@@ -1,0 +1,83 @@
+# FASTCOEF — FLINT backend for the hot pipeline arithmetic
+
+`lib/fastcoef.py` ports the hot coefficient arithmetic (SystemA bracket
+generation, Cascade3 b-elimination) to FLINT via python-flint, keeping the
+pure-Python path (lib/jc.py, lib/reduce3.py) as the default, the fallback,
+and the differential oracle.
+
+## Install
+
+    python3 -m pip install --user --break-system-packages python-flint
+
+Verified: python-flint 0.9.0 (`flint.fmpq_mpoly` available), Python 3.14.6,
+macOS arm64. If python-flint is missing, `JC_BACKEND=flint` falls back to
+the pure path with a one-time stderr warning — nothing breaks.
+
+## Switch
+
+    JC_BACKEND=python   # default: pure-Python Fractions (unchanged oracle)
+    JC_BACKEND=flint    # fmpq_mpoly kernels
+
+Read per call/at Cascade3 construction, so tests flip it in-process. Wired
+into `jc.bracket` (SystemA generation) and `reduce3.Cascade3.run`
+(elimination). `chartelim.two_chart` stays pure in both backends (it only
+consumes the — parity-checked — cascade output).
+
+`JC_MAXTERMS` (optional) overrides the Cascade3 swell abort threshold
+(default 20000). Changing it changes which cores are reachable; parity runs
+must leave it alone.
+
+## What is flint, what is not
+
+* `fastcoef.cadd/cmul/cscale/cneg` — drop-in coefficient ops over
+  `fmpq_mpoly` (same dict contract as jc.py); oracle-tested.
+* `fastcoef.subst_linear_many` — the Cascade3 hot kernel. Splits each
+  equation c = A·v + B and computes B + A·g with one FLINT multiply per
+  equation (g converted once per elimination), then inverse-pair reduction.
+  Contexts are cached per variable-universe size; global var indices are
+  mapped to a dense local range at the boundary (monomial-tuple <->
+  exponent-vector adapters), so exponent vectors stay short at farm scale
+  (1314 vars).
+* `fastcoef.bracket_fast` — generation is accumulation-bound (coefficients
+  are single variables), so the fast path is in-place accumulation, not
+  FLINT; conversion-based variants measured slower for that shape.
+* python-flint pitfall (measured): `fmpq_mpoly_ctx.from_dict` is quadratic
+  in term count; large polynomials are built by chunked `from_dict` +
+  balanced tree sums (`fastcoef._build`).
+
+## Parity status: PROVEN (tests/test_parity.py)
+
+`python3 tests/test_parity.py` — PASS (2026-08-05):
+* 2000 randomized drop-in checks (int + Fraction) vs the jc.py oracle;
+  60 randomized bracket checks vs the pure bracket;
+* full pipeline (SystemA -> Cascade3 -> two_chart) on reg_9_24_c3 and
+  open_8_28_c2 under both backends: identical cascade status, elimination
+  sequence, zeroed vars, log, core equations, two_chart leaves, and
+  byte-identical .ms emissions (SystemA raw, core at p=65521 and char 0,
+  both chart leaves — 5 files per case).
+* Full pre-existing suite (test_jc, test_planeprobe, test_conjE,
+  ltest_polynomials) passes under both backends.
+
+One semantic canonicalization was required for cross-backend determinism:
+`Cascade3._pick_pivot` now iterates its per-equation candidate census in
+sorted var order, so pivot TIE-breaks no longer depend on dict insertion
+order (which differs between backends). Any unit pivot is sound (same
+invariants as before); in tie cases cores could differ from pre-change
+archives while remaining valid. Checked old-vs-new on reg_9_24_c3 and
+open_8_28_c2: identical cores (no tie was actually decided differently).
+python-vs-flint output is byte-identical by the parity gate.
+
+## Benchmarks (12-core M-series, 32 GB, 2026-08-05)
+
+| case (gen+cascade)            | python              | flint      | speedup | status |
+|-------------------------------|---------------------|------------|---------|--------|
+| reg_9_24_c3                   | 0.4s                | 0.2s       | TBD     | reduced, identical cores |
+| open_8_28_c2                  | 3.8s                | 1.3s       | TBD     | reduced, identical cores |
+| open_8_28_c1                  | TBD                 | TBD        | TBD     | TBD    |
+| moh_48_64 (unreduced, 1314 v) | 73 min / 43 elims*  | TBD        | TBD     | TBD    |
+
+*moh_48_64 python row: documented baseline (notes.md 2026-07-30: cascade
+reaches 43/830 b-eliminations, then aborted-swell, in 73 min; generation
+measured now at 2.0s python / 0.4s flint).
+
+moh_48_64 cascade completion: TBD.

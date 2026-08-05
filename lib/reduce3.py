@@ -11,14 +11,20 @@ corner-saturated locus, so everything stays polynomial after multiplying by
 inverse variables.  M1/M2 (contradiction, monomial zero-forcing) run between
 eliminations.  When no unit-pivot b remains, stop and report the mixed core.
 """
+import os
 from fractions import Fraction
 from jc import cadd, cmul
 from reduce import _kill_var
 
 MAXTERMS_EQ = 20000     # abort threshold on any equation size
+                        # (env JC_MAXTERMS overrides; changes which cores are
+                        # reachable, so parity runs must leave it alone)
 
 class Cascade3:
     def __init__(self, system, level_dir=(2, 1)):
+        import fastcoef
+        self.backend = fastcoef.backend()   # JC_BACKEND=flint|python (python)
+        self.maxterms = int(os.environ.get("JC_MAXTERMS", MAXTERMS_EQ))
         S = self.S = system
         self.eqs = [dict((m, Fraction(k)) for m, k in c.items())
                     for c in S.equations[:-1]]
@@ -112,7 +118,9 @@ class Cascade3:
                 for v in set(m):
                     if v in self.bvars and v not in self.units:
                         occ.setdefault(v, []).append(m)
-            for v, ms in occ.items():
+            # sorted: tie-breaks must not depend on dict insertion order,
+            # which differs between the python and flint backends
+            for v, ms in sorted(occ.items()):
                 if len(ms) != 1:
                     continue
                 m0 = ms[0]
@@ -142,8 +150,12 @@ class Cascade3:
                     continue
                 g = cadd(g, cmul({m: -k / q}, {invmon: Fraction(1)}))
             g = self._inv_reduce(g)
-            self.eqs = [self._subst_linear(cc, v, g) if any(v in m for m in cc) else cc
-                        for cc in self.eqs]
+            if self.backend == "flint":
+                import fastcoef
+                self.eqs = fastcoef.subst_linear_many(self.eqs, v, g, self.invof)
+            else:
+                self.eqs = [self._subst_linear(cc, v, g) if any(v in m for m in cc) else cc
+                            for cc in self.eqs]
             self.eqs = [cc for cc in self.eqs if cc]
             self.elim.append((v, g))
             self.alive.discard(v)
@@ -152,7 +164,7 @@ class Cascade3:
             self.log.append((self.varnames[v], len(g), biggest))
             if verbose:
                 print(f"  elim {self.varnames[v]} (|g|={len(g)}), biggest eq {biggest}")
-            if biggest > MAXTERMS_EQ:
+            if biggest > self.maxterms:
                 self.status = "aborted-swell"
                 break
             if self._m1_m2() is None:

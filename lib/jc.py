@@ -9,7 +9,10 @@ Representation:
   Mon     = tuple of var indices, sorted, with multiplicity  (e.g. (3,3,7) = v3^2*v7)
   ()      = the constant monomial
 
-All arithmetic is exact over Z. Everything is stdlib-only.
+All arithmetic is exact over Z. Everything is stdlib-only, with one optional
+exception: JC_BACKEND=flint routes the hot bracket/cascade arithmetic through
+lib/fastcoef.py (python-flint). Default is the pure path (JC_BACKEND=python);
+the functions below are the semantic oracle either way.
 """
 
 from math import gcd
@@ -90,7 +93,14 @@ def dy(p):
     return r
 
 def bracket(p, q):
-    """[P,Q] = P_x Q_y - P_y Q_x."""
+    """[P,Q] = P_x Q_y - P_y Q_x.  JC_BACKEND=flint -> fastcoef fast path
+    (content-identical; differentially tested in tests/test_parity.py)."""
+    try:
+        import fastcoef
+        if fastcoef.backend() == "flint":
+            return fastcoef.bracket_fast(p, q)
+    except ImportError:
+        pass
     return padd(pmul(dx(p), dy(q)), pneg(pmul(dy(p), dx(q))))
 
 # ---------------------------------------------------------------- polygons
