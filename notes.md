@@ -219,3 +219,13 @@
   case, STRICTLY STRONGER; survivors {(21,15),(20,16)} verify. Degree-6 leaf
   table already emitted by the enumerator: 14 rows (< SHEET6's 20-30 est).
   Remaining for td=6: Props 9.3(e)-(m), lambda-budget, termination assembly.
+- SURPLUS-EXT Phase C: surplus-4 variant THEOREM at (2,3) (dual proofs:
+  resultant w/ constant lead + structural divisibility); torus-emptiness also
+  proved at (2,4); rigidity certified (3,3),(4,3),(5,3). Pattern exact:
+  leftovers = 2(w_P-1). DISCOVERY: log-residue functional R_{k,d2} =
+  sum (-1)^j C(j,k+2) a2^(2d2-j) b_j survives per cell — PINS is its 1-term
+  case; conjectured all k>=2,d2>=2; open (3,4),(4,4),(5,4),d2>=5. Erratum:
+  scan's torus-solvable wide cells were numeric false positives (fixed in
+  SURPLUS.md). Coverage: 0/34 current families in wide cells (theory
+  completeness + beyond-150 relevance). P1 avenue now fully delivered:
+  theorem grid (2,2),(2,3),(2,4) + k>=3 impossibility + coverage table.

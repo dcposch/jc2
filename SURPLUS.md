@@ -289,3 +289,10 @@ Recorded honestly:
 - Discriminator: "leftover content == 0 for the solved shape" is observed on
   reg_9_24_c3, not general (reg_swap/nf_k1_d2 leave nonzero torus-solvable
   constraints); the robust form of (iii) is the PINS-form statement.
+- Scope-map torus verdicts (2026-08-05, per SURPLUS-EXT §1.3): the numeric
+  "torus-solvable" at (3,3), (4,3), (5,3) are FALSE POSITIVES (probe tol
+  1e-11 vs |vars| >= 1e-4 misses multiplicity->=3 forced zeros); these cells
+  are torus-EMPTY, proved by exact resultant certificates (surplus_ext.py
+  phaseC3b). (4,4), (5,4) "solvable" now suspect/unresolved. The EMPTY
+  verdicts at (2,3) (= toy_w3) and (2,4) are upgraded to exact theorems
+  (SURPLUS-EXT §1.2-1.3); (3,4)'s EMPTY stays numeric-only for now.

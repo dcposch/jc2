@@ -25,12 +25,187 @@ Recap (SURPLUS.md, LEMMA.md); notation fixed for this file:
   extra keys) / k>=3 verdict cells (see §2); NEEDS-COMPUTATION = wide strips
   w_P>=3 and other unresolved cells; OUT-OF-SCOPE = y-axis support (c1
   shape, gap-kill fails) or d1>=2; UNKNOWN = reduction data unavailable.
+  Added in Phase C: SURPLUS-4-COVERED = wide-strip cells whose leftover
+  system is exactly solved by the surplus-4 variant theorem (§1): torus-
+  empty via forced P-col-1 binomial support (NOT a PINS obstruction);
+  currently (2,3), (2,4) full variety + (3,3), (4,3), (5,3) rigidity.
 
 ## 1. Target 1 — Wide strips (w_P = 3): the surplus-4 leftovers
 ### 1.1 Symbolic characterization of the 4 leftover constraints
-(TBD)
+
+Cell: (k,d2) = (2,3) (w_P = d2 = 3, w_Q = 5; toy_w3's cell; the header's
+"w_P = 3" — note w_P = d2 identically, so this is the d2 = 3 column of the
+scope map). Machine layer: cases/surplus_ext.py wide_setup/wide_W0/wide_W1
+(run 2026-08-05, exit 0): the general-(k,d2) column-ODE solve is
+cross-checked against an independent lattice-det enumeration of every block
+key — eliminated keys reduce to 0, vertex to +1, and the 4 leftovers equal
+the ODE extras EXACTLY (also verified at (2,2) anchor, (2,4), (3,3)).
+
+Coordinates (units a1 = a_p0, c1 = b_q0 scaled to 1): A = 1 + a2 y + a3 y^2
++ a4 y^3 (P col 1, points (1,0)..(1,3)), B = b3 y^3 + .. + b6 y^6 (P col 2,
+points (2,3)..(2,6)). Q cols 2,3 are eliminated (Prop B, 2w_Q+1 = 11 pivots).
+NO M2 ever fires (z = 0): the leftover count is exactly 2(w_P-1) = 4.
+
+Leftover positions (Prop B strata w in [1,2] of both block columns):
+inner pair L1 = key (3,7) [w=2], L2 = (3,8) [w=1] — coeffs of y^6, y^7 in
+A C' - 2 A' C; outer pair L3 = (4,10) [w=2], L4 = (4,11) [w=1] — coeffs of
+y^9, y^10 in A E' - 3 A' E + 2 B C' - 2 B' C. Exact reduced forms:
+
+    10*L1 =  2 a3^3 - 4 a2^2 a3^2 + 2 a2^3 a4 + 19 a2 a3 a4 - 25 a4^2
+    10*L2 = -2 a2 a3^3 + a2^2 a3 a4 + 8 a3^2 a4 + a2 a4^2
+    L3, L4: 18 monomials each, LINEAR in (b3..b6), coefficients in
+            Q[a2,a3,a4] (not displayed; machine-held, wide_setup(2,3)).
+
+Structure (generalizing the (2,2) machinery):
+(a) B-grading: L1, L2 are B-FREE (pure P-col-1 constraints); L3, L4 are
+    linear in B — same split as (2,2)'s inner -a3^2 / outer -(1/5)a2^2 a6.
+(b) Weighted homogeneity: deg(a_{i+1}) = deg(B_i) = i gives deg L1..L4 =
+    6, 7, 9, 10 (= the y-levels); each key is also w-stratum homogeneous.
+(c) ODE meaning: L1, L2 are unit-triangular combinations of the would-be
+    series continuation ctilde_7, ctilde_8 of C = a1 c1 A^2 int_0^y A^-3
+    (L1 = -7 a1 ctilde_7; L2 = -(8 a1 ctilde_8 + 5 a2 ctilde_7)), so
+    ideal(L1,L2) = ideal(ctilde_7, ctilde_8): "P col 1 must make the
+    C-series truncate one AND two steps past deg 6". Likewise L3, L4 for
+    the E-series with inhomogeneity G = 2 B C' - 2 B' C.
+(d) Monomial content of the inner pair: restricted to a2 = 0 or a3 = 0 or
+    a4 = 0 the pair stays a genuine 2-eq system (no M2 event, unlike
+    (2,2)/(k>=3,2) where the inner extra is the single monomial -a3^k).
 ### 1.2 Torus-emptiness: theorem or sub-regime
-(TBD)
+
+THEOREM (surplus-4 variant, inner part; (k,d2) = (2,3), depth-2 block, any
+strip lengths containing it; char not in {2,3,5}). The inner leftover pair
+alone forces a3 = a4 = 0, i.e. V(L1,L2) = {a3 = a4 = 0}: P col 1 collapses
+to the binomial a1 + a2 y (support = p0 and (1,1)). Consequently the FULL
+4-leftover system has NO common zero with all block coordinates nonzero
+(any zero has a3 = 0): the toy_w3 "torus-EMPTY" numeric verdict is now an
+exact theorem.
+
+Proof 1 (resultant; machine-verified, wide phaseC2, exit 0).
+Res_a4(10L1, 10L2) = -3200 a3^7, and the a4-leading coefficient of 10L1 is
+the CONSTANT -25, so for every fixed (a2,a3) the two polynomials in a4 have
+a common root iff the resultant vanishes: any common zero has a3 = 0. Then
+10L2|_{a3=0} = a2 a4^2 and 10L1|_{a3=0} = 2 a2^3 a4 - 25 a4^2: a2 a4^2 = 0
+with a4 != 0 gives a2 = 0 and then L1 = -(5/2) a4^2 != 0 — so a4 = 0.
+Conversely a3 = a4 = 0 kills both (every monomial contains a3 or a4).
+Primes used: pivots 2..6 of the triangular solve, 3200 = 2^7 5^2, 25, 5/2:
+char not in {2,3,5} suffices (denominator/pivot set audited as in (2,2)).
+
+Proof 2 (structural: squarefree-forcing + log-free divisibility; conceptual
+route, generalizes — used again at d2 = 4 in §1.3).
+Extras vanish iff the polynomial identity  C'A - 2A'C = a1 c1  holds exactly
+with C the solved column (deg <= 6). (i) At any root r of A of multiplicity
+m >= 2 the left side is divisible by (y-r), the right side is a nonzero
+constant: so A is SQUAREFREE, and at simple roots -2A'(r)C(r) = a1 c1 gives
+A'(r), C(r) != 0. (ii) Differentiating the identity once/twice and
+evaluating at r: C'(r) = -2A''C/A', then -C'A'' - 2A'''C - 2A''C' = 0
+forces 3A''(r)^2 = A'(r)A'''(r). Hence A | N(A) := 3A''^2 - A'A'''.
+(iii) Case delta := deg A: delta = 3: N = (12a3^2-6a2a4) + 60a3a4 y
++ 90a4^2 y^2 has deg 2 < 3, so N = 0: 90a4^2 = 0, impossible. delta = 2:
+N = 12a3^2 != 0 constant, impossible. So delta <= 1: a3 = a4 = 0. QED
+
+Class of the obstruction — HONEST: this is a SUPPORT-RIGIDITY statement
+(a3 = coeff_P(1,2), a4 = coeff_P(1,3) are forced to 0; neither is a
+saturated corner, so hypothesis (i) is untouched), NOT a PINS-form
+(unit)*(monomial)*b_q0 obstruction: b_q0 stays free. What survives of the
+(2,2) collapse mechanism at d2 = 3 is exactly this forced degeneration of
+the P-side column; the b-side content is settled next (outer pair on the
+binomial locus).
+
+COMPLETE VARIETY (surplus-4 variant theorem, full form; machine layer
+phaseC2b, W4, exit 0). On the forced locus a3 = a4 = 0 (A = a1 + a2 y):
+    L4 == 0 IDENTICALLY, and  L3 = (a2^3/21) * R,
+    R := a2^2 b4 - 5 a2 b5 + 15 b6      (b3 ABSENT).
+Hence  V(L1,L2,L3,L4) = {a3=a4=0, a2=0}  u  {a3=a4=0, R=0}.
+Mechanism of both facts (log-residue view, §2 Steps 3-4 with d2 = 3):
+with z = 1 + a2 y/a1, beta(z) = B(y(z)), the only singular integrand term
+is beta'_3 w^{-1} (m = k+1 = 3), so the non-polynomial part of E is
+-(c1/a2) beta'_3 z^3 log z. Both outer extras are forced multiples of the
+SINGLE residue beta'_3 = 4 R/a2^6 (units scaled to 1), where
+R = sum_{j=4}^{6} (-1)^j C(j,4) a2^{6-j} b_j; and the two tail coefficients
+of z^3 log z satisfy
+11*[y^11] + 7 a2 [y^10] = 0 for the z^3 log z series (11/1320 = 7/840),
+which kills the top extra L4 on the locus identically. The coefficients
+1, -5, 15 are (-1)^j C(j,4), j = 4..6 — at d2 = 2 the sum degenerates to
+the single term C(4,4) b4 = a6: the (2,2) PINS monomial is the d2 = 2
+shadow of this residue functional.
+Consequences: (1) torus-emptiness holds (via a3 = 0), settling the cell
+EXACTLY; (2) on the main component (a2 != 0) the residual b-side condition
+R = 0 is a 3-term linear form: solvable with all of b3..b6, b_q0 nonzero —
+NO empty chart in the b-coordinates and NO PINS leftover: condition (iii)
+in its (2,2) single-monomial form FAILS at (2,3); its correct analog is
+"P col 1 binomial + one residue hyperplane R = 0". (3) char caveats: the
+outer computation adds e-pivots 7,8,9 and denominators 21, 840, 1320
+(primes {2,3,5,7,11}); the INNER rigidity (the part torus-emptiness needs)
+uses only {2,3,5}.
+
+### 1.3 The pattern in w_P: rigidity at w_P = 4 and the k-grid
+
+Leftover COUNT: 2(w_P - 1) exactly, all cells (Prop B; z = 0 since no M2
+fires for w_P >= 3 — every extra key has >= 2 monomials, seen on the whole
+grid below). Scan values 4 (w_P=3), 6 (w_P=4): formula confirmed.
+
+THEOREM (w_P = 4, cell (2,4); char 0, excluded primes within {2,3,5,7}).
+V(inner extras I1,I2,I3) = {a3 = a4 = a5 = 0}: P col 1 is again forced to
+the binomial a1 + a2 y, so torus-emptiness PERSISTS at w_P = 4, exactly.
+On the forced locus the outer extras satisfy O2 = O3 = 0 IDENTICALLY and
+O1 = -(a2^4/55) R4, R4 := a2^4 b4 - 5 a2^3 b5 + 15 a2^2 b6 - 35 a2 b7
++ 70 b8 (machine: phaseC3/W5-W6, exit 0). So
+  V(all 6 leftovers) = {a3=a4=a5=0, a2=0} u {a3=a4=a5=0, R4=0},
+same shape as (2,3): support rigidity + ONE residue hyperplane; no PINS.
+Proof of the inner part (structural route of §1.2 Proof 2, now with the
+delta = 4 divisibility case; every identity machine-asserted in phaseC3):
+extras vanish iff C'A - 2A'C = a1 c1 exactly => A squarefree and
+A | N(A), N := 3A''^2 - A'A'''. Writing A = 1 + py + qy^2 + ry^3 + sy^4:
+  N - 336 s A = E0 + 60 E1 y + 30 E2 y^2   (top two coeffs cancel), with
+  E0 = 12q^2 - 6pr - 336s, E1 = qr - 6ps, E2 = 3r^2 - 8qs.
+delta = 4 (s != 0): divisibility means E0 = E1 = E2 = 0; the identities
+  9s E0 = 84 s (q^2 - 36 s) - 3 q E2 + 9 r E1,
+  27 r^2 - 2 q^3 = 9 E2 - 2 q (q^2 - 36 s)
+give q^2 = 36s, 27r^2 = 2q^3, and (via E1, q != 0) r = pq/6; these force
+(p,q,r,s) = (4u, 6u^2, 4u^3, u^4), i.e. A = (1 + u y)^4 — NOT squarefree
+(u = 0 would give s = 0): contradiction. delta = 3 (s = 0, r != 0):
+N = (12q^2 - 6pr) + 60qr y + 90r^2 y^2 has degree 2 < 3, so N = 0:
+90 r^2 = 0, impossible. delta = 2: N = 12q^2 != 0 constant, impossible.
+Hence delta <= 1. QED (perfect powers (1+uy)^delta satisfy the
+divisibility for every delta >= 4 — squarefreeness is what kills them;
+any general-d2 proof must keep both halves).
+
+GRID (phaseC3b, exit 0). Inner rigidity V(inner) = {A binomial} is also
+CERTIFIED at (k,3) for k = 3, 4, 5 by a uniform two-resultant certificate:
+Res_a4(J1,J2) = c a3^m with CONSTANT a4-lead of J1 (=> a3 = 0), then on
+the slice Res_a2 = c' a4^N with pure-a4 a2-lead (=> a4 = 0); exponents
+(m,N) = (7,8), (15,12), (26,34), (40,44) for k = 2,3,4,5. Combined with
+d2 = 2 (inner = -a3^k, k <= 10) and (2,4): rigidity holds on the ENTIRE
+computed grid k in 2..5, d2 in 2..4 except (3,4)/(4,4)/(5,4) (inner not
+yet eliminated there; (3,4) numeric-EMPTY is consistent with rigidity).
+
+SCAN CORRECTION (erratum to SURPLUS.md scope map + §2.2 caveat (b)):
+the numeric "torus-solvable" verdicts at (3,3), (4,3), (5,3) are FALSE
+POSITIVES of the Gauss-Newton probe: rigidity proves these cells
+torus-EMPTY. Defect: tolerance 1e-11 with |vars| >= 1e-4 cannot see
+forced zeros of multiplicity >= 3 (at a3 = a4 = 1e-4 all leftovers
+evaluate ~1e-12). The (4,4), (5,4) "solvable" verdicts are now equally
+suspect (unresolved). Numeric torus verdicts should not be trusted for
+these systems; the resultant certificates replace them.
+
+OUTER structure on the binomial locus, whole grid: exactly ONE outer
+extra survives and equals (unit * a2-power) * R_{k,d2},
+  R_{k,d2} = sum_{j=k+2}^{2 d2} (-1)^j C(j, k+2) a2^{2 d2 - j} b_j,
+the z^{k+1} log-residue functional (§2 Step 3 with beta' singular at
+m = k+1); the higher outer extras vanish identically there. Verified:
+(2,3) u=a2^3/21, (3,3) -a2^6/99, (4,3) 2a2^9/1001, (2,4) -a2^4/55,
+(3,4) -a2^8/364; and (5,3): ALL outer extras vanish — the sum is EMPTY
+iff k + 2 > 2 d2, which at d2 = 2 is exactly §2's k >= 3 identically-zero
+outer, and at d2 = 2, k = 2 degenerates to the single monomial
+C(4,4) b4 = a6: the (2,2) PINS obstruction is the one-term case of R.
+
+CONJECTURE (w_P pattern, k >= 2, d2 >= 2; evidence above + d2 <= 4
+proofs): V(leftover system) = {A binomial} n ({a2 = 0} u {R_{k,d2} = 0}).
+Consequences: leftover count 2(w_P-1); torus-EMPTY at EVERY such cell;
+PINS form iff (k,d2) = (2,2); no b-side obstruction for d2 >= 3 (R is a
+multi-term linear form, torus-solvable in b), none at all when
+k > 2d2 - 2. Open: rigidity at (3,4), (4,4), (5,4) and d2 >= 5 (the
+perfect-power component makes a uniform proof nontrivial).
 
 ## 2. Target 2 — k >= 3: why leftovers vanish
 ### 2.1 The cancellation mechanism
@@ -127,7 +302,9 @@ leftover per column, numerically torus-solvable (SURPLUS toy_k3), each a
 residue-type condition linear in the fresh P-column coefficients; not
 proved here. (b) d2 = 2 only — the k >= 3, d2 >= 3 cells stay numeric
 (scan: solvable except the (3,4) cell, which is numeric-EMPTY and belongs
-to the wide-strip regime of §1). (c) char excluded set is proof-technical
+to the wide-strip regime of §1). [CORRECTED 2026-08-05: the d2=3 "solvable"
+scan verdicts were false positives; (3,3),(4,3),(5,3) are torus-EMPTY,
+proved — see §1.3 SCAN CORRECTION.] (c) char excluded set is proof-technical
 (denominators s <= 2k+3, k, m-k-1, a2-chart), as in the (2,2) theorem.
 PHASE B COMPLETE (verdict: no k>=3 near-origin obstruction at d2=2).
 
@@ -198,9 +375,11 @@ Classification of the 34 rows (cells per §0; flags from §3.1):
   (7,42) x2 k=4). Basis: §2 verdict (proved for strip shape with d2=2 at
   depth 2). CONDITION: all four have b/a integer, so if the A0-corner
   survives reduction the shape is pentagon/y-axis = OUT-OF-SCOPE rather
-  than strip; and d2>=3 strips would land in the unproven wide cell. No
-  reduction data exists for these (SECTION4-AUTOMATION unimplemented) —
-  honest cell: MECHANISM-ABSENT if strip-with-d2=2, else UNKNOWN.
+  than strip. No reduction data exists for these (SECTION4-AUTOMATION
+  unimplemented) — honest cell: MECHANISM-ABSENT if strip-with-d2=2;
+  SURPLUS-4-COVERED if strip-with-d2=3 (cells (3,3), (4,3) now exact,
+  §1.3 — Phase C upgrade of the former "unproven wide cell" caveat);
+  UNKNOWN if d2>=4 ((3,4)/(4,4) rigidity open).
 - DISCARDED (not a possible pair at all): 1 row, (8,32)+(3,2) (GGV22 §3
   one-paragraph argument; regression gate G2).
 - UNKNOWN (k=2, reduction not done): 9 rows — F2 x2, F3, (8,28)+(7/4,3)
@@ -218,9 +397,40 @@ data among all deg<=150 admissible families; no deg<=150 family is known
 to need the wide-strip extension (§1); the k>=3 extension (§2) has no
 confirmed strip-shaped client at deg<=150 (both k>=3 corners are y-axis
 flagged). PHASE A COMPLETE.
+PHASE C UPDATE (2026-08-05): SURPLUS-4-COVERED cells (2,3), (2,4), (3,3),
+(4,3), (5,3) are now exactly settled (§1), removing "NEEDS-COMPUTATION"
+as a REGIME for w_P = 3 and for (2,4). Rows moving into the new cell on
+CURRENT reduction data: 0 of 34 (every k=2 row has d2* = 2 or y-axis
+flag; every k>=3 row is y-axis flagged) — the change is to the
+CONDITIONAL branches only: the 4 k>=3 rows' hypothetical d2=3 strip
+reductions are covered (see amended bullet above), as would be any
+future k=2 reduction landing at d2 in {3,4}. Firm counts unchanged.
 
 ## 4. Validation scripts
-- cases/surplus_ext.py (TBD)
+- cases/surplus_ext.py (exact Fractions throughout; exit 0 = all checks):
+  Phase B: selftestV1, phaseB (V1-V4, §2). Phase C: wide_setup (general
+  (k,d2) column-ODE solve), wide_W0/W1 (anchor + independent lattice-det
+  cross-check), phaseC2 (W2 resultant -3200 a3^7, W3 slices), phaseC2b
+  (W4 outer factorization (2,3)), phaseC3 (W5 (2,4) rigidity identities,
+  W6 outer), phaseC3b (d2=3 grid certificates k=2..5 + outer survey).
+  Resultants via exact Sylvester determinants (presultant/pdet).
+- cases/surplus_count.py (Phase-1 engine; its numeric torus_probe verdicts
+  at (3,3),(4,3),(5,3) are superseded — §1.3 SCAN CORRECTION).
 
 ## 5. Summary
-(TBD)
+Phase A (§3): 34 GGV deg<=150 rows classified from corner arithmetic;
+(2,2) theorem's only confirmed client is open_8_28_c2; no wide-strip
+client exists on current data.
+Phase B (§2): k >= 3, d2 = 2 verdict is a THEOREM (log-residue dichotomy:
+obstruction <=> k+1 <= 2 d2 - 1); no near-origin obstruction there.
+Phase C (§1): the wide-strip cells are exactly solved. Surplus-4 variant
+theorem at (2,3): V(4 leftovers) = {a3=a4=0} n ({a2=0} u {R=0}),
+R = a2^2 b4 - 5 a2 b5 + 15 b6; torus-empty exactly (two independent
+proofs: resultant certificate; squarefree+divisibility). Same at (2,4)
+with R4 (coefficients C(j,4)); inner rigidity also certified at (3,3),
+(4,3), (5,3). The forced content is P-SUPPORT RIGIDITY (col 1 binomial),
+not a PINS b_q0-obstruction: condition (iii)'s single-monomial form is
+special to (2,2), where the residue functional R_{k,d2} =
+sum_{j=k+2}^{2d2} (-1)^j C(j,k+2) a2^{2d2-j} b_j collapses to one term.
+Scan erratum: three "torus-solvable" cells were numeric false positives.
+Open: rigidity at (3,4), (4,4), (5,4), d2 >= 5; deeper columns D >= 3.
