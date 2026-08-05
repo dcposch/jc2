@@ -206,3 +206,10 @@
   corrected). Caveats: both foundations unaudited; Żołądek gcd gap (GGV-
   documented). Pilot launched: machine-rederive Sigray Prop 9.1 + Stmt 9.6.
   USER ACTION WANTED: Żołądek PDF is CAPTCHA-walled — manual download needed.
+- DC2-PROGRAM.md (P2): port-of-Zheglov blocked at step zero (centralizer
+  rigidity collapses in A_2; prerequisite = 2D Schur-pair/Parshin theory,
+  Zheglov's own open program; no Z^4 subrectangular reduction — vertex-gap
+  slot). EXPERIMENT: DC(2) PROVED in Bernstein degree <= 2 (8s exact;
+  deg-2 slice 0-dim of degree 90 = Lagrangian-cubic family over LGr(2,4) —
+  geometry match; 5/5 operator-level certificates). Divergence at degree 3 =
+  tier-1 next slice, queued. Full DC(2): unreachable at present.
