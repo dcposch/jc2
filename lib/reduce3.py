@@ -13,7 +13,6 @@ eliminations.  When no unit-pivot b remains, stop and report the mixed core.
 """
 import os
 from fractions import Fraction
-from jc import cadd, cmul
 from reduce import _kill_var
 
 MAXTERMS_EQ = 20000     # abort threshold on any equation size
@@ -85,14 +84,28 @@ class Cascade3:
             acted = True
 
     def _subst_linear(self, c, v, g):
-        """substitute b-var v := g into c, where v occurs with exponent <= 1"""
+        """substitute b-var v := g into c, where v occurs with exponent <= 1.
+        In-place accumulation: content- and insertion-order-identical to the
+        original cadd/cmul chain (product keys sorted(m2+mg) are injective in
+        mg for fixed m2, so no intra-product merges existed), minus the
+        quadratic dict copying."""
         out = {}
         for m, k in c.items():
             if v in m:
                 m2 = tuple(i for i in m if i != v)
-                out = cadd(out, cmul({m2: k}, g))
+                for mg, kg in g.items():
+                    mm = tuple(sorted(m2 + mg))
+                    w = out.get(mm, 0) + k * kg
+                    if w:
+                        out[mm] = w
+                    else:
+                        del out[mm]
             else:
-                out = cadd(out, {m: k})
+                w = out.get(m, 0) + k
+                if w:
+                    out[m] = w
+                else:
+                    del out[m]
         return self._inv_reduce(out)
 
     def _inv_reduce(self, c):
@@ -107,7 +120,11 @@ class Cascade3:
                     d = min(cnt[i], cnt[j])
                     cnt[i] -= d; cnt[j] -= d
             mm = tuple(sorted(i for i, e in cnt.items() for _ in range(e)))
-            out = cadd(out, {mm: k})
+            w = out.get(mm, 0) + k
+            if w:
+                out[mm] = w
+            else:
+                del out[mm]
         return out
 
     def _pick_pivot(self):
@@ -144,11 +161,11 @@ class Cascade3:
             c = self.eqs.pop(ei)
             q = c[m0]
             invmon = tuple(sorted(self.invof[i] for i in m0 if i != v))
-            g = {}
-            for m, k in c.items():
+            g = {}          # in-place: sorted(m+invmon) is injective in m,
+            for m, k in c.items():        # so this equals the cadd chain
                 if m == m0:
                     continue
-                g = cadd(g, cmul({m: -k / q}, {invmon: Fraction(1)}))
+                g[tuple(sorted(m + invmon))] = -k / q
             g = self._inv_reduce(g)
             if self.backend == "flint":
                 import fastcoef
