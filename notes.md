@@ -213,3 +213,9 @@
   deg-2 slice 0-dim of degree 90 = Lagrangian-cubic family over LGr(2,4) —
   geometry match; 5/5 operator-level certificates). Divergence at degree 3 =
   tier-1 next slice, queued. Full DC(2): unreachable at present.
+- SHEET6-PILOT: Prop 9.1 exact PASS (11/11 rows, completeness certificates).
+  Stmt 9.6 DISCREPANCY: thesis row (75,51) fails its own equation (p.52
+  arithmetic slip, never-refereed source) — corrected statement drops the
+  case, STRICTLY STRONGER; survivors {(21,15),(20,16)} verify. Degree-6 leaf
+  table already emitted by the enumerator: 14 rows (< SHEET6's 20-30 est).
+  Remaining for td=6: Props 9.3(e)-(m), lambda-budget, termination assembly.
