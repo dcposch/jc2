@@ -200,3 +200,9 @@
   risk mass unchanged at S6 Steps 4-7 + N-independence. HOLDING at T1 (T2
   replay = 15-25 agent-hours, off critical path; escalate on anomaly or if
   DC(1) needed as citable). Artifacts: ZHEGLOV-LTEST.md, tests/ltest_*.py.
+- SHEET6.md (P5): GO verdict — degree 6 ≈ 150-400 mechanizable exact-arith
+  verifications (weeks-scale fan-out); wall (td 9 / bidegree (48,64)) is
+  ABOVE 6. FOUND: Sigray 2008 thesis = independent degree-5 proof (RECON
+  corrected). Caveats: both foundations unaudited; Żołądek gcd gap (GGV-
+  documented). Pilot launched: machine-rederive Sigray Prop 9.1 + Stmt 9.6.
+  USER ACTION WANTED: Żołądek PDF is CAPTCHA-walled — manual download needed.

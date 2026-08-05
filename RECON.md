@@ -99,3 +99,9 @@ Dixmier sweep: Zheglov's claimed DC1 proof = arXiv:2410.06959, **v5 of 2026-01-1
 4. **Write-up strategy:** follow Leiden norms (full AI disclosure, artifacts + independent checker, contact GGV before public claim — they are silent so far and are the natural validators; Ramirez–Valqui 2506.05697 shows Valqui already runs Gröbner pipelines and can referee this). Cite Helali/Suzuki as independent concurrent computations regardless of audit outcome.
 5. **Program-level watch items:** DC(2) activity (a proof would subsume JC2; @octonion's lift attempts), any Alpöge PDF (promised, not yet posted), a Shaska v3 or responses, Gao-mechanism dim-2 descent attempts (@sugarbets_'s valuation obstruction probe), and the (75,125) frontier Helali has already opened — if the 125 bound stands, that pair is the next campaign target and we should pre-emit its systems.
 6. **Coverage gaps in this recon:** MathOverflow (crawler-blocked — check manually), unsolvedmath.com's JC entry (JS-rendered), and the unverifiable Qiu "paper and code".
+
+## Correction (2026-08-06, per SHEET6.md): "no independent reproof of
+Żołądek degree-5" is WRONG — Sigray's independent 2008 ELTE thesis (decorated
+Eggers-Wall trees, never journal-published) proves it; full text obtained
+(refs/). Sheet-bound foundations are doubly-sourced, though BOTH unaudited
+(Żołądek gcd-section gap documented by GGV).
