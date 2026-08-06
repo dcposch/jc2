@@ -6,7 +6,7 @@
 set -euo pipefail
 sudo apt-get update -qq
 sudo apt-get install -y -qq build-essential autoconf automake libtool git \
-    libgmp-dev libmpfr-dev python3 rsync htop time
+    libgmp-dev libmpfr-dev libflint-dev python3 rsync htop time
 if ! command -v msolve >/dev/null; then
   git clone --depth 1 https://github.com/algebraic-solving/msolve.git
   cd msolve && ./autogen.sh && ./configure && make -j"$(nproc)" && sudo make install
