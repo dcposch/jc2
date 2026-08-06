@@ -81,21 +81,26 @@ python-vs-flint output is byte-identical by the parity gate.
 
 ## Benchmarks (12-core M-series Mac, 32 GB, 2026-08-05, final code)
 
-Cascade3 wall time (generation is negligible except moh, listed separately).
+Cascade3 wall time, each run SOLO on an idle machine (concurrent CPU-bound
+processes were observed to inflate the Fraction-heavy python runs several-
+fold; flint runs are much less sensitive). Generation negligible except
+moh, listed separately.
 
-| case                          | python            | flint          | speedup | status/notes |
-|-------------------------------|-------------------|----------------|---------|--------------|
-| reg_9_24_c3                   | 0.3s              | 0.2s           | 1.5x    | reduced; identical 23-var core |
-| open_8_28_c2                  | 1.7s              | 1.3s           | 1.3x    | reduced; identical 30-var core |
-| open_8_28_c1                  | 1367s (22.8 min)  | 109s (1.8 min) | 12.5x   | reduced; identical 73-var core (114 elims, median eq 1166 terms) |
-| moh_48_64 (unreduced, 1314 v) | gen 2.1s + 25.4 min* | gen 0.4s + 4.0 min | 6.4x | both: aborted-swell at 43/830 elims (biggest eq 21131 > 20000 cap), identical terminal state |
+| case                          | python         | flint              | speedup | status/notes |
+|-------------------------------|----------------|--------------------|---------|--------------|
+| reg_9_24_c3                   | 0.3s           | 0.2s               | 1.5x    | reduced; identical 23-var core |
+| open_8_28_c2                  | 1.7s           | 1.3s               | 1.3x    | reduced; identical 30-var core |
+| open_8_28_c1                  | 143.7s         | 107.1s             | 1.3x    | reduced; identical 73-var core (114 elims, median eq 1166 terms) |
+| moh_48_64 (unreduced, 1314 v) | gen 2.0s + 13.7 min | gen 0.4s + 3.9 min | 3.5x | both: aborted-swell at 43/830 elims (biggest eq 21131 > 20000 cap), identical terminal state |
 
-*final-code python (the shared-path fix alone already improved the old
-documented baseline of 73 min, notes.md 2026-07-30, to 25.4 min; flint takes
-it to 4.0 min — 18x vs the documented baseline).
+Context: the old documented moh baseline (notes.md 2026-07-30, pre-dating
+this work) was 73 min to the same 43-elimination abort. On pivot-scan-
+dominated cases (c1) most of the gain comes from the shared-path fix; the
+FLINT kernel's multiply advantage shows at farm scale, where substitution
+products dominate.
 
 moh_48_64 completion: the cascade reaches its terminal verdict
-(aborted-swell, 43 eliminations) in 4.0 minutes — well within 30. It still
+(aborted-swell, 43 eliminations) in 3.9 minutes — well within 30. It still
 does not run to a reduced core, because the MAXTERMS_EQ=20000 swell cap is
 semantic (parity-pinned), not a speed limit. Raised-cap probe
 (JC_MAXTERMS=200000, flint): pushes past the wall to 49+ eliminations, but
