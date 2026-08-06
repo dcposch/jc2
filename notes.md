@@ -229,3 +229,9 @@
   SURPLUS.md). Coverage: 0/34 current families in wide cells (theory
   completeness + beyond-150 relevance). P1 avenue now fully delivered:
   theorem grid (2,2),(2,3),(2,4) + k>=3 impossibility + coverage table.
+- 2026-08-06 DECISION (DC): third replication of subcase (1) deprioritized —
+  the deep cross-check (verified replays + closed gaps + 3-way transcription
+  agreement) makes our own c1 Groebner runs evidentially marginal. Paper 2
+  division: s2 ours end-to-end; s1 = external artifacts + our audit thereof.
+  jc-b STOPPED. AWS Xeon Z-leaf + ultramem full-memory I-leaf continue as
+  72h sunk-cost bonuses, then roll into sec4 Phase 2c / farm work.
