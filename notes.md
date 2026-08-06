@@ -235,3 +235,6 @@
   division: s2 ours end-to-end; s1 = external artifacts + our audit thereof.
   jc-b STOPPED. AWS Xeon Z-leaf + ultramem full-memory I-leaf continue as
   72h sunk-cost bonuses, then roll into sec4 Phase 2c / farm work.
+- Xeon all-Z leaf FAILED at 940GB after 30h — every c1 leaf now exceeds 1TB.
+  Xeon stopped (on-demand $, no viable leaf work); restarts for sec4 Phase 2c.
+  Sole remaining bonus attempt: ultramem single-lane 1.7TB on I-leaves.

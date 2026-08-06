@@ -105,3 +105,34 @@ Dixmier sweep: Zheglov's claimed DC1 proof = arXiv:2410.06959, **v5 of 2026-01-1
 Eggers-Wall trees, never journal-published) proves it; full text obtained
 (refs/). Sheet-bound foundations are doubly-sourced, though BOTH unaudited
 (Żołądek gcd-section gap documented by GGV).
+
+## Delta — 2026-08-06 (window 2026-08-04 → 08-06; sources: grok CLI ×4, arXiv API, Zenodo API, GitHub API, web)
+
+### Competitors: frozen across the board
+1. **Helali silent on math.** Posts daily 08-04→08-06 but ONLY AI-product chatter; zero on (75,125)/Jacobian/Zenodo since 07-22. GitHub last push 07-21; Zenodo still v1.0.1. Last stance: "(75,125) not yet excluded" (07-22, .../2079875807862734946 — that thread also records a finer reduction, 578 free vars / 2,209 residual eqs, beyond the 2128/3759 noted in §1b; and .../2079848260445876630 acknowledges Suzuki as independent). [COMPETES — stalled 15 days]
+2. **Suzuki static.** Zenodo 21483636 still v1.1.4 (modified 07-22); no new records under his name, no X activity in window. [COMPETES — static]
+3. **Qiu vaporware confirmed.** "Paper and Code:" links never posted; his only post since 08-01 is a football reply (08-04, .../2084619096512160011). Discount fully. [CONTEXT]
+4. **125 bound NOT absorbed.** openconjectures.org `jacobian-n2-1939` still Open, renown 5 / attack 2, no degree bound shown; @openconjectures' 08-01 kill-feed post (.../2083614487790354768) has no JC update — last explicit n=2 statement remains "true up to degree 100" (07-25). [CONTEXT — authority slot still open]
+5. **NEW third (72,108) competitor, missed by the 08-04 snapshot:** Felipe Santibañez-Leal, Zenodo **21740213** — "A planar program for the two-variable JC: theorem ladder, staircase transport, and machine certificates at the (72,108) frontier" ("Paper B of 3"; cites GGHV 2204.14178 Prop 4.3; 33×33 core H(A,B,C), direction K_(2,8), 136,500 tensor-grid controls over 30 primes + CRT). **27 versions v0.09 (07-24) → v0.32 (08-01), then dormant — no in-window updates; does NOT claim exclusion.** Author is a mass-output AI-paper account (36 Zenodo records in ~10 days across unrelated fields: Huneke–Wiegand, Shub–Smale tau, ECG physics…). [COMPETES — third independent transcription = extra cross-check material for §Implications 2(i); credibility low]
+
+### Dixmier / proof routes
+6. **Zheglov: total silence.** arXiv 2410.06959 still v5 (2026-01-19); zero X discussion, no referee/verification news in window. [CONTEXT]
+7. **@octonion: no new DC(2) content.** In-window only Poisson-fallout restatements (+ a SIC-POVM note 08-04). Last DC(2)/near-miss posts remain 07-22/23; one pre-window addition to §1e: 07-30 (.../2082888559946571943) — Mathieu fails via a Hopf-pair construction independent of JC(3). [CONTEXT]
+
+### arXiv (math.AG/AC/RA, in/near window; 51 new entries swept, none JC(2)-direct; no Dixmier items; Gao still v1, Shaska solo still v2, no Alpöge PDF)
+8. **Kistner–Shaska 2608.02863** (math.AG, 08-03; bot-tweeted 08-05): "Orbits and Fields of Definition for Graded Keller Maps" — sequel to §2's Shaska: populates hyperbolic-weight strata K(3,(1,−1,−1)) (cyclic cones, every composite generic degree ≥ 6; 33-sheeted member over Q) and K(3,(1,−p,−p)); geometric monodromy always full alternating/symmetric (solvable only at generic degree 3); genuine positive-dimensional moduli at degree 12. Dim 3 only — sharpens the dim-2/dim-3 dichotomy of §2. [USABLE — negative space + full-monodromy result to test Qiu-style A_N claims against]
+9. **BACKFILL (07-29, missed by snapshot; visibility via @AlgebraicPapers 08-05): Mondello arXiv 2608.02634** — "A Dimension-Two Counterexample to the Separable Jacobian Conjecture in Characteristic Two". Explicit PLANE Keller pair over k=F̄₂: P = x+x²y+x⁴+x⁶y², Q = y+x⁵+x⁶y+x⁷y²+x⁸y³, det J = 1, three points share an image, [k(x,y):k(P,Q)] = 3 separable; derived from Huq-Kuruvilla's char-2 map (§2). [USABLE — **mandatory stress test: run OUR vertex-gap/strip-pair argument on this map's Newton polygon; it must fail only via an explicit char-0 step, else our mechanism has a hole**]
+10. Periphery, in-window: Nisse 2608.03613/2608.03601 (08-04) — new Newton-polygon bounds for amoeba-contour cusps/nodes of plane curves (polygon-singularity toolkit, no JC content); Maxim–Messina 2608.04320 (08-05) — vanishing cohomology of fibers at bifurcation values incl. singularities at infinity (sheets-at-infinity terrain); Hajra 2608.04214 (08-04) — classification of affine surfaces finitely dominated by C*×C* (C² among targets). [CONTEXT]
+
+### Our mechanism: still unclaimed
+11. **No independent appearance of the vertex-gap mechanism.** X + arXiv searches for "vertex gap", "strip pairs", "parallel edges" (Jacobian context), "near-origin obstruction", polygon-obstruction phrasing: zero hits. Żołądek/Sigray sheet-degree bounds: zero public activity. [CLEAR — we remain alone on this]
+12. **GGV still fully silent** (no reaction to counterexample or any exclusion claim through 08-06); **Lee–Li/Conjecture E: nothing**; **chloeallegra228: no JC follow-up in window** (Lean-process rants only; collision-ideals paper still NOT on arXiv — endorsement apparently still lacking). [CONTEXT]
+
+### Ecosystem
+13. **Alpöge JC PDF still missing** — but on 08-04 (.../2084776351878537387) he posted Fable write-ups for OTHER problems (Connes, permanent, quantum parallel repetition, CVP, Ehrhart): the write-up pipeline is active, JC not in it. **Tao's new post 08-06 is on the HRT counterexample** (Faulhuber–Petersen–van Velthoven–Voigtlaender) — the wave has moved to the next conjecture; still no JC(2) follow-up from him. Mainstream recaps 08-05/06 (ScienceDaily et al.) uniformly state 2D open. [CONTEXT]
+14. Zenodo noise, in-window/backfill: Santana 21826515 (08-06) "JC and the Arrow of Time" (physics crank); Reed 21542914 (07-25, missed by snapshot) claims "Formal Resolution of the Two-Dimensional JC in Lean 4" via graded differential operators + Jung–van der Kulk — unvetted, zero community visibility, near-certainly wrong (JvdK-flavored circularity); Leal Ramirez 21538118 (07-24) — "nearly free divisor" homological analysis of the dim-3 map. [CONTEXT — noise tier, logged for completeness]
+15. MathOverflow: still crawler-blocked; web search shows no new JC thread signal. [GAP persists]
+
+### Delta implications
+- Competitive pressure DROPPED in-window (Helali stalled, Qiu vaporware, Suzuki static, registry un-absorbed) while our differentiators (audit, arXiv-grade writeup, GGV contact) remain unclaimed — §Implications 1 stands, with more slack than feared.
+- New to-do ahead of any publication: (a) stress-test the vertex-gap argument against Mondello's char-2 plane map (item 9); (b) add Santibañez-Leal v0.32 to the three-way transcription diff (item 5); (c) mine Kistner–Shaska's full-monodromy theorem when auditing any A_N-monodromy exclusion claim (item 8).
