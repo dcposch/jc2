@@ -400,6 +400,8 @@ def tail_resolve(V, incoming, m, n, log, depth=0):
     (extra_corners, endP, endQ, facedir): extra_corners = aligned corners
     accepted on the way (none in all S4 cases)."""
     a, b = V
+    assert incoming[0]*a + incoming[1]*b > 0, \
+        f"tail_resolve completeness requires v_incoming(V)>0 (REDUCE4-REVIEW rider b): {incoming} {V}"
     assert a > b >= 1 and m != n, (V, m, n)
     if depth > 6:
         raise Stuck(f"R9 aligned recursion overflow at {V}")

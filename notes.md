@@ -238,3 +238,7 @@
 - Xeon all-Z leaf FAILED at 940GB after 30h — every c1 leaf now exceeds 1TB.
   Xeon stopped (on-demand $, no viable leaf work); restarts for sec4 Phase 2c.
   Sole remaining bonus attempt: ultramem single-lane 1.7TB on I-leaves.
+- 2026-08-07: leaf program CLOSED (DC directive: novelty only). 8TB moonshot
+  declined (~15% x replication value). Capacity reorganized: farm dispatch on
+  review+driver gates; R residue-interpretation agent launched; sheet-6 build
+  next slot; DC(2) deg-3 slice after. Lifts continue (paper obligation).
