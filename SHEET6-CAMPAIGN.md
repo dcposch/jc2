@@ -1,6 +1,8 @@
 # SHEET6 CAMPAIGN — systematic td=6 case enumeration + bash (Sigray engine)
 
-Status: PHASE 1 COMPLETE (2026-08-07). Follow-on to SHEET6-PILOT.md. Driver:
+Status: PHASE 1 COMPLETE + REVIEWED (2026-08-07, SHEET6-REVIEW.md: all fronts
+CONFIRMED, promoted; one count corrected in §5 r10/M4). Follow-on to
+SHEET6-PILOT.md. Driver:
 `cases/sheet6_campaign.py` (gate PASS). HEADLINE: the mechanizable layer of the
 td=6 case bash is built and run — all 6 single-pole Λ=6 entries + the td≤5
 re-validation. Both (2,3)-type td=6 entries (rows 2,3) are fully excluded
@@ -161,7 +163,7 @@ td ≤ 5 validation chains (single pole, budget Λ−2; `bash5` phase):
 | r5 td4 (3,4) ρ=1,ν=3,κ̄=7 | 3 | 1 III-tail (λ0) at (2,3s+2,3,6s+6) | thesis silent on this row (G3) |
 | r7 td5 (2,5) ρ=1,ν=2,κ̄=7 | 2 | **EXCLUDED** (no IV possible) | — |
 | r10 td5 (4,5) ρ=1,ν=4,κ̄=9 | 2 | 1 III-tail (λ2); 4 IV mod H3 | thesis silent (G3) |
-| r10 td5 | 4 | 4 III-tails; 20 IV mod H3 | thesis silent (G3) |
+| r10 td5 | 4 | 5 III-tails (review corr.); 20 IV mod H3 | thesis silent (G3) |
 
 td = 6 campaign (single pole, budget 4; `bash`/`report` phases):
 

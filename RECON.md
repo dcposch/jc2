@@ -136,3 +136,14 @@ Eggers-Wall trees, never journal-published) proves it; full text obtained
 ### Delta implications
 - Competitive pressure DROPPED in-window (Helali stalled, Qiu vaporware, Suzuki static, registry un-absorbed) while our differentiators (audit, arXiv-grade writeup, GGV contact) remain unclaimed — §Implications 1 stands, with more slack than feared.
 - New to-do ahead of any publication: (a) stress-test the vertex-gap argument against Mondello's char-2 plane map (item 9); (b) add Santibañez-Leal v0.32 to the three-way transcription diff (item 5); (c) mine Kistner–Shaska's full-monodromy theorem when auditing any A_N-monodromy exclusion claim (item 8).
+
+## Delta 2026-08-07: Sigray td>=6 demoted to incomplete-as-printed
+SHEET6-CAMPAIGN.md + SHEET6-REVIEW.md (all fronts confirmed): the thesis's §9
+propagation bash never treats leaf-table rows 1,5,7,10, its St 9.12 kill set
+cannot close its own case-IV terminals without an unstated root-vertex kill
+(our H3), and three printed "no solution"/"M_F=1" claims are false (E2-E4,
+lambda=0 self-loop families). Consequence: Sigray is NOT an independent reproof
+of td>=6 exclusion as printed; td<=5 remains safe via Orevkov/Domrina-Orevkov/
+Zoladek. Our campaign engine (cases/sheet6_campaign.py) is now the most
+complete written treatment of the td=6 bash; remaining gaps: H3 (blocking,
+also needed by the thesis), ~15 case-III s-tails, two-pole (3,3) config.
