@@ -256,3 +256,27 @@
 - Credits: user purchased more; probe confirmed live. Launched queued agents: sheet-6 case-bash build + DC(2) degree-3 slice (both in flight).
 - Driver agent retired (its gates I re-ran locally: ALL FARM TESTS PASS, GF6 byte-identical vs S4 archives, GF7 dispatch cover).
 - 2026-08-07: FARM LIVE — box01 (AWS Xeon 64c) + box02 (jc-b 32c), 62 jobs total, smallest-first; first EMPTY verdicts already in.
+- SHEET6-CAMPAIGN.md: td=6 case-bash PHASE 1 COMPLETE. Built generic propagation
+  engine (cases/sheet6_campaign.py; gate reproduces pilot exactly): ratio-eq
+  Diophantine solver for all Prop 9.3 branches (I, IIa k>0/k=0, IIb, III) x mu|M,
+  s-free reduction of parametric families w/ PIT certificates + s-shift, residue
+  splitting, ceil-lambda budget BFS (Sigma lam <= td-2). Lambda<=7 table: 14 rows.
+  VERDICTS (single-pole, conditional H1-H4+H3): td=6 rows 2,3 (both (2,3)-type)
+  EXCLUDED; rows 6,8,9,11 reduce to ~14 case-III parametric s-tails (all s<=5
+  instances die) + IV-terminals awaiting the root-kill H3. Two-pole 3+3 config
+  OPEN (Prop 8.4 single-pole only). NEW THESIS ERRATA E2-E4: St 9.8/9.9/9.10
+  "no solution"/"M_F=1" claims false (3nu=4m+1, 2nu=3m+1 families exist, lambda=0
+  self-loops, M_F=2 via gcd(2nu,nu+1)). AUDIT FINDINGS: St 9.12's stated kills
+  cannot close its own case-IV terminals (unstated root-kill = our H3, load-
+  bearing G2); thesis silent on td<=5 rows 1,5,7,10 (rows 1,7 we closed
+  mechanically; 5,10 have the same III-tails) => Sigray td>=6 proof INCOMPLETE
+  as printed (JC td<=5 still safe via Orevkov/Domrina/Zoladek). Next: H3 audit
+  (blocking, days), III-tail closure (~15 lemma-sized, 1-2h each, mechanizable),
+  St 3.16/3.18 III-admissibility extraction (may kill all tails at once),
+  two-pole analogue. Nothing farm-sized; all runs seconds-to-minutes exact.
+
+## 2026-08-07 (loop, evening): P5+P2 build agents landed; reviews launched; farm grinding
+- SHEET6 campaign (4835b13, UNREVIEWED): engine reproduces pilot; Lambda<=7 = 14 rows; td=6 rows 2,3 EXCLUDED; ~15 case-III s-tails + IV-terminals gated on H3 (root-kill). HEADLINE CLAIMS: 3 new thesis errata (E2-E4, lam=0 self-loop families the thesis says don't exist), G2 (St 9.12's kill set can't close its own IV-terminals — unstated H3 load-bearing), G3 (thesis silent on rows 1,5,7,10 => Sigray td>=6 INCOMPLETE AS PRINTED; td<=5 safe via Orevkov/Domrina/Zoladek). If review confirms: sheet-6 exclusion is genuinely open => our campaign = novel work, and RECON's "independent reproof" language needs qualification.
+- DC2 degree-3 slice (1eb53b0, UNREVIEWED): 120 unknowns, 420 quantum/414 classical eqs; gate reproduces degree-2 exactly. HEADLINE: quantum corrections = 90 independent directions; at rational family points quantum corank 13 vs classical 14, rank exactly 1 on classical tangent => first measured DC/PC divergence (one scalar quantum obstruction kills one classical modulus). DC(2) consistent with HOLDS at D<=3. D=4 = 260 unknowns, big-box fibers.
+- Adversarial reviews launched in parallel: SHEET6-REVIEW.md (vs sigray_full.pdf ground truth) + DC2-REVIEW.md (truncation-artifact attack prioritized).
+- Farm: both boxes 4 verdicts each (all EMPTY so far), now grinding 4_12mn34d64_c2_core (35+ min in). 
