@@ -242,3 +242,9 @@
   declined (~15% x replication value). Capacity reorganized: farm dispatch on
   review+driver gates; R residue-interpretation agent launched; sheet-6 build
   next slot; DC(2) deg-3 slice after. Lifts continue (paper obligation).
+
+## 2026-08-07 (loop): residue theorem lands; farm gate-complete; leaf retired
+- **RESIDUE.md committed (e67c50a)**: R_{k,d2} IS a Grothendieck residue — iterated residue of dP∧dQ/(x^{k+2}A^{k+2}) at the toric boundary point {P=0}∩{x=0}. Three interpretations verified by exact arithmetic on 11 cells (48 checks): CT/contour form, Grothendieck form, Koszul moment functional spanning the reachable cokernel of ad_{xA}. Naive dP∧dQ/P^{k+2} refuted (exact form, residue ≡ 0). Uniform theorem all k,d2≥2: surviving outer extra = ±(k+2)/C((k+1)d2,k+1)·a2^{(k-1)d2}·R — explains every mystery unit (5,21,55,99,1001,364) as moments at top pivot; replaces per-cell certificates. conj:R now = its rigidity half only. Correction: sum starts j=max(k+2,d2).
+- **Farm Phase 3 gate-complete**: driver agent hit the account credit ceiling (resets Aug 8 8pm PT) but deliverables were on disk; I ran gates locally — ALL FARM TESTS PASS incl GF6 (dry run reproduces S4 archives, 22 files byte-identical incl char 0, pivot product == AUDIT.md) and GF7 (dispatch covers 28 systems, balanced loads). deg≤150 sweep emission running locally under FLINT (13/~30 families done).
+- **Ultramem I-leaf retired** (scp-script pattern beat the ssh-255 flake): lane4+msolve killed, cron removed. Rationale: replication, not novelty (user directive). cCa2/cCa6 Singular lifts untouched, still resident (~114 GB).
+- **Blocked on credits until Aug 8 8pm PT**: sheet-6 case-bash build agent, DC(2) degree-3 slice agent. Local script work unaffected.
