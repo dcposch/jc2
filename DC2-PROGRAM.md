@@ -3,6 +3,11 @@
 Status: COMPLETE (design + first experiment run). Experiment: `cases/dc2_slice.py`
 (exact ℚ arithmetic; numpy census; msolve slices), 8 s, all assertions PASS.
 Date: 2026-08-04
+Update 2026-08-07: **degree-3 slice (tier T1) executed** — `cases/dc2_deg3.py`,
+results in the "Degree-3 slice results" section below. Headline: quantum-classical
+divergence is real at D=3 and is carried entirely by the six deg-0 vertex equations
+(rank-1 obstruction on classical moduli at family points); no support-level
+separation found; DC(2) consistent with HOLDS at degree ≤ 3 on all loci reached.
 
 ## 1. Statement and reduction landscape
 
@@ -393,8 +398,10 @@ cubic×quadratic; both first bite at D=3 as claimed.
 ### 6.3 Quantum-correction placement and span test (divergence at linear level)
 Exact rank computation over ℚ (flint) on coefficient vectors of all equations
 (3832 monomial columns):
-- classical system: 414 equations, rank **410** (4 linear syzygies among the
-  classical generators; the quantum 420 have rank **420** — no syzygy);
+- classical system: 414 equations, rank **410** — exactly 4 linear syzygies, each
+  supported on the deg-1 stratum across the residual triple of one 3-subset of
+  {P₁,P₂,Q₁,Q₂} (the four Jacobi identities); the quantum 420 have rank **420** —
+  stratum-wise Jacobi does not survive the ħ-filtration;
 - adding the quantum corrections: +6 deg-0 → 416; +24 deg-1 → 434; +60 deg-2 → 470;
   all 90 → **500 = 410 + 90**: **every quantum correction form is linearly
   independent of the classical system** (and of each other).
@@ -416,16 +423,175 @@ of a Hamiltonian flow to close up to an exact polynomial symplectomorphism. The
 classical slice question "which cubics c extend" is the fiber question of §6.5.
 
 ### 6.5 Fiber probes over curated cubics c: classical vs quantum (divergence table)
-(pending)
+Method: fix the quadratic tier w = X_c (a fair slice: classically w is *forced* to be
+some X_c by §6.2, so V ∩ {w = X_c} compares the same geometric object in both
+backends). Remaining unknowns: the 80 cubic coefficients v. Exact linear solve of the
+linear substratum (flint), then msolve on the reduced quadrics (-g 2 emptiness with
+"[1]:" certificate; -P 2 for dim/degree; dim measured by generic affine hyperplane
+cuts over ℂ). Confirmed rows (partial, banked as they land):
+
+| c | in V3? | classical fiber | quantum fiber | divergent? |
+|---|---|---|---|---|
+| 0 | (yes) | ⊇ X_(Lagr-quartic) cone, dim ≥ 8 (structure §6.6) | same cone verified exactly at operator level; excess = large-box | not detected |
+| lagr_gen f(u₁,u₂) | yes | dim 5 deg 1 (k9, 210 quadrics) | dim 5 deg 1 (k30, 276 quadrics) | no |
+| lagr_axis f(x₁,ξ₂) | yes | dim 5 deg 1 (k9, 33 quadrics) | dim 5 deg 1 (k30, 178 quadrics) | no |
+| lagr_degen u₁³ | yes | **dim 6 deg 10** (k16) | **dim 6 deg 10** (k=50, 276 quadrics; GB + 6-hyperplane probe, ~20 min) | no |
+| split_LL ξ₁³+x₂³ | yes | dim 5 deg 1 (k9) | dim 5 deg 1 (k30) | no |
+| split_gen f(ξ)+g(x) | no | EMPTY (linear, 170 eqs) | EMPTY (k4, 37 quadrics, -g2 certified) | no |
+| dixmier ξ₁³+x₁³ | no | EMPTY (linear, 116 eqs) | EMPTY (k30, 141 quadrics, -g2) | no |
+| x₁²ξ₁ | no | EMPTY (k7, 9 quadrics) | EMPTY (k30, 144 quadrics) | no |
+| gen_rand1/2 | no | EMPTY (linear, 180 eqs) | EMPTY (unique lin sol violates 25 quadrics) | no |
+| lagr_pert (axis+x₁²ξ₁) | no | EMPTY (k4, 10 quadrics) | EMPTY (k16, 81 quadrics) | no |
+
+Readings:
+1. **No divergence detected**: at every sampled c (all rows now resolved except the
+   c=0 excess question), classical and quantum fibers agree in emptiness/dim/degree. The Lagrangian fibers are affine
+   5-spaces (deg 1) = exactly the quartic freedom d ∈ K[u₁,u₂]₄; the degenerate
+   binary cubic u₁³ has a bigger fiber (dim 6, deg 10) — explained: the commutant of
+   u₁³ is the full ω-degenerate hyperplane u₁^⊥ ⊃ span(u₁,u₂); the point
+   (w,v) = (X_{u₁³}, X_{e⁴}) with {u₁,e}=0, {u₂,e}≠0 verifies **exactly in both
+   backends** (operator level, no ordering correction, since [u₁-op, e-op]=0) and
+   carries a two-sided inverse certificate: exp(ad(u₁³+e⁴)), a 2-step tame
+   automorphism outside the single-Lagrangian-plane family.
+2. The **mechanism** differs even when verdicts agree: classically the S3-stratum
+   linear system is often already inconsistent; quantum solutions survive the linear
+   tier with large slack (k=30–50) and are killed only by the quadrics (which include
+   the ħ-corrections). Shadow-completeness is false (§6.3) yet the varieties have not
+   separated — quantum corrections re-cut the same locus differently.
+3. Non-extendable cubics: generic c, split c, ξ₁³+x₁³, x₁²ξ₁, perturbed-Lagrangian all
+   have EMPTY fibers in both theories: at D=3 the extendable-c locus looks like the
+   Lagrangian family (plus possibly other V3 components) — extension beyond D=2's V3
+   membership is obstructed for everything we sampled outside it, and V3 membership was
+   necessary in every nonempty row.
+
+### 6.5b Pointwise scheme divergence (stage P) — the sharpest new fact
+At 3 rational Lagrangian cubic+quartic flow points (exact solutions of BOTH systems,
+operator-certified), exact Jacobian ranks of the full 120-var systems:
+- classical: rank 106, corank (tangent dim) **14**;
+- quantum: rank 107, corank **13**.
+**The quantum scheme cuts exactly one extra tangent direction at every sampled smooth
+family point.** Decomposition: quantum minus its 6 deg-0 equations has rank 106 = the
+classical rank, and classical + the 6 deg-0 gradients has rank 107 (the 6 S0 gradients
+alone have rank 5, four of which lie in the classical row span). So the entire
+pointwise divergence is carried by the **deg-0 stratum Q0(w,w) + C0(v,v) = 0 — the
+two-channel quantum vertex equations of §3.3**, which at D ≤ 2 were span-redundant
+(§6.1) and at D = 3 become active. This is the first exact witness that
+V_qu ≠ V_cl as schemes at common points: PC-vs-DC divergence is now measured, and it
+sits exactly where the vertex-gap calculus said it should.
+Refinement (exact): restricted to the 14-dim classical tangent, the six S0 gradients
+have **rank exactly 1** — one scalar obstruction functional; the killed direction has
+gradient-type w-part (lies in ker L′, i.e. deforms the cubic c) with a small v-part.
+**At generic family points the quantum vertex imposes exactly one condition
+transverse to the classical moduli** — the lowest-degree avatar of the
+Poisson-lift obstruction (§1.3.3, @octonion's gap), now an explicit rank-1 linear
+functional on classical deformations.
+
+### 6.5c Automorphism certificates (stage N)
+- 5/5 random Lagrangian cubic+quartic flow quadruples (the generic points of the
+  nonempty fiber strata): exact operator 6-CCR PASS, explicit two-sided polynomial
+  inverse constructed ⇒ automorphisms.
+- Unipotent-reduction check at D=3: for 10/10 random non-symplectic linear parts M
+  over family (w,v): deg-0 residual = MᵀJM − J exactly (the quantum constants
+  Q0+C0 vanish on solutions) ⇒ linear part forced symplectic at these points; the
+  §6.0 normalization is consistent at D=3 (caveat: verified pointwise on the family,
+  not yet as an identity on the whole variety).
 
 ### 6.6 Pure-cubic-top stratum (c = 0): the quartic analogue V4 of V3
-(pending)
+The classical c=0 fiber, in quartic coordinates (v = X_d forced by §6.2), is
+**V4 = {quartics d on K⁴ : the four partials pairwise Poisson-commute}** — S4 gives
+210 distinct nonzero quadratic forms in the 35 quartic coefficients. Results:
+- Lagrangian-quartic family d = f(u₁,u₂), ω(u₁,u₂)=0: 10/10 random points in V4,
+  control excluded; exact Jacobian rank 27 at family points ⇒ V4 smooth there of
+  local dim **8** = dim(LGr(2,4)) + dim(binary quartics) = 3+5.
+- Schubert cross-check machinery gates on D=2 (Lagrangian cubic cone: 90 ✓);
+  prediction: deg(Lagrangian-quartic cone in K³⁵) = ∫_{LGr(2,4)} s₃((Sym⁴U*)^∨) =
+  **420** (and 1400 for quintics, the D=4 analogue). msolve codim-8 slice (210
+  quadrics, 27 vars): **TIMEOUT at 1500 s** → emitted `dc2_d3_V4_slice27.ms` as a
+  large-box candidate; the D=2-style "degree = Schubert" identification of V4's
+  top-dimensional part remains a prediction (420), not a verdict.
+- Quantum c=0 fiber: no linear substratum (S2qu is quadratic in v), so no local
+  reduction; but at Lagrangian-quartic family points the quantum fiber Jacobian corank
+  = **8 = classical** (both rank 72/80): no quantum excess locally at the family; the
+  global excess question is the emitted 80-var large-box system (§6.9). Consistent
+  with §6.5b: the S0 divergence mechanism needs w ≠ 0 (grad Q0(w,w) = 0 at w=0).
 
 ### 6.7 Verdict and blockers
-(pending)
+**T1's question — does the classical solution variety deform flatly to the quantum
+one, or do quantum obstructions cut it further? — is answered: the quantum
+obstructions cut further, and we located them exactly.**
+1. **Divergence is real and starts at D=3**, as predicted (§3.4/§4.1): the 90 quantum
+   correction forms are linearly independent of the classical system (§6.3, maximal
+   jump 410→500), and the quantum scheme has strictly smaller tangent space (13 vs 14)
+   at every sampled smooth family point (§6.5b). The active ingredient is precisely
+   the 6 deg-0 vertex equations Q0(w,w)+C0(v,v) — the two-channel quantum vertex of
+   §3.3 — which were span-redundant at D ≤ 2 and become independent at D=3.
+2. **But the divergence is (so far) scheme-level, not support-level**: at every
+   curated cubic c, the fibers V ∩ {w = X_c} agree between backends in
+   emptiness/dimension/degree (11 cubics, incl. a ~20-min GB+probe for the hardest); local
+   dims agree at c=0 family points (corank 8 = 8). The quantum equations re-cut the
+   same solution locus with different (smaller) tangent/multiplicity structure. No
+   quantum-only or classical-only solution point was found anywhere.
+3. **DC(2) status in the slice**: every quantum solution reached (all nonempty fiber
+   strata sampled) is an automorphism — Lagrangian cubic+quartic flow points carry
+   exact operator CCR certificates + explicit two-sided inverses (5/5), and the
+   extendable-cubic locus empirically equals V3 (= Lagrangian-type, D=2's constraint):
+   extension to D=3 unlocked no new cubics and lost none. **No counterexample
+   candidate; DC(2) consistent with HOLDS at Bernstein degree ≤ 3 on everything
+   locally reachable.**
+4. **Precise blockers to a full D ≤ 3 slice theorem** (what remains before "DC(2)
+   holds in degree ≤ 3" is a theorem rather than a sampled verdict):
+   (a) global component structure of V_qu (and V_cl) in K¹²⁰ — emitted, large-box
+   (§6.9); the fiber method covers only the sampled w = X_c slices, and quantum
+   solutions with w outside the gradient family (L′(w) = −B′(v,w) ≠ 0) are not
+   excluded in general — probed: 3 non-gradient displacements X_c + δ at lagr_axis
+   all give EMPTY quantum fibers (2 at linear level, 1 by -g 2 GB), so no such
+   solution nearby, but this remains sampling, not proof;
+   (b) quantum c=0 fiber excess beyond the Lagrangian cone — emitted, large-box;
+   (c) generic-point automorphism certificates for the lagr_degen fiber (dim 6 deg
+   10): a rational point of its extra stratum IS certified (exp(ad(u₁³+e⁴)), §6.5
+   reading 1), but the generic (algebraic) point still needs extraction or a
+   structural argument that the whole fiber is the exp-family of the u₁^⊥ commutant;
+   (d) the classical side inherits the standing D≤2 gap: components of V3/V4 of
+   subfamily dimension are not excluded (Schubert degree matches pin only the
+   top-dimensional part).
+5. The unipotent normalization (linear part = identity) is validated at D=3 pointwise
+   on the family (10/10 non-symplectic probes, §6.5c) but rests on Q0+C0 vanishing on
+   solutions — at D ≥ 3 this is a theorem obligation, not a triviality (a
+   counterexample with non-symplectic linear part balanced by quantum constants is
+   excluded only where S0-vanishing is proved).
 
 ### 6.8 Degree-4 cost estimate
-(pending)
+Counts (programmatic): unknowns 4×(10+20+35) = **260**; equations 6×Σ_{j≤6} dim Sym^j
+= **1260**, still all ≤ quadratic in coefficients; quantum corrections: s=2 at strata
+4..0, s=3 at strata 2..0, s=4 at stratum 0 (deg-0 gets ħ²+ħ³+ħ⁴ terms). Measured-cost
+scaling from D=3: system build and all exact linear algebra (linear strata, span test,
+Jacobian coranks — flint) stay minutes-scale at D=4 (matrices ≤ ~1300×2e4). The
+binding constraint is msolve on fiber reductions: at D=3 the residual quadric systems
+had k ≤ 50 free vars (~20 min GB+probes at k=50); at D=4 the same construction gives k ≈
+60–120 (quartic tier v′ has 140 unknowns, linear tiers eliminate ~45%), i.e. **days to
+intractable locally — large-box territory for every nonempty fiber**; curated EMPTY
+fibers (linear-level or small-k) likely still local. Recommended D=4 scope: linear
+strata + span/Jacobian divergence measurements locally (cheap, and the S0-mechanism
+prediction is testable there), fibers on the big box.
 
 ### 6.9 Large-box candidates emitted
-(pending)
+All in `systems/dc2/` (msolve format, char 0, exact integer coefficients):
+- `dc2_d3_qu_full120.ms` / `dc2_d3_cl_full120.ms` (54/44 KB): the canonical unsliced
+  420/414-equation systems in 120 vars. Goal: global component structure of V_qu vs
+  V_cl (GB/dim/degree). Estimate: 120-var quadratic GB — big-box days+, RAM unknown;
+  slice on arrival as needed.
+- `dc2_d3_qu_full_s65.ms` / `dc2_d3_cl_full_s65.ms` (8.2/7.5 MB): random 65-dim affine slabs
+  substituted (0-dim iff a dim-55 component exists; EMPTY = no top-dim component;
+  posdim = component of dim > 55, impossible classically — sanity lane). Estimate:
+  65-var quadratic GB, hours–days.
+- `dc2_d3_fiber_zero_qu.ms` (28 KB): quantum c=0 fiber, 276 quadrics in 80 vars.
+  Goal: does V_qu ∩ {w=0} exceed the Lagrangian-quartic cone? (Locally it does not:
+  corank 8 = family dim at family points, matching classical — §6.6.) Estimate: 80-var
+  GB, hours–days big-box.
+- `dc2_d3_fiber_lagr_degen_qu.ms` (311 KB): RESOLVED locally after emission
+  (-g 2 GB in minutes; + hyperplane -P 2 probes ⇒ dim 6 deg 10 = classical; ~20 min
+  total; reproducible via `--stage Ldeep`); kept as a big-box calibration instance.
+- `dc2_d3_V4_slice27.ms` (819 KB): V4 codim-8 random affine slice, 210 quadrics in
+  27 vars; local msolve -P 2 TIMEOUT at 1500 s. Goal: 0-dim degree; = **420** ⟺ V4's
+  top-dimensional part is exactly the Lagrangian-quartic cone (the D=3 analogue of
+  the degree-90 identification of §4.3G). Estimate: hours on a big box (deg ~10²–10³).
