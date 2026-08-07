@@ -36,6 +36,8 @@ def main(argv=None):
                     help="print the catalog with pre-filter cells; no compute")
     ap.add_argument("--queues", type=int, metavar="N",
                     help="write N per-box queue.txt files from manifests")
+    ap.add_argument("--resume", action="store_true",
+                    help="skip families whose manifest.json already exists")
     args = ap.parse_args(argv)
 
     chars = tuple(int(c) for c in args.chars.split(",") if c != "")
@@ -66,6 +68,11 @@ def main(argv=None):
         pllc = get_pllc(4 * max(max(r.cd.A0.a, r.cd.A0.b) for r in todo))
         settled = emitted = 0
         for r in todo:
+            if args.resume and os.path.isfile(
+                    os.path.join(args.outdir, r.name, "manifest.json")):
+                print(f"== {r.name}: manifest exists, skipped (--resume)",
+                      flush=True)
+                continue
             print(f"== {r.name} (deg {r.deg}, mn {r.mn})", flush=True)
             man = farm.run_family(r, args.outdir, relroot=ROOT,
                                   prefilter=not args.no_prefilter,

@@ -433,9 +433,15 @@ def execute_case(entry, outdir, relroot, chars=PRIMES_DEFAULT,
         # sound mid-cascade state; probe lane only -> mod-p chars (the
         # archived reg_9_27/reg_7_21 partial convention)
         pchars = tuple(c for c in chars if c) or chars
-        _emit(records, outdir, relroot, f"{entry['name']}_partial", "partial",
-              pchars, C.write_msolve)
-        entry["verdict"] = "PARTIAL-EMITTED"
+        done = _emit(records, outdir, relroot, f"{entry['name']}_partial",
+                     "partial", pchars, C.write_msolve)
+        if not done and 0 in chars and 0 not in pchars:
+            # every mod-p emission tripped the prime-hygiene guard (a
+            # cleared coefficient vanishes mod p): fall back to char 0
+            done = _emit(records, outdir, relroot, f"{entry['name']}_partial",
+                         "partial", (0,), C.write_msolve)
+        entry["verdict"] = ("PARTIAL-EMITTED" if done
+                            else "PARTIAL-UNEMITTED(p-hygiene)")
         return entry
     assert st == "reduced", st
     _emit(records, outdir, relroot, f"{entry['name']}_core", "core", chars,

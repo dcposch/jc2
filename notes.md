@@ -248,3 +248,10 @@
 - **Farm Phase 3 gate-complete**: driver agent hit the account credit ceiling (resets Aug 8 8pm PT) but deliverables were on disk; I ran gates locally — ALL FARM TESTS PASS incl GF6 (dry run reproduces S4 archives, 22 files byte-identical incl char 0, pivot product == AUDIT.md) and GF7 (dispatch covers 28 systems, balanced loads). deg≤150 sweep emission running locally under FLINT (13/~30 families done).
 - **Ultramem I-leaf retired** (scp-script pattern beat the ssh-255 flake): lane4+msolve killed, cron removed. Rationale: replication, not novelty (user directive). cCa2/cCa6 Singular lifts untouched, still resident (~114 GB).
 - **Blocked on credits until Aug 8 8pm PT**: sheet-6 case-bash build agent, DC(2) degree-3 slice agent. Local script work unaffected.
+
+## 2026-08-07 (loop, later): deg<=150 sweep DONE; farm dispatch underway; credits restored
+- Sweep final: 34 families, 62 .ms files (4.5 GB, largest 565 MB), 22 emitted-system cases + partials/cores. NOT COVERED (reduce4 STUCK, psi_j precondition / multi-root chain edge): 12_36mn23d144_r0-r2, 6_15mn27d147, 10_40mn32d150_r0-r1 — these stay open regardless of farm verdicts; candidates for a reduce4 extension later. PARTIAL/CORE emissions are valid (cascade steps are equivalences); they're just less reduced.
+- Queues: --queues 2 -> box01 31 jobs/2.6GB, box02 31 jobs/2.2GB. Runner sorts smallest-first for early verdicts; NO guest poweroff (FARM_DONE marker + control-plane stop).
+- Fleet: claude-x8i-3 restarted (new IP 54.175.21.169, 64c/991GB, msolve OK) <- box01 rsync in flight. jc-b restarted (32c/960GB, crontab wiped clean, msolve OK) <- box02 tgz in flight. ultramem-1 continues lifts only.
+- Credits: user purchased more; probe confirmed live. Launched queued agents: sheet-6 case-bash build + DC(2) degree-3 slice (both in flight).
+- Driver agent retired (its gates I re-ran locally: ALL FARM TESTS PASS, GF6 byte-identical vs S4 archives, GF7 dispatch cover).

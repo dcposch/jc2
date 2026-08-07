@@ -338,3 +338,94 @@ open terrain: nobody has published even the D ≤ 2 slice structure we verified 
 quantum tower calculus is a controlled perturbation of machinery we already own, and
 every increment either accumulates evidence/exclusions or finds the counterexample at
 the lowest degree where it can live. Right-sized next action: T1 (D=3 quantum slice).
+
+## Degree-3 slice results (2026-08-07, `cases/dc2_deg3.py`)
+
+### 6.0 Setup: the D=3 unipotent slice system
+Quadruples P_j = x_j + w_j + v_j, Q_i = ξ_i + w'_i + v'_i (w quadratic, v cubic;
+constants commute with everything and are free; linear part normalized to identity —
+validity of that normalization re-checked at D=3 in §6.7). Unknowns: 4×(10+20) = **120**.
+The 6 CCR residuals stratify by total degree; every equation is ≤ quadratic in the 120
+coefficients. Machine-verified counts (`--stage H`, cross-checked coefficient-by-
+coefficient against direct operator/Poisson residuals at random points):
+
+| stratum | # eqs | classical (s=1) content | quantum corrections |
+|---|---|---|---|
+| deg 4 | 210 | {v,v} | none |
+| deg 3 | 120 | {v,w} | none |
+| deg 2 | 60 | L(v) + {w,w} | ħ²: (v,v) |
+| deg 1 | 24 | L′(w) | ħ²: (v,w) |
+| deg 0 | 6 | — (none) | ħ²: (w,w) + ħ³: (v,v) |
+
+Quantum system: 420 equations; classical (PC-shadow) system: 414. Constants and
+linear parts (λ-terms) of all equations agree between backends — the two varieties
+share their linearization; corrections are pure μ (quadratic) terms. The ħ-grading
+wt(w)=1, wt(v)=2 makes the classical system homogeneous and the corrections
+higher-weight: V_qu(ħ) ≅ V_qu(1) for all ħ≠0 via (w,v)↦(sw,s²v), ħ=s², so
+quantum-vs-classical is a weighted flat-degeneration question.
+**Correction to §5.1/T1**: the first quantum corrections are s=2 of cubic×cubic
+hitting the **deg-2** residuals (not deg-1); deg-1 corrections are s=2 of
+cubic×quadratic; both first bite at D=3 as claimed.
+
+### 6.1 Gate: degree-2 reproduction
+- Environment gate: `python3 cases/dc2_slice.py` rerun 2026-08-07, 9 s, ALL PASS,
+  byte-level agreement with §4.3: rank 20 kernel = gradient family; span 45 with the 6
+  quantum deg-0 forms inside (45→45); F₂ census 2¹⁶; Lagrangian family 25/25, local dim
+  7; 5/5 operator certificates; msolve slice degrees 90/90, all real points
+  Lagrangian-type.
+- Generalized-code gate (`dc2_deg3.py --stage gate`, D=2 through the new stratified
+  builder, cross-checked term-by-term against direct operator/Poisson residuals): deg-1
+  stratum 24×40 rank 20, kernel = X_cubic family (rank 20); deg-2 classical forms
+  restricted to the gradient chart w = X_c: span 45, +6 quantum deg-0 forms → 45. PASS,
+  identical to §4.3 B/C. Bonus (new, stronger): the 6 quantum deg-0 forms lie in the
+  span of the 60 classical deg-2 forms already **ambiently on K⁴⁰** (rank 60 → 60), not
+  just restricted to the chart — D ≤ 2 shadow-completeness is an ambient identity.
+
+### 6.2 Linear strata / tangent space at the identity
+- deg-1 stratum linear map L′ on w: 24×40, rank **20**, kernel = X_c (Hamiltonian
+  fields of cubics) — the D=2 stage-B system, unchanged.
+- deg-2 stratum linear map L on v: 60×80, rank **45**, and the 35-dim X_d family
+  (Hamiltonian fields of quartics d ∈ Sym⁴) lies in the kernel with rank 35 ⇒
+  **ker L = X_(Sym⁴) exactly** (Poincaré-lemma analogue one level up).
+- Tangent space of both varieties at the identity quadruple = ker L′ ⊕ ker L,
+  dim **55 = 20 + 35** (linearizations of quantum and classical systems coincide).
+
+### 6.3 Quantum-correction placement and span test (divergence at linear level)
+Exact rank computation over ℚ (flint) on coefficient vectors of all equations
+(3832 monomial columns):
+- classical system: 414 equations, rank **410** (4 linear syzygies among the
+  classical generators; the quantum 420 have rank **420** — no syzygy);
+- adding the quantum corrections: +6 deg-0 → 416; +24 deg-1 → 434; +60 deg-2 → 470;
+  all 90 → **500 = 410 + 90**: **every quantum correction form is linearly
+  independent of the classical system** (and of each other).
+Contrast D=2 (§6.1): there the quantum forms sat inside the classical span even
+ambiently. **The shadow-completeness mechanism dies at D=3 at the generator level**,
+by the maximal possible margin. Caveat: span divergence of generators does not by
+itself separate the varieties (a correction could still vanish on V_cl without being
+in the linear span) — the geometric separation is §6.5's job.
+
+### 6.4 Classical chart: (c,d) parametrization and the exactness obstruction
+Machine-verified (5/5 random cubics c, exact): the 3-jet-of-flow point
+(w, v) = (X_c z, ½X_c² z) kills residual strata 1 and 2 identically; strata 3/4 are
+generically nonzero. Since ker L′ = X_(Sym³), ker L = X_(Sym⁴) (§6.2) and
+½X_c² z is a particular solution of L(v) = −{w,w}-source for every c, the classical
+variety is exactly
+  V_cl ≅ {(c,d) ∈ Sym³ ⊕ Sym⁴ = K⁵⁵ : S3, S4 vanish at (X_c z, ½X_c² z + X_d z)},
+i.e. 330 obstruction equations (deg ≤ 4 in (c,d)) = the failure of the degree-3 jet
+of a Hamiltonian flow to close up to an exact polynomial symplectomorphism. The
+classical slice question "which cubics c extend" is the fiber question of §6.5.
+
+### 6.5 Fiber probes over curated cubics c: classical vs quantum (divergence table)
+(pending)
+
+### 6.6 Pure-cubic-top stratum (c = 0): the quartic analogue V4 of V3
+(pending)
+
+### 6.7 Verdict and blockers
+(pending)
+
+### 6.8 Degree-4 cost estimate
+(pending)
+
+### 6.9 Large-box candidates emitted
+(pending)
