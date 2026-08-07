@@ -255,3 +255,4 @@
 - Fleet: claude-x8i-3 restarted (new IP 54.175.21.169, 64c/991GB, msolve OK) <- box01 rsync in flight. jc-b restarted (32c/960GB, crontab wiped clean, msolve OK) <- box02 tgz in flight. ultramem-1 continues lifts only.
 - Credits: user purchased more; probe confirmed live. Launched queued agents: sheet-6 case-bash build + DC(2) degree-3 slice (both in flight).
 - Driver agent retired (its gates I re-ran locally: ALL FARM TESTS PASS, GF6 byte-identical vs S4 archives, GF7 dispatch cover).
+- 2026-08-07: FARM LIVE — box01 (AWS Xeon 64c) + box02 (jc-b 32c), 62 jobs total, smallest-first; first EMPTY verdicts already in.
