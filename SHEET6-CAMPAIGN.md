@@ -8,9 +8,15 @@ td<=5: 0 (CLOSED, independent of AF2). td=6 single-pole: 4 r9/M2 classes
 (entries thesis-forced by the pin; 2 slack-1, 2 slack-0). td=6 two-pole:
 residue A only, funneled through the UNIQUE merged child (6,12,3,2,5)@lam0
 with rigid coefficient template (a1/a2 = 2+sqrt(3), unique up to scale).
-Errata found: E1-E9 (five proof-level). Next kills: lam_root>=1 lemma
-(cuts the book 8->4); coefficient-level lift of the rigid template
-(construction vs h1-branch accounting) decides the rest.
+Errata found: E1-E10 (five proof-level). lam_root>=1 lemma REFUTED
+(SHEET6-LROOT.md): case IV's own hypothesis (0,y) not in V_2a forces
+lambda_root = 0 (single root direction — no branch separates at the root);
+the Prop 7.5 (22) ledger balances at 0 for all 8; book stays 8. Yield: all
+8 carriers forced to a SINGLE x-side cv cluster (kappa=1, unsplit below
+height R); slack-0 classes totally budget-rigid (delta_a = 0 on EVERY
+fiber). Next kills: delta-strictness at direction collisions (Prop 7.3
+mult>=2 excess); coefficient-level lift of the rigid template + x-side
+pin (construction vs h1-branch accounting) decides the rest.
 
 ## 0a. Assembly-layer extraction (thesis pp. 37-60, needed before enumeration)
 
