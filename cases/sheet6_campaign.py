@@ -397,6 +397,157 @@ def gate():
     return ("GATE PASS: Prop 9.1 11/11; Stmt 9.6 pairs {(21,15),(20,16)} + erratum "
             "(75,51) reproduced; engine reproduces St 9.6 (iii),(iv),(v) with lambdas 2,2,0")
 
+# ---------------------------------------------- tails3: III structural filter
+# SHEET6-III.md: St 3.16/3.18 + Def 3.1/Not 3.4/3.5/3.8 extraction. Facts used:
+#   N1: any vertex with nu >= 2 is I_P(alpha_j), kap-bar = (kappa-beta_j)/e_j,
+#       nu = e_{j-1}/e_j => gcd(kap-bar, nu) = gcd(beta_j, e_{j-1})/e_j = 1.
+#   E5: printed Prop 9.3 (g)/(h) [den nu_F] are Notation-3.5-consistent only if
+#       nu_F = nu_G; corrected (g')/(h') have den nu_G:
+#       kapF = (nuF*kapG + n)/nuG, DF/i = mu(nuF*rho + n)/nuG,
+#       ratio (f) unchanged: (mu+k*nuF)/(1+k*nuF) = mu(nuF*rho+n)/(nuF*kapG+n).
+#   => gap = DF/i - kapF = mu(kapG - rho)/(k*nuG); with AF2
+#      lambda_III >= k*max(1, ceil(gap/1)) >= ceil(Lam), Lam := mu(kapG-rho)/nuG.
+#   Locked tails (kapG = rho(nuG+1) identically): Lam = mu*rho (s-free), and
+#      rhoF = mu*rho/(k(mu-1)), kapF = rhoF(1+k*nuF), DF/i = rhoF(mu+k*nuF).
+import re as _re2
+
+def parse_node(msg):
+    m = _re2.search(r"at Q\[rho=([-\d/]+),nu=([^,\]]+),M=(\d+),kap=([^,\]]+),"
+                    r"pc=(\d+)\]", msg)
+    if not m: return None
+    def pf(t):
+        mm = _re2.fullmatch(r"(?:(-?\d+)s)?([+-]?\d+)?", t)
+        if not mm or (mm.group(1) is None and mm.group(2) is None): return None
+        return (int(mm.group(1) or 0), int(mm.group(2) or 0))
+    nu, kap = pf(m.group(2)), pf(m.group(4))
+    if nu is None or kap is None: return None
+    return Node(Fr(m.group(1)), nu, int(m.group(3)), kap, int(m.group(5)))
+
+def is_locked(node):
+    """kap(s) == rho*(nu(s)+1) identically (lambda=0-family lock)."""
+    r = node.rho; ka, kb = LF(node.kap); na, nb = LF(node.nu)
+    return Fr(ka) == r*na and Fr(kb) == r*(nb + 1)
+
+def budget_kill_all_s(node, mu, B, smin=0):
+    """Certify mu*(kap(s)-rho) > B*nu(s) for all integer s >= smin (exact)."""
+    L = node.rho.denominator
+    ka, kb = LF(node.kap); na, nb = LF(node.nu)
+    a = mu*L*ka - B*L*na
+    b = mu*L*(ka*smin + kb) - mu*node.rho.numerator - B*L*(na*smin + nb)
+    return a >= 0 and b > 0
+
+def n1_residues(nu, kap):
+    """Killed residues {r mod R : gcd(nu(s),kap(s)) > 1 for s == r}, R the
+    resultant |a*d - b*c| (any common prime divides R; s-dependence mod p only,
+    p | R => set periodic mod R). Sample-asserted out to 3R."""
+    (a, b), (c, d) = LF(nu), LF(kap)
+    R = abs(a*d - b*c)
+    assert R != 0, "proportional nu/kap forms"
+    killed = [r for r in range(R) if gcd(a*r + b, c*r + d) > 1]
+    for s in range(R, 3*R):
+        assert (gcd(a*s + b, c*s + d) > 1) == ((s % R) in killed)
+    return R, killed
+
+def cong_survivors(node, mu, B, numax=600):
+    """Locked node, E5 arithmetic. Enumerate k (lambda(k) <= B) and nu_F:
+    require kapF = rhoF(1+k*nuF) in N [(h') <=> n-congruence], M_F =
+    gcd(mu-1, 1+k*nuF) >= 2 [Prop 8.4], gcd(kapF, nuF) = 1 [N1@F], and an
+    s-window with n(s) = kapF*nu(s) - nuF*kap(s) >= 1. Returns (witnesses,
+    certified_none): certified_none=True iff no nu_F in a full period passes
+    even the periodic conditions (then the empty result is exact, not bounded).
+    PIT: each witness's (f)/(h') consistency asserted at 3 sample s."""
+    assert is_locked(node)
+    Lam = mu*node.rho
+    wits, any_periodic_pass = [], False
+    for k in range(1, B + 1):
+        lam_k = k*max(1, -(-Lam.numerator // (Lam.denominator*k)))
+        if lam_k > B: continue
+        rF = Fr(mu, k*(mu - 1))*node.rho
+        period = rF.denominator*(mu - 1)
+        for nuF in range(2, numax + 1):
+            kapF = rF*(1 + k*nuF)
+            MF = gcd(mu - 1, 1 + k*nuF)
+            if kapF.denominator == 1 and MF >= 2 and nuF <= 2 + period:
+                any_periodic_pass = True
+            if kapF.denominator != 1 or MF < 2: continue
+            if gcd(int(kapF), nuF) != 1: continue
+            na, nb = LF(node.nu); ka, kb = LF(node.kap)
+            n_a = int(kapF)*na - nuF*ka
+            n_bq = Fr(int(kapF)*nb) - Fr(nuF)*Fr(kb)     # kap form is integer
+            if not (n_a > 0 or (n_a == 0 and n_bq >= 1) or
+                    Fr(n_a*6) + n_bq >= 1):              # some s >= 6 has n>=1
+                continue
+            for s in (6, 7, 9):                          # PIT on (f)+(h')
+                nuG, kapG = lf_eval(node.nu, s), lf_eval(node.kap, s)
+                n = int(kapF)*nuG - nuF*kapG
+                if n < 1: continue
+                assert (mu + k*nuF)*(nuF*kapG + n) == \
+                       (1 + k*nuF)*mu*(nuF*node.rho + n), "E5 ratio PIT"
+                assert (nuF*kapG + n) % nuG == 0 and \
+                       (nuF*kapG + n)//nuG == int(kapF), "E5 (h') PIT"
+            wits.append((k, nuF, MF, int(kapF), lam_k))
+            if len(wits) >= 4: return wits, False
+    return wits, (not any_periodic_pass)
+
+def run_tails3():
+    print("== tails3: case-III structural admissibility (SHEET6-III.md) ==")
+    print("filters: N1 gcd(kap,nu)=1 [Def 3.1+Not 3.4/3.5]; E5-corrected "
+          "(g')/(h') => lambda_III >= ceil(mu(kap-rho)/nu) [H5a/H5b + AF2]")
+    rows = []
+    for lam_t, budget in [(3, 1), (4, 2), (5, 3), (6, 4)]:
+        for name, Lam, sanct, node in entry_nodes(lam_t):
+            r = bash(node, budget)
+            for tr, lam in r['open']:
+                mm = _re2.match(r"mu=(\d+) III: s-dependent", tr[-1])
+                if not mm: continue
+                nd = parse_node(tr[-1])
+                if nd is None: continue
+                tag = f"td{lam_t}:{name}" + ("" if sanct else "/ext")
+                rows.append((tag, budget, nd, int(mm.group(1)), lam))
+    seen, summary = set(), {}
+    for tag, budget, nd, mu, lam in sorted(rows, key=lambda x: (str(x[2].shape()), x[3], x[1]-x[4])):
+        key = (nd.shape(), mu, budget - lam, tag)
+        if key in seen: continue
+        seen.add(key)
+        B = budget - lam
+        lock = is_locked(nd)
+        Lam3 = mu*nd.rho if lock else None
+        shp = f"({nd.rho},{lf_str(nd.nu)},{nd.M},{lf_str(nd.kap)})"
+        head = f"[{tag}] {shp} mu={mu} spent={lam} B_rem={B} " \
+               f"{'LOCK Lam=' + str(Lam3) if lock else 'UNLOCKED'}"
+        if budget_kill_all_s(nd, mu, B, smin=0):
+            verdict = f"KILL-BUDGET-E5 (lambda_III >= ceil({Lam3 if lock else 'Lam(s)'}) > {B} for all s)"
+        else:
+            R, killed = n1_residues(nd.nu, nd.kap)
+            n1txt = f"N1 kills s mod {R} in {killed}" if killed else "N1 silent"
+            if len(killed) == R:
+                verdict = f"KILL-N1 (all residues mod {R})"
+            elif lock:
+                wits, certified = cong_survivors(nd, mu, B)
+                if not wits and certified:
+                    verdict = f"KILL-CONG (no (k,nuF) class; certified); {n1txt}"
+                elif not wits:
+                    verdict = f"NO-WITNESS<=600 (uncertified); {n1txt}"
+                else:
+                    w = ", ".join(f"k={k},nuF={nf},MF={mf},kapF={kf},lam={lk}"
+                                  for k, nf, mf, kf, lk in wits[:2])
+                    verdict = f"SURVIVES-EXTRACTION ({n1txt}; residual: {w}, ...)"
+            else:
+                verdict = f"UNLOCKED-OPEN; {n1txt}"
+        print(f"{head}\n    -> {verdict}")
+        skey = (nd.shape(), mu)
+        best = summary.get(skey)
+        if best is None or B > best[0]:
+            summary[skey] = (B, verdict.split(' ')[0], tag)
+    kb = sum(1 for v in summary.values() if v[1].startswith('KILL'))
+    sv = sum(1 for v in summary.values() if v[1].startswith('SURVIVES'))
+    print(f"\n== shape summary (weakest-budget occurrence) == "
+          f"{len(summary)} (shape,mu) pairs: {kb} KILLED, {sv} SURVIVE, "
+          f"{len(summary)-kb-sv} other")
+    for (shp, mu), (B, v, tag) in sorted(summary.items(), key=lambda x: str(x)):
+        rho, nu, M, kap = shp
+        print(f"  ({rho},{lf_str(nu)},{M},{lf_str(kap)}) mu={mu} maxB={B}: {v}  [{tag}]")
+
 # thesis nodes (engine-native s>=0 forms; V911 = 9.6(v) output form):
 V96 = Node(Fr(1, 2), 3, 2, 5, 2)
 V97 = Node(Fr(1, 3), 7, 3, 5, 3)
@@ -471,6 +622,8 @@ if __name__ == "__main__":
                 print(f"  OPEN minlam={min(lams)} x{len(lams)} {k[:80]} | {nd[:70]}")
             for k, lams in sorted(ivshapes.items())[:8]:
                 print(f"  IVSHAPE minlam={min(lams)} x{len(lams)} {k[:95]}")
+    if ph == "tails3":
+        run_tails3()
     if ph in ("bash", "all"):
         print(f"\n=== td=6 bash: single-pole entries Lambda={args.lam}, budget={args.budget} ===")
         for name, Lam, sanct, node in entry_nodes(args.lam):
