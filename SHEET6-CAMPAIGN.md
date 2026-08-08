@@ -97,6 +97,7 @@ high). New Λ=7 rows beyond the 11: (2,7)×1, (3,7)×1, (6,7)×1 (all with
   row11→(ρ=1,ν=5,κ̄=11). M-menu per AF3: M | deg p_F (thesis-sanctioned subset:
   M | gcd(D,P)); μ | M (St 8.4). μ-admissibility needs NO deg(p)-content condition
   (the formal j-unit rescales), so the M-menu is the only entry freedom.
+  [SUPERSEDED by SHEET6-AF3.md §1: no menu — M = gcd(deg p_F, deg p_g,F) exactly.]
 - **Double-pole (3,3)**: Prop 8.4 (M≠1) REQUIRES Ta,pole singleton ⇒ every M=1 kill
   is unavailable. OPEN — needs a Prop-8.4 analogue for 2 dicriticals (genuine math,
   see §6).
@@ -219,6 +220,11 @@ compute).
 6. **AF3 entry-M menu**: M | gcd(D,P) sanctions rows as thesis does (row-4 usage);
    superset runs (M | P) add only more III-tails, no new survivors. Justifying the
    sanction (or bashing the superset tails) closes it.
+   **RESOLVED (SHEET6-AF3.md)**: sanction REFUTED — thesis pins M =
+   gcd(deg p, deg p_g) exactly (Not 8.1 + Prop 5.1(iii), table (23)); r9→M2
+   (the "ext" value) is forced, r8→M3, all other rows entry-dead (M=1 vs
+   Prop 8.4, any td ≤ 6). Single-pole td6 = 4 r9/M2 classes, unconditional
+   at entry; td≤5 residual 0 independent of AF2. Engine: hiii_compose `pin`.
 7. **μ-completeness at entries**: μ | M with M from the menu; if pole-vertex M can
    exceed deg p_F divisors (j-rescaling), larger μ become possible. All μ ≥ 7
    branches die instantly in spot checks (ratio > deg-bound), but a uniform μ-bound

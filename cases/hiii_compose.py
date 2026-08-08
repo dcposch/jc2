@@ -297,7 +297,52 @@ def gate_compose():
     return f"COMPOSE GATE PASS: {len(wits)} tails3 witnesses reproduced by E5 closed forms"
 
 
+# --- AF3' M-pin stage (SHEET6-AF3.md; additive) -------------------------
+# At F in T_a,pole: m_F = 0 (Prop 5.1(i)/(iii) + Not 5.1/5.2, pp. 23-24), so
+# Not 8.1's family (p. 39) collapses to {h_0} = {g} (Prop 4.2, p. 19) and
+# M_F = gcd(deg p_F, deg p_g,F) EXACTLY -- a table-(23) (p. 46) lookup, not
+# a menu. Prop 8.4 (single-pole) then kills every gcd = 1 row at entry.
+PIN_EXPECT = {  # printed table (23) degree pairs -> pinned M (A2P front 7c)
+    (2, 2, 2, 3): 1, (2, 2, 1, 6): 1, (4, 2, 2, 6): 1, (2, 4, 3, 4): 2,
+    (3, 3, 3, 4): 1, (3, 3, 2, 6): 1, (2, 2, 2, 5): 1, (2, 6, 5, 6): 3,
+    (3, 6, 5, 6): 2, (4, 4, 4, 5): 1, (5, 5, 5, 6): 1}
+
+
+def pin_entry_nodes(lam_target):
+    """Entries with M pinned to gcd(P, Pg); gcd = 1 rows are entry-dead."""
+    rows = sorted(sc.prop91(Lmax=7),
+                  key=lambda r: (r[4], r[0], r[1], r[2], r[3]))
+    ent = []
+    for (al, be), (D, Dg), (P, Pg), nu, Lam in rows:
+        if Lam != lam_target:
+            continue
+        Mpin = gcd(P, Pg)
+        assert PIN_EXPECT[(D, P, nu, Lam)] == Mpin, "pin vs table (23)"
+        tag = f"({al},{be})D{D}P{P}nu{nu}Mpin{Mpin}"
+        if Mpin == 1:
+            print(f"[{tag}] ENTRY DEAD: M = gcd({P},{Pg}) = 1 (Prop 8.4)")
+            continue
+        ent.append((tag, Lam, True, Node(Fr(D, P), nu, Mpin, D + Dg, P)))
+    return ent
+
+
 if __name__ == "__main__":
+    if 'pin' in sys.argv[1:]:                  # SHEET6-AF3: pinned entries
+        sc.IIB_DERIVED = True
+        print("[AF3'] entry M pinned to gcd(deg p, deg p_g) per Not 8.1 + "
+              "Prop 5.1(iii); IIB_DERIVED=True (AF2 default)")
+        print(gate_compose())
+        tot = {}
+        for lam_t in (3, 4, 5):
+            s_, _ = run_compose(pin_entry_nodes(lam_t), lam_t, lam_t - 2,
+                                f"PIN td<=5 Lambda={lam_t}")
+            tot[lam_t] = s_
+        s6, _ = run_compose(pin_entry_nodes(6), 6, 4, "PIN td=6")
+        tot[6] = s6
+        print("\n==== PINNED GRAND: "
+              + ", ".join(f"td{k}: {len(v)}" for k, v in tot.items())
+              + " ====")
+        sys.exit(0)
     if 'iib' in sys.argv[1:]:                  # SHEET6-AF2: derived IIb pricing
         sc.IIB_DERIVED = True
         print("[AF2] IIB_DERIVED=True: IIb priced per St 9.3 (24) "
