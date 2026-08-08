@@ -1,7 +1,14 @@
 # SHEET6 CAMPAIGN — systematic td=6 case enumeration + bash (Sigray engine)
 
-Status: PHASE 1 COMPLETE + REVIEWED (2026-08-07, SHEET6-REVIEW.md: all fronts
-CONFIRMED, promoted; one count corrected in §5 r10/M4). Follow-on to
+Status: PHASE 2 COMPLETE (2026-08-07). Phase 1 reviewed by SHEET6-REVIEW.md
+(all fronts CONFIRMED). Phase 2 = H3 audit (SHEET6-H3.md: psi-budget proved,
+G2 closed, thesis td<=5 repairable) + III extraction (SHEET6-III.md: E5/N1)
++ combined review with composition (SHEET6-HIII-REVIEW.md, engine
+cases/hiii_compose.py, both gates PASS): **td=6 SANCTIONED RESIDUAL = 0**
+mod {H1,H2,H4,AF2,AF3,H5a/b} + proved H3q. Grand composed residual:
+td5: 2 sanctioned classes (both die if the AF2-IIb pricing audit decides),
+td6: 13 AF3-superset classes + 1 SF1(ext). Next leverage: AF2-IIb audit,
+AF3 sanction justification, two-pole (3,3) config. Follow-on to
 SHEET6-PILOT.md. Driver:
 `cases/sheet6_campaign.py` (gate PASS). HEADLINE: the mechanizable layer of the
 td=6 case bash is built and run — all 6 single-pole Λ=6 entries + the td≤5

@@ -1,6 +1,9 @@
 # SHEET6-III — Case-III structural admissibility (St 3.16/3.18 extraction)
 
-Status: COMPLETE (2026-08-07). Mission: SHEET6-CAMPAIGN.md §6 item 3. Extract
+Status: COMPLETE + PROMOTED (2026-08-07, SHEET6-HIII-REVIEW.md: E5/N1
+CONFIRMED with p.53 subscript-slip corroboration; the residual book is
+SUPERSEDED by the composition, cases/hiii_compose.py).
+Mission: SHEET6-CAMPAIGN.md §6 item 3. Extract
 the case-III side conditions of Prop 9.3 (St 3.16/3.18 + the Puiseux jump
 structure they encode) from papers/sigray_full.pdf, translate them into
 Q-datum arithmetic, and run them as a filter (`tails3` stage) over the ~15

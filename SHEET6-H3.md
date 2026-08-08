@@ -1,6 +1,8 @@
 # SHEET6-H3.md — Settling H3 (root-vertex kill of case-IV terminals)
 
-Status: COMPLETE (2026-08-07). Auditor: Claude. All thesis citations read
+Status: COMPLETE + PROMOTED (2026-08-07, SHEET6-HIII-REVIEW.md: psi-budget
+CONFIRMED, G2 closure stands; the §5 survivor book is SUPERSEDED by the
+composition, cases/hiii_compose.py). Auditor: Claude. All thesis citations read
 on-page (papers/sigray_full.pdf; page numbers = printed = pdf pages).
 Question (SHEET6-CAMPAIGN.md §6 item 1 / §0b G2; SHEET6-REVIEW.md §2 CONFIRMED
 load-bearing): does a characteristic sequence terminating at the root vertex
