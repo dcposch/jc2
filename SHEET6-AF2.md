@@ -1,6 +1,8 @@
 # SHEET6-AF2.md — AF2 audit: the λ-cost rule derived from St 9.3 (24); case-IIb pricing decided
 
-Status: COMPLETE (2026-08-07). Auditor: Claude. Mission: SHEET6-CAMPAIGN.md §6
+Status: COMPLETE + PROMOTED AS-IS (2026-08-07, SHEET6-A2P-REVIEW.md: all
+fronts CONFIRMED; E6 proven at proof-level; two bonus tightenings noted).
+Auditor: Claude. Mission: SHEET6-CAMPAIGN.md §6
 item 5 + SHEET6-HIII-REVIEW.md §§5/7 flagged asymmetry (IIb extra-orbit
 pricing). Ground truth read on-page: papers/sigray_full.pdf pp. 27-45, 48-55
 (text layer verified with pdftotext for every formula quoted below).

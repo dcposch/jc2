@@ -1,6 +1,9 @@
 # SHEET6-2POLE.md — the two-pole (3,3) configuration at td = 6
 
-Status: DRAFT (2026-08-07, this session). Target: SHEET6-CAMPAIGN.md §6 item 4,
+Status: PROMOTED (2026-08-07, SHEET6-A2P-REVIEW.md: mathematical core
+CONFIRMED on all fronts; three bookkeeping fixes applied — derived IIb
+pricing now engine default, 95.6% histogram, §2d M_pole pin; survivor book
+= residue A + 2 boundary classes). Target: SHEET6-CAMPAIGN.md §6 item 4,
 the last structural gap of the td=6 program (single-pole side closed by
 SHEET6-HIII-REVIEW.md: sanctioned residual 0). Ground truth read on-page:
 papers/sigray_full.pdf (printed page = pdf page). Engine:
@@ -137,6 +140,15 @@ runs drop M=1 (Prop 8.4); here BOTH M_i in {1,2} are live at entry, and by
 still pins the chain-orbit multiplicity per edge: μ_i | M_{G_i} at every
 step, so M=1 ancestry forces μ=1 patterns (§4c).
 
+### 2d. M_pole pin (added per SHEET6-A2P-REVIEW front 7)
+
+Not 8.1 + Prop 5.1(iii) pin the pole entry multiplicity: M_{P_i} =
+gcd(P, P_g) computed from the global (2,3)-type data; it is NOT a free
+label from the §2c menu. Consequence: the residue-B entry labels (M = 2
+at both poles with the §6 B-pattern) are inconsistent with the pin;
+residue B dies at entry. Composed with the derived IIb pricing (A2P
+fix 1), the true survivor book is residue A + the 2 boundary classes.
+
 ## 3. Literature analogue: Domrina-Orevkov's multi-dicritical split
 
 Read: papers/do.pdf (intro + §2); SHEET6.md §history; Domrina II metadata
@@ -256,8 +268,12 @@ M>=2, κ̄<ν (IV/root-capable) shape: 3.
 Phase 2 (interior merges, hyp M-PAT + per-edge Prop 9.3(b)-(d), doc §4a;
 suffix = composed single-pole engine with restored M=1 kill, N1, E5-III,
 H3q IV dispositions): 52 389 merge children solved (216 390 at raised
-caps); kill histogram: 96.6% M=1-at-merge (restored Prop 8.4), 2.6% suffix
-DEAD, 0.6% N1. RESIDUE: **3 (child,Σλ) classes, cap-stable** (§6).
+caps); kill histogram: 95.6% M=1-at-merge (restored Prop 8.4; percentage
+corrected per SHEET6-A2P-REVIEW), 2.6% suffix DEAD, 0.6% N1. RESIDUE under
+the DERIVED IIb pricing (now the engine default, A2P fix 1): **2 (child,Σλ)
+residue classes + 6 IV classes** (the legacy-priced 3+9 book in §6 is
+superseded; A′ repriced out, B halved — and B dies at entry under the §2d
+M_pole pin, leaving A + 2 boundary classes as the true survivor set).
 
 Phase 3 (root merges = meet at (0,y)): ZERO solutions, two independent
 structural grounds: (i) any edge with μ_i = 1 fails the St 8.2 searrow

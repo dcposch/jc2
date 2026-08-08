@@ -37,6 +37,9 @@ import sheet6_campaign as sc
 import hiii_compose as hx
 import h3_check as hc
 
+sc.IIB_DERIVED = True   # SHEET6-A2P-REVIEW fix (1): derived IIb pricing is the default here
+
+
 Node, LF = sc.Node, sc.LF
 SMAX, DEPTH, KMAX, NUMAX = 5, 6, 4, 48
 NU1MAX, L1MAX = 24, 4           # mu=1 IIa_0 child caps
