@@ -1,6 +1,6 @@
 # SHEET6-TEMPLATE.md — coefficient-level lift of the two-pole rigid template
 
-Status: COMPLETE (2026-08-07, UNREVIEWED). Target: SHEET6-L1.md §7.2 — the lift from
+Status: PROMOTED WITH CORRECTIONS (SHEET6-LT-REVIEW.md: fronts 3-5 confirmed; kill chances (i)/(iv) exponent-trivial so 3 genuine not 5; E11 REFUTED as erratum (follows from Prop 8.1(i)+3.17(i)+8.4, which also forces m_Fs=2 printed-tier); R1 spec SUPERSEDED by LT-REVIEW front 7 redesign: tower g^2 - s0*f^3 per Prop 4.2 (gauge a=0), R6 first, co-stage g, x-side lead, terminal J-closure). Original status: COMPLETE (2026-08-07, UNREVIEWED). Target: SHEET6-L1.md §7.2 — the lift from
 Q-data + merge-local coefficients (SHEET6-2POLE.md §6a exhibit, L1c rigid
 solution) to an explicit candidate Puiseux/Newton-tree data set for the
 distinguished sheet-6 counterexample template, and the edge-by-edge

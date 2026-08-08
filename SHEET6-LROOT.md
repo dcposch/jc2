@@ -1,6 +1,6 @@
 # SHEET6-LROOT.md — the λ_root ≥ 1 lemma, decided (the 8→4 kill attempt)
 
-Status: COMPLETE (2026-08-07, this session; UNREVIEWED). Target:
+Status: PROMOTED (SHEET6-LT-REVIEW.md front 1: reading-robust, ledger recomputed; nitpicks filed there). Original status: COMPLETE (2026-08-07, this session; UNREVIEWED). Target:
 SHEET6-A3L1-REVIEW.md final note / SHEET6-CAMPAIGN.md header "next kills":
 does the root vertex (0,y) necessarily carry λ_root ≥ 1 — one unit of the
 St 9.4 budget charged at the root beyond the ψ-certificate — killing the 4
