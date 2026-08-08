@@ -272,6 +272,130 @@ def root_merges(insts):
                                      ratio_kl, Di_a, tot, psi, ok))
     return hits
 
+# ------------------------------------------------ phase 4: L1 stage (new)
+def l1_premerge():
+    """Printed-forced pre-merge tree (SHEET6-L1.md L1a): entry M = 1
+    [M_pole = gcd(deg p, deg p_g) = gcd(2,3) = 1: Not 8.1 + Prop 5.1(i)
+    (m=0 at poles) + table (23) row 1]; every pre-merge step is the thesis's
+    own mult(p,c)=1 case (St 9.6 proof, p. 52): p = single simple nu-orbit,
+    deg q = n*nu+1, M_child = 1, lam = 0 (no NE root can exist: dq > dp)."""
+    def zch_children(node):
+        """Chain-at-0 mu=1 child: p = eta (dp=1, nu_F=1), q = eta*s,
+        dq = 1+l, M=1; same (d)-form edge equation."""
+        rho, nu, kap = node.rho, LF(node.nu)[1], LF(node.kap)[1]
+        out = []
+        for l in range(1, L1MAX + 1):
+            n = edge_n(rho, nu, 1, kap, 1, Fr(1, 1 + l))
+            if n is None: continue
+            ch = Node((rho + n) / nu, 1, 1, (kap + n) // nu, 1, tag="<-mu1z")
+            out.append(('CONT', 0, ch, f"mu=1 zch l={l} n={n}"))
+        return out
+    seen, dq_ = {}, deque()
+    nd = Node(Fr(1), 2, 1, 5, 2)
+    seen[nd.shape()] = (0, "ENTRY M=1 (printed)", nd)
+    dq_.append((nd, 0))
+    while dq_:
+        node, dep = dq_.popleft()
+        if dep >= DEPTH: continue
+        for _, dl, ch, why in mu1_children(node) + zch_children(node):
+            sh = ch.shape()
+            if sh in seen: continue
+            seen[sh] = (dep + 1, why, ch)
+            dq_.append((ch, dep + 1))
+    return seen
+
+def l1_merges(insts, LMAX=8):
+    """mu=(1,1), k=0 merged menu (all that survives L1a):
+      nu>=2: dp=2nu, dq=(l+2)nu+1    [IIa(l), both chains at nonzero orbits;
+             an eta EXTRA in p excluded: third searrow branch -> third pole
+             via Prop 6.8]
+      nu>=2: dp=nu+1, dq=(l+1)nu+1   [ZCH(l): one CHAIN at the 0-direction,
+             p = eta(eta^nu - c^nu); l=0 impossible (rho=1 kills 8.1(iv));
+             M = gcd(nu+1, l)]
+      nu=1 : dp=2, dq=2+l            [I(l); coefficient-IMPOSSIBLE by the
+             Prop 8.1(iv) Wronskian/log analysis (l1_ode_check.py) -- shown
+             for Q-level reach, flagged ODE-DEAD]
+    """
+    menu = [(1, 1, l, 2, 2 + l) for l in range(1, LMAX + 1)]
+    for nu in range(2, NUMAX + 1):
+        for l in range(0, LMAX + 1):
+            menu.append((0, nu, l, 2 * nu, (l + 2) * nu + 1))
+        for l in range(1, LMAX + 1):
+            menu.append((2, nu, l, nu + 1, (l + 1) * nu + 1))
+    for is1, nu, l, dp, dq in menu:
+        if not dq > dp: continue                    # searrow, mu=1
+        r = Fr(dp, dq)
+        bucket = {}
+        for idx, (rho, nug, M, kapg, lam, lab) in enumerate(insts):
+            n = edge_n(rho, nug, M, kapg, 1, r)
+            if n is None: continue
+            kap_m = Fr(kapg + n, nug)
+            if kap_m.denominator != 1: continue
+            Di = (rho + n) / nug
+            bucket.setdefault((kap_m, Di), []).append((idx, n))
+        for (kap_m, Di), edges in bucket.items():
+            for x in range(len(edges)):
+                for y in range(x, len(edges)):
+                    ia, na = edges[x]
+                    ib, nb = edges[y]
+                    ch = Node(Di / dp, nu, gcd(dp, dq), int(kap_m), dp,
+                              tag="<-L1MERGE")
+                    br = {1: 'I', 0: 'IIa', 2: 'ZCH'}[is1]
+                    yield (ia, ib, ch, is1, l,
+                           f"{br}(l={l}) nu={nu} "
+                           f"n=({na},{nb}) dp/dq={dp}/{dq}")
+
+def l1_stage():
+    print("\n== PHASE 4 (L1 stage): printed-forced M=1 chains, mu=(1,1) ==")
+    seen = l1_premerge()
+    print(f"pre-merge shapes (all M=1, lam=0): {len(seen)}")
+    insts = [(nd.rho, LF(nd.nu)[1], 1, LF(nd.kap)[1], 0, str(sh))
+             for sh, (dep, why, nd) in seen.items()]
+    tried = killed_m1 = ode_dead = 0
+    res, kills = {}, {}
+    sfx = {}
+    for ia, ib, ch, is1, l, why in l1_merges(insts):
+        tried += 1
+        if ch.M == 1:
+            killed_m1 += 1; continue
+        if is1 == 1:
+            ode_dead += 1
+            res.setdefault(('NU1-ODE-DEAD', str(ch.shape())), []).append(
+                (insts[ia][5], insts[ib][5], why))
+            continue
+        key = (str(ch.shape()), 0)
+        if key not in sfx:
+            sfx[key] = suffix_bash(ch, 0)
+        r = sfx[key]
+        if r['verdict'].startswith('KILLED') or r['verdict'] == 'DEAD':
+            kills[r['verdict']] = kills.get(r['verdict'], 0) + 1
+        else:
+            res.setdefault(('RESIDUE', str(ch.shape())), []).append(
+                (insts[ia][5], insts[ib][5], why, r))
+    print(f"merge children: {tried}; M=1-at-merge killed: {killed_m1}; "
+          f"nu=1 Q-reachable but ODE-dead: {ode_dead}")
+    for v, c in sorted(kills.items(), key=lambda x: -x[1]):
+        print(f"    suffix kill: {v} x{c}")
+    for (kind, shp), items in sorted(res.items()):
+        print(f"  {kind} child={shp} ({len(items)} parent pairs)")
+        for it in items[:3]:
+            print(f"    parents {it[0]} + {it[1]} via {it[2]}")
+        if kind == 'RESIDUE':
+            r = items[0][3]
+            ivded = {}
+            for sh, lam, surv, tr in r.get('iv', []):
+                ivded.setdefault((str(sh), lam), surv)
+            for (sh, lam), surv in sorted(ivded.items(), key=lambda x: x[0][1]):
+                print(f"      IVSURV lam={lam} {sh} (s,R)={surv}")
+            for kind2 in ('open', 'sf1'):
+                for item in r.get(kind2, [])[:3]:
+                    print(f"      {kind2}: {item}")
+    return res
+
+if __name__ == "__main__" and 'l1only' in sys.argv:
+    l1_stage()
+    sys.exit(0)
+
 # ------------------------------------------------------------------ main
 if __name__ == "__main__":
     print("== PHASE 1: pre-merge reachable shapes (M=1 kill OFF) ==")
@@ -356,3 +480,5 @@ if __name__ == "__main__":
         pa, pb, mu1, mu2, k, rkl, Di, tot, psi, _ = h
         print(f"  root-dead lam={tot} psi={psi} k_f/l_f={rkl} "
               f"parents {pa[5]} + {pb[5]}")
+
+    l1_stage()
