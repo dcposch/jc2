@@ -298,6 +298,10 @@ def gate_compose():
 
 
 if __name__ == "__main__":
+    if 'iib' in sys.argv[1:]:                  # SHEET6-AF2: derived IIb pricing
+        sc.IIB_DERIVED = True
+        print("[AF2] IIB_DERIVED=True: IIb priced per St 9.3 (24) "
+              "(k orbits at max(1,ceil(gap)) + 0-root at max(1,ceil(gap/nu_F)))")
     print(gate_compose())
     tot = {}
     for lam_t in (3, 4, 5):
