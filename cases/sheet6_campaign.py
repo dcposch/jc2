@@ -31,6 +31,13 @@ from fractions import Fraction as Fr
 from math import gcd
 from collections import deque
 
+# SHEET6-AF2.md: price case IIb by the derived rule (St 9.3 (24), sign-fixed
+# E6): lambda >= k*max(1, ceil(D_F/i - kap_F))  [k extra orbits, c* != 0]
+#              + max(1, ceil((D_F/i - kap_F)/nu_F))  [extra root 0, c* = 0].
+# Default False = legacy flat lambda>=1 (the thesis's printed IIb practice);
+# gate/validate phases run with the default and are unchanged.
+IIB_DERIVED = False
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from sheet6_pilot import prop91, THESIS_TABLE, stmt96_knonzero, stmt96_k0
 
@@ -236,7 +243,13 @@ def child_from(node, red, mu, branch, kl, nu_form, m_form, tmax=6):
         gap = DFi - kapF
         gapc = -((-gap.numerator) // gap.denominator) if isinstance(gap, Fr) else gap
         lam = kl * max(1, gapc) if branch in ('IIa_k', 'I', 'III') else 0
-        if branch == 'IIb': lam = max(lam, 1)
+        if branch == 'IIb':
+            if IIB_DERIVED:                    # SHEET6-AF2 sec 2-3 pricing
+                g0 = Fr(gap) / nu_             # (24) c*=0 branch: gap/nu_F
+                g0c = -((-g0.numerator) // g0.denominator)
+                lam = kl * max(1, gapc) + max(1, g0c)
+            else:
+                lam = max(lam, 1)              # legacy: printed lambda>=1 floor
         recs.append((t, nu_, m_, dp, dq, kapF, DFi, MF, lam))
     MFs = {r[7] for r in recs}
     if len(MFs) != 1:
