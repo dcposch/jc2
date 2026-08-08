@@ -595,3 +595,23 @@ All in `systems/dc2/` (msolve format, char 0, exact integer coefficients):
   27 vars; local msolve -P 2 TIMEOUT at 1500 s. Goal: 0-dim degree; = **420** ⟺ V4's
   top-dimensional part is exactly the Lagrangian-quartic cone (the D=3 analogue of
   the degree-90 identification of §4.3G). Estimate: hours on a big box (deg ~10²–10³).
+
+## 6.10 Post-review corrections (DC2-REVIEW.md, 2026-08-07)
+All §6 measurements CONFIRMED at 4 fresh rational points; interpretive gloss
+corrected:
+- The §6.5b "one scalar obstruction kills one classical modulus" picture is
+  WRONG geometry. Correct tangent picture at generic family points:
+  T_qu is NOT contained in T_cl; T_qu ∩ T_cl = the 12-dim family tangent;
+  quantum kills TWO classical directions (only one via the S0 functional) and
+  contributes one new direction of its own that is obstructed at order 2.
+  Net: corank 13 = 14 − 2 + 1.
+- The S0 rank on the classical tangent is 1 only GENERICALLY: measured 0 at
+  c=0, 2 at the lagr_degen witness, 5 at pure-cubic points.
+- Headline demoted: "DC≠PC divergence" → "slice-scheme divergence at D=3"
+  (supports agree everywhere reached; the divergence is scheme/tangent-level
+  in the slice, not a support separation).
+- Upgrade adopted: the lagr_degen dim-6 deg-10 fiber is now DERIVED (pencil of
+  Lagrangian planes through u1, Segre class ⇒ dim 6, deg 10 exact), closing
+  §6.7.4(c) top-dimensional part. Full-120-var corank 14 = 14 at c=0 confirms
+  the w≠0 mechanism prediction at system level.
+- Verdict stands: DC(2) consistent with HOLDS at D≤3 on everything reached.
