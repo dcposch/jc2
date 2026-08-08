@@ -1,23 +1,16 @@
 # SHEET6 CAMPAIGN — systematic td=6 case enumeration + bash (Sigray engine)
 
-Status: PHASE 2 COMPLETE (2026-08-07). Phase 1 reviewed by SHEET6-REVIEW.md
-(all fronts CONFIRMED). Phase 2 = H3 audit (SHEET6-H3.md: psi-budget proved,
-G2 closed, thesis td<=5 repairable) + III extraction (SHEET6-III.md: E5/N1)
-+ combined review with composition (SHEET6-HIII-REVIEW.md, engine
-cases/hiii_compose.py, both gates PASS): **td=6 SANCTIONED RESIDUAL = 0**
-mod {H1,H2,H4,AF2,AF3,H5a/b} + proved H3q. Grand composed residual:
-td5: 2 sanctioned classes (both die if the AF2-IIb pricing audit decides),
-td6: 13 AF3-superset classes + 1 SF1(ext). Next leverage: AF2-IIb audit,
-AF3 sanction justification, two-pole (3,3) config. Follow-on to
-SHEET6-PILOT.md. Driver:
-`cases/sheet6_campaign.py` (gate PASS). HEADLINE: the mechanizable layer of the
-td=6 case bash is built and run — all 6 single-pole Λ=6 entries + the td≤5
-re-validation. Both (2,3)-type td=6 entries (rows 2,3) are fully excluded
-conditional on H1-H4+H3; the other four reduce to ~14 case-III parametric tails
-+ IV-terminals gated by H3. The bash also found 3 NEW thesis errata (E2-E4:
-"no solution" claims false, giving λ=0 self-loops) and exposed that the printed
-thesis td≥6 proof is incomplete without an unstated root-kill (G2) and never
-treats rows 5,10 (G3). Open-case list with estimates: §6. Nothing farm-sized.
+Status: PHASE 3 COMPLETE (2026-08-07). Phases 1-2 as below. Phase 3 =
+AF2 derivation (SHEET6-AF2.md) + two-pole attack (SHEET6-2POLE.md) + entry-M
+pin (SHEET6-AF3.md) + L1 merged-pattern (SHEET6-L1.md), all promoted by
+SHEET6-A2P-REVIEW.md and SHEET6-A3L1-REVIEW.md. CANONICAL SURVIVOR BOOK:
+td<=5: 0 (CLOSED, independent of AF2). td=6 single-pole: 4 r9/M2 classes
+(entries thesis-forced by the pin; 2 slack-1, 2 slack-0). td=6 two-pole:
+residue A only, funneled through the UNIQUE merged child (6,12,3,2,5)@lam0
+with rigid coefficient template (a1/a2 = 2+sqrt(3), unique up to scale).
+Errata found: E1-E9 (five proof-level). Next kills: lam_root>=1 lemma
+(cuts the book 8->4); coefficient-level lift of the rigid template
+(construction vs h1-branch accounting) decides the rest.
 
 ## 0a. Assembly-layer extraction (thesis pp. 37-60, needed before enumeration)
 

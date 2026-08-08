@@ -1,6 +1,6 @@
 # SHEET6-L1.md — settling L1 (merged-pattern l >= 1 inadmissibility)
 
-Status: COMPLETE (2026-08-07, this session; L1 was declared out of scope by
+Status: COMPLETE + PROMOTED (SHEET6-A3L1-REVIEW.md: L1a induction sound, eta-gap closed kill-direction, L1c closed forms re-derived) (2026-08-07, this session; L1 was declared out of scope by
 SHEET6-A2P-REVIEW and is settled here). Target: SHEET6-2POLE.md §6c item
 L1, the fork-deciding lemma of the two-pole (3,3) td=6 program. Baseline
 state: SHEET6-2POLE.md as PROMOTED at 8f3364f (A2P fixes applied: derived
