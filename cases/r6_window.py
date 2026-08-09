@@ -182,5 +182,187 @@ def layer2():
           " patch (5(i)); R1 must enumerate minimal (3,4) + (1,2) branch;"
           " echo chains need one more recursion rung.")
 
+def _pmul(a, b):
+    out = [Fr(0)] * (len(a) + len(b) - 1)
+    for i, x in enumerate(a):
+        if x:
+            for j, y in enumerate(b):
+                out[i + j] += x * y
+    return out
+
+def _ppow(a, n):
+    out = [Fr(1)]
+    for _ in range(n):
+        out = _pmul(out, a)
+    return out
+
+def _psub(a, b):
+    n = max(len(a), len(b))
+    return [(a[i] if i < len(a) else Fr(0)) - (b[i] if i < len(b) else Fr(0))
+            for i in range(n)]
+
+def _pdiff(a):
+    return [i * a[i] for i in range(1, len(a))]
+
+def _pdeg(a):
+    for i in range(len(a) - 1, -1, -1):
+        if a[i]:
+            return i
+    return -1
+
+def echo_rung():
+    """ECHO RUNG (level 3) for (2,3)@(6,17), (2,5)@(6,23) + ninth case (1,2).
+
+    Session 2026-08-09.  Additive to layer2(); its output is unchanged.
+
+    Membership at the echo level (Prop 4.2 p.19-20 + Cor 6.1 p.32):
+      m_P = 0 (g first-dead at P; h1,h2,h3 non-members there: St 3.11(i) only,
+      leaks allowed -- exactly the review's '3 -> 2' and '1-branch' leaks),
+      m_Gm = 2 (h2 first-dead: L4 + Prop 8.1(ii) pattern P^{i(mu2-1)}q),
+      m_Fs >= 3 (strict m-growth; h2 ALIVE at F_s), m_R > m_Fs.
+      Prop 4.2's delta_j := kappa(d_F + d_{h_j,F} - alpha_j d_F - 1 + u) in N
+      is STRICTLY decreasing (p.20) => every tower is FINITE: no infinite
+      recursion is possible at any vertex.  alpha-recursion (9):
+      mu_{j+1} = mu_j + (k_j - 1) l_j/k_j.
+
+    NEW PRINTED TOOL (this session): Prop 8.1(iv) ODE  delta*p*q' - (1-u)p'q
+    = (nonzero const)*p at G_m.  With the m=2 window vertex data (all three
+    open cases share it: i=2, p = P = (eta^3-a1)(eta^3-a2), delta = d/i =
+    3/21, 1-u = 5/21, kappa*u = 16), the polynomial solution is FORCED:
+      deg q = deg p * (1-u)/delta = 10  (top-cancellation of the ODE),
+      P | q, q = H*eta*P*(eta^3 - b) with
+      b = (2/3)(a1+a2)  and  a1*a2 = (a1+a2)^2/6,  a1+a2 != 0.
+    (Level-0 cross-check: the minimal genome's E4 collapse solves to the
+    SAME b and the same pole-orbit relation -- the pin is vertex-structural.)
+    """
+    print("\nR6 ECHO-RUNG ledger (level 3; session 2026-08-09)")
+    # --- (0) the ODE pin at G_m, exact (scale fixed p1 = 3; covariant) ---
+    p1, b_pin, H = Fr(3), Fr(2), Fr(1)          # b = (2/3)p1
+    p2 = p1 * p1 / 6                            # a1a2 = (a1+a2)^2/6
+    P_eta = [p2, 0, 0, -p1, 0, 0, Fr(1)]        # P(eta) = eta^6 - p1 eta^3 + p2
+    q_eta = _pmul([0, H], _pmul(P_eta, [-b_pin, 0, 0, Fr(1)]))   # H*eta*P*(t-b)
+    # lhs = 3*P*q' - 5*P'*q  (kappa=21 units of delta=3/21, 1-u=5/21)
+    lhs = _psub(_pmul(P_eta, [3 * c for c in _pdiff(q_eta)]),
+                _pmul(_pdiff(P_eta), [5 * c for c in q_eta]))
+    ratio = [Fr(lhs[i], P_eta[i]) for i in range(len(P_eta)) if P_eta[i]]
+    assert _pdeg(lhs) == 6 and all(r == ratio[0] for r in ratio) and ratio[0]
+    assert _pdeg(q_eta) == 10 == Fr(6 * 5, 3)   # deg q pinned by the ODE
+    print("  (0) Prop 8.1(iv) ODE at G_m: q = H*eta*P*(t-b) FORCED with"
+          " b = (2/3)(a1+a2), a1a2 = (a1+a2)^2/6, a1+a2 != 0; deg q = 10."
+          "  [3Pq' - 5P'q = const*P verified exactly]")
+    # --- per-case echo rung ---
+    P_t = [p2, -p1, Fr(1)]                      # P in t = eta^3
+    W = _pmul(P_t, [-b_pin, Fr(1)])             # (t-a1)(t-a2)(t-b)
+    for (k1, l1), (k2, l2) in (((2, 3), (6, 17)), ((2, 5), (6, 23))):
+        r, r2 = Fr(l1, k1), Fr(l2, k2)
+        mu2 = Fr(3, 2) + (k1 - 1) * r
+        mu3 = mu2 + (k2 - 1) * r2               # alpha-recursion (9), p.19
+        degh2 = int(12 * r2)                    # 34 / 46 = deg p_h2@Gm
+        bound = int((mu3 - 1) * 12 + 1)         # L4 at F_s, root c_m (m_Fs=3)
+        e = int(12 * mu2) - 12                  # P-exp of p_h3@Gm: k2*i*(mu2-1) = 24 / 36
+        print(f"\n  ({k1},{l1}) echo (k2,l2)=({k2},{l2}): mu3 = {mu3},"
+              f" L4@Fs bound = {bound}, generic deg p_h3@Gm = {6 * l2 * 2}")
+        # (B') r2-forcing WITHOUT St-8.3(ii)-equality-at-j=m (which fails at
+        # level 0: 16 != 18).  Printed route: 12r2 >= deg p_h2@Gm (St 3.11(i))
+        # + hierarchy r2 < l1 (p.20) + grid 6r2 in N (Prop 8.1: i_Fs r2 in N)
+        # + winner-consistency: any NON-TIE r2 has the f-side winning at G_m
+        # (6r2 > 6(mu2 - 1/6)) and dies by the L4 count at F_s.
+        menu = [Fr(s, 6) for s in range(degh2 // 2, 6 * l1)]
+        for rr in menu:
+            kk, ll = rr.denominator, rr.numerator
+            m3 = mu2 + (kk - 1) * rr
+            bd = (m3 - 1) * 12 + 1
+            if rr == mu2 - Fr(1, 6):
+                continue                        # the tie = the echo
+            assert 6 * rr > 6 * mu2 - 1        # f-side wins at G_m
+            assert 12 * ll > bd                # count kill: 12*l2 > (mu3-1)12+1
+        print(f"    (B') r2 menu 6r2 in [{degh2 // 2},{6 * l1 - 1}]: every"
+              f" non-tie value dies (f-side wins at G_m, 12*l2 > L4@Fs);"
+              f" r2 = mu2 - 1/6 = {mu2 - Fr(1, 6)} is the UNIQUE survivor.")
+        # (A') enlarged-family gcds at the echo level
+        Mfs = gcd(gcd(126, 189), gcd(int(126 * r), int(126 * r2)))
+        assert Mfs == 21 and 126 // Mfs == 6 and 12 % (126 // Mfs) == 0
+        print(f"    (A') M*_Fs = gcd(126,189,{int(126 * r)},{int(126 * r2)})"
+              f" = 21, i_Fs = 6, m1 = 2 in N (supersedes the layer-1 '63/2'"
+              f" smell); G_m side unchanged: M* = 6, i = 2, mu_i = 1,"
+              f" two-pole orbit fit 3+3 <= 6 exact.")
+        # (C'/D') pole edges, corrected d-arithmetic: d_h2@P = 2/7 = k1/7,
+        # levels k2*d_h2@P = 12/7 > l2*d_f@P = l2/21: h2-side wins
+        assert Fr(12, 7) > Fr(l2, 21)
+        mult_h3_gm_ci = e + 6                  # P^e*(q^6 - s2'P^10): e + 6
+        assert 24 <= mult_h3_gm_ci
+        print(f"    (C'/D') h3@P: h2-side wins (12/7 > {l2}/21), p_h3@P ="
+              f" (p_h1@P)^12, deg 24 <= mult(p_h3@Gm,c_i) = {mult_h3_gm_ci}:"
+              f" PASS (leak allowed: m_P = 0, h3 a non-member at P).")
+        # (RUNG) the 3-coefficient W2-collapse at G_m:
+        #   p_h3@Gm = (P^e q)^6 - s2' P^{6e+10}, e = i(mu2-1)/... = {4,6}
+        #           = P^{6e} (q^6 - s2' P^10);  drop needed: >= 9 eta-degrees
+        F = _psub(_pmul([Fr(0), Fr(0), H ** 6], _ppow(W, 6)),  # H^6 t^2 W^6
+                  _ppow(P_t, 10))                              # s2' = H^6
+        assert all(F[i] == 0 for i in (20, 19, 18)) and F[17] != 0
+        assert 6 * e + 3 * 17 == bound          # saturates the L4@Fs bound
+        print(f"    (RUNG) W2-collapse q^6 - s2'P^10: t^20,t^19,t^18 vanish"
+              f" IDENTICALLY at s2' = H^6 (t^19,t^18 are the ODE pin);"
+              f" t^17 != 0 => deg p_h3@Gm = {6 * e}+51 = {bound} ="
+              f" L4@Fs bound EXACTLY.  3 conditions, 2 unknowns, 0 kill:"
+              f" the overdetermination is absorbed by Prop 8.1(iv).  PASS.")
+        # (E) next rung: tie at G_m needs 6r3 = {bound}/2 -- half-integral =>
+        # impossible; k3 >= 2 dies both winners; k3 = 1 passes at equality.
+        assert Fr(bound, 2).denominator == 2    # no tie on the 6r3 in N grid
+        for six_r3 in range(1, 6 * l2):         # hierarchy r3 < l2
+            r3 = Fr(six_r3, 6)
+            k3, l3 = r3.denominator, r3.numerator
+            mu4 = mu3 + (k3 - 1) * r3
+            bd4 = (mu4 - 1) * 12 + 1
+            if 12 * r3 > bound:                 # f-side wins at G_m
+                assert 12 * l3 > bd4            # dead, every k3
+            elif k3 >= 2:                       # h3-side, k3 >= 2
+                assert bound * k3 > bd4         # dead: (k3-1)(bound-12r3) > 0
+            else:                               # k3 = 1, h3-side
+                assert bound * 1 == bd4         # equality pass, mu frozen
+        print(f"    (E) rung 4: G_m tie impossible (6r3 = {Fr(bound, 2)}"
+              f" not in N); f-side and every k3 >= 2 h3-side step DIE by the"
+              f" same count; ONLY k3 = 1 survives (at equality, mu4 = mu3)."
+              f"  Hierarchy (p.20) l3 > l4 > ... in N => the (1,l)-tail is"
+              f" FINITE; delta_j(R) strictly decreasing (p.20) => the tower"
+              f" TERMINATES.  No print contradiction, no infinite echo.")
+        print(f"    VERDICT ({k1},{l1}): echo chain SURVIVES the printed"
+              f" tier as a FINITE forced tower (2,3),({k1},{l1}),({k2},{l2})"
+              f",(1,l3),...  -> R1 branch (staged G_m depths"
+              f" {int(6 * r)}/42, {degh2}/42, {bound}/42; pole moduli pinned"
+              f" a1a2 = (a1+a2)^2/6, a2/a1 = 2+-sqrt(3)).")
+    # --- ninth case (1,2) ---
+    print("\n  (1,2): k1 = 1 disposition.  Prop 4.2(iii) with k1 = 1 reads"
+          " h1+ = s1 (f+)^2 EXACTLY -- a legality condition, checked at"
+          " every vertex where the level-1 tie holds (h1 alive: R, F_s,"
+          " G_m); at all three the alive patterns are pure powers"
+          " (p_h1 = p_red^{2i}, (p_f)^2 = p_red^{2i}): CONSISTENT -- and"
+          " at P the tie fails (3/21 > 2/21), so the level-0 nonzero"
+          " deg-2 pattern p_h1@P (2 roots, not a square) is NOT constrained:"
+          " NO k1 = 1 exclusion exists in print.")
+    mu2 = Fr(3, 2)
+    for rr in (Fr(4, 3), Fr(3, 2), Fr(5, 3), Fr(11, 6)):    # 16<=12r2, r2<2
+        kk, ll = rr.denominator, rr.numerator
+        bd = (mu2 + (kk - 1) * rr - 1) * 12 + 1
+        if rr == Fr(4, 3):
+            continue                            # tie: 8*k2 = 6*l2
+        assert 6 * rr > 8 and 12 * ll > bd      # f-side wins and dies
+    print("    (B') same winner-consistency forcing: r2 menu {4/3,3/2,5/3,"
+          "11/6}: non-tie values die (12*l2 > (mu3-1)12+1); r2 = 4/3 forced"
+          " => (k2,l2) = (3,4): the MINIMAL genome re-indexed, dead-member"
+          " data at G_m byte-identical (P*q, deg 16, d = 8/21, same ODE pin).")
+    print("    VERDICT (1,2): NOT print-excludable; DISJOINT R1 branch."
+          "  R1 delta-spec: insert ONE staged resonance level at G_m:"
+          " 18/21 -> 12/21 (h1 stage, quotient prop. to P^4, legality"
+          " h1+ = s1(f+)^2) -> 8/21 (h2 stage, quotient P*q) -> (3,4)"
+          " continuation identical to the minimal genome's L1c layer.")
+    print("\nECHO-RUNG verdicts: (2,3)-chain SURVIVES-IN-PRINT (finite"
+          " forced tower, R1 branch); (2,5)-chain SURVIVES-IN-PRINT (same);"
+          " (1,2) SURVIVES-IN-PRINT (minimal re-indexed, R1 branch).")
+    print("R6 status: CLOSED AS A PRINT CAMPAIGN -- no further printed-tier"
+          " test can kill the three survivors; R1 must run per-branch on"
+          " {minimal (3,4), (1,2), (2,3)-chain, (2,5)-chain}.")
+
 if __name__ == "__main__":
     layer2()
+    echo_rung()

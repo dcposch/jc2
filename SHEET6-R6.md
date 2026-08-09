@@ -1,6 +1,6 @@
 # SHEET6-R6 — deeper-tower window of the sheet-6 two-pole template (m_{G_m} = 2)
 
-Status: PARTIALLY CLOSED, REVIEW-CORRECTED (SHEET6-R6-REVIEW.md: fronts 1-3,6 CONFIRMED; front 4 REFUTED — d_h1@P = 1/7 per the promoted table, (2,3)/(2,5) NOT dead, corrected (D) = k1<=l1 passes whole window; window itself incomplete: ninth case (1,2)). NET: 6/9 DEAD doubly printed-tier; m_Gm>=3 closed by review scope patch; OPEN: (2,3)->forced echo (6,17), (2,5)->forced echo (6,23) [next recursion rung not run], (1,2) = minimal-reindexed DISJOINT R1 branch (needs k1=1 exclusion or R1 enumeration). R1 label: per-branch until the three close.
+Status: CLOSED AS A PRINT CAMPAIGN (echo-rung session 2026-08-09, §4; engine cases/r6_window.py echo_rung(), all asserts green). NET: 6/9 window cases DEAD (banked, doubly printed-tier); the three open branches ALL SURVIVE the printed tier — (i) (2,3)→(6,17) echo: level-3 W₂-collapse PASSES IDENTICALLY (its 3 conditions are absorbed by the Prop 8.1(iv) ODE pin b = (2/3)(a1+a2), a1a2 = (a1+a2)²/6, s2' = H⁶; deg p_h3@Gm = 195 saturates the L4@Fs bound); (ii) (2,5)→(6,23): same, 267; rung 4 kills every k3 ≥ 2 continuation, forces a FINITE (1,l)-tail (p.20 hierarchy: l's strictly descend) — no death, no infinite recursion; (iii) (1,2): NO k1 = 1 exclusion in print (legality h1⁺ = s1(f⁺)² is pattern-consistent at R/F_s/G_m, vacuous at P) — minimal-reindexed DISJOINT branch, R1 delta-spec written. R6 yields NO further printed-tier kills: R1 label is PER-BRANCH on {minimal (3,4), (1,2), (2,3)-chain, (2,5)-chain}. Prior status (review-corrected partial closure) preserved below.
 Mission was: close or characterize the survivors of the
 R6 window. Level-0 kills already banked in SHEET6-TEMPLATE.md §3 R6:
 (k1,l1)=(1,3) dead (level contradiction), l1 > 3k1 dead (h2-count at pole edges).
@@ -14,7 +14,7 @@ mult law, cross-checked EXACT against level-0 E4 (39) and E5 ('pq: 1+1')).
 
 ## 1. Per-case ledgers (Q-ladder with m_{G_m}=2, then E3/E4/E5/E6/N1 analogues)
 
-### 1.1 Case (k1,l1) = (2,3) — DEAD (E5-analogue: h2 count at pole edges)
+### 1.1 Case (k1,l1) = (2,3) — [VERDICT WITHDRAWN by review front 4; final: SURVIVES-IN-PRINT, see §4]
 
 m=2 patterns. G_m (M*=6, i=2; orbit fit forces mu_i=1, p_red = P =
 (eta^3-a1)(eta^3-a2), NOTHING else in p_red): p_f = P^2, p_g = (-)P^3,
@@ -41,7 +41,7 @@ mult(p_f@Gm,c_i) = 2 -> M*_Q = gcd(2,3) = 1, i_Q = 2 -> p_red,Q deg 1,
 single root — St 3.16 (>1 root at non-pole chain vertices) violated.
 Merge legs are direct edges G_m -> P_i; the kill stands.
 
-### 1.2 Case (k1,l1) = (2,5) — DEAD (E5-analogue: h2 count at pole edges)
+### 1.2 Case (k1,l1) = (2,5) — [VERDICT WITHDRAWN by review front 4; final: SURVIVES-IN-PRINT, see §4]
 
 Same structure as 1.1: mu2 = 4, p_h2@Gm = P^6·q (k = 6), p_h1@Gm = (-)P^5
 (deg 30 = mult(p_h1@Fs,c_m), (ii) passes as identity); h1@P deg 2 <= 2r=5;
@@ -84,8 +84,9 @@ d_h1@P = 1/21 is pinned by the m=2 transport) kills them again.
 
 | (k1,l1) | l1/k1 | 6·l1/k1 | in window? | verdict | killing test / genome |
 |---------|-------|---------|------------|---------|-----------------------|
-| (2,3)   | 3/2   | 9       | yes        | DEAD    | h2@pole count: 6 > 5 = 2·mu2-1 (St 3.11 + p.40 L4) |
-| (2,5)   | 5/2   | 15      | yes        | DEAD    | h2@pole count: 10 > 7 = 2·mu2-1 |
+| (1,2)   | 2     | 12      | yes (5(iv))| SURVIVES-IN-PRINT | no k1=1 exclusion; disjoint R1 branch (§4.3) |
+| (2,3)   | 3/2   | 9       | yes        | SURVIVES-IN-PRINT | forced echo (6,17); level-3 rung passes (§4.2) |
+| (2,5)   | 5/2   | 15      | yes        | SURVIVES-IN-PRINT | forced echo (6,23); level-3 rung passes (§4.2) |
 | (3,5)   | 5/3   | 10      | yes        | DEAD    | merge transport: i_Gm = 6, mult(p_f@Gm,c_i) ∈ 6N != 2 |
 | (3,7)   | 7/3   | 14      | yes        | DEAD    | same (M*_Gm = 2, St 3.9/3.16 + St 3.16) |
 | (3,8)   | 8/3   | 16      | yes        | DEAD    | same                  |
@@ -100,18 +101,129 @@ it is a coherence gate, not the discriminator. The discriminating edge
 in R6 is the MERGE edge (the E2-shape count contradiction relocates from
 the suffix edge (m=1 story) to the merge edges (m=2 story)).
 
-## 3. Consequence
+## 3. Consequence [rewritten 2026-08-09]
 
-**R6 CLOSED — R1 decisive for the whole residue-A configuration.**
-All 8 window cases are DEAD at layer 2 (no SURVIVES, no
-ISOMORPHIC-GENOME: the (2,3) self-similar echo r2 = mu2 - 1/6 dies at
-the pole edges before reproducing a genome). Together with the level-0
-kills ((1,3) level contradiction; l1 > 3k1 h2-count), the alternative
-m_{G_m} = 2 is eliminated entirely: the minimal assignment m_{G_m} = 1
-with (k1,l1) = (3,4) (SHEET6-TEMPLATE E3) is FORCED. The two-pole
-residue-A configuration has exactly one live genome, and the
-template-constrained series experiment R1 (TEMPLATE §4) is now decisive
-for the entire configuration.
+**R6 print campaign CLOSED — three survivors, R1 per-branch.** The six
+k1 ∈ {3,6} cases are DEAD (doubly printed-tier, review-confirmed) and
+the level-0 kills stand ((1,3); l1 > 3k1), but m_{G_m} = 2 is NOT
+eliminated: (2,3), (2,5) (as forced echo chains) and (1,2) survive
+every printed-tier test (§4). The two-pole residue-A live structure
+set is {minimal (3,4) genome, (1,2) re-indexed, (2,3)-chain,
+(2,5)-chain}; R1 (TEMPLATE §4) must run and be labeled per-branch,
+with its enumeration extended by the delta-specs in §4.2-4.3.
+R1-UNSOLVABLE on all four branches would close the configuration.
+
+## 4. Echo rungs (level 3) and the ninth case — session 2026-08-09
+
+Engine: cases/r6_window.py echo_rung() (additive; layer2() output
+unchanged; exact Fraction arithmetic, all asserts green).
+
+### 4.0 Membership at the echo level (Prop 4.2 pp. 19-20, Cor 6.1 p. 32)
+
+m_P = 0 (g first-dead at P; h1, h2, h3 are NON-members at pole edges —
+St 3.11(i) only, which legalizes the banked 3→2 and 1-branch leaks);
+m_Gm = 2 (h2 first-dead: L4 + Prop 8.1(ii) shape P^{i(mu2-1)}·q);
+m_Fs ≥ 3 (strict m-growth: h2 ALIVE at F_s); m_R > m_Fs. Prop 4.2's
+proof (p. 20) makes delta_j = kappa(d_F + d_{h_j,F} - alpha_j·d_F - 1
++ u) ∈ N STRICTLY decreasing: every tower is FINITE — an infinite echo
+recursion is impossible at any vertex, a priori. mu-recursion ((9),
+p. 19): mu_{j+1} = mu_j + (k_j - 1)·l_j/k_j, so mu3 = 3 + 5·(17/6) =
+103/6 for (2,3)@(6,17) and 4 + 5·(23/6) = 139/6 for (2,5)@(6,23);
+L4 at F_s, root c_m (mult(p_Fs,c_m) = 12): mult(p_h3@Fs, c_m) =
+(mu3-1)·12 + 1 = 195 resp. 267 (the rung bounds; generic G_m tops
+6·34 = 204 resp. 6·46 = 276, so a ≥ 9-degree, i.e. 3-coefficient,
+collapse is demanded).
+
+CORRECTION to the review's derivation (verdicts unchanged): St 8.3(ii)
+equality at j = m_child is NOT printed-safe — at level 0 it would read
+deg p_h1@Gm = 16 = mult(p_h1@Fs,c_m) = 18, false for the LIVE minimal
+genome. The echo forcing is re-derived printed-tier: St 3.11(i) lower
+bound 12r2 ≥ deg p_h2@Gm + p. 20 hierarchy r2 < l1 + grid 6r2 ∈ N
+(i_Fs·r2 ∈ N, Prop 8.1 proof) + WINNER-CONSISTENCY: for every non-tie
+r2 in the menu the f-side wins h3's top at G_m (6r2 > 6mu2 - 1) and
+deg p_h3@Gm = 12·l2 > (mu3-1)·12 + 1, killing it. Unique survivors:
+r2 = mu2 - 1/6 exactly — (6,17) and (6,23) CONFIRMED forced (and the
+same mechanism re-forces (k2,l2) = (3,4) for (1,2), §4.3).
+
+### 4.1 New printed tool: the Prop 8.1(iv) ODE pins q at G_m
+
+delta·p·q' - (1-u)·p'·q = (nonzero const)·p at G_m with the shared
+m_Gm = 2 vertex data (i = 2, p = P = (eta³-a1)(eta³-a2), delta = d/i =
+3/21, 1-u = 5/21, kappa·u = 16). Consequences (exact, engine-verified):
+deg q = deg p·(1-u)/delta = 10 (top cancellation of the ODE — the
+review's "deg q = 10 forced by d-arithmetic alone", now with the law
+named); P | q; and the polynomial solution is UNIQUE in shape:
+  q = H·eta·P·(eta³ - b),  b = (2/3)(a1+a2),  a1·a2 = (a1+a2)²/6,
+with a1+a2 = 0 excluded (it would force const = 0). So the pole-orbit
+moduli are pinned to a2/a1 = 2 ± √3 already at layer 2, for ALL
+m_Gm = 2 survivors — and, cross-check, the level-0 minimal genome's E4
+collapse solves to the SAME b and the same orbit relation: the pin is
+vertex-structural, not a discriminator. b ∉ {a1,a2} is automatic.
+
+### 4.2 The echo rungs for (2,3)@(6,17) and (2,5)@(6,23): ALL TESTS PASS
+
+(A') Enlarged-family gcds: M*_Fs = gcd(126,189,189,357) = 21 resp.
+gcd(126,189,315,483) = 21, i_Fs = 6, m1 = 2 ∈ N — supersedes the
+layer-1 "M*_Fs = 63, i_Fs = 2" smell (review nit 6c). G_m side
+unchanged: M* = 6, i = 2, mu_i = 1, two-pole orbit fit 3+3 ≤ 6 exact.
+(B') Level-2 suffix data: r2 unique (§4.0); mult(p_h2@Fs,c_m) =
+6·r2·2 = 34 resp. 46 = deg p_h2@Gm — coherent.
+(C'/D') Pole edges, corrected d-arithmetic: d_h2@P = 2/7 = k1·(1/7);
+h3's top at P: k2·(2/7) = 12/7 > l2/21 — the h2-side wins, p_h3@P =
+(p_h2@P)^6 = (p_h1@P)^12, deg 24, pure power; count: 24 ≤
+mult(p_h3@Gm,c_i) = 24+6 = 30 resp. 36+6 = 42. PASS (leaks legal,
+m_P = 0).
+(RUNG) The 3-coefficient W2-collapse: p_h3@Gm = (P^{e/6·...}q)^6 -
+s2'·P-power = P^{24}(q^6 - s2'P^{10}) resp. P^{36}(q^6 - s2'P^{10}) —
+the residual q^6 - s2'P^{10} is IDENTICAL for both cases (q is
+case-independent, §4.1). Conditions t^20, t^19, t^18 = 0 (t = eta³):
+t^20 pins s2' = H^6; t^19 ⟺ b = (2/3)(a1+a2); t^18 ⟺ a1a2 =
+(a1+a2)²/6 — the latter two are EXACTLY the ODE pin: identically
+satisfied. 3 conditions, 2 unknowns (s2, b), 0 kills: the
+overdetermination the review flagged is absorbed by Prop 8.1(iv).
+t^17 ≠ 0 (engine): deg p_h3@Gm = 144+51 = 195 resp. 216+51 = 267,
+saturating the L4@Fs bound EXACTLY. The rung PASSES.
+(E) Rung 4 and termination: a level-4 tie at G_m needs 6r3 = 195/2
+resp. 267/2 ∉ N — impossible; for every grid value r3 < l2 (6r3 ∈ N):
+f-side winners die (12l3 > (mu4-1)·12+1 ⟺ 12r3 > bound, their own
+regime); h3-side winners with k3 ≥ 2 die ((k3-1)(bound - 12r3) > 0);
+ONLY k3 = 1 survives, AT EQUALITY, with mu4 = mu3 frozen and
+d_h3@Gm unchanged — so the same arithmetic repeats and the chain
+continues only through (1, l3), (1, l4), ... with l3 > l4 > ... ∈ N
+strictly descending (p. 20 hierarchy r_{j+1} < l_j): the tail is
+FINITE (≤ 16 resp. ≤ 22 steps), and delta_j(R) strict descent ends the
+tower at a finite m_R regardless. (If instead m_Fs = 3 with the tower
+ending there, the branch is just the finite 3-level tower — simpler.)
+No rung contradicts; no infinite recursion exists.
+
+VERDICTS: (2,3)-chain and (2,5)-chain SURVIVE-IN-PRINT as finite
+forced towers (2,3),(k1,l1),(6,17|6,23),(1,l3),...,(1,l_M). R1
+delta-specs — staged G_m depths (units deg/42): (2,3)-chain: 18/42 →
+34/42 (P^4·q) → 195/42 (P^24(q^6-H^6P^10), 3-coeff collapse) → finite
+(1,l)-tail at equality; (2,5)-chain: 30/42 → 46/42 (P^6·q) → 267/42 →
+same tail; both with the §4.1 moduli pin a2/a1 = 2 ± √3, q =
+H·eta·P·(eta³ - (2/3)(a1+a2)), s2 = H^6/(transport const).
+
+### 4.3 The ninth case (1,2): no print exclusion — disjoint R1 branch
+
+Prop 4.2(iii) at k1 = 1 reads h1⁺ = s1·(f⁺)² EXACTLY (contributes 0
+to mu). Where it bites: only at vertices where the level-1 tie holds,
+i.e. where h1 is ALIVE (R, F_s, G_m). There the patterns are pure
+powers — p_h1 = p_red^{2i} vs (p_f)² = p_red^{2i} — CONSISTENT, no
+contradiction available. At P the tie FAILS (levels 3/21 > 2/21), so
+the level-0 nonzero deg-2 pattern p_h1@P = -(3/4)s0·lam³w⁴(eta²-
+(4/3)w²) (two simple roots, not a square — the hoped-for killer) is
+simply NOT constrained by the k1 = 1 legality: NO exclusion exists in
+print; the condition is an R1-tier series constraint. Downstream the
+winner-consistency forcing (§4.0) gives r2 = 4/3, (k2,l2) = (3,4):
+tower (2,3),(1,2),(3,4),... — the minimal genome re-indexed, with
+dead-member data at G_m byte-identical (P·q, deg 16, d = 8/21, same
+ODE pin) but a DISJOINT constraint set: d_h1@Gm = 12/21 with quotient
+∝ P^4 (vs minimal 8/21, quotient p·q) — mutually exclusive values.
+R1 DELTA-SPEC: insert ONE staged resonance level at G_m: 18/21 →
+12/21 (h1 stage, quotient const·P^4, legality h1⁺ = s1(f⁺)²) → 8/21
+(h2 stage, quotient P·q) → (3,4)-continuation identical to the
+minimal genome's L1c layer downstream.
 
 ## Layer-1 ledger (parent session, cases/r6_window.py — mechanical arithmetic)
 
@@ -139,8 +251,8 @@ vertex transport mult(p_f@Gm,c_i) = 2 infeasible (i_Gm = 6). Premerge
 depth 1 closed off in both shapes (St 3.16 at any intermediate vertex /
 obstruction at G_m itself). ALL 8 DEAD; see §1-§3.
 
-Status: LAYERS 1+2 BANKED; R6 CLOSED — R1 decisive for the whole
-residue-A configuration.
+Status [historical, superseded — see header + §4]: LAYERS 1+2 BANKED;
+R6 CLOSED — R1 decisive for the whole residue-A configuration.
 
 ## Post-review corrections (SHEET6-R6-REVIEW.md, applied)
 
