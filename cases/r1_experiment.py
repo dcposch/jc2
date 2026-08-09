@@ -271,9 +271,16 @@ HIVAR = 10**7                  # degrees collapse to the (HIVAR,) sentinel.
 # information is ever lost; flagged rows re-linearize on the next pass.
 def vC(r): return {(): r} if r else {}
 def vvar(v, r=None): return {(v,): RONE if r is None else r}
+# SENTINEL SOUNDNESS (SHEET6-R1-REVIEW fix 2): the (HIVAR,) sentinel is a
+# boolean "content above cap was dropped here" flag. It must be ABSORBING:
+# never scaled, never summed, hence never cancellable (the cap-2 core bug
+# was g^2 and f^3 sentinel counts cancelling in g^2 - f^3, silently
+# reclassifying truncated rows as exact).
 def vadd(x, y):
     out = dict(x)
     for k, r in y.items():
+        if k and k[-1] == HIVAR:
+            out[k] = RONE; continue
         cur = out.get(k)
         out[k] = r if cur is None else radd(cur, r)
         if not out[k]: del out[k]
@@ -295,7 +302,13 @@ def vmul(x, y):
     return out
 def vscal(x, r):
     if isinstance(r, (int, Fr, K3)): r = rC(r)
-    return {k: rmul(v, r) for k, v in x.items() if rmul(v, r)}
+    if not r: return {}                     # exact zero scaling: 0*lossy = 0
+    out = {}
+    for k, v in x.items():
+        if k and k[-1] == HIVAR: out[k] = RONE; continue
+        p = rmul(v, r)
+        if p: out[k] = p
+    return out
 def vdeg(x): return max((len(k) for k in x), default=0)
 VZERO = {}
 
@@ -1077,23 +1090,54 @@ def stage0_gate():
     print("GATE TOTAL: %d checks, %d FAIL %s" % (len(GATE), len(bad), bad or ""))
     return not bad
 
-def ring_to_poly(r, K3mul=None):
-    """ring elem -> msolve polynomial string in z, r3, A1, A2, W1, HW1,
-    W2, HW2, EB (K3 coeff u+v*r3)."""
-    def mono(key, c):
-        za, ea1, ea2, ew1, eh1, ew2, eh2, eB = key
-        parts = []
-        u, v = c
-        if v == 0: cs = "(%s)" % u
-        elif u == 0: cs = "(%s*r3)" % v
-        else: cs = "(%s%s%s*r3)" % (u, "+" if v > 0 else "-", abs(v))
-        parts.append(cs)
-        for e, nm in ((za, "z"), (ea1, "A1"), (ea2, "A2"), (ew1, "W1"),
-                      (eh1, "HW1"), (ew2, "W2"), (eh2, "HW2"), (eB, "EB")):
-            if e > 0: parts.append("%s^%d" % (nm, e) if e > 1 else nm)
-            elif e < 0: raise ValueError("negative exponent in emission")
-        return "*".join(parts)
-    return " + ".join(mono(k, c) for k, c in r.items()) or "0"
+# --- EMISSION (SHEET6-R1-REVIEW fix 1): msolve grammar = expanded integer-
+# coefficient monomial sums ONLY. NO parentheses anywhere (msolve 0.10.1
+# silently mis-parses them). sqrt3 is emitted via the r3 variable.
+RADNAMES = ("r3", "z", "A1", "A2", "W1", "HW1", "W2", "HW2", "EB")
+def poly_terms(vex, names):
+    """VExpr -> [(Fraction coeff, monomial string)] fully expanded."""
+    terms = []
+    for vkey, r in sorted(vex.items()):
+        assert not (vkey and vkey[-1] == HIVAR), "lossy row in emission"
+        xs = []
+        for vid in sorted(set(vkey)):
+            e = vkey.count(vid)
+            xs.append(names[vid] if e == 1 else "%s^%d" % (names[vid], e))
+        for key, c in sorted(r.items()):
+            for q, exps in ((c[0], (0,) + key), (c[1], (1,) + key)):
+                if not q: continue
+                parts = []
+                for e, nm in zip(exps, RADNAMES):
+                    if e < 0: raise ValueError("negative exponent")
+                    if e: parts.append(nm if e == 1 else "%s^%d" % (nm, e))
+                terms.append((Fr(q), "*".join(parts + xs)))
+    return terms
+def emit_expanded(vex, names):
+    """VExpr -> msolve poly string: denominators cleared, content (gcd)
+    removed, signs inline."""
+    terms = poly_terms(vex, names)
+    if not terms: return "0"
+    L = 1
+    for q, _ in terms: L = L * q.denominator // gcd(L, q.denominator)
+    G = 0
+    for q, _ in terms: G = gcd(G, abs((q * L).numerator))
+    if G > 1: L = Fr(L, G)
+    out = []
+    for q, m in terms:
+        c = q * L
+        assert c.denominator == 1, "denominator not cleared"
+        c = c.numerator
+        if not m: out.append("%+d" % c)
+        elif c == 1: out.append("+" + m)
+        elif c == -1: out.append("-" + m)
+        else: out.append("%+d*%s" % (c, m))
+    s = "".join(out)
+    return s[1:] if s.startswith("+") else s
+PHI42_STR = "".join(("+" if c > 0 else "-") +
+                    ("1" if i == 0 else "z" if i == 1 else "z^%d" % i)
+                    for i, c in enumerate(PHI42) if c).lstrip("+")
+RAD_EQS = ["r3^2-3", "A1^3-3-r3", "A2^3-3+r3", "2*HW1^2-3*W1^2",
+           "2*HW2^2-3*W2^2", "2*EB^7-3", PHI42_STR]
 
 def emit_core(sysm, depth, outdir="/Users/dc/code/math/jc72108/systems/r1"):
     import os
@@ -1113,17 +1157,9 @@ def emit_core(sysm, depth, outdir="/Users/dc/code/math/jc72108/systems/r1"):
         return None
     os.makedirs(outdir, exist_ok=True)
     names = {v: "x%d" % i for i, v in enumerate(frees)}
-    eqs = ["r3^2-3", "A1^3-(3+r3)", "A2^3-(3-r3)", "2*HW1^2-3*W1^2",
-           "2*HW2^2-3*W2^2", "2*EB^7-3"]
-    eqs.append("+".join("z^%d*%d" % (i, c) if i else str(c)
-                        for i, c in enumerate(PHI42) if c) .replace("+-", "-"))
+    eqs = list(RAD_EQS)
     for st, meta, v in nl_clean:
-        terms = []
-        for key, r in v.items():
-            base = ring_to_poly(r)
-            mons = "*".join(names[k] for k in key) if key else ""
-            terms.append("(%s)%s" % (base, "*"+mons if mons else ""))
-        eqs.append(" + ".join(terms))
+        eqs.append(emit_expanded(v, names))
     path = os.path.join(outdir, "r1_core.ms")
     with open(path, "w") as f:
         f.write(", ".join(["z", "r3", "A1", "A2", "W1", "HW1", "W2", "HW2",
@@ -1217,16 +1253,9 @@ def emit_gm_core(depth, outdir="/Users/dc/code/math/jc72108/systems/r1"):
     names = {vid: "x%d" % i for i, vid in enumerate(sorted(allvars))}
     os.makedirs(outdir, exist_ok=True)
     path = os.path.join(outdir, "r1_gmband_core.ms")
-    eqs = ["r3^2-3", "A1^3-(3+r3)", "A2^3-(3-r3)", "2*HW1^2-3*W1^2",
-           "2*HW2^2-3*W2^2", "2*EB^7-3",
-           "+".join("z^%d*(%d)" % (i, c) if i else "(%d)" % c
-                    for i, c in enumerate(PHI42) if c)]
+    eqs = list(RAD_EQS)
     for meta, v in exact:
-        terms = []
-        for key, r in sorted(v.items()):
-            mons = "*".join(names[k] for k in key)
-            terms.append("(%s)%s" % (ring_to_poly(r), "*"+mons if mons else ""))
-        eqs.append(" + ".join(terms))
+        eqs.append(emit_expanded(v, names))
     with open(path, "w") as f:
         f.write(", ".join(["z", "r3", "A1", "A2", "W1", "HW1", "W2", "HW2",
                            "EB"] + [names[v] for v in sorted(allvars)]) + "\n0\n")

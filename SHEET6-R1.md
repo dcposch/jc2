@@ -1,10 +1,14 @@
 # SHEET6-R1 — Redesigned R1 Experiment (Coefficient-Level Test of the Two-Pole Template)
 
-Status: ENGINE BUILT + PASS-1 RUN COMPLETE 2026-08-09 (gate 15/15; 18
-linear stages consistent at depth 54; decisive content = banked
-polynomial core, sec 3-4; NO verdict-table row triggered — partial
-clause applies). Engine: cases/r1_experiment.py (rerun mechanics in
-sec 3.0).
+Status: FULL-DEGREE TERMINAL CORE BUILT, GUARDED, AND RUN LOCALLY
+2026-08-09 (sec 8; supersedes the retracted sec 6): the exact 98-row
+minimal-branch G_m core (C1-Gm proven vacuous; 10 constant rows carry
+the E5 load; all four review guards PASS) is emitted to
+systems/r1/r1_full_core.ms with mod-p / w-free variants and the
+(1,2)-sibling core; msolve local: no [1] on any faithful encoding
+within 1200 s (char 0 + 2 primes + 2 w-free screens) => NO verdict-
+table row triggered; partial clause applies; decision = FARM run of
+the banked core. Engine: cases/r1_experiment.py + cases/r1_fullcore.py.
 Date: 2026-08-08 (skeleton) / 2026-08-09 (run)
 
 ## 0. Spec (per SHEET6-LT-REVIEW.md front 7 R1 GATE: REDESIGN then GO)
@@ -281,3 +285,399 @@ partial clause stands; the template remains FORMAL-CANDIDATE. Path
 forward (review-mandated): parenthesis-free expanded emission, sentinel
 soundness fix, [1]-plausibility guards, then the FULL-DEGREE core build
 (machinery reusable across all four branches).
+
+## 8. Rebuilt terminal core — build log (2026-08-09, per SHEET6-R1-REVIEW mandates)
+
+Mission: full-degree discriminating G_m core for the minimal branch,
+review fixes 1-4 (expanded emission, cancellation-proof sentinels,
+[1]-plausibility + round-trip + residual guards, verdict discipline).
+
+### 8.0 Plan (banked before work)
+
+1. Sizing: monomial-count combinatorics for the full-degree G_m window
+   (slot budget 20 => var-degree <= 20; no cap needed if counts feasible).
+2. Engine fixes: (a) absorbing sentinel (vadd/vscal never cancel
+   (HIVAR,) keys); (b) block-refactored G_m jets: f^3 and g^2 built as
+   products of per-(orbit,k) block cubes/squares (avoids the quadratic
+   jmul(f^2,f) blowup; slot truncation is order-independent since slots
+   are nonnegative and additive); (c) new emitter: fully expanded
+   integer monomials, no parens, per-row denominator clearing, radical
+   relations expanded; (d) guards: paren sweep, independent-parser
+   mod-p round-trip vs state rows, constant-term census + explicit
+   origin check, random-point residual (identically-zero rows dropped
+   and logged), radicals-only msolve sanity run.
+3. Full-degree build (VDEG_CAP effectively off) of jfG, jgG, f^3, g^2,
+   W_G at depth 54 (dG = 21: band slots 1..19, quotient at 20); numeric
+   mod-p validation of the block fast path against the direct
+   126/189-factor product at a random point (full-degree analog of the
+   deg<=2 gate).
+4. F_s band at best feasible cap with sound sentinels (exact rows only,
+   lossy census logged); W_R likewise or skipped with log.
+5. Emit systems/r1/r1_full_core.ms (char 0, radical gens as vars) +
+   char-p radical-specialized screen variant; run guards; msolve local
+   (mod-p screen, then char 0, timeout 1200 s); bank outputs to runs/.
+6. Verdict strictly under the sec-1 table; sibling-branch emission only
+   if the delta-spec is genuinely cheap (review F6), never blocking.
+
+A-priori note (guard 3b anticipated): every band row is prefix-relative
+with zero constant term UNLESS the prefix fails a window condition; if
+the constant census comes back all-zero, the origin + any radical point
+satisfies the core, msolve UNSOLVABLE is impossible for the intended
+math, and any [1] is a pipeline error by construction.
+
+### 8.1 Engine fixes DONE (cases/r1_experiment.py)
+
+- Sentinel soundness: (HIVAR,) is now ABSORBING in vadd/vscal (kept at
+  RONE, never scaled or summed => cancellation impossible; vmul already
+  absorbing). The F2 mechanism (g^2/f^3 sentinel-count cancellation) is
+  closed by construction.
+- Emission: ring_to_poly (parenthesized) REPLACED by poly_terms /
+  emit_expanded — fully expanded monomial sums, integer coefficients
+  (per-row denominator clearing), signs inline, no parens; sqrt3 via r3
+  variable; RAD_EQS = expanded radical relations incl. A1^3-3-r3,
+  A2^3-3+r3, Phi42 as literal string. emit_core / emit_gm_core rewired.
+- Selftests PASS. Grammar check: radicals-only file in the new format ->
+  msolve -g 2 reduced GB is FAITHFUL and non-[1]: [3W2^2-2HW2^2,
+  3W1^2-2HW1^2, r3^2-3, A2^3+r3-3, A1^3-r3-3, 2EB^7-3, Phi42 with
+  correct signs] — the F4 parser artifact is gone (review guard 1 PASS).
+
+Sizing (combinatorial, before build): weight<=20 multiset counts:
+f-pool 50.8k monomials, g-pool 158.6k (upper bounds; true counts lower
+by the 6-grid Delta restriction). Full-degree G_m build is feasible via
+per-(orbit,k) BLOCK products (f^3 = product of block cubes, g^2 = of
+block squares — never jmul(f^2,f) all-pairs). Strategy: exact blocks
+(small), then folds; mod-p specialized fold first (sizing + screen),
+exact fold if timing allows. Driver: cases/r1_fullcore.py (next).
+
+### 8.2 Full-degree build driver (cases/r1_fullcore.py)
+
+New driver module reusing the engine (VDEG_CAP=999 — in the G_m window
+var-degree <= slot <= 20, so full degree is EXACT, no sentinel can
+fire; asserted at build). Per-(orbit,k) blocks: through-d0 factors
+exact (one block per A-orbit), Delta suborbit-Newton blocks else —
+byte-mirrors gm_jet2's verified math. f^3 = tree-fold of block cubes,
+g^2 = of block squares (slot truncation order-independent). Round-trip
+primes p = 105337, 105673 (both 1 mod 84; full consistent radical
+points found and verified incl. Phi42(z) = 0, A_i^3 = 3 +- r3,
+2EB^7 = 3, HW_i = sqrt(3/2)W_i).
+
+- --blocks DONE: 21 f-side + 42 g-side exact blocks, 83 s, 189 vars
+  registered (in-window subset will be smaller). No sentinel fired.
+- --check (running): mod-p full-degree comparison of the block-fold jet
+  against an independently coded DIRECT per-factor 126/189-product at a
+  random point, both primes — the full-degree analog of the deg<=2 gate.
+
+### 8.3 Full-degree structure (mod-p fold first; then exact)
+
+Validation: --check PASS — block-fold jet == independently coded DIRECT
+per-factor 126/189-product, all (n,s) keys, both primes, both sides.
+Sizing (mod-p, full degree): jf 29.3k entries / jg 93.9k / f^3 106.6k /
+g^2 203.3k / W_G 297.9k entries over 99 (n,s) keys. Fold time ~1 s
+mod-p => exact fold tractable locally.
+
+STRUCTURAL FINDINGS (full degree, mod-p; exact confirmation pending):
+1. G_m-jet GRADING: every jet key obeys s == 2n (mod 6) (suborbit
+   phase-sum selector: d0-blocks 6 | 32(n7-n_b)+s_b, Delta-blocks
+   e-slots on the 6-grid with eta at t^20). Verified on all jf/jg/WG
+   keys: 0 violations. Since 2n is even, ODD slots are IDENTICALLY
+   ZERO: the C1-Gm fractional family is VACUOUS BY CONJUGACY at full
+   degree — same mechanism as the F_s C1 finding (sec 3). The cap-2
+   census's "84+54 lossy C1-Gm rows" were PHANTOM sentinel rows (their
+   entire content phase-cancels; the conservative cap flagged them).
+   Note qpat = eta(e3-a1)^2(e3-a2)^2(eta^3-b) has support n == 1 mod 3
+   — exactly the slot-20 lattice 2n == 20 (mod 6). Full consistency.
+2. True full-degree G_m row census: 98 rows = WG-band 87 (even slots
+   1..19 on the lattice) + WG-quot 5 (n = 1,4,7,10,13; n = 16 cancels
+   identically as it must) + WG-quot-deg 6 (n = 19..34 lattice).
+3. TEN rows have CONSTANT (var-free ring) terms — all 10 are the
+   quotient-family rows at slot 20. The prefix does NOT identically
+   satisfy slot-20-proportionality as a ring identity: these rows
+   constrain the RADICAL generators (the E5/H_M load, as the review
+   predicted). => the system does NOT contain the origin; guard 3b's
+   "trivially satisfiable" degeneration does NOT apply; a kill is
+   a-priori possible for this core. Screen emitted:
+   systems/r1/r1_full_core_modp.ms (98 eqs, 119 vars, 6.5 MB, char p).
+
+### 8.4 XCHECK + screen run + slot-20 diagnosis
+
+- XCHECK PASS: folded f^3 == (jet f)^3, g^2 == (jet g)^2 numerically.
+- mod-p SCREEN (radicals SPECIALIZED to a random branch point, x-vars
+  only, char p = 105337): msolve -g 2 => GB = [1] in ~1 s
+  (runs/r1_full_core_modp.ms.screen.out). INTERPRETATION UNDER GUARD
+  DISCIPLINE: this is NOT a verdict — in the screen the w_i were fixed
+  at RANDOM GF(p) values, not on the E5 quartic locus; the 10
+  constant-bearing quotient rows are precisely w-loaded (E5) content,
+  so [1] here is consistent with "random w's are inconsistent with the
+  quotient rows", exactly the review's "E5 discriminating load moves to
+  the quotient rows". The char-0 core (radicals as VARIABLES) is the
+  pre-registered decisive object.
+- qcheck (INDEPENDENT direct 126/189-factor product, prefix x=0, both
+  primes): (i) band slots 1..19 vanish identically at prefix —
+  consistent with the review's float rebuild, now exact-mod-p on two
+  primes; (ii) slot-20 prefix is NOT proportional to qpat: mismatch at
+  n = 1,4,7,10,13 (lattice n < 16) and n = 19,22,25,28,31 (beyond
+  deg qpat = 16, where the template demands 0); (iii) folded-WG
+  constant parts == direct-product values with 0 mismatches. So the 10
+  constant rows are REAL structural content of the minimal-branch
+  genome at slot 20 (w-loaded pattern defect), not a pipeline artifact.
+
+### 8.5 Exact fold + F_s sizing decision
+
+- Exact (char-0 ring) folds running (tree-fold, per-level checkpoints
+  /tmp/r1full/x*.ck; ~1.2 GB RSS steady). Exact ring arithmetic is
+  ~10^2-10^3 x the mod-p fold cost; projected 1-3 h total. All exact
+  objects will be re-validated mod-p against the already-verified
+  mod-p folds before emission (structural equality of supports +
+  coefficient reduction check).
+- F_s band at FULL degree: slot-s W_F rows carry weight-s monomials
+  (bf13^s etc.), so full-degree F_s = degree <= 36 objects at depth 54
+  (in-window band slots 6..36; the 18->8 quotient at 1/7-slot 10 needs
+  depth 84). Combinatorial sizing (N_g(36)-scale, 10^7-10^8 monomials)
+  => FARM-scale; NOT built locally. The local deliverable = the G_m
+  terminal core (98 rows), which is the banked sec-3 terminal family;
+  F_s-band full-degree emission goes to the farm list with this sizing.
+- (1,2) sibling branch: emission phase written (--branch12) per the
+  SHEET6-R6 4.3 delta-spec — reuses the SAME exact W_G object: band
+  slots 1..11, h2-tie rows WG(n,12+r) - s1*F2(n,r) (r = 0..7, s1 fresh
+  tie-scale variable, F2 = fold of f-block squares — cheap), slot-20
+  quotient vs qpat after s1-subtraction. Lattice consistency checked:
+  qpat support n == 1 mod 3 at slot 20; P^4 support n == 0 mod 3 at
+  slot 12; both match the s == 2n (mod 6) jet grading. Runs after the
+  minimal-branch emission completes; chains (6,17)/(6,23) get a sizing
+  note (deeper G_m window + h2^6 jets; not one-pass).
+
+### 8.6 Exact-fold pivot: ring-mod-p CRT path
+
+The direct exact fold (Fraction ring dicts) projects to multiple hours
+(level-1 of the f-jet alone ~4 min; f^3/g^2 dominate). PIVOT (exact
+fold kept running as gold-standard backup): fold with ring-monomial
+keys SYMBOLIC and only the K3 Fraction pairs reduced mod p (rnorm
+semantics reimplemented mod p: hw^2->3/2w^2, alpha^3->3+-r3 as (3,+-1)
+pairs, eB^7->3/2, Phi42 z-reduction via ZRED mod p) — a few seconds
+per prime at 2^29-scale primes. CRT over 7 primes + holdout-prime
+structural verification + consistency vs the (direct-product-verified)
+scalar fold, then Wang rational reconstruction per coefficient => the
+EXACT char-0 W_G. Note: C1-Gm vacuity means the core needs W_G only.
+
+### 8.7 uf30 finding + parallel CRT folds
+
+- uf30 (the 15/21-grid dead-stretch var, Delta-slot 18) is ABSENT from
+  every W_G row. Verified NOT a pipeline bug: the direct-product jets
+  DO depend on uf30 (keys (n,18)/(n,20)), but in W_G = g^2 - f^3 the
+  dependence cancels EXACTLY at random tails (independent direct-path
+  test, keys all equal). uf30 is a free direction of the G_m core (it
+  must be pinned elsewhere — F_s band / deeper content), consistent
+  with the g-side sharing f's dead-stretch arcs (E7).
+- 8 ring-mod-p prime folds (2^29-scale) running in parallel (~2.7 GB
+  total RSS on 32 GB); per-prime ~4-10 min projected.
+
+### 8.8 Pipeline pre-test + housekeeping
+
+- Emission+guard pipeline pre-tested end-to-end on a surrogate exact
+  object (two B-Delta blocks): paren sweep PASS, independent-parser
+  round-trip PASS on both fresh primes (105337/105673 — disjoint from
+  the 2^29-scale CRT primes), origin + residual scans behave. Pipeline
+  is ready for the real W_G.
+- Stale cap-2 artifacts renamed r1_gmband_core.{ms,vars.txt}.RETRACTED
+  (AUDIT standing rule: retracted emission must not sit in msolve-
+  consumable namespace; superseded by r1_full_core*).
+- Exact-Fraction foldx killed (superseded by the CRT path with holdout
+  + scalar-fold verification); 8 parallel per-prime folds at ~100% CPU
+  each on 12 cores; post-fold chain armed (CRT -> emit+guards ->
+  w-free screens).
+
+### 8.9 Screen self-guard
+
+Band-only subsystem of the mod-p screen (87 rows, no constant terms —
+contains the origin by construction): msolve does NOT return a quick
+[1] (240 s, no output) — as REQUIRED (a band-only [1] would have been
+a pipeline error under guard 3b). The screen's [1] therefore hinges on
+the 10 constant-carrying quotient rows, consistent with the E5-load
+reading. (Quotient-only subsystem also does not give a quick [1] at
+300 s; the kill needs band+quotient jointly, i.e. genuine structure,
+not a single garbage row — unlike the retracted cap-2 artifact whose
+[1] came from 3 mangled rows.)
+
+### 8.10 Chain-branch ((2,3)->(6,17), (2,5)->(6,23)) sizing — deferred
+
+Per review F6 the emission machinery transfers, but the chains are NOT
+one-pass-cheap: they need (i) h2 = W_G^2 - s1 F3 (W_G^2 is a >= 10^6-
+entry object per prime), (ii) the h3 = h2^6 - s2 f^l level-3 G_m band
+at depth 195/42 resp. 267/42 with residual P^{24|36}(q^6 - H^6 P^10) —
+a G_m window 2-3x deeper than the minimal branch's 21 slots, hence
+generator depth >= ~84, an in-window unknown pool ~2x, weight budget
+40-60, and monomial counts 10-100x this build. Estimated farm cost:
+~2-10 CPU-h per prime x ~8-12 CRT primes per chain with the current
+(verified) block+CRT machinery. DEFERRED to the farm with this sizing;
+the (1,2) sibling IS emitted locally (8.11) since it reuses this
+build's exact W_G and a cheap F2 fold.
+
+### 8.11 Fold performance fix (restart)
+
+First-generation ring-mod-p folds hit the dense-partial bottleneck
+(ring dicts fill toward 12 z-keys; final f^3/g^2 products ~10^8
+reduction calls => ~1-2 h/prime). Fix: (a) memoized c-independent
+raw-key reduction in rmul_p (rnorm chain + Phi42 z-reduction cached
+per raw monomial key — hit rate is huge since raw keys repeat), (b)
+smallest-first pairing in tree_fold. Folds restarted with the new
+code; correctness remains guarded downstream by the CRT holdout-prime
+check and the scalar-fold consistency check (both hard asserts in the
+armed chain).
+
+### 8.12 Fold shape lesson (banked for the farm/chain builds)
+
+Tree-folding the per-(orbit,k) power-blocks is the WRONG shape for the
+ring-mod-p fold: pairing two grown partials multiplies dense x dense
+ring dicts (10^8+ entry-pairs x high z-density => 10^10 reductions).
+The RIGHT shape is the engine's own seed-chaining: sequential
+dense x sparse (partial x one low-density block), which keeps one side
+at ring-density ~1-3. Implemented as fold_seq; 12 parallel prime folds
+(insurance against the measured coefficient growth |num| ~ 2.7e23 on
+4-block partials, den <= 1024: 11 use-primes give reconstruction bound
+~1e47) restarted 04:37:51; first 11/21 f-blocks in 8 s.
+
+### 8.13 Pointwise-z representation (final fold path)
+
+Third representation iteration: evaluate the z-dimension at all 12
+Phi42 roots mod p (p == 1 mod 42; roots via x^((p-1)/42) sampling, no
+scans) — ring coefficients become {tail7: 24-int vectors} with
+POINTWISE z-multiplication (no convolution, no ZRED); converted back
+to the za-basis by inverse Vandermonde at fold end, so cWG.<p>.pkl
+format and the CRT+holdout+scalar verification stack are unchanged.
+Entry counts agree with the pair representation at every checkpoint
+(19263 @ 11/21, 106592 @ 16/21 and 21/21). f^3 fold: 606.7 s/prime
+(vs pair-rep unfinished at 20+ min). 12 primes (new family, == 1 mod
+42, ~2^29) running in parallel since 05:01.
+
+### 8.14 First exact-prime fold landed
+
+cWG.536870923.pkl: 297,930 entries — EXACTLY the scalar-fold entry
+count (8.3), structural agreement across representations. Per-prime
+wall 31.5 min (pointwise-z, 12 parallel). Remaining 11 primes land
+within ~10 min; CRT chain armed on the 8th.
+
+### 8.15 Vandermonde orientation bug + repair (fixz)
+
+The first CRT attempt failed en masse: pv_to_zbasis had a TRANSPOSED
+Vandermonde (stored (V^-1)^T V c instead of c). Caught by the
+holdout-prime verification exactly as designed (guard did its job).
+Repair applied in place per prime: c = V^-1 V^T stored (phase_fixz,
+self-tested on synthetic vectors per prime; 12/12 repaired). After the
+fix the pointwise path passes DIRECT tests against exact engine ring
+arithmetic (roundtrip + product MATCH), and mini-CRT verifies
+coefficients up to 5.6e34/32 (true magnitudes are enormous — sums over
+~10^5 phase-product paths — vindicating the 12-prime insurance;
+11-use-prime capacity ~1e47). Full CRT + emit + guards chain running.
+
+### 8.16 Capacity extension
+
+11-use CRT left 4,279 unreconstructed coefficients, ALL concentrated
+at slots 18-20 (quotient keys (n,20) dominate) — the deep B-tail
+multiplicity content; largest verified coefficient so far 5.6e34/32.
+Four additional primes (13-16; dedup bug in crt_primes_v fixed — the
+repeat-call cache appended duplicates, silently no-opping the extra
+folds) now folding; 15-use capacity ~2e65. Emitter upgraded with
+per-row content (gcd) removal so emitted integers stay minimal; the
+round-trip guard mirrors the same scaling.
+
+### 8.17 EXACT CORE BUILT + ALL GUARDS PASS (06:07)
+
+- CRT over 15 use-primes + holdout: xWG banked, 297,930 entries/99
+  keys; holdout prime 536873947: 0 mismatches; consistent with the
+  (direct-product-verified) scalar fold. Reconstruction failures: 0.
+- EMITTED systems/r1/r1_full_core.ms — the pre-registered full-degree
+  minimal-branch G_m terminal core: 7 expanded radical eqs + 98 rows
+  (WG-band 87, WG-quot 5, WG-quot-deg 6), 119 engine vars + 9 radical
+  gens, 18.1 MB, integer coefficients, content-normalized, NO parens.
+  Also r1_full_core_p{105337,105673}.ms (same system, coefficients mod
+  p, radicals still variables) and r1_full_core_wfree_p*.ms (z, r3,
+  A1, A2, EB specialized; W1/HW1/W2/HW2 FREE variables).
+- GUARDS: (A) paren sweep PASS. (B) round-trip vs an INDEPENDENT
+  parser at two fresh primes disjoint from the CRT set: 98/98 match;
+  98/98 nonzero at a random point. (C) origin check: 88/98 vanish at
+  x=0; the 10 quotient-family constant rows do NOT => the variety does
+  NOT contain the origin; a [1] would be a legitimate verdict here,
+  NOT auto-spurious. (D) residual: 0 identically-zero rows (none
+  dropped). Row labels: r1_full_core.rows.txt.
+
+### 8.18 msolve runs (first results)
+
+- wfree screen p=105337 (W1/HW1/W2/HW2 free, other radicals branch-
+  specialized, char p): TIMEOUT 1200 s — NO quick [1]. Contrast: the
+  all-specialized screen (w RANDOM) gave [1] in ~1 s. Freeing the w's
+  removes the fast contradiction => the cap-level "kill" at random w
+  was indeed the E5/w-load of the quotient rows, not a shallow death
+  of the branch. The satisfiability question is genuinely deep in the
+  w-coupled system.
+
+### 8.19 (1,2) sibling core EMITTED
+
+Exact F2 (f^2 fold) recovered via the same pointwise-z CRT stack
+(11 use-primes, holdout 0 mismatches, consistent with a scalar fold at
+p=105337): 68,254 entries / 93 keys. (1,2)-branch core emitted per the
+SHEET6-R6 4.3 delta-spec: systems/r1/r1_12branch_core.ms — 105 eqs
+(7 radical + 98 rows: B12-WG-band 37 [slots 1..11 vanish], B12-h2-tie
+50 [WG(n,12+r) = s1*F2(n,r), r = 0..7; r=0 is the printed legality
+h1+ = s1(f+)^2; s1 a fresh tie variable], B12-h2-quot 11 [slot-20
+proportionality vs qpat after s1-subtraction]), 119+9+1 vars, 22.1 MB,
+paren sweep PASS, 10 constant-bearing rows (again the slot-20 family:
+the (1,2) core is also NOT origin-satisfiable => genuinely
+discriminating). Row labels: r1_12branch_core.rows.txt.
+
+### 8.20 Run ledger (msolve 0.10.1 local, -g 2, timeout 1200 s each)
+
+| system | vars | char | radicals | w's | result |
+|---|---|---|---|---|---|
+| r1_full_core_modp.ms (screen) | 119 | p | specialized | RANDOM point | [1] in ~1 s (E5-load diagnostic, NOT a verdict — w-point not on quartic locus) |
+| band-only subset of screen | 119 | p | specialized | random | no quick [1] at 240 s (origin-satisfiable subsystem behaves correctly) |
+| r1_full_core_wfree_p105337.ms | 123 | p | z,r3,A1,A2,EB specialized | FREE | TIMEOUT 1200 s (no [1]) |
+| r1_full_core_wfree_p105673.ms | 123 | p | specialized | FREE | TIMEOUT 1200 s (no [1]) |
+
+| r1_full_core_p105337.ms | 128 | p | VARIABLES | free | TIMEOUT 1200 s (no [1]) |
+| r1_full_core.ms (PRE-REGISTERED) | 128 | 0 | VARIABLES | free | TIMEOUT 1200 s (no [1], no basis) |
+
+| r1_full_core_p105673.ms | 128 | p | VARIABLES | free | TIMEOUT 1200 s (no [1]) |
+
+(All outputs in runs/r1_full_core*.out.)
+
+### 8.21 VERDICT under the pre-registered table (sec 1)
+
+- "R6 window empty AND R1 staged system UNSOLVABLE => template DIES":
+  **NOT TRIGGERED.** The correct full-degree minimal-branch core
+  produced NO [1] on any faithful encoding within the 1200 s local
+  budget (char 0, two full-p reductions, two w-free branch screens).
+  The only [1] observed (all-specialized screen at a RANDOM w-point)
+  is excluded from verdict use by guard discipline: the w-point is not
+  on the E5 quartic locus, and the failing content is exactly the
+  w-loaded quotient family.
+- "R1 SOLVABLE => formal candidate deepens": **NOT TRIGGERED.** No GB
+  or dimension certificate was obtained within budget; satisfiability
+  is NOT established (and is no longer a priori: the 10 constant rows
+  exclude the origin).
+- => **partial clause applies; the decision now rests on a FARM run of
+  the banked, guard-certified core.** What IS established (new, exact,
+  guarded): (i) the true full-degree minimal-branch G_m terminal core
+  is 98 rows / 119+9 vars (not 368 rows / 109 vars — the C1-Gm family
+  is vacuous by the s == 2n (mod 6) jet grading, proven mechanically
+  and verified on two independent evaluation paths); (ii) the core is
+  NOT origin-satisfiable: the slot-20 quotient family carries 10
+  var-free w-loaded constants — the prefix genome VIOLATES exact
+  slot-20 proportionality to qpat (mismatch at n = 1,4,7,10,13 and
+  19..31, two primes, independent direct product) — the E5 load is now
+  EXPLICIT in the emitted system; (iii) a random-w branch point is
+  mod-p INCONSISTENT with the core ([1] in 1 s) while w-free encodings
+  show no fast contradiction: the w's are genuinely constrained by the
+  band+quotient jointly; (iv) uf30 drops out of W_G identically (free
+  direction of this core). The kill-or-candidate decision is exactly
+  the farm-scale GB of r1_full_core.ms (and its mod-p reductions
+  first), plus the F_s-band full-degree extension (farm sizing in 8.5).
+
+Deliverables: systems/r1/r1_full_core.ms (+.rows.txt, char-0
+pre-registered core), r1_full_core_p{105337,105673}.ms (mod-p
+reductions, radicals as variables), r1_full_core_wfree_p*.ms (w-free
+branch screens), r1_full_core_modp.ms (all-specialized diagnostic),
+r1_12branch_core.ms (+.rows.txt, (1,2)-sibling core per the 4.3
+delta-spec, guard-passed), r1_gmband_core.ms.RETRACTED (quarantined);
+engine fixes in cases/r1_experiment.py; builder cases/r1_fullcore.py;
+run logs runs/r1_full_core*.out; state /tmp/r1full (16 CRT primes,
+exact xWG/xF2 with holdout + scalar-fold verification).
