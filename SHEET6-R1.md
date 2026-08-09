@@ -1,7 +1,11 @@
 # SHEET6-R1 — Redesigned R1 Experiment (Coefficient-Level Test of the Two-Pole Template)
 
-Status: PENDING — skeleton banked before any computation (anti-stall discipline).
-Date: 2026-08-08
+Status: ENGINE BUILT + PASS-1 RUN COMPLETE 2026-08-09 (gate 15/15; 18
+linear stages consistent at depth 54; decisive content = banked
+polynomial core, sec 3-4; NO verdict-table row triggered — partial
+clause applies). Engine: cases/r1_experiment.py (rerun mechanics in
+sec 3.0).
+Date: 2026-08-08 (skeleton) / 2026-08-09 (run)
 
 ## 0. Spec (per SHEET6-LT-REVIEW.md front 7 R1 GATE: REDESIGN then GO)
 
@@ -101,6 +105,15 @@ still-free unknowns nonlinearly => deferred to terminal core. Ledger:
 (m, #new, #rows, rank, pinned, nullity, deferred). STOP at first
 inconsistent stage (bank small certificate).
 
+Rerun mechanics (checkpointed; state in /tmp/r1_state.pkl): gate =
+`python3 r1_experiment.py --stage0` (~15 checks, 10 min). Staged run =
+multi-pass with forced-pin substitution between passes; each pass:
+`--phase=fs`, `--phase=gm`, `--phase=wf1`, `--phase=wf2`, `--phase=wf3`,
+`--phase=solve` (add `--final` on the last pass; `--reset-state` to
+start clean; `--depth=N`, default 54). Each phase < 10 min foreground.
+Pass k+1 rebuilds jets with pass-k pins inlined (collapses the HIVAR
+sentinel rows back into linear rows).
+
 ### Stage ledger (banked incrementally as each stage completes)
 
 Stage 0 (gate, --stage0): **PASS 13/13** — engine machinery reproduces
@@ -114,6 +127,13 @@ AND the G_m-jet transports MECHANICALLY: the 126- and 189-factor
 phase-twisted arc products collapse to S_M (e3-a1)^2(e3-a2)^2 with
 S_M = 7^12/2^6 and G_M (e3-a1)^3(e3-a2)^3 with G_M = -7^18/2^9 (sign
 included; St 3.9(ii) reproduced), and W_G slot-0 = 0 (E1 transported).
+Final gate = 15/15: the two production fast paths (fs_jet2: suborbit-
+Newton with selector 6[6|12r+s]; gm_jet2: P is C_7-invariant so other-
+branch suborbit factors are phase images — per-(orbit,k) Newton) both
+match the direct 126/189-factor products exactly on all tracked
+(var-degree <= 2) content, with var-degree >= 3 collapsed to a
+conservative HIVAR sentinel (affected rows classify nonlinear-deferred,
+never linear — kills cannot be manufactured by the cap).
 Engine model facts locked at build time: (i) g's branches ride the same
 joint-tree arcs => g shares f's 7 dead-stretch unknowns (d_g-ladder
 exactness, E7); (ii) B-side modeled as one 42-orbit (f) and 42+21 (g)
@@ -137,12 +157,94 @@ R1 cancellation-depth bands (C2: W_F on the 6-grid stages m = 18, 24,
 NOT graded (fixed direction), hence carry the discriminating load, in
 the band LT-REVIEW predicted ("levels 3..10 past F_s").
 
-Stages m >= 13: PENDING (run in flight).
+Pass-1 ledger (depth 54, VDEG_CAP=1: rows containing any product of two
+still-free unknowns defer to the core; 1414 rows, stages m = 18..52):
+every stage CONSISTENT. rank 54 / 86 seen unknowns, nullity 32; 0
+forced pins; 1136 rows deferred nonlinear; 201 proportionality
+split-columns (relaxations, weaken-only); 0 rho-relations; no
+certificate. Stage rows: m=18/24/30/36: 163-176 rows each (W_F 6-grid,
+~127-140 deferred); m=38..52 even: W_G band 20-22 rows/slot (most
+pivots); m=41..51 odd: C1-Gm fractional 41-43 rows (ALL deferred: each
+contains u*b-tail products); m=42: +W_R j=1 slice (142 deferred);
+m=52: G_m quotient (16/20 deferred).
+
+STRUCTURAL FINDING (pass 1, central): the R1 bands are NOT a staged
+LINEAR system over the genome unknowns — every discriminating row is
+polynomial (quadratic+) in the 7 dead-stretch + B-side tails, because
+band slots aggregate PRODUCTS across branch factors. The spec's
+"linear in the O(1) new unknowns per level" holds only against an
+already-determined bottom, and the bottom is NOT determined by the
+in-window linear residue (nullity stays > 0 at every stage). So R1's
+decisive content = a bounded POLYNOMIAL system in the bottom unknowns
+(dead-stretch u_18,24,30, v_34,36 x 2, B-tails, co-staged g-bottom,
+H_M) — exactly the "terminal nonlinear core" of the pre-registration,
+arriving at the BOTTOM of the tower rather than after linear stages.
+Sizing: in-window bottom unknowns ~40-70 (B-tails dominate), i.e.
+ABOVE the 20-var msolve-easy estimate; the linear stages cannot shrink
+it at depth 54.
+
+Terminal core (banked explicit form + sizing, spec item 5 "else"
+branch): systems/r1/r1_gmband_core.ms + .vars.txt — the G_m-band
+family (C1-Gm fractional slots, W_G band slots 1..19, quotient rows at
+slot 20 with H_M eliminated by the lead) over Q with r3^2 = 3,
+Phi_42(z) = 0, alpha_i^3 = 3 +- r3, hw_i^2 = (3/2) w_i^2, eta_B^7 =
+3/2: **109 engine unknowns + 9 radical generators; 57 rows exact at
+tracked degree <= 2; 311 rows require degree >= 3 tracking** (cap-2
+build; a full-degree emission needs the per-(orbit,k) sub-checkpointed
+build at cap >= 4, ~30-60 min farm CPU). 109 >> 20 vars => local
+msolve NOT attempted (per spec guard); the rank-54 linear reduction
+can eliminate ~half the variables before a farm run. Independent
+cross-check: a subagent reran the final solve on the same state and
+reproduced the ledger and 0-pins result verbatim.
 
 ## 4. Verdict Under Pre-Registration
 
-PENDING.
+Under the section-1 table ONLY:
+
+- "R6 window empty AND R1 staged UNSOLVABLE => template DIES": **NOT
+  TRIGGERED.** R6 is closed (window empty), but NO stage of the R1
+  linear system is unsolvable: all 18 staged linear systems (1414 rows,
+  m = 18..52, depth 54) are CONSISTENT, with no inconsistent row, no
+  rho-relation, and no certificate. Every engine relaxation (HIVAR cap,
+  proportionality splits, free B-side model) only WEAKENS the system,
+  so this "no kill found" is honest but bounded by depth 54 and by the
+  deferred-row set.
+- "R1 SOLVABLE => formal candidate deepens": **NOT TRIGGERED.** The
+  run does NOT establish solvability-at-depth in the pre-registered
+  sense, because the staging premise itself fails: the discriminating
+  R1 conditions are irreducibly POLYNOMIAL (deg >= 2) in the bottom
+  unknowns (7 dead-stretch + B-side + co-staged g-bottom + H_M) and
+  defer to the terminal core (1136 of 1414 rows). A solvable linear
+  stage is NOT a counterexample (pre-registered), and nullity > 0
+  persists at every stage.
+- => the **partial/degenerate clause applies.** Established exactly:
+  (i) stage-0 gate 15/15 — the engine reproduces the genome lead
+  identities (E1/E5/E6/E7, S_M/G_M transports) mechanically over
+  Q(sqrt3); (ii) the linear residue of the R1 bands through depth 54
+  is consistent (rank 54 / 86 unknowns; ledger sec 3); (iii) R1's
+  decisive content at this depth IS the banked terminal core (109
+  unknowns + 9 radicals, G_m-band family; 57/368 rows exact at cap 2)
+  — the decision (kill or candidate) now rests on that polynomial
+  core, not on any further linear stage; (iv) the J(f,g) closure is
+  NOT expressible from y-side data alone (needs the x-side / R5-LROOT
+  merge) and remains an unfulfilled core member, so no candidate-tier
+  claim of any kind is made. The template remains FORMAL-CANDIDATE
+  status quo ante; the book of 4 + residue-A configuration are
+  UNCHANGED by this run.
 
 ## 5. Next Step
 
-PENDING.
+1. Full-degree core build: per-(orbit,k) sub-checkpointing at
+   unbounded cap (or JC_BACKEND=flint products) to emit ALL 368
+   G_m-band rows + the F_s-band rows exactly; substitute the rank-54
+   linear relations to eliminate ~half the 109 unknowns; farm msolve
+   (mod-p first) on the reduced core. UNSOLVABLE core (with R6 closed)
+   = the pre-registered template kill; solvable = near-candidate datum
+   gated on the J-closure.
+2. Depth 84 (--deep): F_s-band 1/7-slots through 11 (the LT-REVIEW
+   predicted kill zone 3..10 fully covered), W_R j = 2, G_m band
+   already complete at 54.
+3. Merge the LROOT x-side pin to express J(f,g) in the core (R5), the
+   one member the y-side window cannot supply.
+4. B-side partition audit (42 vs 2x21 etc. for f; 42+21 for g) before
+   promoting any future kill certificate that touches B-side unknowns.
