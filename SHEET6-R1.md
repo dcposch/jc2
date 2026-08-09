@@ -248,3 +248,21 @@ Under the section-1 table ONLY:
    one member the y-side window cannot supply.
 4. B-side partition audit (42 vs 2x21 etc. for f; 42+21 for g) before
    promoting any future kill certificate that touches B-side unknowns.
+
+## 6. Core verdict (parent session, 2026-08-09)
+
+`systems/r1/r1_gmband_core.ms` (cap-2 G_m-band core: 118 vars incl. 9
+radical gens, 64 equations, char 0) run on ultramem-1, msolve -g 2:
+**EMPTY — GB = [1]** in ~5 s (runs/r1_gmband_core.out, 759 B, verdict
+line present; not a silent death). Since the core is a constraint SUBSET
+of the full minimal-branch R1 system, [1] here kills the whole branch —
+**the minimal-tower genome is UNSATISFIABLE at coefficient level** —
+CONDITIONAL on core-emission faithfulness (under adversarial review; a
+spurious over-constraint would fake this). Note the signature: 64
+equations in 118 unknowns infeasible = deep structural clash, msolve
+found it instantly.
+
+Remaining branches (R6 print-survivors, each needing its own staged
+core): (1,2) [delta-spec written], (2,3)-chain (6,17), (2,5)-chain
+(6,23). If all four die: the two-pole residue-A configuration is
+EXCLUDED and td=6 reduces to the 4 single-pole r9/M2 classes.
