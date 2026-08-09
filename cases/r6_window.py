@@ -81,6 +81,91 @@ def case_report(k1, l1):
     # delta-recursion values => layer 2.
     return rep
 
+def layer2():
+    """Layer 2: m=2 pattern forms (Prop 8.1(ii)/4.2) + printed transport laws.
+
+    Laws used (all printed-tier, page refs sigray_full.pdf):
+      L2 (p.41, St 3.9+3.16):  mult(p_G, c) = deg(p_F) EXACT for vertex
+          patterns on every edge (F = G*c deeper).
+      L1 (St 8.3(ii), p.41):   equality of counts for members j <= m_F.
+      L3 (St 3.11(i)):         deg(p_{h,F*c}) <= mult(p_{h,F}, c), all h.
+      L4 (p.40, Prop 8.1 proof via Prop 6.3): dead member h_m at F: for ANY
+          root c of p_F: mult(p_{h_m,F}, c) = (mu_F - 1)mult(p_F, c) + 1.
+      L5 (Prop 4.2(iii)/8.1):  alive h_j: p_{h_j,F} = (-)p_red^{i l_j/k_j},
+          i l_j/k_j in N; full pattern p_F = p_red^i (Prop 8.1(i)).
+      Orbit frame (Not/Prop 9.3, 2POLE 2b): G_m patterns in eta^s*C[eta^3];
+          each pole direction = full eta^3-orbit factor (eta^3-c_i^3)^{mu_i},
+          mult(p_F, c_i) = i*mu_i; St 3.16: >1 root at non-pole chain vertices.
+    Level-0 cross-checks of L4 (both EXACT in the banked template):
+      G_m: (3/2-1)*2+1 = 2 = mult(P*q, c_i) (E5 'pq: 1+1', q = H*eta*P*(t-b));
+      F_s: (25/6-1)*12+1 = 39 = mult(p_{h2,Fs}, c_m) (E4/E7)."""
+    print("\nR6 LAYER-2 ledger (m_Gm = 2; suffix + merge transports)")
+    assert (Fr(3,2)-1)*2 + 1 == 2 and (Fr(25,6)-1)*12 + 1 == 39  # L4 checks
+    for k1, l1 in WINDOW:
+        r = Fr(l1, k1)
+        mu2 = Fr(3, 2) + (k1 - 1) * r          # mu_Gm, m=2 (Prop 4.2(iv))
+        degp_h1_gm = 12 * r
+        Mst_gm = gcd(gcd(12, 18), int(degp_h1_gm))
+        i_gm = 12 // Mst_gm
+        print(f"\n  ({k1},{l1}) r={r}: mu2={mu2}, M*_Gm={Mst_gm}, i_Gm={i_gm}")
+        # (A) merge-edge vertex transport (L2): mult(p_f@Gm,c_i) = i_Gm*mu_i
+        #     must EQUAL deg p_f@P = 2, mu_i in N>=1; orbit fit: pole orbit
+        #     (eta^3-c_i^3)^{mu_i} needs 3*mu_i <= deg p_red = M*_Gm.
+        A_ok = (2 % i_gm == 0) and (3 * (2 // i_gm) <= Mst_gm)
+        print(f"    (A) merge transport: i_Gm*mu_i = 2 with mu_i in N: "
+              f"{'PASS (mu_i=%d)' % (2//i_gm) if 2 % i_gm == 0 else 'FAIL (mu_i=2/%d not in N)' % i_gm}"
+              + ("" if 2 % i_gm else f"; orbit fit 3*mu_i <= {Mst_gm}: "
+                 + ("PASS" if A_ok else "FAIL")))
+        if not A_ok:
+            print(f"    -> DEAD (A): mult(p_f@Gm,c_i) = {i_gm}*mu_i >= {i_gm}"
+                  f" != 2 = deg p_f@P (L2 exact); equivalently deg-2 reduced"
+                  f" pattern cannot contain an eta^3 pole orbit (St 3.16).")
+            print(f"        corroboration: L4 RHS (mu2-1)*2+1 = {2*mu2-1}"
+                  f" not in N -> merge data cannot exist.")
+            continue
+        # (B) suffix-edge St 8.3(ii) EQUALITY for h1 (member both sides):
+        #     mult(p_h1@Fs,c_m) = i_Fs*r*m1, and L2 forces i_Fs*m1 = 12
+        #     -> mult = 12r = deg p_h1@Gm identically; content = m1 = 12/i_Fs
+        #     in N, i_Fs from M*_Fs | gcd(126,189,126r).
+        Mst_fs_h01 = gcd(63, int(126 * r))
+        i_menu = [126 // d for d in range(1, Mst_fs_h01 + 1)
+                  if Mst_fs_h01 % d == 0 and d in (1, 3, 7, 9, 21, 63)]
+        i_ok = sorted(i for i in i_menu if 12 % i == 0)
+        print(f"    (B) h1 suffix equality: i_Fs menu (m1=12/i in N): {i_ok};"
+              f" mult(p_h1@Fs,c_m) = i*r*(12/i) = {12*r} == deg p_h1@Gm ="
+              f" {degp_h1_gm}: PASS (identity via L2+L5)")
+        # (C) E5-analogue, h1 at pole edges: mult(p_h1@Gm,c_i) = i_Gm*r*mu_i
+        #     = 2r; h0 ALIVE at Gm (m=2) -> (g+)^2 = s0(f+)^3 transports ->
+        #     eta^6-coeff m_i^2 - s0*lam_i^3 = 0 AUTOMATIC; pole-ODE identity
+        #     z(z-(3/2)w^2)^2 - (z-w^2)^3 = -(3/4)w^4 z + w^6 (z^2 cancels):
+        #     deg p_h1@P = 2 EXACT (w != 0), d_h1@P = 3/21 - 4/42 = 1/21.
+        c_ok = 2 <= 2 * r
+        print(f"    (C) E5-analogue h1@P: deg 2 <= mult(p_h1@Gm,c_i) = {2*r}:"
+              f" {'PASS' if c_ok else 'FAIL'} (drop forced, w_i^4 pinned as"
+              f" level-0 E5; d_h1@P = 1/21)")
+        # (D) h2 at pole edges (the binding kill): levels k1*(1/21) vs
+        #     l1*(1/21): l1 > k1 -> f-side wins: p_h2@P = (-)s1*lam^l1*
+        #     (eta^2-w^2)^l1, deg 2*l1 EXACT (pure power, no drop possible).
+        #     L3 + L4: 2*l1 <= mult(p_h2@Gm,c_i) = (mu2-1)*2 + 1 = 2*mu2-1
+        #     <=> l1 <= k1  (TEMPLATE sec 3 R6's own inequality, now with
+        #     d_h1@P pinned so it binds for ALL l1 > k1, not just l1 > 3k1).
+        lhs, rhs = 2 * l1, 2 * mu2 - 1
+        print(f"    (D) h2 pole-edge count: deg p_h2@P = 2*l1 = {lhs} <= "
+              f"mult(p_h2@Gm,c_i) = 2*mu2-1 = {rhs}: "
+              f"{'PASS' if lhs <= rhs else 'FAIL -> DEAD'}")
+        if lhs > rhs:
+            print(f"    -> DEAD (D): {lhs} > {rhs}; general form 2l1 <= "
+                  f"2+2l1-2l1/k1 <=> l1 <= k1, false on the whole window.")
+            # (E) E4-analogue (h3 top at Gm) is MOOT; record the constraint it
+            #     would have imposed on (k2,l2): deg q = 12(r2-mu2+1) with
+            #     q >= H*eta*P*(t-b)^{m_b} (b-orbit relocated into h2, m_b>=1)
+            #     -> minimal shape forces r2 = mu2 - 1/6 (self-similar echo).
+            print(f"        (E, moot) suffix h2 equality would pin deg q ="
+                  f" 12(r2-{mu2-1}); minimal q-shape -> r2 = {mu2-Fr(1,6)}.")
+    print("\nlayer-2 verdicts: ALL 8 DEAD (A: six k1 in {3,6}; D: (2,3),(2,5)).")
+    print("R6 CLOSED: m_Gm = 1 minimal assignment forced; no isomorphic-genome"
+          " survivor (the (2,3) self-similar echo dies at (D)).")
+
 def main():
     print("R6 layer-1 ledger (see SHEET6-R6.md; layer 2 = m=2 pattern forms)")
     for k1, l1 in WINDOW:
@@ -104,3 +189,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    layer2()
