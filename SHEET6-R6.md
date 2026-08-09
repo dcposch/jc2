@@ -1,6 +1,6 @@
 # SHEET6-R6 — deeper-tower window of the sheet-6 two-pole template (m_{G_m} = 2)
 
-Status: CLOSED 2026-08-08 (layer 2 complete: ALL 8 WINDOW CASES DEAD).
+Status: PARTIALLY CLOSED, REVIEW-CORRECTED (SHEET6-R6-REVIEW.md: fronts 1-3,6 CONFIRMED; front 4 REFUTED — d_h1@P = 1/7 per the promoted table, (2,3)/(2,5) NOT dead, corrected (D) = k1<=l1 passes whole window; window itself incomplete: ninth case (1,2)). NET: 6/9 DEAD doubly printed-tier; m_Gm>=3 closed by review scope patch; OPEN: (2,3)->forced echo (6,17), (2,5)->forced echo (6,23) [next recursion rung not run], (1,2) = minimal-reindexed DISJOINT R1 branch (needs k1=1 exclusion or R1 enumeration). R1 label: per-branch until the three close.
 Mission was: close or characterize the survivors of the
 R6 window. Level-0 kills already banked in SHEET6-TEMPLATE.md §3 R6:
 (k1,l1)=(1,3) dead (level contradiction), l1 > 3k1 dead (h2-count at pole edges).
@@ -141,3 +141,23 @@ obstruction at G_m itself). ALL 8 DEAD; see §1-§3.
 
 Status: LAYERS 1+2 BANKED; R6 CLOSED — R1 decisive for the whole
 residue-A configuration.
+
+## Post-review corrections (SHEET6-R6-REVIEW.md, applied)
+
+- (D) corrected: d_h1@P = 1/7 (nonzero deg-2 pattern = no level drop;
+  St 3.9(iii) drops d only via mult along steps). h1-side wins h2's pole
+  top on the whole window (r < 3): p_h2@P = (p_h1@P)^{k1}, deg 2k1; test
+  2k1 <= 2mu2-1 <=> k1 <= l1 PASSES (slack 2(k1-1)(r-1), equality at k1=1).
+- Window completeness: independent re-enumeration gives NINE candidates;
+  (1,2) was missing from all prior banks. Its layer-2: (A) passes (i=2),
+  (D) at equality, suffix equality forces (k2,l2) = (3,4): the minimal
+  genome re-indexed (2,3),(1,2),(3,4) — BUT disjoint R1 constraints
+  (d_h1@Gm = 12/21, quotient ~ P^4 vs minimal 8/21, quotient pq).
+- Echoes forced and OPEN: r2 = mu2 - 1/6 exact => (2,3) -> (6,17),
+  (2,5) -> (6,23); the six-case (A) kill does NOT directly apply at the
+  echo level (different vertex data, m_Gm = 2 still); next rung required.
+- m_Gm >= 3 scope patch (review 5(i), printed-tier): (a) six shapes: M*
+  stays <= 2, same kill any depth; (b) (2,3) depth 3: delta_2 window
+  empty; (c) (2,5) depth 3: 12r2 in {56,58} => M*_Gm = 2 => six-case kill.
+- Cite fix: the six-case kill equality is St 3.17(i) p. 18 (verbatim in
+  St 8.3's proof p. 41); decorative St 7.2 miscite removed (weightless).

@@ -45,7 +45,8 @@ d_f = {v: Fr(D_F[v], KAP[v]) for v in D_F}
 d_g = {"R": Fr(63, 1), "Fs": Fr(9, 1), "Gm": Fr(9, 21), "P": Fr(3, 42)}
 # NB table 1a lists d_g slightly differently normalized; ratios are what matter.
 
-WINDOW = [(2, 3), (2, 5), (3, 5), (3, 7), (3, 8), (6, 11), (6, 13), (6, 17)]
+WINDOW = [(1, 2),   # review 5(iv): missing from all prior banks; passes all window tests
+          (2, 3), (2, 5), (3, 5), (3, 7), (3, 8), (6, 11), (6, 13), (6, 17)]
 
 def case_report(k1, l1):
     r = Fr(l1, k1)
@@ -142,51 +143,44 @@ def layer2():
         c_ok = 2 <= 2 * r
         print(f"    (C) E5-analogue h1@P: deg 2 <= mult(p_h1@Gm,c_i) = {2*r}:"
               f" {'PASS' if c_ok else 'FAIL'} (drop forced, w_i^4 pinned as"
-              f" level-0 E5; d_h1@P = 1/21)")
-        # (D) h2 at pole edges (the binding kill): levels k1*(1/21) vs
-        #     l1*(1/21): l1 > k1 -> f-side wins: p_h2@P = (-)s1*lam^l1*
-        #     (eta^2-w^2)^l1, deg 2*l1 EXACT (pure power, no drop possible).
-        #     L3 + L4: 2*l1 <= mult(p_h2@Gm,c_i) = (mu2-1)*2 + 1 = 2*mu2-1
-        #     <=> l1 <= k1  (TEMPLATE sec 3 R6's own inequality, now with
-        #     d_h1@P pinned so it binds for ALL l1 > k1, not just l1 > 3k1).
-        lhs, rhs = 2 * l1, 2 * mu2 - 1
-        print(f"    (D) h2 pole-edge count: deg p_h2@P = 2*l1 = {lhs} <= "
-              f"mult(p_h2@Gm,c_i) = 2*mu2-1 = {rhs}: "
+              f" level-0 E5; d_h1@P = 1/7 -- REVIEW front 4: nonzero deg-2"
+              f" pattern means NO level drop; St 3.9(iii) drops d only via"
+              f" mult along steps, never via in-vertex cancellation)")
+        # (D) h2 at pole edges — REVIEW-CORRECTED (SHEET6-R6-REVIEW front 4):
+        #     d_h1@P = 1/7 (= 3/21), so h2 = h1^k1 - s1 f^l1 at P compares
+        #     levels k1*(3/21) vs l1*(1/21): h1-side wins iff l1 < 3k1 --
+        #     TRUE on the whole window (r < 3). p_h2@P = (p_h1@P)^{k1},
+        #     deg 2*k1, pure power, strict level gap (no cancellation).
+        #     L3 + L4: 2*k1 <= mult(p_h2@Gm,c_i) = 2*mu2-1 = 2+2(k1-1)*r
+        #     <=> k1 <= l1: PASSES the whole window with slack
+        #     2(k1-1)(r-1) > 0 (= 0 only at k1 = 1: equality).
+        lhs, rhs = 2 * k1, 2 * mu2 - 1
+        print(f"    (D, corrected) h2 pole-edge count: deg p_h2@P = 2*k1 ="
+              f" {lhs} <= mult(p_h2@Gm,c_i) = 2*mu2-1 = {rhs}: "
               f"{'PASS' if lhs <= rhs else 'FAIL -> DEAD'}")
-        if lhs > rhs:
-            print(f"    -> DEAD (D): {lhs} > {rhs}; general form 2l1 <= "
-                  f"2+2l1-2l1/k1 <=> l1 <= k1, false on the whole window.")
-            # (E) E4-analogue (h3 top at Gm) is MOOT; record the constraint it
-            #     would have imposed on (k2,l2): deg q = 12(r2-mu2+1) with
-            #     q >= H*eta*P*(t-b)^{m_b} (b-orbit relocated into h2, m_b>=1)
-            #     -> minimal shape forces r2 = mu2 - 1/6 (self-similar echo).
-            print(f"        (E, moot) suffix h2 equality would pin deg q ="
-                  f" 12(r2-{mu2-1}); minimal q-shape -> r2 = {mu2-Fr(1,6)}.")
-    print("\nlayer-2 verdicts: ALL 8 DEAD (A: six k1 in {3,6}; D: (2,3),(2,5)).")
-    print("R6 CLOSED: m_Gm = 1 minimal assignment forced; no isomorphic-genome"
-          " survivor (the (2,3) self-similar echo dies at (D)).")
-
-def main():
-    print("R6 layer-1 ledger (see SHEET6-R6.md; layer 2 = m=2 pattern forms)")
-    for k1, l1 in WINDOW:
-        rep = case_report(k1, l1)
-        t = rep["tests"]
-        verdict = "UNDECIDED-AT-L1"
-        why = []
-        if not t["window"]:
-            verdict, why = "EXCLUDED-L1", ["window arithmetic fails"]
-        elif not t["h1_integrality"]:
-            verdict, why = "DEAD-L1", ["h1 ladder non-integral"]
-        else:
-            why.append(f"M*_Fs={rep['Mstar_Fs']}, i_Fs={rep['i_Fs']}")
-            if not t["i_not_2_smell"]:
-                why.append("i_Fs=2 reproduces the E2-killed m=1 geometry "
-                           "(layer-2 check expected fatal)")
-            why.append(f"suffix equality target: deg p_h1@Gm = {rep['suffix_equality_target'][0]}")
-        print(f"  ({k1},{l1}) r={rep['r']}: {verdict} | " + "; ".join(why))
-    print("layer-1 complete; no case fully closes at layer 1 except by "
-          "non-integrality (none); kills require layer-2 pattern counts.")
+        # (E) suffix h2 St 8.3(ii) equality (h2 member at F_s m>=3, dead at
+        #     G_m... member at G_m m=2): forces the next-level tower datum:
+        #     minimal q-shape (b-orbit relocated) pins r2 = mu2 - 1/6 --
+        #     the FORCED self-similar echo (review 5(iii): real and OPEN).
+        r2 = mu2 - Fr(1, 6)
+        k2l2 = (6, int(6 * r2)) if (6 * r2).denominator == 1 else None
+        print(f"    (E) forced echo: r2 = mu2 - 1/6 = {r2} -> (k2,l2) ="
+              f" {k2l2}: next recursion rung NOT RUN -> case OPEN"
+              f" (echo chain), unless k1 == 1 (see (1,2) note).")
+        if k1 == 1:
+            print("        (1,2) note: (D) passes AT EQUALITY; suffix"
+                  " equality forces r2 = 4/3 i.e. (k2,l2) = (3,4): the"
+                  " MINIMAL genome with re-indexed tower (2,3),(1,2),(3,4)"
+                  " -- a DISJOINT R1 branch (d_h1@Gm = 12/21, quotient"
+                  " ~P^4 vs minimal 8/21, quotient pq). Needs k1=1"
+                  " exclusion or R1 enumeration (review 5(iv)).")
+    print("\nlayer-2 verdicts (REVIEW-CORRECTED): 6 DEAD at (A)"
+          " (k1 in {3,6}: merge transport, doubly printed-tier);"
+          " OPEN: (2,3)->echo(6,17), (2,5)->echo(6,23), (1,2)->minimal-"
+          "reindexed disjoint branch.")
+    print("R6 status: PARTIALLY CLOSED. m_Gm >= 3 closed by review scope"
+          " patch (5(i)); R1 must enumerate minimal (3,4) + (1,2) branch;"
+          " echo chains need one more recursion rung.")
 
 if __name__ == "__main__":
-    main()
     layer2()
