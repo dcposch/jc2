@@ -266,3 +266,18 @@ Remaining branches (R6 print-survivors, each needing its own staged
 core): (1,2) [delta-spec written], (2,3)-chain (6,17), (2,5)-chain
 (6,23). If all four die: the two-pole residue-A configuration is
 EXCLUDED and td=6 reduces to the 4 single-pole r9/M2 classes.
+
+## 7. RETRACTION of §6 (per SHEET6-R1-REVIEW.md, 2026-08-09)
+
+The §6 EMPTY verdict is SPURIOUS, on two independent grounds: (a) msolve
+0.10.1 silently mis-parses parenthesized input (the shipped file used
+parens; 3 mangled band rows alone reproduce [1]); (b) the intended
+system was satisfiable a priori (all 57 rows have zero constant term, so
+the origin + any radical point solves it — [1] was impossible for the
+intended math). Additionally the "57 rows exact at cap 2" claim is
+false: all 57 are silent deg<=2 truncations (sentinel counts cancel in
+g^2 - f^3); zero discriminating rows were shipped. NOTHING DIED. §4's
+partial clause stands; the template remains FORMAL-CANDIDATE. Path
+forward (review-mandated): parenthesis-free expanded emission, sentinel
+soundness fix, [1]-plausibility guards, then the FULL-DEGREE core build
+(machinery reusable across all four branches).

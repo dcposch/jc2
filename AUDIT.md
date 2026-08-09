@@ -422,3 +422,18 @@ which is exactly the cCa2/cCa6 split used throughout.
 - arXiv:1401.1784 (GGV; J. Algebra 471 (2017) 13-74 — journal omits Cor 7.12).
 - arXiv:1605.09430, arXiv:1406.0886, arXiv:1708.07936 — arXiv-only (unrefereed).
 - msolve (Homebrew build, local; git master built 2026-07-27 on ultramem/jc-b).
+
+## msolve parenthesis hazard (2026-08-09)
+
+SHEET6-R1-REVIEW.md discovered msolve 0.10.1 SILENTLY MIS-PARSES
+parenthesized polynomial input (micro-test: `x-(3+1)` yields GB `[x+1]`).
+Sweep of all 401 shipped .ms files (systems/**, recursive): exactly ONE
+contained parentheses — systems/r1/r1_gmband_core.ms (the new R1 engine's
+emission; its EMPTY verdict retracted on this + independent grounds).
+ALL 400 other systems (72,108 leaves, farm, dc2, sheet6) are fully
+expanded monomial sums — no parentheses — so every prior verdict stands.
+Standing rule added: .ms emitters MUST emit expanded monomial sums only;
+any new emitter gets the paren-sweep + a satisfiability smoke test
+(constant-term row check: a system whose rows all lack constant terms
+cannot be [1] — guard against impossible verdicts) before its verdicts
+are banked.
