@@ -794,8 +794,15 @@ def phase_foldv(nprimes=12, only=None):
                            for key, vex in blk.items()})
                     for lab, blk in blocks]
         fb = conv_blocks(st["f"]); gb = conv_blocks(st["g"])
-        f3 = fold_seq([jpow(b, 3, mul) for _, b in fb], mul, "vf3.%d" % i)
-        g2 = fold_seq([jpow(b, 2, mul) for _, b in gb], mul, "vg2.%d" % i)
+        # per-stage checkpoints (kill-resume; numeric path unchanged)
+        if have("vf3.%d.pkl" % p): f3 = load("vf3.%d.pkl" % p)
+        else:
+            f3 = fold_seq([jpow(b, 3, mul) for _, b in fb], mul, "vf3.%d" % i)
+            save("vf3.%d.pkl" % p, f3)
+        if have("vg2.%d.pkl" % p): g2 = load("vg2.%d.pkl" % p)
+        else:
+            g2 = fold_seq([jpow(b, 2, mul) for _, b in gb], mul, "vg2.%d" % i)
+            save("vg2.%d.pkl" % p, g2)
         WG = {}
         for k in set(f3) | set(g2):
             v = {}

@@ -797,6 +797,32 @@ below slot 6 (W_G identically zero there — structural), or slot 0
 (E1). Same census closes slot 36 = (18,18) only and, for (2,5),
 slot 12 = (6,6), slot 14 = (6,8)/(8,6) only.
 
+Fold incident (14:13): the first 12-way fold launch was killed by the
+task harness ~1 h in (workers at g2 36/42) with per-prime results
+unsaved. Fix: per-STAGE checkpoints added inside phase_foldv (vf3/vg2
+pickles, load-if-present — numeric path unchanged) and the 16-worker
+driver relaunched DETACHED (nohup, /tmp/r1full/run_folds.sh) so a
+harness kill cannot reap the workers; restart 14:14.
+
+### 9.4 Farm handoff — deferred chain content (sizing, refines 8.10)
+
+(2,5) level-2 band slots 16..26 (ties r = 4..12 even + quotient r = 14
+vs pq46 = eta (t-a1)^7 (t-a2)^7 (t-b)): interior W_G^2 pairs with
+per-slot expanded-term counts (467/1.5k/3.4k/10.8k/26.3k/54.7k/134.1k/
+~164k at slots 6/8/10/12/14/16/18/20) give ordered-pair costs:
+r=4 (8,8) 2.2e6; r=6 2(8,10) 1.0e7; r=8 2(8,12)+(10,10) 4.3e7;
+r=10 2(8,14)+2(10,12) 1.5e8; r=12 2(8,16)+2(10,14)+(12,12) 4.6e8;
+r=14 2(8,18)+2(10,16)+2(12,14) 1.3e9 — total ~2.0e9 term-pairs, i.e.
+a few CPU-h per prime pointwise-z + ~16-32 CRT primes (coefficient
+squares ~1e130 => ~2x the prime family; capacity per prime ~8.7
+digits) — squarely the 8.10 farm estimate. All slot-6 factors reduce
+via cL (only pairs with both slots >= 8 are genuinely quadratic).
+Level 3 (both chains): h3 = h2^6 - s2 f^l2 band at deg 195/42 resp.
+267/42 needs generator depth >= 84 and the h2 object to ~30+ slots:
+the 8.10 "10-100x this build" sizing stands; the collapse DATA
+(s2' = H^6, residual q^6 - H^6 P^10, ODE-pinned b, a1a2) is already
+engine-verified scalar-side (R6 4.1-4.2) and imposes no local rows.
+
 ## 10. Acceleration: exact linear pre-reduction + multi-prime sweep (2026-08-10)
 
 Engine: cases/r1_reduce.py (ADDITIVE; parses the guard-certified
@@ -870,3 +896,46 @@ rows AND all 30 dropped rows vanish under the banked back-map, and all
 V(original) bijects with V(reduced) x A^46 (eliminated vars determined
 by the recorded invertible substitutions). Satisfiability is preserved
 in both directions.
+
+### 10.3 Run ledger, reduced core (msolve 0.10.1, -g 2, timeout 1200 s)
+
+Fixed suite (mirrors the 8.20 protocol, reduced encodings):
+| system | vars | char | result |
+|---|---|---|---|
+| r1_reduced_core.ms (char 0, radicals as vars) | 63 | 0 | TIMEOUT 1200 s |
+| r1_reduced_core_p105337.ms | 63 | p | TIMEOUT 1200 s |
+| r1_reduced_core_p105673.ms | 63 | p | TIMEOUT 1200 s |
+| r1_reduced_core_wfree_p105337.ms | 58 | p | TIMEOUT 1200 s |
+| r1_reduced_core_wfree_p105673.ms | 58 | p | TIMEOUT 1200 s |
+
+Multi-prime sweep (10 random primes in [2^15, 2^17], seed 61,
+radicals-as-variables encoding, per the 10.0 pre-registration):
+| p | result | | p | result |
+|---|---|---|---|---|
+| 40427 | TIMEOUT 1200 s | | 77377 | TIMEOUT 1200 s |
+| 49531 | TIMEOUT 1200 s | | 89591 | TIMEOUT 1200 s |
+| 56453 | TIMEOUT 1200 s | | 114691 | TIMEOUT 1200 s |
+| 71011 | TIMEOUT 1200 s | | 115079 | TIMEOUT 1200 s |
+| 76631 | TIMEOUT 1200 s | | 129529 | TIMEOUT 1200 s |
+
+Under the 10.0 pre-registration: NO per-prime verdict (neither EMPTY
+nor NONEMPTY was certified anywhere); the sweep's calibration signal is
+the DIFFICULTY itself -- even after exact halving (49 rows/63 vars,
+32.6k terms) the mod-p GB does not finish in 1200 s at any of 12
+primes tried in either encoding. All runs in runs/r1_reduced_*.out,
+runs/r1_reduced_sweep.log. Extended-budget probes next (10.4).
+
+### 10.4 Depth calibration + elimination frontier completeness
+
+- FRONTIER COMPLETE: after the 19 pivots, a full rescan of the reduced
+  system finds ZERO further admissible pivots (every remaining var
+  either occurs at x-degree >= 2 somewhere, or all its linear
+  occurrences carry x- or W-loaded coefficients, which are not units).
+  The exact linear pre-reduction is maximal for the sound pivot class.
+- F4 shape probe (msolve -v 2, p = 40427, radicals-as-vars, 300 s):
+  basis passes 16k+ elements mid-flight, elimination matrices reach
+  3.7M x 18.4M at step degree 8 with the run still expanding => the
+  mod-p GB is genuinely deep; no near-verdict was cut off by the
+  1200 s budget line. (/tmp/r1red/v2probe.log)
+- Extended probes launched (3900 s, -t 4): p in {40427, 56453, 76631}
+  radicals-as-vars + the wfree p=105337 encoding; results in 10.5.
