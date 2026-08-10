@@ -681,3 +681,192 @@ delta-spec, guard-passed), r1_gmband_core.ms.RETRACTED (quarantined);
 engine fixes in cases/r1_experiment.py; builder cases/r1_fullcore.py;
 run logs runs/r1_full_core*.out; state /tmp/r1full (16 CRT primes,
 exact xWG/xF2 with holdout + scalar-fold verification).
+
+## 9. Chain-branch terminal cores ((2,3)->(6,17), (2,5)->(6,23)) — build log (2026-08-10)
+
+### 9.0 Plan + in-window structure (banked before build)
+
+State loss: /tmp/r1full did NOT survive (host cleaned /tmp since 8.17).
+Rebuild via the verified machinery (deterministic seeds => byte-identical
+re-emission of the minimal core is the regression gate): --blocks (DONE
+13:12, 21+42 blocks / 189 vars — matches 8.2), pointwise-z microtest of
+the in-code path (roundtrip + product vs exact engine rmul: PASS => the
+post-8.15 REPAIRED Vandermonde orientation is in code), --foldp (DONE:
+WG 297,930 entries / 99 keys, census 98 rows / 10 constants — matches
+8.3; re-emitted r1_full_core_modp.ms BYTE-IDENTICAL to the banked copy),
+--check (PASS: block fold == direct 126/189-factor product, both
+primes), 16 per-prime pointwise-z folds (12-way parallel, running),
+then --crt, --emit + byte-diff vs runs/r1chain_prebuild_snapshot/.
+
+Chain in-window structure (units: W_G slot = 1/42 of d; slot-s pattern
+deg = 36 - s; jet grading s == 2n mod 6 => odd slots vacuous).
+Level 1 (h1 = W_G, the SAME exact object as the minimal branch):
+- (2,3): d_h1 = 18/42, p_h1 = (-)P^3 (deg 18, NO b-orbit: b relocated
+  to level 2 per R6 sec 1.1): band slots 1..17 (live = 6..16 even: the
+  exact W_G object has NO keys below slot 6 — slots 1..5 identically
+  zero for every branch — and odd slots are vacuous by grading),
+  slot-18 quotient == cL*P^3 with cL a fresh lead var (linear-in-cL
+  encoding; eliminating cL recovers the cross-mult form), deg rows
+  n > 18.
+- (2,5): d_h1 = 30/42, p_h1 = (-)P^5: band slots 1..5 ALL identically
+  zero (vacuous — the level-1 band contributes no rows; the level-1
+  content is the slot-6 quotient family alone): slot-6 quotient
+  == cL*P^5, deg rows n > 30.
+Level 2 (h2 = h1^2 - s1 f^l1, tie at 2 d_h1 = l1 d_f): W_G^2 slot S
+aligns with f^l1 slot r = S - 2(36 - deg p_h1). On the level-1 variety
+each needed W_G^2 slot reduces via WG(n, s1st) = p_h1[n]*cL (ideal
+membership a-b, c-d in I => ac-bd in I: emitted generators have the
+SAME VARIETY as the unreduced ties; msolve decides the variety).
+- (2,3): tie r=0 => S_M^3 s1 = cL^2 (f^3 slot-0 = S_M^3 P^6, ASSERTED
+  from the F3 fold, not hardcoded); r=1 vacuous (odd); r=2 = QUOTIENT
+  (d_h2 = 34/42): R(n) = 2 cL (P^3 conv WG(.,20))[n] - s1 F3(n,2) must
+  be == qL*(P^4 q)[n], pattern eta (t-a1)^5 (t-a2)^5 (t-b) deg 34
+  monic (q = H eta P (eta^3-b), H absorbed in qL); deg rows n > 34.
+  FULL in-window level-2 content captured (window floor = quotient
+  slot, exactly as in the minimal branch).
+- (2,5): tie r=0 => S_M^5 s1 = cL^2 (f^5 slot-0 = S_M^5 P^10); r=2 tie
+  rows 2 cL (P^5 conv WG(.,8))[n] = s1 F5(n,2) (slot pair (6,8) only);
+  r = 4..12 ties + the r=14 quotient (d_h2 = 46/42) involve interior
+  pairs (8,8),(10,10),(12,12),(8,18),(10,16),(12,14),... = products of
+  10^4-10^5-term vexes with NO cL-reduction => 10^8+ monomial rows,
+  NOT locally emittable: DEFERRED to the farm per the 8.10 sizing. The
+  local (2,5) core = level 1 + r=0 legality + r=2 tie: every row a true
+  consequence of the chain genome (necessary-condition core).
+Legality/scale data (chain-specific): s1 != 0 (Prop 4.2(iii) tie) via
+the Rabinowitsch row t1*s1 - 1 = 0 => cL != 0 => the core does NOT
+contain the origin (guard C target). Since the minimal-branch prefix
+has WG(.,s)|_{x=0} = 0 for all s <= 19 (8.4 qcheck), a chain solution
+must make slot 18 resp. 6 ALIVE with exact P^3/P^5 pattern while the
+band stays dead — the discriminating load. Level 3 ((6,17)/(6,23)):
+h3 = h2^6 - s2 f^l2 tops at 6 d_h2 = 204/42 resp. 276/42, far outside
+the depth-54 window; its 3-coeff W2-collapse (residual q^6 - H^6 P^10,
+s2' = H^6, t^19/t^18 conditions == the Prop 8.1(iv) ODE pin
+b = (2/3)(a1+a2), a1 a2 = (a1+a2)^2/6 — identically satisfied by the
+gauged moduli a_i = 3 +- r3, b = 4) adds NO in-window polynomial rows
+on the genome unknowns; the level-3 band goes to the farm with the
+ladder data deg p_h3@Gm = 195 = 144+51 resp. 267 = 216+51, mu3 = 103/6
+resp. 139/6. Fresh vars per chain core: s1 (tie scale), t1 (its
+inverse), cL (level-1 pattern lead), qL ((2,3) only: level-2 quotient
+lead). Emission: expanded integer monomial sums only (engine
+emit_expanded, AUDIT rule); guards A-D on both cores; w-free mod-p
+screens per the minimal-branch naming convention.
+
+### 9.1 Additive engine extension + chain-local objects DONE
+
+cases/r1_fullcore.py additions (nothing above the chain section
+touched; regression gate = byte-identical minimal re-emission, 9.2):
+chain_patterns (p3/p5/p6/p10, pq34/pq46 via the engine's eta_poly_ref/
+k3poly_pow_pattern; SELF-CHECKED: conv identities p3*p3 = p6,
+p5*p5 = p10 exact over K3 — this is precisely the algebra behind the
+reduced legality row — plus degree/monic asserts and an INDEPENDENT
+mod-p evaluation vs the factored form at both round-trip primes:
+PASS); phase_chainF (exact truncation-first folds F3 = f^3, F5 = f^5
+at dg = 3 — all the in-window chain rows need; slots >= 0 and
+additive => truncation-first is exact): F3 = 37 entries, F5 = 61,
+slot-1 EMPTY (grading), slot-0 asserted == S_M^l * P^{2l} with the
+constant read FROM the fold: S_M^3 = 7^36/2^18, S_M^5 = 7^60/2^30 —
+St 3.9(ii)'s S_M = 7^12/2^6 transported through the l-th powers
+exactly; chain_rows / emit_chain_core / emit_chain_wfree / phase_chain
+(flags --chainF/--chain23/--chain25). Fresh var ids nvars+10..13
+(sort last, mirror --branch12's s1 convention).
+
+Key-lattice census (scalar fold pWG, verified): W_G keys live ONLY at
+even slots 6..20 with n == 2s mod 3... i.e. s == 2n mod 6 (13/12 keys
+per slot, n <= 36); prefix (var-free) content ONLY at slot 20
+(n = 1..31) — the 8.4 qcheck facts reproduced. All chain lattices
+align: p3 conv WG(.,20), F3(.,2), pq34 all n == 1 mod 3; p5 conv
+WG(.,8), F5(.,2) both n == 1 mod 3. Full pipeline DRY-RUN on a
+synthetic lattice-correct miniature W_G (throwaway outdir): row
+families exactly as designed — C23: band 74 + quot 7 + quot-deg 6 +
+h2-quot 12 + h2-quot-deg 6 + s1-tie/inv 2 = 107 rows; C25: quot 11 +
+quot-deg 2 + h2-tie 22 + s1-tie/inv 2 = 37 rows (tie rows on synthetic
+support; real counts may differ) — guards A-D all PASS mechanics,
+origin census = exactly 1 constant row (t1*s1 - 1) per core. Post
+dry-run soundness upgrade: qL != 0 also enforced for (2,3)
+(C23-qL-inv row t2*qL - 1; deg p_h2@Gm = 34 EXACT is forced tower
+data, R6 4.2 B', and q's exact deg-10 shape feeds the level-3 rung)
+=> 2 constant rows for the (2,3) core.
+
+COMPLETENESS note (stronger than 9.0 anticipated): the emitted level-2
+rows are EXACT genome conditions with NO window truncation. W_G^2
+slot-38 a priori sums ordered pairs (s_a, s_b), s_a + s_b = 38, over
+ALL slots incl. out-of-window s >= 21; on the emitted variety every
+pair except (18,20)/(20,18) dies because one factor is either banded
+(rows, slots 6..16), odd (vacuous by grading, incl. all odd s >= 21),
+below slot 6 (W_G identically zero there — structural), or slot 0
+(E1). Same census closes slot 36 = (18,18) only and, for (2,5),
+slot 12 = (6,6), slot 14 = (6,8)/(8,6) only.
+
+## 10. Acceleration: exact linear pre-reduction + multi-prime sweep (2026-08-10)
+
+Engine: cases/r1_reduce.py (ADDITIVE; parses the guard-certified
+emitted artifact systems/r1/r1_full_core.ms, not the pickles; all
+prior emissions untouched).
+
+### 10.0 Pre-registered interpretation of the multi-prime sweep
+(written BEFORE any sweep run)
+
+A char-0 point of the core specializes to a point mod almost all p
+(all p not dividing the denominators/leading data of the point's
+coordinates). Therefore, for independent random primes p_1..p_k:
+- GB = [1] (EMPTY over closure of GF(p)) at MANY independent primes is
+  STRONG EVIDENCE for char-0 emptiness (not proof: the exceptional
+  prime set of a char-0 point is finite but unknown).
+- Nonempty (any GB != [1], or a dimension/degree certificate) at ALL
+  primes tried is STRONG EVIDENCE the branch is realizable in char 0
+  (not proof: mod-p points need not lift).
+- Mixed outcomes: undiagnostic (bad primes exist); report per prime.
+Sweep verdicts are BANKED AS EVIDENCE ONLY; the pre-registered sec-1
+table triggers ONLY on char-0 certificates. The sweep's purpose is to
+calibrate whether the multi-day char-0 ultramem run is worth its wall
+clock. Primes: random in [2^15, 2^17], radicals-as-variables encoding
+(GB emptiness is over the algebraic closure, so no p == 1 mod 84
+constraint is needed for faithfulness).
+
+### 10.1 Linearity analysis of the emitted core (phase analyze/incidence)
+
+- NO row of the 98 is fully linear in the 119 x-vars: every row mixes
+  degree-1 terms with higher-degree tails (max x-degree 19). The
+  "mostly linear rows" premise is FALSE for this core; the correct
+  exact pre-reduction is QUASI-LINEAR VARIABLE elimination.
+- 66 of 119 x-vars are quasi-linear (x-degree <= 1 in EVERY row).
+- 36 vars have >= 1 clean pivot row (coefficient of the var in that
+  row is x-free and W/HW-free, i.e. a candidate UNIT of the etale
+  algebra E = Q[r3,z,A1,A2,EB]/(r3^2-3, Phi42, A1^3-3-r3, A2^3-3+r3,
+  2EB^7-3); dim_Q E = 1512). W/HW-loaded coefficients are NEVER
+  pivots: W_i = 0 lies on the radical locus (2HW_i^2 = 3W_i^2), so
+  dividing by them would break the solution-set bijection.
+- Soundness scheme (fixed before running): eliminate (v, A) only when
+  deg_v(A) = 1 and u = coeff_v(A) is a certified unit (min-poly of u
+  over Q has nonzero constant term => invertible, inverse polynomial;
+  a_0 = 0 would certify a zero-divisor => pivot rejected). Then
+  v = -u^{-1} rest_A is an explicit invertible substitution; solution
+  sets biject. Banked in order for the back-map.
+
+### 10.2 Elimination result + guard results (cases/r1_reduce.py eliminate/emitred/guards)
+
+Greedy elimination (cost-capped 3e6, power guard: no substitution into
+occurrences of degree > 3): 19 pivots executed, every pivot coefficient
+UNIT-CERTIFIED by min-poly (constant term != 0; degrees 1-7). During
+substitution 30 rows became IDENTICALLY ZERO (exact rank deficiency of
+the quasi-linear structure, verified below) and 46 further x-vars
+dropped out of every surviving row (free directions, uf30-style; incl.
+x32-x48, x98-x118 blocks -- the P_2/B-side tails are absorbed by the
+back-map). Survivors: 49 rows / 54 x-vars, 32,600 terms (vs 98 rows /
+119 x-vars, ~420k terms). EMITTED:
+- systems/r1/r1_reduced_core.ms (char 0, 56 eqs, 63 vars, 0.9 MB)
+- r1_reduced_core_p{105337,105673}.ms (mod p, radicals as variables)
+- r1_reduced_core_wfree_p{105337,105673}.ms (z,r3,A1,A2,EB specialized,
+  W/HW free, 58 vars)
+- r1_reduced_core.rows.txt (provenance: per-pivot bank + row map)
+Guards: (A) paren sweep PASS. (B) independent-parser round-trip at 2
+fresh primes: 49/49 match, 49/49 nonzero at a random point. (C) origin:
+40/49 vanish at x=0; 9 quotient-family rows do NOT => reduced core NOT
+origin-satisfiable (discriminating content preserved). (D) residual: 0
+identically-zero survivor rows. (E) SOUNDNESS IDENTITY (2 primes x 2
+random points, incl. random values for the 46 free vars): all 19 pivot
+rows AND all 30 dropped rows vanish under the banked back-map, and all
+49 surviving original rows evaluate EQUAL to their reduced forms =>
+V(original) bijects with V(reduced) x A^46 (eliminated vars determined
+by the recorded invertible substitutions). Satisfiability is preserved
+in both directions.

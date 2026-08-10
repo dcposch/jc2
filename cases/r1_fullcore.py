@@ -1275,6 +1275,259 @@ def phase_branch12():
         % (path, len(eqs), len(allv) - (1 if s1id in allv else 0),
            os.path.getsize(path) / 1e6))
 
+# ------------------------------------------- chain branches (SHEET6-R6 4.2,
+# SHEET6-R1 sec 9 delta-specs; ADDITIVE — nothing above this line changed)
+S1ID_OFF, CLID_OFF, T1ID_OFF, QLID_OFF, T2ID_OFF = 10, 11, 12, 13, 14
+
+def chain_patterns():
+    """K3 eta-coefficient lists (index = eta degree) for the chain
+    patterns: p3/p5/p6/p10 = (t-a1)^k(t-a2)^k (t = eta^3, k=3,5,6,10),
+    pq34/pq46 = eta*(t-a1)^m(t-a2)^m*(t-b) (m=5,7) — the level-2
+    quotient patterns P^{i(mu2-1)}*q with q = H eta P (eta^3-b), H
+    absorbed into the quotient lead variable."""
+    _, pm = R1.k3poly_pow_pattern()
+    P = {k: R1.eta_poly_ref([(R1.A1c, k), (R1.A2c, k)], R1.K1)
+         for k in (3, 5, 6, 7, 10)}
+    tb = [-R1.Bc, R1.K0, R1.K0, R1.K1]          # eta^3 - b
+    pq34 = pm(pm([R1.K0, R1.K1], P[5]), tb)
+    pq46 = pm(pm([R1.K0, R1.K1], P[7]), tb)
+    pats = dict(p3=P[3], p5=P[5], p6=P[6], p10=P[10], pq34=pq34, pq46=pq46)
+    # self-checks: convolution identities (validate the legality-row
+    # reduction (p_k*cL) conv (p_k*cL) = p_{2k}*cL^2) + degrees + monic
+    for a, b, c in (("p3", "p3", "p6"), ("p5", "p5", "p10")):
+        got = pm(pats[a], pats[b])
+        assert len(got) == len(pats[c]) and all(
+            (x - y).iszero() for x, y in zip(got, pats[c])), (a, b, c)
+    for nm, dg in (("p3", 18), ("p5", 30), ("p6", 36), ("p10", 60),
+                   ("pq34", 34), ("pq46", 46)):
+        assert len(pats[nm]) == dg + 1 and (pats[nm][dg] - R1.K1).iszero()
+    # independent mod-p check at both round-trip primes
+    for p in good_primes(2):
+        pt = radical_point(p)
+        a1, a2, b = (3 + pt["r3"]) % p, (3 - pt["r3"]) % p, 4
+        x = random.Random(31 * p).randrange(2, p)
+        t = pow(x, 3, p)
+        for nm, (m, eta, mb) in (("p3", (3, 0, 0)), ("p5", (5, 0, 0)),
+                                 ("p6", (6, 0, 0)), ("p10", (10, 0, 0)),
+                                 ("pq34", (5, 1, 1)), ("pq46", (7, 1, 1))):
+            want = (pow(x, eta, p) * pow(t - a1, m, p) * pow(t - a2, m, p)
+                    * pow(t - b, mb, p)) % p
+            got = sum((frmod(c[0], p) + frmod(c[1], p) * pt["r3"])
+                      * pow(x, i, p) for i, c in enumerate(pats[nm])) % p
+            assert got == want, ("pattern check fail", nm, p)
+    log("chain patterns built + verified (conv identities, 2 primes)")
+    return pats
+
+def phase_chainF():
+    """exact truncated folds F_l = f^l, slots 0..2 only (dg=3) — all the
+    in-window chain rows need. Truncation-first is exact (slots >= 0,
+    additive). Asserts: slot-0 = const * P^{2l} (the tie constant S_M^l,
+    taken FROM the fold, not hardcoded), slot-1 empty (grading)."""
+    st = load("blocks.pkl")
+    pats = chain_patterns()
+    mul = lambda a, b: R1.jmul(a, b, 3)
+    out = {}
+    for l, p2l in ((3, pats["p6"]), (5, pats["p10"])):
+        blks = [jpow({k: v for k, v in b.items() if k[1] < 3}, l, mul)
+                for _, b in st["f"]]
+        Fl = tree_fold(blks, mul, "F%d" % l)
+        assert not any(s == 1 for (n, s) in Fl), "F%d slot-1 nonempty" % l
+        lead = Fl.get((12 * l, 0), {}).get((), R1.RZERO)
+        pk = R1.rk3(lead)
+        assert pk is not None and pk[0] == R1.KONE, \
+            "F%d slot-0 lead not a pure K3 constant" % l
+        sml = pk[1]
+        for (n, s), v in Fl.items():
+            if s != 0: continue
+            kv = v.get((), R1.RZERO)
+            assert not (set(v) - {()}), "F%d slot-0 has var content" % l
+            want = sml * (p2l[n] if n < len(p2l) else R1.K0)
+            pure = R1.rk3(kv)
+            assert (pure is not None and pure[0] == R1.KONE and
+                    (pure[1] - want).iszero()), \
+                "F%d slot-0 != S_M^%d * P^%d at n=%d" % (l, l, 2 * l, n)
+        out[l] = (Fl, sml)
+        log("F%d fold: %d entries, slot-0 = (%s) * P^%d verified"
+            % (l, jsize(Fl), sml, 2 * l))
+    save("chainF.pkl", out)
+
+def times_var(v, vid, mult=1):
+    return {tuple(sorted(vk + (vid,) * mult)): r for vk, r in v.items()}
+
+def conv_pat(pat, WG, slot, n):
+    """sum_a pat[a] * WG(n-a, slot) (VExpr)."""
+    acc = {}
+    for a, c in enumerate(pat):
+        if R1.mk(c).iszero(): continue
+        v = WG.get((n - a, slot))
+        if v: acc = R1.vadd(acc, R1.vscal(v, c))
+    return acc
+
+def chain_rows(chain, WG, Fl, sml, pats):
+    """row list for one chain core. chain in ('23', '25').
+    (2,3): band 1..17, quot slot 18 == cL*P^3, s1-legality (r=0 tie
+    reduced on the level-1 variety), h2-QUOTIENT at WG^2-slot 38
+    (= f^3 slot 2, d_h2 = 34/42) vs pattern pq34 with lead qL.
+    (2,5): band 1..5, quot slot 6 == cL*P^5, s1-legality, h2-TIE r=2
+    at WG^2-slot 14 (= f^5 slot 2) — deeper level-2 slots need interior
+    W_G^2 pairs (farm; sec 9.0)."""
+    st = load("blocks.pkl")
+    nv = st["nvars"]
+    s1, cL, t1, qL, t2 = (nv + S1ID_OFF, nv + CLID_OFF,
+                          nv + T1ID_OFF, nv + QLID_OFF, nv + T2ID_OFF)
+    assert not any(s == 0 for (n, s) in WG), "E1 anchor broken (slot 0)"
+    assert not any(s % 2 for (n, s) in WG), "odd WG slot present?!"
+    if chain == "23":
+        s1st, p1, wslot, pq, l1 = 18, pats["p3"], 20, pats["pq34"], 3
+        tag = "C23"
+    else:
+        s1st, p1, wslot, pq, l1 = 6, pats["p5"], 8, None, 5
+        tag = "C25"
+    rows = []
+    for (n, s), v in sorted(WG.items()):
+        if 1 <= s < s1st and v: rows.append(((tag + "-WG-band", n, s), v))
+    d1 = len(p1) - 1                            # = deg p_h1 = 36 - s1st
+    assert d1 == 36 - s1st
+    ns = sorted({n for (n, s) in WG if s == s1st} |
+                {n for n in range(d1 + 1) if not R1.mk(p1[n]).iszero()})
+    for n in ns:
+        v = WG.get((n, s1st), {})
+        if n > d1:
+            if v: rows.append(((tag + "-WG-quot-deg", n, s1st), v))
+            continue
+        r = R1.vadd(v, R1.vscal({(cL,): R1.RONE}, -R1.mk(p1[n])))
+        if r: rows.append(((tag + "-WG-quot", n, s1st), r))
+    # legality (level-2 tie r=0 on the level-1 variety) + s1 != 0
+    rows.append(((tag + "-s1-tie", 0, 2 * s1st),
+                 R1.vadd({tuple(sorted((cL, cL))): R1.RONE},
+                         R1.vscal({(s1,): R1.RONE}, -R1.mk(sml)))))
+    rows.append(((tag + "-s1-inv", 0, 0),
+                 R1.vadd({tuple(sorted((s1, t1))): R1.RONE},
+                         R1.vC(R1.rC(R1.K3(-1))))))
+    # level-2 slot r=2 (WG^2 slot 2*s1st + 2): pair (s1st, s1st+2) only
+    S2 = 2 * s1st + 2
+    ns2 = sorted({n for n in range(len(p1) + 40)
+                  if conv_pat(p1, WG, wslot, n) or (n, 2) in Fl} |
+                 ({n for n in range(len(pq))
+                   if not R1.mk(pq[n]).iszero()} if pq else set()))
+    for n in ns2:
+        r = times_var(R1.vscal(conv_pat(p1, WG, wslot, n), R1.K3(2)), cL)
+        f = Fl.get((n, 2))
+        if f: r = R1.vadd(r, R1.vscal(times_var(f, s1), R1.K3(-1)))
+        if pq is None:                          # (2,5): tie — must vanish
+            if r: rows.append(((tag + "-h2-tie", n, S2), r))
+            continue
+        d2 = len(pq) - 1
+        if n > d2:
+            if r: rows.append(((tag + "-h2-quot-deg", n, S2), r))
+            continue
+        r = R1.vadd(r, R1.vscal({(qL,): R1.RONE}, -R1.mk(pq[n])))
+        if r: rows.append(((tag + "-h2-quot", n, S2), r))
+    fresh = {s1: "s1", cL: "cL", t1: "t1"}
+    if pq is not None:
+        # deg p_h2@Gm EXACT (R6 4.2 B' coherence; q exact deg 10 feeds
+        # the level-3 rung) => quotient lead qL != 0 (Rabinowitsch)
+        rows.append(((tag + "-qL-inv", 0, 0),
+                     R1.vadd({tuple(sorted((qL, t2))): R1.RONE},
+                             R1.vC(R1.rC(R1.K3(-1))))))
+        fresh[qL] = "qL"; fresh[t2] = "t2"
+    return rows, fresh
+
+def emit_chain_core(base, rows, fresh, st):
+    """char-0 emission + rows.txt + guards A-D (mirrors phase_emit)."""
+    census(rows, base)
+    allv = sorted({vid for _, v in rows for vk in v for vid in vk})
+    names = {vid: "x%d" % i for i, vid in enumerate(allv)}
+    names.update(fresh)
+    os.makedirs(OUT_DIR, exist_ok=True)
+    path = os.path.join(OUT_DIR, base + ".ms")
+    hdr = ["r3", "z", "A1", "A2", "W1", "HW1", "W2", "HW2", "EB"] + \
+          [names[v] for v in allv]
+    eqs = list(R1.RAD_EQS)
+    labels = [("radical", i, 0) for i in range(len(R1.RAD_EQS))]
+    t0 = time.time()
+    for i, (meta, v) in enumerate(rows):
+        eqs.append(R1.emit_expanded(v, names))
+        labels.append(meta)
+        if (i + 1) % 25 == 0:
+            log("emitted %d/%d rows (%.1fs)" % (i + 1, len(rows),
+                                                time.time() - t0))
+    with open(path, "w") as f:
+        f.write(", ".join(hdr) + "\n0\n")
+        f.write(",\n".join(eqs) + "\n")
+    with open(os.path.join(OUT_DIR, base + ".rows.txt"), "w") as f:
+        f.write("# %s chain core (SHEET6-R6 4.2 delta-spec, SHEET6-R1 "
+                "sec 9); s1 = level-2 tie scale, t1 = 1/s1 (legality "
+                "s1 != 0), cL = level-1 pattern lead, qL = level-2 "
+                "quotient lead\n" % base)
+        for i, lab in enumerate(labels): f.write("eq%d = %s\n" % (i, lab))
+        for vid in allv:
+            if vid in fresh: f.write("%s = fresh chain var\n" % fresh[vid])
+            else: f.write("%s = %s (level %d)\n" % (names[vid],
+                          st["vmeta"][vid]["name"], st["vmeta"][vid]["level"]))
+    log("emitted %s (%d eqs, %d+9 vars incl %d fresh, %.1f MB)"
+        % (path, len(eqs), len(allv), len(fresh),
+           os.path.getsize(path) / 1e6))
+    guards(path, rows, names, allv)
+    return names, allv
+
+def emit_chain_wfree(base, rows, names, allv):
+    """w-free char-p screens (z, r3, A1, A2, EB specialized; W's + all
+    x/fresh vars FREE) — mirrors phase_emitwfree, same naming scheme."""
+    for p in good_primes(2):
+        pt = radical_point(p)
+        path = os.path.join(OUT_DIR, "%s_wfree_p%d.ms" % (base, p))
+        eqs = ["2*HW1^2+%d*W1^2" % (p - 3), "2*HW2^2+%d*W2^2" % (p - 3)]
+        labels = [("radical-HW1", 0, 0), ("radical-HW2", 0, 0)]
+        for meta, v in rows:
+            acc = {}
+            for vk, r in v.items():
+                for (za, e1, e2, w1, h1, w2, h2, eB), c in r.items():
+                    s = (pow(pt["z"], za, p) * pow(pt["A1"], e1, p)
+                         * pow(pt["A2"], e2, p) * pow(pt["EB"], eB, p)) % p
+                    s = s * (frmod(c[0], p) + frmod(c[1], p) * pt["r3"]) % p
+                    if not s: continue
+                    kk = (w1, h1, w2, h2, vk)
+                    acc[kk] = (acc.get(kk, 0) + s) % p
+            terms = []
+            for (w1, h1, w2, h2, vk), c in sorted(acc.items()):
+                if not c: continue
+                parts = []
+                for e, nm in ((w1, "W1"), (h1, "HW1"), (w2, "W2"),
+                              (h2, "HW2")):
+                    if e: parts.append(nm if e == 1 else "%s^%d" % (nm, e))
+                for vid in sorted(set(vk)):
+                    e = vk.count(vid)
+                    parts.append(names[vid] if e == 1 else
+                                 "%s^%d" % (names[vid], e))
+                m = "*".join(parts)
+                terms.append("%d*%s" % (c, m) if m else "%d" % c)
+            if terms:
+                eqs.append("+".join(terms))
+                labels.append(meta)
+        with open(path, "w") as f:
+            f.write(", ".join(["W1", "HW1", "W2", "HW2"] +
+                              [names[v] for v in allv]) + "\n%d\n" % p)
+            f.write(",\n".join(eqs) + "\n")
+        assert "(" not in open(path).read(), "paren sweep fail " + path
+        with open(path.replace(".ms", ".rows.txt"), "w") as f:
+            f.write("# w-free screen p=%d point %s\n" % (p, pt))
+            for i, lab in enumerate(labels): f.write("eq%d = %s\n" % (i, lab))
+        log("emitted %s (%d eqs, %d+4 vars, %.1f MB); paren sweep PASS"
+            % (path, len(eqs), len(allv), os.path.getsize(path) / 1e6))
+
+def phase_chain(chain):
+    st = load("blocks.pkl")
+    WG = load("xWG.pkl")
+    cf = load("chainF.pkl")
+    pats = chain_patterns()
+    l = 3 if chain == "23" else 5
+    Fl, sml = cf[l]
+    rows, fresh = chain_rows(chain, WG, Fl, sml, pats)
+    base = "r1_%schain_core" % chain
+    names, allv = emit_chain_core(base, rows, fresh, st)
+    emit_chain_wfree(base, rows, names, allv)
+
 # ---------------------------------------------------------------- msolve
 def run_msolve(path, tag, timeout, extra=("-g", "2")):
     out = os.path.join("/Users/dc/code/math/jc72108/runs",
@@ -1317,6 +1570,9 @@ if __name__ == "__main__":
     if "--crt" in args: phase_crt()
     if "--crt2" in args: phase_crt("cF2", "xF2.pkl", scalar_check="pF2.pkl")
     if "--emitwfree" in args: phase_emitwfree()
+    if "--chainF" in args: phase_chainF()
+    if "--chain23" in args: phase_chain("23")
+    if "--chain25" in args: phase_chain("25")
     if "--foldx" in args: phase_foldx()
     if "--emit" in args: phase_emit()
     if "--msolve-screen" in args:
