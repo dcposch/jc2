@@ -147,3 +147,34 @@ of td>=6 exclusion as printed; td<=5 remains safe via Orevkov/Domrina-Orevkov/
 Zoladek. Our campaign engine (cases/sheet6_campaign.py) is now the most
 complete written treatment of the td=6 bash; remaining gaps: H3 (blocking,
 also needed by the thesis), ~15 case-III s-tails, two-pole (3,3) config.
+
+## Delta 2026-08-10 (window 08-06 → 08-10; sources: grok CLI ×3, arXiv API, Zenodo API, GitHub API, web, local msolve repro)
+
+### 1. Plane JC / JC(2) progress
+- X: quiet — no proof/exclusion claims, no degree-bound posts; all known handles (Helali, Qiu, octonion, Alpöge, chloeallegra228, openconjectures) silent on Jacobian in-window; only "2D still open" recaps (@grok ×3, @claude_news 08-06, @0x_illuminati 08-09, etc.). [VERIFIED via grok; no substantive findings]
+- Alpöge now posting on RH/zeta; JC PDF still missing. Tao's newest post = HRT counterexample (08-06), no JC(2) follow-up. openconjectures `jacobian-n2-1939` still Open, no degree bound absorbed. [VERIFIED]
+- arXiv, new in window: **2608.05392** (subm. 08-05; Castañeda–Honorato–Valenzuela-Henríquez) — weak Markus–Yamabe FAILS for n≥14: a "chain realization" theorem turns any Keller map into a Hurwitz vector field whose singularities biject with a prescribed fiber; applied to the JC counterexample gives a deg-7 field on R^14 with 3 singularities (also deg-3 on R^18); dims 3–13 open; zero dim-2 content. [VERIFIED abstract; CONTEXT — fallout continues, plane untouched]
+- Gao 2608.00222 still v1; Shaska 2607.20210 still v2; Mondello 2608.02634 still v1; no other JC/Keller/"Jacobian conjecture" arXiv items in window. [VERIFIED]
+
+### 2. Sheet-number / topological degree / Sigray
+- No findings. X: zero hits on topological/geometric degree of Jacobian pairs, "sheet six", Sigray/Orevkov/Domrina/Żołądek, Eggers–Wall trees (only false positives: Polish "żołądek", Dave Eggers). Web + arXiv likewise. Our td=6 campaign and the Sigray-incompleteness finding (Delta 08-07) remain unclaimed territory. [CLEAR]
+
+### 3. Degree bounds / (72,108) competitors
+- All known competitors frozen: Helali Zenodo v1.0.1 (GitHub push still 07-21, 1 star); Suzuki v1.1.4; Santibañez-Leal v0.32 (08-01); Qiu artifact-less and silent. No deg>125 verdicts, no (75,125) movement, no trace of anyone else sweeping ≤150. [VERIFIED via Zenodo/GitHub APIs + grok]
+- **BACKFILL — FOURTH independent (72,108) artifact, missed by the 08-06 snapshot:** Ishihara Kotaro, Zenodo **21757679** (pub. 08-02, v1.3.0) — "A Reproducible Exact-Computational Artifact for the Planar Jacobian Degree Pair (72,108)": two Laurent/Newton systems, conditional on GGHV 2204.14178, exact certificates, "nine-variable source-to-chart provenance", one-command verification (14.4 MB zip + technical note PDF); explicitly makes NO priority claim and does not claim to prove JC2. [metadata VERIFIED, content UNVERIFIED; COMPETES/USABLE — the transcription diff of Implications 2(i) is now four-way]
+- In-window Zenodo noise: Ross 21845742 (08-08) — two notes + code on the 3D counterexample (Tao-digestion keyed). [CONTEXT]
+
+### 4. Dixmier / DC(2)
+- Effectively no findings. Zheglov 2410.06959 still v5 (2026-01-19); no new Dixmier/Weyl-endomorphism arXiv items; X in-window only expository (@dif_engine 08-07 ×2, Japanese thread: Dixmier-implies-JC framing + authority priors). @octonion silent on DC/Poisson/Weyl since 08-04 (posting on Robbins algebra, RH strategy). Zero reaction anywhere to the DC/PC divergence (quantum-vs-Poisson rigidity) idea. [VERIFIED sweeps]
+
+### 5. msolve parenthesized-input mis-parse — NOT known upstream
+- Reproduced locally (homebrew msolve 0.10.1): input `x-(3+1)` → reduced GB `[x+1]`, exit 0, no warning (correct: `[x-4]`). [VERIFIED]
+- GitHub sweep of algebraic-solving/msolve: NO existing issue/PR mentions parentheses. Nearest kin: **issue #354** (open 07-27, 0 comments) — silent mis-parse of division after a monomial (`x/2` → wrong answer or spurious `[-1]`, exit 0) — same failure class: undocumented syntax silently accepted; **#313** segfault on malformed input (`*x`), fix **PR #320** ("Reject malformed inputs in the term parser") open + unmerged since 03-23. [VERIFIED]
+- **ACTION — we should file a new issue** (cite #354 as sibling, note #320's pending hardening); meanwhile keep our emitters paren-free and grep all existing .ms inputs for `(`.
+
+### 6. AI-assisted math attacking JC / Dixmier
+- No findings. No X or web trace of any other automated case-bash / Gröbner / degree-farm / Lean campaign on JC(2) or DC(2); no lab or group announcements; @openconjectures/unsolvedmath/ULAM silent; chloeallegra228 no JC follow-up (collision-ideals still not on arXiv). [CLEAR — ours remains the only visible systematic computational campaign]
+
+### Delta implications
+- Competitive pressure still FALLING: four (72,108) artifacts now exist, but all are static, conditional on GGHV, and unaudited; nobody visibly racing the ≤150 sweep or the sheet-6 lane. The authority slot (independent audit + arXiv writeup + GGV contact) is still open; GGV still silent (no new arXiv since 06/2026).
+- New to-dos: (a) fold Ishihara v1.3.0 into the transcription diff — four-way agreement would be a strong exhaustiveness argument; (b) file the msolve parenthesis issue upstream; (c) skim 2608.05392's chain-realization theorem — the Keller-map→vector-field transfer is new machinery worth checking for a dim-2 converse.
