@@ -1,6 +1,6 @@
 # SHEET6-TDUNIFORM.md — does the kill machinery give a td-uniform single-pole exclusion?
 
-Status: COMPLETE (2026-08-10, this session; unreviewed). Mission: SHEET6 campaign
+Status: PROMOTED (SHEET6-TDU-REVIEW.md all fronts + sec 10 numeric reconciliation: PRIME THEOREM stands — single-pole excluded at entry for every prime td; authoritative composite survivor table td=4..16: 0/4/16/16/23/71/48/87/212, Sigma-lambda=0 counts -/0/0/2/2/2/4/6/4; C1 namespace fix verified, no further edits). Original status: COMPLETE (2026-08-10, this session; unreviewed). Mission: SHEET6 campaign
 generalization — for EVERY td >= 3, decide which single-pole leaf-table
 entries are excluded by the promoted kill set (entry-M pin SHEET6-AF3, AF2
 pricing SHEET6-AF2, E5/N1 SHEET6-III, psi-budget H3q SHEET6-H3), derive the
@@ -176,7 +176,7 @@ Results (2026-08-10 runs; exact arithmetic):
   | 4  | 1 | **0** (r4 closes: psi-kills, as promoted) | 0 | 0 |
   | 6  | 2 | **4** (the AF3 book, reproduced exactly) | 0 | 0 |
   | 8  | 3 | 16 | 0 | 0 |
-  | 9  | 3 | 16 (one at Sum lambda = 0, §5) | 0 | 0 |
+  | 9  | 3 | 16 (TWO at Sum lambda = 0, §5 + review C2/§10) | 0 | 0 |
   | 10 | 4 | 23 | 1 kind | 0 |
   | 12 | 9 | 71 | 4 kinds | 1 hit |
   | 14 | 2 | 48 | 2 kinds | 0 |
@@ -348,3 +348,98 @@ after the q-window widening for td in {4,6,8,9,10,12,14,15}: all
 IDENTICAL (0/4/16/16/23/71/48/87); td=16 is pre-widening (flagged lower
 bound). Runtimes: census+step1 to td=40 ~3 min; tdu_bash ~1 s (td<=9) to
 ~15 min (td=16).
+
+## 10. Post-review numeric reconciliation (2026-08-10, second pass)
+
+Mission: reconcile the three-way td=9 discrepancy — §4's printed 16 vs
+the pre-fix CLI's 41 (TDU-REVIEW front 4) vs a reported post-fix "10" —
+and state the authoritative survivor table. Numbered 10 (the sheet
+already has a §7); this is the "post-review numeric reconciliation".
+
+**Verdict: 16 is correct and the committed post-C1-fix CLI prints it.**
+There was never a third engine state producing 10.
+
+- **The three configurations, instrumented.** A debug probe at the
+  child_from IIb pricing site (sheet6_campaign.py:249, printing
+  `__name__` + the effective IIB_DERIVED + both namespace copies) during
+  `--td 9` runs:
+  * post-C1-fix CLI (`python3 sheet6_campaign.py tduniform --td 9`):
+    site executes in module 'sheet6_campaign', flag True, both copies
+    True — 888 IIb pricings — **16 classes**;
+  * single-namespace import path (`import sheet6_campaign as sc;
+    sc.tdu_bash(9)` — how the original §4 runs were made): flag True —
+    888 IIb pricings — **16 classes**, byte-identical output;
+  * pre-fix CLI (HEAD~1 file as __main__, module copy flag False): site
+    reads False while __main__ holds True (the C1 half-state) — 3048 IIb
+    events priced flat-1 — **41 classes**.
+  The C1 fix does NOT double-apply pricing: it only sets a flag read at
+  one site; the increment is computed once. Hypotheses "fix over-kills"
+  and "§4's 16 was itself a half-state" are both REFUTED.
+- **The "10" was a display artifact, not a count.** `tdu_bash(td,
+  show=10)` prints the header "composed IV-survivor (shape,lam) classes:
+  16" and then lists only the first show=10 IVSURV lines (sorted by
+  shape-string). Counting printed IVSURV lines (e.g. `grep -c IVSURV`)
+  gives 10; and exactly 1 of the 10 visible lines has lam=0 because the
+  second Sum-lambda=0 class (2/3,3s+2,3,2s+2) sorts 12th. Both review-F5
+  Sum-lambda=0 classes are in the full 16 (verified with show=99).
+- **Anatomy of 41 vs 16** (same BFS, traces kept, only the flag toggled):
+  41 = 13 shared + 8 re-keys (same shape, under-recorded Sum lambda:
+  (1/2,2s+3,2,s+2) and the three (1/2,6s+*,·,·) shapes at 5 instead of
+  7; (1/3,4,3,3) at 5,6 and (2/3,3s+2,3,2s+2) at 3,4 — phantom copies of
+  the two lam=0 classes reached from OTHER entries via cheap IIb) + 20
+  phantom classes whose every path has an under-priced IIb step and dies
+  at honest prices. 16 = 13 shared + the 3 re-keyed (1/2,6s+*) shapes at
+  their honest lam=7.
+- **Three hand-checks of the differing arithmetic** (exact, per the
+  SHEET6-AF2 derived rule lambda_IIb >= k*max(1,ceil(gap)) +
+  max(1,ceil(gap/nu_F)), gap = D_F/i - kap_F):
+  1. OFF-only (1/3,7,3,5)@3 [entry (2,3)a1b3nu2, step mu=3 IIb k=2
+     nu_F=3 from (1/3,2,3,5)]: n=5, dp=16, dq=10, kap_F=5, D_F/i=8,
+     gap=3 => lambda_IIb = 2*3 + 1 = 7 (legacy printed 1). Chain 7+2=9 >
+     td-2=7 ((26)); even alone 7 > td-1-psi = 6 (R=3). Correctly ABSENT
+     from the 16. KILL arithmetic right.
+  2. Re-key (1/2,6s+3,2,3s+2): step mu=7 IIb k=0 nu_F=6t+3 from
+     (1/7,2,7,1): gap=18t+9, gap/nu_F = 3 exactly for all t =>
+     lambda_IIb = 3 (not 1). Honest key Sum lambda = 4+0+3 = 7; terminal
+     R=2, psi=1, (25): 7 <= 9-1-1 = 7 — SURVIVOR with zero slack. The
+     derived price is exactly 3 (no over-charge): survivor arithmetic
+     right, OFF's @5 key was under-recorded.
+  3. (2/3,3s+2,3,2s+2)@0 [second F5 class]: mu=3 IIa_0 l=0 nu_F=3t+2
+     from (1/3,4,3,3): child exact for all t, M_F=3, lambda=0 (k=0, no
+     extra p-roots; q-orbits unpriced per AF2/St 3.18); terminal s>=1:
+     R=3, (m) M/R=1, psi=2, (25): 0 <= 6. SURVIVOR slack 6. Genuinely
+     free — the td=9 book has TWO Sum-lambda=0 classes (C2 adopted).
+- **Corrections adopted into this sheet**: §4 td=9 row now reads "two at
+  Sum lambda = 0" (review C2); §9's committed-command claim is repaired
+  by the C1 fix now in tree (review C3).
+- **Authoritative table** (committed post-fix CLI, this pass's re-runs):
+  see §4; all nine td values re-run via `python3 sheet6_campaign.py
+  tduniform --td N` — results below.
+
+  | td | IV-survivor classes | of which Sum-lambda=0 | open kinds | frontier |
+  |----|----|----|----|----|
+  | 4  | 0  | -  | 0 | 0 |
+  | 6  | 4  | 0  | 0 | 0 |
+  | 8  | 16 | 0  | 0 | 0 |
+  | 9  | 16 | 2  | 0 | 0 |
+  | 10 | 23 | 2  | 1 | 0 |
+  | 12 | 71 | 2  | 4 | 1 |
+  | 14 | 48 | 4  | 2 | 0 |
+  | 15 | 87 | 6  | 6 | 2 |
+  | 16 | 212 | 4 | 24 | 6 |
+
+  IV-survivor classes 0/4/16/16/23/71/48/87/212 and frontier
+  0/0/0/0/0/1/0/2/6: identical to §4 and to the review's fixed-namespace
+  reruns — three independent reproductions of the same table. Sum-lambda
+  histograms and this table: /tmp logs of this pass; re-derive any cell
+  with `sc.tdu_bash(td, show=999)`. Open kinds are per-entry kinds summed
+  over entries (the review's aggregation note). td >= 12 counts remain
+  LOWER bounds (frontier > 0), as §4 already flags.
+
+- **Engine state**: cases/sheet6_campaign.py needs NO further edit — the
+  C1 fix (flag set on both sys.modules['sheet6_campaign'] and __main__,
+  lines 664-671/708-713) is correct and sufficient; instrumentation
+  confirms the pricing site reads True under both invocation paths. The
+  only residual nit is cosmetic: `show=10` truncates the IVSURV listing
+  below the printed count (raise via tdu_bash(td, show=N) if full
+  listings are wanted; the count line is always authoritative).
