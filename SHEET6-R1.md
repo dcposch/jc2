@@ -986,3 +986,21 @@ eliminate/emitred/guards/msolve/sweep/sweep1/sweepw1); all additions
 additive; prior emissions byte-identical (git: only SHEET6-R1.md +
 new files). State: /tmp/r1red (reduced.pkl = rows+banked
 substitutions+dropped list; sweep/*.ms regenerable via sweep1).
+
+## 11. Chain-core first verdicts (parent session, 2026-08-10)
+
+Fold/CRT pipeline completed; BYTE-IDENTICAL gate passed (re-emission
+reproduces r1_full_core.ms exactly); both chain cores accepted (guards
+A-D PASS each).
+
+**(2,5)-chain core: NONEMPTY at p=105337 AND at char 0** (local msolve,
+minutes; runs/r1/r1_25chain_core.out = reduced GB, 487 elements, char 0,
+12.4 MB — a substantive variety, and guard C shows the origin does NOT
+satisfy the system, so this is not vacuous). Pre-registered reading:
+the branch's formal candidate DEEPENS. Scope: the core carries 25/37
+banked rows (12 deferred to deg >= 3), so this is "not killed by the
+subset", not consistency; remaining obligations = deferred rows, higher
+ladder, J-closure.
+
+(2,3)-chain core (110 eqs, 9.7 MB): queued on ultramem behind the
+reduced minimal-branch queue (follow-on runner).
