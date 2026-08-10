@@ -32,6 +32,7 @@ import h3_check as hc
 LF, Node = sc.LF, sc.Node
 KMAX = 4          # lambda >= k, budget <= 4
 NUF_SPAN = 2      # residue classes scanned over nu_F in [2, NUF_SPAN*T+1]
+BUDGET_CAP = 4    # III-child lambda cap (= chain budget; tduniform overrides)
 
 
 def ceil_fr(x):
@@ -63,7 +64,7 @@ def e5_iii_outcomes(node, mu):
         return out                              # kap_F >= 1 impossible
     for k in range(1, KMAX + 1):
         lam_k = k * max(1, ceil_fr(Lam / k))
-        if lam_k > 4:
+        if lam_k > BUDGET_CAP:
             continue
         C = Lam / (k * (mu - 1))                # = rho_F
         b = C.denominator

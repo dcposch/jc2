@@ -52,9 +52,11 @@ def lf_str(u):
 
 def lf_mod_reduce(kap, nu):
     """n0 = (-kap) mod nu as linear form: n0 = -kap + q*nu with 0 <= n0(s) < nu(s)
-    for all s >= 0 (coefficient conditions). Returns form or None."""
+    for all s >= 0 (coefficient conditions). Returns form or None.
+    [tduniform: q-window widened +-12 -> +-160 (kap up to ~a(alpha+beta) at
+    td<=40 needs q ~ kap/nu > 12); pure search-space widening, OPEN->solved.]"""
     ka, kb = LF(kap); na, nb = LF(nu)
-    for q in range(-12, 13):
+    for q in range(-160, 161):
         a, b = -ka + q*na, -kb + q*nb
         if (a > 0 or (a == 0 and b >= 0)) and b >= 0 or (a > 0 and b >= 0):
             pass
@@ -590,13 +592,199 @@ def entry_nodes(lam_target=6):
                         Node(Fr(D, P), nu, Mv, D + Dg, P)))
     return ent
 
+# ------------------------------------- tduniform: general-td stage (additive)
+# SHEET6-TDUNIFORM.md. Leaf table at arbitrary td (single pole: Lambda = td):
+#   (D,Dg) = a(alpha,beta), (P,Pg) = b(alpha,beta), a,b in N*   [St 5.2(i)]
+#   (A) nu|alpha, nu|b*beta-1  or  (B) nu|beta, nu|b*alpha-1    [St 5.2(ii)]
+#   Lambda = a*b*alpha*beta/nu                                  [Prop 5.6 (19)]
+# Entry pin (AF3): M = gcd(b*alpha, b*beta) = b; b=1 => Prop 8.4 entry-death.
+# N1 at entry (SHEET6-III, H5a): gcd(a, nu) = 1.
+
+def tdu_rows(td):
+    """All multiplicity data with Lambda == td. Bounds: beta <= td (Prop 5.7),
+    b*alpha <= td (Lambda >= a*b*alpha since nu <= beta), nu <= beta."""
+    rows = set()
+    for beta in range(3, td + 1):
+        for alpha in range(2, beta):
+            if gcd(alpha, beta) != 1:
+                continue
+            for b in range(1, td // alpha + 1):
+                for nu in range(1, beta + 1):
+                    okA = alpha % nu == 0 and (b * beta - 1) % nu == 0
+                    okB = beta % nu == 0 and (b * alpha - 1) % nu == 0
+                    if not (okA or okB):
+                        continue
+                    num = b * alpha * beta
+                    assert num % nu == 0, "Lambda integrality"
+                    lam1 = num // nu
+                    if lam1 > td or td % lam1:
+                        continue
+                    a = td // lam1
+                    rows.add(((alpha, beta), (a * alpha, a * beta),
+                              (b * alpha, b * beta), nu, td))
+    return sorted(rows)
+
+def tdu_gate():
+    """tdu_rows must reproduce prop91's table sliced by Lambda for td <= 7,
+    and the prime-td closed form (SHEET6-TDUNIFORM §2): rows at prime p are
+    exactly {(alpha,p): alpha | p-1, nu=alpha, a=b=1}, all with b=1."""
+    full = prop91(Lmax=7)
+    for td in range(3, 8):
+        want = sorted(r for r in full if r[4] == td)
+        got = tdu_rows(td)
+        assert got == want, f"TDU GATE FAIL at td={td}: {got} vs {want}"
+    for p in (3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37):
+        want = [((al, p), (al, p), (al, p), al, p)
+                for al in range(2, p) if (p - 1) % al == 0]
+        assert tdu_rows(p) == want, f"TDU GATE FAIL: prime menu at {p}"
+    return ("TDU GATE PASS: tdu_rows == prop91 slices td=3..7; prime-td "
+            "closed form verified for the 11 primes <= 40")
+
+def tdu_entry_nodes(td):
+    """(tag, row, verdict, node|None): pin + N1 entry filter at Lambda=td."""
+    out = []
+    for (al, be), (D, Dg), (P, Pg), nu, Lam in tdu_rows(td):
+        a, b = D // al, P // al
+        assert gcd(P, Pg) == b * gcd(al, be) == b, "pin arithmetic"
+        tag = f"({al},{be})a{a}b{b}nu{nu}"
+        if b == 1:
+            out.append((tag, (al, be, a, b, nu), 'DEAD_PIN', None))
+        elif gcd(a, nu) != 1:
+            out.append((tag, (al, be, a, b, nu), 'DEAD_N1', None))
+        else:
+            out.append((tag, (al, be, a, b, nu), 'LIVE',
+                        Node(Fr(D, P), nu, b, D + Dg, P)))
+    return out
+
+def tdu_scan(tdmax=40, bashmax=0, step1=True):
+    """Per-td census: pin/N1 deaths + live entries; optional step-1 pricing
+    (min continuation cost under the promoted kill set) and full compose-run
+    for td <= bashmax (see tdu_bash)."""
+    import hiii_compose as hcmp          # lazy: hiii_compose imports us
+    globals()['IIB_DERIVED'] = True      # AF2-derived IIb pricing (promoted)
+    grand = {}
+    for td in range(3, tdmax + 1):
+        ents = tdu_entry_nodes(td)
+        dead_pin = sum(1 for e in ents if e[2] == 'DEAD_PIN')
+        dead_n1 = sum(1 for e in ents if e[2] == 'DEAD_N1')
+        live = [e for e in ents if e[2] == 'LIVE']
+        print(f"td={td:2d}: rows={len(ents):3d} pin_dead={dead_pin:3d} "
+              f"n1_dead={dead_n1:2d} live={len(live):2d}"
+              + ("  <== ALL DEAD AT ENTRY" if not live else ""))
+        grand[td] = (len(ents), dead_pin, dead_n1, len(live))
+        if not step1:
+            continue
+        budget = td - 2
+        hcmp.KMAX = budget               # k extra roots cost >= k
+        hcmp.BUDGET_CAP = budget         # III-child lambda cap
+        for tag, row, _, node in live:
+            outs = hcmp.step_e5(node)
+            conts = [(o[1], o[2]) for o in outs if o[0] == 'CONT'
+                     and o[2].M >= 2 and o[1] <= budget]
+            opens = [o for o in outs if o[0] in ('OPEN', 'OPEN_E5U')]
+            ivs = [o for o in outs if o[0] == 'TERMINAL_IV']
+            minlam = min((l for l, _ in conts), default=None)
+            free = sum(1 for l, _ in conts if l == 0)
+            print(f"    [{tag}] M={node.M} kap={lf_str(node.kap)} "
+                  f"budget={budget}: cont={len(conts)} minlam={minlam} "
+                  f"free={free} opens={len(opens)} iv@entry={len(ivs)}"
+                  + ("  STEP1-DEAD" if not conts and not opens else ""))
+    print("\n== census == td: rows / pin-dead / n1-dead / live")
+    for td, (r, p, n, l) in grand.items():
+        print(f"  {td:2d}: {r:3d} {p:3d} {n:2d} {l:2d}")
+    return grand
+
+def tdu_bash(td, maxdepth=7, show=10):
+    """Full promoted-kill-set chain run (compose-style: E5 III + N1 + AF2 IIb
+    + H3q IV dispositions) for every live entry at Lambda=td, budget td-2."""
+    import hiii_compose as hcmp
+    import h3_check as hc
+    globals()['IIB_DERIVED'] = True
+    budget = td - 2
+    hcmp.KMAX = budget
+    hcmp.BUDGET_CAP = budget
+    live = [(t, r, n) for t, r, v, n in tdu_entry_nodes(td) if v == 'LIVE']
+    print(f"\n=== tdu_bash td={td}: {len(live)} live entries, budget={budget}, "
+          f"depth<={maxdepth} ===")
+    all_surv = {}
+    for tag, row, node in live:
+        seen = {node.shape(): 0}
+        dq_ = deque([(node, 0, [f"ENTRY {node}"])])
+        hits, opens, frontier, nnodes = [], [], 0, 0
+        while dq_:
+            nd, lam, tr = dq_.popleft()
+            nnodes += 1
+            if len(tr) - 1 >= maxdepth:
+                frontier += 1
+                continue
+            for o in hcmp.step_e5(nd):
+                if o[0] == 'TERMINAL_IV':
+                    hits.append((nd, lam, tr))
+                elif o[0] == 'OPEN_E5U':
+                    _, msg, lmin, mu = o
+                    if lam + lmin > budget:
+                        continue
+                    if budget_kill_all_s(nd, mu, budget - lam):
+                        continue
+                    opens.append((msg, lam))
+                elif o[0] == 'OPEN':
+                    lmin = o[2] if len(o) > 2 else 0
+                    if lam + lmin > budget:
+                        continue
+                    opens.append((o[1], lam))
+                elif o[0] == 'CONT':
+                    _, dl, child, why = o
+                    nl = lam + dl
+                    if nl > budget or child.M == 1:
+                        continue
+                    sh = child.shape()
+                    if sh in seen and seen[sh] <= nl:
+                        continue
+                    seen[sh] = nl
+                    dq_.append((child, nl, tr + [why]))
+        seen_h, n_surv = set(), 0
+        for nd, lam, tr in hits:
+            key = (nd.shape(), lam)
+            if key in seen_h:
+                continue
+            seen_h.add(key)
+            rows, _ = hc.iv_dispositions(nd, lam, td)
+            surv = [(s, R) for s, v, R in rows if v == 'SURVIVOR']
+            if surv:
+                n_surv += 1
+                sk = (str(nd.shape()), lam)
+                if sk not in all_surv:
+                    all_surv[sk] = (tag, sorted({str(R) for _, R in surv}))
+        od = {}
+        for msg, lam in opens:
+            od.setdefault(_re2.sub(r" at Q\[.*", "", msg), []).append(lam)
+        print(f"  [{tag}] nodes={nnodes} iv_hits={len(seen_h)} "
+              f"iv_SURV={n_surv} open_kinds={len(od)} frontier={frontier}")
+        for kmsg, lams in sorted(od.items())[:4]:
+            print(f"      OPEN minlam={min(lams)} x{len(lams)} {kmsg[:80]}")
+    print(f"  --- td={td} composed IV-survivor (shape,lam) classes: "
+          f"{len(all_surv)}")
+    for i, (sk, (tag, Rset)) in enumerate(sorted(all_surv.items())):
+        if i >= show:
+            break
+        print(f"    IVSURV[{tag}] lam={sk[1]} shape={sk[0]} R={Rset}")
+    return all_surv
+
 if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser(); ap.add_argument("phase", nargs="?", default="all")
     ap.add_argument("--budget", type=int, default=4)
     ap.add_argument("--lam", type=int, default=6)
+    ap.add_argument("--tdmax", type=int, default=40)
+    ap.add_argument("--td", type=int, default=0)
     args = ap.parse_args()
     ph = args.phase
+    if ph == "tduniform":
+        print(tdu_gate())
+        if args.td:
+            tdu_bash(args.td)
+        else:
+            tdu_scan(args.tdmax)
     if ph in ("gate", "all"):
         print(gate())
     if ph in ("table",):
