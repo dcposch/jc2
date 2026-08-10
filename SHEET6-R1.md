@@ -939,3 +939,50 @@ runs/r1_reduced_sweep.log. Extended-budget probes next (10.4).
   1200 s budget line. (/tmp/r1red/v2probe.log)
 - Extended probes launched (3900 s, -t 4): p in {40427, 56453, 76631}
   radicals-as-vars + the wfree p=105337 encoding; results in 10.5.
+
+### 10.5 Extended-budget probes (3900 s, -t 4)
+
+| system | p | encoding | result |
+|---|---|---|---|
+| r1_reduced_core_p40427 | 40427 | radicals as vars | TIMEOUT 3900 s |
+| r1_reduced_core_p56453 | 56453 | radicals as vars | TIMEOUT 3900 s |
+| r1_reduced_core_p76631 | 76631 | radicals as vars | TIMEOUT 3900 s |
+| r1_reduced_core_wfree_p105337 | 105337 | wfree branch | TIMEOUT 3900 s |
+
+(runs/r1_reduced_sweepx_p*.{out,log}, runs/r1_reduced_wfreex_*.)
+
+### 10.6 Verdict under pre-registration + recommendation
+
+VERDICT (sec-1 table): NOT TRIGGERED, either clause -- no [1]/[-1] and
+no basis/dimension certificate on any faithful encoding within budget
+(char 0: 1200 s; mod p: 12 primes x 1200 s + 4 probes x 3900 s). The
+sweep's pre-registered EMPTY/NONEMPTY calibration produced NO per-prime
+verdict; no inflation. The mandated 2-solution back-map spot-check is
+VACUOUS (no solver returned points); soundness rests on guard E's exact
+identity certification (4 point/prime combos, all pivot+dropped rows
+vanish under back-map, survivors match).
+
+RECOMMENDATION on the ultramem char-0 run:
+1. RETARGET, do not keep as-is: r1_reduced_core.ms is verdict-
+   equivalent to r1_full_core.ms (certified bijection x A^46) at 63 vs
+   128 vars, 56 vs 105 eqs, 0.9 vs 18.1 MB, 32.6k vs ~420k terms.
+   Every F4 step operates in half the variables; days already sunk in
+   the 128-var ring are strictly dominated. Restart on the reduced
+   core (same pre-registered object, same sec-1 table).
+2. CALIBRATE BEFORE BURNING WALL CLOCK: bank ONE mod-p verdict first
+   (farm, reduced core, a few primes, multi-hour budgets). EMPTY at
+   several primes => char-0 kill plausible, the long run is justified;
+   NONEMPTY at the first prime => the branch is likely realizable,
+   char-0 GB-emptiness is the wrong spend, pivot to the R2-R5 ladder /
+   J-closure obligations instead.
+3. The F4 shape (16k+ basis, 10^7-col matrices at degree 8, mod p,
+   REDUCED core) says this GB is deep at any characteristic; if 2.
+   also stalls, the next accelerator is structural (W case split
+   W_i = 0 vs W_i unit -- which unlocks the W-loaded quasi-linear
+   pivots barred here -- or slot-band staging), not more budget.
+
+Engine: cases/r1_reduce.py (phases analyze/incidence/selftest/
+eliminate/emitred/guards/msolve/sweep/sweep1/sweepw1); all additions
+additive; prior emissions byte-identical (git: only SHEET6-R1.md +
+new files). State: /tmp/r1red (reduced.pkl = rows+banked
+substitutions+dropped list; sweep/*.ms regenerable via sweep1).
