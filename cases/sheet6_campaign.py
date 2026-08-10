@@ -661,6 +661,13 @@ def tdu_scan(tdmax=40, bashmax=0, step1=True):
     (min continuation cost under the promoted kill set) and full compose-run
     for td <= bashmax (see tdu_bash)."""
     import hiii_compose as hcmp          # lazy: hiii_compose imports us
+    # TDU-REVIEW C1 fix: under `python3 cases/sheet6_campaign.py` this module
+    # is __main__, but hiii_compose re-imports it as 'sheet6_campaign' -- a
+    # second copy whose IIB_DERIVED stays False. Set the flag on BOTH.
+    import sys as _sys
+    for _m in (_sys.modules.get('sheet6_campaign'), _sys.modules.get('__main__')):
+        if _m is not None and hasattr(_m, 'IIB_DERIVED'):
+            _m.IIB_DERIVED = True
     globals()['IIB_DERIVED'] = True      # AF2-derived IIb pricing (promoted)
     grand = {}
     for td in range(3, tdmax + 1):
@@ -699,6 +706,10 @@ def tdu_bash(td, maxdepth=7, show=10):
     + H3q IV dispositions) for every live entry at Lambda=td, budget td-2."""
     import hiii_compose as hcmp
     import h3_check as hc
+    import sys as _sys
+    for _m in (_sys.modules.get('sheet6_campaign'), _sys.modules.get('__main__')):
+        if _m is not None and hasattr(_m, 'IIB_DERIVED'):
+            _m.IIB_DERIVED = True
     globals()['IIB_DERIVED'] = True
     budget = td - 2
     hcmp.KMAX = budget
