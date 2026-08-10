@@ -1,20 +1,49 @@
 # jc72108
 
-Settle the (72,108) case — the last open degree pair below 125 for the plane
-Jacobian Conjecture (GGV–Horruitiner, arXiv:2204.14178, Prop 4.3).
+Started as: settle the (72,108) case — the last open degree pair below 125 for
+the plane Jacobian Conjecture (GGV–Horruitiner, arXiv:2204.14178, Prop 4.3).
+Grown into: a campaign on the remaining structural avenues (sheet-6 exclusion,
+DC(2), residue theory, deg ≤ 150 frontier farm).
 
 ## Progress
 
+### (72,108) — SETTLED (empty; no counterexample with these polygons)
 - [x] Pipeline validated on solved GGV families (14/14 formulation×char combos)
 - [x] Subcase (2): EMPTY over ℚ + 3 primes, all strata, audited
-  - [x] generic chart — explicit symbolic contradiction (vertex–gap)
-  - [x] a2 = 0 branch
-  - [x] a6 = 0 branch (char-0: 17.7 h / 761 GB)
-- [ ] Subcase (1): 8 branch leaves computing (rev order, 2 boxes)
-- [x] Vertex-gap theorem, (2,2) regime (LEMMA + SURPLUS, adversarially reviewed)
+- [x] Subcase (1): settled via verified external artifacts (Helali, Suzuki) +
+      our audit; own-leaf replication retired (novelty rule)
 - [x] Cross-check vs Helali & Suzuki artifacts (three-way agreement)
-- [ ] Certificates (chartG: 1-term cofactor done; cCa2/cCa6 lifts pending)
-- [ ] §4 reduction automation → family farm (designed; pending quota + FLINT port)
-- [ ] Write-up + open-source release (awaiting go-ahead)
+- [x] Paper 1 drafted + compiled (Lean-checked example); awaiting review
+- [ ] Certificates: cCa2/cCa6 char-0 lifts still running (ultramem)
+- [ ] Pre-publication riders: reduce4 G4 cross-check
 
-Docs: `CAMPAIGN.md` · `AUDIT.md` · `LEMMA.md` · `SURPLUS.md` · `notes.md` · `plan-72-108.md`
+### Vertex-gap program
+- [x] Theorem grid (2,2),(2,3),(2,4) + k≥3 impossibility (reviewed)
+- [x] R functional = Grothendieck residue at toric boundary (3 interpretations
+      verified; uniform extra formula; conj:R reduced to rigidity half)
+
+### Sheet-6 (td = 6) exclusion — the active endgame
+- [x] Campaign engine: pilot + Λ≤7 table + propagation bash (reviewed)
+- [x] Sigray thesis: td≥6 proof shown incomplete as printed; errata E1–E10
+- [x] ψ-budget (G2 closed), E5/N1 extraction, AF2 derived, entry-M pin proved
+- [x] td ≤ 5: CLOSED (0 survivors). Single-pole td = 6: 4 r9/M2 classes
+- [x] Two-pole (3,3): funneled to rigid template (a₁/a₂ = 2+√3); R6
+      print-campaign closed (6/9 dead); 4 branches to coefficient level
+- [ ] R1 decisive runs: minimal-branch mod-p screen RUNNING (ultramem);
+      (1,2) core queued; chain cores building
+- [x] Ops: msolve parenthesis hazard found + 401-file audit (all prior
+      verdicts unaffected); emission rules hardened
+
+### DC(2)
+- [x] Degree-2 + degree-3 slices (reviewed; slice-scheme divergence at D=3;
+      consistent with HOLDS at D ≤ 3); degree-4 sized, parked
+
+### Frontier farm (deg ≤ 150)
+- [x] §4 automation + FLINT port + sweep: 34 families, 62 systems emitted
+      (7 families honestly out of reduce4 scope)
+- [ ] Verdicts: 2 boxes grinding (EMPTYs banking; big char-0 cores need a
+      higher-memory retry tier)
+
+Docs: `CAMPAIGN.md` · `AUDIT.md` · `LEMMA.md` · `SURPLUS.md` · `RESIDUE.md` ·
+`SHEET6-CAMPAIGN.md` (+ SHEET6-* satellites) · `DC2-PROGRAM.md` · `RECON.md` ·
+`notes.md`
