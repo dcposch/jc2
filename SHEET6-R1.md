@@ -1898,3 +1898,188 @@ lines); state /tmp/r1dec12 (core.pkl parse cache + leaves.pkl).
 Minimal-core leaf emissions BYTE-IDENTICAL (sha256 gate, 16/16 OK).
 Part B produced NO new emissions (sizing/plan only, 15.4-15.6);
 depth-84 engine work starts at the Q0 gate.
+
+## 16. Q0 gate: depth-84 slot-60 witness-specialized quotient block
+## (2026-08-11)
+
+### 16.0 Plan + pre-registration (banked BEFORE build; 15.6 semantics
+### govern, no inflation)
+
+ENGINE: cases/r1_q0_gate.py (NEW file, ADDITIVE; reuses r1_experiment
+registry/build_generators at depth 84, r1_fullcore mod-p machinery
+pjmul/ring_modp, r1_minimal_ext witness_point + rnorm memo).
+Regression gate: sha256 of all 44 banked systems/r1 emissions taken
+BEFORE any work (/tmp/q0_regression_baseline.sha); must be unchanged
+after.  New emissions: systems/r1/r1_q0_p{105337,105673}.ms + .rows.txt.
+
+CONSTRUCTION (per banked prime): depth-84 registry (reset_vars +
+build_generators(84)); witness values transported by registry NAME
+(banked 135 emitted vars via r1_full_core.rows.txt map + sec-14 ext
+vars; radical/Tonelli data = witness_point(p), the sec-13.4 point);
+every UNBANKED registry var at level <= 72 carried SYMBOLICALLY (no
+hand-pruning to the 15.5(ii) 39 -- participation is MEASURED, and
+matching the banked 39-count is an anchor); orbit series specialized,
+folded mod p at slot cap 61 by TWO independent paths (sequential
+linear-factor fold and suborbit-Newton fs_block, both mod-p ports of
+the sec-14-cross-checked routines; exact dict equality per orbit
+required); f = P1 P2 B, g = 6-orbit product, W_F = g^2 - f^3; rows =
+WF(n,60) - s1F*c_n over the 54 slot-60 keys.  PATTERN (pre-registered):
+c_n = coeff of T^((n-2)/7) in ((T-1)^2 (T-B))^8, T = eta^7, B = 3/2 --
+the unique eta-shift of p21^8 compatible with the measured grading
+12n + s == 0 (mod 42) at s = 60 (n == 2 mod 7); shift correctness is
+anchor-checked against the measured row support.
+
+ANCHORS (8.4-style, ALL must pass before any row is trusted; failures
+stop the gate for formulation repair, banked either way):
+- A1 jet regression: the specialized fold truncated to slots <= 24
+  must equal the banked sec-14 fsjets.pkl f/g jets evaluated at the
+  witness (per-key mod p, both primes; no symbolic content below slot
+  25 -- tails live at slots >= 25).  End-to-end validation of the
+  specialization hook against guard-passed banked objects, incl. the
+  slot-35/40 tf jet values (the only nonzero witness tails).
+- A2 E1: specialized WF slot-0 identically zero.
+- A3 grading + census: all WF keys obey 12n + s == 0 (mod 42), slots
+  == 0 (mod 6); slot-60 support = 54 keys, n == 2 (mod 7), n <= 377
+  (15.4 count reproduced).
+- A4 free closure (15.5) measured: band rows s = 30..54 have ZERO
+  constant part at the witness (zero-extended witness satisfies the
+  whole in-ladder band mechanically, not just by the slot argument).
+- A5 participation: the set of symbolic tails occurring in the 54
+  emitted rows must be EXACTLY the 15.5(ii) 39 (9 slot-60 linear;
+  bf/bg42/bg21_52 x a-pin; bf/bg42_47 x w-pin; bf/bg42_37 x tf_47;
+  slot-25..35 pair band), new-tail degree <= 2, slot->=42 tails linear.
+
+Q0 SYSTEM (verdict object, fixed now): the 54 rows in the measured
+unknowns (39 tails + s1F expected), emitted expanded-monomial mod-p
+([0,p) coeffs, no parens), msolve -g 2 -t 4, timeout 600 s, both
+banked primes.  Zero-extension pre-check (pure evaluation, banked
+first): constants of all 54 rows == 0 <=> witness zero-extends with
+s1F = 0; else constants proportional to c_n <=> zero-tail point with
+s1F = ratio.  SURVIVE claims additionally re-verify the explicit point
+against the emitted rows via the independent parser AND against the
+symbolic band rows s = 30..54 of the same fold (so "survives the
+TIER", not just the quotient, is certified by point).  VERDICT under
+the 15.6 pre-registered table verbatim; Q1 (multi-witness Tonelli sweep)
+only if Q0 inconsistent; Q2 (leaf-compressed p-screen) only if all
+witnesses die.
+
+### 16.1 Anchor table (both primes 105337/105673; identical results)
+
+| anchor | result |
+|---|---|
+| A1 jet regression (slots <= 24) | PASS -- specialized fold == banked sec-14 fsjets at the witness, exact per-key (f 19, g 28 keys); no symbolic content below slot 25 |
+| A1b exact-ring regression (slots <= 40; ADDED during the gate: A1 cannot see the slot-25 w-pins or slot-35/40 tf values) | PASS -- specialized fold == R1.fs_block (exact ring arithmetic, the sec-14 guard-passed engine) on the depth-84 series at cap 41, all 6 pole orbits, FULL cofactor comparison incl. symbolic tails (~20 s per 42-orbit) |
+| A2 E1 | PASS -- WF slot-0 identically zero at the witness |
+| A3 grading + census | PASS -- 12n+s == 0 (mod 42) on all 324 WF keys; slot-60 support = 54 keys, n == 2 (mod 7), n = 2..373 (15.4 count reproduced) |
+| A4 free closure measured | PASS -- band rows s = 6..54 carry ZERO constant part at the witness (15.5 argument reproduced by direct evaluation) |
+| A5 participation | PASS with a VERIFIED REFINEMENT: measured participation = 36 tails, not 39 -- bf_52/bg42_52/bg21_52 (slot-40 B-side) are BARRED by the per-orbit selector grading (a lone off-6-grid tail cannot survive its own orbit's 7-direction aggregation; its cheapest same-orbit companion, slot >= 25, overshoots cap 60; the 15.5(ii) a-pin partner sits in ANOTHER orbit, which the slot-sum enumeration missed).  Each absence proved two ways: per-orbit fold grading census + perturbation (random value for the tail leaves EVERY W_F key unchanged, both primes -- the 8.7/uf30 methodology).  Degree <= 2 and slot->=42-tail linearity confirmed.  System = 54 rows, 37 unknowns (36 tails + s1F) |
+| A6 cap-67 extension | PASS -- 54 slot-66 (r = 11) rows also carry ZERO constant part at the witness (15.5(a) measured, not just argued); slot-60 rows identical between cap-61 and cap-67 builds (truncation exactness) |
+
+Internal cross-check throughout: every orbit folded by TWO independent
+mod-p paths (sequential linear-factor fold vs suborbit-Newton port of
+fs_block), exact dict equality asserted per orbit at caps 61 and 67.
+
+### 16.2 Q0 construction + the decisive measurement
+
+Engine cases/r1_q0_gate.py (NEW, ADDITIVE; phases gate [p] | emit |
+run; state /tmp/r1q0/gate_p*.pkl).  Depth-84 registry = 414 vars; 198
+unbanked at levels 37..72 carried symbolically (no hand-pruning).
+Witness support re-measured at load: nonzero banked vars = EXACTLY
+tf1/2_47, tf1/2_52 (sec-14.3 reproduced).  Pattern c_n = coeff of
+T^((n-2)/7) in ((T-1)^2(T-B))^8, B = 3/2 (eta^2-shifted p21^8, the
+unique grading-compatible shift; support n = 2..170, 25 nonzero
+coefficients).  Emitted: systems/r1/r1_q0_p105337.ms, _p105673.ms (54
+eqs, 37 vars, 16.5 kB each, coeffs in [0,p), no parens) + .rows.txt
+(row labels with per-n c_n values + var map q0..q35 -> registry names,
+s1F).
+
+DECISIVE MEASUREMENT (both primes): the constant parts of ALL 54
+slot-60 quotient rows VANISH at the witness -- 0/54 nonzero.  The
+15.5(b) constant-bearing candidates (a^3, a*tf_52, w*tf_47) cancel
+under the selector/phase aggregation, resolving the question 15.5
+explicitly left open ("MEASURED anchor at Q0, not assumed") in favor
+of cancellation -- the F_s analogue of the 8.7 uf30 cancellation.
+CONSEQUENCE: the zero-extended witness (all 37 unknowns = 0, s1F = 0)
+satisfies the entire Q0 block by pure evaluation, BEFORE msolve.
+
+### 16.3 Run ledger + certificates (msolve 0.10.1 local, -g 2 -t 4,
+### timeout 600 s; runs/r1_q0_runs.log, .ms.out)
+
+| run | result |
+|---|---|
+| r1_q0_p105337.ms (54 eqs, 37 vars) | GB != [1] NONEMPTY, wall 1.0 s, RSS 1.1 MB; reduced GB = 4 elements: [s1F, one linear, two quadratics] |
+| r1_q0_p105673.ms | GB != [1] NONEMPTY, wall 1.0 s, RSS 0.6 MB; same 4-element shape |
+
+Certificates beyond the GB (both primes):
+- explicit point: all-37-zero satisfies 54/54 EMITTED rows via the
+  independent parser (FC.parse_eval on the .ms files);
+- residual guard: 0 identically-zero rows (3 random points/prime);
+- tier point-certificate: the same zero-extension satisfies every
+  depth-84 band row -- s = 30..54 by A4 and s = 66 by A6 (measured
+  constants, not only the 15.5 slot argument), s <= 24 banked in 14.3;
+- regression gate: 44/44 prior systems/r1 emissions byte-identical
+  (sha256 vs the pre-work baseline).
+Structural finding (banked): the reduced GB contains s1F itself, so
+s1F == 0 on the ENTIRE Q0 variety -- the depth-84 tie closes with
+H_F = 0 on the witness family (codim 4 in the 37 unknowns, origin
+included); the tie scale is not a free direction there.
+
+### 16.4 VERDICT (15.6 pre-registered table, first row; no inflation)
+
+Q0 witnesses CONSISTENT at BOTH banked primes -- by explicit point
+(zero-extension), confirmed by msolve GB != [1].  Q1 does not fire
+(pre-registered trigger: Q0 inconsistent).  Q2 not built
+(pre-registered trigger: all witnesses die).  Therefore:
+- the minimal branch SURVIVES depth-84 at p = 105337 and 105673 by
+  explicit point: the sec-13.4 witnesses, zero-extended to the 198
+  depth-84 tails with s1F = 0, satisfy the quotient tier (this
+  section) and every band rung r = 5..9, 11 (A4/A6 measured + 15.5);
+- the F_s ladder is EXHAUSTED: in-window band r <= 6 (14.3), deferred
+  band r = 5..9, 11 (15.5 + A4/A6), quotient r = 10 (Q0, by point);
+  no F_s tier remains that could bite these witnesses at the banked
+  primes;
+- the minimal branch remains the campaign's strongest near-candidate;
+  remaining obligations, unchanged from 15.6: (i) R2-R5 ladder --
+  next build = R2 window (16.5); (ii) J-closure; (iii) char-0
+  confirmation per the 10.0 tier discipline (the witness certificate
+  is mod-p; char-0 F_s status stays OPEN pending box01 + the
+  J-closure program).
+
+### 16.5 Next-tier spec: the R2 window build (one paragraph, banked)
+
+R2 (template-lift residual ledger, notes night-7; LT-REVIEW
+sequencing item (c); sec-5 item 3) = the x-side h-Newton budgets with
+the LROOT LR2 pin merged -- the one data side the entire y-side
+program (secs 3-16) has never modeled, and the prerequisite for
+expressing the J(f,g) closure (R5), which sec 4 records as
+"NOT expressible from y-side data alone".  The R2 window build needs:
+(1) an x-side data model mirroring the y-side orbit model -- the
+single x-cluster at x0 = 0 with lead pin A_126 = S_R x^42, S_R = G_R
+= 1 (LR2, gauges already banked in 3.0), kappa_G = 1, unsplit below
+R = 3, with x-side dead-stretch/tail unknowns appended to the
+registry in level order; (2) the h-Newton budget conditions (the
+h1 ~ f^{4/3} approximate-root tower (2,3)->(3,4), h1-corner (168,56))
+staged as window rows co-graded with the banked y-side core, x-side
+analogue of the C2 bands, lowest stages first; (3) the Q0
+witness-specialization hook UNCHANGED (banked vars by name, unbanked
+tails symbolic, zero-extension evaluated first), with 8.4-style
+anchors: x-side stage-0 lead identities (LR2 slope law, kappa_G = 1)
++ regression of any shared y-side keys against the banked jets;
+(4) a 15.6-style kill/survive pre-registration banked BEFORE the
+build (future sec 17).  Sizing expectation: one 42-series window,
+O(10^2) rows/stage, local; the merge then unlocks the J(f,g) row
+family for R5.
+
+### 16.6 Deliverables + state
+
+Engine cases/r1_q0_gate.py (NEW file, ADDITIVE; no prior file
+touched; phases gate [p] | emit | run | all; ~470 lines: mod-p
+two-path fold + witness specialization hook + anchors A1-A6 + emit +
+msolve driver).  Emissions systems/r1/r1_q0_p105337.ms,
+r1_q0_p105673.ms + .rows.txt (var maps: q0..q35 = the 36 measured
+tails bf/bg42/bg21_37..47-band, bf/bg42_47, bf/bg42_37, 9 level-72
+tails, + s1F).  Runs runs/r1_q0_p*.ms.out + runs/r1_q0_runs.log.
+State /tmp/r1q0/gate_p*.pkl (rows, pattern, symbolic census, band
+rows s = 30..54 in symbolic form for future reuse).  Regression gate
+44/44 prior emissions byte-identical (sha256, baseline
+/tmp/q0_regression_baseline.sha).
