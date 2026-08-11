@@ -523,6 +523,456 @@ def phase_run(timeout=600):
             f.write(line + "\n")
 
 
+# =====================================================================
+# SATURATED mode (SHEET6-R1.md sec 18; SHEET6-R1-LADDER-REVIEW R2
+# mandates 1-4).  ADDITIVE: nothing above this line changed.
+# =====================================================================
+SATBASE = "r1_q0_sat"
+
+
+def e5e6_rows(p, val):
+    """The relaxation-dropped tie rows, witness-specialized mod p.
+    E5 (TEMPLATE 2c-E5, H_M RESTORED as a variable; review-verified
+    formula, f12_witness.py):  per pole i,
+      4*(a_i-b)*HM + 729*S_M^3*(a1-a2)^4*a_i^2*alpha_i*W_i^4 = 0
+    (s0 = 1, S_M = 7^12/2^6, a_i = 3+-r3, b = 4, alpha_i = A_i).
+    E6 in the embedding-free CUBE form (H_M^3/S_M^4 = H_F^3/S_F^4 = s1,
+    s1F = H_F the quotient lead, S_F = 1):  (H_M/H_F)^3 = (S_M/S_F)^4:
+      2^24*HM^3 - 7^48*s1F^3 = 0.
+    Returns ([(label, eqstr)], HM pinned by E5: asserted nonzero and
+    pole-consistent -- the review's front-2 computation reproduced)."""
+    inv = lambda a: pow(a % p, p - 2, p)
+    r3 = val["r3"]
+    SM = 7 ** 12 * inv(2 ** 6) % p
+    rows, hm = [], []
+    for i, (ai, Ai, Wi) in enumerate(
+            (((3 + r3) % p, val["A1"], val["W1"]),
+             ((3 - r3) % p, val["A2"], val["W2"])), 1):
+        cH = 4 * (ai - 4) % p
+        d = (729 * pow(SM, 3, p) % p * pow(2 * r3 % p, 4, p) % p
+             * pow(ai, 2, p) % p * Ai % p * pow(Wi, 4, p) % p)
+        rows.append(("E5-quartic pole %d (HM pinned)" % i,
+                     "%d*HM+%d" % (cH, d)))
+        hm.append((p - d) * inv(cH) % p)
+    assert hm[0] == hm[1] != 0, ("E5-implied H_M inconsistent/zero", hm)
+    rows.append(("E6-tie cube form 2^24 HM^3 = 7^48 s1F^3",
+                 "16777216*HM^3+%d*s1F^3" % (p - pow(7, 48, p))))
+    return rows, hm[0]
+
+
+def phase_satemit():
+    """r1_q0_sat_p*.ms = the banked Q0 rows VERBATIM (regression: byte
+    reuse of the guard-passed emission) + deferred E5/E6 tie rows
+    (mandate 2) + Rabinowitsch saturation s1F*tSAT-1 (mandate 1).
+    HM != 0 follows from E5's pin; W_i are nonzero witness constants;
+    the 36 tails are free template parameters (no saturation row)."""
+    for p in FC.good_primes(2):
+        val = ME.witness_point(p)
+        path0 = os.path.join(SYS, "%s_p%d.ms" % (BASE, p))
+        hdr, char, eqs = (lambda t: (t[0], t[1], t[2]))(
+            open(path0).read().split("\n", 2))
+        assert int(char) == p and len(hdr.split(", ")) == 37
+        eqs = [e.strip() for e in eqs.strip().rstrip(",").split(",\n")]
+        assert len(eqs) == 54, len(eqs)
+        tie, hmv = e5e6_rows(p, val)
+        sf = hmv * pow(2, 8, p) % p * pow(pow(7, 16, p), p - 2, p) % p
+        labels = [(("Q0-quot verbatim eq%d" % i), e)
+                  for i, e in enumerate(eqs)] + tie + \
+                 [("SAT s1F (Rabinowitsch)", "s1F*tSAT+%d" % (p - 1))]
+        path = os.path.join(SYS, "%s_p%d.ms" % (SATBASE, p))
+        with open(path, "w") as f:
+            f.write(hdr + ", HM, tSAT\n%d\n" % p)
+            f.write(",\n".join(e for _, e in labels) + "\n")
+        with open(os.path.join(SYS, "%s_p%d.rows.txt" % (SATBASE, p)),
+                  "w") as f:
+            f.write("# Q0 SATURATED (sec 18): 54 banked Q0 rows verbatim"
+                    " + E5 quartic (HM restored) + E6 cube tie + "
+                    "s1F*tSAT-1.\n# NAMING FIX (review nit 5): s1F is "
+                    "the QUOTIENT LEAD H_F (linear); the cube-tie scale"
+                    " is s1 = H_F^3/S_F^4.\n# E5-pinned HM = %d, "
+                    "E6-implied s1F (om^0 embedding) = %d -- both "
+                    "NONZERO; the banked Q0 GB contains s1F.\n"
+                    % (hmv, sf))
+            for i, (lab, _) in enumerate(labels):
+                f.write("eq%d = %s\n" % (i, lab))
+        txt = open(path).read()
+        assert "(" not in txt and ")" not in txt
+        log("emitted %s (58 eqs, 39 vars; E5-pinned HM=%d, implied "
+            "s1F=%d nonzero)" % (path, hmv, sf))
+
+
+def a7_check(p, cn, q60supp):
+    """A7 PATTERN-POSITIVE anchor (sec 18 mandate 4; front-5 fix).
+    (a) VALUE: every c_n == coeff of T^((n-2)/7) in ((T-1)^2(T-B))^8,
+        B = 3/2, recomputed HERE by binomial expansion + Fraction
+        convolution (independent of pattern_cn/k3poly_pow_pattern);
+    (b) ALIGNMENT: support = {7m+2} = 2..170 with c_2 = B^8 and MONIC
+        top c_170 = 1; min support == min of the MEASURED WF slot-60
+        n-support (an index shift n->n+7 breaks this);
+    (c) POSITIVITY (Prop 8.1 form): the T-poly q from the EMITTED c_n
+        has a root of multiplicity EXACTLY 16 at T = A = 1 and EXACTLY
+        8 at T = B (synthetic division mod p), deg q == 24; and the
+        space of deg <= 24 polys with those multiplicities is
+        1-DIMENSIONAL (Fraction rank of the 24x25 condition matrix ==
+        24), so c_n is THE template quotient pattern up to scale and
+        (b) pins the scale.  Raises AssertionError on any corruption."""
+    from math import comb
+    t1 = [Fr(comb(16, k)) * (-1) ** (16 - k) for k in range(17)]
+    tB = [Fr(comb(8, k)) * Fr(-3, 2) ** (8 - k) for k in range(9)]
+    ref = [sum(t1[i] * tB[m - i] for i in range(max(0, m - 8),
+               min(16, m) + 1)) for m in range(25)]
+    refp = {7 * m + 2: FC.frmod(c, p) for m, c in enumerate(ref)
+            if FC.frmod(c, p)}
+    assert cn == refp, "A7(a): c_n != independent binomial reference"
+    assert min(cn) == 2 and max(cn) == 170 and cn[170] == 1, \
+        "A7(b): support/monic broken"
+    assert cn[2] == FC.frmod(Fr(3, 2) ** 8, p), "A7(b): c_2 != B^8"
+    assert all((n - 2) % 7 == 0 for n in cn), "A7(b): residue"
+    assert min(cn) == min(q60supp), \
+        "A7(b): pattern min-index != measured WF slot-60 min-index"
+    q = [0] * 25
+    for n, c in cn.items():
+        q[(n - 2) // 7] = c % p
+    assert q[24] % p, "A7(c): deg q != 24"
+    for root, mult in ((1, 16), (FC.frmod(Fr(3, 2), p), 8)):
+        w = list(q)
+        for _ in range(mult):          # synthetic division by (T-root)
+            r, out = 0, [0] * (len(w) - 1)
+            for i in range(len(w) - 1, -1, -1):
+                if i:
+                    out[i - 1] = (w[i] + r) % p
+                r = (w[i] + r) * root % p
+            assert r % p == 0, "A7(c): mult < %d at %d" % (mult, root)
+            w = out
+        r = 0
+        for i in range(len(w) - 1, -1, -1):
+            r = (w[i] + r) * root % p if i else (w[i] + r) % p
+        assert r % p, "A7(c): mult > %d at %d" % (mult, root)
+    rows, piv = [], 0                  # uniqueness rank over Q
+    for root, mult in ((Fr(1), 16), (Fr(3, 2), 8)):
+        for d in range(mult):          # d-th derivative at root = 0
+            row = [Fr(0)] * 25
+            for j in range(d, 25):
+                f = Fr(1)
+                for t in range(d):
+                    f *= (j - t)
+                row[j] = f * root ** (j - d)
+            rows.append(row)
+    for col in range(25):
+        pr = next((i for i in range(piv, len(rows)) if rows[i][col]), None)
+        if pr is None:
+            continue
+        rows[piv], rows[pr] = rows[pr], rows[piv]
+        for i in range(len(rows)):
+            if i != piv and rows[i][col]:
+                f = rows[i][col] / rows[piv][col]
+                rows[i] = [a - f * b for a, b in zip(rows[i], rows[piv])]
+        piv += 1
+    assert piv == 24, "A7(c): condition rank %d != 24 (corank != 1)" % piv
+
+
+def phase_a7(pert=False):
+    for p in FC.good_primes(2):
+        g = load("gate_p%d.pkl" % p)
+        supp = sorted(g["rows"])
+        a7_check(p, dict(g["cn"]), supp)
+        log("anchor A7 PASS p=%d: pattern value/alignment/positivity "
+            "(independent binomial ref; mult EXACTLY (16,8); corank-1 "
+            "uniqueness)" % p)
+        if not pert:
+            continue
+        from math import comb
+        tB = [Fr(comb(8, k)) * Fr(3, 2) ** (8 - k) for k in range(9)]
+        t1 = [Fr(comb(16, k)) * (-1) ** (16 - k) for k in range(17)]
+        wrongB = [sum(t1[i] * tB[m - i] for i in range(max(0, m - 8),
+                      min(16, m) + 1)) for m in range(25)]
+        perts = [
+            ("wrong sign B=-3/2", {7 * m + 2: FC.frmod(c, p)
+             for m, c in enumerate(wrongB) if FC.frmod(c, p)}),
+            ("index shift n->n+7", {n + 7: c for n, c in g["cn"].items()}),
+            ("global sign flip", {n: p - c for n, c in g["cn"].items()}),
+            ("single-coeff corruption",
+             {n: ((c + 1) % p if n == 9 else c)
+              for n, c in g["cn"].items()}),
+        ]
+        for lab, bad in perts:
+            try:
+                a7_check(p, bad, supp)
+                raise SystemExit("A7 BLIND to perturbation: " + lab)
+            except AssertionError as e:
+                log("  A7 pert '%s': CAUGHT (%s)" % (lab, e))
+
+
+def phase_satrun(timeout=1200):
+    import r1_decompose as RD
+    logf = os.path.join(RUNS, SATBASE + "_runs.log")
+    for p in FC.good_primes(2):
+        fn = "%s_p%d.ms" % (SATBASE, p)
+        out = os.path.join(RUNS, fn + ".out")
+        verdict, wall, rss = RD.run_msolve_rss(
+            os.path.join(SYS, fn), out, timeout, threads=4)
+        line = "%s: %s wall %.1fs rss %.1f MB" % (fn, verdict, wall,
+                                                  rss / 1024.0)
+        log(line)
+        with open(logf, "a") as f:
+            f.write(line + "\n")
+
+
+# =====================================================================
+# FAMILY object (char 0 + both primes): the Q0 quotient tier over the
+# WHOLE sec-13.4 witness family -- W1/W2 SYMBOLIC on relation E (every
+# 4th-root branch and A-embedding at once: the Q1 sweep subsumed),
+# free x = 0 section, exact-ring fold.  Sec-18 mandate 3a char-0 leg.
+# =====================================================================
+FAMBASE = "r1_q0_fam"
+S1FID, HMID, TSID = 10 ** 8, 10 ** 8 + 1, 10 ** 8 + 2
+
+
+def family_backmap():
+    """symbolic sec-13.4 back-map at free-x = 0 over the exact ring
+    (banked UU + sec-10 substitution chains).  Returns {registry NAME:
+    ring elem}.  Asserts: support EXACTLY {tf1/2_42, tf1/2_47,
+    tf1/2_52, tg1/2_42} (slots 30/35/40; the slot-30 values are
+    E-multiples -- zero AT the banked witnesses, NOT identically), and
+    mod-p equality with ME.witness_point at both banked primes."""
+    import r1_decompose as RD
+    from r1_reduce import IR3
+
+    def poly_to_ring(poly, xv):
+        acc = R1.RZERO
+        for (rk, xk), c in poly.items():
+            e3 = rk[IR3]
+            kc = R1.mk(c) * R1.mk(3 ** (e3 // 2)) * \
+                (R1.SQ3 if e3 % 2 else R1.K1)
+            r = R1.rmono(za=rk[1], a1=rk[2], a2=rk[3], w1=rk[4],
+                         h1=rk[5], w2=rk[6], h2=rk[7], B=rk[8], c=kc)
+            for v, e in xk:
+                for _ in range(e):
+                    r = R1.rmul(r, xv[v])
+            acc = R1.radd(acc, r)
+        return acc
+
+    uu = RD.load_state()["UU"]["subs"]
+    with open("/tmp/r1red/reduced.pkl", "rb") as f:
+        red = pickle.load(f)["subs"]
+    xv = {v: R1.RZERO for v in range(119)}
+    for v, u, s2, A in reversed(uu):
+        xv[v] = poly_to_ring(s2, xv)
+    for v, u, s2, A in reversed(red):
+        xv[v] = poly_to_ring(s2, xv)
+    names54, vm54 = ME.core_name_map()
+    bmap = {vm54[vid]["name"]: xv[int(xn[1:])]
+            for vid, xn in names54.items()}
+    for ln in open(os.path.join(SYS, "r1_minimal_ext.rows.txt")):
+        m = re.match(r"x\d+ = (\S+) \(", ln)
+        if m and m.group(1) not in bmap:
+            bmap[m.group(1)] = R1.RZERO      # sec-14 ext vars: 0
+    nz = sorted(nm for nm, r in bmap.items() if r)
+    assert nz == ["tf1_42", "tf1_47", "tf1_52", "tf2_42", "tf2_47",
+                  "tf2_52", "tg1_42", "tg2_42"], nz
+    for p in FC.good_primes(2):
+        wval, val = banked_values(p)
+        for nm, r in bmap.items():
+            got = FC.ring_modp(r, val, p) if r else 0
+            assert got == wval.get(nm, 0) % p, ("backmap drift", nm, p)
+    log("family back-map banked: support %s; mod-p exact vs the "
+        "banked witnesses at both primes" % nz)
+    return bmap
+
+
+def phase_fam():
+    t0 = time.time()
+    bmap = family_backmap()
+    R1.reset_vars()
+    orbs84 = R1.build_generators(84)
+    spec, sym = {}, {}
+    for on, orb in orbs84.items():
+        s = {}
+        for lv, vex in orb["series"].items():
+            if lv - 12 >= SCAP:
+                continue
+            (vk, r), = vex.items()
+            if vk == ():
+                s[lv] = {(): r}
+            else:
+                (vid,) = vk
+                nm = R1.VARS[vid]["name"]
+                if nm in bmap:
+                    if bmap[nm]:
+                        s[lv] = {(): bmap[nm]}
+                else:
+                    s[lv] = {(vid,): R1.RONE}
+                    sym[vid] = nm
+        spec[on] = dict(series=s, size=orb["size"], name=on)
+    log("family spec: %d symbolic tails; ring entries at slots 30/35/40"
+        % len(sym))
+    folds = {}
+    for on in R1.FORB + R1.GORB:
+        t1 = time.time()
+        folds[on] = R1.fs_block(spec[on], SCAP)
+        log("  fam fold %s: %d keys %d terms (%.1fs)"
+            % (on, len(folds[on]),
+               sum(len(v) for v in folds[on].values()), time.time() - t1))
+    jf, jg = R1.JONE, R1.JONE
+    for on in R1.FORB:
+        jf = R1.jmul(jf, folds[on], SCAP)
+    for on in R1.GORB:
+        jg = R1.jmul(jg, folds[on], SCAP)
+    log("fam jets: f %d keys, g %d keys (%.1fs)"
+        % (len(jf), len(jg), time.time() - t0))
+    f3 = R1.jmul(R1.jmul(jf, jf, SCAP), jf, SCAP)
+    g2 = R1.jmul(jg, jg, SCAP)
+    WF = R1.jadd(g2, R1.jscal(f3, R1.mk(-1)))
+    log("fam W_F: %d keys %d terms (%.1fs)"
+        % (len(WF), sum(len(v) for v in WF.values()), time.time() - t0))
+    assert not any(v for (n, s), v in WF.items() if s == 0), "fam E1"
+    assert not [k for k in WF if (12 * k[0] + k[1]) % 42], "fam grading"
+    rows = {n: v for (n, s), v in WF.items() if s == 60 and v}
+    occ = sorted({vid for v in rows.values() for vk in v for vid in vk})
+    for p in FC.good_primes(2):          # REGRESSION vs the banked gate
+        g = load("gate_p%d.pkl" % p)
+        wval, val = banked_values(p)
+        assert occ == g["occ"], "fam occ != gate occ"
+        for n in sorted(set(rows) | set(g["rows"])):
+            acc = {}
+            for vk, r in rows.get(n, {}).items():
+                c = FC.ring_modp(r, val, p)
+                if c:
+                    acc[vk] = (acc.get(vk, 0) + c) % p
+            acc = {k: c for k, c in acc.items() if c}
+            assert acc == g["rows"][n], ("fam regression", p, n)
+        log("fam REGRESSION PASS p=%d: exact-ring family rows reduce to "
+            "the banked gate rows at the witness (54/54 exact)" % p)
+    save("fam.pkl", dict(rows=rows, occ=occ, sym=sym))
+    log("fam state banked: fam.pkl (54 rows, %d unknowns + s1F/HM)"
+        % len(occ))
+
+
+def phase_famemit():
+    st = load("fam.pkl")
+    rows, occ, sym = st["rows"], st["occ"], st["sym"]
+    names = {vid: "q%d" % i for i, vid in enumerate(occ)}
+    names.update({S1FID: "s1F", HMID: "HM", TSID: "tSAT"})
+    p21, pm = R1.k3poly_pow_pattern()
+    p8 = [R1.K1]
+    for _ in range(8):
+        p8 = pm(p8, p21)
+    cn = {7 * m + 2: c for m, c in enumerate(p8) if not c.iszero()}
+    SM3 = R1.mk(Fr(7 ** 12, 2 ** 6)) * R1.mk(Fr(7 ** 12, 2 ** 6)) \
+        * R1.mk(Fr(7 ** 12, 2 ** 6))
+    eqs = list(R1.RAD_EQS) + ["uW1*W1-1", "uW2*W2-1",
+                              "9*A1*W1^4+5*r3*A1*W1^4+9*A2*W2^4"
+                              "-5*r3*A2*W2^4"]
+    labels = [("radical/chart", e) for e in eqs[:-1]] + \
+             [("relation E (13.1 core residual on the family)", eqs[-1])]
+    for n in sorted(rows):
+        v = {vk: dict(r) for vk, r in rows[n].items()}
+        if n in cn:
+            v[(S1FID,)] = R1.radd(v.get((S1FID,), R1.RZERO),
+                                  R1.rC(-cn[n]))
+        w1m = min(min(k[3] for k in r) for r in v.values() if r)
+        w2m = min(min(k[5] for k in r) for r in v.values() if r)
+        if w1m < 0 or w2m < 0:              # clear W-Laurent (UU units)
+            mul = R1.rmono(w1=max(0, -w1m), w2=max(0, -w2m))
+            v = {vk: R1.rmul(r, mul) for vk, r in v.items()}
+        eqs.append(R1.emit_expanded(v, names))
+        labels.append(("Q0-fam-quot n=%d s=60%s" % (n,
+                       " *W1^%d*W2^%d" % (-w1m, -w2m)
+                       if w1m < 0 or w2m < 0 else ""), eqs[-1]))
+    for i, (ai2, arg) in enumerate(((R1.A1c * R1.A1c, dict(a1=1, w1=4)),
+                                    (R1.A2c * R1.A2c, dict(a2=1, w2=4))),
+                                   1):
+        ai = R1.A1c if i == 1 else R1.A2c
+        v = {(HMID,): R1.rC(R1.mk(4) * (ai - R1.Bc)),
+             (): R1.rmono(c=R1.mk(729 * 144) * SM3 * ai2, **arg)}
+        eqs.append(R1.emit_expanded(v, names))
+        labels.append(("E5-quartic pole %d (HM restored)" % i, eqs[-1]))
+    eqs.append(R1.emit_expanded({(HMID,) * 3: R1.rC(R1.mk(2 ** 24)),
+                                 (S1FID,) * 3: R1.rC(R1.mk(-(7 ** 48)))},
+                                names))
+    labels.append(("E6-tie cube form", eqs[-1]))
+    eqs.append("s1F*tSAT-1")
+    labels.append(("SAT s1F (Rabinowitsch)", eqs[-1]))
+    hdr = ["r3", "z", "A1", "A2", "W1", "HW1", "W2", "HW2", "EB",
+           "uW1", "uW2"] + [names[v] for v in occ] + \
+          ["s1F", "HM", "tSAT"]
+    path = os.path.join(SYS, FAMBASE + ".ms")
+    with open(path, "w") as f:
+        f.write(", ".join(hdr) + "\n0\n")
+        f.write(",\n".join(eqs) + "\n")
+    txt = open(path).read()
+    assert "(" not in txt and ")" not in txt
+    with open(os.path.join(SYS, FAMBASE + ".rows.txt"), "w") as f:
+        f.write("# Q0 FAMILY saturated verdict object (sec 18): the "
+                "depth-84 slot-60 quotient tier over the WHOLE sec-13.4"
+                " witness family (free x = 0, W1/W2 symbolic on E -- "
+                "all 4th-root branches + A-embeddings at once), exact "
+                "ring, char 0 + reduced p-variants.\n# s1F = quotient "
+                "LEAD H_F (naming fix); HM = G_m h1-lead restored; "
+                "E5/E6 = the relaxation-dropped tie rows.\n")
+        for i, (lab, _) in enumerate(labels):
+            f.write("eq%d = %s\n" % (i, lab))
+        for vid in occ:
+            f.write("%s = %s (level %d)\n"
+                    % (names[vid], sym[vid], R1.VARS[vid]["level"]
+                       if vid < len(R1.VARS) else -1))
+    log("emitted %s (%d eqs, %d vars, %.1f kB)"
+        % (path, len(eqs), len(hdr), os.path.getsize(path) / 1e3))
+    for p in FC.good_primes(2):
+        pp = os.path.join(SYS, "%s_p%d.ms" % (FAMBASE, p))
+        with open(pp, "w") as f:
+            f.write(", ".join(hdr) + "\n%d\n" % p)
+            f.write(",\n".join(FC.reduce_eq_str(e, p) for e in eqs) + "\n")
+        log("emitted %s (reduced [0,p))" % pp)
+
+
+def phase_famctl(timeout=1200):
+    """controls on the char-0 family object (banked in runs/ only):
+    ctlA = RELAXED family (no E5/E6/sat rows, no HM/tSAT) -- must stay
+           NONEMPTY (the zero-extension: the review-confirmed relaxed
+           survival, family-wide);
+    ctlB = saturation WITHOUT the tie rows (s1F*tSAT-1 only) -- [1]
+           here proves s1F == 0 on the ENTIRE family variety in char 0
+           (the 16.3 structural finding upgraded from 2 primes)."""
+    import r1_decompose as RD
+    hdr, char, body = open(os.path.join(SYS, FAMBASE + ".ms")).read() \
+        .split("\n", 2)
+    eqs = [e.strip() for e in body.strip().rstrip(",").split(",\n")]
+    assert eqs[-1] == "s1F*tSAT-1" and len(eqs) == 68
+    h = [x.strip() for x in hdr.split(",")]
+    ctls = [("ctlA_relaxed", h[:-2], eqs[:-4]),
+            ("ctlB_satonly", h, eqs[:-4] + [eqs[-1]])]
+    logf = os.path.join(RUNS, FAMBASE + "_runs.log")
+    for tag, hh, ee in ctls:
+        path = os.path.join("/tmp/r1q0", "%s_%s.ms" % (FAMBASE, tag))
+        with open(path, "w") as f:
+            f.write(", ".join(hh) + "\n0\n" + ",\n".join(ee) + "\n")
+        out = os.path.join(RUNS, "%s_%s.ms.out" % (FAMBASE, tag))
+        verdict, wall, rss = RD.run_msolve_rss(path, out, timeout,
+                                               threads=4)
+        line = "%s_%s.ms (char 0): %s wall %.1fs rss %.1f MB" \
+            % (FAMBASE, tag, verdict, wall, rss / 1024.0)
+        log(line)
+        with open(logf, "a") as f:
+            f.write(line + "\n")
+
+
+def phase_famrun(timeout=1200):
+    import r1_decompose as RD
+    logf = os.path.join(RUNS, FAMBASE + "_runs.log")
+    files = ["%s_p%d.ms" % (FAMBASE, p) for p in FC.good_primes(2)] + \
+            [FAMBASE + ".ms"]
+    for fn in files:
+        out = os.path.join(RUNS, fn + ".out")
+        verdict, wall, rss = RD.run_msolve_rss(
+            os.path.join(SYS, fn), out, timeout, threads=4)
+        line = "%s: %s wall %.1fs rss %.1f MB" % (fn, verdict, wall,
+                                                  rss / 1024.0)
+        log(line)
+        with open(logf, "a") as f:
+            f.write(line + "\n")
+
+
 if __name__ == "__main__":
     ph = sys.argv[1] if len(sys.argv) > 1 else "all"
     if ph == "gate":
@@ -535,6 +985,29 @@ if __name__ == "__main__":
         phase_emit()
     elif ph == "run":
         phase_run()
+    elif ph == "satemit":
+        phase_satemit()
+    elif ph == "satrun":
+        phase_satrun()
+    elif ph == "saturated":
+        phase_satemit()
+        phase_satrun()
+    elif ph == "a7":
+        phase_a7()
+    elif ph == "a7pert":
+        phase_a7(pert=True)
+    elif ph == "fam":
+        phase_fam()
+    elif ph == "famemit":
+        phase_famemit()
+    elif ph == "famrun":
+        phase_famrun()
+    elif ph == "famctl":
+        phase_famctl()
+    elif ph == "famall":
+        phase_fam()
+        phase_famemit()
+        phase_famrun()
     elif ph == "all":
         for p in FC.good_primes(2):
             g = build_gate(p)

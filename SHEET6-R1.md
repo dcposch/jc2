@@ -2099,3 +2099,189 @@ was designed to catch. Standing rule: every verdict object must
 SATURATE all template-forced-nonzero scales (Rabinowitsch rows baked
 in) and carry the deferred tie rows; anchors must include a
 pattern-positive test (front 5 weakness).
+
+## 18. SATURATED rebuild of the two-pole branch verdicts (2026-08-11,
+## per SHEET6-R1-LADDER-REVIEW R2 mandates 1-4)
+
+Engines: cases/r1_q0_gate.py EXTENDED ADDITIVELY (phases satemit |
+satrun | a7 | a7pert | fam | famemit | famrun | famctl; nothing above
+the sec-16 code changed -- original `emit` re-run reproduces
+r1_q0_p*.ms BYTE-IDENTICALLY) + cases/r1_12_sat.py (NEW; phases
+e5port | emit | run | minsat).  Regression gate: 82/82 pre-existing
+systems/r1 emissions byte-identical (sha256, /tmp/r18_baseline.sha,
+checked before AND after).  msolve 0.10.1, -g 2 -t 4, timeboxed
+1200 s (every run below finished in ~1 s).
+
+### 18.0 Scale inventory (mandate 1): every template-forced-nonzero
+### scale, from the genome (TEMPLATE 1b/2c), with dispositions
+
+Gauged to explicit nonzero constants (sec 3.0; no saturation needed --
+they never appear as unknowns): sigma = 6, A = 1, s0 = 1, S_R = G_R =
+1, S_F = 1, B = 3/2, b = 4, b2 = 9/2; c0 drops out of every emitted
+row (y-translation covariance, asserted at stage 0).  Determined
+nonzero by gauges + E6 unit transports (enter rows only as explicit
+nonzero ring constants): G_F (G_F^2 = s0 S_F^3 = 1), S_M = 7^12/2^6,
+G_M = -7^18/2^9, lam_i, m_i (pole leads, unit multiples of S_M/G_M
+powers; m_i^2 = s0 lam_i^3 automatic).  Etale generators r3, z, A1,
+A2, EB: nonzero on the whole radical variety (their minimal polys
+r3^2 = 3, A_i^3 = 3 -+ r3 != 0, 2EB^7 = 3, Phi42(z) have no zero
+root); no Rabinowitsch row needed -- justification: a zero value
+would contradict the minimal-poly row at any point, char != 2,3,7.
+
+FORCED-NONZERO scales that DO appear as unknowns in verdict objects:
+| scale | where forced nonzero (genome) | verdict-object handling |
+|---|---|---|
+| w_1, w_2 (= W_i) | TEMPLATE 2c-E5: w_i^4 pinned nonzero (a_i != b); stage-0 gate r1_experiment.py:1032 | uW_i*W_i - 1 rows (UU chart) -- present in every sec-18 system |
+| HW_i | HW_i^2 = (3/2)W_i^2, so nonzero IFF W_i nonzero | automatic from uW rows (char != 2,3) |
+| H_M (G_m h1-lead) | 1b: lead of forced-degree pattern p_h1,Gm (deg 16); E5 pins it against w_i^4 | RESTORED as variable HM + E5 rows; nonzero automatic from uW + E5 (and from E6 tie + s1F-saturation) |
+| H_F = s1F (F_s quotient lead) | 1b: H_F^3 = s1 S_F^4, lead of p_h1,Fs (deg 168); tower alive at F_s (2c-E2) | s1F*tSAT - 1 row + E6 cube tie 2^24 HM^3 = 7^48 s1F^3.  NAMING FIX (review nit 5): s1F is the LEAD (linear); the cube-tie scale is s1 = H_F^3/S_F^4 -- fixed in all sec-18 rows.txt |
+| s1 (minimal tower constant) | Prop 4.2: tower constant of h2 = h1^3 - s1 f^4; = H_F^3 under the gauges | equivalent to s1F != 0 (cube); covered by the s1F saturation |
+| s1 ((1,2) tie scale) | Prop 4.2(iii) at k1 = 1: h1+ = s1(f+)^2; review front 2 consequence 4 | s1*t12 - 1 row + the E5-12 port rows (18.2) |
+| s1, cL ((2,5) ext) | its level-2 tie + level-1 quotient lead | ALREADY saturated in the banked ext (eq21 = s1*t1 - 1; eq20 ties cL^2 to s1) -- no correction needed |
+| new band/quotient TAILS (36 q's; dead-stretch coeffs) | NOT forced -- free template parameters (1c; review front 2, consequence 1) | carried free, no saturation row (justified) |
+
+### 18.1 MINIMAL branch: the Q0 chain under saturation (mandate 3a)
+### + the deferred tie rows (mandate 2)
+
+Q0-SAT (witness-specialized): systems/r1/r1_q0_sat_p{105337,105673}.ms
+= the banked 54 Q0 rows VERBATIM + the two E5-quartic rows with HM
+restored (4(a_i-b)HM + 729 S_M^3 (a1-a2)^4 a_i^2 alpha_i W_i^4 = 0;
+review-verified formula -- the E5-pinned HM = 71495 / 19010
+reproduces the review's front-2 values, pole-consistent, NONZERO) +
+the E6 cube tie + s1F*tSAT-1.
+
+FAMILY OBJECT (Q1 subsumed; char-0 leg): systems/r1/r1_q0_fam.ms
+(+ _p*.ms) -- the SAME quotient tier rebuilt by EXACT-RING fold over
+the whole sec-13.4 witness family: free x = 0 section, W1/W2/HW/uW
+SYMBOLIC on relation E, radicals as variables => EVERY 4th-root
+branch, Tonelli choice and A-embedding is covered at once (this is
+Q1's sweep, made exhaustive).  Build: symbolic back-map of the banked
+UU + sec-10 substitution chains at free-x = 0 over the exact ring
+(support EXACTLY {tf1/2_42, tf1/2_47, tf1/2_52, tg1/2_42}; the
+slot-30 values are E-multiples -- zero AT the banked witnesses but
+NOT identically: the mod-p gate could not see them, the family build
+carries them); fs_block exact folds at cap 61 (~35 s total); anchors:
+E1 slot-0 identically zero IN THE RING, grading, occ == gate occ
+(36), and the decisive REGRESSION: the exact family rows reduce mod p
+at the banked witnesses to the banked gate rows EXACTLY (54/54, both
+primes).
+
+| run | verdict |
+|---|---|
+| r1_q0_sat_p105337.ms (58 eqs, 39 vars) | **GB = [1] EMPTY**, 1 s |
+| r1_q0_sat_p105673.ms | **GB = [1] EMPTY**, 1 s |
+| r1_q0_fam_p105337.ms / _p105673.ms (68 eqs, 50 vars) | **GB = [1] EMPTY**, 1 s each |
+| r1_q0_fam.ms **CHAR 0** | **GB = [1] EMPTY**, 1 s |
+| ctlA = relaxed family (no tie/sat rows), char 0 | GB != [1] NONEMPTY (the relaxed survival is real, family-wide) |
+| ctlB = saturation only (no E5/E6 rows), char 0 | GB = [1] EMPTY -- **s1F == 0 on the ENTIRE family variety in char 0** (16.3's structural finding upgraded from 2 primes to proof) |
+| r1_minsat.ms = leaf_UU + E5(HM) + HM*tH-1, char 0 | GB != [1] NONEMPTY -- core-level saturation does NOT kill the minimal branch (the 13.1 consistency identity is real) |
+
+VERDICT (minimal branch, sec-1 + 15.6 semantics with the saturation
+standing rule): the intended-locus witness family admits NO
+template-conform depth-84 extension -- **KILLED at the F_s quotient
+tier, in char 0 (GB = [1] over Q => empty over Qbar => PROOF-tier)
+and at both banked primes**, for EVERY witness in the family (all
+embeddings/4th-root branches; Q1 discharged by the family object).
+The kill mechanism is exactly the review's: the quotient rows force
+s1F = 0 (ctlB, now char-0), while E5+E6 force s1F != 0 at any w != 0
+point (witness-family-wide).  SCOPE: this is the free-x = 0 section
+of the UU core (the pre-registered Q0/Q1 object).  Q2 -- the
+quotient screen over the FULL UU locus (free-x directions open) --
+remains the residual object for an unconditional branch kill at this
+tier; its leaf-compressed sizing plan (15.6) stands, WITH the
+saturation rows now mandatory.
+
+### 18.2 (1,2) branch: core-level saturated verdict (mandates 3b, 2, 5)
+
+The banked (1,2) survival rests on a witness with s1 = 0; the
+template forces s1 != 0.  Saturation alone does NOT kill it (s1 is
+free on the UU chart -- controls below), so the honest verdict needs
+the dropped tie: the E5-QUARTIC PORT for the k1 = 1 tower
+(cases/r1_12_sat.py e5port, exact K3): at G_m the (1,2) legality is
+h1+ = s1(f+)^2, so p_h1,Gm = s1 S_M^2 P^4 (mult 4 at c_i); the St
+3.9(ii) merge-edge transport against the branch-independent pole
+pattern -(3/4)s0 lam_i^3 w_i^4 (eta^2 - (4/3)w_i^2) gives
+
+    81 * S_M * a_i * alpha_i * W_i^4 + s1 = 0        (i = 1, 2),
+
+the identity closing EXACTLY at (a1-a2)^2 = 12 with no slack.
+METHOD VALIDATION (banked, exact): the same pipeline on the minimal
+branch reproduces the 13.1 bracket sum (9+-5r3)(a_i-b)/a_i^2 == 0
+IDENTICALLY, and the row constant 243*7^12 = 3363432789843 is
+exactly the content factor the (1,2) core's own row 87 carries
+(15.1) -- two independent corroborations.  The (1,2) bracket is
+sum (9+-5r3)/a_i == 4 != 0: relation E (the (1,2) core's entire UU
+residual) and the E5-12 rows are JOINTLY inconsistent at ANY s1 != 0
+-- and on the UU chart the tie itself forces s1 != 0 (W_i units).
+
+| run (r1_12sat*) | verdict |
+|---|---|
+| r1_12sat.ms = leaf12_UU + E5-12 + s1*t12-1, **CHAR 0** | **GB = [1] EMPTY**, 1 s |
+| r1_12sat_p105337.ms / _p105673.ms (wfree) | **GB = [1] EMPTY**, 1 s each |
+| r1_12sat_ctl_p*.ms (saturation, NO tie rows) | GB != [1] NONEMPTY both primes (the kill is the TIE, not the chart/saturation) |
+
+VERDICT ((1,2) branch): under the honest (saturated + tie-carrying)
+reading, **the (1,2) branch DIES AT ITS TERMINAL CORE, char-0
+proof-tier** (GB = [1] over Q on the UU leaf; ZU/UZ already
+char-0-proven empty (15.7/15.3); ZZ is the off-locus relaxation
+stratum) -- no depth-84 tier needed.  CONTINGENCY, stated honestly:
+the kill rests on the E5-12 transport port derived THIS session
+(unreviewed); it is validated against the review-confirmed minimal
+chain at every shared step, but an adversarial check of the k1 = 1
+transport (one Taylor-coefficient computation) is the single point
+of failure and should be on the next review's front sheet.
+
+### 18.3 (2,5) advisory (mandate 3c; box01 decider NOT touched)
+
+r1_25chain_ext carries its tie scales HONESTLY (s1 saturated by
+eq21 = s1*t1-1; cL tied to s1 by eq20): no correction needed there.
+EXPOSURE FOUND: W1/HW1/W2/HW2 are free variables (70 of 134 rows
+W-loaded, wfree header has NO uW rows) and the E5 quartic for its
+chain reading is not emitted -- the SAME W_i = 0 relaxation the
+review flagged.  Consequence for the running decider:
+- EMPTY at both primes: VALID AS-IS (saturation only shrinks the
+  variety; the kill would stand a fortiori) -- no re-run needed.
+- NONEMPTY: NOT branch-diagnostic until re-run with uW_i rows + the
+  (2,5)-ported E5 quartic (its own G_m h1-lead transport, to be
+  derived as in 18.2); any witness must be checked for W_i != 0 and
+  tie-conformance before a survival is claimed.
+
+### 18.4 Anchor upgrade A7 (mandate 4) + engine/state ledger
+
+A7 (phases a7 | a7pert; runs on the banked gate state, both primes):
+(a) VALUE -- every c_n equals the coefficient of T^((n-2)/7) in
+((T-1)^2(T-B))^8 recomputed by an INDEPENDENT binomial-expansion +
+Fraction-convolution path; (b) ALIGNMENT -- support = {7m+2} =
+2..170, c_2 = B^8, monic top c_170 = 1, min index == min MEASURED
+WF slot-60 support; (c) POSITIVITY -- the T-polynomial assembled
+from the EMITTED c_n has roots of multiplicity EXACTLY 16 at T = A
+and EXACTLY 8 at T = B (synthetic division), deg 24, and the
+condition matrix has corank exactly 1 (Fraction rank 24 of 25), so
+c_n is THE Prop-8.1 quotient pattern up to scale.  Deliberate
+perturbations (review front-5 suite: B -> -3/2, index shift n -> n+7,
+global sign flip, single-coefficient corruption): ALL CAUGHT (banked
+a7pert output); a FORMULATION-level wrong-B (reference sharing the
+error) is caught by (c) alone, since the root data comes from the
+independently-banked template constants.
+
+New emissions (systems/r1/): r1_q0_sat_p*.ms + rows.txt,
+r1_q0_fam.ms + _p*.ms + rows.txt, r1_12sat.ms + rows.txt +
+_p*.ms + _ctl_p*.ms, r1_minsat.ms.  Runs: runs/r1_q0_sat_runs.log,
+r1_q0_fam_runs.log (+ ctlA/ctlB outs), r1_12sat_runs.log,
+r1_minsat_runs.log + .ms.out files.  State: /tmp/r1q0/fam.pkl.
+Engines: r1_q0_gate.py (+~420 lines, additive), r1_12_sat.py (new).
+Prior emissions: 82/82 byte-identical; original phases re-run
+byte-identically.
+
+### 18.5 The net two-pole picture under the standing rule
+
+| branch | core level (saturated) | depth-84 / ext tier | status |
+|---|---|---|---|
+| minimal (3,4) | survives (r1_minsat NONEMPTY; 13.1 identity) | witness-family KILL, char 0 + 2p (18.1) | DEAD on the entire banked witness family; residual: Q2 full-locus quotient screen (saturated), then R2-R5/J only if something survives it |
+| (1,2) | **DEAD, char 0 + 2p (18.2)** | not needed | DEAD at core (E5-12 port contingency noted) |
+| (2,3) | chain core queued (sec 11) | -- | untouched this session; same saturation advisory as (2,5) applies to any future ext build |
+| (2,5) | core NONEMPTY (sec 11) | ext decider running on box01 | advisory 18.3: EMPTY valid as-is; NONEMPTY needs saturated re-run |
+
+The residue-A two-pole configuration now rests on: the minimal
+branch's Q2 residual object, and the two chain branches' deciders --
+with the saturation standing rule (17) binding on all three.
