@@ -1358,8 +1358,85 @@ def phase_chainF():
             % (l, jsize(Fl), sml, 2 * l))
     save("chainF.pkl", out)
 
+def phase_chainF5ext(dg=11):
+    """exact F5 = f^5 truncation-first fold extended to slots < dg
+    (sec 12: rungs r <= 10 need f^5 slots 4..10). Same asserts as
+    phase_chainF + agreement with the dg=3 fold on slots 0..2."""
+    if have("chainF5ext.pkl"):
+        log("chainF5ext.pkl present — skip"); return
+    st = load("blocks.pkl")
+    pats = chain_patterns()
+    mul = lambda a, b: R1.jmul(a, b, dg)
+    if have("F5raw_dg11.pkl"):                  # fold-first then power:
+        F5 = load("F5raw_dg11.pkl")             # exact (slots >= 0 add)
+    else:                                       # and ~100x cheaper than
+        blks = [{k: v for k, v in b.items() if k[1] < dg}  # block^5-first
+                for _, b in st["f"]]
+        F1 = tree_fold(blks, mul, "F1ext")
+        F2 = mul(F1, F1)
+        F5 = mul(mul(F2, F2), F1)
+        save("F5raw_dg11.pkl", F5)
+    assert not any(s % 2 for (n, s) in F5), "F5ext odd slot nonempty"
+    lead = F5.get((60, 0), {}).get((), R1.RZERO)
+    pk = R1.rk3(lead)
+    assert pk is not None and pk[0] == R1.KONE, "F5ext slot-0 lead"
+    sml = pk[1]
+    p10 = pats["p10"]
+    for (n, s), v in F5.items():
+        if s: continue
+        assert not (set(v) - {()}), "F5ext slot-0 var content"
+        want = sml * (p10[n] if n < len(p10) else R1.K0)
+        pure = R1.rk3(v.get((), R1.RZERO))
+        assert pure and pure[0] == R1.KONE and (pure[1] - want).iszero()
+    F5old, smlold = load("chainF.pkl")[5]
+    assert (sml - smlold).iszero(), "S_M^5 drift vs chainF.pkl"
+    old = {k: v for k, v in F5old.items() if k[1] < 3}
+    new = {k: v for k, v in F5.items() if k[1] < 3}
+    assert set(old) == set(new), "F5ext slots 0..2 key drift"
+    for k in old:
+        d = R1.vadd(new[k], R1.vscal(old[k], R1.K3(-1)))
+        assert not d, "F5ext slots 0..2 content drift at %s" % (k,)
+    save("chainF5ext.pkl", (F5, sml))
+    log("F5ext fold: %d entries, slots %s, == chainF.pkl on slots 0..2"
+        % (jsize(F5), sorted({s for (_, s) in F5})))
+
 def times_var(v, vid, mult=1):
     return {tuple(sorted(vk + (vid,) * mult)): r for vk, r in v.items()}
+
+CONV25_PAIRS = ((8, 8), (8, 10), (8, 12), (10, 10), (8, 14), (10, 12))
+
+def phase_conv25(only=None):
+    """exact convolution conv(WG slot sa, WG slot sb) for the genuinely
+    quadratic interior pairs of rungs r = 4..10 (sec 12). Result: dict
+    {n: VExpr} = sum_{na+nb=n} WG[na,sa]*WG[nb,sb]. Checkpoint per pair."""
+    WG = load("xWG.pkl")
+    for i, (sa, sb) in enumerate(CONV25_PAIRS):
+        if only is not None and i != only: continue
+        ck = "conv25_%d_%d.pkl" % (sa, sb)
+        if have(ck):
+            log("%s present — skip" % ck); continue
+        A = {n: v for (n, s), v in WG.items() if s == sa}
+        B = {n: v for (n, s), v in WG.items() if s == sb}
+        t0 = time.time(); out = {}; np = 0
+        for na, va in sorted(A.items()):
+            for nb, vb in sorted(B.items()):
+                cur = out.setdefault(na + nb, {})
+                for ka, ra in va.items():
+                    for kb, rb in vb.items():
+                        np += 1
+                        r = R1.rmul(ra, rb)
+                        if not r: continue
+                        k = tuple(sorted(ka + kb))
+                        c = cur.get(k)
+                        cur[k] = r if c is None else R1.radd(c, r)
+                        if not cur[k]: del cur[k]
+            log("conv25(%d,%d): na=%d done, %d pairs, %.1fs"
+                % (sa, sb, na, np, time.time() - t0))
+        out = {n: v for n, v in out.items() if v}
+        save(ck, out)
+        log("conv25(%d,%d): %d pairs -> %d keys, %d monomials (%.1fs)"
+            % (sa, sb, np, len(out),
+               sum(len(v) for v in out.values()), time.time() - t0))
 
 def conv_pat(pat, WG, slot, n):
     """sum_a pat[a] * WG(n-a, slot) (VExpr)."""
@@ -1439,6 +1516,45 @@ def chain_rows(chain, WG, Fl, sml, pats):
                              R1.vC(R1.rC(R1.K3(-1))))))
         fresh[qL] = "qL"; fresh[t2] = "t2"
     return rows, fresh
+
+def chain25_ext_rows(WG, F5x, pats, nv):
+    """deferred (2,5) level-2 tie rows, rungs 2 < r <= 10 (W_G^2 slots
+    S = 15..22; sec 12.0). W_G^2 slot S = 2*cL*(p5 conv WG(.,S-6))
+    [slot-6 factors reduced via the banked quot rows, same variety]
+    + sum of genuinely quadratic interior pairs (both slots >= 8,
+    exact conv25 pickles). Row: (W_G^2)[n,S] - s1*F5[n,S-12]."""
+    s1, cL = nv + S1ID_OFF, nv + CLID_OFF
+    p5 = pats["p5"]
+    rows = []
+    for S in range(15, 23):
+        r = S - 12
+        if S % 2:                               # odd: W_G^2 empty (grading)
+            for n in sorted(n for (n, s) in F5x if s == r):
+                v = R1.vscal(times_var(F5x[(n, r)], s1), R1.K3(-1))
+                if v: rows.append((("C25-h2-tie-r%d" % r, n, S), v))
+            continue
+        W2 = {}
+        for n in range(0, 68):                  # deg p5 = 30, WG keys <= 36
+            v = conv_pat(p5, WG, S - 6, n)
+            if v: W2[n] = times_var(R1.vscal(v, R1.K3(2)), cL)
+        for (sa, sb) in CONV25_PAIRS:
+            if sa + sb != S: continue
+            cv = load("conv25_%d_%d.pkl" % (sa, sb))
+            mult = R1.K3(2) if sa != sb else R1.K3(1)
+            for n, v in cv.items():
+                v = R1.vscal(v, mult)
+                cur = W2.get(n)
+                W2[n] = v if cur is None else R1.vadd(cur, v)
+                if not W2[n]: del W2[n]
+        ns = sorted(set(W2) | {n for (n, s) in F5x if s == r})
+        for n in ns:
+            rw = W2.get(n, {})
+            f = F5x.get((n, r))
+            if f: rw = R1.vadd(rw, R1.vscal(times_var(f, s1), R1.K3(-1)))
+            if rw: rows.append((("C25-h2-tie-r%d" % r, n, S), rw))
+    odd = [m for m, _ in rows if m[2] % 2]
+    assert not odd, "odd-slot deferred rows unexpectedly nonzero: %s" % odd[:5]
+    return rows
 
 def emit_chain_core(base, rows, fresh, st):
     """char-0 emission + rows.txt + guards A-D (mirrors phase_emit)."""
@@ -1535,6 +1651,266 @@ def phase_chain(chain):
     names, allv = emit_chain_core(base, rows, fresh, st)
     emit_chain_wfree(base, rows, names, allv)
 
+def int_terms(v, names):
+    """VExpr -> (scale Fr, [(int coeff, monomial str)]): emit_expanded's
+    exact normalization (denominators cleared, content removed)."""
+    terms = R1.poly_terms(v, names)
+    if not terms: return Fr(1), []
+    L = 1
+    for q, _ in terms: L = L * q.denominator // gcd(L, q.denominator)
+    G = 0
+    for q, _ in terms: G = gcd(G, abs((q * L).numerator))
+    sc = Fr(L, G) if G > 1 else Fr(L)
+    out = []
+    for q, m in terms:
+        c = q * sc
+        assert c.denominator == 1
+        out.append((c.numerator, m))
+    return sc, out
+
+def reduce_eq_str(eq, p):
+    """re-emit a paren-free integer polynomial string with every
+    coefficient reduced into [0,p) (AUDIT rule, 25LOCUS 4b)."""
+    parts = []
+    for sgn, term in re.findall(r"([+-]?)([^+-]+)", eq.replace(" ", "")):
+        c, mono = 1, []
+        for a in term.split("*"):
+            if a.isdigit(): c *= int(a)
+            elif a: mono.append(a)
+        c = (-c if sgn == "-" else c) % p
+        if not c: continue
+        parts.append("%d%s" % (c, "".join("*" + m for m in mono)))
+    return "+".join(parts) if parts else "0"
+
+def emit_ext_files(base, rows, names, allv, fresh, st):
+    """streamed char-0 + 2 reduced-p emissions in one pass.
+    Returns per-row scales (for guard B round-trip)."""
+    os.makedirs(OUT_DIR, exist_ok=True)
+    primes = good_primes(2)
+    hdr = ["r3", "z", "A1", "A2", "W1", "HW1", "W2", "HW2", "EB"] + \
+          [names[v] for v in allv]
+    f0 = open(os.path.join(OUT_DIR, base + ".ms"), "w")
+    f0.write(", ".join(hdr) + "\n0\n")
+    fps = {}
+    for p in primes:
+        fps[p] = open(os.path.join(OUT_DIR, "%s_p%d.ms" % (base, p)), "w")
+        fps[p].write(", ".join(hdr) + "\n%d\n" % p)
+    eqs0 = list(R1.RAD_EQS)
+    labels = [("radical", i, 0) for i in range(len(R1.RAD_EQS))]
+    scales = [None] * len(R1.RAD_EQS)
+    f0.write(",\n".join(eqs0))
+    for p in primes:
+        fps[p].write(",\n".join(reduce_eq_str(e, p) for e in eqs0))
+    t0 = time.time()
+    for i, (meta, v) in enumerate(rows):
+        sc, terms = int_terms(v, names)
+        scales.append(sc)
+        labels.append(meta)
+        s0 = []
+        for c, m in terms:
+            if not m: s0.append("%+d" % c)
+            elif c == 1: s0.append("+" + m)
+            elif c == -1: s0.append("-" + m)
+            else: s0.append("%+d*%s" % (c, m))
+        s0 = "".join(s0)
+        f0.write(",\n" + (s0[1:] if s0.startswith("+") else s0))
+        for p in primes:
+            sp = ["%d%s" % (c % p, "*" + m if m else "")
+                  for c, m in terms if c % p]
+            if not sp: log("WARNING row %d == 0 mod %d" % (i, p))
+            fps[p].write(",\n" + ("+".join(sp) if sp else "0"))
+        if (i + 1) % 25 == 0:
+            log("emitted %d/%d rows (%.1fs)" % (i + 1, len(rows),
+                                                time.time() - t0))
+    f0.write("\n")
+    f0.close()
+    for p in primes:
+        fps[p].write("\n"); fps[p].close()
+    with open(os.path.join(OUT_DIR, base + ".rows.txt"), "w") as f:
+        f.write("# %s = (2,5)-chain EXTENDED core: 44 core eqs + deferred"
+                " tie rungs r=4..10 (SHEET6-R1 sec 12); s1 = level-2 tie"
+                " scale, t1 = 1/s1, cL = level-1 pattern lead\n" % base)
+        for i, lab in enumerate(labels): f.write("eq%d = %s\n" % (i, lab))
+        for vid in allv:
+            if vid in fresh: f.write("%s = fresh chain var\n" % fresh[vid])
+            else: f.write("%s = %s (level %d)\n" % (names[vid],
+                          st["vmeta"][vid]["name"], st["vmeta"][vid]["level"]))
+    for suff in [".ms"] + ["_p%d.ms" % p for p in primes]:
+        path = os.path.join(OUT_DIR, base + suff)
+        log("%s: %.1f MB" % (path, os.path.getsize(path) / 1e6))
+    return labels, scales
+
+def guard_E(rows_ext, names, idpin):
+    """NEW guard (sec 12.0 E): validate the extension against the banked
+    locus data at the explicit nondegenerate point (mod p=105337):
+    (i) specialized rows == /tmp/fiber_rows.pkl rows (up to scalar);
+    (ii) r<=8 fiber consistent (msolve != [1]); (iii) r<=10 fiber == [1]."""
+    p = 105337
+    pt = pickle.load(open("/tmp/full_point_p105337.pkl", "rb"))
+    spec = []
+    for meta, v in rows_ext:
+        acc = {}
+        for vk, r in v.items():
+            c = ring_modp(r, pt, p)
+            if not c: continue
+            free = []
+            for vid in vk:
+                if vid in idpin: c = c * idpin[vid] % p
+                else: free.append(vid)
+            if not c: continue
+            k = tuple(sorted(free))
+            acc[k] = (acc.get(k, 0) + c) % p
+            if not acc[k]: del acc[k]
+        if acc: spec.append((meta, acc))
+    fib, _ = pickle.load(open("/tmp/fiber_rows.pkl", "rb"))
+    theirs = {(l[1], l[2]): d for l, d in fib
+              if l[0] == "C25-def-tie" and l[2] <= 22}
+    mine = {(m[1], m[2]): d for m, d in spec}
+    assert set(mine) == set(theirs), \
+        ("guard E row-set drift", sorted(set(mine) ^ set(theirs))[:8])
+    bad = []
+    for k, a in mine.items():
+        b = theirs[k]
+        if set(a) != set(b): bad.append(k); continue
+        k0 = next(iter(a))
+        rat = b[k0] * pow(a[k0], p - 2, p) % p
+        if any(b[kk] != a[kk] * rat % p for kk in a): bad.append(k)
+    assert not bad, ("guard E fiber-row mismatch", bad[:8])
+    log("guard E(i): PASS — %d specialized rows match the banked locus "
+        "fiber rows (up to per-row scalar), p=%d" % (len(mine), p))
+    freeids = sorted({vid for _, d in spec for k in d for vid in k})
+    ynm = {vid: "y%d" % i for i, vid in enumerate(freeids)}
+    os.makedirs("/tmp/r1ext", exist_ok=True)
+    res = {}
+    for tag, maxS in (("fib8", 20), ("fib10", 22)):
+        path = "/tmp/r1ext/%s.ms" % tag
+        eqs = []
+        for m, d in spec:
+            if m[2] > maxS: continue
+            terms = []
+            for k in sorted(d):
+                parts = ["%d" % d[k]]
+                for vid in sorted(set(k)):
+                    e = k.count(vid)
+                    parts.append(ynm[vid] if e == 1 else
+                                 "%s^%d" % (ynm[vid], e))
+                terms.append("*".join(parts))
+            eqs.append("+".join(terms))
+        with open(path, "w") as f:
+            f.write(", ".join(ynm[v] for v in freeids) + "\n%d\n" % p)
+            f.write(",\n".join(eqs) + "\n")
+        r = subprocess.run(["msolve", "-g", "2", "-f", path],
+                           capture_output=True, text=True, timeout=600)
+        first = next(l for l in r.stdout.splitlines()
+                     if l and not l.startswith("#"))
+        res[tag] = first.startswith("[1]")
+        log("guard E %s (S<=%d, %d rows): msolve GB %s" %
+            (tag, maxS, len(eqs), "[1] EMPTY" if res[tag] else "nonempty"))
+    assert not res["fib8"], "guard E(ii) FAIL: r<=8 fiber inconsistent"
+    assert res["fib10"], "guard E(iii) FAIL: r<=10 fiber consistent"
+    log("guard E: PASS — r<=8 rows CAN vanish at the banked point, "
+        "r<=10 CANNOT (locus kill reproduced by the emission)")
+
+def guards_ext(base, rows, names, allv, scales):
+    """guards A-D for the extended emission; B runs the independent
+    parser on the REDUCED p-variants (25LOCUS 4b discipline)."""
+    primes = good_primes(2)
+    nrad = len(R1.RAD_EQS)
+    paths = [os.path.join(OUT_DIR, base + ".ms")] + \
+            [os.path.join(OUT_DIR, "%s_p%d.ms" % (base, p)) for p in primes]
+    for path in paths:                          # A: streamed paren sweep
+        with open(path) as f:
+            while True:
+                ch = f.read(1 << 24)
+                if not ch: break
+                assert "(" not in ch and ")" not in ch, "PAREN " + path
+    log("guard A (paren sweep): PASS on %d files" % len(paths))
+    for p in primes:                            # B: round-trip, reduced
+        pt = radical_point(p)
+        rng = random.Random(1000 + p)
+        xval = {vid: rng.randrange(1, p) for vid in allv}
+        val = dict(pt); val.update({names[v]: xval[v] for v in allv})
+        eqs = open(os.path.join(OUT_DIR, "%s_p%d.ms" % (base, p))
+                   ).read().split("\n", 2)[2].strip().rstrip(",").split(",\n")
+        assert len(eqs) == nrad + len(rows), "eq count drift"
+        got = parse_eval(eqs, val, p)
+        assert all(g == 0 for g in got[:nrad]), "radical rows non-vanishing"
+        mism = []; nz = 0
+        for i, (meta, v) in enumerate(rows):
+            want = eval_vex_modp(v, pt, p, xval) * frmod(scales[nrad + i],
+                                                         p) % p
+            if got[nrad + i] != want: mism.append((i, meta))
+            if got[nrad + i]: nz += 1
+        assert not mism, ("ROUND-TRIP FAIL", p, mism[:5])
+        log("guard B (round-trip vs REDUCED file, p=%d): PASS — %d/%d "
+            "rows match independent parser; %d nonzero" %
+            (p, len(rows), len(rows), nz))
+    p = primes[0]; pt = radical_point(p)        # C: origin + const census
+    x0 = {vid: 0 for vid in allv}
+    at0 = [eval_vex_modp(v, pt, p, x0) for _, v in rows]
+    n0 = sum(1 for t in at0 if t == 0)
+    nconst = sum(1 for _, v in rows if () in v)
+    assert n0 < len(rows), "system CONTAINS the origin"
+    log("guard C (origin): %d/%d rows vanish at x=0 (origin NOT a "
+        "solution); %d rows with constant term" % (n0, len(rows), nconst))
+    dead = set(range(len(rows)))                # D: residual scan
+    for p in primes:
+        pt = radical_point(p)
+        for t in range(3):
+            rng = random.Random(7000 + 100 * p + t)
+            xv = {vid: rng.randrange(1, p) for vid in allv}
+            for i in sorted(dead):
+                if eval_vex_modp(rows[i][1], pt, p, xv): dead.discard(i)
+            if not dead: break
+        if not dead: break
+    assert not dead, ("guard D: identically-zero rows",
+                      [rows[i][0] for i in sorted(dead)][:10])
+    log("guard D (residual): PASS — no emitted row identically zero "
+        "(6 point/prime combos)")
+
+def phase_chain25ext():
+    """(2,5) EXTENDED core = 44 core eqs + deferred tie rungs r <= 10
+    (SHEET6-R1 sec 12). Regression gate + guards A-E + emission."""
+    global OUT_DIR
+    st = load("blocks.pkl")
+    WG = load("xWG.pkl")
+    Fl, sml = load("chainF.pkl")[5]
+    F5x, _ = load("chainF5ext.pkl")
+    pats = chain_patterns()
+    rows_core, fresh = chain_rows("25", WG, Fl, sml, pats)
+    keep = OUT_DIR
+    OUT_DIR = "/tmp/r1ext/regress"              # regression gate
+    try: emit_chain_core("r1_25chain_core", rows_core, fresh, st)
+    finally: OUT_DIR = keep
+    import filecmp
+    assert filecmp.cmp("/tmp/r1ext/regress/r1_25chain_core.ms",
+                       os.path.join(OUT_DIR, "r1_25chain_core.ms"),
+                       shallow=False), "REGRESSION GATE: core drifted"
+    log("regression gate: core re-emission BYTE-IDENTICAL to banked core")
+    rows_ext = chain25_ext_rows(WG, F5x, pats, st["nvars"])
+    rows = rows_core + rows_ext
+    census(rows, "C25ext")
+    allv_core = sorted({vid for _, v in rows_core for vk in v for vid in vk})
+    allv = sorted({vid for _, v in rows for vk in v for vid in vk})
+    core_x = [vid for vid in allv_core if vid not in fresh]
+    new_x = [vid for vid in allv if vid not in allv_core]
+    names = {vid: "x%d" % i for i, vid in enumerate(core_x)}
+    names.update({vid: "x%d" % (len(core_x) + j)
+                  for j, vid in enumerate(new_x)})
+    names.update(fresh)
+    assert all(vid in names for vid in allv)
+    log("extended var set: %d core-x + %d new interior + %d fresh + 9 "
+        "radicals" % (len(core_x), len(new_x), len(fresh)))
+    base = "r1_25chain_ext"
+    labels, scales = emit_ext_files(base, rows, names, allv, fresh, st)
+    guards_ext(base, rows, names, allv, scales)
+    pt = pickle.load(open("/tmp/full_point_p105337.pkl", "rb"))
+    idpin = {vid: pt[names[vid]] for vid in allv_core if names[vid] in pt}
+    assert len(idpin) == len(allv_core), "point does not pin the full core"
+    guard_E(rows_ext, names, idpin)
+    emit_chain_wfree(base, rows, names, allv)
+    log("phase_chain25ext DONE — all guards passed; systems ready")
+
 # ---------------------------------------------------------------- msolve
 def run_msolve(path, tag, timeout, extra=("-g", "2")):
     out = os.path.join("/Users/dc/code/math/jc72108/runs",
@@ -1578,6 +1954,11 @@ if __name__ == "__main__":
     if "--crt2" in args: phase_crt("cF2", "xF2.pkl", scalar_check="pF2.pkl")
     if "--emitwfree" in args: phase_emitwfree()
     if "--chainF" in args: phase_chainF()
+    if "--chainF5ext" in args: phase_chainF5ext()
+    if "--conv25" in args: phase_conv25()
+    for a in args:
+        if a.startswith("--conv25-one="): phase_conv25(only=int(a.split("=")[1]))
+    if "--chain25ext" in args: phase_chain25ext()
     if "--chain23" in args: phase_chain("23")
     if "--chain25" in args: phase_chain("25")
     if "--foldx" in args: phase_foldx()

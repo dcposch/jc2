@@ -1004,3 +1004,127 @@ ladder, J-closure.
 
 (2,3)-chain core (110 eqs, 9.7 MB): queued on ultramem behind the
 reduced minimal-branch queue (follow-on runner).
+
+## 12. (2,5) EXTENDED core: deferred rungs r <= 10 (2026-08-10)
+
+### 12.0 Plan + pre-registration (banked before build)
+
+Decision target (SHEET6-R1-25LOCUS SS6.3, pre-registered): core (all 44
+eqs of r1_25chain_core.ms) + the SYMBOLIC deferred tie rows for rungs
+r = 4..10 (W_G^2 slots S = 16..22; r = S-12). If msolve returns [1]
+(char 0 OR 2 good primes with coefficients REDUCED into [0,p)), the
+(2,5) branch DIES at level 2. If NONEMPTY: the surviving V* is the
+campaign's candidate locus; extract/verify a point, report dimension;
+remaining: rungs r = 12, 14 (quot vs pq46, qL), level-3 ladder,
+J-closure.
+
+Construction (engine-exact, additive to cases/r1_fullcore.py):
+- F5 = f^5 exact truncation-first fold extended to dg = 11 (slots
+  0..10; chainF.pkl has 0..2). Guards: slots 0..2 == chainF.pkl,
+  slot-0 == S_M^5 P^10, odd slots empty (grading), and specialization
+  at the locus point mod 105337 == /tmp/F5_point.pkl (independent).
+- W_G^2 slot S (16..22) = sum over ordered pairs (sa,sb), sa+sb = S,
+  6 <= sa,sb <= 20 (census CLOSED for S <= 26: odd/out-of-window/
+  below-6/slot-0 partners die structurally, 9.1 note). Slot-6 factors
+  reduced via the banked quot rows WG(.,6) = cL*p5 (ideal membership,
+  same variety): contribution 2*cL*(p5 conv WG(.,S-6)). Genuinely
+  quadratic pairs computed exactly from xWG.pkl: (8,8); (8,10);
+  (8,12),(10,10); (8,14),(10,12) — measured ~3.8e7 exact K3
+  term-pair products (bench: conv(8,10) = 1.58e6 pairs -> 115k
+  monomials, 29 s; heavy collision => manageable emission).
+- Rows: (W_G^2)[n,S] - s1*F5[n,S-12] = 0, labels C25-h2-tie-r<r>;
+  any nonzero F5 content at odd/uncovered slots 2 < r' <= 10 gets a
+  row -s1*F5 (s1 != 0 forces it; expected empty by grading — assert).
+- Emission: expanded integer monomial sums only, no parens (AUDIT);
+  p-variants FULLY reduced into [0,p) incl. radical rows (4b hazard).
+- Artifacts: systems/r1/r1_25chain_ext.ms (+ _p105337/_p105673 +
+  wfree variants), rows.txt each.
+
+Guards (all must pass BEFORE any verdict): A paren sweep; B
+independent-parser round-trip at 2 primes on the REDUCED p-variants;
+C origin/constant census (origin must NOT satisfy the system; exactly
+1 constant row t1*s1-1); D residual non-degeneracy (no emitted row
+identically zero at 6 point/prime combos); E (NEW, point-validation)
+at the banked locus point /tmp/full_point_p105337.pkl: (i) the
+specialized r<=10 rows must reproduce the locus fiber rows
+/tmp/fiber_rows.pkl (per-row match up to nonzero scalar, labels
+S=16..22), (ii) msolve on the specialized r<=8 fiber != [1]
+(consistent — extended rows CAN vanish at the point for suitable
+interior values), (iii) msolve on the specialized r<=10 fiber == [1]
+(the observed rung-10 kill — rows genuinely discriminating).
+Regression gate: re-emission of the unextended core stays
+byte-identical to the banked r1_25chain_core.ms.
+
+Run discipline: reduced p-screens first (2 good primes, timeout
+3000 s each), then char 0 (timeout 3000 s). msolve -g 2. Nothing
+silent > 3 min; every phase checkpointed under /tmp/r1full.
+
+### 12.1 Build log
+
+Engine additions (cases/r1_fullcore.py, ADDITIVE — nothing above the
+chain section touched; flags --chainF5ext, --conv25[-one=i],
+--chain25ext): phase_chainF5ext (F5 to dg=11), phase_conv25 (exact
+interior-pair convolutions, per-pair checkpoints conv25_sa_sb.pkl),
+chain25_ext_rows, emit_ext_files (streamed one-pass char-0 + 2
+fully-reduced p-variants from the SAME integer term lists),
+reduce_eq_str (radical rows also reduced into [0,p)), guards_ext
+(A-D), guard_E (point validation), phase_chain25ext (driver with
+byte-identical core regression gate).
+
+Exact interior convolutions (from xWG.pkl, measured; heavy monomial
+collision confirms the farm-sizing was a safe overestimate):
+| pair | term-pair products | result monomials | time |
+|---|---|---|---|
+| (8,8)   | 6.56e5  | 41,229    | 12 s |
+| (8,10)  | 1.58e6  | 114,984   | 32 s |
+| (10,10) | 3.81e6  | 198,516   | 77 s |
+| (8,12)  | 6.00e6  | 540,087   | 126 s |
+| (8,14)  | 1.19e7  | 964,775   | 254 s |
+| (10,12) | 1.45e7  | 1,240,661 | 304 s |
+Total 3.85e7 exact K3 term-pair products -> 3.10e6 quadratic-pair
+monomials (+ the linear-in-cL slot-6-reduced parts + s1*F5 parts);
+6-way parallel, all checkpointed.
+
+F5 to dg=11: the block^5-then-fold order (phase_chainF at dg=3) is
+pathological at dg=11 (>15 min stuck in one 670x670 product); the
+FOLD-FIRST order (F1 = fold of slot<11-truncated blocks, then
+F5 = ((F1^2)^2)F1; exact — slots >= 0, additive, truncation-first)
+lands in 85 s: F5 = 3323 vkeys, 122 keys, slots {0,2,4,6,8,10} (odd
+EMPTY — grading), slot-0 == S_M^5 P^10 re-verified, slots 0..2 ==
+chainF.pkl EXACTLY.
+
+Extended system r1_25chain_ext: **132 rows** = 44 core eqs (7 radical
++ 37 rows; first 44 eqs of the .ms BYTE-IDENTICAL to the banked
+r1_25chain_core.ms modulo the continuation comma) + 95 deferred rows
+(r=4: 23, r=6: 24, r=8: 24, r=10: 24); vars = 9 radicals + 29 core-x
++ 54 new interior (matches the 25LOCUS slot-16 cumulative census) +
+s1, cL, t1. Exactly 1 constant row (t1*s1-1). Emitted files:
+r1_25chain_ext.ms 287.9 MB (char 0), _p105337/_p105673.ms 135.5 MB
+each (ALL coefficients incl. radical rows reduced into [0,p)),
+_wfree_p105337/_wfree_p105673.ms 56.5 MB each (134 eqs, 86+4 vars).
+
+### 12.2 Guard table (all PASS, 2026-08-10 17:21-17:25)
+
+| guard | result |
+|---|---|
+| regression gate (core re-emission) | PASS — BYTE-IDENTICAL to banked r1_25chain_core.ms (guards A-D re-passed on the core en route) |
+| A paren sweep | PASS — 0 parens in all 5 emitted files (streamed) |
+| B independent-parser round-trip, REDUCED files | PASS — 132/132 rows match at p=105337 AND p=105673 (random point, all rows nonzero) |
+| C origin/constant census | PASS — 131/132 rows vanish at x=0, the t1*s1-1 row does NOT => origin excluded; exactly 1 constant row |
+| D residual non-degeneracy | PASS — no emitted row identically zero (6 point/prime combos) |
+| E(i) point-validation vs locus data | PASS — all 93 nonzero specialized rows at the banked point (mod 105337) MATCH /tmp/fiber_rows.pkl up to per-row scalar (2 of the 95 symbolic rows specialize to 0 there) |
+| E(ii) r<=8 sub-fiber | PASS — msolve GB nonempty (69 rows CAN vanish at the point: emission consistent with the banked r<=8 verdict) |
+| E(iii) r<=10 fiber | PASS — msolve GB = [1] (the observed rung-10 kill is REPRODUCED by this emission at the point) |
+
+Note guard E is a STRONG cross-validation: the locus fiber rows were
+assembled by an independent implementation (point-specialized xWG
+entries, mod-p arithmetic throughout); matching all 93 rows term-by-
+term validates the exact convolutions, the cL-reduction of slot-6
+pairs, the F5 extension, and the s1-tie assembly simultaneously.
+
+### 12.3 Run ledger (msolve 0.10.1 local, -g 2 -t 4)
+
+| run | budget | result |
+|---|---|---|
+| ext_p105337 + ext_p105673 parallel | 3000 s | both KILLED silently ~13 min in (macOS memory sweep: a 13-GB unrelated redcheck msolve + 2 x 2 GB jobs; the redcheck job died too) — no verdict, relaunched solo |
+| ext_p105337 solo | 3000 s | **TIMEOUT** (RSS to ~16 GB, 100% CPU throughout; no partial output — msolve writes only at completion). The extended GB is FAR heavier than the core's 487-elt/55 s: the 95 deferred rows carry real load |
