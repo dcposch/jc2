@@ -1340,3 +1340,238 @@ UNUSABLE -- its candidate pool is the ~1,170 values (2^15..2^17 on the
 results are uncached => effectively infinite loop at n >= 2. Any
 future wfree sweeps must use the good_primes walk (r1_decompose.
 phase_psweep does).
+
+## 14. Minimal-branch EXTENDED system: UU-chart core + F_s-band rungs r <= 4 (2026-08-11)
+
+### 14.0 Design + rung choice + pre-registration (banked BEFORE build)
+
+Mission: the minimal-branch analogue of the (2,5) rung-extension (sec
+12), mandated by sec 13: the core alone is non-discriminating (UU chart
+collapses it to the identically-satisfied relation E; all
+discriminating content is DEFERRED -- F_s band, R2-R5, J-closure).
+
+SYSTEM = core + chart + deferred F_s rungs:
+- CORE PART: r1_full_core.ms VERBATIM (105 eqs; regression gate:
+  byte-identity). The UNREDUCED core is required for soundness: the
+  F_s rows re-engage bf_18/bf_24/bf_30 (= emitted x37/x43/x49), which
+  the sec-10 pre-reduction ELIMINATED (pivot rows deleted); combining
+  the reduced core (or the UU leaf) with raw F_s rows would leave
+  those vars unconstrained-as-fresh, losing their determination. The
+  full core carries the same variety with zero substitution machinery.
+- CHART ROWS: uW1*W1-1, uW2*W2-1 (Rabinowitsch). Per sec 13 the
+  extension lives in the UU chart: ZU/UZ are EMPTY at 8/8 primes, ZZ
+  is the relaxation artifact (x=0, W=0), and the intended locus has
+  w_i units. Adjoining the inverses to the FULL core is sound: the
+  sec-10 equivalence is chart-independent (etale-unit pivots).
+- F_s ROWS: W_F band rows WF[(n,s)] = 0, W_F = gF^2 - fF^3 in the F_s
+  window at FULL var-degree, slot-truncated at 25 (truncation-first is
+  exact for kept slots). Labels ("Fs-band", n, s), rung r = s/6.
+
+RUNG CHOICE (mirrors sec 12): the minimal-branch F_s rung ledger (secs
+3, 8.5) is the W_F cancellation band on the 6-grid, 1/7-slots r = s/6:
+in-window rungs r = 1..6 (stages m = 18..48, the pass-1 ledger's first
+deferred stages, ~127-140 deferred rows each) + the 18->8 quotient
+(H_F^3 = s1 S_F^4) at r = 10, which needs depth 84 = farm-only (8.5).
+CHOSEN: r = 1..4 (slots 6, 12, 18, 24) --
+(i) the FIRST band expected to bite (lowest deferred stages), exactly
+    the (2,5) pattern: 4 lowest rungs of the band, stopping short of
+    the quotient tier ((2,5) took r = 4..10 of its 4..14 ladder);
+(ii) s <= 24 is the natural w-free sub-window: the w_i pins sit at
+    level 37 = F_s slot 25, so rungs 5-6 (slots 30, 36) are the first
+    to carry the E5 quartic coupling -- that is the NEXT tier, exactly
+    as the (2,5) quotient rungs r = 12, 14 were deferred there;
+(iii) slot-s rows carry weight-s monomials: s <= 24 is locally
+    feasible; the full band s <= 36 is the 8.5 farm-scale object.
+New variables (beyond the core's 119): uW1, uW2 + the F_s-window vars
+absent from W_G -- uf30, bf_31..36, bg42_31..36, bg21_32..36 (x119..,
+compact enumeration continued in registry order).
+
+PRE-REGISTERED INTERPRETATION (sec 1 discipline, fixed before any
+solve): verdict object = the emitted extended system on the UU chart.
+EMPTY (guard-passed, both wfree p-screens GB = [1]; ZU/UZ already
+empty and ZZ artifact per sec 13) => the minimal branch DIES at the
+first F_s rung tier. NONEMPTY => the branch survives to the next tier
+(r = 5, 6, then the r = 10 quotient at depth 84); report surviving
+locus dimension if computable. Char-0 run only if both p-screens
+finish fast (< 300 s); local budget 900 s / 4 threads; on local
+timeout the emission ships to box01 (NOTE: box01 currently runs the
+(2,5) ext at 16 threads -- the minimal ext would QUEUE behind it).
+GUARDS (all must pass before any verdict): A paren sweep; B two-prime
+round-trip char0 + p-variant + wfree vs internal VExpr eval; C
+origin/constant-term plausibility; D residual non-degeneracy (6
+combos); E witness validation (sec 13.4 points, both primes): the
+banked full-core witnesses MUST satisfy all 105 core + 2 chart rows of
+the EMITTED extension (validates emission), and the F_s rows must NOT
+all vanish there (else the extension is vacuous at the witness ->
+pre-registered fallback: go one rung deeper).
+Build anchors (hard asserts): f/g slot-0 == p21^6/p21^9 (stage-0
+identities); E1: WF slot-0 identically zero; F_s grading s == 12n
+(mod 42) => 6-grid-only rows; no HIVAR (VDEG_CAP = 999); sequential
+linear-factor fold == fs_jet (rep-then-image path) at slot cap 7,
+exact dict equality, f AND g.
+Engine: cases/r1_minimal_ext.py (ADDITIVE; phases fsjets | wf | emit |
+guards | run; state /tmp/r1mext). AUDIT rules: expanded integer
+monomials, no parens; p-variants FULLY coefficient-reduced into [0,p)
+incl. radical rows (FC.reduce_eq_str, the sec-12 4b fix -- NOTE the
+banked r1_full_core_p*.ms used the older signed-digit reduction; the
+ext p-variants are fully reduced).
+
+### 14.1 Build log
+
+Engine: cases/r1_minimal_ext.py (new, ADDITIVE; prior emissions and
+engine files byte-untouched; runtime-only monkey-patch of R1.rnorm).
+
+Fold-shape measurements (orbit B, slot cap 13, banked before the full
+build; extends the 8.12 lesson to the F_s window):
+- rnorm memo (rnorm(key,c) is EXACTLY linear in c; key-part cached;
+  300-sample A/B against the unpatched rnorm asserted at patch time):
+  prerequisite for every path below.
+- sequential linear-factor fold (dense x sparse): 184 s.
+- "fixed-j 7-direction group" reassociation: 2276 s -- WRONG IDEA,
+  banked: the fixed-j group is NOT C_7-stable (k = 6 -> 7 wraps the
+  twist index c = k+7j into the j+1 suborbit), so no early phase
+  aggregation happens and the grouped partials are DENSER. Mid-fold
+  partials in every ungrouped order carry ~456 un-aggregated (n,s)
+  keys that collapse to 19 only at the last factors.
+- fs_block (the engine's suborbit-Newton path: power sums aggregate
+  the zeta^{7js} phases by selector BEFORE any eta-product): 31.4 s,
+  6x the linear fold, ~70x the naive order. CHOSEN.
+Cross-checks: fs_block == fs_jet == sequential fold at slot cap 7
+(all 9 orbits, exact dict equality); fs_block == sequential fold for
+orbit B at slot cap 13 (exact dict equality). fs jets carry NO W
+content at slot <= 24 (w-pins sit at slot 25) -- asserted at emission.
+
+Grading correction (banked): the true F_s jet grading, measured on the
+banked orbit folds and asserted on all jets and W_F, is
+12n + s == 0 (mod 42) (sec-3's prose "s = 12n (mod 42)" has the sign
+flipped; the 6-grid-only consequence -- the rung ledger -- is
+unaffected). First chain run tripped the wrong-sign assert; fixed and
+re-asserted: 0 violations on f (91 keys), g (136 keys), WF (216 keys).
+
+Build numbers (chain complete 04:19, state /tmp/r1mext):
+- orbit folds (SCAP 25): P/G-side pole orbits ~ 6-15 s each; B and
+  GB42 (42-orbits, 24 tail vars) 31 keys / 9,792 terms each, ~21 min
+  CPU each (3 parallel workers); GB21 11 s.
+- jets: f-jet 91 keys / 45,564 terms; g-jet 136 keys / 153,935 terms
+  (65 s incl. anchors + 3-way cap-7 cross-check).
+- W_F: f^2 112 s, f^3 351 s, g^2 999 s; E1 anchor (slot-0
+  identically zero) PASS; off-6-grid content: NONE (asserted).
+- rows: 54 rows per rung x 4 rungs = 216 F_s-band rows; terms/rung:
+  r=1: 1,346; r=2: 11,798; r=3: 73,838; r=4: 375,044 (n in [2..377],
+  n mod 7 fixed per slot by the grading).
+
+### 14.2 Emission + guard table
+
+EMITTED (systems/r1/): r1_minimal_ext.ms (323 eqs = 105 core VERBATIM
++ 2 chart + 216 F_s rows; 146 vars = 9 radicals + uW1,uW2 + x0..x118
+banked map + x119..x134 new (uf30, bf_31..36, bg42_31..36,
+bg21_32/34/36 -- compact enumeration continued in registry order);
+38.1 MB) + _p105337/_p105673.ms (28.6 MB each, ALL coefficients
+reduced into [0,p) incl. radical rows) + _wfree_p*.ms (318 eqs, 141
+vars, 18 MB each: banked wfree core rows verbatim + uW rows + F_s
+rows specialized at the banked radical points) + .rows.txt (labels +
+full var map). F_s rows are W-FREE (w-pins sit at slot 25 > 24).
+
+| guard | result |
+|---|---|
+| regression gate | PASS -- first 105 eqs BYTE-IDENTICAL to r1_full_core.ms |
+| A paren sweep | PASS -- 0 parens, all 5 files |
+| B round-trip | PASS both primes -- char0 vs p-variant exact (323 rows); F_s rows exact vs internal VExpr eval (216/216, and all nonzero at random points); wfree core rows via 2-point cross-ratio (banked wfree emission is unscaled; char-0 is content-normalized -- per-row scalar allowance, sec-12 E(i) style) |
+| C origin/constants | 10/323 rows nonzero at x=0 (exactly the slot-20 quotient family) -> origin excluded; F_s rows carry NO constant terms (in-window pins {0,20,25} cannot sum to a 6-grid slot: band is prefix-exact, as in 8.4) |
+| D residual | PASS -- 0 identically-zero rows (6 point/prime combos, all vars random) |
+| E witness (13.4, both primes) | core+chart: ALL 107 rows vanish -- emission validated end-to-end through both banked back-maps. F_s rows: 0/216 nonzero -> VACUOUS AT THE WITNESS (see 14.3) |
+
+### 14.3 The witness result: extension vacuity at the intended point,
+### and why "one rung deeper" is provably undiagnostic
+
+Guard E outcome (both primes): the sec-13.4 intended-chart witnesses
+satisfy ALL 323 equations of the emitted extended system -- core (105),
+chart (2), AND every F_s-band row (216).  The extended p-screen verdict
+is therefore decided by explicit point BEFORE msolve: NONEMPTY at both
+banked primes.  msolve runs below are confirmation only.
+
+MECHANISM (measured, banked): the witness sets all free x's to 0 and
+back-maps the 35 eliminated ones; the only NONZERO back-mapped values
+are x15, x18, x28, x31 = tf1_47, tf1_52, tf2_47, tf2_52 -- F_s slots
+35 and 40.  Every F_s-window variable at slot <= 36 is ZERO at the
+witness (incl. the re-engaged x37/x43/x49 = bf_18/24/30, measured 0).
+Since no in-window W_F row carries a constant term (guard C), every
+F_s row evaluates to 0 there.
+
+ESCALATION ANALYSIS (the 14.0 pre-registered fallback, discharged
+mechanically WITHOUT the multi-hour slot-31/37 rebuild -- the sec-13.0
+foredoomed-run lesson applied BEFORE spending the compute): rung 5
+(slot 30) and rung 6 (slot 36) rows have term var-slot sums in
+{30,10,5} resp. {36,16,11} (pins: 20 = a_i, 25 = w_i).  The witness's
+nonzero slots {35, 40} cannot participate: 35, 40 > 30; for a slot-36
+sum, 35 needs a slot-1 partner, which is zero at the witness.  So
+EVERY term of EVERY rung-5/6 row contains a zero factor: the witness
+identically satisfies the ENTIRE in-window F_s band (r <= 6, depth
+54), not just r <= 4.  Going one rung deeper cannot change any
+verdict at the banked primes; the guard-E vacuity flag would fire
+again, provably.  BANKED as the tier finding: the in-window F_s band
+is NON-DISCRIMINATING against the minimal-branch core's surviving
+locus at the banked primes -- the free-x directions the core leaves
+open let the whole band be satisfied trivially (the F_s analogue of
+the 13.0 relaxation diagnosis).
+
+The first F_s object that CAN bite the witness is the depth-84
+quotient tie (1/7-slot 10, the 18->8 cancellation quotient,
+H_F^3 = s1 S_F^4): like the G_m slot-20 quotient family (the 10
+origin-excluding rows of guard C), it is CONSTANT-BEARING, so it
+cannot be satisfied by zeroing tails.  It is farm-scale (8.5 sizing:
+degree <= 36 objects at depth 84, 10^7-10^8 monomials) -- goes to
+box01 WITH the note that box01 currently runs the (2,5) ext at 16
+threads and this job would QUEUE behind it.
+
+### 14.4 Run ledger + verdict
+
+Runs (msolve 0.10.1, -g 2 -t 4, timeout 900 s, local; runs/
+r1_minimal_ext_runs.log):
+
+| run | result |
+|---|---|
+| wfree p=105337 (318 eqs, 141 vars, 18 MB) | TIMEOUT 900 s, RSS 13.1 GB, no output |
+| wfree p=105673 | TIMEOUT 900 s, RSS 13.3 GB, no output |
+| char 0 (38.1 MB) | NOT RUN (pre-registered gate: p-screens must finish < 300 s) |
+
+The GB confirmation therefore ships to box01 (sizes above; NOTE:
+box01 currently runs the (2,5) ext at 16 threads -- this job QUEUES
+behind it).  The msolve timeouts do NOT leave the tier undecided:
+
+VERDICT (under the 14.0 pre-registration; sec-1 discipline):
+1. EMPTY trigger: NOT FIRED -- and PROVABLY unfireable at the banked
+   primes: the sec-13.4 witnesses are explicit points of the emitted
+   extended system (guard E, both primes, independent parser).  The
+   minimal-branch extended p-screen is NONEMPTY at p = 105337 and
+   105673 by explicit-point certificate (a strictly stronger
+   certificate than the deferred GB).
+2. => the minimal branch SURVIVES the first F_s rung tier; by the
+   14.3 slot-census argument the SAME witnesses survive every
+   in-window rung (r <= 6, depth 54), so the branch survives the
+   ENTIRE locally-buildable F_s band.  Surviving-locus dimension: NOT
+   computable locally (GB timeout); positive-dimensionality note: the
+   68 x-vars absent from every F_s row (all tf/tg tails, levels >=
+   38) do not appear in the added rows at all, so the extension
+   changes nothing in those directions -- the surviving locus fibers
+   over the F_s-window vars exactly as the core did.
+3. Char-0 emptiness of the extended system: OPEN (deferred to box01
+   char-0 + the depth-84 quotient tier).  No inflation: the witness
+   certificate is mod-p; the char-0 verdict remains governed by the
+   10.0 calibration tiers.
+4. REMAINING OBLIGATIONS for the minimal branch (updated ladder):
+   (i) depth-84 F_s quotient tie (H_F^3 = s1 S_F^4, constant-bearing,
+   the first object that can exclude the witness; farm/box01, 8.5
+   sizing); (ii) R2-R5 ladder; (iii) J-closure.  Unchanged from
+   sec 13.3 except the in-window F_s band is now DISCHARGED as
+   non-discriminating (this section).
+
+### 14.5 Deliverables + state
+
+systems/r1/r1_minimal_ext.ms (+ _p105337/_p105673, _wfree_p105337/
+_wfree_p105673, .rows.txt); engine cases/r1_minimal_ext.py (ADDITIVE:
+new file; runtime-only rnorm memo patch, A/B-tested at import; no
+prior file touched; prior emissions byte-identical -- regression gate);
+state /tmp/r1mext (orbit checkpoints, fsjets.pkl, wf.pkl); runs/
+r1_minimal_ext_runs.log + .ms.out stubs.  Phases: orb <name> | fsjets
+| wf | emit | guards | run (chain script /tmp/r1mext/chain.sh).
