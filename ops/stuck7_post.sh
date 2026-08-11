@@ -25,7 +25,8 @@ import json, os
 fams = ("12_36mn23d144_r0 12_36mn23d144_r1 12_36mn23d144_r2 12_36mn23d144_r3 "
         "6_15mn27d147 10_40mn32d150_r0 10_40mn32d150_r1 12_33mn23d135 "
         "8_28mn34d144").split()
-jobs = []
+import hashlib
+jobs, seen = [], {}
 for fam in fams:
     man = json.load(open(f"systems/farm/{fam}/manifest.json"))
     for e in man.get("cases", []):
@@ -37,6 +38,11 @@ for fam in fams:
                 red = p[:-3] + "RED.ms"
                 if os.path.exists(red):
                     p = red
+            h = hashlib.md5(open(p, "rb").read()).hexdigest()
+            if h in seen:                       # 12_36 r1/r2 twin systems:
+                print(f"dedup: {p} == {seen[h]} (verdict transfers)")
+                continue
+            seen[h] = p
             jobs.append((rec["bytes"], p))
 jobs.sort(key=lambda j: (-j[0], j[1]))
 with open("systems/farm/queue/stuck7/queue.txt", "w") as f:
