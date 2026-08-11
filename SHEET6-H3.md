@@ -3,11 +3,11 @@
 Status: COMPLETE + PROMOTED (2026-08-07, SHEET6-HIII-REVIEW.md: psi-budget
 CONFIRMED, G2 closure stands; the §5 survivor book is SUPERSEDED by the
 composition, cases/hiii_compose.py). Auditor: Claude. All thesis citations read
-on-page (papers/sigray_full.pdf; page numbers = printed = pdf pages).
+on-page (refs/sigray_full.pdf; page numbers = printed = pdf pages).
 Question (SHEET6-CAMPAIGN.md §6 item 1 / §0b G2; SHEET6-REVIEW.md §2 CONFIRMED
 load-bearing): does a characteristic sequence terminating at the root vertex
 (0,y) via Prop 9.3 case IV contradict the normalization of the Sigray engine
-(papers/sigray_full.pdf)? Candidate: case IV (l) forces d_F < deg p_G at the
+(refs/sigray_full.pdf)? Candidate: case IV (l) forces d_F < deg p_G at the
 root; Thm 6.1 (l_f < k_f) plus a chart-matching argument should forbid it.
 
 VERDICT: (b) H3 FALSE as a blanket kill — an explicit case-IV terminal chain

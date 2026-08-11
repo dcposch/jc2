@@ -2,7 +2,7 @@
 
 Status: COMPLETE + PROMOTED (SHEET6-A3L1-REVIEW.md: pin airtight, all gcds re-derived, kill-hunt negative) (2026-08-07, this session). Target: SHEET6-CAMPAIGN.md §6
 item 6 (AF3 entry-M menu), the last conditionality on the single-pole td=6
-book. Ground truth read on-page: papers/sigray_full.pdf (printed page = pdf
+book. Ground truth read on-page: refs/sigray_full.pdf (printed page = pdf
 page). Engine: cases/hiii_compose.py new additive `pin` mode (existing `iib`
 mode and both gates unchanged and re-run: PASS).
 

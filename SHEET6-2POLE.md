@@ -6,9 +6,9 @@ pricing now engine default, 95.6% histogram, §2d M_pole pin; survivor book
 = residue A + 2 boundary classes). Target: SHEET6-CAMPAIGN.md §6 item 4,
 the last structural gap of the td=6 program (single-pole side closed by
 SHEET6-HIII-REVIEW.md: sanctioned residual 0). Ground truth read on-page:
-papers/sigray_full.pdf (printed page = pdf page). Engine:
+refs/sigray_full.pdf (printed page = pdf page). Engine:
 cases/twopole_check.py (new, additive; reuses sheet6_campaign.py step/cost
-machinery read-only). Literature: papers/do.pdf (Domrina-Orevkov I),
+machinery read-only). Literature: refs/do.pdf (Domrina-Orevkov I),
 SHEET6.md §Domrina, RECON.md.
 
 VERDICT: **CONSISTENT-EXHIBIT (Q-level)** — the configuration is NOT
@@ -151,7 +151,7 @@ fix 1), the true survivor book is residue A + the 2 boundary classes.
 
 ## 3. Literature analogue: Domrina-Orevkov's multi-dicritical split
 
-Read: papers/do.pdf (intro + §2); SHEET6.md §history; Domrina II metadata
+Read: refs/do.pdf (intro + §2); SHEET6.md §history; Domrina II metadata
 (mathnet im273). DO's stratification variable is the number of DICRITICAL
 COMPONENTS of the resolution at infinity (components of L~ on which F is
 non-constant with image not in L) — a finer/different count than Sigray's

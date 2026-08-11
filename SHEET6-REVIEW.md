@@ -4,7 +4,7 @@ Reviewer: Claude (adversarial pass, 2026-08-07). Status: COMPLETE.
 Verdicts: 1 CONFIRMED (E2+E3+E4), 2 CONFIRMED (G2), 3 CONFIRMED (G3),
 4 CONFIRMED (14 rows), 5 CONFIRMED (spot-checked), 6 CONFIRMED (honest).
 Overall: SHEET6-CAMPAIGN.md stands; one cosmetic count slip (r10/M4: 5 not
-4 tails). Ground truth for thesis content: papers/sigray_full.pdf read
+4 tails). Ground truth for thesis content: refs/sigray_full.pdf read
 directly (pages cited per front).
 
 ## 1. Errata E2, E3, E4 (St 9.8 / 9.9 / 9.10 "no solution" claims)

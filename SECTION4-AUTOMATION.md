@@ -7,7 +7,7 @@ reduced Newton polygons N(P), N(Q) and the bracket RHS x^k, together with a
 machine-checkable justification log. Verified below to reproduce all seven
 §4 outputs (the exact corner sets already transcribed in `cases/emit.py`).
 
-Sources (local caches under /tmp/jcpapers/, fetched 2026-08-03; cite by arXiv id):
+Sources (local caches under /tmp/jcrefs/, fetched 2026-08-03; cite by arXiv id):
 - **GGV22** = arXiv:2204.14178 "§4" = section *Reducing the size of the Newton
   polygon* (tex lines 457–1398). Prop 4.1 = case (9,27), 4.2 = (9,24) [3 subcases],
   4.3 = (8,28) [2 subcases, RHS x²], 4.4 = (7,21). Contains verbatim pseudocode
@@ -316,4 +316,123 @@ will exercise rules in combinations the four regressions don't; the `stuck`
 outcome converts each gap into a bounded manual review instead of a wrong
 polygon. Expect an initial farm pass to fully reduce roughly half the 34
 families automatically, with the rest emitting sound partial reductions.
+
+## Stuck-family closure (2026-08-11)
+
+The deg≤150 rows the farm sweep left with NO emitted system (runs/
+farm_sweep2.log) are closed by three ADDITIVE engine extensions in
+lib/reduce4.py. Scope correction vs the notes: the sweep's stuck set in
+[126,150] was NINE rows, not seven — 12_36mn23d144_r0–r3 (four r-variants),
+6_15mn27d147, 10_40mn32d150_r0/r1, PLUS the two same-failure-mode rows
+12_33mn23d135 and 8_28mn34d144; all nine are closed here (the three 5_20
+rows below deg 126 unstick too as a byproduct, not re-emitted). Verification:
+all prior tests pass unchanged, every previously-non-stuck catalog row
+produces byte-identical output (34-row before/after diff, 0 regressions),
+the v_incoming assert in tail_resolve stands, and the new pin
+tests/test_reduce4.py::test_stuck150_closure banks 2 flagship corner sets +
+per-family case-count/rhs multisets.
+
+### Diagnosis A — "multi-root chain edge" (12_36_r0, 12_33, 8_28mn34, 6_15)
+
+The last chain edge has z-degree zdeg > γ = final.b, so the engine's
+single-root chain cut refused. NOT outside §4 scope: GGV5 (1708.07936,
+re-fetched to /tmp/jcrefs/) Definition 2.6 + Proposition `multiplicidad`(4)
+pin the final-corner root α at multiplicity EXACTLY γ·m (γ = m_λ/m), and
+st(P) = m·A0′ exact forces every root nonzero and ≠ α. The e_K(α) cut is
+therefore support-exact REGARDLESS of how zdeg−γ splits among the other
+roots: transformed level = x^c (y+αx^{−K})^d z^γ Π(z−β′_i)^{t_i}, support
+hull [V, en] with exact bottom vertex V = st + (γ−d)(K,1) (extreme
+coefficient α^d·Π(−β′_i) ≠ 0); below V unknown ⇒ the standard R9 residual,
+one emission per branch (partition-independent). Implemented in
+_chain_edge_data/_cut_chain; the single-root path is untouched. With this,
+12_36_r0 and 6_15 become FULL reductions (ψ_3, RHS x): e.g. 12_36_r0 emits
+N(P)={(0,0),(1,1),(6,16),(6,24),(0,24)}, N(Q)={(0,0),(1,0),(9,24),(9,36),
+(0,36)} — the exact (9,36)-shaped analogue of Prop 4.1 — and 6_15 emits the
+{(0,0),(1,1),(6,8),(6,12)} pair (hand-checked: V=(9,4), R9 parallel test
+cross((−16,−7),(−64,−28))=0 ⇒ ends (2,1)_P/(−1,0)_Q at direction (−7,16)).
+
+### Diagnosis B — "psi_j precondition fails" (12_36_r1/r2/r3, 10_40_r0/r1)
+
+Terminal branches keep a support point (i,0), i>0. Root cause: an UNCUTTABLE
+certified first face — e.g. st(R)=(4,1) at direction (2,−5) for 12_36_r1/r2
+(ρ=2 ⇒ e_K illegal in L^(1), the Prop 4.3 case-a mechanism) — whose vdE kill
+does NOT fire (unlike GGV22 Prop 4.2's (2,−5)+(3,1), which dies because its
+only continuation (1,0)@(1,−2) violates the direction decrease, here
+(1,0)@(1,−3) legally reaches the axis). No transform exists in the GGV chain
+for this shape: ψ_j sends (i,0) ↦ (−i,0) for EVERY j, so a positive-axis
+point can never enter K[x,y]; the papers' endgame always Laurent-izes the
+bottom boundary first, which these branches cannot. Correct §4-scope
+treatment = STOP and emit directly (design S6 soundness stance):
+
+- **Pre-ψ direct emission** (`_prepsi` in finalize): the leaf state is the
+  image of the hypothetical pair under bracket-constant maps only (φ₁, e_K,
+  scalars), so [P,Q] ∈ K^× still, scaled to 1 ⇒ emit N(P)=m·S′, N(Q)=n·S′
+  with RHS x^0 — a direct polynomial Jacobian-pair system, Generator-A
+  valid. Case label suffix `/prepsi`, rhs_exp=0 marks these.
+- **Laurent-mixed leaves** (both (−a,0) tails and (c,0), c>0 — 12_36_r3's
+  R9-processed leaf, 10_40 cut leaves): neither ψ_j nor identity lands in
+  K[x,y]. Fallback: emit the branch's PRE-TRANSFORM polynomial snapshot
+  (base + derived boundary, all e_K cuts and R9 conclusions refused) —
+  invertibility of the applied L^(1)-automorphisms makes this a sound
+  covering of the branch world; strictly bigger, still Generator-A valid.
+- **No-progress cut guard** (_stage_a): 10_40's (5,1)@(1,−3) face has a
+  y^5 prefactor that re-spans the whole face after the cut (dtail ≥ face
+  z-length): the "cut" shrinks nothing and only spawns Laurent tails,
+  violating the design-S6 termination invariant. Such cuts are now refused
+  (face kept, sound partial) — same pattern as the chain-edge interference
+  guard.
+
+Branch coverage stays exhaustive: every B1/B2 world either finalizes via
+ψ_j as before or is covered by one of the two direct emissions; identical
+(NP,NQ,rhs) leaves merge by hash as usual. Known conservatism kept ON
+PURPOSE: lower_boundary's origin-ray worlds are vdE-killable pre-Laurent
+(deg_x P(x,0)=0), but applying that kill retracts two already-banked
+12_30mn32d126 cases, so it is documented here instead of enforced —
+the ray worlds emit as sound over-approximations (12_36_r1/r2 c4-type).
+
+### Change ledger (lib/reduce4.py, all additive)
+
+1. `_chain_edge_data`: γ = final.b < zdeg no longer raises Stuck; returns
+   the multi-root data (guard: st.y ≥ 1 and st.y < γ < zdeg, else still
+   Stuck). Single-root path byte-identical.
+2. `_cut_chain`: multi-root branch — exact rewrite [V, en] + off-face naive
+   e_K images (same loop as apply_cut), residual (V, (−1,K)) for R9.
+3. `_stage_a`: no-progress cut guard (single-root shape whose prefactor
+   tail re-spans the face level ⇒ face kept uncut).
+4. `finalize(…, fallback=)` + `_prepsi`: ψ_j precondition failure now emits
+   pre-ψ (leaf if polynomial, else the branch's pre-transform snapshot),
+   RHS x^0; Stuck only remains for the impossible no-fallback path.
+5. `_reduce`: leaves carry the branch's polynomial snapshot (fb); `/prepsi`
+   label marker on fallback emissions.
+6. NOT changed: tail_resolve (v_incoming assert stands, rider b),
+   apply_cut, all R-rules, lower_boundary (see conservatism note).
+
+Audit trail: 34-row before/after diff — the 22 previously-non-stuck rows
+byte-identical, 12 stuck rows → `reduced`; spy-check confirms no new family
+exercises apply_cut's shortened-face-with-prefactor path (the one latent
+under-approximation flagged in REDUCE4-REVIEW Front 3 stays unexercised).
+Multi-root soundness re-read from source: GGV5 tex 1708.07936 lines 594
+(γ = m_λ/m exact), 642–661 (A_(γ) definition), 520 (multiplicity bound).
+
+### Reduction inventory (engine output; UNVALIDATED, same evidence class
+### as ABOVE125)
+
+| family | (m,n) | deg | cases | ψ-normal (rhs x^k) | pre-ψ (rhs x^0) |
+|---|---|---|---|---|---|
+| 12_36mn23d144_r0 | (2,3) | 144 | 1 | 1 (x) | 0 |
+| 12_36mn23d144_r1 | (2,3) | 144 | 4 | 3 (x, x², x²) | 1 |
+| 12_36mn23d144_r2 | (2,3) | 144 | 4 | 3 (x, x², x²) | 1 |
+| 12_36mn23d144_r3 | (2,3) | 144 | 3 | 2 (x, x²) | 1 |
+| 6_15mn27d147 | (2,7) | 147 | 2 | 2 (x, x) | 0 |
+| 10_40mn32d150_r0 | (3,2) | 150 | 8 | 5 (x² ×2, x³ ×3) | 3 |
+| 10_40mn32d150_r1 | (3,2) | 150 | 8 | 5 (x² ×2, x³ ×3) | 3 |
+| 12_33mn23d135 | (2,3) | 135 | 10 | 5 (x ×4, x²) | 5 |
+| 8_28mn34d144 | (3,4) | 144 | 4 | 4 (x² ×4) | 0 |
+
+Notes: 8_28mn34d144 carries the first surviving R9 ALIGNED-end branch
+(aligned-end (−1,0), design B3 — carried, not killed); 10_40's x³ cases
+come from residual-steepened polygons (j re-derived from the polygon, not
+the table ⌈b₀/a₀⌉ — sound, finalize is generic). All 44 cases sit in
+OUT-OF-SCOPE prefilter cells (no (2,2)-strip skips); farm pins the corner
+sets in systems/farm/<family>/manifest.json.
 

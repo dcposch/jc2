@@ -2,7 +2,7 @@
 
 Reviewer: Claude (adversarial pass, 2026-08-07). Status: COMPLETE.
 Scope: the two coupled unreviewed results (AF3 entry-M pin + L1 merged-
-pattern lemma; L1a leans on the AF3 pin). Ground truth: papers/
+pattern lemma; L1a leans on the AF3 pin). Ground truth: refs/
 sigray_full.pdf re-read on-page this review (pp. 17-19, 23-34, 38-58 —
 every load-bearing formula re-read from the page images, independently of
 the docs). Engines re-run: sheet6_campaign.py gate (PASS), hiii_compose.py

@@ -3,7 +3,7 @@
 Reviewer: Claude (adversarial pass, 2026-08-07). Status: COMPLETE.
 Scope: the two unreviewed endgame results (λ_root refutation + template
 lift) and the GO/NO-GO gate on the proposed decisive experiment R1.
-Ground truth: papers/sigray_full.pdf re-read on-page this review
+Ground truth: refs/sigray_full.pdf re-read on-page this review
 (pp. 10-18, 19-20, 23-28, 35-39, 42-43, 48-52). Engines re-run:
 lroot_ledger.py (asserts pass), template_lift.py (46 checks, 0 FAIL),
 sheet6_campaign.py gate (PASS). Independent sympy/Fraction verifiers

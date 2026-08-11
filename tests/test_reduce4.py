@@ -229,6 +229,56 @@ def test_above125_unvalidated():
           "(7,35) farm-preview RHS x^3 confirmed")
 
 
+# ---- Stuck-family closure (2026-08-11): the deg<=150 stuck set -----------
+
+STUCK150 = {
+    # name: (ncases, sorted rhs exponents).  rhs 0 = pre-psi direct emission
+    # ([P,Q] = const Jacobian-pair system); full corner sets are pinned in
+    # systems/farm/<name>/manifest.json (emission inventory).
+    "12_36mn23d144_r0": (1, (1,)),
+    "12_36mn23d144_r1": (4, (0, 1, 2, 2)),
+    "12_36mn23d144_r2": (4, (0, 1, 2, 2)),
+    "12_36mn23d144_r3": (3, (0, 1, 2)),
+    "6_15mn27d147":     (2, (1, 1)),
+    "10_40mn32d150_r0": (8, (0, 0, 0, 2, 2, 3, 3, 3)),
+    "10_40mn32d150_r1": (8, (0, 0, 0, 2, 2, 3, 3, 3)),
+    "12_33mn23d135":    (10, (0, 0, 0, 0, 0, 1, 1, 1, 1, 2)),
+    "8_28mn34d144":     (4, (2, 2, 2, 2)),
+}
+
+
+def test_stuck150_closure():
+    """The seven previously-stuck deg<=150 families (+ the two multi-root
+    rows 12_33mn23d135 / 8_28mn34d144) now reduce: multi-root chain-edge cut
+    (GGV5 Def 2.6 + Prop `multiplicidad`(4)) + no-progress cut guard +
+    pre-psi direct-emission fallback."""
+    from farm import catalog
+    rows = {r.name: r for r in catalog(150)}
+    # flagship pins: full corner sets of the two clean multi-root reductions
+    r = reduce_family(rows["12_36mn23d144_r0"].cd, PLLC)
+    assert emitted_set(r) == {
+        (corners([(0, 0), (1, 1), (6, 16), (6, 24), (0, 24)]),
+         corners([(0, 0), (1, 0), (9, 24), (9, 36), (0, 36)]), 1)}
+    r = reduce_family(rows["6_15mn27d147"].cd, PLLC)
+    assert emitted_set(r) == {
+        (corners([(0, 0), (1, 1), (6, 8), (6, 12)]),
+         corners([(0, 0), (1, 0), (21, 28), (21, 42)]), 1),
+        (corners([(0, 0), (1, 1), (6, 8), (6, 12), (0, 6)]),
+         corners([(0, 0), (1, 0), (21, 28), (21, 42), (0, 21)]), 1)}
+    for name, (nc, rhss) in STUCK150.items():
+        r = reduce_family(rows[name].cd, PLLC)
+        assert r.status == "reduced", (name, r.status)
+        got = (len(r.cases), tuple(sorted(c.rhs_exp for c in r.cases)))
+        assert got == (nc, rhss), (name, got)
+        for c in r.cases:
+            assert (0, 0) in c.NP and (0, 0) in c.NQ, name
+            if c.rhs_exp == 0:      # pre-psi: polynomial polygons mandatory
+                assert all(x >= 0 and y >= 0
+                           for x, y in list(c.NP) + list(c.NQ)), name
+    print("Stuck-family closure OK: 9 previously-stuck families reduce, "
+          "pins hold (2 flagship corner sets + counts/rhs)")
+
+
 if __name__ == "__main__":
     test_algorithm1()
     test_prop312_filter()
@@ -239,6 +289,7 @@ if __name__ == "__main__":
     test_discard_8_32()
     test_invariants()
     test_above125_unvalidated()
+    test_stuck150_closure()
     print("ALL REDUCE4 TESTS PASS")
 
 

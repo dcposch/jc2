@@ -266,7 +266,10 @@ def lower_boundary(stR, dbound, laurent, log, tag):
             out.append([(c2, d2)] + rest)
     dray = outdir(stR)
     if dir_lt(dray, dbound):
-        # face straight to (0,0) along the ray (v=0)
+        # face straight to (0,0) along the ray (v=0).  NOTE: pre-Laurent this
+        # world is killable by R6 (vdE 10.2.6, no (d,0) support d>=1), but the
+        # kill is NOT applied: it would retract cases already banked/emitted
+        # (12_30mn32d126) -- kept as a sound over-emission instead.
         out.append([(0, 0)])
     if not out:
         log.append(f"{tag}: no boundary continuation below {stR} "
@@ -483,10 +486,40 @@ def tail_resolve(V, incoming, m, n, log, depth=0):
 
 # --------------------------------------- R10: finalization psi_j
 
-def finalize(state, mn, residual_ends, cdname):
+def _prepsi(polyM, polyN, mn, lines, fallback, cdname, bad):
+    """Pre-psi direct emission (fallback when the psi_j precondition fails):
+    the state is the image of the hypothetical pair under L^(1)-automorphisms
+    only (phi_1, e_K, T-const), so [P,Q] is still a CONSTANT, scaled to 1:
+    rhs = x^0.  Polynomial states emit as-is; Laurent-mixed states fall back
+    to the branch's pre-transform polynomial state (all cuts and R9
+    conclusions refused -- a sound under-reduction)."""
+    m, n = mn
+    if all(i >= 0 for i, _ in list(polyM) + list(polyN)):
+        lines.append(f"R10-fallback: psi_j precondition fails (support point"
+                     f"(s) {sorted(bad)} on the positive x-axis) but the "
+                     "state is polynomial: emitted PRE-psi as a direct "
+                     "Jacobian-pair system, [P,Q] in K^x scaled to 1 "
+                     "(rhs x^0); all applied T-ops were bracket-constant")
+        return ((polyM, polyN) if m < n else (polyN, polyM)) + (0, lines)
+    if fallback is not None:
+        assert all(x >= 0 and y >= 0 for x, y in fallback), fallback
+        pM = hull([(m * x, m * y) for x, y in fallback])
+        pN = hull([(n * x, n * y) for x, y in fallback])
+        lines.append("R10-fallback: psi_j precondition fails and the leaf is "
+                     "Laurent-mixed: emitted the branch's PRE-TRANSFORM "
+                     "polynomial state (e_K cuts / R9 conclusions refused -- "
+                     "sound under-reduction), [P,Q] in K^x scaled to 1 "
+                     "(rhs x^0)")
+        return ((pM, pN) if m < n else (pN, pM)) + (0, lines)
+    raise Stuck(f"{cdname}: psi_j precondition fails: support point "
+                f"({bad[0][0]},0) with i>0 in {polyM} / {polyN}")
+
+
+def finalize(state, mn, residual_ends, cdname, fallback=None):
     """Apply psi_j: (i,j') -> (j*j'-i, j'), j = ceil(max i/j'), to the P,Q
     polygons; returns (NP, NQ, j-2, log-lines).  P := the min(m,n) multiple
-    (GGV22 emits deg P < deg Q)."""
+    (GGV22 emits deg P < deg Q).  If the psi_j precondition fails, falls back
+    to the pre-psi direct emission (_prepsi) instead of raising."""
     m, n = mn
     lines = []
     if residual_ends is None:
@@ -506,12 +539,11 @@ def finalize(state, mn, residual_ends, cdname):
     else:
         polyM = hull([(m * x, m * y) for x, y in kept])
         polyN = hull([(n * x, n * y) for x, y in kept])
+    bad = [(i, jy) for i, jy in list(polyM) + list(polyN) if jy == 0 and i > 0]
+    if bad:
+        return _prepsi(polyM, polyN, mn, lines, fallback, cdname, bad)
     js = [(-(-i // jy)) for i, jy in list(polyM) + list(polyN) if jy > 0]
     j = max(js)
-    for i, jy in list(polyM) + list(polyN):
-        if jy == 0 and i > 0:
-            raise Stuck(f"{cdname}: psi_j precondition fails: support point "
-                        f"({i},0) with i>0 in {polyM} / {polyN}")
     psi = lambda p: (j * p[1] - p[0], p[1])
     NP_M = hull([psi(p) for p in polyM])
     NP_N = hull([psi(p) for p in polyN])
@@ -650,18 +682,19 @@ def _reduce(cd, log):
             allowed = set(axis)
             if not _axis_ok(state.corners, allowed, blog, tag):
                 continue
+            fb = state.corners             # polynomial pre-transform snapshot
             for s2, ax2 in _stage_a(cd, state, q0, enR, stR, fdir, allowed,
                                     blog, 0, log):
                 if ce is not None:
                     s3, resid = _cut_chain(cd, ce, s2, list(s2.log))
-                    leaves.append((s3, resid))
+                    leaves.append((s3, resid, fb))
                 else:
-                    leaves.append((s2, None))
+                    leaves.append((s2, None, fb))
     if not leaves:
         raise Stuck("all branches were killed before emission")
     # ---- R9 + finalize + merge
     emitted = {}
-    for state, resid in leaves:
+    for state, resid, fb in leaves:
         llog = list(state.log)
         outcomes = []
         if resid is not None:
@@ -681,7 +714,10 @@ def _reduce(cd, log):
             if extra:
                 st2 = mkstate(list(state.corners) + [e for e in extra],
                               state.prov, state.laurent, flog, state.label)
-            NP, NQ, rhs, lines = finalize(st2, cd.mn, ends, cd.name)
+            NP, NQ, rhs, lines = finalize(st2, cd.mn, ends, cd.name,
+                                          fallback=fb)
+            if any(l.startswith("R10-fallback") for l in lines):
+                lbl = (lbl + "/" if lbl else "") + "prepsi"
             flog += lines
             key = (NP, NQ, rhs)
             if key not in emitted:
@@ -714,24 +750,73 @@ def _chain_edge_data(cd, log):
     K = p[0]
     zdeg = vec[1]
     if cd.final.b != zdeg:
-        log.append(f"chain edge {stE}->{enE}: final corner {tuple(cd.final)} "
-                   f"has gamma={cd.final.b} != zdeg={zdeg}: multi-root chain "
-                   "edge, not supported")
-        raise Stuck("multi-root chain edge")
+        # multi-root chain edge: the final corner A_(gamma) is generated by a
+        # root alpha of multiplicity EXACTLY gamma at the 1/m level (GGV5
+        # Definition 2.6 + Prop `multiplicidad`(4): gamma = m_lambda/m); the
+        # remaining z-degree zdeg-gamma sits in other roots, all nonzero and
+        # distinct from alpha (st(P) = m*A0' exact => no zero root).  The
+        # e_K(alpha) cut is support-exact regardless of how zdeg-gamma splits.
+        gamma = cd.final.b
+        if not (stE[1] < gamma < zdeg) or stE[1] < 1:
+            log.append(f"chain edge {stE}->{enE}: gamma={gamma} zdeg={zdeg} "
+                       f"st={stE}: shape outside the supported multi-root "
+                       "form, not cuttable")
+            raise Stuck("multi-root chain edge")
+        log.append(f"chain edge {stE}->{enE}: MULTI-ROOT form x^c y^d "
+                   f"(z-alpha)^{gamma} * prod(z-beta_i)^(t_i), z = x^{K} y, "
+                   f"sum t_i = {zdeg - gamma} (final corner {tuple(cd.final)} "
+                   f"generated at gamma={gamma} < zdeg={zdeg}, GGV5 Def 2.6 / "
+                   "Prop `multiplicidad`(4)); alpha and all beta_i != 0 since "
+                   "st(P) = m*A0' exactly; support after e_K(alpha) is "
+                   "partition-independent")
+        return dict(stE=stE, enE=enE, K=K, zdeg=zdeg, gamma=gamma)
     log.append(f"chain edge {stE}->{enE}: single root of multiplicity {zdeg} "
                f"(final corner {tuple(cd.final)} generated at full gamma, "
                "GGV5 S2); form x^c y^d (z-alpha)^zdeg, z = x^K y, "
                f"K={K}; alpha != 0 since st(P) = m*A0' exactly")
-    return dict(stE=stE, enE=enE, K=K, zdeg=zdeg)
+    return dict(stE=stE, enE=enE, K=K, zdeg=zdeg, gamma=zdeg)
 
 def _cut_chain(cd, ce, state, blog):
     "stage B: cut the last chain edge; returns (state, residual or None)"
     stE, enE, K, zdeg = ce["stE"], ce["enE"], ce["K"], ce["zdeg"]
+    gamma = ce["gamma"]
     fs = [f for f in faces(state.corners)
           if {f.st, f.en} == {stE, enE}]
     if not fs:
         raise Stuck(f"chain edge {stE}->{enE} is not a face of "
                     f"{state.corners}")
+    if gamma < zdeg:
+        # multi-root cut: e_K(alpha) rewrites the edge form exactly to
+        # x^c (y+alpha x^-K)^d z^gamma prod(z-beta_i')^(t_i), beta_i' != 0:
+        # level support = [V, enE] with the exact bottom vertex
+        # V = stE + (gamma-d)(K,1) (extreme coefficient alpha^d*prod(-beta_i')
+        # cannot vanish); below V the boundary is unknown -> R9 residual.
+        d = stE[1]
+        V = (stE[0] + (gamma - d) * K, stE[1] + (gamma - d))
+        pts, prov = [V, enE], set(state.prov)
+        seg = prim((enE[0] - stE[0], enE[1] - stE[1]))
+        for c in state.corners:                    # off-face corners: naive e_K
+            w = (c[0] - stE[0], c[1] - stE[1])
+            if cross(seg, w) == 0 and \
+               0 <= vdir(seg, w) <= vdir(seg, (enE[0]-stE[0], enE[1]-stE[1])):
+                continue                           # consumed by the rewrite
+            pts.append(c)
+            if c[1] > 0:
+                t = (c[0] - K * c[1], 0)
+                if t[0] <= 0:
+                    pts.append(t)
+                    if t[0] < 0:
+                        prov.add(t)                # provisional Laurent tail
+        blog.append(f"T-shift e_{K}(alpha) cuts the MULTI-ROOT chain edge "
+                    f"{stE}->{enE}: (z-alpha)^{gamma} -> z^{gamma}, remaining "
+                    f"roots (z-beta_i')^(t_i) (sum {zdeg - gamma}) keep the "
+                    f"shortened face; y^{d} prefactor spans the level down to "
+                    f"the exact bottom vertex {V}")
+        st2 = mkstate(pts, prov, True, blog, state.label)
+        resid = (V, outdir((V[0] - enE[0], V[1] - enE[1])))
+        blog.append(f"residual vertex {V} with unknown following edge "
+                    f"(incoming direction {resid[1]}) -- R9 will run")
+        return st2, resid
     pts, prov, contE, collapsed = apply_cut(state, stE, enE, K, 1,
                                             (0, (zdeg,), zdeg), "alpha")
     blog.append(f"T-shift e_{K}(alpha) cuts the chain edge {stE}->{enE} "
@@ -767,6 +852,18 @@ def _stage_a(cd, state, q, enR, stR, fdir, allowed_axis, blog, depth,
     out = []
     for z0, parts in shapes:
         t1 = max(parts)
+        if len(parts) == 1 and q * z0 + sE[1] >= fE[1] - sE[1]:
+            # design S6 termination invariant: an e_K cut must strictly
+            # reduce the support; here the y^(d) prefactor of the face start
+            # re-spans the whole face level, so the "cut" shrinks nothing and
+            # only spawns Laurent tails.  Keep the face UNCUT instead
+            # (sound under-reduction; same refusal pattern as the chain-edge
+            # interference guard).
+            blog.append(f"{tag}: shape z^{z0}*{parts}: e_{K} cut makes no "
+                        f"support progress (prefactor y^{sE[1]} re-spans the "
+                        "face); face kept UNCUT -- partial reduction")
+            out.append((state, allowed_axis))
+            continue
         pts, prov, contE, collapsed = apply_cut(state, sE, fE, K, q,
                                                 (z0, parts, t1), "lam")
         blog2 = list(blog)

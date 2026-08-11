@@ -5,7 +5,7 @@ generalization — for EVERY td >= 3, decide which single-pole leaf-table
 entries are excluded by the promoted kill set (entry-M pin SHEET6-AF3, AF2
 pricing SHEET6-AF2, E5/N1 SHEET6-III, psi-budget H3q SHEET6-H3), derive the
 general gcd/budget pattern, and state the theorem actually provable.
-Ground truth read on-page: papers/sigray_full.pdf pp. 23-28, 45-47 (printed
+Ground truth read on-page: refs/sigray_full.pdf pp. 23-28, 45-47 (printed
 page = pdf page). Engine: cases/sheet6_campaign.py new additive `tduniform`
 stage (existing stages untouched; gate re-run PASS).
 

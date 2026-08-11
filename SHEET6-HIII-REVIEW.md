@@ -3,7 +3,7 @@
 Reviewer: Claude (adversarial pass, 2026-08-07). Status: COMPLETE.
 Scope: two parallel unreviewed results on the sheet-6 campaign; neither saw
 the other. Tasks: (A) refute each; (B) compose the kill sets and produce the
-definitive residual table. Ground truth: papers/sigray_full.pdf read on-page
+definitive residual table. Ground truth: refs/sigray_full.pdf read on-page
 (pp. 8-12, 16-19, 27-32, 39-45, 48-60). Cross-check engine:
 cases/hiii_compose.py (new, additive; both existing engines re-run).
 

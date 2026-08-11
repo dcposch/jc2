@@ -4,7 +4,7 @@ Reviewer: Claude (adversarial pass, 2026-08-10). Status: COMPLETE.
 Scope: SHEET6-TDUNIFORM.md + the `tduniform` stage of cases/sheet6_campaign.py
 — headline claim: single-pole exclusion at ENTRY for every PRIME td (Theorem
 TDU), plus the composite-residual negative (TDU-neg) and the td≤9 salvage
-corollary (TDU-c). Ground truth: papers/sigray_full.pdf re-read on-page this
+corollary (TDU-c). Ground truth: refs/sigray_full.pdf re-read on-page this
 review (pp. 9, 19, 23-31, 39, 44-51). Engines re-run: gate PASS, tdu gate
 PASS, full census td≤40, chain runs td ∈ {4,6,8,9,10,12,14,15,16} both via
 the committed CLI and via an independent harness (this review, in-session,

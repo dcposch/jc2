@@ -2,7 +2,7 @@
 """Coefficient-level check of Prop 8.1(iv) (reduced pattern ODE) at two-pole
 merge vertices and at the exhibit's suffix shapes (SHEET6-L1.md).
 
-Reduced ODE (papers/sigray_full.pdf p. 39-41, Prop 8.1(iv)):
+Reduced ODE (refs/sigray_full.pdf p. 39-41, Prop 8.1(iv)):
     delta * p * q' - (1-u) * p' * q = c * p,   c != 0.
 Divide by (1-u), set rho := delta/(1-u); by top-cancellation (Cor 6.1 / case
 (16)) rho = deg p / deg q. nu-equivariance: p = pt(t), q = eta^{e0} * w(t),

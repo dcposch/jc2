@@ -310,7 +310,7 @@ PHASE B COMPLETE (verdict: no k>=3 near-origin obstruction at d2=2).
 
 ## 3. Target 3 — Coverage of GGV admissible corner families
 ### 3.1 Family -> regime cell mapping
-Source: GGV5 = arXiv:1708.07936 §7 (/tmp/jcpapers/1708.07936.tex, lines
+Source: GGV5 = arXiv:1708.07936 §7 (/tmp/jcrefs/1708.07936.tex, lines
 1794-1875): all 34 admissible cases max(deg P,deg Q) <= 150 (13 from the §6
 (m,n)-families F1..F24 + 9 length-1 + 11 length-2 + 1 length-3 chains).
 Derived per row (pure corner arithmetic, SECTION4-AUTOMATION §1 rule):

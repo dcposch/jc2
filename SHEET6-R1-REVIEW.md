@@ -5,7 +5,7 @@ Scope: the SHEET6-R1.md sec 6 claim "`systems/r1/r1_gmband_core.ms`
 msolve GB = [1] (char 0, ~5 s) => minimal-tower genome UNSATISFIABLE at
 coefficient level, conditional on core-emission faithfulness". Ground
 truth: SHEET6-TEMPLATE.md 1a-1d, 2c (E3-E7); SHEET6-LT-REVIEW.md front
-7; papers/sigray_full.pdf Prop 4.2 pp. 19-20 re-read on-page. Engines:
+7; refs/sigray_full.pdf Prop 4.2 pp. 19-20 re-read on-page. Engines:
 msolve 0.10.1 (local), r1_experiment.py emission re-run from
 /tmp/r1_state.pkl.cap2 (byte-identical re-emission), independent
 float64 rebuild of the G_m band written for this review (own code, no

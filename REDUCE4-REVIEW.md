@@ -4,7 +4,7 @@ Date: 2026-07-24. Reviewer: adversarial pass (no commits).
 
 ## Front 1: Gates 2a/2b vs paper propositions (re-derived)
 - Tests: `python3 tests/test_reduce4.py` -> ALL PASS (9 test funcs).
-- Paper /tmp/jcpapers/2204.14178.tex sec.4 (lines 457-1398) re-read:
+- Paper /tmp/jcrefs/2204.14178.tex sec.4 (lines 457-1398) re-read:
   - Prop 4.1 (9,27): N(P)={(0,0),(1,1),(6,16),(6,18),(0,18)},
     N(Q)={(0,0),(1,0),(9,24),(9,27),(0,27)}, [P,Q]=x. Matches REG_9_27.
   - Prop 4.2 (9,24): 3 subcases, all match REG_9_24 constants verbatim.

@@ -5,7 +5,7 @@ CONFIRMED with p.53 subscript-slip corroboration; the residual book is
 SUPERSEDED by the composition, cases/hiii_compose.py).
 Mission: SHEET6-CAMPAIGN.md §6 item 3. Extract
 the case-III side conditions of Prop 9.3 (St 3.16/3.18 + the Puiseux jump
-structure they encode) from papers/sigray_full.pdf, translate them into
+structure they encode) from refs/sigray_full.pdf, translate them into
 Q-datum arithmetic, and run them as a filter (`tails3` stage) over the ~15
 case-III parametric s-tails left open by the td=6 bash. NOT in scope: H3 /
 IV-terminals (separate thread).

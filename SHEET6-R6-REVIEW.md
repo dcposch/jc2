@@ -3,7 +3,7 @@
 Reviewer: Claude (adversarial pass, 2026-08-09). Status: COMPLETE.
 Scope: SHEET6-R6.md + cases/r6_window.py layer2() — the claim "all 8
 deeper-tower window cases DEAD; R6 CLOSED; R1 decisive for the whole
-residue-A configuration". Ground truth: papers/sigray_full.pdf re-read
+residue-A configuration". Ground truth: refs/sigray_full.pdf re-read
 on-page this review (pp. 15-21, 31-39, 40-44). Engines re-run:
 r6_window.py (layer 1 + 2, output matches doc verbatim),
 sheet6_campaign.py gate (PASS). Independent verifier written for this

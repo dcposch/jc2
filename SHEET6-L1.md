@@ -6,7 +6,7 @@ L1, the fork-deciding lemma of the two-pole (3,3) td=6 program. Baseline
 state: SHEET6-2POLE.md as PROMOTED at 8f3364f (A2P fixes applied: derived
 IIb default, §2d M_pole pin; survivor book = residue A + 2 boundary
 classes). The mission brief pinned 284d847 (legacy 3+9 book); BOTH books
-are adjudicated below (§6). Ground truth: papers/sigray_full.pdf, read
+are adjudicated below (§6). Ground truth: refs/sigray_full.pdf, read
 on-page (printed page = pdf page). Engines: cases/twopole_check.py (new
 additive PHASE 4 `l1_stage`; phases 1-3 untouched, baseline reproduced)
 and cases/l1_ode_check.py (new: exact coefficient solver for Prop 8.1(iv)

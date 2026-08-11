@@ -5,7 +5,7 @@ SHEET6-A3L1-REVIEW.md final note / SHEET6-CAMPAIGN.md header "next kills":
 does the root vertex (0,y) necessarily carry λ_root ≥ 1 — one unit of the
 St 9.4 budget charged at the root beyond the ψ-certificate — killing the 4
 slack-0 classes and cutting the survivor book 8 → 4? Ground truth:
-papers/sigray_full.pdf read on-page (printed page = pdf page; §3 pp. 10-18,
+refs/sigray_full.pdf read on-page (printed page = pdf page; §3 pp. 10-18,
 §5 pp. 23-28, §7 pp. 35-39, §9 pp. 48-51). Engine: cases/lroot_ledger.py
 (NEW, additive, standalone; no existing engine or gate touched; campaign
 gate re-run PASS).

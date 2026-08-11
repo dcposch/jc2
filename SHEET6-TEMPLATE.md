@@ -5,7 +5,7 @@ Q-data + merge-local coefficients (SHEET6-2POLE.md §6a exhibit, L1c rigid
 solution) to an explicit candidate Puiseux/Newton-tree data set for the
 distinguished sheet-6 counterexample template, and the edge-by-edge
 coefficient consistency sweep (St 3.9 transport). Ground truth:
-papers/sigray_full.pdf read on-page. Engine: cases/template_lift.py (new,
+refs/sigray_full.pdf read on-page. Engine: cases/template_lift.py (new,
 additive; exact arithmetic over Q(sqrt 3) via Fraction pairs).
 
 VERDICT: **FORMAL-CANDIDATE — the lift EXISTS and is STRICTLY RIGIDER than

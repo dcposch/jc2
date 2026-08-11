@@ -2,7 +2,7 @@
 
 Reviewer: Claude (adversarial pass, 2026-08-07). Status: COMPLETE.
 Scope: the two unreviewed load-bearing results (AF2-IIb pricing + two-pole
-configuration). Ground truth: papers/sigray_full.pdf read on-page this
+configuration). Ground truth: refs/sigray_full.pdf read on-page this
 review (pp. 16-19, 24-35, 38-47, 48-60 — every formula quoted below
 re-read from the page images, independently of the docs under review).
 Engines re-run: sheet6_campaign.py gate (PASS), hiii_compose.py baseline
