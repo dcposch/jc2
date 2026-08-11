@@ -1221,8 +1221,8 @@ s = sqrt3, a_i = 3 +- s. Exact Q(sqrt3) arithmetic: the two terms are
 +s/3 and -s/3 -- the sum is IDENTICALLY ZERO. The G_m core's only
 surviving constraint on the intended chart is exactly the E5 quartic
 consistency identity, and the intended fourth-root data satisfies it
-identically. (Fraction-exact check in the session log; to be re-run as
-phase e5check.)
+identically. (Fraction-exact; reproducible via phase e5check, which
+also asserts the rank-1 proportionality and row40 == -81*E -- PASS.)
 
 ### 13.2 Emission, guard table, cover certificate
 
@@ -1283,8 +1283,8 @@ COMPOSITE VERDICT (under the 13.0 pre-registration + cover cert):
    W1, W2 BOTH zero or BOTH nonzero. The minimal-branch G_m terminal
    core is NOT killed at p. No EMPTY trigger; no inflation.
 2. DIAGNOSTIC (intended-chart) verdict: UU NONEMPTY at both primes
-   AND in char 0 (121-elt reduced GB over Q => V != 0 over Qbar;
-   with guard E + sec-10.2 guard E, V(full core) != 0 over Qbar).
+   AND in char 0 (121-elt reduced GB over Q => V NONEMPTY over Qbar;
+   with guard E + sec-10.2 guard E, V(full core) NONEMPTY over Qbar).
    The pre-registered decisive object (char-0 core emptiness, sec
    8/10) is DECIDED: NO KILL. Per sec-1: the formal candidate
    DEEPENS; R1's terminal G_m core imposes, on the intended chart,
@@ -1295,3 +1295,48 @@ COMPOSITE VERDICT (under the 13.0 pre-registration + cover cert):
    ultramem run are OBSOLETE: the verdict they sought is banked
    above at ~1 s/leaf. RETIRE the reduced-core monolith from the
    ultramem queue.
+
+### 13.4 Explicit intended-chart witness (strongest certificate)
+
+Phase witness (banked 01:58): at BOTH banked primes an EXPLICIT
+rational point of the FULL terminal core with W1, W2 != 0 was
+constructed and verified end-to-end on the EMITTED artifacts with the
+INDEPENDENT parser (r1_fullcore.parse_eval):
+- solve E for W1 with W2 = 1 (4th root exists at the om^0 A-embedding
+  at both primes; Tonelli twice), HW_i = sqrt(3/2) W_i, uWi = W_i^{-1},
+  free x's = 0, then back-substitute the 16 leaf-UU subs AND the 19
+  sec-10 subs;
+- p=105337: W1=32284; p=105673: W1=90918; in both cases ALL 56 eqs of
+  r1_reduced_core.ms AND ALL 105 eqs of r1_full_core.ms evaluate to 0.
+This upgrades the UU NONEMPTY from GB-certificate to explicit-point
+certificate on the intended chart, through both banked back-maps --
+simultaneously an end-to-end validation of the whole 10.x + 13.x
+elimination pipeline. The sec-10.6 mandated back-map spot-check (then
+vacuous: no solver points) is now DISCHARGED with these 2 points.
+
+### 13.5 Engine + state
+
+cases/r1_decompose.py (ADDITIVE; phases stats | build | emit | guards
+| cover | e5check | calibrate | psweep | witness). State:
+/tmp/r1dec/leaves.pkl (per-leaf rows + banked substitution chains +
+dropped lists). Repo changes: SHEET6-R1.md + the new engine only
+(systems/, runs/ are gitignored-regenerable; leaves re-emittable via
+build + emit from r1_reduced_core.ms). Prior emissions byte-untouched.
+
+### 13.6 Multi-prime confirmation + engine bug note
+
+Phase psweep: all 4 leaves re-emitted + solved at 6 FRESH primes with
+full radical points (good_primes walk: 109537, 165313, 177409, 188833,
+200257, 225961; ~1 s each). Verdict pattern IDENTICAL at all 6 (and at
+both banked primes -- 8 primes total, no exception):
+ZZ NONEMPTY / ZU EMPTY / UZ EMPTY / UU NONEMPTY.
+Under the 10.0 calibration table this is the strong-evidence tier for
+the char-0 readings in 13.3 (which are additionally PROVEN in char 0
+for ZZ -- exact witness -- and UU -- 121-elt GB over Q + the two
+explicit mod-p points of 13.4; ZU/UZ char-0 emptiness stays
+evidence-tier only). BUG NOTE (banked): r1_reduce.sweepw_primes is
+UNUSABLE -- its candidate pool is the ~1,170 values (2^15..2^17 on the
+84-grid), of which only ~1-2 admit full radical points, and None
+results are uncached => effectively infinite loop at n >= 2. Any
+future wfree sweeps must use the good_primes walk (r1_decompose.
+phase_psweep does).
