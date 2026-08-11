@@ -2421,3 +2421,104 @@ UU chart (84/84).
 |---|---|---|
 | r1_q2_l13 (146 vars, 130 kB) | **GB=[1] EMPTY**, 1 s | **GB=[1] EMPTY**, 1 s |
 | r1_q2_l13_ctlA_relaxed | NONEMPTY by EXPLICIT POINT (witness zero-extension, independent parser, 19/19 rows vanish) | (same certificate) |
+| r1_q2_l13_ctlB_satonly | **GB=[1] EMPTY**, 1 s | **GB=[1] EMPTY**, 1 s |
+
+ctlB reading (pre-registered semantics): sat-only EMPTY at both primes
+= s1F == 0 is FORCED on the whole lcut=13 stratum by the quotient rows
+alone (no tie needed) -- the 16.3/18.1 mechanism reaches the stratum.
+Note ideal(ctlB) c ideal(main), so ctlB EMPTY also re-derives the main
+kill a fortiori.  CORRECTION (resume audit): the ctlA relaxed object
+has 15 rows (19 minus E5 x2/E6/SAT), so the certificate is 15/15 rows
+vanishing, not 19/19; re-verified by a fresh independent-parser run
+(/tmp/r1q2/ctl_cert.py, both primes; bf_18/24/30 solved from their
+truncated defining rows -- all 0 on the stratum -- and s1F = 0, i.e.
+the zero-extension lies on the relaxed locus with the quotient scale
+OFF, matching ctlB's s1F == 0 forcing).
+| r1_q2_l13_ctlB_satonly | **GB=[1] EMPTY**, 1 s | **GB=[1] EMPTY**, 1 s |
+| r1_q2_l8 (175 vars, 1.1 MB) | TIMEOUT 1200 s / 14.5 GB | msolve crash (0-byte out; ledger line INVALID, annotated) |
+
+ctlB EMPTY at BOTH primes = **s1F == 0 is FORCED on the entire
+54-direction stratum variety** (quotient subset + chart alone, no tie
+rows): the 16.3/18.1 witness-family mechanism extends verbatim to
+every UU-chart point with free support in slots >= 13.  With the E5/E6
+tie + saturation, the whole stratum DIES -- the l13 EMPTY rows.  ctlA
+(relaxed) is NONEMPTY by EXPLICIT POINT at both primes (independent
+parser; the ctlA GB runs timed out / were killed -- annotated in the
+ledger); mechanism check on the EMITTED file: at the witness
+zero-extension exactly rows {E5 x2, SAT} fail, all 16 others vanish.
+
+SIZING TABLE COMPLETED (phase sz, banked /tmp/r1q2/sizing.pkl + log):
+lcut 26/19/13/8: rows 1,879 / 2,295 / 5,139 / 34,739 terms (9/12/22/94
+s); lcut 4: 960,688 terms (1,279 s; jets f 345,891 + g 1,142,214);
+lcut 1 (FULL locus): **SIZING ABORT -- block B alone exceeds the 2e7
+budget** (1,499 s in; the banked ~6e8 raw estimate confirmed in
+kind).  The 15.6 gate verdict: lcut <= 4 runs and the lcut = 1 build
+are BOX01/ULTRAMEM objects (compiled or higher-budget fold + >= 32 GB
+msolve headroom; the l8 local attempt cost 14.5 GB before timeout).
+State shipped: /tmp/r1q2/build_p*_l{13,12,8}.pkl + sizing.pkl; the
+engine rebuilds any stratum deterministically (phase build L).
+
+lcut = 8 tier record (resume leg; 67/84 free directions, 175 vars,
+1.10 MB, quotient rows 34,739 terms).  Build + anchors at BOTH primes:
+A-Q2-1, A-Q2-2, E1 slot-0, grading, two-path fold equality all PASS
+(/tmp/r1q2/l8.log).  ctlA_relaxed: NONEMPTY by EXPLICIT POINT at both
+primes (ctl_cert.py: witness zero-extension on the stratum, 15/15 rows
+vanish, s1F = 0, bf_18/24/30 = 0 forced by the truncated defining
+rows) + corroborated by an actual GB != [1] at p = 105337, 37 s.
+
+| l8 object | p=105337 | p=105673 |
+|---|---|---|
+| r1_q2_l8 (main, t12 re-run) | TIMEOUT 1200 s / 12.0 GB (t12; t4 first pass 14.4 GB) | (t12 run in flight) |
+| r1_q2_l8_ctlB_satonly | TIMEOUT 1200 s (t4) | (pending) |
+| r1_q2_l8_sub16 (rows n<=16 only; kill-sound subset) | (in flight) | (queued) |
+
+FRONTIER MEASUREMENT (l12 = stratum with uf24 + the slot-12
+directions added; emissions r1_q2_l12_p*.ms banked, anchors PASS):
+r1_q2_l12_p105337.ms TIMEOUT 1200 s / 6.6 GB (p105673 symmetric run +
+the box01-tier ledger lines append to runs/r1_q2_runs.log as they
+finish).  The local GB-resolution cliff sits EXACTLY between stratum
+13 (GB = [1] in 1 s at both primes) and stratum 12; l8 timed out at
+-t 4 AND at the -t 12 retry (12 GB).  Strata 12/8 emissions are
+banked and queued for box01 (>= 64 GB / long timebox); strata 4/1
+additionally need the higher-budget BUILD (sizing table above).
+
+### 19.4 The net G_m two-pole picture (supersedes 18.5)
+
+| branch | core level (saturated) | depth-84 tier | status |
+|---|---|---|---|
+| minimal (3,4) | survives (r1_minsat NONEMPTY; 13.1 identity) | witness family DEAD char 0 + 2p (18.1); UU-chart STRATUM slots>=13 (54/84 free dirs + W symbolic) DEAD at both primes, s1F==0 forced (ctlB) both primes; char-0 stratum object banked + cross-engine-verified (run: see ledger) | DEAD on every UU-chart locus so far reachable; residual = strata 12/8 (emitted, box01) and 4/1 (build-gated) |
+| (1,2) | **ALIVE at core** (19.3 retraction; r1_12sat_corr NONEMPTY char 0 + 2p) | not built (its own per-branch ladder; the k1=1 s1-tie is a series-tier row at pole level 4/42) | 18.2 kill RETRACTED; obligations = 15.3 list |
+| (2,3) | chain core queued (sec 11) | -- | untouched; 18.3-style saturation advisory binds |
+| (2,5) | core NONEMPTY (sec 11) | ext decider on box01 | advisory 18.3 unchanged |
+
+The residue-A two-pole exclusion now rests on: the minimal branch's
+deep-strata Q2 residue (box01 queue) + its R2-R5/J ladder on anything
+that survives; the REOPENED (1,2) branch's own series ladder; and the
+two chain deciders.  Standing rules in force: sec-17 saturation, the
+19.2 ledger-hygiene rule (0-byte .out != NONEMPTY), and the Q2E5
+lesson -- St 3.9(ii) transports require the 3.9(i) count equality,
+checked per member per edge.
+
+CHAR-0 LEG (phase x; the 15.6 char-0-upgrade path, brought local):
+r1_q2_l13.ms EMITTED (24 eqs, 151 vars, 315 kB): the EXACT-ring twin
+of the stratum-13 object -- radicals as variables (every A-embedding
+at once), W symbolic on E, same defining rows/quotient subset/tie/
+saturation, W-Laurent cleared per row.  Its rows REDUCE TO THE BANKED
+MOD-P BUILDS EXACTLY at both primes (cross-engine regression, exact
+ring vs the independent mod-p fold -- the strongest anchor in the Q2
+net).  Its msolve verdict line appends to runs/r1_q2_runs.log
+(GB = [1] here would upgrade the stratum-13 kill to PROOF over Qbar,
+subsuming both p-screens and every A-embedding).
+
+**CHAR-0 VERDICT (landed in-session): r1_q2_l13.ms GB = [1] EMPTY,
+663 s / 6.8 GB (runs/r1_q2_l13.ms.out).**  Empty over Q => empty over
+Qbar, every A-embedding and 4th-root branch at once: the stratum-13
+kill is **PROOF-TIER** -- the minimal branch admits NO template-conform
+depth-84 extension anywhere on the UU chart with free dead-stretch
+support confined to slots >= 13 (54 of 84 directions open, W-pair
+fully symbolic on E, 36-tail + ext + fresh-tail budget free).  This
+subsumes 18.1's witness-family kill (free x = 0 c= the stratum) and
+upgrades it from the free-x = 0 section to a 54-dimensional-family
+statement.  Residual for the branch at this tier: free support
+touching slots < 13 -- strata 12/8 banked for box01, 4/1 build-gated
+(19.2 sizing).

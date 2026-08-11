@@ -25,7 +25,12 @@ Verdicts:
 - §18 minor flag (ctlA/ctlB inputs not banked): FIXED (inputs now in
   systems/r1/, re-run verdict-identical).
 - Q2 design (§19): sizing gate honored mechanically; row-subset
-  soundness argument verified; see §3 below.
+  soundness argument verified; see §3 below.  OUTCOME: stratum-13
+  (54/84 free directions + W symbolic) killed at both primes AND in
+  CHAR 0 (GB = [1] over Q, 663 s -- PROOF-tier over Qbar, all
+  A-embeddings; cross-engine regression exact vs both mod-p builds);
+  strata 12/8 emissions banked, local msolve TIMEOUT (box01 queue);
+  strata 4/1 build-gated by the 15.6 budget (measured).
 
 ## 1. The E5-12 port: re-derivation from the printed mechanism
 
@@ -186,6 +191,15 @@ systems/r1/r1_q0_fam_ctlA_relaxed.ms / r1_q0_fam_ctlB_satonly.ms.
   formulation-positive, discharging the front-5 weakness for Q2.
 
 Results of the Q2 runs: SHEET6-R1.md §19 (engine cases/r1_q2_screen.py).
+Gate outcome, recorded: the full-locus (LCUT = 1) build ABORTS the 2e7
+budget inside the B block alone (1,499 s in) -- the banked ~6e8 raw
+estimate confirmed in kind; strata <= 4 are box01/ultramem objects.
+The local kill frontier and its mechanism (s1F == 0 forced, ctlB EMPTY
+both primes at stratum 13) are SHEET6-R1.md 19.2's content.  Ledger
+hygiene: msolve-crash/kill lines annotated INVALID in
+runs/r1_q2_runs.log (a 0-byte .out parses as "NONEMPTY" -- flagged as
+a runner weakness for the next engine pass; every NONEMPTY line must
+be checked against its .out size before being read as a verdict).
 
 Artifacts of this review: /tmp/q2e5_review/ (e5_12_review.py + output,
 fam_sub_*.ms subset probes); repo: this file, SHEET6-R1.md §19,

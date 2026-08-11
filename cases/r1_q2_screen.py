@@ -865,9 +865,8 @@ def phase_exact(lcut, timeout=3600):
     p8 = [R1.K1]
     for _ in range(8):
         p8 = pm(p8, p21)
+    from fractions import Fraction as Fr
     cn = {7 * m + 2: c for m, c in enumerate(p8) if not c.iszero()}
-    SM3 = R1.mk(Fr(7 ** 12, 2 ** 6)) ** 3 if hasattr(R1.K3, "__pow__") \
-        else None
     SM = R1.mk(Fr(7 ** 12, 2 ** 6))
     SM3 = SM * SM * SM
     eqs = list(R1.RAD_EQS) + ["uW1*W1-1", "uW2*W2-1",
