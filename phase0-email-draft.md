@@ -1,26 +1,45 @@
-# Draft: Email to C. Valqui / J.A. & J.J. Guccione / R. Horruitiner
+# GGV email — FINAL as sent (2026-08-11)
 
-Subject: Draft note on the (8,28) strip subcase of arXiv:2204.14178
+To: cvalqui@pucp.edu.pe, vander@dm.uba.ar, jjgucci@dm.uba.ar
+Subject: Settling the (8,28) strip subcase of Proposition 4.3 (arXiv:2204.14178)
+Attachment: paper1/main.pdf
+
+## Body
 
 Dear Professors Valqui and Guccione,
 
-I attach a short draft on the strip subcase of Proposition 4.3 in your 2022
-paper (arXiv:2204.14178v1): the reduced system for A0 = (8,28) with
-[P,Q] = x^2 and parallel Newton-polygon strips. The note isolates a
-vertex-gap obstruction that empties the generic chart by a short exact
-substitution, and records how far the same mechanism goes for other
-(k,d2). The full computational discard of the remaining strata is in a
-companion repository, conditional on Proposition 4.3.
+Over the past month I have been working on the degree pair left open by
+arXiv:2204.14178v1. The attached note settles the strip subcase of
+Proposition 4.3 (A0 = (8,28), [P,Q] = x^2): a vertex-gap obstruction
+empties the generic chart by proof, and the remaining strata return the
+unit ideal in exact computation over Q and at several large primes
+(archived with the note). Conditional on Proposition 4.3, subcase (2) is
+fully discarded. Subcase (1) is not claimed; Helali and Suzuki have
+independent exclusions of it, so together the pair below 125 appears
+closed.
 
-I would be grateful for any comments, corrections, or pointers to work I
-have missed. Happy to adjust credit or coauthorship if that is useful.
+The note was written in collaboration with an AI system, credited as
+coauthor; all claims are machine-verified in exact arithmetic, and the
+two central identities are checked in Lean.
 
-Best regards,
-Dan Clemens
-dc@dcpos.ch
+Two requests, if you have time:
 
----
-Contact leads: C. Valqui, PUCP; J.A. & J.J. Guccione, Universidad de Buenos
-Aires / CONICET; R. Horruitiner, PUCP (2018 MSc thesis).
+1. Does the polygon and vertex data used for subcase (2) match
+   Proposition 4.3 as you intended?
+2. Any corrections, and your preference for how the dependence on
+   Proposition 4.3 is cited.
 
-Attachment: paper1/main.pdf
+Artifact (code, certificates, logs): doi.org/10.5281/zenodo.21894922
+
+Best,
+Dan Clemens Posch
+
+## Notes (not in the email)
+
+- Salutation covers both Guccinones jointly; body approved by DC 2026-08-11.
+- Endorsement ask deliberately deferred to a follow-up after a positive
+  reaction (arXiv new-user flow).
+- Bound corollary stated as "appears closed" — visible, not claimed.
+- No mention of sheet-6/DC2/farm per the phase-0 rule; the artifact link
+  and request 2 leave the door open.
+- Horruitiner not on To: per DC's send list; can be added on any reply.
