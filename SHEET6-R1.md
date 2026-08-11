@@ -2083,3 +2083,19 @@ State /tmp/r1q0/gate_p*.pkl (rows, pattern, symbolic census, band
 rows s = 30..54 in symbolic form for future reuse).  Regression gate
 44/44 prior emissions byte-identical (sha256, baseline
 /tmp/q0_regression_baseline.sha).
+
+## 17. RETRACTION of the §16 survival verdict (SHEET6-R1-LADDER-REVIEW.md)
+
+The §16 "survives depth-84 / F_s ladder exhausted" reading is REFUTED
+(review front 2): the witness has s1F = 0, but its own w != 0 data pins
+a nonzero H_M via the (relaxation-dropped) E5/E6 tie, forcing s1F != 0
+on any template-conform extension. Adjoining s1F*t - 1 (Rabinowitsch)
+gives GB = [1] at BOTH primes: correctly read, Q0 KILLS the
+intended-locus witness family at depth 84 mod p (strong-evidence tier).
+The same s1 = 0 artifact affects the (1,2) witness (§15). All ladder
+computations were CONFIRMED clean (fronts 1,3,4,6); the error was
+interpretive — the ZZ-leaf lesson repeating one level up, as the review
+was designed to catch. Standing rule: every verdict object must
+SATURATE all template-forced-nonzero scales (Rabinowitsch rows baked
+in) and carry the deferred tie rows; anchors must include a
+pattern-positive test (front 5 weakness).
