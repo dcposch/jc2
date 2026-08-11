@@ -2367,3 +2367,57 @@ slot shift 47->48) CAUGHT by A-Q2-1 (the front-5 upgrade discharged
 at formulation level).  Row-subset sufficiency probes banked
 (/tmp/q2e5_review/fam_sub_*.ms + .out): fam + rows n<=44 GB=[1],
 n<=16 NONEMPTY, n>170 NONEMPTY, all 54 GB=[1].
+
+### 19.3 RETRACTION of the 18.2 (1,2) core kill (SHEET6-R1-Q2E5.md
+### review, front: the E5-12 port)
+
+The 18.2 contingency fired: the k1 = 1 E5-quartic port is WRONG -- a
+LEVEL SLIP, mechanically pinned (review sec 1; /tmp/q2e5_review/
+e5_12_review.py, both primes).  The port applied the St 3.9(ii) lead
+transport to h1 across the merge edge with pattern mult 4, but 3.9(ii)
+presupposes the 3.9(i) count equality, which FAILS there (deg
+p_h1,P_i = 2 < 4; the pole pattern is (2,3)-branch-local); the
+d-arithmetic (St 3.9(iii), 5 steps at 1/42) lands the mult-4
+transported content at level 4/42 = 2 d_f@P -- it is s1*(f+)^2 pole
+content, the k1 = 1 legality ONE LEVEL BELOW the pole top 6/42 the
+port equated it to.  Equating content at different levels produced
+the spurious s1-row and the spurious kill.  R6 4.3 had this right all
+along: "NO exclusion exists in print; the condition is an R1-tier
+series constraint" (it constrains s1 against pole TAIL data -- a
+depth-tier row family for the (1,2) ladder, not a core row).  The
+count-EXACT transport at the (1,2) pole edge is the FIRST DEAD MEMBER
+h2 = h1 - s1 f^2 (P q pattern, deg 16, mult 2 = deg, lands 6/42
+EXACT): its row is the minimal-branch E5 row with H_M -> H12, and its
+E-bracket is the 13.1 identity == 0.  CORRECTED OBJECTS
+(cases/r1_12_sat.py phase corr; r1_12sat_corr.ms + _p*.ms):
+
+| run | verdict |
+|---|---|
+| r1_12sat_corr.ms = leaf12_UU + E5-12corr(H12) + H12*tH12-1 + s1*t12-1, CHAR 0 | GB != [1] NONEMPTY, 1 s |
+| r1_12sat_corr_p105337 / _p105673 | GB != [1] NONEMPTY, 1 s each |
+
+RESTATED (1,2) VERDICT: the branch SURVIVES its terminal core under
+saturation with the corrected tie (exact mirror of r1_minsat; s1
+occurs in NO core row -- its saturation is vacuous there, banked
+openly).  Its remaining obligations are the 15.3 list (own F_s
+band/quotient tier -- where the level-4/42 s1-condition lives --
+R2-R5, J-closure).  The banked r1_12sat*.ms kill files are RETRACTED
+as verdict objects (historical artifacts of the wrong rows).  The
+prior 18.2 "method validation" validated the pipeline only in the
+count-exact regime; the review culture's one-slip-per-layer streak
+continues: ZZ leaf (13.0), Q0 s1F (17), E5-12 port (here) -- all
+three are constraints attached to the WRONG OBJECT.
+
+### 19.2 Q2 verdicts (runs ledger runs/r1_q2_runs.log; engine
+### cases/r1_q2_screen.py; emissions systems/r1/r1_q2_*)
+
+Stratum coverage: lcut = 13 opens 54/84 free directions (all slots
+>= 13) + W-pair symbolic + 36-tail budget + ext-16 + fresh depth-84
+tails; lcut = 8 opens 67/84; lcut = 4 opens 77/84 (only bf_13/14/15,
+bg42_13/14/15, bg21_14 -- slots 1..3 -- zeroed); lcut = 1 = the FULL
+UU chart (84/84).
+
+| object (19 eqs each + controls) | p=105337 | p=105673 |
+|---|---|---|
+| r1_q2_l13 (146 vars, 130 kB) | **GB=[1] EMPTY**, 1 s | **GB=[1] EMPTY**, 1 s |
+| r1_q2_l13_ctlA_relaxed | NONEMPTY by EXPLICIT POINT (witness zero-extension, independent parser, 19/19 rows vanish) | (same certificate) |
