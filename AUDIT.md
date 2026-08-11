@@ -437,3 +437,143 @@ any new emitter gets the paren-sweep + a satisfiability smoke test
 (constant-term row check: a system whose rows all lack constant terms
 cannot be [1] — guard against impossible verdicts) before its verdicts
 are banked.
+
+## msolve mod-p coefficient-reduction hazard (2026-08-10)
+
+### The hazard, and its TRUE boundary (established by micro-test)
+
+SHEET6-R1-25LOCUS.md §4b discovered that feeding msolve 0.10.1 a p>0
+char line with char-0-style bignum coefficients silently corrupts the
+system (r1_25chain_core: spurious GB=[1] at three primes; the same
+system with coefficients pre-reduced into [0,p) gives the correct
+487-elt GB). Root cause isolated TODAY by micro-test (/tmp/redtest):
+**msolve's integer-token parser clamps at LONG_MAX = 2^63-1
+(9223372036854775807)**. Verified: `x+9223372036854775807*y` parses to
+exactly the LONG_MAX value mod p, and every larger token (2^64, a
+9.6e21 coefficient from the c1 leaves) parses to the SAME clamped
+value — silently, exit 0. Conversely, coefficients in [p, 2^63) are
+reduced correctly mod p at parse time: unreduced-vs-reduced twin files
+at magnitudes 65522 / 445440 / 1337656320 produce BYTE-IDENTICAL
+Gröbner bases. So the corruption condition is
+  some |coefficient| > 2^63-1  (NOT merely >= p),
+though the standing rule below mandates full reduction into [0,p)
+regardless, because relying on the parser's internal reduction is
+exactly the kind of trust this campaign does not extend.
+
+### 110-file inventory (full scan of systems/**/*.ms, 2026-08-10)
+
+Scan: line 2 read as char, every integer token of the body compared
+against it (chunked streaming reader; full list with per-file class
+and max coefficient BANKED at ops/modp_contam_inventory_20260810.txt).
+110 files have char p>0 and max coefficient >= p, splitting at the
+true hazard boundary into:
+
+- **49 CORRUPT-class (max coeff > 2^63-1 — msolve genuinely mangles):**
+  - 16 systems/c1_* leaf files at p65521 (max 9.6e21 / 1.6e21);
+  - systems/open_8_28_c1_v6.p65521.ms (1.6e21);
+  - 3 systems/ordtest_*.ms (1.6e21);
+  - systems/reg_7_21_partial.p65521.ms, reg_9_27_partial.p65521.ms;
+  - 27 systems/farm/* p65521 partial/core files (max up to 9.3e30),
+    ALL 27 dispatched in the live farm queues (14 box01 + 13 box02
+    per systems/farm/queue/*/queue.txt).
+- **61 word-sized (p <= max coeff < 2^63 — msolve parses correctly;
+  hygiene violations, not corruptions):** the open_8_28_c2 stratum
+  files (cCa2/cCa6/chartC/chartG/v6/v6s at p65521 and p1048573, max
+  1.34e9), the reg_9_24_c3 mod-p suite, reg_9_24_c1/c2_v6.p65521,
+  24 systems/conjE/*.p65521.ms (max 67200), 14 farm files
+  (4_12mn34d64, 9_24mn23d99, 7_42*_c1_partial).
+
+systems/r1/* mod-p emissions: ALL verified reduced (max coeff < p) —
+the R1 rebuild's emitters already reduce; every R1 mod-p verdict in
+SHEET6-R1.md §8.20/§10.3/§10.5/§11 used clean inputs. dc2, zheglov,
+sheet6-engine systems: zero hits (exact-arithmetic or char-0 lanes).
+
+### Cross-reference: does ANY accepted campaign verdict rest on these?
+
+**VERDICT: NO accepted campaign verdict rests on a corrupted input.
+Contaminated-verdict count = 0.** Per relied-upon verdict class:
+
+1. **(72,108) subcase (2) — the claim-6 inventory.** The char-0
+   certificates (chartG.q, cCa2.q, cCa6.q = the actual soundness
+   chain) are char-0 files: hazard inapplicable. The mod-p
+   corroboration lanes at p=65521/1048573 DID use unreduced files,
+   but all are word-sized (max 1.34e9 < 2^63): msolve parsed the
+   intended systems. Re-verified empirically today (see re-runs). The
+   third prime 2147483629 > 1.34e9: those emissions are reduced by
+   construction. chartG additionally rests on the symbolic -1 (claim
+   7), msolve-free. **Subcase-(2) verdicts stand.**
+2. **(72,108) subcase (1).** The 16 c1_* leaves + open_8_28_c1_v6
+   ARE corrupt-class — but produced NO accepted verdict: every c1
+   lane run died without verdict (notes.md 2026-08-06/07: Xeon all-Z
+   leaf FAILED at 940GB/30h; ultramem I-leaf retired; leaf program
+   CLOSED, novelty rule). Subcase (1) is settled via the EXTERNAL
+   Helali + Suzuki artifacts (CROSSCHECK.md): Helali = gmpy2/flint
+   exact char-0 number-field certificates, Suzuki = exact char-0 +
+   F_23 descent with recorded pivot residues, byte-identical
+   regeneration — NEITHER uses msolve or unreduced mod-p input.
+   **The c1 corruption never touched an accepted verdict.**
+3. **Regression/validation verdicts.** reg_9_24_c3 mod-p suite
+   (14/14 G0 sweep) used word-sized files — parsed correctly;
+   re-verified today. reg_7_21/reg_9_27 partials are corrupt-class
+   but no completion/verdict was ever banked for them (G0 stands at
+   3/5 via other lanes). ordtest_*: runs errored (runs/ordtest_*.err),
+   no verdicts.
+4. **Sheet-6 R1.** All r1 mod-p files reduced (see above); the §6
+   retraction is unrelated (paren hazard); §11's (2,5) NONEMPTY rests
+   on char-0 + reduced-coefficient mod-p GBs (25LOCUS §6). Clean.
+5. **conjE.** HOLD verdicts are char-0 Gröbner certificates; the
+   agreeing mod-p lane used word-sized files (max 67200) — parsed
+   correctly, spot re-verified today. Clean.
+6. **Farm (deg<=150 frontier).** The ONLY at-risk class with live
+   verdict exposure: 27 corrupt-class p65521 jobs are in the remote
+   queues, and the boxes bank smallest-first — the early banked
+   EMPTYs (box01 6 EMPTY, jc-b 9 outputs as of 2026-08-10, not yet
+   pulled locally) plausibly include corrupt-class jobs (e.g.
+   7_42*_c3_core.p65521 at 5.1MB, 8_28mn32d108_c1_core.p65521 at
+   15.7MB are among the smallest). No farm verdict is yet relied upon
+   in any headline claim (README farm checkbox is open), so the
+   contaminated-ACCEPTED-verdict count stays 0 — but **ACTION
+   REQUIRED at next fleet poll: quarantine every farm mod-p verdict
+   whose input is in the 27-file corrupt list; re-emit those inputs
+   reduced (ops/reduce_msp.py) and re-queue.** Sizing: 27 files,
+   4.3GB total (largest 593MB 12_36mn32d144_c1_partial); .q.ms
+   char-0 twins and the 14 word-sized farm files are unaffected.
+
+### Re-runs performed today (reduced re-emissions, local msolve -g 2)
+
+Reducer: ops/reduce_msp.py — reduces every non-exponent integer token
+into [0,p); built-in guard = independent-parser round-trip (exact
+bignum evaluation of every row at 2 random points mod p, original vs
+reduced, plus no-token->=p and row-count asserts). All 12 emissions
+guard-PASS (systems/redcheck/), outputs banked in runs/redcheck/:
+
+| system (reduced) | result | vs banked original |
+|---|---|---|
+| open_8_28_c2_chartG.p65521 | [1], <1s | header+verdict IDENTICAL |
+| open_8_28_c2_cCa2.p65521 | [1], 291s | matches banked [1] |
+| open_8_28_c2_cCa2.p1048573 | [1], 277s | matches fleet [1] |
+| reg_9_24_c3_v6/chartG/chartC .p65521 | [1], 0-3s each | IDENTICAL |
+| reg_9_24_c3_v6/chartG/chartC .p1048573 | [1], 0-3s each | matches |
+| conjE i3l2B12 / i3l3B6x9 .p65521 | [1], <1s | matches |
+| open_8_28_c2_cCa6.p65521 | TIMEOUT 1500s locally (fleet nucleus was ~7h/48T — expected); word-sized => parse-safe; reduced emission staged in systems/redcheck/ for optional big-box re-check |
+
+Every re-run reproduces its banked verdict exactly — direct empirical
+confirmation that the word-sized contaminated inputs were parsed as
+intended (the [0,p) reduction changes nothing), on top of the
+micro-test boundary proof.
+
+### Standing rule (added to the emitter checklist, alongside the
+parenthesis rule)
+
+**Every .ms emission with char p > 0 MUST have all coefficients
+reduced into [0,p) before it ships.** Checklist per new emitter/file:
+(1) expanded monomial sums only, no parens (2026-08-09 rule);
+(2) coefficients reduced into [0,p) — verifier: max integer token of
+the body < char line (the 110-file scan one-liner), reducer:
+ops/reduce_msp.py; (3) independent-parser round-trip at the target
+prime; (4) constant-term satisfiability smoke test. NEVER bank a
+mod-p verdict from a file violating (2) — even word-sized violations
+(currently parse-safe) are barred, since parser internals are not a
+trust anchor and the 2^63 clamp is silent (no warning, exit 0).
+Related: ops/msolve-issue-draft.md (paren hazard) should gain the
+2^63-clamp finding before filing upstream.
