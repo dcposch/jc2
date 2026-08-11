@@ -1128,3 +1128,170 @@ pairs, the F5 extension, and the s1-tie assembly simultaneously.
 |---|---|---|
 | ext_p105337 + ext_p105673 parallel | 3000 s | both KILLED silently ~13 min in (macOS memory sweep: a 13-GB unrelated redcheck msolve + 2 x 2 GB jobs; the redcheck job died too) — no verdict, relaunched solo |
 | ext_p105337 solo | 3000 s | **TIMEOUT** (RSS to ~16 GB, 100% CPU throughout; no partial output — msolve writes only at completion). The extended GB is FAR heavier than the core's 487-elt/55 s: the 95 deferred rows carry real load |
+
+## 13. Chart decomposition of the reduced core (2026-08-11)
+
+Engine: cases/r1_decompose.py (ADDITIVE; parses the guard-certified
+artifact systems/r1/r1_reduced_core.ms; prior emissions untouched).
+Motivation: the monolithic wfree p-screen died at 34 h / 1.5 TB ulimit
+with no verdict; 10.6 rec. 3 named the W case split as the next lever.
+
+### 13.0 Structural finding (banked BEFORE any leaf run) + design
+
+Occurrence census of the 49 rows / 32,600 terms: 5,496 terms W1-loaded,
+5,496 W2-loaded (exact 1<->2 symmetry), 0 mixed, 21,608 W-free; every
+row touches both W-sides; NO row has an x-free W-free term. Therefore
+the point (all x = 0, W1=HW1=W2=HW2=0, any etale point) kills EVERY
+term of EVERY row: it lies on V(reduced core) EXACTLY, in char 0 and
+every p (verified mod p=105337: 49/49 rows vanish). Consequence: the
+monolithic wfree p-screen could never return EMPTY -- its variety
+contains this point; 34 h + 1.5 TB were spent toward a foredoomed,
+undiagnostic NONEMPTY. Diagnosis: the emitted core is a RELAXATION --
+it carries only the tie 2HW_i^2 = 3W_i^2 and DROPS the E5 quartic
+w_i^4 = k_i alpha_i^2 (k_i != 0: stage-0 gate "E5 solvable: a_i-b != 0
+(w_i^4 pinned nonzero)", cases/r1_experiment.py:1032; the 7c w-branches
+were subsumed as embeddings, so no quartic row exists in the core).
+On the INTENDED locus w_i is a unit; W_i = 0 is relaxation-only.
+
+DESIGN (the (72,108) two_chart pattern, lib/chartelim.py, generalized
+to the pivot-blocking variables W1, W2): split V(reduced core) by the
+vanishing pattern of (W1, W2) into 4 leaves ZZ, ZU, UZ, UU (Z: W_i = 0
+substituted, and HW_i = 0 with it -- sound on the variety since
+HW_i^2 = (3/2)W_i^2 + ideal; U: Rabinowitsch uWi with uWi*W_i - 1
+adjoined). U-charts make every W-monomial coefficient invertible
+(HW_i^{-1} = (2/3) HW_i uWi^2 via the quadric), unlocking the
+quasi-linear pivots r1_reduce.py had to bar: census says W1-unit
+unlocks clean pivots for x11,13,15,55,57,59 (+ deg-2 vars x7,9,51,53),
+W2-unit the mirror set x24,26,28,68,70,72 (+ x20,22,64,66). Per-leaf:
+chart substitution, then the 10.1-sound elimination cascade with the
+enlarged unit class (pivot coeff = single W-monomial x certified etale
+unit; explicit inverse; banked back-map), then emission (expanded
+monomial sums; p-variants coefficient-reduced into [0,p)) + guards
+A-E + calibration (msolve -g 2 -t 4, 900 s).
+
+PRE-REGISTERED INTERPRETATION (fixed BEFORE any leaf solve): the four
+leaves partition V(core) by a boolean tautology, so (all leaves EMPTY)
+<=> core EMPTY, and any leaf point maps to a core point. ZZ is
+NONEMPTY a priori (witness above; it will be re-verified mechanically,
+not discovered by msolve). Z-pattern leaves are RELAXATION-DEGENERATE
+content (off the intended locus, where w_i are units). The DIAGNOSTIC
+p-screen verdict for the minimal branch is the UU leaf's verdict:
+UU EMPTY at p => the intended-locus p-screen is EMPTY at p (strong
+evidence tier per the 10.0 pre-registration, not a char-0 proof);
+UU NONEMPTY at p => the relaxed-with-units screen survives at p
+(evidence toward realizability; still short of the quartic tie).
+The composite relaxed-core verdict (NONEMPTY via ZZ) is reported
+alongside but is NOT branch-diagnostic. No inflation of any leaf
+verdict beyond this table.
+
+### 13.1 Build results (phase build; state /tmp/r1dec/leaves.pkl)
+
+Chart kill + per-leaf cascade (every pivot coefficient = single
+W-monomial x etale part, unit-certified by min-poly; explicit inverse
+uses HW_i^{-1} = (2/3)HW_i uWi^2; each pivot's coeff*inv == 1 asserted
+mechanically):
+| leaf | chart | rows | x-vars | terms | elim'd | dropped-as-zero |
+|---|---|---|---|---|---|---|
+| ZZ | W1=0, W2=0 | 49 | 50 | 21,608 | 0 (no W-pivots) | 0 |
+| ZU | W1=0, W2 unit | 42 | 36 | 12,877 | 7 (x20,22,24,26,28,65,67) | 0 |
+| UZ | W1 unit, W2=0 | 42 | 36 | 12,877 | 7 (x7,9,11,13,15,52,54) | 0 |
+| UU | both units | 5 | 0 | 20 | 16 | 28 |
+
+UU COLLAPSE: on the intended chart the cascade eliminates 16 x-vars
+(x7,9,11,13,15,20,22,24,26,28,50,52,54,63,65,67 -- banked invertible
+substitutions), drops 28 rows as identically zero, and frees the other
+38 x's (absent from every survivor; absorbed by the back-map). The 5
+surviving rows are the five quotient rows eq47-eq51 (WG-quot n =
+1,4,7,10,13, slot 20) and are PROPORTIONAL over Q (factors -8, 8, -4,
+1/3 of eq47's reduction; asserted exactly): residual rank 1. The single
+surviving constraint is
+
+  E:  (9 + 5 r3) A1 W1^4 + (9 - 5 r3) A2 W2^4 = 0.
+
+So V(UU leaf) = V(radical relations, uWi Wi = 1, E) x A^38, i.e. the
+ENTIRE minimal-branch G_m terminal core, restricted to the intended
+chart w1 w2 != 0, is equivalent to the one E5-shaped quartic relation E.
+
+E5 CONSISTENCY IDENTITY (exact, banked): on the intended locus the
+dropped quartic tie w_i^4 = k_i alpha_i^2 (sec-3.0, k_i =
+-(4/3)H_M(a_i-b)/(243 s0 S_M^3 (a1-a2)^4 a_i^3)) turns E into
+(9+5r3)k1 a1 + (9-5r3)k2 a2 = 0, in which H_M, S_M and the constant
+factors CANCEL, leaving (9+5s)(a1-4)/a1^2 + (9-5s)(a2-4)/a2^2 with
+s = sqrt3, a_i = 3 +- s. Exact Q(sqrt3) arithmetic: the two terms are
++s/3 and -s/3 -- the sum is IDENTICALLY ZERO. The G_m core's only
+surviving constraint on the intended chart is exactly the E5 quartic
+consistency identity, and the intended fourth-root data satisfies it
+identically. (Fraction-exact check in the session log; to be re-run as
+phase e5check.)
+
+### 13.2 Emission, guard table, cover certificate
+
+EMITTED (systems/r1/leaves/, all expanded monomial sums, no parens;
+wfree p-variants coefficient-reduced into [0,p), '+'-joined):
+leaf_{ZZ,ZU,UZ,UU}.ms (char 0, radicals as vars, chart rows included:
+Z-side W/HW eliminated, U-side quadric + uWi*Wi-1 Rabinowitsch) +
+leaf_*_wfree_p{105337,105673}.ms (etale gens specialized at the banked
+radical point; W-side + x vars free) + per-leaf .rows.txt provenance
+(elim bank with |s| and pivot rows; free-x list; row map). Sizes:
+ZZ 0.56/0.21 MB, ZU = UZ 0.42/0.14 MB, UU 0.003/0.0003 MB.
+
+GUARDS (phase guards; all PASS, log 01:33 2026-08-11):
+| guard | ZZ | ZU | UZ | UU |
+|---|---|---|---|---|
+| A paren sweep (3 files each) | PASS | PASS | PASS | PASS |
+| B round-trip 2 primes, char0 AND wfree vs internal eval | 49/49 | 42/42 | 42/42 | 5/5 (all nonzero at random chart point) |
+| C x=0 at generic chart point | 49/49 vanish: ORIGIN-SATISFIABLE (the 13.0 witness) | 35/42 | 35/42 | 0/5 (origin excluded) |
+| D residual non-degeneracy (6 pt/prime combos) | 0 id-zero | 0 | 0 | 0 |
+| E soundness/back-map, 2 primes x 2 pts | 49 surv == orig | 7 pivot rows vanish; 42 surv == orig | same | 16 pivot + 28 dropped rows vanish; 5 surv == orig |
+
+COVER CERTIFICATE. Claim: V(reduced core) = U_pat pi(V(leaf_pat)),
+pat over {Z,U}^2, pairwise disjoint by the W-vanishing pattern.
+Argument: (a) tautology -- any point has W1 = 0 or W1 != 0, and W2 = 0
+or W2 != 0, exactly one pattern (mechanical: 500 random (W1,W2)
+samples, exactly one pattern each, PASS); (b) Z-side: the quadric at
+W_i = 0 reads 2HW_i^2 = 0, so HW_i = 0 on the variety (char != 2) --
+the substitution W_i = HW_i = 0 loses no points; (c) U-side: uWi :=
+W_i^{-1} exists and is unique (field), so the point lifts uniquely to
+the Rabinowitsch chart; (d) within each chart, the elimination bank is
+an invertible substitution chain (every pivot coefficient = certified
+etale unit x W-monomial, invertible on the chart; coeff*inv == 1
+asserted per pivot at build), so V(chart system) = V(leaf) x A^{free}
+-- certified numerically by guard E in BOTH directions (pivot/dropped
+rows vanish under back-map; survivors match). Conversely any leaf
+point maps to a core point by forgetting uWi and restoring W_i = 0
+(Z-sides) + back-substituting the elim bank (guard E). Hence
+EMPTY on all leaves <=> core EMPTY, and any leaf witness lifts.
+
+### 13.3 Calibration ledger + composite verdict
+
+Runs: msolve 0.10.1, -g 2 -t 4, timeout 900 s, local (12-core/32 GB);
+runs/leaf_*.out, runs/r1_leaves_calibrate.log. EVERY leaf returned a
+VERDICT in ~1 s at <2 MB RSS -- nothing ships to ultramem:
+
+| leaf | wfree p=105337 | wfree p=105673 | wall | RSS |
+|---|---|---|---|---|
+| ZZ | GB != [1] NONEMPTY | GB != [1] NONEMPTY | 1 s | <2 MB |
+| ZU | GB = [1] EMPTY | GB = [1] EMPTY | 1 s | <1 MB |
+| UZ | GB = [1] EMPTY | GB = [1] EMPTY | 1 s | <1 MB |
+| UU | GB != [1] NONEMPTY (15-elt GB) | GB != [1] NONEMPTY | 1 s | <1 MB |
+| UU char 0 (leaf_UU.ms, radicals as vars) | GB != [1]: 121-elt reduced GB over Q | - | 1 s | <1 MB |
+
+COMPOSITE VERDICT (under the 13.0 pre-registration + cover cert):
+1. Relaxed-core p-screen at BOTH banked primes: NONEMPTY =
+   ZZ-stratum (explicit witness x=0, W=0; cover (iii)) UNION
+   UU-stratum (15-elt GB). ZU/UZ EMPTY: every core point mod p has
+   W1, W2 BOTH zero or BOTH nonzero. The minimal-branch G_m terminal
+   core is NOT killed at p. No EMPTY trigger; no inflation.
+2. DIAGNOSTIC (intended-chart) verdict: UU NONEMPTY at both primes
+   AND in char 0 (121-elt reduced GB over Q => V != 0 over Qbar;
+   with guard E + sec-10.2 guard E, V(full core) != 0 over Qbar).
+   The pre-registered decisive object (char-0 core emptiness, sec
+   8/10) is DECIDED: NO KILL. Per sec-1: the formal candidate
+   DEEPENS; R1's terminal G_m core imposes, on the intended chart,
+   EXACTLY the constraint E -- which the E5 fourth-root data
+   satisfies identically (13.1). Remaining obligations unchanged:
+   full-degree F_s band (farm, 8.5), R2-R5 ladder, J-closure.
+3. The 34 h/1.5 TB monolith run and the queued multi-day char-0
+   ultramem run are OBSOLETE: the verdict they sought is banked
+   above at ~1 s/leaf. RETIRE the reduced-core monolith from the
+   ultramem queue.

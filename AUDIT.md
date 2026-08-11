@@ -577,3 +577,5 @@ mod-p verdict from a file violating (2) — even word-sized violations
 trust anchor and the 2^63 clamp is silent (no warning, exit 0).
 Related: ops/msolve-issue-draft.md (paren hazard) should gain the
 2^63-clamp finding before filing upstream.
+## Ops checklist addendum (2026-08-11)
+On every box restart/reuse: crontab -l FIRST; remove any deadline/poweroff/lifecycle entries before launching work (two incidents: jc-b poweroff loop, ultramem jc_deadline kill).
