@@ -1575,3 +1575,326 @@ prior file touched; prior emissions byte-identical -- regression gate);
 state /tmp/r1mext (orbit checkpoints, fsjets.pkl, wf.pkl); runs/
 r1_minimal_ext_runs.log + .ms.out stubs.  Phases: orb <name> | fsjets
 | wf | emit | guards | run (chain script /tmp/r1mext/chain.sh).
+
+## 15. (1,2) sibling 4-leaf decomposition + depth-84 quotient-tier sizing (2026-08-11)
+
+### 15.0 Part-A plan + pre-registration (banked BEFORE any build/solve)
+
+Mission: apply the sec-13 chart decomposition to the (1,2) sibling core
+systems/r1/r1_12branch_core.ms (8.19: 105 eqs = 7 radical + 98 rows
+[B12-WG-band 37, B12-h2-tie 50, B12-h2-quot 11]; vars = 9 radicals +
+x0..x118 + s1 tie; 22.1 MB). Engine: cases/r1_12_decompose.py, ADDITIVE
+(imports r1_decompose/r1_reduce functions; minimal-core leaves stay
+byte-identical -- sha256 regression gate on systems/r1/leaves/ before
+vs after). s1 is carried internally as x119 (r1_reduce.parse_poly
+asserts x-names) and re-named s1 at emission.
+
+Design deltas vs sec 13 (mechanical): (i) input = the RAW (1,2) core
+(no sec-10 pre-reduction exists for it); leaf_eliminate SUBSUMES it --
+etale W-free pivots are chart-independent members of its pivot class;
+guard E certifies soundness directly against the 98 original rows.
+(ii) cover-cert part (iii) is REPLACED: the (1,2) core has 10
+constant-bearing rows (8.19; NOT origin-satisfiable), so no a-priori
+ZZ witness; instead the per-leaf origin/constant census is banked (a
+ZZ-origin finding would be a 13.0-style relaxation artifact IFF the
+constants are W-loaded and die at W=0 -- measured, not assumed).
+(iii) if leaf emission is heavy, it is staged per leaf (bank each).
+
+PRE-REGISTERED INTERPRETATION (fixed BEFORE any leaf solve; sec-1
+discipline; R1 is PER-BRANCH on {minimal, (1,2), (2,3), (2,5)} per
+SHEET6-R6 4.3): the 4 leaves partition V(core) by the (W1,W2)
+tautology; cover cert (i),(ii),(iv back-map) as in 13.2. Verdicts:
+- ALL FOUR leaves EMPTY (GB=[1]) at both banked primes => (1,2) core
+  p-screen EMPTY (strong-evidence tier per 10.0 calibration; char-0
+  GB=[1] on every leaf upgrades to proof) => the (1,2) branch DIES at
+  its terminal core.
+- UU EMPTY + some Z-leaf NONEMPTY => intended-chart kill: (1,2)
+  survives only as relaxation-degenerate (some W_i = 0) content, off
+  the intended locus (w_i units); diagnostic verdict = intended-chart
+  EMPTY (13.0 tier language).
+- UU NONEMPTY => (1,2) survives its terminal core on the intended
+  chart; bank the surviving relation(s); remaining obligations = its
+  F_s band, R2-R5, J-closure (per-branch ladder).
+- No inflation beyond this table. msolve -g 2 -t 4, timeout 900 s per
+  leaf, local; timeouts ship to box01 with sizes.
+Guards A-E exactly as 13.2 (paren; 2-prime round-trip char0+wfree;
+origin census; residual; soundness/back-map). 13.4-style witness only
+if the UU residual collapses to cheaply-solvable relations (<= 2
+low-degree rows); else banked deferred with reason.
+
+Part B (depth-84 quotient tier) = sizing + staging plan ONLY (no full
+build); free-closure analysis first (the 14.3 slot-census argument
+generalized); sections 15.4+.
+
+### 15.1 (1,2) census + build results (phase stats/build; state
+### /tmp/r1dec12/leaves.pkl)
+
+Census (98 rows, 497,969 terms): W1-loaded 9,980 = W2-loaded 9,980
+(exact 1<->2 symmetry again), 0 mixed, 478,009 W-free; 58 rows touch
+each W-side.  The 10 constant-bearing rows are rows 87-96 (B12-h2-quot
+slot-20 family) and their constants are W-LOADED -- they die at
+W = 0, so the ZZ pattern is again relaxation-artifact-prone (13.0
+mechanism; measured in cover (iii') below).  s1 appears in 41 rows,
+max degree 1 (never a clean pivot: its coefficients F2(n,r) carry x's).
+
+Build (chart kill + per-leaf cascade, W-monomial x etale-unit pivots,
+coeff*inv == 1 asserted per pivot; ~40 s/leaf):
+| leaf | rows | x-vars | terms | elim'd | dropped-as-zero |
+|---|---|---|---|---|---|
+| ZZ | 48 | 50 | 21,536 | 20 (all etale W-free) | 30 |
+| ZU | 32 | 34 | 8,305 | 28 | 38 |
+| UZ | 33 | 36 | 12,621 | 27 | 38 |
+| UU | 5 | 0 | 20 | 35 | 58 |
+
+UU COLLAPSE, SAME TERMINAL RELATION AS THE MINIMAL BRANCH: the 5
+survivors are rows 87-91 (B12-h2-quot, slot 20), rank 1 (factors
+-16, 16, -8, 2 of row 87; asserted exactly), and row 87 ==
+-(3363432789843/2) * E with EXACTLY the sec-13.1 relation
+
+  E: (9 + 5 r3) A1 W1^4 + (9 - 5 r3) A2 W2^4 = 0.
+
+(9/5 coefficient ratio verified exactly; 3363432789843 = content.)
+Consequence: the 13.1 E5 consistency identity applies VERBATIM -- the
+intended fourth-root data (w_i^4 = k_i alpha_i^2, sec-3.0 k_i)
+satisfies the (1,2) core's entire UU residual identically, and the
+13.4 witness construction (solve E for W1 at W2 = 1, back-map) ports
+unchanged.  The (1,2) delta content (extra staged G_m level, P^4
+quotient) is entirely absorbed by the cascade: discriminating
+content on the intended chart = E, as in the minimal branch.
+
+### 15.2 Emission, guards, cover certificate, explicit witness
+
+EMITTED (systems/r1/leaves/, minimal-core leaf_* files BYTE-UNTOUCHED
+-- sha256 gate below): leaf12_{ZZ,ZU,UZ,UU}.ms + _wfree_p{105337,
+105673}.ms + .rows.txt.  Sizes: ZZ 0.56/0.21 MB (53 eqs/55 vars char-0;
+48/50 wfree), ZU 0.23/0.08 (39/42; 34/37), UZ 0.38/0.14 (40/44;
+35/39), UU 0.003/0.0003 (14 eqs/11 vars; 9/6).  s1 survives only in
+ZZ/ZU/UZ headers (eliminated nowhere; FREE in UU -- absent from every
+survivor).
+
+GUARDS (all PASS, log 06:07-06:08):
+| guard | ZZ | ZU | UZ | UU |
+|---|---|---|---|---|
+| A paren (3 files each) | PASS | PASS | PASS | PASS |
+| B round-trip 2 primes char0+wfree | 48/48 | 32/32 | 33/33 | 5/5 |
+| C x=s1=0 at chart point | 48/48 vanish: ORIGIN-SATISFIABLE | 25/32 | 26/33 | 0/5 (origin excluded) |
+| D residual (6 combos) | 0 id-zero | 0 | 0 | 0 |
+| E soundness/back-map 2x2 | 20 piv + 30 drop vanish; 48 surv == orig | 28+38; 32 | 27+38; 33 | 35+58; 5 |
+
+COVER: (i) 500-sample tautology PASS; (ii) Z-side HW forcing (char !=
+2); (iii') REPLACED per 15.0: origin census on the RAW core at both
+primes -- ZZ pattern: 0/98 rows nonzero => (x = s1 = 0, W = 0) is an
+EXACT point (char-0 exact too: every x-free term is W-loaded, 15.1
+census) = the 13.0-style relaxation artifact; ZU/UZ/UU patterns: rows
+87-96 nonzero (the W-loaded quotient constants) -> origin excluded.
+Back-maps certified by guard E in both directions => EMPTY on all
+leaves <=> core EMPTY; any leaf witness lifts.
+
+EXPLICIT WITNESS (phase witness, banked 06:08): since the UU residual
+is EXACTLY c*E, the 13.4 construction ports verbatim; at BOTH banked
+primes the explicit intended-chart point (p=105337: W1=32284, W2=1;
+p=105673: W1=90918, W2=1; om^0 A-embedding; free x's = 0, s1 = 0;
+35 UU subs back-mapped -- single back-map layer) satisfies ALL 105
+emitted (1,2)-core eqs under the INDEPENDENT parser.  The (1,2)
+p-screen NONEMPTY verdict is therefore explicit-point-certified
+BEFORE msolve; calibration runs are confirmation only.  (Same W1
+values as 13.4 -- forced: same E, same radical points.)
+
+### 15.3 Calibration ledger + composite (1,2) verdict
+
+Runs (msolve 0.10.1, -g 2 -t 4, timeout 900 s, local;
+runs/leaf12_*.out, runs/r1_12leaves_calibrate.log):
+
+| leaf | wfree p=105337 | wfree p=105673 | char 0 |
+|---|---|---|---|
+| ZZ | GB!=[1] NONEMPTY 188 s / 14.8 GB (concordant) | SKIPPED by policy | NOT RUN by policy: NONEMPTY proven by the exact origin point (15.2 cover iii'), char-0-exact |
+| ZU | GB=[1] EMPTY 1 s | GB=[1] EMPTY 1 s | GB=[1] EMPTY 77 s / 7.3 GB -- PROVEN EMPTY over Qbar |
+| UZ | GB=[1] EMPTY 1 s | GB=[1] EMPTY 1 s | TIMEOUT 900 s / 13.5 GB -- stays evidence-tier |
+| UU | NONEMPTY 1 s | NONEMPTY 1 s | NONEMPTY: 121-elt reduced GB over Q, 1 s |
+
+CHAR-0 UPGRADE vs the minimal branch: leaf12_ZU char-0 GB = [1] is a
+PROOF of ZU emptiness over Qbar (the minimal branch's ZU/UZ stayed
+evidence-tier, 13.6); with ZZ's exact origin point and UU's 121-elt
+GB over Q, three of the four (1,2) leaves are decided in char 0.
+
+MULTI-PRIME SWEEP (13.6 protocol, good_primes walk; same 6 fresh
+primes 109537, 165313, 177409, 188833, 200257, 225961; ~1 s each):
+verdict pattern IDENTICAL at all 6 -- ZU EMPTY / UZ EMPTY / UU
+NONEMPTY -- and at both banked primes: 8 primes total, no exception
+(strong-evidence tier per the 10.0 calibration for the char-0
+readings; ZU additionally char-0-PROVEN above).
+
+COMPOSITE VERDICT (under the 15.0 pre-registration; sec-1 discipline;
+R1 per-branch):
+1. ALL-FOUR-EMPTY trigger: NOT FIRED -- and PROVABLY unfireable: ZZ
+   carries the exact origin point (relaxation artifact) and UU
+   carries the explicit intended-chart witnesses (15.2) at both
+   banked primes AND a char-0 GB.
+2. DIAGNOSTIC (intended-chart) verdict: UU NONEMPTY at both primes
+   and in char 0 => the (1,2) branch SURVIVES its terminal core on
+   the intended chart.  Its entire discriminating content there is
+   the single relation E -- THE SAME E as the minimal branch (15.1)
+   -- which the intended E5 fourth-root data satisfies identically
+   (13.1 identity, ports verbatim).
+3. ZU/UZ EMPTY (char-0-proven on ZU): every core point has W1, W2
+   both zero or both nonzero -- the same two-stratum structure as the
+   minimal branch (13.3).
+4. REMAINING OBLIGATIONS for the (1,2) branch (per-branch ladder):
+   its own F_s band + quotient tier, R2-R5, J-closure.  MEASURED
+   (06:15): the (1,2) witness back-map has the SAME nonzero support
+   {tf1/2_47 (slot 35), tf1/2_52 (slot 40), s1 = 0} as the minimal
+   witness, so the 15.5 mod-5 free closure applies VERBATIM to any
+   slot-graded (1,2) F_s rung with slot not representable by
+   {20,25,35,40} -- the (1,2) F_s ladder inherits the 15.6 staging
+   plan (exact rung ledger for its 12/21-window: future work).
+
+### 15.4 PART B -- depth-84 F_s quotient tier: structure + counts
+### (sizing only; NO build, per the 15.0 scope)
+
+Object (secs 3 C2, 8.5, 14.3): the F_s ladder's terminal tier -- the
+18->8 cancellation quotient at 1/7-slot r = 10 (6-grid slot s = 60,
+stage m = 72, needs series depth 84), H_F^3 = s1F S_F^4 with s1F a
+fresh tie scale; row shape per 3 C2 "quotient == c * p21^8" (exact
+engine formulation to be fixed at the Q0 gate with anchors, 8.4-style).
+Rungs r = 5..9 (slots 30..54) are band rows (= 0); r <= 6 are
+in-window at depth 54 and already DISCHARGED as witness-vacuous (14.3).
+
+COUNTS (mechanical, from the banked grading + registry + measured
+rungs; scripts inline, 2026-08-11 06:10):
+- Rows: grading 12n + s == 0 (mod 42) with n in [2..377] (n = eta
+  degree, set by orbit sizes 3x126 = 2x189 = 378 -- DEPTH-INDEPENDENT,
+  so rows/rung stays ~54 at depth 84): slot 42: 53 rows (n == 0 mod
+  7); 48: 54 (n == 3); 54: 54 (n == 6); 60 QUOTIENT: 54 (n == 2);
+  66: 54 (n == 5).  Depth-84 tier proper (r = 7..10): 215 rows
+  (+ 54 if r = 11 is carried; + 108 for the unemitted in-window
+  r = 5, 6).
+- New unknowns: registry tails at levels 37..72 (bf/bg42/bg21 from
+  level 37 = slot 25; tf/tg from level 54 = slot 42) beyond the 135
+  banked emitted vars: 198 (bf 36, bg42/bg21 54, tf1/tf2 44, tg 64)
+  + s1F = 199.  Through r = 11 (levels <= 78): 244.
+- Degrees/terms: slot-s rows carry weight-s monomials; min var slot 1
+  (bf_13) => var-degree up to 60 at the quotient.  Measured terms/rung
+  at SCAP 25 (14.1): 1,346 / 11,798 / 73,838 / 375,044 (r = 1..4;
+  ratios 8.8, 6.3, 5.1).  Decaying-ratio extrapolation: r = 7 ~2e7,
+  r = 8 ~6e7, r = 9 ~2e8, r = 10 ~6e8 exact ring terms; full tier
+  ~8e8 terms ~ 30-60 GB emitted text.  SYMBOLIC emission of the tier
+  is NOT feasible as one object on any tier of our hardware (and, per
+  15.5-15.6, NOT NEEDED for the decisive question).
+
+### 15.5 FREE CLOSURE FOUND: mod-5 slot obstruction (the 14.3
+### slot-census argument, generalized to the whole ladder)
+
+The banked witnesses' nonzero coordinates sit at F_s slots
+{0 (leads/etale units), 20 (a_i pins), 25 (w_i pins), 35 (tf1/2_47),
+40 (tf1/2_52)} (14.3 measurement) -- every nonzero slot is == 0
+(mod 5).  Slots are ADDITIVE under the jet product, so for the
+ZERO-EXTENDED witness (all new depth-84 tails = 0, a legitimate
+extension point):
+(a) any row at slot s !== 0 (mod 5) has, in EVERY term, a factor at a
+    slot not in 5Z -- zero at the witness => the row vanishes
+    identically there (slots 36, 42, 48, 54, 66);
+(b) for s == 0 (mod 5) a term survives only if s = 20a + 25b + 35c +
+    40d is solvable; mechanical scan (banked 06:10): slot 30 has NO
+    representation; slot 60 has EXACTLY THREE:
+    a^3 (3,0,0,0) | a * tf_52 (1,0,0,1) | w * tf_47 (0,1,1,0).
+CONSEQUENCE (free closure, no depth-84 computation): every band row of
+the ENTIRE remaining F_s ladder (r = 5..9 and r = 11) is identically
+satisfied by the zero-extended witnesses at both banked primes.  The
+band CANNOT kill the branch at the banked primes; the ONLY depth-84
+object that can bite is the r = 10 quotient family -- sharpening 14.3
+("first that can bite") to "the ONLY one in the ladder".  The a^3
+representation is the pin-only ring-constant shape behind 14.3's
+constant-bearing reading; whether its coefficients actually survive
+the selector/phase aggregation (cf. the uf30 cancellation, 8.7) is a
+MEASURED anchor at Q0, not assumed.
+
+TWO STRUCTURAL BONUSES (slot-budget facts; corrected 06:20 -- note
+the new vars include bf/bg42/bg21_37..53 at slots 25..41, NOT only
+slot >= 42 tails):
+(i) slot-60 rows have new-tail degree <= 2 (three new tails need
+    slot >= 3 x 25 = 75 > 60); new tails at slots >= 42 appear only
+    LINEARLY (a pair touching one needs >= 42 + 25 = 67 > 60).
+(ii) at the witness (old vars frozen at their values) the
+    participating new tails are EXACTLY 39 (enumerated mechanically,
+    06:20): the 9 level-72 (slot-60) tails linearly with lead
+    cofactors; bf/bg42/bg21_52 (slot 40, x a-pin); bf/bg42_47 (slot
+    35, x w-pin); bf/bg42_37 (slot 25, x tf_47); and the slot-25..35
+    band bf/bg42/bg21_37..47 through PAIRS t1 + t2 = 60.  The
+    witness-restricted quotient tier is a 54-row system in <= 40
+    unknowns (39 tails + s1F) of degree <= 2 over GF(p) -- msolve
+    territory measured in SECONDS, no farm.
+
+### 15.6 Staging plan, placement, kill/survive semantics
+
+- Q0 (FIRST DECISIVE SUB-BLOCK; local, ~seconds-minutes; engine
+  addition ~100 lines reusing fs_orbit_fold + a specialization hook):
+  witness-specialized quotient evaluation.  Specialize each orbit
+  series at the witness (P_i: slots {0,20,25,35,40}; Gp_i: {0,20,25};
+  B/GB/G0: leads only, PLUS the 39 participating new tails of
+  15.5(ii) carried SYMBOLICALLY), fold mod p at slot cap 61 (<= 5
+  numeric slots + sparse symbolic tails per factor => small), read
+  WF(n,60)|witness for the 54 n's, form the rows WF - s1F*(pattern
+  c_n).  By 15.5(ii) this is a 54-row degree-<= 2 system in <= 40
+  unknowns; msolve mod both banked primes (seconds) decides the
+  witness family's depth-84 fate -- no farm.  Zero-extension check
+  first (all 40 unknowns = 0 vs the constants) is pure evaluation.
+  Anchors: specialized fold must reproduce the banked slot-35/40 jet
+  values and E1/grading on the kept keys.
+- Q1 (only if Q0's system is inconsistent): multi-witness sweep --
+  the other A-embeddings/4th-root branches (9 x Tonelli choices,
+  13.4 machinery) and fresh primes (13.6 walk); same Q0 evaluation
+  per witness.  Still local.
+- Q2 (only if all witnesses die): quotient-only KILL screen.
+  Soundness: EMPTY(core + chart + quotient) => EMPTY(full tier)
+  (adding band rows only shrinks the variety), so a kill never needs
+  the band.  But symbolic slot-60 rows are ~6e8 terms => do NOT emit
+  raw.  Q2 = LEAF-COMPRESSED emission: substitute the UU-leaf
+  parametrization (13.1: core == E x A^38 on the chart; invertible
+  back-map) into the quotient rows, re-expressing them over the ~40
+  surviving directions + 199 new vars; sizing to be MEASURED first
+  (gate: projected <= 10^7 terms -> box01, 16 threads; else redesign).
+  ultramem reserved for a char-0 GB upgrade only if a p-kill appears
+  (10.0 tier discipline).
+- VERDICT SEMANTICS (pre-registered now, sec-1 discipline):
+  * Q0/Q1 consistent (witness survives) => the minimal branch
+    SURVIVES depth-84 at the banked primes by explicit point; the
+    F_s ladder is EXHAUSTED (band 14.3/15.5, quotient by point);
+    remaining obligations: R2-R5 ladder, J-closure, char-0
+    confirmation per 10.0.  The branch = the campaign's strongest
+    near-candidate; next build = R2 window.
+  * all witnesses die AND Q2 p-screens return GB = [1] at both
+    primes => the minimal branch DIES at the F_s quotient tier
+    (strong-evidence tier; char-0 GB upgrades to proof).  With R6
+    closed, the residue-A two-pole exclusion then rests on the
+    sibling ladders ((1,2) -- now at the SAME E-core, sec 15.1-15.2
+    -- plus (2,3), (2,5)) and the single-pole book of 4.
+  * witnesses die but Q2 NONEMPTY => partial: the intended E5
+    fourth-root data is incompatible with the depth-84 tie, but the
+    relaxed locus survives; bank surviving-locus data; next
+    discriminator = R2-R5 on that locus.  No inflation beyond this
+    table.
+
+### 15.7 Bonus: minimal-branch ZU/UZ upgraded to char-0 PROOF
+### + deliverables/state
+
+Prompted by the (1,2) ZU char-0 result (15.3), the MINIMAL branch's
+banked leaves were rerun in char 0 (runs/leaf_{ZU,UZ}.ms.char0.out,
+ledger runs/r1_leaves_calibrate.log): leaf_ZU.ms GB = [1] EMPTY,
+leaf_UZ.ms GB = [1] EMPTY, ~1 s / <2 MB each.  This UPGRADES the sec
+13.3/13.6 reading ("ZU/UZ char-0 emptiness stays evidence-tier only")
+to PROOF over Qbar: ALL FOUR minimal-branch leaves are now decided in
+char 0 (ZZ exact witness; UU 121-elt GB over Q + explicit points;
+ZU/UZ GB = [1]).  The minimal-branch composite of 13.3 is now fully
+char-0-decided: every char-0 core point has W1, W2 both zero or both
+nonzero, and the intended-chart content is exactly E.
+
+DELIVERABLES (this section): engine cases/r1_12_decompose.py
+(ADDITIVE; phases stats | build | emit | guards | cover | calibrate |
+psweep | witness; reuses r1_decompose/r1_reduce functions; s1 carried
+as x119, emitted as s1); systems/r1/leaves/leaf12_* (12 files);
+runs/leaf12_*.out, runs/leaf_{ZU,UZ}.ms.char0.out, ledgers
+runs/r1_12leaves_calibrate.log + r1_leaves_calibrate.log (sweep
+lines); state /tmp/r1dec12 (core.pkl parse cache + leaves.pkl).
+Minimal-core leaf emissions BYTE-IDENTICAL (sha256 gate, 16/16 OK).
+Part B produced NO new emissions (sizing/plan only, 15.4-15.6);
+depth-84 engine work starts at the Q0 gate.
