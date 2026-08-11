@@ -927,7 +927,8 @@ def phase_famemit():
 
 
 def phase_famctl(timeout=1200):
-    """controls on the char-0 family object (banked in runs/ only):
+    """controls on the char-0 family object (INPUTS banked to
+    systems/r1 per the Q2E5 review -- the sec-18 minor flag):
     ctlA = RELAXED family (no E5/E6/sat rows, no HM/tSAT) -- must stay
            NONEMPTY (the zero-extension: the review-confirmed relaxed
            survival, family-wide);
@@ -944,7 +945,7 @@ def phase_famctl(timeout=1200):
             ("ctlB_satonly", h, eqs[:-4] + [eqs[-1]])]
     logf = os.path.join(RUNS, FAMBASE + "_runs.log")
     for tag, hh, ee in ctls:
-        path = os.path.join("/tmp/r1q0", "%s_%s.ms" % (FAMBASE, tag))
+        path = os.path.join(SYS, "%s_%s.ms" % (FAMBASE, tag))
         with open(path, "w") as f:
             f.write(", ".join(hh) + "\n0\n" + ",\n".join(ee) + "\n")
         out = os.path.join(RUNS, "%s_%s.ms.out" % (FAMBASE, tag))

@@ -2285,3 +2285,85 @@ byte-identically.
 The residue-A two-pole configuration now rests on: the minimal
 branch's Q2 residual object, and the two chain branches' deciders --
 with the saturation standing rule (17) binding on all three.
+
+## 19. Q2: the full-locus depth-84 screen + the E5-port review fallout
+## (2026-08-11; review half in SHEET6-R1-Q2E5.md)
+
+### 19.0 Pre-registration (banked BEFORE the Q2 runs; 15.6 semantics
+### + sec-17 saturation rule govern; no inflation)
+
+Object (engine cases/r1_q2_screen.py, NEW, ADDITIVE): per banked prime,
+the UU-chart depth-84 slot-60 quotient screen with W1/W2 SYMBOLIC
+(Laurent W-part canonical mod the quadrics, uW_i chart rows, relation
+E) and the free core directions OPEN above a stratum cutoff: free
+core vars at slot < LCUT are 0, at slot >= LCUT symbolic; LCUT = 1 is
+the FULL UU chart.  Rows: quadrics + uW + E + 3 defining rows
+(bf_18/24/30 kept as variables carrying their composed back-map
+polynomials -- the 15.6 "leaf-compressed" substitution, redesigned
+after MEASUREMENT showed raw substitution EXPANDS the fold; review
+sec 3) + quotient rows WF(n,60) - s1F*c_n for n <= 44 + E5-quartic
+(HM restored, W symbolic) + E6 cube tie + s1F*tSAT-1.  Etale radicals
+at the banked point (wfree methodology).  SOUNDNESS of the two
+restrictions, pre-registered: (a) row subset: ideal(subset) c
+ideal(full tier), so V(subset) contains V(full tier) and EMPTY(subset)
+=> EMPTY(full tier) -- valid for KILLS only; the n <= 44 subset is
+MEASURED sufficient on the banked family object (7 rows kill it;
+n <= 16 does not; probes banked).  (b) stratum: EMPTY at cutoff L
+kills every UU-chart point whose free dead-stretch/tail coefficients
+below slot L vanish; the FULL kill needs L = 1.  VERDICT TABLE:
+- EMPTY at both primes at LCUT = 1 => the ENTIRE minimal-branch UU
+  chart dies at the F_s quotient tier depth 84 (strong-evidence tier;
+  char-0 upgrade = ultramem candidate per 10.0).
+- EMPTY at both primes at LCUT = L > 1 only => partial: every
+  depth-84 survivor needs a nonzero free coefficient at slot < L;
+  bank the surviving-locus characterization; full object ships per
+  the sizing table.
+- NONEMPTY at some prime => the relaxed-full-locus screen survives
+  there; characterize vs the killed family (which frees/tails load
+  the survivor; is s1F != 0 attainable); NOT a branch survival claim
+  (band rows s = 30..54 and rows n > 44 not imposed).
+- Controls: ctlA (no tie/sat) MUST be NONEMPTY (the killed family's
+  zero-extension lives on it -- emission sanity); ctlB (sat only,
+  no tie) EMPTY iff s1F == 0 is forced on the whole stratum (the
+  16.3/18.1 mechanism's reach).
+Anchors gating trust: A-Q2-1 (witness specialization == banked gate
+rows EXACTLY), A-Q2-2 (free-x = 0, W SYMBOLIC == banked exact fam
+rows mod p), E1 slot-0, grading, two-path fold equality, A7 pattern
+suite, and phase pert (deliberate value-corruption + slot-shift
+perturbations must be CAUGHT by the anchors) -- all PASS required
+before any run is read.
+
+### 19.1 Sizing measurements (the 15.6 gate, exercised mechanically)
+### + anchor/perturbation record
+
+Back-map measurement (the review's design audit, Q2E5 sec 3): the 35
+banked UU+sec-10 substitutions composed symbolically over the 84 free
+directions give values of 1-3 terms EXCEPT bf_18/bf_24/bf_30 (24/348/
+3552 terms, x-degree 4/12/18, at slots 6/12/18) -- raw substitution
+would EXPAND the fold (bf_30^3 alone reaches slot 54), so the three
+deep values ride as VARIABLES with defining rows (their restrictions
+to each stratum; sizes logged per lcut).  Fold sizes at p = 105337
+(cap 61, eta-degree cap 44, W symbolic, two-path-verified):
+
+| lcut (free slots open) | quotient-row terms (7 rows) | build wall |
+|---|---|---|
+| 26 | 1,879 | 9 s |
+| 19 | 2,295 | 12 s |
+| 13 | 5,139 | 22 s |
+| 8 | 34,739 | 94 s |
+| 4 | (sec 19.2) | |
+| 1 = FULL locus | (sec 19.2) | |
+
+All builds pass E1 slot-0, grading, and the 7 rows n = 2..44 are all
+nonvacuous.  ANCHOR RECORD (lcut = 13, p = 105337): A-Q2-1 witness
+regression PASS (Q2 rows specialize to the banked gate rows EXACTLY,
+key-for-key); A-Q2-2 family regression PASS (free-x = 0 rows with W
+SYMBOLIC == the banked exact-ring fam rows mod p, key-for-key -- the
+W-symbolic path validated against the char-0-proven family object);
+two-path fold equality PASS on all 9 orbits; A7 pattern suite re-run
+at both primes, all 4 deliberate pattern perturbations CAUGHT; phase
+pert: 2/2 deliberate BUILD perturbations (value corruption tf1_42;
+slot shift 47->48) CAUGHT by A-Q2-1 (the front-5 upgrade discharged
+at formulation level).  Row-subset sufficiency probes banked
+(/tmp/q2e5_review/fam_sub_*.ms + .out): fam + rows n<=44 GB=[1],
+n<=16 NONEMPTY, n>170 NONEMPTY, all 54 GB=[1].

@@ -209,6 +209,84 @@ def phase_minsat(timeout=1200):
         f.write(line + "\n")
 
 
+def phase_corr(timeout=1200):
+    """CORRECTED (1,2) verdict object (SHEET6-R1-Q2E5.md review: the
+    e5port rows are RETRACTED -- level slip).  The count-exact St 3.9
+    pole-edge transport for (1,2) is the FIRST DEAD MEMBER h2 = h1 -
+    s1 f^2 (p_h2,Gm = H12 eta P^2(eta^3-b), mult 2 = deg p_h2,P, lands
+    6/42 EXACT; the port's mult-4 h1 rows land at 4/42 = the s1(f+)^2
+    level, an R1-series tier condition per SHEET6-R6 4.3).  Corrected
+    rows = minimal-shape E5 with H12 restored + H12*tH12-1 + s1*t12-1
+    (s1 absent from every row: core saturation of s1 is VACUOUS).
+    EXPECTED NONEMPTY (13.1 bracket == 0), mirroring r1_minsat."""
+    import r1_decompose as RD
+    b = BASE + "_corr"
+    cW = 729 * 7 ** 36 * 144            # * a_i^2 * A_i * W_i^4 (x 2^18)
+    ties = [("E5-12corr pole 1 (h2-transport, H12)",
+             "%d*A1*W1^4+%d*r3*A1*W1^4-1048576*H12+1048576*r3*H12"
+             % (12 * cW, 6 * cW)),
+            ("E5-12corr pole 2 (h2-transport, H12)",
+             "%d*A2*W2^4-%d*r3*A2*W2^4-1048576*H12-1048576*r3*H12"
+             % (12 * cW, 6 * cW))]
+    hdr, char, eqs = read_ms(os.path.join(LVS, "leaf12_UU.ms"))
+    assert char == 0 and len(eqs) == 14
+    labels = [("leaf12_UU verbatim eq%d" % i, e) for i, e in
+              enumerate(eqs)] + ties + \
+             [("SAT H12 (Rabinowitsch)", "H12*tH12-1"),
+              ("SAT s1 (vacuous at core: s1 in NO row)", "s1*t12-1")]
+    path = os.path.join(SYS, b + ".ms")
+    with open(path, "w") as f:
+        f.write(", ".join(hdr + ["H12", "tH12", "s1", "t12"]) + "\n0\n")
+        f.write(",\n".join(e for _, e in labels) + "\n")
+    t = open(path).read()
+    assert "(" not in t and ")" not in t
+    with open(os.path.join(SYS, b + ".rows.txt"), "w") as f:
+        f.write("# (1,2) CORRECTED core-saturated object (Q2E5 review):"
+                " leaf12_UU verbatim + h2-transport E5 rows (H12 = the"
+                " (1,2) h2-stage G_m lead, template-forced nonzero) +\n"
+                "# H12/s1 saturation.  SUPERSEDES r1_12sat.ms (e5port "
+                "rows retracted: mult-4 h1 transport lands at 4/42, "
+                "not the 6/42 pole top -- level slip).\n")
+        for i, (lab, _) in enumerate(labels):
+            f.write("eq%d = %s\n" % (i, lab))
+    log("emitted %s (%d eqs, %d vars)" % (path, len(labels),
+                                          len(hdr) + 4))
+    logf = os.path.join(RUNS, b + "_runs.log")
+    out = os.path.join(RUNS, b + ".ms.out")
+    verdict, wall, rss = RD.run_msolve_rss(path, out, timeout, threads=4)
+    line = "%s.ms (char 0): %s wall %.1fs" % (b, verdict, wall)
+    log(line)
+    with open(logf, "a") as f:
+        f.write(line + "\n")
+    # p-variants on the wfree leaves (banked radical point, W symbolic)
+    for p in FC.good_primes(2):
+        pt = FC.radical_point(p)
+        hw, cw, ew = read_ms(os.path.join(LVS,
+                                          "leaf12_UU_wfree_p%d.ms" % p))
+        assert cw == p and len(ew) == 9
+        rows = list(ew)
+        for i, (ai, Ai) in enumerate((((3 + pt["r3"]) % p, pt["A1"]),
+                                      ((3 - pt["r3"]) % p, pt["A2"])), 1):
+            c = cW % p * (ai * ai % p) % p * Ai % p
+            d = 4 * ((ai - 4) % p) % p * pow(2, 18, p) % p
+            rows.append("%d*W%d^4+%d*H12" % (c, i, d))
+        rows += ["H12*tH12+%d" % (p - 1), "s1*t12+%d" % (p - 1)]
+        pp = os.path.join(SYS, "%s_p%d.ms" % (b, p))
+        with open(pp, "w") as f:
+            f.write(", ".join(hw + ["H12", "tH12", "s1", "t12"])
+                    + "\n%d\n" % p)
+            f.write(",\n".join(rows) + "\n")
+        t = open(pp).read()
+        assert "(" not in t and ")" not in t
+        out = os.path.join(RUNS, "%s_p%d.ms.out" % (b, p))
+        verdict, wall, rss = RD.run_msolve_rss(pp, out, timeout,
+                                               threads=4)
+        line = "%s_p%d.ms: %s wall %.1fs" % (b, p, verdict, wall)
+        log(line)
+        with open(logf, "a") as f:
+            f.write(line + "\n")
+
+
 if __name__ == "__main__":
     ph = sys.argv[1] if len(sys.argv) > 1 else "all"
     if ph in ("e5port", "all"):
@@ -219,3 +297,5 @@ if __name__ == "__main__":
         phase_run()
     if ph == "minsat":
         phase_minsat()
+    if ph == "corr":
+        phase_corr()
