@@ -2564,3 +2564,163 @@ dead-stretch coefficient at some slot < 13; the 1200-s local GB
 budget resolves nothing below that cliff (l12/l8/l4 all wall out at
 both primes, incl. kill-sound row subsets), so the F_s-route
 exclusion CLAIM stays at the stratum, not the full chart.
+
+## 20. SATURATED chain terminal gates: (2,3)->(6,17) and (2,5)->(6,23)
+## (2026-08-11; the 19.4 banked directive executed)
+
+### 20.0 Pre-registration + scale inventory (banked BEFORE build)
+
+BASE objects (sec 9/11, guard-certified, UNSATURATED): r1_23chain_core
+(115 eqs = 7 radical + 74 band + 7 quot + 6 quot-deg + s1-tie + s1-inv
++ 12 h2-quot + 6 h2-quot-deg + qL-inv; vars x0..x118 + s1,cL,t1,qL,t2)
+and r1_25chain_core (44 eqs = 7 radical + 11 quot + 2 quot-deg +
+s1-tie + s1-inv + 22 h2-tie; x0..x28 + s1,cL,t1).  Both carry the
+sec-17/18 W-exposure: W1/HW1/W2/HW2 free, NO uW rows (18.3).
+
+SCALE INVENTORY (mandate-1 analogue, from the chain genomes R6 4.2):
+| scale | forced nonzero by (genome) | gate handling |
+|---|---|---|
+| s1 (level-2 tie h2 = h1^2 - s1 f^l1) | Prop 4.2(iii) tower constant | t1*s1-1 IN BASE from birth |
+| cL (level-1 G_m lead; rows WG(n,s1st) = cL*P^l1[n]) | p_h1@Gm = (-)P^l1 deg 18|30 EXACT is forced tower data (R6 4.2 B'); also cL^2 = S_M^l1 s1 (s1-tie) + s1 != 0 | NEW explicit row tcL*cL-1 (standing-rule explicitness; redundant given tie, harmless) |
+| qL ((2,3) only; h2-quot lead, q's content H*S_M-power absorbed) | deg p_h2@Gm = 34 EXACT forced; q deg-10 shape feeds level 3 | t2*qL-1 IN BASE from birth |
+| W_1, W_2 | pole pattern p_h1@P = -(3/4)s0 lam_i^3 w_i^4 (eta^2-(4/3)w_i^2) NONZERO deg 2 (R6 post-review (D): d_h1@P = 1/7 rests on no level drop; w_i = 0 kills the lead), axis poles excluded (St 7.2) | NEW uW_i*W_i-1 rows (the 18.3 exposure CLOSED at birth) |
+| HW_i | HW_i^2 = (3/2) W_i^2 | automatic from uW (char != 2,3) |
+| s2 (level-3 tie; W2-collapse pins s2' = H^6, R6 4.2 RUNG) | Prop 4.2 tower constant | (2,3): H absorbed in qL => covered by t2*qL-1; (2,5): H lives in the DEFERRED r=14 farm quotient (9.4) -- no local carrier; kills valid a fortiori, any survival carries the obligation |
+| s1F/s2F analogues (F_s leads; tower ALIVE at F_s, m_Fs >= 3) | 1b at F_s | NOT in the G_m-window gate: the chain's own F_s band/quotient ladder (obligation list) |
+| etale r3, z, A_i, EB | minimal polys have no zero root | no row (18.0 justification verbatim) |
+| interior/tail x-vars | NOT forced (free template parameters, 1c) | carried free, justified |
+
+TIE-ROW DERIVATION (mandate 2, with the Q2E5 lesson applied: St
+3.9(ii) lead transports REQUIRE the 3.9(i) count equality, checked
+per member per edge).  Count scan at the chain pole edges (m_P = 0),
+mult(p@Gm, c_i) vs deg p@P: f: 2 == 2 COUNT-EXACT; g: 3 > 2; h1:
+l1 (3|5) > 2; h2: 2mu2-1 (5|7) > 2k1 = 4; h3: 12(mu2-1)+6 (30|42) >
+24.  So: (a) the ONLY count-exact member is f, whose transport is the
+E6-analogue unit pin lam_i = 9 S_M c_i^4 (a1-a2)^2, m_i^2 = s0 lam_i^3
+-- already RING CONSTANTS inside the shared W_G fold (no row to add);
+(b) NO count-exact dead member exists at either chain pole edge: the
+E5-quartic analogue set is EMPTY BY DERIVATION (not omission) -- any
+ported h-row would repeat the 19.3 level slip; the leaks are St
+3.11(i)-legal (R6 4.2 C'/D').  (c) The in-window E6-tie analogue at
+G_m is the legality row S_M^l1 s1 = cL^2 -- IN BASE from birth.
+Mechanical verification of (a)-(c) = engine phase `inventory` (exact
+K3), gating emission.  NET: saturated gate = base core VERBATIM +
+uW1/uW2 + tcL rows; nothing else is derivable at this tier in print.
+
+GATE LEDGER (pre-registered): per chain X in {23, 25}:
+- r1_Xsat.ms (char 0) = base core rows byte-VERBATIM + uW1*W1-1 +
+  uW2*W2-1 + cL*tcL-1;  r1_Xsat_p{105337,105673}.ms = base wfree rows
+  VERBATIM + the 3 rows reduced into [0,p).
+- r1_Xsat_ext retrofit ((2,5) only): banked ext wfree + same 3 rows --
+  the 18.3-mandated saturated re-emission of the box01 decider (E5
+  port question now settled: vacuous by derivation); EMITTED for the
+  fleet, not run locally (its unsaturated twin walled at 3000 s).
+- ctlA_relaxed_p*.ms = base wfree MINUS its constant rows (s1-inv,
+  qL-inv), NO additions: MUST be NONEMPTY (origin zero-point; guard-C
+  census) -- emission sanity; certified by independent-parser explicit
+  point, GB only if cheap.
+- ctlB_satonly_p*.ms = level-1 subsystem ONLY (radical-HW + band +
+  quot + quot-deg) + uW1/uW2 + tcL, NO level-2 rows (s1-tie, s1-inv,
+  h2-*, qL-inv): DIAGNOSTIC -- EMPTY <=> the level-1 window alone
+  refuses an alive slot-s1st pattern with W-units and cL != 0 (death
+  already at level 1); NONEMPTY <=> level-2 ties carry the load.
+
+ANCHORS (pattern-positive, mandate 4, all PASS required before any
+run is read): A-C-1 pattern suite -- P^3, P^5 (eta-deg 18/30) and
+pq34 = eta(t-a1)^5(t-a2)^5(t-b) recomputed by an INDEPENDENT
+Fraction+r3 convolution path (not the engine's eta_poly_ref/
+k3poly_pow_pattern); value + alignment (deg/monic/lattice n mod 3) +
+positivity (synthetic division: root mult EXACTLY l1 at both a_i;
+pq34: 5/5/1 with b = 4 the ODE pin).  A-C-2 row-level: in the rebuilt
+VExpr rows, coefficient-of-cL in every level-1 quot row == -P^l1[n]
+EXACTLY (sees every pattern coefficient incl. monic top), no cL key
+in band/quot-deg rows; (2,3) h2-quot rows: coefficient-of-qL ==
+-pq34[n], none in h2-quot-deg; s1-tie row keys == {(cL,cL): +1, (s1,):
+-S_M^l1} with S_M^l1 independently recomputed.  PERTURBATION SUITE
+(must ALL be caught): reference-side wrong-b (4 -> -4), index shift
+(n -> n+3, lattice-preserving), global sign flip, single-coefficient
+corruption; build-side: corrupt one row's cL coefficient, shift one
+row's n.  Emission->VExpr closure: FC.guards on the BANKED core files
+against the state-rebuilt rows (guards A-D incl. independent-parser
+round-trip at both primes) -- the banked artifact, the state, and the
+anchor all tied together.
+
+VERDICT SEMANTICS (sec 1 + sec 17 saturation rule; no inflation):
+- GB = [1] at BOTH primes on r1_Xsat_p* => the branch DIES at its
+  terminal core mod p (strong evidence); char-0 [1] on r1_Xsat.ms =>
+  PROOF-tier (empty over Qbar) -- the honest reading the unsaturated
+  sec-11 (2,5) NONEMPTY could never license.  ctlA must be NONEMPTY
+  first, else emission error: HALT, no verdict.
+- NONEMPTY => characterize (GB size; dim/degeneracy strata if cheap;
+  explicit point only if cheap) and state next-tier obligations:
+  (2,5): saturated ext decider (retrofit above) + farm rungs r=12,14
+  + level-3 ladder + F_s tier + J-closure; (2,3): level-3 band (deg
+  195 rung, farm) + F_s tier + J-closure.
+- Runs 1200 s local, -g 2 -t 4; TIMEOUT => bank emission + size for
+  the fleet; 0-byte .out != NONEMPTY (19.2 hygiene).  p-screens
+  first; char 0 only if p-screens resolve fast.
+Regression gate: sha256 of all 137 pre-existing systems/r1 emissions
+(/tmp/r20_baseline.sha) unchanged after the session; engine = NEW
+ADDITIVE file cases/r1_chain_sat.py (r1_fullcore.py untouched).
+
+### 20.1 Build log
+
+Engine: cases/r1_chain_sat.py (NEW, additive; phases inventory |
+anchor | emit | run).  Phase inventory PASS (exact K3): E6 f-transport
+pin lam_i = 9 S_M c_i^4 (a1-a2)^2 verified a K3-unit with m_i^2 =
+s0 lam_i^3 solvable (m_i = 648 sqrt3 G_M a_i^2; 648^2*3 = 729*1728,
+G_M^2 = S_M^3); count scan CONFIRMS the 20.0 derivation -- leaks
+(g,3,2),(h1,l1,2),(h2,2mu2-1,4),(h3,12(mu2-1)+6,24) for both chains,
+f alone count-exact => E5-quartic analogue set EMPTY BY DERIVATION;
+base rows carry s1-tie/s1-inv (+ qL-inv for 23) and NO uW rows (18.3
+exposure confirmed present in the base, closed by this gate).
+
+Phase anchor PASS (11:31): A-C-1 independent-convolution patterns ==
+engine patterns coefficient-for-coefficient (p3/p5/pq34), root mults
+(3,3)/(5,5)/(5,5,1@b=4) by synthetic division; A-C-2 row-level
+pattern-positivity -- (2,3): 7 quot rows cL-part == -P^3[n], 12
+h2-quot rows qL-part == -pq34[n]; (2,5): 11 quot rows == -P^5[n];
+band/deg rows lead-free; s1-tie == {cL^2: +1, s1: -S_M^l1} with
+S_M^l1 independently recomputed.  Perturbation suite 6/6 CAUGHT
+(wrong-b, n->n+3 shift, sign flip, coeff corruption, build-side value
++ slot).  Both BANKED core .ms files re-certified against the
+state-rebuilt rows: guards A-D PASS (round-trip 108/108 resp. 37/37
+at both primes; origin census 106/108 resp. 36/37 -- only the
+constant rows survive at x=0).  W-LOAD MEASUREMENT (banked openly):
+the (2,5) core rows carry NO W-monomials (uW saturation VACUOUS at
+its core tier -- the W-load enters at ext rungs r >= 4: 70/134 ext
+rows W-loaded), while the (2,3) core has 66 W-loaded rows (uW
+BINDING at core).  The uW rows stay in both gates (standing rule);
+the vacuity is recorded, mirroring 19.3's s1-vacuity precedent.
+
+### 20.2 Emission ledger (all guards PASS both primes; regression
+### gate: 137/137 baseline sha256 unchanged after emission)
+
+| object | eqs | vars | note |
+|---|---|---|---|
+| r1_25sat.ms (char 0) | 47 | 44 | base 44 VERBATIM + uW1/uW2/tcL |
+| r1_25sat_p105337/_p105673.ms | 42 | 39 | wfree base 39 VERBATIM + 3 reduced |
+| r1_25sat_ctlA_relaxed_p*.ms | 38 | 36 | s1-inv dropped; NONEMPTY certified (origin, 38/38 rows vanish, indep. parser) |
+| r1_25sat_ctlB_satonly_p*.ms | 18 | 39 | level-1 (radical-HW + quot/quot-deg) + 3 sat rows |
+| r1_23sat.ms (char 0) | 118 | 136 | base 115 VERBATIM + 3 (39.6 MB) |
+| r1_23sat_p105337/_p105673.ms | 113 | 131 | wfree base 110 VERBATIM + 3 reduced |
+| r1_23sat_ctlA_relaxed_p*.ms | 108 | 128 | s1-inv/qL-inv dropped; NONEMPTY certified (origin, 108/108 vanish) |
+| r1_23sat_ctlB_satonly_p*.ms | 92 | 131 | level-1 (radical-HW + band/quot/quot-deg) + 3 sat rows |
+| r1_25sat_ext_p105337/_p105673.ms | 137 | 93 | 18.3-mandated SATURATED re-emission of the box01 ext decider (56.5 MB each); FLEET object, not run locally |
+
+Guard C both primes both gates: origin fails EXACTLY the constant
+rows (4 = s1-inv + uW1/uW2/tcL for 25; 5 = + qL-inv for 23) -- the
+gates exclude the zero point and carry no other constant row.  Paren
+sweep + [0,p) reduction asserts PASS on every emitted p-file; char-0
+gates carry the base rows byte-identically (asserted in-emitter).
+
+### 20.3 Run ledger (msolve 0.10.1 local, -g 2 -t 4, timeout 1200 s;
+### logs runs/r1_25sat_runs.log, r1_23sat_runs.log)
+
+| run | p=105337 | p=105673 |
+|---|---|---|
+| r1_25sat_p* (MAIN, saturated) | GB != [1] NONEMPTY, 1 s (24-elt GB) | GB != [1] NONEMPTY, 1 s |
+| r1_25sat_ctlA_relaxed_p* | NONEMPTY by EXPLICIT POINT (origin; indep. parser cert, 20.2) | (same) |
+| r1_25sat_ctlB_satonly_p* | GB != [1] NONEMPTY, 1 s | GB != [1] NONEMPTY, 1 s |
+
+| r1_23sat_p105337 (MAIN, saturated; FIRST-EVER run of the (2,3) core) | TIMEOUT 1200 s / 15.0 GB rss | (see below) |
