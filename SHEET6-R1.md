@@ -2433,9 +2433,11 @@ vanishing, not 19/19; re-verified by a fresh independent-parser run
 (/tmp/r1q2/ctl_cert.py, both primes; bf_18/24/30 solved from their
 truncated defining rows -- all 0 on the stratum -- and s1F = 0, i.e.
 the zero-extension lies on the relaxed locus with the quotient scale
-OFF, matching ctlB's s1F == 0 forcing).
-| r1_q2_l13_ctlB_satonly | **GB=[1] EMPTY**, 1 s | **GB=[1] EMPTY**, 1 s |
-| r1_q2_l8 (175 vars, 1.1 MB) | TIMEOUT 1200 s / 14.5 GB | msolve crash (0-byte out; ledger line INVALID, annotated) |
+OFF, matching ctlB's s1F == 0 forcing).  [Dedupe note, concurrent-
+session merge: the ctlB row above is the single banked copy; the l8
+verdicts live in the l8 tier table below -- the "msolve crash" reading
+of the 0-byte p105673 out is superseded there (the process was killed
+externally in resume cleanup, then re-run t12: TIMEOUT).]
 
 ctlB EMPTY at BOTH primes = **s1F == 0 is FORCED on the entire
 54-direction stratum variety** (quotient subset + chart alone, no tie
@@ -2468,25 +2470,54 @@ rows) + corroborated by an actual GB != [1] at p = 105337, 37 s.
 
 | l8 object | p=105337 | p=105673 |
 |---|---|---|
-| r1_q2_l8 (main, t12 re-run) | TIMEOUT 1200 s / 12.0 GB (t12; t4 first pass 14.4 GB) | (t12 run in flight) |
-| r1_q2_l8_ctlB_satonly | TIMEOUT 1200 s (t4) | (pending) |
-| r1_q2_l8_sub16 (rows n<=16 only; kill-sound subset) | (in flight) | (queued) |
+| r1_q2_l8 (main, t12 re-run) | TIMEOUT 1200 s / 12.0 GB (t12; t4 first pass 14.4 GB) | TIMEOUT 1200 s / 5.2 GB (t12) |
+| r1_q2_l8_ctlB_satonly | TIMEOUT 1200 s (t4) | not run (harness chain died post-p105337; symmetric wall expected; box01 queue) |
+| r1_q2_l8_sub16 (rows n<=16 only; kill-sound subset) | TIMEOUT 1200 s / 6.8 GB | not run (p105337 wall settles it) |
+
+l8 tier verdict: UNRESOLVED at the 1200 s local budget -- main (t4 +
+t12), ctlB, AND the 3-quotient-row kill-sound subset (n <= 16, 13.7k
+terms) all wall out, so the l12/l13 GB cliff is NOT a row-mass
+artifact: the obstruction is the opened slot-8..12 directions
+themselves.  Subset probes sub16/23/30 are emitted at both primes
+(systems/r1) for the box01 queue.  No verdict claim at l8 beyond ctlA
+NONEMPTY (explicit point); the l13 PROOF-TIER kill stands as the
+deepest resolved stratum.
 
 FRONTIER MEASUREMENT (l12 = stratum with uf24 + the slot-12
 directions added; emissions r1_q2_l12_p*.ms banked, anchors PASS):
-r1_q2_l12_p105337.ms TIMEOUT 1200 s / 6.6 GB (p105673 symmetric run +
-the box01-tier ledger lines append to runs/r1_q2_runs.log as they
-finish).  The local GB-resolution cliff sits EXACTLY between stratum
+r1_q2_l12_p105337.ms TIMEOUT 1200 s / 6.6 GB; p105673 SYMMETRIC
+(TIMEOUT 1200 s / 6.1 GB, landed in-session); further box01-tier
+ledger lines append to runs/r1_q2_runs.log as they finish.  The local GB-resolution cliff sits EXACTLY between stratum
 13 (GB = [1] in 1 s at both primes) and stratum 12; l8 timed out at
 -t 4 AND at the -t 12 retry (12 GB).  Strata 12/8 emissions are
-banked and queued for box01 (>= 64 GB / long timebox); strata 4/1
-additionally need the higher-budget BUILD (sizing table above).
+banked and queued for box01 (>= 64 GB / long timebox); stratum 4 is
+now BUILT + emitted (below); stratum 1 alone still needs the
+higher-budget BUILD (sizing table above).
+
+lcut = 4 tier record (77/84 free directions -- only bf_13/14/15,
+bg42_13/14/15, bg21_14 at slots 1..3 zeroed; 198 vars, 43.5 MB,
+quotient rows 960,682 terms).  Build + anchors at BOTH primes: A-Q2-1,
+A-Q2-2, E1 slot-0, grading, two-path fold equality all PASS
+(/tmp/r1q2/l4_build_p*.log); build pickles + emissions + ctl objects
+banked (systems/r1/r1_q2_l4_*).  ctlA_relaxed: NONEMPTY by EXPLICIT
+POINT at both primes (ctl_cert.py: 15/15 rows vanish, s1F = 0,
+bf_18/24/30 = 0).
+
+| l4 object | p=105337 | p=105673 |
+|---|---|---|
+| r1_q2_l4 (main, t12) | TIMEOUT 1200 s / 15.4 GB | TIMEOUT 1200 s / 14.1 GB |
+| r1_q2_l4_ctlB_satonly | not run locally (l12/l8 wall governs a fortiori; emitted for box01) | (same) |
+
+l4 tier verdict: UNRESOLVED at the 1200 s local budget (expected from
+the l12 cliff); the tier's value is the BANKED BUILD -- the fold, the
+anchors, and the 43.5 MB emissions ship box01-ready, so the deep-
+strata queue is now l12/l8/l4 emitted + l1 build-gated.
 
 ### 19.4 The net G_m two-pole picture (supersedes 18.5)
 
 | branch | core level (saturated) | depth-84 tier | status |
 |---|---|---|---|
-| minimal (3,4) | survives (r1_minsat NONEMPTY; 13.1 identity) | witness family DEAD char 0 + 2p (18.1); UU-chart STRATUM slots>=13 (54/84 free dirs + W symbolic) DEAD at both primes, s1F==0 forced (ctlB) both primes; char-0 stratum object banked + cross-engine-verified (run: see ledger) | DEAD on every UU-chart locus so far reachable; residual = strata 12/8 (emitted, box01) and 4/1 (build-gated) |
+| minimal (3,4) | survives (r1_minsat NONEMPTY; 13.1 identity) | witness family DEAD char 0 + 2p (18.1); UU-chart STRATUM slots>=13 (54/84 free dirs + W symbolic) DEAD at both primes, s1F==0 forced (ctlB) both primes; char-0 stratum object banked + cross-engine-verified (run: see ledger) | DEAD on every UU-chart locus so far reachable; residual = strata 12/8/4 (emitted, box01) and 1 (build-gated) |
 | (1,2) | **ALIVE at core** (19.3 retraction; r1_12sat_corr NONEMPTY char 0 + 2p) | not built (its own per-branch ladder; the k1=1 s1-tie is a series-tier row at pole level 4/42) | 18.2 kill RETRACTED; obligations = 15.3 list |
 | (2,3) | chain core queued (sec 11) | -- | untouched; 18.3-style saturation advisory binds |
 | (2,5) | core NONEMPTY (sec 11) | ext decider on box01 | advisory 18.3 unchanged |
@@ -2497,7 +2528,12 @@ that survives; the REOPENED (1,2) branch's own series ladder; and the
 two chain deciders.  Standing rules in force: sec-17 saturation, the
 19.2 ledger-hygiene rule (0-byte .out != NONEMPTY), and the Q2E5
 lesson -- St 3.9(ii) transports require the 3.9(i) count equality,
-checked per member per edge.
+checked per member per edge.  NEXT BUILD (banked directive): the
+(2,3)/(2,5) chain gates, built SATURATED FROM BIRTH per the sec-17/18
+standing rule (tie + Rabinowitsch rows in the first emission, never
+retrofitted), so their core verdicts land at the same evidence tier
+as r1_minsat/r1_12sat_corr; then the (1,2) branch's own F_s
+band/quotient ladder (where the level-4/42 s1-condition lives).
 
 CHAR-0 LEG (phase x; the 15.6 char-0-upgrade path, brought local):
 r1_q2_l13.ms EMITTED (24 eqs, 151 vars, 315 kB): the EXACT-ring twin
@@ -2520,5 +2556,11 @@ fully symbolic on E, 36-tail + ext + fresh-tail budget free).  This
 subsumes 18.1's witness-family kill (free x = 0 c= the stratum) and
 upgrades it from the free-x = 0 section to a 54-dimensional-family
 statement.  Residual for the branch at this tier: free support
-touching slots < 13 -- strata 12/8 banked for box01, 4/1 build-gated
-(19.2 sizing).
+touching slots < 13 -- strata 12/8/4 emitted + banked for box01 (l4
+built in-session, 43.5 MB, anchors PASS), stratum 1 build-gated (19.2
+sizing).  §19.0 partial-branch semantics with L = 13 (proof-grade):
+every depth-84 survivor on the UU chart carries a NONZERO free
+dead-stretch coefficient at some slot < 13; the 1200-s local GB
+budget resolves nothing below that cliff (l12/l8/l4 all wall out at
+both primes, incl. kill-sound row subsets), so the F_s-route
+exclusion CLAIM stays at the stratum, not the full chart.
