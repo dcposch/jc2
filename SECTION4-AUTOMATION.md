@@ -434,5 +434,32 @@ Notes: 8_28mn34d144 carries the first surviving R9 ALIGNED-end branch
 come from residual-steepened polygons (j re-derived from the polygon, not
 the table ⌈b₀/a₀⌉ — sound, finalize is generic). All 44 cases sit in
 OUT-OF-SCOPE prefilter cells (no (2,2)-strip skips); farm pins the corner
-sets in systems/farm/<family>/manifest.json.
+sets in systems/farm/<family>/manifest.json. 12_36_r1 and _r2 produce
+IDENTICAL case sets (different GGV5 chains, same reduced constraints):
+any verdict on an r1 system transfers to its r2 twin verbatim.
+
+First verdicts (farm run 2026-08-11, runs/farm_stuck7.log):
+- 12_36mn23d144_r1_c3 (= engine c4, the origin-ray world at rhs x²):
+  **EMPTY-BY-CASCADE at 0.0 s** — an original equation contradicts in the
+  first M1 pass. This is the coefficient-level mirror of the vdE 10.2.6
+  support-level kill predicted in the conservatism note above (the ray
+  world has deg_x P(x,0) = 0); transfers to 12_36mn23d144_r2_c3.
+
+### Emission run + completion protocol
+
+`cases/farm_driver.py <9 families>` running locally (JC_BACKEND=flint,
+chars 65521,0; log runs/farm_stuck7.log; sweep layout/naming under
+systems/farm/<family>/, manifests overwrite the old REDUCE4-STUCK stubs).
+Observed so far: r0_c1 partial 147 s; r1 = 3 partials (507/426/237 s,
+c2-prepsi char-0 only via the p-hygiene fallback) + the c3 EMPTY above.
+A detached post-chain (`ops/stuck7_post.sh` + `ops/stuck7_verdicts.sh`)
+fires on the driver's DONE line and (i) builds round-trip-guarded
+.RED.ms twins for every p>0 emission (msolve-0.10.1 64-bit-clamp rule;
+r0_c1/r1_c1/r1_c4 twins already built, guard PASS), (ii) writes the queue
+fragment systems/farm/queue/stuck7/queue.txt (dispatch format; byte-dedup
+of the r1/r2 twin systems, box01/box02 queues untouched — box01 live),
+(iii) msolves every emission < 25 MB locally at timeout 900 s into
+runs/stuck7_verdicts/ (verdicts need authentication before banking:
+proper GB header + basis length 1). Completion marker in the log:
+`[post] ALL POST-PROCESSING DONE`.
 
