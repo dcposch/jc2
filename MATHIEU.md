@@ -28,7 +28,7 @@ The Mathieu–Zhao lens does three things here.
    polynomials forces deg A ≤ 1, for every k ≥ 1, in characteristic 0.
    Consequently (with RESIDUE.md §4b's uniform outer theorem) conj:R
    holds at ALL cells k, d2 ≥ 2 — including the previously open
-   (3,4), (4,4), (5,4) and all d2 ≥ 5.  Status: new proof, this file;
+   (3,4), (4,4), (5,4) and all d2 ≥ 5.  Status: PROVED + PROMOTED (2026-08-12, MATHIEU-REVIEW.md: all six fronts CONFIRMED; Theorem A real; conj:R closes at every cell k,d2>=2 char 0). Original status: new proof, this file;
    machine-corroborated at every step (§7); NEEDS adversarial review
    before the paper absorbs it (repo practice: LEMMA-REVIEW pattern).
 

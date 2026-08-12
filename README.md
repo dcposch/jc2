@@ -19,6 +19,8 @@ DC(2), residue theory, deg ≤ 150 frontier farm).
 
 ### Vertex-gap program
 - [x] Theorem grid (2,2),(2,3),(2,4) + k≥3 impossibility (reviewed)
+- [x] conj:R PROVED (Theorem A via Duistermaat-van der Kallen mechanism, adversarially
+      reviewed): strip obstruction theory now UNIFORM in (k,d2), char 0
 - [x] R functional = Grothendieck residue at toric boundary (3 interpretations
       verified; uniform extra formula; conj:R reduced to rigidity half)
 
