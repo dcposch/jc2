@@ -24,7 +24,7 @@
 \maketitle
 
 \begin{abstract}
-Below degree $125$, the reduction program of Guccione, Guccione, Valqui and Horruitiner leaves a single open family of possible counterexample degrees to the plane Jacobian conjecture, $(\deg P,\deg Q)=(108,72)$. One of its two reduced subcases is a pair of parallel Newton-polygon strips with $[P,Q]=x^2$. We develop an obstruction theory for such strip pairs: a vertex normalization at a Minkowski vertex, a gap condition on the bottom corners, and a counting argument on a self-contained near-origin block. At $(k,d_2)=(2,2)$ this empties the generic chart; the $(8,28)$ family is the explicit ten-step case. We prove related statements at $(2,3)$ and $(2,4)$ (support rigidity plus a residue hyperplane), certify rigidity at $(3,3)$, $(4,3)$, $(5,3)$, show that no near-origin obstruction exists for $k\geq 3$ at $d_2=2$, and organize the cells by a conjectural logarithmic-residue functional $R_{k,d_2}$ whose one-term case is the $(2,2)$ theorem. All claims are machine-verified in exact arithmetic.
+Below degree $125$, the reduction program of Guccione, Guccione, Valqui and Horruitiner leaves a single open family of possible counterexample degrees to the plane Jacobian conjecture, $(\deg P,\deg Q)=(108,72)$. One of its two reduced subcases is a pair of parallel Newton-polygon strips with $[P,Q]=x^2$. We develop an obstruction theory for such strip pairs: a vertex normalization at a Minkowski vertex, a gap condition on the bottom corners, and a counting argument on a self-contained near-origin block. At $(k,d_2)=(2,2)$ this empties the generic chart; the $(8,28)$ family is the explicit ten-step case. Our main theorem describes the block at every cell $k,d_2\geq 2$ in characteristic zero: the depth-two block variety is $\{A\ \text{binomial}\}\cap(\{a_2=0\}\cup\{R_{k,d_2}=0\})$, where $A$ is the low $P$-column and $R_{k,d_2}$ is an explicit logarithmic-residue functional whose one-term case is the $(2,2)$ theorem. The rigidity input is an elementary lemma: if $AC'-\nu A'C$ is a nonzero constant, with $A,C$ polynomials and $\nu\geq1$ an integer, then $\deg A\leq 1$. Deeper Minkowski columns, the $k=1$ cells, and non-strip shapes remain open. All claims are machine-verified in exact arithmetic.
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -35,7 +35,7 @@ Degree is the oldest invariant. Moh proved that a plane counterexample $(P,Q)$ m
 
 Proposition 4.3 of \cite{GGHV} reduces this family to two subcases: find $(P,Q)$ with $[P,Q]:=P_xQ_y-P_yQ_x=x^2$, with $N(P)$ and $N(Q)$ in prescribed small polygons and prescribed vertices attained. In subcase (2) both polygons are narrow lattice \emph{strips} along $(1,2)$. A computational campaign discarded that subcase over characteristic zero (conditional on Proposition 4.3; Section \ref{sec:computation}); the generic chart empties by a short substitution chain ending in $-1=0$. This note isolates that mechanism, the \emph{vertex-gap obstruction}, and develops it as far as it provably goes.
 
-For reduced strip pairs with $[P,Q]=x^k$ and direction $(1,d_2)$ (Section \ref{sec:setup}), we prove two counting propositions that locate a self-contained near-origin block of bracket equations (Section \ref{sec:gap}); the vertex-gap theorem at $(k,d_2)=(2,2)$, emptying the chart $a_2a_6\neq 0$ by a surplus relation of pinning type in the radical of the block ideal (Section \ref{sec:gap}); variants at $(2,3)$ and $(2,4)$ (support rigidity of a $P$-column plus a residue hyperplane), rigidity certificates at $(3,3)$, $(4,3)$, $(5,3)$, and the absence of any near-origin obstruction for $k\geq 3$ at $d_2=2$ (Section \ref{sec:variants}); and the explicit ten-event collapse for the $(8,28)$ generic chart (Section \ref{sec:example}). A conjectural logarithmic-residue functional $R_{k,d_2}$ organizes the cells, with the $(2,2)$ theorem as its one-term case (Section \ref{sec:functional}). Section \ref{sec:coverage} records which GGV families the theory covers; Section \ref{sec:computation} describes verification and AI assistance.
+For reduced strip pairs with $[P,Q]=x^k$ and direction $(1,d_2)$ (Section \ref{sec:setup}), we prove two counting propositions that locate a self-contained near-origin block of bracket equations (Section \ref{sec:gap}); the vertex-gap theorem at $(k,d_2)=(2,2)$, emptying the chart $a_2a_6\neq 0$ by a surplus relation of pinning type in the radical of the block ideal (Section \ref{sec:gap}); variants at $(2,3)$ and $(2,4)$ (support rigidity of a $P$-column plus a residue hyperplane), rigidity certificates at $(3,3)$, $(4,3)$, $(5,3)$, and the absence of any near-origin obstruction for $k\geq 3$ at $d_2=2$ (Section \ref{sec:variants}); and the explicit ten-event collapse for the $(8,28)$ generic chart (Section \ref{sec:example}). Section \ref{sec:functional} proves the main structural result: a logarithmic-residue functional $R_{k,d_2}$, whose one-term case is the $(2,2)$ theorem, describes the depth-two block variety at every cell $k,d_2\geq 2$ in characteristic zero, subsuming and completing the per-cell results of Section \ref{sec:variants}. Section \ref{sec:coverage} records which GGV families the theory covers; Section \ref{sec:computation} describes verification and AI assistance.
 
 \section{Setup: strip pairs, valuations, and the vertex normalization}\label{sec:setup}
 
@@ -235,14 +235,14 @@ then give $q^2=36s$ and $27r^2=2q^3$, and $E_1=0$ with $q\neq0$ gives $r=pq/6$; 
 \end{proof}
 
 \begin{remark}
-Every perfect power $(1+uy)^\delta$ with $\delta\geq4$ satisfies the divisibility $A\mid N(A)$; it is squarefreeness that eliminates it. Any proof for general $d_2$ must keep both halves of the argument, which is why we do not yet have one (see the conjecture in Section \ref{sec:functional}).
+Every perfect power $(1+uy)^\delta$ with $\delta\geq4$ satisfies the divisibility $A\mid N(A)$; it is squarefreeness that eliminates it. Any direct extension of this argument to general $d_2$ must keep both halves; the proof in Section \ref{sec:functional} instead bypasses the divisibility entirely (Theorem \ref{thm:ode}).
 \end{remark}
 
 \begin{theorem}[rigidity certificates at $(k,3)$, $k=3,4,5$]\label{thm:k3}
 At $(k,d_2)=(3,3),(4,3),(5,3)$ the inner extra keys again force $a_3=a_4=0$ ($A$ binomial); consequently these block varieties contain no point with all block coordinates nonzero. The proof is a machine-verified pair of exact Sylvester resultant computations for each cell: an $a_4$-resultant of two inner extras equal to $c\,a_3^m$ with constant $a_4$-leading coefficient, followed by an $a_2$-resultant on the slice $a_3=0$ equal to $c'a_4^N$; the exponents $(m,N)$ are $(15,12)$, $(26,34)$, $(40,44)$ respectively. The certificates are exact rational arithmetic, locked by executable assertions in the repository (Section \ref{sec:computation}).
 \end{theorem}
 
-Theorem \ref{thm:k3} is certified computation, not a structural proof: unlike Theorems \ref{thm:23} and \ref{thm:24} we have no conceptual derivation at these cells, and rigidity at $(3,4)$, $(4,4)$, $(5,4)$ and $d_2\geq5$ is open.
+Theorem \ref{thm:k3} was certified computation without a structural derivation; Theorem \ref{thm:R} now provides one at every cell $k,d_2\geq2$, including the then-open $(3,4)$, $(4,4)$, $(5,4)$ and all $d_2\geq5$, and the certificates remain as independent corroboration.
 
 \subsection{Impossibility for $k\geq 3$ at $d_2=2$}
 
@@ -307,37 +307,71 @@ In the language of Section \ref{sec:gap}: $(\text{unit})\cdot a_2^2a_6\cdot b_3$
 
 The chain is re-runnable with per-equation provenance and was replayed by adversarial review with independently written geometry, substitution, and census code (no pivot ties; spot checks at random rational points). The two central identities are also checked in Lean~4 with mathlib: the reduction of the key-$(3,6)$ coefficient under the ten substitutions to $(-1/5)\,a_2^2a_6\,\iota_{a_1}^2 b_3$ ($\iota_{a_1}$ the formal inverse of $a_1$), and the collapse of equation $\#3$ to $-1$ at $b_3=0$. The first Lean proof holds already in the free commutative ring and therefore specializes to the localization used here. The formal development covers the identity chain only, not the census or variety preservation of the eliminations.
 
-\section{The log-residue functional: a conjecture}\label{sec:functional}
+\section{The log-residue functional: a theorem}\label{sec:functional}
 
-The integral formula in the proof of Theorem \ref{thm:kbig} explains all the coefficients seen so far, and suggests the general picture. Work on the binomial locus ($A=1+a_2y$ after normalizing units, $a_2\neq0$) at any type $(k,d_2)$, and substitute $z=1+a_2y$, $\beta(z):=B(y(z))$, a polynomial of $z$-degree $2d_2$ with $\beta(1)=0$. The solved outer column is
-\[
-E=-\frac{1}{a_2}\,z^{k+1}\!\int_1^z\Bigl[2\beta w^{-3}-\beta'w^{-2}+\beta' w^{-(k+2)}\Bigr]dw,
-\]
-and the only term that can obstruct polynomiality is the index $m=k+1$ in $\beta'=\sum_m\beta'_mw^m$: it integrates to $\beta'_{k+1}\log z$. Since $\deg_z\beta'=2d_2-1$, such a term exists when
-\[
-k+1\;\leq\;2d_2-1 .
-\]
-When it exists, the solved column $E$ acquires the tail $-\frac{1}{a_2}\beta'_{k+1}\,z^{k+1}\log z$, whose truncated coefficients are what the extra keys see: the near-origin geometry obstructs when the logarithmic residue $\beta'_{k+1}$ survives. Expanding $\beta$ through $y=(z-1)/a_2$ gives, up to a unit times a power of $a_2$,
+The integral formula in the proof of Theorem \ref{thm:kbig} explains all the coefficients seen so far and, made uniform, proves the general picture. On the binomial locus at any type $(k,d_2)$ ($A=1+a_2y$ after normalizing units, $a_2\neq0$), in the coordinates $z=1+a_2y$ and $\beta(z):=B(y(z))$ (of $z$-degree $2d_2$, $\beta(1)=0$), the only term of the displayed integrand that can obstruct polynomiality of the solved outer column is the index $m=k+1$ of $\beta'=\sum_m\beta'_mw^m$, which integrates to $\beta'_{k+1}\log z$. Since $\deg_z\beta'=2d_2-1$, such a term exists exactly when $k+1\leq 2d_2-1$, and the extra keys see the truncated coefficients of the tail $-\frac{1}{a_2}\beta'_{k+1}z^{k+1}\log z$: the near-origin geometry obstructs when the logarithmic residue $\beta'_{k+1}$ survives. Expanding $\beta$ through $y=(z-1)/a_2$ gives, up to a unit times a power of $a_2$,
 \[
 \beta'_{k+1}\;\doteq\;R_{k,d_2}\;:=\;\sum_{j=k+2}^{2d_2}(-1)^j\binom{j}{k+2}\,a_2^{\,2d_2-j}\,\beta_j ,
 \]
-a linear form in the $P$-column-$2$ coefficients $\beta_j=a_{(2,j)}$ with binomial coefficients. This functional organizes every cell computed so far:
-\begin{itemize}
-\item $(2,2)$: the sum has the single term $j=4$: $R_{2,2}=\beta_4=a_6$. The pinning monomial $a_2^2a_6$ of Theorem \ref{thm:22} is $a_2^2R_{2,2}$: the pinning obstruction is the one-term case of the residue.
-\item $(k,2)$, $k\geq3$: the sum is empty, $R\equiv0$, and Theorem \ref{thm:kbig} confirms that no obstruction exists.
-\item $(2,3)$ and $(2,4)$: $R_{2,3}=a_2^2\beta_4-5a_2\beta_5+15\beta_6$ and $R_{2,4}=a_2^4\beta_4-5a_2^3\beta_5+15a_2^2\beta_6-35a_2\beta_7+70\beta_8$, the hyperplanes of Theorems \ref{thm:23full} and \ref{thm:24}.
-\item On the binomial locus, in every computed cell one outer extra key survives and equals a unit times a power of $a_2$ times $R_{k,d_2}$, the other outer extras vanishing identically; the verified unit factors are $\frac{a_2^3}{21}$ at $(2,3)$, $-\frac{a_2^6}{99}$ at $(3,3)$, $\frac{2a_2^9}{1001}$ at $(4,3)$, $-\frac{a_2^4}{55}$ at $(2,4)$, $-\frac{a_2^8}{364}$ at $(3,4)$; at $(5,3)$, where $k+2>2d_2$, every outer extra vanishes identically, as the empty sum predicts.
-\end{itemize}
+a linear form in the $P$-column-$2$ coefficients $\beta_j=a_{(2,j)}$ with binomial coefficients. This functional organizes every cell; by Theorem \ref{thm:R} below, the computed instances are illustrations, not evidence. At $(2,2)$ the sum has the single term $j=4$, $R_{2,2}=\beta_4=a_6$, and the pinning monomial of Theorem \ref{thm:22} is $a_2^2R_{2,2}$. At $(k,2)$, $k\geq3$, the sum is empty, $R\equiv0$, and Theorem \ref{thm:kbig} confirms that no obstruction exists. At $(2,3)$ and $(2,4)$, $R$ is the hyperplane displayed in Theorems \ref{thm:23full} and \ref{thm:24}. On the binomial locus, in every computed cell one outer extra key survives and equals a unit times a power of $a_2$ times $R_{k,d_2}$, the rest vanishing identically; the verified units $\frac{a_2^3}{21}$ at $(2,3)$, $-\frac{a_2^6}{99}$ at $(3,3)$, $\frac{2a_2^9}{1001}$ at $(4,3)$, $-\frac{a_2^4}{55}$ at $(2,4)$, $-\frac{a_2^8}{364}$ at $(3,4)$, and the identically vanishing outer extras at $(5,3)$, where $k+2>2d_2$ and the sum is empty, are all instances of the closed form in Lemma \ref{lem:outer}.
 
-\begin{conjecture}[log-residue description of the block variety]\label{conj:R}
-For every $k\geq2$, $d_2\geq2$, and every reduced strip pair of type $(k,d_2)$ satisfying \textup{(i)}, the variety of the extra keys of the depth-two block is
+Everything reduces to one elementary rigidity statement about the weighted derivation identity ($\nu$ is the weight, reserving $w$ for strata; $\operatorname{lc}$ is the leading coefficient).
+
+\begin{theorem}[ODE rigidity, all weights]\label{thm:ode}
+Let $F$ have characteristic zero, let $\nu\geq1$ be an integer, and let $A,C\in F[y]$ satisfy $AC'-\nu A'C=c$ for some constant $c\in F$, $c\neq0$. Then $\deg A\leq 1$.
+\end{theorem}
+
+\begin{proof}
+Both $A$ and $C$ are nonzero, else the left side is $0$; write $\delta:=\deg A$, $\alpha:=\operatorname{lc}(A)$, and suppose $\delta\geq2$.
+
+\emph{Step 1 (leading coefficients).} For nonzero $D\in F[y]$ of degree $d$, the monomial pair $(A_iy^i,D_jy^j)$ contributes $(j-\nu i)A_iD_j\,y^{i+j-1}$ to $AD'-\nu A'D$; the exponent $\delta+d-1$ is reached only by $(i,j)=(\delta,d)$, and nothing higher occurs. So the coefficient of $y^{\delta+d-1}$ is $(d-\nu\delta)\,\alpha\operatorname{lc}(D)$; in characteristic zero, if $d\neq\nu\delta$ then $\deg(AD'-\nu A'D)=\delta+d-1$ exactly.
+
+\emph{Step 2 (degree of $C$).} If $\deg C\neq\nu\delta$, Step 1 gives $\deg(AC'-\nu A'C)=\delta+\deg C-1\geq\delta-1\geq1$, while $\deg c=0$. Hence $\deg C=\nu\delta$.
+
+\emph{Steps 3 and 4 (subtract the kernel).} $A(A^\nu)'-\nu A'A^\nu=0$, so $D:=C-(\operatorname{lc}(C)/\alpha^\nu)A^\nu$ satisfies $AD'-\nu A'D=c$ by linearity, with $\deg D<\nu\delta$. If $D=0$ then $c=0$; if $D\neq0$ then Step 1 gives $\deg(AD'-\nu A'D)\geq\delta-1\geq1$. Either way a contradiction, so $\delta\geq2$ is impossible.
+\end{proof}
+
+\begin{remark}\label{rem:sharp}
+The theorem is sharp: $A=1+a_2y$, $C=((1+a_2y)^\nu-1)/(\nu a_2)$ (or $A=1$, $C=y$) solve the identity with $c=1$. The proof is the valuation-at-infinity mechanism of the one-variable constant-term theorem of Duistermaat and van der Kallen \cite{DvdK} made elementary. Characteristic zero enters only through $d-\nu\delta\neq0$: in small characteristic Step 2 genuinely fails, consistent with the characteristic-two example of Section \ref{sec:example}.
+\end{remark}
+
+The bridge to the block is the solved inner column of Proposition \ref{prop:B}; keep $a_{p_0}=b_{q_0}=1$, so $A=1+a_2y+\dots+a_{d_2+1}y^{d_2}$; the extra keys of Minkowski column $k+1$ are the \emph{inner extras}, those of column $k+2$ the \emph{outer extras} ($d_2-1$ of each).
+
+\begin{lemma}[block to ODE bridge]\label{lem:bridge}
+Fix $k,d_2\geq2$ over a field $F$ of characteristic zero and fix a point $a=(a_2,\dots,a_{d_2+1})$. The $d_2-1$ inner extras vanish at $a$ if and only if some $C\in F[y]$ with support in $\{y,\dots,y^{kd_2}\}$ satisfies $AC'-kA'C=1$.
+\end{lemma}
+
+\begin{proof}
+By \eqref{eq:odes} the inner-column keys are the coefficients of $AC'-kA'C$, $C=\sum_{j=1}^{kd_2}c_jy^j$: the pair $(a_{(1,i)},c_j)$ contributes $(j-ki)\,a_{(1,i)}c_j\,y^{i+j-1}$. The constant coefficient is $c_1$, set to $1$ by the vertex equation. The top coefficient, of $y^{(k+1)d_2-1}$, is $(kd_2-kd_2)\,a_{(1,d_2)}c_{kd_2}=0$ identically: the $w=0$ stratum of Proposition \ref{prop:A}. The coefficients of $y^1,\dots,y^{kd_2-1}$ determine $c_2,\dots,c_{kd_2}$ triangularly (the pivot of $y^n$ is $n+1\neq0$), and the inner extras are the leftover coefficients of $y^{kd_2},\dots,y^{(k+1)d_2-2}$ of the solved series. If the extras vanish at $a$, the solved $C$ satisfies $AC'-kA'C=1$. Conversely a solution with the stated support is unique: two differ by $K$ with $AK'=kA'K$, i.e.\ $(K/A^k)'=0$ in $F(y)$, so $K=\lambda A^k$, and constant terms ($A^k(0)=1$, $K(0)=0$) force $\lambda=0$. Any solution is thus the solved column, and the extras vanish.
+\end{proof}
+
+\begin{lemma}[outer column on the binomial locus]\label{lem:outer}
+Fix $k,d_2\geq2$, characteristic zero, and let $A=1+a_2y$. Then every outer extra vanishes identically except the lowest (the coefficient of $y^{(k+1)d_2}$), which equals
+\[
+(-1)^{(k+1)d_2-1}\,\frac{k+2}{\binom{(k+1)d_2}{k+1}}\;a_2^{(k-1)d_2}\,R_{k,d_2}
+\]
+as a polynomial identity in $(a_2,\beta_\bullet)$, valid at $a_2=0$ as well.
+\end{lemma}
+
+\begin{proof}
+Write $L(E):=AE'-(k+1)A'E$ and $G:=2BC'-kB'C$, with $C$, $E$ the solved columns of Proposition \ref{prop:B}. On the binomial locus $\deg C=k$, so $\deg G\leq 2d_2+k-1<(k+1)d_2$ (the difference is $(k-1)(d_2-1)>0$), and $\deg A=1$ gives $\deg(L(E)+G)\leq(k+1)d_2$. The coefficients of $y^{d_2},\dots,y^{(k+1)d_2-1}$ are the consumed keys of Proposition \ref{prop:B}, hence zero, and the valuation is at least $d_2$, so $L(E)+G=e\,y^{(k+1)d_2}$ with $e$ the lowest outer extra; the higher outer extras vanish identically. To evaluate $e$, assume $a_2\neq0$ and pair with $\mu(f):=\operatorname{res}_{y=-1/a_2}\bigl(fA^{-(k+2)}dy\bigr)$, the local residue (not the resultant of Section \ref{sec:variants}). Since $L(E)A^{-(k+2)}=(E/A^{k+1})'$ is exact, $\mu(L(E))=0$ and $e\,\mu(y^{(k+1)d_2})=\mu(G)$. Both sides are elementary in $z=1+a_2y$: $\mu(y^n)=(-1)^{n-k-1}\binom{n}{k+1}a_2^{-(n+1)}$, while $G=2\beta z^{k-1}-\beta'z^k+\beta'$ gives $\mu(G)=a_2^{-1}[z^{k+1}]G=(k+2)\,a_2^{-1}[z^{k+2}]\beta$, and $[z^{k+2}]\beta=\sum_j\beta_ja_2^{-j}\binom{j}{k+2}(-1)^{j-k-2}=(-1)^ka_2^{-2d_2}R_{k,d_2}$. Solving for $e$ gives the display. Both sides are polynomials in $(a_2,\beta_\bullet)$, so the identity extends to $a_2=0$.
+\end{proof}
+
+\begin{theorem}[log-residue description of the block variety]\label{thm:R}
+For every $k\geq2$, $d_2\geq2$, and every reduced strip pair of type $(k,d_2)$ satisfying \textup{(i)}, over a field of characteristic zero, the variety of the extra keys of the depth-two block is
 \[
 V(\textup{extras})\;=\;\{A \textup{ binomial}\}\;\cap\;\bigl(\{a_2=0\}\cup\{R_{k,d_2}=0\}\bigr),
 \]
 where ``$A$ binomial'' means $a_{(1,i)}=0$ for $2\leq i\leq d_2$.
-\end{conjecture}
+\end{theorem}
 
-If true, the conjecture implies: no point of the block with all coordinates nonzero when $k,d_2\geq2$ (via the forced $a_{(1,2)}=0$); a pinning-type obstruction only at $(k,d_2)=(2,2)$, where $R$ is a single monomial; no $b$-side obstruction for $d_2\geq3$ ($R$ is then a multi-term linear form, satisfiable with every coordinate nonzero); and no residue condition when $k>2d_2-2$. Current status: proved at $(2,2)$, $(2,3)$, $(2,4)$ (Theorems \ref{thm:22}, \ref{thm:23full}, \ref{thm:24}); at $(3,3)$, $(4,3)$, $(5,3)$ the rigidity half is certified and the outer identity is verified by exact symbolic computation; open at $(3,4)$, $(4,4)$, $(5,4)$ and for all $d_2\geq5$, where the perfect-power component of the divisibility argument (Remark after Theorem \ref{thm:24}) is the obstacle. The conjecture says nothing about Minkowski columns beyond $k+2$; each deeper column contributes one further residue-type condition, and their joint behavior is unexplored.
+\begin{proof}
+Inner half. If the inner extras vanish, Lemma \ref{lem:bridge} produces a polynomial solution of $AC'-kA'C=1$, and Theorem \ref{thm:ode} with $\nu=k$ forces $\deg A\leq1$: the point is binomial. Conversely on the binomial locus the solution in Remark \ref{rem:sharp} has support in $\{y,\dots,y^k\}$, so the inner extras vanish there. Outer half. On the binomial locus, by Lemma \ref{lem:outer} the outer extras vanish exactly when $a_2^{(k-1)d_2}R_{k,d_2}=0$, i.e.\ when $a_2=0$ or $R_{k,d_2}=0$, since $(k-1)d_2>0$. Intersecting the halves gives the display. When $k+2>2d_2$ the sum defining $R$ is empty, $R\equiv0$, and the statement degenerates to $V(\textup{extras})=\{A\textup{ binomial}\}$ (Theorem \ref{thm:kbig} at $d_2=2$).
+\end{proof}
+
+Theorem \ref{thm:R} settles what Section \ref{sec:variants} left open: no point of the depth-two block has all coordinates nonzero when $k,d_2\geq2$ (the forced $a_{(1,2)}=0$); a pinning-type obstruction only at $(2,2)$, where $R$ is a single monomial; no $b$-side obstruction for $d_2\geq3$ ($R$ is then a multi-term linear form, satisfiable with every coordinate nonzero); no residue condition for $k>2d_2-2$. The rigidity halves of Theorems \ref{thm:23} and \ref{thm:24} and the certificates of Theorem \ref{thm:k3} become corollaries, retained as independent corroboration; the cells $(3,4)$, $(4,4)$, $(5,4)$ and all $d_2\geq5$, out of reach of the divisibility argument, are closed (indeed evaluating $AC'-kA'C=1$ at a multiple root gives $0=1$, so perfect powers die with no squarefreeness lemma).
+
+The boundary deserves equal precision. Theorem \ref{thm:R} is a depth-two statement under the strip hypotheses of Definition \ref{def:strip}: Minkowski columns beyond $k+2$ contribute one further residue-type condition each, and their joint behavior remains open. It says nothing at $k=1$ (no gap column, no bridge); nothing for pentagon-shaped or $y$-axis-supported subcases, where the gap kill fails, or for strips of direction $(d_1,d_2)$ with $d_1\geq2$; and it is claimed in characteristic zero only, though the rigidity half holds verbatim for $p>(k+1)d_2$ (a conservative bound on the pivots and weights used).
 
 \section{Application: GGV coverage at $(72,108)$}\label{sec:coverage}
 
@@ -357,7 +391,7 @@ unknown & $9$ & $k=2$ rows, case-by-case reduction not carried out \\
 \end{tabular}
 \end{center}
 
-Annotations. The single theorem-covered row is covered only in part: the $(8,28)$ family reduces in \cite{GGHV} to two subcases, and only subcase (2) is strip-shaped; subcase (1) is pentagon-shaped with $y$-axis support, outside the theory, and was handled computationally. For the $19$ rows with $k=1$, the absence of the mechanism is proved (under (i), $k=1$ forces both bottom corners into column $x=1$, so no gap column exists on either side); this does not discard those families, only that this obstruction cannot explain their failure. The $4$ rows with $k\geq3$ all have $b/a$ integral, so if their corners survive reduction the shape is not a strip and the question is moot; if some subcase were strip-shaped, Theorem \ref{thm:kbig} (at $d_2=2$) or the certificates of Theorem \ref{thm:k3} (at $d_2=3$) would apply, and $d_2\geq4$ would be open. Of the $9$ unknown $k=2$ rows, one (the second reduced branch of $(8,28)$ itself) has $d_2=2$ and would land in the proved cell if it strip-reduces; the other eight are $y$-axis flagged.
+Annotations. The single theorem-covered row is covered only in part: the $(8,28)$ family reduces in \cite{GGHV} to two subcases, and only subcase (2) is strip-shaped; subcase (1) is pentagon-shaped with $y$-axis support, outside the theory, and was handled computationally. For the $19$ rows with $k=1$, the absence of the mechanism is proved (under (i), $k=1$ forces both bottom corners into column $x=1$, so no gap column exists on either side); this does not discard those families, only that this obstruction cannot explain their failure. The $4$ rows with $k\geq3$ all have $b/a$ integral, so if their corners survive reduction the shape is not a strip and the question is moot; if some subcase were strip-shaped, Theorem \ref{thm:R} would cover its depth-two block at every $d_2\geq2$ (with Theorem \ref{thm:kbig} showing that at $d_2=2$ the block imposes nothing beyond support rigidity). Of the $9$ unknown $k=2$ rows, one (the second reduced branch of $(8,28)$ itself) has $d_2=2$ and would land in the proved cell if it strip-reduces; the other eight are $y$-axis flagged.
 
 On current reduction data the proved $(2,2)$ theorem has one client among families of degree $\leq150$: the open $(8,28)$ subcase (2), the case it was built for. No family with degree $\leq150$ is known to need the wide-strip cells $(2,3)$, $(2,4)$, $(k,3)$; Section \ref{sec:variants} is theory completeness and preparation for degrees beyond $150$, not coverage at $150$.
 
@@ -366,16 +400,19 @@ On current reduction data the proved $(2,2)$ theorem has one client among famili
 \noindent\textbf{Pipeline and companion claim.} The campaign behind this note transcribes the Proposition 4.3 polygon data into the full bracket system \eqref{eq:key}, runs the level-ordered unit-pivot elimination and a generic-chart decomposition, and hands each stratum to the Gr\"obner engine msolve \cite{msolve}. The companion claim in the repository is that subcase (2) of Proposition 4.3 has no solutions over any field of characteristic zero, each stratum returning the unit ideal over $\mathbb{Q}$ and at two to three large primes on two independent machines. That claim is conditional on Proposition 4.3 itself; \cite{GGV2,GGV3,GGV4,GGHV} are arXiv-only and unrefereed (versions pinned in the repository, \cite{GGHV} at v1), while \cite{GGV1} is published with one corollary present only in the arXiv version. The theorems of Sections \ref{sec:gap} and \ref{sec:variants} are unconditional statements about strip pairs; only their application to $(72,108)$ inherits the dependency. Theorem \ref{thm:22} replaces the Gr\"obner verdict on the generic chart by a proof and yields the $\{a_2=0\}\cup\{a_6=0\}$ split under which the remaining strata were computed. Subcase (1) is not claimed here.
 
 \medskip
-\noindent\textbf{Verification.} Every displayed reduction is checked by re-runnable exact-arithmetic scripts with executable assertions: a full-pipeline replay with per-equation provenance (the ten-event chain of Section \ref{sec:example}), an independent block-local engine that re-derives Propositions \ref{prop:A}, \ref{prop:B} and the reduction tables from corner data alone, and a third layer that solves the column relations \eqref{eq:odes} in exact rational arithmetic, cross-checks them against a lattice-determinant enumeration of every block key, and carries the resultant certificates of Theorems \ref{thm:23}, \ref{thm:24}, \ref{thm:k3}. Each write-up stage was subjected to adversarial review in a separate session with independently written code. Those reviews confirmed the derivations and produced three corrections incorporated here: the gap condition must be stated side-symmetrically; the chart-free conclusion is radical membership, not ideal membership (Remark \ref{rem:radical}); and numerical probes at $(3,3)$, $(4,3)$, $(5,3)$ had reported solvable systems that are in fact empty (tolerance against multiplicity-three zeros), replaced by the certificates of Theorem \ref{thm:k3}. Numerical verdicts are untrusted throughout; every claim above rests on displayed proofs or exact-arithmetic certificates. Scripts, run logs, review documents, and pinned versions: the archived artifact at \texttt{doi.org/10.5281/zenodo.21894922} (self-contained reproduction bundle: pipeline, certificates, Lean sources, review documents), with the full campaign repository at \texttt{github.com/dcposch/jc72108} (to be made public with this note).
+\noindent\textbf{Verification.} Every displayed reduction is checked by re-runnable exact-arithmetic scripts with executable assertions: a full-pipeline replay with per-equation provenance (the ten-event chain of Section \ref{sec:example}), an independent block-local engine that re-derives Propositions \ref{prop:A}, \ref{prop:B} and the reduction tables from corner data alone, and a third layer that solves the column relations \eqref{eq:odes} in exact rational arithmetic, cross-checks them against a lattice-determinant enumeration of every block key, and carries the resultant certificates of Theorems \ref{thm:23}, \ref{thm:24}, \ref{thm:k3}. A further \texttt{mathieu} mode of the residue checker verifies, in exact arithmetic at all computed cells, the identities of Section \ref{sec:functional}: Theorem \ref{thm:ode}'s two computational identities symbolically, the solves of Lemmas \ref{lem:bridge} and \ref{lem:outer}, and the rigidity dichotomy, including every perfect-power instance $(1+uy)^\delta$. Each write-up stage was subjected to adversarial review in a separate session with independently written code. Those reviews confirmed the derivations and produced three corrections incorporated here: the gap condition must be stated side-symmetrically; the chart-free conclusion is radical membership, not ideal membership (Remark \ref{rem:radical}); and numerical probes at $(3,3)$, $(4,3)$, $(5,3)$ had reported solvable systems that are in fact empty (tolerance against multiplicity-three zeros), replaced by the certificates of Theorem \ref{thm:k3}. Numerical verdicts are untrusted throughout; every claim above rests on displayed proofs or exact-arithmetic certificates. Scripts, run logs, review documents, and pinned versions: the archived artifact at \texttt{doi.org/10.5281/zenodo.21894922} (self-contained reproduction bundle: pipeline, certificates, Lean sources, review documents), with the full campaign repository at \texttt{github.com/dcposch/jc72108} (to be made public with this note).
 
 \medskip
 \noindent\textbf{AI assistance.} AI systems performed eliminations, conjectured the vertex-gap mechanism from the $-1$ collapse, wrote verification scripts, adversarially re-reviewed independent reimplementations, and drafted this text. The human author directed the work, checked the mathematics, and takes responsibility for the claims. Two of the corrections above came from AI review of AI-produced mathematics.
 
+\small
 \begin{thebibliography}{99}
 
 \bibitem{Alpoge} L. Alp\"oge, announcement of an explicit counterexample to the Jacobian conjecture in dimension three (cubic map $\mathbb{C}^3\to\mathbb{C}^3$ with $\det JF\equiv-2$), thread on X, July 20, 2026, \url{https://x.com/__alpoge__/status/2079028340955197566}; detailed write-up announced.
 
 \bibitem{msolve} J. Berthomieu, C. Eder, M. Safey El Din, msolve: a library for solving polynomial systems, Proceedings of ISSAC 2021, ACM, 2021, 51--58.
+
+\bibitem{DvdK} J. J. Duistermaat, W. van der Kallen, Constant terms in powers of a Laurent polynomial, Indag. Math. (N.S.) 9 (1998), 221--231.
 
 \bibitem{GGV1} J. A. Guccione, J. J. Guccione, C. Valqui, On the shape of possible counterexamples to the Jacobian conjecture, J. Algebra 471 (2017), 13--74; arXiv:1401.1784. (The arXiv version contains Corollary 7.12, omitted from the journal version; cf.\ \cite{Heitmann}, Theorem 2.24.)
 
