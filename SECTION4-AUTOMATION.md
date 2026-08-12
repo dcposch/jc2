@@ -335,9 +335,13 @@ per-family case-count/rhs multisets.
 ### Diagnosis A — "multi-root chain edge" (12_36_r0, 12_33, 8_28mn34, 6_15)
 
 The last chain edge has z-degree zdeg > γ = final.b, so the engine's
-single-root chain cut refused. NOT outside §4 scope: GGV5 (1708.07936,
-re-fetched to /tmp/jcrefs/) Definition 2.6 + Proposition `multiplicidad`(4)
-pin the final-corner root α at multiplicity EXACTLY γ·m (γ = m_λ/m), and
+single-root chain cut refused. NOT outside §4 scope: the final corner
+A_(γ) is DEFINED from a root α with γ = m_α/m (GGV5, 1708.07936 re-fetched
+to /tmp/jcrefs/, Remark `bala`; the family enumeration branches over every
+γ ∈ Γ(A,A′), so exactness of γ is the branch hypothesis carried by the
+row, with Prop 2.5(3)/(4) supplying the multiplicity bounds — citation per
+REDUCE4-CUT-REVIEW F1, which corrected an earlier "Def 2.6 +
+`multiplicidad`(4) force exactness" reading), and
 st(P) = m·A0′ exact forces every root nonzero and ≠ α. The e_K(α) cut is
 therefore support-exact REGARDLESS of how zdeg−γ splits among the other
 roots: transformed level = x^c (y+αx^{−K})^d z^γ Π(z−β′_i)^{t_i}, support
@@ -412,7 +416,13 @@ byte-identical, 12 stuck rows → `reduced`; spy-check confirms no new family
 exercises apply_cut's shortened-face-with-prefactor path (the one latent
 under-approximation flagged in REDUCE4-REVIEW Front 3 stays unexercised).
 Multi-root soundness re-read from source: GGV5 tex 1708.07936 lines 594
-(γ = m_λ/m exact), 642–661 (A_(γ) definition), 520 (multiplicity bound).
+(γ := m_λ/m branch datum, Remark `bala`), 642–661 (A_(γ) definition), 520
+(Prop 2.5 multiplicity bound). Adversarially reviewed 2026-08-11:
+REDUCE4-CUT-REVIEW.md — F1 WEAKENED (citation fixed here and in the code
+comments: exactness of γ is the branch datum, not `multiplicidad`(4));
+F2/F3/F5/F6 CONFIRMED; F4 CONFIRMED (EMPTY replayed independently).
+PROMOTION: YES with the citation-fix (applied) and commit-provenance
+riders.
 
 ### Reduction inventory (engine output; UNVALIDATED, same evidence class
 ### as ABOVE125)
@@ -440,10 +450,18 @@ any verdict on an r1 system transfers to its r2 twin verbatim.
 
 First verdicts (farm run 2026-08-11, runs/farm_stuck7.log):
 - 12_36mn23d144_r1_c3 (= engine c4, the origin-ray world at rhs x²):
-  **EMPTY-BY-CASCADE at 0.0 s** — an original equation contradicts in the
-  first M1 pass. This is the coefficient-level mirror of the vdE 10.2.6
-  support-level kill predicted in the conservatism note above (the ray
-  world has deg_x P(x,0) = 0); transfers to 12_36mn23d144_r2_c3.
+  **EMPTY-BY-CASCADE at 0.0 s** — the x² coefficient of [P,Q] is
+  IDENTICALLY ZERO on these supports, so the equation reduces to −1 = 0 in
+  the first M1 pass (replayed independently, REDUCE4-CUT-REVIEW F4). This
+  is the coefficient-level mirror of the vdE 10.2.6 support-level kill
+  predicted in the conservatism note above (the ray world has
+  deg_x P(x,0) = 0); transfers verbatim to 12_36mn23d144_r2_c3 (byte-
+  identical twin, confirmed live: r2_c3 EMPTY-BY-CASCADE 0.0 s). Caveat
+  (F4 rider): this retires a deliberately over-emitted ray world, not a
+  main branch.
+- 10_40mn32d150_r0_c6 (= engine c5, the ray-below-(5,1) world at rhs x³):
+  **EMPTY-BY-CASCADE** — same vdE-mirror pattern (origin-ray world, only
+  (0,0) on the x-axis); the identical 10_40_r1 case is expected to follow.
 
 ### Emission run + completion protocol
 
@@ -461,5 +479,9 @@ of the r1/r2 twin systems, box01/box02 queues untouched — box01 live),
 (iii) msolves every emission < 25 MB locally at timeout 900 s into
 runs/stuck7_verdicts/ (verdicts need authentication before banking:
 proper GB header + basis length 1). Completion marker in the log:
-`[post] ALL POST-PROCESSING DONE`.
+`[post] ALL POST-PROCESSING DONE`. Early local lane result: the two
+smallest emissions (6_15 c1 RED 35 MB p=65521; c2 q.ms 17 MB char-0)
+both TIMED OUT at 900 s / 4 threads — the stuck-closure partials are
+box-scale jobs; the local lane adds no verdicts beyond the two cascade
+EMPTYs.
 
