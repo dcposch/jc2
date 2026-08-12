@@ -185,3 +185,17 @@ remaining kill surface is exactly the S layer plus the coefficient layer:
 Gate = run_cell(2,6) checked field-for-field against the promoted record
 before any sweep output is written; the sweep aborts if it fails.
 
+
+## ERRATUM / SCOPE RIDER (2026-08-12, from cross-model review — GPT 5.6 Sol,
+## corroborated independently by Grok 4.6's "mixed-merge children" flag)
+
+The enumeration covers the ALL-b=1 AXIS (every entry M_{P_i} = b_i = 1,
+mu=1-arrival merges per MP6). Two scope corrections:
+1. "Prime td 7/11/13 panels EMPTY" means NO all-b=1 configuration exists
+   there; OFF-AXIS configurations (some b_i >= 2, whose chains propagate
+   M = b_i and can meet in mixed merges with all mu_e >= 2, legal at
+   m >= 3) are NOT enumerated by this book. "td 7/11/13 fully excluded"
+   is RETRACTED at multi-pole level pending the off-axis sector.
+2. Prop 5.8 (td = Sigma Lambda) was audit-reconstructed for GENERIC a
+   only (SIGRAY-AUDIT.md); the every-a strength consumed by layer E
+   carries that rider until the relative pole-divisor argument is proved.
