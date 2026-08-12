@@ -14,7 +14,7 @@ searrow law) CONFIRMED and promotable after fix cycle; R1.3-R1.5 REFUTED
 M-descent law contradicts St 9.6(iii)/(iv)); td=7 RESTORATION RETRACTED
 AGAIN (honest state: 4 DEAD / 2 ALIVE at td=7, incl. the exact (7,5)
 eps-cell d^2=(3/2)c^2 -> live equal-w join); sections 8-9 recount
-UNCERTIFIED. Repair route: lambda-budget per the review. 
+UNCERTIFIED. Repair route: lambda-budget per the review — **lambda-budget repair in progress (2026-08-12, this session)**. 
 Original status: COMPLETE + CLOSURE LEMMAS PROVED (2026-08-12, two sessions).
 VERDICT (updated): **R1 (off-axis w-law) and R2 (general-μ merge
 anatomy) are now PROVED (§6–§7)** at H1 tier (Prop 9.3 arithmetic over
