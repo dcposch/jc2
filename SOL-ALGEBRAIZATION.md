@@ -1,3 +1,11 @@
+Status: PROMOTED (2026-08-12, SOL-ALGEBRAIZATION-REVIEW.md: matrix + scope
+CONFIRMED, obstruction direction sound, Wiedemann certificate regenerated
+hash-identical; E5 factor adjudicated IN SOL'S FAVOR by from-scratch exact
+rebuild 90/90 anchored on promoted E6, Grok concurring — TEMPLATE line 239
+patched; the stale 729-rows in r1_q0_gate/r1_q2_screen/r1_12_sat are
+unit-rescalable, NO banked verdict flips; re-emission = hygiene rider).
+Authored by GPT 5.6 Sol; reviewed by Fable + Grok.
+
 # Bounded Hermite--Padé algebraization test for residue A
 
 Date: 2026-08-12.  Engine: `cases/sol_algebraization.py`.  Arithmetic:

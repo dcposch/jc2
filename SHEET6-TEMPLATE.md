@@ -236,7 +236,12 @@ term cancels IDENTICALLY): p_{h1,P_i} = -(3/4) s0 lam_i^3 w_i^4
 (eta^2 - (4/3)w_i^2), deg 2 = 2 EXACT. Lead transport (St 3.9(ii)):
     H_M 9 c_i^5 (a1-a2)^2 (a_i - b) = -(3/4) s0 lam_i^3 w_i^4
 pins w_i^4 (nonzero, solvable: a_i != b) — no obstruction, no freedom:
-    w_i^4 = -(4/3) H_M (a_i-b) / (243 s0 S_M^3 (a1-a2)^4 a_i^2 c_i).
+    w_i^4 = -(4/3) H_M (a_i-b) / (81 s0 S_M^3 (a1-a2)^4 a_i^2 c_i).
+  [ERRATUM 2026-08-12 per SOL-ALGEBRAIZATION-REVIEW.md: the cleared-row
+  constant is 243 = 3^5 in the lam^3 clearing, making the printed line's
+  denominator 1/3 of true; corrected value above per the exact rebuild
+  (90/90) anchored on the promoted E6 identity. H_M is unit-rescalable
+  in every consumer, so no banked verdict flips.]
 
 E6 (lead-coherence across edges; all automatic, verified exactly).
 Taylor factors: F_s->G_m: (7c_m^6)^N (A-B)^{N/2 or N/3...}: S_M =
