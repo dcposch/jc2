@@ -20,13 +20,15 @@ engine-verified pending review). 6 classes survive the full deep arsenal
 (25 instances), each bottoming out in a rigid one-scale coefficient
 template of exactly the residue-A kind. 13 classes (37 instances: 8 ZCH +
 5 family-I) NOT YET BASHED.** No new td becomes fully excluded: td = 7,
-11, 13 remain the only fully-excluded degrees (prime-panel shadow,
-unchanged), because the residue-A class IIa(2,3,1)M2@w2 is present in
-every non-empty panel and is now proven to survive tiers 1–3 in **all
-10** of its panels. The global bottleneck of the ladder is therefore a
-single object: the residue-A template (a1/a2 = 2±√3, b = (2/3)σ, suffix
-B = (3/2)A), whose closure requires the L1 §7.2 global layer — beyond the
-printed statement list.
+11, 13 remain the only fully-excluded degrees (TDU prime theorem on the
+single-pole side + empty prime panels on the multi-pole side, unchanged),
+because the residue-A class IIa(2,3,1)M2@w2 is present in every non-empty
+panel and is now proven to survive tiers 1–3 in **all 10** of its panels
+— and because every composite td is independently blocked by the promoted
+TDU single-pole residual (§5). The multi-pole bottleneck of the ladder is
+therefore a single object: the residue-A template (a1/a2 = 2±√3,
+b = (2/3)σ, suffix B = (3/2)A), whose closure requires the L1 §7.2 global
+layer — beyond the printed statement list.
 
 ## 1. Verdict table
 
@@ -38,11 +40,11 @@ Bashed classes (cell = (fam, r, ν, l) M @ w, κ̄_m, child (κ̄, D/i, ρ)):
 | IIa(2,3,1)M2@w4 | κ̄10, (10,6,1) | 4: m=2/3/4 td12; m=2 td14 | **SURVIVES** | T1 identical rigid solve (frame-homogeneous); T2: 13/24 IV-survivor classes, 0 open; T3 pole collapses exact at (2,3)ν1, (2,3)ν2, (2,7)ν2; δ-ladder consistent | n/a |
 | IIa(2,7,1)M2@w4 | κ̄11, (11,7,1/2) | 4: m=2/3/4 td12; m=2 td14 | **SURVIVES** | td=6 reach-kill of (7,1) does NOT transfer (cell reachable here); T1 rigid (a1/a2=(4+√7)/3); T2: 14/20 IV classes incl. residue-A quartet; T3 W-quintic + pole deg-6 collapses exact, zero slack | n/a |
 | IIa(2,5,1)M2@w3 | κ̄8, (8,5,1/2) | 3: m=2 td10,12,14 | **SURVIVES** | T1 rigid (a1/a2=(3+√5)/2, b=3σ/5); T2: 9/14/20 IV classes, 0 open; T3 all count laws close with equality; E4 agreement reproduced | n/a |
-| IIa(3,2,1)M3@w2 | κ̄6, (6,4,2/3) | 4: m=3 td9,12,14; m=4 td12 | **DEAD** | T1: recursion numerator r−(ν+1)=0 forces p₀=0, c̃=0 ⟹ ⊖=0 contradicts Prop 8.1(iv); degenerate pt=t(t−b)² triply inadmissible (0-root, double root, root law). Frame-free — one solve kills all 4 panels | **YES** — kill_confirmed, 2 adversarial votes (VERIFIED / CONFIRMED) |
-| IIa(3,5,1)M3@w2 | κ̄7, (7,5,1/3) | 4: m=3 td9 / m=3,m=4 td12 / m=3 td14 | **PARTIAL** — m=3,td9 DEAD; other 3 SURVIVE | Kill at T2: cheapest IV route costs Σλ = 7 > St 9.4 cap td−1−ψ = 6 at td=9 (all 4 reachable IV shapes KILLED_ψ, 0 open, 0 frontier). td=12/14: budgets 10/12 give slack 2/4; T1 rigid solve exists; T3 vertex-local layer closes | **YES** for the td=9 kill — kill_confirmed, 2 votes (CONFIRMED / VERIFIED) |
-| IIa(4,3,1)M4@w2 | κ̄8, (8,6,1/2) | 1: m=4 td12 | **DEAD** | T1: full-rank 4×4 system, unique solution pt=t(t−1)³ = the homogeneous branch ((ν+1) \| r degeneracy), c̃=0; quadruple-inadmissible (⊖=0, 0-root, triple root, b a root) | **YES** — kill_confirmed, 2 votes (NOT REFUTED / STANDS, incl. full independent re-implementation) |
+| IIa(3,2,1)M3@w2 | κ̄6, (6,4,2/3) | 4: m=3 td9,12,14; m=4 td12 | **DEAD** | T1: recursion numerator r−(ν+1)=0 forces p₀=0, c̃=0 ⟹ ⊖=0 contradicts Prop 8.1(iv); degenerate pt=t(t−b)² triply inadmissible (0-root, double root, root law). Frame-free — one solve kills all 4 panels | **YES** — kill_confirmed, 2 adversarial votes (NOT REFUTED / VERIFIED, no escape found) |
+| IIa(3,5,1)M3@w2 | κ̄7, (7,5,1/3) | 4: m=3 td9 / m=3,m=4 td12 / m=3 td14 | **PARTIAL** — m=3,td9 DEAD; other 3 SURVIVE | Kill at T2: cheapest IV route costs Σλ = 7 > St 9.4 cap td−1−ψ = 6 at td=9 (all 4 reachable IV shapes KILLED_ψ, 0 open, 0 frontier). td=12/14: budgets 10/12 give slack 2/4; T1 rigid solve exists; T3 vertex-local layer closes | **YES** for the td=9 kill — kill_confirmed, 2 votes (VERIFIED, PARTIAL stands / NO ESCAPE FOUND) |
+| IIa(4,3,1)M4@w2 | κ̄8, (8,6,1/2) | 1: m=4 td12 | **DEAD** | T1: full-rank 4×4 system, unique solution pt=t(t−1)³ = the homogeneous branch ((ν+1) \| r degeneracy), c̃=0; quadruple-inadmissible (⊖=0, 0-root, triple root, b a root) | **YES** — kill_confirmed, 2 votes (NOT REFUTED / CONFIRMED, incl. full independent re-implementation) |
 | IIa(4,7,1)M4@w2 | κ̄9, (9,7,1/4) | 1: m=4 td12 | **SURVIVES** | T1–T4 exhausted; T1 rigid quartic 128t⁴−448t³+560t²−280t+35; T2: 15 IV classes + 2 OPEN μ=3 III-E5 parametric nodes; T3 W deg 8→3 (five exact cancellations); first coefficient-consistent m=4 Theorem-O escape | n/a (note: only bashed class with OPEN suffix kinds) |
-| ZCH(2,2,3)M3@w4 | κ̄6, (6,2,2/3) | 7: m=2 td9,12,14; m=3 td9,12,14; m=4 td12 | **DEAD** | T1 (family Z): triangular ladder forces unique s = t(t−a)² and C=0 ⟹ ⊖=0; triple-overdetermined (root law, eta law, MP6(c) simple-q-roots all violated). Depends only on (ν,l)=(2,3) via ρ=1/3 — frame-free, kills all 7 panels at once | **PENDING REVIEW** — record arrived truncated, no votes banked; engine cross-check re-run this synthesis: `l1_ode_check.check_ZCH(2,3)` → s=[0,1,−2,1], ct=0, const_ok=False, s_avoids_pt_and_0=False — REPRODUCED |
+| ZCH(2,2,3)M3@w4 | κ̄6, (6,2,2/3) | 7: m=2 td9,12,14; m=3 td9,12,14; m=4 td12 | **DEAD** | T1 (family Z): triangular ladder forces unique s = t(t−a)² and C=0 ⟹ ⊖=0; triple-overdetermined (root law, eta law, MP6(c) simple-q-roots all violated). Depends only on (ν,l)=(2,3) via ρ=1/3 — frame-free, kills all 7 panels at once | **PENDING REVIEW** — record arrived truncated, no votes banked; engine cross-check re-run at synthesis: `l1_ode_check.check_ZCH(2,3)` → s=[0,1,−2,1], ct=0, const_ok=False, s_avoids_pt_and_0=False — REPRODUCED |
 
 Not yet bashed (13 classes, 37 instances — no results supplied):
 
@@ -145,26 +147,33 @@ could kill all five outright.
 
 ## 5. Per-td exclusion status (single-pole + this bash + prime panels)
 
-The single-pole side of td = 6..14 is closed by the sheet-number ladder;
-the multi-pole residue is exactly this book.
+Combining ledger. Single-pole ground truth is SHEET6-TDUNIFORM (promoted):
+the PRIME THEOREM excludes single-pole at entry for every prime td,
+unconditionally; at composite td the printed+composed kill set leaves an
+authoritative residual of ψ/(l)/(m)-consistent case-IV terminal classes —
+4/16/16/23/71/48 at td = 6/8/9/10/12/14 (TDU-t: no budget-side sharpening
+removes them; closure at td ≤ 9 only conditionally under H3-strong, which
+is new math). Multi-pole ground is this book + this bash.
 
-| td | multi-pole status after bash | FULLY excluded? |
-|---|---|---|
-| 6 | 1 cell: residue-A only | NO — td=6 exclusion ≡ residue-A closure |
-| 7 | empty (prime-panel shadow) | **YES** |
-| 8 | 1 cell: residue-A only | NO — now a single-cell td: closing residue-A closes td=8 |
-| 9 | m=2: 3 cells (1 template + 2 unbashed ZCH); m=3: 5 (1 + 4) | NO |
-| 10 | 2 cells: residue-A + IIa(2,5,1)@w3, both template-rigid | NO |
-| 11 | empty (prime) | **YES** |
-| 12 | m=2: 12, m=3: 8, m=4: 18 — the main residue | NO |
-| 13 | empty (prime) | **YES** |
-| 14 | m=2: 6, m=3: 6 | NO |
+| td | single-pole residual (TDU) | multi-pole book after bash | FULLY excluded? |
+|---|---|---|---|
+| 6 | 4 classes (2 slack-1, 2 slack-0) | 1 cell: residue-A only | NO |
+| 7 | 0 (prime theorem) | empty (prime-panel shadow; off-axis only) | **YES** |
+| 8 | 16 classes | 1 cell: residue-A only | NO |
+| 9 | 16 classes | 8 cells (2 residue-A instances + 6 unbashed) | NO |
+| 10 | 23 classes | 2 cells: residue-A + IIa(2,5,1)@w3, both template-rigid | NO |
+| 11 | 0 (prime) | empty | **YES** |
+| 12 | 71 classes | 38 cells (13 template + 25 unbashed) — the main residue | NO |
+| 13 | 0 (prime) | empty | **YES** |
+| 14 | 48 classes | 12 cells (6 template + 6 unbashed) | NO |
 
 **Fully excluded: td = 7, 11, 13 — unchanged.** This bash adds no
-fully-excluded td and cannot, structurally: residue-A sits in every
-non-empty panel and survives everywhere. It does reduce td = 6 and td = 8
-to the closure of the single residue-A template, and td = 10 to two rigid
-IIa templates. Live book instances: 75 → 62 (25 template + 37 unbashed).
+fully-excluded td and structurally cannot: residue-A sits in every
+non-empty panel and survives everywhere, and every composite td is
+independently blocked by the TDU single-pole residual. On the multi-pole
+side it does reduce td = 6 and td = 8 to the closure of the single
+residue-A template, and td = 10 to two rigid IIa templates. Live book
+instances: 75 → 62 (25 template + 37 unbashed).
 
 ## 6. Honest riders
 
@@ -202,7 +211,10 @@ IIa templates. Live book instances: 75 → 62 (25 template + 37 unbashed).
    stance); off-axis (b_i ≥ 2) entry configurations — 100% of the prime-td
    panels and 27 multisets overall — sit outside the closed M=1 lemma, so
    "fully excluded" at td = 7, 11, 13 is relative to the same MP
-   quarantine perimeter as the rest of the program.
+   quarantine perimeter as the rest of the program. On the single-pole
+   side, the composite-td residual (§5) additionally inherits TDU's F1–F5
+   failure modes (SF1 unmodeled, III-tail opens at td ≥ 10, depth frontier
+   at td ≥ 12).
 7. **Do-not-rebash honored.** td=6/m=2 residue-A was used only as the
    mandatory gate in every harness (all gates PASS, cell-for-cell); the
    transfer question was answered instead: tier 1 and the shape-local
@@ -219,7 +231,7 @@ wcollapse, pole27, final_checks}.py, /tmp/bash_iia251.py,
 /tmp/bash_iia471/{tier1_ode, tier2_suffix, tier3_collapse,
 tier3_suffix_coeff}.py, /tmp/zch223_verify.py. Repo grounds (read-only):
 /Users/dc/code/math/jc72108/BOOK-ENUM.md, SHEET6-L1.md,
-SHEET6-MULTIPOLE.md, SHEET6-DEPTH.md, SHEET6-TEMPLATE.md, SIGRAY-AUDIT.md,
-cases/{book_enum, l1_ode_check, hiii_compose, h3_check, sheet6_campaign,
-template_lift}.py, systems/book/book_m{2,3,4}_td{6..14}.json,
-refs/sigray_full.pdf.
+SHEET6-MULTIPOLE.md, SHEET6-DEPTH.md, SHEET6-TEMPLATE.md,
+SHEET6-TDUNIFORM.md, SIGRAY-AUDIT.md, cases/{book_enum, l1_ode_check,
+hiii_compose, h3_check, sheet6_campaign, template_lift}.py,
+systems/book/book_m{2,3,4}_td{6..14}.json, refs/sigray_full.pdf.
