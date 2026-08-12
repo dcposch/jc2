@@ -235,7 +235,272 @@ def t5_uniform(k, d2, G, E, extras):
           f" {'OK' if ok_cf else 'FAIL'}")
     return ok_deg and ok_hi and ok_e and ok_cf
 
+# ---------------------------------------------------------------------------
+# `mathieu` mode — MATHIEU.md companion (run: python3 residue_check.py mathieu)
+# Machine checks for the Mathieu-Zhao bridge and the rigidity theorem
+#   Theorem A: A C' - w A' C = c (const != 0), w >= 1  =>  deg A <= 1.
+# M1 rigidity dichotomy: inner extras of cell (k,d2) vanish at numeric A
+#    iff deg A <= 1 (random / perfect-power / mixed A, exact Fractions).
+# M2 bridge witness + linear form: y^((k+1)delta-1) not in Im(L_A) (properness
+#    of the candidate Mathieu subspace), and L_A(C) = 1 inconsistent iff
+#    deg A >= 2 (solvable control at deg A <= 1).
+# M3 CT form: R_{k,d2} is the honest Laurent constant term
+#    CT_w(beta'(w) w^-(k+1)) on the binomial locus (a2^{2d2} beta_{k+2}
+#    == (-1)^k R); independently re-derives the max(k+2,d2) lower limit.
+# M4 proof identities of Theorem A, symbolically: L_A(A^k) == 0 and the
+#    leading-coefficient lemma lc(L_A(D)) = (deg D - k deg A) lc(A) lc(D).
+# M5 per-cell tie (incl. OPEN cells (3,4),(4,4),(5,4),(2,5),(3,5),(2,6)):
+#    symbolic inner extras vanish identically on the binomial locus; are
+#    nonzero at perfect-power and random off-binomial points; symbolic and
+#    numeric evaluation paths agree.
+import random
+
+def _num(c):
+    c = F(c)
+    return {(): c} if c else {}
+
+def _ymul(P, Q):
+    r = {}
+    for i, p in P.items():
+        for j, q in Q.items():
+            r.setdefault(i + j, {})
+            for m, c in pmul(p, q).items():
+                padd_into(r[i + j], m, c)
+    return {n: pp for n, pp in r.items() if pp}
+
+def _ypow(P, e):
+    r = {0: dict(ONE)}
+    for _ in range(e):
+        r = _ymul(r, P)
+    return r
+
+def _L(A, D, k):
+    """L_A(D) = A D' - k A' D as a y-poly (dict n -> coefficient poly)."""
+    return {n: p for n, p in deriv_prod(D, A, 1, -k, None).items() if p}
+
+def _rand_A(delta, rng, kind):
+    """Numeric A, exact degree delta, A(0)=1."""
+    if delta == 0:
+        return {0: dict(ONE)}
+    if kind == 'power':                       # (1+uy)^delta
+        u = F(rng.randint(1, 9), rng.randint(1, 9)) * rng.choice((1, -1))
+        return {i: _num(F(comb(delta, i)) * u ** i) for i in range(delta + 1)}
+    if kind == 'mixed':                       # (1+uy)^(delta-1) (1+vy)
+        u = F(rng.randint(1, 9), rng.randint(1, 9))
+        v = -F(rng.randint(1, 9), rng.randint(1, 9))
+        P = _ypow({0: dict(ONE), 1: _num(u)}, delta - 1)
+        return _ymul(P, {0: dict(ONE), 1: _num(v)})
+    A = {0: dict(ONE)}
+    for i in range(1, delta + 1):
+        c = F(rng.randint(-9, 9), rng.randint(1, 9))
+        if i == delta and c == 0:
+            c = F(1)
+        if c:
+            A[i] = _num(c)
+    return A
+
+def _inner_extras(A, k, d2):
+    C = col_series(A, k + 1, {}, 1, k * d2)
+    return [extra_value(A, k + 1, {}, C, k * d2 + t) for t in range(d2 - 1)]
+
+def m1_dichotomy(seed=11):
+    rng = random.Random(seed)
+    ok = True
+    for k in range(1, 6):
+        for d2 in range(2, 6):
+            for delta in range(0, d2 + 1):
+                for kind in ('random', 'power', 'mixed'):
+                    if kind != 'random' and delta < 2:
+                        continue
+                    for _ in range(5 if kind == 'random' else 2):
+                        A = _rand_A(delta, rng, kind)
+                        ex = _inner_extras(A, k, d2)
+                        vanish = all(e == {} for e in ex)
+                        if vanish != (delta <= 1):
+                            ok = False
+                            print(f"  M1 FAIL k={k} d2={d2} delta={delta} "
+                                  f"{kind}: vanish={vanish}")
+    print(f"M1 rigidity dichotomy (extras==0 <=> deg A<=1), k=1..5, d2=2..5, "
+          f"all deg A, random/power/mixed A: {'OK' if ok else 'FAIL'}")
+    return ok
+
+def _consistent(A, k, rhs, N):
+    """Is L_A(C) = rhs solvable with C = c_0..c_N?  Exact Gaussian elim."""
+    delta = max(A.keys())
+    nr = N + delta + 1
+    M = [[F(0)] * (N + 1) for _ in range(nr)]
+    b = [F(0)] * nr
+    for j in range(N + 1):
+        for n, p in _L(A, {j: dict(ONE)}, k).items():
+            M[n][j] = p.get((), F(0))
+    for n, c in rhs.items():
+        b[n] = c
+    r = 0
+    for c in range(N + 1):
+        pr = next((i for i in range(r, nr) if M[i][c]), None)
+        if pr is None:
+            continue
+        M[r], M[pr] = M[pr], M[r]
+        b[r], b[pr] = b[pr], b[r]
+        inv = M[r][c]
+        M[r] = [x / inv for x in M[r]]
+        b[r] = b[r] / inv
+        for i in range(nr):
+            if i != r and M[i][c]:
+                f = M[i][c]
+                M[i] = [x - f * y for x, y in zip(M[i], M[r])]
+                b[i] = b[i] - f * b[r]
+        r += 1
+    return all(b[i] == 0 for i in range(r, nr))
+
+def m2_witness(seed=13):
+    rng = random.Random(seed)
+    ok = True
+    for k in range(1, 5):
+        for delta in range(1, 5):
+            for kind in ('random', 'power'):
+                if kind == 'power' and delta < 2:
+                    continue
+                A = _rand_A(delta, rng, kind)
+                N = k * delta + 6
+                # (a) properness witness: y^((k+1)delta - 1) never in Im(L_A)
+                wit = {(k + 1) * delta - 1: F(1)}
+                if _consistent(A, k, wit, N):
+                    ok = False
+                    print(f"  M2a FAIL k={k} delta={delta} {kind}")
+                # (b) rigidity linear form: 1 in Im(L_A) iff delta <= 1
+                sol = _consistent(A, k, {0: F(1)}, N)
+                if sol != (delta <= 1):
+                    ok = False
+                    print(f"  M2b FAIL k={k} delta={delta} {kind}: {sol}")
+    print(f"M2 bridge: y^((k+1)d-1) not in Im(L_A) (properness), and "
+          f"1 in Im(L_A) <=> deg A<=1, k=1..4, deg A=1..4: "
+          f"{'OK' if ok else 'FAIL'}")
+    return ok
+
+def m3_ct_form():
+    ok = True
+    for (k, d2) in [(2, 2), (2, 3), (2, 4), (3, 3), (4, 3), (3, 4), (5, 3),
+                    (4, 4), (5, 4), (2, 5), (3, 5), (2, 6)]:
+        # beta(w) = B((w-1)/a2); a2^{2d2} [w^{k+2}] beta == (-1)^k R_{k,d2}.
+        T = {}
+        for j in range(d2, 2 * d2 + 1):
+            c = F(cmb(j, k + 2) * (-1) ** (j - k))
+            if c:
+                for m, cc in pmul(V(f'b{j}'), a2pow(2 * d2 - j)).items():
+                    padd_into(T, m, cc * c)
+        ok &= (T == pscale(Rpoly(k, d2), F((-1) ** k)))
+    print(f"M3 CT form: a2^(2d2) beta_(k+2) == (-1)^k R (R is the Laurent "
+          f"constant term CT_w(beta' w^-(k+1))), 12 cells: "
+          f"{'OK' if ok else 'FAIL'}")
+    return ok
+
+def m4_proof_identities():
+    ok = True
+    for k in range(1, 5):
+        for delta in range(1, 5):
+            A = {0: dict(ONE)}
+            for i in range(1, delta + 1):
+                A[i] = V(f'a{i + 1}')
+            # (a) kernel: L_A(A^k) == 0 symbolically
+            if _L(A, _ypow(A, k), k) != {}:
+                ok = False
+                print(f"  M4a FAIL k={k} delta={delta}")
+            # (b) leading-coefficient lemma on generic D
+            for d in range(0, k * delta + 3):
+                D = {j: V(f'd{j}') for j in range(d + 1)}
+                LD = _L(A, D, k)
+                top = delta + d - 1
+                if any(n > top for n in LD):
+                    ok = False
+                    print(f"  M4b FAIL (overflow) k={k} delta={delta} d={d}")
+                want = pscale(pmul(V(f'a{delta + 1}'), V(f'd{d}')),
+                              F(d - k * delta))
+                got = LD.get(top, {})
+                if d != k * delta:
+                    if got != want:
+                        ok = False
+                        print(f"  M4b FAIL k={k} delta={delta} d={d}")
+                elif got != {}:
+                    ok = False
+                    print(f"  M4b FAIL (no cancel) k={k} delta={delta} d={d}")
+    print(f"M4 Theorem A identities: L_A(A^k)==0 and "
+          f"lc(L_A(D))==(deg D - k deg A) lc(A) lc(D), symbolic, k,deg A=1..4:"
+          f" {'OK' if ok else 'FAIL'}")
+    return ok
+
+def _peval(p, env):
+    tot = F(0)
+    for m, c in p.items():
+        v = c
+        for var, e in m:
+            v *= env[var] ** e
+        tot += v
+    return tot
+
+def m5_cells(seed=17):
+    rng = random.Random(seed)
+    ok = True
+    cells = [(2, 2), (2, 3), (3, 3), (3, 4), (4, 4), (5, 4),
+             (2, 5), (3, 5), (2, 6)]
+    for (k, d2) in cells:
+        A = {0: dict(ONE)}
+        for i in range(1, d2 + 1):
+            A[i] = V(f'a{i + 1}')
+        ex = _inner_extras(A, k, d2)
+        # (i) binomial locus: extras vanish identically (symbolic)
+        exb = ex
+        for i in range(2, d2 + 1):
+            exb = [psubst(e, f'a{i + 1}', {}) for e in exb]
+        okb = all(e == {} for e in exb)
+        # (ii) perfect-power points (the historically dangerous family)
+        okp = True
+        for delta in range(2, d2 + 1):
+            for u in (F(1), F(-2), F(3, 7)):
+                env = {f'a{i + 1}': F(comb(delta, i)) * u ** i if i <= delta
+                       else F(0) for i in range(1, d2 + 1)}
+                vals = [[_peval(e, env) for e in [x]][0] != 0 for x in ex]
+                okp &= any(vals)
+        # (iii) random off-binomial points
+        okr = True
+        for _ in range(20):
+            env = {f'a{i + 1}': F(rng.randint(-9, 9), rng.randint(1, 9))
+                   for i in range(1, d2 + 1)}
+            if all(env[f'a{i + 1}'] == 0 for i in range(2, d2 + 1)):
+                env[f'a{d2 + 1}'] = F(1)
+            okr &= any(_peval(e, env) != 0 for e in ex)
+        # (iv) symbolic vs numeric path agreement
+        oka = True
+        for _ in range(3):
+            env = {f'a{i + 1}': F(rng.randint(-5, 5), rng.randint(1, 5))
+                   for i in range(1, d2 + 1)}
+            An = {0: dict(ONE)}
+            for i in range(1, d2 + 1):
+                if env[f'a{i + 1}']:
+                    An[i] = _num(env[f'a{i + 1}'])
+            exn = _inner_extras(An, k, d2)
+            for e_s, e_n in zip(ex, exn):
+                oka &= (_peval(e_s, env) == e_n.get((), F(0)))
+        cok = okb and okp and okr and oka
+        ok &= cok
+        print(f"M5 ({k},{d2}): binomial extras==0: {'OK' if okb else 'FAIL'}"
+              f" | perfect-power nonzero: {'OK' if okp else 'FAIL'}"
+              f" | random off-binomial nonzero: {'OK' if okr else 'FAIL'}"
+              f" | paths agree: {'OK' if oka else 'FAIL'}")
+    return ok
+
+def mathieu_main():
+    allok = m1_dichotomy()
+    allok &= m2_witness()
+    allok &= m3_ct_form()
+    allok &= m4_proof_identities()
+    allok &= m5_cells()
+    print("MATHIEU OK" if allok else "MATHIEU FAILURES PRESENT")
+    return 0 if allok else 1
+
 if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "mathieu":
+        sys.exit(mathieu_main())
     allok = t0_anchor()
     cells = [(2, 2), (2, 3), (2, 4), (3, 3), (4, 3), (3, 4), (5, 3),
              (4, 4), (5, 4), (2, 5), (3, 5)]
