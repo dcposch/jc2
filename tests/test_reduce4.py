@@ -250,7 +250,7 @@ STUCK150 = {
 def test_stuck150_closure():
     """The seven previously-stuck deg<=150 families (+ the two multi-root
     rows 12_33mn23d135 / 8_28mn34d144) now reduce: multi-root chain-edge cut
-    (GGV5 Def 2.6 + Prop `multiplicidad`(4)) + no-progress cut guard +
+    (GGV5 Prop 2.5 (multiplicidad) + Prop `multiplicidad`(4)) + no-progress cut guard +
     pre-psi direct-emission fallback."""
     from farm import catalog
     rows = {r.name: r for r in catalog(150)}
