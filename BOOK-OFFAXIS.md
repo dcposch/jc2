@@ -1,5 +1,7 @@
 # BOOK-OFFAXIS.md — Off-axis (b >= 2) sector adjudication
 
+[2026-08-12 closure lemmas R1/R2 in progress — this session]
+
 Mission: adjudicate the off-axis sector flagged by both external reviewers and
 the BOOK-ENUM.md closing erratum. The book enumerated only all-b=1 entry
 configurations; entries with b_i >= 2 propagate M = b_i down their chains and
