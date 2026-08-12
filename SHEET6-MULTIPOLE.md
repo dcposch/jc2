@@ -5,7 +5,11 @@ MP0-MP8 + Theorem O stand as printed; MP9 stands on corrected ground
 (l-independent kappa<nu kill); the "finite book" rider is DEMOTED to
 finite-per-parent-frame — chain-frame depth is the sole unbounded axis,
 needs a closure lemma (empirically depth-invariant at td=6). Jump-book
-parameterization spec: review doc final section.**
+parameterization spec: review doc final section.
+UPDATE 2026-08-12: the closure lemma is PROVED — SHEET6-DEPTH.md
+(chain-depth closure: w = (κ̄−ρ)/ν conserved by l=0 steps, finitely many
+resonant steps, menu factors through w); the finite-book rider is
+RESTORED in corrected form (SHEET6-DEPTH.md §8).**
 Original sYNTHESIS (judge document).** Composite of three panel angles: A1 (piecewise regularity / merge cascade, T0–T7 + obstruction O; NOT REFUTED, 3/3 adversarial votes), A2 (Euler/budget ledger, Theorem M (1)–(5) + Proposition B; NOT REFUTED, 3/3 votes — all theorem clauses explicitly listed as surviving), A3 (merge pattern algebra, Theorem MPM P1–P5 + OB; adversarial record truncated at synthesis time — its clauses cross-derived by A1/A2 are grafted at full tier, its unique clauses quarantined in §7).
 **Ground truth:** refs/sigray_full.pdf (printed page = pdf page); page citations below re-read on-page by the panel this session. Prior promoted sheets: SHEET6-2POLE.md, SHEET6-L1.md, SHEET6-LROOT.md, SHEET6-TDUNIFORM.md, SHEET6-A3L1-REVIEW.md.
 
