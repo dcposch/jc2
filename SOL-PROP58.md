@@ -1,3 +1,11 @@
+Status: PROMOTED (2026-08-12, SOL-PROP58-REVIEW.md: all fronts CONFIRMED,
+Grok concurs; conditions applied — citation repointed to the full EuDML
+text (refs/chau1999_apm71_full.pdf, Thm 4.4 pp. 304-305, hypotheses =
+Keller + monic-in-y only), Chau Thm 4.4 entered in the external trust
+ledger, the "Theorem 4.1(ii) independent check" claim DEMOTED to
+overclaim, minor patches N1-N3/N7-N8 per the review). Authored by GPT 5.6
+Sol; reviewed by Fable + Grok.
+
 # Proposition 5.8: the pole-mass identity on every fiber
 
 ## Verdict

@@ -579,3 +579,9 @@ Related: ops/msolve-issue-draft.md (paren hazard) should gain the
 2^63-clamp finding before filing upstream.
 ## Ops checklist addendum (2026-08-11)
 On every box restart/reuse: crontab -l FIRST; remove any deadline/poweroff/lifecycle entries before launching work (two incidents: jc-b poweroff loop, ultramem jc_deadline kill).
+
+## External trust ledger (2026-08-12)
+- Chau, Ann. Polon. Math. 71 (1999), Theorem 4.4 (full text banked at
+  refs/chau1999_apm71_full.pdf; verified on-page pp. 304-305): load-bearing
+  for the every-fiber Prop 5.8 upgrade (SOL-PROP58.md). Published +
+  refereed; hypotheses Keller + monic in y.
