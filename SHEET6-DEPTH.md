@@ -1,3 +1,5 @@
+Status: PROVED + PROMOTED (2026-08-12, SHEET6-DEPTH-REVIEW.md: all fronts confirmed; one fix adopted — the printed proof yields d0 <= 2*gen+2, not gen+2; td=6 unaffected; final BOOK(m,td) spec = review doc closing section).
+
 # SHEET6-DEPTH.md — the Chain-Depth Closure Lemma: the M=1 jump-cell menu is depth-invariant
 
 **Status: PROVED (2026-08-12), H1 tier (Prop 9.3 printed-step arithmetic) over
