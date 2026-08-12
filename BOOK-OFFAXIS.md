@@ -6,7 +6,16 @@ configurations; entries with b_i >= 2 propagate M = b_i down their chains and
 can meet in MIXED MERGES (all mu_e >= 2, legal at m >= 3). The prime-td
 multi-pole exclusion was retracted pending this adjudication.
 
-Status: COMPLETE + CLOSURE LEMMAS PROVED (2026-08-12, two sessions).
+Status: MIXED AFTER TRIPLE REVIEW (2026-08-12, BOOK-OFFAXIS-REVIEW.md;
+Fable + Grok + GPT converged on identical verdicts): R1.0-R1.2 (rigidity
+lemma, orbit-degree transport, l-fold cancellation) + R2 (all handshakes,
+searrow law) CONFIRMED and promotable after fix cycle; R1.3-R1.5 REFUTED
+(dirty-vertex menu omits the printed St 9.6(II)(b) eta-family; the
+M-descent law contradicts St 9.6(iii)/(iv)); td=7 RESTORATION RETRACTED
+AGAIN (honest state: 4 DEAD / 2 ALIVE at td=7, incl. the exact (7,5)
+eps-cell d^2=(3/2)c^2 -> live equal-w join); sections 8-9 recount
+UNCERTIFIED. Repair route: lambda-budget per the review. 
+Original status: COMPLETE + CLOSURE LEMMAS PROVED (2026-08-12, two sessions).
 VERDICT (updated): **R1 (off-axis w-law) and R2 (general-μ merge
 anatomy) are now PROVED (§6–§7)** at H1 tier (Prop 9.3 arithmetic over
 promoted MP0–MP8). Consequences: **the td = 7 prime-td exclusion is
