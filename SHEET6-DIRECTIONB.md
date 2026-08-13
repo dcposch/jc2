@@ -384,16 +384,22 @@ residue-A itself remains open on the forced-tail locus.
 
 Builder banked /tmp/directionb_tails.pkl (D = 21, 2998.7s, exact,
 sentinel-free; copy /tmp/directionb_tails_D21.pkl). Analysis engine:
-cases/directionb_window.py (phases gate | bands | slot20).
+cases/directionb_window.py (phases gate | bands | slot20 | verdict |
+claim4).
 
-GATE (16/16 PASS = 12 window checks + the 4 relayed strike anchors,
+GATE (17/17 PASS = 13 window checks + the 4 relayed strike anchors,
 which the strike gate itself re-runs 4/4; directionb_window.py gate):
 tails -> 0 kills rows
 6..18 term-by-term (every monomial tail-loaded); Row_20's const part
 == the banked zero-tail system coefficient-for-coefficient (all 9
 eta-comps; the extra eta^27 comp is pure-tail); the 9-on-2 block and
 the 0 = -42/(c_f c_g) contradiction re-derived from the tails state
-itself; E5/E6 anchors + E1 tower + Row_0 (strike gate) 4/4.
+itself; E5/E6 anchors + E1 tower + Row_0 (strike gate) 4/4; RHS42
+certified against the chart-Jacobian constant (x_t y_eta = -42
+t^-11 => LHS + 42 = 0 at c_f c_g = 1) with a no-scalar-const check
+on both banked eta^0 consts, so the -42 enters exactly once and a
+silent edit of RHS42 now breaks the gate [REVIEW 2026-08-13,
+Grok F3].
 
 BAND LEDGER, rows 6..19 (odd rows + Row_7..19-odd identically 0;
 `directionb_window.py bands`, 11s). Two tiers per band. Tier S =
@@ -468,34 +474,63 @@ sits in the 6 components eta^12, 15, 18, 21, 24, 27.
 
 ## 6.V VERDICT
 
-Decisive tests (`directionb_window.py verdict`, 7/7 PASS, 89 s;
-all exact over E, one h-sign branch shown, ranks identical on all 4):
+Decisive tests (`directionb_window.py verdict`, 24/24 PASS, ~8 min;
+all exact over E. [REVIEW 2026-08-13] tests (1)(2) are now
+harness-certified on all 4 h-sign branches at w = (1,1) AND on
+branch (+,+) at w = (2,3), with an explicit dims/ranks/verdicts
+identity check across the 5 fibers -- previously one fiber ran and
+"ranks identical on all 4" was doc-only; both review replays also
+confirm it, adding w = (1/5,7). Strata (3) run on the default fiber;
+(3a) is additionally 12-combo-certified by `slot20`):
 
 (1) LINEARIZATION RELAXATION (every var-monomial an INDEPENDENT
     unknown -- an OVER-approximation of the true solution set, so
     INCONSISTENT here would prove EMPTY outright):
       Row_20 alone : 10 rows x 2718 monomial cols, rank 10 -- CONSISTENT
       full window  : 77 rows x 5106 monomial cols, rank 57 -- CONSISTENT
+      (identical dims/ranks/verdicts on every certified fiber)
     The -42 target IS in the column span. **There is NO linear-algebra
-    kill of the forced-tail window.** No functional annihilates all
-    tail columns while detecting the -42 -- the exact mechanism that
-    killed the zero-tail stratum (9-on-2 on the pole scales) has no
-    analogue once tails are on.
+    kill of the forced-tail window.** Precisely [REVIEW 2026-08-13]:
+    no E-LINEAR functional of these 77 depth-21 rows, on any
+    certified (h-branch, w) fiber, annihilates all tail columns while
+    detecting the -42 -- the exact mechanism that killed the
+    zero-tail stratum (9-on-2 on the pole scales) has no analogue
+    once tails are on.  NOT excluded by this tier: nonlinear /
+    Groebner-tier combinations of the 47+1 conditions, rows k >= 21,
+    and the unfrozen B-side -- exactly the escalations the burden
+    moves to below.
 
 (2) THE DIFFERENTIAL at the zero-tail point (tail-degree <= 1 part;
     the promoted theorem's point is the origin of this system):
-    77 rows x 76 tail cols, rank 29, INCONSISTENT -- uniformly in the
-    dead-stretch values (7 free, incl. all-zero). So the -42 is NOT
-    cancellable to FIRST ORDER: the survivor locus does not meet any
-    first-order deformation of the zero-tail point. This is the exact
-    sense in which the promoted kill "almost" propagates.
+    77 rows x 76 tail cols, rank 29, INCONSISTENT -- at the all-zero
+    AND at a generic dead-stretch sample, on every certified fiber
+    (harness), and rank-29-stable inconsistent on 4 further hostile
+    dead-stretch samples (a 2nd rational point, a mixed-E value, the
+    uf18-axis, ds = 0 at w = (2,3)) in the review replays.  Honest
+    scope [REVIEW 2026-08-13]: this is SAMPLED rank-stability, not a
+    closed-form identity in the 7 -- the differential genuinely
+    moves with them (20488 tail x dead-stretch cross-terms over 67
+    of the 77 rows), and uf30 is a dummy (absent from every window
+    monomial: 6 genuine parameters + 1). So the -42 is NOT
+    cancellable to FIRST ORDER at any tested point: the survivor
+    locus does not meet the first-order deformations of the
+    zero-tail point there. This is the exact sense in which the
+    promoted kill "almost" propagates.
 
-(3) EXACT AFFINE STRATA (all solved in closed form over E):
+(3) EXACT AFFINE STRATA (all solved in closed form over E; in (3b)
+    and (3c) the 7 enter as PARAMETERS fixed at a generic sample,
+    not as unknowns):
       levels 47/52 only          : 10 eqs, 10 unk, rank 4  -- INCONSISTENT
       levels 45/47/50/52 + the 7 : 19 eqs, 20 unk, rank 8  -- INCONSISTENT
       levels >= 43 (low tails 0) : 48 eqs, 50 unk, rank 16 -- INCONSISTENT
-    (the third is forced: with levels < 43 zero, the degree-3 low
-    monomials feeding eta^0 vanish and 0 = -42 returns).
+    (mechanism of the third, corrected [REVIEW 2026-08-13]: with
+    levels < 43 zero, eta^0 STAYS individually solvable -- its
+    linear level-47/52 terms survive; the kill is the slot-20
+    SIMULTANEITY: the solve leaves exactly the 6 obstruction rows
+    Row_20[eta^12,15,18,21,24,27] reading 0 = nonzero, the same
+    defect (4) finds at low = 0 and the slot20 phase certifies.
+    The earlier parenthetical here -- "0 = -42 returns at eta^0" --
+    stated the wrong mechanism.)
 
 (4) THE OBSTRUCTION IS NOT A FIXED CONTRADICTION. Fixing the low data
     (levels <= 42) by an exact cascade solve of bands 6/8/10 and
@@ -504,7 +539,12 @@ all exact over E, one h-sign branch shown, ranks identical on all 4):
     (two independent cascade seeds give different obstruction vectors;
     at low = 0 only 6 obstruction rows remain, exactly eta^12..27 of
     Row_20). So these are genuine polynomial CONDITIONS on the low
-    tails + the 7, not a constant absurdity.
+    tails + the 7, not a constant absurdity.  [REVIEW 2026-08-13:
+    now a shipped phase, `claim4` (6/6 PASS, 10 s) -- both cascade
+    seeds are CERTIFIED to satisfy bands 6/8/10 by exact raw-row
+    evaluation before the joint solve; residual vectors differ at
+    32 of 32 labels; both external replays reproduced the claim
+    independently before it had a code path.]
 
 **THE VERDICT (pre-registered semantics of §6): NOT EMPTY-BY-KILL.
 The 83-var forced-nonzero-tail window does NOT kill residue-A.**
@@ -530,10 +570,21 @@ as a killing instrument at depth 21 and the burden moves to the
 Q2 l8/l4 route and to rows 21+.
 
 REPRODUCTION
-    cd cases && python3 directionb_window.py gate      # 16/16, 3 s
-    python3 directionb_window.py bands                 # ledger, 11 s
-    python3 directionb_window.py slot20                # tail condition
-    python3 directionb_window.py verdict               # 7/7, 89 s
+    cd cases && python3 directionb_window.py gate      # 17/17, 3 s
+    python3 directionb_window.py bands                 # ledger, 19 s
+    python3 directionb_window.py slot20                # 27/27, 3 s
+    python3 directionb_window.py verdict               # 24/24, ~8 min
+    python3 directionb_window.py claim4                # 6/6, 10 s
+[REVIEW 2026-08-13, post-adjudication repair pass: the all-4-branch
+rank identity of tests (1)(2) and claim (4) were first verified by
+BOTH external replays (SHEET6-DIRECTIONB-REVIEW.md "R1 internal
+review (Fable)"; xmodel/grok-directionb-review.md) and are now
+harness-certified -- `verdict` loops (1)(2) over the 4 h-branches
++ w = (2,3) with an explicit rank-identity check, `claim4` is a
+shipped phase, `slot20`'s checks assert the MEASURED inconsistent
+defect (its earlier pre-result text asserted the opposite and
+mis-reported 24 stale FAILs; the phantom "explicit point" print is
+deleted), and `gate` pins RHS42 to the chart Jacobian.]
 State: /tmp/directionb_tails_D21.pkl (banked copy of the build),
 /tmp/directionb_window_conditions.pkl (the 47 band conditions,
 per branch, as E-echelon rows).
@@ -591,7 +642,14 @@ SCREENS (local, msolve 0.10.1, -g 2 -t 4, 1200 s cap each;
   ctl0 p105337: TIMEOUT 1200 s (0-byte .out != NONEMPTY, R6 §19.2
   hygiene) -- banked for the fleet; RSS ~1.6 GB, F4 grinding, so the
   system FITS in memory and is fleet-runnable.
-  [main lanes p105337 / 105673 / 200257: below when landed]
+  main p105337: TIMEOUT 1200 s, 0-byte .out, RSS ~1.1-1.6 GB.
+  main p105673 / p200257: running at the same cap at close of
+  session; verdict lines land in /tmp/directionb_res32_screen.log
+  and cases/*.out as they finish (expected: same TIMEOUT class).
+  READING: no local mod-p verdict; the decider is a FLEET job
+  (memory fits, wall does not). The emission + guards are the
+  banked deliverable; -e 45 elimination lane for the residual-32
+  projection, -g 2 lanes for the EMPTY/alive call.
 
 Trust: (a) the chart identity (J) is elementary calculus on the exact
 factorizations f - a = phi_f prod(y - y_i), g = phi_g prod(y - z_j)

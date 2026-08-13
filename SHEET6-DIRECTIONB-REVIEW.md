@@ -670,3 +670,33 @@ cited further; W2's reconstruction should be adopted as a phase;
 none of W1-W5 flips the verdict. The one genuinely open kill-shaped
 residue at depth 21 is the E5-pinned w-fiber (W5c) — cheap to close
 and worth closing before the depth-23/Groebner tier is spent.
+
+### R1.6 Post-adjudication repair pass (Fable, 2026-08-13, same day)
+Coordinator adjudicated this review + the parallel external one
+(xmodel/grok-directionb-review.md, F1-F5; F1=W4b, F2=W4a, F4=W4d,
+F5=W2, F3 new: gate never certified the RHS42 the analysis
+consumes). Combined errata APPLIED in one pass:
+- DOC (SHEET6-DIRECTIONB.md §6.T/§6.V): test (2) reworded to
+  sampled + rank-stable (2 harness samples x 5 fibers + the review
+  extras; uf30 dummy noted, W4b/F1); test (1) scoped to E-linear
+  functionals of the 77 depth-21 rows with the not-excluded tiers
+  listed (W4a/F2); test (3) parenthetical replaced with the correct
+  6-obstruction-row mechanism (W3) and the 7 marked as fixed
+  parameters in (3b)/(3c) (W4c); GATE para + REPRODUCTION block
+  updated to the new counts with a note crediting both replays for
+  the 4-branch identity and claim (4) (W4d/F4, W2/F5).
+- ENGINE (cases/directionb_window.py): slot20 checks now assert the
+  MEASURED inconsistent result incl. the exact 6-component defect,
+  phantom "explicit point" print deleted (W1) — 27/27 PASS, 3 s;
+  claim4 shipped as a phase (esolve_res + certified cascade seeds)
+  (W2/F5) — 6/6 PASS, 10 s; gate adds the RHS42-vs-chart-Jacobian
+  + no-scalar-const certification (F3) — 17/17 PASS; verdict loops
+  tests (1)(2) over all 4 h-branches at w=(1,1) + (+,+) at w=(2,3)
+  with an explicit cross-fiber dims/ranks/verdicts identity check
+  (W4d/F4) — 24 checks, ~8 min.
+- NOT applied (out of the adjudicated list, still open as findings):
+  W5a (B = 0 tag on V's display), W5b (item-1 joint object), W5c
+  (E5-pinned w-fiber), "exhausted as a killing instrument" wording.
+Re-run counts after repair: gate 17/17, slot20 27/27, claim4 6/6,
+verdict pending-at-banking then confirmed in §6.V's REPRODUCTION
+block; no check FAILs anywhere with the honest assertions.

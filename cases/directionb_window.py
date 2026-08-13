@@ -11,7 +11,7 @@ reduced radical ring (z^Phi42, a_i^3 -> 3 +- r3, h_i^2 -> (3/2) w_i^2,
 B^7 -> 3/2; w_1, w_2 free).  All tail rows have z = B = 0.
 
 Phases (run: python3 directionb_window.py
-                     [gate|bands|slot20|verdict|all]):
+                     [gate|bands|slot20|verdict|claim4|all]):
 
   gate    tails -> 0 must reproduce the promoted zero-tail system:
           rows 6..19 die; Row_20 == /tmp/directionb_dsys.pkl constants
@@ -35,6 +35,13 @@ Phases (run: python3 directionb_window.py
   slot20  Row_20 after the band pins: the inhomogeneous window.  The
           zero-tail contradiction 0 = -42 becomes a CONDITION on the
           surviving tails; derived exactly, per eta-component, over E.
+
+  verdict decisive tests (1)(2)(3) of §6.V; (1)(2) looped over all 4
+          h-branches + w = (2,3) with a rank-identity check.
+
+  claim4  §6.V claim (4): two certified cascade seeds -> 32 residual
+          rows depending on the low data; low = 0 -> the 6 rows
+          Row_20 eta^{12..27}.  [REVIEW 2026-08-13 additions]
 
 Verdict semantics (pre-registered, §6): EMPTY forced-tail variety =
 residue-A dies entirely; NONEMPTY = the surviving locus, characterized.
@@ -716,6 +723,120 @@ def stratum(byk, vars_, unk, val, ks, s1, s2, w1, w2):
     rk, piv, sol, free, incons, undec = esolve(rows, rhs, len(cols))
     return len(rows), len(cols), rk, incons, undec
 
+# ---------------------------------------------------- claim (4) phase
+def esolve_res(rows, rhs, ncols, labels):
+    """esolve variant that returns the residual (non-pivot) rows after
+    unit-pivot elimination: [(label, reduced_rhs, row_nonempty)].
+    [REVIEW 2026-08-13: added because §6.V claim (4) had no code path
+    -- cascade() was dead code and could not emit the report.]"""
+    rows = [dict(r) for r in rows]; rhs = list(rhs)
+    piv, used = [], {}
+    for c in range(ncols):
+        pr = None
+        for i, r in enumerate(rows):
+            if i in used.values() or c not in r: continue
+            if enorm_nonzero(r[c]): pr = i; break
+        if pr is None: continue
+        used[c] = pr; piv.append(c)
+        iv = einv(rows[pr][c])
+        rows[pr] = {k: emul(iv, v) for k, v in rows[pr].items()}
+        rhs[pr] = emul(iv, rhs[pr])
+        for i, r in enumerate(rows):
+            if i != pr and c in r:
+                f = eneg(r[c])
+                for k, v in rows[pr].items():
+                    r[k] = eadd(r.get(k, {}), emul(f, v))
+                    if not r[k]: del r[k]
+                rhs[i] = eadd(rhs[i], emul(f, rhs[pr]))
+    res = [(labels[i], rhs[i], bool(r)) for i, r in enumerate(rows)
+           if i not in used.values() and (r or rhs[i])]
+    return len(piv), tuple(piv), res
+
+def _c4val(p, q): return {(0, 0, 0): K3(Fr(p, q))}
+
+C4SEEDS = (((2, 3), (3, 4), (2, 1), (5, 3), (1, 4), (1, 1), (1, 1)),
+           ((7, 2), (1, 5), (3, 7), (2, 9), (4, 3), (5, 11), (6, 5)))
+
+def claim4(s1=1, s2=1):
+    """§6.V claim (4) as a shipped phase [REVIEW 2026-08-13]: fix the
+    low data (the 7 + the free low directions incl. levels 39/41
+    seeded; levels 38/40/42 solved from bands 6/8/10 exactly, and the
+    assembled seed CERTIFIED against the raw rows), then solve bands
+    12..20 jointly over the 50 level>=43 tails and read the residual
+    rows.  Expected: 48/50/16 with 32 residual rows whose values
+    DEPEND on the seed; at low = 0 exactly the 6 obstruction rows
+    Row_20 eta^{12,15,18,21,24,27} survive."""
+    byk, vars_, D = load()
+    w1 = w2 = K1
+    T = [v for v in vars_ if v[:2] in ("tf", "tg")]
+    HI = [v for v in T if int(lvl(v)) >= 43]
+    R20 = [(20, n) for n in (12, 15, 18, 21, 24, 27)]
+    print("== CLAIM4: the obstruction is NOT a fixed contradiction ==")
+
+    def cascade_low(seed7, off, tag):
+        val = {nm: _c4val(*seed7[j]) for j, nm in enumerate(SEVEN)}
+        for nm in [v for v in T if lvl(v) in ("39", "41")]:
+            h = (sum(map(ord, nm)) % 7) + off
+            val[nm] = _c4val(1 + h % 5, 2 + h % 3)
+        for (k, levs) in ((6, ["38"]), (8, ["40"]), (10, ["42"])):
+            unk = [v for v in T if lvl(v) in levs]
+            cols, rows, rhs, lab = build_affine(byk, vars_, [k], unk,
+                                                val, s1, s2, w1, w2)
+            rk, piv, sol, free, incons, undec = esolve(rows, rhs,
+                                                       len(cols))
+            pres = {c: _c4val(2 + (c + off) % 5, 3 + (c + off) % 4)
+                    for c in free}
+            rk, sol, free, incons, undec = asolve(rows, rhs, len(cols),
+                                                  pres)
+            assert not incons and not undec, (tag, k)
+            inv = {i: nm for nm, i in cols.items()}
+            for c, x in sol.items():
+                if x: val[inv[c]] = x
+        defect = evaluate(byk, vars_, val, s1, s2, w1, w2)
+        chk("[%s] seed satisfies bands 6/8/10 EXACTLY (raw-row "
+            "evaluation; residual defect keys %s)"
+            % (tag, sorted(defect)),
+            all(k not in defect for k in (6, 8, 10)))
+        return val
+
+    def joint(val, tag):
+        cols, rows, rhs, lab = build_affine(byk, vars_,
+                                            [12, 14, 16, 18, 20],
+                                            HI, val, s1, s2, w1, w2)
+        rk, piv, res = esolve_res(rows, rhs, len(cols), lab)
+        print("   [%s] bands 12..20 jointly: %d eqs, %d unknowns, "
+              "rank %d, %d residual rows"
+              % (tag, len(rows), len(cols), rk, len(res)))
+        return (len(rows), len(cols), rk, piv,
+                {l: (tuple(sorted((b, repr(c)) for b, c in r.items())),
+                     ne) for l, r, ne in res})
+
+    out = []
+    for i, s7 in enumerate(C4SEEDS):
+        val = cascade_low(s7, 3 * i, "seed%s" % "AB"[i])
+        out.append(joint(val, "seed%s" % "AB"[i]))
+    (nrA, ncA, rkA, pivA, resA), (nrB, ncB, rkB, pivB, resB) = out
+    chk("both seeds: 48 eqs, 50 unknowns, rank 16, 32 residual rows, "
+        "labels incl. Row_20 eta^{12,15,18,21,24,27}",
+        (nrA, ncA, rkA, len(resA)) == (48, 50, 16, 32) ==
+        (nrB, ncB, rkB, len(resB)) and
+        all(l in resA and l in resB for l in R20))
+    chk("same pivot set + same 32 residual labels across seeds",
+        pivA == pivB and sorted(resA) == sorted(resB))
+    diff = sum(1 for l in resA if resA[l] != resB[l])
+    chk("obstruction vectors DEPEND on the low data: residual values "
+        "differ at %d of %d labels => genuine polynomial conditions, "
+        "not a constant absurdity" % (diff, len(resA)),
+        diff == len(resA) > 0)
+    val0 = {nm: _c4val(1 + i % 5, 2 + i % 3)
+            for i, nm in enumerate(SEVEN)}
+    nr0, nc0, rk0, piv0, res0 = joint(val0, "low=0")
+    nz = sorted(l for l, (r, ne) in res0.items() if r)
+    chk("low = 0: %d nonzero residual rows, EXACTLY Row_20 "
+        "eta^{12,15,18,21,24,27}; the other %d non-pivot rows "
+        "collapse to 0 = 0" % (len(nz), nr0 - rk0 - len(nz)),
+        nz == R20 and len(res0) == len(nz))
+
 VFIBERS = ((1, 1, "1", "1"), (1, -1, "1", "1"), (-1, 1, "1", "1"),
            (-1, -1, "1", "1"), (1, 1, "2", "3"))
 
@@ -791,6 +912,7 @@ if __name__ == "__main__":
     if ph in ("bands", "all"): bands()
     if ph in ("slot20", "all"): slot20()
     if ph in ("verdict", "all"): verdict()
+    if ph in ("claim4", "all"): claim4()
     bad = [n for n, c in OK if not c]
     print("\nTOTAL: %d checks, %d FAIL %s  (%.1fs)"
           % (len(OK), len(bad), bad or "", time.time() - t0))
