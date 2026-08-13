@@ -427,3 +427,246 @@ quantum rider was spot-checked against TEMPLATE-ATTACK 1c.2 (V(b) =
 -878 sigma^9/9261 matches the banked value; direction-honesty of
 (ii)/(iii) verified — no kill is claimed there and none should be
 read there).
+
+## R1 internal review (Fable, 2026-08-13)
+
+VERDICT: **SOUND-WITH-ERRATA** — the survival claim ("NOT
+EMPTY-BY-KILL: the 83-var forced-nonzero-tail window does not kill
+residue-A") reproduces exactly, survives a wrong-object audit of the
+load-bearing relaxation, and its §6.V claim (4) is confirmed by an
+independent reconstruction this review had to build (no engine phase
+implements it); the errata are (i) the `slot20` phase FAILs 24/27 of
+its own checks (stale pre-result check text asserting the OPPOSITE of
+the banked narrative) and prints a nonexistent "explicit point", (ii)
+one §6.V justification states a wrong mechanism (eta^0 at low = 0),
+and (iii) several §6.V sentences claim more quantifier coverage
+(functionals, "uniformly in the 7", branch coverage of the shipped
+command, B-side freeze omitted from V's definition) than the code
+path proves. No finding flips the verdict.
+
+Scope: SHEET6-DIRECTIONB §6.T (line ~383) + §6.V (line ~469-545 at
+review time; the doc was under ACTIVE concurrent edit during this
+review — a depth-23 status note and a "GROEBNER-TIER EMISSION"
+paragraph were inserted mid-review and are NOT reviewed here).
+Engine: cases/directionb_window.py @ 747 lines; state
+/tmp/directionb_tails_D21.pkl (md5 8ab35ec3... == the repo bank
+directionb_tails_D21.pkl; conditions pkl 4590681b... == repo bank).
+Posture: hostile in both directions per the campaign's prior
+wrong-object retraction (front 4 above).
+
+### R1.0 Reproduction (check 1): EXACT MATCH
+- `gate`: 16/16 PASS, 2.3 s (= 12 window checks + 4 relayed strike
+  anchors; claim 16/16, ~3 s).
+- `verdict`: 7/7 PASS, 105.4 s local (claim 89 s): every printed
+  number identical to §6.V — (1) Row_20 relax 10 x 2718 rank 10
+  CONSISTENT; full window 77 x 5106 rank 57 CONSISTENT; (2) 77 x 76
+  rank 29 INCONSISTENT at both dead-stretch samples; (3) strata
+  10/10/4, 19/20/8, 48/50/16, all INCONSISTENT.
+- `bands` (19 s): §6.T ledger table verbatim — tier S dims/ranks
+  18x6->2 ... 451x1341->173; tier V ranks 1,4,6,7,10,10,9 identical
+  on all 4 branches (sum 47); NO unreduced leftovers; printed
+  C6.1 / C10.6 / C16.10 match the doc character-for-character.
+
+### R1.1 Findings, ranked
+
+**W1 (erratum, engine-vs-doc contradiction; not verdict-breaking).**
+The `slot20` phase FAILS 24 of its 27 checks: TOTAL: 27 checks,
+24 FAIL. Its check text (directionb_window.py:613-617 "SOLVABLE",
+cond `(not incons) and undec == 0`; :622-624 "EXACT certificate")
+was written EXPECTING solvability, and the measured result is
+inconsistent=True with residual defect {20: [12,15,18,21,24,27]} on
+all 12 (w-sample x branch) combos — i.e. the run CONFIRMS §6.T's
+prose (lines 446-457: rank 2/6, rank 4/10, obstruction eta^12..27,
+uniform) while the harness records it as failure. The phase then
+prints an "explicit point" (directionb_window.py:628-635) for a
+system it just found inconsistent — the point satisfies nothing
+(certificate defect nonzero); stale output, same pattern as E2
+(`danal`) in the 2026-08-12 review. The REPRODUCTION block lists
+`slot20` with no warning, so a reproducing reader meets 24
+unexplained FAILs. Fix: invert/relabel the two chk conditions to the
+measured semantics and delete the explicit-point print, or annotate
+the REPRODUCTION line. §6.V itself does not cite slot20 check
+counts, and the `verdict` phase re-establishes stratum (a)
+inconsistency with correct semantics — hence not verdict-breaking.
+
+**W2 (reproducibility gap; claim CONFIRMED by reconstruction).**
+§6.V claim (4) (lines 500-507: cascade-fixed low data, 32 unreduced
+rows, seed-dependent obstruction vectors, 6 rows at low = 0) has NO
+code path: `cascade()` (directionb_window.py:502) is called by no
+phase, and as written it could not emit the report (returns early on
+incons/undec). This review reconstructed it (scratchpad claim4.py):
+two cascade seeds solving bands 6/8/10 exactly (CERTIFIED: exact
+`evaluate` of every banked row shows defect keys exclude 6/8/10 —
+the seeds genuinely satisfy the band conditions, answering the
+review brief's check 4), then bands 12..20 jointly over the 50
+level>=43 unknowns: 48 eqs, rank 16, 32 residual rows, labels
+(12,8)...(20,27) incl. Row_20 eta^12..27; SAME pivot set for both
+seeds and residual vectors DIFFERING in all 32 of 32 rows; at
+low = 0 exactly 6 nonzero residual rows, precisely Row_20
+eta^{12,15,18,21,24,27}. Every quantitative element of claim (4)
+checks out; the doc should either ship the phase or mark the claim
+as reproduced-by-review-script only.
+
+**W3 (wrong mechanism stated in §6.V test (3); conclusion right).**
+The parenthetical at lines 497-498 — "(the third is forced: with
+levels < 43 zero, the degree-3 low monomials feeding eta^0 vanish
+and 0 = -42 returns)" — is FALSE as a mechanism: at low = 0 the
+eta^0 row remains individually solvable (its 8 linear level-47/52
+terms survive; the doc itself says at line 463-464 that the 14
+linear terms alone solve eta^0). The measured obstruction is the 6
+components eta^12..27 of Row_20 — eta^0 is NOT among the residual
+rows (reconstruction above, and slot20's own defect print). The
+stratum IS inconsistent (verified), but by the rank-4-of-10
+simultaneity mechanism the doc states correctly everywhere else,
+including its own claim (4). Strike or fix the parenthetical.
+
+**W4 (quantifier/wording overclaims a hostile referee strikes).**
+(a) "No functional annihilates all tail columns while detecting the
+-42" (§6.V lines 480-481): proven for E-LINEAR functionals of the 77
+depth-21 window rows, per (w, h-branch) fiber — not for "functionals"
+simpliciter (the strata of test (3) are killed by NON-linear-tier
+reasoning on the same rows, and rows 21+/Groebner deciders remain,
+as §6.V's own NEXT OBJECT concedes). Say "no E-linear functional of
+this row set". Likewise "the direction-b J-window is exhausted as a
+killing instrument at depth 21" (lines 528-530) — exhausted at the
+LINEAR tier only; the doc's own Groebner-tier NEXT OBJECT on V
+contradicts "exhausted" read broadly.
+(b) Test (2) "uniformly in the dead-stretch values (7 free, incl.
+all-zero)" (lines 487-488): the code (directionb_window.py:715-717)
+runs exactly TWO specializations — all-zero (included, as claimed)
+and ONE rational sample from genval() — not a symbolic/generic-rank
+proof over the polynomial ring in the 7. The sample is also not in
+general position: genval gives vf2_34 = vf2_36 = 1 (repeated
+values). "Uniformly ... (7 free)" overstates; write "at the all-zero
+and one generic sample of the 7".
+(c) Test (3b) label "levels 45/47/50/52 + the 7 : 19 eqs, 20 unk"
+(line 495): the 7 are NOT among the 20 unknowns — they are FIXED at
+the genval sample (code path :724-728); inconsistency is proven at
+that sample of the 7 only. (3a) is sample-independent in the 7 (no
+7-cross-terms reach that stratum) and was verified on all 12
+(w, branch) combos by slot20; (3b)/(3c) as shipped are one-sample.
+(d) §6.V preamble "one h-sign branch shown, ranks identical on all
+4" (line 472): TRUE — but not established by any shipped command:
+`verdict` runs ONLY (s1,s2) = (+1,+1) at w = (1,1)
+(directionb_window.py:699, :744; no loop). Verified THIS review by
+driver sweep: branches (+,-), (-,+), (-,-) at w=(1,1) and branch
+(+,+) at w=(2,3), (1/5,7): 7/7 PASS each, ranks 10/57/29/29/4/8/16
+identical everywhere. The claim should cite a command that shows it.
+
+**W5 (object scope: what "the window" quietly excludes).**
+(a) B-side freeze: the build pins ALL bf/bg* frees to 0
+(directionb_strike.py:227-236, "B-side frozen"; state census: 183
+registry vars, the 100 B-vars occur in NO row). §6.T/§6.V never
+state this; §6.V's displayed V (lines 516-518) omits the B = 0 tag,
+and "the honest surviving locus is exactly V" (line 514) is
+wrong-object as written — V is the B = 0 SLICE of the J-window
+locus (Row_6 loads B-side monomials when they are free, §2).
+DIRECTION-SAFE for the survival verdict: restoring B-columns only
+enlarges the relaxation's column span, so CONSISTENT stands a
+fortiori; but the characterization sentence needs the tag.
+(b) The pre-registered item-1 object (now line ~621: "R1 depth-84
+quotient tier + the J-window ... with P-side tails + B-frees free")
+was only HALF delivered: B-frees frozen (see (a)) and the R1
+quotient-tier rows never imposed. Its [CLOSED] note is fair about
+"no full-window residue-A kill" if "full-window" = all J-rows
+6..20, but the JOINT object's kill question (extra R1-tier rows =
+extra equations, which CAN still kill) remains open — consistent
+with §6.V's "burden moves" sentence, inconsistent with reading
+item 1 as closed-negative.
+(c) w-fiber scope (the one caveat §6.V does not state): with tails
+on, consistency is a PER-FIBER statement (relax evaluates w
+numerically, directionb_window.py:350-361). Certified fibers:
+w = (1,1) all 4 branches + (2,3), (1/5,7) on (+,+) (this review; the
+shipped command covers one). The honest template PINS w_i^4 by the
+E5 lead transport (SHEET6-TEMPLATE ~line 230-240, corrected value),
+an algebraic point outside E that no run touches; consistency does
+not transfer across fibers (span inclusion can fail on special
+loci), so "does NOT kill residue-A" is certified for the free-w
+window variety V — the E5-pinned fiber remains formally untested at
+the linear tier. Contrast the asymmetry: the §3 zero-tail KILL was
+scale-free (valid at every w != 0, a fortiori the honest one); the
+survival direction is scale-SAMPLED. The 3-fiber robustness above
+makes a pinned-fiber kill implausible but not excluded; one more
+`relax` run over E extended by the w4-pin relations would close it.
+
+### R1.2 Wrong-object audit of the load-bearing relaxation: CLEAN
+
+The §6.V verdict hangs on test (1) (relax(), directionb_window.py:
+638-658). Audited against the review brief's three failure modes:
+(i) COLUMN COMPLETENESS — columns are keyed by the state's var-key
+tuples: 2718 (Row_20) / 5106 (full window) distinct monomials
+reproduced by independent census; all keys canonical sorted tuples,
+zero sort-collisions, so nothing is silently merged; nothing is
+dropped (every nonempty vk gets a column; only vk = () feeds the
+const). Row_20[eta^0] census matches §6.T exactly: 2034 monomials,
+degree profile {1:14, 2:184, 3:532, 4:582, 5:386, 6:222, 7:78,
+8:36}, linear levels 42/47/52 only. (Direction note: for the
+CONSISTENT verdict even a merge/drop would have been conservative —
+a true kill functional annihilates every monomial column, hence any
+sums/subsets; none was needed.)
+(ii) ROW COMPLETENESS — the full-window call runs over sorted(byk) =
+bands 6,8,...,18,20, all 77 eta-components (9+10+10+9+10+10+9+10),
+the same rows the bands phase certified; odd rows are identically
+absent from the state (checked).
+(iii) INHOMOGENEITY — the -42 enters once, as +42 at (20, eta^0)
+(RHS42, :348, :654-655), i.e. Row_20[eta^0] = -(42/(c_f c_g)) with
+the c_f c_g = 1 gauge; matches (J) at §0 and the 2026-08-12 front-1
+scratch re-derivation (chart Jacobian -42 t^-11); the E5-corrected
+TEMPLATE ~239 erratum touches only the w_i^4 pin value, which this
+build does not consume (w free ring radicals — front 5 above), so
+the normalization is E5-insulated. Also re-confirmed with tails on:
+J-blindness holds (0 monomials carry a dead-stretch var without a
+tail factor — the 7 enter only via cross-terms, §6.T line 428-429).
+Registry nits, harmless: levels 49/51 exist as vars but occur in NO
+row (stratum (3c)'s "50 unknowns" counts 8 vacuous columns; the
+cascade STAGES' omission of 49/51 is vacuous for the same reason).
+
+### R1.3 Spot check (review brief item 6): band 8, two paths
+(a) The banked echelon for band 8, branch (+,+) (conditions pkl:
+rank 4, leftover 0) GENERATES the raw rows: all 10 raw band-8
+E-rows reduce to 0 against it (unit-pivot reduction re-run).
+(b) Independent-ish jet path: numcheck is frozen-stratum-only (no
+tails), so no zero-shared-code check exists for tail rows — noted
+as a perimeter gap; instead a FRESH frozen build at D = 9 (fresh
+registry + orbit rebuild, 57 s) reproduces bands 6 AND 8 of the
+banked D = 21 state coefficient-for-coefficient (name-keyed, all
+19 eta-components). Same machinery, different run/depth: checks the
+banked pkl, not the orbit model itself (which is guard-certified
+upstream, trust note (b)).
+
+### R1.4 Run ledger (this review)
+- gate 16/16 (2.3 s); verdict 7/7 (105.4 s); bands ledger (19 s);
+  slot20 27 checks / 24 FAIL (3.7 s; see W1 — math content confirms
+  §6.T).
+- Branch/w sweep driver (sweep.py): 5 further verdict runs, 7/7
+  PASS each, all ranks identical (W4d).
+- census.py: vars 183 registry / 83 free (76 tf,tg + the 7; 100
+  B-vars pinned, occur nowhere); 77 rows; monomial counts, canonical
+  keys, eta^0 degree profile, level census (50 / 16 / 20) — all §6.T
+  and §6.V dims reproduced independently of relax()'s own counting.
+- claim4.py: §6.V claim (4) reconstructed and confirmed in full
+  (W2); also demonstrates W3 (eta^0 not an obstruction row at
+  low = 0).
+- spot8.py: R1.3 (a)+(b).
+- State integrity: /tmp/directionb_tails_D21.pkl and
+  /tmp/directionb_window_conditions.pkl md5-match the repo banked
+  copies; D = 21 asserted on load. (The live depth-23 build
+  overwrites only /tmp/directionb_tails.pkl; the analysis engine
+  prefers the _D21 bank — verified in code, STATE at
+  directionb_window.py:54-56.)
+Scripts + logs banked under the session scratchpad
+(claude-501/.../scratchpad: sweep_*.log, census.py, claim4.{py,log},
+spot8.{py,log}, bands_run.log, slot20_run.log, verdict_run.log).
+
+### R1.5 Bottom line
+The pre-registered call is honestly adjudicated: the kill test came
+out CONSISTENT at every certified fiber, the sharpness
+inconsistencies (2)/(3) and the obstruction structure (4) are real
+(now independently reconstructed), and the §3 zero-tail theorem is
+untouched. Survival of residue-A on the forced-nonzero-tail locus
+STANDS as claimed, with V read as the B = 0 slice at the linear
+tier, per W5. Errata W1 and W3 should be fixed before this sheet is
+cited further; W2's reconstruction should be adopted as a phase;
+none of W1-W5 flips the verdict. The one genuinely open kill-shaped
+residue at depth 21 is the E5-pinned w-fiber (W5c) — cheap to close
+and worth closing before the depth-23/Groebner tier is spent.
