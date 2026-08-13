@@ -702,3 +702,113 @@ Next objects, in order of value:
    loci.
 4. Rows k = 42+ with the x-side model (LR2 pin, SHEET6-R1 §16.5):
    the first x-side-coupled J-orders — the R5 completion.
+
+## 7. Level-42 no-log pins (Keller action residues, Sol avenue 1)
+
+[2026-08-13; GATE 1 of the avenues sweep xmodel/sol-avenues2.md §1.
+Adversarial re-derivation in THIS document's chart conventions.
+VERDICT: THE LEMMA IS VALID HERE — 9 pins, 6 live in the banked
+residual-32 system, each a PURE VARIABLE pin. Derivation:]
+
+**(1) Closed, hence exact, on A^2.** J(f,g) = c != 0 constant gives
+d(f dg - c x dy) = (J - c) dx^dy = 0 and d(g df - c y dx) = 0.
+H^1_dR(A^2) = 0 in char 0 (elementary: integrate the closed form
+term-by-term in x, the remainder is a closed form in y alone), so
+there are POLYNOMIALS P, Q with f dg - c x dy = dP and
+g df - c y dx = dQ. Our banked gauge has c = 1 (S_R = G_R = 1);
+nothing below consumes the value beyond c != 0.
+
+**(2) Pull back along a fibre branch.** §2b (promoted, F1):
+f - a = phi_f(x) prod_i (y - y_i(x)), g = phi_g(x) prod_j (y - z_j(x))
+— the y_i are EXACT root series of f = a, the z_j of g = 0. Let
+phi: Spec K((t)) -> A^2, phi = (x(t), y_i(t)) be an f-place. Then
+phi*f = a IDENTICALLY, so pulling back g df - y dx = dQ kills the
+first term: y_i(t) dx(t) = -d(Q o phi). Q is a polynomial and x, y_i
+are Laurent, so Q o phi in K((t)) — finite principal part, NO log,
+NO essential part (this is the entire "no-log" content; a log t in a
+primitive is exactly what a nonzero residue would require). Purely
+formal; no convergence is consumed. Hence Res_t(y_i dx) = 0 at EVERY
+f-place separately (the primitive is global-polynomial, so this is
+per-place, strictly stronger than the residue-theorem sum). On g = 0
+the same argument with f dg - x dy = dP (phi*g = 0, so the f dg term
+dies) gives Res_t(x(t) dz_j(t)) = 0 at every g-place.
+
+**(3) The residue in OUR chart.** §0: t = x^{-1/42}, so x = t^{-42}
+EXACTLY at every 42-ramified place (P1, P2, B, Gp1, Gp2, GB42).
+y = sum_m c_m t^m gives Res_t(y dx) = -42 c_42 and
+Res_t(x dy) = +42 c_42; either way the pin is c_42 = 0: the
+T-LEVEL-42 COEFFICIENT of the root series dies. For the 21-ramified
+places (G0p1, G0p2, GB21; series in u = t^2, x = u^{-21}, registry
+sizes 21 with even support — build_generators, r1_experiment.py
+:357-404): Res_u(x dy) = 21 gamma_21 with gamma_k = c_{2k}, so the
+pin is again the t-level-42 coefficient. Signs and the 42 are
+IRRELEVANT to the pin (homogeneous, char 0); the inhomogeneous -42
+of Row_20 is a different object (the t^20-slot of (J)) and does not
+interact. [Nit vs the avenue doc: the pole pair is 3±sqrt3 (A1c/A2c,
+r1_experiment.py:126), not "2±sqrt3"; the value is not consumed.]
+
+**(4) Exact variable mapping (hazard (a)/(d), from the registry,
+r1_experiment.py build_generators).** Level-42 carries a LONE free
+tail var in every orbit series; skeleton support stops at level 37
+(P-places: 12, uf 18/24/30, alpha at 32, vf 34/36, w at 37), at 32
+(G0-places), at 12 (B-places). So each pin is PURE, not a
+tail+skeleton combination:
+
+  place  series-var at t^42   emitted name     status
+  P1     tf1_42               x46              LIVE pin
+  P2     tf2_42               x51              LIVE pin
+  Gp1    tg1_42               x56              LIVE pin
+  Gp2    tg2_42               x61              LIVE pin
+  G0p1   tg01_42              x64              LIVE pin
+  G0p2   tg02_42              x67              LIVE pin
+  B      bf_42                (frozen 0, D21)  trivially satisfied
+  GB42   bg42_42              (frozen 0, D21)  trivially satisfied
+  GB21   bg21_42              (frozen 0, D21)  trivially satisfied
+
+The three B-side pins are exact too but the banked D21 object
+freezes those tails at 0, so they add nothing here; bank them for
+depth-23+/Q2 AFTER the B-place parameter-normalization guard that
+the avenue doc itself flags.
+
+**(5) Adversarial cross-checks (all reproduced independently).**
+Sol's mapping x46/x51/x56/x61/x64/x67 verified against
+directionb_residual32.rows.txt; term count of the banked emission
+79,590 EXACT match; pin-substituted independent-monomial relaxations
+reproduce EXACTLY: Row_20 10 x 2295 rank 10 CONSISTENT, full window
+76 x 4351 rank 56 CONSISTENT (so the pins are NOT a standalone
+depth-21 kill — the avenue's own label); Row_10[eta^28] (= §6.T's
+C10.6, the only pure-K3 window condition at level 42) has 0
+surviving terms under the pins — the window already contained
+exactly the Galois-symmetric SHADOW of the pins, and nothing more:
+strong wrong-object exclusion (the new rows refine, never
+contradict, the banked ones).
+
+**Trust chain:** (i) step (1) is elementary char-0 calculus;
+(ii) step (2) consumes ONLY the promoted §2b factorization (F1);
+(iii) step (3) the §0 chart normalization; (iv) step (4) the orbit
+registry (guard-certified machinery, read-only). Same tier as the
+J-rows themselves. The pins are NECESSARY conditions on every
+residue-A realization; adding them to the residual-32 decider is
+sound (GATE 2, §6.V addendum).
+
+### 7.G GATE 2 — the no-log decider (emission + screens)
+
+`directionb_residual32_emit.py nolog` (guards 2/2 PASS + per-file
+regression gates): the 6 live §7 pins appended, append-only, to all
+8 banked residual-32 lanes -> cases/directionb_residual32_nolog
+[_ctl0][_p105337|_p105673|_p200257].ms, 91 eqs x 84 vars each
+(79,596 expanded terms on the main lane, = banked 79,590 + 6; ~2.0
+MB/file). Discipline: prefix BYTE-IDENTICAL to the banked emission
+(so guard B round-trip transfers by composition), paren sweep on all
+8, pin mapping re-verified 6/6 against rows.txt, pattern-positive
+anchor re-run on the _nolog main (tails=0 satisfies the pins;
+9 zero-tail Row_20 comps == dsys constants, +42 at eta^0). Pins
+also appended as a comment block to directionb_residual32.rows.txt.
+SCREENS: launched detached 2026-08-13 (runner PID 46709, PPID 1,
+nice 5, msolve -g 2 -t 4, 12 h cap/lane, order: ctl0_p105337 then
+the 3 main lanes; self-recording to /tmp/directionb_res32_nolog.log,
+final line "ALL NOLOG SCREENS DONE"). Verdict semantics unchanged
+(§6.V): main GB=[1] at the primes = strong-evidence EMPTY window
+(then char-0 for proof tier); alive = the pins do not close the
+escape alone (Sol's own expectation; the 6 rows remain banked
+permanently either way — they are exact and free).

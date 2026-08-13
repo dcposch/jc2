@@ -311,6 +311,108 @@ def phase_screen(secs=1200):
             print("   screen %s: TIMEOUT %ds (bank emission for the "
                   "fleet)" % (tag, secs), flush=True)
 
+# ---------------------------------------------------- no-log pins (§7)
+# GATE 2 of the avenues sweep: the six live level-42 no-log pins
+# (SHEET6-DIRECTIONB.md §7 — Keller action residues; exact, pure
+# variable pins).  Append-only discipline: every _nolog file is the
+# banked file + the 6 pin rows, prefix byte-identical (regression
+# gate).  Files: directionb_residual32_nolog[_ctl0][_p<P>].ms
+PINS42 = (("x46", "tf1_42"), ("x51", "tf2_42"), ("x56", "tg1_42"),
+          ("x61", "tg2_42"), ("x64", "tg01_42"), ("x67", "tg02_42"))
+
+def nolog_name(fn):
+    return fn.replace(BASE, BASE + "_nolog", 1)
+
+def phase_nolog():
+    legend = open(os.path.join(HERE, BASE + ".rows.txt")).read()
+    for nm, tv in PINS42:                     # hard mapping guard
+        assert "%s = %s (LOW)" % (nm, tv) in legend, (nm, tv)
+    chk("nolog: pin mapping x-name == registry name, 6/6 against "
+        "rows.txt", True)
+    pins = [nm for nm, _ in PINS42]
+    srcs = [BASE + ".ms", BASE + "_ctl0.ms"] + \
+        ["%s_p%d.ms" % (BASE, p) for p in PRIMES] + \
+        ["%s_ctl0_p%d.ms" % (BASE, p) for p in PRIMES]
+    for src in srcs:
+        hdr, char, eqs = FCparse(src)
+        assert all(nm in hdr for nm in pins), src
+        dst = nolog_name(src)
+        with open(os.path.join(HERE, dst), "w") as f:
+            f.write(", ".join(hdr) + "\n%d\n" % char)
+            f.write(",\n".join(eqs + pins) + "\n")
+        h2, c2, e2 = FCparse(dst)
+        assert e2[:len(eqs)] == eqs and e2[len(eqs):] == pins \
+            and h2 == hdr and c2 == char, ("REGRESSION", dst)
+        txt = open(os.path.join(HERE, dst)).read()
+        assert "(" not in txt and ")" not in txt, ("PAREN", dst)
+        print("   %s: %d eqs (+6 pins), prefix byte-identical, "
+              "paren-free, %.1f MB" % (dst, len(e2),
+                                       os.path.getsize(
+                                           os.path.join(HERE, dst)) / 1e6))
+    # pattern-positive anchor on the nolog main: tails=0 satisfies the
+    # pins trivially and the 9 zero-tail Row_20 comps are unchanged
+    rows, names, ordered, blocks, vars_ = load_rows()
+    p = PRIMES[0]; pt = FC.radical_point(p)
+    ds = pickle.load(open("/tmp/directionb_dsys.pkl", "rb"))
+    hdr, _, eqs = FCparse(nolog_name(BASE + ".ms"))
+    val = dict(pt, uW1=pow(pt["W1"], p - 2, p),
+               uW2=pow(pt["W2"], p - 2, p),
+               uA=pow((pt["A1"] - pt["A2"]) % p, p - 2, p))
+    rng = random.Random(9000)
+    for vid, nm in names.items():
+        val[nm] = 0 if vars_[vid][:2] in ("tf", "tg") \
+            else rng.randrange(1, p)
+    scales = [row_scale_terms(R1.poly_terms(v, names))
+              for _, v, _ in rows]
+    ok = True
+    for i, (lab, v, has42) in enumerate(rows):
+        g = _tiny_parse_eval(eqs[i], val, p)
+        kk, nn = lab.split("[")[0], int(lab.split("^")[1].split("]")[0])
+        if kk != "Row_20" or nn not in ds["byk"][20]:
+            ok &= (g == 0); continue
+        want = FC.ring_modp(ds["byk"][20][nn].get((), {}), pt, p)
+        if nn == 0: want = (want + 42) % p
+        ok &= (g == want * FC.frmod(scales[i], p) % p)
+    ok &= all(_tiny_parse_eval(e, val, p) == 0 for e in eqs[-6:])
+    chk("nolog guard: pattern-positive anchor STILL passes on the "
+        "_nolog main (tails=0 satisfies the 6 pins; 9 zero-tail "
+        "Row_20 comps == banked dsys constants, +42 at eta^0)", ok)
+    with open(os.path.join(HERE, BASE + ".rows.txt"), "a") as f:
+        f.write("# --- §7 level-42 no-log pins (Keller action "
+                "residues; SHEET6-DIRECTIONB.md §7) ---\n")
+        f.write("# _nolog systems append these 6 exact pin rows "
+                "(pure variable pins, one per live place):\n")
+        for nm, tv in PINS42:
+            f.write("# pin: %s = 0   (= %s = [t^42] of its root "
+                    "series)\n" % (nm, tv))
+        f.write("# frozen-stratum pins (not rows here): bf_42 = "
+                "bg42_42 = bg21_42 = 0 (B frozen in D21)\n")
+    print("   pins appended as comment block to %s.rows.txt" % BASE)
+
+def phase_screen_nolog(secs=43200):
+    import subprocess
+    for tag in (["%s_nolog_ctl0_p%d" % (BASE, PRIMES[0])]
+                + ["%s_nolog_p%d" % (BASE, p) for p in PRIMES]):
+        fin = os.path.join(HERE, tag + ".ms")
+        fout = os.path.join(HERE, tag + ".out")
+        t0 = time.time()
+        try:
+            r = subprocess.run(["nice", "-n", "5", "msolve", "-g", "2",
+                                "-t", "4", "-f", fin, "-o", fout],
+                               timeout=secs, capture_output=True)
+            txt = open(fout).read() if os.path.exists(fout) else ""
+            one = txt.replace("\n", "").strip().rstrip(":") == "[1]"
+            print("   screen %s: rc=%d %.1fs out=%dB %s"
+                  % (tag, r.returncode, time.time() - t0, len(txt),
+                     "GB=[1] (EMPTY)" if one else
+                     ("GB!=[1] (alive mod p)" if txt else "NO OUTPUT")),
+                  flush=True)
+        except subprocess.TimeoutExpired:
+            print("   screen %s: TIMEOUT %ds (bank for the fleet)"
+                  % (tag, secs), flush=True)
+    print("ALL NOLOG SCREENS DONE", flush=True)
+
+
 if __name__ == "__main__":
     ph = sys.argv[1] if len(sys.argv) > 1 else "all"
     t0 = time.time()
@@ -318,6 +420,10 @@ if __name__ == "__main__":
     if ph in ("guards", "all"): phase_guards()
     if ph == "screen":
         phase_screen(int(sys.argv[2]) if len(sys.argv) > 2 else 1200)
+    if ph == "nolog": phase_nolog()
+    if ph == "nolog_screen":
+        phase_screen_nolog(int(sys.argv[2]) if len(sys.argv) > 2
+                           else 43200)
     bad = [n for n, c in OK if not c]
     print("\nTOTAL: %d checks, %d FAIL %s  (%.1fs)"
           % (len(OK), len(bad), bad or "", time.time() - t0))
