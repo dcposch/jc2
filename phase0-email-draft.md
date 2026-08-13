@@ -43,3 +43,34 @@ Dan Clemens Posch
 - No mention of sheet-6/DC2/farm per the phase-0 rule; the artifact link
   and request 2 leave the door open.
 - Horruitiner not on To: per DC's send list; can be added on any reply.
+
+---
+
+# Proposed follow-up (draft, for DC review — target send Friday 2026-08-14 if no reply)
+
+To: cvalqui@pucp.edu.pe, vander@dm.uba.ar, jjgucci@dm.uba.ar
+Subject: Re: Settling the (8,28) strip subcase of Proposition 4.3 (arXiv:2204.14178)
+Attachment: paper1/main.pdf (v2)
+
+## Body
+
+Dear Professors Valqui and Guccione,
+
+A brief update to the note I sent Monday: the rigidity statement that
+was conjectural in that version is now a theorem (Theorem 6.5 in the
+attached v2), so the strip analysis no longer has any conditional
+component of ours; the only remaining dependence is Proposition 4.3
+itself. No other changes of substance.
+
+I would still be glad to hear whether the polygon data matches your
+intention, whenever convenient.
+
+Best,
+Dan Clemens Posch
+
+## Notes (not in email)
+- Two sentences + standing question; no nudge language, no endorsement ask
+  (still deferred to a positive reply).
+- v2 = current paper1/main.pdf (author line fixed, Thm 6.1 + 6.5 inline).
+- If they reply before Friday, fold this content into the reply instead.
+- Zenodo v2 refresh offer stands; not mentioned to keep it short.
