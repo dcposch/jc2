@@ -391,3 +391,9 @@
   review launched. Ultramem gcloud ssh now failing repeatedly (rc 255, also via IAP;
   worked at 13:47) — sshd possibly starved by sat23; lift-pkill deferred (cosmetic,
   retirement already recorded). GGV follow-up draft awaiting DC review.
+- 2026-08-13 ~15:45: LOCAL MSOLVE BAN (DC directive after 32GB thrash — my stuck7
+  big-core lanes were the offenders). All 13 lanes migrated to Box02 (restarted,
+  new IP 54.89.92.223, 8 threads/lane, lanes.log self-recording). ops/FLEET.md
+  written: fleet inventory + access + run conventions for ALL agents (Fable subs,
+  Sol, Grok prompts must point at it for any solver job). Box02 stays up until
+  its queue drains. Local-screen elapsed work forfeited (~2h; no msolve checkpoints).
