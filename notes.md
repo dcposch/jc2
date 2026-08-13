@@ -348,3 +348,14 @@
 - 2026-08-12 night: FLEET RECOVERED. Root causes: GCP project transiently unavailable (user-side, restored; both instances TERMINATED but DISKS INTACT — 73 .out files preserved); box01 was never down — the local IP changed (149.22.81.205) and the SG allowlisted only the old IP; added new IP to sg-09ffa8932558f0a79. LOSSES: in-flight compute only — sat23 p105337 progress (relaunched), the old unsaturated 23chain runs (both FAILED pre-termination — superseded by sat23 anyway), and the cCa2/cCa6 lifts (weeks running, no LIFT-CERT, Singular restarted via cron: DECISION per novelty rule = let this one boot cycle run; if no cert by next check, kill permanently and note in AUDIT). NO banked verdicts lost (repo = source of truth). box01 kept farm lanes going throughout (+13 EMPTYs) though Q2 l8_p105337 FAILED (vmem again).
 - 2026-08-13: BOX02 LIVE (x2idn.32xlarge, 2TB/128c, 54.166.236.69) — Q2 l8/l4 running at 1.9TB vcap/96t; box01 relieved of Q2 (farm lanes only now); ultramem sat23; fleet = 3 boxes optimally matched to workloads.
 - 2026-08-13: Q2-l8 died on the 2TB box too (11h, 1.65TB RSS, vcap kill) — the GB cliff is structural; l8/l4 need leaf-decomposition, not iron. Box02 STOPPED (control plane, disk kept, ~$13/h saved) pending the window slot-20 verdict which may moot the whole Q2 ladder. Window agent resumed from transcript post-restart; bands banked, slot-20 in flight.
+- 2026-08-13 ~12:15: WINDOW VERDICT (§6.V): NOT EMPTY-BY-KILL. Relaxation consistent
+  (rank 57/77, -42 in column span) => no linear-algebra kill at depth 21; differential
+  at zero-tail point INCONSISTENT rank 29 => zero-tail theorem sharp at first order;
+  all closed-form strata dead. Survivor locus V = 47 band conditions + slot-20; residual
+  = 32 low-data-dependent conditions on ~28 params. NONEMPTINESS NOT CERTIFIED.
+  Actions: verdict committed; dual review launched (Grok one-shot + Fable internal);
+  window agent re-tasked (emit residual-32 msolve system per AUDIT rules + relaunch
+  depth-23 detached). Burden per §6.V moves to residual solve, rows 21+, and Q2 l8/l4
+  (leaf decomposition needed — Box02 stays STOPPED until residual screen results).
+  Sol lanes running: td7-law, thmB (now elevated: functional-level kill is the missing
+  instrument), avenues2.
