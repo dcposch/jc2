@@ -645,6 +645,41 @@ class lists and the (2,2t) tail inversion are td-7-specific proofs —
 other panels use the capped generic engine (P5); (v) the arrival law's
 "direct" list is a superset (recorded along any in-budget path).
 
+## 11. GENERALIZED ZERO-CHAIN LAW — PROMOTED (2026-08-13): the td-7
+## book collapses 62 -> 6
+
+A closed-form decision law for the Prop. 8.1(iv) local rigid solve on
+the full 62-cell td-7 class-B/C book (found by GPT-5.6-Sol, proof +
+census in xmodel/sol-td7-law.md): with mu = d_p - nu and
+l = (d_q-1)/nu - 1, the cell's reduced equation admits an admissible
+solution with nonzero RHS constant iff d_p does NOT divide d_q;
+equivalently the cell is T1-DEAD iff
+
+    d_p | d_q   <=>   (mu+nu) | (mu(l+1)-1)   <=>   M = d_p
+                <=>   kbar in {3,4}.
+
+On-axis ZCH (nu+1)|l is the mu = 1 specialization. Merge arity r = 2
+never enters; lambda-data select routes but not this vertex-local
+verdict. Dual verification before promotion: (a) zero-shared-reasoning
+engine check, 62/62 agreement (xmodel/td7-law-engine-check.md —
+independent derivation of the reduced equation
+(rho-mu)(t-A)s + (rho-1)nu t s + rho nu t(t-A)s' = C from R1.0, exact
+solves over QQ(A) with admissibility C != 0, s(0) != 0, s(A) != 0,
+squarefree); (b) Grok hostile audit SOUND, both iff directions +
+census + all six survivor substitutions replayed
+(xmodel/grok-td7-law-review.md).
+
+RESULT: 56/62 cells DEAD by theorem (class-B (3,9,2,3) + 55 class-C),
+removing 1636/1689 deduplicated routes. LIVE: six class-C cells, all
+certified LOCAL T1 survivors with explicit admissible solutions —
+
+    (d_p,d_q,nu,M) x mu:  (9,15,7,3)@2  (10,15,7,5)@3  (15,25,8,5)@7
+                          (15,25,12,5)@3 (18,27,13,9)@5 (39,65,32,13)@7
+
+carrying 53 routes (35 budget-equality). The 62-cell T1 bash workflow
+is superseded; the open td-7 problem is the next tier (transport /
+global / coefficient) on these six cells only.
+
 ## Reproducibility
 
     cd cases && python3 book_offaxis.py    # ~25 min with stage P, exit 0

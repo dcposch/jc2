@@ -105,7 +105,7 @@ This is an hours-to-one-day launch; the nonlinear solve may of course run longer
 
 ### (d) Kill criterion for the avenue
 
-The lemma itself should never be abandoned. Abandon only the claim that its six D21 rows are a standalone killing instrument if the augmented saturated system has a certified characteristic-zero point, or a verified smooth \(\mathbb Q_p\) point with a complete Hensel lift. A merely nonempty reduction at one or two primes is only a deprioritization signal. Even after a standalone failure, retain all nine no-log rows permanently in depth 23+, Q2, and off-axis builds because they are exact and essentially free.
+The lemma itself should never be abandoned. Abandon only the claim that its six D21 rows are a standalone killing instrument if the augmented saturated system has a certified characteristic-zero point, or a verified smooth \(\mathbb Q_p\) point with a complete Hensel lift. A merely nonempty reduction at one or two primes is only a deprioritization signal. Even after a standalone failure, retain the six rows in the current normalization permanently, and retain all nine in depth 23+/Q2 once the B-place parameter guard has passed; the identities are exact and essentially free.
 
 ## 2. Restore toric circuits discarded by the depth-21 relaxation
 

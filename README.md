@@ -29,6 +29,8 @@ DC(2), residue theory, deg ≤ 150 frontier farm).
 - [x] Sigray thesis: td≥6 proof shown incomplete as printed; errata E1–E10
 - [x] ψ-budget (G2 closed), E5/N1 extraction, AF2 derived, entry-M pin proved
 - [x] td ≤ 5: CLOSED (0 survivors). Single-pole td = 6: 4 r9/M2 classes
+- [x] td = 7 off-axis book: 62 pinned cells -> 6 (generalized zero-chain
+      law, Sol + dual verification; BOOK-OFFAXIS §11)
 - [x] Two-pole (3,3): funneled to rigid template (a₁/a₂ = 2+√3); R6
       print-campaign closed (6/9 dead); 4 branches to coefficient level
 - [ ] R1 decisive runs: minimal-branch mod-p screen RUNNING (ultramem);

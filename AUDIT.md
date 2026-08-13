@@ -585,3 +585,15 @@ On every box restart/reuse: crontab -l FIRST; remove any deadline/poweroff/lifec
   refs/chau1999_apm71_full.pdf; verified on-page pp. 304-305): load-bearing
   for the every-fiber Prop 5.8 upgrade (SOL-PROP58.md). Published +
   refereed; hypotheses Keller + monic in y.
+- GPT-5.6-Sol, generalized zero-chain rigid law (xmodel/sol-td7-law.md,
+  2026-08-13): td-7 class-B/C cell is T1-dead iff d_p | d_q (iff M = d_p
+  iff kbar in {3,4}); on-axis ZCH (nu+1)|l recovered as the mu=1 case.
+  PROMOTED after dual verification: zero-shared-reasoning engine check
+  62/62 (xmodel/td7-law-engine-check.md; independent reduced-equation
+  derivation from BOOK-OFFAXIS R1.0, exact sympy over QQ(A)) + Grok
+  hostile proof audit SOUND, all 5 attacks held (xmodel/
+  grok-td7-law-review.md). Effect: td-7 book 62 -> 6 live cells
+  ((9,15,7,3),(10,15,7,5),(15,25,8,5),(15,25,12,5),(18,27,13,9),
+  (39,65,32,13); 53 routes, 35 budget-equality), 1636/1689 routes
+  removed by theorem. The six are certified LOCAL T1 survivors
+  (explicit admissible solutions); next tier = transport/global.

@@ -359,3 +359,11 @@
   (leaf decomposition needed — Box02 stays STOPPED until residual screen results).
   Sol lanes running: td7-law, thmB (now elevated: functional-level kill is the missing
   instrument), avenues2.
+- 2026-08-13 ~13:05: PROMOTED generalized zero-chain law (Sol lane 1 + engine check
+  62/62 + Grok audit SOUND): td-7 book 62 -> 6 live cells, 1636/1689 routes dead by
+  theorem; 62-cell bash workflow CANCELLED, replaced by next-tier plan on 6 cells.
+  Sol thmB = proved ceiling (no additive functional separator; escape = slot-10
+  cusp tangent squared -> level-42 quadratic, matches window build independently).
+  §6.V dual review SOUND-WITH-ERRATA both referees; repair 24-test verdict loop
+  grinding. Residual-32: 2 timed-out prime lanes relaunched with 12h caps (5 msolve
+  lanes now live). Depth-23 GB42 done, GB21 in progress. sol-avenues2 landed, unread.
