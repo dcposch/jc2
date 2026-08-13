@@ -378,6 +378,55 @@ one tier down at the single window every diagnostic pointed to —
 residue-A itself remains open on the forced-tail locus.
 
 ## 6. Ledger, trust perimeter, reproduction, next objects
+[build resumed 2026-08-13 (retry, prior attempt died at startup): 83-var forced-nonzero-tail window build, phase `tails`]
+
+### 6.T The 83-var forced-nonzero-tail window build (analysis, 2026-08-13)
+
+Builder banked /tmp/directionb_tails.pkl (D = 21, 2998.7s, exact,
+sentinel-free; copy /tmp/directionb_tails_D21.pkl). Analysis engine:
+cases/directionb_window.py (phases gate | bands | slot20).
+
+GATE (20/20 PASS, directionb_window.py gate): tails -> 0 kills rows
+6..18 term-by-term (every monomial tail-loaded); Row_20's const part
+== the banked zero-tail system coefficient-for-coefficient (all 9
+eta-comps; the extra eta^27 comp is pure-tail); the 9-on-2 block and
+the 0 = -42/(c_f c_g) contradiction re-derived from the tails state
+itself; E5/E6 anchors + E1 tower + Row_0 (strike gate) 4/4.
+
+BAND LEDGER, rows 6..19 (odd rows + Row_7..19-odd identically 0;
+`directionb_window.py bands`, 11s). Two tiers per band. Tier S =
+the pre-registered "Row_6-type" split (radical monomials as free
+K3-module basis; structural census). Tier V = the VERDICT tier:
+one row per eta-component over the etale algebra E = K3[a1,a2,mu]/
+(a1^3-(3+r3), a2^3-(3-r3), mu^2-3/2), h_i |-> s_i mu w_i per h-sign
+branch (s1,s2), w-monomials kept as explicit column weights; Gaussian
+elimination with UNIT pivots only (norm != 0 <=> invertible in every
+field factor), so each band's echelon rows are an exact generating
+set of its conditions on EVERY branch of the radical tower.
+
+  band | eta | tier S rows x cols -> rank | tier V rank over E (x4 branches)
+   6   |  9  |  18 x    6 -> 2   |  1
+   8   | 10  |  48 x   18 -> 6   |  4
+  10   | 10  |  63 x   48 -> 16  |  6
+  12   |  9  | 113 x  127 -> 40  |  7
+  14   | 10  | 191 x  292 -> 74  | 10
+  16   | 10  | 321 x  628 -> 111 | 10
+  18   |  9  | 451 x 1341 -> 173 |  9
+
+Tier V ranks IDENTICAL on all 4 h-sign branches; NO unreduced
+leftover rows anywhere => 47 exact polynomial conditions per branch
+(banked: /tmp/directionb_window_conditions.pkl). NO tail is pinned
+to 0: already Row_6 has E-rank 1 on its 6 level-38 tails (the
+zero-tail cascade DIES at the first band); sample clean conditions:
+  C6.1:  [(-3/2-r3/2) a1^2 a2] tf1_38 - 3 tf2_38 + [(1/2+r3/6) a1^2 a2] tg01_38
+         + tg02_38 + [(1+r3/3) a1^2 a2] tg1_38 + 2 tg2_38 = 0
+  C10.6: -(3/2)(tf1_42+tf2_42) + (1/2)(tg01_42+tg02_42) + tg1_42 + tg2_42 = 0
+  C16.10: (3/184)(tf1_48+tf2_48) - (1/184)(tg01_48+tg02_48)
+          - (1/92)(tg1_48+tg2_48) + (6 nonlinear terms) = 0
+The 7 dead-stretch coefficients enter ONLY in tail cross-terms
+(J-blindness persists with tails on).
+
+[slot-20 verdict: pending below]
 
 Trust: (a) the chart identity (J) is elementary calculus on the exact
 factorizations f - a = phi_f prod(y - y_i), g = phi_g prod(y - z_j)
