@@ -538,11 +538,56 @@ State: /tmp/directionb_tails_D21.pkl (banked copy of the build),
 /tmp/directionb_window_conditions.pkl (the 47 band conditions,
 per branch, as E-echelon rows).
 
+[depth-23 build status 2026-08-13 12:08: ALIVE and detached (PID
+21586, PPID 1, nohup; ~99% CPU, mid-GB42 orbit). Log:
+/tmp/tails23.log (= /tmp/directionb_d23.log, symlinked). On
+completion it OVERWRITES /tmp/directionb_tails.pkl with the D = 23
+state; the D = 21 state stays banked at /tmp/directionb_tails_D21.pkl
+(analysis reads the _D21 copy first).]
+
 NEXT OBJECT (unchanged in kind, sharpened in target): decide V by
 solving the 32 obstruction conditions on the low data -- a Groebner-
 tier job in ~28 parameters, or a depth-23 rerun (rows 21/22, build
 running) which adds rows that may collapse the degeneracy. Until
 then residue-A is ALIVE on the forced-nonzero-tail locus.
+
+GROEBNER-TIER EMISSION (2026-08-13, `directionb_residual32_emit.py`,
+guards 5/5 PASS): the residual decider emitted msolve-ready as
+cases/directionb_residual32*.ms (+ .rows.txt legend). Content: all
+77 window rows (bands 6..18 + Row_20 with the +42 inhomogeneity,
+LHS+42 = 0 form), fully expanded integer-coefficient monomial sums
+(emit_expanded; guard A: zero parens), the r1_minimal_ext radical
+block (r3^2-3, A1^3-3-r3, A2^3-3+r3, 2*HW_i^2-3*W_i^2), and
+Rabinowitsch saturation for every forced-nonzero scale that is a
+datum of this chart: uW1*W1-1, uW2*W2-1, uA*A1-uA*A2-1. NOT
+saturated, with reason: c_f c_g (consumed at the (J)-derivation
+tier, gauge 1 banked, §6 trust (e) -- not a chart variable); z, B
+(absent from every window radkey, asserted at emission). 84 vars =
+74 occurring template frees (42 high tails levels >= 43 + 26 low
+tails + 6 of the 7: uf30 NEVER occurs in the window, it enters
+first beyond depth 21) + uW1,uW2,uA + W1,HW1,W2,HW2,A1,A2,r3. VARIABLE
+ORDER: the 42 highs + 3 u's head the header; `msolve -e 45` projects
+onto the ~28 low+7 parameters + radical tower = THE residual-32
+system (its closed form is Groebner-tier by nature: the rank-16
+elimination transform is rational in the low data, §6.V(4)).
+Char-0 lane (directionb_residual32.ms, 2.0 MB, EMITTED NOT RUN) +
+3 banked-prime lanes (p = 105337, 105673, 200257; coefficients in
+[0,p)) + ctl0 satisfiability-guard variant (constant blocks dropped;
+origin-satisfiable, guard D; GB=[1] there = transcription error,
+ctlA convention). Anchors: guard B independent-parser round-trip
+char0+p vs internal ring eval (85 rows x 2 points x 2 primes);
+guard C pattern-positive -- at tails=0 exactly the 9 zero-tail
+Row_20 comps survive and equal the banked dsys constants (+42 at
+eta^0) mod p, 9/9 nonzero. VERDICT SEMANTICS: main-lane GB = [1]
+at the primes = strong evidence the forced-tail window variety is
+EMPTY (then char-0 [1] = proof-tier residue-A window kill);
+GB != [1] = V alive mod p, dimension/degree data for the fleet.
+Sizes: main 2,035,641 B char-0; 1,983,334 / 1,983,734 / 2,006,543 B
+at p = 105337 / 105673 / 200257; ctl0 1,949,393 B char-0 + 3
+p-lanes ~1.98-2.00 MB; legend 3,753 B; 85 eqs (77 window + 5
+radical + 3 saturation) x 84 vars per file.
+[screens: launched locally, 1200 s cap each, ctl0 first --
+/tmp/directionb_res32_screen.log; results below when landed]
 
 Trust: (a) the chart identity (J) is elementary calculus on the exact
 factorizations f - a = phi_f prod(y - y_i), g = phi_g prod(y - z_j)
