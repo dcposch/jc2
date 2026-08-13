@@ -14,8 +14,19 @@ searrow law) CONFIRMED and promotable after fix cycle; R1.3-R1.5 REFUTED
 M-descent law contradicts St 9.6(iii)/(iv)); td=7 RESTORATION RETRACTED
 AGAIN (honest state: 4 DEAD / 2 ALIVE at td=7, incl. the exact (7,5)
 eps-cell d^2=(3/2)c^2 -> live equal-w join); sections 8-9 recount
-UNCERTIFIED. Repair route: lambda-budget per the review — **lambda-budget repair in progress (2026-08-12, this session)**. 
-Original status: COMPLETE + CLOSURE LEMMAS PROVED (2026-08-12, two sessions).
+UNCERTIFIED. Repair route: lambda-budget per the review — **EXECUTED
+(2026-08-12, this session, §10): the priced menu P0 (AF2-derived λ per
+St 9.6-family step), the shared-budget composition P1 (St 9.4 (25) +
+H3-psi at the trunk terminal, ψ = ⌈1/(1−w)⌉ − 1), and the exhaustive
+td-7 adjudication P3/P4. RESULT: the G2/ε reopening (the review's star
+(7,5) cell → equal-w join) is PRICED OUT (0 fitting routes), the L2 cell
+dies by the corrected St 8.4 transport, but td = 7 does NOT close: the
+printed St 9.6(iii) (A)-jump feeds 62 budget-fitting merge cells (1689
+routes, 1390 at exact budget equality), all fully pinned T1-rigidity
+targets. §8's "CLOSED" theorem stays RETRACTED; §9's recount is
+superseded by the §10 stage-R′/P recount.** 
+Original status [PROVENANCE ONLY — its §8/§9 claims are RETRACTED, see
+above and §10]: COMPLETE + CLOSURE LEMMAS PROVED (2026-08-12, two sessions).
 VERDICT (updated): **R1 (off-axis w-law) and R2 (general-μ merge
 anatomy) are now PROVED (§6–§7)** at H1 tier (Prop 9.3 arithmetic over
 promoted MP0–MP8). Consequences: **the td = 7 prime-td exclusion is
@@ -141,8 +152,10 @@ MP6(a)-(e) applies there). Highlights:
 - **td 6, 9 (all m); m=4 td 12**: off-axis sector EMPTY (0 raw entries).
   The book's panels there are COMPLETE as printed; at td = 6 the
   multi-pole story remains exactly Theorem O's residue-A cell.
-- **td 7 (m=2)** [SUPERSEDED by §8: R1 is now proved and the panel is
-  CLOSED — exclusion RESTORED]: one off-axis entry survives L6: (2,3),
+- **td 7 (m=2)** [SUPERSEDED TWICE: §8's "CLOSED" was retracted by the
+  triple review; §10's λ-budget adjudication now gives the honest state:
+  OPEN with 62 explicitly pinned budget-fitting cells]: one off-axis
+  entry survives L6: (2,3),
   Λ=(3,4), M=(1,2), 6 merge cells, all with full MP6 anatomy (μ=1 edge
   forced); the b=2 chain carries w ≡ 3/2 (frozen, §8 Step 2) against
   the b=1 chain's w ≡ 2, and every join/root configuration dies.
@@ -173,10 +186,11 @@ MP6(a)-(e) applies there). Highlights:
   only when dq < dp); MP6(c) generalizes as R1.0 q-rigidity; MP7's
   survivor is R2.3 (q ∝ p^h dies; l = 0 no-resonance fails but is
   (S)-pruned to ν = 1).
-- **R3 (budget silence)**: MP8 transparency does NOT extend off-axis
-  (Cor 8.1's M=1 hypothesis; V_{2,a} escape §2(c1)) — but neither is a
-  λ ≥ 1 charge proved. Either resolution is progress: transparency ⟹
-  suffix budgets stay td−2; a charge ⟹ new kills at small td.
+- **R3 (budget silence)** — RESOLVED IN THE CHARGE DIRECTION (§10 P0/P2,
+  2026-08-12): every dirty/ε step and every merge NE-orbit/free 0-root
+  carries a derived λ ≥ 1 (regularity-free for gap > 0), priced by the
+  promoted AF2 rule; the shared budget is St 9.4 (25) with the P1
+  ψ-certificate. New kills at td = 7 per §10 P4 (partial: 62 cells fit).
 - **R4 (conservative superset)**: the merge census imposes no l/ν
   window, no i-sync (always solvable: segment ν-products are free
   integers ≥ 1, DS1-R1 gives no (m,td) bound), no root-merge St 9.2
@@ -329,7 +343,9 @@ or 1-parameter); executed per-cell in the §9 engine stage rather than as
 a closed form. Full MP6(a)/(e) (k = 0, λ = 0) remain FALSE in general
 at mixed merges: northeast orbits are budget objects (R3), not banned.
 
-## 8. THE td = 7 KILL (R1 + R2 ⟹ prime-td exclusion RESTORED at td = 7)
+## 8. THE td = 7 KILL — **RETRACTED (review) / re-adjudicated in §10**
+## (Steps 1, 3, 4 stand as conditional kills; Step 2's M-law is refuted;
+## the honest priced verdict is §10 P4: OPEN, 62 cells)
 
 Witness (§1a, the ONLY off-axis td = 7 entry): m = 2, type (2,3),
 Λ = (3,4), poles (a,b,ν) = (1,1,2) ⊕ (1,2,3), M = (1,2),
@@ -378,7 +394,9 @@ off-axis sector at td = 7 is EMPTY at H1 tier (Prop 9.3 arithmetic over
 promoted MP0–MP8 + R1 + R2). The prime-td exclusion at td = 7 is
 RESTORED. (td = 11, 13 remain partially open: see §9 recount.)
 
-## 9. STAGE-R RECOUNT (engine: cases/book_offaxis.py, additive stage)
+## 9. STAGE-R RECOUNT — **UNCERTIFIED (review findings 1-2: the W_off
+## alphabet embeds the refuted M-law and omits the ε-cells; kept for
+## provenance; superseded by §10 P5's stage R′)**
 
 Filters implemented (each cites its proof): per-pole w-alphabet
 W_off(w₀,b) (R1.5; clean R1.2 + dirty R1.4 steps); per-merge-node
@@ -424,15 +442,214 @@ MP6-anatomy cells with equal w were NOT deep-solved here (DS4 menu +
 suffix machinery not rerun off-axis); λ/budget of NE orbits still
 unpriced (R3 unchanged).
 
-## 10. LAMBDA-BUDGET REPAIR (in progress this session; St 9.3 (24) pricing
+## 10. LAMBDA-BUDGET REPAIR — EXECUTED (2026-08-12; St 9.3 (24) pricing
 ## of the off-axis escapes against the shared St 9.4 budget)
 
-[Being written: pricing derivation P0-P3, td-7 re-adjudication, priced
-recount. See BOOK-OFFAXIS-REVIEW.md §7/§9.3 for the prescribed route.]
+Route (BOOK-OFFAXIS-REVIEW §7/§9.3): the R1.3-R1.5 escapes are the
+printed St 9.6-family transitions and carry PRINTED λ-costs; price every
+off-axis chain against the shared St 9.4 budget. Machinery consumed:
+CONFIRMED R1.0-R1.2 + R2 (review Fronts 1-2), promoted AF2 λ-rule
+(SHEET6-AF2 §2, derived from St 9.3 (24) with the E6 sign fix), promoted
+H3-psi (SHEET6-H3 §4a), MP2/MP5/MP8, St 8.4, St 9.4 (25)/(26) p. 49.
+
+**P0 (priced step menu — replaces R1.3-R1.5).** At a chain vertex F with
+arriving mult l (l | M_parent, St 8.4 p. 42), the full pattern is
+p = ⊖η^ε (η^ν−c^ν)^l Π_j (η^ν−d_j^ν)^{m_j}, q = ⊖η·(simple orbits)
+(R1.0; ε-extended R1.3 per review §3b: St 9.6(II)(a)+(b) and general-l
+analogues; NE laws ε·dq < dp, m_j·dq < dp STRICT — equality is the
+root-mult law (R)). Transport (R1.2/R1.4 proportion, l-cancellation):
+with E := l·dq − dp > 0 (searrow of the own edge):
+    κ̄_F = l·w_G·dq/E ∈ ℤ (ν ≥ 2),  w_F = l·w_G(dq−1)/(νE),
+    M_F = gcd(dp, dq).
+λ-price of the step (AF2 rule; every extra direction climbs
+REGULARITY-FREE since its gap = X_F/mult − κ̄_F > 0 ⟺ NE, X_F = κ̄_F·dp/dq):
+    **λ_F ≥ Σ_j max(1, ⌈X_F/m_j − κ̄_F⌉) + [ε ≥ 1]·max(1, ⌈(X_F/ε − κ̄_F)/ν⌉).**
+Clean/neutral steps (ε = 0, k = 0) cost 0 (St 9.6(v) is the λ = 0 family).
+Finiteness WITHOUT R1.5: (i) extras present (C := l(k+lex) − Sm ≥ 1):
+    E | l·num(w_G)·T,  T := Sm + l − ε(1+k+lex) ≥ 1
+(T = 0 ⟺ dp = ε·dq, excluded by (R)); so E ≤ l·num(w_G)·T — a finite
+Diophantine menu per (w, l), generalizing R1.4's bound; (ii) pure-(b)
+(k = lex = Sm = 0, 1 ≤ ε ≤ l−1): C = 0, ν free, but the step COLLAPSES:
+    w_F = l·w_G/(l−ε) (expansion), M_F = gcd(l−ε, ν+1) | l−ε,
+    λ_F ≥ ⌈l·w_G/ε⌉  (e.g. the review's doubling family: l=2, ε=1,
+    λ ≥ ⌈2w⌉ = 3 at w = 3/2; its (7,5) cell is (i) with k=1: λ = 3).
+Every non-clean step costs λ ≥ 1, so the St 9.4 budget bounds the number
+of non-clean steps: R1.5's refuted finiteness is REPLACED by budget-
+boundedness. Sanity (this session, cases/scratch_offaxis_pricing/px2.py):
+the complete one-step menu from the td-7 chain-2 state (3/2, 2) is EXACTLY
+    (A) (21,15): w → 2/3, M → 3, λ ≥ 2   [printed λ ≥ 2, St 9.6 p. 53]
+    (C) (20,16): w → 3/4, M → 4, λ ≥ 2   [printed λ ≥ 2, St 9.6 p. 53]
+    ε (7,5):     w → 2,   M → 1, λ ≥ 3   [review §3b / codex λ = 3]
+    pure-b:      w → 3,   M → 1, λ ≥ 3   [doubling family]
+— the review's four escapes, now all priced.
+
+**P1 (terminal ψ-certificate — H3-psi at the trunk).** Let G be the last
+↘-vertex above (0,y) (trunk chain vertex or the merge itself), any shape.
+Case IV (Prop 9.3 (k), i-normalized; ρ_G = X_G/dp_G, w_G = (κ̄_G − ρ_G)/ν_G):
+    d_F/deg(p_G) = (ρ_G + ν_G − κ̄_G)/ν_G = 1 − w_G,
+so H3-psi's R = deg(p_G)/d_F = **1/(1 − w_G)**, shape-independently, and
+St 9.4 (25) applies with **ψ = ⌈1/(1−w_G)⌉ − 1**:
+    **Σ λ ≤ td − 1 − ψ  over ALL pairwise-distinct ↘-vertices of the
+    configuration** (St 9.4's F_i are arbitrary pairwise-different
+    elements of V_a ∩ T_a↘ — both chains, all merges and the trunk
+    share ONE budget; this is the composition the review §7 prescribed).
+Terminal laws: w_G < 1 (R2.1 IV), M_G ≥ 2 (MP2: trunk M ≠ 1), and 9.3(m)
+i-normalizes to **j := M_G·(1 − w_G) ∈ ℕ***, i.e. w_G = 1 − j/M_G and
+ψ = ⌈M_G/j⌉ − 1. Consequence: terminating NEAR w = 1 is expensive
+(w = 2/3: ψ = 2, budget td − 3; w = 3/4: ψ = 3, budget td − 4);
+terminating at w ≤ 1/2 keeps ψ = 1 (budget td − 2, = St 9.5).
+
+**P2 (merge pricing).** At a merge cell (R2.2 shape), every NE orbit
+prices max(1, ⌈X_G/m_j − κ̄_G⌉) and a FREE 0-root (ε ≥ 1 with no arriving
+0-chain) prices max(1, ⌈(X_G/ε − κ̄_G)/ν_G⌉) — same (24) mechanism,
+regularity-free (gaps > 0). NE directions cannot lead to poles (all pole
+branches arrive as chain edges of the fixed hierarchy), so St 7.3 forces
+a T_{a,cv} vertex on them: they are Y(G)-objects. Arriving edges and
+q-extras price 0 (MP8 rows). The trunk below the merge starts at
+w_tr = (κ̄_G − X_G/dp_G)/ν_G, M = M_G and evolves by P0 (l | M_G).
+Review finding 2 fix: arrival mults are μ_e | M_{H_e} of the CURRENT
+arriving state (post-jump), not divisors of the entry b_i.
+Arrival law (refines R1.5's): an edge of mult μ can leave a chain vertex
+of state (w, M) only at a vertex (ν_H, M_H) with μ | M_H, where M_H =
+gcd(l, ν_H + 1) at a neutral vertex (l | M) — so **ν_H ≡ −1 (mod μ)** —
+or (ν_H, M_H) is the landing cell of the state-creating step itself
+(e.g. μ₀ = 3 arrivals at ν_H = 7 direct from the (21,15) (A)-cell), or
+the entry (ν_i, μ | b). This kills, e.g., (ν_H, μ₀) = (4, 3): no vertex
+with ν = 4 carries M = 3 at w = 2/3 (neutral cells have dq = ν + 1;
+resonance from 2/3 needs Δ | 2 — none).
+
+**P3 (td = 7 complete arrangement classification — hand-proved).**
+Chain 1 is frozen at (μ, w, M) = (1, 2, 1), λ = 0 (MP5/MP8/DS3; §8 Step 1
+unchanged). Chain 2's priced states are P0-closed from (3/2, 2). At the
+single merge G (r = 2), with X = κ̄ − 2 from chain-1's case-II handshake:
+- Root merge: DEAD (w₁ = 2 ≥ 1, R2.1(iv)) — §8 Step 4 unchanged.
+- Chain-1 at 0: needs w₂ = 2ν_{H₁} ≥ 4 (μ₂ = 1) or w₂ > 2 (μ₂ ≥ 2):
+  no priced state reaches w > 3, and w = 3 has M = 1 (μ₂ = 1 only): DEAD.
+- Unequal-μ non-0 pairs: κ̄ = (μ₂w₂ − 2)/(μ₂ − 1) with X > 0 forces
+  w₂ > 2: DEAD (same argument).
+- **Class A (equal-(1,2) join)**, chain 2 arrives (1, 2) after the ε-step
+  (λ = 3): κ̄ free; realizing cells with Σm = 0 forced (dq > dp since
+  X < κ̄): ν_G ≥ 2: dp = 2ν_G, c := dq − dp: ν_G | c − 1, c(κ̄−2) = 4ν_G
+  ⟹ (ν_G + 1) | 4: EXACTLY (6,10) M2 (κ̄ = 5, w_tr = 3/2) — codex's cell;
+  ν_G = 1 (κ̄ ∈ ℚ legal): dp = 2, dq = 2t: the **(2,2t) M2 tail** (t ≥ 2),
+  w_tr = 2 + 1/(t−1); 0-slot variants (case I at ν_G = 1, finding 4) give
+  the same cells.
+- **Class B (chain-2 at 0, μ₀ = 1, case III, ν_G ≥ 2)**: ν_{H₂}w₂ = 2;
+  cheapest state w₂ = 2/3 (λ = 2, ν_H = 3); cells: dp = 1 + ν_G,
+  ν_G | c ⟹ ν_G | 2: EXACTLY (3,9) M3 (κ̄ = 3, w_tr = 4/3) and (3,5) M1
+  (MP2-dead). This is the review's live cell L1.
+- **Class C (chain-2 at 0, μ₀ ≥ 2, case III, ν_G ≥ 2)**: post-jump
+  arrivals (the grid never saw these): κ̄ = (μ₀ν_{H₂}w₂ − 2)/(μ₀ − 1)
+  pinned; cells dp = μ₀ + ν_G, dq = κ̄dp/(κ̄−2), ν_G | (μ₀ + c − 1):
+  FINITE, with κ̄ ≥ 5 ⟹ c ≤ (4μ₀−2)/(κ̄−4), so ν_{H₂} is bounded per
+  (μ₀, w₂) — a complete Diophantine menu. (ν_G = 1 would need case I:
+  w₂ > 2, dead.)
+All class A-C cells carry λ_merge = 0 (Σm = 0, ε = μ₀ arriving: no
+climbing extras). The verdict per route: λ_chain2 + λ_trunk ≤ 6 − ψ(w_t)
+with P1's terminal laws, trunk priced by P0 (M ≥ 2 throughout, MP2).
+
+**P4 (td = 7 VERDICT: NOT closed — but the two review holes are now
+priced, one shut, one survives, and the honest cell set is recut).**
+Exhaustive priced adjudication (this session,
+cases/scratch_offaxis_pricing/px5.py; engine stage adjudicate_td7();
+the class A/B cell lists and the class-C ν₂-bound are the hand-proved
+P3 closed forms; the (2,2t) tail is closed by first-step inversion
+u | 2dq / u | dq — no caps hit):
+
+- **G2 route (the review's STAR cell) is PRICED OUT.** The ε-step (7,5)
+  costs λ = 3 (P0; = codex's λ); the doubling family costs 3 and lands
+  M = 1 (dead on any trunk, MP2). The equal-w join then needs the (6,10)
+  cell (w_tr = 3/2, M2) or a (2,2t)-tail cell: EVERY completion
+  overruns: 3 + 2 = 5 > 4 = 6 − ψ at the ψ = 2 terminals (w_t = 2/3),
+  5 > 3 at ψ = 3 (3/4), and ψ = 1 terminals need ≥ 3 more units
+  (6 > 5). **Class A + tail: 0 budget-fitting routes.** The review's
+  "second, independent reopening" is closed by the printed budget.
+- **The review's L2 cell ((6,9) M3 via w₂ = 4/9, μ₀ = 2) is DEAD by the
+  corrected transport alone**: 4/9 needed an l = 2 dirty step BELOW the
+  M: 2→3 jump — illegal under St 8.4 (l | M); the legal priced closure
+  from (3/2, 2) never reaches 4/9 (its λ ≤ 5 states are listed in the
+  engine; the review's 3/16, 3/8, 4/9 were l|b-conflation artifacts).
+- **G1 route SURVIVES**: class B's (3,9) cell (the review's L1) fits:
+  λ = 2 ((A)-step, printed St 9.6 λ ≥ 2) + trunk (4/3, M3) descending
+  at λ = 2 (e.g. via the l = 3 cell (35,15): κ̄ 6, gap 1, λ 1, w → 4/5,
+  M → 5; then an l = 5 step) to terminals w_t = 2/3 (ψ = 2, total
+  4 = 6 − ψ exact) or w_t = 2/5, M 5 (ψ = 1, total 4 ≤ 5, slack 1);
+  18 fitting routes on this cell.
+- **Post-jump class C opens 61 NEW cells** the grid never enumerated
+  (review finding 2: arrival μ₀ | M-state, e.g. μ₀ = 3 after the M→3
+  jump). Sharpest: the **(10,15) exact-fit route**: entry → (A)-cell
+  (21,15) [λ ≥ 2 printed, w → 2/3, M → 3, ν_H = 7] → arrives μ₀ = 3 at
+  the 0-direction of (dp,dq) = (10,15), ν_G = 7, κ̄ = 6, X = 4,
+  M_G = 5 → child = (0,y) directly with w_G = 4/5: 9.3(k) d_F/i = 2,
+  (m) M(1−w) = 1, R = 5, ψ = 4: budget 6 − 4 = **2 = Σλ**. Every
+  printed law is satisfied with EQUALITY in St 9.4 (25); nothing
+  printed kills it. Similarly (8,16) (Σλ 2 ≤ 3), (7,21), (5,15), ...
+- **Totals: 1689 budget-fitting routes (1713 raw; engine
+  adjudicate_td7 = 1713, A/tail = 0, B = 18 — match); 62 distinct
+  surviving merge cells as (dp,dq,ν,M)-tuples (1 class-B + 61 class-C,
+  over 45 distinct (dp,dq)); minimal total λ = 2.**
+
+**td = 7 verdict: the prime-td exclusion at td = 7 is NOT restored by
+the λ-budget** — of the review's two live cells, L2 dies (transport),
+L1 survives, the G2/ε reopening dies (budget), but the printed
+St 9.6(iii) (A)-jump feeds 61 further budget-fitting case-III cells the
+old grid never enumerated. td = 7 stays OPEN, now with an
+EXPLICIT finite survivor book: every survivor is a fully pinned
+(κ̄, X, dp, dq, ν, M) cell + terminal, i.e. a T1-rigidity target
+(R2.3(iii)): the next kill must come from exact Prop 8.1(iv) solves on
+the 62 cells (as grok did FOR the (7,5) cell — but these are different
+cells), not from budget arithmetic. Honesty: survivors are
+superset-alive (alive ≠ existent); Σλ values are LOWER bounds — 1390 of
+the 1689 routes fit with EQUALITY (Σλ = td − 1 − ψ), so any new printed
+unit of λ anywhere on them (e.g. a positive price for the St 9.6(iii)
+child's own 0-direction, or ψ-sharpening k_f > deg p_G) kills them; only
+the 299 slack routes are robust to a single extra unit.
+
+**P5 (the full recount, td ≤ 14 — stage R′).** The §9 stage-R recount
+(2251 DEAD / 440 alive / 0 open) is VOID: its kills consumed the
+refuted W_off alphabet (G1 M-law + missing ε-cells + the l | b
+conflation). Under the corrected priced alphabet the honest grid-level
+statement, now implemented as stage_rp_census, is:
+- the per-pole state set is bounded ONLY by the St 9.4 budget (P0
+  replaced R1.5's refuted finiteness by budget-boundedness), and at
+  budget td − 2 ≥ 5 it already contains post-jump states of unbounded
+  numerator and M (e.g. the (3/2, 2) closure at budget 5 has 70 states
+  up to M = 25; b = 3, 5 poles are worse);
+- the §9 grid solve's PROVEN loop bounds scale with num(w)·M_G, so no
+  completeness certificate exists for any b ≥ 2 entry at any td;
+- hence **NO off-axis grid cell is certifiably DEAD at printed tier:
+  the recount is 0 DEAD / 0 ALIVE / 2691 OPEN** (superset semantics;
+  per-entry rows in the engine output, all CAPPED), and panel decisions
+  must come from per-route pricing. Executed for td = 7 (P4: G2 shut,
+  62 cells budget-fitting). At td ≥ 8 the budget td − 2 ≥ 6 exceeds
+  the ≤ 5-unit cost of the td-7-style escape routes, so budget pricing
+  alone cannot close any td ≥ 8 panel — those panels need either the
+  T1-rigidity solves or new printed λ/ψ units. td = 11/13 remain open
+  (as before the repair), now with the sharper diagnosis that their
+  stage-R "12/129 alive" figures were alphabet-artifacts in BOTH
+  directions (kills unsound, post-jump cells missing).
+
+**Trust perimeter of §10** (all pre-existing/promoted, no new standing
+hypothesis): corrected St 9.3 (24) with the E6 sign fix + St 6.1/6.2 +
+Prop 6.7 + St 7.1/7.3 + Not 9.3 (the AF2 rule; gap > 0 parts
+regularity-free, ⌈·⌉ rides the St 9.4-proof integrality line); St 9.4
+(25)/(26) with H3-psi's chart transport (Lemma 2.1(i)/St 3.12/St 3.17(i)
+— pole-count-free, k_f/l_f are root invariants); St 8.4 (l | M); MP2
+(trunk M ≠ 1), MP5/MP8 (b = 1 chains free), R1.0-R1.2 + R2 as
+review-confirmed; Prop 9.3 (i)-(m) + St 9.2 at terminals. Honesty
+riders: (i) per-state λ is the MIN over paths — arrivals through direct
+step-cell realizations may under-price (superset-safe: no false kills);
+(ii) n_e ∈ ℕ* and i-sync are never used to kill (stage-R policy kept);
+(iii) NE-orbit prices use the minimizing mult partition; (iv) the P3
+class lists and the (2,2t) tail inversion are td-7-specific proofs —
+other panels use the capped generic engine (P5); (v) the arrival law's
+"direct" list is a superset (recorded along any in-budget path).
 
 ## Reproducibility
 
-    cd cases && python3 book_offaxis.py    # ~0.2 s, exit 0
+    cd cases && python3 book_offaxis.py    # ~25 min with stage P, exit 0
+    # (full run 2026-08-12: all gates PASS; stage R' 0/0/2691; td-7
+    #  adjudication 1713 routes, A/tail 0, B 18, exact-fit 1413, min 2)
 
 Script: cases/book_offaxis.py (additive over book_enum.py, imports its
 entries/tdu_rows/set_partitions verbatim; exact integer arithmetic; no
@@ -440,4 +657,11 @@ floats). Gates, all mandatory before output: (1) book_enum.gate() —
 on-axis td=6 record reproduced unchanged (PASS); (2) MP4 sanity — prime
 and β-minimal Λ force b = 1 in tdu_rows (PASS); (3) L6 ≡ N1 equivalence
 asserted per entry row; (4) stage-R assert: td=7 cells all DEAD (the §8
-kill reproduced mechanically).
+kill — kept as a PROVENANCE gate only, superseded by stage P);
+(5) NEW gate_review_42: the review-§3a patched pre-pricing state
+(W_off(3/2,2) = {3/16,3/8,4/9,2/3,3/4,3/2}; td-7: 4 DEAD / 2 ALIVE)
+reproduced in-engine BEFORE pricing (PASS); (6) stage P
+(adjudicate_td7 + stage_rp_census) as §10. Session scratch engines
+(cases/scratch_offaxis_pricing/px{1,2,5}.py) reproduce the review-patch
+gate, the P0 menu/closure, and the P4 survivor book standalone
+(px5: 1689 routes, EXIT 0).
