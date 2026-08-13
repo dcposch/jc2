@@ -586,8 +586,12 @@ Sizes: main 2,035,641 B char-0; 1,983,334 / 1,983,734 / 2,006,543 B
 at p = 105337 / 105673 / 200257; ctl0 1,949,393 B char-0 + 3
 p-lanes ~1.98-2.00 MB; legend 3,753 B; 85 eqs (77 window + 5
 radical + 3 saturation) x 84 vars per file.
-[screens: launched locally, 1200 s cap each, ctl0 first --
-/tmp/directionb_res32_screen.log; results below when landed]
+SCREENS (local, msolve 0.10.1, -g 2 -t 4, 1200 s cap each;
+/tmp/directionb_res32_screen.log):
+  ctl0 p105337: TIMEOUT 1200 s (0-byte .out != NONEMPTY, R6 §19.2
+  hygiene) -- banked for the fleet; RSS ~1.6 GB, F4 grinding, so the
+  system FITS in memory and is fleet-runnable.
+  [main lanes p105337 / 105673 / 200257: below when landed]
 
 Trust: (a) the chart identity (J) is elementary calculus on the exact
 factorizations f - a = phi_f prod(y - y_i), g = phi_g prod(y - z_j)

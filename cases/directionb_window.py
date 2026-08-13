@@ -236,6 +236,26 @@ def gate():
     chk("zero-tail eta^0 then reads 0 = -42/(c_f c_g): INCONSISTENT "
         "(c1, c2 both nonzero)",
         not sysr[0][0].iszero() and not sysr[0][1].iszero())
+    # (c2) RHS42 certification [REVIEW 2026-08-13, Grok F3]: the
+    # constant every analysis phase consumes (RHS42, used by relax /
+    # evaluate / build_affine / tail_linearize / slot20) must equal
+    # MINUS the chart-Jacobian constant: x = t^-42, y = P + eta t^32
+    # gives x_t y_eta - x_eta y_t = (-42) t^{-43} * t^{32} - 0
+    # = -42 t^{-11}, so (J) reads LHS = -(42/(c_f c_g)) t^20 and the
+    # analysis equation is LHS + 42 = 0 at the c_f c_g = 1 gauge.
+    # Also: NEITHER banked pickle may carry a scalar (empty-radkey)
+    # constant at Row_20 eta^0 -- the -42 lives ONLY on the RHS, so
+    # it enters exactly once (no double count, no smuggled constant).
+    EXX, EYE = -42, 32                  # x = t^EXX, y ~ eta t^EYE
+    JCH = EXX                           # coefficient of t^(EXX-1+EYE)
+    Z8 = (0,) * 8
+    noscal = all(Z8 not in comp[0].get((), {})
+                 for comp in (r20d, r20t))
+    chk("RHS42 == -(chart-Jacobian constant) == 42 (x_t y_eta = "
+        "-42 t^-11, slot %d) and NO scalar const in banked Row_20 "
+        "eta^0 (both pickles): the -42 enters exactly once"
+        % (EXX - 1 + EYE),
+        RHS42 == K3(-JCH) and (EXX - 1 + EYE) == -11 and noscal)
     # (d) E5/E6 anchors (strike gate, rebuilds depth-1 jets)
     import directionb_strike as DS
     DS.OK.clear(); DS.gate()
@@ -544,9 +564,11 @@ def slot20(verbose=True):
     LINEARLY (levels 42/47/52).  On S every band 6..19 except Row_10
     vanishes identically (checked); Row_10 is linear in the six
     level-42 tails; Row_20 = const w4-block + linear(S) + quadratic in
-    the level-42 tails.  Solve exactly over E per h-sign branch and
-    per pole-scale sample, then CERTIFY by exact substitution into
-    all banked rows."""
+    the level-42 tails.  Solved exactly over E per h-sign branch and
+    per pole-scale sample: MEASURED INCONSISTENT (rank 4/10, residual
+    defect exactly Row_20 eta^{12,15,18,21,24,27}, uniform over all
+    12 (w, branch) combos), certified by exact substitution of the
+    particular solve into every banked row [REVIEW 2026-08-13]."""
     byk, vars_, D = load()
     S = sorted({vars_[vk[0]] for n, v in byk[20].items()
                 for vk in v if len(vk) == 1})
@@ -610,29 +632,27 @@ def slot20(verbose=True):
                     rowsB.append(row); rhsB.append(eneg(const)); etaB.append(n)
             rk, piv, sol, free, incons, undec = esolve(
                 rowsB, rhsB, len(colsB))
-            chk("slot-20 %s: SOLVABLE (rank %d/%d on %d eta-rows; "
-                "%d free tails; inconsistent=%s, undecided rows=%d)"
-                % (tag, rk, len(colsB), len(rowsB), len(free),
-                   incons, undec),
-                (not incons) and undec == 0)
-            # certificate: substitute back into EVERY banked row
+            # [REVIEW 2026-08-13] the checks below assert the
+            # MEASURED result (rank 4/10, INCONSISTENT, defect
+            # exactly Row_20 eta^{12,15,18,21,24,27}); the earlier
+            # text asserted the pre-result expectation (SOLVABLE +
+            # vanishing certificate + an "explicit point" that did
+            # not exist) and mis-reported 24 stale FAILs.
+            chk("slot-20 %s: INCONSISTENT as measured (rank %d/%d on "
+                "%d eta-rows; %d free; undecided rows=%d) -- the -42 "
+                "is NOT cancellable by the slot-20-linear tails"
+                % (tag, rk, len(colsB), len(rowsB), len(free), undec),
+                incons and undec == 0 and rk == 4)
+            # residual certificate: the particular solve (free = 0)
+            # substituted into EVERY banked row leaves a defect
+            # EXACTLY in the 6 obstruction components of Row_20
             inv = {i: nm for nm, i in colsB.items()}
             val = {inv[c]: x for c, x in sol.items()}
             defect = evaluate(byk, vars_, val, s1, s2, w1, w2)
-            chk("slot-20 %s: EXACT certificate -- all banked rows "
-                "6..20 vanish at the solution, Row_20 eta^0 cancels "
-                "the -42" % tag, not defect)
-            if defect:
-                print("      residual defect: %s"
-                      % {k: sorted(d) for k, d in defect.items()})
-            if verbose and (w1, w2) == (K1, K1) and (s1, s2) == (1, 1):
-                print("   -- explicit point (w1 = w2 = 1, h-signs ++), "
-                      "free tails = 0:")
-                for nm in REST:
-                    x = val.get(nm)
-                    print("      %-9s = %s" % (nm, eshow(x, 4) if x else "0"))
-                print("      (all other 76-10 window tails = 0; the 7 "
-                      "dead-stretch coefficients ARBITRARY)")
+            chk("slot-20 %s: EXACT residual certificate -- defect "
+                "exactly Row_20 eta^{12,15,18,21,24,27}" % tag,
+                set(defect) == {20} and
+                sorted(defect[20]) == [12, 15, 18, 21, 24, 27])
     return None
 
 def relax(byk, vars_, ks, s1, s2, w1, w2):
@@ -696,29 +716,58 @@ def stratum(byk, vars_, unk, val, ks, s1, s2, w1, w2):
     rk, piv, sol, free, incons, undec = esolve(rows, rhs, len(cols))
     return len(rows), len(cols), rk, incons, undec
 
-def verdict(s1=1, s2=1, w1=K1, w2=K1):
-    """THE VERDICT phase: the decisive tests, in increasing strength."""
+VFIBERS = ((1, 1, "1", "1"), (1, -1, "1", "1"), (-1, 1, "1", "1"),
+           (-1, -1, "1", "1"), (1, 1, "2", "3"))
+
+def verdict():
+    """THE VERDICT phase: the decisive tests, in increasing strength.
+    [REVIEW 2026-08-13] tests (1)(2) now LOOP over all 4 h-sign
+    branches at w = (1,1) plus branch (+,+) at w = (2,3), and the
+    harness asserts identical dims/ranks/verdicts on every fiber
+    (previously a single fiber ran and the 4-branch identity was a
+    doc-only claim, verified in review); strata (3) run on the
+    default fiber ((3a) is additionally 12-combo-certified by the
+    slot20 phase)."""
     byk, vars_, D = load()
     print("== VERDICT: is the forced-tail variety EMPTY? ==")
-    # (1) relaxations -- the only tier at which an EMPTY verdict could
-    #     be certified by linear algebra alone
-    nr, nc, rk, ic, ud = relax(byk, vars_, [20], s1, s2, w1, w2)
-    chk("Row_20 relaxation CONSISTENT (%d rows, %d monomial cols, "
-        "rank %d) => no single-row invariant kills the window"
-        % (nr, nc, rk), not ic and not ud)
-    nr, nc, rk, ic, ud = relax(byk, vars_, sorted(byk), s1, s2, w1, w2)
-    chk("FULL-WINDOW relaxation CONSISTENT (%d rows, %d monomial "
-        "cols, rank %d): the -42 target IS in the column span => "
-        "NO linear-algebra kill; residue-A does NOT die at this tier"
-        % (nr, nc, rk), not ic and not ud)
-    # (2) the differential at the zero-tail point
-    for tag, ds in (("dead-stretch = 0", {}),
-                    ("dead-stretch generic",
-                     {n: genval(i + 1) for i, n in enumerate(SEVEN)})):
-        nr, nc, rk, ic, ud = tail_linearize(byk, vars_, ds, s1, s2, w1, w2)
-        chk("tail-linearization at the zero-tail point (%s) is "
-            "INCONSISTENT (%d rows, %d tail cols, rank %d): the -42 "
-            "is NOT cancellable to first order" % (tag, nr, nc, rk), ic)
+    sig = []
+    for (s1, s2, ws1, ws2) in VFIBERS:
+        w1, w2 = K3(Fr(ws1)), K3(Fr(ws2))
+        ftag = "h=(%+d,%+d) w=(%s,%s)" % (s1, s2, ws1, ws2)
+        rec = []
+        # (1) relaxations -- the only tier at which an EMPTY verdict
+        #     could be certified by linear algebra alone
+        nr, nc, rk, ic, ud = relax(byk, vars_, [20], s1, s2, w1, w2)
+        chk("[%s] Row_20 relaxation CONSISTENT (%d rows, %d monomial "
+            "cols, rank %d) => no single-row invariant kills the "
+            "window" % (ftag, nr, nc, rk), not ic and not ud)
+        rec.append((nr, nc, rk, ic, ud))
+        nr, nc, rk, ic, ud = relax(byk, vars_, sorted(byk), s1, s2, w1, w2)
+        chk("[%s] FULL-WINDOW relaxation CONSISTENT (%d rows, %d "
+            "monomial cols, rank %d): the -42 target IS in the column "
+            "span => NO E-linear functional of these 77 depth-21 rows "
+            "kills the window on this fiber" % (ftag, nr, nc, rk),
+            not ic and not ud)
+        rec.append((nr, nc, rk, ic, ud))
+        # (2) the differential at the zero-tail point (sampled in the
+        #     7: the all-zero point + one generic rational sample --
+        #     rank-stability, not a closed identity in the 7)
+        for tag, ds in (("dead-stretch = 0", {}),
+                        ("dead-stretch generic",
+                         {n: genval(i + 1) for i, n in enumerate(SEVEN)})):
+            nr, nc, rk, ic, ud = tail_linearize(byk, vars_, ds,
+                                                s1, s2, w1, w2)
+            chk("[%s] tail-linearization at the zero-tail point (%s) "
+                "INCONSISTENT (%d rows, %d tail cols, rank %d): the "
+                "-42 is NOT cancellable to first order"
+                % (ftag, tag, nr, nc, rk), ic)
+            rec.append((nr, nc, rk, ic, ud))
+        sig.append(tuple(rec))
+    chk("tests (1)(2): dims/ranks/verdicts IDENTICAL on all %d "
+        "certified (h-branch, w) fibers: %s"
+        % (len(VFIBERS), list(sig[0])), len(set(sig)) == 1)
+    s1 = s2 = 1
+    w1 = w2 = K1
     # (3) exact affine strata
     T = lambda pred: [v for v in vars_ if v[:2] in ("tf", "tg") and pred(v)]
     dsg = {n: genval(i + 1) for i, n in enumerate(SEVEN)}
