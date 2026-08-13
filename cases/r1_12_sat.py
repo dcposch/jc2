@@ -186,7 +186,8 @@ def phase_minsat(timeout=1200):
     depth 84 (r1_q0_sat/r1_q0_fam)."""
     import r1_decompose as RD
     b = "r1_minsat"
-    cW = 729 * 7 ** 36 * 144            # * a_i^2 * A_i * W_i^4
+    # 243 = 3^5: TEMPLATE 2c-E5 erratum 2026-08-12 (was 729)
+    cW = 243 * 7 ** 36 * 144            # * a_i^2 * A_i * W_i^4
     ties = [("E5-min pole 1", "%d*A1*W1^4+%d*r3*A1*W1^4-1048576*HM"
              "+1048576*r3*HM" % (12 * cW, 6 * cW)),
             ("E5-min pole 2", "%d*A2*W2^4-%d*r3*A2*W2^4-1048576*HM"
@@ -221,7 +222,8 @@ def phase_corr(timeout=1200):
     EXPECTED NONEMPTY (13.1 bracket == 0), mirroring r1_minsat."""
     import r1_decompose as RD
     b = BASE + "_corr"
-    cW = 729 * 7 ** 36 * 144            # * a_i^2 * A_i * W_i^4 (x 2^18)
+    # 243 = 3^5: TEMPLATE 2c-E5 erratum 2026-08-12 (was 729)
+    cW = 243 * 7 ** 36 * 144            # * a_i^2 * A_i * W_i^4 (x 2^18)
     ties = [("E5-12corr pole 1 (h2-transport, H12)",
              "%d*A1*W1^4+%d*r3*A1*W1^4-1048576*H12+1048576*r3*H12"
              % (12 * cW, 6 * cW)),

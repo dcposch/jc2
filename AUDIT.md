@@ -606,3 +606,80 @@ at 3 independent large primes + satisfiability guards (see emission
 rules); the char-0 lift was a redundancy rider, never load-bearing.
 Ultramem access note: use `gcloud compute ssh ultramem-1` (plain ssh key
 not authorized); current IP 136.65.11.117 (changes on restart).
+
+## 729-row re-emission (2026-08-13)
+
+TEMPLATE 2c-E5 erratum (SHEET6-TEMPLATE.md §2c, 2026-08-12): the cleared
+E5 row constant is 243 = 3^5, not the 729 an earlier draft baked; the
+corrected row is 4*(a_i-b)*HM + 243*S_M^3*(a1-a2)^4*a_i^2*c_i*W_i^4 = 0.
+H_M is unit-rescalable (HM -> 3*HM maps the 243-row onto the 729-row),
+so no banked verdict flips; emitted files carrying the stale constant
+are re-emitted for hygiene so downstream consumers do not inherit it.
+
+Findings per engine — all three were (b) stale in code AND (c) stale in
+prior emissions:
+- cases/r1_q0_gate.py: e5e6_rows() (-> r1_q0_sat_p*) and phase_famemit()
+  (-> r1_q0_fam*) used 729; patched to 243 (comment breadcrumbs cite the
+  erratum).
+- cases/r1_q2_screen.py: phase_emit() (-> r1_q2_l*_p*) and phase_exact()
+  (-> r1_q2_l13.ms char 0) used 729; patched to 243.
+- cases/r1_12_sat.py: phase_minsat() and phase_corr() used cW =
+  729*7^36*144; patched to 243*7^36*144.  (The e5port/emit 81-constant
+  rows derive via the RETRACTED mult-4 port, not the 2c-E5 H_M row —
+  untouched; the 729 inside the e5port transport identity is lam_i^3's
+  9^3, legitimate.)
+
+Re-emitted (26 files; originals kept as *.stale729, nothing deleted):
+- Q0: r1_q0_sat_p{105337,105673}.ms + .rows.txt (the rows.txt pinned-HM
+  / implied-s1F annotations change by exactly 1/3 mod p, as forced);
+  r1_q0_fam.ms; r1_q0_fam_p{105337,105673}.ms.
+- Q2: r1_q2_l13.ms (char 0); r1_q2_l{4,8,12,13}_p{105337,105673}.ms;
+  r1_q2_l8_sub{16,23,30}_p{105337,105673}.ms (row-subset probes with no
+  in-repo emitter: re-emitted surgically — corrected E5 rows generated
+  by the engine's own emit path, all other rows byte-identical).
+- 12sat: r1_minsat.ms; r1_12sat_corr.ms; r1_12sat_corr_p{105337,
+  105673}.ms.
+Unaffected by construction: every ctlA/ctlB control (E5/E6 rows
+dropped), the relaxed base tiers (r1_q0_p*), the r1_12sat e5port family,
+all leaves.  r1_23sat.ms matches the raw integer 12*729*7^36*144 only as
+an expanded chain-core coefficient on x-monomials — the chain engine
+emits NO E5-analogue rows (EMPTY BY DERIVATION, sec 20.0); not stale.
+
+Verification (all PASS):
+- Per file vs its .stale729 twin: exactly the two E5 rows differ;
+  paren-free; every changed row reduced into [0,p); independent-parser
+  identity stale_row(W, 3*HM) == 3*corr_row(W, HM) at random points
+  (FC.parse_eval), 24/24 .ms files — pins the ratio-3 W-side change and
+  the unchanged HM-side in one shot.  Label-only rows.txt regenerated
+  with zero drift.
+- Engine guards: q0_gate a7 anchor PASS (both primes); q2_screen pert 13
+  PASS (2/2 deliberate perturbations caught); r1_12_sat e5port PASS.
+- 12sat engine-fused re-runs REPRODUCE the banked verdicts exactly:
+  r1_minsat.ms char-0 NONEMPTY; r1_12sat_corr.ms char 0 + both primes
+  NONEMPTY (~1s walls; engine appended them to runs/*_runs.log).
+
+Why no verdict flips (and what was deliberately NOT re-run):
+- NONEMPTY class (minsat, 12sat_corr): exact variety bijection
+  (HM|H12 -> 3x, tH -> (1/3)x; no E6/s1F coupling in these systems) —
+  provable invariance, plus the empirical reproduction above.
+- EMPTY class (r1_q0_sat_p*, r1_q0_fam[_p*], r1_q2_l13[.ms/_p*]): NOT
+  re-screened; the banked EMPTY verdicts refer to the .stale729 bytes.
+  Robustness: the banked ctlB_satonly controls (quotient rows + s1F
+  saturation, NO E5/E6 rows) are EMPTY (fam char 0; q2 l13 both primes;
+  and the banked Q0 GB contains s1F), and ctlB's rows are a SUBSET of
+  the full tier's rows, so EMPTY(ctlB) => EMPTY(full) for ANY E5/E6
+  rows, 243 or 729: the E5 constant is not load-bearing for the kills.
+  FLAG: should any future run of a corrected EMPTY-class twin fail to
+  reproduce EMPTY, that falsifies the subset argument -> review.  The
+  l4/l8/l12/sub* strata carry only TIMEOUTs (no verdicts) — nothing to
+  flip.
+- Pre-existing, unchanged: the E6 literal 16777216 (2^24) token in the
+  q0_sat/q2 mod-p emissions exceeds p (word-sized, parse-safe per the
+  2^63 micro-test); it is byte-identical to the stale banked inputs and
+  was deliberately NOT altered, to keep byte-parity outside the E5 rows.
+  Standing-rule [0,p) reduction of that literal remains an obligation
+  for those emitters.
+- Restored: systems/r1/r1_full_core.rows.txt (byte-identical copy from
+  runs/r1chain_prebuild_snapshot/) — missing from systems/r1 before this
+  task (pre-existing gap) and a required input of the q2 guard
+  (ME.core_name_map).

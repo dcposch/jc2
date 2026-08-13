@@ -533,9 +533,13 @@ SATBASE = "r1_q0_sat"
 def e5e6_rows(p, val):
     """The relaxation-dropped tie rows, witness-specialized mod p.
     E5 (TEMPLATE 2c-E5, H_M RESTORED as a variable; review-verified
-    formula, f12_witness.py):  per pole i,
-      4*(a_i-b)*HM + 729*S_M^3*(a1-a2)^4*a_i^2*alpha_i*W_i^4 = 0
+    formula, f12_witness.py; cleared constant 243 = 3^5 per the
+    TEMPLATE 2c ERRATUM 2026-08-12 -- an earlier draft baked 729):
+      4*(a_i-b)*HM + 243*S_M^3*(a1-a2)^4*a_i^2*alpha_i*W_i^4 = 0
     (s0 = 1, S_M = 7^12/2^6, a_i = 3+-r3, b = 4, alpha_i = A_i).
+    H_M is unit-rescalable (HM -> 3*HM maps the 243-system onto the
+    729-system), so the pinned HM below changes by 1/3 and no
+    verdict flips; stale-729 emissions kept as *.stale729.
     E6 in the embedding-free CUBE form (H_M^3/S_M^4 = H_F^3/S_F^4 = s1,
     s1F = H_F the quotient lead, S_F = 1):  (H_M/H_F)^3 = (S_M/S_F)^4:
       2^24*HM^3 - 7^48*s1F^3 = 0.
@@ -549,7 +553,7 @@ def e5e6_rows(p, val):
             (((3 + r3) % p, val["A1"], val["W1"]),
              ((3 - r3) % p, val["A2"], val["W2"])), 1):
         cH = 4 * (ai - 4) % p
-        d = (729 * pow(SM, 3, p) % p * pow(2 * r3 % p, 4, p) % p
+        d = (243 * pow(SM, 3, p) % p * pow(2 * r3 % p, 4, p) % p
              * pow(ai, 2, p) % p * Ai % p * pow(Wi, 4, p) % p)
         rows.append(("E5-quartic pole %d (HM pinned)" % i,
                      "%d*HM+%d" % (cH, d)))
@@ -883,8 +887,9 @@ def phase_famemit():
                                     (R1.A2c * R1.A2c, dict(a2=1, w2=4))),
                                    1):
         ai = R1.A1c if i == 1 else R1.A2c
+        # 243 = 3^5: TEMPLATE 2c-E5 erratum 2026-08-12 (was 729)
         v = {(HMID,): R1.rC(R1.mk(4) * (ai - R1.Bc)),
-             (): R1.rmono(c=R1.mk(729 * 144) * SM3 * ai2, **arg)}
+             (): R1.rmono(c=R1.mk(243 * 144) * SM3 * ai2, **arg)}
         eqs.append(R1.emit_expanded(v, names))
         labels.append(("E5-quartic pole %d (HM restored)" % i, eqs[-1]))
     eqs.append(R1.emit_expanded({(HMID,) * 3: R1.rC(R1.mk(2 ** 24)),

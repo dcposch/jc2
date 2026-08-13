@@ -575,7 +575,8 @@ def phase_emit(lcut):
                 (((3 + r3) % p, pt["A1"], "W1"),
                  ((3 - r3) % p, pt["A2"], "W2")), 1):
             cH = 4 * (ai - 4) % p
-            cQ = 729 * pow(SM, 3, p) % p * 144 % p * (ai * ai % p) % p \
+            # 243 = 3^5: TEMPLATE 2c-E5 erratum 2026-08-12 (was 729)
+            cQ = 243 * pow(SM, 3, p) % p * 144 % p * (ai * ai % p) % p \
                 * Ai % p
             add("E5-quartic pole %d (HM restored, W symbolic)" % i,
                 "%d*%s^4+%d*HM" % (cQ, Wn, cH))
@@ -909,8 +910,9 @@ def phase_exact(lcut, timeout=3600):
                                     (R1.A2c * R1.A2c,
                                      dict(a2=1, w2=4))), 1):
         ai = R1.A1c if i == 1 else R1.A2c
+        # 243 = 3^5: TEMPLATE 2c-E5 erratum 2026-08-12 (was 729)
         v = {(HMID,): R1.rC(R1.mk(4) * (ai - R1.Bc)),
-             (): R1.rmono(c=R1.mk(729 * 144) * SM3 * ai2, **arg)}
+             (): R1.rmono(c=R1.mk(243 * 144) * SM3 * ai2, **arg)}
         eqs.append(R1.emit_expanded(v, names))
         labels.append(("E5-quartic pole %d (HM restored)" % i, eqs[-1]))
     eqs.append(R1.emit_expanded({(HMID,) * 3: R1.rC(R1.mk(2 ** 24)),
