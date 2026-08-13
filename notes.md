@@ -386,3 +386,8 @@
   got killed mid-flight (both Sol lanes' wrappers + stuck7) — deliverables were
   already written; nolog lanes (orphaned, PPID 1) unaffected. stuck7 script itself
   hangs >70s (remote polls?) — needs a look before next run.
+- 2026-08-13 ~15:25: 11 msolve lanes local (6 nolog + 2 plain + 3 stuck7 farm cores
+  relaunched orphan-safe: 12_33 c10 RED, 6_15 c1 RED, 6_15 c2.q). Grok sixcells
+  review launched. Ultramem gcloud ssh now failing repeatedly (rc 255, also via IAP;
+  worked at 13:47) — sshd possibly starved by sat23; lift-pkill deferred (cosmetic,
+  retirement already recorded). GGV follow-up draft awaiting DC review.
