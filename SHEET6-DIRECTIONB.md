@@ -817,3 +817,85 @@ final line "ALL NOLOG SCREENS DONE"). Verdict semantics unchanged
 (then char-0 for proof tier); alive = the pins do not close the
 escape alone (Sol's own expectation; the 6 rows remain banked
 permanently either way — they are exact and free).
+
+## 8. The depth-23 window (rows 21/22): decision analysis
+
+[2026-08-13. Build: directionb_strike.py tails 23 (5587.2s, exact,
+sentinel-free, 93 free vars, tails to level 54); state banked
+/tmp/directionb_tails_D23.pkl. Engine: directionb_window.py with
+DIRECTIONB_STATE=/tmp/directionb_tails_D23.pkl (D21 default path
+untouched).]
+
+GATE (17/18): all D21 anchors reproduce on the D23 state -- rows
+6..18 die at tails=0 term-by-term; Row_20 zero-tail block == banked
+dsys constants coefficient-for-coefficient; 9-on-2 + 0 = -42
+re-derived; E5/E6/E1/Row_0 strike anchors 4/4. REGRESSION: rows
+6..20 of the D23 build == the D21 build ROW-FOR-ROW (compared by
+variable NAME across the two registries; no level-53/54 monomial
+enters any row <= 20) -- the window rows are depth-stable. The ONE
+designed FAIL is the finding:
+
+**Row_21 == 0 identically; Row_22 is NEW and does NOT die at
+tails=0.** Its zero-tail part is, per eta-component (8 comps,
+eta^1,4,...,22), bilinear:
+
+   alpha1 vf1_34 . L1n(X1, X2) + alpha2 vf2_34 . L2n(X1, X2) = 0,
+   X_i = alpha_i w_i^4,
+
+i.e. THE J-WINDOW'S FIRST DIRECT (LINEAR) SIGHT OF THE MERGE
+COEFFICIENTS vf1_34, vf2_34 -- at depth 23, the §2c statement "the
+grid is undetermined by J at this window" EXPIRES: the grid enters
+linearly (times pole scales), no longer only through tail
+cross-terms. On the zero-tail stratum this adds nothing (Row_20
+already forces X = 0 = absurd there); in the full window it is new
+coupling.
+
+BAND LEDGER DELTA: Row_22 = 10 eta-comps, tier S 631 x 5349 rank
+425; tier V rank 10/10 over E on ALL 4 h-sign branches, no
+leftovers => +10 exact E-conditions per branch (§6.T's 47 -> 57).
+
+THE DECISIVE RELAXATIONS (independent-monomial over-approximation;
+INCONSISTENT would be EMPTY-BY-KILL of the whole forced-tail locus):
+  PLAIN  (+1,+1) w=(1,1): 87 rows x 10328 monomial cols ->
+         rank 67, CONSISTENT, 0 undecided. NO KILL.
+  [pinned + second-branch lanes: below]
+  PINNED (+1,+1) w=(1,1): the 6 §7 no-log pins applied (monomials
+         containing a pinned var dropped): 86 rows x 8623 cols ->
+         rank 66, CONSISTENT, 0 undecided (the one dead row is
+         Row_10[eta^28] = C10.6, implied by the pins, §7(5)).
+         NO KILL.
+  Uniformity lanes ((+1,-1) w=(1,1) plain+pinned; (+1,+1) w=(2,3)
+  pinned) running at close; results land in /tmp/d23_uniformity.log
+  (same CONSISTENT expected -- all D21 ranks were branch-uniform).
+
+**DEPTH-23 VERDICT (same semantics as §6.V): NO EMPTY-BY-KILL.**
+Rows 21/22 do NOT close the window, with or without the level-42
+no-log pins. The forced-tail locus stays alive at depth 23;
+relaxation rank grows 57 -> 67 (plain), 56 -> 66 (pinned) on 87/86
+rows -- rows 21/22 add exactly 10 independent relaxation directions
+and Row_22's 10 E-conditions.
+
+RESIDUAL-32 DELTA: the D21 residual object changes SHAPE, not by
+shrinking: (i) rows <= 20 and their 32 obstruction conditions are
+UNCHANGED (depth-stability, row-for-row); (ii) Row_22 adds 10
+conditions that are QUADRATIC in the high tails (e.g. tg1_43^2 at
+level sum 86) and introduces 10 new high vars (levels 53/54) -- the
+§6.V(4) linear high-elimination does NOT extend verbatim past band
+20; a D23 Groebner emission would need the quadratic block kept.
+(iii) NEW GRID COUPLING: zero-tail Row_22 = 8 bilinear conditions
+alpha1 vf1_34 L1n(X) + alpha2 vf2_34 L2n(X) = 0 -- the first
+J-window rows in which the dead-stretch grid appears linearly
+(times pole scales); any future grid-sector analysis must consume
+them.
+
+Reproduction:
+    cp <build> /tmp/directionb_tails_D23.pkl
+    DIRECTIONB_STATE=/tmp/directionb_tails_D23.pkl \
+        python3 directionb_window.py gate      # 17/18, the FAIL is
+                                               # the Row_22 finding
+    (bands/relaxations: §8 scripts inline; python3 - snippets in
+    the session log; the engine functions are directionb_window.py's
+    band_tierS/band_erows/relax/esolve, state-parameterized)
+Trust: same perimeter as §6.T/§6.V -- exact E-arithmetic, unit
+pivots, all 4 h-sign branches on the band tier; relaxation lanes
+(+1,+1)/(+1,-1), w = (1,1)/(2,3).
