@@ -864,9 +864,11 @@ INCONSISTENT would be EMPTY-BY-KILL of the whole forced-tail locus):
          rank 66, CONSISTENT, 0 undecided (the one dead row is
          Row_10[eta^28] = C10.6, implied by the pins, §7(5)).
          NO KILL.
-  Uniformity lanes ((+1,-1) w=(1,1) plain+pinned; (+1,+1) w=(2,3)
-  pinned) running at close; results land in /tmp/d23_uniformity.log
-  (same CONSISTENT expected -- all D21 ranks were branch-uniform).
+  UNIFORMITY (all landed, /tmp/d23_uniformity.log): PLAIN (+1,-1)
+  w=(1,1): rank 67, CONSISTENT (510 s); PINNED (+1,-1) w=(1,1):
+  rank 66, CONSISTENT (371 s); PINNED (+1,+1) w=(2,3): rank 66,
+  CONSISTENT (442 s). Ranks identical across h-sign branches and
+  pole-scale samples, matching the D21 uniformity pattern.
 
 **DEPTH-23 VERDICT (same semantics as §6.V): NO EMPTY-BY-KILL.**
 Rows 21/22 do NOT close the window, with or without the level-42
