@@ -1,6 +1,19 @@
 # SHEET6-DIRECTIONB.md — the J-jet strike at the resonant direction b
 
-Status: COMPLETE, UNREVIEWED (2026-08-12). Target: the L1 §7.2
+Status: COMPLETE + REVIEWED WITH CORRECTIONS (SHEET6-DIRECTIONB-REVIEW.md,
+3-referee: F1 chart identity CONFIRMED, re-derived from scratch; F2
+dead-stretch blindness CONFIRMED — including at random NONZERO
+dead-stretch values, primes 314329/521137/200257/400849, a test the
+strike's own numcheck never ran — with the MECHANISM corrected to the
+2:3 orbit-cancellation (the §2b pairing story is heuristic, does not
+cover the B-channels); F3 Row_20 CONFIRMED (all 18 coefficients
+independently re-extracted; 8 ratios pairwise-distinct 28/28; the
+eta^0 row already gives 0 = -42 with no need of w != 0); F5 the kill is
+E5-independent and scale-free; F4 the "kills the banked R1 witnesses"
+corollary RETRACTED as wrong-object — the banked witnesses carry
+tf1/2_47, tf1/2_52 != 0 (window slots 15/20), OUTSIDE this stratum;
+they were already dead via R1 §18.1 saturation. Corrections applied in
+place, marked [REVIEW].) (2026-08-12.) Target: the L1 §7.2
 coefficient layer at the residue-A merge (TEMPLATE-ATTACK §7 frontier;
 Grok J-jet proposal xmodel/grok-eval-20260812.md item 3). Engines:
 cases/directionb_strike.py (NEW, additive; reuses
@@ -93,15 +106,20 @@ mod 3), each with ZERO constant part, loading ONLY:
 **The 7 dead-stretch coefficients (uf18, uf24, uf30, vf1_34, vf1_36,
 vf2_34, vf2_36) are ABSENT from every J-row through k = 6** — not
 "linear at the first non-constant order" (Grok item 3's geometry is
-refuted as stated): they cancel structurally. Reason (joint-tree
-pairing): J depends on branch data through log-derivatives of pairwise
-DIFFERENCES z_j - y_i (f = phi_f prod(y - y_i), g = phi_g prod(y - z_j)
-gives J = fg[sum_j c_j/(y-z_j) - sum_i d_i/(y-y_i)], c_j, d_i =
-log-derivative sums of (z_j - y_i)); coefficients SHARED between f- and
-g-arcs riding the same tree edge (uf, vf — forced shared by the E7
-exact d_g ladder) cancel in every low-order difference. What the first
-J-orders see is precisely the data the joint tree does NOT pair: the
-f-vs-g tail splits (tf vs tg) and the B-cluster tails.
+refuted as stated): they cancel structurally. [REVIEW F2: the
+blindness FACT is confirmed — including by direct evaluation at
+random NONZERO dead-stretch values at four further primes — but the
+"joint-tree pairing" story below is HEURISTIC only (it does not cover
+the B-channels); the verified mechanism is the reviewers' 2:3
+orbit-cancellation (sufficiency checked).] Heuristic picture: J
+depends on branch data through log-derivatives of pairwise DIFFERENCES
+z_j - y_i (f = phi_f prod(y - y_i), g = phi_g prod(y - z_j) gives
+J = fg[sum_j c_j/(y-z_j) - sum_i d_i/(y-y_i)], c_j, d_i =
+log-derivative sums of (z_j - y_i)); coefficients SHARED between f-
+and g-arcs riding the same tree edge (uf, vf — forced shared by the
+E7 exact d_g ladder) cancel in low-order differences. What the first
+J-orders see is the data the joint tree does NOT pair: the f-vs-g
+tail splits (tf vs tg) and the B-cluster tails.
 
 Row_6 solved exactly (phase `solve6`): flattening the 10 eta-components
 over the radical-monomial basis gives 78 K3-rows on 31 var-monomial
@@ -150,9 +168,13 @@ h1-log-derivative transport law along the joint tree** — L1 §7.2's
 the missing kill, it IS the Jacobian closure. The J-jet rows of §0 are
 the graded pieces of these identities at G_m; the first order at which
 they see the through-cluster interior data is the h1-window top
-(slot 20), where (eta^3 - b) surfaces — this explains the observed
-identical vanishing of rows 1..10 on the frozen stratum and locates ALL
-dead-stretch discriminating power at the resonance window.
+(slot 20), where (eta^3 - b) surfaces — consistent with the observed
+identical vanishing of rows 1..10 on the frozen stratum and with ALL
+dead-stretch discriminating power sitting at/above the resonance
+window. [REVIEW F2: this reading is heuristic; the proof-grade
+mechanism for the blindness is the reviewers' 2:3 orbit-cancellation,
+banked in SHEET6-DIRECTIONB-REVIEW.md with a sufficiency check. The
+identity J1 itself and the per-branch equivalence are CONFIRMED (F1).]
 
 ## 2c. The depth-21 measurement: the J-window is dead-stretch-BLIND
 ## and lands 9-on-2 on the pole scales
@@ -206,15 +228,20 @@ for ANY values of the 7 on-lattice dead-stretch coefficients uf18,
 uf24, uf30, vf1_34, vf1_36, vf2_34, vf2_36. The J-jet Row_20 forces
 alpha_i w_i^4 = 0 (8 exact, pairwise-independent homogeneous rows on
 2 unknowns) and simultaneously 0 = -42/(c_f c_g). Uniform in the 7;
-no saturation subtleties (contrast SHEET6-R1 §17-19: the R1-tier
-witness kills needed the s1F-saturation standing rule; the J-tier kill
-of the same zero-extension locus is direct).
+no saturation subtleties (the kill is direct — no Rabinowitsch rows,
+no forced-nonzero-scale bookkeeping; [REVIEW F3] the eta^0 row alone
+closes it without even using w != 0). [REVIEW F4: scope precision —
+this stratum is the PURE-DEAD-STRETCH sector. The banked R1 witnesses
+(SHEET6-R1 §13.4/§16) are NOT in it: they carry tf1/2_47, tf1/2_52
+!= 0 (window slots 15/20); those died via the §18.1 saturation
+mechanism, a different object. The two kills are complementary, not
+nested.]
 
 Adjudication of the three pre-registered outcomes:
 - NOT "INCONSISTENT on the dead-stretch grid" as Grok item 3 posed it:
   the J-jet's first 20 orders are structurally BLIND to the grid
-  (Theorem J1 mechanism: shared joint-tree data cancels from the
-  log-derivative transport); the grid coefficients enter the window
+  ([REVIEW F2] verified fact; mechanism = 2:3 orbit-cancellation);
+  the grid coefficients enter the window
   only multiplied by tail data (cross-terms), never linearly.
 - INSTEAD: **INCONSISTENT one level down** — the window is
   overdetermined 9-to-2 on the pole scales (w_1^4, w_2^4), and kills
@@ -335,15 +362,20 @@ independent row families on the same unknowns, and their JOINT
 depth-84-with-J-rows build is the sharpest next object in the
 program (spec: §6).
 
-Retro-diagnosis of the R1 record: every banked witness family
-(SHEET6-R1 §13.4/§16) was a zero-extension — exactly the locus the
-J-rows kill outright. The band/quotient ladder could always be
-satisfied by zero-extensions because the J-closure (R5) was never
-expressible in the y-side model as then formulated; §0's x-side-window
-observation shows the first 41 J-orders WERE expressible all along.
-The "receding discriminant" phenomenology (Grok stress-test A) is
-resolved: the discriminating rows existed, one tier further down, at
-the single window every diagnostic pointed to.
+Retro-diagnosis of the R1 record [REVIEW F4: CORRECTED — the original
+"every banked witness was a zero-extension" claim was wrong-object]:
+the banked witness families (SHEET6-R1 §13.4/§16) carry tf1/2_47,
+tf1/2_52 != 0 and live OFF this stratum; their kills came from the
+§18.1 saturation mechanism, not from these rows. What survives of the
+diagnosis: the J-closure (R5) was recorded as "not expressible from
+y-side data" and so was never imposed in ANY R1 object; §0's
+x-side-window observation shows the first 41 J-orders were
+y-side-expressible all along, and they carry an overdetermined
+row family (9-on-2 at slot 20) that no banked system contained. The
+"receding discriminant" phenomenology (Grok stress-test A) is
+PARTIALLY resolved: a genuinely new, independent row family existed
+one tier down at the single window every diagnostic pointed to —
+residue-A itself remains open on the forced-tail locus.
 
 ## 6. Ledger, trust perimeter, reproduction, next objects
 
