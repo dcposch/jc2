@@ -2,9 +2,9 @@
 """Exact toric/Macaulay pilots for the pinned D21 direction-b window.
 
 The default ``pilot`` phase performs the complete degree-one Macaulay
-closure on the fixed radical fibre (h1,h2,w1,w2)=(+,+,1,1).  It proves
-the reported rank by a deterministic good-prime minor and twelve exact
-E-syzygies.  ``internal`` is the cheaper occurrence-closed sub-tier;
+closure at (h1,h2,w1,w2)=(+,+,1,1).  It proves the reported rank on at
+least one characteristic-zero factor of E by a deterministic good-prime
+minor and twelve exact E-syzygies.  ``internal`` is the cheaper sub-tier;
 ``census`` counts occurrence-wide quadratic toric binomials without
 materialising them.  No phase mutates the banked state.
 
@@ -276,7 +276,8 @@ def pilot():
              basis_full_nnz * 69 - basis_const))
     verify_exact_syzygies(polys, basis, active)
     evaluation_ranks(polys, basis, active)
-    print("EXACT: coefficient rank = augmented rank = 3852")
+    print("EXACT on at least one characteristic-zero E-factor:")
+    print("  coefficient rank = augmented rank = 3852")
     print("VERDICT: NO-KILL-AT-TIER-1")
 
 
@@ -295,6 +296,9 @@ def census():
     star = sum((size - 1) * n for size, n in hist.items())
     all_pairwise = sum(size * (size - 1) // 2 * n
                        for size, n in hist.items())
+    nonconstant = set(coordinates) - {()}
+    factor_targets = sum(fibers[m] > 1 for m in nonconstant)
+    factor_binomials = sum(fibers[m] - 1 for m in nonconstant)
     print("coordinates=%d unordered-pairs=%d sum-fibers=%d"
           % (len(coordinates), pairs, len(fibers)))
     print("collision-fibers=%d star-binomials=%d all-pairwise=%d max-fiber=%d"
@@ -303,7 +307,46 @@ def census():
             star, all_pairwise, max(hist)) == (
                 4352, 9472128, 1652985, 1363363,
                 7819143, 50778314, 63)
+    assert (factor_targets, factor_binomials) == (2207, 6783)
+    print("factor-to-target sub-tier: %d binomials on %d targets"
+          % (factor_binomials, factor_targets))
     print("PASS full occurrence-pair census (%.1fs)" % (time.time() - t0))
+
+
+def rowcensus():
+    """Count the much larger, algebraically arbitrary within-row tier."""
+    _, polys, labels, _ = build()
+    totals, by_band = Counter(), Counter()
+    max_fiber = 0
+    t0 = time.time()
+    for poly, label in zip(polys, labels):
+        # Include z_0 in every support, as required by the affine chart.
+        support = sorted(set(poly) | {()})
+        fibers = Counter()
+        for i, a in enumerate(support):
+            for b in support[i:]:
+                fibers[tuple(sorted(a + b))] += 1
+        pairs = len(support) * (len(support) + 1) // 2
+        bins = len(fibers)
+        star = pairs - bins
+        totals.update({
+            "pairs": pairs,
+            "bins": bins,
+            "collision_fibers": sum(v > 1 for v in fibers.values()),
+            "star": star,
+            "all_pairwise": sum(v * (v - 1) // 2
+                                for v in fibers.values()),
+        })
+        by_band[label[0]] += star
+        max_fiber = max(max_fiber, max(fibers.values()))
+    expected = {"pairs": 27075938, "bins": 8556205,
+                "collision_fibers": 5755181, "star": 18519733,
+                "all_pairwise": 65589065}
+    assert dict(totals) == expected and max_fiber == 33
+    print("within-row summed census: %s" % dict(totals))
+    print("star binomials by band: %s; max fiber=%d"
+          % (dict(by_band), max_fiber))
+    print("PASS within-row census (%.1fs)" % (time.time() - t0))
 
 
 def internal():
@@ -381,8 +424,8 @@ def projection():
 
 if __name__ == "__main__":
     phase = sys.argv[1] if len(sys.argv) > 1 else "pilot"
-    phases = {"pilot": pilot, "census": census, "internal": internal,
-              "projection": projection}
+    phases = {"pilot": pilot, "census": census, "rowcensus": rowcensus,
+              "internal": internal, "projection": projection}
     if phase not in phases:
         raise SystemExit("usage: %s [%s]" %
                          (sys.argv[0], "|".join(sorted(phases))))

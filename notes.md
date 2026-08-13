@@ -378,3 +378,11 @@
   Ultramem: sat23 alive (r1_23sat_p105337, 2 lanes), IP now 136.65.11.117 via gcloud
   ssh only. 6 parallel nolog screens running orphan-safe. D23 analysis tasked to
   window agent (decisive: relaxation +rows21/22 +pins).
+- 2026-08-13 ~14:45: Sol toric = NO-KILL-AT-TIER-1 (closure consistent; tier-2 = 7.8M
+  binomials, parked — msolve screens subsume it; revisit on Box02 only if screens
+  time out persistently). Sol sixcells: (9,15,7,3)@2 PROVEN next-step survival
+  (transport+caseIV both completions; equality sharp-forcing proven for integerized
+  summands; extra-unit kill CONJECTURE). Grok review queued. 3 background tasks
+  got killed mid-flight (both Sol lanes' wrappers + stuck7) — deliverables were
+  already written; nolog lanes (orphaned, PPID 1) unaffected. stuck7 script itself
+  hangs >70s (remote polls?) — needs a look before next run.
