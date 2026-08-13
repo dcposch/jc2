@@ -372,3 +372,9 @@
   (no surviving constructive witness for residue-A survival); additive-separator
   ceiling still holds (pinned relaxation consistent 56/76 => no linear kill either).
   All rides on nolog screens + depth-23. Ultramem IP stale (re-resolve via gcloud).
+- 2026-08-13 ~13:50: §6.V PROMOTED (dual review SOUND-WITH-ERRATA x2, errata applied,
+  harness 17/17+27/27+24/24+6/6 all green). Lift last-chance executed (cCa2/cCa6
+  retired; AUDIT note; remote pkill pending next ultramem window - gcloud ssh flaky).
+  Ultramem: sat23 alive (r1_23sat_p105337, 2 lanes), IP now 136.65.11.117 via gcloud
+  ssh only. 6 parallel nolog screens running orphan-safe. D23 analysis tasked to
+  window agent (decisive: relaxation +rows21/22 +pins).

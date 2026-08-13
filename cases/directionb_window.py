@@ -58,9 +58,11 @@ def chk(name, cond):
     OK.append((name, bool(cond)))
     print(("PASS " if cond else "FAIL ") + name, flush=True)
 
-STATE = ("/tmp/directionb_tails_D21.pkl"
-         if os.path.exists("/tmp/directionb_tails_D21.pkl")
-         else "/tmp/directionb_tails.pkl")
+STATE = os.environ.get(
+    "DIRECTIONB_STATE",
+    "/tmp/directionb_tails_D21.pkl"
+    if os.path.exists("/tmp/directionb_tails_D21.pkl")
+    else "/tmp/directionb_tails.pkl")
 
 def load():
     st = pickle.load(open(STATE, "rb"))

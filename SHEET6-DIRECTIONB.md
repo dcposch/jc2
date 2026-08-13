@@ -472,7 +472,12 @@ it is the SIMULTANEITY across the other 9 eta-components. Precisely,
 the level-47/52 linear map has rank 4, and the residual obstruction
 sits in the 6 components eta^12, 15, 18, 21, 24, 27.
 
-## 6.V VERDICT
+## 6.V VERDICT — **PROMOTED 2026-08-13 after dual review + repair**
+(Grok hostile replay: SOUND-WITH-ERRATA, xmodel/grok-directionb-review.md;
+internal referee: SOUND-WITH-ERRATA + engine repair, SHEET6-DIRECTIONB-
+REVIEW.md R1 + R1.6; all errata applied; harness green: gate 17/17,
+slot20 27/27, verdict 24/24 across all 4 h-branches + extra fiber,
+claim4 6/6.)
 
 Decisive tests (`directionb_window.py verdict`, 24/24 PASS, 451 s;
 all exact over E. [REVIEW 2026-08-13] tests (1)(2) are now
