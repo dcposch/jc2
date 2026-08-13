@@ -3,7 +3,7 @@
 ## Executive summary — five lines
 
 1. I selected **transport** and **budget-equality rigidity**; for the smallest cell, transport gives a **PROVEN next-step survival**, not a kill.
-2. The cell \((9,15,7,3)@\mu _0=2\) has exactly two deduplicated completions, both budget-equality, and an explicit minimum-cost parent chain satisfies every filed handshake and every displayed local Prop. 8.1(iv) equation.
+2. The cell \((9,15,7,3)@\mu _0=2\) has exactly two deduplicated completions, both budget-equality, and an explicit representative satisfies every filed handshake and every displayed local Prop. 8.1(iv) equation.
 3. Its direct completion passes case IV at \((w,M,\psi)=(2/3,3,2)\); its other completion passes the next trunk cell \((35,15,7,5)\) and case IV at \((2/5,5,1)\).
 4. Equality does force every **integerized** AF2 summand sharp, but both routes have a zero-defect scalar ledger; the extra unit needed from a repeated direction is **CONJECTURE**, not a consequence of current Prop. 7.3.
 5. Replaying this transport/T1 tier on the remaining five costs about \(1.5\)–\(2\) person-days; a reusable honest coefficient-gluing emitter is a separate \(3\)–\(5\)-day build, with solve time not yet bounded.
@@ -48,11 +48,12 @@ conditions are proved in `xmodel/sol-td7-law.md:95-113,172-188`.
 
 ### Proposition (proved survival at the filed transport tier)
 
-**PROPOSITION.** The cell \((9,15,7,3)@2\) survives all currently filed
-numerical \(Q\)-transport equations on both of its priced completions. On one
-explicit minimum-cost parent chain, every charged/neutral vertex has an
-admissible solution of (T1). The nonterminal completion also has an
-admissible (T1) solution at its next trunk vertex. Thus the cell is a
+**PROPOSITION.** Each of the two priced completions of
+\((9,15,7,3)@2\) has a representative satisfying all currently filed
+numerical \(Q\)-transport equations. On one explicit minimum-cost parent
+chain, every charged/neutral vertex has an admissible solution of (T1). The
+nonterminal completion also has an admissible (T1) solution at its next
+trunk vertex. Thus the cell is a
 **demonstrated survivor at the Prop. 9.3 transport + vertex-local T1 tier**.
 
 This proposition does **not** assert a simultaneous Puiseux/Keller lift.
@@ -104,14 +105,16 @@ state costs is `cases/scratch_offaxis_pricing/px5.py:63-87`.
 
 ### 2.2 Both merge handshakes close
 
-Chain 1 is frozen with frame
+For the direct-entry representative, the entry formula
+\(Q=(a\alpha,b\alpha,\nu,b,a(\alpha+\beta))\) from
+`SHEET6-DEPTH.md:55-74` gives chain 1 the frame
 
 \[
        (\rho_1,\bar\kappa_1,\nu_1;w_1,M_1)=(1,5,2;2,1),
 \]
 
-as proved in `BOOK-OFFAXIS.md:521-529`. Its case-II edge has \(n_1=5\),
-so
+and chain 1 is frozen at \(w=2\) by `BOOK-OFFAXIS.md:521-529`. Its
+case-II edge has \(n_1=5\), so
 
 \[
  \bar\kappa_G=\frac{5+5}{2}=5,\qquad
@@ -172,9 +175,9 @@ solution table (`xmodel/sol-td7-law.md:270-283`).
 
 ### 2.4 Both next vertices pass
 
-There are exactly two deduplicated routes through this cell, obtained by the
-documented route deduplication
-`cases/scratch_offaxis_pricing/px5.py:254-262`:
+There are exactly two deduplicated routes through this cell
+(`xmodel/grok-td7-law-review.md:48-58`), obtained by the documented route
+deduplication `cases/scratch_offaxis_pricing/px5.py:254-262`:
 
 1. **Direct case-IV terminal.** From (2.4),
    \(j=M(1-w)=3(1/3)=1\) and
@@ -263,13 +266,14 @@ mass, not equality in the underlying rational gap.
 
 ### 3.1 Application to \((9,15,7,3)@2\)
 
-The common positive-cost signatures of the two routes are:
+For the explicit representative in §2, the positive-cost signatures common
+to its two completions are:
 
 | vertex | \((\bar\kappa,X)\) | charged local multiplicity | raw AF2 bound | integer mass |
 |---|---:|---:|---:|---:|
 | \((20,16),\nu=5\) | \((4,5)\) | \(1,1\) | \(1,1\) | \(1+1\) |
 | \((119,35),\nu=17\) | \((5,17)\) | \(3\) | \(17/3-5=2/3\) | \(1\) |
-| \((38,6),\nu=5\) | \((3,19)\) | zero root \(\epsilon=3\) | \((19/3-3)/5=2/3\) | \(1\) |
+| \((38,6),\nu=5\), a pure-\(b\) representative | \((3,19)\) | zero root \(\epsilon=3\) | \((19/3-3)/5=2/3\) | \(1\) |
 
 The second route adds:
 
@@ -294,8 +298,9 @@ Consequently the two formal exact ledgers are
 \]
 
 Thus budget equality supplies real rigidity but no contradiction. In
-particular, the \(2/3,2/3\) (and \(1/2\)) raw gaps can legitimately round to
-mass \(1\). The later hostile reread is decisive here: Prop. 7.3 proves
+particular, the \(2/3,2/3\) (and \(1/2\)) raw gaps are compatible with the
+integer lower bound \(1\). The later hostile reread is decisive here:
+Prop. 7.3 proves
 equality in the special eventual-fibre multiplicity-one case, but provides
 neither the converse nor a strict excess theorem at multiplicity at least
 two (`SHEET6-LT-REVIEW.md:84-118`).
@@ -304,24 +309,37 @@ two (`SHEET6-LT-REVIEW.md:84-118`).
 
 The following implication is already proved by the equality proposition:
 
-> **PROVEN conditional kill.** If the cv subtree belonging to either the
-> multiplicity-\(3\) direction at \((119,35)\) or the zero direction of
-> multiplicity \(3\) at \((38,6)\) has total integer mass at least \(2\), then
-> both routes through \((9,15,7,3)@2\) overrun their budget by one and die.
+> **PROVEN conditional kill.** If the cv subtree belonging to the
+> multiplicity-\(3\) direction at \((119,35)\) has total integer mass at
+> least \(2\), both routes die. Alternatively, they both die if the zero
+> direction has mass at least \(2\) in every admissible
+> \(l=7,\epsilon=3\) pure-\(b\) representative. In either case the budget
+> overrun is one.
 
-A predecessor replay of the minimum state graph shows that zero-cost neutral
-loops/\(M\)-drops are the only minimum-path variants; every positive-cost
-minimum path contains those two signatures. This replay uses exactly the
-transition enumeration `cases/scratch_offaxis_pricing/px2.py:35-151` and the
-minimum-state closure `cases/scratch_offaxis_pricing/px5.py:63-87`.
+A predecessor replay of the minimum state graph shows that every
+positive-cost minimum path contains the fixed \((119,35)\) signature and an
+\(l=7,\epsilon=3\) pure-\(b\) signature. The pure-\(b\) characteristic
+\(\nu\) is free and zero-cost neutral vertices/\(M\)-drops may follow it;
+\((38,6),\nu=5\) is the explicit representative used in §2, not a universal
+cell pin. For a general admissible pure-\(b\) \(\nu\),
+\[
+ \bar\kappa=\frac{\nu+1}{2},\qquad
+ X=\frac{7\nu+3}{2},\qquad
+ \frac{X/3-\bar\kappa}{\nu}=\frac23,
+\]
+so its multiplicity-\(3\) direction and integer price \(1\) are uniform.
+This replay uses exactly the transition enumeration
+`cases/scratch_offaxis_pricing/px2.py:35-151` and the minimum-state closure
+`cases/scratch_offaxis_pricing/px5.py:63-87`.
 
 What is missing is precisely:
 
-**CONJECTURE (transported multiple-direction excess).** At one of those two
-signatures, the local reduced multiplicity \(3\) transports either to
-eventual fibre multiplicity at least \(2\), or to at least two cv vertices,
-and the corresponding subtree has integer mass at least \(2\) rather than
-the AF2 floor \(1\).
+**CONJECTURE (transported multiple-direction excess).** At the fixed
+\((119,35)\) signature, or uniformly along the \(l=7,\epsilon=3\) pure-\(b\)
+family, the local reduced multiplicity \(3\) transports either to eventual
+fibre multiplicity at least \(2\), or to at least two cv vertices, and the
+corresponding subtree has integer mass at least \(2\) rather than the AF2
+floor \(1\).
 
 Both clauses are unproved: the route book does not retain eventual-fibre
 multiplicity, and the required strict local excess formula is exactly the
@@ -343,13 +361,14 @@ one equality route (`xmodel/grok-td7-law-review.md:40-58`). Therefore:
 | Retain exact predecessor/provenance data instead of only \((w,M,\lambda)\) minima | \(0.5\) day | one explicit path for every deduplicated survivor route |
 | Generate (T1) from each distinct charged/neutral/trunk shape and check \(C\ne0\), root separation, and squarefreeness | \(0.5\)–\(1\) day | transport + local-T1 verdict on all remaining five |
 | Independent exact audit of handshakes, terminals, and route deduplication | \(0.5\) day | proof-grade tables; **total \(1.5\)–\(2\) days at the tier of §2** |
-| Emit equality provenance signatures | \(<0.5\) day | at most \(35\cdot5=175\) equality-route charge records, before hashing |
+| Emit equality provenance signatures | \(<0.5\) day | at most \(33\cdot5=165\) remaining equality-route charge records, before hashing |
 | Prove the multiple-direction excess conjecture | \(3\)–\(7\) research days, high uncertainty | one reusable theorem; mechanical application then takes hours |
 | Build the first honest St. 3.9/\(h_j\)-tower/Jacobian coefficient-gluing emitter | \(3\)–\(5\) engineering days, solve time unknown | simultaneous rather than vertex-local obstruction system |
 
-The \(175\)-record bound uses “every positive step costs at least one”
-(`BOOK-OFFAXIS.md:464-478`) and the \(td=7\) maximum total charge \(5\)
-(`BOOK-OFFAXIS.md:486-500`). Equality rigidity can cheaply attack the four
+The \(165\)-record bound (175 including the two routes audited here) uses
+“every positive step costs at least one” (`BOOK-OFFAXIS.md:464-478`) and
+the \(td=7\) maximum total charge \(5\)
+(`BOOK-OFFAXIS.md:486-500`). Equality rigidity can cheaply audit the four
 singleton cells, but it cannot by itself close the 18 slack routes of the
 \((10,15)\) cell. That cell is therefore the dominant remaining cost and the
 right coefficient-gluing pilot after the provenance pass.
