@@ -424,6 +424,12 @@ MP6-anatomy cells with equal w were NOT deep-solved here (DS4 menu +
 suffix machinery not rerun off-axis); λ/budget of NE orbits still
 unpriced (R3 unchanged).
 
+## 10. LAMBDA-BUDGET REPAIR (in progress this session; St 9.3 (24) pricing
+## of the off-axis escapes against the shared St 9.4 budget)
+
+[Being written: pricing derivation P0-P3, td-7 re-adjudication, priced
+recount. See BOOK-OFFAXIS-REVIEW.md §7/§9.3 for the prescribed route.]
+
 ## Reproducibility
 
     cd cases && python3 book_offaxis.py    # ~0.2 s, exit 0
