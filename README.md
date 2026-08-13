@@ -14,7 +14,8 @@ DC(2), residue theory, deg ≤ 150 frontier farm).
       our audit; own-leaf replication retired (novelty rule)
 - [x] Cross-check vs Helali & Suzuki artifacts (three-way agreement)
 - [x] Paper 1 drafted + compiled (Lean-checked example); awaiting review
-- [ ] Certificates: cCa2/cCa6 char-0 lifts still running (ultramem)
+- [x] Certificates: cCa2/cCa6 char-0 lifts RETIRED 2026-08-13 (last-chance rule:
+      no LIFT-CERT produced; mod-p verdicts at 3 primes remain the record)
 - [ ] Pre-publication riders: reduce4 G4 cross-check
 
 ### Vertex-gap program

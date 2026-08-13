@@ -597,3 +597,12 @@ On every box restart/reuse: crontab -l FIRST; remove any deadline/poweroff/lifec
   (39,65,32,13); 53 routes, 35 budget-equality), 1636/1689 routes
   removed by theorem. The six are certified LOCAL T1 survivors
   (explicit admissible solutions); next tier = transport/global.
+
+## Lift retirement (2026-08-13)
+cCa2/cCa6 char-0 lift certificates: RETIRED under the last-chance rule
+(no LIFT-CERT at the post-outage ultramem check; runs killed). Soundness
+unchanged: the (72,108) subcase-(2) record rests on exact mod-p verdicts
+at 3 independent large primes + satisfiability guards (see emission
+rules); the char-0 lift was a redundancy rider, never load-bearing.
+Ultramem access note: use `gcloud compute ssh ultramem-1` (plain ssh key
+not authorized); current IP 136.65.11.117 (changes on restart).

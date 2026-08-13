@@ -474,7 +474,7 @@ sits in the 6 components eta^12, 15, 18, 21, 24, 27.
 
 ## 6.V VERDICT
 
-Decisive tests (`directionb_window.py verdict`, 24/24 PASS, ~8 min;
+Decisive tests (`directionb_window.py verdict`, 24/24 PASS, 451 s;
 all exact over E. [REVIEW 2026-08-13] tests (1)(2) are now
 harness-certified on all 4 h-sign branches at w = (1,1) AND on
 branch (+,+) at w = (2,3), with an explicit dims/ranks/verdicts
@@ -573,7 +573,7 @@ REPRODUCTION
     cd cases && python3 directionb_window.py gate      # 17/17, 3 s
     python3 directionb_window.py bands                 # ledger, 19 s
     python3 directionb_window.py slot20                # 27/27, 3 s
-    python3 directionb_window.py verdict               # 24/24, ~8 min
+    python3 directionb_window.py verdict               # 24/24, 451 s
     python3 directionb_window.py claim4                # 6/6, 10 s
 [REVIEW 2026-08-13, post-adjudication repair pass: the all-4-branch
 rank identity of tests (1)(2) and claim (4) were first verified by

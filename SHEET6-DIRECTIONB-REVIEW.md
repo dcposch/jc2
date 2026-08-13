@@ -697,6 +697,7 @@ consumes). Combined errata APPLIED in one pass:
 - NOT applied (out of the adjudicated list, still open as findings):
   W5a (B = 0 tag on V's display), W5b (item-1 joint object), W5c
   (E5-pinned w-fiber), "exhausted as a killing instrument" wording.
-Re-run counts after repair: gate 17/17, slot20 27/27, claim4 6/6,
-verdict pending-at-banking then confirmed in §6.V's REPRODUCTION
-block; no check FAILs anywhere with the honest assertions.
+Re-run counts after repair: gate 17/17 (2.5 s), slot20 27/27
+(2.4 s), claim4 6/6 (9.3 s), verdict 24/24 (450.8 s, 5-fiber loop,
+cross-fiber identity check PASS); no FAILs anywhere with the honest
+assertions. Not committed (coordinator handles git).
