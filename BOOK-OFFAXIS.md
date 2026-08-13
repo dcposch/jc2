@@ -680,6 +680,17 @@ carrying 53 routes (35 budget-equality). The 62-cell T1 bash workflow
 is superseded; the open td-7 problem is the next tier (transport /
 global / coefficient) on these six cells only.
 
+ADDENDUM (2026-08-13, dual-certified): the smallest cell (9,15,7,3)@2
+PROVABLY SURVIVES the transport tier as well — explicit local solution
+passes every filed handshake and both deduplicated budget-equality
+completions (case IV at (2/3,3,2); trunk (35,15,7,5) at (2/5,5,1)).
+Proof: xmodel/sol-sixcells.md; hostile replay SOUND (exact vertex
+substitutions, px5 census, P1 case-IV line-reads, min-cost DAG):
+xmodel/grok-sixcells-review.md. Integerized AF2 sharpness proven
+(sandwich); the extra-unit contradiction is open (CONJECTURE). The
+remaining instrument for the six is the coefficient-gluing tier
+(emitter build est. 3-5 days, solve cost unbounded a priori).
+
 ## Reproducibility
 
     cd cases && python3 book_offaxis.py    # ~25 min with stage P, exit 0

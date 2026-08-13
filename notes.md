@@ -397,3 +397,8 @@
   written: fleet inventory + access + run conventions for ALL agents (Fable subs,
   Sol, Grok prompts must point at it for any solver job). Box02 stays up until
   its queue drains. Local-screen elapsed work forfeited (~2h; no msolve checkpoints).
+- 2026-08-13 ~16:30: Grok sixcells review SOUND (all 6 attack lines clear; 1 citation
+  nit) => (9,15,7,3)@2 transport-tier survival DUAL-CERTIFIED; BOOK-OFFAXIS §11
+  addendum. td-7 endgame = coefficient-gluing tier on 6 cells (3-5d build, queued
+  decision). Box02: 13 lanes, 468G/2T used, healthy grind. GGV follow-up draft
+  awaiting DC review for Friday send.
