@@ -367,3 +367,8 @@
   §6.V dual review SOUND-WITH-ERRATA both referees; repair 24-test verdict loop
   grinding. Residual-32: 2 timed-out prime lanes relaunched with 12h caps (5 msolve
   lanes now live). Depth-23 GB42 done, GB21 in progress. sol-avenues2 landed, unread.
+- 2026-08-13 ~13:30: Grok re-audit of thmB vs §7 pins: SOUND-WITH-ERRATA. Decisive
+  cross-cut: Sol's flexibility family REQUIRES level-42 tails => DEAD on pinned locus
+  (no surviving constructive witness for residue-A survival); additive-separator
+  ceiling still holds (pinned relaxation consistent 56/76 => no linear kill either).
+  All rides on nolog screens + depth-23. Ultramem IP stale (re-resolve via gcloud).

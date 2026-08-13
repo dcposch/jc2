@@ -1,3 +1,15 @@
+> **STATUS (2026-08-13, post-review):** Reviewed by Grok
+> (xmodel/grok-thmB-review.md): SOUND-WITH-ERRATA. Theorem B-O stands as an
+> existence theorem for UNRESTRICTED jets in K[eta,t]; the additive-separator
+> ceiling SURVIVES the SHEET6-DIRECTIONB §7 no-log pins (pinned relaxation
+> still consistent, rank 56/76). Errata: (1) the explicit flexibility family
+> requires nonzero level-42 tails (r != 0 forced), which §7 pins to zero —
+> the constructive escape witness is DEAD on the Keller-admissible residue-A
+> locus; (2) "any prescribed nonzero Row 20" in the executive summary means
+> "any nonzero CONSTANT (eta^0) Row 20" — which covers the campaign target
+> -42. Net: no proved survival witness, no linear kill; the decision lives in
+> the nonlinear level-38..41 / high-tail complex (nolog screens + depth-23).
+
 # Theorem B obstruction: functional 41-jet flexibility with tails
 
 ## Executive summary
