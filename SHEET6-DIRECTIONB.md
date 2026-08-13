@@ -386,7 +386,9 @@ Builder banked /tmp/directionb_tails.pkl (D = 21, 2998.7s, exact,
 sentinel-free; copy /tmp/directionb_tails_D21.pkl). Analysis engine:
 cases/directionb_window.py (phases gate | bands | slot20).
 
-GATE (20/20 PASS, directionb_window.py gate): tails -> 0 kills rows
+GATE (16/16 PASS = 12 window checks + the 4 relayed strike anchors,
+which the strike gate itself re-runs 4/4; directionb_window.py gate):
+tails -> 0 kills rows
 6..18 term-by-term (every monomial tail-loaded); Row_20's const part
 == the banked zero-tail system coefficient-for-coefficient (all 9
 eta-comps; the extra eta^27 comp is pure-tail); the 9-on-2 block and
@@ -426,7 +428,121 @@ zero-tail cascade DIES at the first band); sample clean conditions:
 The 7 dead-stretch coefficients enter ONLY in tail cross-terms
 (J-blindness persists with tails on).
 
-[slot-20 verdict: pending below]
+SLOT-20, THE INHOMOGENEOUS TAIL CONDITION (`slot20` phase). With
+tails on, X_i = alpha_i w_i^4 is NO LONGER a free unknown (it is the
+pole-scale value); Row_20 reads, per eta-component,
+
+  [w4-block const](eta^n) + sum_j c_j(eta^n) . tail_j
+      + (quadratic tail cross-terms) + 42.[n = 0] = 0,
+
+i.e. the promoted 0 = -42 becomes: THE TAILS MUST CANCEL THE -42 AND
+the w4-block, in all 10 eta-components simultaneously.
+
+Stratum S = the 16 tails entering Row_20 LINEARLY (levels 42/47/52).
+Exact structural facts (checked): bands 6,8,12,14,16,18 vanish
+IDENTICALLY on S; Row_10|S is linear in the six level-42 tails;
+Row_20|S = const + linear(S) + 21 quadratic monomials in level-42.
+
+FIRST SUB-STRATUM (level-42 = 0, unknowns = the 10 level-47/52
+tails), solved exactly over E for h-signs (+-,+-) x pole scales
+w = (1,1), (2,3), (1/5,7):
+  Row_10|S rank 2/6 (level-42 NOT pinned: 4 free directions);
+  Row_20 linear map on the 10 level-47/52 tails has RANK ONLY 4 of
+  10 eta-rows, uniformly in every branch and every w-sample, and the
+  inhomogeneous target is NOT in its image:
+  **INCONSISTENT, with residual defect exactly in eta^12, 15, 18,
+  21, 24, 27** (6 obstruction components).
+So the -42 CANNOT be cancelled by slot-20-linear tails alone: any
+survivor must carry DEEPER tail loading (levels 38..46 cross-terms
+and/or the level-42 quadratic block). Escalation below.
+
+WHICH TAIL COMBINATIONS CANCEL THE -42 (the eta^0 row, exact
+support): Row_20[eta^0] carries 2034 tail monomials -- 14 of tail-
+degree 1 (levels 42/47/52), 184 of degree 2, 532 of degree 3 (e.g.
+tf1_38.tf1_38.tf1_40, tf1_38.tf1_39.tf1_39, tf1_38.tf1_39.vf1_34),
+up to degree 8. The eta^0 equation ALONE is easily solvable (already
+the 14 linear ones suffice); the kill pressure is NOT at eta^0 --
+it is the SIMULTANEITY across the other 9 eta-components. Precisely,
+the level-47/52 linear map has rank 4, and the residual obstruction
+sits in the 6 components eta^12, 15, 18, 21, 24, 27.
+
+## 6.V VERDICT
+
+Decisive tests (`directionb_window.py verdict`, 7/7 PASS, 89 s;
+all exact over E, one h-sign branch shown, ranks identical on all 4):
+
+(1) LINEARIZATION RELAXATION (every var-monomial an INDEPENDENT
+    unknown -- an OVER-approximation of the true solution set, so
+    INCONSISTENT here would prove EMPTY outright):
+      Row_20 alone : 10 rows x 2718 monomial cols, rank 10 -- CONSISTENT
+      full window  : 77 rows x 5106 monomial cols, rank 57 -- CONSISTENT
+    The -42 target IS in the column span. **There is NO linear-algebra
+    kill of the forced-tail window.** No functional annihilates all
+    tail columns while detecting the -42 -- the exact mechanism that
+    killed the zero-tail stratum (9-on-2 on the pole scales) has no
+    analogue once tails are on.
+
+(2) THE DIFFERENTIAL at the zero-tail point (tail-degree <= 1 part;
+    the promoted theorem's point is the origin of this system):
+    77 rows x 76 tail cols, rank 29, INCONSISTENT -- uniformly in the
+    dead-stretch values (7 free, incl. all-zero). So the -42 is NOT
+    cancellable to FIRST ORDER: the survivor locus does not meet any
+    first-order deformation of the zero-tail point. This is the exact
+    sense in which the promoted kill "almost" propagates.
+
+(3) EXACT AFFINE STRATA (all solved in closed form over E):
+      levels 47/52 only          : 10 eqs, 10 unk, rank 4  -- INCONSISTENT
+      levels 45/47/50/52 + the 7 : 19 eqs, 20 unk, rank 8  -- INCONSISTENT
+      levels >= 43 (low tails 0) : 48 eqs, 50 unk, rank 16 -- INCONSISTENT
+    (the third is forced: with levels < 43 zero, the degree-3 low
+    monomials feeding eta^0 vanish and 0 = -42 returns).
+
+(4) THE OBSTRUCTION IS NOT A FIXED CONTRADICTION. Fixing the low data
+    (levels <= 42) by an exact cascade solve of bands 6/8/10 and
+    solving bands 12..20 jointly over all 50 high unknowns leaves 32
+    unreduced rows -- and their exact E-values DEPEND on the low data
+    (two independent cascade seeds give different obstruction vectors;
+    at low = 0 only 6 obstruction rows remain, exactly eta^12..27 of
+    Row_20). So these are genuine polynomial CONDITIONS on the low
+    tails + the 7, not a constant absurdity.
+
+**THE VERDICT (pre-registered semantics of §6): NOT EMPTY-BY-KILL.
+The 83-var forced-nonzero-tail window does NOT kill residue-A.**
+The zero-tail theorem of §3 stands and is now sharp in two directions
+at once: it fails at first order (2) and on every closed-form
+stratum (3), but it does NOT extend to the full window (1). The
+honest surviving locus is exactly
+
+   V = { tails, the 7, w_1, w_2 != 0 :
+         47 band conditions (6.T, banked, exact, all 4 branches)
+         AND the slot-20 inhomogeneous condition (6.T) },
+
+a genuinely NONLINEAR variety: any point of it must carry
+simultaneously nonzero LOW-level tails (38..42) whose degree-2/3
+cross-terms feed the eta^12,15,18,21,24,27 obstruction components,
+plus high-level tails absorbing the rest. Scope caveat, stated
+plainly: NONEMPTINESS IS NOT CERTIFIED -- no explicit point was
+extracted (every stratum admitting a closed-form solve is dead, and
+the residual system is a polynomial system in ~28 low parameters
+with 32 highly-degenerate conditions). What IS certified: no kill.
+Residue-A survives this build; the direction-b J-window is exhausted
+as a killing instrument at depth 21 and the burden moves to the
+Q2 l8/l4 route and to rows 21+.
+
+REPRODUCTION
+    cd cases && python3 directionb_window.py gate      # 16/16, 3 s
+    python3 directionb_window.py bands                 # ledger, 11 s
+    python3 directionb_window.py slot20                # tail condition
+    python3 directionb_window.py verdict               # 7/7, 89 s
+State: /tmp/directionb_tails_D21.pkl (banked copy of the build),
+/tmp/directionb_window_conditions.pkl (the 47 band conditions,
+per branch, as E-echelon rows).
+
+NEXT OBJECT (unchanged in kind, sharpened in target): decide V by
+solving the 32 obstruction conditions on the low data -- a Groebner-
+tier job in ~28 parameters, or a depth-23 rerun (rows 21/22, build
+running) which adds rows that may collapse the degeneracy. Until
+then residue-A is ALIVE on the forced-nonzero-tail locus.
 
 Trust: (a) the chart identity (J) is elementary calculus on the exact
 factorizations f - a = phi_f prod(y - y_i), g = phi_g prod(y - z_j)
@@ -462,15 +578,14 @@ Next objects, in order of value:
    `tails`, is the first half; its row structure characterizes the
    forced-nonzero-tail locus and couples the 7 via tail cross-terms).
    A rank deficit or inconsistency there is the FULL residue-A kill.
-   [Status at close of session: the 83-var tails build (7 dead-stretch
-   + all P-side tails free, B frozen) is LAUNCHED and running
-   (/tmp/tails21.log, banks to /tmp/directionb_tails.pkl); the
-   f-side through-orbits are built; sizing is jet-tier (est. 1-3 h
-   local). Its verdict semantics, pre-registered: rows 6..19 = linear
-   tail pins (Row_6-type, rank measured per row); Row_20 = the
-   inhomogeneous window with the w^4-block of §2c + tail columns +
-   (7 x tail) cross-terms; INCONSISTENT = full-window residue-A kill;
-   consistent = exact characterization of the forced-tail locus.]
+   [CLOSED 2026-08-13 -- see §6.T/§6.V. The build completed
+   (2998.7 s, /tmp/tails21.log); the analysis is done and the
+   pre-registered call is CONSISTENT, not INCONSISTENT: no
+   full-window residue-A kill. Rows 6..19 turned out NOT to be
+   "tail pins" (nothing is pinned to 0 -- already Row_6 has E-rank 1
+   on its 6 level-38 tails); they are 47 exact E-module conditions.
+   A depth-23 rerun (rows 21/22, /tmp/tails23.log) is running to test
+   whether the extra rows collapse the degeneracy.]
 2. Extend (J) to rows 21..41 (still pure y-side; the h2-resonance
    b2 = (3/4) sigma sits at slot 24-ish content) — same machinery,
    deeper truncation.

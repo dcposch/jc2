@@ -10,7 +10,8 @@ radkey -> K3, radkey = (z, a1, a2, w1, h1, w2, h2, B) exponents in the
 reduced radical ring (z^Phi42, a_i^3 -> 3 +- r3, h_i^2 -> (3/2) w_i^2,
 B^7 -> 3/2; w_1, w_2 free).  All tail rows have z = B = 0.
 
-Phases (run: python3 directionb_window.py [gate|bands|slot20|all]):
+Phases (run: python3 directionb_window.py
+                     [gate|bands|slot20|verdict|all]):
 
   gate    tails -> 0 must reproduce the promoted zero-tail system:
           rows 6..19 die; Row_20 == /tmp/directionb_dsys.pkl constants
@@ -344,99 +345,395 @@ def bands():
 # ------------------------------------------------------------- slot 20
 K1M = (0, 1, 0, 4, 0, 0, 0, 0)          # alpha1 w1^4
 K2M = (0, 0, 1, 0, 0, 4, 0, 0)          # alpha2 w2^4
+RHS42 = K3(42)     # J: Row_20[eta^0] = -(42/(c_f c_g)); gauge c_f c_g = 1
 
-def slot20():
-    """Row_20 with tails: the inhomogeneous window.  The J-identity
-    demands Row_20 = -(42/(c_f c_g)) eta^0 (gauge: -42).  Zero-tail
-    made this 0 = -42 (INCONSISTENT).  With tails: derive the exact
-    condition on the window tails that cancels the -42.
+def ring_to_E(r, s1, s2, w1, w2):
+    """ring elt -> E, at h-signs (s1,s2) and pole scales w_i = given
+    NONZERO rationals.  X_i = alpha_i w_i^4 is NOT free here: it is
+    whatever the scales make it (this is what the zero-tail w4 solve
+    could not have, and is why the -42 must be cancelled by tails)."""
+    out = {}
+    for rk, c in r.items():
+        ee, (P, Q) = rad_to_E(rk, s1, s2)
+        for _ in range(P): c = c * w1
+        for _ in range(Q): c = c * w2
+        out = eadd(out, escal(ee, c))
+    return out
 
-    Minimal stratum solve: all tails 0 EXCEPT the vars entering
-    Row_20 LINEARLY (the slot-20 window coordinates).  Rows 6..18
-    are then satisfied identically (gate: every term tail-loaded;
-    all their vars sit at levels < the linear slot-20 set -- checked).
-    Row_20 becomes an E-linear inhomogeneous system on those vars +
-    the w^4-block; solved exactly over E per h-sign branch with
-    w1 = w2 = 1 (so X_i = a_i^{1/3}, both nonzero: w_i != 0 kept)."""
-    byk, vars_, D = load()
-    r20 = byk[20]
-    # linear slot-20 vars and their radical structure
-    linvars = sorted({vname(vars_, vk) for n, v in r20.items()
-                      for vk in v if len(vk) == 1})
-    print("== SLOT-20: inhomogeneous window ==")
-    print("   Row_20 linear vars (%d): %s"
-          % (len(linvars), " ".join(linvars)))
-    # minimal stratum: keep only linear slot-20 vars that appear in
-    # NO row 6..19 and only LINEARLY in Row_20; all other tails -> 0.
-    # Then rows 6..19 vanish identically on the stratum and Row_20
-    # restricted is exactly E-linear.
-    lower = set()
-    for k in range(6, 20):
-        for n, v in byk.get(k, {}).items():
-            for vk in v:
-                lower |= {vars_[i] for i in vk}
-    nl20 = {vars_[i] for n, v in r20.items()
-            for vk in v if len(vk) > 1 for i in vk}
-    keepset = set(linvars) - lower - nl20
-    excl = sorted(set(linvars) - keepset)
-    print("   minimal stratum keeps (%d): %s"
-          % (len(keepset), " ".join(sorted(keepset))))
-    if excl:
-        print("   excluded (appear below slot 20 or nonlinearly): %s"
-              % " ".join(excl))
-    linvars = sorted(keepset)
-    for s1, s2 in ((1, 1), (1, -1), (-1, 1), (-1, -1)):
-        # build augmented system over E: cols = linvars + X1 + X2,
-        # last col = RHS; w1 = w2 = 1 (all w-monomials -> 1).
-        cols = {nm: i for i, nm in enumerate(linvars)}
-        iX1, iX2 = len(cols), len(cols) + 1
-        iR = len(cols) + 2
-        rows = []
-        for n, v in sorted(r20.items()):
-            row = {}
-            def acc(col, ee):
-                row[col] = eadd(row.get(col, {}), ee)
-                if not row[col]: del row[col]
+def esolve(rows, rhs, ncols):
+    """inhomogeneous E-linear solve, UNIT pivots only.
+    rows[i]: dict col -> E; rhs[i]: E.  Returns
+    (rank, piv, sol, freecols, incons, undec):
+      sol = particular solution (free cols = 0),
+      incons = True if some reduced row is 0 = unit  (NO solution on
+               ANY factor of E),
+      undec  = rows left with zero-divisor-only coefficients."""
+    rows = [dict(r) for r in rows]; rhs = list(rhs)
+    piv, used = [], {}
+    for c in range(ncols):
+        pr = None
+        for i, r in enumerate(rows):
+            if i in used.values() or c not in r: continue
+            if enorm_nonzero(r[c]): pr = i; break
+        if pr is None: continue
+        used[c] = pr; piv.append(c)
+        iv = einv(rows[pr][c])
+        rows[pr] = {k: emul(iv, v) for k, v in rows[pr].items()}
+        rhs[pr] = emul(iv, rhs[pr])
+        for i, r in enumerate(rows):
+            if i != pr and c in r:
+                f = eneg(r[c])
+                for k, v in rows[pr].items():
+                    r[k] = eadd(r.get(k, {}), emul(f, v))
+                    if not r[k]: del r[k]
+                rhs[i] = eadd(rhs[i], emul(f, rhs[pr]))
+    sol = {c: rhs[used[c]] for c in piv}       # free cols = 0
+    incons, undec = False, 0
+    for i, r in enumerate(rows):
+        if i in used.values(): continue
+        if not r:
+            if rhs[i]:
+                if enorm_nonzero(rhs[i]): incons = True
+                else: undec += 1
+        else: undec += 1
+    free = [c for c in range(ncols) if c not in piv]
+    return len(piv), piv, sol, free, incons, undec
+
+def restrict(byk, vars_, k, keep):
+    """rows of band k with every var outside `keep` set to 0.
+    Returns comps[n] = dict varkey -> ring (surviving terms only)."""
+    out = {}
+    for n, v in sorted(byk.get(k, {}).items()):
+        w = {vk: r for vk, r in v.items()
+             if all(vars_[i] in keep for i in vk) and r}
+        if w: out[n] = w
+    return out
+
+def evaluate(byk, vars_, val, s1, s2, w1, w2):
+    """EXACT certificate evaluator: substitute tail values `val`
+    (name -> E elt; absent = 0) into EVERY banked row and return
+    {k: {n: E-value}} of the J-identity defect
+    (Row_k[eta^n], plus +42 at (20, 0))."""
+    res = {}
+    for k in sorted(byk):
+        for n, v in byk[k].items():
+            acc = {}
             for vk, r in v.items():
-                if vk and not all(vars_[i] in keepset for i in vk):
-                    continue                     # tails -> 0
-                for rk, c in r.items():
-                    if not vk and rk == K1M:
-                        acc(iX1, {(0, 0, 0): c}); continue
-                    if not vk and rk == K2M:
-                        acc(iX2, {(0, 0, 0): c}); continue
-                    ee, pq = rad_to_E(rk, s1, s2)   # w = 1: drop pq
-                    acc(cols[vname(vars_, vk)] if vk else iR,
-                        escal(ee, c))
-            # move any non-(X,w4) const to RHS side as-is (iR col);
-            # RHS of the J-identity: -42 at eta^0
-            if n == 0:
-                acc(iR, {(0, 0, 0): K3(42)})   # LHS - RHS: +42 on iR
-            if row: rows.append((n, row))
-        rank, piv, ech, left = erank_units([r for _, r in rows], iR)
-        # leftover {iR: c} with c a unit = 0 = c: INCONSISTENT;
-        # other leftovers (zerodivisor coefficients) = undecided.
-        incons = any(set(r) == {iR} and enorm_nonzero(r[iR])
-                     for r in left)
-        chk("slot-20 (%+d,%+d): system SOLVABLE over E "
-            "(rank %d, %d leftover rows%s)"
-            % (s1, s2, rank, len(left),
-               ", INCONSISTENT" if incons else ""),
-            not left)
-        if (s1, s2) != (1, 1): continue
-        # display the solved system on branch (+1,+1)
-        inv = {i: nm for nm, i in cols.items()}
-        inv[iX1], inv[iX2], inv[iR] = "X1", "X2", "RHS"
-        print("   -- branch (+1,+1): echelon solution "
-              "(pivot = -sum of frees; w1 = w2 = 1):")
-        for er in ech:
-            pivc = min(er, key=lambda c: (c not in piv, c))
-            terms = ["[%s]*%s" % (eshow(x, 2), inv[c])
-                     for c, x in sorted(er.items()) if c != pivc]
-            print("      %s = -( %s )" % (inv[pivc],
-                                          " + ".join(terms) or "0"))
-    return linvars
+                m = EONE
+                for i in vk:
+                    m = emul(m, val.get(vars_[i], {}))
+                    if not m: break
+                if not m: continue
+                acc = eadd(acc, emul(m, ring_to_E(r, s1, s2, w1, w2)))
+            if k == 20 and n == 0:
+                acc = eadd(acc, {(0, 0, 0): RHS42})
+            if acc: res.setdefault(k, {})[n] = acc
+    return res
 
+WSAMPLES = ((K1, K1), (K3(2), K3(3)), (K3(Fr(1, 5)), K3(7)))
+
+# ------------------------------------------------------- the cascade
+# Bands introduce new tail levels LINEARLY, in this order; every band
+# is affine in its own new levels once all lower levels are assigned
+# (asserted at run time).  The 7 dead-stretch coefficients are FREE
+# (no band constrains them) and enter Row_20 only via cross-terms --
+# which is exactly the freedom the zero-tail theorem could not see.
+SEVEN = ("uf18", "uf24", "uf30", "vf1_34", "vf1_36", "vf2_34", "vf2_36")
+STAGES = [(6, ["38"]), (8, ["40"]), (10, ["42"]), (12, ["39", "44"]),
+          (14, ["41", "46"]), (16, ["43", "48"])]
+JOINT = ([18, 20], ["45", "50", "47", "52"])
+
+def lvl(nm): return nm.rsplit("_", 1)[-1]
+
+def build_affine(byk, vars_, ks, unk, val, s1, s2, w1, w2):
+    """rows of bands `ks`, affine in the unknown tails `unk` (list of
+    names) once every other var is given a value in `val` (name -> E;
+    absent = 0).  Returns (cols, rows, rhs, labels)."""
+    cols = {nm: i for i, nm in enumerate(unk)}
+    U = set(unk)
+    rows, rhs, lab = [], [], []
+    for k in ks:
+        for n, v in sorted(byk.get(k, {}).items()):
+            row, const = {}, {}
+            for vk, r in v.items():
+                nms = [vars_[i] for i in vk]
+                u = [x for x in nms if x in U]
+                assert len(u) <= 1, "band %d not affine in %s" % (k, u)
+                co = EONE
+                for x in nms:
+                    if x in U: continue
+                    co = emul(co, val.get(x, {}))
+                    if not co: break
+                if not co: continue
+                ee = emul(co, ring_to_E(r, s1, s2, w1, w2))
+                if not ee: continue
+                if u:
+                    j = cols[u[0]]
+                    row[j] = eadd(row.get(j, {}), ee)
+                    if not row[j]: del row[j]
+                else: const = eadd(const, ee)
+            if k == 20 and n == 0:
+                const = eadd(const, {(0, 0, 0): RHS42})
+            if row or const:
+                rows.append(row); rhs.append(eneg(const)); lab.append((k, n))
+    return cols, rows, rhs, lab
+
+def asolve(rows, rhs, ncols, presets):
+    """esolve with some columns preset to given values (folded into
+    the RHS).  Returns (rank, sol, free, incons, undec) with sol over
+    ALL ncols columns."""
+    rows2, rhs2 = [], list(rhs)
+    for i, r in enumerate(rows):
+        rr = {}
+        for c, x in r.items():
+            if c in presets:
+                rhs2[i] = eadd(rhs2[i], emul(eneg(x), presets[c]))
+            else: rr[c] = x
+        rows2.append(rr)
+    rk, piv, sol, free, incons, undec = esolve(rows2, rhs2, ncols)
+    out = dict(presets); out.update(sol)
+    free = [c for c in free if c not in presets]
+    return rk, out, free, incons, undec
+
+def genval(i):
+    """generic nonzero rational sample values for free directions."""
+    return {(0, 0, 0): K3(Fr(1 + (i % 5), 2 + (i % 3)))}
+
+def cascade(s1=1, s2=1, w1=K1, w2=K1, dsv=None, verbose=True):
+    """Solve the whole window level-by-level, generic nonzero data,
+    then the joint Row_18 + Row_20 endgame.  Returns (val, defect)."""
+    byk, vars_, D = load()
+    val = {}
+    for j, nm in enumerate(SEVEN):
+        val[nm] = genval(j + 1) if dsv is None else dsv
+    for (k, levs) in STAGES:
+        unk = [v for v in vars_ if v[:2] in ("tf", "tg") and lvl(v) in levs]
+        cols, rows, rhs, lab = build_affine(byk, vars_, [k], unk, val,
+                                            s1, s2, w1, w2)
+        rk, piv, sol, free, incons, undec = esolve(rows, rhs, len(cols))
+        pres = {c: genval(7 + c + k) for c in free}
+        rk, sol, free, incons, undec = asolve(rows, rhs, len(cols), pres)
+        if verbose:
+            print("   band %-2d: %2d eqs, %2d new unknowns (levels %s) "
+                  "-> rank %d, %d free%s"
+                  % (k, len(rows), len(cols), "/".join(levs), rk,
+                     len(free), ", INCONSISTENT" if incons else ""))
+        if incons or undec: return None, "band %d inconsistent" % k
+        inv = {i: nm for nm, i in cols.items()}
+        for c, x in sol.items():
+            if x: val[inv[c]] = x
+    ks, levs = JOINT
+    unk = [v for v in vars_ if v[:2] in ("tf", "tg") and lvl(v) in levs]
+    cols, rows, rhs, lab = build_affine(byk, vars_, ks, unk, val,
+                                        s1, s2, w1, w2)
+    rk, piv, sol, free, incons, undec = esolve(rows, rhs, len(cols))
+    if verbose:
+        print("   ENDGAME (Row_18 + Row_20): %d eqs, %d unknowns "
+              "(levels %s) -> rank %d, %d free%s"
+              % (len(rows), len(cols), "/".join(levs), rk, len(free),
+                 ", INCONSISTENT" if incons else ""))
+    if incons or undec: return None, "endgame inconsistent"
+    inv = {i: nm for nm, i in cols.items()}
+    for c, x in sol.items():
+        if x: val[inv[c]] = x
+    return val, None
+
+
+def slot20(verbose=True):
+    """THE verdict phase.  Stratum S = the 16 tails entering Row_20
+    LINEARLY (levels 42/47/52).  On S every band 6..19 except Row_10
+    vanishes identically (checked); Row_10 is linear in the six
+    level-42 tails; Row_20 = const w4-block + linear(S) + quadratic in
+    the level-42 tails.  Solve exactly over E per h-sign branch and
+    per pole-scale sample, then CERTIFY by exact substitution into
+    all banked rows."""
+    byk, vars_, D = load()
+    S = sorted({vars_[vk[0]] for n, v in byk[20].items()
+                for vk in v if len(vk) == 1})
+    L42 = [nm for nm in S if nm.endswith("_42")]
+    REST = [nm for nm in S if not nm.endswith("_42")]
+    print("== SLOT-20: the inhomogeneous window (THE verdict) ==")
+    print("   stratum S (%d linear slot-20 tails): %s" % (len(S), " ".join(S)))
+    # structural facts, checked exactly
+    dead = [k for k in sorted(byk) if k != 20 and not restrict(byk, vars_, k, set(S))]
+    chk("bands 6..19 except Row_10 vanish identically on S (%s dead)"
+        % ",".join(map(str, dead)),
+        dead == [k for k in sorted(byk) if k not in (10, 20)])
+    r10 = restrict(byk, vars_, 10, set(S))
+    chk("Row_10|S is LINEAR in the six level-42 tails",
+        all(len(vk) == 1 and vars_[vk[0]] in L42
+            for v in r10.values() for vk in v))
+    r20 = restrict(byk, vars_, 20, set(S))
+    q20 = {vk for v in r20.values() for vk in v if len(vk) > 1}
+    chk("Row_20|S = const + linear(S) + quadratic(level-42 only) "
+        "(%d quadratic monomials)" % len(q20),
+        all(all(vars_[i] in L42 for i in vk) for vk in q20))
+
+    for (w1, w2) in WSAMPLES:
+        for (s1, s2) in ((1, 1), (1, -1), (-1, 1), (-1, -1)):
+            tag = "w=(%r,%r) h=(%+d,%+d)" % (w1, w2, s1, s2)
+            # STAGE A: Row_10|S homogeneous, six level-42 unknowns
+            colsA = {nm: i for i, nm in enumerate(L42)}
+            rowsA = []
+            for n, v in sorted(r10.items()):
+                row = {}
+                for vk, r in v.items():
+                    c = colsA[vars_[vk[0]]]
+                    row[c] = eadd(row.get(c, {}),
+                                  ring_to_E(r, s1, s2, w1, w2))
+                    if not row[c]: del row[c]
+                if row: rowsA.append(row)
+            rkA, pivA, echA, leftA = erank_units(rowsA, len(colsA))
+            pinned = (rkA == len(colsA) and not leftA)
+            if verbose:
+                print("   [%s] Row_10|S: %d E-rows, rank %d/6%s"
+                      % (tag, len(rowsA), rkA,
+                         " => ALL level-42 tails = 0" if pinned
+                         else " (%d free)" % (len(colsA) - rkA)))
+            # STAGE B: level-42 = 0 (stage A) -> Row_20|S linear in REST
+            keep = set(REST)
+            colsB = {nm: i for i, nm in enumerate(REST)}
+            rowsB, rhsB, etaB = [], [], []
+            for n, v in sorted(r20.items()):
+                row, const = {}, {}
+                for vk, r in v.items():
+                    if vk and not all(vars_[i] in keep for i in vk):
+                        continue                       # level-42 -> 0
+                    ee = ring_to_E(r, s1, s2, w1, w2)
+                    if not vk: const = eadd(const, ee)
+                    else:
+                        c = colsB[vars_[vk[0]]]
+                        row[c] = eadd(row.get(c, {}), ee)
+                        if not row[c]: del row[c]
+                if n == 0: const = eadd(const, {(0, 0, 0): RHS42})
+                if row or const:
+                    rowsB.append(row); rhsB.append(eneg(const)); etaB.append(n)
+            rk, piv, sol, free, incons, undec = esolve(
+                rowsB, rhsB, len(colsB))
+            chk("slot-20 %s: SOLVABLE (rank %d/%d on %d eta-rows; "
+                "%d free tails; inconsistent=%s, undecided rows=%d)"
+                % (tag, rk, len(colsB), len(rowsB), len(free),
+                   incons, undec),
+                (not incons) and undec == 0)
+            # certificate: substitute back into EVERY banked row
+            inv = {i: nm for nm, i in colsB.items()}
+            val = {inv[c]: x for c, x in sol.items()}
+            defect = evaluate(byk, vars_, val, s1, s2, w1, w2)
+            chk("slot-20 %s: EXACT certificate -- all banked rows "
+                "6..20 vanish at the solution, Row_20 eta^0 cancels "
+                "the -42" % tag, not defect)
+            if defect:
+                print("      residual defect: %s"
+                      % {k: sorted(d) for k, d in defect.items()})
+            if verbose and (w1, w2) == (K1, K1) and (s1, s2) == (1, 1):
+                print("   -- explicit point (w1 = w2 = 1, h-signs ++), "
+                      "free tails = 0:")
+                for nm in REST:
+                    x = val.get(nm)
+                    print("      %-9s = %s" % (nm, eshow(x, 4) if x else "0"))
+                print("      (all other 76-10 window tails = 0; the 7 "
+                      "dead-stretch coefficients ARBITRARY)")
+    return None
+
+def relax(byk, vars_, ks, s1, s2, w1, w2):
+    """LINEARIZATION RELAXATION: every var-monomial an INDEPENDENT
+    unknown.  This is an over-approximation of the true solution set,
+    so INCONSISTENT here => the forced-tail variety is EMPTY."""
+    cols, rows, rhs = {}, [], []
+    for k in ks:
+        for n, v in sorted(byk.get(k, {}).items()):
+            row, const = {}, {}
+            for vk, r in v.items():
+                ee = ring_to_E(r, s1, s2, w1, w2)
+                if not ee: continue
+                if not vk: const = eadd(const, ee)
+                else:
+                    c = cols.setdefault(vk, len(cols))
+                    row[c] = eadd(row.get(c, {}), ee)
+                    if not row[c]: del row[c]
+            if k == 20 and n == 0:
+                const = eadd(const, {(0, 0, 0): RHS42})
+            if row or const: rows.append(row); rhs.append(eneg(const))
+    rk, piv, sol, free, incons, undec = esolve(rows, rhs, len(cols))
+    return len(rows), len(cols), rk, incons, undec
+
+def tail_linearize(byk, vars_, ds, s1, s2, w1, w2):
+    """THE DIFFERENTIAL of the window map at the zero-tail point:
+    keep only tail-degree <= 1 terms.  Consistent <=> the -42 can be
+    cancelled to FIRST ORDER in the tails."""
+    TAILS = [v for v in vars_ if v[:2] in ("tf", "tg")]
+    T = set(TAILS); cols = {nm: i for i, nm in enumerate(TAILS)}
+    rows, rhs = [], []
+    for k in sorted(byk):
+        for n, v in sorted(byk[k].items()):
+            row, const = {}, {}
+            for vk, r in v.items():
+                nms = [vars_[i] for i in vk]
+                t = [x for x in nms if x in T]
+                if len(t) > 1: continue          # drop degree >= 2
+                co = EONE
+                for x in nms:
+                    if x in T: continue
+                    co = emul(co, ds.get(x, {}))
+                    if not co: break
+                if not co: continue
+                ee = emul(co, ring_to_E(r, s1, s2, w1, w2))
+                if not ee: continue
+                if t:
+                    j = cols[t[0]]
+                    row[j] = eadd(row.get(j, {}), ee)
+                    if not row[j]: del row[j]
+                else: const = eadd(const, ee)
+            if k == 20 and n == 0:
+                const = eadd(const, {(0, 0, 0): RHS42})
+            if row or const: rows.append(row); rhs.append(eneg(const))
+    rk, piv, sol, free, incons, undec = esolve(rows, rhs, len(cols))
+    return len(rows), len(cols), rk, incons, undec
+
+def stratum(byk, vars_, unk, val, ks, s1, s2, w1, w2):
+    cols, rows, rhs, lab = build_affine(byk, vars_, ks, unk, val,
+                                        s1, s2, w1, w2)
+    rk, piv, sol, free, incons, undec = esolve(rows, rhs, len(cols))
+    return len(rows), len(cols), rk, incons, undec
+
+def verdict(s1=1, s2=1, w1=K1, w2=K1):
+    """THE VERDICT phase: the decisive tests, in increasing strength."""
+    byk, vars_, D = load()
+    print("== VERDICT: is the forced-tail variety EMPTY? ==")
+    # (1) relaxations -- the only tier at which an EMPTY verdict could
+    #     be certified by linear algebra alone
+    nr, nc, rk, ic, ud = relax(byk, vars_, [20], s1, s2, w1, w2)
+    chk("Row_20 relaxation CONSISTENT (%d rows, %d monomial cols, "
+        "rank %d) => no single-row invariant kills the window"
+        % (nr, nc, rk), not ic and not ud)
+    nr, nc, rk, ic, ud = relax(byk, vars_, sorted(byk), s1, s2, w1, w2)
+    chk("FULL-WINDOW relaxation CONSISTENT (%d rows, %d monomial "
+        "cols, rank %d): the -42 target IS in the column span => "
+        "NO linear-algebra kill; residue-A does NOT die at this tier"
+        % (nr, nc, rk), not ic and not ud)
+    # (2) the differential at the zero-tail point
+    for tag, ds in (("dead-stretch = 0", {}),
+                    ("dead-stretch generic",
+                     {n: genval(i + 1) for i, n in enumerate(SEVEN)})):
+        nr, nc, rk, ic, ud = tail_linearize(byk, vars_, ds, s1, s2, w1, w2)
+        chk("tail-linearization at the zero-tail point (%s) is "
+            "INCONSISTENT (%d rows, %d tail cols, rank %d): the -42 "
+            "is NOT cancellable to first order" % (tag, nr, nc, rk), ic)
+    # (3) exact affine strata
+    T = lambda pred: [v for v in vars_ if v[:2] in ("tf", "tg") and pred(v)]
+    dsg = {n: genval(i + 1) for i, n in enumerate(SEVEN)}
+    for tag, unk, val in (
+        ("levels 47/52 only", T(lambda v: lvl(v) in ("47", "52")), dsg),
+        ("levels 45/47/50/52", T(lambda v: lvl(v) in ("45", "47", "50", "52")), dsg),
+        ("levels >= 43 (low tails = 0)", T(lambda v: int(lvl(v)) >= 43), dsg)):
+        nr, nc, rk, ic, ud = stratum(byk, vars_, unk, val, sorted(byk),
+                                     s1, s2, w1, w2)
+        chk("stratum [%s] INCONSISTENT (%d eqs, %d unknowns, rank %d)"
+            % (tag, nr, nc, rk), ic)
+    print("   => every closed-form affine stratum dies; the survivor "
+          "locus is genuinely NONLINEAR (needs simultaneously nonzero\n"
+          "      low-level tails whose degree-2/3 cross-terms feed the "
+          "eta^12..27 obstruction components).")
 
 if __name__ == "__main__":
     ph = sys.argv[1] if len(sys.argv) > 1 else "all"
@@ -444,6 +741,7 @@ if __name__ == "__main__":
     if ph in ("gate", "all"): gate()
     if ph in ("bands", "all"): bands()
     if ph in ("slot20", "all"): slot20()
+    if ph in ("verdict", "all"): verdict()
     bad = [n for n, c in OK if not c]
     print("\nTOTAL: %d checks, %d FAIL %s  (%.1fs)"
           % (len(OK), len(bad), bad or "", time.time() - t0))
