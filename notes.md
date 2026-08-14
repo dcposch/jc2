@@ -451,3 +451,8 @@
   11-A kill stands, but fat-state enumeration is INFINITE (no emptiness cert) =>
   td-11 compiler GATED on NF-Z/P/M. Launching NF-Z attack (tower agent; N1-N4 is the
   precedent). Screens R2 ~7h in, 345G, no verdicts. No DC replies yet.
+- 2026-08-14 ~12:30: AM audit = honest (c): char sequence forced + AM divisibility
+  passes, but counterexample fibers are >=4-place (one-place => automorphism) so AM
+  binds only via Jelonek components needing cross-fiber data (not template-pinned).
+  Instrument parked with activation condition recorded. NF-Z repair in re-review;
+  Sol lateral sweep cooking; screens ~9h into R2.
