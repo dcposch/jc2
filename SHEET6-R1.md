@@ -2565,6 +2565,120 @@ budget resolves nothing below that cliff (l12/l8/l4 all wall out at
 both primes, incl. kill-sound row subsets), so the F_s-route
 exclusion CLAIM stays at the stratum, not the full chart.
 
+### 19.5 l8 leaf decomposition: first-nonzero cascade over the 13
+### opened directions (2026-08-13; design + census banked BEFORE runs)
+
+MOTIVATION. The l8 monolith (r1_q2_l8_p*.ms, 243-corrected) is
+structurally GB-dead: 1200 s/12-15 GB locally (19.2) and a Box02
+2 TB attempt died at ~1.65 TB RSS / 11 h with no verdict -- the sec-13
+precedent (monolith death -> leaf verdicts in seconds) mandates a
+chart decomposition.  This is the INDEPENDENT second route on the
+residue-A obligation (confirmation for the Box02 nolog screens if
+they return EMPTY; fallback if they wall).  Engine:
+cases/r1_q2_l8_leaves.py (ADDITIVE; consumes the banked, anchored
+/tmp/r1q2/build_p*_l8.pkl builds; parent emissions untouched).
+
+CENSUS (banked BEFORE design lock; both primes identical).  The l8
+stratum opens EXACTLY 13 free core directions absent from l13 (slot =
+level-12 in [8,13)): slot 8: bf_20, bg42_20, bg21_20; slot 9: bf_21,
+bg42_21; slot 10: bf_22, bg42_22, bg21_22; slot 11: bf_23, bg42_23;
+slot 12: uf24, bg42_24, bg21_24.  (bf_24 sits at slot 12 but is
+KEEPX = kept back-map VARIABLE with a defining row at every lcut --
+NOT stratum-gated; this reconciles the 19.2 54->67 direction count.)
+Occurrence census of the 34,739 quotient-row terms: every direction
+carries 3,013-6,358 terms (uf24 heaviest 6,358; bg21_22 lightest
+3,013) -- the mass is FLAT: no small dominating pivot set exists, so
+the sec-13 4-leaf pattern does NOT transfer (zeroing even the top-2
+directions leaves 23,821/34,739 terms in the LIGHTEST of its 4
+leaves).  The right split is the FIRST-NONZERO (lex-prefix) cascade.
+
+DESIGN (pivot order fixed by census: ascending slot, then descending
+occurrence): d_1..d_13 = bf_20, bg42_20, bg21_20, bf_21, bg42_21,
+bf_22, bg42_22, bg21_22, bf_23, bg42_23, uf24, bg42_24, bg21_24.
+leaf k (k = 1..13): d_1..d_{k-1} = 0 substituted (term-drop in every
+row incl. the bf_18/24/30 defining rows -- the same per-stratum
+restriction semantics the parent uses), d_k != 0 via Rabinowitsch row
+u<d_k>*d_k - 1 adjoined, d_{k+1}..d_13 + all slot->=13 content OPEN.
+Zero leaf (all 13 = 0): IDENTICAL to the banked l13 object --
+verified EXACTLY (dict-equality of quotient rows AND defining rows
+against build_p*_l13.pkl at BOTH primes) -- whose kill is PROOF-TIER
+(char-0 GB=[1] + both primes, 19.2): the base of the cascade needs no
+run.  Per-leaf masses (quotient-row terms surviving the prefix zero,
+p=105337): 34,739 / 29,258 / 24,058 / 21,108 / 17,912 / 15,248 /
+13,356 / 11,834 / 10,935 / 9,747 / 8,848 / 6,815 / 5,878 (l13 =
+5,139).  Emissions: cases/r1_q2_l8_leaf{k}_p{105337,105673}.ms (main,
+20 eqs: the 19 parent rows prefix-restricted + pivot saturation) +
+_ctlB_p*.ms (E5/E6 dropped, both saturations kept: the 16.3/18.1
+mechanism probe, ideal(ctlB) c ideal(main) so ctlB EMPTY => main
+EMPTY a fortiori); E6 literal 16777216 reduced into [0,p) per the
+AUDIT standing rule (parent files carry it unreduced -- flagged
+obligation there; value-preservation pinned by guard B').
+
+PRE-REGISTERED INTERPRETATION (fixed BEFORE any leaf run).  COVER:
+V(l8 stratum) = V(l13) u U_k pi(V(leaf_k)), pairwise disjoint by the
+boolean tautology on the 13-tuple (d_1..d_13): each point either has
+all 13 zero (-> the l13 component, proof-dead) or a unique least
+nonzero index k (-> leaf k; u = d_k^{-1} exists uniquely, field);
+zero-side substitution is exact closed-pattern restriction (free
+polynomial coordinates -- no quadric forcing subtlety, SIMPLER than
+sec-13's Z-side); no elimination cascade is attempted, so leaf rows
+are the stratum rows under the pattern substitution VERBATIM (guard
+B/B').  Hence: ALL 13 leaves EMPTY at p <=> l8 stratum EMPTY at p
+(the l13 base being banked), and any leaf witness lifts to the
+stratum by forgetting u<d_k>.  PROGRESSIVE SEMANTICS (ascending-slot
+order): leaves 1..3 EMPTY => every l8 point has all slot-8 directions
+zero (stratum reduces to l9); + leaves 4..5 => l10; + 6..8 => l11;
++ 9..10 => l12; + 11..13 => l13 => with the banked l13 kill the
+ENTIRE l8 stratum dies at p.  Each verdict prefix is a bankable
+partial statement in the 19.0 lcut semantics.  NONEMPTY at some leaf
+= the relaxed screen survives with its first nonzero opened direction
+pinned at d_k (characterize; NOT a branch survival claim -- band rows
+s=30..54 and n>44 still unimposed).  No inflation beyond this table.
+
+GUARDS (phase guard + cover, log 17:23 2026-08-13; ALL PASS, both
+primes, all 13 leaves, main + ctlB = 52 files):
+| guard | check | result |
+|---|---|---|
+| A | paren sweep + EVERY integer token < p ([0,p) rule) | 52/52 files PASS |
+| B | independent-parser round-trip (FC.parse_eval) == internal VExpr eval, quotient + defining rows, 2 random pts/prime | PASS |
+| B' | leaf rows == PARENT ARTIFACT rows (systems/r1/r1_q2_l8_p*.ms bytes) at the same point with the zeroed prefix imposed -- pins prefix-restriction soundness AND E6 [0,p) value-preservation in one shot | 19/19 rows x 13 leaves x 2 pts x 2 primes PASS |
+| C | satisfiability smoke: constant-bearing rows are EXACTLY the 4 saturations (uW1, uW2, s1F, pivot); no bare-constant row | PASS |
+| D | residual non-degeneracy: no emitted quotient row identically zero at generic points | PASS |
+| cover (i) | 500 random 13-tuples: each matches exactly one pattern (l13 or unique first-nonzero leaf) | PASS |
+| cover (ii) | l8 build rows+defs with ALL 13 dirs zeroed == banked l13 build DICT-EXACT | PASS at BOTH primes |
+| cover (iii) | unit lift u = d_k^-1 unique (field); zero side closed-pattern restriction; rows verbatim (B') -- back-map = forget u<d_k> | stated + mechanical |
+
+LAUNCH RECORD (Box02, x2idn.32xlarge 2 TB; ops/FLEET.md orphan-safe
+self-recording pattern; ~/res32/lanes.log; NO local msolve).
+Monolith provenance: Box02 q2b2.log shows r1_q2_l8_p105337 start
+07:10:36 -> FAILED, p105673 start 18:12:15 (the ~11 h / ~1.65 TB RSS
+death; no verdict line -- 0-byte-out hygiene rule).  Wave 1 launched
+2026-08-14 00:24 UTC (box time), 26 lanes CONFIRMED as 26 running
+msolve processes (39 with the 13 standing lanes), each:
+  nohup sh -c "ulimit -v <fence>; timeout 43200 msolve -g 2 -t 8
+    -f X.ms -o out/X.out; echo LANE X: rc/size/time >> lanes.log" &
+- leaf1..3 MAIN p105337 (34.7k/29.3k/24.1k quot terms): fence 150 GB.
+- leaf1..3 ctlB p105337 (mechanism probes): fence 25 GB.
+- leaf4..13 MAIN at BOTH primes (21.1k..5.9k terms): fence 25 GB.
+Fence budget worst-case 1,025 GB against 1,338 GB free at launch --
+the standing DECISIVE nolog screens (residue-A route 1) keep >300 GB
+growth headroom; a fence-killed lane records rc!=0 and re-runs after
+the standing queue drains.  STAGED on the box, deliberately NOT yet
+launched (second wave, post-drain): leaf1..3 main p105673, leaf1..3
+ctlB p105673, leaf4..13 ctlB both primes (all 52 files + md5-verified
+scp; launcher launch_l8_leaves.sh in ~/res32).  READING RULE: 0-byte
+.out != verdict; only lanes.log "LANE r1_q2_l8_leaf*" lines with
+rc=0 and a GB-bearing .out are verdicts (19.2 hygiene).  Third prime
+200257: NOT emitted -- no banked Q0 gate/fam anchor state at that
+prime (A-Q2-1/A-Q2-2 are per-prime trust gates, 19.0); the two banked
+primes match the entire Q2 tier's verdict basis.  Engine + emissions:
+cases/r1_q2_l8_leaves.py + cases/r1_q2_l8_leaf{1..13}[_ctlB]_p*.ms +
+per-leaf .rows.txt provenance.  CONTINGENCY (pre-registered): if
+leaf1 (full-mass + saturation) also walls at 43200 s / 150 GB, its
+own sub-split is by the pattern of d_2.. within the leaf (same
+machinery, zset seeded with nothing, pivot cascade over the
+remaining 12) -- second-generation leaves, same cover argument.
+
 ## 20. SATURATED chain terminal gates: (2,3)->(6,17) and (2,5)->(6,23)
 ## (2026-08-11; the 19.4 banked directive executed)
 
