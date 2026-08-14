@@ -1,7 +1,6 @@
 # Coefficient gluing for the td-7 off-axis survivors: design and pilot
 
-Status: **LEAD-PILOT COMPLETE; FULL-ROUTE DESIGN IS GATED ON
-CERTIFICATE/WINDOW PROVENANCE**  
+Status: **LEAD-PILOT COMPLETE; FULL-ROUTE DESIGN IS GATED ON CERTIFICATE/WINDOW PROVENANCE**  
 Date: 2026-08-13  
 Target implementation: a new additive emitter; this document changes no
 promoted theorem and does not run a solver.
@@ -26,13 +25,17 @@ made explicit before implementation.
    both equal to 7, `(9,15)@2` and `(10,15)@3`, survive this preflight.
    The arithmetic is in section 2.2.
 3. The advertised 53 routes and 35 equality routes are 53/35 deduplicated
-   **completion records**, not vertex paths. `px5.py` discards predecessors,
+   **completion records**, not vertex paths.
+   `cases/scratch_offaxis_pricing/px5.py` discards predecessors,
    equal-cost alternatives, some characteristics, and multiplicity
    partitions. The corresponding raw census is 59/41. No coefficient-system
    sharing among the 35 equality records is currently certified.
-4. Statement 3.9 transports the full pattern of a fixed global polynomial
-   and its jet, not the reduced Prop. 8.1 polynomials `p,q`. Thus an emitter
-   which merely equates the six local `A` parameters is the wrong object.
+4. Statement 3.9 pins the multiplicity, deeper top coefficient and valuation
+   drop for the full pattern of a fixed global polynomial, not for the
+   reduced Prop. 8.1 polynomials `p,q`. Subleading jet rows are related by
+   the exact coordinate identity for that same global polynomial. Thus an
+   emitter which merely equates the six local `A` parameters is the wrong
+   object.
 
 The implementation consequently has two products:
 
@@ -80,30 +83,41 @@ An edge normally requires `c^nu=A`; retaining both variables keeps the
 system over `Q` and represents the union of root-of-unity branches.
 
 The default is **fiber-zero gauge**: replace the original first polynomial
-`f_old` by `f=f_old-a` and rename it `f`. This lossless target translation
-sets the selected fiber to `a=0` and does not change the Jacobian.  Thus all
-default equations remain over `Q`; no algebraicity assumption on the
-original complex fiber value is being smuggled into `k_0`.  An optional
-ungauged mode instead declares a variable `a`, distinct labels `f` and
-`fbar=f-a`, and, for
-`D_{v,h}=K d_{h,v}` and
-`E=max(D_(v,fbar),D_(v,f),0)`, the exact Laurent identity
+`f_old` by `f=f_old-a` and rename it `f`. If a `MINUS` tower is used, also
+replace `g_old` by `g=g_old-b` before defining that tower. These are lossless
+target translations, set the selected constants to zero, and do not change
+the Jacobian. Thus all default equations remain over `Q`; no algebraicity
+assumption on the original complex values `a,b` is being smuggled into
+`k_0`. An optional ungauged mode instead declares `a_fiber` and, for MINUS,
+`b_fiber`, with distinct labels `fbar=f-a` and `gbar=g-b`. For
+`Dint[v,h]=K d_(h,v)` and
+`E=max(Dint[v,fbar],Dint[v,f],0)`, the exact Laurent identity
 
 \[
- z^{E-D_{v,\mathrm{fbar}}}J_{v,\mathrm{fbar}}
- -z^{E-D_{v,f}}J_{v,f}+a z^E=0.                         \tag{F1a}
+ z^{E-Dint[v,\mathrm{fbar}]}J_{v,\mathrm{fbar}}
+ -z^{E-Dint[v,f]}J_{v,f}+a_{\rm fiber} z^E=0.            \tag{F1a}
 \]
 
-The gauge is chosen exactly once, before charts, jets, tower labels and
-global arrays are defined. Default mode has no second `a` variable or
-pre-translation constant constraint; ungauged mode emits every coefficient
-of (F1a). The emitter may not silently substitute `f` for `f-a`.
+For MINUS, with `E_g=max(Dint[v,gbar],Dint[v,g],0)`, also emit
+
+\[
+ z^{E_g-Dint[v,\mathrm{gbar}]}J_{v,\mathrm{gbar}}
+ -z^{E_g-Dint[v,g]}J_{v,g}+b_{\rm fiber}z^{E_g}=0.        \tag{F1b}
+\]
+
+The gauge is chosen exactly once, before charts, jets, tower labels, the
+Jacobian rescaling and global arrays are defined. Default mode has no
+pre-translation constant variables or constraints; ungauged mode emits the
+dependency-closed coefficients of (F1a) and, when applicable, (F1b). The
+emitter may not silently substitute `f` for `f-a` or `g` for `g-b`.
 
 Use one orientation everywhere:
 
 - `L=rootward` is the shallower vertex;
 - `U=poleward` is the deeper vertex;
-- an edge is written `L -> U`, with `U=L*c` at one elementary level.
+- an edge is written `L -> U`; one elementary slot has the source relation
+  `U=L*c`, while a composite edge owns an ordered elementary-slot sequence or
+  a directly certified composite chart.
 
 This avoids the source's letter reversal: Prop. 3.2/St. 3.17 write the deeper
 vertex as `F=G+c`, while Prop. 9.3 writes it as `G=F+c`; see
@@ -113,23 +127,26 @@ A `RouteCertificate` is not an endpoint `(w,M,lambda)`. It must contain:
 
 \[
 \begin{split}
-\mathcal R=(&V,E,v_{\rm root},\{v_{{\rm pole},i}\});\\
+\mathcal R=(&V,E,v_{\rm root},\{v_{{\rm pole},i}\},K);\\
 v\in V:\quad&
 (\pi_v,\kappa_v,\nu_v,\bar\kappa_v,d_{f,v},i_v,
  d_{p,v},d_{q,v},M_v,\rho_v,w_v,
  \lambda_v^{\rm lb},\lambda_v^{\rm exact},
  \mathsf{lambdaAuthority}_v,\mu_v,k_v),\\
 e=(L,U)\in E:\quad&
-(\text{case}_e,n_e,\mu_e,N_e,c_e,
+(\text{case}_e,n_e,\mu_e,\mathsf{chartMode}_e,
+ \mathsf{slots}_e\ \text{or}\ \{c_{e,j}\}_{0\le j<N_e},
  \text{zero/nonzero},\text{arrival label},
- \{\text{TransportAuthority}_{e,h}\}_h),                    \tag{F2}\\
+ \{\text{TransportAuthority}_{e,h}\}_h,
+ \mathsf{Derived}(N_e,\{r_{e,h}\}_h)),                    \tag{F2}\\
 &\text{the complete }(\epsilon,l,k,(m_j),\ell_{\rm ex})
  \text{ shape at every non-pole vertex},\\
-&\text{the global labels }h_0=g,h_1,\ldots,h_m,
+&\text{the global labels }h_0=g\ (\mathrm{PLUS})
+ \text{ or }g-b\ (\mathrm{MINUS}),h_1,\ldots,h_m,
  (k_j,l_j),\text{ tower side/base},d_{h_j,v},m_v
  \text{ at every vertex},\\
-&\text{root and x-side terminal data, all chart slots, and all
- discrete root-of-unity choices.}
+&\text{root and x-side terminal data, all top-pattern certificates,
+ JetWindows/chart slots, and all discrete root-of-unity choices.}
 \end{split}
 \]
 
@@ -147,6 +164,22 @@ minimizing price into a slack route. The tower exponent is not free data:
 The certificate records the source proof of integrality.  This is the
 `alpha_m` definition in `SHEET6-TEMPLATE.md:49-55`; omitting `mu_v` would
 leave (L1) under-specified.
+
+An `ElementarySlot` is typed as
+
+\[
+ s=(v_s,v_{s+1},\pi_s,\pi_{s+1},\kappa_s,c_s,\delta_s,
+       \{m_{s,h},\mathsf{topWitness}_{s,h}\}_h),
+ \quad \pi_{s+1}-\pi_s={1\over\kappa_s},\quad
+ v_{s+1}=v_s*c_s,\quad \delta_s=K/\kappa_s.              \tag{F2b}
+\]
+
+For `chartMode=EXPANDED_SLOTS`, the ordered sequence must start at `L`, end
+at `U`, and match adjacent endpoints and levels. `K`, `delta_s`, `N_e` and
+`r_(e,h)` are derived/verified fields, never mutually independent user
+inputs. Direct `ELEMENTARY` mode has one slot; a theorem-certified composite
+mode may instead carry the complete chart coefficients and its named
+authority.
 
 Here
 
@@ -179,9 +212,9 @@ For fixed discrete data (F2), the default polynomial variables are:
 | `A[v,r]`, `B[v,s]`, `Q[v,r]` | incoming p-orbits, non-chain p-orbits, and q-only orbits in `t=eta^nu`; every `A` and `B` orbit occurs once in `q`, while only `Q` is q-only |
 | `c[e,j]` | actual continuation and intermediate composite-chart coefficients; `c[e,0]` is the first direction |
 | `S[v,h]` | leading scale of the full top pattern of the fixed global polynomial `h` at `v` |
-| `J[v,h,r,a]` | coefficient of `eta^a` in jet row `P[v,h,r](eta)` |
-| `tower_s[j]` | global approximate-root/tower constant in `h[j+1]=h[j]^k-tower_s[j]*b_j^l`, with certified base `b_j=f` or `f-a` |
-| `a_fiber` | optional selected-fiber value in ungauged mode only |
+| `J[v,h,r,eta_deg]` | coefficient of `eta^eta_deg` in jet row `P[v,h,r](eta)` |
+| `tower_s[j]` | global approximate-root/tower constant in `h[j+1]=h[j]^k-tower_s[j]*base[j]^l`, with certified base `f` or `f-a` |
+| `a_fiber`, `b_fiber` | optional selected f/g-fiber values in ungauged mode (`b_fiber` occurs only for MINUS) |
 | `gamma` | optional nonzero constant Jacobian before the default target rescaling |
 | `Fcoef[i,j]`, `Gcoef[i,j]` | optional global coefficients of `f,g` on a certified finite support, for `GLOBAL-CLOSED` mode |
 | `u[tag]` | a fresh Rabinowitsch inverse for one forced-nonzero polynomial |
@@ -195,6 +228,21 @@ Serialized names are injective by construction: in particular use
 `tower_s[j]` for global tower constants and `local_s[v,j]` for coefficients
 of a local q-extra polynomial. Mathematical subscripts do not authorize
 textual name reuse.
+
+A recorded root-of-unity choice is algebraic data, not a string tag. It is
+represented over `Q` by a variable `eps[e]`, the exact polynomial defining
+the allowed order (`Phi_M(eps)=0` for primitive order `M`, or
+`eps^M-1=0` when all M-th roots are allowed), and the equations
+
+\[
+ \Phi_M(\epsilon_e)=0\ \text{ or }\ \epsilon_e^M-1=0,
+ \qquad c_{e_2}-\epsilon_ec_{e_1}=0.                     \tag{F5}
+\]
+
+Alternatively a manifest may enumerate branches over
+a declared number-field minimal polynomial. A fixed unrecorded complex
+`epsilon`, or a direction relation stated only after passing to `A=c^nu`,
+fails closed.
 
 ### 1.3 Local Prop. 8.1 equations
 
@@ -252,9 +300,9 @@ At a class-C merge, R2.2 fixes the factor form
 \]
 
 \[
- q_v=\eta
- \prod_{\text{distinct nonzero }p\text{-orbits}}
-       (\eta^{\nu_v}-A)
+q_v=\eta
+ \prod_e(\eta^{\nu_v}-A_{v,e})
+ \prod_j(\eta^{\nu_v}-B_{v,j})
  \prod_r(\eta^{\nu_v}-Q_{v,r}).                         \tag{L6}
 \]
 
@@ -264,7 +312,7 @@ check, before creating rows,
 \[
  \mu_{v,e}d_{q,v}>d_{p,v},\quad
  m_{v,j}d_{q,v}<d_{p,v},\quad
- d_{p,v}\ne m_{v,j}d_{q,v},
+ d_{p,v}\ne m^*d_{q,v}\ \text{for every root multiplicity }m^*\text{ of }p_v,
  \quad M_v=\gcd(d_{p,v},d_{q,v}),\quad\gcd(M_v,\nu_v)=1. \tag{L7}
 \]
 
@@ -278,17 +326,41 @@ resultants, and `C_v` are open conditions. Each is internalized as
 
 with a fresh `u_g`. No solver-side saturation is assumed.
 
-In particular, every allocated leading scale `S[v,h]`, every tower constant
-`s[j]`, and `gamma` when retained is forced nonzero by its own (L8) row.
-Pattern resultants may use either one guard per irreducible factor or one
-auditable product guard; the manifest must list the factors.  A scale or
-tower constant without a guard makes the emitted system invalid.
+The guard builder first creates a typed `RequiredNonzero` registry, then
+requires an exact registry-to-(L8) coverage audit. It includes:
 
-At a pole, Prop. 8.1 is replaced by the Prop. 5.3 pole Wronskian and the
-fixed pole degrees. The constructor receives the pole shape and emits its
-coefficient rows, squarefreeness, coprimality and nonzero Wronskian constant;
-it must not pretend that a pole has a reduced `q_v` belonging to an arbitrary
-terminal tower member.
+- every orbit value required away from zero, and every pairwise difference
+  among distinct `A,B,Q` orbit values required by the pattern;
+- the discriminant of the squarefree orbit radical and of `q`, plus each
+  theorem-required resultant or q-only evaluation;
+- every `C_v`, actual nonzero continuation, allocated full-pattern scale,
+  `tower_s[j]`, retained `gamma`, and variable exact-degree leading
+  coefficient; and
+- every pole/root open condition named by its `TopPatternCertificate`.
+
+Never guard `disc(p_v)` when (L5) prescribes repeated factors: it then
+vanishes on the intended family. Guard its squarefree radical/orbit factors
+instead. Default mode assigns one inverse and row to every required target;
+an optional product guard must preserve the factor-to-target ledger and is
+accepted only when the product is proved equivalent. A missing or extraneous
+guard is a build failure, not a solver option.
+
+At a pole, Prop. 8.1 is replaced by the Prop. 5.3 pole Wronskian and fixed
+pole degrees. Every live label at a pole or root is supplied by a typed
+
+```text
+TopPatternCertificate(vertex,label,source,degree,
+                      exact_factored_or_sparse_polynomial,
+                      leading_scale,required_nonzero,coefficient_oracle)
+```
+
+and is tied coefficientwise to `J0` or installed as its `TopOracle`. The pole
+constructor additionally receives the exact Prop. 5.3 `(p,q)` template,
+Wronskian normalization and degrees; it creates raw coefficient rows, then
+applies only the per-row primitive/sign normalization of section 2.3. The root constructor receives the exact top
+polynomial for every live `f,g,h_j` label, not only a numerical degree. A
+missing label returns `UNRESOLVED-TOP-PATTERN`. In particular, a pole must not
+be assigned a reduced `q_v` belonging to an arbitrary terminal tower member.
 
 ### 1.4 Numerical transport and degree synchronization
 
@@ -329,11 +401,25 @@ At a merge `L=G`, a nonzero case-I/II arrival `U` obeys BOOK R2.1
  n_e=\nu_U\bar\kappa_G-\bar\kappa_U\in\mathbb N^*.        \tag{H4}
 \]
 
+For the `mu_e=1` DEPTH handshake this specializes to the exact conserved
+arrival invariant
+
+\[
+ \bar\kappa_G-X_G=w_U,qquad
+ \bar\kappa_G={w_Ud_{q,G}\over d_{q,G}-d_{p,G}},\quad
+ X_G={w_Ud_{p,G}\over d_{q,G}-d_{p,G}},\quad
+ \rho_G={w_U\over d_{q,G}-d_{p,G}}.                       \tag{H4a}
+\]
+
+Thus every all-`mu=1` nonzero arrival at the same merge has the same `w`.
+This is `SHEET6-DEPTH.md:142-165,216-233`; it is a numerical handshake, not
+a coefficient identification.
+
 For a zero case-III arrival, do **not** emit BOOK's old mixed formula.
 With E5/H5a and `G` rootward, `U` poleward,
 
 \[
- D_G={\nu_GD_U+n_e\deg p^{\rm full}_{f,U}\over\nu_U},
+ d_{f,G}={\nu_Gd_{f,U}+n_e\deg p^{\rm full}_{f,U}\over\nu_U},
  \qquad
  \bar\kappa_G={\nu_G\bar\kappa_U+n_e\over\nu_U},         \tag{H5}
 \]
@@ -344,7 +430,8 @@ and hence
                  X_G=\mu_0(\bar\kappa_G-\nu_Gw_U).        \tag{H6}
 \]
 
-BOOK R2.1 and `px5.py` instead use `nu_U*w_U`. The formulas coincide only
+BOOK R2.1 and `cases/scratch_offaxis_pricing/px5.py` instead use
+`nu_U*w_U`. The formulas coincide only
 when `nu_G=nu_U`; section 2.2 applies this mandatory branch check.
 
 The coefficient layer additionally requires the St. 3.9/3.17/8.3 count
@@ -378,12 +465,29 @@ is recorded.
 
 ### 1.5 Exact chart and full-jet transport
 
-Fix one suitable common denominator `K` and put `z=x^(-1/K)`. For every
-global polynomial label `h`, write the top-down jet at `v` as
+Each elementary chart slot carries the suitable ramification `kappa_e` from
+Prop. 3.1/Statement 3.9. Define
+
+\[
+ K_0=\operatorname{lcm}\bigl(\{\kappa_e\}_e,
+   \{\operatorname{den}\pi_v\}_v,
+   \{\operatorname{den}d_{h,v}\}_{v,h}\bigr).             \tag{J0}
+\]
+
+The certificate supplies a common `K`, a positive multiple of `K0`, together
+with a Prop. 3.1 suitability witness for every chart; canonical mode chooses
+the least certified multiple. Merely clearing denominators is insufficient.
+Put `z=x^(-1/K)` and assert every `K*pi_v`, `Dint[v,h]=K*d_(h,v)`, edge
+offset and valuation drop below is integral. For an elementary slot set
+`delta_e=K/kappa_e`; its native coordinate is
+`zeta_e=x^(-1/kappa_e)=z^(delta_e)`.
+
+For every global polynomial label `h`, write the **formal, untruncated**
+top-down jet at `v` as
 
 \[
  h=x^{d_{h,v}}J_{v,h}(z,\eta_v),\qquad
- J_{v,h}=\sum_{r=0}^{B_{v,h}}z^rP_{v,h,r}(\eta_v),
+ J_{v,h}=\sum_{r\ge0}z^rP_{v,h,r}(\eta_v),
  \qquad P_{v,h,0}=p_{h,v},                                \tag{J1}
 \]
 
@@ -393,16 +497,39 @@ or by syntactic inlining. It is never an unasserted alias.
 For an elementary rootward-to-poleward step, St. 3.9 uses
 
 \[
-                  \eta_L=c_e+z\eta_U.                     \tag{J2}
+             \eta_L=c_e+z^{\delta_e}\eta_U
+                    =c_e+\zeta_e\eta_U.                   \tag{J2}
 \]
 
-For a composite edge of `N_e=K*(pi_U-pi_L)` elementary slots, retain all
+For a composite edge of `N_e=K*(pi_U-pi_L)` global `z`-grid units, retain all
 intermediate chart coefficients:
 
 \[
  \eta_L=C_e(z)+z^{N_e}\eta_U,\qquad
  C_e(z)=c_{e,0}+c_{e,1}z+\cdots+c_{e,N_e-1}z^{N_e-1}.      \tag{J3}
 \]
+
+In `EXPANDED_SLOTS` mode this polynomial is not independently guessed. If
+`slots_e=(s_0,...,s_(q-1))`, put
+
+\[
+ D_s=\sum_{u<s}\delta_u,\qquad
+ N_e=\sum_{s=0}^{q-1}\delta_s=K(\pi_U-\pi_L),\qquad
+ C_e(z)=\sum_{s=0}^{q-1}c_s z^{D_s},                      \tag{J3a}
+\]
+
+and certify every other common-grid coefficient zero. For every transported
+label,
+
+\[
+ r_{e,h}=\sum_s m_{s,h}\delta_s
+         =K(d_{h,L}-d_{h,U}).                              \tag{J3b}
+\]
+
+The composer checks every per-slot relation in (F2b), endpoint/level
+matching, every elementary top witness, (J3a), (J3b), and the final `J_U`
+owner before granting
+`TransportAuthority=EXPANDED_SLOTS`.
 
 Setting an on-grid coefficient to zero is legal only when the route proves
 it absent. The integer offset is checked from Prop. 9.3:
@@ -432,91 +559,150 @@ The exact coordinate identity is
 \]
 
 For one elementary step, St. 3.9 proves
-`r_(e,h)=m_(e,h)`, where
+`r_(e,h)=m_(e,h)*delta_e`, where
 `m_(e,h)=mult(P_(L,h,0),c_(e,0))=deg P_(U,h,0)`. For a
 composite edge, `r_(e,h)=m_(e,h)N_e` may be asserted only for `f-a` under
 St. 3.17, or for a common live tower label under St. 8.3(ii), with the
 applicable hypotheses stored in the certificate. Otherwise materialize the
 elementary slots and obtain `r_(e,h)` as the sum of their elementary
-multiplicity drops. A `TransportAuthority` enum
+valuation drops `sum_s m_(s,h)*delta_s`. A `TransportAuthority` enum
 `ELEMENTARY | ST3.17_F | ST8.3_LIVE | EXPANDED_SLOTS` is mandatory for each
 emitted `(e,h)` block; `NONE` fails closed.
 
-At one elementary step, (J6) includes the divisibility
-conditions
+The identity (J6) is the exact change of coordinates between expansions of
+the same global `h`; it is not a claim that St. 3.9 directly supplies every
+subleading row. Once that common-object identity and the elementary chart are
+licensed, coefficient comparison gives the low-slot divisibility conditions
 
 \[
- P_{L,h,r-j}^{(j)}(c_e)=0
-       \quad(0\le r<m_{e,h},\ 0\le j\le r),               \tag{J7}
+ P_{L,h,s-j\delta_e}^{(j)}(c_e)=0
+ \quad\left(0\le s<r_{e,h},\ 0\le j\le
+       \left\lfloor{s\over\delta_e}\right\rfloor\right), \tag{J7}
 \]
 
 and the deep rows
 
 \[
- P_{U,h,s}(\eta)=
- \sum_{j=0}^{m_{e,h}+s}{P_{L,h,m_{e,h}+s-j}^{(j)}(c_e)\over j!}\eta^j.
+ P_{U,h,t}(\eta)=
+ \sum_{j=0}^{\lfloor(r_{e,h}+t)/\delta_e\rfloor}
+ {P_{L,h,r_{e,h}+t-j\delta_e}^{(j)}(c_e)\over j!}\eta^j.
                                                                     \tag{J8}
 \]
 
 Thus the leading coefficient of `P_U,0` is the `m`-th Taylor coefficient
 of `P_L,0`, but its lower coefficients come from lower shallow jet rows.
 This is exactly why equating reduced local `A_v` values is unsound.
-Factorials in (J8) are cleared row by row before emission. For a child window
-`B_U`, a necessary shallow window is at least
+Factorials in (J8) are cleared row by row before emission and entered in the
+prime-exclusion ledger.
+
+A finite emitter never replaces (J1) by a truncated series. Instead every
+`JetWindow` stores
 
 \[
-                         B_L\ge r_{e,h}+B_U.                \tag{J9}
+ \mathcal W_{v,h}=(\mathsf{Allocated}_{v,h},
+   \mathsf{CertifiedZero}_{v,h},\mathsf{TopOracle}_{v,h}), \qquad
+ \Omega_B\subset\mathbb Z\times\mathbb N,                \tag{J9}
 \]
 
-The manifest records whether the chosen windows satisfy every recurrence
-needed by the requested theorem. A partial window is labelled `PREFIX`; it
-is never labelled `FULL-ROUTE`.
+for each equation block `B`. `Allocated` is the exact finite set of
+subleading coefficient indices `(r,a)` for variables
+`[z^r eta^a]J_(v,h)`; `CertifiedZero` contains only indices ruled out by a
+recorded degree/support theorem; `TopOracle` returns exact coefficients of
+the factored or sparse row zero; and `Omega_B` is the exact set of output
+`(z,eta)` coefficients to emit. For every `omega in Omega_B`, the IR computes
+the full dependency set `Dep_B(omega)`. Each dependency must be an allocated
+variable, a row-zero oracle value, or a certified zero. An unknown omitted
+coefficient produces `UNRESOLVED-WINDOW`; it is never substituted by zero.
+The block emits
+
+\[
+ \{[z^s\eta^a](\text{full identity})=0:
+                         (s,a)\in\Omega_B\}.              \tag{J10}
+\]
+
+This rule applies equally to (J6), (T2), (F1a), (F1b) and (R6), including every
+product convolution and derivative shift. A simple sufficient recurrence
+bound for an elementary child band `0<=t<=B_U` is
+`B_L>=r_(e,h)+B_U`, but the dependency audit—not that scalar bound—is the
+acceptance condition.
+
+Default `INLINE-J0` allocates no dense row-zero coefficient variables:
+(L1) and certified pole/root top polynomials form `TopOracle`, which expands
+only coefficients requested by a dependency set. Its emitted result is still
+an expanded polynomial; factor syntax never reaches msolve. Optional
+`DENSE-J0` allocates and counts every row-zero coefficient and emits (L1a).
+For the pilot's degree 203490, pretending dense row zero costs nothing would
+under-count by at least 203491 coefficients at one vertex alone.
+
+The manifest records every support, projection and dependency hash. A
+partial projection is labelled `PREFIX`. `FULL-ROUTE` requires dependency
+closure for every finite cancellation, tower and terminal band demanded by
+the certificate; it never means that an unknown formal tail was set to zero.
 
 ### 1.6 Tower identities and common global objects
 
-The certificate carries `tower_side in {PLUS,MINUS}` and a base polynomial
-`b_j`. Prop. 4.2 on `T_a^+` uses `b_j=f`; Prop. 4.3 on `T_a^-` uses
-`b_j=f-a`:
+The certificate carries `tower_side in {PLUS,MINUS}`, the initial label and a
+base polynomial `base_j`. Prop. 4.2 on `T_a^+` starts at `g` and uses `f`;
+Prop. 4.3 on `T_a^-` starts at `g-b` and uses `f-a`:
 
 \[
- h_0=g,\qquad h_{j+1}=h_j^{k_j}-s_jb_j^{l_j},\qquad
- b_j=\begin{cases}f,&T_a^+,\\ f-a,&T_a^- .\end{cases}     \tag{T1}
+ h_0=\begin{cases}g,&T_a^+,\\ g-b,&T_a^-,\end{cases}
+ \quad h_{j+1}=h_j^{k_j}-\sigma_j\operatorname{base}_j^{l_j},
+ \quad \operatorname{base}_j=
+ \begin{cases}f,&T_a^+,\\ f-a,&T_a^- .\end{cases}       \tag{T1}
 \]
 
-In the default fiber-zero gauge of section 1.1 these two displayed bases
-have the same coefficient array, but the source-side tag is still retained:
-it controls which proposition licenses the tower and prevents accidental
-reuse across another fiber. In ungauged mode the emitter allocates both
-labels, enforces (F1a), and selects the base literally from (T1).
+In the default fiber-zero gauge of section 1.1, a MINUS tower translates both
+constants first and is then represented with `h0=g,base=f`; the source-side
+tag is still retained because it licenses a different proposition. In
+ungauged mode the emitter allocates `fbar,gbar`, enforces (F1a)-(F1b), and
+selects both `h0` and `base` literally from (T1).
 
-Let `D[v,h]=K*d[h,v]` and
-`E=max(D[v,h[j+1]],k_j*D[v,h[j]],l_j*D[v,b_j])`. The normalized jet
+Prop. 4.3 also requires its condition (7): the chosen
+`(g-b)^+_F` is not constant. Every MINUS authority therefore carries a
+`TopPatternCertificate` at the licensing vertex proving
+
+\[
+ Dint[F,\mathrm{gbar}]\ne0
+ \quad\text{or}\quad \deg_\eta p_{\mathrm{gbar},F}>0.     \tag{T0}
+\]
+
+Indeed `(g-b)^+_F=xi^(d_(gbar,F))*p_(gbar,F)(eta)`; only
+`Dint=0` **and** eta-degree zero is constant. Translation/rescaling preserves
+this property. A constant or missing top returns `UNRESOLVED-PROP4.3` and no
+(T2) rows.
+
+Let `Dint[v,h]=K*d[h,v]` and
+`E=max(Dint[v,h[j+1]],k_j*Dint[v,h[j]],l_j*Dint[v,base[j]])`. The normalized jet
 equation at each vertex is
 
 \[
- z^{E-D_{j+1}}J_{v,h_{j+1}}
- -z^{E-k_jD_j}J_{v,h_j}^{k_j}
- +s_jz^{E-l_jD_b}J_{v,b_j}^{l_j}=0.                       \tag{T2}
+ z^{E-Dint[v,h_{j+1}]}J_{v,h_{j+1}}
+ -z^{E-k_jDint[v,h_j]}J_{v,h_j}^{k_j}
+ +\sigma_jz^{E-l_jDint[v,base[j]]}J_{v,base[j]}^{l_j}=0.  \tag{T2}
 \]
 
-Every coefficient through the declared window is emitted. The same global
-`s_j` is used at every vertex. A local terminal `q_v` is attached only to
+Only the dependency-closed projection `Omega_T2` from (J9)-(J10) is emitted.
+The same global `sigma_j` (serialized `tower_s[j]`) is used at every vertex. A local terminal `q_v` is attached only to
 the global label `h_{m_v}` justified by the certificate through (L1); the
 terminal member may change with `v`. `SIGRAY-AUDIT.md:54` records a GAP in
 Prop. 4.2 for a constant leading part. A route encountering that situation
 must stop as `UNRESOLVED-PROP4.2`; it may not invent `l_j>0`.
 The `f-a` substitution is legal on a `PLUS` tower only after recording and
-testing the global shift gauge `a=0`. Confusing the two bases changes
+testing the global shift gauge `a_fiber=0`. Confusing the two bases changes
 subleading bands and can produce a false kill; this exact bug is documented
 at `SHEET6-LT-REVIEW.md:301-317`.
 
-In `GLOBAL-CLOSED` mode, global coefficient arrays `F[a,b]`, `G[a,b]` are
-shared by every chart. Expanding those same arrays in every `(x,eta_v)` chart
-must reproduce `J[v,f]`, `J[v,g]`. This is the strongest way to prevent
-different branches from describing unrelated formal polynomials. A lighter
-`FULL-ROUTE` mode shares jets and tower labels on the certified route and is
-a necessary obstruction system, but its nonemptiness does not prove global
-polynomiality.
+`GLOBAL-CLOSED` additionally requires a `GlobalSupportCertificate` containing
+finite monomial supports for `f,g`, exact degree/leading conditions, one
+coefficient variable per support element, and a dependency-closed chart
+projection equating the expansion of those same arrays to every route jet.
+This is the strongest way to prevent different branches from describing
+unrelated formal polynomials. The repository supplies no such finite support
+certificate, so `GLOBAL-CLOSED` is **UNIMPLEMENTED in v1** and must fail
+closed rather than infer a Newton rectangle. A lighter `FULL-ROUTE` mode
+shares jets and tower labels on the certified route and is a necessary
+obstruction system, but its nonemptiness does not prove global polynomiality.
 
 ### 1.7 Terminal and Jacobian closure
 
@@ -528,7 +714,7 @@ For the last y-side vertex `G`, BOOK P1 (`BOOK-OFFAXIS.md:486-500`) gives
 \]
 
 \[
- R={1\over1-w_G},\qquad
+ R_{\rm term}={1\over1-w_G},\qquad
  \psi=\left\lceil{1\over1-w_G}\right\rceil-1,
  \qquad\sum_F\lambda_F\le td-1-\psi,                     \tag{R2}
 \]
@@ -561,8 +747,11 @@ patterns demanded by (R5).
 
 Finally impose the Keller identity on the shared `f,g` jets. The thesis
 normalization is `J_(x,y)(f,g)=gamma` with `gamma in C*`. The default applies
-the lossless target rescaling `g -> gamma^(-1)g` and sets `gamma=1`; ungauged
-mode retains `gamma` and saturates it. Since `eta=x^pi(y-tail)` and
+the lossless target rescaling `g -> gamma^(-1)g` after the applicable
+f/g-fiber translations and sets `gamma=1`; ungauged mode retains `gamma` and
+saturates it. Perform this
+choice once before tower labels/top certificates are created and transform
+their scales consistently. Since `eta=x^pi(y-tail)` and
 `z=x^(-1/K)`, one has
 
 \[
@@ -572,7 +761,8 @@ mode retains `gamma` and saturates it. Since `eta=x^pi(y-tail)` and
 Write the **full Laurent functions**, not just their normalized jets, as
 
 \[
- f=z^{-D_f}J_f(z,\eta),\qquad g=z^{-D_g}J_g(z,\eta).
+ f=z^{-Dint_f}J_f(z,\eta),\qquad
+ g=z^{-Dint_g}J_g(z,\eta),
 \]
 
 Then, in a fixed chart orientation,
@@ -580,19 +770,21 @@ Then, in a fixed chart orientation,
 \[
 \begin{split}
  &z^{K+1}(J_{f,\eta}J_{g,z}-J_{f,z}J_{g,\eta})\\
- &\quad+z^K(D_fJ_fJ_{g,\eta}-D_gJ_{f,\eta}J_g)
-       -K\gamma z^{K\pi+D_f+D_g}=0 .                     \tag{R6}
+ &\quad+z^K(Dint_fJ_fJ_{g,\eta}-Dint_gJ_{f,\eta}J_g)
+       -K\gamma z^{K\pi+Dint_f+Dint_g}=0 .                \tag{R6}
 \end{split}
 \]
 
 The second line contains the prefactor-derivative terms and may not be
 dropped. Clear any remaining Laurent power and emit all coefficients in the
 certified window. Before expansion assert
-`D_f,D_g,K*pi in Z`; if `K*pi+D_f+D_g` or a shifted row exponent is negative,
+`Dint_f,Dint_g,K*pi in Z`; if `K*pi+Dint_f+Dint_g` or a shifted row exponent is negative,
 clearing means a formal coefficient-index shift—`z` is bookkeeping, not an
 msolve variable. Window propagation must include both derivatives and both
 prefactor shifts. The sign, target rescaling, and chart orientation receive a
-planted `J=1` unit test. If the route has no x-side/root tower data, the
+planted `f=x,g=y,eta=x^pi*y` unit test: then
+`(Dint_f,Dint_g,J_f,J_g)=(K,-K*pi,1,eta)` and (R6) reduces to
+`K*z^K-K*z^K=0`. If the route has no x-side/root tower data, the
 emitter stops at `LEAD-PILOT` or `PREFIX`; it must not silently call P1 alone
 a closed coefficient system.
 
@@ -631,7 +823,7 @@ This table is exactly `xmodel/sol-td7-law.md:264-283` and
 `xmodel/td7-law-engine-check.md:99-108`. It is a regression registry, not a
 six-route gluing certificate.
 
-### 2.2 Mandatory E5 preflight: four recorded arrival/cell data fail
+### 2.2 Mandatory E5 preflight: four conditional legacy rejections
 
 The nonzero chain-1 arrival has `mu=1,w=2`, so (H4) gives
 
@@ -660,31 +852,34 @@ The complete check is:
 |---|---:|---|---:|---|---:|---|
 | `(9,15,7,3)` | 2 | `(1/2,7)` | 7 | `(5,3)` | 5 | PASS |
 | `(10,15,7,5)` | 3 | `(2/3,7)` | 7 | `(6,4)` | 6 | PASS |
-| `(15,25,8,5)` | 7 | `(2/21,48)` | 8 | `(5,3)` | `5/9` | **REJECT** |
-| `(15,25,12,5)` | 3 | `(1/2,8)` | 12 | `(5,3)` | 8 | **REJECT** |
-| `(18,27,13,9)` | 5 | `(2/15,39)` | 13 | `(6,4)` | `5/3` | **REJECT** |
-| `(39,65,32,13)` | 7 | `(2/21,48)` | 32 | `(5,3)` | `29/9` | **REJECT** |
+| `(15,25,8,5)` | 7 | `(2/21,48)` | 8 | `(5,3)` | `5/9` | **CONDITIONAL-REJECT (H5a)** |
+| `(15,25,12,5)` | 3 | `(1/2,8)` | 12 | `(5,3)` | 8 | **CONDITIONAL-REJECT (H5a)** |
+| `(18,27,13,9)` | 5 | `(2/15,39)` | 13 | `(6,4)` | `5/3` | **CONDITIONAL-REJECT (H5a)** |
+| `(39,65,32,13)` | 7 | `(2/21,48)` | 32 | `(5,3)` | `29/9` | **CONDITIONAL-REJECT (H5a)** |
 
 This is a proved algebraic contradiction conditional on `CONJECTURE H5a` and
 the promoted E5 correction. Under the other coherent reading—printed (g),(h)
 together with the definitions—the printed formulas force `nu_G=nu_U`, so
-the same four records are rejected. Only the old mixed engine reading keeps
+the same four records are conditionally rejected under the selected coherent
+reading. Only the old mixed engine reading keeps
 `nu_U` free while using the printed denominator; that mixture corresponds to
 neither Notation 3.5 value (`SHEET6-HIII-REVIEW.md:107-128`).
 
-Default implementation policy:
+Default implementation policy, conditional on `CONJECTURE H5a`/the selected
+coherent case-III reading:
 
-- write a rejection manifest containing (I3)-(I5) for these four legacy
+- write a `CONDITIONAL-REJECT` manifest containing (I3)-(I5) for these four legacy
   arrival/cell records;
 - emit no msolve job for them;
 - retain a `--legacy-mixed-iii` diagnostic mode only for reproducing the old
   route book, with `UNSOUND-FOR-VERDICT` stamped into every artifact.
 
-Filtering the **legacy mixed-reading records** through this gate leaves 49
+Conditionally filtering the **legacy mixed-reading records** through this
+gate leaves 49
 deduplicated records, 31 at budget equality, or 51 raw records, 33 at
 equality. These belong to the two passing legacy cells and are still not
 concrete-route counts. They are not a complete E5-corrected book: E5 changes
-the class-C construction itself, so a fresh coherent enumeration could add
+the case-III class-B/class-C construction itself, so a fresh coherent enumeration could add
 different cells or routes. The complete corrected census is **UNKNOWN**.
 
 The corrected enumerator must not replace the old `nu` cap by a new guessed
@@ -811,9 +1006,10 @@ and
 \]
 
 The loss occurs because `close_with_cells` retains only a minimum cost and
-small arrival set (`px5.py:63-87`), `trunk_routes` retains only
-`(cost,psi,w,M)` (`:98-112`), and the final key ignores the current `M2`
-(`:254-262`). In addition, `px2.py:66-76` omits the free `nu` from pure-b
+small arrival set (`cases/scratch_offaxis_pricing/px5.py:63-87`),
+`trunk_routes` retains only `(cost,psi,w,M)` (`:98-112`), and the final key
+ignores the current `M2` (`:254-262`). In addition,
+`cases/scratch_offaxis_pricing/px2.py:66-76` omits the free `nu` from pure-b
 tags and `:111-125` omits the NE multiplicity partition from dirty tags.
 
 No pair among the 35 equality records is presently proved to share a
@@ -828,40 +1024,99 @@ coefficient system. A tie-broken tag replay gives four **provisional**
 multiplicity partitions, tower labels, chart coefficients and full-degree
 data also agree, (I8) will reduce the 35 equality summaries to 31 systems.
 This is not a permitted implementation dedup. The only permitted dedup key
-is a canonical hash of the fully assembled polynomial IR after alpha-renaming
-and after a proved global gauge quotient.
+is normalized-IR equality, never inferred ideal equivalence. Canonicalization
+is exact and deterministic:
+
+1. alpha-rename variables from the lexicographically ordered typed-owner
+   records;
+2. expand and combine monomials in the fixed emitted variable/monomial order;
+3. per row, clear by the positive LCM of denominators, divide by integer
+   content, and choose the sign so the first nonzero coefficient is positive;
+4. serialize sorted monomials, sort the resulting polynomial multiset, and
+   hash both it and the owner/schema manifest.
+
+Gauge quotienting is `OFF` by default. If enabled, the certificate names a
+proved global action, its nonzero determinant hypotheses, guarded pivot,
+normalization equations and inverse map; otherwise the ungauged IR is hashed.
 
 ### 2.4 Stage-0 route expansion and infinite provenance families
 
-For each completion record, instantiation proceeds in this order.
+There are two deliberately different graph products.
 
-1. Re-run the transition graph while retaining all finite nonparametric
-   equal-cost predecessors in the cycle-quotiented nonidentity DAG, the exact
-   step cell, `nu,epsilon,l,k,(m_j),ell_ex`, edge `n`, arrival type, current
-   `M`, and terminal path. Represent identity self-loops, neutral-padding
-   families, and free-characteristic pure-b transitions symbolically; do not
-   unfold any of them to an artificial cap.
-2. Apply the coherent Prop. 9.3 case classification and E5 preflight before
-   selecting local coefficients.
-3. Apply (H7)-(H8) to `f-a` and to each common live label for which St. 8.3
+- `LEGACY-REPLAY` retains every predecessor attaining the filed minimum cost
+  and reproduces the 53/59 summaries. It is a regression mode, not theorem
+  coverage.
+- `COVERAGE` retains every budget-feasible positive-cost stratum, keyed at
+  least by `(w,M,spent)` plus full discrete provenance, for every
+  `spent<=6-psi`, and every finite zero-cost clean-resonant predecessor.
+  The td-7 budget makes charged depth finite. Zero-cost SCCs, neutral padding
+  and free-characteristic families remain symbolic.
+
+The distinction is essential for the 18 slack `(10,15)` records: a dearer
+predecessor can still fit the terminal budget and produce a different
+coefficient system. Dijkstra minima suffice only where a proved equality
+sandwich excludes extra charge.
+
+For each branch, instantiation proceeds in this order.
+
+1. Re-run the appropriate graph mode, retaining the exact step cell,
+   `nu,epsilon,l,k,(m_j),ell_ex`, edge `n`, arrival type, current `M`, spent
+   charge and terminal path. An arrival is a coupled object
+   `(nu_U,M_U,spent,path_id)`; never join a set of arrival characteristics to
+   an unrelated scalar `dist[(w,M)]`. The latter under-pricing bug occurs in
+   `cases/scratch_offaxis_pricing/px5.py:81-84,230-250`.
+2. Represent identity self-loops, neutral-padding families, and
+   free-characteristic pure-b transitions symbolically; do not unfold any of
+   them to an artificial cap. A specialization fixes all discrete parameters
+   and yields one finite `RouteCertificate`.
+3. Apply the coherent Prop. 9.3 case classification and E5 preflight before
+   selecting local coefficients. Store `lambda_lb` and its authority; store
+   `lambda_exact` only when proved. A slack allocation or additional cv
+   inventory not fixed by the branch returns `UNRESOLVED-BUDGET-INVENTORY`
+   for a full completion claim, although an explicitly independent necessary
+   prefix may still be emitted with that scope.
+4. Apply (H7)-(H8) to `f-a` and to each common live label for which St. 8.3
    applies. Attach a `TransportAuthority` to every `(edge,label)` block;
    expand into elementary slots or fail closed for any other requested label.
    Attach an exact integer `i_v` at every vertex.
-4. Expand every zero-cost neutral step which is needed for degree
-   synchronization. Record its actual characteristic and pattern; a
-   state-level `neutral-drop` tag is insufficient.
-5. Attach the complete tower labels and cancellation levels. If they cannot
-   be deduced from promoted statements, return `UNRESOLVED-TOWER`.
-6. Choose common `K`, compute every integer slot offset `N_e`, and retain the
-   entire chart polynomial (J3).
-7. Assemble local, transport, tower, terminal and guard rows. Only now
+5. Expand every zero-cost neutral step needed for degree synchronization.
+   Record its actual characteristic and pattern; a state-level
+   `neutral-drop` tag is insufficient.
+6. Attach complete tower labels, top-pattern certificates, cancellation
+   levels and `JetWindow` projections. If they cannot be deduced from
+   promoted statements, return `UNRESOLVED-TOWER` or `UNRESOLVED-WINDOW`.
+7. Choose and certify common `K` by (J0), compute every `delta_e,N_e,r_eh`,
+   and retain the entire chart polynomial (J3).
+8. Assemble local, transport, tower, terminal and guard rows. Only now
    canonicalize and hash.
+
+Production coverage may not inherit the exploratory caps
+`k in range(0,7)` or `ell_ex in range(0,41)` from
+`cases/scratch_offaxis_pricing/px2.py:82-88`, `NCAP=400` from
+`cases/scratch_offaxis_pricing/px5.py`, or
+`PCAP_STATES=4000`, numerator `10^4`, and `M>200` cutoffs from
+`cases/book_offaxis.py:598-621`. Legacy replay may retain them only to match a
+filed fixture. Coverage must instead record the budget proof bounding charged
+NE orbits, the P0 Diophantine stopping inequality
+`2*C_shape<=l*num(w)*T` (source `C`) for `ell_ex`, and the closed tail
+inversion. A boundary cap
+or OPEN-superset diagnostic is never a completeness certificate.
+
+The uncharged clean part has its own termination proof. For an R1.2 clean
+resonant edge with `n>=2`,
+`Delta=(n-1)*nu+1`, `nu>=2`, so `n<Delta`; integrality gives
+`Delta|num(w)`, and the numerator of
+`w'=w*n/Delta` strictly decreases even before final fraction reduction. The
+`n=1` clean/neutral case fixes `w` and belongs to the symbolic SCC/M-divisor
+family. Thus charged budget, strict numerator descent, dirty Diophantine
+stopping and symbolic neutral/pure-b families are separate required
+termination certificates.
 
 There are two independent finiteness boundaries. Zero-cost neutral vertices
 can be inserted without changing `(w,M,lambda)`, while multiplying full
 pattern degrees. In addition, a positive-cost pure-b transition can have free,
 unbounded characteristic while retaining the same visible state and price;
-`px2.py:66-76` omits that `nu` from its tag. The certified `(9,15)` endpoint
+`cases/scratch_offaxis_pricing/px2.py:66-76` omits that `nu` from its tag. The certified `(9,15)` endpoint
 already represents such a family: `F3` with `nu=5` is one explicit
 representative, not a universal pin (`xmodel/sol-sixcells.md:320-324`).
 If both branches are padded, a single endpoint summary can also represent
@@ -893,11 +1148,11 @@ auditable guards add more.
 | cell | E5 default fate | exact factored merge-local vars/eqs | naive unnormalized dense-eta local vars/eqs | route-level information currently justified |
 |---|---|---:|---:|---|
 | `(9,15,7,3)@2` | emit | `3/2` | `27/23` | direct synchronized `LEAD-PILOT`: **83/74**, section 3; full jets TBD |
-| `(10,15,7,5)@3` | emit | `3/2` | `28/24` | full paths TBD; one equality suffix has a dense local-only subtotal about `2610/2590` |
-| `(15,25,8,5)@7` | reject | `4/3` | `43/39` | no default solver system |
-| `(15,25,12,5)@3` | reject | `3/2` | `43/39` | no default solver system |
-| `(18,27,13,9)@5` | reject | `3/2` | `48/44` | no default solver system; dedup branches differ as (I6)-(I7) |
-| `(39,65,32,13)@7` | reject | `3/2` | `107/103` | no default solver system; legacy representative dense local-only subtotal about `2149/2125` |
+| `(10,15,7,5)@3` | emit | `3/2` | `28/24` | full paths TBD; one equality suffix has the exact dense local-only subtotal `2610/2590` |
+| `(15,25,8,5)@7` | conditional reject (H5a) | `4/3` | `43/39` | no default solver system under coherent-III policy |
+| `(15,25,12,5)@3` | conditional reject (H5a) | `3/2` | `43/39` | no default solver system under coherent-III policy |
+| `(18,27,13,9)@5` | conditional reject (H5a) | `3/2` | `48/44` | no default solver system; dedup branches differ as (I6)-(I7) |
+| `(39,65,32,13)@7` | conditional reject (H5a) | `3/2` | `107/103` | no default solver system; legacy representative exact dense local-only subtotal `2149/2125` |
 
 The dense diagnostic counts use all coefficients of unnormalized `p,q` plus
 `C`; their equation counts omit the identically zero top Wronskian row. They
@@ -909,26 +1164,36 @@ parametrizations. A representative legacy path to `(39,65)` is
  \to(1008,49)\to(39,65),                                  \tag{I9}
 \]
 
-already giving the stated `2149/2125` local-only subtotal. A `(10,15)` route
-through `(279,63),(425,51),(1617,99)` is larger, so `(39,65)` is not uniquely
+giving the exact diagnostic sum
+`39/35+157/153+69/65+717/713+1060/1056+107/103=2149/2125`.
+The `(10,15)` representative
+`(21,15)->(10,15)->(279,63)->(425,51)->(1617,99)` gives
+`39/35+28/24+345/341+479/475+1719/1715=2610/2590`, so `(39,65)` is not uniquely
 the biggest once route vertices are counted. It is nevertheless the largest
-single merge-local dense pattern, and its default fate is now an inexpensive
-E5 rejection rather than a giant solver lane.
+single merge-local dense pattern, and its conditional default fate is now an
+inexpensive E5 preflight rejection rather than a giant solver lane.
 
 For a decorated route, the emitter computes rather than estimates
 
 \[
- N_{\rm jet}=\sum_{v,h}\sum_{r=1}^{B_{v,h}}
-                 (1+\deg P_{v,h,r}),                       \tag{I10}
+ N_{\rm jet}^{\rm inline}
+   =\sum_{v,h}|\mathsf{Allocated}_{v,h}|,
+ \qquad
+ N_{\rm jet}^{\rm dense}
+   =\sum_{v,h}|\mathsf{Allocated}_{v,h}|
+      +\sum_{v,h}(1+\deg P_{v,h,0}).                       \tag{I10}
 \]
 
-plus local, chart, tower, global and inverse variables. The transport-row
-count is the number of `(z,eta)` coefficients in (J6), including the low-slot
-divisibility rows (J7); tower and Jacobian counts are computed similarly from
-(T2) and (R6). The dry-run manifest must print every summand of these counts.
+The first count is default `INLINE-J0`; the second is `DENSE-J0`. Both add
+local, chart, tower, global and inverse variables. Equation counts are
+`|Omega_B|` after removing independently proved zero IR rows, with every
+block projection and dependency count printed. The dry-run manifest also
+prints the expanded term/byte cost of each row-zero oracle result; inlining
+does not make that work free.
 
-`CONJECTURE (engineering size only).` The first useful characteristic window
-will have roughly 100-300 active series coefficients and `10^3-10^4` sparse
+`CONJECTURE (engineering size only).` Under `INLINE-J0`, the first useful
+subleading projection may have roughly 100-300 allocated series coefficients
+and `10^3-10^4` sparse
 transport/Jacobian rows, as estimated in `xmodel/sol-avenues2.md:282`.
 Full-route systems can be much larger, especially after exact `i`-sync. This
 estimate is not a theorem, a cap, or a per-cell certified count.
@@ -951,6 +1216,11 @@ source-certified `LEAD-PILOT`:
 - leading St. 3.9 Taylor transport on every edge; and
 - the numerical case-IV terminal closure.
 
+The root direction `c0` does not occur in this leading projection: the
+Taylor coefficient of `S_r*(eta-c0)^203490` at its own root is `S_r`.
+Accordingly it is omitted, not normalized; the full root chart must allocate
+it and its subleading dependencies.
+
 Emptiness would kill this concrete route. Nonemptiness is only a leading-
 pattern survival. Section 3.7 states the exact missing rows before the
 implementation may promote it to `FULL-ROUTE`.
@@ -966,6 +1236,11 @@ chain-1 pole-to-merge edge. Add one zero-cost clean neutral chain-1 vertex
  p_N=\eta^{11305}-A_N,\quad
  q_N=\eta(\eta^{11305}-A_N).                              \tag{P1}
 \]
+
+“Direct completion” here means the `(w,M,psi)=(2/3,3,2)` terminal is attached
+at `G` with no trunk suffix. The neutral `N` lies on an incoming chain and is
+the explicit finite synchronization representative; it does not change that
+terminal classification.
 
 From the chain-1 pole frame `(rho,kbar,nu;w,M)=(1,5,2;2,1)`, R1.2 with
 `Delta=1` gives
@@ -994,7 +1269,7 @@ orientation of section 1, and the local cells are from
 `xmodel/sol-sixcells.md:86-100`. The whole tree is
 
 ```text
-R
+R0
 |
 G
 +-- N  -- P1
@@ -1005,7 +1280,7 @@ The full `f` degree ledger is:
 
 | vertex | reduced `(d_p,d_q,nu)` | `i_v` | full `f` degree | continuation multiplicity (reduced except at the root) |
 |---|---|---:|---:|---:|
-| `R` | root pattern | — | 203490 | 203490 at `c0` |
+| `R0` | root pattern | — | 203490 | 203490 at `c0` |
 | `G` | `(9,15,7)` | 22610 | 203490 | 1 toward `N`; 2 at zero toward `H2` |
 | `N` | `(11305,11306,11305)` | 2 | 22610 | 1 toward `P1` |
 | `P1` | pole full degrees `(2,3)` | — | 2 | — |
@@ -1017,7 +1292,7 @@ The full `f` degree ledger is:
 
 Every row satisfies (H8), e.g. `22610*2=45220` at the zero branch and
 `170*7=1190` at `F3`. The case-III edge `G -> H2` has E5 raw `n=7`
-(the `n'=1` used in `sol-sixcells.md` is `n/nu_G`); here
+(the `n'=1` used in `xmodel/sol-sixcells.md` is `n/nu_G`); here
 `nu_G=nu_H=7`, so E5 and BOOK coincide.
 
 At the direct terminal,
@@ -1028,7 +1303,7 @@ At the direct terminal,
  k_f=203490,\quad l_f=(1-w_G)k_f=67830,                   \tag{P5}
 \]
 
-and `R=3,psi=2`. The charged chain-2 cost is 4, exactly the P1 budget
+and `R_term=3,psi=2`. The charged chain-2 cost is 4, exactly the P1 budget
 `6-psi=4`.
 
 ### 3.3 Local patterns and coefficient rows
@@ -1038,14 +1313,14 @@ The pilot variable `C_v` is the normalized constant in (L2). Put
 
 | vertex | `p`, `q` | emitted local rows |
 |---|---|---|
-| `P1` | `p=eta^2-A_p1`, `q=eta*(eta^2-B_p1)` | `2*B_p1-3*A_p1=0`; `C_p1-3*A_p1^2=0` |
+| `P1` | `p=eta^2-A_p1`, `q=eta*(eta^2-B_p1)` | `2*B_p1-3*A_p1=0`; `2*A_p1*B_p1-C_p1=0` |
 | `N` | `p=t-A_n`, `q=eta*(t-A_n)`, `nu=11305` | `11306*C_n+11305*A_n=0` |
 | `G` | `p=eta^2*(t-A_g)`, `q=eta*(t-A_g)*(t-B_g)`, `nu=7` | `-14*A_g+21*B_g=0`; `-7*A_g*B_g-5*C_g=0` |
 | `H2` | `p=(t-A_h)^2`, `q=eta*(t-A_h)`, `nu=7` | `4*C_h+7*A_h=0` |
 | `F3` | `p=eta^3*(t-A_f3)^7`, `q=eta*(t-A_f3)`, `nu=5` | `3*C_f3+10*A_f3=0` |
 | `F2` | `p=(t-A_f2)^4*(t-B_f2)^3`, `q=eta*(t-A_f2)*(t-B_f2)`, `nu=17` | `2*B_f2-3*A_f2=0`; `10*C_f2-51*A_f2^2=0` |
 | `F1` | `R1(t)=t^2-Sig_f1*t+Pi_f1`; `p=(t-A_f1)^2*R1(t)`, `q=eta*(t-A_f1)*R1(t)`, `nu=5` | `Sig_f1-3*A_f1=0`; `Pi_f1-3*A_f1^2=0`; `4*C_f1+15*A_f1^3=0` |
-| `P2` | `p=eta^4-A_p2*eta`; `q=eta^6+U_p2*eta^3+V_p2` | `2*U_p2+3*A_p2=0`; `8*V_p2-3*A_p2^2=0`; `8*C_p2-9*A_p2^3=0` |
+| `P2` | `p=eta^4-A_p2*eta`; `q=eta^6+U_p2*eta^3+V_p2` | `2*U_p2+3*A_p2=0`; `A_p2*U_p2+4*V_p2=0`; `3*A_p2*V_p2-C_p2=0` |
 
 The five non-pole chain rows and merge row are the exact substitutions
 certified in `xmodel/sol-sixcells.md:145-174`. The neutral row follows from
@@ -1055,7 +1330,9 @@ certified in `xmodel/sol-sixcells.md:145-174`. The neutral row follows from
  2pq'-3p'q=C_{P1},                                        \tag{P6}
 \]
 
-and the displayed two rows are its coefficients. For the `(a,b,nu)=(1,2,3)`
+Its raw coefficient rows are `4*B_p1-6*A_p1` and
+`2*A_p1*B_p1-C_p1`; the displayed rows are their primitive, sign-normalized
+canonical IR. For the `(a,b,nu)=(1,2,3)`
 pole, the same Prop. 5.3 Wronskian with full degrees `(4,6)` gives the exact
 new derivation
 
@@ -1064,7 +1341,11 @@ new derivation
  2pq'-3p'q=C_{P2},                                        \tag{P7}
 \]
 
-whose coefficients are precisely the three `P2` rows. Direct expansion
+whose raw coefficient rows are
+`-6*U_p2-9*A_p2`, `-3*A_p2*U_p2-12*V_p2`, and
+`3*A_p2*V_p2-C_p2`. Per-row primitive/sign normalization gives precisely the
+three displayed `P2` rows; no ideal-changing triangularization is used.
+Direct elimination
 gives `U=-3*A/2`, `V=3*A^2/8`, `C=9*A^3/8`.
 
 ### 3.4 Directions and leading Taylor transport
@@ -1125,7 +1406,7 @@ Rabinowitsch guards.
 A_p1,B_p1,C_p1,A_n,C_n,A_g,B_g,C_g,A_h,C_h,A_f3,C_f3,A_f2,B_f2,C_f2,A_f1,Sig_f1,Pi_f1,C_f1,A_p2,U_p2,V_p2,C_p2,c_n,c_g,c_h,c_f3,c_f2,c_f1,d_n,d_g,d_h,d_f3,d_f2,d_f1,z_f2,z_f1,S_r,S_g,S_n,S_p1,S_h,S_f3,S_f2,S_f1,S_p2,u_p1_A,u_p1_B,u_p1_AB,u_p1_C,u_n_A,u_n_C,u_g_A,u_g_B,u_g_AB,u_g_C,u_h_A,u_h_C,u_f3_A,u_f3_C,u_f2_A,u_f2_B,u_f2_AB,u_f2_C,u_f1_A,u_f1_Pi,u_f1_disc,u_f1_z,u_f1_C,u_p2_A,u_p2_V,u_p2_disc,u_p2_qA,u_p2_C,u_S_r,u_S_g,u_S_n,u_S_p1,u_S_h,u_S_f3,u_S_f2,u_S_f1,u_S_p2
 0
 2*B_p1-3*A_p1,
-C_p1-3*A_p1^2,
+2*A_p1*B_p1-C_p1,
 11306*C_n+11305*A_n,
 -14*A_g+21*B_g,
 -7*A_g*B_g-5*C_g,
@@ -1137,8 +1418,8 @@ Sig_f1-3*A_f1,
 Pi_f1-3*A_f1^2,
 4*C_f1+15*A_f1^3,
 2*U_p2+3*A_p2,
-8*V_p2-3*A_p2^2,
-8*C_p2-9*A_p2^3,
+A_p2*U_p2+4*V_p2,
+3*A_p2*V_p2-C_p2,
 c_n^11305-A_n,
 c_g^7-A_g,
 c_h^7-A_h,
@@ -1290,8 +1571,9 @@ be guessed:
 
 - `m_v` and the common global `h_j` label whose top is
   `p_v^(i_v*(mu_v-1))*q_v` at each of `F1,F2,F3,H2,N,G`;
-- every `(k_j,l_j,s_j)` and every `d_(h_j,v)` needed by (T2);
-- the `PLUS/MINUS` tower side and hence the correct base `f` or `f-a`;
+- every `(k_j,l_j,tower_s[j])` and every `d_(h_j,v)` needed by (T2);
+- the `PLUS/MINUS` tower side and hence both the correct initial label
+  `g`/`g-b` and base `f`/`f-a`;
 - the chart polynomial `C_e(z)` on each composite edge, including on-grid
   dead-stretch coefficients;
 - the cancellation window depths needed to make each prescribed `q_v`
@@ -1326,10 +1608,13 @@ be in the manifest. Evaluation gives a direct necessary-condition map:
 Indeed, evaluate each variable at the corresponding coefficient of the
 actual pair and its actual Puiseux charts. Prop. 8.1 gives (L1)-(L4), the
 root law gives (L5)-(L8), the promoted handshakes give (H1)-(H6),
-St. 3.9 gives (H7) and (J5)-(J8) on elementary steps, St. 3.17 gives the
-composite `f-a` instance, and St. 8.3(ii) gives only the certified common-live
-tower instances. Expanded elementary slots justify all remaining emitted
-transport blocks. The actual
+St. 3.9 gives (H7) and the top/drop part of (J5) on elementary steps,
+St. 3.17 gives the composite `f-a` instance, and St. 8.3(ii) gives only the
+certified common-live tower instances. Equation (J6) is the exact coordinate
+identity for those same global objects, and (J7)-(J8) are its coefficient
+consequences. Expanded elementary slots justify all remaining emitted
+transport blocks. The dependency proof for (J9)-(J10) ensures no unknown tail
+was set to zero. The actual
 approximate-root tower gives (T1)-(T2), and the terminal plus Keller identity
 give (R1)-(R6). Every saturated quantity is nonzero on the genuine object,
 so its inverse exists and satisfies (L8). Since field extension is faithfully
@@ -1351,7 +1636,8 @@ say exactly what was included; a prefix's nonemptiness has less content.
 For an endpoint completion record rather than a concrete certificate, (S2)
 kills the record only after **every** predecessor, arrival realization,
 root-of-unity branch, neutral-depth family, free-characteristic pure-b family,
-and tower branch represented by that record has been covered. Current `px5`
+nonminimum budget-feasible charged stratum, and tower branch represented by
+that record has been covered. Current `px5`
 dedup does not provide this
 coverage. A `[1]` result for one tie-broken path is a path kill, not one of
 53 record kills.
@@ -1392,8 +1678,8 @@ The system consumes the following source results.
 | BOOK R2.1/R2.2, `BOOK-OFFAXIS.md:293-325` | merge anatomy and nonzero handshakes | replace the mixed case-III row by E5 |
 | E5, `SHEET6-III.md:131-147`, `SHEET6-HIII-REVIEW.md:102-134` | zero-edge update | conditional on `CONJECTURE H5a`; either coherent reading rejects unequal `nu` records |
 | St. 3.9/3.17 and St. 8.3, summarized at `SHEET6-TEMPLATE.md:140-154` | chart, degree and full-jet transport | St. 3.9 is elementary/all `h`; composite authority is only `f-a` under St. 3.17 or common-live `h_j` under St. 8.3(ii), unless elementary slots are expanded |
-| Prop. 4.2 | common `h_j` tower | constant-leading-part case is a GAP (`SIGRAY-AUDIT.md:54`) |
-| BOOK P1, `BOOK-OFFAXIS.md:486-500` | case-IV `R,psi`, budget and terminal integers | numerical P1 is not coefficient closure |
+| Prop. 4.2 / Prop. 4.3 | `PLUS` / `MINUS` common `h_j` towers | PLUS has `h0=g,base=f`; MINUS has `h0=g-b,base=f-a` and requires condition (7), equivalently (T0); Prop. 4.2 constant-leading-part case is a GAP (`SIGRAY-AUDIT.md:54`), Prop. 4.3 is verified with that gate (`SIGRAY-AUDIT.md:55`) |
+| BOOK P1, `BOOK-OFFAXIS.md:486-500` | case-IV `R_term,psi`, budget and terminal integers | numerical P1 is not coefficient closure |
 | LROOT, `SHEET6-LROOT.md:100-126` | one root direction and exact `k_f` | inherits the recorded E9/H2 branch-at-F reading |
 | corrected St. 3.12, `SIGRAY-AUDIT.md:44` | x/y root chart swap | literal printed pair is duplicated |
 
@@ -1449,14 +1735,28 @@ An implementation must reject emission when any of these checks fails.
 15. **Solver grammar.** Parentheses in msolve polynomial rows and unreduced
     positive-characteristic coefficients are prohibited by `AUDIT.md`.
 16. **Tower-side/base confusion.** Apply the global fiber-zero gauge once, or
-    keep `f` and `f-a` distinct via (F1a). A `PLUS` identity is licensed with
-    the Prop. 4.2 base and a `MINUS` identity with the Prop. 4.3 base.
+    keep `f,f-a` and, for MINUS, `g,g-b` distinct via (F1a)-(F1b). A `PLUS`
+    identity starts at `g` with the Prop. 4.2 base; a `MINUS` identity starts
+    at `g-b` with the Prop. 4.3 base and needs the nonconstant condition-(7)
+    witness (T0).
 17. **Normalized-jet Jacobian.** Differentiate the full Laurent functions.
     Dropping either prefactor term in the second line of (R6) changes the
     Keller equation.
 18. **Unsaturated structural constants.** Every full-pattern scale, tower
     constant, Jacobian constant, continuation required nonzero, and pattern
     guard has an explicit (L8) row; solver-side wishes are not equations.
+19. **Truncated-series false zero.** Emit only an `Omega_B` whose complete
+    dependency set is allocated, inlined, or certified zero. Expanding a
+    truncated `J` and reading its high rows as equations can false-kill.
+20. **Unsuitable ramification.** The LCM in (J0) is only a candidate. Every
+    chart needs a Prop. 3.1 suitability witness, and an elementary
+    substitution uses `z^delta_e`, not automatically `z`.
+21. **Cost/arrival decoupling.** An arrival characteristic travels with its
+    precise path and spent charge. Never combine a union of arrivals with a
+    Dijkstra minimum for the same visible state.
+22. **Lower-bound promotion.** `lambda_lb` is not `lambda_exact` on slack
+    records. A full budget/cv inventory needs an authority or an explicit
+    enumeration of the slack allocation.
 
 ## 5. Build plan and acceptance gates
 
@@ -1479,17 +1779,22 @@ runs/td7_gluing/                 # authenticated remote outputs only
 
 `lib/td7_gluing.py` owns:
 
-- immutable `Cell`, `Frame`, `Vertex`, `Edge`, `RouteSummary`,
-  `RouteCertificate`, `TowerLabel`, `JetWindow`, `Equation`, and
-  `NonzeroGuard` records;
+- immutable `Cell`, `Frame`, `Vertex`, `ElementarySlot`, `Edge`, `RouteSummary`,
+  `ParametricRouteFamily`, `NeutralPaddingFamily`,
+  `FreeCharacteristicFamily`, `RouteCertificate`, `TowerLabel`,
+  `TopPatternCertificate`, `TransportAuthority`, `JetWindow`,
+  `GlobalSupportCertificate`, `Equation`, and `NonzeroGuard` records; each
+  parametric family has an explicit
+  `specialize(discrete_parameters)->RouteCertificate` boundary;
 - an exact `Fraction` polynomial IR with deterministic variable ownership,
   expansion, denominator clearing, content removal and alpha-renaming;
 - the 62-cell **regression** registry, the six positive local witnesses, and
   the E5 preflight table, plus a generic class-C/class-B constructor and
   admissibility gate for every cell produced by corrected enumeration;
-- predecessor-complete route import and explicit neutral/tower expansion;
+- separate legacy-minimum replay and all-budget-strata coverage import,
+  coupled arrival/path/cost records, and explicit neutral/tower expansion;
 - separate constructors for (L1)/(L1a), (L3), pole/root top patterns and
-  Wronskians, (H1)-(H8), (J6), (T2), (F1a), (R1)-(R6), and guards;
+  Wronskians, (H1)-(H8), (J6), (T2), (F1a)-(F1b), (R1)-(R6), and guards;
 - structural canonicalization and equation hashing only after full assembly;
 - characteristic-zero and pre-reduced mod-p emission;
 - an independent tiny parser/evaluator, row legend and JSON manifest.
@@ -1504,36 +1809,42 @@ Every command exits nonzero on unresolved provenance unless the caller asks
 for a named diagnostic prefix. `emit --tier full-route` refuses a summary or
 an unresolved tower.
 
-Each manifest records at least: source commit/worktree fingerprint without
-running git, cell and certificate IDs, every fixed discrete datum, ground
+Each manifest records at least: `source_digest`, the SHA-256 of the ordered
+list of relative source paths and exact input bytes plus the emitter source
+digest/version (not a claimed git commit); cell and certificate IDs; every
+fixed discrete datum; ground
 field/prime, coherent case-III reading, variable order and ownership, equation
-number/source, every saturation target, common `K`, all windows, exact
+number/source, every saturation target, common `K`, all supports, projections
+and dependency hashes, exact
 vars/eqs/bytes, completeness label, canonical hash, prime exclusions, and
 intended fleet lane.
 
 ### 5.2 Implementation milestones
 
-1. **Provenance first.** Reproduce legacy `53/35` and `59/41`, retain every
-   finite nonparametric equal-cost predecessor in a cycle-quotiented
-   nonidentity DAG, encode self-loop/neutral and free-characteristic pure-b
-   families symbolically, and demonstrate the six existing raw collapses.
+1. **Provenance first.** Reproduce legacy `53/35` and `59/41` in
+   `LEGACY-REPLAY`. In `COVERAGE`, retain every finite budget-feasible charged
+   stratum and zero-cost clean-resonant predecessor in a cycle-quotiented
+   nonidentity DAG, couple each arrival to its path/cost, encode
+   self-loop/neutral and free-characteristic pure-b families symbolically,
+   and demonstrate the six existing raw collapses.
    Run a fresh coherent E5 class-B/class-C enumeration using (I5a)-(I5e),
    rerun every case-III branch, and produce a cap-free completeness proof for
    each fixed reachable state. Do not call the filtered legacy list complete;
    do not claim global census completeness until reachable-state provenance
    is also cap-free. Emit no coefficient rows yet.
 2. **Coherent numerical gate.** Reproduce the six local witnesses and the E5
-   `PASS,PASS,REJECT,REJECT,REJECT,REJECT` table. Produce the synchronized
+   `PASS,PASS,CONDITIONAL-REJECT x4 (H5a)` table. Produce the synchronized
    direct certificate of section 3, including all `i` values.
 3. **Exact IR and local layer.** Reproduce the merge-local 62-cell regression
    registry, instantiate the generic constructor on every newly enumerated
    cell, and emit the literal 83/74 pilot. Pass exact rational and
    finite-field anchors.
-4. **Chart/tower layer.** Implement (J6) and (T2) on planted microexamples,
-   then attach real route tower certificates. Stop rather than infer missing
-   Prop. 4.2 data.
-5. **Terminal/global layer.** Add root/x-side charts, (R6), optional shared
-   global coefficient arrays, canonical equation hash, and fleet manifests.
+4. **Chart/tower layer.** Implement (J6), (J9)-(J10) and (T2) on planted
+   microexamples, then attach real route tower/top/window certificates. Stop
+   rather than infer missing Prop. 4.2 data or truncate an unknown tail.
+5. **Terminal/global layer.** Add root/x-side top certificates, (R6),
+   canonical equation hash, and fleet manifests. Keep `GLOBAL-CLOSED`
+   disabled until a `GlobalSupportCertificate` exists.
 6. **Remote solve fleet.** Ship only guard-clean artifacts. Bank a verdict only
    after authenticated output validation.
 
@@ -1547,30 +1858,43 @@ The test suite must include all of the following.
 
 **G0 — census and provenance**
 
-- exact 62-cell registry and `56 dead / 6 local survivors`;
+- exact filed legacy 62-cell regression registry and
+  `56 dead / 6 local survivors`;
 - filed completion counts `53/35` dedup and `59/41` raw, distributed exactly
   as in section 2.3;
 - frozen canonical keys for all 53 dedup and 59 raw legacy records
   (`total,budget,ctx`, arrival `M2`, terminal), including the exact 29
   `(10,15)` equality endpoints and all 18 slack records; aggregate counts
   alone do not detect route drift;
-- E5-filtered **legacy-record** counts `49/31` dedup and `51/33` raw, while
-  the fresh corrected-book census is explicitly `UNKNOWN` until regenerated;
+- conditional-on-H5a E5-filtered **legacy-record** counts `49/31` dedup and
+  `51/33` raw, while the fresh corrected-book census is explicitly `UNKNOWN`
+  until regenerated;
 - exact evaluation of the cap-free inversions (I5a)-(I5e), including class B
   and every P3 case-III branch; a loop bound such as the legacy `numax` is not
   a completeness certificate;
 - all six raw collapses identified, with (I6)-(I7) proving that visible dedup
   is not equation dedup;
-- provenance enumeration terminates by cycle quotient and symbolic neutral
-  plus free-characteristic pure-b families; it never reports a depth or
-  characteristic cap as complete coverage;
+- `LEGACY-REPLAY` retains every minimum-cost predecessor, while `COVERAGE`
+  retains every positive-cost stratum with `spent<=6-psi`, including
+  nonminimum branches for all 18 slack records;
+- every arrival characteristic is joined only to its own `path_id,spent`, and
+  a planted px5-style decoupled union/minimum join is rejected;
+- `lambda_lb` cannot populate `lambda_exact` without an equality/sandwich
+  authority; unresolved slack/cv allocation downgrades the coverage claim;
+- provenance enumeration terminates by charged-budget proof, cycle quotient,
+  strict numerator descent on zero-cost clean-resonant edges, dirty
+  Diophantine stopping, and symbolic neutral plus free-characteristic pure-b
+  families; it rejects
+  inherited `range(0,7)`, `range(0,41)`, `NCAP`, `PCAP_STATES`, numerator and
+  `M` cutoffs as completeness machinery;
 - refusal to emit `FULL-ROUTE` from a `RouteSummary`.
 
 **G1 — six positive local controls**
 
 For every row of section 2.1, reconstruct `p,q`, differentiate in `eta`, and
 verify all (L3) coefficients, exact degrees, `C!=0`, `s(0)!=0`, `s(A)!=0`,
-squarefreeness and resultants. These are six merge-local controls, not six
+squarefreeness of the orbit radical/q (never `disc(p)` when p repeats), and
+resultants. These are six merge-local controls, not six
 certified route systems.
 
 **G2 — 56 law-dead negative controls**
@@ -1585,8 +1909,9 @@ Load the exact tuples from `xmodel/sol-td7-law.md:218-262` or
 \]
 
 Build (I2) independently. The raw coefficient system with `A!=0`, but with
-the three known-failing admissibility inverses omitted, must have its unique
-forced solution and be satisfiable; that solution has
+the three known-failing admissibility inverses omitted, must solve uniquely
+for `(local_s[v,*],C)` over `Q(A)` and remain a one-parameter satisfiable
+family; use `A=1` as the explicit SAT witness. The forced solution has
 `C=s(0)=s(A)=0`. After adjoining only `u_C*C-1`, exact local elimination must
 already be empty. The production constructor may then add the other guards.
 Do this in local exact Python; the largest `ell` is only 21. Do not invent
@@ -1596,7 +1921,8 @@ routes for cells already killed locally.
 
 - reproduce (I3)-(I5) exactly;
 - test equal-`nu` agreement on `(9,15)` and `(10,15)`;
-- test all four unequal-`nu` rejections;
+- test all four unequal-`nu` conditional rejections and require
+  `CONJECTURE H5a` in each verdict dependency field;
 - force the legacy mixed formula and assert the manifest becomes
   `UNSOUND-FOR-VERDICT`;
 - regression-test R1.2 with nonprimitive `(d_p,d_q)` so dropping `M` fails.
@@ -1608,10 +1934,23 @@ routes for cells already killed locally.
 - reduction of the same point at `105337` and independent-parser equality;
 - planted elementary/composite (J6) examples in which the deeper top's lower
   coefficient really comes from a shallow subleading row;
+- a nontrivial `delta_e>1` example and rejection of a denominator-clearing
+  `K` which lacks a Prop. 3.1 suitability witness;
 - rejection of a composite arbitrary-`h` block with no
   `TransportAuthority`, and agreement of expanded-slot `r` with (J5);
-- planted `PLUS` and `MINUS` tower examples whose bases differ before the
-  fiber-zero gauge, plus coefficientwise verification of (F1a);
+- a three-slot composition checking both equations in (J3a)-(J3b), endpoint
+  ownership, cumulative exponents and certified zeros; perturbing one
+  `delta,c,m` or endpoint must revoke `EXPANDED_SLOTS` authority;
+- exact `JetWindow` dependency maps for (J6),(T2),(R6), including boundary
+  fixtures where the first omitted row contributes one slot beyond the last
+  legal `Omega` coefficient; that row is refused, never zero-filled;
+- planted `PLUS` and `MINUS` tower examples whose `h0` and bases both differ
+  before the fiber-zero gauge, plus coefficientwise verification of
+  (F1a)-(F1b); fixtures with `Dint!=0,eta-degree=0` and with
+  `Dint=0,eta-degree>0` must pass (T0), while only the doubly zero/constant
+  MINUS `gbar` top returns `UNRESOLVED-PROP4.3`;
+- primitive and all-M-th-root fixtures for the two allowed root-of-unity
+  representations, with an unrecorded fixed twist rejected;
 - all perturbations listed after (P13);
 - a terminal chart/Jacobian sign microtest which fails if either Laurent
   prefactor-derivative term in (R6) is deleted.
@@ -1623,11 +1962,25 @@ routes for cells already killed locally.
 - no `(` or `)` anywhere in an emitted polynomial body
   (`AUDIT.md:426-439`);
 - per-row denominator clearing and content ledger;
+- primitive-sign/monomial/row sorting and owner-order alpha-renaming exactly
+  as specified in section 2.3; gauge quotienting is off unless certified;
 - every mod-p coefficient represented in `[0,p)`, every intended row nonzero,
   and exact row/header counts preserved (`AUDIT.md:565-577`);
+- prime validation and exclusions for `K`, every cleared J8 factorial,
+  tower/binomial normalization integer, row-operation pivot, derivative
+  coefficient and fixed nonzero coefficient; mod-p reduction must leave every
+  exponent token byte-for-byte unchanged;
 - independent-parser evaluations of the IR, char-zero text reduced mod `p`,
   and emitted mod-p text at two deterministic points;
-- manifest byte/hash/row integrity and fleet coverage exactly once.
+- compute every generator's constant term; if they are all zero, record the
+  origin as a witness and reject any external `[1]` verdict as impossible;
+- one known-SAT emitted fixture per emitter tier (the literal pilot is the
+  lead-tier fixture);
+- manifest byte/hash/row integrity and fleet coverage exactly once;
+- verdict acceptance requires `rc=0`, nonzero output, matching input SHA,
+  logged command/host/msolve version, and an independent parser confirming
+  that the complete reduced basis is exactly `[1]`, not a substring or
+  partial output.
 
 ### 5.4 Fleet targets and verdict handling
 
@@ -1646,13 +1999,17 @@ anchors is allowed.
   `nohup sh -c "timeout ... msolve ...; log rc/bytes/date"` pattern at
   `ops/FLEET.md:29-39`.
 - Initial corroboration primes are `105337,105673,200257` only when none is
-  excluded by a cleared denominator, route characteristic, derivative
-  coefficient or guard. Reduce every coefficient before shipping.
+  excluded by `K`, a cleared denominator/J8 factorial, tower/binomial
+  normalization, any explicitly ledgered row pivot,
+  route characteristic, derivative coefficient, fixed nonzero coefficient,
+  or guard. Assert each selected modulus is prime. Reduce coefficients—but
+  never exponents—before shipping.
 - Preserve input, output, command, host, msolve version, return code, wall
   time and byte count. A 0-byte output is never a verdict.
-- Emit one preflight rejection manifest for each of the four incompatible
+- Emit one **CONDITIONAL-REJECT (H5a/coherent-III)** preflight manifest for
+  each of the four incompatible
   legacy arrival/cell types, listing both raw branch IDs (eight raw records
-  total). They receive no solver jobs. Queueing any of those raw branches
+  total). Under the selected policy they receive no solver jobs. Queueing any of those raw branches
   under its recorded incompatible data is a build-gate failure; a distinct
   cell produced by a fresh coherent enumeration is a new certificate, not a
   revival of the rejected record.
@@ -1671,12 +2028,13 @@ The first solver objective is not “run 53 files.” It is:
 
 The emitter is ready for mathematical verdicts only when:
 
-- a route manifest contains every item in (F2), including a finite or proved
-  invariant treatment of neutral padding and free-characteristic pure-b
-  families, or else states the one concrete characteristic it covers;
+- a verdict manifest either proves parametric/invariance coverage or fixes
+  one concrete finite representative—its exact neutral insertion sequence
+  and depth plus every free characteristic—and claims only that certificate;
 - every variable and equation is traceable to a numbered item in this design;
 - the six positive and 56 negative local gates pass;
-- E5 rejects the four incompatible legacy arrival/cell records by default;
+- the coherent-III default labels the four incompatible legacy arrival/cell
+  records `CONDITIONAL-REJECT` with `CONJECTURE H5a` in the dependency field;
 - the direct pilot reproduces the exact rational point and all negative
   perturbations;
 - `FULL-ROUTE` emission includes common tower labels, the required shallow

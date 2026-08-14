@@ -679,6 +679,9 @@ certified LOCAL T1 survivors with explicit admissible solutions —
 carrying 53 routes (35 budget-equality). The 62-cell T1 bash workflow
 is superseded; the open td-7 problem is the next tier (transport /
 global / coefficient) on these six cells only.
+[SUPERSEDED 2026-08-13: this six-cell list is the BOOK-pin
+(mixed-reading) census; the E5-corrected re-enumeration replaces it as
+the post-E5 book — see §11a.]
 
 ADDENDUM (2026-08-13, dual-certified): the smallest cell (9,15,7,3)@2
 PROVABLY SURVIVES the transport tier as well — explicit local solution
@@ -690,6 +693,139 @@ xmodel/grok-sixcells-review.md. Integerized AF2 sharpness proven
 (sandwich); the extra-unit contradiction is open (CONJECTURE). The
 remaining instrument for the six is the coefficient-gluing tier
 (emitter build est. 3-5 days, solve cost unbounded a priori).
+
+### 11a. E5-CORRECTED CENSUS — EXECUTED (2026-08-13): the class-B/C
+### menu re-solved under the corrected zero-edge pin; the six-cell
+### record is SUPERSEDED (promoted H5a: 17 cells; forced-ν: 2 cells)
+
+Provenance. xmodel/sol-gluing-design.md §2.2 derived the E5 preflight
+(I3)-(I5) and claimed a cell-level shrink 6 → 2 by rejecting four
+recorded arrivals. The hostile review (xmodel/grok-gluing-preflight-
+review.md, VERDICT SOUND-WITH-ERRATA) verified every displayed number
+exactly but refuted the shrink at cell level: (I4) contains ν_G, not
+the arrival vertex ν_U, so a cell dies only if NO admissible arrival
+realizes (I4)=(I5) (finding 1), and the class-C menu was never
+re-enumerated under the E5 pin (finding 2). This subsection is that
+re-solve: engine cases/td7_census_e5.py (exit 0, gates G1-G5 below all
+PASS; px5 machinery — closure, arrival law, feasible/budget — reused
+read-only).
+
+The pin. px5.py:244 pinned κ̄ = (μ₀ν_Uw_U − 2)/(μ₀ − 1) from the
+ARRIVAL vertex ν_U — the mixed reading that corresponds to neither
+Notation 3.5 value. E5 + the chain-1 freeze pin
+    κ̄ = (μ₀ν_Gw_U − 2)/(μ₀ − 1)                        (I4)
+with ν_U free (any legal vertex). Equivalently: a cell
+(d_p,d_q,ν_G,M)@μ₀ with κ̄ = 2d_q/(d_q−d_p) is E5-realizable iff
+    w_U^req = (κ̄(μ₀−1) + 2)/(μ₀ν_G)
+is a priced state (w_U^req, M_U) of the filed chain-2 closure
+(69 states, budget 5) with μ₀ | M_U (St 8.4) and a P2-legal arrival
+vertex (neutral ν ≡ −1 (mod μ₀) / direct stored step-cell / entry).
+Enumeration is CAP-FREE via the sol-gluing-design (I5a)-(I5d)
+inversion (c = d_q−d_p strictly decreasing in ν_G; finite integer
+c-window per (μ₀, w_U)): under E5 there is no ν_U to bound, so the
+old (μ₀,w₂) ↦ ν₂-bound mechanism (κ̄ ≤ 4μ₀+2) is replaced entirely,
+and no guessed cap is introduced. The corrected book's κ̄ values are
+{5,6,7} against the six-cell record's {5,6}. Class B (μ₀ = 1): corrected H6
+gives ν_Gw_U = 2, and g | c, c | 2(1+g) force ν_G = 2, w_U = 1; the
+w = 1 states are priced (λ 4/5) but admit no budget-fitting
+completion, so class B is EMPTY even pre-T1 (its only M ≥ 2 cell
+(3,9,2,3) was T1-dead anyway).
+
+Unchanged filters, exactly as the §11 book: T1 zero-chain law
+(d_p | d_q kills ⟺ κ̄ ∈ {3,4}); N1/L6 primitivity gcd(κ̄,ν_G) = 1
+(SHEET6-III:121-129) — previously a passing sanity check on all 62
+cells, it NOW BITES: four E5-realizable T1-alive cells die by N1 alone
+((14,21,10,7)@4, (22,33,16,11)@6, (30,45,22,15)@8, (38,57,28,19)@10 —
+κ̄ = 6, even ν_G); MP2 (M_G ≥ 2); budget via px5.feasible with
+λ_pre = closure cost of the arrival state.
+
+**RESULT (promoted H5a/Q-value + E5 — the reading the campaign lives
+on): 17 cells, 238 raw routes (202 at equality), 233 deduplicated
+(197 eq).**
+
+| cell @ μ₀ | κ̄ | E5 arrival w_U (λ, M_U) | arrival vertices | routes raw(eq) | status |
+|---|---:|---|---|---|---|
+| `(9,15,7,3)@2` | 5 | `1/2` (4; M2,4) | neutral ν≡1(2) [rec. ν=7 legal] | 4 (4) | kept, arrival unchanged |
+| `(10,15,7,5)@3` | 6 | `2/3` (2; M3) | direct (4,3),(7,3) [rec. ν=7]; neutral ν≡2(3) | 47 (29) | kept, arrival unchanged |
+| `(15,25,12,5)@3` | 5 | `1/3` (5; M3,6) | neutral ν≡2(3) | 2 (2) | kept, ARRIVAL REPLACED (was `(1/2,ν8)`) |
+| `(18,27,13,9)@5` | 6 | `2/5` (3; M5) | direct (2,5),(7,5),(12,5); neutral ν≡4(5) | 37 (33) | kept, ARRIVAL REPLACED (was `(2/15,ν39)`) |
+| `(21,35,17,7)@4` | 5 | `1/4` (5; M4,8) | neutral ν≡3(4) | 2 (2) | NEW |
+| `(25,35,17,5)@8` | 7 | `3/8` (4; M8) | direct (5,8); neutral ν≡7(8) | 3 (2) | NEW (the only κ̄=7 cell) |
+| `(26,39,19,13)@7` | 6 | `2/7` (3; M7) | direct (3,7),(10,7),(17,7); neutral ν≡6(7) | 63 (53) | NEW |
+| `(27,45,22,9)@5` | 5 | `1/5` (5; M5,10) | neutral ν≡4(5) | 2 (2) | NEW |
+| `(34,51,25,17)@9` | 6 | `2/9` (4; M9) | direct (4,9),(13,9); neutral ν≡8(9) | 18 (17) | NEW |
+| `(42,63,31,21)@11` | 6 | `2/11` (4; M11) | direct (5,11),(16,11); neutral ν≡10(11) | 23 (22) | NEW |
+| `(50,75,37,25)@13` | 6 | `2/13` (4; M13) | direct (19,13); neutral ν≡12(13) | 31 (30) | NEW |
+| `(58,87,43,29)@15` | 6 | `2/15` (5; M15) | direct (7,15),(37,15); neutral | 1 (1) | NEW (family) |
+| `(66,99,49,33)@17` | 6 | `2/17` (5; M17) | direct (25,17); neutral | 1 (1) | NEW (family) |
+| `(74,111,55,37)@19` | 6 | `2/19` (5; M19) | direct (9,19),(47,19); neutral | 1 (1) | NEW (family) |
+| `(82,123,61,41)@21` | 6 | `2/21` (5; M21) | direct (31,21); neutral | 1 (1) | NEW (family) |
+| `(90,135,67,45)@23` | 6 | `2/23` (5; M23) | direct (11,23); neutral | 1 (1) | NEW (family) |
+| `(98,147,73,49)@25` | 6 | `2/25` (5; M25) | direct (37,25); neutral | 1 (1) | NEW (family) |
+
+The last six rows are the w = 2/(2k+1) family (μ₀ = 15..25 odd,
+κ̄ = 6, one exact-fit route each); it TERMINATES at μ₀ = 25 because
+the closure contains no state with w ≤ 2/27 at budget 5 —
+closure-forced, not a cap.
+
+Diff vs the §11 six-cell record: KEPT unchanged `(9,15,7,3)@2`,
+`(10,15,7,5)@3`; KEPT with arrival replaced `(15,25,12,5)@3`,
+`(18,27,13,9)@5` (their recorded mixed-engine arrivals fail
+(I4)=(I5), exactly as §2.2 proved — but the cells are E5-realizable
+through the arrivals above, as the review predicted); REMOVED
+`(15,25,8,5)@7` and `(39,65,32,13)@7` (E5-required w_U = 4/7, 1/7
+absent from the priced closure — these two cell kills of §2.2 STAND);
+ADDED 13 cells. Three further pre-T1 κ̄ = 3 candidates the old book
+never had appear and are T1-killed ((37,111,22,37)@15,
+(47,141,28,47)@19, (57,171,34,57)@23).
+
+H5a conditionality (both readings executed). Under printed (g)/(h) +
+forced ν_G = ν_U — the other coherent reading of the grok-review
+trichotomy — the arrival vertex must BE ν_G and be legal: the book is
+then EXACTLY **2 cells, `(9,15,7,3)@2` and `(10,15,7,5)@3`, carrying
+49 deduplicated routes (31 eq; 51 raw / 33 eq)** — precisely §2.2's
+"49/31 (51/33)" filtered-record figures, hereby identified as the
+forced-ν book, NOT the E5 book. The two books DIFFER, so the H5a
+caveat does NOT evaporate: both books are recorded, and every cell
+beyond the two equal-ν passers is conditional on the promoted Q-value
+reading of H5a. Under the P-value reading, (H5)/(H6)/(I4) are not
+theorems and no zero-edge matching census is derivable at this tier
+(St 3.8 also fails as printed): rider only, not enumerated.
+
+Controls and gates (mandatory, engine exits 0): G1 exact replay of the
+review's six-row (I3)/(I4)/(I5)/BOOK + X-handshake table on the
+recorded arrivals; G2 per-cell E5 re-solve reproduces the review's
+finding-1 table exactly (states, λ, routes 4(4)/47(29)/0/2(2)/
+37(33)/0, N1); G3 BOOK-pin parity — the engine replays px5's own
+class-B/C loops in-engine and reproduces the 62-cell book and the
+six-cell 53/35 record; G4 positive controls — `(9,15)@2` and
+`(10,15)@3` present with their recorded arrivals in BOTH readings;
+G5 negative controls — none of the 56 law-dead cells is alive in
+either reading (30 reappear pre-T1 and are re-killed by T1; the other
+26, incl. class-B (3,9,2,3), are not E5-realizable at all).
+
+SUPERSESSION AND SCOPE. The §11 six-cell list (53/35 routes) is the
+BOOK-pin census and is superseded as the post-E5 record; §2.2's
+cell-level "6 → 2" and its 49/31 census are superseded per the review
+(the four REJECTs remain true of the recorded arrivals; 49/31 is the
+forced-ν book). The open td-7 problem at the next tier
+(transport/global/coefficient) is on the 17 promoted-reading cells,
+of which 2 are unconditional across the coherent readings. Honesty
+riders inherited from §10: survivors are superset-alive (arrival law
+is a superset, λ is min over paths — no false kills); route λ values
+are lower bounds; the census is conditional on CONJECTURE H5a
+(promoted Q-value) + promoted E5 + P3's one-orbit class-B/C
+classification, and on the P0-closed reachable-state family at
+budget 5 (the closure itself, as in §10). The §11 ADDENDUM transport
+result for `(9,15,7,3)@2` is unaffected (equal-ν special case,
+arrival unchanged).
+
+Reproduction:
+
+    python3 cases/td7_census_e5.py    # < 1 min, exit 0
+    # prints both books, per-cell arrivals/routes, the diff vs §11,
+    # and gates G1-G5 (grok replay, E5 re-solve, BOOK parity 62 cells
+    # + 53/35, positive controls, negative controls)
 
 ## Reproducibility
 
