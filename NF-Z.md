@@ -1,15 +1,36 @@
-# NF-Z.md — the neutral-word future quotient
+# NF-Z.md — the neutral-word future quotient (CLOSED RECORD)
 
-Status: **REDUCED-WITH-PROVED-CORE-UNDER-SD (2026-08-14, post-review
-round 2).**
-Review chain: round 1 claimed PROVED-RELATIVE; Grok returned
-**NOT-PROVED** (`xmodel/grok-nfz-review.md`: deep anagrams, `theta`
-min/max, `sigma`). Round 2 repaired those three (ordered zone word
-`Z`, `theta* = min`, free-monoid schema); Grok's re-review
-(`xmodel/grok-nfz-rereview.md`) returned **STILL-SHORT** with one open
-core step: free-zone commutativity was ASSERTED, not proved, resting
-on a false letter-locality claim for prefix-δ. **Round 3 (this
-revision) resolves that step both ways:**
+Status: **REDUCED-WITH-PROVED-IN-ZONE-CORE (2026-08-14, post-review
+round 3 — the QUOTIENT PROGRAM IS CLOSED; superseded by the depth-cap
+program, `NF-D.md`).**
+
+**Round-4 verdict (`xmodel/grok-nfz-final.md`): STILL-SHORT — the
+round-3 SD-conditional exchange theorem is REFUTED.** CE3: after the
+last skeleton death at `theta* = 1/13566`, Z1 forces
+`den(alpha_*) = 13566` (the numerator `13566(l+1)−1` is coprime to
+`13566` for every integer register), while `P` after
+`Z = (3,5,7,9,11)` is `20790`, carrying neither `17` nor `19`; the
+equal-`I` free tails `(323,13,15,17)` vs `(13,15,323,17)` then flip
+the first-atom live-factor-cap boolean (`k = 39270 | P_1` vs
+`k = 87297210 ∤ P_1`) and the μ-boolean `P_1(alpha_*−1) ∈ N` —
+Sol-item-3 consumed fields. Lemma 4.2a below is a PURE-WORD lemma;
+the interleaved tail does not inherit its hypothesis
+(`den(alpha_entry) | P_0` does not give `den(alpha_*) | P_Z`), so the
+§4.2 cap row is false in the interleaved ladder and SD is
+**necessary but NOT sufficient**. Three counterexamples over four
+rounds (register CE1, prefix-δ CE2, cap/μ CE3) each flip a consumed
+field between equal-`I` words: the free zone carries ordered
+arithmetic no finite invariant compresses. All six CE configurations
+are DEAD (`cases/nfd_check.py`), so the census-relevant theorem is a
+DEPTH CAP, not a quotient — see `NF-D.md`. What survives of this
+document per round 4: the in-zone ordered core (`Z`, `L*`,
+`theta*`/WIN, composition), Z1–Z3, the CE record, SD-necessity, the
+fail-closed policies. Grok's round-4 finding 2 also stands: block G8
+is hardcoded dens, not a menu-deriving corpus gate; SD is unproved on
+11-B/13-2d. Round-3 text below is kept as the record, with the
+refuted claims flagged in place.
+
+Round-3 summary (SUPERSEDED where flagged):
 
 * **COUNTEREXAMPLE — unconditional free-zone commutativity is
   FALSE.** Prefix-δ integrality `D_f·g − kbar ∈ N` at the entry's
@@ -22,7 +43,8 @@ revision) resolves that step both ways:**
   endpoint 11, product 1155, classes; the atom-2 boolean flips
   (§4.3, gate block G). Grok's lattice `(3,5,7)/(5,3,7)` and the
   den-5 flip at `g = 8/5` replay exactly.
-* **PROVED — the SD-conditional exchange theorem.** Under **SD**
+* **[REFUTED IN ROUND 4 — see the verdict block above]** ~~PROVED~~ —
+  the SD-conditional exchange theorem. Under **SD**
   (scale divisibility: every prefix-menu denominator divides `P_0`,
   with margin `g >= w·theta*`) and entry compatibility
   (`den(alpha_entry) | P_0`), every CONS-consumed boolean or export
@@ -209,6 +231,10 @@ of magnitude). **Entry compatibility:** `den(alpha_entry) | P_0`
 (td-7: `alpha_1 = 3/2`, `P_0 = 2`).
 
 **Theorem NF-Z-core (single-word configurations, relative to CONS).**
+**[FREE-ZONE PART (ii) REFUTED IN ROUND 4** — grok-nfz-final finding
+1: the cap/μ row of §4.2 fails in the interleaved ladder
+(`den(alpha_*) = 13566 ∤ P_Z`); part (i), the in-zone core, stands.
+Kept as the record; see the header block and `NF-D.md`.]
 *Fix `(td, entry, hierarchy, skeleton)` satisfying SD and entry
 compatibility, and suppose the deep zone (below `theta*`) contains
 the vertices of at most one neutral word (plus the CONS-residual root
