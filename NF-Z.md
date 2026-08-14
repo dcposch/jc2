@@ -1,333 +1,294 @@
 # NF-Z.md — the neutral-word future quotient
 
-Status: **PROVED-RELATIVE (2026-08-14): CONJECTURE NF-Z holds relative
-to the promoted consumer set, with the quotient data computable per
-entry — NEW RESULT, UNREVIEWED.** Statement, proof, td-7/11-A
-specialization checks, and trust perimeter below. Sources:
-`xmodel/sol-normalform.md` §§0–3 (the fat record, cylinder (2.5), the
-NF-Z statement), `xmodel/grok-normalform-review.md` (findings 1, 2, 5 —
-the fifth-pair obstruction, the nu=1 nuance, why fat-state enumeration
-cannot certify emptiness), `TOWER-UNIFORM.md` (the promoted ladder
-calculus and N1–N4, of which this is the generalization). No git
-commit.
+Status: **REDUCED-WITH-PROVED-CORE (2026-08-14, post-review round 1).**
+Review chain: first submission claimed PROVED-RELATIVE; Grok returned
+**NOT-PROVED** (`xmodel/grok-nfz-review.md`) with three breaks — deep
+anagrams colliding under the written invariants (finding 1), a
+min/max mismatch in the window threshold (finding 2), and a
+state-vs-monoid-element gap in `sigma` (finding 3) — plus errata
+(findings 5–6). **This revision repairs all three breaks**: the
+invariant is now the ORDERED zone word (the letter action is
+non-commutative, so Grok's counterexample pair separates — verified
+exactly in `cases/nfz_check.py`), the threshold is fixed to its
+definition (`theta* = min` skeleton gap; the old `2/5` object is the
+distinct WIN ceiling), and the free monoid on parametric letter
+classes with its concatenate-and-re-threshold composition replaces the
+unsupported finite-state `sigma`. Honest verdict after repair:
 
-## 0. Setting and the objects
+* **PROVED (relative to CONS):** the quotient for single-word
+  configurations — bounded ordered interleaved zone + commutative free
+  zone + the non-ladder consumers.
+* **NF-Z† (entry-conditional residue):** multi-word deep-zone
+  coexistence (cross-branch cap coupling below `theta*`); per-entry
+  finite check stated in §6.
+
+Machine gate: `cases/nfz_check.py` (25 checks, exit 0), including
+Grok's exact counterexample table. Sources: `xmodel/sol-normalform.md`
+§§0–4, `xmodel/grok-normalform-review.md`, `xmodel/grok-nfz-review.md`,
+`TOWER-UNIFORM.md`. No git commit.
+
+## 0. Setting
 
 Fix `td`, an L6-surviving entry, a labelled hierarchy, and a bounded
-non-neutral skeleton (Sol §2.1–2.2: finitely many such skeletons per
-entry and budget). A **neutral word** is a finite sequence of cylinder
-(2.5) cells inserted between two priced events at a state
-`(w, M_0)`, `w = a/d` reduced:
+non-neutral skeleton. A **neutral word** at a state `(w = a/d, M_0)`
+with poleward degree anchor `P_0` is a sequence of cylinder-(2.5)
+letters
 
 ```text
-letter j:  (l_j, u_j),  l_j | M_{j-1},  u_j >= 2,
-           d | u_j + 1  (vertex integrality),
-           gcd(a, u_j) = 1  (BOOK-N1),
-           M_j = gcd(l_j, u_j + 1),
-frame:     (nu, kbar, rho)_j = (u_j, w(u_j+1), w),
-degree:    P_j = P_0 * u_1 ... u_j       (P_0 = the poleward anchor),
-price:     0 at every letter.
+letter j: (l_j, u_j),  l_j | M_{j-1},  u_j >= 2,  d | u_j + 1,
+          gcd(a, u_j) = 1,  M_j = gcd(l_j, u_j + 1),
+frame:    (nu, kbar, rho)_j = (u_j, w(u_j + 1), w),
+degree:   P_j = P_0 u_1 ... u_j,     gap:  gamma_j = (u_j + 1)/P_j,
+price:    0.
 ```
 
-Per grok-normalform finding 2, `nu = 1` insertions are NOT in this
-cylinder (N1 is scoped to `nu >= 2`; `px2` never emits them); if a
-future convention admits them they are degree-preserving
-(`P' = P`) and are a separate one-letter schema — noted in §5, outside
-the word calculus proper. The letters' own local coefficient data is
-the single parametric one-orbit Prop 8.1(iv) solve
+`nu = 1` insertions are outside the cylinder (grok-normalform
+finding 2) and outside this paper (NF-P). The letters' local
+coefficient certificate is the parametric one-orbit solve
+`C = -u A/(u+1)` — **Lemma Z-Omega**, whose scope is exactly the
+CLEAN-NEUTRAL rows of the promoted certificates (the `N`/`X` rows;
+NOT the merge or dirty rows — grok-nfz finding 6).
+
+**CONS** (the consumer list — a list of predicates, NOT the promoted
+kernel; grok-nfz finding 4): P0/P1 price and budget; E5F
+`n = nu_U kbar_G - nu_G kbar_U`; H8/equal-quotient and scale; M and
+terminal data; the promoted ladder calculus — death gaps `kbar/D_f`,
+delta descent and death equations, mu-recursion with
+`k_v = i_v(alpha - 1) in N`, aliveness with integral factor exponents,
+count monotonicity, N1–N4, **WIN and the single-ladder identification
+St 8.3(i) + Not 4.1** (added per finding 4), R1.0–R2.2 as the frame
+laws. Root-interior tower depth is residual in CONS (the promoted
+certificates never compute it) — this is load-bearing for §4.
+**Carve-out:** simultaneous sibling-`X` gap ties (the 13-4
+configuration) are not handled here.
+
+## 1. What a word touches (unchanged, review-confirmed)
+
+Zero price: `chi, L` untouched. Frame/`C`/`A`: endpoint only. `S`: the
+product `Pi = u_1...u_r` only. `Omega`: Lemma Z-Omega's family.
+`Theta`: every letter contributes the atom
+`(P_j, gamma_j, exponent P_{j-1})`. Grok finding 5/6 confirmed the
+non-ladder consumer analysis (§3 of round 1); the ladder consumer is
+where round 1 broke.
+
+## 2. The corrected invariants
+
+Let `theta* :=` the **minimum** death gap over the (finite, fixed)
+non-word skeleton's competing vertices — the DEFINITION, now also the
+instantiation (grok-nfz finding 2 repair; td-7 direct instance:
+`theta* = 1/13566`, NOT `2/5`). The `2/5` object of TOWER-UNIFORM is
+the **WIN ceiling** (the maximum non-`X` competing gap); it plays a
+role only in kill arithmetic (§5) and is never called `theta` again.
 
 ```text
-p = t - A, q = eta(t - A),  C = -(d_p/d_q) A = -(u/(nu-tail)) ... :
-concretely C = -nu*A/(n*nu+1)|_{n=1} = -u A/(u+1),
+I(word) = ( tau,      # the M-ledger as the DROP-VALUE chain in the
+                      # divisor poset (positions live in Z, not tau --
+                      # grok finding 6 repair)
+            Z,        # THE ORDERED INTERLEAVED-ZONE WORD: the exact
+                      # sequence of letters with gamma_j >= theta*,
+                      # each an exact symbolic parameter over its
+                      # residue-class domain, IN ORDER
+            u_r,      # endpoint parameter (domain: residue classes)
+            Pi,       # the product, one symbolic parameter, plus its
+                      # consumer projections (residues, valuations)
+            F )       # the free-zone summary: the sub-theta* letters'
+                      # MULTISET-level exports only: their product
+                      # factor, their letter-local congruence classes,
+                      # and the endpoint if it lies in the free zone
 ```
 
-one closed form for the whole family (the promoted N/X rows of the
-tower certificates are instances) — call this **Lemma Z-Omega**; it is
-what NF-M consumes for neutral letters.
+`Z` is an element of the **free monoid** on the (finitely many)
+parametric letter classes, of length at most
+`L* = floor(log2(3/(2 theta* P_0))) + 1` (a letter has
+`gamma_j >= theta*` only while `P_{j-1} <= 3/(2 theta*)`, and `P` at
+least doubles per letter; letters never re-enter the zone — monotone).
+**Composition** (concatenation of words `W_L . W_R`, poleward factor
+left): `Z(W_L . W_R) = Z(W_L) . rethreshold(Z(W_R), P_0 Pi(W_L))` —
+re-thresholding drops the right factor's letters whose shifted gaps
+fall below `theta*`; this is well-defined and associative because `P`
+is monotone (verified on lattices, `nfz_check.py` block D). The letter
+action is **non-commutative** — that is not a defect but the content:
+the ladder register genuinely depends on order (§3), so the invariant
+must be ordered, and Grok's finding-1 counterexample becomes the
+canonical separating example of the corrected definition.
 
-**Futures** are labelled as in Sol §0: price/terminal budget, arrival
-vertex + E5F offset and reroutes, merge multiplicities and full-degree
-synchronization (H8/equal quotient), and every tower predicate of the
-promoted ladder calculus (death gaps `kbar/D_f`, delta descent
-`delta_g(v) = D_v g - kbar_v in N`, death equations
-`g_m = kbar/D_f`, mu-recursion `alpha' = alpha + (k-1)l/k` with
-`k_v = i_v(alpha_m - 1) in N`, aliveness `(h^+)^k = sigma (f^+)^l`
-with integral factor exponents, count monotonicity, N1–N4). This
-consumer list is the **promoted consumer set** `CONS`; the theorem is
-relative to it (§6).
+## 3. The ladder register and why order is retained
 
-## 1. What a neutral word can touch (the Markov-bounded audit)
+The three identities of round 1 stand (review-confirmed, machine gate
+block A):
 
-Against the fat record (1.2) of `sol-normalform.md`, a neutral word
-touches exactly:
+* **Z1 (alpha-exit):** a death at gap `g` with step `(k, l)` exports
+  `alpha_next = l + 1 - g`.
+* **Z2 (difference denominator):** consecutive ladder deaths obey
+  `l''/k'' = (g' - g) + l'`; for consecutive WORD deaths **within one
+  run** (no intervening skeleton death),
+  `gamma_{j+1} - gamma_j = (1 - u_j u_{j+1})/P_{j+1}` and
+  `k' = u_j u_{j+1} P_0 / gcd(u_j u_{j+1} - 1, P_0) >= u_j u_{j+1}
+  >= 4`.
+* **Z3 (decay):** `gamma_{j+1}/gamma_j <= 1/2`.
 
-| field | touched? | how |
-|---|---|---|
-| `chi`, `L` (context, budget) | **NO** | every letter has price 0, no charge atom, no cv inventory |
-| frame | endpoint only | `(nu, kbar, rho, M) = (u_r, w(u_r+1), w, M_r)`; `w` invariant |
-| `C` (last cell) | endpoint only | the last letter `(l_r, u_r)` |
-| `A` (arrival witness) | endpoint only | the endpoint is the only new arrival candidate; its pads are further letters |
-| `S` (scale) | product only | `P_r = P_0 * Pi`, `Pi = u_1...u_r` |
-| `Theta` (tower atoms) | **every letter** | atom `(P_j, gap_j = (u_j+1)/P_j, exponent P_{j-1}, delta data)` |
-| `Omega` (coefficients) | one schema | Lemma Z-Omega, parametric in `(u, A)` |
-
-So completeness reduces to two questions: (a) do the non-`Theta`
-consumers factor through finite data plus the symbolic product; (b)
-does the `Theta` (ladder) consumer factor through finite data. (a) is
-§3; (b) is §4 — the actual content, and exactly grok-normalform
-finding 1's "fifth pair" obstruction.
-
-## 2. The quotient data (the invariants)
-
-For fixed `(td, entry, hierarchy, skeleton)` define
+What round 1 missed (grok finding 1, verified exactly in block B): the
+death-step NUMERATOR `l'` is a register threaded through the deaths in
+GLOBAL GAP ORDER — the interleaving merge of the word's `gamma`
+sequence with the skeleton's gap sequence. `alpha_exit` is
+`l'_r + 1 - gamma_r`, and `l'_r` depends on the whole ordered
+register: the pair `(3,5,7,9)` vs `(3,7,5,9)` at `w = 2, P_0 = 2`
+yields death steps
 
 ```text
-I(word) = ( tau,            # the M-ledger: the chain M_0 ) M_1 ) ... in the
-                            # divisor poset, with letter positions of drops
-            W_theta,        # the exact WINDOW ZONE: the (bounded) prefix of
-                            # letters whose gap (u_j+1)/P_j >= theta, each
-                            # letter kept as a parametric symbol with its
-                            # residue-class domain
-            u_r,            # endpoint characteristic: parametric, domain =
-                            # finitely many classes mod lcm(d, divisors of M)
-            Pi,             # the product: ONE symbolic parameter, domain =
-                            # the letter semigroup, PLUS its finitely many
-                            # consumer projections: residues mod m*, p-adic
-                            # valuations for p | m*, and the bound Pi >= 2^r
-            sigma )         # the deep-zone interface state: residues mod m*
-                            # of (previous letter, running product) plus the
-                            # ledger position -- an element of a FINITE set
+(6,7),(15,98),(105,10273),(945, 9707954),  alpha_exit = 1834803494/189
+(6,7),(21,137),(105,14368),(945,13577738), alpha_exit = 2566192670/189
 ```
 
-where `theta` is the skeleton-computable window threshold (the smallest
-death gap of any non-word competing vertex, td-7 instance: `2/5`), and
+— identical product, endpoint, and first-letter gap; different
+exported `alpha` and different `k_x = i_x(alpha - 1)` labels at every
+later skeleton vertex. Under the corrected `I` the two words have
+DIFFERENT `Z` (order differs at position 2) — separated, as required.
+Every register-reading consumer reads it at a skeleton vertex or
+through `alpha` at such a vertex; the register position at a skeleton
+vertex is a function of the ordered in-zone prefix (the letters with
+gaps above that vertex's gap — all in `Z` by the definition of
+`theta*` as the MINIMUM skeleton gap). This is the repaired
+completeness mechanism: **everything order-sensitive is above
+`theta*`, and everything above `theta*` is retained in order.**
 
-```text
-m* = lcm( d, a, divisors of M_0, den(rho_x) and factor-exponent gcds
-          c_x over the finitely many skeleton vertices x, P_0 )
+## 4. The theorem (repaired) and the free zone
+
+**Theorem NF-Z-core (single-word configurations, relative to CONS).**
+*Fix `(td, entry, hierarchy, skeleton)` and suppose the deep zone
+(below `theta*`) contains the vertices of at most one neutral word
+(plus the CONS-residual root interior). Two neutral words with equal
+corrected invariants `I = (tau, Z, u_r, Pi, F)` have identical
+CONS-labelled futures. The invariant set is a finite schema family:
+finitely many ledgers (divisor chains), finitely many zone SHAPES
+(ordered words of length `<= L*` over finitely many letter classes,
+each letter an exact symbolic parameter on a residue-class domain),
+the endpoint and product as symbolic parameters, and the free-zone
+summary; concatenation is closed (§2).*
+
+*Proof.* Non-ladder consumers: as round 1 §3 (review-confirmed) —
+price is word-blind; E5F is affine in `u_r` with reroutes as further
+letters (the offset law is EQUIVALENT to the pad closed form under the
+pad handshake — not "verbatim"; grok finding 6); H8 reads `P_0 Pi`
+symbolically; M/terminal read `tau, w`; coefficients are Lemma
+Z-Omega. Ladder consumer: order the route's deaths by decreasing gap.
+(i) Deaths at gaps `>= theta*`: the participating word letters are
+exactly `Z`, retained in order; the register through this range is a
+function of `Z`, the skeleton, and the entry packet — equal `Z`
+implies equal steps, equal `alpha` at every skeleton vertex, equal
+`k_x`/degree labels. (ii) Deaths at gaps `< theta*`: by the definition
+of `theta*` no skeleton vertex lies below, so (single-word hypothesis)
+these are word deaths and the root residual only. Their cap conditions
+are automatic: `k' | P_{j+1}` by Z2 (nested-product divisibility,
+machine block E), and every rootward-alive vertex's factor exponent is
+a multiple of the relevant nested product (word-rootward part) or of
+the full product (root/terminal side, H8), so no non-automatic cap
+fires. Their legality is letter-local congruences (`d | u + 1`,
+`gcd(a, u) = 1`, `l_j | u_{j-1} + 1`, and the finite-modulus residue
+conditions of the sub-`theta*` delta consumers). Their exports are
+order-free: the product factor (into `Pi`), the congruence classes
+(into `F`), and the endpoint if last; the register values below
+`theta*` are read by NO CONS consumer (root-interior depth is
+residual) — machine block E demonstrates equal exports with unequal
+internal registers. Hence equal `I` gives equal labels everywhere. ∎
+
+**Finiteness** is by the bounded zone (not by a finite transformation
+monoid — the register is integer-valued and unbounded; grok finding 3
+is accepted: no finite-state `sigma` carries it. The finite object is
+the SCHEMA set: `#ledgers x #zone-shapes x #domains`, with `Z`'s
+letters, `u_r`, and `Pi` as exact symbolic parameters — Sol's
+demanded shape).
+
+## 5. Specialization and kill-arithmetic corrections (grok finding 5)
+
+* **N1** is IMPORTED (the promoted `(n-1)(nu-1) >= 1` forcing makes
+  state-preserving zero-cost steps `n = 1`); cylinder membership is
+  its conclusion, not a derivation.
+* **N2** = the letter-domain fact `d | u+1` forces `u` odd at
+  `w = 3/2` (equivalently the `v_2(Pi) = 0` projection of `Pi` — a
+  `Pi`-projection, NOT a `sigma` component).
+* **N3** = the window-zone aliveness cap (`gcd(4, 2P_pre) = 2`),
+  carried by §3's in-zone analysis.
+* **N4** = the absolute one-insertion gap bound
+  `(u+1)/(D_prev u) <= 3/8` at `D_prev >= 4` (Z3 is the DECAY ratio —
+  a different statement; both hold).
+* **The td-7 Case A kill step is `k' = 2 nu_X`** — the pole-to-X death
+  (`l/k = (u+1)/(2u) + 1/2 = (2u+1)/(2u)`), NOT the word-word
+  corollary. The corollary (`k' >= u_j u_{j+1} >= 4` vs caps) applies
+  to consecutive word deaths WITHIN A RUN and is a second, distinct
+  window-zone kill mechanism; round 1's attribution is withdrawn.
+* **11-A**: unchanged and review-confirmed — the odd-letter domain
+  gives `v_2(2 Pi) = 1` vs the resonance's `v_2 >= 3`;
+  `H8_EQUAL_QUOTIENT_VP_MISMATCH` at `p = 2` is a `Pi`-projection
+  consumer. The `5/8` resonance itself is NF-P material (a
+  state-changing clean step, not a (2.5) letter).
+
+## 6. The honest residue: NF-Z† (multi-word deep coexistence)
+
+When several neutral words coexist below `theta*` (padding on several
+chains at once), a deep death on one word must keep levels alive on
+the other words' deep vertices: its `k'` must divide the OTHER
+branches' nested-product exponents, and cross-branch
+`gcd(P^{(1)}-part, P^{(2)}-part)` is not automatic. The single-word
+theorem does not cover this coupling.
+
+**Hypothesis NF-Z† (per-entry check, compiler-usable).** For the fixed
+entry/skeleton, compute the cross-branch deep cap
+`c_x := gcd`-bound exported by each branch's rootward exponents to the
+other branches' sub-`theta*` deaths. If the resulting constraint
+system forces `k' <= c_x < u u' <=` every consecutive deep pair (the
+td-7 pattern: deep cross-coupled configurations are tower-dead), the
+deep zones decouple-or-die and NF-Z closes for that entry; the check
+is finite (finitely many branch pairs, divisor arithmetic). If some
+entry fails the check, that entry's neutral words stay on the exact
+fat record (fail-closed, Sol interface rule 6) — no emptiness
+certificate may use the quotient there.
+
+This is the minimal additional hypothesis; it is checkable per entry;
+and on every configuration inspected in the promoted corpus (td-7
+direct/trunk, the 16 uniform cells, 11-A) the deep coupling resolved
+as kills, never as live complexity.
+
+## 7. Trust perimeter
+
+* Relative to **CONS as a consumer list** (§0) — explicitly NOT "the
+  promoted kernel" (grok finding 4); a consumer beyond CONS re-opens
+  the §1 audit. Root-interior residual status is load-bearing for the
+  free zone; a future consumer of root-interior atoms re-opens §4(ii).
+* The ladder laws are the promoted calculus (td=6-calibrated,
+  reviewed on td-7); Z1–Z3 are algebraic identities on them.
+* Sibling-`X` gap ties: carved out (§0).
+* **Compiler gating is unchanged:** even with NF-Z-core + NF-Z†,
+  the census compiler remains gated on NF-P (parametric charged
+  letters, `nu = 1` schemas, the 11-A resonance class) and NF-M
+  (multi-orbit merge ODE types). This document ungates only the
+  neutral-word slice, and only per-entry where NF-Z† checks.
+
+## 8. What NF-P and NF-M need (updated)
+
+* **NF-P** inherits Z1/Z2 verbatim (price-free identities), the
+  ordered-zone/free-zone split, and the composition law; its charged
+  letter sits at ONE position, so its register effect is one ordered
+  slot in `Z`-position terms. It must supply the `w`-changing closure
+  and the `nu = 1` schemas, and it owns the 11-A `5/8` resonance.
+* **NF-M** consumes Lemma Z-Omega with the corrected scope
+  (clean-neutral rows only) and the schema format of §2.
+
+## 9. Reproduction
+
+```bash
+python3 cases/nfz_check.py     # 25 checks, exit 0
 ```
 
-is the **interface modulus** — an explicit, entry-computable integer.
-
-**The schema set** = (finitely many M-ledgers) x (finitely many
-window-zone shapes) x (finitely many endpoint/domain descriptors) x
-(finitely many sigma values). Concatenation is closed: ledgers
-concatenate in the divisor poset; window zones re-truncate under the
-product action (`P` shifts by the left factor's `Pi`, and thresholding
-commutes with that shift); `Pi` multiplies (semigroup); `sigma`
-composes as a transition-monoid element (§4). This is the "closed
-concatenation operation" NF-Z demands.
-
-## 3. Completeness for the non-ladder consumers (unconditional)
-
-* **Price/budget (P0, P1).** Word-blind: zero cost, no atoms (§1).
-* **Endpoint frame and E5F.** The frame is `(u_r, w(u_r+1), w, M_r)`.
-  The E5F offset at a next merge `(kbar_G, nu_G)` is affine in `u_r`:
-  `n = u_r kbar_G - nu_G w (u_r + 1)`, so legality (`n >= 1`) plus the
-  offset value are exact functions of the parameter `u_r`; every
-  cost-coupled reroute is a further letter, i.e. stays inside the
-  calculus with domains as in §0 (this is TOWER-UNIFORM Lemma E5F's pad
-  closed form, verbatim: `n = ((u+1)X - mu0 kbar_G)/mu0`).
-* **H8 / equal quotient / scale.** These read `P_r = P_0 Pi` exactly;
-  `Pi` is retained symbolically (never truncated), and the promoted
-  uniform kills consume only its projections: parity/valuations
-  (11-A's `v_2`), residues (cap congruences), and growth (`>= 2^r`) —
-  all in `I`.
-* **M and terminal data.** `M_r` from `tau`; `w` invariant; P1 reads
-  `(w, M_r)` only.
-* **Coefficients.** Lemma Z-Omega: one parametric certificate; no two
-  distinguishable coefficient futures are identified (the solve is
-  unique per letter and carries no free coefficient beyond `A`).
-
-## 4. Completeness for the ladder consumer (the theorem's core)
-
-Grok's fifth pair (`(3,5,7)` vs `(5,3,7)` at `w = 2`: same endpoint,
-same product, different intermediate atoms) shows the atom LIST cannot
-be replaced by max-gap + product. The resolution is that the ladder
-calculus itself collapses the deep atoms. Three exact identities:
-
-**(Z1) The alpha-exit identity.** When a ladder level dies at gap
-`gamma` with step `(k', l')` (death equation
-`l'/k' = gamma + alpha - 1`), the mu-recursion gives
-
-```text
-alpha_next = alpha + (k'-1) l'/k' = l' + 1 - gamma .
-```
-
-*(Verified on the td=6 template: after F_s's level-2 death,
-`alpha_3 = 23 + 1 - 5/42 = 1003/42`, equal to the recursion value.)*
-
-**(Z2) The difference-denominator lemma.** For two consecutive deaths
-at gaps `gamma`, `gamma'`, (Z1) gives
-`l''/k'' = gamma' - gamma + l'`; hence `k''` is the reduced denominator
-of `gamma' - gamma` — the unbounded exit-alpha denominators cancel
-pairwise. For consecutive WORD deaths,
-
-```text
-gamma_{j+1} - gamma_j = (1 - u_j u_{j+1}) / P_{j+1},
-```
-
-and since `gcd(u_j u_{j+1} - 1, u_j) = gcd(u_j u_{j+1} - 1, u_{j+1})
-= 1`,
-
-```text
-k'_{j+1} = P_{j+1} / gcd(u_j u_{j+1} - 1, P_{j+1})
-         = (u_j u_{j+1}) * P_{j-1} / gcd(u_j u_{j+1} - 1, P_{j-1})
-         >= u_j u_{j+1} >= 4 .
-```
-
-*(Numerical check: `P_0 = 2`, word `(3,5)`: `den(1/5 - 2/3) = 15 =
-30/gcd(14,30)`.)*
-
-**(Z3) Word deaths are forced and ordered.** Every non-pole vertex has
-`m_v` finite (Prop 4.2 delta descent hits 0), so every word vertex
-hosts exactly one ladder death, at its own gap
-`gamma_j = (u_j+1)/P_j`; and `gamma_{j+1}/gamma_j =
-(u_{j+1}+1)/(u_{j+1}(u_j+1)) <= 1/2`, so the word's deaths occur in
-word order with geometrically decreasing gaps — at most
-`log_2(3/(2 theta P_0))` of them lie in the window zone (the
-generalization of N4), and the zone's letters have bounded prefix
-product `P_{j-1} <= 3/(2 theta)` (though the letter `u_j` itself stays
-parametric — the td-7 `X`-family).
-
-**Aliveness caps.** A level dying at word vertex `v_{j+1}` must be
-alive at every vertex with a smaller death gap (rootward of it in the
-ladder order): the rootward word vertices contribute exponent cap
-`k' | P_{j+1}` — automatic by (Z2) — and the skeleton vertices still
-alive contribute their factor-exponent gcds, all divisors of the fixed
-`c_x`-data in `m*`. Window-zone deaths additionally face the
-*other-branch* small-`i` caps (the td-7 `k | 2`); deep-zone deaths face
-the rootward-context integrality conditions instead:
-
-**Deep-zone congruences.** For word levels, integrality of the
-mu-recursion and delta laws at each still-alive vertex `x` reduces,
-after (Z1)–(Z2) cancellation, to finite-modulus conditions: e.g.
-`k_{v_j} = i_{v_j}(alpha_j - 1) in N` is exactly
-`l_j | u_{j-1} + 1` (modulus `<= M_0`); `delta_{gamma_j}(x) in N` is a
-residue condition on the product ratio `P_x/P_j` modulo `den(rho_x)`;
-the death-step compatibility is a residue condition on
-`u_j u_{j+1} - 1` modulo divisors of `m*`. **Every one of these
-conditions reads only: the previous letter's residues mod `m*`, the
-running product's residues mod `m*`, and the ledger position.** That
-data is the interface state `sigma` — an element of a finite set of
-size at most `m*^2 · |divisor poset of M_0|` — and each letter acts on
-it by an explicit map. The word's entire deep-zone ladder effect is
-therefore an element of the **finite transition monoid** generated by
-the letter classes (the monoid Sol's NF-Z asked to be exhibited), and
-the exported interface (the alpha entering the post-word context) is
-`alpha_exit = l'_r + 1 - gamma_r`, a function of `(u_r, Pi)` — already
-invariants.
-
-**Theorem NF-Z (relative form).** *For fixed
-`(td, entry, hierarchy, skeleton)`, two neutral words with equal
-invariants `I` (§2) — same ledger, same window-zone schema and
-parameters, same endpoint parameter, same product as a symbolic value,
-same interface-monoid element — have identical labelled futures for
-every consumer in `CONS`. The invariant set is finite as a schema set
-(finitely many ledgers, zone shapes, domains, monoid elements), with
-`Pi` and the zone/endpoint letters retained as exact symbolic
-parameters over finite residue-class domains, and concatenation is
-closed.* Proof: §1 bounds the touched fields; §3 handles the
-non-ladder consumers; (Z1)–(Z3) + the cap/congruence analysis show the
-ladder verdict and all its labels are functions of `I`; closure of the
-monoid is closure of residue arithmetic mod `m*`. QED (relative to
-`CONS`; see §6).
-
-**Corollary (neutral-depth rigidity — the surprise).** In the window
-zone, the death-step denominators `k'_{j+1} >= u_j u_{j+1} >= 4` must
-divide the small other-branch caps `c_0`; hence if `c_0 < 4` no
-interior window death exists at all, and generally
-`u_j u_{j+1} <= c_0` with the letter congruences — for many entries
-this makes long window-zone words tower-dead outright, the exact
-mechanism of the td-7 kill. Deep-zone words are constrained by the
-finite congruence system instead of a length bound; solvable words
-correspond to accepting paths of the automaton, and emptiness of a
-schema is decidable (finite monoid).
-
-## 5. Specialization checks
-
-**td-7 (TOWER-UNIFORM N1–N4 falls out).** Entry data: chain-1 anchor
-`P_0 = 2` (`w = 2, M = 1`: ledger trivial, `l = 1`, N1 = the letter
-domain `gcd(2, u) = ...` wait — at `w = 2 = 2/1`: `d = 1`, BOOK-N1
-`gcd(kbar, nu) = gcd(2(u+1), u) = gcd(2, u) = 1` forces `u` odd = the
-domain description); chain-2 pre-first-charged `P_0 = 4`
-(`w = 3/2, M = 2`: `d = 2 | u+1` — odd `u` again = **N2**, i.e. the
-`v_2(Pi) = 0` projection). **N1** (state-preservation forces `n = 1`)
-is the cylinder membership itself. **N3** (joint cap
-`gcd(4, 2 P_pre) = 2`) is the window-zone aliveness cap with the
-first-letter exponent `P_0 = 4` and the other-branch charged cap
-`2 P_pre` — the `c_0`-data of §4. **N4** (`(u+1)/(D_prev u) <= 3/8`)
-is the `gamma_j`-decay bound anchored at `P_0 >= 4`. The td-7
-window-zone schema is the single parametric letter `X` with gap
-`(u+1)/(2u)` and universal-`u` refutation — exactly the
-`W_theta`-schema at `theta = 2/5` with zone length 1; the three-case
-exhaustion is the emptiness decision for that schema's automaton. The
-kill's `u_j u_{j+1} <= c_0 = 2 < 4` instance is the corollary above.
-
-**11-A (the 2-adic certificate).** The strict branch's neutral words at
-`(w, M) = (2, 1)` have domain `u` odd, so the `Pi`-projection
-`v_2(Pi) = 0` gives `v_2(P_1) = v_2(2 Pi) = 1`; the resonance branch
-exports `v_2 = 3` (`+ v_2(A) >= 0` for prefix pads). H8 equal quotient
-reads exactly these two projections and emits
-`H8_EQUAL_QUOTIENT_VP_MISMATCH` — the `p = 2` component of `sigma`,
-no enumeration of the odd family (Sol §4.3 verbatim).
-
-## 6. Trust perimeter and honest residue
-
-* **Relative to `CONS`.** The proof enumerates the promoted consumer
-  set (Sol's fat-record §1.2 checklist + the TOWER-UNIFORM ladder
-  calculus: Prop 4.2 ladder/delta/aliveness, Prop 8.1(i)–(v), Cor 6.1,
-  counts St 3.9/3.17(i)/3.11(i), E5F, H8, N1–N4, P0/P1). A future
-  consumer outside `CONS` (e.g. a jet/coefficient predicate beyond
-  Lemma Z-Omega's family, or chart data of milestone-2 gluing) re-opens
-  the §1 audit for its fields. This is the same trust shape as the fat
-  record's own Markov theorem (grok-normalform finding 1: retention
-  arguments are relative to the consumer list), made explicit.
-* **Ladder-law perimeter.** (Z1)–(Z3) use the campaign tower
-  formalization (calibrated on the td=6 template, quadruple-reviewed on
-  td-7). The laws are per-vertex printed propositions, entry-generic;
-  no td-7-specific constant enters the identities.
-* **Entry-conditional data, not entry-conditional truth.** `theta`,
-  `c_0`/`c_x`, `m*`, the domains, and the monoid are COMPUTED per
-  entry/skeleton (finite closure computation = the compiler's
-  NF-Z pass); the finiteness and completeness proofs are uniform. If a
-  computed `m*` failed to stabilize the congruence moduli (not observed
-  in any inspected instance, and excluded by the explicit modulus
-  formula), that entry's NF-Z status degrades to the exact fat record —
-  fail-closed, per Sol interface rule 6.
-* **`nu = 1` insertions** are outside cylinder (2.5) and outside this
-  proof (grok finding 2); if legalized they are one extra
-  degree-preserving schema letter and belong to NF-P's `nu = 1`
-  obligations.
-* The corollary's kill mechanism is stated but not instantiated beyond
-  td-7 here; per-entry kills still require their own certificates.
-
-## 7. What NF-P and NF-M need from this result
-
-* **NF-P** inherits the whole interface algebra: a pure-(b) letter
-  (cylinder (2.6)) is one CHARGED letter with the same
-  (Z1)–(Z2) death arithmetic (the identities never use price or
-  `w`-preservation), frame update `w' = lw/e`, degree factor
-  `(eps + l u)/l`, and residue-class domain; NF-P must add (i) the
-  `w`-changing clean-resonance closure — pointwise numerator descent
-  is promoted; the uniform symbolic closure is NF-P's own content —
-  and (ii) the `nu = 1` merge schemas. The concatenation law of §2
-  composes NF-Z summaries around each NF-P letter, so NF-P only ever
-  handles ONE parametric charged letter at a time between NF-Z blocks.
-* **NF-M** consumes Lemma Z-Omega (neutral letters have one parametric
-  coefficient type — proved here), reducing NF-M's scope to
-  multi-orbit/mixed/`nu = 1` merge ODEs exactly as Sol stated; and the
-  finite-monoid format of §4 is the shape its "finite computable
-  certificate type" should take.
-
-## 8. Reproduction of the verified identities
-
-The three load-bearing identities were machine-verified during
-construction (exact `Fraction`): the alpha-exit identity on the td=6
-template (`alpha_3 = 1003/42` both ways); the difference-denominator
-computation `den(1/5 - 2/3) = 15 = P_2/gcd(u_1 u_2 - 1, P_2)` at
-`P_0 = 2`, word `(3,5)`; and the td-7/11-A specializations of §5
-against the promoted TOWER-UNIFORM gate values (`n` offsets, `v_2`
-projections, N2–N4 constants). A compiler-grade `nfz_check.py` (schema
-enumeration + monoid closure per entry) is the natural next artifact
-once NF-P fixes the charged-letter interface it must compose with.
+Blocks: A core identities (Z1 algebra + td=6 template `1003/42`; Z2
+word formula, `k' >= uv`, coprimality; Z3); B Grok's counterexample
+pair replayed EXACTLY (both step tables and both `alpha_exit` values),
+collision under the round-1 invariants, separation under the corrected
+ordered `Z`, non-commutativity of the letter action; C `theta*` vs the
+WIN ceiling on the td-7 skeleton (`1/13566` vs `2/5`) and zone
+boundedness (`P_prev <= 3/(2 theta*) = 20349`); D the composition law
+(sample + associativity + monotonicity); E free-zone order-freeness
+(equal exports, unequal CONS-unread registers, automatic caps,
+letter-local congruences); F 11-A `v_2` and the td-7 N2/N3/N4 numbers
+with the corrected Case-A attribution. `cases/tower_check.py` remains
+the promoted N1–N4/tower gate (exit 0, unchanged). No git commit.
