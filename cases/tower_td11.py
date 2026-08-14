@@ -98,12 +98,13 @@ check("11-A chain-2 resonance (n,nu)=(2,2) at p=4: pdeg = 8, dq = 5, "
 check("11-B chain-1 resonance (n,nu)=(2,2) at p=2: pdeg = 4, dq = 5, "
       "gap = 5/4, w: 3->2 (the scope's pole-adjacent resonant X)",
       2 * 2 == 4 and Fr(5, 4) == Fr(2 * 2 + 1, 2 * 2))
-check("resonances are M-DROPS: M' = gcd(l, nu+1) with nu = 2 gives "
-      "M' | 3, and the recorded 11-A drop is 2 -> 1; mu | M' forces "
-      "mu = 1 downstream (the mu = M escape of grok-nfd finding 1 is "
-      "CLOSED by the drop -- NF-D D5 monotonicity)",
-      gcd(2, 3) == 1 and all(m in (1, 3) for m in
-                             [gcd(l, 3) for l in (1, 2, 3)]))
+check("resonances are M-DROPS (round-3 M' law fix, both reviews): the "
+      "changing-cell law is M' = gcd(l, dq) = gcd(l, 5) (px2 engine, "
+      "not the n=1 neutral law gcd(l, nu+1)); for every legal l | 2 "
+      "this gives M' = 1 -- the recorded 2 -> 1 drop; mu | M' forces "
+      "mu = 1 downstream (no grok-nfd finding-1 escape)",
+      all(gcd(l, 5) == 1 for l in (1, 2))
+      and gcd(2, 5) == 1)
 
 print("== 2. entry 11-A [1@2;2] + [2@3;4], pole top 5/2 ==")
 gX = lambda nu: Fr(nu + 1, 2 * nu)
@@ -153,9 +154,11 @@ print("== 3. entry 11-B [1@3;2] + [3@4/3;6], pole top 7/2 ==")
 B_MENU = [Fr(5, 22), Fr(3, 14), Fr(7, 34), Fr(1, 5), Fr(2, 11)]
 check("B1 chain-1 (1@3;2) is NOT td-7-frozen: L-A still gives "
       "uncharged + M=1 propagation, but w=3 carries the classified "
-      "(2,2) resonance (gap 5/4 pole-adjacent, w: 3->2); freeze holds "
-      "MODULO that one classified step (scope:281-283)",
-      Fr(5, 4) == Fr(5, 4))
+      "(2,2) resonance (pdeg 2*2 = 4, dq = 5, gap 5/4 pole-adjacent, "
+      "w: 3->2); 5/4 exceeds every neutral gX <= 3/4, so when taken "
+      "pole-adjacent it IS the first death (round-3 de-tautologized)",
+      Fr(2 * 2 + 1, 2 * 2) == Fr(5, 4)
+      and Fr(5, 4) > max(gX(nu) for nu in range(2, 200) if nu % 3))
 check("B2 neutral X family at w=3: gX = (nu+1)/(2nu) over 3 ndiv nu "
       "(nu = 2 LEGAL, parity free): gX in (1/2, 3/4], max 3/4 at "
       "nu = 2",
@@ -361,10 +364,50 @@ check("OB7d td-7 regression: entry (2,3), cap 2, alpha in {0, 1/2} "
       "for odd nu >= 3 -- reproduces the promoted Case C (k=1 forces "
       "2nu | r nu + 1, k=2 forces nu | 1)",
       refused(2, 2, gA_)[0])
-check("OB7e Case B (opponent-first) refused by gap order + descent: "
-      "every opponent gap < 1/2 < gap(X) (blocks 2-4), so X's delta "
-      "reaches zero first; the promoted no-skip law (delta in N "
-      "strictly decreasing) is cited, not reproved", True)
+check("OB7e Case B (opponent-first) refused by gap order [+ CITED "
+      "no-skip descent law]: min gX strictly exceeds every opponent "
+      "one-step gap on all three entries -- 11-A: inf gX = 1/2 > "
+      "7/16; 11-B: 1/2 > 5/22; 11-C: 1/2 > 2/5",
+      Fr(1, 2) > Fr(7, 16) and Fr(1, 2) > Fr(5, 22)
+      and Fr(1, 2) > Fr(2, 5)
+      and all(gX(nu) > Fr(1, 2) for nu in range(2, 400)))
+# round-3 (sol finding 5 / grok finding 8): the c = 1 register class.
+# den(alpha_1) = 2 does NOT divide c = 1; under cap 1 every prefix step
+# has k = 1, so alpha stays HALF-INTEGRAL, and the criterion must be
+# checked on that class -- and on quarter/sixth registers left by an
+# EARLIER larger cap when the cap later shrinks (dynamic-cap lemma).
+okc1 = all((Fr(1, 2) - 1 + g).denominator > 1 for g in gA_ + gB_)
+# ENTRY-PAIRED dynamic-cap sweep: each entry's own big-cap lattice
+# against its own X-family (cross-pairing is not a real configuration
+# -- see ledger row 5: the quarter-register 3/4 against the nu = 2 gap
+# 3/4 under cap 2 WOULD escape, and no entry realizes that cell).
+okdyn = True
+for cbig, csmall_list, gaps in ((4, (1, 2), gA_), (6, (1, 2), gB_)):
+    for a in range(cbig):
+        for csm in csmall_list:
+            for g in gaps:
+                r = Fr(a, cbig) - 1 + g
+                # r <= 0: no positive death step exists -- refusal
+                okdyn &= (r <= 0 or csm % r.denominator != 0)
+# the ledger-row-5 near-miss, exhibited exactly:
+r_nm = Fr(3, 4) - 1 + Fr(3, 4)
+ok_nm = (r_nm == Fr(1, 2) and 2 % r_nm.denominator == 0
+         and not legal(Fr(2), 2) and 4 not in (1, 2, 6))
+check("OB7f dynamic-cap / register-class lemma (round 3, sol finding "
+      "5): cap 1 with the true half-integral register refuses X "
+      "(den = 2nu or 4 > 1); ENTRY-PAIRED sweep -- 11-A quarter-"
+      "lattice (from cap 4) and 11-B sixth-lattice (from cap 6) "
+      "registers against later shrunken caps {1, 2}: zero escapes "
+      "(r <= 0 rows are refusals: no positive death step)",
+      okc1 and okdyn)
+check("OB7g LEDGER ROW 5 (found by this round's own sweep): the "
+      "quarter-register 3/4 against the nu = 2 gap 3/4 under cap 2 "
+      "gives r = 1/2, k = 2 | 2 -- a WOULD-BE Case-C escape; no "
+      "entry realizes the cell: 11-A's w = 2 domain forbids even "
+      "nu_X (gcd(2,2) != 1), and 11-B's cap candidates {1,2,6} "
+      "contain no 4, so no quarter-lattice history exists there -- "
+      "the dynamic-cap lemma is sound ONLY entry-paired",
+      ok_nm)
 
 print("== 10. OB-6: closure-wide window audit (px2/px5 engines) ==")
 import os
@@ -454,38 +497,279 @@ check("OB8a the second opponent adds NO window step (same seed, menu "
       "shrunk cap is covered",
       max(Fr(2, 5), Fr(5, 14), Fr(3, 10)) < Fr(1, 2)
       and all(gcd(2, c) in (1, 2) for c in (1, 2, 4, 6)))
-check("OB8b no sibling-X tie: the second and third poles are charged "
-      "seeds (M = 2), not M = 1 carriers -- the 13-4 configuration "
-      "does not arise; nested inner-merge orders remain the ONE "
-      "law-covered perimeter clause (NF-M territory, stated in the "
-      "theorem's perimeter)", True)
+check("OB8b no sibling-X tie: the 11-C leaf M-vector is (1, 2, 2) -- "
+      "exactly one M = 1 carrier (A); both opponents are M = 2 "
+      "charged seeds, so the 13-4 sibling-X-tie configuration cannot "
+      "arise (round-3 de-tautologized: checked on the leaf data)",
+      [1, 2, 2].count(1) == 1 and all(b >= 2 for b in (2, 2)))
 
-print("== 12. OB-10: E5F / realization ==")
-check("OB10 the kill is E5F-input-free (dichotomy): a Q+E5/E5F-"
-      "realized X/opponent pair dies by the cap exhaustion (OB7b) or "
-      "the H8 v_2 mismatch (block 2); an unrealized pair is dead by "
-      "non-realization -- either horn gives emptiness; the E5F base "
-      "law n = nu_U kbar_G - nu_G kbar_U >= 1 is td-agnostic (scope "
-      "2.1) and only shrinks the realized set", True)
+print("== 12. OB-10: E5F / realization (round 3: stress witnesses) ==")
+check("OB10a [CITED dichotomy, now exercised] sol-review stress "
+      "witness 1 -- current-state mu class on 11-A: route (3,2,P=4) "
+      "-> st96 (20,16) l=2 lam=4 -> (3/2,4,P=40); with (mu_1,mu_2) = "
+      "(1,4): P_1/mu_1 = 2*5/1 = 10 = 40/4 = P_2/mu_2 -- a "
+      "synchronized CURRENT-STATE branch outside the entry-level "
+      "(1,1)/(1,M) split; its competing gap 16/40 = 2/5 < 1/2 < "
+      "gX(5) = 3/5, so the window stays empty and CAP-DEN (caps "
+      "divide gcd(4, .) -- all swept) kills it",
+      4 * 20 // 2 == 40 and Fr(2 * 5, 1) == Fr(40, 4)
+      and Fr(16, 40) == Fr(2, 5) < Fr(1, 2) < gX(5)
+      and all(c in (1, 2, 4) for c in [gcd(4, i * p) for i in (1, 2, 4)
+                                        for p in range(1, 30)]))
+check("OB10b sol-review stress witness 2 -- budget-6 E5F-admissible "
+      "route: (3,2,4) -(21,15)l2 lam4-> (4/3,3,42) -(85,35)l3 lam2-> "
+      "(2/5,5,1190), mu_2 = 5: 1190/5 = 238 = 2*119, Pi_A = 119 = "
+      "7*17 odd/legal; E5F n = 17*6 - 13*7 = 11 >= 1; route gaps "
+      "15/42 = 5/14 and 35/1190 = 1/34 both < 1/2 < gX -- inside the "
+      "kill's reach (window empty, caps swept); lam = 6 <= 9",
+      4 * 21 // 2 == 42 and 42 * 85 // 3 == 1190
+      and Fr(1190, 5) == 238 == 2 * 119 and 119 == 7 * 17
+      and all(legal(Fr(2), u) for u in (7, 17))
+      and 17 * 6 - 13 * 7 == 11 and Fr(15, 42) == Fr(5, 14) < Fr(1, 2)
+      and Fr(35, 1190) == Fr(1, 34) < Fr(1, 2) and 4 + 2 <= 9)
 
-print("== 13. THE THEOREM ==")
-check("TD11-CLASH aggregate: all three entries -- packets derived "
-      "(OB1), windows inhabited and characterized (OB4), caps "
-      "covered conservatively (OB5), X-death refused over the full "
-      "register lattice for every domain-legal X under every cap "
-      "candidate (OB7), closure-wide window audit (OB6), composition "
-      "(OB8), realization dichotomy (OB10): every synchronized td-11 "
-      "configuration dies at the tower tier, within the stated "
-      "perimeter",
-      okX and okLat and all(a[3] < a[1] for a in AUD))
-check("census implication (the td-11 census does not yet exist): any "
-      "future td-11 class-B/C census row whose configuration passes "
-      "the E5F-corrected enumeration contains a synchronized spine in "
-      "one of the three entry shapes (or fails H8 = spine-death); "
-      "the row therefore emits TOWER-DEAD -- this is the emptiness "
-      "certificate the compiler consumes, quantified over entries "
-      "with per-entry constants (caps {2,4}/{2,6}/{2}, alpha_1 "
-      "{3/2, 5/2, 3/2}, g_top {5/2, 7/2, 5/2})", True)
+print("== 13. the corrected 11-C skeleton layer (145 rows; sol finding 2) ==")
+BS3 = {0: 1, 1: 2, 2: 2}     # leaves A(M=1), B1(M=2), B2(M=2)
+TREES3 = [('direct', ('G', (('leaf', 0), ('leaf', 1), ('leaf', 2)))),
+          ('G(G(A,B1),B2)', ('G', (('G', (('leaf', 0), ('leaf', 1))),
+                                   ('leaf', 2)))),
+          ('G(G(A,B2),B1)', ('G', (('G', (('leaf', 0), ('leaf', 2))),
+                                   ('leaf', 1)))),
+          ('G(G(B1,B2),A)', ('G', (('G', (('leaf', 1), ('leaf', 2))),
+                                   ('leaf', 0))))]
+
+
+def divs(n):
+    return [d for d in range(1, n + 1) if n % d == 0]
+
+
+def sk_expand(node, corrected):
+    """Yield (edge value to parent, #mixed nodes below).  corrected: a
+    merge offers every mu_e | emitted M_G; old defect: mu_e = M_G."""
+    if node[0] == 'leaf':
+        for mu in divs(BS3[node[1]]):
+            yield mu, 0
+        return
+    _, children = node
+    opts = [list(sk_expand(ch, corrected)) for ch in children]
+    combos = [()]
+    for o in opts:
+        combos = [c + (x,) for c in combos for x in o]
+    for combo in combos:
+        mus = [x[0] for x in combo]
+        mix = sum(x[1] for x in combo) + (1 if all(m >= 2 for m in mus)
+                                          else 0)
+        for MG in divs(sum(mus)):
+            if corrected:
+                for mu_e in divs(MG):
+                    yield mu_e, mix
+            else:
+                yield MG, mix
+
+
+def sk_rows(tree, corrected):
+    """Root-level decorated rows: (mus, mix, M_root, interior)."""
+    _, children = tree
+    opts = [list(sk_expand(ch, corrected)) for ch in children]
+    combos = [()]
+    for o in opts:
+        combos = [c + (x,) for c in combos for x in o]
+    rows = []
+    for combo in combos:
+        mus = tuple(x[0] for x in combo)
+        mix = sum(x[1] for x in combo) + (1 if all(m >= 2 for m in mus)
+                                          else 0)
+        for MG in divs(sum(mus)):
+            for interior in (True, False):
+                if interior and MG == 1:
+                    continue
+                rows.append((mus, mix, MG, interior))
+    return rows
+
+
+cnt_c = {n: sk_rows(t, True) for n, t in TREES3}
+cnt_o = {n: sk_rows(t, False) for n, t in TREES3}
+check("SK1 corrected mu-independence law reproduces the scope/sol "
+      "diagnostic EXACTLY: per-hierarchy 16 + 40 + 40 + 49 = 145 "
+      "decorated rows, mixed-node rows 0 + 8 + 8 + 18 = 34",
+      [len(cnt_c[n]) for n, _ in TREES3] == [16, 40, 40, 49]
+      and [sum(1 for r in cnt_c[n] if r[1] > 0) for n, _ in TREES3]
+      == [0, 8, 8, 18])
+check("SK2 old-defect regression (mu_e = M_child conflation, "
+      "BOOK-OFFAXIS-REVIEW finding 2): 16 + 28 + 28 + 31 = 103 rows, "
+      "25 mixed -- the checked-in expansion's numbers, so the "
+      "129-row nested undercount is exactly the documented defect",
+      [len(cnt_o[n]) for n, _ in TREES3] == [16, 28, 28, 31]
+      and sum(sum(1 for r in cnt_o[n] if r[1] > 0)
+              for n, _ in TREES3) == 25)
+# classifier: nested rows are NEVER stamped dead (Rule 6); direct rows
+# get a per-row verdict under H8 = P/mu at the root merge.
+verdicts = []                # one verdict PER ROW (rows may repeat as
+for name, _ in TREES3:       # tuples across distinct inner decorations)
+    for row in cnt_c[name]:
+        mus, mix, MG, interior = row
+        if name != 'direct':
+            verdicts.append((name, row, 'OPEN'))    # nested: perimeter
+        else:
+            muA, mu1, mu2 = mus
+            if mu1 == 1 or mu2 == 1:
+                # that pair needs Pi_A = 2 Pi_B: v2 0 vs >= 1, unsat
+                verdicts.append((name, row, 'SPINE-DEAD'))
+            else:
+                verdicts.append((name, row, 'CLASH-DEAD'))  # CAP-DEN
+n_open = sum(1 for (_, _, v) in verdicts if v == 'OPEN')
+n_dead = sum(1 for (_, _, v) in verdicts if v != 'OPEN')
+check("SK3 per-row classifier (the census template, corrected per "
+      "grok finding 2): 16 direct rows all DEAD with a per-row reason "
+      "(mu = 1 on a B-edge -> H8 spine-death; mu = (1,2,2) -> "
+      "co-scaled window, CAP-DEN clash); the 129 nested rows are "
+      "stamped OPEN, NEVER TOWER-DEAD -- the Rule-6 conjunct the "
+      "round-2 census claim omitted",
+      n_dead == 16 and n_open == 129 and n_dead + n_open == 145
+      and all(v == 'OPEN' for (n, _, v) in verdicts if n != 'direct'))
+
+print("== 14. budget-9 audit record (sol/grok finding 1) ==")
+check("B9a the round-2 OB-6 audit ran px5's DEFAULT budget 5 (td-7's "
+      "td-2), not td-11's gross budget 9 -- erratum accepted; the "
+      "21 + 347 + 69 counts are budget-5 counts; perimeter clause "
+      "(iii) is corrected accordingly (round-2 claim withdrawn)",
+      5 == 7 - 2 and 9 == 11 - 1 - 1)
+check("B9b [FROZEN SIZING RECORD, this session's px5 runs -- not "
+      "re-derived in the gate]: (3,2) ladder 21/56/130/330/743 at "
+      "budgets 5..9 (matches sol-review exactly; budget 9 took 62s); "
+      "(3/2,2) sized 69/162/349/785 at budgets 5..8 (0.2/1.4/18/186s, "
+      "~10x per budget unit -- Macaulay-proxy growth ~2.2x states); "
+      "(4/3,3) is 347 at budget 5; FULL budget-9 closures of the "
+      "latter two are infeasible for px5 in-session (the scope's own "
+      "capacity warning) -- which is WHY B9d uses the cutoff audit "
+      "that needs no closure",
+      [21, 56, 130, 330, 743] == [21, 56, 130, 330, 743]
+      and [69, 162, 349, 785] == [69, 162, 349, 785])
+check("B9c the round-2 R* < p 'law' is RETIRED (falsified at budget "
+      "9): sol's reachable path (3,2) -(20,16)l2-> deg 40 "
+      "-(40,16)l4-> deg 400 at (3/4,8) carries the step "
+      "l8e0k1S1x2nu2(18,9) with ratio 9*8/18 = 4 = p; the state's "
+      "min reachable degree 400 still leaves gap 4/400 = 1/100 < 1/2 "
+      "-- the audit must be DEGREE-AWARE (ratio/min-deg), not "
+      "ratio-only",
+      4 * 20 // 2 == 40 and 40 * 40 // 4 == 400
+      and Fr(9 * 8, 18) == 4 and Fr(4, 400) == Fr(1, 100) < Fr(1, 2))
+# DEGREE-AWARE cutoff audit, run inline at budget 9 for all three
+# seeds: exact menu checks for every state first reached at
+# deg <= D* = 2*R_BOUND; states first reached above D* are LAW-SAFE
+# (every px2-grammar step has ratio dq*l/dp <= R_BOUND = 47 from the
+# engine's k <= 6, lex <= 40 caps, so gap <= 47/deg < 1/2).
+import heapq
+R_BOUND, DSTAR = 47, 94
+
+
+def b9_menu(w, M):
+    out = []
+    for (w2, M2, dl, tag) in sorted(set(px2.chain_steps(w, M))):
+        if tag.startswith('clean'):
+            nu = int(tag.split('nu')[-1])
+            D = int(tag.split('D')[1].split('n')[0])
+            n = (D - 1) // nu + 1
+            out.append((Fr(n * nu + 1, nu), Fr(nu), tag, (w2, M2), dl))
+        elif tag.startswith('st96'):
+            body = tag[5:]
+            l = int(body.split('e')[0][1:])
+            dp, dq = (int(x) for x in
+                      body.split('(')[1].rstrip(')').split(','))
+            out.append((Fr(dq * l, dp), Fr(dp, l), tag, (w2, M2), dl))
+        elif tag.startswith('pure-b'):
+            body = tag[7:]
+            l = int(body.split('e')[0][1:])
+            eps = int(body.split('e')[1])
+            E = l - eps
+            for nu in range(2, 121):
+                g2 = gcd(E, nu + 1) if E > 1 else 1
+                if g2 == M2:
+                    out.append((Fr(l * (nu + 1), eps + l * nu),
+                                Fr(eps + l * nu, l), tag, (w2, M2), dl))
+        elif tag.startswith('neutral-drop'):
+            for nu in (2, 3, 5, 7):
+                out.append((Fr(nu + 1, nu), Fr(nu), tag, (w2, M2), dl))
+    return out
+
+
+def b9_audit(seed, p, res_tag):
+    best, heap, cache, viol, core = {}, [(p, 0, seed)], {}, [], 0
+    while heap:
+        deg, lam, st = heapq.heappop(heap)
+        if any(d <= deg for (s2, l2), d in best.items()
+               if s2 == st and l2 <= lam):
+            continue
+        best[(st, lam)] = deg
+        if deg > DSTAR:
+            continue                     # law-safe by the ratio bound
+        core += 1
+        if st not in cache:
+            cache[st] = b9_menu(*st)
+        for (r, m, tag, st2, dl) in cache[st]:
+            if r / deg >= Fr(1, 2) and not (st == seed and deg == p
+                                            and tag == res_tag):
+                viol.append((st, deg, tag))
+            if lam + dl > 9:
+                continue
+            nd = deg * m
+            if nd.denominator != 1:
+                continue
+            heapq.heappush(heap, (int(nd), lam + dl, st2))
+    rb = all(r <= R_BOUND for mn in cache.values()
+             for (r, m, t, s2, d) in mn)
+    return core, len(cache), viol, rb
+
+
+b9 = {s: b9_audit(s, p, rt) for (s, p, rt) in
+      (((Fr(3), 2), 4, 'clean D3n2nu2'),
+       ((Fr(3, 2), 2), 4, None), ((Fr(4, 3), 3), 6, None))}
+check("B9d DEGREE-AWARE budget-9 window audit, ALL THREE seeds, run "
+      "inline (cutoff Dijkstra): exact menu checks on every state "
+      "first reached at deg <= 94 (cores: 12, 10, 8 states), ZERO "
+      "gaps >= 1/2 beyond 11-A's seed-level 5/8; every deeper state "
+      "is law-safe (parsed ratios max 5/2, 5/2, 7/3, all <= 47 = the "
+      "px2 grammar bound, so gap <= 47/deg < 1/2 above deg 94)",
+      all(len(v) == 0 and rb for (c, n, v, rb) in b9.values())
+      and [n for (c, n, v, rb) in b9.values()] == [12, 10, 8]
+      and Fr(47, 95) < Fr(1, 2))
+# verify the grammar caps empirically on every seed-level st96 tag
+_caps_ok = True
+for (s, p, rt) in (((Fr(3), 2), 4, 'clean D3n2nu2'),
+                   ((Fr(3, 2), 2), 4, None), ((Fr(4, 3), 3), 6, None)):
+    for (w2, M2, dl, tag) in sorted(set(px2.chain_steps(*s))):
+        if tag.startswith('st96'):
+            kk = int(tag.split('k')[1].split('S')[0])
+            xx = int(tag.split('x')[1].split('nu')[0])
+            _caps_ok &= (kk <= 6 and xx <= 40)
+check("B9e honesty rider: the budget-9 audit is a px2-MENU-SLICE "
+      "statement -- the engine inherits td-7 loop caps (k <= 6, "
+      "lex <= 40; verified on every seed-level st96 tag), which the "
+      "scope forbids a production compiler to inherit; the ratio "
+      "bound 47 = 1 + 6 + 40 is exactly that grammar's cap, so a "
+      "cap-free engine re-opens the law-safe step and is a "
+      "compiler-gap item (doc sec 13)",
+      _caps_ok and 1 + 6 + 40 == 47)
+
+print("== 15. THE THEOREM (restated at the audited tier) ==")
+check("TD11-CLASH aggregate (round-3 tier): the three entry packets, "
+      "direct hierarchies (11-A, 11-B binary; 11-C's 16 direct rows), "
+      "single-word-deep zones, px2-menu window discipline "
+      "(budget-9-audited on (3,2), budget-5..8-sized elsewhere): "
+      "every synchronized configuration in THIS class dies at the "
+      "tower tier -- X-death refused on the full register lattice "
+      "under every cap candidate incl. dynamic-cap classes, the 5/8 "
+      "intruder H8-dead, Case B gap-refused, spine-death otherwise",
+      okX and okLat and okc1 and okdyn
+      and all(a[3] < a[1] for a in AUD) and n_dead == 16)
+check("what is NOT claimed (the gap to a compiler certificate): the "
+      "129 nested 11-C rows (OPEN, SK3), multi-word deep zones "
+      "(NF-Z-dagger POLICY -- the NF-D corollary is restricted to "
+      "single-word-deep, sec 9 of the doc), the cap-free budget-9 "
+      "closure for (3/2,2)@9 and (4/3,3)@9, nu = 1 insertions and "
+      "resonance-bearing chains (NF-P), and the Q+E5/E5F refile "
+      "itself (scope: UNKNOWN) -- each stamped OPEN, never certified",
+      n_open == 129)
 
 print()
 print("=== PER-ENTRY VERDICT TABLE (entry/one-step tier, exact) ===")

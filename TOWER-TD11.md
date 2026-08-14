@@ -1,15 +1,22 @@
 # TOWER-TD11.md — entry-level clash analysis for the three td-11 entries
 
-Status: **THEOREM STATED AND MACHINE-CHECKED WITHIN ITS PERIMETER
-(2026-08-14, round 2 — obligations OB-1/4/5/6/7/8/10 discharged in
-§7, Lemma 11A-RES in §8, Theorem TD11-CLASH in §9, census
-implication in §10, near-miss ledger in §11, perimeter honesty in
-§12).** Round-1 content (§§0–5, the window verdicts) is unchanged
-and review-ready. Machine gate: `cases/tower_td11.py` (46 checks,
-exit 0; count printed) — blocks 0–5 are the round-1 window
-arithmetic; blocks 6–13 are the obligation discharges, including the
-px2/px5 closure-wide window audit (21 + 347 + 69 states) and the
-den-criterion prefix exhaustion over the full register lattice.
+Status: **THEOREM RESTATED AT THE AUDITED TIER (2026-08-14, round 3
+— dual-review errata folded: `xmodel/grok-td11-review.md`
+SOUND-WITH-ERRATA, `xmodel/sol-td11-review.md` BROKEN, agreeing
+diagnosis).** The entry-tier kill is REAL and replays (both
+reviews); round 3 corrects the three quantifier breaks: (1) the
+OB-6 audit ran budget 5, not 9 — now a budget-9 DEGREE-AWARE cutoff
+audit for all three seeds (§7.5; the `R* < p` law is retired,
+ledger row 8); (2) OB-8 was not discharged on the nested 11-C
+skeletons — the corrected 145-row layer is built (`145/34` exact,
+old-defect `103/25` regression), 16 direct rows in-theorem, **129
+nested rows OPEN** (§7.6); (3) the NF-D corollary overreached its
+own perimeter — now restricted to single-word-deep zones, with the
+two-word co-scaled families explicitly OPEN (§9). §10 is a per-row
+census TEMPLATE with the perimeter conjunct, not an emptiness
+certificate. Machine gate: `cases/tower_td11.py` (57 checks, exit
+0; count printed; ~3 min — the budget-5 census blocks dominate; the
+budget-9 cutoff audit itself is instant).
 
 Consumer discipline throughout: **H8 = `P/μ` with `μ | M`** of the
 current state (grok-nfd-review finding 1); every synchronization
@@ -55,9 +62,9 @@ The 11-A dichotomy is the new structural fact: **every chain-2 route
 either preserves `M` (then no gap ever reaches `1/2` and the clash
 runs on an empty prefix) or drops `M` (then `μ = 1` is forced and
 the `v_2` mismatch kills the synchronization)**. The scope's "next
-hard td-11 object" is dead at this tier if the promoted H8 row
-survives route realization — the first refile question of
-scope:354-355 is now the ONLY question for 11-A.
+hard td-11 object" is dead at this tier via the dichotomy: realized
+routes die by H8/CAP-DEN, unrealized ones by non-realization (§7.7);
+the residual realization work is the refile itself (perimeter (v)).
 
 ## 2. Entry 11-B — `(2,5): [1@3;2] + [3@4/3;6]`, pole top `7/2`
 
@@ -117,7 +124,7 @@ but every member's spine faces the same Case-A refusal.
 
 ## 6. The td-11 entry-clash theorem: statement prospect and obligations
 
-**PROSPECT (not yet a theorem).** *For each of 11-A, 11-B, 11-C: no
+**PROSPECT (round-1 text, kept as history; the round-3 theorem at its audited tier is §9).** *For each of 11-A, 11-B, 11-C: no
 global approximate-root ladder is compatible with any synchronized
 route. The forced death gaps put the chain-1 pole-adjacent vertex X
 above every opponent gap, the prefix menu in the window
@@ -223,40 +230,79 @@ the promoted no-skip descent law (cited); Case C is the full lattice.
 td-7 regression: the criterion reproduces the promoted Case C
 verbatim (`k=1` forces `2ν | rν+1`, `k=2` forces `ν | 1`).
 
-### 7.5 OB-6: closure-wide window audit (gate block 10, px2/px5)
+### 7.5 OB-6: multistep window audit — **CORRECTED IN ROUND 3**
+(gate blocks 10 + 14; sol/grok finding 1 folded)
 
-The td-7 enumeration engines close all three opponent seeds:
-`(3,2)` → 21 states, `(4/3,3)` → 347, `(3/2,2)` → 69. Over EVERY
-state and EVERY menu step (parametric families included):
+**Erratum accepted.** The round-2 audit ran `px5.close_with_cells`
+at its DEFAULT budget 5 (td-7's `td−2`), not td-11's gross budget 9;
+`21 + 347 + 69` are budget-5 counts, and perimeter clause (iii)
+claimed the opposite. Additionally the round-2 "ratio law
+`R* < p`" is **RETIRED** — falsified at budget 9 by Sol's reachable
+path `(3,2) → deg 40 → deg 400 at (3/4,8)` carrying a step of ratio
+`9·8/18 = 4 = p` (its gap is `4/400 = 1/100`, so it is not a window
+escape — but the law as stated was false; the audit must be
+degree-aware).
 
-* **growth law:** every step multiplier `dp/l >= 2`, so a depth-`j`
-  step sees `deg >= p·2^{j−1}`;
-* **ratio law:** the max step ratio `R* = dq·l/dp` per closure is
-  `5/2, 3, 5/2 < p = 4, 6, 4` — hence EVERY depth-`>=2` step gap is
-  `<= R*/(2p) < 1/2`. Depth-1 gaps are the frozen §3.2 menus
-  (`< 1/2` except 11-A's `5/8`).
-* **resonance census:** at-seed resonances are exactly `D3n2nu2` at
-  `(3,2)` (the `5/8`) and NONE at the other two seeds; all deeper
-  copies (`D3n2nu2`, `D5n2nu4`, `D4n2nu3`) fall under the
-  depth-`>=2` law.
-* **chain-1 engine audit:** the zero-cost clean `n>=2` menu at
-  `(2,1)` is EMPTY (the L-A freeze, engine-confirmed) and at `(3,1)`
-  is exactly `{D3n2nu2}` (11-B's classified `5/4`).
+**The corrected budget-9 audit (gate B9d, runs inline).** A cutoff
+Dijkstra over actual degrees at budget 9, for ALL THREE seeds:
 
-So the ONLY object anywhere in the three multistep closures with a
-gap `>= 1/2` is 11-A's seed-level `5/8` — the round-1 window verdicts
-are closure-stable, not just one-step facts.
+* exact menu checks for every state first reached at
+  `deg <= D* = 94`: cores of 12, 10, 8 states; **zero gaps `>= 1/2`
+  beyond 11-A's seed-level `5/8`**;
+* every state first reached above `D*` is LAW-SAFE: every step in
+  px2's grammar has ratio `dq·l/dp <= 47 = 1 + k_max + lex_max`
+  (`k <= 6`, `lex <= 40`, verified on every parsed tag; parsed
+  maxima are `5/2, 5/2, 7/3`), so its gap is `<= 47/deg < 1/2`.
 
-### 7.6 OB-8: three-pole composition, 11-C (gate block 11)
+This needs NO full closure, so it covers `(3/2,2)` and `(4/3,3)` at
+budget 9 as well — where full `px5` closures are session-infeasible
+(frozen sizing record, gate B9b: `(3,2)` ladder `21/56/130/330/743`
+matching the sol-review; `(3/2,2)` `69/162/349/785` at budgets 5–8
+with ~10× time growth per unit; `(4/3,3)` `347` at budget 5).
 
-The second opponent adds NO window step (same seed, menu max
-`2/5 < 1/2 < gap(X)`) and only SHRINKS the joint cap (intersection
-of simultaneously-alive caps — tower-N3 kernel); the exhaustion is
-divisor-closed (`c = 1` swept), so every shrunk cap is covered. No
-sibling-X tie: the second and third poles are charged `M = 2` seeds,
-not `M = 1` carriers. Nested inner-merge orders (an inner merge
-BEFORE the candidate clash, creating states outside the audited
-closures) are the one law-covered perimeter clause — §12.
+**Honesty rider (gate B9e):** the whole audit is a **px2-MENU-SLICE**
+statement — the engine inherits td-7's `k <= 6, lex <= 40` loop caps,
+which the scope forbids a production compiler to inherit; the ratio
+bound `47` is exactly that grammar's cap. A cap-free engine re-opens
+the law-safe step. That is a compiler-gap item (§13), stated, not
+hidden. The budget-5 blocks (round-2 gate block 10: growth `>= 2`,
+resonance censuses, chain-1 menus at `(2,1)`/`(3,1)`) remain valid
+budget-5-slice facts.
+
+### 7.6 OB-8: three-pole composition, 11-C (gate blocks 11 + 13) —
+**PARTIAL: direct orders only (round 3; sol finding 2 folded)**
+
+Round 3 builds the corrected decorated skeleton layer with the
+μ-independence law (an inner merge keeps its emitted `M_child`; the
+next edge independently chooses `μ_e | M_child` — the documented
+`expand` defect repaired). It reproduces the scope/sol diagnostic
+EXACTLY: `16 + 40 + 40 + 49 = 145` decorated rows, mixed-node rows
+`0 + 8 + 8 + 18 = 34`; and the old-defect law reproduces the
+checked-in `103/25` (gate SK1/SK2 — both regressions).
+
+* **The 16 direct rows are in-theorem**, each with a per-row verdict:
+  `μ = 1` on a B-edge makes that pair's `P/μ` equalization unsat
+  (`Pi_A = 2·Pi_B`, `v_2` 0 vs `>= 1`) — H8 spine-death; `μ =
+  (1,2,2)` gives the co-scaled inhabited window — CLASH-dead by
+  CAP-DEN (the second opponent adds no window step, menu max
+  `2/5 < 1/2 < gap(X)`, and only shrinks the joint cap; the
+  exhaustion is divisor-closed and dynamic-cap-checked, so every
+  shrunk cap and register class is covered). No sibling-X tie
+  (leaf M-vector `(1,2,2)`: exactly one `M = 1` carrier).
+* **The 129 nested rows are OPEN** — stamped so by the gate
+  classifier (SK3), NEVER `TOWER-DEAD`. Two distinct reasons:
+  `G(G(A,B1),B2)` / `G(G(A,B2),B1)` put the clash inside an inner
+  merge with a rootward sibling (the nested-TERM gap, port
+  obligation 11); `G(G(B1,B2),A)` makes the opponent a merged chart
+  whose post-merge menu is NF-M-gated. The 34 mixed-node rows
+  (`all μ_e >= 2` at some node) are Sol's concrete printed-tier
+  witnesses, e.g. `Gout(Gin(B1,B2),A)` with `M_in = 4 | (2+2)`,
+  `μ(inner) = 2`, `M_out = 3 | (2+1)`.
+
+OB-8 is therefore NOT fully discharged: the theorem's 11-C quantifier
+is the direct hierarchy (16/145 rows); nested composition needs a
+global-ladder restriction lemma or per-order first-death enumeration
+(§13).
 
 ### 7.7 OB-10: E5F / realization (gate block 12)
 
@@ -284,23 +330,29 @@ of the resonance (`5/(8A) < 1/2`) never re-enter any window. ∎
 
 ## 9. Theorem TD11-CLASH
 
-**Theorem (entry tier, within the §12 perimeter).** *For each td-11
-L6-surviving entry `E ∈ {11-A, 11-B, 11-C}` with its derived packet
-(§7.1): every synchronized configuration — all `μ`-assignments under
-`μ | M`, every stack `Pi` in the co-scaling window (including the
-`Pi = 5^k` deep-word family and arbitrary neutral insertions within
-the NF-D/clash perimeter), every E5F-admissible realization — dies
-at the tower tier. Explicitly: the global ladder's death order
-reaches the entry's pole-adjacent X (neutral `gap(X) = (ν_X+1)/(2ν_X)`
-over the domain-legal `ν_X`, or 11-B's resonant `X = 5/4`) with
-every competing object below `1/2` (§7.5), possibly after a prefix
-of cap-legal steps; and the X-death step is REFUSED —
-`den(alpha_m − 1 + gap(X))` divides no cap candidate for any lattice
-register `alpha_m` (§7.4, Lemma CAP-DEN) — while the sole in-window
-intruder (11-A's `5/8`) is H8-dead (Lemma 11A-RES) and
-non-synchronized routes are spine-dead (§7.2). Configurations
-extending any such spine by neutral words of any depth — in
-particular the NF-D-round-2 `Pi = 5^k` family — die with it.*
+**Theorem (round-3 tier: entry packets, DIRECT hierarchies,
+single-word-deep zones, px2-menu window discipline, within the
+corrected §12 perimeter).** *For each td-11 L6-surviving entry
+`E ∈ {11-A, 11-B, 11-C}` with its derived packet (§7.1), restricted
+to the direct hierarchies (11-A, 11-B binary; 11-C's 16 direct
+decorated rows of §7.6) and to configurations whose deep zone is
+single-word: every synchronized configuration — all `μ`-assignments
+under `μ | M` including current-state classes (§7.7 witnesses),
+every stack `Pi` in the co-scaling window, every E5F-admissible
+realization — dies at the tower tier. Explicitly: the global
+ladder's death order reaches the entry's pole-adjacent X (neutral
+`gap(X) = (ν_X+1)/(2ν_X)` over the domain-legal `ν_X >= 2` — the
+X-interval `(1/2, 2/3]` / `(1/2, 3/4]`, which excludes `ν = 1` — or
+11-B's resonant `X = 5/4`) with every competing object below `1/2`
+(§7.5, budget-9 degree-aware audit on the px2-menu slice); and the
+X-death step is REFUSED — `den(alpha_m − 1 + gap(X))` divides no
+cap candidate for any lattice register `alpha_m`, including the
+dynamic-cap register classes (§7.4, Lemma CAP-DEN + OB7f) — while
+the sole in-window intruder (11-A's `5/8`) is H8-dead (Lemma
+11A-RES) and non-synchronized routes are spine-dead (§7.2).
+Configurations extending such a spine by a neutral word whose depth
+keeps the deep zone single-word — in particular every single-tail
+truncation of the `Pi = 5^k` family — die with it.*
 
 Per-entry constants:
 
@@ -311,32 +363,61 @@ Per-entry constants:
 | 11-C | `(2,3)`, `3/2`, `5/2` | `{1,2}` | `(ν+1)/(2ν)`, `ν` odd | none |
 
 *Proof assembly:* §7.1 (packets) + §7.2 (synchronization dichotomy)
-+ §7.5 (no competing object at or above `1/2` anywhere in the
-closures, so X is reached in gap order with at most cap-legal
-prefixes — Case B refused by descent) + §7.4 (X-death refused over
++ §7.5 (no competing object at or above `1/2` anywhere on the
+budget-9 px2-menu slice — exact core + grammar bound — so X is
+reached in gap order with at most cap-legal prefixes; Case B refused
+by descent) + §7.4 (X-death refused over
 the full register lattice under every cap candidate — Cases A and C)
 + §8 (the intruder) + §7.6 (third pole only shrinks caps, adds no
 window step) + §7.7 (realization dichotomy). ∎ within §12.
 
-**Corollary (NF-D closure for td-11).** The td-11 neutral-depth
-question (NF-D: `D` OPEN, `S` infinite) is closed entry-wise: every
-neutral word of every depth extends a clashed spine and is dead. The
-depth/census circularity is broken without a depth cap.
+**Corollary (NF-D closure for td-11 — RESTRICTED to the §12
+perimeter, round 3; sol finding 3 folded).** *For every synchronized
+configuration whose deep zone (below `theta*`) is SINGLE-WORD, of any
+depth, the clash kills the spine and the word with it.* The unbounded
+co-scaled families (`Pi = 5^k` on BOTH poles at large `k`) eventually
+have sub-`theta*` tails on both chains simultaneously — that is
+multi-word deep-zone coexistence, which is POLICY NF-Z† and perimeter
+clause (ii): **excluded, OPEN, not closed by this corollary.** The
+td-11 NF-D depth question remains OPEN exactly on that two-word
+slice (as `cases/nfd_check.py` continues to print). Remark: the
+X-refusal argument itself never reads the deep zone (all deep deaths
+occur after X in gap order), so a future cross-branch decoupling
+lemma for two-word deep zones would lift the restriction verbatim;
+until it exists, Rule 6 applies. Shallow co-scaled pairs (at most one
+tail below `theta*`) ARE covered. The depth/census circularity is
+broken on the single-word-deep slice without a depth cap.
 
-## 10. Census implication (the td-11 census does not yet exist)
+## 10. Census template (round 3 — NOT an emptiness certificate; grok
+finding 2 / sol finding 4 folded)
 
-The theorem operates at the entry/configuration tier. What the
-eventual compiler consumes: **any td-11 class-B/C census row whose
-configuration passes the E5F-corrected enumeration discipline
-contains a synchronized spine in one of the three entry shapes (or
-fails H8, which is spine-death); the row therefore emits TOWER-DEAD
-with certificate = (entry id, packet constants, cap candidate, the
-CAP-DEN refusal instance or Lemma 11A-RES).** That statement — not a
-cell count — is the emptiness certificate: it is quantified over
-entries with per-entry constants and is independent of how many rows
-the census will eventually have. A census row that CANNOT be mapped
-to one of the three shapes is outside the theorem and must be
-reported, not certified (Rule 6).
+The td-11 census does not exist (the Q+E5/E5F refile is UNKNOWN in
+the scope), so nothing here certifies an unenumerated book. What the
+eventual compiler consumes is a **per-row classifier template**, and
+its condition has THREE conjuncts:
+
+```text
+stamp TOWER-DEAD(entry id, packet constants, cap candidate,
+                 CAP-DEN instance or Lemma 11A-RES or spine-death)
+  IFF  (a) the row maps to one of the three entry packets, AND
+       (b) the row's hierarchy/decoration is in the audited class
+           (11-A, 11-B binary; 11-C direct — the 16 rows of SK3), AND
+       (c) the configuration is inside the corrected §12 perimeter
+           (single-word-deep, px2-menu window discipline, no nu = 1,
+           no resonance-bearing chain, budget within the audited
+           horizon);
+  ELSE stamp OPEN (Rule 6) — in particular ALL 129 nested 11-C rows,
+       every multi-word-deep configuration, and every row that fails
+       to map.
+```
+
+The gate implements exactly this classifier on the 145-row layer and
+verifies it never stamps a nested row dead (SK3). Conjunct (c) is
+what the round-2 text omitted; a compiler implementing the round-2
+sentence would have stamped nested rows §12 forbids. The mapping
+claim in (a) is a per-row check, not a theorem — a future compiler
+can emit decorations that are labelled 11-C and are not in the
+audited class; those fall to (b)'s OPEN.
 
 ## 11. Near-miss ledger (where a hostile reviewer should push)
 
@@ -346,40 +427,54 @@ reported, not certified (Rule 6).
 | 2 | 11-B, `ν_X = 2`, cap `6`: `ν | c²` (Lemma CAP-DEN's necessary condition) PASSES | the 2-adic part: `den((2a−3)/12) ∈ {4,12}`, never `| 6` | OB7c |
 | 3 | 11-A, cap `4`: the prefix menu is NONEMPTY (`k = 4` rows exist arithmetically, unlike td-7's `k|2` menu) | the exhaustion is menu-independent (α-lattice superset); every lattice register still refuses X | OB7a/b |
 | 4 | 11-A, `ν_X = 3`: the `5/8` intruder is NOT in the window (`2/3 > 5/8`) — the kill must not cite Lemma 11A-RES there | it doesn't: `ν_X = 3` dies by CAP-DEN directly (`3 ∤ 16`) | OB7b/c |
+| 5 | **(round 3, found by our own sweep)** quarter-register `3/4` vs the `ν = 2` gap `3/4` under cap `2`: `r = 1/2`, `k = 2 \| 2` — a genuine Case-C escape shape | no entry realizes the cell: 11-A's `w = 2` domain forbids even `ν_X`; 11-B's cap set `{1,2,6}` contains no `4`, so no quarter-lattice register exists there. The dynamic-cap lemma is sound ONLY entry-paired | OB7g |
+| 6 | `(c, ν) = (4, 2)`: `ν \| c²` and the den test passes shapes | 11-A domain (odd `ν` at `w = 2`); 11-B has no cap 4 (grok finding 7) | OB7b |
+| 7 | `ν_X = 1`: `gap = 1`, `r = 3/2 − 1 + 1 = 3/2`, `k = 2` divides every even cap — a Case-A escape shape | `gap = 1` lies outside every X-interval (`(1/2, 2/3]` / `(1/2, 3/4]`); `ν = 1` insertions are NF-P (§12(iv)). The theorem line now says `ν_X >= 2` explicitly (grok finding 5) | — |
+| 8 | budget-9 state `(3/4, 8)` carries a step of ratio `4 = p` (Sol's path), falsifying the round-2 `R* < p` law | min reachable degree `400` ⇒ gap `1/100`; the corrected audit is degree-aware (exact core `deg <= 94` + grammar bound `47`) | B9c/B9d |
 
-These four exclusions are exact and each is one arithmetic fact away
-from an escape; they are the load-bearing edges of the theorem.
+These eight exclusions are exact and each is one arithmetic fact away
+from an escape; they are the load-bearing edges of the theorem. Row 5
+is this round's own addition — found by running the review-demanded
+sweep, not by a reviewer.
 
 ## 12. Perimeter honesty (machine-checked vs law-covered)
 
-**Machine-checked (blocks 0–13, 46 rows):** the domain law against
-the scope menus; the window arithmetic; packet derivations with td-7
-regression; H8 windows under `P/μ` (inhabited + unsat branches); cap
-candidates including realized even `P_pre` at 11-A; the α-lattice
-lemma and the full den-criterion exhaustion (every cap × residue ×
-domain-legal X, plus algebraic ν-closure); the closure-wide
-growth/ratio laws and resonance censuses over all 437 engine states;
-the chain-1 zero-cost menus; Lemma 11A-RES's `v_2` computation over
-domain stacks; the composition cap-shrink arithmetic.
+**Machine-checked (round-3 gate, 57 rows; the literal-`True` rows of
+round 2 are replaced or [CITED]-labelled per grok finding 3):** the
+domain law against the scope menus; the window arithmetic; packet
+derivations with td-7 regression; H8 windows under `P/μ` (inhabited +
+unsat branches) including Sol's two current-state stress witnesses;
+cap candidates including realized even `P_pre` at 11-A; the α-lattice
+lemma, the full den-criterion exhaustion (every cap × residue ×
+domain-legal X, algebraic ν-closure), the entry-paired dynamic-cap
+register classes, and the row-5 near-miss; the budget-5 closure
+blocks (relabelled as budget-5-slice facts); the budget-9
+degree-aware cutoff audit for all three seeds with the grammar-cap
+verification; the corrected M′ law (`gcd(l, dq)`); the 145-row
+skeleton layer with both regressions (`145/34` corrected, `103/25`
+old-defect) and the per-row classifier; Lemma 11A-RES's `v_2`
+computation over domain stacks.
 
 **Law-covered (cited promoted results, not re-proved here):** the
 ladder calculus itself (delta descent, no-skip, death equations, Z1);
-the L-A kernel (uncharged + `M = 1` propagation on merge-free
-branches); Prop 4.2(iii)/8.1 for the X-side `k | 2` (the exhaustion
-is robust to its failure via the conservative caps); the promoted
-`H8_EQUAL_QUOTIENT_VP_MISMATCH` certificate; the E5F base law; px2's
-menu completeness per state (the promoted enumeration engine — the
-same trust td-7's book stands on).
+the L-A kernel; Prop 4.2(iii)/8.1 for the X-side `k | 2` (the
+exhaustion is robust to its failure via the conservative caps); the
+promoted `H8_EQUAL_QUOTIENT_VP_MISMATCH` certificate; the E5F base
+law; px2's menu completeness per state ON ITS OWN GRAMMAR (the same
+trust td-7's book stands on — see clause (iii)).
 
 **Perimeter clauses (outside the theorem, Rule 6 on their slice):**
-(i) nested inner-merge orders that create chart states BEFORE the
-candidate clash outside the audited closures (NF-M territory; 11-C's
-145-row nested skeleton is enumerated but not state-audited here);
-(ii) multi-word deep-zone coexistence (POLICY NF-Z†, unchanged);
-(iii) the budget horizon: closure audits ran the gross budget 9
-discipline of the scope tables; (iv) `nu = 1` insertions and
-resonance-bearing chains stay NF-P's. A configuration reaching any
-clause is reported OPEN, never certified.
+(i) the 129 NESTED 11-C rows (SK3 stamps them OPEN; the two nested
+flavors and the 34 mixed-node rows are enumerated, not audited);
+(ii) multi-word deep-zone coexistence (POLICY NF-Z†; the §9
+corollary is restricted accordingly); (iii) the engine horizon: all
+multistep statements are px2-MENU-SLICE statements (`k <= 6`,
+`lex <= 40` inherited caps; budget-9 audited via the cutoff design,
+budget-5 closures for the census blocks; full budget-9 closures of
+`(3/2,2)` and `(4/3,3)` are session-infeasible — sized, recorded);
+(iv) `nu = 1` insertions and resonance-bearing chains stay NF-P's;
+(v) the Q+E5/E5F refile itself (scope: UNKNOWN). A configuration
+reaching any clause is reported OPEN, never certified.
 
 ## 13. What td-13 needs (forward pointer)
 
@@ -397,17 +492,23 @@ intruders of the `(3,2;4)`-type seeds classified per entry.
 ## 14. Reproduction
 
 ```bash
-python3 cases/tower_td11.py    # 46 checks, exit 0 (count printed; ~3 min,
-                               # the (4/3,3) closure dominates)
+python3 cases/tower_td11.py    # 57 checks, exit 0 (count printed; ~3 min,
+                               # the budget-5 (4/3,3) closure dominates)
 ```
 
-Blocks: 0 domain law vs scope §3.2; 1 resonance identities; 2–4 the
-per-entry round-1 window verdicts; 5 cross-entry μ-discipline and
-the NF-D byproduct; 6 OB-1 packets; 7 OB-4 H8 windows; 8 OB-5 caps;
-9 OB-7 den-criterion exhaustion (α-lattice lemma, full sweep,
-CAP-DEN algebra, td-7 regression, Case B); 10 OB-6 closure audit
-(growth/ratio laws, resonance census, chain-1 menus); 11 OB-8
-composition; 12 OB-10 realization dichotomy; 13 the theorem
-aggregate + census implication. Companion gates unchanged:
+Blocks: 0 domain law vs scope §3.2; 1 resonance identities (round-3
+M′ = gcd(l, dq) fix); 2–4 the per-entry round-1 window verdicts
+(B1 de-tautologized); 5 cross-entry μ-discipline and the NF-D
+byproduct; 6 OB-1 packets; 7 OB-4 H8 windows; 8 OB-5 caps; 9 OB-7
+den-criterion exhaustion (α-lattice lemma, full sweep, CAP-DEN
+algebra, td-7 regression, Case-B gap dominance, entry-paired
+dynamic-cap classes OB7f, ledger row 5 OB7g); 10 OB-6 budget-5
+census blocks (relabelled); 11 OB-8 direct-only composition; 12
+OB-10 with Sol's two current-state stress witnesses; 13 the
+corrected 145-row skeleton layer + per-row classifier (SK1–SK3); 14
+the budget-9 record: erratum, frozen sizing ladders, R*-law
+retirement, the inline degree-aware cutoff audit (B9d), grammar-cap
+rider; 15 the theorem aggregate at the audited tier + the
+not-claimed list. Companion gates unchanged:
 `cases/nfd_check.py` (22), `cases/nfz_check.py` (39),
 `cases/tower_check.py` (promoted td-7 book). No git commit.
