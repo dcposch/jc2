@@ -435,3 +435,6 @@
   LIVE blockers: M_U=4 arrival + free-characteristic predecessor family unexamined
   (Sol f.3), schema reconciliation (f.2). Agent extending exhaustion; cell-kill
   promotion ON HOLD until Sol re-review. Screens: caps 03:43 PDT.
+- 2026-08-14 ~01:05: FIRST CELL-LEVEL TOWER KILL PROMOTED — (9,15,7,3)@2 dead
+  (triple-review convergence, Sol final CONFIRMED-KILL). td-7: 16 live cells.
+  Rollout planner next. Screens: caps ~03:43.

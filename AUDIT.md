@@ -697,3 +697,13 @@ unconditional under the filed perimeter; the 2-cell sub-book requires
 CONJECTURE U_7C (nu_F = nu_G on relevant case-III edges) — genuinely
 new, unproven, unrefuted (an exact non-Keller model permits inequality);
 no cheap empirical discriminator exists (review finding 5).
+
+## First cell-level tower kill (2026-08-14)
+(9,15,7,3)@mu0=2 of the td-7 §11a book: DEAD at the tower tier (no global
+Prop 4.2 ladder; level-1 clash, terminal-independent). Adversarial history
+preserved in full: Grok SOUND-WITH-ERRATA -> Case C repair; Sol BROKEN
+(same gap, pre-repair snapshot) -> M_U=4/free-characteristic extension
+(universal nu_X>=2 refactor) -> Sol STILL-BROKEN (in-perimeter neutral
+insertions, real gap) -> N1-N4 closure (Sol's sketch formalized) -> Sol
+CONFIRMED-KILL. Artifacts: TOWER-9-15.md, cases/towers/t9_15_{direct,
+trunk}.json, cases/tower_check.py (696 gates). Book: 17 -> 16 live cells.

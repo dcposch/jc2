@@ -1,5 +1,16 @@
 # TOWER-9-15.md — tower certificates for the (9,15,7,3)@mu0=2 completions
 
+> **STATUS: PROMOTED 2026-08-14 — CELL-LEVEL TOWER KILL.** The
+> (9,15,7,3)@mu0=2 cell of the td-7 §11a book is dead at the tower tier:
+> both completions (direct + trunk), all arrivals (M_U=2 and 4), all
+> realizations (free-characteristic + arbitrary finite legal neutral
+> insertion stacks), within the §9 filed-route perimeter. Review chain:
+> Grok SOUND-WITH-ERRATA (xmodel/grok-tower-review.md; errata applied),
+> Sol BROKEN -> STILL-BROKEN -> **CONFIRMED-KILL** (sol-tower-review.md,
+> sol-tower-rereview.md, sol-tower-final.md) — each round found a real
+> gap (Case C, M_U=4/free-char, neutral insertions), each closed by
+> machine-checked exhaustion. Gates 696/696, 14/14 perturbation controls.
+
 Status: **MILESTONE 1 EXECUTED (2026-08-13/14); direct-route kill
 REVIEWED SOUND-WITH-ERRATA (`xmodel/grok-tower-review.md`), errata
 folded in (Case C §3, trunk §7); Sol reviews triaged: `sol-tower-
