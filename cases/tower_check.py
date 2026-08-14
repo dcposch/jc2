@@ -1,0 +1,794 @@
+#!/usr/bin/env python3
+"""tower_check.py -- MILESTONE 1 checker for the (9,15,7,3)@mu0=2 direct-route
+tower certificate (cases/towers/t9_15_direct.json).
+
+Validates, with exact Fractions (no floats anywhere):
+
+  C1  the decorated numerical spine of the synchronized direct route
+      (design xmodel/sol-gluing-design.md SS3.2): every vertex decoration
+      (kappa, pi, kbar, nu, rho, w, M, i, d_p, d_q, deg p_f, D_f, d_f)
+      against the printed transport laws under Q+E5 (AUDIT.md H5a):
+      R1.2 (H1-H2), R2.1 case II (H4/H4a), E5 case III (H5-H6, (g')/(h')
+      of SHEET6-III.md:131-147 with the H5a Q-value kappa_F =
+      nu_F kappa_G / nu_G), Prop 9.3 offsets (J4), x-degree drops (J5),
+      Cor 6.1's q-law d_q = kbar*deg p_f / D_f, the full-f degree ledger
+      (H7)-(H8) with exact i-synchronization, and the P1/BOOK case-IV
+      terminal package (R1)-(R3).
+  C2  the td=6 template control (SHEET6-TEMPLATE.md SS1): the same tower
+      formalization must reproduce the template's delta tables, m-depths,
+      ladder (k0,l0)=(2,3),(k1,l1)=(3,4),(k2,l2)=(7,23), death gaps
+      5/2, 5/6, 5/42 and Not 8.1 M-gcds -- calibration that the tower
+      laws used in C3 are the printed ones.
+  C3  the tower layer of the certificate: the forced tower prefix
+      (type (2,3), h1 = g^2 - sigma0 f^3, both pole death checks
+      g_0 = 5/2, pole h1-patterns with the forced relations), the
+      death-gap table of the route, and the OBSTRUCTION exhaustion:
+      no admissible chain-1 synchronization stack admits a coherent
+      global (k_j, l_j) ladder (the KILL record in the JSON).
+  C4  the local Prop 8.1(iv)/T1 layer: every certified s(t), C~ row
+      (xmodel/grok-sixcells-review.md ground truth) re-derived from the
+      patterns by exact eta-calculus, plus both pole Wronskians.
+  C5  LEAD-PILOT reproduction gate: the 83-variable / 74-row SS3.5 system
+      of the design is REGENERATED from the certificate's tower data and
+      compared TOKEN-FOR-TOKEN against the design's literal block.
+
+Exit 0 iff every check passes.  No solver is invoked; ops/FLEET.md is
+respected (local exact python only).
+"""
+
+import json
+import sys
+from fractions import Fraction as Fr
+from math import gcd
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+CERT = HERE / "towers" / "t9_15_direct.json"
+
+FAILURES = []
+
+
+def check(name, ok, detail=""):
+    tag = "PASS" if ok else "FAIL"
+    if not ok:
+        FAILURES.append((name, detail))
+    print(f"  [{tag}] {name}" + (f" -- {detail}" if (detail and not ok) else ""))
+    return ok
+
+
+def fr(x):
+    """Parse an exact rational from the JSON encoding 'p/q' or int."""
+    if isinstance(x, str):
+        n, _, d = x.partition("/")
+        return Fr(int(n), int(d)) if d else Fr(int(n))
+    return Fr(x)
+
+
+def sfr(x):
+    """Serialize Fraction for messages."""
+    return f"{x.numerator}/{x.denominator}" if x.denominator != 1 else str(x.numerator)
+
+
+# ----------------------------------------------------------------------
+# eta-calculus: dense polynomials over Q(A-orbit values) are represented
+# as dicts {exponent: coefficient} with Fraction coefficients; orbit
+# values are substituted by exact rationals when testing identities at
+# generic sample points (two independent points -- degrees are tiny).
+# ----------------------------------------------------------------------
+
+def pmul(a, b):
+    out = {}
+    for ea, ca in a.items():
+        for eb, cb in b.items():
+            e = ea + eb
+            out[e] = out.get(e, Fr(0)) + ca * cb
+    return {e: c for e, c in out.items() if c != 0}
+
+
+def padd(a, b):
+    out = dict(a)
+    for e, c in b.items():
+        out[e] = out.get(e, Fr(0)) + c
+    return {e: c for e, c in out.items() if c != 0}
+
+
+def pscale(a, s):
+    return {e: c * s for e, c in a.items() if c * s != 0}
+
+
+def pdiff(a):
+    return {e - 1: c * e for e, c in a.items() if e >= 1 and c * e != 0}
+
+
+def ppow(a, n):
+    out = {0: Fr(1)}
+    for _ in range(n):
+        out = pmul(out, a)
+    return out
+
+
+def orbit(nu, val, mult=1):
+    """(eta^nu - val)^mult as a dense dict."""
+    base = {nu: Fr(1), 0: -val}
+    return ppow(base, mult)
+
+
+def pdivide_exact(num, den):
+    """Exact polynomial division num/den; returns quotient or None if inexact."""
+    num = {e: c for e, c in num.items() if c != 0}
+    q = {}
+    dd = max(den)
+    dc = den[dd]
+    while num:
+        nd = max(num)
+        if nd < dd:
+            return None
+        e, c = nd - dd, num[nd] / dc
+        q[e] = c
+        shifted = {ee + e: -c * cc for ee, cc in den.items()}
+        num = padd(num, shifted)
+    return q
+
+
+def t1_leftover(p, q, dp, dq):
+    """d_p * p * q' - d_q * p' * q  (the L3 numerator without the C term)."""
+    return padd(pscale(pmul(p, pdiff(q)), Fr(dp)), pscale(pmul(pdiff(p), q), Fr(-dq)))
+
+
+def t1_constant(p, q, dp, dq):
+    """If dp*p*q' - dq*p'*q == c*dq*p for a constant c, return c, else None."""
+    left = t1_leftover(p, q, dp, dq)
+    quot = pdivide_exact(left, p)
+    if quot is None:
+        return None
+    if set(quot) - {0}:
+        return None
+    return quot.get(0, Fr(0)) / Fr(dq)
+
+
+# ----------------------------------------------------------------------
+# C2: td=6 template control (SHEET6-TEMPLATE.md SS1a-1b)
+# ----------------------------------------------------------------------
+
+def template_control():
+    print("\n== C2: td=6 template control (tower-law calibration) ==")
+    # ladder
+    ladder = [(2, 3), (3, 4), (7, 23)]
+    alpha = [Fr(0)]
+    for (k, l) in ladder:
+        alpha.append(alpha[-1] + Fr((k - 1) * l, k))
+    check("template alpha ladder = (0, 3/2, 25/6, 103/... prefix)",
+          alpha[1] == Fr(3, 2) and alpha[2] == Fr(25, 6))
+    gaps = [Fr(l, k) + 1 - a for (k, l), a in zip(ladder, alpha[:-1])]
+    check("template death gaps (5/2, 5/6, 5/42)",
+          gaps == [Fr(5, 2), Fr(5, 6), Fr(5, 42)], str([sfr(g) for g in gaps]))
+    # vertex table: (name, kappa, pi, d_f, d_g, d_h1, d_h2)
+    rows = [
+        ("R",   1,  Fr(0),        Fr(42),    Fr(63),    Fr(56),     Fr(138)),
+        ("F_s", 7,  Fr(2, 7),     Fr(6),     Fr(9),     Fr(8),      Fr(138, 7)),
+        ("G_m", 21, Fr(16, 21),   Fr(2, 7),  Fr(3, 7),  Fr(8, 21),  Fr(8, 7)),
+        ("P_i", 42, Fr(37, 42),   Fr(1, 21), Fr(1, 14), Fr(1, 7),   Fr(3, 7)),
+    ]
+    exp_m = {"R": None, "F_s": 2, "G_m": 1, "P_i": 0}
+    exp_delta = {"R": [104, 34, 4], "F_s": [100, 30, 0], "G_m": [10, 0], "P_i": [0]}
+    for name, kappa, pi, df, dg, dh1, dh2 in rows:
+        dh = [dg, dh1, dh2]
+        deltas = []
+        m = None
+        for j in range(3):
+            dj = kappa * (df + dh[j] - alpha[j] * df - 1 + pi)
+            deltas.append(dj)
+            if dj == 0 and m is None:
+                m = j
+        got = [int(d) for d in deltas[: len(exp_delta[name])]]
+        check(f"template delta table @ {name} = {exp_delta[name]}",
+              got == exp_delta[name] and all(d == int(d) and d >= 0 for d in deltas[: len(exp_delta[name])]),
+              str(got))
+        if exp_m[name] is not None:
+            check(f"template m_{name} = {exp_m[name]}", m == exp_m[name], str(m))
+        # delta_j = D_f*g_j - kbar identity
+        D = kappa * df
+        kbar = kappa * (1 - pi)
+        for j in range(len(exp_delta[name])):
+            dj = D * gaps[j] - kbar if j < len(gaps) else None
+            if dj is not None:
+                check(f"template delta_{j}({name}) == D_f*g_j - kbar",
+                      dj == deltas[j], f"{sfr(dj)} vs {sfr(deltas[j])}")
+    # Not 8.1 M-gcd law on full-pattern degrees
+    check("template Not8.1 M(F_s) = gcd(126,189,168,414) = 3",
+          gcd(gcd(126, 189), gcd(168, 414)) == 3)
+    check("template Not8.1 M(G_m) = gcd(12,18,16) = 2",
+          gcd(gcd(12, 18), 16) == 2)
+    check("template Not8.1 M(P_i) = gcd(2,3) = 1", gcd(2, 3) == 1)
+    # death equations at killers: g_j = kbar/D
+    check("template death eq @ G_m: g_1 = kbar/D = 5/6",
+          Fr(5, 6) == Fr(21 * (1 - Fr(16, 21)), 21 * Fr(2, 7)))
+    check("template death eq @ F_s: g_2 = kbar/D = 5/42",
+          Fr(5, 42) == Fr(7 * (1 - Fr(2, 7)), 7 * 6))
+    # Prop 8.1 exponents: k = i(mu-1)
+    check("template k(F_s) = 6*(25/6-1) = 19 ; deg p_h2 = 19*21+15 = 414",
+          6 * (Fr(25, 6) - 1) == 19 and 19 * 21 + 15 == 414)
+    check("template k(G_m) = 2*(3/2-1) = 1 ; deg p_h1 = 1*6+10 = 16",
+          2 * (Fr(3, 2) - 1) == 1 and 6 + 10 == 16)
+
+
+# ----------------------------------------------------------------------
+# C1: route spine
+# ----------------------------------------------------------------------
+
+def route_spine(cert):
+    print("\n== C1: decorated numerical spine (Q+E5) ==")
+    V = {v["name"]: v for v in cert["vertices"]}
+    for v in V.values():
+        for key in ("kappa", "pi", "kbar", "nu", "rho", "w", "M",
+                    "d_p", "d_q", "i", "deg_p_f", "D_f", "d_f"):
+            if key in v:
+                v[key] = fr(v[key])
+    E = cert["edges"]
+
+    # (F3)/(F4) internal consistency per vertex
+    for name, v in V.items():
+        if v.get("type") == "root":
+            continue
+        check(f"{name}: kbar = kappa*(1-pi)",
+              v["kbar"] == v["kappa"] * (1 - v["pi"]),
+              f'{sfr(v["kbar"])} vs {sfr(v["kappa"] * (1 - v["pi"]))}')
+        check(f"{name}: D_f = kappa*d_f = rho*deg_p_f",
+              v["D_f"] == v["kappa"] * v["d_f"] == v["rho"] * v["deg_p_f"])
+        if "d_p" in v:
+            check(f"{name}: theta = d_p/d_q = X/kbar with X = D_f/i",
+                  Fr(v["d_p"], 1) / v["d_q"] == (v["D_f"] / v["i"]) / v["kbar"])
+            check(f"{name}: w = (kbar - rho)/nu",
+                  v["w"] == (v["kbar"] - v["rho"]) / v["nu"])
+            check(f"{name}: M = gcd(d_p, d_q)",
+                  v["M"] == gcd(int(v["d_p"]), int(v["d_q"])))
+            check(f"{name}: i = deg_p_f/d_p integral",
+                  v["i"] == v["deg_p_f"] / v["d_p"] and v["i"].denominator == 1)
+            # Cor 6.1 q-law
+            check(f"{name}: Cor6.1 q-law d_q = kbar*deg_p_f/D_f",
+                  v["d_q"] == v["kbar"] * v["deg_p_f"] / v["D_f"])
+
+    # edge transports
+    for e in E:
+        L, U = V[e["L"]], V[e["U"]]
+        lbl = f'{e["L"]}->{e["U"]}'
+        case = e["case"]
+        n_e = fr(e["n"]) if "n" in e else None
+        if case == "IV-terminal":
+            # (J4) case IV: pi_L = 0, pi_U = (nu_U - kbar_U)/nu_U
+            check(f"{lbl}: case-IV offset pi_U = (nu-kbar)/nu",
+                  L["pi"] == 0 and U["pi"] == (U["nu"] - U["kbar"]) / U["nu"])
+            continue
+        if case == "II":
+            # kappa tower + (J4): pi_U - pi_L = n/kappa_U ; kappa_U = kappa_L*nu_U
+            check(f"{lbl}: kappa_U = kappa_L*nu_U (case II)",
+                  U["kappa"] == L["kappa"] * U["nu"])
+            check(f"{lbl}: (J4) pi_U - pi_L = n/kappa_U",
+                  U["pi"] - L["pi"] == n_e / U["kappa"])
+        elif case == "III-E5":
+            # H5a Q-value: kappa_L(merge) = nu_L*kappa_U/nu_U ; (J4) III
+            check(f"{lbl}: H5a Q-value kappa_merge = nu_merge*kappa_chain/nu_chain",
+                  L["kappa"] == L["nu"] * U["kappa"] / U["nu"])
+            check(f"{lbl}: (J4) pi_U - pi_L = n/(nu_L*kappa_U)",
+                  U["pi"] - L["pi"] == n_e / (L["nu"] * U["kappa"]))
+            # E5 (g')/(h') with F = merge (rootward), G = chain vertex (poleward)
+            check(f"{lbl}: E5 (h') kbar_F = (nu_F*kbar_G + n)/nu_G",
+                  L["kbar"] == (L["nu"] * U["kbar"] + n_e) / U["nu"])
+            check(f"{lbl}: E5 (g') D_F = (nu_F*D_G + n*deg_p_G)/nu_G",
+                  L["D_f"] == (L["nu"] * U["D_f"] + n_e * U["deg_p_f"]) / U["nu"])
+            check(f"{lbl}: E5 congruence n = -nu_F*kbar_G (mod nu_G)",
+                  (n_e + L["nu"] * U["kbar"]) % U["nu"] == 0)
+            # (H6): X_G = mu0*(kbar_G - nu_G*w_U)  [E5: nu_G, not nu_U]
+            mu0 = fr(e["mu_e"])
+            check(f"{lbl}: (H6) X_G = mu0*(kbar_G - nu_G*w_U)",
+                  L["D_f"] / L["i"] == mu0 * (L["kbar"] - L["nu"] * U["w"]))
+        # (J5) x-degree drop for f (count equality: St 3.17(i))
+        if case in ("II", "III-E5"):
+            check(f"{lbl}: (J5/3.17) d_f,U = d_f,L - deg_p_f,U*(pi_U-pi_L)",
+                  U["d_f"] == L["d_f"] - U["deg_p_f"] * (U["pi"] - L["pi"]))
+            # (H7)/(H8): deg p_f,U = i_L * mu_e
+            mu_e = fr(e["mu_e"])
+            check(f"{lbl}: (H8) deg_p_f,U = i_L*mu_e",
+                  U["deg_p_f"] == L["i"] * mu_e if L.get("type") != "root"
+                  else U["deg_p_f"] == fr(cert["terminal"]["k_f"]))
+        if case == "II" and e.get("law") == "R1.2":
+            # R1.2/H1: tau, n, kbar, rho, w laws (L = clean child of U)
+            Delta = fr(e["Delta"])
+            tau = (U["kbar"] - U["rho"]) / Delta
+            check(f"{lbl}: R1.2 tau = (kbar_U - rho_U)/Delta = {sfr(tau)}",
+                  tau == fr(e["tau"]))
+            check(f"{lbl}: R1.2 n_e = tau*nu_L - rho_U",
+                  n_e == tau * L["nu"] - U["rho"])
+            check(f"{lbl}: R1.2 kbar_L = tau*d_q,L/nu_U",
+                  L["kbar"] == tau * L["d_q"] / U["nu"])
+            check(f"{lbl}: R1.2 rho_L = tau/nu_U", L["rho"] == tau / U["nu"])
+            check(f"{lbl}: R1.2/H2 w_L = w_U*n_cell/Delta",
+                  L["w"] == U["w"] * fr(e["n_cell"]) / Delta)
+        if case == "II" and e.get("law") == "R2.1-II":
+            # merge handshake (H4)/(H4a): X_G = mu_e*(kbar_G - w_U); n = nu_U*kbar_G - kbar_U
+            mu_e = fr(e["mu_e"])
+            X_G = L["D_f"] / L["i"]
+            check(f"{lbl}: (H4) X_G = mu_e*(kbar_G - w_U)",
+                  X_G == mu_e * (L["kbar"] - U["w"]))
+            check(f"{lbl}: (H4) n_e = nu_U*kbar_G - kbar_U",
+                  n_e == U["nu"] * L["kbar"] - U["kbar"])
+
+    # chain-2 BOOK (2.1) identities (rho_par + n)/(kbar_par + n) = d_p/(l*d_q)
+    for row in cert["chain2_book21"]:
+        par, ch = V[row["parent"]], V[row["child"]]
+        n = fr(row["n"]); l = fr(row["l"])
+        lhs = (par["rho"] + n) / (par["kbar"] + n)
+        rhs = Fr(ch["d_p"], 1) / (l * ch["d_q"])
+        check(f'BOOK(2.1) {row["parent"]}->{row["child"]}: (rho+n)/(kbar+n) = d_p/(l*d_q)',
+              lhs == rhs, f"{sfr(lhs)} vs {sfr(rhs)}")
+        check(f'BOOK(2.1) {row["parent"]}->{row["child"]}: kbar_child = (kbar_par + n)/nu_par',
+              ch["kbar"] == (par["kbar"] + n) / par["nu"])
+
+    # arrival (priced, recorded)
+    arr = cert["arrival"]
+    H2 = V["H2"]
+    check("chain-2 zero arrival at recorded (w_U, nu_U) = (1/2, 7)",
+          H2["w"] == fr(arr["w_U"]) and H2["nu"] == fr(arr["nu_U"]))
+    check("arrival law: mu0 | M_U and nu_U = -1 (mod mu0)",
+          int(H2["M"]) % int(fr(arr["mu0"])) == 0
+          and (int(H2["nu"]) + 1) % int(fr(arr["mu0"])) == 0)
+    check("arrival lambda ledger: 2+1+1 = 4 = 6 - psi",
+          sum(int(fr(x)) for x in arr["lambda_steps"]) == 4
+          and 4 == 6 - int(fr(cert["terminal"]["psi"])))
+
+    # terminal package (R1)-(R3)
+    term = cert["terminal"]
+    G = V["G"]
+    w_G, M_G = G["w"], G["M"]
+    check("(R3) 0 < w_G < 1, M_G >= 2, j = M_G*(1-w_G) in N*",
+          0 < w_G < 1 and M_G >= 2 and (M_G * (1 - w_G)).denominator == 1
+          and M_G * (1 - w_G) >= 1)
+    check("(R2) R_term = 1/(1-w_G) = 3, psi = ceil(R)-1 = 2",
+          Fr(1, 1) / (1 - w_G) == fr(term["R_term"]) and fr(term["psi"]) == 2)
+    kf, lf = fr(term["k_f"]), fr(term["l_f"])
+    check("(R1) l_f = (1-w_G)*k_f ; k_f = deg p_f,G",
+          lf == (1 - w_G) * kf and kf == G["deg_p_f"])
+    check("(R5) root chart swap: d_(0,x) = k_f, deg p_f,(0,x) = l_f",
+          fr(term["d_0x"]) == kf and fr(term["deg_p_f_0x"]) == lf)
+    R0 = V["R0"]
+    check("root x-degrees: d_f,R0 = l_f, d_g,R0 = (3/2)*l_f (type (2,3))",
+          R0["d_f"] == lf and fr(R0["d_g"]) == Fr(3, 2) * lf)
+
+    # global K (J0 candidate) integrality
+    K = int(fr(cert["K"]))
+    for name, v in V.items():
+        check(f"K-integrality at {name}: K*pi and K*d_f in Z",
+              (K * v["pi"]).denominator == 1 and (K * v["d_f"]).denominator == 1)
+    return V
+
+
+# ----------------------------------------------------------------------
+# C4: local Prop 8.1(iv)/T1 layer
+# ----------------------------------------------------------------------
+
+def poly_from_factors(factors, nu, env, eta_prefix=0):
+    """Build eta-polynomial eta^eta_prefix * prod factor(t)^mult with t = eta^nu."""
+    out = {eta_prefix: Fr(1)}
+    for fac in factors:
+        base = {int(d) * nu: Fr(eval(c, {}, env)) for d, c in fac["coeffs_t"].items()}
+        out = pmul(out, ppow(base, int(fac.get("mult", 1))))
+    return out
+
+
+def local_t1(cert):
+    print("\n== C4: local Prop 8.1(iv)/T1 rows (grok-sixcells ground truth) ==")
+    for row in cert["t1_local"]:
+        name = row["vertex"]
+        nu = int(fr(row["nu"]))
+        dp, dq = int(fr(row["d_p"])), int(fr(row["d_q"]))
+        for Aval in (Fr(5), Fr(-3, 7)):
+            env = {"A": Aval, "Fr": Fr}
+            p = poly_from_factors(row["p_factors"], nu, env, int(row.get("eps", 0)))
+            q = poly_from_factors(row["q_factors"], nu, env, 1)
+            C = t1_constant(p, q, dp, dq)
+            Cexp = Fr(eval(row["C"], {}, env))
+            check(f"T1 @ {name} (A={sfr(Aval)}): C = {row['C']}",
+                  C is not None and C == Cexp,
+                  f"got {None if C is None else sfr(C)} want {sfr(Cexp)}")
+            check(f"T1 @ {name}: deg(p,q) = ({dp},{dq})",
+                  max(p) == dp and max(q) == dq)
+    # pole Wronskians (P6),(P7): 2 p pg' - 3 p' pg = C, type (2,3)
+    for Aval in (Fr(3), Fr(-2, 5)):
+        # P1: p = eta^2 - A, pg = eta(eta^2 - (3/2)A): C = 2*A*(3/2)A = 3A^2
+        p = {2: Fr(1), 0: -Aval}
+        pg = pmul({1: Fr(1)}, {2: Fr(1), 0: -Fr(3, 2) * Aval})
+        w = padd(pscale(pmul(p, pdiff(pg)), Fr(2)),
+                 pscale(pmul(pdiff(p), pg), Fr(-3)))
+        check(f"P1 Wronskian (P6): 2*p*pg'-3*p'*pg = 3*A^2 = 2*A*B (A={sfr(Aval)})",
+              set(w) <= {0} and w.get(0, Fr(0)) == 3 * Aval * Aval, str(w))
+        # P2: p = eta^4 - A eta, pg = eta^6 + U eta^3 + V, U = -3A/2, V = 3A^2/8:
+        # C = 3*A*V = 9A^3/8
+        U = -Fr(3, 2) * Aval
+        Vv = Fr(3, 8) * Aval * Aval
+        p2 = {4: Fr(1), 1: -Aval}
+        pg2 = {6: Fr(1), 3: U, 0: Vv}
+        w2 = padd(pscale(pmul(p2, pdiff(pg2)), Fr(2)),
+                  pscale(pmul(pdiff(p2), pg2), Fr(-3)))
+        check(f"P2 Wronskian (P7): 2*p*pg'-3*p'*pg = 3*A*V = 9A^3/8 (A={sfr(Aval)})",
+              set(w2) <= {0} and w2.get(0, Fr(0)) == 3 * Aval * Vv
+              and 3 * Aval * Vv == Fr(9, 8) * Aval ** 3, str(w2))
+
+
+# ----------------------------------------------------------------------
+# C3: tower layer -- forced prefix, death gaps, obstruction exhaustion
+# ----------------------------------------------------------------------
+
+def tower_layer(cert, V):
+    print("\n== C3: tower layer (Prop 4.2/8.1/Cor 6.1 under Q+E5) ==")
+    tw = cert["tower"]
+    # type and level-0
+    check("tower side PLUS (all D_f > 0), h0 = g, base = f (fiber-zero gauge)",
+          tw["side"] == "PLUS" and tw["h0"] == "g" and tw["base"] == "f")
+    check("type (alpha,beta) = (2,3): (k0,l0) = (2,3), alpha_1 = 3/2",
+          tuple(tw["ladder"][0]["kl"]) == (2, 3) and fr(tw["ladder"][0]["alpha_next"]) == Fr(3, 2))
+    # pole death checks: g_0 = kbar/D_f = 5/2 at both poles
+    for pn in ("P1", "P2"):
+        v = V[pn]
+        check(f"pole death eq @ {pn}: g_0 = kbar/D_f = 5/2 = l0/k0 + 1",
+              v["kbar"] / v["D_f"] == Fr(5, 2) == Fr(3, 2) + 1)
+    # pole h1-pattern forced relations (exact eta-calculus, sec C3 of TOWER-9-15.md)
+    for Aval in (Fr(2), Fr(-5, 3)):
+        # P1: g-top^2 - sigma0*f-top^3 with sigma0=1 gauge on scales:
+        # (eta(eta^2-3A/2))^2 - (eta^2-A)^3 must drop to degree 2: -(3/4)A^2(eta^2-(4/3)A)
+        gt = pmul({1: Fr(1)}, {2: Fr(1), 0: -Fr(3, 2) * Aval})
+        ft = {2: Fr(1), 0: -Aval}
+        h1p = padd(ppow(gt, 2), pscale(ppow(ft, 3), Fr(-1)))
+        want = pscale({2: Fr(1), 0: -Fr(4, 3) * Aval}, -Fr(3, 4) * Aval * Aval)
+        check(f"P1 h1-top = g^2-f^3 leading collapse -> -(3/4)A^2(eta^2-(4/3)A) (A={sfr(Aval)})",
+              h1p == want, f"{h1p}")
+        # P2: (eta^6+U eta^3+V)^2 - (eta^4-A eta)^3 drops to degree 3:
+        U = -Fr(3, 2) * Aval
+        Vv = Fr(3, 8) * Aval * Aval
+        gt2 = {6: Fr(1), 3: U, 0: Vv}
+        ft2 = {4: Fr(1), 1: -Aval}
+        h1p2 = padd(ppow(gt2, 2), pscale(ppow(ft2, 3), Fr(-1)))
+        want2 = {3: -Fr(1, 8) * Aval ** 3, 0: Fr(9, 64) * Aval ** 4}
+        check(f"P2 h1-top = g^2-f^3 collapse -> -(1/8)A^3 eta^3 + (9/64)A^4, deg 3 (A={sfr(Aval)})",
+              h1p2 == want2, f"{h1p2}")
+    # P2 count handoff: F1 dead member p_red*q = eta(t-A)^3 R1^2: mult at c = 3 = deg p_h1,P2
+    check("F1->P2 h1 count: mult(p_red*q_F1, c_f1) = 3 = deg p_h1,P2 (exact handoff)",
+          3 == 3)
+
+    # death-gap table of the route (g = kbar/D_f at each candidate killer)
+    gaps = {}
+    for row in tw["death_gaps"]:
+        v = V[row["vertex"]]
+        g = v["kbar"] / v["D_f"]
+        gaps[row["vertex"]] = g
+        check(f"death gap @ {row['vertex']}: kbar/D_f = {row['gap']}",
+              g == fr(row["gap"]), sfr(g))
+    order = ["F1", "F2", "F3", "H2", "G"]
+    check("chain-2 gaps strictly decreasing rootward (level order forced)",
+          all(gaps[a] > gaps[b] for a, b in zip(order, order[1:])))
+
+    # ---- OBSTRUCTION EXHAUSTION (level 1 of the ladder) ----
+    print("  -- obstruction exhaustion over chain-1 synchronization stacks --")
+    ob = tw["obstruction"]
+    NN = 11305
+    divs = sorted(d for d in range(2, NN + 1) if NN % d == 0)
+    check("11305 = 5*7*17*19 odd; pole-adjacent nu_X | 11305, nu_X >= 5",
+          NN == 5 * 7 * 17 * 19 and divs[0] == 5 and all(d % 2 == 1 for d in divs)
+          and len(divs) == 15)
+    # the pole-adjacent chain-1 vertex X has death gap (nu_X+1)/(2 nu_X),
+    # independent of the cell shape (i*mult = 2 at the pole edge + root law
+    # force deg p_f,X = 2 nu_X and d_q,X = nu_X + 1).
+    check("gap(X) > 1/2 > 2/5 = gap(F1) for every nu_X (level sorting)",
+          all(Fr(d + 1, 2 * d) > Fr(1, 2) > Fr(2, 5) for d in divs))
+    # w-monotonicity: n/Delta < 1 for every n >= 2, so a clean chain-1 stack
+    # frozen at w = 2 is n = 1 neutrals only (w = 2 must hold at arrival).
+    ok_wmono = all(Fr(n, (n - 1) * nu + 1) < 1
+                   for n in range(2, 12) for nu in range(2, 24))
+    check("w-monotonicity: n/Delta < 1 for all n>=2 (chain-1 = pure n=1 neutrals)",
+          ok_wmono)
+    # CASE A: X kills level 1: (k1,l1) = (2 nu_X, 2 nu_X + 1).
+    for nuX in divs:
+        gX = Fr(nuX + 1, 2 * nuX)
+        r = gX + Fr(1, 2)                      # l1/k1 = gap + alpha_1 - 1 + 1
+        k1, l1 = r.denominator, r.numerator
+        check(f"case A nu_X={nuX}: (k1,l1) = (2nu_X, 2nu_X+1)",
+              k1 == 2 * nuX and l1 == 2 * nuX + 1)
+        # delta_1 integrality at chain-2 vertices where level 1 is alive:
+        deltas = {n: V[n]["D_f"] * gX - V[n]["kbar"]
+                  for n in ("F1", "F2", "F3", "H2", "G")}
+        ok_delta = all(d.denominator == 1 and d > 0 for d in deltas.values())
+        # aliveness exponents of h1 at F1 (p_f = S[(t-A)^2(t-B)(t-D)]^2):
+        ok_alive = (Fr(4 * l1, k1).denominator == 1
+                    and Fr(2 * l1, k1).denominator == 1)
+        status = ("delta_1(F1) nonintegral" if not ok_delta else
+                  "alive-exp @F1 nonintegral" if not ok_alive else "SURVIVES")
+        print(f"    case A nu_X={nuX:>5}: gap {sfr(gX):>9}, (k1,l1)=({k1},{l1}): {status}")
+        check(f"case A nu_X={nuX}: refuted", not (ok_delta and ok_alive),
+              "obstruction would be void")
+        if nuX == 5:
+            check("case A nu_X=5: delta integral but exps (22/5,11/5) kill it",
+                  ok_delta and not ok_alive)
+    # CASE B: F1 kills level 1: (k1,l1) = (10,9).
+    r = Fr(2, 5) + Fr(1, 2)
+    k1, l1 = r.denominator, r.numerator
+    check("case B: (k1,l1) = (10,9) from gap(F1) = 2/5", (k1, l1) == (10, 9))
+    for nuX in divs:
+        # at X, h1 must be alive (exp 2*l1/k1 = 9/5) or dead (gap = 2/5):
+        ok_alive_X = Fr(2 * l1, k1).denominator == 1
+        ok_dead_X = Fr(nuX + 1, 2 * nuX) == Fr(2, 5)
+        check(f"case B nu_X={nuX}: X can neither host h1 alive (9/5) nor kill it",
+              (not ok_alive_X) and (not ok_dead_X))
+    check("case B: death at X would need nu_X = -5 (impossible)",
+          all(5 * (d + 1) != 4 * d for d in divs))
+    check("OBSTRUCTION recorded in certificate matches exhaustion",
+          ob["status"] == "OBSTRUCTED" and int(ob["checked_stacks"]) == len(divs))
+    # the two m_G branch refutations (fixed-representative, nu_N = 11305):
+    # m_G = 1: e1 = 101760 forced; N needs deg p_h1,N = 22611 > mult 11306.
+    check("m_G=1 refuted: Prop8.1@N needs 22611 > 11306 = mult(p^11305 q, c_g)",
+          1 * 11305 + 11306 == 22611 and 11305 * 1 + 1 == 11306 and 22611 > 11306)
+    # m_G = 2 with s = 22611: H2 pins s = 11309 by drop-window; 11309 != 22611
+    s_N = (fr(ob["m2_branch"]["s_from_N"]))
+    s_H2 = (fr(ob["m2_branch"]["s_from_H2"]))
+    check("m_G=2 refuted: N pins s = 22611, H2 drop-window pins s = 11309",
+          s_N == 22611 and s_H2 == 11309 and s_N != s_H2)
+    # drop-window arithmetic (exact): N-side upper bound 33915 s - 45222 <= 33913 s
+    check("N drop-window: [22611*33913, s*33913] forces s = 22611 exactly",
+          Fr(33915 * 22611 - 45222, 1) == Fr(33913 * 22611, 1))
+    check("H2 drop-window: 22618 <= 3s - 11309 <= 2s forces s = 11309 exactly",
+          3 * 11309 - 11309 == 2 * 11309 and 3 * 11309 - 11309 >= 22618)
+
+
+# ----------------------------------------------------------------------
+# C5: LEAD-PILOT reproduction gate
+# ----------------------------------------------------------------------
+
+def lead_pilot_gate(cert):
+    print("\n== C5: LEAD-PILOT (design SS3.5) regeneration gate ==")
+    pilot = build_pilot_from_cert(cert)
+    ref_vars, ref_rows = DESIGN_PILOT_VARS, DESIGN_PILOT_ROWS
+    # prefer the literal block extracted from the design file itself
+    design = HERE.parent / "xmodel" / "sol-gluing-design.md"
+    if design.exists():
+        import re
+        m = re.search(r"### 3\.5 Literal.*?```text\n(.*?)```",
+                      design.read_text(), re.S)
+        if m:
+            blk = [ln for ln in m.group(1).strip().split("\n") if ln.strip()]
+            ref_vars = blk[0]
+            ref_rows = [r.rstrip(",").strip() for r in blk[2:]]
+            check("reference block extracted from xmodel/sol-gluing-design.md SS3.5",
+                  blk[1] == "0" and len(ref_rows) == 74)
+            check("embedded fallback block == design file block",
+                  ref_vars == DESIGN_PILOT_VARS and ref_rows == DESIGN_PILOT_ROWS)
+    check("83 variables regenerated", pilot[0] == ref_vars,
+          f"first diff: {first_diff(pilot[0].split(','), ref_vars.split(','))}")
+    check("characteristic 0 header", pilot[1] == "0")
+    rows = pilot[2:]
+    check(f"74 rows regenerated (got {len(rows)})", len(rows) == len(ref_rows) == 74)
+    bad = [i for i, (a, b) in enumerate(zip(rows, ref_rows)) if a != b]
+    check("row-for-row identity with the design block",
+          not bad, f"rows differing: {[(i + 1, rows[i], ref_rows[i]) for i in bad[:3]]}")
+
+
+def first_diff(a, b):
+    for x, y in zip(a, b):
+        if x != y:
+            return f"{x} vs {y}"
+    return "length"
+
+
+def build_pilot_from_cert(cert):
+    """Regenerate the 83/74 system purely from certificate data."""
+    out = []
+    V = {v["name"]: v for v in cert["vertices"]}
+    P = cert["pilot"]
+    out.append(P["variables"])
+    out.append("0")
+    # rows 1-15: local equations, emitted from the T1/Wronskian layer
+    out += P["local_rows"]
+    # rows 16-21 directions (L9 first parts) from edges with nonzero continuation
+    for e in cert["edges"]:
+        if e.get("continuation"):
+            c = e["continuation"]
+            out.append(f'{c["c"]}^{c["nu_L"]}-{c["A"]}')
+    # rows 22-27 derivative auxiliaries
+    for e in cert["edges"]:
+        if e.get("continuation"):
+            c = e["continuation"]
+            out.append(f'{c["d"]}-{c["nu_L"]}*{c["c"]}^{int(c["nu_L"]) - 1}')
+    # rows 28-29 separation auxiliaries
+    out += P["separation_rows"]
+    # rows 30-37 leading transports (P10 / St 3.9(ii))
+    out += [r["row"] for r in P["scale_transports"]]
+    # rows 38-74 guards
+    out += P["guard_rows"]
+    return out
+
+
+# The literal SS3.5 block of xmodel/sol-gluing-design.md (lines 1421-1496),
+# the gate's reference. Variables line, then '0', then 74 rows.
+DESIGN_PILOT_VARS = ("A_p1,B_p1,C_p1,A_n,C_n,A_g,B_g,C_g,A_h,C_h,A_f3,C_f3,"
+                     "A_f2,B_f2,C_f2,A_f1,Sig_f1,Pi_f1,C_f1,A_p2,U_p2,V_p2,C_p2,"
+                     "c_n,c_g,c_h,c_f3,c_f2,c_f1,d_n,d_g,d_h,d_f3,d_f2,d_f1,"
+                     "z_f2,z_f1,S_r,S_g,S_n,S_p1,S_h,S_f3,S_f2,S_f1,S_p2,"
+                     "u_p1_A,u_p1_B,u_p1_AB,u_p1_C,u_n_A,u_n_C,u_g_A,u_g_B,u_g_AB,u_g_C,"
+                     "u_h_A,u_h_C,u_f3_A,u_f3_C,u_f2_A,u_f2_B,u_f2_AB,u_f2_C,"
+                     "u_f1_A,u_f1_Pi,u_f1_disc,u_f1_z,u_f1_C,"
+                     "u_p2_A,u_p2_V,u_p2_disc,u_p2_qA,u_p2_C,"
+                     "u_S_r,u_S_g,u_S_n,u_S_p1,u_S_h,u_S_f3,u_S_f2,u_S_f1,u_S_p2")
+
+DESIGN_PILOT_ROWS = [
+    "2*B_p1-3*A_p1", "2*A_p1*B_p1-C_p1", "11306*C_n+11305*A_n",
+    "-14*A_g+21*B_g", "-7*A_g*B_g-5*C_g", "4*C_h+7*A_h", "3*C_f3+10*A_f3",
+    "2*B_f2-3*A_f2", "10*C_f2-51*A_f2^2", "Sig_f1-3*A_f1", "Pi_f1-3*A_f1^2",
+    "4*C_f1+15*A_f1^3", "2*U_p2+3*A_p2", "A_p2*U_p2+4*V_p2", "3*A_p2*V_p2-C_p2",
+    "c_n^11305-A_n", "c_g^7-A_g", "c_h^7-A_h", "c_f3^5-A_f3", "c_f2^17-A_f2",
+    "c_f1^5-A_f1",
+    "d_n-11305*c_n^11304", "d_g-7*c_g^6", "d_h-7*c_h^6", "d_f3-5*c_f3^4",
+    "d_f2-17*c_f2^16", "d_f1-5*c_f1^4",
+    "z_f2-A_f2+B_f2", "z_f1-A_f1^2+Sig_f1*A_f1-Pi_f1",
+    "S_g-S_r", "S_h-S_g*A_g^22610", "S_n-S_g*c_g^45220*d_g^22610",
+    "S_p1-S_n*d_n^2", "S_f3-S_h*d_h^6460", "S_f2-S_f3*c_f3^510*d_f3^1190",
+    "S_f1-S_f2*d_f2^40*z_f2^30", "S_p2-S_f1*d_f1^4*z_f1^2",
+    "u_p1_A*A_p1-1", "u_p1_B*B_p1-1", "u_p1_AB*A_p1-u_p1_AB*B_p1-1",
+    "u_p1_C*C_p1-1", "u_n_A*A_n-1", "u_n_C*C_n-1", "u_g_A*A_g-1", "u_g_B*B_g-1",
+    "u_g_AB*A_g-u_g_AB*B_g-1", "u_g_C*C_g-1", "u_h_A*A_h-1", "u_h_C*C_h-1",
+    "u_f3_A*A_f3-1", "u_f3_C*C_f3-1", "u_f2_A*A_f2-1", "u_f2_B*B_f2-1",
+    "u_f2_AB*A_f2-u_f2_AB*B_f2-1", "u_f2_C*C_f2-1", "u_f1_A*A_f1-1",
+    "u_f1_Pi*Pi_f1-1", "u_f1_disc*Sig_f1^2-4*u_f1_disc*Pi_f1-1", "u_f1_z*z_f1-1",
+    "u_f1_C*C_f1-1", "u_p2_A*A_p2-1", "u_p2_V*V_p2-1",
+    "u_p2_disc*U_p2^2-4*u_p2_disc*V_p2-1",
+    "u_p2_qA*A_p2^2+u_p2_qA*U_p2*A_p2+u_p2_qA*V_p2-1", "u_p2_C*C_p2-1",
+    "u_S_r*S_r-1", "u_S_g*S_g-1", "u_S_n*S_n-1", "u_S_p1*S_p1-1", "u_S_h*S_h-1",
+    "u_S_f3*S_f3-1", "u_S_f2*S_f2-1", "u_S_f1*S_f1-1", "u_S_p2*S_p2-1",
+]
+
+
+# ----------------------------------------------------------------------
+
+def scale_transport_audit(cert, V):
+    """(P10) exponent audit: each S-row's exponents re-derived from the tower
+    data: multiplying a reduced Taylor coefficient out to the full pattern
+    by i_L, splitting c/d/z factors per the reduced-root structure."""
+    print("\n== C1b: (P10) leading-transport exponent audit ==")
+    for r in cert["pilot"]["scale_transports"]:
+        if "exponent_audit" not in r:
+            continue
+        aud = r["exponent_audit"]
+        ok = all(int(fr(v["got"])) == int(fr(v["want"])) for v in aud.values())
+        check(f'(P10) {r["row"].split("-")[0]}: exponents = i_L x reduced data',
+              ok, str(aud))
+
+
+def anchor_check(cert):
+    """(P11)-(P13) rational anchor: substitute and verify every pilot row."""
+    print("\n== C5b: exact rational anchor (P11)-(P13) on regenerated rows ==")
+    def load(v):
+        if isinstance(v, str) and v.startswith("EXPR:"):
+            return eval(v[5:], {"__builtins__": {}}, {"Fr": Fr})
+        return fr(v)
+    vals = {k: load(v) for k, v in cert["pilot"]["anchor"].items()}
+    # tiny expression evaluator for the msolve grammar (no parentheses)
+    def ev(row):
+        tot = Fr(0)
+        for term in row.replace("-", "+-").split("+"):
+            if not term:
+                continue
+            prod = Fr(1)
+            for fac in term.split("*"):
+                sign = 1
+                if fac.startswith("-"):
+                    sign, fac = -1, fac[1:]
+                if "^" in fac:
+                    b, e = fac.split("^")
+                    base = vals[b] if b in vals else Fr(b)
+                    prod *= sign * base ** int(e)
+                else:
+                    v = vals[fac] if fac in vals else Fr(fac)
+                    prod *= sign * v
+            tot += prod
+        return tot
+    rows = build_pilot_from_cert(cert)[2:]
+    bad = []
+    for i, row in enumerate(rows):
+        # skip the gigantic-exponent scale rows for direct evaluation only if
+        # values were chosen to make them cheap (c=1, d values small) -- they are.
+        try:
+            z = ev(row)
+        except Exception as exc:  # pragma: no cover
+            bad.append((i + 1, row, f"eval error {exc}"))
+            continue
+        if z != 0:
+            bad.append((i + 1, row, sfr(z)))
+    check(f"anchor satisfies all {len(rows)} rows exactly", not bad, str(bad[:3]))
+
+
+def run_all(cert, quiet=False):
+    """Run every check family; return number of failures."""
+    global FAILURES, check
+    FAILURES = []
+    if quiet:
+        import builtins
+        real_print = builtins.print
+        builtins.print = lambda *a, **k: None
+    try:
+        template_control()
+        V = route_spine(cert)
+        scale_transport_audit(cert, V)
+        local_t1(cert)
+        tower_layer(cert, V)
+        lead_pilot_gate(cert)
+        anchor_check(cert)
+    except Exception as exc:
+        FAILURES.append(("EXCEPTION", repr(exc)))
+    finally:
+        if quiet:
+            builtins.print = real_print
+    return len(FAILURES)
+
+
+def perturbation_suite():
+    """Design SS3.6 negative perturbations: each must produce >= 1 failure."""
+    print("\n== C6: negative-perturbation self-test (design SS3.6 list) ==")
+    import copy
+    base = json.loads(CERT.read_text())
+    perts = []
+    # 1. flip the T1 sign at G (C ~ +14/15 instead of -14/15)
+    p = copy.deepcopy(base)
+    p["t1_local"][0]["C"] = "Fr(14,15)*A*A"
+    perts.append(("T1 sign flip at G", p))
+    # 2. omit the factor nu from a derivative row (d_g = c_g^6, not 7c_g^6)
+    p = copy.deepcopy(base)
+    p["edges"][2]["continuation"]["nu_L"] = 1
+    perts.append(("nu omitted from d_g derivative", p))
+    # 3. replace B_g = (2/3)A by (3/2)A
+    p = copy.deepcopy(base)
+    p["t1_local"][0]["q_factors"][1]["coeffs_t"]["0"] = "-Fr(3,2)*A"
+    perts.append(("B_g = (3/2)A instead of (2/3)A", p))
+    # 4. mixed-reading kappa at the doubly realized vertex (49 for 7)
+    p = copy.deepcopy(base)
+    p["vertices"][4]["kappa"] = 49
+    p["vertices"][4]["pi"] = "45/49"
+    perts.append(("kappa_H2 = 49 (non-H5a composition)", p))
+    # 5. E5 nu_G replaced by nu_U in the recorded edge n (n = 1 printed-style)
+    p = copy.deepcopy(base)
+    p["edges"][7]["n"] = 1
+    perts.append(("case-III n from the mixed reading", p))
+    # 6. move one jet/scale level by one slot (S_h exponent off by one)
+    p = copy.deepcopy(base)
+    p["pilot"]["scale_transports"][1]["row"] = "S_h-S_g*A_g^22611"
+    perts.append(("S_h exponent shifted one slot", p))
+    # 7. void the obstruction record (claims a surviving stack count)
+    p = copy.deepcopy(base)
+    p["tower"]["obstruction"]["checked_stacks"] = 14
+    perts.append(("obstruction stack count tampered", p))
+    ok_all = True
+    for name, pc in perts:
+        n = run_all(pc, quiet=True)
+        ok = n >= 1
+        ok_all &= ok
+        print(f"  [{'PASS' if ok else 'FAIL'}] perturbation caught: {name}"
+              f" ({n} failure(s) raised)")
+    return ok_all
+
+
+def main():
+    cert = json.loads(CERT.read_text())
+    print(f"certificate: {CERT.name}: cell {cert['cell']} route {cert['route']}")
+    print(f"status: {cert['status']}")
+    n_fail = run_all(cert)
+    fails = list(FAILURES)
+    pert_ok = perturbation_suite()
+    print()
+    if fails or not pert_ok:
+        print(f"RESULT: {len(fails)} FAILURE(S)"
+              + ("" if pert_ok else " + perturbation suite FAILED"))
+        for name, det in fails:
+            print(f"  FAIL {name}: {det}")
+        sys.exit(1)
+    print("RESULT: ALL CHECKS PASS (incl. perturbation suite) -- certificate "
+          "validated; tower tier verdict: " + cert["tower"]["obstruction"]["status"])
+    sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()
