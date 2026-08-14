@@ -46,6 +46,8 @@ HERE = Path(__file__).resolve().parent
 CERT = HERE / "towers" / "t9_15_direct.json"
 TRUNK = HERE / "towers" / "t9_15_trunk.json"
 T1015 = HERE / "towers" / "t10_15.json"
+T5887 = HERE / "towers" / "t58_87.json"
+T2535 = HERE / "towers" / "t25_35.json"
 
 FAILURES = []
 
@@ -381,9 +383,32 @@ def route_spine(cert):
         # the vertex is the closure's own priced step cell.
         check("arrival law (direct stored step-cell): mu0 | M_U",
               int(AV["M"]) % mu0 == 0)
-    check(f"arrival lambda ledger sums to budget {budget} = 6 - psi (saturated)",
-          sum(int(fr(x)) for x in arr["lambda_steps"]) == budget
-          and budget == 6 - psi)
+    lam_sum = sum(int(fr(x)) for x in arr["lambda_steps"])
+    if term.get("saturated", True):
+        check(f"arrival lambda ledger sums to budget {budget} = 6 - psi "
+              "(saturated)", lam_sum == budget and budget == 6 - psi)
+    else:
+        check(f"displayed route slack: lambda {lam_sum} < budget {budget} "
+              "= 6 - psi (L-A carries the residue; terminals table required)",
+              lam_sum < budget == 6 - psi and bool(cert.get("terminals")))
+    # vertex-level E5 arrival filter (probe-2 finding): a direct arrival at
+    # (nu_U, kbar_U) needs n = nu_U*kbar_G - nu_G*kbar_U >= 1; recorded
+    # census arrival vertices failing it are REFUTED (superset rider) and
+    # their realizations must route through legal pads instead.
+    if "e5_refuted_arrivals" in arr:
+        GV = V[cert["terminal"].get("merge", "G")] if "merge" in cert["terminal"] \
+            else V["G"]
+        for row in arr["e5_refuted_arrivals"]:
+            nuU, kbU = int(fr(row["nu_U"])), int(fr(row["kbar_U"]))
+            n = nuU * int(fr(GV["kbar"])) - int(fr(GV["nu"])) * kbU
+            check(f"E5 vertex filter: recorded arrival ({row['tag']}) has "
+                  f"n = {n} < 1 -- REFUTED (realizations reroute via legal pads)",
+                  n == int(fr(row["n"])) and n < 1)
+        for row in arr.get("e5_legal_pads", []):
+            nuU, kbU = int(fr(row["nu_U"])), int(fr(row["kbar_U"]))
+            n = nuU * int(fr(GV["kbar"])) - int(fr(GV["nu"])) * kbU
+            check(f"E5 vertex filter: pad ({row['tag']}) n = {n} >= 1 legal",
+                  n == int(fr(row["n"])) and n >= 1)
     # optional terminal table (all filed endpoints of this cell's routes)
     for row in cert.get("terminals", []):
         wT, MT = fr(row["w"]), fr(row["M"])
@@ -398,14 +423,44 @@ def route_spine(cert):
               f"j = {sfr(jT)} in N*, lambda {lam} vs 6-psi {6 - psiT} "
               f"({'eq' if row.get('eq', True) else 'slack'})", ok)
     if cert.get("terminals"):
-        # L-A: chain-1 stays uncharged even on slack routes: on an l = 1
-        # cell (nu, n*nu+1) a charged direction needs m*d_q < d_p = nu,
-        # impossible for m >= 1 (shape contradiction; rollout L-A).
-        check("L-A: l=1 cells admit no charged direction (m*d_q < d_p "
-              "impossible; lattice)",
+        # L-A (restated per grok-t10 review as the corollary it is): on
+        # chain 1, St 8.4 forces l | M = 1, and R1.3 excludes dirty
+        # vertices at mu = 1; vertex-locally the same fact is the l = 1
+        # shape contradiction -- a charged direction needs m*d_q < d_p =
+        # nu, impossible for m >= 1.  Chain 1 is uncharged regardless of
+        # budget residue.
+        check("L-A (corollary of R1.3 + St 8.4/P3): l=1 cells admit no "
+              "charged direction (m*d_q < d_p impossible; lattice)",
               all(not (m * (n * nu + 1) < nu)
                   for m in range(1, 6) for n in range(1, 6)
                   for nu in range(2, 30)))
+    # optional k-symbolic family block (probe 2): frame identities in the
+    # family parameter m = mu0 for every member, plus the general-m
+    # algebraic identities.
+    fam = cert.get("family")
+    if fam:
+        for m in [int(fr(x)) for x in fam["members"]]:
+            c = (4 * m - 2, 6 * m - 3, 3 * m - 2, 2 * m - 1)
+            kb = Fr(2 * c[1], c[1] - c[0])
+            ok = (kb == 6
+                  and Fr(m * c[2] * Fr(2, m) - 2, m - 1) == 6        # E5 (I4)
+                  and m * (6 - c[2] * Fr(2, m)) == 4                 # (H6)
+                  and gcd(c[0], c[1]) == c[3]
+                  and (Fr(6) - Fr(4, c[0])) / c[2] == Fr(4, 2 * m - 1)  # w_G
+                  and c[3] * (1 - Fr(4, 2 * m - 1)) == 2 * m - 5     # j
+                  and 2 * m - 5 >= 1
+                  and gcd(6, c[2]) == 1                              # N1
+                  and (c[1] - 1) % c[2] == 0)                        # P3
+            check(f"family member mu0={m}: cell {c} frame identities "
+                  f"(kbar=6, E5, H6=4, M, w_G, j=2m-5, N1, P3)", ok)
+        check("family general-m identities: (6m-6)/(m-1) = 6, "
+              "6m-(6m-4) = 4, 2(3m-2) = d_q-1 (lattice odd m 5..41)",
+              all(Fr(6 * m - 6, m - 1) == 6 and 6 * m - (6 * m - 4) == 4
+                  and 2 * (3 * m - 2) == (6 * m - 3) - 1
+                  and gcd(6, 3 * m - 2) == 1
+                  for m in range(5, 42, 2)))
+        check("family scope honestly recorded (spine specialization named)",
+              "specializ" in fam.get("scope", ""))
 
     # terminal package (R1)-(R3) at the terminal vertex
     T = V[term.get("vertex", "G")]
@@ -758,14 +813,20 @@ def tower_layer(cert, V):
         check("single-M_U cell: recorded M_U class realized by the "
               "displayed arrival vertex",
               set(int(fr(m)) for m in cert["arrival"]["M_U_raw"])
-              == {int(fr(V[AVn]["M"]))} and len(variants) >= 2)
+              == {int(fr(V[AVn]["M"]))} and len(variants) >= 1)
     is_trunk = cert["terminal"].get("vertex", "G") == "T"
     if variants and "first_charged" in variants[0]:
-        # menu-style variants (depth-1 cells like (10,15)): realizations
-        # keyed by the universal first-charged-step menu {(A),(C)}; the
-        # arrival-superset rider (rollout Risk 4) applies to non-displayed
-        # arrival vertices, covered by the window bound + universal
-        # exhaustion, not by spine instantiation.
+        # menu-style variants: realizations keyed by the universal
+        # first-charged-step menu; the arrival-superset rider (rollout
+        # Risk 4) applies to non-displayed arrival vertices, covered by
+        # the window bound + universal exhaustion, not by spine
+        # instantiation.  Grok-t10 suggestion 2: the case-B gap list is
+        # LOCKED to the variant gap set.
+        check("first_charged_gaps == the variant gap set (locked; "
+              "grok-t10 suggestion 2)",
+              set(fr(g) for g in tw.get("first_charged_gaps", []))
+              == set(fr(v["gap"]) for v in variants)
+              and any(v.get("displayed") for v in variants))
         for v in variants:
             cellv = tuple(int(x) for x in v["cell"])
             nuv = int(fr(v["nu"]))
@@ -976,8 +1037,10 @@ def insertion_closure(cert, V, ULAT):
             check(f"state {name}: chain-1 stack IS the X-family; universal "
                   "nu_X refutation applies", True)
             continue
-        lat = [(l, nu) for l in range(1, 13) for nu in range(2, 60)
-               if gcd(l, nu + 1) == int(fr(Ms))]
+        Mint = int(fr(Ms))
+        lat = [(l, nu) for l in range(1, 2 * Mint + 2)
+               for nu in range(2, 4 * Mint + 32)
+               if gcd(l, nu + 1) == Mint]
         check(f"state {name}: legal insertion lattice nonempty "
               f"({len(lat)} samples) and every gap (nu+1)/(Dprev*nu) < 2/5 "
               f"at Dprev >= {Dmin}",
@@ -1277,9 +1340,23 @@ def perturbation_suite():
     p["terminals"][30]["psi"] = 1
     perts.append(("(10,15) slack trunk-1 endpoint psi tampered", p))
     p = copy.deepcopy(t15)
-    p["tower"]["first_charged_gaps"] = ["5/14"]
     p["variants"] = p["variants"][:1]
-    perts.append(("(10,15) (C)-menu variant dropped with its case-B gap", p))
+    perts.append(("(10,15) (C)-menu variant dropped (gap-set lock trips)", p))
+    # probe 2/3 perturbations
+    t58 = json.loads(T5887.read_text())
+    p = copy.deepcopy(t58)
+    p["arrival"]["e5_refuted_arrivals"][0]["n"] = 1
+    perts.append(("(58,87) refuted (7,15) arrival claimed E5-legal", p))
+    p = copy.deepcopy(t58)
+    p["family"]["members"] = [15, 16]
+    perts.append(("(58,87) even family member injected (N1 must trip)", p))
+    t25 = json.loads(T2535.read_text())
+    p = copy.deepcopy(t25)
+    p["vertices"][1]["kbar"] = 6
+    perts.append(("(25,35) kbar=7 outlier flattened to 6", p))
+    p = copy.deepcopy(t25)
+    p["terminal"]["saturated"] = True
+    perts.append(("(25,35) slack route claimed saturated", p))
     ok_all = True
     for name, pc in perts:
         n = run_all(pc, quiet=True)
@@ -1292,7 +1369,7 @@ def perturbation_suite():
 
 def main():
     totals = {}
-    for path in (CERT, TRUNK, T1015):
+    for path in (CERT, TRUNK, T1015, T5887, T2535):
         cert = json.loads(path.read_text())
         print(f"\n######## certificate: {path.name}")
         print(f"cell {cert['cell']}\nroute {cert['route']}")

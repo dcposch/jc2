@@ -399,6 +399,26 @@ means safe, predictions never mean killed.
 Status board (2026-08-14): all 16 cells **ARITH-DEAD-PREDICTED** (this
 document, §2 table). Next transition owner: Probe 1 agent.
 
+Status board update (2026-08-14, probes 1–3 executed):
+
+- `(10,15,7,5)@3` — **CERT-BUILT + REVIEWED-SOUND** (Grok single-pass,
+  no errata; promoted). `cases/towers/t10_15.json`, `TOWER-10-15.md`.
+  Forced-nu book closed; U_7C moot for td-7.
+- `(58,87,43,29)@15` — **CERT-BUILT** (`cases/towers/t58_87.json`,
+  `TOWER-58-87.md`), pending review. Family frame layer k-symbolic
+  (all six 2/(2k+1) members); spine specialization forced at the
+  member-specific chain-2 menus + the E5 vertex filter.
+  **§2 TABLE ERRATUM (this probe):** the row's min-witness
+  `13650/910/455` rests on the direct `(7,15)` arrival, which FAILS the
+  vertex-level E5 offset (`n = 6*7 - 43*1 = -1`); the E5-legal minimum
+  is `27750/1850/925` (direct `(37,15)`). Gap/window columns
+  unaffected. U-OB5 must add the `(h') n >= 1` vertex filter to every
+  min-deg scan; rows with small-`kbar_U` direct arrivals need re-audit.
+- `(25,35,17,5)@8` — **CERT-BUILT** (`cases/towers/t25_35.json`,
+  `TOWER-25-35.md`), pending review. kbar=7 audit clean: no hidden
+  kbar <= 6 dependence; first slack displayed route (L-A load-bearing,
+  restated as the R1.3 + St 8.4/P3 corollary per the t10 review).
+
 ## 6. Reproduction
 
 ```bash

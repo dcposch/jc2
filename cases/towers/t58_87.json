@@ -1,0 +1,939 @@
+{
+ "schema": "td7-tower-certificate/v1",
+ "tier": "tower-obstruction certificate: spine COMPLETE, level-0 COMPLETE, levels >= 1 PROVED EMPTY",
+ "cell": "(58,87,43,29)@mu0=15",
+ "route": "displayed (E5-legal minimum): direct case-IV terminal (4/29,29,psi=1) at G, lambda = 5 = 6-psi; chain-2 = (20,16,5) -> (40,16,5) -> (555,75,37), U = (555,75) direct arrival (37,15); chain-1 rep nu_X = 925 (product 925); PROBE 2 of TOWER-ROLLOUT.md -- the 2/(2k+1) family representative (mu0 = 15)",
+ "date": "2026-08-14",
+ "status": "SPINE-COMPLETE; LOCAL-T1-COMPLETE; TOWER-OBSTRUCTED. FINDING: the census-listed direct (7,15) arrival is REFUTED by the vertex-level E5 offset (n = 6*7 - 43*1 = -1 < 1) -- the rollout row's min-witness (deg 13650, P = 455) is a Risk-4 superset artifact; the E5-legal minimum is (37,15) (deg 27750, P = 925). Gap/window values are UNCHANGED; the kill is unaffected (universal in nu_X).",
+ "conventions": {
+  "as": "t9_15_direct.json (orientation, gauge, Q+E5 case III, frames, degrees)"
+ },
+ "K": 238650,
+ "K_note": "lcm kappa_v = 2*3*5^2*37*43; (J0) candidate",
+ "vertices": [
+  {
+   "name": "R0",
+   "type": "root",
+   "kappa": 1,
+   "pi": 0,
+   "kbar": 1,
+   "nu": 1,
+   "rho": "25/29",
+   "deg_p_f": 107300,
+   "D_f": 92500,
+   "d_f": 92500,
+   "d_g": 138750,
+   "deg_p_g": 160950,
+   "root_pattern": "p_f,(0,y) = S_r*(eta-c0)^107300; single direction",
+   "m": "m_R0 > m_G (residual)"
+  },
+  {
+   "name": "G",
+   "type": "merge classC, family member mu0=15 (frame (2/29,6,43;4/29,29))",
+   "kappa": 43,
+   "pi": "37/43",
+   "kbar": 6,
+   "nu": 43,
+   "rho": "2/29",
+   "w": "4/29",
+   "M": 29,
+   "d_p": 58,
+   "d_q": 87,
+   "i": 1850,
+   "deg_p_f": 107300,
+   "D_f": 7400,
+   "d_f": "7400/43",
+   "d_g": "11100/43",
+   "deg_p_g": 160950,
+   "death_gap": "3/3700",
+   "m": "m_v >= 1 exists (Prop 8.1); NO integer m_v jointly realizable with any global ladder -- the certified obstruction",
+   "mu_k_note": "mu_v = alpha_{m_v}, k_v = i_v(mu_v-1): unrealizable for the same reason"
+  },
+  {
+   "name": "U",
+   "type": "chain2 third-charged (555,75,37) = E5-legal direct arrival (37,15)",
+   "kappa": 37,
+   "pi": "32/37",
+   "kbar": 5,
+   "nu": 37,
+   "rho": "1/15",
+   "w": "2/15",
+   "M": 15,
+   "d_p": 555,
+   "d_q": 75,
+   "i": 50,
+   "deg_p_f": 27750,
+   "D_f": 1850,
+   "d_f": 50,
+   "d_g": 75,
+   "deg_p_g": 41625,
+   "death_gap": "1/370",
+   "kappa_note": "kappa_U = 37 = nu_U*kappa_G/nu_G (H5a Q-value)",
+   "m": "m_v >= 1 exists (Prop 8.1); NO integer m_v jointly realizable with any global ladder -- the certified obstruction",
+   "mu_k_note": "mu_v = alpha_{m_v}, k_v = i_v(mu_v-1): unrealizable for the same reason"
+  },
+  {
+   "name": "V2",
+   "type": "chain2 second-charged (40,16,5)",
+   "kappa": 185,
+   "pi": "183/185",
+   "kbar": 2,
+   "nu": 5,
+   "rho": "1/8",
+   "w": "3/8",
+   "M": 8,
+   "d_p": 40,
+   "d_q": 16,
+   "i": 10,
+   "deg_p_f": 400,
+   "D_f": 50,
+   "d_f": "10/37",
+   "d_g": "15/37",
+   "deg_p_g": 600,
+   "death_gap": "1/25",
+   "m": "m_v >= 1 exists (Prop 8.1); NO integer m_v jointly realizable with any global ladder -- the certified obstruction",
+   "mu_k_note": "mu_v = alpha_{m_v}, k_v = i_v(mu_v-1): unrealizable for the same reason"
+  },
+  {
+   "name": "V1",
+   "type": "chain2 first-charged (C) menu cell",
+   "kappa": 925,
+   "pi": "921/925",
+   "kbar": 4,
+   "nu": 5,
+   "rho": "1/4",
+   "w": "3/4",
+   "M": 4,
+   "d_p": 20,
+   "d_q": 16,
+   "i": 2,
+   "deg_p_f": 40,
+   "D_f": 10,
+   "d_f": "2/185",
+   "d_g": "3/185",
+   "deg_p_g": 60,
+   "death_gap": "2/5",
+   "m": "m_v >= 1 exists (Prop 8.1); NO integer m_v jointly realizable with any global ladder -- the certified obstruction",
+   "mu_k_note": "mu_v = alpha_{m_v}, k_v = i_v(mu_v-1): unrealizable for the same reason"
+  },
+  {
+   "name": "X",
+   "type": "chain1 clean neutral (stack rep, product 925)",
+   "kappa": 39775,
+   "pi": "37923/39775",
+   "kbar": 1852,
+   "nu": 925,
+   "rho": 2,
+   "w": 2,
+   "M": 1,
+   "d_p": 925,
+   "d_q": 926,
+   "i": 2,
+   "deg_p_f": 1850,
+   "D_f": 3700,
+   "d_f": "4/43",
+   "d_g": "6/43",
+   "deg_p_g": 2775,
+   "death_gap": "463/925",
+   "m": "m_v >= 1 exists (Prop 8.1); NO integer m_v jointly realizable with any global ladder -- the certified obstruction",
+   "mu_k_note": "mu_v = alpha_{m_v}, k_v = i_v(mu_v-1): unrealizable for the same reason"
+  },
+  {
+   "name": "P1",
+   "type": "pole (a,b,nu)=(1,1,2)",
+   "kappa": 79550,
+   "pi": "15909/15910",
+   "kbar": 5,
+   "nu": 2,
+   "rho": 1,
+   "w": 2,
+   "M": 1,
+   "deg_p_f": 2,
+   "D_f": 2,
+   "d_f": "1/39775",
+   "d_g": "3/79550",
+   "deg_p_g": 3,
+   "m": 0,
+   "pole_identity": "d_f + d_g = 5/79550 = 1 - pi (Prop 4.1 equality)"
+  },
+  {
+   "name": "P2",
+   "type": "pole (a,b,nu)=(1,2,3)",
+   "kappa": 2775,
+   "pi": "554/555",
+   "kbar": 5,
+   "nu": 3,
+   "rho": "1/2",
+   "w": "3/2",
+   "M": 2,
+   "deg_p_f": 4,
+   "D_f": 2,
+   "d_f": "2/2775",
+   "d_g": "1/925",
+   "deg_p_g": 6,
+   "m": 0,
+   "pole_identity": "d_f + d_g = 5/2775 = 1 - pi (Prop 4.1 equality)"
+  }
+ ],
+ "edges": [
+  {
+   "L": "R0",
+   "U": "G",
+   "case": "IV-terminal",
+   "mu_e": 107300,
+   "note": "pi_G = (43-6)/43 = 37/43",
+   "N_e": 205350,
+   "r_f": 22034055000,
+   "r_g": 33051082500,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  },
+  {
+   "L": "X",
+   "U": "P1",
+   "case": "II",
+   "law": "R1.2",
+   "n": 3699,
+   "mu_e": 1,
+   "Delta": 1,
+   "tau": 4,
+   "n_cell": 1,
+   "continuation": {
+    "c": "c_x",
+    "A": "A_x",
+    "d": "d_x",
+    "nu_L": 925,
+    "mult": 1
+   },
+   "N_e": 11097,
+   "r_f": 22194,
+   "r_g": 33291,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  },
+  {
+   "L": "G",
+   "U": "X",
+   "case": "II",
+   "law": "R2.1-II",
+   "n": 3698,
+   "mu_e": 1,
+   "continuation": {
+    "c": "c_g",
+    "A": "A_g",
+    "d": "d_g",
+    "nu_L": 43,
+    "mult": 1
+   },
+   "N_e": 22188,
+   "r_f": 41047800,
+   "r_g": 61571700,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  },
+  {
+   "L": "U",
+   "U": "V2",
+   "case": "II",
+   "law": "BOOK-2.1",
+   "n": 23,
+   "mu_e": 8,
+   "continuation": {
+    "c": "c_u",
+    "A": "A_u",
+    "d": "d_u",
+    "nu_L": 37,
+    "mult": 8
+   },
+   "N_e": 29670,
+   "r_f": 11868000,
+   "r_g": 17802000,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  },
+  {
+   "L": "V2",
+   "U": "V1",
+   "case": "II",
+   "law": "BOOK-2.1",
+   "n": 6,
+   "mu_e": 4,
+   "continuation": {
+    "c": "c_v2",
+    "A": "A_v2",
+    "d": "d_v2",
+    "nu_L": 5,
+    "mult": 4
+   },
+   "N_e": 1548,
+   "r_f": 61920,
+   "r_g": 92880,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  },
+  {
+   "L": "V1",
+   "U": "P2",
+   "case": "II",
+   "law": "BOOK-2.1",
+   "n": 7,
+   "mu_e": 2,
+   "continuation": {
+    "c": "c_v1",
+    "A": "A_v1",
+    "d": "d_v1",
+    "nu_L": 5,
+    "mult": 2
+   },
+   "N_e": 602,
+   "r_f": 2408,
+   "r_g": 3612,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  },
+  {
+   "L": "G",
+   "U": "U",
+   "case": "III-E5",
+   "n": 7,
+   "mu_e": 15,
+   "note": "zero arrival (mu0=15); E5 raw n = 6*37 - 43*5 = 7 >= 1 LEGAL; offset 7/1591",
+   "N_e": 1050,
+   "r_f": 29137500,
+   "r_g": 43706250,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  }
+ ],
+ "chain2_book21": [
+  {
+   "parent": "P2",
+   "child": "V1",
+   "n": 7,
+   "l": 2
+  },
+  {
+   "parent": "V1",
+   "child": "V2",
+   "n": 6,
+   "l": 4
+  },
+  {
+   "parent": "V2",
+   "child": "U",
+   "n": 23,
+   "l": 8
+  }
+ ],
+ "arrival": {
+  "vertex": "U",
+  "type": "direct",
+  "w_U": "2/15",
+  "nu_U": 37,
+  "lambda": 5,
+  "M_U_raw": [
+   15
+  ],
+  "mu0": 15,
+  "lambda_steps": [
+   2,
+   2,
+   1,
+   0,
+   0
+  ],
+  "e5_refuted_arrivals": [
+   {
+    "tag": "(105,15) direct, nu=7, kbar=1 (census-listed; rollout min-witness)",
+    "nu_U": 7,
+    "kbar_U": 1,
+    "n": -1
+   },
+   {
+    "tag": "pad nu=14 over the nu=7 witness (kbar=2)",
+    "nu_U": 14,
+    "kbar_U": 2,
+    "n": -2
+   }
+  ],
+  "e5_legal_pads": [
+   {
+    "tag": "pad nu=29 over the nu=7 witness (kbar=4)",
+    "nu_U": 29,
+    "kbar_U": 4,
+    "n": 2
+   },
+   {
+    "tag": "pad nu=44 over the nu=7 witness (kbar=6)",
+    "nu_U": 44,
+    "kbar_U": 6,
+    "n": 6
+   }
+  ],
+  "provenance": "SS11a row (58,87,43,29)@15: arrival 2/15 (5; M15), direct (7,15),(37,15); neutral. VERTEX-LEVEL E5 FINDING: the (7,15) direct arrival has kbar_U = 1 and n = 6*7 - 43*1 = -1 < 1: REFUTED (the census lists arrivals as a superset; SS11a's own rider). Its realizations reroute via legal pads (nu = 14 (mod 15) with kbar = 2(nu+1)/15 making n >= 1: nu = 29 first). Displayed: the E5-legal minimum (37,15) = (555,75), n = 7."
+ },
+ "terminal": {
+  "vertex": "G",
+  "type": "case IV direct",
+  "w": "4/29",
+  "M": 29,
+  "psi": 1,
+  "R_term": "29/25",
+  "j": 25,
+  "budget": 5,
+  "k_f": 107300,
+  "l_f": 92500,
+  "d_0x": 107300,
+  "deg_p_f_0x": 92500,
+  "closure_conditions": [
+   "(R1) 1 - w_G = 25/29; l_f = 92500",
+   "(R2) R_term = 29/25, psi = 1; sum lambda = 5 (exact fit)",
+   "(R3) j = 29*(25/29) = 25 in N* (family form j = 2*mu0 - 5)",
+   "(R4)/(R5) root/swap (107300, 92500)",
+   "(R6) stated with K = 238650; emission moot under the obstruction"
+  ]
+ },
+ "terminals": [
+  {
+   "w": "4/29",
+   "M": 29,
+   "psi": 1,
+   "lambda": 5,
+   "eq": true,
+   "family": "direct case-IV (displayed; the cell's single route)"
+  }
+ ],
+ "terminals_note": "the SS11a row has exactly 1 route (1 eq): the exact-fit direct terminal (family class 1F)",
+ "t1_local": [
+  {
+   "vertex": "G",
+   "nu": 43,
+   "d_p": 58,
+   "d_q": 87,
+   "eps": 15,
+   "p_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    }
+   ],
+   "q_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    },
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-Fr(1,2)*A"
+     },
+     "mult": 1
+    }
+   ],
+   "C": "-Fr(43,6)*A*A",
+   "s_of_t": "t - (1/2)A",
+   "note": "family G row (same B = A/2 shape as (10,15)); checker-derived"
+  },
+  {
+   "vertex": "U",
+   "nu": 37,
+   "d_p": 555,
+   "d_q": 75,
+   "eps": 0,
+   "p_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 8
+    },
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-Fr(3,2)*A"
+     },
+     "mult": 7
+    }
+   ],
+   "q_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    },
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-Fr(3,2)*A"
+     },
+     "mult": 1
+    }
+   ],
+   "C": "Fr(111,10)*A*A",
+   "s_of_t": "B-side (t - (3/2)A)",
+   "note": "(555,75,37) l=8 extra-mult 7: forced B = (3/2)A"
+  },
+  {
+   "vertex": "V2",
+   "nu": 5,
+   "d_p": 40,
+   "d_q": 16,
+   "eps": 0,
+   "p_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 4
+    },
+    {
+     "coeffs_t": {
+      "2": "1",
+      "1": "-3*A",
+      "0": "3*A*A"
+     },
+     "mult": 2
+    }
+   ],
+   "q_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    },
+    {
+     "coeffs_t": {
+      "2": "1",
+      "1": "-3*A",
+      "0": "3*A*A"
+     },
+     "mult": 1
+    }
+   ],
+   "C": "-Fr(15,2)*A**3",
+   "s_of_t": "R(t) = t^2-3At+3A^2",
+   "note": "(40,16,5): sigma=3A, pi=3A^2"
+  },
+  {
+   "vertex": "V1",
+   "nu": 5,
+   "d_p": 20,
+   "d_q": 16,
+   "eps": 0,
+   "p_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 2
+    },
+    {
+     "coeffs_t": {
+      "2": "1",
+      "1": "-3*A",
+      "0": "3*A*A"
+     },
+     "mult": 1
+    }
+   ],
+   "q_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    },
+    {
+     "coeffs_t": {
+      "2": "1",
+      "1": "-3*A",
+      "0": "3*A*A"
+     },
+     "mult": 1
+    }
+   ],
+   "C": "-Fr(15,4)*A**3",
+   "s_of_t": "R1(t)",
+   "note": "the (C) menu cell"
+  },
+  {
+   "vertex": "X",
+   "nu": 925,
+   "d_p": 925,
+   "d_q": 926,
+   "eps": 0,
+   "p_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    }
+   ],
+   "q_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    }
+   ],
+   "C": "-Fr(925,926)*A",
+   "s_of_t": "1",
+   "note": "clean neutral row"
+  }
+ ],
+ "tower": {
+  "side": "PLUS",
+  "h0": "g",
+  "base": "f",
+  "type": "(alpha,beta) = (2,3); root rectangles (107300,92500)/(160950,138750), ratio 29/25",
+  "sol_table_identity": false,
+  "stack_product_rep": 925,
+  "first_charged_gaps": [
+   "5/14",
+   "2/5"
+  ],
+  "gap_order": [
+   "V1",
+   "V2",
+   "U",
+   "G"
+  ],
+  "p2_handoff": {
+   "vertex": "V1",
+   "nu": 5,
+   "eta_prefix": 1,
+   "expected": 3,
+   "factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 3
+    },
+    {
+     "coeffs_t": {
+      "2": "1",
+      "1": "-3*A",
+      "0": "3*A*A"
+     },
+     "mult": 2
+    }
+   ],
+   "note": "V1 = (20,16) dead member, mult 3 at c = deg p_h1,P2 (same handoff as (9,15))"
+  },
+  "ladder": [
+   {
+    "j": 0,
+    "kl": [
+     2,
+     3
+    ],
+    "alpha": 0,
+    "alpha_next": "3/2",
+    "gap": "5/2",
+    "killed_at": "P1 and P2 (identical entry poles)"
+   },
+   {
+    "j": 1,
+    "kl": "OBSTRUCTED",
+    "alpha": "3/2",
+    "gap": "no admissible value"
+   }
+  ],
+  "death_gaps": [
+   {
+    "vertex": "V1",
+    "gap": "2/5"
+   },
+   {
+    "vertex": "V2",
+    "gap": "1/25"
+   },
+   {
+    "vertex": "U",
+    "gap": "1/370"
+   },
+   {
+    "vertex": "G",
+    "gap": "3/3700"
+   },
+   {
+    "vertex": "X",
+    "gap": "463/925"
+   }
+  ],
+  "laws": {
+   "as": "t9_15_direct.json tower.laws verbatim"
+  },
+  "obstruction": {
+   "status": "OBSTRUCTED",
+   "tier": "tower ladder (Prop 4.2 + Prop 8.1(iv) + Cor 6.1), level 1",
+   "cases": [
+    "A",
+    "B",
+    "C"
+   ],
+   "statement": "Identical level-1 clash on the family representative: gap(X) = (nu_X+1)/(2nu_X) (P1-anchored), first-charged menu {(A) 5/14, (C) 2/5} with i = 2 and the k | 2 cap (P2-anchored joint cap N3), window empty (chain-2 gaps 2/5, 1/25, 1/370, 3/3700 < 1/2), universal nu_X >= 2 A/B/C refutation, N1-N4 insertion closure. The E5 vertex filter (this probe's finding) only SHRINKS the realization family (the (7,15) direct arrival is refuted; its family reroutes via nu = 14 (mod 15) pads with kbar = 2(nu+1)/15, n >= 1 from nu = 29) -- the kill never used realizability of any arrival.",
+   "checked_stacks": 5,
+   "checked_stacks_note": "divisor classes of the displayed product 925 = 5^2*37: {5,25,37,185,925}",
+   "exhaustion_scope": "universal in nu_X >= 2 (closed forms + lattice); menu variants (A)/(C) locked to first_charged_gaps; insertions closed by N1-N4; E5 vertex filter applied to the recorded arrival list (superset rider made exact for this cell)",
+   "dependencies": [
+    "as t9_15_direct.json (H5a Q-value + E5; Prop 4.2/8.1/Cor 6.1; single ladder; counts; BOOK laws; td=6 calibration)",
+    "TOWER-ROLLOUT.md G1-G6 + the family row; ROLLOUT ERRATUM FILED: the row's min-witness (deg 13650, P = 455) fails the vertex-level E5 offset; E5-legal minimum is deg 27750, P = 925 (gap/window columns unaffected)",
+    "L-A as the corollary of R1.3 + St 8.4/P3 (grok-t10 suggestion 1)",
+    "family frame layer: k-symbolic identities for all six 2/(2k+1) members (family block)"
+   ],
+   "scope": "KILLS (NEW, pending hostile review): the tower tier of every realization of the single filed SS11a route of (58,87,43,29)@15, including the refuted-(7,15)-arrival family via its legal pads. The other five 2/(2k+1) members get the k-symbolic FRAME layer here (family block, identities in mu0) but their chain-2 spines are NOT constructed: specialization was forced at (i) the chain-2 witness selection (member-specific census menus) and (ii) the vertex-level E5 arrival filter (kbar_U per member) -- the family kill needs one mechanical chain-2 witness + arrival-filter table per member (U-OB5/6).",
+   "review_status": "NEW RESULT -- PROBE 2 of the rollout; requires hostile review"
+  }
+ },
+ "family": {
+  "members": [
+   15,
+   17,
+   19,
+   21,
+   23,
+   25
+  ],
+  "form": "(4m-2, 6m-3, 3m-2, 2m-1)@m, m = mu0 = 2k+1",
+  "frame_identities": "kbar = 6, X = 4, w_req = 2/m, w_G = 4/(2m-1), M_G = 2m-1, j = 2m-5, psi = 1, budget 5, N1 gcd(6,3m-2)=1, P3 (6m-4) = 2(3m-2)",
+  "scope": "k-SYMBOLIC at the frame tier (identities verified for all six members and general odd m); spine specialization forced at the chain-2 witness (member-specific census menus: direct lists (7,15)/(37,15), (25,17), (9,19)/(47,19), (31,21), (11,23), (37,25)) and at the vertex-level E5 arrival filter (kbar_U member-specific); the family KILL therefore needs one mechanical witness row per member, not six new mechanisms"
+ },
+ "insertions": {
+  "perimeter": "as t9_15_direct.json",
+  "sol_example": {
+   "cell": [
+    6,
+    4
+   ],
+   "l": 2,
+   "nu": 3,
+   "position": "P2-adjacent, state (3/2,2)",
+   "tau": "9/2",
+   "n": 13,
+   "kbar": 6,
+   "rho": "3/2",
+   "M": 2,
+   "i_F1": 6,
+   "gap_F1": "2/15",
+   "scale": 3,
+   "ledger": [
+    [
+     2,
+     6,
+     12,
+     4
+    ],
+    [
+     6,
+     20,
+     120,
+     16
+    ],
+    [
+     30,
+     40,
+     1200,
+     16
+    ],
+    [
+     150,
+     555,
+     83250,
+     75
+    ]
+   ],
+   "mults": [
+    2,
+    4,
+    8
+   ],
+   "i_G_scaled_pairs": [
+    [
+     1850,
+     5550
+    ]
+   ],
+   "first_cell": [
+    20,
+    16
+   ],
+   "next_row": [
+    6,
+    20,
+    32,
+    4
+   ],
+   "note": "P2-anchored (6,4) insertion: i_V1 2->6, i_V2 10->30, i_U 50->150, i_G 1850->5550, product 2775"
+  },
+  "states": [
+   {
+    "state": "(3/2,2)",
+    "position": "P2..V1 (pre-first-charged)",
+    "M": 2,
+    "nu_constraint": "odd (N2)",
+    "Dprev_min": 4,
+    "affects_caps": true
+   },
+   {
+    "state": "(3/4,4)",
+    "position": "V1..V2",
+    "M": 4,
+    "nu_constraint": "3 (mod 4)",
+    "Dprev_min": 40,
+    "affects_caps": false
+   },
+   {
+    "state": "(3/8,8)",
+    "position": "V2..U",
+    "M": 8,
+    "nu_constraint": "7 (mod 8)",
+    "Dprev_min": 400,
+    "affects_caps": false
+   },
+   {
+    "state": "(2/15,15)",
+    "position": "U..G padding (incl. the refuted-(7,15) family's legal pads nu=14(15))",
+    "M": 15,
+    "nu_constraint": "14 (mod 15)",
+    "Dprev_min": 13650,
+    "affects_caps": false
+   },
+   {
+    "state": "(2,1)",
+    "position": "chain-1 stack",
+    "M": 1,
+    "family": "chain1",
+    "note": "IS the X-family"
+   },
+   {
+    "state": "(4/29,29)",
+    "position": "rootward of G (terminal side)",
+    "M": 29,
+    "nu_constraint": "28 (mod 29)",
+    "Dprev_min": 107300,
+    "affects_caps": false
+   }
+  ],
+  "lemmas": {
+   "as": "t9_15_direct.json insertions.lemmas (N1-N4)"
+  },
+  "closure": "the universal A/B/C refutation consumes only the k|2 cap (N3), window emptiness (N4), and gap(X) -- each insertion-invariant; the kill closes over the full neutral-depth family"
+ },
+ "poles": [
+  {
+   "vertex": "P1",
+   "full_degrees": [
+    2,
+    3
+   ],
+   "wronskian": "2 p pg' - 3 p' pg = C_p1",
+   "rows": [
+    "2*B_p1-3*A_p1",
+    "2*A_p1*B_p1-C_p1"
+   ]
+  },
+  {
+   "vertex": "P2",
+   "full_degrees": [
+    4,
+    6
+   ],
+   "wronskian": "2 p pg' - 3 p' pg = C_p2",
+   "rows": [
+    "2*U_p2+3*A_p2",
+    "A_p2*U_p2+4*V_p2",
+    "3*A_p2*V_p2-C_p2"
+   ]
+  }
+ ],
+ "sources": {
+  "rollout": "TOWER-ROLLOUT.md family row + cases/tower_rollout_arith.py: kbar=6, X=4, arrival (2/15;5;M15), gapmax 2/5, window empty, census 1(1): matched. DEVIATION (reported): min deg p_f,U / i_G / P_min columns (13650/910/455) rest on the E5-refuted (7,15) direct arrival; E5-legal values are 27750/1850/925. Engine erratum: direct_ok needs the (h') n >= 1 vertex filter (U-OB5 addendum).",
+  "census": "BOOK-OFFAXIS.md SS11a: 1 (1 eq), NEW (family)",
+  "baseline": "TOWER-9-15.md + TOWER-10-15.md"
+ },
+ "variants": [
+  {
+   "first_charged": "C",
+   "cell": [
+    20,
+    16
+   ],
+   "nu": 5,
+   "i": 2,
+   "M": 4,
+   "gap": "2/5",
+   "book21_n": 7,
+   "D_f": 10,
+   "kbar": 4,
+   "deg_p_f_U": 27750,
+   "i_G": 1850,
+   "chain1_product": 925,
+   "displayed": true,
+   "realization": "displayed E5-legal minimum: ENTRY ->(C)-> (3/4,4) ->(40,16)-> (3/8,8) ->(555,75)-> (2/15,15) direct (37,15)"
+  },
+  {
+   "first_charged": "A",
+   "cell": [
+    21,
+    15
+   ],
+   "nu": 7,
+   "i": 2,
+   "M": 3,
+   "gap": "5/14",
+   "book21_n": 10,
+   "D_f": 14,
+   "kbar": 5,
+   "realization": "depth-4 DAG via (2/3,3)->(2/5,5)->(2/15,15) (engine witness); its (7,15)-direct arrival is E5-REFUTED (n = -1) and reroutes via nu = 14 (mod 15) pads; arrival-superset rider"
+  }
+ ]
+}
