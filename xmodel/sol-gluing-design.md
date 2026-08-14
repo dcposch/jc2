@@ -211,6 +211,7 @@ For fixed discrete data (F2), the default polynomial variables are:
 | `C[v]` | normalized nonzero T1 constant in (L2) |
 | `A[v,r]`, `B[v,s]`, `Q[v,r]` | incoming p-orbits, non-chain p-orbits, and q-only orbits in `t=eta^nu`; every `A` and `B` orbit occurs once in `q`, while only `Q` is q-only |
 | `c[e,j]` | actual continuation and intermediate composite-chart coefficients; `c[e,0]` is the first direction |
+| `d[e]` | optional derivative/Taylor auxiliary for a nonzero orbit direction |
 | `S[v,h]` | leading scale of the full top pattern of the fixed global polynomial `h` at `v` |
 | `J[v,h,r,eta_deg]` | coefficient of `eta^eta_deg` in jet row `P[v,h,r](eta)` |
 | `tower_s[j]` | global approximate-root/tower constant in `h[j+1]=h[j]^k-tower_s[j]*base[j]^l`, with certified base `f` or `f-a` |
@@ -327,7 +328,7 @@ resultants, and `C_v` are open conditions. Each is internalized as
 with a fresh `u_g`. No solver-side saturation is assumed.
 
 The guard builder first creates a typed `RequiredNonzero` registry, then
-requires an exact registry-to-(L8) coverage audit. It includes:
+requires an exact registry-to-guard-or-implication coverage audit. It includes:
 
 - every orbit value required away from zero, and every pairwise difference
   among distinct `A,B,Q` orbit values required by the pattern;
@@ -343,7 +344,21 @@ vanishes on the intended family. Guard its squarefree radical/orbit factors
 instead. Default mode assigns one inverse and row to every required target;
 an optional product guard must preserve the factor-to-target ledger and is
 accepted only when the product is proved equivalent. A missing or extraneous
-guard is a build failure, not a solver option.
+guard is a build failure, not a solver option. The only default implication
+discharge is a continuation (and its characteristic-zero derivative) proved
+nonzero by guarded `A!=0` plus (L9); the manifest records that proof edge.
+
+For each nonzero edge direction attached to incoming orbit `A[L,e]`, emit
+
+\[
+ c_{e,0}^{\nu_L}-A_{L,e}=0,
+ \qquad d_e-\nu_Lc_{e,0}^{\nu_L-1}=0                     \tag{L9}
+\]
+
+when the derivative auxiliary is requested; otherwise inline the second
+expression in the exact Taylor coefficient. The `A` guard and first equation
+already force `c_(e,0)!=0`. A zero arrival has certified direction zero and
+does not receive (L9) or a nonzero-direction guard.
 
 At a pole, Prop. 8.1 is replaced by the Prop. 5.3 pole Wronskian and fixed
 pole degrees. Every live label at a pole or root is supplied by a typed
@@ -1147,8 +1162,8 @@ auditable guards add more.
 
 | cell | E5 default fate | exact factored merge-local vars/eqs | naive unnormalized dense-eta local vars/eqs | route-level information currently justified |
 |---|---|---:|---:|---|
-| `(9,15,7,3)@2` | emit | `3/2` | `27/23` | direct synchronized `LEAD-PILOT`: **83/74**, section 3; full jets TBD |
-| `(10,15,7,5)@3` | emit | `3/2` | `28/24` | full paths TBD; one equality suffix has the exact dense local-only subtotal `2610/2590` |
+| `(9,15,7,3)@2` | emit | `3/2` | `27/23` | direct synchronized `LEAD-PILOT`: **83/74**, section 3; full jets UNKNOWN pending tower/window certificate |
+| `(10,15,7,5)@3` | emit | `3/2` | `28/24` | full paths UNKNOWN pending Stage 0; one equality suffix has the exact dense local-only subtotal `2610/2590` |
 | `(15,25,8,5)@7` | conditional reject (H5a) | `4/3` | `43/39` | no default solver system under coherent-III policy |
 | `(15,25,12,5)@3` | conditional reject (H5a) | `3/2` | `43/39` | no default solver system under coherent-III policy |
 | `(18,27,13,9)@5` | conditional reject (H5a) | `3/2` | `48/44` | no default solver system; dedup branches differ as (I6)-(I7) |
@@ -1607,7 +1622,7 @@ be in the manifest. Evaluation gives a direct necessary-condition map:
 
 Indeed, evaluate each variable at the corresponding coefficient of the
 actual pair and its actual Puiseux charts. Prop. 8.1 gives (L1)-(L4), the
-root law gives (L5)-(L8), the promoted handshakes give (H1)-(H6),
+root law and actual directions give (L5)-(L9), the promoted handshakes give (H1)-(H6),
 St. 3.9 gives (H7) and the top/drop part of (J5) on elementary steps,
 St. 3.17 gives the composite `f-a` instance, and St. 8.3(ii) gives only the
 certified common-live tower instances. Equation (J6) is the exact coordinate
@@ -1793,7 +1808,7 @@ runs/td7_gluing/                 # authenticated remote outputs only
   admissibility gate for every cell produced by corrected enumeration;
 - separate legacy-minimum replay and all-budget-strata coverage import,
   coupled arrival/path/cost records, and explicit neutral/tower expansion;
-- separate constructors for (L1)/(L1a), (L3), pole/root top patterns and
+- separate constructors for (L1)/(L1a), (L3), (L9), pole/root top patterns and
   Wronskians, (H1)-(H8), (J6), (T2), (F1a)-(F1b), (R1)-(R6), and guards;
 - structural canonicalization and equation hashing only after full assembly;
 - characteristic-zero and pre-reduced mod-p emission;
