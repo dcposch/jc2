@@ -741,3 +741,14 @@ sol-uniform-review (both green), 14 errata folded, gates 1559/1559.
 Engine: cases/tower_check.py uniform mode; certificates cases/towers/.
 Chain effect: off-axis td=7 needs no coefficient emitter; the sheet
 ladder's next rungs are td-11/13 (refile + port).
+
+## Witt-Bockstein stratum rigidity (2026-08-14)
+PROMOTED: for plane Keller pairs over F_2 on the registered Mondello-
+hull-plus-one-L1-shell stratum, the W_2/Cartier lifting obstruction
+NEVER vanishes ([xy]E_F = 1 as an identity on the complete four-P
+classification, 1152/1152 nonzero incl. all odd-degree data) — no
+char-0 counterexample seed lifts from this stratum. Sol construction
+(xmodel/sol-witt.md, engine cases/witt_check.py) + Grok hostile review
+SOUND (xmodel/grok-witt-review.md). Disproof door closed on the
+stratum; the lane's continuation (other strata) is optional and
+unranked.
