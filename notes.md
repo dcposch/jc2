@@ -406,3 +406,5 @@
   kill the c2.q char-0 balloon first). Ultramem reachable again — stale lift runner
   bash (PID 9380) killed, lift retirement now fully executed. sat23 ~10h into
   p105337. No screen verdicts yet.
+- 2026-08-13 ~18:10: §19.5a banked. QUEUE: l12 3-chart cover on Box02 AFTER current
+  screen queue drains (350-500G fences). Preflight review still out.
