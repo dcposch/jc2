@@ -408,3 +408,9 @@
   p105337. No screen verdicts yet.
 - 2026-08-13 ~18:10: §19.5a banked. QUEUE: l12 3-chart cover on Box02 AFTER current
   screen queue drains (350-500G fences). Preflight review still out.
+- 2026-08-13 ~18:40: Preflight review = SOUND-WITH-ERRATA: 6->2 FALSE (2 of 4 "dead"
+  cells E5-alive via unpriced arrivals; 37 completions saved by review). Deeper issue:
+  book generated with kbar_BOOK pin, never re-enumerated under kbar_E5 => launched
+  td7_census_e5 agent (both H5a readings, controls = 56 law-dead + 2 certified cells).
+  3 doomed l8 leaf survivors killed on Box02 (frees ~450G for screens). Screens: no
+  verdicts yet (~5h in at 8 threads).
