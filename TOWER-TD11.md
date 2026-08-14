@@ -1,17 +1,15 @@
 # TOWER-TD11.md — entry-level clash analysis for the three td-11 entries
 
-Status: **ENTRY/ONE-STEP TIER COMPLETE (2026-08-14, round 1).** All
-three L6-surviving td-11 entries have their clash windows closed at
-this tier: 11-B and 11-C are EMPTY by exact gap arithmetic; 11-A's
-window contains exactly one intruder — the `5/8` resonance — which is
-H8-dead by the promoted `v_2` mismatch, and that kill is **μ-robust**
-(the resonance drops `M` to `1`, forcing `μ = 1`; the
-grok-nfd-finding-1 escape does not exist on that branch). The td-11
-entry-clash theorem is therefore a REAL PROSPECT with the same shape
-as td-7's; its remaining proof obligations are enumerated in §6 and
-none is discharged here. Machine gate: `cases/tower_td11.py`
-(24 checks, exit 0; count printed) — a prediction engine in the
-`tower_rollout_arith.py` mold, NOT a certificate.
+Status: **THEOREM STATED AND MACHINE-CHECKED WITHIN ITS PERIMETER
+(2026-08-14, round 2 — obligations OB-1/4/5/6/7/8/10 discharged in
+§7, Lemma 11A-RES in §8, Theorem TD11-CLASH in §9, census
+implication in §10, near-miss ledger in §11, perimeter honesty in
+§12).** Round-1 content (§§0–5, the window verdicts) is unchanged
+and review-ready. Machine gate: `cases/tower_td11.py` (46 checks,
+exit 0; count printed) — blocks 0–5 are the round-1 window
+arithmetic; blocks 6–13 are the obligation discharges, including the
+px2/px5 closure-wide window audit (21 + 347 + 69 states) and the
+den-criterion prefix exhaustion over the full register lattice.
 
 Consumer discipline throughout: **H8 = `P/μ` with `μ | M`** of the
 current state (grok-nfd-review finding 1); every synchronization
@@ -128,8 +126,8 @@ above every opponent gap, the prefix menu in the window
 cap for every domain-legal `nu_X`.* — The analogue of the td-7
 `tower.obstruction` statement, per-entry.
 
-Obligations to promotion (numbered against scope §2.3; none
-discharged here):
+Obligations to promotion (numbered against scope §2.3; round 1
+listed them — round 2 discharges each in §7, as indicated):
 
 * **OB-1 (packets):** derive `(k_0, l_0)`, `alpha_1`, pole top, and
   all full pole exponents for each entry — in particular the
@@ -155,24 +153,261 @@ discharged here):
   11-A); E5F is not applicable until the merge arrival frames are
   chosen.
 
-If OB-1..10 discharge with the windows as computed here, the three
-entries fall to the same theorem shape as td-7 — and with them, by
-§5, the td-11 neutral-depth question.
+Round 2 discharges these as follows (§7); the theorem is §9.
 
-## 7. Reproduction
+## 7. Obligation discharges (round 2, machine blocks 6–12)
+
+### 7.1 OB-1: packets, derived not inferred (gate block 6)
+
+**Packet law.** The pole pattern `(t−A)^α (t−B)^β` gives the P1
+scale relation `m^α = σ0·λ^β`, i.e. the pole death step
+`(k_0, l_0) = (α, β)`; `g_top = (α+β)/α`; Z1 gives
+`alpha_1 = l_0 + 1 − g_top = β(α−1)/α`. Regression: type `(2,3)`
+reproduces the promoted td-7 packet EXACTLY (`(2,3)`, `5/2`, `3/2` —
+`t9_15_direct.json`'s `m^2 = σ0 λ^3`, `alpha 3/2`). The NEW type
+`(2,5)` packet (11-B): `(k_0, l_0) = (2, 5)`, `g_top = 7/2`,
+**`alpha_1 = 5/2`**. Pole full degrees per scope §3.1: 11-A `(2,4)`,
+11-B `(2,6)`, 11-C `(2,4,4)`; the X-side pole is `(t−A)^2` in all
+three (type `(2,x)`), so `i_X = 2`. `den(alpha_1) = 2` divides every
+cap candidate (entry compatibility).
+
+### 7.2 OB-4: H8 stacks under `P/μ` (gate block 7)
+
+Stack products are integers; the empty stack passes on all three
+entries (`2/1 = 4/2 = 6/3`); `Pi = 5^k` passes at every depth — the
+synchronized windows are INHABITED and the theorem is about real
+routes. Characterization of the common `Pi`: odd and `3`-free
+(11-A/11-C; both sides' domains), plus side-2 factorability at 11-B
+(`25 = 5·5`, `35` as the single letter `35 ≡ 2 (mod 3)`). The
+`μ = (1,1)` branches stay unsat (raw-`P` valuations, NF-D round 2),
+and a FAILED synchronization is spine-death (scope port obligation 4:
+no H8 match, no X) — either way no escape.
+
+### 7.3 OB-5: joint caps, covered conservatively (gate block 8)
+
+X-side: X lives at the `(t−A)^2` power (`i_X = 2`, all three
+entries), giving the td-7-style `k | 2` while X is alive
+(Prop 4.2(iii)/Prop 8.1 — CITED, not reproved). Because that citation
+is a port, the exhaustion below does NOT depend on it: it runs over
+the conservative chain-2-side candidates
+`{2,4}` (11-A: `gcd(4, i·P_pre)`, `i ∈ {2,4}`, `P_pre` parity FREE —
+`nu = 2` is legal at `w = 3`, so even `P_pre` is realized),
+`{2,6}` (11-B: `gcd(6, i·P_pre)`, `i ∈ {2,6}`, `P_pre` odd and
+`3`-free), `{2}` (11-C: td-7 derivation ports with the seed), PLUS
+the divisor closure `{1}` (a third pole can only shrink the cap).
+
+### 7.4 OB-7: the den-criterion prefix exhaustion (gate block 9)
+
+**α-lattice lemma.** `den(alpha_1) | c`, and every prefix step with
+`k | c` keeps `den(alpha) | c` (`alpha_next = alpha + l(k−1)/k`). So
+the exhaustion may quantify over the FULL lattice `alpha ≡ a/c` — a
+SUPERSET of the reachable registers — which makes it
+**menu-independent**: no first-charge menu derivation is needed for
+the kill, only the cap.
+
+**Criterion.** The X-death step is FORCED to
+`k_m = den(alpha_m − 1 + gap(X))`; it is legal iff `k_m | c`.
+
+**Lemma CAP-DEN (the ν-quantifier closes algebraically).** With
+`gap(X) = (ν+1)/(2ν)`: `num = 2aν + c(1−ν) ≡ c (mod ν)`, so
+`den | c` forces `ν | c²`. Odd `ν >= 3` divides none of
+`{1, 4, 16, 36}` (after the 11-B domain removes `3` and `9`); the
+residual 11-B cases `ν ∈ {2, 4}` refuse 2-adically
+(`(2a−3)/12`, `(4a−9)/24`, `(2a−1)/4`, `(4a−3)/8` — denominators in
+`{4, 8, 12, 24}`, none dividing `6` or `2`), and the 11-B resonant X
+`5/4` gives `(2a+3)/12`-type values, same refusal. Gate block 9
+sweeps every entry × every cap candidate × every register residue ×
+every domain-legal X (`ν <= 300` lattice + `5/4`): **zero escapes.**
+Case A is the `alpha_1` instance; Case B is refused by gap order +
+the promoted no-skip descent law (cited); Case C is the full lattice.
+td-7 regression: the criterion reproduces the promoted Case C
+verbatim (`k=1` forces `2ν | rν+1`, `k=2` forces `ν | 1`).
+
+### 7.5 OB-6: closure-wide window audit (gate block 10, px2/px5)
+
+The td-7 enumeration engines close all three opponent seeds:
+`(3,2)` → 21 states, `(4/3,3)` → 347, `(3/2,2)` → 69. Over EVERY
+state and EVERY menu step (parametric families included):
+
+* **growth law:** every step multiplier `dp/l >= 2`, so a depth-`j`
+  step sees `deg >= p·2^{j−1}`;
+* **ratio law:** the max step ratio `R* = dq·l/dp` per closure is
+  `5/2, 3, 5/2 < p = 4, 6, 4` — hence EVERY depth-`>=2` step gap is
+  `<= R*/(2p) < 1/2`. Depth-1 gaps are the frozen §3.2 menus
+  (`< 1/2` except 11-A's `5/8`).
+* **resonance census:** at-seed resonances are exactly `D3n2nu2` at
+  `(3,2)` (the `5/8`) and NONE at the other two seeds; all deeper
+  copies (`D3n2nu2`, `D5n2nu4`, `D4n2nu3`) fall under the
+  depth-`>=2` law.
+* **chain-1 engine audit:** the zero-cost clean `n>=2` menu at
+  `(2,1)` is EMPTY (the L-A freeze, engine-confirmed) and at `(3,1)`
+  is exactly `{D3n2nu2}` (11-B's classified `5/4`).
+
+So the ONLY object anywhere in the three multistep closures with a
+gap `>= 1/2` is 11-A's seed-level `5/8` — the round-1 window verdicts
+are closure-stable, not just one-step facts.
+
+### 7.6 OB-8: three-pole composition, 11-C (gate block 11)
+
+The second opponent adds NO window step (same seed, menu max
+`2/5 < 1/2 < gap(X)`) and only SHRINKS the joint cap (intersection
+of simultaneously-alive caps — tower-N3 kernel); the exhaustion is
+divisor-closed (`c = 1` swept), so every shrunk cap is covered. No
+sibling-X tie: the second and third poles are charged `M = 2` seeds,
+not `M = 1` carriers. Nested inner-merge orders (an inner merge
+BEFORE the candidate clash, creating states outside the audited
+closures) are the one law-covered perimeter clause — §12.
+
+### 7.7 OB-10: E5F / realization (gate block 12)
+
+The kill is E5F-input-free. Dichotomy: a Q+E5/E5F-realized
+X/opponent pair dies by the cap exhaustion (§7.4) or the H8 `v_2`
+mismatch (§8); an unrealized pair is dead by non-realization. Either
+horn gives emptiness. The E5F base law
+(`n = ν_U·kbar_G − ν_G·kbar_U >= 1`) is td-agnostic (scope §2.1) and
+only shrinks the realized set; no td-7 offset formula is imported.
+
+## 8. Lemma 11A-RES (the entry-specific intruder kill, μ-robust)
+
+*The `5/8` resonance route of 11-A — the ONLY object in any td-11
+clash window — is H8-dead on every route shape.* Proof: the
+resonance (`Δ=3, n=2, ν=2`, `w: 3→2`, `M: 2→1`, `pdeg 8`, `λ=0`) is
+an **M-drop**, so `μ | M' = 1` forces `μ = 1` on that branch — the
+grok-nfd-finding-1 `μ = M` escape does not exist there, and by NF-D
+D5 (drops irreversible) no later step restores it. The comparison is
+therefore raw: `v_2(8·A·B) >= 3` for every `w=3` prefix stack `A`
+and `w=2` suffix stack `B`, against chain-1's `v_2(2·Pi) = 1` for
+every odd stack — `H8_EQUAL_QUOTIENT_VP_MISMATCH`
+(`sol-normalform.md:584–599`, promoted) fires always. Padded copies
+of the resonance (`5/(8A) < 1/2`) never re-enter any window. ∎
+(gate blocks 1, 2/A4)
+
+## 9. Theorem TD11-CLASH
+
+**Theorem (entry tier, within the §12 perimeter).** *For each td-11
+L6-surviving entry `E ∈ {11-A, 11-B, 11-C}` with its derived packet
+(§7.1): every synchronized configuration — all `μ`-assignments under
+`μ | M`, every stack `Pi` in the co-scaling window (including the
+`Pi = 5^k` deep-word family and arbitrary neutral insertions within
+the NF-D/clash perimeter), every E5F-admissible realization — dies
+at the tower tier. Explicitly: the global ladder's death order
+reaches the entry's pole-adjacent X (neutral `gap(X) = (ν_X+1)/(2ν_X)`
+over the domain-legal `ν_X`, or 11-B's resonant `X = 5/4`) with
+every competing object below `1/2` (§7.5), possibly after a prefix
+of cap-legal steps; and the X-death step is REFUSED —
+`den(alpha_m − 1 + gap(X))` divides no cap candidate for any lattice
+register `alpha_m` (§7.4, Lemma CAP-DEN) — while the sole in-window
+intruder (11-A's `5/8`) is H8-dead (Lemma 11A-RES) and
+non-synchronized routes are spine-dead (§7.2). Configurations
+extending any such spine by neutral words of any depth — in
+particular the NF-D-round-2 `Pi = 5^k` family — die with it.*
+
+Per-entry constants:
+
+| entry | packet `(k_0,l_0)`, `alpha_1`, `g_top` | cap candidates | X family | intruder |
+|---|---|---|---|---|
+| 11-A | `(2,3)`, `3/2`, `5/2` | `{1,2,4}` | `(ν+1)/(2ν)`, `ν` odd | `5/8` — dead (Lemma 11A-RES) |
+| 11-B | `(2,5)`, `5/2`, `7/2` | `{1,2,6}` | `(ν+1)/(2ν)`, `3∤ν` (even `ν` legal); resonant `5/4` | none |
+| 11-C | `(2,3)`, `3/2`, `5/2` | `{1,2}` | `(ν+1)/(2ν)`, `ν` odd | none |
+
+*Proof assembly:* §7.1 (packets) + §7.2 (synchronization dichotomy)
++ §7.5 (no competing object at or above `1/2` anywhere in the
+closures, so X is reached in gap order with at most cap-legal
+prefixes — Case B refused by descent) + §7.4 (X-death refused over
+the full register lattice under every cap candidate — Cases A and C)
++ §8 (the intruder) + §7.6 (third pole only shrinks caps, adds no
+window step) + §7.7 (realization dichotomy). ∎ within §12.
+
+**Corollary (NF-D closure for td-11).** The td-11 neutral-depth
+question (NF-D: `D` OPEN, `S` infinite) is closed entry-wise: every
+neutral word of every depth extends a clashed spine and is dead. The
+depth/census circularity is broken without a depth cap.
+
+## 10. Census implication (the td-11 census does not yet exist)
+
+The theorem operates at the entry/configuration tier. What the
+eventual compiler consumes: **any td-11 class-B/C census row whose
+configuration passes the E5F-corrected enumeration discipline
+contains a synchronized spine in one of the three entry shapes (or
+fails H8, which is spine-death); the row therefore emits TOWER-DEAD
+with certificate = (entry id, packet constants, cap candidate, the
+CAP-DEN refusal instance or Lemma 11A-RES).** That statement — not a
+cell count — is the emptiness certificate: it is quantified over
+entries with per-entry constants and is independent of how many rows
+the census will eventually have. A census row that CANNOT be mapped
+to one of the three shapes is outside the theorem and must be
+reported, not certified (Rule 6).
+
+## 11. Near-miss ledger (where a hostile reviewer should push)
+
+| # | near-miss | what saves it | gate row |
+|---|---|---|---|
+| 1 | 11-B, `ν_X = 3`, cap `6`: `k = 2ν_X = 6 | 6` — a genuine Case-A escape | the domain law `3 ∤ ν` at `w = 3` excludes `ν_X = 3` EXACTLY | X4 |
+| 2 | 11-B, `ν_X = 2`, cap `6`: `ν | c²` (Lemma CAP-DEN's necessary condition) PASSES | the 2-adic part: `den((2a−3)/12) ∈ {4,12}`, never `| 6` | OB7c |
+| 3 | 11-A, cap `4`: the prefix menu is NONEMPTY (`k = 4` rows exist arithmetically, unlike td-7's `k|2` menu) | the exhaustion is menu-independent (α-lattice superset); every lattice register still refuses X | OB7a/b |
+| 4 | 11-A, `ν_X = 3`: the `5/8` intruder is NOT in the window (`2/3 > 5/8`) — the kill must not cite Lemma 11A-RES there | it doesn't: `ν_X = 3` dies by CAP-DEN directly (`3 ∤ 16`) | OB7b/c |
+
+These four exclusions are exact and each is one arithmetic fact away
+from an escape; they are the load-bearing edges of the theorem.
+
+## 12. Perimeter honesty (machine-checked vs law-covered)
+
+**Machine-checked (blocks 0–13, 46 rows):** the domain law against
+the scope menus; the window arithmetic; packet derivations with td-7
+regression; H8 windows under `P/μ` (inhabited + unsat branches); cap
+candidates including realized even `P_pre` at 11-A; the α-lattice
+lemma and the full den-criterion exhaustion (every cap × residue ×
+domain-legal X, plus algebraic ν-closure); the closure-wide
+growth/ratio laws and resonance censuses over all 437 engine states;
+the chain-1 zero-cost menus; Lemma 11A-RES's `v_2` computation over
+domain stacks; the composition cap-shrink arithmetic.
+
+**Law-covered (cited promoted results, not re-proved here):** the
+ladder calculus itself (delta descent, no-skip, death equations, Z1);
+the L-A kernel (uncharged + `M = 1` propagation on merge-free
+branches); Prop 4.2(iii)/8.1 for the X-side `k | 2` (the exhaustion
+is robust to its failure via the conservative caps); the promoted
+`H8_EQUAL_QUOTIENT_VP_MISMATCH` certificate; the E5F base law; px2's
+menu completeness per state (the promoted enumeration engine — the
+same trust td-7's book stands on).
+
+**Perimeter clauses (outside the theorem, Rule 6 on their slice):**
+(i) nested inner-merge orders that create chart states BEFORE the
+candidate clash outside the audited closures (NF-M territory; 11-C's
+145-row nested skeleton is enumerated but not state-audited here);
+(ii) multi-word deep-zone coexistence (POLICY NF-Z†, unchanged);
+(iii) the budget horizon: closure audits ran the gross budget 9
+discipline of the scope tables; (iv) `nu = 1` insertions and
+resonance-bearing chains stay NF-P's. A configuration reaching any
+clause is reported OPEN, never certified.
+
+## 13. What td-13 needs (forward pointer)
+
+The same apparatus ports to five of six td-13 entries (max-X empty
+windows per scope §3.3) with new constants: a `k | 3` exhaustion
+lattice for 13-2d (type `(3,4)`: pole `(t−A)^3`, so the α-lattice
+runs mod `3`-caps and CAP-DEN's `ν | c²` changes base), max-X
+relabelling + tie handling for 13-3/13-4 (sibling-X ties are REAL
+there — the carve-out here), and the all-off-axis 13-2b, which has
+NO L-A carrier and a genuinely inhabited menu window
+(`3/10 < 2/5 < 5/2`) — the scope's designated architecture test. The
+th td-13 analogue of Lemma 11A-RES will need the `7/16`-family
+intruders of the `(3,2;4)`-type seeds classified per entry.
+
+## 14. Reproduction
 
 ```bash
-python3 cases/tower_td11.py    # 24 checks, exit 0 (count printed)
+python3 cases/tower_td11.py    # 46 checks, exit 0 (count printed; ~3 min,
+                               # the (4/3,3) closure dominates)
 ```
 
-Blocks: 0 the domain law vs the scope §3.2 menu maxima; 1 the
-resonance identities (`5/8`, `5/4`, M-drop structure); 2 entry 11-A
-(freeze, window, the intruder and its μ-robust H8 kill, Case-A
-refusal under both caps, inhabited synchronization); 3 entry 11-B
-(freeze-modulo-resonance, empty window, resonant-X placement, Case-A
-refusal incl. even `nu_X = 2`); 4 entry 11-C (ported freeze, empty
-leaf windows, sibling arithmetic, ported cap); 5 cross-entry
-(μ-discipline, M-drop dichotomy, the NF-D byproduct, and the
-load-bearing `nu_X = 3` near-miss at 11-B). `cases/nfd_check.py`
-(22), `cases/nfz_check.py` (39), `cases/tower_check.py` unchanged.
-No git commit.
+Blocks: 0 domain law vs scope §3.2; 1 resonance identities; 2–4 the
+per-entry round-1 window verdicts; 5 cross-entry μ-discipline and
+the NF-D byproduct; 6 OB-1 packets; 7 OB-4 H8 windows; 8 OB-5 caps;
+9 OB-7 den-criterion exhaustion (α-lattice lemma, full sweep,
+CAP-DEN algebra, td-7 regression, Case B); 10 OB-6 closure audit
+(growth/ratio laws, resonance census, chain-1 menus); 11 OB-8
+composition; 12 OB-10 realization dichotomy; 13 the theorem
+aggregate + census implication. Companion gates unchanged:
+`cases/nfd_check.py` (22), `cases/nfz_check.py` (39),
+`cases/tower_check.py` (promoted td-7 book). No git commit.
