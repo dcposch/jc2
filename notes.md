@@ -402,3 +402,7 @@
   addendum. td-7 endgame = coefficient-gluing tier on 6 cells (3-5d build, queued
   decision). Box02: 13 lanes, 468G/2T used, healthy grind. GGV follow-up draft
   awaiting DC review for Friday send.
+- 2026-08-13 ~17:10: Box02 13 lanes grinding, mem 610G/2T (watch: if >1.5T next tick,
+  kill the c2.q char-0 balloon first). Ultramem reachable again — stale lift runner
+  bash (PID 9380) killed, lift retirement now fully executed. sat23 ~10h into
+  p105337. No screen verdicts yet.
