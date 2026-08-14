@@ -1,5 +1,15 @@
 # MATHIEU.md — Mathieu–Zhao framing of R_{k,d2}, and the rigidity half of conj:R
 
+> **PRIORITY NOTE (2026-08-14, paper2/PRIORITY.md):** Theorem A follows
+> in two lines from Zoladek, Topology 47 (2008), Appendix Lemma A.7
+> (refs/zoladek2008_official.pdf), who credits Liouville and uses it in
+> the plane JC via the same ODE (3.14); Hermoso-Alcazar 2024 has the
+> w=1 case verbatim. Our proof was found independently (DvdK mechanism,
+> different route) and stands as corroboration; all campaign uses are
+> unaffected (the statement is TRUE and now double-sourced). Any
+> publication must cite Zoladek/Liouville; the novel campaign content is
+> Lemma B, the bridge, SC1, and the uniformity consequences.
+
 Subject: the Mathieu subspace (Mathieu–Zhao) formulation of the residue
 functional R_{k,d2} (RESIDUE.md), and an attack on the rigidity half of
 paper1 conj:R through it.  Sources read: RESIDUE.md (full), SURPLUS.md,
