@@ -707,3 +707,11 @@ preserved in full: Grok SOUND-WITH-ERRATA -> Case C repair; Sol BROKEN
 insertions, real gap) -> N1-N4 closure (Sol's sketch formalized) -> Sol
 CONFIRMED-KILL. Artifacts: TOWER-9-15.md, cases/towers/t9_15_{direct,
 trunk}.json, cases/tower_check.py (696 gates). Book: 17 -> 16 live cells.
+
+## Second cell-level tower kill (2026-08-14)
+(10,15,7,5)@mu0=3: TOWER-DEAD (Grok single-pass SOUND, no errata —
+xmodel/grok-t10-review.md; machinery core was already triple-reviewed).
+Spine == rollout arithmetic exactly (panel-constant apparatus validated).
+Consequence: nu_U = nu_G = 7 makes the kill reading-independent; with
+(9,15) the forced-nu sub-book is EMPTY and CONJECTURE U_7C is MOOT for
+td-7. Book: 15 live cells, all ARITH-DEAD-PREDICTED (TOWER-ROLLOUT.md).
