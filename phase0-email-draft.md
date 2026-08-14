@@ -46,31 +46,25 @@ Dan Clemens Posch
 
 ---
 
-# Proposed follow-up (draft, for DC review — target send Friday 2026-08-14 if no reply)
+# Follow-up — FINAL as approved (2026-08-14, DC: "short, colloquial")
 
-To: cvalqui@pucp.edu.pe, vander@dm.uba.ar, jjgucci@dm.uba.ar
+To: cvalqui@pucp.edu.pe, vander@dm.uba.ar, jjgucci@dm.uba.ar (reply in thread)
 Subject: Re: Settling the (8,28) strip subcase of Proposition 4.3 (arXiv:2204.14178)
 Attachment: paper1/main.pdf (v2)
 
-## Body
+## Body (pbcopy'd 2026-08-14)
 
 Dear Professors Valqui and Guccione,
 
-A brief update to the note I sent Monday: the rigidity statement that
-was conjectural in that version is now a theorem (Theorem 6.5 in the
-attached v2), so the strip analysis no longer has any conditional
-component of ours; the only remaining dependence is Proposition 4.3
-itself. No other changes of substance.
-
-I would still be glad to hear whether the polygon data matches your
+Quick update on Monday's note: the rigidity statement that was conjectural
+there is now a theorem (Thm 6.5 in the attached v2), so nothing on our
+side is conditional anymore -- the only remaining dependence is your
+Proposition 4.3. Still glad to hear whether the polygon data matches your
 intention, whenever convenient.
 
 Best,
 Dan Clemens Posch
 
-## Notes (not in email)
-- Two sentences + standing question; no nudge language, no endorsement ask
-  (still deferred to a positive reply).
-- v2 = current paper1/main.pdf (author line fixed, Thm 6.1 + 6.5 inline).
-- If they reply before Friday, fold this content into the reply instead.
-- Zenodo v2 refresh offer stands; not mentioned to keep it short.
+## Notes
+- Superseded the longer 08-13 draft per DC (<=3 sentences, colloquial).
+- Endorsement ask still deferred. Attach the v2 PDF (paper1/main.pdf).
