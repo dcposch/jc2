@@ -1,31 +1,59 @@
 # NF-Z.md — the neutral-word future quotient
 
-Status: **REDUCED-WITH-PROVED-CORE (2026-08-14, post-review round 1).**
-Review chain: first submission claimed PROVED-RELATIVE; Grok returned
-**NOT-PROVED** (`xmodel/grok-nfz-review.md`) with three breaks — deep
-anagrams colliding under the written invariants (finding 1), a
-min/max mismatch in the window threshold (finding 2), and a
-state-vs-monoid-element gap in `sigma` (finding 3) — plus errata
-(findings 5–6). **This revision repairs all three breaks**: the
-invariant is now the ORDERED zone word (the letter action is
-non-commutative, so Grok's counterexample pair separates — verified
-exactly in `cases/nfz_check.py`), the threshold is fixed to its
-definition (`theta* = min` skeleton gap; the old `2/5` object is the
-distinct WIN ceiling), and the free monoid on parametric letter
-classes with its concatenate-and-re-threshold composition replaces the
-unsupported finite-state `sigma`. Honest verdict after repair:
+Status: **REDUCED-WITH-PROVED-CORE-UNDER-SD (2026-08-14, post-review
+round 2).**
+Review chain: round 1 claimed PROVED-RELATIVE; Grok returned
+**NOT-PROVED** (`xmodel/grok-nfz-review.md`: deep anagrams, `theta`
+min/max, `sigma`). Round 2 repaired those three (ordered zone word
+`Z`, `theta* = min`, free-monoid schema); Grok's re-review
+(`xmodel/grok-nfz-rereview.md`) returned **STILL-SHORT** with one open
+core step: free-zone commutativity was ASSERTED, not proved, resting
+on a false letter-locality claim for prefix-δ. **Round 3 (this
+revision) resolves that step both ways:**
 
-* **PROVED (relative to CONS):** the quotient for single-word
-  configurations — bounded ordered interleaved zone + commutative free
-  zone + the non-ladder consumers.
-* **NF-Z† (entry-conditional residue):** multi-word deep-zone
-  coexistence (cross-branch cap coupling below `theta*`); per-entry
-  finite check stated in §6.
+* **COUNTEREXAMPLE — unconditional free-zone commutativity is
+  FALSE.** Prefix-δ integrality `D_f·g − kbar ∈ N` at the entry's
+  prefix-menu gaps `g = a/d` is a residue condition on the ORDERED
+  prefix products `P_j`, not on letters (re-review finding 1,
+  confirmed). Two legal all-free words with equal invariants can
+  differ on this consumed boolean whenever some menu denominator `d`
+  does not divide `P_0`: `(5,3,7,11)` vs `(5,7,3,11)` at
+  `P_0 = 30002`, `g = 7/3` — same ledger, empty `Z`, same head 5,
+  endpoint 11, product 1155, classes; the atom-2 boolean flips
+  (§4.3, gate block G). Grok's lattice `(3,5,7)/(5,3,7)` and the
+  den-5 flip at `g = 8/5` replay exactly.
+* **PROVED — the SD-conditional exchange theorem.** Under **SD**
+  (scale divisibility: every prefix-menu denominator divides `P_0`,
+  with margin `g >= w·theta*`) and entry compatibility
+  (`den(alpha_entry) | P_0`), every CONS-consumed boolean or export
+  of a legal single-word free tail is either AUTOMATIC (constant over
+  all legal words, any order) or a function of the written invariants
+  — proved field-by-field (§4.2), with the terminal register
+  discharged by a gap-order argument (Lemma 4.2b), not a slogan.
+* **SD holds on every filed packet** (td-7 prefix menu `{1, 3/2, 2}`,
+  dens `{1,2,2}`, `P_0 = 2`; type `(2,3)` pole top `5/2` with even
+  packet degrees; 13-2d type `(3,4)` pole top `7/3` with
+  `P_0 ∈ {3,9}`; 11-B type `(2,5)` pole top `7/2` with
+  `P_0 ∈ {2,6}`) — the lemma the re-review identified as "true on
+  some filed packets, unstated", now stated and machine-checked
+  (§4.4, gate block G).
+* **Architecture consequence:** NO third zone. Entries failing SD
+  keep an **ordered free zone** (equivalently: the invariant is
+  enriched by the ordered chain of prefix residues mod the lcm of
+  menu denominators) and stay fail-closed on the exact fat record;
+  entries passing SD — all filed ones — get the commutative free
+  zone by the theorem.
+* **NF-Z† is POLICY, not a check** (§6, relabelled per the re-review
+  and coordinator): fail-closed default-deny in the sense of Sol
+  interface rule 6; no per-entry algorithm is claimed.
 
-Machine gate: `cases/nfz_check.py` (25 checks, exit 0), including
-Grok's exact counterexample table. Sources: `xmodel/sol-normalform.md`
-§§0–4, `xmodel/grok-normalform-review.md`, `xmodel/grok-nfz-review.md`,
-`TOWER-UNIFORM.md`. No git commit.
+Machine gate: `cases/nfz_check.py` (39 checks, exit 0; the count is
+printed by the script), including Grok's exact counterexample tables
+from both review rounds and the free-zone commutator (exhaustive over
+residue classes + exact-word instances). Sources:
+`xmodel/sol-normalform.md` §§0–4, `xmodel/grok-normalform-review.md`,
+`xmodel/grok-nfz-review.md`, `xmodel/grok-nfz-rereview.md`,
+`xmodel/sol-td11-13-scope.md` §3, `TOWER-UNIFORM.md`. No git commit.
 
 ## 0. Setting
 
@@ -91,10 +119,18 @@ I(word) = ( tau,      # the M-ledger as the DROP-VALUE chain in the
             u_r,      # endpoint parameter (domain: residue classes)
             Pi,       # the product, one symbolic parameter, plus its
                       # consumer projections (residues, valuations)
-            F )       # the free-zone summary: the sub-theta* letters'
-                      # MULTISET-level exports only: their product
-                      # factor, their letter-local congruence classes,
-                      # and the endpoint if it lies in the free zone
+            F )       # the free-zone summary (symbolic schema, §4):
+                      # the sub-theta* letters' product factor Pi_free
+                      # as ONE symbolic parameter plus its consumer
+                      # projections (residues, valuations), the class
+                      # COUNTS per residue class (symbolic integers;
+                      # the free length r_free is their sum), the
+                      # endpoint if it lies in the free zone, and the
+                      # HEAD letter u_1 when the whole word is free
+                      # (Z empty) — E5F reads the junction vertex,
+                      # which is then u_1.  On SD-failing entries F is
+                      # additionally enriched by the ORDERED chain of
+                      # prefix residues P_j mod lcm(menu dens) — §4.3
 ```
 
 `Z` is an element of the **free monoid** on the (finitely many)
@@ -106,7 +142,12 @@ least doubles per letter; letters never re-enter the zone — monotone).
 left): `Z(W_L . W_R) = Z(W_L) . rethreshold(Z(W_R), P_0 Pi(W_L))` —
 re-thresholding drops the right factor's letters whose shifted gaps
 fall below `theta*`; this is well-defined and associative because `P`
-is monotone (verified on lattices, `nfz_check.py` block D). The letter
+is monotone (verified on lattices, `nfz_check.py` block D). **`F` has
+the induced composition law** (re-review finding 3 artifact row): the
+letters dropped by re-thresholding join the free summary — `Pi_free`
+multiplies, class counts add, the endpoint comes from the right
+factor, and the head slot is filled by the left factor's junction
+(only an entirely-free concatenation keeps `u_1` in `F`). The letter
 action is **non-commutative** — that is not a defect but the content:
 the ladder register genuinely depends on order (§3), so the invariant
 must be ordered, and Grok's finding-1 counterexample becomes the
@@ -148,56 +189,170 @@ Every register-reading consumer reads it at a skeleton vertex or
 through `alpha` at such a vertex; the register position at a skeleton
 vertex is a function of the ordered in-zone prefix (the letters with
 gaps above that vertex's gap — all in `Z` by the definition of
-`theta*` as the MINIMUM skeleton gap). This is the repaired
-completeness mechanism: **everything order-sensitive is above
-`theta*`, and everything above `theta*` is retained in order.**
+`theta*` as the MINIMUM skeleton gap). The repaired completeness
+mechanism, stated precisely (round 3 corrects round 2's unconditional
+version): **everything above `theta*` is retained in order; below
+`theta*`, order-sensitivity persists in the register values and — on
+SD-failing entries — in the consumed prefix-δ booleans (§4.3); under
+SD every consumed output below `theta*` is order-free (§4.2), and
+the register is discharged (Lemma 4.2b).**
 
-## 4. The theorem (repaired) and the free zone
+## 4. The theorem (round 3) and the free zone
+
+**Definition (SD, scale divisibility).** An entry satisfies **SD** if
+every gap `g = a/d` (lowest terms) in its prefix menu — the charged
+prefix gaps at which Sol's NF-Z item 3 evaluates prefix-δ integrality
+`D_f·g − kbar ∈ N` on every created atom, free-zone pads included —
+has `d | P_0`, and `g >= w·theta*` (positivity margin; on the filed
+packets the menu gaps are `>= 1`, so the margin holds by four orders
+of magnitude). **Entry compatibility:** `den(alpha_entry) | P_0`
+(td-7: `alpha_1 = 3/2`, `P_0 = 2`).
 
 **Theorem NF-Z-core (single-word configurations, relative to CONS).**
-*Fix `(td, entry, hierarchy, skeleton)` and suppose the deep zone
-(below `theta*`) contains the vertices of at most one neutral word
-(plus the CONS-residual root interior). Two neutral words with equal
-corrected invariants `I = (tau, Z, u_r, Pi, F)` have identical
-CONS-labelled futures. The invariant set is a finite schema family:
-finitely many ledgers (divisor chains), finitely many zone SHAPES
-(ordered words of length `<= L*` over finitely many letter classes,
-each letter an exact symbolic parameter on a residue-class domain),
-the endpoint and product as symbolic parameters, and the free-zone
-summary; concatenation is closed (§2).*
+*Fix `(td, entry, hierarchy, skeleton)` satisfying SD and entry
+compatibility, and suppose the deep zone (below `theta*`) contains
+the vertices of at most one neutral word (plus the CONS-residual root
+interior). Two legal neutral words with equal corrected invariants
+`I = (tau, Z, u_r, Pi, F)` have identical CONS-labelled futures. The
+invariant set is a finite schema family: finitely many ledgers
+(divisor chains), finitely many zone SHAPES (ordered words of length
+`<= L*` over finitely many letter classes, each letter an exact
+symbolic parameter on a residue-class domain), the endpoint, product,
+and free-summary parameters symbolic; concatenation is closed (§2).
+WITHOUT SD the conclusion is FALSE — §4.3 exhibits two legal words
+with equal `I` and different consumed prefix-δ booleans — and the
+free zone must stay ordered on such entries.*
 
 *Proof.* Non-ladder consumers: as round 1 §3 (review-confirmed) —
-price is word-blind; E5F is affine in `u_r` with reroutes as further
-letters (the offset law is EQUIVALENT to the pad closed form under the
-pad handshake — not "verbatim"; grok finding 6); H8 reads `P_0 Pi`
-symbolically; M/terminal read `tau, w`; coefficients are Lemma
-Z-Omega. Ladder consumer: order the route's deaths by decreasing gap.
-(i) Deaths at gaps `>= theta*`: the participating word letters are
-exactly `Z`, retained in order; the register through this range is a
-function of `Z`, the skeleton, and the entry packet — equal `Z`
-implies equal steps, equal `alpha` at every skeleton vertex, equal
-`k_x`/degree labels. (ii) Deaths at gaps `< theta*`: by the definition
-of `theta*` no skeleton vertex lies below, so (single-word hypothesis)
-these are word deaths and the root residual only. Their cap conditions
-are automatic: `k' | P_{j+1}` by Z2 (nested-product divisibility,
-machine block E), and every rootward-alive vertex's factor exponent is
-a multiple of the relevant nested product (word-rootward part) or of
-the full product (root/terminal side, H8), so no non-automatic cap
-fires. Their legality is letter-local congruences (`d | u + 1`,
-`gcd(a, u) = 1`, `l_j | u_{j-1} + 1`, and the finite-modulus residue
-conditions of the sub-`theta*` delta consumers). Their exports are
-order-free: the product factor (into `Pi`), the congruence classes
-(into `F`), and the endpoint if last; the register values below
-`theta*` are read by NO CONS consumer (root-interior depth is
-residual) — machine block E demonstrates equal exports with unequal
-internal registers. Hence equal `I` gives equal labels everywhere. ∎
+price is word-blind; E5F is affine in the JUNCTION letter (head) with
+reroutes as further letters (the offset law is EQUIVALENT to the pad
+closed form under the pad handshake — not "verbatim"; grok finding
+6), and the head is in `Z` when `Z` is nonempty, in `F` when the word
+is entirely free; H8 reads `P_0 Pi` symbolically; M/terminal read
+`tau, w`; coefficients are Lemma Z-Omega. Ladder consumer: order the
+route's deaths by decreasing gap. (i) Deaths at gaps `>= theta*`: the
+participating word letters are exactly `Z`, retained in order; the
+register through this range is a function of `Z`, the skeleton, and
+the entry packet — equal `Z` implies equal steps, equal `alpha` at
+every skeleton vertex, equal `k_x`/degree labels. (ii) Deaths at gaps
+`< theta*`: by the definition of `theta*` no skeleton vertex lies
+below, so (single-word hypothesis) these are word deaths and the root
+residual only. By the field algebra of §4.2, every CONS item's
+consumed output on the free tail is either AUTOMATIC — a boolean that
+holds for every legal word in every order (descent, caps, WIN/N4
+comparisons, and, **under SD**, every prefix-δ atom) — or a function
+of the written invariants (`Pi` and its projections, class counts,
+endpoint, head, `tau`, count sequence); the register is discharged by
+Lemma 4.2b. Hence equal `I` gives equal labels everywhere. ∎
+
+### 4.2 The free-zone field algebra (the commutator, field by field)
+
+Throughout, "free tail" means every gap `< theta*` in the order
+written. The zone boundary itself is order-sensitive — a swap can
+push a letter's gap above `theta*` (`gamma'_first = u·gamma_second`)
+— but such pairs have DIFFERENT `Z` and are separated by the in-zone
+invariant (gate row G10); the commutation question is confined to
+reorderings that stay entirely sub-`theta*`. Field by field:
+
+| CONS item | what it consumes from the tail | order behaviour |
+|---|---|---|
+| price / lambda-budget (P0/P1) | sum of prices `= 0` | constant (letters are price-0) |
+| E5F | `(nu, kbar)` of the junction vertex | = head `u_1`: in `Z` if `Z != ∅`, else in `F` |
+| H8 / equal-quotient, 11-A `v_p` | `P_0 Pi` and its valuations | symmetric function of the multiset — commutes |
+| M / terminal | ledger chain, final `M` | `= tau ∈ I` (equal-`tau` hypothesis); `l_j | M_{j-1}` is domain legality, not a consumed output |
+| gap comparisons (WIN `2/5`, N4 `3/8`, skeleton order) | booleans `gamma_j < c` | automatic: every free gap `< theta* << 3/8 < 2/5` |
+| intra-tail death order, delta descent | strict decrease | automatic in EVERY order: `gamma_{j+1}/gamma_j = (u_{j+1}+1)/((u_j+1)u_{j+1}) <= 1/2` (Z3) |
+| death-equation caps / aliveness | `k_j |` exponent budget | automatic in every order: Lemma 4.2a gives `k_j | P_j`; the factor exponents are supplied by the Z1/Z2 cylinder construction |
+| **prefix-δ at menu gaps `a/d`** | boolean `w P_j g − w(u_j+1) ∈ N` per atom | **automatic IFF SD**: `d | P_0 | P_j` gives integrality in every order, and the margin gives positivity (`g >= w theta* > w gamma_j`). WITHOUT SD: order-sensitive — §4.3 |
+| count monotonicity | the count sequence | function of `r` (class-count sum, in `F`) and the skeleton |
+| mu-recursion: register `alpha_j`, steps `(k_j, l_j)` | — | order-sensitive VALUES with NO consumer: every boolean they feed is automatic (rows above), and `alpha_exit` is terminal (Lemma 4.2b) |
+
+**Lemma 4.2a (automatic caps, any order).** If
+`den(alpha_entry) | P_0`, then along any legal word in any order,
+`den(alpha_j) | P_{j-1}` and `k_j = den(gamma_j + alpha_j − 1)` divides
+`P_j`. *Proof:* induction — `den(gamma_j) | P_j`, `P_{j-1} | P_j`, and
+`alpha_{j+1} = l_j + 1 − gamma_j` has denominator dividing `P_j`; the
+step denominator divides `lcm(P_{j-1}, P_j) = P_j`. The hypothesis is
+NECESSARY: `P_0 = 3`, `alpha = 3/2`, `u = 5` gives `k = 10 ∤ 15`
+(gate row); it holds on the filed packets. ∎
+
+**Lemma 4.2b (terminal-register discharge).** `theta*` is the MINIMUM
+skeleton competing gap, so no skeleton vertex lies below `theta*`;
+deaths are processed in decreasing gap order, so every free-tail
+death occurs after every skeleton death, and after the tail's last
+death the branch is exhausted. CONS reads the register only (a) as
+the input of the NEXT death (mu-recursion/Z1) or (b) through
+`k_x = i_x(alpha − 1)` at a SKELETON vertex. Below `theta*` there is
+no skeleton vertex, so (b) is empty; the (a)-feeds are internal to
+the tail, and their consumed outputs are exactly the automatic
+booleans of the table; after the final letter there is no next death.
+The rootward exports of the completed branch — depth `r`, endpoint
+`u_r`, scale `P_0 Pi`, terminal `M`, junction data — are all in `I`.
+Hence `alpha_exit` and the interior `(k_j, l_j)` values have no CONS
+consumer. This is a computation over the CONS list of §0, not a
+scope slogan; a future consumer of root-interior atoms re-opens it
+(§7). ∎
+
+### 4.3 The counterexample: SD is necessary, and what fails without it
+
+Prefix-δ integrality is a condition on the ordered prefix product:
+at menu gap `a/d` the atom for letter `u_j` passes iff
+`d | a·w·P_j` (equivalently `d_eff | P_j` with
+`d_eff = d/gcd(d, aw)`) and the margin holds. Reordering the word
+redistributes the prime factors of `Pi` among the prefixes `P_j`.
+Exact instance (gate block G, all-free, legal, `w = 2`):
+
+```text
+P_0 = 30002 (3 ∤ P_0), menu gap g = 7/3:
+  (5,3,7,11): prefix-δ booleans [F,T,T,T]
+  (5,7,3,11): prefix-δ booleans [F,F,T,T]
+```
+
+Both words lie entirely below `theta* = 1/13566` with the SAME
+`tau` (trivial), `Z` (empty), head `5`, endpoint `11`, `Pi = 1155`,
+and classes — equal `I`, different consumed boolean. Grok's
+re-review lattice replays exactly: `(3,5,7)` vs `(5,3,7)` at
+`g = 7/3` gives `[T,T,T]` vs `[F,T,T]` for
+`P_0 ∈ {2,4,8,30001,30002}` and both-pass at `P_0 = 30000`
+(`3 | P_0`); the den-5 flip `g = 8/5` at `P_0 = 2` distinguishes
+`(3,5,7)` from `(3,7,5)`. (These flip rows have `gcd(d, aw) = 1`, so
+they are identical under both `D_f` normalizations, `P_j` and
+`w P_j`.)
+
+**Architecture consequence (honest answer to the either/or).** The
+commutator fails on exactly one consumed field, and the missing datum
+is exactly the ordered chain of prefix residues
+`P_j mod lcm(menu denominators)`. So: NO third zone. Entries failing
+SD keep an **ordered free zone** — equivalently, `F` enriched by that
+finite-modulus ordered residue chain — and stay fail-closed on the
+exact fat record. Entries passing SD get the commutative free zone by
+the theorem. SD is a per-entry finite check: one divisibility per
+menu gap.
+
+### 4.4 SD on the filed corpus (why the re-review hunt found no boolean hit)
+
+td-7 (11-A shape): the certified Case-C prefix menu is
+`{1, 3/2, 2}` (`cases/towers/t9_15_direct.json`,
+`tower.obstruction`), dens `{1, 2, 2}`, `P_0 = 2` — SD holds. Type
+`(2,3)` packets (11-A/C, 13-2a/b/c, 13-3, 13-4): pole top `5/2`, den
+`2`, and every packet degree `p = b·alpha` is even. 13-2d (type
+`(3,4)`): pole top `7/3`, den `3`, `p ∈ {3,9}`. 11-B (type `(2,5)`):
+pole top `7/2`, den `2`, `p ∈ {2,6}` (`xmodel/sol-td11-13-scope.md`
+§3.1). In each case `den | P_0` because the menu gaps live over the
+pole degree itself: `g_top = (alpha+beta)/alpha` with
+`alpha | b·alpha = P_0`. This is the lemma the re-review identified
+as "true on some filed packets, unstated" — now stated, per-entry
+checkable, and machine-checked (gate block G). It is why Grok's
+free-zone anagram hunt produced same-`I`/different-register pairs
+but no CONS-boolean hit against any named promoted entry.
 
 **Finiteness** is by the bounded zone (not by a finite transformation
 monoid — the register is integer-valued and unbounded; grok finding 3
 is accepted: no finite-state `sigma` carries it. The finite object is
 the SCHEMA set: `#ledgers x #zone-shapes x #domains`, with `Z`'s
-letters, `u_r`, and `Pi` as exact symbolic parameters — Sol's
-demanded shape).
+letters, `u_r`, `Pi`, and `F`'s parameters (`Pi_free`, class counts,
+head) exact symbolic parameters — Sol's demanded shape; re-review
+finding 3's quotient of `F` to symbolic form is adopted in §2).
 
 ## 5. Specialization and kill-arithmetic corrections (grok finding 5)
 
@@ -223,46 +378,63 @@ demanded shape).
   consumer. The `5/8` resonance itself is NF-P material (a
   state-changing clean step, not a (2.5) letter).
 
-## 6. The honest residue: NF-Z† (multi-word deep coexistence)
+## 6. POLICY NF-Z† (multi-word deep coexistence): fail-closed, Rule-6 style
 
 When several neutral words coexist below `theta*` (padding on several
 chains at once), a deep death on one word must keep levels alive on
 the other words' deep vertices: its `k'` must divide the OTHER
 branches' nested-product exponents, and cross-branch
 `gcd(P^{(1)}-part, P^{(2)}-part)` is not automatic. The single-word
-theorem does not cover this coupling.
+theorem does not cover this coupling — its hypothesis is FALSE there,
+and `F` is not a joint invariant of two interleaved free tails.
 
-**Hypothesis NF-Z† (per-entry check, compiler-usable).** For the fixed
-entry/skeleton, compute the cross-branch deep cap
-`c_x := gcd`-bound exported by each branch's rootward exponents to the
-other branches' sub-`theta*` deaths. If the resulting constraint
-system forces `k' <= c_x < u u' <=` every consecutive deep pair (the
-td-7 pattern: deep cross-coupled configurations are tower-dead), the
-deep zones decouple-or-die and NF-Z closes for that entry; the check
-is finite (finitely many branch pairs, divisor arithmetic). If some
-entry fails the check, that entry's neutral words stay on the exact
-fat record (fail-closed, Sol interface rule 6) — no emptiness
-certificate may use the quotient there.
+**This is a POLICY, not a check** (relabelled per the re-review and
+the coordinator). Round 2 sketched a per-entry quantity `c_x` and
+called it "a finite check"; the re-review is right that the sketch is
+not an algorithm (which exponents, which gcd, over which unbounded
+word tails — undefined), and nothing in `nfz_check.py` implements it.
+The sketch is withdrawn as a check. The earlier sentence "on every
+configuration inspected in the promoted corpus the deep coupling
+resolved as kills" is withdrawn as evidence — it had no lattice, no
+log, no gate row. What remains true and citable is only the td-7
+pattern that a future check would formalize: uniform deep kills of
+the shape `k' <= c_x < 4 <= u u'`.
 
-This is the minimal additional hypothesis; it is checkable per entry;
-and on every configuration inspected in the promoted corpus (td-7
-direct/trunk, the 16 uniform cells, 11-A) the deep coupling resolved
-as kills, never as live complexity.
+**POLICY (fail-closed default-deny; Sol interface rule 6).** An entry
+whose deep zone can carry more than one neutral word is UNRESOLVED by
+NF-Z, unconditionally, unless and until a future, explicitly stated
+finite check certifies deep decoupling for that entry. Unresolved
+entries stay on the exact fat record; the single-word core MUST NOT
+be applied to them; no emptiness certificate may use the quotient
+there; a run that needs the quotient on such an entry emits
+`NEEDS_NF_Z` / `OPEN`, never an empty-panel certificate. This
+constrains what a compiler may emit (exactly Rule 6's shape: an open
+obligation may yield OPEN or a symbolic candidate, never a certified
+empty panel); it is not a theorem, and no completeness is claimed for
+the quotient on multi-word entries.
 
 ## 7. Trust perimeter
 
 * Relative to **CONS as a consumer list** (§0) — explicitly NOT "the
   promoted kernel" (grok finding 4); a consumer beyond CONS re-opens
-  the §1 audit. Root-interior residual status is load-bearing for the
-  free zone; a future consumer of root-interior atoms re-opens §4(ii).
+  the §1 audit. The free-zone half now rests on the §4.2 field table
+  and Lemmas 4.2a/4.2b (computations over the CONS list), no longer
+  on a "root-interior residual" scope sentence; a future consumer of
+  root-interior atoms or of the interior register re-opens §4.2b.
+* **SD is part of the theorem's hypothesis.** Applying the free-zone
+  quotient to an entry without checking SD (one divisibility per
+  prefix-menu gap, plus `den(alpha_entry) | P_0`) is out of
+  perimeter; §4.3's counterexample is what goes wrong.
 * The ladder laws are the promoted calculus (td=6-calibrated,
   reviewed on td-7); Z1–Z3 are algebraic identities on them.
 * Sibling-`X` gap ties: carved out (§0).
-* **Compiler gating is unchanged:** even with NF-Z-core + NF-Z†,
-  the census compiler remains gated on NF-P (parametric charged
-  letters, `nu = 1` schemas, the 11-A resonance class) and NF-M
-  (multi-orbit merge ODE types). This document ungates only the
-  neutral-word slice, and only per-entry where NF-Z† checks.
+* **Compiler gating is unchanged:** even with NF-Z-core, the census
+  compiler remains gated on NF-P (parametric charged letters,
+  `nu = 1` schemas, the 11-A resonance class) and NF-M (multi-orbit
+  merge ODE types). This document ungates only the neutral-word
+  slice, and only per entry where (a) SD and entry compatibility
+  hold, AND (b) the deep zone is single-word — multi-word entries are
+  UNRESOLVED by the §6 policy (default-deny; NF-Z† is not a check).
 
 ## 8. What NF-P and NF-M need (updated)
 
@@ -277,18 +449,30 @@ as kills, never as live complexity.
 ## 9. Reproduction
 
 ```bash
-python3 cases/nfz_check.py     # 25 checks, exit 0
+python3 cases/nfz_check.py     # 39 checks, exit 0 (count printed)
 ```
 
 Blocks: A core identities (Z1 algebra + td=6 template `1003/42`; Z2
-word formula, `k' >= uv`, coprimality; Z3); B Grok's counterexample
-pair replayed EXACTLY (both step tables and both `alpha_exit` values),
-collision under the round-1 invariants, separation under the corrected
-ordered `Z`, non-commutativity of the letter action; C `theta*` vs the
-WIN ceiling on the td-7 skeleton (`1/13566` vs `2/5`) and zone
-boundedness (`P_prev <= 3/(2 theta*) = 20349`); D the composition law
-(sample + associativity + monotonicity); E free-zone order-freeness
-(equal exports, unequal CONS-unread registers, automatic caps,
-letter-local congruences); F 11-A `v_2` and the td-7 N2/N3/N4 numbers
-with the corrected Case-A attribution. `cases/tower_check.py` remains
-the promoted N1–N4/tower gate (exit 0, unchanged). No git commit.
+word formula, `k' >= uv`, coprimality; Z3); B Grok's round-1
+counterexample pair replayed EXACTLY (both step tables and both
+`alpha_exit` values), collision under the round-1 invariants,
+separation under the corrected ordered `Z`, non-commutativity of the
+letter action; C `theta*` vs the WIN ceiling on the td-7 skeleton
+(`1/13566` vs `2/5`) and zone boundedness
+(`P_prev <= 3/(2 theta*) = 20349`); D the composition law (sample +
+associativity + REAL Z3 monotone decay along all orders — the round-2
+tautology row is replaced, re-review finding 3); E free-zone export
+equalities and letter-local congruences; F 11-A `v_2` and the td-7
+N2/N3/N4 numbers with the corrected Case-A attribution; **G round 3:
+the free-zone commutator** — the re-review's sub-`theta*`
+same-endpoint anagram pairs with EXACT `alpha_exit` values (both
+rows of its finding-1 table), all consumed booleans equal under SD,
+the prefix-δ lattice at `g = 7/3` and `g = 8/5` replayed exactly,
+the same-`I` counterexample `(5,3,7,11)/(5,7,3,11)` at
+`P_0 = 30002`, the exhaustive residue-class commutator
+(`d_eff ∈ {2,3,5}`: `d | P_0` forces constant-TRUE over ALL orders,
+`d ∤ P_0` admits flips for every modulus), Lemma 4.2a with its
+necessity witness, the SD corpus row, the coarse-pair identification
+soundness row, and the order-sensitive zone boundary.
+`cases/tower_check.py` remains the promoted N1–N4/tower gate (exit 0,
+unchanged). No git commit.
