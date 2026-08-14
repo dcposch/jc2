@@ -219,11 +219,13 @@ check("X2 the M-drop dichotomy (NF-D D5 applied to the clash): a "
       "drops are irreversible",
       all(gcd(l, nu + 1) <= 2 for l in (1, 2) for nu in (2, 4))
       and v2(8) == 3 and v2(2 * 5 * 7) == 1)
-check("X3 NF-D byproduct (the reorder rationale): an entry-level clash "
-      "theorem kills every neutral word extending a clashed spine, so "
-      "the td-11 depth question (NF-D: D OPEN, S infinite, Pi = 5^k) "
-      "closes entry-wise WITHOUT a depth cap; per-entry Case-A refusal "
-      "over each entry's OWN legal nu_X and caps",
+check("X3 NF-D byproduct (round-4 wording, matching the sec-9 "
+      "corollary): the clash kills every SINGLE-WORD-DEEP neutral "
+      "extension of a clashed spine -- single-tail truncations of "
+      "Pi = 5^k included; the TWO-WORD deep slice stays OPEN "
+      "(NF-Z-dagger), so the td-11 depth question closes only on the "
+      "single-word-deep slice; per-entry Case-A refusal over each "
+      "entry's OWN legal nu_X and caps",
       all(c % (2 * nu) != 0 for nu in range(3, 60, 2) for c in (2, 4))
       and all(c % (2 * nu) != 0 for nu in range(2, 60) if nu % 3 != 0
               for c in (2, 6)))
@@ -724,15 +726,41 @@ def b9_audit(seed, p, res_tag):
 b9 = {s: b9_audit(s, p, rt) for (s, p, rt) in
       (((Fr(3), 2), 4, 'clean D3n2nu2'),
        ((Fr(3, 2), 2), 4, None), ((Fr(4, 3), 3), 6, None))}
-check("B9d DEGREE-AWARE budget-9 window audit, ALL THREE seeds, run "
-      "inline (cutoff Dijkstra): exact menu checks on every state "
-      "first reached at deg <= 94 (cores: 12, 10, 8 states), ZERO "
-      "gaps >= 1/2 beyond 11-A's seed-level 5/8; every deeper state "
-      "is law-safe (parsed ratios max 5/2, 5/2, 7/3, all <= 47 = the "
-      "px2 grammar bound, so gap <= 47/deg < 1/2 above deg 94)",
+check("B9d EXACT-CORE budget-9 window audit, ALL THREE seeds, run "
+      "inline (Dijkstra over actual degrees): exact menu checks on "
+      "every state first reached at deg <= 94 (cores: 12, 10, 8 "
+      "states), ZERO gaps >= 1/2 beyond 11-A's seed-level 5/8; "
+      "parsed ratios max 5/2, 5/2, 7/3.  THE BEYOND-CORE EXTENSION "
+      "IS WITHDRAWN (round 4, sol-td11-rereview finding 1): the "
+      "47-bound is a DIRTY-branch law only -- see B9f",
       all(len(v) == 0 and rb for (c, n, v, rb) in b9.values())
-      and [n for (c, n, v, rb) in b9.values()] == [12, 10, 8]
-      and Fr(47, 95) < Fr(1, 2))
+      and [n for (c, n, v, rb) in b9.values()] == [12, 10, 8])
+# round 4: the clean-branch ratio law and sol's counterexample.
+# px2:45-60: clean cell at state w = a/d has Delta | a, 3 <= Delta
+# <= a, nu | Delta - 1, n = (Delta-1)/nu + 1, dq = n*nu + 1 =
+# Delta + nu, so ratio R = dq/nu = 1 + Delta/nu <= 1 + a/2 --
+# UNBOUNDED in the abstract grammar as num(w) grows.
+okclean = True
+for a in (3, 5, 9, 15, 95):
+    for Delta in range(3, a + 1):
+        if a % Delta:
+            continue
+        for nu in range(2, Delta):
+            if (Delta - 1) % nu:
+                continue
+            n = (Delta - 1) // nu + 1
+            okclean &= (n * nu + 1 == Delta + nu)
+            okclean &= (Fr(n * nu + 1, nu) == 1 + Fr(Delta, nu))
+check("B9f the clean-branch ratio law (round 4): R_clean = 1 + "
+      "Delta/nu with Delta | num(w) -- the identity n*nu + 1 = "
+      "Delta + nu verified across the grammar lattice; sol's "
+      "counterexample replays: abstract state (95,1) emits clean "
+      "D95n48nu2 with R = 97/2 > 47, so NO universal grammar bound "
+      "exists and the beyond-core cutoff is unsound without a "
+      "reachable-numerator invariant (num(w) vs deg -- exactly the "
+      "unfinished closure question; OPEN, ledger row 9)",
+      okclean and (95 - 1) % 2 == 0 and (94 // 2) + 1 == 48
+      and Fr(48 * 2 + 1, 2) == Fr(97, 2) > 47)
 # verify the grammar caps empirically on every seed-level st96 tag
 _caps_ok = True
 for (s, p, rt) in (((Fr(3), 2), 4, 'clean D3n2nu2'),
@@ -742,33 +770,40 @@ for (s, p, rt) in (((Fr(3), 2), 4, 'clean D3n2nu2'),
             kk = int(tag.split('k')[1].split('S')[0])
             xx = int(tag.split('x')[1].split('nu')[0])
             _caps_ok &= (kk <= 6 and xx <= 40)
-check("B9e honesty rider: the budget-9 audit is a px2-MENU-SLICE "
+check("B9e honesty rider: the exact-core audit is a px2-MENU-SLICE "
       "statement -- the engine inherits td-7 loop caps (k <= 6, "
       "lex <= 40; verified on every seed-level st96 tag), which the "
-      "scope forbids a production compiler to inherit; the ratio "
-      "bound 47 = 1 + 6 + 40 is exactly that grammar's cap, so a "
-      "cap-free engine re-opens the law-safe step and is a "
-      "compiler-gap item (doc sec 13)",
+      "scope forbids a production compiler to inherit; 47 = 1 + 6 + "
+      "40 caps the DIRTY branch only (B9f: clean is unbounded in the "
+      "grammar); both the caps and the beyond-core region are "
+      "compiler-gap items (doc sec 13)",
       _caps_ok and 1 + 6 + 40 == 47)
 
 print("== 15. THE THEOREM (restated at the audited tier) ==")
-check("TD11-CLASH aggregate (round-3 tier): the three entry packets, "
+check("TD11-CLASH aggregate (round-4 EXACT-CORE tier; b9 conjuncted "
+      "per sol-rereview's wiring note): the three entry packets, "
       "direct hierarchies (11-A, 11-B binary; 11-C's 16 direct rows), "
-      "single-word-deep zones, px2-menu window discipline "
-      "(budget-9-audited on (3,2), budget-5..8-sized elsewhere): "
+      "single-word-deep zones, and the px2-menu window discipline ON "
+      "THE AUDITED REGION -- the budget-9 exact cores (12/10/8 "
+      "states, zero violations) plus the budget-5 closure blocks: "
       "every synchronized configuration in THIS class dies at the "
       "tower tier -- X-death refused on the full register lattice "
-      "under every cap candidate incl. dynamic-cap classes, the 5/8 "
-      "intruder H8-dead, Case B gap-refused, spine-death otherwise",
+      "under every cap candidate incl. entry-paired dynamic-cap "
+      "classes, the 5/8 intruder H8-dead, Case B gap-refused, "
+      "spine-death otherwise",
       okX and okLat and okc1 and okdyn
-      and all(a[3] < a[1] for a in AUD) and n_dead == 16)
+      and all(a[3] < a[1] for a in AUD) and n_dead == 16
+      and all(len(v) == 0 and rb for (c, n, v, rb) in b9.values()))
 check("what is NOT claimed (the gap to a compiler certificate): the "
-      "129 nested 11-C rows (OPEN, SK3), multi-word deep zones "
-      "(NF-Z-dagger POLICY -- the NF-D corollary is restricted to "
-      "single-word-deep, sec 9 of the doc), the cap-free budget-9 "
-      "closure for (3/2,2)@9 and (4/3,3)@9, nu = 1 insertions and "
-      "resonance-bearing chains (NF-P), and the Q+E5/E5F refile "
-      "itself (scope: UNKNOWN) -- each stamped OPEN, never certified",
+      "BEYOND-CORE budget-9 region (states first reached above deg "
+      "94 -- withdrawn round 4, needs a reachable-numerator "
+      "invariant or a cap-free closure), the 129 nested 11-C rows "
+      "(OPEN, SK3), multi-word deep zones (NF-Z-dagger POLICY -- the "
+      "NF-D corollary is restricted to single-word-deep), the "
+      "cap-free closures for (3/2,2)@9 and (4/3,3)@9, nu = 1 "
+      "insertions and resonance-bearing chains (NF-P), and the "
+      "Q+E5/E5F refile itself (scope: UNKNOWN) -- each stamped OPEN, "
+      "never certified",
       n_open == 129)
 
 print()

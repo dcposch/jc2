@@ -1,9 +1,18 @@
 # TOWER-TD11.md — entry-level clash analysis for the three td-11 entries
 
-Status: **THEOREM RESTATED AT THE AUDITED TIER (2026-08-14, round 3
-— dual-review errata folded: `xmodel/grok-td11-review.md`
-SOUND-WITH-ERRATA, `xmodel/sol-td11-review.md` BROKEN, agreeing
-diagnosis).** The entry-tier kill is REAL and replays (both
+Status: **THEOREM AT THE EXACT-CORE TIER (2026-08-14, round 4, post
+`xmodel/sol-td11-rereview.md` STILL-BROKEN-narrowed-to-one-break).**
+Round 4 takes the re-review's exit (b): the budget-9 BEYOND-CORE
+cutoff extension is WITHDRAWN — its `R <= 47` grammar law is false on
+the clean branch (`R_clean = 1 + Delta/nu`, `Delta | num(w)`,
+unbounded; Sol's `(95,1) -> D95n48nu2`, `R = 97/2` — ledger row 9),
+and the hereditary safety invariant it would need (reachable
+`num(w)` vs degree) is exactly the unfinished closure question. The
+EXACT CORES STAND (12/10/8 states below deg 94, zero violations,
+re-review-confirmed); the beyond-core region joins the OPEN residue.
+Stale §5/X3 all-depth wording and the §9/§10 scope sentences are
+reconciled to the single-word-deep / audited-class tier. Round-3
+history: The entry-tier kill is REAL and replays (both
 reviews); round 3 corrects the three quantifier breaks: (1) the
 OB-6 audit ran budget 5, not 9 — now a budget-9 DEGREE-AWARE cutoff
 audit for all three seeds (§7.5; the `R* < p` law is retired,
@@ -114,13 +123,15 @@ the residual realization work is the refile itself (perimeter (v)).
 
 NF-D round 2 left td-11 depth OPEN: the synchronized windows are
 infinite (`Pi = 5^k` at every depth) and no mechanism-A pin exists.
-The entry-clash theorem closes that from the other side: **every
-neutral word extends a spine whose X-death is refused in every case
-above, so a proved clash kills all depths at once** — deep words die
-as a corollary, no depth cap needed, and the depth/census circularity
-(census needs depth bound, depth bound needs census) is broken
-entry-wise. The `Pi = 5^k` family lives in the synchronized window
-but every member's spine faces the same Case-A refusal.
+The entry-clash theorem closes the SINGLE-WORD-DEEP slice of that
+question (round-4 wording, matching the §9 corollary): a neutral
+word whose depth keeps the deep zone single-word extends a spine
+whose X-death is refused in every case above, so those words die
+with the spine — no depth cap needed on that slice, and the
+depth/census circularity is broken there. Deep co-scaled families
+with sub-`theta*` tails on BOTH chains are two-word deep-zone
+objects: OPEN (POLICY NF-Z-dagger), exactly as `cases/nfd_check.py`
+still reports.
 
 ## 6. The td-11 entry-clash theorem: statement prospect and obligations
 
@@ -243,28 +254,36 @@ path `(3,2) → deg 40 → deg 400 at (3/4,8)` carrying a step of ratio
 escape — but the law as stated was false; the audit must be
 degree-aware).
 
-**The corrected budget-9 audit (gate B9d, runs inline).** A cutoff
-Dijkstra over actual degrees at budget 9, for ALL THREE seeds:
+**The round-4 EXACT-CORE audit (gate B9d, runs inline).** A Dijkstra
+over actual degrees at budget 9, for ALL THREE seeds: exact menu
+checks for every state first reached at `deg <= 94` — cores of 12,
+10, 8 states, **zero gaps `>= 1/2` beyond 11-A's seed-level `5/8`**,
+parsed ratio maxima `5/2, 5/2, 7/3` (re-review-confirmed).
 
-* exact menu checks for every state first reached at
-  `deg <= D* = 94`: cores of 12, 10, 8 states; **zero gaps `>= 1/2`
-  beyond 11-A's seed-level `5/8`**;
-* every state first reached above `D*` is LAW-SAFE: every step in
-  px2's grammar has ratio `dq·l/dp <= 47 = 1 + k_max + lex_max`
-  (`k <= 6`, `lex <= 40`, verified on every parsed tag; parsed
-  maxima are `5/2, 5/2, 7/3`), so its gap is `<= 47/deg < 1/2`.
+**The beyond-core extension is WITHDRAWN (round 4).** Round 3
+claimed every deeper state safe via a universal grammar bound
+`R <= 47 = 1 + k_max + lex_max`. That law governs only the DIRTY
+branch (`px2.py:77-125`); the CLEAN branch (`px2.py:45-60`) has
+`R_clean = dq/nu = 1 + Delta/nu` with `Delta | num(w)` — the
+identity `n·nu + 1 = Delta + nu` (gate B9f) — which is UNBOUNDED as
+`num(w)` grows: the abstract grammar row `(95,1) -> clean D95n48nu2`
+has `R = 97/2 > 47` (sol-td11-rereview finding 1, replayed). Since
+dirty/pure-b transitions can grow numerators
+(`w' = l·w·(1+k+lex)/E`), a hereditary beyond-core safety argument
+needs a reachable-state invariant relating `num(w)` and degree —
+exactly the unfinished closure question. No such invariant is proved,
+so states first reached above deg 94 are **OPEN**, joining the
+residue of §12. (Frozen sizing record, gate B9b: `(3,2)` ladder
+`21/56/130/330/743` matching the sol-review; `(3/2,2)`
+`69/162/349/785` at budgets 5–8 with ~10× time growth per unit;
+`(4/3,3)` `347` at budget 5; full budget-9 closures of the latter
+two are session-infeasible.)
 
-This needs NO full closure, so it covers `(3/2,2)` and `(4/3,3)` at
-budget 9 as well — where full `px5` closures are session-infeasible
-(frozen sizing record, gate B9b: `(3,2)` ladder `21/56/130/330/743`
-matching the sol-review; `(3/2,2)` `69/162/349/785` at budgets 5–8
-with ~10× time growth per unit; `(4/3,3)` `347` at budget 5).
-
-**Honesty rider (gate B9e):** the whole audit is a **px2-MENU-SLICE**
-statement — the engine inherits td-7's `k <= 6, lex <= 40` loop caps,
-which the scope forbids a production compiler to inherit; the ratio
-bound `47` is exactly that grammar's cap. A cap-free engine re-opens
-the law-safe step. That is a compiler-gap item (§13), stated, not
+**Honesty rider (gate B9e):** the exact-core audit is a
+**px2-MENU-SLICE** statement — the engine inherits td-7's
+`k <= 6, lex <= 40` loop caps, which the scope forbids a production
+compiler to inherit; `47` caps the dirty branch only. Both the caps
+and the beyond-core region are compiler-gap items (§13), stated, not
 hidden. The budget-5 blocks (round-2 gate block 10: growth `>= 2`,
 resonance censuses, chain-1 menus at `(2,1)`/`(3,1)`) remain valid
 budget-5-slice facts.
@@ -336,15 +355,19 @@ corrected §12 perimeter).** *For each td-11 L6-surviving entry
 `E ∈ {11-A, 11-B, 11-C}` with its derived packet (§7.1), restricted
 to the direct hierarchies (11-A, 11-B binary; 11-C's 16 direct
 decorated rows of §7.6) and to configurations whose deep zone is
-single-word: every synchronized configuration — all `μ`-assignments
-under `μ | M` including current-state classes (§7.7 witnesses),
-every stack `Pi` in the co-scaling window, every E5F-admissible
-realization — dies at the tower tier. Explicitly: the global
+single-word: every synchronized configuration — `μ`-assignments in
+the AUDITED CLASS (the direct decorated rows of §7.6, read through
+§10(b); the §7.7 current-state witnesses are exercised examples, not
+a proved class — sol-rereview finding 2), every stack `Pi` in the
+co-scaling window, every E5F-admissible realization — dies at the
+tower tier. Explicitly: the global
 ladder's death order reaches the entry's pole-adjacent X (neutral
 `gap(X) = (ν_X+1)/(2ν_X)` over the domain-legal `ν_X >= 2` — the
 X-interval `(1/2, 2/3]` / `(1/2, 3/4]`, which excludes `ν = 1` — or
 11-B's resonant `X = 5/4`) with every competing object below `1/2`
-(§7.5, budget-9 degree-aware audit on the px2-menu slice); and the
+(§7.5, the budget-9 EXACT-CORE audit plus budget-5 closure blocks on
+the px2-menu slice — competing objects beyond the audited region are
+OPEN, not covered); and the
 X-death step is REFUSED — `den(alpha_m − 1 + gap(X))` divides no
 cap candidate for any lattice register `alpha_m`, including the
 dynamic-cap register classes (§7.4, Lemma CAP-DEN + OB7f) — while
@@ -411,10 +434,15 @@ stamp TOWER-DEAD(entry id, packet constants, cap candidate,
        to map.
 ```
 
-The gate implements exactly this classifier on the 145-row layer and
-verifies it never stamps a nested row dead (SK3). Conjunct (c) is
-what the round-2 text omitted; a compiler implementing the round-2
-sentence would have stamped nested rows §12 forbids. The mapping
+The gate implements conjuncts (a)/(b) — the hierarchy and direct-`μ`
+split — on the 145-row layer and verifies the classifier never
+stamps a nested row dead (SK3). Conjunct (c) is a REQUIRED FUTURE
+COMPILER PRECONDITION, not something the current gate enforces:
+SK3's row carries no fields for deep-zone multiplicity, menu
+horizon, budget, resonance, mapping, or refile status
+(sol-rereview finding 5). Conjunct (c) is what the round-2 text
+omitted; a compiler implementing the round-2 sentence would have
+stamped nested rows §12 forbids. The mapping
 claim in (a) is a per-row check, not a theorem — a future compiler
 can emit decorations that are labelled 11-C and are not in the
 audited class; those fall to (b)'s OPEN.
@@ -432,10 +460,13 @@ audited class; those fall to (b)'s OPEN.
 | 7 | `ν_X = 1`: `gap = 1`, `r = 3/2 − 1 + 1 = 3/2`, `k = 2` divides every even cap — a Case-A escape shape | `gap = 1` lies outside every X-interval (`(1/2, 2/3]` / `(1/2, 3/4]`); `ν = 1` insertions are NF-P (§12(iv)). The theorem line now says `ν_X >= 2` explicitly (grok finding 5) | — |
 | 8 | budget-9 state `(3/4, 8)` carries a step of ratio `4 = p` (Sol's path), falsifying the round-2 `R* < p` law | min reachable degree `400` ⇒ gap `1/100`; the corrected audit is degree-aware (exact core `deg <= 94` + grammar bound `47`) | B9c/B9d |
 
-These eight exclusions are exact and each is one arithmetic fact away
+| 9 | **(round 4)** the beyond-core cutoff's `R <= 47` law: the clean branch has `R = 1 + Delta/nu`, `Delta \| num(w)` — abstract grammar row `(95,1) -> D95n48nu2`, `R = 97/2 > 47` | no rescue claimed: the bound was FALSE as a grammar law; the extension is withdrawn and the beyond-core region is OPEN pending a reachable-numerator invariant (`num(w)` vs deg) or a cap-free closure | B9f |
+
+These nine exclusions are exact and each is one arithmetic fact away
 from an escape; they are the load-bearing edges of the theorem. Row 5
-is this round's own addition — found by running the review-demanded
-sweep, not by a reviewer.
+was found by our own round-3 sweep; row 9 by Sol's re-review, and it
+COST the theorem its beyond-core region rather than being excluded —
+the one entry in this ledger that is a withdrawal, not a defense.
 
 ## 12. Perimeter honesty (machine-checked vs law-covered)
 
@@ -469,12 +500,27 @@ flavors and the 34 mixed-node rows are enumerated, not audited);
 (ii) multi-word deep-zone coexistence (POLICY NF-Z†; the §9
 corollary is restricted accordingly); (iii) the engine horizon: all
 multistep statements are px2-MENU-SLICE statements (`k <= 6`,
-`lex <= 40` inherited caps; budget-9 audited via the cutoff design,
-budget-5 closures for the census blocks; full budget-9 closures of
-`(3/2,2)` and `(4/3,3)` are session-infeasible — sized, recorded);
+`lex <= 40` inherited caps); the budget-9 audit covers the EXACT
+CORES ONLY (12/10/8 states below deg 94) — the beyond-core region is
+OPEN (round-4 withdrawal, ledger row 9); budget-5 closures back the
+census blocks; full budget-9 closures of `(3/2,2)` and `(4/3,3)` are
+session-infeasible — sized, recorded;
 (iv) `nu = 1` insertions and resonance-bearing chains stay NF-P's;
 (v) the Q+E5/E5F refile itself (scope: UNKNOWN). A configuration
 reaching any clause is reported OPEN, never certified.
+
+### 13.0 What would restore the withdrawn beyond-core region
+
+Either (a) a **reachable-numerator invariant**: prove that every
+state reachable from a td-11 seed within budget 9 has
+`num(w) <= N*` with `N*/2 + 1` below half its minimal reachable
+degree (the empirical facts — `num(w) <= 6` on the full `(3,2)@9`
+closure, parsed clean ratios `<= 7/2` — say this is TRUE; what is
+missing is a proof that dirty/pure-b numerator growth
+`w' = l·w·(1+k+lex)/E` cannot outrun degree growth `dp/l` on
+reachable paths); or (b) the **cap-free shared-budget-9 closure**
+the scope demands anyway, which makes the question empirical per
+state. Both are compiler-tier items; neither is claimed here.
 
 ## 13. What td-13 needs (forward pointer)
 
@@ -492,7 +538,7 @@ intruders of the `(3,2;4)`-type seeds classified per entry.
 ## 14. Reproduction
 
 ```bash
-python3 cases/tower_td11.py    # 57 checks, exit 0 (count printed; ~3 min,
+python3 cases/tower_td11.py    # 58 checks, exit 0 (count printed; ~3 min,
                                # the budget-5 (4/3,3) closure dominates)
 ```
 
@@ -507,8 +553,10 @@ census blocks (relabelled); 11 OB-8 direct-only composition; 12
 OB-10 with Sol's two current-state stress witnesses; 13 the
 corrected 145-row skeleton layer + per-row classifier (SK1–SK3); 14
 the budget-9 record: erratum, frozen sizing ladders, R*-law
-retirement, the inline degree-aware cutoff audit (B9d), grammar-cap
-rider; 15 the theorem aggregate at the audited tier + the
-not-claimed list. Companion gates unchanged:
+retirement, the inline EXACT-CORE audit (B9d), the clean-branch
+ratio law + Sol's counterexample and the beyond-core withdrawal
+(B9f), grammar-cap rider (B9e); 15 the theorem aggregate at the
+exact-core tier (b9 conjuncted) + the not-claimed list including the
+beyond-core region. Companion gates unchanged:
 `cases/nfd_check.py` (22), `cases/nfz_check.py` (39),
 `cases/tower_check.py` (promoted td-7 book). No git commit.
