@@ -414,3 +414,9 @@
   td7_census_e5 agent (both H5a readings, controls = 56 law-dead + 2 certified cells).
   3 doomed l8 leaf survivors killed on Box02 (frees ~450G for screens). Screens: no
   verdicts yet (~5h in at 8 threads).
+- 2026-08-13 ~19:50: §11a PROMOTED (review SOUND; brute-force complete nu<=400).
+  td-7 honest book: 17 cells (Q-value, printed record leans this way) / 2 (forced-nu).
+  H5a theory lane launched (Sol): prove which reading is forced + decisive-experiment
+  spec. Gluing design v2 (89KB): milestone plan = one complete (9,15) tower cert ->
+  jet window -> Box02 solve -> only then expand to corrected census. Screens 13 lanes
+  973G, ~6h in, no verdicts. Box02 mem eased post-cull.
