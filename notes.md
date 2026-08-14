@@ -438,3 +438,8 @@
 - 2026-08-14 ~01:05: FIRST CELL-LEVEL TOWER KILL PROMOTED — (9,15,7,3)@2 dead
   (triple-review convergence, Sol final CONFIRMED-KILL). td-7: 16 live cells.
   Rollout planner next. Screens: caps ~03:43.
+- 2026-08-14 ~03:50: Screens R1 capped at 12h, no verdicts (F4 deep, 1.5T aggregate,
+  progressing — banked per R6 §19.2: TIMEOUT, not evidence). R2 launched: 3 main-prime
+  lanes @48h caps, -t 24 each + one -e 45 elimination probe (alternative instrument).
+  ctl0 lanes dropped (calibration, not decisive). UNIFORM td-7 THEOREM proved pending
+  dual review (Grok + Sol running). GGV follow-up: surface draft to DC this morning.
