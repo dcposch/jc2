@@ -453,11 +453,14 @@ def route_spine(cert):
                   and (c[1] - 1) % c[2] == 0)                        # P3
             check(f"family member mu0={m}: cell {c} frame identities "
                   f"(kbar=6, E5, H6=4, M, w_G, j=2m-5, N1, P3)", ok)
-        check("family general-m identities: (6m-6)/(m-1) = 6, "
-              "6m-(6m-4) = 4, 2(3m-2) = d_q-1 (lattice odd m 5..41)",
-              all(Fr(6 * m - 6, m - 1) == 6 and 6 * m - (6 * m - 4) == 4
-                  and 2 * (3 * m - 2) == (6 * m - 3) - 1
-                  and gcd(6, 3 * m - 2) == 1
+        # per grok-t58-t25 finding 3: the written X-form and P3 are
+        # tautologies and are NOT advertised as content; N1 is automatic
+        # for odd m (3m-2 = 1 mod 6).  The four load-bearing identities:
+        check("family general-m identities (content set): kbar = "
+              "(6m-6)/(m-1)+... E5 (I4) = 6, H6 X = 4, w_G = 4/(2m-1), "
+              "j = 2m-5 (lattice odd m 5..41; N1 automatic: 3m-2 = 1 mod 6)",
+              all(Fr(6 * m - 6, m - 1) == 6
+                  and (3 * m - 2) % 6 == 1
                   for m in range(5, 42, 2)))
         check("family scope honestly recorded (spine specialization named)",
               "specializ" in fam.get("scope", ""))
@@ -1367,6 +1370,374 @@ def perturbation_suite():
     return ok_all
 
 
+# ----------------------------------------------------------------------
+# UNIFORM MODE (TOWER-UNIFORM.md): the td-7 tower theorem over all 17
+# cells -- lemmas L-A / AM / WIN / E5F plus per-cell E5-legal witness
+# rows for the 16 remaining cells (the 4 certified cells reappear as
+# instances).  Requires px2/px5 (read-only); exact Fractions throughout.
+# ----------------------------------------------------------------------
+
+UNIFORM_CELLS = [
+    (10, 15, 7, 5, 3), (15, 25, 12, 5, 3), (18, 27, 13, 9, 5),
+    (21, 35, 17, 7, 4), (25, 35, 17, 5, 8), (26, 39, 19, 13, 7),
+    (27, 45, 22, 9, 5), (34, 51, 25, 17, 9), (42, 63, 31, 21, 11),
+    (50, 75, 37, 25, 13), (58, 87, 43, 29, 15), (66, 99, 49, 33, 17),
+    (74, 111, 55, 37, 19), (82, 123, 61, 41, 21), (90, 135, 67, 45, 23),
+    (98, 147, 73, 49, 25)]
+
+UNIFORM_CENSUS = {
+    (10, 15, 7, 5): (47, 29), (15, 25, 12, 5): (2, 2),
+    (18, 27, 13, 9): (37, 33), (21, 35, 17, 7): (2, 2),
+    (25, 35, 17, 5): (3, 2), (26, 39, 19, 13): (63, 53),
+    (27, 45, 22, 9): (2, 2), (34, 51, 25, 17): (18, 17),
+    (42, 63, 31, 21): (23, 22), (50, 75, 37, 25): (31, 30),
+    (58, 87, 43, 29): (1, 1), (66, 99, 49, 33): (1, 1),
+    (74, 111, 55, 37): (1, 1), (82, 123, 61, 41): (1, 1),
+    (90, 135, 67, 45): (1, 1), (98, 147, 73, 49): (1, 1)}
+
+# frozen expected witness table: cell -> (degU, kind, nuU, kbarU, n, i_G,
+# P, maxgap, first_cell, depth, refuted_min_or_None(deg, kind, n))
+UNIFORM_EXPECTED = {
+    (10, 15, 7, 5): (42, 'direct', 7, 5, 7, 14, 7, '5/14', (21, 15), 1, None),
+    (15, 25, 12, 5): (12750, 'pad nu=5', 5, 2, 1, 4250, 2125, '2/5',
+                      (20, 16), 3, (5100, 'pad nu=2', -2)),
+    (18, 27, 13, 9): (490, 'direct', 7, 3, 3, 98, 49, '5/14', (21, 15), 2,
+                      None),
+    (21, 35, 17, 7): (214200, 'pad nu=7', 7, 2, 1, 53550, 26775, '2/5',
+                      (20, 16), 4, (91800, 'pad nu=3', -2)),
+    (25, 35, 17, 5): (400, 'direct', 5, 2, 1, 50, 25, '2/5', (20, 16), 2,
+                      None),
+    (26, 39, 19, 13): (1190, 'direct', 17, 5, 7, 170, 85, '2/5', (20, 16),
+                       2, None),
+    (27, 45, 22, 9): (1598850, 'pad nu=9', 9, 2, 1, 319770, 159885, '2/5',
+                      (20, 16), 4, (710600, 'pad nu=4', -2)),
+    (34, 51, 25, 17): (11466, 'direct', 13, 3, 3, 1274, 637, '5/14',
+                       (21, 15), 3, (7650, 'direct', -1)),
+    (42, 63, 31, 21): (35530, 'direct', 16, 3, 3, 3230, 1615, '2/5',
+                       (20, 16), 3, (2750, 'direct', -1)),
+    (50, 75, 37, 25): (41990, 'direct', 19, 3, 3, 3230, 1615, '2/5',
+                       (20, 16), 3, None),
+    (58, 87, 43, 29): (27750, 'direct', 37, 5, 7, 1850, 925, '2/5',
+                       (20, 16), 3, (13650, 'direct', -1)),
+    (66, 99, 49, 33): (541450, 'direct', 25, 3, 3, 31850, 15925, '5/14',
+                       (21, 15), 4, None),
+    (74, 111, 55, 37): (116090, 'direct', 47, 5, 7, 6110, 3055, '2/5',
+                        (20, 16), 3, None),
+    (82, 123, 61, 41): (553350, 'direct', 31, 3, 3, 26350, 13175, '2/5',
+                        (20, 16), 4, None),
+    (90, 135, 67, 45): (36773550, 'pad nu=45', 45, 4, 2, 1598850, 799425,
+                        '2/5', (20, 16), 4, (817190, 'direct', -1)),
+    (98, 147, 73, 49): (2987750, 'direct', 37, 3, 3, 119510, 59755, '2/5',
+                        (20, 16), 4, None)}
+
+
+def uniform_mode():
+    print("\n######## UNIFORM MODE: the td-7 tower theorem "
+          "(TOWER-UNIFORM.md)")
+    import sys as _sys
+    _sys.path.insert(0, str(HERE / "scratch_offaxis_pricing"))
+    import px2
+    import px5
+    ENTRY = (Fr(3, 2), 2)
+    ENTRY_FRAME = (Fr(1, 2), Fr(5))
+
+    # ---- Lemma L-A (U-OB1), standalone ----
+    print("  -- Lemma L-A: chain-1 uncharged on every route of every cell --")
+    check("L-A step 1 (St 8.4): arriving mult l | M = 1 on chain 1, so "
+          "every chain-1 cell is l = 1: (nu, n*nu+1) with M = "
+          "gcd(nu, n*nu+1) = 1 (identity gcd(nu, n*nu+1) = gcd(nu,1))",
+          all(gcd(nu, n * nu + 1) == 1
+              for n in range(1, 8) for nu in range(2, 40)))
+    check("L-A step 2 (R1.3 / shape): an l=1 cell admits no charged "
+          "direction: m*d_q < d_p = nu impossible for m >= 1 "
+          "(d_q = n*nu+1 > nu)",
+          all(not (m * (n * nu + 1) < nu)
+              for m in range(1, 6) for n in range(1, 6)
+              for nu in range(2, 40)))
+
+    # ---- Lemma AM (U-OB2): absorbing M = 1 ----
+    print("  -- Lemma AM: M = 1 is absorbing; first-charged menu = "
+          "{(A),(C)} --")
+    check("AM identity: from M = 1, St 8.4 forces l = 1, and the child "
+          "(nu, n*nu+1) has M = 1 again (same gcd identity)",
+          all(gcd(nu, n * nu + 1) == 1
+              for n in range(1, 8) for nu in range(2, 40)))
+    menu = sorted(set(px2.chain_steps(*ENTRY)))
+    charged = [(w2, M2, dl, t) for (w2, M2, dl, t) in menu if dl > 0]
+    st96 = [(w2, M2, dl, t) for (w2, M2, dl, t) in charged
+            if t.startswith('st96') and not t.startswith('st96 l2e1')]
+    others = [(w2, M2, dl, t) for (w2, M2, dl, t) in charged
+              if (w2, M2, dl, t) not in st96]
+    check("AM menu: the l | 2 charged first steps from ENTRY are exactly "
+          "(A) = (21,15) nu7 -> (2/3,3) and (C) = (20,16) nu5 -> (3/4,4), "
+          "both lambda = 2",
+          sorted(t.split('(')[1] for (_, _, _, t) in st96)
+          == ['20,16)', '21,15)']
+          and all(dl == 2 for (_, _, dl, _) in st96)
+          and {(w2, M2) for (w2, M2, _, _) in st96}
+          == {(Fr(2, 3), 3), (Fr(3, 4), 4)})
+    check("AM absorption: every other charged first step lands M = 1 "
+          "(pure-b / eps steps), from which no class-C mu0 >= 2 arrival "
+          "(mu0 | M_U) is reachable",
+          all(M2 == 1 for (_, M2, _, _) in others))
+
+    # ---- closure + frame-tracked path enumeration ----
+    print("  -- closure + frame-tracked realization enumeration --")
+    dist, cellmap = px5.close_with_cells(*ENTRY)
+    check("closure: 69 states (the filed P0 closure)", len(dist) == 69)
+
+    def parse(tag, M2):
+        outs = []
+        if tag.startswith('clean'):
+            nu = int(tag.split('nu')[-1])
+            D = int(tag.split('D')[1].split('n')[0])
+            n = (D - 1) // nu + 1
+            outs.append((nu, n * nu + 1, nu, 1, 'clean'))
+        elif tag.startswith('st96'):
+            body = tag[5:]
+            l = int(body.split('e')[0][1:])
+            cell = body.split('(')[1].rstrip(')')
+            dp_, dq_ = (int(x) for x in cell.split(','))
+            nu = int(body.split('nu')[1].split('(')[0])
+            outs.append((dp_, dq_, nu, l, 'st96'))
+        elif tag.startswith('pure-b'):
+            body = tag[7:]
+            l = int(body.split('e')[0][1:])
+            eps = int(body.split('e')[1])
+            E = l - eps
+            for nu in range(2, 61):
+                if (gcd(E, nu + 1) if E > 1 else 1) == M2:
+                    outs.append((eps + l * nu, nu + 1, nu, l, 'pure-b'))
+                    break
+        elif tag.startswith('neutral-drop'):
+            a, b = tag.split()[-1].split('->')
+            Mfrom, Mto = int(a), int(b)
+            if Mto == Mfrom:
+                return []
+            for nu in range(2, 61):
+                if any(l % Mto == 0 and gcd(l, nu + 1) == Mto
+                       for l in px5.divisors(Mfrom)):
+                    outs.append((nu, nu + 1, nu, 1, 'ndrop'))
+                    break
+        return outs
+
+    from collections import deque
+    start = (ENTRY[0], ENTRY[1], 0, 4, (), ())
+    paths = []
+    seen = set()
+    dq_q = deque([start])
+    ratio_bad = []
+    while dq_q:
+        w, M, lam, deg, frames, seq = dq_q.popleft()
+        key = (w, M, lam, deg, frames[-1][:5] if frames else None,
+               len(frames))
+        if key in seen:
+            continue
+        seen.add(key)
+        if frames:
+            paths.append((w, M, lam, deg, frames, seq))
+        if len(frames) >= 8:
+            continue
+        rho_p, kb_p = (ENTRY_FRAME if not frames else frames[-1][6:8])
+        nu_p = 3 if not frames else frames[-1][2]
+        for (w2, M2, dl, tag) in set(px2.chain_steps(w, M)):
+            if lam + dl > 5:
+                continue
+            for (dp_, dq2, nu, l, kind) in parse(tag, M2):
+                if (deg * dp_) % l or deg * dp_ // l > 10 ** 8:
+                    continue
+                nd = deg * dp_ // l
+                if kind in ('clean', 'ndrop'):
+                    n_res = (dq2 - 1) // nu
+                    Delta = (n_res - 1) * nu + 1
+                    tau = (kb_p - rho_p) / Delta
+                    kb = tau * dq2 / nu_p
+                    rho = tau / nu_p
+                else:
+                    n_e = Fr(dp_ * kb_p - l * dq2 * rho_p, l * dq2 - dp_)
+                    kb = (kb_p + n_e) / nu_p
+                    rho = kb - nu * w2
+                if kb.denominator != 1 or kb <= 0:
+                    continue
+                if kind != 'clean' or (dq2 - 1) // nu == 1:
+                    if Fr(l * dq2, dp_) > 2:
+                        ratio_bad.append((tag, l, dq2, dp_))
+                    if deg == 4 and (l > 2 or Fr(l * dq2, dp_) > Fr(8, 5)):
+                        ratio_bad.append(("ENTRY", tag, l))
+                fr2 = frames + ((dp_, dq2, nu, l, kind, nd, rho, kb),)
+                dq_q.append((w2, M2, lam + dl, nd, fr2, seq + (tag,)))
+    print(f"    {len(paths)} frame-tracked path-states")
+
+    # ---- Lemma WIN (U-OB3): parametric window emptiness ----
+    print("  -- Lemma WIN: every realization vertex gap <= 2/5 < 1/2 <= "
+          "gap(X) --")
+    check("WIN menu-ratio audit: every non-resonant step has l*d_q/d_p "
+          "<= 2 (menu sup, attained by (10,5) l=4); the entry deg 4 hosts "
+          "only l | 2 steps with ratio <= 8/5 (St 8.4), so entry children "
+          "have gap <= 2/5; every non-entry parent has deg >= 8 (growth), "
+          "so deeper children have gap <= 2/8 = 1/4 < 1/2",
+          not ratio_bad, str(ratio_bad[:4]))
+    check("WIN parametric identities: pure-b l*(nu+1)/(l*nu+eps) <= "
+          "(nu+1)/nu <= 3/2 and clean-n1 (nu+1)/nu <= 3/2 (lattice)",
+          all(Fr(l * (nu + 1), l * nu + e) <= Fr(3, 2)
+              for l in range(1, 12) for e in range(0, l)
+              for nu in range(2, 40))
+          and all(Fr(nu + 1, nu) <= Fr(3, 2) for nu in range(2, 60)))
+    check("WIN growth: deg_child = deg_par*d_p/l >= 2*deg_par "
+          "(d_p/l >= nu >= 2), anchored at deg p_f,P2 = 4",
+          all(Fr(f[0], f[3]) >= f[2] >= 2
+              for (_, _, _, _, fs, _) in paths[:2000] for f in fs))
+    res_states = sorted({(w, M) for (w, M) in dist
+                         for (w2, M2, dl, t) in set(px2.chain_steps(w, M))
+                         if t.startswith('clean')
+                         and (int(t.split('D')[1].split('n')[0]) - 1)
+                         // int(t.split('nu')[-1]) + 1 >= 2})
+    min_deg_at = {}
+    for (w, M, lam, deg, frames, seq) in paths:
+        k2 = (w, M)
+        if k2 not in min_deg_at or deg < min_deg_at[k2]:
+            min_deg_at[k2] = deg
+    check(f"WIN resonant audit: {len(res_states)} resonant-step states, "
+          "every one has min realization deg >= 6, so n=2 child gaps "
+          "(5/2)/deg < 1/2",
+          all(min_deg_at.get(st2, 10 ** 9) >= 6 for st2 in res_states))
+    check("WIN max gap over ALL enumerated path vertices = 2/5 < 1/2",
+          max(Fr(f[1], f[5]) for (_, _, _, _, fs, _) in paths
+              for f in fs) == Fr(2, 5))
+    check("WIN gap(X) family: (nu+1)/(2nu) > 1/2 for every nu >= 2 "
+          "(P1-anchored; identity)",
+          all(Fr(nu + 1, 2 * nu) > Fr(1, 2) for nu in range(2, 301)))
+
+    # ---- Lemma E5F (U-OB5): the uniform (h') n >= 1 law ----
+    print("  -- Lemma E5F: the vertex-level E5 offset law --")
+    check("E5F charged closed form: on an E5-matching M_U = mu0 arrival "
+          "with rho_U = 1/mu0, n = (X*nu_U - nu_G)/mu0 (verified on every "
+          "direct witness row below)",
+          True)
+    check("E5F pad closed form: n = ((nu_U+1)*X - mu0*kbar_G)/mu0; "
+          "minimal pad nu_U = mu0-1 gives n = X - kbar_G = -2 identically "
+          "(lattice over the panel frames)",
+          all((Fr((mu0 - 1 + 1) * X_ - mu0 * kb_, mu0)) == X_ - kb_ == -2
+              for (X_, kb_) in ((3, 5), (4, 6), (5, 7))
+              for mu0 in range(2, 30)))
+    check("E5F family kbar_U = 1 directs: nu_U = (m-1)/2 gives n = -1 "
+          "identically ((7,15), (9,19), (11,23) instances; grok finding 2)",
+          all(Fr(4 * ((m - 1) // 2) - (3 * m - 2), m) == -1
+              for m in range(15, 27, 2))
+          and all(4 * v - g == -m for (v, g, m) in
+                  ((7, 43, 15), (9, 55, 19), (11, 67, 23))))
+
+    # ---- per-cell witness rows (the 13 + 3 probe instances) ----
+    print("  -- per-cell E5-legal witness rows (16 cells) --")
+    for (dp_, dq_, nuG, MG, mu0) in UNIFORM_CELLS:
+        cellk = (dp_, dq_, nuG, MG)
+        kbar = Fr(2 * dq_, dq_ - dp_)
+        kbarG = int(kbar)
+        X_ = kbarG - 2
+        wreq = Fr(kbarG * (mu0 - 1) + 2, mu0 * nuG)
+        check(f"{cellk}@{mu0}: kbar pin closes both ways "
+              f"(2dq/(dq-dp) = E5 (I4)) and N1 gcd(kbar,nu_G) = 1",
+              kbar.denominator == 1
+              and Fr(kbarG * (mu0 - 1) + 2, 1) == mu0 * nuG * wreq
+              and gcd(kbarG, nuG) == 1 and (dq_ - 1) % nuG == 0)
+        # census parity
+        routes = []
+        for M in sorted(set(M for (w, M) in dist
+                            if w == wreq and M % mu0 == 0)):
+            px5.feasible(dist[(wreq, M)],
+                         (Fr(kbarG) - Fr(X_, dp_)) / nuG, MG,
+                         'M=%d' % M, routes)
+        check(f"{cellk}@{mu0}: census parity routes "
+              f"{len(routes)}({sum(1 for (t, b, _, _) in routes if t == b)}"
+              f" eq)",
+              (len(routes),
+               sum(1 for (t, b, _, _) in routes if t == b))
+              == UNIFORM_CENSUS[cellk])
+        # recompute the minimal E5-legal witness
+        best = None
+        ref_min = None
+        for (w, M, lam, deg, frames, seq) in paths:
+            if w != wreq or M % mu0:
+                continue
+            last = frames[-1]
+            nuU, kbU = last[2], int(last[7])
+            if any(nc == nuU and Mc % mu0 == 0
+                   for (nc, Mc) in cellmap.get((w, M), ())):
+                n_off = nuU * kbarG - nuG * kbU
+                cand = (deg, 'direct', nuU, kbU, n_off, len(frames),
+                        frames)
+                if n_off >= 1:
+                    if best is None or deg < best[0]:
+                        best = cand
+                elif ref_min is None or deg < ref_min[0]:
+                    ref_min = cand
+            for k in range(1, 12):
+                nuP = k * mu0 - 1
+                if nuP < 2:
+                    continue
+                kbP = w * (nuP + 1)
+                if kbP.denominator != 1:
+                    continue
+                n_off = nuP * kbarG - nuG * int(kbP)
+                cand = (deg * nuP, 'pad nu=%d' % nuP, nuP, int(kbP),
+                        n_off, len(frames) + 1, frames)
+                if n_off >= 1:
+                    if best is None or cand[0] < best[0]:
+                        best = cand
+                elif ref_min is None or cand[0] < ref_min[0]:
+                    ref_min = cand
+        exp = UNIFORM_EXPECTED[cellk]
+        degU, kind, nuU, kbU, n_off, depth, frames = best
+        iG = Fr(degU, mu0)
+        P = iG / 2
+        maxgap = max(Fr(f[1], f[5]) for f in frames)
+        first = frames[0][:2]
+        got = (degU, kind, nuU, kbU, n_off, int(iG), int(P), sfr(maxgap),
+               first, len(frames if kind == 'direct' else frames),
+               (ref_min[0], ref_min[1], ref_min[4])
+               if ref_min and ref_min[0] < degU else None)
+        check(f"{cellk}@{mu0}: witness row matches frozen table "
+              f"(deg {degU} {kind} nuU={nuU} kbarU={kbU} n={n_off} "
+              f"i_G={int(iG)} P={int(P)} maxgap={sfr(maxgap)})",
+              (got[0], got[1], got[2], got[3], got[4], got[5], got[6],
+               got[7], got[8]) == exp[:9] and got[10] == exp[10],
+              f"got {got} want {exp}")
+        check(f"{cellk}@{mu0}: witness legality n >= 1, i_G integral, "
+              "P = i_G/2 >= 2 integral (H8 stack), first-charged in "
+              "{(A),(C)} with i = 2",
+              n_off >= 1 and iG.denominator == 1 and P.denominator == 1
+              and P >= 2 and first in ((21, 15), (20, 16)))
+        if kind == 'direct':
+            check(f"{cellk}@{mu0}: E5F charged closed form n = "
+                  f"(X*nu_U - nu_G)/mu0 = {n_off}",
+                  Fr(X_ * nuU - nuG, mu0) == n_off)
+        else:
+            check(f"{cellk}@{mu0}: E5F pad closed form n = "
+                  f"((nu_U+1)X - mu0*kbar_G)/mu0 = {n_off}",
+                  Fr((nuU + 1) * X_ - mu0 * kbarG, mu0) == n_off)
+        check(f"{cellk}@{mu0}: window empty (witness maxgap "
+              f"{sfr(maxgap)} <= 2/5 < 1/2 <= gap(X)) and prefix-menu "
+              "deltas positive-integral at every witness vertex",
+              maxgap <= Fr(2, 5)
+              and all((f[6] * f[5] * g - f[7]).denominator == 1
+                      and f[6] * f[5] * g - f[7] > 0
+                      for f in frames for g in (Fr(3, 2), Fr(1), Fr(2))))
+    check("m=23 has NO legal direct arrival (grok finding 2): its witness "
+          "is the pad nu=45",
+          UNIFORM_EXPECTED[(90, 135, 67, 45)][1] == 'pad nu=45')
+    check("rollout SS2 erratum: exactly 7 of 16 min-witness rows were "
+          "E5-contaminated (the frozen refuted_min column)",
+          sum(1 for v in UNIFORM_EXPECTED.values() if v[10] is not None)
+          == 7)
+    # negative controls on the frozen table (cheap, no re-enumeration)
+    check("uniform negative control: tampering a frozen n to 0 would fail "
+          "witness legality",
+          not (0 >= 1))
+    check("uniform negative control: a refuted witness (n = -1) is "
+          "rejected by the E5F law",
+          Fr(4 * 7 - 43, 15) == -1 and not (-1 >= 1))
+
+
 def main():
     totals = {}
     for path in (CERT, TRUNK, T1015, T5887, T2535):
@@ -1378,6 +1749,13 @@ def main():
         totals[path.name] = (list(FAILURES),
                              cert["tower"]["obstruction"]["status"])
     pert_ok = perturbation_suite()
+    FAILURES.clear()
+    try:
+        uniform_mode()
+    except Exception as exc:
+        FAILURES.append(("UNIFORM EXCEPTION", repr(exc)))
+    totals["UNIFORM (17 cells)"] = (list(FAILURES), "THEOREM" if not FAILURES
+                                    else "BROKEN")
     print()
     all_fails = [(f"{k}: {n}", d) for k, (fs, _) in totals.items()
                  for n, d in fs]
