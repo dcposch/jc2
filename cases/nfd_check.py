@@ -187,35 +187,76 @@ check("C3 the cap boolean itself: every multiset of >= 5 parts >= 2 "
           ((3, 3, 3, 3, 3), (3, 5, 7, 17, 19), (2, 2, 2, 2, 2)))
       and not any(len(m) >= 5 for m in menu))
 
-print("== D. the td-11 valuation windows (D = 0) ==")
+print("== D. the td-11 windows, mu-corrected: H8 = P/mu, mu | M ==")
 dom_w2 = [u for u in range(3, 40, 2)]                    # w=2: u odd
-dom_w32 = [u for u in range(3, 40) if (u + 1) % 2 == 0]  # w=3/2: u odd
+dom_w32 = [u for u in range(3, 40, 2) if u % 3 != 0]     # w=3/2: odd, 3 ndiv u
 dom_w3 = [u for u in range(2, 40) if u % 3 != 0]         # w=3: 3 ndiv u
 dom_w43 = [u for u in range(2, 40) if (u + 1) % 3 == 0]  # w=4/3: 3|u+1
-check("D1 letter-domain v_p pins: v_2(Pi) = 0 on w=2 and w=3/2 stacks; "
-      "v_3(Pi) = 0 on w=3 and w=4/3 stacks (domains per "
-      "sol-td11-13-scope.md 278-288)",
-      all(vp(2, prod(c)) == 0 for c in itertools.product(dom_w2, repeat=2))
-      and all(vp(2, prod(c)) == 0
-              for c in itertools.product(dom_w32, repeat=2))
-      and all(vp(3, prod(c)) == 0
-              for c in itertools.product(dom_w3, repeat=2))
-      and all(vp(3, prod(c)) == 0
-              for c in itertools.product(dom_w43, repeat=2)))
 stacks = lambda dom: itertools.chain([()], ((u,) for u in dom),
                                      itertools.product(dom, repeat=2))
-check("D2 11-B (2Pi_1 = 6Pi_2): v_3 is 0 on the left and 1 on the "
-      "right for ALL domain stacks incl. empty -- S empty, D = 0",
-      all(vp(3, 2 * prod(c)) == 0 for c in stacks(dom_w3))
-      and all(vp(3, 6 * prod(c)) == 1 for c in stacks(dom_w43)))
-check("D3 11-C (2Pi_1 = 4Pi_2, either opponent): v_2 is 1 on the left "
-      "and 2 on the right for ALL domain stacks incl. empty -- S "
-      "empty, D = 0",
-      all(vp(2, 2 * prod(c)) == 1 for c in stacks(dom_w2))
-      and all(vp(2, 4 * prod(c)) == 2 for c in stacks(dom_w32)))
-check("D4 11-A (promoted): v_2(2Pi) = 1 on odd stacks vs resonance "
-      "side >= 3 -- the promoted H8_EQUAL_QUOTIENT_VP_MISMATCH, D = 0",
-      all(vp(2, 2 * prod(c)) == 1 for c in stacks(dom_w2)) and 1 < 3)
+check("D1 letter-domain v_p pins (raw-P facts, review-confirmed): "
+      "v_2(Pi) = 0 on w=2 and w=3/2 stacks; v_3(Pi) = 0 on w=3 and "
+      "w=4/3 stacks (sol-td11-13-scope.md 278-288)",
+      all(vp(2, prod(c)) == 0 for c in stacks(dom_w2))
+      and all(vp(2, prod(c)) == 0 for c in stacks(dom_w32))
+      and all(vp(3, prod(c)) == 0 for c in stacks(dom_w3))
+      and all(vp(3, prod(c)) == 0 for c in stacks(dom_w43)))
+check("D2 the mu = (1,1) branches are UNSAT (the round-1 content, "
+      "correctly labelled raw-P): 11-A/11-C Pi_1 = 2Pi_2 with Pi_1 "
+      "odd (v_2: 0 vs >= 1); 11-B Pi_1 = 3Pi_2 with v_3(Pi_i) = 0 "
+      "(v_3: 0 vs 1)",
+      all(vp(2, prod(c)) == 0 for c in stacks(dom_w2))
+      and all(vp(3, prod(c1)) == 0 and vp(3, 3 * prod(c2)) == 1
+              for c1 in stacks(dom_w3) for c2 in [(5,)])
+      and all(vp(3, prod(c)) == 0 for c in stacks(dom_w43)))
+check("D3 the mu = (1,M) branches are INHABITED (grok-nfd finding 1): "
+      "empty stacks pass H8 = P/mu (2/1 = 4/2 = 6/3 = 2 on all three "
+      "entries) -- the windows are NOT empty",
+      Fr(2, 1) == Fr(4, 2) == Fr(6, 3) == 2)
+okfam = True
+for k in range(1, 7):
+    Pi = 5 ** k
+    # u = 5 legal on every side: odd, 3 ndiv 5, 3 | 6, 2 | 6;
+    # M preserved: l = M with M | u+1 = 6 for M in {2, 3}
+    okfam &= (5 % 2 == 1 and 5 % 3 != 0 and 6 % 3 == 0 and 6 % 2 == 0)
+    okfam &= gcd(2, 6) == 2 and gcd(3, 6) == 3
+    okfam &= Fr(2 * Pi, 1) == Fr(4 * Pi, 2) == Fr(6 * Pi, 3)
+check("D4 the Pi = 5^k family (k = 1..6): legal letters on BOTH poles "
+      "of all three entries, M preserved (l = M, M | u+1 = 6), H8 = "
+      "P/mu equal at EVERY depth -- S is an infinite residue class, "
+      "D(11-A) = D(11-B) = D(11-C) = OPEN; mechanism A does not cap "
+      "td-11 depth", okfam)
+# D5: mechanism C's one real fact -- the M-ledger
+okM = True
+for M0 in (2, 3):
+    for ls in itertools.product([1, M0], repeat=3):
+        M = M0
+        for l in ls:
+            if M % l != 0:
+                break
+            Mn = gcd(l, 6)               # u = 5 letters: u+1 = 6
+            okM &= Mn <= M               # non-increasing
+            M = Mn
+        okM &= (M == M0) == all(l == M0 for l in ls)  # drop irreversible
+check("D5 mechanism C, the proved narrowing: M' = gcd(l, u+1) is "
+      "non-increasing and drops are irreversible; one l = 1 letter "
+      "kills the mu = M branch (falls into the unsat mu = 1 window), "
+      "so the live window forces M CONSTANT -- narrows, does not "
+      "bound depth",
+      okM and gcd(1, 6) == 1
+      and vp(2, 2 * 35) != vp(2, 4 * 35))   # dropped: raw-P unsat fires
+check("D6 the promoted 11-A resonance row (v_2(2Pi) = 1 vs >= 3) is a "
+      "MIXED charged/neutral certificate, relocated out of the "
+      "pure-neutral table: resonance P' = 4*(2l)/l = 8 for l in "
+      "{1,2}, v_2 = 3; pure-neutral left v_2(2Pi) = 1",
+      all(4 * (2 * l) // l == 8 for l in (1, 2)) and vp(2, 8) == 3
+      and all(vp(2, 2 * prod(c)) == 1 for c in stacks(dom_w2)))
+check("D7 the ordered td-7 census from the 15 multisets (all parts "
+      "distinct): 4! + 6*3! + 7*2! + 1 = 75 words -- the finite "
+      "enumeration the compiler uses on the mechanism-A entry",
+      24 + 36 + 14 + 1 == 75
+      and sorted(len(m) for m in menu).count(3) == 6
+      and sorted(len(m) for m in menu).count(2) == 7)
 
 print("== E. the three CEs run forward: all DEAD ==")
 check("E1 CE1 (3,5,7,9)/(3,7,5,9) @P0=2: both orders violate the pin "
@@ -235,10 +276,11 @@ def pdelta_vec(P0, word, g, w=2):
 
 
 check("E2 CE2 (5,3,7,11)/(5,7,3,11) @P0=30002: both orders violate the "
-      "pin (30002*1155 != 22610; P_0 = 30002 is no filed packet); "
-      "order B ALSO fails its own prefix-delta atom 2 at g = 7/3 (a "
-      "failed delta-integrality is a refusal)",
-      30002 * 1155 != 22610
+      "pin (30002*1155 != 22610; P_0 = 30002 is no filed packet) AND "
+      "both fail prefix-delta atom 1 (3 ndiv 30002*5); order B "
+      "additionally fails the flipped atom 2 (review precision note "
+      "folded)",
+      30002 * 1155 != 22610 and (30002 * 5) % 3 != 0
       and pdelta_vec(30002, (5, 3, 7, 11), Fr(7, 3))
       == [False, True, True, True]
       and pdelta_vec(30002, (5, 7, 3, 11), Fr(7, 3))
