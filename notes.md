@@ -429,3 +429,9 @@
   (farm riders, back to queue for post-drain/decomposition). Screens now have ~1.6T
   runway through their 03:43 PDT caps. Nice signal: nolog lanes (26G) < plain (38G)
   — the §7 pins genuinely shrink the F4.
+- 2026-08-13 ~23:15: Tower adjudication mid-flight. Grok SOUND-WITH-ERRATA (kill stands
+  + trunk likely dead too); trunk machine-checked DEAD (cell-level kill candidate);
+  Sol BROKEN — but its critical finding = the already-repaired Case C (same 3 pairs).
+  LIVE blockers: M_U=4 arrival + free-characteristic predecessor family unexamined
+  (Sol f.3), schema reconciliation (f.2). Agent extending exhaustion; cell-kill
+  promotion ON HOLD until Sol re-review. Screens: caps 03:43 PDT.
