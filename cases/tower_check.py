@@ -44,6 +44,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 CERT = HERE / "towers" / "t9_15_direct.json"
+TRUNK = HERE / "towers" / "t9_15_trunk.json"
 
 FAILURES = []
 
@@ -326,28 +327,33 @@ def route_spine(cert):
 
     # arrival (priced, recorded)
     arr = cert["arrival"]
+    term = cert["terminal"]
+    psi = int(fr(term["psi"]))
+    budget = int(fr(term["budget"]))
     H2 = V["H2"]
     check("chain-2 zero arrival at recorded (w_U, nu_U) = (1/2, 7)",
           H2["w"] == fr(arr["w_U"]) and H2["nu"] == fr(arr["nu_U"]))
     check("arrival law: mu0 | M_U and nu_U = -1 (mod mu0)",
           int(H2["M"]) % int(fr(arr["mu0"])) == 0
           and (int(H2["nu"]) + 1) % int(fr(arr["mu0"])) == 0)
-    check("arrival lambda ledger: 2+1+1 = 4 = 6 - psi",
-          sum(int(fr(x)) for x in arr["lambda_steps"]) == 4
-          and 4 == 6 - int(fr(cert["terminal"]["psi"])))
+    check(f"arrival lambda ledger sums to budget {budget} = 6 - psi (saturated)",
+          sum(int(fr(x)) for x in arr["lambda_steps"]) == budget
+          and budget == 6 - psi)
 
-    # terminal package (R1)-(R3)
-    term = cert["terminal"]
-    G = V["G"]
-    w_G, M_G = G["w"], G["M"]
-    check("(R3) 0 < w_G < 1, M_G >= 2, j = M_G*(1-w_G) in N*",
-          0 < w_G < 1 and M_G >= 2 and (M_G * (1 - w_G)).denominator == 1
-          and M_G * (1 - w_G) >= 1)
-    check("(R2) R_term = 1/(1-w_G) = 3, psi = ceil(R)-1 = 2",
-          Fr(1, 1) / (1 - w_G) == fr(term["R_term"]) and fr(term["psi"]) == 2)
+    # terminal package (R1)-(R3) at the terminal vertex
+    T = V[term.get("vertex", "G")]
+    w_T, M_T = T["w"], T["M"]
+    jj = M_T * (1 - w_T)
+    check("(R3) 0 < w_T < 1, M_T >= 2, j = M_T*(1-w_T) in N*",
+          0 < w_T < 1 and M_T >= 2 and jj.denominator == 1 and jj >= 1
+          and jj == fr(term["j"]))
+    R = Fr(1, 1) / (1 - w_T)
+    psi_c = -(-R.numerator // R.denominator) - 1   # ceil(R) - 1
+    check(f"(R2) R_term = 1/(1-w_T), psi = ceil(R)-1 = {psi}",
+          R == fr(term["R_term"]) and psi_c == psi)
     kf, lf = fr(term["k_f"]), fr(term["l_f"])
-    check("(R1) l_f = (1-w_G)*k_f ; k_f = deg p_f,G",
-          lf == (1 - w_G) * kf and kf == G["deg_p_f"])
+    check("(R1) l_f = (1-w_T)*k_f ; k_f = deg p_f at terminal vertex",
+          lf == (1 - w_T) * kf and kf == T["deg_p_f"])
     check("(R5) root chart swap: d_(0,x) = k_f, deg p_f,(0,x) = l_f",
           fr(term["d_0x"]) == kf and fr(term["deg_p_f_0x"]) == lf)
     R0 = V["R0"]
@@ -418,6 +424,26 @@ def local_t1(cert):
 # C3: tower layer -- forced prefix, death gaps, obstruction exhaustion
 # ----------------------------------------------------------------------
 
+def mult_at(poly, c):
+    """Multiplicity of the root eta = c of a dense-dict polynomial (exact)."""
+    deg = max(poly)
+    coeffs = [poly.get(d, Fr(0)) for d in range(deg, -1, -1)]  # top down
+    m = 0
+    while True:
+        # synthetic division by (eta - c): b_i top-down, remainder last
+        b = []
+        acc = Fr(0)
+        for a in coeffs:
+            acc = acc * c + a
+            b.append(acc)
+        if b[-1] != 0:
+            return m
+        m += 1
+        coeffs = b[:-1]
+        if not coeffs:
+            return m
+
+
 def tower_layer(cert, V):
     print("\n== C3: tower layer (Prop 4.2/8.1/Cor 6.1 under Q+E5) ==")
     tw = cert["tower"]
@@ -450,9 +476,21 @@ def tower_layer(cert, V):
         want2 = {3: -Fr(1, 8) * Aval ** 3, 0: Fr(9, 64) * Aval ** 4}
         check(f"P2 h1-top = g^2-f^3 collapse -> -(1/8)A^3 eta^3 + (9/64)A^4, deg 3 (A={sfr(Aval)})",
               h1p2 == want2, f"{h1p2}")
-    # P2 count handoff: F1 dead member p_red*q = eta(t-A)^3 R1^2: mult at c = 3 = deg p_h1,P2
-    check("F1->P2 h1 count: mult(p_red*q_F1, c_f1) = 3 = deg p_h1,P2 (exact handoff)",
-          3 == 3)
+        check(f"P2 h1-top degree 3 (A={sfr(Aval)})", max(want2) == 3)
+    # P2 count handoff (real computation, replacing the reviewed tautology):
+    # F1's level-1 dead member is p_red*q = eta(t-A)^3 R1(t)^2, t = eta^5;
+    # its multiplicity at the continuation root c (c^5 = A) must equal the
+    # eta-degree 3 of the P2 h1-collapse computed above (St 3.11 saturation
+    # at the dead-member -> pole handoff).
+    for Aval, cval in ((Fr(1), Fr(1)), (Fr(32), Fr(2))):
+        tma = {5: Fr(1), 0: -Aval}                       # t - A in eta
+        r1 = {10: Fr(1), 5: -3 * Aval, 0: 3 * Aval * Aval}
+        dead = pmul({1: Fr(1)}, pmul(ppow(tma, 3), ppow(r1, 2)))
+        m = mult_at(dead, cval)
+        check(f"F1->P2 h1 count: mult(eta(t-A)^3 R1^2, c) = 3 = deg p_h1,P2 "
+              f"(A={sfr(Aval)}, c={sfr(cval)})", m == 3, f"mult = {m}")
+        check(f"F1->P2 h1 count consistency: R1(A) != 0 (A={sfr(Aval)})",
+              Aval ** 2 - 3 * Aval * Aval + 3 * Aval * Aval != 0)
 
     # death-gap table of the route (g = kbar/D_f at each candidate killer)
     gaps = {}
@@ -462,11 +500,17 @@ def tower_layer(cert, V):
         gaps[row["vertex"]] = g
         check(f"death gap @ {row['vertex']}: kbar/D_f = {row['gap']}",
               g == fr(row["gap"]), sfr(g))
-    order = ["F1", "F2", "F3", "H2", "G"]
-    check("chain-2 gaps strictly decreasing rootward (level order forced)",
+    order = [n for n in ("F1", "F2", "F3", "H2", "G", "T") if n in gaps]
+    check("chain gaps strictly decreasing rootward (level order forced)",
           all(gaps[a] > gaps[b] for a, b in zip(order, order[1:])))
+    check("all non-stack gaps are <= 2/5 (below the level-1 window)",
+          all(gaps[n] <= Fr(2, 5) for n in order))
 
-    # ---- OBSTRUCTION EXHAUSTION (level 1 of the ladder) ----
+    # ---- OBSTRUCTION EXHAUSTION (level 1 window of the ladder) ----
+    # Three cases (Grok review finding 1 repair): the first post-pole death
+    # is at the stack vertex X (its gap outranks everything else and delta_X
+    # in N cannot skip its own zero), possibly after a NON-KILLING prefix of
+    # printed-legal steps with k_j | 2 (X and F1 both alive cap k_j | 2).
     print("  -- obstruction exhaustion over chain-1 synchronization stacks --")
     ob = tw["obstruction"]
     NN = 11305
@@ -479,62 +523,106 @@ def tower_layer(cert, V):
     # force deg p_f,X = 2 nu_X and d_q,X = nu_X + 1).
     check("gap(X) > 1/2 > 2/5 = gap(F1) for every nu_X (level sorting)",
           all(Fr(d + 1, 2 * d) > Fr(1, 2) > Fr(2, 5) for d in divs))
-    # w-monotonicity: n/Delta < 1 for every n >= 2, so a clean chain-1 stack
-    # frozen at w = 2 is n = 1 neutrals only (w = 2 must hold at arrival).
-    ok_wmono = all(Fr(n, (n - 1) * nu + 1) < 1
-                   for n in range(2, 12) for nu in range(2, 24))
-    check("w-monotonicity: n/Delta < 1 for all n>=2 (chain-1 = pure n=1 neutrals)",
-          ok_wmono)
-    # CASE A: X kills level 1: (k1,l1) = (2 nu_X, 2 nu_X + 1).
+    # w-monotonicity: Delta - n = (n-1)(nu-1) >= 1 for n,nu >= 2 (one-line
+    # identity, per review nit; lattice kept as instantiation), so a clean
+    # chain-1 stack frozen at w = 2 is n = 1 neutrals only.
+    ok_wid = all((n - 1) * nu + 1 - n == (n - 1) * (nu - 1) >= 1
+                 for n in range(2, 12) for nu in range(2, 24))
+    check("w-monotonicity identity: Delta - n = (n-1)(nu-1) >= 1 for n>=2",
+          ok_wid)
+    # intermediate stack vertices Y cannot steal the level-1 window:
+    # gap(Y) = (nu_Y+1)/(2 P_Y) with P_Y >= nu_X*nu_Y (product of poleward
+    # nu's), so gap(Y) <= 3/(4*nu_X) < 2/5 < gap(X).
+    ok_int = all(Fr(nuY + 1, 2 * nuX * nuY) < Fr(2, 5)
+                 for nuX in divs for nuY in divs
+                 if (nuX * nuY) <= NN and NN % (nuX * nuY) == 0)
+    check("intermediate stack gaps < 2/5 (cannot claim the level-1 window)",
+          ok_int)
+    # no recorded vertex gap lies inside any level-1 window (gap(X), 5/2):
+    ok_win = all(not (Fr(nuX + 1, 2 * nuX) < gaps[n] < Fr(5, 2))
+                 for nuX in divs for n in gaps if n not in ("N",))
+    check("no non-stack death gap inside the window (gap(X), 5/2)", ok_win)
+
+    prefix_vs = [n for n in ("F1", "F2", "F3", "H2", "G", "N", "T") if n in V
+                 and "death_gap" in V[n]]
+    # prefix cap: while X (p_f = S(t-A)^2) and F1 (i = 2, orbit mults
+    # (2,1,1)) are both alive, Prop 4.2(iii)/Prop 8.1 (i l/k in N) force
+    # every prefix step to have k_j | 2 (gcd(k_j, l_j) = 1):
+    check("prefix cap: 2*l/k in N with gcd(k,l)=1 forces k | 2",
+          all(Fr(2 * l, k).denominator != 1
+              for k in range(3, 13) for l in range(1, 13) if gcd(k, l) == 1))
+    # CASE C-legality (the erratum): the printed-legal non-killing level-1
+    # prefix pairs -- k in {1,2}, gcd(k,l) = 1, gap(X) < g = l/k - 1/2 < 5/2
+    # -- have positive-INTEGER delta_1 at every non-pole vertex; they are
+    # legal ladder steps that kill nobody.  Enumerate them exactly.  (The
+    # half-integer grid {1/2, 1, 3/2, 2} meets every window (gap(X), 5/2),
+    # gap(X) in (1/2, 3/5], in the same three points 1, 3/2, 2.)
+    pref = [(k, l) for k in (1, 2) for l in range(1, 8)
+            if gcd(k, l) == 1 and Fr(1, 2) < Fr(l, k) - Fr(1, 2) < Fr(5, 2)]
+    check("case C prefix menu = {(1,2),(2,3),(2,5)} exactly",
+          sorted(pref) == [(1, 2), (2, 3), (2, 5)], str(pref))
+    for (k1, l1) in sorted(pref):
+        g1 = Fr(l1, k1) - Fr(1, 2)
+        ds = {n: V[n]["D_f"] * g1 - V[n]["kbar"] for n in prefix_vs}
+        ok = all(d.denominator == 1 and d > 0 for d in ds.values())
+        check(f"case C prefix ({k1},{l1}), g = {sfr(g1)}: delta_1 "
+              f"positive-integral at all of {','.join(prefix_vs)} (printed-legal)",
+              ok, str({n: sfr(d) for n, d in ds.items()}))
+    # CASE A (empty prefix) and CASE C (any prefix): X dies at level m while
+    # F1 is alive.  After r k=2 prefix steps (each adds an odd l/2 to alpha;
+    # k=1 steps add 0), alpha_m = 3/2 + r/2 (mod 1).  X-death demands
+    # l_m/k_m = gap(X) + alpha_m - 1 with k_m | 2 (F1 alive):
+    #   k_m = 1: l_m = 1 + r/2 + 1/(2 nu_X) (mod 1) -- integral iff
+    #            2 nu_X | r nu_X + 1: impossible (checked r mod 2 = 0, 1);
+    #   k_m = 2: l_m = 2 + r + 1/nu_X (mod 2) -- integral iff nu_X | 1.
     for nuX in divs:
         gX = Fr(nuX + 1, 2 * nuX)
-        r = gX + Fr(1, 2)                      # l1/k1 = gap + alpha_1 - 1 + 1
-        k1, l1 = r.denominator, r.numerator
-        check(f"case A nu_X={nuX}: (k1,l1) = (2nu_X, 2nu_X+1)",
-              k1 == 2 * nuX and l1 == 2 * nuX + 1)
-        # delta_1 integrality at chain-2 vertices where level 1 is alive:
-        deltas = {n: V[n]["D_f"] * gX - V[n]["kbar"]
-                  for n in ("F1", "F2", "F3", "H2", "G")}
-        ok_delta = all(d.denominator == 1 and d > 0 for d in deltas.values())
-        # aliveness exponents of h1 at F1 (p_f = S[(t-A)^2(t-B)(t-D)]^2):
-        ok_alive = (Fr(4 * l1, k1).denominator == 1
-                    and Fr(2 * l1, k1).denominator == 1)
-        status = ("delta_1(F1) nonintegral" if not ok_delta else
-                  "alive-exp @F1 nonintegral" if not ok_alive else "SURVIVES")
-        print(f"    case A nu_X={nuX:>5}: gap {sfr(gX):>9}, (k1,l1)=({k1},{l1}): {status}")
-        check(f"case A nu_X={nuX}: refuted", not (ok_delta and ok_alive),
-              "obstruction would be void")
-        if nuX == 5:
-            check("case A nu_X=5: delta integral but exps (22/5,11/5) kill it",
-                  ok_delta and not ok_alive)
-    # CASE B: F1 kills level 1: (k1,l1) = (10,9).
-    r = Fr(2, 5) + Fr(1, 2)
-    k1, l1 = r.denominator, r.numerator
-    check("case B: (k1,l1) = (10,9) from gap(F1) = 2/5", (k1, l1) == (10, 9))
-    for nuX in divs:
-        # at X, h1 must be alive (exp 2*l1/k1 = 9/5) or dead (gap = 2/5):
-        ok_alive_X = Fr(2 * l1, k1).denominator == 1
-        ok_dead_X = Fr(nuX + 1, 2 * nuX) == Fr(2, 5)
-        check(f"case B nu_X={nuX}: X can neither host h1 alive (9/5) nor kill it",
-              (not ok_alive_X) and (not ok_dead_X))
-    check("case B: death at X would need nu_X = -5 (impossible)",
-          all(5 * (d + 1) != 4 * d for d in divs))
+        # empty-prefix instance (the old written Case A): k1 = 2 nu_X
+        rr = gX + Fr(1, 2)
+        kA, lA = rr.denominator, rr.numerator
+        check(f"case A nu_X={nuX}: empty prefix step (k,l) = (2nu_X, 2nu_X+1) "
+              f"refused by k | 2 (F1/X alive caps)",
+              kA == 2 * nuX and lA == 2 * nuX + 1 and kA > 2)
+        # general prefix: closed form over r parity + explicit r = 0..5
+        ok_closed = (all((r * nuX + 1) % (2 * nuX) != 0 for r in (0, 1))
+                     and NN % nuX == 0 and nuX > 1)
+        ok_explicit = True
+        for r in range(6):
+            lm1 = Fr(3, 2) + Fr(r, 2) - Fr(1, 2) + Fr(1, 2 * nuX)  # k_m = 1
+            lm2 = 2 * (Fr(3, 2) + Fr(r, 2)) - 1 + Fr(1, nuX)       # k_m = 2
+            ok_explicit &= (lm1.denominator != 1 and lm2.denominator != 1)
+        status = "X-death l_m never integral" if (ok_closed and ok_explicit) \
+            else "SURVIVES"
+        print(f"    case A/C nu_X={nuX:>5}: gap {sfr(gX):>9}: {status}")
+        check(f"case A/C nu_X={nuX}: X-death impossible at any prefix length",
+              ok_closed and ok_explicit)
+    # CASE B: F1 kills level 1 first: impossible -- delta(X) in N cannot
+    # skip its own zero, so X (gap > 2/5) must die strictly before any
+    # g_j = 2/5 level exists; equivalently death at X would need gap 2/5:
+    check("case B: F1 cannot die first (delta_X would need gap(X) = 2/5, "
+          "i.e. nu_X = -5)",
+          all(Fr(d + 1, 2 * d) != Fr(2, 5) and 5 * (d + 1) != 4 * d
+              for d in divs))
+    check("case B: h1 alive at X refused ((k,l) = (10,9): exp 2*9/10 = 9/5)",
+          Fr(2 * 9, 10).denominator != 1)
     check("OBSTRUCTION recorded in certificate matches exhaustion",
-          ob["status"] == "OBSTRUCTED" and int(ob["checked_stacks"]) == len(divs))
-    # the two m_G branch refutations (fixed-representative, nu_N = 11305):
-    # m_G = 1: e1 = 101760 forced; N needs deg p_h1,N = 22611 > mult 11306.
-    check("m_G=1 refuted: Prop8.1@N needs 22611 > 11306 = mult(p^11305 q, c_g)",
-          1 * 11305 + 11306 == 22611 and 11305 * 1 + 1 == 11306 and 22611 > 11306)
-    # m_G = 2 with s = 22611: H2 pins s = 11309 by drop-window; 11309 != 22611
-    s_N = (fr(ob["m2_branch"]["s_from_N"]))
-    s_H2 = (fr(ob["m2_branch"]["s_from_H2"]))
-    check("m_G=2 refuted: N pins s = 22611, H2 drop-window pins s = 11309",
-          s_N == 22611 and s_H2 == 11309 and s_N != s_H2)
-    # drop-window arithmetic (exact): N-side upper bound 33915 s - 45222 <= 33913 s
-    check("N drop-window: [22611*33913, s*33913] forces s = 22611 exactly",
-          Fr(33915 * 22611 - 45222, 1) == Fr(33913 * 22611, 1))
-    check("H2 drop-window: 22618 <= 3s - 11309 <= 2s forces s = 11309 exactly",
-          3 * 11309 - 11309 == 2 * 11309 and 3 * 11309 - 11309 >= 22618)
+          ob["status"] == "OBSTRUCTED" and int(ob["checked_stacks"]) == len(divs)
+          and ob.get("cases") == ["A", "B", "C"])
+    # the two m_G branch refutations (fixed-representative corroboration,
+    # nu_N = 11305; direct certificate only -- the trunk kill rests on the
+    # three-case exhaustion above):
+    if "m2_branch" in ob:
+        check("m_G=1 refuted: Prop8.1@N needs 22611 > 11306 = mult(p^11305 q, c_g)",
+              1 * 11305 + 11306 == 22611 and 11305 * 1 + 1 == 11306
+              and 22611 > 11306)
+        s_N = (fr(ob["m2_branch"]["s_from_N"]))
+        s_H2 = (fr(ob["m2_branch"]["s_from_H2"]))
+        check("m_G=2 refuted: N pins s = 22611, H2 drop-window pins s = 11309",
+              s_N == 22611 and s_H2 == 11309 and s_N != s_H2)
+        check("N drop-window: [22611*33913, s*33913] forces s = 22611 exactly",
+              Fr(33915 * 22611 - 45222, 1) == Fr(33913 * 22611, 1))
+        check("H2 drop-window: 22618 <= 3s - 11309 <= 2s forces s = 11309 exactly",
+              3 * 11309 - 11309 == 2 * 11309 and 3 * 11309 - 11309 >= 22618)
 
 
 # ----------------------------------------------------------------------
@@ -713,11 +801,16 @@ def run_all(cert, quiet=False):
     try:
         template_control()
         V = route_spine(cert)
-        scale_transport_audit(cert, V)
+        if "pilot" in cert:
+            scale_transport_audit(cert, V)
         local_t1(cert)
         tower_layer(cert, V)
-        lead_pilot_gate(cert)
-        anchor_check(cert)
+        if "pilot" in cert:
+            lead_pilot_gate(cert)
+            anchor_check(cert)
+        else:
+            print("\n== C5: no pilot section in this certificate "
+                  "(trunk spine has no design SS3.5 block to gate against) ==")
     except Exception as exc:
         FAILURES.append(("EXCEPTION", repr(exc)))
     finally:
@@ -761,6 +854,19 @@ def perturbation_suite():
     p = copy.deepcopy(base)
     p["tower"]["obstruction"]["checked_stacks"] = 14
     perts.append(("obstruction stack count tampered", p))
+    # 8. claim only the old two-case exhaustion (Grok finding 6)
+    p = copy.deepcopy(base)
+    p["tower"]["obstruction"]["cases"] = ["A", "B"]
+    perts.append(("case list without Case C", p))
+    # trunk perturbations
+    trunk = json.loads(TRUNK.read_text())
+    p = copy.deepcopy(trunk)
+    p["terminal"]["w"] = "3/5"
+    p["vertices"][1]["w"] = "3/5"
+    perts.append(("trunk terminal w tampered (3/5)", p))
+    p = copy.deepcopy(trunk)
+    p["chain2_book21"][0]["l"] = 2
+    perts.append(("trunk BOOK-2.1 l tampered", p))
     ok_all = True
     for name, pc in perts:
         n = run_all(pc, quiet=True)
@@ -772,21 +878,28 @@ def perturbation_suite():
 
 
 def main():
-    cert = json.loads(CERT.read_text())
-    print(f"certificate: {CERT.name}: cell {cert['cell']} route {cert['route']}")
-    print(f"status: {cert['status']}")
-    n_fail = run_all(cert)
-    fails = list(FAILURES)
+    totals = {}
+    for path in (CERT, TRUNK):
+        cert = json.loads(path.read_text())
+        print(f"\n######## certificate: {path.name}")
+        print(f"cell {cert['cell']}\nroute {cert['route']}")
+        print(f"status: {cert['status']}")
+        run_all(cert)
+        totals[path.name] = (list(FAILURES),
+                             cert["tower"]["obstruction"]["status"])
     pert_ok = perturbation_suite()
     print()
-    if fails or not pert_ok:
-        print(f"RESULT: {len(fails)} FAILURE(S)"
+    all_fails = [(f"{k}: {n}", d) for k, (fs, _) in totals.items()
+                 for n, d in fs]
+    if all_fails or not pert_ok:
+        print(f"RESULT: {len(all_fails)} FAILURE(S)"
               + ("" if pert_ok else " + perturbation suite FAILED"))
-        for name, det in fails:
+        for name, det in all_fails:
             print(f"  FAIL {name}: {det}")
         sys.exit(1)
-    print("RESULT: ALL CHECKS PASS (incl. perturbation suite) -- certificate "
-          "validated; tower tier verdict: " + cert["tower"]["obstruction"]["status"])
+    verdicts = ", ".join(f"{k}: {v}" for k, (_, v) in totals.items())
+    print("RESULT: ALL CHECKS PASS (incl. perturbation suite) -- "
+          "both certificates validated; tower tier verdicts: " + verdicts)
     sys.exit(0)
 
 

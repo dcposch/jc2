@@ -166,9 +166,10 @@
     "obstruction": {
       "status": "OBSTRUCTED",
       "tier": "tower ladder (Prop 4.2 + Prop 8.1(iv) + Cor 6.1), level 1",
-      "statement": "No global approximate-root ladder (k_j,l_j) is compatible with the synchronized direct route. Sorting the forced death gaps g = kbar_v/D_f,v places ladder level 1 either at the chain-1 pole-adjacent synchronization vertex X (gap (nu_X+1)/(2nu_X) > 1/2 for every admissible nu_X | 11305) or at F1 (gap 2/5). Case X: (k_1,l_1) = (2nu_X, 2nu_X+1); delta_1(F1) = 1 + 5/nu_X is integral only for nu_X = 5, and then the h_1 aliveness exponents at F1 (4*l_1/k_1, 2*l_1/k_1) = (22/5, 11/5) are nonintegral -- Prop 4.2(iii) unsatisfiable. Case F1: (k_1,l_1) = (10,9); at X the aliveness exponent 2*l_1/k_1 = 9/5 is nonintegral and death needs (nu_X+1)/(2nu_X) = 2/5, i.e. nu_X = -5: impossible. Both cases are refuted for every chain-1 stack: the stack is forced to be pure n=1 clean neutrals (w-freeze at 2: n/Delta < 1 for n >= 2, so w never returns to 2), its nu-product is forced to 11305 (odd) by the f-degree ladder 2 -> 22610, and its pole-adjacent gap is shape-independent.",
+      "cases": ["A", "B", "C"],
+      "statement": "No global approximate-root ladder (k_j,l_j) is compatible with the synchronized direct route. The forced death gaps g = kbar_v/D_f,v put the chain-1 pole-adjacent vertex X (gap (nu_X+1)/(2nu_X) > 1/2, nu_X | 11305 odd, shape-independent) above F1 (gap 2/5) and every other vertex below 5/2, so the first post-pole death is X, possibly after a NON-KILLING prefix of printed-legal ladder steps (Grok finding-1 repair). While X and F1 are both alive every prefix step has k_j | 2 (Prop 4.2(iii)/Prop 8.1 integrality at X's (t-A)^2-power and F1's orbit mults (2,1,1) with i=2); the legal prefix menu in the window (gap(X), 5/2) is exactly (k,l) in {(1,2),(2,3),(2,5)} (g = 3/2, 1, 2; all delta-integral at every non-pole vertex). Case A (empty prefix): X kills level 1 with (k_1,l_1) = (2nu_X, 2nu_X+1), refused by k | 2. Case B: F1 kills level 1 first -- impossible, delta_X in N cannot skip its zero at gap(X) > 2/5 (death at X would need nu_X = -5). Case C (any nonempty prefix, r steps with k=2 and odd l, any number of k=1 steps): alpha_m = 3/2 + r/2 (mod 1), and X-death needs l_m/k_m = alpha_m - 1/2 + 1/(2nu_X) with k_m | 2: k_m = 1 forces 2nu_X | r*nu_X + 1 (impossible for r even or odd), k_m = 2 forces nu_X | 1. All three cases are refuted for every chain-1 stack: the stack is forced to be pure n=1 clean neutrals (w-freeze at 2; Delta - n = (n-1)(nu-1) >= 1), its nu-product is forced to 11305 (odd) by the f-degree ladder 2 -> 22610, and its pole-adjacent gap is shape-independent.",
       "checked_stacks": 15,
-      "checked_stacks_note": "all divisors nu_X >= 2 of 11305 = 5*7*17*19 (odd, so nu_X >= 5); covers every multi-neutral stack since only the pole-adjacent vertex's gap and F1's constraints enter",
+      "checked_stacks_note": "all divisors nu_X >= 2 of 11305 = 5*7*17*19 (odd, so nu_X >= 5); covers every multi-neutral stack since only the pole-adjacent vertex's gap and the F1/X caps enter; case C covers every prefix length via the r-parity closed form plus explicit r = 0..5",
       "m2_branch": {
         "s_from_N": 22611, "s_from_H2": 11309,
         "note": "fixed-representative corroboration (nu_N = 11305): with m_G = 2, h_1 alive at G with exponent s and h_1 dead at N (m_N = 1; the alive-at-N branches 11305 | s die separately by the q-tail count excess), the N-side drop window [deg_U*dpi, mult_L*dpi] pins s = 22611 exactly while the H2-side window pins s = 11309 exactly; m_G = 1 is separately refuted (Prop 8.1@N needs deg 22611 > 11306 = arriving mult, violating St 3.11(i))"
@@ -176,16 +177,17 @@
       "dependencies": [
         "CONJECTURE H5a resolved to the Q-value (AUDIT.md H5a resolution, promoted): kappa_F = nu_F kappa_G/nu_G and the E5 identities (g')/(h')",
         "E5 corrected case-III transport (SHEET6-III.md:131-147)",
-        "Prop 4.2 (pp. 19-20): global (k_j,l_j) ladder, gcd(k_j,l_j)=1, mu-recursion (9), delta_j in N strict descent, alive identity (iii)",
-        "Prop 8.1(i)-(v) (pp. 39-41): p_f = S p^i, p_hm = S p^k q, k = i(mu-1), M = gcd",
-        "Cor 6.1 (p. 32): deg p_h,F = (d_h,F/d_F) deg p_F at searrow vertices; q-law d_q = kbar deg p_f/D_f",
+        "Prop 4.2 (pp. 19-20): (k_j,l_j) ladder, gcd(k_j,l_j)=1, mu-recursion (9), delta_j in N strict descent, alive identity (iii); alive/dead dichotomy of printed (10) (grok-tower-review.md finding 4)",
+        "St 8.3(i) (p. 41) + Cor 6.1 searrow + Not 4.1 prefix order: both merge branches share one ladder and the same polynomials h_j while alive (grok-tower-review.md finding 3 -- the citation upgrade for the single-ladder reading)",
+        "Prop 8.1(i)-(v) (pp. 39-41): p_f = S p^i, p_hm = S p^k q, k = i(mu-1), M = gcd, i*l_j/k_j in N (p. 40)",
+        "Cor 6.1 (p. 32): deg p_h,F = (d_h,F/d_F) deg p_F at searrow vertices; the q-law d_q = kbar deg p_f/D_f is its Prop 8.1/theta rewrite (grok-tower-review.md finding 5)",
         "St 3.11(i) monotone branch counts; St 3.17(i) composite f-equality; St 3.9 elementary equality",
-        "BOOK R1.2/R2.1 and the w-freeze of chain 1 at w=2 (BOOK-OFFAXIS.md:521-529)",
+        "BOOK R1.2/R2.1 and the w-freeze of chain 1 at w=2 (BOOK-OFFAXIS.md:521-529); Delta - n = (n-1)(nu-1) >= 1",
         "P1 budget: lambda total 4 = 6 - psi exactly (no charged chain-1 step available)",
         "the campaign formalization of the tower laws calibrated on the td=6 template (SHEET6-TEMPLATE.md SS1, exact replay in cases/tower_check.py C2)"
       ],
-      "scope": "KILLS: the tower tier of every synchronized direct-completion representative of (9,15,7,3)@2 in the design SS3.2 family (any chain-1 clean stack). DOES NOT KILL: the (9,15,7,3)@2 cell (the trunk completion (35,15,7,5)@(2/5,5,1) has its own, unexamined, tower problem); the LEAD-PILOT leading tier (83/74, SAT over Q, unaffected); the SS11a census. The i-synchronization (H8) at G is what forces the chain-1 stack to exist; a route family avoiding it would need a different completion record.",
-      "review_status": "NEW RESULT -- requires hostile review before promotion; milestone-2 emission for this route is moot unless review overturns a dependency"
+      "scope": "KILLS (hostile-reviewed SOUND-WITH-ERRATA, xmodel/grok-tower-review.md; errata folded in): the tower tier of every synchronized direct-completion representative of (9,15,7,3)@2 in the design SS3.2 family (any chain-1 clean stack). The trunk completion (35,15,7,5)@(2/5,5,1) shares the clash (terminal-independence, review finding 2) and is machine-checked dead in cases/towers/t9_15_trunk.json -- jointly a CELL-level tower kill, itself pending review. NOT machine-checked here: the other 16 SS11a cells; the SS11a arrival census and the LEAD-PILOT leading tier (83/74, SAT over Q) are reproduced, not retracted. 'Untouched' always means 'not machine-checked'.",
+      "review_status": "REVIEWED SOUND-WITH-ERRATA (xmodel/grok-tower-review.md) as the direct-family kill with the Case C erratum, now repaired in-engine; the joint cell-level statement (with the trunk certificate) is NEW and requires its own review"
     }
   },
   "poles": [

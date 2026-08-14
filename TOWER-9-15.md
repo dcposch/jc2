@@ -1,34 +1,39 @@
-# TOWER-9-15.md — tower certificate for the direct (9,15,7,3)@mu0=2 route
+# TOWER-9-15.md — tower certificates for the (9,15,7,3)@mu0=2 completions
 
-Status: **MILESTONE 1 EXECUTED (2026-08-13) — spine + local + LEAD-PILOT
-banked; tower tier OBSTRUCTED (new result, UNREVIEWED — requires hostile
-review before promotion).**
+Status: **MILESTONE 1 EXECUTED (2026-08-13); direct-route kill REVIEWED
+SOUND-WITH-ERRATA (`xmodel/grok-tower-review.md`), both errata folded in
+(Case C repair, §3; trunk machine-check, §7); the joint CELL-LEVEL kill
+is NEW and requires its own hostile review.**
 Engine: `cases/tower_check.py` (exact `Fraction`, no floats, no solver;
-258 checks incl. a 7-case negative-perturbation self-test, exit 0).
-Certificate: `cases/towers/t9_15_direct.json`.
+506 checks over both certificates incl. a 10-case negative-perturbation
+self-test, exit 0). Certificates: `cases/towers/t9_15_direct.json`,
+`cases/towers/t9_15_trunk.json`.
 Task source: `xmodel/sol-gluing-design.md` §5.4 first solver objective,
-milestone 1: "finish one complete tower certificate for the direct
-`(9,15)` route."
+milestone 1, plus the coordinator's post-review work items (Case C
+repair; trunk spine machine-check).
 
-VERDICT IN ONE PARAGRAPH. The synchronized direct route of design §3.2
-(the `(w,M,psi)=(2/3,3,2)` case-IV completion of `(9,15,7,3)@2`, with the
-chain-1 synchronization stack that (H8) i-sync forces) admits a complete,
-exactly verified decoration of every vertex and edge at the numerical and
-leading-coefficient tiers — every `(kappa, pi, kbar, nu, rho, w, M, i,
-d_p, d_q, deg p_f, D_f, d_f, d_g)` closes under the printed transport laws
-with the promoted Q-value/H5a kappa and the E5 case-III identities, and
-the design's §3.5 LEAD-PILOT (83 vars / 74 rows, SAT over Q) regenerates
-from the certificate token-for-token. But the **approximate-root tower
-layer cannot be completed**: level 1 of the global Prop 4.2 ladder is
-claimed by both branches of the route with incompatible death data, and
-the incompatibility survives *every* admissible choice of the chain-1
-synchronization stack (15-case exhaustion, plus two structural lemmas
-that close the family). Under the formalized tower laws — calibrated to
-reproduce the td=6 template genome exactly — the direct synchronized
-route family is **DEAD at the tower tier**. This is a KILL of the direct
-completion's coefficient route as designed, not of the `(9,15,7,3)@2`
-cell: the trunk completion `(35,15,7,5)@(2/5,5,1)` is untouched and now
-becomes the cell's only live completion pending review.
+VERDICT IN ONE PARAGRAPH. Both priced completions of `(9,15,7,3)@2`
+(direct case-IV at `(2/3,3,2)`, λ=4; one trunk step through `(35,15,7,5)`
+to `(2/5,5,1)`, λ=5) admit complete, exactly verified decorations of
+every vertex and edge at the numerical and leading-coefficient tiers —
+every `(kappa, pi, kbar, nu, rho, w, M, i, d_p, d_q, deg p_f, D_f, d_f,
+d_g)` closes under the printed transport laws with the promoted
+Q-value/H5a kappa and the E5 case-III identities, and the design's §3.5
+LEAD-PILOT (83 vars / 74 rows, SAT over Q) regenerates from the direct
+certificate token-for-token. But in **both** cases the approximate-root
+tower layer cannot be completed: ladder level 1 sits in a window claimed
+by the (H8)-forced chain-1 synchronization stack whose death step can
+never be integral while the chain-2 vertex F1 is alive — a three-case
+exhaustion (empty prefix / F1-first / non-killing prefix then X-death)
+over all 15 admissible stacks, terminal-independent because the clash
+lives entirely on the pole-to-merge subtree the two completions share.
+Under the formalized tower laws — calibrated to reproduce the td=6
+template genome exactly, and with the single-ladder reading now pinned
+to printed St 8.3(i) + Cor 6.1 + Not 4.1 per the review — the
+`(9,15,7,3)@2` **CELL is tower-dead: both §11a deduplicated equality
+completions are obstructed**. This would be the campaign's first
+cell-level next-tier kill; it is pending review. "Untouched" below
+always means "not machine-checked", never a survival claim.
 
 ---
 
@@ -49,12 +54,15 @@ certificate's `dependencies` field:
 | BOOK R1.0–R1.4, R2.1/R2.2, P1, P2 | chain/merge/terminal numerics | PROMOTED (`BOOK-OFFAXIS.md`) |
 | §11a census row `(9,15,7,3)@2` | the priced arrival `w_U=1/2 (lambda 4; M2,4)`, recorded `nu_U=7` legal | PROMOTED |
 | grok-sixcells replay | per-vertex T1 substitutions (ground truth) | SOUND (`xmodel/grok-sixcells-review.md`) |
-| **campaign formalization of the tower laws** (§2 below) | the delta/death-gap/aliveness calculus | **calibrated, not printed-verbatim**: reproduces the entire td=6 template genome (checker C2) but has not itself been hostile-reviewed. This is the first thing a reviewer should attack. |
+| St 8.3(i) (p. 41) + Cor 6.1 searrow + Not 4.1 prefix order | single shared ladder + same `h_j` on both merge branches while alive | printed; the review's citation upgrade (`grok-tower-review.md` finding 3: every non-pole route vertex is searrow `T_a^&`, `(1-pi) deg p_f/d_f > 1` re-derived there) |
+| alive/dead dichotomy of printed (10), p. 19 | no third J-state; `delta_j > 0 <=> alive with (iii)` | printed (`grok-tower-review.md` finding 4) |
+| **campaign formalization of the tower laws** (§2 below) | the delta/death-gap/aliveness calculus | reviewed against pp. 19–22/32/39–41: SOUND-WITH-ERRATA; the two errata (Case C, trunk scope) are repaired in this revision |
+| trunk step data | the unique λ=1 menu edge `(35,15,7,5)`, `n=16`, `B=2A`, `C=14A²/3` | dual-certified (`sol-sixcells.md` §2.4, `grok-sixcells-review.md` findings 1–3) |
 
-No CONJECTURE beyond the promoted set enters the kill. The kill is
-route-family-scoped, not cell-scoped (§6). Fiber-zero gauge throughout
-(`f := f_old - a`); PLUS tower `h_0 = g`, base `f`; orientation
-`L = rootward -> U = poleward` everywhere.
+No CONJECTURE beyond the promoted set enters either kill. The
+direct-family kill is reviewed; the joint cell-level statement (§7) is
+new. Fiber-zero gauge throughout (`f := f_old - a`); PLUS tower
+`h_0 = g`, base `f`; orientation `L = rootward -> U = poleward`.
 
 ## 1. The route and its decorated spine (banked, all-green)
 
@@ -191,20 +199,24 @@ of the certified pilot.
 | F2 | 1/34 | | G | 1/13566 |
 | F3 | 3/3230 | | N (nu=11305 rep.) | **5653/11305 ≈ 0.50004** |
 
-Since `delta_j(v) = D_{f,v} g_j - kbar_v` must be strictly decreasing in
-`j` at every vertex (in particular at G, which sees all levels), the
-levels are globally sorted by gap, descending. Chain-2's five gaps are
-already strictly decreasing rootward — internally consistent. The
-problem is chain 1.
+Since `delta_j(v) = D_{f,v} g_j - kbar_v in N` is strictly decreasing in
+`j` at every vertex, the ladder gaps `g_j` strictly decrease, each
+vertex dies at the first index whose `g_j` equals its own `kbar/D_f`,
+and a vertex's descent can never *skip* its own zero (that would make
+some `delta_j(v) < 0`). Note carefully — this is the review's finding-1
+correction — the descent does **not** force every ladder index to be
+some vertex's death: non-killing indices are legal (see Case C below).
+Chain-2's five gaps are already strictly decreasing rootward —
+internally consistent. The problem is chain 1.
 
 **Chain 1 is forced to exist and forced to be neutral.** (H8) i-sync at
 G requires `deg p_{f,P1} = 2` to ladder up to `i_G = 22610` through
 chain-1 vertices; the merge handshake fixes the arriving state at
 `w = 2` (chain 1 frozen, `BOOK-OFFAXIS.md:521-529`); the budget is
 saturated (`4 = 6 - psi`), so every chain-1 step is uncharged; and the
-R1.2 w-law gives `w_child = w_par * n/Delta` with `n/Delta < 1` for
-every `n >= 2` — once w drops below 2 it can never return (verified for
-a lattice of `(n, nu)` in the checker). Hence chain 1 is a stack of
+R1.2 w-law gives `w_child = w_par * n/Delta` with
+`Delta - n = (n-1)(nu-1) >= 1` for every `n >= 2` — once w drops below
+2 it can never return. Hence chain 1 is a stack of
 clean `n = 1` neutrals. The f-degree ladder `2 -> ... -> 22610` forces
 the product of the stack's characteristics to be `22610/2 = 11305 =
 5*7*17*19`, an **odd** number; and the pole-adjacent stack vertex X has
@@ -218,30 +230,46 @@ gap(X) = (nu_X + 1)/(2 nu_X)  in  (1/2, 3/5],   nu_X | 11305, nu_X >= 5,
 shape-independent. The design's §3.2 representative is the one-vertex
 stack `X = N`, `nu_X = 11305`, gap `5653/11305`.
 
-**The clash.** `gap(X) > 1/2 > 2/5 = gap(F1)` always, so ladder level 1
-belongs either to X or (impossibly, see case B) to F1:
+**The clash (three-case form; erratum repair per review finding 1).**
+The first writeup claimed level 1 belongs to X or F1 outright. That
+dichotomy was not exhaustive: Prop 4.2 does *not* require some vertex to
+die at every ladder index, and a **non-killing prefix** of ladder steps
+is printed-legal. The review exhibited the exact menu, now machine-
+checked: while X and F1 are both alive, Prop 4.2(iii)/Prop 8.1
+(`i l_j/k_j in N` at `i = 2` with `gcd(k_j, l_j) = 1`) cap every prefix
+step at `k_j | 2`; the half-integer gap grid meets every window
+`(gap(X), 5/2)` in the same three points, so the legal non-killing
+level-1 pairs are exactly `(k,l) in {(1,2), (2,3), (2,5)}` (gaps
+`3/2, 1, 2`), and each has positive-**integer** `delta_1` at every
+non-pole vertex (checker prints all of them — they kill nobody and are
+genuinely legal). The repaired exhaustion:
 
-- **Case A (X kills level 1).** Then `l_1/k_1 = gap + alpha_1 - 1 =
-  (2 nu_X + 1)/(2 nu_X)`, i.e. `(k_1, l_1) = (2 nu_X, 2 nu_X + 1)` with
-  `k_1 >= 10`. At F1, level 1 must then be either *dead* — impossible,
-  `delta_1(F1) = 0` would force `gap(X) = kbar_{F1}/D_{F1} = 2/5` — or
-  *alive*, which by Prop 4.2(iii) forces the factor exponents of
-  `p_{f,F1}^{l_1/k_1} = [(t-A)^2(t-B)(t-D)]^{2 l_1/k_1}` to be integers:
-  `4 l_1 / k_1` and `2 l_1 / k_1`, i.e. `k_1 | 2`. But `k_1 = 2 nu_X >=
-  10`. Contradiction. (Independently, `delta_1(F1) = 1 + 5/nu_X` is a
-  positive integer only for `nu_X = 5`, so 14 of the 15 stacks die
-  already at delta-integrality; `nu_X = 5` dies at the exponents
-  `(22/5, 11/5)`.)
-- **Case B (F1 kills level 1).** Then `(k_1, l_1) = (10, 9)` from
-  `2/5 + 1/2 = 9/10`. At X, level 1 must be dead — needs
-  `(nu_X + 1)/(2 nu_X) = 2/5`, i.e. `nu_X = -5`, impossible — or
-  alive — needs `2 l_1/k_1 = 9/5 in N`, false. Contradiction, for every
-  stack (X always exists).
+- **Case A (empty prefix; X kills level 1).** `(k_1, l_1) =
+  (2 nu_X, 2 nu_X + 1)` with `k_1 >= 10`: refused by the `k | 2`
+  aliveness cap at F1 (exponents `2(2 nu_X + 1)/nu_X`-type nonintegral).
+  (Independently, `delta_1(F1) = 1 + 5/nu_X in N` only for `nu_X = 5`,
+  which dies at the exponents `(22/5, 11/5)`.)
+- **Case B (F1 kills level 1 first).** Impossible outright:
+  `delta(X) in N` strictly descends and cannot skip its own zero, so X
+  (gap `> 2/5`) must die strictly before any `g_j = 2/5` level exists;
+  death at X with gap `2/5` would need `nu_X = -5`. (And h1 alive at X
+  under `(k_1, l_1) = (10, 9)` needs `2*9/10 = 9/5 in N`, false.)
+- **Case C (nonempty non-killing prefix, then X dies).** After `r`
+  prefix steps with `k = 2` (each adds an odd `l/2` to alpha; `k = 1`
+  steps add 0), `alpha_m = 3/2 + r/2 (mod 1)`. X-death at level `m`
+  demands `l_m/k_m = gap(X) + alpha_m - 1 = alpha_m - 1/2 +
+  1/(2 nu_X)` with `k_m | 2` (F1 still alive):
+  `k_m = 1` forces `2 nu_X | r nu_X + 1` — impossible for `r` even
+  (`1`) or odd (`nu_X + 1 < 2 nu_X`); `k_m = 2` forces `nu_X | 1`.
+  No prefix length escapes (closed form over the `r`-parity, plus
+  explicit `r = 0..5` in the checker).
 
-The checker runs both cases for all 15 admissible `nu_X` and requires
-every one refuted. **No global ladder exists; the tower certificate
-cannot be completed for any representative of the synchronized direct
-route family.**
+The checker runs all three cases for all 15 admissible `nu_X` and
+requires every one refuted; the prefix menu, the `k | 2` cap, and the
+window-emptiness (`no vertex gap inside (gap(X), 5/2)`; intermediate
+stack gaps `< 2/5`) are each separate checks. **No global ladder
+exists; the tower certificate cannot be completed for any
+representative of the synchronized direct route family.**
 
 Fixed-representative corroboration (`nu_N = 11305`, the design's own
 choice), banked as `m2_branch` in the certificate: `m_G = 1` dies
@@ -253,7 +281,34 @@ because the N-side valuation-drop window
 H2-side window pins `s = 11309` *exactly* (both windows degenerate to a
 point; the checker verifies both boundary coincidences).
 
-## 4. Why this does not contradict anything banked
+## 4. Review status and what the errata changed
+
+`xmodel/grok-tower-review.md` (hostile, on-page against
+`refs/sigray_full.pdf` pp. 19–22/32/39–41): **SOUND-WITH-ERRATA** — the
+direct-family kill stands; attacks on the single-ladder reading, the
+alive/dead dichotomy, and the death equation all fail on the printed
+pages (findings 3–5). Two errata, both repaired in this revision:
+
+1. **Case C** (findings 1 + 6): the original A/B dichotomy silently
+   assumed every ladder index kills a vertex; the printed theory allows
+   non-killing steps. Repaired in §3 and in the engine (the prefix menu,
+   its delta-integrality, the `k | 2` cap, and the all-lengths closed
+   form are now explicit checks; the reviewed `3 == 3` tautology in the
+   F1→P2 handoff is replaced by the real `mult(eta(t-A)^3 R1^2, c) = 3`
+   computation at two exact points, matched against the degree of the
+   computed P2 collapse).
+2. **Trunk scope** (finding 2): "different synchronization problem;
+   nothing here examines its tower" was too strong — the clash is
+   terminal-independent. Now machine-checked: §7.
+
+Also folded: the single-ladder dependency is cited to printed
+St 8.3(i) + Cor 6.1 + Not 4.1 (not to `SHEET6-R6.md:10`); the q-law is
+labeled the Prop 8.1/theta rewrite consistent with Cor 6.1, not Cor 6.1
+verbatim; `Delta - n = (n-1)(nu-1) >= 1` replaces the w-monotonicity
+lattice as the cited identity; check counts below are transcript counts,
+not theorems.
+
+## 5. Why this does not contradict anything banked
 
 - The §11 ADDENDUM certifies the transport tier + vertex-local T1 +
   both priced completions. All of that is *reproduced* here (checker
@@ -265,84 +320,133 @@ point; the checker verifies both boundary coincidences).
   tower data as "not present in the filed route artifacts and may not be
   guessed"; CONJECTURE (full-pilot survival) anticipated exactly this
   test — the answer for the direct route family is negative.
-- §11a's census is arrival-tier and untouched.
+- §11a's census is arrival-tier: the 17-cell list and this cell's
+  arrival row are reproduced, not retracted. What the joint kill removes
+  is the *tower/coefficient* life of both deduplicated `(9,15)` equality
+  routes (all 4 raw arrivals), not the cell's row in the arrival book.
 - The kill needs no St 8.3(ii) dead-member equality (the scoping
   correction is respected); it uses only the monotone count law plus
-  vertex-local Prop 8.1/4.2/Cor 6.1.
+  vertex-local Prop 8.1/4.2/Cor 6.1, with St 8.3(i) entering only for
+  the shared-ladder identification of live members.
 
-## 5. What would have to be wrong for the route to survive
+## 6. What would have to be wrong for the kills to fail
 
 For a hostile reviewer; the checker's obstruction block fails loudly if
-any of these is repaired and re-run:
+any of these is repaired and re-run. Doors 1–3 were attacked by the
+review and held (findings 3–5); the sixth door (a non-killing level 1)
+was found, entered, and closed (finding 1 / §3 Case C).
 
-1. **The global-single-ladder reading of Prop 4.2.** If the thesis's
-   tower could branch per pole (different `(k_j, l_j)` on chain 1 vs
-   chain 2 at the same level index), the clash dissolves. The printed
-   tower is one sequence `h_0, h_1, ...` of global polynomials; the td=6
-   template uses one ladder across both poles (both P_i share
-   `(2,3),(3,4),(7,23)`), and `SHEET6-R6.md:10` reads `gcd(k1,l1)=1`
-   from Prop 4.2(i) as global data. A per-branch tower would be a new
-   reading requiring its own review.
-2. **The aliveness identity Prop 4.2(iii) at non-killed levels.** If a
-   level can sit strictly between alive and dead at a vertex (delta_j >
-   0 without the leading-part identity), case A/B both reopen. The
-   template exhibits no such state and `SHEET6-R6.md:126` uses "h2 ALIVE
-   at F_s" as the delta_2 > 0 reading.
-3. **The death equation `g_m = kbar/D_f`.** It is forced by delta_m = 0
-   plus Cor 6.1's q-law plus f-transport — three independently printed
-   inputs that interlock (checker verifies the equivalence numerically
-   at all vertices). An error here would have to break one of the three.
+1. **The single-ladder reading.** Now pinned to printed St 8.3(i)
+   (`h_{j,F} = h_{j,G}` and `(k_j, l_j, s_j)` agree for `j < m_F` on
+   `F = G*c`) + Cor 6.1 searrow (`F < F'` at every non-pole route
+   vertex: `(1-pi) deg p_f/d_f > 1` at all of them) + Not 4.1 prefix
+   order. A per-pole ladder at a shared alive level contradicts these
+   pages (review finding 3); if only one branch is alive, that is Case
+   A/B/C, refuted.
+2. **The aliveness dichotomy.** Printed (10) has exactly two states
+   (`J = 0` alive with (iii), equality dead); a third state would need a
+   new page (review finding 4).
+3. **The death equation `g_m = kbar/D_f`.** The alive rewrite of the
+   printed delta plus (10) at `m`; interlocks with the Prop 8.1/theta
+   q-law rewrite and St 3.17(i) transport (review finding 5).
 4. **The chain-1 forcing.** If a charged chain-1 step were budget-legal
-   (it is not: equality `4 = 6 - psi`), or w could return to 2 after an
-   `n >= 2` clean step (it cannot: `n < Delta`), or the pole-adjacent
-   shape could evade `gap = (nu+1)/(2nu)` (root law + pole mult 2
-   close this), the stack family would widen.
+   (it is not: `4 = 6 - psi` direct, `5 = 6 - psi` trunk, both
+   saturated), or w could return to 2 after an `n >= 2` clean step
+   (`Delta - n = (n-1)(nu-1) >= 1`), or the pole-adjacent shape could
+   evade `gap = (nu+1)/(2nu)` (root law + pole mult 2 close this), the
+   stack family would widen.
 5. **H5a/E5.** Under the forced-nu reading the route data change; the
-   two-cell sub-book (CONJECTURE U_7C) is a different perimeter. This
-   certificate lives on the promoted Q-value book, as instructed.
+   two-cell sub-book (CONJECTURE U_7C) is a different perimeter. These
+   certificates live on the promoted Q-value book, as instructed.
 
-## 6. Scope and consequences
+## 7. The trunk completion dies by the same clash: the cell-level kill
 
-- **KILLED (pending review):** the tower tier of every synchronized
-  representative of the *direct* `(2/3,3,2)` completion of
-  `(9,15,7,3)@2` in the design §3.2 family — the design's milestone-1
-  target route. Milestone 2 (jet-window emission) for this route is moot
-  unless §5 overturns a dependency: there is no tower certificate to
-  emit windows from.
-- **NOT killed:** the `(9,15,7,3)@2` cell. Its second budget-equality
-  completion — the trunk `(35,15,7,5)` step to `(2/5,5,1)` — has a
-  different terminal frame (`psi = 1`, budget 5) and a different
-  synchronization problem; nothing here examines its tower. The other
-  16 §11a cells are untouched.
-- **Structural lesson** (conjecture-flavored, for the next certificate):
-  the clash mechanism is parity — the type-(2,3) half-integer
-  `alpha_1 = 3/2` meets a pole-adjacent gap `(nu+1)/(2nu)` whose ladder
-  step `k_1 = 2 nu_X` is even and large, while the smallest-i chain-2
-  vertex (`i_{F1} = 2`, forced by the (1,2,3) pole) caps `k_1 | 2`. Any
-  route whose two pole chains meet the same merge with coprime-odd
-  degree ratio on one side and a tiny `i` on the other faces the same
-  squeeze; this is a candidate general kill lemma for the trunk route
-  and the other 16 cells, and the natural milestone-2 replacement.
+`cases/towers/t9_15_trunk.json` is the complete decorated spine of the
+second (and last) §11a deduplicated equality completion: the trunk
+vertex `T = (35,15,7,5)` at frame `(1/5,3,7;2/5,5)` inserted rootward of
+G via the unique λ=1 menu edge (`n = 16`, continuation at T's triple
+orbit, `mu_e = 3`), case-IV terminal at T with `(w,M,psi) = (2/5,5,1)`,
+`j = 3`, `R_term = 5/3`, budget `5 = 6 - psi` saturated,
+`k_f = 2374050 = 35*67830`, `l_f = (3/5)k_f = 1424430`. The whole spine
+re-closes exactly (checker C1 on the trunk certificate): T's Cor 6.1
+q-law `15 = 3*2374050/474810`, the (2.1) row `(1/3+16)/21 = 7/9 =
+35/45`, kappa doubling `kappa_G = 49`, `kappa_H2 = 49` (H5a Q-value),
+both pole Prop 4.1 equalities at the rescaled charts (`5/1107890`,
+`5/62475`), T's T1 row `B = 2A, C = 14A^2/3` re-derived at two points,
+and `K = 16618350`.
 
-## 7. Reproduction
+**Terminal-independence, machine-checked** (review finding 2, upgraded
+from argument to checks): (H8) at G reads `deg p_{f,H2} = i_G*mu0 =
+45220` up from the priced chain-2 regardless of G's rootward neighbour,
+so `i_G = 22610`, the chain-1 f-ladder `2 -> 22610` (nu-product 11305,
+odd), `i_{F1} = 2`, both pole types (2,3), and the entire death-gap
+table on `{X-stack, F1, F2, F3, H2, G}` are *identical* to the direct
+route (same `kbar/D_f` at every shared vertex — the kappa rescaling
+cancels). The only new datum is T's own gap `1/158270 < 1/13566 =
+gap(G)`, far below the level-1 window `(gap(X), 5/2)` — checked
+explicitly ("no non-stack death gap inside the window"). The three-case
+exhaustion of §3 then runs verbatim on the trunk certificate: all 15
+stacks, cases A/B/C, every one refuted.
+
+**Consequence (NEW, pending hostile review): the `(9,15,7,3)@2 cell is
+tower-dead.** Both §11a deduplicated equality completions (4 raw
+arrival records) are obstructed at the tower tier; there is no third
+completion in the promoted book (`grok-sixcells-review.md` finding 2:
+the px5 census has exactly these two). This is the campaign's first
+cell-level next-tier kill. Milestone-2 emission for this cell is moot
+unless review overturns a dependency. No terminal-dependent escape
+exists within the checked perimeter: an escape would have to change
+`i_G`, the chain-1 nu-product, `i_{F1}`, the pole types, or the budget
+saturation, and each is re-verified on the trunk spine.
+
+## 8. Scope and consequences
+
+- **KILLED, reviewed:** the tower tier of every synchronized
+  representative of the direct `(2/3,3,2)` completion (design §3.2
+  family) — `grok-tower-review.md` SOUND-WITH-ERRATA, errata repaired.
+- **KILLED, new, pending review:** the trunk `(2/5,5,1)` completion,
+  hence the `(9,15,7,3)@2` cell at the tower tier (§7).
+- **NOT machine-checked** (never "safe", only unexamined): the other 16
+  §11a cells. The mechanism is a candidate lemma for them, not a
+  theorem (review finding 7): per-cell it needs (i) type-(2,3) poles,
+  (ii) odd chain-1 characteristic product, (iii) a small-`i` chain-2
+  vertex alive at the stack death (`k | i` tight), (iv) budget
+  saturation forbidding a charged chain-1 step. The right next
+  artifact is the finding-7 checklist run over the 17-cell book —
+  (type, i_G parity, min i on the priced chain-2, chain-1 budget
+  residual, pole-adjacent gap vs smallest chain-2 gap) — each row
+  either instantiating this squeeze as a corollary or naming its
+  escape ingredient; that replaces milestone 2 for this cell.
+- The LEAD-PILOT leading tier (83/74, SAT over Q) and the §11a arrival
+  census are reproduced and stand.
+
+## 9. Reproduction
 
 ```bash
 cd /Users/dc/code/math/jc72108
-python3 cases/tower_check.py    # < 1 s, exit 0, 258 checks
+python3 cases/tower_check.py    # < 1 s, exit 0, 506 checks (transcript count)
 ```
 
-The engine validates `cases/towers/t9_15_direct.json` (C1 spine, C1b
-scale-exponent audits, C2 td=6 calibration, C3 tower layer + 15-stack
-two-case obstruction exhaustion, C4 T1/Wronskian layer at two generic
-A-points, C5 LEAD-PILOT token-for-token regeneration against the literal
-§3.5 block extracted from `xmodel/sol-gluing-design.md` at run time,
-C5b the exact rational anchor on all 74 regenerated rows, C6 the design
-§3.6 negative-perturbation list — T1 sign flip, omitted nu in a
-derivative, `B_g = (3/2)A`, non-H5a `kappa_H2 = 49`, mixed-reading
-case-III `n`, one-slot scale shift, tampered obstruction record — each
-must raise at least one failure, and does). No msolve, no
-network, no floats; `ops/FLEET.md` untouched. The certificate JSON is
-the machine-readable statement of record; this file is its derivation.
+The engine validates **both** certificates (`t9_15_direct.json`, then
+`t9_15_trunk.json`): C1 spine, C1b scale-exponent audits (direct), C2
+td=6 calibration, C3 tower layer + the repaired **three-case** 15-stack
+obstruction exhaustion (prefix menu, `k | 2` cap, window emptiness,
+closed-form + explicit-`r` Case C, real F1→P2 `mult = 3` handoff), C4
+T1/Wronskian layer at two generic A-points (7 rows on the trunk, incl.
+T), C5 LEAD-PILOT token-for-token regeneration against the literal §3.5
+block extracted from `xmodel/sol-gluing-design.md` at run time (direct
+only — the trunk has no design pilot block to gate against), C5b the
+exact rational anchor on all 74 regenerated rows, C6 ten negative
+perturbations — T1 sign flip, omitted nu in a derivative,
+`B_g = (3/2)A`, non-H5a `kappa_H2` composition, mixed-reading case-III
+`n`, one-slot scale shift, tampered obstruction record, **case list
+without Case C**, tampered trunk terminal `w`, tampered trunk (2.1)
+`l` — each must raise at least one failure, and does. No msolve, no
+network, no floats; `ops/FLEET.md` respected. The certificate JSONs are
+the machine-readable statements of record; this file is their
+derivation.
 
-Files: `cases/towers/t9_15_direct.json` (certificate),
-`cases/tower_check.py` (checker), this document. No git commit was made.
+Files: `cases/towers/t9_15_direct.json`, `cases/towers/t9_15_trunk.json`
+(certificates), `cases/tower_check.py` (checker), this document,
+`xmodel/grok-tower-review.md` (review of record for the direct kill).
+No git commit was made.
