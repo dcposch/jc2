@@ -45,6 +45,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 CERT = HERE / "towers" / "t9_15_direct.json"
 TRUNK = HERE / "towers" / "t9_15_trunk.json"
+T1015 = HERE / "towers" / "t10_15.json"
 
 FAILURES = []
 
@@ -367,15 +368,44 @@ def route_spine(cert):
     term = cert["terminal"]
     psi = int(fr(term["psi"]))
     budget = int(fr(term["budget"]))
-    H2 = V["H2"]
-    check("chain-2 zero arrival at recorded (w_U, nu_U) = (1/2, 7)",
-          H2["w"] == fr(arr["w_U"]) and H2["nu"] == fr(arr["nu_U"]))
-    check("arrival law: mu0 | M_U and nu_U = -1 (mod mu0)",
-          int(H2["M"]) % int(fr(arr["mu0"])) == 0
-          and (int(H2["nu"]) + 1) % int(fr(arr["mu0"])) == 0)
+    AV = V[arr.get("vertex", "H2")]
+    mu0 = int(fr(arr["mu0"]))
+    check(f"chain-2 zero arrival at recorded (w_U, nu_U) = "
+          f"({arr['w_U']}, {arr['nu_U']})",
+          AV["w"] == fr(arr["w_U"]) and AV["nu"] == fr(arr["nu_U"]))
+    if arr.get("type", "neutral") == "neutral":
+        check("arrival law (neutral): mu0 | M_U and nu_U = -1 (mod mu0)",
+              int(AV["M"]) % mu0 == 0 and (int(AV["nu"]) + 1) % mu0 == 0)
+    else:
+        # direct stored-step-cell arrival (P2 direct clause): mu0 | M_U;
+        # the vertex is the closure's own priced step cell.
+        check("arrival law (direct stored step-cell): mu0 | M_U",
+              int(AV["M"]) % mu0 == 0)
     check(f"arrival lambda ledger sums to budget {budget} = 6 - psi (saturated)",
           sum(int(fr(x)) for x in arr["lambda_steps"]) == budget
           and budget == 6 - psi)
+    # optional terminal table (all filed endpoints of this cell's routes)
+    for row in cert.get("terminals", []):
+        wT, MT = fr(row["w"]), fr(row["M"])
+        jT = MT * (1 - wT)
+        RT = Fr(1, 1) / (1 - wT)
+        psiT = -(-RT.numerator // RT.denominator) - 1
+        lam = int(fr(row["lambda"]))
+        ok = (0 < wT < 1 and MT >= 2 and jT.denominator == 1 and jT >= 1
+              and psiT == int(fr(row["psi"])) and lam <= 6 - psiT
+              and (lam == 6 - psiT) == bool(row.get("eq", True)))
+        check(f"terminal table ({row['w']},{row['M']},psi={row['psi']}): "
+              f"j = {sfr(jT)} in N*, lambda {lam} vs 6-psi {6 - psiT} "
+              f"({'eq' if row.get('eq', True) else 'slack'})", ok)
+    if cert.get("terminals"):
+        # L-A: chain-1 stays uncharged even on slack routes: on an l = 1
+        # cell (nu, n*nu+1) a charged direction needs m*d_q < d_p = nu,
+        # impossible for m >= 1 (shape contradiction; rollout L-A).
+        check("L-A: l=1 cells admit no charged direction (m*d_q < d_p "
+              "impossible; lattice)",
+              all(not (m * (n * nu + 1) < nu)
+                  for m in range(1, 6) for n in range(1, 6)
+                  for nu in range(2, 30)))
 
     # terminal package (R1)-(R3) at the terminal vertex
     T = V[term.get("vertex", "G")]
@@ -514,20 +544,22 @@ def tower_layer(cert, V):
         check(f"P2 h1-top = g^2-f^3 collapse -> -(1/8)A^3 eta^3 + (9/64)A^4, deg 3 (A={sfr(Aval)})",
               h1p2 == want2, f"{h1p2}")
         check(f"P2 h1-top degree 3 (A={sfr(Aval)})", max(want2) == 3)
-    # P2 count handoff (real computation, replacing the reviewed tautology):
-    # F1's level-1 dead member is p_red*q = eta(t-A)^3 R1(t)^2, t = eta^5;
-    # its multiplicity at the continuation root c (c^5 = A) must equal the
-    # eta-degree 3 of the P2 h1-collapse computed above (St 3.11 saturation
-    # at the dead-member -> pole handoff).
-    for Aval, cval in ((Fr(1), Fr(1)), (Fr(32), Fr(2))):
-        tma = {5: Fr(1), 0: -Aval}                       # t - A in eta
-        r1 = {10: Fr(1), 5: -3 * Aval, 0: 3 * Aval * Aval}
-        dead = pmul({1: Fr(1)}, pmul(ppow(tma, 3), ppow(r1, 2)))
-        m = mult_at(dead, cval)
-        check(f"F1->P2 h1 count: mult(eta(t-A)^3 R1^2, c) = 3 = deg p_h1,P2 "
-              f"(A={sfr(Aval)}, c={sfr(cval)})", m == 3, f"mult = {m}")
-        check(f"F1->P2 h1 count consistency: R1(A) != 0 (A={sfr(Aval)})",
-              Aval ** 2 - 3 * Aval * Aval + 3 * Aval * Aval != 0)
+    # P2 count handoff (real computation): the P2-adjacent vertex's level-1
+    # dead member p_red^k*q must have multiplicity 3 at the continuation
+    # root toward P2, matching the eta-degree 3 of the P2 h1-collapse
+    # (St 3.11 saturation at the dead-member -> pole handoff).  Data-driven:
+    # tower.p2_handoff carries the dead-member factorization.
+    ho = tw.get("p2_handoff")
+    if ho:
+        nu_h = int(fr(ho["nu"]))
+        for Aval, cval in ((Fr(1), Fr(1)), (Fr(2) ** nu_h, Fr(2))):
+            env = {"A": Aval, "Fr": Fr}
+            dead = poly_from_factors(ho["factors"], nu_h, env,
+                                     int(fr(ho.get("eta_prefix", 1))))
+            m = mult_at(dead, cval)
+            check(f"{ho['vertex']}->P2 h1 count: mult(dead member, c) = 3 "
+                  f"= deg p_h1,P2 (A={sfr(Aval)}, c={sfr(cval)})",
+                  m == 3 == int(fr(ho["expected"])), f"mult = {m}")
 
     # death-gap table of the route (g = kbar/D_f at each candidate killer)
     gaps = {}
@@ -537,7 +569,8 @@ def tower_layer(cert, V):
         gaps[row["vertex"]] = g
         check(f"death gap @ {row['vertex']}: kbar/D_f = {row['gap']}",
               g == fr(row["gap"]), sfr(g))
-    order = [n for n in ("F1", "F2", "F3", "H2", "G", "T") if n in gaps]
+    order = [n for n in tw.get("gap_order", ("F1", "F2", "F3", "H2", "G", "T"))
+             if n in gaps]
     check("chain gaps strictly decreasing rootward (level order forced)",
           all(gaps[a] > gaps[b] for a, b in zip(order, order[1:])))
     check("all non-stack gaps are <= 2/5 (below the level-1 window)",
@@ -556,12 +589,13 @@ def tower_layer(cert, V):
     # representative's instantiation, not the coverage boundary.
     print("  -- obstruction exhaustion over chain-1 synchronization stacks --")
     ob = tw["obstruction"]
-    NN = 11305
+    NN = int(fr(tw.get("stack_product_rep", 11305)))
     divs = sorted(d for d in range(2, NN + 1) if NN % d == 0)
-    check("displayed rep: 11305 = 5*7*17*19 odd; its pole-adjacent classes"
-          " nu_X | 11305, nu_X >= 5",
-          NN == 5 * 7 * 17 * 19 and divs[0] == 5 and all(d % 2 == 1 for d in divs)
-          and len(divs) == 15)
+    check(f"displayed rep: stack product {NN} >= 2; its pole-adjacent "
+          f"classes nu_X | {NN} number {len(divs)}",
+          NN >= 2 and len(divs) >= 1
+          and (NN != 11305 or (NN == 5 * 7 * 17 * 19 and len(divs) == 15
+                               and all(d % 2 == 1 for d in divs))))
     # the pole-adjacent chain-1 vertex X has death gap (nu_X+1)/(2 nu_X),
     # independent of the cell shape (i*mult = 2 at the pole edge + root law
     # force deg p_f,X = 2 nu_X and d_q,X = nu_X + 1).
@@ -605,8 +639,7 @@ def tower_layer(cert, V):
                  for nuX in divs for n in gaps if n not in ("N",))
     check("no non-stack death gap inside the window (gap(X), 5/2)", ok_win)
 
-    prefix_vs = [n for n in ("F1", "F2", "F3", "H2", "G", "N", "T") if n in V
-                 and "death_gap" in V[n]]
+    prefix_vs = [v["name"] for v in cert["vertices"] if "death_gap" in v]
     # prefix cap: while X (p_f = S(t-A)^2) and F1 (i = 2, orbit mults
     # (2,1,1)) are both alive, Prop 4.2(iii)/Prop 8.1 (i l/k in N) force
     # every prefix step to have k_j | 2 (gcd(k_j, l_j) = 1):
@@ -633,29 +666,30 @@ def tower_layer(cert, V):
     # Sol finding-1 identity (xmodel/sol-tower-review.md:56-69): Sol's
     # CRITICAL table of unhandled alive-alive level-1 pairs is exactly this
     # Case C menu, row for row -- pairs, gaps, X/F1 exponents, and the
-    # delta_1 values at (G,H2,F3,F2,F1).  Verify the identity explicitly.
-    sol_table = {
-        (1, 2): {"g": Fr(3, 2), "expX": 4, "expF1": (8, 4), "d1F1": 11,
-                 "deltas": (101740, 33911, 4842, 250, 11)},
-        (2, 3): {"g": Fr(1), "expX": 3, "expF1": (6, 3), "d1F1": 6,
-                 "deltas": (67825, 22606, 3227, 165, 6)},
-        (2, 5): {"g": Fr(2), "expX": 5, "expF1": (10, 5), "d1F1": 16,
-                 "deltas": (135655, 45216, 6457, 335, 16)},
-    }
-    check("Sol finding 1 == repaired Case C: same three pairs",
-          sorted(pref) == sorted(sol_table))
-    for (k1, l1), row in sorted(sol_table.items()):
-        g1 = Fr(l1, k1) - Fr(1, 2)
-        got = tuple(int(V[n]["D_f"] * g1 - V[n]["kbar"])
-                    for n in ("G", "H2", "F3", "F2", "F1"))
-        ok = (g1 == row["g"]
-              and Fr(2 * l1, k1) == row["expX"]
-              and (Fr(4 * l1, k1), Fr(2 * l1, k1)) == row["expF1"]
-              and int(V["F1"]["D_f"] * g1 - V["F1"]["kbar"]) == row["d1F1"]
-              and got == row["deltas"])
-        check(f"Sol table row ({k1},{l1}): g/exponents/deltas match "
-              f"(delta_1(F1) = {row['d1F1']})", ok,
-              f"got deltas {got} want {row['deltas']}")
+    # delta_1 values at (G,H2,F3,F2,F1).  (9,15) certificates only.
+    if tw.get("sol_table_identity"):
+        sol_table = {
+            (1, 2): {"g": Fr(3, 2), "expX": 4, "expF1": (8, 4), "d1F1": 11,
+                     "deltas": (101740, 33911, 4842, 250, 11)},
+            (2, 3): {"g": Fr(1), "expX": 3, "expF1": (6, 3), "d1F1": 6,
+                     "deltas": (67825, 22606, 3227, 165, 6)},
+            (2, 5): {"g": Fr(2), "expX": 5, "expF1": (10, 5), "d1F1": 16,
+                     "deltas": (135655, 45216, 6457, 335, 16)},
+        }
+        check("Sol finding 1 == repaired Case C: same three pairs",
+              sorted(pref) == sorted(sol_table))
+        for (k1, l1), row in sorted(sol_table.items()):
+            g1 = Fr(l1, k1) - Fr(1, 2)
+            got = tuple(int(V[n]["D_f"] * g1 - V[n]["kbar"])
+                        for n in ("G", "H2", "F3", "F2", "F1"))
+            ok = (g1 == row["g"]
+                  and Fr(2 * l1, k1) == row["expX"]
+                  and (Fr(4 * l1, k1), Fr(2 * l1, k1)) == row["expF1"]
+                  and int(V["F1"]["D_f"] * g1 - V["F1"]["kbar"]) == row["d1F1"]
+                  and got == row["deltas"])
+            check(f"Sol table row ({k1},{l1}): g/exponents/deltas match "
+                  f"(delta_1(F1) = {row['d1F1']})", ok,
+                  f"got deltas {got} want {row['deltas']}")
     # CASE A (empty prefix) and CASE C (any prefix): X dies at level m while
     # F1 is alive.  After r k=2 prefix steps (each adds an odd l/2 to alpha;
     # k=1 steps add 0), alpha_m = 3/2 + r/2 (mod 1).  X-death demands
@@ -684,15 +718,21 @@ def tower_layer(cert, V):
         print(f"    case A/C nu_X={nuX:>5}: gap {sfr(gX):>9}: {status}")
         check(f"case A/C nu_X={nuX}: X-death impossible at any prefix length",
               ok_closed and ok_explicit)
-    # CASE B: F1 kills level 1 first: impossible -- delta(X) in N cannot
-    # skip its own zero, so X (gap > 2/5) must die strictly before any
-    # g_j = 2/5 level exists; equivalently death at X would need gap 2/5:
-    check("case B: F1 cannot die first (delta_X would need gap(X) = 2/5, "
-          "i.e. nu_X = -5)",
-          all(Fr(d + 1, 2 * d) != Fr(2, 5) and 5 * (d + 1) != 4 * d
-              for d in divs))
-    check("case B: h1 alive at X refused ((k,l) = (10,9): exp 2*9/10 = 9/5)",
-          Fr(2 * 9, 10).denominator != 1)
+    # CASE B: the first-charged vertex kills level 1 first: impossible --
+    # delta(X) in N cannot skip its own zero, so X (gap > 1/2 > fc_gap)
+    # must die strictly before any g_j = fc_gap level exists; equivalently
+    # death at X would need gap(X) = fc_gap, and h1 alive at X would need
+    # an integral exponent 2*l/k for the fc-gap pair.
+    fc_gaps = [fr(g) for g in tw.get("first_charged_gaps", ["2/5"])]
+    for fcg in fc_gaps:
+        rB = fcg + Fr(1, 2)
+        kB, lB = rB.denominator, rB.numerator
+        check(f"case B (fc gap {sfr(fcg)} < 1/2): death at X impossible "
+              f"((nu+1)/(2nu) = {sfr(fcg)} has no nu >= 2) and h1 alive at X "
+              f"refused (pair ({kB},{lB}): exp {sfr(Fr(2 * lB, kB))})",
+              fcg < Fr(1, 2)
+              and all(Fr(d + 1, 2 * d) != fcg for d in ULAT)
+              and Fr(2 * lB, kB).denominator != 1)
     check("OBSTRUCTION recorded in certificate matches exhaustion",
           ob["status"] == "OBSTRUCTED" and int(ob["checked_stacks"]) == len(divs)
           and ob.get("cases") == ["A", "B", "C"]
@@ -708,10 +748,56 @@ def tower_layer(cert, V):
     # ingredient is unchanged or bounded below the level-1 window.
     print("  -- C3-V: M_U / free-characteristic / padding variant coverage --")
     variants = cert.get("variants", [])
-    check("every recorded raw arrival M_U has a realized variant",
-          set(int(fr(m)) for m in cert["arrival"]["M_U_raw"])
-          <= set(int(fr(v["M_U"])) for v in variants) and len(variants) >= 2)
+    if variants and "M_U" in variants[0]:
+        check("every recorded raw arrival M_U has a realized variant",
+              set(int(fr(m)) for m in cert["arrival"]["M_U_raw"])
+              <= set(int(fr(v["M_U"])) for v in variants)
+              and len(variants) >= 2)
+    else:
+        AVn = cert["arrival"].get("vertex", "H2")
+        check("single-M_U cell: recorded M_U class realized by the "
+              "displayed arrival vertex",
+              set(int(fr(m)) for m in cert["arrival"]["M_U_raw"])
+              == {int(fr(V[AVn]["M"]))} and len(variants) >= 2)
     is_trunk = cert["terminal"].get("vertex", "G") == "T"
+    if variants and "first_charged" in variants[0]:
+        # menu-style variants (depth-1 cells like (10,15)): realizations
+        # keyed by the universal first-charged-step menu {(A),(C)}; the
+        # arrival-superset rider (rollout Risk 4) applies to non-displayed
+        # arrival vertices, covered by the window bound + universal
+        # exhaustion, not by spine instantiation.
+        for v in variants:
+            cellv = tuple(int(x) for x in v["cell"])
+            nuv = int(fr(v["nu"]))
+            iv = int(fr(v["i"]))
+            gapv = fr(v["gap"])
+            tag = f"variant first-charged ({v['first_charged']}) = {cellv}"
+            dpv, dqv = cellv
+            check(f"{tag}: i = 4/l = 2, M | data, gap = d_q/(i*d_p) = "
+                  f"{v['gap']} < 1/2",
+                  iv == 2 and gapv == Fr(dqv, iv * dpv) < Fr(1, 2)
+                  and gcd(dpv, dqv) == int(fr(v["M"])))
+            nB = fr(v["book21_n"])
+            check(f"{tag}: BOOK-2.1 from ENTRY: (1/2+n)/(5+n) = d_p/(2 d_q), "
+                  f"n = {v['book21_n']}",
+                  (Fr(1, 2) + nB) / (5 + nB) == Fr(dpv, 2 * dqv))
+            # prefix-menu delta integrality at this vertex (D = i*dp*rho...)
+            Dv = fr(v["D_f"])
+            kbv = fr(v["kbar"])
+            ds = [Dv * g - kbv for g in (Fr(3, 2), Fr(1), Fr(2))]
+            check(f"{tag}: prefix-menu deltas {[sfr(d) for d in ds]} "
+                  f"positive-integral",
+                  all(d.denominator == 1 and d > 0 for d in ds))
+            if v.get("displayed"):
+                iG = int(fr(v["i_G"]))
+                P1p = int(fr(v["chain1_product"]))
+                check(f"{tag}: displayed ledger i_G = deg/mu0, product = "
+                      f"i_G/2 = {P1p} >= 2",
+                      iG * int(fr(cert["arrival"]["mu0"])) == int(fr(v["deg_p_f_U"]))
+                      and 2 * P1p == iG and P1p >= 2)
+        m2_corroboration(ob)
+        insertion_closure(cert, V, ULAT)
+        return
     for v in variants:
         MU, nu3 = int(fr(v["M_U"])), int(fr(v["nu3"]))
         iG = int(fr(v["i_G"]))
@@ -805,26 +891,36 @@ def insertion_closure(cert, V, ULAT):
           tau == Fr(9, 2) == fr(ex["tau"]) and n_e == 13 == int(fr(ex["n"]))
           and kbY == 6 == int(fr(ex["kbar"])) and rhoY == fr(ex["rho"])
           and (kbY - rhoY) / 3 == Fr(3, 2) and gcd(6, 4) == 2)
+    nr = [int(fr(x)) for x in ex.get("next_row", [6, 20, 32, 4])]
     check("Sol insertion BOOK(2.1) rows: (1/2+13)/(5+13) = 6/(2*4) and "
-          "(3/2+6)/(6+6) = 20/(2*16), kbar_F1 = 4 preserved",
+          f"(3/2+{nr[0]})/(6+{nr[0]}) = {nr[1]}/{nr[2]}, kbar first-charged "
+          f"= {nr[3]} preserved",
           (Fr(1, 2) + 13) / 18 == Fr(6, 8)
-          and (Fr(3, 2) + 6) / 12 == Fr(20, 32)
-          and Fr(6 + 6, 3) == 4)
-    iY, iF1, iF2 = 2, 6, 30
-    check("Sol insertion ledger: i_Y=2 (deg 12), i_F1=6 (deg 120), "
-          "i_F2=30 (deg 3570) -- i_F1 moved off 2",
-          iY * 2 == 4 and iY * 6 == 12 and iF1 * 2 == 12 and iF1 * 20 == 120
-          and iF2 * 4 == 120 and iF2 * 119 == 3570
-          and iF1 == int(fr(ex["i_F1"])) and iF1 != 2)
-    check("Sol insertion gaps: Y 1/3, F1 2/15, F2 1/102 -- all < 2/5, "
-          "none in the window",
-          Fr(4, 12) == Fr(1, 3) and Fr(16, 120) == Fr(2, 15) == fr(ex["gap_F1"])
-          and Fr(35, 3570) == Fr(1, 102)
-          and all(g < Fr(2, 5) for g in (Fr(1, 3), Fr(2, 15), Fr(1, 102))))
-    check("Sol insertion scaling: i_G and chain-1 product x3 "
-          "(22610->67830/11305->33915; 4420->13260/2210->6630), products >= 2",
-          3 * 22610 == 67830 and 67830 // 2 == 33915 == 3 * 11305
-          and 3 * 4420 == 13260 and 13260 // 2 == 6630)
+          and (Fr(3, 2) + nr[0]) / (6 + nr[0]) == Fr(nr[1], nr[2])
+          and Fr(6 + nr[0], 3) == nr[3])
+    # data-driven downstream ledger: rows [i, d_p, deg_p_f, d_q] from the
+    # inserted Y upward; each deg feeds the next vertex's i via the
+    # recorded continued multiplicity in "mults".
+    led = [[int(fr(x)) for x in row] for row in ex["ledger"]]
+    mults = [int(fr(m)) for m in ex["mults"]]
+    ok_led = all(i * dp == dg for i, dp, dg, _ in led)
+    ok_chain = all(led[j + 1][0] * mults[j] == led[j][2]
+                   for j in range(len(led) - 1))
+    check("Sol insertion ledger: i*d_p = deg chains through the recorded "
+          "mults; first-charged i moved off 2",
+          ok_led and ok_chain and led[0] == [2, 6, 12, 4]
+          and led[1][0] == int(fr(ex["i_F1"])) != 2)
+    gaps_led = [Fr(dq, dg) for _, _, dg, dq in led]
+    check(f"Sol insertion gaps {[sfr(g) for g in gaps_led]} all < 2/5 "
+          "(none in the window)",
+          all(g < Fr(2, 5) for g in gaps_led)
+          and gaps_led[1] == fr(ex["gap_F1"]))
+    scale = int(fr(ex.get("scale", 3)))
+    pairs = [[int(fr(x)) for x in p] for p in ex["i_G_scaled_pairs"]]
+    check(f"Sol insertion scaling: i_G and chain-1 product x{scale}, "
+          "products >= 2",
+          all(b == scale * a and (b // 2) == scale * (a // 2) and b // 2 >= 2
+              for a, b in pairs))
     # --- Lemma N1: a state-preserving zero-cost step is a clean n=1
     # neutral: for n >= 2, Delta - n = (n-1)(nu-1) >= 1 so w strictly
     # drops and the record's pinned state sequence breaks. ---
@@ -1172,6 +1268,18 @@ def perturbation_suite():
     p = copy.deepcopy(trunk)
     p["chain2_book21"][0]["l"] = 2
     perts.append(("trunk BOOK-2.1 l tampered", p))
+    # (10,15) probe perturbations
+    t15 = json.loads(T1015.read_text())
+    p = copy.deepcopy(t15)
+    p["t1_local"][1]["q_factors"][1]["coeffs_t"]["0"] = "-Fr(2,3)*A"
+    perts.append(("(10,15) U-cell B = (2/3)A instead of (3/2)A", p))
+    p = copy.deepcopy(t15)
+    p["terminals"][30]["psi"] = 1
+    perts.append(("(10,15) slack trunk-1 endpoint psi tampered", p))
+    p = copy.deepcopy(t15)
+    p["tower"]["first_charged_gaps"] = ["5/14"]
+    p["variants"] = p["variants"][:1]
+    perts.append(("(10,15) (C)-menu variant dropped with its case-B gap", p))
     ok_all = True
     for name, pc in perts:
         n = run_all(pc, quiet=True)
@@ -1184,7 +1292,7 @@ def perturbation_suite():
 
 def main():
     totals = {}
-    for path in (CERT, TRUNK):
+    for path in (CERT, TRUNK, T1015):
         cert = json.loads(path.read_text())
         print(f"\n######## certificate: {path.name}")
         print(f"cell {cert['cell']}\nroute {cert['route']}")
@@ -1204,7 +1312,7 @@ def main():
         sys.exit(1)
     verdicts = ", ".join(f"{k}: {v}" for k, (_, v) in totals.items())
     print("RESULT: ALL CHECKS PASS (incl. perturbation suite) -- "
-          "both certificates validated; tower tier verdicts: " + verdicts)
+          "all certificates validated; tower tier verdicts: " + verdicts)
     sys.exit(0)
 
 
