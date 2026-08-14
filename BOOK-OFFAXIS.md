@@ -645,7 +645,7 @@ class lists and the (2,2t) tail inversion are td-7-specific proofs —
 other panels use the capped generic engine (P5); (v) the arrival law's
 "direct" list is a superset (recorded along any in-budget path).
 
-## 11-PRE. NOTE (2026-08-13, post-§11a): the six-cell record below was — **PROMOTED 2026-08-13 (hostile review SOUND: xmodel/grok-census11a-review.md; brute-force completeness nu<=400 0 miss/0 extra)**
+## 11-PRE. NOTE (2026-08-13, post-§11a): the six-cell record below was
 ## generated under the stale kbar_BOOK pin. The E5-CORRECTED census is
 ## §11a (PROMOTED): 17 cells / 233 routes (Q-value+E5 reading) or 2
 ## cells (forced-nu reading); H5a decides. §11's law and addendum
@@ -700,7 +700,9 @@ xmodel/grok-sixcells-review.md. Integerized AF2 sharpness proven
 remaining instrument for the six is the coefficient-gluing tier
 (emitter build est. 3-5 days, solve cost unbounded a priori).
 
-### 11a. E5-CORRECTED CENSUS — EXECUTED (2026-08-13): the class-B/C
+### 11a. E5-CORRECTED CENSUS — EXECUTED + PROMOTED (2026-08-13; hostile
+### review SOUND, xmodel/grok-census11a-review.md — 13 new cells priced,
+### brute-force completeness nu<=400 0 miss / 0 extra): the class-B/C
 ### menu re-solved under the corrected zero-edge pin; the six-cell
 ### record is SUPERSEDED (promoted H5a: 17 cells; forced-ν: 2 cells)
 
