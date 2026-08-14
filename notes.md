@@ -447,3 +447,7 @@
   14 errata folded, 1559/1559). Second full panel after td<=5. Launching td-11/13
   refile+port scoping (Sol) overnight. Morning package for DC: GGV follow-up draft +
   td-7 news + paper-2 question.
+- 2026-08-14 ~10:30: Normal-form review SOUND-WITH-ERRATA — Markov fat record proved,
+  11-A kill stands, but fat-state enumeration is INFINITE (no emptiness cert) =>
+  td-11 compiler GATED on NF-Z/P/M. Launching NF-Z attack (tower agent; N1-N4 is the
+  precedent). Screens R2 ~7h in, 345G, no verdicts. No DC replies yet.

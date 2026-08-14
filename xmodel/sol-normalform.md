@@ -1,3 +1,13 @@
+> **STATUS (2026-08-14, post-review):** Grok SOUND-WITH-ERRATA
+> (xmodel/grok-normalform-review.md): Markov property holds for the FAT
+> record (thinner projections fail — keep the fat record); all four
+> finite bounds replay (corrected forms: <= td-1-psi price events; eps=0
+> display needs nu>=2); 11-A 2-adic kill stands (plus: the nu=1
+> degree-preserving insertion keeps 5/8 but does not save the route);
+> NF-Z/P/M honestly necessary for a FINITE quotient — fat-state
+> enumeration is complete but INFINITE (cannot certify emptiness).
+> Compiler consequence: the finite-census build is GATED on NF-Z/P/M.
+
 # The priced inter-merge normal form
 
 1. **STATUS — REDUCED-TO-3-LEMMAS.** The exact Markov state is proved below, and its fixed-input P0 and `nu>=2` merge skeletons are finite; a finite *symbolic* quotient still needs NF-Z, NF-P, and NF-M.
