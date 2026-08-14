@@ -715,3 +715,13 @@ Spine == rollout arithmetic exactly (panel-constant apparatus validated).
 Consequence: nu_U = nu_G = 7 makes the kill reading-independent; with
 (9,15) the forced-nu sub-book is EMPTY and CONJECTURE U_7C is MOOT for
 td-7. Book: 15 live cells, all ARITH-DEAD-PREDICTED (TOWER-ROLLOUT.md).
+
+## Third + fourth cell-level tower kills (2026-08-14)
+(58,87,43,29)@15 (family rep, k-symbolic frame in m for all six 2/(2k+1)
+members) and (25,35,17,5)@8 (kbar=7 outlier, formulas kbar-generic):
+TOWER-DEAD, Grok batch review SOUND (xmodel/grok-t58-t25-review.md).
+Tripwire verified both ways: rollout (7,15) arrival E5-refuted (n=-1),
+corrected (37,15) ledger exact and covered. Blast radius: n>=1 omission
+contaminates 7/16 rollout MIN-WITNESS columns (prediction table only) —
+NOT the §11a census, NOT any kill. td-7: 13 live cells, all
+arith-dead-predicted; uniform theorem next (obligations U-OB1..5).

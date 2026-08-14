@@ -32,10 +32,10 @@ DC(2), residue theory, deg ≤ 150 frontier farm).
 - [x] td ≤ 5: CLOSED (0 survivors). Single-pole td = 6: 4 r9/M2 classes
 - [x] td = 7 off-axis book: 62 -> 6 (zero-chain law) -> E5-corrected census
       17 cells UNCONDITIONAL (§11a; H5a RESOLVED: Q+E5 forced). Tower
-      tier opened: (9,15,7,3)@2 + (10,15,7,5)@3 CELLS DEAD (TOWER-9-15,
-      TOWER-10-15; reviews convergent) -> 15 live; forced-nu book EMPTY,
-      U_7C MOOT for td-7; rollout arithmetic predicts all 15 die by the
-      same panel-constant clash; probes 2-3 + uniform theorem in flight
+      tier opened: 4 cells DEAD ((9,15)@2, (10,15)@3, (58,87)@15
+      k-symbolic family rep, (25,35)@8 kbar=7 outlier; all reviews
+      convergent) -> 13 live, all arith-dead-predicted; forced-nu book
+      EMPTY, U_7C MOOT; UNIFORM THEOREM in construction (U-OB1..5)
 - [x] Two-pole (3,3): funneled to rigid template (a₁/a₂ = 2+√3); R6
       print-campaign closed (6/9 dead); 4 branches to coefficient level
 - [ ] R1 decisive runs: minimal-branch mod-p screen RUNNING (ultramem);
