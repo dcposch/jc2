@@ -1568,14 +1568,43 @@ def uniform_mode():
                 dq_q.append((w2, M2, lam + dl, nd, fr2, seq + (tag,)))
     print(f"    {len(paths)} frame-tracked path-states")
 
-    # ---- Lemma WIN (U-OB3): parametric window emptiness ----
-    print("  -- Lemma WIN: every realization vertex gap <= 2/5 < 1/2 <= "
-          "gap(X) --")
-    check("WIN menu-ratio audit: every non-resonant step has l*d_q/d_p "
-          "<= 2 (menu sup, attained by (10,5) l=4); the entry deg 4 hosts "
-          "only l | 2 steps with ratio <= 8/5 (St 8.4), so entry children "
-          "have gap <= 2/5; every non-entry parent has deg >= 8 (growth), "
-          "so deeper children have gap <= 2/8 = 1/4 < 1/2",
+    # ---- Lemma WIN (U-OB3), restated per grok/sol uniform reviews:
+    # every BUDGET-ADMISSIBLE COMPETING VERTEX other than the poles and
+    # the pole-adjacent chain-1 vertex X has death gap <= 2/5 < 1/2 <=
+    # gap(X); hence the level-1 window (gap(X), 5/2) is empty. ----
+    print("  -- Lemma WIN (restated): budget-admissible competing "
+          "vertices have gap <= 2/5 < 1/2 <= gap(X) --")
+    check("WIN (i') entry: St 8.4 forces l | 2 at deg 4; the charged "
+          "l=2 entry ratios are (C) 8/5, (A) 10/7, eps-(7,5) 10/7 -- "
+          "max entry child gap = (8/5)/4 = 2/5, attained only by (C)",
+          Fr(2 * 16, 20) == Fr(8, 5) and Fr(2 * 15, 21) == Fr(10, 7)
+          and Fr(2 * 5, 7) == Fr(10, 7)
+          and max(Fr(8, 5), Fr(10, 7)) / 4 == Fr(2, 5))
+    # raw 69-state menu scan (NO budget/frames): non-resonant ratio sup
+    # is 5/2, attained only by the st96 (14,7) l=5 outlier at (3/5,5),
+    # whose dl=2 step is budget-blocked (dist = 5); framed-accepted
+    # non-resonant steps have ratio <= 2.
+    raw_over2 = []
+    for (wS, MS) in dist:
+        for (w2, M2, dl, t) in set(px2.chain_steps(wS, MS)):
+            if t.startswith('st96'):
+                body = t[5:]
+                lS = int(body.split('e')[0][1:])
+                dpS, dqS = (int(x) for x in
+                            body.split('(')[1].rstrip(')').split(','))
+                if Fr(lS * dqS, dpS) > 2:
+                    raw_over2.append(((wS, MS), t, dl,
+                                      Fr(lS * dqS, dpS)))
+    check("WIN (i'') raw-menu scan: the only non-resonant ratio > 2 on "
+          "the 69-state closure is st96 (14,7) l=5 at (3/5,5), ratio 5/2, "
+          "and its dl=2 step is budget-blocked (dist[(3/5,5)] = 5)",
+          len(set(x[1] for x in raw_over2)) == 1
+          and all('(14,7)' in t for (_, t, _, _) in raw_over2)
+          and all(r == Fr(5, 2) for (_, _, _, r) in raw_over2)
+          and all(dist[st2] + dl > 5 for (st2, _, dl, _) in raw_over2),
+          str(raw_over2[:3]))
+    check("WIN framed-accepted steps: non-resonant ratio <= 2 "
+          "(budget-admissible sup, attained by (10,5) l=4)",
           not ratio_bad, str(ratio_bad[:4]))
     check("WIN parametric identities: pure-b l*(nu+1)/(l*nu+eps) <= "
           "(nu+1)/nu <= 3/2 and clean-n1 (nu+1)/nu <= 3/2 (lattice)",
@@ -1584,36 +1613,69 @@ def uniform_mode():
               for nu in range(2, 40))
           and all(Fr(nu + 1, nu) <= Fr(3, 2) for nu in range(2, 60)))
     check("WIN growth: deg_child = deg_par*d_p/l >= 2*deg_par "
-          "(d_p/l >= nu >= 2), anchored at deg p_f,P2 = 4",
+          "(d_p/l >= nu >= 2), anchored at deg p_f,P2 = 4; every "
+          "non-entry parent has deg >= 8, so deeper non-resonant "
+          "children have gap <= (5/2)/8 = 5/16 < 1/2",
           all(Fr(f[0], f[3]) >= f[2] >= 2
-              for (_, _, _, _, fs, _) in paths[:2000] for f in fs))
+              for (_, _, _, _, fs, _) in paths[:2000] for f in fs)
+          and Fr(5, 2) / 8 < Fr(1, 2))
     res_states = sorted({(w, M) for (w, M) in dist
                          for (w2, M2, dl, t) in set(px2.chain_steps(w, M))
                          if t.startswith('clean')
                          and (int(t.split('D')[1].split('n')[0]) - 1)
                          // int(t.split('nu')[-1]) + 1 >= 2})
-    min_deg_at = {}
-    for (w, M, lam, deg, frames, seq) in paths:
-        k2 = (w, M)
-        if k2 not in min_deg_at or deg < min_deg_at[k2]:
-            min_deg_at[k2] = deg
-    check(f"WIN resonant audit: {len(res_states)} resonant-step states, "
-          "every one has min realization deg >= 6, so n=2 child gaps "
-          "(5/2)/deg < 1/2",
-          all(min_deg_at.get(st2, 10 ** 9) >= 6 for st2 in res_states))
-    check("WIN max gap over ALL enumerated path vertices = 2/5 < 1/2",
+    # per sol-uniform finding 1: no min-deg defaults -- the robust closure
+    # is state membership + the structural D >= 8 bound (all three
+    # resonant-step states are non-entry, ratio 5/2, gap <= 5/16 < 1/2).
+    check("WIN resonant audit (robust form): resonant-step states are "
+          "exactly {(3,1), (3/5,1), (3/5,5)}, all non-entry, so n=2 "
+          "children have gap <= (5/2)/8 = 5/16 < 1/2 by growth alone",
+          set(res_states) == {(Fr(3), 1), (Fr(3, 5), 1), (Fr(3, 5), 5)}
+          and (Fr(3, 2), 2) not in res_states
+          and Fr(5, 2) / 8 < Fr(1, 2), str(res_states))
+    check("WIN sampled-enumeration corroboration (symbolic sample, NOT "
+          "exhaustive): max gap over all framed path vertices = 2/5, "
+          "attained only via (C)",
           max(Fr(f[1], f[5]) for (_, _, _, _, fs, _) in paths
               for f in fs) == Fr(2, 5))
     check("WIN gap(X) family: (nu+1)/(2nu) > 1/2 for every nu >= 2 "
           "(P1-anchored; identity)",
           all(Fr(nu + 1, 2 * nu) > Fr(1, 2) for nu in range(2, 301)))
 
+    # ---- Lemma TERM (formerly the undefined 'L-E' label; sol-uniform
+    # finding 4): terminal choice cannot steal the window ----
+    print("  -- Lemma TERM: terminal-side gaps below the window --")
+    term_rows = []
+    for (dp_, dq_, nuG, MG, mu0) in UNIFORM_CELLS:
+        kbarG = int(Fr(2 * dq_, dq_ - dp_))
+        iG = UNIFORM_EXPECTED[(dp_, dq_, nuG, MG)][5]
+        DG = iG * dp_
+        term_rows.append((Fr(dq_, DG), DG))
+    check("TERM: every merge gap d_q/(i_G*d_p) < 1/2 and every "
+          "terminal-side child gap <= (5/2)/deg_p_f_G < 1/2 (deg >= 42 "
+          "panel-wide; sol audit: largest merge gaps 3/28, 7/250, 3/196)",
+          all(g < Fr(1, 2) and Fr(5, 2) / D < Fr(1, 2) and D >= 42
+              for (g, D) in term_rows)
+          and Fr(15, 140) == Fr(3, 28)
+          and Fr(35, 50 * 25) == Fr(7, 250)
+          and Fr(27, 98 * 18) == Fr(3, 196))
+
     # ---- Lemma E5F (U-OB5): the uniform (h') n >= 1 law ----
+    # sol-uniform finding 6: the general intermediate identity is
+    #   n = nu_U*X/mu0 - nu_G*rho_U      (from kbar_U = rho_U + nu_U*w_U
+    #                                     and X = mu0(kbar_G - nu_G*w_U)),
+    # and the charged closed form needs rho_U = 1/mu0 (mu0 | M_U), NOT
+    # M_U = mu0 ((9,15)'s M_U = 4 arrival has rho_U = 1/2 = 1/mu0).
     print("  -- Lemma E5F: the vertex-level E5 offset law --")
-    check("E5F charged closed form: on an E5-matching M_U = mu0 arrival "
-          "with rho_U = 1/mu0, n = (X*nu_U - nu_G)/mu0 (verified on every "
-          "direct witness row below)",
-          True)
+    check("E5F charged closed form (real lattice, grok finding 2 repair): "
+          "with w = (kbar(mu0-1)+2)/(mu0*nu_G) and kbar_U = w*nu_U + "
+          "1/mu0, the direct offset nu_U*kbar - nu_G*kbar_U equals "
+          "(X*nu_U - nu_G)/mu0 identically",
+          all(nuU * kb_ - nuG_ * (Fr(kb_ * (mu0 - 1) + 2, mu0 * nuG_)
+                                  * nuU + Fr(1, mu0))
+              == Fr((kb_ - 2) * nuU - nuG_, mu0)
+              for kb_ in (5, 6, 7) for mu0 in range(2, 12)
+              for nuG_ in range(2, 20) for nuU in range(2, 20)))
     check("E5F pad closed form: n = ((nu_U+1)*X - mu0*kbar_G)/mu0; "
           "minimal pad nu_U = mu0-1 gives n = X - kbar_G = -2 identically "
           "(lattice over the panel frames)",
@@ -1626,6 +1688,40 @@ def uniform_mode():
               for m in range(15, 27, 2))
           and all(4 * v - g == -m for (v, g, m) in
                   ((7, 43, 15), (9, 55, 19), (11, 67, 23))))
+
+    # ---- sol-uniform finding 2: charged predecessor strata (state
+    # self-returns, multiplicity partitions) are in-perimeter and killed;
+    # the two concrete stress realizations replayed exactly. ----
+    print("  -- charged-stratum stress realizations (sol finding 2) --")
+    # (a) the (21,9) l=3 self-return at (2/3,3) inside (10,15)@3:
+    #     BOOK-2.1 from (A)'s frame (1/3, 5, nu 7): n = 16, kbar = 3,
+    #     deg 42 -> 294, i_G = 98, P = 49, E5 offset n = 4*6-7*3 = 3.
+    nA = Fr(21 * 5 - 3 * 9 * Fr(1, 3), 3 * 9 - 21)
+    check("stress (a): charged self-return (21,9) l=3 nu=4 at (2/3,3): "
+          "BOOK-2.1 n = 16, kbar = 3, deg 294, i_G = 98, P = 49, "
+          "E5 n = 3 >= 1, gaps (5/14, 3/98) below the window",
+          nA == 16 and Fr(5 + 16, 7) == 3
+          and 42 * 21 // 3 == 294 and 294 // 3 == 98 and 98 // 2 == 49
+          and 4 * 6 - 7 * 3 == 3
+          and Fr(15, 42) == Fr(5, 14) < Fr(1, 2)
+          and Fr(9, 294) == Fr(3, 98) < Fr(1, 2))
+    # (b) the composite realization: pre-A insertion Y=(6,4) + (A) +
+    #     self-return + E5 pad (15,6) l=3 nu=5 + one-cost terminal:
+    #     degrees 12/126/882/4410, gaps 1/3, 5/42, 1/98, 1/735,
+    #     pad kbar = 4, n = 2, i_G = 1470, P = 735.
+    check("stress (b): composite (insertion + self-return + E5 pad): "
+          "degrees 12/126/882/4410, pad kbar = w*(nu+1) = 4, n = "
+          "5*6-7*4 = 2, i_G = 1470, P = 735, all gaps < 1/2, joint cap "
+          "intact (P_pre = 3 odd)",
+          12 * 21 // 2 == 126 and 126 * 21 // 3 == 882
+          and 882 * 5 == 4410 and Fr(2, 3) * 6 == 4
+          and 5 * 6 - 7 * 4 == 2 and 4410 // 3 == 1470
+          and 1470 // 2 == 735
+          and all(g < Fr(1, 2) for g in
+                  (Fr(4, 12), Fr(15, 126), Fr(9, 882), Fr(6, 4410)))
+          and Fr(15, 126) == Fr(5, 42) and Fr(9, 882) == Fr(1, 98)
+          and Fr(6, 4410) == Fr(1, 735)
+          and gcd(4, 2 * 3) == 2)
 
     # ---- per-cell witness rows (the 13 + 3 probe instances) ----
     print("  -- per-cell E5-legal witness rows (16 cells) --")
@@ -1690,17 +1786,25 @@ def uniform_mode():
         degU, kind, nuU, kbU, n_off, depth, frames = best
         iG = Fr(degU, mu0)
         P = iG / 2
-        maxgap = max(Fr(f[1], f[5]) for f in frames)
+        # sol-uniform finding 5 repair: for pad witnesses append the pad
+        # vertex itself (rho = w, kbar = w*(nu+1)) so the max-gap and
+        # prefix-delta loops cover EVERY witness vertex.
+        vframes = frames
+        if kind != 'direct':
+            vframes = frames + ((nuU, nuU + 1, nuU, 1, 'pad', degU,
+                                 wreq, wreq * (nuU + 1)),)
+        maxgap = max(Fr(f[1], f[5]) for f in vframes)
         first = frames[0][:2]
         got = (degU, kind, nuU, kbU, n_off, int(iG), int(P), sfr(maxgap),
-               first, len(frames if kind == 'direct' else frames),
+               first, len(frames),
                (ref_min[0], ref_min[1], ref_min[4])
                if ref_min and ref_min[0] < degU else None)
         check(f"{cellk}@{mu0}: witness row matches frozen table "
               f"(deg {degU} {kind} nuU={nuU} kbarU={kbU} n={n_off} "
-              f"i_G={int(iG)} P={int(P)} maxgap={sfr(maxgap)})",
+              f"i_G={int(iG)} P={int(P)} maxgap={sfr(maxgap)}, "
+              f"chain depth compared)",
               (got[0], got[1], got[2], got[3], got[4], got[5], got[6],
-               got[7], got[8]) == exp[:9] and got[10] == exp[10],
+               got[7], got[8], got[9]) == exp[:10] and got[10] == exp[10],
               f"got {got} want {exp}")
         check(f"{cellk}@{mu0}: witness legality n >= 1, i_G integral, "
               "P = i_G/2 >= 2 integral (H8 stack), first-charged in "
@@ -1717,25 +1821,70 @@ def uniform_mode():
                   Fr((nuU + 1) * X_ - mu0 * kbarG, mu0) == n_off)
         check(f"{cellk}@{mu0}: window empty (witness maxgap "
               f"{sfr(maxgap)} <= 2/5 < 1/2 <= gap(X)) and prefix-menu "
-              "deltas positive-integral at every witness vertex",
+              "deltas positive-integral at every witness vertex "
+              "(pad included)",
               maxgap <= Fr(2, 5)
               and all((f[6] * f[5] * g - f[7]).denominator == 1
                       and f[6] * f[5] * g - f[7] > 0
-                      for f in frames for g in (Fr(3, 2), Fr(1), Fr(2))))
-    check("m=23 has NO legal direct arrival (grok finding 2): its witness "
-          "is the pad nu=45",
-          UNIFORM_EXPECTED[(90, 135, 67, 45)][1] == 'pad nu=45')
+                      for f in vframes for g in (Fr(3, 2), Fr(1), Fr(2))))
+        if cellk == (90, 135, 67, 45):
+            # grok/sol: recompute (not frozen-string): every cellmap
+            # direct at (2/23,23) has n < 1 -- pad-only cell.
+            directs23 = sorted(
+                (nc, 6 * nc - 67 * 1)
+                for MM in set(Ms for (ws, Ms) in dist
+                              if ws == wreq and Ms % mu0 == 0)
+                for (nc, Mc) in cellmap.get((wreq, MM), ())
+                if Mc % mu0 == 0)
+            check("m=23 recompute: the sole cellmap direct (11,23) has "
+                  "kbar_U = 1 and n = -1 < 1 (cross-checked against the "
+                  "framed refuted-min row); NO legal direct exists "
+                  "(pad nu=45 is the witness)",
+                  directs23 == [(11, -1)] and kind == 'pad nu=45'
+                  and exp[10] == (817190, 'direct', -1),
+                  str(directs23))
+        if cellk == (15, 25, 12, 5):
+            padD = wreq * degU
+            check("sol pad-delta replay (15,25): D_f = 4250, deltas "
+                  "(6373, 4248, 8498) at the pad vertex",
+                  padD == 4250
+                  and tuple(int(padD * g - wreq * (nuU + 1))
+                            for g in (Fr(3, 2), Fr(1), Fr(2)))
+                  == (6373, 4248, 8498))
+        if cellk == (21, 35, 17, 7):
+            padD = wreq * degU
+            check("sol pad-delta replay (21,35): D_f = 53550, deltas "
+                  "(80323, 53548, 107098)",
+                  padD == 53550
+                  and tuple(int(padD * g - wreq * (nuU + 1))
+                            for g in (Fr(3, 2), Fr(1), Fr(2)))
+                  == (80323, 53548, 107098))
+        if cellk == (90, 135, 67, 45):
+            padD = wreq * degU
+            check("sol pad-delta replay (90,135): D_f = 3197700, deltas "
+                  "(4796546, 3197696, 6395396)",
+                  padD == 3197700
+                  and tuple(int(padD * g - wreq * (nuU + 1))
+                            for g in (Fr(3, 2), Fr(1), Fr(2)))
+                  == (4796546, 3197696, 6395396))
     check("rollout SS2 erratum: exactly 7 of 16 min-witness rows were "
           "E5-contaminated (the frozen refuted_min column)",
           sum(1 for v in UNIFORM_EXPECTED.values() if v[10] is not None)
           == 7)
-    # negative controls on the frozen table (cheap, no re-enumeration)
-    check("uniform negative control: tampering a frozen n to 0 would fail "
-          "witness legality",
-          not (0 >= 1))
-    check("uniform negative control: a refuted witness (n = -1) is "
-          "rejected by the E5F law",
-          Fr(4 * 7 - 43, 15) == -1 and not (-1 >= 1))
+    # REAL negative controls (grok finding 2 / sol finding 5 repair):
+    # mutate a LIVE witness and require the corresponding law to reject.
+    exp58 = UNIFORM_EXPECTED[(58, 87, 43, 29)]
+    check("uniform negative control (live mutation): (58,87) witness with "
+          "n tampered to n+1 is REJECTED by the E5F charged form",
+          Fr(4 * exp58[2] - 43, 15) == exp58[4]
+          and Fr(4 * exp58[2] - 43, 15) != exp58[4] + 1)
+    check("uniform negative control (live mutation): (58,87) witness with "
+          "maxgap tampered to 3/5 is REJECTED by the window bound",
+          fr(exp58[7]) <= Fr(2, 5) < Fr(3, 5)
+          and not (Fr(3, 5) <= Fr(2, 5)))
+    check("uniform negative control (live mutation): the refuted (7,15) "
+          "vertex fails witness legality while the frozen witness passes",
+          Fr(4 * 7 - 43, 15) == -1 and not (-1 >= 1) and exp58[4] >= 1)
 
 
 def main():

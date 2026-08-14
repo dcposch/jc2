@@ -725,3 +725,19 @@ corrected (37,15) ledger exact and covered. Blast radius: n>=1 omission
 contaminates 7/16 rollout MIN-WITNESS columns (prediction table only) —
 NOT the §11a census, NOT any kill. td-7: 13 live cells, all
 arith-dead-predicted; uniform theorem next (obligations U-OB1..5).
+
+## TD-7 PANEL CLOSURE (2026-08-14)
+THEOREM (TOWER-UNIFORM.md, PROMOTED): every cell of the E5-corrected
+td-7 class-B/C book dies at the tower tier — 17/17 (4 certificates +
+13 witness instantiations), full perimeter (filed routes, all arrivals/
+M_U/free-characteristic/padding/insertion stacks/E5 reroutes),
+reading-independent. Lemmas: L-A (R1.3+St8.4/P3 corollary), AM
+(absorbing-M), WIN (budget-admissible competing-vertex form; the raw
+menu-ratio prose was corrected per review), E5F (uniform n>=1 law,
+closed forms). Review chain (seven passes, three model families):
+grok-tower-review, sol-tower-review/-rereview/-final (t9_15);
+grok-t10-review; grok-t58-t25-review; grok-uniform-review +
+sol-uniform-review (both green), 14 errata folded, gates 1559/1559.
+Engine: cases/tower_check.py uniform mode; certificates cases/towers/.
+Chain effect: off-axis td=7 needs no coefficient emitter; the sheet
+ladder's next rungs are td-11/13 (refile + port).

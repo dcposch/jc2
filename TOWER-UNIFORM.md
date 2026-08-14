@@ -1,18 +1,25 @@
 # TOWER-UNIFORM.md — the uniform td-7 tower theorem
 
-Status: **THEOREM CONSTRUCTED (2026-08-14) — all 17 cells of the
-E5-corrected td-7 book die at the tower tier; machine gate
-`UNIFORM (17 cells): THEOREM`, 1550/1550 checks, exit 0. NEW RESULT,
-pending hostile review; the 4 previously certified cells are instances,
-the 13 remaining are killed by the lemmas + witness rows below. No cell
-resisted.**
+Status: **PROMOTED 2026-08-14 (pending coordinator ledger pass) — all
+17 cells of the E5-corrected td-7 book die at the tower tier; machine
+gate `UNIFORM (17 cells): THEOREM`, 1559/1559 checks, exit 0. Review
+chain: Grok SOUND-WITH-ERRATA (`xmodel/grok-uniform-review.md`) + Sol
+CONFIRMED (`xmodel/sol-uniform-review.md`); ALL errata from both folded
+into this revision (WIN restated over budget-admissible competing
+vertices; the three vacuous/tautological uniform checks replaced with
+real assertions; pad vertices included in the max-gap/prefix-delta
+loops; depth compared; m=23 recomputed from cellmap; perimeter sentence
+extended to charged predecessor strata; E5F rho-condition and
+intermediate identity; Lemma TERM named; U_7C terminology). No cell
+resisted at any review round.**
 Engine: `cases/tower_check.py` — uniform mode runs after the five
 certificate suites in the same gate (px2/px5 read-only; exact
 `Fraction`; ~4 s). Baselines (promoted): `TOWER-9-15.md`,
-`TOWER-10-15.md`; (reviewed SOUND): `TOWER-58-87.md`, `TOWER-25-35.md`;
-reviews of record: `xmodel/grok-tower-review.md`,
+`TOWER-10-15.md`, `TOWER-58-87.md`, `TOWER-25-35.md`; reviews of
+record: `xmodel/grok-tower-review.md`, `xmodel/sol-tower-review.md`,
 `xmodel/sol-tower-rereview.md` (+ final), `xmodel/grok-t10-review.md`,
-`xmodel/grok-t58-t25-review.md`.
+`xmodel/grok-t58-t25-review.md`, `xmodel/grok-uniform-review.md`,
+`xmodel/sol-uniform-review.md`.
 
 ## 0. THE THEOREM
 
@@ -28,6 +35,14 @@ reviews of record: `xmodel/grok-tower-review.md`,
 > is empty before this tier (§11a). Hence the td-7 off-axis book is
 > EMPTY at the tower tier.*
 
+The realization quantifier includes, explicitly (Sol uniform finding 2):
+**all budget-feasible charged predecessor strata, including charged
+state self-returns and multiplicity partitions** — e.g. the `(21,9)`
+`l=3` self-return at `(2/3,3)` (cost 4 over the filed minimum 2) and
+the composite insertion + self-return + E5-pad realization are replayed
+and killed in the gate (`stress (a)/(b)` checks); they change degrees,
+never the clash inputs.
+
 Perimeter (verbatim from the promoted (9,15) discipline): realizations
 are the design §2.4/§4.1 families; the trust set is H5a Q-value + E5,
 Prop 4.2 (ladder, delta descent, alive dichotomy), Prop 8.1(i)–(v),
@@ -36,10 +51,11 @@ BOOK R1.0–R2.2/P0–P3, the promoted §11a census as the route perimeter,
 and the campaign tower formalization calibrated on the td=6 template.
 A beyond-perimeter route (a charged step outside the filed closure or a
 budget violation) would be a §11a under-enumeration to flag, never
-absorbed. H5a rider: 15 of the 17 cells exist only in the promoted
-Q-reading; `(9,15)` and `(10,15)` are killed in both coherent readings
-(forced-nu book EMPTY, U_7C moot for td-7), so **the td-7 tower verdict
-holds in every coherent reading of the thesis.**
+absorbed. H5a rider (terminology per Sol uniform finding 8): the
+verdict covers **the promoted Q+E5 book (17 cells) and its
+U_7C-restricted sub-book (exactly `(9,15)` and `(10,15)`, killed by the
+promoted certificates whose only case-III edges have equal indices)** —
+no proof or hidden use of U_7C enters; U_7C is moot for td-7.
 
 Proof structure: the panel-constant clash (§1) + four lemmas (§2) + a
 per-cell witness row for each of the 16 remaining cells (§3, frozen
@@ -92,34 +108,58 @@ ABSORBING (St 8.4 gives `l = 1` forever, children `(nu, n nu+1)` keep
 `M = 1`); a class-C arrival needs `mu0 | M_U` with `mu0 >= 2` —
 unreachable from `M = 1`. (Checks: `AM identity/menu/absorption`.)
 
-**Lemma WIN (U-OB3; parametric window emptiness).** *Every realization
-vertex gap is `<= 2/5 < 1/2 <= gap(X)`; the level-1 window
-`(gap(X), 5/2)` is empty.* Proof ingredients, each machine-audited over
-the full 69-state closure plus the parametric families: (i) menu-ratio:
-every non-resonant step has `l d_q / d_p <= 2` (sup attained by
-`(10,5) l=4`); the entry (deg 4) hosts only `l | 2` steps with ratio
-`<= 8/5` (St 8.4), so entry children have gap `<= 2/5`; (ii) growth:
-`deg_child = deg_par d_p/l >= nu deg_par >= 2 deg_par`, anchored at
-`deg p_{f,P2} = 4`, so every non-entry parent has `deg >= 8` and deeper
-children have gap `<= 2/8 = 1/4`; (iii) resonant (`n >= 2` clean) steps
-exist at exactly 3 closure states, all with min realization degree
-`>= 6`, so their children have gap `(n + 1/nu)/deg < 1/2`; (iv)
-parametric families (pure-b, neutral pads, insertions) by the
-identities `l(nu+1)/(l nu + eps) <= (nu+1)/nu <= 3/2` and N4
-(`(nu+1)/(D_prev nu) <= 3/8` at `D_prev >= 4`); (v) trunk/root gaps by
-searrow growth (L-E, kappa-rescaling cancels in `kbar/D_f`). The
-enumeration-wide maximum is exactly `2/5` (witness (C)).
+**Lemma WIN (U-OB3; window emptiness — restated per both uniform
+reviews).** *Every budget-admissible competing vertex other than the
+poles and the pole-adjacent chain-1 vertex X has death gap
+`<= 2/5 < 1/2 <= gap(X)`; the level-1 window `(gap(X), 5/2)` is
+empty.* Proof ingredients, each a named gate check: (i′) **entry**: at
+`D = 4`, St 8.4 forces `l | 2`; the charged entry ratios are (C) `8/5`,
+(A) `10/7`, eps-`(7,5)` `10/7` — max entry child gap `= 2/5`, attained
+only by (C); (i″) **raw-menu bound with the budget qualifier**: the raw
+69-state non-resonant ratio supremum is `5/2`, attained only by the
+st96 `(14,7) l=5` outlier at `(3/5,5)`, whose `dl = 2` step is
+budget-blocked (`dist = 5`); framed budget-admissible non-resonant
+steps have ratio `<= 2` (sup at `(10,5) l=4`) — the earlier "sup = 2
+over the full closure" sentence was FALSE as a raw menu fact and is
+hereby corrected (Grok finding 1 / Sol finding 1); (ii) **growth**:
+`deg_child = deg_par d_p/l >= nu deg_par >= 2 deg_par` anchored at 4,
+so non-entry parents have `deg >= 8` and deeper children have gap
+`<= (5/2)/8 = 5/16 < 1/2`; (iii) **resonant audit (robust form, no
+min-deg defaults)**: the resonant-step states are exactly
+`{(3,1), (3/5,1), (3/5,5)}`, all non-entry, so their `n = 2` children
+are covered by (ii) alone; (iv) parametric families by the identities
+`l(nu+1)/(l nu + eps) <= (nu+1)/nu <= 3/2` and N4
+(`(nu+1)/(D_prev nu) <= 3/8` at `D_prev >= 4`); (v) terminal side by
+**Lemma TERM** below. The framed enumeration maximum `2/5` (witness
+(C)) is corroboration from a finite SYMBOLIC SAMPLE (242 path-states;
+one characteristic per parametric family, depth/degree cutoffs), not an
+exhaustive realization enumeration — the quantifier closure is by
+(i′)–(v) (Sol finding 3).
+
+**Lemma TERM (formerly the undefined `L-E` label; Sol finding 4).**
+*Terminal choice cannot steal the window: every merge gap
+`d_q/(i_G d_p) < 1/2` (largest on the panel: `3/28`, `7/250`,
+`3/196`), and every trunk/terminal-side child has gap
+`<= (5/2)/deg p_{f,G} < 1/2` since `deg p_{f,G} >= 42` panel-wide and
+kappa-rescaling cancels in `kbar/D_f`.* (Gate check `TERM`, all 16
+cells.)
 
 **Lemma E5F (U-OB5; the uniform vertex-level E5 offset law).** *A
 recorded arrival vertex `(nu_U, kbar_U)` of a cell `(kbar_G, nu_G)` is
 E5-realizable iff `n = nu_U kbar_G - nu_G kbar_U >= 1` (printed (h')
-positivity; the congruence is automatic). Closed forms: on an
-E5-matching charged arrival (`M_U = mu0`, `rho_U = 1/mu0`):
-`n = (X nu_U - nu_G)/mu0`; on a clean pad: `n = ((nu_U+1) X -
+positivity; the congruence is automatic). General intermediate identity
+(Sol finding 6): `n = nu_U X/mu0 - nu_G rho_U`. Closed forms: on a
+charged arrival with `rho_U = 1/mu0` (which requires `mu0 | M_U`, NOT
+`M_U = mu0` — `(9,15)`'s `M_U = 4` arrival has `rho_U = 1/2`; Sol
+finding 5): `n = (X nu_U - nu_G)/mu0`; on a clean pad
+(`rho_U = w_U`, `kbar_U = (nu_U+1) w_U`): `n = ((nu_U+1) X -
 mu0 kbar_G)/mu0`, so the MINIMAL pad `nu_U = mu0 - 1` has
 `n = X - kbar_G = -2` identically (the kbar=5 pad class), and the
 family's `kbar_U = 1` directs `nu_U = (m-1)/2` have `n = -1`
-identically (`(7,15), (9,19), (11,23)`).* Consequences, all checked:
+identically (`(7,15), (9,19), (11,23)`). The charged form is now a
+real gate lattice (not a placeholder), m=23's pad-only status is
+recomputed from the cellmap (sole direct `(11,23)`, `n = -1`), and the
+negative controls are live-witness mutations (Grok finding 2).* Consequences, all checked:
 the §11a arrival-vertex lists are a state-level superset (the census
 prices states — its cell list and 238/233 route counts are untouched);
 7 of 16 rollout §2 min-witness rows were contaminated and are corrected
@@ -192,7 +232,7 @@ perimeter sentence.
 cd /Users/dc/code/math/jc72108
 python3 cases/tower_check.py    # ~4 s, exit 0: 5 certificate suites,
                                 # 21 perturbations, then UNIFORM mode
-                                # (lemmas + 16 witness rows), 1550 checks;
+                                # (lemmas + 16 witness rows), 1559 checks;
                                 # final line: UNIFORM (17 cells): THEOREM
 python3 cases/tower_rollout_arith.py   # the prediction table (7 rows
                                        # corrected by SS3; gap/window
@@ -200,11 +240,18 @@ python3 cases/tower_rollout_arith.py   # the prediction table (7 rows
 ```
 
 Uniform-mode structure: Lemma L-A, Lemma AM (menu audit), 69-state
-closure + frame-tracked path enumeration (242 path-states), Lemma WIN
-(menu-ratio sup 2, entry `l | 2` ratio `<= 8/5`, growth, 3-state
-resonant audit, parametric identities, enumeration max = 2/5), Lemma
-E5F (closed forms + the grok-batch tables), 16 witness rows against the
-frozen expected table (any tamper fails loudly), the m=23 no-legal-
-direct check, the 7-row erratum count, and negative controls. No
+closure + frame-tracked path enumeration (242 path-states — a symbolic
+corroboration sample, not exhaustive; quantifier closure is by the
+lemmas), Lemma WIN restated (entry `l | 2` ratio `<= 8/5`; raw-menu
+`5/2` outlier budget-blocked; framed sup 2; growth; robust 3-state
+resonant audit; parametric identities), Lemma TERM (terminal-side
+audit, 16 cells), Lemma E5F (real charged lattice, pad/minimal-pad
+identities, family `n = -1`, m=23 cellmap recompute), the charged-
+stratum stress realizations (self-return `(21,9)`; the composite
+insertion + self-return + pad), 16 witness rows against the frozen
+table with pad vertices included in max-gap/prefix-delta and chain
+depth compared, Sol's three pad-delta triples replayed, the 7-row
+erratum count, and live-mutation negative controls. Gate totals:
+1559/1559 PASS, exit 0, 21/21 certificate-suite perturbations. No
 msolve, no network, no floats; `ops/FLEET.md` respected. No git commit
 was made.
