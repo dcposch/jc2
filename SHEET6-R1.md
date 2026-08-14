@@ -2679,6 +2679,101 @@ own sub-split is by the pattern of d_2.. within the leaf (same
 machinery, zset seeded with nothing, pivot cascade over the
 remaining 12) -- second-generation leaves, same cover argument.
 
+### 19.5a Wave-1 autopsy: the cliff is CERTIFICATE-side; restructure
+### to the l12 3-chart cover (2026-08-14; design only, NO launches)
+
+FIELD REPORT (coordinator + lanes.log): 23/26 wave-1 lanes died
+rc=139 (malloc at fence) in ~40 min each; the 3 survivors are the
+150 GB heavies (leaf1-3 main p105337, 79-87 GB RSS at +32 min and
+climbing); the fences HELD -- the standing nolog screens were never
+touched.  A 30 s foreground parse of leaf1 is clean: pure F4 growth.
+DECISIVE NEGATIVE DATA, banked: (i) the ctlB lanes died too -- ctlB
+contains NO E5/E6/HM rows, so the deep tie block is EXONERATED: the
+driver sits in the quotient + chart + saturation rows alone.  (ii)
+leaf13, the MINIMAL object of the entire family (l13 + the single
+direction bg21_24: +8 header vars, +739 terms), exceeds 25 GB where
+l13 itself is 1 s at <1 GB: a PER-DIRECTION cliff.
+
+DIAGNOSIS (size-proxy table, measured from the artifact bytes;
+n = header vars, D = max row total degree, powOPEN = max pure power
+of an opened direction, proxy = log10 C(n+D,D) = Macaulay frame at
+the input degree):
+| object | n | D | powOPEN | proxy |
+|---|---|---|---|---|
+| l13 (1 s, <1 GB, PROOF-TIER dead) | 146 | 11 | 0 | 16.4 |
+| leaf13 = l12-chart-3 (>25 GB) | 154 | 11 | 5 | 16.6 |
+| leaf12 = l12-chart-2 (>25 GB) | 155 | 11 | 5 | 16.7 |
+| leaf11 = l12-chart-1 (>25 GB) | 156 | 11 | 5 | 16.7 |
+| leaf7 (>25 GB) | 164 | 11 | 6 | 16.9 |
+| leaf1 = l8+sat (>=87 GB, running) | 176 | 11 | 6 | 17.3 |
+| l8 monolith (~1.65 TB death) | 175 | 11 | 6 | 17.2 |
+The INPUT side is FLAT: D = 11 everywhere, proxy within one decade
+across the family, term mass down 83% at leaf13 -- yet the wall does
+not move.  So the blow-up is NOT input-volume: it is CERTIFICATE-
+side.  At l13 the s1F-forcing mechanism (16.3/18.1) hands F4 the
+unit at low working degree; ANY open slot-<=12 direction breaks the
+near-linear forcing (pure powers d^5..d^7 -- impossible for slot>=13
+directions inside the slot-60 window -- create self-coupled content),
+pushing the emptiness certificate (or the surviving staircase) into
+degree tiers whose Macaulay frames are the ~10^16-column objects the
+proxy prices.  CONSEQUENCE for the coordinator's options: (a) NO
+finer input-side split can work at l8 granularity -- every
+vanishing-pattern refinement bottoms out at a single-direction
+object, and that minimum (= leaf13) is already >25 GB: option (a)
+below l12 is CLOSED by measurement.  (b) -e block orders: REJECTED
+honestly -- no provable intermediate-basis bound exists for block
+elimination in F4 (block orders generally cost >= DRL; the verdict
+is order-independent, only the cost moves); claiming such a bound
+would violate the trust discipline.
+
+SOL CONVERGENCE (xmodel/sol-probability.md branch 8) + IDENTITY.
+Sol independently proposes decomposing the exact l13->l12 cliff:
+l12 = l13 + the low triple (uf24, bg42_24, bg21_24) + six level-60
+highs, covered by the settled origin chart + three nonzero charts.
+VERIFIED MECHANICALLY: (i) hdr(l12) \ hdr(l13) = exactly the 3 lows
++ 6 level-60 tails tg1_60, tg2_60, tg01_60, tg02_60, bg42_60,
+bg21_60 (slot-48 content that enters the slot-60 window only through
+an opened slot-12 partner) -- Sol's object description is exact.
+(ii) build(l8) with the 10 slot-8..11 directions zeroed == the
+banked l12 build DICT-EXACT (rows AND defs, BOTH primes).  Therefore
+Sol's three charts ALREADY EXIST inside the 19.5 cascade: they ARE
+leaf11 (uf24 != 0), leaf12 (uf24 = 0, bg42_24 != 0), leaf13 (both
+zero, bg21_24 != 0), with origin chart = l13 discharged by the
+char-0 certificate -- emitted, guard-PASSED (19.5 table covers all
+6 files), md5-verified on Box02.  Field pricing corrects Sol's
+1-2-day estimate: all six lanes died rc=139 at the 25 GB fence, so
+the charts are >25 GB objects; they remain the LIGHTEST members of
+the family (proxy 16.6-16.7 vs l13's 16.4, the smallest measured
+gap to a solved object) and the only GB route not yet priced above
+150 GB.
+
+RECOMMENDATION (design bank; NO lanes launched, NO commit):
+1. RETIRE leaves 1-10 (l8 granularity) as INFEASIBLE-AT-TIER: the
+   monolith's ~1.65 TB death + the flat proxy + 23 rc=139 price
+   every refinement; let the 3 running 150 GB heavies exhaust their
+   43200 s cap (already launched -- not a new spend) and bank
+   whatever they return; l4/l1 GB attempts are retired A FORTIORI.
+2. ADOPT the l12 3-chart cover = the EXISTING leaf11/12/13 emissions
+   at BOTH primes as the surviving GB route: re-run at raised fences
+   (350-500 GB, <= 3 lanes concurrent, sequenced AFTER the nolog
+   screens drain; coordinator's launch call).  Verdict semantics:
+   all 3 charts EMPTY at p + banked l13 => the l12 stratum dies at p
+   (19.5 progressive semantics, prefix 11..13); the slots-8..11
+   residue then rides the STRUCTURAL row-family routes (n > 44 band
+   rows, R2-R5 ladder, 15.3/19.4) -- not GB force.
+3. FALLBACK, pre-registered: if any chart walls at 500 GB, the
+   Q2-l8/l12 GB tier verdict is INFEASIBLE and the residue-A
+   second-route confirmation rests on the plain
+   directionb_residual32 lanes at p105673/p200257 (+ ctl0 controls)
+   already standing on Box02 -- same residual object, independent
+   lanes and primes.
+REPORTING RULE (Sol's wrong-object warning, STANDING): every Q2
+stratum verdict is a QUOTIENT-WINDOW statement -- UU chart, depth-84
+slot-60 window, row subset n <= 44, named stratum/chart -- NEVER a
+bare "residue-A survives/dies".  Q2 and the J/nolog families are
+DIFFERENT necessary row systems on the same coefficients; individual
+survival protects no intersection (Sol branch 8').
+
 ## 20. SATURATED chain terminal gates: (2,3)->(6,17) and (2,5)->(6,23)
 ## (2026-08-11; the 19.4 banked directive executed)
 
