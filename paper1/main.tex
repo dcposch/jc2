@@ -331,8 +331,10 @@ Both $A$ and $C$ are nonzero, else the left side is $0$; write $\delta:=\deg A$,
 \emph{Steps 3 and 4 (subtract the kernel).} $A(A^\nu)'-\nu A'A^\nu=0$, so $D:=C-(\operatorname{lc}(C)/\alpha^\nu)A^\nu$ satisfies $AD'-\nu A'D=c$ by linearity, with $\deg D<\nu\delta$. If $D=0$ then $c=0$; if $D\neq0$ then Step 1 gives $\deg(AD'-\nu A'D)\geq\delta-1\geq1$. Either way a contradiction, so $\delta\geq2$ is impossible.
 \end{proof}
 
-\begin{remark}\label{rem:sharp}
+\begin{remark}[sharpness and prior art]\label{rem:sharp}
 The theorem is sharp: $A=1+a_2y$, $C=((1+a_2y)^\nu-1)/(\nu a_2)$ (or $A=1$, $C=y$) solve the identity with $c=1$. The proof is the valuation-at-infinity mechanism of the one-variable constant-term theorem of Duistermaat and van der Kallen \cite{DvdK} made elementary. Characteristic zero enters only through $d-\nu\delta\neq0$: in small characteristic Step 2 genuinely fails, consistent with the characteristic-two example of Section \ref{sec:example}.
+
+The statement has prior art. Dividing the identity by $A^{\nu+1}$ gives $(C/A^\nu)'=c/A^{\nu+1}$, so $A^{-(\nu+1)}$ has a rational primitive; when $A$ has two distinct roots this contradicts Lemma A.7 in the appendix of \.Zo{\l}\k{a}dek \cite{Zoladek}, and a perfect power $A$ dies by evaluating the identity at its multiple root. Lemma A.7 is a non-rationality lemma for Schwarz--Christoffel integrals, phrased there via Darboux functions, which \.Zo{\l}\k{a}dek says was probably known already to Liouville; he applies it inside the plane Jacobian problem via the same ODE, deriving $\phi\psi'-\delta\phi'\psi=\mathrm{const}$, this identity with rational weight $\delta$, from the Jacobian equation in a Newton--Puiseux chart (Lemma 3.9 and equation (3.14) there). The case $\nu=1$, a nonzero constant Wronskian, is Theorem 4 of Hermoso and Alc\'azar \cite{HA}. We proved the theorem independently, by the mechanism above, before locating these references; the proof is retained because the mechanism differs, never leaving $F[y]$, and extends to the positive-characteristic bound $p>(k+1)d_2$ recorded after Theorem \ref{thm:R}.
 \end{remark}
 
 The bridge to the block is the solved inner column of Proposition \ref{prop:B}; keep $a_{p_0}=b_{q_0}=1$, so $A=1+a_2y+\dots+a_{d_2+1}y^{d_2}$; the extra keys of Minkowski column $k+1$ are the \emph{inner extras}, those of column $k+2$ the \emph{outer extras} ($d_2-1$ of each).
@@ -425,6 +427,8 @@ On current reduction data the proved $(2,2)$ theorem has one client among famili
 \bibitem{GGHV} J. A. Guccione, J. J. Guccione, R. Horruitiner, C. Valqui, Increasing the degree of a possible counterexample to the Jacobian conjecture from 100 to 108, arXiv:2204.14178v1 (2022).
 
 \bibitem{Heitmann} R. C. Heitmann, On the Jacobian conjecture, J. Pure Appl. Algebra 64 (1990), 35--72.
+
+\bibitem{HA} C. Hermoso, J. G. Alc\'azar, Nonzero constant Wronskians of polynomials and Laurent polynomials, and geometric consequences, arXiv:2410.18867 (2024).
 
 \bibitem{Moh} T.-T. Moh, On the Jacobian conjecture and the configurations of roots, J. Reine Angew. Math. 340 (1983), 140--212.
 
