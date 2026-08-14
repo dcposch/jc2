@@ -683,3 +683,17 @@ Why no verdict flips (and what was deliberately NOT re-run):
   runs/r1chain_prebuild_snapshot/) — missing from systems/r1 before this
   task (pre-existing gap) and a required input of the q2 guard
   (ME.core_name_map).
+
+## H5a resolution (2026-08-13)
+The Notation 3.5 GAP at doubly realized vertices (SIGRAY-AUDIT rows
+26/37/92) is RESOLVED at proof tier: the P/coarse reading is incoherent
+(nonintegral D_{h,F} against printed Stmt 3.8; conflict with Prop 5.5),
+so Q/jump/max kappa_F = nu_F kappa_G / nu_G is the unique uniform repair,
+and Q + printed Stmt 3.17(ii) + Prop 9.3(e) force the E5 transport
+identities. Proof: xmodel/sol-h5a.md (GPT-5.6-Sol); hostile replay SOUND
+incl. printed-page verification and witness construction:
+xmodel/grok-h5a-review.md. Consequence: the §11a 17-cell td-7 book is
+unconditional under the filed perimeter; the 2-cell sub-book requires
+CONJECTURE U_7C (nu_F = nu_G on relevant case-III edges) — genuinely
+new, unproven, unrefuted (an exact non-Keller model permits inequality);
+no cheap empirical discriminator exists (review finding 5).

@@ -647,8 +647,9 @@ other panels use the capped generic engine (P5); (v) the arrival law's
 
 ## 11-PRE. NOTE (2026-08-13, post-§11a): the six-cell record below was
 ## generated under the stale kbar_BOOK pin. The E5-CORRECTED census is
-## §11a (PROMOTED): 17 cells / 233 routes (Q-value+E5 reading) or 2
-## cells (forced-nu reading); H5a decides. §11's law and addendum
+## §11a (PROMOTED): 17 cells / 233 routes — UNCONDITIONAL (H5a RESOLVED
+## 2026-08-13: Q+E5 proved forced, xmodel/sol-h5a.md + grok-h5a-review.md
+## both SOUND; the 2-cell sub-book requires open CONJECTURE U_7C). §11's law and addendum
 ## remain valid; its "six cells" framing is superseded.
 
 ## 11. GENERALIZED ZERO-CHAIN LAW — PROMOTED (2026-08-13): the td-7

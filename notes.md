@@ -420,3 +420,7 @@
   spec. Gluing design v2 (89KB): milestone plan = one complete (9,15) tower cert ->
   jet window -> Box02 solve -> only then expand to corrected census. Screens 13 lanes
   973G, ~6h in, no verdicts. Box02 mem eased post-cull.
+- 2026-08-13 ~21:35: H5a PROMOTED as resolved (dual SOUND). 17-cell book unconditional;
+  U_7C = open conjecture (no cheap discriminator). Launching gluing milestone 1 agent:
+  (9,15) direct-route tower certificate per sol-gluing-design v2 build plan. Box02 mem
+  plateaued 1226G (F4 possibly converging).

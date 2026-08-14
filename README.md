@@ -31,8 +31,9 @@ DC(2), residue theory, deg ≤ 150 frontier farm).
 - [x] ψ-budget (G2 closed), E5/N1 extraction, AF2 derived, entry-M pin proved
 - [x] td ≤ 5: CLOSED (0 survivors). Single-pole td = 6: 4 r9/M2 classes
 - [x] td = 7 off-axis book: 62 -> 6 (zero-chain law) -> E5-corrected census
-      (BOOK-OFFAXIS §11a, promoted): 17 cells (Q-value reading) / 2 cells
-      (forced-nu reading); H5a trichotomy decides — theory lane open
+      17 cells UNCONDITIONAL (§11a promoted; H5a RESOLVED: Q+E5 forced,
+      dual-reviewed; 2-cell sub-book = open CONJECTURE U_7C). Next tier:
+      coefficient gluing, milestone 1 = (9,15) tower certificate
 - [x] Two-pole (3,3): funneled to rigid template (a₁/a₂ = 2+√3); R6
       print-campaign closed (6/9 dead); 4 branches to coefficient level
 - [ ] R1 decisive runs: minimal-branch mod-p screen RUNNING (ultramem);
