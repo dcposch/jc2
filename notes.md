@@ -462,3 +462,8 @@
   quotient completeness; neutral-depth rigidity corollary + td-7 N-closure are the
   evidence). Witt lane: NEVER-VANISHES-PROVED on the registered stratum (clean
   rigidity; disproof lane closes there) — commit on marker.
+- 2026-08-14 ~14:30: td-11 neutral depth OPEN (honest); REORDER: tower port before
+  NF-P — an entry-level td-11 clash theorem kills deep words as a byproduct, breaking
+  the depth/census circularity. Next object: 11-B/11-C entry clash windows under the
+  corrected P/mu consumer (11-A intruder already dead — recheck its window too).
+  Paper-2 core drafted (21pp). Screens ~14h. Witt review rerunning.
