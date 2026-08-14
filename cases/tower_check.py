@@ -259,6 +259,18 @@ def route_spine(cert):
             # (J4) case IV: pi_L = 0, pi_U = (nu_U - kbar_U)/nu_U
             check(f"{lbl}: case-IV offset pi_U = (nu-kbar)/nu",
                   L["pi"] == 0 and U["pi"] == (U["nu"] - U["kbar"]) / U["nu"])
+            check(f"{lbl}: (J5) terminal drops d_f and d_g by deg*(pi_U-pi_L)",
+                  U["d_f"] == L["d_f"] - U["deg_p_f"] * U["pi"]
+                  and fr(U["d_g"]) == fr(L["d_g"]) - fr(U["deg_p_g"]) * U["pi"])
+            if "N_e" in e:
+                K = fr(cert["K"])
+                check(f"{lbl}: derived N_e/r_f/r_g on the terminal edge",
+                      fr(e["N_e"]) == K * U["pi"]
+                      and fr(e["r_f"]) == K * (L["d_f"] - U["d_f"])
+                      == U["deg_p_f"] * fr(e["N_e"])
+                      and fr(e["r_g"]) == K * (fr(L["d_g"]) - fr(U["d_g"]))
+                      == fr(U["deg_p_g"]) * fr(e["N_e"])
+                      and e.get("chartMode") == "PREFIX")
             continue
         if case == "II":
             # kappa tower + (J4): pi_U - pi_L = n/kappa_U ; kappa_U = kappa_L*nu_U
@@ -283,15 +295,40 @@ def route_spine(cert):
             mu0 = fr(e["mu_e"])
             check(f"{lbl}: (H6) X_G = mu0*(kbar_G - nu_G*w_U)",
                   L["D_f"] / L["i"] == mu0 * (L["kbar"] - L["nu"] * U["w"]))
-        # (J5) x-degree drop for f (count equality: St 3.17(i))
+        # (J5) x-degree drop for f (count equality: St 3.17(i)) and for g
+        # (j = 0 live member: St 8.3(i)/Cor 6.1; death-transition exact at
+        # the poles, verified separately in C3)
         if case in ("II", "III-E5"):
             check(f"{lbl}: (J5/3.17) d_f,U = d_f,L - deg_p_f,U*(pi_U-pi_L)",
                   U["d_f"] == L["d_f"] - U["deg_p_f"] * (U["pi"] - L["pi"]))
+            check(f"{lbl}: (J5/8.3i) d_g,U = d_g,L - deg_p_g,U*(pi_U-pi_L)",
+                  fr(U["d_g"]) == fr(L["d_g"])
+                  - fr(U["deg_p_g"]) * (U["pi"] - L["pi"]))
             # (H7)/(H8): deg p_f,U = i_L * mu_e
             mu_e = fr(e["mu_e"])
             check(f"{lbl}: (H8) deg_p_f,U = i_L*mu_e",
                   U["deg_p_f"] == L["i"] * mu_e if L.get("type") != "root"
                   else U["deg_p_f"] == fr(cert["terminal"]["k_f"]))
+        # derived chart data (design F2/J5): N_e = K(pi_U - pi_L) in N*,
+        # r_{e,h} = K(d_h,L - d_h,U) = deg p_h,U * N_e for the count-equal
+        # labels f, g; recorded TransportAuthority per label; chartMode.
+        if "N_e" in e:
+            K = fr(cert["K"])
+            N_e = K * (U["pi"] - L["pi"])
+            check(f"{lbl}: derived N_e = K*(pi_U - pi_L) = {e['N_e']} in N*",
+                  N_e == fr(e["N_e"]) and N_e.denominator == 1 and N_e > 0)
+            r_f = K * (L["d_f"] - U["d_f"])
+            check(f"{lbl}: derived r_f = K*(d_f,L - d_f,U) = deg_p_f,U * N_e",
+                  r_f == fr(e["r_f"]) == U["deg_p_f"] * N_e
+                  and r_f.denominator == 1 and r_f >= 0)
+            r_g = K * (fr(L["d_g"]) - fr(U["d_g"]))
+            check(f"{lbl}: derived r_g = K*(d_g,L - d_g,U) = deg_p_g,U * N_e",
+                  r_g == fr(e["r_g"]) == fr(U["deg_p_g"]) * N_e
+                  and r_g.denominator == 1 and r_g >= 0)
+            check(f"{lbl}: TransportAuthority f/g recorded, chartMode PREFIX",
+                  e.get("transport_authority", {}).get("f") == "ST3.17_F"
+                  and e.get("transport_authority", {}).get("g") == "ST8.3_LIVE_j0"
+                  and e.get("chartMode") == "PREFIX")
         if case == "II" and e.get("law") == "R1.2":
             # R1.2/H1: tau, n, kbar, rho, w laws (L = clean child of U)
             Delta = fr(e["Delta"])
@@ -511,18 +548,43 @@ def tower_layer(cert, V):
     # is at the stack vertex X (its gap outranks everything else and delta_X
     # in N cannot skip its own zero), possibly after a NON-KILLING prefix of
     # printed-legal steps with k_j | 2 (X and F1 both alive cap k_j | 2).
+    # UNIVERSALITY (Sol finding-3 repair): none of the three refutations
+    # uses nu_X | 11305 or oddness -- they hold for EVERY nu_X >= 2, so the
+    # exhaustion covers every chain-1 stack of every chain-2 realization
+    # (M_U = 2/4, free pure-b characteristic, any neutral padding, either
+    # terminal); the 15 divisor classes below are the displayed
+    # representative's instantiation, not the coverage boundary.
     print("  -- obstruction exhaustion over chain-1 synchronization stacks --")
     ob = tw["obstruction"]
     NN = 11305
     divs = sorted(d for d in range(2, NN + 1) if NN % d == 0)
-    check("11305 = 5*7*17*19 odd; pole-adjacent nu_X | 11305, nu_X >= 5",
+    check("displayed rep: 11305 = 5*7*17*19 odd; its pole-adjacent classes"
+          " nu_X | 11305, nu_X >= 5",
           NN == 5 * 7 * 17 * 19 and divs[0] == 5 and all(d % 2 == 1 for d in divs)
           and len(divs) == 15)
     # the pole-adjacent chain-1 vertex X has death gap (nu_X+1)/(2 nu_X),
     # independent of the cell shape (i*mult = 2 at the pole edge + root law
     # force deg p_f,X = 2 nu_X and d_q,X = nu_X + 1).
-    check("gap(X) > 1/2 > 2/5 = gap(F1) for every nu_X (level sorting)",
-          all(Fr(d + 1, 2 * d) > Fr(1, 2) > Fr(2, 5) for d in divs))
+    ULAT = list(range(2, 301))          # universal lattice instantiation
+    check("gap(X) = (nu+1)/(2nu) > 1/2 > 2/5 = gap(F1) for EVERY nu_X >= 2 "
+          "(identity (nu+1)*2 - (2nu) = 2 > 0; lattice 2..300)",
+          all((d + 1) * 2 - 2 * d == 2 and Fr(d + 1, 2 * d) > Fr(1, 2) > Fr(2, 5)
+              for d in ULAT))
+    # UNIVERSAL three-case refutation, nu_X >= 2 arbitrary:
+    #   A/C, k_m = 1: needs 2nu | r nu + 1: r even -> 2nu | 1; r odd ->
+    #     2nu | nu+1 with 0 < nu+1 < 2nu (identity 2nu - (nu+1) = nu-1 >= 1);
+    #   A/C, k_m = 2: needs nu | 1;
+    #   A empty prefix: k_1 = 2nu_X > 2 (identity 2nu - 2 = 2(nu-1) >= 2);
+    #   B: gap 2/5 needs 5(nu+1) = 4nu, i.e. nu = -5 (identity
+    #     5(nu+1) - 4nu = nu + 5 >= 7).
+    check("UNIVERSAL case A: k_1 = 2nu_X > 2 for every nu_X >= 2",
+          all(2 * d - 2 == 2 * (d - 1) >= 2 for d in ULAT))
+    check("UNIVERSAL case C (k_m=1): 2nu - (nu+1) = nu-1 >= 1 and 2nu > 1",
+          all(2 * d - (d + 1) == d - 1 >= 1 and 2 * d > 1 for d in ULAT))
+    check("UNIVERSAL case C (k_m=2): nu | 1 impossible for nu >= 2",
+          all(d > 1 for d in ULAT))
+    check("UNIVERSAL case B: 5(nu+1) - 4nu = nu + 5 >= 7 (never 0)",
+          all(5 * (d + 1) - 4 * d == d + 5 >= 7 for d in ULAT))
     # w-monotonicity: Delta - n = (n-1)(nu-1) >= 1 for n,nu >= 2 (one-line
     # identity, per review nit; lattice kept as instantiation), so a clean
     # chain-1 stack frozen at w = 2 is n = 1 neutrals only.
@@ -568,6 +630,32 @@ def tower_layer(cert, V):
         check(f"case C prefix ({k1},{l1}), g = {sfr(g1)}: delta_1 "
               f"positive-integral at all of {','.join(prefix_vs)} (printed-legal)",
               ok, str({n: sfr(d) for n, d in ds.items()}))
+    # Sol finding-1 identity (xmodel/sol-tower-review.md:56-69): Sol's
+    # CRITICAL table of unhandled alive-alive level-1 pairs is exactly this
+    # Case C menu, row for row -- pairs, gaps, X/F1 exponents, and the
+    # delta_1 values at (G,H2,F3,F2,F1).  Verify the identity explicitly.
+    sol_table = {
+        (1, 2): {"g": Fr(3, 2), "expX": 4, "expF1": (8, 4), "d1F1": 11,
+                 "deltas": (101740, 33911, 4842, 250, 11)},
+        (2, 3): {"g": Fr(1), "expX": 3, "expF1": (6, 3), "d1F1": 6,
+                 "deltas": (67825, 22606, 3227, 165, 6)},
+        (2, 5): {"g": Fr(2), "expX": 5, "expF1": (10, 5), "d1F1": 16,
+                 "deltas": (135655, 45216, 6457, 335, 16)},
+    }
+    check("Sol finding 1 == repaired Case C: same three pairs",
+          sorted(pref) == sorted(sol_table))
+    for (k1, l1), row in sorted(sol_table.items()):
+        g1 = Fr(l1, k1) - Fr(1, 2)
+        got = tuple(int(V[n]["D_f"] * g1 - V[n]["kbar"])
+                    for n in ("G", "H2", "F3", "F2", "F1"))
+        ok = (g1 == row["g"]
+              and Fr(2 * l1, k1) == row["expX"]
+              and (Fr(4 * l1, k1), Fr(2 * l1, k1)) == row["expF1"]
+              and int(V["F1"]["D_f"] * g1 - V["F1"]["kbar"]) == row["d1F1"]
+              and got == row["deltas"])
+        check(f"Sol table row ({k1},{l1}): g/exponents/deltas match "
+              f"(delta_1(F1) = {row['d1F1']})", ok,
+              f"got deltas {got} want {row['deltas']}")
     # CASE A (empty prefix) and CASE C (any prefix): X dies at level m while
     # F1 is alive.  After r k=2 prefix steps (each adds an odd l/2 to alpha;
     # k=1 steps add 0), alpha_m = 3/2 + r/2 (mod 1).  X-death demands
@@ -607,7 +695,84 @@ def tower_layer(cert, V):
           Fr(2 * 9, 10).denominator != 1)
     check("OBSTRUCTION recorded in certificate matches exhaustion",
           ob["status"] == "OBSTRUCTED" and int(ob["checked_stacks"]) == len(divs)
-          and ob.get("cases") == ["A", "B", "C"])
+          and ob.get("cases") == ["A", "B", "C"]
+          and ob.get("exhaustion_scope", "").startswith("universal"))
+
+    # ---- C3-V: arrival/predecessor variant coverage (Sol finding 3) ----
+    # The census keeps 2 raw records per terminal (M_U = 2 and 4; dedup drops
+    # M_U), and the chain-2 predecessor family is free in the pure-b
+    # characteristic nu3 and in zero-cost neutral padding.  The charged
+    # predecessor DAG is unique (grok-sixcells-review.md finding 4), so the
+    # free data are exactly (nu3, padding, M_U).  Verify per recorded
+    # variant, and parametrically for the families, that every clash
+    # ingredient is unchanged or bounded below the level-1 window.
+    print("  -- C3-V: M_U / free-characteristic / padding variant coverage --")
+    variants = cert.get("variants", [])
+    check("every recorded raw arrival M_U has a realized variant",
+          set(int(fr(m)) for m in cert["arrival"]["M_U_raw"])
+          <= set(int(fr(v["M_U"])) for v in variants) and len(variants) >= 2)
+    is_trunk = cert["terminal"].get("vertex", "G") == "T"
+    for v in variants:
+        MU, nu3 = int(fr(v["M_U"])), int(fr(v["nu3"]))
+        iG = int(fr(v["i_G"]))
+        P1prod = int(fr(v["chain1_product"]))
+        pad = int(fr(v.get("padding_factor", 1)))
+        tag = f"variant M_U={MU}, nu3={nu3}"
+        dp3, dq3 = 3 + 7 * nu3, 1 + nu3
+        check(f"{tag}: pure-b cell (3+7nu,1+nu) = ({dp3},{dq3}), "
+              f"M = gcd(4,nu+1) = {MU}",
+              gcd(dp3, dq3) == gcd(4, nu3 + 1) == MU and nu3 % 2 == 1)
+        n3 = Fr(7 + 17 * nu3, 2)
+        check(f"{tag}: BOOK-2.1 n = (7+17nu)/2 = {sfr(n3)} integral and "
+              f"(1/7+n)/(5+n) = d_p/(7 d_q)",
+              n3.denominator == 1
+              and (Fr(1, 7) + n3) / (5 + n3) == Fr(dp3, 7 * dq3))
+        kb3 = Fr(1 + nu3, 2)
+        check(f"{tag}: frame kbar = (1+nu)/2, rho = 1/2, w = 1/2 (nu-free)",
+              kb3 == (5 + n3) / 17 and (kb3 - Fr(1, 2)) / nu3 == Fr(1, 2))
+        deg3 = 170 * dp3
+        degU = deg3 * pad
+        check(f"{tag}: i-ledger 170*(3+7nu)*pad/2 = i_G = {iG}; "
+              f"chain-1 product = i_G/2 = {P1prod} >= 2",
+              iG * 2 == degU and P1prod * 2 == iG and P1prod >= 2)
+        check(f"{tag}: E5 (I4) kbar_G = (mu0*nu_G*w_U - 2)/(mu0 - 1) = 5 "
+              f"uses nu_G = 7 only (nu_U free)",
+              (2 * 7 * Fr(1, 2) - 2) / (2 - 1) == 5)
+        check(f"{tag}: arrival vertex characteristic odd (P2-legality)",
+              (nu3 if pad == 1 else int(fr(v["pad_nu"]))) % 2 == 1)
+        # window emptiness for this variant's chain-2 gaps:
+        gap3 = Fr(dq3, 170 * dp3)
+        gapG = Fr(15, 9 * iG)
+        ok_w = gap3 < Fr(2, 5) and gapG < Fr(2, 5)
+        if is_trunk:
+            iT = int(fr(v["i_T"]))
+            check(f"{tag}: trunk i_T = 3*i_G = {iT}; k_f = 35*i_T; "
+                  f"l_f = (3/5)k_f integral",
+                  iT == 3 * iG and (Fr(3, 5) * 35 * iT).denominator == 1)
+            ok_w &= Fr(15, 35 * iT) < Fr(2, 5)
+        else:
+            kf = 9 * iG
+            check(f"{tag}: direct k_f = 9*i_G = {kf}; l_f = k_f/3 integral",
+                  kf == int(fr(v["k_f"])) and Fr(kf, 3).denominator == 1)
+        check(f"{tag}: variant gaps below the window (F3' {sfr(gap3)}, "
+              f"G {sfr(gapG)} < 2/5)", ok_w)
+        # parity/existence of the stack: i_G even here; if a variant had odd
+        # i_G, (H8) i-sync itself would fail (spine-tier death) -- either
+        # way no escape:
+        check(f"{tag}: chain-1 stack exists (2 | i_G) and universal nu_X "
+              f"refutation applies to every divisor >= 2 of {P1prod}",
+              iG % 2 == 0 and P1prod >= 2)
+    # parametric family bounds (all nu3 >= 2, any padding depth):
+    check("family bound: gap(F3'(nu)) = (1+nu)/(170(3+7nu)) < 2/5 for all "
+          "nu >= 2 (identity 2*170*(3+7nu) - 5(1+nu) = 1015 + 2375nu > 0)",
+          all(2 * 170 * (3 + 7 * n) - 5 * (1 + n) == 1015 + 2375 * n > 0
+              for n in ULAT))
+    check("family bound: padding gap (1+nu)/(2*i*nu) < 2/5 for all nu >= 2 "
+          "once i >= 170 (identity 4*170*nu - 5(1+nu) = 675nu - 5 > 0)",
+          all(4 * 170 * n - 5 * (1 + n) == 675 * n - 5 > 0 for n in ULAT))
+    check("family bound: intermediate chain-1 gaps (1+nu)/(2 P nu) < 1/2 "
+          "<= gap(X) for P >= 2 (identity P*nu - (1+nu) >= nu - 1 >= 1)",
+          all(2 * n - (1 + n) == n - 1 >= 1 for n in ULAT))
     # the two m_G branch refutations (fixed-representative corroboration,
     # nu_N = 11305; direct certificate only -- the trunk kill rests on the
     # three-case exhaustion above):
@@ -858,6 +1023,14 @@ def perturbation_suite():
     p = copy.deepcopy(base)
     p["tower"]["obstruction"]["cases"] = ["A", "B"]
     perts.append(("case list without Case C", p))
+    # 9. variant tampering: M_U=4 claimed realized by a nu3 = 1 (mod 4) cell
+    p = copy.deepcopy(base)
+    p["variants"][1]["nu3"] = 5
+    perts.append(("M_U=4 variant with gcd(4,nu3+1) = 2 cell", p))
+    # 10. drop the M_U=4 variant entirely (Sol finding 3/6: M_U_raw unread)
+    p = copy.deepcopy(base)
+    p["variants"] = p["variants"][:1]
+    perts.append(("M_U=4 raw record without a realized variant", p))
     # trunk perturbations
     trunk = json.loads(TRUNK.read_text())
     p = copy.deepcopy(trunk)

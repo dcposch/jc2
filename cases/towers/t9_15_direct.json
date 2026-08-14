@@ -1,298 +1,1066 @@
 {
-  "schema": "td7-tower-certificate/v1",
-  "cell": "(9,15,7,3)@mu0=2",
-  "route": "direct completion, case-IV terminal (w,M,psi)=(2/3,3,2), synchronized representative of xmodel/sol-gluing-design.md SS3.2",
-  "date": "2026-08-13",
-  "status": "SPINE-COMPLETE; LOCAL-T1-COMPLETE; LEAD-PILOT-REPRODUCED; TOWER-OBSTRUCTED",
-  "conventions": {
-    "orientation": "L=rootward (shallower), U=poleward (deeper); edges written L->U",
-    "gauge": "fiber-zero (f = f_old - a); PLUS tower h0=g, base=f; Jacobian target gamma=1",
-    "case_III": "Q-value + E5 (AUDIT.md H5a resolution): kappa_F = nu_F*kappa_G/nu_G; (g') D_F=(nu_F*D_G+n*deg p_G)/nu_G; (h') kbar_F=(nu_F*kbar_G+n)/nu_G; n = -nu_F*kbar_G (mod nu_G)",
-    "frames": "Q(F)=(D_F, deg p_F, nu_F, M_F, kbar_F); rho=D_f/deg p_f; w=(kbar-rho)/nu (SHEET6-DEPTH.md SS1)",
-    "degrees": "d_h = rational x-degree of label h in the chart at v; D_h = kappa_v*d_h; Dint = K*d_h"
+ "schema": "td7-tower-certificate/v1",
+ "tier": "tower-obstruction certificate: spine COMPLETE, level-0 tower COMPLETE, levels >= 1 PROVED EMPTY (three-case universal exhaustion); m_v/mu_v/k_v beyond level 0 are the fields proved jointly unrealizable",
+ "cell": "(9,15,7,3)@mu0=2",
+ "route": "direct completion, case-IV terminal (w,M,psi)=(2/3,3,2), synchronized representative of xmodel/sol-gluing-design.md SS3.2",
+ "date": "2026-08-13",
+ "status": "SPINE-COMPLETE; LOCAL-T1-COMPLETE; LEAD-PILOT-REPRODUCED; TOWER-OBSTRUCTED",
+ "conventions": {
+  "orientation": "L=rootward (shallower), U=poleward (deeper); edges written L->U",
+  "gauge": "fiber-zero (f = f_old - a); PLUS tower h0=g, base=f; Jacobian target gamma=1",
+  "case_III": "Q-value + E5 (AUDIT.md H5a resolution): kappa_F = nu_F*kappa_G/nu_G; (g') D_F=(nu_F*D_G+n*deg p_G)/nu_G; (h') kbar_F=(nu_F*kbar_G+n)/nu_G; n = -nu_F*kbar_G (mod nu_G)",
+  "frames": "Q(F)=(D_F, deg p_F, nu_F, M_F, kbar_F); rho=D_f/deg p_f; w=(kbar-rho)/nu (SHEET6-DEPTH.md SS1)",
+  "degrees": "d_h = rational x-degree of label h in the chart at v; D_h = kappa_v*d_h; Dint = K*d_h"
+ },
+ "K": 2374050,
+ "K_note": "lcm of all chart kappa_v = 2*3*5^2*7^2*17*19; (J0) candidate; Prop 3.1 suitability witness per chart = the chart's own kappa_v | K; least certified multiple",
+ "vertices": [
+  {
+   "name": "R0",
+   "type": "root",
+   "kappa": 1,
+   "pi": 0,
+   "kbar": 1,
+   "nu": 1,
+   "deg_p_f": 203490,
+   "d_f": 67830,
+   "D_f": 67830,
+   "rho": "1/3",
+   "d_g": 101745,
+   "deg_p_g": 305235,
+   "root_pattern": "p_f,(0,y) = S_r*(eta-c0)^203490 (R4/LROOT); single y-side direction c0",
+   "m": "m_R0 > m_G (residual root depth, as template)"
   },
-  "K": 2374050,
-  "K_note": "lcm of all chart kappa_v = 2*3*5^2*7^2*17*19; (J0) candidate; Prop 3.1 suitability witness per chart = the chart's own kappa_v | K; least certified multiple",
-  "vertices": [
-    {"name": "R0", "type": "root", "kappa": 1, "pi": 0, "kbar": 1, "nu": 1,
-     "deg_p_f": 203490, "d_f": 67830, "D_f": 67830, "rho": "1/3",
-     "d_g": 101745, "deg_p_g": 305235,
-     "root_pattern": "p_f,(0,y) = S_r*(eta-c0)^203490 (R4/LROOT); single y-side direction c0",
-     "m": "m_R0 > m_G (residual root depth, as template)"},
-    {"name": "G", "type": "merge classC", "kappa": 7, "pi": "2/7", "kbar": 5, "nu": 7,
-     "rho": "1/3", "w": "2/3", "M": 3, "d_p": 9, "d_q": 15, "i": 22610,
-     "deg_p_f": 203490, "d_f": 9690, "D_f": 67830, "d_g": 14535, "deg_p_g": 305235,
-     "death_gap": "1/13566"},
-    {"name": "N", "type": "chain1 clean neutral (synchronization representative)", "kappa": 79135,
-     "pi": "56523/79135", "kbar": 22612, "nu": 11305, "rho": 2, "w": 2, "M": 1,
-     "d_p": 11305, "d_q": 11306, "i": 2, "deg_p_f": 22610, "d_f": "4/7", "D_f": 45220,
-     "d_g": "6/7", "deg_p_g": 33915, "death_gap": "5653/11305"},
-    {"name": "P1", "type": "pole (a,b,nu)=(1,1,2)", "kappa": 158270,
-     "pi": "31653/31654", "kbar": 5, "nu": 2, "rho": 1, "w": 2, "M": 1,
-     "deg_p_f": 2, "d_f": "1/79135", "D_f": 2, "d_g": "3/158270", "deg_p_g": 3,
-     "m": 0, "pole_identity": "d_f + d_g = 5/158270 = 1 - pi (Prop 4.1 equality)"},
-    {"name": "H2", "type": "chain2 clean neutral, case-III zero-arrival vertex", "kappa": 7,
-     "pi": "3/7", "kbar": 4, "nu": 7, "rho": "1/2", "w": "1/2", "M": 2,
-     "d_p": 14, "d_q": 8, "i": 3230, "deg_p_f": 45220, "d_f": 3230, "D_f": 22610,
-     "d_g": 4845, "deg_p_g": 67830, "death_gap": "2/11305",
-     "kappa_note": "kappa_H2 = 7 = nu_H2*kappa_G/nu_G: the H5a Q-value at the doubly realized vertex; NOT kappa_G*nu_H2 = 49"},
-    {"name": "F3", "type": "chain2 pure-b (l=7,eps=3), nu-representative of the free-characteristic family", "kappa": 35,
-     "pi": "32/35", "kbar": 3, "nu": 5, "rho": "1/2", "w": "1/2", "M": 2,
-     "d_p": 38, "d_q": 6, "i": 170, "deg_p_f": 6460, "d_f": "646/7", "D_f": 3230,
-     "d_g": "969/7", "deg_p_g": 9690, "death_gap": "3/3230"},
-    {"name": "F2", "type": "chain2 dirty l=4,k=1,(m_j)=(3)", "kappa": 595,
-     "pi": "118/119", "kbar": 5, "nu": 17, "rho": "1/7", "w": "2/7", "M": 7,
-     "d_p": 119, "d_q": 35, "i": 10, "deg_p_f": 1190, "d_f": "2/7", "D_f": 170,
-     "d_g": "3/7", "deg_p_g": 1785, "death_gap": "1/34"},
-    {"name": "F1", "type": "chain2 dirty l=2,k=2,(m_j)=(1,1)", "kappa": 2975,
-     "pi": "2971/2975", "kbar": 4, "nu": 5, "rho": "1/4", "w": "3/4", "M": 4,
-     "d_p": 20, "d_q": 16, "i": 2, "deg_p_f": 40, "d_f": "2/595", "D_f": 10,
-     "d_g": "3/595", "deg_p_g": 60, "death_gap": "2/5"},
-    {"name": "P2", "type": "pole (a,b,nu)=(1,2,3)", "kappa": 8925,
-     "pi": "1784/1785", "kbar": 5, "nu": 3, "rho": "1/2", "w": "3/2", "M": 2,
-     "deg_p_f": 4, "d_f": "2/8925", "D_f": 2, "d_g": "3/8925", "deg_p_g": 6,
-     "m": 0, "pole_identity": "d_f + d_g = 5/8925 = 1 - pi (Prop 4.1 equality)"}
-  ],
-  "edges": [
-    {"L": "R0", "U": "G", "case": "IV-terminal", "mu_e": 203490,
-     "note": "terminal read up; pi_G = (nu_G - kbar_G)/nu_G = 2/7; deg p_f,G = k_f = mult(p_f,R0, c0)"},
-    {"L": "N", "U": "P1", "case": "II", "law": "R1.2", "n": 45219, "mu_e": 1,
-     "Delta": 1, "tau": 4, "n_cell": 1,
-     "continuation": {"c": "c_n", "A": "A_n", "d": "d_n", "nu_L": 11305, "mult": 1}},
-    {"L": "G", "U": "N", "case": "II", "law": "R2.1-II", "n": 33913, "mu_e": 1,
-     "continuation": {"c": "c_g", "A": "A_g", "d": "d_g", "nu_L": 7, "mult": 1}},
-    {"L": "H2", "U": "F3", "case": "II", "law": "BOOK-2.1", "n": 17, "mu_e": 2,
-     "continuation": {"c": "c_h", "A": "A_h", "d": "d_h", "nu_L": 7, "mult": 2}},
-    {"L": "F3", "U": "F2", "case": "II", "law": "BOOK-2.1", "n": 46, "mu_e": 7,
-     "continuation": {"c": "c_f3", "A": "A_f3", "d": "d_f3", "nu_L": 5, "mult": 7}},
-    {"L": "F2", "U": "F1", "case": "II", "law": "BOOK-2.1", "n": 21, "mu_e": 4,
-     "continuation": {"c": "c_f2", "A": "A_f2", "d": "d_f2", "nu_L": 17, "mult": 4}},
-    {"L": "F1", "U": "P2", "case": "II", "law": "BOOK-2.1", "n": 7, "mu_e": 2,
-     "continuation": {"c": "c_f1", "A": "A_f1", "d": "d_f1", "nu_L": 5, "mult": 2}},
-    {"L": "G", "U": "H2", "case": "III-E5", "n": 7, "mu_e": 2,
-     "note": "zero arrival at eta=0 (mu0=2); E5 raw n=7, n' = n/nu_G = 1; no continuation variable (certified direction zero, no L9 row)"}
-  ],
-  "chain2_book21": [
-    {"parent": "P2", "child": "F1", "n": 7, "l": 2},
-    {"parent": "F1", "child": "F2", "n": 21, "l": 4},
-    {"parent": "F2", "child": "F3", "n": 46, "l": 7},
-    {"parent": "F3", "child": "H2", "n": 17, "l": 2}
-  ],
-  "arrival": {
-    "w_U": "1/2", "nu_U": 7, "lambda": 4, "M_U_raw": [2, 4], "mu0": 2,
-    "lambda_steps": [2, 1, 1, 0, 0],
-    "provenance": "BOOK-OFFAXIS.md SS11a row (9,15,7,3)@2: E5 arrival w_U=1/2 (lambda 4; M2,4), recorded nu=7 legal; priced chain-2 witness (3/2,2)-[2]->(3/4,4)-[1]->(2/7,7)-[1]->(1/2,*) with cells (20,16),(119,35),(38,6)nu-rep,(14,8)"
+  {
+   "name": "G",
+   "type": "merge classC",
+   "kappa": 7,
+   "pi": "2/7",
+   "kbar": 5,
+   "nu": 7,
+   "rho": "1/3",
+   "w": "2/3",
+   "M": 3,
+   "d_p": 9,
+   "d_q": 15,
+   "i": 22610,
+   "deg_p_f": 203490,
+   "d_f": 9690,
+   "D_f": 67830,
+   "d_g": 14535,
+   "deg_p_g": 305235,
+   "death_gap": "1/13566",
+   "m": "m_v >= 1 exists (Prop 8.1: q_v is the top of h_{m_v}); level 0 (g) alive with exponent (3/2)i_v verified; NO integer m_v is jointly realizable with any global ladder -- this is the certified obstruction (tower.obstruction)",
+   "mu_k_note": "mu_v = alpha_{m_v}, k_v = i_v(mu_v-1): unrealizable for the same reason"
   },
-  "terminal": {
-    "type": "case IV direct", "w": "2/3", "M": 3, "psi": 2, "R_term": 3,
-    "j": 1, "budget": 4, "k_f": 203490, "l_f": 67830,
-    "d_0x": 203490, "deg_p_f_0x": 67830,
-    "closure_conditions": [
-      "(R1) d_(0,y)/deg p_f,G = 1 - w_G = 1/3; d_(0,y) = l_f = 67830",
-      "(R2) R_term = 1/(1-w_G) = 3; psi = ceil(R_term)-1 = 2; sum lambda_F <= td-1-psi = 4 (attained: 4)",
-      "(R3) 0 < w_G = 2/3 < 1; M_G = 3 >= 2; j = M_G(1-w_G) = 1 in N*",
-      "(R4) root law: p_f,(0,y) = S_r(eta-c0)^203490, k_f = 203490, l_f = d_(0,y) = 67830",
-      "(R5) corrected St 3.12 chart swap (SIGRAY-AUDIT.md:44): d_(0,x) = k_f = 203490, deg p_f,(0,x) = l_f = 67830",
-      "(R6) Keller identity on shared f,g jets in z = x^(-1/K), K = 2374050: z^(K+1)(J_f,eta J_g,z - J_f,z J_g,eta) + z^K(Dint_f J_f J_g,eta - Dint_g J_f,eta J_g) - K z^(K pi + Dint_f + Dint_g) = 0 with (Dint_f, Dint_g) = (K d_f,v, K d_g,v) per chart; STATED, emission deferred to milestone 2 (jet windows); planted f=x, g=y unit test mandatory before emission"
-    ]
+  {
+   "name": "N",
+   "type": "chain1 clean neutral (synchronization representative)",
+   "kappa": 79135,
+   "pi": "56523/79135",
+   "kbar": 22612,
+   "nu": 11305,
+   "rho": 2,
+   "w": 2,
+   "M": 1,
+   "d_p": 11305,
+   "d_q": 11306,
+   "i": 2,
+   "deg_p_f": 22610,
+   "d_f": "4/7",
+   "D_f": 45220,
+   "d_g": "6/7",
+   "deg_p_g": 33915,
+   "death_gap": "5653/11305",
+   "m": "m_v >= 1 exists (Prop 8.1: q_v is the top of h_{m_v}); level 0 (g) alive with exponent (3/2)i_v verified; NO integer m_v is jointly realizable with any global ladder -- this is the certified obstruction (tower.obstruction)",
+   "mu_k_note": "mu_v = alpha_{m_v}, k_v = i_v(mu_v-1): unrealizable for the same reason"
   },
-  "t1_local": [
-    {"vertex": "G", "nu": 7, "d_p": 9, "d_q": 15, "eps": 2,
-     "p_factors": [{"coeffs_t": {"1": "1", "0": "-A"}, "mult": 1}],
-     "q_factors": [{"coeffs_t": {"1": "1", "0": "-A"}, "mult": 1},
-                   {"coeffs_t": {"1": "1", "0": "-Fr(2,3)*A"}, "mult": 1}],
-     "C": "-Fr(14,15)*A*A",
-     "s_of_t": "t - (2/3)A", "note": "certified merge-local solution (sol-td7-law table row 1); B_g = (2/3)A_g"},
-    {"vertex": "N", "nu": 11305, "d_p": 11305, "d_q": 11306, "eps": 0,
-     "p_factors": [{"coeffs_t": {"1": "1", "0": "-A"}, "mult": 1}],
-     "q_factors": [{"coeffs_t": {"1": "1", "0": "-A"}, "mult": 1}],
-     "C": "-Fr(11305,11306)*A",
-     "s_of_t": "1", "note": "clean neutral row: 11306*C + 11305*A = 0"},
-    {"vertex": "H2", "nu": 7, "d_p": 14, "d_q": 8, "eps": 0,
-     "p_factors": [{"coeffs_t": {"1": "1", "0": "-A"}, "mult": 2}],
-     "q_factors": [{"coeffs_t": {"1": "1", "0": "-A"}, "mult": 1}],
-     "C": "-Fr(7,4)*A",
-     "s_of_t": "1", "note": "4*C + 7*A = 0"},
-    {"vertex": "F3", "nu": 5, "d_p": 38, "d_q": 6, "eps": 3,
-     "p_factors": [{"coeffs_t": {"1": "1", "0": "-A"}, "mult": 7}],
-     "q_factors": [{"coeffs_t": {"1": "1", "0": "-A"}, "mult": 1}],
-     "C": "-Fr(10,3)*A",
-     "s_of_t": "1", "note": "3*C + 10*A = 0; p = eta^3(t-A)^7"},
-    {"vertex": "F2", "nu": 17, "d_p": 119, "d_q": 35, "eps": 0,
-     "p_factors": [{"coeffs_t": {"1": "1", "0": "-A"}, "mult": 4},
-                   {"coeffs_t": {"1": "1", "0": "-Fr(3,2)*A"}, "mult": 3}],
-     "q_factors": [{"coeffs_t": {"1": "1", "0": "-A"}, "mult": 1},
-                   {"coeffs_t": {"1": "1", "0": "-Fr(3,2)*A"}, "mult": 1}],
-     "C": "Fr(51,10)*A*A",
-     "s_of_t": "B-side (t - (3/2)A)", "note": "p=(t-A)^4(t-B)^3, B=(3/2)A; 10*C - 51*A^2 = 0"},
-    {"vertex": "F1", "nu": 5, "d_p": 20, "d_q": 16, "eps": 0,
-     "p_factors": [{"coeffs_t": {"1": "1", "0": "-A"}, "mult": 2},
-                   {"coeffs_t": {"2": "1", "1": "-3*A", "0": "3*A*A"}, "mult": 1}],
-     "q_factors": [{"coeffs_t": {"1": "1", "0": "-A"}, "mult": 1},
-                   {"coeffs_t": {"2": "1", "1": "-3*A", "0": "3*A*A"}, "mult": 1}],
-     "C": "-Fr(15,4)*A**3",
-     "s_of_t": "R1(t) = t^2 - 3At + 3A^2 (Sig=3A, Pi=3A^2)",
-     "note": "p=(t-A)^2 R1(t), q=eta(t-A)R1(t); disc R1 = -3A^2 != 0"}
-  ],
-  "tower": {
-    "side": "PLUS", "h0": "g", "base": "f",
-    "type": "(alpha,beta) = (2,3): kbar_pole = a(alpha+beta) = 5 at both poles; root rectangles (k_f,l_f) = (203490,67830), (k_g,l_g) = (305235,101745), ratio 3",
-    "ladder": [
-      {"j": 0, "kl": [2, 3], "alpha": 0, "alpha_next": "3/2", "gap": "5/2",
-       "killed_at": "P1 and P2 (poles, m=0; Prop 5.3 pole pair (p_f, p_g))",
-       "sigma_relations": [
-         "P1: pole scales lam,m with m^2 = sigma0*lam^3; g-top eta(eta^2-(3/2)A); h1-top = -(3/4)sigma0*lam^3*A^2*(eta^2-(4/3)A) after the forced collapse B=(3/2)A",
-         "P2: g-top eta^6+U eta^3+V, U=-(3/2)A, V=(3/8)A^2 force the eta^12/eta^9/eta^6 collapse of g^2-sigma0 f^3; h1-top = -(1/8)A^3 eta^3 + (9/64)A^4 (deg 3 = mult from F1's dead member, exact handoff)"
-       ]},
-      {"j": 1, "kl": "OBSTRUCTED", "alpha": "3/2", "gap": "no admissible value",
-       "note": "level 1 is claimed by both branches with incompatible death gaps; see obstruction"}
-    ],
-    "death_gaps": [
-      {"vertex": "F1", "gap": "2/5"},
-      {"vertex": "F2", "gap": "1/34"},
-      {"vertex": "F3", "gap": "3/3230"},
-      {"vertex": "H2", "gap": "2/11305"},
-      {"vertex": "G", "gap": "1/13566"},
-      {"vertex": "N", "gap": "5653/11305"}
-    ],
-    "laws": {
-      "delta": "delta_j(v) = kappa_v(d_f,v + d_hj,v - alpha_j d_f,v - 1 + pi_v) = D_f,v*g_j - kbar_v in N, strictly decreasing in j; m_v = first zero (Prop 4.2 proof p.20, SHEET6-TEMPLATE.md:53-55, SHEET6-R6.md:126-128)",
-      "mu": "mu_v = alpha_{m_v}; alpha_{j+1} = alpha_j + (k_j-1)l_j/k_j (Prop 4.2 (9) p.19); k_v = i_v(mu_v - 1) in N (Prop 8.1)",
-      "death_gap": "at the killer of level j: g_j := l_j/k_j + 1 - alpha_j = kbar_v/D_f,v (equivalent, given St 3.17(i) f-transport, to Cor 6.1's q-law d_q = kbar*deg p_f/D_f; verified both ways)",
-      "alive": "for j < m_v: (h_j^+)^{k_j} = sigma_j (f^+)^{l_j} at v (Prop 4.2(iii)); p_hj,v = H*(p_f,v)^{l_j/k_j} with every factor exponent in N; d_hj,v = (l_j/k_j) d_f,v",
-      "dead": "at j = m_v: p_hj,v = S*p_red^{k_v}*q_v, deg = k_v d_p + d_q (Prop 8.1(ii)/(iv)); L4: mult(p_hm,v, c) = (mu_v-1)mult(p_f,v, c)+1 at any root c of p_f",
-      "counts": "St 3.9 elementary equality all h; St 3.17(i) f-equality composite; St 3.11(i) monotone deg_U <= mult_L general; St 8.3(ii) member equality j <= m_deeper NOT relied on at j = m (SHEET6-R6.md:137-140)"
-    },
-    "obstruction": {
-      "status": "OBSTRUCTED",
-      "tier": "tower ladder (Prop 4.2 + Prop 8.1(iv) + Cor 6.1), level 1",
-      "cases": ["A", "B", "C"],
-      "statement": "No global approximate-root ladder (k_j,l_j) is compatible with the synchronized direct route. The forced death gaps g = kbar_v/D_f,v put the chain-1 pole-adjacent vertex X (gap (nu_X+1)/(2nu_X) > 1/2, nu_X | 11305 odd, shape-independent) above F1 (gap 2/5) and every other vertex below 5/2, so the first post-pole death is X, possibly after a NON-KILLING prefix of printed-legal ladder steps (Grok finding-1 repair). While X and F1 are both alive every prefix step has k_j | 2 (Prop 4.2(iii)/Prop 8.1 integrality at X's (t-A)^2-power and F1's orbit mults (2,1,1) with i=2); the legal prefix menu in the window (gap(X), 5/2) is exactly (k,l) in {(1,2),(2,3),(2,5)} (g = 3/2, 1, 2; all delta-integral at every non-pole vertex). Case A (empty prefix): X kills level 1 with (k_1,l_1) = (2nu_X, 2nu_X+1), refused by k | 2. Case B: F1 kills level 1 first -- impossible, delta_X in N cannot skip its zero at gap(X) > 2/5 (death at X would need nu_X = -5). Case C (any nonempty prefix, r steps with k=2 and odd l, any number of k=1 steps): alpha_m = 3/2 + r/2 (mod 1), and X-death needs l_m/k_m = alpha_m - 1/2 + 1/(2nu_X) with k_m | 2: k_m = 1 forces 2nu_X | r*nu_X + 1 (impossible for r even or odd), k_m = 2 forces nu_X | 1. All three cases are refuted for every chain-1 stack: the stack is forced to be pure n=1 clean neutrals (w-freeze at 2; Delta - n = (n-1)(nu-1) >= 1), its nu-product is forced to 11305 (odd) by the f-degree ladder 2 -> 22610, and its pole-adjacent gap is shape-independent.",
-      "checked_stacks": 15,
-      "checked_stacks_note": "all divisors nu_X >= 2 of 11305 = 5*7*17*19 (odd, so nu_X >= 5); covers every multi-neutral stack since only the pole-adjacent vertex's gap and the F1/X caps enter; case C covers every prefix length via the r-parity closed form plus explicit r = 0..5",
-      "m2_branch": {
-        "s_from_N": 22611, "s_from_H2": 11309,
-        "note": "fixed-representative corroboration (nu_N = 11305): with m_G = 2, h_1 alive at G with exponent s and h_1 dead at N (m_N = 1; the alive-at-N branches 11305 | s die separately by the q-tail count excess), the N-side drop window [deg_U*dpi, mult_L*dpi] pins s = 22611 exactly while the H2-side window pins s = 11309 exactly; m_G = 1 is separately refuted (Prop 8.1@N needs deg 22611 > 11306 = arriving mult, violating St 3.11(i))"
-      },
-      "dependencies": [
-        "CONJECTURE H5a resolved to the Q-value (AUDIT.md H5a resolution, promoted): kappa_F = nu_F kappa_G/nu_G and the E5 identities (g')/(h')",
-        "E5 corrected case-III transport (SHEET6-III.md:131-147)",
-        "Prop 4.2 (pp. 19-20): (k_j,l_j) ladder, gcd(k_j,l_j)=1, mu-recursion (9), delta_j in N strict descent, alive identity (iii); alive/dead dichotomy of printed (10) (grok-tower-review.md finding 4)",
-        "St 8.3(i) (p. 41) + Cor 6.1 searrow + Not 4.1 prefix order: both merge branches share one ladder and the same polynomials h_j while alive (grok-tower-review.md finding 3 -- the citation upgrade for the single-ladder reading)",
-        "Prop 8.1(i)-(v) (pp. 39-41): p_f = S p^i, p_hm = S p^k q, k = i(mu-1), M = gcd, i*l_j/k_j in N (p. 40)",
-        "Cor 6.1 (p. 32): deg p_h,F = (d_h,F/d_F) deg p_F at searrow vertices; the q-law d_q = kbar deg p_f/D_f is its Prop 8.1/theta rewrite (grok-tower-review.md finding 5)",
-        "St 3.11(i) monotone branch counts; St 3.17(i) composite f-equality; St 3.9 elementary equality",
-        "BOOK R1.2/R2.1 and the w-freeze of chain 1 at w=2 (BOOK-OFFAXIS.md:521-529); Delta - n = (n-1)(nu-1) >= 1",
-        "P1 budget: lambda total 4 = 6 - psi exactly (no charged chain-1 step available)",
-        "the campaign formalization of the tower laws calibrated on the td=6 template (SHEET6-TEMPLATE.md SS1, exact replay in cases/tower_check.py C2)"
-      ],
-      "scope": "KILLS (hostile-reviewed SOUND-WITH-ERRATA, xmodel/grok-tower-review.md; errata folded in): the tower tier of every synchronized direct-completion representative of (9,15,7,3)@2 in the design SS3.2 family (any chain-1 clean stack). The trunk completion (35,15,7,5)@(2/5,5,1) shares the clash (terminal-independence, review finding 2) and is machine-checked dead in cases/towers/t9_15_trunk.json -- jointly a CELL-level tower kill, itself pending review. NOT machine-checked here: the other 16 SS11a cells; the SS11a arrival census and the LEAD-PILOT leading tier (83/74, SAT over Q) are reproduced, not retracted. 'Untouched' always means 'not machine-checked'.",
-      "review_status": "REVIEWED SOUND-WITH-ERRATA (xmodel/grok-tower-review.md) as the direct-family kill with the Case C erratum, now repaired in-engine; the joint cell-level statement (with the trunk certificate) is NEW and requires its own review"
-    }
+  {
+   "name": "P1",
+   "type": "pole (a,b,nu)=(1,1,2)",
+   "kappa": 158270,
+   "pi": "31653/31654",
+   "kbar": 5,
+   "nu": 2,
+   "rho": 1,
+   "w": 2,
+   "M": 1,
+   "deg_p_f": 2,
+   "d_f": "1/79135",
+   "D_f": 2,
+   "d_g": "3/158270",
+   "deg_p_g": 3,
+   "m": 0,
+   "pole_identity": "d_f + d_g = 5/158270 = 1 - pi (Prop 4.1 equality)"
   },
-  "poles": [
-    {"vertex": "P1", "full_degrees": [2, 3], "wronskian": "2 p pg' - 3 p' pg = C_p1",
-     "rows": ["2*B_p1-3*A_p1", "2*A_p1*B_p1-C_p1"]},
-    {"vertex": "P2", "full_degrees": [4, 6], "wronskian": "2 p pg' - 3 p' pg = C_p2",
-     "rows": ["2*U_p2+3*A_p2", "A_p2*U_p2+4*V_p2", "3*A_p2*V_p2-C_p2"]}
-  ],
-  "pilot": {
-    "note": "LEAD-PILOT of the design SS3.5: 83 vars / 74 rows, SAT over Q at the (P11)-(P13) anchor; regenerated from this certificate by cases/tower_check.py C5 and compared token-for-token",
-    "variables": "A_p1,B_p1,C_p1,A_n,C_n,A_g,B_g,C_g,A_h,C_h,A_f3,C_f3,A_f2,B_f2,C_f2,A_f1,Sig_f1,Pi_f1,C_f1,A_p2,U_p2,V_p2,C_p2,c_n,c_g,c_h,c_f3,c_f2,c_f1,d_n,d_g,d_h,d_f3,d_f2,d_f1,z_f2,z_f1,S_r,S_g,S_n,S_p1,S_h,S_f3,S_f2,S_f1,S_p2,u_p1_A,u_p1_B,u_p1_AB,u_p1_C,u_n_A,u_n_C,u_g_A,u_g_B,u_g_AB,u_g_C,u_h_A,u_h_C,u_f3_A,u_f3_C,u_f2_A,u_f2_B,u_f2_AB,u_f2_C,u_f1_A,u_f1_Pi,u_f1_disc,u_f1_z,u_f1_C,u_p2_A,u_p2_V,u_p2_disc,u_p2_qA,u_p2_C,u_S_r,u_S_g,u_S_n,u_S_p1,u_S_h,u_S_f3,u_S_f2,u_S_f1,u_S_p2",
-    "local_rows": [
-      "2*B_p1-3*A_p1", "2*A_p1*B_p1-C_p1", "11306*C_n+11305*A_n",
-      "-14*A_g+21*B_g", "-7*A_g*B_g-5*C_g", "4*C_h+7*A_h", "3*C_f3+10*A_f3",
-      "2*B_f2-3*A_f2", "10*C_f2-51*A_f2^2", "Sig_f1-3*A_f1", "Pi_f1-3*A_f1^2",
-      "4*C_f1+15*A_f1^3", "2*U_p2+3*A_p2", "A_p2*U_p2+4*V_p2", "3*A_p2*V_p2-C_p2"
-    ],
-    "separation_rows": ["z_f2-A_f2+B_f2", "z_f1-A_f1^2+Sig_f1*A_f1-Pi_f1"],
-    "scale_transports": [
-      {"row": "S_g-S_r",
-       "edge": "R0->G", "exponent_audit": {"mult": {"got": 203490, "want": 203490}}},
-      {"row": "S_h-S_g*A_g^22610",
-       "edge": "G->H2 (zero direction)",
-       "exponent_audit": {"i_G": {"got": 22610, "want": 22610},
-                          "sign": {"got": 1, "want": 1}},
-       "note": "reduced coeff at 0 is -A_g; exponent i_G = 22610 even, sign +"},
-      {"row": "S_n-S_g*c_g^45220*d_g^22610",
-       "edge": "G->N", "exponent_audit": {"c_exp": {"got": 45220, "want": 45220},
-                                          "d_exp": {"got": 22610, "want": 22610}},
-       "note": "reduced coeff c_g^2*d_g raised to i_G = 22610"},
-      {"row": "S_p1-S_n*d_n^2",
-       "edge": "N->P1", "exponent_audit": {"d_exp": {"got": 2, "want": 2}}},
-      {"row": "S_f3-S_h*d_h^6460",
-       "edge": "H2->F3", "exponent_audit": {"d_exp": {"got": 6460, "want": 6460}},
-       "note": "reduced coeff d_h^2 raised to i_H2 = 3230"},
-      {"row": "S_f2-S_f3*c_f3^510*d_f3^1190",
-       "edge": "F3->F2", "exponent_audit": {"c_exp": {"got": 510, "want": 510},
-                                            "d_exp": {"got": 1190, "want": 1190}},
-       "note": "reduced coeff c^3 d^7 raised to i_F3 = 170"},
-      {"row": "S_f1-S_f2*d_f2^40*z_f2^30",
-       "edge": "F2->F1", "exponent_audit": {"d_exp": {"got": 40, "want": 40},
-                                            "z_exp": {"got": 30, "want": 30}},
-       "note": "reduced coeff d^4 z^3 raised to i_F2 = 10"},
-      {"row": "S_p2-S_f1*d_f1^4*z_f1^2",
-       "edge": "F1->P2", "exponent_audit": {"d_exp": {"got": 4, "want": 4},
-                                            "z_exp": {"got": 2, "want": 2}},
-       "note": "reduced coeff d^2 z raised to i_F1 = 2"}
-    ],
-    "guard_rows": [
-      "u_p1_A*A_p1-1", "u_p1_B*B_p1-1", "u_p1_AB*A_p1-u_p1_AB*B_p1-1",
-      "u_p1_C*C_p1-1", "u_n_A*A_n-1", "u_n_C*C_n-1", "u_g_A*A_g-1", "u_g_B*B_g-1",
-      "u_g_AB*A_g-u_g_AB*B_g-1", "u_g_C*C_g-1", "u_h_A*A_h-1", "u_h_C*C_h-1",
-      "u_f3_A*A_f3-1", "u_f3_C*C_f3-1", "u_f2_A*A_f2-1", "u_f2_B*B_f2-1",
-      "u_f2_AB*A_f2-u_f2_AB*B_f2-1", "u_f2_C*C_f2-1", "u_f1_A*A_f1-1",
-      "u_f1_Pi*Pi_f1-1", "u_f1_disc*Sig_f1^2-4*u_f1_disc*Pi_f1-1", "u_f1_z*z_f1-1",
-      "u_f1_C*C_f1-1", "u_p2_A*A_p2-1", "u_p2_V*V_p2-1",
-      "u_p2_disc*U_p2^2-4*u_p2_disc*V_p2-1",
-      "u_p2_qA*A_p2^2+u_p2_qA*U_p2*A_p2+u_p2_qA*V_p2-1", "u_p2_C*C_p2-1",
-      "u_S_r*S_r-1", "u_S_g*S_g-1", "u_S_n*S_n-1", "u_S_p1*S_p1-1", "u_S_h*S_h-1",
-      "u_S_f3*S_f3-1", "u_S_f2*S_f2-1", "u_S_f1*S_f1-1", "u_S_p2*S_p2-1"
-    ],
-    "anchor": {
-      "A_p1": "1", "B_p1": "3/2", "C_p1": "3",
-      "A_n": "1", "C_n": "-11305/11306",
-      "A_g": "1", "B_g": "2/3", "C_g": "-14/15",
-      "A_h": "1", "C_h": "-7/4",
-      "A_f3": "1", "C_f3": "-10/3",
-      "A_f2": "1", "B_f2": "3/2", "C_f2": "51/10",
-      "A_f1": "1", "Sig_f1": "3", "Pi_f1": "3", "C_f1": "-15/4",
-      "A_p2": "1", "U_p2": "-3/2", "V_p2": "3/8", "C_p2": "9/8",
-      "c_n": "1", "c_g": "1", "c_h": "1", "c_f3": "1", "c_f2": "1", "c_f1": "1",
-      "d_n": "11305", "d_g": "7", "d_h": "7", "d_f3": "5", "d_f2": "17", "d_f1": "5",
-      "z_f2": "-1/2", "z_f1": "1",
-      "S_r": "1", "S_g": "1", "S_h": "1",
-      "S_n": "EXPR:Fr(7)**22610",
-      "S_p1": "EXPR:Fr(7)**22610*Fr(11305)**2",
-      "S_f3": "EXPR:Fr(7)**6460",
-      "S_f2": "EXPR:Fr(7)**6460*Fr(5)**1190",
-      "S_f1": "EXPR:Fr(7)**6460*Fr(5)**1190*Fr(17)**40*Fr(2)**-30",
-      "S_p2": "EXPR:Fr(7)**6460*Fr(5)**1190*Fr(17)**40*Fr(2)**-30*Fr(5)**4",
-      "u_p1_A": "1", "u_p1_B": "2/3", "u_p1_AB": "-2", "u_p1_C": "1/3",
-      "u_n_A": "1", "u_n_C": "-11306/11305",
-      "u_g_A": "1", "u_g_B": "3/2", "u_g_AB": "3", "u_g_C": "-15/14",
-      "u_h_A": "1", "u_h_C": "-4/7",
-      "u_f3_A": "1", "u_f3_C": "-3/10",
-      "u_f2_A": "1", "u_f2_B": "2/3", "u_f2_AB": "-2", "u_f2_C": "10/51",
-      "u_f1_A": "1", "u_f1_Pi": "1/3", "u_f1_disc": "-1/3", "u_f1_z": "1",
-      "u_f1_C": "-4/15",
-      "u_p2_A": "1", "u_p2_V": "8/3", "u_p2_disc": "4/3", "u_p2_qA": "-8",
-      "u_p2_C": "8/9",
-      "u_S_r": "1", "u_S_g": "1",
-      "u_S_n": "EXPR:Fr(7)**-22610",
-      "u_S_p1": "EXPR:Fr(7)**-22610*Fr(11305)**-2",
-      "u_S_h": "1",
-      "u_S_f3": "EXPR:Fr(7)**-6460",
-      "u_S_f2": "EXPR:Fr(7)**-6460*Fr(5)**-1190",
-      "u_S_f1": "EXPR:Fr(7)**-6460*Fr(5)**-1190*Fr(17)**-40*Fr(2)**30",
-      "u_S_p2": "EXPR:Fr(7)**-6460*Fr(5)**-1190*Fr(17)**-40*Fr(2)**30*Fr(5)**-4"
-    }
+  {
+   "name": "H2",
+   "type": "chain2 clean neutral, case-III zero-arrival vertex",
+   "kappa": 7,
+   "pi": "3/7",
+   "kbar": 4,
+   "nu": 7,
+   "rho": "1/2",
+   "w": "1/2",
+   "M": 2,
+   "d_p": 14,
+   "d_q": 8,
+   "i": 3230,
+   "deg_p_f": 45220,
+   "d_f": 3230,
+   "D_f": 22610,
+   "d_g": 4845,
+   "deg_p_g": 67830,
+   "death_gap": "2/11305",
+   "kappa_note": "kappa_H2 = 7 = nu_H2*kappa_G/nu_G: the H5a Q-value at the doubly realized vertex; NOT kappa_G*nu_H2 = 49",
+   "m": "m_v >= 1 exists (Prop 8.1: q_v is the top of h_{m_v}); level 0 (g) alive with exponent (3/2)i_v verified; NO integer m_v is jointly realizable with any global ladder -- this is the certified obstruction (tower.obstruction)",
+   "mu_k_note": "mu_v = alpha_{m_v}, k_v = i_v(mu_v-1): unrealizable for the same reason"
   },
-  "sources": {
-    "design": "xmodel/sol-gluing-design.md (SS1 route certificate, SS2.2-2.3 arrivals, SS3 LEAD-PILOT, SS5 build plan)",
-    "census": "BOOK-OFFAXIS.md SS11a (promoted E5-corrected census) + SS11 ADDENDUM (dual-certified transport for this cell)",
-    "transport_replay": "xmodel/grok-sixcells-review.md (SOUND: per-vertex substitutions, px5 completions, case-IV triples)",
-    "H5a": "AUDIT.md H5a resolution (Q-value + E5 forced; xmodel/sol-h5a.md + grok-h5a-review.md SOUND)",
-    "tower_laws": "SHEET6-TEMPLATE.md SS0-1 (Prop 4.2/8.1 instantiation, td=6 genome), SHEET6-L1.md SS1 (Prop 8.1/4.6/Cor 6.1 on-page), SHEET6-R6.md SS4.0 (delta descent, mu-recursion, 8.3(ii) scoping correction), SHEET6-R6-REVIEW.md (St 8.3(ii)/3.11(i)/3.17(i) printed scope), SHEET6-H3.md (root Bezout data)"
+  {
+   "name": "F3",
+   "type": "chain2 pure-b (l=7,eps=3), nu-representative of the free-characteristic family",
+   "kappa": 35,
+   "pi": "32/35",
+   "kbar": 3,
+   "nu": 5,
+   "rho": "1/2",
+   "w": "1/2",
+   "M": 2,
+   "d_p": 38,
+   "d_q": 6,
+   "i": 170,
+   "deg_p_f": 6460,
+   "d_f": "646/7",
+   "D_f": 3230,
+   "d_g": "969/7",
+   "deg_p_g": 9690,
+   "death_gap": "3/3230",
+   "m": "m_v >= 1 exists (Prop 8.1: q_v is the top of h_{m_v}); level 0 (g) alive with exponent (3/2)i_v verified; NO integer m_v is jointly realizable with any global ladder -- this is the certified obstruction (tower.obstruction)",
+   "mu_k_note": "mu_v = alpha_{m_v}, k_v = i_v(mu_v-1): unrealizable for the same reason"
+  },
+  {
+   "name": "F2",
+   "type": "chain2 dirty l=4,k=1,(m_j)=(3)",
+   "kappa": 595,
+   "pi": "118/119",
+   "kbar": 5,
+   "nu": 17,
+   "rho": "1/7",
+   "w": "2/7",
+   "M": 7,
+   "d_p": 119,
+   "d_q": 35,
+   "i": 10,
+   "deg_p_f": 1190,
+   "d_f": "2/7",
+   "D_f": 170,
+   "d_g": "3/7",
+   "deg_p_g": 1785,
+   "death_gap": "1/34",
+   "m": "m_v >= 1 exists (Prop 8.1: q_v is the top of h_{m_v}); level 0 (g) alive with exponent (3/2)i_v verified; NO integer m_v is jointly realizable with any global ladder -- this is the certified obstruction (tower.obstruction)",
+   "mu_k_note": "mu_v = alpha_{m_v}, k_v = i_v(mu_v-1): unrealizable for the same reason"
+  },
+  {
+   "name": "F1",
+   "type": "chain2 dirty l=2,k=2,(m_j)=(1,1)",
+   "kappa": 2975,
+   "pi": "2971/2975",
+   "kbar": 4,
+   "nu": 5,
+   "rho": "1/4",
+   "w": "3/4",
+   "M": 4,
+   "d_p": 20,
+   "d_q": 16,
+   "i": 2,
+   "deg_p_f": 40,
+   "d_f": "2/595",
+   "D_f": 10,
+   "d_g": "3/595",
+   "deg_p_g": 60,
+   "death_gap": "2/5",
+   "m": "m_v >= 1 exists (Prop 8.1: q_v is the top of h_{m_v}); level 0 (g) alive with exponent (3/2)i_v verified; NO integer m_v is jointly realizable with any global ladder -- this is the certified obstruction (tower.obstruction)",
+   "mu_k_note": "mu_v = alpha_{m_v}, k_v = i_v(mu_v-1): unrealizable for the same reason"
+  },
+  {
+   "name": "P2",
+   "type": "pole (a,b,nu)=(1,2,3)",
+   "kappa": 8925,
+   "pi": "1784/1785",
+   "kbar": 5,
+   "nu": 3,
+   "rho": "1/2",
+   "w": "3/2",
+   "M": 2,
+   "deg_p_f": 4,
+   "d_f": "2/8925",
+   "D_f": 2,
+   "d_g": "3/8925",
+   "deg_p_g": 6,
+   "m": 0,
+   "pole_identity": "d_f + d_g = 5/8925 = 1 - pi (Prop 4.1 equality)"
   }
+ ],
+ "edges": [
+  {
+   "L": "R0",
+   "U": "G",
+   "case": "IV-terminal",
+   "mu_e": 203490,
+   "note": "terminal read up; pi_G = (nu_G - kbar_G)/nu_G = 2/7; deg p_f,G = k_f = mult(p_f,R0, c0)",
+   "N_e": 678300,
+   "r_f": 138027267000,
+   "r_g": 207040900500,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  },
+  {
+   "L": "N",
+   "U": "P1",
+   "case": "II",
+   "law": "R1.2",
+   "n": 45219,
+   "mu_e": 1,
+   "Delta": 1,
+   "tau": 4,
+   "n_cell": 1,
+   "continuation": {
+    "c": "c_n",
+    "A": "A_n",
+    "d": "d_n",
+    "nu_L": 11305,
+    "mult": 1
+   },
+   "N_e": 678285,
+   "r_f": 1356570,
+   "r_g": 2034855,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  },
+  {
+   "L": "G",
+   "U": "N",
+   "case": "II",
+   "law": "R2.1-II",
+   "n": 33913,
+   "mu_e": 1,
+   "continuation": {
+    "c": "c_g",
+    "A": "A_g",
+    "d": "d_g",
+    "nu_L": 7,
+    "mult": 1
+   },
+   "N_e": 1017390,
+   "r_f": 23003187900,
+   "r_g": 34504781850,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  },
+  {
+   "L": "H2",
+   "U": "F3",
+   "case": "II",
+   "law": "BOOK-2.1",
+   "n": 17,
+   "mu_e": 2,
+   "continuation": {
+    "c": "c_h",
+    "A": "A_h",
+    "d": "d_h",
+    "nu_L": 7,
+    "mult": 2
+   },
+   "N_e": 1153110,
+   "r_f": 7449090600,
+   "r_g": 11173635900,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  },
+  {
+   "L": "F3",
+   "U": "F2",
+   "case": "II",
+   "law": "BOOK-2.1",
+   "n": 46,
+   "mu_e": 7,
+   "continuation": {
+    "c": "c_f3",
+    "A": "A_f3",
+    "d": "d_f3",
+    "nu_L": 5,
+    "mult": 7
+   },
+   "N_e": 183540,
+   "r_f": 218412600,
+   "r_g": 327618900,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  },
+  {
+   "L": "F2",
+   "U": "F1",
+   "case": "II",
+   "law": "BOOK-2.1",
+   "n": 21,
+   "mu_e": 4,
+   "continuation": {
+    "c": "c_f2",
+    "A": "A_f2",
+    "d": "d_f2",
+    "nu_L": 17,
+    "mult": 4
+   },
+   "N_e": 16758,
+   "r_f": 670320,
+   "r_g": 1005480,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  },
+  {
+   "L": "F1",
+   "U": "P2",
+   "case": "II",
+   "law": "BOOK-2.1",
+   "n": 7,
+   "mu_e": 2,
+   "continuation": {
+    "c": "c_f1",
+    "A": "A_f1",
+    "d": "d_f1",
+    "nu_L": 5,
+    "mult": 2
+   },
+   "N_e": 1862,
+   "r_f": 7448,
+   "r_g": 11172,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  },
+  {
+   "L": "G",
+   "U": "H2",
+   "case": "III-E5",
+   "n": 7,
+   "mu_e": 2,
+   "note": "zero arrival at eta=0 (mu0=2); E5 raw n=7, n' = n/nu_G = 1; no continuation variable (certified direction zero, no L9 row)",
+   "N_e": 339150,
+   "r_f": 15336363000,
+   "r_g": 23004544500,
+   "chartMode": "PREFIX",
+   "transport_authority": {
+    "f": "ST3.17_F",
+    "g": "ST8.3_LIVE_j0",
+    "other_labels": "NONE (fails closed; milestone-2 object)"
+   }
+  }
+ ],
+ "chain2_book21": [
+  {
+   "parent": "P2",
+   "child": "F1",
+   "n": 7,
+   "l": 2
+  },
+  {
+   "parent": "F1",
+   "child": "F2",
+   "n": 21,
+   "l": 4
+  },
+  {
+   "parent": "F2",
+   "child": "F3",
+   "n": 46,
+   "l": 7
+  },
+  {
+   "parent": "F3",
+   "child": "H2",
+   "n": 17,
+   "l": 2
+  }
+ ],
+ "arrival": {
+  "w_U": "1/2",
+  "nu_U": 7,
+  "lambda": 4,
+  "M_U_raw": [
+   2,
+   4
+  ],
+  "mu0": 2,
+  "lambda_steps": [
+   2,
+   1,
+   1,
+   0,
+   0
+  ],
+  "provenance": "BOOK-OFFAXIS.md SS11a row (9,15,7,3)@2: E5 arrival w_U=1/2 (lambda 4; M2,4), recorded nu=7 legal; priced chain-2 witness (3/2,2)-[2]->(3/4,4)-[1]->(2/7,7)-[1]->(1/2,*) with cells (20,16),(119,35),(38,6)nu-rep,(14,8)"
+ },
+ "terminal": {
+  "type": "case IV direct",
+  "w": "2/3",
+  "M": 3,
+  "psi": 2,
+  "R_term": 3,
+  "j": 1,
+  "budget": 4,
+  "k_f": 203490,
+  "l_f": 67830,
+  "d_0x": 203490,
+  "deg_p_f_0x": 67830,
+  "closure_conditions": [
+   "(R1) d_(0,y)/deg p_f,G = 1 - w_G = 1/3; d_(0,y) = l_f = 67830",
+   "(R2) R_term = 1/(1-w_G) = 3; psi = ceil(R_term)-1 = 2; sum lambda_F <= td-1-psi = 4 (attained: 4)",
+   "(R3) 0 < w_G = 2/3 < 1; M_G = 3 >= 2; j = M_G(1-w_G) = 1 in N*",
+   "(R4) root law: p_f,(0,y) = S_r(eta-c0)^203490, k_f = 203490, l_f = d_(0,y) = 67830",
+   "(R5) corrected St 3.12 chart swap (SIGRAY-AUDIT.md:44): d_(0,x) = k_f = 203490, deg p_f,(0,x) = l_f = 67830",
+   "(R6) Keller identity on shared f,g jets in z = x^(-1/K), K = 2374050: z^(K+1)(J_f,eta J_g,z - J_f,z J_g,eta) + z^K(Dint_f J_f J_g,eta - Dint_g J_f,eta J_g) - K z^(K pi + Dint_f + Dint_g) = 0 with (Dint_f, Dint_g) = (K d_f,v, K d_g,v) per chart; STATED, emission deferred to milestone 2 (jet windows); planted f=x, g=y unit test mandatory before emission"
+  ]
+ },
+ "t1_local": [
+  {
+   "vertex": "G",
+   "nu": 7,
+   "d_p": 9,
+   "d_q": 15,
+   "eps": 2,
+   "p_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    }
+   ],
+   "q_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    },
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-Fr(2,3)*A"
+     },
+     "mult": 1
+    }
+   ],
+   "C": "-Fr(14,15)*A*A",
+   "s_of_t": "t - (2/3)A",
+   "note": "certified merge-local solution (sol-td7-law table row 1); B_g = (2/3)A_g"
+  },
+  {
+   "vertex": "N",
+   "nu": 11305,
+   "d_p": 11305,
+   "d_q": 11306,
+   "eps": 0,
+   "p_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    }
+   ],
+   "q_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    }
+   ],
+   "C": "-Fr(11305,11306)*A",
+   "s_of_t": "1",
+   "note": "clean neutral row: 11306*C + 11305*A = 0"
+  },
+  {
+   "vertex": "H2",
+   "nu": 7,
+   "d_p": 14,
+   "d_q": 8,
+   "eps": 0,
+   "p_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 2
+    }
+   ],
+   "q_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    }
+   ],
+   "C": "-Fr(7,4)*A",
+   "s_of_t": "1",
+   "note": "4*C + 7*A = 0"
+  },
+  {
+   "vertex": "F3",
+   "nu": 5,
+   "d_p": 38,
+   "d_q": 6,
+   "eps": 3,
+   "p_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 7
+    }
+   ],
+   "q_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    }
+   ],
+   "C": "-Fr(10,3)*A",
+   "s_of_t": "1",
+   "note": "3*C + 10*A = 0; p = eta^3(t-A)^7"
+  },
+  {
+   "vertex": "F2",
+   "nu": 17,
+   "d_p": 119,
+   "d_q": 35,
+   "eps": 0,
+   "p_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 4
+    },
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-Fr(3,2)*A"
+     },
+     "mult": 3
+    }
+   ],
+   "q_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    },
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-Fr(3,2)*A"
+     },
+     "mult": 1
+    }
+   ],
+   "C": "Fr(51,10)*A*A",
+   "s_of_t": "B-side (t - (3/2)A)",
+   "note": "p=(t-A)^4(t-B)^3, B=(3/2)A; 10*C - 51*A^2 = 0"
+  },
+  {
+   "vertex": "F1",
+   "nu": 5,
+   "d_p": 20,
+   "d_q": 16,
+   "eps": 0,
+   "p_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 2
+    },
+    {
+     "coeffs_t": {
+      "2": "1",
+      "1": "-3*A",
+      "0": "3*A*A"
+     },
+     "mult": 1
+    }
+   ],
+   "q_factors": [
+    {
+     "coeffs_t": {
+      "1": "1",
+      "0": "-A"
+     },
+     "mult": 1
+    },
+    {
+     "coeffs_t": {
+      "2": "1",
+      "1": "-3*A",
+      "0": "3*A*A"
+     },
+     "mult": 1
+    }
+   ],
+   "C": "-Fr(15,4)*A**3",
+   "s_of_t": "R1(t) = t^2 - 3At + 3A^2 (Sig=3A, Pi=3A^2)",
+   "note": "p=(t-A)^2 R1(t), q=eta(t-A)R1(t); disc R1 = -3A^2 != 0"
+  }
+ ],
+ "tower": {
+  "side": "PLUS",
+  "h0": "g",
+  "base": "f",
+  "type": "(alpha,beta) = (2,3): kbar_pole = a(alpha+beta) = 5 at both poles; root rectangles (k_f,l_f) = (203490,67830), (k_g,l_g) = (305235,101745), ratio 3",
+  "ladder": [
+   {
+    "j": 0,
+    "kl": [
+     2,
+     3
+    ],
+    "alpha": 0,
+    "alpha_next": "3/2",
+    "gap": "5/2",
+    "killed_at": "P1 and P2 (poles, m=0; Prop 5.3 pole pair (p_f, p_g))",
+    "sigma_relations": [
+     "P1: pole scales lam,m with m^2 = sigma0*lam^3; g-top eta(eta^2-(3/2)A); h1-top = -(3/4)sigma0*lam^3*A^2*(eta^2-(4/3)A) after the forced collapse B=(3/2)A",
+     "P2: g-top eta^6+U eta^3+V, U=-(3/2)A, V=(3/8)A^2 force the eta^12/eta^9/eta^6 collapse of g^2-sigma0 f^3; h1-top = -(1/8)A^3 eta^3 + (9/64)A^4 (deg 3 = mult from F1's dead member, exact handoff)"
+    ]
+   },
+   {
+    "j": 1,
+    "kl": "OBSTRUCTED",
+    "alpha": "3/2",
+    "gap": "no admissible value",
+    "note": "level 1 is claimed by both branches with incompatible death gaps; see obstruction"
+   }
+  ],
+  "death_gaps": [
+   {
+    "vertex": "F1",
+    "gap": "2/5"
+   },
+   {
+    "vertex": "F2",
+    "gap": "1/34"
+   },
+   {
+    "vertex": "F3",
+    "gap": "3/3230"
+   },
+   {
+    "vertex": "H2",
+    "gap": "2/11305"
+   },
+   {
+    "vertex": "G",
+    "gap": "1/13566"
+   },
+   {
+    "vertex": "N",
+    "gap": "5653/11305"
+   }
+  ],
+  "laws": {
+   "delta": "delta_j(v) = kappa_v(d_f,v + d_hj,v - alpha_j d_f,v - 1 + pi_v) = D_f,v*g_j - kbar_v in N, strictly decreasing in j; m_v = first zero (Prop 4.2 proof p.20, SHEET6-TEMPLATE.md:53-55, SHEET6-R6.md:126-128)",
+   "mu": "mu_v = alpha_{m_v}; alpha_{j+1} = alpha_j + (k_j-1)l_j/k_j (Prop 4.2 (9) p.19); k_v = i_v(mu_v - 1) in N (Prop 8.1)",
+   "death_gap": "at the killer of level j: g_j := l_j/k_j + 1 - alpha_j = kbar_v/D_f,v (equivalent, given St 3.17(i) f-transport, to Cor 6.1's q-law d_q = kbar*deg p_f/D_f; verified both ways)",
+   "alive": "for j < m_v: (h_j^+)^{k_j} = sigma_j (f^+)^{l_j} at v (Prop 4.2(iii)); p_hj,v = H*(p_f,v)^{l_j/k_j} with every factor exponent in N; d_hj,v = (l_j/k_j) d_f,v",
+   "dead": "at j = m_v: p_hj,v = S*p_red^{k_v}*q_v, deg = k_v d_p + d_q (Prop 8.1(ii)/(iv)); L4: mult(p_hm,v, c) = (mu_v-1)mult(p_f,v, c)+1 at any root c of p_f",
+   "counts": "St 3.9 elementary equality all h; St 3.17(i) f-equality composite; St 3.11(i) monotone deg_U <= mult_L general; St 8.3(ii) member equality j <= m_deeper NOT relied on at j = m (SHEET6-R6.md:137-140)"
+  },
+  "obstruction": {
+   "status": "OBSTRUCTED",
+   "tier": "tower ladder (Prop 4.2 + Prop 8.1(iv) + Cor 6.1), level 1",
+   "cases": [
+    "A",
+    "B",
+    "C"
+   ],
+   "statement": "No global approximate-root ladder (k_j,l_j) is compatible with the synchronized direct route. The forced death gaps g = kbar_v/D_f,v put the chain-1 pole-adjacent vertex X (gap (nu_X+1)/(2nu_X) > 1/2, nu_X | 11305 odd, shape-independent) above F1 (gap 2/5) and every other vertex below 5/2, so the first post-pole death is X, possibly after a NON-KILLING prefix of printed-legal ladder steps (Grok finding-1 repair). While X and F1 are both alive every prefix step has k_j | 2 (Prop 4.2(iii)/Prop 8.1 integrality at X's (t-A)^2-power and F1's orbit mults (2,1,1) with i=2); the legal prefix menu in the window (gap(X), 5/2) is exactly (k,l) in {(1,2),(2,3),(2,5)} (g = 3/2, 1, 2; all delta-integral at every non-pole vertex). Case A (empty prefix): X kills level 1 with (k_1,l_1) = (2nu_X, 2nu_X+1), refused by k | 2. Case B: F1 kills level 1 first -- impossible, delta_X in N cannot skip its zero at gap(X) > 2/5 (death at X would need nu_X = -5). Case C (any nonempty prefix, r steps with k=2 and odd l, any number of k=1 steps): alpha_m = 3/2 + r/2 (mod 1), and X-death needs l_m/k_m = alpha_m - 1/2 + 1/(2nu_X) with k_m | 2: k_m = 1 forces 2nu_X | r*nu_X + 1 (impossible for r even or odd), k_m = 2 forces nu_X | 1. All three cases are refuted for every chain-1 stack: the stack is forced to be pure n=1 clean neutrals (w-freeze at 2; Delta - n = (n-1)(nu-1) >= 1), its nu-product is forced to 11305 (odd) by the f-degree ladder 2 -> 22610, and its pole-adjacent gap is shape-independent.",
+   "checked_stacks": 15,
+   "checked_stacks_note": "all divisors nu_X >= 2 of 11305 = 5*7*17*19 (odd, so nu_X >= 5); covers every multi-neutral stack since only the pole-adjacent vertex's gap and the F1/X caps enter; case C covers every prefix length via the r-parity closed form plus explicit r = 0..5",
+   "m2_branch": {
+    "s_from_N": 22611,
+    "s_from_H2": 11309,
+    "note": "fixed-representative corroboration (nu_N = 11305): with m_G = 2, h_1 alive at G with exponent s and h_1 dead at N (m_N = 1; the alive-at-N branches 11305 | s die separately by the q-tail count excess), the N-side drop window [deg_U*dpi, mult_L*dpi] pins s = 22611 exactly while the H2-side window pins s = 11309 exactly; m_G = 1 is separately refuted (Prop 8.1@N needs deg 22611 > 11306 = arriving mult, violating St 3.11(i))"
+   },
+   "dependencies": [
+    "CONJECTURE H5a resolved to the Q-value (AUDIT.md H5a resolution, promoted): kappa_F = nu_F kappa_G/nu_G and the E5 identities (g')/(h')",
+    "E5 corrected case-III transport (SHEET6-III.md:131-147)",
+    "Prop 4.2 (pp. 19-20): (k_j,l_j) ladder, gcd(k_j,l_j)=1, mu-recursion (9), delta_j in N strict descent, alive identity (iii); alive/dead dichotomy of printed (10) (grok-tower-review.md finding 4)",
+    "St 8.3(i) (p. 41) + Cor 6.1 searrow + Not 4.1 prefix order: both merge branches share one ladder and the same polynomials h_j while alive (grok-tower-review.md finding 3 -- the citation upgrade for the single-ladder reading)",
+    "Prop 8.1(i)-(v) (pp. 39-41): p_f = S p^i, p_hm = S p^k q, k = i(mu-1), M = gcd, i*l_j/k_j in N (p. 40)",
+    "Cor 6.1 (p. 32): deg p_h,F = (d_h,F/d_F) deg p_F at searrow vertices; the q-law d_q = kbar deg p_f/D_f is its Prop 8.1/theta rewrite (grok-tower-review.md finding 5)",
+    "St 3.11(i) monotone branch counts; St 3.17(i) composite f-equality; St 3.9 elementary equality",
+    "BOOK R1.2/R2.1 and the w-freeze of chain 1 at w=2 (BOOK-OFFAXIS.md:521-529); Delta - n = (n-1)(nu-1) >= 1",
+    "P1 budget: lambda total 4 = 6 - psi exactly (no charged chain-1 step available)",
+    "the campaign formalization of the tower laws calibrated on the td=6 template (SHEET6-TEMPLATE.md SS1, exact replay in cases/tower_check.py C2)"
+   ],
+   "scope": "KILLS (hostile-reviewed SOUND-WITH-ERRATA, xmodel/grok-tower-review.md; errata folded in): the tower tier of every synchronized direct-completion representative of (9,15,7,3)@2 in the design SS3.2 family (any chain-1 clean stack). The trunk completion (35,15,7,5)@(2/5,5,1) shares the clash (terminal-independence, review finding 2) and is machine-checked dead in cases/towers/t9_15_trunk.json -- jointly a CELL-level tower kill, itself pending review. NOT machine-checked here: the other 16 SS11a cells; the SS11a arrival census and the LEAD-PILOT leading tier (83/74, SAT over Q) are reproduced, not retracted. 'Untouched' always means 'not machine-checked'.",
+   "review_status": "REVIEWED SOUND-WITH-ERRATA (xmodel/grok-tower-review.md) as the direct-family kill with the Case C erratum, now repaired in-engine; the joint cell-level statement (with the trunk certificate) is NEW and requires its own review",
+   "exhaustion_scope": "universal in nu_X >= 2 (closed-form identities + lattice 2..300); the 15 divisor classes are the displayed representative's instantiation; M_U/free-characteristic/padding variants covered by C3-V"
+  }
+ },
+ "poles": [
+  {
+   "vertex": "P1",
+   "full_degrees": [
+    2,
+    3
+   ],
+   "wronskian": "2 p pg' - 3 p' pg = C_p1",
+   "rows": [
+    "2*B_p1-3*A_p1",
+    "2*A_p1*B_p1-C_p1"
+   ]
+  },
+  {
+   "vertex": "P2",
+   "full_degrees": [
+    4,
+    6
+   ],
+   "wronskian": "2 p pg' - 3 p' pg = C_p2",
+   "rows": [
+    "2*U_p2+3*A_p2",
+    "A_p2*U_p2+4*V_p2",
+    "3*A_p2*V_p2-C_p2"
+   ]
+  }
+ ],
+ "pilot": {
+  "note": "LEAD-PILOT of the design SS3.5: 83 vars / 74 rows, SAT over Q at the (P11)-(P13) anchor; regenerated from this certificate by cases/tower_check.py C5 and compared token-for-token",
+  "variables": "A_p1,B_p1,C_p1,A_n,C_n,A_g,B_g,C_g,A_h,C_h,A_f3,C_f3,A_f2,B_f2,C_f2,A_f1,Sig_f1,Pi_f1,C_f1,A_p2,U_p2,V_p2,C_p2,c_n,c_g,c_h,c_f3,c_f2,c_f1,d_n,d_g,d_h,d_f3,d_f2,d_f1,z_f2,z_f1,S_r,S_g,S_n,S_p1,S_h,S_f3,S_f2,S_f1,S_p2,u_p1_A,u_p1_B,u_p1_AB,u_p1_C,u_n_A,u_n_C,u_g_A,u_g_B,u_g_AB,u_g_C,u_h_A,u_h_C,u_f3_A,u_f3_C,u_f2_A,u_f2_B,u_f2_AB,u_f2_C,u_f1_A,u_f1_Pi,u_f1_disc,u_f1_z,u_f1_C,u_p2_A,u_p2_V,u_p2_disc,u_p2_qA,u_p2_C,u_S_r,u_S_g,u_S_n,u_S_p1,u_S_h,u_S_f3,u_S_f2,u_S_f1,u_S_p2",
+  "local_rows": [
+   "2*B_p1-3*A_p1",
+   "2*A_p1*B_p1-C_p1",
+   "11306*C_n+11305*A_n",
+   "-14*A_g+21*B_g",
+   "-7*A_g*B_g-5*C_g",
+   "4*C_h+7*A_h",
+   "3*C_f3+10*A_f3",
+   "2*B_f2-3*A_f2",
+   "10*C_f2-51*A_f2^2",
+   "Sig_f1-3*A_f1",
+   "Pi_f1-3*A_f1^2",
+   "4*C_f1+15*A_f1^3",
+   "2*U_p2+3*A_p2",
+   "A_p2*U_p2+4*V_p2",
+   "3*A_p2*V_p2-C_p2"
+  ],
+  "separation_rows": [
+   "z_f2-A_f2+B_f2",
+   "z_f1-A_f1^2+Sig_f1*A_f1-Pi_f1"
+  ],
+  "scale_transports": [
+   {
+    "row": "S_g-S_r",
+    "edge": "R0->G",
+    "exponent_audit": {
+     "mult": {
+      "got": 203490,
+      "want": 203490
+     }
+    }
+   },
+   {
+    "row": "S_h-S_g*A_g^22610",
+    "edge": "G->H2 (zero direction)",
+    "exponent_audit": {
+     "i_G": {
+      "got": 22610,
+      "want": 22610
+     },
+     "sign": {
+      "got": 1,
+      "want": 1
+     }
+    },
+    "note": "reduced coeff at 0 is -A_g; exponent i_G = 22610 even, sign +"
+   },
+   {
+    "row": "S_n-S_g*c_g^45220*d_g^22610",
+    "edge": "G->N",
+    "exponent_audit": {
+     "c_exp": {
+      "got": 45220,
+      "want": 45220
+     },
+     "d_exp": {
+      "got": 22610,
+      "want": 22610
+     }
+    },
+    "note": "reduced coeff c_g^2*d_g raised to i_G = 22610"
+   },
+   {
+    "row": "S_p1-S_n*d_n^2",
+    "edge": "N->P1",
+    "exponent_audit": {
+     "d_exp": {
+      "got": 2,
+      "want": 2
+     }
+    }
+   },
+   {
+    "row": "S_f3-S_h*d_h^6460",
+    "edge": "H2->F3",
+    "exponent_audit": {
+     "d_exp": {
+      "got": 6460,
+      "want": 6460
+     }
+    },
+    "note": "reduced coeff d_h^2 raised to i_H2 = 3230"
+   },
+   {
+    "row": "S_f2-S_f3*c_f3^510*d_f3^1190",
+    "edge": "F3->F2",
+    "exponent_audit": {
+     "c_exp": {
+      "got": 510,
+      "want": 510
+     },
+     "d_exp": {
+      "got": 1190,
+      "want": 1190
+     }
+    },
+    "note": "reduced coeff c^3 d^7 raised to i_F3 = 170"
+   },
+   {
+    "row": "S_f1-S_f2*d_f2^40*z_f2^30",
+    "edge": "F2->F1",
+    "exponent_audit": {
+     "d_exp": {
+      "got": 40,
+      "want": 40
+     },
+     "z_exp": {
+      "got": 30,
+      "want": 30
+     }
+    },
+    "note": "reduced coeff d^4 z^3 raised to i_F2 = 10"
+   },
+   {
+    "row": "S_p2-S_f1*d_f1^4*z_f1^2",
+    "edge": "F1->P2",
+    "exponent_audit": {
+     "d_exp": {
+      "got": 4,
+      "want": 4
+     },
+     "z_exp": {
+      "got": 2,
+      "want": 2
+     }
+    },
+    "note": "reduced coeff d^2 z raised to i_F1 = 2"
+   }
+  ],
+  "guard_rows": [
+   "u_p1_A*A_p1-1",
+   "u_p1_B*B_p1-1",
+   "u_p1_AB*A_p1-u_p1_AB*B_p1-1",
+   "u_p1_C*C_p1-1",
+   "u_n_A*A_n-1",
+   "u_n_C*C_n-1",
+   "u_g_A*A_g-1",
+   "u_g_B*B_g-1",
+   "u_g_AB*A_g-u_g_AB*B_g-1",
+   "u_g_C*C_g-1",
+   "u_h_A*A_h-1",
+   "u_h_C*C_h-1",
+   "u_f3_A*A_f3-1",
+   "u_f3_C*C_f3-1",
+   "u_f2_A*A_f2-1",
+   "u_f2_B*B_f2-1",
+   "u_f2_AB*A_f2-u_f2_AB*B_f2-1",
+   "u_f2_C*C_f2-1",
+   "u_f1_A*A_f1-1",
+   "u_f1_Pi*Pi_f1-1",
+   "u_f1_disc*Sig_f1^2-4*u_f1_disc*Pi_f1-1",
+   "u_f1_z*z_f1-1",
+   "u_f1_C*C_f1-1",
+   "u_p2_A*A_p2-1",
+   "u_p2_V*V_p2-1",
+   "u_p2_disc*U_p2^2-4*u_p2_disc*V_p2-1",
+   "u_p2_qA*A_p2^2+u_p2_qA*U_p2*A_p2+u_p2_qA*V_p2-1",
+   "u_p2_C*C_p2-1",
+   "u_S_r*S_r-1",
+   "u_S_g*S_g-1",
+   "u_S_n*S_n-1",
+   "u_S_p1*S_p1-1",
+   "u_S_h*S_h-1",
+   "u_S_f3*S_f3-1",
+   "u_S_f2*S_f2-1",
+   "u_S_f1*S_f1-1",
+   "u_S_p2*S_p2-1"
+  ],
+  "anchor": {
+   "A_p1": "1",
+   "B_p1": "3/2",
+   "C_p1": "3",
+   "A_n": "1",
+   "C_n": "-11305/11306",
+   "A_g": "1",
+   "B_g": "2/3",
+   "C_g": "-14/15",
+   "A_h": "1",
+   "C_h": "-7/4",
+   "A_f3": "1",
+   "C_f3": "-10/3",
+   "A_f2": "1",
+   "B_f2": "3/2",
+   "C_f2": "51/10",
+   "A_f1": "1",
+   "Sig_f1": "3",
+   "Pi_f1": "3",
+   "C_f1": "-15/4",
+   "A_p2": "1",
+   "U_p2": "-3/2",
+   "V_p2": "3/8",
+   "C_p2": "9/8",
+   "c_n": "1",
+   "c_g": "1",
+   "c_h": "1",
+   "c_f3": "1",
+   "c_f2": "1",
+   "c_f1": "1",
+   "d_n": "11305",
+   "d_g": "7",
+   "d_h": "7",
+   "d_f3": "5",
+   "d_f2": "17",
+   "d_f1": "5",
+   "z_f2": "-1/2",
+   "z_f1": "1",
+   "S_r": "1",
+   "S_g": "1",
+   "S_h": "1",
+   "S_n": "EXPR:Fr(7)**22610",
+   "S_p1": "EXPR:Fr(7)**22610*Fr(11305)**2",
+   "S_f3": "EXPR:Fr(7)**6460",
+   "S_f2": "EXPR:Fr(7)**6460*Fr(5)**1190",
+   "S_f1": "EXPR:Fr(7)**6460*Fr(5)**1190*Fr(17)**40*Fr(2)**-30",
+   "S_p2": "EXPR:Fr(7)**6460*Fr(5)**1190*Fr(17)**40*Fr(2)**-30*Fr(5)**4",
+   "u_p1_A": "1",
+   "u_p1_B": "2/3",
+   "u_p1_AB": "-2",
+   "u_p1_C": "1/3",
+   "u_n_A": "1",
+   "u_n_C": "-11306/11305",
+   "u_g_A": "1",
+   "u_g_B": "3/2",
+   "u_g_AB": "3",
+   "u_g_C": "-15/14",
+   "u_h_A": "1",
+   "u_h_C": "-4/7",
+   "u_f3_A": "1",
+   "u_f3_C": "-3/10",
+   "u_f2_A": "1",
+   "u_f2_B": "2/3",
+   "u_f2_AB": "-2",
+   "u_f2_C": "10/51",
+   "u_f1_A": "1",
+   "u_f1_Pi": "1/3",
+   "u_f1_disc": "-1/3",
+   "u_f1_z": "1",
+   "u_f1_C": "-4/15",
+   "u_p2_A": "1",
+   "u_p2_V": "8/3",
+   "u_p2_disc": "4/3",
+   "u_p2_qA": "-8",
+   "u_p2_C": "8/9",
+   "u_S_r": "1",
+   "u_S_g": "1",
+   "u_S_n": "EXPR:Fr(7)**-22610",
+   "u_S_p1": "EXPR:Fr(7)**-22610*Fr(11305)**-2",
+   "u_S_h": "1",
+   "u_S_f3": "EXPR:Fr(7)**-6460",
+   "u_S_f2": "EXPR:Fr(7)**-6460*Fr(5)**-1190",
+   "u_S_f1": "EXPR:Fr(7)**-6460*Fr(5)**-1190*Fr(17)**-40*Fr(2)**30",
+   "u_S_p2": "EXPR:Fr(7)**-6460*Fr(5)**-1190*Fr(17)**-40*Fr(2)**30*Fr(5)**-4"
+  }
+ },
+ "sources": {
+  "design": "xmodel/sol-gluing-design.md (SS1 route certificate, SS2.2-2.3 arrivals, SS3 LEAD-PILOT, SS5 build plan)",
+  "census": "BOOK-OFFAXIS.md SS11a (promoted E5-corrected census) + SS11 ADDENDUM (dual-certified transport for this cell)",
+  "transport_replay": "xmodel/grok-sixcells-review.md (SOUND: per-vertex substitutions, px5 completions, case-IV triples)",
+  "H5a": "AUDIT.md H5a resolution (Q-value + E5 forced; xmodel/sol-h5a.md + grok-h5a-review.md SOUND)",
+  "tower_laws": "SHEET6-TEMPLATE.md SS0-1 (Prop 4.2/8.1 instantiation, td=6 genome), SHEET6-L1.md SS1 (Prop 8.1/4.6/Cor 6.1 on-page), SHEET6-R6.md SS4.0 (delta descent, mu-recursion, 8.3(ii) scoping correction), SHEET6-R6-REVIEW.md (St 8.3(ii)/3.11(i)/3.17(i) printed scope), SHEET6-H3.md (root Bezout data)"
+ },
+ "variants": [
+  {
+   "M_U": 2,
+   "nu3": 5,
+   "padding_factor": 7,
+   "pad_nu": 7,
+   "i_G": 22610,
+   "chain1_product": 11305,
+   "k_f": 203490,
+   "realization": "displayed representative: pure-b F3(nu=5)=(38,6) M=2, then neutral padding H2=(14,8) nu=7 as the arrival vertex (M_U = 2)"
+  },
+  {
+   "M_U": 4,
+   "nu3": 7,
+   "padding_factor": 1,
+   "i_G": 4420,
+   "chain1_product": 2210,
+   "k_f": 39780,
+   "realization": "pure-b F3'(nu=7)=(52,8) M=4 as the arrival vertex (no padding); chain-1 product 2210 EVEN -- covered by the universal nu_X refutation"
+  }
+ ]
 }

@@ -1,16 +1,20 @@
 # TOWER-9-15.md — tower certificates for the (9,15,7,3)@mu0=2 completions
 
 Status: **MILESTONE 1 EXECUTED (2026-08-13); direct-route kill REVIEWED
-SOUND-WITH-ERRATA (`xmodel/grok-tower-review.md`), both errata folded in
-(Case C repair, §3; trunk machine-check, §7); the joint CELL-LEVEL kill
-is NEW and requires its own hostile review.**
+SOUND-WITH-ERRATA (`xmodel/grok-tower-review.md`), errata folded in
+(Case C §3, trunk §7); Sol's pre-repair review (`sol-tower-review.md`,
+BROKEN) triaged: finding 1 = the already-repaired Case C (identity
+verified row-for-row, §5), findings 2/3 repaired here (§8 schema
+reconciliation; §7a `M_U`/free-characteristic coverage via the
+universal exhaustion); the CELL-LEVEL kill is ON HOLD pending Sol
+re-review.**
 Engine: `cases/tower_check.py` (exact `Fraction`, no floats, no solver;
-506 checks over both certificates incl. a 10-case negative-perturbation
+647 checks over both certificates incl. a 12-case negative-perturbation
 self-test, exit 0). Certificates: `cases/towers/t9_15_direct.json`,
 `cases/towers/t9_15_trunk.json`.
 Task source: `xmodel/sol-gluing-design.md` §5.4 first solver objective,
 milestone 1, plus the coordinator's post-review work items (Case C
-repair; trunk spine machine-check).
+repair; trunk machine-check; Sol finding-2/3 disposition).
 
 VERDICT IN ONE PARAGRAPH. Both priced completions of `(9,15,7,3)@2`
 (direct case-IV at `(2/3,3,2)`, λ=4; one trunk step through `(35,15,7,5)`
@@ -264,12 +268,32 @@ genuinely legal). The repaired exhaustion:
   No prefix length escapes (closed form over the `r`-parity, plus
   explicit `r = 0..5` in the checker).
 
-The checker runs all three cases for all 15 admissible `nu_X` and
-requires every one refuted; the prefix menu, the `k | 2` cap, and the
-window-emptiness (`no vertex gap inside (gap(X), 5/2)`; intermediate
-stack gaps `< 2/5`) are each separate checks. **No global ladder
-exists; the tower certificate cannot be completed for any
-representative of the synchronized direct route family.**
+The checker runs all three cases; the prefix menu, the `k | 2` cap, and
+the window-emptiness (`no vertex gap inside (gap(X), 5/2)`; intermediate
+stack gaps `< 2/5`) are each separate checks.
+
+**What the original 15-stack exhaustion covered, precisely** (Sol
+finding-3 hygiene): it quantified over the chain-1 synchronization
+stacks — via their pole-adjacent class `nu_X | 11305` — of the *fixed*
+chain-2 representative (`M_U = 2` at H2, `nu_F3 = 5`, the unique charged
+predecessor DAG, one padding vertex `nu = 7`). It did not by itself
+cover the `M_U = 4` raw arrival, the free pure-b characteristic, or
+other padding stacks.
+
+**Universality (the extension).** Inspect the three refutations: none
+uses `nu_X | 11305`, oddness, or any other trace of the fixed chain-2
+realization. They are identities in `nu_X >= 2`: case A needs only
+`2 nu_X > 2`; case C needs only that `2 nu_X` never divides
+`r nu_X + 1` (from `2nu - (nu+1) = nu - 1 >= 1`) and that `nu_X` never
+divides 1; case B needs only
+`5(nu+1) - 4nu = nu + 5 > 0`. The checker states each as an algebraic
+identity instantiated on `nu_X = 2..300` (`UNIVERSAL case A/B/C`
+checks), so **every chain-1 stack of every chain-2 realization is
+covered** — the 15 divisor classes are the displayed representative's
+instantiation, not the coverage boundary. The chain-2-side freedom
+(`M_U`, free characteristic, padding) is closed in §7a. **No global
+ladder exists for any representative of either completion's route
+family.**
 
 Fixed-representative corroboration (`nu_N = 11305`, the design's own
 choice), banked as `m2_branch` in the certificate: `m_G = 1` dies
@@ -308,6 +332,17 @@ verbatim; `Delta - n = (n-1)(nu-1) >= 1` replaces the w-monotonicity
 lattice as the cited identity; check counts below are transcript counts,
 not theorems.
 
+**Sol review timeline** (`xmodel/sol-tower-review.md`, BROKEN verdict):
+Sol reviewed the pre-repair snapshot (258-check engine, two-case
+exhaustion, direct certificate only). Its CRITICAL finding 1 is the
+same gap Grok found: the alive-alive level-1 pairs — and its table is
+*exactly* the repaired Case C menu (§5 for the row-for-row identity).
+Its finding 6 overlaps Grok's finding 6 (tautology, hard-coding), both
+repaired. Its findings 2 (schema) and 3 (`M_U = 4` / free-characteristic
+coverage) were live against the current revision and are addressed in
+§8 and §7a respectively. Its findings 4 and 5 CONFIRM (H8) usage and
+the gap arithmetic.
+
 ## 5. Why this does not contradict anything banked
 
 - The §11 ADDENDUM certifies the transport tier + vertex-local T1 +
@@ -328,6 +363,19 @@ not theorems.
   correction is respected); it uses only the monotone count law plus
   vertex-local Prop 8.1/4.2/Cor 6.1, with St 8.3(i) entering only for
   the shared-ladder identification of live members.
+- **Sol finding 1: resolved by repair, same pairs.** Sol's CRITICAL
+  table of unhandled alive-alive level-1 pairs
+  (`sol-tower-review.md:56-69`) is the Case C menu of §3, identically:
+  pairs `{(1,2),(2,3),(2,5)}`, gaps `3/2, 1, 2`, X-exponents `4, 3, 5`,
+  F1-exponents `(8,4), (6,3), (10,5)`, `delta_1(F1) = 11, 6, 16`, and
+  the full delta rows at `(G,H2,F3,F2,F1)` —
+  `(101740,33911,4842,250,11)`, `(67825,22606,3227,165,6)`,
+  `(135655,45216,6457,335,16)`. The checker verifies this identity
+  row-for-row (`Sol table row` checks) on both certificates, and Sol's
+  disposition item 2 ("continue the three branches to their later
+  deaths") is exactly the Case C closed form (any prefix length, both
+  `k_m` values). The finding was found independently by both reviewers
+  and repaired once.
 
 ## 6. What would have to be wrong for the kills to fail
 
@@ -388,65 +436,159 @@ explicitly ("no non-stack death gap inside the window"). The three-case
 exhaustion of §3 then runs verbatim on the trunk certificate: all 15
 stacks, cases A/B/C, every one refuted.
 
+### 7a. Arrival and predecessor variants: all four raw records covered
+
+Sol finding 3: the census dedup drops `M_U`, leaving 4 raw equality
+records (`M_U in {2,4}` x `{direct, trunk}`), and the chain-2
+predecessor is free in the pure-b characteristic and in zero-cost
+neutral padding. Coverage, machine-checked (C3-V on both certificates):
+
+- **The free data are exactly `(nu3, padding, M_U)`.** The charged
+  predecessor DAG is unique (`grok-sixcells-review.md` finding 4, SOUND:
+  `(3/2,2) -λ2- (20,16) -λ1- (119,35) -λ1- pure-b l7e3 - (1/2,*)`; "no
+  other charged parent exists"), so F1 = `(20,16)` with `i = 2` and
+  F2 = `(119,35)` with `i = 10` sit on *every* realization, and the
+  freedom is the pure-b characteristic `nu3`, the neutral padding
+  stack, and the arrival `M_U`.
+- **`M_U` realization.** The pure-b family `(3+7 nu3, 1+nu3)` has
+  `M = gcd(4, nu3+1)`: `nu3 = 1 (mod 4)` gives `M = 2` (displayed:
+  `nu3 = 5`, then padding `H2 = (14,8)` arrives with `M_U = 2`);
+  `nu3 = 3 (mod 4)` gives `M = 4` and the pure-b vertex itself is the
+  legal odd-characteristic arrival (minimal: `nu3 = 7`, cell `(52,8)`,
+  `i_G = 4420`, chain-1 product `2210`). Both variants' frames,
+  BOOK-2.1 transports (`n = (7+17 nu3)/2`), `kbar = (1+nu3)/2`,
+  `rho = w = 1/2`, i-ledgers, `k_f`/`i_T` data, and E5 (I4)
+  `nu_U`-freeness are individually checked, per terminal.
+- **Characteristic-independence of the clash** (the finding-2 method,
+  applied to predecessors): the clash needs only (i) `gap(X) =
+  (nu_X+1)/(2 nu_X)` — chain-1-side, derived from P1's frame alone;
+  (ii) F1's cap `k | 2` and gap `2/5` — fixed by the unique charged
+  DAG and the P2 handoff; (iii) window emptiness — parametric bounds
+  `gap(F3'(nu)) = (1+nu)/(170(3+7nu)) < 2/5`, padding gaps
+  `< 2/5` once `i >= 170`, intermediate chain-1 gaps `< 1/2`, all
+  stated as identities and instantiated on `nu = 2..300`; (iv) budget
+  saturation and the w-freeze — realization-independent. The universal
+  `nu_X >= 2` refutation (§3) then applies to every stack of every
+  variant — including the `M_U = 4` variant's *even* chain-1 product
+  `2210` (e.g. `nu_X = 2`, gap `3/4`, case A pair `(4,5)`: refused).
+  Parity note: if a variant made `i_G` odd, the chain-1 product
+  `i_G/2` would not be integral and (H8) i-sync would fail at the
+  spine tier — dead either way.
+
 **Consequence (NEW, pending hostile review): the `(9,15,7,3)@2 cell is
-tower-dead.** Both §11a deduplicated equality completions (4 raw
-arrival records) are obstructed at the tower tier; there is no third
-completion in the promoted book (`grok-sixcells-review.md` finding 2:
-the px5 census has exactly these two). This is the campaign's first
-cell-level next-tier kill. Milestone-2 emission for this cell is moot
-unless review overturns a dependency. No terminal-dependent escape
-exists within the checked perimeter: an escape would have to change
-`i_G`, the chain-1 nu-product, `i_{F1}`, the pole types, or the budget
-saturation, and each is re-verified on the trunk spine.
+tower-dead.** All four §11a raw equality completion records — both
+deduplicated summaries, both `M_U` arrivals, every free-characteristic
+and padding realization, every chain-1 stack — are obstructed at the
+tower tier; there is no other completion in the promoted book
+(`grok-sixcells-review.md` finding 2: the px5 census has exactly
+these). This is the campaign's first cell-level next-tier kill.
+Milestone-2 emission for this cell is moot unless review overturns a
+dependency. An escape would have to change `i_{F1}`, the pole types,
+the `gap(X)` formula, or the budget saturation — each pinned by data
+shared across all variants and re-verified per certificate.
 
-## 8. Scope and consequences
+## 8. Schema reconciliation: design §1 `RouteCertificate` vs `td7-tower-certificate/v1`
 
-- **KILLED, reviewed:** the tower tier of every synchronized
-  representative of the direct `(2/3,3,2)` completion (design §3.2
-  family) — `grok-tower-review.md` SOUND-WITH-ERRATA, errata repaired.
-- **KILLED, new, pending review:** the trunk `(2/5,5,1)` completion,
-  hence the `(9,15,7,3)@2` cell at the tower tier (§7).
+Sol finding 2: the JSON schema is not the design's (F2) record. It was
+never meant to be byte-compatible — it is an *obstruction* certificate —
+but every design field must map to a field here, an equivalent, or an
+explicit honest absence. The table below is normative; genuine semantic
+omissions found in the audit have been fixed (marked FIXED).
+
+| design §1 field | this certificate | status |
+|---|---|---|
+| `V, E, v_root, {v_pole}, K` (F2) | `vertices[]`, `edges[]`, `type: root/pole`, `K` | match |
+| `pi_v, kappa_v, nu_v, kbar_v` | same names per vertex | match |
+| `d_{f,v}` (x-degree) | `d_f` (rational) + `D_f = kappa*d_f` + `Dint = K*d_f` (K-integrality checked) | match (three normalizations recorded) |
+| `i_v, d_{p,v}, d_{q,v}, M_v, rho_v, w_v` | same names | match |
+| `lambda_v^lb / lambda_v^exact / authority` | `arrival.lambda_steps` + `terminal.budget` (equality-saturated; authority = px5 census + `grok-sixcells-review.md` finding 4 unique charged DAG) | match at route level; per-vertex split not separated (equality leaves no slack to allocate) |
+| `mu_v, k_v` (F2a: `mu_v = alpha_{m_v}`, `k_v = i_v(mu_v-1)`) | `m` / `mu_k_note` per non-pole vertex: **proved jointly unrealizable** — these are the obstructed fields; poles carry `m = 0` | honest absence, FIXED (was silent; now stated per vertex) |
+| `case_e, n_e, mu_e` | `case`, `n`, `mu_e` per edge | match |
+| `chartMode_e, slots_e / {c_{e,j}}` | `chartMode: "PREFIX"` per edge — no slot certificate exists (milestone-2 object; design §1.5 names this label for partial projections) | honest absence, FIXED (was silent) |
+| `TransportAuthority_{e,h}` | `transport_authority: {f: ST3.17_F, g: ST8.3_LIVE_j0, other_labels: NONE-fails-closed}` per edge | FIXED (was silent); h_j-labels beyond g have no authority — that is the obstruction |
+| `Derived(N_e, {r_{e,h}}_h)` | `N_e, r_f, r_g` per edge, machine-checked: `N_e = K(pi_U - pi_L)`, `r_h = K(d_{h,L} - d_{h,U}) = deg p_{h,U} * N_e` | FIXED (was absent; now derived + verified on every edge, both certificates) |
+| zero/nonzero + arrival label | `continuation` presence/absence + `arrival` block + case-III notes | match |
+| shape `(eps, l, k, (m_j), ell_ex)` | `t1_local[].p_factors/q_factors/eps` (full factored shapes) + `type` strings | match (factored form) |
+| tower labels `h_0..h_m, (k_j, l_j), side/base, d_{h_j,v}, m_v` | `tower.side/h0/base/type/ladder` level 0 complete (`(k_0,l_0) = (2,3)`, both pole collapses, `d_g` at every vertex = level-0 `d_{h_0,v}`); levels ≥ 1: `OBSTRUCTED` with the three-case proof | level 0 match; deeper levels are the theorem |
+| `tower_s[j]` (sigma) | `sigma_relations` (P1/P2 scale relations `m^2 = sigma0 lam^3` etc.) — prose-level, not owned algebraic variables | honest partial: milestone-2 object; the obstruction needs no sigma value |
+| `TopPatternCertificate` (pole/root) | `poles[].rows` + `root_pattern` + the C3 collapse checks (exact polynomials in-engine) | match at the tier used |
+| `JetWindows / Omega_B` | none — no jet emission | honest absence (milestone 2; moot under the obstruction) |
+| root/x-side terminal data | `terminal` block: (R1)–(R6) with k_f, l_f, d_0x, swap | match at numerical tier; (R6) stated not emitted |
+| root-of-unity choices (F5) | none — no branch choices reached (obstruction precedes) | honest absence |
+| `K` + Prop 3.1 suitability witnesses (J0) | `K = lcm(kappa_v)` labeled a **candidate** with per-chart `kappa_v \| K` rider; no Prop 3.1 witnesses | honest partial (Sol confirmed the checker tests only `K*pi, K*d_f`; `N_e/r_h` integrality now also exercises K on every edge) |
+| completeness label | `tier` field: "spine COMPLETE, level-0 COMPLETE, levels >= 1 PROVED EMPTY" | FIXED (was only a status string) |
+
+Two schema-level review points adopted verbatim: Sol's correction that
+Prop 4.2 constructs per-vertex data and a common label needs a prefix
+authority — recorded as the `single_ladder` law with St 8.3(i) +
+Not 4.1 + Cor 6.1 and the searrow membership of every non-pole vertex;
+and the relabeling demand — the `tier` field now says exactly what is
+complete and what is proved empty, and the LEAD-PILOT gate is described
+as a stored-fixture regression *plus* edge-derived direction/derivative
+rows, not full IR validation (design §2.3 canonicalization is a
+milestone-2 object).
+
+## 9. Scope and consequences
+
+- **KILLED, reviewed (Grok), Case C erratum repaired:** the tower tier
+  of every synchronized representative of the direct `(2/3,3,2)`
+  completion, now for every `M_U`/characteristic/padding realization
+  (§3 universality + §7a).
+- **KILLED, new, ON HOLD pending Sol re-review:** the trunk `(2/5,5,1)`
+  completion (§7) and hence the `(9,15,7,3)@2` **cell** at the tower
+  tier — all four §11a raw equality records (§7a). Per the
+  coordinator, the cell-kill claim is not promoted until Sol re-reviews
+  this revision; §11a is not edited from here.
 - **NOT machine-checked** (never "safe", only unexamined): the other 16
   §11a cells. The mechanism is a candidate lemma for them, not a
-  theorem (review finding 7): per-cell it needs (i) type-(2,3) poles,
-  (ii) odd chain-1 characteristic product, (iii) a small-`i` chain-2
-  vertex alive at the stack death (`k | i` tight), (iv) budget
-  saturation forbidding a charged chain-1 step. The right next
+  theorem (Grok finding 7): per-cell it needs (i) type-(2,3) poles,
+  (ii) a pole-adjacent chain-1 gap in `(1/2, 3/4]` — universality
+  removed the oddness ingredient — (iii) a small-`i` chain-2 vertex
+  alive at the stack death (`k | i` tight; here `i_{F1} = 2`), (iv)
+  budget saturation forbidding a charged chain-1 step. The right next
   artifact is the finding-7 checklist run over the 17-cell book —
-  (type, i_G parity, min i on the priced chain-2, chain-1 budget
-  residual, pole-adjacent gap vs smallest chain-2 gap) — each row
-  either instantiating this squeeze as a corollary or naming its
-  escape ingredient; that replaces milestone 2 for this cell.
-- The LEAD-PILOT leading tier (83/74, SAT over Q) and the §11a arrival
-  census are reproduced and stand.
+  (type, min i on the priced chain-2, chain-1 budget residual,
+  pole-adjacent gap vs smallest chain-2 gap) — each row either
+  instantiating this squeeze as a corollary or naming its escape
+  ingredient; that replaces milestone 2 for this cell.
+- The LEAD-PILOT leading tier (83/74, SAT over Q — a necessary-prefix
+  SAT point on a route family now tower-obstructed above it, per Sol's
+  closing remark) and the §11a arrival census are reproduced and stand.
 
-## 9. Reproduction
+## 10. Reproduction
 
 ```bash
 cd /Users/dc/code/math/jc72108
-python3 cases/tower_check.py    # < 1 s, exit 0, 506 checks (transcript count)
+python3 cases/tower_check.py    # < 1 s, exit 0, 647 checks (transcript count)
 ```
 
 The engine validates **both** certificates (`t9_15_direct.json`, then
-`t9_15_trunk.json`): C1 spine, C1b scale-exponent audits (direct), C2
-td=6 calibration, C3 tower layer + the repaired **three-case** 15-stack
-obstruction exhaustion (prefix menu, `k | 2` cap, window emptiness,
-closed-form + explicit-`r` Case C, real F1→P2 `mult = 3` handoff), C4
-T1/Wronskian layer at two generic A-points (7 rows on the trunk, incl.
-T), C5 LEAD-PILOT token-for-token regeneration against the literal §3.5
-block extracted from `xmodel/sol-gluing-design.md` at run time (direct
-only — the trunk has no design pilot block to gate against), C5b the
-exact rational anchor on all 74 regenerated rows, C6 ten negative
-perturbations — T1 sign flip, omitted nu in a derivative,
-`B_g = (3/2)A`, non-H5a `kappa_H2` composition, mixed-reading case-III
-`n`, one-slot scale shift, tampered obstruction record, **case list
-without Case C**, tampered trunk terminal `w`, tampered trunk (2.1)
-`l` — each must raise at least one failure, and does. No msolve, no
-network, no floats; `ops/FLEET.md` respected. The certificate JSONs are
-the machine-readable statements of record; this file is their
-derivation.
+`t9_15_trunk.json`): C1 spine incl. the g-layer (J5) drops and the
+derived `N_e/r_f/r_g/chartMode/TransportAuthority` edge data, C1b
+scale-exponent audits (direct), C2 td=6 calibration, C3 tower layer +
+the **three-case universal** obstruction exhaustion (prefix menu with
+the Sol-table row-for-row identity, `k | 2` cap, window emptiness,
+UNIVERSAL `nu_X >= 2` closed forms + `2..300` lattice + the 15
+displayed divisor classes, real F1→P2 `mult = 3` handoff), C3-V the
+`M_U`/free-characteristic/padding variant coverage (both raw records
+per terminal + parametric family bounds), C4 T1/Wronskian layer at two
+generic A-points (7 rows on the trunk, incl. T), C5 LEAD-PILOT
+token-for-token regeneration against the literal §3.5 block extracted
+from `xmodel/sol-gluing-design.md` at run time (direct only — the trunk
+has no design pilot block to gate against), C5b the exact rational
+anchor on all 74 regenerated rows, C6 twelve negative perturbations —
+T1 sign flip, omitted nu in a derivative, `B_g = (3/2)A`, non-H5a
+`kappa_H2` composition, mixed-reading case-III `n`, one-slot scale
+shift, tampered obstruction record, case list without Case C, `M_U=4`
+variant with a `gcd = 2` cell, `M_U=4` record without a realized
+variant, tampered trunk terminal `w`, tampered trunk (2.1) `l` — each
+must raise at least one failure, and does. No msolve, no network, no
+floats; `ops/FLEET.md` respected. The certificate JSONs are the
+machine-readable statements of record; this file is their derivation.
 
 Files: `cases/towers/t9_15_direct.json`, `cases/towers/t9_15_trunk.json`
 (certificates), `cases/tower_check.py` (checker), this document,
-`xmodel/grok-tower-review.md` (review of record for the direct kill).
-No git commit was made.
+`xmodel/grok-tower-review.md` + `xmodel/sol-tower-review.md` (reviews;
+Grok = review of record for the direct kill, Sol = pre-repair snapshot
+whose live findings 2/3 are addressed in §8/§7a). No git commit was
+made.
