@@ -35,6 +35,8 @@ Examples:
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
+import hashlib
 import json
 import re
 import shutil
@@ -147,6 +149,16 @@ def singular_string(poly: Poly2) -> str:
 
 def support_json(poly: Poly2) -> List[List[int]]:
     return [list(mon) for mon in sorted(poly)]
+
+
+def bank_digest(data: Sequence[Tuple[Poly2, Poly2]]) -> Tuple[int, str]:
+    """Canonical byte length/SHA-256 for a finite support-pair bank."""
+    def line(pair: Tuple[Poly2, Poly2]) -> str:
+        p, q = pair
+        encode = lambda poly: ",".join(f"{i}.{j}" for i, j in sorted(poly))
+        return f"P:{encode(p)}|Q:{encode(q)}\n"
+    payload = "".join(sorted(line(pair) for pair in data)).encode("ascii")
+    return len(payload), hashlib.sha256(payload).hexdigest()
 
 
 # ---------------------------------------------------------------------------
@@ -542,6 +554,7 @@ def primary_search() -> Tuple[List[Tuple[Poly2, Poly2]], Dict[str, object]]:
     if any((1, 2) in q for _, q in data):
         raise AssertionError("q_12 rigidity row changed")
 
+    bank_bytes, bank_sha256 = bank_digest(data)
     meta: Dict[str, object] = {
         "P_hull_points": len(P_HULL),
         "Q_hull_points": len(Q_HULL),
@@ -554,6 +567,8 @@ def primary_search() -> Tuple[List[Tuple[Poly2, Poly2]], Dict[str, object]]:
         "surviving_P": len(surviving_p),
         "Q_affine_dimensions": sorted(affine_dimensions),
         "data": len(data),
+        "bank_bytes": bank_bytes,
+        "bank_sha256": bank_sha256,
         "cartier_zero": len(vanishing),
         "cartier_nonzero": len(data) - len(vanishing),
         "odd_odd_patterns": {str(list(pattern)): count
@@ -593,12 +608,18 @@ def relaxed_hull_search() -> Tuple[List[Tuple[Poly2, Poly2]], Dict[str, object]]
     if (len(ps), len(qs), len(ps) * len(qs), len(data), len(zero), bounded_zero) != (
             64, 8192, 524288, 288, 48, 4):
         raise AssertionError("relaxed-hull audit changed")
+    bank_bytes, bank_sha256 = bank_digest(data)
+    zero_bytes, zero_sha256 = bank_digest(zero)
     meta: Dict[str, object] = {
         "P_collision_masks": len(ps),
         "Q_collision_masks": len(qs),
         "pairs_screened": len(ps) * len(qs),
         "keller_collisions": len(data),
+        "bank_bytes": bank_bytes,
+        "bank_sha256": bank_sha256,
         "cartier_zero": len(zero),
+        "cartier_zero_bank_bytes": zero_bytes,
+        "cartier_zero_bank_sha256": zero_sha256,
         "cartier_nonzero": len(data) - len(zero),
         "bounded_same_support_fixed_point_zero": bounded_zero,
     }
@@ -610,24 +631,39 @@ def generic_degrees(data: Sequence[Tuple[Poly2, Poly2]]) -> List[int]:
     singular = shutil.which("Singular")
     if not singular:
         raise RuntimeError("Singular is required for --degrees")
-    lines = ["ring r=(2,U,V),(x,y),dp;", "option(redSB);"]
-    for index, (p, q) in enumerate(data):
-        lines.extend((
-            f"poly P{index}={singular_string(p)};",
-            f"poly Q{index}={singular_string(q)};",
-            f"ideal I{index}=P{index}-U,Q{index}-V;",
-            f'print("D {index} "+string(vdim(std(I{index}))));',
-        ))
-    lines.append("quit;")
-    completed = subprocess.run(
-        [singular, "-q"], input="\n".join(lines), text=True,
-        stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True,
-    )
-    if "error occurred" in completed.stdout.lower():
-        raise RuntimeError("Singular reported an error:\n" + completed.stdout[:4000])
-    parsed = {int(index): int(degree)
-              for index, degree in re.findall(r"^D\s+(\d+)\s+(\d+)\s*$",
-                                              completed.stdout, re.MULTILINE)}
+    indexed = list(enumerate(data))
+    worker_count = min(4, max(1, len(indexed)))
+    chunks = [indexed[offset::worker_count] for offset in range(worker_count)]
+
+    def run_chunk(chunk: Sequence[Tuple[int, Tuple[Poly2, Poly2]]]) -> Dict[int, int]:
+        lines = [
+            "ring r=(2,U,V),(x,y),dp;",
+            "option(redSB);",
+            "proc genericDegree(poly p, poly q)",
+            "{",
+            "  ideal fiber=p-U,q-V;",
+            "  return(vdim(std(fiber)));",
+            "}",
+        ]
+        for index, (p, q) in chunk:
+            lines.append(
+                f'print("D {index} "+string(genericDegree('
+                f'{singular_string(p)},{singular_string(q)})));')
+        lines.append("quit;")
+        completed = subprocess.run(
+            [singular, "-q"], input="\n".join(lines), text=True,
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True,
+        )
+        if "error occurred" in completed.stdout.lower():
+            raise RuntimeError("Singular reported an error:\n" + completed.stdout[:4000])
+        return {int(index): int(degree)
+                for index, degree in re.findall(r"^D\s+(\d+)\s+(\d+)\s*$",
+                                                completed.stdout, re.MULTILINE)}
+
+    parsed: Dict[int, int] = {}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=worker_count) as executor:
+        for result in executor.map(run_chunk, chunks):
+            parsed.update(result)
     if len(parsed) != len(data):
         raise RuntimeError(f"parsed {len(parsed)} of {len(data)} Singular degrees")
     return [parsed[index] for index in range(len(data))]
@@ -718,6 +754,9 @@ def print_primary(degrees: bool, json_all: bool) -> None:
         odd_indices = [index for index, degree in enumerate(degree_list) if degree & 1]
         meta["generic_degree_histogram"] = histogram
         meta["odd_degree_data"] = len(odd_indices)
+        odd_bytes, odd_sha256 = bank_digest([data[index] for index in odd_indices])
+        meta["odd_bank_bytes"] = odd_bytes
+        meta["odd_bank_sha256"] = odd_sha256
     print("REGISTERED HULL+ONE-SHELL SEARCH")
     print(json.dumps(meta, sort_keys=True, indent=2))
     print("surviving P supports:")
@@ -754,7 +793,11 @@ def print_relaxed(degrees: bool, json_vanishing: bool) -> None:
             raise AssertionError("an odd-degree relaxed vanishing datum appeared")
     print("RELAXED INSIDE-HULL AUDIT (core vertices not retained)")
     print(json.dumps(meta, sort_keys=True, indent=2))
-    print("SIDE FINDING: 48 unrestricted W2-vanishing data; all have even generic degree")
+    if degrees:
+        print("SIDE FINDING: 48 unrestricted W2-vanishing data; all have even generic degree")
+    else:
+        print("SIDE FINDING: 48 unrestricted W2-vanishing data "
+              "(use --degrees to recheck their exact degree parity)")
     if json_vanishing:
         payload = []
         for index, (p, q) in enumerate(data):

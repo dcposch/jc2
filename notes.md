@@ -456,3 +456,9 @@
   binds only via Jelonek components needing cross-fiber data (not template-pinned).
   Instrument parked with activation condition recorded. NF-Z repair in re-review;
   Sol lateral sweep cooking; screens ~9h into R2.
+- 2026-08-14 ~13:05: NF-Z round 4 STILL-SHORT (3rd CE). Pattern: the free zone carries
+  ordered arithmetic that resists finite invariants. PIVOT: reframe as NF-D — prove a
+  depth cap on LIVE neutral words (dead-beyond-depth makes enumeration finite without
+  quotient completeness; neutral-depth rigidity corollary + td-7 N-closure are the
+  evidence). Witt lane: NEVER-VANISHES-PROVED on the registered stratum (clean
+  rigidity; disproof lane closes there) — commit on marker.
