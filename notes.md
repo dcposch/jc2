@@ -424,3 +424,8 @@
   U_7C = open conjecture (no cheap discriminator). Launching gluing milestone 1 agent:
   (9,15) direct-route tower certificate per sol-gluing-design v2 build plan. Box02 mem
   plateaued 1226G (F4 possibly converging).
+- 2026-08-13 ~22:20: Box02 triage — 3 stuck7 farm lanes were eating 975G (c2.q 423G,
+  c1.RED 308G, c10.RED 244G) vs ~360G for ALL TEN res32 screens. Culled stuck7
+  (farm riders, back to queue for post-drain/decomposition). Screens now have ~1.6T
+  runway through their 03:43 PDT caps. Nice signal: nolog lanes (26G) < plain (38G)
+  — the §7 pins genuinely shrink the F4.
