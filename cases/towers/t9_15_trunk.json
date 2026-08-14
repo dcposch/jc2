@@ -830,11 +830,12 @@
     "St 8.3(i) + Cor 6.1 + Not 4.1: single shared ladder on both merge branches (grok-tower-review.md finding 3)",
     "BOOK R1.2/R2.1/P1; w-freeze of chain 1 (BOOK-OFFAXIS.md:521-529); Delta - n = (n-1)(nu-1) >= 1",
     "trunk step data: sol-sixcells.md SS2.4 / grok-sixcells-review.md finding 2 (the unique lambda=1 menu edge (35,15,7,5))",
-    "the campaign formalization calibrated on the td=6 template (cases/tower_check.py C2)"
+    "the campaign formalization calibrated on the td=6 template (cases/tower_check.py C2)",
+    "insertion closure: N1 (n=1 forcing), N2 (odd P_pre), N3 (joint gcd(4,2P)=2 cap), N4 (uniform Dprev gap bound) -- implementing the repair sketched and verified escape-free in xmodel/sol-tower-rereview.md finding 1"
    ],
    "scope": "KILLS (pending hostile review): the tower tier of every synchronized representative of the trunk completion (2/5,5,1) of (9,15,7,3)@2. Together with the direct certificate this exhausts BOTH SS11a deduplicated equality completions of the cell: the (9,15,7,3)@2 CELL is tower-dead -- the first cell-level next-tier kill. 'Untouched' elsewhere always means 'not machine-checked': the other 16 SS11a cells are genuinely unexamined (see the finding-7 checklist in TOWER-9-15.md SS8).",
    "review_status": "NEW RESULT -- requires hostile review before promotion (this trunk certificate postdates grok-tower-review.md and is itself unreviewed)",
-   "exhaustion_scope": "universal in nu_X >= 2 (closed-form identities + lattice 2..300); the 15 divisor classes are the displayed representative's instantiation; M_U/free-characteristic/padding variants covered by C3-V"
+   "exhaustion_scope": "universal in nu_X >= 2 (closed-form identities + lattice 2..300); the 15 divisor classes are the displayed representative's instantiation; M_U/free-characteristic/padding variants covered by C3-V; zero-cost neutral insertions at every eligible state closed by lemmas N1-N4 (C3-N; Sol re-review finding 1)"
   }
  },
  "poles": [
@@ -892,5 +893,101 @@
    "i_T": 13260,
    "realization": "pure-b F3'(nu=7)=(52,8) M=4 arrival; trunk: i_T = 13260, k_f = 464100, l_f = 278460"
   }
- ]
+ ],
+ "insertions": {
+  "perimeter": "IN-PERIMETER: zero-cost clean-resonant state-preserving neutral insertions belong to every filed record's realization family (xmodel/sol-gluing-design.md SS2.4 COVERAGE 'zero-cost SCCs, neutral padding... remain symbolic' and SS4.1 kill quantifier 'neutral-depth family'); the px5/closure book is state-level and cannot see them (states are unchanged), so this is NOT a census under-enumeration -- the census prices states, the kill quantifies realizations; legality of Sol's example verified against R1.2, BOOK(2.1), M/w conservation, and the P0 zero charge (budget untouched: direct 4 = 6-psi, trunk 5 = 6-psi)",
+  "sol_example": {
+   "cell": [
+    6,
+    4
+   ],
+   "l": 2,
+   "nu": 3,
+   "position": "P2-adjacent, state (3/2,2)",
+   "tau": "9/2",
+   "n": 13,
+   "kbar": 6,
+   "rho": "3/2",
+   "M": 2,
+   "i_Y": 2,
+   "deg_p_f_Y": 12,
+   "i_F1": 6,
+   "gap_F1": "2/15",
+   "i_F2": 30,
+   "i_G_scale": 3,
+   "note": "xmodel/sol-tower-rereview.md finding 1: legal zero-cost state-preserving clean neutral; moves i_F1 to 6 and gap(F1) to 2/15; replayed exactly in C3-N"
+  },
+  "states": [
+   {
+    "state": "(3/2,2)",
+    "position": "P2..F1 (pre-F1)",
+    "M": 2,
+    "nu_constraint": "odd (N2)",
+    "Dprev_min": 4,
+    "affects_caps": true
+   },
+   {
+    "state": "(3/4,4)",
+    "position": "F1..F2",
+    "M": 4,
+    "nu_constraint": "3 (mod 4)",
+    "Dprev_min": 40,
+    "affects_caps": false
+   },
+   {
+    "state": "(2/7,7)",
+    "position": "F2..F3'",
+    "M": 7,
+    "nu_constraint": "6 (mod 7), parity free",
+    "Dprev_min": 1190,
+    "affects_caps": false
+   },
+   {
+    "state": "(1/2,2)",
+    "position": "post-F3' padding (M_U=2 family)",
+    "M": 2,
+    "nu_constraint": "odd",
+    "Dprev_min": 2890,
+    "affects_caps": false
+   },
+   {
+    "state": "(1/2,4)",
+    "position": "post-F3' padding (M_U=4 family: 4-preserving pads legal)",
+    "M": 4,
+    "nu_constraint": "3 (mod 4)",
+    "Dprev_min": 2890,
+    "affects_caps": false
+   },
+   {
+    "state": "(2,1)",
+    "position": "chain-1 stack",
+    "M": 1,
+    "family": "chain1",
+    "note": "IS the X-family: pole-adjacent gap (nu+1)/(2nu), intermediates < 1/2; universal nu_X refutation"
+   },
+   {
+    "state": "(2/3,3)",
+    "position": "G..T (trunk)",
+    "M": 3,
+    "nu_constraint": "2 (mod 3)",
+    "Dprev_min": 39780,
+    "affects_caps": false
+   },
+   {
+    "state": "(2/5,5)",
+    "position": "rootward of T (terminal side)",
+    "M": 5,
+    "nu_constraint": "4 (mod 5)",
+    "Dprev_min": 464100,
+    "affects_caps": false
+   }
+  ],
+  "lemmas": {
+   "N1": "state-preserving zero-cost step has n = 1: Delta - n = (n-1)(nu-1) >= 1 makes w strictly drop for n >= 2, breaking the record's pinned state sequence",
+   "N2": "M-conservation: M_Y = gcd(l*nu, nu+1) = gcd(l, nu+1) = M_state; at the pre-F1 state (3/2,2) this forces every inserted nu odd, so P_pre = prod(nu) is odd",
+   "N3": "joint cap: the P2-adjacent chain-2 vertex has full f-pattern (t-A)^4 (exponent = deg p_f,P2 = 4, any (i,l) with i*l = 4) giving k | 4; F1 has simple reduced factors with i_F1 = 2*P_pre giving k | 2*P_pre; gcd(4, 2*P_pre) = 2 for odd P_pre restores k | 2 at every level alive at both (both are below gap(X), hence alive at X-death); P_pre = 1 is the no-insertion case",
+   "N4": "uniform gap bound: an inserted neutral above a poleward vertex of full f-degree Dprev has i = Dprev/l and death gap (nu+1)/(Dprev*nu), l-free; chain-2 has Dprev >= 4, so gap <= 3/8 < 2/5 for every nu >= 2; charged gaps only shrink (gap(F1) = 2/(5*P_pre)); window emptiness and gap(X) are untouched"
+  },
+  "closure": "the universal A/B/C refutation consumes only the k|2 cap (N3), window emptiness (N4), and gap(X) = (nu+1)/(2nu) (chain-1, P1-anchored) -- each insertion-invariant under every legal zero-cost neutral insertion at every eligible state of either terminal family; hence the kill closes over the full neutral-depth realization family"
+ }
 }

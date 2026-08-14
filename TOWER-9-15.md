@@ -1,20 +1,22 @@
 # TOWER-9-15.md — tower certificates for the (9,15,7,3)@mu0=2 completions
 
-Status: **MILESTONE 1 EXECUTED (2026-08-13); direct-route kill REVIEWED
-SOUND-WITH-ERRATA (`xmodel/grok-tower-review.md`), errata folded in
-(Case C §3, trunk §7); Sol's pre-repair review (`sol-tower-review.md`,
-BROKEN) triaged: finding 1 = the already-repaired Case C (identity
-verified row-for-row, §5), findings 2/3 repaired here (§8 schema
-reconciliation; §7a `M_U`/free-characteristic coverage via the
-universal exhaustion); the CELL-LEVEL kill is ON HOLD pending Sol
-re-review.**
+Status: **MILESTONE 1 EXECUTED (2026-08-13/14); direct-route kill
+REVIEWED SOUND-WITH-ERRATA (`xmodel/grok-tower-review.md`), errata
+folded in (Case C §3, trunk §7); Sol reviews triaged: `sol-tower-
+review.md` finding 1 = the already-repaired Case C (row-for-row
+identity, §5), findings 2/3 repaired (§8; §7a); `sol-tower-rereview.md`
+(STILL-BROKEN) finding 1 — the in-perimeter zero-cost neutral-insertion
+family — closed by lemmas N1–N4 (§7b), implementing the repair Sol
+itself sketched and verified escape-free; the CELL-LEVEL kill remains
+ON HOLD pending Sol re-review of §7b.**
 Engine: `cases/tower_check.py` (exact `Fraction`, no floats, no solver;
-647 checks over both certificates incl. a 12-case negative-perturbation
+696 checks over both certificates incl. a 14-case negative-perturbation
 self-test, exit 0). Certificates: `cases/towers/t9_15_direct.json`,
 `cases/towers/t9_15_trunk.json`.
 Task source: `xmodel/sol-gluing-design.md` §5.4 first solver objective,
 milestone 1, plus the coordinator's post-review work items (Case C
-repair; trunk machine-check; Sol finding-2/3 disposition).
+repair; trunk machine-check; Sol finding disposition; insertion-family
+perimeter adjudication and closure).
 
 VERDICT IN ONE PARAGRAPH. Both priced completions of `(9,15,7,3)@2`
 (direct case-IV at `(2/3,3,2)`, λ=4; one trunk step through `(35,15,7,5)`
@@ -475,17 +477,74 @@ neutral padding. Coverage, machine-checked (C3-V on both certificates):
   `i_G/2` would not be integral and (H8) i-sync would fail at the
   spine tier — dead either way.
 
-**Consequence (NEW, pending hostile review): the `(9,15,7,3)@2 cell is
+### 7b. Zero-cost neutral insertions: perimeter adjudication and closure
+
+Sol's re-review (`sol-tower-rereview.md` finding 1) accepted Case C but
+exhibited a legal family C3-V had not represented: state-preserving
+zero-cost neutral insertions at any chain state — with an explicit
+construction: insert `(l,nu) = (2,3)`, cell `(6,4)`, `M = 2`, before F1.
+Its rows are exact (replayed in C3-N): R1.2 `tau = 9/2`, `n = 13`,
+`kbar_Y = 6`, `rho_Y = 3/2`, `w = 3/2` conserved; BOOK(2.1)
+`(1/2+13)/18 = 6/8` and `(3/2+6)/12 = 20/32` with `kbar_{F1} = 4`
+preserved — and it moves `i_{F1}` to 6, `gap(F1)` to `2/15`, `i_G` and
+the chain-1 product up by 3, off every fixed value C3-V displayed.
+
+**Perimeter verdict: IN-PERIMETER.** The insertion is a genuine
+zero-cost (P0 clean-resonant, no charge — both budgets stay saturated
+at `4/5 = 6 - psi` untouched), handshake-exact (R1.2/2.1 above),
+state-preserving neutral. The px5/§11a closure is *state-level* and
+cannot see it (the state sequence is unchanged), so it is neither among
+nor excluded by the filed route strings — and this is **not** a census
+under-enumeration: the census prices states; the design's own coverage
+doctrine (§2.4 "zero-cost SCCs, neutral padding … remain symbolic",
+§4.1 "neutral-depth family") places these realizations inside every
+record's kill quantifier. So the kill had to close over them, and no
+perimeter-based restoration is available.
+
+**Closure (lemmas N1–N4, machine-checked; Sol's own sketch, which its
+re-review verified escape-free, made precise).** The universal A/B/C
+refutation consumes only three inputs, each insertion-invariant:
+
+- **N1** (menu): a state-preserving zero-cost step has `n = 1`
+  (`Delta - n = (n-1)(nu-1) >= 1` makes `w` strictly drop otherwise,
+  breaking the record's pinned state sequence). So insertions are clean
+  single-orbit neutrals `(l nu, nu+1)` with `gcd(l, nu+1) = M_state`.
+- **N2** (parity): at the pre-F1 state `(3/2,2)`, `gcd(l, nu+1) = 2`
+  forces every inserted `nu` odd — the pre-F1 product `P_pre` is odd.
+- **N3** (joint cap, replacing the false fixed `i_{F1} = 2`): the
+  P2-adjacent chain-2 vertex — F1 itself, or the first inserted
+  neutral — has full f-pattern `(t-A)^4` (exponent = `deg p_{f,P2} = 4`
+  for any shape `i*l = 4`), giving `k | 4`; F1 has simple reduced
+  factors with `i_{F1} = 2 P_pre`, giving `k | 2 P_pre`; both sit below
+  `gap(X)` (gaps `<= 3/8` and `2/(5 P_pre)`), hence are alive at
+  X-death, and `gcd(4, 2 P_pre) = 2` restores `k | 2` at every level
+  alive at both. (`P_pre = 1` is the no-insertion case.)
+- **N4** (uniform gap bound, replacing the `i >= 170` window): an
+  inserted neutral above a poleward vertex of full f-degree `Dprev` has
+  `i = Dprev/l` and death gap `(nu+1)/(Dprev nu)`, `l`-free; chain-2 has
+  `Dprev >= 4`, so the gap is `<= 3/8 < 2/5` for every `nu >= 2`;
+  charged gaps only shrink (`gap(F1) = 2/(5 P_pre)`); `gap(X)` and the
+  window emptiness are untouched.
+
+C3-N quantifies the eligible states explicitly for both terminal
+families — `(3/2,2)`, `(3/4,4)`, `(2/7,7)`, `(1/2,2)`, `(1/2,4)`
+(4-preserving pads make padded `M_U = 4` realizations legal, covered),
+`(2,1)` (the chain-1 stack = the X-family itself), `(2/3,3)`, and on
+the trunk `(2/5,5)` — with per-state `nu`-constraints, minimal `Dprev`,
+and cap-relevance, each row lattice-instantiated. Sol's example is
+replayed end-to-end, including both variants' scaled `i_G`/products
+(`67830/33915`, `13260/6630`).
+
+**Consequence (pending Sol re-review): the `(9,15,7,3)@2 cell is
 tower-dead.** All four §11a raw equality completion records — both
-deduplicated summaries, both `M_U` arrivals, every free-characteristic
-and padding realization, every chain-1 stack — are obstructed at the
-tower tier; there is no other completion in the promoted book
-(`grok-sixcells-review.md` finding 2: the px5 census has exactly
-these). This is the campaign's first cell-level next-tier kill.
-Milestone-2 emission for this cell is moot unless review overturns a
-dependency. An escape would have to change `i_{F1}`, the pole types,
-the `gap(X)` formula, or the budget saturation — each pinned by data
-shared across all variants and re-verified per certificate.
+deduplicated summaries, both `M_U` arrivals, every free-characteristic,
+padding, and zero-cost insertion realization at every eligible state,
+every chain-1 stack — are obstructed at the tower tier; there is no
+other completion in the promoted book (`grok-sixcells-review.md`
+finding 2). This is the campaign's first cell-level next-tier kill.
+An escape would now have to break one of N1–N4, the pole types, or the
+budget saturation — each an identity or a lattice-instantiated bound in
+the checker.
 
 ## 8. Schema reconciliation: design §1 `RouteCertificate` vs `td7-tower-certificate/v1`
 
@@ -536,9 +595,19 @@ milestone-2 object).
   (§3 universality + §7a).
 - **KILLED, new, ON HOLD pending Sol re-review:** the trunk `(2/5,5,1)`
   completion (§7) and hence the `(9,15,7,3)@2` **cell** at the tower
-  tier — all four §11a raw equality records (§7a). Per the
-  coordinator, the cell-kill claim is not promoted until Sol re-reviews
-  this revision; §11a is not edited from here.
+  tier — all four §11a raw equality records, quantified over every
+  realization: arrivals (`M_U` 2/4), free characteristics, padding,
+  and zero-cost neutral insertions at every eligible state (§7a/§7b).
+  **Perimeter statement:** the kill covers *all realizations of the
+  filed §11a routes for this cell*, where "realization" is the design
+  §2.4/§4.1 family (charged DAG + symbolic neutral-depth/pure-b
+  members). Sol's insertion is inside that perimeter and closed by
+  N1–N4; a genuinely beyond-perimeter route would require a *charged*
+  step outside the filed closure or a budget violation — that would be
+  a census under-enumeration to flag against §11a itself, not
+  something this certificate may absorb silently; none is known. Per
+  the coordinator, the cell-kill claim is not promoted until Sol
+  re-reviews this revision; §11a is not edited from here.
 - **NOT machine-checked** (never "safe", only unexamined): the other 16
   §11a cells. The mechanism is a candidate lemma for them, not a
   theorem (Grok finding 7): per-cell it needs (i) type-(2,3) poles,
@@ -559,7 +628,7 @@ milestone-2 object).
 
 ```bash
 cd /Users/dc/code/math/jc72108
-python3 cases/tower_check.py    # < 1 s, exit 0, 647 checks (transcript count)
+python3 cases/tower_check.py    # < 1 s, exit 0, 696 checks (transcript count)
 ```
 
 The engine validates **both** certificates (`t9_15_direct.json`, then
@@ -576,14 +645,18 @@ generic A-points (7 rows on the trunk, incl. T), C5 LEAD-PILOT
 token-for-token regeneration against the literal §3.5 block extracted
 from `xmodel/sol-gluing-design.md` at run time (direct only — the trunk
 has no design pilot block to gate against), C5b the exact rational
-anchor on all 74 regenerated rows, C6 twelve negative perturbations —
-T1 sign flip, omitted nu in a derivative, `B_g = (3/2)A`, non-H5a
-`kappa_H2` composition, mixed-reading case-III `n`, one-slot scale
-shift, tampered obstruction record, case list without Case C, `M_U=4`
-variant with a `gcd = 2` cell, `M_U=4` record without a realized
-variant, tampered trunk terminal `w`, tampered trunk (2.1) `l` — each
-must raise at least one failure, and does. No msolve, no network, no
-floats; `ops/FLEET.md` respected. The certificate JSONs are the
+anchor on all 74 regenerated rows, C3-N the zero-cost neutral-insertion
+closure (Sol's explicit `(6,4)` example replayed end-to-end; lemmas
+N1–N4; per-state quantification for both terminal families), C6
+fourteen negative perturbations — T1 sign flip, omitted nu in a
+derivative, `B_g = (3/2)A`, non-H5a `kappa_H2` composition,
+mixed-reading case-III `n`, one-slot scale shift, tampered obstruction
+record, case list without Case C, `M_U=4` variant with a `gcd = 2`
+cell, `M_U=4` record without a realized variant, **pre-F1 neutral
+insertion with `i_F1` asserted 2**, **insertion-closure section
+removed**, tampered trunk terminal `w`, tampered trunk (2.1) `l` —
+each must raise at least one failure, and does. No msolve, no network,
+no floats; `ops/FLEET.md` respected. The certificate JSONs are the
 machine-readable statements of record; this file is their derivation.
 
 Files: `cases/towers/t9_15_direct.json`, `cases/towers/t9_15_trunk.json`

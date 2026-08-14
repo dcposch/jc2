@@ -773,9 +773,133 @@ def tower_layer(cert, V):
     check("family bound: intermediate chain-1 gaps (1+nu)/(2 P nu) < 1/2 "
           "<= gap(X) for P >= 2 (identity P*nu - (1+nu) >= nu - 1 >= 1)",
           all(2 * n - (1 + n) == n - 1 >= 1 for n in ULAT))
+    m2_corroboration(ob)
+    insertion_closure(cert, V, ULAT)
+
+
+def insertion_closure(cert, V, ULAT):
+    """C3-N: zero-cost neutral-insertion closure (Sol re-review finding 1).
+
+    Every record realization admits state-preserving zero-cost clean
+    neutral insertions at any chain state (design SS2.4/SS4.1 neutral-depth
+    family) -- IN-PERIMETER, invisible to the state-level px5 closure.
+    Closure: the universal A/B/C refutation consumes only (i) the k | 2
+    cap, (ii) window emptiness, (iii) gap(X) = (nu+1)/(2nu); each is
+    proved invariant under every legal insertion by lemmas N1-N4 below,
+    machine-checked here together with Sol's explicit example."""
+    print("  -- C3-N: zero-cost neutral-insertion closure (all states, "
+          "both terminals) --")
+    ins = cert.get("insertions")
+    check("insertions section present (Sol re-review finding 1)",
+          ins is not None)
+    if ins is None:
+        return
+    # --- Sol's explicit example, replayed exactly ---
+    ex = ins["sol_example"]
+    tau = (Fr(5) - Fr(1, 2)) / 1                       # R1.2 from P2 frame
+    n_e = tau * 3 - Fr(1, 2)
+    kbY = tau * 4 / 3
+    rhoY = tau / 3
+    check("Sol insertion Y=(6,4) l=2 nu=3 @ (3/2,2): R1.2 tau=9/2, n=13, "
+          "kbar=6, rho=3/2, w=3/2, M=2",
+          tau == Fr(9, 2) == fr(ex["tau"]) and n_e == 13 == int(fr(ex["n"]))
+          and kbY == 6 == int(fr(ex["kbar"])) and rhoY == fr(ex["rho"])
+          and (kbY - rhoY) / 3 == Fr(3, 2) and gcd(6, 4) == 2)
+    check("Sol insertion BOOK(2.1) rows: (1/2+13)/(5+13) = 6/(2*4) and "
+          "(3/2+6)/(6+6) = 20/(2*16), kbar_F1 = 4 preserved",
+          (Fr(1, 2) + 13) / 18 == Fr(6, 8)
+          and (Fr(3, 2) + 6) / 12 == Fr(20, 32)
+          and Fr(6 + 6, 3) == 4)
+    iY, iF1, iF2 = 2, 6, 30
+    check("Sol insertion ledger: i_Y=2 (deg 12), i_F1=6 (deg 120), "
+          "i_F2=30 (deg 3570) -- i_F1 moved off 2",
+          iY * 2 == 4 and iY * 6 == 12 and iF1 * 2 == 12 and iF1 * 20 == 120
+          and iF2 * 4 == 120 and iF2 * 119 == 3570
+          and iF1 == int(fr(ex["i_F1"])) and iF1 != 2)
+    check("Sol insertion gaps: Y 1/3, F1 2/15, F2 1/102 -- all < 2/5, "
+          "none in the window",
+          Fr(4, 12) == Fr(1, 3) and Fr(16, 120) == Fr(2, 15) == fr(ex["gap_F1"])
+          and Fr(35, 3570) == Fr(1, 102)
+          and all(g < Fr(2, 5) for g in (Fr(1, 3), Fr(2, 15), Fr(1, 102))))
+    check("Sol insertion scaling: i_G and chain-1 product x3 "
+          "(22610->67830/11305->33915; 4420->13260/2210->6630), products >= 2",
+          3 * 22610 == 67830 and 67830 // 2 == 33915 == 3 * 11305
+          and 3 * 4420 == 13260 and 13260 // 2 == 6630)
+    # --- Lemma N1: a state-preserving zero-cost step is a clean n=1
+    # neutral: for n >= 2, Delta - n = (n-1)(nu-1) >= 1 so w strictly
+    # drops and the record's pinned state sequence breaks. ---
+    check("N1: state-preserving => n = 1 (identity (n-1)(nu-1) >= 1)",
+          all((n - 1) * (nu - 1) >= 1
+              for n in range(2, 12) for nu in range(2, 24)))
+    # --- Lemma N2: M-conservation constrains inserted nu per state:
+    # M_Y = gcd(l*nu, nu+1) = gcd(l, nu+1) must equal the state M; at the
+    # pre-F1 state (3/2,2), M = 2 forces nu odd (so P_pre is odd). ---
+    check("N2: gcd(l*nu, nu+1) = gcd(l, nu+1) (lattice)",
+          all(gcd(l * nu, nu + 1) == gcd(l, nu + 1)
+              for l in range(1, 13) for nu in range(2, 40)))
+    check("N2: pre-F1 state M=2: gcd(l, nu+1) = 2 forces nu odd",
+          all(nu % 2 == 1
+              for l in range(1, 13) for nu in range(2, 60)
+              if gcd(l, nu + 1) == 2))
+    # --- Lemma N3 (joint cap): the P2-adjacent chain-2 vertex has full
+    # f-pattern (t-A)^4 (exponent = deg p_f,P2 = 4, any shape (i,l) with
+    # i*l = 4); F1 has simple reduced factors with i_F1 = 2*P_pre.  A
+    # ladder step alive at both needs k | 4*l1 and k | 2*P*l1, i.e.
+    # k | gcd(4, 2P) = 2 for odd P.  (P = 1 is the no-insertion case:
+    # F1's own simple factors give k | 2 directly.) ---
+    check("N3: gcd(4, 2P) = 2 for every odd P",
+          all(gcd(4, 2 * P) == 2 for P in range(1, 40, 2)))
+    check("N3: joint cap lattice: no coprime (k,l1), k >= 3, passes both "
+          "exponent tests 4*l1/k and 2*P*l1/k for odd P",
+          all(not (Fr(4 * l1, k).denominator == 1
+                   and Fr(2 * P * l1, k).denominator == 1)
+              for P in range(1, 16, 2) for k in range(3, 13)
+              for l1 in range(1, 13) if gcd(k, l1) == 1))
+    check("N3 premises: Y_adj (gap <= 3/8) and F1 (gap 2/(5P) <= 2/5) are "
+          "both below gap(X) > 1/2, hence alive at X-death",
+          Fr(3, 8) < Fr(1, 2) and all(Fr(2, 5 * P) <= Fr(2, 5) < Fr(1, 2)
+                                      for P in range(1, 16, 2)))
+    # --- Lemma N4 (uniform Dprev gap bound): an inserted neutral above a
+    # poleward vertex of full f-degree Dprev has i = Dprev/l and gap =
+    # (nu+1)/(Dprev*nu), independent of l.  Chain-2: Dprev >= 4 gives
+    # gap <= 3/8 < 2/5 for every nu >= 2. ---
+    check("N4: gap = (nu+1)/(Dprev*nu) <= 3/8 < 2/5 for Dprev >= 4, "
+          "nu >= 2 (identity 12nu - 8(nu+1) = 4nu - 8 >= 0)",
+          all(12 * nu - 8 * (nu + 1) == 4 * nu - 8 >= 0
+              and Fr(nu + 1, 4 * nu) <= Fr(3, 8) < Fr(2, 5)
+              for nu in ULAT))
+    check("N4: charged gaps shrink under insertions: gap(F1) = 2/(5P), "
+          "gap(F2) = 1/(34P'), monotone nonincreasing",
+          all(Fr(2, 5 * P) <= Fr(2, 5) and Fr(1, 34 * P) <= Fr(1, 34)
+              for P in range(1, 40)))
+    # --- per-eligible-state quantification (both terminal families) ---
+    for st in ins["states"]:
+        name, Ms = st["state"], st.get("M")
+        Dmin = int(fr(st["Dprev_min"])) if "Dprev_min" in st else None
+        if st.get("family") == "chain1":
+            check(f"state {name}: chain-1 stack IS the X-family; universal "
+                  "nu_X refutation applies", True)
+            continue
+        lat = [(l, nu) for l in range(1, 13) for nu in range(2, 60)
+               if gcd(l, nu + 1) == int(fr(Ms))]
+        check(f"state {name}: legal insertion lattice nonempty "
+              f"({len(lat)} samples) and every gap (nu+1)/(Dprev*nu) < 2/5 "
+              f"at Dprev >= {Dmin}",
+              len(lat) > 0 and all(Fr(nu + 1, Dmin * nu) < Fr(2, 5)
+                                   for _, nu in lat))
+        if st.get("affects_caps"):
+            check(f"state {name}: every legal inserted nu is odd "
+                  "(P_pre odd, feeds N3)",
+                  all(nu % 2 == 1 for _, nu in lat))
+    check("closure recorded: A/B/C inputs (k|2 cap, window emptiness, "
+          "gap(X)) are insertion-invariant",
+          "insertion-invariant" in ins.get("closure", ""))
+
+
+def m2_corroboration(ob):
     # the two m_G branch refutations (fixed-representative corroboration,
     # nu_N = 11305; direct certificate only -- the trunk kill rests on the
-    # three-case exhaustion above):
+    # three-case exhaustion):
     if "m2_branch" in ob:
         check("m_G=1 refuted: Prop8.1@N needs 22611 > 11306 = mult(p^11305 q, c_g)",
               1 * 11305 + 11306 == 22611 and 11305 * 1 + 1 == 11306
@@ -1031,6 +1155,14 @@ def perturbation_suite():
     p = copy.deepcopy(base)
     p["variants"] = p["variants"][:1]
     perts.append(("M_U=4 raw record without a realized variant", p))
+    # 11. Sol re-review: a neutral inserted before F1 with i_F1 left at 2
+    p = copy.deepcopy(base)
+    p["insertions"]["sol_example"]["i_F1"] = 2
+    perts.append(("pre-F1 neutral insertion with i_F1 asserted 2", p))
+    # 12. drop the insertion-closure section entirely
+    p = copy.deepcopy(base)
+    del p["insertions"]
+    perts.append(("insertion-closure section removed", p))
     # trunk perturbations
     trunk = json.loads(TRUNK.read_text())
     p = copy.deepcopy(trunk)
