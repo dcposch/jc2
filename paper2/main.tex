@@ -1,0 +1,680 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{url}
+\makeatletter\g@addto@macro{\UrlBreaks}{\do\-\do\_}\makeatother
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Clearly-marked stub for deferred material (Part I and conclusions).
+\newcommand{\stubbox}[1]{\begin{center}\fbox{\parbox{0.92\textwidth}{\small\textbf{Stub (deferred).} #1}}\end{center}}
+
+\newcommand{\kb}{\bar\kappa}
+\emergencystretch=1.5em
+
+\title{Obstruction Theory on the Sheet-Number Ladder\\ for the Plane Jacobian Problem}
+\author{Dan Clemens Posch\thanks{Email: \texttt{dc@dcpos.ch}.} \and Fable\thanks{Fable is an AI system (Anthropic); see Part IV.}}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent\textbf{[Stub (deferred).]} The abstract is framing and is deferred with Part I, pending the residue-A screen verdict and the td-11/13 refile. It must state up front: the two closed panels ($\mathrm{td}\leq 5$ and $\mathrm{td}=7$); that the $\mathrm{td}=7$ closure is a formal-tier obstruction over a filed route perimeter, conditional on a declared trust set extracted from an unpublished thesis with a disclosed errata ledger; and that the verification methodology of Part IV is itself part of the contribution.
+\end{abstract}
+
+\part{The rigidity engine}
+
+\section{Introduction}\label{sec:intro}
+
+\stubbox{Deferred pending the residue-A screen verdict and the td-11/13 refile, per the scope document (\texttt{paper2/SCOPE.md} rev 2). Planned content, about 2.5 pages: the campaign shape (GGV reduction; $(72,108)$ settled in \cite{P1}; the structural avenues); what a panel closure is; the two closed panels ($\mathrm{td}\leq 5$, $\mathrm{td}=7$); the honesty perimeter declared up front (formal-tier obstruction over a filed route perimeter, trust set explicit); plane-JC framing throughout, with the 2026 wave (the Jacobian conjecture is false for all $n\geq 3$ \cite{Alpoge}; the two-dimensional case remains open) cited as motivation for two-dimensional structure results.}
+
+\section{The rigidity engine: statement and citations}\label{sec:engine}
+
+\stubbox{The connective prose of this section (why one rigidity lemma is the homogeneous engine at every weight; depth-$D$ columns at weight $\nu=k+D-1$; the relation to the companion note, if published separately) is deferred with Part I. The two statements below are stable and are quoted here so that Parts II and III can reference them.}
+
+The engine is one elementary rigidity statement about a weighted derivation identity.
+
+\begin{theorem}[\.Zo{\l}\k{a}dek--Liouville rigidity]\label{thm:rigidity}
+Let $F$ have characteristic zero, let $\nu\geq 1$ be an integer, and let $A,C\in F[y]$ satisfy $AC'-\nu A'C=c$ for some constant $c\in F$, $c\neq 0$. Then $\deg A\leq 1$.
+\end{theorem}
+
+\begin{remark}[prior art and the campaign's second proof]\label{rem:priorart}
+The statement's content is prior art. Dividing the identity by $A^{\nu+1}$ gives $(C/A^\nu)'=c/A^{\nu+1}$, so $A^{-(\nu+1)}$ has a rational primitive; when $A$ has two distinct roots this contradicts Lemma A.7 in the appendix of \.Zo{\l}\k{a}dek \cite{Zoladek}, and a perfect power $A$ dies by evaluating the identity at its multiple root. Lemma A.7 is a non-rationality lemma for Schwarz--Christoffel integrals, phrased there via Darboux functions, which \.Zo{\l}\k{a}dek says was probably known already to Liouville; he applies it inside the plane Jacobian problem via the same ODE, deriving $\phi\psi'-\delta\phi'\psi=\mathrm{const}$, this identity with rational weight $\delta$, from the Jacobian equation in a Newton--Puiseux chart (Lemma 3.9 and equation (3.14) there). The case $\nu=1$, a nonzero constant Wronskian, is Theorem 4 of Hermoso and Alc\'azar \cite{HA}. The campaign proved the theorem independently, by the valuation-at-infinity mechanism of Duistermaat and van der Kallen \cite{DvdK} made elementary, before locating these references; that proof is recorded in \cite{P1} and is retained there because the mechanism differs, never leaving $F[y]$, and extends to the positive-characteristic bound $p>(k+1)d_2$. The priority search that found Lemma A.7, executed against the campaign's own reference folder, is part of the verification record (Section \ref{sec:novelty}).
+\end{remark}
+
+\begin{theorem}[strip uniformity; Theorem 6.5 of \cite{P1}]\label{thm:R}
+For every $k\geq 2$, $d_2\geq 2$, and every reduced strip pair of type $(k,d_2)$ satisfying the vertex normalization, over a field of characteristic zero, the variety of the extra keys of the depth-two block is
+\[
+\begin{gathered}
+V(\textup{extras})\;=\;\{A \textup{ binomial}\}\;\cap\;\bigl(\{a_2=0\}\cup\{R_{k,d_2}=0\}\bigr),\\
+R_{k,d_2}=\sum_{j=k+2}^{2d_2}(-1)^j\binom{j}{k+2}a_2^{\,2d_2-j}\beta_j ,
+\end{gathered}
+\]
+where $R_{k,d_2}$ is the logarithmic-residue functional on the second strip column.
+\end{theorem}
+
+The proof lives in \cite{P1}; nothing in this paper re-proves it. Parts II and III use the rigidity statement as a genre: the sheet-number obstructions below repeatedly reduce to first-order linear ODE identities on polynomial data with a forced nonzero constant, and rigidity of exactly this genre is what kills.
+
+\part{The sheet-6 obstruction framework}
+
+\section{The obstruction genome}\label{sec:genome}
+
+This part presents the framework of the campaign's second obstruction theory. Paper \cite{P1} works at a Newton-polygon corner of one reduced family; here the invariant is the topological degree $\mathrm{td}$ of the hypothetical Keller map, its sheet number. \.Zo{\l}\k{a}dek \cite{Zoladek} and, independently, Sigray \cite{Sigray} proved $\mathrm{td}\geq 6$ for a plane counterexample. The campaign's program is a ladder: re-derive and mechanize the $\mathrm{td}\leq 5$ exclusion, then climb. The rungs $\mathrm{td}\leq 5$ (closed) and $\mathrm{td}=6$ (partially closed) are surveyed here; the rung $\mathrm{td}=7$ (closed at the tower tier) is Part III. The presentation is a survey with pointers: every object below is defined in a promoted campaign document with a machine-checked engine, and we prove in-paper only the statements that carry the $\mathrm{td}=7$ closure. Repository paths refer to the archived artifact (Appendix \ref{app:repro}).
+
+\subsection{Trees, poles, and the sheet-number sum}\label{sec:trees}
+
+The framework is Sigray's thesis \cite{Sigray}. To a normalized Keller pair $(f,g)$ it attaches a finite tree of characteristic vertices, in the style of Eggers--Wall and splice trees: vertices $F$ carry local Puiseux data of the fibration, certain vertices are \emph{poles} (dicriticals), and the tree terminates at a root vertex. Each vertex carries a $Q$-datum
+\[
+Q(F)\;=\;(D_F,\ \deg p_F,\ \nu_F,\ M_F,\ \kb_F),\qquad \kb_F:=\kappa_F\,(1-\pi(F)),
+\]
+where $p_F$ is the vertex-local pattern polynomial, $\nu_F$ the local Puiseux index, and $\kappa_F,\pi(F)$ the local denominator and slope data; $M_F=\gcd(\deg p_F,\deg p_{g,F})$. At a pole vertex $\kb_F=D_F+D_{g,F}$; at the root, $D=d$, $\nu=1$, $\kb=1$ [Sigray, St.~9.1, 9.2]. Two counting facts anchor everything:
+\begin{equation}\label{eq:tdsum}
+\mathrm{td}(f,g)\;=\;\sum_{F\ \mathrm{pole}}\Lambda(F),\qquad \Lambda(F):=\frac{D_{g,F}\deg p_F}{\nu_F},
+\end{equation}
+by [Sigray, Prop.~5.8], and $\Lambda(F)\geq\beta\geq 3$ for every pole [Sigray, Prop.~5.7]. So a fixed $\mathrm{td}$ admits finitely many pole multisets; at $\mathrm{td}=7$ the off-axis entry table admits exactly the two-pole split $\Lambda=3+4$, and exactly one entry survives the filters (Section \ref{sec:td7entry}).
+
+\emph{Entries.} The campaign's entry pin (promoted; \texttt{SHEET6-MULTIPOLE.md} MP4, sharpened in \texttt{SHEET6-AF3.md}) determines the pole-local data exactly: for a pole of type $(\alpha,\beta)$ there is an integer $b\geq 1$ with
+\[
+(\deg p_F,\ \deg p_{g,F})\;=\;b\,(\alpha,\beta),\qquad M_F=b,
+\]
+and $b=1$ is forced whenever $\Lambda$ is prime or $\beta$-minimal. A configuration is \emph{on-axis} when every $b=1$ and \emph{off-axis} otherwise. The entry census for $\mathrm{td}\leq 14$ (engine \texttt{cases/book\_offaxis.py}) lists $27$ raw off-axis entry multisets, of which $23$ survive the primitivity law below. Only pole types $(2,3),(2,5),(3,5),(3,4)$ occur, with $b\in\{2,3,5\}$.
+
+\emph{Primitivity.} The law
+\begin{equation}\label{eq:L6}
+\gcd(\kb_V,\ \nu_V)\;=\;1
+\end{equation}
+holds at every characteristic vertex; it is campaign-derived from the thesis's integrality statements (\texttt{SHEET6-III.md} \S3). We call it \emph{L6} throughout. (Warning on names: the artifact documents label the same law N1 in places; in this paper N1--N4 are reserved for the insertion-closure lemmas of Section \ref{sec:insertions}.)
+
+\subsection{Chains, steps, and the multiplicity law}\label{sec:chains}
+
+From each pole a \emph{characteristic sequence} descends to the root [Sigray, Prop.~9.2]: $F_0=\mathrm{pole}$, $F_{i+1}=F_i^{\circ}$, finitely many steps. Each step is one of four cases I--IV with exact transport arithmetic [Sigray, Prop.~9.3(a)--(m)]; case IV is the terminal arrival at the root. Sequences from different poles join at \emph{merge} vertices. The single law governing arrivals is the multiplicity law
+\begin{equation}\label{eq:st84}
+\text{[Sigray, St.~8.4]}\qquad \mathrm{mult}(p,c)\ \big|\ M_G:
+\end{equation}
+every multiplicity $l$ arriving at a vertex divides the vertex's $M$. The campaign's chain calculus for off-axis segments (the promoted lemmas R1.0--R1.4 and R2.1--R2.2 of \texttt{BOOK-OFFAXIS.md} \S\S6--7) makes the propagation explicit. A chain vertex carries a \emph{state} $(w,M)$; the pattern shape is
+\[
+p\;=\;\ominus\,\eta^{\varepsilon}\,(\eta^{\nu}-c^{\nu})^{l}\ \textstyle\prod_j(\eta^{\nu}-d_j^{\nu})^{m_j},\qquad q\;=\;\ominus\,\eta\cdot(\text{simple orbits})
+\]
+(R1.0, $q$-rigidity), and the transport of a step with arriving multiplicity $l$ into a cell $(d_p,d_q)$ is, with $E:=l\,d_q-d_p>0$,
+\begin{equation}\label{eq:wlaw}
+\kb_F=\frac{l\,w_G\,d_q}{E}\in\mathbb{Z}\ (\nu\geq2),\qquad w_F=\frac{l\,w_G\,(d_q-1)}{\nu E},\qquad M_F=\gcd(d_p,d_q)
+\end{equation}
+(R1.2). Neutral steps, $\varepsilon=0$ and no extra orbits, preserve the state; every other step is \emph{charged}.
+
+\subsection{Charges and the shared budget}\label{sec:budget}
+
+Charged steps are priced. The promoted $\lambda$-rule (\texttt{SHEET6-AF2.md}, derived from [Sigray, St.~9.3, eq.~(24)] after the sign repair E6 of Table \ref{tab:errata}) prices a step at
+\begin{equation}\label{eq:af2}
+\lambda_F\;\geq\;\sum_j \max\Bigl(1,\Bigl\lceil \frac{X_F}{m_j}-\kb_F\Bigr\rceil\Bigr)\;+\;[\varepsilon\geq1]\,\max\Bigl(1,\Bigl\lceil \frac{X_F/\varepsilon-\kb_F}{\nu}\Bigr\rceil\Bigr),\qquad X_F:=\kb_F\,\frac{d_p}{d_q},
+\end{equation}
+with clean steps free. The prices share one budget. The thesis's budget is $\sum\lambda\leq \mathrm{td}-2$ [Sigray, St.~9.4]; the campaign's terminal certificate (P1 of \texttt{BOOK-OFFAXIS.md} \S10) refines it: the last vertex $G$ above the root has $w_G<1$, $j:=M_G(1-w_G)\in\mathbb{N}^{*}$, and with $\psi:=\lceil M_G/j\rceil-1$,
+\begin{equation}\label{eq:budget}
+\sum\lambda\;\leq\;\mathrm{td}-1-\psi\qquad\text{over all pairwise-distinct descending vertices of the configuration:}
+\end{equation}
+both chains, all merges, and the trunk share the one budget. Terminating near $w=1$ is expensive ($w=2/3$ gives $\psi=2$; $w=3/4$ gives $\psi=3$); terminating at $w\leq 1/2$ keeps $\psi=1$.
+
+For $\mathrm{td}=7$ the budget is $6-\psi\leq 5$. The \emph{priced closure} is the set of chain-2 states reachable from the entry state $(3/2,2)$ at cost at most $5$ under the complete step menu: it has $69$ states (engine \texttt{cases/scratch\_offaxis\_pricing/px5.py}, reproduced read-only by every later engine). The complete one-step menu from $(3/2,2)$ itself is exactly four steps:
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+step & cell & state after & price\\
+\midrule
+(A) & $(21,15)$ & $(2/3,\,3)$ & $\lambda\geq 2$\\
+(C) & $(20,16)$ & $(3/4,\,4)$ & $\lambda\geq 2$\\
+$\varepsilon$-step & $(7,5)$ & $(2,\,1)$ & $\lambda\geq 3$\\
+pure-$b$ & doubling family & $(3,\,1)$ & $\lambda\geq 3$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The menu is engine-audited against the printed possibilities of [Sigray, St.~9.6]; the four rows reappear throughout Part III.
+
+\subsection{The td-7 entry and the merge-cell book}\label{sec:td7entry}
+
+At $\mathrm{td}=7$ exactly one off-axis entry survives L6: two poles of type $(2,3)$ with $\Lambda=(3,4)$, pole data $(a,b,\nu)=(1,1,2)\oplus(1,2,3)$, $M=(1,2)$, and initial states $w_0=(2,\,3/2)$. Chain 1, from the $b=1$ pole, is frozen at state $(\mu,w,M)=(1,2,1)$ for its whole length (Lemma L-A of Section \ref{sec:lemmas} re-proves this from the multiplicity law alone). Chain 2 starts at $(3/2,2)$ and evolves through the priced closure. The two chains meet at a single merge vertex $G$ of arity $r=2$; the chain-1 handshake pins
+\begin{equation}\label{eq:I3}
+X_G\;=\;\kb_G-2.
+\end{equation}
+The complete arrangement classification (P3 of \texttt{BOOK-OFFAXIS.md} \S10, hand-proved) sorts the merges into classes: root merges and high-$w$ joins die outright; class B (chain 2 arriving at the zero direction with $\mu_0=1$) and class C (the same with $\mu_0\geq 2$) survive to a finite Diophantine menu of \emph{merge cells}
+\[
+(d_p,\ d_q,\ \nu_G,\ M_G)\,@\,\mu_0,\qquad d_p=\mu_0+\nu_G,
+\]
+where $\mu_0$ is the arriving zero-direction multiplicity. Pricing every cell against the budget \eqref{eq:budget} produced the first $\mathrm{td}=7$ book: $62$ budget-fitting class-B/C cells carrying $1689$ deduplicated priced routes, $1390$ at budget equality (P4; engine \texttt{cases/book\_offaxis.py}, exit 0). Part III shrinks this book to $17$ cells (Sections \ref{sec:zcl} and \ref{sec:census}) and then empties it (Sections \ref{sec:tower} to \ref{sec:uniform}).
+
+\subsection{The trust set and the errata ledger}\label{sec:trust}
+
+The thesis \cite{Sigray} is unpublished and unrefereed. The campaign treats it as a source of named hypotheses, not as an authority: every import is declared, every theorem in this paper carries the declaration in its perimeter, and the campaign's own audits of the printed text are part of the record.
+
+\begin{definition}[trust set $\mathsf{S}$]\label{def:trust}
+$\mathsf{S}$ is the following list of imported statements of \cite{Sigray}, each used in the form printed except where a disclosed erratum repairs it: Prop.~4.2 (approximate-root ladder, $\delta$-descent, alive dichotomy; pp.~19--20), Prop.~8.1(i)--(v) (dead-member patterns; pp.~39--41), Cor.~6.1 (degree law; p.~32), St.~8.3(i) with Not.~4.1 (single shared ladder; p.~41), St.~3.9/3.17(i)/3.11(i) (count laws), St.~8.4 (multiplicity law), St.~8.5 and St.~3.18 (segment anatomy), Prop.~5.7/5.8 (the sum \eqref{eq:tdsum}), Prop.~9.3 (step arithmetic, with the E5 repair), and St.~9.3(24)/9.4 (charges and budget, with the E6 repair). The campaign-proved layer on top of $\mathsf{S}$ (R1.0--R2.2, P0--P3, the entry pins, L6) is re-derived from $\mathsf{S}$ in the promoted documents and machine-checked.
+\end{definition}
+
+Every obstruction theorem below is conditional on $\mathsf{S}$; this is the honest architecture of the paper, stated once here and repeated in the main theorem's perimeter (Section \ref{sec:uniform}).
+
+The declaration has teeth because the campaign audited the source hostilely. Table \ref{tab:errata} is the standing errata catalogue; beyond it, a systematic $72$-item audit of thesis pp.~7--30 (\texttt{SIGRAY-AUDIT.md}) returned $21$ verified, $33$ verified-with-nit, $9$ new errata, $2$ known errata, and $7$ gaps, all filed with exact witnesses. All are disclosed; none is silently absorbed.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lp{0.8\textwidth}}
+\toprule
+id & finding (thesis locus; one line)\\
+\midrule
+E1 & St.~9.6, p.~52: row $(75,51)$ spurious; corrected statement strictly stronger.\\
+E2 & St.~9.8, p.~55: ``$l=0\Rightarrow M_F=1$'' false for the $\mu=2$ pattern ($\gcd(2\nu,\nu+1)=2$ for odd $\nu$); a possibility with $\lambda=0$ is missing.\\
+E3 & St.~9.9, p.~56: both ``no solution'' claims false; the $3\nu=4m+1$ families give $\lambda=0$ self-loops with $M=2$ and $M=4$.\\
+E4 & St.~9.10, p.~57: $\mu=3$ ``no solution'' false ($M=3$ self-loop); printed possibility (iv) is not derived in the proof body.\\
+E5 & Prop.~9.3(g)/(h): printed case-III transport inconsistent when $\nu_F\neq\nu_G$; corrected $(g')/(h')$ re-derived from the thesis's own (c)/(d) proof line (\texttt{SHEET6-III.md} \S3).\\
+E6 & St.~9.3, eq.~(24), p.~49: sign slip; repaired against $\kb_F>0$ (\texttt{SHEET6-AF2.md}).\\
+E7 & St.~9.6 proof, p.~52: cosmetic pattern misprint.\\
+E8 & Prop.~5.1 proof, p.~24: cites ``Proposition 8'' for equation (8); cosmetic.\\
+E9 & Not.~9.3, p.~49: $Y(F)$ definition/usage mismatch.\\
+E10 & St.~3.15: labels (i)/(iii) swapped; casualty Prop.~5.2 repaired inside the printed apparatus.\\
+\bottomrule
+\end{tabular}
+\caption{The standing errata catalogue E1--E10 against \cite{Sigray} (five are proof-level). A candidate E11 was refuted on review and demoted to a reading note. Three reading ambiguities G1--G3 in the thesis's \S9 assembly are catalogued separately (\texttt{SHEET6-CAMPAIGN.md} \S7); G3 records that the printed $\mathrm{td}\geq 6$ proof is incomplete as printed, independently of the errata.}
+\label{tab:errata}
+\end{table}
+
+One gap is load-bearing enough to be resolved at proof tier rather than declared: the value of $\kappa_F$ at doubly realized vertices (the campaign's H5a), on which the case-III transport and hence the whole $\mathrm{td}=7$ census depend.
+
+\begin{proposition}[H5a resolution; \texttt{AUDIT.md}, 2026-08-13]\label{prop:h5a}
+The Notation 3.5 gap at doubly realized vertices is resolved at proof tier: the P/coarse reading is incoherent (nonintegral $D_{h,F}$ against printed St.~3.8; conflict with Prop.~5.5), so the Q/jump/max value $\kappa_F=\nu_F\kappa_G/\nu_G$ is the unique uniform repair, and Q together with printed St.~3.17(ii) and Prop.~9.3(e) forces the E5 transport identities. Full proof: artifact \texttt{xmodel/sol-h5a.md}; hostile replay SOUND, including printed-page verification, \texttt{xmodel/grok-h5a-review.md}.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+At a doubly realized vertex two branches present the same tree point: branch $P$ realizes the deeper jump at the lower level and does not jump at the vertex, branch $Q$ realizes the vertex as a characteristic exponent. Notation 3.5 of \cite{Sigray}, read literally on the two presentations, returns two values: with $L_0$ the common lattice index below the vertex, $\kappa_F(P)=L_0=\kappa_G/\nu_G$ and $\kappa_F(Q)=\nu_F L_0=\nu_F\kappa_G/\nu_G$. The P value is not a coherent global convention: printed St.~3.8 asserts $D_{h,F}=\kappa_F\,d_{h,F}\in\mathbb{Z}$, and an explicit contact-vertex witness under P gives $D=-1/2$ (and an ill-defined value even when integral); the $c=0$ case of printed Prop.~5.5 breaks against the same reading. So the printed text itself forces Q. Once Q is adopted, combining printed St.~3.17(ii) with Prop.~9.3(e) yields
+\[
+D_F=\frac{\nu_F D_G+n\deg p_G}{\nu_G},\qquad \kb_F=\frac{\nu_F\kb_G+n}{\nu_G},
+\]
+which are exactly the E5-corrected transport identities; the printed denominators $\nu_F$ in Prop.~9.3(g),(h) are wrong unless $\nu_F=\nu_G$. The residual reading in which $\nu_F=\nu_G$ is imposed on the relevant edges is not refuted; it is an extra assumption, isolated as Conjecture $U_{7C}$ in Section \ref{sec:census} and shown moot for $\mathrm{td}=7$ in Part III.
+\end{proof}
+
+\part{The td-7 panel closure}
+
+\section{The generalized zero-chain law}\label{sec:zcl}
+
+The first shrink of the $62$-cell book is a closed-form decision law for the vertex-local rigid solve at the merge. The thesis's Prop.~8.1(iv) requires, at a merge cell, a polynomial identity with a forced nonzero constant; the law decides its solvability outright. It was found by a third model family inside the campaign's adversarial-review loop (GPT-5.6-Sol; proof and census in artifact \texttt{xmodel/sol-td7-law.md}) and promoted after a zero-shared-reasoning engine replay ($62/62$ agreement) and a hostile proof audit; see Section \ref{sec:review}.
+
+\begin{theorem}[generalized zero-chain law; \texttt{BOOK-OFFAXIS.md} \S11, promoted]\label{thm:zcl}
+With $\mu=d_p-\nu$ and $l=(d_q-1)/\nu-1$, the cell's reduced equation admits an admissible solution with nonzero RHS constant iff $d_p$ does NOT divide $d_q$; equivalently the cell is T1-dead iff
+\[
+d_p\mid d_q\iff(\mu+\nu)\mid(\mu(l+1)-1)\iff M=d_p\iff \kb\in\{3,4\}.
+\]
+On-axis ZCH $(\nu+1)\mid l$ is the $\mu=1$ specialization.
+\end{theorem}
+
+Here and below, $p$ and $q$ are the vertex-local pattern polynomials of the merge vertex, not the Keller pair; T1 is the campaign's name for the Prop.~8.1(iv) tier. Both directions are proved in-paper. Everything is conditional on $\mathsf{S}$, through the normal form (R1.0/R2.2, campaign-proved from $\mathsf{S}$) and the pins of P3.
+
+\subsection{Normal form and the reduced equation}
+
+Prop.~8.1(iv) forces every root of $p$ to occur simply in $q$, every $q$-root outside $p$ to be simple, and, for $\nu\geq 2$, $\eta\,\Vert\,q$ (R1.0). For the classes B and C of Section \ref{sec:td7entry}, chain 2 arrives at the zero direction with multiplicity $\mu:=\mu_0\geq1$, chain 1 is the sole nonzero arriving orbit, and there are no non-chain $p$-orbits. Writing $\ell:=l=(d_q-1)/\nu-1\geq1$ for the number of $q$-only nonzero $\nu$-orbits, the degree pins are
+\[
+d_p=\mu+\nu,\qquad d_q=1+(\ell+1)\nu,
+\]
+and, up to nonzero pattern scalars, every one of the $62$ cells has the single normal form
+\begin{equation}\label{eq:normalform}
+t=\eta^{\nu},\quad A=c^{\nu}\neq0,\qquad p=\eta^{\mu}(t-A),\qquad q=\eta\,(t-A)\,s(t),\quad \deg s=\ell.
+\end{equation}
+Class B is the $\mu=1$ member. The rigid solve itself is, after normalization,
+\begin{equation}\label{eq:t1}
+\rho\,p\,q'-p'q\;=\;C\,p,\qquad C\neq0\ \text{constant},\qquad \rho=\frac{d_p}{d_q}.
+\end{equation}
+Substituting \eqref{eq:normalform} into \eqref{eq:t1}, cancelling $\eta^{\mu}(t-A)$, and absorbing nonzero scalars gives the reduced equation
+\begin{equation}\label{eq:reduced}
+E(t)\;:=\;(\rho-\mu)(t-A)\,s\;+\;(\rho-1)\,\nu\,t\,s\;+\;\rho\,\nu\,t\,(t-A)\,s'\;=\;\widetilde C .
+\end{equation}
+
+\subsection{Proof of the law}
+
+\begin{proof}[Proof of Theorem \ref{thm:zcl}]
+Put $d:=\mu+\nu=d_p$ and $D:=1+(\ell+1)\nu=d_q$, and normalize $s(t)=\sum_{j=0}^{\ell}s_jt^j$ with $s_\ell=1$. The coefficient of $t^{\ell+1}$ in \eqref{eq:reduced} is $(\rho-\mu)+(\rho-1)\nu+\rho\nu\ell=\rho D-d=0$: it vanishes automatically because $\rho=d/D$. For $k=\ell,\dots,1$ the coefficient of $t^k$ gives the nonsingular triangular recurrence
+\begin{equation}\label{eq:recur}
+s_{k-1}\;=\;A\,\frac{1+dk-\mu(\ell+1)}{d\,(k-\ell-1)}\;s_k ,
+\end{equation}
+whose denominator never vanishes in this range, and the constant term gives
+\begin{equation}\label{eq:const}
+\widetilde C\;=\;A\,(\mu-\rho)\,s_0 .
+\end{equation}
+Since $A\neq0$, $\mu\geq1$, and $0<\rho<1$, the constant \eqref{eq:const} is nonzero iff $s_0\neq0$. Iterating \eqref{eq:recur},
+\[
+s_0\;=\;A^{\ell}\prod_{k=1}^{\ell}\frac{1+dk-\mu(\ell+1)}{d\,(k-\ell-1)} ,
+\]
+so $\widetilde C=0$ iff some $k\in\{1,\dots,\ell\}$ has $dk=\mu(\ell+1)-1$. The range condition is automatic when the divisibility holds: $\mu(\ell+1)-1\geq1$ rules out $k=0$, and the identity
+\begin{equation}\label{eq:range}
+\mu(\ell+1)-1+D\;=\;d\,(\ell+1)
+\end{equation}
+together with $D>d$ (from $\rho<1$) gives $\mu(\ell+1)-1\leq d\ell$, so $k\leq\ell$. By \eqref{eq:range}, such a $k$ exists iff $d\mid D$, i.e.\ iff $d_p\mid d_q$, and iff $(\mu+\nu)\mid(\mu(\ell+1)-1)$. At the zero pivot the forced polynomial is $s=t^{k}(t-A)^{\ell-k}$; in particular $\widetilde C=0$, contradicting the required nonzero constant, and the failure is visible in the root law: $q$ acquires excess multiplicity at both $0$ and $t=A$. This proves the death direction.
+
+Conversely, suppose $d_p\nmid d_q$. Then no numerator in \eqref{eq:recur} vanishes, the unique monic $s$ has $s_0\neq0$, and \eqref{eq:const} gives $\widetilde C\neq0$. The remaining admissibility conditions follow from \eqref{eq:reduced} directly, with no genericity assumption: evaluating at $t=0$ gives $\widetilde C=A(\mu-\rho)s(0)$, so $s(0)\neq0$; evaluating at $t=A$ gives $\widetilde C=(\rho-1)\nu A\,s(A)$, so $s(A)\neq0$; and at any root $b$ of $s$, $\widetilde C=\rho\nu\,b\,(b-A)\,s'(b)\neq0$, so every root of $s$ is nonzero, distinct from $A$, and simple. Hence $q$ has exactly the simple-root anatomy required by R1.0, and the solve is admissible. This proves both directions of the first equivalence.
+
+For the remaining equivalences: Prop.~8.1(v) gives $M=\gcd(d_p,d_q)$, so $M=d_p\iff d_p\mid d_q$. The chain-1 handshake \eqref{eq:I3} gives $X=\kb-2$, and the cell ratio gives $X/\kb=d_p/d_q$ (R2.1/P3), so
+\begin{equation}\label{eq:kbratio}
+\frac{d_q}{d_p}\;=\;\frac{\kb}{\kb-2},
+\end{equation}
+with $\kb$ an integer greater than $2$ (integrality by L6 and St.~3.8, corrected). Thus $d_p\mid d_q$ iff $(\kb-2)\mid 2$ iff $\kb\in\{3,4\}$. Finally, at $\mu=1$ we have $d=\nu+1$ and $D\equiv-\ell\pmod{\nu+1}$, so $d\mid D$ iff $(\nu+1)\mid\ell$: the on-axis zero-chain law is the $\mu=1$ specialization.
+\end{proof}
+
+\begin{corollary}[the book collapses $62\to6$]\label{cor:62to6}
+Of the $62$ cells of the priced $\mathrm{td}=7$ class-B/C book, $56$ are T1-dead by Theorem \ref{thm:zcl}: the one class-B cell $(3,9,2,3)$ and $55$ class-C cells, removing $1636$ of the $1689$ deduplicated routes. The six survivors, all class C, genuinely pass the complete local solve, with explicit admissible solutions:
+\begin{center}
+\small
+\begin{tabular}{lrrrll}
+\toprule
+cell $(d_p,d_q,\nu,M)$ & $\mu$ & $\ell$ & $\kb$ & forced $s(t)$ & $\widetilde C$\\
+\midrule
+$(9,15,7,3)$ & 2 & 1 & 5 & $t-\frac23A$ & $-\frac{14}{15}A^2$\\
+$(10,15,7,5)$ & 3 & 1 & 6 & $t-\frac12A$ & $-\frac76A^2$\\
+$(15,25,8,5)$ & 7 & 2 & 5 & $t^2-\frac23At-\frac19A^2$ & $-\frac{32}{45}A^3$\\
+$(15,25,12,5)$ & 3 & 1 & 5 & $t-\frac23A$ & $-\frac85A^2$\\
+$(18,27,13,9)$ & 5 & 1 & 6 & $t-\frac12A$ & $-\frac{13}{6}A^2$\\
+$(39,65,32,13)$ & 7 & 1 & 5 & $t-\frac23A$ & $-\frac{64}{15}A^2$\\
+\bottomrule
+\end{tabular}
+\end{center}
+They carry $53$ routes ($35$ at budget equality). Merge arity is $r=2$ in every cell and does not enter the law; the $\lambda$-data select routes but not this vertex-local verdict.
+\end{corollary}
+
+The verdict was verified twice before promotion. A zero-shared-reasoning engine check re-derived the reduced equation \eqref{eq:reduced} independently from R1.0 and solved all $62$ cells exactly over $\mathbb{Q}(A)$ with the admissibility conditions, $62/62$ agreement (artifact \path{xmodel/td7-law-engine-check.md}). A hostile audit then replayed both iff directions, the census, and all six survivor substitutions, verdict SOUND (artifact \path{xmodel/grok-td7-law-review.md}).
+
+\begin{remark}[the rigidity genre]\label{rem:genre}
+Equation \eqref{eq:t1} is a first-order linear ODE identity on polynomial data with a forced nonzero constant, the same genre as Theorem \ref{thm:rigidity}, and the death mechanism is the same: a resonance in a triangular coefficient ladder kills the forced constant. \.Zo{\l}\k{a}dek reached this genre inside the plane Jacobian problem first, from Newton--Puiseux charts (Remark \ref{rem:priorart}); the strip theory of \cite{P1} reaches it from the GGV polygon side; the sheet-number ladder reaches it a third time, at merge vertices of the Jacobian tree. The campaign regards this triple convergence as the strongest available evidence that first-order rigidity is a load-bearing structure of the plane problem, not an artifact of one reduction.
+\end{remark}
+
+\section{The E5-corrected census}\label{sec:census}
+
+The six-cell record of Corollary \ref{cor:62to6} was generated under a transport pin that the H5a resolution exposed as a mixed reading: the engine had pinned $\kb$ from the \emph{arrival} vertex index $\nu_U$, which corresponds to neither Notation 3.5 value. This section is the re-enumeration of the class-B/C menu under the corrected pin. It is the census the rest of the paper lives on, so we record its logic in full, prove the two structural claims in-paper (class-B emptiness and the L6 bite), and reproduce the cell table. Engine: \texttt{cases/td7\_census\_e5.py} (exit 0, gates G1--G5 below).
+
+\subsection{The corrected pin and the cap-free inversion}
+
+E5 together with the chain-1 freeze pins the merge invariant from the \emph{merge} index $\nu_G$, with the arrival vertex free:
+\begin{equation}\label{eq:I4}
+\kb_G^{\mathrm{E5}}\;=\;\frac{\mu_0\,\nu_G\,w_U-2}{\mu_0-1}\qquad(\mu_0\geq2),
+\tag{I4}
+\end{equation}
+where $w_U$ is the arriving chain-2 state. Independently, the cell carries $\kb_G^{\mathrm{cell}}=2d_q/(d_q-d_p)$ and $X=\kb-2$ by \eqref{eq:I3}. A cell $(d_p,d_q,\nu_G,M)@\mu_0$ is \emph{E5-realizable} iff
+\[
+w_U^{\mathrm{req}}\;=\;\frac{\kb(\mu_0-1)+2}{\mu_0\,\nu_G}
+\]
+is a priced state $(w_U^{\mathrm{req}},M_U)$ of the filed chain-2 closure ($69$ states, budget $5$) with $\mu_0\mid M_U$, by the multiplicity law \eqref{eq:st84}, and a P2-legal arrival vertex: neutral $\nu\equiv-1\pmod{\mu_0}$, a direct stored step-cell, or the entry.
+
+Enumeration is cap-free. Under E5 there is no $\nu_U$ to bound, so the old cap mechanism is replaced entirely by an inversion: fixing a reachable state $(r,M_U)$ with $r=w_U$ and $m=\mu_0\geq2$, $m\mid M_U$, the one-orbit classification gives $g:=\nu_G\geq2$, $d_p=m+g$, $d_q=d_p+c$ with $c\in\mathbb{N}^{*}$ and $g\mid m+c-1$; combining \eqref{eq:I4} with the cell ratio yields
+\[
+c(g)=\frac{2(m-1)(m+g)}{m(gr-2)},\qquad g(c)=\frac{2m(c+m-1)}{cmr-2(m-1)} ,
+\]
+with positivity $gr>2$. On $g\geq g_0:=\max(2,\lfloor2/r\rfloor+1)$ the function $c(g)$ is strictly decreasing with limit $2(m-1)/(mr)$, so every solution has integer $c$ in the finite window $2(m-1)/(mr)<c\leq c(g_0)$, and each $c$ determines its unique candidate $g$. No guessed cap enters; the window is forced by the algebra.
+
+\subsection{Class B is empty, and L6 bites}
+
+\begin{proposition}[class-B emptiness]\label{prop:classB}
+Under the promoted H5a/Q-value and E5, the $\mathrm{td}=7$ class-B sector ($\mu_0=1$) is empty before the T1 tier.
+\end{proposition}
+
+\begin{proof}
+At $\mu_0=1$ the corrected zero-edge equation reads $X_G=\kb_G-\nu_G w_U$, and the chain-1 handshake \eqref{eq:I3} gives $X_G=\kb_G-2$; hence $\nu_G\,w_U=2$. The cell data are $d_p=1+\nu_G$, $d_q=d_p+c$, and the arrival divisibility ($g\mid m+c-1$ at $m=1$) gives $\nu_G\mid c$, while integrality of $\kb=2d_q/(d_q-d_p)=2+2(1+\nu_G)/c$ gives $c\mid 2(1+\nu_G)$. Write $g=\nu_G\geq2$. If $g\geq3$ is odd then $\gcd(g,2(1+g))=\gcd(g,2)=1$, so $g\mid c\mid 2(1+g)$ forces $g=1$, a contradiction. If $g\geq4$ is even, write $c=gm'$; then $g\mid c\mid 2(1+g)$ and $\gcd(g,1+g)=1$ force $g\mid2$, again a contradiction. So $g=\nu_G=2$ and $w_U=1$. The candidate cells are then $c\in\{2,6\}$, i.e.\ $(3,5)$ with $M=1$, dead by MP2 (interior merges emit $M\geq2$), and $(3,9,2,3)$ with $\kb=3$. But the arrival state must have $w_U=1$, and the $w=1$ states of the priced closure carry $\lambda_{\mathrm{pre}}\in\{4,5\}$; no budget-fitting completion exists under \eqref{eq:budget}. So no class-B cell is realizable at all, before any local solve. (The cell $(3,9,2,3)$ was in addition T1-dead by Theorem \ref{thm:zcl}, its $\kb=3$ being the on-axis test $3\mid9$.)
+\end{proof}
+
+\begin{proposition}[the L6 bite]\label{prop:L6bite}
+Four E5-realizable, T1-alive class-C cells die by primitivity \eqref{eq:L6} alone:
+\begin{gather*}
+(14,21,10,7)@4,\qquad(22,33,16,11)@6,\\
+(30,45,22,15)@8,\qquad(38,57,28,19)@10 .
+\end{gather*}
+\end{proposition}
+
+\begin{proof}
+Each has $\kb=2d_q/(d_q-d_p)=6$ and even $\nu_G$, so $\gcd(\kb,\nu_G)\geq2$, violating \eqref{eq:L6}. In the $62$-cell book L6 had been a passing sanity check on every cell; under the corrected pin it becomes a working filter.
+\end{proof}
+
+\subsection{The seventeen-cell book}
+
+\begin{theorem}[census; \texttt{BOOK-OFFAXIS.md} \S11a, promoted; hostile review SOUND, brute-force completeness $\nu\leq400$, $0$ miss / $0$ extra]\label{thm:census}
+Under promoted H5a/Q-value $+$ E5: $17$ cells, $238$ raw routes ($202$ at equality), $233$ deduplicated ($197$ eq). Class B is EMPTY even pre-T1.
+\end{theorem}
+
+\begin{table}[ht]
+\centering\scriptsize\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{lrllrl}
+\toprule
+cell $@\,\mu_0$ & $\kb$ & arrival $w_U$ ($\lambda$; $M_U$) & arrival vertices & routes raw(eq) & status vs \S\ref{sec:zcl} book\\
+\midrule
+$(9,15,7,3)@2$ & 5 & $1/2$ (4; $M2,4$) & neutral $\nu\equiv1\,(2)$ & 4 (4) & kept, arrival unchanged\\
+$(10,15,7,5)@3$ & 6 & $2/3$ (2; $M3$) & direct $(4,3),(7,3)$; neutral $\nu\equiv2\,(3)$ & 47 (29) & kept, arrival unchanged\\
+$(15,25,12,5)@3$ & 5 & $1/3$ (5; $M3,6$) & neutral $\nu\equiv2\,(3)$ & 2 (2) & kept, arrival replaced\\
+$(18,27,13,9)@5$ & 6 & $2/5$ (3; $M5$) & direct $(2,5),(7,5),(12,5)$; neutral & 37 (33) & kept, arrival replaced\\
+$(21,35,17,7)@4$ & 5 & $1/4$ (5; $M4,8$) & neutral $\nu\equiv3\,(4)$ & 2 (2) & new\\
+$(25,35,17,5)@8$ & 7 & $3/8$ (4; $M8$) & direct $(5,8)$; neutral $\nu\equiv7\,(8)$ & 3 (2) & new (only $\kb=7$ cell)\\
+$(26,39,19,13)@7$ & 6 & $2/7$ (3; $M7$) & direct $(3,7),(10,7),(17,7)$; neutral & 63 (53) & new\\
+$(27,45,22,9)@5$ & 5 & $1/5$ (5; $M5,10$) & neutral $\nu\equiv4\,(5)$ & 2 (2) & new\\
+$(34,51,25,17)@9$ & 6 & $2/9$ (4; $M9$) & direct $(4,9),(13,9)$; neutral & 18 (17) & new\\
+$(42,63,31,21)@11$ & 6 & $2/11$ (4; $M11$) & direct $(5,11),(16,11)$; neutral & 23 (22) & new\\
+$(50,75,37,25)@13$ & 6 & $2/13$ (4; $M13$) & direct $(19,13)$; neutral & 31 (30) & new\\
+$(58,87,43,29)@15$ & 6 & $2/15$ (5; $M15$) & direct $(7,15),(37,15)$; neutral & 1 (1) & new (family)\\
+$(66,99,49,33)@17$ & 6 & $2/17$ (5; $M17$) & direct $(25,17)$; neutral & 1 (1) & new (family)\\
+$(74,111,55,37)@19$ & 6 & $2/19$ (5; $M19$) & direct $(9,19),(47,19)$; neutral & 1 (1) & new (family)\\
+$(82,123,61,41)@21$ & 6 & $2/21$ (5; $M21$) & direct $(31,21)$; neutral & 1 (1) & new (family)\\
+$(90,135,67,45)@23$ & 6 & $2/23$ (5; $M23$) & direct $(11,23)$; neutral & 1 (1) & new (family)\\
+$(98,147,73,49)@25$ & 6 & $2/25$ (5; $M25$) & direct $(37,25)$; neutral & 1 (1) & new (family)\\
+\bottomrule
+\end{tabular}
+\caption{The E5-corrected td-7 class-C book (Theorem \ref{thm:census}). Cells are $(d_p,d_q,\nu_G,M)@\mu_0$. The last six rows are the $w=2/(2k+1)$ family ($\mu_0=15,\dots,25$ odd, $\kb=6$, one exact-fit route each); it terminates at $\mu_0=25$ because the closure contains no state with $w\leq2/27$ at budget $5$: closure-forced, not a cap. The arrival-vertex lists are a state-level superset; Lemma E5F (Section \ref{sec:lemmas}) adds the vertex-level filter $n\geq1$.}
+\label{tab:census}
+\end{table}
+
+Table \ref{tab:census} reproduces the promoted book. Against the six-cell record of Corollary \ref{cor:62to6}: $(9,15,7,3)@2$ and $(10,15,7,5)@3$ are kept unchanged; $(15,25,12,5)@3$ and $(18,27,13,9)@5$ are kept with their recorded mixed-engine arrivals replaced (those arrivals fail \eqref{eq:I4}, exactly as the preflight audit predicted, but the cells are E5-realizable through other arrivals); $(15,25,8,5)@7$ and $(39,65,32,13)@7$ are removed (the E5-required states $w_U=4/7,1/7$ are absent from the priced closure); and $13$ cells are new. Three further pre-T1 $\kb=3$ candidates appear and are T1-killed by Theorem \ref{thm:zcl}.
+
+\subsection{Both readings, recorded}
+
+The H5a caveat does not evaporate with Proposition \ref{prop:h5a}, because a residual reading survives: imposing $\nu_G=\nu_U$ on the relevant case-III edges (printed (g)/(h) taken together with forced equal indices). Under that reading the arrival vertex must be $\nu_G$ itself and be legal, and the book is exactly two cells, $(9,15,7,3)@2$ and $(10,15,7,5)@3$, carrying $49$ deduplicated routes ($31$ eq). The equality assertion is genuinely new mathematics, not a notational choice:
+
+\begin{conjecture}[$U_{7C}$; \texttt{xmodel/sol-h5a.md}]\label{conj:u7c}
+Every actual Prop.~9.3 case-III edge realizing a $\mathrm{td}=7$ class-C zero-arrival certificate admitted by the filed hypotheses satisfies $\nu_F=\nu_G$.
+\end{conjecture}
+
+It is unproven and unrefuted; an exact non-Keller polynomial model permits inequality, so no cheap discriminator exists. The campaign therefore records both books: the $17$-cell Q$+$E5 book (the sound conservative object) and the $2$-cell sub-book conditional on Conjecture \ref{conj:u7c}. Under the P reading no census is derivable at all (Proposition \ref{prop:h5a}). The tower tier kills both books (Sections \ref{sec:tower} to \ref{sec:uniform}), which is what finally makes $U_{7C}$ moot for $\mathrm{td}=7$.
+
+\subsection{Completeness controls}
+
+The census engine runs five mandatory gates, all passing at exit 0: G1, exact replay of the preflight audit's six-row pin table on the recorded arrivals; G2, per-cell E5 re-solve reproducing the audit's route table exactly; G3, book-pin parity, replaying the old engine's loops in-engine and reproducing the $62$-cell book and the six-cell $53/35$ record; G4, positive controls, both kept cells present with their recorded arrivals in both readings; G5, negative controls, none of the $56$ law-dead cells alive in either reading ($30$ reappear pre-T1 and are re-killed by T1; the other $26$, including the class-B cell, are not E5-realizable at all). On top of the gates, a brute-force sweep enumerates all candidate cells to $\nu\leq400$ against the closed-form inversion: $0$ missing, $0$ extra. Honesty riders inherited from the book: survivors are superset-alive (the arrival law is a superset and $\lambda$ values are lower bounds, so no false kills); the census is conditional on $\mathsf{S}$, the promoted H5a/Q$+$E5 reading, P3's classification, and the P0-closed reachable-state family at budget $5$.
+
+\section{The tower tier and the panel-constant clash}\label{sec:tower}
+
+The seventeen cells of Theorem \ref{thm:census} pass every vertex-local test. The next tier is global: a completed route must carry an \emph{approximate-root ladder} across its whole tree [Sigray, Prop.~4.2], and this section shows that on the $\mathrm{td}=7$ panel the ladder is obstructed at level $1$, uniformly. We first state the ladder calculus, then the constants that are the same for every cell of the panel, then the clash itself on the worked example $(9,15,7,3)@2$, whose refutation turns out to be cell-independent.
+
+\subsection{The ladder calculus}\label{sec:ladder}
+
+The certificate formalization of the tower laws, assembled from the printed statements of $\mathsf{S}$:
+\begin{itemize}
+\item \emph{Ladder.} $h_0=g$, $h_{j+1}=h_j^{k_j}-\sigma_j f^{l_j}$ with $\gcd(k_j,l_j)=1$; $\alpha_0=0$ and $\alpha_{j+1}=\alpha_j+(k_j-1)l_j/k_j$ [Sigray, Prop.~4.2, eq.~(9)].
+\item \emph{Descent.} At each vertex $v$, $\delta_j(v)=\kappa_v\bigl(d_{f,v}+d_{h_j,v}-\alpha_j d_{f,v}-1+\pi_v\bigr)\in\mathbb{N}$, strictly decreasing in $j$; $m_v$ is the first zero. Equivalently $\delta_j(v)=D_{f,v}\,g_j-\kb_v$ with the \emph{level gap} $g_j:=l_j/k_j+1-\alpha_j$.
+\item \emph{Alive} ($j<m_v$): $(h_j^{+})^{k_j}=\sigma_j(f^{+})^{l_j}$ at $v$ [Prop.~4.2(iii)], so $p_{h_j,v}=H\,p_{f,v}^{\,l_j/k_j}$ with every factor exponent a nonnegative integer, and $d_{h_j,v}=(l_j/k_j)\,d_{f,v}$.
+\item \emph{Dead} ($j=m_v$): $p_{h_m,v}=S\,p_{\mathrm{red}}^{\,k_v}\,q_v$ with $k_v=i_v(\mu_v-1)$, $\mu_v=\alpha_{m_v}$ [Prop.~8.1(ii),(iv)].
+\item \emph{Death equation.} $\delta_{m_v}(v)=0$ is equivalent to $g_{m_v}=\kb_v/D_{f,v}$, and this is the same statement as Cor.~6.1's degree law $d_q=\kb\deg p_f/D_f$ combined with the St.~3.17(i)-transported $x$-degrees: three interlocking derivations of one number, verified both ways in the checker.
+\item \emph{Gcd law.} $M_v=\gcd(\deg p_f,\deg p_g,\deg p_{h_1},\dots,\deg p_{h_{m_v}})$ [Not.~8.1].
+\end{itemize}
+Because $\delta_j(v)\in\mathbb{N}$ strictly decreases, the ladder gaps $g_j$ strictly decrease, each vertex dies at the first index whose $g_j$ equals its own $\kb/D_f$, and a vertex's descent can never skip its own zero (that would make some $\delta_j(v)<0$). Non-killing indices are legal: the descent does not force every ladder level to be some vertex's death. Both facts are load-bearing below.
+
+The calculus was calibrated before use: on the solved $\mathrm{td}=6$ template it reproduces, with zero free parameters, the four delta tables $(104,34,4)/(100,30,0)/(10,0)/(0)$, the depths $m=(\geq3,2,1,0)$, the gaps $5/2,\,5/6,\,5/42$, the ladder $(2,3),(3,4),(7,23)$, the Prop.~8.1 exponents $k=19$ and $k=1$ with degrees $414$ and $16$, and the M-gcds $3,2,1$: each an independent exact match against filed template data (checker C2).
+
+\subsection{Panel constants}\label{sec:panel}
+
+For every cell of Table \ref{tab:census}, both poles are the unique $\mathrm{td}=7$ entry of Section \ref{sec:td7entry}: type $(2,3)$, pole data $(1,1,2)\oplus(1,2,3)$, with $\deg p_{f,P_1}=2$ and $\deg p_{f,P_2}=4$. Consequently:
+\begin{itemize}
+\item \emph{Level 0.} The pole death equation $g_0=\kb/D_f=5/2=l_0/k_0+1$ holds at both poles, so $(k_0,l_0)=(2,3)$, $\alpha_1=3/2$, $h_1=g^2-\sigma_0f^3$, and the \emph{pole death gap} is $5/2$: identical collapses at both poles. In the worked example the two level-0 collapses are re-derived by exact polynomial arithmetic and coincide with the certified pilot's pole rows.
+\item \emph{Chain 1.} Frozen at $(\mu,w,M)=(1,2,1)$ (Lemma L-A). Its (H8)-forced synchronization stack has a pole-adjacent vertex $X$ with $\deg p_{f,X}=2\nu_X$, $d_{q,X}=\nu_X+1$, hence death gap
+\[
+\mathrm{gap}(X)\;=\;\frac{\nu_X+1}{2\nu_X}\;\in\;(1/2,\,3/4]\qquad\text{for every }\nu_X\geq2 ,
+\]
+shape-independently.
+\item \emph{Chain 2.} Always carries a \emph{first-charged} vertex from the universal menu $\{(\mathrm A),(\mathrm C)\}$ of Section \ref{sec:budget}, with $i=2$ and simple reduced factors: the $k\mid2$ aliveness cap (joint cap N3 under insertions).
+\item \emph{The window.} The level-1 window $(\mathrm{gap}(X),\,5/2)$ contains no realization vertex gap (Lemma WIN). So the first post-pole death is $X$, and the universal $\nu_X\geq2$ refutation below, plus the insertion closure N1--N4, kills every ladder.
+\end{itemize}
+
+\subsection{The worked example: the cell $(9,15,7,3)@2$}\label{sec:worked}
+
+The cell's two deduplicated budget-equality completions are the direct route (case-IV terminal at $(2/3,3,2)$, $\lambda=4$) and the trunk route (one $\lambda=1$ menu edge through $(35,15,7,5)$ to the terminal $(2/5,5,1)$, $\lambda=5$). The shared tree, arrows poleward:
+\begin{center}
+\texttt{R0 -- G;\quad G -- N -- P1\ (chain 1);\quad G -- H2 -- F3 -- F2 -- F1 -- P2\ (chain 2)}
+\end{center}
+Every vertex and edge of both spines carries a complete decoration
+\[
+(\kappa,\ \pi,\ \kb,\ \nu,\ \rho,\ w,\ M,\ i,\ d_p,\ d_q,\ \deg p_f,\ D_f,\ d_f,\ d_g),
+\]
+and every entry closes under the printed transport laws with the promoted Q-value and E5 identities; the Prop.~4.1 pole equalities $d_f+d_g=1-\pi$ close at $P_1$ (value $5/158270$) and $P_2$ ($5/8925$) after nine transported edges, a stringent end-to-end audit of the $x$-degree layer. The death gaps $\kb_v/D_{f,v}$ at the prospective killers:
+\begin{center}
+\small
+\begin{tabular}{lc@{\qquad}lc}
+\toprule
+vertex & gap & vertex & gap\\
+\midrule
+$F_1$ & $\mathbf{2/5}$ & $H_2$ & $2/11305$\\
+$F_2$ & $1/34$ & $G$ & $1/13566$\\
+$F_3$ & $3/3230$ & $N$ ($\nu=11305$ rep.) & $\mathbf{5653/11305}\approx0.50004$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Chain 1 is forced to exist and forced to be neutral: the (H8) $i$-synchronization at $G$ requires $\deg p_{f,P_1}=2$ to ladder up to $i_G=22610$ through chain-1 vertices; the merge handshake fixes the arriving state at $w=2$; the budget is saturated ($4=6-\psi$), so every chain-1 step is uncharged; and the transport \eqref{eq:wlaw}, specialized to clean neutral cells ($l=1$, $(d_p,d_q)=(\nu,n\nu+1)$, $\Delta:=n\nu+1-\nu$), gives $w_{\mathrm{child}}=w_{\mathrm{par}}\,n/\Delta$ with $\Delta-n=(n-1)(\nu-1)\geq1$ for every $n\geq2$: once $w$ drops below $2$ it can never return. Hence chain 1 is a stack of clean $n=1$ neutrals, and the $f$-degree ladder $2\to22610$ forces the product of the stack's characteristics to be $11305=5\cdot7\cdot17\cdot19$.
+
+\medskip
+\noindent\textbf{The clash, in three cases.} While $X$ and the first-charged vertex $F_1$ are both alive, Prop.~4.2(iii) and Prop.~8.1 (integer exponents $i\,l_j/k_j$ at $i=2$ with $\gcd(k_j,l_j)=1$) cap every prefix step at $k_j\mid2$; the legal non-killing level-1 pairs are exactly $(k,l)\in\{(1,2),(2,3),(2,5)\}$, with gaps $3/2,1,2$, each with positive integer $\delta_1$ at every non-pole vertex. The exhaustion:
+\begin{itemize}
+\item[\textbf{A}] (\emph{empty prefix; $X$ kills level 1}). Then $(k_1,l_1)=(2\nu_X,\,2\nu_X+1)$ with $k_1\geq4$: refused by the $k\mid2$ cap at $F_1$ (exponents of type $2(2\nu_X+1)/\nu_X$, nonintegral).
+\item[\textbf{B}] (\emph{$F_1$ kills level 1 first}). Impossible outright: $\delta(X)\in\mathbb{N}$ strictly descends and cannot skip its own zero, so $X$ (gap $>2/5$) must die strictly before any level with $g_j=2/5$ exists; death at $X$ with gap $2/5$ would need $\nu_X=-5$.
+\item[\textbf{C}] (\emph{nonempty non-killing prefix, then $X$ dies}). After $r$ prefix steps with $k=2$ (each adds an odd multiple of $1/2$ to $\alpha$; $k=1$ steps add $0$), $\alpha_m\equiv3/2+r/2\pmod 1$. Death of $X$ at level $m$ demands $l_m/k_m=\mathrm{gap}(X)+\alpha_m-1=\alpha_m-1/2+1/(2\nu_X)$ with $k_m\mid2$ ($F_1$ still alive): $k_m=1$ forces $2\nu_X\mid r\nu_X+1$, impossible for $r$ even (the remainder is $1$) or odd ($\nu_X+1<2\nu_X$); $k_m=2$ forces $\nu_X\mid1$. No prefix length escapes.
+\end{itemize}
+None of the three refutations uses $\nu_X\mid11305$, oddness, or any trace of the fixed chain-2 realization: case A needs only $2\nu_X>2$; case B needs only $\nu_X+5>0$; case C needs only that $2\nu_X$ never divides $r\nu_X+1$ (from $2\nu_X-(\nu_X+1)=\nu_X-1\geq1$) and that $\nu_X$ never divides $1$. They are identities in $\nu_X\geq2$, so every chain-1 stack of every chain-2 realization is covered; the divisor classes of the displayed representative are an instantiation, not the coverage boundary. The trunk completion shares the whole pole-to-merge subtree, its one new vertex has gap $1/158270$, far below the window, and the same exhaustion runs verbatim on its certificate: the cell is tower-dead.
+
+\subsection{Zero-cost insertions: the closure N1--N4}\label{sec:insertions}
+
+Adversarial review exhibited a realization family the certificates had not represented: state-preserving zero-cost neutral insertions at any chain state, e.g.\ inserting the cell $(6,4)$ with $(l,\nu)=(2,3)$, $M=2$, before $F_1$; the insertion is handshake-exact, keeps both budgets saturated, and moves $i_{F_1}$, $\mathrm{gap}(F_1)$, $i_G$, and the chain-1 product off every fixed value the certificates displayed. The census cannot see it (the census prices \emph{states}, and the state sequence is unchanged), and the filed coverage doctrine places such realizations inside every record's kill quantifier: so the kill had to close over them. The closure is four lemmas, each machine-checked, each insertion-invariant:
+\begin{itemize}
+\item[\textbf{N1}] (\emph{menu}). A state-preserving zero-cost step has $n=1$: by \eqref{eq:wlaw}, $\Delta-n=(n-1)(\nu-1)\geq1$ makes $w$ strictly drop otherwise, breaking the pinned state sequence. So insertions are clean single-orbit neutrals $(l\nu,\nu+1)$ with $\gcd(l,\nu+1)=M_{\mathrm{state}}$.
+\item[\textbf{N2}] (\emph{parity}). At the pre-$F_1$ state $(3/2,2)$, $\gcd(l,\nu+1)=2$ forces every inserted $\nu$ odd: the pre-$F_1$ characteristic product $P_{\mathrm{pre}}$ stays odd.
+\item[\textbf{N3}] (\emph{joint cap}). The $P_2$-adjacent chain-2 vertex ($F_1$ itself, or the first inserted neutral) has full $f$-pattern $(t-A)^4$ (exponent $\deg p_{f,P_2}=4$ for any shape with $i\,l=4$), giving $k\mid4$; $F_1$ has simple reduced factors with $i_{F_1}=2P_{\mathrm{pre}}$, giving $k\mid2P_{\mathrm{pre}}$. Both sit below $\mathrm{gap}(X)$ (gaps $\leq3/8$ and $2/(5P_{\mathrm{pre}})$), hence are alive at $X$-death, and $\gcd(4,2P_{\mathrm{pre}})=2$ restores the cap $k\mid2$ at every level alive at both. ($P_{\mathrm{pre}}=1$ is the no-insertion case.)
+\item[\textbf{N4}] (\emph{uniform gap bound}). An inserted neutral above a poleward vertex of full $f$-degree $D_{\mathrm{prev}}$ has $i=D_{\mathrm{prev}}/l$ and death gap $(\nu+1)/(D_{\mathrm{prev}}\nu)$, free of $l$; chain 2 has $D_{\mathrm{prev}}\geq4$, so the gap is $\leq3/8<2/5$ for every $\nu\geq2$; charged gaps only shrink ($\mathrm{gap}(F_1)=2/(5P_{\mathrm{pre}})$); $\mathrm{gap}(X)$ and the window emptiness are untouched.
+\end{itemize}
+The universal A/B/C refutation consumes only the three inputs that N1--N4 preserve: $\mathrm{gap}(X)$, the $k\mid2$ cap, and window emptiness. An escape would now have to break one of N1--N4, the pole types, or the budget saturation, each an identity or a lattice-instantiated bound in the checker.
+
+\section{The four lemmas}\label{sec:lemmas}
+
+The clash of Section \ref{sec:tower} consumes four panel-level premises: chain 1 is never charged; the first charged chain-2 step is (A) or (C); the window is empty; and the recorded arrival vertices are E5-legal or reroutable. Each is a lemma, proved here, with every arithmetic claim a named check in the uniform gate (\texttt{cases/tower\_check.py}).
+
+\begin{lemma}[L-A; chain-1 freeze, budget-independent]\label{lem:LA}
+On every route of every cell, chain 1 is uncharged.
+\end{lemma}
+
+\begin{proof}
+Chain 1's state has $M=1$ (entry pin, Section \ref{sec:td7entry}). The multiplicity law \eqref{eq:st84} forces every arriving multiplicity $l\mid M=1$, so every chain-1 cell is the clean $l=1$ shape $(\nu,\,n\nu+1)$, whose own $M=\gcd(\nu,n\nu+1)=\gcd(\nu,1)=1$: the freeze propagates. R1.3 excludes dirty vertices at $\mu=1$; vertex-locally the same fact reads: a charged direction needs $m\,d_q<d_p=\nu$ (P0/L7), impossible since $d_q=n\nu+1>\nu$ and $m\geq1$. So budget residue on slack routes cannot be spent on chain 1. (Gate checks: L-A steps 1/2; the gcd identity and the shape contradiction on lattices.)
+\end{proof}
+
+\begin{lemma}[AM; absorbing $M=1$ and the first-charged menu]\label{lem:AM}
+The first charged chain-2 step of every class-C realization is $(\mathrm A)=(21,15)$ at $\nu=7$ landing $(2/3,3)$, or $(\mathrm C)=(20,16)$ at $\nu=5$ landing $(3/4,4)$, both $\lambda=2$, both with $i=4/l=2$.
+\end{lemma}
+
+\begin{proof}
+From the entry state $(3/2,2)$, the multiplicity law forces $l\mid M=2$. Steps with $l=1$ are neutral, by the shape argument of Lemma \ref{lem:LA}. The $l=2$ charged menu is exactly $\{(\mathrm A),(\mathrm C)\}$ (engine-audited against the filed P0 menu of Section \ref{sec:budget}). Every other charged first step, the $\varepsilon$-step and the pure-$b$ family, lands $M=1$; and $M=1$ is absorbing: \eqref{eq:st84} then gives $l=1$ forever, and the children $(\nu,n\nu+1)$ keep $M=1$. A class-C arrival needs $\mu_0\mid M_U$ with $\mu_0\geq2$, unreachable from $M=1$. (Gate checks: AM identity/menu/absorption.)
+\end{proof}
+
+\begin{lemma}[WIN; window emptiness, restated per both uniform reviews]\label{lem:WIN}
+Every budget-admissible competing vertex other than the poles and the pole-adjacent chain-1 vertex $X$ has death gap $\leq2/5<1/2\leq\mathrm{gap}(X)$; the level-1 window $(\mathrm{gap}(X),\,5/2)$ is empty.
+\end{lemma}
+
+\begin{proof}
+Five ingredients, each a named gate check.
+(i$'$) \emph{Entry.} At $D=4$ the multiplicity law forces $l\mid2$; the charged entry ratios are $8/5$ for (C), $10/7$ for (A), $10/7$ for the $\varepsilon$-step $(7,5)$; the maximal entry child gap is $2/5$, attained only by (C).
+(i$''$) \emph{Raw menu, with the budget qualifier.} The raw $69$-state non-resonant ratio supremum is $5/2$, attained only by the state-96 outlier $(14,7)$, $l=5$, at $(3/5,5)$, whose $dl=2$ step is budget-blocked (distance $5$); framed budget-admissible non-resonant steps have ratio $\leq2$, with supremum at $(10,5)$, $l=4$. An earlier draft's sentence claiming supremum $2$ over the full closure was false as a raw-menu fact and was corrected on review; the budget qualifier is what makes the bound true.
+(ii) \emph{Growth.} $\deg_{\mathrm{child}}=\deg_{\mathrm{par}}\,d_p/l\geq\nu\,\deg_{\mathrm{par}}\geq2\,\deg_{\mathrm{par}}$, anchored at $4$; so non-entry parents have degree $\geq8$ and deeper children have gap $\leq(5/2)/8=5/16<1/2$.
+(iii) \emph{Resonant audit, robust form.} The resonant-step states are exactly $\{(3,1),(3/5,1),(3/5,5)\}$, all non-entry, so their $n=2$ children are covered by (ii) alone, with no minimal-degree defaults.
+(iv) \emph{Parametric families.} The identities $l(\nu+1)/(l\nu+\varepsilon)\leq(\nu+1)/\nu\leq3/2$ and N4's bound $(\nu+1)/(D_{\mathrm{prev}}\nu)\leq3/8$ at $D_{\mathrm{prev}}\geq4$.
+(v) \emph{Terminal side.} Lemma \ref{lem:TERM}.
+The framed enumeration maximum $2/5$ (witness (C)) is corroboration from a finite symbolic sample ($242$ path-states, one characteristic per parametric family, depth and degree cutoffs), not an exhaustive realization enumeration; the quantifier closure is by (i$'$)--(v).
+\end{proof}
+
+\begin{lemma}[TERM; terminals cannot steal the window]\label{lem:TERM}
+Terminal choice cannot claim a level in the window: every merge gap $d_q/(i_G\,d_p)<1/2$ (the largest on the panel: $3/28$, $7/250$, $3/196$), and every trunk or terminal-side child has gap $\leq(5/2)/\deg p_{f,G}<1/2$, since $\deg p_{f,G}\geq42$ panel-wide and the $\kappa$-rescaling cancels in $\kb/D_f$. (Gate check TERM, all 16 cells.)
+\end{lemma}
+
+\begin{lemma}[E5F; \texttt{TOWER-UNIFORM.md}]\label{lem:E5F}
+A recorded arrival vertex $(\nu_U,\kb_U)$ of a cell $(\kb_G,\nu_G)$ is E5-realizable iff
+\[
+n\;=\;\nu_U\,\kb_G-\nu_G\,\kb_U\;\geq\;1
+\]
+(printed $(h')$ positivity; the congruence is automatic).
+\end{lemma}
+
+\begin{proof}
+The corrected transport (Proposition \ref{prop:h5a}) gives the general intermediate identity $n=\nu_U X/\mu_0-\nu_G\rho_U$, which evaluates to the display on recorded data; the congruence $n\equiv-\nu_F\kb_G\pmod{\nu_G}$ holds automatically on it. Closed forms: on a charged arrival, $\rho_U=1/\mu_0$, which requires only $\mu_0\mid M_U$ and not $M_U=\mu_0$ (the $(9,15)$ cell's $M_U=4$ arrival has $\rho_U=1/2$), so $n=(X\nu_U-\nu_G)/\mu_0$; on a clean pad, $\rho_U=w_U$ and $\kb_U=(\nu_U+1)w_U$, so $n=((\nu_U+1)X-\mu_0\kb_G)/\mu_0$. In particular the minimal pad $\nu_U=\mu_0-1$ has $n=X-\kb_G=-2$ identically (the $\kb=5$ pad class), and the family's $\kb_U=1$ direct vertices $\nu_U=(m-1)/2$ have $n=-1$ identically, refuting the recorded direct arrivals of $(58,87)$, $(74,111)$, $(90,135)$.
+\end{proof}
+
+Consequences of Lemma \ref{lem:E5F}, all gate-checked: the census's arrival-vertex lists are a state-level superset (the census prices states, so its cell list and route counts $238/233$ are untouched); seven of sixteen rollout minimal-witness rows were contaminated and are corrected in Table \ref{tab:witness}; the cell at $\mu_0=23$ has no legal direct arrival at all (its witness is the pad $\nu=45$, $n=2$). Refuted vertices' realization families reroute through their legal pads and are killed with everything else: no kill ever relied on an arrival's realizability. Census-audit note for any future consumer of the census's arrival-vertex columns: apply the $n\geq1$ filter; this is a vertex-realizability refinement, not a census edit.
+
+\section{The uniform theorem and the witness table}\label{sec:uniform}
+
+\begin{theorem}[td-7 tower uniformity; \texttt{TOWER-UNIFORM.md}, promoted 2026-08-14]\label{thm:uniform}
+Every cell of the E5-corrected td-7 class-B/C book dies at the tower tier. Precisely: for each of the 17 cells of the promoted census (238 raw / 233 deduplicated routes), no realization of any filed completion route (over all recorded arrivals and their $M_U$ classes, all free characteristics, all neutral padding, all zero-cost insertions at eligible states, all terminals, and rerouting of E5-refuted arrival vertices through their legal pads) admits a global Prop.~4.2 approximate-root ladder: level 1 of every ladder is obstructed by the $X$/first-charged clash. Class B is empty before this tier (Proposition \ref{prop:classB}). Hence the td-7 off-axis book is EMPTY at the tower tier.
+\end{theorem}
+
+The realization quantifier includes, explicitly, all budget-feasible charged predecessor strata, including charged-state self-returns and multiplicity partitions: the $(21,9)$ $l=3$ self-return at $(2/3,3)$ (cost $4$ over the filed minimum $2$) and the composite insertion-plus-self-return-plus-E5-pad realization are replayed and killed in the gate (stress checks (a)/(b)); they change degrees, never the clash inputs.
+
+\medskip
+\noindent\textbf{Perimeter.} Realizations are the filed design families; the trust set is $\mathsf{S}$ (Definition \ref{def:trust}) together with the promoted H5a Q-value $+$ E5 (Proposition \ref{prop:h5a}), the campaign layer R1.0--R2.2/P0--P3, the promoted census (Theorem \ref{thm:census}) as the route perimeter, and the tower formalization of Section \ref{sec:ladder} calibrated on the $\mathrm{td}=6$ template. A beyond-perimeter route (a charged step outside the filed closure, or a budget violation) would be a census under-enumeration to flag, never absorbed. H5a rider: the verdict covers the promoted Q$+$E5 book (17 cells) \emph{and} its $U_{7C}$-restricted sub-book (exactly $(9,15)$ and $(10,15)$, killed by the promoted certificates whose only case-III edges have equal indices); no proof or hidden use of Conjecture \ref{conj:u7c} enters, and $U_{7C}$ is moot for $\mathrm{td}=7$.
+
+\medskip
+\noindent\textbf{Proof structure.} The panel-constant clash (Section \ref{sec:tower}), the four lemmas (Section \ref{sec:lemmas}), a per-cell witness row for each of the 16 class-C cells (Table \ref{tab:witness}, frozen and machine-recomputed each run), and the four certified instances: the $(9,15)$ cell (both completions, Section \ref{sec:worked}) and the three probe cells $(10,15,7,5)@3$, $(58,87,43,29)@15$ (the representative of the $2/(2k+1)$ family, killed $k$-symbolically), and $(25,35,17,5)@8$ (the $\kb=7$ outlier, killed $\kb$-generically), each with its own promoted certificate and hostile review. Rows 1, 5, and 11 of the frozen table reproduce those certificate ledgers exactly.
+
+\begin{table}[ht]
+\centering\scriptsize\setlength{\tabcolsep}{2pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrlrrrrlll}
+\toprule
+cell $@\,\mu_0$ & $\kb$ & $X$ & arrival & $n$ & $\deg p_{f,U}$ & $i_G$ & $P$ & maxgap & first & refuted min (was)\\
+\midrule
+$(10,15,7,5)@3$ & 6 & 4 & direct $\nu=7$ & 7 & 42 & 14 & 7 & $5/14$ & (A) & none\\
+$(15,25,12,5)@3$ & 5 & 3 & pad $\nu=5$ & 1 & 12750 & 4250 & 2125 & $2/5$ & (C) & 5100 (pad $\nu=2$, $n=-2$)\\
+$(18,27,13,9)@5$ & 6 & 4 & direct $\nu=7$ & 3 & 490 & 98 & 49 & $5/14$ & (A) & none\\
+$(21,35,17,7)@4$ & 5 & 3 & pad $\nu=7$ & 1 & 214200 & 53550 & 26775 & $2/5$ & (C) & 91800 (pad $\nu=3$, $n=-2$)\\
+$(25,35,17,5)@8$ & 7 & 5 & direct $\nu=5$ & 1 & 400 & 50 & 25 & $2/5$ & (C) & none\\
+$(26,39,19,13)@7$ & 6 & 4 & direct $\nu=17$ & 7 & 1190 & 170 & 85 & $2/5$ & (C) & none\\
+$(27,45,22,9)@5$ & 5 & 3 & pad $\nu=9$ & 1 & 1598850 & 319770 & 159885 & $2/5$ & (C) & 710600 (pad $\nu=4$, $n=-2$)\\
+$(34,51,25,17)@9$ & 6 & 4 & direct $\nu=13$ & 3 & 11466 & 1274 & 637 & $5/14$ & (A) & 7650 (direct, $n=-1$)\\
+$(42,63,31,21)@11$ & 6 & 4 & direct $\nu=16$ & 3 & 35530 & 3230 & 1615 & $2/5$ & (C) & 2750 (direct, $n=-1$)\\
+$(50,75,37,25)@13$ & 6 & 4 & direct $\nu=19$ & 3 & 41990 & 3230 & 1615 & $2/5$ & (C) & none\\
+$(58,87,43,29)@15$ & 6 & 4 & direct $\nu=37$ & 7 & 27750 & 1850 & 925 & $2/5$ & (C) & 13650 (direct, $n=-1$)\\
+$(66,99,49,33)@17$ & 6 & 4 & direct $\nu=25$ & 3 & 541450 & 31850 & 15925 & $5/14$ & (A) & none\\
+$(74,111,55,37)@19$ & 6 & 4 & direct $\nu=47$ & 7 & 116090 & 6110 & 3055 & $2/5$ & (C) & none\\
+$(82,123,61,41)@21$ & 6 & 4 & direct $\nu=31$ & 3 & 553350 & 26350 & 13175 & $2/5$ & (C) & none\\
+$(90,135,67,45)@23$ & 6 & 4 & \textbf{pad $\nu=45$ (no direct)} & 2 & 36773550 & 1598850 & 799425 & $2/5$ & (C) & 817190 (direct, $n=-1$)\\
+$(98,147,73,49)@25$ & 6 & 4 & direct $\nu=37$ & 3 & 2987750 & 119510 & 59755 & $2/5$ & (C) & none\\
+\bottomrule
+\end{tabular}}
+\caption{The frozen witness table: for each cell, the minimal E5-legal realization (frame-tracked exact enumeration of the filed closure, budget 5, with $\rho/\kb$ replayed per vertex), its clash instantiation, and census parity. $P=i_G/2$ is the chain-1 stack product; ``first'' is the first-charged menu cell; the last column records the pre-E5F minimal witness where Lemma \ref{lem:E5F} refuted it. The $(9,15,7,3)@2$ cell is carried by its own certificates (Section \ref{sec:worked}).}
+\label{tab:witness}
+\end{table}
+
+Per row, the checked premises are: the $\kb$ pin closes both ways ($2d_q/(d_q-d_p)$ against \eqref{eq:I4}); the L6 and P3 laws; census parity (routes raw/eq match Theorem \ref{thm:census} exactly, 16/16); $n\geq1$ under the applicable E5F closed form; $i_G$ and $P$ integral with $P\geq2$ (the stack exists; a non-integral $P$ would be spine-death, bookkept separately, and none occurs); maximal competing gap $\leq2/5$ (window empty), with pad vertices included in the max-gap and prefix-delta loops; first-charged in $\{(\mathrm A),(\mathrm C)\}$ (cap $k\mid2$); and prefix-menu deltas $D_f\,g-\kb$ positive-integral at every witness vertex for $g\in\{3/2,1,2\}$ (case-C legality). The universal A/B/C block and N1--N4, run five times in the certificate suites, consume only these premises: each row is therefore a complete clash instantiation. The witness rows instantiate parametric families minimally; their quantifier closure is by the lemmas (WIN, the E5F identities, N1--N4), not by enumeration.
+
+\medskip
+\noindent\textbf{What the theorem does not claim.} Formal-tier scope, inherited verbatim from the cell-level certificates: this is an obstruction over the filed route perimeter, not a statement about convergence, P-realizability, global polynomiality, or the existence question away from the represented charts. Jet-window emission (the campaign's milestone 2) is moot panel-wide unless review overturns a dependency. The perimeter sentence above, with its named trust set, is part of the theorem, not a footnote to it; the conditional architecture is deliberate and is discussed as methodology in Part IV.
+
+\part{Methodology}
+
+\section{Verification methodology}\label{sec:method}
+
+The mathematics of Parts II and III was produced by a human-directed campaign in which AI systems did most of the derivation, all of the implementation, and a large share of the checking, over a source text known to contain errors. That combination fails by default. This section describes the discipline that, we believe, makes it sound, at the level of detail a referee needs to attack it. The stance throughout: these are engineering practices that supplement proofs and human refereeing; nothing here replaces either. The evidence offered is not that the process sounds careful but that it demonstrably bites against the authors' own interests: reviews killed campaign programs, retractions were executed under pre-stated rules, and the novelty audit removed a headline claim. Every review, gate log, and retraction cited below is preserved verbatim in the archived artifact (Appendix \ref{app:repro}).
+
+\subsection{Adversarial review across model families}\label{sec:review}
+
+Every promotion-grade claim is reviewed by at least one AI model from a different vendor family than the one that produced it, prompted hostilely: the reviewer's task is to break the claim, with access to the source documents and the repository engines, and its verdict vocabulary is fixed (SOUND, SOUND-WITH-ERRATA, BROKEN, STILL-BROKEN, CONFIRMED-KILL). Two rules give the protocol teeth. First, review history is preserved, not overwritten: a BROKEN verdict stays in the record next to the repair it forced. Second, a repaired claim goes back to the reviewer that broke it.
+
+The $(9,15,7,3)@2$ kill of Section \ref{sec:worked} is the worked example of the loop at full stretch. The first hostile review (Grok family) returned SOUND-WITH-ERRATA: the claimed level-1 dichotomy was not exhaustive, because non-killing ladder prefixes are printed-legal; this forced the three-case form of the clash (case C is the review's finding, machine-checked into the certificate). A second family (GPT-5.6-Sol) then returned BROKEN on the pre-repair snapshot, finding the same gap independently, and its triage exposed two coverage debts: the $M_U=4$ raw arrival and the free pure-$b$ characteristic. Closing them produced the universal $\nu_X\geq2$ refactor, which is what later made the panel theorem possible. Sol's re-review returned STILL-BROKEN with a genuinely new gap: the in-perimeter zero-cost neutral-insertion family of Section \ref{sec:insertions}, exhibited with an explicit handshake-exact construction. The closure N1--N4 formalizes the repair Sol itself sketched and verified escape-free; the final verdict was CONFIRMED-KILL. Panel-wide, the tower campaign took seven review passes across three model families, folded 14 errata from the two uniform-theorem reviews alone, and no reviewed cell kill was ever overturned; several were strengthened. The reviews are the campaign's sharpest tools: of the load-bearing repairs in Part III, none was found by its original author.
+
+A second case study shows the loop killing an author-favored program outright. The neutral-word quotient program (artifact \path{NF-Z.md}) sought a finite invariant compressing the order of free-zone insertion words. The first two hostile rounds produced counterexamples, a ladder-register mismatch and then a prefix-residue boolean, each an explicit pair of equal-invariant legal words differing on a consumed field; they killed unconditional commutativity and forced a conditional form. Round 3 proved an exchange theorem under a scale-divisibility hypothesis SD, field by field, and verified SD on every filed packet. The round-4 hostile review refuted the round-3 theorem with a third counterexample (an interleaved tail flipping a live-factor cap and a $\mu$-boolean), establishing that SD is necessary but not sufficient: the free zone carries ordered arithmetic that no finite invariant compresses. The program was closed, the three counterexamples were banked as regression fixtures, and the census-relevant statement was re-proved as a depth cap in a successor document whose gate replays all six counterexample configurations. Four rounds, three counterexamples, one refuted theorem of our own, and the final record is stronger than the conjecture it replaced. A process that cannot produce this outcome is not review.
+
+\subsection{Machine gates as promotion criteria}\label{sec:gates}
+
+No claim in this paper is promoted on prose. Promotion requires a named machine gate: an executable script whose checks are individually labeled, whose arithmetic is exact (Python integers and \texttt{Fraction}; no floats anywhere in any verdict path), and which exits nonzero on any failure. The gates behind Part III: the uniform gate (\texttt{cases/tower\_check.py}) runs the five certificate suites and then the uniform mode, $1559/1559$ checks in about four seconds, including the lemma identities of Section \ref{sec:lemmas} instantiated on lattices, the frozen witness table recomputed from the closure, and the stress realizations; the census engine (\texttt{cases/td7\_census\_e5.py}) runs gates G1--G5 and the $\nu\leq400$ brute-force sweep. Two design rules matter more than the counts. \emph{Negative controls are live mutations}: the gate perturbs real certificate data (21 perturbations in the tower suites, a 14-case self-test on the $(9,15)$ certificates) and requires the checks to fail; a gate that cannot be made to fail proves nothing. \emph{Gates corroborate, they do not quantify}: where a claim closes a quantifier, the closure is by a lemma, and the gate's enumeration is labeled a sample (the $242$ path-states of Lemma \ref{lem:WIN} are the standing example; an early draft blurred this and review made the labeling exact). Local reproduction of every gate is seconds to minutes (Appendix \ref{app:repro}); a referee can rerun the entire promotion basis of Part III in under two minutes.
+
+\subsection{Certificates: upgrading machine verdicts}\label{sec:cert}
+
+The campaign's Gr\"obner engine, msolve \cite{msolve}, reports emptiness as a reduced basis $[1]$. That is trace-level evidence, not an object a referee can check by hand; and on characteristic-$0$ input the printed basis is computed modulo the first machine prime of the multi-modular run, so even a char-$0$ header is not a lifted result. The campaign explored two ways to do better (artifact \path{CERT-UPGRADE.md}), and reports both outcomes, one of them a clean negative.
+
+\emph{Prime-size certification is dead, and no theorem can revive it.} Effective spreading-out gives a criterion: if a system is nonempty over $\overline{\mathbb{Q}}$, every prime at which it is empty divides a fixed nonzero integer of controlled height, so emptiness at a single sufficiently large prime (or at primes of sufficient product) certifies char-$0$ emptiness. The controlling height is governed by worst-case heights of char-$0$ witness points, of Krick--Pardo--Sombra shape $4n(n+1)d^n(h+\log s+(n+7)\log((n+1)d))$ \cite{KPS}. Instantiating honestly: under a dream floor of $d^n\max(h,1)$, with every combinatorial factor deleted, the smallest system in the entire campaign (a 12-variable control) would need a certifying prime of about $5\times10^9$ decimal digits; the open $(72,108)$ strata need $10^{33}$ digits and up; the banked verdict primes have six digits and msolve's modular ceiling is near $2^{31}$. The exponential shape $d^{\Theta(n)}h$ is realized by explicit iterated-power families, so it is not proof slack. The lane was closed at the smallest system it would ever have served, and the record says so.
+
+\emph{Certificate extraction is alive.} For a banked empty system, Singular's \texttt{lift} \cite{Singular} produces cofactors $h_i$ with $\sum h_if_i=1$, which are then re-verified by exact rational arithmetic in an independent engine (python-flint). On the campaign's conjecture-E control family this produced certificates that are sparse (3 of 21 cofactors nonzero), integral, of height $\log 2$, and byte-identical across all four B-subset variants, collapsing to a statement a human can read:
+
+\begin{quote}
+\textbf{The 2-row certificate (\texttt{CERT-UPGRADE.md} \S2.4).} All four conjE B-subset systems share byte-identical nonzero cofactors, dividing by $t^2$ to
+\[
+(f1_{n0}-f1_{n1})^2\;=\;f_{13}+w\cdot f_{21},
+\]
+\[
+\begin{aligned}
+w=\;&-(g2_{n0}-g2_{n1})^2(f2_{n0}-f2_{n1})-2(g2_{n0}-g2_{n1})(f1_{n0}-f1_{n1})\\
+&-(g1_{n0}-g1_{n1})(f2_{n0}-f2_{n1}):
+\end{aligned}
+\]
+the square of the P1-difference lies in the ideal $(f_{13},f_{21})$ (a 2-row emptiness core, integral, height $\log 2$, verified in an independent engine), upgrading msolve EMPTY verdicts to unconditional char-0 theorems.
+\end{quote}
+
+\noindent On $\{f_{13}=f_{21}=0\}$ the identity forces $f1_{n0}=f1_{n1}$, contradicting the Rabinowitsch row: twenty-one equations are empty, for every B-subset, for one symbolic reason. The honest boundary is also recorded: extraction is instant at 12--14 variables and already infeasible at 27 (the open-stratum systems), consistent with the lift retirement below. Certificates are extracted wherever feasible; where they are not, the record rests on the emission-rule posture of the next subsection and says so explicitly.
+
+\subsection{The retraction ledger and emission hygiene}\label{sec:ledger}
+
+The audit trail (\path{AUDIT.md}) is append-only, and its tail is a ledger of things the campaign took back or repaired under pre-stated rules. Four entries carry the methodological content.
+
+\emph{Retirement under the last-chance rule.} The char-$0$ lift certificates for two $(72,108)$ strata were a redundancy rider on a record that rests on exact mod-$p$ verdicts at three independent large primes plus satisfiability guards. When a scheduled last-chance check produced no certificate, the lane was retired and the runs killed, favorable as the certificates would have been. Redundancy that cannot be produced on schedule is deleted, not kept as an aspiration.
+
+\emph{The 243/729 re-emission.} Review of a template document found that a cleared row constant was $243=3^5$, not the $729$ an earlier draft had baked into three emitters. The constant sits in a unit-rescalable row, so a scale map carries each stale system onto its corrected twin and no banked verdict flips; the campaign nonetheless re-emitted all 26 affected files (originals kept beside them with a \texttt{.stale729} suffix), re-verified the two-row difference with an independent parser at random points, and re-ran the engine guards. For the empty-verdict class the corrected twins were deliberately not re-screened: the banked controls whose rows are a subset of the full systems are empty with no such row at all, so emptiness is implied for any value of the constant; the audit records this subset argument and a falsification flag (if a corrected twin ever fails to reproduce EMPTY, the argument is void and review reopens). Hygiene re-emissions are cheap; silently inherited constants are not.
+
+\emph{The msolve parenthesis hazard.} A review session discovered that msolve 0.10.1 silently mis-parses parenthesized input: the micro-test $x-(3+1)$ yields the basis $[x+1]$, exit 0. A sweep of all 401 shipped input files found exactly one containing parentheses; its verdict had already been retracted on independent grounds, and every other file is an expanded monomial sum. The standing rule since: emitters ship expanded monomial sums only, and every new emitter passes a parenthesis sweep plus a satisfiability smoke test before its verdicts can be banked.
+
+\emph{The $2^{63}$ clamp.} A second hazard, isolated by micro-test: msolve's integer-token parser clamps at $2^{63}-1$, silently, so a positive-characteristic file carrying unreduced coefficients larger than that is corrupted at parse time (coefficients between $p$ and $2^{63}$ are reduced correctly). A full inventory found 110 mod-$p$ files with unreduced coefficients, splitting at the true boundary into 49 corrupt-class and 61 word-sized; a cross-reference of every accepted campaign verdict against the inventory found the contaminated count to be zero, class by class (the char-$0$ certificates never touch the parser's modular path; the corrupt-class files produced no accepted verdict; the word-sized files parse correctly, re-verified empirically by reduced re-emissions reproducing every banked verdict). The standing emission rule now has four points: expanded sums only; all coefficients reduced into $[0,p)$ before shipping; an independent-parser round-trip at the target prime; and a constant-term satisfiability smoke test. Even word-sized violations are barred, because parser internals are not a trust anchor.
+
+\subsection{The novelty audit}\label{sec:novelty}
+
+The same discipline is applied to claims of newness. Before submission, the rigidity statement (Theorem \ref{thm:rigidity}), then the campaign's headline lemma, was subjected to a systematic priority search: 22 logged query rows over the literature and, decisively, a sweep of the campaign's own reference folder. The prior art was found there: Lemma A.7 in the appendix of \.Zo{\l}\k{a}dek's 2008 paper \cite{Zoladek}, credited by him to Liouville, reaches the statement's content in two lines plus a trivial case, and his Lemma 3.9 uses the same ODE inside the plane Jacobian problem; the $\nu=1$ case is published verbatim by Hermoso and Alc\'azar \cite{HA}. The finding was folded into the record, not around it: the statement is named the \.Zo{\l}\k{a}dek--Liouville rigidity throughout both papers, the companion paper's remark was rewritten before any further correspondence, and the campaign's independent proof was demoted to a second proof, retained for its different mechanism and its positive-characteristic bound (Remark \ref{rem:priorart}). The search log is itself an artifact (\path{paper2/PRIORITY.md}), dead ends included. Collateral facts surfaced by the same search were adopted into the campaign's ledger even where they weaken adjacent framing: Mathieu's conjecture is false for $\mathrm{SU}(2)$ and the Gaussian moments conjecture is false for $n\geq3$ \cite{Long1,Long2}, so the Mathieu--Zhao framing documents were corrected against both. A novelty claim audited with the same hostility as a proof is rarer than it should be; the cost here was one search-day, against the alternative of a referee finding the citation three lines above our own bibliography entry.
+
+\medskip
+Five practices, then: hostile review across model families with preserved failure history; named machine gates with live-mutation controls as the promotion bar; certificate extraction wherever feasible, with honest negatives recorded; an append-only retraction ledger with pre-stated rules; and novelty audits run like proofs. None of this replaces human refereeing. All of it is what we would want in place before asking for it.
+
+\section{Open problems}\label{sec:open}
+
+\stubbox{Deferred with the conclusions, pending the residue-A screen verdict and the td-11/13 refile, per \texttt{paper2/SCOPE.md} rev 2. Planned content, about 1 page: the td-11/13 refile and tower port (launching; if it closes, this paper's Part II/III structure upgrades to a multi-panel sheet-ladder statement); Conjecture \ref{conj:u7c} ($U_{7C}$) as a question about case-III edges in its own right; the coefficient-gluing tier for panels the tower does not reach; depth $\geq3$ columns on the strip side; and the Mathieu-subspace question SC1 with its power ledger, post-Long-corrected (expanded here if the companion note is not published separately).}
+
+\appendix
+
+\section{Reproduction}\label{app:repro}
+
+Every promotion gate in this paper reruns locally, with no network access, in exact arithmetic. Commands, from the repository root:
+
+\begin{itemize}
+\item \texttt{python3 cases/tower\_check.py} ($\sim$4 s). Part III: the five certificate suites, 21 perturbation controls, then uniform mode; $1559$ checks, exit 0; final line \texttt{UNIFORM (17 cells): THEOREM}.
+\item \texttt{python3 cases/td7\_census\_e5.py} ($<$1 min). Section \ref{sec:census}: both books, per-cell arrivals and routes, gates G1--G5, exit 0.
+\item \texttt{python3 cases/tower\_rollout\_arith.py} (seconds). The prediction table, 7 rows corrected per Lemma \ref{lem:E5F}; the gap and window columns were always exact.
+\item \texttt{cd cases \&\& python3 book\_offaxis.py} ($\sim$25 min). The off-axis book: entry census, merge census, $\lambda$-pricing, the 62-cell record, stage gates.
+\item \texttt{cd cases \&\& python3 sheet6\_campaign.py gate} (seconds). The td$\,\leq6$ engine gate (pilot reproduction); further phases \texttt{table}, \texttt{validate}, \texttt{bash5}, \texttt{bash --budget 4}, \texttt{report}.
+\end{itemize}
+
+The certificate files for the four certified cells are under \texttt{cases/towers/}; the promoted documents quoted in this paper (\path{BOOK-OFFAXIS.md} \S\S11--11a, \path{TOWER-UNIFORM.md}, \path{TOWER-9-15.md}, \path{SHEET6-CAMPAIGN.md} and satellites, \path{AUDIT.md}, \path{CERT-UPGRADE.md}, \path{paper2/PRIORITY.md}) and the complete adversarial-review record (\texttt{xmodel/}) ship with them. External versions are pinned in the artifact: the GGV-program preprints at the arXiv versions listed in \cite{P1}, and the thesis \cite{Sigray} as the exact PDF audited (\path{refs/sigray_full.pdf}), so that every page citation in Part II resolves against the audited copy. Scripts, run logs, review documents, and pinned versions: the archived artifact at \texttt{doi.org/10.5281/zenodo.21894922} (the campaign bundle of \cite{P1}, extended by this paper's engines), with the full campaign repository at \texttt{github.com/dcposch/jc72108}.
+
+\small
+\begin{thebibliography}{99}
+
+\bibitem{Alpoge} L. Alp\"oge, announcement of an explicit counterexample to the Jacobian conjecture in dimension three (cubic map $\mathbb{C}^3\to\mathbb{C}^3$ with $\det JF\equiv-2$), thread on X, July 20, 2026, \url{https://x.com/__alpoge__/status/2079028340955197566}; detailed write-up announced.
+
+\bibitem{msolve} J. Berthomieu, C. Eder, M. Safey El Din, msolve: a library for solving polynomial systems, Proceedings of ISSAC 2021, ACM, 2021, 51--58.
+
+\bibitem{Singular} W. Decker, G.-M. Greuel, G. Pfister, H. Sch\"onemann, \textsc{Singular} 4-4-1: a computer algebra system for polynomial computations, \url{https://www.singular.uni-kl.de}, 2024.
+
+\bibitem{DvdK} J. J. Duistermaat, W. van der Kallen, Constant terms in powers of a Laurent polynomial, Indag. Math. (N.S.) 9 (1998), 221--231.
+
+\bibitem{HA} C. Hermoso, J. G. Alc\'azar, Nonzero constant Wronskians of polynomials and Laurent polynomials, and geometric consequences, arXiv:2410.18867 (2024).
+
+\bibitem{KPS} T. Krick, L. M. Pardo, M. Sombra, Sharp estimates for the arithmetic Nullstellensatz, Duke Math. J. 109 (2001), 521--598.
+
+\bibitem{Long1} Y. Long, A counterexample to the Mathieu conjecture for $\mathrm{SU}(2)$, arXiv:2607.19012 (2026).
+
+\bibitem{Long2} Y. Long, The Gaussian moments conjecture fails in three and more variables, arXiv:2607.18186 (2026).
+
+\bibitem{P1} D. C. Posch, Fable, A vertex-gap obstruction for low-degree strip pairs in the plane Jacobian conjecture, preprint (2026); artifact at \texttt{doi.org/10.5281/zenodo.21894922}.
+
+\bibitem{Sigray} I. Sigray, Jacobian trees and their applications, PhD thesis, E\"otv\"os Lor\'and University, Budapest, 2008 (unpublished).
+
+\bibitem{Zoladek} H. \.Zo{\l}\k{a}dek, An application of Newton--Puiseux charts to the Jacobian problem, Topology 47 (2008), no.\ 6, 431--469.
+
+\end{thebibliography}
+
+\end{document}
