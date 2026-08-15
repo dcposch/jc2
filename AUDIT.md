@@ -752,3 +752,20 @@ char-0 counterexample seed lifts from this stratum. Sol construction
 SOUND (xmodel/grok-witt-review.md). Disproof door closed on the
 stratum; the lane's continuation (other strata) is optional and
 unranked.
+
+## TD11-CLASH promotion at exact-core tier (2026-08-14)
+PROMOTED: the td-11 entry-clash theorem at its honest tier — entry
+packets (all three L6 entries), direct hierarchies, single-word-deep
+configurations, exact-core audited states (12/10/8, zero non-exempt
+violations); Lemma 11A-RES (the sole 5/8 intruder is mu-robustly
+H8-dead); Lemma CAP-DEN; near-miss ledger rows 1-9 incl. self-found
+row 5 and historicized row 8. OPEN residue, named exactly: beyond-core
+px2 states (grammar unbounded, R=1+Delta/nu; both restoration paths
+stated §13.0), 129 nested 11-C decorated rows, multi-word-deep
+families (NF-Z-dagger per-entry checks), nu=1 resonance chains, the
+future Q+E5/E5F refile. Review chain (5 rounds): grok-td11-review
+(SOUND-WITH-ERRATA), sol-td11-review (BROKEN), restatement,
+sol-td11-rereview (STILL-BROKEN, narrowed), exit-b exact-core
+restatement, sol-td11-final (cores CONFIRMED, inventory COMPLETE,
+editorial), editorial pass. Gates td11 58/58. Corollary: td-11 NF-D
+depth closed for single-word configurations.

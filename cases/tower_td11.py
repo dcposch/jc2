@@ -656,11 +656,12 @@ check("B9c the round-2 R* < p 'law' is RETIRED (falsified at budget "
       "ratio-only",
       4 * 20 // 2 == 40 and 40 * 40 // 4 == 400
       and Fr(9 * 8, 18) == 4 and Fr(4, 400) == Fr(1, 100) < Fr(1, 2))
-# DEGREE-AWARE cutoff audit, run inline at budget 9 for all three
-# seeds: exact menu checks for every state first reached at
-# deg <= D* = 2*R_BOUND; states first reached above D* are LAW-SAFE
-# (every px2-grammar step has ratio dq*l/dp <= R_BOUND = 47 from the
-# engine's k <= 6, lex <= 40 caps, so gap <= 47/deg < 1/2).
+# EXACT-CORE audit (round 4), run inline at budget 9 for all three
+# seeds: exact menu checks for states first reached at deg <= 94 (the
+# exact cores).  States first reached above 94 are NOT expanded and
+# are OPEN -- the round-3 "law-safe" extension is WITHDRAWN (B9f:
+# the 47 cap governs the dirty branch only; clean R = 1 + Delta/nu
+# is unbounded in the grammar).
 import heapq
 R_BOUND, DSTAR = 47, 94
 
@@ -704,7 +705,7 @@ def b9_audit(seed, p, res_tag):
             continue
         best[(st, lam)] = deg
         if deg > DSTAR:
-            continue                     # law-safe by the ratio bound
+            continue          # beyond-core: NOT expanded, OPEN (B9f)
         core += 1
         if st not in cache:
             cache[st] = b9_menu(*st)

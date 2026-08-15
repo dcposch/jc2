@@ -32,11 +32,13 @@ DC(2), residue theory, deg ≤ 150 frontier farm).
 - [x] td ≤ 5: CLOSED (0 survivors). Single-pole td = 6: 4 r9/M2 classes
 - [x] td = 7 off-axis book: 62 -> 6 (zero-chain law) -> E5-corrected census
       17 cells UNCONDITIONAL (§11a; H5a RESOLVED: Q+E5 forced). Tower
-      TD = 7 PANEL CLOSED (2026-08-14): uniform tower theorem — every
-      cell of the E5-corrected book dies at the tower tier (TOWER-UNIFORM
-      .md; 17/17; dual review Grok + Sol green, 14 errata folded, 1559
-      gates). Second full panel closure after td <= 5. Next rung: td-11/
-      13 refile + tower port
+      TD = 7 PANEL CLOSED (2026-08-14): uniform tower theorem (TOWER-
+      UNIFORM.md; 17/17; dual review green; 1559 gates). TD-11: entry-
+      clash theorem PROMOTED at exact-core tier (TOWER-TD11.md; all 3
+      entry windows close, 11-A intruder mu-robustly dead; 5-round
+      review; OPEN residue named: beyond-core px2, 129 nested rows,
+      multi-word families). Next: OPEN-residue attack + compiler, then
+      td-13 (hard object 13-2b)
 - [x] Two-pole (3,3): funneled to rigid template (a₁/a₂ = 2+√3); R6
       print-campaign closed (6/9 dead); 4 branches to coefficient level
 - [ ] R1 decisive runs: minimal-branch mod-p screen RUNNING (ultramem);

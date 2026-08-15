@@ -1,18 +1,25 @@
 # TOWER-TD11.md — entry-level clash analysis for the three td-11 entries
 
-Status: **THEOREM AT THE EXACT-CORE TIER (2026-08-14, round 4, post
-`xmodel/sol-td11-rereview.md` STILL-BROKEN-narrowed-to-one-break).**
-Round 4 takes the re-review's exit (b): the budget-9 BEYOND-CORE
-cutoff extension is WITHDRAWN — its `R <= 47` grammar law is false on
-the clean branch (`R_clean = 1 + Delta/nu`, `Delta | num(w)`,
-unbounded; Sol's `(95,1) -> D95n48nu2`, `R = 97/2` — ledger row 9),
-and the hereditary safety invariant it would need (reachable
-`num(w)` vs degree) is exactly the unfinished closure question. The
-EXACT CORES STAND (12/10/8 states below deg 94, zero violations,
-re-review-confirmed); the beyond-core region joins the OPEN residue.
-Stale §5/X3 all-depth wording and the §9/§10 scope sentences are
-reconciled to the single-word-deep / audited-class tier. Round-3
-history: The entry-tier kill is REAL and replays (both
+Status: **THEOREM TD11-CLASH AT THE EXACT-CORE TIER (2026-08-14,
+round 5 — editorial-consistency pass folded; PENDING Sol's promotion
+pass).**
+Review chain: round 1 (window verdicts) → round 2 (obligation
+discharges, 46 checks) → dual review `xmodel/grok-td11-review.md`
+SOUND-WITH-ERRATA + `xmodel/sol-td11-review.md` BROKEN → round 3
+(budget-9 erratum, 145-row nested layer, corollary restriction) →
+`xmodel/sol-td11-rereview.md` STILL-BROKEN (one break: the false
+`R <= 47` grammar law) → round 4 (exit (b): beyond-core extension
+WITHDRAWN, exact-core restatement) → `xmodel/sol-td11-final.md`
+(math done: exact cores CONFIRMED, OPEN inventory COMPLETE; five
+editorial targets) → round 5 (this revision: §9 proof assembly, §4
+M-dichotomy scope, ledger row 8 historicized, gate comments, §13.0
+path-(a) scope — all reconciled to the exact-core tier).
+The tier: entry packets, direct hierarchies, single-word-deep zones,
+px2-menu discipline on the AUDITED REGION (budget-9 exact cores
+12/10/8 below deg 94 + budget-5 closure blocks). OPEN residue:
+beyond-core states, 129 nested 11-C rows, two-word deep families,
+cap-free closures, `nu = 1`/resonance chains (NF-P), the Q+E5/E5F
+refile. Round-3 history: The entry-tier kill is REAL and replays (both
 reviews); round 3 corrects the three quantifier breaks: (1) the
 OB-6 audit ran budget 5, not 9 — now a budget-9 DEGREE-AWARE cutoff
 audit for all three seeds (§7.5; the `R* < p` law is retired,
@@ -115,9 +122,11 @@ the residual realization work is the refile itself (perimeter (v)).
   monotonicity (M-drops irreversible) is exactly why no later step
   can restore the `μ = M` escape.
 * **The M-drop dichotomy is the organizing principle** (gate X2):
-  preserve `M` and stay below `1/2` forever, or drop `M` and die on
-  `v_2`. This is the td-11 analogue of td-7's "pure `n=1` clean
-  neutrals forced" step.
+  on the audited region (the exact cores and budget-5 closures),
+  M-preserving routes never produce a gap `>= 1/2`, and M-dropping
+  routes die on `v_2`. This is the td-11 analogue of td-7's "pure
+  `n=1` clean neutrals forced" step — scoped, like every window
+  statement here, to the audited region (§7.5).
 
 ## 5. The NF-D byproduct (why this came before NF-P)
 
@@ -386,10 +395,11 @@ Per-entry constants:
 | 11-C | `(2,3)`, `3/2`, `5/2` | `{1,2}` | `(ν+1)/(2ν)`, `ν` odd | none |
 
 *Proof assembly:* §7.1 (packets) + §7.2 (synchronization dichotomy)
-+ §7.5 (no competing object at or above `1/2` anywhere on the
-budget-9 px2-menu slice — exact core + grammar bound — so X is
-reached in gap order with at most cap-legal prefixes; Case B refused
-by descent) + §7.4 (X-death refused over
++ §7.5 (no competing object at or above `1/2` on the EXACT CORE —
+the audited states, 12/10/8 below deg 94, plus the budget-5 closure
+blocks; competing objects beyond the audited region are OPEN — so X
+is reached in gap order with at most cap-legal prefixes there; Case
+B refused by descent) + §7.4 (X-death refused over
 the full register lattice under every cap candidate — Cases A and C)
 + §8 (the intruder) + §7.6 (third pole only shrinks caps, adds no
 window step) + §7.7 (realization dichotomy). ∎ within §12.
@@ -458,7 +468,7 @@ audited class; those fall to (b)'s OPEN.
 | 5 | **(round 3, found by our own sweep)** quarter-register `3/4` vs the `ν = 2` gap `3/4` under cap `2`: `r = 1/2`, `k = 2 \| 2` — a genuine Case-C escape shape | no entry realizes the cell: 11-A's `w = 2` domain forbids even `ν_X`; 11-B's cap set `{1,2,6}` contains no `4`, so no quarter-lattice register exists there. The dynamic-cap lemma is sound ONLY entry-paired | OB7g |
 | 6 | `(c, ν) = (4, 2)`: `ν \| c²` and the den test passes shapes | 11-A domain (odd `ν` at `w = 2`); 11-B has no cap 4 (grok finding 7) | OB7b |
 | 7 | `ν_X = 1`: `gap = 1`, `r = 3/2 − 1 + 1 = 3/2`, `k = 2` divides every even cap — a Case-A escape shape | `gap = 1` lies outside every X-interval (`(1/2, 2/3]` / `(1/2, 3/4]`); `ν = 1` insertions are NF-P (§12(iv)). The theorem line now says `ν_X >= 2` explicitly (grok finding 5) | — |
-| 8 | budget-9 state `(3/4, 8)` carries a step of ratio `4 = p` (Sol's path), falsifying the round-2 `R* < p` law | min reachable degree `400` ⇒ gap `1/100`; the corrected audit is degree-aware (exact core `deg <= 94` + grammar bound `47`) | B9c/B9d |
+| 8 | budget-9 state `(3/4, 8)` carries a step of ratio `4 = p` (Sol's path), falsifying the round-2 `R* < p` law | historical: round 3 replaced the ratio law with a degree-aware cutoff whose `47` grammar bound row 9 then REFUTED; what survives is the state's arithmetic (min reachable degree `400` ⇒ gap `1/100`) and the exact-core audit, which checks such states exactly or leaves them OPEN | B9c/B9d |
 
 | 9 | **(round 4)** the beyond-core cutoff's `R <= 47` law: the clean branch has `R = 1 + Delta/nu`, `Delta \| num(w)` — abstract grammar row `(95,1) -> D95n48nu2`, `R = 97/2 > 47` | no rescue claimed: the bound was FALSE as a grammar law; the extension is withdrawn and the beyond-core region is OPEN pending a reachable-numerator invariant (`num(w)` vs deg) or a cap-free closure | B9f |
 
@@ -511,16 +521,19 @@ reaching any clause is reported OPEN, never certified.
 
 ### 13.0 What would restore the withdrawn beyond-core region
 
-Either (a) a **reachable-numerator invariant**: prove that every
-state reachable from a td-11 seed within budget 9 has
-`num(w) <= N*` with `N*/2 + 1` below half its minimal reachable
-degree (the empirical facts — `num(w) <= 6` on the full `(3,2)@9`
-closure, parsed clean ratios `<= 7/2` — say this is TRUE; what is
-missing is a proof that dirty/pure-b numerator growth
+Either (a) a **reachable-numerator invariant, correctly scoped**:
+prove that every state FIRST REACHED BEYOND degree 94 (the exact
+core and the seed are excluded — the invariant is FALSE at the seed
+`(3,2)` itself, where `num(w) = 3` against degree `4` and the `5/8`
+is the audited exception) satisfies `1 + num(w)/2 < deg/2`, i.e.
+`num(w) < deg − 2` (the empirical facts — `num(w) <= 6` on the full
+`(3,2)@9` closure, parsed clean ratios `<= 7/2` — say this is TRUE
+there; what is missing is a proof that dirty/pure-b numerator growth
 `w' = l·w·(1+k+lex)/E` cannot outrun degree growth `dp/l` on
-reachable paths); or (b) the **cap-free shared-budget-9 closure**
-the scope demands anyway, which makes the question empirical per
-state. Both are compiler-tier items; neither is claimed here.
+reachable paths past the core); or (b) the **cap-free
+shared-budget-9 closure** the scope demands anyway, which makes the
+question empirical per state. Both are compiler-tier items; neither
+is claimed here.
 
 ## 13. What td-13 needs (forward pointer)
 
