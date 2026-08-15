@@ -488,3 +488,7 @@
   partition => full nolog system EMPTY mod p => residue-A screening-tier death =>
   char-0 certification run => on-axis td=6 closes. Watch for a1/a2 next (similar
   size class to a3).
+- 2026-08-14 ~20:25: OPS SLIP (mine): the broad-leaf cull pkill patterns also matched
+  the NEW leaves2 process names — killed b1-b3/a1/a2 19min in (rc=143). Relaunched
+  with L2GEN tags. LESSON banked: pkill patterns must include the generation
+  discriminator (directory or tag), never bare leaf names.
