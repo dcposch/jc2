@@ -496,3 +496,7 @@
   cliff class as l8); p105673 twin killed preemptively (identical death predicted);
   sat23-as-monolith RETIRED (decomposition only if the chamber map leaves it relevant).
   ULTRAMEM STOPPED (no active lanes; cost sweep). td-11 nested closure promoted.
+- 2026-08-14 ~22:55: Box03: c1.RED died rc=137 (OOM, 21:48 — my earlier solo-pause
+  pkill evidently failed silently; SECOND pkill-verification lesson today). One lane
+  survives (identifying). Chamber lanes: 1003G, heavy b-chambers grinding, no new
+  verdicts. NF-P banked; compiler top of queue.
