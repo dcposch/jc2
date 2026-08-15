@@ -932,3 +932,38 @@ orphan-safe pattern; md5-verified transfer): 8 lanes (7 leaves +
 a0-ctl0), msolve -g 2 -t 8, 86400 s caps, 120G ulimit fence +
 nice 10 per lane (main lanes not crowded; 1.4T free at launch);
 self-recording to ~/res32/lanes.log.
+
+### 7.H2 Hierarchical first-nonzero tau-orbit cover (v2, Sol accel2 (b))
+
+[2026-08-14. Replaces the v1 broad leaves (v1 flaw, Sol-confirmed:
+b-leaves hard-zeroed nothing; a1-a3 shared the {38s = 0} open set;
+pins appended not substituted). cases/directionb_residual32_leaves.py
+rewritten to the exact accel2 design; checks 6/6 PASS.]
+
+Design: six no-log pins SUBSTITUTED OUT everywhere (Row_10[eta^28]
+= C10.6 dies identically); first-nonzero hierarchy on the tau-pairs
+(tf38, tg38, tg0_38, then tf40, tg40, tg0_40): b1 fence tf1_38;
+b2 tf38-pair=0 fence tg1_38; b3 +tg38-pair=0 fence tg01_38;
+a1 all-38s=0 fence tf1_40; a2 +tf40=0 fence tg1_40; a3 +tg40=0
+fence tg01_40; a0 all twelve even lows = 0. The seven chamber
+classes C_i = leaf_i U tau(leaf_i) PARTITION the support lattice
+(machine-checked: each of 4096 patterns in EXACTLY ONE class;
+census 3072/768/192/48/12/3/1). tau-involution re-certified exactly.
+
+SIZES == SOL'S PREDICTED TABLE, ALL SEVEN EXACT (wrong-object gate):
+b1 76/67698/79, b2 76/50229/77, b3 76/36042/75, a1 67/24741/73,
+a2 67/19983/71, a3 67/15737/69, a0 48/12079/66 (window rows/window
+terms/vars). Guards: paren sweep (14 files), dual-parser round-trip
+(7 leaves x 2 primes x 2 fence-consistent points), anchor on a0.
+Emitted p105337 (shipped, md5-verified, Box02 ~/res32/leaves2,
+launched orphan-safe -t 8 / 86400 s / 120G ulimit / nice 10) AND
+p200257 (BANKED in cases/, verdict-confirmation wave, NOT launched).
+Old broad lanes culled (stragglers a1-a3/b2/b3 killed to match the
+coordinator's cull); old a0 + a0-ctl0 kept (same variety as v2-a0).
+
+**FIRST LEAF VERDICT: a3 = GB [1] at p105337 -- EMPTY** (authentic
+msolve header, grevlex, basis length 1; reproduced rc=0/512B TWICE
+at 02:52 and 02:53). The chamber {all 38s = 0, tf40 & tg40 pairs =
+0, tg0_40 loaded} is DEAD mod p105337: strong evidence, pending the
+banked p200257 twin + char-0 for promotion (§6.V semantics). The
+surviving low-support chambers narrow to b1/b2/b3/a1/a2 + a0.

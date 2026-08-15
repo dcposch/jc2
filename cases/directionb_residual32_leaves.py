@@ -1,45 +1,35 @@
 #!/usr/bin/env python3
-"""SHEET6-DIRECTIONB §6.V/§7.G: LOW-SUPPORT CASE SPLIT of the nolog
-residual-32 decider (screen acceleration; DC-authorized).
+"""SHEET6-DIRECTIONB §7.H (v2): HIERARCHICAL FIRST-NONZERO TAU-ORBIT
+COVER of the nolog residual-32 decider (Sol accel2 §(b) design,
+replacing the v1 broad leaves -- those paid for overlaps and the
+b-leaves hard-zeroed nothing).
 
-Rationale: §6.V(3) proved every closed-form stratum INCONSISTENT
-instantly -- F4 difficulty concentrates in the all-lows-nonzero
-chamber.  SPLIT LATTICE: the 12 EVEN low tails (levels 38/40; six
-per level).  The odd lows 39/41 are NOT split: they enter the bands
-only w-weighted (C12/C14) and carry no unit-kill lever; splitting
-them multiplies leaves without isolating difficulty.  [This is the
-documented reading of the task's "level-38..41 low block, ~8-10
-vars": the actionable split sub-block is the 12 even lows.]
+Design (exact; the six §7 no-log pins are SUBSTITUTED OUT everywhere,
+never appended as rows -- Row_10[eta^28] = C10.6 then dies
+identically):
+  b1: fence tf1_38 (tau-rep of the tf38 pair);           Z = pins
+  b2: tf38 pair = 0, fence tg1_38;                       Z = pins+2
+  b3: tf38+tg38 pairs = 0, fence tg01_38;                Z = pins+4
+  a1: all six 38s = 0, fence tf1_40;                     Z = pins+6
+  a2: 38s + tf40 pair = 0, fence tg1_40;                 Z = pins+8
+  a3: 38s + tf40+tg40 pairs = 0, fence tg01_40;          Z = pins+10
+  a0: all twelve even lows = 0, no fence.                Z = pins+12
+Up to the certified tau-involution (phase `levers`), the seven
+chamber classes C_i = leaf_i U tau(leaf_i) PARTITION the support
+lattice of the twelve even lows: C_i are pairwise disjoint
+(first-nonzero hierarchy) and exhaust it -- machine-checked in
+phase `cover` (each of the 4096 patterns lands in EXACTLY ONE
+class, and satisfies that leaf's constraints directly or after tau).
 
-LEAVES (a COVER of the nolog variety -- overlaps allowed; zero-pins
-are hard-substituted, fences are Rabinowitsch rows; tau-conjugate
-chambers merged, certified by the banked tau-covariance (1c.1, §2c,
-gate) + the exact involution check in phase `levers`):
-  leaf_a0: all 38s = 0, all 40s = 0
-  leaf_a1/a2/a3: all 38s = 0; tf1_40 / tg1_40 / tg01_40 != 0
-  leaf_b1/b2/b3: tf1_38 / tg1_38 / tg01_38 != 0
-PRE-DEAD (cited, no emission; machine-checked in `levers`):
-  - singleton-38 chambers (6): C6.1 (§6.T) is one E-row on the six
-    38s with ALL-UNIT coefficients on every h-sign branch, no
-    7/w-dependence => exactly one nonzero 38 contradicts its fence.
-  - singleton-40-within-38-silent chambers (6): the C8 block
-    restricted to {38s = 0} is pure-linear in the 40s; every 40-var
-    carries a unit coefficient in some restricted row, every branch.
-  - {all lows = 0} sits inside leaf_a0 (also §6.V(3) "levels >= 43",
-    sampled-7 scope) -- listed for knowledge, not load-bearing.
-COVER IDENTITY (machine-checked, phase `cover`): every one of the
-2^12 support patterns of the split lattice lies in >= 1 leaf or a
-tau-image of one; patterns of the unsplit vars are unconstrained by
-every leaf, so the union over the full variety follows.
+Sizes are verified against Sol's predicted table (window rows /
+expanded window terms / header vars incl. fence); ANY deviation is
+a wrong-object alarm and blocks shipping.  Emission at p105337
+(ship + launch) and p200257 (bank only, verdict-confirmation wave).
 
-Emission: p105337 lane only (the plain/nolog portfolio covers the
-rest), full AUDIT discipline.  Phases:
-  levers | emit | guards | cover | all      (ship = scp/launch,
-  separate script /tmp/ship_leaves.sh)
+Phases: levers | emit | guards | cover | all
 """
 import os, sys, time, pickle, random
 from fractions import Fraction as Fr
-from math import gcd
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import r1_experiment as R1
@@ -49,19 +39,29 @@ import directionb_residual32_emit as E32
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = "directionb_residual32_nolog_leaf"
-P = 105337
-Z38 = ("tf1_38", "tf2_38", "tg1_38", "tg2_38", "tg01_38", "tg02_38")
-Z40 = ("tf1_40", "tf2_40", "tg1_40", "tg2_40", "tg01_40", "tg02_40")
+PRIMES = (105337, 200257)          # launch first; bank second
+PIN42 = ("tf1_42", "tf2_42", "tg1_42", "tg2_42", "tg01_42", "tg02_42")
+TF38, TG38, TG038 = ("tf1_38", "tf2_38"), ("tg1_38", "tg2_38"), \
+    ("tg01_38", "tg02_38")
+TF40, TG40, TG040 = ("tf1_40", "tf2_40"), ("tg1_40", "tg2_40"), \
+    ("tg01_40", "tg02_40")
+# leaf -> (extra zero set beyond PIN42, fence var or None)
 LEAVES = {
-    "a0": (Z38 + Z40, ()),
-    "a1": (Z38, ("tf1_40",)), "a2": (Z38, ("tg1_40",)),
-    "a3": (Z38, ("tg01_40",)),
-    "b1": ((), ("tf1_38",)), "b2": ((), ("tg1_38",)),
-    "b3": ((), ("tg01_38",)),
+    "b1": ((), "tf1_38"),
+    "b2": (TF38, "tg1_38"),
+    "b3": (TF38 + TG38, "tg01_38"),
+    "a1": (TF38 + TG38 + TG038, "tf1_40"),
+    "a2": (TF38 + TG38 + TG038 + TF40, "tg1_40"),
+    "a3": (TF38 + TG38 + TG038 + TF40 + TG40, "tg01_40"),
+    "a0": (TF38 + TG38 + TG038 + TF40 + TG40 + TG040, None),
 }
+ORDER = ("b1", "b2", "b3", "a1", "a2", "a3", "a0")
+SOL_TABLE = {"b1": (76, 67698, 79), "b2": (76, 50229, 77),
+             "b3": (76, 36042, 75), "a1": (67, 24741, 73),
+             "a2": (67, 19983, 71), "a3": (67, 15737, 69),
+             "a0": (48, 12079, 66)}
 TAU_NAME = {"tf1": "tf2", "tf2": "tf1", "tg1": "tg2", "tg2": "tg1",
-            "tg01": "tg02", "tg02": "tg01", "vf1": "vf2", "vf2": "vf1",
-            "uf1": "uf1", "uf2": "uf2", "uf3": "uf3"}
+            "tg01": "tg02", "tg02": "tg01", "vf1": "vf2", "vf2": "vf1"}
 
 OK = []
 def chk(name, cond):
@@ -76,7 +76,6 @@ def tau_var(nm):
 
 # ------------------------------------------------------------ levers
 def tau_ring(r):
-    """radkey (z,a1,a2,w1,h1,w2,h2,B) swap + K3 conjugation."""
     out = {}
     for (z, e1, e2, p_, h1, q_, h2, B), c in r.items():
         out[(z, e2, e1, q_, h2, p_, h1, B)] = W.K3(c[0], -c[1])
@@ -84,7 +83,6 @@ def tau_ring(r):
 
 def phase_levers():
     byk, vars_, D = W.load()
-    # (1) tau-involution maps the banked row set to itself, row-for-row
     same = True
     for k in sorted(byk):
         for n, v in byk[k].items():
@@ -94,47 +92,12 @@ def phase_levers():
                     vars_.index(tau_var(vars_[i])) for i in vk))
                 tv[nvk] = tau_ring(r)
             same &= (tv == byk[k][n])
-    chk("tau-involution: tau(Row_k[eta^n]) == Row_k[eta^n] as banked "
-        "VExpr, every row (merge-certification, on top of banked "
-        "1c.1/§2c/gate tau-covariance)", same)
-    # (2) C6.1 all-unit coefficients on all 4 branches
-    bank = pickle.load(open("/tmp/directionb_window_conditions.pkl", "rb"))
-    ok6 = True
-    for s1, s2 in ((1, 1), (1, -1), (-1, 1), (-1, -1)):
-        st = bank[(6, s1, s2)]
-        assert st["rank"] == 1 and not st["leftover"]
-        er = st["echelon"][0]
-        cofs = {st["cols"][c][0]: x for c, x in er.items()}
-        ok6 &= set(cofs) == set(Z38) and \
-            all(W.enorm_nonzero(x) for x in cofs.values())
-    chk("C6.1: the single Row_6 E-condition has ALL-UNIT coefficients "
-        "on the six level-38 tails, all 4 branches => singleton-38 "
-        "chambers PRE-DEAD (uniform: no 7, no w)", ok6)
-    # (3) C8 block restricted to {38s = 0}: pure-linear in 40s, each
-    # 40-var carries a unit coefficient in some row, all branches
-    ok8 = True
-    for s1, s2 in ((1, 1), (1, -1), (-1, 1), (-1, -1)):
-        st = bank[(8, s1, s2)]
-        rows = []
-        for er in st["echelon"]:
-            row = {}
-            for c, x in er.items():
-                nm, pq = st["cols"][c]
-                if "*" in nm:
-                    assert any(z in nm.split("*") for z in Z38)
-                    continue                    # dies at 38s = 0
-                row[nm] = x
-            if row: rows.append(row)
-        for v in Z40:
-            ok8 &= any(v in row and W.enorm_nonzero(row[v])
-                       for row in rows)
-    chk("C8|{38s=0}: pure-linear in the six 40s; every 40-var has a "
-        "unit coefficient in some restricted row, all 4 branches => "
-        "singleton-40-within-38-silent chambers PRE-DEAD", ok8)
+    chk("tau-involution: tau(Row) == Row for every banked VExpr row "
+        "(chamber-class merge certification; with banked 1c.1/§2c/"
+        "gate covariance)", same)
 
-# ------------------------------------------------------------- emit
+# -------------------------------------------------------------- emit
 def leaf_rows(byk, vars_, Z):
-    """banked window rows with Z hard-substituted to 0."""
     Zs = set(Z)
     rows = []
     for k in sorted(byk):
@@ -144,194 +107,174 @@ def leaf_rows(byk, vars_, Z):
                 v[()] = R1.radd(v.get((), R1.RZERO), R1.rC(R1.K3(42)))
             keep = {vk: r for vk, r in v.items()
                     if not (vk and any(vars_[i] in Zs for i in vk))}
-            lab = "Row_%d[eta^%d]%s" % (k, n,
-                                        "+42" if k == 20 and n == 0 else "")
-            if keep: rows.append((lab, keep))
+            if keep:
+                rows.append(("Row_%d[eta^%d]%s"
+                             % (k, n, "+42" if k == 20 and n == 0
+                                else ""), keep))
     return rows
+
+def tp_rows(p):
+    return ["r3^2+%d" % (p - 3), "A1^3+%d+%d*r3" % (p - 3, p - 1),
+            "A2^3+%d+1*r3" % (p - 3), "2*HW1^2+%d*W1^2" % (p - 3),
+            "2*HW2^2+%d*W2^2" % (p - 3), "uW1*W1+%d" % (p - 1),
+            "uW2*W2+%d" % (p - 1), "uA*A1+%d*uA*A2+%d" % (p - 1, p - 1)]
 
 def phase_emit():
     byk, vars_, D = W.load()
-    _, names, ordered, (high, low, seven), _ = E32.load_rows()
-    hdr_full, _, eqs_nolog = E32.FCparse("directionb_residual32_nolog"
-                                         "_p%d.ms" % P)
-    pins = eqs_nolog[-6:]
-    for tag, (Z, F) in LEAVES.items():
-        Zids = {i for i, nm in names.items() if vars_[i] in Z}
+    _, names, ordered, blocks, _ = E32.load_rows()
+    hdr_full, _, _ = E32.FCparse("directionb_residual32.ms")
+    sizes_ok = True
+    for tag in ORDER:
+        Zx, F = LEAVES[tag]
+        Z = PIN42 + Zx
         rows = leaf_rows(byk, vars_, Z)
-        body, labs = [], []
+        nterms = 0
+        bodies = {p: [] for p in PRIMES}
         for lab, v in rows:
             terms = R1.poly_terms(v, names)
+            nterms += len(terms)
             sc = E32.row_scale_terms(terms)
-            body.append(E32.emit_modp(terms, sc, P))
-            labs.append(lab)
-        drop = {names[i] for i in Zids}
+            for p in PRIMES:
+                s = E32.emit_modp(terms, sc, p)
+                assert s.count("+") + 1 == len(terms), \
+                    "coefficient divisible by %d in %s" % (p, lab)
+                bodies[p].append(s)
+        drop = {names[i] for i in names if vars_[i] in Z}
         hdr = [h for h in hdr_full if h not in drop]
-        fences = []
-        for j, fv in enumerate(F):
-            u = "uF%d" % j
-            hdr.append(u)
-            xv = next(names[i] for i, nm in names.items()
-                      if vars_[i] == fv)
-            fences.append("%s*%s+%d" % (u, xv, P - 1))
-        tp = ["r3^2+%d" % (P - 3), "A1^3+%d+%d*r3" % (P - 3, P - 1),
-              "A2^3+%d+1*r3" % (P - 3), "2*HW1^2+%d*W1^2" % (P - 3),
-              "2*HW2^2+%d*W2^2" % (P - 3), "uW1*W1+%d" % (P - 1),
-              "uW2*W2+%d" % (P - 1),
-              "uA*A1+%d*uA*A2+%d" % (P - 1, P - 1)]
-        eqs = body + tp + pins + fences
-        path = os.path.join(HERE, "%s_%s_p%d.ms" % (BASE, tag, P))
-        with open(path, "w") as f:
-            f.write(", ".join(hdr) + "\n%d\n" % P)
-            f.write(",\n".join(eqs) + "\n")
-        with open(path.replace(".ms", ".rows.txt"), "w") as f:
-            f.write("# leaf %s: Z=0: %s ; fences!=0: %s\n"
-                    % (tag, ",".join(Z) or "-", ",".join(F) or "-"))
-            for i, lab in enumerate(labs): f.write("eq%d = %s\n" % (i, lab))
-            f.write("then: rad(6)+sat(3) block, 6 nolog pins, "
-                    "%d fence row(s)\n" % len(F))
-        print("   leaf %s: %d window rows (of 77 -- %d died under Z), "
-              "%d eqs, %d vars, %.2f MB"
-              % (tag, len(body), 77 - len(body), len(eqs), len(hdr),
-                 os.path.getsize(path) / 1e6), flush=True)
-    # ctl0-analogue for the ONLY origin-satisfiable leaf (a0)
-    Z, F = LEAVES["a0"]
-    rows = leaf_rows(byk, vars_, Z)
-    bodyc = []
-    for lab, v in rows:
-        vc = {vk: r for vk, r in v.items() if vk}
-        if not vc: continue
-        tc = R1.poly_terms(vc, names)
-        bodyc.append(E32.emit_modp(tc, E32.row_scale_terms(tc), P))
-    drop = {names[i] for i, nm in names.items() if vars_[i] in Z}
-    hdr = [h for h in hdr_full if h not in drop]
-    tp = ["r3^2+%d" % (P - 3), "A1^3+%d+%d*r3" % (P - 3, P - 1),
-          "A2^3+%d+1*r3" % (P - 3), "2*HW1^2+%d*W1^2" % (P - 3),
-          "2*HW2^2+%d*W2^2" % (P - 3), "uW1*W1+%d" % (P - 1),
-          "uW2*W2+%d" % (P - 1), "uA*A1+%d*uA*A2+%d" % (P - 1, P - 1)]
-    path = os.path.join(HERE, "%s_a0_ctl0_p%d.ms" % (BASE, P))
-    with open(path, "w") as f:
-        f.write(", ".join(hdr) + "\n%d\n" % P)
-        f.write(",\n".join(bodyc + tp + pins) + "\n")
-    print("   leaf a0 ctl0 (satisfiability guard, origin-satisfiable):"
-          " %d eqs" % (len(bodyc) + len(tp) + 6))
+        fences = {}
+        if F:
+            xv = next(names[i] for i in names if vars_[i] == F)
+            hdr.append("uF0")
+            for p in PRIMES:
+                fences[p] = ["uF0*%s+%d" % (xv, p - 1)]
+        else:
+            for p in PRIMES: fences[p] = []
+        got = (len(rows), nterms, len(hdr))
+        want = SOL_TABLE[tag]
+        sizes_ok &= (got == want)
+        mark = "OK" if got == want else "DEVIATION want %r" % (want,)
+        for p in PRIMES:
+            path = os.path.join(HERE, "%s_%s_p%d.ms" % (BASE, tag, p))
+            with open(path, "w") as f:
+                f.write(", ".join(hdr) + "\n%d\n" % p)
+                f.write(",\n".join(bodies[p] + tp_rows(p) + fences[p])
+                        + "\n")
+        with open(os.path.join(HERE, "%s_%s.rows.txt" % (BASE, tag)),
+                  "w") as f:
+            f.write("# leaf %s (hierarchical first-nonzero, v2): "
+                    "Z=0: pins(6)+%s ; fence: %s\n"
+                    % (tag, ",".join(Zx) or "-", F or "-"))
+            for i, (lab, _) in enumerate(rows):
+                f.write("eq%d = %s\n" % (i, lab))
+            f.write("then: rad+sat block (8), %s\n"
+                    % ("1 fence row" if F else "no fence"))
+        print("   leaf %s: %d window rows, %d window terms, %d vars "
+              "[Sol table: %s]" % (tag, got[0], got[1], got[2], mark),
+              flush=True)
+    chk("ALL leaf sizes match Sol's predicted table EXACTLY "
+        "(wrong-object alarm gate)", sizes_ok)
 
 # ------------------------------------------------------------ guards
 def phase_guards():
     byk, vars_, D = W.load()
     _, names, ordered, blocks, _ = E32.load_rows()
-    files = ["%s_%s_p%d.ms" % (BASE, t, P) for t in LEAVES] + \
-        ["%s_a0_ctl0_p%d.ms" % (BASE, P)]
+    files = ["%s_%s_p%d.ms" % (BASE, t, p) for t in ORDER
+             for p in PRIMES]
     for fn in files:
         txt = open(os.path.join(HERE, fn)).read()
         assert "(" not in txt and ")" not in txt, fn
-    chk("guard A: paren sweep, %d leaf files" % len(files), True)
-    pt = FC.radical_point(P)
-    okall, okanchor = True, True
-    for tag, (Z, F) in LEAVES.items():
-        hdr, char, eqs = E32.FCparse("%s_%s_p%d.ms" % (BASE, tag, P))
-        assert char == P
-        rows = leaf_rows(byk, vars_, Z)
+    chk("guard A: paren sweep, %d leaf files (both primes)"
+        % len(files), True)
+    okall = True
+    for tag in ORDER:
+        Zx, F = LEAVES[tag]
+        Z = set(PIN42 + Zx)
+        rows = leaf_rows(byk, vars_, tuple(Z))
         scales = [E32.row_scale_terms(R1.poly_terms(v, names))
                   for _, v in rows]
-        for t in range(2):
-            rng = random.Random(5100 + t + hash(tag) % 997)
-            val = dict(pt, uW1=pow(pt["W1"], P - 2, P),
-                       uW2=pow(pt["W2"], P - 2, P),
-                       uA=pow((pt["A1"] - pt["A2"]) % P, P - 2, P))
-            P42 = {"tf1_42", "tf2_42", "tg1_42", "tg2_42",
-                   "tg01_42", "tg02_42"}          # pin-consistent point
-            for i, nm in names.items():
-                val[nm] = 0 if (vars_[i] in Z or vars_[i] in P42)                     else rng.randrange(1, P)
-            for j, fv in enumerate(F):
-                xv = next(names[i] for i, nm2 in names.items()
-                          if vars_[i] == fv)
-                val["uF%d" % j] = pow(val[xv], P - 2, P)
-            xval = {i: val[names[i]] for i in names}
-            for i, (lab, v) in enumerate(rows):
-                want = 0
-                for vk, r in v.items():
-                    m = 1
-                    for vid in vk: m = m * xval[vid] % P
-                    want = (want + m * FC.ring_modp(r, pt, P)) % P
-                want = want * FC.frmod(scales[i], P) % P
-                okall &= (E32._tiny_parse_eval(eqs[i], val, P) == want)
-            for e in eqs[len(rows):]:
-                okall &= (E32._tiny_parse_eval(e, val, P) == 0)
-    chk("guard B: independent-parser round-trip vs internal ring eval "
-        "(hard-substituted rows + rad/sat/pins/fences), 7 leaves x "
-        "2 fence-consistent points, p=%d" % P, okall)
-    # guard C: pattern-positive anchor on leaf a0 (support matches:
-    # tails = 0 satisfies Z-pins, the 6 nolog pins, no fences)
+        for p in PRIMES:
+            pt = FC.radical_point(p)
+            hdr, char, eqs = E32.FCparse("%s_%s_p%d.ms" % (BASE, tag, p))
+            assert char == p
+            for t in range(2):
+                rng = random.Random(6200 + t + p + hash(tag) % 997)
+                val = dict(pt, uW1=pow(pt["W1"], p - 2, p),
+                           uW2=pow(pt["W2"], p - 2, p),
+                           uA=pow((pt["A1"] - pt["A2"]) % p, p - 2, p))
+                for i, nm in names.items():
+                    val[nm] = 0 if vars_[i] in Z \
+                        else rng.randrange(1, p)
+                if F:
+                    xv = next(names[i] for i in names
+                              if vars_[i] == F)
+                    val["uF0"] = pow(val[xv], p - 2, p)
+                xval = {i: val[names[i]] for i in names}
+                for i, (lab, v) in enumerate(rows):
+                    want = 0
+                    for vk, r in v.items():
+                        m = 1
+                        for vid in vk: m = m * xval[vid] % p
+                        want = (want + m * FC.ring_modp(r, pt, p)) % p
+                    want = want * FC.frmod(scales[i], p) % p
+                    okall &= (E32._tiny_parse_eval(eqs[i], val, p)
+                              == want)
+                for e in eqs[len(rows):]:
+                    okall &= (E32._tiny_parse_eval(e, val, p) == 0)
+    chk("guard B: independent-parser round-trip vs internal ring "
+        "eval, 7 leaves x 2 primes x 2 fence-consistent points",
+        okall)
+    # guard C: pattern-positive anchor where the support matches:
+    # tails = 0 lies in leaf a0 ONLY (every fenced leaf excludes it)
     ds = pickle.load(open("/tmp/directionb_dsys.pkl", "rb"))
-    hdr, _, eqs = E32.FCparse("%s_a0_p%d.ms" % (BASE, P))
-    Z, F = LEAVES["a0"]
-    rows = leaf_rows(byk, vars_, Z)
+    p = PRIMES[0]; pt = FC.radical_point(p)
+    Zx, F = LEAVES["a0"]
+    rows = leaf_rows(byk, vars_, PIN42 + Zx)
     scales = [E32.row_scale_terms(R1.poly_terms(v, names))
               for _, v in rows]
+    hdr, _, eqs = E32.FCparse("%s_a0_p%d.ms" % (BASE, p))
     rng = random.Random(9000)
-    val = dict(pt, uW1=pow(pt["W1"], P - 2, P),
-               uW2=pow(pt["W2"], P - 2, P),
-               uA=pow((pt["A1"] - pt["A2"]) % P, P - 2, P))
+    val = dict(pt, uW1=pow(pt["W1"], p - 2, p),
+               uW2=pow(pt["W2"], p - 2, p),
+               uA=pow((pt["A1"] - pt["A2"]) % p, p - 2, p))
     for i, nm in names.items():
         val[nm] = 0 if vars_[i][:2] in ("tf", "tg") \
-            else rng.randrange(1, P)
+            else rng.randrange(1, p)
     ok = True
     for i, (lab, v) in enumerate(rows):
-        g = E32._tiny_parse_eval(eqs[i], val, P)
+        g = E32._tiny_parse_eval(eqs[i], val, p)
         kk, nn = lab.split("[")[0], int(lab.split("^")[1].split("]")[0])
         if kk != "Row_20" or nn not in ds["byk"][20]:
             ok &= (g == 0); continue
-        want = FC.ring_modp(ds["byk"][20][nn].get((), {}), pt, P)
-        if nn == 0: want = (want + 42) % P
-        ok &= (g == want * FC.frmod(scales[i], P) % P)
-    chk("guard C: pattern-positive anchor on leaf a0 -- zero-tail "
-        "point satisfies Z-pins + nolog pins; the 9 zero-tail Row_20 "
-        "comps == banked dsys constants (+42 at eta^0)", ok)
-    # guard D: a0 ctl0 satisfied at the origin
-    hdr, _, eqsc = E32.FCparse("%s_a0_ctl0_p%d.ms" % (BASE, P))
-    val0 = dict(val)
-    for h in hdr:
-        if h.startswith("x"): val0[h] = 0
-    nwin = len(eqsc) - 8 - 6
-    bad = [j for j in range(nwin)
-           if E32._tiny_parse_eval(eqsc[j], val0, P)]
-    chk("guard D: leaf-a0 ctl0 window rows vanish at the origin "
-        "(satisfiability control honest; fenced leaves have no "
-        "origin-tier control -- documented)", not bad)
+        want = FC.ring_modp(ds["byk"][20][nn].get((), {}), pt, p)
+        if nn == 0: want = (want + 42) % p
+        ok &= (g == want * FC.frmod(scales[i], p) % p)
+    chk("guard C: pattern-positive anchor on leaf a0 (the only "
+        "support-matching leaf): 9 zero-tail Row_20 comps == banked "
+        "dsys constants (+42 at eta^0), all other rows die", ok)
 
 # ------------------------------------------------------------- cover
 def phase_cover():
-    lat = Z38 + Z40
-    tau_class = lambda v: min(v, tau_var(v))
-    reps_b = {tau_class(v): "b" for v in Z38}
-    covered_by = []
-    ok = True
+    lat = TF38 + TG38 + TG038 + TF40 + TG40 + TG040
+    ok, census = True, {}
     for m in range(4096):
         supp = {lat[i] for i in range(12) if (m >> i) & 1}
-        s38, s40 = supp & set(Z38), supp & set(Z40)
-        hit = None
-        if s38:
-            v = sorted(s38)[0]; c = tau_class(v)
-            hit = {"tf1_38": "b1", "tg1_38": "b2", "tg01_38": "b3"}[c]
-        elif s40:
-            v = sorted(s40)[0]; c = tau_class(v)
-            hit = {"tf1_40": "a1", "tg1_40": "a2", "tg01_40": "a3"}[c]
-        else:
-            hit = "a0"
-        # verify the pattern satisfies the leaf's constraints (or the
-        # tau-image's): zero-pins outside supp; fences inside supp-or-tau
-        Z, F = LEAVES[hit]
-        okz = not (set(Z) & supp)
-        okf = all(f in supp or tau_var(f) in supp for f in F)
-        ok &= okz and okf
-        covered_by.append(hit)
-    chk("COVER IDENTITY: all 4096 support patterns of the split "
-        "lattice (38/40 blocks) land in a leaf or a tau-image "
-        "(zero-pins respected, fences witnessed); unsplit vars "
-        "unconstrained by every leaf => union(leaves + tau-images) "
-        "+ pre-dead chambers = the full nolog variety", ok)
-    from collections import Counter
-    print("   chamber census: %s" % dict(Counter(covered_by)))
+        hits = []
+        for tag in ORDER:
+            Zx, F = LEAVES[tag]
+            if set(Zx) & supp: continue          # zero-pins violated
+            if F is None:
+                if not supp: hits.append(tag)
+            elif F in supp or tau_var(F) in supp:
+                hits.append(tag)
+        ok &= (len(hits) == 1)
+        if hits: census[hits[0]] = census.get(hits[0], 0) + 1
+    chk("COVER = PARTITION: each of the 4096 support patterns of the "
+        "twelve even lows satisfies EXACTLY ONE chamber class "
+        "C_i = leaf_i U tau(leaf_i) (first-nonzero hierarchy); "
+        "unsplit vars unconstrained => the 7 classes partition the "
+        "full nolog variety", ok)
+    print("   chamber census: %s" % {t: census.get(t, 0)
+                                     for t in ORDER})
 
 if __name__ == "__main__":
     ph = sys.argv[1] if len(sys.argv) > 1 else "all"
