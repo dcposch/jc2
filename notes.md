@@ -492,3 +492,7 @@
   the NEW leaves2 process names — killed b1-b3/a1/a2 19min in (rc=143). Relaunched
   with L2GEN tags. LESSON banked: pkill patterns must include the generation
   discriminator (directory or tag), never bare leaf names.
+- 2026-08-14 ~21:35: sat23 p105337 FAILED at 37h/1.6TB (ultramem vcap — same structural
+  cliff class as l8); p105673 twin killed preemptively (identical death predicted);
+  sat23-as-monolith RETIRED (decomposition only if the chamber map leaves it relevant).
+  ULTRAMEM STOPPED (no active lanes; cost sweep). td-11 nested closure promoted.
