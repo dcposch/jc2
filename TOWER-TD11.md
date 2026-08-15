@@ -1,11 +1,14 @@
 # TOWER-TD11.md — entry-level clash analysis for the three td-11 entries
 
-Status: **PROMOTED AT THE EXACT-CORE TIER; round 6 attacks the OPEN
-residue (2026-08-14): NF-Z† instantiated for td-11 on its DIE horn —
-the two-word deep families are CLOSED (dead at X, §15); 62 of the
-129 nested rows stamped SPINE-DEAD by inner-merge H8 (§16); the
-coupled-cap divisor completion adds the never-swept `c = 3` to the
-refusal set (DG3); per-item OPEN inventory in §17.**
+Status: **PROMOTED AT THE EXACT-CORE TIER; OPEN-residue campaign
+through round 10 (2026-08-14): NF-Z† DIE-horn closed the two-word
+deep families (§15); the 129 nested rows are CLOSED-AT-TIER — 62 by
+inner-merge H8 (§16), 67 by the NF-M enumeration + the round-9
+outer-merge analysis, confirmed by grok-67-final with round-10
+errata folded (closed-form both-nonzero menu with its seven
+`A < Q` schemas; the 109-member free-`ν_A` census, all
+census-unrealizable). Remaining OPEN: beyond-core region, cap-free
+closures, NF-P slice, refile (§17).**
 Review chain: round 1 (window verdicts) → round 2 (obligation
 discharges, 46 checks) → dual review `xmodel/grok-td11-review.md`
 SOUND-WITH-ERRATA + `xmodel/sol-td11-review.md` BROKEN → round 3
@@ -320,8 +323,12 @@ checked-in `103/25` (gate SK1/SK2 — both regressions).
   exhaustion is divisor-closed and dynamic-cap-checked, so every
   shrunk cap and register class is covered). No sibling-X tie
   (leaf M-vector `(1,2,2)`: exactly one `M = 1` carrier).
-* **The 129 nested rows are OPEN** — stamped so by the gate
-  classifier (SK3), NEVER `TOWER-DEAD`. Two distinct reasons:
+* **The 129 nested rows were OPEN at round 3** — stamped so by the
+  gate classifier (SK3), never `TOWER-DEAD` at that tier. (Rounds
+  6–10 subsequently closed them: 62 by inner-merge H8, 67 by the
+  NF-M enumeration + outer-merge analysis — §17 and NF-M.md §5;
+  SK3's OPEN stamp remains the correct ROUND-3 record and the
+  correct behaviour for any decoration outside the audited class.) Two distinct reasons:
   `G(G(A,B1),B2)` / `G(G(A,B2),B1)` put the clash inside an inner
   merge with a rootward sibling (the nested-TERM gap, port
   obligation 11); `G(G(B1,B2),A)` makes the opponent a merged chart
@@ -666,14 +673,18 @@ charts).
 | item | round-5 status | round-6 status |
 |---|---|---|
 | two-word deep families (`Pi = 5^k`, both tails deep) | OPEN (NF-Z† hold) | **CLOSED — dead at X (§15, DG5)** |
-| 129 nested 11-C rows | OPEN | **CLOSED-AT-TIER (round 9, block2 review folded): 62 SPINE-DEAD (inner-H8, §16) + 67 via NF-M (NF-M.md §5): 31 unrealizable, 12 AB self-refused (GENERAL den-criterion at `k \| i_G = 2`, X alive — round-9 attribution, not Lemma CAP-DEN), 3 split (cylinder self-refused + discrete `(11,7)` alternatives outer-dead), 21 DEAD-OUTER by the round-9 outer-merge analysis (parametric in the unknown inner emission `w_in`; census-pinned zero-slots; algebraic family refusals; below-window schemas fall to the completed-object clash where CAP-DEN applies genuinely). 0 LIVE, 0 DEFERRED. Named objects: the two above-window free-`ν_A` candidates (census-unrealizable). Riders: `ν = 1` modes (NF-P), post-merge P0 strata, current-state arrivals |
+| 129 nested 11-C rows | OPEN | **CLOSED-AT-TIER (rounds 8–10; review chain: grok-td11-block2-review SOUND-WITH-ERRATA -> round-9 outer-merge repair -> grok-67-final YES-all-67-dead + three writeup errata -> round-10 fold): 62 SPINE-DEAD (inner-H8, §16) + 67 via NF-M (NF-M.md §5): 31 unrealizable, 12 AB self-refused (GENERAL den-criterion at `k \| i_G = 2`, X alive — round-9 attribution, not Lemma CAP-DEN), 3 split (cylinder self-refused + discrete `(11,7)` alternatives outer-dead), 21 DEAD-OUTER by the round-9 outer-merge analysis (parametric in the unknown inner emission `w_in`; census-pinned zero-slots; algebraic family refusals; below-window schemas fall to the completed-object clash where CAP-DEN applies genuinely). 0 LIVE, 0 DEFERRED. Named objects: the two above-window free-`ν_A` candidates (census-unrealizable). Riders: `ν = 1` modes (NF-P), post-merge P0 strata, current-state arrivals |
 | beyond-core budget-9 region | OPEN | OPEN — §13.0 paths unchanged; NOT sufficient for the 67 nested rows |
 | cap-free closures `(3/2,2)@9`, `(4/3,3)@9` | OPEN | OPEN (compiler-tier) |
 | `ν = 1` insertions, resonance-bearing chains | NF-P | NF-P (unchanged) |
 | Q+E5/E5F refile | UNKNOWN | UNKNOWN (unchanged) |
 | general NF-Z† algorithm | — | OPEN (definition gap flagged in NF-Z.md §6; the td-11 DIE-horn instantiation does not repair it) |
 
-Remaining genuinely-OPEN td-11 items after round 8: **four**
+Remaining genuinely-OPEN td-11 items after round 10: **four**
 (beyond-core region, cap-free closures, NF-P slice incl. the nested
 rows' `ν = 1` rider, refile) plus the general-dagger definition gap,
-which is cross-rung. The 129 nested rows are CLOSED-AT-TIER.
+which is cross-rung. The 129 nested rows are CLOSED-AT-TIER,
+confirmed by grok-67-final (YES — all 67 DEAD-AT-TIER; writeup
+errata folded round 10: the sign lemma replaced by the closed form
+with its seven `A < Q` schemas, the free-`ν_A` census completed at
+109 members all census-unrealizable, I1/I2b now real gates).

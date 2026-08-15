@@ -555,7 +555,9 @@ for (flav, kind, Min, _) in ROWS67:
         continue
     # in-window objects present: all self-refuse (H2) -> dead
     stamps['DEAD-SELFREF'] += 1
-check("H3 THE 67 STAMPS (deterministic re-enumeration): "
+check("H3 [ROUND-8 HISTORICAL LAYER -- superseded by H3b + I4; the "
+      "round-8 wording 'CAP-DEN-refused' is corrected in H2] the "
+      "round-8 stamps re-derive deterministically: "
       "31 DEAD-UNREALIZABLE (no nu>=2 schema matches the row's M_in: "
       "the 28 A-flavor M_in=3 rows and 3 BB mu=(1,1) M_in=1 rows), "
       "21 DEAD-WINDOWED-OUT (every matching schema's merged vertex "
@@ -693,17 +695,60 @@ def outer_schemas(mu_in):
     return out
 
 
-check("I1 the both-nonzero sign lemma: with X = kb - 2 and eps = 0, "
-      "(2.9) forces A = Q exactly (A > Q gives nu < 1; A < Q flips "
-      "the sign) -- the family kb = 2 nu Q + 2, Q = mu_in + 1, is the "
-      "COMPLETE both-nonzero pinned menu, independent of w_in",
-      all((k_ * (mu_in + 1 + 1) - (k_ - 2) * (mu_in + 2)) > (k_ - 2) / 2
-          or True for mu_in in (1, 2, 4) for k_ in range(3, 30))
-      and all(Fr(2 * nu * Q + 2, 1).denominator == 1
-              for nu in (2, 3) for Q in (2, 3, 5)))
+# I1 (round 10, grok-67-final finding 1: the round-9 "sign lemma" was
+# FALSE -- A < Q does NOT flip the sign when kb < 2Q/(Q-A)).  The
+# correct closed form from (2.9) with X = kb - 2, eps = 0:
+#     kb = 2(1 + nu Q) / (1 - nu(A - Q)),   denominator > 0 => A <= Q.
+# A > Q gives nu < 1 (that half stood).  The A = Q slice is the
+# family kb = 2 nu Q + 2; the A < Q slice is enumerated HERE.
+ANEQ = []
+for mu_in in (1, 2, 4):
+    A_ = mu_in + 1
+    for x in range(0, 17):
+        Q_ = 2 + x
+        if A_ == Q_:
+            continue
+        for nu in range(2, 81):
+            den_ = 1 - nu * (A_ - Q_)
+            if den_ <= 0:
+                continue
+            kbf = Fr(2 * (1 + nu * Q_), den_)
+            if kbf.denominator != 1 or kbf < 1:
+                continue
+            kb_ = int(kbf)
+            dp_, dq_ = nu * A_, 1 + nu * Q_
+            if Fr(kb_ * dp_, dq_) != kb_ - 2:
+                continue
+            MG_ = gcd(dp_, dq_)
+            if gcd(MG_, nu) != 1 or (mu_in + 1) % MG_:
+                continue
+            if not (mu_in * dq_ > dp_ and dq_ > dp_):
+                continue
+            ANEQ.append((mu_in, x, nu, kb_, dp_, dq_, MG_,
+                         Fr(kb_, 2 * dp_)))
+check("I1 (round 10, de-falsified): the closed form "
+      "kb = 2(1 + nu Q)/(1 - nu(A - Q)) enumerates the COMPLETE "
+      "both-nonzero menu: A > Q impossible (nu < 1); A = Q is the "
+      "kb = 2 nu Q + 2 family; A < Q yields EXACTLY the seven "
+      "grok-67-final schemas -- (6,10)M2@5/12, (6,9)M3@1/2, "
+      "(15,21)M3@7/30, (20,25)M5@1/4, (45,55)M5@11/90, (10,15)M5@"
+      "3/10, (15,25)M5@1/6 -- ALL at gap <= 1/2 (below-window: "
+      "completed-object clash), none in-window; gap -> 1/(A nu) as "
+      "x grows, so no further member enters",
+      len(ANEQ) == 7 and all(s[-1] <= Fr(1, 2) for s in ANEQ)
+      and {(s[4], s[5], s[6]) for s in ANEQ}
+      == {(6, 10, 2), (6, 9, 3), (15, 21, 3), (20, 25, 5),
+          (45, 55, 5), (10, 15, 5), (15, 25, 5)})
+def full_outer(mu_in):
+    return outer_schemas(mu_in) + [
+        ('bnz-AneQ', kb_, dp_, dq_, MG_, 2, g_)
+        for (mi_, x_, nu_, kb_, dp_, dq_, MG_, g_) in ANEQ
+        if mi_ == mu_in]
+
+
 okI2, live_objects, above = True, [], []
 for mu_in in (1, 2, 4):
-    for (tag, kb, dp, dq, MG, imin, gap) in outer_schemas(mu_in):
+    for (tag, kb, dp, dq, MG, imin, gap) in full_outer(mu_in):
         if gap >= Fr(5, 2):
             above.append((mu_in, tag, kb, dp, dq, str(gap)))
         elif gap > Fr(1, 2):            # OPEN window (1/2, 5/2)
@@ -722,6 +767,72 @@ check("I2 EVERY outer schema across all orientations and mu_in in "
       "objects; gap-exactly-1/2 objects (the (6,9)) sit BELOW every "
       "gap(X) > 1/2 -> completed clash; NO census-pinned schema "
       "reaches 5/2", okI2 and live_objects == [] and above == [])
+# I2b (round 10, grok-67-final finding 2: the round-9 doc cited a
+# nonexistent gate and "exactly two" was an undercount): the REAL
+# free-nu_A superset enumerator, nu_A <= 20, kb <= 80.
+NAMED = set()
+for mu_in in (1, 2, 4):
+    imin = max(2, -(-4 // mu_in))
+    for nu_A in range(1, 21):
+        for kb in range(3, 81):
+            X = kb - 2 * nu_A
+            if X < 1:
+                continue
+            g0 = gcd(X, kb)
+            p_, q_ = X // g0, kb // g0
+            for k in range(0, 4):
+                for mjs in (itertools.product(range(1, mu_in), repeat=k)
+                            if mu_in > 1 else ([()] if k == 0 else [])):
+                    A = mu_in + sum(mjs)
+                    for x in range(0, 10):
+                        Q = 1 + k + x
+                        lhs = q_ * A - p_ * Q
+                        rhs = p_ - q_
+                        if lhs == 0 or rhs % lhs or rhs // lhs < 2:
+                            continue
+                        nu = rhs // lhs
+                        dp, dq = 1 + nu * A, 1 + nu * Q
+                        if Fr(kb * dp, dq) != X:
+                            continue
+                        MG = gcd(dp, dq)
+                        if gcd(MG, nu) != 1 or (mu_in + 1) % MG:
+                            continue
+                        if not (mu_in * dq > dp
+                                and all(m * dq < dp for m in mjs)):
+                            continue
+                        gap = Fr(kb, imin * dp)
+                        if gap >= Fr(5, 2):
+                            NAMED.add(('above', mu_in, nu_A, kb, dp, dq))
+                        elif gap > Fr(1, 2) and not refused_gap(gap):
+                            NAMED.add(('live', mu_in, nu_A, kb, dp, dq))
+check("I2b the REAL free-nu_A superset enumerator (nu_A <= 20, "
+      "kb <= 80; round-9's 'exactly two' was an undercount and its "
+      "gate did not exist): 109 named objects -- 108 above-window "
+      "plus ONE in-window-live shape (nu_A=15, kb=48, (6,16), gap 2, "
+      "r = alpha + 1 legal at k | 2) -- and EVERY one requires "
+      "nu_A != 2: ALL census-unrealizable (the A-pole label "
+      "L3a1b1n2 pins nu_A = 2); grok-67-final's named members "
+      "replay: (3,5)@5/2, (5,7)@7/2, (5,7)@14/5, (5,7)@21/5, "
+      "(4,10)@5/2, (6,16)@2-live; NO live object at census",
+      len(NAMED) == 109
+      and all(nu_A != 2 for (_, _, nu_A, _, _, _) in NAMED)
+      and sum(1 for n in NAMED if n[0] == 'live') == 1
+      and ('live', 1, 15, 48, 6, 16) in NAMED
+      and ('above', 1, 6, 30, 3, 5) in NAMED
+      and ('above', 2, 5, 35, 5, 7) in NAMED
+      and ('above', 2, 4, 28, 5, 7) in NAMED
+      and ('above', 2, 6, 42, 5, 7) in NAMED
+      and ('above', 1, 12, 40, 4, 10) in NAMED)
+check("I2c the i_min floor provenance (grok-67-final finding 3, "
+      "rider): A-zero uses i >= P_inner/mu_in with P_inner >= 4 (the "
+      "B-seed); every inner BB schema's local d_p is >= 9 (cylinder "
+      "4nu+1 >= 9 at nu >= 2; discretes 10, 11, 14, 20, 26) and no "
+      "P-shrink mechanism exists on the page -- the floor is "
+      "conservative; an emission P below the seed would re-open the "
+      "census-pinned window and is recorded as the one smuggling "
+      "path (perimeter)",
+      min([4 * nu + 1 for nu in range(2, 30)] + [10, 11, 14, 20, 26])
+      == 9 and 9 > 4)
 # algebraic closure for the two parametric families
 okI3 = True
 for Q in (2, 3, 5):
@@ -754,7 +865,7 @@ for (kind, Min, mu_ins) in (('BB1', 2, (1, 2)), ('BB2', 2, (1, 2)),
 ROWS24 += [('BB2-M1-disc', 1, 1)] * 3
 okI4 = len(ROWS24) == 24
 for (kind, Min, mu_in) in ROWS24:
-    sch = outer_schemas(mu_in)
+    sch = full_outer(mu_in)
     # every schema is dead (I2/I3); rows with no M_root-matching
     # schema are emission-unrealizable -- dead either way
     okI4 &= all(gap <= Fr(1, 2) or refused_gap(gap)

@@ -769,3 +769,15 @@ sol-td11-rereview (STILL-BROKEN, narrowed), exit-b exact-core
 restatement, sol-td11-final (cores CONFIRMED, inventory COMPLETE,
 editorial), editorial pass. Gates td11 58/58. Corollary: td-11 NF-D
 depth closed for single-word configurations.
+
+## td-11 nested-rows closure (2026-08-14)
+PROMOTED: all 129 nested 11-C decorated skeleton rows DEAD-AT-TIER —
+62 by inner-merge H8, then the remaining 67 = 31 unrealizable + 12
+AB-self-refused (general den-criterion at k | i_G = 2) + 3 split-resolved
++ 21 DEAD-OUTER (NF-M parametric X_out pin at the outer vertex). The
+109-object free-nu_A sweep (incl. the in-window-live (6,16)@2 shape)
+is census-unrealizable throughout (nu_A != 2 needed, nu_A = 2 pinned).
+Review chain: grok-td11-block2-review (reopened 24), repair,
+grok-67-final (YES, gap closed), errata fold (sign lemma -> closed form
+kbar = 2(1+nuQ)/(1-nu(A-Q))). Gates nfm 25/25. td-11 OPEN inventory:
+beyond-core, NF-P slice, refile.

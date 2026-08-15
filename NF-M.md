@@ -23,7 +23,7 @@ permutation × scaling is the certificate:
 
 Excluded, as `sol-normalform.md` §2.2 itself assigns them: the
 `ν = 1` case-I η-modes (NF-P). Machine gate: `cases/nfm_check.py`
-(23 checks, exit 0; count printed). Sources: `sol-gluing-design.md`
+(25 checks, exit 0; count printed). Sources: `sol-gluing-design.md`
 §1.3 (L1–L9), `sol-normalform.md` §§2.2/3, `cases/tower_check.py`
 `t1_local` machinery, `cases/towers/t9_15_direct.json` `t1_local`
 rows, Lemma Z-Omega (NF-Z.md). No git commit.
@@ -203,22 +203,41 @@ the 3 BB2 `M=1` rows hid discrete `(11,7)` alternatives — 43 solid,
 at the outer vertex `G_out(inner, A)`: any orientation with A
 nonzero pins `X_out = κ̄_out − 2` INDEPENDENT of the unknown inner
 emission `w_in`, so the analysis is parametric and kills for every
-`w_in`. The both-nonzero (2.9) forces `A = Q` exactly (sign lemma),
-giving the family `κ̄ = 2νQ + 2` (gap just above 1, in-window,
-den-refused ALGEBRAICALLY: `g | 4` so `den >= νQ/2 > 2`); `μ_in = 1`
-both-nonzero forces `w_in = 2` on pain of contradiction, opening the
-equal-handshake menu (cylinder `κ̄ = 4ν+2` refused ∀ν; one discrete
-`(6,10)` below-window); the A-zero and inner-zero menus (census-
-pinned `ν_A = 2` from the entry label `L3a1b1n2`) are all
-below-window or in-window-refused — below-window schemas fall to the
-completed-object clash, where X IS a child of the outer merge and
-Lemma CAP-DEN applies genuinely. **All 24 reopened rows: DEAD-OUTER.
+`w_in`. The both-nonzero (2.9) with `X = κ̄ − 2` has the closed form
+`κ̄ = 2(1 + νQ)/(1 − ν(A − Q))` (round-10 correction,
+grok-67-final finding 1: the round-9 "sign lemma" claiming `A = Q`
+is forced was FALSE — `A < Q` does not flip the sign when
+`κ̄ < 2Q/(Q−A)`): denominator positivity gives `A <= Q`; the
+`A = Q` slice is the family `κ̄ = 2νQ + 2` (gap just above 1,
+in-window, den-refused ALGEBRAICALLY: `g | 4` so `den >= νQ/2 > 2`);
+the `A < Q` slice consists of EXACTLY SEVEN schemas (gate I1
+enumerates them from the closed form: `(6,10)M2@5/12, (6,9)M3@1/2,
+(15,21)M3@7/30, (20,25)M5@1/4, (45,55)M5@11/90, (10,15)M5@3/10,
+(15,25)M5@1/6`), all at gap `<= 1/2` — below-window, dead by the
+completed-object clash. `μ_in = 1` both-nonzero forces `w_in = 2`
+on pain of contradiction, opening the equal-handshake menu (cylinder
+`κ̄ = 4ν+2` refused ∀ν; one discrete `(6,10)` below-window); the
+A-zero and inner-zero menus (census-pinned `ν_A = 2` from the entry
+label `L3a1b1n2`) are all below-window or in-window-refused —
+below-window schemas fall to the completed-object clash, where X IS
+a child of the outer merge and Lemma CAP-DEN applies genuinely. **All 24 reopened rows: DEAD-OUTER.
 Post-repair: 67 = 31 UNREAL + 12 AB-SELFREF + 3 SPLIT (cylinder
 self-refused, discretes outer-dead) + 21 DEAD-OUTER; 0 LIVE, 0
-DEFERRED.** The free-`ν_A` superset scan names exactly two
-above-window candidates (`κ̄=30, (3,5)` at `5/2`; `κ̄=35, (5,7)` at
-`7/2`) — both need `ν_A ∈ {5,6}`, far from the census value 2:
-unrealizable, recorded as named objects.
+DEFERRED.** The free-`ν_A` superset (round-10 correction, grok-67-final
+finding 2: round-9 said "exactly two" and cited a gate that did not
+exist) is now REALLY enumerated (gate I2b, `ν_A <= 20`,
+`κ̄ <= 80`): **109 named objects — 108 above-window plus ONE
+in-window-live shape (`ν_A = 15`, `κ̄ = 48`, `(6,16)`, gap `2`,
+whose death residue `r = α + 1` is legal at `k | 2`) — and every
+single one requires `ν_A ≠ 2`: ALL census-unrealizable.** The two
+round-9 border objects and grok-67-final's extra members
+(`(5,7)@14/5`, `(5,7)@21/5`, `(4,10)@5/2`) replay within the list.
+No live object at census. Rider (finding 3): the A-zero index floor
+`i >= P_inner/μ_in >= 4/μ_in` rests on `P_inner >= 4` (the B-seed);
+every inner schema's local `d_p >= 9` and no P-shrink mechanism
+exists on the page, but an emission `P` below the seed would re-open
+the census-pinned window — recorded as the one smuggling path
+(perimeter).
 
 **Attribution (review finding 8, fixed):** the three round-8
 self-refusals use the GENERAL den-criterion (`k = den(α − 1 + g)`,
@@ -255,7 +274,7 @@ way.
 ## 7. Reproduction
 
 ```bash
-python3 cases/nfm_check.py     # 23 checks, exit 0 (count printed)
+python3 cases/nfm_check.py     # 25 checks, exit 0 (count printed)
 ```
 
 Blocks: A the M2 reduction vs direct (L3) on all certificate rows +
