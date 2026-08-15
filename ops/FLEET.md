@@ -20,6 +20,14 @@ exact small linear algebra (sympy, <8 GB) is fine.
   queue drains (coordinator's call; don't stop it while lanes run).
   After start: `sudo ldconfig` once before msolve.
   Job dir: ~/res32 (screens + stuck7), ~/jc72108 (older Q2 work).
+- **Box03** (AWS r6i.16xlarge, 64 vCPU / 512 GB): instance
+  i-0ece0b9a3b4a7512f (profile `personal`), launched 2026-08-14 for the
+  3 stuck7 farm big-cores idle since the Box02 cull. Same SG/subnet/key
+  as Box02 (claude-ssh / subnet-948915c9 / claude-cli), us-east-1a,
+  200 GB gp3 root. IP CHANGES on stop/start — resolve like Box02
+  (cached in /tmp/box03_ip; currently 54.167.215.189). ~$4.03/h —
+  STOP IT when the stuck7 lanes finish. msolve from Ubuntu apt.
+  Job dir: ~/stuck7 (out/ + lanes.log).
 - **ultramem** (GCP, project dclanker, zone us-central1-a, instance
   ultramem-1): access ONLY via
     gcloud compute ssh ultramem-1 --project dclanker --zone us-central1-a
@@ -43,3 +51,12 @@ exact small linear algebra (sympy, <8 GB) is fine.
   screens, 3 stuck7 farm cores; lanes.log self-records.
 - box01: farm lanes (13 EMPTYs banked so far).
 - ultramem: sat23 (r1_23sat).
+- Box03 ~/stuck7 (2026-08-14): 3 stuck7 big-cores (12_33 c10.RED,
+  6_15 c1.RED, 6_15 c2.q), 48h cap, lanes.log self-records.
+
+## Version caveat (2026-08-14)
+Box03 runs apt msolve 0.6.5 (not the campaign-standard 0.10.1). Any
+verdict produced there is SCREENING-TIER until re-confirmed on a
+0.10.1 box (Box02 post-drain) — record the version in every AUDIT
+citation of a Box03 result. Rationale: our hazard ledger is calibrated
+to 0.10.1; 0.6.5 may lack fixes or carry different bugs.
