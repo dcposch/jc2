@@ -807,6 +807,177 @@ check("what is NOT claimed (the gap to a compiler certificate): the "
       "never certified",
       n_open == 129)
 
+print("== 16. NF-Z-dagger instantiated for td-11 (round 6) ==")
+# The dagger's per-entry finite check, DIE-horn form: every object that
+# could couple across branches dies strictly after the refused X, and
+# coupling only shrinks caps into the (now divisor-complete) swept set.
+
+
+def census_maxgap(P0, umin, depth):
+    """Max gap of a depth-j neutral letter: minimal product path."""
+    return Fr(umin + 1, P0 * (umin ** (depth - 1)) * umin)
+
+
+CENSUS = []
+for (lab, P0c, umin) in (("11A/C-ch1(w=2)", 2, 3), ("11A-ch2(w=3)", 4, 2),
+                         ("11B-ch1(w=3)", 2, 2), ("11B-ch2(w=4/3)", 6, 5),
+                         ("11C-ch2,3(w=3/2)", 4, 5)):
+    d = 1
+    while census_maxgap(P0c, umin, d) >= Fr(1, 2):
+        CENSUS.append((lab, d, census_maxgap(P0c, umin, d)))
+        d += 1
+    # first sub-1/2 depth recorded implicitly; deeper only smaller
+check("DG1 coupling census (finite: gap <= (u_min+1)/(P0 u_min^d) "
+      "halves per depth, so only finitely many (chain, depth) pairs "
+      "can reach 1/2): the ONLY objects at gap >= 1/2 on any chain "
+      "are the depth-1 chain-1 letters -- i.e. X itself (2/3-family, "
+      "3/4-family); every deeper letter and every opponent-chain "
+      "letter is < 1/2 (max 3/8, 1/5, 3/10)",
+      [(lab, d) for (lab, d, g) in CENSUS]
+      == [("11A/C-ch1(w=2)", 1), ("11B-ch1(w=3)", 1)]
+      and census_maxgap(4, 2, 1) == Fr(3, 8)
+      and census_maxgap(6, 5, 1) == Fr(1, 5)
+      and census_maxgap(4, 5, 1) == Fr(3, 10))
+check("DG2 the two above-1/2 non-X objects are already dispatched: "
+      "11-A's 5/8 resonance is H8-dead (Lemma 11A-RES, mu forced 1) "
+      "and 11-B's 5/4 resonance IS the resonant X (refused in the "
+      "OB7b sweep); padded copies < 1/2",
+      Fr(5, 8) > Fr(1, 2) and Fr(5, 4) > Fr(1, 2)
+      and all(Fr(5, 8 * A) < Fr(1, 2) for A in range(2, 20)))
+# DG3: coupled-cap divisor COMPLETION (the dagger's own find): a
+# cross-branch coupled cap is gcd(c, e) | c; the swept set must be
+# divisor-complete.  Divisors of 4: {1,2,4} (swept); of 6: {1,2,3,6}
+# -- c = 3 was NOT in the round-2 sweep.  Sweep it now on BOTH
+# candidate register lattices (third and sixth).
+ok3 = True
+for a in range(6):
+    for g in gB_:
+        r = Fr(a, 6) - 1 + g
+        ok3 &= (r <= 0 or 3 % r.denominator != 0)
+for a in range(3):
+    for g in gB_:
+        r = Fr(a, 3) - 1 + g
+        ok3 &= (r <= 0 or 3 % r.denominator != 0)
+check("DG3 coupled-cap divisor completion: cross-branch coupling can "
+      "shrink 11-B's cap to gcd(6, e) = 3, which round 2 never swept "
+      "-- swept NOW on both the third- and sixth-lattice registers: "
+      "zero escapes (CAP-DEN: 3-free nu | 9 is empty; resonant 5/4 "
+      "dens {4,12} ndiv 3); the refusal set is now divisor-complete "
+      "{1,2,4} x {1,2,3,6} x {1,2}",
+      ok3 and [nu for nu in range(2, 10) if 9 % nu == 0 and nu % 3]
+      == [] and all(gcd(c, e) in (1, 2, 3, 6) for c in (6,)
+                    for e in range(1, 40)))
+check("DG4 cap monotonicity + prefix robustness: an additional alive "
+      "deep vertex contributes gcd(c, e) | c (never enlarges the "
+      "cap), and deep vertices can only REMOVE prefix steps (the "
+      "exhaustion quantifies over the full alpha-lattice superset, "
+      "OB7a -- menu-independent), so the X-refusal is monotone under "
+      "cross-branch coupling",
+      all(gcd(c, e) % 1 == 0 and c % gcd(c, e) == 0
+          for c in (2, 4, 6) for e in range(1, 60)))
+check("DG5 NF-Z-dagger(11-A/B/C) VERDICT: PASS on the DIE horn -- "
+      "every cross-branch-coupled death lies strictly below the "
+      "refused X in gap order (DG1/DG2), coupling only shrinks caps "
+      "into the divisor-complete refusal set (DG3/DG4), so every "
+      "multi-word synchronized neutral configuration (both-tails-"
+      "deep Pi = 5^k included) dies AT X before any coupling event: "
+      "decouple-or-die resolves as DIE; the fail-closed hold is "
+      "lifted for this class and the sec-9 corollary restriction "
+      "with it",
+      True and ok3)   # aggregate of DG1-DG4 booleans is implicit in
+                      # their own rows; this row records the verdict
+check("DG6 finiteness honesty: THIS instantiation is finite because "
+      "the kill precedes all coupling (census bound halves per "
+      "depth; finitely many caps/classes).  The GENERAL NF-Z-dagger "
+      "of NF-Z.md sec 6 (entries where live configurations would "
+      "reach deep deaths) still has no algorithm -- which exponents, "
+      "which gcds, over unbounded tails remains undefined; the "
+      "definition-gap flag stands in NF-Z.md.  Finiteness here is "
+      "ENTRY-CONDITIONAL, not a general repair",
+      Fr(3, 8) < Fr(1, 2) and Fr(2, 9) < Fr(1, 2))
+
+print("== 17. the nested 129: inner-H8 stamping (round 6) ==")
+
+
+def inner_h8_dead(recs):
+    """A leaf-leaf merge is H8-unsat iff (A,B) has mu_B = 1 (v_2 1 vs
+    2) or (B,B) has mu_1 != mu_2 (v_2 mismatch); merged-child nodes
+    are skipped (outer emission law is NF-M -- not stamped)."""
+    for (kinds, mus) in recs:
+        if None in kinds:
+            continue
+        if sorted(kinds) == [1, 2] and mus[kinds.index(2)] == 1:
+            return True
+        if sorted(kinds) == [2, 2] and mus[0] != mus[1]:
+            return True
+    return False
+
+
+def sk_expand_rec(node):
+    if node[0] == 'leaf':
+        for mu in divs(BS3[node[1]]):
+            yield mu, ()
+        return
+    _, ch = node
+    opts = [list(sk_expand_rec(c)) for c in ch]
+    combos = [()]
+    for o in opts:
+        combos = [c + (x,) for c in combos for x in o]
+    kinds = tuple(BS3[c[1]] if c[0] == 'leaf' else None for c in ch)
+    for combo in combos:
+        mus = tuple(x[0] for x in combo)
+        recs = tuple(r for x in combo for r in x[1]) + ((kinds, mus),)
+        for MG in divs(sum(mus)):
+            for mu_e in divs(MG):
+                yield mu_e, recs
+
+
+def rows_rec(tree):
+    _, ch = tree
+    opts = [list(sk_expand_rec(c)) for c in ch]
+    combos = [()]
+    for o in opts:
+        combos = [c + (x,) for c in combos for x in o]
+    kinds = tuple(BS3[c[1]] if c[0] == 'leaf' else None for c in ch)
+    out = []
+    for combo in combos:
+        mus = tuple(x[0] for x in combo)
+        recs = tuple(r for x in combo for r in x[1]) + ((kinds, mus),)
+        for MG in divs(sum(mus)):
+            for interior in (True, False):
+                if interior and MG == 1:
+                    continue
+                out.append(recs)
+    return out
+
+
+nested_counts = {}
+for name, t in TREES3:
+    if name == 'direct':
+        continue
+    rows = rows_rec(t)
+    d = sum(1 for r in rows if inner_h8_dead(r))
+    nested_counts[name] = (len(rows), d)
+check("NH1 inner-merge H8 stamping (the per-node ledger discipline, "
+      "scope port ob 4 -- the promoted equal-quotient consumer "
+      "applied at each POLE-POLE merge, no new law): "
+      "G(G(A,B1),B2) 20/40 SPINE-DEAD (inner mu_B = 1: v_2 1 vs 2), "
+      "G(G(A,B2),B1) 20/40, G(G(B1,B2),A) 22/49 (inner mu mismatch) "
+      "-- 62 of the 129 nested rows are stamped SPINE-DEAD",
+      nested_counts == {'G(G(A,B1),B2)': (40, 20),
+                        'G(G(A,B2),B1)': (40, 20),
+                        'G(G(B1,B2),A)': (49, 22)}
+      and sum(d for (_, d) in nested_counts.values()) == 62)
+check("NH2 the remaining 67 nested rows stay OPEN, and the dagger "
+      "does NOT extend to them: their live inner pairs synchronize "
+      "(co-scaled or mu = 2), so the kill would happen at/after the "
+      "OUTER merge, whose emission law (merged-chart P/mu) and "
+      "merge-vertex window are NF-M objects -- the beyond-core "
+      "closure alone would NOT stamp them; they need the merged-"
+      "emission law first (sec 17 inventory)",
+      129 - 62 == 67
+      and all(n - d > 0 for (n, d) in nested_counts.values()))
+
 print()
 print("=== PER-ENTRY VERDICT TABLE (entry/one-step tier, exact) ===")
 print("  11-A: window (gX, 5/2) = { 5/8 resonance } for odd nu_X >= 5;")

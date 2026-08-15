@@ -901,3 +901,34 @@ Reproduction:
 Trust: same perimeter as §6.T/§6.V -- exact E-arithmetic, unit
 pivots, all 4 h-sign branches on the band tier; relaxation lanes
 (+1,+1)/(+1,-1), w = (1,1)/(2,3).
+
+### 7.H Low-support case split of the nolog decider (leaf portfolio)
+
+[2026-08-14, DC-authorized screen acceleration;
+cases/directionb_residual32_leaves.py, checks 8/8 PASS.]
+Split lattice = the 12 EVEN low tails (levels 38/40; the odd lows
+39/41 enter the bands only w-weighted, no unit-kill lever -- not
+split; documented reading of the "38..41 block"). COVER (overlaps
+allowed), tau-conjugate chambers merged -- merge certified by the
+banked tau-covariance (1c.1/§2c/gate) PLUS an exact involution
+check: tau(Row) == Row for every banked VExpr row. PRE-DEAD, cited
++ machine-checked, no emission: 6 singleton-38 chambers (C6.1 is
+one E-row with ALL-UNIT coefficients on the six 38s, every branch,
+no 7/w-dependence); 6 singleton-40-within-38-silent chambers
+(C8|{38s=0} pure-linear, every 40-var carries a unit coefficient,
+every branch); {all lows = 0} (inside leaf a0; also §6.V(3)).
+EMITTED (p105337, full AUDIT discipline -- paren sweep, dual-parser
+round-trip at fence-consistent points, pattern-positive anchor on
+the support-matching leaf a0, origin-satisfiable ctl0 for a0;
+fenced leaves have no origin-tier control, documented):
+  a0 {38s,40s = 0}          58/77 rows,  72 eqs, 0.41 MB
+  a1/a2/a3 {38s=0, one 40 fenced}  68/77, 83 eqs, 0.76 MB each
+  b1/b2/b3 {one 38 fenced}         77/77, 92 eqs, 1.98 MB each
+COVER IDENTITY machine-checked: all 4096 support patterns of the
+lattice land in a leaf or tau-image (pins respected, fences
+witnessed); unsplit vars unconstrained => leaves + pre-dead = the
+full nolog variety. LAUNCHED on Box02 ~/res32/leaves (FLEET.md
+orphan-safe pattern; md5-verified transfer): 8 lanes (7 leaves +
+a0-ctl0), msolve -g 2 -t 8, 86400 s caps, 120G ulimit fence +
+nice 10 per lane (main lanes not crowded; 1.4T free at launch);
+self-recording to ~/res32/lanes.log.

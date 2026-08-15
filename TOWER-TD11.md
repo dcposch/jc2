@@ -1,8 +1,11 @@
 # TOWER-TD11.md — entry-level clash analysis for the three td-11 entries
 
-Status: **THEOREM TD11-CLASH AT THE EXACT-CORE TIER (2026-08-14,
-round 5 — editorial-consistency pass folded; PENDING Sol's promotion
-pass).**
+Status: **PROMOTED AT THE EXACT-CORE TIER; round 6 attacks the OPEN
+residue (2026-08-14): NF-Z† instantiated for td-11 on its DIE horn —
+the two-word deep families are CLOSED (dead at X, §15); 62 of the
+129 nested rows stamped SPINE-DEAD by inner-merge H8 (§16); the
+coupled-cap divisor completion adds the never-swept `c = 3` to the
+refusal set (DG3); per-item OPEN inventory in §17.**
 Review chain: round 1 (window verdicts) → round 2 (obligation
 discharges, 46 checks) → dual review `xmodel/grok-td11-review.md`
 SOUND-WITH-ERRATA + `xmodel/sol-td11-review.md` BROKEN → round 3
@@ -420,6 +423,13 @@ lemma for two-word deep zones would lift the restriction verbatim;
 until it exists, Rule 6 applies. Shallow co-scaled pairs (at most one
 tail below `theta*`) ARE covered. The depth/census circularity is
 broken on the single-word-deep slice without a depth cap.
+**Round-6 amendment:** the restriction is LIFTED for the td-11
+synchronized pure-neutral class — NF-Z† instantiated on its DIE horn
+(§15) shows every cross-branch coupling event lies strictly below
+the refused X, so the two-word families die at X with everything
+else; the cross-branch decoupling lemma this paragraph anticipated
+turned out to be unnecessary FOR CLASHED ENTRIES (it remains the
+open object for entries without an entry-level kill).
 
 ## 10. Census template (round 3 — NOT an emptiness certificate; grok
 finding 2 / sol finding 4 folded)
@@ -551,7 +561,7 @@ intruders of the `(3,2;4)`-type seeds classified per entry.
 ## 14. Reproduction
 
 ```bash
-python3 cases/tower_td11.py    # 58 checks, exit 0 (count printed; ~3 min,
+python3 cases/tower_td11.py    # 66 checks, exit 0 (count printed; ~3 min,
                                # the budget-5 (4/3,3) closure dominates)
 ```
 
@@ -570,6 +580,99 @@ retirement, the inline EXACT-CORE audit (B9d), the clean-branch
 ratio law + Sol's counterexample and the beyond-core withdrawal
 (B9f), grammar-cap rider (B9e); 15 the theorem aggregate at the
 exact-core tier (b9 conjuncted) + the not-claimed list including the
-beyond-core region. Companion gates unchanged:
+beyond-core region; 16 NF-Z-dagger instantiated (coupling census,
+resonance dispatch, coupled-cap divisor completion incl. c = 3,
+monotonicity, DIE-horn verdict, finiteness honesty); 17 the nested
+129 after inner-H8 stamping (62 dead / 67 open). Companion gates unchanged:
 `cases/nfd_check.py` (22), `cases/nfz_check.py` (39),
 `cases/tower_check.py` (promoted td-7 book). No git commit.
+
+## 15. NF-Z† instantiated for td-11 (round 6): the DIE horn
+
+NF-Z.md §6 defines NF-Z† as a fail-closed POLICY on multi-word
+deep-zone coexistence: a deep death on one word must keep the other
+words' deep vertices alive (`k'` dividing their nested-product
+exponents; cross-branch gcds not automatic), and no general finite
+check was ever defined (the round-2 `c_x` sketch was withdrawn as
+not-an-algorithm). The td-11 instantiation below is the **DIE
+horn** of "decouple-or-die": it proves the coupling never gets to
+act, because the entry-level clash kills first.
+
+**The per-entry finite check (gate block 16):**
+
+1. **Coupling census (DG1).** Enumerate every `(chain, depth,
+   letter-class)` whose gap can reach `1/2`: the max gap of a
+   depth-`d` neutral letter is `(u_min+1)/(P_0·u_min^d)`, which at
+   least halves per depth — so the enumeration is FINITE (this is
+   the load-bearing finiteness step, and it is entry-conditional:
+   it works because the comparison point `1/2 < gap(X)` exists).
+   Result: the ONLY objects at gap `>= 1/2` anywhere are the
+   depth-1 chain-1 letters — X itself. Opponent-chain maxima:
+   `3/8` (11-A), `1/5` (11-B), `3/10` (11-C).
+2. **Dispatch of the above-1/2 non-X objects (DG2).** 11-A's `5/8`
+   resonance: H8-dead (Lemma 11A-RES). 11-B's `5/4`: it IS the
+   resonant X, refused in the sweep. Padded copies `< 1/2`.
+3. **Coupled-cap divisor completion (DG3 — the dagger's own
+   find).** Cross-branch coupling shrinks caps to `gcd(c, e) | c`;
+   the refusal sweep must therefore be divisor-complete. Divisors
+   of 6 include `3`, which rounds 2–5 never swept: swept now on
+   both candidate register lattices (third and sixth) — zero
+   escapes (CAP-DEN: `3`-free `ν | 9` is empty; resonant `5/4` dens
+   `{4,12} ∤ 3`). The refusal set is now `{1,2,4} / {1,2,3,6} /
+   {1,2}`.
+4. **Monotonicity (DG4).** Extra alive deep vertices only shrink
+   the cap (gcd) and only remove prefix steps (the exhaustion is
+   already menu-independent over the full α-lattice), so the
+   X-refusal is monotone under coupling.
+
+**VERDICT (DG5): PASS on all three entries.** Every multi-word
+synchronized neutral configuration — including the both-tails-deep
+`Pi = 5^k` families — dies at X before any cross-branch coupling
+event. Decouple-or-die resolves as DIE; the two-word OPEN item
+CLOSES for this class, and the §9 corollary restriction is lifted
+(round-6 amendment there).
+
+**Finiteness honesty (DG6).** This check is finite BECAUSE the kill
+precedes all coupling. The general NF-Z† — for entries where live
+configurations would actually reach deep deaths — still has no
+algorithm; NF-Z.md §6's definition gap stands (flagged there,
+round-6 addendum). No general repair is claimed.
+
+## 16. The nested 129 after inner-merge H8 stamping (round 6)
+
+The per-node ledger discipline (scope port obligation 4: "Nested
+merges require a ledger at every node") lets the promoted
+equal-quotient consumer run at every POLE-POLE merge — the same
+arithmetic as the direct rows, no new law. Applied to the corrected
+145-row layer (gate block 17):
+
+| hierarchy | rows | inner-H8 SPINE-DEAD | still OPEN |
+|---|---:|---:|---:|
+| `G(G(A,B1),B2)` | 40 | 20 (inner `μ_B = 1`: `v_2` 1 vs 2) | 20 |
+| `G(G(A,B2),B1)` | 40 | 20 | 20 |
+| `G(G(B1,B2),A)` | 49 | 22 (inner `μ` mismatch) | 27 |
+| **nested total** | **129** | **62** | **67** |
+
+The 67 survivors have synchronizing inner pairs (co-scaled or
+`μ = 2`), so their kill would happen at or after the OUTER merge —
+whose emission law (merged-chart `P/μ`) and merge-vertex window are
+NF-M objects. **The beyond-core closure alone would NOT stamp
+them**; they need the merged-emission law first. The dagger does not
+extend to them either (its census runs on pole chains, not merged
+charts).
+
+## 17. OPEN inventory (round-6 per-item status)
+
+| item | round-5 status | round-6 status |
+|---|---|---|
+| two-word deep families (`Pi = 5^k`, both tails deep) | OPEN (NF-Z† hold) | **CLOSED — dead at X (§15, DG5)** |
+| 129 nested 11-C rows | OPEN | **62 SPINE-DEAD (inner-H8, §16); 67 OPEN** — need the merged-emission law + merge-vertex window (NF-M), not just beyond-core |
+| beyond-core budget-9 region | OPEN | OPEN — §13.0 paths unchanged; NOT sufficient for the 67 nested rows |
+| cap-free closures `(3/2,2)@9`, `(4/3,3)@9` | OPEN | OPEN (compiler-tier) |
+| `ν = 1` insertions, resonance-bearing chains | NF-P | NF-P (unchanged) |
+| Q+E5/E5F refile | UNKNOWN | UNKNOWN (unchanged) |
+| general NF-Z† algorithm | — | OPEN (definition gap flagged in NF-Z.md §6; the td-11 DIE-horn instantiation does not repair it) |
+
+Remaining genuinely-OPEN td-11 items: **five** (67 nested rows,
+beyond-core region, cap-free closures, NF-P slice, refile) plus the
+general-dagger definition gap, which is cross-rung.

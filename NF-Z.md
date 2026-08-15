@@ -439,6 +439,17 @@ obligation may yield OPEN or a symbolic candidate, never a certified
 empty panel); it is not a theorem, and no completeness is claimed for
 the quotient on multi-word entries.
 
+**Round-6 addendum (2026-08-14, TOWER-TD11.md §15):** the first
+per-entry instantiation exists — for the three td-11 entries the
+policy resolves on the DIE horn (every cross-branch coupling event
+lies strictly below the refused X-death, so multi-word
+configurations die before any coupling acts; finite check = coupling
+census + coupled-cap divisor completion + monotonicity). That
+instantiation is finite BECAUSE the entry-level clash kills first;
+it does NOT supply the general algorithm this section lacks — for
+entries without an entry-level kill, which exponents/gcds over which
+unbounded tails remains undefined. The definition gap stands.
+
 ## 7. Trust perimeter
 
 * Relative to **CONS as a consumer list** (§0) — explicitly NOT "the

@@ -261,6 +261,15 @@ gives and what it cannot
   one synchronized side (nothing currently forces one; the co-scaling
   structure above is evidence against).
   Until one lands: OPEN, fail-closed (§7/§8).
+* **Round-6 addendum (TOWER-TD11.md §§9/15):** path (a) LANDED for
+  the three td-11 entries — the entry-clash theorem (exact-core
+  tier) plus the NF-Z† DIE-horn instantiation kill every
+  synchronized pure-neutral configuration including the two-word
+  `Pi = 5^k` families. The `D`-values above stay OPEN as DEPTH-CAP
+  statements (mechanism A still has no pin — that fact is
+  unchanged), but the FAMILIES the caps were meant to bound are dead
+  by the clash; the census-relevant question is closed for the
+  audited class.
 
 ## 6. The three counterexamples, run forward (consistency with NF-D)
 
