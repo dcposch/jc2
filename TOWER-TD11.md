@@ -676,14 +676,17 @@ charts).
 | 129 nested 11-C rows | OPEN | **CLOSED-AT-TIER (rounds 8–10; review chain: grok-td11-block2-review SOUND-WITH-ERRATA -> round-9 outer-merge repair -> grok-67-final YES-all-67-dead + three writeup errata -> round-10 fold): 62 SPINE-DEAD (inner-H8, §16) + 67 via NF-M (NF-M.md §5): 31 unrealizable, 12 AB self-refused (GENERAL den-criterion at `k \| i_G = 2`, X alive — round-9 attribution, not Lemma CAP-DEN), 3 split (cylinder self-refused + discrete `(11,7)` alternatives outer-dead), 21 DEAD-OUTER by the round-9 outer-merge analysis (parametric in the unknown inner emission `w_in`; census-pinned zero-slots; algebraic family refusals; below-window schemas fall to the completed-object clash where CAP-DEN applies genuinely). 0 LIVE, 0 DEFERRED. Named objects: the two above-window free-`ν_A` candidates (census-unrealizable). Riders: `ν = 1` modes (NF-P), post-merge P0 strata, current-state arrivals |
 | beyond-core budget-9 region | OPEN | OPEN — §13.0 paths unchanged; NOT sufficient for the 67 nested rows |
 | cap-free closures `(3/2,2)@9`, `(4/3,3)@9` | OPEN | OPEN (compiler-tier) |
-| `ν = 1` insertions, resonance-bearing chains | NF-P | NF-P (unchanged) |
+| `ν = 1` insertions, resonance-bearing chains | NF-P | **STAMPED (NF-P.md round 1): ν=1 modes classified — η-absorbed `ε>0` EMPTY (η-pole lemma), η-factor covered by the ν-uniform square system, the 18-schema ν=1 menu all refused/out (zero live); resonance chains dead by promoted rows with per-state finiteness; pure-b below-window at every ν. Residue = NF-P-OB1 (the state-changing closure) = the standing beyond-core item, not a new object** |
 | Q+E5/E5F refile | UNKNOWN | UNKNOWN (unchanged) |
 | general NF-Z† algorithm | — | OPEN (definition gap flagged in NF-Z.md §6; the td-11 DIE-horn instantiation does not repair it) |
 
-Remaining genuinely-OPEN td-11 items after round 10: **four**
-(beyond-core region, cap-free closures, NF-P slice incl. the nested
-rows' `ν = 1` rider, refile) plus the general-dagger definition gap,
-which is cross-rung. The 129 nested rows are CLOSED-AT-TIER,
+Remaining genuinely-OPEN td-11 items after the NF-P round:
+**three** (beyond-core region — which now also absorbs NF-P-OB1's
+state-changing closure, cap-free closures, refile) plus the
+general-dagger definition gap, which is cross-rung. The NF-P slice
+is stamped (NF-P.md), completing the three quotient lemmas:
+NF-Z (closed record + in-zone core), NF-M
+(REDUCED-WITH-PROVED-CORE), NF-P (REDUCED-WITH-PROVED-CORE). The 129 nested rows are CLOSED-AT-TIER,
 confirmed by grok-67-final (YES — all 67 DEAD-AT-TIER; writeup
 errata folded round 10: the sign lemma replaced by the closed form
 with its seven `A < Q` schemas, the free-`ν_A` census completed at
