@@ -666,7 +666,7 @@ charts).
 | item | round-5 status | round-6 status |
 |---|---|---|
 | two-word deep families (`Pi = 5^k`, both tails deep) | OPEN (NF-Z† hold) | **CLOSED — dead at X (§15, DG5)** |
-| 129 nested 11-C rows | OPEN | **62 SPINE-DEAD (inner-H8, §16); 67 OPEN** — need the merged-emission law + merge-vertex window (NF-M), not just beyond-core |
+| 129 nested 11-C rows | OPEN | **62 SPINE-DEAD (inner-H8, §16); 67 OPEN** — round 7: NF-M's coefficient half is now PROVED (NF-M.md: square-system types per inner schema, `(Q̂−1)!` bound; conservative outer-`v_2` screen stamps 0), so the blocker is localized to the finite per-row inner-schema enumeration with exact emitted valuations + the merge-vertex window (engine tier) |
 | beyond-core budget-9 region | OPEN | OPEN — §13.0 paths unchanged; NOT sufficient for the 67 nested rows |
 | cap-free closures `(3/2,2)@9`, `(4/3,3)@9` | OPEN | OPEN (compiler-tier) |
 | `ν = 1` insertions, resonance-bearing chains | NF-P | NF-P (unchanged) |
