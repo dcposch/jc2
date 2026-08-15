@@ -666,7 +666,7 @@ charts).
 | item | round-5 status | round-6 status |
 |---|---|---|
 | two-word deep families (`Pi = 5^k`, both tails deep) | OPEN (NF-Z† hold) | **CLOSED — dead at X (§15, DG5)** |
-| 129 nested 11-C rows | OPEN | **CLOSED-AT-TIER (round 8): 62 SPINE-DEAD (inner-H8, §16) + 67 stamped by the executed NF-M enumeration (NF-M.md §5: 31 unrealizable, 21 windowed-out, 15 in-window-but-SELF-REFUSED — the three in-window merged emissions incl. §2.2's parametric cylinder all die at their own CAP-DEN-refused death). Riders: `ν = 1` inner modes (NF-P), merged-chart descendant strata, current-state arrivals, `ν_e ∈ {3,4}` handshake conditionality (dead either way) |
+| 129 nested 11-C rows | OPEN | **CLOSED-AT-TIER (round 9, block2 review folded): 62 SPINE-DEAD (inner-H8, §16) + 67 via NF-M (NF-M.md §5): 31 unrealizable, 12 AB self-refused (GENERAL den-criterion at `k \| i_G = 2`, X alive — round-9 attribution, not Lemma CAP-DEN), 3 split (cylinder self-refused + discrete `(11,7)` alternatives outer-dead), 21 DEAD-OUTER by the round-9 outer-merge analysis (parametric in the unknown inner emission `w_in`; census-pinned zero-slots; algebraic family refusals; below-window schemas fall to the completed-object clash where CAP-DEN applies genuinely). 0 LIVE, 0 DEFERRED. Named objects: the two above-window free-`ν_A` candidates (census-unrealizable). Riders: `ν = 1` modes (NF-P), post-merge P0 strata, current-state arrivals |
 | beyond-core budget-9 region | OPEN | OPEN — §13.0 paths unchanged; NOT sufficient for the 67 nested rows |
 | cap-free closures `(3/2,2)@9`, `(4/3,3)@9` | OPEN | OPEN (compiler-tier) |
 | `ν = 1` insertions, resonance-bearing chains | NF-P | NF-P (unchanged) |

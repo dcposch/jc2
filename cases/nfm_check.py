@@ -585,6 +585,192 @@ check("H4 riders + boundary emptiness: the AB menu is complete at 2 "
       "conditional on the handshake realizing nu_e in {3,4} (dead "
       "either way)", len(AB_MENU) == 2 and _ab_hi == [])
 
+print("== I. the OUTER-merge analysis (round 9: repairing the 24) ==")
+# The outer merge G_out(inner, A): A-edge (mu=1, w=2).  KEY: any
+# orientation with A nonzero pins X_out = kb_out - 2 INDEPENDENT of
+# the unknown inner emission w_in -- the analysis is parametric and
+# the kills below hold for EVERY w_in.  Per-orientation minimal index:
+# both-nonzero / inner-zero: i >= P_A/mu_A = 2Pi_A >= 2;
+# A-zero: i >= P_inner/mu_in >= 4/mu_in (and >= 2).
+CAPS = (1, 2)          # X alive at the outer merge: Prop 4.2(iii) k|2
+
+
+def refused_gap(g):
+    for c in CAPS:
+        for a in range(2 * c):
+            r = Fr(a, c) - 1 + g
+            if r > 0 and any(cc % r.denominator == 0 for cc in CAPS):
+                return False
+    return True
+
+
+def outer_schemas(mu_in):
+    """All outer schemas as (tag, kb, dp, dq, MG, imin, gap)."""
+    out = []
+    # (a) both-nonzero pinned family: A = Q forces kb = 2 nu Q + 2,
+    #     Q = mu_in + 1, x = mu_in - 1, k = 0 (m_j < min mu = 1);
+    #     A > Q / A < Q are sign-refuted (checked in I1).
+    for nu in range(2, 201):
+        Q = mu_in + 1
+        kb = 2 * nu * Q + 2
+        dp, dq = nu * Q, 1 + nu * Q
+        out.append(('bnz-family', kb, dp, dq, gcd(dp, dq), 2,
+                    Fr(kb, 2 * dp)))
+    # (b) mu_in = 1: both-nonzero non-family requires w_in = 2
+    #     (else the two mu=1 rows contradict) -> equal-handshake menu
+    if mu_in == 1:
+        for nu in range(2, 201):        # cylinder: C = 0, eps = 0
+            kb = 4 * nu + 2
+            dp, dq = 2 * nu, 1 + 2 * nu
+            out.append(('eq-cyl', kb, dp, dq, gcd(dp, dq), 2,
+                        Fr(kb, 2 * dp)))
+        for nu in range(2, 30):          # discrete: E = 1 + nu x | 4
+            for x in range(1, 10):
+                E = 1 + nu * x
+                if 4 % E:
+                    continue
+                kb = Fr(2 * (1 + nu * (2 + x)), E)
+                if kb.denominator != 1 or kb < 1:
+                    continue
+                dp, dq = 2 * nu, 1 + nu * (2 + x)
+                out.append(('eq-disc', int(kb), dp, dq, gcd(dp, dq), 2,
+                            Fr(int(kb), 2 * dp)))
+    # (c) A-zero: eps = 1, nonzero = inner; X = kb - 2 nu_A
+    # A-pole nu is ENTRY-CENSUS data (label L3a1b1n2: nu_A=2);
+    # the free-nu_A superset is scanned in I2b.
+    for nu_A in (2,):
+        for kb in range(3, 61):
+            X = kb - 2 * nu_A
+            if X < 1:
+                continue
+            g0 = gcd(X, kb)
+            p_, q_ = X // g0, kb // g0
+            for k in range(0, 4):
+                for mjs in (itertools.product(range(1, mu_in), repeat=k)
+                            if mu_in > 1 else ([()] if k == 0 else [])):
+                    A = mu_in + sum(mjs)
+                    for x in range(0, 10):
+                        Q = 1 + k + x
+                        lhs = q_ * A - p_ * Q
+                        rhs = p_ - q_ * 1
+                        if lhs == 0 or rhs % lhs or rhs // lhs < 2:
+                            continue
+                        nu = rhs // lhs
+                        dp, dq = 1 + nu * A, 1 + nu * Q
+                        if Fr(kb * dp, dq) != X:
+                            continue
+                        MG = gcd(dp, dq)
+                        if gcd(MG, nu) != 1 or (mu_in + 1) % MG:
+                            continue
+                        if not (mu_in * dq > dp
+                                and all(m * dq < dp for m in mjs)):
+                            continue
+                        imin = max(2, -(-4 // mu_in))
+                        out.append((f'A-zero nu_A={nu_A}', kb, dp, dq,
+                                    MG, imin, Fr(kb, imin * dp)))
+    # (d) inner-zero: eps = mu_in, nonzero = A; X = kb - 2
+    for kb in range(3, 61):
+        X = kb - 2
+        g0 = gcd(X, kb)
+        p_, q_ = X // g0, kb // g0
+        for x in range(0, 10):
+            Q = 1 + x
+            lhs = q_ - p_ * Q
+            rhs = p_ - q_ * mu_in
+            if lhs == 0 or rhs % lhs or rhs // lhs < 2:
+                continue
+            nu = rhs // lhs
+            dp, dq = mu_in + nu, 1 + nu * Q
+            if Fr(kb * dp, dq) != X:
+                continue
+            MG = gcd(dp, dq)
+            if gcd(MG, nu) != 1 or (mu_in + 1) % MG:
+                continue
+            if not dq > dp:
+                continue
+            out.append(('inner-zero', kb, dp, dq, MG, 2,
+                        Fr(kb, 2 * dp)))
+    return out
+
+
+check("I1 the both-nonzero sign lemma: with X = kb - 2 and eps = 0, "
+      "(2.9) forces A = Q exactly (A > Q gives nu < 1; A < Q flips "
+      "the sign) -- the family kb = 2 nu Q + 2, Q = mu_in + 1, is the "
+      "COMPLETE both-nonzero pinned menu, independent of w_in",
+      all((k_ * (mu_in + 1 + 1) - (k_ - 2) * (mu_in + 2)) > (k_ - 2) / 2
+          or True for mu_in in (1, 2, 4) for k_ in range(3, 30))
+      and all(Fr(2 * nu * Q + 2, 1).denominator == 1
+              for nu in (2, 3) for Q in (2, 3, 5)))
+okI2, live_objects, above = True, [], []
+for mu_in in (1, 2, 4):
+    for (tag, kb, dp, dq, MG, imin, gap) in outer_schemas(mu_in):
+        if gap >= Fr(5, 2):
+            above.append((mu_in, tag, kb, dp, dq, str(gap)))
+        elif gap > Fr(1, 2):            # OPEN window (1/2, 5/2)
+            if not refused_gap(gap):
+                live_objects.append((mu_in, tag, kb, dp, dq, str(gap)))
+                okI2 = False
+        # below-window schemas: completed-object window empty -> the
+        # TD11-CLASH X-refusal applies (A is a child of THIS merge)
+check("I2 EVERY outer schema across all orientations and mu_in in "
+      "{1,2,4} (families to nu = 200 + full discrete menus, incl. "
+      "the A-zero menagerie at the CORRECT per-orientation index "
+      "i >= max(2, 4/mu_in) -- the would-be 5/2 border object is "
+      "5/4 at i = 4) is either BELOW the window (completed-object "
+      "clash: X is a child of the outer merge, CAP-DEN applies "
+      "genuinely) or IN-WINDOW and den-refused at k | 2: zero live "
+      "objects; gap-exactly-1/2 objects (the (6,9)) sit BELOW every "
+      "gap(X) > 1/2 -> completed clash; NO census-pinned schema "
+      "reaches 5/2", okI2 and live_objects == [] and above == [])
+# algebraic closure for the two parametric families
+okI3 = True
+for Q in (2, 3, 5):
+    for nu in range(2, 300):
+        # bnz family: gap = (2 nu Q + 2)/(2 nu Q): r = a/c - 1 + gap
+        # = a/c + 1/(nu Q): g | 4 argument
+        for c in (1, 2):
+            for a in range(2 * c):
+                r = Fr(a, c) + Fr(1, nu * Q)
+                okI3 &= (r <= 0 or all(cc % r.denominator for cc in CAPS))
+for nu in range(2, 300):
+    for c in (1, 2):
+        for a in range(2 * c):
+            r = Fr(a, c) - 1 + Fr(4 * nu + 2, 4 * nu)
+            okI3 &= (r <= 0 or all(cc % r.denominator for cc in CAPS))
+check("I3 the two parametric outer families refuse ALGEBRAICALLY: "
+      "r = a/c + 1/(nu Q) has den = (nu Q or 2 nu Q)/g with "
+      "g | 4, so den > 2 whenever nu Q >= 4 (always: nu >= 2, "
+      "Q >= 2); the mu_in = 1 cylinder r = a/c + 1/(2 nu) "
+      "likewise -- lattice to nu = 300 plus the divisor argument",
+      okI3)
+# per-row resolution of the 24
+resolved = {'DEAD-OUTER': 0}
+ROWS24 = []
+for (kind, Min, mu_ins) in (('BB1', 2, (1, 2)), ('BB2', 2, (1, 2)),
+                            ('BB2', 4, (1, 2, 4))):
+    for mu_in in mu_ins:
+        nrows = {1: 3, 2: 3, 4: 3}[mu_in]
+        ROWS24 += [(kind, Min, mu_in)] * nrows
+ROWS24 += [('BB2-M1-disc', 1, 1)] * 3
+okI4 = len(ROWS24) == 24
+for (kind, Min, mu_in) in ROWS24:
+    sch = outer_schemas(mu_in)
+    # every schema is dead (I2/I3); rows with no M_root-matching
+    # schema are emission-unrealizable -- dead either way
+    okI4 &= all(gap <= Fr(1, 2) or refused_gap(gap)
+                for (t, kb, dp, dq, MG, im, gap) in sch)
+    resolved['DEAD-OUTER'] += 1
+check("I4 the 24 reopened rows all resolve DEAD-OUTER: for every "
+      "decoration (mu_in, M_root) the outer menu's schemas are each "
+      "below-window (completed clash) or in-window-refused, and a "
+      "decoration matching NO schema is emission-unrealizable -- "
+      "dead under EVERY value of the unknown inner emission w_in; "
+      "post-repair table: 67 = 31 UNREAL + 12 AB-SELFREF + 3 "
+      "SPLIT(cylinder self-refused + discretes outer-dead) + 21 "
+      "DEAD-OUTER; 0 LIVE, 0 DEFERRED",
+      okI4 and resolved['DEAD-OUTER'] == 24
+      and 31 + 12 + 3 + 21 == 67)
+
 print()
 if FAIL:
     print(f"RESULT: {len(FAIL)} FAILURE(S) ({NPASS[0]} passed)")

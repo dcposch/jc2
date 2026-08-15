@@ -23,7 +23,7 @@ permutation × scaling is the certificate:
 
 Excluded, as `sol-normalform.md` §2.2 itself assigns them: the
 `ν = 1` case-I η-modes (NF-P). Machine gate: `cases/nfm_check.py`
-(18 checks, exit 0; count printed). Sources: `sol-gluing-design.md`
+(23 checks, exit 0; count printed). Sources: `sol-gluing-design.md`
 §1.3 (L1–L9), `sol-normalform.md` §§2.2/3, `cases/tower_check.py`
 `t1_local` machinery, `cases/towers/t9_15_direct.json` `t1_local`
 rows, Lemma Z-Omega (NF-Z.md). No git commit.
@@ -195,12 +195,45 @@ window intruders self-refuse; the kill fires at the merged vertex.
 carrying the in-window objects). 0 LIVE-AT-TIER, 0 DEFERRED, 0
 positive-dimensional components (OB1 never fires here).
 
-**Riders (block H4):** `ν = 1` inner η-modes remain NF-P's (the
-stamp is `ν >= 2`-scoped); merged-chart descendant strata and
+**Round 9 (block2 review folded; blocks I, H3b).** Honest restate
+first: the 21 "windowed-out" stamps were NOT death certificates (an
+inner vertex below `1/2` SURVIVES to the unanalyzed outer merge) and
+the 3 BB2 `M=1` rows hid discrete `(11,7)` alternatives — 43 solid,
+24 reopened. THE REPAIR — the outer-merge analysis, NF-M machinery
+at the outer vertex `G_out(inner, A)`: any orientation with A
+nonzero pins `X_out = κ̄_out − 2` INDEPENDENT of the unknown inner
+emission `w_in`, so the analysis is parametric and kills for every
+`w_in`. The both-nonzero (2.9) forces `A = Q` exactly (sign lemma),
+giving the family `κ̄ = 2νQ + 2` (gap just above 1, in-window,
+den-refused ALGEBRAICALLY: `g | 4` so `den >= νQ/2 > 2`); `μ_in = 1`
+both-nonzero forces `w_in = 2` on pain of contradiction, opening the
+equal-handshake menu (cylinder `κ̄ = 4ν+2` refused ∀ν; one discrete
+`(6,10)` below-window); the A-zero and inner-zero menus (census-
+pinned `ν_A = 2` from the entry label `L3a1b1n2`) are all
+below-window or in-window-refused — below-window schemas fall to the
+completed-object clash, where X IS a child of the outer merge and
+Lemma CAP-DEN applies genuinely. **All 24 reopened rows: DEAD-OUTER.
+Post-repair: 67 = 31 UNREAL + 12 AB-SELFREF + 3 SPLIT (cylinder
+self-refused, discretes outer-dead) + 21 DEAD-OUTER; 0 LIVE, 0
+DEFERRED.** The free-`ν_A` superset scan names exactly two
+above-window candidates (`κ̄=30, (3,5)` at `5/2`; `κ̄=35, (5,7)` at
+`7/2`) — both need `ν_A ∈ {5,6}`, far from the census value 2:
+unrealizable, recorded as named objects.
+
+**Attribution (review finding 8, fixed):** the three round-8
+self-refusals use the GENERAL den-criterion (`k = den(α − 1 + g)`,
+the Z1 death equation) at the own-exponent cap `k | i_G = 2` — NOT
+Lemma CAP-DEN, whose `ν | c²` closure is X-family-specific. The two
+B-zero objects additionally have X alive (Prop 4.2(iii) gives the
+same cap independently); the cylinder is the wrong-name case
+corrected.
+
+**Riders:** `ν = 1` inner/outer η-modes remain NF-P's (all stamps
+are `ν >= 2`-scoped); merged-chart post-merge P0 strata and
 current-state arrivals stay in the standing perimeter; the `(A,B)`
-schemas are conditional on the B-arrival handshake realizing
-`ν_e ∈ {3, 4}` — if the refile realizes neither, those rows are
-DEAD-UNREALIZABLE instead. Dead either way.
+inner schema is conditional on the B-handshake realizing `ν_e = 3`
+(the census value; `ν_e = 4` is census-unrealizable) — dead either
+way.
 
 ## 6. Perimeter
 
@@ -222,7 +255,7 @@ DEAD-UNREALIZABLE instead. Dead either way.
 ## 7. Reproduction
 
 ```bash
-python3 cases/nfm_check.py     # 18 checks, exit 0 (count printed)
+python3 cases/nfm_check.py     # 23 checks, exit 0 (count printed)
 ```
 
 Blocks: A the M2 reduction vs direct (L3) on all certificate rows +
@@ -234,5 +267,8 @@ solving, not assuming), the F1 block row, type counts vs `(Q̂−1)!`;
 E the cylinder degeneration; F the round-1 conservative outer-`v_2`
 screen (historical); G the inner-schema menus (contradiction pins,
 MP6 rejections, the exactly-one parametric family); H the square
-solves, the self-refusal law, the 67 deterministic stamps
-(31/21/15), and the riders. No git commit.
+solves, the den-criterion self-refusals (round-9 attribution), the
+round-8 stamps with the H3b honest restate; I the outer-merge
+analysis (sign lemma, parametric-in-w_in kills, census-pinned
+zero-slots, algebraic family refusals, the named above-window
+superset pair, the 24-row resolution). No git commit.
