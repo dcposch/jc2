@@ -467,3 +467,9 @@
   the depth/census circularity. Next object: 11-B/11-C entry clash windows under the
   corrected P/mu consumer (11-A intruder already dead — recheck its window too).
   Paper-2 core drafted (21pp). Screens ~14h. Witt review rerunning.
+- 2026-08-14 ~17:45: Screen acceleration per DC ask: (a) ORDER PORTFOLIO — 2 reordered
+  copies of nolog_p105337 (reversed + seeded shuffle) launched on Box02 spare cores
+  (-t 12, 29h caps; GB order sensitivity = 10-100x lottery); (b) support-split leaf
+  emission tasked to window agent (the §6.V strata evidence says zero-heavy leaves
+  collapse); (c) held: more primes (correlated), HC (start-system explosion), Macaulay
+  cert (unknown degree). Parallel: td-11 OPEN-residue (NF-Z-dagger) + td-13 13-2b recon.
