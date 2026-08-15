@@ -199,11 +199,25 @@ check("B1 Lemma M1 over the full lattice (eps x nu x mult-vectors x "
       "block degrees x extras): the x^Qhat coefficient of F vanishes "
       "IDENTICALLY -- d_p(1 + nu Qhat) - d_q(eps + nu Sum p_i f_i) "
       "= d_p d_q - d_q d_p = 0", okB)
-check("B2 the square count: #equations = #{x^1..x^(Qhat-1)} = Qhat-1 "
-      "= (Qhat unknowns) - (1-dim scaling torus); the x^j equation is "
-      "homogeneous of degree Qhat - j, so Bezout = (Qhat-1)!",
-      all((Qh - 1) == (Qh - 1) for Qh in range(1, 6))
-      and [1, 1, 2, 6] == [1, 1, 2, 6])
+okB2 = True
+for (vals, mults, eps, nu) in (
+        ((Fr(1), Fr(3, 2)), (4, 3), 0, 17),
+        ((Fr(2), Fr(-1), Fr(5, 3)), (2, 1, 1), 1, 3),
+        ((Fr(1), Fr(3)), (1, 2), 2, 5)):
+    lam = Fr(2)
+    F1_, dp, dq, Qh, G = Fsys([(lin(v), m) for v, m in zip(vals, mults)],
+                              [], eps, nu)
+    F2_, *_ = Fsys([(lin(lam * v), m) for v, m in zip(vals, mults)],
+                   [], eps, nu)
+    for j in range(0, Qh):
+        c1 = F1_.get(j, Fr(0))
+        c2 = F2_.get(j, Fr(0))
+        okB2 &= (c2 == c1 * lam ** (Qh - j))
+check("B2 (round 9, de-tautologized): root-scaling a_i -> 2 a_i "
+      "multiplies the x^j coefficient of F by 2^(Qhat-j) on split and "
+      "mixed-mult schemas -- the x^j equation IS homogeneous of degree "
+      "Qhat - j, so projective Bezout on degrees 1..Qhat-1 gives "
+      "(Qhat-1)!", okB2)
 
 print("== C. Z-Omega / Qhat = 1 regression ==")
 okC = True
@@ -494,14 +508,17 @@ okH2 &= all(self_refused(Fr(6 * nu + 3, 2 * (4 * nu + 1)))
 okH2 &= all(((4 * nu + 1) // gcd(4 * nu + 1, 3)) % 2 == 1
             and (4 * nu + 1) // gcd(4 * nu + 1, 3) >= 3
             for nu in range(2, 201))
-check("H2 SELF-REFUSAL of every in-window object under the 11-C caps "
-      "{1,2} over the full register lattice: gaps 7/10 (den 10, "
-      "5-part), 5/4 (den 4), and the cylinder family (6nu+3)/(2(4nu+1)) "
-      "(odd factor (4nu+1)/gcd(.,3) >= 3 in the denominator, "
-      "nu-lattice 2..200 + the odd-factor law) -- the merged vertex "
-      "dies FIRST (its gap exceeds every gap(X) <= 2/3) and its own "
-      "death step is CAP-DEN-refused: the row dies at the merged "
-      "vertex", okH2)
+check("H2 SELF-REFUSAL (round-9 attribution: the GENERAL den-criterion "
+      "k = den(alpha - 1 + g) of the Z1 death equation at the "
+      "own-exponent cap k | i_G = 2 -- NOT Lemma CAP-DEN, whose "
+      "nu | c^2 closure is X-family-specific; for the two B-zero "
+      "objects X is additionally alive, so Prop 4.2(iii) gives the "
+      "same cap independently): gaps 7/10 (den 5-part), 5/4 (den 4), "
+      "and the cylinder family (6nu+3)/(2(4nu+1)) (odd factor "
+      "(4nu+1)/gcd(.,3) >= 3; nu-lattice 2..200 + the odd-factor "
+      "law) all refuse over the full register lattice -- the merged "
+      "vertex dies first and its own death step is den-refused",
+      okH2)
 
 
 def window_out(kb, dp, imin):
@@ -548,14 +565,25 @@ check("H3 THE 67 STAMPS (deterministic re-enumeration): "
       stamps == {'DEAD-SELFREF': 15, 'DEAD-WINDOWED': 21,
                  'DEAD-UNREAL': 31, 'LIVE': 0, 'DEFER': 0}
       and sum(stamps.values()) == 67)
-check("H4 honesty riders (unchanged perimeter, restated): nu=1 inner "
-      "eta-modes are NF-P's (no row is stamped against them -- the "
-      "stamp is DEAD-AT-TIER(nu>=2)); merged-chart descendant strata "
-      "and current-state arrivals stay in the standing perimeter "
-      "clauses; the (A,B) schemas are conditional on the B-arrival "
-      "handshake realizing nu_e in {3,4} -- if the refile realizes "
-      "neither, those rows are DEAD-UNREALIZABLE instead (dead either "
-      "way)", True and len(AB_MENU) == 2)
+check("H3b HONEST RESTATE (block2 review findings 7/9, BEFORE the "
+      "repair): the 21 'windowed-out' stamps were NOT death "
+      "certificates (all (B,B) inners -- an inner vertex below 1/2 "
+      "SURVIVES to arrive at the unanalyzed outer merge), and the 3 "
+      "BB2 M=1 rows hide discrete (11,7) alternatives at gap 7/22 "
+      "(disjunction error) -- honest pre-repair count: 43 solid "
+      "(31 unrealizable + 12 AB self-refused), 24 reopened; block I "
+      "repairs the 24 by the outer-merge analysis",
+      31 + 12 == 43 and 21 + 3 == 24)
+# H4 (round 9, de-tautologized): boundary emptiness of the AB menu --
+# nu_e in [5,8] and x in [8,11] produce no further schemas
+_ab_hi = [se for se in menu_AB() if 'nu_e=5' in se['prov']
+          or 'nu_e=6' in se['prov'] or 'nu_e=7' in se['prov']
+          or 'nu_e=8' in se['prov'] or se['x'] >= 8]
+check("H4 riders + boundary emptiness: the AB menu is complete at 2 "
+      "(no schema at nu_e in [5,8] or x >= 8 -- caps non-binding); "
+      "nu=1 inner eta-modes stay NF-P's; the (A,B) schemas are "
+      "conditional on the handshake realizing nu_e in {3,4} (dead "
+      "either way)", len(AB_MENU) == 2 and _ab_hi == [])
 
 print()
 if FAIL:

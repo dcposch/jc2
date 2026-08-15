@@ -482,3 +482,9 @@
 - WRITING: paper-2 Part I + abstract (GATED on screen verdict); A-prime note; paper-1 v3 HELD for GGV
 - PERIODIC: accel+lateral scan w/ Sol (~6h; last 19:06); fleet cost sweep; GGV inbox check
 - GATED ON DC: anything external; msolve upstream report (HOLD)
+- 2026-08-14 ~20:15: LEAF a3 CONFIRMED EMPTY AT TWO PRIMES (GB [1] at p105337 instant +
+  p200257 confirm). Chamber map: 13 pre-dead (theorems) + a3 double-EMPTY; remaining =
+  b1,b2,b3,a1,a2,a0 (6 lanes running, new-style). If all leaves empty at 2 primes =>
+  partition => full nolog system EMPTY mod p => residue-A screening-tier death =>
+  char-0 certification run => on-axis td=6 closes. Watch for a1/a2 next (similar
+  size class to a3).
