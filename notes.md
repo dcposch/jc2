@@ -475,10 +475,10 @@
   cert (unknown degree). Parallel: td-11 OPEN-residue (NF-Z-dagger) + td-13 13-2b recon.
 
 ## STANDING QUEUE (loop reads this; keep current)
-- ACTIVE SOLVER: Box02 x14 lanes (4 R2 mains, 2 order-portfolio, 8 leaves; caps staggered 24-29h)
-- ACTIVE THEORY: NF-M (tower agent), td-13 recon (Sol)
-- NEXT THEORY: NF-P slice, beyond-core closures, general-dagger gap, td-13 program
-- NEXT SOLVER: stuck7 big cores -> Box03 (provisioning), l12 3-chart post-drain
-- WRITING: paper-2 Part I + abstract (GATED on screen verdict); A-prime note (2-3d, nonblocking); paper-1 v3 HELD for GGV reply
-- PERIODIC: acceleration+lateral scan w/ Sol second opinion (~6h); fleet cost sweep (stop idle boxes); ultramem sat23 health check (30h+ on one prime — triage next tick)
-- GATED ON DC: sending anything external; msolve upstream bug report (ops/msolve-issue-draft.md HOLD)
+- ACTIVE SOLVER: Box02 (4 R2 mains + 2 order-portfolio + a0/a0-ctl0; leaves2 re-emission in flight); Box03 (c2.q SOLO per Sol concurrency warning; 2 REDs re-queue after); box01 farm; ultramem sat23 (ON SECOND PRIME p105673 — CHECK p105337 OUTCOME next tick)
+- ACTIVE THEORY: block2 errata repair (24 rows reopened: 21 outer-merge via NF-M + 3 discrete alternatives; tower agent); leaves2 hierarchical tau-orbit re-emission (window agent)
+- NEXT THEORY: NF-P slice; beyond-core; td-13 program NEEDS NEW MATH (13B-SAFE-SUFFIX conjecture + MAX/SIM-X lemma per recon — scope a lane); general-dagger gap
+- NEXT SOLVER (UNHOLD per Sol): reduced mixed-volume homotopy pilot; Macaulay targeted sidecar; l12 3-chart post-drain
+- WRITING: paper-2 Part I + abstract (GATED on screen verdict); A-prime note; paper-1 v3 HELD for GGV
+- PERIODIC: accel+lateral scan w/ Sol (~6h; last 19:06); fleet cost sweep; GGV inbox check
+- GATED ON DC: anything external; msolve upstream report (HOLD)
