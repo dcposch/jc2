@@ -473,3 +473,12 @@
   emission tasked to window agent (the §6.V strata evidence says zero-heavy leaves
   collapse); (c) held: more primes (correlated), HC (start-system explosion), Macaulay
   cert (unknown degree). Parallel: td-11 OPEN-residue (NF-Z-dagger) + td-13 13-2b recon.
+
+## STANDING QUEUE (loop reads this; keep current)
+- ACTIVE SOLVER: Box02 x14 lanes (4 R2 mains, 2 order-portfolio, 8 leaves; caps staggered 24-29h)
+- ACTIVE THEORY: NF-M (tower agent), td-13 recon (Sol)
+- NEXT THEORY: NF-P slice, beyond-core closures, general-dagger gap, td-13 program
+- NEXT SOLVER: stuck7 big cores -> Box03 (provisioning), l12 3-chart post-drain
+- WRITING: paper-2 Part I + abstract (GATED on screen verdict); A-prime note (2-3d, nonblocking); paper-1 v3 HELD for GGV reply
+- PERIODIC: acceleration+lateral scan w/ Sol second opinion (~6h); fleet cost sweep (stop idle boxes); ultramem sat23 health check (30h+ on one prime — triage next tick)
+- GATED ON DC: sending anything external; msolve upstream bug report (ops/msolve-issue-draft.md HOLD)
