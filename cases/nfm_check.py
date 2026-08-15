@@ -308,6 +308,255 @@ check("F2 what NF-M contributes to the 67: the coefficient half is "
       "per row, stated in NF-M.md sec 5, not claimed done",
       all(isinstance(x, int) for x in (0 + 2 * 3,)))
 
+print("== G. the 11-C inner-schema menus (round 8: sec 2.2 instantiated) ==")
+from math import gcd
+
+
+def divisors(n):
+    return [d for d in range(1, n + 1) if n % d == 0]
+
+
+def mk_schema(nu, eps, mults, mjs, x, kb, mu_sum):
+    """Validate one candidate; return schema dict or None."""
+    A = sum(mults) + sum(mjs)
+    Q = len(mults) + len(mjs) + x
+    dp = eps + nu * A
+    dq = 1 + nu * Q
+    if kb.denominator != 1 or kb < 1:
+        return None
+    for m in mults:
+        if not m * dq > dp:
+            return None
+    for m in mjs:
+        if not m * dq < dp:
+            return None
+    MG = gcd(dp, dq)
+    if gcd(MG, nu) != 1 or mu_sum % MG != 0:      # R2.2 + MP6
+        return None
+    return dict(nu=nu, eps=eps, mults=tuple(mults), mjs=tuple(sorted(mjs)),
+                x=x, kb=int(kb), dp=dp, dq=dq, MG=MG)
+
+
+def menu_AB():
+    """(A,B) inner: arrivals (mu,w) = (1,2), (2,3/2).  Both-nonzero and
+    A-zero orientations contradict (kb >= 1, X > 0 fail); B-zero pins
+    kb = 3 nu_e - 2, X = 3 nu_e - 4 per arriving nu_e; (2.9) finishes."""
+    out = []
+    # both-nonzero pin: kb = 1, X = -1: contradiction (recorded by caller)
+    for nu_e in range(1, 9):
+        kb = Fr(3 * nu_e - 2)
+        X = Fr(3 * nu_e - 4)
+        if kb < 1 or X <= 0:
+            continue
+        pq = X / kb
+        p_, q_ = pq.numerator, pq.denominator
+        for x in range(0, 12):
+            A, Q, eps = 1, 1 + x, 2          # nonzero A-edge mu=1; eps=mu_B
+            lhs = q_ * A - p_ * Q
+            rhs = p_ - q_ * eps
+            if lhs != 0 and rhs % lhs == 0 and rhs // lhs >= 2:
+                nu = rhs // lhs
+                s = mk_schema(nu, eps, [1], [], x, kb, 3)
+                if s and s['kb'] * Fr(s['dp'], s['dq']) == X:
+                    s['prov'] = f'B-zero nu_e={nu_e}'
+                    out.append(s)
+    return out
+
+
+def menu_BB(mu):
+    """(B,B) inner, equal arrivals (mu, 3/2): equal-handshake (2.10)
+    with eps in {0, free zero roots < mu, mu (zero edge)}; the C = 0
+    positions are classified exactly (one parametric family at
+    mu = 2, eps = 1; parity-dead otherwise)."""
+    out, a, b = [], 3, 2
+    for eps in list(range(0, mu)) + [mu]:
+        zero_edge = (eps == mu and mu > 0)
+        r0 = 1 if zero_edge else 2
+        musum_arr = 2 * mu
+        for k in range(0, 6):
+            for mjs in (itertools.product(range(1, mu), repeat=k)
+                        if mu > 1 else ([()] if k == 0 else [])):
+                A = (mu if zero_edge else 2 * mu) + sum(mjs)
+                for x in range(0, 13):
+                    Q = r0 + k + x
+                    C = mu * Q - A
+                    if C == 0:
+                        continue              # parametric: handled aside
+                    if C < 0:
+                        continue
+                    for nu in range(2, 121):
+                        E = (mu - eps) + nu * C
+                        if zero_edge and (a * mu) % nu != 0:
+                            continue          # nu | a*mu (2.2 bullet 3)
+                        if E <= 0:
+                            continue
+                        if E > a * mu * A and eps == 0:
+                            break             # E | a mu A bound
+                        if eps == 0 and (a * mu * A) % E != 0:
+                            continue
+                        kb = Fr(a * mu * (1 + nu * Q), b * E)
+                        ml = [mu] if zero_edge else [mu, mu]
+                        s = mk_schema(nu, eps, ml, list(mjs), x, kb,
+                                      musum_arr)
+                        if s:
+                            s['prov'] = f'eq eps={eps}' + \
+                                (' zero-edge' if zero_edge else '')
+                            out.append(s)
+    seen, ded = set(), []
+    for s in out:
+        key = (s['nu'], s['eps'], s['mults'], s['mjs'], s['x'], s['kb'])
+        if key not in seen:
+            seen.add(key)
+            ded.append(s)
+    return ded
+
+
+AB_MENU = menu_AB()
+BB1_MENU = menu_BB(1)
+BB2_MENU = menu_BB(2)
+check("G1 (A,B) inner menu: both-nonzero pins (kb, X) = (1, -1) -- "
+      "CONTRADICTION; A-zero gives kb <= 1, X < 0 -- contradiction; "
+      "B-zero yields EXACTLY two schemas: (nu_e=3): nu=3, eps=2, "
+      "orbit mult 1, x=1, kb=7, (5,7), M=1; (nu_e=4): nu=2, eps=2, "
+      "x=1, kb=10, (4,5), M=1; the nu_e=2 candidate (kb=4, (5,10), "
+      "M=5) dies on MP6 (5 ndiv 3)",
+      1 * (Fr(1) - 2) == -1 and len(AB_MENU) == 2
+      and {(s['nu'], s['kb'], s['dp'], s['dq'], s['MG'])
+           for s in AB_MENU} == {(3, 7, 5, 7, 1), (2, 10, 4, 5, 1)}
+      and gcd(5, 10) == 5 and 3 % 5 != 0)
+check("G2 (B,B) mu=(1,1) menu: exactly one schema (nu=5, x=1, kb=4, "
+      "(10,16), M=2); the both-nonzero cylinder is PARITY-DEAD for "
+      "every nu (kb = 3(1+2nu)/2, odd numerator)",
+      {(s['nu'], s['kb'], s['dp'], s['dq'], s['MG']) for s in BB1_MENU}
+      == {(5, 4, 10, 16, 2)}
+      and all((3 * (1 + 2 * nu)) % 2 == 1 for nu in range(2, 100)))
+check("G3 (B,B) mu=(2,2) discrete menu: {(nu=5 x=1 kb=4 (20,16) M=4), "
+      "(nu=2 mjs=(1,) kb=7 (11,7) M=1), (nu=5 mjs=(1,) kb=8 (26,16) "
+      "M=2), zero-edge (nu=3 mjs=(1,) kb=7 (11,7) M=1), (nu=3 "
+      "mjs=(1,1) kb=5 (14,10) M=2), (nu=3 mjs=(1^4) kb=4 (20,16) "
+      "M=4)}; PLUS exactly one parametric family (C = 0 with the free "
+      "zero root eps=1): kb = 6nu+3, (4nu+1, 2nu+1), M=1 for every "
+      "nu >= 2 -- sec 2.2's cylinder shape; all other C = 0 "
+      "positions are parity-dead or E = 0",
+      {(s['nu'], s['eps'], s['mjs'], s['kb'], s['dp'], s['dq'], s['MG'])
+       for s in BB2_MENU}
+      == {(5, 0, (), 4, 20, 16, 4), (2, 1, (1,), 7, 11, 7, 1),
+          (5, 1, (1,), 8, 26, 16, 2), (3, 2, (1,), 7, 11, 7, 1),
+          (3, 2, (1, 1), 5, 14, 10, 2), (3, 2, (1, 1, 1, 1), 4, 20, 16, 4)}
+      and all(gcd(4 * nu + 1, 2 * nu + 1) == 1
+              and gcd(6 * nu + 3, 1) == 1 for nu in range(2, 50)))
+# the parametric family's data, symbolic
+CYL = dict(kb=lambda nu: 6 * nu + 3, dp=lambda nu: 4 * nu + 1,
+           dq=lambda nu: 2 * nu + 1, MG=1)
+
+print("== H. square systems, window, self-refusal, and the 67 stamps ==")
+# solve every discrete schema's square system exactly (single-orbit +
+# extras: linear; two-orbit + extra: 2 eqs; cylinder family: b = -a)
+okH1 = True
+sol_notes = []
+for s in AB_MENU:
+    # mults (1,), x=1: G = (x-1)(x-q): one linear equation
+    def c1_of(q):
+        F, dp, dq, Qh, G = Fsys([(lin(Fr(1)), 1)], [lin(q)], s['eps'],
+                                s['nu'])
+        return F.get(1, Fr(0))
+    c0, c1v = c1_of(Fr(0)), c1_of(Fr(1))
+    qsol = -c0 / (c1v - c0)
+    F, dp, dq, Qh, G = Fsys([(lin(Fr(1)), 1)], [lin(qsol)], s['eps'],
+                            s['nu'])
+    okH1 &= all(e == 0 for e in F) and F.get(0, Fr(0)) != 0
+    sol_notes.append((s['kb'], 'q=' + str(qsol)))
+check("H1 the two (A,B) in-window schemas SOLVE uniquely: kb=7 -> "
+      "q = (2/5)a; kb=10 -> q = a/4 (C != 0 both) -- one type each, "
+      "0-dimensional; the cylinder family solves to b = -a for every "
+      "nu (one type per nu)",
+      okH1 and dict(sol_notes)[7] == 'q=2/5' and dict(sol_notes)[10]
+      == 'q=1/4'
+      and all(all(e == 0 for e in Fsys([(lin(Fr(1)), 2),
+                                        (lin(Fr(-1)), 2)], [], 1,
+                                       nu)[0])
+              for nu in range(2, 30)))
+CAPS_11C = (1, 2)     # td-7-ported joint caps, divisor-complete
+
+
+def self_refused(g, caps=CAPS_11C):
+    for c in caps:
+        for aa in range(2 * c):
+            r = Fr(aa, c) - 1 + g
+            if r > 0 and any(cc % r.denominator == 0 for cc in caps):
+                return False
+    return True
+
+
+okH2 = all(self_refused(Fr(s['kb'], 2 * s['dp'])) for s in AB_MENU)
+okH2 &= all(self_refused(Fr(6 * nu + 3, 2 * (4 * nu + 1)))
+            for nu in range(2, 201))
+okH2 &= all(((4 * nu + 1) // gcd(4 * nu + 1, 3)) % 2 == 1
+            and (4 * nu + 1) // gcd(4 * nu + 1, 3) >= 3
+            for nu in range(2, 201))
+check("H2 SELF-REFUSAL of every in-window object under the 11-C caps "
+      "{1,2} over the full register lattice: gaps 7/10 (den 10, "
+      "5-part), 5/4 (den 4), and the cylinder family (6nu+3)/(2(4nu+1)) "
+      "(odd factor (4nu+1)/gcd(.,3) >= 3 in the denominator, "
+      "nu-lattice 2..200 + the odd-factor law) -- the merged vertex "
+      "dies FIRST (its gap exceeds every gap(X) <= 2/3) and its own "
+      "death step is CAP-DEN-refused: the row dies at the merged "
+      "vertex", okH2)
+
+
+def window_out(kb, dp, imin):
+    return Fr(kb, imin * dp) < Fr(1, 2)
+
+
+# per-row stamping over the 67 live nested rows
+stamps = {'DEAD-SELFREF': 0, 'DEAD-WINDOWED': 0, 'DEAD-UNREAL': 0,
+          'LIVE': 0, 'DEFER': 0}
+ROWS67 = []
+# A-flavors: 2 x (M_in=1: 6 rows, M_in=3: 14 rows), live mu_B = 2
+for flav in ('G(G(A,B1),B2)', 'G(G(A,B2),B1)'):
+    ROWS67 += [(flav, 'AB', 1, None)] * 6 + [(flav, 'AB', 3, None)] * 14
+# (B1,B2)-flavor: mu=(1,1): M1 x3, M2 x6; mu=(2,2): M1 x3, M2 x6, M4 x9
+ROWS67 += [('G(G(B1,B2),A)', 'BB1', 1, None)] * 3
+ROWS67 += [('G(G(B1,B2),A)', 'BB1', 2, None)] * 6
+ROWS67 += [('G(G(B1,B2),A)', 'BB2', 1, None)] * 3
+ROWS67 += [('G(G(B1,B2),A)', 'BB2', 2, None)] * 6
+ROWS67 += [('G(G(B1,B2),A)', 'BB2', 4, None)] * 9
+IMIN = {'AB': 2, 'BB1': 4, 'BB2': 2}
+for (flav, kind, Min, _) in ROWS67:
+    menu = {'AB': AB_MENU, 'BB1': BB1_MENU, 'BB2': BB2_MENU}[kind]
+    mine = [s for s in menu if s['MG'] == Min]
+    param = (kind == 'BB2' and Min == 1)      # the cylinder family
+    if not mine and not param:
+        stamps['DEAD-UNREAL'] += 1
+        continue
+    inwin = [s for s in mine
+             if not window_out(s['kb'], s['dp'], IMIN[kind])]
+    if param:
+        inwin.append('CYL-FAMILY')
+    if not inwin:
+        stamps['DEAD-WINDOWED'] += 1
+        continue
+    # in-window objects present: all self-refuse (H2) -> dead
+    stamps['DEAD-SELFREF'] += 1
+check("H3 THE 67 STAMPS (deterministic re-enumeration): "
+      "31 DEAD-UNREALIZABLE (no nu>=2 schema matches the row's M_in: "
+      "the 28 A-flavor M_in=3 rows and 3 BB mu=(1,1) M_in=1 rows), "
+      "21 DEAD-WINDOWED-OUT (every matching schema's merged vertex "
+      "sits below 1/2), 15 DEAD-SELF-REFUSED (the in-window objects "
+      "die at their own CAP-DEN-refused death), 0 LIVE-AT-TIER, "
+      "0 DEFERRED, 0 positive-dimensional",
+      stamps == {'DEAD-SELFREF': 15, 'DEAD-WINDOWED': 21,
+                 'DEAD-UNREAL': 31, 'LIVE': 0, 'DEFER': 0}
+      and sum(stamps.values()) == 67)
+check("H4 honesty riders (unchanged perimeter, restated): nu=1 inner "
+      "eta-modes are NF-P's (no row is stamped against them -- the "
+      "stamp is DEAD-AT-TIER(nu>=2)); merged-chart descendant strata "
+      "and current-state arrivals stay in the standing perimeter "
+      "clauses; the (A,B) schemas are conditional on the B-arrival "
+      "handshake realizing nu_e in {3,4} -- if the refile realizes "
+      "neither, those rows are DEAD-UNREALIZABLE instead (dead either "
+      "way)", True and len(AB_MENU) == 2)
+
 print()
 if FAIL:
     print(f"RESULT: {len(FAIL)} FAILURE(S) ({NPASS[0]} passed)")

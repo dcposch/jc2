@@ -666,13 +666,14 @@ charts).
 | item | round-5 status | round-6 status |
 |---|---|---|
 | two-word deep families (`Pi = 5^k`, both tails deep) | OPEN (NF-Z† hold) | **CLOSED — dead at X (§15, DG5)** |
-| 129 nested 11-C rows | OPEN | **62 SPINE-DEAD (inner-H8, §16); 67 OPEN** — round 7: NF-M's coefficient half is now PROVED (NF-M.md: square-system types per inner schema, `(Q̂−1)!` bound; conservative outer-`v_2` screen stamps 0), so the blocker is localized to the finite per-row inner-schema enumeration with exact emitted valuations + the merge-vertex window (engine tier) |
+| 129 nested 11-C rows | OPEN | **CLOSED-AT-TIER (round 8): 62 SPINE-DEAD (inner-H8, §16) + 67 stamped by the executed NF-M enumeration (NF-M.md §5: 31 unrealizable, 21 windowed-out, 15 in-window-but-SELF-REFUSED — the three in-window merged emissions incl. §2.2's parametric cylinder all die at their own CAP-DEN-refused death). Riders: `ν = 1` inner modes (NF-P), merged-chart descendant strata, current-state arrivals, `ν_e ∈ {3,4}` handshake conditionality (dead either way) |
 | beyond-core budget-9 region | OPEN | OPEN — §13.0 paths unchanged; NOT sufficient for the 67 nested rows |
 | cap-free closures `(3/2,2)@9`, `(4/3,3)@9` | OPEN | OPEN (compiler-tier) |
 | `ν = 1` insertions, resonance-bearing chains | NF-P | NF-P (unchanged) |
 | Q+E5/E5F refile | UNKNOWN | UNKNOWN (unchanged) |
 | general NF-Z† algorithm | — | OPEN (definition gap flagged in NF-Z.md §6; the td-11 DIE-horn instantiation does not repair it) |
 
-Remaining genuinely-OPEN td-11 items: **five** (67 nested rows,
-beyond-core region, cap-free closures, NF-P slice, refile) plus the
-general-dagger definition gap, which is cross-rung.
+Remaining genuinely-OPEN td-11 items after round 8: **four**
+(beyond-core region, cap-free closures, NF-P slice incl. the nested
+rows' `ν = 1` rider, refile) plus the general-dagger definition gap,
+which is cross-rung. The 129 nested rows are CLOSED-AT-TIER.

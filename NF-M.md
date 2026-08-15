@@ -1,6 +1,8 @@
 # NF-M.md — multi-orbit coefficient locality: the square-system classification
 
-Status: **REDUCED-WITH-PROVED-CORE (2026-08-14, round 1).** For every
+Status: **REDUCED-WITH-PROVED-CORE; round 2 executes the 67-row
+enumeration — all 67 nested 11-C rows DEAD-AT-TIER (§5)
+(2026-08-14).** For every
 fixed `ν >= 2` discrete merge schema (finite per entry/budget by
 `sol-normalform.md` §2.2), the Prop. 8.1(iv) coefficient equation
 reduces to an explicitly computable **square polynomial system** —
@@ -21,7 +23,7 @@ permutation × scaling is the certificate:
 
 Excluded, as `sol-normalform.md` §2.2 itself assigns them: the
 `ν = 1` case-I η-modes (NF-P). Machine gate: `cases/nfm_check.py`
-(11 checks, exit 0; count printed). Sources: `sol-gluing-design.md`
+(18 checks, exit 0; count printed). Sources: `sol-gluing-design.md`
 §1.3 (L1–L9), `sol-normalform.md` §§2.2/3, `cases/tower_check.py`
 `t1_local` machinery, `cases/towers/t9_15_direct.json` `t1_local`
 rows, Lemma Z-Omega (NF-Z.md). No git commit.
@@ -146,21 +148,59 @@ below the bound: every td-7 certificate row has EXACTLY ONE type.
   SINGLE parametric type (0-dimensional modulo scaling), exactly
   §2.2's surviving `C = 0` shape.
 
-## 5. The 67 nested 11-C rows (validation run, machine block F)
+## 5. The 67 nested 11-C rows — EXECUTED (round 8, machine blocks
+F–H)
 
-What NF-M adds: the merged emission's COEFFICIENT half is now typed
-(finitely many types per inner schema), and (2.7) gives the emitted
-local degree `d_p = ε + νA` per schema. What still blocks stamping:
-the outer-H8 valuation test needs the exact `v_2` of the inner
-chart's full-pattern transport, which varies with the inner schema;
-run conservatively (that valuation treated as FREE `>= 0`), the
-outer equation `v_2(P_in/μ_in) = v_2(P_A)` is satisfiable for every
-live row — **0 additional rows stamped**. The precise remaining
-blocker for the 67 is now LOCALIZED: enumerate the finite `ν >= 2`
-inner-schema menu per row (§2.2 + budget), compute each schema's
-exact emitted valuation and its NF-M types, and re-run the outer
-test per (row × schema × type); plus the merge-vertex window audit
-(engine tier). Both are finite; neither is done here.
+Block F's conservative screen (0 stamps, valuation-free) is
+superseded by the full per-row enumeration:
+
+**The inner-schema menus (block G).** §2.2 instantiated at the rows'
+decorations, all cases (both-nonzero / one-zero orientations ×
+`ν_e`, equal-handshake with `ε ∈ {0, free zero roots, μ}`, NE
+extras, q-extras), with the R2.2/L7 shape laws and MP6
+(`M_G | Σμ_e`) as filters:
+
+* `(A,B)` inner (`μ = (1,2)`, `w = (2, 3/2)`): both-nonzero PINS
+  `(κ̄, X) = (1, −1)` — contradiction; A-zero likewise; B-zero
+  yields EXACTLY two schemas — `ν_e = 3`: `(ν, ε, x) = (3, 2, 1)`,
+  `κ̄ = 7`, `(d_p, d_q) = (5, 7)`, `M = 1`, merged-vertex gap
+  **`7/10`, IN-WINDOW**; `ν_e = 4`: `(2, 2, 1)`, `κ̄ = 10`,
+  `(4, 5)`, `M = 1`, gap **`5/4`, IN-WINDOW**. (The `ν_e = 2`
+  candidate dies on MP6: `M = 5 ∤ 3`.)
+* `(B,B)` `μ = (1,1)`: one schema (`ν = 5`, `(10,16)`, `M = 2`,
+  gap `1/10` — out); the cylinder is parity-dead
+  (`κ̄ = 3(1+2ν)/2 ∉ Z`).
+* `(B,B)` `μ = (2,2)`: six discrete schemas (all windowed out,
+  incl. the familiar `(20,16)` at `κ̄ = 4`) **plus exactly one
+  parametric family** — §2.2's cylinder-with-free-zero-root
+  (`ε = 1`, `C = 0`): `κ̄ = 6ν+3`, `(4ν+1, 2ν+1)`, `M = 1`, type
+  `b = −a`, merged-vertex gap `(6ν+3)/(2(4ν+1)) ∈ (3/4, 5/6]` —
+  **IN-WINDOW for every `ν >= 2`**.
+
+**The interesting objects and their death (blocks H1–H2).** All
+three in-window emissions have solvable, uniquely-typed square
+systems (`q = (2/5)a`, `q = a/4`, `b = −a`) — genuine merged charts
+whose vertex gap exceeds every 11-C `gap(X) <= 2/3`, so they die
+FIRST. And their own death step is **CAP-DEN-refused**: over the
+full register lattice and the divisor-complete 11-C caps `{1, 2}`,
+`den(α − 1 + gap)` carries a factor `∤ 2` (the `5`-part of `7/10`;
+the `4` of `5/4`; the odd factor `(4ν+1)/gcd(4ν+1,3) >= 3` for the
+cylinder family — `ν`-lattice to 200 plus the odd-factor law). The
+window intruders self-refuse; the kill fires at the merged vertex.
+
+**The stamps (block H3).** All 67 rows DEAD-AT-TIER(`ν >= 2`):
+**31 DEAD-UNREALIZABLE** (no schema matches the row's `M_in`: the
+28 A-flavor `M_in = 3` rows, 3 `(B,B)` `μ=(1,1)` `M_in = 1` rows),
+**21 DEAD-WINDOWED-OUT**, **15 DEAD-SELF-REFUSED** (the rows
+carrying the in-window objects). 0 LIVE-AT-TIER, 0 DEFERRED, 0
+positive-dimensional components (OB1 never fires here).
+
+**Riders (block H4):** `ν = 1` inner η-modes remain NF-P's (the
+stamp is `ν >= 2`-scoped); merged-chart descendant strata and
+current-state arrivals stay in the standing perimeter; the `(A,B)`
+schemas are conditional on the B-arrival handshake realizing
+`ν_e ∈ {3, 4}` — if the refile realizes neither, those rows are
+DEAD-UNREALIZABLE instead. Dead either way.
 
 ## 6. Perimeter
 
@@ -182,7 +222,7 @@ test per (row × schema × type); plus the merge-vertex window audit
 ## 7. Reproduction
 
 ```bash
-python3 cases/nfm_check.py     # 11 checks, exit 0 (count printed)
+python3 cases/nfm_check.py     # 18 checks, exit 0 (count printed)
 ```
 
 Blocks: A the M2 reduction vs direct (L3) on all certificate rows +
@@ -191,5 +231,8 @@ the full (ε, ν, mults, blocks, extras) lattice + the square count;
 C the Z-Omega/`Q̂ = 1` regressions; D the td-7 rows — exact `C`
 match, unique-ratio solves for `Q̂ = 2` (2/3 and 3/2 recovered by
 solving, not assuming), the F1 block row, type counts vs `(Q̂−1)!`;
-E the cylinder degeneration; F the 67-row conservative outer-`v_2`
-screen (0 stamps; blocker localized). No git commit.
+E the cylinder degeneration; F the round-1 conservative outer-`v_2`
+screen (historical); G the inner-schema menus (contradiction pins,
+MP6 rejections, the exactly-one parametric family); H the square
+solves, the self-refusal law, the 67 deterministic stamps
+(31/21/15), and the riders. No git commit.
