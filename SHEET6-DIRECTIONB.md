@@ -818,6 +818,33 @@ final line "ALL NOLOG SCREENS DONE"). Verdict semantics unchanged
 escape alone (Sol's own expectation; the 6 rows remain banked
 permanently either way — they are exact and free).
 
+## 7.S THE SCREEN CAMPAIGN RECORD (final, 2026-08-16)
+
+The residual-32 nolog system (84 vars after the six §7 pins; 85 eqs
+main / 91 pinned variant) resisted every Groebner instrument fielded:
+
+  R1 (12 h caps, -t 4):  6 nolog lanes TIMEOUT; ctl0 TIMEOUT.
+  R2 (48 h caps, -t 24): 3 main-prime lanes TIMEOUT; -e 45
+      elimination probe TIMEOUT (all rc=124, 0-byte outs — per R6
+      hygiene these are TIMEOUTS, not verdicts).
+  Order portfolio (29 h): reversed + seeded-shuffle orderings both
+      TIMEOUT — hardness is order-robust.
+  Chamber map v1 (broad leaves, 120 G fences): a3-analogue EMPTY
+      instantly; rest fence-killed.
+  Chamber map v2 (hierarchical tau-orbit partition, Sol design,
+      exact sizes verified): leaf a3 EMPTY at p105337 AND p200257
+      (the only computed chamber verdict; banked); a1/a2/a0/b1 hit
+      120 G fences in <2 h each; b2/b3 TIMEOUT at 24 h caps.
+  Fleet total: ~300 lane-hours of F4 at up to 1.9 TB aggregate RSS.
+
+HONEST READING: the system is compute-hard for msolve F4 at 2 TB
+scale in every configuration tried; hardness is spread across the
+support chambers (not concentrated), order-robust, and unaffected
+by the -e elimination hint at these caps. The a3 chamber (tg0_40-
+loaded, all other even lows zero) is EMPTY at two primes. No
+NONEMPTY witness anywhere. Next-instrument decision: §7.S1 below
+(the 2026-08-16 scan).
+
 ## 8. The depth-23 window (rows 21/22): decision analysis
 
 [2026-08-13. Build: directionb_strike.py tails 23 (5587.2s, exact,
