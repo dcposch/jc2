@@ -109,3 +109,9 @@ logs and cross-check writeup in any case.
 
 Best,
 Dan Clemens Posch
+
+# SEND LOG
+- 2026-08-11: GGV original (Valqui, JA+JJ Guccione) + paper v2
+- 2026-08-14: GGV follow-up (thread; theorem-upgrade note)
+- 2026-08-16: Horruitiner CC'd into thread (rmh322@cornell.edu) + v3 attached
+- 2026-08-16: Helali (hello@lumelia.io) + v3; Suzuki forward requested
