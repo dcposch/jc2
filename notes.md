@@ -530,3 +530,6 @@
   stale-snapshot race) — now VERIFIED running on box01 (import OK, proc confirmed,
   log streaming). Ops lesson compounding: remote lanes need dep-manifest + import
   smoke test in the launch script itself.
+- 2026-08-16 00:05: Order-portfolio lanes BOTH capped out (29h, rc=124) — the ordering
+  lottery LOST (neither reordering beat standard; GB hardness is order-robust here).
+  FC1 audit healthy (300 pops/187 states/956s, growing BFS). 4 lanes to caps ~03:45.
