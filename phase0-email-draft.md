@@ -68,3 +68,37 @@ Dan Clemens Posch
 ## Notes
 - Superseded the longer 08-13 draft per DC (<=3 sentences, colloquial).
 - Endorsement ask still deferred. Attach the v2 PDF (paper1/main.pdf).
+
+---
+
+# Horruitiner CC line (pbcopy'd 2026-08-16; DC pastes when adding him to the GGV thread)
+
+CC Rodrigo Horruitiner, who I should have included from the start as a
+coauthor of arXiv:2204.14178. Rodrigo: the note below settles the (8,28)
+strip subcase of Proposition 4.3 (machine-verified, conditional on the
+Proposition; v2 attached upthread), and I would value your read on
+whether the polygon data matches what you intended.
+
+# Helali / Suzuki draft (2026-08-16; DC review before send; emails from
+# their artifact repos)
+
+To: [Helali], [Suzuki]
+Subject: Coordinated note on closing the degree pair below 125?
+
+Dear Dr. Helali and Dr. Suzuki,
+
+I have been working on the (72,108) degree pair for the plane Jacobian
+Conjecture. My note (attached) settles subcase (2) of Proposition 4.3
+of arXiv:2204.14178, the (8,28) strip family, with all claims machine-
+verified in exact arithmetic. In the process I replayed both of your
+subcase (1) artifacts in full: both reproduce exactly, and the three
+computations agree everywhere they overlap.
+
+Since your exclusions and mine together appear to close the last pair
+below degree 125, I wonder if you would be interested in a short
+coordinated note recording the combined result, with the three
+verifications credited to their authors. Happy to share my replay
+logs and cross-check writeup in any case.
+
+Best,
+Dan Clemens Posch
