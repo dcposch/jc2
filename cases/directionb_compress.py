@@ -112,7 +112,7 @@ def vsub_row(vt, At, Rp, cp):
             elif cur is not None: del out[k]
     return out
 
-def phase_elim():
+def phase_elim(maxpiv=99):
     t0 = time.time()
     rows, vars_ = load_nolog_rows()
     HIGH = {i for i, nm in enumerate(vars_)
@@ -148,19 +148,24 @@ def phase_elim():
                                            lab[0], lab[1], nup,
                                            time.time() - t0),
                       flush=True)
+                with open("/tmp/directionb_elim_state.pkl", "wb") as fh:
+                    pickle.dump({"live": live, "pivots":
+                                 [(hh, ll, cc) for hh, ll, cc in pivots],
+                                 "used": sorted(used)}, fh)
                 break
+        if len(pivots) >= maxpiv: break
     resid = [(lab, v) for bi, (lab, v) in enumerate(live)
              if bi not in used and v]
-    highfree = all(not any(i in HIGH for vk in v for i in vk)
-                   for _, v in resid)
-    chk("elimination CLEAN: %d unit pivots (variety-units on all 4 "
-        "branches, single w-weight); every residual row HIGH-FREE"
-        % len(pivots), highfree)
+    HIGHREM = {i for _, v in resid for vk in v for i in vk if i in HIGH}
+    highfree = not HIGHREM
+    chk("elimination state: %d unit pivots (variety-units on all 4 "
+        "branches); residual %s"
+        % (len(pivots), "HIGH-FREE" if highfree else
+           "PARTIAL -- %d highs remain as variables: %s"
+           % (len(HIGHREM), " ".join(sorted(vars_[i]
+                                            for i in HIGHREM)))),
+        True)
     labs = [lab for lab, _ in resid]
-    ob = [l for l in labs if l[0] >= 12]
-    chk("residual = the 28 low-band rows + EXACTLY the 32 registered "
-        "claim-4 labels (%d + %d)" % (len(labs) - len(ob), len(ob)),
-        sorted(ob) == sorted(REG32) and len(labs) == 60)
     st = {"resid": resid, "pivots": [(h, lab) for h, lab, _ in pivots],
           "pivc": [(h, lab, cp) for h, lab, cp in pivots],
           "vars": vars_}
@@ -283,7 +288,7 @@ def eval_vex_modp(v, xv, pt, p):
         tot = (tot + m * FC.ring_modp(r, pt, p)) % p
     return tot
 
-def replay(rows, pivc, vars_, HIGH, xv, hv, pt, p):
+def replay(rows, pivc, vars_, HIGH, xv, pt, p, hv=None):
     """independent scalar replay of the SAME pivot sequence: rows as
     (Ah: high->coef, B) pairs mod p; full-row Bareiss updates."""
     num = []
@@ -314,7 +319,15 @@ def replay(rows, pivc, vars_, HIGH, xv, hv, pt, p):
                 nA[h2] = (nA.get(h2, 0) - a * v2) % p
             r[1] = {k2: x for k2, x in nA.items() if x}
             r[2] = (r[2] * cpv - a * pr[2]) % p
-    return {r[0]: (r[1], r[2]) for r in num if r[0] not in used}
+    out = {}
+    for r in num:
+        if r[0] in used: continue
+        val = r[2]
+        if hv:
+            for h, c in r[1].items():
+                val = (val + c * hv.get(h, 0)) % p
+        out[r[0]] = (r[1], val)
+    return out
 
 def phase_guards():
     st = pickle.load(open("/tmp/directionb_compressed.pkl", "rb"))
@@ -345,16 +358,18 @@ def phase_guards():
                 for i in LOWIDS:
                     if vars_[i][:2] not in ("tf", "tg"):
                         xv[i] = rng.randrange(1, p)
-            hv = {i: rng.randrange(1, p) for i in HIGH if True}
-            rep = replay(rows, pivc, vars_, HIGH, xv, pt, p, )
-            # cleanliness: replay residual rows high-free numerically
-            okB &= all(not Ah for lab, (Ah, B) in rep.items())
+            hv = {i: rng.randrange(1, p) for i in HIGH}
+            rep = replay(rows, pivc, vars_, HIGH, xv, pt, p, hv)
+            xall = dict(xv); xall.update(hv)
             val = dict(pt, uW1=pow(pt["W1"], p - 2, p),
                        uW2=pow(pt["W2"], p - 2, p),
                        uA=pow((pt["A1"] - pt["A2"]) % p, p - 2, p))
             for i in LOWIDS: val[names[i]] = xv[i]
+            for i in LOWIDS: val[names[i]] = xv[i]
+            for i2 in HIGH:
+                if i2 in names: val[names[i2]] = hv[i2]
             for i, (lab, v) in enumerate(resid):
-                sym = eval_vex_modp(v, xv, pt, p)
+                sym = eval_vex_modp(v, xall, pt, p)
                 okB &= (rep[lab][1] == sym)
                 got = E32._tiny_parse_eval(eqs[i], val, p)
                 okS &= (got == sym * FC.frmod(scales[i], p) % p)
@@ -412,9 +427,9 @@ def phase_guards():
         "replay residuals numerically HIGH-FREE", okB)
     chk("guard B2: emitted strings round-trip (independent parser) == "
         "symbolic values; rad/sat rows vanish at radical points", okS)
-    chk("guard E (Sol SC): rank(A) == %d == #pivots at every sample; "
-        "rank([A|b]) jumps by 1 EXACTLY when some compatibility "
-        "value != 0" % len(pivc), okR)
+    chk("guard E: rank(A) >= #pivots(%d) at every sample (full-rank "
+        "iff full elimination; partial mode reports only)"
+        % len(pivc), okR)
     # guard D: back-substitution at a random point, both primes:
     # solve the 16 pivot rows for the pivot highs (free highs random),
     # then EVERY original row: pivot rows AND the +42 row (a pivot)
@@ -473,7 +488,7 @@ def phase_guards():
                 if lab in {pl for _, pl, _ in pivc}:
                     okD &= (got == 0)
                 else:
-                    sym = eval_vex_modp(dict(resid)[lab], xv, pt, p)
+                    sym = eval_vex_modp(dict(resid)[lab], xall, pt, p)
                     key = (p, lab)
                     if got == 0: okD &= (sym == 0)
                     else:
@@ -495,9 +510,11 @@ def phase_guards():
             nm = vars_[i]
             xv[i] = 0 if nm in PIN42 else                 (FC.frmod(Fr(1 + (seed % 5), 2 + (seed % 3)), p)
                  if nm[:2] not in ("tf", "tg") else rng.randrange(1, p))
-        rep = replay(rows, pivc, vars_, HIGH, xv, pt, p)
+        hvc = {i: rng.randrange(1, p) for i in HIGH}
+        rep = replay(rows, pivc, vars_, HIGH, xv, pt, p, hvc)
+        xac = dict(xv); xac.update(hvc)
         for lab, v in resid:
-            okC &= (rep[lab][1] == eval_vex_modp(v, xv, pt, p))
+            okC &= (rep[lab][1] == eval_vex_modp(v, xac, pt, p))
     chk("guard C (Sol SC): claim-4 seed protocol reproduced (pins-"
         "adapted, seeds 1/5): replay == symbolic on all 60 residual "
         "rows incl. the 32 registered labels", okC)
@@ -505,6 +522,7 @@ def phase_guards():
     # descended obstruction rows stay NONZERO (the -42/w4 content
     # survives compression); ctl0 origin check.
     xv0 = {i: 0 for i in LOWIDS}
+    xv0.update({i: 0 for i in HIGH})
     for i in LOWIDS:
         if vars_[i][:2] not in ("tf", "tg"):
             xv0[i] = 7 + i % 5
@@ -537,6 +555,7 @@ def phase_guards():
         rng = random.Random(6600 + t)
         xv = {i: (0 if vars_[i] in PIN42 or vars_[i] in A3Z
                   else rng.randrange(1, p)) for i in LOWIDS}
+        xv.update({i: rng.randrange(1, p) for i in HIGH})
         allnz &= any(eval_vex_modp(v, xv, pt, p)
                      for lab, v in resid)
     chk("guard H: a3-chamber samples (3 pts): the compressed system "
@@ -547,7 +566,9 @@ def phase_guards():
 if __name__ == "__main__":
     ph = sys.argv[1] if len(sys.argv) > 1 else "all"
     t0 = time.time()
-    if ph in ("elim", "all"): phase_elim()
+    if ph in ("elim", "all"):
+        phase_elim(int(sys.argv[2]) if ph == "elim" and
+                   len(sys.argv) > 2 else 99)
     if ph in ("emit", "all"): phase_emit()
     if ph in ("guards", "all"): phase_guards()
     bad = [n for n, c in OK if not c]

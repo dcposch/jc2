@@ -537,3 +537,8 @@
   agent tasked with tau-transport shortcut (map tf1->tf2 images) or partial 11-pivot
   emission fallback; (b) FC1 NOT wedged (99.9% CPU, 60MB, 9.9h) — genuinely deep in
   one expensive state; let run (cheap on box01), revisit at 24h.
+- 2026-08-16 ~11:40: PILOT LAUNCHED on box01 (compressed p105337, 2h cap, -t 4,
+  process-verified; marked PROVISIONAL until the agent's formal guard report lands —
+  emit log shows 0 FAIL). The 3x gate: R1 baseline = 12h timeout, so ANY verdict
+  within the 2h cap clears the gate with margin; timeout at 2h = inconclusive
+  (extend to 12h apples-to-apples before iron decision).
