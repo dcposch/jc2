@@ -508,3 +508,9 @@
   post-drain with 300G fences ONLY if mains cap out empty-handed. Sol census review
   process died silently — relaunching. a3 remains the only computed chamber verdict
   (double-EMPTY).
+- 2026-08-15 ~19:45: SESSION GAP ~17h (machine asleep). Catch-up: Sol census review
+  BROKEN (M_G|sum(mu_e) misapplied outside epsilon=0=k scope — real quotient hole);
+  Box03 both cores OOM at 495G -> STOPPED (big cores 3-for-3 beyond iron; sat23 1.6T,
+  c1.RED 495G, c2.q 495G — decomposition-only, deprioritized); Box02 healthy: b2/b3 +
+  R2 mains + portfolio grinding at 1736G, caps Aug16 ~03:50; a3 still the only chamber
+  verdict. NEXT: census repair (the misapplied divisibility row), then re-review.
