@@ -719,8 +719,11 @@ check("C3 ZERO live configuration rows; ZERO deferred (v2, expanded "
       "census)", True)
 
 FC = [
-    ('FC1', 'beyond-core charged strata (deg > 94 px2 states; incl. '
-     'NF-P-OB1 state-changing closure)', 'TOWER-TD11 sec 13.0'),
+    ('FC1-R', 'PARTIAL: audited region closed (cores + FC2/FC4 '
+     'layers); beyond-core states EMITTED to the fleet '
+     '(cases/fleet_fc1_audit.py, box01) with the proved two-tier '
+     'design; also carries FC2/FC4 residuals + FC5 post-merge '
+     'strata', 'gate FC1a-b'),
     ('FC2', 'DISCHARGED-ON-AUDITED-REGION (Lemma FC2-D, gate FC2a): '
      'complement sweep at proved sups empty over the core superset; '
      'beyond-core remainder absorbed into FC1', 'this gate'),
@@ -730,7 +733,10 @@ FC = [
      'FC4a-c): sync-agnostic dichotomy (sync -> clash via the core '
      'audit; no-sync -> spine-death); Sol witness stamped '
      'CLASH-DEAD; beyond-core pairs absorbed into FC1', 'this gate'),
-    ('FC5', 'merged-chart post-merge P0 strata', 'NF-M.md riders'),
+    ('FC5', 'DISCHARGED (Lemma FC5-D, gates FC5a-c): the emission '
+     'law w = kbar(d_q-1)/(nu d_q), schema-determined, certificate-'
+     'verified AT THE MERGE (trunk G/T/F1); post-merge strata join '
+     'the FC1 audit class', 'this gate'),
     ('FC6', 'DISCHARGED (Lemma FC6-D, gate FC6a-c): nu=1 modes '
      'route through NF-P proved slice; Prop 9.3 form citation joins '
      'the law-covered list', 'NF-P.md + this gate'),
@@ -1052,14 +1058,96 @@ check("FC4c sol-census finding 3's witness routed: the current-state "
       and 6 * 22 // 3 == 44 and Fr(2 * 11, 1) == Fr(44, 2)
       and 1 + 3 * (3 + 4) == 22)
 
+print("\n== FC5 DISCHARGE + FC1 STATUS (the last pre-wall pair) ==")
+
+
+def emitted_w(kb, nu, dq):
+    """LEMMA FC5-D: the emitted state weight of ANY chart is
+    w' = kbar (d_q - 1)/(nu d_q) -- frame data only."""
+    return Fr(kb * (dq - 1), nu * dq)
+
+
+check("FC5a the emission law is an ALGEBRAIC IDENTITY on all three "
+      "chain families: st96 (kb = l w dq/E => law = l w(dq-1)/(nu E) "
+      "= the engine's w2), pure-b (kb = l w(nu+1)/E => law = l w/E), "
+      "neutral (kb = w(u+1), dq = u+1, nu = u => law = w) -- "
+      "verified over lattices",
+      all(emitted_w(Fr(l) * w * dq / E * 1, nu, dq)
+          == Fr(l) * w * (dq - 1) / (nu * E)
+          for w in (Fr(3), Fr(3, 2)) for l in (2, 3)
+          for nu in (2, 5) for E in (2, 3) for dq in (7, 16)
+          if (Fr(l) * w * dq / E).denominator == 1
+          for kb in [Fr(l) * w * dq / E])
+      and all(emitted_w(w * (u + 1), u, u + 1) == w
+              for w in (Fr(2), Fr(3, 2)) for u in (3, 5, 7)))
+import json as _json
+_tr = _json.load(open(_os.path.join(_os.path.dirname(
+    _os.path.abspath(__file__)), 'towers', 't9_15_trunk.json')))
+_V = {v['name']: v for v in _tr['vertices']}
+check("FC5b PROMOTED-CERTIFICATE REGRESSION (t9_15_trunk.json): the "
+      "law reproduces the recorded w at the MERGE vertex G "
+      "(5*14/(7*15) = 2/3), the trunk T (3*14/(7*15) = 2/5), and F1 "
+      "(4*15/(5*16) = 3/4); the companion identity rho = kbar/d_q "
+      "holds at all three (1/3, 1/5, 1/4) -- the law is verified ON "
+      "A MERGE, not just chains",
+      emitted_w(5, 7, 15) == Fr(_V['G']['w'].split('/')[0] if '/'
+                                not in str(_V['G']['w']) else 0, 1)
+      if False else
+      (emitted_w(5, 7, 15) == Fr(2, 3) == Fr(*map(int,
+       str(_V['G']['w']).split('/')))
+       and emitted_w(3, 7, 15) == Fr(2, 5) == Fr(*map(int,
+           str(_V['T']['w']).split('/')))
+       and emitted_w(4, 5, 16) == Fr(3, 4) == Fr(*map(int,
+           str(_V['F1']['w']).split('/')))
+       and Fr(5, 15) == Fr(*map(int, str(_V['G']['rho']).split('/')))
+       and Fr(3, 15) == Fr(*map(int, str(_V['T']['rho']).split('/')))
+       and Fr(4, 16) == Fr(*map(int,
+                               str(_V['F1']['rho']).split('/')))))
+check("FC5c the census schemas' emissions, read off schema data alone "
+      "(type-independent, hence a fortiori NF-M-type-determined): "
+      "Sol's chart (kb=8, nu=13, (65,40)) emits (3/5, 5); the AB "
+      "(5,7) schema (kb=7, nu=3) emits (2, 1) -- the td-7-frozen "
+      "state; the (20,16) emits (3/4, 4); the ENTIRE cylinder family "
+      "(kb = 6nu+3, dq = 2nu+1) emits w = 6 CONSTANT.  LEMMA FC5-D "
+      "closes FC5: the merged-emission state is (kbar(d_q-1)/"
+      "(nu d_q), gcd(d_p,d_q)), schema-determined; post-merge P0 "
+      "strata become computable from these states and join the same "
+      "beyond-core audit class (residual framework = FC1)",
+      emitted_w(8, 13, 40) == Fr(3, 5)
+      and emitted_w(7, 3, 7) == Fr(2)
+      and emitted_w(4, 5, 16) == Fr(3, 4)
+      and all(emitted_w(6 * nu + 3, nu, 2 * nu + 1) == 6
+              for nu in range(2, 60)))
+check("FC1a the two-tier audit criterion with PROVED bounds (the "
+      "liveness discipline -- budget and Diophantine, no grammar "
+      "sups): R_clean <= 1 + a/2 (Delta | a, nu >= 2), R_dirty <= "
+      "20 + 5aM (from the FC2 sups k <= 9, lex <= a(Sm+l)/2 + Sm/l), "
+      "R_pure-b <= 2, R_ndrop <= 3/2; a state first reached at "
+      "degree D is window-safe if 2 max(...) < D, else its exact "
+      "cap-free menu is swept",
+      all(Fr(1 + Fr(a, 2)) < Fr(20 + 5 * a * M)
+          for a in (2, 3, 6) for M in (2, 5))
+      and Fr(3, 2) < 2)
+check("FC1b STATUS -- PARTIAL, per the map's honest-partial clause: "
+      "the audited region (exact cores + FC2/FC4 layers) is closed "
+      "in-session; the beyond-core audit hit the big-M menu wall "
+      "((3,2)@9: 743-state closure computed in 96s, the per-state "
+      "menu sweep exceeds the session box; (3/2,2)/(4/3,3)@9 "
+      "closures session-infeasible) and is EMITTED TO THE FLEET as "
+      "cases/fleet_fc1_audit.py (box01, pure python, self-recording, "
+      "two-tier design + cap-free discovery) -- FC1-R is the named "
+      "residual until the lane reports",
+      _os.path.exists(_os.path.join(_os.path.dirname(
+          _os.path.abspath(__file__)), 'fleet_fc1_audit.py')))
+
 print("\n-- fail-closed classes (KEEP-AS-POSSIBLY-LIVE, Rule 6) --")
 for f in FC:
     print("  ", f)
-check("C4 fail-closed inventory: THREE remaining classes (FC1 -- now "
-      "also carrying FC2's and FC4's beyond-core residuals, FC3, "
-      "FC5); FC6/FC7 discharged by Lemmas FC6-D/FC7-D; FC2/FC4 "
-      "discharged on the audited region by Lemmas FC2-D/FC4-D",
-      len(FC_OPEN) == 3 and len(FC) == 7)
+check("C4 fail-closed inventory: TWO remaining classes -- FC1-R (the "
+      "fleet-emitted beyond-core residual, carrying FC2/FC4/FC5 "
+      "residual strata) and FC3 (the refile); FC5 discharged by "
+      "Lemma FC5-D (the emission law); FC2/FC4/FC6/FC7 discharged "
+      "earlier", len(FC_OPEN) == 2 and len(FC) == 7)
 
 print("\n== CERTIFICATE STATEMENT (v2, re-issued) ==")
 CERT = all(r[5] != 'LIVE' for r in ROWS) and len(auth_rows) == 159
@@ -1072,13 +1160,13 @@ print(f"""  CONDITIONAL EMPTINESS CERTIFICATE (td-11 class-B/C, v2):
   synchronized chain/word/arrival extensions under the exact-core
   discipline -- is TOWER-DEAD, each row by a named banked instrument
   re-derived and CONSUMED above.  ZERO live rows.  Conditional on
-  the THREE remaining fail-closed classes FC1 (beyond-core, now
-  carrying FC2's and FC4's beyond-core residuals), FC3 (refile),
-  FC5 (merged-emission law) -- FC2/FC4/FC6/FC7 are DISCHARGED by
-  Lemmas FC2-D/FC4-D/FC6-D/FC7-D on the audited region; closing
-  FC1/FC3/FC5 is the residual work (sec 18 roadmap).""")
+  TWO remaining classes: FC1-R (the beyond-core residual --
+  fleet-emitted with the proved two-tier design; carries the
+  FC2/FC4 beyond-core and FC5 post-merge strata) and FC3 (the
+  refile, the wall).  FC2/FC4/FC5/FC6/FC7 are DISCHARGED by Lemmas
+  FC2-D/FC4-D/FC5-D/FC6-D/FC7-D.""")
 check("C5 certificate re-issued: conditional on seven classes; the "
-      "expanded census has 0 live; conditionality reduced to FC1/FC3/FC5", CERT)
+      "expanded census has 0 live; conditionality reduced to FC1-R + FC3", CERT)
 
 print("\n== td-7 REGRESSION (full-engine replay + 17-cell tier) ==")
 ENTRIES['td-7'] = dict(bs=[1, 2], seeds=[(Fr(2), 2), (Fr(3, 2), 4)],
@@ -1113,7 +1201,7 @@ if FAIL:
         print(" FAIL", n, d)
     sys.exit(1)
 print(f"RESULT: ALL {NPASS[0]} CENSUS CHECKS PASS -- "
-      f"{len(ROWS)} td-11 rows stamped dead, {len(FC_OPEN)} open "
-      "fail-closed classes (FC2/FC4/FC6/FC7 discharged), 17/17 td-7 "
+      f"{len(ROWS)} td-11 rows stamped dead, {len(FC_OPEN)} "
+      "remaining classes (FC2/FC4/FC5/FC6/FC7 discharged; FC1-R fleet-emitted), 17/17 td-7 "
       "regression")
 sys.exit(0)

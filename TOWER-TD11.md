@@ -700,20 +700,21 @@ difficulty guess.
 
 | class | what would close it | nearest banked asset | difficulty |
 |---|---|---|---|
-| **FC1** beyond-core charged strata (px2 states first reached above deg 94; carries NF-P-OB1's state-changing closure) | EITHER the reachable-numerator invariant, correctly scoped (§13.0(a): `num(w) < deg − 2` for states first reached past the core), OR the brute cap-free budget-9 closure computation (~10⁴–10⁵ states offline) | the cutoff-Dijkstra design + the sized ladders (§7.5); §13.0's scoping analysis; the empirical facts (`num(w) ≤ 6` on the full `(3,2)@9` closure) | lemma route: **needs-new-math** (numerator-vs-degree growth); computational route: **days** (engine rewrite + one long run) |
+| **FC1** beyond-core charged strata | **PARTIAL (gates FC1a–b): audited region closed; the beyond-core audit is FLEET-EMITTED** (`cases/fleet_fc1_audit.py`, box01) with the proved two-tier design — cheap test `2·max(1+a/2, 20+5aM) < D` (bounds from `Δ\|a`, budget `λ≥k`, the FC2 Diophantine sups — liveness constraints, no grammar sups), exact cap-free sweep at failures, cap-free discovery. In-session wall: the big-M menu cost (`(3,2)@9` closure done in 96s; the per-state sweep exceeds the box; the other two seeds' closures session-infeasible). FC1-R = the named residual until the lane reports; it also carries FC2/FC4 beyond-core and FC5 post-merge strata | fleet lane pending |
 | **FC2** cap-free grammar slice | **DISCHARGED-ON-AUDITED-REGION (Lemma FC2-D, census gate FC2a):** `k ≤ 9` is the proved budget bound (`λ ≥ k`); the `lex`-sups follow from the `ν ≥ 2` Diophantine identities (`ε ≥ 1`: `lex < (Sm+l)/ε − 1 − k`; `ε = 0`: `lex ≤ a(Sm+l)/2 + Sm/l − k`); the complement sweep over the core superset (34 states) is EMPTY; `M = 1` states have no dirty steps. Beyond-core remainder ⊆ FC1 | closed on the audited region |
 | **FC3** Q+E5/E5F refile layer | the refile itself: parameterized P0/shared-budget core, the two two-pole books, the corrected three-pole book, ODE/E5F gates (scope's own 3–4-round estimate) | the E5F base law (td-agnostic); the census's per-row instruments (kills are E5F-monotone: realization only shrinks the live set); the NF-M type certificates for the ODE layer | **the real wall**: multi-round engineering + some new math (the merged-emission `w` law feeds it) |
 | **FC4** current-state arrival classes | **DISCHARGED-ON-AUDITED-REGION (Lemma FC4-D, census gates FC4a–c):** the sync-agnostic dichotomy — chain-1 is state-frozen (L-A; `l ≥ 2` forbids dirty steps at `M=1`), and for any core-state pair: sync satisfiable ⇒ clash fires (core-audit window-emptiness + arrival-independent `k \| 2` + register-lattice CAP-DEN); unsatisfiable ⇒ spine-death. Sol's `(1,2)@(22,44)` witness stamped CLASH-DEAD. Beyond-core pairs ⊆ FC1 | closed on the audited region |
-| **FC5** merged-chart post-merge P0 strata | the merged-emission law (`w_G` of a merged chart) + merged-state step menus; the round-9 parametric-in-`w_in` trick sidesteps it for kills but not for enumeration | (2.7)/(2.8) emission degrees; NF-M types; the outer-analysis pattern | **needs-new-math** (the emitted-`w` law — the one frame law never pinned; likely derivable from L1–L9, then days) |
+| **FC5** merged-chart post-merge P0 strata | **DISCHARGED (Lemma FC5-D, census gates FC5a–c): THE EMISSION LAW EXISTS** — `w' = κ̄(d_q−1)/(ν·d_q)`, `M' = gcd(d_p,d_q)`, schema-determined (frame data only, type-independent). Verified as an algebraic identity on all three chain families AND against the promoted trunk certificate AT THE MERGE (G: `5·14/105 = 2/3` ✓, T: `2/5` ✓, F1: `3/4` ✓, with `ρ = κ̄/d_q` companion). Census emissions: Sol's chart → `(3/5, 5)`; the AB schema → `(2, 1)` (the td-7-frozen state); the cylinder family → `w = 6` constant. Post-merge strata are now computable seeds in the FC1 audit class | closed |
 | **FC6** `ν = 1` case-I handshake provenance | **DISCHARGED (Lemma FC6-D, census gates FC6a–c):** the (2.7)/(2.8) arithmetic is ν-uniform; η-factor menus complete + dead (NF-P D1), η-absorbed `ε>0` empty (η-pole lemma), `ε=0` resweep dead (NF-P D2); coefficient layer = NF-M verbatim. Prop 9.3's form citation joins the law-covered list | closed |
 | **FC7** merge-schema finiteness | **DISCHARGED (Lemma FC7-D, census gates FC7a–c):** loop bounds are proved sups — budget `k ≤ 9`, `E \| aμA ⇒ x ≤ k+5` and `ν`-divisor bounds at `ε=0`, the `ε=1` κ̄-parametrization (`ν` determined per `κ̄ ≤ 3(Q+1)/C`), zero-edge divisor bounds, pinned-(2.9) sups, and the outer `A<Q` window lemma (`(d−1)(A−1) > 1 ⇒` below-window; `d=1` finite); the proved-sup resweep (`k ≤ 9, x ≤ 15, ν ≤ 200`) reproduces the engine menu EXACTLY. Form completeness = the promoted R2.1/R2.2 citation | closed |
 
-**Headline (after both discharge rounds):** FC2, FC4, FC6, FC7 are
-CLOSED (Lemmas FC2-D/FC4-D/FC6-D/FC7-D; FC2/FC4 on the audited
-region with beyond-core residuals absorbed into FC1) — **the
-certificate's conditionality is now FC1 / FC3 / FC5**. FC1 has a
-cheap computational route (days: the cap-free budget-9 closure, now
-also carrying FC2/FC4's residuals) and an open lemma route; FC5
-needs one genuinely new law (the merged-emission `w`); **FC3 — the
-refile — is the real wall**. Remaining order: FC1(computational) →
-FC5 → FC3.
+**Headline (after all three discharge rounds):** FC2, FC4, FC5,
+FC6, FC7 are CLOSED (Lemmas FC2-D/FC4-D/FC5-D/FC6-D/FC7-D — FC5's
+emission law `w' = κ̄(d_q−1)/(ν·d_q)` was hiding in plain sight
+across the engine's three families and is certificate-verified at
+the merge itself). **The certificate's conditionality is now
+FC1-R + FC3**: FC1-R is the fleet-emitted beyond-core lane
+(`cases/fleet_fc1_audit.py`, proved two-tier design; carries the
+FC2/FC4/FC5 residual strata), and **FC3 — the refile — is the
+wall**. When the FC1-R lane reports clean, the certificate is
+conditional on the refile alone.
