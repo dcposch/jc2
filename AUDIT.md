@@ -781,3 +781,19 @@ Review chain: grok-td11-block2-review (reopened 24), repair,
 grok-67-final (YES, gap closed), errata fold (sign lemma -> closed form
 kbar = 2(1+nuQ)/(1-nu(A-Q))). Gates nfm 25/25. td-11 OPEN inventory:
 beyond-core, NF-P slice, refile.
+
+## td-11 CONDITIONAL EMPTINESS CERTIFICATE (2026-08-15)
+PROMOTED with wording riders: every configuration of the audited
+td-11 class-B/C layer (411-row instrument-backed quotient of the
+~2e8 raw route space) is TOWER-DEAD; emptiness is CONDITIONAL on
+seven named fail-closed classes (FC1-FC7: beyond-core, cap-free
+grammar, refile, current-state arrivals, post-merge strata, nu=1
+provenance, merge-schema finiteness) held KEEP-AS-POSSIBLY-LIVE.
+Sol's scope-hole chart + 5 siblings enter and die OUTER-DEAD.
+Review chain: grok-census-review (SOUND-WITH-ERRATA, FC7 + real
+re-derives + genuine td-7 replay — folded), sol-census-review
+(BROKEN, M_G scope hole — repaired, +252 rows), sol-census-final
+(EARNED; provenance-wording riders NOT load-bearing — fold next
+editorial pass). Engine cases/td11_census.py gates 8/8; td-7
+replayed through the same two-pole engine. The td-11 panel now
+rests on: this certificate + discharging/closing FC1-FC7.
