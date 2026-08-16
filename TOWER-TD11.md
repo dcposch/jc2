@@ -691,3 +691,27 @@ confirmed by grok-67-final (YES — all 67 DEAD-AT-TIER; writeup
 errata folded round 10: the sign lemma replaced by the closed form
 with its seven `A < Q` schemas, the free-`ν_A` census completed at
 109 members all census-unrealizable, I1/I2b now real gates).
+
+## 18. FC discharge map (the td-11 panel-closure roadmap)
+
+The v2 census certificate is conditional on seven fail-closed
+classes. Per class: what closes it, the nearest banked asset, and a
+difficulty guess.
+
+| class | what would close it | nearest banked asset | difficulty |
+|---|---|---|---|
+| **FC1** beyond-core charged strata (px2 states first reached above deg 94; carries NF-P-OB1's state-changing closure) | EITHER the reachable-numerator invariant, correctly scoped (§13.0(a): `num(w) < deg − 2` for states first reached past the core), OR the brute cap-free budget-9 closure computation (~10⁴–10⁵ states offline) | the cutoff-Dijkstra design + the sized ladders (§7.5); §13.0's scoping analysis; the empirical facts (`num(w) ≤ 6` on the full `(3,2)@9` closure) | lemma route: **needs-new-math** (numerator-vs-degree growth); computational route: **days** (engine rewrite + one long run) |
+| **FC2** cap-free grammar slice (`k > 6`, `lex > 40`) | prove the budget-dependent `k`/multiplicity-partition/`ℓ_ex` sups the scope demands (port obligation: "do not inherit px2's td-7 loop caps") | the §2.2 divisor-bound pattern ((2.9)/(2.10) arithmetic — the same derivation style); Sol's widened hostile scan (`x ≤ 64, ν ≤ 500, κ̄ ≤ 200`: nothing new) as empirical margin | **days** (assembling existing divisor arguments into stated sups) |
+| **FC3** Q+E5/E5F refile layer | the refile itself: parameterized P0/shared-budget core, the two two-pole books, the corrected three-pole book, ODE/E5F gates (scope's own 3–4-round estimate) | the E5F base law (td-agnostic); the census's per-row instruments (kills are E5F-monotone: realization only shrinks the live set); the NF-M type certificates for the ODE layer | **the real wall**: multi-round engineering + some new math (the merged-emission `w` law feeds it) |
+| **FC4** current-state arrival classes | re-run the census layer with arrivals drawn from the priced closure states instead of entry states (Sol's `(1,2)@(22,44)` witness shows the shape); the stamping instruments are state-generic | the budget-5 closures (fast) + the same menu/CAP-DEN machinery; v_p arithmetic is per-state | budget-5-slice: **days** (bounded computation); full coverage is tied to FC1's horizon |
+| **FC5** merged-chart post-merge P0 strata | the merged-emission law (`w_G` of a merged chart) + merged-state step menus; the round-9 parametric-in-`w_in` trick sidesteps it for kills but not for enumeration | (2.7)/(2.8) emission degrees; NF-M types; the outer-analysis pattern | **needs-new-math** (the emitted-`w` law — the one frame law never pinned; likely derivable from L1–L9, then days) |
+| **FC6** `ν = 1` case-I handshake provenance (= NF-P-OB2 exactly) | derive the ν=1 case-I affine handshake from Prop 9.3 and confirm the (2.8)-shape the menus assumed | NF-P's ν=1 classification (η-pole lemma, ν-uniform square system, the 18-schema menu already swept under the assumed shape) | **hours-to-days** (one law derivation + a gate row) — cheapest wall |
+| **FC7** merge-schema finiteness (enumerator loop bounds + handshake-form completeness) | prove per-menu sups (`κ̄ ≤ f(budget)` etc.) from the (2.10) integrality bullets; state the handshake-form completeness relative to R2.1/R2.2 | §2.2's own divisor bounds (most of the work exists as bullets); Sol's widened scan margin | **hours-to-days** (assembly + statement discipline) |
+
+**Headline:** FC6 and FC7 are cheap (hours-to-days of assembly);
+FC2 and FC4 are bounded computations (days); FC1 has a cheap
+computational route (days) and an open lemma route; FC5 needs one
+genuinely new law (the merged-emission `w`); **FC3 — the refile —
+is the real wall**, the scope's own 3–4-round estimate, and it
+consumes FC5's law on the way. Recommended order: FC6 → FC7 → FC2 →
+FC4(budget-5) → FC1(computational) → FC5 → FC3.

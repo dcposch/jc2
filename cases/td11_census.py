@@ -10,6 +10,12 @@ the spurious dp = dq family the unfiltered sweep would admit).
 Sol's omitted chart -- BB2 equal-handshake eps=0, k=1, nu=13,
 (d_p,d_q)=(65,40), M_G=5, kbar=8, gap 4/65 -- now ENTERS the census
 with its siblings and is stamped by the extended outer analysis.
+Terminology (sol-census-final): the per-ROW r[7] flag is the
+legacy-divisor-axis marker (numeric M | sum), used only for the
+159-row regression; the exact subadd_authority bit is per-CELL
+(auth = eps==0=k on each menu record).  The quotient is an
+INSTRUMENT-UNIFORM DEATH QUOTIENT, not a literal enumeration of
+every extension record.
 Grok's errata: FC7 declared; stamps consume their re-derived
 booleans; td-7 replays through the SAME two-pole engine (6 skeleton
 rows) plus the 17-cell tier.
@@ -205,8 +211,11 @@ def menu_AB():
             if lhs and rhs % lhs == 0 and rhs // lhs >= 2:
                 nu = rhs // lhs
                 dp, dq = eps + nu * A, 1 + nu * Q
+                # NOTE (sol-census-final f.1): NO MP6 conjunct here --
+                # eps = 2 has no R2.2(D) authority; Sol verified its
+                # removal leaves the same sole candidate (5,7,1).
                 if Fr(kb * dp, dq) == X and gcd(gcd(dp, dq), nu) == 1 \
-                        and 3 % gcd(dp, dq) == 0 and dq > dp:
+                        and dq > dp:
                     out.append(dict(kb=kb, dp=dp, dq=dq,
                                     MG=gcd(dp, dq)))
     return out
@@ -259,8 +268,8 @@ def menu_BB(mu):
                                         k=k, nu=nu))
     seen, ded = set(), []
     for s in out:
-        key = (s['kb'], s['dp'], s['dq'])
-        if key not in seen:
+        key = (s['kb'], s['dp'], s['dq'], s['auth'])   # keep both
+        if key not in seen:                            # provenances
             seen.add(key)
             ded.append(s)
     return ded
@@ -667,12 +676,15 @@ newM_rows = [r for r in ROWS if not r[7]]
 solrows = [r for r in ROWS if r[0] == '11-C' and len(r) > 8
            and r[8][0] == 'inner' and r[8][2] == 5
            and r[8][1] == (2, 2)]
-check("C1 v2 layer: the authority-subset (eps=0=k-scoped MP6 rows) "
-      "reproduces the original 159 EXACTLY (6 + 8 + 145 -- the "
-      "review regression); the scoped re-enumeration adds "
-      f"{len(newM_rows)} cell-derived rows (total {len(ROWS)}) -- "
-      "Sol's scope hole repaired: M_G is cell-derived, MP6 applied "
-      "only at eps=0=k, the R1.0 root-multiplicity guard enforced",
+check("C1 v2 layer (wording per sol-census-final f.1: r[7] is the "
+      "LEGACY-DIVISOR-AXIS marker -- M divides the relevant sum -- "
+      "NOT a per-cell subadd_authority bit; the true authority bit "
+      "lives on each CELL as auth = (eps==0 and k==0)): the "
+      "divisor-skeleton slice reproduces the original 159 EXACTLY "
+      "(6 + 8 + 145 -- the review regression); the scoped "
+      f"re-enumeration adds {len(newM_rows)} complement rows (total "
+      f"{len(ROWS)}); MP6 applied only at eps=0=k on cells; R1.0 "
+      "root-multiplicity guard enforced",
       len(auth_rows) == 159 and len(ROWS) > 159)
 check("C1b SOL'S CHART IS IN THE CENSUS: the BB2 eps=0 k=1 nu=13 "
       "(65,40) M=5 kbar=8 cell (and its (15,10) M5 sibling) generate "
@@ -696,6 +708,13 @@ check("C2 stamp breakdown (v2): every row dead; the authority-slice "
       == Counter({'SPINE-DEAD-H8': 81, 'CLASH-DEAD': 11,
                   'UNREALIZABLE': 31, 'SELF-REFUSED': 12,
                   'SPLIT': 3, 'OUTER-DEAD': 21}))
+check("C2b full stamp multiset over all rows matches the "
+      "sol-census-final independent accounting: 185 OUTER / 133 "
+      "SPINE / 63 UNREAL / 12 SELF / 11 CLASH / 7 SPLIT = 411",
+      Counter(r[5] for r in ROWS)
+      == Counter({'OUTER-DEAD': 185, 'SPINE-DEAD-H8': 133,
+                  'UNREALIZABLE': 63, 'SELF-REFUSED': 12,
+                  'CLASH-DEAD': 11, 'SPLIT': 7}))
 check("C3 ZERO live configuration rows; ZERO deferred (v2, expanded "
       "census)", True)
 
@@ -729,9 +748,10 @@ print("\n== CERTIFICATE STATEMENT (v2, re-issued) ==")
 CERT = all(r[5] != 'LIVE' for r in ROWS) and len(auth_rows) == 159
 print(f"""  CONDITIONAL EMPTINESS CERTIFICATE (td-11 class-B/C, v2):
   every configuration in the audited class -- now the EXPANDED
-  {len(ROWS)}-row layer (159 authority rows + {len(newM_rows)}
-  cell-derived rows from the scoped subadditivity repair, including
-  Sol's (65,40) M=5 chart and all its siblings) with full
+  {len(ROWS)}-row layer (the 159-row legacy divisor-skeleton slice
+  plus its {len(newM_rows)}-row complement from the scoped
+  subadditivity repair, including Sol's (65,40) M=5 chart and all
+  its siblings; per-CELL authority bits carried) with full
   synchronized chain/word/arrival extensions under the exact-core
   discipline -- is TOWER-DEAD, each row by a named banked instrument
   re-derived and CONSUMED above.  ZERO live rows.  Conditional on
