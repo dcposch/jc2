@@ -500,3 +500,11 @@
   pkill evidently failed silently; SECOND pkill-verification lesson today). One lane
   survives (identifying). Chamber lanes: 1003G, heavy b-chambers grinding, no new
   verdicts. NF-P banked; compiler top of queue.
+- 2026-08-15 ~02:00: CHAMBER MAP partial failure — a1/a2/a0/b1 all died at the 120G
+  fences (rc=139, UTC 10:37-14:52). Diagnostic: F4 hardness is NOT concentrated in
+  one chamber; even 67-eq subchambers exceed 120G. Sol's caveat (input shrinkage !=
+  F4 shrinkage) proved out. b2/b3 still running; R2 mains ~22h in (~26h to caps),
+  Box02 at 1685G/2T — NO new load on Box02 (OOM risk); failed chambers re-queue
+  post-drain with 300G fences ONLY if mains cap out empty-handed. Sol census review
+  process died silently — relaunching. a3 remains the only computed chamber verdict
+  (double-EMPTY).
