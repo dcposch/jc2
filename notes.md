@@ -533,3 +533,7 @@
 - 2026-08-16 00:05: Order-portfolio lanes BOTH capped out (29h, rc=124) — the ordering
   lottery LOST (neither reordering beat standard; GB hardness is order-robust here).
   FC1 audit healthy (300 pops/187 states/956s, growing BFS). 4 lanes to caps ~03:45.
+- 2026-08-16 ~09:00: Interventions: (a) elim pivot curve steep (740/2483/9650s) —
+  agent tasked with tau-transport shortcut (map tf1->tf2 images) or partial 11-pivot
+  emission fallback; (b) FC1 NOT wedged (99.9% CPU, 60MB, 9.9h) — genuinely deep in
+  one expensive state; let run (cheap on box01), revisit at 24h.
