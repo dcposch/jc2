@@ -520,3 +520,9 @@
   slots: FC1 computation, FC5 lemma attack. Screens ~5h to caps; big scan at expiry.
   After FC1+FC5: the td-11 panel rests on the refile alone — same shape as td-7's
   endgame before its census. Review gauntlet for the FC-discharge batch queued.
+- 2026-08-15 ~23:50: FC5 = THE MERGED-EMISSION LAW (w'=kbar(d_q-1)/(nu d_q), M'=gcd)
+  — the (c2) gap closed as a formula, trunk-certificate-verified. FC1 fleet lane:
+  agent's box01 launch had NOT actually landed (verification caught it — ops lesson
+  #3 this week: always verify remote launches by process count); shipped + launched
+  properly, 1 proc confirmed. On clean FC1-R: certificate conditional on REFILE ALONE
+  => FC-batch review gauntlet (all 6 discharge lemmas + FC5 law, dual review).
