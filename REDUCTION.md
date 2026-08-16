@@ -224,27 +224,28 @@ started.
 
 ### T3. GGV polygon constraints
 
-**Statement actually available.** A standard minimal \((m,n)\)-pair has the
-starting-corner, regular-corner, lower-side, and admissible-chain restrictions
-proved in the GGV papers. Under additional numerical bounds, the GGV
-algorithms enumerate possible corner families. In the special residual case
-\((A_0,m,n)=((8,28),3,2)\), arXiv:2204.14178 Proposition 4.3 produces two
-explicit Laurent-polynomial polygon systems with bracket \([P,Q]=x^2\).
+**Statement actually available.** This heading is not one theorem with one
+hypothesis set. It combines a general necessary-constraint lane and a
+bounded residual-family lane. They must be separated as follows.
 
-**Exact hypotheses and scope.**
+Here GGV's Laurent ring is
+\(L^{(l)}=K[x^{1/l},x^{-1/l},y]\).
 
-- The general lower-side results assume a **standard minimal** pair, and the
-  pinned GGV2 text also assumes \(P(0,0)Q(0,0)\ne0\) where stated.
-- GGV5's family lists are bounded enumerations, not a list of all possible
-  counterexamples at arbitrary degree.
-- The 2022 theorem says that a counterexample either has
-  \(\max(\deg P,\deg Q)\ge125\) or has degree pair \((72,108)\) or its
-  transpose. This is a lower-bound dichotomy, not an upper bound.
-- Proposition 4.3 assumes the particular \((8,28)\) family. Its conclusion
-  is not a Keller pair: the final map
-  \(x\mapsto x^{-1},\ y\mapsto x^j y\) is not in
-  \(\operatorname{Aut}\mathbf C[x,y]\), and changes the bracket to a power
-  of \(x\); see [SECTION4-AUTOMATION.md](SECTION4-AUTOMATION.md) §1 and §3.
+| Component | Exact input hypotheses | Exact scope of the output |
+|---|---|---|
+| Published GGV1 support restrictions | Exactly the standard minimal \((m,n)\)-pair of T2. Any additional hypothesis is theorem-specific; this document does not silently bundle every later corner proposition into one implication. | Starting/support and regular-corner restrictions for the selected minimal pair. This is necessary data, not a finite all-degree catalog. |
+| GGV2 Proposition 3.12 | \((\rho,\sigma)\in ](0,-1),(1,-1)[\); homogeneous \(R,G\in L^{(l)}\); \(R\) nonmonomial; \([G,R]=R^i\); and \(u=v_{\rho,\sigma}(R)>0\). | Exactly one of its three factor/predecessor alternatives holds. This is an algebraic lemma used inside the bounded \((8,28)\) derivation, not a universal Keller-to-polygon theorem. |
+| GGV5 Theorem 2.20 / Algorithm 8 | A GGV1 standard minimal pair; for the algorithmic completeness claim, an explicit input bound \(v_{1,1}(A_0)\le M\). | A finite complete chain with the theorem's fourteen conditions; Algorithm 8 outputs all admissible complete chains **under that bound**. The reported family farm is bounded, not all-degree. |
+| GGV6 Proposition 2.5 | \(a,l\in\mathbf N\), \(a/l>2\), \(b=2\), and \((\rho,\sigma)\in ](0,-1),(1,-1)[\). Its existence clause requires \(c\in\mathbf N\), \(d\in\{0,1\}\), and homogeneous \(R,G\in L^{(l)}\) with \(v_{\rho,\sigma}(R)>0\), \([G,R]=R^i\), \(\operatorname{en}_{\rho,\sigma}(R)=(a/l,2)\), \(\operatorname{st}_{\rho,\sigma}(R)=(c/l,d)\), and \(R\ne\lambda x^{u/\rho}h^j(x^{-\sigma/\rho}y)\) for every \(\lambda\in K^*\), \(j\in\mathbf N\), and linear \(h\). | That existence is equivalent to some \(\Delta\in\mathbf N\) satisfying \(l<\Delta<a/2\), \(a-2\Delta\mid\Delta-l\), and \((\rho,\sigma)\sim(l,-\Delta)\). In the residual family this leaves directions \((1,-2)\) and \((1,-3)\). |
+| GGV22 Proposition 4.3 | A counterexample already landed, through the bounded GGV lane, in \((A_0,m,n)=((8,28),3,2)\). | Two explicit Laurent-polygon systems, reproduced in §2.2, with \(P,Q\in L^{(1)}\) and \([P,Q]=x^2\). It is not a statement about every counterexample. |
+
+The 2022 main theorem says that a counterexample either has
+\(\max(\deg P,\deg Q)\ge125\) or has degree pair \((72,108)\) or its
+transpose. This is a lower-bound dichotomy, not an upper bound. Proposition
+4.3's conclusion is not a Keller pair: the final map
+\(x\mapsto x^{-1},\ y\mapsto x^j y\) is not in
+\(\operatorname{Aut}\mathbf C[x,y]\), and changes the bracket to a power
+of \(x\); see [SECTION4-AUTOMATION.md](SECTION4-AUTOMATION.md) §1 and §3.
 
 **Sources.** GGV1 (published); the pinned arXiv text 1605.09430 (GGV2);
 arXiv:1708.07936 (GGV5); GGV6, *Pro Mathematica* 30 (2019), Proposition
@@ -252,8 +253,10 @@ arXiv:1708.07936 (GGV5); GGV6, *Pro Mathematica* 30 (2019), Proposition
 
 **Verdict.**
 
-- Necessary polygon restrictions for a standard minimal pair:
-  **UNCONDITIONAL** within each cited theorem's hypotheses.
+- The published GGV1 necessary restrictions for a T2 pair:
+  **UNCONDITIONAL** under T2's exact hypotheses.
+- The GGV2/GGV5/GGV6/GGV22 bounded residual lane: **CONDITIONAL on the exact
+  imported statements/version perimeter in the table and ledger**.
 - An exhaustive finite GGV polygon catalog for all counterexamples:
   **NOT ESTABLISHED**.
 - Proposition 4.3 as a universal reduction step: **FALSE AS STATED**. It is
@@ -426,8 +429,11 @@ Moreover \(\Lambda(F)\ge\beta\ge3\). Therefore, at a fixed \(d\):
 **Exact hypotheses.** A normalized complex Keller counterexample with the
 type data of Notations 2.3–2.4/Lemma 2.1/Statement 2.1; the audit-corrected
 forms of Sigray Proposition 5.3, Proposition 5.4, Statements 5.1–5.2, and
-Propositions 5.5–5.7; and the every-fiber mass identity. The equality
-\(M_F=b_F\) specifically uses Notation 5.2, Proposition 5.1(i),(iii), the
+Propositions 5.5–5.7; specifically, the pole-order identification also uses
+corrected Statement 3.18 and Proposition 5.3(v),(ix). It further uses the
+standard surface facts disclosed in §2.5 and the every-fiber defect argument.
+The equality
+\(M_F=b_F\) specifically uses Notations 5.1–5.2, Proposition 5.1(i),(iii), the
 ladder of Proposition 4.2 with \(h_0=g\), Notation 8.1, and Statement
 5.2(i)/Statement 2.1. It is not a consequence of the mass formula alone.
 
@@ -447,10 +453,13 @@ many branch values as well as finite puncture values.
 
 **Verdict.**
 
-- The every-fiber mass identity: **UNCONDITIONAL relative to Chau's
-  published theorem and the one-line repair written above**. At the artifact
-  level, `SOL-PROP58.md` remains stale: its header says all review patches
-  are incorporated although N2 is absent from its body. This master document
+- The every-fiber mass identity in the displayed Sigray notation:
+  **UNCONDITIONAL relative to the audit-corrected/rederived local
+  pole-identification inputs (Statement 3.18, Proposition 5.3(v),(ix), and
+  Propositions 5.5–5.6), the standard surface facts of §2.5, Chau's published
+  theorem, and the one-line repair written above**. At the artifact level,
+  `SOL-PROP58.md` remains stale: its header says all review patches are
+  incorporated although N2 is absent from its body. This master document
   supplies that missing micro-step; the status drift must still be fixed in
   the promoted source before external publication.
 - The complete entry parameterization and \(M=b\) pin:
@@ -466,7 +475,7 @@ characteristic-sequence configurations.
 ### T8. Tree calculus produces a case split, not yet a complete book
 
 **Statement available in the promoted perimeter.** Let
-\(s=|T_{a,\mathrm{pole}}|\).
+\(s=|T_{a,\mathrm{pole}}|\ge2\).
 
 1. The relevant pole/characteristic subtree has \(s\) leaves and at most
    \(s-1\) merges (`MP0`–`MP1`).
@@ -487,7 +496,7 @@ all-\(b_i=1\) entry hypothesis, Theorem MP and the depth theorem consume:
 - `P3`: the \(y\)-side convention that Proposition 9.2 characteristic
   sequences terminate at \((0,y)\), with the \((0,x)\) placement used in
   Statement 9.4;
-- `P4`: the entry pin—Notation 5.2, Proposition 5.1(i),(iii), Proposition
+- `P4`: the entry pin—Notations 5.1–5.2, Proposition 5.1(i),(iii), Proposition
   4.2 with \(h_0=g\), Notation 8.1, Statement 5.2(i), and Statement 2.1;
 - the corrected continuation/tree inputs Statements 3.9, 3.17(i), 3.18,
   Proposition 6.2, and the unaudited Proposition 6.8 used to manufacture a
@@ -548,7 +557,8 @@ The entry formulas of T7 are finite for fixed \(d\). If \(d\) is prime,
 \(d\) prime, the `P4` entry pin expanded in T8, and Proposition 8.4. To meet
 Proposition 8.4's hypothesis \(F\in T_a^\searrow\cap V_a\), the promoted
 argument also consumes Notation 6.1/Statement 6.1, the pole-to-
-\(\searrow\) glue in `SHEET6-A3L1-REVIEW.md` §1, and Statement 3.16. These
+\(\searrow\) glue in [SHEET6-A3L1-REVIEW.md](SHEET6-A3L1-REVIEW.md) §1,
+and Statement 3.16. These
 items were omitted from the older TDU perimeter list and are restored here.
 
 **Verdict.** Prime \(d\), single pole: **CONDITIONAL theorem on the exact
@@ -605,7 +615,8 @@ expressly over the **filed route perimeter**: a route outside the filed
 closure is classified as under-enumeration, not silently covered. At
 \(d=11\), an attempted program artifact constructs and stamps 159 diagnostic
 rows, but [TOWER-TD11.md](TOWER-TD11.md) §10 and
-`xmodel/sol-census-review.md` find no certified complete census; the latter
+[xmodel/sol-census-review.md](xmodel/sol-census-review.md) find no certified
+complete census; the latter
 classifies the attempted universal certificate as broken. The \(d=13\)
 sector is open (§13).
 
@@ -621,7 +632,8 @@ inside that perimeter.
 **Desired statement.** Every Keller counterexample has a normalized sheet
 configuration which occurs in an enumerated object \(B(d,E)\).
 
-**Verdict: NOT ESTABLISHED.** No such \(B(d,E)\) is defined, and the sector
+**Verdict: NOT ESTABLISHED.** No universal \(B(d,E)\) with the requested
+entry-specific, full-configuration semantics is defined, and the sector
 objects do not cover all possibilities:
 
 - single-pole composite configurations are not exhausted;
@@ -640,10 +652,11 @@ following disjunction.
 > its topological degree \(d\) is unchanged and \(d\ge6\). For every fixed
 > fiber it has a finite entry datum \(E\) satisfying T7. If it has one pole
 > and \(d\) is prime, the promoted single-pole theorem excludes it. If it is
-> multi-pole and all \(b_i=1\), its pure \(M=1\) ancestry has a finite local
-> marked-jump menu. In every other case—composite single-pole, off-axis, or
-> post-jump mixed continuation—the current reduction stops before an
-> exhaustive enumerated book.
+> multi-pole and all \(b_i=1\), it conditionally lands at its marked first
+> jump/root event in the finite local `BOOK(s,d)`. That local record is not a
+> complete downstream configuration. For composite single-pole, off-axis,
+> or post-jump mixed continuation, the current reduction stops before an
+> exhaustive full-configuration book.
 
 This statement does not use the GGV polygon restrictions after selecting the
 counterexample. That redundancy is evidence that the purported GGV-to-sheet
@@ -684,7 +697,7 @@ it as a black box should add them to its own detailed ledger.
 | **GGV22** | Guccione–Guccione–Horruitiner–Valqui, arXiv:2204.14178v1, “Increasing the degree of a possible counterexample to the Jacobian Conjecture from 100 to 108”: §2 degree dichotomy and Proposition 4.3 for \((A_0,m,n)=((8,28),3,2)\). | **preprint** | Load-bearing only for the repo's \((72,108)\) polygon claim. It is **not** load-bearing in the sheet/book reduction and cannot be used globally. | [CROSSCHECK.md](CROSSCHECK.md) validates independent transcriptions; [AUDIT.md](AUDIT.md) audits the downstream systems; neither proves Proposition 4.3's exhaustiveness. No promoted mathematical replacement exists. |
 
 For precision, GGV22 Proposition 4.3 concludes that in that one family there
-are \(P,Q\in L^{(1)}\) with \([P,Q]=x^2\) and either
+are \(P,Q\in L^{(1)}=K[x,x^{-1},y]\) with \([P,Q]=x^2\) and either
 
 \[
 \begin{aligned}
@@ -748,14 +761,14 @@ part of the chain's actual proof surface.
 |---|---|---|
 | [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) | A statement-by-statement audit of 72 items in §§2–5 and §6 through Proposition 6.2, thesis pp. 7–30: 21 verified, 33 verified-with-nit, 9 new errata, 2 known errata, 7 gaps; supplies several corrected derivations. | It does not cover Propositions 6.3–6.8 or §§7–9. Prop. 4.2, St. 3.14, and guarded Prop. 5.1 issues remain as stated. |
 | `xmodel/sol-h5a.md`, `xmodel/grok-h5a-review.md`, [AUDIT.md](AUDIT.md) §H5a | Forces the Q/jump/max interpretation of \(\kappa_F\) and repairs the H5a coherence problem; E5 is then applied. | The equal-index assertion \(U_{7C}\) is a separate conjecture, though the 17-cell \(td=7\) tower result does not need it. |
-| [SOL-PROP58.md](SOL-PROP58.md), [SOL-PROP58-REVIEW.md](SOL-PROP58-REVIEW.md) | Replaces the missing proof of Sigray Prop. 5.8 at every-fiber strength, completed in this master by T7's one-line N2 repair. | Imports Chau Theorem 4.4 and standard surface foundations. The source header overstates patch incorporation: N2 and the review's N1/N3/N4 wording/link cleanups remain stale. It explicitly does not repair off-axis, merge, suffix, or book completeness. |
+| [SOL-PROP58.md](SOL-PROP58.md), [SOL-PROP58-REVIEW.md](SOL-PROP58-REVIEW.md) | Replaces the missing proof of Sigray Prop. 5.8 at every-fiber strength, completed in this master by T7's one-line N2 repair. | Imports audit-corrected Statement 3.18, Proposition 5.3(v),(ix), and Propositions 5.5–5.6 for the local pole identification, plus Chau Theorem 4.4 and standard surface foundations for the global every-fiber argument. The source header overstates patch incorporation: N2 and the review's N1/N3/N4 wording/link cleanups remain stale. It explicitly does not repair off-axis, merge, suffix, or book completeness. |
 | [SHEET6-TDUNIFORM.md](SHEET6-TDUNIFORM.md), [SHEET6-TDU-REVIEW.md](SHEET6-TDU-REVIEW.md) | Closed-form single-pole entry table, \(M=b\), and the prime-\(d\) single-pole theorem. | Composite single-pole searches survive; no uniform finite residual; exact corrected thesis/promoted perimeter is expanded in T7–T9. |
 | [SHEET6-MULTIPOLE.md](SHEET6-MULTIPOLE.md), [SHEET6-MP-REVIEW.md](SHEET6-MP-REVIEW.md) | `MP0`–`MP9`: finite merge topology, entry pin, pure \(M=1\) anatomy, resonant first-jump calculus. | All-\(\mu\ge2\) mixed merges, post-jump \(M\ge2\) chains, general reachability, and coefficients remain. Its local marked-event landing theorem survives; only a **full-configuration** reading is broader than this perimeter. |
 | [SHEET6-DEPTH.md](SHEET6-DEPTH.md), [SHEET6-DEPTH-REVIEW.md](SHEET6-DEPTH-REVIEW.md) | Finite \(w\)-alphabet and depth-invariant local jump menu on the \(M=1\) axis. | Does not prove a finite full-configuration book off the axis or after a jump. Correct safe depth metadata are \(2\,\mathrm{gen}(W)+2\). |
 | [BOOK-ENUM.md](BOOK-ENUM.md), `cases/book_enum.py` | Concrete on-axis local-cell enumeration for \(6\le d\le14\). | Explicitly skips off-axis entries; does not cover all downstream mixed contexts; conservative cell aggregation is not a per-entry coverage certificate. |
 | [BOOK-OFFAXIS.md](BOOK-OFFAXIS.md) | Off-axis entry census and partial chain/price laws; special \(d=7\) classification. | Its §10 P5 says the generic grid has no completeness certificate. Earlier contradictory sections are superseded. |
 | [TOWER-UNIFORM.md](TOWER-UNIFORM.md) | Kills all 17 cells in the promoted \(d=7\) special route book. | Conditional on the Sigray trust set and filed route perimeter; not a universal off-axis landing theorem. |
-| [TOWER-TD11.md](TOWER-TD11.md), `cases/td11_census.py`, `xmodel/sol-census-review.md` | Entry-clash theorem and an attempted 159-row diagnostic census at an exact-core tier. | No certified complete \(d=11\) census exists; the review finds the universal seven-class certificate broken, and beyond-core, nested, and multi-word sectors remain open. |
+| [TOWER-TD11.md](TOWER-TD11.md), [cases/td11_census.py](cases/td11_census.py), [xmodel/sol-census-review.md](xmodel/sol-census-review.md) | Entry-clash theorem and an attempted 159-row diagnostic census at an exact-core tier. | No certified complete \(d=11\) census exists; the review finds the universal seven-class certificate broken, and beyond-core, nested, and multi-word sectors remain open. |
 
 ### 2.5 Uncited foundational inputs
 
@@ -810,15 +823,17 @@ One can re-normalize the selected counterexample independently in Sigray's
 sense, but then the GGV data are discarded. Calling this a sequential
 reduction is mathematically misleading.
 
-### CRITICAL 4 — no canonical book object and no book-landing theorem
+### CRITICAL 4 — no canonical universal endpoint or full-configuration landing theorem
 
 `B(td,entry)` does not occur as a defined object in the repository.
-`BOOK(s,td)` variously denotes a local jump-cell menu, an aggregate of cells
-over entry contexts, or an alleged set of full configurations. Those readings
-have different completeness obligations.
+The reviewed E/T/C′/J′/R/S specification does define `BOOK(s,td)` at the
+local marked-event tier and asserts conditional landing there. Elsewhere,
+“book” also denotes an aggregate of cells over entry contexts or an alleged
+set of full configurations. Those readings have different completeness
+obligations and do not define the requested universal \(B(d,E)\).
 
-A usable endpoint requires all of the following, none of which is presently
-stated in one theorem:
+A usable universal/full-configuration endpoint requires all of the following,
+none of which is presently stated in one theorem:
 
 1. a precise object \(B(d,E)\);
 2. a deterministic map from every normalized sheet configuration to a book
@@ -828,9 +843,10 @@ stated in one theorem:
    every cell kill; and
 5. a fail-closed coverage certificate showing that no transition was skipped.
 
-The natural first repair is a **marked-first-event landing theorem**: select
-the earliest resonant/\(M\ne1\) event, include its complete pole-side
-subtree, and explicitly type the unused branches and downstream continuation.
+The natural first repair is to turn the existing **marked-first-event landing
+theorem** into a typed, certified map: select the earliest resonant/
+\(M\ne1\) event, include its complete pole-side subtree, and explicitly type
+the unused branches and downstream continuation.
 
 ### CRITICAL 5 — the off-axis sector has no completeness theorem
 
@@ -864,8 +880,9 @@ configurations are expressly quarantined in:
 
 Thus `SHEET6-DEPTH.md` §8's “finite book for every \((s,d)\)” is an
 overstatement if read as a full-configuration theorem. Its own §9 gives the
-narrower, correct perimeter. A finite local first-jump menu may still be a
-theorem; equality with the implemented full book is not.
+narrower, correct perimeter. The conditional finite local first-jump landing
+theorem remains valid at its stated trust perimeter; equality with an
+implemented full-configuration book is not proved.
 
 ### CRITICAL 7 — finite-range enumeration cannot reduce JC2
 
@@ -882,7 +899,7 @@ Therefore “the books cover all configurations” is **not a theorem at every
 |---|---|---|---|
 | Entry layer, any fixed \(d\) | Necessary arithmetic entry data \(E\), conditional on T7's corrected inputs | Entry scans in bounded campaigns | **Yes for the necessary entry menu at a fixed \(d\); no claim of realizability or full routes** |
 | Single pole | Finite entry menu at fixed \(d\); prime entries killed | TDU searches at selected \(d\), with opens/frontiers in composite cases | **No** for composite \(d\) |
-| Multi-pole all \(b_i=1\) | Finite pure-\(M=1\) local marked-event menu at fixed \((s,d)\) | `BOOK-ENUM` only for \(d=6,\ldots,14\) | **No** as a full-configuration theorem; post-jump mixed contexts omitted |
+| Multi-pole all \(b_i=1\) | Conditional finite marked-event landing for every such configuration at fixed \((s,d)\) | `BOOK-ENUM` only for \(d=6,\ldots,14\) | **Yes only for local marked-event landing; no** as a full-configuration theorem because post-jump mixed contexts are omitted |
 | Multi-pole some \(b_i\ge2\) | No general finite-state/termination theorem | Generic bounded census is uncertified; special \(d=7\) route book only | **No** |
 | All \(d\) | No upper bound on \(d\) | No unbounded enumeration | **No** |
 
@@ -893,19 +910,22 @@ but composite rows with \(b\ge2\) survive. The current search record is:
 
 | \(d\) | reported surviving single-pole search classes | qualification |
 |---:|---:|---|
-| 6 | 4 | open |
-| 8 | 16 | open |
-| 9 | 16 | includes a hand-checked zero-charge chain |
-| 10 | 23 | open kinds appear |
-| 12 | 71 | lower bound; depth frontier hit |
-| 14 | 48 | open |
-| 15 | 87 | lower bound / frontier residue |
-| 16 | 212 | lower bound / frontier residue |
+| 6 | 4 | no solver-`OPEN` kind or depth frontier; survivor classes remain |
+| 8 | 16 | no solver-`OPEN` kind or depth frontier; survivor classes remain |
+| 9 | 16 | **two** hand-checked zero-charge classes; no solver-`OPEN` kind or frontier |
+| 10 | 23 | one solver-`OPEN` kind; no frontier |
+| 12 | 71 | four solver-`OPEN` kinds and one frontier hit; lower bound |
+| 14 | 48 | two solver-`OPEN` kinds; no depth frontier; still incomplete |
+| 15 | 87 | six solver-`OPEN` kinds and two frontier hits; lower bound |
+| 16 | 212 | 24 solver-`OPEN` kinds and six frontier hits; lower bound |
 
 Source: [SHEET6-TDUNIFORM.md](SHEET6-TDUNIFORM.md) §§4–7 and
 [SHEET6-TDU-REVIEW.md](SHEET6-TDU-REVIEW.md). These are search classes,
-not known realizable counterexamples, but they are enough to refute a claim
-of completed exclusion or completed finite-chain enumeration.
+not known realizable counterexamples. Their survival refutes completed
+**exclusion/emptiness**, not enumeration completeness by itself: a complete
+finite book may contain survivors. Completeness is separately defeated here
+by the explicit solver-`OPEN`/frontier states and the absence of a uniform
+depth/loop-closure theorem.
 
 ### HIGH 2 — the on-axis composite books are open
 
@@ -1007,8 +1027,9 @@ provenance and reject an uncovered transition.
    transport is defined.
 5. **“`BOOK(s,d)` is an exhaustive full-configuration book for every
    \((s,d)\).”** False as a reading of the current artifacts. The proved
-   closure is the \(M=1\) local menu; the files themselves exclude off-axis,
-   mixed, and \(M\ge2\) suffix sectors.
+   conditional result is local marked-event landing; the files themselves
+   exclude off-axis, mixed, and \(M\ge2\) suffix sectors from the stronger
+   full-configuration reading.
 6. **“Mixed all-\(\mu\ge2\) merges occur only for \(s\ge3\).”** False
    off-axis; two-pole examples occur when both entry multipliers are at least
    two.
@@ -1039,12 +1060,12 @@ Before another cell is killed, define four noninterchangeable objects:
 3. a **route book** within a stated transition grammar; and
 4. a **full-configuration book**.
 
-Then prove a marked-first-event landing theorem with exact input/output
-types. The proof must retain every unused branch and downstream continuation
-on which a later kill can depend. Implement it with a fail-closed compiler
-that emits a coverage certificate per entry and marks any unknown transition
-`OPEN`. This single repair would decide which existing cell kills are global
-and which are only local observations.
+Then formalize the existing conditional marked-first-event theorem as a total
+typed configuration-to-record map and extend its record through every
+downstream context needed by a kill. The proof/compiler must retain every
+unused branch, emit a coverage certificate per entry, and mark any unknown
+transition `OPEN`. This single repair would decide which existing cell kills
+are global and which are only local observations.
 
 ### 5.2 Highest-leverage mathematical repair: a cap-free `M>=2` state theorem
 

@@ -83,7 +83,13 @@ whether the polygon data matches what you intended.
 # Helali / Suzuki draft (2026-08-16; DC review before send; emails from
 # their artifact repos)
 
-To: [Helali], [Suzuki]
+To: hello@lumelia.io (Helali — via his site lumelia.io; no direct
+address published; fallback = GitHub issue on
+bilLkarkariy/jc2-72-108-exact-certificates)
++ Suzuki: NO public email (ORCID 0009-0002-0556-4967 private, no
+employment listed; artifact PDFs address-free) — reach via a polite
+Zenodo-record comment/request or an issue if he has a repo; or ask
+Helali if they are in contact (their artifacts appeared days apart)
 Subject: Coordinated note on closing the degree pair below 125?
 
 Dear Dr. Helali and Dr. Suzuki,
