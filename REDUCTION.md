@@ -29,15 +29,20 @@ What is presently supportable is weaker:
    this second normalization. The GGV data are therefore not an input to the
    sheet construction as currently written.
 3. A Sigray-normalized counterexample has pole/tree data and, after the
-   promoted repair of Sigray's unproved Proposition 5.8, a finite **entry
-   menu** at each fixed topological degree. This is the strongest general
-   finite reduction presently justified.
-4. The passage from an entry menu to a complete book is not general. The
-   implemented `BOOK(m,td)` skips every off-axis entry; its all-\(b=1\)
-   model also omits post-jump all-\(\mu\ge2\) / \(M\ge2\) continuations. The
-   generic off-axis audit expressly reports that no completeness certificate
-   exists for any \(b\ge2\) entry. Only bounded or specially hand-classified
-   sectors have been enumerated.
+   promoted repair of Sigray's unproved Proposition 5.8 (modulo the
+   review-identified one-line patch recorded in T7), a finite **entry menu**
+   at each fixed topological degree. This is the strongest general finite
+   reduction presently justified.
+4. The passage from an entry menu to a complete **full-configuration** book
+   is not general. In the all-\(b=1\) sector, `MP` plus the reviewed depth
+   theorem does assert a conditional landing of every configuration at a
+   marked first jump/root event in a finite local `BOOK(s,td)`. That is a
+   genuine local landing theorem. It does not classify every downstream
+   all-\(\mu\ge2\) / \(M\ge2\) continuation needed to treat the record as a
+   complete configuration. The implementation also skips every off-axis
+   entry, and the generic off-axis audit expressly reports that no
+   completeness certificate exists for any \(b\ge2\) entry. Only bounded or
+   specially hand-classified sectors have been concretely enumerated.
 5. No theorem bounds the topological degree of a counterexample above. A
    run over \(td=6,\ldots,14\) therefore cannot be an end-to-end reduction of
    JC2 even if every one of those books were complete.
@@ -61,7 +66,10 @@ that are actually false.
 Work over \(\mathbf C\). Write \(F=(f,g):\mathbf A^2\to\mathbf A^2\), with
 \(J(f,g)=1\). A **counterexample** means that \(F\) is not a polynomial
 automorphism. This is stronger than saying that \(f,g\) are not
-*linearly* equivalent to the coordinate pair.
+*linearly* equivalent to the coordinate pair. Sigray's statements allow any
+nonzero constant Jacobian. When a source linear map changes \(J=1\) to a
+different nonzero constant, a target coordinate scaling restores \(J=1\)
+without changing noninvertibility or \(td\).
 
 The **topological degree** is
 
@@ -160,18 +168,37 @@ not enough.
 **Statement.** Assume JC2 is false. Define
 
 \[
-B=\min\{\gcd(\deg P,\deg Q):(P,Q)\text{ is a counterexample}\}.
+B_{\mathrm{GGV}}=\min\{\gcd(\deg P,\deg Q):(P,Q)\text{ is a counterexample}\}.
 \]
 
-Then there exists a counterexample realizing \(B\). After a polynomial-ring
+Then there exists a counterexample realizing \(B_{\mathrm{GGV}}\). After a polynomial-ring
 automorphism, one can choose coprime \(m,n>1\) so that the selected pair is a
 minimal standard \((m,n)\)-pair, with the subrectangular/standard support
 properties of GGV.
 
-**Exact hypotheses.** Characteristic zero; a nonzero constant Jacobian;
-failure of JC2; and **global minimality among all counterexamples** for the
-selected pair. The standard-pair definition also requires the two valuation
-ratios to be \(m/n\) and the stated lower-edge sign conditions.
+**Exact hypotheses.** Over a characteristic-zero field \(K\), take
+\(P,Q\in K[x,y]\) with \([P,Q]\in K^*\). GGV Definition 4.3 requires
+coprime integers \(m,n>1\) and
+
+\[
+ \frac{v_{1,1}(P)}{v_{1,1}(Q)}
+ =\frac{v_{1,0}(P)}{v_{1,0}(Q)}=\frac mn,
+ \qquad
+ v_{1,-1}\!\left(\operatorname{en}_{1,0}(P)\right)<0.
+\]
+
+“Standard” adds
+\(v_{1,-1}(\operatorname{st}_{1,0}(P))<0\). “Minimal” here means the
+**global** condition
+
+\[
+ \gcd\bigl(v_{1,1}(P),v_{1,1}(Q)\bigr)=B_{\mathrm{GGV}},
+\]
+
+where the minimum is over all counterexamples, not merely the source/target
+equivalence class of a given pair. The subrectangular support properties are
+conclusions of the cited standardization results, not extra hidden
+hypotheses.
 
 **Source.** Guccione–Guccione–Valqui, *On the shape of possible
 counterexamples to the Jacobian Conjecture*, J. Algebra 471 (2017), §4,
@@ -249,7 +276,9 @@ equivalence class
 
 where \(K,L\) are polynomial automorphisms, for which
 \((\deg f^*,\deg g^*)\) is lexicographically minimal. After a nondegenerate
-linear source change, Sigray's Lemma 2.1 gives rectangular Newton polygons
+linear source change, followed if necessary by a target coordinate scaling
+that restores the Jacobian to one, Sigray's Lemma 2.1 gives rectangular
+Newton polygons
 with positive corners \((k_f,l_f)\), \((k_g,l_g)\),
 
 \[
@@ -261,17 +290,24 @@ and \(k_g/k_f\notin\mathbf N_{>0}\). Reducing the ratio defines a type
 \((\alpha,\beta)\) with \(2\le\alpha<\beta\) and
 \(\gcd(\alpha,\beta)=1\). The topological degree is unchanged.
 
-**Exact hypotheses.** A genuine nonautomorphic Keller pair; minimization
-under both source and target polynomial automorphisms; and a generic
-nondegenerate linear source map as in Lemma 2.1.
+**Exact hypotheses.** A genuine nonautomorphic pair with Jacobian in
+\(\mathbf C^*\); minimization under both source and target polynomial
+automorphisms; and a suitable nondegenerate linear source map as in Lemma
+2.1. If the convention \(J=1\) is retained literally, include the harmless
+target scaling just described.
 
 **Sources.** Sigray thesis, Notations 2.1–2.4 and Lemma 2.1, printed pp.
-7–9; [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) §§1–3 supplies an independent
-rederivation/correction audit of §§2–6.
+7–9; [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) supplies an independent
+rederivation/correction audit of §§2–5 and §6 only through Proposition 6.2
+(printed pp. 7–30).
 
-**Verdict: UNCONDITIONAL for existence of the normalized representative,
-relative to the internally rederived Lemma 2.1.** Polynomial automorphisms
-preserve the field extension and noninvertibility.
+**Verdict: UNCONDITIONAL as a mathematical implication if the cited theorem
+statements are accepted; evidence tier: unrefereed thesis plus published
+monograph.** Polynomial automorphisms preserve the field extension and
+noninvertibility. The internal audit rederives the concrete uses of
+Abhyankar's Lemma 18.2 and Proposition 17.4, but Abhyankar Theorems 18.13 and
+19.2 remain external inputs to Sigray Lemma 2.1; this is not a wholly internal
+proof.
 
 However, the following stronger link is **NOT ESTABLISHED**:
 
@@ -304,7 +340,8 @@ diagram is a fork, not a chain:
 \(td(F)\le5\), then \(F\) is invertible. Hence a counterexample has
 \(d=td(F)\ge6\).
 
-**Source.** H. Żołądek, *The Jacobian conjecture in two variables*,
+**Source.** H. Żołądek, *An application of Newton–Puiseux charts to the
+Jacobian problem*,
 Topology 47 (2008), 431–469, Theorem 6.12; local official PDF
 [refs/zoladek2008_official.pdf](refs/zoladek2008_official.pdf).
 
@@ -334,16 +371,19 @@ completeness assertions, the hypotheses listed in
 [SHEET6-MULTIPOLE.md](SHEET6-MULTIPOLE.md) §§1–4.
 
 **Sources.** Sigray thesis §§3–6 and the tree statements from §§7–9;
-[SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) audits only the printed pp. 7–30
-(§§2–6); [SHEET6-MULTIPOLE.md](SHEET6-MULTIPOLE.md) Theorem MP,
-`MP0`–`MP1`, supplies the promoted multi-pole synthesis.
+[SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) audits only §§2–5 and §6 through
+Proposition 6.2, printed pp. 7–30. In particular, Propositions 6.7–6.8 on
+printed pp. 33–34 are outside that audit even though Proposition 6.8 is used
+in `MP5`–`MP6` to manufacture a same-branch pole.
+[SHEET6-MULTIPOLE.md](SHEET6-MULTIPOLE.md) Theorem MP, `MP0`–`MP1`,
+supplies the promoted multi-pole synthesis.
 
 **Verdict: CONDITIONAL on the corrected Sigray/MP trust perimeter.** Basic
 Eggers–Wall-tree existence is standard, but the exact campaign subtree
 coverage and decorations consumed by the book are not available as one
-refereed theorem or one complete internal replacement. The audit of §§2–6
-does not audit all of §§7–9, and the thesis contains both errors and omitted
-proofs.
+refereed theorem or one complete internal replacement. The audit stops at
+Proposition 6.2; later §6 and all of §§7–9 remain outside its systematic
+scope, and the thesis contains both errors and omitted proofs.
 
 ---
 
@@ -383,22 +423,36 @@ Moreover \(\Lambda(F)\ge\beta\ge3\). Therefore, at a fixed \(d\):
 - only finitely many partitions \(d=\sum_i\Lambda_i\) occur; and
 - only finitely many entry data \(E\) occur.
 
-**Exact hypotheses.** A normalized complex Keller counterexample; the
-corrected forms of Sigray Proposition 5.3, Proposition 5.4, Statements
-5.1–5.2, Propositions 5.5–5.7; the every-fiber mass identity; and the
-pole-only hypotheses used for \(M_F=b_F\).
+**Exact hypotheses.** A normalized complex Keller counterexample with the
+type data of Notations 2.3–2.4/Lemma 2.1/Statement 2.1; the audit-corrected
+forms of Sigray Proposition 5.3, Proposition 5.4, Statements 5.1–5.2, and
+Propositions 5.5–5.7; and the every-fiber mass identity. The equality
+\(M_F=b_F\) specifically uses Notation 5.2, Proposition 5.1(i),(iii), the
+ladder of Proposition 4.2 with \(h_0=g\), Notation 8.1, and Statement
+5.2(i)/Statement 2.1. It is not a consequence of the mass formula alone.
 
 **Sources.** Sigray thesis pp. 25–28; [SHEET6-TDUNIFORM.md](SHEET6-TDUNIFORM.md)
-§§1–2 and [SHEET6-TDU-REVIEW.md](SHEET6-TDU-REVIEW.md) §§1–3;
+§§1–2, [SHEET6-AF3.md](SHEET6-AF3.md) §1, and
+[SHEET6-TDU-REVIEW.md](SHEET6-TDU-REVIEW.md) §§1–3 and §6;
 [SHEET6-MULTIPOLE.md](SHEET6-MULTIPOLE.md) `MP4`. Sigray prints no proof
 of Proposition 5.8. Its every-fiber form is replaced by
 [SOL-PROP58.md](SOL-PROP58.md), whose external input is Chau's published
-Theorem 4.4 excluding a vertical exceptional component.
+Theorem 4.4 excluding a vertical exceptional component. The review identifies
+one owed line not incorporated into that promoted file: before equating a
+generic fiber count with \(\deg(g|_{\overline R_a})\), prove that \(g\) is
+nonconstant on every component \(\Gamma\subset f^{-1}(a)\). If \(g\) were
+constant on \(\Gamma\), both \(df\) and \(dg\) would annihilate
+\(T\Gamma\), contradicting \(J(f,g)\ne0\). One must then avoid the finitely
+many branch values as well as finite puncture values.
 
 **Verdict.**
 
-- The every-fiber mass identity: **UNCONDITIONAL relative to the written
-  internal proof and Chau's published theorem**.
+- The every-fiber mass identity: **UNCONDITIONAL relative to Chau's
+  published theorem and the one-line repair written above**. At the artifact
+  level, `SOL-PROP58.md` remains stale: its header says all review patches
+  are incorporated although N2 is absent from its body. This master document
+  supplies that missing micro-step; the status drift must still be fixed in
+  the promoted source before external publication.
 - The complete entry parameterization and \(M=b\) pin:
   **CONDITIONAL on the corrected Sigray/TDU/MP package**.
 - Finiteness of the entry menu once those formulas hold: **UNCONDITIONAL**
@@ -423,6 +477,28 @@ characteristic-sequence configurations.
    \(M=1\) segments. Thus, for a fixed on-axis entry, the local menu for a
    marked first jump/root event is finite up to menu equivalence.
 
+**Exact hypothesis/trust crosswalk.** In addition to T6–T7 and the
+all-\(b_i=1\) entry hypothesis, Theorem MP and the depth theorem consume:
+
+- `P1`: Proposition 8.3's hypothesis under the promoted reading that its
+  printed typo means Notation 9.2 regularity;
+- `P2`: the exact root/order and eta/residue laws derived from the printed
+  identity in Proposition 8.1(iv);
+- `P3`: the \(y\)-side convention that Proposition 9.2 characteristic
+  sequences terminate at \((0,y)\), with the \((0,x)\) placement used in
+  Statement 9.4;
+- `P4`: the entry pin—Notation 5.2, Proposition 5.1(i),(iii), Proposition
+  4.2 with \(h_0=g\), Notation 8.1, Statement 5.2(i), and Statement 2.1;
+- the corrected continuation/tree inputs Statements 3.9, 3.17(i), 3.18,
+  Proposition 6.2, and the unaudited Proposition 6.8 used to manufacture a
+  same-branch pole; and
+- `H1`: Proposition 9.3(a)–(d) for MP9's root-residual clause, enlarged to
+  Proposition 9.3(a)–(m) for the depth theorem's chain, jump, and root
+  layers.
+
+The depth theorem expressly says that its local landing result does not use
+the separate E9/H2 mid-segment branch reading.
+
 **Sources.** [SHEET6-MULTIPOLE.md](SHEET6-MULTIPOLE.md) Theorem MP;
 [SHEET6-MP-REVIEW.md](SHEET6-MP-REVIEW.md) §5;
 [SHEET6-DEPTH.md](SHEET6-DEPTH.md) §§2–9; and
@@ -430,9 +506,13 @@ characteristic-sequence configurations.
 metadata are \(d_0\le2\,\mathrm{gen}(W)+2\), although the body of
 `SHEET6-DEPTH.md` §8 still prints the stale \(\mathrm{gen}(W)+2\).
 
-**Verdict: CONDITIONAL, and narrower than the headline in those files.** The
-finite result closes the pure \(M=1\) ancestry / marked-first-event menu. The
-same files expressly leave out:
+**Verdict: CONDITIONAL, and local rather than full-configurational.**
+`SHEET6-DEPTH.md` §8 explicitly states the named **finite jump-vertex book**
+theorem for every fixed \((s,d)\), and `SHEET6-DEPTH-REVIEW.md` §6 gives its
+finite E/T/C′/J′/R/S specification. Within the exact perimeter above, it
+asserts that every all-\(b=1\) configuration lands at its marked first
+jump/root event in that finite local book. The same files expressly leave
+out of a full downstream configuration:
 
 - downstream merges all of whose arrivals have \(\mu_e\ge2\);
 - a first resonant jump followed by an \(M\ge2\) chain and a later merge;
@@ -442,13 +522,15 @@ same files expressly leave out:
 See [SHEET6-MULTIPOLE.md](SHEET6-MULTIPOLE.md) §4,
 [SHEET6-DEPTH.md](SHEET6-DEPTH.md) §9,
 [BOOK-BASH-R2.md](BOOK-BASH-R2.md) §6, and
-[TEMPLATE-ATTACK.md](TEMPLATE-ATTACK.md) §§1c and 6. Consequently, the
-sentence “every \((s,d)\) reduces to a finite book” is defensible only if
-“book” means a finite local marked-event menu. It is **not established** if
-“book” means an exhaustive set of full configurations.
+[TEMPLATE-ATTACK.md](TEMPLATE-ATTACK.md) §§1c and 6. Consequently, “every
+\((s,d)\) reduces to a finite book” is a promoted conditional theorem when
+“book” means the local marked-event object. It is **not established** when
+“book” means an exhaustive set of complete configurations.
 
-The missing repair is a marked-first-event landing theorem that records the
-unused branches and all downstream context.
+The named theorem also does not supply a typed configuration-to-record map,
+a fail-closed coverage certificate, or a record of every unused branch and
+downstream context. Those are specification/provenance gaps, not grounds for
+denying the local landing theorem it actually states.
 
 ---
 
@@ -462,22 +544,33 @@ The entry formulas of T7 are finite for fixed \(d\). If \(d\) is prime,
 [SHEET6-TDUNIFORM.md](SHEET6-TDUNIFORM.md) §2 proves that every row has
 \(b=1\), and the single-pole Proposition 8.4 mechanism excludes it.
 
-**Verdict.** Prime \(d\), single pole: **CONDITIONAL theorem at the stated
-TDU/AF3 perimeter**. Composite \(d\): **no complete landing or exclusion**.
+**Exact hypotheses.** Besides T4 and T7, the prime kill assumes \(s=1\),
+\(d\) prime, the `P4` entry pin expanded in T8, and Proposition 8.4. To meet
+Proposition 8.4's hypothesis \(F\in T_a^\searrow\cap V_a\), the promoted
+argument also consumes Notation 6.1/Statement 6.1, the pole-to-
+\(\searrow\) glue in `SHEET6-A3L1-REVIEW.md` §1, and Statement 3.16. These
+items were omitted from the older TDU perimeter list and are restored here.
+
+**Verdict.** Prime \(d\), single pole: **CONDITIONAL theorem on the exact
+thesis/promoted perimeter just stated**. Composite \(d\): **no complete
+landing or exclusion**.
 The TDU breadth-first searches leave surviving classes at every composite
-\(d=6,8,9,10,12,14,15,16\); at \(d\ge12\) the reported counts are lower
-bounds because a depth frontier is hit. TDU itself states that there is no
-finite residual list uniform in \(d\).
+\(d=6,8,9,10,12,14,15,16\). Depth frontiers are hit at \(d=12,15,16\).
+At \(d=14\) the depth frontier is zero, but two solver kinds remain `OPEN`;
+the reported 48 classes are still not a completeness certificate. The TDU
+audit treats the \(d\ge12\) survivor totals as lower bounds and states that
+there is no finite residual list uniform in \(d\).
 
 #### T9(b). Multi-pole, all `b_i=1`
 
-T8 supplies a finite local marked-jump menu for a fixed entry under the H1
-and MP hypotheses. The implementation in
+T8 supplies, under its explicitly expanded P1–P4/H1 perimeter, conditional
+landing of every all-\(b_i=1\) configuration at a marked first jump/root
+event in a finite local book for each fixed \((s,d)\). The implementation in
 [cases/book_enum.py](cases/book_enum.py) enumerates conservative cells only
 for
 
 \[
-  6\le d\le14,qquad 2\le s\le\lfloor d/3\rfloor.
+  6\le d\le14,\qquad 2\le s\le\lfloor d/3\rfloor.
 \]
 
 It is not a full-configuration compiler: post-jump mixed/two-jump contexts
@@ -485,10 +578,11 @@ are quarantined. Nor does it preserve complete per-entry provenance: cells
 are aggregated over contexts and only a bounded prefix of entry tags is
 written to survivor records.
 
-**Verdict.** Landing in the implemented on-axis cells is
-**CONDITIONAL on belonging to the modeled pure sector and on the promoted
-MP/H1 perimeter**. Landing of every on-axis full configuration is
-**NOT ESTABLISHED**, especially for \(s\ge3\).
+**Verdict.** Landing in the abstract on-axis marked-event book is a
+**CONDITIONAL theorem under T8's exact perimeter for every fixed \(d\)**.
+Landing in the implemented on-axis artifact is available only for
+\(6\le d\le14\). Coverage of every on-axis **complete downstream
+configuration** is **NOT ESTABLISHED**, especially for \(s\ge3\).
 
 #### T9(c). Multi-pole, some `b_i>=2`
 
@@ -556,15 +650,20 @@ link has not been supplied.
 
 ## 2. Dependency ledger
 
+The requested classifications are used literally where justified. Abhyankar
+is a published monograph/lecture-note source whose journal-referee status was
+not established; it is labelled that way rather than inaccurately forced into
+“refereed-published.”
+
 ### 2.1 Externally published statements
 
 | ID | Statement actually consumed | Classification | Exact role in the chain | Campaign replacement / caveat |
 |---|---|---|---|---|
 | **GGV1** | J. A. Guccione, J. J. Guccione, C. Valqui, “On the shape of possible counterexamples to the Jacobian Conjecture,” *J. Algebra* 471 (2017), 13–74, [DOI 10.1016/j.jalgebra.2016.08.039](https://doi.org/10.1016/j.jalgebra.2016.08.039): §4 minimal pair and standard \((m,n)\)-pair; the standardization propositions; Cor. 5.21; later regular-corner restrictions. | **refereed-published** | T2, and the published part of T3. It proves existence of a globally minimal standard representative if JC2 is false. | No replacement needed. The quantifier is existential over all counterexamples. The repo's `/tmp/jcrefs/1401.1784.tex` is a pinned arXiv source copy; publication metadata are above. |
-| **GGV6** | J. A. Guccione, J. J. Guccione, R. Horruitiner, C. Valqui, “The Jacobian Conjecture: Approximate roots and intersection numbers,” *Pro Mathematica* 30(60) (2019), 51–89, especially Prop. 2.5 where invoked by the \((8,28)\) reduction. | **published journal** | A subsidiary input to the special GGV22 Proposition 4.3 branch, not to the sheet/book branch. | No internal replacement. It inherits the same bounded-family limitation as Proposition 4.3. |
-| **Chau99** | N. V. Chau, “Non-zero constant Jacobian polynomial maps of \(\mathbf C^2\),” *Ann. Polon. Math.* 71 (1999), 287–310, Theorem 4.4(E1), printed pp. 304–305; local text [refs/chau1999_apm71_full.pdf](refs/chau1999_apm71_full.pdf). The exceptional set is a finite union of polynomially parametrized curves whose component degree ratio is \(\deg f/\deg g>0\), excluding a vertical-line component. | **refereed-published** | The sole external input in the promoted every-fiber repair of Sigray Proposition 5.8, T7. | Consumed, not replaced. [SOL-PROP58.md](SOL-PROP58.md) §§6–7 proves that this is precisely the extra Keller input needed to remove the fiber defect. It does **not** repair any later book-completeness issue. |
-| **Ż08** | H. Żołądek, “The Jacobian conjecture in two variables,” *Topology* 47 (2008), 431–469, [DOI 10.1016/j.top.2008.04.001](https://doi.org/10.1016/j.top.2008.04.001), Theorem 6.12: a Jacobian map of topological degree at most five is invertible; local official text [refs/zoladek2008_official.pdf](refs/zoladek2008_official.pdf). | **refereed-published** | T5, hence \(d\ge6\). | This published theorem replaces the campaign's need to trust Sigray Theorem 9.1. Reported gaps in Żołądek's separate gcd-degree argument do not by themselves invalidate Theorem 6.12; the chain consumes only Theorem 6.12. |
-| **Abh77** | S. S. Abhyankar, *Expansion Techniques in Algebraic Geometry*, Tata Institute of Fundamental Research, 1977, especially Prop. 17.4 and Thms. 18.13, 19.2 as cited in Sigray Lemma 2.1. | **published monograph** | External foundation for the rectangular normal form in T4. | [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) rederives the concrete normal-form steps used by the campaign, with a symmetric-case nit, but is not a published replacement for the full Abhyankar results. |
+| **GGV6** | J. A. Guccione, J. J. Guccione, R. Horruitiner, C. Valqui, “The Jacobian Conjecture: Approximate roots and intersection numbers,” *Pro Mathematica* 30(60) (2019), 51–89, [publisher page](https://revistas.pucp.edu.pe/index.php/promathematica/article/view/21094), Prop. 2.5. Under its displayed homogeneous-bracket hypotheses with normalized corner \((a/l,2)\), it gives the arithmetic predecessor criterion that reduces the \((8,28)\) predecessor directions to \((1,-2)\) and \((1,-3)\). | **refereed-published** | A subsidiary input to the special GGV22 Proposition 4.3 branch, not to the sheet/book branch. | No internal replacement. It inherits the same bounded-family limitation as Proposition 4.3. |
+| **Chau99** | N. V. Chau, “Non-zero constant Jacobian polynomial maps of \(\mathbf C^2\),” *Ann. Polon. Math.* 71 (1999), 287–310, [DOI 10.4064/ap-71-3-287-310](https://doi.org/10.4064/ap-71-3-287-310), Theorem 4.4(E1), printed pp. 304–305; local text [refs/chau1999_apm71_full.pdf](refs/chau1999_apm71_full.pdf). For a nonzero constant-Jacobian pair monic in the required variable, the fiber-deficit set is a finite union of polynomially parametrized curves whose component degree ratio is \(\deg f/\deg g>0\), excluding a vertical-line component. Generic linear source change and target scalings supply the monicity used by the internal proof. | **refereed-published** | The sole external input in the promoted every-fiber repair of Sigray Proposition 5.8, T7. | Consumed, not replaced. [SOL-PROP58.md](SOL-PROP58.md) §§6–7 proves that this is precisely the extra Keller input needed to remove the fiber defect. It does **not** repair any later book-completeness issue. |
+| **Ż08** | H. Żołądek, “An application of Newton–Puiseux charts to the Jacobian problem,” *Topology* 47 (2008), 431–469, [DOI 10.1016/j.top.2008.04.001](https://doi.org/10.1016/j.top.2008.04.001), Theorem 6.12: a Jacobian map of topological degree at most five is invertible; local official text [refs/zoladek2008_official.pdf](refs/zoladek2008_official.pdf). | **refereed-published** | T5, hence \(d\ge6\). | This published theorem replaces the campaign's need to trust Sigray Theorem 9.1. Reported gaps in Żołądek's separate gcd-degree argument do not by themselves invalidate Theorem 6.12; the chain consumes only Theorem 6.12. |
+| **Abh77** | S. S. Abhyankar, *Lectures on Expansion Techniques in Algebraic Geometry*, TIFR Lectures on Mathematics and Physics 57, 1977, [official TIFR catalogue](https://mathweb.tifr.res.in/lectures.html), especially Prop. 17.4 and Thms. 18.13, 19.2 as cited in Sigray Lemma 2.1. | **published monograph / lecture notes** | External foundation for the rectangular normal form in T4. | [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) rederives the concrete Lemma 18.2/Prop. 17.4 uses, but leaves Thms. 18.13 and 19.2 as load-bearing external inputs; there is no promoted replacement for those two theorems. |
 
 The GGV1 proof also cites van den Essen's book, Corollary 10.2.21, for the
 subrectangular form, and Makar-Limanov for a standard support adjustment.
@@ -576,10 +675,30 @@ it as a black box should add them to its own detailed ledger.
 
 | ID | Statement actually consumed or invoked | Classification | Load-bearing? | Replacement status |
 |---|---|---|---|---|
-| **GGV2-pinned** | Guccione–Guccione–Valqui, arXiv:1605.09430v2, “The two-dimensional Jacobian conjecture and the lower side of the Newton polygon”: lower-side restrictions and admissible chains for a standard minimal pair; in particular the hypotheses stated near §2 and Prop. 3.12 used by the reduction code design. | **preprint (exact consumed version)** | Load-bearing only if T3 is stated with the lower-side/admissible-chain detail. It is not needed for the sheet entry reduction. | A journal successor, “The lower side of the Newton polygon of hypothetical counterexamples to the plane Jacobian conjecture,” appeared online in *Quaestiones Mathematicae* on 2026-07-28, [DOI 10.2989/16073606.2026.2701437](https://doi.org/10.2989/16073606.2026.2701437). The campaign has not diffed that revised-title publication against pinned arXiv v2. Until equivalence is checked, classify the proposition text actually consumed as **preprint**, not retroactively as the journal article. |
-| **GGV3** | Guccione–Guccione–Valqui, arXiv:1406.0886, “A system of polynomial equations related to the Jacobian Conjecture.” | **preprint** | Contextual for the polynomial-system lane; not load-bearing in JC2 \(\to\) sheet entries or books. | No promoted general replacement. The repo's systems and audits check particular transcriptions/cases, not this paper's full reduction. |
-| **GGV5** | Guccione–Guccione–Horruitiner–Valqui, arXiv:1708.07936, “Some algorithms related to the Jacobian Conjecture”: complete-chain algorithms and bounded family tables, including the tables used in the degree-150 farm. | **preprint** | Load-bearing for any assertion that the farm exhausts GGV families under a stated degree cutoff; not load-bearing for T4–T9. | [SECTION4-AUTOMATION.md](SECTION4-AUTOMATION.md) and code reproduce bounded tables/reductions, but do not replace the all-input mathematical enumeration theorem. |
+| **GGV2-pinned** | Guccione–Guccione–Valqui, arXiv:1605.09430v2, “The two-dimensional Jacobian conjecture and the lower side of the Newton polygon.” For a direction between \((0,-1)\) and \((1,-1)\), nonmonomial homogeneous \(R\), homogeneous \(G\), \([G,R]=R^i\), and positive directional value, Prop. 3.12 gives the three finite factor/predecessor alternatives used by the \((8,28)\) proof; the paper's lower-side/admissible-chain results assume a standard minimal pair. | **preprint (exact consumed version)** | Load-bearing only if T3 is stated with the lower-side/admissible-chain detail or the bounded Proposition 4.3 derivation. It is not needed for the sheet entry reduction. | A journal successor, “The lower side of the Newton polygon of hypothetical counterexamples to the plane Jacobian conjecture,” appeared online in *Quaestiones Mathematicae* on 2026-07-28, [DOI 10.2989/16073606.2026.2701437](https://doi.org/10.2989/16073606.2026.2701437). The campaign has not diffed that revised-title publication against pinned arXiv v2. Until equivalence is checked, classify the proposition text actually consumed as **preprint**, not retroactively as the journal article. |
+| **GGV3** | Guccione–Guccione–Valqui, arXiv:1406.0886v3, “A system of polynomial equations related to the Jacobian Conjecture.” Theorem 1.9/Corollary 1.12, over a characteristic-zero domain/algebraic closure, give an equivalence between failure of JC and existence of Laurent-series data solving their canonical system for integers \(m,n\) with neither dividing the other. | **preprint** | Contextual for the polynomial-system lane; not load-bearing in JC2 \(\to\) sheet entries or books, and not used in the polygon statement of Proposition 4.3. | No promoted general replacement. The repo's bracket systems and audits check particular constructions/cases, not this paper's global equivalence. |
+| **GGV5** | Guccione–Guccione–Horruitiner–Valqui, arXiv:1708.07936v1, “Some algorithms related to the Jacobian Conjecture.” Assuming JC false and a GGV1 standard minimal pair, Theorem 2.20 attaches a finite complete chain satisfying its fourteen conditions; Algorithm 8 outputs all admissible complete chains under an input bound on \(v_{1,1}(A_0)\). The reported run yields the bounded tables used for the \(\max(\deg P,\deg Q)\le150\) farm. | **preprint** | Load-bearing for any assertion that the farm exhausts GGV families under that stated degree cutoff; not load-bearing for T4–T9 and not an all-degree list. | [SECTION4-AUTOMATION.md](SECTION4-AUTOMATION.md) and code reproduce bounded tables/reductions, but do not replace the mathematical enumeration theorem for arbitrary input bounds. |
 | **GGV22** | Guccione–Guccione–Horruitiner–Valqui, arXiv:2204.14178v1, “Increasing the degree of a possible counterexample to the Jacobian Conjecture from 100 to 108”: §2 degree dichotomy and Proposition 4.3 for \((A_0,m,n)=((8,28),3,2)\). | **preprint** | Load-bearing only for the repo's \((72,108)\) polygon claim. It is **not** load-bearing in the sheet/book reduction and cannot be used globally. | [CROSSCHECK.md](CROSSCHECK.md) validates independent transcriptions; [AUDIT.md](AUDIT.md) audits the downstream systems; neither proves Proposition 4.3's exhaustiveness. No promoted mathematical replacement exists. |
+
+For precision, GGV22 Proposition 4.3 concludes that in that one family there
+are \(P,Q\in L^{(1)}\) with \([P,Q]=x^2\) and either
+
+\[
+\begin{aligned}
+N(P)&=\{(0,0),(1,0),(8,14),(8,16),(0,8)\},\\
+N(Q)&=\{(0,0),(2,1),(12,21),(12,24),(0,12)\},
+\end{aligned}
+\]
+
+or the same two sets with \((0,8)\) and \((0,12)\), respectively, removed.
+This exact conclusion is why the proposition cannot be substituted for a
+constant-Jacobian sheet-normalization theorem.
+
+The 2013 Guccione–Guccione–Valqui article “A differential equation for
+polynomials related to the Jacobian conjecture,” *Pro Mathematica* 27,
+83–98, is **refereed-published/contextual** here. GGV22 invokes it in its
+broader bounded-degree elimination history, but no statement from it is a
+book-landing link in T4–T10.
 
 No statement from GGV3, GGV5, or GGV22 turns the bounded GGV family lane
 into an upper bound on polynomial degree or topological degree. Their presence
@@ -588,7 +707,8 @@ in a dependency graph must not be read that way.
 ### 2.3 Sigray thesis statements
 
 I. Sigray, *Jacobian trees and their applications*, ELTE PhD thesis (2008),
-is an **unrefereed thesis**. The local source is
+[official ELTE record](https://edit.elte.hu/xmlui/handle/10831/45438), is an
+**unrefereed thesis**. The local source is
 [refs/sigray_full.pdf](refs/sigray_full.pdf). The relevant statements and
 their replacement status are:
 
@@ -740,6 +860,14 @@ nothing that truncates topological degree.
 Therefore “the books cover all configurations” is **not a theorem at every
 \(d\)**, even before the sector omissions are considered.
 
+| Sector | What is finite in theorem form? | What is actually enumerated? | Exhaustive full configurations? |
+|---|---|---|---|
+| Entry layer, any fixed \(d\) | Necessary arithmetic entry data \(E\), conditional on T7's corrected inputs | Entry scans in bounded campaigns | **Yes for the necessary entry menu at a fixed \(d\); no claim of realizability or full routes** |
+| Single pole | Finite entry menu at fixed \(d\); prime entries killed | TDU searches at selected \(d\), with opens/frontiers in composite cases | **No** for composite \(d\) |
+| Multi-pole all \(b_i=1\) | Finite pure-\(M=1\) local marked-event menu at fixed \((s,d)\) | `BOOK-ENUM` only for \(d=6,\ldots,14\) | **No** as a full-configuration theorem; post-jump mixed contexts omitted |
+| Multi-pole some \(b_i\ge2\) | No general finite-state/termination theorem | Generic bounded census is uncertified; special \(d=7\) route book only | **No** |
+| All \(d\) | No upper bound on \(d\) | No unbounded enumeration | **No** |
+
 ### HIGH 1 — composite single-pole configurations remain open
 
 The promoted TDU arithmetic proves a strong prime-\(d\) single-pole theorem,
@@ -772,16 +900,17 @@ on-axis survivor counts are:
 | 8 | 1 | residue-A |
 | 9 | 2 | residue-A in the \(s=2\) and \(s=3\) panels |
 | 10 | 2 | residue-A and `IIa(2,5,1)@w3` |
-| 12 | 12 | six listed panel blocks after four L6 kills |
+| 12 | 12 | \(4+2+6\) cells in the \(s=2,3,4\) panels |
 | 14 | 5 | four cells at \(s=2\), one residue-A at \(s=3\) |
 
 Source: [TEMPLATE-ATTACK.md](TEMPLATE-ATTACK.md) §§2–3. These 23 cells are
 local/template survivors inside the modeled perimeter, not 23 exhaustive
 full configurations. Twenty-two lie at composite \(d>6\).
 
-The direct answer to the campaign question is: **nothing currently kills
-the on-axis books at \(d=8,9,10,12,14\)**. `SHEET6-DIRECTIONB.md` kills only
-the pure-zero-tail stratum of residue-A and explicitly leaves the
+The direct answer to the campaign question is: **no current argument kills
+any on-axis panel completely at \(d=8,9,10,12,14\)**. Many individual cells
+have been killed, but the cells in the table remain. `SHEET6-DIRECTIONB.md`
+kills only the pure-zero-tail stratum of residue-A and explicitly leaves the
 forced-nonzero-tail locus alive. Residue-A survives in every nonempty modeled
 panel. Beyond \(d=14\), no concrete on-axis JSON book has been generated.
 

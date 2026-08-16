@@ -551,3 +551,9 @@
   claimable, uses idle capacity); (3) residue-A + reduction-chain lanes launched in
   parallel w/ uniform-td (Sol co-researcher x2: REDUCTION.md + algebraization kill);
   (4) Sol = equal co-researcher standing; loop directive simplified.
+- 2026-08-16 ~13:40: Pilot 2h: TIMEOUT at 92.7GB (rc=124) — no quick win, but box01
+  turns out to have 991G RAM (assumption corrected in FLEET next edit). PILOT12
+  launched: 12h cap, -t 8, apples-to-apples vs the R1 12h baseline that timed out
+  on the RAW system. Verdict inside 12h = compression helps; timeout = mod-p
+  compression dead-end => Sol instrument round 2 (char-0-direct / structural /
+  park). Box02/Box03 stay STOPPED (box01's 991G suffices for this).
