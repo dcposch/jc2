@@ -994,3 +994,53 @@ at 02:52 and 02:53). The chamber {all 38s = 0, tf40 & tg40 pairs =
 0, tg0_40 loaded} is DEAD mod p105337: strong evidence, pending the
 banked p200257 twin + char-0 for promotion (§6.V semantics). The
 surviving low-support chambers narrow to b1/b2/b3/a1/a2 + a0.
+
+## 7.S1 Exact symbolic band elimination (the compression instrument)
+
+[2026-08-15/16, instrument decision xmodel/sol-instrument.md §C;
+owner: cases/directionb_compress.py (phases elim | emit | guards).]
+
+OBJECT: the nolog window (D21, §7 pins substituted, 76 rows after
+C10.6 dies) is AFFINE-LINEAR in the 42 occurring high tails
+(asserted: no high*high monomial exists below slot 21 since
+43 + 43 = 86 > 84). Fraction-free Bareiss steps
+R_t' = c_p R_t - A_t(lows) R_p with CONSTANT pivot coefficients c_p
+that are variety-units (single w-monomial weight x unit of the
+etale algebra E on ALL FOUR h-sign branches -- verified per pivot;
+no denominators beyond the tower) eliminate the highs exactly,
+branch-free. Residual = the compatibility system on the low
+parameters + dead-stretch + w1, w2 (+ the untouched low bands).
+
+STATUS AT BANKING: elimination RUNNING detached
+(/tmp/compress_elim.log): 10/~16 pivots done, all unit-certified on
+4 branches -- tf1/tf2_44 (Row_12), tf1/tf2_46 (Row_14), tf1/tf2_43
++ tf1/tf2_48 (Row_16), tf1_45 + tf1_50 (Row_18); remaining by
+tau-symmetry: tf2_45, tf2_50, then tf1/tf2_47, tf1/tf2_52 (Row_20)
+= 16 = the claim-4 generic high-rank. STRUCTURE: every unit pivot
+is f-side; the tg-side high coefficients are MIXED-w constants
+(h-fold makes them two-weight sums) -- correctly REFUSED as pivots
+(a mixed-w constant can vanish at special w: not a variety-unit).
+SHADOW PROJECTION (support-only replay, 2 s): residual support
+~2.0e3 var-monomials, max var-degree 5 -- the Sol §C STOP criteria
+(1e6 terms / 67,698 raw pinned mass) project as PASSED by two
+orders of magnitude; exact counts on completion.
+
+STAGED (module complete, runs on elimination completion): emission
+directionb_compressed[.ms|_p105337|_p200257|_ctl0*|_a3_p105337]
+with the banked xN naming; guards: paren sweep; independent scalar
+REPLAY of the exact pivot sequence == symbolic residual (2 primes x
+3 points incl. all-lows-0); emitted-string round-trip; rank(A) ==
+16 == #pivots and rank([A|b]) jump <=> compatibility values != 0;
+back-substitution kills every pivot row INCLUDING the +42 row;
+claim-4 seed protocol (pins-adapted, seeds 1/5); ctl0 origin;
+a3-chamber samples + the emitted _a3 msolve reproduction lane.
+
+PRE-REGISTERED A/B GATE (3x, per the instrument decision): the
+p105337 compressed lane runs on box01 (nearly idle) with a 2 h cap
+against the R1 baseline = the uncompressed nolog lanes' 12 h
+timeouts. PROMOTE the instrument to big iron iff the compressed
+lane returns a verdict inside the cap OR -v 2 telemetry shows >= 3x
+same-degree matrix/RSS improvement; else the instrument stays
+local-tier (Sol §C: acceleration failure is NOT a mathematical
+survival verdict). Box01 pilot is the coordinator's launch; nothing
+runs locally beyond the exact-python elimination and guards.
