@@ -542,3 +542,11 @@
   emit log shows 0 FAIL). The 3x gate: R1 baseline = 12h timeout, so ANY verdict
   within the 2h cap clears the gate with margin; timeout at 2h = inconclusive
   (extend to 12h apples-to-apples before iron decision).
+- 2026-08-16 ~13:30: DC directives executed: (1) GCP confirmed fully shut down (both
+  instances TERMINATED; 2 disks remain ~300G — deletion = DC's call; AWS-ONLY policy
+  in FLEET.md); (2) AWS spare capacity: Box02 restart DECISION GATED on pilot verdict
+  (minutes away) — if compressed viable: full compressed campaign on Box02 + char-0
+  certification wave for banked farm EMPTYs on Box03 (converts mod-p evidence toward
+  claimable, uses idle capacity); (3) residue-A + reduction-chain lanes launched in
+  parallel w/ uniform-td (Sol co-researcher x2: REDUCTION.md + algebraization kill);
+  (4) Sol = equal co-researcher standing; loop directive simplified.

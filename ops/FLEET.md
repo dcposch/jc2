@@ -28,11 +28,10 @@ exact small linear algebra (sympy, <8 GB) is fine.
   (cached in /tmp/box03_ip; currently 54.167.215.189). ~$4.03/h —
   STOP IT when the stuck7 lanes finish. msolve from Ubuntu apt.
   Job dir: ~/stuck7 (out/ + lanes.log).
-- **ultramem** (GCP, project dclanker, zone us-central1-a, instance
-  ultramem-1): access ONLY via
-    gcloud compute ssh ultramem-1 --project dclanker --zone us-central1-a
-  (plain ssh key not authorized; sshd sometimes starves under load —
-  retry later, don't fight it). Runs sat23.
+- **ultramem** (GCP): RETIRED 2026-08-16 per DC (AWS-only policy).
+  Instance stopped/terminated; two disks remain in dclanker (jc-b 200G,
+  ultramem-1 100G, ~$15-30/mo) holding old run outputs — deletion is
+  DC's call, not the loop's.
 
 ## Run conventions (remote)
 - Launch every lane orphan-safe and self-recording:
