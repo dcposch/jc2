@@ -92,7 +92,7 @@ Zenodo-record comment/request or an issue if he has a repo; or ask
 Helali if they are in contact (their artifacts appeared days apart)
 Subject: Coordinated note on closing the degree pair below 125?
 
-Dear Dr. Helali and Dr. Suzuki,
+Dear Billel Helali,  [honorifics dropped: both profile as independent researchers, no doctorates in evidence; single-recipient form with forward-to-Suzuki line — final as pbcopy'd 2026-08-16]
 
 I have been working on the (72,108) degree pair for the plane Jacobian
 Conjecture. My note (attached) settles subcase (2) of Proposition 4.3
