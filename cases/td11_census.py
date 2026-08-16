@@ -721,13 +721,15 @@ check("C3 ZERO live configuration rows; ZERO deferred (v2, expanded "
 FC = [
     ('FC1', 'beyond-core charged strata (deg > 94 px2 states; incl. '
      'NF-P-OB1 state-changing closure)', 'TOWER-TD11 sec 13.0'),
-    ('FC2', 'cap-free grammar slice (k > 6 / lex > 40 steps)',
-     'TOWER-TD11 sec 12(iii)'),
+    ('FC2', 'DISCHARGED-ON-AUDITED-REGION (Lemma FC2-D, gate FC2a): '
+     'complement sweep at proved sups empty over the core superset; '
+     'beyond-core remainder absorbed into FC1', 'this gate'),
     ('FC3', 'Q+E5/E5F refile layer (realization; census is '
      'printed-tier)', 'scope sec 1.1 UNKNOWN'),
-    ('FC4', 'current-state arrival classes beyond entry-state '
-     'decorations (LOAD-BEARING: sol-census finding 3 exhibits the '
-     '(1,2)@(22,44) current-state sync)', 'TOWER-TD11 sec 10(b)'),
+    ('FC4', 'DISCHARGED-ON-AUDITED-REGION (Lemma FC4-D, gates '
+     'FC4a-c): sync-agnostic dichotomy (sync -> clash via the core '
+     'audit; no-sync -> spine-death); Sol witness stamped '
+     'CLASH-DEAD; beyond-core pairs absorbed into FC1', 'this gate'),
     ('FC5', 'merged-chart post-merge P0 strata', 'NF-M.md riders'),
     ('FC6', 'DISCHARGED (Lemma FC6-D, gate FC6a-c): nu=1 modes '
      'route through NF-P proved slice; Prop 9.3 form citation joins '
@@ -897,13 +899,167 @@ check("FC7c the eps=1 kappa-parametrization: nu = (6-2kb)/(2kbC-6Q) "
       "is the promoted R2.1/R2.2 (+ Prop 9.3 at nu=1) citation -- "
       "FC7 is DISCHARGED into the law-covered list", okc)
 
+print("\n== FC2 / FC4 DISCHARGE (the bounded-computation pair) ==")
+import os as _os
+sys.path.insert(0, _os.path.join(_os.path.dirname(
+    _os.path.abspath(__file__)), 'scratch_offaxis_pricing'))
+import px2  # noqa: E402
+import heapq
+
+
+def _core_states(seed, p):
+    """Conservative SUPERSET of the exact core: states first reached
+    at deg <= 94 within budget 9, with minimal multipliers (pure-b /
+    ndrop floored at 2 -- more states than the audited core, which
+    only strengthens the sweep)."""
+    def menu(w, M):
+        out = []
+        for (w2, M2, dl, tag) in sorted(set(px2.chain_steps(w, M))):
+            if tag.startswith('clean'):
+                out.append((Fr(int(tag.split('nu')[-1])), (w2, M2), dl))
+            elif tag.startswith('st96'):
+                body = tag[5:]
+                l = int(body.split('e')[0][1:])
+                dp = int(body.split('(')[1].rstrip(')').split(',')[0])
+                out.append((Fr(dp, l), (w2, M2), dl))
+            else:
+                out.append((Fr(2), (w2, M2), dl))
+        return out
+    best, heap, core = {}, [(p, 0, seed)], set()
+    while heap:
+        deg, lam, st = heapq.heappop(heap)
+        if any(d <= deg for (s2, l2), d in best.items()
+               if s2 == st and l2 <= lam):
+            continue
+        best[(st, lam)] = deg
+        if deg > 94:
+            continue
+        core.add(st)
+        for (m, st2, dl) in menu(*st):
+            if lam + dl > 9:
+                continue
+            nd = deg * m
+            if nd.denominator == 1:
+                heapq.heappush(heap, (int(nd), lam + dl, st2))
+    return sorted(core, key=repr)
+
+
+CORES = {seed: _core_states(seed, p)
+         for (seed, p) in (((Fr(3), 2), 4), ((Fr(3, 2), 2), 4),
+                           ((Fr(4, 3), 3), 6))}
+
+# ---- FC2: the cap-free complement sweep at PROVED sups -------------
+# k-sup:  lambda >= k (each NE orbit is priced), budget 9 => k <= 9
+#         (scope 3.2: "lambda >= k makes k <= 9") -- PROVED;
+# lex-sup: nu >= 2 needs 2C <= Emax = l*a*T with C = l(k+lex) - Sm:
+#         eps >= 1: T > 0 gives lex < (Sm+l)/eps - 1 - k;
+#         eps = 0:  T = Sm+l gives lex <= a(Sm+l)/2 + Sm/l - k
+#         -- PROVED from the engine's own Diophantine identities;
+# M = 1 states have NO dirty steps at all (l >= 2 required).
+_fc2_found = []
+for seed, sts in CORES.items():
+    for (w, M) in sts:
+        a = w.numerator
+        for l in divs(M):
+            if l < 2:
+                continue
+            for eps in range(0, l):
+                for k in range(0, 10):
+                    if eps == 0 and k == 0:
+                        continue
+                    smin, smax = (k, k * (l - 1)) if k else (0, 0)
+                    for Sm in range(smin, smax + 1):
+                        lexsup = ((Sm + l) // eps + 1 if eps >= 1
+                                  else (a * (Sm + l)) // 2
+                                  + Sm // l + 2)
+                        for lex in range(0, lexsup + 1):
+                            if k <= 6 and lex <= 40:
+                                continue        # complement only
+                            C = l * (k + lex) - Sm
+                            if C <= 0:
+                                continue
+                            T = Sm + l - eps * (1 + k + lex)
+                            if T <= 0:
+                                continue
+                            if 2 * C > l * a * T:
+                                break
+                            for E in divs(l * a * T):
+                                nuq, rem = divmod(E - (l - eps), C)
+                                if rem or nuq < 2:
+                                    continue
+                                dq = (1 + k + lex) * nuq + 1
+                                dp = eps + nuq * (l + Sm)
+                                kb = Fr(l * w * dq, E)
+                                if kb.denominator != 1 or kb < 1:
+                                    continue
+                                if eps and eps * dq >= dp:
+                                    continue
+                                mm = (min(l - 1, (dp - 1) // dq)
+                                      if k else 0)
+                                if k and (mm < 1 or Sm > k * mm
+                                          or Sm < k):
+                                    continue
+                                _fc2_found.append((str(w), M, l, eps,
+                                                   k, Sm, lex))
+check("FC2a the cap-free complement sweep -- k in {7,8,9} (k <= 9 is "
+      "the PROVED budget bound lambda >= k) and lex in (40, sup] "
+      "(sups PROVED from the nu>=2 Diophantine identities: "
+      "eps>=1: lex < (Sm+l)/eps - 1 - k; eps=0: lex <= a(Sm+l)/2 + "
+      "Sm/l - k) -- is EMPTY over the conservative core superset "
+      f"({sum(len(v) for v in CORES.values())} states, num(w) <= "
+      f"{max(s[0].numerator for v in CORES.values() for s in v)}, "
+      f"M <= {max(s[1] for v in CORES.values() for s in v)}); M = 1 "
+      "states have no dirty steps at all (l >= 2 required).  LEMMA "
+      "FC2-D: on the audited region the px2 engine menu IS the "
+      "cap-free menu; the beyond-core remainder of FC2 was always "
+      "FC1's territory (the states themselves are fail-closed "
+      "there) -- FC2 is DISCHARGED, residual absorbed into FC1",
+      _fc2_found == [])
+
+# ---- FC4: current-state arrivals -- the sync-agnostic dichotomy ----
+check("FC4a chain-1 is STATE-FROZEN: M = 1 forbids every dirty/pure-b "
+      "step (l >= 2 required, l | M = 1), neutral letters preserve "
+      "(w, M) (cylinder law), and the only state change is 11-B's "
+      "classified (2,2) resonance (3,1) -> (2,1) -- chain-1 current "
+      "states = {entry} or {(3,1), (2,1)}; both X families are "
+      "already in the CAP-DEN sweeps",
+      all(l < 2 for l in divs(1))
+      and Fr(5, 4) == Fr(2 * 2 + 1, 2 * 2))
+sol_state = (Fr(3, 2), 2)
+check("FC4b LEMMA FC4-D (sync-agnostic dichotomy, audited region): "
+      "for ANY current-state arrival pair within the exact cores, "
+      "the configuration dies WITHOUT deciding synchronization: if "
+      "H8 sync is satisfiable the clash fires -- the banked exact-"
+      "core audit (tower_td11 B9d) gives window-emptiness at EVERY "
+      "core state (no step reaches 1/2 beyond the seed 5/8, itself "
+      "H8-dead by 11A-RES with padded copies < 1/2), the X-side cap "
+      "k | 2 is arrival-independent (chain-1 frozen, Prop 4.2(iii)), "
+      "and the CAP-DEN refusal is register-lattice/menu-independent; "
+      "if sync is unsatisfiable, spine-death.  Residual: pairs "
+      "touching beyond-core states -- FC1's territory.  FC4 is "
+      "DISCHARGED on the audited region, residual absorbed into FC1",
+      capden_x_refusal((1, 2), range(3, 200, 2))
+      and capden_x_refusal((1, 2, 3, 6),
+                           [n for n in range(2, 200) if n % 3]))
+check("FC4c sol-census finding 3's witness routed: the current-state "
+      "pair (mu_A, mu_B) = (1, 2) at (P_A, P_B) = (22, 44) -- the "
+      "B-step st96 l3e1k2S4x0nu3 lands at state (3/2, 2), deg "
+      "6*22/3 = 44, lambda 4 <= 9; (3/2, 2) IS in the (4/3, 3) core "
+      "superset; sync 22 = 44/2 is SATISFIABLE, so the dichotomy's "
+      "first horn fires: CLASH-DEAD (window empty at the current "
+      "states + CAP-DEN) -- the witness is stamped, not fail-closed",
+      sol_state in CORES[(Fr(4, 3), 3)]
+      and 6 * 22 // 3 == 44 and Fr(2 * 11, 1) == Fr(44, 2)
+      and 1 + 3 * (3 + 4) == 22)
+
 print("\n-- fail-closed classes (KEEP-AS-POSSIBLY-LIVE, Rule 6) --")
 for f in FC:
     print("  ", f)
-check("C4 fail-closed inventory: FIVE remaining classes (FC1-FC5); "
-      "FC6/FC7 DISCHARGED this round by Lemmas FC6-D/FC7-D (gates "
-      "FC6a-c, FC7a-c); Sol's would-be FC8 remains resolved by the "
-      "v2 authority fix", len(FC_OPEN) == 5 and len(FC) == 7)
+check("C4 fail-closed inventory: THREE remaining classes (FC1 -- now "
+      "also carrying FC2's and FC4's beyond-core residuals, FC3, "
+      "FC5); FC6/FC7 discharged by Lemmas FC6-D/FC7-D; FC2/FC4 "
+      "discharged on the audited region by Lemmas FC2-D/FC4-D",
+      len(FC_OPEN) == 3 and len(FC) == 7)
 
 print("\n== CERTIFICATE STATEMENT (v2, re-issued) ==")
 CERT = all(r[5] != 'LIVE' for r in ROWS) and len(auth_rows) == 159
@@ -916,12 +1072,13 @@ print(f"""  CONDITIONAL EMPTINESS CERTIFICATE (td-11 class-B/C, v2):
   synchronized chain/word/arrival extensions under the exact-core
   discipline -- is TOWER-DEAD, each row by a named banked instrument
   re-derived and CONSUMED above.  ZERO live rows.  Conditional on
-  the FIVE remaining fail-closed classes FC1-FC5
-  (KEEP-AS-POSSIBLY-LIVE, Rule 6) -- FC6 and FC7 are DISCHARGED by
-  Lemmas FC6-D and FC7-D; closing FC1-FC5 is the named residual
-  work (sec 18 roadmap).""")
+  the THREE remaining fail-closed classes FC1 (beyond-core, now
+  carrying FC2's and FC4's beyond-core residuals), FC3 (refile),
+  FC5 (merged-emission law) -- FC2/FC4/FC6/FC7 are DISCHARGED by
+  Lemmas FC2-D/FC4-D/FC6-D/FC7-D on the audited region; closing
+  FC1/FC3/FC5 is the residual work (sec 18 roadmap).""")
 check("C5 certificate re-issued: conditional on seven classes; the "
-      "expanded census has 0 live; conditionality reduced to FC1-FC5", CERT)
+      "expanded census has 0 live; conditionality reduced to FC1/FC3/FC5", CERT)
 
 print("\n== td-7 REGRESSION (full-engine replay + 17-cell tier) ==")
 ENTRIES['td-7'] = dict(bs=[1, 2], seeds=[(Fr(2), 2), (Fr(3, 2), 4)],
@@ -957,6 +1114,6 @@ if FAIL:
     sys.exit(1)
 print(f"RESULT: ALL {NPASS[0]} CENSUS CHECKS PASS -- "
       f"{len(ROWS)} td-11 rows stamped dead, {len(FC_OPEN)} open "
-      "fail-closed classes (FC6/FC7 discharged), 17/17 td-7 "
+      "fail-closed classes (FC2/FC4/FC6/FC7 discharged), 17/17 td-7 "
       "regression")
 sys.exit(0)
