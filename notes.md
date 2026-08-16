@@ -475,13 +475,14 @@
   cert (unknown degree). Parallel: td-11 OPEN-residue (NF-Z-dagger) + td-13 13-2b recon.
 
 ## STANDING QUEUE (loop reads this; keep current)
-- ACTIVE SOLVER: Box02 (4 R2 mains + 2 order-portfolio + a0/a0-ctl0; leaves2 re-emission in flight); Box03 (c2.q SOLO per Sol concurrency warning; 2 REDs re-queue after); box01 farm; ultramem sat23 (ON SECOND PRIME p105673 — CHECK p105337 OUTCOME next tick)
-- ACTIVE THEORY: block2 errata repair (24 rows reopened: 21 outer-merge via NF-M + 3 discrete alternatives; tower agent); leaves2 hierarchical tau-orbit re-emission (window agent)
-- NEXT THEORY: TD-11 CENSUS COMPILER (all three quotient lemmas now banked — build it consuming NF-D caps + NF-M types + NF-P + dagger + clash theorem, fail-closed on beyond-core); td-13 program NEEDS NEW MATH (13B-SAFE-SUFFIX + MAX/SIM-X); beyond-core; general-dagger gap
-- NEXT SOLVER (UNHOLD per Sol): reduced mixed-volume homotopy pilot; Macaulay targeted sidecar; l12 3-chart post-drain
-- WRITING: paper-2 Part I + abstract (GATED on screen verdict); A-prime note; paper-1 v3 HELD for GGV
-- PERIODIC: accel+lateral scan w/ Sol (~6h; last 19:06); fleet cost sweep; GGV inbox check
+- ACTIVE (live lanes; see ops/status.sh): box01 pilot (compressed p105337, cap ~13:40) + fc1_audit (445 states); Sol x2 (REDUCTION.md consolidation, residue-A algebraization kill)
+- ON PILOT VERDICT: viable => Box02 restart (compressed campaign) + Box03 restart (char-0 certification wave for farm EMPTYs); fail => Sol instrument round 2
+- NEXT THEORY: uniform-td track (FC1-R -> FC-batch review gauntlet; td-11 refile prep; td-13 new math: 13B-SAFE-SUFFIX + MAX/SIM-X); l12 eta0 certification (folded into algebraization lane route c)
+- WRITING: paper-2 Part I (gated on residue-A verdict); A-prime note; paper-1 v3 HELD for GGV
+- COMMS (DC decides): Horruitiner add-to-thread rec'd; Helali/Suzuki coordinated-note thread rec'd; drafts on request
+- PERIODIC: accel+lateral scan w/ Sol ~6h; fleet cost sweep; GCP disks (300G) deletion = DC call
 - GATED ON DC: anything external; msolve upstream report (HOLD)
+
 - 2026-08-14 ~20:15: LEAF a3 CONFIRMED EMPTY AT TWO PRIMES (GB [1] at p105337 instant +
   p200257 confirm). Chamber map: 13 pre-dead (theorems) + a3 double-EMPTY; remaining =
   b1,b2,b3,a1,a2,a0 (6 lanes running, new-style). If all leaves empty at 2 primes =>
