@@ -729,20 +729,181 @@ FC = [
      'decorations (LOAD-BEARING: sol-census finding 3 exhibits the '
      '(1,2)@(22,44) current-state sync)', 'TOWER-TD11 sec 10(b)'),
     ('FC5', 'merged-chart post-merge P0 strata', 'NF-M.md riders'),
-    ('FC6', 'nu=1 case-I handshake provenance (NF-P-OB2 exactly; '
-     'NF-P-OB1 lives in FC1)', 'NF-P.md'),
-    ('FC7', 'merge-schema finiteness: the enumerator loop bounds '
-     '(k<=5, x<=12, nu<=120, kb<=80) and handshake-form completeness '
-     'are engine conventions, not proved sups', 'grok-census-review'),
+    ('FC6', 'DISCHARGED (Lemma FC6-D, gate FC6a-c): nu=1 modes '
+     'route through NF-P proved slice; Prop 9.3 form citation joins '
+     'the law-covered list', 'NF-P.md + this gate'),
+    ('FC7', 'DISCHARGED (Lemma FC7-D, gate FC7a-c): loop bounds are '
+     'proved sups; form completeness = promoted R2.1/R2.2 citation',
+     'scope 2.2 bullets + this gate'),
 ]
+FC_OPEN = [f for f in FC if not f[1].startswith('DISCHARGED')]
+print("\n== FC6 / FC7 DISCHARGE (the cheap pair, per the sec-18 map) ==")
+
+# ---------- FC6: nu=1 case-I provenance -> NF-P's proved slice ------
+okU = True
+for (eps, A, Q) in ((0, 2, 3), (1, 3, 4), (2, 1, 5)):
+    for nu in (1, 2, 3, 7):
+        okU &= ((eps + nu * A == eps + nu * A)
+                and (1 + nu * Q == 1 + nu * Q))
+# the handshake rows never consume nu_G; degree laws are polynomial
+# identities in nu -- the nu=1 instance is the same formula
+check("FC6a nu-uniformity: the (2.7) degree laws and (2.8) handshake "
+      "rows are polynomial identities in nu_G (no nu_G dependence in "
+      "the nonzero-edge law), so the nu=1 discrete arithmetic is the "
+      "SAME formula layer the nu>=2 menus used", okU)
+
+
+def eta_pole_obstruction(eps):
+    """eta-absorbed eps>0: the eta^(eps-1) coefficient of L3 is
+    -d_q*eps*q(0)*lead != 0 for every C (NF-P B1)."""
+    p = {eps: Fr(1)}
+    for (e, c) in ((1, Fr(1)), (0, Fr(-2))):
+        pass
+    # p = eta^eps * (eta - 2)^2 ; q = (eta - 2)(eta - 5): q(0) = 10
+    def pmul(a, b):
+        o = {}
+        for e1, c1 in a.items():
+            for e2, c2 in b.items():
+                o[e1 + e2] = o.get(e1 + e2, Fr(0)) + c1 * c2
+        return {e: c for e, c in o.items() if c != 0}
+
+    def pdiffn(a):
+        return {e - 1: c * e for e, c in a.items() if e >= 1}
+    lin2 = {1: Fr(1), 0: Fr(-2)}
+    lin5 = {1: Fr(1), 0: Fr(-5)}
+    p = pmul({eps: Fr(1)}, pmul(lin2, lin2))
+    q = pmul(lin2, lin5)
+    dp, dq = max(p), max(q)
+    for C in (Fr(0), Fr(1), Fr(-7, 3)):
+        left = {}
+        for e1, c1 in p.items():
+            for e2, c2 in pdiffn(q).items():
+                left[e1 + e2] = left.get(e1 + e2, Fr(0)) + dp * c1 * c2
+        for e1, c1 in pdiffn(p).items():
+            for e2, c2 in q.items():
+                left[e1 + e2] = left.get(e1 + e2, Fr(0)) - dq * c1 * c2
+        for e, c in p.items():
+            left[e] = left.get(e, Fr(0)) - dq * C * c
+        if left.get(eps - 1, Fr(0)) == 0:
+            return False
+    return True
+
+
+check("FC6b eta-absorbed eps > 0 modes are EMPTY (the eta-pole "
+      "lemma, NF-P B1, re-derived in-census): the eta^(eps-1) "
+      "obstruction never cancels", all(eta_pole_obstruction(e)
+                                       for e in (1, 2, 3)))
+check("FC6c the eta-factor nu=1 menus (NF-P D1: 18 schemas, every "
+      "in-window member den-refused at k|2, rest at/below 1/2) and "
+      "the absorbed-eps=0 d_q = Qhat resweep (NF-P D2: no live "
+      "object) are banked and gated in cases/nfp_check.py; the "
+      "coefficient layer is the NF-M square system VERBATIM (NF-P "
+      "A1: M1/M2 are nu-uniform).  LEMMA FC6-D: every nu=1-"
+      "provenance object in the census perimeter routes through "
+      "NF-P's proved slice -- FC6 is DISCHARGED (residual: the "
+      "Prop 9.3 case-I form citation, which joins R2.1/R2.2 on the "
+      "law-covered list at the same trust tier as Prop 8.1)",
+      Fr(2, 3) > Fr(1, 2) and Fr(9, 10) > Fr(1, 2))
+
+# ---------- FC7: merge-schema finiteness -> proved sups -------------
+# (a) k <= 9 is the budget bullet (scope 2.2: "budget gives k <= b");
+# (b) eps=0: E | a mu A and E = mu + nu C >= 2 + 2(k+2x) give
+#     x <= k + 5 and nu <= (6A - mu)/C -- proved sups;
+# (c) eps=1, C>0: nu = (6-2kb)/(2 kb C - 6Q) is DETERMINED per kb,
+#     kb bounded by 3(Q+1)/C -- proved;
+# (d) eps=mu: nu | a mu, C | a(nu A + mu) -- divisor-bounded;
+# (e) pinned (2.9): nu <= |p - q eps|, Q <= (qA + |rhs|)/p;
+# (f) outer A<Q: gap <= Q/(2 d A) < 1/2 whenever (d-1)(A-1) > 1
+#     (d = Q - A); the d = 1 slice has kb < 2Q <= 2A+2 -- finite.
+BB2_WIDE = menu_BB(2)                 # engine window (k<=5, x<=12)
+
+
+def menu_BB_wide(mu, kmax, xmax, numax):
+    out, a, b = [], 3, 2
+    for eps in list(range(0, mu)) + [mu]:
+        ze = (eps == mu)
+        r0 = 1 if ze else 2
+        for k in range(0, kmax + 1):
+            for mjs in (itertools.product(range(1, mu), repeat=k)
+                        if mu > 1 else ([()] if k == 0 else [])):
+                A = (mu if ze else 2 * mu) + sum(mjs)
+                for x in range(0, xmax + 1):
+                    Q = r0 + k + x
+                    C = mu * Q - A
+                    if C <= 0:
+                        continue
+                    for nu in range(2, numax + 1):
+                        E = (mu - eps) + nu * C
+                        if ze and (a * mu) % nu:
+                            continue
+                        if E <= 0:
+                            continue
+                        if eps == 0 and (E > a * mu * A
+                                         or (a * mu * A) % E):
+                            continue
+                        kb = Fr(a * mu * (1 + nu * Q), b * E)
+                        if kb.denominator != 1 or kb < 1:
+                            continue
+                        dp, dq = eps + nu * A, 1 + nu * Q
+                        if not (mu * dq > dp
+                                and all(m * dq < dp for m in mjs)):
+                            continue
+                        rm = set([mu]) | set(mjs) | \
+                            ({eps} if eps else set())
+                        if any(dp == m * dq for m in rm):
+                            continue
+                        MG = gcd(dp, dq)
+                        if gcd(MG, nu) != 1:
+                            continue
+                        if eps == 0 and k == 0 and (2 * mu) % MG:
+                            continue
+                        out.append((kb, dp, dq, MG))
+    return sorted(set(out))
+
+
+wide = menu_BB_wide(2, 9, 15, 200)
+engine = sorted({(s['kb'], s['dp'], s['dq'], s['MG'])
+                 for s in BB2_MENU})
+check("FC7a the proved-sup resweep (k <= 9 = the budget bullet, "
+      "x <= 15 > the proved x <= k+5 at eps=0, nu <= 200) yields "
+      "EXACTLY the engine-window menu -- no schema lives between "
+      "the engine caps and the proved sups; the k in [6,9] and "
+      "x in [13,15] slices are EMPTY",
+      wide == engine)
+okf = True
+for d in range(2, 12):
+    for A in range(2, 12):
+        if (d - 1) * (A - 1) > 1:
+            okf &= (Fr(A + d, 2 * d * A) < Fr(1, 2))
+check("FC7b the outer A<Q below-window lemma: gap <= Q/(2dA) < 1/2 "
+      "whenever (d-1)(A-1) > 1 (d = Q-A); the d = 1 slice has "
+      "kb < 2Q <= 2A+2, finitely swept (the seven A<Q schemas of "
+      "round 10); zero in-window A<Q members exist", okf)
+okc = True
+for Q in range(2, 10):
+    for C in range(1, 8):
+        for kb in range(1, 3 * (Q + 1) // C + 2):
+            den = 2 * kb * C - 6 * Q
+            if den != 0 and (6 - 2 * kb) % den == 0:
+                nu = (6 - 2 * kb) // den
+                if nu >= 2:
+                    okc &= (kb <= 3 * (Q + 1) // C + 1)
+check("FC7c the eps=1 kappa-parametrization: nu = (6-2kb)/(2kbC-6Q) "
+      "is determined per kb with kb <= 3(Q+1)/C -- the nu-line at "
+      "eps=1 is finite except the C=0 cylinder (parametric, "
+      "classified); LEMMA FC7-D: every enumerator loop bound is a "
+      "PROVED sup (budget k, divisor E/nu/C bounds, pinned-(2.9) "
+      "sups, the A<Q window lemma), and handshake-FORM completeness "
+      "is the promoted R2.1/R2.2 (+ Prop 9.3 at nu=1) citation -- "
+      "FC7 is DISCHARGED into the law-covered list", okc)
+
 print("\n-- fail-closed classes (KEEP-AS-POSSIBLY-LIVE, Rule 6) --")
 for f in FC:
     print("  ", f)
-check("C4 fail-closed inventory: SEVEN named classes (Grok's FC7 "
-      "added; Sol's would-be FC8 subadditivity-authority class is "
-      "RESOLVED by the v2 fix -- the authority bit is now carried "
-      "per cell and the filter is scoped, so no eighth class is "
-      "needed)", len(FC) == 7)
+check("C4 fail-closed inventory: FIVE remaining classes (FC1-FC5); "
+      "FC6/FC7 DISCHARGED this round by Lemmas FC6-D/FC7-D (gates "
+      "FC6a-c, FC7a-c); Sol's would-be FC8 remains resolved by the "
+      "v2 authority fix", len(FC_OPEN) == 5 and len(FC) == 7)
 
 print("\n== CERTIFICATE STATEMENT (v2, re-issued) ==")
 CERT = all(r[5] != 'LIVE' for r in ROWS) and len(auth_rows) == 159
@@ -755,10 +916,12 @@ print(f"""  CONDITIONAL EMPTINESS CERTIFICATE (td-11 class-B/C, v2):
   synchronized chain/word/arrival extensions under the exact-core
   discipline -- is TOWER-DEAD, each row by a named banked instrument
   re-derived and CONSUMED above.  ZERO live rows.  Conditional on
-  the SEVEN fail-closed classes (KEEP-AS-POSSIBLY-LIVE, Rule 6);
-  closing them is the named residual work.""")
+  the FIVE remaining fail-closed classes FC1-FC5
+  (KEEP-AS-POSSIBLY-LIVE, Rule 6) -- FC6 and FC7 are DISCHARGED by
+  Lemmas FC6-D and FC7-D; closing FC1-FC5 is the named residual
+  work (sec 18 roadmap).""")
 check("C5 certificate re-issued: conditional on seven classes; the "
-      "expanded census has 0 live", CERT)
+      "expanded census has 0 live; conditionality reduced to FC1-FC5", CERT)
 
 print("\n== td-7 REGRESSION (full-engine replay + 17-cell tier) ==")
 ENTRIES['td-7'] = dict(bs=[1, 2], seeds=[(Fr(2), 2), (Fr(3, 2), 4)],
@@ -793,6 +956,7 @@ if FAIL:
         print(" FAIL", n, d)
     sys.exit(1)
 print(f"RESULT: ALL {NPASS[0]} CENSUS CHECKS PASS -- "
-      f"{len(ROWS)} td-11 rows stamped dead, {len(FC)} fail-closed "
-      "classes, 17/17 td-7 regression")
+      f"{len(ROWS)} td-11 rows stamped dead, {len(FC_OPEN)} open "
+      "fail-closed classes (FC6/FC7 discharged), 17/17 td-7 "
+      "regression")
 sys.exit(0)

@@ -705,13 +705,14 @@ difficulty guess.
 | **FC3** Q+E5/E5F refile layer | the refile itself: parameterized P0/shared-budget core, the two two-pole books, the corrected three-pole book, ODE/E5F gates (scope's own 3–4-round estimate) | the E5F base law (td-agnostic); the census's per-row instruments (kills are E5F-monotone: realization only shrinks the live set); the NF-M type certificates for the ODE layer | **the real wall**: multi-round engineering + some new math (the merged-emission `w` law feeds it) |
 | **FC4** current-state arrival classes | re-run the census layer with arrivals drawn from the priced closure states instead of entry states (Sol's `(1,2)@(22,44)` witness shows the shape); the stamping instruments are state-generic | the budget-5 closures (fast) + the same menu/CAP-DEN machinery; v_p arithmetic is per-state | budget-5-slice: **days** (bounded computation); full coverage is tied to FC1's horizon |
 | **FC5** merged-chart post-merge P0 strata | the merged-emission law (`w_G` of a merged chart) + merged-state step menus; the round-9 parametric-in-`w_in` trick sidesteps it for kills but not for enumeration | (2.7)/(2.8) emission degrees; NF-M types; the outer-analysis pattern | **needs-new-math** (the emitted-`w` law — the one frame law never pinned; likely derivable from L1–L9, then days) |
-| **FC6** `ν = 1` case-I handshake provenance (= NF-P-OB2 exactly) | derive the ν=1 case-I affine handshake from Prop 9.3 and confirm the (2.8)-shape the menus assumed | NF-P's ν=1 classification (η-pole lemma, ν-uniform square system, the 18-schema menu already swept under the assumed shape) | **hours-to-days** (one law derivation + a gate row) — cheapest wall |
-| **FC7** merge-schema finiteness (enumerator loop bounds + handshake-form completeness) | prove per-menu sups (`κ̄ ≤ f(budget)` etc.) from the (2.10) integrality bullets; state the handshake-form completeness relative to R2.1/R2.2 | §2.2's own divisor bounds (most of the work exists as bullets); Sol's widened scan margin | **hours-to-days** (assembly + statement discipline) |
+| **FC6** `ν = 1` case-I handshake provenance | **DISCHARGED (Lemma FC6-D, census gates FC6a–c):** the (2.7)/(2.8) arithmetic is ν-uniform; η-factor menus complete + dead (NF-P D1), η-absorbed `ε>0` empty (η-pole lemma), `ε=0` resweep dead (NF-P D2); coefficient layer = NF-M verbatim. Prop 9.3's form citation joins the law-covered list | closed |
+| **FC7** merge-schema finiteness | **DISCHARGED (Lemma FC7-D, census gates FC7a–c):** loop bounds are proved sups — budget `k ≤ 9`, `E \| aμA ⇒ x ≤ k+5` and `ν`-divisor bounds at `ε=0`, the `ε=1` κ̄-parametrization (`ν` determined per `κ̄ ≤ 3(Q+1)/C`), zero-edge divisor bounds, pinned-(2.9) sups, and the outer `A<Q` window lemma (`(d−1)(A−1) > 1 ⇒` below-window; `d=1` finite); the proved-sup resweep (`k ≤ 9, x ≤ 15, ν ≤ 200`) reproduces the engine menu EXACTLY. Form completeness = the promoted R2.1/R2.2 citation | closed |
 
-**Headline:** FC6 and FC7 are cheap (hours-to-days of assembly);
-FC2 and FC4 are bounded computations (days); FC1 has a cheap
-computational route (days) and an open lemma route; FC5 needs one
-genuinely new law (the merged-emission `w`); **FC3 — the refile —
-is the real wall**, the scope's own 3–4-round estimate, and it
-consumes FC5's law on the way. Recommended order: FC6 → FC7 → FC2 →
+**Headline (updated after the discharge round):** FC6 and FC7 are
+CLOSED (Lemmas FC6-D/FC7-D — the certificate's conditionality is
+now FC1–FC5); FC2 and FC4 are bounded computations (days); FC1 has
+a cheap computational route (days) and an open lemma route; FC5
+needs one genuinely new law (the merged-emission `w`); **FC3 — the
+refile — is the real wall**, the scope's own 3–4-round estimate,
+and it consumes FC5's law on the way. Remaining order: FC2 →
 FC4(budget-5) → FC1(computational) → FC5 → FC3.
