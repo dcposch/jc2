@@ -514,3 +514,9 @@
   c1.RED 495G, c2.q 495G — decomposition-only, deprioritized); Box02 healthy: b2/b3 +
   R2 mains + portfolio grinding at 1736G, caps Aug16 ~03:50; a3 still the only chamber
   verdict. NEXT: census repair (the misapplied divisibility row), then re-review.
+- 2026-08-15 ~22:45: FC ladder: 4 of 7 discharged in one evening (FC6,FC7,FC2,FC4);
+  certificate now conditional on FC1 (beyond-core, days-scale computational route),
+  FC5 (merged-emission w law — ONE new lemma), FC3 (refile — the wall). Next theory
+  slots: FC1 computation, FC5 lemma attack. Screens ~5h to caps; big scan at expiry.
+  After FC1+FC5: the td-11 panel rests on the refile alone — same shape as td-7's
+  endgame before its census. Review gauntlet for the FC-discharge batch queued.
