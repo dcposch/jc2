@@ -526,3 +526,7 @@
   #3 this week: always verify remote launches by process count); shipped + launched
   properly, 1 proc confirmed. On clean FC1-R: certificate conditional on REFILE ALONE
   => FC-batch review gauntlet (all 6 discharge lemmas + FC5 law, dual review).
+- 2026-08-16 ~00:15: FC1 lane launch saga (3 attempts: missing script, missing px2 dep,
+  stale-snapshot race) — now VERIFIED running on box01 (import OK, proc confirmed,
+  log streaming). Ops lesson compounding: remote lanes need dep-manifest + import
+  smoke test in the launch script itself.
