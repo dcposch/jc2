@@ -602,9 +602,12 @@ any \(d\).
 The \(d=7\) §11a census is a special cap-free inversion producing 17 cells,
 and [TOWER-UNIFORM.md](TOWER-UNIFORM.md) kills all 17. But that theorem is
 expressly over the **filed route perimeter**: a route outside the filed
-closure is classified as under-enumeration, not silently covered. The
-\(d=11\) census does not exist ([TOWER-TD11.md](TOWER-TD11.md) §10), and the
-\(d=13\) sector is open (§13).
+closure is classified as under-enumeration, not silently covered. At
+\(d=11\), an attempted program artifact constructs and stamps 159 diagnostic
+rows, but [TOWER-TD11.md](TOWER-TD11.md) §10 and
+`xmodel/sol-census-review.md` find no certified complete census; the latter
+classifies the attempted universal certificate as broken. The \(d=13\)
+sector is open (§13).
 
 **Verdict.** A general off-axis book-landing theorem is
 **NOT ESTABLISHED**. The \(d=7\) endpoint is **CONDITIONAL on the filed
@@ -659,10 +662,10 @@ not established; it is labelled that way rather than inaccurately forced into
 
 | ID | Statement actually consumed | Classification | Exact role in the chain | Campaign replacement / caveat |
 |---|---|---|---|---|
-| **GGV1** | J. A. Guccione, J. J. Guccione, C. Valqui, “On the shape of possible counterexamples to the Jacobian Conjecture,” *J. Algebra* 471 (2017), 13–74, [DOI 10.1016/j.jalgebra.2016.08.039](https://doi.org/10.1016/j.jalgebra.2016.08.039): §4 minimal pair and standard \((m,n)\)-pair; the standardization propositions; Cor. 5.21; later regular-corner restrictions. | **refereed-published** | T2, and the published part of T3. It proves existence of a globally minimal standard representative if JC2 is false. | No replacement needed. The quantifier is existential over all counterexamples. The repo's `/tmp/jcrefs/1401.1784.tex` is a pinned arXiv source copy; publication metadata are above. |
-| **GGV6** | J. A. Guccione, J. J. Guccione, R. Horruitiner, C. Valqui, “The Jacobian Conjecture: Approximate roots and intersection numbers,” *Pro Mathematica* 30(60) (2019), 51–89, [publisher page](https://revistas.pucp.edu.pe/index.php/promathematica/article/view/21094), Prop. 2.5. Under its displayed homogeneous-bracket hypotheses with normalized corner \((a/l,2)\), it gives the arithmetic predecessor criterion that reduces the \((8,28)\) predecessor directions to \((1,-2)\) and \((1,-3)\). | **refereed-published** | A subsidiary input to the special GGV22 Proposition 4.3 branch, not to the sheet/book branch. | No internal replacement. It inherits the same bounded-family limitation as Proposition 4.3. |
-| **Chau99** | N. V. Chau, “Non-zero constant Jacobian polynomial maps of \(\mathbf C^2\),” *Ann. Polon. Math.* 71 (1999), 287–310, [DOI 10.4064/ap-71-3-287-310](https://doi.org/10.4064/ap-71-3-287-310), Theorem 4.4(E1), printed pp. 304–305; local text [refs/chau1999_apm71_full.pdf](refs/chau1999_apm71_full.pdf). For a nonzero constant-Jacobian pair monic in the required variable, the fiber-deficit set is a finite union of polynomially parametrized curves whose component degree ratio is \(\deg f/\deg g>0\), excluding a vertical-line component. Generic linear source change and target scalings supply the monicity used by the internal proof. | **refereed-published** | The sole external input in the promoted every-fiber repair of Sigray Proposition 5.8, T7. | Consumed, not replaced. [SOL-PROP58.md](SOL-PROP58.md) §§6–7 proves that this is precisely the extra Keller input needed to remove the fiber defect. It does **not** repair any later book-completeness issue. |
-| **Ż08** | H. Żołądek, “An application of Newton–Puiseux charts to the Jacobian problem,” *Topology* 47 (2008), 431–469, [DOI 10.1016/j.top.2008.04.001](https://doi.org/10.1016/j.top.2008.04.001), Theorem 6.12: a Jacobian map of topological degree at most five is invertible; local official text [refs/zoladek2008_official.pdf](refs/zoladek2008_official.pdf). | **refereed-published** | T5, hence \(d\ge6\). | This published theorem replaces the campaign's need to trust Sigray Theorem 9.1. Reported gaps in Żołądek's separate gcd-degree argument do not by themselves invalidate Theorem 6.12; the chain consumes only Theorem 6.12. |
+| **GGV1** | J. A. Guccione, J. J. Guccione, C. Valqui, “On the shape of possible counterexamples to the Jacobian Conjecture,” *J. Algebra* 471 (2017), 13–74, [DOI 10.1016/j.jalgebra.2016.08.039](https://doi.org/10.1016/j.jalgebra.2016.08.039): §4 minimal pair and standard \((m,n)\)-pair; the standardization propositions; Cor. 5.21; later regular-corner restrictions. | **refereed-published** | T2, and the published part of T3. It proves existence of a globally minimal standard representative if JC2 is false. | No replacement needed. The quantifier is existential over all counterexamples. `/tmp/jcrefs/1401.1784.tex` was an ephemeral local audit copy, not a banked repository source; publication metadata are above. |
+| **GGV6** | J. A. Guccione, J. J. Guccione, R. Horruitiner, C. Valqui, “The Jacobian Conjecture: Approximate roots and intersection numbers,” *Pro Mathematica* 30(60) (2019), 51–89, [publisher page](https://revistas.pucp.edu.pe/index.php/promathematica/article/view/21094), Prop. 2.5. Under its displayed homogeneous-bracket hypotheses with normalized corner \((a/l,2)\), it gives the arithmetic predecessor criterion that reduces the \((8,28)\) predecessor directions to \((1,-2)\) and \((1,-3)\). | **refereed-published**; the journal's [official policy](https://revistas.pucp.edu.pe/index.php/promathematica/about/submissions) states that articles undergo arbitration/evaluation. | A subsidiary input to the special GGV22 Proposition 4.3 branch, not to the sheet/book branch. | No internal replacement. It inherits the same bounded-family limitation as Proposition 4.3. |
+| **Chau99** | N. V. Chau, “Non-zero constant Jacobian polynomial maps of \(\mathbf C^2\),” *Ann. Polon. Math.* 71 (1999), 287–310, [DOI 10.4064/ap-71-3-287-310](https://doi.org/10.4064/ap-71-3-287-310), Theorem 4.4(E1), printed pp. 304–305; local text [refs/chau1999_apm71_full.pdf](refs/chau1999_apm71_full.pdf). For a nonzero constant-Jacobian pair monic in the required variable, the fiber-deficit set is a finite union of polynomially parametrized curves whose component degree ratio is \(\deg f/\deg g>0\), excluding a vertical-line component. Generic linear source change and target scalings supply the monicity used by the internal proof. | **refereed-published** | The sole **cited Keller-specific** external input in the promoted every-fiber repair of Sigray Proposition 5.8, T7. Standard resolution/intersection inputs are separately disclosed in §2.5. | Consumed, not replaced. [SOL-PROP58.md](SOL-PROP58.md) §§6–7 uses this to remove the fiber defect, with the N2 micro-step supplied in T7 above. It does **not** repair any later book-completeness issue. |
+| **Ż08** | H. Żołądek, “An application of Newton–Puiseux charts to the Jacobian problem,” *Topology* 47 (2008), 431–469, [DOI 10.1016/j.top.2008.04.001](https://doi.org/10.1016/j.top.2008.04.001), Theorem 6.12: a Jacobian map of topological degree at most five is invertible; local official text [refs/zoladek2008_official.pdf](refs/zoladek2008_official.pdf). | **refereed-published** | T5, hence \(d\ge6\). | This published theorem replaces the campaign's need to trust Sigray Theorem 9.1. The chain cites Theorem 6.12 at statement level as an external black box and makes no independent validation claim. |
 | **Abh77** | S. S. Abhyankar, *Lectures on Expansion Techniques in Algebraic Geometry*, TIFR Lectures on Mathematics and Physics 57, 1977, [official TIFR catalogue](https://mathweb.tifr.res.in/lectures.html), especially Prop. 17.4 and Thms. 18.13, 19.2 as cited in Sigray Lemma 2.1. | **published monograph / lecture notes** | External foundation for the rectangular normal form in T4. | [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) rederives the concrete Lemma 18.2/Prop. 17.4 uses, but leaves Thms. 18.13 and 19.2 as load-bearing external inputs; there is no promoted replacement for those two theorems. |
 
 The GGV1 proof also cites van den Essen's book, Corollary 10.2.21, for the
@@ -696,7 +699,9 @@ constant-Jacobian sheet-normalization theorem.
 
 The 2013 Guccione–Guccione–Valqui article “A differential equation for
 polynomials related to the Jacobian conjecture,” *Pro Mathematica* 27,
-83–98, is **refereed-published/contextual** here. GGV22 invokes it in its
+83–98, is **refereed-published/contextual** here under the same journal
+[arbitration policy](https://revistas.pucp.edu.pe/index.php/promathematica/about/submissions).
+GGV22 invokes it in its
 broader bounded-degree elimination history, but no statement from it is a
 book-landing link in T4–T10.
 
@@ -718,9 +723,10 @@ their replacement status are:
 | Definitions/Notations and Statements 3.1–3.18; Prop. 3.1–3.2, pp. 10–18 | Eggers–Wall vertices, \(\pi,\kappa,\nu\), pattern roots, continuation, characteristic descent, degree transport. | **thesis-page** | The audit found multiple errata. Not. 3.5 is ill-defined under the printed P-presentation; St. 3.8 is false under that reading. The Q/jump/max reading is forced and internally proved in `xmodel/sol-h5a.md`, reviewed in `xmodel/grok-h5a-review.md`, and promoted in [AUDIT.md](AUDIT.md) §H5a. St. 3.18 needs the repaired conclusion \(F*(\varepsilon c)\). St. 3.14 retains a cross-fiber conjugation-twist gap. |
 | Props. 4.1–4.6, pp. 19–23 | Approximate-root comparisons and the ladder later used by tower kills. | **thesis-page** | Prop. 4.2 has a genuine constant-leading-part gap in [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md); there is no general promoted replacement. Particular tower uses claim to avoid the bad corner, so those uses are conditional on that guard. |
 | Prop. 5.1; Not. 5.1–5.3; St. 5.1–5.2; Props. 5.2–5.7, pp. 23–28 | Pole status, ratios, \(\nu\)-menu, \(\Lambda\), lower bound, and the entry formulas. | **thesis-page** | Prop. 5.1's printed proof has a finite-nonzero-asymptotic gap; pole-only uses with \(g(P)=\infty\) avoid it. Prop. 5.3(ii),(viii) print inverted ratios and are internally corrected. Prop. 5.4 omits its q-half; [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) supplies a repair. Props. 5.5–5.7 are used only with the audit's corrections. |
-| Prop. 5.8, p. 28 | \(d=\sum\Lambda\) on **every** fiber. | **thesis-page; printed proof absent** | Replaced by [SOL-PROP58.md](SOL-PROP58.md) and [SOL-PROP58-REVIEW.md](SOL-PROP58-REVIEW.md), using published Chau Theorem 4.4. This replacement repairs only the mass/entry layer. |
-| Props./Statements 6.1–6.8, pp. 28–34 | Tree order, root/branch comparisons, manufacture of pole ancestors, degree law. | **thesis-page** | Only §§2–6 were systematically audited. St. 6.2 needs an omitted \(H\in T_a^+\) hypothesis; concrete consumers must show it. Prop. 6.2 prints an F/G hypothesis swap, repaired in the audit. |
-| Not./St./Props. of §7, especially St. 7.1–7.3, Prop. 7.2, Prop. 7.5 (22), Cor. 7.1 | Critical-value vertices, Euler equality, and budget accounting. | **thesis-page** | Not covered by the 72-item §§2–6 audit. Imported in the MP/book trust perimeter; no single standalone promoted replacement. |
+| Prop. 5.8, p. 28 | \(d=\sum\Lambda\) on **every** fiber. | **thesis-page; printed proof absent** | Replaced mathematically by [SOL-PROP58.md](SOL-PROP58.md), [SOL-PROP58-REVIEW.md](SOL-PROP58-REVIEW.md), Chau Theorem 4.4, and the N2 micro-step written in T7. The promoted source file's header says its review patches are incorporated, but N2 and several wording/link patches remain stale in its body. This replacement repairs only the mass/entry layer. |
+| Props./Statements 6.1–6.2, pp. 28–30 | Initial tree order/root comparisons and degree laws. | **thesis-page** | Included in the 72-item audit. St. 6.2 needs an omitted \(H\in T_a^+\) hypothesis; concrete consumers must show it. Prop. 6.2 prints an F/G hypothesis swap, repaired in the audit. |
+| Remaining §6, Props./Statements 6.3–6.8, pp. 31–34, especially Props. 6.7–6.8 | Later root/branch comparisons and manufacture of same-branch pole ancestors. | **thesis-page** | **Outside the systematic audit.** Proposition 6.8 is nevertheless load-bearing in `SHEET6-MULTIPOLE.md`'s MP5–MP6 tree-coverage argument. No standalone promoted replacement exists. |
+| Not./St./Props. of §7, especially St. 7.1–7.3, Prop. 7.2, Prop. 7.5 (22), Cor. 7.1 | Critical-value vertices, Euler equality, and budget accounting. | **thesis-page** | Not covered by the 72-item audit of §§2–5 and §6 through Proposition 6.2. Imported in the MP/book trust perimeter; no single standalone promoted replacement. |
 | Not. 8.1; St. 8.1–8.5; Props. 8.1–8.4; Cor. 8.1, pp. 39–45 | Pattern identity, entry \(M\), multiplicity divisibility, \(M=1\) propagation and single-pole kill. | **thesis-page** | Re-used and partially rederived in the promoted MP/TDU documents, but not independently replaced as a complete theorem package. These are load-bearing for T7–T9. |
 | Table (23); Not. 9.1–9.3; St. 9.1–9.6; Props. 9.1–9.3, pp. 46–52 | Entry seeds, characteristic sequences, cases I–IV, charges, shared budget, and step arithmetic. | **thesis-page** | §§7–9 have no comprehensive audit. Prop. 9.3 requires the E5 repair; St. 9.3(24) requires the E6 sign repair. [SHEET6-CAMPAIGN.md](SHEET6-CAMPAIGN.md) and satellites rederive particular clauses and exhibit false printed case eliminations, but do not replace all of §§7–9. |
 | Thm. 9.1, p. 60 | Claimed \(d\ge6\). | **thesis-page; incomplete proof** | Not used. Replaced for the conclusion by refereed-published Żołądek Theorem 6.12. |
@@ -740,16 +746,28 @@ part of the chain's actual proof surface.
 
 | Internal source | Replaces or proves | Remaining perimeter |
 |---|---|---|
-| [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) | A statement-by-statement audit of 72 items on thesis pp. 7–30: 21 verified, 33 verified-with-nit, 9 new errata, 2 known errata, 7 gaps; supplies several corrected derivations. | It is not an audit of all §§7–9. Prop. 4.2, St. 3.14, and guarded Prop. 5.1 issues remain as stated. |
+| [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) | A statement-by-statement audit of 72 items in §§2–5 and §6 through Proposition 6.2, thesis pp. 7–30: 21 verified, 33 verified-with-nit, 9 new errata, 2 known errata, 7 gaps; supplies several corrected derivations. | It does not cover Propositions 6.3–6.8 or §§7–9. Prop. 4.2, St. 3.14, and guarded Prop. 5.1 issues remain as stated. |
 | `xmodel/sol-h5a.md`, `xmodel/grok-h5a-review.md`, [AUDIT.md](AUDIT.md) §H5a | Forces the Q/jump/max interpretation of \(\kappa_F\) and repairs the H5a coherence problem; E5 is then applied. | The equal-index assertion \(U_{7C}\) is a separate conjecture, though the 17-cell \(td=7\) tower result does not need it. |
-| [SOL-PROP58.md](SOL-PROP58.md), [SOL-PROP58-REVIEW.md](SOL-PROP58-REVIEW.md) | Replaces the missing proof of Sigray Prop. 5.8 at every-fiber strength. | Imports Chau Theorem 4.4; explicitly does not repair off-axis, merge, suffix, or book completeness. |
-| [SHEET6-TDUNIFORM.md](SHEET6-TDUNIFORM.md), [SHEET6-TDU-REVIEW.md](SHEET6-TDU-REVIEW.md) | Closed-form single-pole entry table, \(M=b\), and the prime-\(d\) single-pole theorem. | Composite single-pole searches survive; no uniform finite residual; H1/AF3 and corrected thesis perimeter. |
-| [SHEET6-MULTIPOLE.md](SHEET6-MULTIPOLE.md), [SHEET6-MP-REVIEW.md](SHEET6-MP-REVIEW.md) | `MP0`–`MP9`: finite merge topology, entry pin, pure \(M=1\) anatomy, resonant first-jump calculus. | All-\(\mu\ge2\) mixed merges, post-jump \(M\ge2\) chains, general reachability, and coefficients remain. Several headline “finite book” sentences are broader than this perimeter. |
+| [SOL-PROP58.md](SOL-PROP58.md), [SOL-PROP58-REVIEW.md](SOL-PROP58-REVIEW.md) | Replaces the missing proof of Sigray Prop. 5.8 at every-fiber strength, completed in this master by T7's one-line N2 repair. | Imports Chau Theorem 4.4 and standard surface foundations. The source header overstates patch incorporation: N2 and the review's N1/N3/N4 wording/link cleanups remain stale. It explicitly does not repair off-axis, merge, suffix, or book completeness. |
+| [SHEET6-TDUNIFORM.md](SHEET6-TDUNIFORM.md), [SHEET6-TDU-REVIEW.md](SHEET6-TDU-REVIEW.md) | Closed-form single-pole entry table, \(M=b\), and the prime-\(d\) single-pole theorem. | Composite single-pole searches survive; no uniform finite residual; exact corrected thesis/promoted perimeter is expanded in T7–T9. |
+| [SHEET6-MULTIPOLE.md](SHEET6-MULTIPOLE.md), [SHEET6-MP-REVIEW.md](SHEET6-MP-REVIEW.md) | `MP0`–`MP9`: finite merge topology, entry pin, pure \(M=1\) anatomy, resonant first-jump calculus. | All-\(\mu\ge2\) mixed merges, post-jump \(M\ge2\) chains, general reachability, and coefficients remain. Its local marked-event landing theorem survives; only a **full-configuration** reading is broader than this perimeter. |
 | [SHEET6-DEPTH.md](SHEET6-DEPTH.md), [SHEET6-DEPTH-REVIEW.md](SHEET6-DEPTH-REVIEW.md) | Finite \(w\)-alphabet and depth-invariant local jump menu on the \(M=1\) axis. | Does not prove a finite full-configuration book off the axis or after a jump. Correct safe depth metadata are \(2\,\mathrm{gen}(W)+2\). |
 | [BOOK-ENUM.md](BOOK-ENUM.md), `cases/book_enum.py` | Concrete on-axis local-cell enumeration for \(6\le d\le14\). | Explicitly skips off-axis entries; does not cover all downstream mixed contexts; conservative cell aggregation is not a per-entry coverage certificate. |
 | [BOOK-OFFAXIS.md](BOOK-OFFAXIS.md) | Off-axis entry census and partial chain/price laws; special \(d=7\) classification. | Its §10 P5 says the generic grid has no completeness certificate. Earlier contradictory sections are superseded. |
 | [TOWER-UNIFORM.md](TOWER-UNIFORM.md) | Kills all 17 cells in the promoted \(d=7\) special route book. | Conditional on the Sigray trust set and filed route perimeter; not a universal off-axis landing theorem. |
-| [TOWER-TD11.md](TOWER-TD11.md) | Entry-clash theorem at an exact-core tier. | §10 says the \(d=11\) census does not exist; beyond-core, nested, and multi-word sectors remain open. |
+| [TOWER-TD11.md](TOWER-TD11.md), `cases/td11_census.py`, `xmodel/sol-census-review.md` | Entry-clash theorem and an attempted 159-row diagnostic census at an exact-core tier. | No certified complete \(d=11\) census exists; the review finds the universal seven-class certificate broken, and beyond-core, nested, and multi-word sectors remain open. |
+
+### 2.5 Uncited foundational inputs
+
+Two standard mathematical packages are used without a precise source or a
+full internal proof. They cannot honestly be assigned one of the four
+requested evidence labels; the missing citations are themselves ledger
+items.
+
+| Input | Exact use | Classification | Replacement status |
+|---|---|---|---|
+| Resolution of indeterminacy for a rational map from a smooth projective surface, together with normalization, divisor intersection, push-pull/projection, and finite-flat degree facts | [SOL-PROP58.md](SOL-PROP58.md) §2 resolves \(\mathbf P^2\dashrightarrow\mathbf P^1\times\mathbf P^1\), decomposes horizontal and vertical boundary divisors, and turns intersection degree into the generic sheet number. | **uncited standard foundation; not independently audited** | No promoted replacement or exact bibliographic citation. Chau is the sole cited **Keller-specific** input, not the sole external mathematical fact in the proof. |
+| Newton–Puiseux existence/termination and the basic finiteness of the Eggers–Wall tree attached to the branches at infinity | T6's underlying finite tree before the Sigray-specific decorations and transition formulas are imposed. | **uncited standard foundation / thesis-mediated** | No separate source or complete internal proof is identified. The Sigray thesis defines and uses the object, while the campaign audits only its listed statements through Proposition 6.2. |
 
 ---
 
@@ -920,8 +938,9 @@ sectors remain.
 
 ### HIGH 3 — the Sigray replacement is not end to end
 
-The audit of thesis §§2–6 is substantial and caught real errors, but the book
-also imports §§7–9. The current chain therefore rests on an unrefereed,
+The audit of thesis §§2–5 and §6 through Proposition 6.2 (pp. 7–30) is
+substantial and caught real errors, but the book also imports Propositions
+6.3–6.8 and §§7–9. The current chain therefore rests on an unrefereed,
 partly incorrect source plus a distributed set of clause-specific repairs.
 The most serious unresolved or guarded items are:
 
@@ -997,8 +1016,10 @@ provenance and reject an uncovered transition.
    configuration.”** False. TDU's theorem is single-pole only. The old
    on-axis prime emptiness statement omitted off-axis configurations.
 8. **“Topological degrees 11 and 13 are fully excluded.”** False in current
-   campaign status. The \(d=11\) census is explicitly absent and \(d=13\)
-   is open. The later \(d=7\) result does not repair those statements.
+   campaign status. At \(d=11\) an attempted 159-row diagnostic artifact
+   exists, but no certified complete census does; its universal certificate
+   is broken. The \(d=13\) sector is open. The later \(d=7\) result does not
+   repair those statements.
 
 The following are not asserted to be mathematically false, but remain
 unproved at the necessary generality: the corrected Sigray trust set, global

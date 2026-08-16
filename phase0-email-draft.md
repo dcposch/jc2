@@ -72,6 +72,7 @@ Dan Clemens Posch
 ---
 
 # Horruitiner CC line (pbcopy'd 2026-08-16; DC pastes when adding him to the GGV thread)
+# Address: rmh322@cornell.edu (from the arXiv:2204.14178 PDF author list, Cornell affiliation)
 
 CC Rodrigo Horruitiner, who I should have included from the start as a
 coauthor of arXiv:2204.14178. Rodrigo: the note below settles the (8,28)
