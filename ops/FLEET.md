@@ -59,3 +59,11 @@ verdict produced there is SCREENING-TIER until re-confirmed on a
 0.10.1 box (Box02 post-drain) — record the version in every AUDIT
 citation of a Box03 result. Rationale: our hazard ledger is calibrated
 to 0.10.1; 0.6.5 may lack fixes or carry different bugs.
+
+## Local CAS etiquette (2026-08-17)
+Agent lanes exploring Singular/Maple/etc. on the local Mac MUST run
+batch mode with browsers disabled (Singular: `Singular -q < script`,
+never interactive `help`; or export ESINGULAR_BROWSER=cat BROWSER=cat).
+Interactive help shells out to `open` and spams DC's Safari with
+file:// doc pages. Include this rule in any prompt that authorizes
+local CAS use.
