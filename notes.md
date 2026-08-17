@@ -626,3 +626,9 @@ DAILY DISCIPLINES (in order, at least once per day):
   harness (points dying on rows 21/22 = deeper window still kills; a survivor =
   genuine mod-p germ candidate). Unsplit lane still running. Both branches from
   here are historic: kill-at-depth or first-witness.
+- 2026-08-17 ~15:20: TWO-PRIME ROBUSTNESS CONFIRMED — CORE2 fiber NONEMPTY at all
+  THREE primes, identical structure (397-element GB at each; seconds each). The D21
+  window survival mod p is robust, structurally rigid (same basis length = same
+  staircase), and consistent with the pole-scale pinning. All rides on the D23-core
+  (building). td-12 promoted at honest tier (u=1 gap-1/3 candidate exhibited
+  unrefused = named honest residual).
