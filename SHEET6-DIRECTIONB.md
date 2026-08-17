@@ -1044,3 +1044,46 @@ same-degree matrix/RSS improvement; else the instrument stays
 local-tier (Sol §C: acceleration failure is NOT a mathematical
 survival verdict). Box01 pilot is the coordinator's launch; nothing
 runs locally beyond the exact-python elimination and guards.
+
+### 7.S2 The fast elimination engine (python-flint; split-prime cores)
+
+[2026-08-16, DC priority; cases/fastelim.py; python-flint 0.9.0
+(nmod_mpoly). 18/18 checks PASS across the three banked primes.]
+
+SPLIT-PRIME MODE: legendre(3,p) = +1 for ALL THREE banked primes
+(105337, 105673, 200257 -- no replacements needed); s = sqrt3
+substituted (the radical_point branch), so K3-coefficients are GF(p)
+scalars and the window rows live in GF(p)[template, A1, A2, W1, HW1,
+W2, HW2] with FREE radical generators (relations rejoin at emission
+as minimal-poly rows; exponents lattice-reduced at emission).
+
+WALL-TIMES, old exact engine vs flint: the 10-pivot prefix 2491 s ->
+0.1 s (~25,000x); the FULL elimination (16 pivots) 0.2 s vs the
+exact run's projected days (pivot 11 alone took 9650 s before the
+kill). All 16 pivots are UNIT-class (single w-weight, nonzero on
+all 4 h-sign branches), 0 mixed => the core is EQUIVALENCE-tier on
+the w != 0 chart (projection exact), not merely necessary. 8 high
+tails survive as variables (tg1/tg2/tg01/tg02 at levels 44/46); the
+other 18 non-pivot highs cancel identically.
+
+TRUE CORES (per prime, identical shape): 43 vars (34 template incl.
+the 8 leftover highs + 6 radgens + 3 sat), 67 eqs (60 window rows +
+7 rad/sat), 21,870 terms, template-degree profile {0:18, 1:306,
+2:2310, 3:5204, 4:6120, 5:4462, 6:2268, 7:894, 8:288}, ~0.80 MB:
+cases/directionb_core_p105337|105673|200257.ms (+ .rows.txt
+legends). 21,870 << 67,698 raw pinned mass: Sol §C stop-criteria
+PASSED with 3x margin (the char-0 partial's 135,523 failed them;
+the mod-p core is the compression the instrument wanted).
+
+GATES (per prime): a2 -- all 10 banked exact pivot coefficients ==
+engine's, compared sequentially mid-elimination (lattice-reduced);
+a -- 10-pivot state == the banked EXACT residual mod p ROW-FOR-ROW
+(66 rows); b -- tau(input at r3) == input at p-r3, all 76 rows
+exactly; c1 -- independent scalar replay of the full pivot sequence
+== mpoly residual at random points; c2 -- pattern-positive anchor
+(6 Row_20-descended rows nonzero at tails->0; the +42 content
+survives); emission guards -- paren sweep + independent-parser
+round-trip, 60 rows + rad/sat x 2 points. CHAR-0 TOWER MODE:
+deferred (the mod-p lanes are the screens' instrument; the banked
+exact 10-pivot state remains the char-0 ground truth). Solver lanes
+NOT launched (coordinator's call; box01 busy with PILOT12).
