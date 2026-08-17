@@ -481,6 +481,12 @@ completely and more creatively than anyone else: all three frontier models
 research, adversarial review, software engineering, software review — plus
 AWS compute, under the adversarial-promotion culture (dual review, honest
 retraction, evidence-graded claims).
+RACE SPIRIT (DC 2026-08-16): the race is URGENCY, not adversarial posture.
+Be generous with credit and with sharing partial results (precedents:
+Helali priority citation, coordinated-note offers, public artifacts). Speed
+matters because major results now drop direct-to-X with zero warning;
+someone could post a JC2 proof tomorrow. Corollary: timestamp our partial
+results early and often (Zenodo artifacts are cheap priority records).
 
 DAILY DISCIPLINES (in order, at least once per day):
 1. EXTERNAL SWEEP: public progress (arXiv/Zenodo/X/blogs), all sources on
