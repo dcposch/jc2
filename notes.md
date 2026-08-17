@@ -600,3 +600,8 @@ DAILY DISCIPLINES (in order, at least once per day):
   mod p; tau; anchor/+42 survival. On core emission: multi-prime portfolio + (if
   core resists) triangular-decomposition diversity + tau-folding. Reusable for the
   3 OOM'd farm cores + Q2 strata. PILOT12 races on meanwhile (~3h to cap).
+- 2026-08-16 ~23:15: FLINT engine DELIVERED: 25,000x (16 pivots in 0.2s vs days);
+  TRUE CORES emitted (43v/67eq/21.9k terms/prime, guards 18/18) and 3 core lanes
+  LAUNCHED on box01 (12h caps, process-verified: 5 msolve) racing PILOT12 (332GB,
+  ~2.5h to cap). Any core verdict = the residue-A signal. Engine is reusable infra
+  (farm big cores, Q2 strata next).
