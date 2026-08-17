@@ -411,6 +411,190 @@ def emit_core(p, eng, piv, resid, pt):
         okrt)
     return len(hdr), len(body) + len(tp), nterm, degp, sz
 
+
+# -------------------------------------------------------------- CORE2
+# Sol instrument3 §1/§7: +6 low unit pivots after the 16 high ones,
+# W-unit normalization after EVERY pivot (ideal-preserving on the
+# chart: uW rows make W_i units), pseudo-division for pivot vars that
+# occur nonlinearly in target rows (pivot rows are LINEAR in them).
+LOW6 = [("tf1_38", (6, 2)), ("tf1_40", (8, 0)), ("tf2_40", (8, 3)),
+        ("tf1_39", (12, 8)), ("tf1_41", (14, 6)), ("tf2_41", (14, 9))]
+HIGH6 = [("tf2_45", (18, 8)), ("tf2_50", (18, 11)),
+         ("tf1_47", (20, 0)), ("tf1_52", (20, 3)),
+         ("tf2_47", (20, 6)), ("tf2_52", (20, 9))]
+SOL2 = {"unsplit": (27, 45, 6311, 10), "fiber": (22, 26, 5348, 8)}
+SOL2_TEMPLATE18 = {"tf2_38", "tg1_38", "tg1_39", "tg1_40", "tg1_41",
+                   "tg2_38", "tg2_39", "tg2_40", "tg2_41", "tg01_38",
+                   "tg01_40", "tg02_38", "tg02_40", "uf18", "vf1_34",
+                   "vf1_36", "vf2_34", "vf2_36"}
+
+def mp_from_dict(eng, d):
+    return eng.ctx.from_dict(d)
+
+def mp_to_dict(f):
+    return dict(zip([tuple(m) for m in f.monoms()],
+                    [int(c) for c in f.coeffs()]))
+
+def wstrip(eng, f, rec):
+    """lattice-reduce, strip common W1/W2 content, record + verify."""
+    if f.is_zero(): return f
+    d = eng.reduce_lattice(f)
+    iw1, iw2 = eng.nt + 2, eng.nt + 4
+    a = min(k[iw1] for k in d); b = min(k[iw2] for k in d)
+    if a or b:
+        d2 = {}
+        for k, c in d.items():
+            e = list(k); e[iw1] -= a; e[iw2] -= b
+            d2[tuple(e)] = c
+        rec.append((a, b))
+        g = mp_from_dict(eng, d2)
+        # G0.3 reconstruction: multiply back == pre-strip (reduced)
+        wmon = [0] * (eng.nt + 6); wmon[iw1] = a; wmon[iw2] = b
+        assert mp_to_dict(g * mp_from_dict(eng, {tuple(wmon): 1})) == d
+        return g
+    rec.append((0, 0))
+    return mp_from_dict(eng, d)
+
+def core2_pivot(eng, gx, bi, strips, plog):
+    """pivot on gen index gx using row bi (LINEAR there), pseudo-
+    dividing nonlinear targets; then normalize every updated row."""
+    P = eng.P[bi]
+    assert P.degrees()[gx] == 1
+    cp = P.derivative(gx)
+    assert eng.tdeg0(cp)
+    for bj in range(len(eng.P)):
+        if bj == bi or eng.P[bj].is_zero() or bj in eng.c2used:
+            continue
+        R = eng.P[bj]
+        if R.degrees()[gx] == 0: continue
+        while (dg := R.degrees()[gx]) > 0:
+            Ad = {}
+            for k, c in mp_to_dict(R).items():
+                if k[gx] == dg:
+                    e = list(k); e[gx] = 0
+                    Ad[tuple(e)] = c
+            Adm = mp_from_dict(eng, Ad)
+            xm = [0] * (eng.nt + 6); xm[gx] = dg - 1
+            R = cp * R - Adm * mp_from_dict(eng, {tuple(xm): 1}) * P
+        rec = []
+        eng.P[bj] = wstrip(eng, R, rec)
+        strips.setdefault(bj, []).extend(rec)
+    eng.c2used.add(bi)
+    plog.append((gx, eng.labs[bi], eng.reduce_lattice(cp)))
+
+def run_core2(p, verbose=True):
+    r3v, pt = r3_of(p)
+    eng = Engine(p, r3v)
+    bank, forced, pivc = bank_rows_modp(eng)
+    t0 = time.time()
+    eng.reset(); eng.c2used = set()
+    strips, plog = {}, []
+    name2vid = {eng.vars_[i]: i for i in eng.occ}
+    for h, lab in forced:                      # banked 10 high pivots
+        bi = eng.labs.index(lab)
+        core2_pivot(eng, eng.gi[h], bi, strips, plog)
+    for nm, lab in HIGH6:                      # greedy 6 (CORE1 log)
+        bi = eng.labs.index(lab)
+        core2_pivot(eng, eng.gi[name2vid[nm]], bi, strips, plog)
+    ok6 = True
+    for nm, lab in LOW6:                       # the 6 new low pivots
+        bi = eng.labs.index(lab)
+        gx = eng.gi[name2vid[nm]]
+        cp = eng.P[bi].derivative(gx)
+        cd = eng.reduce_lattice(cp)
+        single = len(cd) == 1 and next(iter(cd.values())) % p != 0
+        ok6 &= single and eng.P[bi].degrees()[gx] == 1
+        core2_pivot(eng, gx, bi, strips, plog)
+    resid = [(eng.labs[bi], eng.P[bi]) for bi in range(len(eng.P))
+             if bi not in eng.c2used and not eng.P[bi].is_zero()]
+    wall = time.time() - t0
+    # census
+    tset = set(); nterm = 0; maxdeg = 0
+    for lab, v in resid:
+        d = mp_to_dict(v)
+        nterm += len(d)
+        for k in d:
+            maxdeg = max(maxdeg, sum(k))
+            for j in range(eng.nt):
+                if k[j]: tset.add(eng.vars_[eng.occ[j]])
+    if verbose:
+        print("   [p=%d] CORE2: %d pivots (%.1fs), %d residual rows, "
+              "%d terms, %d template coords, max TOTAL degree %d"
+              % (p, len(plog), wall, len(resid), nterm, len(tset),
+                 maxdeg),
+              flush=True)
+    return eng, resid, plog, strips, pt, (len(resid), nterm,
+                                          len(tset), maxdeg, tset)
+
+def twin_replay(p, plogA):
+    """independent dict-engine replay (no flint): same pivots, same
+    pseudo-division + normalization; returns residual dicts."""
+    r3v, pt = r3_of(p)
+    eng = Engine(p, r3v)          # reuse builder only
+    rows = [mp_to_dict(v) for v in eng.P0]
+    labs = eng.labs
+    iw1, iw2 = eng.nt + 2, eng.nt + 4
+    def red(dd):
+        a1v, a2v = (3 + r3v) % p, (3 - r3v) % p
+        i32 = 3 * pow(2, p - 2, p) % p
+        out = {}
+        for k, c in dd.items():
+            e = list(k)
+            q, e[eng.nt] = divmod(e[eng.nt], 3)
+            c = c * pow(a1v, q, p) % p
+            q, e[eng.nt + 1] = divmod(e[eng.nt + 1], 3)
+            c = c * pow(a2v, q, p) % p
+            q, e[eng.nt + 3] = divmod(e[eng.nt + 3], 2)
+            c = c * pow(i32, q, p) % p; e[iw1] += 2 * q
+            q, e[eng.nt + 5] = divmod(e[eng.nt + 5], 2)
+            c = c * pow(i32, q, p) % p; e[iw2] += 2 * q
+            k2 = tuple(e)
+            out[k2] = (out.get(k2, 0) + c) % p
+        return {k: c for k, c in out.items() if c}
+    def dmul(a, b):
+        out = {}
+        for ka, ca in a.items():
+            for kb, cb in b.items():
+                k = tuple(x + y for x, y in zip(ka, kb))
+                out[k] = (out.get(k, 0) + ca * cb) % p
+        return {k: c for k, c in out.items() if c}
+    def dsub(a, b):
+        out = dict(a)
+        for k, c in b.items():
+            out[k] = (out.get(k, 0) - c) % p
+            if not out[k]: del out[k]
+        return out
+    used = set()
+    for gx, lab, cpd in plogA:
+        bi = labs.index(lab)
+        P = rows[bi]
+        cp = {tuple(0 if j == gx else k[j]
+                    for j in range(len(k))): c
+              for k, c in P.items() if k[gx] == 1}
+        for bj in range(len(rows)):
+            if bj == bi or bj in used or not rows[bj]: continue
+            R = rows[bj]
+            while True:
+                dg = max((k[gx] for k in R), default=0)
+                if dg == 0: break
+                Ad = {tuple(0 if j == gx else k[j]
+                            for j in range(len(k))): c
+                      for k, c in R.items() if k[gx] == dg}
+                xm = [0] * (eng.nt + 6); xm[gx] = dg - 1
+                R = dsub(dmul(cp, R),
+                         dmul(dmul(Ad, {tuple(xm): 1}), P))
+            R = red(R)
+            if R:
+                a = min(k[iw1] for k in R); b = min(k[iw2] for k in R)
+                if a or b:
+                    R = {tuple(x - (a if j == iw1 else
+                                    b if j == iw2 else 0)
+                               for j, x in enumerate(k)): c
+                         for k, c in R.items()}
+            rows[bj] = R
+        used.add(bi)
+    return {labs[bj]: rows[bj] for bj in range(len(rows))
+            if bj not in used and rows[bj]}, eng
 if __name__ == "__main__":
     ph = sys.argv[1] if len(sys.argv) > 1 else "all"
     t0 = time.time()

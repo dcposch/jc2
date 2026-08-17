@@ -1087,3 +1087,54 @@ round-trip, 60 rows + rad/sat x 2 points. CHAR-0 TOWER MODE:
 deferred (the mod-p lanes are the screens' instrument; the banked
 exact 10-pivot state remains the char-0 ground truth). Solver lanes
 NOT launched (coordinator's call; box01 busy with PILOT12).
+
+### 7.S3 CORE2 (instrument round 3: +6 low pivots, W-normalization)
+
+[2026-08-17; Sol instrument3 §§1/7; fastelim.py run_core2 + drivers.
+Forensic input accepted: the §7.S2 "true core" was NOT a degree-8
+object (template-only degree count hid Laurent W-content up to
+W1^2184 W2^546, actual msolve degree 2741); Sol's 6 further unit
+pivots were real.]
+
+CORE2 = 22 pivots (16 high + the 6 low: tf1_38<-Row_6[eta^2],
+tf1_40<-Row_8[eta^0], tf2_40<-Row_8[eta^3], tf1_39<-Row_12[eta^8],
+tf1_41<-Row_14[eta^6], tf2_41<-Row_14[eta^9]), pseudo-division for
+targets nonlinear in the low pivots (pivot rows are linear there),
+W-unit normalization after EVERY pivot (uW rows make W_i units;
+strips recorded, reconstruction asserted -- G0.3, 143 strips).
+WALL: 14 s per prime (engine build ~220 s more), vs the exact
+engine's days-scale projection. CENSUS == SOL'S REPLAY EXACTLY on
+the unsplit object at ALL THREE primes: 38 residual rows, 6,311
+terms, 18 template coords (set identical to Sol's list), max TOTAL
+degree 10 => emitted 27 vars / 45 eqs / ~0.16 MB:
+directionb_core2_p{105337,105673,200257}.ms. Cross-prime monomial
+SUPPORT identical row-for-row (G0.2x).
+
+GATES (Sol §7 G0, all PASS): G0.1 22 sequential pivots, the 6 low
+coefficients single radical/Laurent monomials nonzero on all 36
+tower factors; G0.2 shape/support identity x3 primes; G0.3 strip
+records + reconstruction; G0.4 independent dict-engine TWIN replay
+== flint residual row-for-row + back-substitution (22 frozen pivot
+rows incl. the +42 row vanish at back-solved points; pins held 0);
+G0.5 paren/round-trip x3, tau-OUTPUT (CORE2 at r3 == tau-transported
+CORE2 at p-r3, normalized row-for-row), pattern-positive anchor (6
+Row_20-descended rows nonzero at tails->0), ctl0 origin; G0.6
+a3=[1] REPRODUCED at 105337 AND 200257 at source level (Sol §5
+mechanism verified: raw Row_8 at the a3 chamber = 10 homogeneous
+rows on (tg01_40, tg02_40), rank 2 on ALL 36 fibers => fence
+contradiction; transfers to CORE2 by the certified equivalence);
+G0.7 fiber sweep: ALL 36 fibers, census 22 vars / 26 eqs / deg <= 8
+IDENTICAL, A1 != A2 everywhere.
+
+FIBER TERM-COUNT RECONCILIATION (the one non-exact item, stated
+plainly): the fiber term count is PRESENTATION-dependent: RREF
+3,997; forward echelon (min-pivot) 4,889; forward echelon
+(max-pivot) 5,344; raw independent-row selection 6,011. Sol's
+replay says 5,348 -- 4 terms (0.07%) from the max-pivot echelon:
+same construction modulo an echelon ordering convention; the ideal
+is identical in all presentations (round-trip + rank certified).
+Emitted: directionb_core2_fiber_p105337.ms = the radical_point
+fiber, 24 max-pivot echelon rows + 2 uW rows, 5,344 terms, 0.11 MB.
+Legend: directionb_core2.rows.txt. Handed off for the 30-min A/B
+pilot (box01; G1 semantics of instrument3 §7). Nothing launched
+locally; no commits.
