@@ -609,3 +609,8 @@ DAILY DISCIPLINES (in order, at least once per day):
   added — ops pattern #3, consider a /24 or automation). PILOT12: TIMEOUT at 12h cap
   (rc=124) — the half-compressed object officially dead-ends; the 3x gate outcome is
   moot because the TRUE cores superseded it mid-race. 3 core lanes alive (~1h in).
+- 2026-08-17 ~11:35: CORE LANES CAPPED (both rc=124 at 12h, 221G steady) — the TRUE
+  43-var core is Groebner-hard at this budget: raw 48h fail + compressed 12h fail +
+  core 12h fail + a3 double-EMPTY = the complete instrument dataset. Sol round 3
+  launching. FC1 stalled-deep (595 states unchanged ~11h — kill+partial next tick
+  if no movement). box01 down to farm only.
