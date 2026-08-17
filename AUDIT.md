@@ -797,3 +797,19 @@ re-derives + genuine td-7 replay — folded), sol-census-review
 editorial pass). Engine cases/td11_census.py gates 8/8; td-7
 replayed through the same two-pole engine. The td-11 panel now
 rests on: this certificate + discharging/closing FC1-FC7.
+
+## FOUNDATIONS SCOPE ENTRY (2026-08-17, dual-adjudicated)
+The end-to-end reduction (Keller counterexample -> GGV polygon data ->
+sheet data -> enumerated book entry) is NOT currently a theorem
+(REDUCTION.md, Sol; cross-review Grok SOUND-WITH-ERRATA). Real gaps:
+(G1) GGV minimal-pair selection is existential, not a normalization of
+every counterexample; (G2) NO transport theorem carries GGV corner data
+through Sigray's normalization — the sheet construction does not consume
+GGV data as written; (G5) NO upper bound on td. Gap 4 adjudicated: the
+td-7 book carries its §11a completeness certificate and td-11 its
+conditional certificate (Grok), but a UNIVERSAL full-configuration
+landing theorem for the b>=2 sector does not exist (Sol) — both true.
+HONEST SCOPE of promoted ladder results: book-relative (every
+configuration in the enumerated books dies), pending the book-landing
+theorem. The reduction consolidation (T-chain + gap repairs) is now a
+top-tier theory objective alongside residue-A.
