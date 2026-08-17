@@ -1138,3 +1138,48 @@ fiber, 24 max-pivot echelon rows + 2 uW rows, 5,344 terms, 0.11 MB.
 Legend: directionb_core2.rows.txt. Handed off for the 30-min A/B
 pilot (box01; G1 semantics of instrument3 §7). Nothing launched
 locally; no commits.
+
+### 7.S4 The fiber locus: dimension, points, and the depth-23 filter
+
+[2026-08-17. Pilot input: the CORE2 fiber at p105337 solved in 11 s,
+GB = 397 elements, NONEMPTY over F_p-bar -- the A/B gate cleared
+~4000x; the old 12h/221G record measured the defective object.]
+
+TWIN EMISSIONS: directionb_core2_fiber_p{105673,200257}.ms emitted
+(identical shape: 24 max-pivot echelon rows + 2 uW, 5,344 terms,
+~0.11 MB each) -- handed off for the two-prime robustness check.
+
+DIMENSION (from the box01 GB, initial-ideal combinatorics, exact):
+**the fiber locus is 13-DIMENSIONAL** (22 fiber vars; maximal
+independent set = uf18, vf1_34, vf1_36, vf2_34, vf2_36 -- the WHOLE
+dead-stretch/merge block -- plus tg1_39, tg1_41, tg2_39, tg2_41,
+tg01_38, tg01_40, tg02_38, tg02_40). LT-degree histogram 1..12
+(mode at deg 6); top-component degree not cheaply convergent
+(>1e5 standard monomials in the naive localization) -- deferred.
+STRUCTURAL GEM: the GB pins the POLE SCALES: W1^4 = 57673,
+W2^4 = 53212 (mod 105337) -- the fiberwise echo of the §6.V slot-20
+X_i-pinning, now GLOBAL on the locus. F_p-RATIONAL POINTS: sampling
+the 13 free directions randomly + solving the bound block: 12/12
+tries produced verified F_p-points (all 397 GB elements vanish) --
+the locus is F_p-point-rich.
+
+THE DEPTH-23 FILTER (exact, mod p; harness /tmp/fiber_filter2.py,
+to be promoted into cases/ with the D23 core): per sampled point,
+the full D21 chart is reconstructed (22 pivots back-solved, pivot
+rows vanish -- asserted), then the banked D23 Row_22 block (10
+eta-comps) is evaluated as an affine system on the 10 deep tails
+(levels 49/54), with the auxiliary D21-free tails at zeros AND at 2
+random draws:
+
+  **0/12 SAMPLED FIBER POINTS SURVIVE DEPTH 23 (36/36 point-draw
+  combinations INCONSISTENT).** The D21 germ locus, nonempty and
+  13-dimensional mod p, is killed at every sampled point by the
+  depth-23 rows. No residue-A germ candidate through depth 23 was
+  found; the D23-CORE RE-EMISSION is the next object, exactly as
+  pre-registered. (Scope: 12 random points x 3 free-draws, one
+  radical fiber, one prime -- a sampling statement, not a variety
+  kill; the D23 core decides it.)
+
+Q2-l12 eta0: NOT added to the filter -- obsolete per Sol
+instrument3 §6.3 itself (V_bank cap Q2_l12 = empty already
+certified at quotient tier; "re-running eta0 adds nothing").
