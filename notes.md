@@ -557,3 +557,6 @@
   on the RAW system. Verdict inside 12h = compression helps; timeout = mod-p
   compression dead-end => Sol instrument round 2 (char-0-direct / structural /
   park). Box02/Box03 stay STOPPED (box01's 991G suffices for this).
+- 2026-08-16 ~15:10: NEW STANDING DISCIPLINE (DC): daily external-progress sweep
+  (X/arXiv/blogs) + fresh lateral-avenue generation, tri-model (Fable web + Sol +
+  Grok). First run launching now.
