@@ -568,3 +568,10 @@
   thread, fallback cold-credentialed (van den Essen circle / Orevkov line). Intel:
   Helali = non-mathematician (DC LinkedIn chat) — artifact more impressive, check
   his methods section for AI provenance before any joint note names methods.
+- 2026-08-16 ~16:40: SOFTWARE PRIORITY (DC): FLINT tower-elimination engine build
+  launched (window agent) — split-prime GF(p) band elimination = seconds/prime, no
+  swell => TRUE ~36-var core per prime (PILOT12 grinds a HALF-compressed 68-var
+  object with inherited swell). Gates: agreement with sympy 16-pivot ground truth
+  mod p; tau; anchor/+42 survival. On core emission: multi-prime portfolio + (if
+  core resists) triangular-decomposition diversity + tau-folding. Reusable for the
+  3 OOM'd farm cores + Q2 strata. PILOT12 races on meanwhile (~3h to cap).
