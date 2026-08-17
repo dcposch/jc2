@@ -474,6 +474,25 @@
   collapse); (c) held: more primes (correlated), HC (start-system explosion), Macaulay
   cert (unknown degree). Parallel: td-11 OPEN-residue (NF-Z-dagger) + td-13 13-2b recon.
 
+## STRATEGY (standing, DC 2026-08-16 — loop/workflows read this)
+WIN CONDITION: we win the JC2 proof race by using our full resources more
+completely and more creatively than anyone else: all three frontier models
+(Fable + GPT-5.6 Sol + Grok 4.6) across EVERY role — math ideation, primary
+research, adversarial review, software engineering, software review — plus
+AWS compute, under the adversarial-promotion culture (dual review, honest
+retraction, evidence-graded claims).
+
+DAILY DISCIPLINES (in order, at least once per day):
+1. EXTERNAL SWEEP: public progress (arXiv/Zenodo/X/blogs), all sources on
+   content; track the (72,108)/JC2 ecosystem actors.
+2. AVENUE EXPANSION: fresh lateral/creative proof+disproof ideas,
+   tri-model (Fable + Sol + Grok generating independently), cross-ranked.
+3. SOFTWARE PASS: given 1+2 and the current bottlenecks, ask "would a
+   software-engineering effort materially accelerate us?" (precedent: the
+   FLINT tower-elimination engine replacing sympy = orders of magnitude).
+   Software gets the same tri-model treatment: one model builds, another
+   reviews the code.
+
 ## STANDING QUEUE (loop reads this; keep current)
 - ACTIVE (live lanes; see ops/status.sh): box01 pilot (compressed p105337, cap ~13:40) + fc1_audit (445 states); Sol x2 (REDUCTION.md consolidation, residue-A algebraization kill)
 - ON PILOT VERDICT: viable => Box02 restart (compressed campaign) + Box03 restart (char-0 certification wave for farm EMPTYs); fail => Sol instrument round 2
