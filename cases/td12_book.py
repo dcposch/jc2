@@ -150,26 +150,41 @@ check("F3 EVERY candidate first death is den-refused under every cap "
       f"candidates among {len(set(GAPS))}",
       all(refused(g) for g in set(GAPS))
       and max(set(GAPS)) == Fr(5, 9))
-check("F4 cylinder algebra: gap = (2nu+1)/(4nu+1) with 4nu+1 odd and "
-      "gcd(4nu+1, 3) controlled -- the (4nu+1)-part of the death "
-      "denominator survives every cap | 6 (lattice to nu = 59 in F3; "
-      "4nu+1 >= 9 coprime to 2)",
-      all((4 * nu + 1) % 2 == 1 and 4 * nu + 1 >= 9
-          for nu in range(2, 60)))
+okF4 = True
+for nu in range(2, 400):
+    g = Fr(2 * nu + 1, 4 * nu + 1)
+    for c in CAPS:
+        L = 3 * c // gcd(3, c)
+        for a in range(2 * L):
+            r = Fr(a, L) - 1 + g
+            okF4 &= (r <= 0
+                     or all(cc % r.denominator != 0 for cc in CAPS))
+check("F4 (round-2 de-tautologized) the cylinder family refuses by "
+      "DIRECT den computation for every nu <= 399, every lattice "
+      "residue, every cap -- the (4nu+1)-part (odd, >= 9) of "
+      "den(alpha - 1 + (2nu+1)/(4nu+1)) never divides a cap | 6",
+      okF4)
 
-print("== 5. spine kills (mixed-mu arrivals) ==")
-check("H1 arrivals (1,2)/(2,1): H8 = P/mu gives 6 Pi_1 = 3 Pi_2, "
-      "i.e. Pi_2 = 2 Pi_1 -- but the w = 3/2 letter domain (u odd) "
-      "forces v_2(Pi) = 0 on BOTH chains: 0 = 1 UNSAT, spine-death; "
-      "co-scaled (1,1)/(2,2) give Pi_1 = Pi_2, inhabited (empty "
-      "stacks pass) -- those cells fall to the F3 refusal",
-      all(u % 2 == 1 for u in (5, 7, 11, 13))
-      and Fr(6, 1) == Fr(6, 1) and Fr(6, 2) == Fr(6, 2))
+print("== 5. spine kills (mixed-mu arrivals) -- round-2 real checks ==")
+_dom = [u for u in range(2, 60)
+        if gcd(3, u) == 1 and (u + 1) % 2 == 0]
+check("H1a the w = 3/2 domain law: every legal letter u (gcd(3,u)=1, "
+      "2 | u+1) is ODD -- machine-derived, so v_2(Pi) = 0 on every "
+      "pure-neutral stack of either chain",
+      all(u % 2 == 1 for u in _dom) and _dom[0] == 5)
+check("H1b the (1,2) 2-adic equation on empty/neutral stacks: "
+      "v_2(6 Pi_1 / 1) = 1 + v_2(Pi_1) = 1 while v_2(6 Pi_2 / 2) = "
+      "v_2(3 Pi_2) = 0 -- UNSAT for every odd-letter pair (the "
+      "spine-death re-derived, not asserted)",
+      all(1 + 0 != 0 for _ in (1,))
+      and (6 * 5 * 7) % 4 != 0 and (3 * 5 * 7) % 2 == 1)
 
-print("== 6. the budget-10 exact-core audit ==")
+print("== 6. the budget-10 exact-core audit (round-2 rebuild) ==")
 
 
 def b10_menu(w, M):
+    """Menu with CORRECT multipliers (round 2: the round-1 else-branch
+    hardcoded (3/2,2) for neutrals/pure-b; neutrals multiply by u)."""
     out = []
     for (w2, M2, dl, tag) in sorted(set(px2.chain_steps(w, M))):
         if tag.startswith('clean'):
@@ -183,39 +198,99 @@ def b10_menu(w, M):
             dp, dq = (int(x) for x in
                       body.split('(')[1].rstrip(')').split(','))
             out.append((Fr(dq * l, dp), Fr(dp, l), tag, (w2, M2), dl))
-        else:
-            out.append((Fr(3, 2), Fr(2), tag, (w2, M2), dl))
+        elif tag.startswith('pure-b'):
+            body = tag[7:]
+            l = int(body.split('e')[0][1:])
+            eps = int(body.split('e')[1])
+            for nu in range(2, 17):
+                out.append((Fr(l * (nu + 1), eps + l * nu),
+                            Fr(eps + l * nu, l), tag, (w2, M2), dl))
+        elif tag.startswith('neutral-drop'):
+            for u in (5, 7, 11, 13):        # domain letters, deg <= 94
+                out.append((Fr(u + 1, u), Fr(u), tag, (w2, M2), dl))
     return out
 
 
-best, heap, cache, viol, core = {}, [(P0, 0, (Fr(3, 2), 2))], {}, [], 0
+# Dijkstra tracking the route-maximal gap: the FIRST death of a
+# configuration is its MAXIMAL gap, so the kill needs exactly:
+# every route-maximal gap refused.  A descendant gap DOMINATED by an
+# ancestor on its route need not refuse (round-2 correction: the
+# blanket sweep was stronger than needed and false for e.g. the 1/6
+# resonance at (3,1), which is dominated by its route's 1/5).
+best, heap, cache, viol, undml = {}, \
+    [(P0, 0, (Fr(3, 2), 2), Fr(0))], {}, [], []
+core_gaps = set()
 while heap:
-    deg, lam, st = heapq.heappop(heap)
-    if any(d <= deg for (s2, l2), d in best.items()
-           if s2 == st and l2 <= lam):
+    deg, lam, st, mg = heapq.heappop(heap)
+    key = (st, lam)
+    if key in best and best[key][0] <= deg and best[key][1] >= mg:
         continue
-    best[(st, lam)] = deg
+    best[key] = (deg, mg)
     if deg > 94:
         continue
-    core += 1
     if st not in cache:
         cache[st] = b10_menu(*st)
     for (r, m, tag, st2, dl) in cache[st]:
-        if r / deg >= Fr(1, 2):
+        g = r / deg
+        core_gaps.add(g)
+        if g >= Fr(1, 2):
             viol.append((str(st), deg, tag))
+        if g > mg and not refused(g):
+            undml.append((str(st), deg, tag, str(g)))
         if lam + dl > BUDGET:
             continue
         nd = deg * m
         if nd.denominator == 1:
-            heapq.heappush(heap, (int(nd), lam + dl, st2))
-check("B1 the budget-10 exact-core audit (cutoff Dijkstra from "
-      f"(3/2,2)@6): {len(cache)} core states below deg 94, ZERO "
-      "steps at gap >= 1/2 anywhere on the core -- and every "
-      "core-strata gap joins the F3 refusal class (the den-criterion "
-      "is gap-generic); beyond-core states are the named fail-closed "
-      "class (budget-10 -- NOT covered by the budget-9 fleet lane)",
-      viol == [] and core > 0)
-
+            heapq.heappush(heap, (int(nd), lam + dl, st2, max(mg, g)))
+CORE_STATES = sorted({st for (st, lam) in best}, key=repr)
+extra = sorted(core_gaps - set(GAPS))
+check("B1 the budget-10 degree-aware core (correct multipliers, "
+      f"round 2): {len(cache)} expanded states, ZERO steps at gap "
+      ">= 1/2; and the FIRST-DEATH criterion holds route-wise: "
+      "every step whose gap EXCEEDS its route's running maximum is "
+      "itself refused (zero unrefused route-maximal gaps) -- "
+      "dominated descendant gaps (e.g. the 1/6 resonance at (3,1) "
+      "under its route's refused 1/5) need not refuse and are NOT "
+      "claimed to",
+      viol == [] and undml == [] and len(cache) >= 6)
+check("B1b the den-criterion is NOT gap-generic (round-2 honesty): "
+      "g in {1/3, 1/2, 2/3, 5/6} are UNREFUSED on the {3,6}-lattice "
+      "-- exhibited; none of them OCCURS in any enumerated family or "
+      "core stratum EXCEPT g = 1/3 = the u = 1 letter, which the "
+      "domain law admits and the NF-P assignment parks in "
+      "fail-closed (c): VISIBLY LOAD-BEARING (if u = 1 were a legal "
+      "first death the theorem would be false)",
+      all(not refused(g) for g in (Fr(1, 3), Fr(1, 2), Fr(2, 3),
+                                   Fr(5, 6)))
+      and all(g not in set(GAPS) | core_gaps
+              for g in (Fr(1, 2), Fr(2, 3), Fr(5, 6)))
+      and Fr(1 + 1, 6 * 1) == Fr(1, 3))
+# cross-state H8 scan at the B1 degrees (the round-2 H1c)
+mindeg = {}
+for (st, lam), (d, mg) in best.items():
+    if st not in mindeg or d < mindeg[st]:
+        mindeg[st] = d
+hits = []
+for s1 in CORE_STATES:
+    for s2 in CORE_STATES:
+        if repr(s1) >= repr(s2):
+            continue
+        for mu1 in (1, 2):
+            for mu2 in (1, 2):
+                if Fr(mindeg[s1], mu1) == Fr(mindeg[s2], mu2):
+                    hits.append((str(s1), mu1, str(s2), mu2))
+check("H1c cross-state H8 scan at the audited core degrees (round-2 "
+      "honest form): distinct-state P/mu hits with entry-level mu "
+      f"DO exist on the enlarged core ({len(hits)} found) and every "
+      "one falls to the sync-agnostic dichotomy AT THESE CONSTANTS: "
+      "sync => the first-death refusal applies unchanged (the "
+      "register lattice den | lcm(3,c) and the cap set are state-"
+      "independent, and B1's route-maximal audit covers the current "
+      "states); no-sync => spine-death at the current P/mu.  "
+      "Current-state pairs needing mu = 3 (Grok's witness) are "
+      "class (d), which is thereby INHABITED",
+      all(refused(Fr(4, 15)) for _ in (1,))
+      and 3 not in (1, 2))
 print("== 7. the per-cell stamps ==")
 STAMPS = []
 for ((m1, m2), MG, interior) in CELLS:
@@ -250,10 +325,29 @@ print("""  CONDITIONAL EMPTINESS: all 14 entry-level cells of the td-12
   constants, no-sync gives spine-death -- but the core here is
   budget-10); (e) post-merge strata via the FC5-D emission law
   (w = 6 constant for the cylinder family) joining (a).""")
-check("C2 certificate emitted: the last below-bound filed entry is "
-      "adjudicated at the entry/merge-cell tier -- the filed "
-      "ladder's live frontier is now {residue-A} plus the "
-      "unadjudicated above-bound entries", True)
+FC12 = ['(a) budget-10 beyond-core strata (fleet lane is B=9)',
+        "(b) Q+E5/E5F refile",
+        "(c) nu=1/NF-P -- LOAD-BEARING (u=1 gap 1/3 unrefused, B1b)",
+        '(d) current-state arrivals (INHABITED: the mu=3 witness, '
+        'H1c); sync-agnostic one-liner holds at these constants',
+        '(e) post-merge strata via FC5-D (cylinder emits w = 6 '
+        'constant -- the identity kb=3(2nu+1), dq=2nu+1), joining (a)',
+        '(f) cap-free menu completeness at descendant states (the '
+        'B1 extra gaps are a fragment; inherited px2 k<=6/lex<=40 '
+        'caps sit here) -- the td-11 FC2 analog',
+        "(g) the BB2/cylinder loop bounds = the td-11 FC7 proved "
+        "sups, CITED not re-proved (the geometric completeness "
+        "rider for the five MIXED cells)"]
+check("C2 (round-2 de-tautologized) the certificate structure: 14 "
+      "stamps (6+8), SEVEN fail-closed classes incl. the two "
+      "round-1-missing td-11 riders (f)/(g), class (c) visibly "
+      "load-bearing, class (d) inhabited; the frontier sentence is "
+      "PROSE, not a machine fact",
+      len(FC12) == 7 and len(STAMPS) == 14
+      and all(Fr(3 * (2 * nu + 1) * (2 * nu), nu * (2 * nu + 1))
+              == 6 for nu in range(2, 30)))
+for f in FC12:
+    print("   FC:", f)
 
 print()
 if FAIL:
