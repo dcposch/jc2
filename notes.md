@@ -560,3 +560,11 @@
 - 2026-08-16 ~15:10: NEW STANDING DISCIPLINE (DC): daily external-progress sweep
   (X/arXiv/blogs) + fresh lateral-avenue generation, tri-model (Fable web + Sol +
   Grok). First run launching now.
+- 2026-08-16 ~16:00: COMMS POLICY (DC + refinement): two-track. Math developments =
+  track ALL sources on content. Citation = merit/priority only, NEVER credential-
+  filtered (Helali keeps priority citation). Collaboration = two tiers: verification
+  exchange open to all competent actors (Zenodo notes, artifact replay); endorsement-
+  relevant outreach filtered to published authors. arXiv path = GGV/Horruitiner
+  thread, fallback cold-credentialed (van den Essen circle / Orevkov line). Intel:
+  Helali = non-mathematician (DC LinkedIn chat) — artifact more impressive, check
+  his methods section for AI provenance before any joint note names methods.
