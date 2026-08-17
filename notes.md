@@ -618,3 +618,11 @@ DAILY DISCIPLINES (in order, at least once per day):
   expansion exploded; the partial = 595-state audited region, honest FC1-R remains
   partially open, fold into the census fail-closed inventory). Instrument-3 forensic:
   CORE2 build dispatched (the real object at last). td-12 errata repair queued.
+- 2026-08-17 ~13:55: *** CORE2 FIBER NONEMPTY MOD P *** — GB 397 elements (not [1])
+  in 11 SECONDS at p105337 (A/B gate cleared ~4000x; the 12h/221G record was the
+  defective presentation). FIRST nonempty coefficient-tier signal of the campaign;
+  quotient-window discipline: mod-p D21 window statement only, NOT algebraized, NOT
+  char-0. In flight: twin-prime fibers, dimension/point extraction, D23-row filter
+  harness (points dying on rows 21/22 = deeper window still kills; a survivor =
+  genuine mod-p germ candidate). Unsplit lane still running. Both branches from
+  here are historic: kill-at-depth or first-witness.
