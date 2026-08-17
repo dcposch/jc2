@@ -605,3 +605,7 @@ DAILY DISCIPLINES (in order, at least once per day):
   LAUNCHED on box01 (12h caps, process-verified: 5 msolve) racing PILOT12 (332GB,
   ~2.5h to cap). Any core verdict = the residue-A signal. Engine is reusable infra
   (farm big cores, Q2 strata next).
+- 2026-08-17 ~00:25: box01 ssh outage = local IP drift again (.205 -> .202; SG rule
+  added — ops pattern #3, consider a /24 or automation). PILOT12: TIMEOUT at 12h cap
+  (rc=124) — the half-compressed object officially dead-ends; the 3x gate outcome is
+  moot because the TRUE cores superseded it mid-race. 3 core lanes alive (~1h in).
