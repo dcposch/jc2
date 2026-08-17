@@ -614,3 +614,7 @@ DAILY DISCIPLINES (in order, at least once per day):
   core 12h fail + a3 double-EMPTY = the complete instrument dataset. Sol round 3
   launching. FC1 stalled-deep (595 states unchanged ~11h — kill+partial next tick
   if no movement). box01 down to farm only.
+- 2026-08-17 ~12:25: FC1 audit KILLED at 30.9h (595 states frozen 12h+ — one state's
+  expansion exploded; the partial = 595-state audited region, honest FC1-R remains
+  partially open, fold into the census fail-closed inventory). Instrument-3 forensic:
+  CORE2 build dispatched (the real object at last). td-12 errata repair queued.
