@@ -1,7 +1,43 @@
 # TDBOUND.md — the Bézout-defect td bound: empirical test
 
-Status: **CONJECTURE TD-BOUND stated; unfalsified on the entire filed
-corpus (2026-08-17, the empirical round of grok-lateral1.md §1).**
+Status: **CONJECTURE TD-BOUND — unfalsified but evidence-downgraded
+(2026-08-17, round 2: sol-tdbound-review COINCIDENCE-RISK folded;
+the intersection-theoretic reformulation is the real proof lane).**
+
+**Round-2 errata (the review's findings, folded honestly):**
+
+* **Evidence grading.** The round-1 "dead ↔ violates" claim was
+  overstated: the scan assigned DEAD labels from `td` rather than
+  reading kill artifacts; only 10 of the 23 off-axis rows are
+  actually adjudicated (td-7's entry + the td-11 three — the td-11
+  result itself CONDITIONAL on FC1-R/FC3; td-13's entry-tier rows
+  with the panel globally OPEN); 12 violating rows are
+  unadjudicated. **21/22 violations are largely FORCED by the census
+  construction** (the Λ-partition sample over the small type menu
+  makes `td > mn` nearly automatic) — the correlation is
+  coincidence-risk, not empirical law. L6 did not manufacture the
+  single passing row (its four kills are all violating type-(2,3)),
+  which is the one non-automatic discriminator the sample contains.
+* **The reformulation (the substantive output).** In the Sigray
+  frame, with `td = Σ_F Λ_F = Σ_F αβ·a_F b_F/ν_F`, the bound is
+  EXACTLY the pole-mass inequality **`Σ_F a_F·b_F/ν_F <= 1`**, and
+  equivalently (resolved-pencil form) the square-norm bound
+  **`Δ² >= −2`** for the normalized difference divisor after
+  deleting the Cor-7.4-certified proportional centers. That names
+  the missing lemma — a Jacobian/proximity problem at divergence
+  centers — and is where `J(f,g) = 1` must first do real work.
+* **Type provenance.** `TRANSPORT.md`'s normalization theorem makes
+  the GGV multipliers equal the Sigray type on the selected genuine
+  minimal pair; the 23 formal rows still carry no entrywise GGV
+  provenance or polynomial realizations. The tested candidate is
+  the Sigray-frame bound.
+* **"No book was ever built" was too literal**: the td-12 (3,5)
+  14-cell skeleton existed (`stage_rp_census`: OPEN 14, capped);
+  what was missing was the priced/tower book — **now built:
+  BOOK-TD12.md adjudicates all 14 cells dead (6 spine + 8
+  first-death-refused). The below-bound entry died CHEAPLY — the
+  bound did not protect it, and the only equality row (`td = mn`)
+  remains residue-A.**
 Machine gate: `cases/tdbound_scan.py` (6 checks, exit 0). Data
 sources: the on-axis td=6 residue-A record, the 23 L6-surviving
 off-axis entries (`cases/book_offaxis.py` census, td 7..14), the
@@ -18,7 +54,7 @@ commit.
 | td-10 ×2 | 10 | (2,3) | 6 | (2,1)/(1,1,2) | fails | fails | unadjudicated |
 | td-11 ×3 (+ the 411 census rows) | 11 | (2,3)/(2,5) | 6/10 | (1,2)/(1,3)/(1,2,2) | fails | fails | DEAD (td-11 census) |
 | td-12 (2,3) ×3, (2,5) | 12 | (2,3)/(2,5) | 6/10 | various | fails | 3 hold | unadjudicated |
-| **td-12 (3,5), poles ((6,1,2,5),(6,1,2,5))** | **12** | **(3,5)** | **15** | **(2,2)** | **HOLDS (12 < 15)** | holds | **UNADJUDICATED — no book was ever built** |
+| **td-12 (3,5), poles ((6,1,2,5),(6,1,2,5))** | **12** | **(3,5)** | **15** | **(2,2)** | **HOLDS (12 < 15)** | holds | **DEAD (BOOK-TD12, entry/merge-cell tier, conditional) — round 2** |
 | td-13 ×6 | 13 | (2,3)/(3,4) | 6/12 | various | fails | fails | DEAD (entry-tier rows) |
 | td-14 ×5 | 14 | (2,3) | 6 | various | fails | fails | unadjudicated |
 

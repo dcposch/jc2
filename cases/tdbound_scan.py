@@ -58,8 +58,12 @@ for (m_, td), d in sorted(cen.items(), key=lambda kv: (kv[0][1],
     for (al, be, poles) in d['l6']:
         bs = tuple(p[2] for p in poles)
         adjud = ('DEAD (td-7 book)' if td == 7
-                 else 'DEAD (td-11 census)' if td == 11
-                 else 'DEAD (td-13 entry-tier rows)' if td == 13
+                 else 'DEAD-CONDITIONAL (td-11 census, FC1-R+FC3)'
+                 if td == 11
+                 else 'entry-rows dead; PANEL OPEN (td-13)'
+                 if td == 13
+                 else 'DEAD (BOOK-TD12, conditional)'
+                 if (td, al, be) == (12, 3, 5)
                  else 'UNADJUDICATED')
         ROWS.append(dict(src=f'off-axis entry m={m_}', td=td, m=al,
                          n=be, bs=bs, degf=None, degg=None, Iinf=None,
@@ -106,14 +110,14 @@ check("T2 LAW (i) td <= m*n: HOLDS on the residue-A record AT "
       and ROWS[0]['law1'] and ROWS[0]['td'] == ROWS[0]['m'] * ROWS[0]['n'])
 td12 = [r for r in off if r['law1']]
 check("T3 THE SINGLE BELOW-BOUND FILED ENTRY: td=12, m=2, type "
-      "(3,5) (12 <= 15), poles ((6,1,2,5),(6,1,2,5)), q_h = (2,2) "
-      "-- the ONE entry in the whole filed range whose book was "
-      "never built (UNADJUDICATED).  Law (i) refuses to kill "
-      "exactly the configuration nobody has adjudicated",
+      "(3,5) (12 <= 15), q_h = (2,2) -- round 2: ADJUDICATED DEAD "
+      "by BOOK-TD12 (14/14 cells, first-death refusal).  The bound "
+      "did not protect it; the only equality row td = mn remains "
+      "residue-A",
       len(td12) == 1 and td12[0]['td'] == 12
       and (td12[0]['m'], td12[0]['n']) == (3, 5)
       and td12[0]['bs'] == (2, 2)
-      and td12[0]['status'] == 'UNADJUDICATED')
+      and td12[0]['status'].startswith('DEAD (BOOK-TD12'))
 l2rows = [r for r in ROWS if r['law2']]
 check("T4 LAW (ii) td | mn*prod(q_h) with q_h = b: COARSER -- holds "
       "on {td6 record, td8 [2,2], td12 (2,3)-b(2,2), td12 (3,5), "
@@ -136,13 +140,15 @@ check("T5 pattern (iii), reported from the data: (a) the live "
       and {(r['m'], r['n']) for r in off}
       == {(2, 3), (2, 5), (3, 4), (3, 5)}
       and max(r['m'] * r['n'] for r in off) == 15)
-check("T6 kill-consistency cross-check: every ADJUDICATED filed "
-      "configuration (td-7: 17/17 dead; td-11: 411/411 dead; td-13 "
-      "entry rows: dead at entry tier) violates law (i); NO "
-      "adjudicated row satisfies it -- zero counterexamples to "
-      "CONJECTURE TD-BOUND in the filed corpus",
-      all(not r['law1'] for r in off
-          if r['status'].startswith('DEAD')))
+check("T6 (round 2, sol-review graded): adjudication labels now "
+      "read the actual record -- td-11 CONDITIONAL, td-13 panel "
+      "OPEN, td-12 (3,5) DEAD via BOOK-TD12; the round-1 dead<->"
+      "violates equivalence is WITHDRAWN (21/22 violations are "
+      "census-construction-forced, sol-tdbound-review sec 1); the "
+      "conjecture remains merely UNFALSIFIED, with the Sigray "
+      "pole-mass reformulation sum a*b/nu <= 1 as the proof lane",
+      any('CONDITIONAL' in r['status'] for r in off)
+      and any('OPEN' in r['status'] for r in off))
 
 print()
 if FAIL:
