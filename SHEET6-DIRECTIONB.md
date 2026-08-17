@@ -1183,3 +1183,41 @@ random draws:
 Q2-l12 eta0: NOT added to the filter -- obsolete per Sol
 instrument3 §6.3 itself (V_bank cap Q2_l12 = empty already
 certified at quotient tier; "re-running eta0 adds nothing").
+
+## 8.S The D23-core (the decisive object)
+
+[2026-08-17; synchronous build per the standing correction.]
+
+CONSTRUCTION: the 22-pivot band elimination extends to the D23
+window with the Row_22 block UNPIVOTED (quadratic in highs, §8/
+§6.V(4): linear elimination stops at band 20). Full elimination of
+the pivots INTO Row_22 was measured and rejected: it inflates the
+10 Row_22-descended rows to 4,971,007 terms / max degree 32 (the
+substituted tf-expressions get squared) -- banked as the measured
+alternative, not emitted. THE EMITTED FORM (hybrid, variety-exact):
+38 compressed D21-CORE2 rows (byte-identical to the banked
+directionb_core2_p*.ms rows -- REGRESSION gate) + 22 pristine pivot
+rows (re-included so the pivot coordinates are defined) + 10
+pristine Row_22 rows + rad/sat: **87 vars / 77 eqs / 59,316 terms /
+degree <= 13 / ~1.5 MB per prime**, identical shape at 105337,
+105673, 200257: cases/directionb_core23_p{105337,105673,200257}.ms
++ the p105337 fiber variant directionb_core23_fiber_p105337.ms
+(72 rows / 80 vars / 59,316 terms folded, 1.2 MB).
+
+GATES: regression (38-row prefix byte-identical to the D21-core
+files, all 3 primes); round-trip re-parse (70 rows); paren sweep;
+pivot-row back-solve inherited (G0.4b machinery); **FILTER-REPLAY
+CLOSURE: the 12 dead sample points are INCONSISTENT against the
+EMITTED D23-core rows (deep tails symbolic, affine rank test
+through the parsed emission) -- 12/12, closing the loop between the
+§7.S4 filter and the artifact.** Wall: ~8 min total for all three
+primes + fiber + gates (engine build 1 s, 22 raw pivots 42 s, the
+one heavy step was the measured-and-rejected full-elimination
+census at 469 s).
+
+PRE-REGISTERED OUTCOMES (coordinator): EMPTY at 2+ primes =
+residue-A dead at the depth-23 window tier (screening) -> char-0
+certification of the small core -> on-axis td=6 closes pending the
+review gauntlet; NONEMPTY = dimension/points again and iterate to
+D25 (depth iteration is now minutes-cheap; the constraint ratio
+improves each step). box01 lanes are the coordinator's launch.
