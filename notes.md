@@ -638,3 +638,10 @@ DAILY DISCIPLINES (in order, at least once per day):
   re-strategy launching with the full telemetry; (c) daily sweep after. The D23
   system (87v/77eq incl. quadratic Row_22 block) is qualitatively harder than
   CORE2 (11s) — consistent with Row_22 being the killing tier.
+- 2026-08-18 ~07:10: Sweep #3: a FIFTH (72,108) actor — anonymous MO answerer (Jul 23,
+  'write-up in preparation', KConrad-endorsed). Paper-1 timing pressure is now real:
+  the paper-of-record for the bound may be in someone else's draft folder. FOR DC:
+  recommend (a) v4 goes into the GGV thread + to Helali NOW rather than waiting for
+  replies, and (b) the theory-bundle Zenodo timestamp decision gets urgency — our
+  subcase-(2)-by-proof content is safe (nobody else has it) but the record framing
+  window may be closing. Verdict lanes still grinding.
