@@ -1221,3 +1221,55 @@ certification of the small core -> on-axis td=6 closes pending the
 review gauntlet; NONEMPTY = dimension/points again and iterate to
 D25 (depth iteration is now minutes-cheap; the constraint ratio
 improves each step). box01 lanes are the coordinator's launch.
+
+### 8.S2 Row_22 in the D21 quotient: the compatibility object
+
+[2026-08-18; Sol instrument4 §§2-3, built + verified independently;
+synchronous. /tmp state loss (the D21/D23 window pickles aged out)
+was absorbed by working FROM THE FROZEN ARTIFACTS -- G0's own point;
+harnesses/GB/points now promoted into cases/ (directionb_fiber_
+filter.py, directionb_row22_schur.py, directionb_row22_emit.py,
+directionb_core23_{elim,emit,final}.py, directionb_fiber_gb_
+p105337.out.txt, directionb_fiber_points_p105337.txt).]
+
+SOL'S §2.1 ALGEBRA VERIFIED INDEPENDENTLY (5/5 per prime): the ten
+pristine Row_22 rows are F22 = A(z) y + b(z) in the ten deep tails
+y = (x74..x83); A = C diag(u_j) with each u_j a SINGLE W-monomial
+(chart unit) and C CONSTANT on the radical fiber; rank(C) = 4
+certified by exact row reduction with recorded invertible U;
+L = bottom-6 rows of U satisfies L C = 0, hence L A = 0 for ALL
+chart W-values -- the SIX rows c = L b are the complete
+compatibility condition, formed BEFORE any pivot substitution.
+Stage-entry census MATCHES SOL EXACTLY: c at fixed-W = 25,554
+terms ("before pivot elimination").
+
+RECONCILIATION (the one non-replayable stage, stated plainly):
+Sol's §2.2 post-pivot counts (16,134 / 10,500 / 7,054) presuppose
+normal-form reduction by a FRESH FIXED-W D21 basis; no such basis
+exists in our banked state (both overnight artifacts are the
+W-symbolic 397-GB; the box01 D23 lanes are still 0-byte), and
+solver runs are off-limits locally. W-symbolic NF against the
+banked 397-GB is exact but coarser (86k terms at stage 2, growing)
+-- pipeline-dependent presentation, NOT a bug in either side's
+algebra; reconciled by construction of an emission that NEEDS NO
+QUOTIENT STEP:
+
+THE EMITTED OBJECT (deep-eliminated, quotient-free, variety-exact):
+{24-row W-symbolic D21 fiber core} + {22 pristine pivot rows,
+radgens folded} + {the 6 compatibility rows c} + 2 uW rows =
+**72 vars / 54 eqs / 48,621 terms / ~1.0 MB per prime**, identical
+shape at 105337 / 105673 / 200257:
+cases/directionb_row22compat_p{105337,105673,200257}.ms.
+The TEN DEEP TAILS ARE GONE from the system (asserted): by the
+certified rank-4 Schur step, a D21 point extends through depth 23
+iff c = 0 -- so EMPTINESS of this object == the depth-23 kill on
+the chart, with 10 fewer variables and 6 rows instead of 10.
+
+GATES: Schur certification per prime (6/6); paren sweep; deep-var
+absence asserted; **LOOP CLOSURE: all 12 banked D21 fiber points
+violate >= 1 of the SIX compatibility rows (12/12) -- the §7.S4/
+§8.S filter verdict reproduced through c = L b.** Twin robustness
+(coordinator's overnight lanes): fiber GBs at 105673/200257 are
+~10.5 MB bases, NOT [1] -- the D21 fiber locus is NONEMPTY at all
+three primes, consistent with §7.S4. box01 lanes on the compat
+object are the coordinator's launch.
