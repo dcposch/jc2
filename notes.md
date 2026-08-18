@@ -632,3 +632,9 @@ DAILY DISCIPLINES (in order, at least once per day):
   staircase), and consistent with the pole-scale pinning. All rides on the D23-core
   (building). td-12 promoted at honest tier (u=1 gap-1/3 candidate exhibited
   unrefused = named honest residual).
+- 2026-08-18 ~03:30: D23-core lanes ALL TIMEOUT at 12h caps (rc=124; mains plateaued
+  121G for final ~5h). Banked per hygiene. Per pre-registered tree: (a) D23-EXT
+  launched — ONE lane (p105337) at 48h cap with -v2 telemetry, verified; (b) Sol
+  re-strategy launching with the full telemetry; (c) daily sweep after. The D23
+  system (87v/77eq incl. quadratic Row_22 block) is qualitatively harder than
+  CORE2 (11s) — consistent with Row_22 being the killing tier.
