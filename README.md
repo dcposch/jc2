@@ -1,5 +1,7 @@
 # jc2
 
+Our goal is to resolve the plane Jacobian conjecture.
+
 Either prove that every polynomial map ℂ² → ℂ² with constant nonzero Jacobian
 is invertible, or find a counterexample. After the July 2026 counterexample in
 dimension 3, the plane case is the last one standing. This repo is a sustained
