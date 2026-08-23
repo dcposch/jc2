@@ -1,0 +1,38 @@
+I'll start by loading the review skill and both Sol claims, then independently check the computation payloads against the extraction-agent rank claim.The review skill is for code diffs; this is a math audit, so I’ll verify both claims against the banked payloads and the 8.S6 extraction note.I'll pull 8.S6, the rank-5 extraction claim, and the payload formats next so the two stories can be compared on the same numbers.I’ll recompute the NF ranks, atlas signatures, and kernel vectors from the banked files, then check the G5 arithmetic family the same way.Atlas JSON already stores `cond_dim=3` and `nf_rank=5` together; I’ll recompute those from the payloads and check whether the torsion/saturation claims are actually banked.I have the atlas layout; next I’ll recompute ranks, kernels, character templates, and the G5 arithmetic independently.Witness `q`-values match, and the independence claim is now a direct recompute. I’ll write the two-target verdict next.One leftover phrase in the character-template paragraph needs cleaning up.Verdict is in `xmodel/grok-k-g5-review.md`. No other files changed; no git.
+
+## (A) Conjecture K — CONFIRMED on the premise, GAPS on the mechanism
+
+**Sol is right about \(g_1,g_2,g_3\).** They are constant-linearly independent in all 72 atlas fibers and at \(p=200257\) `a00pp`. Private monomials \(x_{57}^2 uW_1^2\), \(x_{57}^2 uW_2^2\), \(x_{70}\) have coefficient 1 everywhere, so a constant combination is zero only if all three coefficients are zero. Recomputed from `g_rows`.
+
+**The extraction agent is right about two other facts**, and those are not the same object:
+
+| Object | Fact | Status |
+|---|---|---|
+| 6 NF rows | rank 5, left-kernel dim 1 | Confirmed at all three primes; kernel vectors match (K.9) exactly |
+| \(\{g_1,g_2,g_3\}\) | rank 3 | Confirmed; atlas already stores `cond_dim: 3` next to `nf_rank: 5` |
+| max dimension | \(13\to 11\) | Uniform on both atlases |
+
+8.S6’s sentence “one variety-level dependency among the g’s” glues the rank-5-of-six syzygy and the \(13\to 11\) drop into a linear relation among the three residuals. That identification is false. Rank \(C=2\) explains why six rows become three independent \(g\)’s (“four becomes three”); it does not explain why three independent rows drop dimension by only two. A rank-1 conormal span of three classes has **nullity two**, not one.
+
+**8.S6 needs a correction entry.** Suggested replacement is in the review (A.5). The JSON is already correct; the prose in 8.S6 / 8.S8 / notes.md / the witnesses `anomaly` field is not.
+
+**Replacement mechanism:** the right *kind* of explanation (two quotient-torsion syzygies, \(q\) a zerodivisor, residual principal on a 12-dimensional \(q\)-open). Two external checks pass: claimed \(q_p\) at the 12 D23 witnesses reproduces (K.18) and is nonzero; the 12 old D21 rational points all have \(q=0\) while D23 witnesses have \(q\ne 0\), so \(q\) is a zerodivisor rather than identically zero. **The load-bearing identities are unbanked:** \(\mathrm{NF}(q(g_2-\lambda g_1))=0\), the \(\Phi\) matrix (681 columns, rank 673, nullity 8), and the four saturation hashes in (K.19) exist only in Sol’s note. Demote “proved on the complete first-prime atlas” until those artifacts exist.
+
+Character template (K.10): **864/864** atlas coefficients match.
+
+## (B) G5 BLOCKED — CONFIRMED
+
+The obstruction is airtight against the extracted bookkeeping. No usable FC5 consequence was missed.
+
+- FC5 is \(w=\bar\kappa(d_q-1)/(\nu d_q)\), \(M=\gcd(d_p,d_q)\). No incoming mass.
+- \(\Phi_s(w,M)=wM^2/(sM-1)\) equals pole mass at poles and is **nonmonotone** on coefficient-solvable charts (residue-A decreases by \(1/3\); BB2 cylinder increases by \(1/6\)).
+- Prop 3 family recomputes: type \((2,3)\), \(td=4A\to\infty\), FC5 output stuck at \((w,M)=(2/3,3)\). Lives on \(M=2\to 3\), outside the depth theorem. NF-M sees one type per \(A\).
+- Reconstructing \(A\) from the child *frame* \(\bar\kappa_1=6A-1\) is not a bound: FC5 emits \((w,M)\), not a bound on the frame, and nothing presently bounds \(M\ge 2\) frame parameters.
+
+**Missing lemma, precisely:**
+
+- **SP** (\(ab\le\nu\) on a realizable one-pole configuration) is the smallest necessary sector test for any emission proof. It **is** one-pole TD-BOUND, not a reduction.
+- **KME-2** is TD-BOUND rewritten in mismatch-energy coordinates. Diagnostic, not a lemma.
+- **PCC** (\(\sum h_p^2\ge B^2-1\)) is the only genuine *sufficient* lemma on the table, and it is unproved.
+
+A false BLOCKED would waste the prize. This one is not false. Do not open a G5 proof lane from FC5 + depth-closure + NF-M as presently stated.

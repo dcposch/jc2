@@ -1,0 +1,545 @@
+# Reduction mod $p$ / $p$-curvature: the residue-A lane
+
+**Date:** 2026-08-23  
+**Charge:** execute APPROACHES.md row 20 as a standalone lane; define the
+$p$-curvature attached to a plane Keller map, test whether it gives a
+necessary condition on the banked residue-A data, and locate the exact
+arrow to the Dixmier side.  
+**Verdict:** **KNOWN-HOLLOW as a new residue-A obstruction; REAL as a
+dictionary and scope correction.**
+
+There are two different objects that should not be called “the
+$p$-curvature of a Keller map” interchangeably.
+
+1. A plane Keller map has a canonical inverse-Jacobian connection on its
+   direct image. Its $p$-curvature is identically zero for every Keller map
+   in characteristic $p$. This is a necessary condition, but it is a formal
+   consequence of $J(P,Q)=1$ and adds no equation to residue-A.
+2. Tsuchimoto’s useful $p$-curvature is attached to a splitting module for
+   the characteristic-$p$ Weyl algebra. It starts with a Weyl-algebra
+   endomorphism and proves that its map on the $p$-center is symplectic.
+   Belov-Kanel–Kontsevich (BKK) obtain the same quantum-to-classical arrow
+   from the canonical Poisson bracket on the center. Neither construction
+   sends an arbitrary commutative Keller map, much less a finite
+   residue-A jet, to an $A_1$ endomorphism.
+
+Consequently, the repository’s modular nonemptiness does not cross to the
+DC(1) lane. A full plane Keller map does give a special endomorphism of
+$A_2$ by pullback of differential operators, but that is the familiar
+$\mathrm{DC}_2\Rightarrow\mathrm{JC}_2$ direction and supplies no new
+constraint before the residue template has been extended and algebraized.
+
+---
+
+## 1. The connection attached to a plane Keller map
+
+### 1.1 Setup
+
+Let $k$ be a perfect field of characteristic $p>0$, and let
+
+\[
+ F=(P,Q):\mathbb A^2_{x,y}\longrightarrow\mathbb A^2_{u,v},
+ \qquad P,Q\in B:=k[x,y],
+\]
+
+with
+
+\[
+ J:=P_xQ_y-P_yQ_x=1.
+\]
+
+Put $A=k[u,v]$ and make $B$ an $A$-algebra by $u\mapsto P$ and
+$v\mapsto Q$. The inverse Jacobian gives the unique lifts of the target
+coordinate derivations:
+
+\[
+ \delta_u=Q_y\partial_x-Q_x\partial_y,
+ \qquad
+ \delta_v=-P_y\partial_x+P_x\partial_y.                 \tag{1.1}
+\]
+
+They satisfy
+
+\[
+\begin{array}{c|cc}
+ &P&Q\\ \hline
+\delta_u&1&0\\
+\delta_v&0&1
+\end{array}
+\]
+
+and commute. Indeed, $[\delta_u,\delta_v]$ kills both $P$ and $Q$, while
+$dP,dQ$ are a $B$-basis of $\Omega^1_{B/k}$.
+
+On the largest target open set $U$ over which $F$ is finite étale,
+
+\[
+ E=(F_*\mathcal O_{\mathbb A^2})|_U
+\]
+
+is a vector bundle whose rank is the generic degree. It carries the
+integrable connection
+
+\[
+ \nabla b=du\otimes\delta_u(b)+dv\otimes\delta_v(b).      \tag{1.2}
+\]
+
+The same formula defines an $A$-connection on the quasi-coherent module
+$B$ without a global finiteness assumption. Equation (1.2)—not a
+rank-one exponential connection and not Tsuchimoto’s splitting
+connection—is the canonical connection directly attached to $F$.
+
+### 1.2 Its $p$-curvature
+
+For $D\in\operatorname{Der}_k(A)$, write $D^{[p]}$ for its restricted
+$p$-th power. The $p$-curvature is
+
+\[
+ \psi_\nabla(D)=\nabla_D^p-\nabla_{D^{[p]}}
+ \in\operatorname{End}_A(E).                              \tag{1.3}
+\]
+
+Since $\partial_u^{[p]}=\partial_v^{[p]}=0$,
+
+\[
+ \psi_\nabla(\partial_u)=\delta_u^p,
+ \qquad
+ \psi_\nabla(\partial_v)=\delta_v^p.                      \tag{1.4}
+\]
+
+The powers on the right are iterates acting on $B$. In characteristic
+$p$, the $p$-th iterate of a derivation is again a derivation. Moreover,
+
+\[
+ \delta_u^p(P)=\delta_u^{p-1}(1)=0,\qquad
+ \delta_u^p(Q)=0,
+\]
+
+and likewise for $\delta_v^p$. A derivation of $B$ is determined by its
+values on $P,Q$, because $dP,dQ$ form a basis. Therefore both iterates
+vanish.
+
+> **Proposition 1 (automatic zero $p$-curvature).** For every plane Keller
+> map over $k$, the inverse-Jacobian connection (1.2) is flat and
+> $\psi_\nabla=0$.
+
+Equivalently, on function fields $k(P,Q)\subset k(x,y)$, the extension is
+finite separable and $\delta_u^p,\delta_v^p$ are
+$k(P,Q)$-derivations. A finite separable extension has no nonzero
+derivations over its base. This formulation shows that the conclusion is
+unaffected by the nonproperness locus.
+
+Cartier descent interprets zero $p$-curvature as Frobenius descent of this
+connection. It does **not** interpret it as generic degree one, global
+properness, or polynomial invertibility.
+
+### 1.3 A decisive negative control
+
+The condition cannot distinguish automorphisms even inside the class of
+finite étale maps. For every $p$,
+
+\[
+ F_{\mathrm{AS}}=(x-x^p,y)
+\]
+
+has Jacobian one and is finite étale of degree $p$, so it is not a
+polynomial automorphism. Its lifted derivations are
+$\delta_u=\partial_x$ and $\delta_v=\partial_y$, and its $p$-curvature is
+zero. This Artin–Schreier example rules out using
+$\psi_\nabla=0$ as an invertibility screen.
+
+---
+
+## 2. Where Tsuchimoto’s $p$-curvature lives
+
+### 2.1 The characteristic-$p$ Weyl algebra
+
+Let $W_n(k)$ be generated by $X_i,D_i$ with
+$[D_i,X_j]=\delta_{ij}$. In characteristic $p$,
+
+\[
+ Z(W_n)=k[X_1^p,\ldots,X_n^p,D_1^p,\ldots,D_n^p],          \tag{2.1}
+\]
+
+and $W_n$ is Azumaya of degree $p^n$ over this center. After adjoining
+formal $p$-th roots of the central coordinates, the algebra splits:
+
+\[
+ W_n\otimes_Z Z^{1/p}\simeq
+ \operatorname{End}_{Z^{1/p}}(\mathcal E),
+ \qquad \operatorname{rank}\mathcal E=p^n.                \tag{2.2}
+\]
+
+Tsuchimoto constructs a flat connection on
+$\operatorname{End}(\mathcal E)$ for which the Weyl algebra is horizontal,
+lifts it to a projectively flat connection on $\mathcal E$, and recovers
+the standard symplectic form as its scalar curvature. He then modifies
+the lifted connection to a flat connection and computes that modified
+connection’s $p$-curvature. Comparing it with its pullback under a Weyl
+endomorphism gives the gauge equation in his Proposition 3.2. When the
+endomorphism degree is bounded independently of $p$, the scalar error
+vanishes for sufficiently large $p$, so the induced map on the
+$p$-th-root center preserves the symplectic form (Corollary 3.3).
+An ultraproduct returns to characteristic zero (Proposition 7.1 and
+Corollary 7.3).
+
+The logical input is
+
+\[
+ \boxed{\text{Weyl endomorphism}}
+ \longrightarrow
+ \boxed{\text{pullback of the Azumaya splitting connection}}
+ \longrightarrow
+ \boxed{\text{symplectic map on }\operatorname{Spec}Z^{1/p}}. \tag{2.3}
+\]
+
+It is not
+
+\[
+ \text{arbitrary Keller map}\longrightarrow\text{Weyl endomorphism}.
+                                                                    \tag{2.4}
+\]
+
+This direction is explicit in
+[Tsuchimoto 2005, §§2–3 and §7](https://doi.org/10.18910/7472).
+
+### 2.2 The BKK version
+
+BKK avoid the splitting-connection calculation. Spread a
+characteristic-zero Weyl endomorphism over a finitely generated integral
+ring and reduce modulo $p$. The reduction preserves the large center.
+On that center they define
+
+\[
+ \{a,b\}=\frac{[\widetilde a,\widetilde b]}{p}\pmod p,     \tag{2.5}
+\]
+
+where the tildes are lifts before reduction. In the coordinates (2.1),
+this gives the standard symplectic Poisson bracket after taking $p$-th
+roots. A Weyl endomorphism preserves (2.5), so its center map is a
+$2n$-variable symplectic Keller map. Assuming $\mathrm{JC}_{2n}$, that
+center map is invertible for all sufficiently large $p$; the equal-degree
+Azumaya map is then invertible, and spreading out returns an inverse in
+characteristic zero. This is Theorem 1 of
+[Belov-Kanel–Kontsevich](https://arxiv.org/abs/math/0512171):
+
+\[
+ \mathrm{JC}_{2n}\Longrightarrow\mathrm{DC}_n.             \tag{2.6}
+\]
+
+Tsuchimoto’s $p$-curvature and the BKK Poisson center are two realizations
+of the same **quantum-to-classical** shadow. BKK do not require a
+connection attached to a pre-existing commutative Keller map.
+
+### 2.3 Why “zero above, nonzero center below” is no contradiction
+
+The abstract crystalline/Weyl differential operator $D^p$ is not the
+same object as the $p$-fold action of $D$ on the polynomial module. In
+particular, $\partial_x^p$ is a nonzero central element of the Weyl
+algebra but acts as zero on $k[x,y]$.
+
+For a vector field $D=a\partial_x+b\partial_y$, the corresponding central
+$p$-curvature element is
+
+\[
+ D^p-D^{[p]}=a^p\partial_x^p+b^p\partial_y^p.              \tag{2.7}
+\]
+
+For $D=\delta_u,\delta_v$, the restricted vector-field powers $D^{[p]}$
+vanish by Proposition 1, while the central elements (2.7) need not vanish
+inside the Weyl algebra. The direct-image connection sees the zero
+cotangent central character; Tsuchimoto’s splitting family sees all
+central characters. This is the precise relationship between the two
+uses of $p$-curvature.
+
+---
+
+## 3. The full Keller-to-$A_2$ lift and its center shadow
+
+There is no automatic $A_1$ quantization, but a full plane Keller map does
+canonically pull back differential operators in two variables. With
+target Weyl generators $u,v,\partial_u,\partial_v$, define
+
+\[
+\begin{aligned}
+ \Phi_F(u)&=P, & \Phi_F(v)&=Q,\\
+ \Phi_F(\partial_u)&=Q_y\partial_x-Q_x\partial_y,
+ &\Phi_F(\partial_v)&=-P_y\partial_x+P_x\partial_y.
+\end{aligned}                                                \tag{3.1}
+\]
+
+Equations (1.1) and flatness give all the canonical commutation relations,
+so $\Phi_F:A_2\to A_2$ is a Weyl endomorphism. This is the standard
+construction underlying
+$\mathrm{DC}_2\Rightarrow\mathrm{JC}_2$: a nonautomorphic plane Keller
+map would produce a non-surjective $A_2$ endomorphism.
+
+In characteristic $p$, apply (2.7) and take $p$-th-root center
+coordinates. If $(x,y;\alpha,\beta)$ are source cotangent coordinates,
+the center shadow of (3.1) is
+
+\[
+ \widetilde F(x,y;\alpha,\beta)=
+ \bigl(P,Q;\,
+ Q_y\alpha-Q_x\beta,\,
+ -P_y\alpha+P_x\beta\bigr).                               \tag{3.2}
+\]
+
+This is the inverse-cotangent lift of $F$. It is automatically exact
+symplectic: writing $\zeta_u,\zeta_v$ for the last two target coordinates,
+
+\[
+ \widetilde F^*(\zeta_u\,du+\zeta_v\,dv)
+ =\alpha\,dx+\beta\,dy.                                   \tag{3.3}
+\]
+
+The identity follows by substituting (3.2) and using $J=1$. Thus the
+four-variable BKK Keller condition on this special Weyl endomorphism is
+another consequence of $J(P,Q)=1$. It does not cut the plane Keller locus
+further.
+
+The exact dictionary relevant to this repository is therefore
+
+\[
+\begin{array}{ccccc}
+\text{full plane Keller }F
+&\longrightarrow&
+\Phi_F\in\operatorname{End}(A_2)
+&\longrightarrow&
+\widetilde F:T^*\mathbb A^2\to T^*\mathbb A^2,\\[2mm]
+\text{finite residue-A jet}
+&\not\longrightarrow&
+\text{polynomial }A_2\text{ endomorphism}
+&\not\longrightarrow&
+\text{global center map}.
+\end{array}                                                 \tag{3.4}
+\]
+
+The first line is real, conditional on having a full polynomial pair. The
+second line is the current state of the campaign.
+
+---
+
+## 4. Necessary-condition audit on residue-A
+
+### 4.1 What is banked
+
+The phrase “three-prime modular nonemptiness” needs a scope qualifier.
+
+| object | banked modular result | primes | what is not present |
+|---|---|---|---|
+| D23 a00pp det23/row22red fiber | proper 509-element Gröbner basis; dimension 11 over $\overline{\mathbf F}_p$ | 105337, 105673, 200257 | global $P,Q$; a third-prime rational witness |
+| D23 full 36-fiber atlas | 36/36 nonempty; dimension 11 | 105337, 105673 | third-prime atlas; global $P,Q$ |
+| D25 family | 576 copies of $\mathbb A^{14}$, hence nonempty | 105337, 105673 | third-prime result; formal germ; global $P,Q$ |
+
+The repository sources are
+[SHEET6-DIRECTIONB §§8.S5–8.S8 and 9.S2](../SHEET6-DIRECTIONB.md),
+the [D23 witness banks](../cases/d23_witnesses_p105337.json), and the
+[D25 replay](../cases/d25_certificate_replay.json). D23 witness files
+exist only for 105337 and 105673. At 200257 the recorded result is
+geometric nonemptiness over the algebraic closure; the selected $W^4$
+branch has no $\mathbf F_p$-rational chart point. The D25 replay explicitly
+scopes itself to the first two primes.
+
+These are finite-window, chart-local systems: residue-A, B-frozen,
+no-log, PIN42, $W_1W_2\ne0$, and subject to the recorded
+emission-fidelity caveat. Their variables are tail, radical, pole-scale,
+and compatibility coordinates. The three det23 headers contain 22 such
+coordinates; they do not contain coefficients of global polynomials
+$P,Q$, a finite étale $A$-algebra $B$, a Weyl splitting module, or a
+connection matrix.
+
+### 4.2 Candidate gate N: zero $p$-curvature
+
+The putative gate is
+
+\[
+ \delta_u^p=\delta_v^p=0.                                  \tag{N}
+\]
+
+**Result: PASS IDENTICALLY / ZERO DISCRIMINATION.** Proposition 1 proves
+(N) in the coordinate ring of every exact Keller pair, before any
+residue-A specialization. No residue-A coefficient enters the proof.
+Evaluating at 105337, 105673, and 200257 would only replay $J=1$.
+
+There is no meaningful raw $p$-fold witness calculation to perform. The
+bank gives depth 23/25, not global $P,Q$, while the primes are of order
+$10^5$. Different completions beyond the banked window do not define a
+common $p$-fold differential operator. Proposition 1 bypasses the missing
+data and shows that every genuine Keller completion passes anyway.
+
+### 4.3 Candidate gate C: symplectic center shadow
+
+The putative gate is to construct (3.2) and require preservation of the
+canonical symplectic form.
+
+**Result: PASS IDENTICALLY / ZERO DISCRIMINATION.** Equation (3.3) is an
+identity from the inverse Jacobian. It supplies no new row to the D23 or
+D25 ideals.
+
+### 4.4 Candidate gate Q: an $A_1$ Weyl lift
+
+One might ask for $\widehat P,\widehat Q\in A_1$ satisfying
+$[\widehat Q,\widehat P]=1$, with center shadow or principal symbols
+recovering the residue-A data. That would make Tsuchimoto’s $n=1$
+connection applicable.
+
+**Result: NOT A NECESSARY CONDITION; NOT RUN.** The known theorem is
+
+\[
+ \mathrm{JC}_2\Longrightarrow\mathrm{DC}_1,
+\]
+
+not “every plane Keller map quantizes to an $A_1$ endomorphism.” A
+hypothetical JC(2) counterexample is not required to admit such a lift.
+Imposing Gate Q would shrink the problem to a stronger, unjustified locus.
+
+This separation is already stated correctly in
+[SHEET6-DIRECTIONB §4](../SHEET6-DIRECTIONB.md): the nonzero first Moyal
+correction at the resonant direction separates classical residue-A data
+from conforming Weyl-pair data, but it does not kill the classical
+template. The $p$-curvature dictionary cannot reverse that implication.
+
+> **CONJECTURE Q-LIFT (unsupported).** Every minimal plane Keller
+> counterexample admits, perhaps after a controlled deformation, an
+> $A_1$ Weyl lift compatible with its residue-A symbol data.
+
+This conjecture is exactly the missing reverse arrow needed to make the
+existing quantum separation bite. Neither Tsuchimoto nor BKK proves it;
+the measured Moyal obstruction weighs against naive versions. It must not
+be used as a residue-A necessary condition.
+
+### 4.5 What was actually checked
+
+No solver lane or new script was warranted. The cheap audit consisted of:
+
+- inspecting the schema of the D23 witness/atlas banks and D25 replay;
+- checking the headers of all three det23 emissions;
+- reconciling the three-prime D23 fiber with the two-prime D23 atlas and
+  D25 family; and
+- doing the exact symbolic calculations in Proposition 1 and
+  equations (3.2)–(3.3).
+
+The conclusion is stronger than “the test is unavailable.” The only
+genuinely necessary $p$-curvature test is a theorem-level tautology, while
+the non-tautological Tsuchimoto input is not defined on the banked
+commutative objects.
+
+---
+
+## 5. Connection to the Dixmier lane
+
+### 5.1 DC(1): no arrow from modular nonemptiness
+
+For $n=1$, Tsuchimoto/BKK send a full $A_1$ endomorphism to a plane
+symplectic map after reduction modulo $p$:
+
+\[
+ \operatorname{End}(A_1)\longrightarrow
+ \{\text{plane symplectic center maps mod }p\}.             \tag{5.1}
+\]
+
+Residue-A modular nonemptiness is not in the source of (5.1). It is not a
+full plane map, and even a full plane map has no known reverse lift
+through (5.1). It therefore has no implication for the Zheglov/DC(1)
+audit lane. Conversely, even DC(1) would not prove JC(2); the established
+arrow used here is $\mathrm{JC}_2\Rightarrow\mathrm{DC}_1$.
+
+### 5.2 DC(2): a real conditional link, but no present leverage
+
+If residue-A were extended through all compatible depths, algebraized,
+and shown to be a nonautomorphic polynomial Keller pair, then (3.1) would
+immediately produce a special DC(2) counterexample:
+
+\[
+ \boxed{\text{residue-A algebraizes to a JC(2) counterexample}}
+ \Longrightarrow
+ \boxed{\Phi_F\text{ is a DC(2) counterexample}}.           \tag{5.2}
+\]
+
+This link is real and does not need Tsuchimoto. But every substantive
+antecedent in the first box remains open. D23/D25 nonemptiness is not a
+formal germ, a characteristic-zero lift, an algebraic branch, or a
+polynomial map; the D43 graph-preserving family is unresolved. Thus (5.2)
+cannot consume the modular banks.
+
+The center shadow of this special $\Phi_F$ is the cotangent lift (3.2), a
+four-variable symplectic map. For a generic $A_2$ endomorphism, BKK needs
+the full $\mathrm{JC}_4$/Poisson bridge. In the repository’s current
+landscape those stronger statements are false, as recorded in
+[DC2-PROGRAM §1.3](../DC2-PROGRAM.md). Restricting to cotangent lifts
+avoids generic four-variable geometry, but proving those lifts invertible
+is exactly JC(2) again.
+
+The existing bounded DC(2) slices concern arbitrary canonical-commutation
+quadruples of small Bernstein degree. A residue-A lift, if it existed,
+would be highly structured but far outside those slices. The
+$p$-curvature dictionary neither lowers its degree nor supplies the
+missing $A_2$ normal-form or centralizer theory.
+
+### 5.3 What would make the lane non-hollow
+
+Only new theorems, not further modular sampling, would reactivate this
+lane.
+
+1. **CONJECTURE Q-LIFT** above: a justified $A_1$-quantization theorem for
+   minimal plane counterexamples. This would connect the measured Moyal
+   obstruction to DC(1), but is presently unsupported.
+2. **CONJECTURE FINITE-DETERMINACY-PC.** There is a boundary extension of
+   some different, nonzero $p$-curvature object that is determined by the
+   depth-$D$ residue-A window, vanishes for every characteristic-zero
+   algebraization, and fails for generic modular window points.
+
+No such connection or finite-determinacy theorem is currently defined.
+The canonical connection (1.2) cannot serve because its rational
+$p$-curvature is already zero. Any proposal under item 2 must first name
+the bundle, connection, extension across infinity, and proof of necessity;
+otherwise it merely relabels the open algebraization or Witt-vector lanes.
+
+---
+
+## 6. Final ruling
+
+**(1) Precise object.** The canonical connection attached directly to a
+plane Keller map modulo $p$ is (1.2), built from the inverse-Jacobian
+derivations (1.1). Its $p$-curvature is identically zero.
+
+**(2) Necessary-condition check.** Zero $p$-curvature is necessary but
+automatic, and it is passed by nonautomorphic characteristic-$p$ Keller
+maps such as $(x-x^p,y)$. The cotangent-center symplectic condition is
+equally automatic. The banked residue-A objects contain neither the
+global map nor the Weyl lift needed for a stronger test. Thus there is no
+new modular equation and no useful solver run at the three primes.
+
+**(3) Dixmier dictionary.** Tsuchimoto/BKK run from Weyl endomorphisms to
+symplectic center maps. They do not turn commutative modular nonemptiness
+into a DC(1) object. A full plane Keller map does yield the special $A_2$
+endomorphism (3.1), but that is the direct
+$\mathrm{DC}_2\Rightarrow\mathrm{JC}_2$ construction and activates only
+after the campaign’s open inverse-limit, characteristic-zero, and
+algebraization bridges have all been crossed.
+
+**Lane classification:** retire row 20 as an independent residue-A
+attack. Keep this note as the dictionary: it prevents zero-section
+$p$-curvature from being confused with Tsuchimoto’s Azumaya-family
+$p$-curvature, and records the exact cotangent lift linking a future full
+residue-A counterexample to DC(2). No additional F4 budget should be spent
+here absent one of the explicitly labeled conjectural reverse or
+finite-determinacy theorems.
+
+---
+
+## Primary sources
+
+- Y. Tsuchimoto,
+  [*Endomorphisms of Weyl algebra and $p$-curvatures*](https://doi.org/10.18910/7472),
+  Osaka J. Math. **42** (2005), 435–452. Relevant: Lemma 2.5,
+  Proposition 3.2, Corollary 3.3, Proposition 7.1, Corollary 7.3.
+- A. Belov-Kanel and M. Kontsevich,
+  [*The Jacobian Conjecture is stably equivalent to the Dixmier Conjecture*](https://arxiv.org/abs/math/0512171),
+  Moscow Math. J. **7** (2007), 209–218. Relevant: Theorem 1; §3.2;
+  §4, Propositions 2–4 and Lemmas 4–6.
+- N. Katz,
+  [*Nilpotent connections and the monodromy theorem*](https://www.numdam.org/item/PMIHES_1970__39__175_0/),
+  Publ. Math. IHÉS **39** (1970), 175–232. Relevant for the definition
+  of $p$-curvature and Cartier descent.

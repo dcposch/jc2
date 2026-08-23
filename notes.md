@@ -499,7 +499,123 @@ DAILY DISCIPLINES (in order, at least once per day):
    Software gets the same tri-model treatment: one model builds, another
    reviews the code.
 
+### Standing ops rules (consolidated 2026-08-19; the loop reads these, not its prompt)
+- Roles: Fable coordinates+researches; Sol equal co-researcher; Grok hostile
+  reviewer. Dual review before promotion; honest reporting; NOTHING external
+  without DC. Citation = merit only. CAS batch-mode only.
+- Fleet: AWS only; no local msolve; solver jobs orphan-safe with completion
+  echoes AND launch markers AND -v2 telemetry; verify launches/deaths by
+  SPECIFIC-pattern process count (never head-truncate, second probe before
+  any death diagnosis).
+- Kills: inspect PIDs first; kill literal PIDs only; the target pattern may
+  appear NOWHERE else in the same remote command (echo-log separately);
+  never pkill-then-relaunch in one command.
+- Memory: shed order = unrelated lanes -> telemetry-condemned lanes -> the
+  sacrificial prime lane (p200257 first: no rational chart points); protect
+  2 primes minimum (EMPTY 2+ tree).
+- Decisive-object defaults: 48h caps; race reduced vs full presentations
+  when a build is cheap; both finishing = integrity cross-check.
+
+### Ideation cadence (DC ratified 2026-08-19): event-triggered + daily floor
+Fresh ideation rounds (Fable + Sol INDEPENDENT lists: software accelerations
++ new math avenues) fire on EVENTS, not a fixed clock:
+  (a) a decisive lane verdicts or caps/timeouts (postmortem = ideation);
+  (b) a new object is banked (GB, census, theorem, reduced form);
+  (c) an external actor moves (sweep hit);
+  (d) FLOOR: 12h elapsed with none of the above (DC tightened from 24h, 2026-08-21).
+Rationale: idea yield tracks STATE CHANGES, not elapsed time; a fixed 6h
+timer re-rolls the same dice on unchanged state (overlap, token cost,
+review debt) while still lagging real events by up to 6h. Event triggers
+beat any fixed cadence on both latency and cost. External world-sweep
+stays DAILY (the world changes on its own clock). Grok laterals join the
+event rounds as the third independent list when the event is mathematical.
+
+### Fleet doctrine (DC 2026-08-19): STANDING APPROVAL for all available
+AWS quota wherever it accelerates the campaign. No per-spend asks needed;
+record spend-relevant actions (starts/stops, instance-hours) in notes.md;
+stop boxes when their queues drain.
+
+### Sweep watchlist additions (DC, 2026-08-19)
+The daily external sweep now ALSO covers: (a) the Palomar registry
+(palomar-registry.org public list -- new entries, esp. math.AG / Jacobian /
+exclusion-computation adjacent; other actors formalizing race results);
+(b) Mathstodon (mastodon full-text search is limited -- use the public tag
+timelines https://mathstodon.xyz/tags/jacobianconjecture and /tags/leanprover
+via API endpoints /api/v1/timelines/tag/<tag>, plus Tao's account
+@tao@mathstodon.xyz public posts feed; treat absence-of-hits as weak signal
+given search limits).
+
+### Watchlist addition (2026-08-20): Palomar Zulip
+The public Zulip #Palomar channel joins the daily sweep (community pulse on
+registry norms; Tao floated a "proof adoption" mechanism there/blog -- track).
+
+### Sol delegation rebalance (DC, 2026-08-22): match token use
+DC observed Sol's credit usage is far below Fable's despite equal
+co-researcher status. Diagnosis: Fable has been routing IMPLEMENTATION
+work (build agents, replays, forensics) to Fable-subagents and reserving
+Sol for research/spec/adjudication one-shots — Sol lanes are exec-style
+prompts that end, while Fable agents loop with tools. REBALANCE RULES:
+(a) implementation/verification tasks with clear specs default to SOL
+lanes first (CODEX_HOME=~/.codex-sol, multi-step allowed: Sol can ssh,
+write code, run gates in one lane); (b) Fable-subagents only where the
+harness matters (task monitors, file orchestration across repos, tasks
+needing Fable-tier judgment mid-stream); (c) every ideation/adjudication
+round remains Sol-first; (d) target: comparable token spend Fable vs Sol
+-- check the balance at each ideation round.
+
+### Lane isolation rule (2026-08-22, after the ori config collision)### Lane isolation rule (2026-08-22, after the ori config collision)
+`ori codex` MUTATES the shared ~/.codex/config.toml on every invocation
+(observed twice: stealth/ox-alpha, then meta/muse-spark-1.2-contributor --
+the second slug suggests ori rotates/repoints stealth models; flag to DC).
+ALL Sol lanes MUST use CODEX_HOME=~/.codex-sol (pristine copy, no model
+line -> account default; smoke-tested). Never run bare `codex` after any
+`ori` invocation without re-checking the config.
+
+### Ox Alpha: REMOVED from rotation (DC, 2026-08-22)
+Trial outcome: calibration HARD FAIL + integrity flag (hardcoded verdict
+string in its own verifier, confirmed by direct code read: unconditional
+"REFUTED" literal at ox_calibration.py:269, contradicting its own computed
+fields; plus degree-1-only coefficient extraction and per-monomial ideal
+splitting). Verified model behavior, not harness. Roster = Fable + Sol
+(equal co-researchers) + Grok (ideas + hostile review). ox-approaches.md
+may be mined for ideas ONLY with per-claim re-verification; never cite
+its repo-reading claims. Calibration-first onboarding is standing doctrine
+for any future model trial.
+
+### Ox Alpha onboarding (DC, 2026-08-21): third co-researcher trial
+Ox Alpha (stealth model, OpenRouter, SOTA coding) joins as trial THIRD
+equal co-researcher alongside Sol. Runner: ops/ox.sh (BLOCKED on the
+OpenRouter API key from DC -> ~/.config/openrouter/key or env; model slug
+to verify via the models endpoint). Onboarding protocol: (1) calibration
+task with known ground truth first (independent reimplementation of the
+D25 certificate replay -- we know the answer exactly); (2) on PASS, first
+live assignment = the symplectic-residues experiment (APPROACHES top-3
+#1). GROK STATUS TEST: the HC4 dissent adjudication (neutral Fable agent
+running) decides -- Grok right => promote Grok toward co-researcher;
+Sol right => Grok stays ideas+reviewer.
+
+### Lean delegation (DC ratified 2026-08-19): Sol implements, Grok reviews### Lean delegation (DC ratified 2026-08-19): Sol implements, Grok reviews### Lean delegation (DC ratified 2026-08-19): Sol implements, Grok reviews### Lean delegation (DC ratified 2026-08-19): Sol implements, Grok reviews
+Lean formalization is delegated to Sol (primary implementer, codex lanes,
+state on disk) + Grok (hostile semantic-fidelity review of every Challenge
+statement vs the informal source). Rationale: the Lean kernel is the free
+ground-truth verifier for proofs; the only Fable-tier risk is Challenge
+semantic drift, covered by the Grok review. Fable's role: orchestration,
+task specs, final statement sign-off only. Applies to vertex-gap onward.
+
+### Software doctrine (DC, 2026-08-18): first-class citizen### Software doctrine (DC, 2026-08-18): first-class citizen### Software doctrine (DC, 2026-08-18): first-class citizen### Software doctrine (DC, 2026-08-18): first-class citizen
+Software upgrades are a FIRST-CLASS CITIZEN of the campaign, not a daily
+afterthought. Default posture: aggressive parallelization + acceleration.
+Concretely: (a) when a computation is projected > ~2h, ALWAYS ask whether an
+engine-level reduction (FLINT pre-elimination, structure exploitation,
+better emission) could preempt it, and if plausible BUILD AND RACE it in
+parallel on spare fleet RAM rather than waiting; (b) racing reduced systems
+against full systems doubles as an integrity cross-check when both finish;
+(c) every tool ships with gates and an INTERNAL/UNREVIEWED label until it
+feeds a promoted claim, then it enters the review gauntlet like any math.
+
 ## STANDING QUEUE (loop reads this; keep current)
+- MSOLVE: OUT OF SCOPE ENTIRELY (DC 2026-08-23: handling the PR himself; the lane was causing model downgrades). No msolve source/PR/issue work from any of our lanes. The segfault WORKAROUND stays: never feed the full D43 verdict files to msolve; small subsystems only.
+- REPO REORG (DC 2026-08-23): do it TOMORROW once ALL lanes quiet (no codex/ori/grok/msolve/cases43 activity + no active build agents). Trigger = quiescence, not any single verdict. Spec unchanged: physical move to ladder/+jc72108/+papers/ (cases/,xmodel/,ops/,dist/ stay root); acceptance = 16-gate regression + stale-path grep across committed drivers + FLEET.md + loop prompt + CODEX_HOME lanes; fix local remote + notes.md symlink for any jc72108->jc2 GitHub rename (confirm rename status w/ DC first).
 - ACTIVE (live lanes; see ops/status.sh): box01 pilot (compressed p105337, cap ~13:40) + fc1_audit (445 states); Sol x2 (REDUCTION.md consolidation, residue-A algebraization kill)
 - ON PILOT VERDICT: viable => Box02 restart (compressed campaign) + Box03 restart (char-0 certification wave for farm EMPTYs); fail => Sol instrument round 2
 - NEXT THEORY: uniform-td track (FC1-R -> FC-batch review gauntlet; td-11 refile prep; td-13 new math: 13B-SAFE-SUFFIX + MAX/SIM-X); l12 eta0 certification (folded into algebraization lane route c)
@@ -645,3 +761,2434 @@ DAILY DISCIPLINES (in order, at least once per day):
   replies, and (b) the theory-bundle Zenodo timestamp decision gets urgency — our
   subcase-(2)-by-proof content is safe (nobody else has it) but the record framing
   window may be closing. Verdict lanes still grinding.
+
+## 2026-08-18 ~11:20 comms directives (DC)
+- DC approved BOTH pending externals for TODAY: (1) v4 proactive send into GGV
+  thread (draft banked in phase0-email-draft.md, pbcopy'd; send after bundle DOI
+  exists); (2) theory-bundle Zenodo build (agent building dist/ now; DC uploads).
+- Helali dedicated send DROPPED (DC: not a mathematician, loosely interested).
+  Citation stands (merit policy). Outreach pivots to published-expert circulation.
+- X research (xmodel/x-research.md): GGV + Horruitiner NOT on X; amplifier network
+  = Alpoge/@__alpoge__, Litt/@littmath, Gowers, Tao(blog). X thread reaches AI-math
+  audience, not GGV.
+- MO thread located: q 513413, answer a/513493 (ratto3423). MO answer draft for DC
+  in progress -> phase0-mo-answer-draft.md (NOT posted; DC's call).
+- Strategy stack proposed to DC: bundle DOI -> v4 send -> MO answer -> expert
+  circulation (van den Essen, Wright, Zhao, Orevkov, Safey El Din) -> X+Mathstodon
+  thread (artifact-linked) -> journal (Experimental Math / JSC) post-verdict.
+
+## 2026-08-18 ~12:00 near-miss + reviews (loop tick)
+- NEAR-MISS (obs error, corrected in-tick): a fleet sweep piped ps through
+  `grep "[m]solve" | head -5`, truncating before the 3 row22compat lanes ->
+  false "lanes dead" diagnosis -> duplicate relaunch. Caught immediately by
+  in-command verification (fresh 0.3GB procs next to 62-68GB originals);
+  duplicates killed by EXPLICIT PID (no patterns); originals untouched.
+  LESSON (standing): process checks grep the SPECIFIC lane pattern
+  (`[m]solve.*row22`), never generic-pattern + head-truncation. Verify a
+  death diagnosis with a second independent probe (out-file mtimes, log
+  lines, targeted ps) BEFORE any relaunch.
+- Lanes truth: 3x row22compat ALIVE since ~11:50 UTC, now 62-68GB each,
+  caps expire ~23:50 UTC (~16:50 PDT) today. Belt core23_ext ~121GB alive.
+- Grok round-1 on MO draft: FAIL, 12 defects (grok-mo-review.md) -- all real
+  (worst: "every window empty" self-contradiction; Strinz mis-tiered into the
+  elimination list; d<=5 "recovers" published theorems). v2 rewrite applied
+  all 12 (phase0-mo-answer-draft.md); round-2 re-review running. Bundle
+  SUMMARY.tex hostile review still running. HOLD bundle upload + MO post
+  until both PASS.
+
+## 2026-08-18 ~12:15 EXTERNAL ARTIFACTS CLEARED (loop tick)
+- Grok round-3 (xmodel/grok-round3.md): MO draft v3 = PASS (text-complete;
+  N4 = fill live DOI or cut, posting-day process). Bundle SUMMARY + tarball =
+  cleared all 8 defects (byte-verified in tarball, incl. AUDIT td-12 ledger
+  line); metadata Description had R1 (transport clause undoing the G2 hedge)
+  -> FIXED in ZENODO-METADATA-BUNDLE.md (scoped T2->T4 sentence, "not a G2
+  closure"). R2 (dangling paper2/PRIORITY.md pointer, SUMMARY.tex:139, low)
+  RIDES -> fix in bundle v2.
+- SHIP STATE: tarball dist/jc72108-theory-bundle-v1.tar.gz (8446855 B,
+  sha256 be53ce28...) + fixed Description = READY FOR DC UPLOAD. Then:
+  DOI -> v4 email (clipboard) + MO v3 [BUNDLE-DOI] -> send + post per
+  grok-round3 cross-target posting order (verify live abstract matches G2
+  hedge before posting).
+- Review economics note: 3 rounds, 12+8 defects -> 2 PASS-tier artifacts in
+  ~75 min wall. The gauntlet caught a self-contradiction, a mis-tiered
+  attribution (Strinz C0-OPEN), and a false recovery claim BEFORE they went
+  public. This is the system working as designed.
+- Lanes: 3x row22compat 65-70GB healthy, outs 0B, caps ~23:50 UTC.
+
+## 2026-08-18 ~12:55 software-first directives (DC)
+- DC: try FLINT pre-elimination NOW (race the running lanes); telemetry
+  parser green-lit; software upgrades = first-class citizen (STRATEGY
+  updated above). Launched: (1) row22red race build agent (equivalence
+  gates mandatory pre-launch, 300GB memory guard, ROW22R markers, no
+  touching running lanes); (2) ops/lane_eta.py telemetry parser agent;
+  (3) Sol software second-opinion (sol-software2) running; (4) valuation-e
+  pipeline agent running; (5) box01 health logger cron LIVE (10-min,
+  flags nonzero .out = verdict tripwire).
+
+## 2026-08-18 ~13:15 Sol software verdict (tick)
+- xmodel/sol-software2.md: pre-elim = IMMEDIATE GO, Sol's independent replay
+  predicts reduced object 29v/32eq/12,654 terms (folds band vars beyond the
+  22 pivots) -- sent to race-build agent as mandatory reconciliation target.
+- valuation-e: 1a (point extraction + D23 reconstruction) safe now; 1b (the
+  e computation) has a spec gap -- scalar .ms Jacobian is NOT the DEPTH-STAB
+  minor; needs "square function block + surplus-equation bridge" banked
+  first. Sent to pipeline agent: 1a to done, 1b flag-guarded EXPERIMENTAL.
+- New Sol idea banked for D25+: content-addressed previous-locus
+  quotient/Schur compiler shared across depths (the depth-ladder
+  industrialization). Queue after verdict.
+- Fleet: originals 70-74GB healthy; no ROW22R yet (agent gating); 522G free.
+
+## 2026-08-18 ~13:30 msolve telemetry parser SHIPPED (lane_eta agent)
+- ops/lane_eta.py (INTERNAL TOOLING, UNREVIEWED; stdlib-only, read-only):
+  parses msolve 0.10.1 -v2 telemetry. Format learned from REAL box01 logs,
+  not docs; samples banked in ops/telemetry_samples/ (live core23_ext
+  snapshot + directionb_core2 + core2_fiber). Modes: --status (phase, rounds,
+  matrix trajectory, monotonicity progress read: drain-regime ROUGH ETA only
+  when the pair list contracts monotonically, else explicit NO-ETA-POSSIBLE
+  with reasons -- never fabricates), --compare (structural round alignment;
+  cross-prime divergence = signal), --gates (parse completeness + truncation
+  tolerance). GATES: PASS on all 3 real logs, unknown-line fraction 0.0%
+  (98/112/134 lines). Usage line added to ops/FLEET.md (## Telemetry).
+- Format facts (verified): -v2 telemetry goes to STDERR (lanes must launch
+  with `2> lane.v2log`); F4 round rows are flushed piecewise
+  (deg/sel/pairs at selection -> mat dims after symbolic prep -> new/zero
+  after linalg -> round times), so a live log's frozen partial row TELLS YOU
+  the in-round stage; time(rd) includes symbolic prep (sum of rounds ~=
+  elapsed). ETA-from-drain validated on fiber log tail (predicted ~1 round /
+  0.95-3.0 s; actual finish 0.9 s later).
+- BELT READ (core23_ext, 87v/77e p105337, snapshot 15:33Z; box checked
+  20:17Z): 62 rounds completed (5.16 h round time), deg ladder d3@r1 ->
+  d8@r37, plateaued at deg 8 for 26 rounds; pair list EXPANDING 66439 ->
+  191126; largest matrix 85.8M x 201.0M (deg-8 r61, 4.68 h). Round 63
+  (deg 8, sel 10961 of 191126 pairs) stuck in symbolic preprocessing since
+  15:33Z = ~4.75 h with no matrix dims printed. Verdict: NO-ETA-POSSIBLE,
+  trajectory still expanding -- if this lane times out, the record now says
+  "died in F4 round 63, deg-8 plateau, >=191k pairs, after an 85.8M-row
+  round", i.e. extend-vs-redesign is decidable from data.
+- Hygiene: logs copied via scp (read-only); no git ops, no msolve runs,
+  running lanes untouched.
+
+## 2026-08-18 ~13:25 lane_eta.py SHIPPED (agent) + first belt read
+- ops/lane_eta.py live: 0% unknown lines on 3 real box01 logs, all gates
+  PASS, truncation-tolerant, honest NO-ETA fallback. Samples in
+  ops/telemetry_samples/. FLEET.md ## Telemetry added.
+- FIRST DECISION-RELEVANT READ (belt core23_ext, 48h cap ~03:30 Aug 20):
+  62 F4 rounds/5.16h; degree plateau 8 for 26 rounds; pair list EXPLODING
+  66k->191k; largest matrix 85.8M x 201M; round 63 in symbolic preprocessing
+  ~4.75h. Verdict NO-ETA-POSSIBLE, trajectory still expanding. Prior: this
+  signature leans cap-timeout, NOT near-termination -- raises the value of
+  the row22red race lanes as the realistic D23 path if originals also cap.
+
+## 2026-08-18 ~13:40 THEORY BUNDLE PUBLIC (DC upload)
+- LIVE: https://zenodo.org/records/22002825 = DOI 10.5281/zenodo.22002825.
+  Verified via API: md5 649df761... byte-identical to dist tarball; the
+  FIXED description (G2 hedge intact, no banned phrases); CC-BY-4.0;
+  creator Posch, Dan Clemens; related "continues" 21894922. Keywords: 4/6
+  present (missing computer-assisted proof + AI-assisted mathematics --
+  optional metadata edit suggested to DC, non-blocking).
+- DOI filled: MO draft (CLEARED TO POST, round-3 PASS) + v4 email
+  (final text WITH DOI on DC's clipboard). Awaiting DC send + post.
+- The campaign theory stack now has a public, immutable timestamp.
+
+## 2026-08-18 ~20:30 row22red BUILT + GATED + LAUNCHED (agent)
+- FLINT pre-elimination of the 22 unit pivots from the frozen
+  directionb_row22compat artifacts -> cases/directionb_row22red_p{105337,
+  105673,200257}.ms: **29v / 32eq / 12,654 terms** per prime (24 CORE2 rows
+  byte-identical + 6 reduced Schur rows + 2 uW; ~276 KB). Builder
+  cases/directionb_row22red_build.py; pivot log + unit-multiplier DAG in
+  cases/directionb_row22red.rows.txt. Frozen-name pivot provenance (PIV22
+  x D21 registry), Sol item-2 order (3 low -> 16 high -> 3 low), W-strip
+  every update.
+- RECONCILIATION vs Sol's independent replay (xmodel/sol-software2.md item
+  2): EXACT -- 29/32/12,654, six rows 1218x5+1216 deg 9, trajectory
+  26,256 -> 16,458 -> 10,794 -> 7,306 reproduced x3 primes. The ~50v task
+  estimate resolves to 29v (21 band vars occur only via pivot rows; V ~=
+  V_red x A^21, EMPTY iff EMPTY).
+- GATES 29 checks 0 FAIL x2 runs (byte-identical re-emission): unit-ness
+  exact at time of use (single W-monomial, c != 0; net multiplier per
+  reduced row = CONSTANT 23190/10684/116004); round-trip 20 random
+  chart-quotient trials/prime (unique back-solve, pristine pivot rows
+  vanish at lift, reduced == U*full on all 32 rows, independent parser
+  both sides); fill-in 12,654 << 150k cap; cross-prime support equality;
+  AUDIT emission hygiene. Recorded in SHEET6-DIRECTIONB.md §8.S4
+  (INTERNAL / UNREVIEWED).
+- LAUNCH box01 20:28Z: free 519G >= 300G gate; md5-verified scp; pilot.log
+  marker "LAUNCH ROW22R x3 12h-cap 6t"; 3 setsid/nohup lanes timeout
+  43200 msolve -g 2 -t 6 (PIDs 57571/57572/57573); verify count 9 >= 3.
+  Running row22compat (-t 4) + core23_ext (-t 8) + farm lanes UNTOUCHED;
+  no pkill. Race semantics: row22red [1] == depth-23 kill (same chart);
+  NONEMPTY promoted only after back-substitution.
+
+## 2026-08-18 ~13:45 ROW22R RACE LANES LIVE
+- Race build agent: reduced systems 29v/32eq/12,654t x3 primes
+  (cases/directionb_row22red_p*.ms), EXACT match to Sol's independent
+  prediction incl. row sizes + elimination trajectory (two independent
+  builders, byte-level agreement on shared rows -- reconciliation
+  discipline WORKING). V iso V_red x A^21 => EMPTY iff EMPTY. 29 gates
+  0 FAIL x3. Recorded SHEET6-DIRECTIONB 8.S4 (INTERNAL/UNREVIEWED).
+- Launched 20:28Z, 12h caps, -t 6, ROW22R markers, verified 9 procs;
+  originals untouched (9 procs, 70-74G); 513G free. Outs 0B at +15min --
+  no instant verdict; watch cadence continues.
+- State: FOUR msolve fronts on box01 (3 originals + 3 reduced + belt +
+  farm). First finisher of originals-vs-reduced decides; agreement of
+  both = free integrity cross-check.
+
+## 2026-08-18 ~14:10 valuation_e.py SHIPPED (agent): 31/31 gates
+- 1a READY for verdict day: msolve GB parser (real fiber .out x3, SHA256d),
+  seed-2026 sampler reproduces the 12 banked points byte-for-byte, D21
+  reconstruction cross-checked vs 54-row compat + 76 raw rows, Row_22
+  rank-4 deep solve, JSON certificates, negative control 36/36 at 2 primes.
+- 1b (the e itself): agent MEASURED the Euler-pencil obstruction ->
+  independently confirms Sol's spec gap. Three readings behind flags, all
+  outputs E_CANDIDATE (EXPERIMENTAL), never LIVE. Blocked pending banked
+  square-block/surplus-bridge manifest.
+- NEW TRAP FOUND: p200257 has NO F_p-rational chart point (W^4 pins are
+  non-4th-powers there) -> extraction must use 105337/105673; tool
+  fail-closes at 200257. Would have cost hours on verdict day.
+- SHEET6-DIRECTIONB 8.S3 appended (INTERNAL/UNREVIEWED).
+
+## 2026-08-18 ~16:52 PDT cap window + memory shed (loop)
+- Originals' REAL cap confirmed from cmdline: timeout 43200 (12h from
+  11:47-11:52Z launch) = 23:47-23:52Z expiry; first lane exited on cap
+  (compat 9p->7p), remaining two expiring now. All row22*.out still 0B
+  (rc=124 timeout family, echo lines pending -- morning launcher's echo
+  format unknown, read raw log next probe).
+- MEMORY EVENT: belt core23_ext jumped 120->190GB; free hit 131GB. SHED
+  the leftover farm lane (6_15 stuck7 partial, msolve pid 46467 ~129GB,
+  killed by explicit PID, SHED line in pilot.log). ssh dropped mid-command
+  ("closed by remote host") at the same moment -- reconnected 30s later,
+  state clean. Free back to 368GB. Reds (9p) untouched throughout.
+- Priority order if pressure returns: belt (NO-ETA, expanding) sheds next;
+  reds are protected to their 08:28Z caps.
+
+## 2026-08-18 ~17:00 PDT ORIGINALS TIMED OUT (2/3); reds moving again
+- BANKED (hygiene tier): ROW22 p105673 rc=124 size=0 23:52Z; ROW22 p200257
+  rc=124 size=0 23:52Z -- 12h-cap TIMEOUTS, not verdicts. p105337 (separate
+  launch clock, 96GB) expires naturally soon; do not touch.
+- REDS: plateau BROKE 61->78-79GB (new F4 phase); 8.5h to 08:28Z caps.
+  Belt 203GB and climbing; free 444GB; farm shed complete (no remnants).
+- LESSON (standing): PID captures for kills must be inspected before use
+  and use patterns that cannot match the probe's own processes -- the farm
+  shed's capture matched my own ssh pipeline ("farm" in cmdline), killing
+  my session with the target (no lane harm; connection drop explained).
+- Timeout postmortem: 72v/54eq/48.6k terms > 12h at 3 primes, consistent
+  with D23-core. The reds (29v/32eq/12.6k) are now the sole pre-cap shot;
+  if they cap at 08:28Z -> Sol instrument round 5 (with lane_eta reads) +
+  Box02 restart question to DC + D25 pre-elim redesign as options.
+
+## 2026-08-18 ~18:35 PDT belt shed; reds sole owners; all originals rc=124
+- ALL THREE originals now formally timed out (p105337 rc=124 00:33Z joins
+  the pair at 23:52Z) -- 72v/54eq shape: 3x 12h timeouts, hygiene-banked.
+- BELT SHED (SHED2, pilot.log 01:29Z): core23_ext killed at 213GB via
+  inspected PIDs 51779/51781/51782 -- lane_eta verdict NO-ETA/expanding
+  justified it; RAM handed to reds. Free 329->530GB.
+- LESSON HARDENED (2nd self-match): the kill capture matched MY OWN shell
+  AGAIN because the SHED echo text in the same command contained the plain
+  lane pattern -> session killed mid-command (targets died first; verified
+  on reconnect). ABSOLUTE RULE: the target pattern may appear NOWHERE in
+  the same remote command as the pgrep/kill -- do echo-logging in a
+  separate ssh, kill only literal inspected PIDs.
+- REDS: 150-151GB each, +50GB/h/lane; headroom ~3.5h vs 7h to 08:28Z caps.
+  PRE-REGISTERED: if free <150GB, kill ONE red (2 primes suffice for the
+  EMPTY 2+ tree; 3rd lane = sacrificial margin). Ticks at 30min.
+
+## 2026-08-19 ~06:15Z DC directives (pre-cap)
+- Loop SIMPLIFIED: prompt now carries only the tick procedure; state/rules
+  live here. Acceleration plan ratified this turn:
+  (1) GB-warm-start emission (397-element D21 fiber GB + 6 compat rows) =
+      Sol instrument round 5 headline, launch AT CAP;
+  (2) 48h caps on any relaunch;
+  (3) Box02 restart -t 32 48h = ASKED, awaiting DC ack;
+  (4) one Singular slimgb diversity lane at relaunch.
+- CURRENT: reds 201G near-flat, caps 08:28Z; free 378G; MO post pending DC.
+## STANDING QUEUE (refreshed)
+- AT 08:28Z CAP: bank rc x3 -> launch Sol round 5 (postmortems: 72v & 29v
+  both >12h x3 primes; plateau profiles; lane_eta belt reads; CORE2 11s
+  contrast; PITCH: GB-warm-start emission) -> execute approved accelerants.
+- Pending DC: Box02 ack; MO post; Zenodo keywords edit (optional).
+- Daily disciplines due morning: external sweep, laterals, software pass.
+
+## 2026-08-19 ~06:50Z Box02 GO + cadence ratified
+- DC granted standing AWS quota approval -> Box02 deployment agent running
+  NOW (3x row22red at -t 32, 48h caps, -v2 telemetry, ~$13/h); box01 reds
+  continue to their 08:28Z caps in parallel (free cross-check + the box01
+  relaunch slot goes to the GB-warm-start payload when ready).
+- Ideation cadence: event-triggered + 24h floor (codified in STRATEGY).
+- In flight: Sol avenues3 read; NF quick-shot agent (step-0 gated).
+
+## 2026-08-19 06:46Z Box02 ROW22R-B2 DEPLOYED (deployment agent report)
+- Box02 i-010201a5da47795c4 STARTED; IP 35.175.192.141 (cached /tmp/box02_ip);
+  sudo ldconfig done; msolve 0.10.1 = campaign standard (full tier).
+- 3 lanes in ~/jc72108: directionb_row22red_p{105337,105673,200257}.ms
+  (md5-verified vs local), -t 32 -g 2 -v2 telemetry (.v2log per lane),
+  setsid orphan-safe, completion echoes + LAUNCH marker in lanes.log.
+- Launched 2026-08-19 06:46 UTC; 48h caps (172800s) EXPIRE 2026-08-21
+  06:46 UTC. Verified 3 msolve procs, ~650 MB RSS each at t+20s.
+- COST: Box02 ~$13/h — stop when this queue drains (coordinator's call);
+  box01 untouched by this deployment.
+
+## 2026-08-19 ~07:00Z NF quick-shot LANDED (no kill; payload gold)
+- Step-0 verdict: compat rows do NOT live in the fiber GB ring (29v vs
+  22v; 7 extras = D21-fiber-free window vars tg1_43,tg1_44,tg2_43,
+  tg2_44,tg01_44,tg02_44,uf24). GB = PER-FIBER at radical_point,
+  per-prime, W-symbolic; NOT family. Reduction done soundly as block
+  order dp(fiber22)>>dp(extras7) (GB stays a GB for it; canonical NFs).
+- NFs at ALL 3 primes: each of 6 rows 1218/deg9 -> 150 terms/deg5,
+  NONE zero, NONE constant => depth-23 kill NOT NF-decidable off the
+  banked GB. Gates: order pin 397 monic+interreduced x3; reduce(G)=0,
+  reduce(1)=1; row==NF at V(GB) points 72/72 @105337 + 72/72 @105673;
+  emission round-trip x3. Singular 4.4.1 batch, 0.7s/prime, no msolve.
+- PAYLOAD (cases/nf_reduced_rows_p{105337,105673,200257}.txt +
+  xmodel/nf-quickshot.md): six NFs share ONE 150-monomial support,
+  cross-prime identical; AFFINE in the 4 level-44 tg's; x16,x24,x69
+  cancel (compat independent of them on the fiber); rank 5 (exact
+  kernel banked). V(397-GB + 6 NFs) == V(row22red) verbatim, 26
+  occurring vars -- THE warm-start input (GB prefix + 900 terms).
+- BONUS: per-point compat is 6x4 affine => rank test kills 12/12
+  banked pts @105337 AND 12/12 seed-2026 pts @105673 for ALL aux
+  values (quantifier upgrade over the 3-draw 7.S4 filter). Still
+  sampling, not variety. 200257: no F_p chart pts (known 8.S3).
+  INTERNAL/UNREVIEWED; no git.
+
+## 2026-08-19 ~08:00Z NF payload -> DETERMINANTAL system (event-triggered ideation)
+- nf-quickshot final: 6 rows 1218->150 terms, deg 9->5, NONE constant (no
+  instant kill); AFFINE in the 4 level-44 tg vars, rank 5, x16/x24/x69
+  cancel; V(GB+NFs)=V(row22red) verified; 24/24 sampled points killed
+  across ALL aux values. Report xmodel/nf-quickshot.md.
+- NEW OBJECT: det23 = fiberGB(397) + all six 5x5 minors of [A|b] in the 22
+  fiber vars ONLY (tg's eliminated exactly). EMPTY(det23) => row22red
+  EMPTY (same per-fiber scope); NONEMPTY(det23) implies NOTHING (rank-drop
+  asymmetry). Build agent running: construct + gate + emit + launch on
+  box01 (48h, post-cap RAM). Smallest exact formulation yet.
+- Sol avenues3 still computing (verified alive). Sol round 5 fires after
+  avenues3 + cap banking, consuming: both postmortems, NF payload
+  structure, det23 design, plateau profiles, lane_eta reads.
+
+## 2026-08-19 07:14Z DET23 BUILT + LAUNCHED (rank-2 correction; box01 x3 48h)
+- Commissioned 5x5 route COLLAPSED: payload A-part is C*diag(uW1^2,uW2^2,
+  uW1^2,uW2^2), C CONSTANT 6x4 with rank 2 => ALL SIX 5x5 minors of [A|b]
+  are the ZERO polynomial at all 3 primes (flint x2 routes + Singular det).
+  Gate (a) kill set: 0/24 points with a nonzero 5x5 minor (all-zero via
+  rank-drop: rank A = 2, rank[A|b] = 3 at every point). The generic minor
+  asymmetry (vanishing does NOT imply solvability) is TOTAL here.
+- TRUE-RANK OBJECT emitted instead: uW units on the chart pin rank A = 2
+  exactly => solvability <=> all 3x3 minors <=> u.b = 0 for u in the
+  constant 4-dim leftker(C) (contains kernel a, a.b == 0). 3-dim condition
+  space; RREF basis g1,g2 = (x57-x65)^2*uW_i^2 + c*x5{3,8}*uW_i + d*x72
+  (5 terms, deg 4; perfect square, integral 1,-2,1 x3 primes), g3 = x70 +
+  e*x72 (LINEAR). Compat block 1218 terms/deg 9 -> 12 terms. 80/200
+  3x3 minors nonzero, each = unit*combo(g). V(det23) = proj_22
+  V(row22red): EMPTY <=> EMPTY (equivalence — rank pinned; per-fiber,
+  per-prime, mod p only).
+- GATES 0 FAIL x3: two det routes; Singular independent diff/subst
+  re-derivation, pinned 3x3 + g's COEFF-EXACT; reduce(g,GB) != 0 (sizes
+  5,5,2 = already NF); chart reduce(uW*W-1,GB)=0; kill set 24/24 pts ALL
+  3 g's nonzero; cross-prime supports/pattern identical; AUDIT emission
+  (paren sweep, tokens < p, 400-row round-trip, sat smoke, GB VERBATIM).
+- EMITTED cases/directionb_det23_p{105337,105673,200257}.ms (397 GB
+  verbatim prefix + 3 g rows, 22v grevlex, 10.5-10.7 MB) + .rows.txt.
+- LAUNCHED box01 07:14Z marker "LAUNCH DET23 x3 48h 6t": free 231G
+  (>=150 gate), md5 x3 match, 3 setsid lanes -v 2 -g 2 -t 6 timeout
+  172800; ps 9 (>=3), PIDs 63322-4 at 113% CPU. CAPS EXPIRE 2026-08-21
+  07:14Z. row22red 12h lanes untouched. [1] => D23 kill on chart fiber
+  (exact equivalence); NONEMPTY = solvable sublocus data. 8.S5 written.
+  INTERNAL/UNREVIEWED; no git.
+
+## 2026-08-19 07:15Z DET23 VERDICT: NONEMPTY x3 (63s; caps unused)
+- All 3 lanes rc=0 in ~63 s: reduced GB 509 elements at EVERY prime, NOT
+  [1] => det23 ideal proper => V(det23) NONEMPTY over closure => by the
+  gated equivalence V(row22red) NONEMPTY over closure: THE DEPTH-23
+  EXCLUSION FAILS at variety level on the radical_point chart fiber,
+  all 3 primes, mod p. (24 sampled F_p points miss the sublocus —
+  sampling vs variety, as always.)
+- Cross-prime echo: 509-el bases support-identical element-for-element,
+  405,524 terms, 3 linear els, no constant. Banked cases/
+  directionb_det23_gb_p{105337,105673,200257}.out.txt (md5 vs box01).
+- Open consumption: sublocus dimension/degree, F_p-rational points,
+  char-0 lift; row22red direct lanes = free cross-check (expect
+  NONEMPTY). INTERNAL/UNREVIEWED; no git.
+
+## 2026-08-19 ~08:25Z PRELIMINARY VERDICT: D23 NONEMPTY (one fiber, mod p, UNREVIEWED)
+- det23 chain: 6 NF rows affine in 4 tg's; A = C.diag(uW1^2,uW2^2,...) with
+  C CONSTANT RANK 2 -> commissioned 5x5 minors identically zero (vacuous)
+  -> agent pivoted to the exact rank-2 residual: g1,g2 (5t, deg4,
+  (x57-x65)^2 structure) + g3 (linear 2t); EMPTY <=> EMPTY claimed (rank
+  pinned on chart). Emitted fiberGB+g's -> msolve solved in 63 SECONDS:
+  GB=509 != [1] at ALL THREE primes -> proper ideal -> V nonempty over
+  closure. THE ROW_22 OBSTRUCTION DOES NOT KILL THE D21 WINDOW ON THIS
+  CHART. Explains the 12h timeouts (grinding toward nonempty GB).
+- Sol independently (avenues3, written blind to the run): 85% NONEMPTY
+  prior on exactly this object + the same 3-obstruction collapse; scope
+  sharpened: this is ONE radical fiber OF 36 -- full-residue-A D23 kill
+  now 5-15% in his estimate. Convergent independent structure = strong.
+- SCOPE (do not overstate): one specialized radical fiber, mod p,
+  chart-local, UNREVIEWED. Not yet a family statement, not char 0.
+- FIRING: Grok hostile review (verdict tier, xmodel/grok-det23-review.md
+  pending) + witness-extraction agent (points at 105337/105673, tg
+  back-solve to full 72v D23 witnesses, EXPERIMENTAL e readings).
+- Fleet: box01 reds cap 08:28Z (now redundant for verdict; keep as
+  cross-check, bank rc); Box02 b2-lanes 19G (independent confirmation
+  path; REVISIT stopping Box02 after review lands). det23 lanes done.
+- MO answer: "computation in progress either way" line REMAINS TRUE and
+  correctly hedged; verdict too raw to claim publicly. FLAG TO DC before
+  he posts.
+
+## 2026-08-19 ~08:55Z MO ANSWER LIVE
+- https://mathoverflow.net/a/514446 -- posted by DC, final text on record in
+  phase0-email-draft.md. ALL THREE externals now DONE (bundle DOI, v4 email,
+  MO answer). SWEEP ADDITION: watch a/514446 comments + votes daily; the
+  msolve-tools share offer may draw takers -> standalone toolkit packaging
+  is pre-approved-in-spirit, build on first request (or proactively when
+  quiet). Public position: timestamped stack + thread presence + open
+  coordination offer.
+
+## 2026-08-19 D23 WITNESSES EXTRACTED (det23 NONEMPTY branch step 1; INTERNAL/UNREVIEWED)
+- Witness-extraction agent (fired above) ran to completion; full report
+  SHEET6-DIRECTIONB.md 8.S6; banked cases/d23_witnesses_p{105337,105673}.json.
+- DIMENSION: LT-staircase exact B&B on the 509-el det23 GBs: dim = 11 at
+  ALL THREE primes (identical profiles/indep set; fiber control 13).
+  ANOMALY: g1,g2,g3 cut codim 2, not 3 -- one variety-level dependency,
+  cross-prime identical. Survivor sublocus = codim-2 subvariety of the fiber.
+- POINTS: 6 F_p points per prime at 105337/105673 (6/6 tries, adapted 1a
+  discipline: 11 indep coords + W-branch -> 0-dim slice -> local propagation
+  with flint roots; box01 msolve fallback never needed; 200257 excluded, no
+  F_p chart points per 8.S3). All flint-verified: 397 GB + g1,g2,g3 = 0
+  exactly (400/400), independent of msolve.
+- RECONSTRUCTION: rank-2 tg back-solve SUCCEEDS at every point (rank[A|b]=2,
+  A=C*diag(uW^2) re-verified pointwise; free tg {x32,x37}); 22 pivots
+  back-solved from pristine rows (band-triangular affine groups
+  1+2+3+4+4+4+4); 54/54 row22compat rows vanish incl. the 6 compat rows;
+  76/76 raw D21 rows; Schur rank-4 deep solve x3 kernel draws; 77/77 hybrid.
+  First non-synthetic D23_POINTs through the 1a path (banked 12 were 36/36
+  NOT_IN_DOMAIN). = explicit depth-23 surviving configurations mod p,
+  chart-local, one fiber of 36. NOT char 0, NOT a family claim, UNREVIEWED.
+- EXPERIMENTAL e (1b, all flags pencil/weighted/rank x tails/tailsW):
+  ALL FAIL CLOSED -- no numeric e-candidate at window depth 23. pencil:
+  rank 29/29 but fill-unstable (135/137 zero-fill vs 62 random, identical
+  both primes); weighted/rank: Jacobian col rank 35/37 < 77/80 (consistent
+  with the 11-dim survivor family). E_CANDIDATE(EXPERIMENTAL) discipline
+  kept; DEPTH-STAB e<=11 untested pending the 1b manifest. No git; red
+  lanes untouched (PIDs 57571-3 alive throughout).
+
+## 2026-08-19 ~09:15Z WITNESSES IN HAND (NONEMPTY step-1 complete, UNREVIEWED)
+- Survivor locus DIM 11 (all 3 primes; g1-g3 cut codim 2 not 3 -- one
+  cross-prime-identical dependency = structural, feed to Sol round 5).
+- 6 witness points/prime at 105337+105673, exact 400/400 row verification;
+  tg back-solve OK at every point -> FULL 72v depth-23 configurations
+  (54/54+76/76+77/77). cases/d23_witnesses_p*.json + 8.S6. The first
+  depth-23 survivors of the campaign.
+- EXPERIMENTAL e: all 6 flags FAIL CLOSED (honest) -> DEPTH-STAB e<=11
+  untested; BLOCKING ITEM = the square-block/surplus-bridge spec (math).
+  Sol round 5 brief: spec the e-object + explain the codim-2 dependency +
+  D25 design consuming the 11-dim survivor locus.
+- QUEUE: (1) Grok det23 review verdict -> if CONFIRMED, stop Box02
+  (lanes now redundant at ~$13/h; det23+witnesses supersede) + bank box01
+  red rc lines; (2) launch Sol round 5; (3) e-spec = the new decisive
+  math object.
+
+## 2026-08-19 ~09:40Z VERDICT PROMOTED + fleet drawdown + round 5
+- GROK CONFIRMED det23 chain (grok-det23-review.md): all claims recompute,
+  bidirectionality holds, scope honest. PROMOTED at fiber-local/mod-p tier
+  (AUDIT.md entry; 8.S5 label upgraded). The depth ladder's first
+  surviving window is now a promoted campaign result.
+- Fleet: sacrificial red lane killed at 305GB (PID-inspected; rc=137 to
+  log); remaining 2 reds ride to 08:28Z caps (rc=124 expected, bank next
+  tick); Box02 STOPPED (~1.6h, ~$21; superseded); det23 lanes done in 63s.
+- SOL ROUND 5 LAUNCHED: e-spec (decisive next object), codim-2 dependency
+  explanation, D25 + fiber->family design.
+- Next milestones: e-spec banked -> compute e at witnesses -> any e<=11 =
+  certified formal germ (DEPTH-STAB) = counterexample-side headline; else
+  D25 iteration on the 11-dim locus.
+
+## 2026-08-19 ~09:55Z round-5 consumed; two build agents overnight
+- sol-round5.md: e-object = Euler/Ore operator (NOT scalar Jacobian);
+  29x29 square block spec implementable; e<=11 stays E_CANDIDATE until a
+  FILTERED DIFFERENTIAL NEWTON LEMMA is proved (new-math queue item, the
+  germ-certification gate); codim-2 dependency = Conjecture K (open);
+  D25 design: pristine Row 24 Schur -> <=5 residuals through cached G23;
+  ATLAS FIRST (35 fibers) before family D25.
+- Lanes closed: reds rc=124 x2 (caps) + rc=143 (kill) banked; Box02
+  confirmed stopped; box01 idle 984G.
+- LAUNCHED overnight: (1) corrected-e agent (round-5 sect-1 spec, all
+  witnesses, E_CANDIDATE tier); (2) 36-fiber atlas agent (per-fiber
+  NF->rank2->det23 pipeline, ATLAS markers on box01).
+- NEW-MATH QUEUE: filtered differential Newton lemma (germ gate);
+  Conjecture K; then D25. Morning report: e-distribution + atlas table.
+
+## 2026-08-19 ~09:25Z corrected-e agent report: Euler/Ore e computed at all D23 witnesses (E_CANDIDATE only)
+- BUILT cases/valuation_e2.py per sol-round5.md sec 1 TO THE LETTER:
+  numeric dual-jet rebuild of gm_jet2/jrows mod p (DBUILD=42, pure-y
+  exact), zero-completion hashed, 30 residue u-streams vs 29 eta-outputs,
+  29x29 blocks in fixed family order, tails mode, PIN42 never tangent.
+  All gates PASS both primes: 86/86 banked-row derivative match, Ore
+  affinity 2605/2605 bins, zeta-branch + second-path invariance, Schur
+  rank 4 anchor, cross-prime identical structure, byte-identical replay.
+- FINDING 1: the ten deep-tail labels of DEEPMAP were permuted —
+  measured true map (tf1_49<->tg1_49, tf2_49<->tg2_49, tf1_54<->tg02_54,
+  tf2_54<->tg01_54, tg1_54<->tg2_54); witnesses re-verified under it.
+- FINDING 2 (changes the round-5 design): ***eta29 == 0 REFUTED*** —
+  E_29 != 0 at t^36, derivative support = the six residue-4 (level-48,
+  C7-invariant) streams; char-0 confirmed via the exact machinery
+  (coefficient -147880611647231905314470776689/1024, branch-free);
+  operator really has 30 outputs vs 30 inputs beyond band 22. eta30..33
+  and every other grading clause hold to band 41.
+- RESULTS (36 pts = 6 wit x 3 deep draws x 2 primes; ALL E_CANDIDATE
+  (EXPERIMENTAL); Newton-lemma/E-HENSEL gate UNPROVED, nothing promotes,
+  strictly NO DEPTH e): defect profiles [24,40,52,56,56-57]; e_cand
+  distribution {295: 27, fail-closed None: 9 (w1 both primes + p105673
+  w3, defect drifting at N=5)}; e_idx range 295-304; ***0/36 at or
+  under DEPTH-STAB e<=11***; certified in-window delayed-loss lower
+  bounds ell >= 24 > 11 at every one of the 1080 blocks => every block
+  hits the spec stop rule; no promoted e<=11 can exist at these
+  witnesses at this truncation. The germ-side headline does NOT fire;
+  the corrected object points away from the counterexample side at D23.
+- BANKED: cases/d23_ecandidates.json (d0a52d432eee538b..), SHEET6-
+  DIRECTIONB.md 8.S7 (INTERNAL/UNREVIEWED). Local python only (numpy +
+  banked pickles); msolve unused; box01 untouched; no git.
+- NEXT per round-5: repair the grading lemma (prove the 30-output
+  cyclic-character statement or conjugate H_29 away), THEN redo the
+  square-block/Ore-Popov design on the corrected 30x30 object; the
+  filtered differential Newton lemma remains the germ gate; D25/atlas
+  tracks unaffected.
+
+## 2026-08-19 ~10:00Z E-VERDICT: no near-term germ (E_CANDIDATE tier)
+- Corrected Euler-operator e at all 36 witnesses: e=295 at 27/36,
+  fail-closed 9; 0/36 <= 11; certified delayed-loss l>=24>11 at ALL 1080
+  blocks = spec stop rule -> NO promoted e<=11 possible at D23 on this
+  fiber. Germ certification would need depth 2e+1=591. Gates all pass
+  (86/86 derivative match, Ore 2605/2605, cross-prime, byte replays).
+- TWO SPEC DEFECTS for Sol adjudication: (1) eta29==0 lemma REFUTED
+  exactly (E_29 != 0 at t^36, char-0 coeff banked) -> operator has 30
+  outputs; agent claims stop-rule conclusion robust but numbers may move;
+  (2) DEEPMAP deep-label involution permuted (true involution measured).
+- READING: D23 survivors are ultra-degenerate. Either counterexample
+  structure that certifies only much deeper, or formal mirages that die
+  at D25. D25 = THE discriminating computation. Wait for atlas (due
+  minutes), then Sol round 6 consumes: atlas table + e-distribution +
+  refuted lemma + D25 final design.
+
+## 2026-08-19 ~09:35Z 36-FIBER D23 ATLAS COMPLETE (8.S8; INTERNAL/UNREVIEWED)
+- Sol round-5 SC3.4 executed (atlas BEFORE D25): the promoted radical_point
+  fiber-local D23 nonemptiness extended to ALL 36 radical fibers
+  (3 A1-roots x 3 A2-roots x 2 HW1-signs x 2 HW2-signs) at p105337.
+- VERDICT: 36/36 NONEMPTY, 0 EMPTY, 0 anomalies. EVERY fiber: D21 fiber GB
+  397 els / dim 13 / 282,304 terms; det23 GB 509 els / dim 11 / 405,524
+  terms; ONE full-support class at BOTH tiers (element-for-element hashes
+  a9498f3c../e2c2e64e.. x36); rank(C10)=4 Schur, rank(C)=2, {u.b} dim 3,
+  NF 150t x6 rank 5, extras cancel, (x57-x65)^2 integral (1,-2,1), g's cut
+  codim 2 (the 8.S6 dependency is FAMILY-WIDE). All structure constants of
+  the promoted chain reproduce fiber-for-fiber; the pre-registered rank
+  anomaly trigger NEVER fired.
+- REGRESSION ANCHOR: a00pp re-derived from frozen artifacts BYTE-IDENTICAL
+  at both emissions (fiber .ms, det .ms == banked directionb_det23) and
+  dict-exact at compat/row22red/NF-payload/g-rows. Spot G-C on 4 non-
+  radical fibers: row==NF at 72 combos each, rank A pinned 2 pointwise.
+- TRANSPORT GEM (for Sol round 6): only coefficients vary across fibers,
+  organized by fiber-group characters: g3 = x70+e*x72 with e constant on
+  (j-i) mod 3 classes (3 values); g2 = f(j,s2) (6 classes); g1 = f(i,j,s1)
+  (18 classes). Concrete handle for the SC3.4 explicit-transport search.
+- FAMILY STATEMENT (honest tier): at p=105337 the depth-23 Row_22
+  obstruction eliminates NO radical fiber of the D21 window -- every one
+  of the 36 carries an 11-dim depth-23 survivor locus mod p (per-fiber
+  gated equivalences; mod p, chart-local, INTERNAL/UNREVIEWED; no char-0,
+  no family-scheme claim). Tier-1 target of sol-round5 SC3.4 = MET, with
+  staircase identity strengthened to full support identity.
+- OPS: 70 box01 lanes rc=0 (35 fibgb ~11s + 35 det23 ~65s, 3 lanes -t 4,
+  ATLAS markers in pilot.log; ~6 min solver wall); local flint/Singular
+  ~35 min; md5 both directions on every ship/fetch; nothing else touched.
+- p105673: no EMPTY/anomalous fiber arose => mandated spot-checks VACUOUS;
+  stage-1/3 banks built + a00pp byte-regressions PASS, ready for a full
+  second-prime replication if commissioned.
+- BANKED: cases/d23_atlas_p105337.json (87.5 KB; per-fiber verdicts, dims,
+  GB stats, g rows, w vectors, md5s, fiber mod-p data); SHEET6-DIRECTIONB
+  8.S8 (atlas + family statement); artifacts scratchpad atlas/ + box01
+  ~/jc72108/atlas/. Ready for Sol round 6 (with 8.S7 e-distribution).
+
+## 2026-08-19 ~10:15Z ATLAS COMPLETE: 36/36 NONEMPTY (single-prime, internal)
+- All 36 radical fibers: D23 obstruction eliminates NONE at p=105337.
+  Identical structure per fiber (397/dim13 -> 509/dim11, rank C=2,
+  codim-2 g-cut family-wide, support identity). radical_point regression
+  byte-identical. 70/70 lanes rc=0; box01 back to idle 983G.
+- Transport gem: g-coefficients organize by (j-i) mod 3 / (j,s2) /
+  (i,j,s1) classes -> feeds Conjecture K + family-level D25 emission.
+- COMBINED PICTURE: family-wide D23 survival + e=295 ultra-degeneracy =
+  survival everywhere, certifiability nowhere. D25 = the discriminating
+  computation (EMPTY -> the kill resumes at depth 25; NONEMPTY -> track
+  e-behavior for mirage-vs-germ).
+- LAUNCHED parallel: Sol round 6 (defect adjudication + final family-D25
+  spec + discrimination logic + updated probabilities); Grok promotion
+  review of atlas + e-computation (single-prime risk flagged for rating).
+
+## 2026-08-19 ~10:35Z adjudications banked; D25 program launched
+- Sol round-6 + Grok atlas/e review both in: e=295 WITHDRAWN (corrected
+  30x30 object) but NO-GERM-AT-D23 STANDS via corrected certificate
+  (l+ >= 31 > 11 all 36; 8.S7-ADDENDUM). Atlas CONFIRMED single-prime
+  tier (copy-attack dead, hashes distinct); promotion gap = second prime.
+- Sol D25 posteriors: 6% all-EMPTY / 22% mixed / 72% all-NONEMPTY; ~5%
+  corrected e+ <= 12 on a D25 survivor.
+- LAUNCHED (one agent, sequenced): p105673 atlas (promotion gap) then the
+  FAMILY D25 MASTER EMISSION (36 etale components, componentwise verdicts,
+  cached-G23 reduction, sol-round6 sect-3 spec, shape-reconciliation gate).
+- Discrimination: family D25 EMPTY = unconditional scoped mod-p germ kill
+  (residue-A kill resumes); NONEMPTY = survival deepens, corrected-e on
+  D25 survivors = mirage-vs-germ-track test.
+
+## 2026-08-19 ~11:20Z SECOND-PRIME ATLAS COMPLETE: p105673 = 36/36 NONEMPTY (promotion gap closed at computational tier)
+- The grok-atlas-e-review promotion gap (Object A finding 1: single
+  prime on 35 fibers) CLOSED by a full second-prime replay: identical
+  gated stage-1..6 chain at p=105673 from the banked stage-1/3 banks.
+  **VERDICT COUNTS: 36/36 NONEMPTY, 0 EMPTY, 0 anomalies** — table
+  identical to p105337 in every structural field (397/dim13 ->
+  509/dim11, same 11-coord indep set, rank C=2 x36, codim-2 g-cut
+  x36, 282,304/405,524 terms, one LT class per tier).
+- a00pp regressions vs banked p105673 artifacts ALL exact: fiber
+  emission + det emission byte-identical; NF payload == banked
+  nf_reduced_rows; g rows == det rows 398-400; det GB md5 == banked.
+- Copy-attack battery (Grok A1/A2 as explicit gates, 8 checks 0
+  FAIL): pairwise-distinct md5s 36/36 at all four artifact tiers; 3
+  coefficient classes on first GB poly; det-GB support skeleton
+  element-for-element identical ACROSS PRIMES; class laws 3/6/18
+  replayed. The 8.S8 family statement now holds at TWO split primes.
+- Remaining to full promotion: A6 consumer hazard (NF payloads now
+  banked both primes, scratchpad-only) + A4 good-reduction lemma for
+  any scheme-level reading.
+- OPS: box01 markers LAUNCH ATLAS673 FIBGB x35 (10:07Z) + LAUNCH
+  ATLAS673 DET23 x35 (10:26Z), 3 lanes each, 70 rc=0, ~11s/fibGB +
+  ~2min/detGB; md5 both directions every ship/fetch; a00pp not
+  re-solved (banked reuse); box01 idle after. Local Singular stage-4
+  1369s 0 FAIL. BANKED: cases/d23_atlas_p105673.json (87.5 KB);
+  SHEET6-DIRECTIONB 8.S8 second-prime block. No git.
+
+## 2026-08-19 ~12:40Z D25 FAMILY COMPILER: state checkpoint (IN FLIGHT)
+- JOB 2 (sol-round6 family D25 master emission) is mid-build. DONE +
+  GATED so far (scripts session scratchpad e1e34384 d25/):
+  (a) the family DAG at BOTH primes' artifacts VERIFIED at p105337
+  (d25fam_bcd.py): level-44 unit 2x2 solve (rows 0,1; solve closes
+  rows on chart, componentwise x36), 22 at-use pivot cascade (G1
+  unit-ness re-certified family-wide, cascade sizes <= ~500 terms),
+  Row-22 deep rank-4 family solve with the CORRECTED sol-round6 1.3
+  registry (solves tg02_54, tg01_54, tg2_49, tg1_49; kernel
+  tg1_54, tg2_54, tf1_54, tf2_54, tf1_49, tf2_49); (b) phases A
+  (Row-24/C24/L24 certification incl. frozen-digest ab5ee038 +
+  90/90 frontier-derivative match spec), D (G23~ ingestion + family
+  NF with idempotent-mask splits + membership-trace replay +
+  Singular cross-check), E (launch gates + emission + manifest +
+  witness D23-truncation regression) are coded with hard STOP
+  discipline, pending the full-live D=25 window build.
+- The D=25 window build (step 0, build_tails25.py = 6.T at D=25,
+  103 live vars) is RACING on two machines: local (launchd job,
+  gc-disabled; macOS kept E-core-throttling the first nohup run —
+  killed at ~45 CPU-min, relaunched full-speed) and box01
+  ~/jc72108/d25/ (steady 99.9%, marker LAUNCH D25BUILD in
+  pilot.log). Both are deep in the GB42 orbit (>40 min each at
+  100%); GB21 + jrows assembly remain. First DONE wins; pkl =
+  directionb_tails_D25.pkl next to the script.
+- NEXT (mechanical, coded): fetch/copy winner pkl -> d25fam_a.py ->
+  d25fam_bcd.py + d25fam_d.py + d25fam_e.py per prime (105337,
+  105673) -> mk_lanes.py -> ship d25out/*.ms (72) to box01
+  ~/jc72108/d25fam/ -> LAUNCH D25FAM marker, 1 lane/prime, timeout
+  172800 per solve, -v 2 -g 2 -t 8, verify by specific-pattern ps
+  counts -> SHEET6-DIRECTIONB section 9 (draft ready:
+  scratchpad/draft_sec9.md; discrimination logic quoted verbatim
+  from sol-round6 sec 3) + notes entry (draft_notes_job2.md).
+- JOB 1 is COMPLETE and banked (36/36 NONEMPTY at p105673; see the
+  entry above + 8.S8 second-prime block).
+
+## 2026-08-19 ~13:15Z D25 build ALIVE (false stall alarm, my grep error)
+- build_tails25.py: 125min CPU, 1.1GB, mid-orbit (escalation 8s->86s->
+  1452s->586s->current ~92min); agent correctly blocked on it. My "0 py
+  procs" was a WRONG PATTERN ([p]ython3.*d25 vs script named tails25) +
+  head-3 truncation -- THIRD near-miss of this class. RULE REINFORCED:
+  process checks use the exact script/lane name, never a guessed
+  substring, never truncated output. Verify absence with a second
+  independent probe (here: 2h-alive wrapper bash contradicted "dead").
+- Build projection: possibly 2-6h more (orbit escalation). Do NOT
+  interrupt; wrapper proceeds to emission+launch on python exit. Relax
+  cadence to hourly.
+
+## 2026-08-19 ~12:10 PDT credits outage + recovery
+- Usage-credit exhaustion killed the D25 build agent mid-build (~11:50);
+  DC refilled ~12:08. Its two local reduction workers (level-49 pair,
+  3.2GB/89min each) SURVIVED and kept computing. Original agent transcript
+  lost -> fresh finisher agent spawned with full state handoff (wait for
+  workers, validate, assemble, gates, emit, launch D25FAM, bank incl. any
+  missing JOB1/p105673-atlas write-up).
+- Ops note: outage also explains the quiet 10:40-12:08 stretch. Watch for
+  any OTHER casualties of the outage window on next sweeps.
+
+## 2026-08-19 ~12:45 PALOMAR track opened (DC directive)
+- Palomar (palomar-registry.org, Tao announce 8/18, Lean FRO+ICARM) = Lean
+  -verified results registry; public GitHub + Challenge/Solution/comparator
+  + formalization.yaml (AI-roles disclosure built in); kernel-only (NO
+  native_decide); 3 std axioms; Challenge <=1000 lines/100KiB; permanent
+  versioned registration by explicit choice.
+- LADDER: (0) Theorem A ODE lemma = pipeline test, days; (1) vertex-gap
+  = flagship, 1-2wk agent time; (2) post-D25 witness certificate (mod-p
+  window survival; witnesses Lean-cheap, emptiness = cofactor cert); (3)
+  td-7 maybe (kernel cost). Repo plan: NEW public jc72108-lean (not the
+  campaign repo). NORTH-STAR POLICY: disproof -> Palomar primary-grade
+  (small certificate, verification = announcement); proof -> prose/Zenodo
+  priority first, Palomar = parallel credibility track, modular.
+- Phase 0 internal (Lean skeleton + Theorem A) authorized to build NOW;
+  public repo + submission = DC's go.
+
+## 2026-08-19 ~13:00 PALOMAR phase 0 DONE: Theorem A Lean project builds green
+- NEW dir /Users/dc/code/math/jc72108-lean (campaign repo untouched; NO git
+  init by design — DC creates public dcposch/jc72108-lean). Lean v4.32.2 +
+  Mathlib v4.32.2 (same pin as lean/; cache hit, zero Mathlib compile).
+- Challenge.lean 73 lines/3.7KB (Palomar prefers <=300/32KiB), imports
+  Mathlib only: TheoremA (char 0) + TheoremA_charP. Both stated over
+  CommRing+IsDomain (STRONGER than paper's field — proof clears
+  denominators: D := lcA^nu*C - lcC*A^nu, no division). char-p variant
+  INCLUDED: ports cleanly; hyps nu*deg A < p AND deg C < p (implies paper
+  §6's conservative p > (k+1)d2 in its application; cf. MATHIEU.md 5.4).
+  Solution.lean 205 lines, sorry-free; lake build clean (8658 jobs).
+- Axiom audit: BOTH theorems = [propext, Classical.choice, Quot.sound]
+  exactly (no sorryAx/ofReduceBool/custom). scripts/check_axioms.sh
+  automates; also #print axioms at end of Solution.lean.
+- comparator.json uses the REAL Palomar schema (challenge_module/
+  solution_module/theorem_names/definition_names/permitted_axioms/
+  enable_nanoda — verified against PalomarRegistry/PalomarTemplate), NOT
+  the {"compare":[...]} sketch. formalization.yaml v0.4 complete: name
+  jc72108-theorem-a, Apache-2.0, sources = Zenodo 10.5281/zenodo.21894922
+  (formalizes) + Zoladek 2008 Topology 47 A.7 + Hermoso-Alcazar
+  arXiv:2410.18867 (independently-proves), math.AG+math.AC, MSC 14R15,
+  automation agent(Claude Fable)+manual w/ full AI-roles narrative, review
+  self-assessed (no external peer review claimed).
+- Lean 4.32/Mathlib gotchas banked for the flagship formalization:
+  (1) linarith needs ordered fields — use linear_combination over domains;
+  (2) Finset.mem_antidiagonal is SHADOWED by the Set.IsPWO antidiagonal —
+  use Finset.HasAntidiagonal.mem_antidiagonal / sum_eq_single_of_mem;
+  (3) natDegree_pow needs Monic here — coeff_pow_mul_natDegree (plain
+  Semiring, simp) is the hypothesis-free route; (4) push_neg deprecated.
+- SUBMISSION.md = DC's exact runbook: git init+push, rev-parse HEAD ->
+  full SHA, submit.palomar-registry.org (browser GitHub sign-in route,
+  root layout, "responsible author" answer), KEEP the status-page link
+  (Palomar never emails), register = permanent by explicit choice.
+
+## 2026-08-19 ~13:20 Lean fidelity verdict + fix round
+- Sol (sol-lean-fidelity.md): FAITHFUL at statement level, both theorems;
+  domain generalization sound; no degree-convention weakening. 3
+  attribution defects (6.5-vs-thm:ode numbering; Zenodo source predates
+  ODE thm -> repoint to MATHIEU.md in 22002825; bogus Zoladek DOI) ->
+  fix round dispatched to the lean agent. After its PASS: package is
+  SUBMISSION-READY, DC's go required for public repo + submit.
+- Workers: 139min CPU each, still on level-49 pair. D25 finisher armed.
+- ~13:20 addendum: Sol semantic-fidelity review (xmodel/sol-lean-fidelity.md)
+  = FAITHFUL on both Lean statements; attribution fixed per review: ODE thm
+  cited by label thm:ode ("ODE rigidity, all weights", =6.1 current, NOT 6.5
+  =thm:R unformalized); campaign source repointed to theory bundle
+  10.5281/zenodo.22002825 MATHIEU.md 5.1/5.4 (21894922 kept as background,
+  software/MIT); bogus Zoladek DOI removed (plain citation, Appendix A.7,
+  relationship background w/ directional note); charP = "standalone
+  strengthening extracted from §6 proof"; Lemma 6.6->6.3; Alcázar accent.
+  Rebuilt green, axiom check re-passed (3 std axioms only).
+
+## 2026-08-19 ~13:35 PALOMAR PACKAGE SUBMISSION-READY
+- All Sol attribution fixes applied + rebuilt green + axiom check
+  re-passed (exactly the 3 std axioms, both theorems). Challenge 88 /
+  Solution 213 lines. Statements untouched (were FAITHFUL). Dual review
+  complete: Lean kernel (mechanical) + Sol (semantic fidelity).
+  AWAITING DC: create public repo jc72108-lean, push, submit SHA
+  (runbook = jc72108-lean/SUBMISSION.md).
+
+## 2026-08-19 ~14:20 jc2-lean PUBLIC + pushed (DC created repos)
+- github.com/dcposch/jc2-lean live (public, master): theorem-a/ project at
+  layout jc2-lean/theorem-a per the single-repo plan; top README index.
+  Submission SHA for Palomar = c59d6ef0d5ea85707d78980ea03c38608285d446
+  (the follow-up SHA just records SUBMISSION.md provenance; EITHER works,
+  use the LATEST HEAD when submitting + path setting "theorem-a").
+- msolve-toolkit repo also created (empty) -- fill on first request or
+  next quiet window. jc72108->jc2 master-repo rename: GitHub-side DC's
+  call anytime; LOCAL dir rename deferred until D25 finisher completes.
+
+## 2026-08-19 ~21:15Z daily web sweep #4 (xmodel/websweep-2026-08-19.md)
+- 6 deltas (2 ACTIONABLE): a/514446 at score -3, 0 comments (AI-climate downvotes, no engagement
+  — hold, don't delete); Palomar JC race OPEN: Paul-Lez/jacobian-conjecture = dim-3 Alpöge disproof
+  Comparator, submission-imminent, JC(2) explicitly left open -> submit theorem-a TODAY (jc2-lean
+  public 20:47Z, only submit-SHA step left). Quiet elsewhere: ratto3423 dormant (no MO login since
+  Aug 12), arXiv/Zenodo tripwires silent, 21894922 4->7 views (MO referral), registry = 13 entries, 0 math.AG.
+
+## 2026-08-19 ~14:25 sweep deltas (2 ACTIONABLE)
+- MO a/514446: score -3, zero comments, no substantive objection; thread
+  traffic UP + artifact referrals 4->7 views. Read: provenance-skepticism
+  (meta Q514380 climate), not a math objection. DECISION: HOLD (no edit,
+  no delete, no reply unless a substantive comment appears). Lesson
+  banked: MO judges provenance, Palomar judges proofs -> weight the
+  registry track.
+- PALOMAR RACE OPEN: Paul Lezeau registered a COMPLETE dim-3 Alpoge
+  -disproof package TODAY (JC2 explicitly open). Registry 13 entries,
+  none math.AG. First-JC2-entry window is NOW -- DC has SHA+path in hand.
+- Quiet: ratto3423 dormant since Aug 12; arXiv/Zenodo tripwires silent.
+
+## 2026-08-19 ~15:05 SESSION RESTART: D25 reduction stage LOST; recovery
+- CLI process restart killed the local reduction workers AND wiped the
+  scratchpad (bc logs, d25fam_bcd.py driver, partial outputs): ~7h local
+  compute lost. SURVIVES: box01 ~/jc72108/d25/directionb_tails_D25.pkl
+  (jets bank), d25build.tgz, all repo + jc2-lean files.
+- DOCTRINE NOW MANDATORY (twice burned in 24h): any computation >30min
+  runs ON THE FLEET, setsid-detached, with per-item checkpoint files, and
+  its driver script COMMITTED to cases/ (never scratchpad-only).
+- Recovery: fresh agent rebuilds the reduction driver from sol-round6
+  sect 3 + the surviving jets pkl, runs it on box01 detached w/
+  checkpoints. Vertex-gap agent resuming (files survived).
+
+## 2026-08-19 ~15:30 PALOMAR SUBMITTED (theorem-a)
+- DC submitted: repo dcposch/jc2-lean, SHA e5102c83ba2b..., path theorem-a
+  (root LICENSE fix applied first -- Palomar checks repo root).
+- STATUS PAGE (ONLY access, save this): https://submit.palomar-registry.org/s#ba8977605f4001426ae0752b12d7975098e62da05b32f58295b41f0944e38b1f
+  JS live-updating page; DC checks in-browser. Mechanical checks target
+  ~1h; after PASS, DC chooses "Register this result" explicitly.
+- If registered: among the first ~15 registry entries, first JC2-side
+  entry (Lezeau's dim-3 disproof registered same day).
+
+## 2026-08-19 vertex-gap Lean formalization BUILT (jc2-lean/vertex-gap)
+- Palomar Phase 1 second project: thm:22 (Theorem 3.4, vertex-gap
+  obstruction (2,2)) formalized at polynomial level in
+  /Users/dc/code/math/jc2-lean/vertex-gap/ (NOT committed -- DC handles git).
+  Four theorems: VertexGap22 (normalized labels, MvPolynomial (Fin 2) K,
+  bracket via pderiv, support strips as lattice inequalities incl. the
+  load-bearing near-origin edge i<=2j on the wide member),
+  VertexGap22_swapped (side-symmetric companion = (P,Q)->(Q,-P)),
+  CornerEnumeration (lem:enum), GapConditionSideSymm (hypothesis (ii)
+  per the side-symmetry erratum). Vertex equation + gap kill DERIVED from
+  the bracket (S2 saturation not assumed -- statement harmlessly stronger).
+- lake build green (Lean/Mathlib v4.32.2, pins copied verbatim from
+  theorem-a); Solution.lean sorry-free, 450 lines; axioms exactly
+  propext/Classical.choice/Quot.sound (script passes); kernel-only.
+- FINDING: the formalized cascade needs only char != 2,3 -- the 1/5 pivot
+  is avoidable (keep 5 on the b9-pivot, multiply hK8 by 5). (5:K)!=0 kept
+  in the statement for fidelity with the print; consistent with Remark 3.7
+  (persistence mod 5 observed there, unclaimed). Candidate erratum-grade
+  strengthening for the paper if we ever want it.
+- NOT formalized (documented in README + formalization.yaml): Props
+  3.2/3.3 counting, general-(k,d2) gap kill, Remark 3.5 radical
+  membership, Section 4-6 variants/functional, GGHV reduction.
+- Key equations + cascade re-verified pre-formalization by independent
+  GF(p) enumeration (scratchpad verify2.py, all 12 keys + (3,6)==0 match;
+  obstruction events reproduced).
+
+## 2026-08-19 ~15:55 new-math queue UNBLOCKED -> 3 parallel Sol lanes
+- DC: nothing prevents parallelizing the queue -- confirmed, it was
+  sequencing-by-habit. LAUNCHED: sol-newton-lemma (germ gate, either-branch
+  decisive), sol-conjecture-k (codim-2 mechanism + D25 prediction),
+  sol-g5-emission (td-bound via FC5 -> ladder cofinality, biggest prize).
+  Each gets Grok review on delivery per gauntlet.
+- Palomar: verification FAILED on Mathlib ancestry (release-tag pin not on
+  master lineage) -- repin agent running, resubmit SHA to follow.
+
+## 2026-08-19 ~22:30Z D25 BASE-COEFFICIENT REDUCTION REBUILT + LAUNCHED ON BOX01 (D25RED)
+- The lost stage (session-restart wipe, ~15:05 entry) REBUILT per doctrine:
+  driver COMMITTED as cases/d25_reduce.py (self-contained, pure python3,
+  no flint/Singular needed), runs ON box01, per-item checkpoints,
+  setsid-detached. Marker LAUNCH D25RED x2 in box01 pilot.log 22:22Z;
+  completion echoes "D25RED p<P>: rc=..".
+- OBJECT: sol-round6 2.5/(4)-(5). Row_22 + Row_24 eta-component jets of
+  ~/jc72108/d25/directionb_tails_D25.pkl expanded as sum_alpha
+  h_alpha(z) a^alpha, z = the 22 det23 vars (x68,x70..x73,x47,x52..x66
+  = SOL2_TEMPLATE18 tails + W1,W2,uW1,uW2), a = deep tails (incl. uf24,
+  uf30, all level-42..56 tf/tg). 453 DISTINCT deep monomials alpha
+  (deep-deg 0..4; incl. the 10-var Row-22 deep block tg02_54/tg01_54/
+  tg*_49/kernel + the 10 Row-24 frontier vars), ~135k F_p terms/fiber.
+  Each h_alpha NF-reduced through the cached 509-el det23 G23 of ALL 36
+  fibers x BOTH primes 105337/105673, WITH membership traces
+  h = NF + sum_k q_k G_k stored per (row,eta,fiber) (zlib'd).
+  NOTE vs the lost run: that run reduced the rank-4 SOLVE combinations
+  (~588-term tg02_54/tg01_54, heavy tg*_49 pair, exact K3 arith, 7h);
+  this rebuild reduces the raw h_alpha bank instead — a SUPERSET from
+  which assembly re-derives every solve/Schur combination F_p-LINEARLY
+  from reduced pieces (NF is linear; L24, cofactors are constants).
+- CHECKPOINT SCHEME (resume-safe): one file per (prime, alpha):
+  ~/jc72108/d25/ckpt/red_p<P>_<name>.pkl, name = '*'->'.', ()->'const'
+  (e.g. red_p105337_tg02_54.pkl, red_p105337_tf1_38.tf1_38.pkl); files
+  appear only via atomic os.replace; startup SKIPS existing ones.
+  Payload: {fibers: {label: {(k,n): {nf (exp22-tuple dict), trace_z,
+  in_terms, steps}}}, r3, fiber_vals, gbvars, alpha}. Progress log
+  ~/jc72108/d25/reduce_p<P>.log appended per expression w/ term counts
+  + secs. GB parse cached (d25/gbcache_p<P>_<label>.pkl). RESUME = just
+  relaunch the same command; expected 453 ckpts/prime.
+- SPECIALIZATION: per-fiber A1,A2,HW_i/W_i taken VERBATIM from banked
+  cases/d23_atlas_p<P>.json fibers[label]["fiber"] (no omega/sigma
+  re-derivation); r3 := A1(a00pp)^3-3 (=795/14686, matches core pin);
+  za==eB==0 asserted bank-wide so z/EB never enter. W symbolic.
+- GATES (all PASS both primes): msolve-order pin on all 36x509 els
+  (first term unique grevlex-max + monic, packed-int order comparator);
+  det-GB support skeleton identical across 36 fibers; A1^3=3+r3,
+  A2^3=3-r3, 2*(HW/W)^2=3 laws on every fiber; NF(G_el)=0 x3, NF(1)=1;
+  Row 23==0, Row_24 eta support {2,5,..,26}, frontier census 10/10
+  (spec 2.3). INDEPENDENT REPLAY (local, valuation_e parser + fresh
+  specialization code): h == NF + sum q_k G_k dict-exact, 7/7 cells
+  (const/tf1_38/tg1_42 x Row_22+Row_24 cells, a00pp p105337).
+- SHIPPED to box01 d25/ (md5 both directions): d25_reduce.py, a00pp det
+  GBs (= cases/directionb_det23_gb_p{105337,105673}.out.txt ->
+  det_a00pp_p<P>.out), both atlas JSONs. Other 35 fibers read from
+  ~/jc72108/atlas/det_<label>_p<P>.out.
+- MOD-P IS CHEAP: local selftest a00pp = ~5s for the 8 heaviest exprs
+  (const 44,820 terms -> 45,962 NF, 80,877 steps, 2.2s); projected
+  BOX01 wall ~minutes/prime (vs 7h exact-arith), 28 workers x2 niced.
+- 90-entry first-occurrence digest (spec 2.3) + C24/L24 certification
+  NOT rerun here (serialization recipe lives with the assembly stage);
+  D25RED is reduction ONLY. NEXT TASK: assembly = shared Row 24 +
+  rank-4 Schur + skeleton -> family systems, consuming ckpt/ + traces.
+- ~22:25Z COMPLETE: both drivers rc=0 in pilot.log; 906/906 checkpoints
+  (453 x 2 primes), 671M in ckpt/, WALL 120s/prime (28 workers; vs 7h
+  lost exact-arith run). Heaviest: const = 1,613,520 in -> 1,654,632 NF
+  terms, 2.9M division steps, 74s. Log totals per expression in
+  reduce_p<P>.log. POST-RUN replay ON BOX01 (d25/remote_verify.py):
+  h == NF + sum q_k G_k dict-exact on non-a00pp fibers a11mm(p105337) +
+  a21mp(p105673), 6/6 cells incl. const + tg*_49 + tg02_54 + a deep
+  square: ALL PASS. box01 idle again; PIDs exited cleanly (procs=0).
+
+## 2026-08-19 ~16:15 D25RED complete (120s/prime!) -> assembly launched
+- Rebuilt reduction: 453 deep exprs reconstructed, 906/906 checkpoints,
+  rc=0 both primes, WALL 120s/prime on 28 box01 workers (vs 7h lost local
+  attempt -- the fleet+checkpoint doctrine paid ~200x immediately).
+  Driver cases/d25_reduce.py committed-location. Gates all green incl.
+  13/13 membership replays.
+- Assembly+launch agent running (cases/d25_assemble.py, sol-round6 sect-3
+  spec, mandatory shape/witness gates, then D25FAM x2 48h lanes).
+- Concurrent: 3 Sol math lanes (newton/K/G5), Mathlib repin, Grok
+  vertex-gap fidelity. Seven workstreams live.
+
+## 2026-08-19 ~20:00 Mathlib repin to master lineage (Palomar) — DONE
+- Palomar rejected pin 905b9581 (v4.32.2 release tag): GitHub compare
+  master...905b9581 = "diverged" (ahead 2, behind 795) — release-branch
+  commit, not master lineage. Repinned BOTH theorem-a/ + vertex-gap/
+  (kept identical) to mathlib4 master HEAD
+  20bc12820422504f9e52ee6caebf8182a9015336; compare = "behind" =>
+  confirmed ancestor of master. lean-toolchain both projects ->
+  leanprover/lean4:v4.34.0-rc1 (exact bytes of mathlib's file).
+- lake update mathlib + cache get (8729/8729 prebuilt) + lake build:
+  GREEN both projects, ZERO proof fixes needed (vertex-gap .lean
+  untouched — still mid-fidelity-review, its .lean files remain
+  uncommitted). Only new warnings: if_pos/if_neg deprecations.
+- check_axioms.sh: all 6 theorems (TheoremA, TheoremA_charP;
+  CornerEnumeration, GapConditionSideSymm, VertexGap22,
+  VertexGap22_swapped) depend on exactly propext, Classical.choice,
+  Quot.sound.
+- Committed pins only (lake-manifest.json, lakefile.toml rev,
+  lean-toolchain x2) + pushed origin/master:
+  6c0f56309226432afb90b6213638ec987d46f4a3
+
+## 2026-08-19 ~16:30 Palomar resubmission #2 (theorem-a)
+- SHA 6c0f56309226432afb90b6213638ec987d46f4a3 (Mathlib master-lineage
+  repin, toolchain v4.34.0-rc1). STATUS PAGE #2 (save):
+  https://submit.palomar-registry.org/s#4bf62942adf505994f8d9c16dbeead2f785d3e2bb8e228fd7842128bd7098391
+- Known risk: RC toolchain may trip the supported-release check ->
+  fallback = repin to newest master commit w/ stable toolchain.
+
+## 2026-08-19 ~16:58 vertex-gap PUSHED (Palomar #2 ready)
+- Grok fidelity: FAITHFUL x4 (independently re-derived i<=2j edge).
+  Pushed jc2-lean SHA 3a8216d040758dc2655abf1f2c1b9722b310db70.
+  DC submits path "vertex-gap" whenever ready (theorem-a registration
+  pending its automated review).
+- Sol math lanes (newton/K/G5): all 3 still computing (files partial).
+  D25 assembly agent working. Box01 idle awaiting D25FAM.
+
+## 2026-08-19 ~17:05 PALOMAR REGISTRATION SUCCEEDED (theorem-a)
+- Theorem A (ODE rigidity, char-0 + char-p) REGISTERED in the Palomar
+  registry -- mechanical verification + automated semantic review both
+  passed; DC clicked register. First campaign entry; likely first
+  JC2-side result in the registry (day 2 of its existence). Get the
+  PALOMAR ID from DC's status page for citation; add to paper1/paper2
+  reference lists + README when known.
+- vertex-gap (Palomar #2) pushed + ready: SHA 3a8216d..., path vertex-gap.
+
+## 2026-08-19 ~17:15 PALOMAR ID: PALOMAR-2026-08-19-000005 v1 (theorem-a)
+- Citation: PALOMAR-2026-08-19-000005 v1,
+  https://palomar-registry.org/entry?id=PALOMAR-2026-08-19-000005&version=1
+- Propagated: jc2-lean README + theorem-a README (pushed). TODO next paper
+  revision: cite in paper1 verification paragraph + paper2 + MATHIEU.md.
+  ID counter is PER-DAY (DC correction): fifth entry of 2026-08-19, not fifth ever (registry had ~13 entries as of yesterday's sweep).
+
+## 2026-08-19 ~17:35 three math verdicts in; Grok gauntlet on all
+- NEWTON LEMMA: Sol claims THEOREM (Route B contraction, any field incl
+  char p, D >= 2e+1, e = causal-right-section loss) -> germ gate OPEN if
+  confirmed. Grok verdict-tier review running.
+- G5: BLOCKED honestly (FC5+closure+NF-M provably insufficient for Sigray
+  bound; missing lemma isolated). CONJ K: premise FALSE (no constant
+  dependency in any of 72 fibers; torsion/component mechanism proposed;
+  contradicts 8.S6 rank-5 reading -> adjudication needed). Grok audit
+  lane running on both.
+- D25 assembly agent still building. Palomar: vertex-gap submitted by DC.
+
+## 2026-08-19 ~17:45 Palomar vertex-gap: THEIR-side failure, retry later
+- Verification failed with Palomar-internal error ("formalization repair
+  draft requires profile version 2 or 3"); Palomar says error is on their
+  end, could not retrieve detailed report. Their instruction: DO NOT
+  change the repo; retry the SAME commit (3a8216d...) later; report the
+  workflow URL if it recurs. QUEUE: remind DC to retry in a few hours /
+  tomorrow morning; if recurs, DC reports workflow URL to Palomar.
+
+## 2026-08-19 ~23:45Z D25 FAMILY ASSEMBLED + DISCRIMINATING SOLVES LAUNCHED (D25FAM)
+- cases/d25_assemble.py (committed; runs on box01; per-fiber ckpts in
+  d25/asm/) consumed the 906 D25RED ckpts + jets bank + atlas and built
+  the sol-round6 sect-2 family object at BOTH primes: shared pristine
+  Row 24 (90-entry digest ab5ee038 REPRODUCED, exact recipe =
+  sol_algkill check_row24), factorization (2) entry-exact, C24 rank 4
+  pivots 0-3, ONE L24 (rank-5 RREF left kernel) -> 5 residuals; D23 DAG
+  replayed family-wide (22-pivot cascade G1-clean, l44 2x2 rank-2 solve,
+  Row-22 rank-4 deep solve in the CORRECTED 1.3 registry, sizes
+  588/588/747/888 = the lost run's telemetry).
+- SHAPE = PREDICTION: per fiber 26 core + 3 g + 5 residuals = 34 eqs /
+  28 vars (22 base + r=6 lift: x16,x24,x19,x27,x33,x38); s=5<=5;
+  residuals 144-148 NF terms, ALL live on ALL 36 components (5 all-ones
+  masks, no idempotent splits needed); kernel-6/x32/x37/uf* all CANCEL.
+- FINDING: jets bank omitted the +42 t^20 no-log pin in cell (20,0) --
+  caught by dict-exact regression vs frozen core23 (only diff: bare 42,
+  scale 1, in 32 rows x 2 primes); restored; witness gates then PASS.
+- GATES x2 primes (all PASS): witness-truncation regression 1566 rows
+  == 0 (corrected involution load-bearing; old-name control fails);
+  36 components + interpolation round trips exact; Schur rank 4; Row 22
+  adds NOTHING to I23 at D25 (compat closure 4/4 + 6/6); forward
+  inclusion 29/29; AUDIT hygiene + dict-exact reparse on all 38 rows.
+- EMITTED cases/d25fam_p{105337,105673}.ms: union selector system,
+  38 rows / 32 vars / 6,104 terms / 0.17 MB per prime (+ 36 parked
+  per-fiber .ms each + manifests, box01 d25fam/, md5 both directions).
+- LAUNCHED box01 23:39:08Z marker LAUNCH D25FAM x2 48h 8t: 2 setsid
+  lanes, timeout 172800, msolve -v 2 -g 2 -t 8; ps "[m]solve.*d25fam"
+  count 8 >= 2 (msolve PIDs 90409/90410). CAPS EXPIRE 2026-08-21
+  23:39:08Z. Completion echoes to pilot.log; verdicts read ONLY against
+  the sol-round6 discrimination logic quoted verbatim in
+  SHEET6-DIRECTIONB.md section 9 (banked this entry).
+
+## 2026-08-19 ~17:55 D25FAM LAUNCHED (the discriminator)
+- Assembly EXACT match to sol-round6 prediction: 34eq/28v per fiber, union
+  38 rows/32 vars/6,104 terms x2 primes over 36 etale components. ALL
+  gates pass x2 (90-entry digest, factorization entry-exact, ranks, 1566
+  witness-truncation rows == 0, interpolation round trips). DEFECT CAUGHT
+  PRE-LAUNCH: jets bank omitted the +42 t^20 no-log pin -> restored+gated.
+- Lanes verified (8 procs, PIDs 90409/90410, -v2 telemetry), caps
+  2026-08-21 23:39Z. DISCRIMINATION: componentwise EMPTY -> scoped mod-p
+  germ kill resumes; NONEMPTY -> corrected-e on survivors vs the (pending
+  -review) Newton criterion D >= 2e+1. Sol prior: 72% all-nonempty.
+- Concurrent: Grok on newton + K/G5; vertex-gap resubmission (3cee8100)
+  with DC.
+
+## 2026-08-19 ~18:05 vertex-gap resubmitted (DC, SHA 3cee8100); sweep watchlist +Palomar +Mathstodon
+
+## 2026-08-19 ~18:30 vertex-gap Palomar SUCCESS + doc-drift fix
+- vertex-gap verification+review SUCCEEDED (DC); non-blocking warning:
+  READMEs stated pre-repin v4.32.2 toolchain -- fixed both projects +
+  SUBMISSION.md to actual pins (v4.34.0-rc1 / mathlib 20bc1282), pushed
+  a5fb1b8 (doc-only; registered commits immutable, fix rides the next
+  version). LESSON: repin agents must sweep docs for version mentions.
+- Awaiting: vertex-gap Palomar ID from DC on registration.
+
+## 2026-08-19 ~18:45 vertex-gap REGISTERED: PALOMAR-2026-08-20-000001 v1
+- Second registered entry (first of Aug 20 UTC). Campaign now holds TWO
+  machine-verified registered results = paper-1's theoretical core
+  (Theorem A engine + vertex-gap obstruction). Propagated to repo READMEs
+  (pushed). Paper citation queue: both IDs into paper1 v5 + paper2.
+- Palomar phase 2 (depth-witness certificate) = event-gated on D25.
+
+## 2026-08-19 ~17:55 gauntlet results banked (3/3 adjudicated)
+- NEWTON: CONFIRMED, PROMOTED abstract-theorem tier (AUDIT entry) --
+  germ mechanism ready, application gates open (e+ certification,
+  *-30 bridge lemmas = next implementation targets).
+- G5 BLOCKED: CONFIRMED airtight. The wall precisely mapped: SP = one-pole
+  TD-BOUND itself; KME-2 = TD-BOUND rewritten; PCC = the ONLY genuine
+  sufficient lemma on the table, unproved -> PCC is the new G5 target.
+- CONJ-K premise refutation: CONFIRMED -> 8.S6 CORRECTION filed (rank-5/
+  dependency claim retracted; dim-11 stands; mechanism = open conjecture).
+- D25FAM: 21GB/lane at ~1h -- real content, not instant; watch continues.
+
+## 2026-08-20 ~08:30 SG auto-update tool shipped (ops/sg_autoupdate.sh)
+- Motivation: third ssh-breaking local-IP drift on 08-19 (149.22.81.x ->
+  149.88.22.138). Script: detect public IP (checkip.amazonaws.com,
+  ifconfig.me fallback), ensure <ip>/32 has port-22 ingress on
+  sg-09ffa8932558f0a79 (profile personal), add if missing; after an add,
+  conservatively prune stale /32s ONLY in 149.22.81.*/149.88.22.*
+  (69.181.195.82/32 + everything else never touched). One status line,
+  idempotent, nonzero exit only on AWS errors.
+- Live test: "SG: current" (149.88.22.138 already present from the
+  manual fix), exit 0; ssh ubuntu@54.175.21.169 `date -u` OK. Two stale
+  149.22.81.{205,202}/32 rules remain by design — pruned on next drift.
+- FLEET.md: new "## SG auto-update" section incl. STANDING INSTRUCTION:
+  any agent hitting an ssh timeout to the fleet runs ops/sg_autoupdate.sh
+  once before diagnosing further.
+
+## 2026-08-20 ~13:50Z daily web sweep #5 (xmodel/websweep-2026-08-20.md)
+- 6 deltas (2 ACTIONABLE): a/514446 DELETED + q513413 protected (Yemon Choi 00:15Z) — MO lane
+  closed, no math engagement ever, recommend no undeletion/meta fight (Palomar+Zenodo now carry
+  priority). WE HOLD FIRST-JC PALOMAR SLOT: both entries live+correct in recent.json (registry
+  13->19, ours the only 14R15; Lezeau still unregistered). Context: Tao floats "proof adoption"
+  mechanism + public Zulip #Palomar (watchlist candidate); 22002825 views 2->18; benign new arXiv
+  density paper (n=2 open); ratto3423 dormant 8d; tripwires quiet.
+
+## 2026-08-20 ~06:50 sweep #5: MO answer DELETED; Palomar position strong
+- a/514446 DELETED + q513413 protected (mod Yemon Choi, 00:15Z). MO lane
+  CLOSED. Zero math engagement ever received; loss is small and the -3
+  signal is gone with it. DECISION: no undeletion fight (reputation burn
+  for zero value). Record lives at the DOIs + Palomar.
+- PALOMAR: we hold the ONLY Jacobian/14R15 slots (both entries rendered
+  correctly, registry 13->19, Lezeau still unregistered). Bundle views
+  2->18. Tao floating "proof adoption" mechanism; Zulip #Palomar added to
+  watchlist. STRATEGY READ: provenance-gated venues (MO) are closing to
+  AI work while verification-gated venues (Palomar) are opening -- our
+  two-track bet is resolving decisively toward the registry.
+
+## 2026-08-20 ~09:15 union grinding -> per-fiber race hedge launched
+- Union telemetry (16.5h in): F4 round 9, 580k x 608k matrix 3h+ silent,
+  round-8 yield only 54 pivots -- advancing but timeout-risk. Cap ~31h out.
+- HEDGE (race doctrine): per-fiber decomposition agent launched -- 36
+  plain-F_p D25 systems at p105337 (det23 scale, 63s precedent), gated
+  (witness truncation + union-consistency spot checks), batched short
+  lanes, union untouched as cross-check. Componentwise-verdict equivalence
+  to be stated in 9.S1. Verdict table possibly TODAY.
+
+## 2026-08-20 ~10:25 ideation acted on (3 lanes) + race state
+- Race: no per-fiber completions inside the first hour (heavier than
+  det23); first cap outcomes imminent; union in round 9 (~4.5h in the
+  580k matrix). BOTH alive.
+- LAUNCHED: (1) D25FAML44 prob-LA hedge on the union emission (l 44,
+  48h cap; verify by pattern faml44 next tick); (2) Sol round: PCC proof
+  attempt + FIBER-GROUP EQUIVARIANCE (the a{ij}{s}{s} 3x3x2x2 lattice is
+  in the emission filenames; orbit solves could divide all D27+ work);
+  (3) e+ certifier build agent (Newton lemma application gates *-30,
+  corrected 30x30 operator, run on banked D23 witnesses; zero-latency
+  germ test for any D25 survivor).
+
+## 2026-08-20 ~10:35 e+ CERTIFIER shipped (cases/eplus_certify.py) + 36/36 D23 verdicts
+- The application-gate implementation of the PROMOTED Newton lemma:
+  corrected SQUARE 30x30 Euler/Ore object (sol-round6 sect 1), e+ per the
+  lemma's own causal-right-section definition (2.1)-(2.3), NOT a proxy.
+  All four *-30 gates as executable checks: CYCLIC/BRIDGE/FILTER checks
+  PASS at candidate tier (pending their all-depth/universal lemmas);
+  PARAM-30 executable in the FAIL direction and it FIRES: ell+ >= 37
+  CERTIFIED at all 36 points (6 wit x 3 draws x 2 primes), binding pair
+  (n=0, H_29 u^0 target at level 36) = independent replay of
+  sol-newton-lemma (8.7). e_plus_certified = None everywhere (no section
+  constructed, fail-closed); E_PLUS_CANDIDATE floor = 37; 0/36 at or
+  below the D23 threshold e+ <= 11; 0 germs certified.
+- Replications for free: window rank 117/174 x27 + 115/174 x9 = EXACTLY
+  the Round-6 banked split; the 9 low-rank points = the 8.S7
+  defect-unstable witness-points (w1 both primes, w3@105673, delta+(1)
+  26 vs 25). nu_window = 24 uniformly (exact; nu >= D = 23).
+- Fail-closed teeth: d+/(e+)^idx withheld (M+(N>=2) needs the unbanked
+  t^42 x-side); selftest proves the (4.5) char-p resonance is invisible
+  to short windows (why no window reading ever promotes); diag(t^e)
+  control returns exactly e; literal n >= 0 interval endpoints.
+- Banked: cases/d23_eplus.json (summary + 36 point records, ell scan
+  profiles, gate tiers, witness sha256s); SHEET6-DIRECTIONB.md 8.S9
+  (INTERNAL/UNREVIEWED, promotion condition stated: all gates PROVED +
+  2e+ + 1 <= D = certified germ). Gates 47/47 exit 0; ~40 s local; no
+  git; running lanes untouched. Ready as the zero-latency germ test for
+  any D25 survivor completion.
+
+## 2026-08-20 ~10:40 e+ certifier SHIPPED: D23 no-germ now triple-derived
+- cases/eplus_certify.py (47/47 gates): PARAM-30 executable in the FAIL
+  direction and fires -- certified l+ >= 37 at ALL 36 banked witnesses
+  (independent replay of the Newton lemma computation); certified e+ =
+  None (fail-closed) everywhere; 0/36 <= 11; ZERO germs certifiable at
+  D23. Window ranks replicate Round 6 exactly; the 9 rank-115 points are
+  the known defect-unstable witnesses.
+- IMPLICATION: e+ floor 37 => germ needs depth >= 75 unless e+ drops on
+  the deeper locus. D25 survivor e+ measurement = instant via --point.
+  Certifier ready for verdict day.
+
+## 2026-08-20 ~10:50 pf batch 1: 4/4 uniform 1h-timeouts -> redirect
+- a00{mm,mp,pm,pp} all rc=124 at 3600s -- uniform mid-weight difficulty
+  confirmed (consistent w/ support identity). Redirect sent to pf agent:
+  cancel batch, ONE representative (a00pp) at 24h/-t8 instead. Union (9p)
+  + l44 prob-LA (3p) continue as primary routes. Info gained: per-fiber
+  D25 sits between det23 (63s) and >1h -- the depth jump is real
+  computational weight even per fiber.
+
+## 2026-08-20 ~17:50Z D25 PER-FIBER RACE: emitted+gated, batch timeout-uniform, redirected to single probe (D25PF)
+- cases/d25_perfiber.py (box01) emitted the 36 per-fiber D25 race systems
+  at p105337: d25pf_p105337_<lab>.ms = 509-el det23 GB (gbcache = banked
+  atlas det GB) + the 5 D25 Schur residuals of the parked per-fiber file,
+  514 rows / 28 vars, plain F_p. ALL gates PASS (wall 22s): PF2 union rows
+  specialize dict-exact to parked rows at every fiber (34x36 + 4 selector
+  rows vanish) => componentwise union verdicts == per-fiber verdicts; PF3
+  NF_G23(core+g)==0 29/29 x36; PF4 banked a00pp witnesses satisfy the D25
+  D23-truncation (9162 G23-row evals == 0 / 18 draws); PF5 reparse
+  dict-exact 514 rows x36, 36 distinct md5s; a00pp emission byte-identical
+  local vs box01.
+- RACE RESULT: batch-1 (4 lanes t4, cap 3600s) a00mm/mp/pm/pp ALL rc=124
+  UNIFORM (F4 ~round 9, 1.2Mx2.9M, ~11GB RSS): per-fiber D25 is mid-weight,
+  not the 63s D23 scale. REDIRECT (coordinator): 8.S8 support identity =>
+  uniform difficulty, 36 timeouts carry no more info than 4; batch-2
+  cancelled by literal inspected PIDs (no pattern kills); ONE representative
+  relaunched: D25PF1 a00pp 24h -t 8, 17:48:31Z (cap expires 08-21 17:48Z).
+- Banked: cases/d25_perfiber_p105337.json (0 EMPTY / 0 NONEMPTY / 4
+  TIMEOUT / 32 CANCELLED + redirect record), SHEET6-DIRECTIONB.md 9.S1;
+  verdict tooling cases/d25pf_verdict.py (LT-staircase min-hitting-set;
+  regression: banked det23 GB -> dim 11, exact 8.S8 indep set). Union
+  D25FAM lanes (90409/90410) + l44 lane untouched throughout. No git.
+
+## 2026-08-20 ~11:00 pf redirect executed; union design vindicated
+- pf agent final: all emission gates PASS (dict-exact specialization,
+  9162 witness evals == 0, cross-host byte-identity); batch cancelled by
+  literal PIDs; D25PF1 a00pp relaunched 24h/-t8 (17:48Z).
+- KEY DATUM: per-fiber F4 matrices ~1.2M x 2.9M -- LARGER than the
+  union's 580k x 608k. Sol's shared-skeleton union design is the better
+  formulation; per-fiber loses the cross-component sharing. Union + l44
+  = primary routes; a00pp 24h = the per-fiber datapoint.
+
+## 2026-08-20 ~11:20 EQUIVARIANCE THEOREM claimed + PCC precise
+- sol-pcc-orbits.md: 36 fibers = ONE FREE ORBIT under G=(C3)^2x(C2)^2,
+  diagonal scalings, character identity at D25 -- claimed PROVED +
+  computed exactly. Explains atlas 36/36 identity; if confirmed, ONE
+  fiber decides all 36 at every depth (a00pp lane becomes decisive) and
+  D27+ per-fiber cost /36. Grok verdict-tier review launched (incl.
+  F_p-rationality of scalings = the scope-critical check).
+- PCC boxed precisely (td <= alpha*beta sufficient); missing arrow
+  isolated = CONJECTURE WTC-1 (weighted-to-center transport) + a
+  coverage/no-double-counting theorem. The G5 wall now has named bricks.
+- l44 hedge died instantly rc=1 (flag rejected) -- no loss, dropped.
+
+## 2026-08-20 ~11:50 EQUIVARIANCE PROMOTED; four verdict routes live
+- Grok CONFIRMED at F_p-torsor scope (scalings F_p-rational; 9792 row
+  pairs exact) -> AUDIT entry. a00pp lane verdict = all-36 verdict.
+- CORRECTION: l44 prob-LA lane IS ALIVE (35GB) -- the rc=1 echo was my
+  failed-filename first attempt's corpse. Routes: union x2 (239GB),
+  l44 (35GB), a00pp (26GB, decisive-by-equivariance). PCC/WTC-1 queued
+  as the G5 lane's next research round.
+
+## 2026-08-20 ~20:05 queued angles unblocked -> 3 Sol lanes
+- Nothing was truly blocked. LAUNCHED: (1) sol-wtc1 (the PCC arrow --
+  prove or reduce); (2) sol-codim2 round 2 (G-equivariant mechanism +
+  PRE-REGISTERED falsifiable D25 predictions before the data lands);
+  (3) sol-lean-dw: first Sol-led Lean build per delegation doctrine --
+  depth-witness/ definitional layer (verdict-independent long pole of
+  Palomar phase 2). Grok reviews on delivery per gauntlet.
+
+## 2026-08-20 ~20:15 depth-witness definitional layer DONE (Sol-led Lean)
+- First delegation-doctrine Lean build: COMPLETE, independently rebuilt
+  green (8748 jobs), pins byte-identical to registered siblings,
+  FIDELITY.md mapping included. Grok definitions-tier fidelity review
+  launched (catch drift BEFORE the verdict statement builds on top).
+- WTC-1 + codim-2 Sol lanes still computing. Solver lanes stable
+  (239/239/118/112, 271G free, trigger clear).
+
+## 2026-08-20 ~20:45 SHED3 (l44) + three deliverables banked
+- Union p105673 surged 239->318G (new F4 phase); free hit 183G falling ->
+  pre-registered shed executed: l44 hedge (PID 115387 inspected, 121G)
+  killed cleanly, SHED3 logged. Free ~360G post-release. Routes remain:
+  union x2 + a00pp (protected). l44 experiment verdict: no advantage
+  demonstrated before shed (ramped slower than exact LA).
+- grok-dw-fidelity: FAITHFUL -- depth-witness Lean definitional layer
+  fully staged for the verdict.
+- sol-wtc1: NOT proved, but the paired-power input + local commutative-
+  algebra output ARE proved; remaining geometric content isolated (the
+  wall narrows: WTC-1-geometric is the residual).
+- sol-codim2: predictions doc in (read fully at next quiet tick; Grok
+  review then).
+
+## 2026-08-21 ~01:10 SHED4 (a00pp) at trigger; unions sole survivors
+- Free hit 123G -> pre-registered shed executed: a00pp probe (PID 116599
+  inspected, 217G, rc=137 to log) killed; SHED4 logged; free ~330G post-
+  release. UNIONS ALONE NOW (322/313G, 33h in, caps 23:39Z = ~16:40 PDT
+  tonight). Equivariance makes this informationally lossless.
+- IF unions cap without verdict: postmortem -> Sol instrument round 7
+  (telemetry + all shed/timeout data; options: 96h relaunch on box01,
+  Box02 -t 32 restart under standing quota approval, or D25 formulation
+  redesign via the codim-2 predictions).
+
+## 2026-08-21 ~15:45Z daily web sweep #6 (xmodel/websweep-2026-08-21.md)
+- 6 deltas (2 ACTIONABLE): Lezeau dim-3 comparator SUBMITTED to Palomar (archive fork 11:10Z
+  today, 14R15/math.AG+AC, cites Alpöge/Tao NOT us; published list still ours-only — first-mover
+  holds; propagate our PALOMAR IDs into papers before theirs surfaces). Zulip #Palomar read in
+  full (web-public since Aug 18; browser-spectator route — curl API blocked): publication lag is
+  a known registry-wide issue (recent.json frozen at 19 vs 57 archive repos), reviewer model =
+  codex:gpt-5.6-sol, single-headline-repo preference => phase-2 structural decision needed.
+  Context: Tao answered blog Q — registration BEFORE preprint explicitly endorsed (our sequence);
+  Alacosta2025 fixing Palomar verification errors (3rd JC actor in pipeline); FORTUNE-Didier
+  README readable = "JC2 Bidegree-Extinction" plane-JC strategy manuscript (human+Claude, not a
+  claimed theorem, no (72,108)/125 overlap — tripwire quiet); MO/arXiv/Zenodo/tags/X all static
+  (ratto dormant 9d, 22002825 plateau 18 views, Alonso broadcast 4 entries, skipped ours again).
+
+## 2026-08-21 ~08:30 sweep #6 intel (2 ACTIONABLE)
+- Lezeau dim-3 comparator SUBMITTED to Palomar today (11:10Z, 14R15,
+  does not cite us); published list still ours-only (known publication
+  lag: 19 published vs 57 archived). First-mover holds; neighborhood
+  filling.
+- ZULIP INTEL: Palomar's automated semantic reviewer = codex:gpt-5.6
+  (same family as our Sol -- our fidelity pre-clears are literally the
+  reviewer's own model); single-headline-repo preference -> PLAN CHANGE
+  for phase 2: depth-witness gets its OWN repo (jc2-depth-witness), not
+  a jc2-lean subdir; TAO ENDORSED register-before-preprint -> validates
+  our endgame priority policy (registry timestamp first-class).
+- New actor: FORTUNE-Didier plane-JC strategy manuscript (no overlap;
+  watchlist). MO/arXiv/Zenodo quiet.
+
+## 2026-08-21 ~11:50 SOL CLAIMS D25 DECIDED BY CERTIFICATE (unverified)
+- sol-ideas-0821.md: every parked fiber + both unions NONEMPTY dim 14
+  (NOT the predicted 13) via tiny certificate: 2 lift pivots + 8 Laurent
+  -unit base pivots => 16 disjoint copies of A^14; explicit all-x-zero
+  point annihilates all 38 union rows both primes. NO GB NEEDED -- the
+  48h union lanes would be moot as verdict lanes. Also: my character
+  -isotypic idea REFUTED correctly (etale characters = fiber projections);
+  codim-2 carrier off by one (dim 9 vs 10 on q-divisor).
+- GAUNTLET: independent mechanical replay agent launched (own parser,
+  point evals, pivot verification, dim re-derivation, codim-2 prediction
+  adjudication, negative controls). Grok verdict-tier review after replay.
+  Union lanes left running to caps (record completeness; 4.7h).
+
+## 2026-08-21 ~12:05 D25 CERTIFICATE REPLAY: VERIFIED, dim 14 x 16 A^14 (both primes)
+- Independent mechanical replay done (own parser, exact mod-p, ~22 s local;
+  no msolve/Singular; all 74 .ms sha256 == box01). Sol's explicit all-x-zero
+  point: 38/38 union rows vanish at BOTH primes; 34/34 on parked a00pp (and
+  the a00** quartet); 28/34 on the 32 other fibers (different quartic
+  constants -- expected); per-fiber derived witnesses vanish 34/34 at 72/72.
+- Pivots: lift minor = unit scalar*uW1^2*uW2^2 at 72/72 (75772/9899 at
+  a00pp); Sol's 8 base pivots all Laurent-unit, DAG well-founded, 34/34
+  closure; hcore+hlin reduce to 0 through a raw-rows-only independent
+  elimination => both ideal members => identification EXACT (not just >=).
+- Recomputed: dim = 10 free base + 4 free lifts = 14; 16 components/fiber
+  (4x4 fourth roots, p=1 mod 8); union = 36 selector points x 16 = 576
+  copies of A^14 (selector->parked specialization bijective, both primes);
+  terminal 6x3 matrix identical to Sol's; (W1^4,W2^4)=(57673,53212)/
+  (44399,92038). Jacobian ranks 14/18 at witnesses.
+- sol-codim2 pre-registration ADJUDICATED: ECO-D25 REFUTED per its own
+  table (found lane dim 14, projected base 10, compatibility pair height
+  ONE not two; carrier pair (10,9) not (9,<=8) -- q monic-linear in x59 on
+  all 16 branches). Mechanism skeleton (identity 4.3, rank-2, iso 4.10,
+  36-fiber uniformity, cross-prime match, q a true divisor) HELD.
+- Negative controls (seed 20260821): 3-coord perturbations never vanish
+  (5-26 rows fail x24 trials); random points fail on ALL rows x24.
+- Banked: cases/d25_certificate_replay.json; SHEET6-DIRECTIONB.md 9.S2
+  (INTERNAL/UNREVIEWED pending Grok; modular both primes; emission-
+  fidelity caveat inherited). Union lanes untouched. No git.
+
+## 2026-08-21 ~12:15 CERTIFICATE REPLAY CONFIRMED -> Grok final gate
+- Independent replay: EXACT at both primes. D25 survivor locus = 576
+  disjoint A^14 cells (16/fiber x 36; dim 14 = codim 14 in A^28 vs D23
+  codim 11 in A^22 -- cutting slows with depth); per-fiber witnesses
+  34/34; pivots unit-exact; controls 24/24. ECO-D25 prediction REFUTED
+  by its own table (pre-registration discipline worked).
+- Grok verdict-tier review launched (attack: A^14 freeness, saturation
+  of Laurent-unit pivots, scope honesty). On PASS: promote D25 NONEMPTY
+  -dim-14 modular tier; execute NONEMPTY branch (parametrized witnesses
+  -> corrected e+ via eplus_certify on the A^14 cells); unions moot ->
+  let cap (2.5h) then no relaunch.
+
+## 2026-08-21 ~12:35 D25 VERDICT PROMOTED; germ stage launched
+- GROK CONFIRMED (72/72 fibers, freeness verified, no hidden relations)
+  -> AUDIT PROMOTION: D25 NONEMPTY dim 14, 576 disjoint A^14 cells,
+  modular tier, full three-way gauntlet (Sol cert -> mechanical replay
+  -> Grok recompute). ECO-D25 refuted. Kill direction has now failed at
+  D23 AND D25; codim grows slower than depth (11@D23 -> 14@D25 in
+  22->28 vars).
+- e+ agent launched on the cell parametrizations (germ track needs
+  e+ <= 12 at D25; D23 floor was 37; question = does the smooth locus
+  drop the loss). Unions moot -- capping naturally ~23:39Z, rc banked
+  then, NO relaunch. Sol round 7 CANCELLED (verdict landed pre-cap).
+- The formulation lesson, compounding: D23 = 63s efter 24h brute; D25 =
+  ten pivots + one point after 44h brute. Bank for the methods paper.
+
+## 2026-08-21 ~14:35 e+ LANDSCAPE ON THE D25 CELLS: FLAT AT 37 (germ track blocked at D25)
+- Stage executed on the promoted D25 verdict (576 A^14 cells): corrected
+  e+ per the 8.S9 gate discipline at D=25 (GERM-TRACK needs e+ <= 12) at
+  360 points, 360 accepted / 0 rejected: the 72 banked per-fiber
+  witnesses (36 fibers x 2 primes, --heavy) + 288 interior samples
+  (a00pp: all 16 cells x 3 at BOTH primes; a00mm/a01pp/a10pm/a22mp: all
+  16 cells x 3 at 105337). Every sample solved through the certificate's
+  unit-pivot structure (compat rows re-derived numerically per fiber)
+  and verified 34/34 on the raw fiber rows BEFORE use; fail-closed
+  throughout, nothing silently dropped.
+- Reconstruction cell->chart fiber-frame-native (per-side HW, atlas
+  selectors): 22-pivot groupwise backsolve on pristine rows + tg pair by
+  exact affine probing of band-22 compat (affinity verified at a 4th
+  probe) + rank-4 deep + NEW BAND-24 FRONTIER COMPLETION (levels 51/56,
+  rank 4, kernel frees 0, via the certifier's own operator; level cap
+  re-measured 360/360). Validation: banked D23 witness reproduced 72/72
+  coords + row22red tg + draw-0 deep EXACTLY from its 24 cell coords;
+  --crosscheck == unmodified eplus_certify --file at both primes
+  (operator hash + every gate check). Measured: without the frontier
+  stage interior points sit at nu=24 (not depth-25 at the ZC_RULE zero
+  completion) -- first nonzero completion measured, banked, hashed.
+- RESULT (E_PLUS_CANDIDATE / certified-lower-bound tier only): FLAT.
+  ell+ >= 37 CERTIFIED at 360/360 ({37: 360}); at/below 12: **0**;
+  germs certified: **0**; PARAM-30 FAIL-CERTIFIED everywhere;
+  e_plus_certified = None everywhere. nu = 30 (all 72 witnesses) / 26
+  (all 288 interior) -- residual deepens past 25, floor does not move;
+  binding pair still (n=0, H_29 u^0 at level 36). Window rank 115/174 +
+  delta+(1) = 26 UNIVERSAL -- the D23 defect-unstable profile (9/36 in
+  8.S9) is the UNIQUE D25 profile; no prime/fiber/character/cell/point
+  dependence anywhere. Sole exception: c4 support starts fail at the 72
+  all-cell-zero witnesses (banked tool agrees; interior 30/30 exact).
+- CONSEQUENCE: the deeper smoother locus does NOT drop the loss at the
+  measured completions; finite-e Newton target through this operator
+  still needs nu >= 75 (D75-scale, (7.3)). Sampling cannot prove the
+  locus-wide claim (sect-9 table); points may still extend singularly.
+  Germ-side lever left at D25: completion-family scan / finite-range
+  invariance lemma. Kill-side: mechanism for a tower with codim growth
+  (11->14) < depth growth (23->25).
+- Banked: cases/d25_eplus.json (sha256 891fb937..bc6c4; all points +
+  distributions + gate records); driver cases/d25_eplus.py (--selftest/
+  --crosscheck/--run); SHEET6-DIRECTIONB.md 9.S3 (INTERNAL/UNREVIEWED).
+  No git; union lanes untouched (capping on their own); 1570 s local
+  detached run, checkpointed.
+
+## 2026-08-21 ~14:10 e+ LANDSCAPE FLAT: the D25 arc completes
+- 360/360 points: E_PLUS_CANDIDATE floor l+ >= 37 certified, 0 <= 12,
+  0 germs, PARAM-30 fail-certified everywhere; obstruction UNIVERSAL
+  (H_29 binding pair, identical to D23; no prime/fiber/character/cell
+  dependence). The smooth locus did NOT drop the loss.
+- THE NEW SHARP QUESTION: dl+/dD. Floor(D23)=37=Floor(D25). FLAT =>
+  germs certify at D >= 75 (counterexample track; cert machinery makes
+  deep systems cheap). GROWING (2l+ + 1 > D always) => mirage; proving
+  H_29 forces growth = A NEW KILL MECHANISM (terminates the cell tower).
+  Launching Sol dichotomy round: prove H_29 depth-behavior OR compile
+  D45 certificate to measure the floor at a third depth.
+- Unions cap in ~1.5h as footnote. 9.S3 banked (INTERNAL/UNREVIEWED;
+  fold into next Grok round with the dichotomy deliverable).
+
+## 2026-08-21 ~14:25 H29 dichotomy ruling -> D43 program
+- sol-h29-dichotomy: floor CANNOT drop (projection persistence, l+ >= 37
+  permanent, pending review); BUT D23/D25 "flatness" = ARTIFACT (both
+  sweeps used the same RMAX-40 window -- one measurement twice!); first
+  new coefficient at level 42; TRUE discriminator = D43 (184x180 window,
+  needs the UNBANKED x-side). Branch scopes: growth kills finite-loss
+  germs only (FORMAL-REGULARITY-30 gap); locus-wide floor = conjecture
+  (LOCUS-UNIVERSAL-H29).
+- LAUNCHED: sol-xside-spec (bank the level-42/x-side operator extension
+  + D43 jets requirements) + grok-h29 review (persistence theorem + the
+  RMAX-40 factual check). D43 compilation agent follows the spec.
+
+## 2026-08-21 ~14:55 D43 PROGRAM LAUNCHED (the third depth measurement)
+- grok-h29: persistence theorem CONFIRMED (l >= 37 permanent per fixed
+  operator, not locus-wide); RMAX-40 artifact CONFIRMED (D23/D25 = one
+  measurement twice). sol-xside-spec banked. D43 agent launched: operator
+  extension (184x180, band-40 reproduction gate) -> D43 compilation
+  (pivot-certificate-first, GB fallback) -> floor measurement at level 42.
+  FLAT (37) -> germ track at D>=75 gains force; RISES -> H_29 kill
+  mechanism gains force. Box01 frees at union caps 23:39Z (~1.7h).
+
+## 2026-08-21 ~15:40 repo reorg scheduled (event-triggered)
+- TRIGGER: D43 final report banked -> launch reorg agent: physical move
+  to ladder/ + jc72108/ + papers/ (cases/, xmodel/, ops/, dist/ stay
+  root), acceptance = 16-gate-suite regression + stale-path grep across
+  committed drivers + FLEET.md + loop prompt; also fix local remote +
+  notes.md symlink for the jc72108->jc2 GitHub rename (DC side, anytime;
+  confirm status before the move). Sol probability sets banked
+  (sol-probabilities-0821.md); FC3 cap-free compiler + Sigray-subset
+  validation queued as the Q1 de-risking project.
+
+## 2026-08-21 ~16:00 D43 PROGRAM stage 1: extended operator BANKED (regression byte-identical); FIRST LOOK AT LEVEL 42
+- OPERATOR EXTENSION (cases/eplus43.py, INTERNAL/UNREVIEWED, fail-closed
+  per xmodel/sol-xside-spec.md): configured engine = source-configured
+  copy of valuation_e2 (DBUILD 43, RMAX 42, GIDX/GD/_S recomputed; no
+  module mutation), REAL level-42 x-side U_f=1+alpha t^42, U_g=1+beta
+  t^42 multiplied into the jets BEFORE euler_rows; alpha,beta declared
+  INDEPENDENT tangents (X-SIDE-DERIVATION undischarged, fail-closed)
+  => the legal window is 184x182 (180 y + Dalpha + Dbeta), never the
+  conditional 184x180. alpha=beta=0 as NAMED finite-support completion,
+  hashed in a full source-consumption manifest (absence != zero).
+- GATES (spec sect 9, all executable ones implemented + passing):
+  ROW42-IDENTITY (direct row vs (3.5)/(3.9), exact p^4p' vector 3.3,
+  x-columns (3.11) = 126/-84*S_M*G_M*p4p', H29u1 entries 756/-504*S_M
+  *G_M, 3:-2 ratio), TWO-PATH ((3.2) grouped path + path-A both == dual
+  path, values AND all 182 gradient cols), XSIDE-ONSET (alpha/beta
+  perturbations change NOTHING below band 42), CAUSALITY-42 measured,
+  ORE/GRADING-42, OUTPUT-CENSUS-42 (row-42 eta support exactly
+  {2,5,...,26,29}; eta30-33 surplus zero), M+(2) 60x60 banked (rank 17,
+  delta+(2)=43), brute 0..42 loss scan == fast interval scan, sparse
+  dual witnesses with independent replay, registry/matrix hashes.
+- MANDATORY GATE PASSED: LEGACY_BAND40_REGRESSION -- extended build at
+  the banked D25 completions, restricted to bands<=40/old GIDX in the
+  exact old order, is BYTE-IDENTICAL (arrays + per-point operator hash
+  + all gate outputs) to the banked stack, AND the unmodified 9.S3
+  driver record is reproduced (seconds stripped). Full 360-point sweep
+  running (0 failures at ~150 done; spot d23 w0k0 + char-0 eta29
+  crosscheck PASS both primes). cases/d43_regress.json.
+- C0 SMOKE (D25_COMPLETION_BAND42; NOT a depth measurement; 12 banked
+  witness completions x both primes): ell+ >= 37 certified at 12/12
+  (window rank 125/184x182, nu=30, d+(1)=26); H29u0 recheck: still
+  uncovered (fresh dual witnesses banked). THE LEVEL-42 SPLIT: H29u1
+  (t^42 e29) is UNCOVERED in the 180 y-columns (y180 dual witness
+  banked per point = the CONJECTURE X-SIDE-30-conditional shifted-
+  obstruction certificate) but COVERED once the two independent x
+  columns enter => fail-closed NO growth is certified (floor stays
+  >= 37); under a proved fixed/derived x-side classification the same
+  data would certify ell >= 43 at these completions. The verdict now
+  hinges exactly on the x-side tangent class, as the spec anticipated
+  (2.2). cases/d43_smoke.json.
+- D43 PROLONGATION OBSTRUCTION (the real stage-2 finding, numeric,
+  POINTWISE): extending a completed D25 cell point to nu >= 43 through
+  the 90 first-occurrence completion coordinates (+ frontier/deep
+  kernel re-opening + the 2 x columns) is INCONSISTENT at EVERY point
+  sampled (witnesses + random interiors, both primes, several fibers/
+  cells; bands 26..40 jointly affine in the unknowns, level argument
+  21+21=42, so the affine test is exact). b never lies in colspan(A):
+  ~35 canonical kernel pairings nonzero; peel hunt zeroed them 1-at-a-
+  time (x19/x27 chains, deg-1 fits) with NO collapse; ALL 37 pairings
+  fit as validated quadratics in the 4 lifts, span rank 10, and the
+  10-quadric system is the UNIT IDEAL in Singular (dim -1: the whole
+  4-dim lift slice is empty over the closure). Generic points already
+  fail at rung 26 (i.e. no D27 prolongation either): the depth tower
+  CUTS THE BASE from D27 on -- the D23/D25 completion-only ladder ends.
+  Multi-slice census (2 primes x 4+ fibers x cells) running:
+  cases/d43_slices.json. FAMILY-LEVEL verdict (EMPTY vs positive-dim
+  survivor subvariety) belongs to the symbolic D43 compat ideal:
+  jets bank building on box01 (build_tails43.py, per-orbit ckpts,
+  ~10-30h est), then d43 reduce/assemble-D + pivot certificate, msolve
+  fallback. If EMPTY exhausts: finite-depth kill of the scoped tower
+  (dichotomy sect 7.3) -- no loss argument needed; floor measurement
+  then moot at D43 (no survivors to measure).
+- No git. Box01 union lanes untouched (cap 23:39Z).
+
+## 2026-08-21 ~16:45 D43: mandatory gate 360/360; obstruction census closes; family lanes up
+- REGRESSION COMPLETE: 360/360 banked D25 points byte-identical through
+  the extended engine (arrays + operator hash + all gate outputs +
+  banked-record reproduction), d23 w0k0 spot both primes, char-0 eta29
+  crosscheck both primes: ALL PASS (cases/d43_regress.json). Stage 1
+  closed.
+- SLICE CENSUS COMPLETE: 24/24 EMPTY_SLICE (2 primes x 5 fibers x
+  cells x 2 base draws; all 37 kernel pairings = validated lift
+  quadrics, span rank 10, Singular lex GB = unit ideal every time).
+  Extended pass (all 16 a00pp cells at 105337) queued.
+- AUX-DRAW RIGIDITY (closes the last numeric freedom): the 18 tg-side
+  aux kernel draws (levels 44-52, the "draw 0" completion choices)
+  have only a 4-dim bands<=22-preserving subspace at a cell point, and
+  EVERY random draw in it breaks the band-24 frontier solve (12/12) --
+  on the D25 survivor locus the aux draws are pinned. Full-pool
+  first-order Newton (census90 + frontier + deep + aux + alpha,beta =
+  132 cols, all selected bands 6..42) is INCONSISTENT at step 0 at
+  every sampled point (rank 88 / aug 89). The D43(& D27) prolongation
+  obstruction is genuinely on the cell base.
+- FAMILY LANES: mod-p symbolic banks (build_tails_modp; structural
+  mirror of the regressed numeric engine; D25 control 4 s + exact
+  value/gradient replay) building on box01 for BOTH primes (a00pp
+  pilot); char-0 gold lane (build_tails43, per-orbit ckpts) continues.
+  Chain ready: d43_reduce_modp (NF through det23 gbcache; validated at
+  D25 scale in 5 s) -> d43_family2 (rung affine split, SYMBOLIC C_k
+  diag(d_j) factorization -- numerically rank-4-constant at ALL nine
+  rungs incl. the x-side Row 42 -> 53 constant-left-kernel compat rows
+  -> verdict .ms + Singular). Verdict = EMPTY (1 in <parked+compat>,
+  the finite-depth kill per chart) vs NONEMPTY (dim + witnesses ->
+  stage-3 floor). SHEET6-DIRECTIONB.md sect 10 banked (INTERNAL/
+  UNREVIEWED). No git.
+
+## 2026-08-21 ~17:55 unions capped (footnote); D43 chain owns box01
+- D25FAM p105337 + p105673 both rc=124 size=0 at 48h caps -- formal
+  timeouts, superseded 11h earlier by the certificate verdict (promoted).
+  Hygiene-banked; no relaunch. Box01 memory fully freed (971G avail);
+  the D43 automated chain (1 python driver) continues through its stages.
+
+## 2026-08-21 ~18:30 APPROACHES.md merged (Sol 48 + Grok 40 + Fable 18)
+- Union: 46 top-level approaches; unique finds Sol 9 / Grok 6 / Fable 2.
+- Consensus stuck-point: landing theorem + td ceiling (G1/G2/G5 = REDUCTION.md).
+- Top untried: symplectic residues, HC4 quintic (S9 vs G dissent), primitive-td bound.
+
+## 2026-08-21 ~21:00 HC4 ADJUDICATION: Sol carries it; Grok stays reviewer
+- Chain HC4=>JC2 VALID (5-line proof, machine-verified; h=y1P+y2Q,
+  detHess h = (detJ_F)^2); module finite/computable (111 params, 1820
+  quartics). Grok dissent FAILED on math (Gordan-Noether n<=4 makes HC4
+  structural). Sol 9/10 haircut to 6.5 (y-linear sector IS JC2; endgame
+  value 2.5-3). PER DC RULE: Grok NOT promoted -- stays ideas+reviewer
+  (where his verdict-tier record is excellent). Architecture validated.
+- Bonus: 5->4 Schur-descent kill-probe spec queued (next ideation round).
+
+## 2026-08-22 ~00:05 OX ALPHA ONLINE (ori codex lane pattern)
+- Smoke test PASS. Two lanes launched: (1) ox-approaches (same neutral
+  survey Sol/Grok got -- scoreable against the 46-union for coverage +
+  novelty); (2) ox-calibration (independent D25 certificate replay,
+  firewalled from the baseline artifacts). On calibration PASS: first
+  live task = symplectic-residues experiment. Runner: ori codex exec
+  (same lane pattern as Sol codex).
+
+## 2026-08-22 ~00:45 OX CALIBRATION: REFUTES D25 certificate -> FORENSICS
+- Ox (calibration, firewalled): parked systems EMPTY (dim -1 localized),
+  (x33,x38) minor = 0 not unit, forced relation x70+c*x72=0. DIRECTLY
+  contradicts the triple-gauntlet D25 promotion AND the 288 verified
+  interior samples. Reconciliation hypothesis: the all-x-zero witness
+  lies OUTSIDE Ox's aggressive saturation -- "empty localized chart" and
+  "nonempty variety" can both hold; then the live question is whether
+  the A^14 cells (needing Laurent units nonzero) contain real points.
+  Forensic agent launched (file hashes, fresh minor computation, witness
+  -vs-localization, verdict w/ scope). D25 DOWNSTREAM USE FROZEN pending
+  verdict (e+ cell conclusions, D43 interpretation). Either outcome is
+  big: Ox failure mode identified, or a promoted-verdict correction.
+- Ox-approaches survey also in (44KB) -- merge scoring queued after
+  forensics.
+
+## 2026-08-22 ~01:10 FORENSICS: OX-MISCALIBRATED ENTIRELY; promotion stands
+- Same bytes (sha256 match), pure computational divergence, all on Ox:
+  (1) coefficient extractor reads only degree-1 monomials -> its "zero
+  minor" artifact (true value = the certificate's Laurent units
+  75772/9899 x uW1^2uW2^2, freshly recomputed); (2) comma-splits
+  polynomials into per-monomial generators -> ideal=(1), dim -1 even on
+  {W1*uW1-1}; (3) its "forced relation" is just row 28 (a pivot), which
+  6 fresh interior points satisfy with x70,x72 nonzero, vanishing 34/34,
+  Jacobian rank 14; (4) VERDICT STRING HARDCODED -- fabrication-adjacent.
+- D25 PROMOTION STANDS UNCHANGED. Freeze lifted. Calibration protocol
+  vindicated: firewalled scoring caught all of this before any live work.
+- OX TRIAL VERDICT: calibration HARD FAIL + integrity flag. Recommend:
+  NOT a co-researcher; computation untrusted; approaches survey scored
+  for ideas only w/ full skepticism on its repo-reading claims. DC call.
+
+## 2026-08-22 ~01:40 D43 CHAIN LANDS: stage 1 BANKED, family fail-closed at rung 28 -> REORG TRIGGER MET
+- box01 chain (a00pp pilot, both primes) first pass complete. STAGE 1
+  PASS both primes, banked: build_tails_modp 189-var bank, 184 rows,
+  structural gates PASS, V1 replay 184 values + 36 gradients EXACT vs
+  the byte-regressed engine; d43_reduce_modp through the 509-el det23
+  GB, all bands 6..42, drop 0 everywhere, rc=0 (~454 s/prime). The 10.1
+  mandatory gate (360/360 byte-identical) stands independently.
+- STAGE 2 (family + independent famcheck) ABORTED FAIL-CLOSED, 4/4 runs
+  IDENTICAL across primes: ('C-diag factorization FAILS', 28, 'tf1_55',
+  9). Rung 26 (dormant level 53) VERIFIES (rank C=4, 6 compat rows);
+  rung 28 fails on the FIRST level-55 column: proportional on rows
+  h=1..25, breaks at the boundary row h=28. Prime-symmetric =>
+  structural in the emitted object. NO family verdict; nothing
+  promoted; ell+ ledger unchanged; the 10.3 pointwise obstruction is
+  unaffected. Level 55 = the other formerly-dormant D25 level -- spec
+  6.1/6.3 CONJECTURE-conditional territory (implicit-zero slots,
+  reconstruction mandated).
+- ADJUDICATION OPEN (not concluded): (A) emission/dormant-55
+  reconstruction defect at the boundary cell (V1 checks values only --
+  can't see it) vs (B) genuine loss of the D25 A = C.diag(uW^2)
+  structure at D43 (then 10.4's pointwise rank-4 says the deviation
+  VANISHES at every sampled completion -- itself structure).
+  Discriminators queued in SHEET6-DIRECTIONB.md 10.5 (col diff,
+  reconstruction toggle, witness evaluation, assert->census map).
+- SHEET6-DIRECTIONB.md sect 10.5 written (INTERNAL/UNREVIEWED); 10.4
+  pending-verdict line closed. This banks the D43 first-pass final
+  report => repo-reorg trigger condition (2026-08-21 ~15:40) is MET;
+  reorg agent may launch per that entry (confirm DC-side jc72108->jc2
+  rename status first).
+
+## 2026-08-22 ~01:30 D43 banked; Sol adjudication launched; reorg next
+- D43 first pass complete: STAGE 1 PASSED both primes (extended operator
+  + reproduction gates -- independently valuable, the band-44 window is
+  now real); stage 2 C-diag failure PRIME-SYMMETRIC at rung 28/tf1_55
+  (spec CONJECTURE territory; rung 26 verifies rank 4). Symmetry + exact
+  location favor STRUCTURE over bug -- Sol adjudicating (spec-defect
+  correction vs characterize-the-transition).
+- REORG: trigger MET; launching after Sol lane clears (file moves vs
+  live reads). Ox disposition awaiting DC.
+
+## 2026-08-22 ~01:50 ori config collision fixed; adjudication relaunched
+- ori install had overwritten ~/.codex/config.toml model -> stealth/
+  ox-alpha, silently breaking ALL Sol lanes (first casualty: d43adj
+  rc=1). Fix: model line removed (account default), backup at
+  config.toml.ox.bak; Sol + Ox both smoke-tested online. RULE: after any
+  third-party CLI install, smoke-test the EXISTING lanes.
+- sol-d43-adjudication relaunched on the working config.
+
+## 2026-08-22 ~02:50 D43 false-FAIL resolved -> chain resumed to the floor
+- sol-d43-adjudication (attempt 3, isolated lane): verdict (A)-corrected
+  -- CHECKER BUG (proportional() rejects lambda=0; zero poly IS 0*pa);
+  dormant-55 emission correct; rank-2 carrier does NOT terminate at rung
+  28. Two-line fix supplied. Resumption agent: patch -> stage-2 rerun
+  both primes -> EMPIRICAL validation gate (fresh code verifies the
+  zero-lambda factorization; substitutes for prose review) -> continue
+  to certificate + THE FLOOR MEASUREMENT (flat 37 vs risen).
+- Reorg holds until this chain lands (active file writes in cases43).
+
+## 2026-08-22 ~10:20 D43 fix applied; rung-28 PASSES; VALIDATION GATE PASS both primes
+- Sol's exact zero-safe proportional() fix applied to d43_family.py +
+  d43_family2.py, box01 cases43/ AND local cases/ mirrors byte-identical
+  (family2 sha256 f55354d3..., pre-fix c4e97d95... = the adjudication's
+  provenance hash). Failed first-pass logs archived as *.fail-20260822.
+- Stage-2 rerun (rerun_stage2.sh, detached+logged): p105337 family rc=0
+  -- ALL rungs 26..42 pass, ranks 4x8 + rung-42 rank 5 (independent-x),
+  52 compat rows + 34 parked = 86-row verdict system, 178 vars (=
+  adjudication (5.2) exactly). One rung-36 compat row is LINEAR, 6
+  terms, in the six level-48 tails. p105673 leg + famchecks in flight.
+- VALIDATION GATE (fresh independent code cases43/d43_valgate.py, no
+  import of the patched checker): BOTH primes 18/18 PASS -- rung-28
+  A = C.diag EXACT incl. the four lambda=0 boundary entries; published
+  v/w tables, subblock ranks 2+2, rank 4, minors 37062/84146, canonical
+  C_28 sha256s, d_j units ALL match the adjudication; rung 26 EXACT and
+  unchanged (log line identical to first pass). The false-FAIL is
+  empirically adjudicated: checker defect, not structure.
+- Verdict stage armed (run_d43_verdict.sh): msolve -g 2, 12h caps, both
+  primes, auto-launches on stage-2 DONE rc=0x4.
+
+## 2026-08-22 ~03:30 D43 prime-symmetric; rational rung-36 row spotted
+- p105673 emits the identical 86-row/178-var verdict system, same rank
+  census; the rung-36 linear row has EXACT 2:1 rational coefficient
+  structure at both primes: c1(tf1_48+tf2_48) + c2(2(tg1_48+tg2_48) +
+  tg01_48+tg02_48) -- char-0 object showing through mod p. Feed to the
+  eventual char-0 certification round. Verdict solves auto-launch next.
+
+## 2026-08-22 ~10:20 D43 STAGE 2 COMPLETE both primes; verdict stage launched (msolve, 12h caps)
+- Stage-2 rerun DONE 10:11:57 UTC, 4/4 rc=0: family2 all rungs 26..42
+  pass BOTH primes (ranks 4x8 + rung-42 rank 5); famcheck 104/104
+  compat-row evaluations vs the numeric engine EXACT per prime. Verdict
+  systems emitted: 86 rows (34 parked + 52 compat), true 172 vars.
+- The 6-term rung-36 LINEAR compat row is PRIME-SYMMETRIC with rational
+  2:1 structure: c1*(tf1_48+tf2_48)+c2*(2*(tg1_48+tg2_48)+tg01_48+
+  tg02_48), (c1,c2)=(48635,54013)@105337, (50809,18288)@105673.
+- Emission footnote: first .ms/.sing emission listed 6 vars twice
+  (x16,x19,x24,x27,x33,x38; deepvars-vs-GBVARS dedup miss) -> msolve
+  instant rc=1 "Duplicate variable name". allvars dedup patched into
+  d43_family2.py (mirrors synced, sha256 8c0f7fd3...); emitted headers
+  rewritten in place, generator sections sha256-verified byte-identical.
+- msolve -g 2 -t 8, 12h caps, relaunched both primes 10:16:39 UTC
+  (run_d43_verdict.sh round 2, detached; ~1.2G RSS each at parse).
+  EMPTY (GB=[1]) => finite-depth chart kill, no survivor to measure;
+  NONEMPTY => dim + witnesses -> eplus43 --survivor floor measurement.
+
+## 2026-08-22 ~11:15 D43 verdict: msolve SIGSEGV both primes; input VALIDATED clean; reroute to census + split ladder
+- msolve 0.10.1 (-g 2 -t 8) rc=139 SIGSEGV at BOTH primes after ~34 min
+  (10:50Z), no output; v2log holds only the RNG-seed line ("dumped
+  core"). Deterministic, prime-symmetric.
+- EMISSION VALIDATION (fresh code, cases43/d43_msval.py, no emitter
+  imports): PASS both primes -- 172 header names valid+unique, ALL 172
+  used, 86 generators, every generator fullmatches the strict term
+  grammar, zero stray characters, coefficients in [0,p). Term counts
+  match the reports except exactly the six rung-28 rows at -16 terms
+  each (the uf30 scope-pin monomial drop; prime-symmetric, expected).
+  REGENERATION: patched emitter rerun (d43regen prefix, p105337) is
+  BYTE-IDENTICAL to the header-rewritten verdict.ms => the dedup
+  rewrite introduced nothing. VERDICT: msolve crashed on VALID input
+  (reportable upstream; reproducer hunt in flight via the ladder).
+- Certificate-route notes: compat rows are ALREADY NF mod the det23
+  509-el GB (built from d43red checkpoints), and no D25-family GB
+  exists to quickshot against (D25FAM msolve = 48h timeouts; the D25
+  verdict came from certificate replay). Runnable analogs launched:
+  (a) d43_census2.py EXACT per-rung polynomial-rank/support census of
+  the 52 compat rows (sparse elimination, no sampling), both primes;
+  (b) run_d43_splits.sh msolve prefix ladder p105337 (parked, +r26,
+  ..., +r36; 3h caps): crash bisection AND certificate attempts -- any
+  subsystem GB [1] decides the FULL verdict EMPTY (superset ideal).
+
+## 2026-08-22 ~12:15 D43 census: compat rows FULL RANK 52 -- no linear compression; parallel ladder up
+- d43_census2.py (exact sparse elimination over the union supports, no
+  sampling): all nine rung blocks have full polynomial rank (6/6/5/6/6/
+  6/6/6/5), support-DISJOINT across rungs => global rank 52/52 at BOTH
+  primes. Union support sizes IDENTICAL across primes (20892, 42114,
+  80595, 145189, 263318, 473823, 818235, 1405548, 2408813) -- the
+  cross-prime support-identity echo again. Quickshot-style linear
+  compression yields NOTHING: the verdict genuinely needs a solver.
+- Split ladder converted to parallel (10 msolve runs, 3h caps): parked
+  (control; D25FAM precedent = 48h timeout, expect rc=124), upto26..
+  upto40 prefixes (certificate attempts: any [1] => full EMPTY; also
+  crash-threshold bisection), full-file -t 1 (threading hypothesis).
+
+## 2026-08-22 ~09:05 credits restored; Sol-first rebalance live
+- Two Sol lanes launched under the rebalance: (1) msolve segfault fix ->
+  upstream PR (background; gdb on box01 source build, minimal PR per DC
+  spec); (2) THE D43 NF-certificate route (Sol owns end-to-end: NF ->
+  affine hunt -> verdict -> floor vs 37, or structural-hardening bank).
+  Sweep relaunch queued behind (credit casualty).
+
+## 2026-08-22 ~13:50 D43 NF route banked: structural hardening, NO VERDICT (INTERNAL / UNREVIEWED)
+- Exact D25 certificate replay eliminates all 34 parked rows on all 16
+  W-components at BOTH primes (32/32 prime-components); a +1 pivot
+  perturbation makes >=5 parked equations nonzero in every component.
+  Family regressions remain 104/104 per prime; independent valgate
+  remains 18/18 per prime.
+- At the certified generic D25 cell point the 52 compat rows become
+  affine in 92 level>=53 variables, with prime-symmetric pointwise
+  rank(A)=44 and rank([A|b])=45 on four lower-tail draws (left nullity
+  8).  Unlike D25, global A=C.diag(d) fails exactly and symmetrically at
+  row 12 / tf1_53; A has 2592 nonzero polynomial entries and depends on
+  all 52 lower variables.  The exact polynomial syzygy gate timed out.
+- Reduced negative probes did not decide the family: 52x144 generic
+  cell slices (msolve 1800s, Singular 900s), 52x116 D25-free-zero
+  witness slices (both solvers 900s), and the 51x14 external-tail-zero
+  slices (msolve 1800s, Singular 900s) all timed out at BOTH primes,
+  with no crash or basis output.  No full verdict file was fed to
+  msolve.  NO EMPTY/NONEMPTY verdict, dimension, witness, or floor
+  number; eplus43 was correctly not run and ell+ >= 37 is unchanged.
+- Bank: cases/d43_nf_certificate.py + selftest/quickshot JSON and row
+  pickles + witness slices + cases/d43_nf_certificate_report.json +
+  cases/d43_nf_solver_gates.log; SHEET6-DIRECTIONB.md section 10.6.
+  All labelled INTERNAL/UNREVIEWED.
+
+## 2026-08-22 sweep #7 (~05:25Z Aug 23; xmodel/websweep-2026-08-22.md) — NEW ACTOR + frontier forming
+- 6 deltas (3 ACTIONABLE): NEW ACTOR Roy van Rijn (royvanrijn/jacobian-research, active NOW) claims
+  conditional (72,108) determinantal closure of GGHV Prop 4.3 (Aug 1, "no theorem claim" framing, vendors
+  Helali) AND runs HC4=>JC2 (= APPROACHES row 10) + a (75,125) F2 program — adjudication lane + daily watch
+  recommended. Strinz opened wstrinz/plane-jacobian-75-125 (open-problem framed, Zenodo+Palomar landing gear;
+  72-108 repo "full-stack replay") — 14R15 neighbors imminent; Lezeau PUBLISHED (PALOMAR-2026-08-21-000006,
+  dim-3 disproof w/ Cureton, no cite of us) — we still hold the only plane-JC entries; registry unfroze 19->47
+  (DeepMind + Birkbeck in); Zulip: Vakil+Tao advise a third party "Palomar first, then arXiv" = our sequence;
+  MO/arXiv/Zenodo/GGV/tags/X all quiet, ratto dormant 10d, zero citations of our DOIs.
+
+## 2026-08-22 ~09:40 sweep #7: 3 ACTIONABLE (field accelerating)
+- NEW ACTOR van Rijn (conditional (72,108) determinantal closure Aug 1 +
+  HC4 route + (75,125) program) -> Grok adjudication lane launched.
+- Strinz pivots to (75,125) w/ Zenodo+Palomar landing gear; Lezeau
+  PUBLISHED (PALOMAR-2026-08-21-000006, no cite); registry 19->47;
+  Vakil+Tao endorse Palomar-first. READ: the (75,125) window is becoming
+  the next crowded frontier while we hold the td=6/depth program alone;
+  our two registered entries remain the only JC2-side ones.
+
+## 2026-08-22 ~16:00 three lanes landed: D43 = STRUCTURAL HARDENING
+- SOL D43-NF (10.6, INTERNAL/UNREVIEWED): the D25 pivot machinery still
+  works on the PARKED block (16 W-components x 14 params, 34/34 parked
+  rows die, negative controls firing) -- but the 52 COMPAT rows resist:
+  no exploitable affine coll
+## 2026-08-22 ~15:55 D43-NF hardening (no verdict); msolve safety-blocked; van Rijn = collaborator
+- D43 NF ROUTE (10.6): the D25 pivot certificate STILL applies -- parked
+  quotient = 16 W-components x (14 free + 10 reconstructed), 34/34
+  parked identities, negative control clean. BUT the compat rows over
+  the 144 external vars do NOT collapse to a small solvable residual the
+  way D25 did (affine hunt inconclusive on this pass) -> NO verdict, NO
+  floor; l+ >= 37 unchanged. This is the honest state: the cell scaffold
+  persists, the *emptiness question* at D43 is genuinely harder than D25.
+  NOT a structural termination -- an unresolved harder object. Next: Sol
+  round on the 144-var residual (deeper elimination / the working
+  <=rung-38 msolve sub-block as a partial-verdict lever).
+- MSOLVE FIX: codex safety filter re-flagged the OSS framing too (rc=1).
+  BLOCKER -- needs a different tool or DC to run the build/PR steps by
+  hand. Banked as blocked; not retried automatically.
+- VAN RIJN: Grok verdict = COLLABORATOR (4th independent (72,108)
+  replication, same conditionality, does NOT scoop vertex-gap; saw 2 real
+  HC4 things not in our adjudication, neither repairs the discount).
+  Posture: citation-courtesy tier, credit Helali first, daily-watch repo,
+  DC decides outreach. NO (75,125) stake just because crowded.
+
+## 2026-08-23 msolve SIGSEGV: PR opened (32-bit exponent-index overflow)
+- Root cause: not F4 hash growth. Parser `store_exponent` takes
+  `(pos+j)*nvars` as int32_t; SIGSEGV once `nterms*nvars > INT32_MAX`.
+  gdb: `pos=-2147477296` at iofiles.c:58. Bracket: upto38 (10.5M terms,
+  172 vars, product 1.81e9) computes; upto40 (18.9M terms, product 3.26e9)
+  faults; full 1.05 GB file also wraps the uint32 calloc.
+- Fix: 64-bit offsets/allocs in iofiles.c + set_exponent_vector + var-order
+  swap. Minimized reproducer (10000 vars, 214750 copies of x0, ~700KB):
+  unpatched SIGSEGV, patched computes GB. `make check` 64/64.
+- PR: https://github.com/algebraic-solving/msolve/pull/355
+  (`dcposch:fix-int32-exp-overflow`, Co-Authored-By: Grok via the JC2 campaign).
+  Details in ops/msolve-issue-draft.md.
+
+## 2026-08-23 ~00:15 DC directives: Sol-parallel, Grok owns msolve PR, van Rijn=daily-watch
+- msolve PR -> GROK (delegated, autonomous; Fable drops it).
+- SOL PARALLELIZED (2 lanes): (1) sol-d43resid = the decisive D43
+  emptiness residual (deeper elimination + rung<=38 partial-verdict lever
+  + equivariance var reduction -> verdict+floor or sharpest partial);
+  (2) sol-wtc1-round2 = PCC/WTC-1 geometric residual (the G5 td-bound
+  prize). Both Sol-owned end-to-end per rebalance.
+- van Rijn: daily-sweep watch only (per DC); no adjudication follow-up.
+
+## 2026-08-23 ~00:35 shortlist avenues parallelized (4 fresh Sol lanes)
+- Parallelism limits established: box01 = 64 vCPU/991G (load 3, headroom);
+  512-vCPU AWS aggregate = the real ceiling on compute-heavy lanes; Sol
+  codex lanes bounded by account throughput (~low-tens) not local; gov
+  rules = file-discipline + Fable review bandwidth. Roster of 6 Sol lanes
+  now: d43resid + wtc1r2 (running) + symplectic + jvdk + tangentsweep +
+  hc4probe (APPROACHES shortlist; monodromy already done, HC4 adjudicated
+  so only its kill-probe launched). Each distinct output file. Grok owns
+  msolve PR separately.
+
+## 2026-08-23 ~03:05 D43 decisive residual pass: literal NONEMPTY, witnesses do not graph-lift (INTERNAL / UNREVIEWED)
+
+- DEEPER ELIMINATION SUCCEEDED on the emitted 52x144 compatibility object.
+  The 92-variable level >= 53 affine layer has rank 44; its 8-row Schur
+  residual has analytic Jacobian rank 8 in
+  `tf1_49,tf1_51,tf2_49,tf2_51,tg1_49,x0,x1,x13`. Exact zero
+  specialization leaves a 52x52, 3146-term, degree-3 slice. Small remote
+  msolve runs finish in 0.01s at both primes with 52-element linear GBs.
+- LITERAL VERDICT: NONEMPTY at both primes. Witness gates are 34/34 parked
+  + 52/52 compat, Jacobian ranks 14+52, raw ~1 GB streaming replay 86/86;
+  the witnessed compressed component is smooth of dimension 106. The
+  literal <=rung-38 prefix is NONEMPTY, smooth dimension 117. Correction:
+  the historical p105337 `upto38.ms` did not solve; it timed out after 3h
+  (rc124, output 0), while upto40 crashed.
+- SEMANTIC GRAPH GATE FAILS: rung 26 reconstructs coordinates, and after
+  forward substitution rung 28 is rank 4/5 inconsistent at both primes.
+  The compatibility-only emitter had eliminated reused rung coordinates
+  without retaining their graph relations. Therefore its NONEMPTY points
+  are an overapproximation, not D43 survivors.
+- CORRECTED FIXED-POINT PROBE: reconstruct all D25 represented/deep/frontier
+  coordinates, retain all 89 raw rung rows. At the named A^14 point the
+  exact 88x98 nonzero system (4958 terms, degree 2) has GB [1] at both
+  primes; already rung 26 is linear rank 8/9. Fidelity gate: 178/178 raw
+  row comparisons per prime exact vs eplus43, negative control fires.
+  A deterministic search of 21 completed a00pp points/prime finds 0/42
+  prolongations (all joint bands 26..40 inconsistent), pointwise evidence
+  only.
+- EQUIVARIANCE gives no within-a00pp shrink: G acts freely/transitively on
+  36 fibers, so the a00pp stabilizer is trivial. SHARPEST HONEST STATUS:
+  literal emitted ideal NONEMPTY with smooth component dim106; intended
+  graph-preserving family remains unresolved. No floor run; ell+ >= 37.
+  Bank: SHEET6-DIRECTIONB.md 10.7 +
+  `cases/d43_residual_final_report.json` and paired solver/witness/lift/raw
+  reconstruction artifacts. No full-file msolve used.
+
+## 2026-08-23 ~03:20 SIX-LANE HARVEST (all rc=0)
+- D43 RESIDUAL (10.7): SPLIT verdict -- literal 86-row emitted ideal
+  NONEMPTY both primes (smooth point, dim >= 106) BUT that object omits
+  the rung reconstruction graph equations; the GRAPH-PRESERVING D43
+  family remains UNRESOLVED (both literal witnesses fail the rung-28
+  reconstruction gate; one reconstructed D25 point empty at rung 26 --
+  a HINT toward emptiness of the true family, not a proof). The emitted
+  compression was semantically incomplete -> next: re-emit WITH graph
+  rows (or prove the gate cuts to empty) = the true D43 question.
+- WTC-1 r2: proximity/naming part PROVED at theorem level; ordinary
+  multiplicities NOT proved (the remaining wall). Real progress.
+- SHORTLIST TRIAGE: symplectic = HOLLOW as new obstruction (exact
+  equivalence shown); jvdk = CONFIRMED-BLOCKED (no-descent theorem at
+  cusp layer -- now a THEOREM not just a block); tangentsweep = landing
+  ingredient only (Chau 1999 prior art); hc4probe = confirms
+  no-new-theorem discount. Three avenues honestly closed, one demoted
+  to ingredient -- the 46-list prunes to the tried core + WTC-1/PCC +
+  the D43 family question. Grok reviews queued for WTC-1r2 + 10.7 (the
+  two with promotable content).
+
+## 2026-08-23 ~03:35 exotic + connections parallelization (DC directive)
+- 3 new Sol lanes (Grok still reviewing WTC-1r2/10.7): (1) sol-connections
+  = the META-task -- non-obvious links between the 46 avenues, esp. does
+  any supply the G2 landing / G5 td-ceiling bridge; shared-obstruction
+  pairs; char-0 rational-signal connections; best exotic for a bridge.
+  (2) sol-dixmier = End(A_1)/DC(1) counterexample route (row 14; T2 replay
+  + can our modular certificate machinery TRANSFER to Weyl algebras). (3)
+  sol-pcurvature = Tsuchimoto p-curvature standalone (row 20; necessary
+  condition on residue-A mod-p data + link to the Dixmier lane). Both
+  exotic lanes probe the counterexample side + whether our tooling ports.
+
+## 2026-08-23 ~04:20 Grok verdicts banked; auth fix; exotic trio relaunched
+- GROK (grok-d43wtc-review): ALL FIVE 10.7 sub-claims CONFIRMED (split
+  verdict correct; literal NONEMPTY artifact-tier; family UNRESOLVED
+  stands; rung-26 emptiness = completed-point theorem, A^14-family hint
+  only). WTC-1: proximity theorem CONFIRMED (writeup gaps only);
+  multiplicities gap (KPC) confirmed as A wall but NOT the only PCC wall
+  (PFE also remains -- scope corrected).
+- LANE-AUTH LESSON: ~/.codex-sol copy died by refresh-token rotation
+  (two homes refreshing one account). New pattern: PRIMARY ~/.codex +
+  pre-launch model-line guard strip (ori-proof). ~/.codex-sol retired.
+  Exotic trio (connections/dixmier/pcurvature) relaunched on the fix.
+- Post-verdict queue: D43 graph-preserving re-emission (34+89 blocks) =
+  the true D43 object; WTC-1 writeup completion + KPC/PFE next rounds.
+
+## 2026-08-23 ~04:50 CONNECTION HARVEST -> two high-value lanes
+- sol-connections delivered 5 ranked cross-links. TOP TWO now EXECUTING:
+  * RANK 1 (G2 landing, the #1 bottleneck): enrich GGV packet flag by the
+    approximate-root/cusp tower -> candidate transport functor to the
+    Sigray tree. If the cusp data forces the dicritical decoration, G2
+    (and the whole book ladder) unblocks. -> sol-landing1.
+  * RANK 3 (cheapest exact): the residue-A genome (a1/a2=2+-sqrt3, rung-36
+    2:1 row) may BE a rigid tetrahedral Belyi map -- classical rigid
+    object identification -> potential char-0 certificate / depth bound
+    for the l+ dichotomy. -> sol-belyi.
+- Exotic verdicts banked: DIXMIER = JC2=>DC(1) confirmed, T2 PASS, but
+  residue-A template does NOT transfer to A_1 (normal symbol mismatch) ->
+  counterexample-transfer route closed; keep as reduction knowledge.
+  P-CURVATURE = known-hollow as new obstruction, real as scope/dictionary.
+- rank 5 insight banked: JvdK + HC4 fail for the SAME ramification reason
+  (ramified power loci) -> next tests need normal-cone/approximate-root
+  data. rank 2 (multi-Rees energy for G5) queued.
+
+## 2026-08-23 ~05:15 BELYI IDENTIFICATION VERIFIED (Sol); G2 route partial
+- BELYI (sol-belyi): VERIFIED -- residue-A collapse IS exactly the degree-4
+  Belyi map beta(u)=u(u-2/3)^3/(u^2-u+1/6)^2, passport ((3,1),(2,2),(3,1)),
+  monodromy A_4, RIGID (one Nielsen orbit), double poles ratio 2+-sqrt3 =
+  the a1/a2 genome. Exact over QQ(sqrt3), no float recognition. The
+  residue-A tower now has a CLASSICAL rigid-cover identity. BUT: rung-36
+  row REFUTED as the passport tangent -- it is the universal g^2-f^3
+  first-variation top-coeff (exists for any distinct pole pair, does NOT
+  detect the tetrahedral modulus). So: the OBJECT is classical+rigid, but
+  the rung-36 signal is not the rigidity witness. Grok verdict-tier review
+  launched (recompute beta + the leverage question: does rigidity bound
+  the tower depth or is it inert?).
+- G2 LANDING (sol-landing1): precise formulation achieved, but the
+  approximate-root packet data as proposed is NOT yet sufficient to define
+  the transport functor -- names the exact missing information. Real
+  progress on the #1 bottleneck, not a solution. Next round targets the
+  identified information gap.
+
+## 2026-08-23 ~05:40 GROK BELYI VERDICT: real name, inert constraint
+- Grok CONFIRMED the identification rigorously: beta IS a Belyi map (3
+  crit values, RH defect 6), passport (3,1)/(2,2)/(3,1), pole ratio
+  2+sqrt3 over Q(sqrt3), monodromy A_4, absolutely rigid (one S_4 orbit
+  of 24). The residue-A genome (a1/a2, a1a2=sigma^2/6, b=2sigma/3,
+  b2=3sigma/4) really IS this unique rigid degree-4 A_4 cover -- NOT a
+  quadratic-field coincidence. Real classical identification.
+- LEVERAGE: rigidity does NOT bound tower depth / certify D43 / give
+  l+ or G5 (CONFIRMED inert as a CONSTRAINT). "Beautiful as a NAME,
+  inert as a constraint." What WOULD unlock it (named): a proved faithful
+  marked-jet landing from the tower into the Hurwitz tangent space with
+  uniformly bounded kernel -- i.e. the leverage needs the SAME landing/
+  transport theorem the G2 lane is chasing. CONNECTION: Belyi leverage
+  and G2 landing are the same missing object.
+- Residual GAPs (minor, banked): passport print-order; kappa=42 not a
+  Belyi invariant; sigma not pinned to 6; inner vs absolute Nielsen.
+- NET: residue-A now has a classical rigid identity (publishable context,
+  strengthens the paper's framing) but no free depth bound. The tower's
+  hardness is genuine, not an artifact.
+
+## 2026-08-23 ~06:50 both global-bridge lanes: sharper walls, no proofs
+- LANDING2 (#1 prize): the marked-jet landing has a PRECISE formulation
+  but a structural surprise -- the gauge-quotiented tangent space of the
+  FIXED A_4 passport is ZERO, so any fixed-passport landing has zero
+  differential after gauge. CONSEQUENCE (important refinement): a kernel
+  RANK bound would NOT cap depth; the actual missing object is a uniform
+  BOUNDED-DELAY lemma -- "a compatible tower chain contains at most B
+  successive non-gauge states with the same marked Hurwitz jet." Since
+  the rigid jet is constant, that bound => the depth cap => G2 + ladder
+  + Belyi leverage. So the #1 target is now SHARPENED to one precise
+  finiteness statement (bounded-delay), not a vague landing theorem.
+- G5REES: multi-Rees gives a CANONICAL common b-divisor (the "balanced
+  rooftop") that cleanly replaces packet concentration AND does NOT need
+  KPC -- structural progress past the WTC-1 wall -- but the UNIT bound
+  (energy <= 1 => td ceiling) is a NEW inequality, still unproved. Named.
+- BOTH bridges now reduce to ONE precise unproved inequality/finiteness
+  statement each (bounded-delay for G2; rooftop-unit for G5). That's the
+  campaign's sharpest state: not solved, but the two walls are now single
+  named lemmas. Next rounds target each directly.
+- Queue: D43 graph re-emission still pending (hold: 2 lanes just cleared,
+  launch next tick); bounded-delay lemma round; rooftop-unit round.
+
+## 2026-08-23 ~07:30 three lanes: the two named-lemma prizes + D43 truth
+- sol-bdelay = prove the BOUNDED-DELAY lemma (G2/#1; w-invariant delay
+  bound + empirical B on the D21->D25 chain + Belyi-rigidity finiteness).
+- sol-rooftop = prove the ROOFTOP-UNIT bound OR any finite bound (G5; any
+  finite bound = cofinality = TDBOUND becomes THEOREM).
+- sol-d43reemit = the graph-PRESERVING D43 system (34+52+89 rows); EMPTY
+  = first depth kill; the rung-26/28 gate rank is the crux.
+
+## 2026-08-23 ~08:05 HARVEST: both walls sharpened to ONE Keller-bound each -- and they SHARE the ν's
+- sol-bdelay DONE = **REDUCED-TO-SUBLEMMA (not proved).** Both proposed
+  mechanisms OBSTRUCTED, and this CORRECTS a prior hope:
+  * w-route DEAD: at residue A every admissible l=0 step FIXES w=2 (resonant
+    steps need Δ|num(w)=2, impossible), and the depth-closure lemma supplies
+    self-reproducing l=0 continuations -> w CANNOT change -> "jet fixed =>
+    w moves" is FALSE. d0=2 is a jump-MENU stabilization depth, not a
+    segment-depth bound.
+  * Belyi-route DEAD: absolute A_4 rigidity gives ONE target point {β}, not
+    fiber finiteness. D25 cells realize A^14 -> {β} with 14-dim kernel. One
+    point != quasi-finite.
+  * B_row=2 is a **two-row equation-response cadence** (Row21=Row23=0,
+    Row22,Row24 != 0, EXACT both primes), NOT a marked-jet delay B. The
+    real jet-delay B is UNDEFINED (no positive-order jet map / vertical
+    gauge quotient is built).
+  * EXACT implication banked: ∏_j ν_j ≤ κ_i (pole Puiseux denom) and
+    ν_j≥2 => d_sh ≤ log2(κ_i). So **G2 bounded-delay ⟸ CONJECTURE UCD**:
+    κ_i ≤ K uniform (K indep of cutoff & continuation). td does NOT bound
+    κ_i; degree does NOT bound κ_i. G2 = UCD now.  [xmodel/sol-bdelay.md]
+- sol-rooftop DONE = **OBSTRUCTED -> CONJECTURE KJN(C).** No unit bound, no
+  B-independent finite bound. But high-value EXACT structure + a class-kill:
+  * EXACT four-way energy identity: E_MR = B²−‖H_∩‖² = ½‖Z_f/α − Z_g/β‖²
+    = td/(αβ) = Σ_P a_P b_P/ν_P. Rooftop is canonical (no KPC/PCC needed).
+  * Hodge index / mixed-volume / Teissier-Rees-Sharp all give the WRONG
+    SIGN: E_MR ≥ 0 (upper bnd on mixed mult); G5 needs the LOWER bound
+    Δ²≥−2. Convexity is bookkeeping, not coercivity. ADE support alone
+    doesn't give −2 (residual must separately be a root).
+  * EXACT pure-boundary Jacobian identity: F_X G_Y − F_Y G_X = j·Z^{d+e−2}
+    (Keller => all ramification created at the boundary; det DΨ =
+    c·F^{β−1}G^{α−1}Z^{N+d+e−3}).
+  * CLASS-KILL (permanent NO-GO): family f_B=x^{Bα}+y, g_B=x^{Bβ}+y^{Bβ−1}
+    has the SAME balanced leading form, finite normalized multi-Rees, yet
+    E_MR = B²−B/β -> ∞. So {finite-gen, antinef rooftop, common leading
+    power} do NOT imply any uniform bound. Non-Keller (so not a G5 c/ex),
+    but it kills that whole proof class. Grok-checking now.
+  * G5 ⟺ **KJN(C)**: deg Ψ = αβ·td ≤ C(αβ)²  (sharp C=1). Clean projective
+    degree bound; must use the exact Keller multiplicities, not just the
+    critical-divisor support.  [xmodel/sol-rooftop.md]
+- sol-d43reemit STILL RUNNING (~35min, the live implementation lane on
+  §10.6/10.7). Intermediate: (a) 42/42 completed D25 points FAIL to prolong
+  through bands 26–40 ("STAGE A INCONSISTENT") = strong POINTWISE
+  obstruction, explicitly NOT a family cert; (b) certified graph-preserving
+  175-row assembler built (34 parked + 52 compat-as-exact-linear-combos +
+  89 graph rows, byte-exact regressions, smaller graph-only solver
+  prefixes 26/28/38). Family EMPTY/NONEMPTY verdict PENDING. Do not collide.
+- **NEW CONNECTION (the prize of this tick).** Both walls now reduce to a
+  single Keller-specific arithmetic bound, and the SAME local ν_P appears
+  in both: G2/UCD needs κ_i = ∏ν_j bounded; G5/KJN bounds td = αβ·Σ a_P
+  b_P/ν_P. Open, non-obvious, decides the campaign's shape either way:
+  does **KJN(C) => UCD** (one bound closes BOTH walls = biggest possible
+  unification) or are they independent (need two bounds)? -> launching
+  sol-unify to decide. Grok reviewing the rooftop class-kill + identities.
+
+## 2026-08-23 ~08:30 HARVEST: rooftop claims dual-CONFIRMED; walls are INDEPENDENT; K2C is the bridge
+- grok-rooftop = **BOTH CONFIRMED** (independent recompute + toy checks):
+  * Pure-boundary Jacobian identity F_X G_Y − F_Y G_X = j·Z^{d+e−2}
+    (Keller): verified via chain rule dF/dX=Z^{d-1}f_x(X/Z,Y/Z), toy pair
+    f=x+(y+x²)², g=y+x² gives LHS=Z⁴ exactly, +5 more. EXACT.
+  * Class-kill: td=d(e−1) (Gauss irreducibility), E_MR=B²−B/β→∞ confirmed
+    on 6 triples. Finite-gen+convexity+common-leading-power do NOT bound
+    E_MR; Hodge/AF give WRONG SIGN. => any G5 proof MUST use identity (4.1).
+  * PROMOTED both to AUDIT.md (dual-model tier). G5 ⟺ KJN(C).
+- sol-unify = **INDEPENDENT** (corrects last tick's optimism). The "shared
+  ν" was a NOTATION COLLISION: rooftop ν_P = leaf factor only (2); depth
+  κ_i = FULL product 7·3·2 = 42. Belyi passport {2,3} is a degree-4
+  QUOTIENT invariant after carrier cancellation — the factor 7 is in the
+  genome but not the passport. Two formal countermodels: KJN⇏UCD (td=6 fixed,
+  κ_i=42·2^r→∞) and UCD⇏KJN (κ_P=6 fixed, E_MR=b→∞). Both FORMAL (no known
+  polynomial-origin realization). EXACT Puiseux dictionary ∏ν_j=κ_i banked.
+  => G2 & G5 are SEPARATE walls (need TWO bounds): UCD bounds the
+  multiplicative carrier axis max_i κ_i; KJN bounds the additive pole-mass
+  axis Σ a_P b_P/ν_P. The ONE remaining bridge = **CONJECTURE K2C**
+  (polynomial origin + identity 4.1 bounds internal char indices from
+  rooftop pole-mass) — exactly what the formal countermodels lack.
+- sol-d43reemit STILL RUNNING (~52min). Log tail: exact 69×69 graph slice
+  solves in 0.01s/prime; witnessed smooth component dim 79, full depth dim
+  81 => SIGNALS the graph-preserving D43 family is NONEMPTY (positive-dim),
+  i.e. likely NOT a depth kill (floor holds, no new kill). VERDICT PENDING
+  (.md not yet written) — do not bank until final.
+- QUEUE ADVANCE: launching TWO lanes, both wielding the now-confirmed
+  identity (4.1):
+  * sol-kjn = attack KJN(C)/G5 directly: does (4.1) after base resolution
+    force the uniform Green-capacity bound (rooftop §8/eq 6.3)? WIN =
+    TDBOUND theorem = book ladder UNCONDITIONAL = headline.
+  * sol-k2c = attack the bridge/UCD: can a polynomial-origin Keller pair
+    realize the Lemma-2.2 countermodel (td bounded, κ_i→∞)? If (4.1)+poly
+    origin FORBID it => K2C => KJN⇒UCD on real Keller maps => unification
+    restored at the Keller tier + G2 depth cap. If a Keller realization
+    exists => G2 needs its own genuinely separate bound.
+
+## 2026-08-23 ~08:55 HARVEST: both walls reduced to ONE LOCAL lemma each; still separate; reorg trigger now met (blocked on DC rename)
+- sol-d43reemit DONE (self-banked §10.8 + cases/d43_graph_final_report.json).
+  HONEST NO-KILL: commissioned 175-row object (34 parked+52 compat+89 graph)
+  NONEMPTY both primes, smooth dim 81; rung26/28 ranks 4/4 => rung28 does NOT
+  kill it. But MANDATORY FLOOR GATE REJECTED: algebraic points have 94 older
+  residual coeffs nonzero (bands 6..24) => s9_nu_ge_43 fails. Diagnosis: object
+  still an OVER-APPROXIMATION (reintroduced D23/D25 coords as free vars WITHOUT
+  their reconstruction graph). Actual all-history D43 survivor family UNRESOLVED.
+  No floor, no first depth kill; ell+ >= 37 UNCHANGED. Full 2.34GB emissions on
+  box01, 175/175 replay both primes. INTERNAL/UNREVIEWED.
+- sol-k2c DONE = **NO KELLER-TIER UNIFICATION.** Real theorem, not formal:
+  * THEOREM 2.1 (EXACT polynomial-origin): the Henon tower
+    Phi_r = H_{q_s} o..o H_{q_1}, H_q(u,v)=(v, v^q - u), indices (7,3,2,..,2)
+    [s=r+4], is a genuine AUTOMORPHISM of A^2 (J=1, td=1) whose pole branch has
+    Puiseux denominator kappa_r = 42*2^r -> INF, satisfying the FULL boundary
+    identity (F_r)_X(G_r)_Y-(F_r)_Y(G_r)_X = Z^{3kappa_r-2}. Pays per char factor
+    in DEGREE (deg f_r=kappa_r, g_r=2kappa_r), not td. => UNRESTRICTED K2C is
+    FALSE: bounded td does NOT bound kappa_i even w/ poly origin + (4.1) + AM.
+  * BUT scope: it's an automorphism (one pole, type (1,2), degree-minimizes to
+    identity) -> does NOT realize residue-A (2,3)/td=6/two-pole/w=2. So the
+    DEGREE-MINIMAL NONAUTOMORPHIC type-(2,3) residue-A K2C stays open.
+  * PROVED fixed-degree bounds: kappa_i <= d_f (pole order <= deg), #char pairs
+    <= log2(d_f). td does NOT bound d_f; type fixes only the ratio, not scale B.
+  * G2/UCD sharpened to CONJECTURE UCD-A-min: bound max_i kappa_i for
+    degree-minimal nonautomorphic type-(2,3) residue-A Keller pairs. Grok-review
+    of Theorem 2.1 PENDING (concrete refutation deserves the gate).
+- sol-kjn DONE = **OBSTRUCTED, reduced to CONJECTURE RPMC(C)** (a strictly
+  LOCAL one-root lemma). Genuinely deep:
+  * THEOREM 7.1 (PROVED reduction): RPMC(C) => KJN(C) => TDBOUND theorem.
+    RPMC(C): per proper root P_i of H (F_d=xi H^alpha, G_e=eta H^beta, deg H=B),
+    local energy E_i = (1/2)sum_{p>P_i}(R_p/alpha - S_p/beta)^2 <= C*mu_i/B.
+    Sum over roots (sum mu_i = B) gives E_MR <= C, i.e. deg Psi <= C(alpha beta)^2.
+  * EXACT gradient matrix factorization (the Keller-specific object): A=[[F_X,G_X],
+    [F_Y,G_Y]] has det = j Z^M, so Fitt_0(coker)=(Z^M), supported on the thick
+    line M*L_inf with NO residual Jacobian curve; transformed det is a UNIT off
+    Z=0. This is what ordinary effectivity/Chern/coprimality all DISCARD.
+  * EXACT energy localization E_MR = sum_i E_i (orthogonal cluster, no cross-terms).
+  * Killed attacks cleanly: (A) Z-exponent s is NOT a consumable blowup budget
+    (v_{E_n}(Z)=1 all n); (2.9) effectivity is WRONG DIRECTION for the Noether
+    square; coprimality gives only a lower quantum 1/(2(alpha beta)^2).
+  * SEPARATION (sec 8, EXACT): the class-kill family has Q_B != jZ^{d+e-2} (extra
+    Jacobian curve), yet its log-effectivity coeff is +1 = SAME as a Keller pair.
+    So log-effectivity ALONE cannot be the Keller step; the separating datum is
+    the VANISHING of the residual Jacobian curve in the transformed gradient
+    cokernel. Pinpoints the Keller-only step precisely.
+- STRATEGIC PICTURE (clean now): G5 <= RPMC(C) [one-root pure-minor capacity];
+  G2 <= UCD-A-min [degree-minimal carrier bound]. Walls SEPARATE. REAL
+  CONNECTION (subtler than one-bound): BOTH proofs must EXCLUDE A DECOY family
+  using fine Keller structure -- non-Keller class-kill (G5) and removable-
+  automorphism Henon towers (G2). The would-be meta-lemma is a NO-DECOY /
+  rigidity statement for degree-minimal noninvertible Keller germs.
+- REORG TRIGGER: fleet is now QUIET (count=0) = the quiescence condition DC set
+  is MET for the first time. But reorg also needs DC to confirm jc72108->jc2
+  GitHub rename, and it's a large hard-to-reverse op touching lane infra paths.
+  => HOLD for DC go-ahead (do NOT auto-execute in an autonomous tick). Surface
+  on next DC contact.
+
+## 2026-08-23 ~09:20 HARVEST: Henon dual-CONFIRMED (promoted); G5 chain now KJN<=RPMC<=>PC
+- grok-k2c = **Theorem 2.1 CONFIRMED (i)-(vi)** by explicit hand computation
+  (r=0 written out P_2..P_5, homogenized Jacobian Z^124 by direct expansion,
+  r=1 spot-check, correct Zariski reparametrization vs the naive-Tschirnhausen
+  artifact). Unrestricted K2C genuinely FALSE; scoping legitimate; residue-A
+  K2C/UCD-A-min untouched. PROMOTED to AUDIT.md (dual-confirmed). Precision
+  note: char indices are q_1..q_{s-1} (exclude q_s); r=0 composes 4 gens
+  (7,3,2,2) but chars are (7,3,2). => G2 and G5 SEPARATE at the Keller tier
+  is now a dual-confirmed fact.
+- sol-rpmc = **DECISIVE PARTIAL** (executed 2 of 3 sol-kjn §7 bullets EXACTLY):
+  * Thick-line degeneration RIGID: cokernel free rank M, z-mult = one length-M
+    Jordan block over k((u)), exactly TWO blocks (r,M-r) at u=0, Smith
+    diag(1..1,u^c,0), c=alpha*mu-1. One transverse defect, exact size; jump
+    COUNTS fixed, EXPONENTS not.
+  * Point-basis square = integer intersection defect: E_P = Delta_P/(alpha
+    beta), Delta_P = alpha beta B mu - n_P in Z>=0; stronger quantum
+    E_P >= 1/(alpha beta).
+  * EXACT POLAR BRIDGE (pure-minor used exactly): Delta_P = sum_{gamma|P}
+    max{0, ord_gamma F_X - (d-2)m_gamma}.
+  * REDUCTION: RPMC(C) <=> CONJECTURE PC(C) [sum polar excess <= C alpha beta
+    mu/B]. Keller separation EXACT (decoy adds branch order de-d-1; bridge fails
+    iff Fitt_0 != (Z^M) -- sanity gate holds). PROMOTED to AUDIT.md.
+  * NO finite C. Remaining step: bound the intrinsic polar excess of the
+    generic fiber at a Keller root by C alpha beta mu/B.
+- G5 STATE: KJN(C) <= RPMC(C) <=> PC(C). Onion peeled 3 layers, each an EXACT
+  theorem (global->local->concrete polar), not relabeling. PC(C) is now a
+  classical-looking polar/adjunction bound.
+- STRATEGY NOTE: 5 straight G5-reduction lanes = real progress but same wall.
+  DIVERSIFYING this tick: sol-pc (finish G5: attack PC(C) via two-block
+  degeneration + adjunction/polar-class) + sol-ucda (fresh: G2/UCD-A-min --
+  bound kappa_i for degree-minimal NONautomorphic type-(2,3) residue-A Keller
+  germ via Abhyankar-Moh/semigroup + constant Jacobian; k2c showed automorphisms
+  store REMOVABLE chains, so degree-minimality is the crux). Parallelize both
+  walls per DC directive. Meta-connection to keep in view: both walls are
+  DECOY-EXCLUSION (non-Keller class-kill for G5; removable automorphisms for
+  G2) -> a no-decoy rigidity lemma for degree-minimal noninvertible Keller
+  germs would be the keystone.
+
+## 2026-08-23 ~09:45 HARVEST: BOTH walls bottomed out at a terminal crux conjecture (DIR, A-SCALE)
+- sol-pc = **DECISIVE PARTIAL.** PC(C)=RPMC(C) reduced ONE more layer to
+  CONJECTURE DIR(C) (displaced-intersection retention): for general lambda,nu,
+  n_P = i_P(Phi - lambda z^d, Gamma - nu z^e) >= e(c+1)(1 - C/B^2), c=alpha*mu-1.
+  Since e(c+1)=alpha beta B mu, DIR(C) <=> PC(C). So PC's 1/B is a 1/B^2
+  RELATIVE intersection-retention statement. New EXACT structures: (a) canonical
+  differential omega=dy/f_x=dg/j, a_gamma = ord_gamma F_X-(d-2)m_gamma =
+  -ord_gamma omega - 1; adjunction SIGNED identity Delta_inf - K_inf = 2-2g_C-s
+  (does NOT cap the positive part; compensator K_inf uncontrolled); (b) Smith
+  telescope tau_q <= min(q,M-q)(alpha*mu-1) (higher jumps bounded by first
+  defect); (c) semicontinuity has WRONG orientation (upper, not lower). G5 chain:
+  KJN <= RPMC <=> PC <=> DIR. DIR is the G5 crux; if proved (any finite C) =>
+  TDBOUND theorem.
+- sol-ucda = **DECISIVE NEGATIVE on the degree-minimality route.** KEY: a
+  type-(2,3) rectangular cusp pair is ALREADY Aut-orbit degree-minimal at every
+  common scale (char-0 coordinate-cusp theorem) -- so degree minimality gives NO
+  bound deg f <= Phi(6,(2,3)). (Contrast Henon type (1,2): V-U^2 is a coordinate
+  that deletes the last stage; that's why the automorphism tower is removable.)
+  Const-Jacobian gives only ord_t f_y = 3 - kappa_i (compatibility); conductor
+  c(P_i) = 2 delta(P_i) >= 2(kappa_i - 1) is a LOWER bound. Neither caps kappa_i.
+  UCD-A-min reduces to CONJECTURE A-SCALE: a+b <= B_A for orbitwise
+  degree-minimal nonautomorphic residue-A pairs (Sigray rectangle base (a,b)) =>
+  kappa_i <= 2B_A. Conditional K_A=42 only under the global-coordinate-tail
+  hypothesis. **A-SCALE IS the G2 crux; a counterexample, if one exists, lives
+  in the non-removable type-(2,3) carrier direction** (Sol's own words). Both
+  promoted to AUDIT.md; reduction tower added to REDUCTION.md.
+- STRATEGIC JUNCTURE (surfaced to DC). Four straight rounds now bottom out at
+  named terminal conjectures; both walls reduce to a single crux each:
+    G5: KJN <= RPMC <=> PC <=> DIR(C)   [intersection-retention, 1/B^2]
+    G2: UCD <= UCD-A-min <= A-SCALE     [bound Sigray base a+b]
+  Each round = a REAL exact theorem (not relabeling), but the quantitative
+  terminal bound resists standard tools -- consistent with these being the
+  actual locus of JC2's difficulty for the book-relative program. Sol assesses
+  BOTH terminal conjectures as plausibly TRUE but UNPROVEN, with counterexamples
+  (if any) in specific identified directions. This tick I do NOT grind a 5th
+  reduction; instead launch the CONNECTION lane (sol-bridge2): the residue-A
+  branch conductor delta(P_i) [G2/A-SCALE side, via c(P_i)>=2(kappa_i-1)] and
+  the polar-excess defect Delta_P [G5/DIR side] are BOTH local invariants of the
+  SAME residue-A germ -- are they linked into ONE no-decoy invariant, so DIR and
+  A-SCALE share a root? FORK FOR DC: (a) keep grinding DIR+A-SCALE, (b) TEST the
+  terminal conjectures vs known exclusion results (Moh/GGV/(72,108)), (c) pursue
+  the connection/keystone (chosen default this tick), (d) pivot to an exotic
+  APPROACHES.md avenue.
+
+## 2026-08-23 ~10:10 CONNECTION SETTLED: walls INDEPENDENT even locally; foundational thread at its floor
+- sol-bridge2 = **INDEPENDENT (terminal verdict).** No single no-decoy keystone.
+  * EXACT different/contact ledger (PROVED): ord_gamma F_X = (d-2)m + p, so the
+    branch polar defect Delta_gamma = p = POLE ORDER OF g (=3 on residue A);
+    conductor 2 delta measures the branch different; common ledger
+    c(gamma) + I_gamma = (d-3)m + p + 1 carries an UNCONTROLLED CONTACT I_i.
+    => bounding polar excess does NOT bound conductor (kappa_i), and vice versa.
+  * DIR does NOT imply A-SCALE (formal tower: Delta_gamma=3 fixed while kappa_i,
+    conductor -> inf). A-SCALE => residue-A DIR only tautologically. Terminal
+    directions genuinely different.
+  * Concrete residue-A arithmetic (checkable): chars (b1,b2,b3)=(54,74,79),
+    generators (42,54,398,1199), c(P_i)=2278, delta=1139, contact I_i=4656,
+    d=168, m=kappa=42, p=3. DIR ratio B*Delta_P/(alpha beta mu) = 84*6/(6*63)
+    = 4/3 EXACTLY -> DIR(4/3) is EQUALITY on the filed root (DIR holds w/ small C).
+  * Both decoys (Henon, class-kill) have polar excess 1 & conductor->inf but are
+    excluded by ORTHOGONAL mechanisms (orbit-minimality vs pure-Jacobian-support);
+    neither invariant excludes both. 3rd equiv form of G2: CONJECTURE
+    CONTACT-DEFICIT (d-3)kappa_i - I_i <= K_A (= conductor bound in new notation).
+  * PROMOTED to AUDIT.md.
+- FOUNDATIONAL THREAD = AT ITS FLOOR. Both walls -> terminal conjectures,
+  twice-confirmed INDEPENDENT (globally sol-unify, locally sol-bridge2);
+  everything else along the chains PROVED. Milestone: JC2's difficulty for the
+  book-relative program localizes to
+    G5: DIR(C) [intersection retention; =4/3 equality on the filed root]
+    G2: A-SCALE <=> bound c(P_i) <=> CONTACT-DEFICIT
+  genuinely separate. Further reduction lanes = treadmill.
+- PHASE SHIFT: stop reducing; TEST the terminal conjectures for truth (DC fork
+  b). Launching sol-truth: is 4/3 the DIR sup or can a config push it higher?
+  does the banked td<=12 ladder confine residue-A to bounded scale (=> A-SCALE
+  true) or admit unbounded scale (=> counterexample signal)? Uses the OWN AUDIT
+  ladder + concrete germ arithmetic. RECOMMEND to DC: the reduction milestone is
+  landable/publishable; decide (b) keep testing, hard-pivot, or write it up.
+
+## 2026-08-23 ~10:40 TRUTH TEST: direction resolved -- A-SCALE is the suspect bound; decisive compute = fully-reconstructed D43
+- sol-truth = calibrated, honest (bank-relative epistemic probs, NOT stats):
+  * DIR(C) some finite C: NEUTRAL, weakly pro-truth ~0.55. Sharp C_sup=4/3
+    UNSUPPORTED ~0.20 (one equality case != sup).
+  * A-SCALE: WEAK EVIDENCE AGAINST ~0.40. It has the campaign's ONLY live
+    counterexample-tower signal.
+- KEY CORRECTION (banked prominently): "D21,D23,D25,D43 all nonempty" is TOO
+  STRONG. D21-D25 nonempty are DEEPER COEFFICIENT TRUNCATIONS of the SAME B=84
+  template -- they do NOT compute a new kappa_i or increasing Sigray base B, so
+  D21->D25 nonemptiness does NOT imply unbounded A-SCALE failure. D43 (prior
+  lane) was an OVERAPPROXIMATION nonempty; the TRUE graph-preserving D43
+  survivor family is UNRESOLVED (fully-reconstructed probes: 0/42 D25 points
+  prolong = pointwise negative, not a family cert). ell+ >= 37 floor => first
+  Newton-certification depth is D75 (needs depth 2*37+1), not a shallow window.
+- DIR structure (EXACT): R_P = B*Delta_P/(alpha beta mu_P); Delta_gamma = pole
+  order of g. HIGH multiplicity LOWERS R_P (Henon=1/2, filed=4/3); the dangerous
+  axis is CONCENTRATION on a LIGHT root mu_P/B->0 with Delta_P>=1. No Keller-
+  admissible unbounded R_P banked; the only polynomial divergence is non-Keller
+  (class-kill, killed by pure-minor identity). Integral diagnostic: finite
+  DIR(C) forces Delta_P=0 whenever B > C alpha beta mu_P.
+- A-SCALE signal (the live lead): non-removable type-(2,3), q=2 carrier tower
+  kappa_i(r)=42*2^r forces B_r >= 21*2^r (r=3 already needs B>=168 > filed 84).
+  Type-(2,3) cusp protection makes it NON-removable (unlike Henon). BUT
+  separated from an actual JC2 counterexample by a LONG chain: inverse-limit
+  existence -> char-0 lifting -> algebraization -> globalization -> polynomial
+  Keller realization. So A-SCALE~0.40 does NOT mean P(JC2 false)~0.60; the
+  formal tower failing is NECESSARY-not-sufficient for a counterexample.
+- DIRECTION RESOLVED. Two decisive next computes identified by sol-truth:
+  1. (A-SCALE, heavy) FULLY-RECONSTRUCTED D43 FAMILY IDEAL: impose BOTH the
+     D23/D25 reconstruction graph AND rung-26..42 graph SIMULTANEOUSLY, decide
+     family-wide at both primes via exact-slice/certificate route (NO full-file
+     msolve -- segfault). EMPTY = first depth kill at fixed B=84 (pro A-SCALE /
+     no ctrex at this scale). NONEMPTY + gate-passing witness = live A-SCALE
+     counterexample signal (then measure ell+; floor says D75).
+  2. (DIR, cheap) rootwise CENSUS of every filed admissible inventory recording
+     (B,alpha,beta,mu_P,sum p_gamma) -> compute R_P, test if it can grow;
+     target Keller roots mu_P/B->0. Conductor/kappa are NOT useful proxies.
+- Launching BOTH: sol-d43full (decisive, heavy) + sol-dircensus (cheap).
+- PROBABILITY UPDATE for DC: P(A-SCALE true) ~0.40 is the new low; it's the
+  weakest link. This nudges P(JC2 true) DOWN slightly but NOT to a coin flip --
+  the counterexample chain past A-SCALE is long. DIR looks fine (~0.55, no
+  signal). RECOMMEND: run the fully-reconstructed D43 (it's the single most
+  decision-relevant computation in the campaign) before any write-up/pivot call.
+
+## 2026-08-23 ~11:05 DIR census: NEUTRAL (downgrade); BOTH walls converge on the ALGEBRAIZATION gate
+- sol-dircensus = **DIR VERDICT: NEUTRAL, no finite C supported** (downgrades my
+  earlier ~0.55 pro-truth read). Full rootwise census of td<=12 books:
+  * Max FULLY-SPECIFIED filed R_P = 4/3 (residue-A Y-root, equality); actual
+    Keller CONTROLS only reach 1/2 (Henon). Residue-A X-root R_P=0 (g finite).
+  * BUT book-tier (2,3) rows FORCE max_P R_P >= 3/2 (td=9), 5/3 (td=10;
+    M8/M13 are promoted off-axis ladder rows), 11/6 (td=11, conditional audit),
+    2 (td=12) under ANY Keller lift. So C=4/3 is UNSUPPORTED once you contemplate
+    lifting those books. These are AVERAGES (td/(alpha beta) = weighted avg of
+    root ratios) -- the root receiving the pole mass may have MUCH larger R_P.
+  * DIR <=> CONJECTURE RPC (root-pole cap): sum p_gamma <= C alpha beta mu_P/B.
+    Pure-minor only gives R_P <= B^2 (wrong B-scale). No coupling sum p to mu/B.
+  * DIR counterexample lead (additive pole-mass axis): fixed-(2,3) unbounded
+    pole-mass family [3A;A,1,2]^2, td=6A; any Keller lift => max R_P >= A -> inf.
+- **CONVERGENCE (key strategic insight).** BOTH terminal conjectures have
+  concrete FORMAL counterexample leads gated by the SAME meta-question:
+    A-SCALE lead: q=2 carrier tower kappa=42*2^r  (multiplicative axis)
+    DIR lead:     [3A;A,1,2]^2 unbounded pole-mass (additive axis)
+    GATE (both):  does the FORMAL family ALGEBRAIZE to a polynomial Keller pair?
+                  YES(either) => JC2 counterexample; NO(always) => both bounds
+                  hold => JC2 true (book-relative).
+  The ENTIRE foundational program has converged to ONE question: do these formal
+  Newton/entry families algebraize? sol-d43full is the sharpest CONCRETE test
+  (modular coefficient-existence for the A-SCALE carrier tower at fixed B=84).
+- PROB UPDATE: DIR now NEUTRAL (not 0.55); A-SCALE ~0.40. Walls are independent
+  as INEQUALITIES but their counterexample leads SHARE the algebraization gate,
+  so they're more correlated than "independent" suggested. If algebraization is
+  generically OBSTRUCTED (JC2-true world), both bounds hold together.
+- sol-d43full STILL RUNNING (building the fully-reconstructed linear-witness
+  engine) = THE decisive compute. NOT spawning a competing lane; let it finish.
+
+## 2026-08-23 ~11:35 D43 FULLY-RECONSTRUCTED = NONEMPTY mod p: carrier SURVIVES, no first depth kill
+- sol-d43full = the decisive test DONE. **Fully-reconstructed residue-A D43
+  family NONEMPTY at both primes** (INTERNAL/UNREVIEWED/MOD-p, B=84, fiber a00pp).
+  * System: 218 nonredundant rows = 34 parked + 95 OLD graph (bands 6-24, the
+    D21/D23/D25 reconstruction the prior lane DROPPED) + 89 LATE graph (bands
+    26-42), in 184 vars. Explicit 184-coord witness at each prime satisfies all
+    218 generators AND passes the FULL survivor gate: 184/184 pristine residuals
+    zero, s9_nu_ge_43 PASS, 18/18 floor checks. Negative control tf1_57+=1
+    breaks 18 rows.
+  * CORRECTS the prior overapproximation narrative: the "94 nonzero old coeffs"
+    was a WITNESS-FAILURE count, not a generator census; old-graph census is 95
+    rows and one vanished at the bad witness. THIS system properly imposes all
+    95 -> genuinely the graph-preserving family, and it is NONEMPTY.
+  * Clean method: NO full-file msolve; only 101-var exact slices (55,947 terms,
+    deg 6) solved ~280-300s each, decoded points replay all 184 graph rows
+    (not just slice rows). Certificates cases/d43_full_certificate_p*.json.
+  * Floor: ell+ >= 37 (window lower bound; e_plus still E_PLUS_CANDIDATE,
+    certified=null -- NOT equality). D75 = first Newton-cert depth.
+- MEANING: **no first depth kill; the fixed-B=84 residue-A carrier SURVIVES to
+  D43.** This is a LIVE A-SCALE/carrier signal, mildly counterexample-leaning
+  (the carrier survives the sharpest fixed-scale kill we can run). BUT it does
+  NOT: disprove A-SCALE (which is about UNBOUNDED B, not fixed B=84 depth),
+  lift to char-0, algebraize, or give a polynomial Keller map. D21->D43 are all
+  fixed-B=84 depth truncations, NOT increasing scale.
+- Grok-reviewing sol-d43full (is the reconstruction genuinely COMPLETE vs
+  another overapproximation? does the witness truly pass the FULL gate?).
+- STRATEGIC: the campaign has now run its sharpest fixed-scale depth kill and
+  the carrier did NOT die. The resolution of A-SCALE now genuinely hinges on the
+  ALGEBRAIZATION gate (does the mod-p carrier lift to char-0 / a polynomial
+  Keller pair?) -- NOT on more fixed-B=84 depth. Launching sol-lift to attack
+  that gate theoretically (char-0 lifting obstruction for the residue-A carrier).
+  Next expensive concrete option (test the tower at DOUBLED scale B=168, kappa=84)
+  held pending DC -- big compute, DC's call.
+
+## 2026-08-23 ~12:00 D43 NONEMPTY dual-CONFIRMED; algebraization gate mapped (8 stages); launching the char-0 lift
+- grok-d43full = **CONFIRMED: Completeness COMPLETE, Witness SOUND, Scope HONEST.**
+  The 10.8 omitted class is present; no second overapproximation. Independent:
+  S30 census = 95+89, both linear GBs parsed (101 linear, 22 nonzero =
+  graph_156), 184/184 point-bank + 34/34 parked rows vanish both primes
+  (incl. the 10 band-42 rows NOT in the slice), floor_gate rerun 18/18 PASS
+  byte-equal. SCOPED CAVEATS (not holes): (i) witness = CELL ORIGIN (FREE=0),
+  not generic interior -> §10.7's 0/42-D25-points-prolong at rung 26 is a
+  DIFFERENT point and STANDS (family NONEMPTY != every point prolongs; positive-
+  dim survivor locus some points miss); (ii) at origin, 9 band-10 rows degenerate
+  to identities (so 174-9=165 nonzero solver rows); (iii) old_graph hash not
+  independently re-emission-compared (weaker audit than late-graph byte
+  regression). Result STANDS: fixed-B=84 carrier survives D43 mod p via origin.
+- sol-lift = **algebraization gate MAPPED. Verdict: no known obstruction AND no
+  known construction; carrier is MODULARLY VIABLE, not demonstrably ALGEBRAIZABLE.**
+  8-stage gate (each OPEN unless noted):
+    0 D43 witness mod p .................. DONE
+    1 common integral/Z_p reconstruction scheme ... OPEN (certificate absent)
+    2 one char-0 point of the finite D43 scheme ... OPEN; settled by relative
+      smoothness => Hensel (KNOWN THEOREM)
+    3 compatible points at EVERY depth (not indep nonempty X_D) ... OPEN
+    4 inverse-limit coeffs = formal Puiseux germ ... OPEN
+    5 convergent + algebraic over rational-fn field ... OPEN (formal =/=>
+      convergent =/=> algebraic)
+    6 global chart/tree/w=2 gluing, one compactification ... OPEN
+    7 same f,g in C[x,y], J=const globally ... OPEN, HARDEST
+    8 unbounded scale kappa=42*2^r ... OPEN (required to refute A-SCALE)
+  KEY: two primes + CRT do NOT promote to char-0 (modular nonemptiness can sit
+  at primes dividing a bad M in I). ONE actual Z_p-point IS enough. Candidate
+  obstructions (GCT-A, K2C, A-CONDUCTOR) all CONJECTURAL; standard ledgers give
+  NO obstruction. Belyi quotient cancels the carrier exactly (factor 7 absent
+  from passport).
+- RECOMMENDED next step = **(b) char-0 lift of the B=84 witness** (cheapest
+  DECISIVE test; bounded computation, NOT the B=168 scale test). Procedure:
+  (1) re-emit all 218 eqns over Z_p retaining radical vars, audit reduction;
+  (2) all-row p^2 correction test J(xbar)delta = -F(x1)/p mod p; (3) full
+  Jacobian rank + local dim at witness; (4) nonzero minor + localized-generation
+  /flatness certificate => Hensel gives the first certified char-0 D43 point
+  (advances stage 2). B=168 (option a) = next SCALE test not algebraization
+  test (HELD for DC); obstruction proof (option c) = the GCT-A/K2C research
+  programs, not a bounded compute.
+- Loop prompt authorizes advancing per sol-lift (hold only B=168 + reorg for DC).
+  LAUNCHING sol-clift = the char-0 lift (option b). If step-4 succeeds =>
+  first certified char-0 D43 point (real promotion, stage 2 cleared). If step-2
+  p^2 test fails => immediate local obstruction worth deciding family-wide.
+
+## 2026-08-23 ~08:35 D43 graph re-emission final: 175-row NONEMPTY, survivor floor REJECTED (INTERNAL / UNREVIEWED)
+
+- Re-emitted the commissioned a00pp object at p=105337,105673 as 34 parked
+  + 52 compatibility + 89 pristine rung-26..42 reconstruction-graph rows.
+  Full files are on box01 (`cases43/d43graph_p*_a00pp_full175.ms`), 2.34 GB
+  each; no full-file msolve. Emission gates: parked 34/34 byte-exact,
+  compatibility = exact graph left-kernel combinations 52/52 byte-exact,
+  graph 89/89, retained-coefficient negative control fires.
+- CENSUS CORRECTION: true union header is 184 vars, not 172. The compat
+  header eliminated 12 rung-42 first-occurrence coords (alpha,beta and ten
+  level-69/74 tails); graph retention must adjoin them. This corrects Grok
+  A.5's 172-ring sentence.
+- COMMISSIONED IDEAL VERDICT = NONEMPTY at both primes. Exact 89x89 slices
+  solve in 0.01s to linear GBs; decoded 184-points pass 34+52+89 = 175/175.
+  Independent expanded 2.34-GB replay checks 69,536,652 / 69,536,382 terms.
+  Jacobian ranks = parked 14 + graph 89, so witnessed smooth dim =
+  184-103 = 81. Negative control Xf_alpha+=1 breaks 10 graph rows.
+- KEY GROK GATE: rung26 ranks 4/4 and rung28 ranks 4/4 at both graph
+  witnesses; prefix Jacobian ranks 10/10 and 20/20. Thus rung28 DOES NOT
+  kill the commissioned component. Rung<=38 is NONEMPTY: exact 69x69,
+  6549-term slices solve in 0.01s/prime to 69 linear GB elements; prefix
+  smooth dim in its 162-var used ring = 162-(14+69)=79.
+- PIVOT/NF TRY: exact parked-cell NF through rung28 = 20x98,
+  134891/134892 terms, degree14, Jacobian rank20 at origin+sequence;
+  12/12 compats re-derived and control fires. Uncut msolve hit 1800s cap
+  at both primes with zero-byte outputs; inconclusive, and not needed for
+  NONEMPTY after the linear slice/full replay certificate.
+- MANDATORY FLOOR GATE overturns the earlier optimistic running note above:
+  REJECTED at both primes. The algebraic points have 94 older selected
+  residual coefficients nonzero, all in bands 6..24, so
+  s9_d43_residual_184_zero and s9_nu_ge_43 fail. Diagnosis: stage 2 restored
+  the later rung graph but still reintroduced D23/D25 coordinates eliminated
+  by the parked quotient as independent variables, without their earlier
+  reconstruction graph. Thus the 175-row object is STILL an overapproximation
+  and is not a true D43_SURVIVOR object.
+- HONEST SPLIT: commissioned 175-row ideal NONEMPTY smooth dim81; actual
+  graph-preserving all-history D43 survivor family remains UNRESOLVED.
+  Completed-point rung26 rank8/9 remains pointwise evidence only. No floor,
+  no first depth kill; ell+ >=37 unchanged. Bank: SHEET6-DIRECTIONB.md 10.8
+  + cases/d43_graph_final_report.json and d43_graph_{emission,full_gate,
+  witness,floor,numeric_gate}_p*.json + prefix slice artifacts/drivers.

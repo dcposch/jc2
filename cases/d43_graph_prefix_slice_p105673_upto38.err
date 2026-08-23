@@ -1,0 +1,72 @@
+Initial seed for pseudo-random number generator is 843
+
+--------------- INPUT DATA ---------------
+#variables                      69
+#equations                      69
+#invalid equations               0
+field characteristic        105673
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size     131072 (2^17)
+max pair selection             ALL
+reduce gb                        1
+#threads                         4
+info level                       1
+generate pbm files               0
+------------------------------------------
+
+---------------- TIMINGS ----------------
+overall(elapsed)        0.01 sec
+overall(cpu)            0.03 sec
+select                  0.00 sec   8.6%
+symbolic prep.          0.00 sec  15.1%
+update                  0.01 sec  62.5%
+convert                 0.00 sec   3.0%
+linear algebra          0.00 sec   8.1%
+reduce gb               0.00 sec   0.0%
+-----------------------------------------
+
+---------- COMPUTATIONAL DATA -----------
+size of basis                    69
+#terms in basis                 137
+#pairs reduced                  117
+#GM criterion                 14589
+#redundant elements             103
+#rows reduced                   303
+#zero reductions                 14
+max. matrix data                430 x 555 (3.146%)
+max. symbolic hash table size  2^11
+max. basis hash table size     2^16
+-----------------------------------------
+
+
+
+------------------------------------------------------------------------------------
+msolve overall time           0.01 sec (elapsed) /  0.04 sec (cpu)
+------------------------------------------------------------------------------------
+	Command being timed: "msolve -v 1 -g 2 -t 4 --random-seed 843 -f cases43/d43_graph_prefix_slice_p105673_upto38.ms -o cases43/d43_graph_prefix_slice_p105673_upto38.out"
+	User time (seconds): 0.03
+	System time (seconds): 0.00
+	Percent of CPU this job got: 266%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7876
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1405
+	Voluntary context switches: 3
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

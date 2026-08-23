@@ -1,0 +1,27 @@
+I'll start by reading the local draft and workspace, then connect to box01 to reproduce the msolve crash.Box01 is up with 991 GB RAM. Next I’ll inspect the crash inputs, install gdb if needed, and start a debug build of msolve.There's already a clone at `~/msolve`. I'll install gdb, inspect that tree, and start looking at F4 size/index arithmetic.Installed msolve already has debug symbols. I’ll install gdb, inspect F4 size/index types, and start a crash run.gdb is installed. I’ll start a crash run on `upto40.ms` and search the F4/hash code for 32-bit overflow.The 38 vs 40 split looks like `int32` term×variable indexing: ~12.5M terms × 172 vars crosses `INT32_MAX`. I'll confirm that in the parser.Term counts confirm it: upto38 stays under `INT32_MAX` for `terms × vars`; upto40 does not. Next I’ll read `set_exponent_vector` and write a small reproducer plus the patch.The 38/40 split matches signed `pos * nvars` overflow. I’ll clone a debug tree, generate a small reproducer, and apply a 64-bit index patch.The 36 MB pair brackets the overflow. I’ll gdb that on the current binary and apply the 64-bit index patch.Patched binary is built. Next I’ll check the gdb crash, then run the reproducer and the test suite.Backtrace confirms it: `pos=-2147477296` from `(pos+j)*nvars`. I’ll run the patched binary on that reproducer next.**PR: https://github.com/algebraic-solving/msolve/pull/355**
+
+The crash was not F4 hash-table growth. It was 32-bit signed overflow in the **file parser**.
+
+`(pos+j)*nvars` in `store_exponent()` is done as `int32_t`. Once `nterms × nvars > INT32_MAX`, `pos` wraps negative and the write to `gens->exps` segfaults.
+
+That matches the 38/40 split on the original 172-variable system:
+
+| input | terms | terms × 172 | result |
+| --- | --- | --- | --- |
+| `upto38.ms` (325 MB) | 10,516,643 | 1.81e9 (under `INT32_MAX`) | computes |
+| `upto40.ms` (600 MB) | 18,949,882 | 3.26e9 (over) | SIGSEGV |
+| full 1.05 GB file | ~31M | ~5.3e9 (over `UINT32_MAX` too) | SIGSEGV, and the `calloc` size wraps |
+
+gdb on a 700 KB minimizer (10000 vars, 214750 copies of `x0`):
+
+```
+SIGSEGV in store_exponent (pos=-2147477296) at iofiles.c:58
+#1 get_coefficient_ff_and_term_from_line at iofiles.c:799
+       store_exponent(term, gens, (pos+j)*gens->nvars);
+```
+
+`pos=-2147477296` is `214749*10000` wrapped as int32.
+
+**Fix:** 64-bit offsets/allocations in `iofiles.c`, `set_exponent_vector` (F4 import), and the variable-order swap. 34 insertions / 32 deletions.
+
+**Checks:** unpatched minimizer SIGSEGV; patched computes GB `[1*x0^1]` in 31s. `make check` 64/64. Banked in `ops/msolve-issue-draft.md` and a 2026-08-23 `notes.md` line.

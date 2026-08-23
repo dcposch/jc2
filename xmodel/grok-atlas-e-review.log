@@ -1,0 +1,40 @@
+I'll run a hostile promotion-tier review of the 36-fiber D23 atlas and the corrected e-computation. First I'm loading the review skill and the two claim objects.This is a claim-level math review, not a git-diff pass. I'll read the two claim objects, the existing review style, and the evidence files.There's already a review log on disk. I'll pull the claim sections, prior review format, and the two artifact files next.I'll load the atlas JSON, the e-computation code, the spec, and a recent review for format, then start recomputing.The claim texts are in hand. Next I’ll parse both JSONs, finish `valuation_e2.py`, and hunt the ATLAS log lines.The JSON stores per-fiber md5s. I'll extract hash uniqueness, then read the e-pipeline and hunt the ATLAS logs.I have the e-pipeline. Next I’ll parse both JSONs, check the a00pp regression against the banked det23 rows, and recompute the 30-output stop-rule.I'll parse both artifacts in Python, check the a00pp regression, and try to reach the box01 ATLAS log.Atlas hashes are 36/36 distinct, so the GBs are not copies. I'll inspect a00pp’s missing fields, pull the box01 log, and start the e-recompute.Box01 has 70 distinct ATLAS lanes, and a00pp matches the banked files. Next I’ll verify remote GB hashes, recompute e, and test the 30-output stop-rule.e-recompute at w0/k0 matches. Next I’ll cross-check box01 md5s against the JSON, compute support hashes, and run the 30-output stop-rule.Support parsing on the remote files was too coarse. I'll hash supports from the banked GBs and recompute the 30-output delayed-loss.I have the recomputations. Writing the hostile review to `xmodel/grok-atlas-e-review.md` only.Hostile promotion-tier review is in `xmodel/grok-atlas-e-review.md`. No other files written. No git.
+
+## Object A — 36-fiber D23 atlas
+
+**CONFIRMED** at single-prime computational tier. **GAPS** for promotion and for a second prime. Not refuted.
+
+The copy-one-GB attack is closed. Each fiber got its own system:
+
+- 36/36 `fiber_ms_md5` distinct
+- 35/35 box01 fiber GB md5s distinct, 35/35 det23 GB md5s distinct
+- 35/35 `det_out_md5` match box01 byte-for-byte
+- a00pp matches the banked 8.S5 artifacts (`fiber_ms`, `det_out`, g-rows, w-vectors)
+- 70/70 ATLAS lanes `rc=0` in box01 `pilot.log`; lane scripts are real `msolve -g 2` on distinct files
+
+Support identity is real (monomial-for-monomial on banked a00pp plus remote a00mm / a11pm / a22pp). Distinct coefficients, one skeleton. GB ≠ `[1]` ⇒ nonempty over \(\overline{\mathbb F}_{105337}\) is the affine Nullstellensatz: 397- and 509-element reduced bases, no constant polynomial. Dim 13 → 11 recomputed from the LT staircase.
+
+**Tier deserved: INTERNAL / single-prime computational. Not a promotion.**
+
+The p105673 “vacuous spot-checks” are a skipped check, not a passed one. Severity: **HIGH for promotion**, medium as a bad-reduction residual on 35 fibers that already share the 3-prime a00pp staircase. 8.S8’s own scope box is correct; do not quote the family sentence without it.
+
+## Object B — corrected e
+
+**CONFIRMED** as `E_CANDIDATE` diagnostics of the commissioned 29×29 object. The eta29 lemma is **REFUTED** (as claimed). The stop-rule conclusion **survives** the 30-output repair.
+
+Replayed p105337 w0/k0: operator and zero-completion hashes match the JSON; G6 86/86; G7 2605/2605; G2d holds at both primes. Fail-closed w1/k0 also replays (`e = None`, ell 25–31). Argmin is first consistent `tf1/r1` at 295 \(= 6\cdot 56 + 7 - 48\). Fail-closed handling is correct and conservative for ≤ 11.
+
+Independent 30-output coverage on that operator:
+
+| object | delayed-loss ell |
+|---|---|
+| 29-out, 29-in (spec) | 24–31, all > 11 |
+| 29-out, all 30 in | 24 |
+| **30-out, all 30 in (repaired)** | **31** |
+| 30-out, any one stream free | **31** on all 30 |
+
+The extra output deepens the deficit. It does not create an \(e\le 11\). The *number* 295 dies under a 30×30 redesign (analogue 330 at w0/k0). The inequality ≫ 11 does not.
+
+**Tier deserved: `E_CANDIDATE` only. No DEPTH \(e\). No germ. No promotion.**
+
+The two “36”s are different objects (36 fibers vs 6 witnesses × 3 draws × 2 primes). Combined INTERNAL reading stands: survival at this prime on every fiber, no near-term germ on the witness family. D25 is still the discriminating computation.

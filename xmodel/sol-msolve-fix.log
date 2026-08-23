@@ -1,0 +1,609 @@
+Reading additional input from stdin...
+OpenAI Codex v0.149.0
+--------
+workdir: /Users/dc/code/math/jc72108
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a02afb-a945-7050-9d62-e68ee0603926
+--------
+user
+You are GPT 5.6 Sol, open-source contributor for the JC2 math campaign. TASK: fix a crash bug in msolve (the open-source Groebner basis library, github.com/algebraic-solving/msolve) that we triggered with a large legitimate polynomial system, and contribute the fix upstream as a PR. This is ordinary OSS maintenance: our input is a valid 86-row/172-var polynomial system over F_105337 and msolve 0.10.1 exits with a memory fault instead of computing -- likely an integer-overflow or allocation-size bug on very large rows (some have 2.4M terms). MATERIALS on box01 (ubuntu@54.175.21.169, key ~/.ssh/claude-cli.pem): the failing input ~/jc72108/cases43/d43fam_p105337_a00pp_verdict.ms (+ p105673 sibling); the bracketing pair d43split_p105337_upto38.ms (works) vs upto40.ms (crashes); draft notes ops/msolve-issue-draft.md. STEPS: (1) build msolve from source on box01 with debug info (./autogen.sh && ./configure CFLAGS="-g -O1" && make -j); (2) minimize the failing input (delta between upto38/upto40, then try trimming rows/terms) and capture a stack trace of the fault; (3) locate the defect in the source (check size arithmetic in F4 symbolic preprocessing / exponent packing / hash table growth for 32-bit overflow at multi-million-term scale) and write the smallest correct fix; (4) rebuild, confirm the minimized input and the original file now run (or proceed past the old fault), run the project test suite; (5) using local gh (authenticated): fork, branch, commit, push, open a PR with a MINIMAL body -- 2-3 sentences: what was wrong, the fix, and the crash evidence (trace excerpt + minimized input); no campaign context. (6) Bank PR URL + summary in ops/msolve-issue-draft.md + dated notes.md entry. If the defect is too invasive to fix safely, open an issue with reproducer + trace instead and bank that.
+codex
+I’ll reproduce this on box01, narrow the failing system, trace the fault, patch and verify msolve, then handle the upstream PR and record the result locally. I’ll keep the upstream text narrowly technical and fall back to an issue only if the fix cannot be made safely.
+  → Inspect the local notes and remote materials; identify/build the matching msolve source
+  • Minimize the reproducer and capture a debug stack trace
+  • Locate and implement the smallest safe fix
+  • Verify the minimized and original inputs and run tests
+  • Fork, commit, push, and open an upstream PR (or issue if unsafe)
+  • Record the upstream URL and summary in project notes
+exec
+/bin/zsh -lc "git status --short && sed -n '1,240p' ops/msolve-issue-draft.md && tail -n 120 notes.md" in /Users/dc/code/math/jc72108
+ succeeded in 0ms:
+ M .DS_Store
+ M AUDIT.md
+ M SHEET6-DIRECTIONB.md
+ M notes.md
+ M ops/FLEET.md
+ M ops/msolve-issue-draft.md
+ M phase0-email-draft.md
+?? APPROACHES.md
+?? cases/asm_manifest_p105337.json
+?? cases/asm_manifest_p105673.json
+?? cases/build_tails43.py
+?? cases/build_tails_modp.py
+?? cases/d23_atlas_p105337.json
+?? cases/d23_atlas_p105673.json
+?? cases/d23_ecandidates.json
+?? cases/d23_eplus.json
+?? cases/d23_witnesses_p105337.json
+?? cases/d23_witnesses_p105673.json
+?? cases/d25_assemble.py
+?? cases/d25_certificate_replay.json
+?? cases/d25_eplus.json
+?? cases/d25_eplus.py
+?? cases/d25_perfiber.py
+?? cases/d25_perfiber_p105337.json
+?? cases/d25_reduce.py
+?? cases/d25fam_p105337.ms
+?? cases/d25fam_p105337_a00mm.ms
+?? cases/d25fam_p105337_a00mp.ms
+?? cases/d25fam_p105337_a00pm.ms
+?? cases/d25fam_p105337_a00pp.ms
+?? cases/d25fam_p105337_a01mm.ms
+?? cases/d25fam_p105337_a01mp.ms
+?? cases/d25fam_p105337_a01pm.ms
+?? cases/d25fam_p105337_a01pp.ms
+?? cases/d25fam_p105337_a02mm.ms
+?? cases/d25fam_p105337_a02mp.ms
+?? cases/d25fam_p105337_a02pm.ms
+?? cases/d25fam_p105337_a02pp.ms
+?? cases/d25fam_p105337_a10mm.ms
+?? cases/d25fam_p105337_a10mp.ms
+?? cases/d25fam_p105337_a10pm.ms
+?? cases/d25fam_p105337_a10pp.ms
+?? cases/d25fam_p105337_a11mm.ms
+?? cases/d25fam_p105337_a11mp.ms
+?? cases/d25fam_p105337_a11pm.ms
+?? cases/d25fam_p105337_a11pp.ms
+?? cases/d25fam_p105337_a12mm.ms
+?? cases/d25fam_p105337_a12mp.ms
+?? cases/d25fam_p105337_a12pm.ms
+?? cases/d25fam_p105337_a12pp.ms
+?? cases/d25fam_p105337_a20mm.ms
+?? cases/d25fam_p105337_a20mp.ms
+?? cases/d25fam_p105337_a20pm.ms
+?? cases/d25fam_p105337_a20pp.ms
+?? cases/d25fam_p105337_a21mm.ms
+?? cases/d25fam_p105337_a21mp.ms
+?? cases/d25fam_p105337_a21pm.ms
+?? cases/d25fam_p105337_a21pp.ms
+?? cases/d25fam_p105337_a22mm.ms
+?? cases/d25fam_p105337_a22mp.ms
+?? cases/d25fam_p105337_a22pm.ms
+?? cases/d25fam_p105337_a22pp.ms
+?? cases/d25fam_p105673.ms
+?? cases/d25fam_p105673_a00mm.ms
+?? cases/d25fam_p105673_a00mp.ms
+?? cases/d25fam_p105673_a00pm.ms
+?? cases/d25fam_p105673_a00pp.ms
+?? cases/d25fam_p105673_a01mm.ms
+?? cases/d25fam_p105673_a01mp.ms
+?? cases/d25fam_p105673_a01pm.ms
+?? cases/d25fam_p105673_a01pp.ms
+?? cases/d25fam_p105673_a02mm.ms
+?? cases/d25fam_p105673_a02mp.ms
+?? cases/d25fam_p105673_a02pm.ms
+?? cases/d25fam_p105673_a02pp.ms
+?? cases/d25fam_p105673_a10mm.ms
+?? cases/d25fam_p105673_a10mp.ms
+?? cases/d25fam_p105673_a10pm.ms
+?? cases/d25fam_p105673_a10pp.ms
+?? cases/d25fam_p105673_a11mm.ms
+?? cases/d25fam_p105673_a11mp.ms
+?? cases/d25fam_p105673_a11pm.ms
+?? cases/d25fam_p105673_a11pp.ms
+?? cases/d25fam_p105673_a12mm.ms
+?? cases/d25fam_p105673_a12mp.ms
+?? cases/d25fam_p105673_a12pm.ms
+?? cases/d25fam_p105673_a12pp.ms
+?? cases/d25fam_p105673_a20mm.ms
+?? cases/d25fam_p105673_a20mp.ms
+?? cases/d25fam_p105673_a20pm.ms
+?? cases/d25fam_p105673_a20pp.ms
+?? cases/d25fam_p105673_a21mm.ms
+?? cases/d25fam_p105673_a21mp.ms
+?? cases/d25fam_p105673_a21pm.ms
+?? cases/d25fam_p105673_a21pp.ms
+?? cases/d25fam_p105673_a22mm.ms
+?? cases/d25fam_p105673_a22mp.ms
+?? cases/d25fam_p105673_a22pm.ms
+?? cases/d25fam_p105673_a22pp.ms
+?? cases/d25modp_test.log
+?? cases/d25pf1_run.sh
+?? cases/d25pf_lane.sh
+?? cases/d25pf_run.sh
+?? cases/d25pf_verdict.py
+?? cases/d43_famcheck.py
+?? cases/d43_family.py
+?? cases/d43_family2.py
+?? cases/d43_hunt.py
+?? cases/d43_liftquad.json
+?? cases/d43_liftquad.log
+?? cases/d43_peel.log
+?? cases/d43_program.json
+?? cases/d43_reduce.py
+?? cases/d43_reduce_modp.py
+?? cases/d43_regress.json
+?? cases/d43_regress.json.ck
+?? cases/d43_regress.log
+?? cases/d43_slices.json
+?? cases/d43_slices.log
+?? cases/d43_slices.py
+?? cases/d43_slices2.log
+?? cases/d43_smoke.json
+?? cases/d43_valgate.py
+?? cases/d43modp_p105337.log
+?? cases/d43valgate_p105337.log
+?? cases/d43valgate_p105673.log
+?? cases/directionb_det23_gb_p105337.out.txt
+?? cases/directionb_det23_gb_p105673.out.txt
+?? cases/directionb_det23_gb_p200257.out.txt
+?? cases/directionb_det23_p105337.ms
+?? cases/directionb_det23_p105337.rows.txt
+?? cases/directionb_det23_p105673.ms
+?? cases/directionb_det23_p105673.rows.txt
+?? cases/directionb_det23_p200257.ms
+?? cases/directionb_det23_p200257.rows.txt
+?? cases/directionb_row22red.rows.txt
+?? cases/directionb_row22red_build.py
+?? cases/directionb_row22red_p105337.ms
+?? cases/directionb_row22red_p105673.ms
+?? cases/directionb_row22red_p200257.ms
+?? cases/eplus43.py
+?? cases/eplus_certify.py
+?? cases/monodromy_td.py
+?? cases/nf_reduced_rows_p105337.txt
+?? cases/nf_reduced_rows_p105673.txt
+?? cases/nf_reduced_rows_p200257.txt
+?? cases/ox_calibration.py
+?? cases/row22red_bank.pkl
+?? cases/valuation_e.py
+?? cases/valuation_e2.py
+?? dist/ZENODO-METADATA-BUNDLE.md
+?? dist/jc72108-theory-bundle-v1.tar.gz
+?? dist/jc72108-theory-bundle-v1/
+?? ops/lane_eta.py
+?? ops/ox.sh
+?? ops/sg_autoupdate.sh
+?? ops/telemetry_samples/
+?? phase0-mo-answer-draft.md
+?? pilot-local.log
+?? xmodel/d25-forensics.md
+?? xmodel/grok-approaches.md
+?? xmodel/grok-atlas-e-review.log
+?? xmodel/grok-atlas-e-review.md
+?? xmodel/grok-bundle-review.log
+?? xmodel/grok-bundle-review.md
+?? xmodel/grok-d25cert-review.log
+?? xmodel/grok-d25cert-review.md
+?? xmodel/grok-det23-review.log
+?? xmodel/grok-det23-review.md
+?? xmodel/grok-dw-fidelity.log
+?? xmodel/grok-dw-fidelity.md
+?? xmodel/grok-h29-review.md
+?? xmodel/grok-h29.log
+?? xmodel/grok-k-g5-review.log
+?? xmodel/grok-k-g5-review.md
+?? xmodel/grok-mo-review.log
+?? xmodel/grok-mo-review.md
+?? xmodel/grok-mo-review2.log
+?? xmodel/grok-mo-review2.md
+?? xmodel/grok-newton-review.log
+?? xmodel/grok-newton-review.md
+?? xmodel/grok-orbits-review.log
+?? xmodel/grok-orbits-review.md
+?? xmodel/grok-round3.log
+?? xmodel/grok-round3.md
+?? xmodel/grok-vertexgap-fidelity.log
+?? xmodel/grok-vertexgap-fidelity.md
+?? xmodel/hc4-adjudication.md
+?? xmodel/nf-quickshot.md
+?? xmodel/ox-approaches.log
+?? xmodel/ox-approaches.md
+?? xmodel/ox-calibration.log
+?? xmodel/ox-calibration.md
+?? xmodel/sol-approaches.log
+?? xmodel/sol-approaches.md
+?? xmodel/sol-avenues3.log
+?? xmodel/sol-avenues3.md
+?? xmodel/sol-codim2.log
+?? xmodel/sol-codim2.md
+?? xmodel/sol-conjecture-k.md
+?? xmodel/sol-d43-adjudication.md
+?? xmodel/sol-d43adj.log
+?? xmodel/sol-d43nf.log
+?? xmodel/sol-g5-emission.log
+?? xmodel/sol-g5-emission.md
+?? xmodel/sol-h29-dichotomy.md
+?? xmodel/sol-h29.log
+?? xmodel/sol-ideas-0821.log
+?? xmodel/sol-ideas-0821.md
+?? xmodel/sol-lean-depthwitness.md
+?? xmodel/sol-lean-dw.log
+?? xmodel/sol-lean-fidelity.log
+?? xmodel/sol-lean-fidelity.md
+?? xmodel/sol-monodromy-td.md
+?? xmodel/sol-monodromy.log
+?? xmodel/sol-msolve-fix.log
+?? xmodel/sol-newton-lemma.log
+?? xmodel/sol-newton-lemma.md
+?? xmodel/sol-pcc-orbits.log
+?? xmodel/sol-pcc-orbits.md
+?? xmodel/sol-prob.log
+?? xmodel/sol-probabilities-0821.md
+?? xmodel/sol-round5.log
+?? xmodel/sol-round5.md
+?? xmodel/sol-round6.log
+?? xmodel/sol-round6.md
+?? xmodel/sol-software2.log
+?? xmodel/sol-software2.md
+?? xmodel/sol-wtc1.log
+?? xmodel/sol-wtc1.md
+?? xmodel/sol-xside-spec.md
+?? xmodel/sol-xside.log
+?? xmodel/websweep-2026-08-19.md
+?? xmodel/websweep-2026-08-20.md
+?? xmodel/websweep-2026-08-21.md
+?? xmodel/x-research.md
+# DRAFT GitHub issue for algebraic-solving/msolve (HOLD: needs user approval to file)
+
+Title: Silent mis-parse of parenthesized constant subexpressions (0.10.1)
+
+Body:
+msolve 0.10.1 silently mis-parses polynomial input containing parenthesized
+subexpressions, producing a wrong Groebner basis with exit code 0.
+
+Minimal reproduction (char 0, 1 variable):
+  x
+  0
+  x-(3+1)
+Expected: GB [x-4]. Actual: GB [x+1].
+
+The parser appears to drop the parenthesized group's operator context
+(related failure class to #354, silent x/2 mis-parse; PR #320's parser
+hardening may cover it — unmerged as of 2026-08-10).
+
+Impact: any pipeline emitting parenthesized .ms input gets silently wrong
+verdicts. Workaround we adopted: emit fully expanded monomial sums only,
+plus an input round-trip guard through an independent parser.
+
+Found during a large verification campaign (systems with ~100 vars over Q);
+happy to provide more cases.
+
+---
+
+# DRAFT issue 2 for algebraic-solving/msolve (HOLD: needs user approval to file)
+
+Title: SIGSEGV on large valid modular input (0.10.1, -g 2, both -t 1 and -t N)
+
+Body:
+msolve 0.10.1 segfaults (exit 139, core dumped) on large but well-formed
+positive-characteristic input; no output is produced and stderr shows only
+the RNG-seed line.
+
+Input class (found during a large verification campaign, mod p):
+  * ring: 172 variables, char 105337 (also reproduces at char 105673);
+  * 86 generators, fully expanded monomial sums (no parentheses), term
+    counts from 2 up to 2,420,711; total ~31M terms, file ~1.05 GB;
+  * input validated by an independent strict-grammar parser: all names
+    declared/unique, all coefficients in [0,p), no stray bytes.
+Invocation: msolve -v 2 -g 2 -t 8 -f FILE.ms -o out    -> SIGSEGV ~34 min
+            msolve -v 1 -g 2 -t 1 -f FILE.ms -o out    -> SIGSEGV ~50 min
+(-t 1 crash rules out a pure threading race; deterministic at both primes;
+ also reproduces on an 81-generator, 628 MB prefix of the same system --
+ smallest crashing prefix TBD, bisection in flight.)
+Host: 64-core, 991 GB RAM; RSS at crash far below limits (tens of GB).
+sha256 of the two full inputs:
+  00c9a4b44a49c3bbdbbce5658fe9f5714416e309a7f149d7e492a470733881b6 (p105337)
+  (p105673 file crashes identically)
+Suspected 32-bit index/size overflow in F4 structures rather than OOM.
+Happy to provide the reproducer files (large) or bisect further on request.
+  report => repo-reorg trigger condition (2026-08-21 ~15:40) is MET;
+  reorg agent may launch per that entry (confirm DC-side jc72108->jc2
+  rename status first).
+
+## 2026-08-22 ~01:30 D43 banked; Sol adjudication launched; reorg next
+- D43 first pass complete: STAGE 1 PASSED both primes (extended operator
+  + reproduction gates -- independently valuable, the band-44 window is
+  now real); stage 2 C-diag failure PRIME-SYMMETRIC at rung 28/tf1_55
+  (spec CONJECTURE territory; rung 26 verifies rank 4). Symmetry + exact
+  location favor STRUCTURE over bug -- Sol adjudicating (spec-defect
+  correction vs characterize-the-transition).
+- REORG: trigger MET; launching after Sol lane clears (file moves vs
+  live reads). Ox disposition awaiting DC.
+
+## 2026-08-22 ~01:50 ori config collision fixed; adjudication relaunched
+- ori install had overwritten ~/.codex/config.toml model -> stealth/
+  ox-alpha, silently breaking ALL Sol lanes (first casualty: d43adj
+  rc=1). Fix: model line removed (account default), backup at
+  config.toml.ox.bak; Sol + Ox both smoke-tested online. RULE: after any
+  third-party CLI install, smoke-test the EXISTING lanes.
+- sol-d43-adjudication relaunched on the working config.
+
+## 2026-08-22 ~02:50 D43 false-FAIL resolved -> chain resumed to the floor
+- sol-d43-adjudication (attempt 3, isolated lane): verdict (A)-corrected
+  -- CHECKER BUG (proportional() rejects lambda=0; zero poly IS 0*pa);
+  dormant-55 emission correct; rank-2 carrier does NOT terminate at rung
+  28. Two-line fix supplied. Resumption agent: patch -> stage-2 rerun
+  both primes -> EMPIRICAL validation gate (fresh code verifies the
+  zero-lambda factorization; substitutes for prose review) -> continue
+  to certificate + THE FLOOR MEASUREMENT (flat 37 vs risen).
+- Reorg holds until this chain lands (active file writes in cases43).
+
+## 2026-08-22 ~10:20 D43 fix applied; rung-28 PASSES; VALIDATION GATE PASS both primes
+- Sol's exact zero-safe proportional() fix applied to d43_family.py +
+  d43_family2.py, box01 cases43/ AND local cases/ mirrors byte-identical
+  (family2 sha256 f55354d3..., pre-fix c4e97d95... = the adjudication's
+  provenance hash). Failed first-pass logs archived as *.fail-20260822.
+- Stage-2 rerun (rerun_stage2.sh, detached+logged): p105337 family rc=0
+  -- ALL rungs 26..42 pass, ranks 4x8 + rung-42 rank 5 (independent-x),
+  52 compat rows + 34 parked = 86-row verdict system, 178 vars (=
+  adjudication (5.2) exactly). One rung-36 compat row is LINEAR, 6
+  terms, in the six level-48 tails. p105673 leg + famchecks in flight.
+- VALIDATION GATE (fresh independent code cases43/d43_valgate.py, no
+  import of the patched checker): BOTH primes 18/18 PASS -- rung-28
+  A = C.diag EXACT incl. the four lambda=0 boundary entries; published
+  v/w tables, subblock ranks 2+2, rank 4, minors 37062/84146, canonical
+  C_28 sha256s, d_j units ALL match the adjudication; rung 26 EXACT and
+  unchanged (log line identical to first pass). The false-FAIL is
+  empirically adjudicated: checker defect, not structure.
+- Verdict stage armed (run_d43_verdict.sh): msolve -g 2, 12h caps, both
+  primes, auto-launches on stage-2 DONE rc=0x4.
+
+## 2026-08-22 ~03:30 D43 prime-symmetric; rational rung-36 row spotted
+- p105673 emits the identical 86-row/178-var verdict system, same rank
+  census; the rung-36 linear row has EXACT 2:1 rational coefficient
+  structure at both primes: c1(tf1_48+tf2_48) + c2(2(tg1_48+tg2_48) +
+  tg01_48+tg02_48) -- char-0 object showing through mod p. Feed to the
+  eventual char-0 certification round. Verdict solves auto-launch next.
+
+## 2026-08-22 ~10:20 D43 STAGE 2 COMPLETE both primes; verdict stage launched (msolve, 12h caps)
+- Stage-2 rerun DONE 10:11:57 UTC, 4/4 rc=0: family2 all rungs 26..42
+  pass BOTH primes (ranks 4x8 + rung-42 rank 5); famcheck 104/104
+  compat-row evaluations vs the numeric engine EXACT per prime. Verdict
+  systems emitted: 86 rows (34 parked + 52 compat), true 172 vars.
+- The 6-term rung-36 LINEAR compat row is PRIME-SYMMETRIC with rational
+  2:1 structure: c1*(tf1_48+tf2_48)+c2*(2*(tg1_48+tg2_48)+tg01_48+
+  tg02_48), (c1,c2)=(48635,54013)@105337, (50809,18288)@105673.
+- Emission footnote: first .ms/.sing emission listed 6 vars twice
+  (x16,x19,x24,x27,x33,x38; deepvars-vs-GBVARS dedup miss) -> msolve
+  instant rc=1 "Duplicate variable name". allvars dedup patched into
+  d43_family2.py (mirrors synced, sha256 8c0f7fd3...); emitted headers
+  rewritten in place, generator sections sha256-verified byte-identical.
+- msolve -g 2 -t 8, 12h caps, relaunched both primes 10:16:39 UTC
+  (run_d43_verdict.sh round 2, detached; ~1.2G RSS each at parse).
+  EMPTY (GB=[1]) => finite-depth chart kill, no survivor to measure;
+  NONEMPTY => dim + witnesses -> eplus43 --survivor floor measurement.
+
+## 2026-08-22 ~11:15 D43 verdict: msolve SIGSEGV both primes; input VALIDATED clean; reroute to census + split ladder
+- msolve 0.10.1 (-g 2 -t 8) rc=139 SIGSEGV at BOTH primes after ~34 min
+  (10:50Z), no output; v2log holds only the RNG-seed line ("dumped
+  core"). Deterministic, prime-symmetric.
+- EMISSION VALIDATION (fresh code, cases43/d43_msval.py, no emitter
+  imports): PASS both primes -- 172 header names valid+unique, ALL 172
+  used, 86 generators, every generator fullmatches the strict term
+  grammar, zero stray characters, coefficients in [0,p). Term counts
+  match the reports except exactly the six rung-28 rows at -16 terms
+  each (the uf30 scope-pin monomial drop; prime-symmetric, expected).
+  REGENERATION: patched emitter rerun (d43regen prefix, p105337) is
+  BYTE-IDENTICAL to the header-rewritten verdict.ms => the dedup
+  rewrite introduced nothing. VERDICT: msolve crashed on VALID input
+  (reportable upstream; reproducer hunt in flight via the ladder).
+- Certificate-route notes: compat rows are ALREADY NF mod the det23
+  509-el GB (built from d43red checkpoints), and no D25-family GB
+  exists to quickshot against (D25FAM msolve = 48h timeouts; the D25
+  verdict came from certificate replay). Runnable analogs launched:
+  (a) d43_census2.py EXACT per-rung polynomial-rank/support census of
+  the 52 compat rows (sparse elimination, no sampling), both primes;
+  (b) run_d43_splits.sh msolve prefix ladder p105337 (parked, +r26,
+  ..., +r36; 3h caps): crash bisection AND certificate attempts -- any
+  subsystem GB [1] decides the FULL verdict EMPTY (superset ideal).
+
+## 2026-08-22 ~12:15 D43 census: compat rows FULL RANK 52 -- no linear compression; parallel ladder up
+- d43_census2.py (exact sparse elimination over the union supports, no
+  sampling): all nine rung blocks have full polynomial rank (6/6/5/6/6/
+  6/6/6/5), support-DISJOINT across rungs => global rank 52/52 at BOTH
+  primes. Union support sizes IDENTICAL across primes (20892, 42114,
+  80595, 145189, 263318, 473823, 818235, 1405548, 2408813) -- the
+  cross-prime support-identity echo again. Quickshot-style linear
+  compression yields NOTHING: the verdict genuinely needs a solver.
+- Split ladder converted to parallel (10 msolve runs, 3h caps): parked
+  (control; D25FAM precedent = 48h timeout, expect rc=124), upto26..
+  upto40 prefixes (certificate attempts: any [1] => full EMPTY; also
+  crash-threshold bisection), full-file -t 1 (threading hypothesis).
+
+## 2026-08-22 ~09:05 credits restored; Sol-first rebalance live
+- Two Sol lanes launched under the rebalance: (1) msolve segfault fix ->
+  upstream PR (background; gdb on box01 source build, minimal PR per DC
+  spec); (2) THE D43 NF-certificate route (Sol owns end-to-end: NF ->
+  affine hunt -> verdict -> floor vs 37, or structural-hardening bank).
+  Sweep relaunch queued behind (credit casualty).
+
+exec
+/bin/zsh -lc "ssh -i ~/.ssh/claude-cli.pem -o BatchMode=yes -o StrictHostKeyChecking=accept-new ubuntu@54.175.21.169 'hostname; uname -a; ls -la ~/jc72108/cases43 | sed -n \"1,160p\"; find ~ -maxdepth 3 -type d \\( -name msolve -o -name \".git\" \\) -print | sed -n \"1,120p\"'" in /Users/dc/code/math/jc72108
+ succeeded in 1205ms:
+ip-172-30-0-237
+Linux ip-172-30-0-237 7.0.0-1010-aws #10~24.04.1-Ubuntu SMP PREEMPT Mon Jul 27 17:41:33 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+total 9975644
+drwxr-xr-x  6 ubuntu ubuntu      28672 Aug 22 15:26 .
+drwxrwxr-x 10 ubuntu ubuntu       4096 Aug 21 23:15 ..
+drwxrwxr-x  2 ubuntu ubuntu       4096 Aug 22 12:00 __pycache__
+-rw-r--r--  1 ubuntu ubuntu      10395 Aug 14 18:17 am_check.py
+-rw-r--r--  1 ubuntu ubuntu      38140 Aug 19 23:38 asm_manifest_p105337.json
+-rw-r--r--  1 ubuntu ubuntu      38144 Aug 19 23:38 asm_manifest_p105673.json
+-rw-r--r--  1 ubuntu ubuntu       1924 Aug  5 23:34 bench_fastcoef.py
+-rw-r--r--  1 ubuntu ubuntu      20641 Aug 12 10:23 book_enum.py
+-rw-r--r--  1 ubuntu ubuntu      41671 Aug 13 03:01 book_offaxis.py
+-rw-r--r--  1 ubuntu ubuntu       4416 Aug 21 21:58 build_tails43.py
+-rw-r--r--  1 ubuntu ubuntu      18051 Aug 21 23:19 build_tails_modp.py
+-rw-r--r--  1 ubuntu ubuntu      15133 Aug 12 08:07 classical_tests.py
+-rw-r--r--  1 ubuntu ubuntu      87468 Aug 19 09:25 d23_atlas_p105337.json
+-rw-r--r--  1 ubuntu ubuntu      87528 Aug 19 10:52 d23_atlas_p105673.json
+-rw-r--r--  1 ubuntu ubuntu    2291979 Aug 19 09:25 d23_ecandidates.json
+-rw-r--r--  1 ubuntu ubuntu     255037 Aug 20 17:33 d23_eplus.json
+-rw-r--r--  1 ubuntu ubuntu     102651 Aug 19 07:43 d23_witnesses_p105337.json
+-rw-r--r--  1 ubuntu ubuntu     102673 Aug 19 07:43 d23_witnesses_p105673.json
+-rw-r--r--  1 ubuntu ubuntu      60201 Aug 19 23:36 d25_assemble.py
+-rw-r--r--  1 ubuntu ubuntu     247466 Aug 21 19:06 d25_certificate_replay.json
+-rw-r--r--  1 ubuntu ubuntu    1802814 Aug 21 20:44 d25_eplus.json
+-rw-r--r--  1 ubuntu ubuntu      55415 Aug 21 20:19 d25_eplus.py
+-rw-r--r--  1 ubuntu ubuntu      18755 Aug 20 16:18 d25_perfiber.py
+-rw-r--r--  1 ubuntu ubuntu      12327 Aug 20 17:51 d25_perfiber_p105337.json
+-rw-r--r--  1 ubuntu ubuntu      17632 Aug 19 22:20 d25_reduce.py
+-rw-r--r--  1 ubuntu ubuntu     167150 Aug 19 23:37 d25fam_p105337.ms
+-rw-r--r--  1 ubuntu ubuntu     126654 Aug 19 23:37 d25fam_p105337_a00mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126652 Aug 19 23:37 d25fam_p105337_a00mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126665 Aug 19 23:37 d25fam_p105337_a00pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126663 Aug 19 23:37 d25fam_p105337_a00pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126675 Aug 19 23:37 d25fam_p105337_a01mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126674 Aug 19 23:37 d25fam_p105337_a01mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126676 Aug 19 23:37 d25fam_p105337_a01pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126675 Aug 19 23:37 d25fam_p105337_a01pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126654 Aug 19 23:38 d25fam_p105337_a02mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126647 Aug 19 23:38 d25fam_p105337_a02mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126655 Aug 19 23:38 d25fam_p105337_a02pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126648 Aug 19 23:38 d25fam_p105337_a02pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126669 Aug 19 23:38 d25fam_p105337_a10mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126660 Aug 19 23:38 d25fam_p105337_a10mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126663 Aug 19 23:38 d25fam_p105337_a10pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126654 Aug 19 23:38 d25fam_p105337_a10pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126678 Aug 19 23:38 d25fam_p105337_a11mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126668 Aug 19 23:38 d25fam_p105337_a11mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126682 Aug 19 23:38 d25fam_p105337_a11pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126672 Aug 19 23:38 d25fam_p105337_a11pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126732 Aug 19 23:38 d25fam_p105337_a12mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126723 Aug 19 23:38 d25fam_p105337_a12mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126726 Aug 19 23:38 d25fam_p105337_a12pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126717 Aug 19 23:38 d25fam_p105337_a12pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126651 Aug 19 23:38 d25fam_p105337_a20mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126648 Aug 19 23:38 d25fam_p105337_a20mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126658 Aug 19 23:38 d25fam_p105337_a20pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126655 Aug 19 23:38 d25fam_p105337_a20pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126693 Aug 19 23:38 d25fam_p105337_a21mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126684 Aug 19 23:38 d25fam_p105337_a21mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126700 Aug 19 23:38 d25fam_p105337_a21pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126691 Aug 19 23:38 d25fam_p105337_a21pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126684 Aug 19 23:38 d25fam_p105337_a22mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126674 Aug 19 23:38 d25fam_p105337_a22mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126701 Aug 19 23:38 d25fam_p105337_a22pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126691 Aug 19 23:38 d25fam_p105337_a22pp.ms
+-rw-r--r--  1 ubuntu ubuntu     167195 Aug 19 23:38 d25fam_p105673.ms
+-rw-r--r--  1 ubuntu ubuntu     126728 Aug 19 23:38 d25fam_p105673_a00mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126721 Aug 19 23:38 d25fam_p105673_a00mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126725 Aug 19 23:38 d25fam_p105673_a00pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126718 Aug 19 23:38 d25fam_p105673_a00pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126720 Aug 19 23:38 d25fam_p105673_a01mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126717 Aug 19 23:38 d25fam_p105673_a01mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126707 Aug 19 23:38 d25fam_p105673_a01pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126704 Aug 19 23:38 d25fam_p105673_a01pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126681 Aug 19 23:38 d25fam_p105673_a02mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126685 Aug 19 23:38 d25fam_p105673_a02mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126676 Aug 19 23:38 d25fam_p105673_a02pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126680 Aug 19 23:38 d25fam_p105673_a02pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126753 Aug 19 23:38 d25fam_p105673_a10mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126756 Aug 19 23:38 d25fam_p105673_a10mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126737 Aug 19 23:38 d25fam_p105673_a10pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126740 Aug 19 23:38 d25fam_p105673_a10pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126727 Aug 19 23:38 d25fam_p105673_a11mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126725 Aug 19 23:38 d25fam_p105673_a11mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126713 Aug 19 23:38 d25fam_p105673_a11pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126711 Aug 19 23:38 d25fam_p105673_a11pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126706 Aug 19 23:38 d25fam_p105673_a12mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126705 Aug 19 23:38 d25fam_p105673_a12mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126682 Aug 19 23:38 d25fam_p105673_a12pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126681 Aug 19 23:38 d25fam_p105673_a12pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126688 Aug 19 23:38 d25fam_p105673_a20mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126682 Aug 19 23:38 d25fam_p105673_a20mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126668 Aug 19 23:38 d25fam_p105673_a20pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126662 Aug 19 23:38 d25fam_p105673_a20pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126734 Aug 19 23:38 d25fam_p105673_a21mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126738 Aug 19 23:38 d25fam_p105673_a21mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126722 Aug 19 23:38 d25fam_p105673_a21pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126726 Aug 19 23:38 d25fam_p105673_a21pp.ms
+-rw-r--r--  1 ubuntu ubuntu     126731 Aug 19 23:38 d25fam_p105673_a22mm.ms
+-rw-r--r--  1 ubuntu ubuntu     126727 Aug 19 23:38 d25fam_p105673_a22mp.ms
+-rw-r--r--  1 ubuntu ubuntu     126721 Aug 19 23:38 d25fam_p105673_a22pm.ms
+-rw-r--r--  1 ubuntu ubuntu     126717 Aug 19 23:38 d25fam_p105673_a22pp.ms
+-rw-r--r--  1 ubuntu ubuntu       1236 Aug 20 17:48 d25pf1_run.sh
+-rw-r--r--  1 ubuntu ubuntu        644 Aug 20 16:20 d25pf_lane.sh
+-rw-r--r--  1 ubuntu ubuntu       1037 Aug 20 16:20 d25pf_run.sh
+-rw-r--r--  1 ubuntu ubuntu       8913 Aug 20 16:19 d25pf_verdict.py
+-rw-r--r--  1 ubuntu ubuntu       4004 Aug 22 12:06 d43_census2.py
+-rw-r--r--  1 ubuntu ubuntu       5388 Aug 21 23:32 d43_famcheck.py
+-rw-r--r--  1 ubuntu ubuntu      14797 Aug 22 09:49 d43_family.py
+-rw-r--r--  1 ubuntu ubuntu      13388 Aug 22 10:15 d43_family2.py
+-rw-r--r--  1 ubuntu ubuntu      21464 Aug 21 22:50 d43_hunt.py
+-rw-r--r--  1 ubuntu ubuntu       5265 Aug 21 22:47 d43_liftquad.json
+-rw-r--r--  1 ubuntu ubuntu       4366 Aug 22 11:56 d43_msval.py
+-rw-r--r--  1 ubuntu ubuntu      16959 Aug 21 22:52 d43_reduce.py
+-rw-r--r--  1 ubuntu ubuntu       7211 Aug 21 23:30 d43_reduce_modp.py
+-rw-r--r--  1 ubuntu ubuntu       2682 Aug 21 23:13 d43_slices.json
+-rw-r--r--  1 ubuntu ubuntu       6381 Aug 21 22:50 d43_slices.py
+-rw-r--r--  1 ubuntu ubuntu      69602 Aug 21 22:47 d43_smoke.json
+-rw-r--r--  1 ubuntu ubuntu      10188 Aug 22 09:54 d43_valgate.py
+-rw-rw-r--  1 ubuntu ubuntu        804 Aug 22 12:06 d43census_p105337.log
+-rw-rw-r--  1 ubuntu ubuntu        816 Aug 22 12:07 d43census_p105673.log
+-rw-rw-r--  1 ubuntu ubuntu       3176 Aug 22 17:24 d43chain.log
+-rw-rw-r--  1 ubuntu ubuntu        982 Aug 22 09:54 d43fam_p105337.log
+-rw-rw-r--  1 ubuntu ubuntu        542 Aug 22 00:06 d43fam_p105337.log.fail-20260822
+-rw-rw-r--  1 ubuntu ubuntu 1049421622 Aug 22 10:15 d43fam_p105337_a00pp.sing
+-rw-rw-r--  1 ubuntu ubuntu       3636 Aug 22 09:53 d43fam_p105337_a00pp_report.json
+-rw-rw-r--  1 ubuntu ubuntu 1049421804 Aug 22 10:15 d43fam_p105337_a00pp_verdict.ms
+-rw-rw-r--  1 ubuntu ubuntu          0 Aug 22 10:16 d43fam_p105337_a00pp_verdict.out
+-rw-rw-r--  1 ubuntu ubuntu        124 Aug 22 10:50 d43fam_p105337_a00pp_verdict.v2log
+-rw-rw-r--  1 ubuntu ubuntu        982 Aug 22 10:04 d43fam_p105673.log
+-rw-rw-r--  1 ubuntu ubuntu        542 Aug 22 00:08 d43fam_p105673.log.fail-20260822
+-rw-rw-r--  1 ubuntu ubuntu 1049515880 Aug 22 10:15 d43fam_p105673_a00pp.sing
+-rw-rw-r--  1 ubuntu ubuntu       3636 Aug 22 10:04 d43fam_p105673_a00pp_report.json
+-rw-rw-r--  1 ubuntu ubuntu 1049516062 Aug 22 10:15 d43fam_p105673_a00pp_verdict.ms
+-rw-rw-r--  1 ubuntu ubuntu          0 Aug 22 10:16 d43fam_p105673_a00pp_verdict.out
+-rw-rw-r--  1 ubuntu ubuntu        124 Aug 22 10:50 d43fam_p105673_a00pp_verdict.v2log
+-rw-rw-r--  1 ubuntu ubuntu       1154 Aug 22 10:01 d43famchk_p105337.log
+-rw-rw-r--  1 ubuntu ubuntu        612 Aug 22 00:06 d43famchk_p105337.log.fail-20260822
+-rw-rw-r--  1 ubuntu ubuntu       1154 Aug 22 10:11 d43famchk_p105673.log
+-rw-rw-r--  1 ubuntu ubuntu        612 Aug 22 00:08 d43famchk_p105673.log.fail-20260822
+-rw-rw-r--  1 ubuntu ubuntu        124 Aug 22 13:00 d43full_t1.err
+-rw-rw-r--  1 ubuntu ubuntu          0 Aug 22 12:09 d43full_t1.out
+-rw-rw-r--  1 ubuntu ubuntu        371 Aug 21 23:58 d43modp_p105337.log
+-rw-rw-r--  1 ubuntu ubuntu  909942294 Aug 21 23:58 d43modp_p105337_a00pp.pkl
+-rw-rw-r--  1 ubuntu ubuntu        371 Aug 22 00:00 d43modp_p105673.log
+-rw-rw-r--  1 ubuntu ubuntu  910014740 Aug 22 00:00 d43modp_p105673_a00pp.pkl
+-rw-rw-r--  1 ubuntu ubuntu       1377 Aug 22 11:58 d43msval_p105337.log
+-rw-rw-r--  1 ubuntu ubuntu       1377 Aug 22 12:00 d43msval_p105673.log
+drwxrwxr-x  2 ubuntu ubuntu       4096 Aug 22 00:08 d43red
+-rw-rw-r--  1 ubuntu ubuntu      13637 Aug 22 00:06 d43red_p105337.log
+-rw-rw-r--  1 ubuntu ubuntu      13637 Aug 22 00:08 d43red_p105673.log
+-rw-rw-r--  1 ubuntu ubuntu       1007 Aug 22 12:04 d43regen_p105337.log
+-rw-rw-r--  1 ubuntu ubuntu 1049421622 Aug 22 12:04 d43regen_p105337_a00pp.sing
+-rw-rw-r--  1 ubuntu ubuntu       3636 Aug 22 12:04 d43regen_p105337_a00pp_report.json
+-rw-rw-r--  1 ubuntu ubuntu 1049421804 Aug 22 12:04 d43regen_p105337_a00pp_verdict.ms
+-rw-rw-r--  1 ubuntu ubuntu        124 Aug 22 17:24 d43rep_parked_r40.err
+-rw-rw-r--  1 ubuntu ubuntu  288088061 Aug 22 15:26 d43rep_parked_r40.ms
+-rw-rw-r--  1 ubuntu ubuntu          0 Aug 22 15:26 d43rep_parked_r40.out
+-rw-rw-r--  1 ubuntu ubuntu        124 Aug 22 17:24 d43rep_r40only.err
+-rw-rw-r--  1 ubuntu ubuntu  287961541 Aug 22 15:26 d43rep_r40only.ms
+-rw-rw-r--  1 ubuntu ubuntu          0 Aug 22 15:26 d43rep_r40only.out
+-rw-rw-r--  1 ubuntu ubuntu        681 Aug 22 12:08 d43split_p105337_parked.err
+/home/ubuntu/msolve
+/home/ubuntu/msolve/src/msolve
+/home/ubuntu/msolve/.git
+/home/ubuntu/msolve/test/msolve
+
+ERROR: This content was flagged for possible cybersecurity risk. If this seems wrong, try rephrasing your request. To get authorized for security work, join the Trusted Access for Cyber program: https://chatgpt.com/cyber
+ERROR: This content was flagged for possible cybersecurity risk. If this seems wrong, try rephrasing your request. To get authorized for security work, join the Trusted Access for Cyber program: https://chatgpt.com/cyber
+tokens used
+6,131

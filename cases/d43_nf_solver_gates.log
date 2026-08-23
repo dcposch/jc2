@@ -1,0 +1,34 @@
+D43 NF SOLVER GATES -- INTERNAL / UNREVIEWED
+Date: 2026-08-22 UTC
+Host: box01 (Ubuntu)
+msolve: 0.10.1, -g 2 -t 8
+Singular: 4.3.2, slimgb
+
+SAFETY GATE
+full 86-row verdict files: NOT RUN by this route
+
+GENERIC CERTIFIED CELL POINT (52 rows, 144 variables)
+p105337 msolve 1800s: rc=124 TIMEOUT; stdout=0 bytes; stderr=0 bytes
+p105673 msolve 1800s: rc=124 TIMEOUT; stdout=0 bytes; stderr=0 bytes
+p105337 Singular 900s: rc=124 TIMEOUT; no basis output
+p105673 Singular 900s: rc=124 TIMEOUT; no basis output
+
+D25-FREE-ZERO WITNESS SLICE (52 rows, 116 variables, 46428 terms)
+p105337 msolve 900s: rc=124 TIMEOUT; stdout=0 bytes; stderr=0 bytes
+p105673 msolve 900s: rc=124 TIMEOUT; stdout=0 bytes; stderr=0 bytes
+p105337 Singular 900s: rc=124 TIMEOUT; no basis output
+p105673 Singular 900s: rc=124 TIMEOUT; no basis output
+
+EXTERNAL-TAIL-ZERO D25-PARAMETER SLICE (51 rows, 14 variables)
+p105337 msolve 1800s: rc=124 TIMEOUT; stdout=0 bytes; stderr=0 bytes
+p105673 msolve 1800s: rc=124 TIMEOUT; stdout=0 bytes; stderr=0 bytes
+p105337 Singular 900s: rc=124 TIMEOUT; no basis output
+p105673 Singular 900s: rc=124 TIMEOUT; no basis output
+
+POLYNOMIAL LEFT-SYZYGY GATE
+p105337 Singular 900s on the 92x52 threshold-53 coefficient transpose:
+rc=124 TIMEOUT; no residual system emitted
+
+INTERPRETATION
+No gate crashed. A timeout and an empty output are not an algebraic verdict.
+EMPTY/NONEMPTY remains unresolved; no dimension, witness, or floor follows.

@@ -1,0 +1,79 @@
+# true core, split prime p=200257, r3=28908 (s=sqrt3 substituted)
+# 16 UNIT pivots (all 4 h-branches; equivalence tier, w!=0 chart):
+#   tf1_44 <- Row_12[eta^2] (unit)
+#   tf2_44 <- Row_12[eta^5] (unit)
+#   tf1_46 <- Row_14[eta^0] (unit)
+#   tf2_46 <- Row_14[eta^3] (unit)
+#   tf1_43 <- Row_16[eta^1] (unit)
+#   tf1_48 <- Row_16[eta^4] (unit)
+#   tf2_43 <- Row_16[eta^7] (unit)
+#   tf2_48 <- Row_16[eta^10] (unit)
+#   tf1_45 <- Row_18[eta^2] (unit)
+#   tf1_50 <- Row_18[eta^5] (unit)
+#   tf2_45 <- Row_18[eta^8] (unit)
+#   tf2_50 <- Row_18[eta^11] (unit)
+#   tf1_47 <- Row_20[eta^0] (unit)
+#   tf1_52 <- Row_20[eta^3] (unit)
+#   tf2_47 <- Row_20[eta^6] (unit)
+#   tf2_52 <- Row_20[eta^9] (unit)
+eq0 = Row_6[eta^2]
+eq1 = Row_6[eta^5]
+eq2 = Row_6[eta^8]
+eq3 = Row_6[eta^11]
+eq4 = Row_6[eta^14]
+eq5 = Row_6[eta^17]
+eq6 = Row_6[eta^20]
+eq7 = Row_6[eta^23]
+eq8 = Row_6[eta^26]
+eq9 = Row_8[eta^0]
+eq10 = Row_8[eta^3]
+eq11 = Row_8[eta^6]
+eq12 = Row_8[eta^9]
+eq13 = Row_8[eta^12]
+eq14 = Row_8[eta^15]
+eq15 = Row_8[eta^18]
+eq16 = Row_8[eta^21]
+eq17 = Row_8[eta^24]
+eq18 = Row_8[eta^27]
+eq19 = Row_10[eta^1]
+eq20 = Row_10[eta^4]
+eq21 = Row_10[eta^7]
+eq22 = Row_10[eta^10]
+eq23 = Row_10[eta^13]
+eq24 = Row_10[eta^16]
+eq25 = Row_10[eta^19]
+eq26 = Row_10[eta^22]
+eq27 = Row_10[eta^25]
+eq28 = Row_12[eta^8]
+eq29 = Row_12[eta^11]
+eq30 = Row_12[eta^14]
+eq31 = Row_12[eta^17]
+eq32 = Row_12[eta^20]
+eq33 = Row_12[eta^23]
+eq34 = Row_12[eta^26]
+eq35 = Row_14[eta^6]
+eq36 = Row_14[eta^9]
+eq37 = Row_14[eta^12]
+eq38 = Row_14[eta^15]
+eq39 = Row_14[eta^18]
+eq40 = Row_14[eta^21]
+eq41 = Row_14[eta^24]
+eq42 = Row_14[eta^27]
+eq43 = Row_16[eta^13]
+eq44 = Row_16[eta^16]
+eq45 = Row_16[eta^19]
+eq46 = Row_16[eta^22]
+eq47 = Row_16[eta^25]
+eq48 = Row_16[eta^28]
+eq49 = Row_18[eta^14]
+eq50 = Row_18[eta^17]
+eq51 = Row_18[eta^20]
+eq52 = Row_18[eta^23]
+eq53 = Row_18[eta^26]
+eq54 = Row_20[eta^12]
+eq55 = Row_20[eta^15]
+eq56 = Row_20[eta^18]
+eq57 = Row_20[eta^21]
+eq58 = Row_20[eta^24]
+eq59 = Row_20[eta^27]
+# vars: 34 template (incl. leftover highs) + 6 radgens + 3 sat

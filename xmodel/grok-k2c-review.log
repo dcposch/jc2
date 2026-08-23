@@ -1,0 +1,20 @@
+I'll read Theorem 2.1 in full, then independently recompute the Henon chain, pole orders, and boundary identity so the verdict can actually refute the claim if it fails.Theorem 2.1 is in hand. Next I’ll compute the short Hénon chains and the r=0 case directly, including Jacobian, pole orders, and the homogenised boundary identity.I have the claim structure. Next I’ll compute the short chains and the r=0 parametrization in Singular/Python, then extract characteristic Puiseux exponents rather than trusting the gcd bookkeeping.I’ll compute the fiber parametrizations, Jacobians, and Puiseux supports explicitly so the characteristic-index claim can be refuted if the gcd drops are accidental.The first Puiseux extraction looks buggy, and the (7,3,2) vs (7,6) drop is exactly the kind of failure I should try to force. I’ll fix the reversion and check Sigray’s definition of κ.The r=0 series matches (7,3,2) with denominator 42. I’ll write the verdict now from the explicit polynomials, pole-order arithmetic, and Jacobian identities.Verdict is in `xmodel/grok-k2c-review.md`. Theorem 2.1 stands; unrestricted K2C does not.
+
+**(i)–(vi): all CONFIRMED** by expansion, not by quoting the paper.
+
+Machinery:
+- `H_q(u,v)=(v,v^q-u)` has `J=1` and inverse `(U,V)\mapsto(U^q-V,U)`.
+- `q=(2)`: `P_2=y^2-x`.
+- `q=(2,2)`: `P_2=y^2-x`, `P_3=y^4-2xy^2+x^2-y`, Jacobian `1`, homogenized Jacobian `Z^4`, fiber pole orders `n_0=2`, `n_1=1`.
+
+`r=0` (`q=(7,3,2,2)`, chars `(7,3,2)`):
+```
+P_4 = y^{42}-6xy^{35}+15x^2y^{28}-20x^3y^{21}-2y^{22}
+      +15x^4y^{14}+6xy^{15}-6x^5y^7-6x^2y^8-y^7
+      +x^6+2x^3y+y^2+x
+```
+`deg(f_0,g_0)=(42,84)`, affine Jacobian `1`, inverse recovers `(x,y)`, homogenized Jacobian `Z^{124}`. On `P_4=1`: `n=(42,6,2,1)`, ratios `(7,3,2)`. Zariski series of `y` vs `x` drops `(42\to6\to2\to1)` with indices `(7,3,2)` and denominator `42`.
+
+**Unrestricted K2C is FALSE:** this is a genuine automorphism (`td=1`) with `kappa_r=42\cdot2^r\to\infty` and the full boundary identity.
+
+**Scoping is legitimate.** The family is one-pole, reduced type `(1,2)`, and degree-minimizes to a linear automorphism. It does not realize residue-A type `(2,3)`, `td=6`, two poles, and does not threaten that sector.

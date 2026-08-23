@@ -1,0 +1,73 @@
+{
+ "artifact_sha256": {
+  "build_tails43.py": "92ea21461ad86274473b984fdbf64c4103f18f320e4e60d0aec430ab29999231",
+  "build_tails_modp.py": "cf62626f8f7ce144649924e773df9f68d692c06c009c7ab5606fe6fbac459f5e",
+  "d43_famcheck.py": "438a12133ef815722eab438f2f29b9b9548e29c3da31c481433a33ce850fe22f",
+  "d43_family.py": "023004a649d2d488adbabae3031d546e2d7dec2258cddef84fd6f8a0ebbc9822",
+  "d43_family2.py": "c4e97d9542faea59303dfb4c4584632f152fb1f22f5eb2d34151833305abe332",
+  "d43_hunt.py": "4a6e3acb32376200d7de896c16f7bbe170dbf37f11bc04e3ee3c4b4403f5ea32",
+  "d43_liftquad.json": "305c5ccd5383211456412f2614003ba028d97dab87a3455ea66e25a4f6f16210",
+  "d43_reduce.py": "27f2f496055a22c9131134bd80163d8fa53b9c20acf8b3e93722b545e95ea44d",
+  "d43_reduce_modp.py": "e991ebd0d7d48144bbc14c2e6f6f961d9529ef1b34bc9a3375d490681b4c8fb2",
+  "d43_regress.json": "88f08d24e06a7506250dde010b072691ca96dd9730dfcdd493b4d70ed48a37c9",
+  "d43_slices.json": "42f525e69e97bedc8fe9510cb59ecad6457fa3312891073399e588759042210c",
+  "d43_slices.py": "0872c155c81bf81062c3e64fd86b4ae7cfa211eb85ae72033a7208efa484d621",
+  "d43_smoke.json": "7fe1384642257d2a17d0e534502f133b2b881ce41f7d38d6a9077582c8f39c25",
+  "eplus43.py": "94db6c25df5254a040522b7bd5afe38f19577c267c8e61f57b05d3b0dfd3fe1c"
+ },
+ "commission": "THE D43 PROGRAM (sol-h29-dichotomy sect 4/7; sol-xside-spec followed exactly, CONJECTURES fail-closed)",
+ "date": "2026-08-21",
+ "stage1_regression": {
+  "all_pass": true,
+  "char0_crosscheck": [
+   {
+    "pass": true,
+    "prime": 105337
+   },
+   {
+    "pass": true,
+    "prime": 105673
+   }
+  ],
+  "d23_spot": [
+   {
+    "kernel_draw": 0,
+    "pass": true,
+    "prime": 105337,
+    "witness": 0
+   },
+   {
+    "kernel_draw": 0,
+    "pass": true,
+    "prime": 105673,
+    "witness": 0
+   }
+  ],
+  "n_pass": 360,
+  "n_points": 360
+ },
+ "stage1_smoke_D25_COMPLETION_BAND42": {
+  "H29u1_uncovered_182": {
+   "False": 12
+  },
+  "ell_lb_distribution": {
+   "37": 12
+  },
+  "note": "H29u1 uncovered in the y-180 diagnostic at every point (conditional shifted-obstruction dual witnesses banked); covered via the independent x columns; fail-closed no growth certified; NOT a depth measurement"
+ },
+ "stage2_family_chain": {
+  "status": "IN FLIGHT on box01: mod-p symbolic banks (both primes, a00pp pilot) -> d43_reduce_modp (NF/det23) -> d43_family2 (C_k diag Schur compat, 53 rows) -> msolve verdict (capped); char-0 gold lane build_tails43 in parallel",
+  "validation": "D25-scale controls: bank 4 s + exact value/gradient replay; reduce 5 s + 19/19 reduced rows == numeric engine at randomized cell points"
+ },
+ "stage2_pointwise_obstruction": {
+  "note": "every sampled D25 point fails to prolong to D43 (or D27) through the full legal completion pool; every sampled 4-dim lift slice is empty over the closure (unit ideal); aux kernel draws rigid on the locus",
+  "slice_census": {
+   "n": 25,
+   "verdicts": [
+    "EMPTY_SLICE"
+   ]
+  }
+ },
+ "status": "INTERNAL / UNREVIEWED; fail-closed; E_PLUS_CANDIDATE-tier numerics; pointwise scope per SHEET6-DIRECTIONB sect 10",
+ "tool": "cases/d43_program.json"
+}

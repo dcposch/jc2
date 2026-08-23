@@ -1,0 +1,357 @@
+{
+ "counts": {
+  "CANCELLED": 32,
+  "EMPTY": 0,
+  "NONEMPTY": 0,
+  "TIMEOUT": 4
+ },
+ "date": "2026-08-20",
+ "dimension_method": "exact LT-staircase min-hitting-set (branch-and-bound, order pin asserted on every GB element)",
+ "dims_histogram": {},
+ "emission_gates": {
+  "PF1": "union+parked md5s match asm_manifest; gbcache support skeleton identical x36",
+  "PF2": "union rows specialized at each fiber == parked rows dict-exact (34x36) + 4 selector rows vanish",
+  "PF3": "forward inclusion NF_G23(26 core + 3 g) == 0, 29/29 per fiber x36",
+  "PF4": "witness truncation: 9162 G23-row evaluations == 0 over 18 banked a00pp witness draws",
+  "PF5": "hygiene + independent reparse dict-exact on all 514 rows x36; 36 pairwise-distinct md5s",
+  "cross_host": "a00pp emission byte-identical local vs box01 (md5 179d1ad59a7aeeb5a204050d8d8cd035)",
+  "witness_truncation_detail": {
+   "points": 18,
+   "row_evals": 9162,
+   "status": "PASS"
+  }
+ },
+ "equivalence": "ideal(G23 + R1..R5) == ideal(26 core + 3 g + R1..R5) == the label-component of the union system: (a) G23 = banked atlas det23 GB of <core+g> (8.S8); (b) GATE-PF3 NF_G23(core+g)==0 re-verified per fiber; (c) GATE-PF2 union rows specialize dict-exactly to the parked rows at every fiber. Componentwise union verdicts == per-fiber verdicts.",
+ "fibers": {
+  "a00mm": {
+   "emission_md5": "9116e33947f3ed686617541a74db75a3",
+   "emission_terms": 406260,
+   "rc": 124,
+   "secs": 3602,
+   "size": 0,
+   "verdict": "TIMEOUT"
+  },
+  "a00mp": {
+   "emission_md5": "a1b67cdbbed7c0e2acb162af13878795",
+   "emission_terms": 406260,
+   "rc": 124,
+   "secs": 3601,
+   "size": 0,
+   "verdict": "TIMEOUT"
+  },
+  "a00pm": {
+   "emission_md5": "34529cab14b7f586d547aa11b61dc682",
+   "emission_terms": 406260,
+   "rc": 124,
+   "secs": 3601,
+   "size": 0,
+   "verdict": "TIMEOUT"
+  },
+  "a00pp": {
+   "emission_md5": "179d1ad59a7aeeb5a204050d8d8cd035",
+   "emission_terms": 406260,
+   "rc": 124,
+   "secs": 3601,
+   "size": 0,
+   "verdict": "TIMEOUT"
+  },
+  "a01mm": {
+   "emission_md5": "54fafe00baffcfa91e4c90036c98107f",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a01mp": {
+   "emission_md5": "6e3b6beaf07c6d74e2e09d305205e332",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a01pm": {
+   "emission_md5": "01dba8e97c6b6ce2669659c0dd05ab9b",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a01pp": {
+   "emission_md5": "a07962f42b2774b12ab4a876bcd234d1",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a02mm": {
+   "emission_md5": "2910b473004438de3767ed71624b52c7",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a02mp": {
+   "emission_md5": "24edbc7f66bbd43ce0322c2c9b0f55b6",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a02pm": {
+   "emission_md5": "da895ea9f7ca70290a91284bc9a3fbcb",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a02pp": {
+   "emission_md5": "5bb5bba8fe521f7b33aa730bd417d0ab",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a10mm": {
+   "emission_md5": "0545b9e9e54f371b4c61e729227a6751",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a10mp": {
+   "emission_md5": "fa34288f22c824bd182631cd568468a5",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a10pm": {
+   "emission_md5": "50cee2ae95a1b41a7f0d43b69a81da36",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a10pp": {
+   "emission_md5": "2ddb39771d88da989ac59ed5724ebd60",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a11mm": {
+   "emission_md5": "223bdf01fa466ce5cfc862284143511b",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a11mp": {
+   "emission_md5": "3ea7112ef32be70d1b84d0adeed5b3db",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a11pm": {
+   "emission_md5": "ae87d289b9a11eefea4a581a78bd7ea2",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a11pp": {
+   "emission_md5": "07d4ff3c23c04a793951960908825df8",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a12mm": {
+   "emission_md5": "b1da8a1021d4ee1212bb0d2cd03660b9",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a12mp": {
+   "emission_md5": "19a967f02953affba990d47a728c3ee9",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a12pm": {
+   "emission_md5": "e7a3b0fb286e6b2fc5ef27027eb341bf",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a12pp": {
+   "emission_md5": "ebd19b754ad1b0a0e6a27367d43489ec",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a20mm": {
+   "emission_md5": "8b7d33952ab6ea12836cc5de04c2defb",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a20mp": {
+   "emission_md5": "683556bfb678e698101002727896e2fc",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a20pm": {
+   "emission_md5": "d54cb8c835da4e1c5265b0fb9c4b9060",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a20pp": {
+   "emission_md5": "5a5387c160efecadcfaf2058bcb85c56",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a21mm": {
+   "emission_md5": "11cbce0827feb91f94af0d1b5721ef6f",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a21mp": {
+   "emission_md5": "5d2011420b9a29c45eb2014aac4c4f8d",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a21pm": {
+   "emission_md5": "2997d7a1be400c895ed3e654143ae5b2",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a21pp": {
+   "emission_md5": "d6aa8a14daac31dab3bda044f197b3c2",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a22mm": {
+   "emission_md5": "0656c6211d926f30dce7c8bb423ecc2f",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a22mp": {
+   "emission_md5": "a1e9554220bbf08a0652ab9a740e62a7",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a22pm": {
+   "emission_md5": "a157d18ed018c7f23e27c3e1c196a83d",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  },
+  "a22pp": {
+   "emission_md5": "71fa7fda8e19866c96f05cae7e1b63a4",
+   "emission_terms": 406260,
+   "note": "batch cancelled 17:47:59Z per the 2026-08-20 redirect (uniform difficulty; see redirect field)",
+   "rc": -1,
+   "secs": -1,
+   "size": -1,
+   "verdict": "CANCELLED"
+  }
+ },
+ "object": "36 per-fiber D25 race systems d25pf_p105337_<label>.ms = 509-el det23 GB + 5 D25 Schur residuals (514 rows / 28 vars); verdicts under sol-round6 sect 3 componentwise mask semantics",
+ "prime": 105337,
+ "redirect": {
+  "batch1_result": "a00mm/a00mp/a00pm/a00pp ALL rc=124 at the 3600 s caps (secs 3601-3602, 0-byte .out, never read as verdicts); batch-2 lanes (a01**) cancelled ~30 min in by literal inspected PIDs (no pattern kills)",
+  "continuation": "D25PF1: single representative fiber a00pp (the historically banked one), 24 h cap, msolve -v 2 -g 2 -t 8, launched 2026-08-20T17:48:31Z (marker D25PF1 a00pp; box01 d25pf/out/d25pf1_a00pp.{out,v2log}); cap expires 2026-08-21T17:48:31Z",
+  "date": "2026-08-20",
+  "primary_routes": "the section-9 union D25FAM lanes (PIDs 90409/90410, caps 2026-08-21 23:39Z) and the l44 union lane continue UNTOUCHED as the primary verdict routes",
+  "rationale": "8.S8 support identity: all 36 fibers share one GB support skeleton and one term profile, so per-fiber difficulty is expected uniform -- 36 one-hour timeouts carry no more information than 4. 4/4 uniform 1h-timeouts at p105337 IS the banked batch result (evidence of uniform mid-weight per-fiber difficulty at D25)."
+ },
+ "scope": "INTERNAL/UNREVIEWED; mod p, chart-local (residue-A B-frozen no-log PIN42 W1W2!=0 chart, fixed r3 embedding); NOT char 0"
+}

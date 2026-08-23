@@ -1,0 +1,17 @@
+I'll start by reading the claimed chain in full — the pivot/point writeup, section 9.S2, and the replay JSON — then recompute the modular certificates from the raw `.ms` rather than trusting the writeup.The review skill is for code diffs; this is a math-certificate attack. I'll pull previous grok verdict format, then the target chain and raw `.ms`.I have the claim chain. Next I’ll locate the raw `.ms` files and the D23 dimension comparison so the independent recomputation is from source, not the replay JSON.Raw parked `.ms` files are local. I’ll inspect one system’s shape, the ECO-D25 prediction, and the D23 dimension bookkeeping before writing an independent recomputation.D23 dimension 11 is the inherited atlas fact. I’ll parse the raw `.ms` next and recompute witnesses, the lift minor, and the residual structure independently.The lift minor and inverse rows check out. Next I’ll run an independent pivot DAG, then test whether the leftover 14 variables are actually free.hcore/hlin sit in the raw residual span, and the DAG already produced the claimed 6×3 terminal matrix. Next I’ll run the Sol-style pivot sequence, then census all 72 fibers plus the union.Jacobian rank came back 12, not 14 — that needs an independent check at both the sparse witness and a generic point of the graph.Item 2’s q factorization and norms match exactly. I’ll write the verdict file now.**VERDICT: CONFIRMED.** Written to `xmodel/grok-d25cert-review.md`. No other files changed, no git.
+
+The emitted modular D25 schemes are 16 disjoint copies of \(\mathbb{A}^{14}\) over \(\mathbb{F}_p\) on every parked fiber (72/72), dimension 14, nonempty. The two selector unions are 576 copies. ECO-D25 is refuted at both registered primes by its own lock-table row.
+
+Recomputed from the raw `.ms`, not from the replay JSON:
+
+| Attack | Result |
+|---|---|
+| (1) Pivot units + 16-component count | The \(R_1,R_2\) minor is \(s\cdot uW_1^2 uW_2^2\) (a00pp scalars 75772 / 9899). Independent greedy DAG finds 10 unit-linear \(x\)-pivots on every fiber; remainder is a rank-2 \(6\times 3\) in \((W_1^4,W_2^4,1)\) with the claimed RREF and constants. \(c_1,c_2\) are nonzero fourth powers; \(p\equiv 1\pmod{8}\) gives 4×4=16 separable points. |
+| (2) Hidden relations / hcore–hlin membership | After the 10 pivots, **no** remaining support on the 14 free variables. hcore/hlin lie in the \(\mathbb{F}_p\)-span of the raw Cramer combinations of the five residuals — in the original ideal, not merely localized. |
+| (3) Laurent units vs vanishing \(uW\) | Inverse rows \(W_i uW_i-1\) are among the 34 generators. \(W,uW\) are units on the whole affine scheme; dividing by a pivot unit does not saturate anything extra. |
+| (4) 10+4 vs D23’s 11 in 22 | 28 − 10 graphs − 2 inverses = 14. Projected base 11→10 (height one), plus 4 free lifts. ECO-D25 predicted 13. The lock table’s “NONEMPTY, dimension 14 ⇒ REFUTED” fires. Carrier \(q\) is associate to a monic linear in \(x_{59}\) on all 16 branches; pair is (10,9), not (9,≤8). |
+| (5) 9.S2 scope | Honest: modular only, both split primes, named chart, emission-fidelity inherited. No char-0 claim. |
+
+Witnesses vanish 34/34 (parked) and 38/38 (union). Jacobian ranks of the unreduced rows are 14/28 and 18/32. Union specialized at each atlas fiber reproduces the parked file at scale 1 on all 1224 rows.
+
+Nits that do not flip the verdict: Sol’s printed 14×14 determinants 9870 / 39560 were not recovered among the complements tried (rank 14 still holds); pivot *order* is not unique; D23 dimension 11 is inherited, not re-GBed.

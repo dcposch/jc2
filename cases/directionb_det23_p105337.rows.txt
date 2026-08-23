@@ -1,0 +1,59 @@
+# cases/directionb_det23_p105337.ms -- the D23 determinantal system (rank-2 tier)
+# [2026-08-19; INTERNAL / UNREVIEWED; report SHEET6-DIRECTIONB.md 8.S5]
+# rows 1..397: the banked 397-element D21 radical_point fiber GB, VERBATIM
+#   (directionb_core2_fiber_p105337.out, sha256 92e274d7076c9a57..;
+#   reduced grevlex GB in the 22 printed vars => zero-cost engine prefix).
+# rows 398..400: g1,g2,g3 -- the COMPLETE determinantal content of the
+#   depth-23 compatibility block. From the NF payload
+#   (cases/nf_reduced_rows_p105337.txt): NF_j = sum_k A_jk tg_k + b_j is
+#   AFFINE in the level-44 tails (x17,x25,x32,x37) with
+#   A = Cdiag(uW1^2,uW2^2,uW1^2,uW2^2), C the CONSTANT 6x4 matrix below,
+#   rank C = 2. All six 5x5 minors of [A|b] are IDENTICALLY ZERO (all
+#   4x4 minors of C vanish) -- the naive 5x5 formulation is vacuous.
+#   On the chart (uW_i = W_i^-1 units: uW rows in the fiber ideal,
+#   re-verified reduce(uW_i*W_i-1,GB)=0) rank A(x) = 2 EXACTLY, so
+#     exists tg solving the 6 compat rows at x
+#       <=> rank[A(x)|b(x)] = 2  <=> all 3x3 minors of [A|b] vanish at x
+#       <=> u.b(x) = 0 for all u in leftker(C) (4-dim, constant; contains
+#           the NF kernel vector a with a.b == 0 identically)
+#       <=> g1 = g2 = g3 = 0 at x   (RREF basis of the 3-dim {u.b} space,
+#           g_s = w_s.NF with the w_s below; tg terms cancel exactly).
+#   SEMANTICS (per-fiber, radical_point chart, per-prime, mod p):
+#     V(det23) = proj_22 V(row22red):  EMPTY <=> row22red EMPTY.
+#   Kill direction needs only =>; the converse holds here because the
+#   rank of A is pinned at 2 on the whole chart (no rank-drop escape).
+#   The naive-5x5 asymmetry statement is therefore MOOT for this file,
+#   but any consumer treating g's as generic minors must remember:
+#   minor-vanishing alone (without the rank pin) does NOT imply
+#   solvability.
+# C (6x4, rows=compat rows 24..29, cols=x17,x25,x32,x37):
+#   [52002, 36979, 53335, 68358]
+#   [7493, 84526, 97844, 20811]
+#   [46924, 59787, 58413, 45550]
+#   [44051, 12059, 61286, 93278]
+#   [7298, 58295, 98039, 47042]
+#   [1499, 45379, 103838, 59958]
+# w_s (g_s = w_s . NF, s=1..3):
+#   [544, 19904, 28629, 58042, 53516, 0]
+#   [32548, 101350, 94193, 31698, 70393, 0]
+#   [83295, 55221, 39214, 44006, 17278, 0]
+# g rows (grevlex-descending):
+#   g1 = 1*x57^2*uW1^2+105335*x57*x65*uW1^2+1*x65^2*uW1^2+50008*x53*uW1+103704*x72
+#   g2 = 1*x57^2*uW2^2+105335*x57*x65*uW2^2+1*x65^2*uW2^2+4803*x58*uW2+13955*x72
+#   g3 = 1*x70+52700*x72
+# GATES (all PASS x3 primes; scripts scratchpad nfq/det23_*.py):
+#   struct: payload 6x150 terms, x16/x24/x69 absent, single shared
+#     tg-carrier per column; two det routes agree (Laplace vs cofactor);
+#   5x5: all six == 0 at all three primes (flint AND Singular det);
+#   3x3 census: 80/200 nonzero, each = unit-monomial * combo of g's;
+#   kill set: 24/24 banked+seed-2026 fiber points have ALL THREE g's
+#     nonzero (5x5 minors: 0/24 nonzero -- vacuous as predicted by
+#     rank C = 2; rank A = 2, rank [A|b] = 3 at every point);
+#   Singular independent re-derivation (diff/subst from raw payload
+#     text): pinned 3x3 + g1..g3 coefficient-exact vs flint;
+#     reduce(g_s, GB) != 0 (sizes 5,5,2: not in the fiber ideal);
+#   cross-prime: g supports identical; C pattern identical; census
+#     identical; emission round-trip dict-exact.
+# msolve semantics: GB=[1] => det23 EMPTY => row22red EMPTY (chart
+#   fiber scope); NONEMPTY output = the compat-solvable sublocus of the
+#   D21 fiber (dimension/points = direct depth-23 data).

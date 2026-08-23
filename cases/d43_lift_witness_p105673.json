@@ -1,0 +1,84 @@
+{
+ "compressed_witness": "cases43/d43_witness_p105673_report.json",
+ "fiber": "a00pp",
+ "lift_status": "NONLIFTING_COMPRESSED_WITNESS",
+ "prime": 105673,
+ "rungs": [
+  {
+   "changed_from_compressed_assignment": {
+    "tf1_53": {
+     "compressed": 92566,
+     "reconstructed": 40259
+    },
+    "tf1_58": {
+     "compressed": 391,
+     "reconstructed": 64772
+    },
+    "tf2_53": {
+     "compressed": 94939,
+     "reconstructed": 92924
+    },
+    "tf2_58": {
+     "compressed": 26736,
+     "reconstructed": 65746
+    },
+    "tg01_58": {
+     "compressed": 100795,
+     "reconstructed": 0
+    },
+    "tg02_58": {
+     "compressed": 23916,
+     "reconstructed": 0
+    }
+   },
+   "compressed_assignment_raw_nonzero_rows": 10,
+   "expected_rank": 4,
+   "pivot_variables": [
+    "tf1_53",
+    "tf1_58",
+    "tf2_53",
+    "tf2_58"
+   ],
+   "rank_A": 4,
+   "rank_augmented": 4,
+   "replay_zero_rows": 10,
+   "rows": 10,
+   "rung": 26,
+   "unknowns": [
+    "tf1_53",
+    "tf1_58",
+    "tf2_53",
+    "tf2_58",
+    "tg01_58",
+    "tg02_58",
+    "tg1_53",
+    "tg1_58",
+    "tg2_53",
+    "tg2_58"
+   ],
+   "verdict": "SOLVED"
+  },
+  {
+   "compressed_assignment_raw_nonzero_rows": 10,
+   "expected_rank": 4,
+   "rank_A": 4,
+   "rank_augmented": 5,
+   "rows": 10,
+   "rung": 28,
+   "unknowns": [
+    "tf1_55",
+    "tf1_60",
+    "tf2_55",
+    "tf2_60",
+    "tg01_60",
+    "tg02_60",
+    "tg1_55",
+    "tg1_60",
+    "tg2_55",
+    "tg2_60"
+   ],
+   "verdict": "INCONSISTENT_AFTER_PRIOR_RECONSTRUCTION"
+  }
+ ],
+ "status": "INTERNAL / UNREVIEWED"
+}

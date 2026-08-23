@@ -1,0 +1,13 @@
+I'll compare the Lean definitional layer against the informal sources in FIDELITY.md, then write a FAITHFUL-or-defects verdict. Reading the review skill and the target files first.This is a definitions-only fidelity review, not a git-diff review. I'll read the Lean layer and the informal sources next.Next I’ll read the informal sources and any existing fidelity-review format so the comparison is line-accurate.I'll match the existing fidelity-review format and check the orbit/PIN42/W-scale sources against the Lean definitions.The orbit registry and Jacobian residual are the load-bearing pieces. I’ll read those implementations next and independently check the split-prime constants.Independent checks on the Jacobian weights, PIN42, W-units, and the split prime all line up. I’ll write the verdict to `xmodel/grok-dw-fidelity.md` only.**Verdict: FAITHFUL.** Written to [`xmodel/grok-dw-fidelity.md`](/Users/dc/code/math/jc72108/xmodel/grok-dw-fidelity.md). No other files changed, and git was not used.
+
+The Lean window is the unreduced residue-A J-jet object, not a CORE2 or Schur stand-in. The four hunt items:
+
+1. **Window / depth structure.** Depth `D` means rows `k < D` (D21 is `0..20`, D23 adds `21,22`, D25 adds `23,24`). Jacobian weights `(i−12)` and `(j−18)`, PIN42 (`c_{42} = 0` on the six live places), W-unit saturation (`uW·W = 1`, not `W = 1`), and the `level < 32+D` truncation cutoff all match the engine (`gm_jet`, residual-32 legend, §7.S3).
+
+2. **No silent weakening of nonemptiness.** A `HasDepthWitness D` point is a genuine campaign witness on the B-frozen, no-log, PIN42, `W ≠ 0` chart at `p = 105337`. Lean is stricter in places (full polynomial rows, F_p-rational point), not looser.
+
+3. **Statement template.** `HasDepthWitness D` is the right Palomar shape for both branches: NONEMPTY is `HasDepthWitness 25`; EMPTY is `HasDepthWitness 23 ∧ ¬HasDepthWitness 25`. The EMPTY negation is F_p-rational nonexistence; geometric emptiness has to live in the certificate, which the README already requires. That is proof discipline for a future Solution, not a definitional defect.
+
+4. **`ZMod 105337`.** Independently recomputed: `795² = 3`, primitive `ζ = 2779`, `2·24069⁷ = 3`, leads `51107` and `33066`, `84 | (p−1)`, 36 F_p-rational radical fibers. Sound for this split prime.
+
+No HIGH or MEDIUM defects. LOW nits (odd-`D` cap never names the full y-side package `k = 0..41`; raw `WindowConditions` is unguarded past `D = 42`) do not affect a D25 theorem.

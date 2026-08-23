@@ -1,0 +1,87 @@
+{
+ "status": "INTERNAL / UNREVIEWED",
+ "date": "2026-08-23",
+ "fiber": "a00pp",
+ "scope": "residue-A, B-frozen, no-log, PIN42, W1W2 != 0; modular at p=105337,105673",
+ "commissioned_175_row_system": {
+  "definition": "34 parked rows + 52 compatibility rows + 89 rung-26-through-42 reconstruction-graph rows",
+  "verdict": "NONEMPTY at both primes",
+  "variable_census": 184,
+  "variable_census_correction": "The compatibility-only header had 172 variables. Retaining the rung-42 graph adds 12 eliminated first-occurrence variables: Xf_alpha,Xg_beta,tf1_69,tf1_74,tf2_69,tf2_74,tg01_74,tg02_74,tg1_69,tg1_74,tg2_69,tg2_74.",
+  "smooth_component_dimension": 81,
+  "dimension_argument": "At each explicit point, parked Jacobian rank=14 and graph Jacobian rank in the 156 external coordinates=89. Thus combined rank=103 in 184 variables; the 52 compatibility rows are exact graph-row combinations.",
+  "rung_26_rank": "rank(A)=rank([A|b])=4; prefix graph Jacobian rank 10/10",
+  "rung_28_rank": "rank(A)=rank([A|b])=4; prefix graph Jacobian rank 20/20",
+  "rung_28_gate": "DOES NOT KILL the commissioned component",
+  "rung_le_38": "NONEMPTY; exact 69x69 slice has a 69-element completely linear reduced GB at both primes (0.01 s); prefix graph rank 69 and smooth dimension 79 in its 162-variable used ring"
+ },
+ "full_emissions": {
+  "105337": {
+   "remote_path": "box01:/home/ubuntu/jc72108/cases43/d43graph_p105337_a00pp_full175.ms",
+   "bytes": 2340905280,
+   "sha256": "015c26d57e2c3ce4ee5b0e5ae1c440e9d9ecab8d7c645ca0e2a6c9487b5ce323",
+   "direct_text_replay": "PASS 175/175; 69,536,652 terms"
+  },
+  "105673": {
+   "remote_path": "box01:/home/ubuntu/jc72108/cases43/d43graph_p105673_a00pp_full175.ms",
+   "bytes": 2341124763,
+   "sha256": "367b5c30d1783db839fc70977e51dfd9951d1c84a6ccbbac722be5ee72b9c380",
+   "direct_text_replay": "PASS 175/175; 69,536,382 terms"
+  }
+ },
+ "gates": {
+  "parked_identity_selftest": "PASS 32/32 prime-components; 34/34 polynomial identities each; reconstructed-coordinate negative controls fire",
+  "parked_rows_in_emission": "34/34 byte-exact at both primes",
+  "compatibility_from_graph": "52/52 byte-exact at both primes",
+  "graph_rows": "89/89 retained at both primes",
+  "full_expanded_emission_replay": "175/175 zero at both explicit points",
+  "independent_jet_replay": "178/178 raw-row comparisons at each prime; coefficient perturbation detected",
+  "witness_negative_control": "Xf_alpha += 1 makes 10 graph rows nonzero at each prime"
+ },
+ "witness_artifacts": {
+  "105337": "cases/d43_graph_witness_p105337.json",
+  "105673": "cases/d43_graph_witness_p105673.json",
+  "full_gate_105337": "cases/d43_graph_full_gate_p105337.json",
+  "full_gate_105673": "cases/d43_graph_full_gate_p105673.json",
+  "prefix_slice_105337": "cases/d43_graph_prefix_slice_p105337_upto38.{ms,out,err,json}",
+  "prefix_slice_105673": "cases/d43_graph_prefix_slice_p105673_upto38.{ms,out,err,json}"
+ },
+ "pivot_NF_attempt": {
+  "cell": "derived W-component cell00 at each prime",
+  "prefix": 28,
+  "system": "20 graph rows in 98 variables after exact parked-cell substitution",
+  "terms": "134891 / 134892",
+  "max_degree": 14,
+  "derived_compatibility_rows": 12,
+  "jacobian_rank_origin_and_sequence": 20,
+  "negative_control": "PASS",
+  "msolve": "1800-second cap at both primes; zero-byte basis output",
+  "interpretation": "Inconclusive as a full NF solve; superseded for NONEMPTY by the exact linear witness slices"
+ },
+ "mandatory_survivor_floor_gate": {
+  "result": "REJECTED at both primes",
+  "failed_checks": [
+   "s9_d43_residual_184_zero",
+   "s9_nu_ge_43"
+  ],
+  "nonzero_older_selected_coefficients": "94 at each prime, all in bands 6,8,...,24",
+  "diagnosis": "The 175-row system restores the rung-26-through-42 graph but still reintroduces D23/D25 coordinates eliminated by the parked presentation as independent variables. It omits their older reconstruction graph. Hence a point of the 175-row ideal is not yet a D43_SURVIVOR.",
+  "floor": null,
+  "diagnostic_window_number_not_reportable": 37,
+  "ledger": "ell+ >= 37 unchanged"
+ },
+ "honest_verdict": {
+  "commissioned_algebraic_object": "NONEMPTY with a smooth dimension-81 component at both primes",
+  "true_D43_survivor_family": "UNRESOLVED: the commissioned object is still an overapproximation; the completed-point rung-26 emptiness remains pointwise only",
+  "first_depth_kill": null,
+  "floor": null
+ },
+ "principal_tools": [
+  "cases/d43_graph_family.py",
+  "cases/d43_graph_nf.py",
+  "cases/d43_graph_prefix_slice.py",
+  "cases/d43_graph_witness.py",
+  "cases/d43_graph_full_gate.py",
+  "cases/d43_raw_point_system.py"
+ ]
+}

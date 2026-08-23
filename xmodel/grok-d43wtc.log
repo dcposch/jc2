@@ -1,0 +1,17 @@
+I'll start with the review skill and the two targets so the verdicts rest on the actual claims, not the surrounding narrative.This is a mathematical hostile review of two named claims, not a git-diff review. I’ll load section 10.7, the D43 artifacts, and the WTC-1 proof chain next.I’ll inspect the residual drivers, reports, and family emitter next, then check whether Theorem 2.1 actually assumes the order lemma.The lift gate may be reconstructing one particular section, not the full fiber. I’ll check that, the rung-26 emptiness, and the WTC proof’s dependencies in parallel.Independent checks match the banked numbers. I’ll write the two-target verdict to `xmodel/grok-d43wtc-review.md` only.Hostile review is in `xmodel/grok-d43wtc-review.md`. No other files changed, no git.
+
+** (A) D43 SPLIT — CONFIRMED, family still UNRESOLVED**
+
+The literal-vs-family split is real. Stage-2 compression emits 34 parked rows plus 52 left-kernel compatibility rows and drops the 89 raw rung graph equations. Later rungs still use the eliminated first-occurrence tails, so the 86-row NONEMPTY answers an overapproximation.
+
+That compressed ideal is NONEMPTY at both primes: the unique F_p-points of the 52×52 slices match the banked witnesses in all 52 linear forms, ambient dimension 172, smooth local dimension 106. Those witnesses are not D43 survivors — all 10 raw rung-26 rows are already nonzero on them. Independently, the reconstructed D25 point (free values 1,…,14) is empty at rung 26: the 10×16 linear block has rank 8/9 at both primes, so emptiness is not an msolve or 86-row artifact. It is still only a completed-point obstruction, not an A^14 certificate.
+
+**Next for (A):** re-emit `{34 parked} ∪ {89 pristine graph rows}` with first-occurrence tails kept and the 14 D25-free parameters unspecialized. EMPTY/NONEMPTY of that object is the real family question. Do not floor-measure compressed witnesses.
+
+** (B) WTC-1 naming vs multiplicities — naming CONFIRMED; unique-PCC-wall overstated**
+
+Theorem 2.1 names a flag / infinitely-near point from the certified prefix and residue root. It does not use KPC, WTC-ORD, or base-cluster membership; the order lemma is used only later, in Theorem 3.2. Residual gaps are writeup (Kummer value-group sketch, weak-transform square for the boundary restriction, a sloppy generator-change sentence), not circularity. Ordinary one-center multiplicities remain Conjecture KPC. Proposition 5.1’s Laurent bracket independently reproduces `[P,Q] = -3/2` with orders 1,2 against predicted 2,3, so local face + denominators + Jacobian cannot prove KPC.
+
+KPC is the remaining WTC-1 wall and a necessary PCC wall. It is not the only PCC wall: PFE (`∑ c_p² ≥ B²-1`) still sits after naming and after KPC, and contact splitting has the wrong quadratic sign.
+
+**Next for (B):** prove KPC from polynomial origin and/or the full eligible prefix; separately prove PFE. Store exact field maps so the naming theorem is executable.

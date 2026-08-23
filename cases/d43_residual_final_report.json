@@ -1,0 +1,152 @@
+{
+  "status": "INTERNAL / UNREVIEWED",
+  "generated_at_local": "2026-08-23T03:03:00-07:00",
+  "object": "D43 a00pp emptiness residual",
+  "primes": [105337, 105673],
+  "scope_adjudication": {
+    "literal_emitted_86_row_ideal": {
+      "verdict": "NONEMPTY at both primes",
+      "meaning": "34 parked rows plus the emitted 52 compatibility rows, with no rung graph equations",
+      "smooth_component_dimension": 106,
+      "global_dimension_statement": "dimension >= 106; the witnessed component is smooth of dimension 106",
+      "fixed_D25_point_external_component_dimension": 92
+    },
+    "intended_graph_preserving_D43_family": {
+      "verdict": "UNRESOLVED",
+      "dimension": null,
+      "reason": "The compatibility-only elimination forgets graph relations for rung coordinates that occur again later. Both compressed witnesses become inconsistent at rung 28 after the rung-26 coordinates are reconstructed. The graph-preserving system is proved empty only on one certified D25 cell point per prime, not on the full A^14 cell family."
+    },
+    "floor_measurement_run": false,
+    "floor_number": null,
+    "ledger": "No liftable D43 survivor was obtained; ell+ >= 37 is unchanged."
+  },
+  "parked_certificate_regression": {
+    "components_per_prime": 16,
+    "free_parameters_per_component": 14,
+    "reconstructed_coordinates": 10,
+    "parked_identities": "34/34 on all 32 prime-components",
+    "negative_control": "PASS: a reconstructed-coordinate +1 perturbation makes at least five parked rows nonzero on every component",
+    "selftest": "cases/d43_nf_selftest.json",
+    "selftest_sha256": "fac3c5dce5375813945a255f9c78e13096eb2e0ebf70b9cb015c08c72d5bf208"
+  },
+  "stagewise_affine_profile_at_certified_D25_point": {
+    "rows": 52,
+    "external_variables": 144,
+    "first_affine_layer": "the 92 variables of level >= 53",
+    "threshold_profile_columns": ["threshold", "selected_variables", "rank_A", "rank_augmented"],
+    "threshold_profile": [
+      [53, 92, 44, 45], [54, 88, 42, 43], [55, 82, 38, 39],
+      [56, 78, 36, 37], [57, 72, 34, 35], [58, 68, 32, 33],
+      [59, 62, 28, 29], [60, 58, 26, 27], [61, 52, 22, 23],
+      [62, 48, 20, 21], [63, 42, 17, 18], [64, 38, 15, 16],
+      [65, 32, 11, 12], [66, 28, 9, 10], [67, 22, 7, 8],
+      [68, 18, 5, 6], [69, 12, 3, 4], [70, 12, 3, 4],
+      [71, 6, 1, 2], [72, 6, 1, 2]
+    ],
+    "rung_prefix_profile_columns": ["last_rung", "compatibility_rows", "rank_in_level_ge_53_layer", "Schur_residual_rows"],
+    "rung_prefix_profile": [
+      [26, 6, 4, 2], [28, 12, 8, 4], [30, 17, 10, 7],
+      [32, 23, 16, 7], [34, 29, 22, 7], [36, 35, 27, 8],
+      [38, 41, 33, 8], [40, 47, 39, 8], [42, 52, 44, 8]
+    ],
+    "linearization_location": "After eliminating a canonical constant 44 by 44 high-variable minor, the analytic Schur residual Jacobian has rank 8 in lower variables tf1_49, tf1_51, tf2_49, tf2_51, tg1_49, x0, x1, x13. Retaining those 8 variables and the 44 high pivots gives an exact 52 by 52 degree-at-most-3 slice."
+  },
+  "small_second_layer_solver": {
+    "slice": {"equations": 52, "variables": 52, "terms": 3146, "max_degree": 3},
+    "specialization": "the other 92 external variables are exactly zero",
+    "solver": "msolve 0.10.1, -g 2 -t 4 --random-seed 843, remote box01",
+    "result": "52-element completely linear reduced Groebner basis at each prime; one rational F_p point on each slice",
+    "basis_terms": 103,
+    "elapsed_seconds": 0.01,
+    "max_RSS_kbytes": {"105337": 6352, "105673": 6380},
+    "NF_level_witness_gates": {
+      "parked_rows": "34/34 zero",
+      "compatibility_rows": "52/52 zero",
+      "parked_Jacobian_rank": 14,
+      "compatibility_external_Jacobian_rank": 52,
+      "negative_control": "tf1_49 + 1 makes 51 compatibility rows nonzero"
+    },
+    "full_raw_streaming_replay": {
+      "result": "PASS at both primes: 86/86 literal emitted rows zero",
+      "terms_replayed": {"105337": 30993910, "105673": 30993618},
+      "source_sha256": {
+        "105337": "00c9a4b44a49c3bbdbbce5658fe9f5714416e309a7f149d7e492a470733881b6",
+        "105673": "df0af1e4c68d8672e638e00f29a69b65c22616f44b0951014932ee7f69248105"
+      }
+    }
+  },
+  "rung_le_38_lever": {
+    "historical_solver_record": "The 340672955-byte p105337 upto38 input did not solve: rc=124 after the 3-hour cap, zero-byte output. Its sha256 is fdbe3f2c3380a48e1622d2a9c9b902c9c53b8f1889ca86c2485bc3ae06e7ddc7. The prior statement that it solved was incorrect.",
+    "literal_compressed_prefix_verdict": "NONEMPTY at both primes, because the full compressed witness zeros its first 41 compatibility rows",
+    "compatibility_Jacobian_rank_at_witness": 41,
+    "smooth_full_cell_component_dimension": 117,
+    "prefix_local_dimension_profile_columns": ["last_rung", "compatibility_Jacobian_rank", "smooth_full_cell_dimension"],
+    "prefix_local_dimension_profile": [
+      [26, 6, 152], [28, 12, 146], [30, 17, 141], [32, 23, 135],
+      [34, 29, 129], [36, 35, 123], [38, 41, 117], [40, 47, 111], [42, 52, 106]
+    ],
+    "semantic_limit": "These dimensions belong to the compatibility-only presentation and do not survive the graph-lift gate."
+  },
+  "graph_lift_gate": {
+    "result": "FAIL for both compressed witnesses",
+    "rung_26": "rank(A)=rank([A|b])=4; reconstruction changes six compressed coordinates",
+    "rung_28_after_rung_26_reconstruction": "rank(A)=4, rank([A|b])=5; inconsistent",
+    "interpretation": "The literal NONEMPTY witnesses are not D43 prolongations and cannot be passed to eplus43 --survivor."
+  },
+  "graph_preserving_fixed_point_slice": {
+    "D25_point": "one certified a00pp W-component with the 14 free values 1,...,14; all D25 represented, deep, and frontier coordinates reconstructed by d25_eplus.reconstruct_point plus eplus43.completed_point_v2",
+    "system": {"rows_before_zero_drop": 89, "equations": 88, "variables": 98, "terms": 4958, "max_degree": 2},
+    "solver": "msolve 0.10.1, -g 2 -t 4 --random-seed 843, remote box01",
+    "result": {"105337": "EMPTY, reduced GB [1]", "105673": "EMPTY, reduced GB [1]"},
+    "first_obstruction": "Already at rung 26, 10 linear rows have rank(A)=8 and rank([A|b])=9 at both primes.",
+    "prefix_numeric_profile_columns": ["last_rung", "raw_rows", "variables", "terms", "rank_A", "rank_augmented"],
+    "prefix_numeric_profile": [
+      [26, 10, 16, 170, 8, 9], [28, 20, 26, 419, 12, 13],
+      [30, 29, 36, 752, 16, 17], [32, 39, 46, 1221, 20, 21],
+      [34, 49, 56, 1746, 26, 27], [36, 59, 66, 2349, 34, 35],
+      [38, 69, 76, 3138, 42, 43], [40, 79, 86, 3975, 50, 51],
+      [42, 89, 98, 4958, 59, 60]
+    ],
+    "independent_numeric_fidelity_gate": "PASS 178/178 exact raw-row comparisons per prime against the eplus43 jet engine; coefficient-perturbation negative control detected",
+    "scope_limit": "An empty fixed-point fiber is not an empty A^14 family."
+  },
+  "pointwise_graph_search": {
+    "sample": "21 completed a00pp D25 points per prime: one named witness plus 20 deterministic interior samples",
+    "result": "0/42 prolonged; every sample had an inconsistent joint bands-26-through-40 affine system",
+    "interpretation": "supporting pointwise obstruction evidence only, not a family certificate",
+    "report": "cases/d43_graph_point_search_report.json",
+    "raw_checkpoint": "cases/d43_graph_point_search.json.ck",
+    "raw_checkpoint_sha256": "fb60411ffbde4574d64a034e10d754e803573835cbd96c4c6e7cc2343af3add9"
+  },
+  "equivariance": {
+    "group": "(C3)^2 x (C2)^2, order 36",
+    "fiber_action": "free and transitive on the 36 promoted fibers",
+    "a00pp_stabilizer": "trivial",
+    "consequence": "Equivariance reduces the 36 fiber systems to one representative fiber, but supplies no nontrivial character decomposition of the 144 coordinates inside fixed a00pp; variable reduction = 0."
+  },
+  "full_file_solver_policy": {
+    "full_86_row_msolve_used_by_this_lane": false,
+    "small_systems_only": true
+  },
+  "artifacts": {
+    "drivers": {
+      "cases/d43_residual_deepen.py": {
+        "artifact_build_sha256": "52e96b5cb272e67f0b393cd23add42b9fc79844146a27318edb135a19fcdc112",
+        "current_sha256": "677eed1b80c6c581ad5a19836123274e3bd36816b1abce13f827e5569df0600c",
+        "difference": "documentation-only clarification that the compatibility witness requires a graph-lift gate"
+      },
+      "cases/d43_lift_witness.py": "b06f8c5c2ae1438ccfc5a9cbb7e709d990df1aa62b19a5f44d4b8908cf1a948e",
+      "cases/d43_raw_point_system.py": "ac2317f67e44047ff95ec14e43513b96ed0d8fd8c43c752eecd99f9d32623b9a",
+      "cases/d43_verdict_witness_gate.py": "865472743bfc25d026f4219b6dbe4c25f408744da0404d4dce25c888f8e826a2"
+    },
+    "second_layer_inputs": ["cases/d43_second_layer_p105337.ms", "cases/d43_second_layer_p105673.ms"],
+    "second_layer_outputs": ["cases/d43_second_layer_p105337.out", "cases/d43_second_layer_p105673.out"],
+    "compressed_witness_reports": ["cases/d43_witness_p105337_report.json", "cases/d43_witness_p105673_report.json"],
+    "raw_streaming_gates": ["cases/d43_raw_witness_gate_p105337.json", "cases/d43_raw_witness_gate_p105673.json"],
+    "lift_reports": ["cases/d43_lift_witness_p105337.json", "cases/d43_lift_witness_p105673.json"],
+    "reconstructed_banks": ["cases/d43_reconstructed_point_p105337.pkl", "cases/d43_reconstructed_point_p105673.pkl"],
+    "reconstructed_inputs": ["cases/d43_reconstructed_full_p105337.ms", "cases/d43_reconstructed_full_p105673.ms"],
+    "reconstructed_outputs": ["cases/d43_reconstructed_full_p105337.out", "cases/d43_reconstructed_full_p105673.out"],
+    "reconstructed_numeric_gates": ["cases/d43_reconstructed_numeric_gate_p105337.json", "cases/d43_reconstructed_numeric_gate_p105673.json"]
+  }
+}

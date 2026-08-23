@@ -1,0 +1,19 @@
+I'll re-review the v2 draft against the twelve round-1 defects and the source documents, then write a PASS or remaining-defects verdict.The draft applied the round-1 wording; next I’ll check those claims against AUDIT.md, REDUCTION.md, paper1, and the live records.I’ll pull the ledger passages and live records next so I can test the remaining numerical and attribution claims.I have the live records and the ledgers. Next I’ll write the round-2 verdict: the twelve old defects are checked, then the rewrite’s new problems.**FAIL.** Do not post v2 as written.
+
+The rewrite applied the twelve round-1 defects at the sentence level. Defects 1–5, 7, and 9–12 are gone. Defects 6 and 8 are mostly gone. Three remaining problems are still quote-worthy, two of them introduced by the rewrite.
+
+**Round-1 scorecard.** The “every window is empty” closer is gone. Strinz is held at his own C0-OPEN abstract. The \(d=12\) line is the type-(3,5) list, not a degree-12 exclusion. Residue A is no longer “the” live front. The \(d\le 5\) book is consistent with the published low-sheet theorems, not a machine-checked recovery of them, and Sigray 9.1 is not relied on. Prior art on the ODE lemma is cited. Procesi’s AI question is no longer hijacked. Degree-pair order is consistent. The \(d=7\) perimeter is stated. The Helali email is struck from the checklist.
+
+**Remaining defects.**
+
+| ID | Severity | Problem | Fix |
+|---|---|---|---|
+| N1 | medium | “The bound belongs to that collective record” still follows Strinz (C0 OPEN) and unchecked Leox | Delete it, or move it to before Strinz/Leox |
+| N2 | medium | Helali/Suzuki replays glued to `21894922`; that DOI’s abstract says the (72,108) discard is not in the artifact | Keep `21894922` for the note only; move the replay clause to the credit paragraph |
+| N3 | medium | “They kill every configuration in the enumerated books” contradicts `REDUCTION.md` HIGH 2 (open on-axis books at \(d=6,8,9,10,12,14\)) | “completed books named above, at the tiers stated” |
+| N4 | posting blocker | `[BUNDLE-DOI]` is still in the body; no public theory-bundle record exists | Fill a resolving DOI, or cut the ladder |
+| N5 | low | “Made effective … in arXiv:2204.14178” is the 108-bound paper, not the algorithms paper | Drop “made effective” |
+
+Live checks that still hold: Helali 21479814 (21 Jul, both supports), Suzuki 21483636, Ishihara 21757679, Strinz 21633408 (C0 OPEN), Posch 21894922, Leox on a/513493, thread quiet since 27 Jul, ~613 words, no em dashes.
+
+Full write-up: `xmodel/grok-mo-review2.md`. No other files changed.

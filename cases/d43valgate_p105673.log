@@ -1,0 +1,20 @@
+prime 105673 rung 28:
+  [PASS] row census within selection -- rows [1, 4, 7, 10, 13, 16, 19, 22, 25, 28]
+  [PASS] A_28 = C.diag(d_j) EXACT, all 10 columns
+  [PASS] rank C_28 == 4 -- got 4
+  [PASS] n_compat == 6 -- 10 rows - rank 4
+  [PASS] zero-lambda entries present (the adjudicated case) -- 4 zero lambdas
+  [PASS] C_28 == [v1 v2 v1 v2 w1 w2 w1 w2 w1 w2] published table
+  [PASS] boundary row h=28: level-55 columns all zero
+  [PASS] boundary row h=28: level-60 columns nonzero
+  [PASS] level-55 subblock rank == 2 -- got 2
+  [PASS] level-60 subblock rank == 2 -- got 2
+  [PASS] (1,4,7,10)x(tf1_55,tf2_55,tf1_60,tf2_60) minor == 84146 -- got 84146
+  [PASS] canonical sha256 of normalized C_28 matches doc -- form ['nested']
+  [PASS] d_j leading coefficients match doc unit table -- got [76645, 3, 30669, 35567, 30444, 59009, 85377, 101558, 95525, 50779]
+prime 105673 rung 26:
+  [PASS] row census within selection -- rows [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+  [PASS] A_26 = C.diag(d_j) EXACT, all 10 columns
+  [PASS] rank C_26 == 4 -- got 4
+  [PASS] n_compat == 6 -- 10 rows - rank 4
+VALIDATION GATE: PASS (prime 105673, rungs 28 + 26)

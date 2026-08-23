@@ -813,3 +813,409 @@ HONEST SCOPE of promoted ladder results: book-relative (every
 configuration in the enumerated books dies), pending the book-landing
 theorem. The reduction consolidation (T-chain + gap repairs) is now a
 top-tier theory objective alongside residue-A.
+
+## td-12 type-(3,5) book (2026-08-18)
+PROMOTED AT THE HONEST / LIST-RELATIVE TIER: all 14 entry-level cells
+of the td-12 type-(3,5) book (poles 2 x (6,1,2,5) — the single
+below-bound filed entry) are TOWER-DEAD on the ENUMERATED 74-gap
+candidate list (78 raw): 6 SPINE-DEAD-H8 + 8 CLASH-DEAD-FIRSTDEATH,
+conditional on the SEVEN named fail-closed classes (a)-(g).
+List-completeness is LIST-RELATIVE with residuals named (Lemma
+FD-TRICHOTOMY); the u=1 gap-1/3 candidate is exhibited UNREFUSED =
+the named load-bearing residual (class (c)/NF-P). No X vertex exists
+at this entry: the kill is the first-death refusal theorem (den-
+refusal of every enumerated candidate maximal gap), replacing the
+td-7/td-11 X-clash pattern. TDBOUND consequence: the filed ladder's
+live frontier is exactly {residue-A} plus the unadjudicated
+above-bound entries (td 8, 10, 12-(2,3)/(2,5), 14). Review chain:
+grok-td12-review (SOUND-WITH-ERRATA — round-2 errata folded: 74/78
+candidate recount vs the stale 54, corrected budget-10 core
+multipliers, de-tautologized spine checks, citation hygiene). Engine
+cases/td12_book.py, 14 gates, exit 0. Source: BOOK-TD12.md.
+
+## D23 FIBER-LOCAL NONEMPTINESS (2026-08-19)
+PROMOTED AT THE FIBER-LOCAL / MOD-p TIER: on the radical_point chart fiber
+of the D21 window (the CORE2 object, SHEET6-DIRECTIONB 7.S3), the depth-23
+Row_22 obstruction does NOT eliminate the window: V(row22red) is nonempty
+over the algebraic closure of F_p at p = 105337, 105673, 200257.
+Chain: NF reduction of the 6 compat rows against the banked 397-element
+fiber GB (8.S4 payload; point-identity gates 72/72 x2 primes) -> affine
+structure A = C.diag(uW1^2,uW2^2,uW1^2,uW2^2), C constant rank 2 -> exact
+rank-2 residual g1,g2,g3 with V(fiberGB+g) = proj V(row22red), EMPTY iff
+EMPTY (rank pinned by saturated scales) -> msolve GB 509 elements != [1]
+at all three primes (det23 lanes, 63s each; det23_p*.out banked).
+Witnesses: 6 explicit F_p points per prime at 105337/105673, verified
+400/400 emission rows in python-flint, back-solved to FULL 72-variable
+depth-23 configurations (54/54+76/76+77/77 rows; cases/d23_witnesses_*.json,
+8.S6). Survivor locus dimension 11 (all three primes; g's cut codim 2).
+Review: Grok hostile recompute CONFIRMED all load-bearing claims incl.
+bidirectionality + scope honesty (xmodel/grok-det23-review.md); Sol
+independent structural convergence + 85% prior (xmodel/sol-avenues3.md).
+SCOPE LIMITS (explicit): one radical fiber of 36; mod p only (no char-0
+statement); chart-local; says nothing about the other fibers or about
+DEPTH-STAB germ certification (e-spec unbanked, experimental readings
+fail closed). Supersedes: the row22compat/row22red 12h timeouts (now
+explained as nonempty-GB grinds; rc=124 x3 + x2 banked, third lane killed
+at 305GB post-confirmation, rc=137).
+
+## FILTERED DIFFERENTIAL NEWTON LEMMA (2026-08-19)
+PROMOTED AT THE ABSTRACT-THEOREM TIER: the filtered Newton/Hensel lifting
+theorem for the Euler/Ore linearization (xmodel/sol-newton-lemma.md
+Theorem 3.1 + Cor 3.2 + supporting lemmas): over any field (incl. char p),
+a residual of global t-order D lifts to a formal solution whenever
+D >= 2e+1, where e = the delayed-parametrix loss of the linearization;
+Euler terms need no conjugation. Proof: Sol (Route B contraction);
+review: Grok hostile replay CONFIRMED (xmodel/grok-newton-review.md).
+SCOPE WITHHELD (per both documents): no promoted e+ at any point, no
+D23/D25 germ certified, CYCLIC-30/BRIDGE-30/PARAM-30/FILTER-30
+application gates open. This closes CONJECTURE E-HENSEL and supplies the
+mechanism awaiting a D25 survivor with a certified e+.
+
+## FIBER EQUIVARIANCE THEOREM (2026-08-20)
+PROMOTED (scoped algebraic theorem + exact D25 realization): the 36
+radical fibers of the D21 window form a single free orbit (G-torsor) under
+G = (C3)^2 x (C2)^2, acting by diagonal scalings with entries in
+{+-1, +-omega, +-omega^2} subset F_p at both banked primes; the fiber
+transports are F_p-SCHEME isomorphisms, and the character identity
+F_{l,g.lambda}(T_g x) = chi_l(g) F_{l,lambda}(x) holds as an exact
+monomial-dictionary identity on all 9,792 generator-edge row pairs of the
+parked D25 systems (residuals R1-R5 character 0). Proof: Sol
+(xmodel/sol-pcc-orbits.md); review: Grok hostile recompute CONFIRMED
+(xmodel/grok-orbits-review.md). RESIDUAL GAPS (named, minor): un-rerun
+source-pkl weights; 216 witness checks pending; future-emission fidelity
+must be re-gated per new emission. CONSEQUENCE: one fiber decides all 36
+at D25 (and at any depth whose emission passes the fidelity gate) --
+per-fiber cost /36 permanently; the atlas support identity is explained.
+
+## D25 FAMILY NONEMPTINESS + CELL STRUCTURE (2026-08-21)
+PROMOTED AT THE MODULAR TIER (p = 105337 and 105673; emission-fidelity
+caveat inherited from SHEET6-DIRECTIONB sect 9; chart-local as always):
+the depth-25 residue-A family systems are NONEMPTY of dimension 14 --
+and moreover each of the 36 fiber systems is 16 DISJOINT COPIES OF A^14
+over F_p (union: 576 cells), identified by an exact certificate: 2 lift
+pivots (minor = unit x uW1^2 uW2^2) + 8 Laurent-unit base pivots with
+well-founded DAG, hcore/hlin ideal-membership from raw rows, explicit
+per-fiber witnesses vanishing 34/34, Jacobian ranks 14/18. NO Groebner
+basis was required; the 48h union lanes are superseded.
+Chain: Sol certificate (xmodel/sol-ideas-0821.md) -> independent
+mechanical replay CONFIRMED (cases/d25_certificate_replay.json, 9.S2;
+negative controls 24/24) -> Grok hostile recompute CONFIRMED
+(xmodel/grok-d25cert-review.md: 72/72 fibers, freeness verified).
+The pre-registered ECO-D25 codim-2 prediction is REFUTED (height-1 cut).
+CONSEQUENCE: the residue-A window survives depth 25 family-wide with
+smooth rational cell structure; the kill direction has now failed at
+D23 and D25; the discriminating question moves to germ certification
+(corrected e+ on the A^14 cells vs the Newton criterion) and, on the
+kill side, to whatever mechanism could terminate a cell tower that
+grows codimension strictly slower than depth.
+
+## PURE-BOUNDARY JACOBIAN IDENTITY + G5 CLASS-KILL (2026-08-23, dual-confirmed)
+Two EXACT, hand-checkable results from the G5/rooftop lane
+(xmodel/sol-rooftop.md), independently CONFIRMED by Grok adversarial
+recompute (xmodel/grok-rooftop-review.md, direct computation + toy checks).
+
+(1) PURE-BOUNDARY JACOBIAN IDENTITY. Let f,g in k[x,y], F,G their degree-d,e
+homogenizations, J(f,g)=f_x g_y - f_y g_x. Chain rule gives
+dF/dX = Z^{d-1} f_x(X/Z,Y/Z), so
+    F_X G_Y - F_Y G_X = Z^{d+e-2} * J(f,g)(X/Z,Y/Z).
+KELLER case J=j in k*:  F_X G_Y - F_Y G_X = j * Z^{d+e-2}  (all critical
+contributions created at the line at infinity). Grok toy-verified on the
+elementary automorphism f=x+(y+x^2)^2, g=y+x^2 (LHS = Z^4 exactly) plus five
+more pairs; homogeneity, dehomogenization, and monomial-uniqueness all clean.
+Corollary: det D[F^beta:G^alpha:Z^N] = c*F^{beta-1}G^{alpha-1}Z^{N+d+e-3}.
+TIER: EXACT, dual-model confirmed. This is the polynomial-origin datum the
+formal countermodels lack.
+
+(2) G5 CLASS-KILL (permanent NO-GO). The family f_B=x^{Balpha}+y,
+g_B=x^{Bbeta}+y^{Bbeta-1} (coprime 2<=alpha<beta) has: finite normalized
+multi-Rees algebra, antinef/complete rooftop (definitional), and the balanced
+common leading power F_d=(X^B)^alpha, G_e=(X^B)^beta (so even J(F_d,G_e)=0),
+YET normalized rooftop energy
+    E_MR = td/(alpha beta) = d(e-1)/(alpha beta) = B^2 - B/beta  ->  infinity.
+Grok CONFIRMED td=d(e-1) (Gauss-irreducibility of P(X)-v, deg_x = d(e-1)>e)
+and the energy arithmetic on six triples. Non-Keller (J not constant), so not
+a G5 counterexample -- it REFUTES the implication class
+{finite generation, rooftop convexity, common leading power} => uniform bound.
+Also Hodge index / Teissier-Rees-Sharp / reverse-AF give e_inf(I,J)<=N^2, i.e.
+E_MR >= 0 -- the WRONG SIGN (G5 needs the upper/near-max bound).
+CONSEQUENCE: any proof of the G5 td-ceiling MUST use the full Keller identity
+(1), not finite generation, convexity, Hodge, mixed volume, or the leading-form
+shadow of Keller. G5 <=> CONJECTURE KJN(C): deg Psi = alpha beta * td <=
+C(alpha beta)^2 (sharp C=1). TIER: EXACT, dual-model confirmed.
+
+## G2/G5 INDEPENDENCE + PUISEUX gcd DICTIONARY (2026-08-23)
+The unification lane (xmodel/sol-unify.md) asked whether one Keller bound
+closes both walls. VERDICT: INDEPENDENT at the banked structural tier -- the
+"shared nu" was a NOTATION COLLISION.
+- EXACT Puiseux gcd dictionary (Lemma 1.1): for a pole branch with denominator
+  kappa_i and characteristic gcd-drops nu_j, prod_j nu_j = kappa_i (telescoping
+  gcd chain, e_s=1 by minimality). Residue-A ladder: 1 -x7-> 7 -x3-> 21 -x2->
+  42, so kappa(P_i)=42=7*3*2.
+- The ROOFTOP nu_P is only the LEAF decoration (final factor 2); the DEPTH
+  product is over ALL characteristic vertices (7*3*2). The Belyi passport
+  {2,3} ramification is a degree-4 QUOTIENT invariant AFTER common-carrier
+  cancellation -- the factor 7 lives in the same genome but nowhere in the
+  passport. Carriers cancel exactly: (C^4 h1)^3/(C^3 f)^4 = h1^3/f^4.
+- KJN(C) =/=> UCD: formal countermodel (Lemma 2.2) inserts r characteristic
+  vertices (q=q'=2, w=2 preserved) keeping td=6, deg Psi=36, E_MR=1 fixed
+  while kappa_i = 42*2^r -> infinity. Even restricting factors to {2,3} fails.
+- UCD =/=> KJN(C): formal family (Lemma 3.1) kappa_P=6 fixed, b_P=b odd -> inf,
+  giving E_MR=b, td=6b -> infinity.
+Both countermodels are FORMAL (satisfy the tree/arithmetic identities, no known
+polynomial-origin Keller realization). CONSEQUENCE: G2 and G5 are separate
+walls -- UCD bounds the MULTIPLICATIVE internal-carrier axis (max_i kappa_i),
+KJN bounds the ADDITIVE pole-mass axis (sum a_P b_P/nu_P); independent
+coordinates. The ONLY remaining bridge is CONJECTURE K2C (Keller
+degree-to-carrier theorem): polynomial origin + the pure-boundary Jacobian
+identity bounds the internal characteristic indices in terms of rooftop
+pole-mass data -- exactly the ingredient the formal countermodels lack.
+TIER: dictionary EXACT; independence proved at banked/formal tier; K2C is the
+open polynomial-origin bridge.
+
+## G5/KJN REDUCED TO A LOCAL LEMMA: RPMC(C) => KJN(C) (2026-08-23)
+The G5 lane (xmodel/sol-kjn.md) reduces the global td-ceiling to a strictly
+LOCAL one-root capacity lemma, with the reduction PROVED.
+
+EXACT structures (all char 0; F,G degree d=Balpha,e=Bbeta homogenizations;
+M=d+e-2; accepted input: the dual-confirmed pure-boundary identity
+F_X G_Y - F_Y G_X = j Z^M):
+- GRADIENT MATRIX FACTORIZATION (the Keller-specific object). A=[[F_X,G_X],
+  [F_Y,G_Y]] has det = j Z^M, so the cokernel Q has Fitt_0(Q)=(Z^M): Q is
+  supported scheme-theoretically on the M-fold thick line M*L_inf with NO extra
+  Jacobian curve. After removing exceptional monomials, the transformed det is
+  a UNIT off the strict transform of Z=0. This is the exact datum that ordinary
+  ramification effectivity, Chern/Hilbert data, and coprimality all discard.
+  (Its Hilbert poly chi(Q(t)) = M t + (3M-(d-1)^2-(e-1)^2)/2 still scales
+  quadratically in B, so ordinary invariants alone give no B-independent bound.)
+- ENERGY LOCALIZATION (EXACT). Common leading power forces F_d=xi H^alpha,
+  G_e=eta H^beta, deg H=B, div_{Linf}(H)=sum mu_i P_i, sum mu_i=B. The rooftop
+  energy splits with NO cross-terms over proper roots: E_MR = sum_i E_i,
+  E_i = (1/2) sum_{p > P_i} (R_p/alpha - S_p/beta)^2.
+- Coprimality lower quantum (EXACT): each nonzero R_p/alpha - S_p/beta has
+  |.| >= 1/(alpha beta), so its square >= 1/(2(alpha beta)^2) -- a lower bound,
+  not the needed upper bound.
+
+CONJECTURE RPMC(C) (root-weighted pure-minor capacity): for each proper root,
+E_i <= C mu_i / B, under the pure-minor identity hypothesis.
+THEOREM 7.1 (PROVED conditional reduction): RPMC(C) => KJN(C). Sum E_i over
+roots, sum mu_i = B => E_MR <= C => deg Psi = (alpha beta)^2 E_MR <=
+C(alpha beta)^2. So RPMC(1) => sharp KJN(1) => TDBOUND becomes a THEOREM =>
+the sheet-number book ladder becomes unconditional.
+
+SEPARATION FROM THE CLASS-KILL DECOY (EXACT, sec 8). The non-Keller control
+f_B=x^d+y, g_B=x^e+y^{e-1} has Q_B = d(e-1)X^{d-1}Y^{e-2}Z - e X^{e-1}Z^{d-1}
+!= j Z^M (an EXTRA Jacobian curve), yet at the first boundary valuation its
+log-effectivity coefficient equals +1, IDENTICAL to a Keller pair. Therefore
+log-effectivity alone cannot be the Keller step; the separating datum is
+precisely the VANISHING of the residual Jacobian curve in the transformed
+gradient cokernel. E_MR = B^2 - B/beta for this family violates RPMC's C mu/B
+demand, with no contradiction because the matrix-factorization hypothesis fails.
+TIER: reduction + all listed structures EXACT/PROVED (single-model, sol-kjn);
+RPMC(C) is the open local lemma. NOT YET Grok-reviewed.
+
+Bridge status (companion, xmodel/sol-k2c.md): UNRESTRICTED K2C is FALSE
+(explicit Henon automorphism tower, td=1, kappa=42*2^r -> inf; Grok review of
+that construction PENDING). So G2/UCD does NOT follow from KJN and needs its
+own bound UCD-A-min (degree-minimal nonautomorphic type-(2,3) residue-A). The
+two walls remain SEPARATE; the only conditional bridge is CONJECTURE K2C-min.
+
+## UNRESTRICTED K2C REFUTED: HENON AUTOMORPHISM TOWER (2026-08-23, dual-confirmed)
+Theorem 2.1 of xmodel/sol-k2c.md, independently CONFIRMED by Grok hostile
+recompute (xmodel/grok-k2c-review.md) with explicit hand computation.
+Generators H_q(u,v)=(v, v^q - u), J=1, inverse (u,v)->(u^q - v, u). Fix r>=0,
+s=r+4, indices q=(7,3,2,...,2); P_0=x,P_1=y,P_{i+1}=P_i^{q_i}-P_{i-1};
+(f_r,g_r)=(P_s,P_{s+1}). Then (all CONFIRMED (i)-(vi)):
+  - Phi_r is a polynomial AUTOMORPHISM of A^2, J=1, hence td=1;
+  - pole orders at the unique place infinity: n_0 = prod_{j=1}^{s-1} q_j =
+    7*3*2^{r+1} = 42*2^r; characteristic indices (7,3,2,...,2);
+  - pole Puiseux denominator kappa_r = 42*2^r -> INFINITY;
+  - deg f_r = kappa_r, deg g_r = 2 kappa_r;
+  - the FULL pure-boundary identity holds: (F_r)_X(G_r)_Y-(F_r)_Y(G_r)_X =
+    Z^{3 kappa_r - 2} (Grok verified Z^124 at r=0 by direct expansion).
+CONSEQUENCE: bounded td + polynomial origin + the full boundary identity do
+NOT bound kappa -> UNRESTRICTED K2C is FALSE. Grok confirms the scoping is
+legitimate: the family is one-pole, reduced type (1,2), degree-minimizes to a
+linear automorphism (kappa=1), never type (2,3), does not realize residue-A.
+NET: G2 and G5 are genuinely SEPARATE walls at the Keller tier. G2/UCD needs
+its own bound UCD-A-min (degree-minimal nonautomorphic type-(2,3) residue-A);
+the only conditional bridge is CONJECTURE K2C-min. TIER: EXACT, dual-confirmed.
+
+## G5 CHAIN EXTENDED: RPMC(C) <=> PC(C), POLAR-EXCESS BRIDGE (2026-08-23)
+xmodel/sol-rpmc.md executes two of the three sol-kjn §7 bullets EXACTLY (single
+-model tier), reducing RPMC to a concrete polar-capacity bound.
+- THICK-LINE DEGENERATION (EXACT/PROVED). At a root of multiplicity mu, the
+  gradient cokernel is a free k[[u]]-module of rank M=d+e-2; z-multiplication
+  has ONE Jordan block of length M over k((u)), exactly TWO blocks (r, M-r) at
+  u=0 with 1<=r<=d-1, M-r>=e-1, and Smith form diag(1,...,1,u^c,0), c=alpha*mu-1.
+  So exactly ONE transverse elementary-divisor defect of exact size alpha*mu-1;
+  all jump COUNTS determined, jump EXPONENTS not.
+- POINT-BASIS = INTERSECTION DEFECT (EXACT/PROVED). With n_P =
+  i_P(F-lambda Z^d, G-nu Z^e) and Delta_P = alpha*beta*B*mu - n_P (a nonnegative
+  integer): E_P = Delta_P/(alpha beta) and sum_{p>P}(beta R_p - alpha S_p)^2 =
+  2 alpha beta Delta_P. Hence the stronger quantum E_P >= 1/(alpha beta).
+- EXACT POLAR BRIDGE (PROVED, pure-minor used exactly): on the normalization
+  branches gamma of a general F-fiber above P (m_gamma = ord_gamma z),
+  Delta_P = sum_{gamma|P} max{0, ord_gamma F_X - (d-2) m_gamma}.
+- REDUCTION: CONJECTURE PC(C): sum_gamma max{0, ord_gamma F_X - (d-2)m_gamma}
+  <= C alpha beta mu / B. By the above, PC(C) <=> RPMC(C) <=> (via Thm 7.1) KJN(C).
+- KELLER SEPARATION (EXACT): for the class-kill decoy the residual Jacobian
+  curve adds branch order de-d-1; intrinsic polar excess is only 1 while the
+  actual defect is de-d, so the bridge (0.6), freeness, and nilpotence all fail
+  exactly because Fitt_0 != (Z^M). Sanity gate holds.
+STATUS: G5/KJN(C) <= RPMC(C) <=> PC(C). The single remaining step is to bound
+the intrinsic polar excess of the generic fiber at a Keller root by C alpha beta
+mu/B. No finite B-independent C obtained. TIER: DECISIVE PARTIAL (single-model).
+
+## BOTH FOUNDATIONAL WALLS REDUCED TO ONE TERMINAL CONJECTURE EACH (2026-08-23)
+G5 (xmodel/sol-pc.md) and G2 (xmodel/sol-ucda.md), single-model tier.
+
+G5: PC(C) <=> CONJECTURE DIR(C) (displaced-intersection retention). For general
+lambda,nu at a boundary root of mult mu (c=alpha*mu-1):
+    n_P = i_P(Phi - lambda z^d, Gamma - nu z^e) >= e(c+1)(1 - C/B^2).
+Since e(c+1) = alpha beta B mu, DIR(C) <=> PC(C) <=> RPMC(C) <=> KJN(C). PC's
+1/B factor is thus a 1/B^2 RELATIVE intersection-retention bound.
+New EXACT structures (PROVED):
+ - canonical fiber differential omega = dy/f_x = -dx/f_y = dg/j; polar-excess
+   term a_gamma = ord_gamma F_X - (d-2)m_gamma = -ord_gamma omega - 1; adjunction
+   SIGNED identity Delta_inf - K_inf = 2 - 2 g_C - s (does NOT cap the positive
+   part; the finite-end compensator K_inf is uncontrolled).
+ - Smith telescope: higher z-filtration torsion tau_q <= min(q,M-q)(alpha*mu-1),
+   i.e. every higher jump bounded by the first Smith defect c=alpha*mu-1.
+ - semicontinuity gives n_P <= i_P (UPPER); DIR needs a LOWER bound. Wrong way.
+STATUS: DIR(C) is the G5 crux. Any finite B-independent C => TDBOUND theorem.
+
+G2: UCD-A-min <= CONJECTURE A-SCALE. DECISIVE NEGATIVE on degree-minimality:
+by the char-0 coordinate-cusp theorem a type-(2,3) rectangular cusp pair is
+ALREADY Aut-orbit degree-minimal at every common scale, so degree minimality
+gives NO bound deg f <= Phi(6,(2,3)). (Contrast: the Henon type-(1,2) tower is
+removable because V-U^2 is a coordinate; that mechanism is absent for reduced
+type with both entries > 1.) Constant Jacobian gives only ord_t f_y = 3-kappa_i
+(compatibility); branch conductor c(P_i)=2 delta(P_i) >= 2(kappa_i-1) is a LOWER
+bound. Neither caps kappa_i.
+A-SCALE: a+b <= B_A for orbitwise degree-minimal nonautomorphic residue-A pairs
+(Sigray rectangle base (a,b)) => kappa_i <= deg f = 2(a+b) <= 2 B_A =: K_A.
+Conditional K_A=42 only under the global-coordinate-tail hypothesis.
+STATUS: A-SCALE IS the G2 crux; a counterexample sequence, if one exists, lives
+in the non-removable type-(2,3) carrier direction.
+
+NET FOUNDATIONS MAP: G5 = KJN <= RPMC <=> PC <=> DIR(C); G2 = UCD <= UCD-A-min
+<= A-SCALE. Walls SEPARATE (Henon dual-confirmed). Each reduction is an EXACT
+theorem; the two terminal conjectures resist standard tools and are the honest
+locus of JC2 difficulty for the book-relative program. TIER: single-model,
+DECISIVE PARTIAL on both.
+
+## G2/G5 INDEPENDENT AT THE GERM LEVEL: DIFFERENT/CONTACT LEDGER (2026-08-23)
+xmodel/sol-bridge2.md settles whether the two terminal cruxes (DIR for G5,
+A-SCALE for G2) share a root. VERDICT: INDEPENDENT even locally.
+- EXACT different/contact ledger (PROVED): on a pole branch gamma of a general
+  f-fiber, with m=ord z, p=pole order of g, I_gamma = contact with the other
+  branches of the fiber germ:
+     ord_gamma F_X = (d-2)m + p,   c(gamma) + I_gamma = (d-3)m + p + 1,
+  hence the branch polar defect Delta_gamma = p (= 3 on residue A, the pole
+  order of g), while the conductor 2 delta(gamma) measures the branch different.
+  The common ledger carries an UNCONTROLLED CONTACT term I_gamma.
+- CONSEQUENCE: a bound on the polar excess (G5/DIR) does NOT bound the conductor
+  / kappa_i (G2), nor conversely; the formal l=0,nu=2 tower keeps Delta_gamma=3
+  while kappa_i, delta -> infinity. A-SCALE => residue-A DIR only tautologically
+  (bounding the whole degree scale). Terminal directions genuinely different.
+- CONCRETE residue-A germ arithmetic (all EXACT): characteristic exponents
+  (b1,b2,b3)=(54,74,79), approximate-root generators (42,54,398,1199), conductor
+  c(P_i)=2278, delta(P_i)=1139, contact I_i=4656, d=168, m=kappa=42, p=3. The
+  ledger closes with no slack (ord F_X = 6975 = 6972 + 3). DIR ratio
+  B*Delta_P/(alpha beta mu) = 84*6/(6*63) = 4/3, so DIR(4/3) is EQUALITY on the
+  filed residue-A root (independent of the large conductor 2278).
+- DECOYS (Henon automorphism tower, non-Keller class-kill) BOTH have intrinsic
+  polar excess 1 and conductor -> infinity, but are excluded by ORTHOGONAL
+  mechanisms: Henon by orbit-minimality, class-kill by pure-Jacobian support
+  (Fitt_0=(Z^M)). Neither Delta nor delta alone excludes both. No single
+  no-decoy local rigidity statement exists.
+- Third equivalent form of the G2 crux: CONJECTURE CONTACT-DEFICIT
+  (d-3)kappa_i - I_i <= K_A, equivalent to a uniform upper bound on the branch
+  conductor c(P_i) (=> kappa_i <= floor((K_A+4)/2)+1).
+TIER: ledger + arithmetic EXACT/PROVED (single-model); INDEPENDENCE established
+at the banked-germ tier. NET: G2 and G5 need two separate proofs; the
+foundational reduction tower is at its floor (two independent terminal cruxes).
+
+## DIR CENSUS + THE ALGEBRAIZATION CONVERGENCE (2026-08-23)
+xmodel/sol-dircensus.md, full rootwise census of the td<=12 books.
+- R_P = B*Delta_P/(alpha beta mu_P), Delta_gamma = pole order of g.
+- Max FULLY-SPECIFIED filed R_P = 4/3 (residue-A Y-root, equality); actual
+  Keller controls (Henon) only 1/2. But td<=12 type-(2,3) book rows FORCE
+  max_P R_P >= 3/2, 5/3, 11/6, 2 (td=9,10,11,12) under any Keller lift; these
+  are weighted averages so the mass-bearing root can be larger still. => C=4/3
+  is NOT a supported DIR ceiling.
+- DIR(C) <=> CONJECTURE RPC: sum_{gamma|P} p_gamma <= C alpha beta mu_P/B. The
+  pure-minor identity gives only Delta_P <= alpha beta B mu_P (R_P <= B^2), the
+  wrong B-scale. VERDICT: DIR NEUTRAL, no finite C supported (single-model).
+- DIR counterexample lead (additive pole-mass axis): [3A;A,1,2]^2, pole profile
+  (3A,3A), td=6A; any Keller lift => max R_P >= A -> infinity.
+CONVERGENCE: both terminal conjectures reduce to formal counterexample families
+(A-SCALE: carrier tower kappa=42*2^r; DIR: [3A;A,1,2]^2 pole-mass tower), and
+BOTH are gated by the SAME meta-question -- do these formal Newton/entry
+families ALGEBRAIZE to actual polynomial Keller pairs? Algebraize(either) =>
+JC2 counterexample; obstructed(always) => both bounds hold => JC2 true
+(book-relative). The foundational program has converged to this single
+algebraization/exclusion wall. TIER: census EXACT/book-relative; convergence is
+an assessment.
+
+## D43 FULLY-RECONSTRUCTED RESIDUE-A FAMILY = NONEMPTY (2026-08-23, MOD-p / INTERNAL)
+xmodel/sol-d43full.md; cases/d43_full_{family.py,certificate_p*.json,floor_p*.json}.
+Fixed Sigray scale B=84, fiber a00pp, p=105337 & 105673. NOT char-0, NOT a
+polynomial Keller map -- explicitly INTERNAL/UNREVIEWED/MOD-p.
+- The fully graph-preserving family (218 nonredundant rows = 34 parked + 95 old
+  graph bands 6-24 [the D21/D23/D25 reconstruction dropped by the prior
+  overapproximation] + 89 late graph bands 26-42, in 184 vars) is NONEMPTY at
+  both primes. Explicit 184-coordinate witness per prime satisfies all 218
+  generators AND the independent full survivor gate (184/184 pristine residuals
+  zero, s9_nu_ge_43 PASS, 18/18 floor checks; negative control tf1_57+=1 breaks
+  18 rows). Method: exact 101-var slices only (no full-file msolve), decoded
+  points replay all 184 graph rows.
+- CORRECTION to the 2026-08-23 ~08:35 D43 note: the earlier "94 nonzero old
+  coefficients" was a WITNESS-FAILURE count, not a missing-generator census; the
+  properly reconstructed system imposes all 95 old-graph rows and is NONEMPTY.
+- CONSEQUENCE: NO first depth kill. The fixed-B=84 residue-A carrier SURVIVES
+  through depth 43. Floor ell+ >= 37 unchanged (window lower bound; e_plus still
+  E_PLUS_CANDIDATE / certified=null; D75 = first Newton-cert depth). This is a
+  live A-SCALE/carrier signal, but tests only FIXED B=84 depth -- it does NOT
+  disprove A-SCALE (unbounded B), lift to char-0, or algebraize. Grok review
+  pending. The A-SCALE resolution now hinges on the ALGEBRAIZATION gate, not on
+  more fixed-scale depth.
+
+## D43-FULL NONEMPTY: GROK-CONFIRMED + ALGEBRAIZATION GATE MAPPED (2026-08-23)
+- grok-d43full-review.md CONFIRMS the 2026-08-23 D43-full entry: Completeness
+  COMPLETE (10.8 omitted class present; no second overapproximation), Witness
+  SOUND (independent replay both primes, 184/184+34/34 rows vanish incl. 10
+  out-of-slice band-42 rows, floor_gate 18/18 byte-equal), Scope HONEST.
+  Tier upgrade: MOD-p result is now DUAL-CONFIRMED. Scoped caveats (not holes):
+  witness is the CELL ORIGIN (FREE=0), so the separate §10.7 fact "0/42 completed
+  D25 points prolong at rung 26" stands (NONEMPTY != every point prolongs); 9
+  band-10 rows degenerate to identities at the origin; old-graph hash audit is
+  weaker than the late-graph byte regression.
+- sol-lift.md maps the algebraization gate (mod-p -> char-0 -> polynomial Keller)
+  as 8 stages: stage 0 (mod-p witness) DONE; stage 2 (char-0 point) settled by
+  relative-smoothness/Hensel (KNOWN THEOREM) once a common integral model exists;
+  stages 3-8 (inverse-limit survival, convergence/algebraicity, global gluing,
+  polynomial+J=const, unbounded scale) all OPEN, stage 7 HARDEST. VERDICT: no
+  known obstruction AND no known construction -- the carrier is modularly viable,
+  not demonstrably algebraizable. Two primes+CRT do NOT give char-0; one Z_p-point
+  does. Candidate obstructions (GCT-A/K2C/A-CONDUCTOR) all conjectural.
+- NEXT (bounded, decisive): char-0 lift of the B=84 witness (relative smoothness
+  => Hensel). Launched as sol-clift. B=168 scale test + reorg held for DC.
+
+## D43 CHAR-0 LIFT SCREEN: p^2 PASSES, STAGE 2 OPEN (2026-08-23)
+xmodel/sol-clift.md; cases/d43_char0_lift.py + d43_char0_lift_p105337.json.
+- EXACT POSITIVE: coefficient radicals (r3, zeta42, A1, A2, h) Hensel-lifted to
+  Z/p^2 (all defining residuals zero); the pristine 184-row Euler source system
+  has rank J = 129 = rank[J | -F/p] and an explicit 24-coordinate correction
+  replays 184/184 rows zero mod p^2 (direct reevaluation, not linear
+  prediction). NO first-order local obstruction to lifting the D43 witness.
+- EXACT: full special-fiber Jacobian rank of the 218-row system at the witness
+  is 131 (tangent dim 53), with a certified unit 131x131 minor (det=810 mod p).
+- NOT OBTAINED: common integral 218-row model (the d43red band .pkl checkpoints
+  are ABSENT locally -- artifact-recovery item, likely box01), all-218 integral
+  p^2 replay, local Krull dimension (Singular std capped 10 CPU-min), localized
+  generation, p-flatness => the unit minor is NOT a standard-smooth certificate;
+  Stacks 02H6 not invocable. X_43(C) != empty REMAINS OPEN.
+- VERDICT: STAGE 2 OPEN -- no local obstruction found, no Hensel certificate.
+  Next concrete item: recover/re-derive the band checkpoints to build the
+  common integral model, then the dimension/flatness certificate.

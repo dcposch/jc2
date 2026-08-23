@@ -1,0 +1,22 @@
+{
+  "status": "INTERNAL / UNREVIEWED",
+  "mode": "pointwise graph-preserving D43 prolongation search",
+  "fiber": "a00pp",
+  "primes": [105337, 105673],
+  "seed": 20260843,
+  "samples_per_prime": {
+    "named_D25_witness": 1,
+    "deterministic_D25_cell_interior": 20,
+    "total": 21
+  },
+  "result": {
+    "points_tested": 42,
+    "points_prolonged": 0,
+    "no_prolongation": 42,
+    "reason": "STAGE A INCONSISTENT (bands 26..40; no prolongation here)"
+  },
+  "interpretation": "Pointwise obstruction evidence only. Random completed D25 points missing a proper survivor sublocus cannot certify family emptiness.",
+  "raw_checkpoint": "cases/d43_graph_point_search.json.ck",
+  "raw_checkpoint_sha256": "fb60411ffbde4574d64a034e10d754e803573835cbd96c4c6e7cc2343af3add9",
+  "raw_checkpoint_note": "The a00pp census is complete. The interrupted default multi-fiber sweep also left eight incidental p105337 a00mm NO_PROLONGATION records in the raw checkpoint; they are outside this report's scope."
+}

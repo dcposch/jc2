@@ -115,3 +115,32 @@ Dan Clemens Posch
 - 2026-08-14: GGV follow-up (thread; theorem-upgrade note)
 - 2026-08-16: Horruitiner CC'd into thread (rmh322@cornell.edu) + v3 attached
 - 2026-08-16: Helali (hello@lumelia.io) + v3; Suzuki forward requested
+
+---
+
+## v4 proactive send into the GGV thread (drafted 2026-08-18, DC approved "do #1 and #2 today")
+
+Reply-all into the existing thread (GGV + Horruitiner CC). Attach paper1/main.pdf (v4).
+Recommended: send AFTER today's Zenodo bundle upload so the DOI line is concrete.
+
+Dear all,
+
+Attaching v4 of the short paper, superseding the version sent August 16. Three changes: a prior-art remark at Theorem 6.1 (the theorem also follows from Zoladek 2008, Appendix A.7; our characteristic-p proof is retained as an independent argument), citations to the four public replication artifacts of the (72,108) computation, and a revised author line with an explicit AI-collaboration disclosure.
+
+We are also archiving the full theory bundle (all proofs, solver inputs, and verification scripts) on Zenodo today: [BUNDLE-DOI].
+
+No response needed; sharing for the record. As before, if any of this is useful to your program, please use it freely.
+
+Best regards,
+Dan Clemens Posch
+
+## Helali send: DROPPED per DC 2026-08-18 ("not a mathematician at all, only loosely interested").
+## Citation of his artifact stands (merit policy); no further dedicated outreach.
+
+## SEND LOG addition: v4 + bundle DOI sent into GGV thread 2026-08-18 (DC confirmed ~16:45 PDT)
+
+## SEND LOG: MO ANSWER POSTED 2026-08-19 (~01:00 PDT)
+https://mathoverflow.net/a/514446 (q513413). Final short form: 125 bound w/
+Prop-4.3 conditionality, GGV-Horruitiner credited, Helali/Suzuki/Ishihara
+DOIs + exact-replay claim, both our DOIs (21894922 + 22002825), book-relative
+qualifier, AI disclosure + responsibility clause, msolve-tools share offer.

@@ -1138,3 +1138,48 @@ to all of the following.
 
 On the repository state audited here, the answers to the comparison,
 full-landing, off-axis, post-jump, and all-\(d\) questions are **no**.
+
+## 7. Reduction tower as of 2026-08-23 (both walls -> terminal crux conjectures)
+
+The two top-ranked gaps of §3 -- G2 (no GGV->Sigray transport / bounded delay)
+and G5 (no td ceiling) -- have each been driven, through a chain of EXACT
+intermediate theorems (see AUDIT.md 2026-08-23 entries), to a SINGLE terminal
+conjecture. Both chains are honest: every arrow is a proved reduction, and the
+terminal statement in each is the precise place the standard tools stop.
+
+G5 (td ceiling):   KJN(C)  <=  RPMC(C)  <=>  PC(C)  <=>  DIR(C)
+  - KJN(C): deg Psi = alpha beta td <= C(alpha beta)^2. <=> G5 td-ceiling.
+  - Theorem 7.1 (PROVED): RPMC(C) => KJN(C) [sum per-root energies, sum mu_i=B].
+  - RPMC(C) <=> PC(C): exact polar bridge Delta_P = sum_gamma max{0, ord_gamma
+    F_X - (d-2)m_gamma}; two-block thick-line Smith degeneration, defect
+    c=alpha*mu-1.
+  - PC(C) <=> DIR(C): displaced-intersection retention n_P >= e(c+1)(1-C/B^2).
+  TERMINAL: DIR(C) -- a 1/B^2 relative lower bound on the local intersection of
+  two generically displaced pencil members. Adjunction gives only a signed
+  identity; the Smith telescope bounds higher jumps by the first defect;
+  semicontinuity is upper (wrong way). UNPROVEN.
+
+G2 (bounded delay / carrier depth):   G2  <=  UCD  <=  UCD-A-min  <=  A-SCALE
+  - UCD: pole Puiseux denominator kappa_i <= K uniform => d_sh <= log2 K
+    (via prod nu_j = kappa_i) => bounded delay => G2.
+  - Unrestricted K2C / UCD is FALSE (Henon automorphism tower, dual-confirmed:
+    td=1, kappa=42*2^r). So UCD must be restricted to degree-minimal
+    nonautomorphic type-(2,3) residue-A: UCD-A-min.
+  - Degree-minimality does NOT prove UCD-A-min (char-0 coordinate-cusp theorem:
+    type-(2,3) rectangular cusp pairs are already Aut-orbit degree-minimal at
+    every scale). Reduces to A-SCALE: a+b <= B_A (Sigray rectangle base).
+  TERMINAL: A-SCALE -- bound the Newton-rectangle base of a degree-minimal
+  nonautomorphic residue-A Keller pair. Constant Jacobian + passport + conductor
+  give lower bounds only. UNPROVEN; this is where a counterexample sequence, if
+  any, would live (non-removable type-(2,3) carrier direction).
+
+Both terminal conjectures are local invariants of the SAME residue-A germ (DIR
+concerns the polar-excess defect Delta_P; A-SCALE relates to the branch
+conductor via c(P_i) >= 2(kappa_i-1)). Whether they share a single "no-decoy"
+root is under investigation (xmodel/sol-bridge2). The walls are otherwise
+independent (no KJN<=>UCD unification; AUDIT 2026-08-23 G2/G5 INDEPENDENCE).
+
+Referee note: none of the §3 gaps is closed. The tower REPLACES two vague gaps
+with two precise, testable conjectures, and dual-confirms that they are
+genuinely separate. This is progress in localization, not a proof of "JC2
+reduces to books."

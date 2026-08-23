@@ -1,0 +1,11 @@
+I'll run a hostile round-3 re-review of both targets against the prior verdicts, then write the result only to `xmodel/grok-round3.md`. First I'm loading the review skill and the previous verdicts so I can check residuals against the current drafts.This is a two-target residual check, not a git review. Next I’ll read v3, the rebuilt bundle surfaces, and the ledgers those prior defects pointed at.The v3 MO draft is in hand. Next I’ll walk `SUMMARY.tex` and the ledgers against the eight bundle defects, including the AUDIT td-12 line.The draft edits look close; I’m now checking the ledgers, leftover phrases, and whether the metadata abstract overruns the MO hedges.Word count and residual phrases check out. Next I’ll confirm the tarball matches the rebuilt files, then live-check the DOIs and GitHub URL.The tarball matches the rebuilt files and GitHub is still 404. I’ll extract the PDF, pull the live Zenodo abstracts, and check whether D23 or the metadata drifted.I have enough to score both targets. Next I’ll write the round-3 verdict only to `xmodel/grok-round3.md`.Round-3 verdict is in `xmodel/grok-round3.md`. No other files changed. No git.
+
+**A. MO draft v3: PASS (text).** N1–N3 and N5 are actually gone. The v3 edits did not introduce a new text defect. `[BUNDLE-DOI]` is still N4, a posting-day process item, not a wording fail. Do not post until that placeholder is filled with a resolving DOI or cut.
+
+**B. Bundle SUMMARY + Zenodo metadata: FAIL.** All 8 SUMMARY defects landed, including the `AUDIT.md` td-12 ledger line. The rebuilt `SUMMARY.pdf` (10 pages) and the tarball match. The metadata abstract then undoes the G2 hedge:
+
+> “the pre-Laurent GGV-Sigray transport theorem repairing one of those gaps”
+
+That contradicts MO v3 (“no transport theorem from the GGV normal form into the sheet frame”) and the SUMMARY sentence that just restored AUDIT’s G2. One remaining high defect (R1) plus a low dangling `paper2/PRIORITY.md` pointer (R2).
+
+Ship order in the verdict: fix the Zenodo Description clause, upload the existing tarball, paste the minted DOI into the MO draft, then post.

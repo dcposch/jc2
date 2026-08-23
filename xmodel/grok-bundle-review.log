@@ -1,0 +1,17 @@
+I'll load the review skill and read the summary plus the four source-of-truth documents so I can cross-check every theorem, tier, and scope claim.The review skill is for code diffs; this is a hostile external-comms check of the public summary. Next I’ll load the four source-of-truth documents and existing review format.The first `AUDIT.md` section is the paper-1 soundness audit. I’ll search the promotion ledger, foundations scope, and the other source-of-truth documents next.I have the section map. Next I’ll read the promotion ledger, the theorem statements, and the gap lists in full.Several count and scope mismatches already stand out. I’ll verify those against the gates, the transport write-up, the DOI, and the current D23 status.The MO review already flags similar comms risks. I’ll now check transport scope, D23 status, residue-A numbers, and whether the GitHub URL and DOI still resolve.Counts, DOI, and theorem text check out. The remaining defects are comms-tier: a dead repo link, a G2 repair the ledger still denies, and a residue-A headline that swallows the open panels. Writing the verdict.**FAIL.** The verdict is in `xmodel/grok-bundle-review.md`. No other file was touched.
+
+The body of `SUMMARY.tex` is the most careful public statement in the campaign: book-relative banner, `REDUCTION.md` included, D23 left PENDING, `u=1` residual named, no JC2 claim. The theorem statements and the advertised counts replay against `AUDIT.md`, `REDUCTION.md`, `TOWER-UNIFORM.md`, and `BOOK-TD12.md` (17/238/233, 411 with stamp sum 411, 74/78, 1559+21, DOI `10.5281/zenodo.21894922`, Żołądek A.7, author name). That honesty does not save the four surfaces a Zenodo reader will quote.
+
+**Ship-blocking**
+
+| Sev | Defect | Fix |
+|---|---|---|
+| high | `https://github.com/dcposch/jc72108` is 404 today | Publish that exact URL in the same hour, or drop the link |
+| high | G2 written as “partially repaired”; `AUDIT.md` 2026-08-17 still says **NO transport theorem**; `TRANSPORT.md` is not in the promotion ledger | Restore the AUDIT sentence; scope TRANSPORT as T2→T4 pre-Laurent only |
+| high | Residue-A called “the only realized configuration” and “the live frontier” | Use `BOOK-TD12.md` §5: residue-A **plus** unadjudicated td 8/10/12-(2,3)/(2,5)/14, plus HIGH 1 single-pole survivors |
+| medium | Abstract: “td=7 panel closed”; DEPTH-STAB called a theorem while **BANKED** | De-compress the ladder; demote DS |
+| medium | D23 timeouts called “consistent with Row-22 being the killing tier” | Delete the parenthetical. PENDING is otherwise honest |
+
+Three more medium/low items (included `REDUCTION.md` still denies the 411-row certificate; Prop 4.2 trust-set gap unnamed; td-12 labeled PROMOTED with no `AUDIT.md` line) can ride in a rider if the five above are fixed.
+
+**Do not upload `SUMMARY.pdf` as written.**

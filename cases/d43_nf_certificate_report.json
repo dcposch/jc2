@@ -1,0 +1,181 @@
+{
+  "status": "INTERNAL / UNREVIEWED",
+  "route_outcome": "STRUCTURAL_HARDENING_NO_VERDICT",
+  "generated_at_utc": "2026-08-22T20:49:00Z",
+  "scope": {
+    "fiber": "a00pp",
+    "primes": [105337, 105673],
+    "full_system": {
+      "rows": 86,
+      "parked_rows": 34,
+      "compatibility_rows": 52,
+      "variables_after_dedup": 172
+    },
+    "full_verdict_msolve_run_by_this_route": false,
+    "reason": "The full-system msolve crash is already bracketed between prefix rungs 38 and 40; this route used only NF-reduced or specialized systems."
+  },
+  "inputs": {
+    "p105337_verdict_sha256": "00c9a4b44a49c3bbdbbce5658fe9f5714416e309a7f149d7e492a470733881b6",
+    "p105673_verdict_sha256": "df0af1e4c68d8672e638e00f29a69b65c22616f44b0951014932ee7f69248105",
+    "compatibility_count_by_rung": {
+      "26": 6,
+      "28": 6,
+      "30": 5,
+      "32": 6,
+      "34": 6,
+      "36": 6,
+      "38": 6,
+      "40": 6,
+      "42": 5
+    }
+  },
+  "parked_quotient_certificate": {
+    "method": "D25 residual-left-kernel plus triangular/pair pivot replay",
+    "free_parameters_per_component": 14,
+    "dependent_coordinates_reconstructed": 10,
+    "components_per_prime": 16,
+    "components_checked_total": 32,
+    "parked_polynomials_checked_per_component": 34,
+    "result": "PASS: every parked polynomial reduces identically to zero on every checked component",
+    "negative_control": "PASS: adding 1 to one reconstructed dependent coordinate makes at least 5 parked polynomials nonzero in every component",
+    "selftest_sha256": "fac3c5dce5375813945a255f9c78e13096eb2e0ebf70b9cb015c08c72d5bf208"
+  },
+  "generic_d25_point_affine_probe": {
+    "interpretation": "The 14 D25 free coordinates are fixed to 1..14 on one certified W component per prime; these are exact cell-point slices, not the full D25 quotient family.",
+    "remaining_external_variables": 144,
+    "first_affine_tail_threshold": 53,
+    "affine_variables_at_threshold": 92,
+    "pointwise_rank_A_over_four_lower_tail_draws": [44, 44, 44, 44],
+    "pointwise_rank_augmented_over_four_lower_tail_draws": [45, 45, 45, 45],
+    "pointwise_left_nullity": 8,
+    "coefficient_matrix_nonzero_entries": 2592,
+    "coefficient_entry_degree_bound_in_lower_variables": 3,
+    "constant_vector_degree_bound_in_lower_variables": 6,
+    "d25_style_global_C_diag_factorization": {
+      "result": "FAIL at both primes",
+      "first_failure": {
+        "row_zero_based": 12,
+        "variable": "tf1_53",
+        "reason": "not scalar-proportional"
+      },
+      "contrast": "The first six-row rung-26 block factors, but the global 52-row matrix does not; the D25 rank-2 signature does not survive D43."
+    },
+    "threshold_rank_profile": [
+      [53, 92, 44, 45], [54, 88, 42, 43], [55, 82, 38, 39],
+      [56, 78, 36, 37], [57, 72, 34, 35], [58, 68, 32, 33],
+      [59, 62, 28, 29], [60, 58, 26, 27], [61, 52, 22, 23],
+      [62, 48, 20, 21], [63, 42, 17, 18], [64, 38, 15, 16],
+      [65, 32, 11, 12], [66, 28, 9, 10], [67, 22, 7, 8],
+      [68, 18, 5, 6], [69, 12, 3, 4], [70, 12, 3, 4],
+      [71, 6, 1, 2], [72, 6, 1, 2]
+    ],
+    "threshold_rank_profile_columns": ["threshold", "selected_variables", "rank_A", "rank_augmented"],
+    "prime_reports": {
+      "105337": {
+        "json_sha256": "b8473f81dcd6b4ff8d86ce45588a3dd40729e89ce6ad70d644162cc7d053dca5",
+        "support_sha256": "bf077d07f5e3e7ab9672ef206173cd080cab2a2b0f6001e7084500c40799bffd"
+      },
+      "105673": {
+        "json_sha256": "c012c1c6a57251a16e3a52ff3785b906fffa888a275eacf0561955283539f684",
+        "support_sha256": "ac3247d16a2665ef85fbdda4a6555a3e3be71d34497942a4bd36819b2c7ad785"
+      }
+    }
+  },
+  "specialized_probes": {
+    "d25_free_zero_external_tail_system": {
+      "rows": 52,
+      "variables": 116,
+      "terms": 46428,
+      "threshold_53_variables": 64,
+      "rank_A_at_zero_lower_tail": 30,
+      "rank_augmented_at_zero_lower_tail": 31,
+      "rank_A_at_three_nonzero_lower_tail_draws": [32, 32, 32],
+      "rank_augmented_at_three_nonzero_lower_tail_draws": [33, 33, 33],
+      "global_C_diag": "FAIL at both primes at row 35 / tf1_53",
+      "msolve_900_seconds": {"105337": "TIMEOUT", "105673": "TIMEOUT"},
+      "singular_900_seconds": {"105337": "TIMEOUT", "105673": "TIMEOUT"},
+      "input_sha256": {
+        "105337": "f79efce7c467c3318c03e0fe8975f4cc6b4d37bb532445db1c540436e8b7c25c",
+        "105673": "1c2a7bba7396c11dfc12f27072e0f9cabf780baa487d43a0d485984e8d51ba10"
+      }
+    },
+    "external_tails_zero_d25_parameter_system": {
+      "interpretation": "One representative W component per prime, all external tails zero, 14 D25 free coordinates retained symbolically.",
+      "nonzero_rows": 51,
+      "variables": 14,
+      "terms": {"105337": 953056, "105673": 953055},
+      "linear_row_rank": {"105337": 51, "105673": 51},
+      "unit_or_constant_linear_combination": false,
+      "jacobian_rank_at_origin": {"105337": 14, "105673": 14},
+      "augmented_jacobian_rank_at_origin": {"105337": 15, "105673": 15},
+      "coordinate_axis_witness_search": "No witness on any of the 14 coordinate axes at either prime",
+      "msolve_1800_seconds": {"105337": "TIMEOUT", "105673": "TIMEOUT"},
+      "singular_900_seconds": {"105337": "TIMEOUT", "105673": "TIMEOUT"},
+      "remote_input_sha256": {
+        "105337": "d52768813675e3b52e7a7486fec523299f53bbe5771c531f69bcdc88720ae802",
+        "105673": "38d27c675ce812a0a5ad078bcf9fe79b71c1d65c1bcd27697fdfb6b5e43e4f3c"
+      }
+    },
+    "generic_cell_system": {
+      "rows": 52,
+      "variables": 144,
+      "msolve_1800_seconds": {"105337": "TIMEOUT", "105673": "TIMEOUT"},
+      "singular_900_seconds": {"105337": "TIMEOUT", "105673": "TIMEOUT"},
+      "remote_input_sha256": {
+        "105337": "ec8dd8dad1621a6bf29ba868a8f843bb456e93ab378c137fe031f6481d4ed4ef",
+        "105673": "557145fa568ab151d2677058d21eb4f79d393b80e540fc780ea3583456b34bf2"
+      }
+    },
+    "polynomial_left_syzygy": {
+      "prime": 105337,
+      "system": "92-by-52 threshold-53 coefficient transpose over 52 lower variables",
+      "singular_900_seconds": "TIMEOUT",
+      "residual_system_emitted": false
+    }
+  },
+  "regression_gates": {
+    "famcheck_compat_evaluations_per_prime": 104,
+    "famcheck": {"105337": "PASS", "105673": "PASS"},
+    "famcheck_sha256": {
+      "105337": "0e14bd059af4ad9e32b00932e5611d6fa5992313cbcf2b74c57228f9f916475b",
+      "105673": "8e5a5da1047e9e18f61fbb33bacc6ac91efbb6da91cc21d0b40c3a4e7953cb5b"
+    },
+    "independent_valgate_checks_per_prime": 18,
+    "independent_valgate": {"105337": "PASS", "105673": "PASS"},
+    "independent_valgate_sha256": {
+      "105337": "b282d538d5fcdc4d344c70e0bbddf9eaf05e80ac7e45ee7494d31a0524505717",
+      "105673": "753e6d01eccba9a5659b12db85490b5ee6ecdc0ba480df9b00cc7df619582a7e"
+    }
+  },
+  "conclusion": {
+    "empty_or_nonempty": "UNRESOLVED",
+    "dimension": null,
+    "witness": null,
+    "floor_measurement_run": false,
+    "floor_number": null,
+    "comparison_to_37": "No new comparison is available; the banked lower bound ell+ >= 37 is unchanged.",
+    "structural_hardening": "After exact parked-block elimination, D43 exposes a broad affine tail layer with sampled rank 44 and eight-dimensional pointwise left kernel, but its coefficient columns depend polynomially on all lower-tail variables and fail the global C.diag factorization. Exact syzygy and all bounded reduced solvers timed out prime-symmetrically."
+  },
+  "artifacts": {
+    "driver_sha256": "41865448d3de9d0d47a9c0d086a343ea7a46b00688699d2e8b304adb0be5945b",
+    "driver": "cases/d43_nf_certificate.py",
+    "solver_gate_log": "cases/d43_nf_solver_gates.log",
+    "selftest": "cases/d43_nf_selftest.json",
+    "quickshot_reports": [
+      "cases/d43_nf_quickshot_p105337.json",
+      "cases/d43_nf_quickshot_p105673.json",
+      "cases/d43_nf_quickshot_zero_p105337.json",
+      "cases/d43_nf_quickshot_zero_p105673.json"
+    ],
+    "specialized_row_banks": [
+      "cases/d43_nf_quickshot_p105337_rows.pkl",
+      "cases/d43_nf_quickshot_p105673_rows.pkl",
+      "cases/d43_nf_quickshot_zero_p105337_rows.pkl",
+      "cases/d43_nf_quickshot_zero_p105673_rows.pkl"
+    ],
+    "witness_slices": [
+      "cases/d43_nf_witnessslice_p105337.ms",
+      "cases/d43_nf_witnessslice_p105673.ms"
+    ]
+  }
+}

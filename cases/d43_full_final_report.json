@@ -1,0 +1,144 @@
+{
+ "status": "INTERNAL / UNREVIEWED / MOD-p",
+ "date": "2026-08-23",
+ "fiber": "a00pp",
+ "scope": "residue-A, B=84 frozen, no-log, PIN42, W1W2 != 0; p in {105337,105673}",
+ "verdict": {
+  "fully_reconstructed_D43_family": "NONEMPTY at both banked primes",
+  "first_depth_kill": null,
+  "interpretation": "live fixed-B=84 residue-A carrier / anti-A-SCALE signal; no characteristic-zero or unbounded-scale claim"
+ },
+ "ideal": {
+  "variables": 184,
+  "rows": 218,
+  "row_blocks": {
+   "parked": 34,
+   "old_graph_bands_6_24": 95,
+   "late_graph_bands_26_42": 89
+  },
+  "old_graph_band_census": {
+   "6": 9,
+   "8": 10,
+   "10": 9,
+   "12": 9,
+   "14": 10,
+   "16": 10,
+   "18": 9,
+   "20": 10,
+   "22": 10,
+   "24": 9
+  },
+  "late_graph_band_census": {
+   "26": 10,
+   "28": 10,
+   "30": 9,
+   "32": 10,
+   "34": 10,
+   "36": 10,
+   "38": 10,
+   "40": 10,
+   "42": 10
+  },
+  "late_compatibility_audit_redundancies": 52,
+  "rows_if_redundancies_retained": 270
+ },
+ "source_regressions": {
+  "105337": {
+   "parked_source_sha256": "ef6db7e9ad36666537475fabf8238887de0c7e6d8f02c9381eaa7c810cbe4fe2",
+   "old_graph_rows_sha256": "3cbb13d166529c043502ccc070692e610357c4dcab99ccf337b2296b41803651",
+   "late_graph_rows_sha256": "43dc1d54e121e25fe03a6f95ab4666fc6d117c3835dc971c050af9209af15807",
+   "late_compatibility_rows_sha256": "536e2c3fe5516ae51adeb456477d4546d4820eeb369db1e32290d9191f9af59a",
+   "late_graph_byte_regression": "PASS 89/89",
+   "late_compatibility_from_graph_byte_regression": "PASS 52/52"
+  },
+  "105673": {
+   "parked_source_sha256": "43b81c4ea5f77a5d0d32f433a23e867e9ef4c7228f5d6e7624f43561aa976175",
+   "old_graph_rows_sha256": "d681bc8f36372cecadcb5cee6ffc95e8d4ef3657e0baf9c60196daa95da7c85f",
+   "late_graph_rows_sha256": "1f72d049b1ec50c64ffa22b1a15d47f7f9c664cb0e7c8bf52a67ee8654f94d3e",
+   "late_compatibility_rows_sha256": "60b20bee7fa418d22eb598638d91ae3446790470fd4bc3e2745c3efaf22c1205",
+   "late_graph_byte_regression": "PASS 89/89",
+   "late_compatibility_from_graph_byte_regression": "PASS 52/52"
+  }
+ },
+ "exact_slice": {
+  "meaning": "witness-search slice only; NONEMPTY is established by full unsliced replay",
+  "stored_rows": 174,
+  "nonzero_solver_rows": 165,
+  "variables": 101,
+  "terms": 55947,
+  "max_degree": 6,
+  "linear_GB_elements": 101,
+  "linear_GB_terms": 123,
+  "105337": {
+   "input": "cases/d43_full_slice_p105337.ms",
+   "input_sha256": "1e67d9f9d457db2a9b789966545404e45d8c16d78a1c724434dba2d6829e0ee1",
+   "output": "cases/d43_full_slice_p105337.out",
+   "output_sha256": "15cce699758e1f3e53c1b750b3e16bc690befc5fc08d8068b6c062fd21ad8705",
+   "elapsed_seconds": 281.56
+  },
+  "105673": {
+   "input": "cases/d43_full_slice_p105673.ms",
+   "input_sha256": "10b07f407588f17aab00208c6334486f85f34c67c8cc4fe29c9f2460b1cf7c6e",
+   "output": "cases/d43_full_slice_p105673.out",
+   "output_sha256": "adc9702ceaa1154cb4ac54357fec01ed18331f14754e7aab3fa984d5f0a421ae",
+   "elapsed_seconds": 297.81
+  }
+ },
+ "witness_replay": {
+  "105337": {
+   "parked_rows_zero": 34,
+   "old_graph_rows_zero": 95,
+   "late_graph_rows_zero": 89,
+   "all_rows_zero": 218,
+   "selected_pristine_residuals_zero": 184,
+   "survivor_floor_checks": "PASS 18/18",
+   "nu_window": null,
+   "floor_eligible": true,
+   "ell_plus_lower_bound": 37,
+   "parked_jacobian_rank": 14,
+   "graph_fiber_jacobian_rank": 111,
+   "negative_control": "tf1_57 += 1 breaks 18 graph rows"
+  },
+  "105673": {
+   "parked_rows_zero": 34,
+   "old_graph_rows_zero": 95,
+   "late_graph_rows_zero": 89,
+   "all_rows_zero": 218,
+   "selected_pristine_residuals_zero": 184,
+   "survivor_floor_checks": "PASS 18/18",
+   "nu_window": null,
+   "floor_eligible": true,
+   "ell_plus_lower_bound": 37,
+   "parked_jacobian_rank": 14,
+   "graph_fiber_jacobian_rank": 111,
+   "negative_control": "tf1_57 += 1 breaks 18 graph rows"
+  }
+ },
+ "floor_context": {
+  "e_plus_certified": null,
+  "candidate_window_floor": 37,
+  "tag": "E_PLUS_CANDIDATE",
+  "D43_threshold": 21,
+  "first_possible_Newton_certification_depth": 75
+ },
+ "artifacts": {
+  "engine": "cases/d43_full_family.py",
+  "writeup": "xmodel/sol-d43full.md",
+  "audits": [
+   "cases/d43_full_audit_p105337.json",
+   "cases/d43_full_audit_p105673.json"
+  ],
+  "certificates": [
+   "cases/d43_full_certificate_p105337.json",
+   "cases/d43_full_certificate_p105673.json"
+  ],
+  "floors": [
+   "cases/d43_full_floor_p105337.json",
+   "cases/d43_full_floor_p105673.json"
+  ],
+  "point_banks": [
+   "cases/d43_full_pointbank_p105337.pkl",
+   "cases/d43_full_pointbank_p105673.pkl"
+  ]
+ }
+}

@@ -1,0 +1,589 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\Urlmuskip=0mu plus 1mu
+\expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks\do\-\do\*}
+\emergencystretch=2em
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareUrlCommand\fp{\urlstyle{tt}}
+
+\title{Sheet-number obstruction theory for the plane Jacobian Conjecture:\\ the campaign theory bundle, v1}
+\author{Dan Clemens Posch\thanks{Email: \texttt{dc@dcpos.ch}. This bundle and the theory it freezes were produced in close collaboration with Claude (Fable, an AI system by Anthropic), which developed much of the mathematics and all of the software under the author's direction and review. Independent AI systems of the GPT family (``Sol'') and the Grok family served as co-researchers and hostile adversarial reviewers; their review documents are part of this bundle (\texttt{xmodel/}). The author takes responsibility for every claim. The division of labor and the promotion discipline are described in Section \ref{sec:record}.}}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document is the index and precise statement layer for a Zenodo priority
+bundle freezing the theory stack of an ongoing computer-assisted campaign on
+the plane Jacobian Conjecture: the uniform strip-rigidity theorem (Theorem A
+and the uniform residue functional); the sheet-number ladder in the Sigray
+frame, every rung book-relative: $td\le 5$ emptiness on the canonical book,
+the $td=6$ funnel to the residue-A template, the $td=7$ off-axis book empty
+at the tower tier on the filed 17-cell perimeter, the $td=11$ conditional
+411-row certificate resting on the named fail-closed classes FC1-R and FC3,
+and the $td=12$ type-$(3,5)$ list-relative first-death refusal (14 cells);
+the normal-form lemma suite NF-Z/NF-D/NF-M/NF-P with the merged-emission
+law; the banked depth-stabilization lemma for the residue-A window system
+(first-lemma tier: a depth-free kill direction plus a Tougeron $2e+1$
+effective decision constant); and the current, deliberately honest state of
+the residue-A record: its depth-21 window is nonempty modulo three primes
+while every sampled point dies at depth 23, and the deciding depth-23
+computation is still running. Residue-A is the unique coefficient-tier
+two-pole template and the current compute target, not the whole live
+inventory: per \fp{BOOK-TD12.md}, the filed ladder's live frontier is
+exactly $\{$residue-A$\}$ plus the unadjudicated above-bound entries
+($td$ 8, 10, 12-(2,3)/(2,5), 14), joined by the four single-pole r9/M2
+classes at $td=6$, generic off-axis entries, and every $td$ above the
+enumerated range. Every statement below carries its evidence tier, its
+scope, and its adversarial review chain. The bundle includes the campaign's own
+hostile dependency audit (\fp{REDUCTION.md}), whose verdict is that the
+end-to-end reduction from a Keller counterexample to an enumerated book entry
+is not yet a theorem; that audit is part of the record being timestamped,
+not an external criticism of it.
+\end{abstract}
+
+\section{Purpose, provenance, and how to read this bundle}\label{sec:purpose}
+
+This bundle timestamps theory, most of it new since the companion artifact
+release for the paper ``A Vertex-Gap Obstruction for Low-Degree Strip Pairs
+in the Plane Jacobian Conjecture'' (Zenodo DOI \texttt{10.5281/zenodo.21894922};
+the Zenodo records are the canonical public artifacts of the campaign). It
+contains four layers:
+
+\begin{enumerate}
+\item \textbf{The document corpus} (bundle root): the promoted derivation and
+review documents (\fp{SHEET6-*}, \fp{BOOK-*}, \fp{TOWER-*}, \fp{NF-*},
+\fp{DEPTH-STAB.md}, \fp{TDBOUND.md}, \fp{TRANSPORT.md}, \fp{REDUCTION.md},
+\fp{AM-CHECK.md}, \fp{CERT-UPGRADE.md}, \fp{AUDIT.md}, \fp{MATHIEU.md},
+\fp{notes.md}, and companions). These are working documents: they record
+errata, retractions, and superseded readings in place, on purpose.
+\item \textbf{The machine layer} (\fp{cases/}): the exact-arithmetic engines and
+gate suites that re-derive every promoted arithmetic claim, plus the frozen
+certificate data (\fp{cases/towers/}, the emitted residue-A cores, the
+depth-21 fiber Groebner basis and sample points). \fp{VERIFICATION.md} lists
+one command per suite with its expected check count; all suites are pure
+Python 3 standard library except where noted, and all exit 0.
+\item \textbf{The adversarial record} (\fp{xmodel/}): the review documents of the
+two independent AI reviewer families, including the reviews that broke
+claims. Section \ref{sec:record}.
+\item \textbf{This summary}: precise statements with pointers into the other
+three layers.
+\end{enumerate}
+
+Nothing in this bundle claims a proof of the plane Jacobian Conjecture or of
+the sheet-number exclusion. The bundle exists because the campaign produces
+intermediate theorems and certificates faster than they can be refereed, and
+because the honest, evidence-graded form of the record, including its named
+gaps, is itself the artifact worth timestamping.
+
+\section{Evidence tiers and status language}\label{sec:tiers}
+
+Every claim in the corpus carries one of a small set of labels. The summary
+uses them exactly as the corpus does.
+
+\begin{center}
+\begin{tabular}{p{4.2cm}p{9.6cm}}
+\toprule
+label & meaning \\
+\midrule
+PROVED / THEOREM & a complete mathematical proof at the stated scope, machine-corroborated, surviving at least one hostile review round \\
+PROMOTED & accepted into the campaign's trust set after adversarial review with all errata folded; ``internal-promoted'' is not peer review \\
+BANKED & recorded with its machine gate, not yet through the full review gauntlet \\
+CONDITIONAL & true modulo named, enumerated hypotheses (fail-closed classes, route perimeters, thesis readings); the conditions are always listed \\
+book-relative & quantified over an enumerated book or census, not over all counterexamples; the landing question is a named open gap (Section \ref{sec:foundations}) \\
+mod-$p$ screening & a Groebner verdict over $\mathbb{F}_p$ at the banked primes $105337$, $105673$, $200257$: strong evidence, never a characteristic-zero proof (pre-registered calibration, \fp{SHEET6-R1.md} Section 10.0) \\
+exact-core / entry tier & proved on an audited finite region (exact cores, entry packets), with the beyond-core remainder named OPEN \\
+OPEN / NOT ESTABLISHED & no proof at present; fail-closed where it feeds a certificate \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Machine gates are exact (integer and \texttt{fractions.Fraction} arithmetic,
+no floats); ``$n$ checks, exit 0'' means every named assertion in the suite
+passed on the frozen data in this bundle.
+
+\section{The uniform strip layer: Theorem A and strip uniformity}\label{sec:thmA}
+
+The strip-pair obstruction theory of the companion paper reduces, at every
+cell, to one elementary rigidity statement.
+
+\begin{theorem}[Theorem A; \fp{MATHIEU.md} Section 5.1, PROVED + PROMOTED]\label{thm:A}
+Let $A,C$ be polynomials over a field of characteristic zero and let
+$w\ge 1$ be an integer. If $AC' - wA'C$ is a nonzero constant, then
+$\deg A\le 1$.
+\end{theorem}
+
+\emph{Priority and the Zoladek engine.} Theorem A follows in two lines from
+Zoladek (Topology 47 (2008), Appendix Lemma A.7, who credits Liouville and
+uses the same ODE in the plane Jacobian context); Hermoso-Alcazar (2024) has
+the $w=1$ case verbatim. The campaign proof was found independently through
+the Duistermaat-van der Kallen valuation mechanism and stands as
+corroboration; all uses cite Zoladek/Liouville
+(\fp{MATHIEU.md}, priority note; \fp{paper2/PRIORITY.md} in the repository).
+
+\begin{corollary}[strip uniformity; conj:R closed]\label{cor:unif}
+With the uniform outer residue theorem (\fp{RESIDUE.md} Section 4b), the
+depth-two block variety of a reduced strip pair of type $(k,d_2)$ is
+$\{A\ \mathrm{binomial}\}\cap(\{a_2=0\}\cup\{R_{k,d_2}=0\})$ at every cell
+$k,d_2\ge 2$ in characteristic zero. The strip obstruction theory is uniform
+in $(k,d_2)$; the previously open cells $(3,4)$, $(4,4)$, $(5,4)$ and all
+$d_2\ge 5$ close.
+\end{corollary}
+
+Review chain: \fp{MATHIEU-REVIEW.md} (independent re-implementation, all six
+fronts CONFIRMED, ``Theorem A is a real proof''), plus the external-model
+reviews \fp{xmodel/codex-thmA-review-20260812.md} and
+\fp{xmodel/grok-thmA-review-20260812.md}. Machine layer:
+\fp{cases/residue_check.py} (\texttt{mathieu} mode). Scope: characteristic
+zero; depth two; strips as defined in the companion paper.
+
+\section{The sheet ladder in the Sigray frame}\label{sec:ladder}
+
+The remaining sections concern the sheet-number (topological degree $td$)
+ladder for a hypothetical plane Keller counterexample $F=(f,g)$,
+$td(F)=[\mathbf{C}(x,y):\mathbf{C}(f,g)]$, studied through pole towers and
+Newton trees in the frame of Sigray's thesis. The campaign's audit of that
+thesis found its printed $td\ge 6$ proof incomplete (errata E1 to E10,
+\fp{notes.md}; the bound itself is safe by Orevkov, Domrina, and Zoladek),
+which is why the ladder below is re-proved from the campaign's own kill set.
+All results in this section are \textbf{book-relative} (Section
+\ref{sec:foundations}).
+
+\subsection{$td\le 5$ and the $td=6$ funnel}
+
+The canonical book at $td\le 5$ is CLOSED: zero surviving configurations,
+independent of the AF2 pricing layer (\fp{SHEET6-CAMPAIGN.md};
+review \fp{SHEET6-A3L1-REVIEW.md}, all fronts confirmed). At $td=6$ the
+single-pole sector reduces to four r9/M2 classes, and the two-pole sector
+funnels to a unique rigid template: the \textbf{residue-A} object, with
+merged child $(6,12,3,2,5)$ at level $0$, gauge $\sigma=6$, pole-position
+ratio $a_1/a_2=2\pm\sqrt3$, $\kappa=42$
+(\fp{SHEET6-2POLE.md}, \fp{SHEET6-TEMPLATE.md}). Section \ref{sec:residueA}
+is the current state of that object. The single-pole analysis is
+td-uniform: for every prime $td$, all single-pole configurations die at
+entry (Theorem TDU, \fp{SHEET6-TDUNIFORM.md}, PROMOTED), while composite
+$td$ retain growing survivor lists ($4$ to $212$ over $td=6$ to $16$), so no
+finite residual list exists across all $td$ at current kill-set strength.
+The on-axis (all $b_i=1$) books for $td=6$ to $14$ are enumerated in
+\fp{BOOK-ENUM.md}: 421 cells, 346 killed inline, 75 survivors, no root cell
+surviving anywhere.
+
+\subsection{The $td=7$ panel: census, H5a, and the uniform tower theorem}
+
+Three promoted layers close the off-axis $td=7$ book.
+
+\emph{(a) The zero-chain law.} On the 62-cell class-B/C book the
+Proposition 8.1(iv) local solve has a closed-form verdict: a cell is
+T1-dead iff $d_p\mid d_q$, iff $\bar\kappa\in\{3,4\}$; 56 of 62 cells die
+(\fp{BOOK-OFFAXIS.md} Section 11; dual verification, zero-shared-reasoning
+engine check 62/62 plus hostile audit).
+
+\emph{(b) The E5-corrected census and H5a.} The corrected zero-edge pin
+$\bar\kappa=(\mu_0\nu_G w_U-2)/(\mu_0-1)$ re-enumerates the book cap-free:
+\textbf{17 cells, 238 raw / 233 deduplicated routes}
+(\fp{BOOK-OFFAXIS.md} Section 11a; engine \fp{cases/td7_census_e5.py}).
+The reading ambiguity H5a in the underlying thesis statement was
+\textbf{resolved} on 2026-08-13: the Q-value + E5 reading is proved forced
+(\fp{xmodel/sol-h5a.md}; hostile review \fp{xmodel/grok-h5a-review.md},
+SOUND), making the 17-cell census unconditional across the coherent
+readings; the alternative forced-$\nu$ sub-book (2 cells) is recorded
+alongside, and conjecture U\_7C is moot for $td=7$.
+
+\emph{(c) The uniform tower theorem.}
+
+\begin{theorem}[td-7 tower uniformity; \fp{TOWER-UNIFORM.md}, PROMOTED 2026-08-14]
+Every cell of the E5-corrected $td=7$ class-B/C book dies at the tower
+tier: for each of the 17 census cells, no realization of any filed
+completion route (over all recorded arrivals and their $M_U$ classes, all
+free characteristics, all neutral padding, all zero-cost insertions, all
+terminals, and rerouting of E5-refuted arrival vertices through legal pads)
+admits a global Proposition 4.2 approximate-root ladder: level 1 of every
+ladder is obstructed by the X / first-charged clash. Class B is empty
+before this tier. Hence the $td=7$ off-axis book is EMPTY at the tower
+tier.
+\end{theorem}
+
+Proof structure: the panel-constant clash plus four lemmas (L-A chain-1
+freeze; AM first-charged menu; WIN window emptiness; E5F, the uniform
+vertex-level E5 offset law $n=\nu_U\bar\kappa_G-\nu_G\bar\kappa_U\ge 1$)
+plus a frozen 16-row witness table. Machine gate: \fp{cases/tower_check.py},
+\textbf{1559 checks} plus 21 certificate-suite perturbations, final line
+\texttt{UNIFORM (17 cells): THEOREM}. Review chain (seven passes, three
+model families): \fp{xmodel/grok-tower-review.md},
+\fp{xmodel/sol-tower-review.md} and re-reviews,
+\fp{xmodel/grok-t10-review.md}, \fp{xmodel/grok-t58-t25-review.md}, then
+\fp{xmodel/grok-uniform-review.md} + \fp{xmodel/sol-uniform-review.md}
+(both green; 14 errata folded). Scope, stated in the theorem's own Section
+4: an obstruction over the filed route perimeter, not a statement about
+convergence, P-realizability, or existence away from the represented
+charts. Consequence: off-axis $td=7$ needs no coefficient emitter.
+
+\subsection{The $td=11$ conditional emptiness certificate}
+
+Three promoted layers, in increasing generality:
+
+\begin{enumerate}
+\item \textbf{Entry-clash theorem} (exact-core tier, PROMOTED after a
+five-round review chain ending \fp{xmodel/sol-td11-final.md}): at all three
+$td=11$ entries the level-1 window closes; the sole intruder (the 11-A
+zero-cost $5/8$ resonance) is $\mu$-robustly H8-dead (Lemma 11A-RES: the
+resonance is an M-drop, forcing $\mu=1$ and a $v_2$ valuation mismatch on
+every route shape). \fp{TOWER-TD11.md}; gate \fp{cases/tower_td11.py}, 66
+checks.
+\item \textbf{Nested-row closure}: all 129 nested 11-C decorated skeleton
+rows are DEAD-AT-TIER (62 inner-merge H8; the remaining 67 = 31
+unrealizable + 12 self-refused + 3 split + 21 outer-dead via the NF-M
+parametric pin), confirmed by \fp{xmodel/grok-67-final.md} with round-10
+errata folded.
+\item \textbf{The census certificate} (PROMOTED 2026-08-15, wording riders):
+every configuration of the audited $td=11$ class-B/C layer is TOWER-DEAD.
+The census is a \textbf{411-row} instrument-backed quotient of a raw route
+space of order $10^8$; stamp multiset $185$ OUTER-DEAD, $133$ SPINE-DEAD-H8,
+$63$ UNREALIZABLE, $12$ SELF-REFUSED, $11$ CLASH-DEAD, $7$ SPLIT. Engine
+\fp{cases/td11_census.py} (24 checks; the $td=7$ book replays through the
+same two-pole engine as a regression). Review chain:
+\fp{xmodel/grok-census-review.md} (SOUND-WITH-ERRATA),
+\fp{xmodel/sol-census-review.md} (BROKEN: a real $M_G$ scope hole, repaired
+by adding 252 rows), \fp{xmodel/sol-census-final.md} (EARNED).
+\end{enumerate}
+
+\textbf{Conditionality, stated exactly.} Emptiness is conditional on seven
+named fail-closed classes FC1 to FC7. After three discharge rounds, FC2
+(cap-free grammar), FC4 (current-state arrivals), FC5 (post-merge strata),
+FC6 ($\nu=1$ provenance), and FC7 (merge-schema finiteness) are closed by
+Lemmas FC2-D/FC4-D/FC5-D/FC6-D/FC7-D. The certificate currently rests on
+\textbf{FC1-R} (beyond-core strata: the audited region is closed; the
+fleet audit of the remainder is honestly PARTIAL, a 595-state audited
+subregion) \textbf{and FC3, the Q+E5/E5F refile, which is the wall}.
+
+\begin{lemma}[merged-emission law, FC5-D; \fp{TOWER-TD11.md} Section 18]\label{lem:emission}
+The post-merge P0 state emitted by a $\nu\ge 2$ merge is schema-determined,
+independent of the coefficient type:
+\[
+w' \;=\; \frac{\bar\kappa\,(d_q-1)}{\nu\, d_q},
+\qquad M' \;=\; \gcd(d_p,d_q),
+\]
+with companion $\rho=\bar\kappa/d_q$. Verified as an algebraic identity on
+all three chain families and against the promoted trunk certificate at the
+merge itself ($5\cdot 14/105=2/3$; $2/5$; $3/4$).
+\end{lemma}
+
+\subsection{The $td=12$ book and the state of $td=13$}
+
+\begin{theorem}[first-death refusal, entry tier, enumerated-list-relative;
+\fp{BOOK-TD12.md}, honest / list-relative tier 2026-08-17; promotion
+ledger entry \fp{AUDIT.md} ``td-12 type-(3,5) book (2026-08-18)'']
+For the $td=12$ type-$(3,5)$ entry (poles $2\times(6,1,2,5)$, the single
+below-bound filed entry), all 14 entry-level cells are tower-dead on the
+enumerated candidate list of 74 unique gaps: 6 cells spine-dead by an H8
+parity contradiction, 8 cells dead because every candidate first death is
+denominator-refused ($\mathrm{den}(\alpha_m-1+g)$ divides no cap candidate
+$c\mid 6$ over the full register lattice). Conditional on seven named
+fail-closed classes; the completeness of the candidate list is
+list-relative with residuals named (Lemma FD-TRICHOTOMY), of which the
+$u=1$ letter (gap $1/3$, UNREFUSED) is exhibited in-gate as visibly
+load-bearing.
+\end{theorem}
+
+Structural novelty: this panel has no $M=1$ carrier and hence no X vertex;
+the $td=7$/$td=11$ ``X dies first'' pattern is replaced by refusing the
+maximal gap directly. Gate \fp{cases/td12_book.py} (14 checks); review
+\fp{xmodel/grok-td12-review.md} (SOUND-WITH-ERRATA, folded; the round-1
+candidate count 54 corrected to 74/78). At $td=13$ only entry-tier rows are
+adjudicated; the panel is OPEN (hard object 13-2b).
+
+\subsection{Conjecture TD-BOUND (honest, evidence-downgraded)}
+
+\begin{conjecture}[\fp{TDBOUND.md}]
+For every dominant GGV-standard $(m,n)$ pair in rectangular normal form,
+$td\le m\cdot n$; the realized record suggests the frontier form $td=mn$.
+\end{conjecture}
+
+Status: unfalsified but deliberately downgraded after review
+(\fp{xmodel/sol-tdbound-review.md}, round 2 folded): 21 of 22 violating census
+rows are census-construction-forced, so the correlation carries coincidence
+risk; only 10 of 23 off-axis rows are genuinely adjudicated. The
+substantive output is the reformulation: in the Sigray frame the bound is
+exactly the pole-mass inequality $\sum_F a_F b_F/\nu_F\le 1$, a
+Jacobian/proximity problem at divergence centers, which names the missing
+lemma. If proved, TD-BOUND makes the sheet ladder finite (it would close
+gap G5 of Section \ref{sec:foundations}); the one realized data point,
+residue-A, sits at equality $6=2\cdot 3$ with
+$I_\infty=168\cdot 252-6=42330$. Gate \fp{cases/tdbound_scan.py}.
+
+\section{The normal-form lemma suite}\label{sec:nf}
+
+The suite answers: can the infinite neutral-word and parametric strata of
+the tower books be compressed to finite certificates? The answers, each
+with its machine gate, are one honest negative and three positives.
+
+\textbf{NF-Z (closed record; \fp{NF-Z.md}; gate 39 checks).} The neutral-word
+future-quotient program is CLOSED as refuted: across four review rounds,
+three counterexamples (CE1 register, CE2 prefix-delta, CE3 live-factor cap)
+show the free zone carries ordered arithmetic that no finite invariant
+compresses; the round-3 SD-conditional exchange theorem is refuted (SD is
+necessary, not sufficient). What survives and is proved: the in-zone
+ordered core ($Z$, $L^*$, $\theta^*$/WIN, composition), Z1 to Z3, and the
+fail-closed policies. All six counterexample configurations are themselves
+dead. This negative result is banked deliberately: it is why the census
+architecture uses depth caps, not quotients.
+
+\textbf{NF-D (depth caps; \fp{NF-D.md}; gate 22 checks).} On mechanism-A
+entries the live-neutral-word depth is finitely capped: at $td=7$, $D=4$
+(15 multisets, 75 ordered words, complete menu). The $td=11$ depth is OPEN:
+with the corrected H8 law ($P/\mu$, $\mu\mid M$), the windows are infinite
+residue classes; round 1's claimed $td=11$ cap was withdrawn as fail-open
+and is recorded as such.
+
+\textbf{NF-M (the square system; \fp{NF-M.md}; gate 25 checks).} For every
+fixed $\nu\ge 2$ discrete merge schema, the Proposition 8.1(iv) coefficient
+equation reduces to a square polynomial system, $\hat Q-1$ homogeneous
+equations in $\hat Q-1$ orbit unknowns modulo the scaling torus.
+Zero-dimensional components give finitely many future-local types (at most
+$(\hat Q-1)!$ per schema, PROVED); positive-dimensional components are
+retained fail-closed (NF-M-OB1; none observed). Round 2 executes the 67-row
+nested enumeration used in the $td=11$ closure above.
+
+\textbf{NF-P ($\nu=1$ and parametric slice; \fp{NF-P.md}; gate 10 checks).}
+The square system is $\nu$-uniform; the $\eta$-pole lemma empties the
+$\eta$-absorbed $\varepsilon>0$ modes in one line; pure-(b) families have
+$\nu$-independent state data with finite congruence-interval partitions;
+the $(2,2t)$ x-tail family is uniformly dead beyond a finite head. On the
+audited $td=7$/$td=11$ perimeter there are \textbf{zero live parametric
+objects}. The honest residue NF-P-OB1 (closure under state-changing steps)
+is the standing beyond-core item, cited, not hidden.
+
+\section{Residue-A: the current compute target, stated honestly}\label{sec:residueA}
+
+Residue-A is the unique $td=6$ two-pole template (Section
+\ref{sec:ladder}): the unique coefficient-tier template on the filed
+ladder, and the current compute target. It is not the whole live
+inventory. In the words of \fp{BOOK-TD12.md} Section 5: ``the filed
+ladder's live frontier is exactly \{residue-A\} plus the unadjudicated
+above-bound entries (td 8, 10, 12-(2,3)/(2,5), 14)''; to that inventory
+add the four single-pole r9/M2 classes at $td=6$, the generic off-axis
+entries with no completeness theorem, and every $td$ above the enumerated
+range (\fp{REDUCTION.md} HIGH 1 and 2, CRITICAL 7). The current record on
+the residue-A object itself
+(\fp{SHEET6-DIRECTIONB.md} Sections 6 to 8; all emissions and harnesses in
+\fp{cases/}) is a \textbf{mod-$p$ window statement, not algebraized, not
+characteristic zero}:
+
+\begin{enumerate}
+\item \textbf{CORE2, the compressed depth-21 window.} A 22-pivot
+fraction-free band elimination (python-flint engine \fp{cases/fastelim.py},
+25000$\times$ the exact-engine wall time) compresses the B-frozen no-log
+depth-21 residue-A window to identical 27-variable / 45-equation cores at
+the three banked primes ($\approx 6311$ terms). All pivots are unit-class,
+so the core is \textbf{equivalence-tier on the $W\neq 0$ chart}, not merely
+necessary. Gates G0.1 to G0.7 (frozen-pivot replay, cross-prime support
+identity, strip reconstruction, independent twin-engine replay, tau
+transport, the a3-chamber reproduction, the 36-fiber sweep) all pass.
+Files: \fp{cases/directionb_core2_p*.ms}, legends \fp{*.rows.txt}.
+\item \textbf{Depth 21 is NONEMPTY mod $p$.} The radical-fiber core solves
+in seconds per prime: Groebner basis of 397 elements (not $[1]$) at all
+three primes, identical staircase; the fiber locus is 13-dimensional, is
+$\mathbb{F}_p$-point-rich (12 of 12 sampled directions produced verified
+points), and globally pins the pole scales ($W_1^4=57673$, $W_2^4=53212$
+mod $105337$). This is the campaign's first nonempty coefficient-tier
+signal, and it is reported at exactly its tier: a mod-$p$ depth-21
+germ-window statement. Frozen artifacts:
+\fp{cases/directionb_fiber_gb_p105337.out.txt},
+\fp{cases/directionb_fiber_points_p105337.txt}.
+\item \textbf{Depth 23 kills every sample.} Evaluating the banked depth-23
+Row-22 block at the 12 fiber points: \textbf{0 of 12 survive} (36 of 36
+point-draw combinations inconsistent). A sampling statement, not a variety
+kill. The deciding objects are emitted: the D23-core
+(\fp{cases/directionb_core23_p*.ms}, 87 vars / 77 eqs per prime, with a
+byte-identity regression to the CORE2 rows) and the quotient-free
+compatibility object (\fp{cases/directionb_row22compat_p*.ms}): a certified
+rank-4 Schur step reduces the ten deep tails to \textbf{six compatibility
+rows} $c=Lb$, so emptiness of that object is equivalent to the depth-23
+kill on the chart. All 12 banked points violate at least one row of $c$
+(loop closure 12/12).
+\item \textbf{Verdict: PENDING.} At bundling time the depth-23 solver lanes
+have timed out at their 12-hour caps and a 48-hour extension lane is
+running. Both outcomes are
+pre-registered: EMPTY at two or more primes kills residue-A at the
+window-screening tier; NONEMPTY routes to the point/dimension iteration of
+\fp{DEPTH-STAB.md}. No verdict is claimed here.
+\end{enumerate}
+
+\begin{lemma}[Lemma DS, depth decision; \fp{DEPTH-STAB.md}, BANKED
+2026-08-17 at the first-lemma tier, both routes, not yet an \fp{AUDIT.md}
+promotion; gate \fp{cases/depthstab_check.py}, 14 checks]
+Let $A$ be the CORE2 coordinate ring localized at the pole scales, and for
+odd $D\ge 21$ let $V_D$ be the residue-A window at depth $D$ with
+$J_D\subseteq A$ its elimination ideal. Then:
+(1) truncation-compatibility (a machine fact: the D23-core contains the
+D21 rows byte-identically) gives an ascending chain
+$J_{21}\subseteq J_{23}\subseteq\cdots$ in the Noetherian ring $A$, which
+stabilizes; mod $p$, all depths nonempty is equivalent to the existence of
+a mod-$p$ formal germ.
+(2) (Kill direction, depth-free.) $V_D=\emptyset$ at any single depth kills
+the germ; the pre-registered depth-23 decision needs no stabilization
+theorem.
+(3) (Effective live direction, committed.) By Tougeron's implicit function
+theorem in Greenberg's effective form, a depth-$D$ point whose Jacobian
+minor has $t$-adic valuation $e\le (D-1)/2$ lifts to a true formal germ;
+the decision constant is $D^*_{\mathrm{eff}}=2e+1$. At $D=23$, any found
+point with $e\le 11$ already decides the formal germ question.
+(4) The banked 12/12 sample deaths refute stabilization at $D^*\le 21$;
+every statement carries $D^*\ge 23$.
+\end{lemma}
+
+The bundle also freezes the honest instrument audits around this frontier:
+\fp{AM-CHECK.md} (the Abhyankar-Moh one-place semigroup test: the
+characteristic sequence of the template is fully forced and banked, but no
+binding one-place check exists on the pinned data; the binding tier lives
+on Jelonek's non-properness curve and is not derivable template-locally)
+and \fp{CERT-UPGRADE.md} (effective spreading-out certification of mod-$p$
+EMPTY verdicts is dead at realistic prime sizes, needing $10^{9}$-digit
+primes for even the smallest toy; the alive sub-lane is Nullstellensatz
+certificate extraction, demonstrated exactly on banked 12 to 14 variable
+systems and already infeasible at 27).
+
+\section{Foundations: transport, and the honest gap list}\label{sec:foundations}
+
+\textbf{Transport (separately scoped).} \fp{TRANSPORT.md} (2026-08-17;
+not yet an \fp{AUDIT.md} promotion entry) proves a pre-Laurent T2-to-T4
+simultaneous-normalization theorem for the GGV-\emph{selected} standard
+pair: a determinant-one target rotation and source rotation carry the
+common-corner pair to a lexicographically minimal Sigray-equivalent pair,
+with a coordinate-cusp obstruction, an exact target-degree formula, and
+signed-axis transport. \fp{cases/transport_check.py} is a regression
+fixture for its worked data, not the proof. Conjecture T, the
+corner-to-tree map, remains open: \textbf{this is not a G2 closure}
+(\fp{xmodel/grok-transport-review.md}). It does not build Eggers-Wall
+trees, does not treat the post-Laurent $[P,Q]=x^j$ objects, and does not
+bound $td$.
+
+\textbf{The audit.} \fp{REDUCTION.md} (2026-08-16, hostile dependency
+audit; cross-reviewed, \fp{xmodel/grok-reduction-review.md}
+SOUND-WITH-ERRATA) is the campaign's own verdict on its foundations, and
+its inclusion here is deliberate. One freshness rider: \fp{REDUCTION.md}
+is frozen at 2026-08-16; on $td=11$ the later \fp{AUDIT.md} promotions of
+2026-08-15/17 control (the conditional 411-row certificate, residual wall
+FC1-R + FC3), and item 8 of \fp{REDUCTION.md} Section 4 is superseded by
+them. Executive verdict: \emph{the end-to-end
+reduction, Keller counterexample $\Rightarrow$ GGV polygon data
+$\Rightarrow$ sheet data $\Rightarrow$ enumerated book entry, is not a
+theorem, in the repository or in the cited literature.} The ranked gap
+list, abbreviated (the document states each precisely, with a dependency
+ledger and a list of claims that are false as stated, not merely
+unproved):
+
+\begin{itemize}
+\item CRITICAL: (G1) the literal starting predicate is wrong, and GGV
+minimal-pair selection is existential, not a normalization of every
+counterexample; (G2) NO transport theorem carries GGV corner data through
+Sigray's normalization: the sheet construction does not consume GGV data
+as written (\fp{AUDIT.md} foundations entry, verbatim; the separately
+scoped \fp{TRANSPORT.md} result above does not close it); (G3) the
+GGV-to-sheet arrow is absent as written and
+the reduced object is often ill-typed; (G4) no canonical universal endpoint
+or full-configuration landing theorem exists, so promoted ladder results
+are \textbf{book-relative}: every configuration in the enumerated books
+dies, pending a book-landing theorem (the $td=7$ book carries its own
+completeness certificate; $td=11$ its conditional one); (G5) no upper bound
+on $td$ exists, so a finite-range run cannot reduce JC2 even with complete
+books; also the off-axis sector has no general completeness theorem and
+the all-$b=1$ books omit post-jump configurations.
+\item HIGH: composite single-pole configurations and on-axis composite
+books remain open; the Sigray replacement is not end to end, including
+Proposition 4.2's constant-leading-part gap, which sits directly inside
+the trust set of the $td=7$ tower theorem of Section \ref{sec:ladder};
+source version drift is tracked.
+\item MEDIUM: contradictory status prose in superseded documents is unsafe
+to cite (the corpus marks it in place); implemented artifacts do not prove
+per-entry coverage.
+\end{itemize}
+
+This scope discipline was adjudicated by both reviewer families
+(\fp{AUDIT.md}, foundations scope entry, 2026-08-17) and is inherited by
+every theorem in Sections \ref{sec:ladder} to \ref{sec:residueA}.
+
+\section{The adversarial record and the machine layer}\label{sec:record}
+
+\textbf{Process.} Three frontier model families work every role (ideation,
+primary research, hostile review, software, software review): Claude
+(Fable, Anthropic) as primary researcher, with GPT-family (``Sol'') and
+Grok-family models as co-researchers and adversarial reviewers. Promotion
+requires hostile review; verdicts are graded (SOUND, SOUND-WITH-ERRATA,
+BROKEN, STILL-SHORT, EARNED) and \emph{negative verdicts are kept}: the
+record in \fp{xmodel/} includes the reviews that broke claims (NF-Z rounds
+1 to 4; \fp{sol-td11-review.md} BROKEN and the exact-core restatement it
+forced; \fp{sol-census-review.md} BROKEN and the 252-row repair;
+the withdrawn round-1 NF-D $td=11$ cap). Retractions are recorded in place;
+\fp{AUDIT.md} is the promotion ledger; \fp{notes.md} is the dated lab
+journal, including operational errors.
+
+\textbf{Machine layer.} Every promoted arithmetic claim has a named check
+in a gate suite under \fp{cases/}; \fp{VERIFICATION.md} gives the exact
+command list with expected counts (at bundling time: 1559 + 21
+perturbations for the uniform tower theorem; 24 census checks stamping the
+411 rows; 14, 39, 22, 25, 10, 14, 6, 21 for the td-12 book, NF-Z, NF-D,
+NF-M, NF-P, DEPTH-STAB, TD-BOUND, and AM suites; all exit 0). The heavy
+Groebner computations (msolve 0.10.1) are \emph{not} re-run by the gates;
+their inputs are frozen in the bundle as \texttt{.ms} emissions with
+\texttt{.rows.txt} legends, and the gate suites verify the emissions'
+internal consistency (byte-identity regressions, round-trip re-parses,
+Schur certificates, loop closures) rather than the solver verdicts.
+
+\section{Bundle manifest}\label{sec:manifest}
+
+\begin{center}
+\begin{tabular}{p{4.6cm}p{9.2cm}}
+\toprule
+path & contents \\
+\midrule
+\fp{SUMMARY.pdf} / \fp{.tex} & this document \\
+\fp{VERIFICATION.md} & one command per gate suite, expected counts, environment notes \\
+\fp{*.md} (root) & the document corpus (Section \ref{sec:purpose}) \\
+\fp{directionb_*.pkl} (root) & the frozen depth-21 window data consumed by the emission harnesses \\
+\fp{cases/*.py} & engines and gate suites (76 files, exact arithmetic) \\
+\fp{lib/families.py} & the GGV family table consumed by the transport gate \\
+\fp{cases/towers/*.json} & the five frozen tower certificate suites \\
+\fp{cases/scratch_offaxis_pricing/} & the px1/px2/px5 pricing layer (read-only dependency of the tower gates) \\
+\fp{cases/*.ms}, \fp{cases/*.rows.txt} & representative frozen emissions: the CORE2 / core23 / row22compat residue-A cores at the three banked primes, the depth-21 fiber core, and the double-EMPTY a3 chamber pair; every \texttt{.rows.txt} legend \\
+\fp{cases/directionb_fiber_*} & the frozen 397-element depth-21 fiber Groebner basis and the 12 sample points \\
+\fp{xmodel/*.md} & the adversarial review corpus (both reviewer families, prompts and verdicts, including negative verdicts) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Excluded for size, with nothing load-bearing lost: the multi-megabyte raw
+window emissions superseded by the compressed cores (the frozen cores here
+regenerate the record), the raw model session transcripts backing the
+\fp{xmodel} review documents ($\approx 82$ MB of \texttt{.out} files), and
+the historical \fp{runs/} and \fp{systems/} trees of the (72,108)
+computation, which belong to the paper-1 artifact line
+(DOI \texttt{10.5281/zenodo.21894922}).
+
+\medskip
+\noindent\textbf{AI contribution.} Claude (Fable, Anthropic) developed the
+mathematics of Sections \ref{sec:thmA} to \ref{sec:residueA} jointly with
+the named co-researcher models, wrote all engines and gate suites, and
+drafted this summary; GPT-family and Grok-family systems adversarially
+reviewed every promoted item and re-implemented key computations from
+scratch. The human author directed the campaign, set the honesty and
+promotion rules, and takes responsibility for all claims.
+
+\end{document}

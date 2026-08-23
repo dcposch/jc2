@@ -1,0 +1,59 @@
+# directionb_row22red_p{105337,105673,200257}.ms -- provenance + gate log
+# Built 2026-08-18 from the frozen cases/directionb_row22compat_p<p>.ms
+# artifacts (72v/54eq/48,621t; SHEET6-DIRECTIONB.md 8.S2) by FLINT
+# pseudo-division of the 22 unit-linear pivot coordinates out of the 6
+# Schur compatibility rows, per xmodel/sol-software2.md item 2 safe order
+# (3 cheap low -> 16 high -> 3 low); W-content stripped after every
+# update; 24 CORE2 rows + 2 uW saturation rows retained BYTE-IDENTICAL.
+# Builder: scratchpad build_row22red.py (session e1e34384); engine
+# python-flint 0.9.0 nmod_mpoly, same split-prime GF(p) conventions as
+# cases/fastelim.py. Pivot provenance = frozen PIV22 of cases/
+# directionb_core23_{elim,emit}.py + D21 registry xN map (NOT positional).
+#
+# EQUIVALENCE (verified, 29 checks 0 FAIL): on the uW chart the emitted
+# 6 rows equal U * (compat rows after exact unit back-substitution of the
+# 22 pivots); U = per-prime nonzero CONSTANT (net W-exponent 0 after
+# strips W1^11*W2^13): 23190 @105337, 10684 @105673, 116004 @200257.
+# Hence V(row22compat) ~= V(row22red) x A^21 (21 vars occur only via
+# pivot rows and drop out); EMPTY <=> EMPTY. Gates: G1 unit-ness at
+# time of use (single W-monomial, c!=0, exact, x3 primes); G2 20 random
+# chart-quotient trials/prime: unique unit back-solve, all 22 pristine
+# pivot rows vanish at lift, reduced == U*full on all 32 surviving rows;
+# G3 12,654 terms << 150k cap; G4 shape == Sol prediction 29v/32eq/
+# 12,654t, six-row sizes 1218x5+1216, deg 9, trajectory 26256->16458->
+# 10794->7306 reproduced, cross-prime support equality; G5 AUDIT hygiene
+# (paren-free, coeffs in [0,p), independent-parser round-trip, no
+# bare-constant row).
+#
+# Rows 0..23  = row22compat rows 0..23   (24 CORE2 rows, byte-identical)
+# Rows 24..29 = the 6 reduced compatibility rows (order preserved)
+# Rows 30..31 = uW1*W1-1, uW2*W2-1        (chart saturation, verbatim)
+# Vars (29): 25 xN + W1 W2 + uW1 uW2; eliminated: x0-x15,x42-x45,x49,x50
+#
+# 22 pivots, order of use; at-use coefficient = c*W1^a*W2^b:
+# step  srcrow          tf-name  xN    W1^a*W2^b   c@105337  c@105673  c@200257
+#   0   Row_6 [eta^2 ]  tf1_38   x42   W1^0*W2^0      65439     66482     77592
+#   1   Row_8 [eta^0 ]  tf1_40   x44   W1^0*W2^0      43554     83926    170569
+#   2   Row_8 [eta^3 ]  tf2_40   x49   W1^0*W2^0      99428      3010     53333
+#   3   Row_12[eta^2 ]  tf1_44   x1    W1^0*W2^0      42493     47102      7279
+#   4   Row_12[eta^5 ]  tf2_44   x9    W1^0*W2^0      45756     24190    139242
+#   5   Row_14[eta^0 ]  tf1_46   x3    W1^0*W2^0      13031     44065    128447
+#   6   Row_14[eta^3 ]  tf2_46   x11   W1^0*W2^0      67864     90264     31111
+#   7   Row_16[eta^1 ]  tf1_43   x0    W1^1*W2^0      42356     27069    102817
+#   8   Row_16[eta^4 ]  tf1_48   x5    W1^0*W2^0      86002     20166     67284
+#   9   Row_16[eta^7 ]  tf2_43   x8    W1^0*W2^1      30348     47152       850
+#  10   Row_16[eta^10]  tf2_48   x13   W1^0*W2^0      83570     25322     27986
+#  11   Row_18[eta^2 ]  tf1_45   x2    W1^2*W2^1      33647     64536     29873
+#  12   Row_18[eta^5 ]  tf1_50   x6    W1^0*W2^1      30116     89316     83996
+#  13   Row_18[eta^8 ]  tf2_45   x10   W1^0*W2^2      43917     28669     35817
+#  14   Row_18[eta^11]  tf2_50   x14   W1^0*W2^0      67969     47975    132982
+#  15   Row_20[eta^0 ]  tf1_47   x4    W1^3*W2^2      62662     83047    115503
+#  16   Row_20[eta^3 ]  tf1_52   x7    W1^0*W2^2      57478     70747    137233
+#  17   Row_20[eta^6 ]  tf2_47   x12   W1^0*W2^3      52127     38880    145618
+#  18   Row_20[eta^9 ]  tf2_52   x15   W1^0*W2^0      10107     68484     51702
+#  19   Row_12[eta^8 ]  tf1_39   x43   W1^1*W2^0      61104     78299    196434
+#  20   Row_14[eta^6 ]  tf1_41   x45   W1^3*W2^0      15368     59516    154052
+#  21   Row_14[eta^9 ]  tf2_41   x50   W1^0*W2^1      17013     41893    125411
+# (at-use coefficients differ from pristine by prior-pivot updates and
+#  W-strips; both banked in scratchpad row22red_bank.pkl. All single
+#  W-monomials with c != 0 at every prime: unit on the uW chart.)

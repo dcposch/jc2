@@ -1,0 +1,14 @@
+I'll do a hostile semantic-fidelity review: read the Lean target and the paper sources first, then recompute the support conditions myself before writing the verdict.Lean target and paper sections are next: I'll pull Challenge/Solution plus the informal theorems they claim to match.Section 8 erratum, key formula details, and a prior fidelity review are next so I can recompute the geometry against those sources.I'll verify theorem numbering in the compiled paper and recompute the lattice-support inequalities independently.Support conditions recompute as the paper’s geometry; next I’ll write the Palomar-tier verdict with theorem-by-theorem findings.**Verdict: FAITHFUL.** Written to `xmodel/grok-vertexgap-fidelity.md`. No other files changed.
+
+Recomputed from Definition 2.1, Lemma 2.2, and the motivating quadrilateral (not from the Lean comments): at type `(2,2)` after label normalization, `P` lives in `0 ≤ 2i−j ≤ 2` and `Q` in `0 ≤ 2i−j ≤ 3`. The extra cut `i ≤ 2j` is the closed half-plane of the near-origin edge `(0,0)—(2,1)`, *not* the parallel bottom `w = 3`. Inside the first-quadrant band it excludes exactly one lattice point, `(1,0)`. That point is load-bearing: without it, `E_{(2,1)} = a₁β₁ − a₂ b_{(1,0)}` and the gap kill fails. Strict `i < 2j` would be wrong (it kills the corner `q₀` itself). No paper edge is missing; saturation and uniqueness are correctly derived from the bracket rather than assumed.
+
+All four declarations match their sources:
+
+- `VertexGap22` is Theorem 3.4 (PDF numbering confirmed): same Jacobian, same `char ∉ {2,3,5}`, variety-level conclusion `a₃ = 0` and `a₂²a₆ = 0` at the right lattice points.
+- `VertexGap22_swapped` is the printed `(P,Q) ↦ (Q,−P)` companion, with `i ≤ 2j` on the wide member and the obstruction on `Q`.
+- `CornerEnumeration` is Lemma 2.2 (sum + `det = ±1`; uniqueness of (i) is unused by the lemma).
+- `GapConditionSideSymm` is the already-corrected (ii).
+
+`(5:K) ≠ 0` is retained for print fidelity and unused by the cascade, as disclosed. `pderiv` is the ordinary Jacobian of equation (1). Challenge and Solution types are character-identical on all four names. README/yaml correctly bound the claim: radical refinement (Remark 3.5), Props 3.2/3.3, and Sections 4–8 are not formalized.
+
+Two LOW wording nits only (yaml “verbatim”; `project.description` leading with the `(8,28)` role). Neither is a missing inequality, a drifted quantifier, or a comparator break.

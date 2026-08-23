@@ -1,0 +1,167 @@
+# APPROACHES.md — Canonical merged survey of top-level JC2 approaches
+
+Date: 2026-08-21. Merge of three independently produced surveys:
+**Sol** (S1–S48, [xmodel/sol-approaches.md](xmodel/sol-approaches.md)),
+**Grok** (G1–G40, [xmodel/grok-approaches.md](xmodel/grok-approaches.md)),
+**Fable** (F1–F18, list delivered 2026-08-19/21, reproduced in provenance note at bottom).
+Every claim below traces to one of these three inputs; nothing is invented here.
+
+**Scoring semantics differ and are NOT averaged.** Sol's x/10 = expected research
+information from the cheapest first experiment. Grok's x/10 = P(checkable proof or
+explicit char-0 counterexample at serious multi-year intensity), given **only** for
+campaign-untried lanes. Fable gives qualitative status flags only. Disagreements are
+flagged inline as DISSENT.
+
+## Executive summary (10 lines)
+
+1. Three independent surveys (Sol 48 entries, Grok 40, Fable 18) merge into **46 distinct top-level approaches**; every row traces to at least one input.
+2. All three agree the tried core — GGV corner farm, Sigray sheet books, formal-germ D-series — is a necessary-condition mill stuck on the same two gaps: **no landing theorem and no topological-degree ceiling** (Fable's G1/G2/G5 = Grok's REDUCTION.md audit = Sol's "two global bridges").
+3. The strip/residue-ODE result (S5–S6/G3) is the campaign's one real theorem; scope-limited, and the ODE rigidity has Żołądek A.7 priority.
+4. The implication ladder above JC2 (Mathieu, GMC n≥3, PC(2), JC(n≥3), Hessian n≠4) is dead post-July-2026 — full consensus; Fable's "no n=2 traction anywhere" matches Grok's "documented massacre".
+5. Char-p: Mondello verified, W2 Witt obstruction total on the searched stratum (1,152/1,152); the odd-prime/other-support refinement is the agreed open extension (F16 = S31's 5/10 = G17(i)–(iii)).
+6. Promise scores are incommensurable across surveys (see semantics note above); this document flags disagreements rather than averaging them.
+7. Top untried consensus pick: **global symplectic primitives / action residues at infinity** (Grok 6/10, his highest untried; Sol's adjacent symplectic lane 7/10) — cheap, dimension-2-specific, falsifiable on leading forms.
+8. Biggest dissent: **HC4 ⇒ JC2** (Sol 9/10, his top pick overall vs Grok's structural hostility to prove-something-stronger routes); also BCW cubic reduction (S 5 vs G 1), dim-3 descent (S 6 vs G 2), collision ideals (S 7 vs G 2), A(F)-as-object (S 8 vs G "would not start here").
+9. Unique finds: **Sol 9** (ZMT/Rees integrality, K2 reciprocity, free-associative lift, p-adic model theory, Siegel integral points, Vitushkin pole removal, deformation no-go, motivic/A^1-degree, commuting frames), **Grok 6** (Ritt, finite-field census, Markus–Yamabe, Moskowicz, differential Galois, Lagrangian generating functions), **Fable 2** (D-module/holonomic index; Tsuchimoto p-curvature as a standalone lane).
+10. Shortlist (section 4): symplectic residues, HC4 quintic module, primitive-group td bound with Orevkov (48,64) negative control, JvdK cusp words, 2D tangent-sweep saturation — each runnable in days; none requires another residue-A F4 job.
+
+---
+
+## 1. Master union table
+
+Tried? legend: **Tried** = substantive campaign computation/proof/audit; **Partial** = restricted client or adjacent work only; **No** = no executed test (proposal notes do not count) — following Sol's and Grok's shared convention. Fable's flags quoted where they differ.
+
+| # | Approach | Essence | Sources | Tried? | Stuck where | Promise (reconciled) |
+|--:|---|---|---|---|---|---|
+| 1 | GGV Newton-polygon corner families + degree farm | Enumerate corner families below a degree cutoff, transcribe [P,Q]=x^k, empty each leaf | S2+S3+S42 / G1 / F1 | Tried (origin of repo; (72,108) settled, farm to deg 150) | No degree/td ceiling ("always a next pair", G); GGV Section-4 reductions not a complete engine; Prop 4.3 chain arXiv-only + no general corner endgame (F); char-0 certificate memory wall | — (tried); all three agree on the stuck-point |
+| 2 | Sheet-number ladder / Eggers–Wall / dicritical boundary trees (Sigray–Orevkov frame) | Resolve infinity, decorate the boundary tree, exclude td=6,7,8,... | S4+S10+S44 / G2 / F2+F3 | Tried — the campaign's active endgame (td≤5 closed, td6 funneled to residue-A, td7 panel, td11 promoted) | No landing theorem (G1/G2); no td ceiling (G5) — consistent tree exists at td=9; residue-A coefficient wall / l+ dichotomy (F2); Sigray unrefereed. DISSENT on framing: F3 calls the Favre–Jonsson valuation-tree version "untried; field" while S/G count the campaign's blowup machinery as this lane | S:8 for a verified GGV-chain-to-Eggers–Wall transport functor |
+| 3 | Vertex-gap / strip ODEs / residue functional R_{k,d2} | Face valuation orders bracket equations; strip block collapses to a rigid ODE | S5+S6 / G3 / — | Tried — "the campaign's actual theorem" (G) | Scope: strips, d1=1, depth two, k≥2 only; y-axis columns block (8,28) subcase (1); ODE rigidity is Żołądek A.7 priority | S:6 for depth-three Ore/resultant extension |
+| 4 | Formal-germ certification + algebraization (D-series windows, DEPTH-STAB, Padé, gluing, toric closure) | Prolong J=1 in Puiseux depth; if all depths stay nonempty, algebraize a germ | S43+S45 / G4+G24 / F17 | Tried deeply — "ours/novel" (F) | l+/e+ >= 37 floor, no live square block (S,F); modular nonempty ≠ germ ≠ char-0 ≠ polynomial (G); route-provenance loss in gluing; "the D-series is not JC2" (G) | S:7 (D25 comprehensive triangular decomposition), S:6 (joint Fitting ideal); G: honest disproof lane, currently a local maximum |
+| 5 | Jung–van der Kulk degree descent / Aut(C^2) amalgam, polydegree | Produce an elementary automorphism strictly dropping degree of a Keller pair | S1 / G5 / F10 | No (as JC2 program; TRANSPORT.md is normalization, not descent) | GGV cusp leading forms d^m U^n − c^n V^m block triangular shears (S,G); "amalgam rigidity never bites on non-automorphisms" (F) | S:4, G:5 — concordant moderate |
+| 6 | Abhyankar–Moh one-place / coordinate recognition | Force a coordinate or one-place curve, finish by AMS | S8 / G6 / — | Tried on the wrong object (both agree: fibers are multi-place; category error documented twice) | Correct one-place objects are A(F) components, whose place data are unpinned | S:6 for place semigroups of asymptotic-set components |
+| 7 | Nonproperness / Jelonek asymptotic variety A(F) | JC2 iff A(F) empty; classify its rational one-place components | S9 / G7 / F11 | Partial (consistency checks pass; A(F) never constructed from the books) | Computing A(F) is the compactification problem again (G); cross-fiber correspondence underived. F11: "partially adjacent (repo RECON material); undeveloped" | DISSENT: S:8 (construct asymptotic values for smallest mu=6 book) vs G: "not cheaper than rebuilding the compactification; I would not start here" |
+| 8 | Formal-inverse combinatorics (BCW tree formula, McKay–Wang, Wright, Singer) | Prove high coefficients of the formal inverse vanish | S26 / G8 / F9 | DISSENT on status: Partial (S, via conjE/Magnus truncation) vs No (G, F) | Cancellation across tree shapes global; no uniform truncation bound; unrestricted vanishing false post-Gao dim-3 CE | S:5, G:4 |
+| 9 | Lee–Li Conjecture E / Magnus remainder vanishing | E => D => C => B => A <=> JC2 | S28 / G13 / — | Tried at smallest cap (6 exact char-0 HOLDs, 0 fails) | No reduction to a finite check; instances scale badly; quantification over all tuples is the theorem | S:7 (sparse-cofactor recurrence hunt) vs G: skeptical, "implication-ladder with a worse generating function" |
+| 10 | HC4 => JC2 Hessian bridge (Meng–Yang; quartic by Ni) | Hessian conjecture in 4 variables implies JC2 via doubling | S23 / G12 (status only) / — | No executed attack | Degree >= 5: homogeneous layers can cancel; cone condition insufficient | LARGEST DISSENT: S:9 — his top pick; G folds it into the dead Zhao ladder and gives no score |
+| 11 | Mathieu / GMC / Poisson / Zhao image-conjecture ladder | Prove a stronger analytic statement implying JC | S27 / G11+G12 / F6 | Dead as a route: Mathieu false on SU(2), PC(2) false, GMC(n>=3) false (Long 2026); abelian DvdK lemma already consumed | Keller gives one bilinear identity, not an infinite moment tower; F6: "no n=2 traction anywhere" — consensus | — (refuted) |
+| 12 | Face isolation / p-adic multinomials (Wilson GMC(2) technique) | Choose a good prime; Kummer carries isolate one Newton face | S27 (part) / G20 / — | Analyzed, not executed as an independent proof | No integer m to send to infinity; surplus already is the face-count of the one identity | Low (both) |
+| 13 | Dixmier DC(2) | Every endomorphism of A_2 is an automorphism; DC(2) => JC2 | S29 / G9 / F7 (part) | Tried in bounded slices (deg<=2 classified; deg-3 quantum/classical divergence real; deg-4 parked) | No Schur normal form in A_2; huge noncommutative centralizers; strictly stronger than JC2; deg-4 is a computational black hole | S:5 (Sp4-irreducible decomposition first); G: 3 if restarted |
+| 14 | End(A_1) disproof route / Zheglov DC(1) audit (Bavula program) | Non-surjective endomorphism of A_1 would refute JC2 | S29 (audit part) / G10 / F7 | Partial (T1 640/640 passed; T2 symbolic replay of S6 Steps 4–7 named and NOT done) | No candidate non-surjective endo exists; even refuting Zheglov's proof yields no CE; 400-line private-calculus endgame | DISSENT: F flags "best counterexample-side alternative, modular tooling may transfer" vs G: "the paper's whole point is that none exist" — defensive recon only |
+| 15 | Spectral surfaces / commuting PDOs in two variables | Build the 2D Burchnall–Chaundy dictionary, run DC(2) there | G26 / — / (F18-adjacent) | No | The dictionary itself is incomplete (Zheglov–Kurke–Osipov research program) | G:3 — "the DC2 degree-3 slice already was the experiment" |
+| 16 | D-module / holonomic index | Holonomic index invariant against a Keller endomorphism | — / — / F18 only | No | "Untried, exotic" (F); no concrete invariant named in any input | Unscored; Fable unique find |
+| 17 | BCW / Druzkowski / Yagzhev cubic stabilization | Stabilize to cubic-homogeneous/cubic-linear normal form in high dimension | S24+S25 / G14 / — | No (per G: correctly) | Raises dimension; target class now contains genuine CEs (Alpoge/Gao era); plane-origin subclass has no recognizing invariants | DISSENT: S:5 and S:4 (salvage subclass invariants) vs G:1 ("category error") |
+| 18 | Graded / equivariant / GIT symmetry | Reduce to weighted-homogeneous Keller maps | S22 / G15 / — | Closed as CE hunt: Shaska 2026 — graded plane Keller maps are automorphisms for every weight pattern | A hypothetical CE has no G_m symmetry; orbit limits lose nonproperness | S:4 (stabilizer/orbit-limit check); G: closed |
+| 19 | Char-p counterexamples + Witt lifting | Lift a char-p plane Keller collision to char 0 | S31 / G17 / F16 | Tried (Mondello char-2 verified; 1,152/1,152 W2-obstructed on registered stratum) | Total obstruction where searched; other primes/supports open; full descent chain (all Witt levels + limit) never armed | Consensus extension: S:5 = F16 "refined version unexplored" = G17(i)-(iii): search F3/F5 low-support collisions, keep W2-survivors |
+| 20 | Reduction mod p / p-curvature formalism (Tsuchimoto, Belov–Kontsevich) | Use the p-curvature/reduction-mod-p correspondence as the proof engine | F8 / S29 (part) / G9 (part) | No (as formalism) | The known bridge consumes PC(2)/JC(4), both now false (S,G); F elevates it as its own untried lane | Unscored by S/G as standalone; Fable framing find |
+| 21 | p-adic injectivity / Hensel / model theory | Uniform p-adic bijectivity for almost all p; transfer to char 0 | S32 only / — / — | Partial (tools used; global implication untested) | Transfer needs a uniform degree/support bound = exactly the missing compactness | S:4 |
+| 22 | Diophantine integral points / heights on fibers | Siegel-type finiteness forces preimages or properness | S33 / G39 (height-search variant) / — | No | Siegel classifies the wrong direction; uniformity across an unknown pencil inaccessible; no effective smallest-CE bound without JC2 (G) | S:3, G:2 — concordant low |
+| 23 | Analytic global inverse / metric completeness / holomorphic analog | Properness via pullback-metric completeness; Hadamard | S34 / G36 / F14 (part) | No | Fatou–Bieberbach: the holomorphic analog is FALSE (G); dim-3 CE kills every dimension-free metric slogan (S) | S:4, G:1 — concordant low |
+| 24 | Real JC / Pinchuk deformation | Deform a Pinchuk map to constant J, or use real global-injectivity theory | S35 / G29 / F14 (part) | No | Pinchuk J is nonconstant; complex collisions need no real points; SOS orthogonal to complex emptiness | S:1 proof / 3 disproof-recon, G:3 — concordant low |
+| 25 | Fiber monodromy / dessins / Hurwitz passports | Riemann-existence constraints on the td-sheeted \hat g | S12 / G19 / F12 | Tried on residue-A: all 169 passports admit transitive identity tuples — no kill | Riemann existence is generous; single-cover passports ignore the second coordinate and Jacobian contacts | S:7 for the coupled two-coordinate branch-cycle CSP |
+| 26 | Primitive-monodromy group bound on td + function-field Galois | Group theory forbids primitive G <= S_td for large td, or forces blocks | S15 / G23 / F12 (part) | No (as a global bound; proposed in sol-lateral3.md, unexecuted) | pi_1 of curve complements is a classical monster; A_n/S_n probably allowed (Kistner–Shaska analog) | G:5 (his best cheap untried test), S:5 — consensus untried pick |
+| 27 | Links at infinity / splice diagrams / plumbing | Exclude every splice diagram compatible with a Keller map | S11 / G21 (part) / F4 | Tried on residue-A (one x-side branch died; template survives) | Admissible diagram ≠ algebraically realizable; genus/moduli explosion (F4); Egorov's 5-sheet exotic cover shows topology alone insufficient (G) | — (tried) |
+| 28 | Log surfaces / BMY / log-Kodaira of the resolved pencil | Log-Chern and adjunction inequalities kill the boundary configuration | S14 / G21 / F5 | Partial — BMY marked NEEDS-DATA; Euler/genus ledger "passes identically" (the predicted non-result, G) | B/x-resolution tails unpinned; kappa-bar(C^2) = -infty blocks naive BMY (G); F5: "non-rational-fibration cases" open | S:6 (complete one survivor to all minimal tails and test) |
+| 29 | LND / Hamiltonian-derivation completeness / commuting frames | Prove D_P locally nilpotent or the dual frame integrates to G_a^2 | S18+S19 / G22 (part) / — | No | LND-ness with a slice is essentially the conjecture again; Rentschler classification loops back to JvdK (G) | S:6 and S:5; G:4 (via the ML-invariant experiment) |
+| 30 | Affine-surface classification / Makar-Limanov invariant / exotic surfaces, cancellation | A CE would violate the package characterizing A^2 | S40 / G22 / F5 (part) | No (as JC2 program; LNDs used only inside TRANSPORT.md proof) | ML invariant does not see the embedding; dimension 2 is "too classified" (G); stabilization destroys the Keller presentation (S) | Mild DISSENT: S:2 vs G:4 (afternoon check on residue-A leading graded ring) |
+| 31 | Integrality / Zariski Main / etale finiteness (Rees valuations) | Prove x,y integral over C[P,Q]; finite etale covers of A^2 are trivial | S16 only / — / — | No direct attempt | Finiteness is exactly the missing global assertion; ZMT adds boundary rather than removing it | S:6 (Rees valuations of one complete boundary book) |
+| 32 | Off-diagonal collision ideal / injectivity route (Cynk–Rusek, Ax–Grothendieck) | Show the saturated collision ideal is empty; injective => automorphism | S17 / G25 / F13 | Partial (S: resultant machinery used, saturated ideal never attacked) vs hollow (G) | Collision component closes only at infinity where eliminant leading coefficients vanish (S); "no hidden inertia" axiom IS JC2 (G); F13: "reduces to injectivity, no handle" | DISSENT: S:7 (Q-linear kernel on open_8_28_c2) vs G:2 |
+| 33 | Global symplectic exactness / action residues / generating functions | f dg − x dy and g df − y dx are exact; promote residue pins to a global lemma | S36 (part) / G27+G40 / — | Pins used (PIN42, no-log); the global lemma never run as a proof | Poincare lemma yields primitives for CEs too; risk the identities are "only J=1 in costume" (G); generating functions local, mixed-coordinate (G40) | G:6 — his highest untried; G:3 for the generating-function chart; consonant with Sol's adjacent 7 |
+| 34 | 2D tangent-sweep / pole removal / rational Keller maps (Vitushkin-type) | Adapt the dim-3 sweep mechanism, or clear poles of a rational etale map, inside two variables | S36+S38 / G16 (mechanism inventory) / — | No | Ramification divisor has nowhere to go in 2D; no spare coordinate to absorb a denominator; graded plane maps already automorphic | DISSENT: S:7 (sweep ansatz) and S:6 (pole removal) vs G:2 for the descent framing |
+| 35 | Descent of dim >= 3 counterexamples to the plane | Restrict/quotient/project Alpoge–Gao–Gallagher maps | S37 / G16 / — | Recon and negative controls only | Every known mechanism is structurally 3-dimensional (forget-a-root, weighted lifts, duality); Picard obstruction Z/(d−2); constant 3x3 det gives no constant 2x2 minor | DISSENT: S:6 vs G:2 ("tourism") |
+| 36 | Guided counterexample search: SAT / fewnomial / sparse supports / small heights | Impose J=1 plus an explicit collision on structured supports | S47 / G18+G39 / F15 | DISSENT on status: F "tried/refined (the books)"; S Partial; G "not tried as a search" (probes tested reduced systems, not random maps) | Below the GGV cutoff theorems already emptied the region; above it the space is enormous and CEs form a thin locus; F: "combinatorics past frontier" | S:6 sparse-algebra / 1 generic-ML; G:2 (worthwhile only as a GGV bug-hunt) |
+| 37 | Finite-field census of Keller maps | Enumerate maps over F_q, count bijections, look for extras | G31 / S46 (diagnostics only) / — | No (as census) | Char-p extras will not lift (Mondello lesson); enumeration dies past tiny degree | G:2 |
+| 38 | Tropical geometry beyond Newton polygons | Tropicalize the coefficient ideal / the map as PL geometry | S21 / G33 / — | No | Prevariety overapproximates; saturation lost in initial degenerations (S); "no tropical invariant without a Newton name" (G) | Mild DISSENT: S:5 vs G:2 |
+| 39 | Cohomological cluster: K2 reciprocity, motivic / A^1-degree, Hodge, anabelian, prismatic | Some cohomology class obstructs a nonproper etale endomorphism | S20+S41 / G34 / — | No | No vanishing theorem attached to J=1; local A^1-degree is +1 everywhere and blind to sheets (S); "refuse to start until a 10-line class is written" (G) | S:3 and S:3, G:1 — concordant low |
+| 40 | Free-associative / noncommutative Jacobian lift | Invoke the free Jacobian theorem, abelianize the inverse | S30 only / — / — | No | Commutative det-1 does not imply free invertibility; the correction problem is the whole problem | S:2 |
+| 41 | Naive scaling deformation to the linear part | F_t = t^{-1}F(tx) connects to the linear part | S39 only / — / — | No — and should not be pursued | The dim-3 CE deforms to its linear part: the principle is falsified | S:1 |
+| 42 | Markus–Yamabe / Hurwitz vector-field realization | Convert Keller maps to vector fields with spectral hypotheses | G32 only / — / — | No | The arrow points the wrong way; constant J does not give the Hurwitz spectral condition | G:2 |
+| 43 | Ritt decomposition / composite coordinates | Force f Ritt-prime, reduce composite cases | G30 only / — / — | No | Abhyankar divisibility already coarsely primes both degrees; collapses to GGV after Aut-reduction | G:3 |
+| 44 | Moskowicz "no prime td" | Claimed exclusion of prime covering degree (arXiv:2407.13795, unvetted) | G37 only / — / — | No (flagged unvetted in SHEET6.md) | 8-page unpublished claim of that strength; prime td=3 exists in char 2 | G:2 (read it; test first non-trivial lemma on Orevkov td=9) |
+| 45 | Differential Galois / Liouvillian inverse | Kovacic-style analysis of the inverse's ODEs | G38 only / — / — | No | The inverse PDE is tautological; univariate reduction reproduces Zoladek A.7 | G:3 |
+| 46 | Lean / AI formal certification vs axiom-laundering | Formalize the pipeline, or "AI will settle JC2" | S48 / G35 / — | S: Tried at the leaf/identity layer (two Lean identities, no sorry); G: not a route | Formalization cannot manufacture the finite universe; laundering an axiom is the failure mode; watched cranks dumped | S:5 rigor / 1 discovery; G:1 as standalone |
+
+---
+
+## 2. Unique finds (approaches surfaced by only one model)
+
+**Sol only (9):**
+- S16 Integrality / Zariski Main / Rees-valuation test of finiteness (row 31).
+- S19 Commuting frames / polynomial G_a^2-actions (folded into row 29).
+- S20 K2 tame symbols / global reciprocity as a concrete program (row 39; Grok's G34 name-drops K-theory only to dismiss it).
+- S30 Free-associative / noncommutative Jacobian lift (row 40).
+- S32 p-adic injectivity / Hensel / model-theoretic transfer (row 21).
+- S33 Siegel integral points / thin sets on fibers (row 22).
+- S38 Rational pole removal, Vitushkin-type (row 34).
+- S39 Naive scaling deformation — documented as a dead end with the dim-3 CE as refuter (row 41).
+- S41 Motivic / A^1-degree / homology at infinity as a specific invariant (row 39).
+- Semi-unique: S23 HC4 => JC2 as an *executed program proposal* with a concrete quintic experiment — Grok records HC(4)'s survival as a status fact only.
+
+**Grok only (6):**
+- G30 Ritt decomposition / composite coordinates (row 43).
+- G31 Finite-field census (row 37; Sol's S46 is diagnostics of already-reduced systems).
+- G32 Markus–Yamabe / chain-realization vector fields (row 42).
+- G37 Moskowicz "no prime td" claim triage (row 44).
+- G38 Differential Galois / Liouvillian inverse (row 45).
+- G40 Lagrangian generating functions / 2D Hamilton–Jacobi (row 33).
+- Semi-unique: G23's primitive-group-database td bound with the Orevkov (48,64) negative control — Sol's S15 is the adjacent function-field Galois version.
+
+**Fable only (2):**
+- F18 D-module / holonomic index (row 16) — the one clean Fable-unique lane; Grok's G26 (commuting PDOs) is adjacent but a different mechanism.
+- F8 Reduction mod p / p-curvature (Tsuchimoto) elevated to a standalone formalism lane (row 20) — Sol and Grok mention the correspondence only inside their Dixmier entries, as a bridge that now consumes false statements.
+
+---
+
+## 3. Consensus + dissent
+
+### Consensus (all three, or both scorers, agree)
+
+1. **The tried core is stuck on landing + ceiling.** Fable: "stuck: G1/G2/G5 + residue-A l+ dichotomy"; Grok: REDUCTION.md — no theorem landing arbitrary Keller pairs in the books, no td bound; Sol: "two global bridges" (universal landing/coverage and a finite bound). Same diagnosis, three vocabularies. All three also agree more brute force inside a filed sector will not repair it (Sol: "will not repair either gap"; Grok: "local maximum"; Fable: "stuck").
+2. **The Zhao/Mathieu ladder is dead for n=2 leverage.** Long's 2026 refutations (Mathieu on SU(2), PC(2), GMC n>=3) close the prove-something-stronger instinct; F6's "no n=2 traction anywhere" concurs.
+3. **AM was run on the wrong object** — Sol and Grok independently and exactly agree: residue-A fibers are multi-place; the one-place theorem applies to A(F) components, which are unpinned.
+4. **Char-p is tried; the odd-prime refinement is the open extension.** F16 "refined version unexplored" = Sol's F3/F5 W2-survivor search (5/10) = Grok's open questions (i)-(iii).
+5. **Monodromy passports alone are too generous.** Both scorers: Riemann existence fills everything; the untried half is coupled/global (row 26).
+6. **Concordant-low band** (both scorers <= 4, no advocate): real/Pinchuk, holomorphic analog, cohomology slogans without a named class, finite-field census, free lift, Markus–Yamabe, naive deformation, tropical-as-renaming (Grok side), integral points, formalization-as-route.
+7. **Disproof lanes that are not fantasies** (Grok's list, consistent with Sol and Fable): a nonempty GGV family that algebraizes; a certified germ at infinity that algebraizes; a Witt-unobstructed char-p pair that lifts. All three currently return "consistent with JC2 true".
+
+### Dissent
+
+1. **HC4 => JC2** — Sol 9/10, his single best experiment; Grok treats the whole ladder as a "documented massacre" and does not score it. Fable silent. This is a genuine disagreement about whether HC4's survival is signal or survivorship.
+2. **BCW cubic stabilization** — Sol 5/4 (isolate the plane-origin subclass with new invariants) vs Grok 1 ("category error that still appears in survey talks").
+3. **Dim-3 descent** — Sol 6 (invariant-surface/rank-two-target sweep) vs Grok 2 ("the silence looks structural"; "tourism").
+4. **Collision ideals / injectivity** — Sol 7 (Fitting-ideal experiment on open_8_28_c2) vs Grok 2 ("the axiom IS JC2"). Fable F13 sides with the difficulty: "reduces to injectivity, no handle".
+5. **A(F)-as-the-object** — Sol 8 (his second-best plane experiment) vs Grok "I would not start here". Fable F11 leans Sol: adjacent repo material, undeveloped.
+6. **End(A_1) / Dixmier disproof** — Fable: "best counterexample-side alternative"; Grok: no candidate endo exists and auditing Zheglov is defensive recon; Sol: bounded slices plus expert-gated endgame gaps.
+7. **Tropical** — Sol 5 (coefficient-ideal tropicalization retaining saturation) vs Grok 2 (renaming).
+8. **Tried-status disagreements**: formal inverse (Sol Partial via conjE vs Grok/Fable Not tried); guided search (Fable "tried/refined — the books" vs Grok "not tried as a search" — they mean different objects: book-guided vs random/SAT); valuation theory (Fable "untried; field" for the Favre–Jonsson tree framing vs Sol/Grok counting the campaign's blowup machinery as tried).
+9. **Scoring philosophy** — Sol scores information yield of the first experiment; Grok scores endgame probability. Sol's 9 (HC4) and Grok's 6 (symplectic primitives) are each survey's top untried number and are not on the same scale.
+
+---
+
+## 4. Ranked untried shortlist (top 5, with cheapest first experiment)
+
+Ranking weighs cross-model presence, both scores, and Fable's flags. Experiments are the surveys' own specs, reconciled where both wrote one.
+
+**1. Global symplectic primitives / action residues at infinity** (row 33; G27 6/10 — Grok's top untried; Sol's S36 sibling 7/10).
+*Experiment (Grok's spec):* For the elementary automorphism (x, y+x^n) and a tame product of two elementaries of degrees 3,4, compute the polynomial primitives F,G of f dg − x dy and g df − y dx explicitly and their polar residues at infinity in the standard compactification; then do the same formally for the residue-A leading pair without tails. If the polar divisor of F is already illegal for the (2,3) genome, that is a leading-form kill independent of Sigray; if it matches, the primitives see no more than J=1 — the experiment is designed to detect "J=1 in costume".
+
+**2. HC4 => JC2, degree five** (row 10; Sol 9/10 — highest single score in any survey; Grok dissents on the ladder instinct — dissent priced in, ranked second not first).
+*Experiment (Sol's spec):* Reproduce Ni's quartic cone/Schur argument symbolically, formulate the exact quintic obstruction module, and decompose its first uncancelled term under GL_4. Strongest adjacent live conjecture with a clean implication to JC2.
+
+**3. Primitive-monodromy td bound + coupled two-cover CSP** (rows 25–26; G23 5/10 — his best cheap test; Sol 7/10 coupled CSP + 5/10 Galois closure; Fable F12: untried, "td IS the covering degree").
+*Experiment (reconciled, two stages):* Stage 1, Grok's weekend GAP/Magma script — assume ramification of \hat g supported at <= N places at infinity, Riemann–Hurwitz, transitivity, primitivity; enumerate types for td=6,7,8,9 against the primitive-group databases, with Orevkov's (48,64) td=9 configuration as built-in negative control. Stage 2 (only if the control disciplines rather than kills the idea), Sol's coupled CSP: encode both coordinate fibrations, all infinity contacts, and the Jacobian pairing as one finite branch-cycle CSP on the mu=6 residue-A data.
+
+**4. Jung–van der Kulk cusp-avoidance negative control** (row 5; Sol 4, Grok 5, Fable F10 untried — the most cross-model-consistent moderate pick).
+*Experiment (Grok's spec — already written in xmodel/sol-lateral3.md and never run):* Enumerate reduced Jung words of length <= 6 over Q and F_101, triangular exponents 2..8, and test whether any word's (m,n)-initial face lies in the cusp ideal (d^m U^n − c^n V^m) for coprime 2 <= m < n <= 13. A hit kills the degree-lowering strategy in range; no hit is evidence for the cusp-avoidance lemma, which is the actual theorem. Sol's shear-divisibility enumeration on the smallest GGV corner families is the same test run from the other end.
+
+**5. 2D tangent-sweep / pole-cancellation saturation** (row 34; Sol 7 and 6 — his best disproof experiment; Grok scores only the descent framing, at 2 — dissent noted).
+*Experiment (Sol's spec):* Write the lowest-degree plane tangent-sweep ansatz with one controlled pole, impose polynomiality and determinant one as divisibility equations, and compute the saturation. Either a survivor reveals a new 2D mechanism, or a short unit identity documents the two-dimensional no-go — valuable either way.
+
+*Honorable mentions:* Zheglov T2 symbolic replay (F7 + G10 — the named-and-not-done CE-side audit); Makar-Limanov invariant of the residue-A leading graded ring (G22, one afternoon, 4/10); Rees valuations / integral dependence on one complete boundary book (S16, 6/10, Sol-unique).
+
+---
+
+## Provenance note
+
+Fable's input list (verbatim source for F1–F18, delivered with the merge charge): 1 Newton-polygon corner-cutting (GGV-Horruitiner); 2 Sheet-number ladder (Sigray frame); 3 Valuation theory/dicritical divisors (Abhyankar, Favre–Jonsson); 4 Links at infinity/splice diagrams (Neumann, Cassou-Nogues, Orevkov); 5 Open-surface/log-Kodaira (Miyanishi, Kaliman); 6 Mathieu subspaces/Zhao image conjectures; 7 Dixmier route: attack End(A_1) directly (Bavula program); 8 Reduction mod p/p-curvature (Tsuchimoto); 9 Formal-inverse combinatorics (BCW tree formula, Wright, Singer); 10 Aut(A^2) structure/polydegree (Jung–van der Kulk, Furter); 11 Nonproperness/asymptotic variety (Jelonek); 12 Monodromy/Galois of generic fiber (Razar, Wright); 13 Ax-Grothendieck/injectivity route (Cynk–Rusek); 14 Analytic/dynamical (Fatou–Bieberbach, Pinchuk constraint); 15 Guided counterexample search beyond frontier; 16 Char-p analogue lifting; 17 Formal-germ certification + algebraization (DEPTH-STAB/Newton/e+); 18 D-module/holonomic index.
+
+Status flags in the table quote each survey's own words; where a Fable status ("untried; field") conflicts with Sol/Grok ("tried"), both are shown and the conflict is listed in section 3. No approach, experiment, score, or stuck-point in this document originates outside the three inputs.

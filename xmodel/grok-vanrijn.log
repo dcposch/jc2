@@ -1,0 +1,15 @@
+I'll start by reading today's sweep, our promoted record, the HC4 adjudication, and van Rijn's repo so the verdict sits on the actual mathematics rather than the claim framing.There's already a van Rijn log in xmodel. Next I’ll pull our promoted record, the HC4 adjudication, and his public write-ups.I’ll pull paper1, the vertex-gap theorem, and race doctrine next, then clone van Rijn’s repo and read the write-ups.Cloning van Rijn’s repo off-workspace so I can read the write-ups without touching our tree.The full clone is large; I’ll fetch the key write-ups directly from GitHub while it finishes.Repo is cloned. Next I’ll read the (72,108), HC4, and (75,125) write-ups and grep for overlap with our record.The (72,108) write-ups match Helali’s lineage. I’ll read the HC4 and (75,125) programs next and check for tripwires against our unpublished work.Prop 4.3 checker passed. I have the overlap map; writing the adjudication now.**Collaboration, not threat.** Full write-up is in `xmodel/grok-vanrijn.md`.
+
+Roy’s Aug 1 “(72,108) determinantal closure” is a **Helali-line reconstruction**, not a new theorem. Same two Laurent systems, same fields (deg 35 / quintic `L`), same emptiness, **same Prop 4.3 conditionality we flag**. It complements rather than contradicts the promoted record: vertex-gap is a different object (strip pairs; subcase (1) is outside it), and he never touches it. Helali still has priority on the exclusion.
+
+What is actually new, and worth citing by merit:
+
+- A **finite Prop 4.3 tail audit**. His stdlib checker was replayed here and printed `PROP43_EXHAUSTIVENESS_AUDIT_PASS`. That is the interface `AUDIT.md` left as eyes-only.
+- A **Case-1 `(h,N)` two-generator lemma** replacing Helali’s 89 MB identity. The lemma is correct as algebra; the instance (`RANKDROP_EXACT_UNIT_PASS`) was not re-run here.
+- An independent 5-dessin first-block (Suzuki’s passport, **uncited**).
+
+On HC4: he started **Jul 30**, before our Aug 21 adjudication, and has executed the case-tree we only specified. Two things the adjudication missed: an **isotropic Schur recognition** problem, and a **Wronskian unit obstruction** that kills moving rank-three kernels by reducing them to the JC2 cotangent endpoint. Neither repairs the 6.5/10 score — his own shared-boundary computation returned zero, and the “master theorem” has no end-to-end replay. He has not found a JC2 proof, an HC4 proof, or a reason to raise the score.
+
+On (75,125): he is **ahead of us** on that pair (forced F2 skeleton, no exclusion claimed). We are not racing him there; our endgame is td=6. No tripwire on unpublished objects. He and Strinz already disagree at the first interesting modulus, uncrosswalked.
+
+**Posture:** coordinated-note / citation-courtesy tier, DC decides outreach. Cite the Prop 4.3 audit and the `(h,N)` lemma if used; credit Helali first; daily-watch the repo; replay the Wronskian-unit argument before spending campaign days on the quintic-module spec; do not open a (75,125) stake just because the window is crowded.

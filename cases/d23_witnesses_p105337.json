@@ -1,0 +1,5269 @@
+{
+ "date": "2026-08-19",
+ "dimension_analysis": {
+  "anomaly": "dim 11 = 13 - 2: the three residual conditions g1,g2,g3 cut only CODIMENSION 2 on the fiber (one dependency at variety level; naive count codim 3). Identical at all three primes.",
+  "cross_prime": "identical LT degree profile, dimension, and independent set at 105337/105673/200257",
+  "dimension": 11,
+  "fiber_control": {
+   "dimension": 13,
+   "note": "banked 397-el fiber GB gives dim 13 = |FREE| (control)"
+  },
+  "linear_lts": [
+   "x52",
+   "x47",
+   "x70"
+  ],
+  "lt_degree_profile": {
+   "1": 3,
+   "10": 27,
+   "11": 16,
+   "12": 25,
+   "13": 11,
+   "14": 6,
+   "15": 4,
+   "16": 2,
+   "2": 4,
+   "3": 16,
+   "4": 82,
+   "5": 135,
+   "6": 87,
+   "7": 33,
+   "8": 30,
+   "9": 28
+  },
+  "max_independent_set": [
+   "x55",
+   "x58",
+   "x59",
+   "x60",
+   "x62",
+   "x63",
+   "x65",
+   "x66",
+   "x68",
+   "x71",
+   "x73"
+  ],
+  "method": "grevlex leading-term staircase of the 509-el reduced GB; dim = 22 - (min hitting set of LT supports); exact branch-and-bound; independence and maximality asserted",
+  "n_linear_lts": 3
+ },
+ "e_experimental": {
+  "block_note": "1b BLOCKED FROM PROMOTION (sol-software2.md item 1): e is experimental until the series-valued equation map, its square function block, and the surplus-equation bridge are banked and their promotion gates pass; no LIVE verdict is printed by this tool.",
+  "depth_stab_note": "DEPTH-STAB e<=11 is the eventual criterion; spec (series map + square block + surplus bridge) still UNBANKED; nothing here is a LIVE verdict",
+  "per_witness_readings": "in witnesses[*].deep_draws[*].e_experimental",
+  "summary": {
+   "all_flags": "e = None (FAIL-CLOSED) at every witness, every kernel draw, both primes -- no numeric e-candidate is reported",
+   "pencil(tails|tailsW)": "full row rank 29/29 but the truncated-Smith valuation sum is UNSTABLE under randomizing beyond-window coefficients (135/137 at zero-fill vs 62 at random fill, identical at both primes): window depth D=23 insufficient",
+   "weighted,rank(tails|tailsW)": "Jacobian column rank 35 (tails) / 37 (tailsW) out of 77-80 variable columns -- no nonvanishing maximal minor; rank-deficiency consistent with the 11-dim survivor locus + free tg/kernel directions"
+  },
+  "tag": "E_CANDIDATE(EXPERIMENTAL)"
+ },
+ "extras_vars": [
+  "x16",
+  "x24",
+  "x69"
+ ],
+ "object": "depth-23 surviving configurations (D23 witnesses) on the det23 = compat-solvable sublocus of the D21 radical_point chart fiber",
+ "pivot_order_at_use": [
+  "x42",
+  "x44",
+  "x49",
+  "x1",
+  "x9",
+  "x3",
+  "x11",
+  "x0",
+  "x5",
+  "x8",
+  "x13",
+  "x2",
+  "x6",
+  "x10",
+  "x14",
+  "x4",
+  "x7",
+  "x12",
+  "x15",
+  "x43",
+  "x45",
+  "x50"
+ ],
+ "prime": 105337,
+ "provenance": {
+  "det23_emission": {
+   "path": "cases/directionb_det23_p105337.ms",
+   "rows": "397 fiber GB VERBATIM + g1,g2,g3",
+   "sha256": "fa4024ad52268e7ded63faebe9d0900c51aa98d7251db459633dee7098abbe43"
+  },
+  "det23_gb_out": {
+   "box01_md5_rechecked_2026-08-19": "0e4b9e58f6f1765faa85a52be3f71439",
+   "elements": 509,
+   "path": "cases/directionb_det23_gb_p105337.out.txt",
+   "sha256": "3ba965d8d57439fce5e6febd6a3f7a3ab3bcad74337768eec18681bf0e2a2acc"
+  },
+  "row22compat": {
+   "path": "cases/directionb_row22compat_p105337.ms",
+   "sha256": "e90bb02c79c8a3bb8d9f9bc8a61622274c2d4f26e78d9f5129902565b0596cfb"
+  },
+  "row22red": {
+   "path": "cases/directionb_row22red_p105337.ms",
+   "sha256": "5d4a181545711f814aa6d85c93c38febd1abac6e53a4d8cbe2089910adc5c11e"
+  }
+ },
+ "report_section": "SHEET6-DIRECTIONB.md 8.S6 (8.S5 = det23 construction; 8.S4 = row22red; 8.S3 = 1a/1b tooling)",
+ "sampling": {
+  "discipline": "1a (7.S3) discipline adapted to the det23 staircase: draw the 11-var max independent set uniformly + the W-branch (4th-root x i-power x sign, uW = W^-1), then solve the 0-dim slice by GB propagation (univariate rows, flint nmod_poly roots, DFS on root branches). msolve never run locally; box01 0-dim fallback NOT needed (no stalls).",
+  "field_limitation": "F_p-rational only; p=200257 excluded (W^4 pins non-4th-powers: no F_p-rational chart point; 8.S3)",
+  "seed": 20260819,
+  "tries": 6,
+  "w4_pins": {
+   "W1": 57673,
+   "W2": 53212
+  }
+ },
+ "scope": "one radical fiber (radical_point) of 36, residue-A B-frozen no-log W1W2!=0 chart with PIN42, per-prime, mod p ONLY; chart-local; NOT a family statement, NOT char 0; first depth-23 survivors of the campaign (SHEET6-DIRECTIONB 8.S5/8.S6)",
+ "status": "INTERNAL / UNREVIEWED -- no promotion claims",
+ "tg_vars": [
+  "x17",
+  "x25",
+  "x32",
+  "x37"
+ ],
+ "verification_tiers": {
+  "T1": "python-flint re-evaluation (independent of msolve): 397 fiber-GB rows + g1,g2,g3 of the EMISSION all vanish (400/400); 509/509 output-GB rows also vanish",
+  "T2": "row22red compat rows 24..29 partially evaluated at the point collapse to A*tg=-b, affine in (x17,x25,x32,x37), extras-(x16,x24,x69)-independent, A == C*diag(uW1^2,uW2^2,uW1^2,uW2^2) with the banked C, rank A = rank [A|b] = 2 (rank-2 back-solve; free tg cols = [x32,x37])",
+  "T3": "all 32 row22red rows vanish (flint)",
+  "T4": "22 pivots back-solved from the PRISTINE row22compat pivot rows 24..45 (band-triangular affine groups 1+2+3+4+4+4+4; each group square + nonsingular)",
+  "T5": "all 54 row22compat rows vanish (flint) incl. the 6 compat rows == 0: the depth-23 survivor signature on the full 72-var witness",
+  "T6": "all 76 raw no-log D21 window rows vanish at the witness (registry-mapped tf-chart, valuation_e window_partials)",
+  "T7": "valuation_e.verify_row22compat: 48/48 membership, compat c-values [0,0,0,0,0,0]",
+  "T8": "Row_22 rank-4 deep solve (Schur rank 4) x kernel draws 0,1,2 + verify_core23 77/77 hybrid rows",
+  "result": "ALL TIERS PASS for every point, every draw (3 tg-free/extras/band draws x 3 kernel draws)"
+ },
+ "verification_transcripts": {
+  "location": "session scratchpad d23x/ (working artifacts until reviewed)",
+  "phase6_transcript_p105337.txt": "c772bc977be3c881909f3b5204e9ac65c74fb37874998e12829d31e79cbfef3c",
+  "verify_transcript_p105337.txt": "a96fbfc932760f65cec88addc8b5a000b5609afa6b876940d54902eb347b0b80"
+ },
+ "witness_count": 6,
+ "witnesses": [
+  {
+   "deep_draws": [
+    {
+     "deep_tails": {
+      "tf1_49": 7157,
+      "tf1_54": 85073,
+      "tf2_49": 14394,
+      "tf2_54": 20264,
+      "tg01_54": 0,
+      "tg02_54": 0,
+      "tg1_49": 0,
+      "tg1_54": 0,
+      "tg2_49": 0,
+      "tg2_54": 0
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 0,
+     "schur_rank": 29
+    },
+    {
+     "deep_tails": {
+      "tf1_49": 42628,
+      "tf1_54": 83726,
+      "tf2_49": 101652,
+      "tf2_54": 15651,
+      "tg01_54": 24634,
+      "tg02_54": 74886,
+      "tg1_49": 92909,
+      "tg1_54": 90293,
+      "tg2_49": 82141,
+      "tg2_54": 61967
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 1,
+     "schur_rank": 29
+    },
+    {
+     "deep_tails": {
+      "tf1_49": 93416,
+      "tf1_54": 13286,
+      "tf2_49": 72106,
+      "tf2_54": 1987,
+      "tg01_54": 13338,
+      "tg02_54": 73110,
+      "tg1_49": 101485,
+      "tg1_54": 3232,
+      "tg2_49": 88974,
+      "tg2_54": 66135
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 2,
+     "schur_rank": 29
+    }
+   ],
+   "draws": [
+    {
+     "draw": 0,
+     "extras": {
+      "x16": 0,
+      "x24": 0,
+      "x69": 0
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 39329,
+      "x25": 46025,
+      "x32": 0,
+      "x37": 0
+     },
+     "witness72": {
+      "W1": 73406,
+      "W2": 9457,
+      "uW1": 40583,
+      "uW2": 22756,
+      "x0": 94789,
+      "x1": 20256,
+      "x10": 4262,
+      "x11": 31000,
+      "x12": 68921,
+      "x13": 52884,
+      "x14": 68301,
+      "x15": 93081,
+      "x16": 0,
+      "x17": 39329,
+      "x18": 0,
+      "x19": 0,
+      "x2": 4873,
+      "x20": 0,
+      "x21": 0,
+      "x22": 0,
+      "x23": 0,
+      "x24": 0,
+      "x25": 46025,
+      "x26": 0,
+      "x27": 0,
+      "x28": 0,
+      "x29": 0,
+      "x3": 40744,
+      "x30": 0,
+      "x31": 0,
+      "x32": 0,
+      "x33": 0,
+      "x34": 0,
+      "x35": 0,
+      "x36": 0,
+      "x37": 0,
+      "x38": 0,
+      "x39": 0,
+      "x4": 68210,
+      "x40": 0,
+      "x41": 0,
+      "x42": 19440,
+      "x43": 54732,
+      "x44": 33090,
+      "x45": 25248,
+      "x47": 88274,
+      "x48": 0,
+      "x49": 64720,
+      "x5": 52453,
+      "x50": 50764,
+      "x52": 19440,
+      "x53": 38393,
+      "x54": 28926,
+      "x55": 64135,
+      "x57": 88274,
+      "x58": 57154,
+      "x59": 70248,
+      "x6": 102114,
+      "x60": 81197,
+      "x62": 19440,
+      "x63": 41418,
+      "x65": 88274,
+      "x66": 53664,
+      "x68": 103278,
+      "x69": 0,
+      "x7": 37965,
+      "x70": 57587,
+      "x71": 91566,
+      "x72": 14892,
+      "x73": 22849,
+      "x8": 22758,
+      "x9": 18400
+     }
+    },
+    {
+     "draw": 1,
+     "extras": {
+      "x16": 87644,
+      "x24": 56715,
+      "x69": 57908
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 103775,
+      "x25": 80003,
+      "x32": 64446,
+      "x37": 33978
+     },
+     "witness72": {
+      "W1": 73406,
+      "W2": 9457,
+      "uW1": 40583,
+      "uW2": 22756,
+      "x0": 46164,
+      "x1": 9693,
+      "x10": 10401,
+      "x11": 46863,
+      "x12": 52391,
+      "x13": 59545,
+      "x14": 97246,
+      "x15": 78307,
+      "x16": 87644,
+      "x17": 103775,
+      "x18": 102676,
+      "x19": 39925,
+      "x2": 93589,
+      "x20": 66375,
+      "x21": 19323,
+      "x22": 25720,
+      "x23": 83790,
+      "x24": 56715,
+      "x25": 80003,
+      "x26": 58208,
+      "x27": 85096,
+      "x28": 40587,
+      "x29": 11473,
+      "x3": 43037,
+      "x30": 63820,
+      "x31": 88941,
+      "x32": 64446,
+      "x33": 80724,
+      "x34": 84979,
+      "x35": 22153,
+      "x36": 88908,
+      "x37": 33978,
+      "x38": 77873,
+      "x39": 63692,
+      "x4": 85574,
+      "x40": 94482,
+      "x41": 43117,
+      "x42": 19440,
+      "x43": 11892,
+      "x44": 33090,
+      "x45": 6472,
+      "x47": 88274,
+      "x48": 96078,
+      "x49": 64720,
+      "x5": 45655,
+      "x50": 86015,
+      "x52": 19440,
+      "x53": 38393,
+      "x54": 28926,
+      "x55": 64135,
+      "x57": 88274,
+      "x58": 57154,
+      "x59": 70248,
+      "x6": 83121,
+      "x60": 81197,
+      "x62": 19440,
+      "x63": 41418,
+      "x65": 88274,
+      "x66": 53664,
+      "x68": 103278,
+      "x69": 57908,
+      "x7": 72654,
+      "x70": 57587,
+      "x71": 91566,
+      "x72": 14892,
+      "x73": 22849,
+      "x8": 76460,
+      "x9": 59677
+     }
+    },
+    {
+     "draw": 2,
+     "extras": {
+      "x16": 85074,
+      "x24": 101961,
+      "x69": 84386
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 96387,
+      "x25": 49171,
+      "x32": 57058,
+      "x37": 3146
+     },
+     "witness72": {
+      "W1": 73406,
+      "W2": 9457,
+      "uW1": 40583,
+      "uW2": 22756,
+      "x0": 66298,
+      "x1": 67532,
+      "x10": 44189,
+      "x11": 37139,
+      "x12": 47522,
+      "x13": 79465,
+      "x14": 65108,
+      "x15": 39236,
+      "x16": 85074,
+      "x17": 96387,
+      "x18": 80690,
+      "x19": 21894,
+      "x2": 37893,
+      "x20": 41949,
+      "x21": 69858,
+      "x22": 95322,
+      "x23": 96648,
+      "x24": 101961,
+      "x25": 49171,
+      "x26": 53183,
+      "x27": 75458,
+      "x28": 80341,
+      "x29": 83214,
+      "x3": 87641,
+      "x30": 37830,
+      "x31": 62283,
+      "x32": 57058,
+      "x33": 26442,
+      "x34": 29538,
+      "x35": 70669,
+      "x36": 104124,
+      "x37": 3146,
+      "x38": 91370,
+      "x39": 72627,
+      "x4": 19124,
+      "x40": 91476,
+      "x41": 105041,
+      "x42": 19440,
+      "x43": 53434,
+      "x44": 33090,
+      "x45": 41139,
+      "x47": 88274,
+      "x48": 100842,
+      "x49": 64720,
+      "x5": 56638,
+      "x50": 26962,
+      "x52": 19440,
+      "x53": 38393,
+      "x54": 28926,
+      "x55": 64135,
+      "x57": 88274,
+      "x58": 57154,
+      "x59": 70248,
+      "x6": 94011,
+      "x60": 81197,
+      "x62": 19440,
+      "x63": 41418,
+      "x65": 88274,
+      "x66": 53664,
+      "x68": 103278,
+      "x69": 84386,
+      "x7": 31699,
+      "x70": 57587,
+      "x71": 91566,
+      "x72": 14892,
+      "x73": 22849,
+      "x8": 35149,
+      "x9": 29424
+     }
+    }
+   ],
+   "fiber_coordinates_22": {
+    "W1": 73406,
+    "W2": 9457,
+    "uW1": 40583,
+    "uW2": 22756,
+    "x47": 88274,
+    "x52": 19440,
+    "x53": 38393,
+    "x54": 28926,
+    "x55": 64135,
+    "x57": 88274,
+    "x58": 57154,
+    "x59": 70248,
+    "x60": 81197,
+    "x62": 19440,
+    "x63": 41418,
+    "x65": 88274,
+    "x66": 53664,
+    "x68": 103278,
+    "x70": 57587,
+    "x71": 91566,
+    "x72": 14892,
+    "x73": 22849
+   },
+   "index": 0,
+   "w_branch_s1_i1_s2_i2": [
+    -1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "deep_draws": [
+    {
+     "deep_tails": {
+      "tf1_49": 1449,
+      "tf1_54": 97294,
+      "tf2_49": 102656,
+      "tf2_54": 8043,
+      "tg01_54": 0,
+      "tg02_54": 0,
+      "tg1_49": 0,
+      "tg1_54": 0,
+      "tg2_49": 0,
+      "tg2_54": 0
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          78
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            9,
+            9,
+            10,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 137
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          80
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 78: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 80: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 78: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 80: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 0,
+     "schur_rank": 29
+    },
+    {
+     "deep_tails": {
+      "tf1_49": 36920,
+      "tf1_54": 95947,
+      "tf2_49": 84577,
+      "tf2_54": 3430,
+      "tg01_54": 24634,
+      "tg02_54": 74886,
+      "tg1_49": 92909,
+      "tg1_54": 90293,
+      "tg2_49": 82141,
+      "tg2_54": 61967
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          78
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            9,
+            9,
+            10,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 137
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          80
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 78: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 80: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 78: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 80: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 1,
+     "schur_rank": 29
+    },
+    {
+     "deep_tails": {
+      "tf1_49": 87708,
+      "tf1_54": 25507,
+      "tf2_49": 55031,
+      "tf2_54": 95103,
+      "tg01_54": 13338,
+      "tg02_54": 73110,
+      "tg1_49": 101485,
+      "tg1_54": 3232,
+      "tg2_49": 88974,
+      "tg2_54": 66135
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          78
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            9,
+            9,
+            10,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 137
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          80
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 78: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 80: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 78: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 80: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 2,
+     "schur_rank": 29
+    }
+   ],
+   "draws": [
+    {
+     "draw": 0,
+     "extras": {
+      "x16": 0,
+      "x24": 0,
+      "x69": 0
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 51625,
+      "x25": 14012,
+      "x32": 0,
+      "x37": 0
+     },
+     "witness72": {
+      "W1": 62175,
+      "W2": 9457,
+      "uW1": 65569,
+      "uW2": 22756,
+      "x0": 17209,
+      "x1": 93895,
+      "x10": 97994,
+      "x11": 36043,
+      "x12": 58411,
+      "x13": 11928,
+      "x14": 76100,
+      "x15": 45986,
+      "x16": 0,
+      "x17": 51625,
+      "x18": 0,
+      "x19": 0,
+      "x2": 30615,
+      "x20": 0,
+      "x21": 0,
+      "x22": 0,
+      "x23": 0,
+      "x24": 0,
+      "x25": 14012,
+      "x26": 0,
+      "x27": 0,
+      "x28": 0,
+      "x29": 0,
+      "x3": 83630,
+      "x30": 0,
+      "x31": 0,
+      "x32": 0,
+      "x33": 0,
+      "x34": 0,
+      "x35": 0,
+      "x36": 0,
+      "x37": 0,
+      "x38": 0,
+      "x39": 0,
+      "x4": 2458,
+      "x40": 0,
+      "x41": 0,
+      "x42": 53694,
+      "x43": 92230,
+      "x44": 17397,
+      "x45": 30630,
+      "x47": 36389,
+      "x48": 0,
+      "x49": 91572,
+      "x5": 93409,
+      "x50": 11048,
+      "x52": 50102,
+      "x53": 65797,
+      "x54": 3563,
+      "x55": 94951,
+      "x57": 2264,
+      "x58": 103833,
+      "x59": 21330,
+      "x6": 97046,
+      "x60": 71964,
+      "x62": 39326,
+      "x63": 36065,
+      "x65": 5226,
+      "x66": 2651,
+      "x68": 77424,
+      "x69": 0,
+      "x7": 9188,
+      "x70": 19131,
+      "x71": 25792,
+      "x72": 34505,
+      "x73": 74904,
+      "x8": 1639,
+      "x9": 43173
+     }
+    },
+    {
+     "draw": 1,
+     "extras": {
+      "x16": 7493,
+      "x24": 26143,
+      "x69": 8551
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 53937,
+      "x25": 5507,
+      "x32": 2312,
+      "x37": 96832
+     },
+     "witness72": {
+      "W1": 62175,
+      "W2": 9457,
+      "uW1": 65569,
+      "uW2": 22756,
+      "x0": 71213,
+      "x1": 24899,
+      "x10": 81544,
+      "x11": 41885,
+      "x12": 103583,
+      "x13": 68651,
+      "x14": 70957,
+      "x15": 33003,
+      "x16": 7493,
+      "x17": 53937,
+      "x18": 44935,
+      "x19": 86631,
+      "x2": 2155,
+      "x20": 47999,
+      "x21": 94500,
+      "x22": 72946,
+      "x23": 42019,
+      "x24": 26143,
+      "x25": 5507,
+      "x26": 68344,
+      "x27": 51154,
+      "x28": 79884,
+      "x29": 13006,
+      "x3": 32814,
+      "x30": 33743,
+      "x31": 26104,
+      "x32": 2312,
+      "x33": 103226,
+      "x34": 58113,
+      "x35": 26550,
+      "x36": 65266,
+      "x37": 96832,
+      "x38": 28500,
+      "x39": 43417,
+      "x4": 57880,
+      "x40": 21167,
+      "x41": 16923,
+      "x42": 53694,
+      "x43": 68006,
+      "x44": 17397,
+      "x45": 48558,
+      "x47": 36389,
+      "x48": 79440,
+      "x49": 91572,
+      "x5": 36863,
+      "x50": 73943,
+      "x52": 50102,
+      "x53": 65797,
+      "x54": 3563,
+      "x55": 94951,
+      "x57": 2264,
+      "x58": 103833,
+      "x59": 21330,
+      "x6": 64297,
+      "x60": 71964,
+      "x62": 39326,
+      "x63": 36065,
+      "x65": 5226,
+      "x66": 2651,
+      "x68": 77424,
+      "x69": 8551,
+      "x7": 71096,
+      "x70": 19131,
+      "x71": 25792,
+      "x72": 34505,
+      "x73": 74904,
+      "x8": 94795,
+      "x9": 543
+     }
+    },
+    {
+     "draw": 2,
+     "extras": {
+      "x16": 31002,
+      "x24": 96454,
+      "x69": 81747
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 4532,
+      "x25": 79430,
+      "x32": 58244,
+      "x37": 65418
+     },
+     "witness72": {
+      "W1": 62175,
+      "W2": 9457,
+      "uW1": 65569,
+      "uW2": 22756,
+      "x0": 3521,
+      "x1": 76061,
+      "x10": 27511,
+      "x11": 44821,
+      "x12": 39042,
+      "x13": 61786,
+      "x14": 67727,
+      "x15": 25681,
+      "x16": 31002,
+      "x17": 4532,
+      "x18": 34841,
+      "x19": 63857,
+      "x2": 30977,
+      "x20": 15258,
+      "x21": 5013,
+      "x22": 98945,
+      "x23": 103322,
+      "x24": 96454,
+      "x25": 79430,
+      "x26": 78888,
+      "x27": 27026,
+      "x28": 7557,
+      "x29": 94129,
+      "x3": 21725,
+      "x30": 57286,
+      "x31": 10841,
+      "x32": 58244,
+      "x33": 5011,
+      "x34": 6799,
+      "x35": 24035,
+      "x36": 54829,
+      "x37": 65418,
+      "x38": 28174,
+      "x39": 71720,
+      "x4": 38922,
+      "x40": 25918,
+      "x41": 42681,
+      "x42": 53694,
+      "x43": 30058,
+      "x44": 17397,
+      "x45": 57196,
+      "x47": 36389,
+      "x48": 9493,
+      "x49": 91572,
+      "x5": 65594,
+      "x50": 10988,
+      "x52": 50102,
+      "x53": 65797,
+      "x54": 3563,
+      "x55": 94951,
+      "x57": 2264,
+      "x58": 103833,
+      "x59": 21330,
+      "x6": 65630,
+      "x60": 71964,
+      "x62": 39326,
+      "x63": 36065,
+      "x65": 5226,
+      "x66": 2651,
+      "x68": 77424,
+      "x69": 81747,
+      "x7": 47165,
+      "x70": 19131,
+      "x71": 25792,
+      "x72": 34505,
+      "x73": 74904,
+      "x8": 52401,
+      "x9": 29548
+     }
+    }
+   ],
+   "fiber_coordinates_22": {
+    "W1": 62175,
+    "W2": 9457,
+    "uW1": 65569,
+    "uW2": 22756,
+    "x47": 36389,
+    "x52": 50102,
+    "x53": 65797,
+    "x54": 3563,
+    "x55": 94951,
+    "x57": 2264,
+    "x58": 103833,
+    "x59": 21330,
+    "x60": 71964,
+    "x62": 39326,
+    "x63": 36065,
+    "x65": 5226,
+    "x66": 2651,
+    "x68": 77424,
+    "x70": 19131,
+    "x71": 25792,
+    "x72": 34505,
+    "x73": 74904
+   },
+   "index": 1,
+   "w_branch_s1_i1_s2_i2": [
+    -1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "deep_draws": [
+    {
+     "deep_tails": {
+      "tf1_49": 7153,
+      "tf1_54": 83694,
+      "tf2_49": 61850,
+      "tf2_54": 21643,
+      "tg01_54": 0,
+      "tg02_54": 0,
+      "tg1_49": 0,
+      "tg1_54": 0,
+      "tg2_49": 0,
+      "tg2_54": 0
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 0,
+     "schur_rank": 29
+    },
+    {
+     "deep_tails": {
+      "tf1_49": 42624,
+      "tf1_54": 82347,
+      "tf2_49": 43771,
+      "tf2_54": 17030,
+      "tg01_54": 24634,
+      "tg02_54": 74886,
+      "tg1_49": 92909,
+      "tg1_54": 90293,
+      "tg2_49": 82141,
+      "tg2_54": 61967
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 1,
+     "schur_rank": 29
+    },
+    {
+     "deep_tails": {
+      "tf1_49": 93412,
+      "tf1_54": 11907,
+      "tf2_49": 14225,
+      "tf2_54": 3366,
+      "tg01_54": 13338,
+      "tg02_54": 73110,
+      "tg1_49": 101485,
+      "tg1_54": 3232,
+      "tg2_49": 88974,
+      "tg2_54": 66135
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 2,
+     "schur_rank": 29
+    }
+   ],
+   "draws": [
+    {
+     "draw": 0,
+     "extras": {
+      "x16": 0,
+      "x24": 0,
+      "x69": 0
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 8596,
+      "x25": 42425,
+      "x32": 0,
+      "x37": 0
+     },
+     "witness72": {
+      "W1": 62175,
+      "W2": 9457,
+      "uW1": 65569,
+      "uW2": 22756,
+      "x0": 42092,
+      "x1": 58731,
+      "x10": 15568,
+      "x11": 17024,
+      "x12": 44196,
+      "x13": 58109,
+      "x14": 73360,
+      "x15": 77479,
+      "x16": 0,
+      "x17": 8596,
+      "x18": 0,
+      "x19": 0,
+      "x2": 39681,
+      "x20": 0,
+      "x21": 0,
+      "x22": 0,
+      "x23": 0,
+      "x24": 0,
+      "x25": 42425,
+      "x26": 0,
+      "x27": 0,
+      "x28": 0,
+      "x29": 0,
+      "x3": 43823,
+      "x30": 0,
+      "x31": 0,
+      "x32": 0,
+      "x33": 0,
+      "x34": 0,
+      "x35": 0,
+      "x36": 0,
+      "x37": 0,
+      "x38": 0,
+      "x39": 0,
+      "x4": 14042,
+      "x40": 0,
+      "x41": 0,
+      "x42": 38705,
+      "x43": 36089,
+      "x44": 60547,
+      "x45": 54180,
+      "x47": 84470,
+      "x48": 0,
+      "x49": 3863,
+      "x5": 47228,
+      "x50": 32069,
+      "x52": 38705,
+      "x53": 41821,
+      "x54": 10407,
+      "x55": 40034,
+      "x57": 84470,
+      "x58": 40397,
+      "x59": 70766,
+      "x6": 60748,
+      "x60": 74240,
+      "x62": 38705,
+      "x63": 55490,
+      "x65": 84470,
+      "x66": 80731,
+      "x68": 34447,
+      "x69": 0,
+      "x7": 71744,
+      "x70": 33952,
+      "x71": 16510,
+      "x72": 87539,
+      "x73": 35991,
+      "x8": 22586,
+      "x9": 29958
+     }
+    },
+    {
+     "draw": 1,
+     "extras": {
+      "x16": 83145,
+      "x24": 46561,
+      "x69": 24958
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 89124,
+      "x25": 51413,
+      "x32": 80528,
+      "x37": 8988
+     },
+     "witness72": {
+      "W1": 62175,
+      "W2": 9457,
+      "uW1": 65569,
+      "uW2": 22756,
+      "x0": 86126,
+      "x1": 66913,
+      "x10": 4232,
+      "x11": 77396,
+      "x12": 53047,
+      "x13": 25895,
+      "x14": 88839,
+      "x15": 70809,
+      "x16": 83145,
+      "x17": 89124,
+      "x18": 62481,
+      "x19": 19568,
+      "x2": 1267,
+      "x20": 66434,
+      "x21": 60447,
+      "x22": 66000,
+      "x23": 87166,
+      "x24": 46561,
+      "x25": 51413,
+      "x26": 13941,
+      "x27": 85807,
+      "x28": 70243,
+      "x29": 39588,
+      "x3": 26397,
+      "x30": 27937,
+      "x31": 61287,
+      "x32": 80528,
+      "x33": 42681,
+      "x34": 98381,
+      "x35": 59337,
+      "x36": 68419,
+      "x37": 8988,
+      "x38": 47970,
+      "x39": 30208,
+      "x4": 9426,
+      "x40": 13420,
+      "x41": 75957,
+      "x42": 38705,
+      "x43": 31697,
+      "x44": 60547,
+      "x45": 37077,
+      "x47": 84470,
+      "x48": 28179,
+      "x49": 3863,
+      "x5": 83658,
+      "x50": 28199,
+      "x52": 38705,
+      "x53": 41821,
+      "x54": 10407,
+      "x55": 40034,
+      "x57": 84470,
+      "x58": 40397,
+      "x59": 70766,
+      "x6": 75081,
+      "x60": 74240,
+      "x62": 38705,
+      "x63": 55490,
+      "x65": 84470,
+      "x66": 80731,
+      "x68": 34447,
+      "x69": 24958,
+      "x7": 16499,
+      "x70": 33952,
+      "x71": 16510,
+      "x72": 87539,
+      "x73": 35991,
+      "x8": 39754,
+      "x9": 77461
+     }
+    },
+    {
+     "draw": 2,
+     "extras": {
+      "x16": 62886,
+      "x24": 78335,
+      "x69": 3085
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 60540,
+      "x25": 81578,
+      "x32": 51944,
+      "x37": 39153
+     },
+     "witness72": {
+      "W1": 62175,
+      "W2": 9457,
+      "uW1": 65569,
+      "uW2": 22756,
+      "x0": 43496,
+      "x1": 21960,
+      "x10": 93286,
+      "x11": 6136,
+      "x12": 48663,
+      "x13": 69667,
+      "x14": 20537,
+      "x15": 70248,
+      "x16": 62886,
+      "x17": 60540,
+      "x18": 70919,
+      "x19": 8901,
+      "x2": 23931,
+      "x20": 98625,
+      "x21": 59808,
+      "x22": 64522,
+      "x23": 24705,
+      "x24": 78335,
+      "x25": 81578,
+      "x26": 46014,
+      "x27": 15692,
+      "x28": 5920,
+      "x29": 38862,
+      "x3": 55964,
+      "x30": 6766,
+      "x31": 49339,
+      "x32": 51944,
+      "x33": 45735,
+      "x34": 34018,
+      "x35": 34255,
+      "x36": 97994,
+      "x37": 39153,
+      "x38": 10791,
+      "x39": 32499,
+      "x4": 67969,
+      "x40": 24796,
+      "x41": 22602,
+      "x42": 38705,
+      "x43": 79375,
+      "x44": 60547,
+      "x45": 22890,
+      "x47": 84470,
+      "x48": 74984,
+      "x49": 3863,
+      "x5": 88510,
+      "x50": 94662,
+      "x52": 38705,
+      "x53": 41821,
+      "x54": 10407,
+      "x55": 40034,
+      "x57": 84470,
+      "x58": 40397,
+      "x59": 70766,
+      "x6": 42145,
+      "x60": 74240,
+      "x62": 38705,
+      "x63": 55490,
+      "x65": 84470,
+      "x66": 80731,
+      "x68": 34447,
+      "x69": 3085,
+      "x7": 28514,
+      "x70": 33952,
+      "x71": 16510,
+      "x72": 87539,
+      "x73": 35991,
+      "x8": 78914,
+      "x9": 66019
+     }
+    }
+   ],
+   "fiber_coordinates_22": {
+    "W1": 62175,
+    "W2": 9457,
+    "uW1": 65569,
+    "uW2": 22756,
+    "x47": 84470,
+    "x52": 38705,
+    "x53": 41821,
+    "x54": 10407,
+    "x55": 40034,
+    "x57": 84470,
+    "x58": 40397,
+    "x59": 70766,
+    "x60": 74240,
+    "x62": 38705,
+    "x63": 55490,
+    "x65": 84470,
+    "x66": 80731,
+    "x68": 34447,
+    "x70": 33952,
+    "x71": 16510,
+    "x72": 87539,
+    "x73": 35991
+   },
+   "index": 2,
+   "w_branch_s1_i1_s2_i2": [
+    -1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "deep_draws": [
+    {
+     "deep_tails": {
+      "tf1_49": 91717,
+      "tf1_54": 34142,
+      "tf2_49": 9147,
+      "tf2_54": 71195,
+      "tg01_54": 0,
+      "tg02_54": 0,
+      "tg1_49": 0,
+      "tg1_54": 0,
+      "tg2_49": 0,
+      "tg2_54": 0
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 0,
+     "schur_rank": 29
+    },
+    {
+     "deep_tails": {
+      "tf1_49": 21851,
+      "tf1_54": 32795,
+      "tf2_49": 96405,
+      "tf2_54": 66582,
+      "tg01_54": 24634,
+      "tg02_54": 74886,
+      "tg1_49": 92909,
+      "tg1_54": 90293,
+      "tg2_49": 82141,
+      "tg2_54": 61967
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 1,
+     "schur_rank": 29
+    },
+    {
+     "deep_tails": {
+      "tf1_49": 72639,
+      "tf1_54": 67692,
+      "tf2_49": 66859,
+      "tf2_54": 52918,
+      "tg01_54": 13338,
+      "tg02_54": 73110,
+      "tg1_49": 101485,
+      "tg1_54": 3232,
+      "tg2_49": 88974,
+      "tg2_54": 66135
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 2,
+     "schur_rank": 29
+    }
+   ],
+   "draws": [
+    {
+     "draw": 0,
+     "extras": {
+      "x16": 0,
+      "x24": 0,
+      "x69": 0
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 30127,
+      "x25": 41608,
+      "x32": 0,
+      "x37": 0
+     },
+     "witness72": {
+      "W1": 43162,
+      "W2": 21687,
+      "uW1": 39768,
+      "uW2": 105303,
+      "x0": 81962,
+      "x1": 33515,
+      "x10": 1391,
+      "x11": 50768,
+      "x12": 57663,
+      "x13": 58408,
+      "x14": 89791,
+      "x15": 9694,
+      "x16": 0,
+      "x17": 30127,
+      "x18": 0,
+      "x19": 0,
+      "x2": 104463,
+      "x20": 0,
+      "x21": 0,
+      "x22": 0,
+      "x23": 0,
+      "x24": 0,
+      "x25": 41608,
+      "x26": 0,
+      "x27": 0,
+      "x28": 0,
+      "x29": 0,
+      "x3": 83661,
+      "x30": 0,
+      "x31": 0,
+      "x32": 0,
+      "x33": 0,
+      "x34": 0,
+      "x35": 0,
+      "x36": 0,
+      "x37": 0,
+      "x38": 0,
+      "x39": 0,
+      "x4": 8445,
+      "x40": 0,
+      "x41": 0,
+      "x42": 58941,
+      "x43": 13355,
+      "x44": 33744,
+      "x45": 52754,
+      "x47": 73028,
+      "x48": 0,
+      "x49": 91125,
+      "x5": 46929,
+      "x50": 79276,
+      "x52": 58941,
+      "x53": 30302,
+      "x54": 36251,
+      "x55": 48229,
+      "x57": 73028,
+      "x58": 66914,
+      "x59": 99737,
+      "x6": 31507,
+      "x60": 45375,
+      "x62": 58941,
+      "x63": 28730,
+      "x65": 73028,
+      "x66": 73901,
+      "x68": 192,
+      "x69": 0,
+      "x7": 82299,
+      "x70": 69042,
+      "x71": 11642,
+      "x72": 83081,
+      "x73": 47504,
+      "x8": 41355,
+      "x9": 11890
+     }
+    },
+    {
+     "draw": 1,
+     "extras": {
+      "x16": 84329,
+      "x24": 21948,
+      "x69": 26065
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 20044,
+      "x25": 88487,
+      "x32": 95254,
+      "x37": 46879
+     },
+     "witness72": {
+      "W1": 43162,
+      "W2": 21687,
+      "uW1": 39768,
+      "uW2": 105303,
+      "x0": 29885,
+      "x1": 15037,
+      "x10": 13889,
+      "x11": 82673,
+      "x12": 37388,
+      "x13": 11983,
+      "x14": 53891,
+      "x15": 13860,
+      "x16": 84329,
+      "x17": 20044,
+      "x18": 63240,
+      "x19": 91358,
+      "x2": 66034,
+      "x20": 44149,
+      "x21": 56332,
+      "x22": 104137,
+      "x23": 93790,
+      "x24": 21948,
+      "x25": 88487,
+      "x26": 69659,
+      "x27": 80317,
+      "x28": 74742,
+      "x29": 102799,
+      "x3": 19731,
+      "x30": 20598,
+      "x31": 83082,
+      "x32": 95254,
+      "x33": 74352,
+      "x34": 102630,
+      "x35": 89151,
+      "x36": 2142,
+      "x37": 46879,
+      "x38": 14999,
+      "x39": 62120,
+      "x4": 4070,
+      "x40": 67594,
+      "x41": 31578,
+      "x42": 58941,
+      "x43": 91846,
+      "x44": 33744,
+      "x45": 61070,
+      "x47": 73028,
+      "x48": 23501,
+      "x49": 91125,
+      "x5": 43684,
+      "x50": 22987,
+      "x52": 58941,
+      "x53": 30302,
+      "x54": 36251,
+      "x55": 48229,
+      "x57": 73028,
+      "x58": 66914,
+      "x59": 99737,
+      "x6": 104746,
+      "x60": 45375,
+      "x62": 58941,
+      "x63": 28730,
+      "x65": 73028,
+      "x66": 73901,
+      "x68": 192,
+      "x69": 26065,
+      "x7": 76087,
+      "x70": 69042,
+      "x71": 11642,
+      "x72": 83081,
+      "x73": 47504,
+      "x8": 102946,
+      "x9": 57669
+     }
+    },
+    {
+     "draw": 2,
+     "extras": {
+      "x16": 28853,
+      "x24": 28693,
+      "x69": 65176
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 61127,
+      "x25": 81244,
+      "x32": 31000,
+      "x37": 39636
+     },
+     "witness72": {
+      "W1": 43162,
+      "W2": 21687,
+      "uW1": 39768,
+      "uW2": 105303,
+      "x0": 56868,
+      "x1": 18846,
+      "x10": 57281,
+      "x11": 61302,
+      "x12": 63586,
+      "x13": 20579,
+      "x14": 42036,
+      "x15": 89134,
+      "x16": 28853,
+      "x17": 61127,
+      "x18": 65719,
+      "x19": 33009,
+      "x2": 30269,
+      "x20": 71941,
+      "x21": 26727,
+      "x22": 100314,
+      "x23": 14685,
+      "x24": 28693,
+      "x25": 81244,
+      "x26": 29624,
+      "x27": 15478,
+      "x28": 31008,
+      "x29": 89418,
+      "x3": 55081,
+      "x30": 484,
+      "x31": 99819,
+      "x32": 31000,
+      "x33": 48903,
+      "x34": 51240,
+      "x35": 1448,
+      "x36": 70814,
+      "x37": 39636,
+      "x38": 10277,
+      "x39": 81926,
+      "x4": 24458,
+      "x40": 93287,
+      "x41": 102923,
+      "x42": 58941,
+      "x43": 11509,
+      "x44": 33744,
+      "x45": 13414,
+      "x47": 73028,
+      "x48": 12885,
+      "x49": 91125,
+      "x5": 31015,
+      "x50": 97830,
+      "x52": 58941,
+      "x53": 30302,
+      "x54": 36251,
+      "x55": 48229,
+      "x57": 73028,
+      "x58": 66914,
+      "x59": 99737,
+      "x6": 746,
+      "x60": 45375,
+      "x62": 58941,
+      "x63": 28730,
+      "x65": 73028,
+      "x66": 73901,
+      "x68": 192,
+      "x69": 65176,
+      "x7": 14548,
+      "x70": 69042,
+      "x71": 11642,
+      "x72": 83081,
+      "x73": 47504,
+      "x8": 37780,
+      "x9": 35002
+     }
+    }
+   ],
+   "fiber_coordinates_22": {
+    "W1": 43162,
+    "W2": 21687,
+    "uW1": 39768,
+    "uW2": 105303,
+    "x47": 73028,
+    "x52": 58941,
+    "x53": 30302,
+    "x54": 36251,
+    "x55": 48229,
+    "x57": 73028,
+    "x58": 66914,
+    "x59": 99737,
+    "x60": 45375,
+    "x62": 58941,
+    "x63": 28730,
+    "x65": 73028,
+    "x66": 73901,
+    "x68": 192,
+    "x70": 69042,
+    "x71": 11642,
+    "x72": 83081,
+    "x73": 47504
+   },
+   "index": 3,
+   "w_branch_s1_i1_s2_i2": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "deep_draws": [
+    {
+     "deep_tails": {
+      "tf1_49": 99969,
+      "tf1_54": 81689,
+      "tf2_49": 69467,
+      "tf2_54": 23648,
+      "tg01_54": 0,
+      "tg02_54": 0,
+      "tg1_49": 0,
+      "tg1_54": 0,
+      "tg2_49": 0,
+      "tg2_54": 0
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 0,
+     "schur_rank": 29
+    },
+    {
+     "deep_tails": {
+      "tf1_49": 30103,
+      "tf1_54": 80342,
+      "tf2_49": 51388,
+      "tf2_54": 19035,
+      "tg01_54": 24634,
+      "tg02_54": 74886,
+      "tg1_49": 92909,
+      "tg1_54": 90293,
+      "tg2_49": 82141,
+      "tg2_54": 61967
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 1,
+     "schur_rank": 29
+    },
+    {
+     "deep_tails": {
+      "tf1_49": 80891,
+      "tf1_54": 9902,
+      "tf2_49": 21842,
+      "tf2_54": 5371,
+      "tg01_54": 13338,
+      "tg02_54": 73110,
+      "tg1_49": 101485,
+      "tg1_54": 3232,
+      "tg2_49": 88974,
+      "tg2_54": 66135
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 2,
+     "schur_rank": 29
+    }
+   ],
+   "draws": [
+    {
+     "draw": 0,
+     "extras": {
+      "x16": 0,
+      "x24": 0,
+      "x69": 0
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 20845,
+      "x25": 63723,
+      "x32": 0,
+      "x37": 0
+     },
+     "witness72": {
+      "W1": 62175,
+      "W2": 9457,
+      "uW1": 65569,
+      "uW2": 22756,
+      "x0": 29339,
+      "x1": 97113,
+      "x10": 87887,
+      "x11": 26786,
+      "x12": 69693,
+      "x13": 19392,
+      "x14": 21264,
+      "x15": 45619,
+      "x16": 0,
+      "x17": 20845,
+      "x18": 0,
+      "x19": 0,
+      "x2": 34825,
+      "x20": 0,
+      "x21": 0,
+      "x22": 0,
+      "x23": 0,
+      "x24": 0,
+      "x25": 63723,
+      "x26": 0,
+      "x27": 0,
+      "x28": 0,
+      "x29": 0,
+      "x3": 4515,
+      "x30": 0,
+      "x31": 0,
+      "x32": 0,
+      "x33": 0,
+      "x34": 0,
+      "x35": 0,
+      "x36": 0,
+      "x37": 0,
+      "x38": 0,
+      "x39": 0,
+      "x4": 2379,
+      "x40": 0,
+      "x41": 0,
+      "x42": 73922,
+      "x43": 27092,
+      "x44": 48137,
+      "x45": 1318,
+      "x47": 95976,
+      "x48": 0,
+      "x49": 7534,
+      "x5": 85945,
+      "x50": 73135,
+      "x52": 73922,
+      "x53": 60408,
+      "x54": 61577,
+      "x55": 90021,
+      "x57": 95976,
+      "x58": 44707,
+      "x59": 36912,
+      "x6": 91689,
+      "x60": 49229,
+      "x62": 73922,
+      "x63": 21257,
+      "x65": 95976,
+      "x66": 54115,
+      "x68": 94440,
+      "x69": 0,
+      "x7": 32720,
+      "x70": 45324,
+      "x71": 76587,
+      "x72": 88850,
+      "x73": 64485,
+      "x8": 26862,
+      "x9": 83040
+     }
+    },
+    {
+     "draw": 1,
+     "extras": {
+      "x16": 50312,
+      "x24": 37149,
+      "x69": 89234
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 34402,
+      "x25": 104747,
+      "x32": 13557,
+      "x37": 41024
+     },
+     "witness72": {
+      "W1": 62175,
+      "W2": 9457,
+      "uW1": 65569,
+      "uW2": 22756,
+      "x0": 82718,
+      "x1": 35836,
+      "x10": 88224,
+      "x11": 66368,
+      "x12": 25683,
+      "x13": 86587,
+      "x14": 16466,
+      "x15": 98487,
+      "x16": 50312,
+      "x17": 34402,
+      "x18": 30496,
+      "x19": 57131,
+      "x2": 88093,
+      "x20": 44875,
+      "x21": 15096,
+      "x22": 32255,
+      "x23": 16340,
+      "x24": 37149,
+      "x25": 104747,
+      "x26": 73620,
+      "x27": 7797,
+      "x28": 91589,
+      "x29": 97532,
+      "x3": 38056,
+      "x30": 49937,
+      "x31": 98795,
+      "x32": 13557,
+      "x33": 83247,
+      "x34": 92971,
+      "x35": 22755,
+      "x36": 14107,
+      "x37": 41024,
+      "x38": 45036,
+      "x39": 57853,
+      "x4": 25382,
+      "x40": 103661,
+      "x41": 102253,
+      "x42": 73922,
+      "x43": 89517,
+      "x44": 48137,
+      "x45": 102373,
+      "x47": 95976,
+      "x48": 50834,
+      "x49": 7534,
+      "x5": 38773,
+      "x50": 91520,
+      "x52": 73922,
+      "x53": 60408,
+      "x54": 61577,
+      "x55": 90021,
+      "x57": 95976,
+      "x58": 44707,
+      "x59": 36912,
+      "x6": 9697,
+      "x60": 49229,
+      "x62": 73922,
+      "x63": 21257,
+      "x65": 95976,
+      "x66": 54115,
+      "x68": 94440,
+      "x69": 89234,
+      "x7": 23253,
+      "x70": 45324,
+      "x71": 76587,
+      "x72": 88850,
+      "x73": 64485,
+      "x8": 83811,
+      "x9": 84207
+     }
+    },
+    {
+     "draw": 2,
+     "extras": {
+      "x16": 1736,
+      "x24": 11037,
+      "x69": 69297
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 84464,
+      "x25": 42019,
+      "x32": 63619,
+      "x37": 83633
+     },
+     "witness72": {
+      "W1": 62175,
+      "W2": 9457,
+      "uW1": 65569,
+      "uW2": 22756,
+      "x0": 89209,
+      "x1": 91126,
+      "x10": 56006,
+      "x11": 36632,
+      "x12": 54273,
+      "x13": 703,
+      "x14": 41551,
+      "x15": 83716,
+      "x16": 1736,
+      "x17": 84464,
+      "x18": 52107,
+      "x19": 69492,
+      "x2": 51770,
+      "x20": 84550,
+      "x21": 63463,
+      "x22": 42478,
+      "x23": 104335,
+      "x24": 11037,
+      "x25": 42019,
+      "x26": 41101,
+      "x27": 43993,
+      "x28": 91350,
+      "x29": 29848,
+      "x3": 35242,
+      "x30": 50136,
+      "x31": 89477,
+      "x32": 63619,
+      "x33": 93186,
+      "x34": 103843,
+      "x35": 7184,
+      "x36": 47750,
+      "x37": 83633,
+      "x38": 54019,
+      "x39": 40487,
+      "x4": 43883,
+      "x40": 32501,
+      "x41": 45941,
+      "x42": 73922,
+      "x43": 21090,
+      "x44": 48137,
+      "x45": 32258,
+      "x47": 95976,
+      "x48": 75204,
+      "x49": 7534,
+      "x5": 74502,
+      "x50": 39184,
+      "x52": 73922,
+      "x53": 60408,
+      "x54": 61577,
+      "x55": 90021,
+      "x57": 95976,
+      "x58": 44707,
+      "x59": 36912,
+      "x6": 70459,
+      "x60": 49229,
+      "x62": 73922,
+      "x63": 21257,
+      "x65": 95976,
+      "x66": 54115,
+      "x68": 94440,
+      "x69": 69297,
+      "x7": 16139,
+      "x70": 45324,
+      "x71": 76587,
+      "x72": 88850,
+      "x73": 64485,
+      "x8": 67796,
+      "x9": 80824
+     }
+    }
+   ],
+   "fiber_coordinates_22": {
+    "W1": 62175,
+    "W2": 9457,
+    "uW1": 65569,
+    "uW2": 22756,
+    "x47": 95976,
+    "x52": 73922,
+    "x53": 60408,
+    "x54": 61577,
+    "x55": 90021,
+    "x57": 95976,
+    "x58": 44707,
+    "x59": 36912,
+    "x60": 49229,
+    "x62": 73922,
+    "x63": 21257,
+    "x65": 95976,
+    "x66": 54115,
+    "x68": 94440,
+    "x70": 45324,
+    "x71": 76587,
+    "x72": 88850,
+    "x73": 64485
+   },
+   "index": 4,
+   "w_branch_s1_i1_s2_i2": [
+    -1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "deep_draws": [
+    {
+     "deep_tails": {
+      "tf1_49": 30489,
+      "tf1_54": 102256,
+      "tf2_49": 49353,
+      "tf2_54": 3081,
+      "tg01_54": 0,
+      "tg02_54": 0,
+      "tg1_49": 0,
+      "tg1_54": 0,
+      "tg2_49": 0,
+      "tg2_54": 0
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 0,
+     "schur_rank": 29
+    },
+    {
+     "deep_tails": {
+      "tf1_49": 65960,
+      "tf1_54": 100909,
+      "tf2_49": 31274,
+      "tf2_54": 103805,
+      "tg01_54": 24634,
+      "tg02_54": 74886,
+      "tg1_49": 92909,
+      "tg1_54": 90293,
+      "tg2_49": 82141,
+      "tg2_54": 61967
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 1,
+     "schur_rank": 29
+    },
+    {
+     "deep_tails": {
+      "tf1_49": 11411,
+      "tf1_54": 30469,
+      "tf2_49": 1728,
+      "tf2_54": 90141,
+      "tg01_54": 13338,
+      "tg02_54": 73110,
+      "tg1_49": 101485,
+      "tg1_54": 3232,
+      "tg2_49": 88974,
+      "tg2_54": 66135
+     },
+     "e_experimental": {
+      "readings": {
+       "pencil/tails": {
+        "detail": {
+         "shape": [
+          29,
+          77
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null,
+        "per_fill_diagnostic": {
+         "fills": [
+          {
+           "fill": 0,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            8,
+            9,
+            9,
+            10,
+            10,
+            11,
+            13,
+            15
+           ],
+           "rank": 29,
+           "val_sum": 135
+          },
+          {
+           "fill": 1,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          },
+          {
+           "fill": 2,
+           "pivot_vals": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+           ],
+           "rank": 29,
+           "val_sum": 62
+          }
+         ],
+         "note": "raw per-fill Smith data; NOT a certified e-reading (the certified reading fail-closes)"
+        }
+       },
+       "pencil/tailsW": {
+        "detail": {
+         "shape": [
+          29,
+          79
+         ],
+         "stable": false,
+         "why": "e unstable under unknown-tail fill (window depth insufficient, fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "rank/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tails": {
+        "detail": {
+         "why": "column rank 35 < 77: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       },
+       "weighted/tailsW": {
+        "detail": {
+         "why": "column rank 37 < 79: no nonvanishing maximal minor (fail-closed)"
+        },
+        "e": null
+       }
+      },
+      "tag": "E_CANDIDATE(EXPERIMENTAL)"
+     },
+     "kernel_draw": 2,
+     "schur_rank": 29
+    }
+   ],
+   "draws": [
+    {
+     "draw": 0,
+     "extras": {
+      "x16": 0,
+      "x24": 0,
+      "x69": 0
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 47495,
+      "x25": 48088,
+      "x32": 0,
+      "x37": 0
+     },
+     "witness72": {
+      "W1": 31931,
+      "W2": 21687,
+      "uW1": 64754,
+      "uW2": 105303,
+      "x0": 31898,
+      "x1": 84911,
+      "x10": 19232,
+      "x11": 93430,
+      "x12": 52096,
+      "x13": 14443,
+      "x14": 14174,
+      "x15": 28177,
+      "x16": 0,
+      "x17": 47495,
+      "x18": 0,
+      "x19": 0,
+      "x2": 29979,
+      "x20": 0,
+      "x21": 0,
+      "x22": 0,
+      "x23": 0,
+      "x24": 0,
+      "x25": 48088,
+      "x26": 0,
+      "x27": 0,
+      "x28": 0,
+      "x29": 0,
+      "x3": 67886,
+      "x30": 0,
+      "x31": 0,
+      "x32": 0,
+      "x33": 0,
+      "x34": 0,
+      "x35": 0,
+      "x36": 0,
+      "x37": 0,
+      "x38": 0,
+      "x39": 0,
+      "x4": 17106,
+      "x40": 0,
+      "x41": 0,
+      "x42": 73529,
+      "x43": 98454,
+      "x44": 47398,
+      "x45": 17836,
+      "x47": 38403,
+      "x48": 0,
+      "x49": 5721,
+      "x5": 90894,
+      "x50": 67512,
+      "x52": 73529,
+      "x53": 91996,
+      "x54": 18933,
+      "x55": 6783,
+      "x57": 38403,
+      "x58": 58243,
+      "x59": 19133,
+      "x6": 92454,
+      "x60": 68907,
+      "x62": 73529,
+      "x63": 104328,
+      "x65": 38403,
+      "x66": 84234,
+      "x68": 28607,
+      "x69": 0,
+      "x7": 66650,
+      "x70": 73114,
+      "x71": 60053,
+      "x72": 6039,
+      "x73": 48287,
+      "x8": 28326,
+      "x9": 6412
+     }
+    },
+    {
+     "draw": 1,
+     "extras": {
+      "x16": 47469,
+      "x24": 67716,
+      "x69": 15701
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 47766,
+      "x25": 53088,
+      "x32": 271,
+      "x37": 5000
+     },
+     "witness72": {
+      "W1": 31931,
+      "W2": 21687,
+      "uW1": 64754,
+      "uW2": 105303,
+      "x0": 75673,
+      "x1": 58601,
+      "x10": 16888,
+      "x11": 27216,
+      "x12": 76454,
+      "x13": 294,
+      "x14": 65468,
+      "x15": 64803,
+      "x16": 47469,
+      "x17": 47766,
+      "x18": 9752,
+      "x19": 28331,
+      "x2": 89304,
+      "x20": 54916,
+      "x21": 29143,
+      "x22": 9237,
+      "x23": 91380,
+      "x24": 67716,
+      "x25": 53088,
+      "x26": 73055,
+      "x27": 54807,
+      "x28": 99083,
+      "x29": 40116,
+      "x3": 5156,
+      "x30": 20738,
+      "x31": 49569,
+      "x32": 271,
+      "x33": 24186,
+      "x34": 30711,
+      "x35": 76392,
+      "x36": 105035,
+      "x37": 5000,
+      "x38": 70031,
+      "x39": 14198,
+      "x4": 86946,
+      "x40": 18665,
+      "x41": 25247,
+      "x42": 73529,
+      "x43": 94917,
+      "x44": 47398,
+      "x45": 2234,
+      "x47": 38403,
+      "x48": 61763,
+      "x49": 5721,
+      "x5": 25736,
+      "x50": 96820,
+      "x52": 73529,
+      "x53": 91996,
+      "x54": 18933,
+      "x55": 6783,
+      "x57": 38403,
+      "x58": 58243,
+      "x59": 19133,
+      "x6": 87330,
+      "x60": 68907,
+      "x62": 73529,
+      "x63": 104328,
+      "x65": 38403,
+      "x66": 84234,
+      "x68": 28607,
+      "x69": 15701,
+      "x7": 70310,
+      "x70": 73114,
+      "x71": 60053,
+      "x72": 6039,
+      "x73": 48287,
+      "x8": 59892,
+      "x9": 69475
+     }
+    },
+    {
+     "draw": 2,
+     "extras": {
+      "x16": 95977,
+      "x24": 104949,
+      "x69": 26502
+     },
+     "free_tg_cols": [
+      2,
+      3
+     ],
+     "tg": {
+      "x17": 62394,
+      "x25": 90,
+      "x32": 14899,
+      "x37": 57339
+     },
+     "witness72": {
+      "W1": 31931,
+      "W2": 21687,
+      "uW1": 64754,
+      "uW2": 105303,
+      "x0": 63822,
+      "x1": 10089,
+      "x10": 57040,
+      "x11": 78259,
+      "x12": 1046,
+      "x13": 98011,
+      "x14": 100681,
+      "x15": 68026,
+      "x16": 95977,
+      "x17": 62394,
+      "x18": 24467,
+      "x19": 19739,
+      "x2": 85100,
+      "x20": 61726,
+      "x21": 25461,
+      "x22": 74887,
+      "x23": 8751,
+      "x24": 104949,
+      "x25": 90,
+      "x26": 93051,
+      "x27": 62379,
+      "x28": 77852,
+      "x29": 16435,
+      "x3": 85998,
+      "x30": 38758,
+      "x31": 62207,
+      "x32": 14899,
+      "x33": 37976,
+      "x34": 22423,
+      "x35": 59600,
+      "x36": 55431,
+      "x37": 57339,
+      "x38": 35262,
+      "x39": 93290,
+      "x4": 102382,
+      "x40": 104594,
+      "x41": 79068,
+      "x42": 73529,
+      "x43": 39266,
+      "x44": 47398,
+      "x45": 17377,
+      "x47": 38403,
+      "x48": 71509,
+      "x49": 5721,
+      "x5": 3603,
+      "x50": 68572,
+      "x52": 73529,
+      "x53": 91996,
+      "x54": 18933,
+      "x55": 6783,
+      "x57": 38403,
+      "x58": 58243,
+      "x59": 19133,
+      "x6": 22979,
+      "x60": 68907,
+      "x62": 73529,
+      "x63": 104328,
+      "x65": 38403,
+      "x66": 84234,
+      "x68": 28607,
+      "x69": 26502,
+      "x7": 12486,
+      "x70": 73114,
+      "x71": 60053,
+      "x72": 6039,
+      "x73": 48287,
+      "x8": 80338,
+      "x9": 28970
+     }
+    }
+   ],
+   "fiber_coordinates_22": {
+    "W1": 31931,
+    "W2": 21687,
+    "uW1": 64754,
+    "uW2": 105303,
+    "x47": 38403,
+    "x52": 73529,
+    "x53": 91996,
+    "x54": 18933,
+    "x55": 6783,
+    "x57": 38403,
+    "x58": 58243,
+    "x59": 19133,
+    "x60": 68907,
+    "x62": 73529,
+    "x63": 104328,
+    "x65": 38403,
+    "x66": 84234,
+    "x68": 28607,
+    "x70": 73114,
+    "x71": 60053,
+    "x72": 6039,
+    "x73": 48287
+   },
+   "index": 5,
+   "w_branch_s1_i1_s2_i2": [
+    1,
+    0,
+    1,
+    1
+   ]
+  }
+ ]
+}

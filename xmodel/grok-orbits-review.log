@@ -1,0 +1,13 @@
+I'll start by reading the target proof and locating the atlas/fiber data so the review can attack the equivariance claim on independent computation.The review skill is for git diffs; this is a proof audit, so I’ll keep going on the remaining theorem text and the banked atlas/fiber files.I'll inspect prior review format, atlas JSON shape, and where the D25 fiber files actually live.Atlas and local D25 fibers are in place. Next I’ll inspect their structure and run independent coefficient checks, not the paper’s reproduction script.I’ll run an independent parser and coefficient-level checks next: selectors, `F_p`-rationality, and exact scaling of `a00pp` against a few other fibers.File shapes check out. Next I’ll compute selector freeness, `F_p` membership of the scalings, and exact coefficient transport on the parked fibers.Union files reported two syntax rejections — I’ll inspect those terms, then finish the source-proof and PCC attacks.Selector law, freeness, and the D25 character identity all held in independent arithmetic. I’ll write the verdict file with exact scope on the one-fiber consequence.Verdict is in `xmodel/grok-orbits-review.md`. Neither object is refuted.
+
+**Object A — equivariance theorem: CONFIRMED**, with only the gaps the document already flags (source-pkl weights not re-expanded here, 216 witness checks not rerun, FUTURE-EMISSION FIDELITY for D27+). Independent arithmetic on both atlases and all 72 parked D25 files:
+
+- 36 distinct selector points, trivial stabilizer, one free \(G\)-orbit, \(|G|=36\)
+- character identity holds on all **9792** generator-edge row pairs, including residuals R1–R5
+- focused `a00pp` vs `a10pp` / `a01pp` / `a00mp` / `a00pm` is 34/34 exact at both primes, including `50008 → 81147 = ω·50008`
+
+**Object B — PCC + WTC-1: CONFIRMED.** Boxed PCC is genuinely sufficient for `td ≤ αβ`. WTC-1 is the first missing arrow in the Corollary 7.4 packet-to-PCC lane. PCC remains a conjecture.
+
+**One fiber decides all 36, including dimensions — over \(\mathbf F_p\), not only over the closure.** Every diagonal entry of every \(T_g\) lies in \(\{1,-1,ω,ω^2,-ω,-ω^2\}\subset\mathbf F_p^\times\). \(\sqrt{3}\) is in these fields and makes the 36 selector points \(\mathbf F_p\)-rational; it does not appear in \(T_g\). So \(\mathbf F_p[x]/I(λ)\cong\mathbf F_p[x]/I(gλ)\) as \(\mathbf F_p\)-algebras: emptiness, Krull dimension, degree, Jacobian ranks, and \(\mathbf F_p\)-points all transport.
+
+What it does **not** decide: the other \(\sqrt{3}\), the other prime (honest reduction is \(36\to 1\) per prime, \(72\to 2\)), other charts, or an uncertified D27+ compiler output.
