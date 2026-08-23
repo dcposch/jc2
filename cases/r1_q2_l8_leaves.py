@@ -4,7 +4,7 @@
 The l8 monolith is structurally GB-dead (1200 s / 12-15 GB locally,
 ~1.65 TB / 11 h on the 2 TB Box02).  Per the sec-13 precedent the
 stratum is split by the FIRST-NONZERO pattern of the 13 free core
-directions opened between l13 (PROOF-TIER dead) and l8 (slots 8..12;
+directions opened between l13 (dead at the recorded primes; Qbar open) and l8 (slots 8..12;
 bf_24 excluded: KEEPX kept back-map variable, not stratum-gated):
 
   order (census-fixed: ascending slot, then descending occurrence):
@@ -376,8 +376,8 @@ def phase_cover():
         zd = {v: zfilter(d, z) for v, d in st["meta"]["defs"].items()}
         assert zr == st13["rows"] and zd == st13["meta"]["defs"]
         log("cover (ii) p=%d: l8 rows+defs with ALL 13 dirs zeroed == "
-            "banked l13 build DICT-EXACT (zero leaf = the PROOF-TIER "
-            "dead l13 object)" % p)
+            "banked l13 build DICT-EXACT (zero leaf = the finite-field "
+            "dead l13 object at this prime)" % p)
     log("cover (iii): unit side lifts uniquely (u = d_k^-1, field); "
         "zero side is closed-pattern restriction on free polynomial "
         "coordinates; leaf rows are the stratum rows verbatim under "

@@ -21,7 +21,11 @@ lattice points of hull(N(P)) and hull(N(Q)); equations = all coefficients of
 w.r.t. the convention that (0,0) always belongs to the Newton polygon);
 "_strict" also constrains (0,0) != 0.
 GB = [1] mod p  =>  strong evidence the reduced case is empty (theorem-grade
-requires the char-0 certificate; mod-p emptiness for one prime is evidence only).
+requires an exact characteristic-zero cofactor or equivalent certificate;
+mod-p emptiness for finitely many primes is evidence only).  With msolve 0.10.1,
+`-g` on a characteristic-zero input prints the first-machine-prime basis, so a
+char-0 header followed by `[1]` is also modular trace evidence, not a Q
+certificate.
 Bracket sign convention: [P,Q] := P_x Q_y - P_y Q_x; a solution of the opposite
 convention corresponds to swapping (P,Q), so emptiness is convention-independent.
 

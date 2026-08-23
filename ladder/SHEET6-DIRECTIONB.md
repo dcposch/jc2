@@ -257,11 +257,12 @@ of the template variety, uniformly in the 7 + both w 4th-root branches
 + every A-embedding (the ratio contradiction lives in Q(sqrt3)).
 Every surviving residue-A configuration MUST carry nonzero
 sub-pattern tail data inside the slot-20 window — the direction-b
-window is now a FORCED-NONZERO-TAIL regime. This composes with the
-§19.2 stratum kill (survivors need a nonzero free below slot 13,
-proof-tier on the UU chart) into: the residue-A survivor locus is
-pushed off every zero-extension in two independent row systems
-(h1-band tier AND J-tier).
+window is now a FORCED-NONZERO-TAIL regime.  At the recorded finite
+fields this composes with the §19.2 l13 kill (survivors need a nonzero
+free below slot 13).  The former proof-tier characteristic-zero reading
+of l13 was withdrawn on 2026-08-23 because msolve's printed `[1]` was a
+first-prime trace; over characteristic zero only the exact J-tier
+zero-tail theorem is currently available.
 
 ## 4. The quantum transfer (derivation + honest implication direction)
 
@@ -355,10 +356,11 @@ polynomials — the row builder needs only each cell's
 build_generators analogue; whether their resonance windows are also
 overdetermined on the pole scales is the natural next run (NOT
 claimed here). (iii) The forced-nonzero-tail regime composes with the
-banked R1 record: every residue-A survivor now needs BOTH a nonzero
-free below slot 13 (SHEET6-R1 §19.2, proof-tier stratum) AND nonzero
-window tails at the J-tier — the two systems (h1-band and J) are
-independent row families on the same unknowns, and their JOINT
+banked R1 record over the recorded finite fields: every residue-A survivor
+there needs BOTH a nonzero free below slot 13 (SHEET6-R1 §19.2) AND
+nonzero window tails at the J-tier — the two systems (h1-band and J) are
+independent row families on the same unknowns at the recorded finite
+fields, and their JOINT
 depth-84-with-J-rows build is the sharpest next object in the
 program (spec: §6).
 
@@ -636,7 +638,9 @@ guard C pattern-positive -- at tails=0 exactly the 9 zero-tail
 Row_20 comps survive and equal the banked dsys constants (+42 at
 eta^0) mod p, 9/9 nonzero. VERDICT SEMANTICS: main-lane GB = [1]
 at the primes = strong evidence the forced-tail window variety is
-EMPTY (then char-0 [1] = proof-tier residue-A window kill);
+EMPTY.  An msolve `-g` `[1]` from a characteristic-zero-header input is only
+the first-prime trace; proof-tier residue-A window death additionally requires
+a verified rational Gröbner basis or an exact identity `1 = sum h_i f_i`;
 GB != [1] = V alive mod p, dimension/degree data for the fleet.
 Sizes: main 2,035,641 B char-0; 1,983,334 / 1,983,734 / 2,006,543 B
 at p = 105337 / 105673 / 200257; ctl0 1,949,393 B char-0 + 3

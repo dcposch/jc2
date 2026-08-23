@@ -93,10 +93,12 @@ def test_sweep():
     for key in [(1, 1), (1, 2), (2, 1), (3, 2), (3, 3), (4, 2)]:
         assert key in got, f"missing sweep instance {key}"
         assert got[key] != "undecided", f"instance {key} undecided (solver issue)"
-    # the gate fixture is a point of the (i=4, ell=2) hypothesis variety, so
-    # that instance cannot be vacuous; given the certified emptiness of the
-    # saturated systems it must be reported as a genuine 'holds'.
-    assert got[(4, 2)] == "holds", "primary instance P1 must be non-vacuous holds"
+    # msolve -g can short-circuit a characteristic-zero `[1]` after its first
+    # prime.  The six solver-only rows therefore stay trace-supported, not HOLD.
+    assert got[(4, 2)] == "modular-trace-support", \
+        "primary instance P1 must not be promoted without a Q certificate"
+    assert all(got[key] == "modular-trace-support" for key in
+               [(1, 1), (1, 2), (2, 1), (3, 2), (3, 3), (4, 2)])
     n_h = sum(1 for r in records if r["verdict"] == "holds")
     n_d = sum(1 for r in records if r["verdict"] == "degenerate")
     print(f"sweep (b) OK: {len(records)} instances, holds={n_h}, "

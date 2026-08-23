@@ -464,6 +464,9 @@ def write_msolve(path, names, eqs, char):
     return len(used)
 
 def run_msolve(mspath, outpath, timeout, threads=4):
+    with open(mspath) as f:
+        f.readline()
+        char = int(f.readline().strip())
     t0 = time.time()
     try:
         r = subprocess.run(["msolve", "-g", "2", "-t", str(threads),
@@ -481,8 +484,16 @@ def run_msolve(mspath, outpath, timeout, threads=4):
         return "error", dt
     for line in txt.splitlines():
         if line.strip() == "[1]:":
-            return "empty", dt
-    return ("nonempty", dt) if "]:" in txt else ("error", dt)
+            # On characteristic-zero input, msolve 0.10.1 may return from its
+            # unit-basis branch after the first machine prime and before
+            # rational reconstruction.  Never promote that `[1]` to Q-emptiness.
+            return ("first-prime-empty", dt) if char == 0 else ("empty", dt)
+    if not any(line.strip().endswith("]:") for line in txt.splitlines()):
+        return "error", dt
+    # The early return is unit-specific.  A successful non-unit char-0 run
+    # has continued through CRT/rational reconstruction and establishes a
+    # proper Q-ideal within the ordinary trust placed in msolve.
+    return "nonempty", dt
 
 # ---------------------------------------------------------------- linear c-solve
 
@@ -691,7 +702,10 @@ def run_sweep(outfile=None, sysdir=None, t_modp=120, t_char0=600,
               log=lambda s: None):
     """The smallest-instance sweep: (a,b,m,n)=(2,3,2,4), delta=1, i in I,
     all ell in [uF,vF], all B subseteq B_max, two msolve lanes
-    (mod 65521 evidence; char-0 certificate).  Writes per-instance rows."""
+    (mod 65521 plus a char-0 run).  A printed char-0-header `[1]` can be the
+    unit short circuit at the first prime and is not a rational certificate;
+    a successful non-unit result has completed reconstruction.  Writes
+    per-instance rows."""
     outfile = outfile or os.path.join(ROOT, "runs", "conjE_results.txt")
     sysdir = sysdir or os.path.join(ROOT, "systems", "conjE")
     os.makedirs(sysdir, exist_ok=True)
@@ -716,7 +730,7 @@ def run_sweep(outfile=None, sysdir=None, t_modp=120, t_char0=600,
         model = Model(inst)
         for ell in inst.ells:
             t0 = time.time()
-            n_empty = n_nonempty = n_other = n_const = 0
+            n_empty = n_nonempty = n_other = n_const = n_trace = 0
             n_hyp_sat = n_hyp_other = 0
             nonempty_Bs = []
             for B in all_subsets(inst.Bmax):
@@ -755,14 +769,16 @@ def run_sweep(outfile=None, sysdir=None, t_modp=120, t_char0=600,
                                f"modp={s1}({dt1:.1f}s) char0={s2}({dt2:.1f}s)")
                 if s2 == "empty":
                     n_empty += 1
+                elif s2 == "first-prime-empty":
+                    n_trace += 1
                 elif s2 == "nonempty":
                     n_nonempty += 1
                     nonempty_Bs.append(B)
                 else:
                     n_other += 1
-                if s1 == "nonempty" and s2 == "empty":
-                    details.append(f"# {tag} WARNING lane disagreement "
-                                   f"(modp nonempty, char0 empty): unlucky prime?")
+                if s1 == "nonempty" and s2 == "first-prime-empty":
+                    details.append(f"# {tag} WARNING modular-lane disagreement "
+                                   f"(fixed prime nonempty, first prime empty)")
             nB = 2 ** len(inst.Bmax)
             if n_nonempty > 0:
                 verdict = "NONEMPTY-NEEDS-WITNESS-ANALYSIS"
@@ -770,16 +786,22 @@ def run_sweep(outfile=None, sysdir=None, t_modp=120, t_char0=600,
                 verdict = "undecided"
             elif n_hyp_sat == 0:
                 verdict = "degenerate"      # hypotheses of E empty for every B
+            elif n_empty == nB:
+                verdict = "holds"           # exact structural contradictions only
+            elif n_empty + n_trace == nB:
+                verdict = "modular-trace-support"
             else:
-                verdict = "holds"
+                verdict = "undecided"
             dt = time.time() - t0
             records.append(dict(base, ell=ell, verdict=verdict,
-                                detail=f"B-subsets {nB}: sat-lane char0-empty={n_empty} "
-                                       f"(const={n_const}) nonempty={n_nonempty} "
+                                detail=f"B-subsets {nB}: exact-empty={n_empty} "
+                                       f"(const={n_const}) first-prime-empty={n_trace} "
+                                       f"nonempty={n_nonempty} "
                                        f"other={n_other}; hyp-lane satisfiable={n_hyp_sat}"
                                        + (f" nonempty_B={nonempty_Bs}" if nonempty_Bs else ""),
                                 t=dt))
-            log(f"i={i} ell={ell}: {verdict} (sat {n_empty}/{nB} empty, "
+            log(f"i={i} ell={ell}: {verdict} (exact {n_empty}/{nB}, "
+                f"first-prime trace {n_trace}/{nB}, "
                 f"hyp {n_hyp_sat}/{nB} satisfiable, {dt:.1f}s)")
         log(f"i={i}: done in {time.time()-t_inst0:.1f}s")
     # ------------- write results file
@@ -793,7 +815,7 @@ def run_sweep(outfile=None, sysdir=None, t_modp=120, t_char0=600,
         f.write(f"# gate result: {gate}\n")
         f.write("# semantics: an instance row 'holds' = (i) for EVERY B subseteq "
                 "B_max, {B supported} & {P_1(x_j)=0, j>ell} & {P_1(x_ell)!=0} is "
-                "EMPTY (char-0 Groebner certificate GB=[1]), i.e. E holds in the "
+                "EMPTY by an exact characteristic-zero certificate, i.e. E holds in the "
                 "strong form (proper-subset escape never needed) on the capped "
                 "stratum N0(E)=(1/da)T_{m,n}, supp(F) in T_{m,n} (exactly what "
                 "the E=>D induction instantiates; see plan honesty note); AND "
@@ -803,6 +825,9 @@ def run_sweep(outfile=None, sysdir=None, t_modp=120, t_char0=600,
                 "also the nontrivial honest-pair gate fixture), so E's "
                 "implication has content and the verified conclusion is that "
                 "P_1(x_ell)=0 on the WHOLE hypothesis variety.\n")
+        f.write("# 'modular-trace-support' means the fixed-prime and char-0-header "
+                "msolve -g lanes printed modular [1] bases; it is evidence only, "
+                "not a Q certificate or a HOLD verdict.\n")
         f.write("# 'degenerate' = hypotheses of E vacuous (no valid (F,G,w)/ell "
                 "configuration, or hypothesis system empty for every B), NOT a "
                 "verification.\n")

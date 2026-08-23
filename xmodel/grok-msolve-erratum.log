@@ -1,0 +1,24 @@
+I'll confirm or refute the msolve char-0 `[1]` erratum from source and a box01 experiment, starting with the uncommitted `AUDIT.md` claim and the campaign outputs.The erratum is in the AUDIT.md diff. Next I’ll read the existing prompt/log and the archived campaign outputs, then inspect msolve’s driver on box01.The archived cCa2 output is an eight-line char-0 header plus `[1]:`. I’ll inspect msolve’s `-g` docs and source next, then run the box01 probe.CERT-UPGRADE already flags `-g` as first-prime. Next I’ll pull msolve’s help text and the multi-modular driver on box01.Help text already says `-g` prints the GB “for first prime characteristic.” I’ll read the prime-selection and unit-ideal paths in source next.The early-return around `is_empty` in `lifting-gb.c` looks like the smoking gun. I’ll pull that function and the lucky-prime filter next.`--random-seed` makes the first prime reproducible. Next I’ll pin that prime, build a hidden-determinant trap, and run it on box01.Seed 0 pins the first prime at 1266886877. I’ll build the hidden-determinant trap around that and run the controls on box01.The hidden-det trap returns a false char-0 `[1]`; the same system lifts correctly when the first prime misses the determinant. Writing the verdict.**VERDICT: CONFIRMED.** Written to `xmodel/grok-msolve-erratum.md`.
+
+The coordinator’s coefficient-planted trap was the one case msolve *does* catch. A determinant-hidden unlucky prime is not filtered, and then `-g 2` returns a **wrong** char-0 `[1]`.
+
+**Source (msolve 0.10.1, `/home/ubuntu/msolve` @ `1e3af01`):**
+- Lucky-prime filter (`modular.h:41-60`) excludes a prime iff it divides **any input coefficient**. Not LCs only, not GB denominators, not intermediate F4 coefficients.
+- After F4 at that first prime, if the modular reduced GB is `{1}`, `core_groebner_qq` **returns immediately** (`lifting-gb.c:1363-1370`). No second prime, no CRT, no cofactor.
+- The printer then **hardcodes** `#field characteristic: 0` (`lifting-gb.c:1853`).
+
+**Probe on box01** (`--random-seed 0` pins first prime `p = 1266886877`). Trap = the 2×2 linear system with det `p` and no coefficient divisible by `p`. Over Q it has the point `x=(a+1)/p`, `y=-a/p`.
+
+| run | result |
+|---|---|
+| trap, seed 0 (first prime = det) | char-0 header + `[1]:`, no `New prime` — **wrong** |
+| trap, seed 42 (first prime ≠ det) | 5 primes, 0 bad, GB `[p y + a, p x - (a+1)]` — **correct** |
+| naive `p x - 1` (coordinator) | prime skipped, correct proper GB |
+
+Same input, same binary: seed 0 lies, seed 42 puts `p` in the denominators.
+
+**Archives:** `runs/open_8_28_c2_cCa2.q.out` is the same 8-line surface as the false trap. No `-v`, so no `#primes`/CRT lines. No local `cCa6.q.out`. `cCa2_lift.txt` is empty. chartG is still exact: its `.q.ms` contains the literal generator `-1`.
+
+Scoped non-claim: `-g 2` on a *non-unit* first modular GB *does* CRT (the dummy and the seed-42 trap). The dangerous path — and the campaign’s char-0 `[1]` — is the unit-ideal short-circuit.
+
+This is an msolve soundness bug **and** the usual evidence-tier gap: even a honest multi-prime `[1]` without a rational cofactor is not a Q-membership certificate.

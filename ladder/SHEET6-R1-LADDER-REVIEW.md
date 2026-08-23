@@ -1,5 +1,10 @@
 # SHEET6-R1-LADDER-REVIEW.md — Consolidated adversarial review of the R1 tier ladder (secs 13–16, e8839bb..3913087)
 
+> **Evidence correction (2026-08-23).** The msolve 0.10.1
+> characteristic-zero-header `[1]` files replayed in Front 4 contain
+> first-machine-prime bases, not rational Gröbner bases.  Their finite-field
+> evidence stands, but the ZU/UZ/leaf12_ZU proof-over-Qbar upgrades do not.
+
 Reviewer: Claude (adversarial pass, 2026-08-11). Status: COMPLETE.
 Scope: the four unreviewed tier results SHEET6-R1.md §13 (4-leaf
 decomposition + relation E), §14 (323-eq minimal ext + r<=6 slot
@@ -153,7 +158,7 @@ the inflation to "the branch survives depth-84 / F_s ladder exhausted".
   the three claimed ((3,0,0,0), (1,0,0,1), (0,1,1,0)). Correct — and
   A4/A6 verify the conclusion by direct measurement anyway.
 
-## 4. Front 4 — cover certificates + char-0 claims: CONFIRMED
+## 4. Front 4 — cover certificates confirmed; char-0 `[1]` claims demoted
 
 - Cover (i)/(ii)/(iii): re-run (both engines): tautology PASS; Z-side
   forcing is sound (2HW_i^2 = 3W_i^2 at W_i = 0 gives HW_i = 0, char
@@ -162,9 +167,13 @@ the inflation to "the branch survives depth-84 / F_s ladder exhausted".
   core 0/98 at (x = s1 = 0, W = HW = 0), both primes; (1,2) W-loaded
   constant census reproduced (rows 87–96 nonzero iff some W != 0).
 - Guard tables §13.2/§15.2/§14.2: re-run, all PASS, values match.
-- Char-0 claims re-run from the banked artifacts: leaf_ZU GB = [1],
-  leaf_UZ GB = [1] (§15.7 upgrade), leaf12_ZU GB = [1] — all over Q,
-  ~1 s / 77 s; leaf_UU and leaf12_UU both 121-elt reduced GB over Q.
+- Char-0-header artifacts re-run: leaf_ZU, leaf_UZ, and leaf12_ZU each
+  printed `[1]` in ~1 s / 77 s, but these are first-prime traces, not Q
+  certificates.  The unit-specific short circuit does not apply to the
+  successful 121-element leaf_UU/leaf12_UU outputs: those runs continue
+  through rational reconstruction and retain their Q-level nonemptiness
+  meaning within the ordinary trust placed in msolve.  Independently checked
+  exact points remain the stronger witness artifacts where available.
   leaf12_UZ char-0: NOT re-attempted past timeout — §15.3 correctly
   keeps it evidence-tier (the one honest gap in the char-0 table).
 - Leaf p-screens: all reproduce the banked pattern (minimal ZZ 36-elt

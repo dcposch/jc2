@@ -653,7 +653,12 @@ def phase_e5check():
 
 # ------------------------------------------------------------ calibrate
 def run_msolve_rss(path, out, timeout=900, threads=4):
-    """msolve -g 2 -t threads with RSS sampling (1 Hz via ps)."""
+    """msolve -g 2 with RSS sampling and evidence-aware labels.
+
+    On a characteristic-zero input msolve 0.10.1 can short-circuit a unit
+    basis at its first machine prime; `[1]` is then not a Q verdict.  A
+    successful non-unit run continues through rational reconstruction.
+    """
     import subprocess
     t0 = time.time()
     proc = subprocess.Popen(
@@ -675,8 +680,20 @@ def run_msolve_rss(path, out, timeout=900, threads=4):
     wall = time.time() - t0
     txt = open(out).read() if os.path.exists(out) else ""
     body = [l for l in txt.splitlines() if l and not l.startswith("#")]
-    verdict = "GB=[1] EMPTY" if any(l.strip().rstrip(":") == "[1]"
-                                    for l in body) else "GB!=[1] NONEMPTY"
+    with open(path) as f:
+        f.readline()
+        char = int(f.readline().strip())
+    is_unit = any(l.strip().rstrip(":") == "[1]" for l in body)
+    complete_basis = (proc.returncode == 0 and
+                      any(l.strip().endswith("]:") for l in body))
+    if not complete_basis:
+        return "NO-VERDICT (solver failure or no complete basis body)", wall, rssmax
+    if char == 0:
+        verdict = ("FIRST-PRIME-EMPTY TRACE (NOT Q-EMPTY)" if is_unit else
+                   "GB!=[1] NONEMPTY over Qbar (reconstructed Q basis; engine-trusted)")
+    else:
+        verdict = ("GB=[1] EMPTY over F_%d" % char if is_unit else
+                   "GB!=[1] NONEMPTY over algebraic closure of F_%d" % char)
     return verdict, wall, rssmax
 
 

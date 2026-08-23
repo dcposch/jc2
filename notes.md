@@ -3374,21 +3374,24 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   d43int trace result if promoted.
 
 ## 2026-08-23 ~23:30 CHARACTERISTIC-ZERO EVIDENCE CORRECTION (supersedes, does not erase, historical entries)
-- msolve 0.10.1 `-g` prints the reduced basis for the first machine prime even
-  when the input characteristic is 0.  In the `[1]` case it can return before
+- On characteristic-zero input, msolve 0.10.1 `-g` can short-circuit when the
+  first machine-prime basis is `[1]`, returning before
   CRT/rational reconstruction while the output header still says
   `#field characteristic: 0`.  Therefore a char-0-header `[1]` file is
   first-prime trace evidence, not a rational Gröbner basis or a certificate
   `1 = sum h_i f_i`.  Finitely many modular unit ideals alone do not imply a
   unit ideal over Q without an effective bad-prime bound or an exact
   reconstructed cofactor.
+  Successful non-unit characteristic-zero runs continue through rational
+  reconstruction and retain their Q-level nonemptiness meaning within engine
+  trust; this correction does not demote those outputs.
 - This corrects the 2026-07-30--08-01 cCa ledger: chartG remains exact because
   its emitted rational system literally contains `-1`; cCa2/cCa6 have no
   internal rational certificate (cCa2 lift timed out; cCa6 lift absent).
   The campaign's own three-chart proof of subcase (2) is incomplete.  The full
   `(72,108)` exclusion is nevertheless supported by the separately replayed
   exact Helali/Suzuki artifacts in `archive/crosscheck.tgz`, conditional on the
-  faithful normalization/transcription and the exhaustive GGHV Proposition
+  faithful normalization/transcription and the exhaustive GGV-Horruitiner Proposition
   4.3 reduction.  This is not a proof of JC2.
 - Systemic inventory: 105 archived outputs have both a characteristic-zero
   header and `[1]` (96 conjE files and 9 other runs).  `CERT-UPGRADE.md` gives
@@ -3422,3 +3425,38 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   forensics). Sol's AUDIT edit stays UNCOMMITTED until the verdict.
 - This is the dual-model protocol working exactly as designed on the incoming
   coordinator's own first claim. Incoming coordinator harvests the Grok verdict.
+
+## 2026-08-23 ~16:40 ERRATUM CONFIRMED (dual-model); Sol's edits ACCEPTED; COORDINATION HANDED TO SOL
+- grok-msolve-erratum = **CONFIRMED**. Source: is_lucky_prime_ui filters
+  INPUT-coefficient divisors only (modular.h:41-60); the -g unit-ideal path
+  RETURNS THE FIRST-PRIME MODULAR BASIS before any CRT/reconstruction
+  (lifting-gb.c:775-788 is_empty + 1363-1370 early return); char-0 header is
+  HARDCODED (lifting-gb.c:1852-3). Experiment: det-hidden trap (matrix det =
+  first prime at --random-seed 0; no input coeff divisible) returns a WRONG
+  char-0 [1]; seeds 42/12345 return the correct Q-GB with p in denominators.
+  Forensics: archived cCa2 8-line output byte-indistinguishable from the false
+  surface; cCa6 char-0 .out ABSENT locally (fleet report only); 17h43m run
+  consistent with a single modular F4. VERDICT: archived char-0 [1] under -g 2
+  certifies only "reduced GB mod the first selected prime was {1}".
+- SOL'S EDITS ALL ACCEPTED (review complete): AUDIT.md erratum (now confirmed),
+  PROGRESS.md blast-radius correction (also demotes R1 ZU/UZ/Q0/l13 char-0
+  upgrades + 5/6 conjE HOLD rows to modular tier; finite-field verdicts stand;
+  chartG exact; (72,108) conditionally on external artifacts), APPROACHES.md
+  strategy correction (G2 split: G2-PSC transport vs G2-BD delay; corrected
+  arrows DIR<=>PC<=>RPMC=>KJN, A-SCALE=>UCD-A-min=>G2-BD; KJN = per-type not
+  absolute ceiling), r1_*.py runner hardening (stderr capture). All committed.
+- **TOP QUEUE (incoming coordinator = SOL):**
+  1. EXTERNAL-ARTIFACT RE-AUDIT (decides campaign-local vs FIELD-WIDE): do the
+     Helali/Suzuki char-0 verdicts (and Ishihara/Strinz/SuperMind/Guo) rest on
+     the same msolve -g path? Grok explicitly did not re-audit them.
+  2. REPAIR ROUTE for cCa2/cCa6 char-0: rational cofactor certificate
+     (Rabinowitsch lift), multi-prime with effective bad-prime bound, or an
+     independent engine (Singular/M2) char-0 GB. Same for R1 l13 reopened uses.
+  3. UPSTREAM DISCLOSURE: msolve maintainers (DC owns the relationship via his
+     segfault PR) -- DC's call on timing/framing.
+  4. PUBLIC-RECORD IMPLICATIONS (MO answer 514446 "replayed exactly" + Zenodo
+     descriptions) -- pending item 1's outcome; DC DECISION, do not act alone.
+  5. Prior queue: A1/A2 actor verification, Palomar formalization (Henon +
+     boundary identity), stage-2 integral re-emission, B=168 (funded, HELD).
+- HANDOVER COMPLETE: outgoing coordinator's loop STOPPED this tick. Sol
+  coordinates per COORDINATION.md; Fable available as lane/reviewer on request.

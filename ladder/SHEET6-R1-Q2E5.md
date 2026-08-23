@@ -1,5 +1,12 @@
 # SHEET6-R1-Q2E5.md — Adversarial review: the (1,2) E5-quartic port (§18.2) + the Q2 full-locus screen design (§19)
 
+> **Evidence correction (2026-08-23).** The Q2 l13
+> characteristic-zero-header `[1]` cited here is msolve 0.10.1's first-prime
+> basis, not a rational Gröbner basis.  The two finite-field l13 kills stand;
+> the Qbar/proof-tier upgrade and its downstream uses are open pending an exact
+> rational certificate.  This is separate from, and additional to, this
+> review's retraction of the `(1,2)` E5 port.
+
 Reviewer: Claude (adversarial pass, 2026-08-11). Status: COMPLETE.
 Scope: (i) the k1 = 1 E5 pole-edge port derived in SHEET6-R1.md §18.2 and
 implemented in cases/r1_12_sat.py (the single point of failure §18.2
@@ -26,9 +33,9 @@ Verdicts:
   systems/r1/, re-run verdict-identical).
 - Q2 design (§19): sizing gate honored mechanically; row-subset
   soundness argument verified; see §3 below.  OUTCOME: stratum-13
-  (54/84 free directions + W symbolic) killed at both primes AND in
-  CHAR 0 (GB = [1] over Q, 663 s -- PROOF-tier over Qbar, all
-  A-embeddings; cross-engine regression exact vs both mod-p builds);
+  (54/84 free directions + W symbolic) killed at both recorded primes;
+  the char-0-header `[1]` is a first-prime trace, not proof over Qbar
+  (cross-engine regression of the emitted equations against both mod-p builds still holds);
   strata 12/8 emissions banked, local msolve TIMEOUT (box01 queue);
   strata 4/1 build-gated by the 15.6 budget (measured).
 

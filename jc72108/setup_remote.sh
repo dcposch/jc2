@@ -20,17 +20,53 @@ cat > jc72108/run_probes_remote.sh <<'RUNNER'
 set -u
 MEMGB=${MEMGB:-1200}
 T=${T:-$(nproc)}
+MSOLVE_SEED=${MSOLVE_SEED:-0}
 cd "$(dirname "$0")"
+MSOLVE_BIN=$(command -v msolve)
+MSOLVE_VERSION=$(msolve --version 2>&1 | head -n 1)
 ulimit -v $((MEMGB * 1024 * 1024))
 for f in $(ls -S -r systems/*.ms); do
   base=$(basename "$f" .ms)
   o="runs/${base}.out"
+  timefile="runs/${base}.time"
+  meta="runs/${base}.meta"
   [ -s "$o" ] && continue
   echo "=== $base start $(date -u +%H:%M:%S) size=$(wc -c < "$f")"
-  /usr/bin/time -v msolve -g 2 -t "$T" -f "$f" -o "$o" 2> "runs/${base}.time" \
-    && { grep -qx '\[1\]:' "$o" && echo "=== $base EMPTY (GB=[1])" \
-         || echo "=== $base NONEMPTY-OR-OTHER"; } \
-    || echo "=== $base FAILED (see runs/${base}.time)"
+  char=$(sed -n '2p' "$f" | tr -d '[:space:]')
+  {
+    echo "utc_start=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+    echo "host=$(hostname)"
+    echo "msolve_bin=$MSOLVE_BIN"
+    echo "msolve_version=$MSOLVE_VERSION"
+    echo "input=$f"
+    echo "input_characteristic=$char"
+    echo "input_sha256=$(sha256sum "$f" | awk '{print $1}')"
+    echo "random_seed=$MSOLVE_SEED"
+    echo "command=msolve -v 2 -g 2 --random-seed $MSOLVE_SEED -t $T -f $f -o $o"
+  } > "$meta"
+  /usr/bin/time -v msolve -v 2 -g 2 --random-seed "$MSOLVE_SEED" -t "$T" -f "$f" -o "$o" 2> "$timefile"
+  status=$?
+  grep -i 'initial prime' "$timefile" >> "$meta" || true
+  echo "utc_end=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$meta"
+  echo "exit_status=$status" >> "$meta"
+  [ -s "$o" ] && echo "output_sha256=$(sha256sum "$o" | awk '{print $1}')" >> "$meta"
+  if [ "$status" -ne 0 ]; then
+    echo "=== $base FAILED (see $timefile)"
+  elif grep -qx '\[1\]:' "$o"; then
+    if [ "$char" = 0 ]; then
+      echo "=== $base FIRST-PRIME-EMPTY (NOT Q-EMPTY)"
+    else
+      echo "=== $base EMPTY over F_$char (GB=[1])"
+    fi
+  elif [ "$char" = 0 ]; then
+    if grep -q '^#length of basis:' "$o" && grep -q '^\[' "$o" && grep -q '\]:$' "$o"; then
+      echo "=== $base NONEMPTY over Qbar (reconstructed Q basis; engine-trusted)"
+    else
+      echo "=== $base NO-VERDICT (no complete basis body emitted)"
+    fi
+  else
+    echo "=== $base NONEMPTY-OR-OTHER over F_$char"
+  fi
 done
 echo "ALL DONE"
 RUNNER

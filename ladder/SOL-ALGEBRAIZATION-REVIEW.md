@@ -173,8 +173,8 @@ The banked R1 saturation layer carries line 239's clearing verbatim:
   lines 537/552/887): row 4(a_i-b)HM + 729 S_M^3 (a1-a2)^4 a_i^2
   alpha_i W_i^4 = 0.
 - r1_q2_screen.py (Q2 screen rows, lines 578/913): same 729
-  normalization (the stratum-13 char-0 GB = [1] PROOF-tier kill
-  contains these rows).
+  normalization (the stratum-13 characteristic-zero-header `[1]` trace
+  contains these rows; it is not a Q proof).
 - r1_12_sat.py phase corr (SHEET6-R1-Q2E5.md 1.5, the "corrected"
   (1,2) rows) and phase_minsat (cW = 729*7^36*144): same.
 
@@ -349,9 +349,9 @@ Artifacts: /tmp/xe5_brief.txt, /tmp/xe5_grok.out.
    correct the "E5-pinned HM" comment values in the r1_q0_sat rows.txt
    artifacts (true H_M = 58944/41561).
 3. Re-emit the 729-row systems with 243 (1-second systems; the Q2
-   stratum-13 char-0 leg at ~11 min) so the bank certifies the correct
-   ideal directly instead of via the rescale argument; verdicts are
-   expected unchanged (sec 2.2).
+   stratum-13 char-0-header leg at ~11 min) so the bank records the corrected
+   first-prime trace directly instead of via the rescale argument; an exact
+   cofactor is still required for a Q-level certificate (sec 2.2).
 4. Next decisive object remains the staged R1 ladder; a depth-5481 HP
    rerun on any FUTURE constructed saturated completion is now a
    14-min/prime commodity via this engine.

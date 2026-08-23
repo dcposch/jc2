@@ -84,6 +84,25 @@ verdict produced there is SCREENING-TIER until re-confirmed on a
 citation of a Box03 result. Rationale: our hazard ledger is calibrated
 to 0.10.1; 0.6.5 may lack fixes or carry different bugs.
 
+## Characteristic-zero `-g` caveat (2026-08-23)
+In msolve 0.10.1, a characteristic-zero `-g` run whose first machine-prime
+basis is `[1]` may take a unit-basis short circuit before CRT/rational
+reconstruction even though the output header repeats characteristic 0.
+Therefore:
+- a char-0-header `[1]` is `FIRST-PRIME-EMPTY` trace evidence, never a Q
+  verdict;
+- a successful char-0 non-unit output has continued through rational
+  reconstruction and is a Q-level nonemptiness result within engine trust;
+- finitely many modular `[1]` results do not certify characteristic-zero
+  emptiness without an effective prime bound or a reconstructed exact
+  cofactor;
+- theorem-tier emptiness requires an independently verified identity
+  `1 = sum h_i f_i` (or an equivalent exact rational certificate);
+- every hardened probe lane sets and records `--random-seed` (default 0,
+  overridable through `MSOLVE_SEED`), plus input hash, input characteristic,
+  msolve version, host, UTC start, and, when verbose output exposes it, the
+  initial prime.
+
 ## Telemetry
 - ops/lane_eta.py (INTERNAL TOOLING, UNREVIEWED): msolve -v2 lane telemetry
   reader — `python3 ops/lane_eta.py --status lane.v2log` (phase / F4 rounds /

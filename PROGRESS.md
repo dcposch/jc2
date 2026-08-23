@@ -29,6 +29,19 @@ counters via ops/tokens.py, campaign-scoped by project/cwd, all-time): Claude
 1.92B processed (95% cached); Grok 95.3M session-cumulative. Refresh weekly
 and append the summary line here.
 
+Evidence-tier correction (supersedes the 2026-08-01 cCa entry and the
+characteristic-zero parts of the 2026-08-11 R1 entry): msolve 0.10.1 `-g`
+can short-circuit a characteristic-zero unit basis and return first-prime
+`[1]` before rational reconstruction.  Thus cCa2/cCa6, the R1 ZU/UZ/Q0/l13
+upgrades, and five of the six conjE HOLD rows were not Q certificates.  chartG
+remains exact internally because its emitted ideal literally contains `-1`;
+the full `(72,108)` exclusion remains externally certificate-supported by the
+replayed Helali/Suzuki artifacts, conditional on the GGV-Horruitiner
+reduction/transcription bridge.  The R1 l13 characteristic-zero stratum and
+its Q-level downstream uses are reopened; their finite-field verdicts stand.
+Successful non-unit characteristic-zero runs still carry their reconstructed
+Q-level nonemptiness meaning within engine trust.
+
 ## 2026-08-22
 D43 program end-to-end: stage-1 extended operator banked (level 42, full gate
 suite), a false-FAIL traced to a checker bug (proportionality at lambda=0),

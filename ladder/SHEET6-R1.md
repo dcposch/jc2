@@ -1,5 +1,17 @@
 # SHEET6-R1 — Redesigned R1 Experiment (Coefficient-Level Test of the Two-Pole Template)
 
+> **SUPERSEDING EVIDENCE ERRATUM (2026-08-23).** Every msolve 0.10.1
+> characteristic-zero `-g` output cited below as `GB=[1]` printed the basis at
+> the first machine prime; it is not a rational Gröbner basis or cofactor
+> certificate.  Accordingly the ZU/UZ leaf upgrades (§§15.3, 15.7), Q0
+> family/control upgrade (§18.1), and Q2 l13 upgrade (§19.2) are
+> modular/trace-grade, not proof-tier over Qbar.  The old `(1,2)` kill (§18.2)
+> was already retracted for an independent level-slip.  Exact point and
+> identity certificates, finite-field verdicts, and the exact Direction-B
+> zero-tail theorem are unaffected.  The l13 characteristic-zero stratum and
+> all Q-level downstream uses of it are open pending an exact rational
+> certificate.
+
 Status: FULL-DEGREE TERMINAL CORE BUILT, GUARDED, AND RUN LOCALLY
 2026-08-09 (sec 8; supersedes the retracted sec 6): the exact 98-row
 minimal-branch G_m core (C1-Gm proven vacuous; 10 constant rows carry
@@ -1708,14 +1720,15 @@ runs/leaf12_*.out, runs/r1_12leaves_calibrate.log):
 | leaf | wfree p=105337 | wfree p=105673 | char 0 |
 |---|---|---|---|
 | ZZ | GB!=[1] NONEMPTY 188 s / 14.8 GB (concordant) | SKIPPED by policy | NOT RUN by policy: NONEMPTY proven by the exact origin point (15.2 cover iii'), char-0-exact |
-| ZU | GB=[1] EMPTY 1 s | GB=[1] EMPTY 1 s | GB=[1] EMPTY 77 s / 7.3 GB -- PROVEN EMPTY over Qbar |
+| ZU | GB=[1] EMPTY 1 s | GB=[1] EMPTY 1 s | first-prime `[1]` trace 77 s / 7.3 GB -- **not a Qbar proof** |
 | UZ | GB=[1] EMPTY 1 s | GB=[1] EMPTY 1 s | TIMEOUT 900 s / 13.5 GB -- stays evidence-tier |
 | UU | NONEMPTY 1 s | NONEMPTY 1 s | NONEMPTY: 121-elt reduced GB over Q, 1 s |
 
-CHAR-0 UPGRADE vs the minimal branch: leaf12_ZU char-0 GB = [1] is a
-PROOF of ZU emptiness over Qbar (the minimal branch's ZU/UZ stayed
-evidence-tier, 13.6); with ZZ's exact origin point and UU's 121-elt
-GB over Q, three of the four (1,2) leaves are decided in char 0.
+CORRECTED EVIDENCE TIER: the leaf12_ZU char-0-header `[1]` is a
+first-prime trace, not a proof of ZU emptiness over Qbar.  ZZ still has an
+exact origin point; no characteristic-zero conclusion is drawn from the
+printed 121-element or unit bases without an independently exact witness or
+certificate.
 
 MULTI-PRIME SWEEP (13.6 protocol, good_primes walk; same 6 fresh
 primes 109537, 165313, 177409, 188833, 200257, 225961; ~1 s each):
@@ -1874,19 +1887,17 @@ slot >= 42 tails):
     discriminator = R2-R5 on that locus.  No inflation beyond this
     table.
 
-### 15.7 Bonus: minimal-branch ZU/UZ upgraded to char-0 PROOF
+### 15.7 Historical ZU/UZ char-0 claim (demoted to first-prime trace)
 ### + deliverables/state
 
-Prompted by the (1,2) ZU char-0 result (15.3), the MINIMAL branch's
+Prompted by the (1,2) ZU char-0-header result (15.3), the MINIMAL branch's
 banked leaves were rerun in char 0 (runs/leaf_{ZU,UZ}.ms.char0.out,
 ledger runs/r1_leaves_calibrate.log): leaf_ZU.ms GB = [1] EMPTY,
-leaf_UZ.ms GB = [1] EMPTY, ~1 s / <2 MB each.  This UPGRADES the sec
-13.3/13.6 reading ("ZU/UZ char-0 emptiness stays evidence-tier only")
-to PROOF over Qbar: ALL FOUR minimal-branch leaves are now decided in
-char 0 (ZZ exact witness; UU 121-elt GB over Q + explicit points;
-ZU/UZ GB = [1]).  The minimal-branch composite of 13.3 is now fully
-char-0-decided: every char-0 core point has W1, W2 both zero or both
-nonzero, and the intended-chart content is exactly E.
+leaf_UZ.ms GB = [1] EMPTY, ~1 s / <2 MB each.  **2026-08-23
+correction:** both are first-machine-prime traces, so the former
+evidence-tier reading remains in force.  The mixed leaves are not proved
+empty over Qbar and the minimal-branch composite is not fully
+characteristic-zero-decided by these runs.
 
 DELIVERABLES (this section): engine cases/r1_12_decompose.py
 (ADDITIVE; phases stats | build | emit | guards | cover | calibrate |
@@ -2171,20 +2182,17 @@ primes).
 | r1_q0_sat_p105337.ms (58 eqs, 39 vars) | **GB = [1] EMPTY**, 1 s |
 | r1_q0_sat_p105673.ms | **GB = [1] EMPTY**, 1 s |
 | r1_q0_fam_p105337.ms / _p105673.ms (68 eqs, 50 vars) | **GB = [1] EMPTY**, 1 s each |
-| r1_q0_fam.ms **CHAR 0** | **GB = [1] EMPTY**, 1 s |
+| r1_q0_fam.ms **CHAR-0 HEADER** | first-prime **GB = [1]** trace, 1 s; no Q certificate |
 | ctlA = relaxed family (no tie/sat rows), char 0 | GB != [1] NONEMPTY (the relaxed survival is real, family-wide) |
-| ctlB = saturation only (no E5/E6 rows), char 0 | GB = [1] EMPTY -- **s1F == 0 on the ENTIRE family variety in char 0** (16.3's structural finding upgraded from 2 primes to proof) |
+| ctlB = saturation only (no E5/E6 rows), char-0 header | first-prime GB = [1] trace -- supports the finite-field finding only; **no Q-level forcing certificate** |
 | r1_minsat.ms = leaf_UU + E5(HM) + HM*tH-1, char 0 | GB != [1] NONEMPTY -- core-level saturation does NOT kill the minimal branch (the 13.1 consistency identity is real) |
 
-VERDICT (minimal branch, sec-1 + 15.6 semantics with the saturation
-standing rule): the intended-locus witness family admits NO
-template-conform depth-84 extension -- **KILLED at the F_s quotient
-tier, in char 0 (GB = [1] over Q => empty over Qbar => PROOF-tier)
-and at both banked primes**, for EVERY witness in the family (all
-embeddings/4th-root branches; Q1 discharged by the family object).
-The kill mechanism is exactly the review's: the quotient rows force
-s1F = 0 (ctlB, now char-0), while E5+E6 force s1F != 0 at any w != 0
-point (witness-family-wide).  SCOPE: this is the free-x = 0 section
+CORRECTED VERDICT (minimal branch, sec-1 + 15.6 semantics with the saturation
+standing rule): the intended-locus witness family is killed at the F_s
+quotient tier at both banked primes.  The characteristic-zero-header `[1]`
+runs do not upgrade that result over Qbar.  The modular mechanism is exactly
+the review's: the quotient rows force s1F = 0 over the recorded finite fields,
+while E5+E6 force s1F != 0 at any w != 0 point.  SCOPE: this is the free-x = 0 section
 of the UU core (the pre-registered Q0/Q1 object).  Q2 -- the
 quotient screen over the FULL UU locus (free-x directions open) --
 remains the residual object for an unconditional branch kill at this
@@ -2216,15 +2224,14 @@ residual) and the E5-12 rows are JOINTLY inconsistent at ANY s1 != 0
 
 | run (r1_12sat*) | verdict |
 |---|---|
-| r1_12sat.ms = leaf12_UU + E5-12 + s1*t12-1, **CHAR 0** | **GB = [1] EMPTY**, 1 s |
+| r1_12sat.ms = leaf12_UU + E5-12 + s1*t12-1, **CHAR-0 HEADER** | first-prime **GB = [1]** trace, 1 s; no Q certificate |
 | r1_12sat_p105337.ms / _p105673.ms (wfree) | **GB = [1] EMPTY**, 1 s each |
 | r1_12sat_ctl_p*.ms (saturation, NO tie rows) | GB != [1] NONEMPTY both primes (the kill is the TIE, not the chart/saturation) |
 
-VERDICT ((1,2) branch): under the honest (saturated + tie-carrying)
-reading, **the (1,2) branch DIES AT ITS TERMINAL CORE, char-0
-proof-tier** (GB = [1] over Q on the UU leaf; ZU/UZ already
-char-0-proven empty (15.7/15.3); ZZ is the off-locus relaxation
-stratum) -- no depth-84 tier needed.  CONTINGENCY, stated honestly:
+HISTORICAL VERDICT ((1,2) branch): this claimed a characteristic-zero
+terminal-core kill from the printed `[1]` and the ZU/UZ traces.  It has no
+rational certificate and, more decisively, was retracted in §19.3 because the
+E5-12 transport premise has a level slip.  CONTINGENCY as originally stated:
 the kill rests on the E5-12 transport port derived THIS session
 (unreviewed); it is validated against the review-confirmed minimal
 chain at every shared step, but an adversarial check of the k1 = 1
@@ -2480,8 +2487,8 @@ terms) all wall out, so the l12/l13 GB cliff is NOT a row-mass
 artifact: the obstruction is the opened slot-8..12 directions
 themselves.  Subset probes sub16/23/30 are emitted at both primes
 (systems/r1) for the box01 queue.  No verdict claim at l8 beyond ctlA
-NONEMPTY (explicit point); the l13 PROOF-TIER kill stands as the
-deepest resolved stratum.
+NONEMPTY (explicit point); l13 is the deepest stratum resolved at the
+recorded finite fields, while its characteristic-zero status is open.
 
 FRONTIER MEASUREMENT (l12 = stratum with uf24 + the slot-12
 directions added; emissions r1_q2_l12_p*.ms banked, anchors PASS):
@@ -2517,7 +2524,7 @@ strata queue is now l12/l8/l4 emitted + l1 build-gated.
 
 | branch | core level (saturated) | depth-84 tier | status |
 |---|---|---|---|
-| minimal (3,4) | survives (r1_minsat NONEMPTY; 13.1 identity) | witness family DEAD char 0 + 2p (18.1); UU-chart STRATUM slots>=13 (54/84 free dirs + W symbolic) DEAD at both primes, s1F==0 forced (ctlB) both primes; char-0 stratum object banked + cross-engine-verified (run: see ledger) | DEAD on every UU-chart locus so far reachable; residual = strata 12/8/4 (emitted, box01) and 1 (build-gated) |
+| minimal (3,4) | survives (r1_minsat NONEMPTY; 13.1 identity) | witness-family and UU-chart slots>=13 kills at the recorded primes; the char-0-header family/l13 traces are not Q certificates | modularly dead on every UU-chart locus so far reached; characteristic-zero status open; residual = strata 12/8/4 (emitted, box01) and 1 (build-gated) |
 | (1,2) | **ALIVE at core** (19.3 retraction; r1_12sat_corr NONEMPTY char 0 + 2p) | not built (its own per-branch ladder; the k1=1 s1-tie is a series-tier row at pole level 4/42) | 18.2 kill RETRACTED; obligations = 15.3 list |
 | (2,3) | chain core queued (sec 11) | -- | untouched; 18.3-style saturation advisory binds |
 | (2,5) | core NONEMPTY (sec 11) | ext decider on box01 | advisory 18.3 unchanged |
@@ -2526,7 +2533,8 @@ The residue-A two-pole exclusion now rests on: the minimal branch's
 deep-strata Q2 residue (box01 queue) + its R2-R5/J ladder on anything
 that survives; the REOPENED (1,2) branch's own series ladder; and the
 two chain deciders.  Standing rules in force: sec-17 saturation, the
-19.2 ledger-hygiene rule (0-byte .out != NONEMPTY), and the Q2E5
+  19.2 ledger-hygiene rule (0-byte .out != NONEMPTY), the 2026-08-23
+  evidence correction (char-0-header `-g` output is first-prime trace), and the Q2E5
 lesson -- St 3.9(ii) transports require the 3.9(i) count equality,
 checked per member per edge.  NEXT BUILD (banked directive): the
 (2,3)/(2,5) chain gates, built SATURATED FROM BIRTH per the sec-17/18
@@ -2543,24 +2551,18 @@ saturation, W-Laurent cleared per row.  Its rows REDUCE TO THE BANKED
 MOD-P BUILDS EXACTLY at both primes (cross-engine regression, exact
 ring vs the independent mod-p fold -- the strongest anchor in the Q2
 net).  Its msolve verdict line appends to runs/r1_q2_runs.log
-(GB = [1] here would upgrade the stratum-13 kill to PROOF over Qbar,
-subsuming both p-screens and every A-embedding).
+  (an exact rational cofactor here would upgrade the stratum-13 kill to a
+  proof over Qbar, subsuming both p-screens and every A-embedding; printed
+  `-g [1]` alone does not).
 
-**CHAR-0 VERDICT (landed in-session): r1_q2_l13.ms GB = [1] EMPTY,
-663 s / 6.8 GB (runs/r1_q2_l13.ms.out).**  Empty over Q => empty over
-Qbar, every A-embedding and 4th-root branch at once: the stratum-13
-kill is **PROOF-TIER** -- the minimal branch admits NO template-conform
-depth-84 extension anywhere on the UU chart with free dead-stretch
-support confined to slots >= 13 (54 of 84 directions open, W-pair
-fully symbolic on E, 36-tail + ext + fresh-tail budget free).  This
-subsumes 18.1's witness-family kill (free x = 0 c= the stratum) and
-upgrades it from the free-x = 0 section to a 54-dimensional-family
-statement.  Residual for the branch at this tier: free support
-touching slots < 13 -- strata 12/8/4 emitted + banked for box01 (l4
-built in-session, 43.5 MB, anchors PASS), stratum 1 build-gated (19.2
-sizing).  §19.0 partial-branch semantics with L = 13 (proof-grade):
-every depth-84 survivor on the UU chart carries a NONZERO free
-dead-stretch coefficient at some slot < 13; the 1200-s local GB
+**CORRECTED CHAR-0 EVIDENCE TIER:** `r1_q2_l13.ms` produced a `[1]`
+first-prime trace in 663 s / 6.8 GB (`jc72108/runs/r1_q2_l13.ms.out`),
+not a rational unit-ideal certificate.  Together with the two explicit
+p-runs it gives strong modular evidence that the 54-direction stratum dies,
+uniformly across the encoded embeddings, but the Qbar stratum remains open.
+Consequently the claim that every characteristic-zero survivor carries a
+nonzero free coefficient below slot 13 is withdrawn; that implication is
+valid only over the recorded finite fields.  The 1200-s local GB
 budget resolves nothing below that cliff (l12/l8/l4 all wall out at
 both primes, incl. kill-sound row subsets), so the F_s-route
 exclusion CLAIM stays at the stratum, not the full chart.
@@ -2601,9 +2603,9 @@ restriction semantics the parent uses), d_k != 0 via Rabinowitsch row
 u<d_k>*d_k - 1 adjoined, d_{k+1}..d_13 + all slot->=13 content OPEN.
 Zero leaf (all 13 = 0): IDENTICAL to the banked l13 object --
 verified EXACTLY (dict-equality of quotient rows AND defining rows
-against build_p*_l13.pkl at BOTH primes) -- whose kill is PROOF-TIER
-(char-0 GB=[1] + both primes, 19.2): the base of the cascade needs no
-run.  Per-leaf masses (quotient-row terms surviving the prefix zero,
+against build_p*_l13.pkl at BOTH primes) -- whose kill is established at
+those same primes, not over Qbar (19.2).  The base of the finite-field
+cascade needs no additional run.  Per-leaf masses (quotient-row terms surviving the prefix zero,
 p=105337): 34,739 / 29,258 / 24,058 / 21,108 / 17,912 / 15,248 /
 13,356 / 11,834 / 10,935 / 9,747 / 8,848 / 6,815 / 5,878 (l13 =
 5,139).  Emissions: cases/r1_q2_l8_leaf{k}_p{105337,105673}.ms (main,
@@ -2617,7 +2619,7 @@ obligation there; value-preservation pinned by guard B').
 PRE-REGISTERED INTERPRETATION (fixed BEFORE any leaf run).  COVER:
 V(l8 stratum) = V(l13) u U_k pi(V(leaf_k)), pairwise disjoint by the
 boolean tautology on the 13-tuple (d_1..d_13): each point either has
-all 13 zero (-> the l13 component, proof-dead) or a unique least
+all 13 zero (-> the l13 component, dead at the recorded primes) or a unique least
 nonzero index k (-> leaf k; u = d_k^{-1} exists uniquely, field);
 zero-side substitution is exact closed-pattern restriction (free
 polynomial coordinates -- no quadric forcing subtlety, SIMPLER than
@@ -2629,7 +2631,7 @@ stratum by forgetting u<d_k>.  PROGRESSIVE SEMANTICS (ascending-slot
 order): leaves 1..3 EMPTY => every l8 point has all slot-8 directions
 zero (stratum reduces to l9); + leaves 4..5 => l10; + 6..8 => l11;
 + 9..10 => l12; + 11..13 => l13 => with the banked l13 kill the
-ENTIRE l8 stratum dies at p.  Each verdict prefix is a bankable
+ENTIRE l8 stratum dies at that same prime.  Each verdict prefix is a bankable
 partial statement in the 19.0 lcut semantics.  NONEMPTY at some leaf
 = the relaxed screen survives with its first nonzero opened direction
 pinned at d_k (characterize; NOT a branch survival claim -- band rows
@@ -2700,7 +2702,7 @@ of an opened direction, proxy = log10 C(n+D,D) = Macaulay frame at
 the input degree):
 | object | n | D | powOPEN | proxy |
 |---|---|---|---|---|
-| l13 (1 s, <1 GB, PROOF-TIER dead) | 146 | 11 | 0 | 16.4 |
+| l13 (1 s, <1 GB, dead at two recorded primes; Qbar open) | 146 | 11 | 0 | 16.4 |
 | leaf13 = l12-chart-3 (>25 GB) | 154 | 11 | 5 | 16.6 |
 | leaf12 = l12-chart-2 (>25 GB) | 155 | 11 | 5 | 16.7 |
 | leaf11 = l12-chart-1 (>25 GB) | 156 | 11 | 5 | 16.7 |
@@ -2738,8 +2740,8 @@ an opened slot-12 partner) -- Sol's object description is exact.
 banked l12 build DICT-EXACT (rows AND defs, BOTH primes).  Therefore
 Sol's three charts ALREADY EXIST inside the 19.5 cascade: they ARE
 leaf11 (uf24 != 0), leaf12 (uf24 = 0, bg42_24 != 0), leaf13 (both
-zero, bg21_24 != 0), with origin chart = l13 discharged by the
-char-0 certificate -- emitted, guard-PASSED (19.5 table covers all
+zero, bg21_24 != 0), with origin chart = l13 discharged only at the
+recorded finite fields -- emitted, guard-PASSED (19.5 table covers all
 6 files), md5-verified on Box02.  Field pricing corrects Sol's
 1-2-day estimate: all six lanes died rc=139 at the 25 GB fence, so
 the charts are >25 GB objects; they remain the LIGHTEST members of
@@ -2856,8 +2858,10 @@ anchor all tied together.
 
 VERDICT SEMANTICS (sec 1 + sec 17 saturation rule; no inflation):
 - GB = [1] at BOTH primes on r1_Xsat_p* => the branch DIES at its
-  terminal core mod p (strong evidence); char-0 [1] on r1_Xsat.ms =>
-  PROOF-tier (empty over Qbar) -- the honest reading the unsaturated
+  terminal core mod p (strong evidence).  On `r1_Xsat.ms`, an msolve `-g`
+  `[1]` with a characteristic-zero header is only `FIRST-PRIME-EMPTY`, not a
+  Qbar verdict; PROOF-tier requires a verified rational Gröbner basis or an
+  exact identity `1 = sum h_i f_i` -- the honest reading the unsaturated
   sec-11 (2,5) NONEMPTY could never license.  ctlA must be NONEMPTY
   first, else emission error: HALT, no verdict.
 - NONEMPTY => characterize (GB size; dim/degeneracy strata if cheap;

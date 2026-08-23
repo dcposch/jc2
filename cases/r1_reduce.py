@@ -753,8 +753,8 @@ def run_msolve(path, out, timeout=1200):
     import subprocess
     t0 = time.time()
     try:
-        subprocess.run(["msolve", "-g", "2", "-f", path, "-o", out],
-                       timeout=timeout, capture_output=True)
+        proc = subprocess.run(["msolve", "-g", "2", "-f", path, "-o", out],
+                              timeout=timeout, capture_output=True)
         wall = time.time() - t0
     except subprocess.TimeoutExpired:
         with open(out, "w") as f:
@@ -762,8 +762,20 @@ def run_msolve(path, out, timeout=1200):
         return "TIMEOUT", timeout
     txt = open(out).read() if os.path.exists(out) else ""
     body = [l for l in txt.splitlines() if l and not l.startswith("#")]
-    verdict = "GB=[1] EMPTY" if any(l.strip().rstrip(":") == "[1]"
-                                    for l in body) else "GB!=[1] NONEMPTY"
+    with open(path) as f:
+        f.readline()
+        char = int(f.readline().strip())
+    is_unit = any(l.strip().rstrip(":") == "[1]" for l in body)
+    complete_basis = (proc.returncode == 0 and
+                      any(l.strip().endswith("]:") for l in body))
+    if not complete_basis:
+        return "NO-VERDICT (solver failure or no complete basis body)", wall
+    if char == 0:
+        verdict = ("FIRST-PRIME-EMPTY TRACE (NOT Q-EMPTY)" if is_unit else
+                   "GB!=[1] NONEMPTY over Qbar (reconstructed Q basis; engine-trusted)")
+    else:
+        verdict = ("GB=[1] EMPTY over F_%d" % char if is_unit else
+                   "GB!=[1] NONEMPTY over algebraic closure of F_%d" % char)
     return verdict, wall
 
 def phase_sweep(n=10, skip=0):

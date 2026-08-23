@@ -1,5 +1,31 @@
 # Soundness audit — emptiness of GGV Prop 4.3, subcase (2) (the (8,28) family)
 
+> **SUPERSEDING EVIDENCE ERRATUM (2026-08-23).** On a characteristic-zero
+> input, msolve 0.10.1's `-g` **unit-basis short circuit** can print `[1]`
+> from the first machine-prime computation and return before CRT or rational
+> reconstruction, while still printing
+> `#field characteristic: 0`.  Consequently the archived characteristic-zero
+> `[1]` outputs are modular trace evidence, not Gröbner bases or membership
+> certificates over Q.  This supersedes the original Claim 6 inventory and
+> every later proof-tier reading of the same output surface in this file.
+> The files under `dist/jc72108-theory-bundle-v1/` are an immutable historical
+> snapshot and still contain the superseded wording; they must be regenerated
+> from the corrected canonical sources before any further distribution.
+>
+> The generic chart `chartG` remains an exact internal theorem because
+> `jc72108/systems/open_8_28_c2_chartG.q.ms` itself contains the generator
+> `-1`; its
+> one-term certificate is independent of msolve.  No rational cofactor is
+> archived for `cCa2` or `cCa6`, so the campaign's own three-stratum
+> characteristic-zero proof is incomplete.  Finitely many modular unit
+> ideals do not repair that gap without an effective bad-prime bound or a
+> reconstructed rational certificate.  Separately, the full `(72,108)`
+> exclusion retains exact characteristic-zero support from the independently
+> replayed Helali and Suzuki artifacts documented in `jc72108/CROSSCHECK.md`
+> and retained in `archive/crosscheck.tgz`; inference from those explicit
+> systems to the degree family remains conditional on the GGV-Horruitiner reduction,
+> normalization, and transcription bridge.
+
 Audited claim (2026-08-01): **Subcase (2) of Proposition 4.3 of
 Guccione–Guccione–Valqui/Horruitiner (arXiv:2204.14178) — the (8,28) family,
 (deg P, deg Q) = (108,72), reduced to [P,Q] = x^2 with prescribed Newton
@@ -15,19 +41,20 @@ Prop 4.3 s2 statement                                  [trusted-external]
   → two_chart decomposition          (lib/chartelim.py two_chart)
       V(core) = V(chartG) ∪ V(core + prod(pivots))
   → kill-split of the complement     → cCa2 (a2:=0) ∪ cCa6 (a6:=0)
-  → per-stratum emptiness:
-      chartG: symbolic −1 derivation + msolve GB=[1] over Q + 3 primes
-      cCa2:   msolve GB=[1] over Q + 3 primes
-      cCa6:   msolve GB=[1] over Q + 2 primes (3rd prime in flight)
+  → per-stratum evidence:
+      chartG: exact symbolic −1 derivation + modular corroboration
+      cCa2:   first-prime/mod-p [1] traces; no internal Q certificate
+      cCa6:   first-prime/mod-p [1] reports; no internal Q certificate
 ```
 
 Composition: a solution over any char-0 field K is a solution over the
 algebraic closure K̄ (claim 1); it can be torus-normalized within K̄ (claim 2);
 the normalized solution survives to the Cascade3 core (claim 3) and hence lies
-in one of the three strata (claims 4, 5); each stratum carries a Q-coefficient
-certificate 1 = Σ h_i f_i (claims 6, 7), which evaluated at the solution gives
-1 = 0. Contradiction. Subcase (1) is **not** covered by this audit; it is the
-remaining half of the (72,108) family.
+in one of the three strata (claims 4, 5).  The intended final step requires a
+Q-coefficient certificate `1 = Σ h_i f_i` on every stratum.  The internal
+record supplies that step only for `chartG`, so this proof skeleton stops at
+`cCa2`/`cCa6`.  The separate external exact-certificate route is summarized in
+the erratum above.  Subcase (1) is **not** covered by this internal audit.
 
 Verification-status legend:
 - **proved-in-code** — the property is enforced by an assertion/test in the repo.
@@ -252,51 +279,56 @@ asserted in ../notes.md (2026-07-31) and follows from claims 4 + 5.
 
 ---
 
-## Claim 6 — What msolve GB = [1] certifies, per stratum
+## Claim 6 — What the archived msolve `[1]` output actually certifies
 
-**Statement.** msolve reporting reduced Gröbner basis = {1} over Q for a
-stratum system certifies (conditional on msolve correctness) that
-1 = Σ h_i f_i for the stratum's generators f_i with h_i ∈ Q[vars]; hence the
-stratum has no points in **any** nonzero Q-algebra — in particular over
-every field of characteristic 0. Mod-p verdicts are independent
-corroboration, not part of the char-0 certificate.
+**Correct algebraic criterion.** If a rational Gröbner basis calculation or
+an independently verified identity really establishes `1 ∈ I ⊂ Q[vars]`,
+then `1 = Σ h_i f_i` for rational cofactors and the stratum has no point over
+any characteristic-zero field.  The localization equations in these systems
+make ordinary ideal membership the right criterion.
 
-**Why it holds.** 1 ∈ I ⟺ reduced GB = {1} (Buchberger); a common zero in
-any char-0 field would evaluate the cofactor identity to 1 = 0. Emptiness
-over C (Nullstellensatz) is the special case. Note the localization is
-internal: corner/pivot invertibility is imposed by polynomial equations
-(c·ic − 1, u·coeff − 1), so plain ideal triviality is the right test — no
-saturation-aware reasoning is delegated to msolve.
+**The archived output does not establish that premise.** In msolve 0.10.1,
+the characteristic-zero `-g` path starts at a machine prime.  If that modular
+basis is `[1]`, the unit-basis branch can return before multimodular
+reconstruction; the printer nevertheless repeats the input characteristic as
+zero.  Thus a complete header followed by `[1]:` authenticates a completed
+first-prime calculation, not a basis over Q.  This warning is specific to the
+unit short circuit: a successful non-unit characteristic-zero run continues
+through CRT/rational reconstruction, and its printed non-unit basis remains a
+Q-level result within the ordinary trust placed in the engine.
 
-**Verdict inventory** (runs/ + fleet logs per ../notes.md 2026-07-31 and
-2026-08-01; all verdicts are authenticated full msolve headers: field char,
-complete variable order, "length of basis: 1 element"):
+**Corrected inventory:**
 
-| stratum | over Q | mod p (65521 / 1048573 / 2147483629) | local artifacts |
+| stratum | archived `-g` trace | exact internal Q certificate | modular corroboration |
 |---|---|---|---|
-| chartG (27 vars) | [1] | [1] / [1] / [1] | runs/open_8_28_c2_chartG.q.out, .p65521.out |
-| cCa2 | [1] | [1] / [1] / [1] | runs/open_8_28_c2_cCa2.q.out, .p65521.out |
-| cCa6 | [1] (17h43m, 761 GB peak) | [1] / [1] / running | none yet (fleet only; local .p65521.out is 0 bytes) |
+| chartG (27 vars) | char-0 header + first-prime `[1]` | **YES:** literal generator `-1`, one-term cofactor | `[1]` at the recorded primes |
+| cCa2 | char-0 header + first-prime `[1]` | **NO:** Singular lift timed out; `jc72108/runs/cCa2_lift.txt` is empty | `[1]` at the recorded primes |
+| cCa6 | historical fleet report of the same output surface; no local Q output | **NO:** lift not attempted/completed | historical multi-prime `[1]` reports; local p-output is not archived |
 
-**Caveats.**
-- The three primes rule out "lucky-prime" artifacts and cross-check the
-  char-0 lane, but all runs used the *same engine* (msolve). No independent
-  GB engine has confirmed the open-case strata (Singular ran only the lift
-  attempts, claim 8).
-- Mod-p emission path: `leaf_to_msolve` (lib/chartelim.py:172-208) clears
-  denominators per equation but — unlike `Cascade.write_msolve`
-  (lib/reduce.py:152, which asserts no cleared coefficient vanishes mod p) —
-  has **no mod-p vanishing guard**. If p divided a cleared coefficient the
-  mod-p system would be silently weakened. This cannot affect the char-0
-  certificate; it only (mildly) weakens the corroboration lanes. No check
-  that the three primes avoid all denominators/numerators has been run →
-  obligation.
+The cCa2 and chartG `.q.out` files contain only the eight-line header and
+`[1]:`; they contain neither a rational basis reconstruction nor cofactors.
+No cCa6 rational output is present locally.
 
-**Status.** Certificate semantics: pen-and-paper (standard). Verdicts:
-machine-produced, trusted-external w.r.t. msolve; multi-prime + two-machine
-agreement (README.md) is the current defense in depth. Fleet verdict files
-for cCa6 and the third-prime runs are not yet archived in runs/ →
-obligation.
+**Why several primes still are not a proof.** A characteristic-zero system
+can become the unit ideal at finitely many exceptional primes.  For example,
+`(p_1 p_2 p_3 x - 1)` has a rational zero but reduces to the unit ideal at
+each `p_i`.  Therefore two, three, or any other fixed finite number of
+modular `[1]` verdicts is corroborating evidence only unless their size or
+product exceeds a proved effective bad-prime bound, or the modular data are
+reconstructed and verified as an exact rational certificate.  The bounds
+calculated in `jc72108/CERT-UPGRADE.md` put the banked primes far below such a
+threshold.
+
+**Mod-p caveat.** The historical `leaf_to_msolve` path also lacked a guard
+against coefficient loss during per-equation denominator clearing.  Later
+reduced re-emissions strengthen the modular evidence but cannot promote it to
+characteristic zero.
+
+**Status.** `chartG` is theorem-grade internally.  `cCa2` and `cCa6` are
+modular/trace-grade internally.  Exact characteristic-zero exclusion of the
+full external case-2 coefficient system is supplied separately by the Helali
+replay in `jc72108/CROSSCHECK.md`; it is not a cofactor certificate for these
+two internal chart ideals.
 
 ---
 
@@ -349,19 +381,18 @@ Everything above reduces the headline claim to the following trusted inputs:
    version of 1401.1784 omits Cor. 7.12 (Heitmann JPAA 64 (1990) Thm 2.24
    covers it independently) — see ../plan-72-108.md "Risks"/"Phase 0".
    Exact arXiv versions must be pinned in any writeup.
-2. **msolve correctness** (F4 + char-0 tracing + [1] reporting), version(s)
-   as installed on the local box, jc-b, and ultramem-1. Mitigations in
-   place: 2-3 primes per stratum, two machines/builds agreeing, authenticated
-   headers. Not yet mitigated: no second GB engine on the open strata.
+2. **msolve correctness for the modular screens.** The recorded `[1]`
+   verdicts are first-prime/mod-p evidence.  Agreement at 2-3 primes and on
+   two machines mitigates implementation accidents but does not turn those
+   screens into a characteristic-zero certificate.
 3. **Steps still lacking machine-checkable certificates:**
    - Cofactor certificates 1 = Σ h_i f_i: **chartG — obtained** (trivial
      1-term lift, systems/open_8_28_c2_chartG.lift.sing / chartG_culprit.sing);
      **cCa2 — Singular lift(I,1) TIMED OUT** (runs/cCa2_lift.txt is empty;
      input systems/open_8_28_c2_cCa2.lift.sing); **cCa6 — lift not
-     attempted**. Until cCa2/cCa6 lifts (or an equivalent certificate,
-     e.g. msolve's own cofactors) exist and are re-verified by the planned
-     independent FLINT/Nemo checker, those two strata rest on trusting
-     msolve.
+     attempted**. Until cCa2/cCa6 lifts (or an equivalent reconstructed
+     certificate) exist and are re-verified by an independent exact checker,
+     those two internal strata have no characteristic-zero proof.
    - Cascade3 / two_chart / kill-split correctness: mathematically argued
      (claims 3-5) and numerically audited, but the audits are
      session-transcript-only and there is no formal write-down and no
@@ -373,6 +404,17 @@ Everything above reduces the headline claim to the following trusted inputs:
    convention question (settled by inclusion), and the bracket sign
    convention (settled by negation).
 
+5. **Separate external completion.** `jc72108/CROSSCHECK.md` records exact
+   Helali and Suzuki replays for both Proposition-4.3 subcases, with the
+   archived bundles retained in `archive/crosscheck.tgz`.  Those certificates
+   preserve the conditional `(72,108)` exclusion without using the internal
+   cCa2/cCa6 traces.  Their perimeter is the faithful normalization and
+   transcription of the explicit coefficient systems and the correctness and
+   exhaustiveness of the upstream GGV-Horruitiner Proposition-4.3 reduction;
+   the lower
+   bound 125 additionally uses the upstream enumeration saying this is the
+   sole remaining family below 125.
+
 ---
 
 ## Remaining obligations before any public claim
@@ -383,16 +425,18 @@ Everything above reduces the headline claim to the following trusted inputs:
 - [ ] **Write the standalone −1 lemma** for chartG: identify equation #3's
       bracket position, lay out the substitution chain, state the excluded
       denominator primes (upgrades chartG to paper-grade).
-- [ ] **Certificates for cCa2 and cCa6**: rerun cCa2 lift with more
+- [ ] **Certificates for cCa2 and cCa6, if a self-contained internal proof is
+      still desired**: rerun cCa2 lift with more
       time/memory or extract cofactors by other means; attempt cCa6 lift;
       then verify all three certificates with the independent FLINT/Nemo
       checker (../plan-72-108.md Phase 4).
 - [ ] **Second GB engine** (Singular/Macaulay2/Groebner.jl) reproducing
       [1] at one prime for each stratum — removes single-engine risk even
       before lifts land.
-- [ ] **Archive fleet artifacts** into runs/: cCa6 Q-run and p-run outputs,
-      third-prime outputs, with full headers, plus msolve version strings
-      and host info.
+- [ ] **Archive fleet trace artifacts** into runs/: cCa6 first-prime and p-run
+      outputs, third-prime outputs, with full headers, initial-prime logs,
+      input hashes, random seeds, msolve versions, and host info.  Do not label
+      a characteristic-zero-header `-g` output as a Q certificate.
 - [ ] **Prime-hygiene check**: verify no cleared numerator/denominator in
       any emitted stratum system vanishes mod 65521 / 1048573 / 2147483629;
       add the missing guard to `leaf_to_msolve`.
@@ -490,18 +534,25 @@ sheet6-engine systems: zero hits (exact-arithmetic or char-0 lanes).
 
 ### Cross-reference: does ANY accepted campaign verdict rest on these?
 
+This subsection audits the separate integer-token/parser hazard only.  Its
+"clean" labels do **not** authenticate characteristic-zero `[1]` output; the
+2026-08-23 superseding erratum applies independently.
+
 **VERDICT: NO accepted campaign verdict rests on a corrupted input.
 Contaminated-verdict count = 0.** Per relied-upon verdict class:
 
-1. **(72,108) subcase (2) — the claim-6 inventory.** The char-0
-   certificates (chartG.q, cCa2.q, cCa6.q = the actual soundness
-   chain) are char-0 files: hazard inapplicable. The mod-p
+1. **(72,108) subcase (2) — the claim-6 inventory.** The char-0-header
+   files are outside this parser hazard, but only `chartG` has an internal
+   exact certificate; cCa2/cCa6 are first-prime traces. The mod-p
    corroboration lanes at p=65521/1048573 DID use unreduced files,
    but all are word-sized (max 1.34e9 < 2^63): msolve parsed the
    intended systems. Re-verified empirically today (see re-runs). The
    third prime 2147483629 > 1.34e9: those emissions are reduced by
    construction. chartG additionally rests on the symbolic -1 (claim
-   7), msolve-free. **Subcase-(2) verdicts stand.**
+   7), msolve-free. The full subcase-(2) characteristic-zero verdict stands
+   via the separate exact Helali/Suzuki record, conditional on the shared
+   reduction/transcription bridge; it does not stand on the internal msolve
+   traces.
 2. **(72,108) subcase (1).** The 16 c1_* leaves + open_8_28_c1_v6
    ARE corrupt-class — but produced NO accepted verdict: every c1
    lane run died without verdict (notes.md 2026-08-06/07: Xeon all-Z
@@ -518,12 +569,18 @@ Contaminated-verdict count = 0.** Per relied-upon verdict class:
    but no completion/verdict was ever banked for them (G0 stands at
    3/5 via other lanes). ordtest_*: runs errored (runs/ordtest_*.err),
    no verdicts.
-4. **Sheet-6 R1.** All r1 mod-p files reduced (see above); the §6
-   retraction is unrelated (paren hazard); §11's (2,5) NONEMPTY rests
-   on char-0 + reduced-coefficient mod-p GBs (25LOCUS §6). Clean.
-5. **conjE.** HOLD verdicts are char-0 Gröbner certificates; the
-   agreeing mod-p lane used word-sized files (max 67200) — parsed
-   correctly, spot re-verified today. Clean.
+4. **Sheet-6 R1.** All r1 mod-p files reduced (see above), so their modular
+   verdicts are clean with respect to this parser hazard.  The claimed
+   characteristic-zero upgrades for the ZU/UZ leaves, Q0 family/control, and
+   Q2 l13 stratum used the same first-prime `-g` output surface and are
+   reclassified as modular/trace evidence absent exact cofactors.  In
+   particular, the active l13 "proof-tier" base and its characteristic-zero
+   downstream consequences are open.
+5. **conjE.** The 96 characteristic-zero-header `[1]` files are first-prime
+   traces, not rational Gröbner certificates.  `CERT-UPGRADE.md` gives an
+   exact two-row identity for the `(i,ell)=(1,1)` B-subset family; the other
+   five reported HOLD rows remain modular/trace-grade.  None proves
+   Conjecture E or is load-bearing for a global JC2 conclusion.
 6. **Farm (deg<=150 frontier).** The ONLY at-risk class with live
    verdict exposure: 27 corrupt-class p65521 jobs are in the remote
    queues, and the boxes bank smallest-first — the early banked
@@ -600,10 +657,13 @@ On every box restart/reuse: crontab -l FIRST; remove any deadline/poweroff/lifec
 
 ## Lift retirement (2026-08-13)
 cCa2/cCa6 char-0 lift certificates: RETIRED under the last-chance rule
-(no LIFT-CERT at the post-outage ultramem check; runs killed). Soundness
-unchanged: the (72,108) subcase-(2) record rests on exact mod-p verdicts
-at 3 independent large primes + satisfiability guards (see emission
-rules); the char-0 lift was a redundancy rider, never load-bearing.
+(no LIFT-CERT at the post-outage ultramem check; runs killed).
+**CORRECTION (2026-08-23):** those lifts were load-bearing for the campaign's
+own characteristic-zero chart proof.  Three independent modular `[1]`
+verdicts plus satisfiability/emission guards are strong evidence but do not
+imply `1` belongs to the rational ideal.  The internal cCa2/cCa6 proof status
+is therefore open.  The separately replayed exact Helali/Suzuki systems
+preserve the conditional external `(72,108)` conclusion.
 Ultramem access note: use `gcloud compute ssh ultramem-1` (plain ssh key
 not authorized); current IP 136.65.11.117 (changes on restart).
 
@@ -664,11 +724,12 @@ Why no verdict flips (and what was deliberately NOT re-run):
   provable invariance, plus the empirical reproduction above.
 - EMPTY class (r1_q0_sat_p*, r1_q0_fam[_p*], r1_q2_l13[.ms/_p*]): NOT
   re-screened; the banked EMPTY verdicts refer to the .stale729 bytes.
-  Robustness: the banked ctlB_satonly controls (quotient rows + s1F
-  saturation, NO E5/E6 rows) are EMPTY (fam char 0; q2 l13 both primes;
-  and the banked Q0 GB contains s1F), and ctlB's rows are a SUBSET of
-  the full tier's rows, so EMPTY(ctlB) => EMPTY(full) for ANY E5/E6
-  rows, 243 or 729: the E5 constant is not load-bearing for the kills.
+  Robustness at the modular tier: the banked ctlB_satonly controls
+  (quotient rows + s1F saturation, NO E5/E6 rows) are `[1]` at the recorded
+  primes, and ctlB's rows are a SUBSET of the full tier's rows, so
+  EMPTY(ctlB) => EMPTY(full) over those same finite fields for ANY E5/E6
+  rows, 243 or 729.  The fam characteristic-zero-header `[1]` is only a
+  first-prime trace, so this subset argument supplies no Q-level kill.
   FLAG: should any future run of a corrected EMPTY-class twin fail to
   reproduce EMPTY, that falsifies the subset argument -> review.  The
   l4/l8/l12/sub* strata carry only TIMEOUTs (no verdicts) — nothing to
@@ -803,7 +864,7 @@ The end-to-end reduction (Keller counterexample -> GGV polygon data ->
 sheet data -> enumerated book entry) is NOT currently a theorem
 (REDUCTION.md, Sol; cross-review Grok SOUND-WITH-ERRATA). Real gaps:
 (G1) GGV minimal-pair selection is existential, not a normalization of
-every counterexample; (G2) NO transport theorem carries GGV corner data
+every counterexample; (`G2-PSC`) NO transport theorem carries GGV corner data
 through Sigray's normalization — the sheet construction does not consume
 GGV data as written; (G5) NO upper bound on td. Gap 4 adjudicated: the
 td-7 book carries its §11a completeness certificate and td-11 its
@@ -938,15 +999,20 @@ a G5 counterexample -- it REFUTES the implication class
 {finite generation, rooftop convexity, common leading power} => uniform bound.
 Also Hodge index / Teissier-Rees-Sharp / reverse-AF give e_inf(I,J)<=N^2, i.e.
 E_MR >= 0 -- the WRONG SIGN (G5 needs the upper/near-max bound).
-CONSEQUENCE: any proof of the G5 td-ceiling MUST use the full Keller identity
-(1), not finite generation, convexity, Hodge, mixed volume, or the leading-form
-shadow of Keller. G5 <=> CONJECTURE KJN(C): deg Psi = alpha beta * td <=
-C(alpha beta)^2 (sharp C=1). TIER: EXACT, dual-model confirmed.
+CONSEQUENCE: any proof along this rooftop route MUST use the full Keller
+identity (1), not finite generation, convexity, Hodge, mixed volume, or the
+leading-form shadow of Keller. CORRECTION: KJN(C),
+deg Psi = alpha beta * td <= C(alpha beta)^2, gives the type-relative ceiling
+td <= C alpha beta; it is not equivalent to an absolute G5 ceiling unless a
+separate theorem supplies a bounded/cofinal type menu with valid provenance.
+The EXACT, dual-model-confirmed tier here applies to the identity and the
+class-kill, not to the still-conjectural KJN estimate.
 
-## G2/G5 INDEPENDENCE + PUISEUX gcd DICTIONARY (2026-08-23)
+## G2-BD/KJN FORMAL SEPARATION + PUISEUX gcd DICTIONARY (2026-08-23; terminology corrected)
 The unification lane (xmodel/sol-unify.md) asked whether one Keller bound
-closes both walls. VERDICT: INDEPENDENT at the banked structural tier -- the
-"shared nu" was a NOTATION COLLISION.
+closes both local objectives. It found a NOTATION COLLISION in the "shared
+nu" and two non-implications in a weakened formal system; the earlier
+"independent walls" verdict is superseded by the scoped reading below.
 - EXACT Puiseux gcd dictionary (Lemma 1.1): for a pole branch with denominator
   kappa_i and characteristic gcd-drops nu_j, prod_j nu_j = kappa_i (telescoping
   gcd chain, e_s=1 by minimality). Residue-A ladder: 1 -x7-> 7 -x3-> 21 -x2->
@@ -962,19 +1028,22 @@ closes both walls. VERDICT: INDEPENDENT at the banked structural tier -- the
 - UCD =/=> KJN(C): formal family (Lemma 3.1) kappa_P=6 fixed, b_P=b odd -> inf,
   giving E_MR=b, td=6b -> infinity.
 Both countermodels are FORMAL (satisfy the tree/arithmetic identities, no known
-polynomial-origin Keller realization). CONSEQUENCE: G2 and G5 are separate
-walls -- UCD bounds the MULTIPLICATIVE internal-carrier axis (max_i kappa_i),
-KJN bounds the ADDITIVE pole-mass axis (sum a_P b_P/nu_P); independent
-coordinates. The ONLY remaining bridge is CONJECTURE K2C (Keller
-degree-to-carrier theorem): polynomial origin + the pure-boundary Jacobian
-identity bounds the internal characteristic indices in terms of rooftop
-pole-mass data -- exactly the ingredient the formal countermodels lack.
-TIER: dictionary EXACT; independence proved at banked/formal tier; K2C is the
-open polynomial-origin bridge.
+polynomial-origin Keller realization). CORRECTED CONSEQUENCE: they separate
+the post-residue-A carrier predicate `G2-BD` from the type-relative KJN
+predicate in the weakened formal system. They say nothing about `G2-PSC`, the
+global GGV-to-Sigray transport/fidelity obligation, and do not prove
+non-implication inside the class of actual polynomial Keller maps. The
+dictionary is exact but this separation is single-model/banked formal
+evidence, not a promoted two-way independence theorem. The unrestricted K2C
+bridge proposed here is explicitly superseded by the later dual-confirmed
+Henon refutation; only appropriately restricted minimal/nonautomorphic
+residue-A variants remain open.
 
-## G5/KJN REDUCED TO A LOCAL LEMMA: RPMC(C) => KJN(C) (2026-08-23)
-The G5 lane (xmodel/sol-kjn.md) reduces the global td-ceiling to a strictly
-LOCAL one-root capacity lemma, with the reduction PROVED.
+## TYPE-RELATIVE KJN: LOCAL SUFFICIENT LEMMA RPMC(C) => KJN(C) (2026-08-23; corrected)
+The former G5 lane (xmodel/sol-kjn.md) gives a proved-in-lane sufficient
+reduction from a LOCAL one-root capacity lemma to type-relative KJN. It does
+not reduce the absolute td-ceiling without the separate type-menu/provenance
+theorem stated below.
 
 EXACT structures (all char 0; F,G degree d=Balpha,e=Bbeta homogenizations;
 M=d+e-2; accepted input: the dual-confirmed pure-boundary identity
@@ -999,8 +1068,11 @@ CONJECTURE RPMC(C) (root-weighted pure-minor capacity): for each proper root,
 E_i <= C mu_i / B, under the pure-minor identity hypothesis.
 THEOREM 7.1 (PROVED conditional reduction): RPMC(C) => KJN(C). Sum E_i over
 roots, sum mu_i = B => E_MR <= C => deg Psi = (alpha beta)^2 E_MR <=
-C(alpha beta)^2. So RPMC(1) => sharp KJN(1) => TDBOUND becomes a THEOREM =>
-the sheet-number book ladder becomes unconditional.
+C(alpha beta)^2. So RPMC(1) => sharp KJN(1) => td <= alpha beta at each
+provenanced fixed type. CORRECTION: an absolute/cofinal TDBOUND conclusion
+also requires an independently justified bounded type menu, and even that
+would not close the transport, source, landing, or coverage gaps needed to
+make the full book ladder unconditional.
 
 SEPARATION FROM THE CLASS-KILL DECOY (EXACT, sec 8). The non-Keller control
 f_B=x^d+y, g_B=x^e+y^{e-1} has Q_B = d(e-1)X^{d-1}Y^{e-2}Z - e X^{e-1}Z^{d-1}
@@ -1014,10 +1086,13 @@ TIER: reduction + all listed structures EXACT/PROVED (single-model, sol-kjn);
 RPMC(C) is the open local lemma. NOT YET Grok-reviewed.
 
 Bridge status (companion, xmodel/sol-k2c.md): UNRESTRICTED K2C is FALSE
-(explicit Henon automorphism tower, td=1, kappa=42*2^r -> inf; Grok review of
-that construction PENDING). So G2/UCD does NOT follow from KJN and needs its
-own bound UCD-A-min (degree-minimal nonautomorphic type-(2,3) residue-A). The
-two walls remain SEPARATE; the only conditional bridge is CONJECTURE K2C-min.
+(explicit Henon automorphism tower, td=1, kappa=42*2^r -> inf). The review was
+pending when this entry was drafted; the next entry records Grok's independent
+confirmation. Thus unrestricted UCD does NOT follow from the bounded-td data.
+No KJN => `G2-BD` theorem is established; the restricted route still needs its
+own UCD-A-min bound (degree-minimal nonautomorphic type-(2,3) residue-A). The
+two local predicates remain unbridged; the only conditional bridge presently
+named is CONJECTURE K2C-min.
 
 ## UNRESTRICTED K2C REFUTED: HENON AUTOMORPHISM TOWER (2026-08-23, dual-confirmed)
 Theorem 2.1 of xmodel/sol-k2c.md, independently CONFIRMED by Grok hostile
@@ -1036,11 +1111,13 @@ CONSEQUENCE: bounded td + polynomial origin + the full boundary identity do
 NOT bound kappa -> UNRESTRICTED K2C is FALSE. Grok confirms the scoping is
 legitimate: the family is one-pole, reduced type (1,2), degree-minimizes to a
 linear automorphism (kappa=1), never type (2,3), does not realize residue-A.
-NET: G2 and G5 are genuinely SEPARATE walls at the Keller tier. G2/UCD needs
-its own bound UCD-A-min (degree-minimal nonautomorphic type-(2,3) residue-A);
-the only conditional bridge is CONJECTURE K2C-min. TIER: EXACT, dual-confirmed.
+NET: unrestricted UCD does not follow from bounded td plus polynomial origin
+and the boundary identity. Because this automorphism never realizes residue-A,
+the construction addresses neither `G2-PSC` nor the restricted `G2-BD`
+obligation. That residue-A route still needs UCD-A-min; the only conditional
+bridge presently named is CONJECTURE K2C-min. TIER: EXACT, dual-confirmed.
 
-## G5 CHAIN EXTENDED: RPMC(C) <=> PC(C), POLAR-EXCESS BRIDGE (2026-08-23)
+## TYPE-RELATIVE KJN CHAIN: RPMC(C) <=> PC(C), POLAR-EXCESS BRIDGE (2026-08-23; corrected)
 xmodel/sol-rpmc.md executes two of the three sol-kjn §7 bullets EXACTLY (single
 -model tier), reducing RPMC to a concrete polar-capacity bound.
 - THICK-LINE DEGENERATION (EXACT/PROVED). At a root of multiplicity mu, the
@@ -1057,22 +1134,28 @@ xmodel/sol-rpmc.md executes two of the three sol-kjn §7 bullets EXACTLY (single
   branches gamma of a general F-fiber above P (m_gamma = ord_gamma z),
   Delta_P = sum_{gamma|P} max{0, ord_gamma F_X - (d-2) m_gamma}.
 - REDUCTION: CONJECTURE PC(C): sum_gamma max{0, ord_gamma F_X - (d-2)m_gamma}
-  <= C alpha beta mu / B. By the above, PC(C) <=> RPMC(C) <=> (via Thm 7.1) KJN(C).
+  <= C alpha beta mu / B. By the above, PC(C) <=> RPMC(C), and Theorem 7.1
+  gives the one-way implication RPMC(C) => KJN(C). No converse from KJN to the
+  rootwise capacity bound is proved.
 - KELLER SEPARATION (EXACT): for the class-kill decoy the residual Jacobian
   curve adds branch order de-d-1; intrinsic polar excess is only 1 while the
   actual defect is de-d, so the bridge (0.6), freeness, and nilpotence all fail
   exactly because Fitt_0 != (Z^M). Sanity gate holds.
-STATUS: G5/KJN(C) <= RPMC(C) <=> PC(C). The single remaining step is to bound
+STATUS: PC(C) <=> RPMC(C) => KJN(C) (type-relative). The remaining step on
+this sufficient route is to bound
 the intrinsic polar excess of the generic fiber at a Keller root by C alpha beta
 mu/B. No finite B-independent C obtained. TIER: DECISIVE PARTIAL (single-model).
 
-## BOTH FOUNDATIONAL WALLS REDUCED TO ONE TERMINAL CONJECTURE EACH (2026-08-23)
-G5 (xmodel/sol-pc.md) and G2 (xmodel/sol-ucda.md), single-model tier.
+## TWO LOCAL SUFFICIENT ROUTES, NOT BOTH FOUNDATIONAL WALLS (2026-08-23; corrected)
+The type-relative mass route (xmodel/sol-pc.md) and post-residue-A bounded-delay
+route (xmodel/sol-ucda.md), both at the single-model tier. Neither addresses
+the separate global transport obligation `G2-PSC`.
 
-G5: PC(C) <=> CONJECTURE DIR(C) (displaced-intersection retention). For general
+Type-relative KJN route: PC(C) <=> CONJECTURE DIR(C)
+(displaced-intersection retention). For general
 lambda,nu at a boundary root of mult mu (c=alpha*mu-1):
     n_P = i_P(Phi - lambda z^d, Gamma - nu z^e) >= e(c+1)(1 - C/B^2).
-Since e(c+1) = alpha beta B mu, DIR(C) <=> PC(C) <=> RPMC(C) <=> KJN(C). PC's
+Since e(c+1) = alpha beta B mu, DIR(C) <=> PC(C) <=> RPMC(C) => KJN(C). PC's
 1/B factor is thus a 1/B^2 RELATIVE intersection-retention bound.
 New EXACT structures (PROVED):
  - canonical fiber differential omega = dy/f_x = -dx/f_y = dg/j; polar-excess
@@ -1082,9 +1165,13 @@ New EXACT structures (PROVED):
  - Smith telescope: higher z-filtration torsion tau_q <= min(q,M-q)(alpha*mu-1),
    i.e. every higher jump bounded by the first Smith defect c=alpha*mu-1.
  - semicontinuity gives n_P <= i_P (UPPER); DIR needs a LOWER bound. Wrong way.
-STATUS: DIR(C) is the G5 crux. Any finite B-independent C => TDBOUND theorem.
+STATUS: DIR(C) is a sufficient crux for type-relative KJN. Any finite
+B-independent C gives td <= C alpha beta; an absolute/cofinal TDBOUND theorem
+additionally needs an independently justified bounded type menu and provenance.
 
-G2: UCD-A-min <= CONJECTURE A-SCALE. DECISIVE NEGATIVE on degree-minimality:
+`G2-BD`: CONJECTURE A-SCALE => UCD-A-min => bounded delay. These are one-way
+sufficient implications, with no converse claimed. DECISIVE NEGATIVE on using
+degree-minimality alone:
 by the char-0 coordinate-cusp theorem a type-(2,3) rectangular cusp pair is
 ALREADY Aut-orbit degree-minimal at every common scale, so degree minimality
 gives NO bound deg f <= Phi(6,(2,3)). (Contrast: the Henon type-(1,2) tower is
@@ -1095,18 +1182,21 @@ bound. Neither caps kappa_i.
 A-SCALE: a+b <= B_A for orbitwise degree-minimal nonautomorphic residue-A pairs
 (Sigray rectangle base (a,b)) => kappa_i <= deg f = 2(a+b) <= 2 B_A =: K_A.
 Conditional K_A=42 only under the global-coordinate-tail hypothesis.
-STATUS: A-SCALE IS the G2 crux; a counterexample sequence, if one exists, lives
-in the non-removable type-(2,3) carrier direction.
+STATUS: A-SCALE is a sufficient `G2-BD` crux for this residue-A architecture;
+a counterexample sequence to that bound, if one exists, lives in the
+non-removable type-(2,3) carrier direction.
 
-NET FOUNDATIONS MAP: G5 = KJN <= RPMC <=> PC <=> DIR(C); G2 = UCD <= UCD-A-min
-<= A-SCALE. Walls SEPARATE (Henon dual-confirmed). Each reduction is an EXACT
-theorem; the two terminal conjectures resist standard tools and are the honest
-locus of JC2 difficulty for the book-relative program. TIER: single-model,
-DECISIVE PARTIAL on both.
+CORRECTED LOCAL MAP: DIR(C) <=> PC(C) <=> RPMC(C) => KJN(C), and
+A-SCALE => UCD-A-min => `G2-BD`. KJN remains type-relative; none of the reverse
+arrows just omitted is established. The Henon result dual-confirms only the
+failure of unrestricted K2C/UCD. The local reductions remain single-model,
+DECISIVE PARTIAL; they do not close `G2-PSC`, source, landing, or coverage.
 
-## G2/G5 INDEPENDENT AT THE GERM LEVEL: DIFFERENT/CONTACT LEDGER (2026-08-23)
-xmodel/sol-bridge2.md settles whether the two terminal cruxes (DIR for G5,
-A-SCALE for G2) share a root. VERDICT: INDEPENDENT even locally.
+## NO TWO-WAY LOCAL DIR/A-SCALE UNIFICATION: DIFFERENT/CONTACT LEDGER (2026-08-23; corrected)
+xmodel/sol-bridge2.md compares the two local sufficient routes (DIR for
+type-relative KJN, A-SCALE for `G2-BD`). CORRECTED VERDICT: no equivalence or
+common controlling invariant is obtained; this is not a promoted symmetric
+independence theorem and does not concern `G2-PSC`.
 - EXACT different/contact ledger (PROVED): on a pole branch gamma of a general
   f-fiber, with m=ord z, p=pole order of g, I_gamma = contact with the other
   branches of the fiber germ:
@@ -1114,10 +1204,12 @@ A-SCALE for G2) share a root. VERDICT: INDEPENDENT even locally.
   hence the branch polar defect Delta_gamma = p (= 3 on residue A, the pole
   order of g), while the conductor 2 delta(gamma) measures the branch different.
   The common ledger carries an UNCONTROLLED CONTACT term I_gamma.
-- CONSEQUENCE: a bound on the polar excess (G5/DIR) does NOT bound the conductor
-  / kappa_i (G2), nor conversely; the formal l=0,nu=2 tower keeps Delta_gamma=3
-  while kappa_i, delta -> infinity. A-SCALE => residue-A DIR only tautologically
-  (bounding the whole degree scale). Terminal directions genuinely different.
+- CONSEQUENCE: a bound on the polar excess (DIR) does NOT, in the formal
+  ledger, bound the conductor/kappa_i; the l=0,nu=2 tower keeps Delta_gamma=3
+  while kappa_i, delta -> infinity. In the other direction, A-SCALE does imply
+  a coarse residue-A DIR bound by bounding the whole degree scale. Thus the
+  established comparison is asymmetric: DIR does not recover A-SCALE, while
+  A-SCALE supplies a coarse DIR only on the fixed residue-A inventory.
 - CONCRETE residue-A germ arithmetic (all EXACT): characteristic exponents
   (b1,b2,b3)=(54,74,79), approximate-root generators (42,54,398,1199), conductor
   c(P_i)=2278, delta(P_i)=1139, contact I_i=4656, d=168, m=kappa=42, p=3. The
@@ -1127,14 +1219,20 @@ A-SCALE for G2) share a root. VERDICT: INDEPENDENT even locally.
 - DECOYS (Henon automorphism tower, non-Keller class-kill) BOTH have intrinsic
   polar excess 1 and conductor -> infinity, but are excluded by ORTHOGONAL
   mechanisms: Henon by orbit-minimality, class-kill by pure-Jacobian support
-  (Fitt_0=(Z^M)). Neither Delta nor delta alone excludes both. No single
-  no-decoy local rigidity statement exists.
-- Third equivalent form of the G2 crux: CONJECTURE CONTACT-DEFICIT
-  (d-3)kappa_i - I_i <= K_A, equivalent to a uniform upper bound on the branch
-  conductor c(P_i) (=> kappa_i <= floor((K_A+4)/2)+1).
-TIER: ledger + arithmetic EXACT/PROVED (single-model); INDEPENDENCE established
-at the banked-germ tier. NET: G2 and G5 need two separate proofs; the
-foundational reduction tower is at its floor (two independent terminal cruxes).
+  (Fitt_0=(Z^M)). Neither Delta nor delta alone excludes both; no local
+  no-decoy rigidity statement using only either displayed invariant is
+  presently established.
+- Equivalent reformulation of a **uniform residue-A conductor ceiling** (not
+  of `G2-BD` or A-SCALE): CONJECTURE CONTACT-DEFICIT
+  `(d-3)kappa_i - I_i <= K_A`. By the ledger with pole order `p=3`, this is
+  exactly `c(P_i) <= K_A+4`; combined with
+  `c(P_i) >= 2(kappa_i-1)`, it is a sufficient route to UCD-A-min and hence
+  `G2-BD`. No converse from carrier boundedness or A-SCALE is asserted.
+TIER: ledger + arithmetic EXACT/PROVED (single-model); the no-equivalence
+assessment is banked but not hostile-reviewed/promoted. NET: no present local
+lemma merges the two sufficient routes. This does not rule out a stronger
+future theorem proving both, and it leaves `G2-PSC` and the other foundational
+landing/coverage obligations untouched.
 
 ## DIR CENSUS + THE ALGEBRAIZATION CONVERGENCE (2026-08-23)
 xmodel/sol-dircensus.md, full rootwise census of the td<=12 books.
@@ -1149,14 +1247,50 @@ xmodel/sol-dircensus.md, full rootwise census of the td<=12 books.
   wrong B-scale. VERDICT: DIR NEUTRAL, no finite C supported (single-model).
 - DIR counterexample lead (additive pole-mass axis): [3A;A,1,2]^2, pole profile
   (3A,3A), td=6A; any Keller lift => max R_P >= A -> infinity.
-CONVERGENCE: both terminal conjectures reduce to formal counterexample families
+CONVERGENCE ASSESSMENT: both local conjectures have formal counterexample families
 (A-SCALE: carrier tower kappa=42*2^r; DIR: [3A;A,1,2]^2 pole-mass tower), and
 BOTH are gated by the SAME meta-question -- do these formal Newton/entry
 families ALGEBRAIZE to actual polynomial Keller pairs? Algebraize(either) =>
-JC2 counterexample; obstructed(always) => both bounds hold => JC2 true
-(book-relative). The foundational program has converged to this single
-algebraization/exclusion wall. TIER: census EXACT/book-relative; convergence is
-an assessment.
+JC2 counterexample (provided the advertised nonautomorphic realization and
+provenance are certified). CORRECTION: failure to algebraize these particular
+families would not prove the universal bounds, much less JC2; other formal
+families and the source, `G2-PSC`, landing, off-axis, and type-provenance gaps
+remain. TIER: census EXACT/book-relative; the convergence claim is a
+single-model lead assessment, not a stopping rule or promoted reduction.
+
+## CANONICAL STRATEGY MAP — G2 SPLIT AND ARROW CORRECTION (2026-08-23)
+
+This entry explicitly supersedes every overloaded `G2`, `KJN <=> RPMC`, and
+`UCD-A-min <=> A-SCALE` reading in the same-day roadmap entries above. It does
+not retract their exact local identities; it corrects their global strategic
+interpretation and status.
+
+- **`G2-PSC` (packet/sheet compatibility)** is the missing global theorem
+  transporting a selected GGV packet/corner, with provenance, to a specified
+  decorated Sigray pole tree faithfully enough for the book machinery.
+- **`G2-BD` (bounded delay/carrier)** begins only after residue-A has been
+  reached and asks for the carrier/delay bound needed to enter a finite book.
+  Neither G2 obligation implies the other.
+- A hybrid proof using GGV restrictions in the Sigray stage owes `G2-PSC`. A
+  pure Sigray proof may bypass `G2-PSC` by selecting/minimizing the hypothetical
+  counterexample wholly in that frame, but then it may not claim the unused
+  GGV farm as input and still owes Sigray source, all-branch landing/coverage,
+  `G2-BD` where used, and type/td control.
+- The correct same-constant local arrows are
+  `DIR(C) <=> PC(C) <=> RPMC(C) => KJN(C)`. There is no proved converse
+  `KJN => RPMC`. KJN yields only `td <= C alpha beta` at a provenanced fixed
+  type; absolute/cofinal control needs an independent bounded type menu with
+  bounded constants.
+- The correct architecture-scoped delay arrows are
+  `A-SCALE => UCD-A-min => G2-BD`. No converse holds on present evidence, and
+  restricted UCD-A-min does not imply the unrestricted UCD refuted by Henon.
+
+STATUS: the pure-boundary identity/class-kill and unrestricted Henon
+obstruction are dual-confirmed at their stated scopes. The KJN/RPMC/PC/DIR,
+UCD-A-min/A-SCALE, formal countermodel, and DIR/A-SCALE comparison work is
+single-model decisive partial unless separately reviewed later. In particular,
+there is no promoted G2/G5 independence theorem, no promoted merger theorem,
+and no implication making the complete book ladder unconditional.
 
 ## D43 FULLY-RECONSTRUCTED RESIDUE-A FAMILY = NONEMPTY (2026-08-23, MOD-p / INTERNAL)
 xmodel/sol-d43full.md; cases/d43_full_{family.py,certificate_p*.json,floor_p*.json}.

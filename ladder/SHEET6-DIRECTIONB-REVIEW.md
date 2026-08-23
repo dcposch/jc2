@@ -257,9 +257,10 @@ The measured facts, from the R1 record itself:
   set to 0 (plus zero-extension beyond depth 54); the 4 nonzero tails
   are ELIMINATED coordinates back-mapped through the §10/§13 chains —
   the R1 core itself FORCES them nonzero on its witness section. The
-  strike doc conflated the two senses. (Historical note: the witness
-  family was in any case already DEAD — §18.1's char-0 saturated
-  quotient-tier kill; the strike could at most have re-killed it.)
+  strike doc conflated the two senses. (Evidence correction, 2026-08-23:
+  §18.1 killed the witness family at the recorded primes; its
+  characteristic-zero-header `[1]` was only a first-prime trace.  The strike
+  could at most have re-killed that modular locus.)
 - Is zero-tail template-forced or a choice? A CHOICE: the tails are
   free 1c data (TEMPLATE §4 inventory; R1 §18.0: tails "NOT forced —
   free template parameters"). Nonzero tails are consistent with the
@@ -270,7 +271,7 @@ The measured facts, from the R1 record itself:
 
 What the strike GENUINELY adds (and it is real):
 - The pure-dead-stretch sector {any values of the 7, all window tails
-  0} was previously covered by NOTHING: the R1 §19.2 l13 proof-tier
+  0} was previously covered by NOTHING: the R1 §19.2 l13 finite-field
   kill ZEROES uf18/uf24 (slots 6/12 < 13) on its stratum, so
   configurations with uf-support and no tails were out of its scope.
   The strike kills them all, char 0, uniformly, saturation-free, and
@@ -280,10 +281,11 @@ What the strike GENUINELY adds (and it is real):
   This resolves Grok item 3 (the seed proposal) in the refined form
   the doc states: the grid is J-blind through slot 20; the kill is
   one level down, on the pole scales.
-- The composition statement (§3 SCOPE end) is correct once restated:
-  survivors need a nonzero free below slot 13 (R1 §19.2, on the l13
-  complement) AND nonzero window tails (this strike) — two
-  independent row systems. The banked witnesses already satisfied
+- The composition statement (§3 SCOPE end) is correct over the banked
+  finite fields: survivors need a nonzero free below slot 13 (R1 §19.2,
+  on the l13 complement) AND nonzero window tails (this strike) — two
+  independent row systems.  Its characteristic-zero version is open pending
+  an exact l13 certificate. The banked witnesses already satisfied
   both requirements, which is exactly why neither system kills them.
 - The retro-diagnosis SHOULD read: the band/quotient ladder never saw
   the J-closure, and the survivor sections it produced are precisely

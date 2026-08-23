@@ -55,6 +55,27 @@ Thus the correct campaign-level conclusion is:
 > valuable necessary-data reductions, but the universal book-landing link is
 > missing.
 
+### Terminology correction: the two obligations formerly called `G2`
+
+This document now reserves two different names for two logically different
+obligations that earlier roadmap notes sometimes conflated:
+
+- **`G2-PSC` (packet/sheet compatibility):** a global theorem transporting
+  the GGV packet/corner (and its provenance) into a specified, decorated
+  Sigray pole-tree datum with enough fidelity to use the later book
+  machinery.
+- **`G2-BD` (bounded delay/carrier):** after a residue-A configuration has
+  already been reached, a bound on the delay/carrier parameter needed to
+  enter a finite book.
+
+Neither obligation implies the other. A hybrid architecture that advertises
+GGV polygon restrictions as input to the Sigray/book stage owes `G2-PSC`. A
+pure Sigray architecture may bypass `G2-PSC` by selecting and minimizing a
+hypothetical counterexample wholly inside the Sigray frame, but then the GGV
+packet/farm is not an input to that proof. Such an architecture still owes
+its own Sigray source theorem, full landing and coverage, and any `G2-BD` or
+type/total-degree bound used by its chosen endpoint.
+
 The rest of this document states the attempted chain theorem by theorem,
 records every external dependency used by it, and separates gaps from claims
 that are actually false.
@@ -810,7 +831,7 @@ not “every counterexample carries the selected minimal-pair data.” No
 argument relates the selected pair's \(td\) to that of an arbitrary original
 pair.
 
-### CRITICAL 3 — the GGV-to-sheet arrow is absent and the reduced GGV object is often ill-typed
+### CRITICAL 3 (`G2-PSC`) — the GGV-to-sheet arrow is absent and the reduced GGV object is often ill-typed
 
 There is no theorem translating GGV corners/admissible chains into Sigray
 pole/tree decorations. The early GGV standardization is a polynomial-ring
@@ -1139,47 +1160,99 @@ to all of the following.
 On the repository state audited here, the answers to the comparison,
 full-landing, off-axis, post-jump, and all-\(d\) questions are **no**.
 
-## 7. Reduction tower as of 2026-08-23 (both walls -> terminal crux conjectures)
+## 7. Superseding roadmap correction: transport, delay, and degree control
 
-The two top-ranked gaps of §3 -- G2 (no GGV->Sigray transport / bounded delay)
-and G5 (no td ceiling) -- have each been driven, through a chain of EXACT
-intermediate theorems (see AUDIT.md 2026-08-23 entries), to a SINGLE terminal
-conjecture. Both chains are honest: every arrow is a proved reduction, and the
-terminal statement in each is the precise place the standard tools stop.
+This section supersedes earlier campaign shorthand that used `G2` for both a
+global transport problem and a post-landing delay problem, or displayed the
+sufficient local bounds below as equivalences. It is a correction of the
+strategy map, not a promotion of any conjectural estimate.
 
-G5 (td ceiling):   KJN(C)  <=  RPMC(C)  <=>  PC(C)  <=>  DIR(C)
-  - KJN(C): deg Psi = alpha beta td <= C(alpha beta)^2. <=> G5 td-ceiling.
-  - Theorem 7.1 (PROVED): RPMC(C) => KJN(C) [sum per-root energies, sum mu_i=B].
-  - RPMC(C) <=> PC(C): exact polar bridge Delta_P = sum_gamma max{0, ord_gamma
-    F_X - (d-2)m_gamma}; two-block thick-line Smith degeneration, defect
-    c=alpha*mu-1.
-  - PC(C) <=> DIR(C): displaced-intersection retention n_P >= e(c+1)(1-C/B^2).
-  TERMINAL: DIR(C) -- a 1/B^2 relative lower bound on the local intersection of
-  two generically displaced pencil members. Adjunction gives only a signed
-  identity; the Smith telescope bounds higher jumps by the first defect;
-  semicontinuity is upper (wrong way). UNPROVEN.
+### 7.1 `G2-PSC` and `G2-BD` are different obligations
 
-G2 (bounded delay / carrier depth):   G2  <=  UCD  <=  UCD-A-min  <=  A-SCALE
-  - UCD: pole Puiseux denominator kappa_i <= K uniform => d_sh <= log2 K
-    (via prod nu_j = kappa_i) => bounded delay => G2.
-  - Unrestricted K2C / UCD is FALSE (Henon automorphism tower, dual-confirmed:
-    td=1, kappa=42*2^r). So UCD must be restricted to degree-minimal
-    nonautomorphic type-(2,3) residue-A: UCD-A-min.
-  - Degree-minimality does NOT prove UCD-A-min (char-0 coordinate-cusp theorem:
-    type-(2,3) rectangular cusp pairs are already Aut-orbit degree-minimal at
-    every scale). Reduces to A-SCALE: a+b <= B_A (Sigray rectangle base).
-  TERMINAL: A-SCALE -- bound the Newton-rectangle base of a degree-minimal
-  nonautomorphic residue-A Keller pair. Constant Jacobian + passport + conductor
-  give lower bounds only. UNPROVEN; this is where a counterexample sequence, if
-  any, would live (non-removable type-(2,3) carrier direction).
+The definitions in the terminology box above are canonical. In particular,
 
-Both terminal conjectures are local invariants of the SAME residue-A germ (DIR
-concerns the polar-excess defect Delta_P; A-SCALE relates to the branch
-conductor via c(P_i) >= 2(kappa_i-1)). Whether they share a single "no-decoy"
-root is under investigation (xmodel/sol-bridge2). The walls are otherwise
-independent (no KJN<=>UCD unification; AUDIT 2026-08-23 G2/G5 INDEPENDENCE).
+```
+G2-PSC  =  GGV packet/corner -> decorated Sigray pole-tree transport/fidelity,
+G2-BD   =  bounded delay/carrier after residue-A has already been reached.
+```
 
-Referee note: none of the §3 gaps is closed. The tower REPLACES two vague gaps
-with two precise, testable conjectures, and dual-confirms that they are
-genuinely separate. This is progress in localization, not a proof of "JC2
-reduces to books."
+There is no established implication in either direction. `G2-BD` says
+nothing about whether the residue-A datum comes from the globally selected GGV
+packet; `G2-PSC` says nothing by itself about bounding a later carrier.
+
+The architecture determines whether `G2-PSC` is required:
+
+- A **hybrid GGV-to-Sigray architecture** owes `G2-PSC` before it may use GGV
+  polygon restrictions in a Sigray/book argument.
+- A **pure Sigray architecture** can bypass `G2-PSC` by choosing and minimizing
+  the hypothetical counterexample wholly in the Sigray frame. It may not then
+  claim the unused GGV packet/farm as an input, and it still owes a Sigray
+  source theorem, all-branch landing and coverage, and the delay/type bounds
+  used by its endpoint.
+
+### 7.2 The correct local implication chain for total degree
+
+For a residue-A chart of type `(alpha,beta)` with face polynomial `Psi`, the
+exact identity is
+
+```
+td = deg(Psi) / (alpha beta).
+```
+
+Within the stated residue-A hypotheses and with the same constant `C`, the
+proved/formal implication map is
+
+```
+DIR(C)  <=>  PC(C)  <=>  RPMC(C)  =>  KJN(C).
+```
+
+The reverse implication `KJN(C) => RPMC(C)` is not established: a bound on
+the total root multiplicity does not give the rootwise ceiling. The first
+three formulations are therefore sufficient strengthenings of KJN, not
+equivalent names for it.
+
+Moreover, KJN is **type-relative**:
+
+```
+KJN(C):  deg(Psi) <= C (alpha beta)^2
+          => td <= C alpha beta.
+```
+
+It becomes an absolute/cofinal total-degree ceiling only after an independent
+theorem supplies a legitimately finite or uniformly bounded menu of
+`(alpha,beta)` types, together with the provenance needed to place every
+counterexample in that menu (and with the relevant constants bounded over the
+menu). KJN alone does not supply that type theorem. Thus neither KJN nor the
+stronger local conjectures, by themselves, makes the whole ladder
+unconditional.
+
+### 7.3 The correct one-way chain for bounded delay
+
+For a degree-minimal counterexample **inside the residue-A class**, the
+residue-A scale estimate is a sufficient route:
+
+```
+A-SCALE(B_A)  =>  UCD-A-min  =>  G2-BD.
+```
+
+No converse arrow is established. Nor does the restricted `UCD-A-min`
+statement imply unrestricted UCD. The exact Keller-Henon family refutes the
+unrestricted UCD/K2C formulation, while leaving the type-(2,3),
+degree-minimal, residue-A statement open.
+
+### 7.4 No promoted merger theorem
+
+The local comparison currently supports only the following asymmetric fact:
+on a fixed residue-A inventory, `A-SCALE` gives a coarse directional bound;
+the directional condition does not recover the common scale `a+b`. Hence
+there is no known equivalence or single promoted lemma joining `DIR` and
+`A-SCALE`. The formal separation/countermodel work and this bridge analysis
+are single-model campaign evidence, whereas the pure-boundary identity and
+the exact unrestricted Henon obstruction have independent confirmations.
+
+Algebraizing either formal obstruction family could yield a genuine
+disproof route. Conversely, failure to algebraize those particular families
+would not prove KJN, `G2-BD`, or the Jacobian conjecture: the global
+transport/source, full landing, off-axis coverage, and type-provenance gaps in
+Section 3 would still have to be discharged. None of those gaps is closed by
+the corrected arrows above.

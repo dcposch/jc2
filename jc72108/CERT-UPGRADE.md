@@ -38,12 +38,14 @@ committed).
   (colon/saturation). **No flag emits cofactors h_i with 1 = Σ h_i f_i.**
   Checked against the Debian manpage and the msolve GitHub docs — no such
   feature exists in any released version.
-- Caveat worth recording: per the help text, `-g` prints the reduced GB "for
-  **first prime characteristic**" — i.e. even on char-0 input the printed `[1]`
-  is the GB mod the first machine prime of the multi-modular run. A banked
-  "char-0 [1]" header is therefore itself trace-level evidence, not a lifted,
-  verified char-0 result. (Numerically irrelevant for `[1]`, semantically
-  load-bearing: it is exactly the gap this lane was meant to close.)
+- Caveat worth recording: the help text describes `-g` in terms of the
+  **first prime characteristic**, and the characteristic-zero unit-basis path
+  can return `[1]` after that first modular computation, before CRT/rational
+  reconstruction.  A banked "char-0 [1]" header is therefore trace-level
+  evidence, not a lifted, verified char-0 result.  The short circuit is
+  unit-specific: a successful non-unit characteristic-zero run continues
+  through reconstruction, so this erratum does not demote its Q-level
+  nonemptiness verdict within engine trust.
 - Signature-based runs (`-q 1`) compute data that in principle supports
   membership certificates, but msolve does not expose it.
 - Adjacent tools: `f4ncgb` (arXiv 2505.19304) does track cofactors but is for
@@ -197,11 +199,14 @@ certificate extraction (this file, §2), which needs no prime bound:
    any heavy Macaulay-style reconstruction (e.g. leaf12 at 44 vars, D ≤ 8:
    ~10^7-column sparse mod-p linear systems, Box02-scale) worth costing out.
 3. **What stays mod-p-only**: farm cores (61+ vars) and anything cCa2-shaped.
-   Their record continues to rest on the existing posture (exact mod-p
-   verdicts at ≥3 independent primes + emission guards + two-machine
-   agreement), per AUDIT.md's lift-retirement note. No prime-size theorem can
-   rescue them; only a reconstructed certificate (2) or a human lemma mined
-   from smaller relatives (1) can.
+   Exact mod-p verdicts at independent primes, emission guards, and
+   two-machine agreement remain valuable trace evidence, but do not close the
+   characteristic-zero ideal.  This corrects the proof-tier reading in the
+   historical lift-retirement note superseded by the 2026-08-23 erratum in
+   `AUDIT.md`.  No finite collection of prime verdicts alone can rescue the
+   Q-level claim; it needs a reconstructed rational certificate (2), an
+   effective bad-prime bound, or a human lemma mined from smaller relatives
+   (1).
 
 ## 5. Anti-stall log
 
