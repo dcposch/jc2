@@ -18,9 +18,6 @@ campaign to settle the question.
   claim comes with replayable artifacts. Key results are machine-verified in
   Lean 4.
 
-## Published output
+## Public progress
 
-- **2026-08-20** · [PALOMAR-2026-08-20-000001](https://palomar-registry.org/entry?id=PALOMAR-2026-08-20-000001&version=1):
-  vertex-gap obstruction for low-degree strip pairs (Lean 4, kernel-checked)
-- **2026-08-19** · [PALOMAR-2026-08-19-000005](https://palomar-registry.org/entry?id=PALOMAR-2026-08-19-000005&version=1):
-  Theorem A, the strip rigidity lemma (Lean 4, kernel-checked)
+For public progress, see [jc2-lean](https://github.com/dcposch/jc2-lean).
