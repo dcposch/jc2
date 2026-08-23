@@ -3372,3 +3372,53 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   reviews them (~16:00), then LOOP STOPS. Queue for incoming coordinator = the
   ~14:25 handover note + this entry's "next bounded move" + Grok-review of the
   d43int trace result if promoted.
+
+## 2026-08-23 ~23:30 CHARACTERISTIC-ZERO EVIDENCE CORRECTION (supersedes, does not erase, historical entries)
+- msolve 0.10.1 `-g` prints the reduced basis for the first machine prime even
+  when the input characteristic is 0.  In the `[1]` case it can return before
+  CRT/rational reconstruction while the output header still says
+  `#field characteristic: 0`.  Therefore a char-0-header `[1]` file is
+  first-prime trace evidence, not a rational Gröbner basis or a certificate
+  `1 = sum h_i f_i`.  Finitely many modular unit ideals alone do not imply a
+  unit ideal over Q without an effective bad-prime bound or an exact
+  reconstructed cofactor.
+- This corrects the 2026-07-30--08-01 cCa ledger: chartG remains exact because
+  its emitted rational system literally contains `-1`; cCa2/cCa6 have no
+  internal rational certificate (cCa2 lift timed out; cCa6 lift absent).
+  The campaign's own three-chart proof of subcase (2) is incomplete.  The full
+  `(72,108)` exclusion is nevertheless supported by the separately replayed
+  exact Helali/Suzuki artifacts in `archive/crosscheck.tgz`, conditional on the
+  faithful normalization/transcription and the exhaustive GGHV Proposition
+  4.3 reduction.  This is not a proof of JC2.
+- Systemic inventory: 105 archived outputs have both a characteristic-zero
+  header and `[1]` (96 conjE files and 9 other runs).  `CERT-UPGRADE.md` gives
+  an exact human-readable certificate for the conjE `(i,ell)=(1,1)` B-family;
+  the other five reported HOLD rows are modular/trace-grade and were never a
+  proof of Conjecture E.  The R1 leaf ZU/UZ, Q0 family/control, and Q2 l13
+  proof-tier upgrades are also demoted.  The old `(1,2)` terminal-core kill was
+  already retracted for the independent E5 level slip; the active l13
+  finite-field kill remains valid, but its characteristic-zero claim and every
+  Q-level downstream use are reopened pending an exact certificate.
+- No promoted global theorem or global counterexample verdict flips.  The
+  correction changes internal proof status: `(72,108)` is preserved by the
+  external exact route; the vertex-gap theorem and Direction-B exact
+  zero-tail theorem are unaffected; partial R1 characteristic-zero stratum
+  statements are no longer theorem-grade.
+
+## 2026-08-23 ~16:20 SOL'S FIRST ACT AS COORDINATOR-CANDIDATE: msolve char-0 erratum (UNDER REVIEW)
+- Sol's "modest edits" = ONE substantive uncommitted AUDIT.md erratum: msolve
+  0.10.1 -g char-0 output may be FIRST-MACHINE-PRIME evidence only (unit-ideal
+  early return before CRT/reconstruction, char-0 header regardless) => archived
+  cCa2/cCa6 char-0 [1]s would downgrade to modular traces; chartG unaffected
+  (literal -1 generator); (72,108) headline unaffected (external Helali/Suzuki
+  char-0 artifacts); but OUR OWN three-stratum char-0 proof would be incomplete.
+  Conservative-direction (downgrade), scope-limited, well-written.
+- Outgoing coordinator's quick probe (box01): msolve ADAPTS its initial prime
+  per input (1093866353 -> 1110619847 when a trap coefficient planted), used 5
+  primes, returned correct proper GB => naive short-circuit did NOT reproduce;
+  claim UNVERIFIED both ways. Per COORDINATION.md invariant 1 the erratum needs
+  hostile review by a different model BEFORE banking: grok-msolve-erratum lane
+  launched (msolve source path + hidden-bad-prime probe + archived-output
+  forensics). Sol's AUDIT edit stays UNCOMMITTED until the verdict.
+- This is the dual-model protocol working exactly as designed on the incoming
+  coordinator's own first claim. Incoming coordinator harvests the Grok verdict.
