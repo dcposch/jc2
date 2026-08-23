@@ -3347,3 +3347,28 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   repo (unpushed commit containing that link was rewritten away pre-push);
   jc2 (PRIVATE) README points "For public progress, see jc2-lean". All public
   comms now flow through jc2-lean.
+
+## 2026-08-23 ~15:45 sol-d43int HARVESTED (last lane): modular fidelity CLOSED, stage 2 open; FLEET QUIET
+- sol-d43int rc=0. NEW EXACT: full recovered 218-row modular presentation
+  audited BOTH primes (34+95+89, all hashes); at p=105337 every pristine graph
+  row has a replayed source-to-D23-NF membership trace (184/184, 24.9M raw +
+  38.9M NF + 102.9M quotient-trace terms, dictionary-exact vs checkpoints) --
+  closes sol-clift's principal ambiguity: the graph polys ARE the source
+  reductions mod D23. Bandwise local-NF engine (product criterion, no std):
+  localized generation PASSES on the fixed 156-var fiber through band 32
+  (band-10 identities NOT a hidden cut); band 34 = 300s TIMEOUT (2 dependent
+  rows; timeout not remainder).
+- STAGE 2 STILL OPEN: checkpoints have NO integral data (G_j + parked rows are
+  prime-specific); no common integral model, no all-218 p^2 replay, no dim-53/
+  generation/flatness, no Z_p or char-0 point. NEXT BOUNDED MOVE (named): re-emit
+  D23/D25 parked system over the source radical number ring (or Z_p) WITH
+  reducer-to-parked traces; rerun bandwise membership in the FULL 14-free cell;
+  if band 34 still blocks, move to a non-origin point of the same component.
+- Engines: d43_integral_gate.py, d43_nf_trace_replay.py, d43_local_fiber.py +
+  audits/certs (cases/d43_integral_*, d43_nf_trace_*, d43_local_fiber_*,
+  d43modp_*_rebuilt.pkl). All fail-closed; replay commands in the doc.
+- FLEET QUIET (no research lanes). Handover conditions MET. Sol (coordinator
+  candidate) is making modest read/correct edits per DC; outgoing coordinator
+  reviews them (~16:00), then LOOP STOPS. Queue for incoming coordinator = the
+  ~14:25 handover note + this entry's "next bounded move" + Grok-review of the
+  d43int trace result if promoted.

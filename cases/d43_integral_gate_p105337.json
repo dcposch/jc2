@@ -1,0 +1,414 @@
+{
+ "common_integral_model": {
+  "forbidden_promotion": "least-residue lifts of the prime-specialized parked/NF coefficients would define an unverified model",
+  "missing": [
+   "a common integral or Z_p 34-row parked presentation derived from the source model",
+   "integral/Z_p membership of the 509 D23 reducers in those parked generators",
+   "integral/Z_p raw-to-NF identities; the recovered and regenerated traces stop over F_p",
+   "an all-218-row p^2 replay in one common 184-coordinate integral presentation"
+  ],
+  "positive": {
+   "coefficient_radicals_hensel_lifted": true,
+   "mod_p_source_to_D23_NF_membership": "184/184",
+   "pristine_184_row_source_model_over_Zp": true,
+   "source_model_p2_correction": "SOLVABLE"
+  },
+  "status": "NOT CERTIFIED"
+ },
+ "conclusion": {
+  "Zp_point": null,
+  "assembled_218_point_reaches_p2": null,
+  "characteristic_zero_D43_point": null,
+  "source_point_reaches_p2": true,
+  "stacks_02H6_applicable": false,
+  "stage_2_cleared": false
+ },
+ "dimension_generation_flatness": {
+  "fixed_parked_graph_fiber": {
+   "ambient_variables": 156,
+   "bandwise_local_generation_passed_through_band": 32,
+   "certificate": "/Users/dc/code/math/jc2/cases/d43_local_fiber_p105337.json",
+   "certificate_sha256": "9df08b692154f9a270dfbbdb5d2afa7f1777566dee7094b95210c0fe45541ad4",
+   "dependent_rows": [
+    142,
+    143
+   ],
+   "first_inconclusive_band": 34,
+   "full_jacobian_rank": 111,
+   "normal_form_result": "TIMEOUT; no nonzero remainder returned",
+   "passed_prefix_rank": 64,
+   "timeout_seconds": 300
+  },
+  "local_dimension_53": null,
+  "p_flatness": null,
+  "selected_131_generate_218_locally": null,
+  "standard_smooth": false,
+  "status": "NOT CERTIFIED"
+ },
+ "next_move": [
+  "re-emit the D23/D25 parked system over the source radical number ring (or Z_p) with reducer-to-parked traces",
+  "then run the bandwise local membership proof in the 14-free parked cell; if band 34 remains expensive, move to a non-origin point on that cell/component",
+  "only after localized generation, deduce the 53-dimensional complete intersection and p-flatness and invoke formal smoothness"
+ ],
+ "prime": 105337,
+ "recovered_modular_model": {
+  "audit_paths": {
+   "105337": "/Users/dc/code/math/jc2/cases/d43_integral_recovery_audit_p105337.json",
+   "105673": "/Users/dc/code/math/jc2/cases/d43_integral_recovery_audit_p105673.json"
+  },
+  "audit_sha256": {
+   "105337": "9eb34da6bd409172553489650807956796f87751b153f91e4018669f35d6bce0",
+   "105673": "a1cc85db21d4871a4a132590eac915b837f9d914498c125a9d608c091312c35f"
+  },
+  "blocks": {
+   "late_graph": 89,
+   "old_graph": 95,
+   "parked": 34
+  },
+  "checkpoint_payload_keys": {
+   "105337": {
+    "10": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "12": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "14": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "16": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "18": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "20": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "22": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "24": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "26": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "28": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "30": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "32": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "34": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "36": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "38": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "40": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "42": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "6": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "8": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ]
+   },
+   "105673": {
+    "10": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "12": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "14": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "16": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "18": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "20": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "22": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "24": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "26": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "28": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "30": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "32": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "34": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "36": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "38": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "40": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "42": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "6": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ],
+    "8": [
+     "band",
+     "fiber",
+     "gbvars",
+     "prime",
+     "rows"
+    ]
+   }
+  },
+  "checkpoint_sha256": {
+   "105337": {
+    "10": "89c5ec5dc202f6b404b15ff1243f5ba7613b5c4719efbcf19aa85b5d72723deb",
+    "12": "a017f9be00e6d87967b6c4c3227010f4faca984f6c66ffb2df2d99536b329037",
+    "14": "264925c9a401346c8656916c2406f25aaad84c98fee18e804813b691475deccd",
+    "16": "c08929deba60b3720699926334124c60bcec292c375d388b819c336079b34706",
+    "18": "944c2c3b10b307793aef5797000f4c402d8f398e983a3725a9b94f90a95916ed",
+    "20": "d3deb686a10274c56ec7c16d99b4ec0836ede7b29fddadbf567f140001feea8b",
+    "22": "af4a01989fdf6c9871f8fe13f3330d0eeb0fc4d4c79f04314f243815d245395d",
+    "24": "5883cdf11b7e7d79276e8a4286e9ab46dcb819aaf43f52d9094900ae15cfa002",
+    "26": "6ccdc7e6706c8e72e0be5ecc2b31c63dfc43b87f5b3a3ac99fa41c832b6fb5b2",
+    "28": "1fb7e6feab1692d5f5e7ac2caa40521d1aef106751a3f4c4bde78b0e5e4f9c96",
+    "30": "9433a8b4c7007fad2e3f9181db39af136903d51001e566657e17698a4294b5ae",
+    "32": "04ff1ac56abcde9fd2e43785f56c98f6fdbf78f71982f6b8892fe6a5c14cdbeb",
+    "34": "7e50d7412bede0d48ff2159ab4ebace69e5829274388ca464e6714cecfb95b86",
+    "36": "8a1411b2d7397cfa4503893c256e68026bd0d97f546b572dbfaed76a6df853b1",
+    "38": "bb22e070437f6cb13596b4e96b850f5c7e71641bc1b9ab2b686de1d7205b810b",
+    "40": "c6174e314422629be7fde066d9b28050d338dcf05d67b4020cc419d0b6280d44",
+    "42": "6160fd650ac3076c8063295c905a8e53b5ce6cde82ef9608e2a910abd1fec0ce",
+    "6": "4fb975d14ecd84927509f717b96c00fe190e05effa550faf9afe12fe94522f81",
+    "8": "c08e69ae70883c8c7d9319e6bcd826ae986898ca9b5d109120e41fdc73aa1071"
+   },
+   "105673": {
+    "10": "b51ed67148e6f3507c4e283b9f9f4480da1555d4a5b64c560dccddee36049c3c",
+    "12": "4460a5dd53df94d3ab363a1edb0fecc045885c3352d73838ee9b6d0803611cc1",
+    "14": "a6effd2f8b6e5944791e7fae145a44d377048a58de9de6c3be2ced8f1bcf95e0",
+    "16": "db32f7b147466cb61cdb45763bb69551b1d7043a4f8950327c20602cf38a87e4",
+    "18": "aafe93d870dbfe1ef83b5892a4a04d8a112b110066965d47af297c0b148d72ac",
+    "20": "b0673ac572bafac5e20daa0e7c088ef9d1b5686763efd9c768e197565dd143e0",
+    "22": "8f1f5a103e968a6092a7eb5bea7cdf1ce90638b43d771d6cf343623c4f281aef",
+    "24": "25ffbac51a33f67d79131a81b3ee92a3d5c367b2943cecd492f1f836779f5835",
+    "26": "36202d61c939ca2977509ee54267a70232b5c7fcd18ac357b14df00bd59383af",
+    "28": "9ceefcbacb8b0576eb1f055d1cebda9a00fe869d9dec2704d3cb232524986472",
+    "30": "2c16d90bb0eae83b6497a3d505758dd58458343ef5162c63c7b79aa1b5d689f3",
+    "32": "81f693738b0b18dc2582d4d0f929c692840f5d1add3c0b60f5b3f0024ec84c22",
+    "34": "86a77737d89efa64c1f591d3e62d165067afb9b7066f1633126745af960357ed",
+    "36": "6ce226c640c2b6a14bc5dcf996e8eca640905220d41ca568b7f1a8ff554650e8",
+    "38": "3837093e855afcfffc3c68a26b7fefd0b3dc9d97a2e7a9491823ef4b1b275cc6",
+    "40": "c9168758b8075ca5e67a8dea07bce296c12be0334e66d35cadc08be4c28abc76",
+    "42": "e6420d4eba9a49c8a0fd082466031468bce1930fbd3713ee0f60fbaa10bd1a85",
+    "6": "7d58ce330e16a322bfd1ca973b882dcb977c35e753705ccc5b21a2cddecb2f5d",
+    "8": "d29ceae1240985f1e719b3e87cc21c5417eef3a5faa74c4e92c287287f1198f0"
+   }
+  },
+  "checkpoint_trace_fields_present": false,
+  "primes": [
+   105337,
+   105673
+  ],
+  "rows": 218,
+  "status": "PASS",
+  "variables": 184
+ },
+ "scope": "residue-A, B=84, D43 full 218-row presentation",
+ "source_to_nf_mod_p": {
+  "aggregate_trace_sha256": "59f795b6489b3ecafa316bbf75a6d4bce318812fac868da479e047f7314170ed",
+  "certificate": "/Users/dc/code/math/jc2/cases/d43_nf_trace_p105337.json",
+  "certificate_sha256": "2db9d8556b3c615c1d71536e7dc2c7128cf2fa7b613bef2ecfb816f93975f510",
+  "checkpoint_matches": "184/184",
+  "identities": "184/184",
+  "nf_terms": 38871970,
+  "raw_terms_after_grouping": 24882668,
+  "rows": 184,
+  "status": "PASS",
+  "trace_quotient_terms": 102883725
+ },
+ "special_fiber_linear_data": {
+  "certificate": "/Users/dc/code/math/jc2/cases/d43_char0_lift_p105337.json",
+  "certificate_sha256": "81eae319fb02ade7369be0c192162925bf63ebc52edc97a99348acb3524b9f3c",
+  "jacobian_rank": 131,
+  "tangent_dimension": 53,
+  "unit_minor_determinant_mod_p": 810
+ },
+ "status": "STAGE 2 OPEN"
+}
