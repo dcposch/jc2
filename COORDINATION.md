@@ -32,6 +32,8 @@ exactly one place: the roster at the bottom.
    certificate does not support.
 3. **Bank everything.** Findings, decisions, corrections, and dead ends go to
    `notes.md` the tick they happen. Negative results are kept deliberately.
+   At end of day the coordinator appends the day's digest entry (newest first)
+   to `PROGRESS.md` — the one-entry-per-day campaign log.
 4. **Lane isolation.** One lane, one task, one deliverable path. Lanes do not
    edit shared state (`notes.md`, `AUDIT.md`) — the coordinator banks.
    After installing any third-party CLI, smoke-test existing lanes.
