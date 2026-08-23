@@ -3227,3 +3227,78 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   * PENDING: pytest regression (background), reorg commit, local dir rename
     jc72108 -> jc2 + symlink re-point (notes.md, plan-72-108.md) + compat
     symlink jc72108 -> jc2 (keeps 35 historical prompt-file abs paths valid).
+
+## 2026-08-23 ~13:45 REORG COMPLETE (commit 76e5346); repo is now ~/code/math/jc2
+- Layout live: ladder/ (44 docs) + jc72108/ (10 docs + run_probes.sh +
+  setup_remote.sh + runs/ + systems/ data, ignored) + papers/ (paper1, paper2 +
+  LEMMA*, SURPLUS*, RESIDUE) + archive/ (phase0 drafts, ox.sh). Root: README,
+  notes.md, AUDIT, APPROACHES, COORDINATION.md + side-avenue docs (avenues/
+  decision still open w/ DC).
+- MODEL-AGNOSTIC protocol live: COORDINATION.md (roles/invariants/hazards/
+  bootstrap; roster = only place model names appear); ops/lane.sh <adapter>
+  <tag> <promptfile> + ops/adapters/{codex,grok}.sh; sol_lane.sh = compat shim.
+  Launch pattern from now on: nohup sh ops/lane.sh codex <tag> <pf> etc.
+- SIMPLIFICATION (DC): NO reorg symlinks. run_probes.sh/setup_remote.sh moved
+  INTO jc72108/ next to their data (relative paths intact, remote-safe); 12
+  code files' paths updated (3 relative + absolute /Users/dc/code/math/jc72108
+  -> /Users/dc/code/math/jc2 sweep, incl r1_fullcore OUT_DIR + runs path).
+  Kept only DC's 2 pre-existing ~/code/math shortcuts, re-pointed.
+- INCIDENT (owned + fixed): my `cat > .gitignore` CLOBBERED the existing
+  .gitignore -> git add -A tried to sweep the 19GB systems/ tree (commit
+  timeout). Restored full old ignore set (+ .DS_Store, - stale papers/ rule so
+  first-party papers/ is tracked). LESSON: never blind-overwrite dotfiles;
+  check existence first (this violated my own look-before-overwrite rule).
+- Acceptance: pytest 38 passed / 3 pre-existing failures (reproduced exactly at
+  pre-reorg checkpoint: python-flint missing x2, flaky farm dry-run gate);
+  stale-path sweep 0 in code. Remote -> github.com/dcposch/jc2.git. PUSH NOT
+  DONE (holding for DC go-ahead).
+- OUTSTANDING for DC: (1) README says July 2026 for the dim-3 counterexample
+  (DC wrote June; posted 2026-07-20 -- awaiting call); (2) avenues/ dir for the
+  6 side-avenue docs; (3) push authorization; (4) B=168 scale test.
+- QUEUE next (math): recover d43red band checkpoints (box01) -> common integral
+  model -> dimension/flatness -> Hensel cert (stage 2); DIR/RPC attack; daily
+  external sweep due.
+
+## 2026-08-23 ~14:00 DC decisions: pushed to jc2 master; July confirmed; B=168 FUNDED (held)
+- PUSHED f875dc9..76e5346 to github.com/dcposch/jc2 master (reorg is public).
+- README month: DC confirms July 2026 correct (dim-3 counterexample posted
+  2026-07-20). README stands as written.
+- **B=168 DOUBLED-SCALE TEST: FUNDED by DC, DO NOT KICK OFF YET.** (The direct
+  unbounded-scale probe of A-SCALE: re-emit the residue-A tower at B=168,
+  kappa=84, decide mod-p survival at depth. Await DC's explicit go.)
+- avenues/ question pending DC answer (7 side-avenue docs at root).
+
+## 2026-08-23 ~14:15 d43red checkpoints RECOVERED; stage-2 completion lane + sweep #8 launched (new runner's first flight)
+- Recovered box01:cases43/d43red/ -> cases/d43red/ (40 files, 1.8GB, both
+  primes, band{6..42} + summaries). Added cases/d43red/ to .gitignore
+  (regenerable; canonical on box01). SG was current; box01 reachable.
+- Launched via the NEW model-agnostic runner (ops/lane.sh codex ...):
+  * sol-d43int = finish stage 2: common integral model from the recovered
+    checkpoints (the audit sol-clift couldn't run) + dimension/generation/
+    flatness at the witness (moving off the degenerate FREE=0 origin if
+    needed) -> standard-smooth -> Hensel -> FIRST CERTIFIED CHAR-0 D43 POINT.
+  * websweep-0823 = daily external sweep #8 (van Rijn, Palomar, MO 513413,
+    Zenodo, arXiv, actors).
+- B=168: funded by DC, HELD for his explicit go (do not launch).
+- avenues/ still awaiting DC answer.
+
+## 2026-08-23 ~14:25 avenues/ cleanup + COORDINATOR HANDOVER PREP (Sol test)
+- avenues/ created per DC: DC2-PROGRAM, DC2-REVIEW, ZHEGLOV-LTEST, ZHEGLOV-SCOPE,
+  MATHIEU, MATHIEU-REVIEW, conjectureE-plan moved. Root = exactly 5 canon docs
+  (README, notes.md, AUDIT, APPROACHES, COORDINATION). Pushed.
+- DC will run SOL AS COORDINATOR to test the decoupling. HANDOVER STATE:
+  * IN FLIGHT (2 lanes, launched ~14:15 via ops/lane.sh codex ...):
+    - sol-d43int -> xmodel/sol-d43int.md: stage-2 completion (integral model
+      from cases/d43red/ checkpoints + dimension/flatness -> Hensel). If it
+      lands a standard-smooth certificate = FIRST CERTIFIED CHAR-0 D43 POINT
+      (major; needs hostile review by a non-producer model before promotion).
+    - websweep-0823 -> xmodel/websweep-2026-08-23.md: daily sweep #8; handle
+      ACTIONABLE items per prior sweeps' format.
+  * QUEUE after harvest: Grok-review any promotable d43int result; then next
+    math targets are DIR/RPC (G5) and UCD-A-min (G2) per AUDIT 2026-08-23
+    entries; B=168 scale test FUNDED BUT HELD for DC's explicit go.
+  * HOLDS: B=168 (DC go required); no full-file msolve ever; push freely is NOT
+    standing policy (DC authorizes pushes).
+  * The outgoing coordinator's loop STOPS at handover (single-coordinator rule;
+    see COORDINATION.md roles). Incoming coordinator: bootstrap per
+    COORDINATION.md, then read this file bottom-up.

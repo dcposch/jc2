@@ -1,0 +1,1462 @@
+Reading additional input from stdin...
+OpenAI Codex v0.149.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a03077-dad3-73e0-8091-45e324ad1217
+--------
+user
+You are the daily external-sweep lane. Repo: /Users/dc/code/math/jc2. Read the
+two most recent sweeps (xmodel/websweep-2026-08-22.md, xmodel/websweep-2026-08-21.md)
+for the watchlist and format, then run sweep #8 for 2026-08-23. Write
+xmodel/websweep-2026-08-23.md.
+
+Watchlist (established): (1) van Rijn repo daily-watch (any new commits/results);
+(2) Palomar registry new entries (esp. anything JC-related; our entries are
+PALOMAR-2026-08-19-000005 + PALOMAR-2026-08-20-000001); (3) the MathOverflow
+thread 513413 (new answers/comments; ratto3423 "write-up in preparation" status;
+reactions to DC's answer 514446); (4) our Zenodo records (21894922, 22002825 --
+download/citation activity if visible); (5) arXiv new: plane Jacobian
+conjecture, (72,108), Newton polygon exclusions, Dixmier; (6) Mathstodon/Zulip
+chatter on JC2; (7) the other (72,108) actors (Helali, Suzuki, Ishihara, Strinz,
+Leox) for new artifacts. Flag each finding QUIET / NOTE / ACTIONABLE with a
+one-line recommended action for ACTIONABLE items. Terse.
+codex
+I’ll mirror the established sweep format, then check each watchlist source for changes through 2026-08-23 and write the new report in place.
+exec
+/bin/zsh -lc "pwd && rg --files -g 'AGENTS.md' -g 'xmodel/websweep-2026-08-2*.md' | sort" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+/Users/dc/code/math/jc2
+xmodel/websweep-2026-08-20.md
+xmodel/websweep-2026-08-21.md
+xmodel/websweep-2026-08-22.md
+
+exec
+/bin/zsh -lc "sed -n '1,260p' xmodel/websweep-2026-08-22.md && sed -n '1,260p' xmodel/websweep-2026-08-21.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+# Web sweep — 2026-08-22 (run ~05:25Z Aug 23, evening Aug 22 PT; deltas vs websweep-2026-08-21.md ~15:45Z)
+
+Scope: changes since yesterday's sweep. (Relaunched sweep — the first Aug-22 attempt died on
+credits before touching any source; this is the full run.) Sources hit: Stack Exchange API
+(q513413 q+answers+timeline, a/514446 probe, a/513493 comments, Q514380 q+answers+comments+
+timeline+answer-comments, ratto3423 user), arXiv API (phrase + author + cat queries, https),
+Zenodo REST (our 2 + watched 4, JC search, citing probes, Strinz-creator search), Palomar
+registry (recent.json FULL 47-entry enumeration + feed.xml + per-entry detail for Lezeau/ours),
+GitHub REST (PalomarArchive org, Paul-Lez, Alacosta2025, FORTUNE-Didier, wstrinz ×2,
+royvanrijn incl. full tree + file pulls, created:>Aug-21 search), Tao blog comments (curl +
+browser UA, 29 enumerated), Lean Zulip #Palomar (browser spectator, full rendered channel),
+Mathstodon API (tags ×2, @tao account, Jose_A_Alonso statuses), web search. X secondary-only.
+
+**Executive summary (5 lines):**
+1. **NEW ACTOR — the day's biggest delta: Roy van Rijn (royvanrijn/jacobian-research, "Vibing
+   verifiable math", created Jul 20, pushed minutes before this sweep).** His plane-jc/ tree
+   claims a **determinantal closure of the (72,108) Laurent systems** (Aug 1: GGHV Prop 4.3's
+   two systems inconsistent over char 0 ⇒ pair + swap excluded, frontier 125 — explicitly
+   conditional on the published GGV/GGHV reduction, final sections "make no theorem claim"),
+   vendors Helali's 21479814, and ALSO runs an active (75,125) F2 programme AND an
+   **HC4⇒JC2 program — our APPROACHES row-10 avenue**. He cites Helali/GGHV, never us.
+2. **Strinz opened a second front: wstrinz/plane-jacobian-75-125** (created Aug 22 10:01Z,
+   14 commits same day) — open-problem-framed carrier/root-jet study of the OTHER degree-125
+   pair, with .zenodo.json + CITATION.cff + "Palomar preview" + a Comparator/NanoDa-verified
+   Lean K5 criterion ready; his 72-108 repo got "Record clean Palomar full-stack replay"
+   (Aug 23 02:37Z). Zenodo + Palomar 14R15 landings from Strinz look imminent, on BOTH pairs.
+3. **Lezeau PUBLISHED: PALOMAR-2026-08-21-000006** (Lezeau + Dean Cureton, 14R15/math.AG+AC)
+   — abstract is purely the dim-3 generalized-JC disproof ("formal-conjectures formalisation
+   remains the reference statement"); no plane-case framing, no citation of us. Registry now
+   has 3×14R15; ours remain the ONLY plane-JC/(72,108) entries. Carry-over CLOSED.
+4. **Registry UNFROZE: 19 → 47 published entries** — Morrison fixed the publication bug (Zulip,
+   "all of these ... are now live"); backlog incl. google-deepmind/formal-conjectures and
+   CBirkbeck flushed. Zulip also delivered: **Vakil (Tao+Morrison concurring) told a new
+   AI-result author "Palomar first, then arXiv"** — our exact sequence is now the recommended
+   template — plus v2 mechanics (resubmit same repo+comparator path ⇒ v2, same ID), and
+   Ericson's report that arXiv cs.LO/math.LO REJECTED his long formalization (moved to HAL).
+5. Everything else quiet: MO q513413 static (views +29, ratto3423 dormant 10d), Q514380 grew an
+   LLM-authorship comment spat (no JC), arXiv totals unchanged (218/25, GGV idle, no
+   bidegree-extinction or (72,108) paper), Zenodo flat (ours 19/9 views, +1 each, 0 citations;
+   watched four unchanged), tags/Tao/Alonso/X silent, Alacosta + FORTUNE-Didier untouched.
+
+**Delta count: 6 substantive (3 ACTIONABLE, 3 CONTEXT). Everything else checked and
+unchanged — see NONE.**
+
+---
+
+## ACTIONABLE
+
+### D1. Roy van Rijn: full public JC2 research program incl. a claimed (72,108) closure and
+### our HC4⇒JC2 avenue — new to us, invisible to prior sweeps, discovered via Strinz's citations
+- Repo: royvanrijn/jacobian-research ("Vibing verifiable math"), created 2026-07-20, 5 stars,
+  5,895 files, pushed 2026-08-23T04:07Z (actively working RIGHT NOW, currently on an unrelated
+  Elkies-K3/Q80 lane). Invisible to our created:>date GitHub searches all month (repo predates
+  them); surfaced only because Strinz's NOVELTY_MATRIX cites him heavily.
+- **(72,108): plane-jc/JC2_72_108_DETERMINANTAL_CLOSURE.md** (last commit Aug 1, "Close the
+  JC(2) (72,108) certificate gaps (#20)"): via t=xy², z=y⁻¹ band systems (J4..J1), claims the
+  two GGHV-Prop-4.3 Laurent systems are inconsistent over char 0 — "**assuming the published
+  general GGV/GGHV reduction and degree classification**, the degree pair (72,108) (and its
+  swap) is excluded and the published frontier becomes 125." Structure: exact unit-ideal
+  certificates (RANKDROP_EXACT_UNIT_PASS etc.), Case-1 hard ideal proved = (h,N) by a small
+  determinantal computation, mu_7 quotient descent, Case 2 as binary-octic complete
+  intersection, plus a PROP43_EXHAUSTIVENESS_AUDIT.md front-end audit. Companion
+  PAIR_72_108_REPRODUCTION.md (Aug 6) is scrupulously classified (external reduction / local
+  reproduction / interpretation) and its final section "makes no theorem claim". He VENDORS
+  Helali's Zenodo 21479814 under plane-jc/external/ — same certificate lineage we crosschecked.
+- **Read**: this is a FOURTH replication line for the bound-125 exclusion (Helali, Suzuki, our
+  audited s2/c1, now Roy's determinantal reconstruction) — same conditional shape as ours
+  (rests on published GGV/GGHV), not a scoop of the deeper campaign; but it is the first
+  public actor to close Case-1 opacity structurally, and priority/citation courtesy toward
+  Helali is his, not ours.
+- **HC4: HC4_RANK_THREE_WRONSKIAN_TO_JC2.md + JC2_HC4_SHARED_BOUNDARY_PROGRAM.md** (active) +
+  an archived superseded branch — an external actor is independently working APPROACHES row
+  10, the Sol-9/10-vs-Grok dissent we adjudicated Aug 21. Also archive/plane-jc-closed-branches
+  (Belyi reduction, Laurent normal form, dual-Schur — his dead ends, free reconnaissance).
+- **(75,125)**: F2_75_125_{DERIVATION, CARRIER_WRONSKIAN_CLASSIFIER, CARRIER_SPECIALIZATIONS,
+  NONLINEAR_FORCING}.md + ~15 generated-results JSONs — his tested return packet keeps both
+  roots of 27y²−9y+1 through v¹⁰ where Strinz's K5 kills generic roots (see D2; the two
+  disagree only in uncrosswalked coordinates — both say so).
+- **Actions:** (a) spin an adjudication lane (Sol implements, Grok hostile): replay Roy's
+  Case-1 (h,N) determinantal reconstruction + PROP43 exhaustiveness audit against our audited
+  chain — agreement strengthens bound-125 to 4 independent lines, disagreement is maximal
+  alarm; (b) mine his HC4 program against our row-10 adjudication verdict; (c) clone the repo
+  and full-grep for any (72,108)-beyond-Prop-4.3 or 125-locus overlap with our unpublished
+  program (only file heads read today); (d) add royvanrijn/jacobian-research to the DAILY
+  watch (commits stream); (e) cooperative posture per RACE SPIRIT: he cites Helali properly
+  and firewall-labels claims — a candidate for the coordinated-note tier, DC decides.
+
+### D2. Strinz launches the (75,125) frontier repo with Zenodo+Palomar landing gear, and
+### replays the Palomar stack on his (72,108) repo — 14R15 neighbors imminent
+- wstrinz/plane-jacobian-75-125 created 2026-08-22T10:01Z, 14 commits through 20:11Z. Framing
+  is exemplary-honest: "**Status — open problem.** No degree-(75,125) exclusion or
+  counterexample is claimed"; carrier K3/K4 root-jet classification, K5 kills generic roots
+  (resultant 63), K6/K7 partial, K8 Chang–Wang selector cancels; front-end reduction lemma
+  (75,125) → GGV F2, j=1, A0=(5,20), gcd 25 over Kbar (uncomposed with the carrier theory);
+  Gate-B census 26/32 cells, six largest open. NOVELTY_MATRIX pins the landscape publicly:
+  "Below maximum degree 125, every candidate is excluded except (72,108) and its swap (GGHV
+  2022)... it does not classify or exclude the degree-125 pair (75,125)."
+- Landing gear present: .zenodo.json (title "The degree-(75,125) frontier of the plane
+  Jacobian problem"), CITATION.cff, RELEASE_NOTES, Lean formalization of a local K5 criterion
+  "replayed through Comparator, Lean's kernel, and NanoDa", commits "Prepare publication and
+  Palomar preview" + "Align Zenodo release metadata". No Zenodo record exists yet (creator
+  search: only 21633408). Old repo: wstrinz/plane-jacobian-72-108 newest commit
+  2026-08-23T02:37Z "Record clean Palomar full-stack replay" — he is rehearsing submission on
+  BOTH repos.
+- References: GGV/GGHV, Roy van Rijn (six uncertain-priority/overlap rows, pinned to his
+  commit 654a6026) — **no reference to us, our DOIs, or jc2-lean anywhere** (grepped all top
+  docs: only the GGHV-(72,108) landscape row).
+- **Actions:** (a) daily watch for his Palomar registrations (both pairs) and the 75-125
+  Zenodo DOI; when they land, ours stop being the only campaign-style 14R15 artifacts — the
+  papers' positioning line ("first/only plane-JC entries") must be timestamped; (b) his
+  (75,125) reduction + Roy's programme = the post-(72,108) frontier forming publicly NOW —
+  feed both into the next avenue-expansion round (do we want a (75,125) stake, or explicit
+  complement-citation posture?); (c) no tripwire on our unpublished specifics: nothing on
+  (72,108) beyond GGHV restatement, no Newton-corner/125-locus overlap with our program.
+
+### D3. Lezeau's entry published — dim-3 disproof comparator, exactly the complement slot;
+### carry-over action CLOSED
+- PALOMAR-2026-08-21-000006 v1, published 2026-08-21T11:10:13Z (the fork-time we predicted),
+  authors **Paul Lezeau + Dean Cureton**, 14R15 / math.AG+math.AC, trust high, theorem
+  JacobianConjecture.jacobian_conjecture, commit b244ea4. Abstract: "self-contained version of
+  the formal-conjectures formalization... disproves the generalized Jacobian conjecture over
+  every nontrivial commutative ring using an explicit determinant-one polynomial self-map in
+  three variables. The formal-conjectures formalisation remains the reference statement."
+- No JC(2)-open framing in the abstract, no reference to our entries/DOIs. Registry 14R15
+  census: his dim-3 disproof + our TheoremA + our VertexGap22 — ours remain the only PLANE-JC
+  entries, first-mover intact.
+- **Action:** slot PALOMAR-2026-08-21-000006 as the dim-3 complement citation in paper1
+  v5/paper2 (with the Cureton co-author and formal-conjectures lineage); our own PALOMAR-ID
+  propagation into the reference lists should land now (his entry is already public).
+
+---
+
+## CONTEXT
+
+### D4. Registry publication pipeline FIXED: 19 → 47 entries; our two intact; archive at 65
+- recent.json (fetched ~05:20Z): 47 entries, newest PALOMAR-2026-08-22-000010 (23:31Z Aug 22).
+  The Aug 20–22 backlog flushed: rwst, Vulkin-prog, benkeene, sloisel, catskillsresearch,
+  ehrlich-b ×3, lennrt ×5, mbaccaro-dev ×6, teal-sea ×2, williamjblair, xiangyazi24 ×2,
+  adas1236, ashebson, stalex444 ×2, elliotglazer, yuanchenyang, teorth/sendov, guanyangwang,
+  vo-rodrigues, WillWhistler, **google-deepmind/formal-conjectures (PALOMAR-2026-08-20-000005,
+  11D41/12E05 — DeepMind is now a registrant)**, **CBirkbeck/uniform-sheafy-tate-domains-lean
+  (14G22/12J25 — nearest new math.AG-adjacent entry, professional-mathematician actor)**.
+  Zulip: Morrison "I think I've now fixed the underlying problems, and all of these (and
+  others!) are now live." Ericson's submission alone still jammed ("operator attention").
+- Our entries re-verified byte-level in recent.json: both v1, registered, trust high,
+  abstracts/theorem names/commits unchanged. jc2-lean 1 star/1 fork. PalomarArchive 57→65
+  repos; new forks match the new publications (+ leanprover cslib, alejandro-soto-franco).
+
+### D5. Zulip #Palomar new since yesterday: registry-first endorsed as advice, v2 mechanics,
+### arXiv-rejects-formalization signal
+- **Benjamin Dozier (Aug 22): "I have a proof (found with AI) of a new result... paper...
+  autoformalized"** — asks arXiv/Palomar sequencing. **Vakil: "Palomar first, then the arXiv
+  entry can refer to Palomar. Then later update the Palomar entry to point to arXiv"** (Tao +
+  Morrison endorse-reacted); Morrison: resubmitting the same repo+comparator auto-creates v2
+  under the same ID. The register-before-preprint pattern we executed is now the advice given
+  to third parties in the project's own channel.
+- **Lars Ericson**: arXiv cs.LO/math.LO rejected his 1,500-page Lean formalization submission
+  ("topic not covered") after 3 weeks — he moved to HAL.science; "credential it on Palomar
+  and then submit the writeup on HAL". Weak but notable venue signal for formalization-heavy
+  write-ups (our papers are conventional math manuscripts — low direct risk).
+- Ops texture: ProofWidgets trusted-cache + Verso-tag renderer bugs fixed same-day; Morrison
+  on semantic matching of formal vs informal statements: "so far we just trust Sol to get it
+  right" + an open invitation for research on the problem. Zero Jacobian mentions channel-wide.
+
+### D6. Discussion-layer churn, no JC content: Tao blog 27→29; Q514380 authorship spat
+- Tao blog: +2 comments — Anonymous (Aug 21): autoformalization-of-the-literature anxiety
+  ("all our papers and books will probably get autoformalized... machines possibly finding
+  mistakes"); Ericson (Aug 21): the registration-jam report (now resolved, D4). Tao himself
+  quiet on blog + Mathstodon since Aug 19 (last_status_at).
+- Q514380: views 4,122→4,450, score 31; GH-from-MO revised his answer twice (Aug 22 ~16:50Z,
+  score 17→18) and a fresh comment exchange ran Aug 22 19:38–23:56Z — Vladimir Zolotov vs GH
+  on whether LLM-written cleaner proofs may be pasted under one's own authorship. Community
+  authorship norms still contested; nothing touching JC, us, or the registry.
+
+---
+
+## NONE (checked this sweep, no change vs yesterday)
+
+- **MO q513413 static:** views 8,665 (+29), score 49, 4 answers (KConrad 56, Eremenko 52,
+  Procesi 20, ratto 14), protection event unchanged (Yemon Choi Aug 20 00:15:41Z), newest
+  timeline item = Aug-21 vote aggregate (the Procesi +1 already reported); no new comments;
+  a/514446 still deleted (API zero items).
+- **ratto3423: dormant 10 days** (rep 151, last access 2026-08-12 09:03Z; write-up 30 days
+  unmaterialized).
+- **arXiv silent:** all:"Jacobian conjecture" 218 (newest still Pissolato Aug 19); "Keller
+  map" 25 (newest Aug 12); Valqui 39 / Guccione 79 totals unchanged (newest June cycle-sets —
+  GGV idle); cat:math.AG/math.AC abs:jacobian nothing since Aug 19/Aug 12;
+  all:"bidegree extinction" = 0. **No (72,108)/125 arXiv write-up — the only tripwire event
+  is Roy's GitHub-resident Aug-1 closure (D1).**
+- **Zenodo flat:** 22002825 19 views/18 uniq/0 dl (+1); 21894922 9/7/0 (+1). Watched: Helali
+  21479814 1068/8 (=), Suzuki 21483636 98/7 (=), Strinz 21633408 9/1 (=), Ishihara 21757679
+  55 (+1)/8 — no version bumps. JC search 115→116 but nothing newer than Aug 8 (metadata/index
+  drift, no new JC record). Citing probes: only our own two records — zero external citations.
+- **FORTUNE-Didier**: jc2-formalization untouched since Aug 20 08:01Z; no arXiv/Zenodo
+  materialization of the bidegree-extinction program.
+- **Alacosta2025**: no commits since Aug 20 16:43Z; still absent from registry + archive org.
+- **Mathstodon:** #jacobianconjecture newest still KilleansRow Aug 16; #leanprover routine
+  (Lean FRO roadmap, Alonso Calculemus); Alonso's registry-broadcast series stopped Aug 20 —
+  still never ours; Tao feed silent since Aug 19.
+- **GitHub search created:>Aug-21**: 3 hits, only wstrinz 75-125 relevant (D2); teerthsharma/
+  monodromy + Cargo-Cult-Research/lego-rl unrelated.
+- **X/Twitter secondary:** nothing new — searches still resurface July-era media only; no
+  Palomar+Jacobian crossover, no van Rijn/Strinz coverage, no mention of our entries.
+
+## Coverage limits (today)
+- royvanrijn/jacobian-research: 5,895 files; only the (72,108)/HC4/(75,125) doc heads and
+  commit stream were read — NOT yet cloned/full-grepped for references to our objects; his
+  claim chain (unit certificates, PROP43 audit) is UNVERIFIED by us as of this sweep.
+- Strinz 75-125: top-level docs + metadata read; proofs/, gate_b/, lean/ directories not
+  audited.
+- Zulip: browser spectator rendered window only (full channel text captured this time; DMs/
+  private streams invisible by design). Ericson's jammed submission detail is his account.
+- SE deleted-post invisibility carried (a/514446). Palomar pending queue proxied via archive
+  forks. WebFetch 403 on terrytao.wordpress.com carried (curl+UA worked).
+- Sweep ran ~14h late (credit outage) — "today" deltas span Aug 21 15:45Z → Aug 23 05:25Z.
+
+## Suggested next actions (not started)
+1. D1: Sol+Grok adjudication lane on Roy's (72,108) determinantal closure + PROP43 audit vs
+   our audited chain; clone + full tripwire grep; add his repo to the daily watch; DC call on
+   coordinated-note outreach.
+2. D1/D2: feed the public (75,125) frontier (Roy + Strinz, uncrosswalked disagreement at K5/
+   first-return) into the next ideation round — complement-citation posture vs a stake.
+3. D3: cite Lezeau PALOMAR-2026-08-21-000006 as the dim-3 complement; land our PALOMAR-ID
+   propagation in paper1 v5/paper2 NOW (his entry is public; Strinz's are coming).
+4. D2: re-timestamp all "only 14R15/JC entries" claims in drafts against recent.json at
+   citation time.
+5. Carry-overs: Zenodo keyword polish on next version; Ishihara one-command verification;
+   Suzuki identity reconciliation; phase-2 single-headline-repo decision (Zulip D2 yesterday).
+# Web sweep — 2026-08-21 (~15:45Z; deltas vs websweep-2026-08-20.md)
+
+Scope: changes since yesterday's ~13:50Z sweep. Sources hit today: Stack Exchange API (q513413
+question+answers+timeline, a/514446 direct probe, a/513493 comments, Q514380 q+answers+comments,
+user endpoint ratto3423), arXiv API (phrase + author + cat:math.AG queries, https), Zenodo REST
+(our 2 + watched 4 records, newest-JC search, citing-record probes), Palomar registry
+(recent.json full 19-entry enumeration w/ per-entry detail + feed.xml cross-check + main-site
+probe), GitHub REST (Paul-Lez commits/diffs/forks, PalomarArchive org enumeration, actor repos,
+created:>Aug-20 search, FORTUNE-Didier content pull), Tao blog Palomar post comments (all 27,
+full bodies), **Lean Zulip #Palomar READ IN FULL for the first time** (browser spectator mode —
+channel became Web-public Aug 18 19:56; anonymous curl API is blocked), Mathstodon API (tags
+#jacobianconjecture + #leanprover, @tao statuses ×20), web search ×3 + DDG ×2. X secondary-only.
+
+**Executive summary (5 lines):**
+1. **Lezeau's dim-3 JC comparator is IN the Palomar pipeline**: PalomarArchive forked
+   Paul-Lez/jacobian-conjecture at 11:10Z TODAY (= submission/registration event), after two
+   morning commits; classification 14R15 + math.AG/math.AC — our exact MSC slot; sources cite
+   Alpöge/Wikipedia/Tao-blog only, NOT us. Published registry still lists only OUR two
+   Jacobian/14R15 entries — first-mover position held; theirs publishes as #2 (complement).
+2. **Zulip #Palomar fully read (new standing channel, now web-public)**: registry publication
+   lag is a KNOWN issue (3 users report registered-but-unlisted entries; "a lot of traffic") —
+   explains recent.json frozen at 19 entries for ~38h while PalomarArchive hit 57 repos (~10
+   fresh submissions queued, incl. Lezeau, who was in-channel debugging his submission at 01:42Z
+   today). Automated reviewer model disclosed in a user's report: **codex:gpt-5.6-sol**.
+3. **Tao ANSWERED the "register before preprint?" blog question: YES** — "we will increasingly
+   have to also permit the registration of formal proofs before a preprint written to
+   professional standards is available," plus explicit handoff-of-authorship language. Our
+   registry-first sequence is now the founder-endorsed pattern. (Blog comments 18→27; also: a
+   GPT-5.6-Sol-solved 73-year-old problem [Wallace] was accepted "in less than an hour".)
+4. Two more JC-ecosystem actors moved: **Alacosta2025** is fixing a "Palomar verification
+   error" on their counterexample formalization (third JC actor in the pipeline);
+   **FORTUNE-Didier/jc2-formalization README now readable** — a "JC2 Bidegree-Extinction"
+   plane-JC STRATEGY manuscript (human+Claude, "not a claimed theorem", Abhyankar–Moh anchored;
+   no (72,108)/125/our-artifact references — tripwire NOT triggered).
+5. Everything else quiet: MO static post-deletion (q513413 protection unchanged, no new
+   answers/comments anywhere, ratto3423 dormant 9 days), arXiv totals unchanged (218/25, GGV
+   idle), Zenodo flat (22002825 plateaued at 18 views, no bumps/citations), tags quiet, Alonso
+   broadcast 4 more registry entries on Mathstodon but skipped ours again.
+
+**Delta count: 6 substantive (2 ACTIONABLE, 4 CONTEXT). Everything else checked and unchanged —
+see NONE.**
+
+---
+
+## ACTIONABLE
+
+### D1. Lezeau JC comparator submitted to Palomar TODAY — 14R15/math.AG+AC, no citation of us;
+### our first-JC slot still holds in the published registry
+- GitHub: Paul-Lez/jacobian-conjecture pushed 08:48Z today (was idle since Aug 19 15:54Z);
+  now 1 star, 1 fork — the fork is **PalomarArchive/Paul-Lez--jacobian-conjecture--13e84929e25d
+  created 2026-08-21T11:10:40Z** (archive forks are created at submission/registration). Two new
+  commits, both to formalization.yaml: "add extra reference" (08:28Z — adds Tao's blog
+  "digestion" post) and "source roles" (08:48Z — role strings for Alpöge X post / Wikipedia /
+  Tao blog). Diff confirms classification `arxiv: [math.AG, math.AC]`, `msc2020: [14R15]` —
+  identical slot to ours. **No reference to our entries, DOIs, or repo anywhere in the diffs.**
+- Zulip corroboration: Paul Lezeau posted in #Palomar at 01:42Z today reporting a submission-form
+  bug ("sources entry 3 relationship must be at most 500 characters" on an empty field) —
+  actively pushing his submission through overnight; fix was shipped by maintainer Aayush
+  Rajasekaran by 06:19Z.
+- Published registry (recent.json + feed.xml, both fetched ~15:20Z): STILL 19 entries, newest
+  published_at 2026-08-20T01:23:54Z — Lezeau's entry not yet listed, so ours remain the ONLY
+  Jacobian/14R15 entries in the public list; given D3 (publication lag), assume his entry is
+  effectively registered and will surface within ~a day.
+- **Actions:** (a) tomorrow, capture his PALOMAR ID + abstract when published; verify the
+  abstract frames JC(2) as open and position it as the dim-3 complement citation in paper1
+  v5/paper2; (b) our queued propagation of PALOMAR-2026-08-19-000005 / -08-20-000001 into the
+  papers should land BEFORE their entry is public (clean first-mover citation graph); (c) no
+  outreach needed — their sources list shows they know the Tao-blog lineage, not ours; the
+  complement relationship is symmetric and can be established from our side in print.
+
+### D2. Zulip #Palomar READ (first full read; add browser-spectator route to standing ops) —
+### registry mechanics, reviewer identity, and phase-2-relevant submission guidance
+- Access: channel 621638 went **Web-public Aug 18 19:56** (Notification Bot event in-channel).
+  Anonymous API (curl /api/v1/messages + /json/messages, with csrf/register handshake) returns
+  UNAUTHORIZED realm-wide — the working route is browser spectator mode (used today).
+- JC-relevant intelligence harvested:
+  - **Publication lag is known and registry-wide** (see D3): Ralf Stephan ("successful
+    submission... empty registry page: entry not found"), Moritz Firsching ("Registered...
+    ~10h ago... hasn't appeared"), Ben Keene ("Thirding, I imagine there is a lot of traffic").
+  - **Automated review = codex:gpt-5.6-sol** (from Ben Keene's pasted review report:
+    "Reviewer models: codex:gpt-5.6-sol"). Our own co-researcher model family is the registry's
+    reviewer — relevant to how our phase-2 abstracts/Challenge files will be read.
+  - **Tao's draft About-page AI policy** (Aug 18 19:55Z, in-channel, 4 reactions): AI-generated
+    submissions explicitly allowed; formalization.yaml must record automation methods
+    ("or manual"); submitter must be a responsible author/maintainer or have approval.
+  - **Multi-result repo guidance (phase-2 structural implication)**: Kim Morrison — large
+    repos with comparator configs pointing at subsets are "mildly discouraged... not going to
+    be as well supported as a repository with a single headline result"; versions amalgamate by
+    (repo, path-to-comparator); per-result formalization.yaml in subdirectories is the accepted
+    layout (Monticone/Kourovka precedent). => our depth-witness certificate should either be
+    its own headline repo or a fixed-path second comparator in jc2-lean, chosen ONCE.
+  - Infrastructure: 5.5h runner wall-clock cap ("we should get some bigger runners" — Morrison),
+    module-system + Verso-renderer bugs being fixed live; Axiom (PrimeGapsLib/246) invited by
+    Ono/Vakil; submission URLs are secrets ("The URL is the password" — do not post ours).
+  - **Zero mentions of Jacobian, our entries, or the MO episode anywhere in the channel.**
+- **Action:** standing sweep now reads #Palomar via browser spectator; log the
+  single-headline-repo preference into the phase-2 (depth-witness) plan.
+
+---
+
+## CONTEXT
+
+### D3. Registry published list frozen at 19 (~38h) while the archive org grew to 57 repos —
+### review pipeline healthy, publication pipeline lagging
+- recent.json + feed.xml: 19 entries, no additions since Aug 20 01:23:54Z. PalomarArchive org:
+  **57 public repos**, with ~10 new submission forks since Aug 20 10:59Z: rwst/Even-Integral,
+  Vulkin-prog/paper-c-lean, benkeene/erdos266, sloisel/MPE-Formal, catskillsresearch/
+  scott_models (= Ericson's "registered today" per his blog comment), ehrlich-b/
+  sequential-products-lean, lennrt/palomar-formalizations, mbaccaro-dev/mathematical-proofs,
+  teal-sea/zeta-lab, Paul-Lez/jacobian-conjecture (D1). None besides Lezeau's is JC-adjacent.
+- Our two entries re-verified in recent.json: status **registered**, trust high, v1, theorem
+  names/abstracts/commits intact and unchanged. jc2-lean 1 star / 1 fork (= archive), no change.
+- Read: "only JC entries in the registry" claims should be timestamped against the published
+  list AND the archive side-channel from now on; the archive fork stream is the earlier signal.
+
+### D4. Tao blog: comments 18→27; "register before preprint?" answered YES (carry-over closed)
+- Comment 694024 (Tao, Aug 19 09:47): authorship stages "will become increasingly decoupled...
+  we will increasingly have to also permit the registration of formal proofs before a preprint
+  written to professional standards is available... we may need a more explicit process to
+  'hand off' the responsibility of authorship from one group to another." The blog twin of the
+  Mathstodon proof-adoption toot (D4 yesterday), now stated as registry policy posture — our
+  registered-before-preprint sequence is the endorsed pattern, and the handoff mechanism is the
+  legitimizing frame for any multi-actor JC2 endgame.
+- Also new: Vinicius Rodrigues comment — Wallace's problem (73y open) solved with GPT-5.6 Sol,
+  formalized, "accepted in less than an hour" (= vo-rodrigues registry entry; public precedent
+  for AI-solved results registering smoothly). Ericson describes the 3-try submission loop +
+  reviewer-engine retries (pipeline texture consistent with D3). No JC mentions; no backlog
+  complaints beyond D3's.
+
+### D5. Two more JC-ecosystem actors in motion (neither tripwire-triggering)
+- **Alacosta2025/jacobian-conjecture-counterexample**: commit Aug 20 16:43Z "Fix ring tactic:
+  use ring_nf per Palomar verification error" — they submitted to Palomar and are iterating on
+  verification failures. Third JC-adjacent actor in the pipeline (dim>=3 counterexample
+  formalization class, not a plane-case competitor).
+- **FORTUNE-Didier/jc2-formalization** (carry-over content probe CLOSED — README + files now
+  readable): "JC2 Bidegree-Extinction Project" — a *proposed proof strategy* for the PLANE
+  Jacobian conjecture (reduction-and-extinction by x2-bidegree; "every impossibility... paid in
+  a single currency — the non-integrality of s = D/d"); explicitly "**not a claimed theorem**";
+  human+Claude collaboration with machine-certified identities, some Lean-kernel-verified
+  components (zero sorry), a formalization blueprint, and honest refutation-trap framing.
+  ~13 files incl. an 84KB exposé (French-titled documents), Abhyankar–Moh anchored. **No
+  (72,108), no degree 125, no Newton-polygon-corner overlap, no reference to our artifacts.**
+  File as the first public third-party JC2 proof-*program* of the post-counterexample era;
+  watch for a Palomar/Zenodo materialization.
+
+### D6. Mathstodon: Jose_A_Alonso broadcast 4 more registry entries Aug 20 14:13–14:31Z —
+### and skipped ours again
+Broadcasts: cardb (Ericson), erdos501 (Glazer), low-rank SOS (Yuan), Regts–Sevenster
+(Whistler) — i.e., the entries published in the SAME Aug 19–20 window as ours, before and after
+our two timestamps. Combined with his Aug-19 batch (Sendov, Sabidussi, de Dios Pont), he has now
+covered 7 of the 9 non-dcposch entries published since Aug 17 and neither of ours. Weak signal
+(his queue, or a deliberate skip of AI-authored/JC entries); no engagement cost either way —
+our discovery surface is the registry itself plus the papers.
+
+---
+
+## NONE (checked today, no change vs yesterday)
+
+- **MO q513413: static.** Views 8,636 (+29), score 49, answer_count 4, protection unchanged
+  (Yemon Choi, Aug 20 00:15:41Z; no new post_state events); a/514446 still deleted (API zero
+  items); only timeline event since: today's vote_aggregate +1 on Procesi (19→20). No new
+  comments anywhere on the thread; Leox's Jul-23 comment still the only one on a/513493.
+- **ratto3423 (top tripwire): dormant 9 days.** Rep 151, last access still 2026-08-12 09:03Z;
+  a/513493 score 14; write-up now 29 days unmaterialized.
+- **Meta-adjacent Q514380 ("About AI and how we publish"): no new content.** Score 30→31, views
+  3,800→4,122, 6 answers unchanged (White 23, Dotsenko 17, GH 17, Kojar 10, Weiss 3,
+  parkingfunc 1); newest comment remains Yemon Choi's Aug 20 00:20Z; newest answer-comment
+  remains GH-from-MO/Jeon Aug 19.
+- **arXiv silent:** all:"Jacobian conjecture" total 218 (newest still 2608.19069 Pissolato);
+  "Keller map" 25 (newest still 2608.12543); GGV (Valqui/Guccione) newest still the June-2026
+  non-JC cycle-sets paper; van den Essen 2023; Zoladek 2025; cat:math.AG+abs:jacobian shows
+  nothing new since Aug 19. **No (72,108) / degree-125 write-up — tripwire quiet.**
+- **Zenodo flat:** 22002825 **18 views / 17 unique / 0 dl (plateau — yesterday's spike did not
+  continue)**; 21894922 8/6/0. Watched: Helali 21479814 v1.0.1 (1068 +2 / 8 dl), Suzuki
+  21483636 v1.1.4 (98 +1 / 6), Strinz 21633408 v1.0.0 (9 = / 1), Ishihara 21757679 v1.3.0
+  (54 +1 / 8) — no version bumps. JC search total still 115 (newest Aug 8). Citing probes: only
+  self-hits; still zero external citations of either DOI.
+- **Mathstodon tags:** #jacobianconjecture unchanged (newest KilleansRow Aug 16). Tao feed: NO
+  new posts since the Aug 19 20:02Z proof-adoption toot (quiet ~44h).
+- **GitHub:** zero new JC repos created since Aug 20 (search). PalomarArchive fork of our repo
+  untouched (pushed Aug 20 00:09:46Z).
+- **X/Twitter secondary:** nothing new — searches resurface only July-era media (kingy.ai,
+  phys.org, sbseminar, biggo/glitchwire aggregators). No mention of Palomar+Jacobian, our
+  entries, or the MO deletion.
+
+## Coverage limits (today)
+- Zulip #Palomar: anonymous API is blocked (UNAUTHORIZED on /api/v1 and /json endpoints even
+  with csrf+spectator-register); browser spectator mode works and was used, but only the
+  rendered recent window was captured (older history not paged; DMs/private channels invisible
+  by design). Search engines do not index the channel.
+- Palomar pending-review queue still not directly visible; the PalomarArchive fork stream is a
+  side-channel proxy (fork creation time ≈ submission/registration, not publication). recent.json
+  lag (D3) means published-list negatives are stale by up to ~1-2 days right now.
+- SE API deleted-post invisibility carried: a/514446's content/votes/deletion actor remain
+  unreconstructible; deleted body visible only to 10k+-rep users on-site.
+- WebFetch is 403-blocked on terrytao.wordpress.com (fetched via curl+browser-UA instead —
+  worked; comment threads beyond the Palomar post not re-scanned today).
+- Mathstodon full-text search remains limited; tag-timeline absence stays weak signal.
+- FORTUNE-Didier documents skimmed via grep + README only (84KB exposé not read line-by-line).
+
+## Suggested next actions (not started)
+1. D1: tomorrow's sweep — capture Lezeau's published PALOMAR ID/abstract; verify JC(2)-open
+   framing; slot as the dim-3 complement citation. Land our own PALOMAR-ID propagation into
+   paper1 v5/paper2 reference lists NOW, before their entry is public (already queued).
+2. D2: fold the single-headline-repo preference into the phase-2 depth-witness plan (own repo
+   vs fixed-path second comparator in jc2-lean — decide once, before any submission).
+3. D2: add browser-spectator #Palomar read to the standing sweep procedure (curl route dead).
+4. D5: watch FORTUNE-Didier for a Palomar/Zenodo materialization of the bidegree-extinction
+   program; if it registers under 14R15 it becomes the third entry in our MSC slot.
+5. Carry-overs: Zenodo optional-keyword polish on next version; Ishihara one-command
+   verification run; Suzuki identity reconciliation.
+
+codex
+The prior sweep’s main carry-overs are Roy van Rijn’s active repo, Strinz’s two publication-ready repos, and the now-unfrozen Palomar registry. I’m treating Aug 23 deltas against the Aug 22 run (~05:25Z), with the same QUIET / NOTE / ACTIONABLE discipline the user requested.
+exec
+/bin/zsh -lc "rg -n \"recent\\.json|Stack Exchange API|royvanrijn|Mathstodon|Zulip|Zenodo REST|api\\.zenodo|api\\.stackexchange|export\\.arxiv|palomar\" xmodel scripts . -g '*.sh' -g '*.py' -g '*.md' --glob '"'!xmodel/websweep-2026-08-2[12].md'"' --glob '"'!xmodel/websweep-2026-08-22.md'"' | head -n 260" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+rg: scripts: No such file or directory (os error 2)
+./notes.md:540:(palomar-registry.org public list -- new entries, esp. math.AG / Jacobian /
+./notes.md:542:(b) Mathstodon (mastodon full-text search is limited -- use the public tag
+./notes.md:548:### Watchlist addition (2026-08-20): Palomar Zulip
+./notes.md:549:The public Zulip #Palomar channel joins the daily sweep (community pulse on
+./notes.md:777:  circulation (van den Essen, Wright, Zhao, Orevkov, Safey El Din) -> X+Mathstodon
+./notes.md:1420:- Palomar (palomar-registry.org, Tao announce 8/18, Lean FRO+ICARM) = Lean
+./notes.md:1465:  full SHA, submit.palomar-registry.org (browser GitHub sign-in route,
+./notes.md:1539:- STATUS PAGE (ONLY access, save this): https://submit.palomar-registry.org/s#ba8977605f4001426ae0752b12d7975098e62da05b32f58295b41f0944e38b1f
+./notes.md:1676:  https://submit.palomar-registry.org/s#4bf62942adf505994f8d9c16dbeead2f785d3e2bb8e228fd7842128bd7098391
+./notes.md:1699:  https://palomar-registry.org/entry?id=PALOMAR-2026-08-19-000005&version=1
+./notes.md:1768:## 2026-08-19 ~18:05 vertex-gap resubmitted (DC, SHA 3cee8100); sweep watchlist +Palomar +Mathstodon
+./notes.md:1814:  priority). WE HOLD FIRST-JC PALOMAR SLOT: both entries live+correct in recent.json (registry
+./notes.md:1816:  mechanism + public Zulip #Palomar (watchlist candidate); 22002825 views 2->18; benign new arXiv
+./notes.md:1826:  2->18. Tao floating "proof adoption" mechanism; Zulip #Palomar added to
+./notes.md:1993:  holds; propagate our PALOMAR IDs into papers before theirs surfaces). Zulip #Palomar read in
+./notes.md:1995:  a known registry-wide issue (recent.json frozen at 19 vs 57 archive repos), reviewer model =
+./notes.md:2496:- 6 deltas (3 ACTIONABLE): NEW ACTOR Roy van Rijn (royvanrijn/jacobian-research, active NOW) claims
+./notes.md:2502:  (DeepMind + Birkbeck in); Zulip: Vakil+Tao advise a third party "Palomar first, then arXiv" = our sequence;
+xmodel/grok-vanrijn.md:1:# Hostile adjudication: Roy van Rijn (`royvanrijn/jacobian-research`)
+xmodel/grok-vanrijn.md:6:Actor: Roy van Rijn, GitHub `royvanrijn/jacobian-research` ("Vibing verifiable math").
+xmodel/grok-vanrijn.md:9:Read: the cloned HEAD at `/tmp/royvanrijn-jacobian-research` (shallow clone of `main`); the (72,108) closure / Prop 4.3 audit / Helali provenance / Case-2 syzygy notes; the HC4 Wronskian, shared-boundary, Schur-descent, and relative-nilpotent master notes; the F2 (75,125) derivation / classifier / forcing notes; `STATUS.md` rows that name those objects. Compared against paper1, `CROSSCHECK.md`, `AUDIT.md`, `hc4-adjudication.md`, `APPROACHES.md` row 10, `FACE-ISOLATION.md`, race doctrine in `notes.md`. Executable check: his `plane-jc/cas/verify_prop43_exhaustiveness.py` was run here and printed `PROP43_EXHAUSTIVENESS_AUDIT_PASS`. The Case-1 `RANKDROP_EXACT_UNIT_PASS` Singular identity was **not** re-run (needs Helali pkl + Singular). No coefficient-level replay of the HC4 master theorem or the F2 live block.
+xmodel/grok-vanrijn.md:158:1. **Daily watch** `royvanrijn/jacobian-research` (already in the sweep's action list). Commit stream, not just the (72,108) files — the HC4 master and F2 live block are the moving parts.
+./README.md:23:- **2026-08-20** · [PALOMAR-2026-08-20-000001](https://palomar-registry.org/entry?id=PALOMAR-2026-08-20-000001&version=1):
+./README.md:25:- **2026-08-19** · [PALOMAR-2026-08-19-000005](https://palomar-registry.org/entry?id=PALOMAR-2026-08-19-000005&version=1):
+xmodel/grok-mo-review.md:4:**Sources:** `AUDIT.md`, `paper1/main.tex`, `REDUCTION.md`; DOIs and the live thread checked against Zenodo records and the Stack Exchange API (2026-08-18).
+./xmodel/grok-vanrijn.md:1:# Hostile adjudication: Roy van Rijn (`royvanrijn/jacobian-research`)
+./xmodel/grok-vanrijn.md:6:Actor: Roy van Rijn, GitHub `royvanrijn/jacobian-research` ("Vibing verifiable math").
+./xmodel/grok-vanrijn.md:9:Read: the cloned HEAD at `/tmp/royvanrijn-jacobian-research` (shallow clone of `main`); the (72,108) closure / Prop 4.3 audit / Helali provenance / Case-2 syzygy notes; the HC4 Wronskian, shared-boundary, Schur-descent, and relative-nilpotent master notes; the F2 (75,125) derivation / classifier / forcing notes; `STATUS.md` rows that name those objects. Compared against paper1, `CROSSCHECK.md`, `AUDIT.md`, `hc4-adjudication.md`, `APPROACHES.md` row 10, `FACE-ISOLATION.md`, race doctrine in `notes.md`. Executable check: his `plane-jc/cas/verify_prop43_exhaustiveness.py` was run here and printed `PROP43_EXHAUSTIVENESS_AUDIT_PASS`. The Case-1 `RANKDROP_EXACT_UNIT_PASS` Singular identity was **not** re-run (needs Helali pkl + Singular). No coefficient-level replay of the HC4 master theorem or the F2 live block.
+./xmodel/grok-vanrijn.md:158:1. **Daily watch** `royvanrijn/jacobian-research` (already in the sweep's action list). Commit stream, not just the (72,108) files — the HC4 master and F2 live block are the moving parts.
+xmodel/websweep-2026-08-16.md:5:Zenodo REST API (15 newest "Jacobian conjecture" records), GitHub search API (~20 of 57 hits, newest-first),
+xmodel/websweep-2026-08-16.md:6:Tao / Speyer / Buzzard / Woit blogs, openconjectures.org, jacobianfun.org, Hacker News, Mathstodon tag API,
+xmodel/websweep-2026-08-16.md:187:  Lean4, keller-map topic, updated Aug 16/17 UTC — active now), Mathstodon user alerad's Lean4 proof
+xmodel/websweep-2026-08-16.md:196:  Mathstodon (KilleansRow, Aug 16: withheld prompts, unvetted results becoming news).
+xmodel/websweep-2026-08-16.md:245:- Mathstodon: public tag API only (20 newest under #JacobianConjecture); other tags/instances unswept.
+xmodel/websweep-2026-08-17.md:3:Scope: changes since yesterday's sweep only. Sources hit today: Zenodo REST API (record + versions
+xmodel/websweep-2026-08-17.md:6:date-ranged math.AG/math.AC query for Aug 13–17), Mathstodon tag API, HN Algolia (date-filtered),
+xmodel/websweep-2026-08-17.md:128:- **Mathstodon #JacobianConjecture:** nothing after KilleansRow Aug 16 (already captured yesterday).
+xmodel/websweep-2026-08-17.md:134:- X/Twitter: still unreadable directly; secondary layers (blogs, HN, Mathstodon, web search) show
+xmodel/websweep-2026-08-17.md:139:  attempt); low priority, try a Stack Exchange API search next sweep.
+xmodel/x-research.md:5:- **Christian Valqui (PUCP, Lima)** — NOT FOUND on X/Mathstodon/Bluesky. Web presence is academic only (PUCP profile, Google Scholar `fXtTsxkAAAAJ`, cris.pucp.edu.pe). No personal social accounts surfaced.
+xmodel/x-research.md:6:- **Jorge A. Guccione (UBA)** — NOT FOUND on X/Mathstodon/Bluesky. Academic footprint only (ResearchGate, CONICET repositories); an ar.linkedin.com "Jorge Guccione" exists but is unverified as the mathematician.
+xmodel/x-research.md:7:- **Juan J. Guccione (UBA)** — NOT FOUND on X/Mathstodon/Bluesky. Academic footprint only (ResearchGate "J. A./J. J. Guccione" contribution pages); no social accounts surfaced.
+xmodel/x-research.md:8:- **Rodrigo Horruitiner (Cornell, PhD 2025)** — NOT FOUND on X/Mathstodon/Bluesky. Cornell directory page (pi.math.cornell.edu/m/People/bynetid/rmh322) lists no site or socials; a @luhorru "Luis Horruitiner" on X is a different person.
+xmodel/x-research.md:24:- Blog-side (not X): **Terence Tao** (Mathstodon @tao@mathstodon.xyz + "digestion" blog post Jul 21), **Kevin Buzzard** ("Human mathematicians are being outcounterexampled," Xena blog Jul 20; X: @XenaProject), **David Speyer** (Secret Blogging Seminar geometric explanation Jul 23), John D. Cook blog Jul 21. Follow-ups: Gallagher's infinite family (Jul 20), arXiv:2608.00222; n = 2 (the JC2 / (72,108) case) explicitly flagged as still open everywhere.
+xmodel/x-research.md:28:None of the four (72,108) authors are reachable on X, so a JC2 thread can't ride on tagging them — its natural amplification path runs through the accounts already primed by the July story. @littmath is the key node: large math-X audience, already framing AI-assisted results as a trend, and quick to QT concrete verifiable math. @__alpoge__ is the second: any serious progress on the surviving n = 2 case is a direct sequel to his post and he'd likely engage. @wtgowers amplifies if the claim is checkable and notable; @jdlichtman and @viditnanda are plausible mid-tier boosts. For the fastest serious-attention path off-X: Tao's Mathstodon + blog and Speyer's Secret Blogging Seminar both covered the counterexample and explicitly noted n = 2 remains open — a thread that leads with the (72,108) degree-pair bound (the exact frontier of arXiv:2204.14178) and a machine-checkable artifact is the shape those accounts have already shown they'll carry.
+xmodel/websweep-2026-08-18.md:3:Scope: changes since yesterday's sweep only. Sources hit today: Zenodo REST API (record endpoints for
+xmodel/websweep-2026-08-18.md:7:au:Valqui/Guccione/Horruitiner author queries), **Stack Exchange API (MathOverflow — first sweep with
+xmodel/websweep-2026-08-18.md:8:MO coverage**, per yesterday's plan), HN Algolia, Mathstodon tag API, openconjectures.org,
+xmodel/websweep-2026-08-18.md:133:- **Mathstodon #JacobianConjecture:** nothing after KilleansRow Aug 16.
+xmodel/websweep-2026-08-18.md:146:- X/Twitter still unreadable directly; secondary layers (HN, Mathstodon, web search) show nothing new.
+xmodel/codex-eval-20260812.md:1897:- **MathOverflow: coverage gap** — mathoverflow.net and api.stackexchange.com both block our fetcher; domain-restricted search is likewise refused. Generic web search surfaced **no** post-07-20 MO thread on the plane case. Recommend a manual browser check of mathoverflow.net/search?q=jacobian+conjecture (newest). [GAP]
+xmodel/grok-mo-review2.md:5:**Sources:** `AUDIT.md`, `REDUCTION.md`, `paper1/main.tex`; also `BOOK-TD12.md`, `CROSSCHECK.md`, `SHEET6-CAMPAIGN.md`, `dist/ZENODO-METADATA.md`, `dist/ZENODO-METADATA-BUNDLE.md`. DOIs and the live thread re-checked against Zenodo records and the Stack Exchange API (2026-08-18).
+xmodel/websweep-0823-prompt.md:12:conjecture, (72,108), Newton polygon exclusions, Dixmier; (6) Mathstodon/Zulip
+xmodel/websweep-2026-08-19.md:3:Scope: changes since yesterday's sweep. Sources hit today: Stack Exchange API (q513413 incl. full
+xmodel/websweep-2026-08-19.md:5:Zenodo REST (all six records + versions endpoints + phrase/keyword/DOI searches — endpoint healthy
+xmodel/websweep-2026-08-19.md:6:today), arXiv API (phrase re-runs + au: queries), Palomar registry (data.palomar-registry.org
+xmodel/websweep-2026-08-19.md:7:recent.json), Tao blog Palomar post (RSS comment feed + full-HTML keyword scan; HTML fetch works
+xmodel/websweep-2026-08-19.md:8:with browser UA), HN Algolia (incl. full Palomar thread 49355968), Mathstodon tag API, GitHub REST
+xmodel/websweep-2026-08-19.md:67:  scripts/). Remaining step per runbook: rev-parse SHA → submit.palomar-registry.org. **Do it
+xmodel/websweep-2026-08-19.md:81:data.palomar-registry.org/recent.json (site itself is a JS search shell; JSON feed is the browse
+xmodel/websweep-2026-08-19.md:100:https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/
+xmodel/websweep-2026-08-19.md:170:- **Mathstodon:** #JacobianConjecture nothing after KilleansRow Aug 16; #palomar only the HN bot.
+xmodel/websweep-2026-08-19.md:171:- **X/Twitter secondary:** nothing about palomar-registry + Jacobian, nothing about a/514446 or
+xmodel/websweep-2026-08-19.md:182:- Palomar: recent.json lists registered entries only; the pending-review queue is not public — a
+xmodel/websweep-2026-08-19.md:196:3. New standing watches: (a) Palomar recent.json for any 14R15/JC registration (daily, alongside
+./xmodel/websweep-2026-08-17.md:3:Scope: changes since yesterday's sweep only. Sources hit today: Zenodo REST API (record + versions
+./xmodel/websweep-2026-08-17.md:6:date-ranged math.AG/math.AC query for Aug 13–17), Mathstodon tag API, HN Algolia (date-filtered),
+./xmodel/websweep-2026-08-17.md:128:- **Mathstodon #JacobianConjecture:** nothing after KilleansRow Aug 16 (already captured yesterday).
+./xmodel/websweep-2026-08-17.md:134:- X/Twitter: still unreadable directly; secondary layers (blogs, HN, Mathstodon, web search) show
+./xmodel/websweep-2026-08-17.md:139:  attempt); low priority, try a Stack Exchange API search next sweep.
+xmodel/websweep-2026-08-20.md:3:Scope: changes since yesterday's ~21:10Z sweep. Sources hit today: Stack Exchange API (q513413
+xmodel/websweep-2026-08-20.md:6:Zenodo REST (our 2 + watched 4 records, newest-JC search, citing-id search), Palomar registry
+xmodel/websweep-2026-08-20.md:7:(data.palomar-registry.org/recent.json — full 19-entry enumeration + per-entry detail), Mathstodon
+xmodel/websweep-2026-08-20.md:21:4. Tao (Mathstodon, Aug 19 20:02Z) floated a formal **"proof adoption" mechanism** for handing off
+xmodel/websweep-2026-08-20.md:23:   toot also names a public Lean Zulip channel #Palomar (new venue, not yet monitored).
+xmodel/websweep-2026-08-20.md:58:- data.palomar-registry.org/recent.json (schema v2): **19 entries** total (13 yesterday). Ours:
+xmodel/websweep-2026-08-20.md:76:  queued in notes); (b) keep the daily recent.json watch for the Lezeau registration + any 14R15
+xmodel/websweep-2026-08-20.md:92:### D4. Tao floats a "proof adoption" mechanism (Mathstodon, Aug 19 20:02Z, 24 favs / 7 boosts) +
+xmodel/websweep-2026-08-20.md:93:### a public Lean Zulip #Palomar channel exists
+xmodel/websweep-2026-08-20.md:100:own founder. Also from his feed: the Palomar announcement toot links a **public Zulip channel
+xmodel/websweep-2026-08-20.md:138:- **Mathstodon:** #jacobianconjecture — nothing after KilleansRow Aug 16 (8 statuses total, rest
+xmodel/websweep-2026-08-20.md:147:  palomar-registry + Jacobian, our entries, or the a/514446 deletion.
+xmodel/websweep-2026-08-20.md:154:  until registered. recent.json omits registered_at per-version detail beyond published_at.
+xmodel/websweep-2026-08-20.md:155:- Lean Zulip #Palomar channel (D4) NOT yet read — needs an access route (public archive or API);
+xmodel/websweep-2026-08-20.md:160:- Mathstodon full-text search remains limited; tag-timeline absence is weak signal by design.
+xmodel/websweep-2026-08-20.md:168:3. D4: propose adding Lean Zulip #Palomar (channel 621638) to the standing watchlist; check the
+./xmodel/websweep-2026-08-16.md:5:Zenodo REST API (15 newest "Jacobian conjecture" records), GitHub search API (~20 of 57 hits, newest-first),
+./xmodel/websweep-2026-08-16.md:6:Tao / Speyer / Buzzard / Woit blogs, openconjectures.org, jacobianfun.org, Hacker News, Mathstodon tag API,
+./xmodel/websweep-2026-08-16.md:187:  Lean4, keller-map topic, updated Aug 16/17 UTC — active now), Mathstodon user alerad's Lean4 proof
+./xmodel/websweep-2026-08-16.md:196:  Mathstodon (KilleansRow, Aug 16: withheld prompts, unvetted results becoming news).
+./xmodel/websweep-2026-08-16.md:245:- Mathstodon: public tag API only (20 newest under #JacobianConjecture); other tags/instances unswept.
+./xmodel/grok-mo-review2.md:5:**Sources:** `AUDIT.md`, `REDUCTION.md`, `paper1/main.tex`; also `BOOK-TD12.md`, `CROSSCHECK.md`, `SHEET6-CAMPAIGN.md`, `dist/ZENODO-METADATA.md`, `dist/ZENODO-METADATA-BUNDLE.md`. DOIs and the live thread re-checked against Zenodo records and the Stack Exchange API (2026-08-18).
+./xmodel/websweep-0823-prompt.md:12:conjecture, (72,108), Newton polygon exclusions, Dixmier; (6) Mathstodon/Zulip
+./xmodel/websweep-2026-08-19.md:3:Scope: changes since yesterday's sweep. Sources hit today: Stack Exchange API (q513413 incl. full
+./xmodel/websweep-2026-08-19.md:5:Zenodo REST (all six records + versions endpoints + phrase/keyword/DOI searches — endpoint healthy
+./xmodel/websweep-2026-08-19.md:6:today), arXiv API (phrase re-runs + au: queries), Palomar registry (data.palomar-registry.org
+./xmodel/websweep-2026-08-19.md:7:recent.json), Tao blog Palomar post (RSS comment feed + full-HTML keyword scan; HTML fetch works
+./xmodel/websweep-2026-08-19.md:8:with browser UA), HN Algolia (incl. full Palomar thread 49355968), Mathstodon tag API, GitHub REST
+./xmodel/websweep-2026-08-19.md:67:  scripts/). Remaining step per runbook: rev-parse SHA → submit.palomar-registry.org. **Do it
+./xmodel/websweep-2026-08-19.md:81:data.palomar-registry.org/recent.json (site itself is a JS search shell; JSON feed is the browse
+./xmodel/websweep-2026-08-19.md:100:https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/
+./xmodel/websweep-2026-08-19.md:170:- **Mathstodon:** #JacobianConjecture nothing after KilleansRow Aug 16; #palomar only the HN bot.
+./xmodel/websweep-2026-08-19.md:171:- **X/Twitter secondary:** nothing about palomar-registry + Jacobian, nothing about a/514446 or
+./xmodel/websweep-2026-08-19.md:182:- Palomar: recent.json lists registered entries only; the pending-review queue is not public — a
+./xmodel/websweep-2026-08-19.md:196:3. New standing watches: (a) Palomar recent.json for any 14R15/JC registration (daily, alongside
+./xmodel/grok-mo-review.md:4:**Sources:** `AUDIT.md`, `paper1/main.tex`, `REDUCTION.md`; DOIs and the live thread checked against Zenodo records and the Stack Exchange API (2026-08-18).
+./xmodel/x-research.md:5:- **Christian Valqui (PUCP, Lima)** — NOT FOUND on X/Mathstodon/Bluesky. Web presence is academic only (PUCP profile, Google Scholar `fXtTsxkAAAAJ`, cris.pucp.edu.pe). No personal social accounts surfaced.
+./xmodel/x-research.md:6:- **Jorge A. Guccione (UBA)** — NOT FOUND on X/Mathstodon/Bluesky. Academic footprint only (ResearchGate, CONICET repositories); an ar.linkedin.com "Jorge Guccione" exists but is unverified as the mathematician.
+./xmodel/x-research.md:7:- **Juan J. Guccione (UBA)** — NOT FOUND on X/Mathstodon/Bluesky. Academic footprint only (ResearchGate "J. A./J. J. Guccione" contribution pages); no social accounts surfaced.
+./xmodel/x-research.md:8:- **Rodrigo Horruitiner (Cornell, PhD 2025)** — NOT FOUND on X/Mathstodon/Bluesky. Cornell directory page (pi.math.cornell.edu/m/People/bynetid/rmh322) lists no site or socials; a @luhorru "Luis Horruitiner" on X is a different person.
+./xmodel/x-research.md:24:- Blog-side (not X): **Terence Tao** (Mathstodon @tao@mathstodon.xyz + "digestion" blog post Jul 21), **Kevin Buzzard** ("Human mathematicians are being outcounterexampled," Xena blog Jul 20; X: @XenaProject), **David Speyer** (Secret Blogging Seminar geometric explanation Jul 23), John D. Cook blog Jul 21. Follow-ups: Gallagher's infinite family (Jul 20), arXiv:2608.00222; n = 2 (the JC2 / (72,108) case) explicitly flagged as still open everywhere.
+./xmodel/x-research.md:28:None of the four (72,108) authors are reachable on X, so a JC2 thread can't ride on tagging them — its natural amplification path runs through the accounts already primed by the July story. @littmath is the key node: large math-X audience, already framing AI-assisted results as a trend, and quick to QT concrete verifiable math. @__alpoge__ is the second: any serious progress on the surviving n = 2 case is a direct sequel to his post and he'd likely engage. @wtgowers amplifies if the claim is checkable and notable; @jdlichtman and @viditnanda are plausible mid-tier boosts. For the fastest serious-attention path off-X: Tao's Mathstodon + blog and Speyer's Secret Blogging Seminar both covered the counterexample and explicitly noted n = 2 remains open — a thread that leads with the (72,108) degree-pair bound (the exact frontier of arXiv:2204.14178) and a machine-checkable artifact is the shape those accounts have already shown they'll carry.
+./xmodel/websweep-2026-08-18.md:3:Scope: changes since yesterday's sweep only. Sources hit today: Zenodo REST API (record endpoints for
+./xmodel/websweep-2026-08-18.md:7:au:Valqui/Guccione/Horruitiner author queries), **Stack Exchange API (MathOverflow — first sweep with
+./xmodel/websweep-2026-08-18.md:8:MO coverage**, per yesterday's plan), HN Algolia, Mathstodon tag API, openconjectures.org,
+./xmodel/websweep-2026-08-18.md:133:- **Mathstodon #JacobianConjecture:** nothing after KilleansRow Aug 16.
+./xmodel/websweep-2026-08-18.md:146:- X/Twitter still unreadable directly; secondary layers (HN, Mathstodon, web search) show nothing new.
+./xmodel/websweep-2026-08-20.md:3:Scope: changes since yesterday's ~21:10Z sweep. Sources hit today: Stack Exchange API (q513413
+./xmodel/websweep-2026-08-20.md:6:Zenodo REST (our 2 + watched 4 records, newest-JC search, citing-id search), Palomar registry
+./xmodel/websweep-2026-08-20.md:7:(data.palomar-registry.org/recent.json — full 19-entry enumeration + per-entry detail), Mathstodon
+./xmodel/websweep-2026-08-20.md:21:4. Tao (Mathstodon, Aug 19 20:02Z) floated a formal **"proof adoption" mechanism** for handing off
+./xmodel/websweep-2026-08-20.md:23:   toot also names a public Lean Zulip channel #Palomar (new venue, not yet monitored).
+./xmodel/websweep-2026-08-20.md:58:- data.palomar-registry.org/recent.json (schema v2): **19 entries** total (13 yesterday). Ours:
+./xmodel/websweep-2026-08-20.md:76:  queued in notes); (b) keep the daily recent.json watch for the Lezeau registration + any 14R15
+./xmodel/websweep-2026-08-20.md:92:### D4. Tao floats a "proof adoption" mechanism (Mathstodon, Aug 19 20:02Z, 24 favs / 7 boosts) +
+./xmodel/websweep-2026-08-20.md:93:### a public Lean Zulip #Palomar channel exists
+./xmodel/websweep-2026-08-20.md:100:own founder. Also from his feed: the Palomar announcement toot links a **public Zulip channel
+./xmodel/websweep-2026-08-20.md:138:- **Mathstodon:** #jacobianconjecture — nothing after KilleansRow Aug 16 (8 statuses total, rest
+./xmodel/websweep-2026-08-20.md:147:  palomar-registry + Jacobian, our entries, or the a/514446 deletion.
+./xmodel/websweep-2026-08-20.md:154:  until registered. recent.json omits registered_at per-version detail beyond published_at.
+./xmodel/websweep-2026-08-20.md:155:- Lean Zulip #Palomar channel (D4) NOT yet read — needs an access route (public archive or API);
+./xmodel/websweep-2026-08-20.md:160:- Mathstodon full-text search remains limited; tag-timeline absence is weak signal by design.
+./xmodel/websweep-2026-08-20.md:168:3. D4: propose adding Lean Zulip #Palomar (channel 621638) to the standing watchlist; check the
+./papers/paper2/PRIORITY.md:116:indication of our lemma); export.arxiv.org API returned empty from sandbox; Wenhua Zhao's ISU publications
+./xmodel/codex-eval-20260812.md:1897:- **MathOverflow: coverage gap** — mathoverflow.net and api.stackexchange.com both block our fetcher; domain-restricted search is likewise refused. Generic web search surfaced **no** post-07-20 MO thread on the plane case. Recommend a manual browser check of mathoverflow.net/search?q=jacobian+conjecture (newest). [GAP]
+./jc72108/RECON.md:92:- **MathOverflow: coverage gap** — mathoverflow.net and api.stackexchange.com both block our fetcher; domain-restricted search is likewise refused. Generic web search surfaced **no** post-07-20 MO thread on the plane case. Recommend a manual browser check of mathoverflow.net/search?q=jacobian+conjecture (newest). [GAP]
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-17.md:3:Scope: changes since yesterday's sweep only. Sources hit today: Zenodo REST API (record + versions
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-17.md:6:date-ranged math.AG/math.AC query for Aug 13–17), Mathstodon tag API, HN Algolia (date-filtered),
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-17.md:128:- **Mathstodon #JacobianConjecture:** nothing after KilleansRow Aug 16 (already captured yesterday).
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-17.md:134:- X/Twitter: still unreadable directly; secondary layers (blogs, HN, Mathstodon, web search) show
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-17.md:139:  attempt); low priority, try a Stack Exchange API search next sweep.
+./dist/jc72108-theory-bundle-v1/notes.md:661:  circulation (van den Essen, Wright, Zhao, Orevkov, Safey El Din) -> X+Mathstodon
+./dist/jc72108-theory-bundle-v1/xmodel/x-research.md:5:- **Christian Valqui (PUCP, Lima)** — NOT FOUND on X/Mathstodon/Bluesky. Web presence is academic only (PUCP profile, Google Scholar `fXtTsxkAAAAJ`, cris.pucp.edu.pe). No personal social accounts surfaced.
+./dist/jc72108-theory-bundle-v1/xmodel/x-research.md:6:- **Jorge A. Guccione (UBA)** — NOT FOUND on X/Mathstodon/Bluesky. Academic footprint only (ResearchGate, CONICET repositories); an ar.linkedin.com "Jorge Guccione" exists but is unverified as the mathematician.
+./dist/jc72108-theory-bundle-v1/xmodel/x-research.md:7:- **Juan J. Guccione (UBA)** — NOT FOUND on X/Mathstodon/Bluesky. Academic footprint only (ResearchGate "J. A./J. J. Guccione" contribution pages); no social accounts surfaced.
+./dist/jc72108-theory-bundle-v1/xmodel/x-research.md:8:- **Rodrigo Horruitiner (Cornell, PhD 2025)** — NOT FOUND on X/Mathstodon/Bluesky. Cornell directory page (pi.math.cornell.edu/m/People/bynetid/rmh322) lists no site or socials; a @luhorru "Luis Horruitiner" on X is a different person.
+./dist/jc72108-theory-bundle-v1/xmodel/x-research.md:24:- Blog-side (not X): **Terence Tao** (Mathstodon @tao@mathstodon.xyz + "digestion" blog post Jul 21), **Kevin Buzzard** ("Human mathematicians are being outcounterexampled," Xena blog Jul 20; X: @XenaProject), **David Speyer** (Secret Blogging Seminar geometric explanation Jul 23), John D. Cook blog Jul 21. Follow-ups: Gallagher's infinite family (Jul 20), arXiv:2608.00222; n = 2 (the JC2 / (72,108) case) explicitly flagged as still open everywhere.
+./dist/jc72108-theory-bundle-v1/xmodel/x-research.md:28:None of the four (72,108) authors are reachable on X, so a JC2 thread can't ride on tagging them — its natural amplification path runs through the accounts already primed by the July story. @littmath is the key node: large math-X audience, already framing AI-assisted results as a trend, and quick to QT concrete verifiable math. @__alpoge__ is the second: any serious progress on the surviving n = 2 case is a direct sequel to his post and he'd likely engage. @wtgowers amplifies if the claim is checkable and notable; @jdlichtman and @viditnanda are plausible mid-tier boosts. For the fastest serious-attention path off-X: Tao's Mathstodon + blog and Speyer's Secret Blogging Seminar both covered the counterexample and explicitly noted n = 2 remains open — a thread that leads with the (72,108) degree-pair bound (the exact frontier of arXiv:2204.14178) and a machine-checkable artifact is the shape those accounts have already shown they'll carry.
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-18.md:3:Scope: changes since yesterday's sweep only. Sources hit today: Zenodo REST API (record endpoints for
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-18.md:7:au:Valqui/Guccione/Horruitiner author queries), **Stack Exchange API (MathOverflow — first sweep with
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-18.md:8:MO coverage**, per yesterday's plan), HN Algolia, Mathstodon tag API, openconjectures.org,
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-18.md:133:- **Mathstodon #JacobianConjecture:** nothing after KilleansRow Aug 16.
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-18.md:146:- X/Twitter still unreadable directly; secondary layers (HN, Mathstodon, web search) show nothing new.
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-16.md:5:Zenodo REST API (15 newest "Jacobian conjecture" records), GitHub search API (~20 of 57 hits, newest-first),
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-16.md:6:Tao / Speyer / Buzzard / Woit blogs, openconjectures.org, jacobianfun.org, Hacker News, Mathstodon tag API,
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-16.md:187:  Lean4, keller-map topic, updated Aug 16/17 UTC — active now), Mathstodon user alerad's Lean4 proof
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-16.md:196:  Mathstodon (KilleansRow, Aug 16: withheld prompts, unvetted results becoming news).
+./dist/jc72108-theory-bundle-v1/xmodel/websweep-2026-08-16.md:245:- Mathstodon: public tag API only (20 newest under #JacobianConjecture); other tags/instances unswept.
+./dist/jc72108-theory-bundle-v1/xmodel/codex-eval-20260812.md:1897:- **MathOverflow: coverage gap** — mathoverflow.net and api.stackexchange.com both block our fetcher; domain-restricted search is likewise refused. Generic web search surfaced **no** post-07-20 MO thread on the plane case. Recommend a manual browser check of mathoverflow.net/search?q=jacobian+conjecture (newest). [GAP]
+
+exec
+/bin/zsh -lc "date -u '+%Y-%m-%dT%H:%M:%SZ' && for repo in royvanrijn/jacobian-research wstrinz/plane-jacobian-72-108 wstrinz/plane-jacobian-75-125 Paul-Lez/jacobian-conjecture Alacosta2025/jacobian-conjecture-counterexample FORTUNE-Didier/jc2-formalization; do curl -sS \"https://api.github.com/repos/"'$repo" | jq -r '"'\"REPO \\(.full_name) pushed=\\(.pushed_at) updated=\\(.updated_at) stars=\\(.stargazers_count) forks=\\(.forks_count) default=\\(.default_branch)\"'; curl -sS \"https://api.github.com/repos/"'$repo/commits?per_page=10" | jq -r '"'.[] | \"  \\(.commit.author.date) \\(.sha[0:12]) \\(.commit.message|split(\"\\n\")[0])\"'; done" in /Users/dc/code/math/jc2
+ succeeded in 3694ms:
+REPO royvanrijn/jacobian-research pushed=2026-08-23T20:28:58Z updated=2026-08-23T20:29:04Z stars=5 forks=0 default=main
+  2026-08-23T20:28:55Z 2ebb1f612bb0 updating ledgers
+  2026-08-23T20:23:02Z 49268ad1bd1a Merge branch 'main' of https://github.com/royvanrijn/jacobian-research
+  2026-08-23T20:23:00Z 21ec4a6bc196 trying to lift over q24
+  2026-08-23T16:13:12Z 1dbd84d9fb76 Add H3 q24 to pinned R17 closeout ledger
+  2026-08-23T16:13:00Z 0de759a1c05c Correct q24 suffix ledger after pinned R17 closeout
+  2026-08-23T16:12:43Z 35acb1723445 Correct preferred H3 route after q24 R17 closeout
+  2026-08-23T16:09:44Z e0f7ba7cdb2e PASS_Q24_EQUATION_D13_TO_PINNED_R17_LATTICE_PATH
+  2026-08-23T15:37:38Z af1d0f2fb4ac Merge branch 'main' of https://github.com/royvanrijn/jacobian-research
+  2026-08-23T15:37:28Z 33917a749efe trying to lift
+  2026-08-23T15:18:50Z 4b941a743fe1 Add q24-native suffix proof ledger
+REPO wstrinz/plane-jacobian-72-108 pushed=2026-08-23T19:47:36Z updated=2026-08-23T02:54:33Z stars=0 forks=0 default=main
+  2026-08-23T02:37:24Z d5fb30e771ac Record clean Palomar full-stack replay
+  2026-08-23T02:25:20Z 2c34c470bed0 Check Challenge definition parity before replay
+  2026-08-23T02:10:02Z f0e093a51791 Mark Palomar replay scripts executable
+  2026-08-23T02:06:33Z dbf62b8d8d1c Harden Palomar f37 release replay
+  2026-08-22T20:03:00Z 7586ad379290 Update Palomar preflight after kernel proof
+  2026-08-22T20:00:16Z 40e084475dbc Prove the full Palomar f37 challenge
+  2026-08-22T18:11:07Z 518c021f100f Use one repository-wide MIT license
+  2026-08-22T16:48:32Z 9361771185ea Pin Palomar Lean project to Mathlib 4.32
+  2026-08-22T16:37:08Z a333d7507f8a Slice sparse top merge into bounded key ranges
+  2026-08-22T16:33:43Z d0d714e5046e Add scoped Palomar f37 challenge surface
+REPO wstrinz/plane-jacobian-75-125 pushed=2026-08-22T20:11:36Z updated=2026-08-22T20:12:08Z stars=0 forks=0 default=main
+  2026-08-22T20:11:24Z 1acfb5b2f1a9 Polish frozen preview and repair Gate-B replay
+  2026-08-22T14:30:25Z d8dc3a340339 Make publication checks manual-only
+  2026-08-22T14:19:32Z 3f06c93e6417 Align Zenodo release metadata
+  2026-08-22T14:10:48Z ea77d4ef8cf6 Polish release gates and add Lean CI
+  2026-08-22T12:12:45Z f8214431be5e Normalize generated proof receipts across platforms
+  2026-08-22T12:00:14Z 9fc06b6065b2 Make vendored snapshot audit replay-safe
+  2026-08-22T11:52:51Z b9ebd46214f6 Prepare publication and Palomar preview
+  2026-08-22T04:40:20Z eaadd61c0bda Pin Palomar template provenance
+  2026-08-22T04:36:10Z e803ceb44aba Add Palomar-verified local K5 formalization
+  2026-08-22T02:14:19Z dba0c2705426 Verify release artifacts without mutation
+REPO Paul-Lez/jacobian-conjecture pushed=2026-08-21T08:48:24Z updated=2026-08-21T11:17:09Z stars=1 forks=1 default=main
+  2026-08-21T08:48:21Z b244ea482ed0 source roles
+  2026-08-21T08:28:27Z 4b6f73f30925 add extra reference
+  2026-08-19T15:40:42Z 83bfab931430 Add definition to Challenge file
+  2026-08-19T12:10:53Z 72742513c655 update metadata
+  2026-08-19T10:38:10Z 9577c3eb9c39 update formalization.yaml
+  2026-08-19T10:18:26Z 5cb09dc5fb41 update challenge and solution file to mathlib only import
+  2026-08-18T09:42:05Z 1aa21cda7f9c Add Jacobian conjecture comparator wrapper
+REPO Alacosta2025/jacobian-conjecture-counterexample pushed=2026-08-20T16:43:39Z updated=2026-08-20T16:46:33Z stars=0 forks=0 default=main
+  2026-08-20T16:43:38Z aa765dd3e96a Fix ring tactic: use ring_nf per Palomar verification error
+  2026-08-19T19:15:20Z d8184b77bde8 Add lake-manifest.json via workflow
+  2026-08-19T19:12:30Z 1bb728e0447c Update lake-update.yml
+  2026-08-19T19:08:37Z 88ac5f4aa201 Create lake-update.yml
+  2026-08-19T18:51:11Z 1627bdb32653 Update formalization.yaml
+  2026-08-19T18:49:21Z ee5d93c01dd1 Update Solution.lean
+  2026-08-19T18:40:37Z b2721b616826 Update formalization.yaml
+  2026-08-19T18:33:40Z c8cadbe1aeb9 Update formalization.yaml
+  2026-08-19T18:27:23Z 15afd05040ba Update formalization.yaml
+  2026-08-19T18:25:53Z 4e0398a98b3e Update formalization.yaml
+REPO FORTUNE-Didier/jc2-formalization pushed=2026-08-20T08:01:55Z updated=2026-08-20T08:04:05Z stars=0 forks=0 default=main
+  2026-08-20T08:01:55Z de10adfd7ea2 Create README.md
+  2026-08-20T07:23:47Z 184c74291823 Add files via upload
+
+exec
+/bin/zsh -lc "curl -sS https://data.palomar-registry.org/recent.json | jq -r '\"COUNT \\(.entries|length)\", (.entries[] | [.id, (.version|tostring), .published_at, (.title // \"\"), ((.authors // [])|tostring), ((.msc2020 // [])|tostring), (.repository // .repo // \"\")] | @tsv)'" in /Users/dc/code/math/jc2
+ succeeded in 168ms:
+COUNT 53
+PALOMAR-2026-08-23-000006	1	2026-08-23T18:02:47Z	ehrlich-b/euclidean-jordan	[{"name":"Bryan Ehrlich"}]	[]	
+PALOMAR-2026-08-23-000005	1	2026-08-23T14:43:08Z	ehrlich-b/euclidean-jordan	[{"name":"Bryan Ehrlich"}]	[]	
+PALOMAR-2026-08-23-000004	1	2026-08-23T14:18:53Z	DiarHaidary/Nelson-Nguyen-conjecture-upper-bound-palomar	[{"name":"Diar Heidary"}]	[]	
+PALOMAR-2026-08-23-000003	1	2026-08-23T13:17:20Z	novou/square-maximality-palomar	[{"name":"Jiechen Zhang"}]	[]	
+PALOMAR-2026-08-23-000002	1	2026-08-23T10:11:09Z	rwst/Square-Roots	[{"name":"Ralf Stephan (direction, review, paper author)"},{"name":"Claude Code, claude-fable-5 (mathematical discovery, formalization, paper drafting)"},{"name":"Claude Code, claude-opus-5 (formalization, paper drafting)"}]	[]	
+PALOMAR-2026-08-23-000001	1	2026-08-23T09:43:44Z	geoconuk/lean-misc-math	[{"name":"George A. Constantinides"}]	[]	
+PALOMAR-2026-08-22-000010	1	2026-08-22T23:31:52Z	CBirkbeck/uniform-sheafy-tate-domains-lean	[{"name":"Christopher Birkbeck"},{"name":"Alex Torzewski"}]	[]	
+PALOMAR-2026-08-22-000009	1	2026-08-22T23:20:12Z	xiangyazi24/palomar-qseries-prime-coefficients	[{"name":"Xiang Huang"}]	[]	
+PALOMAR-2026-08-22-000008	1	2026-08-22T20:27:03Z	adas1236/KaltonPeckPalomar	[{"name":"Avik Das"}]	[]	
+PALOMAR-2026-08-22-000007	1	2026-08-22T19:17:46Z	ashebson/kinin-lean	[{"name":"Aryeh Shebson"}]	[]	
+PALOMAR-2026-08-22-000006	1	2026-08-22T16:18:09Z	ehrlich-b/sequential-products-lean	[{"name":"Bryan Ehrlich"}]	[]	
+PALOMAR-2026-08-22-000005	1	2026-08-22T05:26:20Z	mbaccaro-dev/mathematical-proofs	[{"name":"Mayk Loide Baccaro"}]	[]	
+PALOMAR-2026-08-22-000004	1	2026-08-22T04:26:46Z	mbaccaro-dev/mathematical-proofs	[{"name":"Mayk Loide Baccaro"}]	[]	
+PALOMAR-2026-08-22-000003	1	2026-08-22T03:39:14Z	xiangyazi24/palomar-hahn-hecke-appell	[{"name":"Xiang Huang"}]	[]	
+PALOMAR-2026-08-22-000002	1	2026-08-22T03:29:50Z	mbaccaro-dev/mathematical-proofs	[{"name":"Mayk Loide Baccaro"}]	[]	
+PALOMAR-2026-08-22-000001	1	2026-08-22T03:01:51Z	williamjblair/lean-proofs	[{"name":"Will Blair"}]	[]	
+PALOMAR-2026-08-21-000012	1	2026-08-21T23:05:23Z	teal-sea/zeta-lab	[{"name":"Thomas Lince"}]	[]	
+PALOMAR-2026-08-21-000011	1	2026-08-21T19:03:24Z	lennrt/palomar-formalizations	[{"name":"Lennart Rudolph"},{"name":"Sol"},{"name":"Fable"}]	[]	
+PALOMAR-2026-08-21-000010	1	2026-08-21T18:18:21Z	lennrt/palomar-formalizations	[{"name":"Lennart Rudolph"},{"name":"Sol"},{"name":"Fable"}]	[]	
+PALOMAR-2026-08-21-000009	1	2026-08-21T18:03:30Z	ehrlich-b/sequential-products-lean	[{"name":"Bryan Ehrlich"}]	[]	
+PALOMAR-2026-08-21-000008	1	2026-08-21T17:39:41Z	lennrt/palomar-formalizations	[{"name":"Lennart Rudolph"},{"name":"Sol"},{"name":"Fable"}]	[]	
+PALOMAR-2026-08-21-000007	1	2026-08-21T14:54:39Z	lennrt/palomar-formalizations	[{"name":"Lennart Rudolph"},{"name":"Sol"},{"name":"Fable"}]	[]	
+PALOMAR-2026-08-21-000006	1	2026-08-21T11:10:13Z	Paul-Lez/jacobian-conjecture	[{"name":"Paul Lezeau"},{"name":"Dean Cureton"}]	[]	
+PALOMAR-2026-08-21-000005	1	2026-08-21T06:20:10Z	mbaccaro-dev/mathematical-proofs	[{"name":"Mayk Loide Baccaro"}]	[]	
+PALOMAR-2026-08-21-000004	1	2026-08-21T05:37:39Z	teal-sea/zeta-lab	[{"name":"Thomas Lince"}]	[]	
+PALOMAR-2026-08-21-000003	1	2026-08-21T05:17:07Z	mbaccaro-dev/mathematical-proofs	[{"name":"Mayk Loide Baccaro"}]	[]	
+PALOMAR-2026-08-21-000002	1	2026-08-21T04:45:28Z	lennrt/palomar-formalizations	[{"name":"Lennart Rudolph"},{"name":"Sol"},{"name":"Fable"}]	[]	
+PALOMAR-2026-08-21-000001	1	2026-08-21T04:18:12Z	ehrlich-b/sequential-products-lean	[{"name":"Bryan Ehrlich"}]	[]	
+PALOMAR-2026-08-20-000009	1	2026-08-20T14:31:52Z	sloisel/MPE-Formal	[{"name":"Sébastien Loisel"}]	[]	
+PALOMAR-2026-08-20-000008	1	2026-08-20T12:34:27Z	benkeene/erdos266	[{"name":"Ben Keene"}]	[]	
+PALOMAR-2026-08-20-000007	1	2026-08-20T11:56:02Z	Vulkin-prog/paper-c-lean	[{"name":"Brice Pouly"}]	[]	
+PALOMAR-2026-08-20-000006	1	2026-08-20T10:58:50Z	rwst/Even-Integral	[{"name":"Ralf Stephan (direction, review, paper author)"},{"name":"Claude Code, claude-opus-5 (mathematical discovery, formalization, paper drafting)"}]	[]	
+PALOMAR-2026-08-20-000005	1	2026-08-20T06:11:14Z	google-deepmind/formal-conjectures	[{"name":"The Formal Conjectures Authors"},{"name":"Moritz Firsching"},{"name":"Codrut Grosu"},{"name":"Reklle"}]	[]	
+PALOMAR-2026-08-20-000004	1	2026-08-20T05:28:41Z	guanyangwang/ktv-swap-lean-comparator	[{"name":"Guanyang Wang"}]	[]	
+PALOMAR-2026-08-20-000003	1	2026-08-20T01:23:54Z	catskillsresearch/cardb	[{"name":"Lars Warren Ericson"}]	[]	
+PALOMAR-2026-08-19-000007	2	2026-08-20T01:02:27Z	stalex444/pdt-lean	[{"name":"Stephanie Alexander"}]	[]	
+PALOMAR-2026-08-19-000002	2	2026-08-20T00:53:26Z	elliotglazer/erdos501	[{"name":"Elliot Glazer"},{"name":"Sol"}]	[]	
+PALOMAR-2026-08-20-000002	1	2026-08-20T00:36:51Z	yuanchenyang/lean_low_rank_univariate_sos	[{"name":"Chenyang Yuan"}]	[]	
+PALOMAR-2026-08-13-000001	2	2026-08-20T00:23:23Z	teorth/sendov	[{"name":"Terence Tao"}]	[]	
+PALOMAR-2026-08-20-000001	1	2026-08-20T00:09:33Z	dcposch/jc2-lean	[{"name":"Dan Clemens Posch"}]	[]	
+PALOMAR-2026-08-19-000006	1	2026-08-19T23:11:42Z	stalex444/arithmetic-of-time	[{"name":"Stephanie Alexander"}]	[]	
+PALOMAR-2026-08-19-000005	1	2026-08-19T23:02:22Z	dcposch/jc2-lean	[{"name":"Dan Clemens Posch"}]	[]	
+PALOMAR-2026-08-19-000004	1	2026-08-19T14:58:19Z	vo-rodrigues/wallace-problem-palomar	[{"name":"Juliane Trianon Fraga"},{"name":"Vinicius de Oliveira Rodrigues"}]	[]	
+PALOMAR-2026-08-19-000003	1	2026-08-19T14:08:35Z	WillWhistler/Regts-Sevenster	[{"name":"William Whistler"}]	[]	
+PALOMAR-2026-08-19-000001	1	2026-08-19T01:54:36Z	rkirov/jordan_pick	[{"name":"Rado Kirov"}]	[]	
+PALOMAR-2026-08-18-000003	1	2026-08-18T23:20:17Z	xinjiegit/ben_27_formalization	[{"name":"Xinjie He"}]	[]	
+PALOMAR-2026-08-18-000002	1	2026-08-18T20:27:38Z	AxiomMath/PrimeGapsLib	[{"name":"Evan Chen"},{"name":"Sidharth Hariharan"},{"name":"Kenny Lau"},{"name":"Bhavik Mehta"},{"name":"Ken Ono"},{"name":"Ashvin Swaminathan"},{"name":"Jesse Thorner"},{"name":"Yunzhou Xie"}]	[]	
+PALOMAR-2026-08-18-000001	1	2026-08-18T15:09:37Z	LionSR/LDT-comparator	[{"name":"Sirui Lu"},{"name":"Ruixuan Deng"},{"name":"Zhengfeng Ji"}]	[]	
+PALOMAR-2026-08-17-000004	1	2026-08-17T23:51:34Z	jaumededios/cantor-frames-palomar	[{"name":"Jaume de Dios Pont"},{"name":"Lukas Liehr"},{"name":"Mitchell A. Taylor"}]	[]	
+PALOMAR-2026-08-17-000003	1	2026-08-17T19:19:41Z	gexahedron/sabidussi-lean	[{"name":"Nikolay Ulyanov"}]	[]	
+PALOMAR-2026-08-17-000002	1	2026-08-17T19:10:42Z	Paul-Lez/hadamard-668-comparator	[{"name":"Paul Lezeau"}]	[]	
+PALOMAR-2026-08-17-000001	1	2026-08-17T06:39:48Z	rkirov/jordan_pick	[{"name":"Rado Kirov"}]	[]	
+PALOMAR-2026-08-08-000001	3	2026-08-14T07:52:09Z	kim-em/erdos-unit-distance-comparator	[{"name":"Kim Morrison"}]	[]	
+
+exec
+/bin/zsh -lc 'for page in 1 2; do curl -sS "https://api.github.com/orgs/PalomarArchive/repos?type=public&sort=created&direction=desc&per_page=100&page=$page"; done | jq -s '"'add' | jq -r '\"COUNT \\(length)\", (.[] | [.created_at,.pushed_at,.full_name,.fork,.html_url] | @tsv)' | head -n 90" in /Users/dc/code/math/jc2
+ succeeded in 1361ms:
+COUNT 71
+2026-08-23T14:43:21Z	2026-08-23T18:12:33Z	PalomarArchive/ehrlich-b--euclidean-jordan--60bdbed9ee0b	true	https://github.com/PalomarArchive/ehrlich-b--euclidean-jordan--60bdbed9ee0b
+2026-08-23T14:19:06Z	2026-08-23T14:19:21Z	PalomarArchive/DiarHaidary--Nelson-Nguyen-conjecture-upper-bound-palomar--1d79648f834b	true	https://github.com/PalomarArchive/DiarHaidary--Nelson-Nguyen-conjecture-upper-bound-palomar--1d79648f834b
+2026-08-23T14:19:06Z	2026-08-23T14:19:21Z	PalomarArchive/DiarHaidary--nelson-nguyen-sparse-fock--d0dec0229a75	true	https://github.com/PalomarArchive/DiarHaidary--nelson-nguyen-sparse-fock--d0dec0229a75
+2026-08-23T13:17:38Z	2026-08-23T13:17:53Z	PalomarArchive/novou--square-maximality-palomar--766d2a064ab1	true	https://github.com/PalomarArchive/novou--square-maximality-palomar--766d2a064ab1
+2026-08-23T10:11:31Z	2026-08-23T10:11:50Z	PalomarArchive/rwst--Square-Roots--3c293e4b711d	true	https://github.com/PalomarArchive/rwst--Square-Roots--3c293e4b711d
+2026-08-23T09:43:55Z	2026-08-23T09:44:07Z	PalomarArchive/geoconuk--lean-misc-math--79e5c7089a59	true	https://github.com/PalomarArchive/geoconuk--lean-misc-math--79e5c7089a59
+2026-08-22T23:31:58Z	2026-08-22T23:32:04Z	PalomarArchive/CBirkbeck--uniform-sheafy-tate-domains-lean--22a6d2e6470c	true	https://github.com/PalomarArchive/CBirkbeck--uniform-sheafy-tate-domains-lean--22a6d2e6470c
+2026-08-22T23:20:28Z	2026-08-22T23:20:33Z	PalomarArchive/xiangyazi24--palomar-qseries-prime-coefficients--11cfcf6746fb	true	https://github.com/PalomarArchive/xiangyazi24--palomar-qseries-prime-coefficients--11cfcf6746fb
+2026-08-22T20:27:11Z	2026-08-22T20:27:16Z	PalomarArchive/adas1236--KaltonPeck--85f54b622a52	true	https://github.com/PalomarArchive/adas1236--KaltonPeck--85f54b622a52
+2026-08-22T20:27:11Z	2026-08-22T20:27:16Z	PalomarArchive/adas1236--KaltonPeckPalomar--bffa78b64bd0	true	https://github.com/PalomarArchive/adas1236--KaltonPeckPalomar--bffa78b64bd0
+2026-08-22T03:39:34Z	2026-08-22T03:39:40Z	PalomarArchive/xiangyazi24--palomar-hahn-hecke-appell--7cd8b3eedc08	true	https://github.com/PalomarArchive/xiangyazi24--palomar-hahn-hecke-appell--7cd8b3eedc08
+2026-08-22T03:02:25Z	2026-08-22T03:02:32Z	PalomarArchive/williamjblair--lean-proofs--0e1dd8ebd799	true	https://github.com/PalomarArchive/williamjblair--lean-proofs--0e1dd8ebd799
+2026-08-21T20:48:30Z	2026-08-21T20:48:36Z	PalomarArchive/alejandro-soto-franco--EllipticPDE--bea407da0588	true	https://github.com/PalomarArchive/alejandro-soto-franco--EllipticPDE--bea407da0588
+2026-08-21T17:40:04Z	2026-08-21T17:40:12Z	PalomarArchive/leanprover--cslib--ce4da95284c3	true	https://github.com/PalomarArchive/leanprover--cslib--ce4da95284c3
+2026-08-21T11:10:40Z	2026-08-21T11:10:48Z	PalomarArchive/Paul-Lez--jacobian-conjecture--13e84929e25d	true	https://github.com/PalomarArchive/Paul-Lez--jacobian-conjecture--13e84929e25d
+2026-08-21T05:37:55Z	2026-08-21T23:05:48Z	PalomarArchive/teal-sea--zeta-lab--3c21e0f57be6	true	https://github.com/PalomarArchive/teal-sea--zeta-lab--3c21e0f57be6
+2026-08-21T05:17:25Z	2026-08-22T05:26:39Z	PalomarArchive/mbaccaro-dev--mathematical-proofs--747a1597eb38	true	https://github.com/PalomarArchive/mbaccaro-dev--mathematical-proofs--747a1597eb38
+2026-08-21T04:45:51Z	2026-08-21T19:03:54Z	PalomarArchive/lennrt--palomar-formalizations--21c40838d48e	true	https://github.com/PalomarArchive/lennrt--palomar-formalizations--21c40838d48e
+2026-08-21T04:18:18Z	2026-08-22T16:18:23Z	PalomarArchive/ehrlich-b--sequential-products-lean--7c5c76db591c	true	https://github.com/PalomarArchive/ehrlich-b--sequential-products-lean--7c5c76db591c
+2026-08-20T18:33:42Z	2026-08-20T18:33:52Z	PalomarArchive/catskillsresearch--scott_models--939a81cd7f19	true	https://github.com/PalomarArchive/catskillsresearch--scott_models--939a81cd7f19
+2026-08-20T14:32:13Z	2026-08-20T14:32:20Z	PalomarArchive/sloisel--MPE-Formal--357ef4ffc856	true	https://github.com/PalomarArchive/sloisel--MPE-Formal--357ef4ffc856
+2026-08-20T12:34:34Z	2026-08-20T12:34:39Z	PalomarArchive/benkeene--erdos266--5089d7151e9d	true	https://github.com/PalomarArchive/benkeene--erdos266--5089d7151e9d
+2026-08-20T11:56:21Z	2026-08-20T11:56:28Z	PalomarArchive/Vulkin-prog--paper-c-lean--3e6fbf22dec6	true	https://github.com/PalomarArchive/Vulkin-prog--paper-c-lean--3e6fbf22dec6
+2026-08-20T10:59:21Z	2026-08-20T10:59:27Z	PalomarArchive/rwst--Even-Integral--d8277e09a8e7	true	https://github.com/PalomarArchive/rwst--Even-Integral--d8277e09a8e7
+2026-08-20T10:59:18Z	2026-08-23T10:11:48Z	PalomarArchive/leanprover--lean4export--94a894d77e17	true	https://github.com/PalomarArchive/leanprover--lean4export--94a894d77e17
+2026-08-20T10:59:14Z	2026-08-23T10:11:47Z	PalomarArchive/leanprover--comparator--25495a50215b	true	https://github.com/PalomarArchive/leanprover--comparator--25495a50215b
+2026-08-20T07:59:36Z	2026-08-22T19:17:59Z	PalomarArchive/ashebson--kinin-lean--d6cd02a705f8	true	https://github.com/PalomarArchive/ashebson--kinin-lean--d6cd02a705f8
+2026-08-20T04:06:20Z	2026-08-20T04:06:26Z	PalomarArchive/RemyDegenne--kolmogorov_extension4--24bff9d3fa3f	true	https://github.com/PalomarArchive/RemyDegenne--kolmogorov_extension4--24bff9d3fa3f
+2026-08-20T04:06:18Z	2026-08-20T04:06:24Z	PalomarArchive/RemyDegenne--brownian-motion--0a105c3be893	true	https://github.com/PalomarArchive/RemyDegenne--brownian-motion--0a105c3be893
+2026-08-20T04:06:16Z	2026-08-20T04:06:23Z	PalomarArchive/leanprover--subverso--a9e8c8480480	true	https://github.com/PalomarArchive/leanprover--subverso--a9e8c8480480
+2026-08-20T04:05:58Z	2026-08-20T04:06:06Z	PalomarArchive/formal-applied-math--formal-mathfin--0ddd7144638f	true	https://github.com/PalomarArchive/formal-applied-math--formal-mathfin--0ddd7144638f
+2026-08-20T01:24:04Z	2026-08-20T01:24:12Z	PalomarArchive/catskillsresearch--cardb--9073a5b05dee	true	https://github.com/PalomarArchive/catskillsresearch--cardb--9073a5b05dee
+2026-08-20T00:37:14Z	2026-08-20T00:37:21Z	PalomarArchive/yuanchenyang--lean_low_rank_univariate_sos--99a6cdb210e0	true	https://github.com/PalomarArchive/yuanchenyang--lean_low_rank_univariate_sos--99a6cdb210e0
+2026-08-19T23:41:03Z	2026-08-20T01:02:58Z	PalomarArchive/stalex444--pdt-lean--23d4079303b8	true	https://github.com/PalomarArchive/stalex444--pdt-lean--23d4079303b8
+2026-08-19T23:11:58Z	2026-08-19T23:12:05Z	PalomarArchive/stalex444--arithmetic-of-time--b101f6bdb410	true	https://github.com/PalomarArchive/stalex444--arithmetic-of-time--b101f6bdb410
+2026-08-19T23:02:29Z	2026-08-20T00:09:46Z	PalomarArchive/dcposch--jc2-lean--e2c6525da39f	true	https://github.com/PalomarArchive/dcposch--jc2-lean--e2c6525da39f
+2026-08-19T14:58:54Z	2026-08-19T14:59:02Z	PalomarArchive/vo-rodrigues--wallace-problem-zfc-paper--bb095f618cc2	true	https://github.com/PalomarArchive/vo-rodrigues--wallace-problem-zfc-paper--bb095f618cc2
+2026-08-19T14:58:48Z	2026-08-19T14:58:56Z	PalomarArchive/vo-rodrigues--wallace-problem-palomar--c93f65425503	true	https://github.com/PalomarArchive/vo-rodrigues--wallace-problem-palomar--c93f65425503
+2026-08-19T14:32:24Z	2026-08-20T05:28:56Z	PalomarArchive/guanyangwang--ktv-swap-lean--4ad7ece5b060	true	https://github.com/PalomarArchive/guanyangwang--ktv-swap-lean--4ad7ece5b060
+2026-08-19T14:32:24Z	2026-08-20T05:28:56Z	PalomarArchive/guanyangwang--ktv-swap-lean-comparator--1838500af2cf	true	https://github.com/PalomarArchive/guanyangwang--ktv-swap-lean-comparator--1838500af2cf
+2026-08-19T14:09:12Z	2026-08-19T14:09:22Z	PalomarArchive/WillWhistler--Regts-Sevenster--a4b9e3ae19a0	true	https://github.com/PalomarArchive/WillWhistler--Regts-Sevenster--a4b9e3ae19a0
+2026-08-19T12:02:45Z	2026-08-20T00:53:36Z	PalomarArchive/elliotglazer--erdos501--a846048a857c	true	https://github.com/PalomarArchive/elliotglazer--erdos501--a846048a857c
+2026-08-18T23:20:34Z	2026-08-18T23:20:40Z	PalomarArchive/xinjiegit--ben_27_formalization--484843286ef4	true	https://github.com/PalomarArchive/xinjiegit--ben_27_formalization--484843286ef4
+2026-08-18T20:27:50Z	2026-08-18T20:27:57Z	PalomarArchive/AxiomMath--PrimeGapsLib--48de30bd7df0	true	https://github.com/PalomarArchive/AxiomMath--PrimeGapsLib--48de30bd7df0
+2026-08-18T20:27:50Z	2026-08-18T20:27:57Z	PalomarArchive/AxiomMath--PrimeNumberTheoremAnd--efa133edeace	true	https://github.com/PalomarArchive/AxiomMath--PrimeNumberTheoremAnd--efa133edeace
+2026-08-18T15:10:00Z	2026-08-18T15:10:09Z	PalomarArchive/LionSR--MIPStarRE--795dd6dc2a77	true	https://github.com/PalomarArchive/LionSR--MIPStarRE--795dd6dc2a77
+2026-08-18T15:10:00Z	2026-08-18T15:10:08Z	PalomarArchive/LionSR--LDT-comparator--d4a9ec4f2c03	true	https://github.com/PalomarArchive/LionSR--LDT-comparator--d4a9ec4f2c03
+2026-08-17T23:51:46Z	2026-08-17T23:51:54Z	PalomarArchive/jaumededios--cantor-frames-palomar--1431a78e4d9e	true	https://github.com/PalomarArchive/jaumededios--cantor-frames-palomar--1431a78e4d9e
+2026-08-17T23:51:46Z	2026-08-17T23:51:55Z	PalomarArchive/jaumededios--Cantor_Measure_Frames--06e98128d917	true	https://github.com/PalomarArchive/jaumededios--Cantor_Measure_Frames--06e98128d917
+2026-08-17T19:19:49Z	2026-08-17T19:19:56Z	PalomarArchive/gexahedron--sabidussi-lean--5f92c8eca325	true	https://github.com/PalomarArchive/gexahedron--sabidussi-lean--5f92c8eca325
+2026-08-17T19:11:03Z	2026-08-17T19:11:11Z	PalomarArchive/Paul-Lez--hadamard-668-comparator--2b123e0fb883	true	https://github.com/PalomarArchive/Paul-Lez--hadamard-668-comparator--2b123e0fb883
+2026-08-17T19:10:50Z	2026-08-21T11:10:31Z	PalomarArchive/google-deepmind--formal-conjectures--26b7f8cc558b	true	https://github.com/PalomarArchive/google-deepmind--formal-conjectures--26b7f8cc558b
+2026-08-17T06:40:04Z	2026-08-19T01:55:05Z	PalomarArchive/rkirov--jordan_pick--96177826a785	true	https://github.com/PalomarArchive/rkirov--jordan_pick--96177826a785
+2026-08-13T00:15:11Z	2026-08-20T00:23:51Z	PalomarArchive/teorth--sendov--f83e016e02dc	true	https://github.com/PalomarArchive/teorth--sendov--f83e016e02dc
+2026-08-07T03:03:49Z	2026-08-20T05:10:49Z	PalomarArchive/TauCetiProject--TauCeti--19ea3a09e7a2	true	https://github.com/PalomarArchive/TauCetiProject--TauCeti--19ea3a09e7a2
+2026-08-07T02:12:57Z	2026-08-22T20:27:26Z	PalomarArchive/PatrickMassot--checkdecls--17681c736a92	true	https://github.com/PalomarArchive/PatrickMassot--checkdecls--17681c736a92
+2026-08-07T02:12:55Z	2026-08-23T18:12:37Z	PalomarArchive/leanprover--lean4-cli--df175a7fc790	true	https://github.com/PalomarArchive/leanprover--lean4-cli--df175a7fc790
+2026-08-07T02:12:54Z	2026-08-23T18:12:36Z	PalomarArchive/leanprover-community--quote4--90d31d153685	true	https://github.com/PalomarArchive/leanprover-community--quote4--90d31d153685
+2026-08-07T02:12:54Z	2026-08-23T18:12:36Z	PalomarArchive/leanprover-community--ProofWidgets4--26014acbbaff	true	https://github.com/PalomarArchive/leanprover-community--ProofWidgets4--26014acbbaff
+2026-08-07T02:12:49Z	2026-08-23T18:12:35Z	PalomarArchive/leanprover-community--plausible--fb632f6f7bf4	true	https://github.com/PalomarArchive/leanprover-community--plausible--fb632f6f7bf4
+2026-08-07T02:12:48Z	2026-08-23T18:12:34Z	PalomarArchive/leanprover-community--LeanSearchClient--9de355ab5f53	true	https://github.com/PalomarArchive/leanprover-community--LeanSearchClient--9de355ab5f53
+2026-08-07T02:12:48Z	2026-08-23T18:12:42Z	PalomarArchive/leanprover-community--mathlib4--67b3d817d8a2	true	https://github.com/PalomarArchive/leanprover-community--mathlib4--67b3d817d8a2
+2026-08-07T02:12:47Z	2026-08-23T18:12:33Z	PalomarArchive/leanprover-community--import-graph--e0a79261b05a	true	https://github.com/PalomarArchive/leanprover-community--import-graph--e0a79261b05a
+2026-08-07T02:12:42Z	2026-08-20T05:11:01Z	PalomarArchive/kim-em--erdos-unit-distance-comparator--73f0f74bae03	true	https://github.com/PalomarArchive/kim-em--erdos-unit-distance-comparator--73f0f74bae03
+2026-08-07T02:12:42Z	2026-08-23T18:12:33Z	PalomarArchive/leanprover-community--batteries--1b4c776305c9	true	https://github.com/PalomarArchive/leanprover-community--batteries--1b4c776305c9
+2026-08-07T02:12:42Z	2026-08-23T18:12:33Z	PalomarArchive/leanprover-community--aesop--01b46b609077	true	https://github.com/PalomarArchive/leanprover-community--aesop--01b46b609077
+2026-08-07T02:12:41Z	2026-08-20T05:10:59Z	PalomarArchive/kim-em--erdos-unit-distance--89772f7e422b	true	https://github.com/PalomarArchive/kim-em--erdos-unit-distance--89772f7e422b
+2026-08-07T02:12:36Z	2026-08-22T03:02:09Z	PalomarArchive/b-mehta--PrimeCert--6e1ce9df1ff2	true	https://github.com/PalomarArchive/b-mehta--PrimeCert--6e1ce9df1ff2
+2026-08-07T02:12:36Z	2026-08-22T03:02:09Z	PalomarArchive/hanwenzhu--LeanArchitect--25c443d37079	true	https://github.com/PalomarArchive/hanwenzhu--LeanArchitect--25c443d37079
+2026-08-07T02:12:36Z	2026-08-22T03:02:10Z	PalomarArchive/AlexKontorovich--PrimeNumberTheoremAnd--8a93fdfc4bd1	true	https://github.com/PalomarArchive/AlexKontorovich--PrimeNumberTheoremAnd--8a93fdfc4bd1
+2026-08-07T02:12:36Z	2026-08-22T03:02:10Z	PalomarArchive/alerad--leancert--f3752754ce0e	true	https://github.com/PalomarArchive/alerad--leancert--f3752754ce0e
+
+exec
+/bin/zsh -lc "curl -sS 'https://api.github.com/repos/royvanrijn/jacobian-research/commits?since=2026-08-23T05:25:00Z&per_page=100' | jq -r '\"COMMITS \\(length)\", (.[] | [.commit.author.date,.sha[0:12],(.commit.message|split(\"\\n\")[0])] | @tsv)'" in /Users/dc/code/math/jc2
+ succeeded in 259ms:
+COMMITS 29
+2026-08-23T20:28:55Z	2ebb1f612bb0	updating ledgers
+2026-08-23T20:23:02Z	49268ad1bd1a	Merge branch 'main' of https://github.com/royvanrijn/jacobian-research
+2026-08-23T20:23:00Z	21ec4a6bc196	trying to lift over q24
+2026-08-23T16:13:12Z	1dbd84d9fb76	Add H3 q24 to pinned R17 closeout ledger
+2026-08-23T16:13:00Z	0de759a1c05c	Correct q24 suffix ledger after pinned R17 closeout
+2026-08-23T16:12:43Z	35acb1723445	Correct preferred H3 route after q24 R17 closeout
+2026-08-23T16:09:44Z	e0f7ba7cdb2e	PASS_Q24_EQUATION_D13_TO_PINNED_R17_LATTICE_PATH
+2026-08-23T15:37:38Z	af1d0f2fb4ac	Merge branch 'main' of https://github.com/royvanrijn/jacobian-research
+2026-08-23T15:37:28Z	33917a749efe	trying to lift
+2026-08-23T15:18:50Z	4b941a743fe1	Add q24-native suffix proof ledger
+2026-08-23T15:18:09Z	3d221044fb06	Update ledger for q24-native D12 suffix
+2026-08-23T15:17:24Z	fe69068a16d5	Document q24-native H3 preferred path
+2026-08-23T15:12:22Z	bfb96bf526b0	lifting q24 path
+2026-08-23T14:33:17Z	33f903e149cd	Create probe_h92_q32_spinor_quartic_section_anchor.sage
+2026-08-23T14:23:09Z	1f3a746459b0	pushing alternative q32
+2026-08-23T13:22:15Z	833bbe583443	Merge pull request #34 from royvanrijn/work/q24-d13-component-graph
+2026-08-23T13:21:54Z	55b65c234581	Document q24 effective cluster frontier
+2026-08-23T13:21:22Z	2547a14c6aae	Probe q24 resolved cluster RR pencil
+2026-08-23T13:19:25Z	c8874e8fae5b	Derive q24 effective I9* vanishing cluster
+2026-08-23T13:12:52Z	37f0439ee2a8	Certify q24 affine D13 component graph
+2026-08-23T13:12:30Z	645aaaf15dd6	Record q24 resolved-component frontier
+2026-08-23T13:11:47Z	e1ff6e43347e	Add q24 I9* D13 component graph certifier
+2026-08-23T13:06:40Z	79723b396916	Merge pull request #32 from royvanrijn/fix/q24-i9star-component-accounting
+2026-08-23T13:02:03Z	b0c70e990ee4	Add q24 ordinary-jet pair diagnostic scan
+2026-08-23T12:59:05Z	c5343009a769	Distinguish I9* blow-up centres from exceptional components
+2026-08-23T12:48:26Z	52eb5c164e5e	Fix q24 RR preflight JSON serialization
+2026-08-23T10:30:23Z	fb39505b3391	trying to add some documentation
+2026-08-23T10:25:25Z	140c7d9eeefd	Audit and document Elkies K3 script history (#30)
+2026-08-23T09:40:52Z	4eac04a442a1	adding archived scripts that might help backtrack
+
+exec
+/bin/zsh -lc "curl -sS 'https://api.github.com/repos/royvanrijn/jacobian-research/commits?until=2026-08-23T05:25:00Z&per_page=5' | jq -r '.[] | [.commit.author.date,.sha[0:40],(.commit.message|split(\"\\n\")[0])] | @tsv'" in /Users/dc/code/math/jc2
+ succeeded in 148ms:
+2026-08-23T04:07:28Z	0e2e3a251281d328a87baab8b41c829f47db7fa8	Restore Q80 proof script executable modes
+2026-08-23T03:59:51Z	a32ed3f70ad1db5c4414ccd513a3ebc4fc9f08b0	Keep Q80 proof scripts byte-for-byte
+2026-08-23T03:59:14Z	0e5b832619d4644ee0f0e64a6bb60c0c569fb8fa	Add Q80 final q6 reproduction links
+2026-08-23T03:58:35Z	3ba50eb576a59f9ef5e966060a479c811a78d6ce	Clean Q80 final-q6 entry points
+2026-08-23T03:57:57Z	4ce25ff1b20b4a204df21caf762995aa276084bc	Refresh canonical routes after Q80 terminal char0 closure
+
+exec
+/bin/zsh -lc "curl -sS 'https://api.github.com/repos/royvanrijn/jacobian-research/compare/0e2e3a251281d328a87baab8b41c829f47db7fa8...2ebb1f612bb0' | jq -r '\"STATUS \\(.status) ahead=\\(.ahead_by) commits=\\(.total_commits) files=\\(.files|length)\", (.files[] | [.status,.filename,(.additions|tostring),(.deletions|tostring)] | @tsv)'" in /Users/dc/code/math/jc2
+ succeeded in 765ms:
+STATUS ahead ahead=29 commits=29 files=293
+modified	.gitignore	3	0
+modified	MATH_STATUS.json	40	6
+modified	REPRODUCE.md	44	2
+modified	STATUS.md	2	1
+added	artifacts/generated-results/elkies-k3-rank17-to-h3-reverse-transport.json	40821	0
+modified	elkies-k3/CONSTRUCTION_ROUTES.md	246	126
+added	elkies-k3/H3_PREFERRED_PATH.md	126	0
+added	elkies-k3/H3_Q24_EFFECTIVE_CLUSTER_2026-08-23.md	48	0
+added	elkies-k3/H3_Q24_FRONTIER_2026-08-23.md	106	0
+added	elkies-k3/H3_Q24_R17_CLOSEOUT_2026-08-23.md	135	0
+modified	elkies-k3/KUMAR_E7E8_BACKTRACK.md	12	1
+added	elkies-k3/Q24_NATIVE_SUFFIX_LEDGER_2026-08-23.md	187	0
+added	elkies-k3/RANK17_TO_H3_REVERSE_TRANSPORT_2026-08-23.md	162	0
+modified	elkies-k3/README.md	22	6
+added	elkies-k3/SCRIPT_ROUTE_AND_FAILURE_LEDGER.md	428	0
+added	elkies-k3/data/fibrations/h3_rootless_mw17_to_pinned_rank17_isometry.txt	21	0
+added	elkies-k3/scripts/README.md	296	0
+added	elkies-k3/scripts/analyze_h92_d13_degree3_exact_bisection_frontier.sage	268	0
+added	elkies-k3/scripts/analyze_h92_d13_degree3_section_decompositions.sage	277	0
+added	elkies-k3/scripts/analyze_h92_q24_a11_easy_spinor_shift.sage	254	0
+added	elkies-k3/scripts/analyze_h92_q32_d12_mw5_sections.sage	149	0
+added	elkies-k3/scripts/anchor_h92_q24_d12_spinor_modp.sage	201	0
+added	elkies-k3/scripts/archive/Q24_HENSEL_SRR_DEAD_END.md	19	0
+added	elkies-k3/scripts/archive/README.md	193	0
+added	elkies-k3/scripts/archive/analyze_h92_q8_component_nef_s3_target.sage	425	0
+added	elkies-k3/scripts/archive/analyze_h92_q8_visible_zero_profiles.sage	415	0
+added	elkies-k3/scripts/archive/analyze_h92_q8_visible_zero_profiles_v2.sage	417	0
+added	elkies-k3/scripts/archive/audit_h3_d13_mw_basis_profiles.sage	401	0
+added	elkies-k3/scripts/archive/audit_h3_d13_q24_pullback_invariants.sage	376	0
+added	elkies-k3/scripts/archive/audit_h3_d13_q24_section_pullback.sage	399	0
+added	elkies-k3/scripts/archive/audit_h3_d13_q24_section_pullback_v2.sage	447	0
+added	elkies-k3/scripts/archive/audit_h3_d13_q24_section_pullback_v3.sage	566	0
+added	elkies-k3/scripts/archive/audit_h3_d13_q24_section_pullback_v4.sage	634	0
+added	elkies-k3/scripts/archive/audit_h92_q6_child_q8_marking_height.sage	217	0
+added	elkies-k3/scripts/archive/audit_h92_q6_child_q8_point_heights.sage	440	0
+added	elkies-k3/scripts/archive/audit_h92_q6_third_literal_support.sage	372	0
+added	elkies-k3/scripts/archive/audit_h92_q8_d13_zero_anchor.sage	655	0
+added	elkies-k3/scripts/archive/audit_h92_q8_d13_zero_anchor_v2.sage	669	0
+added	elkies-k3/scripts/archive/audit_h92_q8_explicit_old_curves.sage	427	0
+added	elkies-k3/scripts/archive/audit_h92_q8_old_q6_mw_images.sage	532	0
+added	elkies-k3/scripts/archive/audit_h92_q8_original_h3_sections.sage	274	0
+added	elkies-k3/scripts/archive/audit_h92_q8_representative_selection.sage	181	0
+added	elkies-k3/scripts/archive/build_mw3_semistable_p1_checkpoint.sage	130	0
+added	elkies-k3/scripts/archive/build_mw3_semistable_p1_system.sage	268	0
+added	elkies-k3/scripts/archive/certify_h92_q6_third_to_q8_bridge.sage	329	0
+added	elkies-k3/scripts/archive/certify_h92_q6_third_to_q8_bridge_v2.sage	338	0
+added	elkies-k3/scripts/archive/certify_h92_q6_third_to_q8_bridge_v3.sage	340	0
+added	elkies-k3/scripts/archive/certify_h92_q8_equation_ns_divisor.sage	530	0
+added	elkies-k3/scripts/archive/certify_q8_e7_round10_pure_m.sage	128	0
+added	elkies-k3/scripts/archive/certify_q8_e8_resolved_reduced_lattice.sage	303	0
+added	elkies-k3/scripts/archive/certify_q8_e8_saturated_lattice.sage	179	0
+added	elkies-k3/scripts/archive/check_e6_rank2_components_gf31.sage	97	0
+added	elkies-k3/scripts/archive/check_h92_q6_third_rr_stability.sage	82	0
+added	elkies-k3/scripts/archive/derive_h92_q6_child_q8_corrected2cover_qq.sage	597	0
+added	elkies-k3/scripts/archive/derive_h92_q8_d13_branch_anchor.sage	543	0
+added	elkies-k3/scripts/archive/derive_h92_q8_d13_g3_from_e77_bisection.sage	642	0
+added	elkies-k3/scripts/archive/derive_h92_q8_global_orientation.sage	349	0
+added	elkies-k3/scripts/archive/derive_h92_q8_global_orientation_v2.sage	380	0
+added	elkies-k3/scripts/archive/e6_i4_blowup_classifier.sage	166	0
+added	elkies-k3/scripts/archive/e6_i4_blowup_classifier_v2.sage	142	0
+renamed	elkies-k3/scripts/archive/exactify_h92_q24_from_padic_srr.sage	4	0
+added	elkies-k3/scripts/archive/extend_mw3_p1_p110_norm_state.sage	102	0
+added	elkies-k3/scripts/archive/inspect_h92_q6_third_hensel.sage	77	0
+renamed	elkies-k3/scripts/archive/lift_h92_q24_direct_hensel.sage	5	0
+added	elkies-k3/scripts/archive/lift_h92_q6_third_hensel.sage	396	0
+added	elkies-k3/scripts/archive/mw3_p1_stage2_chain.sage	512	0
+added	elkies-k3/scripts/archive/mw3_semistable_component_profiles.sage	80	0
+added	elkies-k3/scripts/archive/probe_h92_q6_child_q8_corrected2cover_global_modp.sage	472	0
+added	elkies-k3/scripts/archive/probe_h92_q6_child_q8_corrected2cover_global_modp_v2.sage	490	0
+added	elkies-k3/scripts/archive/probe_h92_q6_child_q8_corrected2cover_global_modp_v3.sage	504	0
+added	elkies-k3/scripts/archive/probe_h92_q6_child_q8_corrected2cover_global_modp_v4.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q6_third_p2_trace_modp.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q6_third_p2_trace_modp_v2.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q6_third_p2_trace_modp_v3.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_complete_chamber_reduction.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_corrected1278_all_nodes_direct.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_corrected1278_e7_identity.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_corrected1278_e7_identity_full_jets.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_corrected1278_global.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_corrected1278_global_v2.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_corrected1278_marked_caps.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_corrected1278_two_translated_divisors.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_corrected1278_y_root_full_jets.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_corrected1278_zu_root_full_jets.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_horizontal_fixed_reduction.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_lower_twist_multiplication.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_lower_twist_tail.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_s3_trace_modp.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_s3_trace_modp_v2.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_s3_trace_modp_v3.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_source_nef_multisections.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true1600_all_nodes_direct.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true1600_e75_full_normal_jets.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true1600_first_finite_node.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true1600_first_finite_node_v2.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true1600_full_chart_power_modp.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true1600_p59_global.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true1600_restricted_node_direct.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true1600_restricted_node_fast.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true1600_translated_divisor.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true1600_two_translated_divisors.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true1600_two_translated_divisors_p59.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true1600_y_root_full_jets.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true1600_zu_root_full_jets.sage	0	0
+added	elkies-k3/scripts/archive/probe_h92_q8_true_twist_ladder.sage	0	0
+added	elkies-k3/scripts/archive/probe_mw3_i11_formal_root_state.sage	0	0
+added	elkies-k3/scripts/archive/probe_mw3_p1_residuals.sage	0	0
+added	elkies-k3/scripts/archive/probe_mw3_p1_stage3_state.sage	0	0
+added	elkies-k3/scripts/archive/q24-bak-20260823/README.md	0	0
+added	elkies-k3/scripts/archive/q8_global_lattice_intersection_diagnostic.sage	0	0
+added	elkies-k3/scripts/archive/q8_global_lattice_intersection_modp_v2.sage	0	0
+added	elkies-k3/scripts/archive/q8_global_true_e7_all_nodes_gate.sage	0	0
+added	elkies-k3/scripts/archive/q8_global_true_e7_generic_gate.sage	0	0
+added	elkies-k3/scripts/archive/q8_global_true_e7_generic_gate_v2.sage	0	0
+added	elkies-k3/scripts/archive/q8_global_true_e7_node43_gate.sage	0	0
+added	elkies-k3/scripts/archive/q8_qframe_e7_node_probe.sage	0	0
+added	elkies-k3/scripts/archive/q8_qframe_e7_node_probe_corner.sage	0	0
+added	elkies-k3/scripts/archive/q8_qframe_e7_node_probe_fixed.sage	0	0
+added	elkies-k3/scripts/archive/q8_qframe_e7_node_probe_product.sage	0	0
+added	elkies-k3/scripts/archive/q8_qframe_finite_transition_probe.sage	0	0
+added	elkies-k3/scripts/archive/rank_mw3_p1_i2_five_from_state.sage	0	0
+added	elkies-k3/scripts/archive/rebase_h92_q6_third_iistar_ivstar.sage	0	0
+added	elkies-k3/scripts/archive/rebase_h92_q6_third_iistar_ivstar_v2.sage	0	0
+added	elkies-k3/scripts/archive/recover_h92_q24_pointed_zero_pole_sections.sage	0	0
+added	elkies-k3/scripts/archive/recover_h92_q24_r17_a11_zero_pole_sections.sage	0	0
+added	elkies-k3/scripts/archive/recover_h92_q6_standard_zero_translation_v2.sage	0	0
+added	elkies-k3/scripts/archive/recover_h92_q6_third_common_denominator.sage	0	0
+added	elkies-k3/scripts/archive/recover_h92_q6_third_rational_adaptive.sage	0	0
+added	elkies-k3/scripts/archive/recover_h92_q6_third_trace_modp.sage	0	0
+added	elkies-k3/scripts/archive/recover_h92_q6_third_trace_samples_modp.sage	0	0
+added	elkies-k3/scripts/archive/recover_h92_q6_third_trace_samples_modp_v2.sage	0	0
+added	elkies-k3/scripts/archive/recover_h92_q8_s3_aj_samples_modp.sage	0	0
+added	elkies-k3/scripts/archive/recover_h92_q8_s3_aj_samples_modp_v2.sage	0	0
+added	elkies-k3/scripts/archive/recover_h92_q8_s3_aj_samples_modp_v3.sage	0	0
+added	elkies-k3/scripts/archive/repair_h92_q6_child_q8_marking_2cover.sage	0	0
+added	elkies-k3/scripts/archive/run_h92_q24_pointed_zero_pole_sections.sh	0	0
+added	elkies-k3/scripts/archive/run_h92_q24_r17_a11_progress.py	0	0
+added	elkies-k3/scripts/archive/scan_e6_p3_first_order_31adic.sage	0	0
+added	elkies-k3/scripts/archive/scan_e6_p3_second_order_31adic.sage	0	0
+added	elkies-k3/scripts/archive/search_e6_third_polynomial_gf31.sage	0	0
+added	elkies-k3/scripts/archive/search_h92_q6_mw_for_q24_bridge_exhaustive.sage	0	0
+added	elkies-k3/scripts/archive/search_h92_q6_mw_for_q24_bridge_raw_v2.sage	0	0
+added	elkies-k3/scripts/archive/search_h92_source_mw_for_q24_bridge.sage	0	0
+added	elkies-k3/scripts/archive/search_h92_source_mw_for_q24_bridge_v2.sage	0	0
+added	elkies-k3/scripts/archive/search_h92_source_mw_for_q24_bridge_v3.sage	0	0
+added	elkies-k3/scripts/archive/search_h92_source_mw_for_q24_bridge_v4.sage	0	0
+added	elkies-k3/scripts/archive/search_h92_source_mw_for_q24_bridge_v5.sage	0	0
+added	elkies-k3/scripts/archive/search_h92_source_mw_for_q24_bridge_v6.sage	0	0
+added	elkies-k3/scripts/audit_h92_q24_explicit_curves_for_a11.sage	0	0
+added	elkies-k3/scripts/audit_h92_q24_i9star_exceptional_components_modp.sage	0	0
+added	elkies-k3/scripts/audit_h92_q24_i9star_tangent_cones_modp.sage	0	0
+added	elkies-k3/scripts/audit_h92_q24_native_embedded_divergence.sage	0	0
+added	elkies-k3/scripts/audit_h92_q24_native_r17_divergence.sage	0	0
+added	elkies-k3/scripts/audit_h92_q24_orbit42_explicit_multisections.sage	0	0
+added	elkies-k3/scripts/backlift_h92_q24_a11_to_q8_equation_frame.sage	0	0
+added	elkies-k3/scripts/build_h3_r17_backward_exact_lift_manifest.sage	0	0
+added	elkies-k3/scripts/build_h92_q24_orbit85_exact_construction_manifest.sage	0	0
+added	elkies-k3/scripts/certify_h92_q24_effective_d13_transport.sage	0	0
+added	elkies-k3/scripts/certify_h92_q24_effective_d13_transport.sage.bak-20260823-153700	0	0
+added	elkies-k3/scripts/certify_h92_q24_effective_d13_transport.sage.bak-20260823-153905	0	0
+added	elkies-k3/scripts/certify_h92_q24_effective_d13_transport.sage.bak-20260823-154136	0	0
+added	elkies-k3/scripts/certify_h92_q24_equation_d13_to_pinned_r17.sage	0	0
+added	elkies-k3/scripts/certify_h92_q24_i9star_component_graph_modp.sage	0	0
+added	elkies-k3/scripts/check_h92_q24_to_a1_toolbox.sage	0	0
+added	elkies-k3/scripts/close_h92_q24_native_a1_to_r17.sage	0	0
+modified	elkies-k3/scripts/close_h92_q8_q24_by_q6_translation.sage	0	0
+added	elkies-k3/scripts/compare_h92_q32_a11_to_historical_suffix.sage	0	0
+added	elkies-k3/scripts/compare_h92_q32_a1_mw16_fingerprint.sage	0	0
+added	elkies-k3/scripts/compare_h92_three_q24_d12_current_equation_profiles.sage	0	0
+added	elkies-k3/scripts/compare_h92_three_q24_d12_equation_profiles.sage	0	0
+added	elkies-k3/scripts/compile_h92_q24_orbit42_a11_chord_modp.sage	0	0
+added	elkies-k3/scripts/compile_h92_q32_d12_from_divval_modp.sage	0	0
+added	elkies-k3/scripts/compile_h92_q32_d12_resolved_center_rr_modp.sage	0	0
+added	elkies-k3/scripts/derive_h92_q24_i9star_effective_cluster_modp.sage	0	0
+added	elkies-k3/scripts/derive_h92_q24_i9star_effective_cluster_modp.sage.bak-20260823-152743	0	0
+added	elkies-k3/scripts/derive_h92_q24_i9star_effective_cluster_modp.sage.bak-20260823-153132	0	0
+added	elkies-k3/scripts/derive_h92_q24_i9star_resolution_modp.sage	0	0
+added	elkies-k3/scripts/diagnose_h92_q32_child_j_poles.sage	0	0
+added	elkies-k3/scripts/diagnose_h92_q32_compact_intrinsic_crt.sage	0	0
+added	elkies-k3/scripts/diagnose_h92_q32_fullnorm_invariants.sage	0	0
+added	elkies-k3/scripts/diagnose_h92_q32_intrinsic_plane_crt.sage	0	0
+modified	elkies-k3/scripts/elliptic_neighbor_compiler.sage	0	0
+added	elkies-k3/scripts/enumerate_h92_q24_geometric_i9star_degree_patterns.sage	0	0
+added	elkies-k3/scripts/exactify_q24_weighted_from_hensel.sage	0	0
+added	elkies-k3/scripts/export_h92_q24_native_d12_frame.sage	0	0
+added	elkies-k3/scripts/export_h92_q32_d12_mw5_frame.sage	0	0
+added	elkies-k3/scripts/extend_h92_q24_orbit85_crt_precision.py	0	0
+added	elkies-k3/scripts/extend_h92_q32_modular_precision_until_qq.py	0	0
+added	elkies-k3/scripts/extend_h92_q32_until_fullnorm_qq.py	0	0
+added	elkies-k3/scripts/extract_h92_q24_d12_modp_signature.sage	0	0
+added	elkies-k3/scripts/extract_h92_q24_orbit42_current_equation_bridge.sage	0	0
+added	elkies-k3/scripts/extract_h92_q32_modp_signature.sage	0	0
+added	elkies-k3/scripts/find_h92_q24_native_a1_to_pinned_r17.sage	0	0
+added	elkies-k3/scripts/identify_h92_q24_r17_a11_pointed_target.sage	0	0
+added	elkies-k3/scripts/install_current_o42_fast_solver.py	0	0
+added	elkies-k3/scripts/lift_h92_q32_horizontal_section_direct_hensel.sage	0	0
+added	elkies-k3/scripts/lift_h92_q32_horizontal_section_direct_hensel.sage.before-checkpoint	0	0
+added	elkies-k3/scripts/lift_h92_q32_horizontal_section_direct_hensel.sage.before-simrr	0	0
+added	elkies-k3/scripts/lift_q24_d13_to_d12_resolved_rr_qq.sage	0	0
+added	elkies-k3/scripts/lift_q24_d13_to_d12_resolved_rr_qq.sage.bak-cluster-map-20260823-222736	0	0
+added	elkies-k3/scripts/lift_q24_reduced_unknowns.sage	0	0
+added	elkies-k3/scripts/lift_q24_stable_reduced.sage	0	0
+added	elkies-k3/scripts/lift_q24_structured_newton.sage	0	0
+added	elkies-k3/scripts/map_h92_q24_i9star_geometric_components.sage	0	0
+added	elkies-k3/scripts/optimize_h92_q24_orbit42_direct_aj_combination.sage	0	0
+added	elkies-k3/scripts/preflight_h92_q24_o12_p42_exact_q6_points.sage	0	0
+added	elkies-k3/scripts/probe_h92_q24_d12_component_valuation_rr_modp.sage	0	0
+added	elkies-k3/scripts/probe_h92_q24_d12_component_valuation_rr_modp.sage.bak-20260823-161318	0	0
+added	elkies-k3/scripts/probe_h92_q24_d12_degree2_rr_modp.sage	0	0
+added	elkies-k3/scripts/probe_h92_q24_d12_effective_d13_rr_modp.sage	0	0
+added	elkies-k3/scripts/probe_h92_q24_d12_eight_jet_pencil_modp.sage	0	0
+added	elkies-k3/scripts/probe_h92_q24_d12_reduced16.sage	0	0
+added	elkies-k3/scripts/probe_h92_q24_d12_resolved_cluster_rr_modp.sage	0	0
+added	elkies-k3/scripts/probe_h92_q24_d12_resolved_cluster_rr_modp.sage.bak-20260823-153132	0	0
+added	elkies-k3/scripts/probe_h92_q24_effective_d13_chamber_cycle_modp.sage	0	0
+added	elkies-k3/scripts/probe_h92_q24_effective_d13_chamber_v2.sage	0	0
+added	elkies-k3/scripts/probe_h92_q24_i9star_ideal_atlas_modp.sage	0	0
+added	elkies-k3/scripts/probe_h92_q32_denominator_structure.sage	0	0
+added	elkies-k3/scripts/probe_h92_q32_exact_mw_shortcut.sage	0	0
+added	elkies-k3/scripts/probe_h92_q32_generic_divisorial_rr_modp.sage	0	0
+added	elkies-k3/scripts/probe_h92_q32_pointed_spinor_weierstrass.sage	0	0
+added	elkies-k3/scripts/probe_h92_q32_spinor_quartic_section_anchor.sage	0	0
+added	elkies-k3/scripts/profile_h92_q24_d12_mw5_parent_curves.sage	0	0
+added	elkies-k3/scripts/profile_h92_q24_orbit42_spinor_zeros.sage	0	0
+added	elkies-k3/scripts/profile_h92_q24_pointed_d12_a11.sage	0	0
+added	elkies-k3/scripts/pullback_h92_q24_native_a1_pinned_r17.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q24_orbit85_compact_rows_lll.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q24_orbit85_rr_kernel_crt.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q32_compact_plane_lll.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q32_compact_rows_lll.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q32_d12_ab.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q32_d12_canonical_j.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q32_from_modp_signatures.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q32_fully_normalized_qq.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q32_horizontal_hybrid_crt.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q32_horizontal_section_crt.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q32_i8star_infinity_qq.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q32_pointed_d12_projective_lll.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q32_pointed_d12_projective_lll_xfirst.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q32_pointed_d12_qq.sage	0	0
+added	elkies-k3/scripts/reconstruct_h92_q32_polynomial_model_qq.sage	0	0
+added	elkies-k3/scripts/recover_h92_q24_a11_orbit23_p1_section.sage	0	0
+added	elkies-k3/scripts/recover_h92_q24_a11_orbit23_p1_section.sage.bak-20260823-175642	0	0
+added	elkies-k3/scripts/recover_h92_q24_d12_orbit42_section_modp.sage	0	0
+added	elkies-k3/scripts/recover_h92_q24_d12_orbit42_section_modp.sage.bak-20260823-165033	0	0
+added	elkies-k3/scripts/recover_h92_q24_d12_orbit42_section_modp.sage.bak-20260823-170047	0	0
+added	elkies-k3/scripts/recover_h92_q24_degree46_direct_global_fixedsign_modp.sage	0	0
+added	elkies-k3/scripts/recover_h92_q24_degree46_direct_global_modp_reuse_sign.sage	0	0
+added	elkies-k3/scripts/recover_h92_q24_exact_by_multiprime_sections.sage	0	0
+added	elkies-k3/scripts/recover_h92_q24_exact_by_qq_trace_interpolation.sage	0	0
+added	elkies-k3/scripts/recover_h92_q24_exact_by_qq_trace_interpolation.sage.parallel-bak	0	0
+added	elkies-k3/scripts/recover_h92_q24_orbit42_current_equation_section_modp.sage	0	0
+added	elkies-k3/scripts/recover_h92_q32_d12_actual_twist_dx3.sage	0	0
+added	elkies-k3/scripts/recover_h92_q32_d12_polynomial_sections_modp.sage	0	0
+added	elkies-k3/scripts/recover_q24_from_partial_identity.sage	0	0
+added	elkies-k3/scripts/replay_h3_rank_growth_corridor_geometry.sage	0	0
+added	elkies-k3/scripts/replay_h92_q24_d12_discovery_and_theta.sage	0	0
+added	elkies-k3/scripts/run_h3_r17_backward_exact_lift_manifest.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_a11_backlift_q8.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_a11_easy_spinor_shift.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_a11_f8_bisection_test.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_a11_orbit23_p1_section.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_d12_a11_equation_bootstrap.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_d12_orbit42_section.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_explicit_curves_for_a11.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_native_suffix_to_a1.py	0	0
+added	elkies-k3/scripts/run_h92_q24_native_suffix_to_a1.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_orbit42_current_equation_bridge.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_orbit42_direct_aj_combination.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_orbit42_explicit_multisections.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_orbit42_spinor_zeros.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_orbit85_modp_stack.py	0	0
+added	elkies-k3/scripts/run_h92_q24_pointed_d12_a11_profile.sh	0	0
+added	elkies-k3/scripts/run_h92_q24_to_a1_toolbox.sh	0	0
+added	elkies-k3/scripts/run_q24_local_module_scan.sh	0	0
+added	elkies-k3/scripts/run_q24_reduced_module_tests.sh	0	0
+added	elkies-k3/scripts/scan_h92_q24_d12_a11_equation_friendly.sage	0	0
+added	elkies-k3/scripts/scan_h92_q24_d12_local_module_splits_modp.sage	0	0
+added	elkies-k3/scripts/scan_h92_q24_d12_ordinary_jet_pairs_modp.sage	0	0
+added	elkies-k3/scripts/scan_h92_q24_d12_sheared_modules_modp.sage	0	0
+added	elkies-k3/scripts/scout_h3_d13_symbolic_exits.sage	0	0
+added	elkies-k3/scripts/search_h92_all_three_q24_bridges_equation_frame.sage	0	0
+added	elkies-k3/scripts/search_h92_d13_equation_cost_frontier.sage	0	0
+added	elkies-k3/scripts/search_h92_q32_final_rootless_by_parity.sage	0	0
+added	elkies-k3/scripts/search_h92_q32_final_rootless_targeted_shell.sage	0	0
+added	elkies-k3/scripts/search_root_adapted_weyl_neighbors_targeted.sage	0	0
+added	elkies-k3/scripts/test_h92_q24_a11_reuse_f8_bisection.sage	0	0
+added	elkies-k3/scripts/test_h92_q24_geometrically_clean_d12_neighbor.sage	0	0
+added	elkies-k3/scripts/transport_h92_q24_effective_i9star_components.sage	0	0
+added	elkies-k3/scripts/transport_h92_q24_native_a1_final_q6_to_r17.sage	0	0
+added	elkies-k3/scripts/verify_h92_q32_to_mw17_path.sage	0	0
+added	elkies-k3/scripts/verify_rank17_to_h3_reverse_transport.sage	0	0
+modified	elliptic-curves/notes/ICARM_CURVE273_CONSTRUCTION_INVESTIGATION.md	0	0
+
+exec
+/bin/zsh -lc 'for path in plane-jc HC4_RANK_THREE_WRONSKIAN_TO_JC2.md JC2_HC4_SHARED_BOUNDARY_PROGRAM.md; do echo "PATH $path"; curl -sS "https://api.github.com/repos/royvanrijn/jacobian-research/commits?path=$path&per_page=5" | jq -r '"'.[] | [.commit.author.date,.sha[0:12],(.commit.message|split(\"\\n\")[0])] | @tsv'; done" in /Users/dc/code/math/jc2
+ exited 127 in 0ms:
+PATH plane-jc
+zsh:1: command not found: curl
+zsh:1: command not found: jq
+PATH HC4_RANK_THREE_WRONSKIAN_TO_JC2.md
+zsh:1: command not found: curl
+zsh:1: command not found: jq
+PATH JC2_HC4_SHARED_BOUNDARY_PROGRAM.md
+zsh:1: command not found: curl
+zsh:1: command not found: jq
+
+exec
+/bin/zsh -lc "for watch_path in plane-jc HC4_RANK_THREE_WRONSKIAN_TO_JC2.md JC2_HC4_SHARED_BOUNDARY_PROGRAM.md; do printf 'PATH %s\\n' \""'$watch_path"; curl -sS "https://api.github.com/repos/royvanrijn/jacobian-research/commits?path=$watch_path&per_page=5" | jq -r '"'.[] | [.commit.author.date,.sha[0:12],(.commit.message|split(\"\\n\")[0])] | @tsv'; done" in /Users/dc/code/math/jc2
+ succeeded in 714ms:
+2026-08-14T19:35:41Z	4d90d704470e	adding more EC
+2026-08-11T06:30:05Z	ba35e43b62a1	iterating
+2026-08-10T15:14:16Z	dc9b02113696	adding final changes
+2026-08-10T10:51:19Z	23ba08026bd9	pushing some of the frontier problems
+2026-08-06T05:55:39Z	75a0b3bd6a10	iterating
+PATH HC4_RANK_THREE_WRONSKIAN_TO_JC2.md
+2026-08-08T05:09:59Z	7c78d256e99f	Strengthen Wronskian reduction to a unit obstruction
+2026-08-07T13:43:19Z	04b198efd12a	Reduce moving rank-three Wronskian branch to JC2
+PATH JC2_HC4_SHARED_BOUNDARY_PROGRAM.md
+2026-07-30T13:35:31Z	88c929649e8c	cleaning and optimizing
+2026-07-30T12:00:56Z	02c878324c3a	iterating
+2026-07-30T10:59:34Z	cb66ec7664be	first commit from new machine
+2026-07-30T09:15:21Z	bf1483797ec6	handoff to new machine
+
+exec
+/bin/zsh -lc "printf 'QUESTION\\n'; curl -sS 'https://api.stackexchange.com/2.3/questions/513413?site=mathoverflow&filter="'!nNPvSNdWme'"' | jq -r '.items[] | {question_id,title,score,view_count,answer_count,comment_count,last_activity_date,last_edit_date,protected_date,closed_date}'; printf 'ANSWERS\\n'; curl -sS 'https://api.stackexchange.com/2.3/questions/513413/answers?site=mathoverflow&pagesize=100&order=asc&sort=creation&filter="'!nNPvSNVZJS'"' | jq -r '.items[] | {answer_id,score,owner:(.owner.display_name),creation_date,last_activity_date,last_edit_date,comment_count,is_accepted}'; printf 'QUESTION COMMENTS\\n'; curl -sS 'https://api.stackexchange.com/2.3/questions/513413/comments?site=mathoverflow&pagesize=100&filter="'!nNPvSNdWme'"' | jq -r '.items[] | [.comment_id,.creation_date,.owner.display_name,.score,.body] | @tsv'; printf 'ANSWER COMMENTS\\n'; curl -sS 'https://api.stackexchange.com/2.3/answers/513467;513476;513493;513502/comments?site=mathoverflow&pagesize=100&filter="'!nNPvSNdWme'"' | jq -r '.items[] | [.post_id,.comment_id,.creation_date,.owner.display_name,.score,.body] | @tsv'; printf 'TIMELINE NEW\\n'; curl -sS 'https://api.stackexchange.com/2.3/questions/513413/timeline?site=mathoverflow&pagesize=100' | jq -r '.items[] | select(.creation_date >= 1787462700) | [.creation_date,.timeline_type,(.post_id//0),(.comment_id//0),(.user.display_name//\"\"),(.detail//\"\")] | @tsv'; printf 'DELETED ANSWER PROBE\\n'; curl -sS 'https://api.stackexchange.com/2.3/answers/514446?site=mathoverflow&filter="'!nNPvSNVZJS'"' | jq -r '{items,quota_remaining}'; printf 'RATTO USER\\n'; curl -sS 'https://api.stackexchange.com/2.3/users/30506?site=mathoverflow' | jq -r '.items[] | {user_id,display_name,reputation,last_access_date,last_modified_date,link}'" in /Users/dc/code/math/jc2
+ succeeded in 1004ms:
+{
+  "question_id": 513413,
+  "title": "The simplest case of Jacobian conjecture",
+  "score": 49,
+  "view_count": 8683,
+  "answer_count": 4,
+  "comment_count": null,
+  "last_activity_date": 1787125054,
+  "last_edit_date": 1784654211,
+  "protected_date": 1787184941,
+  "closed_date": null
+}
+ANSWERS
+{
+  "answer_id": 513414,
+  "score": 56,
+  "owner": "KConrad",
+  "creation_date": 1784594514,
+  "last_activity_date": 1784908366,
+  "last_edit_date": 1784908366,
+  "comment_count": null,
+  "is_accepted": false
+}
+{
+  "answer_id": 513458,
+  "score": 52,
+  "owner": "Alexandre Eremenko",
+  "creation_date": 1784678230,
+  "last_activity_date": 1784754364,
+  "last_edit_date": 1784754364,
+  "comment_count": null,
+  "is_accepted": false
+}
+{
+  "answer_id": 513493,
+  "score": 14,
+  "owner": "ratto3423",
+  "creation_date": 1784790782,
+  "last_activity_date": 1784796271,
+  "last_edit_date": 1784796271,
+  "comment_count": null,
+  "is_accepted": false
+}
+{
+  "answer_id": 513656,
+  "score": 20,
+  "owner": "Claudio Procesi",
+  "creation_date": 1785170129,
+  "last_activity_date": 1785178825,
+  "last_edit_date": 1785178825,
+  "comment_count": null,
+  "is_accepted": false
+}
+QUESTION COMMENTS
+1340263	1784764646	Tri	2	
+1340222	1784743735	M.G.	0	
+1340216	1784742324	Daniel Asimov	6	
+1340188	1784720837	Markus Klyver	1	
+1340151	1784674884	Gerry Myerson	17	
+1340141	1784671399	Donu Arapura	2	
+1340139	1784668710	i9Fn	3	
+1340053	1784596883	Daniel Asimov	3	
+1340052	1784595796	Donu Arapura	13	
+1340050	1784594953	KConrad	1	
+1340049	1784594560	Donu Arapura	17	
+1340048	1784594528	Sam Hopkins	11	
+1340047	1784594406	KConrad	2	
+1340046	1784594284	Sam Hopkins	7	
+ANSWER COMMENTS
+513493	1340394	1784843506	Leox	3	
+513476	1340220	1784743429	Dheghom	0	
+TIMELINE NEW
+DELETED ANSWER PROBE
+{
+  "items": [],
+  "quota_remaining": 287
+}
+RATTO USER
+{
+  "user_id": 30506,
+  "display_name": "kohta",
+  "reputation": 11,
+  "last_access_date": 1364825405,
+  "last_modified_date": 1573685114,
+  "link": "https://mathoverflow.net/users/30506/kohta"
+}
+
+exec
+/bin/zsh -lc "curl -sS 'https://api.stackexchange.com/2.3/answers/513493?site=mathoverflow&filter="'!nNPvSNVZJS'"' | jq -r '.items[] | {answer_id,score,owner,creation_date,last_activity_date,last_edit_date}'; printf 'ALL ANSWER COMMENTS\\n'; curl -sS 'https://api.stackexchange.com/2.3/answers/513414;513458;513493;513656/comments?site=mathoverflow&pagesize=100&filter="'!nNPvSNdWme'"' | jq -r '.items[] | [.post_id,.comment_id,.creation_date,.owner.display_name,.score,.body] | @tsv'; printf 'TIMELINE LAST20\\n'; curl -sS 'https://api.stackexchange.com/2.3/questions/513413/timeline?site=mathoverflow&pagesize=100' | jq -r '.items[:20][] | [.creation_date,.timeline_type,(.post_id//0),(.comment_id//0),(.user.display_name//\"\"),(.detail//\"\")] | @tsv'" in /Users/dc/code/math/jc2
+ succeeded in 331ms:
+{
+  "answer_id": 513493,
+  "score": 14,
+  "owner": {
+    "account_id": 15538822,
+    "reputation": 151,
+    "user_id": 595783,
+    "user_type": "registered",
+    "profile_image": "https://www.gravatar.com/avatar/1a9efb2421da851ca882729a0bbb78f0?s=256&d=identicon&r=PG&f=y&so-version=2",
+    "display_name": "ratto3423",
+    "link": "https://mathoverflow.net/users/595783/ratto3423"
+  },
+  "creation_date": 1784790782,
+  "last_activity_date": 1784796271,
+  "last_edit_date": 1784796271
+}
+ALL ANSWER COMMENTS
+513493	1340394	1784843506	Leox	3	
+513458	1340330	1784819417	Vladimir Dotsenko	2	
+513458	1340280	1784788106	liuyao	2	
+513458	1340256	1784760537	Gerry Myerson	14	
+513458	1340201	1784732795	Olivier	9	
+513458	1340189	1784725425	Kevin Casto	5	
+513458	1340170	1784691478	Timothy Chow	8	
+513458	1340168	1784689867	chessprogrammer	2	
+513458	1340167	1784689503	Timothy Chow	16	
+513458	1340166	1784688963	chessprogrammer	4	
+513414	1340121	1784658477	Will Sawin	2	
+513414	1340118	1784656919	Daniel Asimov	0	
+513414	1340104	1784639830	Timothy Chow	4	
+TIMELINE LAST20
+1787270400	vote_aggregate	513656	0		
+1787184941	post_state_changed	513413	0	Yemon Choi	
+1787097600	vote_aggregate	513413	0		
+1787097600	vote_aggregate	513414	0		
+1787097600	vote_aggregate	513458	0		
+1787097600	vote_aggregate	513493	0		
+1787097600	vote_aggregate	513656	0		
+1785974400	vote_aggregate	513413	0		
+1785974400	vote_aggregate	513414	0		
+1785974400	vote_aggregate	513458	0		
+1785974400	vote_aggregate	513493	0		
+1785974400	vote_aggregate	513656	0		
+1785369600	vote_aggregate	513458	0		
+1785369600	vote_aggregate	513493	0		
+1785369600	vote_aggregate	513656	0		
+1785283200	vote_aggregate	513413	0		
+1785283200	vote_aggregate	513458	0		
+1785196800	vote_aggregate	513413	0		
+1785196800	vote_aggregate	513414	0		
+1785196800	vote_aggregate	513458	0		
+
+exec
+/bin/zsh -lc "curl -sS 'https://api.stackexchange.com/2.3/users/595783?site=mathoverflow' | jq -r '.items[] | {display_name,reputation,last_access_date,last_modified_date,question_count,answer_count,link}'" in /Users/dc/code/math/jc2
+ succeeded in 8ms:
+{
+  "display_name": "ratto3423",
+  "reputation": 151,
+  "last_access_date": 1787468799,
+  "last_modified_date": 1784790692,
+  "question_count": null,
+  "answer_count": null,
+  "link": "https://mathoverflow.net/users/595783/ratto3423"
+}
+
+exec
+/bin/zsh -lc "date -u -r 1787468799 '+%Y-%m-%dT%H:%M:%SZ'; date -u -r 1784790692 '+%Y-%m-%dT%H:%M:%SZ'; date -u -r 1787270400 '+%Y-%m-%dT%H:%M:%SZ'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+2026-08-23T07:06:39Z
+2026-07-23T07:11:32Z
+2026-08-21T00:00:00Z
+
+exec
+/bin/zsh -lc "printf 'TIMELINE\\n'; curl -sS 'https://api.stackexchange.com/2.3/users/595783/timeline?site=mathoverflow&pagesize=100' | jq -r '.items[] | select(.creation_date >= 1787462700) | [.creation_date,.timeline_type,(.post_id//0),(.comment_id//0),(.title//\"\")] | @tsv'; printf 'ANSWERS\\n'; curl -sS 'https://api.stackexchange.com/2.3/users/595783/answers?site=mathoverflow&pagesize=100&order=desc&sort=activity' | jq -r '.items[] | [.answer_id,.question_id,.score,.creation_date,.last_activity_date] | @tsv'; printf 'COMMENTS\\n'; curl -sS 'https://api.stackexchange.com/2.3/users/595783/comments?site=mathoverflow&pagesize=100&order=desc&sort=creation' | jq -r '.items[:10][] | [.comment_id,.post_id,.creation_date,.score] | @tsv'" in /Users/dc/code/math/jc2
+ succeeded in 374ms:
+ANSWERS
+513493	513413	14	1784790782	1784796271
+COMMENTS
+
+exec
+/bin/zsh -lc 'for rec_id in 21894922 22002825 21479814 21483636 21633408 21757679; do curl -sS "https://zenodo.org/api/records/$rec_id" | jq -r '"'[.id,.doi,.updated,.metadata.version,(.stats.views|tostring),(.stats.unique_views|tostring),(.stats.downloads|tostring),(.stats.unique_downloads|tostring),(.stats.volume|tostring),.metadata.title] | @tsv'; done; printf 'JC SEARCH\\n'; curl -sS -G 'https://zenodo.org/api/records' --data-urlencode 'q=\"Jacobian conjecture\"' --data-urlencode 'sort=newest' --data-urlencode 'size=20' | jq -r '\"TOTAL \\(.hits.total)\", (.hits.hits[] | [.id,.created,.updated,.doi,.metadata.title] | @tsv)'; printf 'STRINZ SEARCH\\n'; curl -sS -G 'https://zenodo.org/api/records' --data-urlencode 'q=creators.name:\"William Strinz\"' --data-urlencode 'sort=newest' --data-urlencode 'size=20' | jq -r '\"TOTAL \\(.hits.total)\", (.hits.hits[] | [.id,.created,.updated,.doi,.metadata.title] | @tsv)'" in /Users/dc/code/math/jc2
+ succeeded in 7141ms:
+21894922	10.5281/zenodo.21894922	2026-08-11T21:47:11.999972+00:00		10	8	0	0	null	Artifact for: A Vertex-Gap Obstruction for Low-Degree Strip Pairs in the Plane Jacobian Conjecture
+22002825	10.5281/zenodo.22002825	2026-08-18T20:28:20.175398+00:00		19	18	0	0	null	Sheet-number obstruction theory for the plane Jacobian Conjecture: campaign theory bundle v1
+21479814	10.5281/zenodo.21479814	2026-07-21T20:01:47.916983+00:00	1.0.1	1068	989	8	8	null	Exact Computer-Assisted Exclusion of the (72,108) Frontier in the Two-Dimensional Jacobian Problem
+21483636	10.5281/zenodo.21483636	2026-07-22T05:20:16.789820+00:00	1.1.4	98	33	7	6	null	Exclusion of the (8,28) Newton-Polygon Case in the Plane Jacobian Conjecture
+21633408	10.5281/zenodo.21633408	2026-07-27T23:46:28.603885+00:00	v1.0.0	10	9	1	1	null	plane-jacobian-72-108: an audited computational case-closure program for the last open plane Jacobian Conjecture case below degree 125
+21757679	10.5281/zenodo.21757679	2026-08-02T10:19:59.350711+00:00	1.3.0	56	42	8	7	null	A Reproducible Exact-Computational Artifact for the Planar Jacobian Degree Pair (72,108)
+JC SEARCH
+TOTAL 116
+21845742	2026-08-08T03:20:03.820658+00:00	2026-08-08T03:20:04.013138+00:00	10.5281/zenodo.21845742	michaelmross/jacobian: Two notes and a code repository about the Jacobian conjecture counterexample
+21845035	2026-08-08T00:50:25.074486+00:00	2026-08-08T00:50:25.548341+00:00	10.5281/zenodo.21845035	Erdős–Straus Project Archive: Residual Divisor Shells, Quotient Surpluses, and Finite Verification
+21826515	2026-08-06T15:36:46.079186+00:00	2026-08-06T15:36:46.312944+00:00	10.5281/zenodo.21826515	Jacobian Conjecture and the Arrow of Time
+21757679	2026-08-02T10:19:59.064604+00:00	2026-08-02T10:19:59.350711+00:00	10.5281/zenodo.21757679	A Reproducible Exact-Computational Artifact for the Planar Jacobian Degree Pair (72,108)
+21740213	2026-08-01T13:44:32.231197+00:00	2026-08-01T13:44:32.484845+00:00	10.5281/zenodo.21740213	A planar program for the two-variable Jacobian conjecture: a theorem ladder, staircase transport, and machine certificates at the (72,108) frontier
+21688251	2026-07-29T19:43:00.766135+00:00	2026-07-29T19:56:04.268956+00:00	10.5281/zenodo.21688251	Sharp finite Gaussian moments for quadratic polynomials
+21688130	2026-07-29T19:39:42.416172+00:00	2026-07-29T19:39:42.733306+00:00	10.5281/zenodo.21688130	Exterior-Power Obstructions to Low-Degree Descent of the Three-Dimensional Keller Counterexample
+21579022	2026-07-26T00:20:54.797420+00:00	2026-07-26T00:20:55.495399+00:00	10.5281/zenodo.21579022	The Jacobian counterexample, validated and extended: structure, an infinite family, exact escape geometry, and characteristic-p certificates
+21554281	2026-07-25T11:23:58.055721+00:00	2026-07-25T11:23:58.342255+00:00	10.5281/zenodo.21554281	The consequence cascade of the Jacobian counterexample, with an explicit dimension-48 witness against the Hessian conjecture
+21542914	2026-07-25T03:58:26.893680+00:00	2026-07-25T03:58:27.339357+00:00	10.5281/zenodo.21542914	Formal Resolution of the Two-Dimensional Jacobian Conjecture in Lean 4 via Graded Differential Operators.
+21538118	2026-07-24T18:05:04.379277+00:00	2026-07-24T18:05:04.632792+00:00	10.5281/zenodo.21538118	Homological structures and computational verification of a proposed three-dimensional counterexample to the jacobian conjecture
+21514514	2026-07-23T16:59:46.062745+00:00	2026-07-23T16:59:48.210448+00:00	10.5281/zenodo.21514514	An Independent Lean 4 Verification of the Alpöge–Fable Counterexample
+21462020	2026-07-20T20:41:58.271948+00:00	2026-07-20T20:41:58.464661+00:00	10.5281/zenodo.21462020	The Chamberland–Meisters eigenvalue conjecture is false
+21461572	2026-07-20T19:51:17.654856+00:00	2026-07-20T20:10:59.170533+00:00	10.5281/zenodo.21461572	The Alpöge–Fable counterexample to the Jacobian Conjecture: verification, geometry, dynamics, and an equivariant program for the plane case
+19790416	2026-04-26T13:30:19.089022+00:00	2026-04-26T13:30:19.359214+00:00	10.5281/zenodo.19790416	Normal-Closure Monodromy and Boundary Defects for the Jacobian Conjecture
+15208056	2025-04-14T00:06:48.922332+00:00	2025-04-14T00:06:49.077953+00:00	10.5281/zenodo.15208056	Algebra, Geometry, Topology, and Functional Analysis Equations of Major Unsolved Problems in Mathematics
+22064739	2026-08-23T05:05:55.487822+00:00	2026-08-23T05:05:55.710979+00:00	10.5281/zenodo.22064739	teerthsharma/monodromy: monodromy v0.1.0 — injectivity without the Jacobian
+22040381	2026-08-21T06:12:43.863764+00:00	2026-08-21T06:12:44.073856+00:00	10.5281/zenodo.22040381	WITHDRAWN: A One-Parameter Family of Jacobian  Counterexamples Deforming the July 2026 Counterexample
+22019392	2026-08-20T01:25:48.108704+00:00	2026-08-20T01:33:30.350781+00:00	10.5281/zenodo.22019392	A Non-Suspension Polynomial Solution in Gao's Five-Dimensional Middle Branch
+22002825	2026-08-18T20:28:19.893580+00:00	2026-08-18T20:28:20.175398+00:00	10.5281/zenodo.22002825	Sheet-number obstruction theory for the plane Jacobian Conjecture: campaign theory bundle v1
+STRINZ SEARCH
+TOTAL 0
+
+exec
+/bin/zsh -lc "curl -sS https://zenodo.org/api/records/21633408 | jq -r '.metadata.creators'; printf 'SEARCH STRINZ BROAD\\n'; curl -sS -G 'https://zenodo.org/api/records' --data-urlencode 'q=Strinz' --data-urlencode 'sort=newest' --data-urlencode 'size=20' | jq -r '\"TOTAL \\(.hits.total)\", (.hits.hits[] | [.id,.created,.doi,.metadata.title,([.metadata.creators[].name]|join(\"; \"))] | @tsv)'" in /Users/dc/code/math/jc2
+ succeeded in 1187ms:
+[
+  {
+    "name": "Strinz, Will",
+    "affiliation": null
+  }
+]
+SEARCH STRINZ BROAD
+TOTAL 1
+21633408	2026-07-27T23:46:28.457982+00:00	10.5281/zenodo.21633408	plane-jacobian-72-108: an audited computational case-closure program for the last open plane Jacobian Conjecture case below degree 125	Strinz, Will
+
+exec
+/bin/zsh -lc "for watch_doi in 21894922 22002825; do printf 'CITING %s\\n' \""'$watch_doi"; curl -sS -G '"'https://zenodo.org/api/records' --data-urlencode \"q=10.5281/zenodo."'$watch_doi" --data-urlencode '"'sort=newest' --data-urlencode 'size=100' | jq -r '\"TOTAL \\(.hits.total)\", (.hits.hits[] | [.id,.doi,.metadata.title] | @tsv)'; done" in /Users/dc/code/math/jc2
+ exited 5 in 974ms:
+jq: error (at <stdin>:0): Cannot iterate over null (null)
+TOTAL null
+CITING 22002825
+TOTAL null
+jq: error (at <stdin>:0): Cannot iterate over null (null)
+
+exec
+/bin/zsh -lc "curl -sS -G 'https://zenodo.org/api/records' --data-urlencode 'q=\"10.5281/zenodo.21894922\"' --data-urlencode 'sort=newest' --data-urlencode 'size=100' | jq ." in /Users/dc/code/math/jc2
+ succeeded in 399ms:
+{
+  "status": 400,
+  "message": "A validation error occurred.",
+  "errors": [
+    {
+      "field": "size",
+      "messages": [
+        "Page size cannot be greater than 25. Please use authenticated requests to increase the limit to 100."
+      ]
+    }
+  ]
+}
+
+exec
+/bin/zsh -lc "for watch_doi in 21894922 22002825; do printf 'CITING %s\\n' \""'$watch_doi"; curl -sS -G '"'https://zenodo.org/api/records' --data-urlencode \"q=\\\"10.5281/zenodo."'$watch_doi'"\\\"\" --data-urlencode 'sort=newest' --data-urlencode 'size=25' | jq -r '\"TOTAL \\(.hits.total)\", (.hits.hits[] | [.id,.doi,.metadata.title] | @tsv)'; done" in /Users/dc/code/math/jc2
+ succeeded in 1131ms:
+TOTAL 0
+CITING 22002825
+TOTAL 0
+
