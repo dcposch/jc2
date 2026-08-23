@@ -1,5 +1,5 @@
 import sys, re, random, time, pickle
-sys.path.insert(0,'/Users/dc/code/math/jc72108/cases')
+sys.path.insert(0,'/Users/dc/code/math/jc2/cases')
 import fastelim as FE
 p=105337
 t0=time.time()

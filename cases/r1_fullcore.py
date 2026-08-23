@@ -29,7 +29,7 @@ import r1_experiment as R1
 DEPTH = 54
 DG = min(DEPTH - 32, 21)                    # 21: band 1..19 + quotient at 20
 STATE_DIR = "/tmp/r1full"
-OUT_DIR = "/Users/dc/code/math/jc72108/systems/r1"
+OUT_DIR = "/Users/dc/code/math/jc2/jc72108/systems/r1"
 _PRIMES = []
 def good_primes(n=2, start=60000):
     """first n primes p == 1 mod 84 with a full radical point in GF(p)."""
@@ -1913,7 +1913,7 @@ def phase_chain25ext():
 
 # ---------------------------------------------------------------- msolve
 def run_msolve(path, tag, timeout, extra=("-g", "2")):
-    out = os.path.join("/Users/dc/code/math/jc72108/runs",
+    out = os.path.join("/Users/dc/code/math/jc2/jc72108/runs",
                        os.path.basename(path) + "." + tag + ".out")
     cmd = ["msolve"] + list(extra) + ["-f", path]
     log("msolve start: %s (timeout %ds)" % (" ".join(cmd), timeout))

@@ -1,5 +1,5 @@
 import sys, os, time, pickle, re
-sys.path.insert(0,'/Users/dc/code/math/jc72108/cases')
+sys.path.insert(0,'/Users/dc/code/math/jc2/cases')
 import directionb_residual32_emit as E32
 import r1_fullcore as FC
 OK=[]

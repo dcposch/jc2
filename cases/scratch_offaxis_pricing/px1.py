@@ -1,6 +1,6 @@
 import sys, os
-sys.path.insert(0, '/Users/dc/code/math/jc72108/cases')
-os.chdir('/Users/dc/code/math/jc72108/cases')
+sys.path.insert(0, '/Users/dc/code/math/jc2/cases')
+os.chdir('/Users/dc/code/math/jc2/cases')
 from fractions import Fraction as Fr
 from math import gcd
 import book_offaxis as B

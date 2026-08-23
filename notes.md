@@ -3192,3 +3192,38 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   no first depth kill; ell+ >=37 unchanged. Bank: SHEET6-DIRECTIONB.md 10.8
   + cases/d43_graph_final_report.json and d43_graph_{emission,full_gate,
   witness,floor,numeric_gate}_p*.json + prefix slice artifacts/drivers.
+
+## 2026-08-23 ~13:10 sol-clift landed (p^2 PASSES, stage 2 open) + REORG EXECUTING
+- sol-clift: NO local obstruction (pristine 184-row system lifts mod p^2, rank
+  129=129, explicit 24-coord correction, 184/184 replay; radicals Hensel-lifted).
+  Full 218-row Jacobian rank = 131 EXACT (tangent dim 53), unit minor det=810.
+  NOT obtained: common integral model (d43red band .pkl checkpoints ABSENT
+  locally -- recovery item, likely box01), dimension/flatness => no Hensel cert.
+  STAGE 2 OPEN. Banked to AUDIT.md. Queue: recover band checkpoints -> integral
+  model -> dimension/flatness certificate.
+- REORG (DC-approved layout + confirmed rename github.com/dcposch/jc2):
+  * checkpoint commit 11329d2, then doc moves: ladder/ (SHEET6*, BOOK*, TOWER*,
+    NF-*, TDBOUND, DEPTH-STAB, TRANSPORT, TEMPLATE-ATTACK, SIGRAY-AUDIT,
+    REDUCTION, AM-CHECK, GROK-MONODROMY, MONDELLO-CHECK, SOL-ALGEBRAIZATION*,
+    SOL-PROP58*), jc72108/ (CAMPAIGN, plan-72-108, RECON, CROSSCHECK, REDUCE4*,
+    SECTION4-AUTOMATION, FACE-ISOLATION, CERT-UPGRADE, postverdict + runs/ +
+    systems/ untracked trees), papers/ (paper1, paper2, LEMMA*, SURPLUS*,
+    RESIDUE), archive/ (phase0 drafts, ops/ox.sh).
+  * root keeps: README, notes.md, AUDIT, APPROACHES, COORDINATION.md (NEW) +
+    side-avenue docs (DC2*, ZHEGLOV*, MATHIEU*, conjectureE-plan) pending the
+    avenues/ decision.
+  * MODEL-AGNOSTIC protocol (DC directive): COORDINATION.md = roles (coordinator
+    /lane/reviewer), invariants (dual-model promotion, fail-closed tiers, bank-
+    everything, lane isolation), hazards, bootstrap-for-any-coordinator, roster
+    (the ONLY place model names appear). ops/lane.sh <adapter> <tag> <prompt> +
+    ops/adapters/{codex,grok}.sh; sol_lane.sh kept as compat shim.
+  * README.md rewritten per DC's approved draft + edits (no emdashes; his first
+    line; "Software as a first-class citizen" wording; July-2026 flagged vs his
+    "June" -- awaiting his call). Palomar entries linked.
+  * compat symlinks: runs -> jc72108/runs, systems -> jc72108/systems (code in
+    cases/run_probes/setup_remote references these paths; zero code edits).
+  * remote -> github.com/dcposch/jc2.git. Stale-path grep CLEAN (all doc refs
+    in code are docstring citations). .gitignore added (.DS_Store, pycache).
+  * PENDING: pytest regression (background), reorg commit, local dir rename
+    jc72108 -> jc2 + symlink re-point (notes.md, plan-72-108.md) + compat
+    symlink jc72108 -> jc2 (keeps 35 historical prompt-file abs paths valid).

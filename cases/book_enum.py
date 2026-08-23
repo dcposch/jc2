@@ -75,7 +75,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from sheet6_campaign import tdu_rows          # promoted entry table (TDU gate)
 
 OUTDIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                      '..', 'systems', 'book')
+                      '..', 'jc72108', 'systems', 'book')
 
 def fstr(x):
     return str(x) if isinstance(x, (int, str)) else \

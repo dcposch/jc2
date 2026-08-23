@@ -23,7 +23,7 @@ import sys
 from fractions import Fraction as Fr
 from math import gcd
 
-HERE = '/Users/dc/code/math/jc72108/cases/scratch_offaxis_pricing'
+HERE = '/Users/dc/code/math/jc2/cases/scratch_offaxis_pricing'
 sys.path.insert(0, HERE)
 import px2  # noqa: E402
 import px5  # noqa: E402

@@ -19,7 +19,7 @@ Exact arithmetic only (int / Fraction). No git commit.
 import sys
 from fractions import Fraction as Fr
 
-B = '/Users/dc/code/math/jc72108/cases/'
+B = '/Users/dc/code/math/jc2/cases/'
 PRIMES = (105337, 105673, 200257)
 ok = []
 

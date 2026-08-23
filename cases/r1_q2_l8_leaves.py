@@ -220,7 +220,7 @@ def phase_emit():
             with open(os.path.join(CASES, fn + ".rows.txt"), "w") as f:
                 f.write(
                     "# Q2-l8 leaf %d/13 (SHEET6-R1.md 19.5): parent = "
-                    "systems/r1/r1_q2_l8_p%d.ms (243-corrected)\n"
+                    "jc72108/systems/r1/r1_q2_l8_p%d.ms (243-corrected)\n"
                     "# first-nonzero cascade, order %s\n"
                     "# ZEROED prefix (%d): %s\n"
                     "# PIVOT (!= 0, Rabinowitsch u%s): %s (slot %d)\n"

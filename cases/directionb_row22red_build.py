@@ -15,7 +15,7 @@ cross-prime support equality; G5 emission hygiene per AUDIT.md.
 """
 import sys, os, re, time, pickle, random, json
 
-HERE = "/Users/dc/code/math/jc72108/cases"
+HERE = "/Users/dc/code/math/jc2/cases"
 SCRATCH = os.path.dirname(os.path.abspath(__file__))  # bank lands next to script
 sys.path.insert(0, HERE)
 import flint

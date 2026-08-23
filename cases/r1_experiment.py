@@ -1139,7 +1139,7 @@ PHI42_STR = "".join(("+" if c > 0 else "-") +
 RAD_EQS = ["r3^2-3", "A1^3-3-r3", "A2^3-3+r3", "2*HW1^2-3*W1^2",
            "2*HW2^2-3*W2^2", "2*EB^7-3", PHI42_STR]
 
-def emit_core(sysm, depth, outdir="/Users/dc/code/math/jc72108/systems/r1"):
+def emit_core(sysm, depth, outdir="/Users/dc/code/math/jc2/jc72108/systems/r1"):
     import os
     frees = sorted(v for v in sysm.seen_vars
                    if v not in sysm.piv and VSTAT[v] is None
@@ -1218,7 +1218,7 @@ def phase_solve(depth, final=False):
             except Exception as e:
                 print("  msolve: %s" % e)
 
-def emit_gm_core(depth, outdir="/Users/dc/code/math/jc72108/systems/r1"):
+def emit_gm_core(depth, outdir="/Users/dc/code/math/jc2/jc72108/systems/r1"):
     """exact G_m-band polynomial system on the bottom unknowns (the R1
     terminal core in its native form). Requires state built at a cap
     high enough that rows are exact; lossy rows are counted + excluded."""

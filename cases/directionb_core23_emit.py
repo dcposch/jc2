@@ -1,9 +1,9 @@
 import sys, os, time, pickle, random
 os.environ["DIRECTIONB_STATE"]="/tmp/directionb_tails_D23.pkl"
-sys.path.insert(0,'/Users/dc/code/math/jc72108/cases')
+sys.path.insert(0,'/Users/dc/code/math/jc2/cases')
 import fastelim as FE
 import directionb_residual32_emit as E32
-HERE='/Users/dc/code/math/jc72108/cases'
+HERE='/Users/dc/code/math/jc2/cases'
 RADG=FE.RADG
 OK=[]
 def chk(n,c):

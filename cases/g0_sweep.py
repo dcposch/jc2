@@ -29,5 +29,5 @@ for name in ["reg_9_27", "reg_7_21"]:
     if best[0][0] is False and len(C.bvars) <= 6:
         G, Cm, info = two_chart(C)
         for tag, L in (("G", G), ("C", Cm)):
-            nv, ne = leaf_to_msolve(L, f"systems/{name}_chart{tag}.p65521.ms", 65521)
+            nv, ne = leaf_to_msolve(L, f"jc72108/systems/{name}_chart{tag}.p65521.ms", 65521)
             print(f"  {name}_chart{tag}: {nv} vars, {ne} eqs", flush=True)

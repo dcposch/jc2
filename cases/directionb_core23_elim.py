@@ -1,6 +1,6 @@
 import sys, os, time, pickle
 os.environ["DIRECTIONB_STATE"]="/tmp/directionb_tails_D23.pkl"
-sys.path.insert(0,'/Users/dc/code/math/jc72108/cases')
+sys.path.insert(0,'/Users/dc/code/math/jc2/cases')
 import fastelim as FE
 p=int(sys.argv[1])
 PIV22=[("tf1_44",(12,2)),("tf2_44",(12,5)),("tf1_46",(14,0)),("tf2_46",(14,3)),
