@@ -3332,3 +3332,18 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   crosswalk lanes; (2) harvest sol-d43int when it lands + route to hostile
   review if promotable; (3) Palomar formalization lanes for Henon tower +
   boundary identity (per DC publication discussion: Layer-1 go).
+
+## 2026-08-23 ~15:30 jc2-lean = submodule; math/ = just jc2; READMEs decoupled public/private
+- jc2-lean added as SUBMODULE at jc2/jc2-lean (pinned 694a24a, pushed ef2f2de).
+  Standalone ~/code/math/jc2-lean REMOVED (was fully pushed); the UNTRACKED WIP
+  depth-witness/ (definitional layer, carrier-adjacent -> stays UNPUBLISHED per
+  the Layer-3 publication hold) preserved into the submodule checkout as
+  local-only. Future Lean/Palomar lanes work in jc2/jc2-lean; new registrations
+  bump the submodule pointer in jc2.
+- ~/code/math/ symlinks (notes.md, plan-72-108.md) REMOVED per DC; math/ now
+  contains ONLY jc2 (+ dotfiles: .env [API keys], .claude, .ori -- untouched).
+- README split finalized: jc2-lean (PUBLIC) = campaign summary + "Public
+  progress" Palomar timeline + Zenodo links, NO mention of the private jc2
+  repo (unpushed commit containing that link was rewritten away pre-push);
+  jc2 (PRIVATE) README points "For public progress, see jc2-lean". All public
+  comms now flow through jc2-lean.
