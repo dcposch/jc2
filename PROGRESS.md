@@ -23,10 +23,11 @@ running). B=168 scale test funded (held). REORG: repo renamed jc2, docs split
 into ladder/ + jc72108/ + papers/ + avenues/, root = 5 canon docs,
 model-agnostic COORDINATION.md + generic lane runner; pushed. Sol-as-coordinator
 test prepped. Token ledger to date (exact, summed from the CLIs' own session
-counters via ops/tokens.py, all-time): Claude 37.4M output + 7.7M fresh input +
-738.6M cache-write + 10,085M cache-read = 10.87B processed (93% cache-reads);
-Codex/Sol 11.1M output (6.5M reasoning) + 2.01B processed (95% cached); Grok
-95.3M session-cumulative. Refresh weekly and append the summary line here.
+counters via ops/tokens.py, campaign-scoped by project/cwd, all-time): Claude
+37.4M output + 7.7M fresh input + 738.6M cache-write + 10,088M cache-read =
+10.87B processed (93% cache-reads); Codex/Sol 10.6M output (6.2M reasoning) +
+1.92B processed (95% cached); Grok 95.3M session-cumulative. Refresh weekly
+and append the summary line here.
 
 ## 2026-08-22
 D43 program end-to-end: stage-1 extended operator banked (level 42, full gate

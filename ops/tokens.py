@@ -16,7 +16,7 @@ HOME = os.path.expanduser("~")
 CLAUDE_PROJ = os.path.join(HOME, ".claude", "projects", "-Users-dc-code-math")
 CODEX_SESS = os.path.join(HOME, ".codex", "sessions")
 GROK_SESS = os.path.join(HOME, ".grok", "sessions")
-CAMPAIGN_PAT = re.compile(r"math", re.I)  # grok/codex dirs are project-scoped
+CAMPAIGN_PAT = re.compile(r"code(/|%2F)math", re.I)  # campaign cwd filter
 
 
 def claude():
@@ -48,7 +48,11 @@ def codex():
     for path in glob.glob(os.path.join(CODEX_SESS, "**", "*.jsonl"), recursive=True):
         last = None
         with open(path, errors="replace") as fh:
-            for line in fh:
+            head = fh.readline()
+            m = re.search(r'"cwd":"([^"]*)"', head)
+            if not (m and CAMPAIGN_PAT.search(m.group(1))):
+                continue  # non-campaign session
+            for line in [head] + list(fh):
                 if '"total_token_usage"' not in line:
                     continue
                 m = re.search(r'"total_token_usage":({[^{}]*})', line)
