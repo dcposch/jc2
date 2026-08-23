@@ -3302,3 +3302,33 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   * The outgoing coordinator's loop STOPS at handover (single-coordinator rule;
     see COORDINATION.md roles). Incoming coordinator: bootstrap per
     COORDINATION.md, then read this file bottom-up.
+
+## 2026-08-23 ~14:45 websweep #8 HARVESTED: two MISSED bound-125 actors found (priority map correction)
+- ACTIONABLE A1: SuperMindAI/Jacobian-Conjecture (paper Aug 3, repo Aug 5, missed
+  by sweeps 1-7) -- FULL (72,108)/bound-125 claim, four manuscripts, public
+  replays+checksums. Authorship "SuperMind" = autonomous GPT-5.6-Sol-Max with
+  limited human feedback (!). Cites ratto3423 (mis-pointed at Eremenko's a/513458)
+  + Santibanez-Leal; does NOT cite Helali/Suzuki/Strinz/Ishihara/Roy/us. Not on
+  arXiv/Zenodo/Palomar. TODO: clone, run verifier, hostile-crosswalk terminal
+  certificates vs Suzuki/Roy/Helali/Guo/ours.
+- ACTIONABLE A2: Ziwei Guo, Kakarottoooo/jacobian-2d-research (theorem core
+  Aug 9, preprint Aug 10, missed) -- full conditional bound-125 claim, 790-file
+  archive, Sage/Singular replays. Cites only Santibanez-Leal. Public timestamp
+  PRECEDES our Aug-11 Zenodo artifact -> belongs in related-work/priority audit
+  regardless of whether the proof survives review. TODO: replay + byte-diff the
+  Belyi/quintic + polygon systems vs the crosscheck lineage; add Guo + SuperMind
+  to daily watch.
+- CONSEQUENCE: yesterday's "fourth replication line" count WITHDRAWN pending
+  duplication/provenance audit. Paper-1/paper-2 related-work sections + any
+  public actor-count statements need the corrected map BEFORE next publication
+  step. (Both missed artifacts predate the sweep series; date-windowed searches
+  were the blind spot -- sweep methodology now includes broad phrase search.)
+- A3: Strinz branch codex/palomar72-composed = clean composed-intermediate
+  Palomar candidate (NOT full exclusion, NOT submitted). Daily watch.
+- NOTE: ratto3423 visited MO 07:06Z (first in 11 days), no public activity;
+  Palomar 47->53 entries, none JC-related; our IDs intact. Roy: 29 commits, all
+  Elkies-K3. Everything else quiet.
+- QUEUE (for next coordinator -- good first tasks): (1) A1/A2 verification +
+  crosswalk lanes; (2) harvest sol-d43int when it lands + route to hostile
+  review if promotable; (3) Palomar formalization lanes for Henon tower +
+  boundary identity (per DC publication discussion: Layer-1 go).
