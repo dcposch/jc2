@@ -1,0 +1,23 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll work as the independent different-model reviewer on the frozen AS109 support-gate artifacts, starting by reading the gate note and every file under the case directory.I'll read every case file and a prior review of the same type so the verdict format and frozen hashes match this gate.I’ll verify git state and hashes, rerun the replay, and independently expand the determinant and transport identities.Hashes match the freeze. Next I’ll independently expand the identities and search the tree for any enumerator the producer might have run.I’ll run a second exact engine that does not import the producer script, covering determinant expansion, gauge transport, and closure.Independent arithmetic checks out. I’ll write the review with per-claim verdicts, hashes, scope, and separate promotion advice.Overall verdict: **CONFIRMED**. Written to `xmodel/as109-support-review-grok-20260824.md`. Producer files were not edited.
+
+Replay at basis `c17bd2542b40f3178ec619ae4a73501550555336` exited 0 with `PASS-SPEC-OBSTRUCTION-CONTROL` and `enumeration_run=false`. The frozen report hash `b73aefd1c70667b041d13d40747ee273d6359ac1d7bbc600492595081d9268b5` matches. A second integer sparse engine (no producer imports) recomputed the `mod 109^3` Jacobian, binomial transport of `G_m`, and both closure probes with zero failures.
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | Freeze-before-enumeration; no enumerator | **CONFIRMED** |
+| 2 | Exact `E1`/`E2`/bracket/`N` modulo `109^3` | **CONFIRMED** |
+| 3 | Two-slot family from `G_m` for every `m>=1` | **CONFIRMED** |
+| 4 | Residual and transport; three new slots; not a same-slot cycle | **CONFIRMED** |
+| 5 | `NO-FROZEN-GRAMMAR` at this scope, not nonexistence of cap-eight lifts | **CONFIRMED** |
+| 6 | Hensel nonautomorphy plus finite-type embedding into `C` | **CONFIRMED** |
+| 7 | Closed-support contraction, with every module/ball hypothesis | **CONFIRMED** |
+| 8 | Canonical/five-slot closure fails; nothing found or inferred | **CONFIRMED** |
+
+**Scope.** One prime, one seed, cap eight, first nonlinear successor, no rectangle.
+
+**Promotion, grammar.** Accept `NO-FROZEN-GRAMMAR` as the registered stop. Do not read it as absence of cap-eight lifts, and do not answer it by widening the cap or enumerating a box.
+
+**Promotion, Hensel/contraction.** Keep both as one-way conditionals. Neither is an existence theorem; no module in this run meets `CLOSED-SUPPORT + UNIT-L`.
+
+Smallest precision, not a gap: the `G_m` family is one first-order gauge orbit, so claim 5 is a failure of literal finiteness and invariant-graph well-definedness, not a proof that the gauge quotient has infinitely many classes. Claim 6’s embedded collision is a pair of Hensel preimages, not `F(0,0)=F(1,0)` as lattice-point values.

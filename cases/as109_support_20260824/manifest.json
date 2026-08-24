@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "round": "20260824T0719Z-c17bd25",
+  "status_at_freeze": "SPECIFICATION_GATE_NO_ENUMERATION",
+  "prime": 109,
+  "field": "F_109",
+  "seed": {
+    "P": [[1, 0, 1], [109, 0, -1]],
+    "Q": [[0, 1, 1]],
+    "marked_source_points": [[0, 0], [1, 0]],
+    "common_target": [0, 0]
+  },
+  "lift": {
+    "modulus": "109^3",
+    "P": "x-x^109+109*A0+109^2*A1",
+    "Q": "y+109*B0+109^2*B1",
+    "E1": "A0_x+B0_y=x^108",
+    "N": "(A0_x-x^108)*B0_y-A0_y*B0_x",
+    "E2": "A1_x+B1_y=-N"
+  },
+  "vertex_types": [
+    "P_CORRECTION",
+    "Q_CORRECTION",
+    "RESIDUAL"
+  ],
+  "derivative_rules": {
+    "P": "(a,b)->(a-1,b), coefficient a mod 109",
+    "Q": "(c,d)->(c,d-1), coefficient d mod 109"
+  },
+  "bracket_rule": {
+    "input": "P monomial x^a y^b and Q monomial x^c y^d",
+    "output_exponent": ["a+c-1", "b+d-1"],
+    "coefficient": "a*d-b*c mod 109",
+    "zero_coefficient_edges_omitted": true
+  },
+  "collision": {
+    "layer_conditions": [
+      "Ai(1,0)-Ai(0,0)=0",
+      "Bi(1,0)-Bi(0,0)=0"
+    ],
+    "layers": [0, 1],
+    "nonautomorphy_witness": "distinct marked sections retain a common image"
+  },
+  "support": {
+    "slot": "(component in {P,Q}, exponent in N^2)",
+    "count_across_layers_once": true,
+    "layer_zero_slots_must_have_nonzero_coefficient": true,
+    "base_seed_slots_counted": false,
+    "maximum_correction_slots": 8,
+    "exponent_rectangle": null,
+    "degree_cutoff": null
+  },
+  "gauge": {
+    "level": "mod 109^2",
+    "map": "(x+109*U,y+109*V)",
+    "conditions": [
+      "U_x+V_y=0 mod 109",
+      "U(0,0)=U(1,0)=0",
+      "V(0,0)=V(1,0)=0"
+    ],
+    "action": "(A0,B0)->(A0+U,B0+V)"
+  },
+  "grammar_acceptance": {
+    "requires_finite_exhaustive_normal_forms_or_decidable_symbolic_motifs": true,
+    "requires_successor_gauge_invariance_or_explicit_mod_109_cubed_gauge_lift": true,
+    "forbids_hidden_exponent_bound": true,
+    "failure_verdict": "NO-FROZEN-GRAMMAR"
+  },
+  "outcomes": [
+    "NO-FROZEN-GRAMMAR",
+    "CONTROL-FAIL",
+    "HEIGHT-CERT",
+    "NO-CYCLE-AT-8",
+    "SUPPORT-ONLY",
+    "FEASIBLE-CYCLE"
+  ],
+  "characteristic_zero_inference": false,
+  "aws": false
+}

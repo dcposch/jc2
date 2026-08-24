@@ -1,22 +1,35 @@
 # SHEET6 CAMPAIGN — systematic td=6 case enumeration + bash (Sigray engine)
 
-Status: PHASE 3 COMPLETE (2026-08-07). Phases 1-2 as below. Phase 3 =
+Status: HISTORICAL PHASE-3 LEDGER (completed 2026-08-07; terminal-class
+checksum updated 2026-08-24). Phases 1-2 remain below as provenance. Phase 3 =
 AF2 derivation (SHEET6-AF2.md) + two-pole attack (SHEET6-2POLE.md) + entry-M
 pin (SHEET6-AF3.md) + L1 merged-pattern (SHEET6-L1.md), all promoted by
 SHEET6-A2P-REVIEW.md and SHEET6-A3L1-REVIEW.md. CANONICAL SURVIVOR BOOK:
-td<=5: 0 (CLOSED, independent of AF2). td=6 single-pole: 4 r9/M2 classes
+td<=5: 0 in the campaign's repaired Sigray recomposition (independent of
+AF2, but **not** a complete proof as printed in Sigray's thesis). td=6
+single-pole: 4 r9/M2 terminal classes
 (entries thesis-forced by the pin; 2 slack-1, 2 slack-0). td=6 two-pole:
 residue A only, funneled through the UNIQUE merged child (6,12,3,2,5)@lam0
-with rigid coefficient template (a1/a2 = 2+sqrt(3), unique up to scale).
+with rigid coefficient template (a1/a2 = 2+sqrt(3), unique up to scale),
+then branching to 4 two-pole terminal classes (2 slack-1, 2 slack-0).
+Thus the terminal-class book has **8 classes total**. "UNIQUE merged child"
+means one intermediate two-pole Q-datum, not one terminal class, one full
+configuration, or one global survivor.
 Errata found: E1-E10 (five proof-level). lam_root>=1 lemma REFUTED
 (SHEET6-LROOT.md): case IV's own hypothesis (0,y) not in V_2a forces
 lambda_root = 0 (single root direction — no branch separates at the root);
 the Prop 7.5 (22) ledger balances at 0 for all 8; book stays 8. Yield: all
 8 carriers forced to a SINGLE x-side cv cluster (kappa=1, unsplit below
 height R); slack-0 classes totally budget-rigid (delta_a = 0 on EVERY
-fiber). Next kills: delta-strictness at direction collisions (Prop 7.3
-mult>=2 excess); coefficient-level lift of the rigid template + x-side
-pin (construction vs h1-branch accounting) decides the rest.
+fiber). The coefficient-level lift subsequently survived and was promoted as
+a FORMAL-CANDIDATE by SHEET6-LT-REVIEW.md; it is not still a pending lift.
+The exact analytic equality control in
+`xmodel/d73-strict-or-equality-20260824.md` shows that direction multiplicity
+alone does not force strict excess in Proposition 7.3.  The next surface is
+therefore global polynomial realizability/opposite-side balance and
+algebraization of the pinned templates. At campaign scope this finite ledger does not close full
+landing/coverage or the distinct G2-PSC / G2-BD obligations; see
+REDUCTION.md, AUDIT.md, and APPROACHES.md.
 
 ## 0a. Assembly-layer extraction (thesis pp. 37-60, needed before enumeration)
 
@@ -52,26 +65,29 @@ pin (construction vs h1-branch accounting) decides the rest.
   not 4); row 4 has Λ=4. Table row labels are misprinted (rows 5,6 both "6"), and
   St 9.6's Q(G)=(j,2j,3,2,5) matches row 4 (j=2, M=2) and NO other row. Adopted
   reading: St 9.12 kills row **4**, "type (3)" is a label slip, (20) stands as printed.
-- **G2 (St 9.12 proof terseness — load-bearing)**: printed kill mechanisms are only
+- **S9-G2 (historical Statement-9.12 diagnosis; superseded by H3q/LROOT)**: printed kill mechanisms are only
   "some M_{F_j}=1 (contra Prop 8.4) or Σλ > td−2 (contra St 9.4)". But the chain
   row4 →9.6(iii) (λ=2) →9.7(iii) = case-IV terminal reaches (0,y) with Σλ = 2 ≤ 2
   and no M=1: NOT killed by the stated mechanisms. An unstated root-vertex kill must
   close it. Candidate: case IV forces d_F < deg p_F at (0,y) by its own condition
   (l), while Thm 6.1 (l_f < k_f, i.e. deg p < d at the root in the other chart) plus
-  normalization forbids exactly this. Campaign runs with hypothesis **H3**: "case-IV
-  terminals are killed by the root-data constraint" and reports verdicts both with
-  and without H3.
+  normalization forbids exactly this. The phase-1 campaign therefore ran with
+  blanket hypothesis **H3**. Later work refuted blanket H3, replaced the valid
+  kills by the proved quantitative H3q/psi-budget, and proved
+  `lambda_root=0`; H3 is not a current standing hypothesis.
 - **G3 (thesis silence on rows 1,5,7,10)**: under (20), td≤5 also admits single-vertex
   rows 1 (td=3), 5 (td=4), 7 (td=5), 10 (td=5). §9 as printed bashes only row 4.
   Campaign re-bashes ALL of {1,4,5,7,10} as validation (if our engine kills them, the
   silence is benign; if not, the thesis's td≥6 claim has a gap beyond terseness).
 
-## 0c. Standing hypotheses (all audit-flagged, inherited from unrefereed source)
+## 0c. Phase-1 standing hypotheses and later dispositions
 
 - H1: Prop 9.3 case split + (a)-(m) arithmetic correct (foundations audit pending).
 - H2: chain kills = {M=1 via Prop 8.4 (single-pole only), λ-budget via St 9.4,
   no-applicable-case}; AF2: λ-rule as reverse-engineered above.
-- H3: case-IV (0,y)-terminals killed by root-data constraint (see G2).
+- H3 (historical only): blanket case-IV root kill. **REFUTED** by
+  SHEET6-H3.md/SHEET6-LROOT.md; replaced where applicable by H3q, while the
+  eight canonical terminal classes survive the resulting ledger.
 - H4: regularity wlog per thesis usage; St 3.16/3.18 root patterns as templated.
 
 ## 0. Gate: pilot reproduction
@@ -97,9 +113,11 @@ high). New Λ=7 rows beyond the 11: (2,7)×1, (3,7)×1, (6,7)×1 (all with
   M | gcd(D,P)); μ | M (St 8.4). μ-admissibility needs NO deg(p)-content condition
   (the formal j-unit rescales), so the M-menu is the only entry freedom.
   [SUPERSEDED by SHEET6-AF3.md §1: no menu — M = gcd(deg p_F, deg p_g,F) exactly.]
-- **Double-pole (3,3)**: Prop 8.4 (M≠1) REQUIRES Ta,pole singleton ⇒ every M=1 kill
-  is unavailable. OPEN — needs a Prop-8.4 analogue for 2 dicriticals (genuine math,
-  see §6).
+- **Double-pole (3,3), phase-1 status**: Prop 8.4 (M≠1) requires a singleton
+  pole set, so the raw phase-1 kill was unavailable. **SUPERSEDED**:
+  SHEET6-2POLE.md and SHEET6-L1.md funnel this sector to residue A and the
+  unique merged datum `(6,12,3,2,5)@0`, which has four terminal classes. A
+  blanket two-dicritical Prop-8.4 analogue is not the current open task.
 
 ## 3. Propagation lemmas (St 9.6–9.11 analogues, td = 6)
 
@@ -156,9 +174,22 @@ BFS over chains (Prop 9.2 characteristic sequence), state = (Q-shape, Σλ):
 - λ uses ceil(D_F/i − κ̄_F) per extra root (κ_H(π(H)−1) ∈ N, St 9.4 proof line).
 - loops (revisited shape at ≥ λ): closed off first visit; sequences are finite
   (Prop 9.2) so λ=0 self-loops (which DO exist — E2-E4) cannot save a chain.
-- IV-terminals recorded, killed iff H3. Depth cap 7 (no frontier hits at cap).
+- IV-terminals were recorded and killed iff the then-standing H3 in this
+  phase-1 run. This is historical output, not the current disposition; H3 was
+  later refuted and the canonical eight-class ledger is stated above.
 
-## 5. Verdict table
+## 5. Verdict tables (phase-1 output; superseded by canonical checksum)
+
+The tables below are retained as the exact phase-1 search trace. Their
+`mod H3`, sanctioned-menu, raw Case-III, and raw two-pole labels must not be
+read as current opens. The superseding terminal-class ledger is:
+
+| sector | forced entry / funnel | terminal classes | current ledger status |
+|---|---|---:|---|
+| td<=5 | repaired row selection + pin | 0 | closed inside the audited campaign frame; Sigray's proof remains incomplete as printed |
+| td=6 single pole | `r9/M2`, `Q=(3,6,5,2,8)` | 4 | two R3/slack-1 and two R4/slack-0 classes |
+| td=6 two pole | row1+row1 -> residue A -> one `Q(G_m)=(6,12,3,2,5)@0` | 4 | two R3/slack-1 and two R4/slack-0 classes; reviewed formal-candidate template |
+| **td=6 total** | one single-pole sector plus one two-pole sector | **8** | local terminal-class book, not an unconditional global landing theorem |
 
 td ≤ 5 validation chains (single pole, budget Λ−2; `bash5` phase):
 
@@ -186,36 +217,55 @@ td = 6 campaign (single pole, budget 4; `bash`/`report` phases):
 | r11 (5,6) ρ=1,ν=5,κ̄=11 | 5 SANC | mod H3 (26 IV) + 8 III-tails | μ∈{3,4,5}, shapes in report |
 | 2-pole (r1+r1, Λ=3+3) | — | **OPEN** (Prop 8.4 unavailable) | needs 2-dicritical M≠1 analogue |
 
-All s≤5 instances of every tail were chased to death (kills/loops only); IV-terminal
-counts are before applying H3. No computation exceeded minutes; nothing farmed
-(systems/sheet6/ not needed — remaining opens are lemma-sized mathematics, not
-compute).
+All s≤5 instances of every phase-1 tail were chased to death (kills/loops
+only); IV-terminal counts in the historical tables are before applying H3.
+No computation exceeded minutes. Later composition, not this bounded-s line,
+decides which tails enter the canonical book.
 
-## 6. Remaining open cases (with size estimates)
+## 6. Historical open list and superseding dispositions
 
-1. **H3 / root-vertex kill (BLOCKING, math)**: prove that a characteristic sequence
+Current terminal-class endpoint: eight classes; `lambda_root=0`; a unique
+two-pole merged datum but four two-pole terminal classes; and a reviewed
+formal-candidate coefficient template.  A multiple direction collision can
+attain equality in the local delta bound, so that cheap strictness attack is
+retired. The coefficient path continues through the reviewed R6/deeper-tower
+window and redesigned R1 toward global template realizability/opposite-side
+balance and algebraization. The campaign-level gaps are full
+landing/coverage plus G2-PSC and G2-BD.
+The numbered phase-1 list is retained below with dispositions so it cannot be
+mistaken for the launch queue.
+
+1. **H3 / root-vertex kill (HISTORICAL; blanket form REFUTED)**: prove that a characteristic sequence
    ending at (0,y) via case IV contradicts normalization (candidate: case IV (l)
    forces d < deg p at the root; Thm 6.1 gives deg p < d at (0,x); chart-matching
    argument needed). Without it, EVERY IV-terminal above (≈ 100 shapes, all pinned
    with explicit Q-data) is a survivor-candidate. The td≤5 proof needs this too
-   (G2), so it is an audit item on solved ground first. Est: days (expert), or
-   agent-audit of thesis §§2-4 charts.
-2. **Case-III s-tails (~15 distinct shapes, listed in §5/report)**: for parametric
+   (S9-G2), so it is an audit item on solved ground first. Est: days (expert), or
+   agent-audit of thesis §§2-4 charts. **Disposition:** H3q supplies the valid
+   psi-budget kills; blanket H3 is false; LROOT forces `lambda_root=0` on the
+   surviving case-IV terminals.
+2. **Case-III s-tails (HISTORICAL phase-1 list)**: for parametric
    nodes, RATIO_III = μ(ρ+m)/(κ̄(s)+m) is never s-free; per-s instances (s ≤ 5) all
    die, s ≥ 6 unproven. Each shape is one two-variable-per-s Diophantine family
    m = [κ̄(s)(μ+kν) − μρ(1+kν)]/[kν(μ−1)]; closure = symbolic divisor-bound in s.
    Est: 1-2 agent-hours per shape, mechanizable; top targets (reachable at λ=0):
    (3,3s+2,3,9s+9) [r6], (4/3,3s+2,3,4s+4) [r8-ext], (2,5s+4,5,10s+10) [r11].
-3. **Case-III structural admissibility**: St 3.16/3.18 may forbid III at many of
+   **Disposition:** SHEET6-III plus the AF3 pin/composition remove these raw
+   tails from the canonical book; do not launch a blanket per-s chase.
+3. **Case-III structural admissibility (COMPLETED for this ledger)**: St 3.16/3.18 may forbid III at many of
    these nodes (thesis handles III only via λ≥1 shortcut; the ν_F-vs-Puiseux-jump
    side conditions are unextracted). Extracting them could kill all III-tails at
-   once. Est: thesis §3 close-read, 0.5-1 day.
-4. **Two-pole (3,3) configuration**: Prop 8.4's M≠1 kill assumes one dicritical.
+   once. Est: thesis §3 close-read, 0.5-1 day. **Disposition:** extracted in
+   SHEET6-III and composed with the later entry pin.
+4. **Two-pole (3,3) configuration (RAW TASK SUPERSEDED)**: Prop 8.4's M≠1 kill assumes one dicritical.
    Needs either a 2-pole analogue (each pole vertex row 1: Q=(1,2,2,5)-shape) or a
    different obstruction. Genuine math; no analogue in thesis. Est: unknown; this
    is the td=6 analogue of the Domrina-Orevkov multi-dicritical split.
-5. **AF2 λ-rule audit**: reverse-engineered (matches all six lemmas + ceil from
-   St 9.4-integrality); needs derivation from St 9.3 (24). Est: hours.
+   **Disposition:** 2POLE/L1 replace the raw task by residue A, one merged
+   datum, and four terminal classes; LT promotes its coefficient template as
+   a formal candidate.
+5. **AF2 lambda-rule audit (RESOLVED)**: derived in SHEET6-AF2.md and promoted
+   by SHEET6-A2P-REVIEW.md.
 6. **AF3 entry-M menu**: M | gcd(D,P) sanctions rows as thesis does (row-4 usage);
    superset runs (M | P) add only more III-tails, no new survivors. Justifying the
    sanction (or bashing the superset tails) closes it.
@@ -224,10 +274,13 @@ compute).
    (the "ext" value) is forced, r8→M3, all other rows entry-dead (M=1 vs
    Prop 8.4, any td ≤ 6). Single-pole td6 = 4 r9/M2 classes, unconditional
    at entry; td≤5 residual 0 independent of AF2. Engine: hiii_compose `pin`.
-7. **μ-completeness at entries**: μ | M with M from the menu; if pole-vertex M can
+7. **mu-completeness at entries (M-pin makes the menu issue MOOT here)**: μ | M with M from the menu; if pole-vertex M can
    exceed deg p_F divisors (j-rescaling), larger μ become possible. All μ ≥ 7
    branches die instantly in spot checks (ratio > deg-bound), but a uniform μ-bound
-   lemma (Λ ≤ 6 forces μ ≤ 6) should be extracted from §5. Est: hours.
+   lemma (Λ ≤ 6 forces μ ≤ 6) should be extracted from §5. Est: hours. For
+   the canonical td=6 entries, AF3 pins M exactly and the composed engine
+   supplies the stated four single-pole classes; this item is not a current
+   eight-class ledger gap.
 
 ## 7. Corrections / errata found
 
@@ -241,8 +294,10 @@ compute).
 - **E4 (St 9.10, p. 57)**: μ=3 "no solution" false (2ν=3m+1 family, ν=3s+2 ⇒
   M_F=3 self-loop); also printed possibility (iv) is not derived in the proof body.
 - **G1**: St 9.12 "type (3)"/"td=4" label inconsistency; adopted reading = row 4
-  under Prop 5.8 (20) as printed. **G2**: St 9.12's stated kill set (M=1, budget)
-  cannot kill its own IV-terminals — an unstated root-kill (our H3) is load-bearing.
+  under Prop 5.8 (20) as printed. **S9-G2**: St 9.12's stated kill set (M=1, budget)
+  cannot kill its own IV-terminals — the phase-1 blanket H3 was therefore
+  load-bearing, but was later refuted and replaced by the scoped H3q/psi
+  disposition plus LROOT's `lambda_root=0` ledger.
   **G3**: thesis §9 silent on td≤5 rows 1,5,7,10; rows 1,7 close mechanically
   (above), rows 5,10 need the same III-tail closure as td=6 — so the thesis's
   td ≥ 6 proof is INCOMPLETE as printed even modulo its errata (rows 5,10 = td 4,5

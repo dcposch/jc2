@@ -1,0 +1,15 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll independently recompute the D73 equality-control claims from the frozen producer report, the cited ladder text, and Sigray Proposition 7.3.Hash matches. Next I’ll pull Proposition 7.3 from the PDF and the committed ladder citations, then recompute the Jacobian identities.I’ll extract Proposition 7.3 and the surrounding definitions from the thesis, then recompute the Jacobian identities by hand.I have the primary text. Next I’ll recompute the Jacobian, leading data, and fiber cover with exact algebra rather than relying on the producer.The identities check out. I’ll write the independent review with per-claim verdicts, source caveats, and the scoped promotion limits.**Overall: CONFIRMED.** Written to `xmodel/d73-strict-or-equality-review-grok-20260824.md`. Frozen producer hash still `90546ffb50b5cf8325195dc04a4e39b550e4075c057049529e29d8d188b698de`. No producer or canonical file was edited.
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | Chart Jacobians and `J_{x,y}(f,g)=+1` | **CONFIRMED** |
+| 2 | Height-four leading data, `κ_G=1`, multiplicity 15 | **CONFIRMED** |
+| 3 | Special fiber: 3 branches, all in `R*_0`, `ΣΛ=3=π(G)-1` | **CONFIRMED** |
+| 4 | Generic `a≠0`: 15 punctures in one bidisc, distinct `g`-values, local `Λ=3`, cover degree 3; summing 15 is a cross-fiber type error | **CONFIRMED** |
+| 5 | Prop 7.3 equality is *if*, not iff; germ locally refutes the strict upgrade | **CONFIRMED** |
+| 6 | Scope: analytic/rational germ only; no class kill or realization | **CONFIRMED** |
+
+Recomputed identities: `dx∧dy=s^2 ds∧dt=df∧dg`, so the Jacobian is exactly `+1`; `S^3=t^{15}` has three branches of pole order 5, contact `21/5`, each `Λ=1`; the 15 generic simple roots sit over 15 different `g`-values and do not raise the local cover degree above 3.
+
+**Promotion:** accept as local equality-control only. Direction multiplicity by itself does not force an extra local defect. **Not** a polynomial Keller pair, **not** a kill or realization of any of the eight terminal classes, and **not** a JC2 decision.

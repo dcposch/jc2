@@ -188,9 +188,12 @@ Coalesce echo events to prevent review/round thrashing. If a sealed full-round
 packet already states a provisional result's complete mathematical content and
 the post-cutoff review merely confirms that same content and scope, harvest the
 lifecycle promotion as a micro-round; it does not trigger an otherwise
-identical full scan. Any refutation, narrowed or enlarged scope, new dependency,
-or rank-changing review fact remains a critical trigger. Record the coalescing
-decision explicitly in the next synthesis or `LIVE STATE`.
+identical full scan. A refutation or scope change of a **promoted or
+load-bearing** claim, a new dependency on the critical path, or a materially
+rank-changing review fact remains a critical trigger. An expected negative
+first-gate result or correction to an unpromoted provisional formula may be
+coalesced when the global ranking and trust perimeter are unchanged. Record
+the coalescing decision explicitly in the next synthesis or `LIVE STATE`.
 
 If a critical event arrives during an open full round and invalidates a
 load-bearing snapshot assumption, mark that round `ABORTED` and reseal. If it
@@ -235,7 +238,15 @@ event starts one sooner. Each round follows this protocol:
    combine compatible ideas, expose shared hidden assumptions, attack the
    strongest proposal, and design the cheapest experiment that separates the
    leading choices.
-6. **Synthesize and launch.** The coordinator writes a ranked synthesis,
+6. **Run the canonical history/priority checksum.** Before compute, search
+   `AUDIT.md`, `APPROACHES.md`, `PROGRESS.md`, the newest `LIVE STATE`,
+   `ladder/REDUCTION.md`, and repository reports for every surviving target,
+   mechanism, and close synonym. Reconcile the master known-degree/closed-case
+   ledgers, then check each load-bearing literature claim in primary text.
+   Label every card `NEW`, `KNOWN`, `DUPLICATE`, or `SCOPE-CONFLICT` in the
+   synthesis. Blind consensus never overrides a banked exact result or primary
+   theorem; a shared stale packet premise is correlated error, not a vote.
+7. **Synthesize and launch.** The coordinator writes a ranked synthesis,
    updates the avenue/claim graphs if needed, assigns owners and reviewers,
    launches reversible lanes immediately, and records why alternatives were
    deferred or stopped.

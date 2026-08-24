@@ -144,6 +144,64 @@ network timeout, and is quarantined non-executable pending a successful smoke.
 AWS utilization is unchanged: one legacy `build_tails43.py` core on box01;
 Box02 and Box03 remain stopped.
 
+The immediate follow-on full round `20260824T0719Z-c17bd25` closed at
+`07:55:37Z`, formally `DEGRADED`: four blind all-46 scans landed and a fifth
+timed out without freezing a report.  Twelve cards deduplicated to three
+bounded mechanisms.  The mandatory history/priority checksum then corrected a
+shared stale premise: Domrina excludes mapping degree four, Żołądek closes
+topological degree at most five, and the first open sheet degree is six.  The
+quartic cards were therefore known-case reproofs.  The proposed HC4 quintic
+module duplicated the already-run `NO LEVERAGE` probe; the advertised
+`x+x^2y+y^k` control is not unimodular; the Tate horizontal divisor lies
+outside its stated affinoid; and ordinary action residues are exact-form
+`COSTUME`.
+
+The H/P/S gates all stopped without blocking one another.  For a
+unimodular-gradient `P`, Hamiltonian `kappa(P)=[div V] mod D_P` is a
+classical Friedland/Brieskorn--Gauss--Manin object and vanishes exactly when
+`P` has a polynomial Jacobian mate.  A
+different-model-confirmed exhaustive weight recurrence proves the scoped
+family theorem that every `P=x+x^n y`, `n>=2`, has unimodular gradient but no
+polynomial mate; no universal receiver was found.  The dual-pencil gate is
+also different-model confirmed `PRIOR-ART / JUMP-ONLY / TYPE-FAIL`: the raw
+Suzuki defect is positive in every direction of a hypothetical
+nonautomorphism and therefore horizontal rather than a finite divisor; after
+subtracting the baseline, constant-degree jumps are anti-effective away from
+at most one uncontrolled degree-drop direction.  No GRR descendant survives.
+
+The characteristic-109 support gate stopped `NO-FROZEN-GRAMMAR` before any
+enumeration: a cap on slot count does not bound exponents, and exact triangular
+gauges change successor support.  A hostile carry audit found that generic
+second-digit and marked-section equations must include base-109 carries; a
+five-slot countercontrol passes the frozen uncarried tests while
+`det J-1=109^2*x^108 mod 109^3`.  The obstruction family has zero carry over
+the integers, so the grammar stop survives, as independently confirmed.  Two
+positive conditional lemmas remain: for each fixed residue `b`, an exact
+fixed-support determinant-one `Z_109` lift would map the 109 source balls
+indexed by `a` onto one target ball and embed to a complex counterexample; and
+a finite `CLOSED-SUPPORT + UNIT-L` coefficient module would
+construct such a lift by contraction.  No such support or lift is known.
+
+The sheet-six canonical checksum is now explicit: eight terminal classes,
+four single-pole and four two-pole, with one unique merged datum only at the
+intermediate two-pole stage.  All eight balance at `lambda_root=0`.  A
+dual-confirmed exact analytic Jacobian-one germ matches the sharp SP-2 x-side
+data with direction multiplicity 15 yet attains
+`sum Lambda=3=pi(G)-1`; the fifteen nearby simple roots lie over fifteen
+different target values.  Thus multiplicity alone cannot force strict local
+defect and kills none of the eight classes.  The live proof surface is global
+polynomial realizability/opposite-side balance plus the distinct `G2-PSC` and
+`G2-BD` obligations.  The live disproof surface is a proved finite
+gauge-normal-form or symbolic-motif grammar exposing `CLOSED-SUPPORT + UNIT-L`.
+No proof or counterexample was found.
+
+Resource snapshot at `2026-08-24 09:02Z`: all producer and review lanes from
+this batch are closed.  All-time counters are Claude 47,374 messages /
+10,925.7M processed tokens; Codex/Sol 303 rollouts / 2,410.1M total; and Grok
+86 sessions / 146.2M cumulative.  AWS remains one protected legacy
+`build_tails43.py` core on box01; Box02 and Box03 are stopped.  No new compute
+target licensed an expansion.
+
 ## 2026-08-23
 Foundational-floor day, then the reorg. Belyi identification of the residue-A
 genome verified (A4 passport; leverage inert). Canonical strategy correction:

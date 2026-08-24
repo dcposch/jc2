@@ -42,7 +42,12 @@ All from §7 of the thesis, read on-page.
 - Prop 7.2 (p. 36): g(P) ∈ C ⟺ the ray of P carries a cv vertex
   F̂_P := I_P(u) (Not 7.2). Prop 7.3 (pp. 36-38): the punctures continuing
   from a cv vertex F in one direction c (p_F(c) = a) carry total Λ-mass
-  ≥ κ_F π(F) − κ_F, with equality iff mult(p_F − a, c) = 1.
+  ≥ κ_F π(F) − κ_F, with equality when mult(p_F − a, c) = 1.
+
+The printed proposition gives this as a sufficient equality condition, not
+an if-and-only-if statement.  The later exact local control in
+`xmodel/d73-strict-or-equality-20260824.md` shows that equality can also occur
+at multiplicity greater than one.
 - Prop 7.5 (p. 38), identity (22): for T_{a0,cv} = {F_1,…,F_s},
 
       td(f,g) = 1 + Σ_{i=1}^s κ_{F_i}(π(F_i) − 1) + Σ_{a∈C} δ_{F_i,a},
@@ -221,7 +226,7 @@ D_g·deg p/ν = 6 = td pins the absolute sizes):
 
 The λ_root ≥ 1 lemma is DEAD as a kill: its content is empty on exactly
 the survivor set (case-IV terminals), by the survivors' own terminal
-hypothesis. SHEET6-CAMPAIGN header "next kills" should drop it; the
+hypothesis. The SHEET6-CAMPAIGN header has since dropped it; the
 counterexample template is instead STRENGTHENED (5b). No class dies; no
 class is resurrected; canonical book unchanged: td ≤ 5: 0; td = 6: 4
 single-pole r9/M2 + two-pole residue A (4 IV classes).
@@ -248,15 +253,17 @@ For the 4 slack-0 classes additionally (every ledger row exact):
 
 ### 5c. The surviving attack surfaces (precise, none printed)
 
-1. **δ-strictness at direction collisions.** The x-family's direction
+1. **Global compatibility beyond local δ-strictness.** The x-family's direction
    polynomial has degree deg p_G = l_f ≥ 15 (single-pole) at the cv
    vertex, so a* with mult(p_G − a*, c) ≥ 2 EXIST (critical values of a
-   nonconstant polynomial). Prop 7.3 proves Λ-mass ≥ κπ−κ with equality
-   iff mult = 1 but does NOT prove strictness at mult ≥ 2. A strict
-   version (one extra unit of δ at some collision fiber) would kill all
-   four slack-0 classes at once — this is the exact quantitative question
-   the ledger isolates. Genuinely new mathematics (a local excess formula
-   for Prop 7.4's δ); nothing in §7 decides it.
+   nonconstant polynomial). Prop 7.3 proves Λ-mass ≥ κπ−κ and gives
+   equality when mult = 1; it does not assert the converse.  The exact
+   Jacobian-one analytic germ in
+   `xmodel/d73-strict-or-equality-20260824.md` attains equality with
+   multiplicity 15, so direction multiplicity alone cannot supply the extra
+   unit of δ.  Any kill must use a genuinely global restriction: polynomial
+   realizability, compatibility with the pinned opposite-side templates, or
+   an additional branch elsewhere on the same compactified fiber.
 2. **x-side realizability vs the templates.** LR2's single-cluster/κ=1/
    unsplit-to-height-R x-side must coexist with the pinned y-side
    patterns (AF3 §4 entry family; L1 §5 rigid merge template) inside one

@@ -1747,8 +1747,20 @@ review: **CONFIRMED**).
   Keller map has multiplicity neither two nor three. Thus a rank-three
   continuation is also known-closed; this says nothing about polynomial total
   degree three.
-- SCOPE: ranks at least four remain untouched here. This is not a new theorem,
-  a finiteness proof in arbitrary rank, or a JC2 result.
+- GLOBAL LOW-SHEET CHECKSUM: the preceding producer proof itself stops at
+  rank two, but **generic mapping/topological degree four is not open**.
+  Domrina, *On four-sheeted
+  polynomial mappings of C^2. II. The general case*, Izv. Math. 64:1 (2000),
+  1--33, proves that no four-sheeted complex plane polynomial map has nonzero
+  constant Jacobian (MathNet `im273`). Żołądek, *An application of
+  Newton--Puiseux charts to the Jacobian problem*, Topology 47 (2008),
+  Theorem 6.12, proves invertibility for topological degree at most five.
+  Hence the first open mapping/topological degree is six, consistently with
+  `ladder/SHEET6.md`. The round-0719 packet's global reading of “ranks at
+  least four untouched” was a priority error and licensed no quartic replay.
+- SCOPE: this rank-two gate is not a new theorem, a finiteness proof in
+  arbitrary rank, or a JC2 result. Its local proof does not rederive the
+  separate known rank-four/five theorems.
 
 ## WEIGHTED D LEVEL-TWO SOURCE GATE (2026-08-24, DUAL-CONFIRMED SOURCE-TYPING TIER)
 `xmodel/weighted-d-source-gate-20260824.md` and
@@ -1777,3 +1789,146 @@ review: **CONFIRMED**).
   rule. Another external sidecar or modular D row is not enough.
 - SCOPE: no band 28/deeper D, D43 integral, syzygy/Spencer/Fitting, germ,
   characteristic-zero point, polynomial Keller map, or JC2 inference follows.
+
+## HAMILTONIAN KAPPA CLASS + `x+x^n y` FAMILY NO-MATE (2026-08-24, DUAL-CONFIRMED SCOPED TIER)
+`xmodel/hamiltonian-kappa-gate-20260824.md` and
+`cases/hamiltonian_kappa_20260824/` (exact producer/replay), with
+`xmodel/hamiltonian-kappa-review-grok-20260824.md` (different-model hostile
+review: **CONFIRMED**).
+- EXACT CLASS: for a polynomial `P` with unimodular gradient, choose a
+  polynomial vector field `V(P)=1` and put
+  `kappa(P)=[div V] in C[x,y]/D_P(C[x,y])`.  The syzygy module of
+  `(P_x,P_y)` makes this independent of `V`.  Subtracting `hD_P` and applying
+  the polynomial Poincare lemma proves
+  `kappa(P)=0` iff some polynomial `Q` satisfies `[P,Q]=1`, with all signs
+  independently checked.
+- PRIORITY: Friedland 2001 already defines this cokernel and its
+  Gauss--Manin operator, whose value at one is `kappa(P)`.  Dimca--Saito type
+  the same element as `partial_t[dx wedge dy]` in the Brieskorn module.  No
+  primary source or gate result supplies a finite universal receiver forcing
+  this class to be nonzero for every noncoordinate.
+- SCOPED FAMILY THEOREM: for every integer `n>=2`,
+  `P_n=x+x^n y` has unimodular gradient.  The weight
+  `w(i,j)=i-(n-1)j` exhausts all monomials that could contribute to
+  `[P_n,Q]=1`; coefficient recursion gives a nonzero infinite chain and an
+  uncancelled terminal term for every finite polynomial.  Hence no polynomial
+  mate exists.  The replay passed 4,979 exact checks and the rational/formal
+  slice is correctly nonpolynomial.
+- SCOPE: this is a controlled infinite-family theorem whose members are not
+  Keller coordinates; literature novelty is not claimed.  The class is an
+  exact reformulation of the missing mate, not a new global obstruction.  No
+  generic sparse widening, universal receiver, proof, or counterexample to
+  JC2 follows.
+
+## DUAL-PENCIL INFINITY DEFECT IS JUMP-ONLY, NOT THE PROPOSED DIVISOR (2026-08-24, DUAL-CONFIRMED DEFINITION STOP)
+`xmodel/dual-pencil-definition-gate-20260824.md` (corrected producer), with
+`xmodel/dual-pencil-hostile-audit-20260824.md` (internal hostile source audit:
+**PASS WITH SCOPED CORRECTION**) and
+`xmodel/dual-pencil-review-grok-20260824.md` (different-model review:
+**CONFIRMED**).
+- EXACT CORE: for a Keller pair and every nonzero direction
+  `H=aP+bQ`, `H` is a polynomial submersion.  Suzuki's primitive
+  factorization gives connected generic fiber and total infinity defect
+  `delta(H)=1-chi(G_H)=b_1(G_H)>=0`.
+- ENDPOINT: `delta(H)=0` makes the generic fiber `A^1`; the resulting
+  coordinate direction, together with its Keller mate, makes the original
+  pair an automorphism.  Thus any hypothetical nonautomorphic Keller pair has
+  positive defect in every pencil direction.
+- TYPE VERDICT: the universal defect therefore has horizontal support over
+  the whole dual line, not a finite effective divisor.  Subtracting the
+  generic value leaves only a jump cycle and destroys the proposed
+  degree-zero endpoint.  At constant polynomial degree, Siersma--Tibar
+  Proposition 5.1 gives a nonpositive jump coefficient; at the possible
+  degree-drop direction the coefficient remains uncontrolled.  This corrects
+  the producer's original sign assertion without changing
+  `PRIOR-ART / JUMP-ONLY / TYPE-FAIL`.
+- SCOPE: the signed jump cycle is a resolution-independent finite formal
+  cycle, but no finite **effective** divisor with the proposed degree-zero
+  endpoint, GRR formula, new positivity obstruction, or JC2 result follows.
+  No dual-pencil descendant is licensed without a genuinely new typed object.
+
+## AS109 SUPPORT GRAMMAR STOP + CARRY CORRECTION (2026-08-24, DUAL-CONFIRMED CORRECTED SPECIFICATION TIER)
+`xmodel/as109-support-gate-20260824.md` and
+`cases/as109_support_20260824/` (frozen specification and exact controls),
+with `xmodel/as109-support-review-grok-20260824.md`, the frozen
+`xmodel/as109-support-gate-20260824-erratum.md`, and
+`xmodel/as109-carry-erratum-review-grok-20260824.md` (different-model
+follow-up: **CONFIRMED**).
+- REGISTERED STOP: a cap of eight correction slots does not bound literal
+  exponents.  For every `m>=1`, the exact triangular automorphism
+  `G_m=(x+109y^m,y)` gives a two-slot first layer and a five-slot two-layer
+  union after exact successor transport; its exponents remain unbounded.
+  Nonlinear residual support
+  changes along the exact source-gauge orbit, so no finite exhaustive graph
+  exists without a proved gauge section or groupoid transition rule.  No
+  enumerator or AWS job ran; no cap-eight existence or nonexistence statement
+  follows.
+- CARRY ERRATUM: for integral digit lifts, put
+  `C_1=L(A_0,B_0)-x^108` and `K=C_1/109` after the first congruence.  The
+  correct second digit is
+  `K+L(A_1,B_1)+N_0=0 mod 109`; marked-section equations have analogous
+  evaluation carries.  A five-slot countercontrol passes the frozen
+  uncarried `E1/E2` but has
+  `det J-1=109^2*x^108 mod 109^3`.  This supersedes claim 2 of the original
+  review only at the inference from the correct determinant expansion to an
+  uncarried generic second digit.
+- SURVIVING OBSTRUCTION: the parametric triangular family has `C_1=0` and
+  its successor equation over `Z`, so its carry is identically zero.  Hence
+  `NO-FROZEN-GRAMMAR`, the unbounded-support witness, and the stopped scope
+  survive the correction exactly.
+- CONDITIONAL HENSEL BRIDGE: any exact polynomial
+  `F in Z_109[x,y]^2` reducing to `(x-x^109,y)` with `det J_F=1` has the
+  following property: for each fixed residue `b`, the 109 source balls
+  `(a,b)+109Z_109^2`, indexed by `a`, each map bijectively onto the target
+  ball `(0,b)+109Z_109^2`.  It is therefore noninjective over `Q_109`;
+  adjoining finitely many
+  coefficients and two preimages gives a finitely generated characteristic-
+  zero field that embeds in `C`, hence a complex Keller counterexample.  This
+  assumes an exact lift and does not assert one exists.
+- CONDITIONAL CONTRACTION: let `U'` be a finite free gauge-fixed coefficient
+  module and `W` a finite residual module with
+  `x^108 in W`, `L(U') subset W`, and `N(U') subset W`.  An integral right
+  inverse `R:W->U'` whose image is the chosen section makes
+  `T(u)=R(x^108-109N(u))` a strict contraction.  `CLOSED-SUPPORT + UNIT-L`
+  would therefore construct the exact lift needed above.  No known support
+  meets these hypotheses.
+- SCOPE: this is a corrected specification stop plus two conditional
+  resurrection lemmas.  There is no `HEIGHT-CERT`, `NO-CYCLE-AT-8`, found
+  lift, characteristic-zero inference, proof, or counterexample to JC2.
+
+## D73 DIRECTION-COLLISION STRICTNESS HAS AN EXACT EQUALITY CONTROL (2026-08-24, DUAL-CONFIRMED LOCAL TIER)
+`xmodel/d73-strict-or-equality-20260824.md` (producer), with
+`xmodel/d73-strict-or-equality-review-grok-20260824.md` (different-model
+hostile review: **CONFIRMED**).
+- EXACT LOCAL GERM: in the infinity chart `s=y^-1`, `t=xy^4`, put
+  `q=t+t^25`, `g=q(t)`, and
+  `f=t^15+s^3/(3q'(t))`.  Both `dx wedge dy` and `df wedge dg` equal
+  `s^2 ds wedge dt`, so the analytic germ has Jacobian one exactly.  Its
+  height-four data match sharp SP-2:
+  `(k_f,l_f)=(60,15)`, `(k_g,l_g)=(100,25)`, `pi(G)=4`, `kappa_G=1`, and
+  direction multiplicity 15.
+- EQUALITY: on `f=0`, a holomorphic unit change gives `S^3=t^15`.  There are
+  exactly three normalized branches, each with `y`-pole order five, first
+  contact `21/5`, and `Lambda=1`.  Hence the collided direction has
+  `sum Lambda=3=pi(G)-1`, attaining Proposition 7.3's lower bound despite
+  multiplicity greater than one.
+- GENERIC-FIBER TYPE CHECK: for small generic `a`, the fifteen simple roots
+  of `t^15=a` lie in one local neighborhood, but their values
+  `q(t_i)` are pairwise distinct.  Each puncture has local multiplicity three
+  while the cover over any one target value has degree three.  Adding all
+  fifteen multiplicities would illegally mix fifteen different `g`-fibers.
+- SOURCE WORDING: Sigray Proposition 7.3 says equality holds **if** the
+  direction root is simple; it states no converse.  The two former
+  `iff mult=1` readings in `ladder/SHEET6-LROOT.md` are corrected to the
+  one-way statement.  Direction multiplicity alone therefore cannot force
+  the hoped-for strict extra delta unit.
+- SCOPE: `f` is rational/analytic, not a global polynomial in `(x,y)`.  This
+  is a local equality control, not a Keller counterexample, a realization or
+  kill of any of the eight terminal classes, or a global equality theorem.
+  The remaining implication must use global polynomial realizability,
+  opposite-side compatibility, or an additional branch elsewhere on the
+  same compactified fiber.  No proof or counterexample to JC2 follows.
+- REVIEW METADATA: the three final Grok reports in this batch contain
+  inaccurate human-written review windows.  The authoritative automatic
+  runner times and frozen hashes are recorded in
+  `xmodel/review-window-erratum-20260824.md`; no mathematical verdict changes.

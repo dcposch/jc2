@@ -3765,3 +3765,69 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   sessions / 136.2M cumulative. Provider counters are cache-dominated and not
   directly comparable. AWS active compute is one core on box01; Box02/Box03
   compute utilization is zero.
+
+## 2026-08-24 09:05Z EVENT ROUND `20260824T0719Z-c17bd25` + GATES CLOSED
+- ROUND: cutoff `2026-08-24T07:19:08Z`, close
+  `2026-08-24T07:55:37Z`, clean basis
+  `c17bd2542b40f3178ec619ae4a73501550555336`.  Four complete blind all-46
+  scans landed; the fifth timed out without a report and was excluded, so the
+  round is `DEGRADED`.  Packet/synthesis SHA-256 are
+  `ef61e5d5fe8f58081b9b36602b5bf98a83f655b9836cefe93a5a355dd90c9a2d` /
+  `c2de1aec94ac42c07028bfe759ac8fb4f5100f204abaedc1dc032aa098931c60`.
+  Twelve cards deduplicated to H/P/S.
+- PRIORITY CHECKSUM: mapping/topological degree four was a shared stale
+  premise.  Domrina closes four and Zoladek closes at most five; first open is
+  six.  Quartic cards stop `KNOWN`.  HC4's first quintic module duplicates
+  `sol-hc4probe` (`NO LEVERAGE`).  `x+x^2y+y^k` is not unimodular; the Tate
+  divisor is outside its unit affinoid; untwisted action residues are exact
+  `COSTUME`.  `COORDINATION.md` now requires the canonical history/priority
+  checksum before every launch.
+- H: report/review SHA-256
+  `1ce7ac73d117c8db403c702f35bc860c6318a2275e288a8212cee96d9a417709` /
+  `10864874a876a3d2cccee6f0927f941b4e3615984e542659a8f9cc0f1327db12`.
+  Different-model `CONFIRMED`: for unimodular-gradient `P`, `kappa(P)` is
+  well defined and zero iff a mate exists; the module/GM typing is
+  Friedland/Dimca--Saito prior art; all
+  `x+x^n y`, `n>=2`, have no polynomial mate by exhaustive recurrence.  Stop
+  at scoped family theorem / no universal receiver.
+- P: corrected producer/internal audit/different-model review SHA-256
+  `b96a6564f4f1f494c6c86c3fa69f0131e9c772d5823558fae6b0ee9d0a34e1ec` /
+  `f65de557bfec85eb7ef407b6cf4f087ab1b5f458abf3d3b9386ef88f5b9037db` /
+  `57e6d4a14d90abc1411fe9e20d328745084f4123355be728ad54bf112a7ad0f5`.
+  Verdict `PRIOR-ART / JUMP-ONLY / TYPE-FAIL`: positive horizontal baseline,
+  anti-effective constant-degree jumps, at most one uncontrolled degree-drop
+  direction, no finite effective divisor or GRR client.
+- S: producer/initial review/erratum/corrected review SHA-256
+  `b73aefd1c70667b041d13d40747ee273d6359ac1d7bbc600492595081d9268b5` /
+  `1448985c259d2adb9b7e982fee233e802100fa8a0fd2eb32822b617e0a4632e8` /
+  `ca8a549c8b75873179fef536361c992c346ce5ac203b7e376c65ab4a116b9bbb` /
+  `1b10eba84500d008548926e2c9dba9dd70a77331b4b670104f164d6119cf7212`.
+  Stop `NO-FROZEN-GRAMMAR`; no enumeration.  Carry-aware E2 is
+  `K+L(A1,B1)+N0=0 mod109`; the five-slot countercontrol has residual
+  `109^2*x^108`.  The unbounded gauge family has zero integral carry, so the
+  stop, Hensel bridge, and conditional `CLOSED-SUPPORT+UNIT-L` contraction all
+  survive.  No lift exists in hand.
+- TD6/D73: canonical book = 8 terminal classes (4 single-pole + 4 two-pole),
+  one intermediate merged two-pole datum, and `lambda_root=0` in every row.
+  D73 producer/review SHA-256
+  `90546ffb50b5cf8325195dc04a4e39b550e4075c057049529e29d8d188b698de` /
+  `3c0df2009432646bc6b93fa36f4c688b24af9e8df22629755303e89fde0fac3a`.
+  Different-model `CONFIRMED`: a multiplicity-15 local analytic germ attains
+  `sum Lambda=pi-1`; the 15 generic roots lie over 15 distinct target values.
+  Retire the local strictness shortcut; no terminal class is killed.
+- METADATA: three Grok reports guessed inaccurate human review windows.  The
+  byte-frozen reports are preserved; authoritative automatic runner windows
+  and hashes are in `xmodel/review-window-erratum-20260824.md`, SHA-256
+  `24d7fce231860b73f4d8bd4b8ed820b473a7f42e882afebf691f2f494b3cc369`.
+  Mathematics and verdicts are unaffected.
+- OUTER LOOP: these post-round stops and scoped controls are coalesced as the
+  event micro-round; they do not globally rerank beyond td6 proof / fixed-
+  support disproof.  Retain the stricter precommitted quiet backstop
+  `2026-08-24T18:29:30Z`; significant news fires sooner.  Last broad web sweep
+  remains #8 at `2026-08-23 21:25Z`; sweep #9 deadline
+  `2026-08-24 21:25Z`.
+- RESOURCES: all local producer/review lanes closed.  Counters: Claude 47,374
+  messages / 10,925.7M processed; Codex/Sol 303 rollouts / 2,410.1M total;
+  Grok 86 sessions / 146.2M cumulative.  box01 keeps one protected legacy
+  `build_tails43.py` core; Box02/Box03 remain stopped.  No gate licensed AWS
+  expansion.  No proof or counterexample was found.

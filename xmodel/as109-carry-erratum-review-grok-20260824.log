@@ -1,0 +1,18 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll independently review the AS109 carry erratum: read the frozen artifacts, rerun the carry replay, and attack each numbered claim with exact arithmetic.I'll read the erratum prompt and a recent review for format, then verify hashes and rerun the carry replay independently.Hashes match the charged basis. Next I’ll rerun the frozen carry replay and independently recompute the determinant expansion, collision carries, five-slot countercontrol, and parametric identities.Independent expansion, replay, and closed-form Jacobian all agree. I’ll write the review file next, without touching any frozen producer artifacts.Overall verdict: **CONFIRMED**. Written to `xmodel/as109-carry-erratum-review-grok-20260824.md`. No frozen producer, review, replay, or canonical file was edited.
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | Corrected `E2` is `K+L(A_1,B_1)+N_0=0 mod p` | **CONFIRMED** |
+| 2 | Marked-collision carries | **CONFIRMED** |
+| 3 | Five-slot countercontrol | **CONFIRMED** |
+| 4 | Parametric family has integral zero carry; `NO-FROZEN-GRAMMAR` survives | **CONFIRMED** |
+| 5 | Hensel lemma independent of digit carries | **CONFIRMED** |
+| 6 | Packed `CLOSED-SUPPORT + UNIT-L` unaffected and still conditional | **CONFIRMED** |
+| 7 | Scope; original claim 2 superseded only in the uncarried inference | **CONFIRMED** |
+
+Frozen replay `python3 cases/as109_support_20260824/verify_carry_erratum.py` exited 0 with `verdict = PASS-CARRY-ERRATUM`. All four launch hashes matched. A second sparse engine, not imported from that script, plus the closed form `P=(1-p)(x-x^p)`, `Q=y(1+p(1+s)+p^2(1+s)^2)`, gave `det J-1 = 109^2 x^{108} mod 109^3` while uncarried `E1/E2` still pass over `F_{109}`.
+
+**What is superseded.** Original review claim 2 only, and only the inference that displayed `E1` and `E2` over `F_{109}` are the exact condition modulo `109^3`. The truncated expansion, monomial bracket, `N`, and packed `Z_{109}` identity stand. Claims 1 and 3–8 of that review are not superseded.
+
+**Promotion.** Accept the scoped correction. Keep `NO-FROZEN-GRAMMAR` as the registered stop. Keep Hensel and contraction as conditional lemmas. No enumeration ran, no lift was found, and nothing here proves or disproves JC2.

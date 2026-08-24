@@ -1,0 +1,32 @@
+{
+  "verdict": "PASS-SPEC-OBSTRUCTION-CONTROL",
+  "enumeration_run": false,
+  "frozen_hashes": {
+    "PREREGISTRATION.md": "be9138a90b661f069197a4c22235ee1caa4e03fcecd2dab8c980e8934f2d6301",
+    "manifest.json": "c69d70805bdba5793f385fca9c289f9a12a8c58c45e1625e1c2f69a9632f0364"
+  },
+  "parametric_identity": {
+    "family": "A0=y^m, B0=x^108*y for every integer m>=1",
+    "E1": "A0_x+B0_y=x^108",
+    "collision": "both corrections preserve the two sections on y=0",
+    "gauge": "exact integral triangular G_m=(x+109*y^m,y)",
+    "N": "-x^216 + (m mod 109)*x^107*y^m",
+    "literal_slot_count": 2,
+    "transported_E2": "A1=-x^108*y^m; B1=x^216*y+108*x^107*y^(m+1)",
+    "union_slot_count_through_E2": 5,
+    "same_slot_cycle": false,
+    "closed_support_unit_L": "FAIL-NOT-CLOSED",
+    "closure_counterexample": "the allowed slot B=x^216*y produces N=-x^324, outside the derivative residual span",
+    "consequence": "the monomial-count cap does not bound exponents; the full frozen gauge changes literal supports and nonlinear residual supports"
+  },
+  "sample_m": [1, 2, 3, 108, 109, 110, 1000],
+  "all_sample_assertions": {
+    "E1": "PASS",
+    "collision": "PASS",
+    "slot_count_at_most_8": "PASS",
+    "x^216_successor_residual_coefficient": "-1 mod 109",
+    "E2_with_exact_transported_gauge": "PASS_WITH_THREE_NEW_SLOTS",
+    "closed_support_control": "FAIL-NOT-CLOSED",
+    "frozen_hash_replay": "PASS"
+  }
+}
