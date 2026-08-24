@@ -41,59 +41,69 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
-## Current event synthesis overlay (reviewed through 2026-08-24 16:17Z)
+## Current event synthesis overlay (reviewed through 2026-08-24 17:41Z)
 
 The last completed all-avenue decision record is
-[`xmodel/ideation-20260824T1358Z-synthesis.md`](xmodel/ideation-20260824T1358Z-synthesis.md).
-The active roots remain avenues `2,3,19`: TD6 global realizability, the first
-unresolved partial-`y` pair `(6,9)`, and characteristic-`p` algebraic lifting.
-No result below proves or disproves JC2.
+[`xmodel/ideation-20260824T1633Z-synthesis.md`](xmodel/ideation-20260824T1633Z-synthesis.md).
+All five blind scans converged on three operational roots: fail-closed
+partial-`y` coverage, a proof-carrying map-only AS accepted-digit recursion,
+and a dependency-complete TD6 rank/Fitting atlas.  The first root has now
+advanced to maximum twelve.  No result below proves or disproves JC2.
 
-- **The aligned nontrivial-Kummer `(6,9)` branch is empty; the independent
-  cube core is sharply reduced and provisionally near closure.**  Four exact
-  Pfaffian potentials and a two-sheet invariant fibre exclude the aligned
-  branch.  The reviewed target-translation correction makes `kappa` gauge and
-  `C=kappa^2+mu` invariant without changing that exclusion.  Independently,
-  the reviewed Faber--Laurent gate reduces the polynomial cube core to
-  `r1'=...=r4'=0`, `6r5'=j/s`, with constant `s` or one repeated polynomial
-  root.  A new exact producer has since excluded every listed `d!=0`, `d=0`,
-  boundary, and first-target trajectory, including the formerly missing mixed
-  `rho3,rho4` stratum: its generic target fibre is genus one, while the
-  degenerate rational parametrization has incompatible pole places.  This
-  stronger closure is **provisional until its corrected package is frozen and
-  hostile-reviewed**.  Even if confirmed, it is conditional on the reviewed
-  cube-core landing and does not by itself exclude arbitrary `(6,9)`.
-- **The proposed quantitative AS cap law is false.**  At `p=3`, hostile
-  review now confirms exact equal-cap minima
-  `n2,n3,n4,n5 = 3,5,7,7`; hence `(n-1)(p-1)+1` fails at depth five.  A
-  separately reviewed cap-eight point records a useful cyclotomic carry
-  cancellation but is superseded for the minimum.  The minimum cap-seven
-  residue has a representative-invariant nonzero `x^2 y^2` Cartier class and
-  cannot lift to depth six at any cap; this is pointwise, not emptiness of a
-  depth-six system.  The live disproof successor removes the auxiliary gauge
-  cap altogether and fixes only the degree of the actual map, compiling the
-  Keller tower directly in `(P,Q)`.  This is a search-design correction, not
-  a promoted no-lift theorem; no `p=109`, `A_infinity`, deck descent,
-  polynomial lift, or JC2 conclusion follows.
-- **The entire licensed TD6 `q2` boundary pencil is empty.**  For
-  `q_B=t+B*t^2+t^25`, hostile review independently reconstructed the raw
-  transport, exact `E[B]` elimination, all 101 unit pivots, ten
-  compatibilities, and a Bezout identity showing `gcd(N4,N13)=1`.  Thus no
-  value of `B` survives, even after field extension.  This kills one
-  one-parameter family in the fixed normalized section, not centering,
-  dead stretch, SP-2, or JC2.  Common centering is now the smallest
-  matrix-changing successor; its full infinitesimal compatibility map is
-  provisionally injective, and the exact `c1` pencil is being propagated.
+- **Every characteristic-zero Keller pair of maximum actual partial
+  `y`-degree at most eleven is an automorphism.**  Different-model hostile
+  review confirms the cube-trajectory closure and the complete `(6,9),3|H`
+  composition.  The nontrivial-Kummer and polynomial-cube branches are
+  disjoint and exhaustive; the latter is closed separately for `d!=0` and
+  `d=0`, constant and one-root-power `s`, and all mixed `rho3,rho4` strata.
+  The degree recursion then closes all 78 unordered / 144 ordered pairs
+  through maximum eleven.  This is an unbounded-`x` partial-degree theorem,
+  not a new total-degree theorem.  Maximum twelve has exactly two new
+  primitive checksums, `(8,12)` and `(9,12)`; neither is yet excluded.
+- **The maximum-twelve successor is source-honest branch typing; its cheaper
+  cell is not yet honestly ordered.**  For primitive degrees `(dr,ds)`, on
+  `u^d=h` the first residual is `d*(s*A-r*B)'=0` and
+  `delta=s*A-r*B`.  Every nontrivial Kummer class of order dividing `d`
+  forces `delta=0`; the polynomial `d`th-power branch remains weight-
+  unforced.  Thus `(8,12)` has orders `4,2,1`, including a mandatory
+  quadratic intermediate branch, while `(9,12)` has orders `3,1`.  The raw
+  constant-W tangent gate is smaller for `(8,12)` (18 variables/17 rows,
+  rank 11) than for `(9,12)` (19/18, rank 11), but the full Kummer branch tree
+  is simpler for `(9,12)`.  Exact preflight is frozen pending review; a
+  matched first-high-row probe must decide the allocation.
+- **Map-only AS has a confirmed deep terminal point and a confirmed infinite
+  finite-depth control, but no full-locus obstruction.**  The exact
+  `D=7` triangular map survives modulo `3^6` and is cap-terminal at the next
+  digit; hostile review independently rebuilt its integer determinant and
+  digit enumeration.  A balanced cyclotomic family of degree `2m+1` has
+  determinant `1-3^(2m)*x^(4m)`, so finite-depth false positives occur at
+  arbitrarily large depths; hostile review confirms the identity, 3-adic
+  integrality, special fibre, and same-cap terminality.  Each displayed
+  residue remains pointwise terminal through every cap `D'<=4m`, but this is
+  not a locus theorem.  Hostile review also confirms that the associated
+  layer-`7/6` top scheme has three reduced minimal components and one
+  load-bearing embedded primary component.  A proposed 29-row deep-branch
+  acceptance scheme is **quarantined**:
+  its universal bracket Cartier-zero lemma is correct, but it omitted the
+  divided integer carry `(U_x+V_y-x^2)/3`, whose `p=3` Cartier coefficient is
+  `u5_3+v5_2`.  A corrected 30-row scheme is being recomputed before review,
+  retaining the original nonreduced primary structure for the degree-ten
+  successor.
+- **The licensed TD6 `q2` pencil remains empty, while common centering is
+  only a sensitivity gate.**  The frozen full-centering differential
+  `E^3 -> E^10` has producer rank three and zero kernel, and its affine
+  equation is inconsistent at the registered nonsolution; hostile review is
+  independently reconstructing the 3,602-column engine.  This does not kill
+  a center family or SP-2.  Dependency census selects `(c1,c3)` over
+  `(c1,c2)` by 6,763 fewer typed entries.  Exact FLINT tower arithmetic is
+  propagating the nonlinear `c1` line, the `c3` dual thickening, and every
+  exceptional pivot stratum.
 
-The cube-trajectory closure, TD6 family kill, AS law falsification, and
-fixed-map reformulation constitute significant news, so a new blind
-whole-portfolio round is triggered rather than waiting for the quiet
-`2026-08-25T02:16:26Z` backstop.  Reviews remain background/nonblocking;
-provisional descendants may run once their producer evidence is reasonable,
-but promotion remains review-gated.  The broad web sweep is due by
-`2026-08-24T21:25Z`.  AWS expansion remains stopped because the current exact
-gates are compiler/certificate or low-dimensional symbolic problems rather
-than memory-capacity bottlenecks.
+Reviews remain background/nonblocking, but promotion remains review-gated.
+The next blind all-avenue scan is due no later than twelve hours after the
+`17:14Z` synthesis close; broad web sweep #9 is due by `2026-08-24T21:25Z`.
+AWS expansion remains stopped because the current gates are exact symbolic
+and certificate bottlenecks rather than memory-capacity bottlenecks.
 
 ## Prior event synthesis overlay (reviewed through 2026-08-24 14:03Z)
 

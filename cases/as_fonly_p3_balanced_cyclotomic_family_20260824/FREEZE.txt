@@ -1,0 +1,22 @@
+AS F-ONLY p=3 BALANCED CYCLOTOMIC FINITE-DEPTH TERMINAL FAMILY
+date: 2026-08-24
+status: PRODUCER-INTERNAL EXACT; HOSTILE REVIEW PENDING
+verdict: ODD m>=3 GIVES D=2m+1 SURVIVAL THROUGH DEPTH 2m AND TERMINALITY AT DEPTH 2m+1
+
+report_sha256: 8d6873550d06136f3a725160161500a844b43c9793a90c59798e5dc2b3c4c8e4
+manifest_sha256: c4244493a6e94c5f2ddb275d8aab1bd61902e78d6a8bcba9af3fff3441398494
+replay_sha256: 7464a1936ee089fc0d22f24ff4c3151225aea7942845a14d69ad283388fc53ef
+payload_sha256: badabc43d596f94e8fbae3ca2f2afbbaf6115af529423ed8974b544cb739b27b
+
+identity:
+  A_m(z)=(1+z)(1+...+z^(m-1)), B_m(z)=A_m(-z)
+  A_m(z)B_m(z)=1-z^(2m) for odd m
+
+replay from repository root:
+  shasum -a 256 -c cases/as_fonly_p3_balanced_cyclotomic_family_20260824/MANIFEST.sha256
+  python3 cases/as_fonly_p3_balanced_cyclotomic_family_20260824/replay.py
+
+scope:
+  Infinite family of finite-depth triangular regression controls only. No
+  full fixed-degree locus, compatible all-depth tower, characteristic-zero
+  lift, no-lift theorem, counterexample, or JC2 inference.

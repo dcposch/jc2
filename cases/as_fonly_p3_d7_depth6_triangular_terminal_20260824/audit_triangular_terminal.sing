@@ -1,0 +1,28 @@
+// Independent exact-CAS audit of the triangular F-only D7 point.
+ring r=0,(x,y),dp;
+poly P=x+2*x^3+441*x^5+108*x^7;
+poly Q=y-6*x^2*y+18*x^4*y-27*x^6*y;
+poly J=diff(P,x)*diff(Q,y)-diff(P,y)*diff(Q,x);
+poly expected=1+2187*x^4-12393*x^6+34992*x^8-45927*x^10-20412*x^12;
+if (J-expected!=0) { print("FAIL exact determinant"); exit(1); }
+if (deg(P)!=7 || deg(Q)!=7) { print("FAIL total degree"); exit(1); }
+poly Ptilde=x+2*x^3+441*x^5+1566*x^7;
+poly cleanExpected=1-729*x^12;
+poly cleanError=diff(Ptilde,x)*diff(Q,y)-cleanExpected;
+// Every coefficient of cleanError is divisible by 2187.
+poly cleanQuotient=cleanError/2187;
+if (cleanError-2187*cleanQuotient!=0)
+{ print("FAIL clean representative congruence"); exit(1); }
+poly Pxmod=1+6*x^2+18*x^4+27*x^6;
+if (Pxmod*diff(Q,y)-cleanExpected!=0)
+{ print("FAIL modular derivative product"); exit(1); }
+poly P3=subst(P,x,x); // Retain an explicit source object for printing.
+print("determinant_exact:");
+print(J);
+print("clean_lift_error_over_2187:");
+print(cleanQuotient);
+print("P:");
+print(P3);
+print("Q:");
+print(Q);
+print("PASS-SINGULAR-FONLY-P3-D7-N6-TRIANGULAR");

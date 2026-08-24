@@ -437,6 +437,40 @@ cube-core reduction. The package is frozen and under different-model hostile
 review; arbitrary `(6,9)` and JC2 remain open. These results trigger a new
 whole-portfolio ideation round before the quiet twelve-hour backstop.
 
+That review and the subsequent fail-closed composition are now complete.
+Grok independently confirmed the entire polynomial-cube trajectory closure;
+Claude/Fable then reread every leaf and hand-derived every load-bearing
+handoff in the cube/noncube partition and degree recursion. The registered
+freeze and replay separately pass on the coordinator's shell-enabled host.
+Consequently no characteristic-zero Keller pair has actual partial
+`y`-degrees `(6,9)` with `3|H`, and every characteristic-zero Keller pair with
+maximum actual `y`-degree at most eleven is a polynomial automorphism. This is
+an unbounded-`x` partial-degree theorem, not JC2. The exact maximum-twelve
+frontier consists of `(8,12)` and `(9,12)`. Source-honest Kummer preflight
+finds a smaller raw constant-W gate for `(8,12)` but a simpler branch tree for
+`(9,12)`; a matched first-high-row probe must decide their honest ordering.
+
+The map-only AS redesign also produced a different-model-confirmed triangular
+`D=7` point surviving modulo `3^6` and terminal modulo `3^7`. Hostile review
+then confirmed the balanced cyclotomic family giving arbitrarily deep finite-
+precision false positives; the displayed residue at odd parameter `m` remains
+pointwise terminal through every cap at most `4m`. This is not a full-locus or
+characteristic-zero theorem. Hostile review also confirmed the associated
+layer-`7/6` scheme: three reduced minimal components plus a load-bearing
+embedded primary component. A proposed 29-row deep-branch acceptance gate
+was caught before promotion: it correctly proved the bracket's basic Cartier
+coefficient zero but omitted the divided integer carry, which contributes the
+additional row `u5_3+v5_2`. Those bytes are quarantined and a source-honest
+30-row replacement is being recomputed. No promoted AS result is affected.
+
+In TD6, the common-centering tangent producer has full compatibility rank
+three on the three center directions and no affine correction at the frozen
+nonsolution; an independent 3,602-column reconstruction remains active. The
+dependency-complete `(c1,c3)` atlas is cheaper than `(c1,c2)` by 6,763 typed
+entries, and exact FLINT tower arithmetic is propagating its generic and
+exceptional strata. Reviews continue in the background and do not block
+these successors.
+
 ## 2026-08-23
 Foundational-floor day, then the reorg. Belyi identification of the residue-A
 genome verified (A4 passport; leverage inert). Canonical strategy correction:

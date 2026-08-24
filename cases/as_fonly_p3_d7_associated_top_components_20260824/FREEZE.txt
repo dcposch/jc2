@@ -1,0 +1,22 @@
+AS F-ONLY p=3 D=7 ASSOCIATED TOP-COMPONENT CHECKPOINT
+date: 2026-08-24
+status: PRODUCER EXACT; PYTHON ROW REPLAY + SINGULAR PRIMARY DECOMPOSITION PASS; HOSTILE REVIEW PENDING
+verdict: CARRY ROWS 12/11 GIVE 3 MINIMAL LAYER-76 COMPONENTS + 1 EMBEDDED PRIMARY COMPONENT
+report_sha256: e50297762088b17e3a01d98e4a76823ec6f33abe02df8b05f50486a3224c30a3
+manifest_sha256: e8e7e7169966848a58cdac9aac7412e5e5e2d2d4f56c521f0b4d7a3a570d6bf9
+top_generator_sha256: 64032b10b8ec0c9fbed4a9e3cd12d314d28b58264f6dcb929bec816d696af411
+layers76_generator_sha256: 2dd77cadc42509b3e2fff62a97642a769d783a8d02e46f1d9ab353602a231973
+row_replay_sha256: 38ab633076c804f6a60ccc24e8b338cfe303ea5c7c52f11fd44cdf97f646e986
+
+replay:
+  python3 replay_rows_and_incidence.py
+  M=7 DO_PRIMARY=1 python3 generate_top_gate.py | Singular -q
+  TOP=7 LOW=6 DO_PRIMARY=1 python3 generate_layers76_gate.py | Singular -q
+  shasum -a 256 -c MANIFEST.sha256
+
+scope:
+  Exact first-digit divergence rows in homogeneous degrees 6/5 and next-carry
+  rows in degrees 12/11 only.  Carry degrees 10..7, Cartier, accepted second
+  digit, full D7 locus, all-depth, characteristic-zero, and JC2 remain open.
+  Minimal components navigate the calculation; the original nonreduced ideal
+  and embedded primary component remain load-bearing.

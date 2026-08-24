@@ -2729,3 +2729,160 @@ with `xmodel/as-gauge-growth-p3-depth6-cartier-d7-point-review-grok-20260824.md`
   successor is the full depth-five locus intersected with all Cartier and
   depth-six support rows, or the direct fixed-map-degree tower with no gauge
   cap. No all-depth, lift, `A_infinity`, deck-descent, or JC2 result follows.
+
+## GCD3 `(6,9)` CUBE-TRAJECTORY CLOSURE (2026-08-24, DUAL-CONFIRMED BRANCH-EXCLUSION TIER)
+
+`xmodel/gcd3-69-cube-trajectory-kuranishi-20260824.md` (SHA-256
+`069f6280332b44d93dcad17801dc7136d4a79fb06ace101c2dce8a4e746b5e7b`)
+with `xmodel/gcd3-69-cube-trajectory-kuranishi-review-grok-20260824.md`
+(SHA-256
+`7bcf18d69344acc2277a0184ca1aeeb717ebad35c3aacf91421874b7e59f5cc9`):
+**CONFIRMED `POLYNOMIAL-CUBE TRAJECTORY EMPTY AFTER THE REVIEWED
+FABER--LAURENT LANDING`**.
+
+- COVERAGE: after `h=s^3`, `s in k[x]`, the reviewed landing gives
+  `r1'=...=r4'=0`, `6*r5'=j/s` and forces nonconstant rational `s` to one
+  repeated-root power. The closure treats constant and nonconstant `s`,
+  `d!=0` and `d=0`, every legal Faber constant, all rank-zero/crossing
+  strata, and both original polynomial boundary jets. It imports no
+  nontrivial-Kummer weight vanishing.
+- DECISIVE GEOMETRY: distinct first-load weights close the ordinary orbit
+  and boundary strata. The formerly dangerous mixed `rho3,rho4` fibre is a
+  smooth genus-one curve when `mu!=0`; when `mu=0`, its rational cusp has two
+  pole places, incompatible with the one-pole terminal forms. The remaining
+  zero-bracket, double-root, triple-point, and shifted Davenport--Stothers
+  strata are excluded by exact bracket, valuation, boundary-resultant, or
+  projective arguments.
+- SCOPE: this closes exactly the polynomial-cube branch after the frozen
+  landing. It does not alone establish the cube/noncube partition handoffs,
+  degree recursion, a maximum-twelve theorem, or JC2.
+
+## GCD3 `(6,9)` COVERAGE COMPOSITION AND MAXIMUM-ELEVEN THEOREM (2026-08-24, DIFFERENT-MODEL-CONFIRMED THEOREM TIER)
+
+`xmodel/gcd3-69-coverage-composition-20260824.md` (SHA-256
+`7eda0a469585247479d46c8f5f2ce95d2643ae8541f0d7f9c80e1c8537fffb0c`)
+with `xmodel/gcd3-69-coverage-composition-review-claude-20260824.md`
+(SHA-256
+`d9522acbb35c5097cb3d3c947be12c10868f109af4d30c9713870f5ec6e9a33f`):
+**CONFIRMED `NO (6,9),3|H / EVERY MAXIMUM ACTUAL y-DEGREE <=11
+KELLER PAIR IS AN AUTOMORPHISM`**.
+
+- `(6,9)` EXHAUSTION: after scalar extension, the primitive leading core is
+  either a noncube in `k(x)` or a polynomial cube. The noncube branch derives
+  `delta=0` by Kummer weight and lands exactly in the reviewed aligned
+  lower-Pfaffian exclusion. The cube branch retains every weight-unforced
+  constant and lands exactly in the reviewed Faber--Laurent/trajectory
+  exclusion. The dichotomy is disjoint and exhaustive, including constant
+  cores, repeated factors, and mixed cube factors. Thus no characteristic-
+  zero Keller pair has actual partial `y`-degrees `{6,9}` with `3|H`.
+- DEGREE THEOREM: source shear plus the repaired prime-gcd and independent
+  `2p` theorems close `gcd(H,d)<=2`; equal/divisible target reductions recurse
+  with strict measure decrease. Independent enumeration checks all 78
+  unordered and 144 ordered pairs through maximum eleven. Hence over every
+  characteristic-zero field, every Keller pair with
+  `max(deg_y(P),deg_y(Q))<=11` is a polynomial automorphism. Descent uses the
+  unique inverse/faithful flatness.
+- FRONTIER/PROCESS: at maximum twelve the first new primitive pairs are
+  exactly `(8,12)` and `(9,12)`; this is a checksum, not their exclusion.
+  Claude independently hand-derived every load-bearing identity and hand-
+  traced the frozen replay, but its adapter exposed no shell. The coordinator
+  separately ran the registered SHA-256 check and replay successfully on the
+  frozen bytes, including terminal payload
+  `d7e030685c84e7c7366524e4b28f8516a5bf9d5060c3ebdba3990ca2e243ecd4`.
+- SCOPE: this is an unbounded-`x` partial-`y` theorem. It is not a new
+  total-degree result, a maximum-twelve theorem, arbitrary-support JC2, or a
+  counterexample. A targeted web/primary-source sweep found no public
+  duplicate, but that is not a novelty or priority proof.
+
+## AS MAP-ONLY `p=3,D=7` TRIANGULAR TERMINAL POINT (2026-08-24, DUAL-CONFIRMED POINTWISE TIER)
+
+`xmodel/as-fonly-p3-d7-depth6-triangular-terminal-20260824.md` (SHA-256
+`5325890a505489570a6e02409d64e026560d2635ddf989b865039eeb6ecddccb`)
+with `xmodel/as-fonly-p3-d7-depth6-triangular-terminal-review-grok-20260824.md`
+(SHA-256
+`75ff0c8588c633fcf53e17104bf77cdc74fba30bc9c02aa776b23ad0baaa2318`):
+**CONFIRMED `ONE MAP-ONLY D7 RESIDUE SURVIVES MODULO 3^6 AND IS
+CAP-TERMINAL MODULO 3^7`**.
+
+- EXACT POINT:
+  `P=x+2*x^3+441*x^5+108*x^7` and
+  `Q=y-6*x^2*y+18*x^4*y-27*x^6*y` have determinant one modulo `729`.
+  The congruent clean lift with `x^7` coefficient `1566` has determinant
+  `1-729*x^12` modulo `2187`.
+- TERMINALITY: a next map digit at cap seven changes the residual only by a
+  divergence of degree at most six and therefore cannot cancel `x^12`.
+  The literal representative's quotient is `x^6-x^12` modulo three; the
+  `x^6` term is divergence-removable. The reviewer independently rebuilt the
+  integer determinant, exhaustive accepted-digit enumeration, clean lift,
+  and terminal degree bound.
+- SCOPE: this refutes emptiness of the map-only `D=7` system through depth
+  six and supplies a terminal positive control. It neither empties the full
+  next-depth locus nor supplies a compatible all-depth tower, polynomial
+  characteristic-zero lift, counterexample, or JC2 result.
+
+## AS MAP-ONLY BALANCED CYCLOTOMIC TERMINAL FAMILY (2026-08-24, DUAL-CONFIRMED INFINITE FINITE-DEPTH TIER)
+
+`xmodel/as-fonly-p3-balanced-cyclotomic-terminal-family-20260824.md`
+(SHA-256
+`8d6873550d06136f3a725160161500a844b43c9793a90c59798e5dc2b3c4c8e4`)
+with
+`xmodel/as-fonly-p3-balanced-cyclotomic-terminal-family-review-grok-20260824.md`
+(SHA-256
+`d4803d27735b815cfb0ef3c8120def1a935912ef9427acb0c9b05d00d3d4b1dd`):
+**CONFIRMED `FOR EVERY ODD m>=3, ONE D=2m+1 AS RESIDUE SURVIVES
+THROUGH DEPTH 2m AND IS SAME-CAP TERMINAL AT DEPTH 2m+1`**.
+
+- IDENTITY/INTEGRALITY: with
+  `A_m=(1+z)*(1+...+z^(m-1))` and `B_m=A_m(-z)`, oddness gives
+  `A_m*B_m=1-z^(2m)`. Setting `z=3*x^2`, taking `P_m' = A_m(z)` with zero
+  constant and `Q_m=y*B_m(z)` gives coefficients in `Z_(3)`, exact total
+  degree `D=2m+1`, special fibre `(x-x^3,y)`, and the exact identity
+  `det J(P_m,Q_m)=1-3^(2m)*x^(4m)` over `Q_3[x]`.
+- SURVIVAL/TERMINALITY: the map survives modulo `3^(2m)`. At the next digit
+  the residual is `-x^(4m)+U_x+V_y` modulo three. At the family cap,
+  `deg(U_x+V_y)<=2m`, so the displayed residue has no lift. The same degree
+  comparison gives the pointwise corollary that it remains terminal for
+  every cap `D'<=4m`; the first divergence cap that can see the monomial is
+  `4m+1`.
+- CONTROLS/SCOPE: `m=3` recovers the separately reviewed `D=7` point;
+  `m=5` gives a complete `D=11` residue through depth ten. Even `m` fails the
+  cyclotomic identity, with smallest failure `m=2`. This is an arbitrarily
+  deep compiler regression family of different finite degrees, not a
+  compatible tower at fixed degree, full-locus classification, uniform death
+  bound for other residues, characteristic-zero lift/no-lift, counterexample,
+  or JC2 inference.
+
+## AS MAP-ONLY `p=3,D=7` ASSOCIATED TOP COMPONENTS (2026-08-24, DUAL-CONFIRMED NONREDUCED-CHECKPOINT TIER)
+
+`xmodel/as-fonly-p3-d7-associated-top-components-20260824.md` (SHA-256
+`e50297762088b17e3a01d98e4a76823ec6f33abe02df8b05f50486a3224c30a3`)
+with
+`xmodel/as-fonly-p3-d7-associated-top-components-review-grok-20260824.md`
+(SHA-256
+`7593a9a822c07a3d5daf67b30c46028f0ba84b7978c038d7ec1bc6af62168f8a`):
+**CONFIRMED `THE FIRST-DIGIT CARRY ROWS OF DEGREES 12 AND 11 HAVE
+THREE REDUCED LAYER-7/6 COMPONENTS AND ONE LOAD-BEARING EMBEDDED PRIMARY
+COMPONENT`**.
+
+- SOURCE/ROWS: for `P=x-x^3+3U`, `Q=y+3V`, the exact integer identity is
+  `det J=1+3*(U_x+V_y-x^2)+9*K` with
+  `K=(U_x-x^2)*V_y-U_y*V_x`. The checkpoint includes homogeneous divergence
+  degrees six/five and carry degrees twelve/eleven. The fixed term
+  `-x^2*V_y` has degree at most eight and cannot enter those carry rows.
+- TOP LAYER: the 16-variable/20-row degree-seven ideal has dimension four,
+  exactly two dimension-four minimal primes, and two primary components. One
+  is a nonprime thickening; the original ideal is nonradical, with no embedded
+  prime at this one-layer stage.
+- LAYERS 7/6: attaching all degree-six coefficients and degree-eleven carry
+  gives 30 variables/38 rows, dimension ten, and three minimal primes of
+  dimensions `10,10,8`. Complete primary decomposition has a fourth,
+  dimension-six embedded component supported on zero degree-seven layer plus
+  the eight derivative-visible degree-six zeros. The six Frobenius degree-six
+  coefficients remain free on the two dimension-ten branches. The triangular
+  control projects to the origin on every associated-prime support.
+- SCOPE/NEXT: the nonreduced structure is load-bearing for accepted-digit and
+  Fitting recursion and must not be replaced by its radical. Carry degrees
+  ten through seven, the divided integer carry/Cartier row, accepted second
+  digits, the full `D=7` locus, all-depth lifting, characteristic zero, and
+  JC2 remain open. The smallest honest successor attaches degree ten
+  componentwise while preserving all primary structure.

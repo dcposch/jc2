@@ -1,0 +1,29 @@
+AS F-ONLY p=3 D=7 DEPTH-6 TRIANGULAR SURVIVOR / DEPTH-7 TERMINAL POINT
+date: 2026-08-24
+status: PRODUCER EXACT; PYTHON + INDEPENDENT SINGULAR PASS; HOSTILE REVIEW PENDING
+verdict: ONE MAP-ONLY D7 POINT EXISTS MOD 729 AND HAS NO D7 LIFT MOD 2187
+report_sha256: 5325890a505489570a6e02409d64e026560d2635ddf989b865039eeb6ecddccb
+manifest_sha256: c722e0a6fef62a31d431b2b331f886bc4ab05726a75a9b5694fcc166bc99afce
+compiler_sha256: dcd2ea308ff31813cb55a88904ddbd375471a7cb92f6d7a2ffb370f1fee5acaa
+direct_replay_sha256: 17287308e709adc0579fdaf6853e947b4ec3de136433d5bcbbbc71da0aee4fdc
+independent_singular_sha256: 86398ebcf209d1ba588c0e86ec280db7ee4ac7d7013f0a6bed859dfdc8b4a5c5
+
+map modulo 729:
+  P=x+2*x^3+441*x^5+108*x^7
+  Q=y-6*x^2*y+18*x^4*y-27*x^6*y
+
+clean representative modulo 2187:
+  Ptilde=x+2*x^3+441*x^5+1566*x^7
+  det J(Ptilde,Q)=1-729*x^12 mod 2187
+
+replay:
+  python3 compile_triangular_first_survivor.py
+  python3 replay_triangular_terminal.py
+  python3 replay_accepted_digit_trace.py
+  Singular -q audit_triangular_terminal.sing
+  shasum -a 256 -c MANIFEST.sha256
+
+scope:
+  Exact pointwise depth-6 survival and depth-7 terminality at map-only total
+  degree cap seven.  No full D7-locus emptiness, gauge-cap, all-depth,
+  characteristic-zero, no-lift, counterexample, or JC2 inference.
