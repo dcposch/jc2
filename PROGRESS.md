@@ -471,6 +471,20 @@ entries, and exact FLINT tower arithmetic is propagating its generic and
 exceptional strata. Reviews continue in the background and do not block
 these successors.
 
+The shared maximum-twelve Faber compiler is now different-model confirmed.
+Over any characteristic-zero differential field, every monic depressed
+high-row solution has a unique constant-coefficient Faber expansion, and the
+entire remaining Jacobian system is
+`r1'=...=r_(m-2)'=0`, `m*r_(m-1)'=j/u`.  Independent reconstruction verifies
+all eleven high rows in both `(8,12)` and `(9,12)`, the legal target quotient,
+and exact route widths `7,10,16` versus `9,17`.  Their aggregate cost selects
+the `(9,12)` lower fibre for speed; this does not classify a lower component,
+discharge either Taylor-boundary family, empty a maximum-twelve cell, or prove
+JC2.  A significant-connection ideation round opened at `18:20Z` after the
+campaign discovered Pinchuk's 2021 quasi-polynomial reduction and its exact
+generalized Davenport--Zannier connection to the new `(9,12)` spectral norm.
+The source and connection are under bounded hostile audit, not promoted.
+
 ## 2026-08-23
 Foundational-floor day, then the reorg. Belyi identification of the residue-A
 genome verified (A4 passport; leverage inert). Canonical strategy correction:

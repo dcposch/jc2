@@ -41,7 +41,7 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
-## Current event synthesis overlay (reviewed through 2026-08-24 17:41Z)
+## Current event synthesis overlay (reviewed through 2026-08-24 18:26Z)
 
 The last completed all-avenue decision record is
 [`xmodel/ideation-20260824T1633Z-synthesis.md`](xmodel/ideation-20260824T1633Z-synthesis.md).
@@ -60,8 +60,8 @@ advanced to maximum twelve.  No result below proves or disproves JC2.
   through maximum eleven.  This is an unbounded-`x` partial-degree theorem,
   not a new total-degree theorem.  Maximum twelve has exactly two new
   primitive checksums, `(8,12)` and `(9,12)`; neither is yet excluded.
-- **The maximum-twelve successor is source-honest branch typing; its cheaper
-  cell is not yet honestly ordered.**  For primitive degrees `(dr,ds)`, on
+- **The maximum-twelve successor now has a confirmed universal high-row Faber
+  landing; its lower fibres remain open.**  For primitive degrees `(dr,ds)`, on
   `u^d=h` the first residual is `d*(s*A-r*B)'=0` and
   `delta=s*A-r*B`.  Every nontrivial Kummer class of order dividing `d`
   forces `delta=0`; the polynomial `d`th-power branch remains weight-
@@ -69,8 +69,16 @@ advanced to maximum twelve.  No result below proves or disproves JC2.
   quadratic intermediate branch, while `(9,12)` has orders `3,1`.  The raw
   constant-W tangent gate is smaller for `(8,12)` (18 variables/17 rows,
   rank 11) than for `(9,12)` (19/18, rank 11), but the full Kummer branch tree
-  is simpler for `(9,12)`.  Exact preflight is frozen pending review; a
-  matched first-high-row probe must decide the allocation.
+  is simpler for `(9,12)`.  Different-model review independently confirms the
+  shared differential-field theorem: every high-row solution has a unique
+  constant-coefficient Faber form, with remaining equations
+  `r1'=...=r_(m-2)'=0`, `m*r_(m-1)'=j/u`.  After character-compatible target
+  quotient the exact high-row widths are `7,10,16` on the `(8,12)` orders
+  `4,2,1` and `9,17` on the `(9,12)` orders `3,1`; local two-row controls give
+  `5,8,14` and `7,15`.  Aggregate mandatory-route cost therefore selects
+  `(9,12)` for speed, while raw width and the widest leaf can still favor
+  `(8,12)`.  This is an allocation rule, not a simpler-cell theorem; no lower
+  fibre or Taylor-boundary family is classified.
 - **Map-only AS has a confirmed deep terminal point and a confirmed infinite
   finite-depth control, but no full-locus obstruction.**  The exact
   `D=7` triangular map survives modulo `3^6` and is cap-terminal at the next

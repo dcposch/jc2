@@ -2886,3 +2886,34 @@ COMPONENT`**.
   digits, the full `D=7` locus, all-depth lifting, characteristic zero, and
   JC2 remain open. The smallest honest successor attaches degree ten
   componentwise while preserving all primary structure.
+
+## MAXIMUM-12 SHARED FABER HIGH-ROW LANDING (2026-08-24, DIFFERENT-MODEL-CONFIRMED EXACT TIER)
+
+`xmodel/max12-partial-y-shared-faber-probe-20260824.md` (SHA-256
+`d303bf76853a286c9fedf6dedcce430b4575f2c0040c050d57b954e599dc0036`)
+with
+`xmodel/max12-partial-y-shared-faber-probe-review-grok-20260824.md`
+(SHA-256
+`e2ddc5b50506e4ba7a933265c640f2abd77ab51a077c3672b7ef9d90f77aa47c`):
+**CONFIRMED `COMPLETE UNIVERSAL HIGH-ROW FABER INTEGRATION / EXACT
+MAXIMUM-12 ROUTE WIDTHS / LOWER FIBRES OPEN`**.
+
+- UNIVERSAL LANDING: for monic depressed `f,g` of degrees `(m,n)` over a
+  characteristic-zero differential field, put `w=f^(1/m)` and
+  `F_j=[w^j]_+`.  If `deg_z(f_x*g_z-f_z*g_x)<=m-2`, unitriangularity and the
+  fixed-`w` identity force the unique expansion `g=sum h_j F_j` to have every
+  `h_j` differential-constant.  With
+  `H(w)-g(z(w))=sum r_l w^-l`, the remaining system is exactly
+  `r1'=...=r_(m-2)'=0`, `m*r_(m-1)'=j/u`; the terminal sign is positive and
+  the triangular determinant is `m^(m-1)`.
+- EXACT CELLS: an independent Newton/product engine reconstructed all eleven
+  high rows in `(8,12)` and `(9,12)`, both first integrated rows, every
+  per-branch `r1,r2` digest, and the three legal target gauges.  High-row
+  quotient widths are `7,10,16` on Kummer orders `4,2,1` and `9,17` on orders
+  `3,1`; two-row local controls are `5,8,14` and `7,15`.
+- ALLOCATION/SCOPE: aggregate mandatory-route widths `33` versus `26` (or
+  local controls `27` versus `22`) license allocating `(9,12)` next.  The
+  widest single branch and raw gate can favor `(8,12)`, so no global
+  simpler-cell theorem is claimed.  Neither lower invariant fibre nor either
+  Taylor-boundary family is classified; neither frontier is empty, and no
+  maximum-twelve, counterexample, or JC2 conclusion follows.

@@ -4177,3 +4177,38 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   synthesis close. Box01's protected legacy core remains untouched,
   boxes02/03 remain stopped, and no current exact gate licenses AWS expansion.
   No proof or counterexample to JC2 has been found.
+
+## 2026-08-24 18:28Z LIVE STATE
+- BASIS/LIFECYCLE: clean bank `7832fb73ac887041968f9cec2dc6cba7aa0d0bcf`
+  equals `origin/master`; it adds the fail-closed exact-integer-quotient rule
+  for every `p`-adic successor digit.  Nested `jc2-lean` remains clean at
+  `c40f83378b579a46d8a2c0172f15f502fe38ed79`.  Frozen active artifacts are
+  immutable; active prompt/log/run files remain outside the bank.
+- MAX-12 PROMOTION/ACTIVE: Grok different-model review confirms the universal
+  Faber high-row theorem and both exact maximum-12 specializations.  Quotient
+  widths are `(8,12):7,10,16` and `(9,12):9,17`; aggregate route cost selects
+  `(9,12)` without claiming it is globally simpler.  Exact approximate-cubic
+  Kuranishi and spectral-norm work proceeds on its order-three lower fibre;
+  no lower component, Taylor boundary, frontier emptiness, or maximum-twelve
+  theorem is promoted.  The separate max-12 preflight review remains active.
+- AS ACTIVE/REVIEW: the corrected divided-carry replacement is frozen at
+  report SHA
+  `cbcd8851200f2ab15c29a7b9414c1d720c7aee0aa852b2cd522dcd7d699ae194`
+  and under immediate hostile review.  Its owner continues the degree-ten
+  affine/Fitting successor from the original nonreduced ideal.  The old
+  29-row package stays quarantined and no promoted AS result depends on it.
+- TD6 ACTIVE/REVIEW: the nonlinear `c1` base line is provisionally empty on
+  its generic pivot open by nine nonzero compatibilities with numerator gcd
+  one.  This is not whole-line coverage: nonconstant pivot divisors and the
+  `c3` dual thickening remain active.  The independent 3,602-column tangent
+  reconstruction continues.
+- OUTER LOOP/EXTERNAL: significant-connection full round `20260824T1820Z` is
+  open with a sealed all-46 packet, two external ideators, root, and three
+  owner submissions; two owner reports will be marked degraded after narrow
+  accidental snippet exposure and will not count as blind votes.  The trigger
+  is a newly discovered 2021 Pinchuk quasi-polynomial reduction plus its exact
+  generalized Davenport--Zannier connection to the maximum-12 spectral norm.
+  A separate hostile primary-source audit is active.  This is new to the
+  campaign, not a new publication, and no source claim is promoted.  Broad
+  sweep #9 remains due by `21:25Z`; AWS remains stopped.  No proof or
+  counterexample to JC2 has been found.

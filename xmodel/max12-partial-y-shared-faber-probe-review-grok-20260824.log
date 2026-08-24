@@ -1,0 +1,18 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start as an independent different-model reviewer: verify the freeze hashes, rerun the probe as a regression check, then audit the Faber claims against the frozen files.The review skill is a GitHub/PR workflow; this is a frozen mathematical audit. Next I’ll pin the commit, check freeze hashes, and read every file the freeze names.HEAD is not the frozen basis; I’ll read the freeze, the probe, a prior Grok review for format, and confirm the named SHA.I’ll load a prior Grok review for format, the probe source, and the pinned preflight/history files.I’ll read a prior Grok review for structure, then the pinned preflight and history files, and start hash verification plus the probe rerun.I’ll verify hashes and rerun the probe, then build an independent exact checker in `/tmp` and pull the remaining pinned inputs.Hashes match. Next I’ll rerun the probe and start an independent exact implementation in `/tmp`.SymPy isn’t in the default interpreter. I’ll put an independent stdlib checker in `/tmp` and try `uv` only as a second engine.I’ll write two independent checkers in `/tmp`: a SymPy identity audit for the load-bearing signs, and a separate exact reconstruction of both cells.Newton inverse truncated the high `w` powers, and SymPy rejected Laurent `1/t`. I’ll fix both checkers and rerun.Cell reconstruction passed. I’ll wait on the SymPy identity run and add a faster stdlib series check for the differential identity.The identity failures were at truncated negative `w` orders. I’ll compare both sides as series in `z`, which is where `D` is actually a polynomial.Identities and both cells check out. I’ll write the review with per-claim verdicts, hashes, and quarantine language.**Overall verdict: CONFIRMED.** Independent different-model review is in `xmodel/max12-partial-y-shared-faber-probe-review-grok-20260824.md`.
+
+Freeze hashes matched, including payload `abbd72dc33aecd86d648696c138bcf5c919db6781a30447223fd184492d66a2d`. The registered replay passed as regression only. Claims 1–8 were re-derived with separate exact algebra (Newton/`w`-product Faber, not the producer binomial loop).
+
+What held:
+
+- Unique triangular Faber basis `F_j=[w^j]_+` in `K((z^{-1}))`, characteristic zero.
+- Fixed-`w` identity with the **plus** tail sign; opposite sign fails. `deg_z D<=m-2` forces every `h_j'` to a scalar of the licensed Kummer constant field.
+- `A_ell` leading terms, vanishing for `ell>=m`, `A_{m-1}=m`, determinant `m^{m-1}`, and the positive system `m r_{m-1}'=j/u`.
+- Both first two `(8,12)` and `(9,12)` rows, all eleven high rows, binomial cutoff, supports `242`/`242`.
+- All ten `r_1,r_2` digests; `n+1` inverse terms are necessary for `r_2` only. Rank two is a local control.
+- `P->P+q` for `n<2m`, slices `(8,0,4)` and `(9,0,3)`, widths `7,10,16` and `9,17`.
+- Aggregate `33` vs `26` may allocate `(9,12)` next; that is not an overall simpler-cell theorem.
+
+**Not promoted:** lower-fibre classification, rational trajectory, emptiness of either frontier, maximum-twelve automorphy, a counterexample, or JC2. Both Taylor-boundary families remain charged.
+
+No producer, case, prompt, log, or run file was edited. Scratch stayed in `/tmp`.
