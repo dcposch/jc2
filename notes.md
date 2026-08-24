@@ -3612,3 +3612,93 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   126.4M cumulative. Provider accounting differs and is cache-dominated, so
   these are usage counters, not cross-model productivity measures. AWS active
   compute is one core on box01; Box02/Box03 compute utilization is zero.
+
+## 2026-08-24 07:13Z EVENT ROUND `20260824T0453Z-dd11599` CLOSED; FOUR GATES + REVIEWS BANKED
+- ROUND INTEGRITY: packet cutoff `2026-08-24T04:53:35Z`, synthesis close
+  `2026-08-24T06:29:30Z`, clean basis
+  `dd11599b07eb05591b5c006791005eef19457d8e`. Five blind all-46 reports
+  landed (`/root`, Atlas, Zero-base, Falsifier, Grok 4.6). The Claude/Fable
+  lane emitted no report and was cancelled after one hour, so the round is
+  formally `DEGRADED` rather than blocked. Deduplication, adversarial
+  cross-pollination, feasibility, and coordinator synthesis all landed;
+  synthesis SHA-256
+  `76d9b7685771f65138fcb3c3dba1cfdd1ab104a9a5b21a7e3262c971f96ff790`.
+  The packet printed one AUDIT hash without a zero; the separate frozen
+  packet erratum supplies the correct hash. Mathematical input and all five
+  submitted disposition vectors were unaffected.
+- EXACT COFRAME: producer report SHA-256
+  `8aad8b60777fb7d52fb037df961f1204f255ee36f1775a3f8c772d1739691571`;
+  targeted Grok review SHA-256
+  `f3ad02d9e104692b5e066a4926c10f92c369445a6dd47eea4e6dba22a226caea`,
+  verdict `CONFIRMED`. The characteristic-zero closed-row/non-`E_2`
+  certificate is valid but classical; Wright 1978 already supplies the
+  converse for a full Jacobian in `GE_2`. The distinct scoped result is
+  negative. With
+  `C_B=[[1+2xy,x^2],[-4y^2,1-2xy]]`, every determinant-one completion of the
+  fixed Broughton row is `L(h)C_B`, and closure is
+  `(1+2xy)h_y-x^2h_x=6y`. The frozen three-term tangent has ranks 3/4 and an
+  explicit unit certificate. The global weight chain forces
+  `c_n=(-1)^n(n+3)` and cannot terminate; the rational solution records the
+  pole/infinite-tail control. No full-double-orbit, Keller-pair, collision, or
+  JC2 result. Citation erratum: Cohn is Prop. 7.3/end of section 7, not section
+  8; arXiv:2412.03688 is the retrieved 2024 v1; Wright's original body was
+  inaccessible, so Theorem 6/page 250 is frozen from primary-research
+  restatements. Shpilrain--Yu Prop. 2.4's arbitrary-row “furthermore” is false
+  as printed (`L(y)` is the exact control) and is not imported.
+- FINITE NORMALIZATION: producer SHA-256
+  `d5027984be4ae4dbe4d0b5f95161d6d57d71ed9b3c086dd6fce2f03190e6c1bc`;
+  Grok review SHA-256
+  `ab540f10a2431fd2a59c88cea983cebbd8883e5777e74d7f0a415eff0b7fc952`,
+  verdict `CONFIRMED`. Rank two gives
+  `R=A+Az=A[z]/(z^2-h)`; etaleness on `B=C[x,y]` makes trace-zero `z` a
+  polynomial unit and hence an impossible scalar. The equivalent boundary
+  relation is `div_X(q_i)=2E_i`. This is a clean self-contained rederivation
+  of the known quadratic/Galois case, not a new theorem. Focused primary
+  intake also froze Orevkov Theorem 1.1: generic mapping/function-field
+  degrees two and three are impossible for complex plane Keller maps. Do not
+  confuse this with total polynomial degree three; do not launch rank three.
+- WEIGHTED D SOURCE: producer SHA-256
+  `04047377c778ababf07e847f5a72d39787dd452e284bc01d83538b5131f7d08a`;
+  targeted Grok review SHA-256
+  `266e30b1c12f7cbc9a60a86ad1b450d5ba23d9db27f307a22be04f01c99da07e`,
+  verdict `CONFIRMED`. All 25 frozen producer hashes match and the replay core
+  is `95eceeb60465bc21948ab39263ffe91dfd269e8c04a993946f689b93842b0b4a`.
+  The level-42/84 `(C,R)` and chain-rule formulae are exact, but the promoted
+  perimeter has no named full-polynomial source point or typed tangent maps
+  through `alpha_2,beta_2`. Verdict is source-scoped
+  `NO-TYPED-SOURCE/NO-QUOTIENT`: no quotient test is licensed. No
+  `TWO-DRIVER`, Hankel, recurrence, band 28, deeper D, integral D43, or
+  characteristic-zero inference.
+- K3 LOCAL PREFLIGHT: report SHA-256
+  `579bac61491fa4d33a2bc0d454be83f7207fd44595e88bc6240190f5f022416e`.
+  The exact normalized degree-at-most-three collision scheme has 16 variables
+  and 15 Jacobian equations. The mod-3 seed and mod-9 lift pass; tangent rank
+  is 6, kernel dimension 10; nine rows have zero linear part; the divided first
+  obstruction is killed by `B=x^2y`. Both preregistered Stage-B thresholds
+  fail (`10>8`, `9>8`), so the honest stop is `COMPILER-READY/HEAVY`, not a
+  verticality certificate. Coordinator follow-up added fail-closed
+  `replay_expected.py`, SHA-256
+  `7a3a1252e0d1e8ef8de9b3065fea3063e0df131dabcfa565c0240504f2d43001`,
+  which pins stdout SHA and compares every JSON field exactly without changing
+  any frozen producer hash.
+- POST-GATE DELTA TRIAGE: do not deepen the four stopped representations.
+  A single-lane all-46 delta pass nominates avenue 33
+  `ACTION-RESIDUE-INDEPENDENCE` as the next bounded root: freeze
+  `P dQ-x dy=dS_F`, one minimal `(2,3)` infinity jet, tame controls, and one
+  provenanced client; test only the first possible `dt/t` class modulo the
+  same-order Jacobian/no-log/PIN ideal; stop on control failure, costume, or
+  duplicate. Avenue 10 `HC4-QUINTIC-MODULE` is the orthogonal reserve, gated
+  first by primary-source replay of the HC4=>JC2 and quartic inputs. These are
+  queue recommendations, not launches; Wright/Orevkov priority changes and
+  four stopped gates justify an immediate follow-on full-spectrum
+  adjudication rather than silently elevating one strategist's vote.
+- OPERATIONS/VPN: both final Grok lanes completed with no retry, DNS, TLS, or
+  transport error. Direct first-byte checks to xAI/OpenAI were about 0.39s;
+  both GitHub remotes answered in about 1.8s through the VPN. The Fable failure
+  instead reports auth-source precedence and a CLI `Execution error`; its
+  adapter hash and cancelled prompt/log/run are preserved, and the adapter is
+  quarantined non-executable pending a successful smoke. Current all-time
+  counters: Claude 47,374 messages / 10,925.7M total; Codex 292 rollouts /
+  2,317.2M total; Grok 80 sessions / 136.2M cumulative. box01 retains only the
+  legacy checkpointed `build_tails43.py` process (`other_campaign_py=1`);
+  Box02 and Box03 remain stopped. No proof or counterexample was found.

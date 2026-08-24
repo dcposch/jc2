@@ -1,0 +1,25 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll independently attack the exact-coframe claim as a hostile reviewer: first the specified synthesis, root, adversary, and feasibility sections, then the literature and algebraic bridges.Next I’ll pull the exact-coframe sections plus the audit and avenue constraints that could clash with this bridge.I’ll read the rest of the feasibility write-up and prior review templates so the attack stays in campaign format.I’ll recompute the algebraic bridges, then check Cohn’s theorem and Jacobian-in-`E_2` claims against the primary literature.Hashes match the frozen packet. Next I’ll pull Cohn’s original statement and the 2024 decomposition paper, then run the curl calculations.Wright 1978 is the Jacobian-link I needed. I’ll pull that paper and Cohn’s original matrix next.Wright’s 1978 converse is prior art. Next I’ll recompute the curls and elementary actions, then lock the family and degree cap.I have the recomputed bridges, Cohn’s primary statement, and the orbit calculations. Next I’ll write the background review as a single file.Background review is in `xmodel/exact-coframe-background-review-grok-20260824.md`. No other campaign files were edited. Nothing is promoted.
+
+**1. Bridge: CONFIRMED** (one-way only).  
+Polynomial Poincaré in characteristic zero recovers `P,Q` from closed rows. Jung–van der Kulk plus the chain rule, with constant `GL_2` factored as `diag(δ,1)U` and checked conjugation `e_{12}(r)↦e_{12}(r/δ)`, `e_{21}(r)↦e_{21}(δ r)`, puts every det-1 plane automorphism Jacobian in `E_2`. Contrapositively, a closed-row matrix outside `E_2` integrates to a Keller nonautomorphism. `M ∈ E_2` is not part of this implication.
+
+**2. Cohn witness lineage: CONFIRMED** for the standard matrix, **GAP** off its double orbit.  
+Cohn 1966 Prop. 7.3 (Publ. Math. IHÉS 30, pp. 25–26) is the primary nonmembership proof for
+
+```text
+C = [[1+xy, x^2], [-y^2, 1-xy]],   det = 1.
+```
+
+Rows are not closed: `a_y-b_x = -x`, `c_y-d_x = -y` (feasibility’s “`x` and `-y`” is a sign slip). Left/right elementary multiplication preserves nonmembership because `E_2` is a subgroup, with no normality required. `SL_2/E_2` is not a group. Additive “degree-two Mennicke corrections” do not inherit the witness.
+
+**3. Bounded family: amber, negative-control only.**  
+Smallest justified cap: `e_{12}(p)e_{21}(q)\,C\,e_{12}(r)e_{21}(s)` with `deg ≤ 2` (24 coefficients). Length-1 and degree `≤ 1` linearized maps miss `(-x,-y)` (unit ideals / inconsistent). Degree `≤ 2` linearized hits, with a 6-dimensional kernel; the second-order obstruction on that kernel is the unit ideal. Affine Aut-substitution of `C` only produces singular `θ`. Integrated degree at this cap is `≲ 7`, far below Moh 100 / GGV 108 except `(72,108)`, so a survivor is a pipeline bug or a Moh/GGV contradiction, not a legal counterexample.
+
+**4. Prior-art / priority conflict: YES.**  
+The one-way lemma is classical (Jung–van der Kulk + chain rule). Wright 1978 is the weak Jacobian theorem: Jacobian in `GE_2` implies automorphism (quoted from Drensky–Yu, Trans. AMS 353 (2001) 521; primary JPAA PDF was blocked). If that converse holds, JC2 is equivalent to “every closed-row matrix in `SL_2` lies in `E_2`,” and the synthesis claim that the route is new is false for the bridge. Ivarsson–Kutzschebauch 2012 already cite Cohn’s matrix and Wright for the Jacobian problem. The Cohn-orbit curl experiment itself was not found in print. Wright’s converse remains a **GAP** until the 1978 text is frozen.
+
+**5. Negative controls and stops.**  
+Controls: `C` itself; shears/affine; constant double orbit (unit ideal); length-1 deg `≤ 3`; affine Aut-substitution; 2024 type-(a) with `ψ=0` only (elementary); one-variable specialization; Wang deg `≤ 2`; Moh/GGV degree ceiling; Shaska graded maps; dim `≥ 3` via Suslin + the 2026 three-dimensional counterexample (converse fails off the plane). Stop on survivor, unit ideal of the licensed family, support expansion, invalid Cohn lineage, quotient language, or generic sparse search.
+
+Atomic-write SHA-256: `525c2d2976f3125c9c7b9b35afd1c54c6412c23fa12a9de4df02b57b301d2a5a`. On-disk hash after the self-record line: `1fa8b5cc89d35163ad0aa43e1eb0a2fc3f7f1f6a28cbcf2085af45a0dca2e553`.

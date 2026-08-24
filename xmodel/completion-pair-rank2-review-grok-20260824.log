@@ -1,0 +1,12 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll independently review the degree-two Keller claim from the specified notes, recompute each algebraic step, and write only the review file. First I'm loading the gate note, the cited synthesis sections, and the relevant AUDIT corrections.The gate note is loaded. Next I’ll extract synthesis §§3.3 and 5 and the AUDIT trust-boundary corrections that affect this claim.The perimeter is in hand; next I’ll pull the AUDIT corrections, a previous review’s format, and primary sources on the degree-two case.I have recomputed the algebra and checked the primary sources. Next I’ll write the review file with per-subclaim verdicts, then record its SHA-256.**Headline: `CONFIRMED`.** No characteristic-zero plane polynomial Keller map has function-field degree two.
+
+The independent recalculation is in `xmodel/completion-pair-rank2-review-grok-20260824.md`. Every listed subclaim is **`CONFIRMED`**. No step is **`REFUTED`** or **`GAP`**. This review does not promote the result and does not launch descendants.
+
+The argument is the trace-zero splitting of a rank-two finite free algebra `R` over `A=C[P,Q]`, giving `R ≅ A[z]/(z^2-h)` with `h` squarefree, Kähler module `Omega_{R/A} ≅ (R/(2z)) dz`, and base change along the Zariski Main open immersion `Spec C[x,y] -> Spec R`. Keller étaleness forces `z` to be a unit of `C[x,y]`, hence a scalar, while `Tr(z)=2z=0` forces `z=0`. The same obstruction is the principal boundary relation `div_X(q_i)=2E_i`.
+
+Hostile checks that did not break a step: miracle flatness at primes of `R` (not at the semi-local `R_p`); `Tr(1)=2` and scalar trace `Tr(c)=2c`; unused non-Gorenstein duality (the rank-two ring is a hypersurface anyway); a purely codimension-two complement (killed by the same unit argument); a ramified fibre sharing a target with an unramified source sheet (impossible: the fibre is `Spec k[z]/(z^2)`).
+
+The theorem is **known**. A quadratic extension is Galois, and the Galois Jacobian theorem is Campbell (1973), Razar (1979), Wright (1981), and Bass–Connell–Wright Theorem 2.1(g)⇒(a). Orevkov records mapping degree two as already well-known. Wang’s theorem is a different statement (polynomial total degree `≤ 2`). Priority is not part of correctness; the producer writeup is a valid elementary proof of the known fact.
+
+Complete-file SHA-256: `ab540f10a2431fd2a59c88cea983cebbd8883e5777e74d7f0a415eff0b7fc952`.

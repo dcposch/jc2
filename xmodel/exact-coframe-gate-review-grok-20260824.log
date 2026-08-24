@@ -1,0 +1,17 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll work as the independent reviewer at the frozen basis and start by reading the charge documents, then independently rerun and attack the listed claims.The charge is a mathematical attack, not a code-review workflow. Next I’ll lock the git basis, hash the frozen artifacts, rerun the registered replay, and independently recompute the eight claims.Basis and producer hashes match; the registered replay reproduced the frozen output. Next I’ll independently recompute the identities and pull the primary sources.Shpilrain–Yu Prop. 2.4 is the printed strengthening, and Park’s leading-monomial test is in their Prop. 2.5. I’ll independently recompute the identities and pull Cohn next.All eight claims survived independent exact recomputation and the primary-source checks. I’ll write the single review file now.Overall **CONFIRMED**. Smallest failing identity: none.
+
+The independent review is in `xmodel/exact-coframe-gate-review-grok-20260824.md` (SHA-256 `f3ad02d9e104692b5e066a4926c10f92c369445a6dd47eea4e6dba22a226caea`). No other file was written. Git HEAD is the charged basis `dd11599b07eb05591b5c006791005eef19457d8e`.
+
+All eight subclaims are **CONFIRMED**:
+
+1. The one-way closed-row + det-1 + literal non-`E_2` bridge holds (Poincaré, Jung–van der Kulk, explicit constant-`GL_2` normalisation; no normality of `E_2` in `SL_2`).
+2. Cohn 1966 Prop. 7.3 and Park 1995 Thm. 5.2.1 (printed pp. 52–53) certify `C ∉ E_2`; `y ↦ 2y` is the unique scaling that closes the first row and transports nonmembership.
+3. Every det-1 completion of the fixed first row is `M(h)=L(h)C_B`.
+4. Second-row closedness is exactly `δh=6y`.
+5. On `H_2`, rank 3 vs augmented rank 4; the displayed unit certificate evaluates to 1.
+6. The weight recurrence is `c_n=(-1)^n(n+3)` with uncancelled terminal term for every finite `N`; the rational control satisfies `δh_rat=6y` and does not terminate.
+7. Scope is one-left-shear / fixed Broughton row, not the double orbit and not JC2.
+8. Wright 1978 is prior art for the full Jacobian dichotomy; Shpilrain–Yu Prop. 2.4’s printed arbitrary-second-row strengthening is false, counterexample `L(y)`.
+
+The registered replay was byte-identical to the frozen `replay_exact.txt`. Producer case-file hashes match. Promotion: none. Non-blocking citation nits (Cohn is §7 not §8; Wright 1978 body unread; arXiv:2412.03688 currently v1 only) do not touch an identity.

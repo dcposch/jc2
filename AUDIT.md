@@ -1680,3 +1680,100 @@ xmodel/review-dstate-grok.md (different-model hostile review:
   preserved because several manifests pin it. This confirmed entry supersedes
   that header for live state: include `H_29` at start 36, giving 30 outputs and
   start sum 276; the legacy tool's 29-output diagnostic remains historical.
+
+## EXACT-COFRAME PRIORITY + FIXED BROUGHTON/COHN NO-GO (2026-08-24, DUAL-CONFIRMED)
+`xmodel/exact-coframe-gate-20260824.md` and
+`cases/exact_coframe_gate_20260824/` (exact producer/replay), with
+`xmodel/exact-coframe-gate-review-grok-20260824.md` (different-model hostile
+review: **CONFIRMED**) and the citation-preserving
+`xmodel/exact-coframe-gate-20260824-erratum.md`.
+- CLASSICAL ONE-WAY CERTIFICATE: if both rows of
+  `M in SL_2(C[x,y])` are closed, polynomial integration gives
+  `M=J(P,Q)`. Jung--van der Kulk plus the chain rule puts the determinant-one
+  Jacobian of every plane automorphism in `E_2(C[x,y])`. Literal
+  `M notin E_2` therefore gives a characteristic-zero plane Keller
+  nonautomorphism. This uses no quotient `SL_2/E_2` and no normality claim.
+- PRIORITY CORRECTION: the bridge/reformulation is not campaign-new. Wright's
+  1978 weak Jacobian theorem supplies the converse for a **full** Jacobian in
+  `GE_2`; its exact Theorem 6/page-250 wording is frozen from primary-research
+  restatements because the original Elsevier body was inaccessible. The
+  canonical DOI is `10.1016/0022-4049(87)90004-1` despite the 1978 year.
+- COHN LINEAGE: the standard Cohn matrix is non-elementary by Cohn Proposition
+  7.3 and Park's leading-row certificate. Entry substitution `y -> 2y`
+  preserves nonmembership and gives
+  `C_B=[[1+2xy,x^2],[-4y^2,1-2xy]]`; its first row is
+  `d(x+x^2y)`. The frozen report's reference to Cohn section 8 is corrected to
+  the end of section 7. The retrieved arXiv:2412.03688 artifact is v1,
+  2024-12-04; an unsupported 2026 manuscript date is withdrawn.
+- SCOPED NEW NEGATIVE: every determinant-one polynomial completion of the
+  fixed first row is uniquely `L(h)C_B`. Its second row is closed exactly when
+  `(1+2xy)h_y-x^2h_x=6y`. On the preregistered three-term support the exact
+  linear map has rank 3 and augmented rank 4, with an explicit unit
+  certificate. Globally, the weight recurrence forces
+  `c_n=(-1)^n(n+3)` and an uncancelled terminal term for every finite
+  polynomial. The rational/formal control
+  `h=y^2(3+2xy)/(1+xy)^2` has precisely the nonterminating series.
+- SOURCE HAZARD: Shpilrain--Yu Proposition 2.4's printed claim that an
+  arbitrary second row beneath a gradient first row in `GE_2` must itself be
+  a gradient is false as printed: `L(y)` is elementary, has first row `dx`,
+  and has non-closed second row `(y,1)`. Wright assumes a full Jacobian; this
+  stronger assertion is not imported.
+- SCOPE: this closes only the complete fixed-first-row / one-left-shear
+  Broughton/Cohn family. It does not close `E_2 C E_2` with a changed first
+  row, produce a Keller pair, or prove/disprove JC2. No second shear, support
+  widening, or generic sparse search is licensed by this result.
+
+## NORMALIZATION RANK-TWO NO-GO (2026-08-24, KNOWN-THEOREM/REDERIVATION TIER)
+`xmodel/completion-pair-gate-20260824.md` (self-contained producer proof), with
+`xmodel/completion-pair-rank2-review-grok-20260824.md` (different-model hostile
+review: **CONFIRMED**).
+- PROMOTED AT KNOWN-THEOREM/REDERIVATION TIER: a complex plane Keller map
+  cannot have function-field degree two. For
+  `A=C[P,Q]`, `B=C[x,y]`, and the normalization `R` of `A` in `Frac(B)`,
+  Zariski Main embeds `Spec B` as an open in `Spec R`. Rank two, trace
+  splitting, and `Pic(A)=0` give
+  `R=A+Az ~= A[z]/(z^2-h)` with `Tr(z)=0` and
+  `Omega_(R/A)=(R/(2z))dz`. Keller etaleness on the open chart makes `z` a
+  unit of `B`; since `B^*=C^*`, scalar trace forces `z=0`, a contradiction.
+  Equivalently, every squarefree branch factor gives the forbidden principal
+  boundary relation `div_X(q_i)=2E_i`.
+- WORDING CAVEAT: `j(U)=X` gives finiteness; concluding automorphy in general
+  also invokes triviality of connected finite etale covers of `A^2_C`. The
+  rank-two unit/trace contradiction itself does not need that extra sentence.
+- KNOWNNESS: quadratic extensions are Galois, so this statement follows from
+  the classical Galois case (Campbell/Razar/Wright/Bass--Connell--Wright).
+  Orevkov, *On three-sheeted polynomial mappings of C^2*, Theorem 1.1, defines
+  multiplicity as generic fibre cardinality and proves that a complex plane
+  Keller map has multiplicity neither two nor three. Thus a rank-three
+  continuation is also known-closed; this says nothing about polynomial total
+  degree three.
+- SCOPE: ranks at least four remain untouched here. This is not a new theorem,
+  a finiteness proof in arbitrary rank, or a JC2 result.
+
+## WEIGHTED D LEVEL-TWO SOURCE GATE (2026-08-24, DUAL-CONFIRMED SOURCE-TYPING TIER)
+`xmodel/weighted-d-source-gate-20260824.md` and
+`cases/weighted_d_source_gate_20260824/` (exact producer/replay), with
+`xmodel/weighted-d-source-review-grok-20260824.md` (different-model hostile
+review: **CONFIRMED**).
+- FROZEN-PERIMETER VERDICT: at basis
+  `dd11599b07eb05591b5c006791005eef19457d8e`, all 25 registered source hashes
+  match, but no promoted producer supplies a named normalized full-polynomial
+  source completion and typed tangent maps through
+  `alpha_1,beta_1,alpha_2,beta_2`. P4P1 symbols are external compiler
+  variables; `eplus43` is an unreviewed zero/independence constructor choice
+  and stops before factor level two.
+- EXACT AMBIENT ALGEBRA: the coordinate change through `q^2=t^84`, the
+  unreduced identity
+  `B_full=R^2 C^5 B+R C^5(theta R)A+R^2 C^4(theta C)D`, and every displayed
+  level-42/84 chain-rule term independently replay. Level 84 contains the old
+  carrier `c_1`; `c_2` drops out only because `B_0=D_0=0`.
+- PROMOTED STOP: `NO-TYPED-SOURCE/NO-QUOTIENT` means that no quotient test is
+  presently licensed, not that a mathematical quotient is nonexistent. The
+  free formal span is an acceptance target, not `T_src`; it cannot certify
+  `TWO-DRIVER`, a Hankel pivot, a recurrence, or a state dimension.
+- RESURRECTION: require one producer artifact reconstructing the first two
+  factor levels from `phi_f,phi_g` (or an exact R2/h-Newton model), with the
+  named point, stable source labels, tangent maps, relations, and full chain
+  rule. Another external sidecar or modular D row is not enough.
+- SCOPE: no band 28/deeper D, D43 integral, syzygy/Spencer/Fitting, germ,
+  characteristic-zero point, polynomial Keller map, or JC2 inference follows.

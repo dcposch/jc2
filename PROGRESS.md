@@ -102,6 +102,48 @@ current `GB42` orbit has run about 21.5 hours since the last checkpoint. Box02
 (`x2idn.32xlarge`, 128 vCPU / 2 TiB) and Box03 (`r6i.16xlarge`, 64 vCPU /
 512 GiB) are stopped; their 150 GiB and 200 GiB root volumes persist.
 
+The event-triggered full round `20260824T0453Z-dd11599` then completed five
+blind all-46 scans, post-collection deduplication, hostile cross-pollination,
+and synthesis. It is formally `DEGRADED`: Claude/Fable failed before writing a
+report and was cancelled rather than delaying the other five submissions. A
+packet-hash transcription error is isolated in the frozen erratum and changed
+no mathematical input. The portfolio launched exact-coframe, finite-
+normalization, and weighted-D source gates, with the fixed degree-three local
+compiler as reserve.
+
+Different-model review confirms the exact-coframe bridge and Cohn lineage, but
+Wright 1978 already supplies the broader weak-Jacobian reformulation. The
+distinct scoped result is negative: every determinant-one completion of the
+fixed Broughton row is `L(h)C_B`, and
+`(1+2xy)h_y-x^2h_x=6y` has no polynomial solution. The registered bounded
+tangent is empty and the global weight recurrence cannot terminate. This says
+nothing about the full elementary double orbit or JC2. Citation review also
+corrected Cohn's location from section 8 to the end of section 7 and rejected
+Shpilrain--Yu Proposition 2.4's arbitrary-second-row strengthening as false as
+printed; `L(y)` is the immediate non-closed elementary control.
+
+The completion-pair gate's rank-two normalization/unit contradiction is sound
+and independently confirmed, but it is a rederivation of the known quadratic
+Galois case. Primary-source intake records Orevkov's stronger mapping-degree
+control: a complex plane Keller map has generic degree neither two nor three.
+No rank-three continuation is licensed. The weighted-D gate is independently
+confirmed `NO-TYPED-SOURCE/NO-QUOTIENT`: the frozen producer perimeter lacks a
+named full-source point and tangent maps through `alpha_2,beta_2`; the exact
+level-42/84 formulae are ambient acceptance identities, not a quotient or
+recurrence. The K3 reserve stops `COMPILER-READY/HEAVY` with tangent rank six,
+dimension ten, nine zero-linear equations, and a killed first obstruction; a
+new fail-closed wrapper now replays every frozen JSON field exactly. No result
+proves or disproves JC2.
+
+Resource snapshot at `2026-08-24 07:02Z`: Claude remains at 47,374 messages /
+10,925.7M processed tokens; Codex/Sol is at 292 rollouts / 2,317.2M total; Grok
+is at 80 sessions / 136.2M cumulative. VPN-routed DNS/TLS and GitHub remote
+checks were healthy; both final Grok reviews completed normally. The failed
+Claude adapter is an authentication-source/CLI execution failure, not a
+network timeout, and is quarantined non-executable pending a successful smoke.
+AWS utilization is unchanged: one legacy `build_tails43.py` core on box01;
+Box02 and Box03 remain stopped.
+
 ## 2026-08-23
 Foundational-floor day, then the reorg. Belyi identification of the residue-A
 genome verified (A4 passport; leverage inert). Canonical strategy correction:

@@ -41,14 +41,19 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
-## Current portfolio overlay (full round closed 2026-08-24 02:35Z)
+## Current portfolio overlay (full round closed 2026-08-24 06:29Z)
 
 The survey scores and shortlist below are historical inputs, not the live
-allocation. Two outer-loop-v2 rounds have now rescanned all 46 avenues with
-five blind ideators apiece. The current canonical decision record is
-[`xmodel/ideation-20260824T0156Z-synthesis.md`](xmodel/ideation-20260824T0156Z-synthesis.md);
-the preceding launch record remains
+allocation. Three outer-loop-v2 rounds have now rescanned all 46 avenues. The
+current canonical decision record is
+[`xmodel/ideation-20260824T0453Z-synthesis.md`](xmodel/ideation-20260824T0453Z-synthesis.md);
+the preceding records are
+[`xmodel/ideation-20260824T0156Z-synthesis.md`](xmodel/ideation-20260824T0156Z-synthesis.md)
+and
 [`xmodel/ideation-20260824T0035Z-synthesis.md`](xmodel/ideation-20260824T0035Z-synthesis.md).
+The newest round landed five blind all-46 submissions but is formally
+`DEGRADED`: the Claude/Fable lane failed before producing a report and was
+cancelled at the close rather than blocking the other research.
 
 The first launch envelope has run. Exact different-model reviews preserved,
 at narrow scope, the external SuperMind/Guo intake, the pointwise one-band
@@ -81,6 +86,38 @@ mathematical root must redesign around (i) a typed
 global polynomial-origin source/receiver, (ii) the missing full D-source state,
 or (iii) bounded-support/degree Witt descent. `A(F)` remains the canonical
 target object but still lacks a cheap complete source/landing construction.
+
+The newest gates changed the ranking again. Exact coframes refine avenues 5
+and 39 rather than adding avenue 47: closed determinant-one rows outside
+`E_2(C[x,y])` give a counterexample, but Wright's 1978 weak Jacobian theorem
+makes the broader `E_2`/automorphism dichotomy classical. Different-model
+review confirms that the complete fixed-first-row Broughton/Cohn family
+`L(h)C_B` is empty: its closure equation
+`(1+2xy)h_y-x^2h_x=6y` has a nonterminating weight recurrence and no
+polynomial solution. This closes one left-shear family only; small-word,
+low-degree orbit expansion is an instrument/negative control because any
+resulting explicit low-degree Keller pair would conflict with the established
+plane degree bounds.
+
+The finite-normalization gate refines avenue 31. Its rank-two unit/trace
+contradiction is different-model confirmed but rederives the known quadratic
+Galois case; Orevkov's primary Theorem 1.1 also excludes generic mapping
+degrees two and three. Neither is campaign-new, and no rank-three descendant
+is live. The weighted-D level-two gate refines avenue 4: at the frozen basis,
+the promoted 25-file producer perimeter has no named full-polynomial source
+point or tangent maps through `alpha_2,beta_2`, so no quotient, two-driver,
+Hankel, recurrence, band-28, or deeper-D step is licensed. Its level-42/84
+formulae are exact ambient acceptance tests only. The degree-three marked
+collision preflight refines avenue 19: rank six, tangent dimension ten, and a
+vanishing first obstruction leave ten parameters and nine zero-linear rows,
+so it stops `COMPILER-READY/HEAVY` without a verticality or characteristic-zero
+claim.
+
+A post-gate delta triage nominates avenue 33's first global action-residue
+quotient as the next bounded root and avenue 10's HC4 quintic obstruction
+module as the orthogonal reserve. This is a queue recommendation, not a launch
+or promotion; the Wright/Orevkov priority corrections and four stopped gates
+warrant adjudication in the next full-spectrum round.
 
 Standalone TRACE-REG, raw boundary passports, sublinear type, primitive-group
 censuses without a proved support bound, new book cells, DIR/A-SCALE expansion,

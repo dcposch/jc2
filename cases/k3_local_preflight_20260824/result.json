@@ -1,0 +1,41 @@
+{
+  "verdict": "COMPILER-READY/HEAVY",
+  "stdout_sha256": "64704d211aad05766f4f75b39f44e66c1370ca718495a45d3387917c5e9c8a40",
+  "scheme": {
+    "raw_coefficients": 20,
+    "collision_linear_eliminations": 4,
+    "normalized_variables": 16,
+    "jacobian_equations": 15,
+    "total_nonzero_equation_terms": 73,
+    "maximum_terms_per_equation": 8
+  },
+  "controls": {
+    "special_fibre_mod3": "PASS",
+    "promoted_mod9_lift": "PASS",
+    "normalized_mod9_determinant": "1-9*x^4",
+    "promoted_mod9_determinant": "1+27*x^2+72*x^4",
+    "marked_collision_mod9": "PASS"
+  },
+  "tangent": {
+    "field": "F_3",
+    "rank": 6,
+    "dimension": 10,
+    "pivot_columns": ["p10", "p20", "p11", "p21", "p12", "q21"],
+    "free_columns": ["p01", "p02", "p03", "q10", "q01", "q20", "q11", "q02", "q12", "q03"]
+  },
+  "first_obstruction": {
+    "integer_seed_jacobian_error": "-3*x^2",
+    "divided_error_mod3": "2*x^2",
+    "required_tangent_image_mod3": "x^2",
+    "class": "zero",
+    "registered_solution": "delta_q21=1, i.e. B=x^2*y"
+  },
+  "stage_b": {
+    "remaining_local_parameters": 10,
+    "equations_with_zero_linear_part": 9,
+    "parameter_threshold": 8,
+    "residual_equation_threshold": 8,
+    "launched": false,
+    "reason": "both preregistered size thresholds fail; no transformation-tracking mixed-characteristic local standard-basis run was licensed"
+  }
+}

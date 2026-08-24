@@ -1,0 +1,29 @@
+EXACT-COFRAME-GATE-20260824
+engine=python-stdlib sparse polynomial ring over Q
+det(C)=1
+curl_rows(C)=['-x', '-y']
+det(C_B)=1
+C_B=[[2*x*y + 1,x^2],[-4*y^2,-2*x*y + 1]]
+curl_rows(C_B)=['0', '-6*y']
+first_row_integral_P=x^2*y + x
+unimodular_identity=1
+h=x^2*y^4*c2 + x*y^3*c1 + y^2*c0
+det(M(h))=1
+curl_row_1(M(h))=0
+curl_row_2(M(h))=6*x^3*y^4*c2 + 5*x^2*y^3*c1 + 4*x^2*y^3*c2 + 4*x*y^2*c0 + 3*x*y^2*c1 + 2*y*c0 - 6*y
+delta_basis=['4*x*y^2 + 2*y', '5*x^2*y^3 + 3*x*y^2', '6*x^3*y^4 + 4*x^2*y^3']
+output_basis=['y', 'x*y^2', 'x^2*y^3', 'x^3*y^4']
+linearized_matrix=[['2', '0', '0'], ['4', '3', '0'], ['0', '5', '4'], ['0', '0', '6']]
+target=['6', '0', '0', '0']
+rank=3
+augmented_rank=4
+target_in_image=False
+coefficient_equations=['2*c0 - 6', '4*c0 + 3*c1', '5*c1 + 4*c2', '6*c2']
+linsolve=EMPTY
+elimination_licensed=False
+rational_solution_numerator_check=0
+formal_series_coefficients_n0_to_n6=[Fraction(3, 1), Fraction(-4, 1), Fraction(5, 1), Fraction(-6, 1), Fraction(7, 1), Fraction(-8, 1), Fraction(9, 1)]
+global_recurrence=c_0=3; (n+2)c_n+(n+3)c_(n-1)=0 for n>=1
+global_coefficients=c_n=(-1)^n(n+3)
+terminal_residual=(N+4)c_N*x^(N+1)*y^(N+2), nonzero for finite N
+VERDICT=EMPTY-TANGENT; ELIMINATION_NOT_LICENSED; ONE-SHEAR-NO-POLYNOMIAL
