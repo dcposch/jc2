@@ -1,0 +1,20 @@
+// Independent exact audit of the source-honest negative control.
+ring q=0,(x,y),dp;
+poly U=x^3*y^2;
+poly V=x^2*y;
+poly P=x-x^3+3*U;
+poly Q=y+3*V;
+poly J=diff(P,x)*diff(Q,y)-diff(P,y)*diff(Q,x);
+poly E=(J-1)/9;
+if (J-1-9*E!=0) { print("FAIL exact division"); exit(1); }
+if (J-1-(-9*x^4+9*x^2*y^2-9*x^4*y^2)!=0)
+  { print("FAIL integer determinant"); exit(1); }
+
+setring q;
+ring r=3,(x,y),dp;
+poly Er=imap(q,E);
+if (Er-(2*x^4+x^2*y^2+2*x^4*y^2)!=0)
+  { print("FAIL residual reduction"); exit(1); }
+print("integer_residual_over_9:"); print(imap(q,E));
+print("residual_mod_3:"); print(Er);
+print("PASS-SINGULAR-DIVIDED-LINEAR-CARRY-ERRATUM");

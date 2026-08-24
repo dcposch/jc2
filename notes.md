@@ -4212,3 +4212,49 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   campaign, not a new publication, and no source claim is promoted.  Broad
   sweep #9 remains due by `21:25Z`; AWS remains stopped.  No proof or
   counterexample to JC2 has been found.
+
+## 2026-08-24 19:08Z LIVE STATE
+- BASIS/LIFECYCLE: bank remains
+  `1144839652c6a4750b9b0cd43e21d80cc9a755eb`, equal to `origin/master`;
+  nested `jc2-lean` remains clean at
+  `c40f83378b579a46d8a2c0172f15f502fe38ed79`.  The `1820Z` full round is
+  complete/degraded at synthesis SHA pending final bank.  All six reports
+  landed; AS/TD6 owner reports do not count as blind votes on accidentally
+  disclosed root lines.  Four uncontaminated scans independently selected
+  the same max-12 spectral/DZ client.
+- REVIEW PROMOTIONS: max-12 preflight is Claude/Fable-confirmed; coordinator
+  freeze and replay reproduce payload
+  `eb1e72d69193cded40438981907f62972725945c39a18e34891dd8f5b3645bf1`.
+  Consume Kummer orders as monic-core divisor orders and retain the pair-level
+  `H=0`, low-`x`-degree gcd-six corner.  The AS divided-carry erratum is
+  Grok-confirmed and fully replayed: exact residual `L/3+K+C_x+D_y`, corrected
+  40/30/dim18 nonradical ideal, exact cover
+  `I=Q0 intersect Q1 intersect E`.  Old 29-row completeness stays
+  quarantined.
+- MAX-12 ACTIVE: producer-exact DZ20 stabilizer descent excludes the coprime
+  order-three `k=mu=nu=0` nontrivial-Kummer face.  Exact passport
+  `(3^12)|(4^9)|(20,1^16)` permits only stabilizer orders `1,2,4`; all three
+  descent lattices contradict the terminal ODE plus `3|deg h`.  Report SHA
+  `4a5ec8b08aab7a9ba5d7c22593efeb67621fea720128dd7051972f52cc9191e5`;
+  hostile Grok review is active.  The proof uses fixed-passport finiteness,
+  not the overread PZ unitree classification.  Common factors, nonzero loads,
+  order one, `(8,12)`, and maximum twelve remain open.
+- AS ACTIVE: exact D10 rank stratification provisionally kills generic points
+  of the rational-normal-cone component but retains the vertical component
+  and two endpoint rays.  The owner is completing radical equality, endpoint
+  digit reconstruction, the independent `A^7` factor provenance, and replay
+  before freeze.  No D7 locus or tower verdict yet.
+- TD6 ACTIVE/CORRECTED: generic `c1` pivot-open emptiness remains provisional
+  and the exact staged `c1/c3` dual run remains live.  Cross-pollination
+  falsified the proposed one-shot affine Smith shortcut: later substituted
+  rows contain degree-at-least-two transport monomials.  Invalid raw-special
+  descendants were stopped; exceptional coverage returns to a typed
+  stagewise factor DAG or nonlinear certificate.  Custody erratum SHA
+  `da2ef83320ca21cc3ea48b47455de813b56afb05670fa00ee237275a1f268ac0`.
+- SOURCE/OUTER LOOP: Pinchuk audit SHA
+  `bbc8c1df4993301babed4fff5717f89bcae7fd849448e1c221884ab345ca9774`
+  promotes only Theorem 4.1's matched-leading degree identity; Theorem 3.4 is
+  GAP as a global reduction, PZ “complete classification” is an overread of
+  unitrees, and Avenue 24 is unchanged.  Broad sweep #9 remains due by
+  `21:25Z`; next full scan by `2026-08-25T07:03Z`.  AWS remains stopped.  No
+  proof or counterexample to JC2 has been found.

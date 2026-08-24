@@ -1,0 +1,30 @@
+AS F-ONLY p=3,D=7 DIVIDED-LINEAR FIRST-RESIDUAL ERRATUM / REPLACEMENT
+date: 2026-08-24
+status: PRODUCER EXACT; INTEGER PYTHON + INDEPENDENT SINGULAR + EXACT NONREDUCED COVER PASS; HOSTILE REVIEW PENDING
+verdict: THE FULL FIRST RESIDUAL ADDS u5_3+v5_2=0; THE CORRECTED 40-VARIABLE/30-ROW IDEAL HAS AN EXACT THREE-PIECE NONREDUCED COVER
+report_sha256: cbcd8851200f2ab15c29a7b9414c1d720c7aee0aa852b2cd522dcd7d699ae194
+manifest_sha256: 15eaebe76b10f27f63bf16e01efebbb623d0a7c03a7c45787aa58fd977f0736d
+integer_replay_sha256: dde2c39caaaadae1a5e881c511cecc73c8842083076a01af50b950f91be59bfa
+independent_singular_sha256: a271c47faa8fcb8f96ecc9e7b04e4305237f59ec867feb4c4d9a0e4972dc0518
+corrected_generator_sha256: 41ee62190262d779e36a62183cbdf27f05273cff5ac91cbcd002e324a3facca3
+
+quarantine:
+  old_report_sha256: b0ee40acf7e1df81574d0a41f0338df86b124cae475ad56bbf4e464b481a27f7
+  old_manifest_sha256: 59684bd4f16ed71432eb461b1de2c3b7ebd41ac35d9fb8ff6c53bf87fa38104d
+  old_freeze_sha256: ef500fa54af3cb8070ccfb991cb9ae9d09772177e3ae427199ac87be3b31a071
+  disposition: bytes unchanged; 29-row completeness/dimension/saturation claims retracted
+
+replay:
+  python3 replay_divided_linear_carry.py
+  Singular -q audit_divided_linear_carry.sing
+  python3 generate_corrected_deep_branch_gate.py | Singular -q
+  COVER=1 python3 generate_corrected_deep_branch_gate.py | Singular -q
+  RADICAL=1 python3 generate_corrected_deep_branch_gate.py | Singular -q
+  shasum -a 256 -c MANIFEST.sha256
+
+scope:
+  Exact correction of first-digit acceptance on U7=V7=0 with degree-six
+  Frobenius layers.  Q0,Q1,E are localization aids, not asserted primary or
+  minimal components.  Accepted-second-digit classification, the next carry,
+  other associated-top branches, full D7, all-depth, characteristic-zero,
+  and JC2 remain open.

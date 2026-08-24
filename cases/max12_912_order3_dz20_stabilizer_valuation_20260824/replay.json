@@ -1,0 +1,98 @@
+{
+  "case": "max12_912_order3_dz20_stabilizer_valuation_20260824",
+  "exact_inputs": {
+    "base_field": "K=C(x), L=K(u), u^3=h, sigma(u)=zeta*u",
+    "history_residual": "3 divides deg(h)",
+    "passport": [
+      "3^12",
+      "4^9",
+      "(20,1^16)"
+    ],
+    "terminal_descent": "r8=u^2*R; 9*h*R'+6*h'*R=j!=0"
+  },
+  "producer_conclusion": "No coprime k=mu=nu=0 order-three trajectory with nontrivial Kummer class survives, conditional only on the passport and stabilizer-aware isotrivial descent proved in the report.",
+  "scope_excluded": [
+    "common-factor/noncoprime spectral stratum",
+    "nonzero k, mu, or nu",
+    "order-one polynomial core",
+    "all other maximum-12 cells",
+    "JC2"
+  ],
+  "stabilizer_rows": [
+    {
+      "N": 20,
+      "S": 14,
+      "a": 2,
+      "character_check_mod_3": 0,
+      "e": 1,
+      "finite_zero_congruence": "m == 3 (mod 20)",
+      "m_3_leading_coefficient": 0,
+      "m_3_next_possible_order": 1,
+      "smallest_admissible_noncancelled_m": 23
+    },
+    {
+      "N": 10,
+      "S": 4,
+      "a": 1,
+      "character_check_mod_3": 0,
+      "e": 2,
+      "finite_zero_congruence": "m == 3 (mod 10)",
+      "m_3_leading_coefficient": 0,
+      "m_3_next_possible_order": 1,
+      "smallest_admissible_noncancelled_m": 13
+    },
+    {
+      "N": 5,
+      "S": 4,
+      "a": 2,
+      "character_check_mod_3": 0,
+      "e": 4,
+      "finite_zero_congruence": "m == 3 (mod 5)",
+      "m_3_leading_coefficient": 0,
+      "m_3_next_possible_order": 1,
+      "smallest_admissible_noncancelled_m": 8
+    }
+  ],
+  "valuation_checks": {
+    "cancelled_local_balances": [
+      {
+        "m": 3,
+        "next_possible_order": 1,
+        "r": -2
+      },
+      {
+        "m": 6,
+        "next_possible_order": 2,
+        "r": -4
+      },
+      {
+        "m": 9,
+        "next_possible_order": 3,
+        "r": -6
+      },
+      {
+        "m": 12,
+        "next_possible_order": 4,
+        "r": -8
+      }
+    ],
+    "infinity_balance": {
+      "conclusion": "all finite multiplicities m>3 imply D>3s, so the top coefficient is nonzero; constancy forces s=1; 3|D then makes h a cube",
+      "finite_orders_sum": "s-D",
+      "lhs_top_coefficient": "9*(s-D)+6*D=3*(3*s-D)",
+      "lhs_top_degree": "s-1",
+      "ord_infinity_R": "D-s"
+    },
+    "regular_point_divisor_check": "constant RHS would require ord(R)=1, but ord(R) is a multiple of N in {20,10,5}",
+    "terminal_positive_control": {
+      "R": "C/(x*(x-1)^3)",
+      "h": "x^2*(x-1)^4",
+      "ode_lhs_over_C": -3,
+      "ord_R_minus_6_ord_h": {
+        "x=0": -13,
+        "x=1": -27,
+        "x=infinity": 40
+      }
+    }
+  }
+}

@@ -2917,3 +2917,96 @@ MAXIMUM-12 ROUTE WIDTHS / LOWER FIBRES OPEN`**.
   simpler-cell theorem is claimed.  Neither lower invariant fibre nor either
   Taylor-boundary family is classified; neither frontier is empty, and no
   maximum-twelve, counterexample, or JC2 conclusion follows.
+
+## MAXIMUM-12 KUMMER PREFLIGHT (2026-08-24, DIFFERENT-MODEL-CONFIRMED EXACT TIER)
+
+`xmodel/max12-partial-y-kummer-preflight-20260824.md` (SHA-256
+`30cb45ccb64bc3666a8f1c6b223d89654a69b31bd5e96eb8915718b0f2de7b07`)
+with
+`xmodel/max12-partial-y-kummer-preflight-review-claude-20260824.md`
+(SHA-256
+`2951856cabe309fe07f564693a6b48a38cd7108616ffe41305d9583611da90fe`):
+**CONFIRMED `EXACT MAXIMUM-12 ROUTING / KUMMER ORDERS / BOUNDARY
+PROVENANCE / CONDITIONAL BINARY GATE`**.
+
+- ROUTING: the only primitive maximum-12 cells are `(8,12)` and `(9,12)`.
+  Their unresolved history classes are `4|H` and `3|H`; the latter is exact
+  classwise.  At pair level its `H=0`, coefficient-`x`-degree-at-most-one
+  corner is already closed by the frozen `L=2` shear to total gcd six.
+- KUMMER ROW: for `(m,n)=(dr,ds)`, the next row is exactly
+  `d*u^(d*(r+s)-1)*(s*A-r*B)'`; depression gives
+  `delta=s*A-r*B` and mismatch `-delta/r`.  On the **monic-core divisor
+  class order**, every nontrivial Kummer branch forces `delta=0`.  This
+  includes the genuine order-two leaf inside `(8,12)`; the remaining orders
+  are `4,2,1` and `3,1`.
+- BOUNDARY/GATE: both complete original Taylor-jet families remain charged.
+  The conditional binary Wronskian has common-power locus `(K^r,K^s)` and
+  tangent ranks 11 in both cells, kernels 7 and 8.  This is local linear
+  degeneracy, not a global component theorem.
+- CUSTODY/SCOPE: the coordinator reran all four frozen hash checks and
+  reproduced payload SHA-256
+  `eb1e72d69193cded40438981907f62972725945c39a18e34891dd8f5b3645bf1`.
+  No lower fibre, Taylor family, maximum-twelve cell, counterexample, or JC2
+  conclusion follows.
+
+## AS `p=3,D=7` DIVIDED-CARRY ERRATUM (2026-08-24, DIFFERENT-MODEL-CONFIRMED CORRECTION TIER)
+
+`xmodel/as-fonly-first-residual-divided-carry-deep-d7-erratum-20260824.md`
+(SHA-256
+`cbcd8851200f2ab15c29a7b9414c1d720c7aee0aa852b2cd522dcd7d699ae194`)
+with
+`xmodel/as-fonly-first-residual-divided-carry-deep-d7-erratum-review-grok-20260824.md`
+(SHA-256
+`4e915fb6f7e8701d1932b2b28df76db35859520bc94ffe8fb08a1cd679936ae8`):
+**CONFIRMED `THE QUADRATIC BRACKET CARTIER SLOT VANISHES, BUT THE FULL
+SOURCE-HONEST RESIDUAL HAS ONE ADDITIONAL DIVIDED-LINEAR ROW`**.
+
+- EXACT QUOTIENT: with `L=U_x+V_y-x^2` and
+  `K=(U_x-x^2)*V_y-U_y*V_x`, first-digit admissibility makes `L/3`
+  integral and the next residual is
+  `L/3+K+C_x+D_y` modulo three.  The basic Cartier coefficient of `K`
+  vanishes universally, while that of `L/3` is `u5_3+v5_2`.
+- CORRECTED SCHEME: on the named deep branch the source-honest ideal has 40
+  variables and 30 rows, reduced-Groebner size 269 in the registered order,
+  dimension 18, radical size 44, and is nonradical.  Its exact localization
+  cover is `I=Q0 intersect Q1 intersect E`; the pieces are navigation aids,
+  not primary or minimal-component assertions, and none replaces `I`.
+- QUARANTINE: the predecessor's 29-row completeness, dimension 19, and
+  two-piece cover are retracted.  The old bytes remain preserved as a
+  negative control.  The already reviewed degree-12/11 associated-top rows
+  are unaffected because the divided-linear quotient has too low a degree.
+- CUSTODY/SCOPE: all registered producer, cover, radical, integer-identity,
+  and manifest replays pass on the coordinator host.  No accepted second
+  digit, full `D=7` locus, all-depth lift/no-lift, characteristic-zero map,
+  counterexample, or JC2 conclusion follows.
+
+## PINCHUK QUASI-POLYNOMIAL SOURCE AUDIT (2026-08-24, PRIMARY-SOURCE GAP/CORRECTION TIER)
+
+`xmodel/pinchuk-quasipolynomial-reduction-source-audit-grok-20260824.md`
+(SHA-256
+`bbc8c1df4993301babed4fff5717f89bcae7fd849448e1c221884ab345ca9774`):
+**LOCAL IDENTITY CONFIRMED / THEOREM 3.4 TERMINATION GAP / NOT A GLOBAL
+JC2 REDUCTION**.
+
+- LOCAL PROMOTION: Pinchuk 2021 Theorem 4.1 is correct for the stated exact
+  degrees with matched leading coefficients.  Over `C(x)` in the separate
+  fibre variable it gives
+  `deg(p^r-q^k)=d*(k*r-k-r)+1+deg(r*p'*q-k*p*q')`.
+  For `(k,r,d)=(4,3,3)`, the extremal number is 16.  This is the exact local
+  identity used on the coprime `(9,12)`, `k=mu=nu=0` spectral face; it is
+  not a classification of that face.
+- GLOBAL QUARANTINE: Theorem 3.4's six local polygon cuts check, but the
+  printed remainder walk lacks a well-founded termination argument and does
+  not establish that its only terminal state has constant leading Jacobian.
+  Its rational-power source changes also leave `C[x,y]`.  It is not licensed
+  as a global JC2 reduction, `G2-PSC`, or polynomial normal form.
+- CLASSIFICATION CORRECTION: Pakovich--Zvonkin 2014 gives the weighted-tree
+  dictionary and classifies **unitrees**, not all minimizing equality pairs.
+  The passport `(3^12)|(4^9)` is not a unitree.  No explicit literature list
+  may be imported; a self-contained finite three-point-cover/descent argument
+  must carry any maximum-12 rigidity claim.
+- TYPE NOTE: `J(f,W)=3*(g^2-k*f^2)J(f,g)` requires `k` differential-constant;
+  the reviewed Faber coefficient `k` has exactly that status, and the live
+  DZ20 client has `k=0`.  A variable `k(x)` would contribute an extra chain-
+  rule term.  This 2021 paper is unrelated to the real Pinchuk maps and does
+  not change Avenue 24.

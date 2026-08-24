@@ -485,6 +485,53 @@ campaign discovered Pinchuk's 2021 quasi-polynomial reduction and its exact
 generalized Davenport--Zannier connection to the new `(9,12)` spectral norm.
 The source and connection are under bounded hostile audit, not promoted.
 
+The event-triggered round `20260824T1820Z` closed at `19:03Z` with all six
+submissions.  It is `COMPLETE / DEGRADED INDEPENDENCE`: the AS and TD6 owner
+reports do not count as blind votes on the narrow root snippet accidentally
+disclosed to them.  All four uncontaminated scans nevertheless converged on
+the same maximum-twelve spectral/Davenport--Zannier client, with corrected AS
+degree ten and TD6 exceptional coverage as orthogonal roots.  Cross-
+pollination rejected two shortcuts before launch: a direct D12 carry has no
+typed predecessor/accepted-digit chain, and a proposed one-shot TD6 affine
+Smith system becomes nonlinear after later-row substitution.  The D12 idea is
+deferred until the D7 compiler is proof-carrying; TD6 returns to a stagewise
+factor-stratum DAG.  No mathematical claim is promoted by ideation.
+
+Two pending lifecycle gates then closed.  Claude/Fable independently
+confirmed the maximum-twelve Kummer preflight, including the genuine
+quadratic leaf for `(8,12)`, both full Taylor-boundary families, and closed-
+form tangent ranks.  The exact precision is monic-core divisor class order;
+at pair level the `(9,12)` `H=0`, coefficient-`x`-degree-at-most-one corner is
+already covered by the frozen gcd-six route.  The coordinator reproduced all
+hashes and payload SHA
+`eb1e72d69193cded40438981907f62972725945c39a18e34891dd8f5b3645bf1`.
+Grok independently confirmed the corrected AS divided-carry package: the
+full residual is `L/3+K+C_x+D_y`, the deep ideal is 40-variable/30-row,
+dimension 18 and nonradical, and its exact navigation cover is
+`I=Q0 intersect Q1 intersect E`.  All registered producer, cover, radical,
+integer-identity, and manifest replays pass.  The old 29-row completeness and
+two-piece cover remain quarantined.
+
+The Pinchuk primary-source audit closed
+`LOCAL IDENTITIES CONFIRMED / THEOREM 3.4 GAP / NOT A GLOBAL JC2 REDUCTION`.
+Theorem 4.1 supplies the exact degree-16 identity on the coprime undeformed
+maximum-twelve face.  Theorem 3.4 lacks a complete termination argument and
+leaves the polynomial category; Pakovich--Zvonkin classify unitrees rather
+than all equality pairs.  Consequently the campaign uses a self-contained
+three-point-cover descent and imports no finite literature list.
+
+Post-collection mathematics then sharpened that descent.  On the coprime
+`(9,12)` order-three face with `k=mu=nu=0`, the exact passport is
+`(3^12)|(4^9)|(20,1^16)`.  The unique index-20 point and depression reduce
+every deck twist to order `1,2,4`; Kummer covariance gives three exact
+scaling lattices.  Combining each with `9hR'+6h'R=j` forces every finite zero
+of `h` to have multiplicity strictly greater than three, while infinity
+forces either a single-root cube or average multiplicity three.  Both
+contradict the nontrivial cubic Kummer class.  The result is frozen producer-
+exact and under immediate different-model hostile review.  It excludes only
+the coprime undeformed nontrivial-Kummer face; common factors, nonzero loads,
+the order-one core, `(8,12)`, maximum-twelve coverage, and JC2 remain open.
+
 ## 2026-08-23
 Foundational-floor day, then the reorg. Belyi identification of the residue-A
 genome verified (A4 passport; leverage inert). Canonical strategy correction:

@@ -1,0 +1,24 @@
+AS F-ONLY FIRST-CARRY CARTIER ZERO / DEEP p=3,D=7 ACCEPTANCE SCHEME
+date: 2026-08-24
+status: PRODUCER EXACT; PYTHON + INDEPENDENT SINGULAR CARTIER CHECK + EXACT SINGULAR SATURATION PASS; HOSTILE REVIEW PENDING
+verdict: THE BASIC FIRST-CARRY CARTIER COEFFICIENT VANISHES FOR EVERY PRIME; THE DEEP D7 BRANCH IS EXACTLY A 29-ROW NONRADICAL SCHEME COVERED BY TWO SATURATION BRANCHES
+report_sha256: b0ee40acf7e1df81574d0a41f0338df86b124cae475ad56bbf4e464b481a27f7
+manifest_sha256: 59684bd4f16ed71432eb461b1de2c3b7ebd41ac35d9fb8ff6c53bf87fa38104d
+python_cartier_replay_sha256: 5f4d952cac06d1c2020d942b65321a89ed659d5ba616e579786e33440ae2e9dd
+singular_cartier_audit_sha256: 1d1cc0793f28dda47e6f09b1734fa8e8bc92ffb42067f7f01d0e4097b5a247db
+deep_branch_generator_sha256: d4a2807a59338660a0b83513d4fa1568d2f67f2fdc477ceec2b6995a6aabba13
+
+replay:
+  python3 replay_universal_cartier.py
+  python3 generate_deep_branch_gate.py | Singular -q
+  DECOMP=1 python3 generate_deep_branch_gate.py | Singular -q
+  Singular -q audit_cartier_control.sing
+  shasum -a 256 -c MANIFEST.sha256
+
+scope:
+  The all-prime lemma concerns only the basic first AS carry.  At p=3,D=7,
+  the scheme covers only U7=V7=0 with degree-six Frobenius layers, including
+  all lower first-digit variables and all first acceptance rows.  Accepted
+  second-digit classification, the next integer carry, other associated-top
+  branches, the full D7 locus, all-depth, characteristic-zero, and JC2 remain
+  open.  Later carries may have nonzero Cartier classes.

@@ -41,14 +41,17 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
-## Current event synthesis overlay (reviewed through 2026-08-24 18:26Z)
+## Current event synthesis overlay (reviewed through 2026-08-24 19:03Z)
 
 The last completed all-avenue decision record is
-[`xmodel/ideation-20260824T1633Z-synthesis.md`](xmodel/ideation-20260824T1633Z-synthesis.md).
-All five blind scans converged on three operational roots: fail-closed
-partial-`y` coverage, a proof-carrying map-only AS accepted-digit recursion,
-and a dependency-complete TD6 rank/Fitting atlas.  The first root has now
-advanced to maximum twelve.  No result below proves or disproves JC2.
+[`xmodel/ideation-20260824T1820Z-synthesis.md`](xmodel/ideation-20260824T1820Z-synthesis.md).
+Six of six scans landed.  The round is formally degraded because two owner
+reports had narrow accidental root-snippet exposure, but all four
+uncontaminated scans independently selected the same new critical-path client:
+the coprime undeformed `(9,12)` order-three fibre should be attacked through
+its spectral norm, sharp polynomial-abc equality, and exact degree-36 Belyi
+passport.  AS degree ten and the TD6 exceptional atlas remain the orthogonal
+disproof/proof roots.  No result below proves or disproves JC2.
 
 - **Every characteristic-zero Keller pair of maximum actual partial
   `y`-degree at most eleven is an automorphism.**  Different-model hostile
@@ -60,10 +63,10 @@ advanced to maximum twelve.  No result below proves or disproves JC2.
   through maximum eleven.  This is an unbounded-`x` partial-degree theorem,
   not a new total-degree theorem.  Maximum twelve has exactly two new
   primitive checksums, `(8,12)` and `(9,12)`; neither is yet excluded.
-- **The maximum-twelve successor now has a confirmed universal high-row Faber
-  landing; its lower fibres remain open.**  For primitive degrees `(dr,ds)`, on
+- **The maximum-twelve successor has confirmed routing and universal high-row
+  Faber landing; its full lower fibres remain open.**  For primitive degrees `(dr,ds)`, on
   `u^d=h` the first residual is `d*(s*A-r*B)'=0` and
-  `delta=s*A-r*B`.  Every nontrivial Kummer class of order dividing `d`
+  `delta=s*A-r*B`.  On the monic-core divisor class, every nontrivial Kummer class of order dividing `d`
   forces `delta=0`; the polynomial `d`th-power branch remains weight-
   unforced.  Thus `(8,12)` has orders `4,2,1`, including a mandatory
   quadratic intermediate branch, while `(9,12)` has orders `3,1`.  The raw
@@ -77,8 +80,16 @@ advanced to maximum twelve.  No result below proves or disproves JC2.
   `4,2,1` and `9,17` on the `(9,12)` orders `3,1`; local two-row controls give
   `5,8,14` and `7,15`.  Aggregate mandatory-route cost therefore selects
   `(9,12)` for speed, while raw width and the widest leaf can still favor
-  `(8,12)`.  This is an allocation rule, not a simpler-cell theorem; no lower
-  fibre or Taylor-boundary family is classified.
+  `(8,12)`.  This is an allocation rule, not a simpler-cell theorem.
+  Producer-exact approximate-cubic equations additionally trap every reduced
+  formal arc meeting the common cubic when `k!=0,mu=nu=0`; nilpotents and
+  disjoint components remain open.  On the coprime `k=mu=nu=0` face,
+  `beta=g^3/f^4` has exact passport
+  `(3^12)|(4^9)|(20,1^16)`.  A new stabilizer-aware descent treats every deck
+  order `1,2,4` and combines the terminal ODE with divisor congruences to
+  exclude that nontrivial-Kummer face at producer level.  Its hostile review
+  is active.  Common factors, nonzero loads, the polynomial-core leaf,
+  `(8,12)`, and all remaining Taylor boundaries stay charged.
 - **Map-only AS has a confirmed deep terminal point and a confirmed infinite
   finite-depth control, but no full-locus obstruction.**  The exact
   `D=7` triangular map survives modulo `3^6` and is cap-terminal at the next
@@ -91,12 +102,16 @@ advanced to maximum twelve.  No result below proves or disproves JC2.
   not a locus theorem.  Hostile review also confirms that the associated
   layer-`7/6` top scheme has three reduced minimal components and one
   load-bearing embedded primary component.  A proposed 29-row deep-branch
-  acceptance scheme is **quarantined**:
+  acceptance scheme remains **quarantined**:
   its universal bracket Cartier-zero lemma is correct, but it omitted the
   divided integer carry `(U_x+V_y-x^2)/3`, whose `p=3` Cartier coefficient is
-  `u5_3+v5_2`.  A corrected 30-row scheme is being recomputed before review,
-  retaining the original nonreduced primary structure for the degree-ten
-  successor.
+  `u5_3+v5_2`.  Different-model review now confirms the source-honest
+  replacement: the full residual is `L/3+K+C_x+D_y`, the corrected ideal has
+  40 variables/30 rows/dimension 18, is nonradical, and has exact cover
+  `I=Q0 intersect Q1 intersect E`.  The degree-ten successor retains the
+  original ideal.  Its current exact rank stratification kills generic cone
+  points but leaves a vertical component and two endpoint rays; endpoint
+  digit reconstruction and global radical equality are still producer-active.
 - **The licensed TD6 `q2` pencil remains empty, while common centering is
   only a sensitivity gate.**  The frozen full-centering differential
   `E^3 -> E^10` has producer rank three and zero kernel, and its affine
@@ -104,12 +119,29 @@ advanced to maximum twelve.  No result below proves or disproves JC2.
   independently reconstructing the 3,602-column engine.  This does not kill
   a center family or SP-2.  Dependency census selects `(c1,c3)` over
   `(c1,c2)` by 6,763 fewer typed entries.  Exact FLINT tower arithmetic is
-  propagating the nonlinear `c1` line, the `c3` dual thickening, and every
-  exceptional pivot stratum.
+  propagating the nonlinear `c1` line and the `c3` dual thickening.  Nine
+  current-band compatibilities provisionally kill the generic `c1` pivot
+  open.  Cross-pollination caught that the proposed one-shot 110-by-132
+  affine Smith system becomes genuinely nonlinear after later-row
+  substitution; that shortcut and its descendants are stopped.  Exceptional
+  coverage must instead use the typed stagewise parameterization, recursive
+  specialization, or a nonlinear certificate.  On the valid generic
+  first-plus-previous open, a literal constant residual already prunes every
+  current-stage pivot root.  What remains is the finite tree of previous/pole
+  factors, first-stage factors, and raw transport fibres `c1=0,3`.  The
+  generic result is not reversed.
+- **Pinchuk 2021 contributes one local identity, not a global reduction.**
+  Primary-source audit confirms Theorem 4.1 under matched leading
+  coefficients and the extremal number 16 at `(4,3,3)`.  Theorem 3.4's
+  printed reduction has a termination gap and exits through rational-power
+  q-polynomials; it is not a polynomial normal form, `G2-PSC`, or JC2 route.
+  Pakovich--Zvonkin classify unitrees rather than all minimizing pairs, so no
+  literature list is imported into the self-contained three-point-cover
+  descent.  This paper is unrelated to Avenue 24's real Pinchuk maps.
 
 Reviews remain background/nonblocking, but promotion remains review-gated.
 The next blind all-avenue scan is due no later than twelve hours after the
-`17:14Z` synthesis close; broad web sweep #9 is due by `2026-08-24T21:25Z`.
+`19:03Z` synthesis close; broad web sweep #9 is due by `2026-08-24T21:25Z`.
 AWS expansion remains stopped because the current gates are exact symbolic
 and certificate bottlenecks rather than memory-capacity bottlenecks.
 
