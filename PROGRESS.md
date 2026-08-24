@@ -53,6 +53,21 @@ its Q-level downstream uses are reopened; their finite-field verdicts stand.
 Successful non-unit characteristic-zero runs still carry their reconstructed
 Q-level nonemptiness meaning within engine trust.
 
+Coordination/outer-loop v2 encoded and pushed: disjoint top-level document
+authority, one coordinator, claim DAG and provisional gate, background hostile
+review, four-root/25%-exposure limits, event micro-rounds, mandatory blind
+full-spectrum ideation at most 12 hours apart, broad web sweep at most 24 hours
+apart, post-collection deduplication/cross-pollination, and information-gain
+portfolio rules. The first full round (`20260824T0035Z-2386780`) completed with
+five blind scans over all 46 avenues, including a supervised Grok 4.6 lane;
+15 cards reduced to six distinct candidates and a four-root launch envelope.
+Immediate work is external exact-certificate lineage intake, D43 hostile review
+in parallel with a D25-grounded source-transition/symbol gate, and one hard
+equivalent-map covariance test of the boundary coframe/Fitting consensus.
+TRACE-REG survives as a distinct but narrowed residue/underdetermination audit;
+sublinear-type work is downstream only. B=168 and deeper fixed-depth work stay
+held. No mathematical claim was promoted by ideation.
+
 ## 2026-08-22
 D43 program end-to-end: stage-1 extended operator banked (level 42, full gate
 suite), a false-FAIL traced to a checker bug (proportionality at lambda=0),

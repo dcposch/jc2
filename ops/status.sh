@@ -20,7 +20,7 @@ echo "=== REPOSITORY ==="
 git -C "$repo_root" status --short --branch | sed 's/^/  /'
 
 echo "=== LOCAL LANES ==="
-local_lanes=$(pgrep -fl '[c]odex exec|[g]rok (-p|--prompt-file)|[d]irectionb_compress|[f]leet_fc1' 2>/dev/null || true)
+local_lanes=$(pgrep -fl '[c]odex exec|[g]rok (.* )?(-p|--prompt-file)|[d]irectionb_compress|[f]leet_fc1' 2>/dev/null || true)
 if [ -n "$local_lanes" ]; then
   printf '%s\n' "$local_lanes" | sed 's/^/  /'
 else

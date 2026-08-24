@@ -40,6 +40,24 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
+## Current portfolio overlay (full round closed 2026-08-24 01:05Z)
+
+The survey scores and shortlist below are historical inputs, not the live
+allocation. The first outer-loop-v2 full round rescanned all 46 avenues with
+five blind ideators, then deduplicated and attacked the proposals. Its canonical
+decision record is
+[`xmodel/ideation-20260824T0035Z-synthesis.md`](xmodel/ideation-20260824T0035Z-synthesis.md).
+
+Current ordering is: (1) bounded external exact-certificate/provenance intake;
+(2) source-defined D-series transitions and symbols, with D43 hostile review in
+parallel and no further fixed-depth spending; (3) one equivalent-map covariance
+kill test for the proposed intrinsic boundary/coframe/Fitting objects; then,
+only if the proof slot clears, (4) a narrow trace-residue/underdetermination
+audit. A packet-information collision test for `G2-PSC` is queued behind a
+precise boundary fingerprint. Standalone sublinear-type, new book cells,
+DIR/A-SCALE census expansion, D75, and B=168 are stopped or held at this cycle's
+gates. None of these rankings is a claim promotion.
+
 ## Executive summary (10 lines)
 
 1. Three independent surveys (Sol 48 entries, Grok 40, Fable 18) merge into **46 distinct top-level approaches**; every row traces to at least one input.
