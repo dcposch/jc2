@@ -41,7 +41,7 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
-## Current event synthesis overlay (reviewed through 2026-08-24 19:03Z)
+## Current event synthesis overlay (reviewed through 2026-08-24 19:32Z)
 
 The last completed all-avenue decision record is
 [`xmodel/ideation-20260824T1820Z-synthesis.md`](xmodel/ideation-20260824T1820Z-synthesis.md).
@@ -87,8 +87,15 @@ disproof/proof roots.  No result below proves or disproves JC2.
   `beta=g^3/f^4` has exact passport
   `(3^12)|(4^9)|(20,1^16)`.  A new stabilizer-aware descent treats every deck
   order `1,2,4` and combines the terminal ODE with divisor congruences to
-  exclude that nontrivial-Kummer face at producer level.  Its hostile review
-  is active.  Common factors, nonzero loads, the polynomial-core leaf,
+  exclude that nontrivial-Kummer face.  Hostile review is now **CONFIRMED**
+  after independent reconstruction of the passport, isotrivial descent,
+  stabilizers, local series, and infinity contradiction.  On an actual
+  Keller trajectory coprimality is automatic because `gcd_z(f,g)` divides
+  the nonzero `z`-constant Jacobian; projected noncoprime pieces are
+  elimination artifacts, not a remaining trajectory branch.  The active
+  loaded successor has
+  `B=(15/2)*mu*F6'+18*nu*F3'+60*r8`; for `mu=0,nu=1` its first collision
+  boundary is `3*p+10*r8=0`.  Nonzero loads, the polynomial-core leaf,
   `(8,12)`, and all remaining Taylor boundaries stay charged.
 - **Map-only AS has a confirmed deep terminal point and a confirmed infinite
   finite-depth control, but no full-locus obstruction.**  The exact
@@ -109,14 +116,17 @@ disproof/proof roots.  No result below proves or disproves JC2.
   replacement: the full residual is `L/3+K+C_x+D_y`, the corrected ideal has
   40 variables/30 rows/dimension 18, is nonradical, and has exact cover
   `I=Q0 intersect Q1 intersect E`.  The degree-ten successor retains the
-  original ideal.  Its current exact rank stratification kills generic cone
-  points but leaves a vertical component and two endpoint rays; endpoint
-  digit reconstruction and global radical equality are still producer-active.
+  original ideal.  Its frozen exact rank stratification kills generic cone
+  points but leaves a vertical component and two endpoint rays; hostile
+  review is active.  Successor work proves that the full vertical degree-nine
+  mixed-carry row has a global polynomial section and is universally
+  compatible.  Degree eight, where the divided integer carry first enters,
+  is the next honest obstruction gate.
 - **The licensed TD6 `q2` pencil remains empty, while common centering is
   only a sensitivity gate.**  The frozen full-centering differential
-  `E^3 -> E^10` has producer rank three and zero kernel, and its affine
-  equation is inconsistent at the registered nonsolution; hostile review is
-  independently reconstructing the 3,602-column engine.  This does not kill
+  `E^3 -> E^10` is now different-model **CONFIRMED** with rank three, zero
+  kernel, and inconsistent affine equation at the registered nonsolution;
+  the reviewer independently rebuilt all 3,602 columns.  This does not kill
   a center family or SP-2.  Dependency census selects `(c1,c3)` over
   `(c1,c2)` by 6,763 fewer typed entries.  Exact FLINT tower arithmetic is
   propagating the nonlinear `c1` line and the `c3` dual thickening.  Nine
@@ -125,11 +135,12 @@ disproof/proof roots.  No result below proves or disproves JC2.
   affine Smith system becomes genuinely nonlinear after later-row
   substitution; that shortcut and its descendants are stopped.  Exceptional
   coverage must instead use the typed stagewise parameterization, recursive
-  specialization, or a nonlinear certificate.  On the valid generic
-  first-plus-previous open, a literal constant residual already prunes every
-  current-stage pivot root.  What remains is the finite tree of previous/pole
-  factors, first-stage factors, and raw transport fibres `c1=0,3`.  The
-  generic result is not reversed.
+  specialization, or a nonlinear certificate.  On the valid transport-plus-
+  first chart, the genuine current `X0,t12` row is literally `-k/50`,
+  independent of all remaining parameters; its source-ideal lift is active
+  and provisionally prunes every previous/pole and current pivot stratum
+  there.  The generic `c1/c3` dual and raw transport fibres `c1=0,3`
+  continue.  The generic result is not reversed.
 - **Pinchuk 2021 contributes one local identity, not a global reduction.**
   Primary-source audit confirms Theorem 4.1 under matched leading
   coefficients and the extremal number 16 at `(4,3,3)`.  Theorem 3.4's
@@ -138,6 +149,17 @@ disproof/proof roots.  No result below proves or disproves JC2.
   Pakovich--Zvonkin classify unitrees rather than all minimizing pairs, so no
   literature list is imported into the self-contained three-point-cover
   descent.  This paper is unrelated to Avenue 24's real Pinchuk maps.
+- **Recent Makar-Limanov papers add conditional Newton-frame restrictions,
+  not a campaign bridge.**  Primary-source audits confirm, in the papers'
+  specially reduced complex-counterexample frame, the ratio-two/vertical-
+  edge exclusion, the admissible-edge bound `s<=Omega(D)-1`, and the shaped
+  leading-total-degree condition `Omega(D)>=3`.  The author-reported
+  `D<=100` census is not code-reproducible and retains `D=72`.  Existence-
+  promised mate recovery gives uniqueness only modulo `C[f]` and no
+  unconditional mate-existence algorithm.  No theorem currently transports
+  these inputs to GGV packets, Sigray books, TD6, residue-A, or maximum actual
+  partial degree.  Typed Newton-row checking and bounded Faber certificate
+  packaging are licensed software clients; untyped filtering is not.
 
 Reviews remain background/nonblocking, but promotion remains review-gated.
 The next blind all-avenue scan is due no later than twelve hours after the

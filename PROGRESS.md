@@ -529,8 +529,51 @@ of `h` to have multiplicity strictly greater than three, while infinity
 forces either a single-root cube or average multiplicity three.  Both
 contradict the nontrivial cubic Kummer class.  The result is frozen producer-
 exact and under immediate different-model hostile review.  It excludes only
-the coprime undeformed nontrivial-Kummer face; common factors, nonzero loads,
-the order-one core, `(8,12)`, maximum-twelve coverage, and JC2 remain open.
+the coprime undeformed nontrivial-Kummer face; nonzero loads, the order-one
+core, `(8,12)`, maximum-twelve coverage, and JC2 remain open.
+
+That hostile review is now complete and **CONFIRMED**.  Grok independently
+rederived the spectral tail, degree-36 passport, Hurwitz finiteness,
+stabilizers `1,2,4`, Kummer covariance, every local cancellation, and the
+infinity contradiction.  It also sharpened the successor firewall: on an
+actual Keller trajectory `gcd_z(f,g)` divides the nonzero `z`-constant
+Jacobian, so projected noncoprime components are coefficient-fibre artifacts,
+not a remaining trajectory stratum.  The coordinator reran the manifest and
+replay exactly.  The active loaded successor has the frozen identity
+`B=(15/2)*mu*F6'+18*nu*F3'+60*r8`; on `mu=0,nu=1` this is the centered
+quadratic `54*z^2+18*p+60*r8`, with first collision boundary
+`3*p+10*r8=0`.  Exact modular block elimination to `(p,r8)` continues.
+
+The TD6 3,602-column centering review also closed **CONFIRMED**.  A wholly
+independent engine reproduced the three transverse center directions, every
+staged rank, the full `10x3` compatibility differential of rank three, and
+the inconsistent augmented rank four.  This is sensitivity at a normalized
+nonsolution, not a center-family or SP-2 kill.  Nonblocking successor work is
+stronger on the typed first chart: the genuine current `X0,t12` row is the
+parameter-free constant `-k/50`, provisionally deleting every previous/pole
+and current pivot stratum there.  Its source-ideal lift, generic `c1/c3` dual,
+and raw `c1=0,3` transport fibres remain live.
+
+The AS degree-ten successor is frozen and under hostile review.  Pointwise it
+retains the vertical branch and two endpoint rays while cutting every other
+nonzero cone point.  A new exact successor calculation gives a global
+polynomial section for the entire vertical degree-nine mixed-carry row, so
+that row is universally compatible.  The first potentially decisive vertical
+row is degree eight, where the source-divided integer carry enters; a
+carry-aware accepted-digit compiler is active.
+
+Primary-source sweep intake of Makar-Limanov 2022/2025 and Makar-Limanov--
+Trakhtenberg 2024/2026 closed `MIXED`.  In their own reduced Newton frame the
+papers give an admissible-edge bound, a ratio-two/vertical-edge exclusion,
+and the leading-total-degree condition `Omega(D)>=3`; they also report a
+finite `D<=100` census and existence-promised mate recovery modulo `C[f]`.
+No type-safe bridge currently applies these claims to GGV, Sigray, TD6,
+residue-A, or maximum partial degree.  The licensed software descendants are
+a provenance-bearing exact Newton-row checker and bounded Faber certificate
+packaging, never an existence oracle.  At `19:32Z`, all three internal
+research roots and three exact local cores remain occupied; AWS expansion is
+held because the bottlenecks are symbolic structure and certification.  No
+proof or counterexample to JC2 has been found.
 
 ## 2026-08-23
 Foundational-floor day, then the reorg. Belyi identification of the residue-A

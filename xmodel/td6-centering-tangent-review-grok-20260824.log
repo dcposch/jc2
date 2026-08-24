@@ -1,0 +1,24 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the producer report, the case manifest, and the named parent reviews, then freeze-check hashes from the repo root before any independent reconstruction.Next I’ll inventory the case payloads and the parent adjoint/whole-B reviews so the freeze check and independent reconstructions have a complete basis.I'll freeze-check hashes and start the registered replays, then read the producer programs in parallel so independent reconstruction can start as soon as the provenance is in hand.Hashes match the charged freeze. Next I’ll start the registered programs and read the producer replay so the independent reconstruction is not just a rerun.I’ll read the rest of the producer replay and the parent Dual/transport machinery so the independent engine can diverge from the same frozen geometry.Orbit audit matches the freeze. Next I’ll write the independent field/orbit and matrix-changing engines while the registered replay continues.I'll write the independent orbit/field audit and the matrix-changing engine next, keeping both off tracked paths.The Rabin gcd needed a monic leading term, and the transport-row `setdefault` was evaluating the right-hand side too early. I’ll fix both and rerun.The independent engine is stalled on degree-18 arithmetic for Q-valued transport directions. I’ll keep those coefficients in `Q` and restart.First-J passed. `scale_form` mixed `E` with `Jet3`; I’ll multiply in place and resume from the previous-band compile.The tail is grinding every 3×3/4×4 minor over huge field elements. I’ll switch to a few independently chosen minors and an `E`-only reverse-row rank check.Independent reconstruction matched the ranks, the 10×3 map, and the residual hashes. I’ll write the review report now.**Overall verdict: CONFIRMED.** All six numbered claims are **CONFIRMED**. Smallest failing identity: none.
+
+The report is `xmodel/td6-centering-tangent-review-grok-20260824.md` (SHA-256 `3d33ed766a4ea02b79bee1dd13b144c2f3adbfd7a0dbb571314c36679b92d13a`).
+
+What was checked:
+
+- Freeze hashes from the repo root all match the launch prompt. Registered `orbit_audit.py` and `replay.py` reran as regressions and matched canonical stdout byte-for-byte (`real 1364.46` for the replay).
+- An independent engine, not imported from either centering program, reconstructed the Laurent chart tangent, the degree-18 field, the 3,602-column `δA`, the solve `A0 dx=-dA x0`, both later bands, all ten current compatibilities including `λ'`, and the `10×3` map.
+
+Load-bearing independent results:
+
+| Check | Result |
+|---|---|
+| Quotient in this registered section | rank 3; regular source and the four det-1 target gauges do not absorb a center |
+| Staged ranks | `3470/3602 → 38/132 → 38/94 → 25/56`; all derivative rank-change flags 0 |
+| `t^4` sensitivities | all three nonzero; hashes match the freeze |
+| `λ'` | support 3; frozen `λ0` is not the full derivative in any direction |
+| `D C` | rank 3, kernel 0, certified on `(t^4,t^7,t^{10})`, not the producer’s lex-first triple |
+| `[D C \| -C0]` | rank 4; no common linearized root |
+
+**Promotion.** Accept as `CENTERING-TRANSVERSE / FULL-COKERNEL-INJECTIVE / NO-COMMON-LINEARIZED-ROOT / C1-PENCIL-LICENSED` **in this registered normalized section**.
+
+**Quarantine.** The base control is already affine inconsistent, so injective `D C` is sensitivity at a nonsolution, not a tangent space or a nonlinear family kill. `centering_family_killed=false`, `SP2_killed=false`, `JC2_resolved=false`. The licensed successor remains the exact matrix-changing pencil `c1=C`, `c2=c3=1`.

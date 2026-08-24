@@ -3010,3 +3010,103 @@ JC2 REDUCTION**.
   DZ20 client has `k=0`.  A variable `k(x)` would contribute an extra chain-
   rule term.  This 2021 paper is unrelated to the real Pinchuk maps and does
   not change Avenue 24.
+
+## MAXIMUM-12 `(9,12)` ORDER-THREE DZ20 EXCLUSION (2026-08-24, DIFFERENT-MODEL-CONFIRMED BRANCH TIER)
+
+`xmodel/max12-912-order3-dz20-stabilizer-valuation-20260824.md` (SHA-256
+`4a5ec8b08aab7a9ba5d7c22593efeb67621fea720128dd7051972f52cc9191e5`)
+with
+`xmodel/max12-912-order3-dz20-stabilizer-valuation-review-grok-20260824.md`
+(SHA-256
+`a8d7282ff98a0dfd998c52bfc60eed7e9f64ff89e6a988682ef8e80202229300`):
+**CONFIRMED `THE NONTRIVIAL ORDER-THREE k=mu=nu=0 TRAJECTORY IS EMPTY
+ON THE DEGREE-16 SPECTRAL FACE`**.
+
+- SPECTRAL/PASSPORT: on the named Faber leaf, the elementary tail identity
+  gives `deg_z(g^3-f^4)=16` and terminal nonvanishing follows from
+  `9*r8'=j/u`.  The rational function `beta=g^3/f^4` is a degree-36
+  three-point cover with exact passport
+  `(3^12)|(4^9)|(20,1^16)` and Riemann--Hurwitz defect `70=70`.
+  Finiteness comes from transitive permutation triples of the fixed passport,
+  not from a Pakovich--Zvonkin unitree list.
+- STABILIZER/DESCENT: the unique index-20 point fixes source infinity and
+  depression kills translation.  Every residual source stabilizer has order
+  `e in {1,2,4}`.  Exact Kummer covariance yields the three lattices
+  `(e,N,a,S)=(1,20,2,14),(2,10,1,4),(4,5,2,4)` and
+  `R=C*h^(-S)*v^(-N)`.  Local cancellation eliminates the apparent
+  multiplicity-three resonance; infinity then forces `h` to be a cube,
+  contradicting exact Kummer order three.
+- COPRIMALITY FIREWALL: for an actual Keller trajectory,
+  `D=f_x*g_z-f_z*g_x=j/u` is a nonzero `z`-constant.  Any
+  `gcd_z(f,g)` divides `D`, so noncoprime components seen in a projected
+  coefficient fibre are artifacts and must be saturated or labelled before
+  trajectory use; there is no common-factor Keller trajectory stratum.
+- CUSTODY/SCOPE: the coordinator reran the frozen manifest and reproduced
+  the registered replay exactly.  This excludes only the nontrivial
+  order-three `k=mu=nu=0` trajectory.  Nonzero invariant loads, the
+  order-one core, `(8,12)`, the original Taylor-boundary families,
+  maximum-twelve coverage, a counterexample, and JC2 remain open.
+
+## TD6 FULL-COKERNEL CENTERING TANGENT (2026-08-24, DIFFERENT-MODEL-CONFIRMED TRANSVERSALITY TIER)
+
+`xmodel/td6-centering-tangent-gate-20260824.md` (SHA-256
+`15b08835512839d044c049b11ba889be1fbf06c52dc9ad6487e714910ac774d3`)
+with `xmodel/td6-centering-tangent-review-grok-20260824.md` (SHA-256
+`3d33ed766a4ea02b79bee1dd13b144c2f3adbfd7a0dbb571314c36679b92d13a`):
+**CONFIRMED `CENTERING-TRANSVERSE / FULL-COKERNEL-INJECTIVE /
+NO-COMMON-LINEARIZED-ROOT / C1-PENCIL-LICENSED` IN THE REGISTERED
+NORMALIZED SECTION**.
+
+- EXACT DIFFERENTIAL: the three common-center jets survive quotient by the
+  registered regular source reparametrizations and four rectangle-preserving
+  determinant-one target gauges.  Independent differentiation of all 3,602
+  transport columns and both later parameterizations reproduces ranks
+  `3470/3602 -> 38/132 -> 38/94 -> 25/56`, with every derivative rank-change
+  flag zero.
+- FULL COKERNEL: all ten current compatibilities, including the derivatives
+  of their left-null vectors, give an exact `10x3` map of rank three and
+  kernel zero.  The augmented rank is four, so
+  `D C(v)=-C(1,1,1)` has no solution.  Independent minors, reverse-order
+  elimination, residual hashes, and both registered replays agree.
+- SCOPE/NEXT: the base control is already a nonsolution.  Injective
+  sensitivity there is not a tangent-space calculation at a solution and
+  does not kill remote or nonlinear centering roots, SP-2, a terminal class,
+  or JC2.  It licenses the exact matrix-changing `c1` pencil and a stagewise
+  exceptional-fibre atlas; it does not license a one-shot affine model after
+  nonlinear substitutions.
+
+## MAKAR-LIMANOV NEWTON-SHAPE AND MATE-RECOVERY INTAKE (2026-08-24, PRIMARY-SOURCE CONDITIONAL TIER)
+
+`xmodel/websweep-20260824T1916Z-makar-shape-recovery-audit-codex.md`
+(SHA-256
+`cf910d136d59661e646563e4eb0ec8f5c256b0780b0bb2ed6a38328ace72df4b`)
+and
+`xmodel/websweep-20260824T1916Z-properties-jacobian-mate-audit-codex2.md`
+(SHA-256
+`84f4fb2738e18b1cc34a627d19a5bf2f96b5584d9ec35ecbe082a514ad5b94e6`):
+**NEW CONDITIONAL NECESSARY CONDITIONS / NO CURRENT CAMPAIGN-FRAME
+EXCLUSION / RECOVERY DOES NOT SUPPLY MATE EXISTENCE**.
+
+- SHAPE: in Makar-Limanov's specially reduced complex-counterexample frame,
+  the ratio-two case with the stated first vertical right edge is impossible.
+  If the barred/smallest-monomial vertex is
+  `v0=D*(a,b)`, `gcd(a,b)=1`, then the number of admissible right edges is at
+  most `Omega(D)-1`.
+- PROPERTIES: conditional on the paper's shaped-counterexample setup and
+  imported resolution/recoverability inputs, the leading total degree
+  satisfies `Omega(D)>=3`, where prime factors are counted with
+  multiplicity.  The paper reports 19 surviving total degrees through 100,
+  including 72, but publishes no implementation or coverage certificate;
+  its table is not yet independently reproducible.
+- RECOVERY: if a polynomial mate already exists, it is unique modulo
+  `C[f]`, and finite declared branch/degree data can reconstruct and verify a
+  normalized representative.  The paper gives no unconditional existence
+  test, a priori mate-degree bound, or choice-independent finite algorithm
+  for arbitrary `f`.
+- TYPE FIREWALL: these Newton data are not Sigray topological degree, not
+  automatically GGV packet data, and not maximum actual partial `y`-degree.
+  They currently exclude none of `(72,108)`, residue-A, TD6, `(8,12)`, or
+  `(9,12)`.  Any client must first prove the source-normalization bridge and
+  must fail closed on unresolved symbols, table typos, and publisher-version
+  drift.  The smallest licensed software is a provenance-bearing exact row
+  checker plus bounded Faber/mate certificate packaging, not a mate finder.
