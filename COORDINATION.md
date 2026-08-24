@@ -98,7 +98,10 @@ A result may enter `PROVISIONAL` only when all of the following are recorded:
 3. frozen source/artifact hashes and a replay command when computational;
 4. producer-run attacks, sanity checks, and at least one meaningful negative
    control where the object admits one;
-5. no known contradiction with the current ledgers.
+5. for a characteristic-`p`, Witt, or `p`-adic successor digit, the exact
+   integer numerator, its divisibility on the charged predecessor scheme, and
+   the reduced integer quotient are recorded before any reduction modulo `p`;
+6. no known contradiction with the current ledgers.
 
 ## Promotion and adversarial review
 
@@ -108,6 +111,11 @@ A result may enter `PROVISIONAL` only when all of the following are recorded:
 2. **Recompute, do not defer.** Review the exact source statement, hypotheses,
    transcription, code, certificate, and conclusion as applicable. A second
    prose opinion is not a computational review.
+   For a characteristic-`p`, Witt, or `p`-adic successor residual, independently
+   reconstruct the integer quotient and compare its generated rows with the
+   exact source identity on both a symbolic control and, where possible, an
+   old-pass/new-fail negative control. A mod-`p` bracket calculation alone does
+   not review a divided carry.
 3. **Priority by exposure.** Review priority is proportional to
    `downstream fanout x centrality x fragility x rollback cost`. A claim that
    many active lanes consume outranks an isolated lemma of equal apparent
@@ -355,6 +363,12 @@ campaign from paying twice for the same failed idea.
 - Computational claims ship engines, certificates, exact replay commands,
   versions, input hashes, seeds, host, UTC times, and meaningful negative
   controls. Mod-p work records every prime.
+- A successor residual at digit `n` is typed only after an exact numerator `N`
+  is proved divisible by `p^n` on the charged predecessor scheme and
+  `N/p^n mod p` is derived with all lower-order divided carries retained. If
+  the quotient is not integral on that scheme, or generated coefficient rows
+  disagree with an exact determinant/source-identity reconstruction, the gate
+  is `TYPE-FAIL` and must not be used downstream.
 - msolve 0.10.1 characteristic-zero `-g` may return a first-machine-prime
   unit basis before rational reconstruction while printing a characteristic-0
   header. A char-0-header `[1]` is only first-prime trace evidence unless an
