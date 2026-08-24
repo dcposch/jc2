@@ -3885,3 +3885,68 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   accepting lost orbit work.  Box02 and Box03 are stopped.  No current
   mathematical target licenses expansion.  No proof or counterexample has
   been found.
+
+## 2026-08-24 13:26Z LIVE STATE
+- Evidence bank: `99ae7ecca2aedbd6a80a56b8660141fb5845af4c`, clean and pushed;
+  this block is the only post-bank append.  All 23 new manifests / 64 payload
+  entries, 29 corrected review-window records, 48 canonical hashes, and 17
+  canonical promotions passed the final independent audit.  The nested
+  `jc2-lean` submodule remains clean and synchronized at
+  `c40f83378b579a46d8a2c0172f15f502fe38ed79`.
+- OUTER LOOP: the last full all-46 blind round remains
+  `20260824T0719Z-c17bd25`; significant later evidence was synthesized in
+  `xmodel/ideation-20260824T1205Z-event-synthesis.md` (SHA-256
+  `9adbbf0326610b455497e1bbefc43933bdb5cae7e3de9bb8f4ab5128deed9834`).
+  The quiet full-round backstop remains `2026-08-24T18:29:30Z`; material
+  mathematical news fires an earlier event round.  Web sweep #8 remains the
+  last broad sweep; #9 is due by `2026-08-24T21:25Z`, with credible external
+  claims and known-actor alerts consumed immediately.
+- REVIEWED PROOF STATE: source shear plus the repaired prime-gcd and GGV `2p`
+  inputs close every maximum actual `y`-degree at most eight.  The first
+  fundamental remainder is `(6,9)` with `3|H` and common-cubic top
+  `(K^2,K^3)`.  Separately, TD6's complete fixed normalized reduced-boundary
+  family is empty.  Its smallest q-deformation `q_B=t+B*t^2+t^25` is
+  dual-confirmed empty at `B=1` and one exact adaptive value, with a
+  `B`-sensitive `t^4` residue; the one-parameter family, SP-2, and all eight
+  terminal classes remain open.  The next certified TD6 gate is
+  fraction-free `E[B]` elimination with every rank-jump stratum.
+- PROVISIONAL PROOF LANE: the `(6,9)` source-honest producer has identified
+  the unique Birch/Davenport--Stothers nonlinear component, conditionally
+  excluded its pure coefficient trajectory by a Kummer ODE plus the two
+  polynomial boundaries, and reduced the nontrivial-Kummer high-row system to
+  five coefficient variables, one essential weight-zero constant, and the
+  lower Pfaffian rows.  Full-cubic boundary reduction from one selected root
+  is explicitly stopped unless orbit degree three is proved.  This is
+  producer-only until materialization and different-model hostile review; it
+  is not yet an exclusion of `(6,9)`.
+- REVIEWED DISPROOF STATE: a hypothetical AS109 lift is locally a completed
+  Artin--Schreier torsor, but all determinant-one restricted-analytic lifts
+  of the special map lie in one near-identity symplectic gauge orbit.
+  Unrestricted completed cohomology therefore cannot distinguish a
+  polynomial lift.  Generic degree `d>=109`, the residual `A_infinity`, and
+  rational deck descent remain the global gaps.
+- PROVISIONAL DISPROOF LANE: the bounded-orbit successor has frozen an
+  all-odd-prime polar-conductor theorem for the rational cotangent basepoint.
+  It forces the canonical analytic gauge of any hypothetical polynomial lift
+  to have unbounded truncation degree; its first exact cap survives mod `p^2`
+  but is empty mod `p^3` for degree bounds `D_F=D_phi=p`.  This is isolated
+  producer evidence pending materialization and hostile review; it does not
+  exclude an unbounded polynomial lift or decide JC2.
+- ACTIVE ALLOCATION: one producer is closing the `(6,9)` triangular/Pfaffian
+  gate; one is deriving a source-quotiented TD6 jet/adjoint table and a
+  certificate-grade staged-pencil implementation.  The AS polar-conductor
+  producer is frozen for the next review slot.  Reviews remain background and
+  nonblocking; provisional descendants may proceed without waiting for
+  promotion, but no claim enters the canonical trust perimeter first.
+- CAMPAIGN GAPS/HOLDS: proof-side obligations remain actual `(6,9)`
+  lower-weight closure or TD6 global realizability, complete landing/coverage,
+  and distinct `G2-PSC` / `G2-BD`.  Disproof-side obligations remain a finite
+  polynomial lift, `A_infinity=0`, or rational deck descent.  Generic sparse
+  search, exponent rectangles, p=109 brute force, new book cells, B=168,
+  D75, unrestricted Witt depth, and AWS expansion remain stopped absent a new
+  source-derived invariant.
+- RESOURCES (`13:24Z` counters): Claude 47,374 messages / 10,925.7M total;
+  Codex/Sol 316 rollouts / 2,659.8M total; Grok 112 sessions / 187.0M
+  cumulative.  Box01 retains exactly one protected legacy
+  `build_tails43.py` core; Box02 and Box03 are stopped.  No active gate
+  licenses AWS expansion.  No proof or counterexample has been found.
