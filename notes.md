@@ -3559,3 +3559,56 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Immediate harvest triggers: D43 review verdict; typed or failed D transition;
   external identity replay/lineage change; boundary verdict `CANDIDATE` or
   `COSTUME`. Rebalance at the first decisive gate; unrelated roots continue.
+
+## 2026-08-24 04:00Z LIVE STATE
+- Basis: `1318171673a4358f2f78e0b742be43a929cc4267` (second full round,
+  post-round gates, reviews, canonical ledgers, and resource snapshot banked
+  clean and pushed before this state-only append).
+- Coordinator / ideators: `/root` coordinates. Full round
+  `20260824T0156Z-8bf25a5` used five blind all-46 scans: `/root`, Bacon,
+  Nash, Grok 4.6, and Fable. All submissions landed; 17 raw fingerprints
+  deduplicated to 15 operational mechanisms, with only `PAIR-IR` and `D-ORE`
+  forming duplicate pairs.
+- Last full ideation: packet cutoff `2026-08-24 01:56:44Z`, closed
+  `2026-08-24 02:35Z`. Quiet backstop `2026-08-24 13:56:44Z`. The subsequent
+  D/R/W/P4 results are non-echo, globally rank-changing events, so the next
+  all-46 round is event-triggered at the next research continuation rather
+  than deferred to the quiet backstop.
+- Last broad web sweep: `2026-08-23 21:25Z`, sweep #8,
+  `xmodel/websweep-2026-08-23.md`; next deadline `2026-08-24 21:25Z`.
+- Active lanes: no model research or review lane. `/root` is banking and
+  handing off only. AWS box01 retains the legacy checkpointed
+  `build_tails43.py` process, PID 130360: one of 64 cores saturated, about
+  134.6 GiB RSS, seven checkpoints / 515 MiB banked, currently in the
+  uncheckpointed `GB42` orbit. Do not stop before the next checkpoint without
+  accepting loss of about 21.5 hours of orbit work. Box02 and Box03 are
+  stopped.
+- Provisional claims: none exposed from this batch. Different-model reviews
+  confirmed the exact narrow D-transition/full-cell, receiver-separation,
+  D-state, odd-prime Witt, all-Witt control, and P4P1 compiler-interface
+  results; their explicit exclusions remain load-bearing. No result proves or
+  disproves JC2.
+- Review queue/debt: none from the current batch. P4P1 is `CONFIRMED /
+  ORIGIN-ONLY`; its zero locus is `3*alpha-2*beta=0`, so the named origin is
+  safe but nonzero graph witnesses outside that line are not covered.
+- Holds/human gates: B=168, D75, band 28 or deeper D work, new book cells,
+  another DIR/A-SCALE census, cCa6 F4, HC4 expansion, generic sparse search,
+  integral D43, public/external communication, and msolve disclosure remain
+  held. The depth-witness Lean WIP stays unmerged on
+  `wip/depth-witness-definition-layer`; `jc2-lean/master` is clean and pushed.
+- Top gaps: global `G2-PSC`, complete landing/coverage, and an absolute/cofinal
+  type ceiling; a typed global polynomial-origin source-to-receiver functor;
+  the missing full D-source `alpha_1,beta_1` state; uniform-support/degree Witt
+  descent; and characteristic-zero certificate repair where still invoked.
+- Immediate queue/triggers: (1) run the event-triggered all-46 scan and choose
+  among typed global receiver/source, full D-source typing, and bounded-
+  complexity Witt descent; do not continue a stopped representation unchanged;
+  (2) adjudicate the legacy box01 job at its next checkpoint; (3) complete web
+  sweep #9 by its deadline. The unrestricted finite-Witt branch is closed for
+  this seed; the all-Witt formula was one permitted closed-form descendant,
+  not an enumerative `W_3` search.
+- Resource snapshot (`2026-08-24 03:52Z`): Claude 47,374 messages / 10,925.7M
+  processed tokens; Codex/Sol 286 rollouts / 2,222.6M total; Grok 75 sessions /
+  126.4M cumulative. Provider accounting differs and is cache-dominated, so
+  these are usage counters, not cross-model productivity measures. AWS active
+  compute is one core on box01; Box02/Box03 compute utilization is zero.
