@@ -1,0 +1,14 @@
+AS-GAUGE-GROWTH p=3 DEPTH-6 CARTIER GATE FOR FROZEN D7 POINT
+date: 2026-08-24
+status: PRODUCER EXACT; INDEPENDENT SINGULAR REPLAY PASS; HOSTILE REVIEW PENDING
+verdict: FROZEN DEPTH-5 D7 RESIDUE IS TERMINAL MOD 729 AT EVERY CAP
+manifest_sha256: a0c7a82a55f55dba1cd66466d70933ee61533929b8377a78952ae0a7e8bd610a
+python_payload_sha256: b77499127f2f5eb9400134c7d85ba9a7befcdf7d516fc3ea127cbd5012736473
+
+replay:
+  python3 replay_n6_cartier_d7_point.py
+  Singular -q audit_n6_cartier_d7_point.sing
+  shasum -a 256 -c MANIFEST_n6_cartier_d7_point.sha256
+
+scope:
+  Pointwise residue-class terminality only; no B_(3,6)(D,D) emptiness or broader inference.

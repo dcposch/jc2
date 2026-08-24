@@ -1,0 +1,19 @@
+AS-GAUGE-GROWTH p=3 DEPTH-6 FIXED-(a,b) CAP-7 SLICE
+date: 2026-08-24
+status: PRODUCER EXACT FINITE UNSAT; HOSTILE REVIEW/CERTIFICATE PENDING
+verdict: NO DEPTH-6 CAP-7 POINT ABOVE THE FIXED a=0,b=x^5 SLICE
+report_sha256: 46b26bc9dd8438083950a1eac45ee35bf2b1d1abc710458918d6e9c3ba176027
+solver_sha256: cced10bf5080b5779743f04c69034110637a1a1f29b8761d5183ccc7d2e6c4bd
+manifest_sha256: 101735927c7f0af3098304e03e4ae443ffcb6088012fff4419ab98168097b56f
+
+replay:
+  FULL_N6=1 python3 solve_n6_d7_bx5_full_slice.py
+  python3 probe_n6_bx5_cartier_survivor.py
+  shasum -a 256 -c MANIFEST_n6_d7_bx5_full_slice_unsat.sha256
+
+scope:
+  The final 243*k,243*l digits are eliminated exactly: high P,Q support is
+  representative-invariant under cap-7 corrections, and the high-degree plus
+  Cartier rows are necessary and sufficient for bounded determinant correction.
+  This freezes only a=0,b=x^5.  It does not freeze any other first-digit
+  component, the full gauge-capped locus, or the F-only tower.

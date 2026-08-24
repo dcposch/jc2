@@ -4081,3 +4081,57 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   due `2026-08-24T21:25Z`.  Box01's protected legacy core is untouched,
   boxes02/03 remain stopped, and no current discriminator licenses AWS
   expansion.  No proof or counterexample has been found.
+
+## 2026-08-24 16:32Z LIVE STATE
+- BASIS/LIFECYCLE: charged bank and `origin/master` are both
+  `c327bdc8d02472feba42573760325099f34b8cdf`; the nested `jc2-lean` tree is
+  clean at `c40f83378b579a46d8a2c0172f15f502fe38ed79`. New reviewed artifacts,
+  canonical integration, and active producer bytes are uncommitted for the
+  next bank. Frozen reports are not mutated; review-window metadata is
+  corrected cumulatively in `xmodel/review-window-erratum-20260824-v4.md`.
+- PROMOTED TD6: the whole licensed q2 pencil
+  `q_B=t+B*t^2+t^25` is different-model confirmed empty. Exact untruncated
+  `E[B]` elimination has constant ranks
+  `3470/3602 -> 38/132 -> 38/94 -> 25/56`, 101 B-independent unit pivots,
+  and compatibility numerators `N4,N13` with an exact Bezout identity and
+  gcd one. This does not kill centering, dead stretch, other boundary jets,
+  SP-2, or JC2.
+- PROMOTED AS: exact simultaneous map/gauge minima at `p=3` are now
+  `3,5,7,7` through depth five, so the proposed linear cap law is false. The
+  minimum cap-seven residue is pointwise Cartier-terminal at depth six: its
+  nonzero `x^2y^2` residual cannot be changed by any next digit, at any cap.
+  This does not empty a depth-six system. The reviewed cap-eight point remains
+  a correct but nonminimal cyclotomic-cancellation motif.
+- PROVISIONAL CUBE CLOSURE: the frozen trajectory package at report SHA
+  `069f6280332b44d93dcad17801dc7136d4a79fb06ace101c2dce8a4e746b5e7b`
+  conditionally empties both finite-pole branches of the reviewed polynomial
+  cube-core landing, separately for `d!=0` and `d=0`. The formerly missing
+  mixed `rho3,rho4` fiber is reconstructed as a smooth genus-one curve for
+  `mu!=0` and a two-pole rational cusp for `mu=0`; both contradict the
+  one-pole terminal forms. All registered replays pass. Different-model
+  hostile review is active; arbitrary `(6,9)` remains outside this claim.
+- ACTIVE AS REDESIGN: the live counterexample compiler fixes only the degree
+  of the actual map, not the canonical gauge. At depth six and map degree
+  seven it uses 70 effective coefficients, 91 exact coefficient rows, and
+  161 assertions. A local exact Z3 discovery solve is active; SAT requires
+  independent integer replay, while UNSAT will not be promoted without a
+  checkable exhaustive/certificate route. D8 is the next theorem-consistent
+  control and D9 the first live bounded-degree candidate.
+- ACTIVE TD6 SUCCESSOR: the exact full common-centering compatibility map
+  `E^3 -> E^10` has provisional rank three and zero kernel; the earlier
+  two-dimensional kernel seen at the single `t^4` residue was a projection
+  artifact. The affine tangent equation is inconsistent, with no rank-change
+  flag. Explicit minors and final replay are being frozen; the c1-only exact
+  pencil is the smallest full nonlinear successor. No tangent, family, SP-2,
+  or JC2 exclusion is claimed.
+- OUTER LOOP/REVIEW DEBT: the cube closure, TD6 family kill, AS law
+  falsification, and fixed-map redesign trigger a new blind whole-portfolio
+  round before the quiet `2026-08-25T02:16:26Z` backstop. Its packet will
+  freeze this promoted/provisional distinction. The cube hostile review runs
+  in the background and does not block descendants. The broad web sweep #9
+  remains due by `2026-08-24T21:25Z`.
+- RESOURCES: the fixed-map D7 Z3 discovery uses one local core and about
+  4.7 GiB RSS at this snapshot; the cube Grok review is external. Box01's
+  protected legacy `build_tails43.py` core remains untouched; boxes02/03 are
+  stopped. Current gates are symbolic/compiler limited, so AWS expansion is
+  not yet licensed. No proof or counterexample has been found.

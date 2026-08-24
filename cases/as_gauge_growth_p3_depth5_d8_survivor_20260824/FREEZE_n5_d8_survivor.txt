@@ -1,0 +1,15 @@
+AS-GAUGE-GROWTH p=3 DEPTH-5 CAP-8 SURVIVOR FREEZE
+date: 2026-08-24
+status: PRODUCER EXACT; INDEPENDENT SINGULAR REPLAY PASS; HOSTILE REVIEW PENDING
+verdict: B_(3,5)(8,8) IS NONEMPTY; PREDICTED CAP-9 LAW IS FALSE
+manifest_sha256: 7cf4df1eb4427d08fc2eb6bfa665466b05c65d7b7beaa2f0ca1ebbb81fe0e16d
+python_payload_sha256: b5fb3f3e48c7193ea385293ce38bbe62219a84ebd318ce72c8f47587d3c24382
+
+replay:
+  python3 replay_n5_d8_survivor.py
+  Singular -q audit_n5_d8_survivor.sing
+  shasum -a 256 -c MANIFEST_n5_d8_survivor.sha256
+
+scope:
+  D=7 remains open; D=8 is not claimed minimal.
+  No n>=6, compatible tower, polynomial lift, no-lift, A_infinity, or JC claim.

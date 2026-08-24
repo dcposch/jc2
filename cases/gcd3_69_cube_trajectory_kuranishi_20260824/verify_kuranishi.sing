@@ -1,0 +1,191 @@
+// Exact elimination certificates for the GCD3-(6,9) cube trajectory gate.
+
+LIB "elim.lib";
+
+proc require_equal(ideal left, ideal right, string label)
+{
+  ideal lr=simplify(reduce(left,std(right)),2);
+  ideal rl=simplify(reduce(right,std(left)),2);
+  if ((size(lr)!=0)||(size(rl)!=0))
+  {
+    print("FAIL ideal equality "+label);
+    exit(1);
+  }
+}
+
+proc require_unit(ideal input, string label)
+{
+  ideal G=std(input);
+  if (reduce(1,G)!=0)
+  {
+    print("FAIL expected unit ideal "+label);
+    exit(1);
+  }
+}
+
+ring R=0,(X,Y,Z,T,u,v),(dp(4),dp(2));
+
+poly N1=729*u*X2-1458*X*Z-729*Y2;
+poly N2=-2187*v*X2-4374*u*X*Y+4374*Y*Z;
+poly N3=2*u2*X2-6*v*X*Y-4*u*X*Z-2*u*Y2+3*Z2;
+poly N4=19683*u*v*X2+13122*u2*X*Y-26244*v*X*Z
+ -13122*v*Y2-13122*u*Y*Z;
+poly N5=-729*u3*X2+2187*v2*X2+4374*u*v*X*Y+1458*u2*X*Z
+ +729*u2*Y2-4374*v*Y*Z;
+poly RES=v2*X3-u*v*X2*Y+u2*X2*Z-v*Y3+3*v*X*Y*Z
+ +u*Y2*Z-2*u*X*Z2+Z3;
+
+// Saturation away from the zero normal is covered by the three affine
+// charts X!=0, Y!=0, Z!=0.  Each chart projects to the same discriminant;
+// hence neither a coordinate boundary nor an embedded affine origin is
+// mistaken for an additional projective normal stratum.
+ideal Inormal=N1,N2,N3,N4;
+poly Delta=4*u3+27*v2;
+require_equal(eliminate(Inormal+ideal(T*X-1),X*Y*Z*T),ideal(Delta),"normal cone X-chart");
+require_equal(eliminate(Inormal+ideal(T*Y-1),X*Y*Z*T),ideal(Delta),"normal cone Y-chart");
+require_equal(eliminate(Inormal+ideal(T*Z-1),X*Y*Z*T),ideal(Delta),"normal cone Z-chart");
+
+proc check_projection_and_units(ideal II, poly expected, poly terminal, string label)
+{
+  ideal projection=eliminate(II,X*Y*Z*T);
+  require_equal(projection,ideal(expected),label+" projection");
+
+  // u!=0 and v!=0 cover the nonzero weighted-projective common point.
+  require_unit(II+ideal(RES,T*u-1),label+" resultant u-chart");
+  require_unit(II+ideal(RES,T*v-1),label+" resultant v-chart");
+  require_unit(II+ideal(terminal,T*u-1),label+" terminal u-chart");
+  require_unit(II+ideal(terminal,T*v-1),label+" terminal v-chart");
+}
+
+// d != 0, normalized to d=1 after the square-root normal rescaling.
+ideal Id=N1+320*u3*v-960*v3,
+ N2+64*u5-1440*u2*v2,
+ N3,
+ N4+160*u6-5760*u3*v2+6480*v4;
+poly Td=N5+320*u5*v-2880*u2*v3;
+poly Pd=2*u6-90*u3*v2+135*v4;
+check_projection_and_units(Id,Pd,Td,"d");
+
+// d=0.  The first nonzero high constant is unique because the retained
+// weights are 2,4,5,7,8.
+ideal I7=56*u4-1008*u*v2+729*u*X2-1458*X*Z-729*Y2,
+ 224*u3*v-336*v3+729*v*X2+1458*u*X*Y-1458*Y*Z,
+ N3,
+ 224*u4*v-1008*u*v3-2187*u*v*X2-1458*u2*X*Y
+   +2916*v*X*Z+1458*v*Y2+1458*u*Y*Z;
+poly T7=112*u6-5040*u3*v2+4536*v4-2187*u3*X2+6561*v2*X2
+ +13122*u*v*X*Y+4374*u2*X*Z+2187*u2*Y2-13122*v*Y*Z;
+check_projection_and_units(I7,u*v*(u3-6*v2),T7,"c7");
+
+ideal I5=40*u3-360*v2+243*u*X2-486*X*Z-243*Y2,
+ 40*u2*v+81*v*X2+162*u*X*Y-162*Y*Z,
+ N3,
+ 40*u3*v-80*v3-243*u*v*X2-162*u2*X*Y
+   +324*v*X*Z+162*v*Y2+162*u*Y*Z;
+poly T5=8*u5-240*u2*v2-81*u3*X2+243*v2*X2+486*u*v*X*Y
+ +162*u2*X*Z+81*u2*Y2-486*v*Y*Z;
+check_projection_and_units(I5,v*(u3-3*v2),T5,"c5");
+
+ideal I4=32*u*v-27*u*X2+54*X*Z+27*Y2,
+ 32*u3-144*v2+243*v*X2+486*u*X*Y-486*Y*Z,
+ N3,
+ 8*u4-96*u*v2-243*u*v*X2-162*u2*X*Y
+   +324*v*X*Z+162*v*Y2+162*u*Y*Z;
+poly T4=32*u3*v-64*v3+27*u3*X2-81*v2*X2-162*u*v*X*Y
+ -54*u2*X*Z-27*u2*Y2+162*v*Y*Z;
+check_projection_and_units(I4,u*(u3-18*v2),T4,"c4");
+
+ideal I2=-16*v+9*u*X2-18*X*Z-9*Y2,
+ 8*u2+27*v*X2+54*u*X*Y-54*Y*Z,
+ N3,
+ 16*u3-72*v2-243*u*v*X2-162*u2*X*Y
+   +324*v*X*Z+162*v*Y2+162*u*Y*Z;
+poly T2=16*u2*v+9*u3*X2-27*v2*X2-54*u*v*X*Y
+ -18*u2*X*Z-9*u2*Y2+54*v*Y*Z;
+check_projection_and_units(I2,u3-9*v2,T2,"c2");
+
+ideal I1=8*u-9*u*X2+18*X*Z+9*Y2,
+ -8*v+9*v*X2+18*u*X*Y-18*Y*Z,
+ N3,
+ 8*u*v+27*u*v*X2+18*u2*X*Y-36*v*X*Z
+   -18*v*Y2-18*u*Y*Z;
+poly T1=8*u3-72*v2+27*u3*X2-81*v2*X2-162*u*v*X*Y
+ -54*u2*X*Z-27*u2*Y2+162*v*Y*Z;
+check_projection_and_units(I1,u*v,T1,"c1");
+
+// With all high constants zero, these are the first possible invariant
+// target loads.  rho3 is intentionally not given a terminal-unit assertion:
+// its exact global fiber is handled by the universal two-sheet replay.
+ideal Ir1=N1+1944,N2,N3,N4;
+require_equal(eliminate(Ir1,X*Y*Z*T),ideal(v),"rho1 projection");
+require_unit(Ir1+ideal(RES,T*u-1),"rho1 resultant");
+require_unit(Ir1+ideal(N5,T*u-1),"rho1 terminal");
+
+ideal Ir2=N1,N2-5832,N3,N4;
+require_equal(eliminate(Ir2,X*Y*Z*T),ideal(u),"rho2 projection");
+require_unit(Ir2+ideal(RES,T*v-1),"rho2 resultant");
+require_unit(Ir2+ideal(N5,T*v-1),"rho2 terminal");
+
+ideal Ir3=N1,N2,N3-8,N4;
+require_equal(eliminate(Ir3,X*Y*Z*T),ideal(0),"rho3 dominant projection");
+require_unit(Ir3+ideal(RES,T*u-1),"rho3 resultant u-chart");
+require_unit(Ir3+ideal(RES,T*v-1),"rho3 resultant v-chart");
+
+ideal Ir4=N1,N2,N3,N4-52488;
+require_unit(Ir4,"rho4 impossible");
+
+// No quadratic normal direction can supply only a terminal row.
+require_unit(ideal(N1,N2,N3,N4,N5-17496),"terminal-only quadratic balance");
+
+print("PASS-GCD3-69-CUBE-KURANISHI-ELIMINATION");
+print("d_exceptional=2u6-90u3v2+135v4");
+print("d_zero_high_table=c7,c5,c4,c2,c1");
+print("all_exceptional_high_orbits=SQUAREFREE-AND-RES-NONZERO-FULL-TERMINAL-NONZERO");
+print("zero_high_target_support=rho1:v0,rho2:u0,rho3:dominant,rho4:first-common-empty");
+
+// Reconstruct the two d!=0 exceptional q-orbits.  v=1 and the irreducible
+// minpoly combine q=(45+-3sqrt(195))/2 and their cubic choices.  The normal
+// fiber has exact scheme length eight; resultant and terminal never vanish.
+ring D=(0,q),(x,y,z),dp;
+minpoly=2*q^6-90*q^3+135;
+poly DE1=729*q*x^2-1458*x*z-729*y^2+320*q^3-960;
+poly DE2=-2187*x^2-4374*q*x*y+4374*y*z+64*q^5-1440*q^2;
+poly DE3=2*q^2*x^2-6*x*y-4*q*x*z-2*q*y^2+3*z^2;
+poly DE4=19683*q*x^2+13122*q^2*x*y-26244*x*z
+ -13122*y^2-13122*q*y*z+160*q^6-5760*q^3+6480;
+poly DRES=x^3-q*x^2*y+q^2*x^2*z-y^3+3*x*y*z
+ +q*y^2*z-2*q*x*z^2+z^3;
+poly DT=320*q^5-2880*q^2-729*q^3*x^2+2187*x^2
+ +4374*q*x*y+1458*q^2*x*z+729*q^2*y^2-4374*y*z;
+ideal DI=DE1,DE2,DE3,DE4;
+ideal DG=std(DI);
+if (vdim(DG)!=8)
+{
+  "FAIL d exceptional fiber length";
+  exit(1);
+}
+require_unit(DI+ideal(DRES),"d exceptional resultant");
+require_unit(DI+ideal(DT),"d exceptional terminal");
+
+print("PASS-GCD3-69-D-EXCEPTIONAL-RECONSTRUCTION");
+print("d_exceptional_normal_fiber_length=8");
+
+// Exact localization of the mixed rho3/rho4 fiber.  Here mu=I2=6*rho3
+// and nu=I1=6*rho4.  If nu!=0, the expected relation below forces A!=0,
+// so adjoining T*A-1 loses no point of this mixed stratum.  The two ideals
+// are equal, proving reversibility of the elliptic coordinate model.
+ring M=0,(p,q,A,B,w,V,mu,nu,T),dp;
+poly ME4=-A2*q+4*A*w+8*B2;
+poly ME3=-A2*p-4*A*B*q+8*B*w;
+poly MS2=A3-4*A2*q2+48*A*B*p+16*A*q*w+32*B2*q-24*w2;
+poly MS1=-3*A2*B+3*A2*p*q+4*A*B*q2-8*A*p*w-16*B2*p-8*B*q*w;
+ideal Imixed=ME4,ME3,-3*MS2-512*mu,-3*MS1+256*nu,
+ A*V-A*w-8*B2,T*A-1;
+ideal Jmixed=9*A2*B+256*nu,72*V2-3*A3-512*mu,
+ A*V-A*w-8*B2,A2*q-4*A*w-8*B2,
+ A2*p+4*A*B*q-8*B*w,T*A-1;
+require_equal(Imixed,Jmixed,"mixed rho3 rho4 localized model");
+
+print("PASS-GCD3-69-MIXED-TARGET-FIBER");
+print("mixed_target_curve=72V2-3A3-512mu");
+print("mixed_target_localization=A-NONZERO-FOR-nu-NONZERO");

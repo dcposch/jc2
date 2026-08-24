@@ -1,0 +1,14 @@
+AS-GAUGE-GROWTH p=3 DEPTH-5 EXACT MINIMUM-7 FREEZE
+date: 2026-08-24
+status: PRODUCER EXACT; INDEPENDENT SINGULAR REPLAY PASS; HOSTILE REVIEW PENDING
+verdict: B_(3,5)(7,7) IS NONEMPTY AND REVIEWED DEPTH-4 REDUCTION MAKES 7 MINIMAL
+manifest_sha256: 42d3917672e1eb24ea390cbb24b57d40d5e1a933300ed4f2d3047910ea8bfefc
+python_payload_sha256: 6e161a0cde8387b5853dc6756ef13e44c60785f166bcdd8658a086023090924b
+
+replay:
+  python3 replay_n5_d7_minimum.py
+  Singular -q audit_n5_d7_minimum.sing
+  shasum -a 256 -c MANIFEST_n5_d7_minimum.sha256
+
+scope:
+  Exact finite-system minimum only.  No n>=6/tower/lift/no-lift/A_infinity/JC claim.

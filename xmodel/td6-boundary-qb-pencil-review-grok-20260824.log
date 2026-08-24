@@ -1,0 +1,20 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the producer report, frozen hashes, and related gates, then independently reconstruct the exact claims from the committed basis.The committed basis matches. Next I’ll load the adjoint/parent gates, freeze files, and the case programs.I’ll verify hashes, then read the case programs and parent reports so the independent reconstruction can start from the frozen artifacts.Hashes match. I’ll read the case programs and parent gates next, then start an independent exact reconstruction.I’ll rerun the registered programs for provenance, then inspect the adjoint compilers so the independent `E[B]` solver can be built separately.I’ll start the registered provenance reruns and write an independent exact engine in `/tmp`, outside the tracked tree.I’ll write the independent field, orbit, transport, and `E[B]` engine next, keeping all scratch work in `/tmp`.The independent engine passed with byte-equal transport and matching `N4`/`N13`. I’ll extract the remaining certificates and write the review.Independent reconstruction matched every load-bearing certificate. I’ll write the review with per-claim verdicts, hashes, and quarantine language.**CONFIRMED** overall, and **CONFIRMED** on all seven numbered claims. Smallest failing identity: none.
+
+The review is in `xmodel/td6-boundary-qb-pencil-review-grok-20260824.md`. Freeze hashes, both registered reruns, and an independent `E[B]` reconstruction all agree.
+
+What was checked:
+
+- Freeze from `c327bdc8d02472feba42573760325099f34b8cdf` is intact. Both registered programs exited 0; their stdout is byte-identical to the freeze (`cd8e8e07…`, `9326e843…`). The cache rebuild is provenance only.
+- A second engine (own field/orbit proofs, own two-form compilers, own `Poly`/`E[B]` GE; no import of the pencil replay or `load_cache` as the solver) rebuilt every cached section from the raw 3,602-column transport matrix. That reconstruction is byte-identical to the canonical JSON, and every later band uses only cached jets.
+- Independent elimination reproduces ranks `3470/3602 → 38/132 → 38/94 → 25/56`. All 101 normalized leads are B-independent units in the degree-18 field `E`. Homogeneous leftovers are the zero polynomial.
+- Affine rebuilds hold coefficientwise. Unreduced left-nulls recover the displayed
+  `N_4=ρ-(4720/29)B+(11364/145)B^2-(4096/145)B^3+16B^4` and
+  `N_{13}=((252-342S+144S^2-36S^3)/25)B`,
+  including every advertised numerator and syzygy digest.
+- `k` and `ρ` are units in `E`; the displayed inverse, Bezout identity, and `gcd(N_4,N_{13})=1` hold over `E[B]` and after any field extension. `B=0` and every quartic root of `N_4` fail. This is not a sampled-point argument.
+- The linear coefficient of `N_4` is the reviewed adjoint derivative `-4720/29`; the secant is `-14012/145`. Neither is used as interpolation. The polynomial solve supersedes the adjoint and two-point gates.
+
+**Promotion.** Accept as emptiness of this one licensed q2 pencil in the fixed normalized section (`NOT-SP2 / NOT-JC2 / STOP`).
+
+**Quarantine.** Common centering, dead stretch, other boundary jets, full SP-2, any terminal class, and JC2 remain open. The next honest step is the first matrix-changing common-centering pencil, then first-entering dead-stretch blocks.

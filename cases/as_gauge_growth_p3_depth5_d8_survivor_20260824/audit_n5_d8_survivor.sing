@@ -1,0 +1,32 @@
+// Independent Singular replay over Z/243Z.
+ring r=(integer,243),(x,y),dp;
+
+poly A=x+9*x^5-9*x^5*y;
+poly B=y+9*x^4+198*x^4*y+144*x^4*y^2;
+poly S=1+3*A^2+9*A^4+27*A^6+81*A^8;
+poly DA=1-3*A^2;
+poly P=A-A^3;
+poly Q=B*S;
+poly JAB=diff(A,x)*diff(B,y)-diff(A,y)*diff(B,x);
+poly JPQ=diff(P,x)*diff(Q,y)-diff(P,y)*diff(Q,x);
+
+poly expectedP=x-x^3+9*x^5-9*x^5*y-27*x^7+27*x^7*y;
+poly expectedQ=y+3*x^2*y+9*x^4+207*x^4*y+144*x^4*y^2
+               +27*x^6+189*x^6*y+135*x^6*y^2+81*x^8;
+
+if (P-expectedP!=0) { ERROR("P support mismatch"); }
+if (Q-expectedQ!=0) { ERROR("Q support mismatch"); }
+if (DA*S-1!=0) { ERROR("truncated inverse failure"); }
+if (Q*DA-B!=0) { ERROR("gauge orientation failure"); }
+if (JAB-1!=0) { ERROR("gauge determinant failure"); }
+if (JPQ-1!=0) { ERROR("F determinant failure"); }
+if (deg(A)!=6 || deg(B)!=6 || deg(P)!=8 || deg(Q)!=8)
+{ ERROR("degree assertion failure"); }
+
+print("AUDIT_PASS p=3 n=5 D=8 modulus=243");
+print("degrees A B P Q");
+deg(A); deg(B); deg(P); deg(Q);
+print("P");
+print(P);
+print("Q");
+print(Q);

@@ -409,6 +409,34 @@ provisionally upgraded the two sampled `B` values to exact elimination over
 the whole `E[B]` pencil; portable freezing and independent hostile review are
 required before that family exclusion enters this ledger.
 
+Four further hostile reviews changed the live frontier. The exact TD6
+`E[B]` elimination kills the whole licensed pencil
+`q_B=t+B*t^2+t^25`: all 101 pivots are parameter-independent units, and the
+current-band compatibility polynomials have an explicit Bezout identity.
+This is a one-pencil exclusion inside the fixed normalized section, not SP-2;
+common centering is the active matrix-changing successor.
+
+At `p=3`, depth five has exact simultaneous map/gauge minimum seven, so the
+reviewed sequence is `3,5,7,7` and the proposed linear cap law is false. The
+minimum residue is itself terminal at depth six because its nonzero
+`x^2y^2` Cartier class cannot be changed by any next gauge digit. That is a
+pointwise obstruction, not emptiness of the depth-six system. More
+importantly, the campaign corrected the search category: bounded gauge degree
+measures auxiliary representation complexity, not bounded degree of the
+actual map. The live counterexample gate now fixes only `deg(P),deg(Q)` and
+compiles the Keller tower directly, with canonical gauge growth observed but
+not capped.
+
+The polynomial cube-core trajectory producer then closed its last internal
+coverage gap. The mixed later-target fiber with both `rho3` and `rho4`
+nonzero is exactly elliptic generically and a two-pole rational cusp in the
+degenerate case; neither admits either prescribed one-pole terminal
+trajectory. Together with exact reconstructions of the other weighted strata,
+the producer conditionally empties both finite-pole branches of the reviewed
+cube-core reduction. The package is frozen and under different-model hostile
+review; arbitrary `(6,9)` and JC2 remain open. These results trigger a new
+whole-portfolio ideation round before the quiet twelve-hour backstop.
+
 ## 2026-08-23
 Foundational-floor day, then the reorg. Belyi identification of the residue-A
 genome verified (A4 passport; leverage inert). Canonical strategy correction:

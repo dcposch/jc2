@@ -1,0 +1,25 @@
+// Independent Singular replay of the first depth-six determinant digit.
+ring r=(integer,729),(x,y),dp;
+
+poly b=x^5;
+poly c=2*x^2*y;
+poly d=x*y^2+x^5+2*x^7;
+poly e=2*x+x*y+2*x^2+x^4*y+2*x^5;
+poly f=y+y^2+2*x*y+y^3+2*x*y^2+x*y^3+x^3*y^2
+       +2*x^4*y+x^6*y+x^7;
+poly g=x+x^2+2*x*y^2+2*x^2*y+2*x*y^3+x^2*y^2+2*x^2*y^3
+       +x^4*y+x^5+2*x^2*y^4+2*x^7;
+poly h=y+y^2+2*x*y+y^4+2*x*y^4+x*y^5+2*x^5*y+2*x^6*y;
+
+poly A=x+9*c+27*e+81*g;
+poly B=y+3*b+9*d+27*f+81*h;
+poly JAB=diff(A,x)*diff(B,y)-diff(A,y)*diff(B,x);
+poly R=x^10+x^8+x^7*y+x^7-x^6*y^3-x^6*y+x^5*y-x^3*y
+       +x^2*y^3-x^2*y^2+x*y^3+x*y^2+x*y-x-y^3+y^2+y+1;
+
+if (JAB-1-243*R!=0) { ERROR("depth-six residue mismatch"); }
+
+print("AUDIT_PASS frozen D7 point has Cartier-terminal depth-six row");
+print("R=(detJ-1)/243 mod 3");
+print(R);
+print("Cartier coefficient [x2y2]R=-1 mod 3");

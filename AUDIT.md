@@ -2650,3 +2650,82 @@ SUCCESSOR LICENSED`**.
   `E[B]` with printed degree bounds and every exceptional rank stratum; it
   does not kill the `B`-family, centering, dead stretch, SP-2, a terminal
   class, or JC2.
+
+## TD6 LICENSED Q2 PENCIL EMPTY (2026-08-24, DUAL-CONFIRMED FAMILY TIER)
+
+`xmodel/td6-boundary-qb-pencil-gate-20260824.md` (SHA-256
+`5e1f6b44e143360a41550ae552b20bef02325414f96c5fd469ba4d016eb5eb22`)
+with `xmodel/td6-boundary-qb-pencil-review-grok-20260824.md` (SHA-256
+`5c238f2bd3cf11422093184e1563f7671d0abd4b8f06a6fb5dfd7d380ac51319`):
+**CONFIRMED `TD6-QB-LICENSED-FAMILY-EMPTY / EXACT-E[B]-BEZOUT / NOT-SP2`**.
+
+- EXACT FAMILY: at every point of the frozen degree-18 sextic field, the
+  normalized family `p=t^15`, `q_B=t+B*t^2+t^25` has no solution for any
+  `B`, even after extending the residue field. Exact staged elimination over
+  untruncated `E[B]` has ranks
+  `3470/3602 -> 38/132 -> 38/94 -> 25/56`.
+- NO HIDDEN STRATUM: all 101 normalized leads are nonzero elements of `E`
+  independent of `B`; the pivot exceptional product is therefore one. The
+  reviewer reconstructed every consumed section from the raw 3,602-column
+  transport matrix and independently obtained zero homogeneous remainders.
+- COMPATIBILITY IDEAL: ten exact current-band left-null conditions were
+  recomputed against the original rows. In particular,
+  `N4=rho-(4720/29)B+(11364/145)B^2-(4096/145)B^3+16B^4` and
+  `N13=((252-342S+144S^2-36S^3)/25)B`. The displayed coefficient and `rho`
+  are units; an independently checked Bezout identity gives
+  `gcd(N4,N13)=1` over `E[B]` and after field extension.
+- SCOPE/NEXT: this kills exactly one licensed one-parameter q2 deformation in
+  the fixed normalized section. It does not cover common centering, dead
+  stretch, other boundary jets, SP-2, landing, any terminal class, or JC2.
+  The smallest matrix-changing successor is common centering.
+
+## AS `p=3` DEPTH-FIVE MINIMUM SEVEN (2026-08-24, DUAL-CONFIRMED FINITE-TABLE TIER)
+
+`xmodel/as-gauge-growth-p3-depth5-d7-minimum-20260824.md` (SHA-256
+`618a954ea683fd8444dafc4511c9aed708ea88459c524d747b815d48c6618f65`)
+with `xmodel/as-gauge-growth-p3-depth5-d7-minimum-review-grok-20260824.md`
+(SHA-256
+`7006d82c4f6ff9943433bb4447bb95d3f94d6a76ea28ba1088bcc9aac774621f`):
+**CONFIRMED `D_MIN(3,5)=7 / PROPOSED LINEAR CAP LAW FALSE`**.
+
+- EXACT MINIMUM: the frozen total-degree-simplex system
+  `B_(3,5)(7,7)` has an explicit point modulo 243. Independent sparse,
+  dense, SymPy, and Singular expansions reproduce both bounded gauge and map,
+  `C_3 o (A,B)=(P,Q)`, and both determinant-one identities. Reduction modulo
+  81 maps every depth-five cap-`D` point to the reviewed depth-four system,
+  which is empty for `D<=6`; hence the minimum is exactly seven.
+- LAW FALSIFIED: the reviewed minima through depths two through five are
+  `3,5,7,7`, not the proposed `(n-1)(p-1)+1`, whose depth-five value is nine.
+  The separately reviewed cap-eight producer (report/review SHAs
+  `3cca09d0c31b46ed12b8510e0d343fd097b2727e2b8ff3aef464c334d48dba6f` /
+  `2c3f961a5f0e537abef82db9243723289864d3ae901179adedaa554617d975c7`)
+  remains a correct but nonminimal cancellation motif.
+- SCOPE/NEXT: this is a minimum for a simultaneous map-and-canonical-gauge
+  cap at one prime and depth. It neither gives a compatible tower nor
+  excludes a bounded-degree map whose gauge grows. No polynomial/Tate lift,
+  `p=109`, `A_infinity`, deck-descent, or JC2 conclusion follows.
+
+## AS DEPTH-SIX CARTIER STOP FOR ONE D7 RESIDUE (2026-08-24, DUAL-CONFIRMED POINTWISE TIER)
+
+`xmodel/as-gauge-growth-p3-depth6-cartier-d7-point-20260824.md` (SHA-256
+`9bff27d0aed6294633c7e5726a7d1c0d7e0fb8a5629809790da783c62b41fea4`)
+with `xmodel/as-gauge-growth-p3-depth6-cartier-d7-point-review-grok-20260824.md`
+(SHA-256
+`99f703a8c97afde81ff41065c1f69e34b7739d321f2020ce54949ea144adf567`):
+**CONFIRMED `FROZEN D7 RESIDUE CARTIER-TERMINAL AT DEPTH SIX / NOT SYSTEM EMPTY`**.
+
+- EXACT CLASS: for the frozen depth-five minimum witness,
+  `R=(det J(A,B)-1)/243 mod 3` has `[x^2*y^2]R=-1`. Independent integer,
+  characteristic-zero, mod-3, SymPy, and Singular computations reproduce the
+  representative and residual.
+- INVARIANCE: every next digit `A+243U,B+243V` changes the residual by
+  `U_x+V_y`. In characteristic three the `x^2*y^2` coefficient of both terms
+  is zero, so no polynomial `U,V` of any degree changes this Cartier class.
+  The obstruction is invariant under changing integer representatives of the
+  same residue modulo 243.
+- SCOPE/NEXT: this one residue class has no determinant-one gauge lift modulo
+  729 at any cap. It does not empty `B_(3,6)(7,7)` or any fixed-map-degree
+  system: other depth-five residues may have zero Cartier class. The honest
+  successor is the full depth-five locus intersected with all Cartier and
+  depth-six support rows, or the direct fixed-map-degree tower with no gauge
+  cap. No all-depth, lift, `A_infinity`, deck-descent, or JC2 result follows.
