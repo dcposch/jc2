@@ -1,0 +1,23 @@
+stage transport PASS
+stage first-J PASS
+stage previous-paired PASS
+TD6-Q2-DUAL-ADJOINT: PASS
+transport_rank = 3470/3602
+first_J_rank = 38/132
+previous_paired_rank = 38/94
+current_affine_pivots_before_t4_stop = 3/56
+current_homogeneous_rank = 25/56
+residual_value = (2495634/3625)*S^0+(-4154976/3625)*S^1+(4405068/3625)*S^2+(-2488119/3625)*S^3+(761922/3625)*S^4+(-105084/3625)*S^5|(136875/29)*S^0|0
+residual_q2_derivative = (-4720/29)*S^0|0|0
+derivative_nonzero = True
+derivative.sha256 = 4c8bc517090b664f129b45b5dfabcbbcdffe6197c93d37b1b2b323fd5cb4be13
+lambda_support = 4
+lambda_prime_support = 3
+lambda0_bprime = (-209308447819087441/4020125)*S^0+(1417233355423100739/8844275)*S^1+(-1494104244675157314/8844275)*S^2+(193243767943712034/1768855)*S^3+(-366416901531876024/8844275)*S^4+(339285022405696512/44221375)*S^5|(895058125/353771)*S^0|0
+lambdaprime_b0 = (209308447164777441/4020125)*S^0+(-1417233355423100739/8844275)*S^1+(1494104244675157314/8844275)*S^2+(-193243767943712034/1768855)*S^3+(366416901531876024/8844275)*S^4+(-339285022405696512/44221375)*S^5|(-895058125/353771)*S^0|0
+dual_left_syzygy.sha256 = 9527d18e4fbd48d0e6771cb9a45e1c4ffd6e33dfdc9c5cdc052fa6e37c883272
+rank_change_flags = {'first': 0, 'previous': 0, 'current_through_stop': 0}
+verdict = Q2-TRANSVERSE-NONZERO-FIRST-DERIVATIVE
+q2_family_killed = false
+SP2_killed = false
+JC2_resolved = false

@@ -365,10 +365,49 @@ reduction modulo the full cubic without orbit degree three. Exact primary
 decomposition classifies the normalized constant-W scheme as the
 common-cubic surface plus one Davenport--Stothers curve, meeting only at the
 triple cubic. The eight high source rows integrate to five moving
-coefficients plus essential `kappa`; a pure DS source path is conditionally
+coefficients plus a weight-zero `kappa` in the chosen target pin; a later
+reviewed translation erratum shows that `kappa` is gauge and
+`C=kappa^2+mu` is invariant. A pure DS source path is conditionally
 excluded by its Kummer ODE and polynomial boundaries. This is structural
 progress, not a `(6,9)` exclusion: the lower Pfaffian/terminal rows, filtered
 component persistence, and cube mismatch remain.
+
+The aligned lower-Pfaffian successor then passed hostile different-model
+review. Four exact potentials reduce the zero rows to an invariant fibre with
+two reduced sheets. One has identically zero source bracket. The other is
+`Y^2=3X^3+4096C`; for `C!=0` its terminal differential forces a forbidden
+finite valuation, while `C=0` is zero bracket or a shifted DS trajectory whose
+terminal ODE forces the supposedly nontrivial Kummer core to be a cube. Thus
+the aligned nontrivial-Kummer branch is empty. The target-translation erratum
+was separately hostile-review confirmed: it corrects only the claim that
+`kappa` was essential and leaves every identity and this exclusion intact.
+It does not close the independent cube-core mismatch or arbitrary `(6,9)`.
+
+The cube-mismatch gate and its hostile review produced the complementary exact
+normal form. Writing `w=f^(1/6)` and retaining every Faber constant in
+`g=[H(w)]_+`, the five lower equations are triangularly equivalent to
+`r1'=...=r4'=0`, `6r5'=j/s`. A rational primitive of `dx/s` forces either
+constant `s` or `s=C0(x-a)^m`, `m>=2`. This sharply reduces the live search
+but does not exclude either `d!=0` or the `d=0` cube core; global rational and
+ramified trajectories are the active discriminator.
+
+On the disproof/control side, the first quantitative algebraic-gauge table is
+now hostile-review confirmed. At `p=3` the exact equal-cap minima through
+depth four are `3,5,7`; all carries are included, and both the registered and
+independent sparse engines agree. This is evidence for the proposed linear
+law, not an induction, a `p=109` computation, a polynomial-lift exclusion, or
+an `A_infinity` comparison. Depth five is testing cap eight against the
+required cap-nine positive control.
+
+Finally, the frozen TD6 adjoint gate identifies the smallest `q2` boundary
+jet as the sole transverse class and gives exact sensitivity
+`c'(0)=-4720/29`, with zero sensitivity on the full second-order source orbit
+and target gauges. Hostile review independently rebuilt the orbit quotient,
+dual-number elimination, varying left syzygy, ranks, residue, and two-summand
+derivative, and confirmed the scoped gate. A nonblocking successor has
+provisionally upgraded the two sampled `B` values to exact elimination over
+the whole `E[B]` pencil; portable freezing and independent hostile review are
+required before that family exclusion enters this ledger.
 
 ## 2026-08-23
 Foundational-floor day, then the reorg. Belyi identification of the residue-A

@@ -41,7 +41,60 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
-## Current event synthesis overlay (reviewed through 2026-08-24 14:03Z)
+## Current event synthesis overlay (reviewed through 2026-08-24 15:16Z)
+
+The authoritative all-avenue decision record is
+[`xmodel/ideation-20260824T1358Z-synthesis.md`](xmodel/ideation-20260824T1358Z-synthesis.md).
+The active roots remain avenues `2,3,19`: TD6 global realizability, the first
+unresolved partial-`y` pair `(6,9)`, and quantitative characteristic-`p`
+algebraic-gauge growth.  No result below proves or disproves JC2.
+
+- **The aligned nontrivial-Kummer `(6,9)` branch is empty.**  The four lower
+  Pfaffian rows have exact algebraic potentials.  Their invariant fibre has
+  two reduced sheets: a zero-bracket sheet and the elliptic sheet
+  `Y^2=3X^3+4096C`.  The terminal form excludes `C!=0` by finite-place
+  valuation and reduces `C=0` to zero bracket or the reviewed shifted
+  Davenport--Stothers ODE, which contradicts nontrivial Kummer descent.  A
+  hostile different-model review independently reconstructed the full chain.
+  A target-translation audit corrected one real bookkeeping error:
+  `a0 -> a0+q`, `kappa -> kappa-3q/2`; `kappa` is not an essential modulus,
+  while `C=kappa^2+mu` is invariant.  The correction changes no identity or
+  exclusion.  The independent cube-mismatch branch remains open.
+- **Cube mismatch has an exact Laurent gate, not yet an obstruction.**  With
+  `w=f^(1/6)` and `g=[H(w)]_+`, all constants retained, the lower equations
+  are equivalent to `r1'=...=r4'=0` and `6r5'=j/s`.  Rational exactness forces
+  nonconstant polynomial `s` to have the form `C0(x-a)^m`, `m>=2`; constant
+  `s` is the other branch.  Hostile review confirmed the Faber reconstruction,
+  target quotient, triangular determinant, and finite-pole dichotomy.  Both
+  `d!=0` and the `d=0` cube core, ramified landings, and the original terminal
+  equations remain open.  Weighted Newton--Puiseux/Kowalevski and direct
+  rational-trajectory reconstruction are the live successors.
+- **Quantitative AS growth is exact through depth four at `p=3`.**  The
+  equal-cap minima are `n2=3,n3=5,n4=7`; depth-three caps three and four and
+  depth-four caps five and six are empty, while the next cap has positive
+  cotangent.  Different-model review confirmed the integer carries and two
+  independent finite-field engines.  This supports, but does not prove, the
+  proposed law `(n-1)(p-1)+1`; depth five and an all-depth invariant remain
+  open, and no `p=109`, `A_infinity`, lift, or JC2 conclusion follows.
+- **TD6 adjoint infrastructure has exposed a genuine transverse direction.**
+  The frozen exact gate gives sole smallest boundary class `q2`, zero response
+  on the full second-order source orbit and target gauges, and
+  `c'(0)=-4720/29`.  Hostile review independently rebuilt the dual-number
+  elimination, including the varying left syzygy, and confirmed that this
+  licenses an exact compatibility polynomial but is not itself a family
+  exclusion.  Provisional exact elimination over the whole `E[B]` pencil has
+  since found constant ranks and incompatible `t^4`/`t^13` conditions, but
+  that stronger family exclusion is not promoted here until its portable
+  freeze and hostile review are complete.
+
+The next full blind whole-portfolio round is not due before
+`2026-08-25T02:16:26Z` absent a rank-changing event.  Reviews remain
+background/nonblocking; provisional descendants may run once their producer
+evidence is reasonable, but promotion remains review-gated.  The broad web
+sweep is due by `2026-08-24T21:25Z`.  AWS expansion remains stopped because
+none of the current gates is compute-capacity limited.
+
+## Prior event synthesis overlay (reviewed through 2026-08-24 14:03Z)
 
 The proof backbone remains the `td=6` global-realizability problem; the
 disproof backbone remains an exact finite polynomial AS109 lift. The current
@@ -61,7 +114,9 @@ ranked synthesis is
   mismatch; one selected boundary root does not license full-cubic reduction;
   the normalized constant-W scheme is exactly common cubic union one
   Davenport--Stothers curve; and the eight high source rows reduce to five
-  moving coefficients plus essential `kappa`. A pure DS trajectory is
+  moving coefficients plus a weight-zero `kappa` in the chosen target pin.
+  A later reviewed translation erratum shows that `kappa` itself is gauge,
+  while `kappa^2+mu` is invariant. A pure DS trajectory is
   conditionally empty, but its entry is not automatic. The active gate is the
   four lower Pfaffian rows and terminal row, componentwise with the true
   minimal boundary factor, while `delta!=0` runs separately. Our

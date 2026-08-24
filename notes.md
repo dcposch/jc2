@@ -3972,8 +3972,9 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   mismatch, type-fails full-cubic boundary reduction without orbit degree
   three, classifies the normalized constant-W scheme as common cubic plus one
   DS curve, conditionally excludes a pure DS path, and reduces the eight high
-  source rows to five moving coefficients plus essential `kappa`.  A Grok
-  hostile review is active; no `(6,9)` exclusion is promoted.
+  source rows to five moving coefficients plus a then-apparent essential
+  `kappa` in the chosen target pin.  The later reviewed translation erratum
+  supersedes that modulus wording; no `(6,9)` exclusion is promoted here.
 - PROVISIONAL `(6,9)` SUCCESSOR: independent exact work indicates that the
   four remaining zero Pfaffian rows integrate to four algebraic first
   integrals.  Kummer weights kill three constants and leave one weight-zero
@@ -4003,8 +4004,9 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   `f63bf74fd1013c74645f9f7fe9292db69199572b390b5b19d160c5ed13b373e8` /
   `5416440bc12bb50ecebfdfa520082aa9e88a26069b43deb13bdaabfcd1690503`.
   Promote only the Kummer split, full-cubic selected-boundary `TYPE-FAIL`,
-  exact common-cubic/unique-DS constant-W classification, five-plus-`kappa`
-  high-row normal form, and conditional pure-DS exclusion.  Cube mismatch,
+  exact common-cubic/unique-DS constant-W classification, target-pinned
+  five-plus-`kappa` high-row normal form, and conditional pure-DS exclusion.
+  The later translation erratum supersedes the modulus count. Cube mismatch,
   lower rows, filtered persistence, `(6,9)`, and JC2 remain open.
 - PROVISIONAL ALIGNED-BRANCH CLOSURE: exact successor work integrates the four
   zero Pfaffian rows and decomposes their Kummer-forced invariant fiber.  One
@@ -4029,3 +4031,53 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   Reviews remain nonblocking; no AWS expansion is licensed; box01's protected
   core is untouched and boxes02/03 remain stopped.  No proof or
   counterexample has been found.
+
+## 2026-08-24 15:21Z LIVE STATE
+- BASIS/LIFECYCLE: the charged bank is
+  `1e4480c14f2ab9c4145eb6f6c74f0ac348baf76a`, equal to `origin/master`;
+  the nested `jc2-lean` tree is clean and synchronized.  The completed
+  `20260824T1358Z` blind round and the reviewed gates below are being
+  integrated into the next bank.  Frozen producer/reviewer bytes are not
+  mutated; review-window discrepancies receive a successor metadata erratum.
+- PROMOTED ALIGNED `(6,9)`: the lower-Pfaffian producer/review SHAs are
+  `7671785519bf4e55b602f117740bd8d8571c6982a8916235407a2bb0a2263043` /
+  `a000619d8b5597add21716d525856c459ff57d5a2b2ab75b85de5d9d08970b27`.
+  Four exact potentials and the two-sheet invariant-fibre decomposition
+  exclude the whole aligned nontrivial-Kummer branch.  The separately
+  reviewed target-translation erratum corrects the old “essential `kappa`”
+  wording: `kappa` is gauge, `C=kappa^2+mu` is invariant, and no identity or
+  exclusion changes.  Cube mismatch and arbitrary `(6,9)` remain open.
+- PROMOTED CUBE REDUCTION: producer/review SHAs
+  `6a2799dfe46828c70462d51a842a3fc0adf0515b8ded7a576cdb837d81847d20` /
+  `2648eef3b8091970655a94743c6c181343a94534b6454f43c579b310331ba7d7`
+  give the exact Faber--Laurent system
+  `r1'=...=r4'=0`, `6r5'=j/s` and force rational nonconstant `s` to a
+  single repeated-root monomial.  This is a reduction, not an obstruction.
+  An internal worker and an external Claude lane attack global rational and
+  Puiseux trajectories independently.
+- PROMOTED AS GROWTH TABLE: producer/review SHAs
+  `bfacd9a475f8e2aa7da9d26e43785b80ff3eadd53615e4823dfe6d52fc6fd660` /
+  `fecc4e758727b540cef9951ca59162f77cb2d8ff5876132e72f6175350891919`
+  confirm exact `p=3` equal-cap minima `3,5,7` through depth four.  Depth five
+  is testing cap eight with the cap-nine positive control; a normalized
+  boundary slice is already empty, but the full boundary polynomial remains
+  open.  No all-depth law, lift exclusion, `p=109`, or `A_infinity` conclusion
+  follows.
+- TD6: the frozen adjoint gate (report SHA
+  `28a8869cf91f5e7d1e3601c52ee21742eca9187e57d7ac1065f22bcbd0ee402b`)
+  and hostile review SHA
+  `2cd542615dfcc7b15dab3796adba0c91b84dcba606da6ff442b3d69dd4fb79f9`
+  confirm sole transverse `q2`, exact `c'(0)=-4720/29`, and the necessity of
+  differentiating the normalized left syzygy.  A nonblocking exact `E[B]`
+  successor is internally audited: all 101 pivots are degree-zero units and
+  two replayed compatibilities have gcd one, provisionally killing the
+  complete licensed `q_B=t+B*t^2+t^25` family.  Portable raw rebuild/freeze
+  and a new hostile review are mandatory before promotion; SP-2 and JC2
+  remain open.
+- OUTER LOOP/RESOURCES: all internal slots are occupied by coordination,
+  TD6 freeze, AS depth five, and cube trajectories.  External Grok review and
+  Claude research run in parallel.  Next full blind scan is due no earlier
+  than `2026-08-25T02:16:26Z` absent significant news; the broad web sweep is
+  due `2026-08-24T21:25Z`.  Box01's protected legacy core is untouched,
+  boxes02/03 remain stopped, and no current discriminator licenses AWS
+  expansion.  No proof or counterexample has been found.

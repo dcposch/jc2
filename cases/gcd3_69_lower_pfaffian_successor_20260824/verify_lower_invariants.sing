@@ -1,0 +1,97 @@
+// Exact universal component decomposition for the four Kummer-forced
+// lower Pfaffian first-integral equations.
+
+LIB "primdec.lib";
+
+proc require_ideal_equal(ideal left, ideal right, string label)
+{
+  ideal lr=simplify(reduce(left,std(right)),2);
+  ideal rl=simplify(reduce(right,std(left)),2);
+  if ((size(lr)!=0) || (size(rl)!=0))
+  {
+    print("FAIL "+label);
+    exit(1);
+  }
+}
+
+ring R=0,(a0,a1,a2,a3,a4,k,m),dp;
+poly e4=64*a0*a2-16*a0*a4^2+32*a1^2-32*a1*a3*a4
+ -16*a2^2*a4-16*a2*a3^2+8*a2*a4^3+12*a3^2*a4^2-a4^5;
+poly e3=64*a0*a1-32*a0*a3*a4-32*a1*a2*a4-16*a1*a3^2
+ +8*a1*a4^3-16*a2^2*a3+24*a2*a3*a4^2+8*a3^3*a4-5*a3*a4^4;
+poly p4=3*e4+32*k*(4*a2-a4^2);
+poly p3=3*e3+64*k*(2*a1-a3*a4);
+poly p2=1152*a0^2-768*a0*a2*a4-576*a0*a3^2+192*a0*a4^3
+ +1536*a0*k-384*a1^2*a4-1152*a1*a2*a3+672*a1*a3*a4^2
+ -192*a2^3+336*a2^2*a4^2+768*a2*a3^2*a4-132*a2*a4^4
+ -512*a2*a4*k+72*a3^4-288*a3^2*a4^3-384*a3^2*k
+ +15*a4^6+128*a4^3*k-512*m;
+poly p1=96*a0*a1*a4+192*a0*a2*a3-96*a0*a3*a4^2+96*a1^2*a3
+ +144*a1*a2^2-120*a1*a2*a4^2-120*a1*a3^2*a4+21*a1*a4^4
+ +64*a1*a4*k-144*a2^2*a3*a4-48*a2*a3^3+96*a2*a3*a4^3
+ +128*a2*a3*k+48*a3^3*a4^2-15*a3*a4^5-64*a3*a4^2*k;
+ideal I=p4,p3,p2,p1;
+
+poly A=4*a2-a4^2;
+poly B=2*a1-a3*a4;
+poly w=4*a0-a3^2;
+poly C=k^2+m;
+poly EB=384*a2^3-432*a2^2*a4^2+144*a2*a4^4-15*a4^6+1024*C;
+
+// Two minimal reduced strata and the one vertical embedded associated prime.
+ideal PA=A,B,9*w^2+48*k*w-64*m;
+ideal PE=C,A,B,12*a0-3*a3^2+8*k;
+ideal PB=a3,a1,EB,48*a0-12*a2*a4+3*a4^3+32*k;
+
+list dec=primdecGTZ(I);
+if (size(dec)!=3)
+{
+  "FAIL associated-prime count";
+  exit(1);
+}
+int foundA=0;
+int foundE=0;
+int foundB=0;
+ideal primei;
+ideal x1; ideal x2;
+for (int ii=1;ii<=size(dec);ii++)
+{
+  primei=dec[ii][2];
+  x1=simplify(reduce(primei,std(PA)),2);
+  x2=simplify(reduce(PA,std(primei)),2);
+  if ((size(x1)==0)&&(size(x2)==0)) { foundA=1; }
+  x1=simplify(reduce(primei,std(PE)),2);
+  x2=simplify(reduce(PE,std(primei)),2);
+  if ((size(x1)==0)&&(size(x2)==0)) { foundE=1; }
+  x1=simplify(reduce(primei,std(PB)),2);
+  x2=simplify(reduce(PB,std(primei)),2);
+  if ((size(x1)==0)&&(size(x2)==0)) { foundB=1; }
+}
+if ((foundA!=1)||(foundE!=1)||(foundB!=1))
+{
+  "FAIL expected associated primes";
+  exit(1);
+}
+
+// PE contains PA, so V(PE) is embedded inside the zero-bracket sheet and
+// contributes no additional field-valued reduced branch.
+if (size(simplify(reduce(PA,std(PE)),2))!=0)
+{
+  "FAIL embedded-prime containment";
+  exit(1);
+}
+require_ideal_equal(radical(I),intersect(PA,PB),"minimal reduced union");
+
+// On C=0, the elliptic component specializes without division:
+// EB=(3/4)X^2(X-3a4^2), X=8a2-2a4^2.
+poly X=8*a2-2*a4^2;
+if (subst(EB,m,-k^2)-(3/4)*X^2*(X-3*a4^2)!=0)
+{
+  "FAIL C=0 factorization";
+  exit(1);
+}
+
+"PASS-GCD3-69-LOWER-INVARIANT-DECOMPOSITION";
+"minimal_reduced_components=ZERO-BRACKET-SHEET,ELLIPTIC-SHEET";
+"embedded_C_zero_component=CONTAINED-IN-ZERO-BRACKET-SHEET";
+"special_C_zero=ZERO-BRACKET-OR-SHIFTED-DS";

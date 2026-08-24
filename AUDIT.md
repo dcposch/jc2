@@ -2393,8 +2393,10 @@ COMMON-CUBIC UNION UNIQUE DS / FIVE PLUS KAPPA`**.
   exact and independently reconstructed.
 - SOURCE HIGH ROWS: in the aligned nontrivial-Kummer branch, all eight high
   source rows integrate exactly. Kummer weights and constant target gauges
-  leave five moving coefficients plus one essential weight-zero constant
-  `kappa`; a path persisting on the common component has
+  leave five moving coefficients plus one weight-zero `kappa` in that chosen
+  target pin. The later dual-confirmed target-translation erratum shows that
+  `kappa` itself is gauge and `kappa^2+mu` is invariant. A path persisting on
+  the common component has
   `f=K^2,g=K^3+kappa*K` and zero source bracket. One associated-graded common
   point does not prove such persistence.
 - CONDITIONAL DS STOP: only under pure DS entry, weighted Euler gives
@@ -2404,8 +2406,8 @@ COMMON-CUBIC UNION UNIQUE DS / FIVE PLUS KAPPA`**.
 - SCOPE/NEXT: this does not solve the four lower Pfaffian rows, terminal row,
   filtered boundary/component persistence, or cube mismatch, and does not
   exclude `(6,9)` or decide JC2. The licensed successor is precisely those
-  lower rows in the five-plus-`kappa` form, componentwise with the true
-  minimal boundary factor, while `delta!=0` runs independently.
+  lower rows in the target-pinned five-plus-`kappa` form, componentwise with
+  the true minimal boundary factor, while `delta!=0` runs independently.
 
 ## AS109 WILD-SYMPLECTIC COMPLETED-BIDISC GATE (2026-08-24, DUAL-CONFIRMED CONDITIONAL TIER)
 
@@ -2505,3 +2507,146 @@ with `xmodel/td6-boundary-q2-deformation-review-grok-20260824.md` (SHA-256
   and JC2 remain open. The licensed successor is symbolic fraction-free
   elimination over `E[B]` plus separate treatment of every pivot/rank-jump
   locus. Sampling or an adjoint shortcut alone is not a certificate.
+
+## GCD3 `(6,9)` ALIGNED LOWER-PFAFFIAN SUCCESSOR (2026-08-24, DUAL-CONFIRMED BRANCH-EXCLUSION TIER)
+
+`xmodel/gcd3-69-lower-pfaffian-successor-20260824.md` (SHA-256
+`7671785519bf4e55b602f117740bd8d8571c6982a8916235407a2bb0a2263043`)
+with `xmodel/gcd3-69-lower-pfaffian-successor-review-grok-20260824.md`
+(SHA-256
+`a000619d8b5597add21716d525856c459ff57d5a2b2ab75b85de5d9d08970b27`):
+**CONFIRMED `ALIGNED NONTRIVIAL-KUMMER BRANCH EMPTY`**.
+
+- LOWER EXACTNESS: after the independently reconstructed eight high rows,
+  the four zero lower one-forms have potentials
+  `alpha4=dI4`, `alpha3=dI3`,
+  `alpha2-(a4/2)alpha4=dI2`, and
+  `alpha1-(a3/3)alpha4-(a4/3)alpha3=dI1`. Kummer weights force
+  `I4=I3=I1=0` and leave `I2=mu`.
+- INVARIANT FIBRE: independent Singular decompositions in a different
+  monomial order, using both GTZ and SY algorithms, give exactly two reduced
+  sheets (plus one embedded prime contained in the zero-bracket sheet).
+  On `P_A`, `f=K^2+d` and
+  `g=K^3+(kappa+3d/2)K`, so the source bracket vanishes identically.
+- ELLIPTIC SHEET: `P_B` is `Y^2=3X^3+4096C`. Its terminal one-form pulls
+  back to `(7Y^2-12288C)dY/(147456X)`. For `C!=0`, exact finite-place
+  valuations force an impossible negative valuation of the polynomial core.
+  At `C=0`, the sheet is either zero bracket or the shifted
+  Davenport--Stothers path; the reviewed terminal ODE and every boundary
+  case force the nontrivial Kummer core to be a cube.
+- REPLAY/TRUST: the registered Python replay inserted rather than re-integrated
+  the high-row `b`-polynomials. The reviewer independently performed the
+  sequential integration, rebuilt the potentials and decomposition, and
+  rederived both determinants and the full valuation lattice. The shortcut
+  is therefore a coverage note, not evidence for the verdict.
+- SCOPE/NEXT: this excludes only the aligned nontrivial-cubic-Kummer branch.
+  It does not close the aligned cube core with extra constants, `delta!=0`,
+  the independent cube-mismatch branch, all of `(6,9)`, or JC2.
+
+## GCD3 TARGET-TRANSLATION ERRATUM (2026-08-24, DUAL-CONFIRMED SCOPED CORRECTION)
+
+`xmodel/gcd3-69-target-translation-erratum-20260824.md` (SHA-256
+`43fa36968bb90414748330c1b4a5d5169a0eaa21b1925623764e96204e049c78`)
+with `xmodel/gcd3-69-target-translation-erratum-review-grok-20260824.md`
+(SHA-256
+`f4cb57ca765138ed2decab01b12a7f884c37f9a847d80e90162ee751bb3df837`):
+**CONFIRMED `KAPPA GAUGE / NO MATHEMATICAL EXCLUSION CHANGES`**.
+
+- LEGAL ACTION: the target translation `(f,g) -> (f+q,g)` preserves all
+  degree pins and sends `a0 -> a0+q`, `kappa -> kappa-3q/2`. Thus
+  `q=2kappa/3` gauges `kappa` to zero. The first-gate and successor phrases
+  “essential `kappa`” and “five plus essential `kappa`” were wrong or
+  pin-dependent.
+- TRUE INVARIANTS: `I4,I3,I1` are unchanged,
+  `mu -> mu+3kappa q-9q^2/4`, and `C=kappa^2+mu` is invariant. So are the
+  elliptic coordinates `X,Y`, the curve, and its terminal form. On the
+  zero-bracket sheet, `d -> d+q` while `kappa+3d/2` is invariant.
+- EFFECT: no high-row identity, lower potential, primary component,
+  determinant, terminal ODE, valuation argument, or aligned-branch exclusion
+  fails. The clean canonical parameter is `C`, not `kappa`. Cube mismatch,
+  arbitrary `(6,9)`, and JC2 remain open.
+
+## GCD3 `(6,9)` CUBE-MISMATCH LAURENT GATE (2026-08-24, DUAL-CONFIRMED REDUCTION TIER)
+
+`xmodel/gcd3-69-cube-mismatch-gate-20260824.md` (SHA-256
+`6a2799dfe46828c70462d51a842a3fc0adf0515b8ded7a576cdb837d81847d20`)
+with `xmodel/gcd3-69-cube-mismatch-review-grok-20260824.md` (SHA-256
+`2648eef3b8091970655a94743c6c181343a94534b6454f43c579b310331ba7d7`):
+**CONFIRMED `FABER--LAURENT REDUCTION / FINITE-POLE DICHOTOMY`**.
+
+- FULL HIGH-ROW FORM: in the polynomial cube core, set `w=f^(1/6)` and
+  `g=[H(w)]_+` with
+  `H=T^9+dT^8+sum(c_j T^j)`. All nine integration constants are retained.
+  Target gauges remove `c6,c0`; for `d!=0`, convenient residual invariants
+  are `mu=8dc3-9c2` and `nu=8dc1-7c7c2`. The `d=0` quotient is separate.
+- LOWER TRIANGLE: if `H(w)-g=sum(r_n w^-n)`, exact Laurent extraction gives
+  a triangular five-row system of determinant `6^5`, equivalent to
+  `r1'=r2'=r3'=r4'=0` and `6r5'=j/s`. An independent finite-binomial Faber
+  reconstruction and reverse integration order recovered every identity.
+- RATIONAL POLES: if nonconstant polynomial `s` admits the required rational
+  primitive, it must be `C0(x-a)^m`, `m>=2`; constant `s` is the other case.
+  Simple roots, more than one distinct root, degree one, and logarithmic
+  primitives are impossible. This constrains trajectories but does not itself
+  control all coefficient-boundary poles.
+- CONTROLS/SCOPE: the regular local formal survivor is genuine. The tested
+  ordinary square/double `d`-arcs fail, a Davenport--Stothers tangent survives
+  first order, and the triple point is exceptional. Neither `d!=0`, `d=0`,
+  ramified/Puiseux common landings, an actual `(6,9)` Keller pair, nor JC2 is
+  excluded. The licensed successor is exact global rational/Puiseux
+  trajectory classification followed by reconstruction in the original rows.
+
+## AS ALGEBRAIC-GAUGE GROWTH AT `p=3`, DEPTH FOUR (2026-08-24, DUAL-CONFIRMED FINITE-TABLE TIER)
+
+`xmodel/as-gauge-growth-p3-depth4-gate-20260824.md` (SHA-256
+`bfacd9a475f8e2aa7da9d26e43785b80ff3eadd53615e4823dfe6d52fc6fd660`)
+with `xmodel/as-gauge-growth-p3-depth4-review-grok-20260824.md` (SHA-256
+`fecc4e758727b540cef9951ca59162f77cb2d8ff5876132e72f6175350891919`):
+**CONFIRMED `MINIMUM EQUAL CAPS 3,5,7 THROUGH DEPTH FOUR`**.
+
+- EXACT TABLE: on the identity branch at `p=3`, total-degree equal caps have
+  minima `n2=3`, `n3=5`, `n4=7`. At depth three, caps three and four have
+  rank/augmented-rank `15/16` and `21/22`; cap five has positive cotangent.
+  At depth four, caps five and six are empty, including a unit certificate
+  over `F_3`; cap seven has positive cotangent.
+- INDEPENDENCE: the reviewer rebuilt the commuting-variable mod-81
+  expansions, all integer carries, and the generic-simplex matrices with a
+  second sparse engine and reversed column order. A wording correction does
+  not change the certificate: `a_[x3]=0` follows from the degree cap, while
+  `b_[x^2y]=0` follows from divergence; the displayed integer combination
+  reduces to the claimed unit over `F_3`.
+- SCOPE/NEXT: the values agree with `(n-1)(p-1)+1` for these three depths but
+  do not prove the law, any `n>=5` statement, a lift or no-lift theorem,
+  `p=109`, `A_infinity`, or JC2. Depth five, cap eight versus the cap-nine
+  positive control, is the next exact discriminator.
+
+## TD6 JET-ORBIT ADJOINT GATE (2026-08-24, DUAL-CONFIRMED TRANSVERSALITY TIER)
+
+`xmodel/td6-jet-orbit-adjoint-gate-20260824.md` (SHA-256
+`28a8869cf91f5e7d1e3601c52ee21742eca9187e57d7ac1065f22bcbd0ee402b`)
+with `xmodel/td6-jet-orbit-adjoint-review-grok-20260824.md` (SHA-256
+`2cd542615dfcc7b15dab3796adba0c91b84dcba606da6ff442b3d69dd4fb79f9`):
+**CONFIRMED `Q2 TRANSVERSE / NONZERO FIRST DERIVATIVE / POLYNOMIAL
+SUCCESSOR LICENSED`**.
+
+- ORBIT QUOTIENT: the full infinitesimal reparametrization
+  `t -> t+epsilon*t^2` moves chart, `p`, and `q` by
+  `(t^2,15t^16,t^2+25t^26)`. In the fixed linear-chart section, adjoining
+  the q2-only vector raises the source-orbit rank from seven to eight, so q2
+  is the sole smallest transverse boundary slot there. Four target gauges
+  have zero Jacobian sensitivity, and `(S,D,L,A)` is rigid of rank `4/4`.
+- ADJOINT IDENTITY: exact dual-number elimination has ranks
+  `3470 -> 132`, `38 -> 94`, `38 -> 56`, and current homogeneous rank
+  `25/56`, with no first-order rank flag. Differentiating the normalized left
+  syzygy gives
+  `c'(0)=lambda0^T b'(0)+lambda'(0)^T b0=-4720/29`. The frozen-left-kernel
+  shortcut is false (`lambda'` has support three), and the old secant
+  `-14012/145` is not the derivative.
+- INDEPENDENCE: the reviewer wrote separate two-form compilers, dual-number
+  arithmetic, and Dual Gaussian elimination, reproduced the ranks, residue,
+  derivative, syzygy digest, orbit/gauge controls, and the counterexample to
+  freezing `lambda`. Both registered replays also matched byte-for-byte.
+- SCOPE/NEXT: a nonzero derivative at an already inconsistent point proves
+  only that the obstruction moves. It licenses exact elimination over
+  `E[B]` with printed degree bounds and every exceptional rank stratum; it
+  does not kill the `B`-family, centering, dead stretch, SP-2, a terminal
+  class, or JC2.

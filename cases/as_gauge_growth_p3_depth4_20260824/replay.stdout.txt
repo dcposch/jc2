@@ -1,0 +1,152 @@
+{
+  "aws": false,
+  "cotangent_positive_controls": {
+    "2": {
+      "depth": 2,
+      "determinant_one": true,
+      "equal_cap": 3,
+      "first_degree": 3,
+      "gauge_degree": 1,
+      "modulus": 9,
+      "second_degree": 3
+    },
+    "3": {
+      "depth": 3,
+      "determinant_one": true,
+      "equal_cap": 5,
+      "first_degree": 3,
+      "gauge_degree": 1,
+      "modulus": 27,
+      "second_degree": 5
+    },
+    "4": {
+      "depth": 4,
+      "determinant_one": true,
+      "equal_cap": 7,
+      "first_degree": 3,
+      "gauge_degree": 1,
+      "modulus": 81,
+      "second_degree": 7
+    }
+  },
+  "depth_4_survivor_below_7": false,
+  "depth_four_top_coefficients": {
+    "5": {
+      "bracket_x4_plus_product_x5y_mod_3": 0,
+      "degree": 5,
+      "degree_bridge": {
+        "degree": 5,
+        "first_divergence_x2_is_b_x2y": true,
+        "first_divergence_x4_after_forced_rows": 0,
+        "forced_degree_a_at_most": 2,
+        "forced_degree_b_at_most": 3,
+        "frobenius_top_degree": 9,
+        "p2_first_cap_degree_a_at_most": 3,
+        "p3_first_x7_is_minus_c_x5": true
+      },
+      "empty": true,
+      "first_cap_x7_forces_c_x5": 0,
+      "first_divergence_x2_forces_b_x2y": 0,
+      "first_divergence_x4_exact_carry": 0,
+      "forced_degree_a_at_most": 2,
+      "forced_degree_b_at_most": 3,
+      "forced_second_coordinate_x6y_digit": 1,
+      "unit_certificate_Qrow_minus_detrow_minus_b_x2y": 1
+    },
+    "6": {
+      "bracket_x4_plus_product_x5y_mod_3": 0,
+      "degree": 6,
+      "degree_bridge": {
+        "degree": 6,
+        "first_divergence_x2_is_b_x2y": true,
+        "first_divergence_x4_after_forced_rows": 0,
+        "forced_degree_a_at_most": 2,
+        "forced_degree_b_at_most": 4,
+        "frobenius_top_degree": 12,
+        "p2_first_cap_degree_a_at_most": 4,
+        "p3_first_x7_is_minus_c_x5": true
+      },
+      "empty": true,
+      "first_cap_x7_forces_c_x5": 0,
+      "first_divergence_x2_forces_b_x2y": 0,
+      "first_divergence_x4_exact_carry": 0,
+      "forced_degree_a_at_most": 2,
+      "forced_degree_b_at_most": 4,
+      "forced_second_coordinate_x6y_digit": 1,
+      "unit_certificate_Qrow_minus_detrow_minus_b_x2y": 1
+    }
+  },
+  "depth_three_frozen_control_recovered": {
+    "augmented_rank": 13,
+    "coefficient_rank": 12,
+    "inconsistent": true,
+    "rows": 14,
+    "variables": 20
+  },
+  "depth_three_full_affine_certificates": {
+    "3": {
+      "affine_dimension_if_consistent": -1,
+      "augmented_rank": 16,
+      "coefficient_rank": 15,
+      "degree": 3,
+      "inconsistent": true,
+      "particular_exists": false,
+      "rows": 62,
+      "variables": 20
+    },
+    "4": {
+      "affine_dimension_if_consistent": -1,
+      "augmented_rank": 22,
+      "coefficient_rank": 21,
+      "degree": 4,
+      "inconsistent": true,
+      "particular_exists": false,
+      "rows": 89,
+      "variables": 30
+    },
+    "5": {
+      "affine_dimension_if_consistent": 14,
+      "augmented_rank": 28,
+      "coefficient_rank": 28,
+      "degree": 5,
+      "inconsistent": false,
+      "particular_exists": true,
+      "rows": 117,
+      "variables": 42
+    }
+  },
+  "exact_equal_cap_minima": {
+    "depth_2": 3,
+    "depth_3": 5,
+    "depth_4": 7
+  },
+  "gauge_elimination": {
+    "finite_system": "F-only; displayed gauge digits are canonical",
+    "first_coordinate": "A-A^3=P",
+    "identity_branch_unique": true,
+    "orientation": "C_3 o Phi_F = F",
+    "second_coordinate": "B=Q*(1-3*A^2)"
+  },
+  "jc2_inference": false,
+  "p109": false,
+  "polynomial_lift_inference": false,
+  "proposed_law_depth_4": "SURVIVES-THIS-GATE",
+  "rectangles": false,
+  "schema": "as-gauge-growth-p3-depth4-v1",
+  "universal_mod_81_expansions": {
+    "determinant_mod_81": true,
+    "first_coordinate_mod_81": true,
+    "second_coordinate_mod_81": true
+  }
+}
+PASS-AS-GAUGE-GROWTH-P3-DEPTH4
+gauge_variables=ELIMINATED-BY-UNIQUE-AS-HENSEL-ROOT
+depth_2_exact_min_equal_cap=3
+depth_3_exact_min_equal_cap=5
+depth_4_D5=EMPTY
+depth_4_D6=EMPTY
+depth_4_exact_min_equal_cap=7
+depth_4_below_7_survivor=false
+growth_law_beyond_depth_4=UNPROVED
+polynomial_lift_inference=false
+jc2_inference=false
