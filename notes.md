@@ -3481,3 +3481,35 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   with the required nonautomorphic Keller provenance would be a disproof lead;
   failure to algebraize those two families would not establish the bounds or
   prove JC2. Source, `G2-PSC`, landing/coverage, and type-control gaps remain.
+
+## 2026-08-24 00:35Z LIVE STATE
+- Basis: `2386780cfe436da2d9c406d2f53f4baf30d10af9` (clean immediately
+  before this state-only append).
+- Coordinator / ideators: `/root` coordinates; first full-round roster is
+  `/root`, `compute_audit`, `strategy_audit`, `outerloop_critic`, plus one
+  independent Grok CLI lane.
+- Last full ideation: none under outer-loop v2 (OVERDUE); first round starts
+  immediately after its packet is sealed. Next deadline: round close + 12h.
+- Last broad web sweep: `2026-08-23 21:25Z`, sweep #8,
+  `xmodel/websweep-2026-08-23.md`; next deadline `2026-08-24 21:25Z`.
+- Active lanes: none. box01 has no msolve/fc1 processes; Box02 and Box03 are
+  stopped.
+- Provisional claims: `D43-NF-FID` — `MOD-p`, `PRODUCER-CHECKED/PROVISIONAL`:
+  recovered 218-row presentation agrees at both primes and all 184 source-to-
+  D23 normal-form traces replay at p=105337; parents are the promoted D23/D25
+  modular artifacts; no descendants; hostile different-model review due.
+- Review queue/debt: `D43-NF-FID` (ordinary, due by first-round close). The
+  SuperMind/Guo external bound-125 claims are `DRAFT/UNVERIFIED`, not campaign
+  claims; replay and provenance crosswalk are intake tasks, not promotions.
+- Holds/human gates: B=168 test funded but held for explicit go; external
+  communication/public-record changes and msolve upstream disclosure remain
+  human decisions; depth-witness Lean WIP is preserved on a remote branch but
+  not merged to public `jc2-lean/master` pending fidelity/publication review.
+- Top gaps: `APPROACHES.md` avenue map; `ladder/REDUCTION.md` for `G2-PSC`,
+  landing/coverage, `G2-BD`, and type/td control; `AUDIT.md` for the reopened
+  cCa/R1 characteristic-zero certificates and evidence boundaries. D43 still
+  lacks a common integral presentation and Hensel/flatness bridge.
+- Immediate queue/triggers: run full-spectrum ideation on all 46 avenues using
+  the msolve correction, corrected G2 map, D43 fidelity result, and sweep #8
+  A1/A2 evidence; synthesize/deduplicate; then launch the highest-information
+  reversible lanes with review in parallel.
