@@ -23,9 +23,10 @@ w.r.t. the convention that (0,0) always belongs to the Newton polygon);
 GB = [1] mod p  =>  strong evidence the reduced case is empty (theorem-grade
 requires an exact characteristic-zero cofactor or equivalent certificate;
 mod-p emptiness for finitely many primes is evidence only).  With msolve 0.10.1,
-`-g` on a characteristic-zero input prints the first-machine-prime basis, so a
-char-0 header followed by `[1]` is also modular trace evidence, not a Q
-certificate.
+the characteristic-zero `-g` unit-basis path can return the first-machine-prime
+`[1]` before rational reconstruction, so a char-0 header followed by `[1]` is
+also modular trace evidence, not a Q certificate.  Successful non-unit runs
+continue through reconstruction.
 Bracket sign convention: [P,Q] := P_x Q_y - P_y Q_x; a solution of the opposite
 convention corresponds to swapping (P,Q), so emptiness is convention-independent.
 

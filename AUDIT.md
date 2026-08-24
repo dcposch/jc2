@@ -1,4 +1,11 @@
-# Soundness audit — emptiness of GGV Prop 4.3, subcase (2) (the (8,28) family)
+# AUDIT.md — campaign evidence and trust-boundary ledger
+
+This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
+`(8,28)` family, and now carries promoted campaign claims and corrections. It
+is not a live queue or avenue-ranking document; see `COORDINATION.md` and
+`APPROACHES.md` for those roles.
+
+## Founding audit — GGV Proposition 4.3 subcase (2), the (8,28) family
 
 > **SUPERSEDING EVIDENCE ERRATUM (2026-08-23).** On a characteristic-zero
 > input, msolve 0.10.1's `-g` **unit-basis short circuit** can print `[1]`
@@ -14,17 +21,16 @@
 >
 > The generic chart `chartG` remains an exact internal theorem because
 > `jc72108/systems/open_8_28_c2_chartG.q.ms` itself contains the generator
-> `-1`; its
-> one-term certificate is independent of msolve.  No rational cofactor is
-> archived for `cCa2` or `cCa6`, so the campaign's own three-stratum
+> `-1`; its one-term certificate is independent of msolve.  No rational
+> cofactor is archived for `cCa2` or `cCa6`, so the campaign's own three-stratum
 > characteristic-zero proof is incomplete.  Finitely many modular unit
 > ideals do not repair that gap without an effective bad-prime bound or a
 > reconstructed rational certificate.  Separately, the full `(72,108)`
 > exclusion retains exact characteristic-zero support from the independently
 > replayed Helali and Suzuki artifacts documented in `jc72108/CROSSCHECK.md`
 > and retained in `archive/crosscheck.tgz`; inference from those explicit
-> systems to the degree family remains conditional on the GGV-Horruitiner reduction,
-> normalization, and transcription bridge.
+> systems to the degree family remains conditional on the GGV-Horruitiner
+> reduction, normalization, and transcription bridge.
 
 Audited claim (2026-08-01): **Subcase (2) of Proposition 4.3 of
 Guccione–Guccione–Valqui/Horruitiner (arXiv:2204.14178) — the (8,28) family,
@@ -1258,12 +1264,13 @@ families and the source, `G2-PSC`, landing, off-axis, and type-provenance gaps
 remain. TIER: census EXACT/book-relative; the convergence claim is a
 single-model lead assessment, not a stopping rule or promoted reduction.
 
-## CANONICAL STRATEGY MAP — G2 SPLIT AND ARROW CORRECTION (2026-08-23)
+## DATED STRATEGY-STATUS CORRECTION — G2 SPLIT AND ARROWS (2026-08-23)
 
 This entry explicitly supersedes every overloaded `G2`, `KJN <=> RPMC`, and
 `UCD-A-min <=> A-SCALE` reading in the same-day roadmap entries above. It does
 not retract their exact local identities; it corrects their global strategic
-interpretation and status.
+interpretation and status. The current detailed dependency theorem is
+`ladder/REDUCTION.md`; this entry records the evidence/status correction.
 
 - **`G2-PSC` (packet/sheet compatibility)** is the missing global theorem
   transporting a selected GGV packet/corner, with provenance, to a specified

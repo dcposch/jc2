@@ -1,28 +1,39 @@
 # PROGRESS.md — daily campaign log
 
-One entry per day, newest first. Coordinator appends the day's entry at end of
-day (see COORDINATION.md). Detail lives in notes.md (tick-level) and AUDIT.md
-(promotion ledger); this file is the digest.
+One derived entry per day, newest first. The coordinator updates the current
+day or inserts the completed day directly below this preamble (see
+`COORDINATION.md`). Detail lives in `notes.md` (tick-level) and `AUDIT.md`
+(promotion ledger); historical entries are not live policy or queue state.
 
 ## 2026-08-23
 Foundational-floor day, then the reorg. Belyi identification of the residue-A
-genome verified (A4 passport; leverage inert). Both foundational walls driven
-through chains of exact theorems to one terminal conjecture each: G5 = KJN <=
-RPMC <=> PC <=> DIR (intersection retention; equality at 4/3 on the filed
-root); G2 = UCD <= UCD-A-min <= A-SCALE (conductor/scale bound). Unrestricted
-unification refuted by an explicit Henon automorphism tower (kappa=42*2^r at
-td=1; dual-confirmed); walls proved independent globally AND at the germ level
-(different/contact ledger). Truth test: DIR neutral, A-SCALE ~0.40 with the
-campaign's only live counterexample-tower signal; both leads gated by ONE
-question — does the formal carrier algebraize to a Keller polynomial pair?
+genome verified (A4 passport; leverage inert). Canonical strategy correction:
+the claim that both foundational walls were exactly reduced to one terminal
+conjecture each is withdrawn. `G2-PSC` remains a separate global gap: no theorem
+transports the GGV packet/corner, with provenance, to a decorated Sigray pole
+tree with the fidelity required by the books. After residue-A is reached, the
+bounded-delay route is only the one-way sufficient chain
+`A-SCALE => UCD-A-min => G2-BD`. On the degree side the correct local chain is
+`DIR <=> PC <=> RPMC => KJN`; KJN gives the type-relative ceiling
+`td <= C alpha beta`, not an absolute/cofinal bound without independently
+bounded type provenance. The explicit Henon tower (kappa=42*2^r at td=1) is a
+dual-confirmed refutation of unrestricted UCD/K2C only. The formal countermodels
+and different/contact comparison are single-model decisive partial, not a
+promoted global or germ-level independence theorem. DIR remained neutral and
+A-SCALE supplied a live formal counterexample-tower lead, but the two named
+families do not constitute one exhaustive algebraization gate: algebraizing a
+suitable nonautomorphic Keller realization would be a disproof lead, while
+failure to algebraize those families would not prove the bounds or JC2.
 Sharpest probes: fully-reconstructed D43 family NONEMPTY mod p at B=84
 (dual-confirmed; carrier survives depth 43, no first depth kill; ell+ >= 37);
-char-0 lift screen passes p^2 with Jacobian rank 131 exact (Hensel certificate
-still open — band checkpoints recovered from box01, stage-2 completion lane
-running). B=168 scale test funded (held). REORG: repo renamed jc2, docs split
-into ladder/ + jc72108/ + papers/ + avenues/, root = 5 canon docs,
-model-agnostic COORDINATION.md + generic lane runner; pushed. Sol-as-coordinator
-test prepped. Token ledger to date (exact, summed from the CLIs' own session
+char-0 lift screen passes p^2 with Jacobian rank 131 exact. The recovered
+modular presentation's source/NF fidelity is closed at both primes; a common
+integral presentation, full p^2 replay, dimension/flatness, and Hensel
+certificate remain open. B=168 scale test funded (held). REORG: repo renamed
+jc2, docs split into ladder/ + jc72108/ + papers/ + avenues/, with six
+top-level campaign documents, model-agnostic `COORDINATION.md`, and a generic
+lane runner; pushed. Coordinator handoff completed. Token ledger to date
+(exact, summed from the CLIs' own session
 counters via ops/tokens.py, campaign-scoped by project/cwd, all-time): Claude
 37.4M output + 7.7M fresh input + 738.6M cache-write + 10,088M cache-read =
 10.87B processed (93% cache-reads); Codex/Sol 10.6M output (6.2M reasoning) +

@@ -1726,9 +1726,11 @@ runs/leaf12_*.out, runs/r1_12leaves_calibrate.log):
 
 CORRECTED EVIDENCE TIER: the leaf12_ZU char-0-header `[1]` is a
 first-prime trace, not a proof of ZU emptiness over Qbar.  ZZ still has an
-exact origin point; no characteristic-zero conclusion is drawn from the
-printed 121-element or unit bases without an independently exact witness or
-certificate.
+exact origin point.  The successful non-unit UU run is not affected by the
+unit-specific short circuit: its 121-element basis was rationally
+reconstructed and retains its Qbar-nonemptiness meaning within engine trust.
+Thus ZZ and UU are decided in characteristic zero, while neither mixed-leaf
+emptiness claim has an exact rational certificate.
 
 MULTI-PRIME SWEEP (13.6 protocol, good_primes walk; same 6 fresh
 primes 109537, 165313, 177409, 188833, 200257, 225961; ~1 s each):

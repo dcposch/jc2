@@ -12,9 +12,9 @@ campaign to settle the question.
 - **Multi-model research.** Frontier AI models work as peer co-researchers
   under a common protocol: any model can coordinate, implement, or review, and
   no result is promoted until it survives hostile review by a model other than
-  the one that produced it. `AUDIT.md` records every claim with its evidence
-  tier and review chain; `APPROACHES.md` maps the avenues; `COORDINATION.md`
-  defines the protocol.
+  the one that produced it. `AUDIT.md` records promoted and load-bearing claims
+  with their evidence tiers and review chains; `APPROACHES.md` maps the
+  avenues; `COORDINATION.md` defines the protocol.
 - **Software as a first-class citizen.** The fleet continuously improves its
   own software. Heavy computations run on cloud servers. Every mathematical
   claim comes with replayable artifacts. Key results are machine-verified in

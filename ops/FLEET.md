@@ -54,10 +54,15 @@ sg-09ffa8932558f0a79 (profile `personal`).
   only then escalate to instance/network debugging.
 
 ## Run conventions (remote)
-- Launch every lane orphan-safe and self-recording:
+- The minimal process-control recipe below is for legacy screening only; it is
+  not evidence-grade because it omits the full metadata ledger. Launch every
+  such lane orphan-safe and self-recording:
     nohup sh -c "timeout 43200 msolve -g 2 -t 8 -f X.ms -o out/X.out; \
       echo \"LANE X: rc=\$? size=\$(wc -c < out/X.out | tr -d ' ') \
       \$(date +%H:%M)\" >> lanes.log" >/dev/null 2>&1 &
+- For evidentiary work, use a route-specific hardened wrapper that enforces the
+  characteristic-zero caveat and records every field in the metadata rule
+  below. Do not promote output from the minimal recipe.
 - 0-byte .out = still running or timeout (check lanes.log rc), NEVER
   read it as a verdict (R6 §19.2 hygiene).
 - Ship work as files via scp (scp-script pattern), not long inline ssh
@@ -65,7 +70,10 @@ sg-09ffa8932558f0a79 (profile `personal`).
 - Threads: -t 8 on Box02 (128 cores), -t 2..4 on box01.
 - Caps: 43200 s default; raise only with a reason.
 
-## Current standing jobs (2026-08-13)
+## Historical job snapshot (2026-08-13; never live state)
+
+This section is incident provenance only. The newest `LIVE STATE` block in
+`notes.md` and direct process checks determine current jobs.
 - Box02 ~/res32: 6 nolog screens (DECISIVE for residue-A), 4 plain/ctl0
   screens, 3 stuck7 farm cores; lanes.log self-records.
 - Box02 ~/jc72108 (2026-08-19 restart): 3 ROW22R-B2 decisive reduced

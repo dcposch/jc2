@@ -475,6 +475,10 @@
   cert (unknown degree). Parallel: td-11 OPEN-residue (NF-Z-dagger) + td-13 13-2b recon.
 
 ## STRATEGY (standing, DC 2026-08-16 — loop/workflows read this)
+> Historical policy snapshot, retained as provenance. Live roles, gates,
+> clocks, allocation, and queue ownership are superseded by `COORDINATION.md`
+> and the newest `LIVE STATE` block near the end of this file.
+
 WIN CONDITION: we win the JC2 proof race by using our full resources more
 completely and more creatively than anyone else: all three frontier models
 (Fable + GPT-5.6 Sol + Grok 4.6) across EVERY role — math ideation, primary
@@ -563,7 +567,7 @@ needing Fable-tier judgment mid-stream); (c) every ideation/adjudication
 round remains Sol-first; (d) target: comparable token spend Fable vs Sol
 -- check the balance at each ideation round.
 
-### Lane isolation rule (2026-08-22, after the ori config collision)### Lane isolation rule (2026-08-22, after the ori config collision)
+### Lane isolation rule (2026-08-22, after the ori config collision)
 `ori codex` MUTATES the shared ~/.codex/config.toml on every invocation
 (observed twice: stealth/ox-alpha, then meta/muse-spark-1.2-contributor --
 the second slug suggests ori rotates/repoints stealth models; flag to DC).
@@ -594,7 +598,7 @@ live assignment = the symplectic-residues experiment (APPROACHES top-3
 running) decides -- Grok right => promote Grok toward co-researcher;
 Sol right => Grok stays ideas+reviewer.
 
-### Lean delegation (DC ratified 2026-08-19): Sol implements, Grok reviews### Lean delegation (DC ratified 2026-08-19): Sol implements, Grok reviews### Lean delegation (DC ratified 2026-08-19): Sol implements, Grok reviews### Lean delegation (DC ratified 2026-08-19): Sol implements, Grok reviews
+### Lean delegation (DC ratified 2026-08-19): Sol implements, Grok reviews
 Lean formalization is delegated to Sol (primary implementer, codex lanes,
 state on disk) + Grok (hostile semantic-fidelity review of every Challenge
 statement vs the informal source). Rationale: the Lean kernel is the free
@@ -602,7 +606,7 @@ ground-truth verifier for proofs; the only Fable-tier risk is Challenge
 semantic drift, covered by the Grok review. Fable's role: orchestration,
 task specs, final statement sign-off only. Applies to vertex-gap onward.
 
-### Software doctrine (DC, 2026-08-18): first-class citizen### Software doctrine (DC, 2026-08-18): first-class citizen### Software doctrine (DC, 2026-08-18): first-class citizen### Software doctrine (DC, 2026-08-18): first-class citizen
+### Software doctrine (DC, 2026-08-18): first-class citizen
 Software upgrades are a FIRST-CLASS CITIZEN of the campaign, not a daily
 afterthought. Default posture: aggressive parallelization + acceleration.
 Concretely: (a) when a computation is projected > ~2h, ALWAYS ask whether an
@@ -3373,7 +3377,7 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   ~14:25 handover note + this entry's "next bounded move" + Grok-review of the
   d43int trace result if promoted.
 
-## 2026-08-23 ~23:30 CHARACTERISTIC-ZERO EVIDENCE CORRECTION (supersedes, does not erase, historical entries)
+## 2026-08-23 23:30Z CHARACTERISTIC-ZERO EVIDENCE CORRECTION (supersedes, does not erase, historical entries)
 - On characteristic-zero input, msolve 0.10.1 `-g` can short-circuit when the
   first machine-prime basis is `[1]`, returning before
   CRT/rational reconstruction while the output header still says
@@ -3391,8 +3395,8 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   The campaign's own three-chart proof of subcase (2) is incomplete.  The full
   `(72,108)` exclusion is nevertheless supported by the separately replayed
   exact Helali/Suzuki artifacts in `archive/crosscheck.tgz`, conditional on the
-  faithful normalization/transcription and the exhaustive GGV-Horruitiner Proposition
-  4.3 reduction.  This is not a proof of JC2.
+  faithful normalization/transcription and the exhaustive GGV-Horruitiner
+  Proposition 4.3 reduction.  This is not a proof of JC2.
 - Systemic inventory: 105 archived outputs have both a characteristic-zero
   header and `[1]` (96 conjE files and 9 other runs).  `CERT-UPGRADE.md` gives
   an exact human-readable certificate for the conjE `(i,ell)=(1,1)` B-family;
@@ -3460,3 +3464,20 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
      boundary identity), stage-2 integral re-emission, B=168 (funded, HELD).
 - HANDOVER COMPLETE: outgoing coordinator's loop STOPPED this tick. Sol
   coordinates per COORDINATION.md; Fable available as lane/reviewer on request.
+
+## 2026-08-23 23:50Z CANONICAL STRATEGY CORRECTION (supersedes roadmap readings; historical entries retained)
+- The same-day claims that two foundational walls had each reached one exact
+  terminal conjecture, were proved independent globally/at the germ, or shared
+  one exhaustive algebraization gate are withdrawn. `G2-PSC` remains the
+  separate global GGV-packet/corner -> decorated-Sigray transport/fidelity gap.
+  A pure Sigray architecture may bypass it only by not using GGV data as input.
+- The scoped local maps are one-way where shown:
+  `A-SCALE => UCD-A-min => G2-BD` and
+  `DIR <=> PC <=> RPMC => KJN`. KJN yields only
+  `td <= C alpha beta` at a provenanced type; absolute/cofinal control still
+  needs an independent bounded type menu and provenance theorem.
+- The local bridge and formal countermodels are single-model decisive partial,
+  not promoted independence results. Algebraizing either named formal family
+  with the required nonautomorphic Keller provenance would be a disproof lead;
+  failure to algebraize those two families would not establish the bounds or
+  prove JC2. Source, `G2-PSC`, landing/coverage, and type-control gaps remain.

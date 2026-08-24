@@ -44,7 +44,7 @@ single-model decisive partial unless separately promoted.
 
 1. Three independent surveys (Sol 48 entries, Grok 40, Fable 18) merge into **46 distinct top-level approaches**; every row traces to at least one input.
 2. All three agree the tried core — GGV corner farm, Sigray sheet books, formal-germ D-series — is a necessary-condition mill stuck on global source/transport and complete landing/coverage, plus no absolute/cofinal topological-degree ceiling. The old “same two gaps” phrasing overloaded `G2-PSC` with the separate route-specific `G2-BD`; see the correction above.
-3. The strip/residue-ODE result (S5–S6/G3) is the campaign's one real theorem; scope-limited, and the ODE rigidity has Żołądek A.7 priority.
+3. The strip/residue-ODE result (S5–S6/G3) was the surveys' one highlighted general theorem in the tried core; it is scope-limited, and the ODE rigidity has Żołądek A.7 priority.
 4. The implication ladder above JC2 (Mathieu, GMC n≥3, PC(2), JC(n≥3), Hessian n≠4) is dead post-July-2026 — full consensus; Fable's "no n=2 traction anywhere" matches Grok's "documented massacre".
 5. Char-p: Mondello verified, W2 Witt obstruction total on the searched stratum (1,152/1,152); the odd-prime/other-support refinement is the agreed open extension (F16 = S31's 5/10 = G17(i)–(iii)).
 6. Promise scores are incommensurable across surveys (see semantics note above); this document flags disagreements rather than averaging them.
