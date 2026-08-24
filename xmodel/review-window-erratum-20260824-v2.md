@@ -38,8 +38,10 @@ verdict changes.
 | `as109-partial-y-history-review-grok-20260824` | `f9d547f0f17dc3557ed8edce19912b4930dc2125542c7f9b3e4782c554a03afd` | `8f492d348d73b3710bcb7d72de6c09ffd5c278d84d63cc693447bef4af81a6b3` | `12:05:00--12:27:42Z` | `12:15:36--12:31:30Z` |
 | `as109-wild-symplectic-conductor-review-grok-20260824` | `a59c7ccbf39971ad7ab47f8e865926c93e4ac9d46305be076f4bd0193b2b1a9a` | `93efcce92f0c7139f2d0954f63f0d5833160c62e38bc1f4e2d0a996c0e0f43cc` | `12:32:00--12:50:00Z` | `12:31:14--12:49:03Z` |
 | `td6-boundary-q2-deformation-review-grok-20260824` | `6df0d9c9dde4c4e8991b73da1c807ce40b4f44c2b587949c2312aaebf469665c` | `f7cf11d05fcfca5d92bdab763634ca5131f323a25974b322e512794fb0c8c4d2` | `12:58:15--13:16:11Z` | `12:53:23--13:19:11Z` |
+| `as109-bounded-polar-conductor-review-grok-20260824` | `bda4dda7d24d36bf75b6c55b566f708ee300c80aeb3344c4bb724bfc7e7787fa` | `b6c89b68c64c799f950311550333b95aa7862ebaa85175ec2db0cbe9defb4123` | `13:34:33--13:48:00Z` | `13:33:46--13:52:18Z` |
+| `gcd3-69-common-cubic-first-gate-review-grok-20260824` | `5416440bc12bb50ecebfdfa520082aa9e88a26069b43deb13bdaabfcd1690503` | `4f6bf1f98be2a15981eefccd8574319ae37f576922e72282e15de0ceb8d28b35` | `13:44:21--13:58:00Z` | `13:44:21--14:03:12Z` |
 
-All 26 additional runner records have exit code zero,
+All 28 additional runner records have exit code zero,
 `final_status=DONE`, and matching embedded report hashes.  The frozen v1 and
-this successor jointly cover 29 reports.  No input hash, computation, source
+this successor jointly cover 31 reports.  No input hash, computation, source
 audit, verdict, or scope statement is affected.

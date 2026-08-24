@@ -1,0 +1,210 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by verifying the frozen hashes, rereading the cited history stop, and locating the producer plus both registered replays before reconstructing the finite calculations.Hashes and the producer come first; I'll also look up prior GCD3 review format so the report matches this repo's hostile-review convention.Hashes match the charged bank. Next I’ll read the producer, freeze manifests, history stop, and review conventions.Hashes match. Next I’ll read the history stop and both replay scripts, then rerun the registered commands and reconstruct the finite identities independently.Hashes and inputs check out. Next I’ll rerun both registered replays and independently reconstruct the load-bearing identities with a second engine.Both registered replays passed. I’ll now reconstruct the identities independently—different solving path, different Singular order, and a full valuation-case audit.Literature hashes match. Next I’ll reconstruct the finite algebra independently, including a second Singular primary decomposition and a full valuation-case audit.The DS substitution bug is in my checker, not the producer. I’ll fix that and re-audit whether the residual scheme is actually nonreduced.Independent reconstruction passed 123 checks; both Singular algorithms agree. I’ll write the hostile review to the campaign path and include the full report here.# Hostile different-model review — GCD3 `(6,9)` common-cubic first gate
+
+| Field | Value |
+|---|---|
+| Claim under review | Frozen producer first common-cubic gate: genuine `(6,9)` pairs admit an exact cubic-Kummer normalization that splits into an aligned branch and a cube-core mismatch branch; full-cubic boundary reduction type-fails without orbit degree three; the normalized constant-`W` scheme is exactly the common-cubic surface union one Davenport–Stothers curve, meeting only at the triple cubic; the eight high source rows reduce to five moving coefficients plus essential `kappa`; a pure DS source path is ODE/boundary-empty, but entry from the full `(6,9)` system is not derived |
+| Overall verdict | **CONFIRMED** |
+| Smallest failing identity | none |
+| Smallest missing hypothesis | none that breaks a numbered claim (non-blocking: the scheme-theoretic intersection of the two primes is the length-two fat point `(a_0,a_1,a_2,a_3,a_4^2)`, which the producer correctly classifies only after taking radical; emptiness of the noncube ODE branch uses the historical `3\|deg(h)`, not a gap in `5e+7n=1`) |
+| Evidence tier | independent hand derivation of the `y^{13}` identity, depression, Kummer weights, Euler/Wronskian calculus, and every finite-place/infinity valuation case; independently solved triangular source Jacobian and frozen-`W` systems; second-engine Singular primary decomposition (`lp` order, both GTZ and SY) of the residual scheme; official Rikkyo Shioda PDF and ICM-archive Zannier PDF, hash-checked; unmodified rerun of both registered replays as regression only |
+| Reviewer / model | Grok 4.6 (xAI). Different model family from the producer (OpenAI Codex, GPT-5 family) |
+| Repo | `/Users/dc/code/math/jc2` |
+| Git HEAD | `6f2e49e63d74493910fa357a8adc82f0e40d219a` (matches the charged basis) |
+| Review window (UTC) | 2026-08-24T13:44:21Z – 2026-08-24T13:58:00Z |
+| Python | uv-pinned CPython 3.11.11 + SymPy `1.14.0` |
+| Singular | `/opt/homebrew/bin/Singular` 4.4.1 |
+| Host | `dc-mbp-m2.local`, Darwin arm64 |
+
+On-disk copy: `xmodel/gcd3-69-common-cubic-first-gate-review-grok-20260824.md` (SHA-256 `5416440bc12bb50ecebfdfa520082aa9e88a26069b43deb13bdaabfcd1690503`). No producer, case, canonical, ladder, or notes file was edited.
+
+---
+
+## Promotion
+
+**Accept `KUMMER NORMALIZATION SPLITS; FULL-CUBIC BOUNDARY REDUCTION TYPE-FAILS WITHOUT ORBIT DEGREE THREE; THE NORMALIZED CONSTANT-W SCHEME IS EXACTLY COMMON-CUBIC UNION ONE DAVENPORT--STOTHERS CURVE; HIGH SOURCE ROWS REDUCE TO FIVE COEFFICIENTS PLUS KAPPA; A PURE DS SOURCE PATH IS CONDITIONALLY EMPTY` at the stated scopes.**
+
+- A genuine pair of actual `y`-degrees `(6,9)` with `a_6=h^2`, `b_9=h^3` has `delta=3A-2B` constant. Nontrivial cubic Kummer action forces `delta=0`. A cube core only makes `h` a constant times a polynomial cube and leaves `delta\neq 0` live. The change `z=sy+r` is over `L=k(x)(s)`, not a polynomial source automorphism; `P(x,0)=f(r)` and `Q(x,0)=g(r)` are polynomial and need not vanish.
+- A chosen polynomial boundary root licenses reduction only modulo its minimal polynomial over the coefficient field of `K(1,z)`. Full-cubic reduction is a `TYPE-FAIL` without a separately proved orbit of degree three. Discriminant nonvanishing does not supply that orbit.
+- After the high Wronskian rows, the residual ideal in `(a_0,\ldots,a_4)` has radical exactly `P_{\mathrm{common}}\cap P_{\mathrm{DS}}`. These are the only reduced components. They meet set-theoretically only at the triple-cubic origin. The original residual scheme is nonreduced along the common component. The DS parameterization, difference `f^3-g^2`, constant Wronskian `378\lambda^7`, and resultant `(3^9 7^2/2^5)\lambda^{27}` are exact.
+- The eight high source rows integrate to five moving `a_i` plus essential `kappa=c_3` after Kummer descent and constant target gauges. On any path that persists on the common component one has `f=K^2`, `g=K^3+kappa K` and vanishing source bracket. An associated-graded common point does not prove that persistence.
+- Conditional on pure DS entry after aligned depression, the Keller equation is `(\lambda^7)'=j/(81s)`. Exact valuations exclude the noncube Kummer case under the historical `3\mid\deg(h)`, and both polynomial boundaries exclude the remaining cube case. This is a closed conditional branch, not a closure of `(6,9)`.
+
+**Do not promote this to:** a polynomial identity `z=sy+r`; orbit degree three; a persistent filtered common root; derivation that an aligned `(6,9)` trajectory enters the pure DS curve; closure of the cube-mismatch branch `delta\neq 0`; a solution of the four lower Pfaffian rows or the terminal Keller row; a Keller pair of type `(6,9)`; a nonlinear `(6,9)` exclusion; or a JC2 decision.
+
+**Smallest valid successor.** Solve the four lower Pfaffian rows and the terminal row of the exact five-variable-plus-`kappa` form, componentwise, retaining the chosen minimal boundary factor `m_\rho` rather than the full cubic. If the associated-graded arc lands on the DS prime, apply the conditional Section 7; if it lands on the common primary, compute the first nonzero Kuranishi row separately on the squarefree and double strata. Run `delta\neq 0` as an independent parallel branch. Do not open a generic coefficient rectangle or AWS.
+
+---
+
+## Quarantine
+
+No result here proves or disproves JC2, constructs or excludes a characteristic-zero Keller pair of type `(6,9)`, or closes the cube-mismatch branch. Producer strings `PASS-GCD3-69-FIRST-COMMON-CUBIC-GATE` and `PASS-GCD3-69-CONSTANT-W-SCHEME` were not used as evidence; the Jacobian identities, the eight `b`-rows, the four residuals, the primary decomposition, the DS family, the jets, and the valuation lattice were re-derived. Literature (Shioda, Zannier, the unpaid Stothers citation) was source-checked only for the historical claims actually used; the component calculation stands independently. The reviewed partial-`y` history stop is consumed only for actual degrees `(6,9)` with `a_6=h^2`, `b_9=h^3` and the residue `3\mid H`; it does not license a filtered common root.
+
+---
+
+## Headline and subclaim table
+
+| # | Exact subclaim | Verdict | What would have flipped it |
+|---|---|---|---|
+| 1 | From actual `y`-degrees `(6,9)` and `a_6=h^2,b_9=h^3`, the `y^{13}` identity is `s^{14}(9A'-6B')`, depression is `r=A/6`, residual mismatch is `-delta/2` with `delta=3A-2B` constant. Nontrivial cubic Kummer forces `delta=0`; a cube core only makes `h` a constant times a polynomial cube and leaves `delta\neq 0` live. `z=sy+r` is over a coefficient extension; both boundary values are polynomial and need not vanish | **CONFIRMED** | leftover `s'` terms in the `y^{13}` row; constants of `L/k(x)` larger than `k`; weight of `A` or `B` not `1`; `3\mid\deg(h)` used as if it made `h` a cube; `z=sy+r` treated as a polynomial source auto; `P(x,0)` forced to vanish |
+| 2 | The triangular `z^{12},\ldots,z^5` source system integrates to eight constants; Kummer kills `c_7,c_5,c_4,c_2,c_1`; constant target gauges remove `c_6,c_0`; the surviving form is five moving `a_i` plus essential `kappa=c_3`. On a persistent common component this is exactly `f=K^2,g=K^3+kappa K` with zero source bracket; an associated-graded common point does not prove persistence | **CONFIRMED** | a non-closed high-row one-form; a weight-zero extra constant besides `c_6,c_3,c_0`; `kappa` absorbed into constant-`W` without lower rows; source bracket of `(K^2,K^3+kappa K)` nonzero; persistence inferred from one graded point |
+| 3 | UFD gives `F_0=K^2,G_0=K^3`; the depressed cubic and its squarefree/double/triple strata are exact. A boundary equation licenses reduction only modulo `m_\rho`, not the full cubic without orbit degree three. The split control `K=z^3-t^2z`, `rho=0`, `phi=zt^5`, `psi=3Kphi/2` is a `TYPE-FAIL` of full-cubic *boundary* reduction | **CONFIRMED** | a homogeneous pair of degrees `(6,9)` with vanishing binary Jacobian not a cubic power; `Delta\neq 0` used as orbit degree three; `phi` divisible by `K` on the split control; the type-fail promoted to a Jacobian-row refutation |
+| 4 | `L_K=K\{K,2psi-3Kphi\}`; the constant row is a nonzero tangent cokernel class; under exact zero-RHS filtration, `q_2=9phi^2 K_z\pmod{K}` hence `K\mid phi` on the squarefree stratum, with the three displayed coefficient rows. RHS/boundary caveat is load-bearing. The double- and triple-root two-jets survive over `k[e]/(e^3)` and are not characteristic-zero Keller pairs | **CONFIRMED** | a linearized bracket not divisible by `K`; gauges enlarging the image to constants; `q_2=0\pmod{K}` forcing `K\mid phi` without reducedness or the filtration hypothesis; the jets having Jacobian a nonzero constant in characteristic zero |
+| 5 | All eight frozen `b`-rows and four residual equations reconstruct uniquely. The radical is exactly `P_{\mathrm{common}}\cap P_{\mathrm{DS}}`; these are the only reduced components and meet only at the triple-cubic origin. The original residual scheme is nonreduced along the common component. DS parameterization, `f^3-g^2`, `W=378\lambda^7`, and the exact nonzero resultant hold | **CONFIRMED** | a third associated prime; `I` already radical; a geometric intersection point with `Delta\neq 0` or a double-root common cubic; resultant vanishing for `lambda\neq 0`; `W` not constant on the DS curve |
+| 6 | The DS curve meets the common component only at the triple point; `f_lambda(0)` first turns on at `lambda^3` and the constant row at `lambda^7`. This is a negative control against filtered boundary persistence. Historical claims used from Shioda/Zannier check; the component calculation does not depend on them | **CONFIRMED** | a common root of `f_lambda,g_lambda` for some `lambda\neq 0`; constant `W` appearing at order `<7`; literature used as evidence for primary decomposition; a persistent filtered common root inferred from the leading layer |
+| 7 | Under—and only under—the pure-entry hypothesis: weighted Euler, `J_{(\lambda,z)}=567\lambda^6`, chain rule, and `(lambda^7)'=j/(81s)`. Every finite-place and infinity case of `(7.4)`–`(7.8)` holds, including `h` constant, cancellation, leading coefficients, and why historical `3\mid\deg(h)` forces the cube-core form. Both polynomial boundaries then contradict the nonzero resultant. No valuation case was omitted | **CONFIRMED** | a solution of `5e+7n=1` with `e>0` and `2e+3n\neq 0` outside `k\geq 1`; cancelled `2e+3n=0` of valuation `0`; `h` constant giving nonzero `j`; `r\geq 2` with vanishing leading coefficient; a balanced boundary with `f_1(\xi)=g_1(\xi)=0`; pure entry treated as derived |
+| 8 | Maximum licensed promotion is exactly the list in the prompt. The gate does not solve the four lower Pfaffian rows, the terminal Keller row, filtered persistence, cube mismatch, `(6,9)`, or JC2. Those lower rows, treated componentwise with the true minimal boundary factor, together with the independent cube-mismatch branch, are the smallest honest successor | **CONFIRMED** | a hidden solution of `z^4,\ldots,z^0`; promotion of associated-graded commonness to persistence; a claim that the successor is a generic coefficient search |
+
+Claim 3’s producer-side `TYPE-FAIL` is the correct conclusion of that claim, not a failure of the claim. No numbered claim is `PARTIAL`, `REFUTED`, or `TYPE-FAIL`.
+
+---
+
+## Replay and hashes
+
+All charged hashes match the launch prompt, `MANIFEST.sha256`, and `FREEZE.sha256`:
+
+| Artifact | SHA-256 | Match |
+|---|---|---|
+| `xmodel/gcd3-69-common-cubic-first-gate-20260824.md` | `f63bf74fd1013c74645f9f7fe9292db69199572b390b5b19d160c5ed13b373e8` | prompt, `MANIFEST`, `FREEZE` |
+| `cases/gcd3_69_common_cubic_first_gate_20260824/MANIFEST.sha256` | `ea2353e008b9ce1d52810fc792c23b3ce8c3246812e8912432dbf37677707e2c` | prompt (self-hash) |
+| `cases/gcd3_69_common_cubic_first_gate_20260824/FREEZE.sha256` | `65370031b04014f96efc3ac814477a6689d5d5fef6b2695066ba6d60658ee585` | prompt (self-hash) |
+| `cases/gcd3_69_common_cubic_first_gate_20260824/PREREGISTRATION.md` | `55ced70452072d141f17bb87d64797c842cd0af94f5d14c32c8806afa12c61aa` | `MANIFEST`, `FREEZE` |
+| `cases/gcd3_69_common_cubic_first_gate_20260824/replay.py` | `0ec1a7295cb9a3b090e1be2dfab1f730c12e2d8aeeec492c22932c9d720d3a94` | `MANIFEST`, `FREEZE` |
+| `cases/gcd3_69_common_cubic_first_gate_20260824/verify_constant_w_scheme.sing` | `ea4761f641e1778bbc3cfa9f7769a9129ab1a3ca0ddd6d8944431400645eb06a` | `MANIFEST`, `FREEZE` |
+| `xmodel/as109-partial-y-history-stop-20260824.md` | `6994dd6bc1642122ba549be474d2465203faf554d93da5146ecb212dbaaf89fe` | preregistration |
+| `xmodel/as109-partial-y-history-review-grok-20260824.md` | `f9d547f0f17dc3557ed8edce19912b4930dc2125542c7f9b3e4782c554a03afd` | preregistration |
+
+The case directory contains exactly those five files. Registered commands, rerun unmodified from the repository root, both exit 0 with the exact advertised PASS banners, including `nonlinear_69_closure=false`, `keller_pair_found=false`, `jc2_inference=false`. Those strings are regression only.
+
+Independently recomputed primary-source hashes:
+
+| Source | SHA-256 | Match |
+|---|---|---|
+| Shioda, official Rikkyo `AA00610867_54-01_04.pdf` | `467701925109586976ca8f89ec614ee95c5ad740084b969a93ba3795b0cdb740` | producer §5.1 |
+| Zannier, ICM journal-archive `aa/aa71/aa7122.pdf` | `b629733a8c7c64007110e06e5ffc73212eb4b87bcbd6dbcf5416cac485c51a2d` | producer §5.1 |
+
+Shioda §1 display (4) records `St(m)=1` for `m=1,2,3,4`. Shioda §5, the `m=3` (Birch) display, is exactly `(5.7)` at `lambda=1`. Zannier’s introduction states existence of equality cases of Davenport’s bound for every positive order. Stothers 1981 was not consumed.
+
+Independent reconstruction: 123 exact SymPy assertions on a solver path that does not import producer formulas, plus Singular primary decomposition in monomial order `lp` by both GTZ and SY. Residual generators coincide with the producer’s `(e_4,e_3,e_2,e_1)`. Both algorithms return exactly two primes; the radical equals their intersection; the DS primary equals its prime; the common primary is properly contained in its prime; `vdim(P_{\mathrm{common}}+P_{\mathrm{DS}})=2` with radical the origin.
+
+---
+
+## Claim 1 — top row and Kummer split
+
+**CONFIRMED.**
+
+From `a_6=s^6`, `b_9=s^9`, `a_5=s^5 A`, `b_8=s^8 B`, the four product rules expand to
+
+```text
+8 a_6' b_8 + 9 a_5' b_9 - 6 a_6 b_8' - 5 a_5 b_9'
+  = 48 s^{13} s' B + 45 s^{13} s' A + 9 s^{14} A'
+    - 48 s^{13} s' B - 6 s^{14} B' - 45 s^{13} s' A
+  = s^{14}(9A'-6B').
+```
+
+The `s'` terms cancel. The same combination is `3 s^{14} delta'` for `delta=3A-2B`, so the vanishing `y^{13}` row places `delta` in the constant field of `L=k(x)(s)`, which is `k`. Translation `r=A/6` kills the `z^5` coefficient of `P`; the `z^8` coefficient of `Q` becomes `B-3A/2=-delta/2`.
+
+Galois weight of `A` and of `B` is `1`, so `sigma(delta)=omega delta`. Combined with `delta\in k`, nontrivial Kummer forces `delta=0`. If `h` is a cube in `k(x)`, Gauss puts `h` equal to a constant times a polynomial cube and there is no Kummer action: `delta\neq 0` remains live. Historical `3\mid\deg(h)` does not make `h` a cube (`h=x(x-1)(x-2)`).
+
+Even after alignment, `z=sy+r` is an identity in `L[y]`. The two `z_x` summands cancel in `J_{(x,y)}=s(f_x g_z-f_z g_x)`. Boundaries are `P(x,0)=f(r)`, `Q(x,0)=g(r)`, polynomial and not forced to vanish.
+
+---
+
+## Claim 2 — eight high source rows
+
+**CONFIRMED.**
+
+Each of `z^{12},\ldots,z^5` is linear homogeneous in the velocities `(a_i')` and integrates to a unique potential plus `c_j`. Display `(1.9)` reconstructs including the cross terms `(7/6)a_4 c_7` and `(7/6)a_3 c_7+a_4 c_6`. The `c=0` slice coincides with the frozen-`W` solution of Claim 5. Weights `-j\bmod 3` kill `{c_7,c_5,c_4,c_2,c_1}`. Constant target shear removes `c_6`; translation removes `c_0`. What survives is five moving `a_i` plus `kappa=c_3`.
+
+On the common-cubic locus this is exactly `f=K^2`, `g=K^3+kappa K`, with identically vanishing source bracket, so a *persistent* common path cannot be Keller. The `z`-Wronskian on that pair is `-4 kappa K^2 K_z`, constant only if `kappa=0`; `kappa` is not absorbed into Section 5 unless the lower rows force it. An associated-graded common point does not prove persistence. Four lower Pfaffian rows and the terminal row remain.
+
+---
+
+## Claim 3 — cubic provenance and strata
+
+**CONFIRMED.**
+
+Vanishing binary Jacobian plus Euler gives `(G_0^2/F_0^3)_z=0`; homogeneity and monicity give `G_0^2=F_0^3`; UFD gives `F_0=K^2`, `G_0=K^3`. Absence of `z^5` and `z^8` kills the `z^2 t` coefficient of `K`. Discriminant and double-root parameterization reconstruct. This is a binary-leading identity, not a global `(K^2,K^3)` claim.
+
+`H(rho)=0` iff `m_rho` divides `H`. Full reduction modulo `K` requires orbit degree three. `Delta\neq 0` does not supply it: independently, `z^3-2`, `z(z^2-2)`, and `z(z-1)(z+1)` all have nonzero discriminant and orbit degrees `3`, `{1,2}`, `1`. The split control has `L_K=0`, selected-root boundaries at `rho=0`, and `phi|_{t=1}` taking values `(0,1,-1)`, hence divisible by the selected linear factor and not by `K`. That is a `TYPE-FAIL` of full-cubic *boundary* reduction. It does not refute extra Jacobian rows.
+
+---
+
+## Claim 4 — linear, quadratic, and singular controls
+
+**CONFIRMED.**
+
+The identity `L_K=K\{K,2psi-3K phi\}` is exact, not a congruence, so a linearized bracket is never a nonzero constant. `Res_z(K(1,z),c)=c^3`. Domain gauges cannot enlarge the image. This is tangent-only.
+
+Under zero first-order bracket one has `psi=(3/2)K phi`, and Euler reduces `q_2` to `9 phi^2 K_z\pmod{K}` at `t=1`. On `Delta\neq 0`, with constant row and both boundaries still absent, this is `K\mid phi`, which is exactly the three rows `(4.6)` and leaves the two common-cubic tangents. Split-control residues are `(0,18,18)`. If the constant row or a boundary first appears at this order, the implication fails; DS is the delayed control (`lambda^3` then `lambda^7`).
+
+The two jets reconstruct, vanish over `k[e]/(e^3)`, satisfy the selected-root boundaries, and are not characteristic-zero Keller pairs.
+
+---
+
+## Claim 5 — complete normalized constant-`W` scheme
+
+**CONFIRMED.**
+
+The eight `b`-rows solve uniquely from `z^{12},\ldots,z^5`. The four residuals are nonzero rational multiples (`15/64`, `33/128`, `3/32`, `3/128`) of the producer’s `(e_4,e_3,e_2,e_1)`. Both advertised families annihilate them.
+
+Second engine (`lp`, GTZ and SY): exactly two primes, radical equal to their intersection, DS primary equal to `P_{\mathrm{DS}}`, common primary properly contained in `P_{\mathrm{common}}`. The original scheme is therefore nonreduced along the common component. Set-theoretic intersection is only the origin (`K=z^3`). Scheme-theoretically the sum is the length-two fat point `(a_0,a_1,a_2,a_3,a_4^2)`; the producer takes radical and does not claim a reduced intersection scheme.
+
+On the DS parameterization a second expansion gives `W=378\lambda^7`, the displayed `f^3-g^2`, and resultant `(3^9 7^2/2^5)\lambda^{27}`, the last obtained twice. For `lambda\neq 0` there is no persistent common root. The tautology `f H'-3f'H=-Wg` identifies a nonzero constant Wronskian at degrees `(6,9)` with an extremal order-three DS pair. Under `a_4=4lambda` one has `(189/8192)a_4^7=378\lambda^7`.
+
+---
+
+## Claim 6 — boundary timing and literature scope
+
+**CONFIRMED.**
+
+`f_lambda(0)=6\lambda^3`, `g_lambda(0)=0`, while `W=378\lambda^7`. The leading common root at `lambda=0` is not a filtered common root: one boundary turns on four orders before the constant row. At fixed `lambda\neq 0` a persistent common root would force `W(rho)=0`, contrary to `(5.8)`, and `(5.9)` is the symmetric certificate.
+
+Shioda and Zannier hashes match the producer table; the explicit Birch polynomials and the existence statement check. They are not evidence for `(5.3)`.
+
+---
+
+## Claim 7 — conditional pure-DS closure
+
+**CONFIRMED.** No valuation case was omitted; no counterexample is frozen.
+
+Pure entry is hypothesized, not derived. Weighted Euler reconstructs `J_{(\lambda,z)}=567\lambda^6` and `(lambda^7)'=j/(81s)`. Descent `lambda=s^2 q` converts this to `(7.4)`.
+
+Finite places, complete lattice: `gcd(5,7)=1` so every integer solution of `5e+7n=1` is `e=3+7k`, `n=-2-5k`. The constraints `e>0` and `2e+3n\neq 0` force `k\geq 1`. Cancellation `2e+3n=0` has valuation `\geq e/3>0` (identically zero on pure monomials; valuation exactly `1` on the first unit perturbation of `(e,n)=(3,-2)`). Places with `e=0` force `n=0`. If `h` has no zero then `h` and `q` are constant and the left-hand side of `(7.4)` vanishes. Logarithmic derivatives at infinity give a polynomial of degree `r-1` with leading coefficient containing `-\sum k_i\neq 0`, so `r=1`. Historical `3\mid\deg(h)` forces `3\mid k` and the cube-core form `(7.8)`. There is no noncube/Kummer solution *on this residue*. Smallest control: `h=x^{24}`, `s=x^8`, `q=x^{-17}`, `lambda=x^{-1}`, source factor `-567`.
+
+Boundaries: the four valuations in `f_lambda(r)`, shifted by `3ell`, are `(3w,2w,w,0)` with `w=2nu+ell`. If `w\neq 0` the minimum is unique and negative, a pole. If `w=0` all terms of `f` and of `g` balance, so regularity forces a common root of `f_1,g_1`, contradicting the resultant. Odd `ell` never balances. Poles of `r` away from the pole of `lambda`, and `r\equiv 0`, are likewise poles of `f_lambda(r)`.
+
+Cube-mismatch and extra lower-weight constants remain open, as claimed.
+
+---
+
+## Claim 8 — exact scope and successor
+
+**CONFIRMED.**
+
+The maximum licensed promotion is exactly the list above. The gate does not solve the four lower Pfaffian rows or the terminal Keller row, does not prove polynomiality of the rational depression data, does not close `delta\neq 0`, does not construct or exclude a Keller pair, and does not decide JC2. The smallest source-honest successor is those lower rows, treated componentwise with the true minimal boundary factor `m_\rho`, together with the independent cube-mismatch branch. Landing on the DS prime re-uses Section 7; landing on the common primary requires a separate first Kuranishi row on each discriminant stratum. A generic coefficient rectangle and AWS remain unlicensed.
+
+---
+
+## Non-blocking remarks
+
+1. The scheme-theoretic intersection `P_{\mathrm{common}}+P_{\mathrm{DS}}` is the fat point `(a_0,a_1,a_2,a_3,a_4^2)` of length two. The producer classifies it via `radical`, which is the correct geometric statement.
+2. Emptiness of the noncube pure-DS branch is the arithmetic `3\mid\deg(h)\Rightarrow 3\mid k`, not a claim that `5e+7n=1` has no noncube lattice points.
+3. In the registered Python replay the symbols `nu,ell` are declared `positive=True` in a matrix identity that holds for all integers, including negative `nu`. The identity is correct; the annotation is not used as a restriction.
+4. Under `lambda=epsilon^2` the first boundary term is of order `epsilon^6`. The producer states the `lambda^3` timing in §4 and §6 and the `epsilon^{14}` timing only for the constant row.
+
+---
+
+## Promotion (restated)
+
+**Accept `KUMMER NORMALIZATION SPLITS; FULL-CUBIC BOUNDARY REDUCTION TYPE-FAILS WITHOUT ORBIT DEGREE THREE; THE NORMALIZED CONSTANT-W SCHEME IS EXACTLY COMMON-CUBIC UNION ONE DAVENPORT--STOTHERS CURVE; HIGH SOURCE ROWS REDUCE TO FIVE COEFFICIENTS PLUS KAPPA; A PURE DS SOURCE PATH IS CONDITIONALLY EMPTY` at the stated scopes.**
+
+**Do not promote this to** a polynomial Kummer depression, orbit degree three, filtered common-root persistence, derived pure-DS entry from the full `(6,9)` system, cube-mismatch closure, a solution of the lower Pfaffian/terminal rows, a `(6,9)` Keller pair or exclusion, or JC2.
+
+**Smallest valid successor:** the four lower Pfaffian rows and the terminal Keller row of the five-variable-plus-`kappa` form, treated componentwise with the true minimal boundary factor, together with the independent cube-mismatch branch. No generic coefficient search, no AWS.
+
+---
+
+## Quarantine (restated)
+
+No result here proves or disproves JC2. PASS strings are regression markers. Literature was source-checked only for historical claims actually used. The reviewed partial-`y` history stop licenses actual degrees `(6,9)` with `3\mid H` and leading powers `h^2,h^3`; it does not license a filtered common root, orbit degree three, polynomial depression, or nonlinear closure. Independent reconstruction, not the producer scripts, is the evidence for every numbered claim.

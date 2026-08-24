@@ -1,0 +1,170 @@
+{
+  "primes": {
+    "3": {
+      "affine_cap_D_equals_p": {
+        "precision_2_degree": 3,
+        "precision_2_solution": true,
+        "precision_3_empty": true,
+        "precision_3_forced_degree": 5
+      },
+      "all_poles_outside_closed_unit_disc": true,
+      "cotangent_tower": [
+        {
+          "Q_total_degree": 3,
+          "jacobian_error": {
+            "coefficient": -9,
+            "x_exponent": 4
+          },
+          "precision": 2
+        },
+        {
+          "Q_total_degree": 5,
+          "jacobian_error": {
+            "coefficient": -27,
+            "x_exponent": 6
+          },
+          "precision": 3
+        },
+        {
+          "Q_total_degree": 7,
+          "jacobian_error": {
+            "coefficient": -81,
+            "x_exponent": 8
+          },
+          "precision": 4
+        }
+      ],
+      "denominator_squarefree": true,
+      "g": {
+        "x": 1,
+        "x^3": -1
+      },
+      "g_prime": {
+        "1": 1,
+        "x^2": -3
+      },
+      "geometric_polar_components": 2,
+      "nonlinear_cap_D_equals_p": {
+        "augmented_inconsistent": true,
+        "augmented_rank": 13,
+        "coefficient_rank": 12,
+        "degree_cap_map_and_gauge": 3,
+        "forced_coefficient_after_dividing_by_p_squared": 1,
+        "forced_forbidden_Q_monomial": [
+          4,
+          1
+        ],
+        "necessary_rows": 14,
+        "precision": 3,
+        "variables_first_digit_r_s": 20
+      },
+      "p": 3,
+      "restricted_inverse_support": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          6,
+          27
+        ]
+      ],
+      "root_valuation": "-1/2"
+    },
+    "5": {
+      "affine_cap_D_equals_p": {
+        "precision_2_degree": 5,
+        "precision_2_solution": true,
+        "precision_3_empty": true,
+        "precision_3_forced_degree": 9
+      },
+      "all_poles_outside_closed_unit_disc": true,
+      "cotangent_tower": [
+        {
+          "Q_total_degree": 5,
+          "jacobian_error": {
+            "coefficient": -25,
+            "x_exponent": 8
+          },
+          "precision": 2
+        },
+        {
+          "Q_total_degree": 9,
+          "jacobian_error": {
+            "coefficient": -125,
+            "x_exponent": 12
+          },
+          "precision": 3
+        },
+        {
+          "Q_total_degree": 13,
+          "jacobian_error": {
+            "coefficient": -625,
+            "x_exponent": 16
+          },
+          "precision": 4
+        }
+      ],
+      "denominator_squarefree": true,
+      "g": {
+        "x": 1,
+        "x^5": -1
+      },
+      "g_prime": {
+        "1": 1,
+        "x^4": -5
+      },
+      "geometric_polar_components": 4,
+      "nonlinear_cap_D_equals_p": {
+        "augmented_inconsistent": true,
+        "augmented_rank": 33,
+        "coefficient_rank": 32,
+        "degree_cap_map_and_gauge": 5,
+        "forced_coefficient_after_dividing_by_p_squared": 1,
+        "forced_forbidden_Q_monomial": [
+          8,
+          1
+        ],
+        "necessary_rows": 34,
+        "precision": 3,
+        "variables_first_digit_r_s": 42
+      },
+      "p": 5,
+      "restricted_inverse_support": [
+        [
+          0,
+          1
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          8,
+          25
+        ],
+        [
+          12,
+          125
+        ]
+      ],
+      "root_valuation": "-1/4"
+    }
+  },
+  "schema": "as109-bounded-polar-conductor-v1",
+  "structural_scope": {
+    "arbitrary_rectangle": false,
+    "aws": false,
+    "jc2_inference": false,
+    "odd_prime_formula_not_enumerated": true,
+    "p109_enumeration": false
+  }
+}

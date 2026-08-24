@@ -1,0 +1,115 @@
+// Exact primary-decomposition replay for normalized degree-(6,9)
+// polynomial solutions of 2*f*g'-3*f'*g = constant.
+
+LIB "primdec.lib";
+
+proc require_ideal_equal(ideal left, ideal right, string label)
+{
+  ideal lr=simplify(reduce(left,std(right)),2);
+  ideal rl=simplify(reduce(right,std(left)),2);
+  if ((size(lr)!=0) || (size(rl)!=0))
+  {
+    print("FAIL " + label);
+    exit(1);
+  }
+}
+
+ring R=0,(a0,a1,a2,a3,a4),dp;
+
+// After the high Wronskian rows uniquely solve b7,...,b0, the z^4,...,z
+// rows are these four equations (nonzero rational scalar factors removed).
+poly e4=64*a0*a2-16*a0*a4^2+32*a1^2-32*a1*a3*a4
+        -16*a2^2*a4-16*a2*a3^2+8*a2*a4^3+12*a3^2*a4^2-a4^5;
+poly e3=64*a0*a1-32*a0*a3*a4-32*a1*a2*a4-16*a1*a3^2
+        +8*a1*a4^3-16*a2^2*a3+24*a2*a3*a4^2+8*a3^3*a4-5*a3*a4^4;
+poly e2=96*a0^2+16*a0*a2*a4-48*a0*a3^2-4*a0*a4^3+8*a1^2*a4
+        -96*a1*a2*a3+16*a1*a3*a4^2-16*a2^3+8*a2^2*a4^2
+        +44*a2*a3^2*a4-a2*a4^4+6*a3^4-9*a3^2*a4^3;
+poly e1=96*a0*a1*a4-64*a0*a2*a3-32*a0*a3*a4^2-32*a1^2*a3
+        -208*a1*a2^2+56*a1*a2*a4^2+8*a1*a3^2*a4-a1*a4^4
+        +96*a2^2*a3*a4+16*a2*a3^3-24*a2*a3*a4^3;
+ideal I=e4,e3,e2,e1;
+
+ideal common=-a4^2+4*a2,-a3*a4+2*a1,-a3^2+4*a0;
+ideal ds=a3,-5*a4^2+8*a2,a1,-3*a2*a4+20*a0;
+
+list dec=primdecGTZ(I);
+if (size(dec)!=2)
+{
+  "FAIL primary component count";
+  exit(1);
+}
+
+int foundCommon=0;
+int foundDS=0;
+ideal primei;
+ideal c1;
+ideal c2;
+ideal d1;
+ideal d2;
+for (int i=1;i<=size(dec);i++)
+{
+  primei=dec[i][2];
+  c1=simplify(reduce(primei,std(common)),2);
+  c2=simplify(reduce(common,std(primei)),2);
+  if ((size(c1)==0) && (size(c2)==0)) { foundCommon=1; }
+  d1=simplify(reduce(primei,std(ds)),2);
+  d2=simplify(reduce(ds,std(primei)),2);
+  if ((size(d1)==0) && (size(d2)==0)) { foundDS=1; }
+}
+if ((foundCommon!=1) || (foundDS!=1))
+{
+  "FAIL expected prime radicals";
+  exit(1);
+}
+
+ideal radI=radical(I);
+ideal unionIdeal=intersect(common,ds);
+require_ideal_equal(radI,unionIdeal,"radical union");
+
+ideal meet=common+ds;
+ideal origin=a0,a1,a2,a3,a4;
+require_ideal_equal(radical(meet),origin,"components meet only at origin");
+
+poly cW=(3/64)*(32*a0^2*a4-16*a0*a1*a3+16*a0*a2^2
+        -8*a0*a2*a4^2-8*a0*a3^2*a4+a0*a4^4-48*a1^2*a2
+        +12*a1^2*a4^2+24*a1*a2*a3*a4+4*a1*a3^3-6*a1*a3*a4^3);
+if (reduce(cW,std(common))!=0)
+{
+  "FAIL common component W";
+  exit(1);
+}
+if (reduce(8192*cW-189*a4^7,std(ds))!=0)
+{
+  "FAIL DS component W";
+  exit(1);
+}
+
+ring S=0,(z,a),dp;
+poly f=z^6+a*z^4+(5/8)*a^2*z^2+(3/32)*a^3;
+poly g=z^9+(3/2)*a*z^7+(21/16)*a^2*z^5+(35/64)*a^3*z^3
+       +(63/512)*a^4*z;
+poly h=f^3-g^2;
+poly W=2*f*diff(g,z)-3*diff(f,z)*g;
+if (W-(189/8192)*a^7!=0)
+{
+  "FAIL DS W identity";
+  exit(1);
+}
+if (h-(27/262144)*a^7*(16*z^4+13*a*z^2+8*a^2)!=0)
+{
+  "FAIL DS difference identity";
+  exit(1);
+}
+poly resfg=resultant(f,g,z);
+if (resfg-(964467/576460752303423488)*a^27!=0)
+{
+  "FAIL DS coprime resultant";
+  exit(1);
+}
+
+"PASS-GCD3-69-CONSTANT-W-SCHEME";
+"radical_components=COMMON-CUBIC-SURFACE,UNIQUE-DS-CURVE";
+"component_intersection=TRIPLE-CUBIC-ORIGIN-ONLY";
+"ds_constant_w=(189/8192)*a4^7";
+"ds_persistent_common_root=false";

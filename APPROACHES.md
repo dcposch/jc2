@@ -41,7 +41,7 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
-## Current event synthesis overlay (reviewed through 2026-08-24 13:19Z)
+## Current event synthesis overlay (reviewed through 2026-08-24 14:03Z)
 
 The proof backbone remains the `td=6` global-realizability problem; the
 disproof backbone remains an exact finite polynomial AS109 lift. The current
@@ -56,9 +56,17 @@ ranked synthesis is
   pair with maximum actual `y`-degree at most eight. The first fundamental
   remainder is `(6,9)` with `3|H`. Its leading common-cubic family
   `(K^2,K^3)` is positive-dimensional, so the previous coprime finite-map
-  mechanism stops. The next licensed coefficient gate is a gauge-quotiented
-  transverse deformation about that family. Our cubic-through-sextic proofs
-  remain exact alternate certificates, not first exclusions.
+  mechanism stops. The first source-honest coefficient gate is now
+  dual-confirmed: nontrivial Kummer alignment separates from a live cube-core
+  mismatch; one selected boundary root does not license full-cubic reduction;
+  the normalized constant-W scheme is exactly common cubic union one
+  Davenport--Stothers curve; and the eight high source rows reduce to five
+  moving coefficients plus essential `kappa`. A pure DS trajectory is
+  conditionally empty, but its entry is not automatic. The active gate is the
+  four lower Pfaffian rows and terminal row, componentwise with the true
+  minimal boundary factor, while `delta!=0` runs separately. Our
+  cubic-through-sextic proofs remain exact alternate certificates, not first
+  exclusions.
 - **AS109 is globally constrained but not obstructed.** Any exact lift has
   generic degree `d>=109` and a formal split `E^109 x A_infinity`; the two
   missing global keys are `A_infinity=0` and rational deck descent. The
@@ -70,10 +78,16 @@ ranked synthesis is
   a finite etale Artin--Schreier torsor, but all determinant-one
   restricted-analytic lifts of that special fibre form one near-identity
   symplectic gauge orbit. The forced first-digit monomial is only a floor.
-  Minimal uniformly bounded polynomial representatives or an algebraic
-  boundary conductor are the next
-  finite-support discriminators; no p=109 brute force or exponent rectangle
-  is licensed.
+  The bounded successor is now dual-confirmed: the rational cotangent
+  basepoint has a reduced exterior affine polar divisor which no polynomial
+  Keller right map can cancel. Consequently the unique analytic gauge of any
+  hypothetical polynomial lift has canonical truncation degree/support
+  tending to infinity; every fixed simultaneous map/gauge degree cap fails
+  at finite depth, and the first cap `p,p` fails already at depth three for
+  every odd prime. This does not exclude an unbounded polynomial lift or
+  identify `A_infinity`. Quantitative conductor growth and a proved
+  polar-divisor/`A_infinity` comparison are the next discriminators; no
+  `p=109` brute force or exponent rectangle is licensed.
 - **TD6 has killed one complete normalized family, not SP-2.** The symbolic
   next-row zero curve, its centered sextic cut, the degree-18 pole field, and
   a nonzero exact left syzygy exclude the whole fixed normalized reduced-
@@ -338,7 +352,7 @@ Tried? legend: **Tried** = substantive campaign computation/proof/audit; **Parti
 | 16 | D-module / holonomic index | Holonomic index invariant against a Keller endomorphism | — / — / F18 only | No | "Untried, exotic" (F); no concrete invariant named in any input | Unscored; Fable unique find |
 | 17 | BCW / Druzkowski / Yagzhev cubic stabilization | Stabilize to cubic-homogeneous/cubic-linear normal form in high dimension | S24+S25 / G14 / — | No (per G: correctly) | Raises dimension; target class now contains genuine CEs (Alpoge/Gao era); plane-origin subclass has no recognizing invariants | DISSENT: S:5 and S:4 (salvage subclass invariants) vs G:1 ("category error") |
 | 18 | Graded / equivariant / GIT symmetry | Reduce to weighted-homogeneous Keller maps | S22 / G15 / — | Closed as CE hunt: Shaska 2026 — graded plane Keller maps are automorphisms for every weight pattern | A hypothetical CE has no G_m symmetry; orbit limits lose nonproperness | S:4 (stabilizer/orbit-limit check); G: closed |
-| 19 | Char-p counterexamples + Witt lifting | Lift a char-p plane Keller collision to char 0 | S31 / G17 / F16 | Tried (Mondello char-2: 1,152/1,152 W2-obstructed; explicit Artin--Schreier `F_3` collision confirmed through `W_2=Z/9`; the cap-eight `p=109` gate stopped `NO-FROZEN-GRAMMAR`; every hypothetical exact AS109 lift now needs correction `y`-degree at least nine) | First-Witt obstruction is not universal. A same-seed tower lifts through every Witt level with growing degree/support and a nonpolynomial rational/restricted-analytic limit. Literal-slot closure is infinite; local Hensel gives degree `>=109` but neither `A_infinity=0` nor deck descent; the first true bounded partial-degree residue is `(6,9),3|H` | Redesign around uniformly bounded representatives in the analytic symplectic gauge orbit, an algebraic boundary conductor, or the `(6,9)` transverse cokernel; no automatic all-Witt-to-polynomial inference |
+| 19 | Char-p counterexamples + Witt lifting | Lift a char-p plane Keller collision to char 0 | S31 / G17 / F16 | Tried (Mondello char-2: 1,152/1,152 W2-obstructed; explicit Artin--Schreier `F_3` collision confirmed through `W_2=Z/9`; the cap-eight `p=109` gate stopped `NO-FROZEN-GRAMMAR`; every hypothetical exact AS109 lift now needs correction `y`-degree at least nine; the completed-orbit polar conductor is dual-confirmed unbounded) | First-Witt obstruction is not universal. A same-seed tower lifts through every Witt level with growing degree/support and a nonpolynomial rational/restricted-analytic limit. No polynomial Keller gauge cancels its exterior polar divisor, so every fixed simultaneous map/gauge cap eventually fails, but this gives neither `A_infinity=0` nor nonexistence of an unbounded polynomial lift; the first true bounded partial-degree residue is `(6,9),3|H` | Quantify canonical conductor growth, compare its exterior polar divisor with `A_infinity`, or close the `(6,9)` lower Pfaffian system; no automatic all-Witt-to-polynomial inference |
 | 20 | Reduction mod p / p-curvature formalism (Tsuchimoto, Belov–Kontsevich) | Use the p-curvature/reduction-mod-p correspondence as the proof engine | F8 / S29 (part) / G9 (part) | No (as formalism) | The known bridge consumes PC(2)/JC(4), both now false (S,G); F elevates it as its own untried lane | Unscored by S/G as standalone; Fable framing find |
 | 21 | p-adic injectivity / Hensel / model theory | Uniform p-adic bijectivity for almost all p; transfer to char 0 | S32 only / — / — | Partial: a hypothetical exact determinant-one `Z_109` lift has 109 Hensel sheets, generic degree `d>=109`, and tube split `E^109 x A_infinity`; maximum actual `y`-degree `<=8` is impossible, and maximum nine reduces to `(6,9),3|H` | Existence remains open. Hensel does not kill `A_infinity`, descend a deck cycle, or force a degree congruence; `xy` lies outside the target field; the secant projector adds no off-sector rank. Completion alone does not supply a global rational action | S:4; live clients are negative-weight `A_infinity`, bounded analytic-gauge representatives, and rational graph-factor descent |
 | 22 | Diophantine integral points / heights on fibers | Siegel-type finiteness forces preimages or properness | S33 / G39 (height-search variant) / — | No | Siegel classifies the wrong direction; uniformity across an unknown pencil inaccessible; no effective smallest-CE bound without JC2 (G) | S:3, G:2 — concordant low |

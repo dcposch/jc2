@@ -336,6 +336,19 @@ The next admissible discriminator is minimal uniformly bounded polynomial
 support inside that orbit or an algebraic boundary conductor, not
 unrestricted depth or a 109-scale search.
 
+That bounded successor then passed hostile different-model review. The
+rational cotangent representative has `p-1` reduced affine polar components
+outside the unit bidisc, and no polynomial Keller right map can cancel their
+denominator. Therefore the unique analytic gauge of any hypothetical
+polynomial lift has unbounded canonical truncation degree and nested support;
+every fixed simultaneous map/gauge degree cap fails at a finite Witt depth.
+At caps `D_F=D_phi=p`, depth two survives and depth three is empty for every
+odd prime, with independent exact `p=3,5` rank controls. This is a
+bounded-category theorem only: it neither excludes an unbounded polynomial
+lift nor identifies `A_infinity`, descends deck symmetry, runs `p=109`, or
+decides JC2. Quantitative conductor growth and a proved comparison with the
+valued `A_infinity` systems are the live successors.
+
 The smallest TD6 q-boundary deformation then passed a different-model
 hostile replay. For `p=t^15`, `q_B=t+B*t^2+t^25`, both `B=1` and one exact
 adaptive value in the degree-18 pole field die at the centered `t^4` row
@@ -344,6 +357,18 @@ moves by `-14012/145` between `B=0` and `B=1`, while the adaptive residue
 acquires nonzero `1,A,A^2` support, so affine extrapolation fails. This is two
 empty points, not a kill of the `B`-family or SP-2. The next gate is symbolic
 elimination over `E[B]` with all pivot/rank-jump strata handled separately.
+
+The first true `(6,9)` common-cubic gate then passed hostile different-model
+review. The first non-top row splits nontrivial-Kummer alignment from a live
+cube-core mismatch, and a selected boundary root was proved insufficient for
+reduction modulo the full cubic without orbit degree three. Exact primary
+decomposition classifies the normalized constant-W scheme as the
+common-cubic surface plus one Davenport--Stothers curve, meeting only at the
+triple cubic. The eight high source rows integrate to five moving
+coefficients plus essential `kappa`; a pure DS source path is conditionally
+excluded by its Kummer ODE and polynomial boundaries. This is structural
+progress, not a `(6,9)` exclusion: the lower Pfaffian/terminal rows, filtered
+component persistence, and cube mismatch remain.
 
 ## 2026-08-23
 Foundational-floor day, then the reorg. Belyi identification of the residue-A

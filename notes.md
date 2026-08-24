@@ -3950,3 +3950,82 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   cumulative.  Box01 retains exactly one protected legacy
   `build_tails43.py` core; Box02 and Box03 are stopped.  No active gate
   licenses AWS expansion.  No proof or counterexample has been found.
+
+## 2026-08-24 13:55Z LIVE STATE
+- BASIS/LIFECYCLE: charged clean bank remains
+  `6f2e49e63d74493910fa357a8adc82f0e40d219a` (evidence parent
+  `99ae7ecca2aedbd6a80a56b8660141fb5845af4c`).  New producer/reviewer
+  artifacts and canonical integration are isolated and uncommitted pending
+  the open event round; the nested `jc2-lean` tree remains untouched.
+- PROMOTED AS109: the bounded polar-conductor gate and different-model hostile
+  review are confirmed.  `C_p=(x-x^p,y/(1-p*x^(p-1)))` has a reduced exterior
+  affine polar divisor which no polynomial Keller right map cancels.  For any
+  hypothetical polynomial lift the unique identity-branch analytic gauge has
+  `kappa_n -> infinity`; every fixed simultaneous map/gauge degree cap fails
+  at finite depth, and `D_F=D_phi=p` fails at depth three for every odd prime.
+  This does not exclude an unbounded polynomial lift, identify `A_infinity`,
+  descend deck symmetry, run `p=109`, or decide JC2.  Quantitative algebraic-
+  gauge growth and an `A_infinity` comparison are queued successors.
+- FROZEN/UNDER REVIEW `(6,9)`: the first common-cubic gate is frozen at report
+  SHA `f63bf74fd1013c74645f9f7fe9292db69199572b390b5b19d160c5ed13b373e8`.
+  It source-honestly separates nontrivial-Kummer alignment from the live cube
+  mismatch, type-fails full-cubic boundary reduction without orbit degree
+  three, classifies the normalized constant-W scheme as common cubic plus one
+  DS curve, conditionally excludes a pure DS path, and reduces the eight high
+  source rows to five moving coefficients plus essential `kappa`.  A Grok
+  hostile review is active; no `(6,9)` exclusion is promoted.
+- PROVISIONAL `(6,9)` SUCCESSOR: independent exact work indicates that the
+  four remaining zero Pfaffian rows integrate to four algebraic first
+  integrals.  Kummer weights kill three constants and leave one weight-zero
+  `mu`; on the nonzero DS locus these rows force `kappa=0`, and the terminal
+  row becomes the already identified DS ODE.  The producer is independently
+  classifying all invariant fibers, determinant/rank-drop strata, common
+  crossings, and true minimal-factor boundary behavior.  This is unreviewed
+  and may be consumed only provisionally.
+- TD6: the source-quotiented adjoint lane has exact PASS through transport and
+  the first-J pencil.  It confirms the full `t^2` source orbit, a rank-one
+  transverse `q_2` class in the normalized section, zero adjoint response on
+  the full orbit and target gauges, and is reducing the later `t^4`
+  sensitivity/rank strata over the exact dual-number pencil.  No new TD6
+  claim is frozen yet.
+- OUTER LOOP/ALLOCATION: an event-triggered blind whole-portfolio ideation
+  scan is active and has already supplied the independently reproduced
+  Pfaffian/vector-field discriminator; its full ranked report remains due.
+  Active research slots are `(6,9)` lower rows, TD6 adjoint/pencil, and the
+  all-avenue scan.  Reviews are background/nonblocking.  The broad web-sweep
+  deadline remains `2026-08-24T21:25Z`; no AWS expansion is licensed, box01's
+  protected `build_tails43.py` core remains untouched, and boxes02/03 remain
+  stopped.  No proof or counterexample has been found.
+
+## 2026-08-24 14:04Z LIVE STATE
+- PROMOTION: the frozen `(6,9)` first common-cubic gate is now
+  different-model confirmed at producer/review SHAs
+  `f63bf74fd1013c74645f9f7fe9292db69199572b390b5b19d160c5ed13b373e8` /
+  `5416440bc12bb50ecebfdfa520082aa9e88a26069b43deb13bdaabfcd1690503`.
+  Promote only the Kummer split, full-cubic selected-boundary `TYPE-FAIL`,
+  exact common-cubic/unique-DS constant-W classification, five-plus-`kappa`
+  high-row normal form, and conditional pure-DS exclusion.  Cube mismatch,
+  lower rows, filtered persistence, `(6,9)`, and JC2 remain open.
+- PROVISIONAL ALIGNED-BRANCH CLOSURE: exact successor work integrates the four
+  zero Pfaffian rows and decomposes their Kummer-forced invariant fiber.  One
+  reduced stratum has `f=K^2+d`,
+  `g=K^3+(kappa+3d/2)K` and zero source bracket.  The other is the cubic
+  `Y^2=3X^3+4096C`, `C=kappa^2+mu`; its terminal one-form yields an
+  omitted-value contradiction for `C!=0`, while `C=0` splits into the
+  zero-bracket stratum and a shifted DS path whose ODE contradicts the
+  nontrivial-Kummer residue.  The producer is auditing constant solutions,
+  denominators, embedded/special fibers, component crossings, and exact
+  replays before freeze.  Until hostile review, this is not an exclusion.
+- PARALLEL RESPONSE: a separate agent has begun the independent cube-core
+  mismatch `delta!=0` branch.  TD6 exact adjoint/pencil work continues.  The
+  formal event round `20260824T1358Z` is sealed at packet SHA
+  `b38d9ed2090e3107d2b7dacdd894ce5991e47f7533edc2271579d38f051528f4`:
+  the Sol blind report is frozen at
+  `67eb6a2b15333372c03459e5ef7b62a686281a6e6754d968c90350b06657fe11`,
+  and independent Claude/Grok whole-portfolio scans are active.  This
+  post-cutoff aligned-branch result is queued for synthesis and does not
+  mutate the packet.
+- AS109 remains promoted only at `POLAR-CONDUCTOR / UNBOUNDED-GAUGE`.
+  Reviews remain nonblocking; no AWS expansion is licensed; box01's protected
+  core is untouched and boxes02/03 remain stopped.  No proof or
+  counterexample has been found.

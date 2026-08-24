@@ -2363,6 +2363,50 @@ FUNDAMENTAL REMAINDER (6,9) WITH 3|H`**.
   valuation contradiction. No lift, arbitrary-support no-go, or JC2 result
   follows.
 
+## GCD3 `(6,9)` FIRST COMMON-CUBIC GATE (2026-08-24, DUAL-CONFIRMED STRUCTURAL TIER)
+
+`xmodel/gcd3-69-common-cubic-first-gate-20260824.md` (SHA-256
+`f63bf74fd1013c74645f9f7fe9292db69199572b390b5b19d160c5ed13b373e8`)
+with `xmodel/gcd3-69-common-cubic-first-gate-review-grok-20260824.md`
+(SHA-256
+`5416440bc12bb50ecebfdfa520082aa9e88a26069b43deb13bdaabfcd1690503`):
+**CONFIRMED `KUMMER SPLIT / FULL-CUBIC BOUNDARY TYPE-FAIL /
+COMMON-CUBIC UNION UNIQUE DS / FIVE PLUS KAPPA`**.
+
+- SOURCE NORMALIZATION: after `a_6=h^2,b_9=h^3` and `s^3=h`, the `y^13`
+  row makes `delta=3A-2B` constant. A nontrivial cubic Kummer action forces
+  `delta=0`; a cube core makes `h` a constant times a polynomial cube but
+  leaves `delta!=0` live. The depression `z=sy+A/6` is over `k(x)(s)`, not a
+  polynomial source automorphism, and its two boundary values are polynomial
+  but need not vanish.
+- BOUNDARY FIREWALL: a chosen boundary root licenses reduction only modulo
+  its minimal polynomial. Reduction modulo the full depressed cubic requires
+  an independently proved orbit of degree three; squarefreeness alone is
+  insufficient. An exact split-root perturbation is a `TYPE-FAIL` of the
+  stronger boundary inference, not of any conclusion derived from extra
+  Jacobian rows.
+- CONSTANT-W SCHEME: after solving the eight high binary rows, the residual
+  radical has exactly the common-cubic surface and one order-three
+  Davenport--Stothers curve. They meet set-theoretically only at the triple
+  cubic; the original scheme is nonreduced along the common component. The
+  DS identities, constant Wronskian `378*lambda^7`, and nonzero resultant are
+  exact and independently reconstructed.
+- SOURCE HIGH ROWS: in the aligned nontrivial-Kummer branch, all eight high
+  source rows integrate exactly. Kummer weights and constant target gauges
+  leave five moving coefficients plus one essential weight-zero constant
+  `kappa`; a path persisting on the common component has
+  `f=K^2,g=K^3+kappa*K` and zero source bracket. One associated-graded common
+  point does not prove such persistence.
+- CONDITIONAL DS STOP: only under pure DS entry, weighted Euler gives
+  `(lambda^7)'=j/(81s)`. Exact finite/infinity valuations, the reviewed
+  `3|deg(h)` residue, and both polynomial boundaries exclude that pure path.
+  Entry from the full source system is not inferred.
+- SCOPE/NEXT: this does not solve the four lower Pfaffian rows, terminal row,
+  filtered boundary/component persistence, or cube mismatch, and does not
+  exclude `(6,9)` or decide JC2. The licensed successor is precisely those
+  lower rows in the five-plus-`kappa` form, componentwise with the true
+  minimal boundary factor, while `delta!=0` runs independently.
+
 ## AS109 WILD-SYMPLECTIC COMPLETED-BIDISC GATE (2026-08-24, DUAL-CONFIRMED CONDITIONAL TIER)
 
 `xmodel/as109-wild-symplectic-conductor-gate-20260824.md` (SHA-256
@@ -2394,6 +2438,45 @@ with `xmodel/as109-wild-symplectic-conductor-review-grok-20260824.md`
   algebraic boundary conductor invariant under a specified bounded
   equivalence. No `p=109` brute force, lift, fixed-support exclusion,
   `A_infinity` conclusion, or JC2 decision follows.
+
+## AS109 BOUNDED POLAR CONDUCTOR (2026-08-24, DUAL-CONFIRMED CONDITIONAL TIER)
+
+`xmodel/as109-bounded-polar-conductor-gate-20260824.md` (SHA-256
+`2baa7a7a17454e4b30a974841071104283917c424d208f03e3d5e12b8a12dc0b`)
+with `xmodel/as109-bounded-polar-conductor-review-grok-20260824.md`
+(SHA-256
+`bda4dda7d24d36bf75b6c55b566f708ee300c80aeb3344c4bb724bfc7e7787fa`):
+**CONFIRMED `POLAR-CONDUCTOR / UNBOUNDED-GAUGE`**.
+
+- EXTERIOR DIVISOR: for every odd prime `p`,
+  `C_p=(x-x^p,y/(1-p*x^(p-1)))` is an integral restricted-analytic
+  determinant-one lift. Over `Qpbar` its rational second coordinate has
+  exactly `p-1` reduced affine vertical polar components, all at valuation
+  `-1/(p-1)` and outside the closed unit bidisc. This divisor is neither the
+  projective line at infinity nor the residual factor `A_infinity`.
+- NO POLYNOMIAL CANCELLATION: for every polynomial Keller right map
+  `phi=(X,Y)`, without assuming invertibility or JC,
+  `gcd(1-p*X^(p-1),Y)=1`. Thus the rational pole cannot cancel. Under a
+  polynomial symplectic automorphism the polar divisor pulls back
+  isomorphically; under a merely Keller right map only noncancellation, not
+  preservation of the component count, is claimed.
+- CANONICAL CONDUCTOR: conditionally on a polynomial lift `F`, the reviewed
+  completed-orbit theorem gives the unique identity-branch gauge in the
+  orientation `C_p o Phi_F=F`. The maximum total degree `kappa_n(F)` of its
+  canonical reduction modulo `p^n` tends to infinity. A uniform degree bound,
+  or a uniform bound on the nested support cardinalities, would make
+  `Phi_F` polynomial and contradict the no-cancellation lemma.
+- FINITE CAPS: every fixed simultaneous map/gauge degree pair fails at some
+  finite Witt depth by a finite-tree inverse-limit argument. At the first
+  natural caps `D_F=D_phi=p`, depth two survives and depth three is empty for
+  every odd prime. Exact independent controls give coefficient/augmented
+  ranks `12/13` and `32/33` at `p=3,5`, with forbidden monomials `x^4y` and
+  `x^8y`; additional `p=7,11` checks are controls only.
+- SCOPE/NEXT: this does not exclude a polynomial lift or give a growth rate,
+  identify `A_infinity`, descend a deck action, compute at `p=109`, or decide
+  JC2. The licensed successors are a quantitative lower growth law for
+  `kappa_n` or intrinsic-cap elimination, and an independently proved
+  comparison with the valued initial systems governing `A_infinity`.
 
 ## TD6 SMALLEST Q-BOUNDARY DEFORMATION (2026-08-24, DUAL-CONFIRMED TWO-POINT TIER)
 
