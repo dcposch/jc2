@@ -1,0 +1,16 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the review skill and the TD6 paired-third-band artifacts at the specified commit, then independently rerun the replay.This is an independent mathematical review, not a code-review skill run. I’ll load the producer, freeze, prior reviews, and replay next.I’ll load the review prompt, prior TD6 reviews, and the moduli-uniformity producer so the independent attack can reconstruct rather than trust the imported families.The moduli-uniformity review looks unfinished; I’ll check git state, hashes, and the producer/review chain before launching the independent replay.Hashes match the charged basis. Next I’ll start the registered replay and independently reconstruct the field, jets, and imported families.The Jacobian formulae look consistent on paper. I’ll inspect `exact_solve` and the first-band compiler next — mixed `Q`/`K` arithmetic is the most likely place a silent error would hide.I’ll start the registered replay and an independent second engine in parallel so we can reconstruct the families instead of trusting them.The registered replay is running. I’ll write an independent engine that uses reverse-lex GE, its own `[s^0]J` compiler, and extra affine-point checks.I found a constructor trap in my engine: `K(-1, 25)` is `-1+25S`, not `-1/25`. Fixing that, then launching the independent run.Both long jobs are running. I’ll check their logs and keep auditing the field, formula, and mixed `Q`/`K` arithmetic by hand.The registered replay passed in 53s. I’ll hash its stdout and keep the independent engine running.Independent engine passed. I’ll check whether the moduli-uniformity review landed and gather remaining hashes, then write the review.Independent reconstruction matched the producer on every numbered claim. I’ll write the review now.**Overall: CONFIRMED.** All six numbered claims are **CONFIRMED**.
+
+The review is in `xmodel/td6-paired-third-band-review-grok-20260824.md`. Producer and canonical files were not edited. The uniform successor was not run.
+
+At the algebraic point `C=1`, `D=S-22/25`, `L=3`, `A=1/9` in `K=Q[S]/(10S^2-35S+37)`, the whole 56-dimensional paired-next family forces
+
+\[
+[s^0 t^0]J=\frac{81}{15625},
+\]
+
+with every parameter coefficient zero. Jacobian one needs this slot to be `1`; the residual is `-15544/15625≠0`. The third paired band is therefore empty over `K` at this single point.
+
+A second engine (all-`K` GE in two row orders, own jet compilers, global `J` at five 56-points) rebuilt the 94- and 56-families rather than importing them, recovered the same ranks `3508/3602` and `38/94`, and matched the registered hashes, including stdout `3ef256cb…` and the certificate `e07f7b47…`. Homogeneous rank `25` is only the linear part of an already inconsistent affine system; it is not a solution-space dimension.
+
+**Promotion:** accept as `K-EMPTY / STOP` of this one algebraic moduli point. This does not kill the moduli curve, SP-2, any terminal class, landing, or JC2. The smallest valid successor is a moduli-uniform `[s^0 t^0]J-1` on `-2S^2+2S+5D-3=0`.

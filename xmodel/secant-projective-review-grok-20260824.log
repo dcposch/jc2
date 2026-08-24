@@ -1,0 +1,21 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the gate documents, case files, and parent claims at the frozen basis, then independently rerun both engines.The gate and parent docs are in; next I’ll read the case files, avenue entries, and an existing review so the write-up matches this campaign’s format.I have the claims and case files; next I’ll hash the frozen artifacts, rerun both engines, and recompute saturations independently.Hashes match the freeze. I’m rerunning both producer engines and an independent saturation/decomposition attack.Replays and independent saturations agree with the producer. I’ll write the review with per-claim verdicts, hashes, and promotion bounds.Overall verdict: **CONFIRMED**. Naive projective complete-intersection connectedness is a costume at the stated scope; the honest object is the `Z`-saturated closure, and that datum is still missing.
+
+Wrote `xmodel/secant-projective-review-grok-20260824.md` at basis `51aa1cc210b20d6c57c5bb0ba3b4a6dfa5fc8f54`. Producer files were not edited.
+
+**Hashes (independent SHA-256).** Report `cabfa347efc22b90b1c4c0808ceb1e1ac0bce235d35e8e28d9f27cc6bc614fb2` matches the launch prefix. Python and Singular sources match the freeze. Both engines were rerun: `18/18` and five `PASS` lines, stdout hashes identical to the producer.
+
+**Claims 1–6.** All **CONFIRMED**.
+
+| # | Result |
+|---|---|
+| 1 | Honest closure is `Proj(K:Z^∞)`, not `Proj K`. CI connectedness need not pass. |
+| 2 | Tame identities hold. Saturation to the diagonal has **minimal** exponent 4. Off ideal saturates to `(1)` with **minimal** exponent 3. |
+| 3 | Char-3 Artin–Schreier is already saturated; meeting is exactly `(X-U,Y-V,Z^2)`; marked collision lies on the off component. |
+| 4 | Constant Jacobian kills affine contact and does not prohibit boundary contact. No hidden purity/reducedness assumption in that negative statement. |
+| 5 | Verdict holds as a falsified **general** shortcut, not as a Newton-family or all-compactifications theorem. |
+| 6 | Parent `SECANT-IDEMPOTENT` stays provisional. Projective identities/saturations/meeting stand without it. No JC2 implication. |
+
+**Smallest failing hypothesis of the shortcut:** treating the two homogenized difference equations as the projective closure, then using connectedness plus affine étaleness as an obstruction. `Z`-torsion can carry the connectivity even for an automorphism; an honest off component can meet the diagonal only at infinity.
+
+**Promotion.** Accept the negative gate only. Do not promote the parent, do not kill avenues 7/31/32, do not launch a generic projective search. A descendant still needs the honest `Z`-saturated boundary intersection cycle.

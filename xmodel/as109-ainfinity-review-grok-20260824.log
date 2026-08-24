@@ -1,0 +1,17 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the gate document, case files, and predecessor reviews at the frozen commit, then independently rerun the replay and attack each numbered claim.The gate and case layout are in place. Next I’ll read the replay, freeze hashes, predecessor degree materials, and a recent review for format.I’ve got the gate, replay, and predecessor review. Next I’ll hash-check, rerun the replay, and pull the Hensel/secant dual-confirmed files plus Galois-Keller citations.Hashes match and the replay is 48/48. I’ll re-derive Newton, deck, fibre-split, and Zariski-Main controls in a second engine that does not import the producer script.Independent algebra checks out: Newton hull, uncontaminated deck comparison, and the Zariski–Main control all hold. I’ll write the review with per-claim verdicts and the tropical/axis and smaller-descent precisions.Overall verdict: **CONFIRMED**. All seven numbered claims are **CONFIRMED**.
+
+Review written at `xmodel/as109-ainfinity-review-grok-20260824.md` (SHA-256 `a86b694364ebaf28a3890b7bd73aafb5057ddae100172db78a9490e7a2b55d76`). Frozen producer hashes match; replay `python3 cases/as109_ainfinity_20260824/check.py` is 48/48. A second engine (Newton hull for many `N>p`, binomial deck expansion, seed-only tropical emptiness) had zero failures. No producer/canonical files were edited, no compiler was implemented, no AWS call was made.
+
+What held under attack:
+
+- Fibre algebra `B` is étale by the Jacobian criterion; the special fibre is the reduced split of `X-X^p`. After height-one localization, the `p` integral geometric roots are exactly the Hensel lifts of `(a,0)`.
+- `d-p` is the exact residual geometric count, packaged as valued-initial multiplicity of the **fixed** system, not mixed volume. The finite-support emptiness test is finite and exact (axes handled separately).
+- `B` finite over `R` forces `d=p`. The control `R^p × (R[1/p])^r` shows Zariski Main + étaleness cannot bound residual rank, and is not a Keller model.
+- Newton lengths `1, p-1, N-p` and deck triviality for `N≥p+2` (unique pole, uncontaminated `x^{N-1}` row) re-derive. `N=p+1` is correctly excluded.
+- An `L`-factor of `L ⊗_M L` is exactly an element of `Aut_M(L)`. One off factor or one `0→1` match is not a `p`-cycle. The two-key obstruction (5.3) is conditional and unearned.
+- Trace, secant, and formal `S_p` do not descend.
+
+Non-blocking precisions (not gaps): (2.2) with classical torus `Trop` is residual torus mass; headline (0.2) plus the axis step is the complete count. After `A_infinity=0`, any single off `L`-factor already gives Galois of degree `p` because `p` is prime. Idempotents of `B/pB` lift in the `p`-adic completion, not inside `B`.
+
+Promotion: accept the two finite discriminators. Do not promote to a lift obstruction, `A_infinity=0`, `109|d`, or any JC2 decision.

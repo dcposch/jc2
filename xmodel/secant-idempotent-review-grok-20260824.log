@@ -1,0 +1,18 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the review brief, the frozen producer artifacts, and the cited secant/Bezoutian notes so the independent rerun can attack the seven claims at their exact scope.Producer artifacts and the two replay engines are next, along with avenue-32 / Bezoutian notes, so I can rerun independently instead of trusting the report.Hashes, avenue-32 notes, and independent replays come next so I can attack the identities without using producer verdict strings.Hashes match the frozen producer. I'll rerun both engines and independently check a non-telescoping secant, uniqueness scope, and the saturation identity.The public collision-ideals neighbor already states the colon/idempotent identity; I'll read McKean and independently recompute the algebra rather than trust producer checks.McKean’s Bézoutian is the same telescoping matrix; the public collision-ideals neighbor already has the colon/idempotent identity. Next I’ll independently attack uniqueness, saturation, and non-telescoping conventions.The extra-idempotent probe used free coefficients over `F_3`, which sympy cannot coerce. I’ll drop that probe and finish the remaining independent checks.The saturation helper dropped every generator because it treated ring variables as appearing in every polynomial. I’ll fix elimination and load Singular’s `elim.lib`.Algebra and both replays check out. Next I’ll write the review with per-claim verdicts, the saturation proof, and the priority/scope caveats.I need to clean one sloppy Singular-hash sentence before leaving the review as the only written file.**CONFIRMED** overall. Algebra holds; the smallest overclaim is campaign-novelty, not a broken identity.
+
+Review written to `xmodel/secant-idempotent-review-grok-20260824.md` at basis `51aa1cc`. Frozen hashes matched; both engines were rerun (Python stdout `1e0d4737…`, Singular `06678206…`). Producer verdict strings were not used.
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | Adjugate identities for an arbitrary polynomial secant | **CONFIRMED** (they hold in `S`, not merely modulo `I`) |
+| 2 | Every such `A` restricts to `J_F`; constant `c≠0` gives the idempotent | **CONFIRMED** (including non-telescoping perturbations and `c=2`) |
+| 3 | Uniqueness of the diagonal idempotent | **CONFIRMED** at exact scope: unique with `e J_δ=0` and `1-e∈J_δ`. Reject uniqueness among all idempotents — Artin–Schreier has a second idempotent `1-e` |
+| 4 | `I:(x-u,y-v)^∞ = I+(det A)` scheme-theoretically | **CONFIRMED**; first colon already equals saturation; `eC ≅ k[x,y]` |
+| 5 | Convention independence | **CONFIRMED** (`x`-then-`y`, `y`-then-`x`, and kernel perturbations give the same class modulo `I`) |
+| 6 | Automorphism / Artin–Schreier / non-Keller controls | **CONFIRMED** independently |
+| 7 | Scope and priority | **CONFIRMED** (scope). Identity is standard secant/Bézoutian + unramified-diagonal algebra |
+
+**Saturation, both ways.** `e∈I:J` by adjugate, so `I+(e)⊆I:J⊆I:J^∞`. Conversely, `1-e∈J_δ` and `(1-e)^m=1-e`, so `J_δ`-torsion is exactly `(e)`. Singular `sat` and `quotient` agree with `I+(det A)` on the nonempty Artin–Schreier off-ideals (`p=3` and `p=5`).
+
+**Priority.** McKean’s Bézoutian is the same telescoping matrix. The public collision-ideals neighbor already writes `I_R:I_Δ=I_R+(δ_F)` with the complementary idempotent. Do not promote a new theorem. Do promote a collision-module software interface. `I+(det A)=(1)` for every char-0 Keller map is injectivity, hence JC2; there is no degree bound.

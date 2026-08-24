@@ -1,0 +1,18 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start from the frozen AS109 artifacts and the cited reports, then independently rerun the replay and audit each numbered claim before writing the review file.The closed-support report is in; next I’ll read the case files, packed-equation sections, and erratum, then check hashes against the freeze.I have the erratum; next I’ll read the packed-equation and contraction sections plus the case-directory files.Hashes match the freeze. I’ll inspect prior review format, then independently rerun the replay and check the algebra.Replay passed and hashes match. I’ll run a second sparse engine and expand the identities independently so the verdicts don’t rest on the producer’s strings.I’ll run a second sparse engine for the packed identity, polarization, affine split, obstruction, and coupled control.Independent algebra checks out. Next I’ll write the review with per-claim verdicts, hash/replay evidence, and promotion advice.**Overall: CONFIRMED.** Review is in `xmodel/as109-natural-nogo-review-grok-20260824.md`.
+
+All seven claims are **CONFIRMED**. Producer hashes matched the freeze, and an unmodified replay of `verify_no_go.py` exited 0. A second sparse engine (not importing the producer) reproduced the packed identity, unique contributing slots, polarization `(2.4)`, coupled countercontrol, affine split, and `x^{108}` obstruction.
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | Packed `det J-1 = p(L-s+pN)` over `Z_{109}`, no carry | CONFIRMED |
+| 2 | Unit right inverse at `s` forces independent `Q`-slot `(0,sy)` | CONFIRMED |
+| 3 | Induction puts every `s^k` in finite free `W` without a monomial basis on `W` | CONFIRMED |
+| 4 | Scope is full independent slots, not coupled sections; rank-one countercontrol | CONFIRMED |
+| 5 | Affine-`y` split, `c=k(1+109b)`, `k` 109-adically integral | CONFIRMED |
+| 6 | `[x^{108}]g = -109+109^2 a_{109}-109^3 k d_{109}` blocks every affine-`y` lift | CONFIRMED |
+| 7 | Survivors need coupling and `y`-degree ≥ 2; no lift / char-0 / JC2 | CONFIRMED |
+
+**Promotion:** accept the two no-go theorems at stated scope. Do not promote to nonexistence of an arbitrary finite-support lift, a found lift, or JC2. `CLOSED-SUPPORT + UNIT-L` remains a conditional target, now requiring a coupled section with `y`-degree at least two.
+
+No numbered claim fails for a missing hypothesis. Producer and canonical files were not edited.

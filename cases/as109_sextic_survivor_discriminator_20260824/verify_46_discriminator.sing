@@ -1,0 +1,144 @@
+// Exact replay for the AS109 sextic (4,6) survivor discriminator.
+// Singular 4.x, characteristic zero.  No support/exponent search.
+
+ring R=0,(z,r,q,A,B,C,U,L,al,be,ga,de,ep,k1,k2,F0,G0,t,
+          Ap,Bp,Cp,Up,Pp,Qp,Rp,Sp,Tp),lp;
+
+// Depressed normal form:
+// f=z^4+A*z^2+B*z+C,
+// g=z^6+L*z^5+P*z^4+Q*z^3+R*z^2+S*z+T.
+poly P=(3/2)*A+al;
+poly Q=(5/4)*L*A+(3/2)*B+be;
+poly RR=(3/8)*A^2+al*A+(5/4)*L*B+(3/2)*C+ga;
+poly S=(5/32)*L*A^2+(3/4)*A*B+(3/4)*be*A+al*B+(5/4)*L*C+de;
+poly T=(-1/16)*A^3+(5/16)*L*A*B+(3/4)*A*C+(1/2)*ga*A
+       +(3/8)*B^2+(3/4)*be*B+al*C+ep;
+
+poly fx=Ap*z^2+Bp*z+Cp;
+poly fz=4*z^3+2*A*z+B;
+poly gx=Pp*z^4+Qp*z^3+Rp*z^2+Sp*z+Tp;
+poly gz=6*z^5+5*L*z^4+4*P*z^3+3*Q*z^2+2*RR*z+S;
+poly jac=fx*gz-fz*gx;
+poly expected=(6*Ap-4*Pp)*z^7
+ +(5*L*Ap+6*Bp-4*Qp)*z^6
+ +(-2*A*Pp+5*L*Bp+4*P*Ap+6*Cp-4*Rp)*z^5
+ +(-2*A*Qp-B*Pp+5*L*Cp+4*P*Bp+3*Q*Ap-4*Sp)*z^4
+ +(-2*A*Rp-B*Qp+4*P*Cp+3*Q*Bp+2*RR*Ap-4*Tp)*z^3
+ +(-2*A*Sp-B*Rp+3*Q*Cp+2*RR*Bp+S*Ap)*z^2
+ +(-2*A*Tp-B*Sp+2*RR*Cp+S*Bp)*z
+ +(-B*Tp+S*Cp);
+if (jac-expected!=0) { "FAIL full Jacobian rows"; exit(1); }
+
+proc td(poly f)
+{
+  return(diff(f,A)*Ap+diff(f,B)*Bp+diff(f,C)*Cp);
+}
+
+poly Pdot=td(P); poly Qdot=td(Q); poly Rdot=td(RR);
+poly Sdot=td(S); poly Tdot=td(T);
+poly E7=6*Ap-4*Pdot;
+poly E6=5*L*Ap+6*Bp-4*Qdot;
+poly E5=-2*A*Pdot+5*L*Bp+4*P*Ap+6*Cp-4*Rdot;
+poly E4=-2*A*Qdot-B*Pdot+5*L*Cp+4*P*Bp+3*Q*Ap-4*Sdot;
+poly E3=-2*A*Rdot-B*Qdot+4*P*Cp+3*Q*Bp+2*RR*Ap-4*Tdot;
+if (E7!=0 || E6!=0 || E5!=0 || E4!=0 || E3!=0)
+{ "FAIL integrated upper rows"; exit(1); }
+
+poly I2=(-5/32)*L*A^3-(3/4)*A^2*B+(5/4)*L*A*C-(3/8)*be*A^2
+        +de*A+(5/8)*L*B^2+3*B*C+2*ga*B+3*be*C;
+poly I1=(3/32)*A^4-(15/32)*L*A^2*B-(3/4)*A*B^2-(3/4)*A^2*C
+        -(3/4)*A*B*be-(1/2)*A^2*ga+(5/4)*L*B*C+de*B
+        +(3/2)*C^2+2*ga*C;
+poly E2=-2*A*Sdot-B*Rdot+3*Q*Cp+2*RR*Bp+S*Ap;
+poly E1=-2*A*Tdot-B*Sdot+2*RR*Cp+S*Bp;
+poly E0=-B*Tdot+S*Cp;
+if (E2-td(I2)!=0 || E1-td(I1)!=0) { "FAIL first integrals"; exit(1); }
+
+// Change C=(A^2-U)/4.  Compare the two invariants and constant form.
+poly Csub=(A^2-U)/4;
+poly I2u=(5/32)*L*A^3+(3/8)*be*A^2-(5/16)*L*A*U+de*A
+         +(5/8)*L*B^2-(3/4)*B*U+2*ga*B-(3/4)*be*U;
+poly I1u=(-5/32)*L*A^2*B-(3/4)*A*B^2-(3/4)*A*B*be
+         -(5/16)*L*B*U+de*B+(3/32)*U^2-(1/2)*ga*U;
+if (subst(I2,C,Csub)-I2u!=0 || subst(I1,C,Csub)-I1u!=0)
+{ "FAIL U-transformed invariants"; exit(1); }
+
+poly Cpd=(A/2)*Ap-Up/4;
+poly etau=subst(subst(E0,C,Csub),Cp,Cpd);
+poly eta_expected=(15/64)*L*A^3*Ap-(5/16)*L*B^2*Ap-(5/32)*L*A*U*Ap
+ +(3/8)*be*A^2*Ap+(3/16)*B*U*Ap-(1/2)*B*ga*Ap+(1/2)*A*de*Ap
+ -(5/16)*L*A*B*Bp-(3/4)*B^2*Bp-(3/4)*B*be*Bp
+ -(15/128)*L*A^2*Up+(5/64)*L*U*Up-(3/16)*A*be*Up-(1/4)*de*Up;
+if (etau-eta_expected!=0) { "FAIL transformed eta"; exit(1); }
+
+// Both polynomial boundary equations in q=r^2+A/2 coordinates.
+poly Asub=2*q-2*r^2;
+poly Cq=(Asub^2-U)/4;
+poly Fboundary=r*B+q^2-U/4;
+poly originalF=r^4+Asub*r^2+B*r+Cq;
+if (originalF-Fboundary!=0) { "FAIL first boundary"; exit(1); }
+
+poly Pq=subst(P,A,Asub);
+poly Qq=subst(Q,A,Asub);
+poly Rq=subst(subst(RR,A,Asub),C,Cq);
+poly Sq=subst(subst(S,A,Asub),C,Cq);
+poly Tq=subst(subst(T,A,Asub),C,Cq);
+poly originalG=r^6+L*r^5+Pq*r^4+Qq*r^3+Rq*r^2+Sq*r+Tq;
+poly Eboundary=(3/8)*L*r^5-(5/4)*L*r^3*q-(1/2)*be*r^3
+ +(5/8)*L*r^2*B+(15/8)*L*r*q^2+(3/2)*r*q*B+(3/2)*be*r*q
+ -(5/16)*L*r*U+de*r+q^3+(5/8)*L*q*B-(3/8)*q*U+ga*q
+ +(3/8)*B^2+(3/4)*be*B;
+if (originalG-al*Fboundary-ep-Eboundary!=0)
+{ "FAIL second boundary"; exit(1); }
+
+// Weighted infinity initial system.  B=0 forces U=q=0.  If U=0 and
+// B!=0, the remaining equations force q=r^2,B=-r^3, rejected by G_infty.
+poly Finf=r*B+q^2-U/4;
+poly Ginf=q^3+(3/2)*r*q*B-(3/8)*q*U+(3/8)*B^2;
+poly J2inf=-(3/4)*B*U;
+poly J1inf=(3/2)*r^2*B^2-(3/2)*q*B^2+(3/32)*U^2;
+if (subst(subst(subst(Ginf,U,0),q,r^2),B,-r^3)+(1/8)*r^6!=0)
+{ "FAIL infinity rejection"; exit(1); }
+
+// L=0 shifted curve: X=B+beta, V=U-8gamma/3.
+poly X=B+be;
+poly V=U-(8/3)*ga;
+poly phi=(4/3)*de*A+(1/2)*be*A^2-(4/3)*(k2+2*be*ga);
+poly rad=8*A*X*(X-be)-(32/3)*de*(X-be)+(32/3)*(k1+(2/3)*ga^2);
+poly shiftedI2=subst(I2u,L,0)-k2;
+poly shiftedI1=subst(I1u,L,0)-k1;
+if (shiftedI2-(3/4)*(phi-X*V)!=0) { "FAIL shifted I2"; exit(1); }
+if (shiftedI1-(3/32)*(V^2-rad)!=0) { "FAIL shifted I1"; exit(1); }
+
+// Type-II line boundary resultant after allowed target translations set
+// gamma=C=0.  Eline means G0-alpha*F0-epsilon.
+poly Eline=r^6+((3/2)*B+be)*r^3+(3/8)*B^2+(3/4)*be*B;
+poly eqF=F0-r^4-B*r;
+poly eqE=G0-Eline;
+poly elimination=resultant(eqF,eqE,B);
+poly expected_elim=(1/8)*r^8-(1/4)*be*r^5-(3/4)*F0*r^4
+ +(G0)*r^2-(3/4)*be*F0*r-(3/8)*F0^2;
+if (elimination-expected_elim!=0) { "FAIL Type-II monic resultant"; exit(1); }
+
+// Nonlinear rational coefficient-curve control:
+// beta=1, gamma=delta=k1=k2=L=0.
+poly At=t+(1/32)*t^4;
+poly Bt=(1/32)*t^3;
+poly Ut=(1/2)*t^2+(1/64)*t^5;
+poly controlI2=subst(subst(subst(subst(subst(subst(I2u,L,0),be,1),ga,0),de,0),A,At),B,Bt);
+controlI2=subst(controlI2,U,Ut);
+poly controlI1=subst(subst(subst(subst(subst(subst(I1u,L,0),be,1),ga,0),de,0),A,At),B,Bt);
+controlI1=subst(controlI1,U,Ut);
+if (controlI2!=0 || controlI1!=0) { "FAIL nonlinear curve control"; exit(1); }
+
+poly Atp=diff(At,t); poly Btp=diff(Bt,t); poly Utp=diff(Ut,t);
+poly controlEta=subst(subst(subst(subst(subst(subst(subst(subst(subst(eta_expected,L,0),be,1),ga,0),de,0),A,At),B,Bt),U,Ut),Ap,Atp),Bp,Btp);
+controlEta=subst(controlEta,Up,Utp);
+poly eta_factor=(3/262144)*t^2*(t^3+32)*(5*t^6+122*t^3+512);
+if (controlEta-eta_factor!=0) { "FAIL nonlinear eta factor"; exit(1); }
+
+"PASS-SEXTIC-46-SURVIVOR-DISCRIMINATOR";
+"full_sextic_theorem_proved=false";
+"lift_found=false";
+"jc2_inference=false";
+quit;

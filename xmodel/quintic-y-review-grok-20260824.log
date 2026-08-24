@@ -1,0 +1,19 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start from the frozen preflight and case files at the given commit, then independently rerun the replay and attack each numbered claim.I'll load the case files, producer reports, and prior reviews next so the independent attack can follow the same claims.The quartic review may still be running; I'll read that producer, the cubic confirmation, and a prior review for format.Hashes match the frozen basis. Next I’ll rerun the producer replay and independently re-derive the Jacobian identities.The producer replay passed 24/24. The quartic review file is now on disk; I’ll read its verdict before attacking the quintic claims.Quartic review landed `CONFIRMED`. I’ll independently re-derive the normal forms, Jacobian rows, pole equations, and pullbacks from scratch.Independent algebra checks out (51/51). I’ll confirm the last row-integrations and then write the review.I’ve finished the independent algebra. Next I’ll write the single review file with overall and per-claim verdicts.Overall verdict: **CONFIRMED**. Written to `xmodel/quintic-y-review-grok-20260824.md`.
+
+The three new actual pairs `(2,5)`, `(3,5)`, `(4,5)` are empty. With the completed quartic review also **CONFIRMED**, every Keller pair with both `y`-degrees at most five is a polynomial automorphism over any characteristic-zero field. The scoped AS109 consequence follows: an exact lift cannot have both correction `y`-degrees at most five.
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | Reduction to `(2,5),(3,5),(4,5)`; UFD `a=h^m,d=h^5`; descent; quartic dependency | **CONFIRMED** |
+| 2 | `(2,5)` normal form, shears, `3 rho^5/8` pole, unit product | **CONFIRMED** |
+| 3 | `(3,5)` form, weighted poles, subresultant `441` | **CONFIRMED** |
+| 4 | Weierstrass cubic, `Psi` degree 6, LC `-epsilon 35/27` | **CONFIRMED** |
+| 5 | `(4,5)` form, `I_2,I_1`, constant bracket signs | **CONFIRMED** |
+| 6 | Weighted pole lemma, `c≠0`, resultant `-12180258816` | **CONFIRMED** |
+| 7 | Infinity types I–III, degree `8q-1`, Laurent as negative tests | **CONFIRMED** |
+| 8 | Char-0 theorem, AS109 lift consequence, no JC2/novelty | **CONFIRMED** |
+
+Independent work: producer replay **24/24**; second engine **51/51**, including re-derived Jacobian rows, both leading Groebner bases `(1)`, and `Psi` from the constant row rather than the producer formula. Frozen hashes match. No counterexample. Characteristic zero is load-bearing (`441`, `35/27`, `55`, …); algebraic closure is not.
+
+**Promotion:** accept `QUINTIC-Y NO-GO` at this scope. Do not promote to sextic, arbitrary-support AS109, or JC2. Resurrection still needs `CLOSED-SUPPORT + UNIT-L` with `y`-degree at least six in one correction.

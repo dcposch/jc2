@@ -1,0 +1,16 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the preflight report, case files, and confirmed quartic artifacts at the specified commit, then independently rerun the replay and attack each numbered claim.The repo is on the specified commit. Next I’ll read the preflight report, case files, and prior quartic/quintic reviews so the attack list is grounded.The case directory is just the freeze and replay. I’ll hash those, read the producer scripts, and check quartic/quintic status before attacking the algebra.Hashes match the freeze. Next I’ll rerun the producer replay and independently re-derive the Jacobian identities, integrals, and the rational trajectory.Producer replay matched. I’ll run a separate engine to re-derive the Jacobian rows, integrals, and trajectory rather than reuse the producer script.The two test failures were in my expected values, not the producer. The 4-form vanishing is more interesting: I’ll check whether ω is actually closed on the I₂, I₃ surfaces.Zero-constant `I1` checks out. Next I’ll see whether that primitive still exists with the full integration constants.The quintic review file appeared while this review was running. I’ll read only its verdict so I can record status without consuming any quintic theorem.I1 is a successor input, not a refutation of the survivor claim. I’ll write the review with per-claim verdicts, hashes, and that promotion boundary.Wrote `xmodel/as109-sextic-preflight-review-grok-20260824.md`. Overall verdict: **CONFIRMED**.
+
+All seven numbered claims are **CONFIRMED**. Frozen hashes match, the unmodified replay returned the surviving-Pfaffian flags, and an independent `Fraction` engine recovered the pair sweep, both `(4,6)` branches, all nine `(5,6)` rows, `(5.2)`, `I_3`/`I_2`, every `omega`/`eta` coefficient, the rank `(6/5)^4`, exterior component `(7.6)`, and the rational trajectory `h eta=-6`, `g(x,0)=-x^{-6}/5`.
+
+The preflight is a scoped survivor only: no degree-`<=6` theorem, no raised AS109 floor, no lift, no JC2 inference. Quintic independently landed `CONFIRMED` during this window and was not consumed.
+
+Hostile extra, recorded as successor input rather than a flipped claim: `omega` is closed on every `I_2,I_3` surface, and
+
+```text
+dI_1 = omega - (2A/5) dI_3
+```
+
+for an explicit weight-nine polynomial `I_1`. That answers the producer’s next-gate question; it does not close `(5,6)` (`I_1` vanishes on the negative control).
+
+Smallest successors: lower-row compiler for both `(4,6)` branches; `(5,6)` starting from `I_1` plus both polynomial boundaries and the remaining `eta` speed law.

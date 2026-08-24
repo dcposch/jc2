@@ -263,7 +263,35 @@ For the 4 slack-0 classes additionally (every ledger row exact):
    multiplicity 15, so direction multiplicity alone cannot supply the extra
    unit of δ.  Any kill must use a genuinely global restriction: polynomial
    realizability, compatibility with the pinned opposite-side templates, or
-   an additional branch elsewhere on the same compactified fiber.
+   an additional branch elsewhere on the same compactified fiber.  The
+   dual-confirmed centered control in
+   `xmodel/td6-global-compatibility-gate-20260824.md` further shows that the
+   bare chart `x=t s^4` cannot be pinned: the LR2-legal shared truncation
+   `x~y^-1` gives `T=xy^4-y^3`, and fixed-rectangle polynomial controls reach
+   `J=1+O(s^6)`.  Cap-dropped one-sided jets exist to arbitrary finite order.
+   The remaining test must therefore keep the fixed rectangles, explicit
+   common centering, the opposite r9/M2 chart, and exact global `J=1` in one
+   system; bare-chart divisibility or one-sided finite jets cannot close it.
+   The dual-confirmed first such shared-coefficient control, with one licensed
+   numerical choice of centering/orbits/dead stretch/pole parameter, has rank
+   `3508/3602` and is nonempty at its first band.  Its complete 94-dimensional
+   affine family is then killed at the next x row by the exact constant
+   `[s^-1 t^13]J=-18858/3125`.  This kills only that specialization.  The live
+   symbolic continuation makes this row
+   `(6/5)(5E2-2E1^2)`.  Its complex zero curve leaves a 56-dimensional paired
+   finite-band family; one quadratic point dies at `[s^0 t^0]J`, and the
+   complete curve is then cut to an irreducible sextic whose degree-18
+   pole-normalized field has a nonzero exact left-syzygy already at `t^4`.
+   Consequently the fixed normalized reduced-boundary family is empty.  This
+   still is not a realization or kill of SP-2: x-boundary, dead-stretch,
+   centering, and other licensed boundary data remain frozen.  The first
+   bounded q-boundary deformation `q_B=t+B*t^2+t^25` is dual-confirmed empty
+   at `B=1` and at one exact adaptive value, both at the centered `t^4` row;
+   the residue is `B`-sensitive, so these two points do not kill the family.
+   The live test is fraction-free elimination over `E[B]`, retaining the
+   actual F1-to-r9 transport and treating every pivot/rank-jump locus; the
+   differentiated compatibility certificate is an accelerator, not a
+   substitute for that stratification.
 2. **x-side realizability vs the templates.** LR2's single-cluster/κ=1/
    unsplit-to-height-R x-side must coexist with the pinned y-side
    patterns (AF3 §4 entry family; L1 §5 rigid merge template) inside one

@@ -1,0 +1,30 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the closure report, case files, parent reviews, and frozen hashes, then independently rerun the replay and attack the numbered claims.This is a math-gate review, not a code-review run. I’ll read the prompt, prior landed reviews, the gate document, and the case files next.Hashes match the frozen values. Next I’ll read the gate, freeze, replay, and parent documents in full.Parent hashes match. I’ll read the parent equations, then rerun the replay and independently re-derive the local substitutions.Parent reviews both landed `CONFIRMED`. I’ll rerun the replay and independently re-derive the local chart, Newton faces, and degree cones.Replay passed and hashes match. Next I’ll independently re-derive the chart, Newton faces, quartic, and degree cones in a second engine.The only failed check was a test bug, not the algebra. Next I’ll independently derive `eta`, run the Singular cone check, and close the remaining edge cases.Independent algebra checks out. I’ll write the review report with per-claim verdicts, hashes, and promotion advice.Hostile different-model review of the AS109 sextic `(4,6)` closure is complete. Overall verdict: **CONFIRMED**.
+
+The report is `xmodel/as109-sextic-46-closure-review-grok-20260824.md`. Producer and canonical files were not edited; no AWS call was made.
+
+**Per-claim verdicts**
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | Parent NF and unique infinity now covered by landed reviews; child local equations re-derived | **CONFIRMED** |
+| 2 | `L!=0` Puiseux valuations, including zero/infinite `Q,Y,Z` and ramification | **CONFIRMED** |
+| 3 | `L=0` Newton strata; beta/delta tie tables exhaustive | **CONFIRMED** |
+| 4 | `beta=delta=0` shift, `k2` split, nonlinear `AB^2=theta` component, both boundaries, monic quartic | **CONFIRMED** |
+| 5 | Square/nonsquare descent, integrality of `K=B^2` and `M=hB`, unit products, hidden zeros | **CONFIRMED** |
+| 6 | Polynomial degree cones; unique nonzero leading `eta`; constants exhaust the residue | **CONFIRMED** |
+| 7 | Hashes, exact replay, dependencies, scope | **CONFIRMED** |
+
+**What was checked independently**
+
+- Frozen hashes match: report `587a142a…`, replay `a705526c…`, freeze `45134ff2…`.
+- Unmodified Singular replay: `PASS-SEXTIC-46-LOCAL-NORMALIZATION`, `as109_inference=false`, `jc2_inference=false`.
+- Parent reviews have both landed **CONFIRMED**, so the producer’s `PROVISIONAL`/`CONDITIONAL` label is discharged.
+- Second engine (sympy over `Q`, plus a separate Singular Groebner pass) re-derived the weighted chart, `Z`-elimination, `eta` from `E0`, both boundaries, the monic quartic, and the three leading `eta` coefficients.
+- Newton scan of positive rationals with denominator `≤ 12`: no surviving `(v(Q),v(Y))` on the `beta!=0` or `delta!=0` strata.
+- Degree-cone scan: unique primitives `(4,5,7)`, `(1,1)`, `(4,3,5)`, `(4,1,3)`.
+- Linear-`K` trap on the nonsquare side is killed by `M^2=HK`, not by degree counting alone.
+
+**Promotion**
+
+Accept this as exact closure of the genuine `(4,6)` pair after its reviewed parent. Do not promote it to a `y`-degree-at-most-six theorem, a stronger AS109 floor, a lift, or JC2. The next bounded calculation is the `(5,6)` Pfaffian.

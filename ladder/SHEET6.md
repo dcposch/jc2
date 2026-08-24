@@ -31,9 +31,28 @@ census and survivor ledger supersede the estimates below; see
   coefficient template survived the reviewed lift.  An exact Jacobian-one
   analytic germ subsequently showed that a multiple direction root can attain
   equality in the local delta bound, so multiplicity alone cannot provide a
-  strictness kill.  The live local/global surface is polynomial realizability
-  and opposite-side balance, pursued through the reviewed R6/deeper-tower plus
-  redesigned-R1 coefficient path toward template algebraization. At campaign scope, full
+  strictness kill. A later dual-confirmed global-compatibility control showed
+  that the bare `x=t s^4` divisibility obstruction disappears under the
+  LR2-legal shared centering `T=xy^4-y^3`; fixed-rectangle controls reach only
+  finite Jacobian order, while arbitrary one-sided orders require dropping the
+  degree cap. A dual-confirmed two-chart numerical specialization is nonempty
+  at its first shared band (rank `3508/3602`) but its entire 94-dimensional
+  affine family dies one x row later at
+  `[s^-1 t^13]J=-18858/3125`. This is not uniform in the licensed moduli and
+  kills no terminal class.  The symbolic-moduli continuation makes that row
+  `(6/5)(5E2-2E1^2)`: its complex zero curve carries a 56-dimensional paired
+  finite-band survivor.  One algebraic point dies at the next centered row;
+  uniformly on the curve, that row cuts to an irreducible sextic and a later
+  exact left-syzygy is nonzero at all 18 pole-normalized conjugates.  Thus the
+  whole **fixed normalized reduced-boundary family** is empty, but the
+  x-boundary, dead-stretch, centering, and other boundary moduli were not
+  quantified.  The first q-boundary deformation `q_B=t+B*t^2+t^25` is
+  dual-confirmed empty at `B=1` and one exact adaptive value at the centered
+  `t^4` row, with a genuinely `B`-sensitive residue; these two points do not
+  kill the family.  The live local/global surface is fraction-free
+  elimination over `E[B]` with every pivot/rank-jump stratum treated
+  separately, alongside the reviewed R6/deeper-tower plus redesigned-R1
+  coefficient path toward template algebraization. At campaign scope, full
   landing/coverage and the distinct `G2-PSC` / `G2-BD` obligations remain;
   this sheet ledger alone is not an unconditional reduction of JC2.
 
@@ -55,9 +74,12 @@ census and survivor ledger supersede the estimates below; see
   the source of the tree engine and is cited for the bound by
   Makar-Limanov (arXiv:2106.06869) and Borisov (arXiv:1901.04073). The
   documented GGV criticism of Żołądek's neighboring gcd argument is separate
-  from Żołądek's Theorem 6.12. Also flagged: arXiv:2407.13795 (Moskowicz,
-  2024) claims that no Keller map has prime field-extension degree; it is
-  unpublished and remains unvetted here.
+  from Żołądek's Theorem 6.12. The later source audit of arXiv:2407.13795
+  (Moskowicz, 2024) is dual-confirmed `REFUTED-AS-PROOF`: its first case uses
+  a false universal degree-two inference, so its no-prime headline is not a
+  usable theorem. This does not disprove that headline. Its repaired second
+  case gives only the independent membership implication
+  `xy in C(P,Q) => automorphism`.
 
 ## 2. Method skeleton (two structurally distinct engines, not two audited proofs)
 Both: compactify, resolve indeterminacy at infinity, then add Abhyankar-type ARITHMETIC of Puiseux data to the topology.

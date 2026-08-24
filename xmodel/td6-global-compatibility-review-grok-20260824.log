@@ -1,0 +1,17 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll work as the independent different-model reviewer at the given commit, starting by reading the producer report, replay, D73 materials, and cited ladder sources in full.Hashes and commit basis match. Next I’ll read the producer report, replay, D73 materials, and the cited ladder sources.I’ll read D73, a prior hostile-review template, the cited ladder/LR2 sources, and the producer prompt next.I’ll pull the cited LR2/SP-2 ledger text and Sigray source, then independently rerun the algebra.I’ll read the Sigray forms and LR2 typing next, then independently recompute the identities instead of trusting the producer replay.Replay passed. I’ll now run a second, independent exact-algebra engine that does not import the producer script.All independent checks passed. I’ll write the hostile review with per-claim verdicts, recovered polynomials, and scope.**Overall verdict: CONFIRMED.** Written to `xmodel/td6-global-compatibility-review-grok-20260824.md`.
+
+All six numbered claims are **CONFIRMED**. There is no failing identity and no hidden local-to-global step. Basis `51aa1cc` and both frozen producer hashes match. The producer replay passed; a second exact engine that does not import it recorded 52/52 identities.
+
+Per claim:
+
+1. The bare-chart divisibility lemma and Jacobian contradiction are exact under the hypothesis that both polynomials are holomorphic in `x=t s^R`, `y=s^{-1}`.
+2. LR2/Sigray typing permits a shared unramified `y^{-1}` truncation; `T=xy^4-y^3` is the Eggers coordinate at height four after that truncation. No GAP at the typing step.
+3. `(f_3,g_3)` matches the SP-2 x-side mechanism (patterns, three branches, contact `21/5`, `∑Λ=3`) with exact Jacobian (6) and centered valuation 3. It is not Keller.
+4. Recovered `(f_6,g_6)` from intended (8) stay in the fixed rectangles; `val(J-1)=6` exactly. No stronger fixed-rectangle order is asserted.
+5. The `Q[T][[x]]` recursion (IFT, Lagrange `u'`, Bezout, char-0 divisions, composition, degree growth) holds, and `Q[T,x]` is a strict subring of the polynomial-origin completion.
+6. The construction validly stops the bare-divisibility attack, kills or realizes no td6 class, and leaves the two-chart fixed-rectangle exact-`J` gate open.
+
+Equation (8) is a formatting erratum only (`-left(` for `-\left(`); recovered polynomials match the replay with no mathematical mismatch.
+
+**Promotion:** accept as a stop of the bare-divisibility attack and as banked centered finite-jet control. Do not promote as a Keller pair, class kill/realization, or two-chart exact-`J` theorem.

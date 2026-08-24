@@ -1,0 +1,19 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start from the committed basis and the frozen audit artifacts, then independently check the paper, MathOverflow, and the algebraic claims before writing the review.Next I’ll inventory the case files, check the frozen hashes, and pull the paper plus MathOverflow sources.Hashes match the freeze. I’ll read the case files and a prior review for format, then pull the paper and MathOverflow sources.I’ll pull the paper, MathOverflow thread, and cited Wang/Gwoździewicz statements, then independently check the algebra.The MathOverflow page was blocked. I’ll retrieve the arXiv source and try alternate copies of the paper and the MO thread.The paper text is in hand. I’ll extract the TeX, fetch the MathOverflow answer, and pull Wang and Gwoździewicz.Regression passed. I’ll independently recompute the countercontrol algebra and hash the freeze artifacts before writing the report.I have the primary sources, independent algebra, and matching hashes. Next I’ll write the review report.**Overall: CONFIRMED.** Written to `xmodel/moskowicz-prime-degree-review-grok-20260824.md`.
+
+Every numbered claim is **CONFIRMED**. I re-read arXiv:2407.13795v1 (official TeX hash matched), MathOverflow 472877 / Moret-Bailly 473055 including the full comment thread, Wang 41(i), and Gwoździewicz 1.1, and independently attacked the algebra.
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | Rare property → degree 2 is not what MO 473055 proves | **CONFIRMED** |
+| 2 | All-degree countercontrol `C(s^n,v)⊂C(s,v)` | **CONFIRMED** |
+| 3 | Refutes the printed proof, not a Keller counterexample | **CONFIRMED** |
+| 4 | Second case repairable via `μ≠0`; Wang and injectivity-on-one-line apply | **CONFIRMED** |
+| 5 | Paper cannot exclude prime 109; `xy∈K(P,Q)` is a valid successor, not a finite ansatz | **CONFIRMED** |
+| 6 | Regression, hashes, and scope strings | **CONFIRMED** |
+
+Rescue attempts that failed: LMB’s comment “yes” is not a proof (the questioner’s July 11 edit is what the paper copied); `P=2` is already Corollary 2.13 and does not save odd primes; the countercontrol is not Keller; Step 2 does not transfer common-zero avoidance to `(p-c,q)`.
+
+**Promotion.** Mark avenue 44 `REFUTED-AS-PROOF`. Do not use this paper against AS109. Keep the repaired second case as a known-result gate. `AS109-XY-MEMBERSHIP` is an honest successor, not a theorem of this freeze.
+
+**Quarantine.** No Keller counterexample, no disproof of the headline *statement*, no JC2 inference. Producer files were not edited.

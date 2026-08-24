@@ -1,0 +1,168 @@
+// Exact replay for the (4,6) weighted-infinity normalization gate.
+// Singular 4.x over Q.  This is finite symbolic algebra, not an
+// exponent/support search.
+
+ring R=0,(s,si,Q,Y,Z,L,be,ga,de,k1,k2,d,e,r,q,B,U,A,
+          q0,y0,z0,w0,v0,aa,bb,uu,X,V,th,pp,KK,ww,
+          Ap,Bp,Up,Kp,h,M),dp;
+
+// Original boundary cover and coefficient invariants, with
+// A=2q-2r^2.  The Laurent chart is r=si, q=Q si^2,
+// B=Y si^3, U=Z si^4, s si=1.
+poly Asub=2*q-2*r^2;
+poly Forig=r*B+q^2-U/4-d;
+poly Gorig=(3/8)*L*r^5-(5/4)*L*r^3*q-(1/2)*be*r^3
+ +(5/8)*L*r^2*B+(15/8)*L*r*q^2+(3/2)*r*q*B
+ +(3/2)*be*r*q-(5/16)*L*r*U+de*r+q^3
+ +(5/8)*L*q*B-(3/8)*q*U+ga*q+(3/8)*B^2
+ +(3/4)*be*B-e;
+poly J2orig=(5/32)*L*Asub^3+(3/8)*be*Asub^2
+ -(5/16)*L*Asub*U+de*Asub+(5/8)*L*B^2
+ -(3/4)*B*U+2*ga*B-(3/4)*be*U-k2;
+poly J1orig=-(5/32)*L*Asub^2*B-(3/4)*Asub*B^2
+ -(3/4)*be*Asub*B-(5/16)*L*B*U+de*B
+ +(3/32)*U^2-(1/2)*ga*U-k1;
+
+proc chart(poly f, int wt)
+{
+  poly g=subst(subst(subst(subst(f,r,si),q,Q*si^2),B,Y*si^3),U,Z*si^4);
+  return(reduce(s^wt*g,std(ideal(s*si-1))));
+}
+
+poly Fh=Y+Q^2-Z/4-d*s^4;
+poly Gh=(3/8)*L*s-(5/4)*L*Q*s-(1/2)*be*s^3
+ +(5/8)*L*Y*s+(15/8)*L*Q^2*s+(3/2)*Q*Y
+ +(3/2)*be*Q*s^3-(5/16)*L*Z*s+de*s^5+Q^3
+ +(5/8)*L*Q*Y*s-(3/8)*Q*Z+ga*Q*s^4
+ +(3/8)*Y^2+(3/4)*be*Y*s^3-e*s^6;
+poly J2h=(-5/4)*L*s+(15/4)*L*Q*s+(3/2)*be*s^3
+ -(15/4)*L*Q^2*s-3*be*Q*s^3+(5/8)*L*Z*s
+ -2*de*s^5+(5/4)*L*Q^3*s+(3/2)*be*Q^2*s^3
+ -(5/8)*L*Q*Z*s+2*de*Q*s^5+(5/8)*L*Y^2*s
+ -(3/4)*Y*Z+2*ga*Y*s^4-(3/4)*be*Z*s^3-k2*s^7;
+poly J1h=(-5/8)*L*Y*s+(5/4)*L*Q*Y*s+(3/2)*Y^2
+ +(3/2)*be*Y*s^3-(5/8)*L*Q^2*Y*s-(3/2)*Q*Y^2
+ -(3/2)*be*Q*Y*s^3-(5/16)*L*Y*Z*s+de*Y*s^5
+ +(3/32)*Z^2-(1/2)*ga*Z*s^4-k1*s^8;
+
+if (chart(Forig,4)-Fh!=0 || chart(Gorig,6)-Gh!=0
+ || chart(J2orig,7)-J2h!=0 || chart(J1orig,8)-J1h!=0)
+{ "FAIL weighted chart"; exit; }
+
+// Highest weighted system has only [1:0:0:0].  The nonzero-B branch
+// with U=0 would have q=r^2 and B=-r^3; G_infinity rejects it.
+poly Finf=r*B+q^2-U/4;
+poly Ginf=q^3+(3/2)*r*q*B-(3/8)*q*U+(3/8)*B^2;
+poly J2inf=-(3/4)*B*U;
+poly J1inf=(3/2)*r^2*B^2-(3/2)*q*B^2+(3/32)*U^2;
+if (subst(subst(subst(Ginf,U,0),q,r^2),B,-r^3)+(1/8)*r^6!=0)
+{ "FAIL unique infinity rejection"; exit; }
+
+// In the aligned branch eliminate Z by the first boundary.
+poly Zsub=4*(Y+Q^2-d*s^4);
+poly G0=8*s^6*e-8*s^4*Q*ga-8*s^5*de-12*s^4*Q*d
+ -12*s^3*Q*be-6*s^3*Y*be+4*s^3*be+4*Q^3-3*Y^2;
+poly J20=6*s^7*be*d-2*s^7*k2+4*s^5*Q*de-3*s^3*Q^2*be
+ +4*s^4*Y*ga-4*s^5*de+6*s^4*Y*d-6*s^3*Q*be
+ -6*s^3*Y*be+3*s^3*be-6*Q^2*Y-6*Y^2;
+poly J10=4*s^8*ga*d+3*s^8*d^2-2*s^8*k1-4*s^4*Q^2*ga
+ +2*s^5*Y*de-6*s^4*Q^2*d-3*s^3*Q*Y*be
+ -4*s^4*Y*ga-6*s^4*Y*d+3*s^3*Y*be
+ +3*Q^4+6*Q^2*Y-3*Q*Y^2+6*Y^2;
+if (8*subst(subst(Gh,L,0),Z,Zsub)+G0!=0
+ || 2*subst(subst(J2h,L,0),Z,Zsub)-J20!=0
+ || 2*subst(subst(J1h,L,0),Z,Zsub)-J10!=0)
+{ "FAIL aligned elimination"; exit; }
+
+// L!=0 first Newton face.  F=0 and the order-3/4 part of G=0
+// force z0=4y0 and then q0^2=0 once q0 is nonzero.
+poly FL=q0^2+y0-z0/4;
+poly GLinside=q0^2+(3/2)*y0-(3/8)*z0;
+if (GLinside-FL-(4*y0-z0)/8!=0)
+{ "FAIL mismatch face identity"; exit; }
+// The order-one J2 face fixes y0*z0=-5L/3; in particular both
+// are nonzero, which is the input to the valuation split.
+poly J2L=(-5/4)*L-(3/4)*y0*z0;
+if (subst(J2L,z0,4*y0)+(5/4)*L+3*y0^2!=0)
+{ "FAIL mismatch J2 face"; exit; }
+
+// Aligned shifted coefficient curve.
+poly I2=(5/32)*L*A^3+(3/8)*be*A^2-(5/16)*L*A*U+de*A
+ +(5/8)*L*B^2-(3/4)*B*U+2*ga*B-(3/4)*be*U-k2;
+poly I1=-(5/32)*L*A^2*B-(3/4)*A*B^2-(3/4)*be*A*B
+ -(5/16)*L*B*U+de*B+(3/32)*U^2-(1/2)*ga*U-k1;
+poly Xsub=B+be;
+poly Vsub=U-(8/3)*ga;
+poly Phi=(4/3)*de*A+(1/2)*be*A^2-(4/3)*(k2+2*be*ga);
+poly Rad=8*A*Xsub*(Xsub-be)-(32/3)*de*(Xsub-be)
+ +(32/3)*(k1+(2/3)*ga^2);
+if (subst(I2,L,0)-(3/4)*(Phi-Xsub*Vsub)!=0
+ || subst(I1,L,0)-(3/32)*(Vsub^2-Rad)!=0)
+{ "FAIL shifted curve"; exit; }
+
+// k2!=0 boundary leading face.  If q0 has the borderline order,
+// the two boundaries force v0=4w0 and q0^2=0.
+poly Flead=w0+q0^2-v0/4;
+poly EleadInside=q0^2+(3/2)*w0-(3/8)*v0;
+if (EleadInside-Flead-(4*w0-v0)/8!=0)
+{ "FAIL k2-nonzero boundary face"; exit; }
+if (subst(v0^2+16*w0^2,v0,4*w0)-32*w0^2!=0)
+{ "FAIL k2-nonzero coefficient clash"; exit; }
+
+// On V=0, beta=delta=0 and A B^2=theta!=0, both boundaries imply
+// a monic quartic for q.  Here pp=D+2gamma/3, KK=B^2, ww=rB.
+poly Kformula=(8*e+4*q^3-12*pp*q)/3;
+poly Wformula=pp-q^2;
+poly relation=ww^2-q*KK+th/2;
+poly quartic=q^4-6*pp*q^2+8*e*q-3*pp^2-(3/2)*th;
+poly relsub=subst(subst(relation,ww,Wformula),KK,Kformula);
+if (3*relsub+quartic!=0)
+{ "FAIL monic quartic"; exit; }
+
+// The theta=0,A=0 line uses both boundaries as well.
+poly lineF=pp-r^4-r*B;
+poly lineE=e-r^6-(3/2)*r^3*B-(3/8)*B^2;
+poly lineResultant=resultant(lineF,lineE,B);
+poly lineMonic=r^8-6*pp*r^4+8*e*r^2-3*pp^2;
+if (8*lineResultant-lineMonic!=0)
+{ "FAIL monic line resultant"; exit; }
+
+// The last-row form and its restrictions.
+poly eta=(15/64)*L*A^3*Ap-(5/16)*L*B^2*Ap
+ -(5/32)*L*A*U*Ap+(3/8)*be*A^2*Ap
+ +(3/16)*B*U*Ap-(1/2)*B*ga*Ap+(1/2)*A*de*Ap
+ -(5/16)*L*A*B*Bp-(3/4)*B^2*Bp-(3/4)*B*be*Bp
+ -(15/128)*L*A^2*Up+(5/64)*L*U*Up
+ -(3/16)*A*be*Up-(1/4)*de*Up;
+poly etaV0=subst(subst(subst(subst(eta,L,0),be,0),de,0),U,(8/3)*ga);
+if (etaV0+(3/4)*B^2*Bp!=0)
+{ "FAIL V=0 eta"; exit; }
+// K'=2BB' turns h eta into -(3/8)(hB)K'.
+poly invariantEta=-(3/4)*h*B^2*Bp+(3/8)*(h*B)*(2*B*Bp);
+if (invariantEta!=0) { "FAIL invariant eta"; exit; }
+
+// Leading coefficient of eta on every possible nonconstant polynomial
+// branch at base infinity.
+// L!=0: degrees (A,B,U)=(4n,5n,7n), and 5L A^3=24BU.
+poly etaLtop=(15/64)*L*aa^3+(3/16)*bb*uu;
+ideal leadL=24*bb*uu-5*L*aa^3;
+if (reduce(128*etaLtop-35*L*aa^3,std(leadL))!=0)
+{ "FAIL mismatch eta leading coefficient"; exit; }
+// L=0,beta!=0: XV=(beta/2)A^2.
+poly etaBetatop=(3/16)*X*V+(3/8)*be*A^2;
+ideal leadBe=2*X*V-be*A^2;
+if (reduce(32*etaBetatop-15*be*A^2,std(leadBe))!=0)
+{ "FAIL beta eta leading coefficient"; exit; }
+// L=beta=0,delta!=0: XV=(4delta/3)A.
+poly etaDeltatop=(3/16)*X*V+(1/2)*de*A;
+ideal leadDe=3*X*V-4*de*A;
+if (reduce(4*etaDeltatop-3*de*A,std(leadDe))!=0)
+{ "FAIL delta eta leading coefficient"; exit; }
+
+"PASS-SEXTIC-46-LOCAL-NORMALIZATION";
+"mismatch_finite_pole_branches=0";
+"aligned_finite_pole_survivors=0";
+"polynomial_eta_trajectories=0";
+"as109_inference=false";
+"jc2_inference=false";
+quit;

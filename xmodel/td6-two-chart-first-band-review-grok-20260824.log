@@ -1,0 +1,19 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start from the frozen committed basis and read the producer report, case files, parent review, and the cited canonical material before independently rerunning the replay.The review skill is for code PRs; this is a hostile math review, so I’ll match the existing xmodel review format and read the producer artifacts plus parent material next.I’ll pull the rest of the replay, the parent gate plus its hostile review, the review prompt, and a prior review as the format template.I’ll verify the git basis and hashes, then locate the canonical SP-2, F1, and r9/M2 sources the producer cites.Hashes match the charged basis. Next I’ll read the canonical SP-2 / F1 / r9-M2 sources and start an independent replay plus a second solver.Canonical typing is in place. I’ll rerun the producer replay and, in parallel, write a second exact engine that does not import it.Producer replay passed and matches the frozen hashes. I’ll now run a second exact engine that rebuilds the charts, ranks, witness, and next Jacobian rows without importing the producer code.The full RREF over rationals is too slow, so I’ll switch the second engine to a different-order sparse solve plus an independent modular rank check.Independent checks all match. I’ll write the hostile review now: overall and per-claim verdicts, hashes, source-typing caveats, and promotion scope.Overall verdict: **CONFIRMED**. There is no failing identity and no hidden local-to-global step.
+
+The first-band system for this one licensed SP-2/r9-M2 specialisation is nonempty over `Q`, with joint rank `3508/3602`. The deterministic witness is a genuine rational point and is not a Keller pair. That stops the proposed first-band emptiness obstruction and nothing larger.
+
+Written to `xmodel/td6-two-chart-first-band-review-grok-20260824.md`.
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | Source typing: one licensed control, not terminal-forced data | **CONFIRMED** |
+| 2 | Patterns, two-forms, pole ODE `3pq'-5p'q=25`, first pole `J` built into transport | **CONFIRMED** |
+| 3 | Shared-coefficient ranks `946/976`, `2524/2626`, 40 x-J rows with 38 new, joint `3508/3602` | **CONFIRMED** |
+| 4 | Deterministic `Q`-witness, serialization hash, second-path replay | **CONFIRMED** |
+| 5 | Next rows `[s^{-1}]J` and `[r^1](J-1)` nonzero; `global_J_exact=false`; `terminal_class_realized=false` | **CONFIRMED** |
+| 6 | `NONEMPTY-WITNESS` scope is this specialisation only | **CONFIRMED** |
+
+Independent checks: producer replay exit 0; a second engine with iterative chart powers, reverse-lex GE, and rank over `F_1000000007`; chart-then-differentiate Jacobians; hand two-forms and the pole ODE. Witness and next-row hashes match. Producer and canonical files were not edited.
+
+**Promotion:** accept as `NONEMPTY-WITNESS / STOP` of this first-band obstruction. Do not promote to a Keller pair, terminal realization, landing theorem, counterexample, or JC2. The next gate is the polynomial pair `[s^{-1}]J=0`, `[r^1](J-1)=0` on the 94-dimensional affine space; those are not linear rows.

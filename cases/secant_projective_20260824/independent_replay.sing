@@ -1,0 +1,114 @@
+// Independent exact Z-saturation replay for the projective-connectedness gate.
+// Run: Singular -q cases/secant_projective_20260824/independent_replay.sing
+
+LIB "elim.lib";
+
+proc require_zero(poly value, string label)
+{
+  if (value != 0)
+  {
+    print("FAIL " + label);
+    exit(1);
+  }
+}
+
+proc require_nonzero(poly value, string label)
+{
+  if (value == 0)
+  {
+    print("FAIL " + label);
+    exit(1);
+  }
+}
+
+proc require_ideal_equal(ideal left, ideal right, string label)
+{
+  ideal left_remainder = simplify(reduce(left,std(right)),2);
+  ideal right_remainder = simplify(reduce(right,std(left)),2);
+  if ((size(left_remainder) != 0) || (size(right_remainder) != 0))
+  {
+    print("FAIL " + label);
+    exit(1);
+  }
+}
+
+ring r0 = 0,(X,Y,U,V,Z),dp;
+
+// Identity control: already homogeneous and Z-saturated.
+ideal identity_pair = X-U,Y-V;
+list identity_sat = sat_with_exp(identity_pair,ideal(Z));
+require_ideal_equal(identity_pair,identity_sat[1],"identity saturation");
+if (identity_sat[2] != 0)
+{
+  print("FAIL identity saturation exponent");
+  exit(1);
+}
+
+// Nontrivial tame automorphism Q=y+x^2, P=x+Q^2.
+poly q1 = X2+Y*Z;
+poly q2 = U2+V*Z;
+poly Hq = q1-q2;
+poly Hp = X*Z3+q1^2-U*Z3-q2^2;
+require_zero(Hp-(q1+q2)*Hq-Z3*(X-U),"tame first recovery identity");
+require_zero(Hq-(X+U)*(X-U)-Z*(Y-V),"tame second recovery identity");
+ideal tame_pair = Hp,Hq;
+list tame_sat = sat_with_exp(tame_pair,ideal(Z));
+ideal diagonal = X-U,Y-V;
+require_ideal_equal(tame_sat[1],diagonal,"tame honest closure is diagonal");
+if (tame_sat[2] != 4)
+{
+  print("FAIL tame saturation exponent");
+  exit(1);
+}
+
+// Homogenization of the parent's nine-term secant determinant.
+poly E = -U3-U2*X-U*V*Z+U*X2+U*Y*Z-V*X*Z+X3+X*Y*Z+Z3;
+ideal tame_off = Hp,Hq,E;
+list tame_off_sat = sat_with_exp(tame_off,ideal(Z));
+require_zero(reduce(1,std(tame_off_sat[1])),"tame honest off closure is empty");
+if (tame_off_sat[2] != 3)
+{
+  print("FAIL tame off saturation exponent");
+  exit(1);
+}
+
+// At infinity the two equations lose independence and contain two whole
+// surfaces Z=X-U=0 and Z=X+U=0.
+require_zero(subst(subst(Hp,Z,0),U,X),"tame plus infinity Hp");
+require_zero(subst(subst(Hq,Z,0),U,X),"tame plus infinity Hq");
+require_zero(subst(subst(Hp,Z,0),U,-X),"tame minus infinity Hp");
+require_zero(subst(subst(Hq,Z,0),U,-X),"tame minus infinity Hq");
+
+ring r3 = 3,(X,Y,U,V,Z),dp;
+poly E = Z2-X2-X*U-U2;
+poly Hp = (X-U)*E;
+poly Hq = Y-V;
+ideal pair = Hp,Hq;
+list pair_sat = sat_with_exp(pair,ideal(Z));
+require_ideal_equal(pair_sat[1],pair,"Artin-Schreier pair is already saturated");
+if (pair_sat[2] != 0)
+{
+  print("FAIL Artin-Schreier saturation exponent");
+  exit(1);
+}
+ideal diagonal = X-U,Y-V;
+ideal off = E,Y-V;
+ideal decomposition = intersect(diagonal,off);
+require_ideal_equal(decomposition,pair,"Artin-Schreier diagonal/off decomposition");
+ideal meet = diagonal+off;
+ideal expected_meet = X-U,Y-V,Z2;
+require_ideal_equal(meet,expected_meet,"Artin-Schreier infinity meet");
+poly marked_E = subst(subst(subst(subst(subst(E,X,0),Y,0),U,1),V,0),Z,1);
+require_zero(marked_E,"Artin-Schreier marked off point");
+
+ring rn = 0,(X,Y,U,V,Z),dp;
+poly E = Z2-X2-X*U-U2;
+poly E_on_diagonal = subst(subst(E,U,X),V,Y);
+require_zero(E_on_diagonal-(Z2-3X2),"non-Keller affine ramification meet");
+require_nonzero(subst(E_on_diagonal,Z,1),"non-Keller meet is not infinity-only");
+
+print("PASS identity homogeneous closure is already saturated");
+print("PASS tame complete intersection loses two infinity components under Z-saturation");
+print("PASS tame secant off ideal becomes unit after Z-saturation");
+print("PASS Artin-Schreier F3 honest diagonal/off closures meet on Z^2=0");
+print("PASS char0 non-Keller control meets on the affine ramification locus");

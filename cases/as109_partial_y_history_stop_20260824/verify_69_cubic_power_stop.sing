@@ -1,0 +1,99 @@
+// Exact bounded preflight for the first partial-y-degree history remainder.
+// Scope: the weighted leading boundary/Jacobian mechanism for actual (6,9),
+// in the only source-shear residue not already classical: 3 | deg(h).
+// No coefficient search, AS109 inference, AWS, or JC2 inference.
+
+ring R=0,(z,t,r,u,v),dp;
+
+// A depressed monic cubic and its common powers.  These are the unavoidable
+// gcd(6,9)=3 controls: F has degree 6, G degree 9, and neither has the first
+// subleading z coefficient.
+poly K=z^3+u*t^2*z+v*t^3;
+poly F=K^2;
+poly G=K^3;
+
+poly Fexpected=z^6+2*u*t^2*z^4+2*v*t^3*z^3+u^2*t^4*z^2
+               +2*u*v*t^5*z+v^2*t^6;
+poly Gexpected=z^9+3*u*t^2*z^7+3*v*t^3*z^6+3*u^2*t^4*z^5
+               +6*u*v*t^5*z^4+(u^3+3*v^2)*t^6*z^3
+               +3*u^2*v*t^7*z^2+3*u*v^2*t^8*z+v^3*t^9;
+if (F-Fexpected!=0 || G-Gexpected!=0)
+{
+  "FAIL common-power expansions";
+  exit(1);
+}
+
+poly J=diff(F,t)*diff(G,z)-diff(F,z)*diff(G,t);
+if (J!=0)
+{
+  "FAIL cubic common-power Jacobian";
+  exit(1);
+}
+
+// At y=0 the normalized variable is z=r.  Both leading polynomial boundary
+// equations collapse to the one cubic condition K(1,r)=0.
+poly Kr=subst(subst(K,z,r),t,1);
+poly Fr=subst(subst(F,z,r),t,1);
+poly Gr=subst(subst(G,z,r),t,1);
+if (Fr-Kr^2!=0 || Gr-Kr^3!=0)
+{
+  "FAIL boundary powers";
+  exit(1);
+}
+
+ring Rb=0,(r,u,v),dp;
+poly k=r^3+u*r+v;
+ideal I=k^2,k^3;
+ideal S=std(I);
+if (dim(S)!=2)
+{
+  "FAIL cubic-power survivor dimension";
+  exit(1);
+}
+poly rem=reduce(k^2,S);
+if (rem!=0)
+{
+  "FAIL boundary ideal membership";
+  exit(1);
+}
+
+// AS109-integral first-row negative control.  The primitive common core h
+// has degree 3, both scalar contents have v_109=1, and nonzero y^5/y^8
+// coefficients arise from a common integral shift.  The first non-top row
+// still vanishes identically; hence it gives no universal mod-109 valuation
+// contradiction.
+ring Ri=0,(x,y),dp;
+int p=109;
+poly h=x^3+1;
+poly shift=x;
+poly a=p*h^2;
+poly c=6*p*h^2*shift;
+poly b=p*h^3;
+poly d=9*p*h^3*shift;
+poly row13=8*diff(a,x)*d+9*diff(c,x)*b-6*a*diff(d,x)-5*c*diff(b,x);
+if (row13!=0)
+{
+  "FAIL AS109 first non-top row control";
+  exit(1);
+}
+poly common=h*(y+shift)^3;
+poly Pint=p*common^2;
+poly Qint=p*common^3;
+poly Jint=diff(Pint,x)*diff(Qint,y)-diff(Pint,y)*diff(Qint,x);
+if (Jint!=0)
+{
+  "FAIL AS109 common-shift control";
+  exit(1);
+}
+
+"PASS-(6,9)-CUBIC-POWER-STOP";
+"leading_boundary_dimension=2";
+"finite_weighted_map=false";
+"coprime_common-factor_lemma_transfers=false";
+"as109_scalar_valuations_control=(1,1)";
+"as109_first_nontop_valuation_contradiction=false";
+"generic_search_run=false";
+"aws_used=false";
+"as109_lift_construction_or_exclusion=false";
+"jc2_inference=false";
+quit;

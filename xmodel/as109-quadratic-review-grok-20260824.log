@@ -1,0 +1,19 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll independently review the AS109 quadratic-y no-go at the frozen commit, starting from the producer report, case files, and Hensel support lemmas.Git basis and frozen hashes match. Next I’ll read the producer report, cases, and support lemmas in full.Producer hashes match. I’ll read the carry erratum and a prior review for format, then recompute the algebra independently.Jung–van der Kulk would appear to kill every exact lift, not just quadratic ones — I’ll check what this campaign means by JC2 before treating that as a gap.Producer replay passed. Next I’ll rerun the coefficient identities and edge cases with a separate exact engine.Independent identities and Hensel hypotheses check out. I’ll write the review now.**Overall: CONFIRMED.** The quadratic-y no-go holds at the stated scope. Written to `xmodel/as109-quadratic-review-grok-20260824.md`.
+
+Per claim:
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | `[y^3]J=2(a_2'b_2-a_2 b_2')`; zero-leading cases and constant target `GL_2` to one affine coordinate | **CONFIRMED** |
+| 2 | `[y^2]J=2 a_1' b_2-a_1 b_2'`; `b_2=k a_1^2` including `a_1=0`; shear invertible and kills `y^2` | **CONFIRMED** |
+| 3 | Affine-in-y Keller pairs are automorphisms, with explicit inverse | **CONFIRMED** |
+| 4 | This proves the field theorem; no hidden algebraic closure, leftover denominator, or source change | **CONFIRMED** |
+| 5 | Exact integral AS109 lift with correction y-degree `<=2` contradicts residue-ball noninjectivity | **CONFIRMED** |
+| 6 | Scope: only both y-degrees `<=2`; cubic open; no lift / char-0 CE / arbitrary-AS109 / JC2 | **CONFIRMED** |
+
+Frozen hashes matched, producer replay exited 0, and a second sparse engine reproduced the coefficient identities on larger exponent sets. Hensel was rechecked as 109-to-1 covering of residue balls, not a marked collision, and is independent of the carry erratum.
+
+**Promotion:** accept `QUADRATIC-Y NO-GO` at this scope. Do not promote to cubic y-degree, an arbitrary AS109 no-go, a found lift, or JC2. A future `CLOSED-SUPPORT + UNIT-L` certificate must allow y-degree at least three.
+
+Producer files were not edited.

@@ -1,0 +1,18 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the gate document, freeze manifest, and parent chain so the review is grounded in the committed artifacts rather than producer prose.Next I’ll hash-check the freeze, then read the probe scripts and parent chain so the independent reductions have a clean source of truth.I’ll look at a prior review’s format and pull the parent chain next, then start hash verification.Hashes match the freeze. I’ll read a prior review template and the parent producer/review chain next, then start independent reductions.I’ll inspect the parent compilers, Jacobian formulas, and B=0 residue next so the independent reductions aren’t just a producer replay.I’ll rerun both frozen probes and start an independent second engine with its own Jacobian compilers and reverse-row reductions.Probes are still running; I’ll write the independent second engine now so it can attack the load-bearing ranks and residues in parallel.Independent ranks and residues match the freeze. I’ll write the hostile review now.Overall verdict: **CONFIRMED**. Report: `xmodel/td6-boundary-q2-deformation-review-grok-20260824.md`.
+
+Both frozen probes were rerun (exit 0; wall-clock 236s and 317s). The freeze verified from the repository root. A second engine, not imported from either probe, rebuilt the Jacobian compilers from the two-form and reran insertion-order and reverse-row exact GE. All advertised ranks, the `t^4` inconsistency, `ρ_1`, `ρ_1-ρ_0=-14012/145`, `B_*`, and the adaptive `1,A,A^2` support matched.
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | Source typing: bounded `q`-jet, not an SP-2 normal form; retained parent field/center/F1/r9 data | **CONFIRMED** |
+| 2 | First row is `f1(1+2Bt+25t^{24})-15t^{14}g1=0`; no stale `B=0` matrix | **CONFIRMED** |
+| 3 | Exact `B=1`: ranks `3508/3602`, `36/94`, `25/58`, empty at `t^4`, residue `ρ_1` | **CONFIRMED** |
+| 4 | `B_*` well-defined in `E`, nondegenerate; adaptive rebuilds all `B`-dependent bands plus the pole | **CONFIRMED** |
+| 5 | Adaptive ranks `3470→132→94→56`, tangent `25/56`, empty at `t^4`, all three `E`-slots nonzero | **CONFIRMED** |
+| 6 | Licensed conclusion is only two empty points plus `B`-sensitivity of the degree-four residue | **CONFIRMED** |
+| 7 | Next test is symbolic one-parameter elimination with rank-jump strata, not interpolation or an adjoint shortcut | **CONFIRMED** |
+
+**Promotion.** Accept as `TWO-EXACT-EMPTY-SPECIALIZATIONS / STOP`. Bank the two empty points, the residue shift, and the ranks. Promote nothing else.
+
+**Quarantine.** The one-parameter family in `B` is not killed. Other `q`-jets, centering, dead stretch, other F1 patterns, SP-2, every terminal class, and JC2 remain open.

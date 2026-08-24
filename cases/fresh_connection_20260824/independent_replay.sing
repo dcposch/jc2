@@ -1,0 +1,91 @@
+// Independent exact replay of the secant-idempotent discriminator.
+// Run: Singular -q cases/fresh_connection_20260824/independent_replay.sing
+
+proc require_zero(poly value, string label)
+{
+  if (value != 0)
+  {
+    print("FAIL " + label);
+    exit(1);
+  }
+}
+
+proc require_nonzero(poly value, string label)
+{
+  if (value == 0)
+  {
+    print("FAIL " + label);
+    exit(1);
+  }
+}
+
+ring r0 = 0,(x,y,u,v),dp;
+poly P = x+(y+x2)^2;
+poly Q = y+x2;
+poly Puy = subst(P,x,u);
+poly Quy = subst(Q,x,u);
+poly Puv = subst(Puy,y,v);
+poly Quv = subst(Quy,y,v);
+poly F1 = P-Puv;
+poly F2 = Q-Quv;
+poly a11 = (P-Puy)/(x-u);
+poly a12 = (Puy-Puv)/(y-v);
+poly a21 = (Q-Quy)/(x-u);
+poly a22 = (Quy-Quv)/(y-v);
+poly d = a11*a22-a12*a21;
+ideal I = F1,F2;
+ideal G = std(I);
+require_zero(reduce(d^2-d,G),"char0 idempotence");
+require_zero(reduce(d*(x-u),G),"char0 det annihilates dx");
+require_zero(reduce(d*(y-v),G),"char0 det annihilates dy");
+ideal O = F1,F2,d;
+O = std(O);
+require_zero(reduce(1,O),"char0 off ideal is unit");
+
+ring r3 = 3,(x,y,u,v),dp;
+poly P = x-x3;
+poly Q = y;
+poly Puy = subst(P,x,u);
+poly Quy = subst(Q,x,u);
+poly Puv = subst(Puy,y,v);
+poly Quv = subst(Quy,y,v);
+poly F1 = P-Puv;
+poly F2 = Q-Quv;
+poly a11 = (P-Puy)/(x-u);
+poly a12 = (Puy-Puv)/(y-v);
+poly a21 = (Q-Quy)/(x-u);
+poly a22 = (Quy-Quv)/(y-v);
+poly d = a11*a22-a12*a21;
+ideal I = F1,F2;
+ideal G = std(I);
+require_zero(reduce(d^2-d,G),"char3 idempotence");
+require_zero(reduce(d*(x-u),G),"char3 det annihilates dx");
+require_zero(reduce(d*(y-v),G),"char3 det annihilates dy");
+ideal O = F1,F2,d;
+O = std(O);
+require_nonzero(reduce(1,O),"char3 off ideal survives");
+poly marked = subst(subst(subst(subst(d,x,0),y,0),u,1),v,0);
+require_zero(marked,"char3 marked collision lies on det=0");
+
+ring rn = 0,(x,y,u,v),dp;
+poly P = x2;
+poly Q = y;
+poly Puy = subst(P,x,u);
+poly Quy = subst(Q,x,u);
+poly Puv = subst(Puy,y,v);
+poly Quv = subst(Quy,y,v);
+poly F1 = P-Puv;
+poly F2 = Q-Quv;
+poly a11 = (P-Puy)/(x-u);
+poly a12 = (Puy-Puv)/(y-v);
+poly a21 = (Q-Quy)/(x-u);
+poly a22 = (Quy-Quv)/(y-v);
+poly d = a11*a22-a12*a21;
+ideal I = F1,F2;
+ideal G = std(I);
+require_nonzero(reduce(d^2-d,G),"non-Keller idempotence rejected");
+
+print("PASS secant rows / diagonal idempotent / off-ideal split");
+print("PASS tame degree-four automorphism off ideal = (1)");
+print("PASS Artin-Schreier F3 marked off component survives");
+print("PASS non-Keller square control rejected");

@@ -1,0 +1,13 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the AS109 membership-gate report, case files, and the parent Hensel/A∞ reviews so the independent attack can target the numbered claims.Next I’ll load the case files, parent Hensel/A∞ reviews, and the Moskowicz audits so the attack can track licensed inputs versus unearned claims.Parent gates are in hand. I’ll next read the confirmed reviews, Moskowicz audit, and a prior review template, then independently rerun the frozen replay.I’ll verify hashes and git state, rerun the frozen replay, and independently recompute the residue algebra in a second engine.Hashes match the freeze. Next I’ll rerun the registered replay and independently recompute the residue algebra, minpoly, controls, and interpolation.Replay and second engine both passed. I’ll write the hostile review with per-claim verdicts, hashes, independent algebra, and exact scope.**Overall: CONFIRMED.** All eight numbered claims are **CONFIRMED**.
+
+The review is in `xmodel/as109-xy-membership-review-grok-20260824.md`. Frozen hashes match; producer files were not edited. Independent replay of `cases/as109_xy_membership_20260824/check.py` exited 0 with the advertised no-go Booleans (stdout SHA-256 `ead9fb80403aeea5a301536298ae952681a0b4ed5f3bab09daee1a4b05799352`). A second engine, not imported from the producer, rebuilt Fermat, product residues, trace/norm/disc, the `109×109` interpolant `Z+1`, the `G_p` identity, and the Möbius/`Kummer` comparisons, with zero failures.
+
+What survived a hostile reading:
+
+- The 109 Hensel sections on `(P,Q)=(109S,1+109T)` are the reviewed embeddings into `E`, not a special-fibre count. Distinct residues of `xy` in `R` force `[M(xy):M]≥109`.
+- So `xy` is in neither the target field nor the target ring, including after any characteristic-zero coefficient embedding into `C`. The repaired Moskowicz second case cannot consume an AS109 lift.
+- Under the separately reviewed hypothesis `A_infinity=0`, one has `L=M(xy)` and the field minpoly specializes on that tube to `Z^{109}-Z`. That identification is local in `R[Z]`, not a global integral equation over `K[P,Q]`.
+- Trace, norm, and `Disc≡-1 (mod 109)` are split-étale tautologies (`33^2≡-1`). Both controls check. The univariate discriminator `R_τ(Z)≡Z+1` is unearned descent, not a corollary of `μ_w`.
+
+**Promotion:** accept as a sharp no-go for the `xy∈M` bridge plus the conditional primitive-generator statement. Do not promote as a lift exclusion, a proof of `A_infinity=0`, deck descent, or a JC2 decision.

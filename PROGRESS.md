@@ -202,6 +202,149 @@ this batch are closed.  All-time counters are Claude 47,374 messages /
 `build_tails43.py` core on box01; Box02 and Box03 are stopped.  No new compute
 target licensed an expansion.
 
+The next nonblocking micro-round sharpened both active backbones. Two
+different-model-confirmed AS109 no-gos exclude every full independently
+variable literal-slot contraction module and every exact lift whose two
+coordinate `y`-degrees are at most two. The first obstruction is an infinite
+polarization chain `x^(108k)`; the second is a characteristic-zero field
+theorem reducing quadratic tops by target `GL_2`, a square shear, and an
+explicit affine inverse. A surviving fixed-support lift must therefore use a
+genuinely coupled section and, at this cutoff, `y`-degree at least three.
+
+The different-model-confirmed `td=6` global-compatibility gate stopped the
+bare-chart divisibility attack. LR2 permits the common truncation `x~y^-1`,
+whose polynomial coordinate `T=xy^4-y^3` eliminates the apparent
+contradiction. Explicit fixed-rectangle polynomials reproduce the SP-2
+three-branch equality mechanism and correct the centered Jacobian through
+order six; arbitrary finite one-sided orders are possible only after dropping
+the degree cap. No class is killed or realized. The next finite compiler must
+combine fixed rectangles, actual centering coefficients, the opposite chart,
+and exact `J=1`.
+
+A separate different-model-confirmed secant theorem gives the exact collision
+identity `I:Delta=I:Delta^infinity=I+(det A)`, replacing saturation by one
+explicit third generator. It is a standard theory/software accelerator, not
+a new JC2 obstruction: unit ideal remains injectivity. Its projective
+connectedness child is independently confirmed `COSTUME`; tame maps acquire
+artificial infinity components before `Z`-saturation, and honest collision
+components can attach to the diagonal only at infinity. The missing datum is
+the saturated boundary-intersection cycle on a source-derived compactification.
+All registered replays passed; no proof or counterexample was found.
+
+The AS109 degree frontier then moved again. A different-model-confirmed,
+cap-free field theorem proves that every characteristic-zero Keller pair with
+both `y`-degrees at most three is an automorphism. The new `(2,3)` cusp case
+normalizes to `f=z^2+U`, `g=z^3+Vz+W`; a monic equation makes the initially
+rational shift polynomial, after which the Jacobian coefficient equations
+contradict their nonzero constant term. Therefore any exact AS109 lift must
+have `y`-degree at least four in one correction. This is a family exclusion,
+not an arbitrary-support no-go or JC2 decision.
+
+The secant accelerator's first AS109 client was also different-model confirmed
+`COSTUME`. Modulo 109 it reconstructs the 108 off-sector CRT/Hensel split, but
+on each sector `x-u` is a unit and the adjugate identity puts the secant row
+and its differential inside the localized collision equations. It adds rank
+zero to any collision-aware coefficient compiler. A useful descendant would
+need a global bounded algebraic coupling of the analytic sectors; the raw
+projector is now stopped.
+
+The AS109 cap-free degree theorem advanced once more. A corrected producer
+and hostile different-model review independently prove that every
+characteristic-zero Keller pair with both coordinate `y`-degrees at most four
+is an automorphism. The only new `(3,4)` normal form has five exact Jacobian
+rows, a conserved product, and a degree-ten monic integrality equation; after
+polynomiality its constant row is impossible. Thus an exact AS109 lift needs
+`y`-degree at least five in one correction. Quintic work proceeded
+nonblockingly under review; no arbitrary-support conclusion follows.
+
+That nonblocking quintic successor was then different-model confirmed. The
+three genuinely new patterns `(2,5)`, `(3,5)`, and `(4,5)` close respectively
+by an uncancellable finite-pole term, a singular-Weierstrass pullback, and a
+weighted `(2,3,4)` pole/infinity argument. Consequently every
+characteristic-zero Keller pair with both `y`-degrees at most five is an
+automorphism, and any exact AS109 lift needs `y`-degree at least six in one
+correction. Sextic work is the first unresolved bounded-`y` frontier; this is
+not an arbitrary-support no-go.
+
+The first shared-coefficient TD6 two-chart control was then independently
+confirmed nonempty at its first band: exact rank `3508/3602`, nullity 94, and
+a deterministic rational witness in the original rectangles. Parameterizing
+the entire affine family exposed a stronger next-row fact, also
+different-model confirmed: the first transverse jets are rigid and
+`[s^-1 t^13]J=-18858/3125` identically. Therefore that one numerical
+centering/orbit/dead-stretch/pole specialization is exactly empty at the next
+band. No terminal class is killed; the successor must quantify the licensed
+moduli rather than append rows at the dead point.
+
+The AS109 Hensel route acquired a different-model-confirmed global degree
+ledger. Any hypothetical exact lift has generic degree `d>=109`, and over one
+formal target tube its generic algebra splits as `E^109 x A_infinity`, with
+rank `d-109` in the residual factor. That rank is exactly the valued
+multiplicity of negative-source-weight roots. Proving integral finiteness
+would kill `A_infinity`; descending the formal translation would supply a
+rational deck action. Neither follows from local splitting, and explicit
+non-Keller controls realize every residual rank with trivial deck group.
+
+A primary-source audit independently confirmed that Moskowicz's 2024
+prime-degree proof cannot be used: its first case attributes an unproved and
+universally false degree-two implication to a MathOverflow answer. The paper's
+headline is unestablished, not disproved; its second case can be repaired to
+the independent statement `xy in C(P,Q) => automorphism`. The ensuing AS109
+client stopped sharply in the opposite direction. On the tube with target
+second coordinate congruent to one, the 109 Hensel images of `xy` are pairwise
+distinct, so `xy` is outside the target field. Under the separate hypothesis
+`A_infinity=0`, it is instead a primitive generator whose local minimal
+polynomial reduces to `Z^109-Z`; trace, norm, and discriminant are tautological.
+
+The exact partial-`y` coefficient chain reached six. Hostile reviews confirmed
+both genuine sextic leaves `(4,6)` and `(5,6)` and the resulting field theorem:
+every characteristic-zero Keller pair with both actual `y`-degrees at most six
+is an automorphism. Thus an exact AS109 lift needs correction `y`-degree at
+least seven in one coordinate. This is a valid alternate proof ledger; no
+priority claim, arbitrary-support exclusion, or lift follows.
+
+The mandatory primary-history check then found and hostile-review confirmed a
+stronger classical source-shear argument. For actual degrees `da,db`, a large
+triangular shear gives total-degree gcd `H+dL`; Nagata's repaired prime-gcd
+theorem and GGV's independent `2p` theorem cover partial gcd at most two.
+Together with target reductions this proves every pair of maximum actual
+`y`-degree at most eight classical. The first fundamental remainder is
+`(6,9)` with `3|H`; its positive-dimensional common-cubic leading family
+stops the old coprime finite-map mechanism. The sextic results remain correct
+alternate certificates, while the AS109 correction floor rises to nine.
+
+The TD6 moduli successor then passed three separate, chain-dependent
+different-model hostile review stages. The
+numerical obstruction extends to
+`[s^-1 t^13]J=(6/5)(5E2-2E1^2)`; its complex zero curve carries a genuine
+56-dimensional paired finite-band family. One quadratic point dies at the
+next centered row. Uniformly, that row cuts the curve to an irreducible sextic,
+the pole normalization gives a degree-18 field, and a left-syzygy residual is
+nonzero at all 18 conjugates. Hence the fixed normalized reduced-boundary
+family is empty. SP-2 remains alive because boundary, dead-stretch, centering,
+and related moduli were fixed; the successor must deform one of them.
+
+The AS109 wild-symplectic gate and its hostile review then confirmed a sharp
+category correction. A hypothetical exact lift is a finite etale rank-109
+Artin--Schreier torsor on the completed unit bidisc, with a uniquely lifted
+determinant-one restricted-analytic deck action. All determinant-one
+restricted-analytic lifts of that special map lie in one near-identity
+symplectic gauge orbit, so unrestricted completed-orbit cohomology cannot
+distinguish a polynomial lift. The first digit has one affine gauge orbit and
+the universal floor `[x^108 y]Q1=1`; small-prime compilers recover it exactly.
+The next admissible discriminator is minimal uniformly bounded polynomial
+support inside that orbit or an algebraic boundary conductor, not
+unrestricted depth or a 109-scale search.
+
+The smallest TD6 q-boundary deformation then passed a different-model
+hostile replay. For `p=t^15`, `q_B=t+B*t^2+t^25`, both `B=1` and one exact
+adaptive value in the degree-18 pole field die at the centered `t^4` row
+after full transport and preceding-band reconstruction. The exact residue
+moves by `-14012/145` between `B=0` and `B=1`, while the adaptive residue
+acquires nonzero `1,A,A^2` support, so affine extrapolation fails. This is two
+empty points, not a kill of the `B`-family or SP-2. The next gate is symbolic
+elimination over `E[B]` with all pivot/rank-jump strata handled separately.
+
 ## 2026-08-23
 Foundational-floor day, then the reorg. Belyi identification of the residue-A
 genome verified (A4 passport; leverage inert). Canonical strategy correction:

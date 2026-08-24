@@ -1,0 +1,18 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the review brief, frozen artifacts, and case files at the given commit, then independently rerun the replay and attack each numbered claim.Git basis matches. Next I’ll read the case files, parent preflight, prior review format, and the frozen hashes.Parent preflight review may not have landed yet. I’ll load the parent producer, a prior review for format, and compute hashes.Hashes match; parent preflight review has not landed. I’ll rerun Singular, re-prove the parent `(4,6)` split, and independently recompute the Jacobian identities.Producer replay passed. I’ll run an independent sympy engine and a separate Singular Groebner check of the infinity system and complete-intersection rank.The off-curve check was the wrong identity. I’ll retest `J = h(I₂' z² + I₁' z + E₀)` after the `P..T` substitutions.Identities and uniqueness checks hold. I’ll write the hostile review with per-claim verdicts, hashes, and promotion bounds.Overall verdict: **CONFIRMED**. Written to `xmodel/as109-sextic-survivor-review-grok-20260824.md`. Producer and freeze files were not edited.
+
+Independent sympy and Singular checks reproduced the Jacobian rows, the five integrations, `I_2`/`I_1`, `eta`, both `y=0` boundary identities, the `L=0` plane model, the degree-eight resultant, and the nonlinear control. The weighted initial system has a single reduced point `[r:q:B:U]=[1:0:0:0]`; charts `q=1`, `B=1`, `U=1` are empty. Frozen hashes match, and the Singular replay prints `full_sextic_theorem_proved=false`, `lift_found=false`, `jc2_inference=false`.
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | Common depressed form, quadratic extension, constant `L` | **CONFIRMED** |
+| 2 | Eight Jacobian rows, integrations, `I_2,I_1`, factor `h` | **CONFIRMED** |
+| 3 | `U=A^2-4C` complete intersection, `eta`, no intermediate Pfaffian | **CONFIRMED** |
+| 4 | Both polynomial boundary equations; polynomial vs extension | **CONFIRMED** |
+| 5 | Unique infinity point `[1:0:0:0]`, square/cube initial form | **CONFIRMED** |
+| 6 | `L=0` plane, two closed lines, resultant, nonlinear control | **CONFIRMED** |
+| 7 | Hashes, replay, survivor-only scope | **CONFIRMED** |
+
+The parent preflight review has not landed; the `(4,6)` split was re-derived here. Non-blocking: on nonsquare `L=0`, `r` and `B` are Galois-odd, not rational, and Galois forces `beta=0` on that whole branch.
+
+Do not promote this to a degree-`<=6` theorem, a stronger AS109 floor, a lift, or a JC2 decision. Do not treat (7.11) as a Keller pair. Next gate: Puiseux / local normalization at `[1:0:0:0]` with both boundary equations and `eta`, split on `L=0` / `L!=0`.

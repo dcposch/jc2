@@ -1928,7 +1928,497 @@ hostile review: **CONFIRMED**).
   The remaining implication must use global polynomial realizability,
   opposite-side compatibility, or an additional branch elsewhere on the
   same compactified fiber.  No proof or counterexample to JC2 follows.
-- REVIEW METADATA: the three final Grok reports in this batch contain
-  inaccurate human-written review windows.  The authoritative automatic
-  runner times and frozen hashes are recorded in
-  `xmodel/review-window-erratum-20260824.md`; no mathematical verdict changes.
+- REVIEW METADATA: some Grok reports across this and successor batches contain
+  inaccurate human-written review windows. The authoritative automatic runner
+  times and frozen hashes are recorded in the immutable
+  `xmodel/review-window-erratum-20260824.md` and its cumulative `-v2`
+  successor; no mathematical verdict changes.
+
+## AS109 INDEPENDENT-SLOT + QUADRATIC-Y NO-GOS (2026-08-24, DUAL-CONFIRMED SCOPED TIER)
+
+`xmodel/as109-closed-support-gate-20260824.md` and
+`xmodel/as109-quadratic-coupling-gate-20260824.md`, with hostile
+different-model reviews `xmodel/as109-natural-nogo-review-grok-20260824.md`
+and `xmodel/as109-quadratic-review-grok-20260824.md`: **CONFIRMED**.
+
+- INDEPENDENT-SLOT THEOREM: report/review SHA-256 are
+  `b3fa62651673db06b89fb6ad8217ebc2a61bacd5940b7a08501a1f3a47a7d717` /
+  `3b0d369c678a518614be0218c434eec97c43af0747aa8a26906256e12d2b13d5`.
+  In a full independently variable literal-slot module, a unit right inverse
+  at `x^108` forces `(0,x^108 y)`. Nonlinear closure and polarization then
+  force every `x^(108k)` into the finite residual module, a contradiction.
+  This excludes the raw independent-slot certificate, not genuinely coupled
+  modules or arbitrary fixed support.
+- QUADRATIC FIELD THEOREM: report/review SHA-256 are
+  `10ee0b91d4be7ced8d6c053ba66e6d677d7c4cc83af89fc481d215f145e38ea1` /
+  `4ee7793d352d130d79b5efb1f555c8a241ed5ed59335426238505da5dcae48f2`.
+  Over every characteristic-zero field, a Keller pair whose two coordinates
+  have `y`-degree at most two is a polynomial automorphism. The cubic
+  Jacobian coefficient makes quadratic tops proportional; a target `GL_2`
+  operation makes one coordinate affine; the mixed coefficient gives
+  `b_2=k a_1^2`; a polynomial target shear removes it; the affine pair has an
+  explicit triangular inverse. No algebraic closure, source substitution, or
+  nonconstant denominator is used.
+- AS109 CONSEQUENCE: an exact lift with both correction `y`-degrees at most
+  two would be an automorphism over `Q_109`, contradicting the already
+  reviewed 109-ball Hensel noninjectivity. Thus a surviving lift needs
+  essential coefficient coupling and, at this tier, `y`-degree at least
+  three in one correction. No lift, arbitrary-support no-go, or JC2 inference
+  follows.
+
+## TD6 CENTERING ESCAPE + FINITE-JET CONTROL (2026-08-24, DUAL-CONFIRMED STOP TIER)
+
+`xmodel/td6-global-compatibility-gate-20260824.md` (producer SHA-256
+`b53064c877a4f0b741f23f036b2323195bef825ccc72b6722b98f1fc2d2eec17`)
+with `xmodel/td6-global-compatibility-review-grok-20260824.md` (review
+SHA-256
+`f3e468f415fdd7bd1aa85962090d34a55bf6ff15d469c28373347cf1c7cc42ac`):
+**CONFIRMED `CENTERING-ESCAPE / FINITE-JET-CONTROL / STOP`**.
+
+- BARE LEMMA: in the zero-centered chart `x=t s^R`, `y=s^-1`, every positive
+  `s^k` coefficient of a polynomial holomorphic there is divisible by
+  `t^ceil(k/R)`. If both members of a Keller pair were holomorphic in that
+  same chart, the Jacobian would vanish at `t=0`, an exact contradiction.
+- CENTERING ESCAPE: LR2 does not force the shared lower truncation to zero.
+  The legal choice `x=s+t s^4`, `y=s^-1` has the polynomial Eggers coordinate
+  `T=xy^4-y^3=t`, so the bare divisibility inference is not available.
+- GLOBAL POLYNOMIAL CONTROLS: explicit pairs inside the fixed SP-2 rectangles
+  reproduce its height-four patterns and three-branch
+  `sum Lambda=3` mechanism. Their centered Jacobian errors have exact orders
+  three and six. Neither pair is Keller. A characteristic-zero Bezout
+  recursion in `Q[T][[x]]` constructs arbitrary finite one-sided Keller jets
+  only after dropping the degree cap; degrees grow and no convergence,
+  algebraization, or opposite-chart statement follows.
+- NEXT GATE: fixed `Q[x,y]` rectangles, explicit common-centering
+  coefficients, the opposite r9/M2 chart, and exact global `J=1` must be
+  imposed together. No terminal class is killed or realized. The two
+  LaTeX-only producer slips are frozen in
+  `xmodel/td6-global-compatibility-format-erratum-20260824.md`; code and math
+  are unchanged.
+
+## SECANT IDEMPOTENT REMOVES COLLISION SATURATION (2026-08-24, DUAL-CONFIRMED ACCELERATOR TIER)
+
+`xmodel/fresh-connection-gate-20260824.md` (producer SHA-256
+`666bde51ea8bb78bd2c031122183148708b2b7de08547dc407191e633a712c4b`)
+with `xmodel/secant-idempotent-review-grok-20260824.md` (review SHA-256
+`6b0cb25dd3d1769f9f6c15116b6869b37c6cb1c89f17d9831ff19c67f20f09e9`):
+**CONFIRMED**.
+
+For `I=(F(x,y)-F(u,v))`, diagonal ideal `Delta=(x-u,y-v)`, constant
+Jacobian `c`, and any polynomial secant matrix `A`, put
+`e=c^-1 det A` in `C=S/I`. The adjugate gives `e Delta=0`; restriction to
+the diagonal gives `1-e in Delta`; hence `e^2=e`, uniquely among elements
+with those two properties. Moreover
+
+```text
+I:Delta = I:Delta^infinity = I+(det A)
+```
+
+as schemes, with `eC` the reduced diagonal quotient and `(1-e)C` the off
+factor. Different secant conventions give the same class modulo `I`. This is
+a substantial software simplification to one explicit third generator, but
+making that ideal unit for all characteristic-zero Keller maps is exactly
+injectivity/JC2. The identity is standard neighboring secant/Bezoutian and
+collision-ideal algebra; no priority novelty is promoted.
+
+## PROJECTIVE COLLISION CONNECTEDNESS IS COSTUME (2026-08-24, DUAL-CONFIRMED NEGATIVE TIER)
+
+`xmodel/secant-projective-connectedness-gate-20260824.md` (producer SHA-256
+`cabfa347efc22b90b1c4c0808ceb1e1ac0bce235d35e8e28d9f27cc6bc614fb2`)
+with `xmodel/secant-projective-review-grok-20260824.md` (review SHA-256
+`99b7649365a3fbae34932c2bacc03ad141507f74a6ca55d2945bc427e0404957`):
+**CONFIRMED `COSTUME / NEED-Z-SATURATED-INFINITY-DATUM`**.
+
+- The honest projective closure is cut out by `K:Z^infinity`, not the two
+  naive homogenized difference equations `K`. A nontrivial tame automorphism
+  gives an exact control: the naive complete intersection contains two whole
+  infinity surfaces; saturation exponent four removes them and leaves only
+  the diagonal, while the secant off ideal saturates to `(1)` at exponent
+  three.
+- Over `F_3`, the Artin--Schreier Keller collision has honest saturated
+  diagonal/off components meeting scheme-theoretically on the doubled line
+  `(X-U,Y-V,Z^2)`. Thus affine etaleness can move all contact to the boundary
+  without contradiction.
+- Consequently projective complete-intersection connectedness supplies no
+  general obstruction and kills no named characteristic-zero family. A live
+  descendant needs the source-derived saturated boundary-intersection cycle
+  on a pinned compactification. No proof or counterexample follows.
+
+## AS109 CUBIC-Y NO-GO (2026-08-24, DUAL-CONFIRMED SCOPED TIER)
+
+`xmodel/as109-cubic-coupling-gate-20260824.md` (producer SHA-256
+`198f0b2ff39f91a7815b9be15f7fc3c3afdd00c00b1c4c0ada6b9f6438d62820`)
+with `xmodel/as109-cubic-review-grok-20260824.md` (review SHA-256
+`2fdb8ae2beffb766b38d8e7de4bdff353bc354c4dba84d026225f88376f95cef`):
+**CONFIRMED**.
+
+- FIELD THEOREM: every Keller pair over an arbitrary characteristic-zero
+  field whose two coordinate `y`-degrees are at most three is a polynomial
+  automorphism. Equal cubic tops reduce by constant target `GL_2`; an
+  affine/cubic top reduces by `g-k f^3`; lower cases use the quadratic theorem.
+- GENUINE `(2,3)` CASE: UFD valuations normalize the leading coefficients to
+  `h^2,h^3`. A constant target addition aligns the two rational depression
+  shifts and gives
+  `f=z^2+U`, `g=z^3+Vz+W`, `z=hy+r`. The Jacobian equations are
+  `V'=3U'/2`, `W'=0`, `hU'V=j`. Polynomial constant terms give the monic
+  equation `r^3-(3D+2c)r+2(G-w)=0`; integral closure makes `r,U,V`
+  polynomials. Their unit product then contradicts `V'=3U'/2`.
+- DESCENT/SCOPE: automorphy descends from the algebraic closure by uniqueness
+  or faithful flatness. No source coordinate change, support cap, `x`-degree
+  bound, or finite-Witt inference is used. An exact AS109 lift with both
+  correction `y`-degrees at most three would be an automorphism over `Q_109`
+  and contradict Hensel noninjectivity. Thus a surviving lift needs
+  `y`-degree at least four in one correction. No quartic theorem, lift,
+  arbitrary-support no-go, novelty claim, or JC2 decision is promoted here.
+
+## SECANT x AS109 IS LOCAL-RANK COSTUME (2026-08-24, DUAL-CONFIRMED NEGATIVE TIER)
+
+`xmodel/secant-as109-cross-gate-20260824.md` (producer SHA-256
+`f4bd8ff7708469dd4ca1a6a6880634fb60ea2975fa1c7aa9fb3ecf5d61ba80cf`)
+with `xmodel/secant-as109-review-grok-20260824.md` (review SHA-256
+`16d052ae483fe5c829fb6416202a77c1707e7acc85b65bee249e794b16c51029`):
+**CONFIRMED `COSTUME / NEED-GLOBAL-BOUNDED-ALGEBRAIC-OFF-DATUM`**.
+
+- The seed collision algebra has `t=x-u`,
+  `I_0=(t(1-t^108),y-v)`, `e_0=1-t^108`; its off factor is the product of
+  108 copies of `F_109[u,y]`. The 108 CRT projectors and their Teichmuller
+  lifts record the already-known Hensel collision sheets.
+- On every off sector `x-u` is a unit and the adjugate identity gives
+  `e=(x-u)^-1(a_22 f_1-a_12 f_2)`. Scheme-theoretically
+  `(f_1,f_2,e)=(f_1,f_2)` after localization, and at a collision
+  `de=(x-u)^-1(a_22 df_1-a_12 df_2)`. Thus a compiler that already includes
+  matching-precision collision equations gains coefficient/tangent rank zero
+  from the raw secant row, including its carried digit equations.
+- Trace, norm, factor count, and derived support are ranks or consequences of
+  the analytic split, not new bounded polynomial constraints. Resume only
+  with an independently constructed finite normalization, bounded polynomial
+  branch algebra, or global elimination datum that couples all 108 sectors
+  and adds positive rank. No contradiction, finite constraint, lift, or JC2
+  decision follows.
+
+## AS109 QUARTIC-Y NO-GO (2026-08-24, DUAL-CONFIRMED SCOPED TIER)
+
+`xmodel/as109-quartic-discriminator-gate-20260824.md` (producer SHA-256
+`8c8e3151ce63e4e43d8c91c56a3b801e2bb0e0fcbb9b16dc459dc8eccf7b0276`)
+with `xmodel/as109-quartic-review-grok-20260824.md` (review SHA-256
+`3f9e763c07aa019a766b267774f92df857aadd94750cb8c3c9431671318d930e`):
+**CONFIRMED**.
+
+- FIELD THEOREM: over every characteristic-zero field, a Keller pair whose
+  two coordinate `y`-degrees are at most four is a polynomial automorphism.
+  Equal/top-divisible cases reduce to the independently re-proved cubic base;
+  the only new actual pair is `(3,4)`.
+- GENUINE `(3,4)` CASE: after UFD normalization and aligned depression,
+  `f=z^3+uz+v`, `g=z^4+az^2+bz+c`. The five coefficient rows are
+  `4u'-3a'`, `4v'-3b'`, `2au'-3c'-ua'`,
+  `bu'+2av'-ub'`, and `bv'-uc'`. They give
+  `(4u/3+2alpha)v=delta` and the constant Jacobian row. Polynomial constant
+  terms yield a degree-ten monic eliminant for the rational shift; integral
+  closure makes all depressed coefficients polynomial, and every
+  conserved-product branch then contradicts a nonzero constant Jacobian.
+- AS109 CONSEQUENCE/SCOPE: no exact AS109 lift has both correction
+  `y`-degrees at most four. A survivor needs `y`-degree at least five in one
+  correction, with arbitrary `x`-degree and coefficient coupling still
+  allowed. No quintic theorem, arbitrary-support no-go, lift, priority claim,
+  or JC2 decision follows.
+
+## TD6 TWO-CHART FIRST BAND AND NUMERICAL NEXT-ROW KILL (2026-08-24, DUAL-CONFIRMED FINITE TIER)
+
+The first-band producer/review
+`xmodel/td6-two-chart-first-band-20260824.md` /
+`xmodel/td6-two-chart-first-band-review-grok-20260824.md` have SHA-256
+`cb373892233bddaf1b8fbf7722335ca43ee366b337151c3b244d2604d8168bf2` /
+`265c1103391e2bae889c018bb0637fe486e7292644c0295e4f9965e5085e7a25`.
+The next-row producer/review
+`xmodel/td6-two-chart-next-row-20260824.md` /
+`xmodel/td6-two-chart-next-row-review-grok-20260824.md` have SHA-256
+`32124d20ec84ef59d5b116639176b12053f5da6de1a9458dd4a2095d6b1618f0` /
+`12834c356c2c26243522b2609753370118ecd2c8ed87907033ca27e926d2ac2f`.
+Both hostile reviews are **CONFIRMED**.
+
+- FIRST BAND: one licensed SP-2/r9-M2 specialization uses common centering
+  `(1,1,1)`, the selected F1 orbit polynomial, zero dead stretch, and
+  `A=1/9` in the unchanged `(15,60)/(25,100)` rectangles. One shared global
+  coefficient system has exact rank `3508/3602`, nullity 94. Its deterministic
+  rational witness satisfies all stated transport rows, `[s^-2]J=0`, and
+  `[r^0]J=1`; it fails the next rows and is not Keller.
+- NEXT ROW: exact affine parameterization of the entire 94-space freezes
+  `f1=-384t^14/25`,
+  `g1=-128/125-(128/5)t^24`, and
+  `[t^13]f2=66927/625`. Hence every point satisfies
+  `[s^-1 t^13]J=-18858/3125`, an exact `Q-EMPTY` certificate. The apparent
+  quadratic next band collapses to affine-linear; the pole row is unnecessary
+  for the contradiction.
+- SCOPE: the first band is nonempty and the next band empty only for these
+  selected numerical moduli. SP-2 and all eight td6 terminal classes remain
+  alive. The valid successor varies the licensed common centering, F1 orbits,
+  dead stretch, and pole parameter while preserving their source-typed
+  transport. Further bands at this dead numerical point add no information.
+
+## AS109 QUINTIC-Y NO-GO (2026-08-24, DUAL-CONFIRMED SCOPED TIER)
+
+`xmodel/quintic-y-frontier-preflight-independent-20260824.md` (producer
+SHA-256
+`598cdf3799d4abf40ec761f1fd2b0a5a6457ee2b578371bd864c296259d2a978`)
+with `xmodel/quintic-y-review-grok-20260824.md` (review SHA-256
+`ab5ce55c1d71628e16800bc9ff9985da9f4ae90fe521849fa2060e97ff552e0e`):
+**CONFIRMED**.
+
+- FIELD THEOREM: every Keller pair over an arbitrary characteristic-zero
+  field whose two coordinate `y`-degrees are at most five is a polynomial
+  automorphism. The confirmed quartic theorem handles all lower patterns;
+  the only new actual pairs are `(2,5)`, `(3,5)`, and `(4,5)`.
+- NEW PAIRS: `(2,5)` has an uncancellable `3rho^5/8` finite-pole term and a
+  final polynomial unit-product contradiction. `(3,5)` has a cubic first
+  integral; finite-pole leading equations have subresultant 441, while every
+  nonconstant polynomial point on the resulting singular Weierstrass cubic
+  gives `R'Psi(R)` with `deg Psi=6` and nonzero leading coefficient.
+  `(4,5)` has two polynomial first integrals; weighted `(2,3,4)` finite-pole
+  equations have no point (resultant `-12180258816` on the nonzero branch),
+  and every polynomial-infinity branch gives a nonzero term of degree
+  `8q-1` in the constant Jacobian row.
+- AS109 CONSEQUENCE/SCOPE: no exact AS109 lift has both correction
+  `y`-degrees at most five. A surviving coupled section must allow
+  `y`-degree at least six. Sextic pairs, arbitrary support, existence of a
+  lift, priority, and JC2 remain open.
+
+## AS109 GENERIC DEGREE, `A_infinity`, AND DECK-DESCENT REDUCTION (2026-08-24, DUAL-CONFIRMED CONDITIONAL TIER)
+
+The producer/review pairs
+`xmodel/as109-hensel-global-degree-cross-gate-20260824.md` /
+`xmodel/as109-degree-cross-review-grok-20260824.md` have SHA-256
+`7a7185c27fe245233173a173f9f0851326f18d83585ffb743970b2189f703133` /
+`fb260d5ce622f05e5869bfc64d0497f54e219e9afe04308aa7f3355312af19c6`;
+`xmodel/as109-ainfinity-deck-descent-gate-20260824.md` /
+`xmodel/as109-ainfinity-review-grok-20260824.md` have SHA-256
+`f1cf4991e92e502459ca6c61a3cb4d0e346a65e6221890c8c64a808ec2e3b64b` /
+`a86b694364ebaf28a3890b7bd73aafb5057ddae100172db78a9490e7a2b55d76`.
+Both hostile reviews are **CONFIRMED**.
+
+- DEGREE/SPLIT: conditionally on an exact integral AS109 lift, with
+  `M=Q_109(P,Q)`, `L=Q_109(x,y)`, and `d=[L:M]`, complete-ring parameter
+  Hensel gives 109 distinct `M`-embeddings into the target-tube fraction
+  field. Hence `d>=109` and
+  `L tensor_M E = E^109 x A_infinity`, with
+  `dim_E A_infinity=d-109`. After descent to a finitely generated coefficient
+  field and abstract embedding in `C`, the **generic degree `d`** persists;
+  the displayed 109-adic tube splitting is not transported to `C`.
+- VALUED MEANING: after height-one localization/completion, the 109 integral
+  roots are precisely the Hensel sheets; every other geometric root has a
+  negative source valuation. Thus `dim A_infinity` is the exact sum of
+  valued-initial multiplicities at negative extended weights, axes included.
+  A fixed finite support admits a finite exact discriminator. Mixed volume or
+  generic tropical intersection is not that discriminator.
+- TWO MISSING KEYS: finiteness of the formal fibre algebra over the complete
+  target ring would force `d=109` and `A_infinity=0`, but abstract etale and
+  Zariski-Main data do not. A rational `L`-factor of the self-fibre algebra is
+  exactly an element of `Aut_M(L)`, but a formal permutation of the 109 split
+  factors does not descend. `A_infinity=0` together with a descended
+  109-cycle would give a cyclic Galois degree-109 Keller extension and a
+  contradiction; neither key is proved.
+- CONTROLS/SCOPE: triangular non-Keller maps realize every `d>=109` and every
+  residual rank while retaining the same local split, and can have trivial
+  rational deck group. No degree congruence, `109|d`, properness, lift
+  obstruction, or JC2 conclusion follows from local Hensel data alone.
+
+## MOSKOWICZ PRIME-DEGREE PROOF IS UNSUPPORTED (2026-08-24, DUAL-CONFIRMED SOURCE-AUDIT TIER)
+
+`xmodel/moskowicz-prime-degree-source-audit-20260824.md` (SHA-256
+`929469d903d156d18e32a3b98e847a07145c72352d3baecf37b50eb10d9d4210`)
+with `xmodel/moskowicz-prime-degree-review-grok-20260824.md` (SHA-256
+`a32082a89077b17bb9f9df4d2b518d8e7ad6de4e126a35cf0d49b446bb0d5a06`):
+**CONFIRMED `REFUTED-AS-PROOF / HEADLINE NOT ESTABLISHED`**.
+
+- The load-bearing first case of arXiv:2407.13795v1 attributes to a
+  MathOverflow answer the implication that a stated rare-monomial property
+  forces extension degree two. The answer proves no such universal
+  implication. Exact Kummer controls
+  `C(s^n,v) subset C(s,v)`, with `x=s+v`, `y=s+2v`, satisfy that property for
+  every `n>=2`, so the printed inference is false.
+- These controls are not Keller subfields. They refute the proof step, not
+  the prime-degree statement itself, and produce no counterexample.
+- The paper's second case is repairable: after choosing a nonzero generic
+  linear parameter, Wang's intersection theorem and Gwozdziewicz's
+  injectivity-on-one-line theorem show that a complex Keller map with
+  `xy in C(P,Q)` is an automorphism. This repaired implication does not use
+  prime degree. The paper cannot be consumed to exclude degree 109.
+
+## AS109 `xy` MEMBERSHIP ROUTE STOPS (2026-08-24, DUAL-CONFIRMED CONDITIONAL TIER)
+
+`xmodel/as109-xy-membership-gate-20260824.md` (SHA-256
+`09d5654aeeeee55f9c5766e75f1a975db12a5701258efb25b04606fb4fc72729`)
+with `xmodel/as109-xy-membership-review-grok-20260824.md` (SHA-256
+`04c4d3dc8342141c4b1cb615e232a00053a056825fddbe55dd3ba5c2b44b8ac0`):
+**CONFIRMED `SHARP NO-GO FOR MEMBERSHIP`**.
+
+- On the tube `(P,Q)=(109S,1+109T)`, the Hensel sections satisfy
+  `x_a y_a = a mod 109`; their 109 images are distinct. Therefore
+  `[M(xy):M]>=109`, so `xy` lies in neither `M=Q_109(P,Q)` nor the target
+  ring. Nonmembership survives coefficient-field extension to `C`, closing
+  the proposed client of the repaired Moskowicz implication.
+- If separately `A_infinity=0`, then `d=109`, `L=M(xy)`, and the tube-local
+  monic minimal polynomial reduces to `Z^109-Z`. Its trace, norm, and
+  discriminant are split-etale tautologies and yield no obstruction. This is
+  not a global integral equation over `Q_109[P,Q]`.
+- The univariate root-translation test is equivalent to supplying the missing
+  descended deck action; it is not forced by symmetric coefficients. No lift
+  is excluded or constructed.
+
+## SEXTIC PARTIAL-`y` CLOSURE AND BOUNDED-SIX SYNTHESIS (2026-08-24, DUAL-CONFIRMED FIELD-THEOREM TIER)
+
+The genuine sextic leaves and synthesis have the following producer/review
+SHA-256 pairs:
+
+- `(4,6)`: `587a142a09ac70805264f56ed408545fa6dd0b771d4712459fad6eddcf9902ac` /
+  `183ad7d6eab8b9f74041c2eb7d29180b2c75a4bc84d82bfeb681f29a55b9c32c`;
+- `(5,6)`: `31420c0cd667640f340f4d127f185edd4515aac7df3733560e6d1fda5ec6c7a4` /
+  `d7b4f0e033f63f5e8f1f62b44f98ae23b566071cd34c810c18199cd099f88b70`;
+- bounded-six synthesis: `1078bbdd47ccf085900b93b165ee268d314d2cc4e387b30ad81c4a40817e12f3` /
+  `81669337bf038ae2bb2d81c20bec7ef92a97eaeaa03f906d0a20c33bf20a9115`.
+
+All three hostile reviews are **CONFIRMED**. Over every characteristic-zero
+field, every Keller pair whose two actual partial `y`-degrees are at most six
+is a polynomial automorphism. The proof ledger closes `(4,6)` by its
+imprimitive local-normalization branches and `(5,6)` by the third integral,
+weighted common-factor identity, two polynomial boundaries, and infinity
+contradiction; target reductions cover every other pair. Therefore an exact
+AS109 lift has at least one correction of `y`-degree at least seven.
+
+This entry promotes mathematical validity only. It makes no novelty claim:
+the separate source-shear history audit may supply a shorter classical proof
+and a stronger frontier. No arbitrary-support AS109 no-go, lift existence,
+or JC2 inference follows.
+
+## TD6 SYMBOLIC-MODULI THIRD-BAND CHAIN (2026-08-24, DUAL-CONFIRMED FINITE-FAMILY TIER)
+
+The moduli-uniformity, paired-point, and moduli-uniform third-band
+producer/review SHA-256 pairs are respectively:
+
+- `499e95763759fe195ab1eba5fbf97bfb9d255bbf6fb2b090add938d92f1f3a06` /
+  `d95e0d684464c2f56b76ceb5cf32158d47ed907565216ff2974ca1d5f883730b`;
+- `a98de6d23ff2942360c328e4eeb6c08e24a122b0f9c964a5ad586cf0b009e9f2` /
+  `3f2462b2c61d01a39769cc82cf3e9a04732e2bc824edea92bcb0eb9c449d3ad7`;
+- `0d3e2dc8e57b03060582d6906212ae707cb1d42b10416cff85117daa93b4ed7b` /
+  `582933fca15c8e1005460591f795102d43c60a9733b8bc19f0b7bdbd716784ef`.
+
+All three hostile reviews are **CONFIRMED**.
+
+- UNIFORM NEXT ROW: on the retained x-boundary/F1 pattern,
+  `[s^-1 t^13]J=(6/5)(5E2-2E1^2)`, independently of common centering and of
+  pole/dead-stretch data absent from that coefficient. The real form is
+  negative definite, but over `C` its zero curve carries a genuine
+  56-dimensional paired finite-band survivor on the normalized slice.
+- PAIRED POINT: the first explicit quadratic point on that curve dies at the
+  next centered row, where the whole 56-family has
+  `[s^0 t^0]J=81/15625`. This kills only that point.
+- UNIFORM THIRD BAND: on the entire moduli curve, the constant centered row
+  cuts to an irreducible sextic `F(S)`. Adjoining the cubic pole scale gives a
+  degree-18 field; the remaining centered equations have homogeneous rank
+  `25/58`, and an exact left syzygy has nonzero residual, including
+  `(136875/29)A`, at all 18 conjugates. Hence the fixed normalized reduced-
+  boundary family is empty at this band.
+- SCOPE/NEXT: SP-2 and every terminal class remain alive because x-boundary,
+  dead-stretch, centering, and other boundary moduli were fixed. The valid
+  successor varies one such datum and tests its pairing with the existing
+  left syzygy; another band on the empty family is invalid.
+
+## PARTIAL-`y` SOURCE-SHEAR HISTORY STOP AND FIRST TRUE FRONTIER (2026-08-24, DUAL-CONFIRMED CLASSICAL-THEOREM TIER)
+
+`xmodel/as109-partial-y-history-stop-20260824.md` (SHA-256
+`6994dd6bc1642122ba549be474d2465203faf554d93da5146ecb212dbaaf89fe`)
+with `xmodel/as109-partial-y-history-review-grok-20260824.md` (SHA-256
+`f9d547f0f17dc3557ed8edce19912b4930dc2125542c7f9b3e4782c554a03afd`):
+**CONFIRMED `ALL MAXIMUM ACTUAL y-DEGREE <=8 IS CLASSICAL; FIRST
+FUNDAMENTAL REMAINDER (6,9) WITH 3|H`**.
+
+- SHEAR THEOREM: for actual degrees `m=da`, `n=db`, `gcd(a,b)=1`, the top
+  Jacobian row gives `a_m=alpha h^a`, `b_n=beta h^b`. With `H=deg h` and a
+  sufficiently large triangular source shear `y -> y+x^L`, the exact total
+  degrees are `a(H+dL)`, `b(H+dL)` and their gcd is `H+dL`.
+- CLEAN CLASSICAL INPUTS: if `gcd(H,d)=1`, Dirichlet makes this gcd prime and
+  Nagata's repair of Appelgate--Onishi applies. If `gcd(H,d)=2`, it can be
+  made `2p` and the independent Guccione--Guccione--Valqui theorem applies.
+  Magnus is only the coprime-total-degree theorem; the gap in Zoladek's
+  neighboring argument is not consumed. The field statement descends from
+  `C` to every characteristic-zero field.
+- COVERAGE/PRIORITY: every pair with partial gcd at most two is therefore
+  classical. Equal-degree `GL_2` and divisible-degree target shears then cover
+  all 81 ordered pairs with maximum actual `y`-degree at most eight. Hence
+  the campaign's `(4,6)`, `(5,6)`, and bounded-six proofs remain correct
+  alternate certificates but are not first exclusions. Consecutive-degree
+  widening is stopped as duplicate history.
+- FIRST REMAINDER: at maximum nine, the only fundamental residue is `(6,9)`
+  with `3|H`; `(9,9)` is derivative through target reduction. The leading
+  family `F=K^2`, `G=K^3`,
+  `K=z^3+u t^2 z+v t^3`, has zero binary Jacobian and a positive-dimensional
+  leading-boundary locus. It is not Keller; it proves only that the earlier
+  coprime finite-map certificate does not transfer. The valid successor is a
+  gauge-quotiented transverse deformation and cokernel test, not generic
+  coefficient search.
+- AS109 COROLLARY: conditionally on an exact lift, maximum actual `y`-degree
+  at most eight is impossible by reviewed Hensel noninjectivity. Maximum
+  exactly nine reduces, by an integral target operation and possible swap, to
+  `(6,9)` with `3|H`. Its first non-top `y^13` row is automatically divisible
+  by `109^2`; an exact primitive-core control rules out a universal first-row
+  valuation contradiction. No lift, arbitrary-support no-go, or JC2 result
+  follows.
+
+## AS109 WILD-SYMPLECTIC COMPLETED-BIDISC GATE (2026-08-24, DUAL-CONFIRMED CONDITIONAL TIER)
+
+`xmodel/as109-wild-symplectic-conductor-gate-20260824.md` (SHA-256
+`c7ad3660c136bbee7105e786cc8b717d025534b67ac63cababb33c4b6de29e7c`)
+with `xmodel/as109-wild-symplectic-conductor-review-grok-20260824.md`
+(SHA-256
+`a59c7ccbf39971ad7ab47f8e865926c93e4ac9d46305be076f4bd0193b2b1a9a`):
+**CONFIRMED `GAUGE-TRIVIAL / CONTROL-ONLY`**.
+
+- COMPLETED TORSOR: conditionally on an exact integral lift of
+  `(x-x^p,y)`, `Z_p<x,y>` is finite free etale of rank `p` over
+  `Z_p<P,Q>`. The special Artin--Schreier translations lift uniquely to a
+  free constant-`C_p` torsor action on the closed unit bidisc, and the chain
+  rule makes every deck transformation determinant one.
+- GAUGE TRANSITIVITY: any two determinant-one restricted-analytic lifts of
+  the same special map are uniquely right-equivalent by a near-identity
+  restricted-analytic symplectomorphism. Thus unrestricted completed
+  cohomology has one gauge orbit. The statement does not provide a rational
+  or polynomial deck map, act on `A_infinity`, or imply generic degree `p`.
+- FIRST DIGIT: the exact norm, order, divergence, and invariance equations
+  form one affine orbit under divergence-free right gauges. Nevertheless
+  every solution has `[x^(p-1)y]Q1=1`; independent exact compilers at
+  `p=3,5` give quotient dimension zero and recover the rational cotangent
+  tower through depths two through four.
+- SCOPE/NEXT: the forced monomial is a first-digit floor, not an unbounded
+  support theorem, and the growing cotangent representative is not known to
+  be minimal. A valid successor must define minimal support or degree inside
+  the unique completed orbit with uniformly bounded polynomial gauges, or an
+  algebraic boundary conductor invariant under a specified bounded
+  equivalence. No `p=109` brute force, lift, fixed-support exclusion,
+  `A_infinity` conclusion, or JC2 decision follows.
+
+## TD6 SMALLEST Q-BOUNDARY DEFORMATION (2026-08-24, DUAL-CONFIRMED TWO-POINT TIER)
+
+`xmodel/td6-boundary-q2-deformation-gate-20260824.md` (SHA-256
+`f098dea46ca99ed26bb0ad541efe2135c78c3c1f47da8d92096a91dfece4fcc0`)
+with `xmodel/td6-boundary-q2-deformation-review-grok-20260824.md` (SHA-256
+`6df0d9c9dde4c4e8991b73da1c807ce40b4f44c2b587949c2312aaebf469665c`):
+**CONFIRMED `TWO-EXACT-EMPTY-SPECIALIZATIONS / STOP`**.
+
+- SOURCE/SCOPE: inside the already-cut normalized SP-2 chart-pattern
+  control, retain the fixed rectangles, center, zero dead stretch, reduced
+  F1 pattern, r9 relation, sextic, and degree-18 pole field, and deform only
+  `p=t^15`, `q_B=t+B*t^2+t^25`. This is the smallest displayed q-jet, not a
+  complete SP-2 boundary normal form.
+- `B=1`: the exact chain has ranks `3508/3602`, then `36/94`, then tangent
+  rank `25/58`, and is empty at the centered input row `t^4`. Its residue
+  differs from the frozen `B=0` residue by exactly `-14012/145`, so the
+  obstruction is genuinely `B`-sensitive rather than copied unchanged.
+- ADAPTIVE POINT: at the exact secant-cancellation candidate
+  `B_*=rho_0/(14012/145)` in the degree-18 field, the full `B`-dependent
+  rebuild has ranks `3470/3602 -> 132`, `+38 -> 94`, `+38 -> 56`, tangent
+  rank `25/56`, and is again empty at `t^4`. The residual has nonzero
+  `1,A,A^2` components, directly refuting affine secant extrapolation.
+- SCOPE/NEXT: neither generic `B` nor the one-parameter family is killed;
+  other q-jets, centering, dead stretch, F1 data, SP-2, all terminal classes,
+  and JC2 remain open. The licensed successor is symbolic fraction-free
+  elimination over `E[B]` plus separate treatment of every pivot/rank-jump
+  locus. Sampling or an adjoint shortcut alone is not a certificate.

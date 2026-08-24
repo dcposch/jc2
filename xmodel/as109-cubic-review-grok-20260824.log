@@ -1,0 +1,18 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the producer report, cubic-coupling case files, and cited quadratic/Hensel materials at the frozen basis, then independently rerun the replay.The review skill is for code diffs; this is an independent mathematical attack of the cubic-Y no-go. Next I’ll inventory the case files, verify frozen hashes, and read the cited parent materials.Hashes match the charged tree. Next I’ll reread the Hensel parent, priority notes, and provenance files, then rerun the replay with an independent algebra check.Replay passed and provenance hashes match. I’ll run a second, independent algebra engine on the Jacobian identities, integrality, and the AS109 degree/Hensel checks.Independent identities all hold and no cubic-Y Keller counterexample appeared. I’ll write the review with per-claim verdicts, hashes, and the algebra.**Overall verdict: `CONFIRMED`.** Written to `xmodel/as109-cubic-review-grok-20260824.md`.
+
+Every characteristic-zero Keller pair with both `y`-degrees at most 3 is a polynomial automorphism, so there is no exact `det J=1` AS109 lift whose two corrections both have `y`-degree `<=3`. No cubic-Y counterexample survived, and there is no missing hypothesis that breaks a numbered claim.
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | Exhaustive top-degree reduction over `K` (Wronskian, zero-tops, affine/cubic shear) | **CONFIRMED** |
+| 2 | Genuine `(2,3)`: `[y^4]`/`[y^3]`, UFD `a2=α h²`, `b3=β h³`, depression, `-2λ` | **CONFIRMED** |
+| 3 | Cusp form `f=z²+U`, `g=z³+Vz+W` and Jacobian `V'=3U'/2`, `W'=0`, `h U' V=j` | **CONFIRMED** |
+| 4 | Monic equation for `r`, integral closure, unit-product contradiction (including nonconstant `h`) | **CONFIRMED** |
+| 5 | Descent `Kbar → K` by uniqueness / faithful flatness; `Kbar` is unnecessary | **CONFIRMED** |
+| 6 | AS109: coordinate `y`-degree `<=3` over `Q_109` vs residue-ball Hensel; carries/marked collisions irrelevant | **CONFIRMED** |
+| 7 | Exact theorem not identifiable from accessible local primary sources; no novelty claim | **CONFIRMED** |
+
+Independent replay of `verify_cubic_no_go.py` exited 0. Frozen hashes match: report `198f0b2f…`, replay `7939c0d7…`, freeze `a68afeca…`. A second sparse engine (not the producer) rechecked the identities on supports including `{0,108,109,216}` with 0 failures. Algebraic closure is a convenience: `K[x]` UFD already produces `h`. Magnus 1955 is a different (total-degree) statement; Appelgate–Onishi / Nowicki–Nakai remain paywalled and are not used as attribution.
+
+**Promotion:** accept `CUBIC-Y NO-GO` at this scope only. Do not promote to quartic `y`, arbitrary-support AS109 nonexistence, JC2, or novelty. A later `CLOSED-SUPPORT + UNIT-L` attempt must allow `y`-degree at least 4 in one correction; this review licenses no such search. Producer files were not edited.

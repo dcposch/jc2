@@ -41,6 +41,120 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
+## Current event synthesis overlay (reviewed through 2026-08-24 13:19Z)
+
+The proof backbone remains the `td=6` global-realizability problem; the
+disproof backbone remains an exact finite polynomial AS109 lift. The current
+ranked synthesis is
+[`xmodel/ideation-20260824T1205Z-event-synthesis.md`](xmodel/ideation-20260824T1205Z-event-synthesis.md).
+
+- **The bounded partial-`y` frontier is historical through eight.** If the
+  actual degrees are `da,db`, the top Jacobian row and a large source shear
+  make the total-degree gcd `H+dL`, where `H` is the common leading-root
+  degree. Nagata's repaired prime-gcd theorem and the independent GGV `2p`
+  theorem cover `gcd(H,d)<=2`; target reductions then cover every ordered
+  pair with maximum actual `y`-degree at most eight. The first fundamental
+  remainder is `(6,9)` with `3|H`. Its leading common-cubic family
+  `(K^2,K^3)` is positive-dimensional, so the previous coprime finite-map
+  mechanism stops. The next licensed coefficient gate is a gauge-quotiented
+  transverse deformation about that family. Our cubic-through-sextic proofs
+  remain exact alternate certificates, not first exclusions.
+- **AS109 is globally constrained but not obstructed.** Any exact lift has
+  generic degree `d>=109` and a formal split `E^109 x A_infinity`; the two
+  missing global keys are `A_infinity=0` and rational deck descent. The
+  natural `xy` client points away from the target field, and the Moskowicz
+  no-prime proof is source-audited `REFUTED-AS-PROOF`. The bounded-degree
+  history stop raises the correction floor to at least nine and reduces an
+  exact maximum-nine survivor to `(6,9), 3|H`. The wild-symplectic gate is
+  dual-confirmed `GAUGE-TRIVIAL / CONTROL-ONLY`: the completed unit bidisc is
+  a finite etale Artin--Schreier torsor, but all determinant-one
+  restricted-analytic lifts of that special fibre form one near-identity
+  symplectic gauge orbit. The forced first-digit monomial is only a floor.
+  Minimal uniformly bounded polynomial representatives or an algebraic
+  boundary conductor are the next
+  finite-support discriminators; no p=109 brute force or exponent rectangle
+  is licensed.
+- **TD6 has killed one complete normalized family, not SP-2.** The symbolic
+  next-row zero curve, its centered sextic cut, the degree-18 pole field, and
+  a nonzero exact left syzygy exclude the whole fixed normalized reduced-
+  boundary family. Boundary, dead-stretch, centering, and related moduli were
+  fixed. The first bounded q-boundary successor
+  `q_B=t+B*t^2+t^25` is now dual-confirmed empty at `B=1` and at one exact
+  adaptive value in the degree-18 field, both at the `t^4` centered row; the
+  residue is genuinely `B`-sensitive. Two points do not kill the family.
+  The active test is fraction-free elimination over `E[B]`, with every
+  pivot/rank-jump stratum treated separately; adjoint jets may accelerate
+  that elimination but cannot replace it. Full landing/coverage and the
+  distinct `G2-PSC` / `G2-BD` obligations remain.
+
+The rational-Catalan length analogy is an accelerator/control only. Secant,
+raw projective connectedness, literal-slot, `xy`-membership, unrestricted
+completed cohomology, consecutive-degree widening, generic sparse search, and
+AWS expansion are stopped unless a new source-derived invariant reopens them.
+No result here proves or disproves JC2.
+
+## Prior event micro-round overlay (reviewed through 2026-08-24 10:51Z)
+
+The two live backbones remain `td=6` global realizability on the proof side
+and a fixed finite-support AS109 lift on the disproof side. The exact gates
+and their different-model hostile reviews sharpened both without resolving
+JC2.
+
+- **AS109 independent-slot and bounded-`y` no-gos.** A finite full module of independently
+  variable literal monomial slots cannot satisfy the proposed
+  `CLOSED-SUPPORT + UNIT-L` certificate: the forced `x^108 y` slot and its
+  nonlinear polarizations generate infinitely many `x^(108k)` residuals.
+  Genuinely coupled sections are not excluded. Independently, every
+  characteristic-zero Keller pair with both coordinate `y`-degrees at most
+  five is a polynomial automorphism. The cubic cusp block reduces over the
+  function field to `f=z^2+U`, `g=z^3+Vz+W`. The new `(3,4)` block reduces to
+  `f=z^3+uz+v`, `g=z^4+az^2+bz+c`; five exact Jacobian rows give a conserved
+  product, and a degree-ten monic equation removes the rational depression.
+  The remaining polynomial unit product is impossible. The three new
+  quintic patterns `(2,5)`, `(3,5)`, `(4,5)` close by exact finite-pole,
+  singular-cubic, and weighted-projective-infinity arguments. Hence no exact
+  AS109 lift has both correction `y`-degrees at most five. The surviving
+  certificate must be genuinely coupled and allow `y`-degree at least six;
+  no support search is licensed by this degree floor.
+- **TD6 centering escape.** The bare chart `x=t s^4`, `y=s^-1` has a valid
+  polynomial divisibility contradiction only after the common lower
+  truncation is pinned to zero. LR2 permits the shared truncation `x~y^-1`,
+  giving the polynomial Eggers coordinate `T=xy^4-y^3`. Explicit polynomials
+  inside the SP-2 rectangles reproduce the three-branch equality mechanism
+  with centered Jacobian errors of exact orders three and six. Dropping the
+  degree cap permits arbitrary finite one-sided Keller jets. Thus the bare
+  obstruction is stopped. The first exact shared-coefficient two-chart
+  specialization is nonempty at its first band: rank `3508/3602`, nullity 94,
+  with a deterministic rational witness. On that entire affine family the
+  next row is nevertheless impossible because
+  `[s^-1 t^13]J=-18858/3125`. Both facts are different-model confirmed. They
+  kill only the selected centering/orbit/dead-stretch/pole values, not SP-2
+  or a terminal class. The next honest gate quantifies those licensed moduli
+  inside the same rectangles and preserves the F1-to-r9 transport.
+- **Secant-idempotent accelerator.** For a Keller map and any polynomial
+  secant matrix `A`, the normalized `det A` is the diagonal projector in the
+  self-fiber product and
+  `I:Delta = I:Delta^infinity = I+(det A)` scheme-theoretically. This replaces
+  saturation by one explicit third generator, but the unit-ideal endpoint is
+  injectivity and hence JC2 itself. The identity is standard neighboring
+  secant/Bezoutian algebra, not a novelty claim. Its first projective
+  connectedness child is dual-confirmed `COSTUME`: unsaturated homogenization
+  can contain artificial infinity components even for an automorphism, while
+  a genuine collision component may meet the diagonal only at infinity.
+  Resurrection requires a source-derived saturated boundary-intersection
+  datum, not another naive connectedness argument. Applied directly to
+  AS109, the secant row is also dual-confirmed `COSTUME`: on every off sector
+  `x-u` is a unit, so the adjugate identity puts `det A` and its tangent row
+  inside the localized collision ideal. The 108 projectors merely restate
+  the Hensel sheet split and add coefficient rank zero.
+
+The active finite successors are the symbolic-moduli two-chart `td=6` gate,
+the AS109 sextic survivor discriminator, and a
+conditional Hensel-to-global-degree cross-gate. Reviews remain
+background/nonblocking. No held
+D-series, unrestricted Witt, generic exponent-rectangle, new book-cell, or
+AWS expansion is reopened. No result here proves or disproves JC2.
+
 ## Current portfolio overlay (full round closed 2026-08-24 07:55Z)
 
 The authoritative decision record is
@@ -207,7 +321,7 @@ Tried? legend: **Tried** = substantive campaign computation/proof/audit; **Parti
 | # | Approach | Essence | Sources | Tried? | Stuck where | Promise (reconciled) |
 |--:|---|---|---|---|---|---|
 | 1 | GGV Newton-polygon corner families + degree farm | Enumerate corner families below a degree cutoff, transcribe [P,Q]=x^k, empty each leaf | S2+S3+S42 / G1 / F1 | Tried (origin of repo; (72,108) externally certificate-supported conditional on the GGV-Horruitiner reduction/transcription bridge; own cCa2/cCa6 lanes modular only; farm to deg 150) | No degree/td ceiling ("always a next pair", G); GGV Section-4 reductions not a complete engine; Prop 4.3 chain arXiv-only + no general corner endgame (F); char-0 certificate memory wall | — (tried); all three agree on the stuck-point |
-| 2 | Sheet-number ladder / Eggers–Wall / dicritical boundary trees (Sigray–Orevkov frame) | Resolve infinity, decorate the boundary tree, exclude td=6,7,8,... | S4+S10+S44 / Grok-survey G2 / F2+F3 | Tried — the campaign's active proof backbone (td≤5 closed by the external theorem ledger; td6 has eight terminal classes: four single-pole and four two-pole, with one intermediate merged datum; td7 panel, td11 promoted at their stated conditional tiers) | Hybrid version lacks `G2-PSC` transport/fidelity; all versions lack a universal full-configuration landing/coverage theorem and an absolute/cofinal td ceiling; residue-A routes additionally owe `G2-BD`. A pure Sigray architecture can bypass `G2-PSC` but cannot use GGV restrictions as input. The local direction-multiplicity strictness shortcut is refuted by an exact analytic equality control; realizability/opposite-side balance remains. Consistent tree exists at td=9; residue-A coefficient wall / l+ dichotomy (F2); Sigray unrefereed. DISSENT on framing: F3 calls the Favre–Jonsson valuation-tree version "untried; field" while S/G count the campaign's blowup machinery as this lane | S:8 for a verified GGV-chain-to-Eggers–Wall transport functor |
+| 2 | Sheet-number ladder / Eggers–Wall / dicritical boundary trees (Sigray–Orevkov frame) | Resolve infinity, decorate the boundary tree, exclude td=6,7,8,... | S4+S10+S44 / Grok-survey G2 / F2+F3 | Tried — the campaign's active proof backbone (td≤5 closed by the external theorem ledger; td6 has eight terminal classes: four single-pole and four two-pole, with one intermediate merged datum; one fixed normalized reduced-boundary SP-2 family is now exactly empty at a centered third band; td7 panel and td11 are promoted only at their stated conditional tiers) | Hybrid version lacks `G2-PSC` transport/fidelity; all versions lack a universal full-configuration landing/coverage theorem and an absolute/cofinal td ceiling; residue-A routes additionally owe `G2-BD`. A pure Sigray architecture can bypass `G2-PSC` but cannot use GGV restrictions as input. Local direction-multiplicity strictness is refuted by an exact analytic equality control, and the new family kill freezes boundary/centering/dead-stretch data; global realizability and deformation across those moduli remain. Consistent tree exists at td=9; residue-A coefficient wall / l+ dichotomy (F2); Sigray unrefereed | S:8 for a verified GGV-chain-to-Eggers–Wall transport functor |
 | 3 | Vertex-gap / strip ODEs / residue functional R_{k,d2} | Face valuation orders bracket equations; strip block collapses to a rigid ODE | S5+S6 / G3 / — | Tried — "the campaign's actual theorem" (G) | Scope: strips, d1=1, depth two, k≥2 only; y-axis columns block (8,28) subcase (1); ODE rigidity is Żołądek A.7 priority | S:6 for depth-three Ore/resultant extension |
 | 4 | Formal-germ certification + algebraization (D-series windows, DEPTH-STAB, Padé, gluing, toric closure) | Prolong J=1 in Puiseux depth; if all depths stay nonempty, algebraize a germ | S43+S45 / G4+G24 / F17 | Tried deeply — "ours/novel" (F) | l+/e+ >= 37 floor, no live square block (S,F); modular nonempty ≠ germ ≠ char-0 ≠ polynomial (G); route-provenance loss in gluing; "the D-series is not JC2" (G) | S:7 (D25 comprehensive triangular decomposition), S:6 (joint Fitting ideal); G: honest disproof lane, currently a local maximum |
 | 5 | Jung–van der Kulk degree descent / Aut(C^2) amalgam, polydegree | Produce an elementary automorphism strictly dropping degree of a Keller pair | S1 / G5 / F10 | No (as JC2 program; TRANSPORT.md is normalization, not descent) | GGV cusp leading forms d^m U^n − c^n V^m block triangular shears (S,G); "amalgam rigidity never bites on non-automorphisms" (F) | S:4, G:5 — concordant moderate |
@@ -224,9 +338,9 @@ Tried? legend: **Tried** = substantive campaign computation/proof/audit; **Parti
 | 16 | D-module / holonomic index | Holonomic index invariant against a Keller endomorphism | — / — / F18 only | No | "Untried, exotic" (F); no concrete invariant named in any input | Unscored; Fable unique find |
 | 17 | BCW / Druzkowski / Yagzhev cubic stabilization | Stabilize to cubic-homogeneous/cubic-linear normal form in high dimension | S24+S25 / G14 / — | No (per G: correctly) | Raises dimension; target class now contains genuine CEs (Alpoge/Gao era); plane-origin subclass has no recognizing invariants | DISSENT: S:5 and S:4 (salvage subclass invariants) vs G:1 ("category error") |
 | 18 | Graded / equivariant / GIT symmetry | Reduce to weighted-homogeneous Keller maps | S22 / G15 / — | Closed as CE hunt: Shaska 2026 — graded plane Keller maps are automorphisms for every weight pattern | A hypothetical CE has no G_m symmetry; orbit limits lose nonproperness | S:4 (stabilizer/orbit-limit check); G: closed |
-| 19 | Char-p counterexamples + Witt lifting | Lift a char-p plane Keller collision to char 0 | S31 / G17 / F16 | Tried (Mondello char-2: 1,152/1,152 W2-obstructed; explicit Artin--Schreier `F_3` collision confirmed through `W_2=Z/9`; the cap-eight `p=109` gate stopped `NO-FROZEN-GRAMMAR`) | First-Witt obstruction is not universal. A confirmed same-seed tower lifts through every Witt level, but with growing degree/support and a nonpolynomial rational/restricted-analytic limit. At `p=109`, a slot cap does not bound exponents modulo exact triangular gauges; the generic digit equations also require base-p carries. Bounded-support/degree lifting and a characteristic-zero polynomial limit remain absent | Redesign around a proved finite gauge-normal-form/symbolic-motif grammar and `CLOSED-SUPPORT + UNIT-L`; no automatic all-Witt-to-polynomial inference |
+| 19 | Char-p counterexamples + Witt lifting | Lift a char-p plane Keller collision to char 0 | S31 / G17 / F16 | Tried (Mondello char-2: 1,152/1,152 W2-obstructed; explicit Artin--Schreier `F_3` collision confirmed through `W_2=Z/9`; the cap-eight `p=109` gate stopped `NO-FROZEN-GRAMMAR`; every hypothetical exact AS109 lift now needs correction `y`-degree at least nine) | First-Witt obstruction is not universal. A same-seed tower lifts through every Witt level with growing degree/support and a nonpolynomial rational/restricted-analytic limit. Literal-slot closure is infinite; local Hensel gives degree `>=109` but neither `A_infinity=0` nor deck descent; the first true bounded partial-degree residue is `(6,9),3|H` | Redesign around uniformly bounded representatives in the analytic symplectic gauge orbit, an algebraic boundary conductor, or the `(6,9)` transverse cokernel; no automatic all-Witt-to-polynomial inference |
 | 20 | Reduction mod p / p-curvature formalism (Tsuchimoto, Belov–Kontsevich) | Use the p-curvature/reduction-mod-p correspondence as the proof engine | F8 / S29 (part) / G9 (part) | No (as formalism) | The known bridge consumes PC(2)/JC(4), both now false (S,G); F elevates it as its own untried lane | Unscored by S/G as standalone; Fable framing find |
-| 21 | p-adic injectivity / Hensel / model theory | Uniform p-adic bijectivity for almost all p; transfer to char 0 | S32 only / — / — | Partial: for each fixed residue `b`, an exact determinant-one `Z_109` polynomial lift of `(x-x^109,y)` would map the 109 source balls `(a,b)+109Z_109^2` onto the target ball `(0,b)+109Z_109^2` and, after adjoining finitely many coefficients/preimages, embed to a complex counterexample | Existence of such a fixed finite-support lift is wholly open; the cap-eight grammar failed before enumeration | S:4 |
+| 21 | p-adic injectivity / Hensel / model theory | Uniform p-adic bijectivity for almost all p; transfer to char 0 | S32 only / — / — | Partial: a hypothetical exact determinant-one `Z_109` lift has 109 Hensel sheets, generic degree `d>=109`, and tube split `E^109 x A_infinity`; maximum actual `y`-degree `<=8` is impossible, and maximum nine reduces to `(6,9),3|H` | Existence remains open. Hensel does not kill `A_infinity`, descend a deck cycle, or force a degree congruence; `xy` lies outside the target field; the secant projector adds no off-sector rank. Completion alone does not supply a global rational action | S:4; live clients are negative-weight `A_infinity`, bounded analytic-gauge representatives, and rational graph-factor descent |
 | 22 | Diophantine integral points / heights on fibers | Siegel-type finiteness forces preimages or properness | S33 / G39 (height-search variant) / — | No | Siegel classifies the wrong direction; uniformity across an unknown pencil inaccessible; no effective smallest-CE bound without JC2 (G) | S:3, G:2 — concordant low |
 | 23 | Analytic global inverse / metric completeness / holomorphic analog | Properness via pullback-metric completeness; Hadamard | S34 / G36 / F14 (part) | No | Fatou–Bieberbach: the holomorphic analog is FALSE (G); dim-3 CE kills every dimension-free metric slogan (S) | S:4, G:1 — concordant low |
 | 24 | Real JC / Pinchuk deformation | Deform a Pinchuk map to constant J, or use real global-injectivity theory | S35 / G29 / F14 (part) | No | Pinchuk J is nonconstant; complex collisions need no real points; SOS orthogonal to complex emptiness | S:1 proof / 3 disproof-recon, G:3 — concordant low |
@@ -237,7 +351,7 @@ Tried? legend: **Tried** = substantive campaign computation/proof/audit; **Parti
 | 29 | LND / Hamiltonian-derivation completeness / commuting frames | Prove D_P locally nilpotent or the dual frame integrates to G_a^2 | S18+S19 / G22 (part) / — | Scoped gate complete: `kappa(P)=[div V] mod D_P` is classical Gauss--Manin data and vanishes iff a mate exists; exhaustive recurrence proves no mate for all `P=x+x^n y`, `n>=2` | The quotient is an exact reformulation and has no known universal receiver; LND-ness with a slice is essentially the conjecture again; Rentschler classification loops back to JvdK (G) | S:6 and S:5; G:4 (via the ML-invariant experiment) |
 | 30 | Affine-surface classification / Makar-Limanov invariant / exotic surfaces, cancellation | A CE would violate the package characterizing A^2 | S40 / G22 / F5 (part) | No (as JC2 program; LNDs used only inside TRANSPORT.md proof) | ML invariant does not see the embedding; dimension 2 is "too classified" (G); stabilization destroys the Keller presentation (S) | Mild DISSENT: S:2 vs G:4 (afternoon check on residue-A leading graded ring) |
 | 31 | Integrality / Zariski Main / etale finiteness (Rees valuations) | Prove x,y integral over C[P,Q]; finite etale covers of A^2 are trivial | S16 only / — / — | No direct attempt | Finiteness is exactly the missing global assertion; ZMT adds boundary rather than removing it | S:6 (Rees valuations of one complete boundary book) |
-| 32 | Off-diagonal collision ideal / injectivity route (Cynk–Rusek, Ax–Grothendieck) | Show the saturated collision ideal is empty; injective => automorphism | S17 / G25 / F13 | Partial (S: resultant machinery used, saturated ideal never attacked) vs hollow (G) | Collision component closes only at infinity where eliminant leading coefficients vanish (S); "no hidden inertia" axiom IS JC2 (G); F13: "reduces to injectivity, no handle" | DISSENT: S:7 (Q-linear kernel on open_8_28_c2) vs G:2 |
+| 32 | Off-diagonal collision ideal / injectivity route (Cynk–Rusek, Ax–Grothendieck) | Show the saturated collision ideal is empty; injective => automorphism | S17 / G25 / F13 | Partial, now with a dual-confirmed exact accelerator: for any Keller secant matrix `A`, `I:Delta=I:Delta^infinity=I+(det A)`, so the off scheme has a three-generator presentation without saturation | Proving the three-generator ideal is `(1)` is still injectivity/JC2. Naive projective-CI connectedness is dual-confirmed `COSTUME`: `Z`-torsion can carry connectivity and honest off closures may attach only at infinity. A useful client needs a named bounded family or source-derived saturated boundary datum | DISSENT remains on promise: exact software simplification, no degree/support bound or new global obstruction |
 | 33 | Global symplectic exactness / action residues / generating functions | f dg − x dy and g df − y dx are exact; promote residue pins to a global lemma | S36 (part) / G27+G40 / — | Ordinary action-residue gate run: `P dQ-x dy=dS` polynomially, so untwisted divisorial residues are automatic `COSTUME`; pins remain bookkeeping | Poincare lemma yields primitives for CEs too; any revival needs a genuinely twisted/client-specific class; generating functions local, mixed-coordinate (G40) | G:6 — his original highest untried; G:3 for the generating-function chart; consonant with Sol's adjacent 7 |
 | 34 | 2D tangent-sweep / pole removal / rational Keller maps (Vitushkin-type) | Adapt the dim-3 sweep mechanism, or clear poles of a rational etale map, inside two variables | S36+S38 / G16 (mechanism inventory) / — | No | Ramification divisor has nowhere to go in 2D; no spare coordinate to absorb a denominator; graded plane maps already automorphic | DISSENT: S:7 (sweep ansatz) and S:6 (pole removal) vs G:2 for the descent framing |
 | 35 | Descent of dim >= 3 counterexamples to the plane | Restrict/quotient/project Alpoge–Gao–Gallagher maps | S37 / G16 / — | Recon and negative controls only | Every known mechanism is structurally 3-dimensional (forget-a-root, weighted lifts, duality); Picard obstruction Z/(d−2); constant 3x3 det gives no constant 2x2 minor | DISSENT: S:6 vs G:2 ("tourism") |
@@ -249,7 +363,7 @@ Tried? legend: **Tried** = substantive campaign computation/proof/audit; **Parti
 | 41 | Naive scaling deformation to the linear part | F_t = t^{-1}F(tx) connects to the linear part | S39 only / — / — | No — and should not be pursued | The dim-3 CE deforms to its linear part: the principle is falsified | S:1 |
 | 42 | Markus–Yamabe / Hurwitz vector-field realization | Convert Keller maps to vector fields with spectral hypotheses | G32 only / — / — | No | The arrow points the wrong way; constant J does not give the Hurwitz spectral condition | G:2 |
 | 43 | Ritt decomposition / composite coordinates | Force f Ritt-prime, reduce composite cases | G30 only / — / — | No | Abhyankar divisibility already coarsely primes both degrees; collapses to GGV after Aut-reduction | G:3 |
-| 44 | Moskowicz "no prime td" | Claimed exclusion of prime covering degree (arXiv:2407.13795, unvetted) | G37 only / — / — | No (flagged unvetted in SHEET6.md) | 8-page unpublished claim of that strength; prime td=3 exists in char 2 | G:2 (read it; test first non-trivial lemma on Orevkov td=9) |
+| 44 | Moskowicz "no prime td" | Claimed exclusion of prime covering degree (arXiv:2407.13795) | G37 only / — / — | Source-audited, **REFUTED-AS-PROOF**: the first case consumes a false universal degree-two implication; the headline is unestablished, not disproved. The second case repairs independently to `xy in C(P,Q) => automorphism` | Exact Kummer controls satisfy the alleged rare property in every degree; they are not Keller maps. A hypothetical exact AS109 lift separately forces `xy` outside its target field, so the repaired client also stops | Closed as proof input; retain only the repaired membership theorem and the general prime-degree question |
 | 45 | Differential Galois / Liouvillian inverse | Kovacic-style analysis of the inverse's ODEs | G38 only / — / — | No | The inverse PDE is tautological; univariate reduction reproduces Zoladek A.7 | G:3 |
 | 46 | Lean / AI formal certification vs axiom-laundering | Formalize the pipeline, or "AI will settle JC2" | S48 / G35 / — | S: Tried at the leaf/identity layer (two Lean identities, no sorry); G: not a route | Formalization cannot manufacture the finite universe; laundering an axiom is the failure mode; watched cranks dumped | S:5 rigor / 1 discovery; G:1 as standalone |
 
