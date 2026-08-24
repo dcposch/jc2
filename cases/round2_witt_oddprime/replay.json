@@ -1,0 +1,128 @@
+{
+  "cap_id": "AS3-MIN-W2",
+  "checks": [
+    "producer canonical JSON hash",
+    "independent two-value special-fibre census",
+    "exact generic-fibre division basis and separability",
+    "independent Teichmueller lift, E, and top Cartier class",
+    "independent modular correction solve",
+    "independent verification of producer linearized and Z/9 determinant witnesses",
+    "independent Z/9 marked-collision replay"
+  ],
+  "independent_core": {
+    "cap_id": "AS3-MIN-W2",
+    "correction_matrix_rank": 10,
+    "entering_values": [
+      2
+    ],
+    "error_E_mod3": [
+      [
+        2,
+        0,
+        2
+      ]
+    ],
+    "generic_basis": [
+      "1",
+      "x",
+      "x^2"
+    ],
+    "generic_degree": 3,
+    "independent_correction_witness": [
+      [
+        "B",
+        2,
+        1,
+        1
+      ]
+    ],
+    "producer_lifted_points_mod9": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "producer_lifted_target_mod9": [
+      0,
+      0
+    ],
+    "producer_witness_determinant_exact": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        27
+      ],
+      [
+        4,
+        0,
+        72
+      ]
+    ],
+    "special_fibre_rows": [
+      {
+        "a": 1,
+        "enters": false,
+        "jacobian_mod3": [
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "marked_images_mod3": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "a": 2,
+        "enters": true,
+        "jacobian_mod3": [
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "marked_images_mod3": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    ],
+    "teichmueller_coefficients": {
+      "1": 1,
+      "2": 8
+    },
+    "top_cartier_support": [],
+    "verdict": "W2-SURVIVOR"
+  },
+  "independent_core_sha256": "9ee96b84ac81f36f921235987bcfcf33a71484a5e5a93aba4757f81efcdb834c",
+  "preregistration_sha256": "af9917fe117c84a92ab9738c1d258d636354cec63cdc81e5e5bd1cbe4f6269e3",
+  "producer_canonical_claim_sha256": "875682b644f367ee8b841d3e433b8706b3f95a25bb1200b6f20395faa8f7dff9",
+  "producer_result_sha256": "bb02c36fcd8356529b1d188fa61760bbfd6194fafcd050740752a795abd5201c",
+  "provenance_sha256": "08493aa37d816612b0e051ca869ed59f6f414279bd59fb67a3a12ebe81b33da4",
+  "schema_version": 1,
+  "verdict": "PASS"
+}

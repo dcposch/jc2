@@ -618,6 +618,9 @@ against full systems doubles as an integrity cross-check when both finish;
 feeds a promoted claim, then it enters the review gauntlet like any math.
 
 ## STANDING QUEUE (loop reads this; keep current)
+> Historical queue snapshot, retained as provenance. It is superseded by
+> `COORDINATION.md` and the newest `LIVE STATE`; do not launch from this list.
+
 - MSOLVE: OUT OF SCOPE ENTIRELY (DC 2026-08-23: handling the PR himself; the lane was causing model downgrades). No msolve source/PR/issue work from any of our lanes. The segfault WORKAROUND stays: never feed the full D43 verdict files to msolve; small subsystems only.
 - REPO REORG (DC 2026-08-23): do it TOMORROW once ALL lanes quiet (no codex/ori/grok/msolve/cases43 activity + no active build agents). Trigger = quiescence, not any single verdict. Spec unchanged: physical move to ladder/+jc72108/+papers/ (cases/,xmodel/,ops/,dist/ stay root); acceptance = 16-gate regression + stale-path grep across committed drivers + FLEET.md + loop prompt + CODEX_HOME lanes; fix local remote + notes.md symlink for any jc72108->jc2 GitHub rename (confirm rename status w/ DC first).
 - ACTIVE (live lanes; see ops/status.sh): box01 pilot (compressed p105337, cap ~13:40) + fc1_audit (445 states); Sol x2 (REDUCTION.md consolidation, residue-A algebraization kill)

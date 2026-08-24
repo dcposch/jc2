@@ -6,11 +6,15 @@ and thrashes. ALL solver jobs go to the AWS/GCP fleet. Local python for
 exact small linear algebra (sympy, <8 GB) is fine.
 
 ## Inventory
-- **box01** (AWS, farm): ubuntu@54.175.21.169, key ~/.ssh/claude-cli.pem.
-  Runs the deg<=150 farm lanes (~/jc72108, farm.log/farm2.log). Moderate
-  size — do not stack big cores here.
-- **Box02** (AWS x2idn.32xlarge, 128 vCPU / 2 TB): instance
-  i-010201a5da47795c4 (profile `personal`). IP CHANGES on stop/start —
+- **box01** (AWS x8i.16xlarge, 64 vCPU / 1 TiB): instance
+  i-029d0899cdb7c1ed1 (profile `personal`), 100 GiB gp3 root;
+  ubuntu@54.175.21.169, key ~/.ssh/claude-cli.pem. Runs the deg<=150 farm
+  lanes (`~/jc72108`, `farm.log`/`farm2.log`). Current us-east-1 on-demand
+  price checked 2026-08-24: ~$7.00/h; verify current pricing before a cost
+  decision. Do not stack big-memory jobs without checking live RSS, and do
+  not stop it until all active/checkpointed campaign processes are identified.
+- **Box02** (AWS x2idn.32xlarge, 128 vCPU / 2 TiB, 3.8 TB local NVMe):
+  instance i-010201a5da47795c4 (profile `personal`), 150 GiB gp3 root. IP CHANGES on stop/start —
   resolve with:
     aws ec2 describe-instances --instance-ids i-010201a5da47795c4 \
       --profile personal --query \
@@ -20,11 +24,11 @@ exact small linear algebra (sympy, <8 GB) is fine.
   queue drains (coordinator's call; don't stop it while lanes run).
   After start: `sudo ldconfig` once before msolve.
   Job dir: ~/res32 (screens + stuck7), ~/jc72108 (older Q2 work).
-- **Box03** (AWS r6i.16xlarge, 64 vCPU / 512 GB): instance
-  i-0ece0b9a3b4a7512f (profile `personal`), launched 2026-08-14 for the
+- **Box03** (AWS r6i.16xlarge, 64 vCPU / 512 GiB): instance
+  i-0ece0b9a3b4a7512f (profile `personal`), 200 GiB gp3 root, launched 2026-08-14 for the
   3 stuck7 farm big-cores idle since the Box02 cull. Same SG/subnet/key
   as Box02 (claude-ssh / subnet-948915c9 / claude-cli), us-east-1a,
-  200 GB gp3 root. IP CHANGES on stop/start — resolve like Box02
+  IP CHANGES on stop/start — resolve like Box02
   (cached in /tmp/box03_ip; currently 54.167.215.189). ~$4.03/h —
   STOP IT when the stuck7 lanes finish. msolve from Ubuntu apt.
   Job dir: ~/stuck7 (out/ + lanes.log).

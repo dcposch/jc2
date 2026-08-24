@@ -5,6 +5,103 @@ day or inserts the completed day directly below this preamble (see
 `COORDINATION.md`). Detail lives in `notes.md` (tick-level) and `AUDIT.md`
 (promotion ledger); historical entries are not live policy or queue state.
 
+## 2026-08-24
+Coordination/outer-loop v2 encoded and pushed: disjoint top-level document
+authority, one coordinator, claim DAG and provisional gate, background hostile
+review, four-root/25%-exposure limits, event micro-rounds, mandatory blind
+full-spectrum ideation at most 12 hours apart, broad web sweep at most 24 hours
+apart, post-collection deduplication/cross-pollination, and information-gain
+portfolio rules. The first full round (`20260824T0035Z-2386780`) completed with
+five blind scans over all 46 avenues, including a supervised Grok 4.6 lane;
+15 cards reduced to six distinct candidates and a four-root launch envelope.
+Immediate work was external exact-certificate lineage intake, D43 hostile review
+in parallel with a D25-grounded source-transition/symbol gate, and one hard
+equivalent-map covariance test of the boundary coframe/Fitting consensus.
+TRACE-REG survives as a distinct but narrowed residue/underdetermination audit;
+sublinear-type work is downstream only. B=168 and deeper fixed-depth work stay
+held. No mathematical claim was promoted by ideation.
+
+The launch envelope then closed four independent gates. Grok's hostile review
+confirmed the D43 modular census/hash/source-to-NF result with a scoped replay
+gap and isolated the assembled band-42 P4P1 correction outside the checkpoint
+traces; no integral/Hensel inference was restored. A source-defined, D25-based
+`X27 -> X25` transition was different-model confirmed at two primes and four
+named points: ten new rows/coordinates, rank four, six exact one-band lifts at
+the witnesses, and genuine rank-augmented cuts at two interiors. Later bands
+remain nonzero, so this is a `FREE-TAIL-SIGNAL`, not a component, persistence,
+germ, or characteristic-zero result. Claude/Fable independently confirmed the
+raw-boundary `COSTUME` verdict and the exact TRACE-REG audit: first-`d` trace
+regularity is equivalent to the missing finiteness step, while the current
+contact packet permits quadratic residues 84 and 168 and therefore lacks
+target-divisor-tagged branch pairing/coefficient convolution. Grok confirmed
+the SuperMind/Guo bounded artifact intake with explicit Sage-only and
+`modStd(I,1)` gaps; exact-equivalent residual systems are not independent votes
+and do not prove the GGV bridge or an unconditional degree bound.
+
+The reviewed D-transition signal triggered full round
+`20260824T0156Z-8bf25a5`. Five blind all-46 scans plus deduplication and hostile
+cross-pollination reduced 17 raw fingerprints to 15 real mechanisms; only
+`PAIR-IR` and `D-ORE` were true duplicate pairs. The portfolio launched three
+research roots beside coordination: one D source-structure root, one
+falsification-first canonical normalization/different/trace receiver
+(`NORM-MOMENT-SEP`), and one orthogonal fixed-cap odd-prime `W2`
+discriminator. Source stationarity
+must precede Ore/Spencer claims; a native GGV packet must populate the receiver
+or stop at `NO-TYPED-FUNCTOR`; local different-only arguments face an exact
+fixed-different/varying-moment Darboux control. Raw passports, theorem-scale
+TRACE-REG, integral D43, more depth, new book cells, primitive-group work
+without a support bound, and local-bound expansion remain held. No proof or
+counterexample was found.
+
+First post-round discriminators: the full-cell band-26 gate is now
+different-model confirmed on one promoted `p=105337` `a00pp` `A^14` cell.
+The origin is compatible with Jacobian rank five (minor 39793), a deterministic
+same-cell point is cut and also rank five (minor 104469), so the modular locus
+is nonempty and generic differential rank is at least five. The repeated sixth
+relation remains a sampled structural signal, not a polynomial identity;
+dimension, rank exactly five, band-28 persistence, germ, and characteristic
+zero all remain open. `NORM-MOMENT-SEP` is different-model confirmed
+`DIFFERENT-INSUFFICIENT`: the same abstract local algebra, different, selected
+contact/Jacobian data, and first trace principal part allow quadratic residues
+84 and 168 because coordinate multiplication data differ. The preregistered
+native-source gate was not reached, so a richer global polynomial-origin
+receiver remains open.
+
+The orthogonal `AS3-MIN-W2` cap is different-model confirmed
+`W2-SURVIVOR`: `(x-x^3,y)` over `F_3`, with its marked collision and degree
+three, lifts to `(x+8x^3, y+3x^2y)` over `Z/9` with determinant one modulo 9.
+This supplies no bounded-support all-Witt, characteristic-zero, or JC2
+inference. A separately different-model confirmed closed-form control gives
+the exact compatible tower
+`(x-x^p, y*sum_{j=0}^{n-1}(p*x^(p-1))^j)` modulo `p^n`; its support and degree
+grow with `n`, and its inverse limit is the nonpolynomial rational/restricted-
+analytic map `(x-x^p,y/(1-p*x^(p-1)))`.
+
+The different-model confirmed `D-STATE-GATE` independently replayed an exact
+six-band affine law for the corrected 30-by-30 pure-`y` source through band 40,
+but returned `NO-TYPED-STATIONARITY`: the full polynomial source first adds
+unclassified `alpha_1,beta_1` directions at band 42. Thus no Ore/Spencer
+object, band-28 continuation, or all-depth claim is licensed. The
+different-model confirmed D43 P4P1 source-honesty gate returned `ORIGIN-ONLY`:
+the exact source-derived sidecar is nonzero modulo both registered base ideals
+and changes all ten rows off its zero line, but vanishes at the named
+`alpha=beta=0` modular origin. The reviewer independently executed the live
+assembler on every real checkpoint row at both primes. Thus no wrong
+mathematics invalidates the origin witness; the corrected issue is that
+checkpoint source traces alone did not cover the later sidecar.
+
+Resource snapshot at `2026-08-24 03:52Z`: all external model lanes are closed.
+All-time adapter counters are Claude 47,374 messages, 37.5M output / 10,925.7M
+total processed tokens; Codex/Sol 286 rollouts, 11.8M output (6.8M reasoning) /
+2,222.6M total; and Grok 75 sessions / 126.4M cumulative. These vendor counters
+are not directly comparable and the Claude/Codex totals are dominated by cache
+traffic. AWS box01 (`x8i.16xlarge`, 64 vCPU / 1 TiB) remains up only for the
+legacy `build_tails43.py` checkpointed compiler: one core is saturated and
+about 135 GiB RSS is live; seven checkpoints (515 MiB) are banked and the
+current `GB42` orbit has run about 21.5 hours since the last checkpoint. Box02
+(`x2idn.32xlarge`, 128 vCPU / 2 TiB) and Box03 (`r6i.16xlarge`, 64 vCPU /
+512 GiB) are stopped; their 150 GiB and 200 GiB root volumes persist.
+
 ## 2026-08-23
 Foundational-floor day, then the reorg. Belyi identification of the residue-A
 genome verified (A4 passport; leverage inert). Canonical strategy correction:
@@ -33,40 +130,25 @@ certificate remain open. B=168 scale test funded (held). REORG: repo renamed
 jc2, docs split into ladder/ + jc72108/ + papers/ + avenues/, with six
 top-level campaign documents, model-agnostic `COORDINATION.md`, and a generic
 lane runner; pushed. Coordinator handoff completed. Token ledger to date
-(exact, summed from the CLIs' own session
-counters via ops/tokens.py, campaign-scoped by project/cwd, all-time): Claude
-37.4M output + 7.7M fresh input + 738.6M cache-write + 10,088M cache-read =
-10.87B processed (93% cache-reads); Codex/Sol 10.6M output (6.2M reasoning) +
-1.92B processed (95% cached); Grok 95.3M session-cumulative. Refresh weekly
-and append the summary line here.
+(exact, summed from the CLIs' own session counters via ops/tokens.py,
+campaign-scoped by project/cwd, all-time): Claude 37.4M output + 7.7M fresh
+input + 738.6M cache-write + 10,088M cache-read = 10.87B processed (93%
+cache-reads); Codex/Sol 10.6M output (6.2M reasoning) + 1.92B processed (95%
+cached); Grok 95.3M session-cumulative. Refresh weekly and append the summary
+line here.
 
 Evidence-tier correction (supersedes the 2026-08-01 cCa entry and the
 characteristic-zero parts of the 2026-08-11 R1 entry): msolve 0.10.1 `-g`
 can short-circuit a characteristic-zero unit basis and return first-prime
-`[1]` before rational reconstruction.  Thus cCa2/cCa6, the R1 ZU/UZ/Q0/l13
-upgrades, and five of the six conjE HOLD rows were not Q certificates.  chartG
+`[1]` before rational reconstruction. Thus cCa2/cCa6, the R1 ZU/UZ/Q0/l13
+upgrades, and five of the six conjE HOLD rows were not Q certificates. chartG
 remains exact internally because its emitted ideal literally contains `-1`;
 the full `(72,108)` exclusion remains externally certificate-supported by the
 replayed Helali/Suzuki artifacts, conditional on the GGV-Horruitiner
-reduction/transcription bridge.  The R1 l13 characteristic-zero stratum and
+reduction/transcription bridge. The R1 l13 characteristic-zero stratum and
 its Q-level downstream uses are reopened; their finite-field verdicts stand.
 Successful non-unit characteristic-zero runs still carry their reconstructed
 Q-level nonemptiness meaning within engine trust.
-
-Coordination/outer-loop v2 encoded and pushed: disjoint top-level document
-authority, one coordinator, claim DAG and provisional gate, background hostile
-review, four-root/25%-exposure limits, event micro-rounds, mandatory blind
-full-spectrum ideation at most 12 hours apart, broad web sweep at most 24 hours
-apart, post-collection deduplication/cross-pollination, and information-gain
-portfolio rules. The first full round (`20260824T0035Z-2386780`) completed with
-five blind scans over all 46 avenues, including a supervised Grok 4.6 lane;
-15 cards reduced to six distinct candidates and a four-root launch envelope.
-Immediate work is external exact-certificate lineage intake, D43 hostile review
-in parallel with a D25-grounded source-transition/symbol gate, and one hard
-equivalent-map covariance test of the boundary coframe/Fitting consensus.
-TRACE-REG survives as a distinct but narrowed residue/underdetermination audit;
-sublinear-type work is downstream only. B=168 and deeper fixed-depth work stay
-held. No mathematical claim was promoted by ideation.
 
 ## 2026-08-22
 D43 program end-to-end: stage-1 extended operator banked (level 42, full gate

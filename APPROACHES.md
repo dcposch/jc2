@@ -4,7 +4,8 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 **Sol** (S1–S48, [xmodel/sol-approaches.md](xmodel/sol-approaches.md)),
 **Grok** (G1–G40, [xmodel/grok-approaches.md](xmodel/grok-approaches.md)),
 **Fable** (F1–F18, list delivered 2026-08-19/21, reproduced in provenance note at bottom).
-Every claim below traces to one of these three inputs; nothing is invented here.
+The dated 46-row inventory and original scores trace to these three inputs;
+later correction and live-overlay sections cite post-survey campaign evidence.
 
 **Scoring semantics differ and are NOT averaged.** Sol's x/10 = expected research
 information from the cheapest first experiment. Grok's x/10 = P(checkable proof or
@@ -21,7 +22,7 @@ change to what its three inputs reported.
   transport a selected GGV packet/corner, with provenance, into a specified
   decorated Sigray pole tree with enough fidelity for the book machinery.
 - `G2-BD` is the **post-residue-A bounded-delay/carrier** obligation. It begins
-  only after a residue-A datum has been reached. Neither G2 obligation implies
+  only after a residue-A datum has been reached. Neither scoped obligation implies
   the other.
 - A hybrid GGV-to-Sigray campaign owes `G2-PSC`. A pure Sigray campaign may
   bypass it by selecting/minimizing the hypothetical counterexample wholly in
@@ -34,29 +35,57 @@ change to what its three inputs reported.
   KJN gives `td <= C alpha beta` at a fixed provenanced type, not an absolute
   or cofinal ceiling without an independent bounded type menu.
 
-Accordingly, later same-day language that called G2 and G5 two equivalent or
+Accordingly, later same-day language that called the overloaded label `G2` and G5 two equivalent or
 independent “terminal walls,” or said these estimates made the whole ladder
 unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
-## Current portfolio overlay (full round closed 2026-08-24 01:05Z)
+## Current portfolio overlay (full round closed 2026-08-24 02:35Z)
 
 The survey scores and shortlist below are historical inputs, not the live
-allocation. The first outer-loop-v2 full round rescanned all 46 avenues with
-five blind ideators, then deduplicated and attacked the proposals. Its canonical
-decision record is
+allocation. Two outer-loop-v2 rounds have now rescanned all 46 avenues with
+five blind ideators apiece. The current canonical decision record is
+[`xmodel/ideation-20260824T0156Z-synthesis.md`](xmodel/ideation-20260824T0156Z-synthesis.md);
+the preceding launch record remains
 [`xmodel/ideation-20260824T0035Z-synthesis.md`](xmodel/ideation-20260824T0035Z-synthesis.md).
 
-Current ordering is: (1) bounded external exact-certificate/provenance intake;
-(2) source-defined D-series transitions and symbols, with D43 hostile review in
-parallel and no further fixed-depth spending; (3) one equivalent-map covariance
-kill test for the proposed intrinsic boundary/coframe/Fitting objects; then,
-only if the proof slot clears, (4) a narrow trace-residue/underdetermination
-audit. A packet-information collision test for `G2-PSC` is queued behind a
-precise boundary fingerprint. Standalone sublinear-type, new book cells,
-DIR/A-SCALE census expansion, D75, and B=168 are stopped or held at this cycle's
-gates. None of these rankings is a claim promotion.
+The first launch envelope has run. Exact different-model reviews preserved,
+at narrow scope, the external SuperMind/Guo intake, the pointwise one-band
+`D25 -> D27` signal, the raw-boundary `COSTUME` kill, and the current-packet
+TRACE underdetermination result. They do not supply the GGV transport bridge,
+a D27 component or germ, a characteristic-zero lift, or a JC2 implication.
+
+The post-round gates have separated the live questions. The sole full-cell D
+gate run so far found a nonempty compatibility locus on one modular cell;
+different-model review confirms generic differential rank at least five. Rank
+exactness, dimension, persistence, and characteristic zero remain open. Its
+different-model confirmed `D-STATE-GATE` found an exact six-band affine law for the pure-`y`
+source but stopped at `NO-TYPED-STATIONARITY`: the full source introduces
+unclassified `alpha_1,beta_1` directions, so no Ore/Spencer object is licensed.
+`NORM-MOMENT-SEP` is different-model confirmed `DIFFERENT-INSUFFICIENT`: the
+same abstract local algebra, different, selected contact/Jacobian data, and
+first trace principal part do not determine the quadratic coordinate moment;
+the coordinate multiplication data differ, and the preregistered native-source
+gate was not reached.
+The orthogonal odd-prime cap is different-model confirmed `W2-SURVIVOR` over
+`Z/9`, with no characteristic-zero inference. A separately different-model
+confirmed exact control exhibits compatible lifts at every Witt level for this
+seed, but with linearly growing support and a rational/restricted-analytic,
+nonpolynomial limit. The
+D43 P4P1 source-honesty gate is different-model confirmed `ORIGIN-ONLY`:
+its exact sidecar vanishes at the named modular origin but is
+load-bearing away from the sidecar zero line, so the old issue was
+provenance/scope wording rather than wrong origin math. Any renewed
+mathematical root must redesign around (i) a typed
+global polynomial-origin source/receiver, (ii) the missing full D-source state,
+or (iii) bounded-support/degree Witt descent. `A(F)` remains the canonical
+target object but still lacks a cheap complete source/landing construction.
+
+Standalone TRACE-REG, raw boundary passports, sublinear type, primitive-group
+censuses without a proved support bound, new book cells, DIR/A-SCALE expansion,
+D75, B=168, and integral D43 are stopped or held at the current gates. None of
+these rankings is a mathematical promotion.
 
 ## Executive summary (10 lines)
 
@@ -64,7 +93,7 @@ gates. None of these rankings is a claim promotion.
 2. All three agree the tried core — GGV corner farm, Sigray sheet books, formal-germ D-series — is a necessary-condition mill stuck on global source/transport and complete landing/coverage, plus no absolute/cofinal topological-degree ceiling. The old “same two gaps” phrasing overloaded `G2-PSC` with the separate route-specific `G2-BD`; see the correction above.
 3. The strip/residue-ODE result (S5–S6/G3) was the surveys' one highlighted general theorem in the tried core; it is scope-limited, and the ODE rigidity has Żołądek A.7 priority.
 4. The implication ladder above JC2 (Mathieu, GMC n≥3, PC(2), JC(n≥3), Hessian n≠4) is dead post-July-2026 — full consensus; Fable's "no n=2 traction anywhere" matches Grok's "documented massacre".
-5. Char-p: Mondello verified, W2 Witt obstruction total on the searched stratum (1,152/1,152); the odd-prime/other-support refinement is the agreed open extension (F16 = S31's 5/10 = G17(i)–(iii)).
+5. Char-p: the Mondello `F_2` stratum is W2-obstructed (1,152/1,152), but an explicit degree-three `F_3` collision has a confirmed lift at every Witt level when support grows; its limit is restricted-analytic, not polynomial, so bounded-support/degree characteristic-zero polynomial descent remains open.
 6. Promise scores are incommensurable across surveys (see semantics note above); this document flags disagreements rather than averaging them.
 7. Top untried consensus pick: **global symplectic primitives / action residues at infinity** (Grok 6/10, his highest untried; Sol's adjacent symplectic lane 7/10) — cheap, dimension-2-specific, falsifiable on leading forms.
 8. Biggest dissent: **HC4 ⇒ JC2** (Sol 9/10, his top pick overall vs Grok's structural hostility to prove-something-stronger routes); also BCW cubic reduction (S 5 vs G 1), dim-3 descent (S 6 vs G 2), collision ideals (S 7 vs G 2), A(F)-as-object (S 8 vs G "would not start here").
@@ -80,7 +109,7 @@ Tried? legend: **Tried** = substantive campaign computation/proof/audit; **Parti
 | # | Approach | Essence | Sources | Tried? | Stuck where | Promise (reconciled) |
 |--:|---|---|---|---|---|---|
 | 1 | GGV Newton-polygon corner families + degree farm | Enumerate corner families below a degree cutoff, transcribe [P,Q]=x^k, empty each leaf | S2+S3+S42 / G1 / F1 | Tried (origin of repo; (72,108) externally certificate-supported conditional on the GGV-Horruitiner reduction/transcription bridge; own cCa2/cCa6 lanes modular only; farm to deg 150) | No degree/td ceiling ("always a next pair", G); GGV Section-4 reductions not a complete engine; Prop 4.3 chain arXiv-only + no general corner endgame (F); char-0 certificate memory wall | — (tried); all three agree on the stuck-point |
-| 2 | Sheet-number ladder / Eggers–Wall / dicritical boundary trees (Sigray–Orevkov frame) | Resolve infinity, decorate the boundary tree, exclude td=6,7,8,... | S4+S10+S44 / G2 / F2+F3 | Tried — the campaign's active endgame (td≤5 closed, td6 funneled to residue-A, td7 panel, td11 promoted) | Hybrid version lacks `G2-PSC` transport/fidelity; all versions lack a universal full-configuration landing/coverage theorem and an absolute/cofinal td ceiling; residue-A routes additionally owe `G2-BD`. A pure Sigray architecture can bypass `G2-PSC` but cannot use GGV restrictions as input. Consistent tree exists at td=9; residue-A coefficient wall / l+ dichotomy (F2); Sigray unrefereed. DISSENT on framing: F3 calls the Favre–Jonsson valuation-tree version "untried; field" while S/G count the campaign's blowup machinery as this lane | S:8 for a verified GGV-chain-to-Eggers–Wall transport functor |
+| 2 | Sheet-number ladder / Eggers–Wall / dicritical boundary trees (Sigray–Orevkov frame) | Resolve infinity, decorate the boundary tree, exclude td=6,7,8,... | S4+S10+S44 / Grok-survey G2 / F2+F3 | Tried — the campaign's active endgame (td≤5 closed, td6 funneled to residue-A, td7 panel, td11 promoted) | Hybrid version lacks `G2-PSC` transport/fidelity; all versions lack a universal full-configuration landing/coverage theorem and an absolute/cofinal td ceiling; residue-A routes additionally owe `G2-BD`. A pure Sigray architecture can bypass `G2-PSC` but cannot use GGV restrictions as input. Consistent tree exists at td=9; residue-A coefficient wall / l+ dichotomy (F2); Sigray unrefereed. DISSENT on framing: F3 calls the Favre–Jonsson valuation-tree version "untried; field" while S/G count the campaign's blowup machinery as this lane | S:8 for a verified GGV-chain-to-Eggers–Wall transport functor |
 | 3 | Vertex-gap / strip ODEs / residue functional R_{k,d2} | Face valuation orders bracket equations; strip block collapses to a rigid ODE | S5+S6 / G3 / — | Tried — "the campaign's actual theorem" (G) | Scope: strips, d1=1, depth two, k≥2 only; y-axis columns block (8,28) subcase (1); ODE rigidity is Żołądek A.7 priority | S:6 for depth-three Ore/resultant extension |
 | 4 | Formal-germ certification + algebraization (D-series windows, DEPTH-STAB, Padé, gluing, toric closure) | Prolong J=1 in Puiseux depth; if all depths stay nonempty, algebraize a germ | S43+S45 / G4+G24 / F17 | Tried deeply — "ours/novel" (F) | l+/e+ >= 37 floor, no live square block (S,F); modular nonempty ≠ germ ≠ char-0 ≠ polynomial (G); route-provenance loss in gluing; "the D-series is not JC2" (G) | S:7 (D25 comprehensive triangular decomposition), S:6 (joint Fitting ideal); G: honest disproof lane, currently a local maximum |
 | 5 | Jung–van der Kulk degree descent / Aut(C^2) amalgam, polydegree | Produce an elementary automorphism strictly dropping degree of a Keller pair | S1 / G5 / F10 | No (as JC2 program; TRANSPORT.md is normalization, not descent) | GGV cusp leading forms d^m U^n − c^n V^m block triangular shears (S,G); "amalgam rigidity never bites on non-automorphisms" (F) | S:4, G:5 — concordant moderate |
@@ -97,7 +126,7 @@ Tried? legend: **Tried** = substantive campaign computation/proof/audit; **Parti
 | 16 | D-module / holonomic index | Holonomic index invariant against a Keller endomorphism | — / — / F18 only | No | "Untried, exotic" (F); no concrete invariant named in any input | Unscored; Fable unique find |
 | 17 | BCW / Druzkowski / Yagzhev cubic stabilization | Stabilize to cubic-homogeneous/cubic-linear normal form in high dimension | S24+S25 / G14 / — | No (per G: correctly) | Raises dimension; target class now contains genuine CEs (Alpoge/Gao era); plane-origin subclass has no recognizing invariants | DISSENT: S:5 and S:4 (salvage subclass invariants) vs G:1 ("category error") |
 | 18 | Graded / equivariant / GIT symmetry | Reduce to weighted-homogeneous Keller maps | S22 / G15 / — | Closed as CE hunt: Shaska 2026 — graded plane Keller maps are automorphisms for every weight pattern | A hypothetical CE has no G_m symmetry; orbit limits lose nonproperness | S:4 (stabilizer/orbit-limit check); G: closed |
-| 19 | Char-p counterexamples + Witt lifting | Lift a char-p plane Keller collision to char 0 | S31 / G17 / F16 | Tried (Mondello char-2 verified; 1,152/1,152 W2-obstructed on registered stratum) | Total obstruction where searched; other primes/supports open; full descent chain (all Witt levels + limit) never armed | Consensus extension: S:5 = F16 "refined version unexplored" = G17(i)-(iii): search F3/F5 low-support collisions, keep W2-survivors |
+| 19 | Char-p counterexamples + Witt lifting | Lift a char-p plane Keller collision to char 0 | S31 / G17 / F16 | Tried (Mondello char-2: 1,152/1,152 W2-obstructed; explicit Artin--Schreier `F_3` collision different-model confirmed through `W_2=Z/9`) | First-Witt obstruction is not universal. A confirmed same-seed tower lifts through every Witt level, but with growing degree/support and a nonpolynomial rational/restricted-analytic limit; bounded-support/degree lifting and a characteristic-zero polynomial limit remain absent | Redesign around uniform polynomial complexity or a different lift; no automatic all-Witt-to-polynomial inference |
 | 20 | Reduction mod p / p-curvature formalism (Tsuchimoto, Belov–Kontsevich) | Use the p-curvature/reduction-mod-p correspondence as the proof engine | F8 / S29 (part) / G9 (part) | No (as formalism) | The known bridge consumes PC(2)/JC(4), both now false (S,G); F elevates it as its own untried lane | Unscored by S/G as standalone; Fable framing find |
 | 21 | p-adic injectivity / Hensel / model theory | Uniform p-adic bijectivity for almost all p; transfer to char 0 | S32 only / — / — | Partial (tools used; global implication untested) | Transfer needs a uniform degree/support bound = exactly the missing compactness | S:4 |
 | 22 | Diophantine integral points / heights on fibers | Siegel-type finiteness forces preimages or properness | S33 / G39 (height-search variant) / — | No | Siegel classifies the wrong direction; uniformity across an unknown pencil inaccessible; no effective smallest-CE bound without JC2 (G) | S:3, G:2 — concordant low |
@@ -161,13 +190,13 @@ Tried? legend: **Tried** = substantive campaign computation/proof/audit; **Parti
 
 ### Consensus (all three, or both scorers, agree)
 
-1. **The tried core is stuck on source/transport, full landing/coverage, and an absolute ceiling.** Fable: "stuck: G1/G2/G5 + residue-A l+ dichotomy"; Grok: REDUCTION.md — no theorem landing arbitrary Keller pairs in the books, no td bound; Sol: "two global bridges" (universal landing/coverage and a finite bound). The surveys shared the diagnosis but not a clean vocabulary: hybrid transport is `G2-PSC`, while bounded delay after residue-A is `G2-BD`. All three also agree more brute force inside a filed sector will not repair the global gaps (Sol: "will not repair either gap"; Grok: "local maximum"; Fable: "stuck").
+1. **The tried core is stuck on source/transport, full landing/coverage, and an absolute ceiling.** Fable's old shorthand was "stuck: G1/G2/G5 + residue-A l+ dichotomy"; Grok: REDUCTION.md — no theorem landing arbitrary Keller pairs in the books, no td bound; Sol: "two global bridges" (universal landing/coverage and a finite bound). The surveys shared the diagnosis but not a clean vocabulary: hybrid transport is `G2-PSC`, while bounded delay after residue-A is `G2-BD`. All three also agree more brute force inside a filed sector will not repair the global gaps (Sol: "will not repair either gap"; Grok: "local maximum"; Fable: "stuck").
 2. **The Zhao/Mathieu ladder is dead for n=2 leverage.** Long's 2026 refutations (Mathieu on SU(2), PC(2), GMC n>=3) close the prove-something-stronger instinct; F6's "no n=2 traction anywhere" concurs.
 3. **AM was run on the wrong object** — Sol and Grok independently and exactly agree: residue-A fibers are multi-place; the one-place theorem applies to A(F) components, which are unpinned.
-4. **Char-p is tried; the odd-prime refinement is the open extension.** F16 "refined version unexplored" = Sol's F3/F5 W2-survivor search (5/10) = Grok's open questions (i)-(iii).
+4. **Char-p is tried; the odd-prime first-Witt refinement has now fired positively.** The smallest typed `F_3` Artin--Schreier cap has a confirmed `W_2` survivor and a confirmed growing-support lift through every Witt level. The open extension is uniform support/degree and a characteristic-zero polynomial limit, not another unrestricted finite-level lift.
 5. **Monodromy passports alone are too generous.** Both scorers: Riemann existence fills everything; the untried half is coupled/global (row 26).
 6. **Concordant-low band** (both scorers <= 4, no advocate): real/Pinchuk, holomorphic analog, cohomology slogans without a named class, finite-field census, free lift, Markus–Yamabe, naive deformation, tropical-as-renaming (Grok side), integral points, formalization-as-route.
-7. **Disproof lanes that are not fantasies** (Grok's list, consistent with Sol and Fable): a nonempty GGV family that algebraizes; a certified germ at infinity that algebraizes; a Witt-unobstructed char-p pair that lifts. All three currently return "consistent with JC2 true".
+7. **Disproof lanes that are not fantasies** (Grok's list, consistent with Sol and Fable): a nonempty GGV family that algebraizes; a certified germ at infinity that algebraizes; a char-p pair that lifts through all levels with uniformly polynomial complexity. Current bounded results still return “consistent with JC2 true.”
 
 ### Dissent
 
@@ -210,4 +239,4 @@ Ranking weighs cross-model presence, both scores, and Fable's flags. Experiments
 
 Fable's input list (verbatim source for F1–F18, delivered with the merge charge): 1 Newton-polygon corner-cutting (GGV-Horruitiner); 2 Sheet-number ladder (Sigray frame); 3 Valuation theory/dicritical divisors (Abhyankar, Favre–Jonsson); 4 Links at infinity/splice diagrams (Neumann, Cassou-Nogues, Orevkov); 5 Open-surface/log-Kodaira (Miyanishi, Kaliman); 6 Mathieu subspaces/Zhao image conjectures; 7 Dixmier route: attack End(A_1) directly (Bavula program); 8 Reduction mod p/p-curvature (Tsuchimoto); 9 Formal-inverse combinatorics (BCW tree formula, Wright, Singer); 10 Aut(A^2) structure/polydegree (Jung–van der Kulk, Furter); 11 Nonproperness/asymptotic variety (Jelonek); 12 Monodromy/Galois of generic fiber (Razar, Wright); 13 Ax-Grothendieck/injectivity route (Cynk–Rusek); 14 Analytic/dynamical (Fatou–Bieberbach, Pinchuk constraint); 15 Guided counterexample search beyond frontier; 16 Char-p analogue lifting; 17 Formal-germ certification + algebraization (DEPTH-STAB/Newton/e+); 18 D-module/holonomic index.
 
-Status flags in the table quote each survey's own words; where a Fable status ("untried; field") conflicts with Sol/Grok ("tried"), both are shown and the conflict is listed in section 3. No approach, experiment, score, or stuck-point in this document originates outside the three inputs.
+Status flags in the table quote each survey's own words; where a Fable status ("untried; field") conflicts with Sol/Grok ("tried"), both are shown and the conflict is listed in section 3. No approach, original survey experiment, or score in the dated inventory originates outside the three inputs; post-survey statuses and corrections are explicitly marked as later campaign evidence.

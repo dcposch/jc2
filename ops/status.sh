@@ -20,7 +20,7 @@ echo "=== REPOSITORY ==="
 git -C "$repo_root" status --short --branch | sed 's/^/  /'
 
 echo "=== LOCAL LANES ==="
-local_lanes=$(pgrep -fl '[c]odex exec|[g]rok (.* )?(-p|--prompt-file)|[d]irectionb_compress|[f]leet_fc1' 2>/dev/null || true)
+local_lanes=$(pgrep -fl '[c]odex exec|[g]rok (.* )?(-p|--prompt-file)|[c]laude -p|[d]irectionb_compress|[f]leet_fc1' 2>/dev/null || true)
 if [ -n "$local_lanes" ]; then
   printf '%s\n' "$local_lanes" | sed 's/^/  /'
 else
@@ -58,7 +58,7 @@ echo "=== FLEET ==="
 if command -v ssh >/dev/null 2>&1; then
   remote_status=$(run_bounded 15 ssh -i "$HOME/.ssh/claude-cli.pem" -o BatchMode=yes \
     -o ConnectTimeout=6 ubuntu@54.175.21.169 \
-    'm=$(pgrep -cx msolve 2>/dev/null || true); p=$(pgrep -fc "[p]ython[^ ]* .*fleet_fc1" 2>/dev/null || true); [ -n "$m" ] || m=0; [ -n "$p" ] || p=0; printf "msolve=%s fc1=%s" "$m" "$p"' \
+    'm=$(pgrep -cx msolve 2>/dev/null || true); p=$(pgrep -fc "[p]ython[^ ]* .*fleet_fc1" 2>/dev/null || true); c=$(pgrep -a -x python3 2>/dev/null | grep -Ec "(build_tails|directionb_|d43_)" || true); [ -n "$m" ] || m=0; [ -n "$p" ] || p=0; [ -n "$c" ] || c=0; printf "msolve=%s fc1=%s other_campaign_py=%s" "$m" "$p" "$c"' \
     2>/dev/null || true)
   if [ -n "$remote_status" ]; then
     echo "  box01: $remote_status"

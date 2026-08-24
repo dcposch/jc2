@@ -1,0 +1,3128 @@
+{
+ "perimeter": "Relative first-order ranks and pointwise affine lifts are not component statements, do not decide the projection image, and do not imply persistence or existence of an inverse limit.",
+ "projection": {
+  "X25_equations": "all pristine residual coefficients at bands <=24",
+  "X27_new_equations": [
+   "Row_26[eta^0]",
+   "Row_26[eta^3]",
+   "Row_26[eta^6]",
+   "Row_26[eta^9]",
+   "Row_26[eta^12]",
+   "Row_26[eta^15]",
+   "Row_26[eta^18]",
+   "Row_26[eta^21]",
+   "Row_26[eta^24]",
+   "Row_26[eta^27]"
+  ],
+  "direction": "X27 -> X25",
+  "forgotten_coordinates": [
+   {
+    "absolute_root_tail_level": 53,
+    "family": "tf1",
+    "name": "tf1_53",
+    "source_r": 21
+   },
+   {
+    "absolute_root_tail_level": 53,
+    "family": "tf2",
+    "name": "tf2_53",
+    "source_r": 21
+   },
+   {
+    "absolute_root_tail_level": 53,
+    "family": "tg1",
+    "name": "tg1_53",
+    "source_r": 21
+   },
+   {
+    "absolute_root_tail_level": 53,
+    "family": "tg2",
+    "name": "tg2_53",
+    "source_r": 21
+   },
+   {
+    "absolute_root_tail_level": 58,
+    "family": "tf1",
+    "name": "tf1_58",
+    "source_r": 26
+   },
+   {
+    "absolute_root_tail_level": 58,
+    "family": "tf2",
+    "name": "tf2_58",
+    "source_r": 26
+   },
+   {
+    "absolute_root_tail_level": 58,
+    "family": "tg1",
+    "name": "tg1_58",
+    "source_r": 26
+   },
+   {
+    "absolute_root_tail_level": 58,
+    "family": "tg2",
+    "name": "tg2_58",
+    "source_r": 26
+   },
+   {
+    "absolute_root_tail_level": 58,
+    "family": "tg01",
+    "name": "tg01_58",
+    "source_r": 26
+   },
+   {
+    "absolute_root_tail_level": 58,
+    "family": "tg02",
+    "name": "tg02_58",
+    "source_r": 26
+   }
+  ],
+  "name": "pi_27_25",
+  "projection_rule": "retain every D25 cell/reconstruction/frontier coordinate and forget only the ten displayed first-occurrence coordinates",
+  "source_constructor": "unreduced cyclic orbit products valuation_e2.build_jets; no row reduction, Schur complement, D43 source, or D43 claim",
+  "source_equation": "E=(theta(Phi)-12Phi)Gamma_eta-Phi_eta(theta(Gamma)-18Gamma)+42*t^20",
+  "typing_test": "the ten new source columns vanish on every lower row and direct finite-difference rebuilds leave X25 byte-identical"
+ },
+ "projection_sha256": "686032872533b57e1084d8200d674be3b1ec569f8c9b70ff160c316a5a7bb3d5",
+ "samples": [
+  {
+   "cell": 0,
+   "cell_34_rows_zero": true,
+   "cell_point_sha256": "5c66442b18695f859137d96d51aec1df09f7f15aa80e30b3017749673f2f5286",
+   "completed_point_sha256": "c74f220e2cc5badfb3418421825571165aa84af3a18abd585fdd1dbd59fbea02",
+   "fiber": "a00pp",
+   "free_values": null,
+   "frontier": {
+    "applied": false,
+    "values": {}
+   },
+   "kind": "witness",
+   "nonorigin_chart": true,
+   "prime": 105337,
+   "pristine_checks": {
+    "compat_c_zero": true,
+    "core23_77": true,
+    "pristine_row22_vanish": true,
+    "raw_D21_rows_vanish": true,
+    "row22compat_48": true,
+    "row22red_32": true
+   },
+   "projection_gates": {
+    "D25_residual_bands_le24_zero": true,
+    "band26_output_census_exact": true,
+    "dual_vs_independent_product_rule": true,
+    "first_occurrence_band26_exactly_declared_ten": true,
+    "mixed_vector_affine_replay": true,
+    "new_columns_zero_below_band26": true,
+    "ten_unit_finite_differences": [
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf1",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf2",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg1",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg2",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf1",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf2",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg1",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg2",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg01",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg02",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     }
+    ]
+   },
+   "reconstruction": {
+    "deep_rank": 4,
+    "tg1_44": 0,
+    "tg2_44": 0,
+    "tg_rank": 2
+   },
+   "relative_block": {
+    "A": [
+     [
+      48505,
+      47219,
+      23136,
+      70990,
+      95467,
+      54413,
+      6580,
+      104174,
+      3290,
+      52087
+     ],
+     [
+      93239,
+      13172,
+      13110,
+      20972,
+      16833,
+      53977,
+      94115,
+      34240,
+      99726,
+      17120
+     ],
+     [
+      98284,
+      80080,
+      84543,
+      12951,
+      25276,
+      86865,
+      53374,
+      47427,
+      26687,
+      76382
+     ],
+     [
+      39414,
+      98528,
+      4951,
+      53839,
+      52546,
+      86329,
+      35194,
+      12672,
+      17597,
+      6336
+     ],
+     [
+      60486,
+      101676,
+      33383,
+      37611,
+      90373,
+      104082,
+      9976,
+      35949,
+      4988,
+      70643
+     ],
+     [
+      99198,
+      88533,
+      73139,
+      63068,
+      78694,
+      46577,
+      17762,
+      4061,
+      8881,
+      54699
+     ],
+     [
+      23903,
+      38494,
+      31372,
+      6749,
+      57279,
+      9484,
+      67151,
+      63902,
+      86244,
+      31951
+     ],
+     [
+      87510,
+      7656,
+      5300,
+      38164,
+      4904,
+      579,
+      31843,
+      104951,
+      68590,
+      105144
+     ],
+     [
+      64851,
+      43076,
+      69506,
+      74278,
+      2409,
+      82078,
+      103731,
+      15506,
+      104534,
+      7753
+     ],
+     [
+      93870,
+      59329,
+      75308,
+      77092,
+      82830,
+      74489,
+      50117,
+      90790,
+      77727,
+      45395
+     ]
+    ],
+    "actual_lifts_one_per_free_direction": [
+     {
+      "all_residuals_through_band26_zero": true,
+      "free_direction": 0,
+      "new_coordinate_vector": [
+       103736,
+       0,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "residual_array_sha256": "7a1f947a4a546c30699d17ed5236d6e116ea4722e76983dfc010601dbf131035"
+     },
+     {
+      "all_residuals_through_band26_zero": true,
+      "free_direction": 1,
+      "new_coordinate_vector": [
+       0,
+       103736,
+       0,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "residual_array_sha256": "7a1f947a4a546c30699d17ed5236d6e116ea4722e76983dfc010601dbf131035"
+     },
+     {
+      "all_residuals_through_band26_zero": true,
+      "free_direction": 2,
+      "new_coordinate_vector": [
+       0,
+       0,
+       0,
+       0,
+       35113,
+       0,
+       1,
+       0,
+       0,
+       0
+      ],
+      "residual_array_sha256": "7a1f947a4a546c30699d17ed5236d6e116ea4722e76983dfc010601dbf131035"
+     },
+     {
+      "all_residuals_through_band26_zero": true,
+      "free_direction": 3,
+      "new_coordinate_vector": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       35113,
+       0,
+       1,
+       0,
+       0
+      ],
+      "residual_array_sha256": "7a1f947a4a546c30699d17ed5236d6e116ea4722e76983dfc010601dbf131035"
+     },
+     {
+      "all_residuals_through_band26_zero": true,
+      "free_direction": 4,
+      "new_coordinate_vector": [
+       0,
+       0,
+       0,
+       0,
+       70225,
+       0,
+       0,
+       0,
+       1,
+       0
+      ],
+      "residual_array_sha256": "7a1f947a4a546c30699d17ed5236d6e116ea4722e76983dfc010601dbf131035"
+     },
+     {
+      "all_residuals_through_band26_zero": true,
+      "free_direction": 5,
+      "new_coordinate_vector": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       70225,
+       0,
+       0,
+       0,
+       1
+      ],
+      "residual_array_sha256": "7a1f947a4a546c30699d17ed5236d6e116ea4722e76983dfc010601dbf131035"
+     }
+    ],
+    "block_sha256": "6abe8aa8e0111fea363fdc1cd0ae8624e7d9a201dd8784ebf41d126a313df37f",
+    "canonical_minor_determinant_mod_p": 85798,
+    "canonical_particular_solution": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cokernel_dimension": 6,
+    "column_labels": [
+     [
+      "tf1",
+      21,
+      53
+     ],
+     [
+      "tf2",
+      21,
+      53
+     ],
+     [
+      "tg1",
+      21,
+      53
+     ],
+     [
+      "tg2",
+      21,
+      53
+     ],
+     [
+      "tf1",
+      26,
+      58
+     ],
+     [
+      "tf2",
+      26,
+      58
+     ],
+     [
+      "tg1",
+      26,
+      58
+     ],
+     [
+      "tg2",
+      26,
+      58
+     ],
+     [
+      "tg01",
+      26,
+      58
+     ],
+     [
+      "tg02",
+      26,
+      58
+     ]
+    ],
+    "compatible": true,
+    "kernel_dimension": 6,
+    "left_cokernel_obstruction_pairings": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "left_kernel_basis": [
+     [
+      35188,
+      59711,
+      45655,
+      94807,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      70056,
+      15759,
+      98298,
+      77242,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      101574,
+      55042,
+      59118,
+      84273,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+     ],
+     [
+      40913,
+      39392,
+      9359,
+      34526,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      4154,
+      35602,
+      30724,
+      86318,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     [
+      24383,
+      27407,
+      25749,
+      85440,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+     ]
+    ],
+    "pivot_column_indices": [
+     0,
+     1,
+     4,
+     5
+    ],
+    "pivot_column_labels": [
+     [
+      "tf1",
+      21,
+      53
+     ],
+     [
+      "tf2",
+      21,
+      53
+     ],
+     [
+      "tf1",
+      26,
+      58
+     ],
+     [
+      "tf2",
+      26,
+      58
+     ]
+    ],
+    "pivot_eta_labels": [
+     0,
+     3,
+     6,
+     9
+    ],
+    "pivot_row_indices": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "rank_A": 4,
+    "rank_augmented": 4,
+    "rhs_minus_residual": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "right_kernel_basis": [
+     [
+      103736,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      103736,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      35113,
+      0,
+      1,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      35113,
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      70225,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      70225,
+      0,
+      0,
+      0,
+      1
+     ]
+    ],
+    "right_kernel_free_columns": [
+     2,
+     3,
+     6,
+     7,
+     8,
+     9
+    ],
+    "row_eta_labels": [
+     0,
+     3,
+     6,
+     9,
+     12,
+     15,
+     18,
+     21,
+     24,
+     27
+    ]
+   }
+  },
+  {
+   "cell": 0,
+   "cell_34_rows_zero": true,
+   "cell_point_sha256": "b142e59bb5fdb4d703963ffc1dcbea6608a584206d61ebbce1b21f98a9b8f2d3",
+   "completed_point_sha256": "47189df7dc4a6b71d5d863295ed639a6f8cd5392a39a324597b5e70145518103",
+   "fiber": "a00pp",
+   "free_values": {
+    "x16": 11,
+    "x19": 12,
+    "x24": 13,
+    "x27": 14,
+    "x57": 1,
+    "x59": 2,
+    "x60": 3,
+    "x62": 4,
+    "x63": 5,
+    "x65": 6,
+    "x66": 7,
+    "x68": 8,
+    "x72": 9,
+    "x73": 10
+   },
+   "frontier": {
+    "applied": true,
+    "diag": {
+     "frontier_entries_below_band24": false,
+     "frontier_nonzero": 4,
+     "frontier_rank": 4
+    },
+    "values": {
+     "tf1_51": 4638,
+     "tf1_56": 91894,
+     "tf2_51": 11461,
+     "tf2_56": 14361,
+     "tg01_56": 0,
+     "tg02_56": 0,
+     "tg1_51": 0,
+     "tg1_56": 0,
+     "tg2_51": 0,
+     "tg2_56": 0
+    }
+   },
+   "kind": "interior-sequence",
+   "nonorigin_chart": true,
+   "prime": 105337,
+   "pristine_checks": {
+    "compat_c_zero": true,
+    "core23_77": true,
+    "pristine_row22_vanish": true,
+    "raw_D21_rows_vanish": true,
+    "row22compat_48": true,
+    "row22red_32": true
+   },
+   "projection_gates": {
+    "D25_residual_bands_le24_zero": true,
+    "band26_output_census_exact": true,
+    "dual_vs_independent_product_rule": true,
+    "first_occurrence_band26_exactly_declared_ten": true,
+    "mixed_vector_affine_replay": true,
+    "new_columns_zero_below_band26": true,
+    "ten_unit_finite_differences": [
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf1",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf2",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg1",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg2",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf1",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf2",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg1",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg2",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg01",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg02",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     }
+    ]
+   },
+   "reconstruction": {
+    "deep_rank": 4,
+    "tg1_44": 71491,
+    "tg2_44": 102957,
+    "tg_rank": 2
+   },
+   "relative_block": {
+    "A": [
+     [
+      48505,
+      47219,
+      23136,
+      70990,
+      95467,
+      54413,
+      6580,
+      104174,
+      3290,
+      52087
+     ],
+     [
+      93239,
+      13172,
+      13110,
+      20972,
+      16833,
+      53977,
+      94115,
+      34240,
+      99726,
+      17120
+     ],
+     [
+      98284,
+      80080,
+      84543,
+      12951,
+      25276,
+      86865,
+      53374,
+      47427,
+      26687,
+      76382
+     ],
+     [
+      39414,
+      98528,
+      4951,
+      53839,
+      52546,
+      86329,
+      35194,
+      12672,
+      17597,
+      6336
+     ],
+     [
+      60486,
+      101676,
+      33383,
+      37611,
+      90373,
+      104082,
+      9976,
+      35949,
+      4988,
+      70643
+     ],
+     [
+      99198,
+      88533,
+      73139,
+      63068,
+      78694,
+      46577,
+      17762,
+      4061,
+      8881,
+      54699
+     ],
+     [
+      23903,
+      38494,
+      31372,
+      6749,
+      57279,
+      9484,
+      67151,
+      63902,
+      86244,
+      31951
+     ],
+     [
+      87510,
+      7656,
+      5300,
+      38164,
+      4904,
+      579,
+      31843,
+      104951,
+      68590,
+      105144
+     ],
+     [
+      64851,
+      43076,
+      69506,
+      74278,
+      2409,
+      82078,
+      103731,
+      15506,
+      104534,
+      7753
+     ],
+     [
+      93870,
+      59329,
+      75308,
+      77092,
+      82830,
+      74489,
+      50117,
+      90790,
+      77727,
+      45395
+     ]
+    ],
+    "actual_lifts_one_per_free_direction": [],
+    "block_sha256": "18bc0e1d36bf92c2e1858ee4e46be961fe67c623e4d9d61c10ec9d8e900e5771",
+    "canonical_minor_determinant_mod_p": 85798,
+    "canonical_particular_solution": null,
+    "cokernel_dimension": 6,
+    "column_labels": [
+     [
+      "tf1",
+      21,
+      53
+     ],
+     [
+      "tf2",
+      21,
+      53
+     ],
+     [
+      "tg1",
+      21,
+      53
+     ],
+     [
+      "tg2",
+      21,
+      53
+     ],
+     [
+      "tf1",
+      26,
+      58
+     ],
+     [
+      "tf2",
+      26,
+      58
+     ],
+     [
+      "tg1",
+      26,
+      58
+     ],
+     [
+      "tg2",
+      26,
+      58
+     ],
+     [
+      "tg01",
+      26,
+      58
+     ],
+     [
+      "tg02",
+      26,
+      58
+     ]
+    ],
+    "compatible": false,
+    "kernel_dimension": 6,
+    "left_cokernel_obstruction_pairings": [
+     23070,
+     55420,
+     82249,
+     287,
+     11111,
+     1237
+    ],
+    "left_kernel_basis": [
+     [
+      35188,
+      59711,
+      45655,
+      94807,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      70056,
+      15759,
+      98298,
+      77242,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      101574,
+      55042,
+      59118,
+      84273,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+     ],
+     [
+      40913,
+      39392,
+      9359,
+      34526,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      4154,
+      35602,
+      30724,
+      86318,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     [
+      24383,
+      27407,
+      25749,
+      85440,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+     ]
+    ],
+    "pivot_column_indices": [
+     0,
+     1,
+     4,
+     5
+    ],
+    "pivot_column_labels": [
+     [
+      "tf1",
+      21,
+      53
+     ],
+     [
+      "tf2",
+      21,
+      53
+     ],
+     [
+      "tf1",
+      26,
+      58
+     ],
+     [
+      "tf2",
+      26,
+      58
+     ]
+    ],
+    "pivot_eta_labels": [
+     0,
+     3,
+     6,
+     9
+    ],
+    "pivot_row_indices": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "rank_A": 4,
+    "rank_augmented": 5,
+    "rhs_minus_residual": [
+     86547,
+     8107,
+     90514,
+     27464,
+     56711,
+     84164,
+     37147,
+     58209,
+     29654,
+     18706
+    ],
+    "right_kernel_basis": [
+     [
+      103736,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      103736,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      35113,
+      0,
+      1,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      35113,
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      70225,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      70225,
+      0,
+      0,
+      0,
+      1
+     ]
+    ],
+    "right_kernel_free_columns": [
+     2,
+     3,
+     6,
+     7,
+     8,
+     9
+    ],
+    "row_eta_labels": [
+     0,
+     3,
+     6,
+     9,
+     12,
+     15,
+     18,
+     21,
+     24,
+     27
+    ]
+   }
+  },
+  {
+   "cell": 0,
+   "cell_34_rows_zero": true,
+   "cell_point_sha256": "634bd36d49a98437f33f2f02dac2ee5213aba1263b3ced81d7a70a8e09775b7b",
+   "completed_point_sha256": "efe0d125541a652c546444dcbac80accf8982962e8198e93812b8754f2b6b26c",
+   "fiber": "a00pp",
+   "free_values": null,
+   "frontier": {
+    "applied": false,
+    "values": {}
+   },
+   "kind": "witness",
+   "nonorigin_chart": true,
+   "prime": 105673,
+   "pristine_checks": {
+    "compat_c_zero": true,
+    "core23_77": true,
+    "pristine_row22_vanish": true,
+    "raw_D21_rows_vanish": true,
+    "row22compat_48": true,
+    "row22red_32": true
+   },
+   "projection_gates": {
+    "D25_residual_bands_le24_zero": true,
+    "band26_output_census_exact": true,
+    "dual_vs_independent_product_rule": true,
+    "first_occurrence_band26_exactly_declared_ten": true,
+    "mixed_vector_affine_replay": true,
+    "new_columns_zero_below_band26": true,
+    "ten_unit_finite_differences": [
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf1",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf2",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg1",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg2",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf1",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf2",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg1",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg2",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg01",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg02",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     }
+    ]
+   },
+   "reconstruction": {
+    "deep_rank": 4,
+    "tg1_44": 0,
+    "tg2_44": 0,
+    "tg_rank": 2
+   },
+   "relative_block": {
+    "A": [
+     [
+      18979,
+      83464,
+      66105,
+      34615,
+      50471,
+      90144,
+      1577,
+      45577,
+      53625,
+      75625
+     ],
+     [
+      30919,
+      56993,
+      20945,
+      87297,
+      55283,
+      26078,
+      104042,
+      17839,
+      52021,
+      61756
+     ],
+     [
+      17074,
+      20351,
+      95082,
+      93662,
+      78320,
+      94107,
+      88684,
+      42935,
+      44342,
+      74304
+     ],
+     [
+      78139,
+      89921,
+      95644,
+      8954,
+      83275,
+      35519,
+      14932,
+      11545,
+      7466,
+      58609
+     ],
+     [
+      66632,
+      97504,
+      25882,
+      53200,
+      37185,
+      100044,
+      80883,
+      38977,
+      93278,
+      72325
+     ],
+     [
+      98670,
+      66572,
+      104193,
+      54253,
+      22231,
+      44040,
+      55628,
+      76313,
+      27814,
+      90993
+     ],
+     [
+      46902,
+      14188,
+      3152,
+      12007,
+      4294,
+      70040,
+      67586,
+      94204,
+      33793,
+      47102
+     ],
+     [
+      57198,
+      45323,
+      16781,
+      57624,
+      73634,
+      23907,
+      91808,
+      89735,
+      45904,
+      97704
+     ],
+     [
+      57573,
+      77106,
+      24390,
+      71584,
+      813,
+      102695,
+      105131,
+      72434,
+      105402,
+      36217
+     ],
+     [
+      78792,
+      25258,
+      88041,
+      8371,
+      87185,
+      46080,
+      82774,
+      74953,
+      41387,
+      90313
+     ]
+    ],
+    "actual_lifts_one_per_free_direction": [
+     {
+      "all_residuals_through_band26_zero": true,
+      "free_direction": 0,
+      "new_coordinate_vector": [
+       58593,
+       0,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "residual_array_sha256": "7a1f947a4a546c30699d17ed5236d6e116ea4722e76983dfc010601dbf131035"
+     },
+     {
+      "all_residuals_through_band26_zero": true,
+      "free_direction": 1,
+      "new_coordinate_vector": [
+       0,
+       58593,
+       0,
+       1,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "residual_array_sha256": "7a1f947a4a546c30699d17ed5236d6e116ea4722e76983dfc010601dbf131035"
+     },
+     {
+      "all_residuals_through_band26_zero": true,
+      "free_direction": 2,
+      "new_coordinate_vector": [
+       0,
+       0,
+       0,
+       0,
+       35225,
+       0,
+       1,
+       0,
+       0,
+       0
+      ],
+      "residual_array_sha256": "7a1f947a4a546c30699d17ed5236d6e116ea4722e76983dfc010601dbf131035"
+     },
+     {
+      "all_residuals_through_band26_zero": true,
+      "free_direction": 3,
+      "new_coordinate_vector": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       35225,
+       0,
+       1,
+       0,
+       0
+      ],
+      "residual_array_sha256": "7a1f947a4a546c30699d17ed5236d6e116ea4722e76983dfc010601dbf131035"
+     },
+     {
+      "all_residuals_through_band26_zero": true,
+      "free_direction": 4,
+      "new_coordinate_vector": [
+       0,
+       0,
+       0,
+       0,
+       70449,
+       0,
+       0,
+       0,
+       1,
+       0
+      ],
+      "residual_array_sha256": "7a1f947a4a546c30699d17ed5236d6e116ea4722e76983dfc010601dbf131035"
+     },
+     {
+      "all_residuals_through_band26_zero": true,
+      "free_direction": 5,
+      "new_coordinate_vector": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       70449,
+       0,
+       0,
+       0,
+       1
+      ],
+      "residual_array_sha256": "7a1f947a4a546c30699d17ed5236d6e116ea4722e76983dfc010601dbf131035"
+     }
+    ],
+    "block_sha256": "3ff813f3ad07eb85833a375bfa4aa41ac582ea7a366721e220567eb47b18a5e6",
+    "canonical_minor_determinant_mod_p": 58578,
+    "canonical_particular_solution": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "cokernel_dimension": 6,
+    "column_labels": [
+     [
+      "tf1",
+      21,
+      53
+     ],
+     [
+      "tf2",
+      21,
+      53
+     ],
+     [
+      "tg1",
+      21,
+      53
+     ],
+     [
+      "tg2",
+      21,
+      53
+     ],
+     [
+      "tf1",
+      26,
+      58
+     ],
+     [
+      "tf2",
+      26,
+      58
+     ],
+     [
+      "tg1",
+      26,
+      58
+     ],
+     [
+      "tg2",
+      26,
+      58
+     ],
+     [
+      "tg01",
+      26,
+      58
+     ],
+     [
+      "tg02",
+      26,
+      58
+     ]
+    ],
+    "compatible": true,
+    "kernel_dimension": 6,
+    "left_cokernel_obstruction_pairings": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "left_kernel_basis": [
+     [
+      35300,
+      81036,
+      24666,
+      10571,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      70280,
+      36944,
+      77477,
+      98623,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      7966,
+      27038,
+      87486,
+      21138,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+     ],
+     [
+      76268,
+      58304,
+      2344,
+      41681,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      51133,
+      47457,
+      30822,
+      51369,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     [
+      83168,
+      32191,
+      32876,
+      8219,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+     ]
+    ],
+    "pivot_column_indices": [
+     0,
+     1,
+     4,
+     5
+    ],
+    "pivot_column_labels": [
+     [
+      "tf1",
+      21,
+      53
+     ],
+     [
+      "tf2",
+      21,
+      53
+     ],
+     [
+      "tf1",
+      26,
+      58
+     ],
+     [
+      "tf2",
+      26,
+      58
+     ]
+    ],
+    "pivot_eta_labels": [
+     0,
+     3,
+     6,
+     9
+    ],
+    "pivot_row_indices": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "rank_A": 4,
+    "rank_augmented": 4,
+    "rhs_minus_residual": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "right_kernel_basis": [
+     [
+      58593,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      58593,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      35225,
+      0,
+      1,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      35225,
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      70449,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      70449,
+      0,
+      0,
+      0,
+      1
+     ]
+    ],
+    "right_kernel_free_columns": [
+     2,
+     3,
+     6,
+     7,
+     8,
+     9
+    ],
+    "row_eta_labels": [
+     0,
+     3,
+     6,
+     9,
+     12,
+     15,
+     18,
+     21,
+     24,
+     27
+    ]
+   }
+  },
+  {
+   "cell": 0,
+   "cell_34_rows_zero": true,
+   "cell_point_sha256": "a5e86c92580d0757118dfa21f4de63c6fa9dea550e606c1e5049b20f94328399",
+   "completed_point_sha256": "c7223effcaf10f7cc194d575c8142d3f3d81401bdd8acbd834fb6303fbe5e830",
+   "fiber": "a00pp",
+   "free_values": {
+    "x16": 11,
+    "x19": 12,
+    "x24": 13,
+    "x27": 14,
+    "x57": 1,
+    "x59": 2,
+    "x60": 3,
+    "x62": 4,
+    "x63": 5,
+    "x65": 6,
+    "x66": 7,
+    "x68": 8,
+    "x72": 9,
+    "x73": 10
+   },
+   "frontier": {
+    "applied": true,
+    "diag": {
+     "frontier_entries_below_band24": false,
+     "frontier_nonzero": 4,
+     "frontier_rank": 4
+    },
+    "values": {
+     "tf1_51": 57584,
+     "tf1_56": 9096,
+     "tf2_51": 101336,
+     "tf2_56": 49708,
+     "tg01_56": 0,
+     "tg02_56": 0,
+     "tg1_51": 0,
+     "tg1_56": 0,
+     "tg2_51": 0,
+     "tg2_56": 0
+    }
+   },
+   "kind": "interior-sequence",
+   "nonorigin_chart": true,
+   "prime": 105673,
+   "pristine_checks": {
+    "compat_c_zero": true,
+    "core23_77": true,
+    "pristine_row22_vanish": true,
+    "raw_D21_rows_vanish": true,
+    "row22compat_48": true,
+    "row22red_32": true
+   },
+   "projection_gates": {
+    "D25_residual_bands_le24_zero": true,
+    "band26_output_census_exact": true,
+    "dual_vs_independent_product_rule": true,
+    "first_occurrence_band26_exactly_declared_ten": true,
+    "mixed_vector_affine_replay": true,
+    "new_columns_zero_below_band26": true,
+    "ten_unit_finite_differences": [
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf1",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf2",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg1",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg2",
+       21,
+       53
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf1",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tf2",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg1",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg2",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg01",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     },
+     {
+      "band26_equals_source_derivative": true,
+      "band26_support_eta": [
+       0,
+       3,
+       6,
+       9,
+       12,
+       15,
+       18,
+       21,
+       24,
+       27
+      ],
+      "coordinate": [
+       "tg02",
+       26,
+       58
+      ],
+      "lower_rows_unchanged": true
+     }
+    ]
+   },
+   "reconstruction": {
+    "deep_rank": 4,
+    "tg1_44": 8091,
+    "tg2_44": 98198,
+    "tg_rank": 2
+   },
+   "relative_block": {
+    "A": [
+     [
+      18979,
+      83464,
+      66105,
+      34615,
+      50471,
+      90144,
+      1577,
+      45577,
+      53625,
+      75625
+     ],
+     [
+      30919,
+      56993,
+      20945,
+      87297,
+      55283,
+      26078,
+      104042,
+      17839,
+      52021,
+      61756
+     ],
+     [
+      17074,
+      20351,
+      95082,
+      93662,
+      78320,
+      94107,
+      88684,
+      42935,
+      44342,
+      74304
+     ],
+     [
+      78139,
+      89921,
+      95644,
+      8954,
+      83275,
+      35519,
+      14932,
+      11545,
+      7466,
+      58609
+     ],
+     [
+      66632,
+      97504,
+      25882,
+      53200,
+      37185,
+      100044,
+      80883,
+      38977,
+      93278,
+      72325
+     ],
+     [
+      98670,
+      66572,
+      104193,
+      54253,
+      22231,
+      44040,
+      55628,
+      76313,
+      27814,
+      90993
+     ],
+     [
+      46902,
+      14188,
+      3152,
+      12007,
+      4294,
+      70040,
+      67586,
+      94204,
+      33793,
+      47102
+     ],
+     [
+      57198,
+      45323,
+      16781,
+      57624,
+      73634,
+      23907,
+      91808,
+      89735,
+      45904,
+      97704
+     ],
+     [
+      57573,
+      77106,
+      24390,
+      71584,
+      813,
+      102695,
+      105131,
+      72434,
+      105402,
+      36217
+     ],
+     [
+      78792,
+      25258,
+      88041,
+      8371,
+      87185,
+      46080,
+      82774,
+      74953,
+      41387,
+      90313
+     ]
+    ],
+    "actual_lifts_one_per_free_direction": [],
+    "block_sha256": "ef79e9a87c76d33778eb15abc3f2fd86510b81929158f86dcf3b324c81840676",
+    "canonical_minor_determinant_mod_p": 58578,
+    "canonical_particular_solution": null,
+    "cokernel_dimension": 6,
+    "column_labels": [
+     [
+      "tf1",
+      21,
+      53
+     ],
+     [
+      "tf2",
+      21,
+      53
+     ],
+     [
+      "tg1",
+      21,
+      53
+     ],
+     [
+      "tg2",
+      21,
+      53
+     ],
+     [
+      "tf1",
+      26,
+      58
+     ],
+     [
+      "tf2",
+      26,
+      58
+     ],
+     [
+      "tg1",
+      26,
+      58
+     ],
+     [
+      "tg2",
+      26,
+      58
+     ],
+     [
+      "tg01",
+      26,
+      58
+     ],
+     [
+      "tg02",
+      26,
+      58
+     ]
+    ],
+    "compatible": false,
+    "kernel_dimension": 6,
+    "left_cokernel_obstruction_pairings": [
+     31240,
+     82912,
+     41011,
+     45166,
+     44055,
+     32303
+    ],
+    "left_kernel_basis": [
+     [
+      35300,
+      81036,
+      24666,
+      10571,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      70280,
+      36944,
+      77477,
+      98623,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      7966,
+      27038,
+      87486,
+      21138,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+     ],
+     [
+      76268,
+      58304,
+      2344,
+      41681,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      51133,
+      47457,
+      30822,
+      51369,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     [
+      83168,
+      32191,
+      32876,
+      8219,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+     ]
+    ],
+    "pivot_column_indices": [
+     0,
+     1,
+     4,
+     5
+    ],
+    "pivot_column_labels": [
+     [
+      "tf1",
+      21,
+      53
+     ],
+     [
+      "tf2",
+      21,
+      53
+     ],
+     [
+      "tf1",
+      26,
+      58
+     ],
+     [
+      "tf2",
+      26,
+      58
+     ]
+    ],
+    "pivot_eta_labels": [
+     0,
+     3,
+     6,
+     9
+    ],
+    "pivot_row_indices": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "rank_A": 4,
+    "rank_augmented": 5,
+    "rhs_minus_residual": [
+     82188,
+     25726,
+     99846,
+     33709,
+     36882,
+     11366,
+     67976,
+     65704,
+     17499,
+     95997
+    ],
+    "right_kernel_basis": [
+     [
+      58593,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      58593,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      35225,
+      0,
+      1,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      35225,
+      0,
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      70449,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      70449,
+      0,
+      0,
+      0,
+      1
+     ]
+    ],
+    "right_kernel_free_columns": [
+     2,
+     3,
+     6,
+     7,
+     8,
+     9
+    ],
+    "row_eta_labels": [
+     0,
+     3,
+     6,
+     9,
+     12,
+     15,
+     18,
+     21,
+     24,
+     27
+    ]
+   }
+  }
+ ],
+ "scope": "mod p only at 105337 and 105673; residue-A, B-frozen, no-log, PIN42, W1*W2!=0 a00pp chart; four named points on promoted D25 cells; one new band only",
+ "source_manifest": {
+  "cases/d23_atlas_p105337.json": {
+   "bytes": 87468,
+   "sha256": "9c029b8cff87beb71d78a89ab49d40fc7b68d335c5d3f4a84b2fcc1b6ed0fbec"
+  },
+  "cases/d23_atlas_p105673.json": {
+   "bytes": 87528,
+   "sha256": "92c1ef178126f5042661bccd28959fad84d732a8e43ff3b23b4ae42aab5b437e"
+  },
+  "cases/d25_certificate_replay.json": {
+   "bytes": 247466,
+   "sha256": "af3983a7a65a5adb8cb278417a9056481c53c535bc500f0f498e477ccbc464bb"
+  },
+  "cases/d25_eplus.py": {
+   "bytes": 55415,
+   "sha256": "e964d2b467f76696f16ccef505f6f66cce7d68e722004bb1a70b6e1cf4f21e7c"
+  },
+  "cases/d25fam_p105337_a00pp.ms": {
+   "bytes": 126663,
+   "sha256": "ef6db7e9ad36666537475fabf8238887de0c7e6d8f02c9381eaa7c810cbe4fe2"
+  },
+  "cases/d25fam_p105673_a00pp.ms": {
+   "bytes": 126718,
+   "sha256": "43b81c4ea5f77a5d0d32f433a23e867e9ef4c7228f5d6e7624f43561aa976175"
+  },
+  "cases/directionb_compress.py": {
+   "bytes": 25945,
+   "sha256": "422c9c0cf5fa1988acc83248f5f349036ec860a81b4b11453810d0d97d188964"
+  },
+  "cases/directionb_core23_p105337.ms": {
+   "bytes": 1522403,
+   "sha256": "0533787f6bf89ff25478f01ddad40230a11f6a19bb19af8889b692ce26a38cdf"
+  },
+  "cases/directionb_core23_p105673.ms": {
+   "bytes": 1522949,
+   "sha256": "1e292496d1f77f4096decf6b8cbb95ff94898f77a38916cd74672ba4d3c0d179"
+  },
+  "cases/directionb_residual32_emit.py": {
+   "bytes": 20134,
+   "sha256": "1ac2f37245fd4f9770cf6172ecde994e5394171712d4dffd25f87029531b4f82"
+  },
+  "cases/directionb_row22compat_p105337.ms": {
+   "bytes": 1009048,
+   "sha256": "e90bb02c79c8a3bb8d9f9bc8a61622274c2d4f26e78d9f5129902565b0596cfb"
+  },
+  "cases/directionb_row22compat_p105673.ms": {
+   "bytes": 1009090,
+   "sha256": "ce1a65ba814bbf9c2979dab5a50877cb9ddde41535f23ebca6ad05e5528ca469"
+  },
+  "cases/directionb_row22red_p105337.ms": {
+   "bytes": 275806,
+   "sha256": "5d4a181545711f814aa6d85c93c38febd1abac6e53a4d8cbe2089910adc5c11e"
+  },
+  "cases/directionb_row22red_p105673.ms": {
+   "bytes": 275788,
+   "sha256": "353aca7b3dd5e27b722e080f027bf5eaa7e47afc503f8d9488955accf06909b4"
+  },
+  "cases/r1_experiment.py": {
+   "bytes": 56044,
+   "sha256": "1214f58eac807128eb7d6edb32726e8cf0923241e7340cbe78bdd5c0aca5d7c1"
+  },
+  "cases/r1_fullcore.py": {
+   "bytes": 88155,
+   "sha256": "f17b17d6bbc82eeb7be3ce1886af8b876b1a67559783b88f01cd60cf252e859b"
+  },
+  "cases/valuation_e.py": {
+   "bytes": 61342,
+   "sha256": "a1ef7061f7a2da5d4b1734e1dde3b56ded53b29d9a55489ffd71e1c32e2ae42f"
+  },
+  "cases/valuation_e2.py": {
+   "bytes": 52784,
+   "sha256": "c1a858fbe53c291038b0386c124dbfd4bc79400eedc6b9d5d49a4088736d08f8"
+  },
+  "directionb_tails_D21.pkl": {
+   "bytes": 3651047,
+   "sha256": "b4ba8dfcd9755fb3201780cd97c1d2ef38bd26d2d1b023521a0e62a3d6db169e"
+  }
+ },
+ "source_manifest_sha256": "b60019973eb8af2676a8668f3cce8f4361ce08131763dd09d2654c527106dcfb",
+ "status": "INTERNAL / PRODUCER-CHECKED / MOD-p SIGNAL ONLY",
+ "summary": {
+  "actual_lifts_replayed": 12,
+  "compatible_samples": 2,
+  "incompatible_samples": 2,
+  "n_samples": 4,
+  "rank_A_distribution": {
+   "4": 4
+  },
+  "rank_augmented_distribution": {
+   "4": 2,
+   "5": 2
+  },
+  "samples_per_prime": {
+   "105337": 2,
+   "105673": 2
+  }
+ },
+ "tool": "cases/round1_dtransition/transition_symbol.py",
+ "type_or_provenance_defect": null,
+ "verdict": "FREE-TAIL-SIGNAL"
+}

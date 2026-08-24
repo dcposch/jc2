@@ -1,0 +1,220 @@
+{
+  "assembly_sources": {
+    "cases/d43_family2.py": {
+      "required_tokens_present": true,
+      "sha256": "8c0f7fd3ea1efb54293036e1caa481519682251ec554e8dac4cb254b4f2ca013"
+    },
+    "cases/d43_nf_certificate.py": {
+      "required_tokens_present": true,
+      "sha256": "41865448d3de9d0d47a9c0d086a343ea7a46b00688699d2e8b304adb0be5945b"
+    }
+  },
+  "classification": "ORIGIN-ONLY",
+  "gates": {
+    "all_provenance_hashes_match": "PASS",
+    "classification_match": "PASS",
+    "exact_constant_normal_forms": "PASS",
+    "factored_euler_derivation": "PASS",
+    "fresh_checkpoint_census": "PASS",
+    "manual_groebner_census": "PASS",
+    "z_variable_p4p1_derivation": "PASS"
+  },
+  "independent_core_sha256": "9245288b87d8bebd80af19de80e5798eb78716fa720dfbca12fbe10b26555b4d",
+  "nonclaim": "replay certifies only the registered modular compiler interface; it makes no D43, integral, germ, characteristic-zero, or JC2 claim",
+  "primes": {
+    "105337": {
+      "checkpoint": {
+        "deep_groups": 131679,
+        "h29_independent_encoding_sha256": "436506101b5c2940cac8e25adeef435709d690803c54b763f262a53ffbd2ea21",
+        "normal_form_terms": 15695212,
+        "rows": 10,
+        "sha256": "6160fd650ac3076c8063295c905a8e53b5ce6cde82ef9608e2a910abd1fec0ce",
+        "sidecar_hits": [],
+        "sidecars_absent": true
+      },
+      "classification": "ORIGIN-ONLY",
+      "constant_remainders_all_nonzero": true,
+      "groebner_basis": {
+        "all_leading_terms_positive_degree": true,
+        "all_monic_leads": true,
+        "characteristic": 105337,
+        "constant_normal_form_rule": "a positive-degree leading monomial cannot divide monomial 1",
+        "groebner_elements": 509,
+        "sha256": "3ba965d8d57439fce5e6febd6a3f7a3ab3bcad74337768eec18681bf0e2a2acc",
+        "variable_order": [
+          "x68",
+          "x70",
+          "x71",
+          "x72",
+          "x73",
+          "x47",
+          "x52",
+          "x53",
+          "x54",
+          "x55",
+          "x57",
+          "x58",
+          "x59",
+          "x60",
+          "x62",
+          "x63",
+          "x65",
+          "x66",
+          "W1",
+          "W2",
+          "uW1",
+          "uW2"
+        ]
+      },
+      "off_origin_1_0_changes_all_rows": true,
+      "origin_zero": true,
+      "row_scalars": {
+        "11": {
+          "alpha": 27272,
+          "beta": 16931
+        },
+        "14": {
+          "alpha": 28414,
+          "beta": 51282
+        },
+        "17": {
+          "alpha": 6818,
+          "beta": 30567
+        },
+        "2": {
+          "alpha": 56469,
+          "beta": 67691
+        },
+        "20": {
+          "alpha": 5872,
+          "beta": 66310
+        },
+        "23": {
+          "alpha": 79348,
+          "beta": 17326
+        },
+        "26": {
+          "alpha": 37699,
+          "beta": 45092
+        },
+        "29": {
+          "alpha": 96138,
+          "beta": 41245
+        },
+        "5": {
+          "alpha": 71312,
+          "beta": 92908
+        },
+        "8": {
+          "alpha": 30404,
+          "beta": 14843
+        }
+      }
+    },
+    "105673": {
+      "checkpoint": {
+        "deep_groups": 131679,
+        "h29_independent_encoding_sha256": "d9714e1f368b1cac58fdd38bdb22785f124da800242a801a8cc371b994e26449",
+        "normal_form_terms": 15695214,
+        "rows": 10,
+        "sha256": "e6420d4eba9a49c8a0fd082466031468bce1930fbd3713ee0f60fbaa10bd1a85",
+        "sidecar_hits": [],
+        "sidecars_absent": true
+      },
+      "classification": "ORIGIN-ONLY",
+      "constant_remainders_all_nonzero": true,
+      "groebner_basis": {
+        "all_leading_terms_positive_degree": true,
+        "all_monic_leads": true,
+        "characteristic": 105673,
+        "constant_normal_form_rule": "a positive-degree leading monomial cannot divide monomial 1",
+        "groebner_elements": 509,
+        "sha256": "cda3a0d61c6ab8973f3d6f4ec6b45abba0007514789323445200a948738e72de",
+        "variable_order": [
+          "x68",
+          "x70",
+          "x71",
+          "x72",
+          "x73",
+          "x47",
+          "x52",
+          "x53",
+          "x54",
+          "x55",
+          "x57",
+          "x58",
+          "x59",
+          "x60",
+          "x62",
+          "x63",
+          "x65",
+          "x66",
+          "W1",
+          "W2",
+          "uW1",
+          "uW2"
+        ]
+      },
+      "off_origin_1_0_changes_all_rows": true,
+      "origin_zero": true,
+      "row_scalars": {
+        "11": {
+          "alpha": 24924,
+          "beta": 89057
+        },
+        "14": {
+          "alpha": 58595,
+          "beta": 101834
+        },
+        "17": {
+          "alpha": 6231,
+          "beta": 101519
+        },
+        "2": {
+          "alpha": 28385,
+          "beta": 16301
+        },
+        "20": {
+          "alpha": 81253,
+          "beta": 16280
+        },
+        "23": {
+          "alpha": 79260,
+          "beta": 52833
+        },
+        "26": {
+          "alpha": 5334,
+          "beta": 102117
+        },
+        "29": {
+          "alpha": 93734,
+          "beta": 78408
+        },
+        "5": {
+          "alpha": 53120,
+          "beta": 105484
+        },
+        "8": {
+          "alpha": 15734,
+          "beta": 24735
+        }
+      }
+    }
+  },
+  "producer_canonical_claim_sha256": "f147c46d55f46fd9eb009023a8beb104a93327612815c9f59d008e005d692334",
+  "schema": "jc2.p4p1-source-honesty-replay.v1",
+  "source_derivation": {
+    "alpha": 126,
+    "base_B_multiplier": 0,
+    "beta": -84,
+    "factored": {
+      "common": 42,
+      "linear": [
+        3,
+        -2
+      ]
+    }
+  },
+  "status": "INTERNAL / INDEPENDENT REPLAY",
+  "verdict": "PASS"
+}

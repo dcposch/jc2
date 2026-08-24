@@ -1,0 +1,102 @@
+{
+  "schema": "jc2.norm-moment-sep.summary.v1",
+  "generated_at_utc": "2026-08-24T02:50:27Z",
+  "basis_commit": "8bf25a52f5f6c20886b77c6d9aeeb879eb18f8e4",
+  "status": "STOPPED",
+  "verdict": "DIFFERENT-INSUFFICIENT",
+  "preregistration": {
+    "path": "cases/round2_norm_moment_sep/PREREGISTRATION.md",
+    "frozen_at_utc": "2026-08-24T02:40:55Z",
+    "sha256": "15caf35ca825f7a56bb6766cf585b4845c41a491904a748301264a7eb708330b"
+  },
+  "implementation": {
+    "path": "cases/round2_norm_moment_sep/norm_moment_sep.py",
+    "sha256": "150cdc2fb211d20685694e698eeb14f295c7d660be419eb8642d339815255601",
+    "runtime_tested": "Python 3.9.6; standard library only",
+    "full_stdout_bytes": 41522,
+    "full_stdout_sha256": "c81c75b0cc3721f1198d3dc049f66cd3c87fdb24c81e6542d7cecfd15bffae96"
+  },
+  "frozen_inputs": {
+    "xmodel/ideation-20260824T0156Z-synthesis.md": "9c0455ddae2388d7f5256ec46094c0d97dd5bc6748f2b61177f736cc23581f50",
+    "xmodel/ideation-20260824T0156Z-adversary.md": "b9ad25c0cd16ec6698b7922128f00da6ca4dede812dc38d9e9444f42dcf1aec8",
+    "xmodel/review-round1-proof-gates-claude.md": "ef0bf14d10abfedb5c4b8921344ff9de1dc0078f287ed5c6fe3fc7a24a522e11",
+    "xmodel/round1-trace-regularity-20260824.md": "908dc24bfb7f493d108e05135d863bc1a32a4c4ef8e3889f7dee89574978920c",
+    "cases/round1_trace_probe/trace_probe.py": "faadfaf26c7184c24fc3e55a3de90c881e38b0bf12293cb245bcaa9ab5ad0372",
+    "cases/round1_trace_probe/results.json": "51f5a6e200327dd343c1c06ed2e9529ef807428531d21535caef63c655f00706",
+    "jc72108/systems/farm/4_12mn34d64/manifest.json": "26bf6d4e7845e6278a24d09161bef36e320af2e87bff1c32a1f2a5eeae72e577"
+  },
+  "bounds": {
+    "moments": [1, 2],
+    "receiver_records": 4,
+    "random_samples": 0,
+    "resultants": false,
+    "network": false,
+    "native_type_gate_executed": false
+  },
+  "derivation_checks": {
+    "trace": [
+      "conjugation_divisibility_filter",
+      "companion_basis_diagonal_trace"
+    ],
+    "different_discriminant": [
+      "minimal_polynomial_derivative_and_norm",
+      "trace_pairing_determinant"
+    ],
+    "all_agree": true
+  },
+  "controls": {
+    "C1_triangular_automorphism": {
+      "result": "PASS",
+      "record_sha256": "4e14a6763ff9a75adb09f55ba2e0857f30d50b9e9fdd661b7e382908422d4aaa",
+      "local_algebra_sha256": "0109d80f97ebc64e499ec5c44303674477895b5ada59e37a4538beb2b16de26d",
+      "different_sha256": "6205b93e3bbdb3b749c584b142f7cf221f937fb8cfc298a24e2f1f4b7c8031bc",
+      "observed": "unit different; no negative principal part for x, x^2, y, or y^2"
+    },
+    "C2_nonproper_x2_xy": {
+      "result": "PASS",
+      "record_sha256": "e2ecec2469032547d3aef40ce7e80783b3995219e3f9bb3f6f8bcabb52a85cf0",
+      "local_algebra_sha256": "d6dfdec7f303bb470e62702174ad008fc8b7df407c4805ba6a21f9ba99291c36",
+      "different_sha256": "31940ce3dcdaae1e71287cf06866ef466c9218c4b36bdd789b1baea3cf42f5ea",
+      "y_second_principal_part": "2*q^2*t^-1",
+      "y_second_principal_part_sha256": "b4057cad9257288b105565b02747c58d3b254d5059c0d89a963851319444f293"
+    },
+    "D1_denominator42_b1": {
+      "result": "PASS",
+      "record_sha256": "79d51a9b9d100c22e1b5a183970e086650aec8e6d24d54e5d6f710885e95a913",
+      "local_algebra_sha256": "4b478e7698aef346013a70d010dba404cebfb5a12ce2d5a9475dd416af87e08c",
+      "different_sha256": "3fc5e68b1d6cfde7e2b39e3d7f42b3801a6b7f7c55eec6a131d0d18c5c4ae8a8",
+      "retained_decoration_sha256": "c299892d75b67ef532a3ef95e18c93c1591a5b58683dee66b738eb3abd6ce952",
+      "x_first_principal_part_sha256": "19fd6e4cdaf2812c7e0d520cc20c756b41e928defede1cfbec35c100bebc7766",
+      "x_second_principal_part_sha256": "356345294227348e8fe8442aa6b9aa4fb3def9a32289c3708949b285ee7220f1",
+      "x_quadratic_residue": 84
+    },
+    "D2_denominator42_b2": {
+      "result": "PASS",
+      "record_sha256": "bea02a18a5c16339b22bbdf85abacb72da6237cd29ba7eb8ab02f3aeb1b20f24",
+      "local_algebra_sha256": "4b478e7698aef346013a70d010dba404cebfb5a12ce2d5a9475dd416af87e08c",
+      "different_sha256": "3fc5e68b1d6cfde7e2b39e3d7f42b3801a6b7f7c55eec6a131d0d18c5c4ae8a8",
+      "retained_decoration_sha256": "c299892d75b67ef532a3ef95e18c93c1591a5b58683dee66b738eb3abd6ce952",
+      "x_first_principal_part_sha256": "19fd6e4cdaf2812c7e0d520cc20c756b41e928defede1cfbec35c100bebc7766",
+      "x_second_principal_part_sha256": "4a84fa39b11993886bb5822bfcffcae7df2019c5afc069de3cf5614bd1025d4b",
+      "x_quadratic_residue": 168
+    },
+    "record_hash_semantics": "SHA-256 of canonical JSON record body before insertion of record_sha256"
+  },
+  "fixed_different_varying_moment": {
+    "same_local_algebra": true,
+    "same_different_and_derivation_conductor": true,
+    "same_retained_contact_decoration": true,
+    "same_local_jacobian_two_form": true,
+    "same_coordinate_valuations": true,
+    "same_x_first_principal_part": true,
+    "same_x_second_principal_part": false,
+    "result": "PASS_STOP"
+  },
+  "stages": {
+    "receiver_controls": "PASS",
+    "fixed_different_separator": "PASS_STOP",
+    "native_source_type_gate": "NOT_REACHED_BY_PREREGISTERED_HARD_STOP",
+    "global_separator_candidate": "UNAVAILABLE_NOT_PREREGISTERED"
+  },
+  "scope": "The displayed local finite algebra, different/derivation conductor, retained contact decoration, coordinate valuations, and local Jacobian two-form do not determine the quadratic coordinate moment. The controls are formal-local and do not supply a polynomial Keller map, a genuinely global polynomial-origin identity, trace regularity, integrality, properness, or any conclusion about JC2."
+}

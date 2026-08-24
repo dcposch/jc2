@@ -1,0 +1,278 @@
+{
+ "campaign_data_audit": {
+  "missing_for_trace": [
+   "a proved GGV/source-to-paired-boundary dictionary",
+   "all branches grouped above one target DVR",
+   "a common target uniformizer with conjugation twists fixed",
+   "the completed coefficient slots entering c_(w,m,-e_w)",
+   "a construction of the field trace from D25 tail labels"
+  ],
+  "p1_usage": "P1 is used only as a COSTUME perimeter/tooling result; no P1 invariant is assumed as a proposition",
+  "retained": [
+   "pole/place counts, ramification indices and cycle types",
+   "Newton pairs, characteristic denominators and contacts",
+   "the pure-boundary determinant identity",
+   "finite modular D25 source jets in their own chart"
+  ]
+ },
+ "conditional_algebra_gate": {
+  "characteristic_polynomial_reconstructed": true,
+  "degree": 4,
+  "recursion": "m*e_m = sum_{i=1}^m (-1)^(i-1) e_(m-i)*Tr(z^i)"
+ },
+ "controls": {
+  "generically_finite_nonproper": {
+   "diagnostic": "m=1 cancels on both coordinates, while Tr(y^2)=2*q^2/t has residue 2*q^2 and detects nonregularity",
+   "field_degree": 2,
+   "jacobian": "2*x^2",
+   "map": "P=x^2, Q=x*y",
+   "nonproper_witness": "x=u -> 0, y=q/u -> infinity maps to (P,Q)=(u^2,q); (0,q), q!=0, has no affine preimage",
+   "target_DVR": {
+    "branches": [
+     "x=u,y=q/u",
+     "x=-u,y=-q/u"
+    ],
+    "power_sums": {
+     "Tr(x)": {
+      "expression": "0",
+      "principal_part": "0",
+      "residue_of_expression_dt": "0"
+     },
+     "Tr(x^2)": {
+      "expression": "2*t",
+      "principal_part": "0",
+      "residue_of_expression_dt": "0"
+     },
+     "Tr(y)": {
+      "expression": "0",
+      "principal_part": "0",
+      "residue_of_expression_dt": "0"
+     },
+     "Tr(y^2)": {
+      "expression": "2*q**2/t",
+      "principal_part": "2*q**2/t",
+      "residue_of_expression_dt": "2*q**2"
+     }
+    },
+    "relation": "t=P=u^2, Q=q (generic nonzero q)"
+   }
+  },
+  "tame_automorphism": {
+   "affine_target_DVR": {
+    "power_sums": {
+     "Tr(x)": {
+      "expression": "t",
+      "principal_part": "0",
+      "residue_of_expression_dt": "0"
+     },
+     "Tr(x^2)": {
+      "expression": "t**2",
+      "principal_part": "0",
+      "residue_of_expression_dt": "0"
+     },
+     "Tr(y)": {
+      "expression": "q - t**2",
+      "principal_part": "0",
+      "residue_of_expression_dt": "0"
+     },
+     "Tr(y^2)": {
+      "expression": "q**2 - 2*q*t**2 + t**4",
+      "principal_part": "0",
+      "residue_of_expression_dt": "0"
+     }
+    },
+    "substitution": "P=t, Q=q (generic q)"
+   },
+   "field_degree": 1,
+   "inverse": "x=P, y=Q-P^2",
+   "jacobian": "1",
+   "map": "P=x, Q=y+x^2",
+   "target_infinity_chart": {
+    "note": "poles here are ordinary polynomial growth at target infinity, not failure of A-regularity",
+    "power_sums": {
+     "Tr(x)": {
+      "expression": "1/t",
+      "principal_part": "1/t",
+      "residue_of_expression_dt": "1"
+     },
+     "Tr(x^2)": {
+      "expression": "t**(-2)",
+      "principal_part": "t**(-2)",
+      "residue_of_expression_dt": "0"
+     },
+     "Tr(y)": {
+      "expression": "q - 1/t**2",
+      "principal_part": "-1/t**2",
+      "residue_of_expression_dt": "0"
+     },
+     "Tr(y^2)": {
+      "expression": "q**2 - 2*q/t**2 + t**(-4)",
+      "principal_part": "-2*q/t**2 + t**(-4)",
+      "residue_of_expression_dt": "0"
+     }
+    },
+    "substitution": "P=t^-1, Q=q"
+   }
+  }
+ },
+ "engine": {
+  "arithmetic": "exact QQ[symbols]",
+  "sympy": "1.14.0"
+ },
+ "input_manifest": {
+  "AUDIT.md": {
+   "bytes": 88319,
+   "sha256": "1e8403edc264f71ee04a34ab903fde1e9d85bb295c50a35d0a78e699c05c81c4"
+  },
+  "PROGRESS.md": {
+   "bytes": 13450,
+   "sha256": "95c301e33aa7a8e76d3207ea61c6f8a7a1af96f57322c9a3a5ae2a326a6426d3"
+  },
+  "cases/round1_boundary_probe/results.json": {
+   "bytes": 7693,
+   "sha256": "f049f0315e635b792e0927281a34d8a71cef779a0d79cb5f5b01dded361e2e83"
+  },
+  "ladder/GROK-MONODROMY.md": {
+   "bytes": 22514,
+   "sha256": "a45ffd7577809c5e9ced861d10c6cd1d7c7e9286c6e257c3f4f0c2ced1acbd6c"
+  },
+  "ladder/SHEET6-CLASSICAL.md": {
+   "bytes": 17789,
+   "sha256": "459bfe8e3e8e57cf554c019d8051475e74d1e8f44e23991f87ae4cbe26030a2e"
+  },
+  "ladder/TRANSPORT.md": {
+   "bytes": 22997,
+   "sha256": "39a607c8935153c814cd51fb65a2f1c708a9e4ba5e1dd0f38f9c96401fc4a624"
+  },
+  "xmodel/round1-boundary-passport-20260824.md": {
+   "bytes": 8470,
+   "sha256": "a51e2f21f0ed37385d7c335a1ef6b6709827c4904b787d0ded2337c6a9a888e9"
+  }
+ },
+ "input_manifest_sha256": "b9028b003acccabea5299d02960bac0f276c86ad00c3ea8ac62ebcd477e39c85",
+ "local_trace_formula": {
+  "base_coefficient_specialization": "if every c_(w,m,n) lies in kappa_v, the coefficient factor is e_w*f_w*c_(w,m,n)",
+  "formula": "Tr(z^m)=sum_w e_w*sum_{e_w|n} Tr_(kappa_w/kappa_v)(c_(w,m,n))*t^(n/e_w)",
+  "principal_part": "retain the terms n<0 with e_w|n",
+  "required_data": [
+   "all places w above the same target valuation v",
+   "ramification and residue degrees e_w,f_w",
+   "a common target uniformizer and branch embeddings",
+   "the completed coefficients contributing to c_(w,m,n)"
+  ],
+  "residue": "Res_t(Tr(z^m)dt)=sum_w e_w*Tr_(kappa_w/kappa_v)(c_(w,m,-e_w))",
+  "setup": "At a target DVR K_v=kappa_v((t)), put each tame completed factor in split form t=u_w^e_w and write z_w(u_w)^m=sum_n c_(w,m,n)u_w^n, with coefficients in the residue field kappa_w."
+ },
+ "perimeter": [
+  "the collision is not a Keller map or formal Keller countermodel",
+  "m=1,2 do not establish the trace criterion when field degree >2",
+  "no claim is made about all residue-A coefficient completions",
+  "no trace regularity, finiteness, or automorphism is proved"
+ ],
+ "status": "INTERNAL / PRODUCER-CHECKED",
+ "tool": "cases/round1_trace_probe/trace_probe.py",
+ "tool_sha256": "faadfaf26c7184c24fc3e55a3de90c881e38b0bf12293cb245bcaa9ab5ad0372",
+ "underdetermination_collision": {
+  "completions": [
+   {
+    "Tr(z)": "42*t + 42/t + 42/t**2",
+    "Tr(z^2)": "42*t**2 + 84 + 84/t + 42/t**2 + 84/t**3 + 42/t**4",
+    "a": 1,
+    "b": 1,
+    "decoration": {
+     "all_displayed_coefficients_nonzero": true,
+     "characteristic_gcd_sequence": [
+      42,
+      6,
+      2,
+      1
+     ],
+     "characteristic_index_sequence": [
+      7,
+      3,
+      2
+     ],
+     "characteristic_offsets_from_leading": [
+      54,
+      74,
+      79
+     ],
+     "conjugate_orbit_size": 42,
+     "contact_invariance": "the varying b*u^42 term is fixed by u -> zeta*u, so it cancels in every conjugate difference and changes no contact",
+     "invariant_leading_exponent": -84,
+     "leading_coefficient": 1,
+     "occupied_exponents": [
+      -84,
+      -42,
+      -30,
+      -10,
+      -5,
+      42
+     ],
+     "ramification_denominator": 42,
+     "varying_slot_offset_from_leading": 126
+    },
+    "principal_part_Tr(z)": "42/t + 42/t**2",
+    "principal_part_Tr(z^2)": "84/t + 42/t**2 + 84/t**3 + 42/t**4",
+    "residue_Tr(z)_dt": "42",
+    "residue_Tr(z^2)_dt": "84"
+   },
+   {
+    "Tr(z)": "84*t + 42/t + 42/t**2",
+    "Tr(z^2)": "168*t**2 + 168 + 168/t + 42/t**2 + 84/t**3 + 42/t**4",
+    "a": 1,
+    "b": 2,
+    "decoration": {
+     "all_displayed_coefficients_nonzero": true,
+     "characteristic_gcd_sequence": [
+      42,
+      6,
+      2,
+      1
+     ],
+     "characteristic_index_sequence": [
+      7,
+      3,
+      2
+     ],
+     "characteristic_offsets_from_leading": [
+      54,
+      74,
+      79
+     ],
+     "conjugate_orbit_size": 42,
+     "contact_invariance": "the varying b*u^42 term is fixed by u -> zeta*u, so it cancels in every conjugate difference and changes no contact",
+     "invariant_leading_exponent": -84,
+     "leading_coefficient": 1,
+     "occupied_exponents": [
+      -84,
+      -42,
+      -30,
+      -10,
+      -5,
+      42
+     ],
+     "ramification_denominator": 42,
+     "varying_slot_offset_from_leading": 126
+    },
+    "principal_part_Tr(z)": "42/t + 42/t**2",
+    "principal_part_Tr(z^2)": "168/t + 42/t**2 + 84/t**3 + 42/t**4",
+    "residue_Tr(z)_dt": "42",
+    "residue_Tr(z^2)_dt": "168"
+   }
+  ],
+  "decisive_collision": true,
+  "family": "z_b=u^-84+u^-30+u^-10+u^-5+a*u^-42+b*u^42",
+  "generic_formulas": {
+   "Res(Tr(z)dt)": "42*a",
+   "Res(Tr(z^2)dt)": "84*b",
+   "Tr(z)": "42*a/t + 42*b*t + 42/t**2",
+   "Tr(z^2)": "42*a**2/t**2 + a*(84*b + 84/t**3) + 42*b**2*t**2 + 84*b/t + 42/t**4"
+  },
+  "local_relation": "t=u^42",
+  "meaning": "denominator, full exponent support, leading coefficient, all characteristic gcd drops and every conjugate contact agree, but the second Newton-sum residue changes with an invariant completed coefficient",
+  "not_a_formal_Keller_countermodel": "this is a local data-sufficiency witness; no polynomial pair or constant-Jacobian completion is asserted"
+ },
+ "verdict": "INSUFFICIENT-DATA",
+ "verdict_reason": "The current valuation/contact packet does not supply a complete target-local branch decomposition or the coefficients selected by the trace residue formula.  Two exact completions with the same retained coarse decorations have different m=2 residues."
+}

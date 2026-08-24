@@ -661,6 +661,33 @@ On every box restart/reuse: crontab -l FIRST; remove any deadline/poweroff/lifec
   removed by theorem. The six are certified LOCAL T1 survivors
   (explicit admissible solutions); next tier = transport/global.
 
+## SUPERMIND/GUO BOUNDED CERTIFICATE INTAKE (2026-08-24)
+xmodel/intake-supermind-guo-20260824.md (producer) and
+xmodel/review-external-intake-grok.md (different-model hostile review:
+**CONFIRMED WITH GAPS**). This is an artifact/provenance intake, not an
+independent proof count and not an unconditional degree theorem.
+- PROMOTED AT THE STATED ARTIFACT TIERS: the SuperMind first-layer and Case-II
+  exact Python checks; the pinned Case-I Singular characteristic-zero
+  52-dimensional/good-specialization full-rank terminal; Guo's authoritative
+  790-file manifest and its exact/hash/regression/conditional audits; the
+  degree-21 passport enumeration; the advertised characteristic-zero FGLM
+  *program* replay; and the two row-split polynomial identities.
+- EXACT CROSSWALK: SuperMind and Guo use the same two Proposition-4.3 Laurent
+  systems under a lossless renaming, and their Helali/Suzuki reductions give
+  exact zero remainders to the common quintic. Neither proof path invokes
+  msolve `-g`.
+- GAPS/QUALIFIERS: the SuperMind Python regeneration of the pinned Case-I
+  `.sing` file capped; Guo's Sage-only lift, `V(c)`, `D != 0`, and `D=E=0`
+  terminal expansions were not rerun. Guo's FGLM script uses Singular
+  `modStd(I,1)` on a nonhomogeneous global-order ideal: the advertised program
+  replay passes, but it is not to be described as a fully rational `std`
+  certificate.
+- NO GLOBAL PROMOTION: coordinate equivalence and artifact correctness do not
+  establish social or derivational independence. Both bounded exclusions
+  still depend on the GGV-Horruitiner reduction/transcription bridge. Thus no
+  unconditional exclusion of every `(72,108)` counterexample, no unconditional
+  degree-125 theorem, and no implication for JC2 is recorded here.
+
 ## Lift retirement (2026-08-13)
 cCa2/cCa6 char-0 lift certificates: RETIRED under the last-chance rule
 (no LIFT-CERT at the post-outage ultramem check; runs killed).
@@ -819,6 +846,58 @@ char-0 counterexample seed lifts from this stratum. Sol construction
 SOUND (xmodel/grok-witt-review.md). Disproof door closed on the
 stratum; the lane's continuation (other strata) is optional and
 unranked.
+
+## ODD-PRIME FIRST-WITT SURVIVOR (2026-08-24)
+xmodel/round2-witt-oddprime-20260824.md and
+cases/round2_witt_oddprime/ (exact producer plus independent replay), with
+xmodel/review-witt-oddprime-claude.md (different-model hostile review:
+**CONFIRMED**).
+- PROMOTED AT THE FINITE-FIELD/`W_2(F_3)` TIER ONLY: over `F_3`,
+  `(P,Q)=(x-x^3,y)` has Jacobian one, generic degree three, and the distinct
+  marked points `(0,0)` and `(1,0)` collide at `(0,0)`.  Its unrestricted
+  first Witt obstruction vanishes.
+- EXPLICIT LIFT: in `W_2(F_3)=Z/9`,
+  `(P_2,Q_2)=(x+8x^3,y+3x^2y)` has exact integer determinant
+  `1+27x^2+72x^4`, hence determinant one modulo 9, and the same marked
+  collision persists.  Independent implementations, a third hostile
+  recomputation, and the frozen manifest all agree.
+- CONSEQUENCE AT THIS SCOPE: the promoted characteristic-two obstruction on
+  the registered Mondello stratum is not a blanket first-Witt obstruction at
+  odd primes or on other supports.
+- NOT SHOWN: no `W_3`, bounded-support compatible all-Witt tower, `Z_3` or
+  characteristic-zero polynomial lift, germ, or JC2 counterexample follows.
+  The displayed correction already enlarges support.
+
+## UNRESTRICTED-SUPPORT ALL-WITT ARTIN--SCHREIER CONTROL (2026-08-24)
+xmodel/witt-tate-control-20260824.md (exact closed-form producer plus internal
+audit), with xmodel/review-witt-tate-control-claude.md (different-model hostile
+review: **CONFIRMED**). This is a separate descendant/control, not a widening
+of the finite `W2-SURVIVOR` case above.
+- PROMOTED AT THE ALL-WITT / RESTRICTED-ANALYTIC CONTROL TIER: for every odd
+  prime `p` and `n>=1`, over `W_n(F_p)=Z/p^n`,
+  `F_n=(x-x^p, y*sum_{j=0}^{n-1}(p*x^(p-1))^j)` has exact integer determinant
+  `1-p^n*x^(n*(p-1))`, hence determinant one modulo `p^n`. The maps are
+  compatible under every Witt truncation and the fixed distinct points
+  `(0,0),(1,0)` collide at every level. Each map is finite etale of rank `p`.
+- LOAD-BEARING ESCAPE: `Q_n` has exactly `n` monomials and degree
+  `1+(n-1)(p-1)`. Thus support and degree grow linearly. The inverse limit is
+  the nonpolynomial restricted-analytic/rational bidisc map
+  `(x-x^p,y/(1-p*x^(p-1)))` in `Z_p<x,y>`, still finite etale of rank `p`,
+  determinant one, and noninjective. It is not a polynomial endomorphism of
+  affine two-space.
+- CONSEQUENCE AT THIS SCOPE: no later finite Witt obstruction can kill this
+  seed when growing support is allowed, and compatible lifting through every
+  finite level does not by itself yield a characteristic-zero polynomial.
+  The missing uniform-support-or-polynomial-limit criterion was already
+  stated in `xmodel/sol-witt.md` section 6; this is its first explicit
+  same-seed witness.
+- NOT SHOWN: no bounded-support or uniformly bounded-degree tower, alternate
+  polynomial lift, impossibility theorem for other lifts, complex polynomial
+  map, germ, or JC2 counterexample follows.
+- GOVERNANCE: the coordinator accepts this as the synthesis's single
+  explicitly provisional, closed-form descendant while review ran, not as a
+  same-generation enumerative `W3`/support-search cap. It is now independently
+  confirmed; the W search root remains stopped.
 
 ## TD11-CLASH promotion at exact-core tier (2026-08-14)
 PROMOTED: the td-11 entry-clash theorem at its honest tier — entry
@@ -1013,6 +1092,82 @@ td <= C alpha beta; it is not equivalent to an absolute G5 ceiling unless a
 separate theorem supplies a bounded/cofinal type menu with valid provenance.
 The EXACT, dual-model-confirmed tier here applies to the identity and the
 class-kill, not to the still-conjectural KJN estimate.
+
+## RAW BOUNDARY PASSPORT/CAPACITY PROBE RETURNS COSTUME (2026-08-24)
+xmodel/round1-boundary-passport-20260824.md and
+cases/round1_boundary_probe/ (exact QQ producer run; coordinator byte-identical
+replay), with xmodel/review-round1-proof-gates-claude.md (different-model
+hostile review: **CONFIRMED**). This is a route-falsification result, not a
+theorem about every possible compactified boundary invariant.
+- Exact control suite: identity; `T_n=(x,y+x^n)` for n=2,4;
+  `T_4^{-1} o T_4`; the promoted Henon automorphisms at r=0,1; and the
+  non-Keller class-kill member only as a negative control. One explicit
+  boundary blow-up chart is included.
+- VERDICT **COSTUME** for the tested raw proposals. Gradient-cokernel
+  Fitting/Smith splits, log-coframe Smith splits, and action-primitive pole
+  orders vary under polynomially equivalent presentations and/or the explicit
+  blow-up; tame and Henon automorphisms make them arbitrarily large, while
+  exact orbit minimization returns the identity data. The stable Keller-suite
+  outputs are the log-determinant volume orders and zero residues of exact
+  meromorphic differentials, both consequences of `J=1` rather than stronger
+  capacity data.
+- KILLED AT THIS SCOPE: untwisted action-residue charge, raw primitive pole
+  order as an invariant budget, raw `Q`/`Fitt_1`/Smith filtration as a
+  coordinate-free passport, unsigned raw log-coframe/localized-Chern charge,
+  and raw boundary exponent as a uniform consumable cap.
+- NOT KILLED: the exact pure-boundary identity; use of `Q` as a checksum after
+  a proved choice-independent minimization/compactification; boundary-twisted
+  forms; or a signed global invariant using complete polynomial data. Those
+  redesigns first owe covariance/minimality and positivity, and no theorem lane
+  is opened by the present computation.
+
+## TRACE-REGULARITY AUDIT: CURRENT CONTACT PACKET IS INSUFFICIENT (2026-08-24)
+xmodel/round1-trace-regularity-20260824.md and
+cases/round1_trace_probe/ (exact producer run; coordinator byte-identical
+replay), with xmodel/review-round1-proof-gates-claude.md (different-model
+hostile review: **CONFIRMED**).
+- EXACT CHARACTERISTIC-ZERO REDUCTION: for a generically finite plane Keller
+  map of function-field degree `d`, regularity of the first `d` field power
+  traces of `x` and `y` is equivalent to integrality/finiteness and hence to
+  automorphy. This is an honest reformulation of the missing finiteness step,
+  not a shortcut to it; the required cutoff `d` is itself unbounded.
+- EXACT UNDERDETERMINATION CONTROL: two denominator-42 formal completions have
+  identical retained support, contacts, gcd chain `42 -> 6 -> 2 -> 1`, indices
+  `(7,3,2)`, leading data, and full `m=1` principal parts, but their `m=2`
+  residues are respectively 84 and 168. The varying coefficient sits at
+  offset 126, beyond the last retained level 79.
+- CONSEQUENCE AT THIS SCOPE: the current contact-only packet does not determine
+  the quadratic trace principal part. The missing datum is an
+  affine-target-divisor-tagged completed branch pairing, including coefficient
+  convolution and residue-field traces. Do not build a general TRACE-REG
+  engine from the current packet.
+- NOT SHOWN: the formal pair is not a Keller countermodel; TRACE-REG is not
+  refuted; no nonautomorphic Keller map is produced; and no claim is made that
+  every augmented packet is insufficient or that a universal trace cutoff is
+  impossible.
+
+## NORMALIZATION/DIFFERENT RECEIVER DOES NOT FIX QUADRATIC MOMENTS (2026-08-24)
+xmodel/round2-norm-moment-sep-20260824.md and
+cases/round2_norm_moment_sep/ (exact producer), with
+xmodel/review-norm-moment-sep-grok.md (different-model hostile review:
+**CONFIRMED**).
+- PROMOTED AT THE FORMAL-LOCAL CONTROL TIER: for `t=u^42`, the two exact
+  Darboux completions
+  `x_b=u^-84+u^-42+u^-30+u^-10+u^-5+b*u^42`,
+  `y_b=42*q*u^41/(d x_b/du)`, with `b=1,2`, have the same finite local
+  algebra, different `(42u^41)`, conductor exponent, selected contact/gcd
+  decoration, coordinate valuations, local Jacobian two-form, and complete
+  first trace principal part.
+- DECISIVE SEPARATION: the `t^-1` coefficients of `Tr(x_b^2)` are 84 and 168.
+  Thus the displayed local algebra/different/contact/Jacobian packet does not
+  determine even the quadratic coordinate moment.  Coordinate multiplication
+  data differ, as they must, and can carry the missing information.
+- HARD STOP HONORED: the preregistered native-source type gate was not run once
+  `DIFFERENT-INSUFFICIENT` fired.  No claim is made that a native GGV packet
+  cannot populate a richer target-divisor-tagged receiver.
+- NOT SHOWN: these are formal-local controls, not polynomial Keller maps; no
+  global polynomial-origin identity is excluded, TRACE-REG is unaffected at
+  its honest finiteness-equivalent scope, and no JC2 conclusion follows.
 
 ## G2-BD/KJN FORMAL SEPARATION + PUISEUX gcd DICTIONARY (2026-08-23; terminology corrected)
 The unification lane (xmodel/sol-unify.md) asked whether one Keller bound
@@ -1277,7 +1432,7 @@ interpretation and status. The current detailed dependency theorem is
   decorated Sigray pole tree faithfully enough for the book machinery.
 - **`G2-BD` (bounded delay/carrier)** begins only after residue-A has been
   reached and asks for the carrier/delay bound needed to enter a finite book.
-  Neither G2 obligation implies the other.
+  Neither scoped obligation implies the other.
 - A hybrid proof using GGV restrictions in the Sigray stage owes `G2-PSC`. A
   pure Sigray proof may bypass `G2-PSC` by selecting/minimizing the hypothetical
   counterexample wholly in that frame, but then it may not claim the unused
@@ -1296,8 +1451,9 @@ STATUS: the pure-boundary identity/class-kill and unrestricted Henon
 obstruction are dual-confirmed at their stated scopes. The KJN/RPMC/PC/DIR,
 UCD-A-min/A-SCALE, formal countermodel, and DIR/A-SCALE comparison work is
 single-model decisive partial unless separately reviewed later. In particular,
-there is no promoted G2/G5 independence theorem, no promoted merger theorem,
-and no implication making the complete book ladder unconditional.
+there is no promoted independence theorem joining `G2-PSC`/`G2-BD` to the
+G5/type-ceiling side, no promoted merger theorem, and no implication making
+the complete book ladder unconditional.
 
 ## D43 FULLY-RECONSTRUCTED RESIDUE-A FAMILY = NONEMPTY (2026-08-23, MOD-p / INTERNAL)
 xmodel/sol-d43full.md; cases/d43_full_{family.py,certificate_p*.json,floor_p*.json}.
@@ -1361,15 +1517,31 @@ xmodel/sol-clift.md; cases/d43_char0_lift.py + d43_char0_lift_p105337.json.
   Next concrete item: recover/re-derive the band checkpoints to build the
   common integral model, then the dimension/flatness certificate.
 
-## D43 MODULAR SOURCE/NF FIDELITY CLOSED; STAGE 2 OPEN (2026-08-23)
-xmodel/sol-d43int.md (single-model; engines + fail-closed gates in cases/).
-- NEW EXACT: the fully-reconstructed 218-row modular presentation is freshly
-  audited at BOTH primes (row/variable census + all checkpoint hashes), and at
-  p=105337 every one of the 184 pristine graph rows carries a replayed
-  source-to-D23-NF membership trace R_raw = R_NF + sum Q_j G_j, reconstructed
-  coefficient-by-coefficient (24.9M/38.9M/102.9M terms) and dictionary-exact
-  against the recovered checkpoints. This closes the model-provenance ambiguity
-  flagged in sol-clift: the tested graph polynomials ARE the source reductions.
+## D43 MODULAR SOURCE/NF FIDELITY REVIEWED WITH SCOPED GAP; STAGE 2 OPEN (2026-08-23/24)
+xmodel/sol-d43int.md (producer) and xmodel/review-d43-nf-fid-grok.md
+(different-model hostile review: **CONFIRMED WITH GAPS**).
+- EXACT, DUAL-MODEL CONFIRMED: the fully reconstructed modular presentation has
+  184 variables and 218 rows = 34 parked + 95 old graph + 89 late graph rows at
+  both primes; the row/eta census, checkpoint schema/prime/band/fiber, and all
+  recorded canonical hashes replay. The 34 parked rows are the prime-specific
+  D25 `.ms` files; the checkpoint payloads contain no integral or trace data.
+- PRODUCER-FULL + INDEPENDENT SPANNING CORROBORATION at p=105337: the producer
+  replay reconstructs all 184 checkpoint rows coefficient-by-coefficient as
+  `R_raw = R_NF + sum Q_j G_j` (24.9M raw / 38.9M NF / 102.9M quotient-trace
+  terms), dictionary-exact against the checkpoints. Grok independently parsed
+  the 509 reducers and rebuilt tuple grevlex division on 2,355 groups across 62
+  rows, including every group through band 14 and a row at every later band;
+  zero mismatches. It also checked a bijection and origin evaluation on all
+  382,824 groups. The remaining 122 fat-row dictionary remainders and the full
+  producer replay were not regenerated, so this clause is corroborated rather
+  than fully dual-recomputed.
+- SCOPE CORRECTION: this establishes that the **checkpoint NF rows** are the
+  stated modular source reductions. At band 42 the final `rung_kernel` assembly
+  adjoins the `Xf_alpha`/`Xg_beta` P4P1 correction; those names are absent from
+  the checkpoints and the 184 source-to-NF traces. Thus “all assembled graph
+  polynomials are covered by those checkpoint traces” would overstate the
+  reviewed result. The separately hashed modular assembly/census still passes,
+  and the source-honesty gate below now accounts for the sidecar explicitly.
 - Bandwise local-normal-form engine (nested pivots + product criterion, no std):
   localized generation on the fixed parked fiber PASSES through band 32; band 34
   is a 300s timeout (not a nonzero remainder). The 9 band-10 origin identities
@@ -1377,6 +1549,134 @@ xmodel/sol-d43int.md (single-model; engines + fail-closed gates in cases/).
 - STILL OPEN (stage 2): common integral presentation (the D23 reducer basis and
   parked rows exist only as prime-specific modular objects), all-218 p^2 replay,
   local dimension 53, generation by the 131 unit-minor equations, p-flatness,
-  any Z_p / char-0 point. Named next bounded move: integral re-emission of the
-  parked system over the radical number ring with reducer-to-parked traces,
-  then full-cell bandwise membership and a non-origin point.
+  any Z_p / char-0 point. The reviewed source-defined D25-to-D27 one-band
+  signal below makes its full-cell compatibility locus the next discriminator.
+  Decide that locus before integral D43 engineering; only a separately reviewed
+  coherent stratum could license re-emission over the radical number ring with
+  reducer-to-parked traces and non-origin local membership.
+
+## D43 BAND-42 P4P1 SIDECAR IS SOURCE-DERIVED AND ORIGIN-ONLY (2026-08-24)
+xmodel/round2-p4p1-honesty-20260824.md and
+cases/round2_p4p1_honesty/ (exact producer plus independent replay), with
+xmodel/review-p4p1-honesty-grok.md (different-model hostile review:
+**CONFIRMED; exact-source / MOD-p compiler-interface tier**).
+- EXACT SOURCE IDENTITY: the sidecar correction is
+  `42*S_M*G_M*(3*alpha-2*beta)*p(eta)^4*p'(eta)`. A direct four-term Euler
+  expansion and an independent factored-product derivation agree before
+  specialization; the actual `rung_kernel` subtraction matches all ten rows.
+- EXACT BASE-IDEAL STATUS: neither checkpoint contains `Xf_alpha` or
+  `Xg_beta`. At both registered primes, all twenty sidecar coefficients are
+  nonzero constants and hence remain unchanged under the registered
+  509-element `I23` Groebner bases. The correction is not zero modulo the base
+  ideal and is load-bearing away from its sidecar zero line.
+- VERDICT `ORIGIN-ONLY`: at the named completion `alpha=beta=0`, used by the
+  modular origin witness, the correction vanishes; at the fixed control
+  `(alpha,beta)=(1,0)` it changes all ten rows. Therefore no wrong mathematics
+  invalidates that origin witness. The defect was the provenance/scope slogan:
+  checkpoint source traces do not themselves cover the later sidecar.
+- REVIEW HARDENING: the hostile reviewer independently derived the identity,
+  executed the live `rung_kernel` assembler on empty input and all ten real
+  checkpoint rows at both primes, and recomputed every exact `I23` normal form.
+  The sidecar-zero locus is the line `3*alpha-2*beta=0`; nonzero graph
+  reconstruction witnesses away from that line are outside this origin gate.
+- CLEAN WORDING: “checkpoint rows are source-to-NF traced modulo `I23`; final
+  assembly adjoins the displayed exact source-derived sidecar, which vanishes
+  at the named origin.” No integral emitter, general D43 nonemptiness,
+  compatible tail, germ, characteristic-zero point, or JC2 inference follows.
+
+## D25-TO-D27 SOURCE TRANSITION: ONE-BAND FREE-TAIL SIGNAL (2026-08-24)
+xmodel/round1-dtransition-20260824.md and
+cases/round1_dtransition/ (producer), with
+xmodel/review-dtransition-grok.md (different-model hostile review:
+**CONFIRMED**).
+- SCOPE: exact modular arithmetic at `p=105337,105673`, fiber `a00pp`, one
+  chart, four named points, and band 26 only. The unreduced recurrence gives a
+  typed projection `X27 -> X25`, adding exactly ten band-26 rows and ten
+  first-occurrence coordinates without changing a lower row. It imports no
+  D43 or `D43-NF-FID` artifact.
+- POSITIVE POINTWISE SIGNAL: at each of two named witnesses,
+  `rank(A)=rank([A|b])=4`; the affine fiber has dimension six, and all twelve
+  displayed kernel lifts (six at each prime) replay through the unreduced
+  source recurrence to band 26.
+- NEGATIVE POINTWISE SIGNAL: at each of two deterministic interior points,
+  `rank(A)=4` but `rank([A|b])=5`; exact left-cokernel pairings are nonzero, so
+  those points do not prolong through this band.
+- VERDICT `FREE-TAIL-SIGNAL`: compatible one-band fibers exist over the two
+  witnesses while other D25 points are cut. The same lifted directions leave
+  nonzero residuals at bands 30, 36, and 40. Therefore this proves no
+  component, dominance, full-cell rank statement, band-28 persistence,
+  compatible inverse system, formal germ, characteristic-zero point, or
+  polynomial Keller map. The registered next gate is the source-defined
+  compatibility locus on one full promoted D25 cell, stopping before band 28.
+
+## D25 CELL-0 BAND-26 COMPATIBILITY LOCUS IS NONEMPTY, RANK AT LEAST FIVE (2026-08-24)
+cases/round1_dtransition_fullcell/ and
+xmodel/round1-dtransition-fullcell-20260824.md (producer), with
+xmodel/review-dtransition-fullcell-grok.md (different-model hostile review:
+**CONFIRMED**).
+- SCOPE: `p=105337`, fiber `a00pp`, promoted cell-0 `A^14`, fixed
+  `(W1,W2)=(31931,9457)`, and the source-defined band-26 compatibility problem
+  only. The six functions are the canonical left-cokernel contractions of the
+  unreduced ten-row source block after exact D25 and band-24 triangular
+  pullback. No D43 artifact enters.
+- NONEMPTY + LOWER RANK BOUND: the cell origin is a certified common zero. Its
+  exact `6 x 14` Jacobian has rank five, witnessed by a nonzero `5 x 5` minor
+  of determinant 39793. Hence the compatibility locus on this modular cell is
+  nonempty and the generic differential rank is at least five. The
+  preregistered rank-six-at-origin gate failed.
+- MIXED FULL-CELL BEHAVIOR: the deterministic same-cell point with free
+  coordinates `1,...,14` is cut by compatibility; its function vector is
+  `(23070,55420,82249,287,11111,1237)` and its Jacobian again has rank five,
+  with displayed minor 104469. Thus the pointwise witness/interior split was
+  not merely a comparison between different cells.
+- SOURCE/TANGENT CHECK: the full reconstruction and a scratch rerun are
+  byte-identical. Independent differentiation confirms the cell, 86-row
+  D21/Row-22, prefix, and band-24 frontier chains. The shared-prefix derivative
+  is `1-C_k`; replacing it by `-C_k` changes the origin minor and makes the
+  sequence-point frontier tangent inconsistent at `x68=uf18`.
+- OPEN UPPER BOUND: the constant row vector
+  `(104372,48519,44983,31248,84848,1)` annihilates function values and
+  Jacobians at the two registered points and four hostile extra probes, but no
+  global polynomial-identity certificate was obtained. Do not infer generic
+  rank exactly five, dimension, reducedness, or component structure.
+- NO DESCENT INFERENCE: nothing here proves a non-origin compatible rank-six
+  point, band-28 persistence, a compatible inverse system, formal germ,
+  characteristic-zero point, algebraization, polynomial Keller map, or JC2
+  counterexample. The licensed provisional continuation was the separate
+  source-stationarity gate, not another depth computation; it has since
+  returned producer/replay `NO-TYPED-STATIONARITY` because the current full
+  source does not classify its first x-side directions. The following entry
+  records its separate hostile confirmation.
+
+## D SIX-BAND PURE-Y LAW CONFIRMED; FULL SOURCE NOT TYPED (2026-08-24)
+xmodel/round2-dstate-gate-20260824.md and cases/round2_dstate_gate/
+(exact producer plus independent replay), with
+xmodel/review-dstate-grok.md (different-model hostile review:
+**CONFIRMED**).
+- POSITIVE SCOPED RESULT: at the two registered modular D25 witnesses, the
+  unreduced pure-`y` source through band 40 has the corrected 30-input /
+  30-output six-band state, including `H_29` at start 36. The shifted
+  first-occurrence layers at bands 26, 32, and 38 are exact `10 x 10` types;
+  their truncation squares commute coefficientwise, dual and grouped source
+  derivatives agree, and `M_38-2*M_32+M_26=0` after six-shift relabeling.
+- FIRST FULL-SOURCE INTERFACE: independently,
+  `[t^42]E_full=[t^42]E_y+42*S_M*G_M*(3*alpha_1-2*beta_1)*p(eta)^4*p'(eta)`.
+  Both partials are nonzero over `Q` and at both registered primes.
+- VERDICT `NO-TYPED-STATIONARITY`: the current constructor has no x-side
+  argument; its 30 streams contain neither `alpha_1` nor `beta_1`; and no
+  source-derived held/derived/independent classification, chain rule,
+  six-shift relabeling, or projection map for them is banked. Choosing one
+  would invent the state map.
+- NOT SHOWN: the three-layer affine check is not an all-depth stationarity
+  theorem. No finite full-source state, Ore/Spencer/Fitting or syzygy object,
+  band-28 persistence, D43 result, inverse system, germ, characteristic-zero
+  point, algebraization, polynomial Keller map, or JC2 inference follows.
+  The frozen `UNBOUNDED-STATE` label is not implemented as a producer branch;
+  future reuse must close that driver-completeness gap. It does not alter this
+  verdict because the omitted factor directions form a finite but untyped list.
+- FROZEN-SOURCE DOCUMENTATION CAVEAT: the header of `cases/valuation_e2.py`
+  still narrates the earlier 29-output candidate (`E_29=0`, start sum 240),
+  although the same file later records its refutation. The source byte is
+  preserved because several manifests pin it. This confirmed entry supersedes
+  that header for live state: include `H_29` at start 36, giving 30 outputs and
+  start sum 276; the legacy tool's 29-output diagnostic remains historical.

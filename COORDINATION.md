@@ -2,9 +2,9 @@
 
 This file owns the campaign's live operating policy. It is model-agnostic:
 any sufficiently capable model can fill any role below. Avenue inventory and
-ranking belong in `APPROACHES.md`; the detailed Keller-to-book/G2 dependency
-theorem belongs in `ladder/REDUCTION.md`; claim-level evidence belongs in
-`AUDIT.md`. None is duplicated here.
+ranking belong in `APPROACHES.md`; the detailed Keller-to-book / `G2-PSC` /
+`G2-BD` dependency map belongs in `ladder/REDUCTION.md`; claim-level evidence
+belongs in `AUDIT.md`. None is duplicated here.
 
 ## Mission and decision rule
 
@@ -33,10 +33,10 @@ The six top-level Markdown files have disjoint jobs:
 - `notes.md` — append-oriented tick log and active-state journal.
 
 The newest `LIVE STATE` block in `notes.md` is authoritative for lanes, holds,
-provisional claims, review debt, clocks, and the immediate queue. `xmodel/` holds immutable
-producer, reviewer, sweep, and round reports; code and replay artifacts live
-beside the relevant cases. `ops/FLEET.md` owns machine inventory and compute
-safety rules.
+provisional claims, review debt, clocks, and the immediate queue. `xmodel/`
+holds immutable producer, reviewer, sweep, and round reports; code and replay
+artifacts live beside the relevant cases. `ops/FLEET.md` owns machine inventory
+and compute safety rules.
 
 Do not maintain a second live queue, avenue map, or evidence ledger. Link to
 the canonical entry instead of copying it. When a digest must repeat a fact,
@@ -118,7 +118,7 @@ A result may enter `PROVISIONAL` only when all of the following are recorded:
    STATE`; it is not silent permission to promote.
 5. **Fail closed.** `REFUTED` triggers immediate rollback. `GAP` preserves only
    the portion actually checked. Corrections are appended promptly to
-`notes.md`, the relevant canonical route/evidence file, and the current
+   `notes.md`, the relevant canonical route/evidence file, and the current
    daily digest.
 
 When the current reduction architecture is discussed, use the scoped names
@@ -179,10 +179,18 @@ Run an immediate strategy update when any of these occurs:
 A targeted response to a routine local event is a **micro-round**: triage the
 delta, launch or stop bounded work, and bank it without forcing every ideator
 to rescan all avenues. It does not reset the 12-hour clock. A credible external
-proof/counterexample, a load-bearing review reversal, or any change to the
-promoted ledger is critical and starts a full round immediately. Other events
-start a full round when they materially change the global ranking; otherwise
-they receive a micro-round.
+proof/counterexample, a load-bearing review reversal, or any non-echo change to
+the promoted ledger is critical and starts a full round immediately, subject
+to the coalescing rule below. Other events start a full round when they
+materially change the global ranking; otherwise they receive a micro-round.
+
+Coalesce echo events to prevent review/round thrashing. If a sealed full-round
+packet already states a provisional result's complete mathematical content and
+the post-cutoff review merely confirms that same content and scope, harvest the
+lifecycle promotion as a micro-round; it does not trigger an otherwise
+identical full scan. Any refutation, narrowed or enlarged scope, new dependency,
+or rank-changing review fact remains a critical trigger. Record the coalescing
+decision explicitly in the next synthesis or `LIVE STATE`.
 
 If a critical event arrives during an open full round and invalidates a
 load-bearing snapshot assumption, mark that round `ABORTED` and reseal. If it

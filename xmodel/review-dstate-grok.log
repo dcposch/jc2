@@ -1,0 +1,20 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the review skill and the producer claim, then independently audit every artifact without trusting stored prose or booleans.This is a mathematical audit, not a code-review skill run. I'll load the case artifacts, previous review format, and banked sources next.I'll load the gate implementations, JSON records, and banked sources so I can recompute instead of trusting stored verdicts.Next I’ll hash-check the banked files, reconstruct the coefficient formula, and inspect the constructor labels independently.I’ll read the source constructors and x-side spec next, then run independent arithmetic outside the repo.I have the algebraic identity; next I’ll recompute hashes, chronology, polynomials, and the modular matrices outside the repo.I’ll recompute the coefficient identity and the modular matrices in scratch, without touching repository artifacts.The modular rebuilds are still running. I’ll keep auditing constructor typing and the x-side search while they finish.The matrices match and the second difference vanishes. I’ll pull a non-constant entry so the affine law isn’t just `c-2c+c`.Independent recomputation matches the banked record. I’ll write the review now, splitting the pure-`y` confirmation from the typing stop.**CONFIRMED.** The split `NO-TYPED-STATIONARITY` record stands: the pure-`y` six-band window is real at both registered primes, and the full source still has no typed `α_1,β_1` interface.
+
+The review is in `xmodel/review-dstate-grok.md`. That was the only repository write. Scratch work is under `/tmp/dstate-grok-hUwGz5`.
+
+**Positive (pure-`y`).** At the two already-reviewed modular D25 witnesses, the unreduced 30-input / 30-output source through band 40 has the registered six-step ladders (`sum r=288`, `sum s=276`), keeps `H_{29}` at band 36, and has exact shifted `10×10` first-occurrence layers at 26/32/38. Combined unit perturbations leave lower rows unchanged. Dual-jet and four-term product-rule derivatives agree through 40. After a simultaneous six-shift, `M_{38}-2M_{32}+M_{26}=0`; 90 of 100 entries at `p=105337` are a genuine nonzero-slope arithmetic progression, not a constant-matrix degeneracy.
+
+**Negative (typing stop).** Independently derived and recomputed three ways (factored formula, four Euler terms, bivariate `(t,η)` perturbation):
+
+\[
+[t^{42}]\mathcal E_{\mathrm{full}}
+=[t^{42}]\mathcal E_y
++42 S_M G_M(3\alpha_1-2\beta_1)p(\eta)^4 p'(\eta).
+\]
+
+Both partials are nonzero over \(\mathbf Q\) and at `105337` and `105673`. `build_jets(point, p, Z)` has no x-side argument, `DBUILD=42` truncates before these terms, and the 30 registered streams do not contain them. `cases/eplus43.py` is a D43 fail-closed declaration, not a sourced classification.
+
+**What may enter `AUDIT.md`:** this split source-typing record only. Not an Ore/Spencer/Fitting object, not all-depth stationarity, not band 28, D43, germ, characteristic zero, or JC2.
+
+Scratch producer and replay JSON were byte-identical to the banked files. Manifest and provenance hashes matched disk. No network and no solver were used.
