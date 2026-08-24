@@ -4135,3 +4135,45 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   protected legacy `build_tails43.py` core remains untouched; boxes02/03 are
   stopped. Current gates are symbolic/compiler limited, so AWS expansion is
   not yet licensed. No proof or counterexample has been found.
+
+## 2026-08-24 17:54Z LIVE STATE
+- BASIS/LIFECYCLE: evidence bank `56903894fdf6dcdaf63afea0ce8b4c39c52af5c0`
+  equals `origin/master`; nested `jc2-lean` remains clean at
+  `c40f83378b579a46d8a2c0172f15f502fe38ed79`. The bank contains the complete
+  `(6,9)` composition, reviewed AS controls/components, completed `1633Z`
+  ideation round, max-12 preflight producer, and cumulative review-window
+  erratum v5 covering 44 reports. Frozen bytes are not mutated.
+- LANDMARK PROMOTION: different-model review confirms the cube trajectory and
+  full fail-closed composition. No characteristic-zero Keller pair has actual
+  partial `y`-degrees `(6,9)` with `3|H`; the strict degree recursion therefore
+  proves that every characteristic-zero Keller pair with
+  `max(deg_y P,deg_y Q)<=11` is a polynomial automorphism. This is an
+  unbounded-`x` partial-degree theorem, not JC2. Maximum twelve has exactly the
+  primitive frontier `(8,12),(9,12)`.
+- MAX-12 ACTIVE: frozen producer preflight separates `(8,12)` into Kummer
+  orders `4/2/1` and `(9,12)` into `3/1`, and proves the common umbrella
+  `d*(s*A-r*B)'=0`, `delta=s*A-r*B`, with `delta=0` on every nontrivial class.
+  The raw constant-W gate is smaller for `(8,12)` while the branch tree is
+  simpler for `(9,12)`; whole-cell cost is deliberately unordered. Claude
+  hostile review and a matched two-row integration probe run in parallel.
+- AS PROMOTED/QUARANTINED: hostile reviews confirm the triangular D7 terminal
+  point, the odd-`m` balanced cyclotomic family of arbitrarily deep finite-
+  precision terminal residues, and the nonreduced layer-7/6 associated scheme
+  with three minimal components plus one embedded primary. The proposed
+  29-row deep-branch package is quarantined: its bracket Cartier-zero lemma is
+  valid, but it omitted the divided integer carry `(U_x+V_y-x^2)/3`, whose
+  Cartier coefficient is `u5_3+v5_2`. A separate 30-row erratum/replacement is
+  being recomputed; no promoted result depends on the bad package.
+- TD6 ACTIVE: the common-centering tangent producer is frozen at compatibility
+  rank three/kernel zero and affine inconsistency at one registered
+  nonsolution. A hostile reviewer is independently rebuilding all 3,602
+  columns. In parallel, exact FLINT arithmetic propagates the dependency-
+  complete `(c1,c3)` atlas through generic and every exceptional pivot
+  stratum. No tangent, family, SP-2, or terminal-class kill is promoted.
+- OUTER LOOP/RESOURCES: all three internal research slots remain occupied by
+  max-12, corrected AS recurrence, and TD6. Reviews are background and
+  nonblocking. Broad web sweep #9 is due by `2026-08-24T21:25Z`; the next full
+  blind all-46 scan is due no later than twelve hours after the `17:14Z`
+  synthesis close. Box01's protected legacy core remains untouched,
+  boxes02/03 remain stopped, and no current exact gate licenses AWS expansion.
+  No proof or counterexample to JC2 has been found.
