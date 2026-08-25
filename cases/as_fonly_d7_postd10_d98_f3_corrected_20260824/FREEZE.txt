@@ -1,0 +1,34 @@
+AS F-ONLY P=3 D=7 SOURCE-CORRECTED POST-D10 D9/D8 GATE
+date: 2026-08-24
+status: PRODUCER EXACT; FULL PORTABLE REPLAY PASS; HOSTILE REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256: 9cc39af35e1d52c9673755b79392e62bb265f78dc38bd9110cd37a992115c2d8
+manifest_sha256: a5480d2e3d7c36db4fee735ef8f2262c3454e3e35eb348c7f097c45c59aa2cfb
+generator_sha256: a71daa0cb525bac229afb91c76987c8f25c1e2d63683caa10ff45d3364c658e5
+source_audit_sha256: 77485e9d583dd621c8ae412fa70bab3c2aa5b7605bebe03e0b74a3c4dc87689c
+complete_replay_sha256: b3564b4e34f60bba751f00de3e30420050c1e6537db3a137001b89d0ca16e5ff
+
+deterministic_result_hashes:
+  vertical_rank_stream: e86fd1ec2724b5089039378c07e1a19a089042eeb4172b0342474f85d4d8b23d
+  vertical_empty_base_stream: 5b66a63af070eff410c1824a6e6f4e73fc254da13eb5445dcb9bdae4c2ece701
+  g_endpoint_rank_stream: ce421ac61d73307c3d0bd553af9e23df7f040f6e7b3e85b4d7da06f220935b67
+  g_endpoint_empty_base_stream: 2fdb6b61e6a98e9e4b39ce8459f62774cf6dacd161b04c6752e044e87e963b2e
+
+replay:
+  ./replay_all.sh
+  shasum -a 256 -c MANIFEST.sha256
+
+verdict:
+  The regenerated source rows include the divided single-Frobenius cross
+  and all six degree-six Frobenius variables.  Vertical D9 retains its global
+  section.  The corrected vertical D8 literal-F3 census is 314127/1594323,
+  with 12/2187 empty structural fibers.  The corrected g-endpoint system is
+  17x14 and its census is 918/354294.  Two explicit mod-81 cap-seven points
+  are terminal mod243, pointwise only.
+
+scope:
+  Exact source/carry derivation, geometric rank check, literal-F3 finite
+  censuses, and pointwise controls only.  No algebraic-closure compatibility,
+  full-D7, all-depth lift/no-lift, characteristic-zero, counterexample, or
+  JC2 inference.

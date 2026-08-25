@@ -1,0 +1,25 @@
+AS F-ONLY D7 Q9-WITNESS TO Q8 KURANISHI V2 SOURCE FREEZE
+date: 2026-08-25Z
+status: PREREGISTERED AWS-ONLY CERTIFICATE PRODUCER; NO RESULT YET
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+v1_compiler_sha256:
+  fbf327fb04beb2fa929f3b46a5df035244ec838793bc1f596801935adae09d4b
+v1_failed_run_tag:
+  as_q9_q8_kuranishi_20260825T015219Z
+v2_compiler_sha256:
+  01804fe319b420025fa4cbc5e4c14ece8d703e1e39d04b694823f463e80801a3
+source_closure_sha256:
+  c20a0406e8bc16b05b7b6755c6fbaf159af1e3952bc6e806deb7ef5860bd23c4
+runner_manifest_sha256:
+  bed71e44ba2e2dcde7dd2a26d4f23937feebc813e7888833a837250562b1ac73
+
+discriminator:
+  Preserve V1's assertion failure.  V2 emits and directly verifies a sparse
+  left-null certificate lambda*A=0, lambda*b!=0 when the first Q9 witness is
+  Q8-incompatible, together with ranks, source-row identities, substitution,
+  and a plus-one pairing control.
+
+scope:
+  First Q9 canonical witness only.  No predecessor death, full-fibre census,
+  recurrence, all-depth lift/no-lift, counterexample, or JC2 claim.

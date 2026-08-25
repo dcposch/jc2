@@ -1,0 +1,38 @@
+AS F-ONLY D7 NEXT TOP-CARRY 27-WAY AWS SHARD RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT; PORTABLE HASH/AGGREGATE CHECK PASS;
+        MONOLITHIC STREAM-HASH AGREEMENT AND HOSTILE REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256:
+  0647faaf788c958182f4890c815e207813d0490db6758bf99bdf273da7ef0b92
+result_manifest_sha256:
+  ad16e6ec92b12a97f5fef678a2a480b1fb0c74c70581712c6f073eddad764ea0
+remote_results_manifest_sha256:
+  6c598aa4396942df64e752c3980af1646f4be453481e01ddf370dac4d7464c7b
+aggregate_output_sha256:
+  083f7623b462696aa2ab57dafeb989d72a8ffe32f5147da5d433c5f64d82a9ae
+remote_results_archive_sha256:
+  67f52fcd6d40ae76cf7c1cc97087b449eef88d58122c9f1219ff6db4418d0058
+ordered_shard_merkle_sha256:
+  81fe1d26d18f879f704adecaf36acb3757a2f7c1084bb944e6e428726f3d9b83
+
+execution:
+  host Box02 / ip-172-30-0-186 / 34.203.207.55
+  tag as_d7_next_top_shards_20260825T001733Z
+  UTC 2026-08-25T00:18:46Z--00:21:12Z
+  overall_rc 0; aggregate_rc 0; aggregate stderr empty
+
+verdict:
+  Of 1085103 visible predecessor states, 629115 pass N12 and 602343 also
+  pass N11.  The six degree-six Frobenius directions give exactly 729
+  completions per N11-visible survivor, for 439108047 completions.
+
+replay:
+  ./verify_frozen_results.sh
+
+scope:
+  Exact sharded count/Merkle evidence pending agreement with the independent
+  monolithic ordered stream.  Rows 12 and 11 only.  No lower row,
+  recurrence, all-depth, characteristic-zero, no-lift, counterexample, or
+  JC2 claim.

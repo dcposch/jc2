@@ -1,0 +1,40 @@
+AS F-ONLY D7 Q9-RANK-CLASS Q8 SAMPLED STATE-INSUFFICIENCY RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT AT SAMPLED-CANONICAL SCOPE;
+        PROVISIONAL PENDING DIFFERENT-MODEL REVIEW
+git_head_at_source_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256:
+  3d1b354269ea81c4afb634451ece5147393d4853118d46f797e7f566c664e60b
+result_readme_sha256:
+  8f6a75e2d3dc9e62133d27ae8879387c65f47cf239d7696a8822ae8b445831c1
+verify_result_sha256:
+  16656f734ff8e6667c576b7c73dc806ad2781e6b33024375b64d16f157bfe89d
+result_manifest_sha256:
+  4589b9c250a840601d6729f724ba1c05c8b4f1e1ac687a44461e4486f5ed5d50
+source_freeze_sha256:
+  e6bd2442081291798cee05fa8595afa35080d31968da9b8d2264df334bc12662
+result_archive_sha256:
+  077edbb740e1dbaa83d8c15414ab88a93293687e1e7348c4931b3529bd06d067
+aggregate_json_sha256:
+  492a70d7145578bf35730b0a48dc54687f8de3c7168dc1a23b7f0f4c0404b967
+ordered_shard_merkle_sha256:
+  20d2dd31b184e44ea7ffca36df82a5435e60b8b901e0449b56fb469890b5694d
+
+execution:
+  Box02/ip-172-30-0-186;
+  /home/ubuntu/jobs/as_q9_rankclass_q8_samples_20260825T022400Z/source;
+  UTC 02:21:56Z--02:26:10Z; rc0;
+  27 shards, 27/27 PASS, all stderr empty.
+
+result:
+  The shards traversed all 33,225 corrected-Q10 states and retained 168
+  deterministic rank-class representatives.  Compatible Q9 samples give
+  Q8 pass counts 0/4 at rank13, 4/4 at rank15, and 4/84 at rank16.  The
+  rank16 sample has fifteen distinct Q8 matrix/RREF signatures, proving the
+  scalar Q9 rank pair is not a sufficient transition state.
+
+scope:
+  Deterministic samples within rank classes, not a class census; fractions
+  are not rates.  No whole-fibre, fixed-cap/all-depth, counterexample, or JC2
+  claim.

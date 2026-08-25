@@ -1,0 +1,19 @@
+AS F-ONLY D7 NEXT TOP-CARRY FROBENIUS ERRATUM SOURCE FREEZE
+date: 2026-08-25Z
+status: PREREGISTERED EXACT-INTEGER SOURCE; SYNTAX/MANIFEST PASS;
+        AWS REPLAY PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+runner_manifest_sha256:
+  f8eba8df4c828a2b6d8a142c3a10ed07fd5cef20934fd8ecd0f8f31e57defb1f
+source_sha256:
+  eaa8ddbdf7e286ea58ffe9e5873e105e9d323a2b5732e8f07dd717c19808e3d6
+
+test:
+  Derive MF7/3, MF6/3, and Kdouble/9 over Z, reduce only afterward,
+  and require explicit nonzero degree-11 and degree-10 controls.
+
+scope:
+  Universal source filtration only.  No corrected predecessor census,
+  lower row, recurrence, all-depth, characteristic-zero, no-lift,
+  counterexample, or JC2 claim.

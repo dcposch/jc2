@@ -1,0 +1,23 @@
+Frozen UTC: 2026-08-25T09:57:00Z
+
+Erratum:
+  cases/as_fonly_d7_global_q5_h6_replay_erratum_20260825/ERRATUM.md
+  SHA-256 605e97a135f7e731c899be944af9c306164bf4b617e4b3335497b4beda6b20fa
+
+Case manifest:
+  SHA-256 2c7a6c4ec629e51eb6971bd1c19eef45bbd0c8f6d862d34f1cdf6c9f4765ccb9
+
+Exact Box02 custody archive:
+  results_box02_20260825/replay_v2_controls.tar.gz
+  SHA-256 5472c2b476d3e8ba39ed576b4fefbb99e62ad56b5e21da69ad113e0e037d6a7f
+
+Remote custody:
+  /home/ubuntu/jobs/as_global_q5_h6_20260825T0942Z_v2
+
+V1 controls: both fail closed with `NameError: P is not defined`.
+V2 controls: both rc0 and PASS, with recursive/literal `/243` agreement.
+The known zero-H6/J6 controls have nonzero Q5 rows, respectively
+`[1,0,0,1,1,1]` and `[0,1,1,0,1,0]`.
+
+Formula compiler, emitted SMT, and solver inputs are unchanged.  All future
+SAT consumption is through V2 only.

@@ -1,0 +1,23 @@
+AS F-ONLY BINARY WRONSKIAN COMPRESSION IN CHARACTERISTIC THREE
+date: 2026-08-24
+status: PRODUCER EXACT; FULL PORTABLE REPLAY PASS; HOSTILE REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256: 180ff182ed092eb8d1503d8fa24eb47401475493c5726ce6049cec352e0e9a4a
+manifest_sha256: 0bfb158eef29b0a6744e7463f54ff972d3ed498e03e14fc489d7b8893a19813d
+
+replay:
+  ./replay_all.sh
+  shasum -a 256 -c MANIFEST.sha256
+
+verdict:
+  For binary degree-seven forms over F3, {C,D}=0 iff, after removing
+  their homogeneous gcd H, the coprime quotient pair consists of cubes.
+  Hence deg(H) is 1, 4, or 7.  In the AS D7 top gate this classifies N12.
+  The six degree-six Frobenius spectators have zero gradient and therefore
+  cannot affect N11; its spectator fibre is either 0 or 729.
+
+scope:
+  Pure N12/N11 structural compression only.  No claim that a stratum meets
+  the predecessor gate or passes lower rows.  No recurrence, all-depth,
+  characteristic-zero, no-lift, counterexample, or JC2 claim.

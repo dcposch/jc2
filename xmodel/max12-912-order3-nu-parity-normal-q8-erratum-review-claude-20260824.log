@@ -1,0 +1,28 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=dontAsk
+⚠ claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login · Unset it to load your organization's connectors
+I'm blocked at the execution step and need your decision before I can finish this review honestly.
+
+## Where things stand
+
+**All reading and static analysis is done.** I read the erratum report, all seven case files, the pinned `order3_fibre.py` compiler and `shared_faber_probe.py` engine, the genus-five producer/replay and its CONFIRMED hostile review, the quarantined Q12 producer/replay, and the Grok refutation. Several things are already established from sources alone:
+
+- **The mistranscription diagnosis is confirmed at source level.** The quarantined Q12 replay (line 135) substitutes `genus.Rat.constant(Fraction(1, 3))` — the constant `1/3` — where the reviewed genus-five replay (line 248) uses `Rat((Fraction(1), Fraction(3)))`, the coefficient tuple for the polynomial `1+3v`. The erratum's equation (1.1) reproduces the wrong slice exactly as the Q12 code wrote it.
+- **Internal hash consistency holds everywhere I can cross-read**: the charged report/manifest values appear identically in `FREEZE.txt`, `MANIFEST.sha256`, and `QUARANTINE.md`; the pins inside the erratum replay match the hashes Grok independently recomputed for the compiler, genus-five replay, and refutation.
+- **The quarantine boundary looks structurally sound**: both mathematical consumers of the refuted checkpoint (the Q12 case and its formal-branch descendant) are in the quarantine ledger; the Q12 formal branch has only a review *prompt* in-tree, so no stale CONFIRMED verdict survives; the genus-five theorem is correctly retained.
+- Hand-checkable numerics agree: `x5=-252, x3=-756, x1=27720` at `p=v=1`, `x1_wrong=1848`, `226492416 = 2^23·3^3`, and the weight/scaling bookkeeping behind the `p^20` and `p^9` prefactors.
+
+**What I cannot do in this session is execute anything.** I staged a full verification battery — `/tmp/q8_review/run_all.sh` (byte-level SHA-256 of every charged and pinned artifact, manifest `-c` checks, the erratum/genus-five/Q12 replays with `diff`) and `/tmp/q8_review/independent_check.py` (a from-scratch reconstruction of all eight tail rows by residue extraction rather than the producer's series inversion, the full symbolic determinant over `Q[v]`, the `1/3` vs `1+3v` controls, the r4 factorization, the gcd ledger, and eight full-`p` exact rational spot checks). But this session has no Bash tool at all — including inside subagents — and the one shell-capable tool (Monitor) is permission-denied in don't-ask mode. The denial explicitly instructs me to stop and let you decide rather than work around it. The battery has run **zero** times.
+
+## Why I won't write the review yet
+
+The charge requires ending with exactly one verdict, and the load-bearing identity — the 4×4 normal determinant factoring through `Q8` — cannot be hand-verified and must not be inherited from either the producer's replay or Grok's refutation. A verdict without an independent run would be exactly the failure mode this erratum exists to correct.
+
+## What I need from you (either one)
+
+- **Option A** — run the battery yourself; it's one command and writes everything to files I can read:
+  ```sh
+  sh /tmp/q8_review/run_all.sh
+  ```
+  Then tell me it's done, and I'll read `/tmp/q8_review/*.txt`, complete the analysis, and write `xmodel/max12-912-order3-nu-parity-normal-q8-erratum-review-claude-20260824.md` with the verdict.
+- **Option B** — grant shell execution (Bash or Monitor) for this session, and I'll run it exactly once myself.
+adapter exited 0 but required report is absent: xmodel/max12-912-order3-nu-parity-normal-q8-erratum-review-claude-20260824.md

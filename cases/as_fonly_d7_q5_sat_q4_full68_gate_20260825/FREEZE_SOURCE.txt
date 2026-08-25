@@ -1,0 +1,10 @@
+# Frozen full-68 producer source
+
+`SOURCE_MANIFEST.sha256` pins the pointwise complete chronological Q4 gate.
+The 68 rows are retained as one exact affine system; no terminal row is
+discarded after taking a divergence preimage.  Both inconsistent and
+rank-drop results are first-class outputs.  A SAT classification is accepted
+only after literal-integer Q4 and terminal replay.
+
+Execution is AWS-only.  The three initial inputs are the source-replayed
+base0000, base0270, and base0513 models.  Coverage remains pointwise.

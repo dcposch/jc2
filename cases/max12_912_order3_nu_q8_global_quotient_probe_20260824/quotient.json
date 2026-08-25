@@ -1,0 +1,95 @@
+{
+  "case": "max12_912_order3_nu_q8_global_quotient_probe_20260824",
+  "chart": {
+    "approximate_cubic": "K=z^3+z+q",
+    "k": 0,
+    "p": 1,
+    "parameter": "t=x0",
+    "q": "t*c",
+    "w": "t^2",
+    "x0": "t",
+    "x2": "t*d2",
+    "x4": "t*d4"
+  },
+  "coordinates": "approx",
+  "equations": [
+    "r1/t",
+    "r3/t",
+    "r5/t",
+    "r7/t",
+    "r2",
+    "r4"
+  ],
+  "outputs": [
+    "r6",
+    "r8"
+  ],
+  "rows": {
+    "r1_over_t": {
+      "imposed": true,
+      "sha256": "ef9907505a7baf0ccaca290e4eedb8cb7cb08261cc6458f7b69fc2ee29d9fd37",
+      "terms": 10,
+      "total_degree": 4,
+      "w_degree": 1
+    },
+    "r2": {
+      "imposed": true,
+      "sha256": "d92a50757c7cd310695ca9b955ebac755fe1f891da8c2a71ec2f8adc187abf3b",
+      "terms": 16,
+      "total_degree": 5,
+      "w_degree": 1
+    },
+    "r3_over_t": {
+      "imposed": true,
+      "sha256": "42faeb82003234764d1161229839693c70d37dc0f4c597f4aa07fde1d951b313",
+      "terms": 20,
+      "total_degree": 5,
+      "w_degree": 1
+    },
+    "r4": {
+      "imposed": true,
+      "sha256": "584c6584e336044bcd1f08c1c852a66168576c2329b01432def72753bb0149a2",
+      "terms": 29,
+      "total_degree": 6,
+      "w_degree": 2
+    },
+    "r5_over_t": {
+      "imposed": true,
+      "sha256": "4c23e53edb1036cd1fc37478090c3a2fdcd6cd3fdc3a39dc6b0629889c469c57",
+      "terms": 35,
+      "total_degree": 6,
+      "w_degree": 1
+    },
+    "r6": {
+      "imposed": false,
+      "sha256": "08519a425c8dcf2e5c4b43d8a971a77a00e3996c1db77c16eb437c06553d215c",
+      "terms": 48,
+      "total_degree": 7,
+      "w_degree": 2
+    },
+    "r7_over_t": {
+      "imposed": true,
+      "sha256": "ddd9698ad78925eeb83c9ea1365d1001821695f007e8bf2a718f2885651bc567",
+      "terms": 57,
+      "total_degree": 7,
+      "w_degree": 2
+    },
+    "r8": {
+      "imposed": false,
+      "sha256": "b4b3593fc22032663c86e6dddea8af8148f8945c9198a3d7aefe63b5babbc724",
+      "terms": 73,
+      "total_degree": 7,
+      "w_degree": 2
+    }
+  },
+  "scope": "exact quotient compiler and bounded CAS probe only; no component, global relation, trajectory, max12, or JC2 conclusion",
+  "variables": [
+    "w",
+    "c",
+    "d2",
+    "d4",
+    "x1",
+    "x3",
+    "x5"
+  ]
+}

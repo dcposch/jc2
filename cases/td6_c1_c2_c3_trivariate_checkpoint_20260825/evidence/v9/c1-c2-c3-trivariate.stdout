@@ -1,0 +1,56 @@
+trivariate_transport rows=0;pivots=1;events=0
+trivariate_transport rows=250;pivots=251;events=0
+trivariate_transport rows=1500;pivots=684;events=0
+trivariate_transport rows=1750;pivots=934;events=0
+trivariate_transport rows=2000;pivots=1184;events=0
+trivariate_transport rows=2250;pivots=1434;events=0
+trivariate_transport rows=4750;pivots=1716;events=0
+trivariate_transport rows=5000;pivots=1966;events=1
+trivariate_transport rows=5250;pivots=2215;events=1
+trivariate_transport rows=5500;pivots=2465;events=2
+trivariate_transport rows=5750;pivots=2715;events=2
+trivariate_transport rows=6000;pivots=2965;events=2
+trivariate_transport rows=6250;pivots=3215;events=2
+trivariate_transport rows=6500;pivots=3465;events=2
+TD6 trivariate transport PASS
+transport_rank=3470/3602
+transport_event_count=2
+transport_event[0]=4804,('f', 'X', -1, 2),193;num=(-C + 3*U^2);den=(1)
+transport_event[1]=5282,('g', 'X', 0, 1),1185;num=(2*U);den=(1)
+transport_minor_num_summary=(3, 2, 'e6b803230379a6308a4f44d9907adb36c1a89a202636c859811b5787e50d61da')
+transport_minor_den_summary=(0, 1, 'cba2fbeb391b1b01d10d62b5d049665afdea6dda577ce5ab23077b7cd21fa34b')
+transport_global_factorization_deferred=true
+first_rank=38/132
+first_incompatibility_count=0
+first_minor_num_summary=(17, 19, 'ea2148d5b1bb3d59911c708a626561034036938bde8a112bbe6f6799dc1a3f74')
+first_minor_den_summary=(0, 1, 'cba2fbeb391b1b01d10d62b5d049665afdea6dda577ce5ab23077b7cd21fa34b')
+first_global_factorization_deferred=true
+TD6 trivariate genuine P12 PASS
+remainder_inverse_sha256=218b4ebe549c262d6b1bca13c6dc3f24eda3c79c80845f780cdb6fc122a43548
+raw_terms=2893
+raw_sha256=8d5c3550fbad393c1e13061d9934ed79e29261db378f1d344c4ea5e587e704da
+remainder_terms=1
+remainder_degree=0
+remainder_sha256=93121eef14c472c3c55b7acaeb1d0eff73b77d462ad8d5b197e8e21b9cda89c4
+expected_sha256=b9445255e063a82f827a01b7e18c3bdd2f3da41de14903a73fc2ae68121df7a0
+remainder_is_expected_constant=true
+remainder_is_constant_unit=true
+source_nonzero_rows=28
+source_multiplier_terms=1489
+source_relation_original_row_replay=true
+source_relation_plus_one_negative_control=true
+raw_denominator=(C*U - 3*U^3)
+raw_denominator_summary=(3, 2, '85fec0864be6430058dd3bbfe187027d41a99c70d0d1fae25356c8f08309e557')
+first_denominator=(C*U - 3*U^3)
+first_denominator_summary=(3, 2, '85fec0864be6430058dd3bbfe187027d41a99c70d0d1fae25356c8f08309e557')
+relation_denominator=(C^4*U^4 - C^3*V^2*U^3 + 1/4*C^2*V^4*U^2 + C^2*V^2*U^5 - 22*C^2*U^8 - 3/2*C*V^4*U^4 + 21*C*V^2*U^7 + 24*C*U^10 + 9/4*V^4*U^6 - 45*V^2*U^9 + 45*U^12)
+relation_denominator_summary=(12, 11, '1262f7b268075620793899629cf877b1fb852d0c6462b19164fc1985dd24e275')
+termwise_denominator=(C^5*U^5 - C^4*V^2*U^4 - 3*C^4*U^7 + 1/4*C^3*V^4*U^3 + 4*C^3*V^2*U^6 - 22*C^3*U^9 - 9/4*C^2*V^4*U^5 + 18*C^2*V^2*U^8 + 90*C^2*U^11 + 27/4*C*V^4*U^7 - 108*C*V^2*U^10 - 27*C*U^13 - 27/4*V^4*U^9 + 135*V^2*U^12 - 135*U^15)
+termwise_denominator_summary=(15, 15, '8f915db68be0663eeab26e848130f37d2c1a2b213e16af99df7227ccddec540a')
+denominator_factorizations_deferred=true
+Rat3_inverse_count=7589
+generic_open_killed=true
+full_three_center_family_killed=false
+SP2_killed=false
+JC2_resolved=false
+TD6-C1-C2-C3-TRIVARIATE-GENERIC PASS

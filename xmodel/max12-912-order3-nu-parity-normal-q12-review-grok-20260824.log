@@ -1,0 +1,15 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the charged report, the case files, and the pinned compiler/theorem sources so the review can reconstruct the claims independently.I'll read the case files, an existing review for format, and the pinned compiler/parity sources next.I’ll read the pinned compiler, genus-five theorem, and Faber/order-three dependencies next, then recompute the determinant independently.I'll inspect the compiler tails, genus-five rational arithmetic, and how the involution acts on the eight rows.The replay’s `x1` formula may not match the genus-five chart; I’ll recompute the determinant both ways and run the frozen hashes in parallel.Hashes match and the frozen replay passes. Next I’ll recompute the Jacobian, both `x1` substitutions, and the gcd data independently.The displayed identity matches the wrong `x1` slice, not the `r2=r4=0` chart. I’ll reconstruct the true determinant on the correct substitutions.The identity is false on the displayed chart: the replay substituted the wrong `x1`. I’ll write the hostile review with that as the failing identity.**Verdict: `REFUTED`.**
+
+The involution typing, the `4 x 4` as the complete first-order normal block, and the displayed genus-five substitutions for `x3,x1,x5` survive. Identity `(3.1)` does not.
+
+The report writes the reviewed chart `x1 = x5 p^2 (v+1) + x5^2 (3v+1)/(9v)`, on which `r2=r4=0`. The frozen replay instead substitutes `x1 = x5 p^2 (v+1) + x5^2/(27v)`, on which `r2` and `r4` do not vanish. The determinant depends on `x1`, so `(3.1)` is an off-fibre identity. The replay passes because it proves that wrong substitution, not the report.
+
+Smallest failing identity: `(3.1)` after the displayed substitutions. At `p=1`, `v=1` on the genuine `r2=r4=0` chart,
+
+```text
+det(J_N) = 25275425185572323328,
+(3.1)    = 169664962152837939200 / 243.
+```
+
+On the loaded chart the residual is a squarefree octic `Q8` coprime to `Q12`. Rank drops at `Q8=0`, not at `Q12=0`. Charged hashes matched; the review is in `xmodel/max12-912-order3-nu-parity-normal-q12-review-grok-20260824.md`.

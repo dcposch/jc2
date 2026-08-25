@@ -1,0 +1,42 @@
+AS F-ONLY D7 CANONICAL Q8/Q7 FIBRE-COORDINATE ERRATUM RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT COORDINATE CORRECTION;
+        PROVISIONAL PENDING DIFFERENT-MODEL REVIEW
+
+report_sha256:
+  c76214b68f902e0d22ade1507c20d6524a0031733842217e40f71cb2930c5977
+result_readme_sha256:
+  b29b8bd94e3b4ac75988e3366bb74228bed3932c149fe12048e85a44f369ff9a
+verify_result_sha256:
+  863c7bed2549938eb592fc31cb69ca8cd70966434a4a81095938dadc596e8c1b
+source_freeze_sha256:
+  c78d5d83d92cf86583054ad15b9570384da05342362757cad3547e566b875d00
+result_manifest_sha256:
+  5fe4a38a7ae79e1e88aaa938b04c2118485a7f85a7cbbc7da88fc0962b2cd0fe
+particular_catalog_sha256:
+  3b00529566df3850e42a29325af22de1b0e938a4d3b17de680ad91e44f6ce76c
+audit_stdout_sha256:
+  b229fcaa35f06b15f6ce55b44304b1eb3b8995b93b293cd53e932bb6ca38583d
+outputs_manifest_sha256:
+  c151ba5c8048caf150fb84e93bb79a4fa1599277d3162ac567464cfac5605879
+remote_verify_stdout_sha256:
+  63e9fc1d80f3d16068bc3a766e658c06e9bbb7075d8aeed8d3fca8efa6c77e90
+result_archive_sha256:
+  2ed295bef3accc4bd35ade85146b60939ae7f750328a40a541e40e1225b7da19
+
+execution:
+  Box02/ip-172-30-0-186;
+  /home/ubuntu/jobs/as_q8_particular_erratum_20260825T0425Z;
+  rc0; audit and verification stderr empty.
+
+result:
+  Of 64 zero RREF-fibre-coordinate witnesses, 13 have affine Q8 particular
+  y0=0 and 51 have y0 nonzero.  The catalog displays and hashes all 64.
+  The original compiler substituted each actual y0, so pointwise Q8/Q7
+  compatibility survives; only the all-zero coefficient-vector wording is
+  retracted.
+
+scope:
+  Coordinate correction for the frozen 64-sample producer only.  No
+  whole-fibre, full-chart, later-carry, fixed-cap/all-depth, counterexample,
+  or JC2 claim.

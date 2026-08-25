@@ -1,0 +1,14 @@
+ring R=3,(p,q,r,s,t,w),dp;
+matrix A[4][9]=
+ -s,0,0,r,-p,0,0,0,0,
+ -w,-s,0,t,-q,r,-p,0,0,
+ 0,-w,-s,0,0,t,-q,r,-p,
+ 0,0,-w,0,0,0,0,t,-q;
+matrix b[4][1]=r^3+p*r*s,q*r*s+p*s*t+p*r*w,q*s*t+q*r*w+p*t*w,t^3+q*t*w;
+matrix ell[9][1]=-p*r,-q*r-p*t,-q*t,r^2,0,-r*t,0,t^2,0;
+matrix residue=A*ell-b;
+if (residue[1,1]!=0 || residue[2,1]!=0 || residue[3,1]!=0 || residue[4,1]!=0)
+{ ERROR("FAIL-D9-SECTION"); }
+print("global_section_ell"); print(ell);
+print("PASS-VERTICAL-D9-GLOBAL-SECTION");
+

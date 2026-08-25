@@ -1,0 +1,27 @@
+AS F-ONLY D7 Q7-KERNEL TO Q6 TRANSITION SOURCE FREEZE
+date: 2026-08-25Z
+status: PREREGISTERED 19-WAY AWS-ONLY SAMPLE PRODUCER; NO RESULT YET
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+compiler_sha256:
+  3cdaf8f2e98270d4b6ae3a6ed1d6a76bd1fc5baa13056d787d08bf11541d1087
+aggregate_sha256:
+  5f30c0560d4e1a6131f8c70aa0cccaf5af60ad8caac4a14158d9656d807990f0
+source_closure_sha256:
+  f711946172aa70219f4546fa6e3c910e1b32c71ef84c64873821d97b1fa31bba
+runner_manifest_sha256:
+  3956d18a4949c4a308916a297a7c346e4171ec09126933b342f26d9933e63aea
+source_package_files_sha256:
+  5bb5e656ea04b00f620bc7285d92447abd993d269439f0ff36a5246911010c24
+
+discriminator:
+  Reconstruct the exact nine-dimensional Q7 kernel at the canonical branch,
+  test its zero vector and both scalar multiples of all nine basis vectors,
+  form G6=F6/3+{C,D}6+T6 with exact division, and solve after adjoining two
+  homogeneous degree-seven fourth-digit forms.  Emit substituted witnesses
+  and the G6 histogram.
+
+scope:
+  Nineteen deterministic low-weight Q7 points, not all 3^9 states and not
+  the following divided carry.  No recurrence, all-depth lift/no-lift,
+  counterexample, or JC2 claim.

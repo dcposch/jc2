@@ -1,0 +1,53 @@
+AS F-ONLY D7 Q9 SOURCE-STATE 27-WAY AWS RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT; PORTABLE HASH/AGGREGATE CHECK;
+        INDEPENDENT SOURCE/RESULT REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+source_erratum_freeze_sha256:
+  e23391101129c0822ed2f906053919860db02ed2ae5776285bace5764f326385
+corrected_q10_freeze_sha256:
+  e73b854b288bc18f9207a47ae4e265b429d054410c586c8ab9ee318ce24a79ec
+report_sha256:
+  6fb2ce4bcea7ab35102ca60198509f99b1bc1c058dea4181d87641f56ce847ae
+result_readme_sha256:
+  9236ef601547d55fe7afb29ebc04f05b69f471bc1a63438eee754743bf5883ab
+result_manifest_sha256:
+  06b7c5401d5886b2646101683f8df97e3335ad7aeacb4a1481e579d3388817d5
+remote_results_manifest_sha256:
+  181670e49c709a9d01c045aaea9c702bc550ed511c73ed5b098eb9b6d436e0b8
+aggregate_output_sha256:
+  ab38fefa43d3b2065f839bfed2deccd58b75e0570fc36324cce67db805b5d3d0
+ordered_shard_merkle_sha256:
+  31b77bef882a784b43ee146d930f192385714efce730b9126c8c2df4038b7be7
+
+source:
+  compiler 54d05ebf86af9d75da0cc509e3094ce2e26516b84c73b8a50a36e71dbc9282b2
+  source freeze 1aa89a7bebf557494970f7a6ed045d031a5999f35516caced58f3937dd0ea589
+  source closure 7c639d8489fa1ec0dd04b6d0b84f4d6ab16bd8d463cd6d6c47e715a9bd7aaebb
+  transported archive 7edde1b07a9ec0839d535bb20d1ab0779d0afa96afa281a1b115c1aee143546b
+
+execution:
+  host Box02 / ip-172-30-0-186 / 34.203.207.55
+  tag as_d7_q9_state_20260825T011049Z
+  UTC 2026-08-25T01:12:19Z--01:16:10Z
+  overall_rc 0; aggregate_rc 0; all result stderr empty
+
+verdict:
+  The exact 23-row affine extension in 32 restored coefficients is
+  compatible for 11881 of 33225 corrected-Q10 predecessor states and
+  incompatible for 21344.  Relevant completion total is 8096356425843;
+  restoring the six current Frobenius spectators gives 5902243834439547.
+  Exactly 79 of 2187 structural bases survive.  A substituted witness is
+  retained.  This is a strong shrink, not a Q9 branch death.
+
+replay:
+  ./verify_frozen_results.sh
+  expected: PASS-Q9-FROZEN-HASH-AND-AGGREGATE-CHECK
+  observed locally: 0.32 s wall, about 11 MB maximum RSS
+
+scope:
+  Exact Q9 finite producer pending independent review.  Canonical integer
+  representative reconstruction and the displayed row bands only.  Degree
+  eight and lower rows remain open.  No recurrence, all-depth,
+  characteristic-zero, lift/no-lift, counterexample, or JC2 claim.

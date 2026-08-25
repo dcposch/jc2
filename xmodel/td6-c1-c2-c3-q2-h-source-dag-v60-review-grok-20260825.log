@@ -1,0 +1,23 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll review the frozen V60 claim from the listed documents and source archive only, using read/search operations and writing a single report. Starting by reading the claim files and locating the expanded V60 source.Claim files are in. Next I’ll read `replay.py` in the expanded archive and walk its import/runbook/hash chain.V60 `replay.py` pins a parent producer and V44 stdout. I’ll follow that chain and the V60 runbook/hash files next.Parent import is live. I’ll trace `n13_v34`, center typing, `pack`, and the V44 H-zero pins next.I have the dependency chain and the nine attack points. Next I’ll write the report from source-level evidence only, without treating custody markers as algebra.The frozen V60 H-stratum claim survives as a fraction-field identity, not as the two-previous-row DAG it advertises. Report: `xmodel/td6-c1-c2-c3-q2-h-source-dag-v60-review-grok-20260825.md`.
+
+**Verdict: `CONFIRMED_WITH_REPAIRS`**
+
+What holds in source:
+
+- Center is exactly `C=3U^2` over `Q(V,U)` (`H=C-3U^2` identically 0). No `B3=0` / `V=0` extra center.
+- P12 is the genuine `compile_x_current[12]` object, first-stage only: 2,885 terms, 28 first rows, 1,640 multiplier terms, V44 tail/multiplier digests. No nested-multiplier shortcut.
+- Residual is exactly `-k/50`. `k` is a frozen-A3 residue-field unit, not a hidden `(V,U)` leaf factor.
+- All 16 ledger lines reconstruct. Radical is `{U,V,P3,QH}`. `QH` is actually on row-13 first multipliers and the `('X-1', 14)` previous-to-first edge.
+- Scope flags already refuse whole-`H`, full-A3, TD6, SP-2, and JC2.
+
+What does not hold as written:
+
+- Current row 13 uses **one** previous original row, `('X-1', 14)`. `('X-1', 0)` is only the quadratic positive control, mixed into the lift cache. The claim “exactly previous rows 0 and 14” is a cache dump, not N13 support.
+- The “one-required-edge” control with singleton support is just `N13 ≠ 0`. It does not test previous edges.
+- `QH` is an emitted leaf factor, not a proved essential prime of the simplified identity.
+- No SHA256 was recomputed in this no-shell session. `verify.py` is a marker gate. The expanded tree basename is `...-v59/` while the claimed tarball is `...-v60`.
+
+The surviving theorem is at most an exact identity on `H=0, D(U V P3 QH)`. Required repairs are packaging and control-naming, not a different center or a different P12 object.
+
+CONFIRMED_WITH_REPAIRS

@@ -1,0 +1,38 @@
+AS F-ONLY D7 Q6-ZERO NEXT DIVIDED HIGH-CARRY RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT AT DISPLAYED CUMULATIVE POINT;
+        PROVISIONAL PENDING DIFFERENT-MODEL REVIEW
+git_head_at_source_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256:
+  325d456fefacbd7783a8cbf4b18e50ff38590eb28f5615a7b2a2d6db246a5ebf
+result_readme_sha256:
+  b271fcff8da589d3da524aa54b98a7c4a46fdf68bee8b66295bcfeab4c1cc801
+result_manifest_sha256:
+  7bd1b18265c189596f15dd47f8af915f3c14e218670a0d73250a313c36441df9
+source_freeze_sha256:
+  200841da0127e55c0a94d68472cd0b7941a60acf9b0ca3aed49d06522c1a8e0e
+source_archive_sha256:
+  749eb36271e98462dba0196f00cbf22396370a1021dbaddd09e06d26091164cc
+stdout_sha256:
+  46fed22942a21d47b12259c7e9aacf02178d975eeaf813f56698da9541c48603
+empty_stderr_sha256:
+  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+recursive_and_direct_row_sha256:
+  b4cee654df3af7f850644a468160be9626fc96659ae98c17715e3d727cf6af12
+
+execution:
+  Box02/ip-172-30-0-186;
+  /home/ubuntu/jobs/as_q6_zero_next_divided_high_20260825T025049Z;
+  UTC 02:51:15Z--02:51:26Z; rc0; maxRSS 20724 KiB.
+
+result:
+  At cumulative Q9=e17, Q8=0, Q7=0, Q6=0, the recursively derived fifth
+  carry and literal integer determinant agree in degrees 12..7.  The first
+  nonzero high row is R10=x^10; R8=2*x^8 is also nonzero.  A cap-seven
+  fifth digit has divergence degree at most six, so this point is terminal.
+
+scope:
+  This does not classify the Q7 or Q6 affine fibres, the thirteen free Q8
+  directions, all fixed-cap branches, all-depth lifting, counterexamples,
+  or JC2.  Kernel dependence is the next discriminator.

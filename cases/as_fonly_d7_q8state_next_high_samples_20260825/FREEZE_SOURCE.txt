@@ -1,0 +1,26 @@
+AS F-ONLY D7 Q8-STATE / Q9-LOCUS NEXT-HIGH SAMPLE SOURCE FREEZE
+date: 2026-08-25Z
+status: PREREGISTERED 66-LANE AWS-ONLY SAMPLED-STATE PRODUCER; NO RESULT YET
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+compiler_sha256:
+  abfd5cfa79edb87e16e2df706f7466dcf335302d889cb71bf06bcdfb9609588e
+aggregate_sha256:
+  f52f9478b086bebbaade6d2d047c6ce5cb67f6b12a04110c4f79a2e7b99934d2
+source_closure_stream_sha256:
+  d250bf3a2fc345dfbe55e363bda28fa3717b33f437cd1765fa6c4b3ffa602a0f
+runner_manifest_stream_sha256:
+  d31fcc6428c5dd54057c1eb66534ab3f2f698340947465f258159db31642ab3f
+source_package_files_sha256:
+  ec06a0218c7106f499b75865f1ce5e4f0d045e77ba50a73bd1cacb7f598069f2
+
+discriminator:
+  Classify 39 low-weight Q8-kernel states and 27 low-weight points of the
+  13-dimensional Q9 Kuranishi locus.  For each, solve Q7 and exhaust its
+  entire affine fibre when dimension <=10, comparing recursive and literal
+  high carries and eliminating Q6 via an exact degree/rank argument.
+
+scope:
+  Sampled canonical predecessor states, exhaustive only within each reported
+  Q7 fibre.  No sample-rate extrapolation, whole-fibre, fixed-cap/all-depth,
+  counterexample, or JC2 claim.

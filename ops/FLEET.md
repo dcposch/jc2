@@ -1,9 +1,13 @@
 # Fleet access + job rules (for ALL agents: Fable subagents, Sol, Grok)
 
-## HARD RULE (2026-08-13 incident)
-NEVER run msolve (or any multi-GB solver) on the local Mac — it has 32 GB
-and thrashes. ALL solver jobs go to the AWS/GCP fleet. Local python for
-exact small linear algebra (sympy, <8 GB) is fine.
+## HARD RULE (strengthened 2026-08-24 after local swap incident)
+Run **all heavy campaign computation on AWS**, never on the local Mac. This
+includes Singular/msolve/other CAS jobs, Lean builds, and long or potentially
+multi-GB Python exact-algebra replays/enumerations. The Mac is reserved for
+editing, orchestration, hashing, process/status checks, and genuinely short,
+low-memory validation. If a job's memory or duration is uncertain, ship it to
+AWS. Do not use the former `<8 GB` local-Python allowance: several concurrent
+"small" jobs can still exhaust the Mac's 32 GB and thrash swap.
 
 ## Inventory
 - **box01** (AWS x8i.16xlarge, 64 vCPU / 1 TiB): instance
@@ -24,6 +28,7 @@ exact small linear algebra (sympy, <8 GB) is fine.
   queue drains (coordinator's call; don't stop it while lanes run).
   After start: `sudo ldconfig` once before msolve.
   Job dir: ~/res32 (screens + stuck7), ~/jc72108 (older Q2 work).
+  Current 2026-08-25 boot IP: `34.203.207.55`.
 - **Box03** (AWS r6i.16xlarge, 64 vCPU / 512 GiB): instance
   i-0ece0b9a3b4a7512f (profile `personal`), 200 GiB gp3 root, launched 2026-08-14 for the
   3 stuck7 farm big-cores idle since the Box02 cull. Same SG/subnet/key
@@ -32,6 +37,23 @@ exact small linear algebra (sympy, <8 GB) is fine.
   (cached in /tmp/box03_ip; currently 54.167.215.189). ~$4.03/h —
   STOP IT when the stuck7 lanes finish. msolve from Ubuntu apt.
   Job dir: ~/stuck7 (out/ + lanes.log).
+  Current 2026-08-25 boot IP: `98.80.65.144` (the older IP in the preceding
+  historical sentence is stale).
+- **r6a** (AWS r6i.16xlarge, 64 vCPU / 512 GiB): instance
+  `i-02cb2b4a379ffcc64`, current IP `3.91.104.135`.
+- **r6b** (AWS r6i.16xlarge, 64 vCPU / 512 GiB): instance
+  `i-0f089e64c378f5da3`, current IP `34.204.74.226`.
+- **r6c** (AWS r6i.16xlarge, 64 vCPU / 512 GiB): instance
+  `i-040b7a1c2ed72d4cc`, current IP `54.167.205.167`.
+- **r6d** (AWS r6i.16xlarge, 64 vCPU / 512 GiB): instance
+  `i-07eeaf8ba6f0bc419`, current IP `100.26.198.153`.  Its TD6 environment is
+  `/home/ubuntu/venvs/td6` (Python 3.12 / python-flint 0.9.0).
+
+The seven running instances total the account's current 512-vCPU quota.
+The four `r6*` nodes were added on 2026-08-24 for independent Double-B,
+Q8, AS, and TD6 work.  Their public IPs change on stop/start; resolve from the
+instance IDs before use.  Do not stop or repurpose one until its exact live
+processes and output custody are audited.
 - **ultramem** (GCP): RETIRED 2026-08-16 per DC (AWS-only policy).
   Instance stopped/terminated; two disks remain in dclanker (jc-b 200G,
   ultramem-1 100G, ~$15-30/mo) holding old run outputs — deletion is
@@ -123,10 +145,8 @@ Therefore:
   ops/telemetry_samples/). -v2 goes to STDERR: launch lanes with
   `msolve -v 2 ... 2> lane.v2log`. Read-only — safe on live lanes.
 
-## Local CAS etiquette (2026-08-17)
-Agent lanes exploring Singular/Maple/etc. on the local Mac MUST run
-batch mode with browsers disabled (Singular: `Singular -q < script`,
-never interactive `help`; or export ESINGULAR_BROWSER=cat BROWSER=cat).
-Interactive help shells out to `open` and spams DC's Safari with
-file:// doc pages. Include this rule in any prompt that authorizes
-local CAS use.
+## Local CAS etiquette (superseded 2026-08-24)
+Do not run campaign CAS locally. Ship even exploratory Singular/Maple/etc.
+jobs to AWS. If a trivial local parser/version check is ever unavoidable, it
+must be batch-only with browsers disabled (`ESINGULAR_BROWSER=cat`,
+`BROWSER=cat`; never interactive `help`).

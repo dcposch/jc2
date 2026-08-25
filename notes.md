@@ -4298,3 +4298,1163 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   and bounded Faber certificate packaging.  Broad sweep #9 remains due by
   `21:25Z`; the next full ideation scan remains due by `07:03Z`.  No proof or
   counterexample to JC2 has been found.
+
+## 2026-08-24 21:15Z EVENT MICRO-ROUND: TD6 LINE PROMOTED; Q12 ROLLED BACK
+- BASIS/ROUND: charged bank remains
+  `2e6104a417cfe15a93a901aa0a9129094a2ae11b`; active and frozen evidence is
+  uncommitted above it.  Full round `20260824T2024Z` closed at `20:56Z`
+  `COMPLETE / DEGRADED INDEPENDENCE`: all six reports landed, but AS-owner
+  avenue dispositions 21 and 26 are excluded from blind vote counts after a
+  disclosed two-line TD6-owner exposure.  Synthesis SHA-256 is
+  `769c1aac6f9ce5d53dfdcb74a4edca9e2ca10a856fe7ef436365f002ebda0f79`.
+  The round converged on maximum-12 normalized differential/Hurwitz strata,
+  corrected AS residue state, and TD6 projective escape.  No ideation vote is
+  mathematical evidence.
+- TD6 PROMOTION: Grok reviews the raw `C=0,3` fibres and the exact union of
+  `C=0`, `C=3`, `C(C-3)J!=0`, and `J=0` as **CONFIRMED**, at review SHAs
+  `c524122ca098193075f39205d1833f9e310f8607956c1115ca97b9655fda767d` /
+  `d2f8a204ca0e9cdf0c985b7940468e9ef6ef038ac17b245054a6e3a4fe87e7f9`.
+  Promote exactly `TD6-C1-LINE-EMPTY`: the licensed normalized section
+  `(c1,c2,c3)=(C,1,1)` is empty over every extension of `E`.  The unit
+  obstruction is `-k/50`; simultaneous center motion, other moduli, TD6,
+  SP-2, terminal classes, and JC2 remain open.  The exact first `c3`
+  derivative is being frozen separately; no neighborhood inference is made.
+- MAX12 CRITICAL ROLLBACK: hostile review SHA
+  `fc0b0216784bdcec8f9b0955c5a6c71d57870ae2265ed927f306d19d31a79c30`
+  **REFUTES** the provisional parity-normal `Q12` checkpoint.  The producer
+  replay used `x5^2/(27v)` where the actual `r2=r4=0` chart requires
+  `x5^2(3v+1)/(9v)`.  Its passing determinant is therefore off-fibre.  The
+  reviewer independently finds the genuine residual squarefree octic
+  `Q8=-999v^8-1539v^7+1782v^6+6498v^5+7320v^4+4428v^3+1548v^2+296v+24`.
+  The frozen `Q12` checkpoint and its formal-branch descendant are
+  quarantined immediately and remain byte-preserved.  The owner has stopped
+  every descendant and is rebuilding the correct `Q8` determinant with an
+  old-pass/new-fail control before retesting formal branching.  The reviewed
+  parity genus-five exclusion is unaffected.
+- MAX12 ROOT-FREE STRATIFIER: producer-exact report SHA
+  `7339478798e00894c7b975c60aca821ec7ff2da383ffe5165a93cfa361bb6cb6`
+  replaces the expanded critical-value resultant by a quadratic-pair norm.
+  Its exact identity `disc_T C=4*s*E^2` gives the coefficient-field split
+  into double-root, full absorption, one absorption, equal non-1 values, and
+  generic unequal values, retaining `B`-meets-`f` separately.  Manifest /
+  freeze SHAs are
+  `73b55970e600fe65664a089a03642291fbbbd5e6d9480515517011f1f2745e0a` /
+  `258fea426d71f524de180b84d6633f0e163f6d837f665f094ab484c22b5283d6`;
+  hostile review is active.  This stratifies but excludes no leaf.
+- AS PRODUCER CHECKPOINT: the corrected vertical D8 matrix has a frozen
+  three-stratum state-sufficiency theorem at report SHA
+  `410235081a54470a377d8d107a1982d34d507040718b945d11ee99dc4d1e5fe4`.
+  Exact replay matches all `1,594,323` corrected literal assignments and all
+  `314,127` compatible points; omitting quotient degree caps creates
+  `202,176` false positives.  The corrected source package and this successor
+  each remain under different-model review.  A provisional D7 successor
+  shrinks the remaining state but is not yet frozen.
+- SOURCE/EXTERNAL: sweep #9 and focused public collision-geometry audit find
+  reusable conjugate collision-pair APIs but no plane proof, counterexample,
+  or client with the missing common `N/T` landing map and conductor
+  containment.  Allocate no compute there.  AWS remains stopped; box01's
+  protected legacy core is untouched.  No proof or counterexample to JC2 has
+  been found.
+
+## 2026-08-24 21:15Z LIVE STATE
+- Authoritative lifecycle delta is the preceding micro-round.  `Q12` and all
+  descendants are `QUARANTINED`; only a newly frozen/reviewed correct-chart
+  `Q8` successor may re-root that work.  The parity genus-five exclusion,
+  full-absorption theorem, and DZ20 exclusion remain promoted and unchanged.
+- Active internal lanes: coordinator/root-free maximum-12 atlas; maximum-12
+  correct-chart `Q8` reconstruction; AS quotient/remainder next carry; TD6
+  first/second transverse `c3` thickening.  External reviews of corrected AS,
+  AS state sufficiency, root-free norm, the quarantined formal-branch logic,
+  and replacement dependencies run asynchronously.  Review never blocks a
+  cheap reversible successor but promotion and further fanout remain gated.
+- Immediate queue: (1) freeze/review `Q8` with a control reproducing the old
+  off-fibre `Q12`; (2) attach fibre/Taylor rows to the root-free collision
+  leaves; (3) adjudicate corrected AS source before promoting its state
+  theorem; (4) finish the portable TD6 `dc3=0` replay, then test second order
+  and projective escape; (5) append canonical promotions/corrections, bank,
+  push, and clean after active frozen artifacts close.
+- The next full all-46 scan is due by twelve hours after the `20:56Z` close,
+  unless a corrected `Q8` theorem, AS component transition, TD6 transverse
+  family result, external proof/counterexample, or other rank-changing event
+  triggers one sooner.  No proof or counterexample to JC2 has been found.
+
+## 2026-08-24 21:25Z REVIEW/PACKAGING DELTA
+- AS MATRIX STATE PROMOTED: Grok hostile review SHA
+  `6ab373bf9214c54f506cd368473aff02ed472a20e9797037f83a9745c384bc17`
+  is `CONFIRMED`.  Promote exactly the capped-adjugate theorem for the
+  displayed vertical D8 `7x5` matrix and its exhaustive literal-`F3`
+  comparison: ranks `5,3,2,0`, 1,594,323 assignments, 314,127 compatible,
+  and 202,176 false positives without caps.  The corrected source-column
+  review remains active, so the AS-successor reading is still conditional.
+- MAX12 Q8 PRODUCER STATE: the corrected determinant replacement is frozen
+  at report/manifest/freeze SHAs `7f1ed3c7...` / `aecc0762...` /
+  `998a967b...`; independent Claude review is active.  A fresh Q8-only
+  seven-row formal-branch package is replay-clean at SHAs `37ce842e...` /
+  `d4b54c5a...` / `0047d348...`; Grok hostile review is active.  Neither is
+  promoted.  The owner is computing the lowest normalization and terminal
+  `r8` jet without consuming any quarantined Q12 artifact.
+- TD6 PORTABILITY CONTROL: the transverse producer caught and removed one
+  absolute-path dependency before freeze.  A clean post-fix replay is
+  mandatory; the exact first-order result remains provisional.  Root-free
+  norm review, corrected AS source review, and the double-`B` exact
+  computation continue in parallel.  No proof or counterexample to JC2 has
+  been found.
+
+## 2026-08-24 21:29Z ROOT-FREE STRATIFIER PROMOTED
+- Grok hostile review SHA
+  `b6ae9516430073e177a5174684109b437ab278fa04dd066686c58af57715588e`
+  is `CONFIRMED`.  Promote the exact `nu=1` coefficient-field identity
+  `disc_T Norm(g^3-T*f^4)=4*s*E^2` and its exhaustive open split into full
+  absorption, one absorption, equal non-unit values, and generic unequal
+  values, with `s=0` and `B`-meets-`f` retained separately.  The reviewer
+  independently rebuilt the Faber pair, actual Wronskian, scaling covariance,
+  quadratic reduction, resultant controls, and parity control.
+- SCOPE/QUEUE: no residual leaf is killed.  Root now projects the normalized
+  double-`B` leaf to `(p,q)` while a separate full-basis computation extracts
+  its geometry.  Original Taylor rows and terminal dynamics remain mandatory.
+  No proof or counterexample to JC2 has been found.
+
+## 2026-08-24 21:36Z Q8 FORMAL NODE PROMOTED; AS SOURCE REVIEW RELAUNCHED
+- Q8 FORMAL GEOMETRY: Grok hostile review SHA
+  `32750e4e350919d7d52984feab06d3cd2d801386caec5848f7c5750bf9e8e846`
+  is `CONFIRMED`.  Every loaded root of the genuine corrected `Q8` on the
+  seven-row parity chart has normal/invariant ranks `3/3` and lies on a
+  second reduced smooth non-parity formal branch.  The review independently
+  reconstructs the determinant, every `3x3` minor, `R6'` gcd, Schur
+  complement, and equivariant IFT, consuming no quarantined Q12 descendant.
+  Normalize that branch and pull back `r8`, both Taylor families, and the
+  terminal differential before any trajectory claim.
+- AS REVIEW CUSTODY: the long Claude corrected-source audit failed with no
+  report because its response exceeded the adapter's 64k output limit.  This
+  is a technical failure and supplies no evidence.  A narrower Grok audit is
+  active under the new immutable source-review tag; the displayed matrix
+  theorem remains promoted while its AS-successor interpretation remains
+  conditional.
+- DOUBLE-B DISCOVERY: modulo `1000003`, the `p=0` slice is a one-dimensional
+  degree-five family with free `q`, hence `r8=0` and terminally impossible;
+  the `p=1` slice is empty.  Exact projection to `p` and an independent
+  algebraicity attack are active.  Modular evidence is not promoted.  No
+  proof or counterexample to JC2 has been found.
+- ROUND DECISION: coalesce these expected successors as an event micro-round.
+  They strengthen but do not reorder the same maximum-12 / AS / TD6 portfolio
+  sealed at `20:56Z`; no global premise, proof, or counterexample changed.
+  The full-round clock therefore remains due by `2026-08-25T08:56Z`.
+
+## 2026-08-24 21:43Z LIVE STATE
+- BASIS: `HEAD=origin/master=2e6104a417cfe15a93a901aa0a9129094a2ae11b`;
+  completed and active evidence is uncommitted above it.  Nested `jc2-lean`
+  remains clean at its pinned commit.  Frozen/active lane bytes are not
+  mutated; canonical reconciliation is in progress.
+- CLOCKS: last full ideation `20260824T2024Z`, closed `20:56Z`; next deadline
+  `2026-08-25T08:56Z`.  Last broad sweep `20260824T2041Z`; next deadline
+  `2026-08-25T20:41Z`.  The `Q8` and norm promotions are coalesced
+  micro-rounds because the global three-root ranking is unchanged.
+- PROMOTED DELTA: root-free critical-value norm review `b6ae9516...`, AS
+  displayed-matrix state review `6ab373bf...`, and genuine `Q8` formal-node
+  review `32750e4e...` are `CONFIRMED` at their strict stratification,
+  matrix, and formal-local tiers.  Q12 and its descendant remain quarantined.
+- INTERNAL LANES: root projects the double-`B` leaf to `p` and stops at an
+  exact characteristic-zero algebraicity/terminal certificate; max12 owner
+  reconstructs the `Q8` normalization, root-free leaf transition, charged
+  `A/9` Taylor families, and `r8` jet; AS owner finishes the source-linked D7
+  component decomposition; TD6 owner finishes a portable post-fix `dc3`
+  replay before second order/projective escape.  All four reasoning slots are
+  occupied.
+- PROVISIONAL: the punctured `Q8` non-parity branch has unit first `E`
+  coefficient and enters generic norm leaf 4; the AS D7 row leaves 1,245
+  states / 3,507 digit points with deterministic streams; the TD6 first
+  transverse coefficient vanishes while the unit `-k/50` persists.  None is
+  frozen/promoted at this timestamp.
+- REVIEW/DEBT: Claude reviews the corrected Q8 determinant; Grok audits the
+  corrected AS source column after a no-report Claude output-limit failure;
+  Grok independently attacks double-`B` `p`-algebraicity.  The quarantined
+  Q12 formal review may contribute only reusable logic.  New Q8-jet, AS-D7,
+  and TD6 packages receive immediate different-model review after freeze.
+- TOP GAPS: maximum-12 still needs leafwise Taylor/terminal coverage and all
+  non-parity/disjoint components; AS needs a proved recurrent bounded state
+  and characteristic-zero polynomial algebraization; TD6 needs complete
+  transverse projective coverage; the global campaign still owes full
+  landing/cofinality beyond bounded partial degree.
+- IMMEDIATE QUEUE: harvest exact double-`B` projection; adjudicate Q8 and AS
+  source reviews; freeze/review Q8 jet, D7 decomposition, and TD6 first-order
+  rigidity; then advance the strongest reviewed successor without waiting on
+  unrelated reviews.  AWS remains stopped because all live bottlenecks are
+  small exact symbolic/source tasks.  No proof or counterexample to JC2 has
+  been found.
+
+## 2026-08-24 21:45Z QUARANTINED Q12 DESCENDANT REVIEW CLOSED
+- Claude review SHA
+  `5efb648c0e351dce8179bc0524949faa67d7e8a4389be73296ebaae918ed137c`
+  is `REFUTED`.  It independently identifies the inherited constant-`1/3`
+  substitution and confirms that the formal IFT skeleton was sound but
+  instantiated on the wrong rank divisor.  Since the genuine determinant is
+  supported on `Q8` and `gcd(Q8,Q12)=1`, loaded `Q12` points are normal-rank
+  four and parity-trapped; the claimed second germ is empty.  This is custody
+  closure only, not a new route or a trigger for a full ideation round.
+
+## 2026-08-24 22:11Z SOURCE PROMOTION, NEW LOCAL DESCENTS, AND AWS EXPANSION
+- AS SOURCE PROMOTED: corrected-source hostile Grok review SHA
+  `156053c538c4c826bc0feb345d25d91f015543464e0ab9d7734ab190cd7842c4`
+  is `CONFIRMED` at its exact D9/D8 and endpoint scope.  It independently
+  regenerated the integer divided carry, all six Frobenius directions, the
+  vertical column, both literal-F3 censuses, and their hashes.  The displayed
+  matrix theorem now has an unconditional AS-source interpretation; the live
+  D7 component decomposition remains producer-tier until frozen/reviewed.
+- MAX12 Q8: the normalization/Taylor/terminal jet is frozen at report /
+  manifest / freeze SHAs `739fbad4...` / `036b8656...` / `807ad9da...` and
+  replays byte-for-byte.  It places the punctured branch in generic norm leaf
+  4 and rules out finite trajectory contact with the parity node; hostile
+  review is active.  Its corrected weight-zero successor is independently
+  replay-clean at report / manifest / freeze SHAs `b835aa03...` /
+  `0b9b3f71...` / `700ddb29...`: `Delta,tau,q,S` are etale local quotient
+  coordinates and `h^3*(S')^9=j^9*S^8` is necessary.  An executable control
+  proves `p^9*R6(v)=nu` is parity-only and fails by a unit at order `t^2` off
+  parity.  Review runs in the background; the global quotient relation is
+  already the provisional successor.
+- TD6: first-c3 dual package frozen at report SHA `6b36c189...`, with
+  manifest/freeze SHA `83e21713...`.  The genuine `P12` first-ideal class has
+  base remainder `-k/50` and zero first `c3` derivative after differentiating
+  transport, echelon, pivots, and multipliers.  Manifest passes; exact replay
+  and hostile review are active while the owner computes order `eps^2`.
+- AWS CAPACITY: user authorized use of the remaining 512-vCPU quota.  Existing
+  Box02 `i-010201a5da47795c4` (128 vCPU / 2 TiB) and Box03
+  `i-0ece0b9a3b4a7512f` (64 vCPU / 512 GiB) were started.  Four new on-demand
+  `r6i.16xlarge` 64-vCPU / 512-GiB workers with 200-GiB gp3 roots were launched
+  at `21:59:45Z`: `i-02cb2b4a379ffcc64`, `i-0f089e64c378f5da3`,
+  `i-040b7a1c2ed72d4cc`, and `i-07eeaf8ba6f0bc419`.  With existing Box01 the
+  fleet is at 512/512 vCPUs.  A SHA-verified source payload and self-recording
+  runner were installed on all seven nodes.  Exact races are Q `modStd`
+  p-saturated projection (Box01), msolve 0.10.1 p-saturated reconstruction
+  (Box02), and Q `modStd` weighted double-B projection (one new worker).
+  Independent ten-prime farms project to `p`, `(p,q)`, and weighted
+  `(p,rho,nu)` on three other workers/Box03.  A later input audit found that
+  the initial msolve trials had an in-band comment before the variable
+  declaration, so msolve parsed one variable; every such trial is
+  quarantined.  The corrected input begins with all nine variables and uses
+  the mathematically correct eight-variable elimination block retaining `p`,
+  plus an independent full-solve ordering.  Modular output remains
+  discovery-only; promotion still requires exact reconstruction/membership.
+  Stop the six newly started workers and Box02/03 promptly when their queues
+  drain, after copying results and metadata.  No proof or counterexample to
+  JC2 has been found.
+
+## 2026-08-24 22:51Z Q8 REVIEWS PROMOTED; DOUBLE-B EXACT CERTIFICATES
+- Q8 NORMALIZATION: Claude review SHA `e85c20f3...` is `CONFIRMED`.  It
+  independently checks the corrected `Q8` branch jet, leaf-3-to-leaf-4
+  transition, all 23 true-center Taylor members, and the finite-place node
+  contradiction.  It licenses no punctured-branch or infinity exclusion.
+- Q8 DESCENT: Grok review SHA `58fafc55...` is `CONFIRMED`.  The character-zero
+  coordinates `theta,pi,q,S`, unit local coordinates `Delta,tau,q,S`, and
+  `h^3*(S')^9=j^9*S^8` are promoted at formal-local scope.  The executable
+  negative control confirms that `p^9*R6(v)=nu` is parity-only.
+- DOUBLE-B EXACT Q: corrected msolve input parses 9 variables / 9 equations.
+  The independent full-order run reconstructed a non-unit 1,246-element
+  characteristic-zero DRL basis after 126 primes; its initial ideal contains
+  a pure power of every variable and has 1,188 standard monomials.  A separate
+  eight-variable elimination reconstructed a primitive degree-630 polynomial
+  `P(p)` with exactly 71 terms `p^(9k)`, nonzero constant, after 120 primes.
+  Three independent Singular primes match all 71 normalized coefficients.
+  Both producer packages replay and are frozen; hostile Claude/Grok reviews
+  run in parallel.  Until review closes, the double-B terminal kill is
+  provisional rather than canonical.
+- AWS: full 512-vCPU quota remains allocated.  Box01 and one 512-GiB worker
+  run independent exact Singular reconstructions; Box02 runs an independent
+  exact Singular route after both corrected msolve certificates completed;
+  the remaining workers finish weighted and p-saturated modular controls.
+  Stop/copy each worker as its queue drains.  No proof or counterexample to
+  JC2 has been found.
+
+## 2026-08-24 23:01Z R6C REASSIGNED; CORRECTED EXACT RACE
+- CAPACITY POLICY: the user authorized additional AWS workers of at most 1 TiB
+  RAM when quota is available; the fleet is already at the 512/512-vCPU hard
+  ceiling, so no new instance was started.  Idle capacity is reassigned before
+  any stop/start decision.
+- R6C: `i-040b7a1c2ed72d4cc` / `54.167.205.167` was directly checked idle and
+  has 64 vCPUs / 512 GiB.  At `22:57:41Z` it started the independent exact
+  Singular `lift(...,"slimgb")` membership lane
+  `q_exact_singular_p_membership_lift_v1`, using frozen source/result SHAs
+  `1bde828b...` / `50d71a0b...`, generator SHA `40388307...`, runner SHA
+  `19603817...`, and generated-input SHA `61e3d934...`.
+- CORRECTED ORDER: the earlier Singular projection generator's fixed
+  `(dp(7),dp(1))` block incorrectly grouped `ip` with retained `p` after
+  saturation.  The source-honest corrected generator SHA `a0ab4878...`
+  dynamically emits `(dp(8),dp(1))`.  On r6c, runner SHA `c11833a0...` now
+  drives two independent exact characteristic-zero lanes (`modStd` and direct
+  `slimgb`) and ten finite-prime `slimgb` controls.  The exact modular route
+  spawned its worker pool; live inputs visibly declare
+  `R=0,(x0,x1,x2,x3,x4,x5,q,ip,p),(dp(8),dp(1))`.  These lanes are
+  evidentiary successors, not yet promoted.
+- Q8 SUCCESSOR: the corrected global quotient package froze at report /
+  manifest / freeze SHAs `2102e5d7...` / `3d60b567...` / `c34fff2b...`; its
+  five-minute replay passes.  It explicitly derives selected-branch dimension
+  from the reviewed formal IFT, not the two modular 607-basis runs.  Hostile
+  Claude review is active in the background.  No proof or counterexample to
+  JC2 has been found.
+
+## 2026-08-24 23:10Z DOUBLE-B P REVIEW: CERTIFICATE DEBT IS EXACTLY THE LIVE LIFT
+- Grok hostile review SHA `ca5c052f...` is `INCONCLUSIVE`, with no false
+  identity found.  It independently confirms the corrected nine-variable
+  source, the genuine 120-prime non-unit reconstruction, the degree-630 / 71
+  term / nonzero-constant polynomial, all three locally rerun modular Singular
+  matches, and that `homogeneous input? 1` is an ELIM-mode telemetry side
+  effect rather than lost constants.
+- The sole blocking debt is exact characteristic-zero membership `P in J`
+  from a second engine (a Q elimination basis or explicit cofactors).  The r6c
+  `lift(...,"slimgb")` lane launched at `22:57:41Z` targets precisely that
+  certificate and is CPU-active; corrected Q `slimgb` and `modStd` elimination
+  lanes run independently beside it.  Therefore no double-B trajectory kill
+  is promoted yet.  No proof or counterexample to JC2 has been found.
+
+## 2026-08-24 23:16Z SECOND LIFT, MODULAR HARVEST, AND AS FAIL-CLOSED PAUSE
+- DOUBLE-B CERTIFICATE RACE: Box02 started an independent default-`std`
+  membership lift at `23:12:33Z`, beside the r6c `slimgb` lift.  It pins base
+  generator SHA `40388307...`, wrapper SHA `c63dcd96...`, runner SHA
+  `a9dbcb96...`, frozen input/result SHAs `1bde828b...` / `50d71a0b...`, and
+  generated-input SHA `455c6376...`.  The first completed exact cofactor
+  identity will be replayed and sent to hostile review.
+- CORRECTED MODULAR HARVEST: all ten r6c finite-prime `(dp(8),dp(1))`
+  controls completed with exit zero, zero stderr, dimension zero, degree 1188,
+  and one degree-630 projection polynomial.  Local verifier
+  `cases/max12_912_order3_double_b_p_projection_corrected_20260824/verify.py`
+  regenerates every input from corrected generator SHA `a0ab4878...` and
+  confirms that every coefficient equals the frozen exact `P` reduced and
+  lead-normalized at all ten primes.  This strengthens regression coverage but
+  does not replace the missing Q membership identity.
+- AS D7 FAIL-CLOSED: a newly frozen 13-component package was paused before
+  review when its owner noticed that the report did not explicitly justify
+  replacing the full divided accepted carry `E1` by its single-Frobenius
+  degree-seven contribution.  Three optional r6d full-ring jobs were started
+  at `23:16:15Z`, then immediately TERM-stopped after the warning; direct
+  process audit confirms none remains, and their partial outputs are not
+  evidence.  A subsequent exact degree audit indicates the rows are likely
+  source-honest (`L/3`, `Cx+Dy`, and base `K` have degree at most six, while
+  the double-Frobenius bracket vanishes mod 3), but the package remains
+  quarantined until an independent full-`E1` assertion is added and it is
+  re-frozen.  No proof or counterexample to JC2 has been found.
+
+## 2026-08-24 23:45Z LOCAL SWAP INCIDENT; AWS-ONLY COMPUTE BOUNDARY
+- LOCAL REMEDIATION: concurrent campaign Singular, exact-Python, and an
+  unrelated stale `jc2-lean/depth-witness` build drove local swap to about
+  32.4 GiB.  Every identified campaign CAS/replay process was TERM-stopped;
+  the stale independent Codex/Lean session was interrupted; a TD6 hostile
+  review whose reviewer had spawned a 0.55-GiB local independent replay was
+  canceled and supplies no evidence.  A direct respawn audit found no
+  campaign Singular, Lean build, or long replay process.  Swap subsequently
+  fell to 7.0 GiB with about 16 GiB of free physical memory and no throttled
+  pages; macOS may reclaim the remaining compressed/swap pages gradually.
+- STANDING POLICY: `ops/FLEET.md` now sends all heavy or uncertain-duration
+  campaign computation to AWS, including CAS, Lean builds, and exact Python
+  replays/enumerations.  Local execution is limited to editing,
+  orchestration, hashing, status checks, and genuinely short low-memory
+  validation.  All active internal agents were notified.
+- AWS CAPACITY: the seven-node fleet remains at 512/512 vCPUs.  Live memory
+  audit found large headroom on every worker; r6d `i-07eeaf8ba6f0bc419`
+  had about 473 GiB available at load 8/64 and was selected for the TD6
+  handoff.  A dedicated Python 3.12 / python-flint 0.9.0 virtual environment
+  was installed there.
+- TD6 HANDOFF FAIL-CLOSED: V3 archive SHA `8bdd2e85...` and its complete
+  *declared* source manifest verified on r6d, but all six first launches
+  exited immediately because the archive omitted the recursively imported
+  `td6_boundary_q2_deformation_20260824/replay.py`.  These startup failures
+  supply no mathematical evidence.  A full recursive-import-closure V4 was
+  requested before relaunch; no heavy TD6 computation returned to the Mac.
+  No proof or counterexample to JC2 has been found.
+
+## 2026-08-25 00:01Z AWS MIGRATION LIVE; FIRST REMOTE SUCCESSORS
+- LOCAL HEALTH: a second respawn audit again found no campaign Singular,
+  Lean build, or long Python replay.  Swap continued downward to about
+  6.2 GiB; local work remains orchestration/review only.
+- TD6 V4/V5: the complete recursive-closure V4 archive SHA `4bb63523...`
+  verified on r6d.  Independent remote lanes returned exit-zero / empty
+  stderr for the generic two-center identity (stdout `08a43204...`), the
+  B-local identity (`2532ff68...`), and raw `H=0` rebuild (`68d3a56b...`).
+  They recover the genuine 2,893-term P12, remainder `-k/50`, 28-row source
+  relations, exact denominators, and `Res_C(B,T)=64U^10`; B-local is a unit
+  chart off `U*H=0`.  The eps-squared replay remains active.
+- TD6 EXCEPTIONAL CERTIFICATES: V5 SHA `c7be0153...` converts the V4
+  first-band assertions into original-row incompatibility certificates.
+  AWS replays passed for the intersection (stdout `91f29401...`) and `U=0`
+  fraction-field chart (`0943cc42...`).  The intersection has unit residual
+  and unit complete chart factor and is exactly empty.  The `U=0` chart is
+  empty off `C=0`; its only excluded factor is `C`, so the separate empty
+  intersection supplies the remaining raw point.  This coverage is
+  producer-tier pending freeze and hostile review; it licenses no SP-2/JC2
+  claim.  Artifacts were harvested to `/tmp/td6-aws-harvest-20260824/`.
+- Q8 TERMINAL: the AWS-only terminal classifier passed with source SHA
+  `495844f1...` and output SHA `4697899b...`; its strict necessary Belyi
+  classification froze at report/manifest/freeze SHAs `5d8806db...` /
+  `ff7e0658...` / `0c5b862f...`.  Hostile no-Bash Claude review is active.
+  A cheaper component-grouping discriminator was shipped to r6d; its first
+  generation attempt failed closed on an omitted recursive dependency, then
+  the complete source layout generated input SHA `e837e300...` and the
+  guarded prime-10007 saturation became CPU-active.
+- AS: a 1-CPU/16-GiB-capped next-top-carry enumeration is active on r6d at
+  tag `as_d7_next_top_20260824T235345Z`.  Its first wrong-layout launch
+  exited before computation and is quarantined.  A no-Bash hostile review of
+  the frozen full-C5 D7 and first following-Cartier gates runs concurrently.
+  No proof or counterexample to JC2 has been found.
+
+## 2026-08-25 00:15Z LOCAL LEAN RESPAWN STOPPED; AWS-ONLY RECONFIRMED
+- A leftover coordinator-owned `jc2-lean` verification chain respawned after
+  the earlier audit, successively running depth-witness and gcd3-69
+  `Solution.lean` / `Challenge.lean` processes.  One invocation briefly
+  reached about 5.2 GiB RSS at one full core.  The exact processes whose cwd
+  lay under this campaign were TERM-stopped, and a repeated scoped sweep found
+  no remaining campaign Lean, Singular, or long Python computation.
+- Local swap continued falling, from about 5.94 GiB to 5.91 GiB used during
+  the remediation.  All three active research agents explicitly acknowledged
+  the standing AWS-only rule for substantive CAS, Lean builds, and exact or
+  long-running Python.
+- A live seven-host audit confirmed substantial remote RAM headroom.  Box02
+  had about 1.97 TiB available at load 2/128 and is taking the independent
+  27-way AS top-carry shard acceleration while the canonical monolithic stream
+  remains on r6d.  r6d had about 472 GiB available and is taking the packaged
+  TD6 V6 exact quotient replay.  No proof or counterexample to JC2 has been
+  found.
+
+## 2026-08-25 02:02Z LIVE STATE
+- BASIS/CUSTODY: `HEAD=2e6104a417cfe15a93a901aa0a9129094a2ae11b`;
+  the post-midnight frozen cases, reviews, synthesis, and canonical updates
+  are intentionally uncommitted above it while producers remain active.
+  Frozen producer/reviewer bytes are immutable.  The working tree is dirty by
+  design; no cleanup, commit, or push occurs until active harvests and
+  manifests reconcile.
+- CLOCKS: the significant-news full round `20260825T0126Z` closed at `01:56Z`
+  with four of four whole-46 scans and synthesis SHA `843f9ffd...`; its one
+  disclosed TD6 syzygy exposure is excluded from blind support.  Next full
+  round is due by `2026-08-25T13:56Z`, sooner on a rank-changing event.  Broad
+  sweep `20260825T0126Z` found no new disclosed plane result; next broad sweep
+  is due by `2026-08-26T01:26Z`.
+- PROMOTED DELTA: selected-Q8 global quotient and corrected `Z!=0` terminal
+  Belyi classifier are in `AUDIT.md`.  The AS divided-Frobenius erratum and
+  corrected degree-12/11/10 rows/counts are now different-model confirmed at
+  review SHA `f3dadb71...` and promoted at exact finite-census scope.  The
+  frozen erratum/Q11/Q10 verification scripts returned rc zero on Box02.  AS
+  Q9 is confirmed at canonical-representative scope (review `ab0c98be...`),
+  with two wording attributions corrected in a nonmutating erratum.  TD6
+  `(C,1,U)` review SHA `56c4ece1...` found no false identity, missing stratum,
+  or hypothesis; its custody supplement is frozen and the fixed-section
+  theorem is now promoted.
+- REVIEW/CUSTODY: the TD6
+  independent Box03 probe has 108 explicit PASS checks and a terminal
+  `PROBE PASSED` in 114 stdout lines (stdout SHA `5dbd5025...`);
+  custody report/manifest/freeze SHAs are `2ca09994...` / `feebc1b3...` /
+  `8c503ad5...`.  Full-C5/next-Cartier AWS
+  custody separately returned four rc-zero replay/manifest checks on Box02.
+- PROVISIONAL CLAIM DAG: `AS-Q9` (producer SHA `6fb2ce4b...`, review
+  `ab0c98be...` confirmed)
+  has parent corrected Q10 and leaves 11,881 canonical states.  The corrected
+  one-shard monolithic Q11 control completed rc zero at stdout SHA
+  `6e303e3a...`, matching N12 stream `0fa6cb58...` exactly and closing the
+  review's named agreement debt.  Child
+  `AS-Q9-Q8-LS-V3` now freezes the first zero-free-variable representative's
+  incompatibility in a 22-row/32-variable transition: accepted/full rank
+  pairs `(13,13)` / `(13,14)`, `lambda=e21`, `lambda*b=2`, producer report
+  SHA `0227176c...`; no fibre death is inferred and review is active.  V1/V2
+  remain assertion-failure controls.  `Q8-PRIMITIVE-INFINITY` (producer SHAs `9f37fc3f...` /
+  `89691023...`, review active) has child exact component/constant-field races.
+  `TD6-TRICENTER` has parent reviewed fixed section, exact generic P12
+  remainder `-k/50`, closed `U=0` and `V=0`, and live `H=0/P3` raw children.
+  V14's B3-local source replay is exact only as a pivot/denominator diagnostic:
+  its P12 remainder has 1,681 terms, is not `-k/50`, and the producer records
+  `stratum_localization_killed=false`.  Its three finite resultant curves are
+  denominator-exceptional loci, not the complete B3 debt.  Direct raw-curve
+  and birational generic-B3 replays are active; no full-section or TD6 claim
+  exists.
+- INTERNAL LANES: AS owner runs whole-fibre and rank-class
+  affine-Kuranishi/Cartier compilers
+  on Box02; the coordinator-launched corrected Q11 monolithic stream has
+  completed and is ready for harvest.  Max12 owner runs p89/p127 and characteristic-zero
+  primitive-element, standard-basis, and absolute-factor races on Box03 while
+  older r6d grouping jobs continue.  TD6 owner runs the denominator-resultant
+  curves, direct birational `B3=0`, `H=0`, and `P3` quotient/raw replays on
+  r6d/Box02.  Exact Double-B
+  membership/standard-basis races continue on Box01/Box02/r6c.
+- REVIEW DEBT: no-Bash hostile reviews of Q8 infinity+primitivity and the AS
+  pointwise Q9-to-Q8 V3 obstruction remain active.  TD6, AS corrected-top,
+  and AS Q9 reviews are complete; their `.run` metadata are frozen locally.
+  Reviews remain background/nonblocking;
+  reasonable provisional results may seed reversible successors but do not
+  enter `AUDIT.md` outside their confirmed scope.
+- COMPUTE BOUNDARY: all seven AWS instances remain allocated at 512/512
+  vCPUs.  Box01/r6a/r6b/r6c are saturated or nearly saturated; Box02/Box03/r6d
+  receive new source-complete shards and divisor/component lanes as scripts
+  become ready.  Local execution remains editing, orchestration, hashing,
+  status, short diagnostics, and cloud-review clients only—no campaign CAS,
+  Lean build, long exact Python, or uncertain-memory job.
+- RANKING/QUEUE: (1) AS affine-Kuranishi transition and finite-state
+  sufficiency; (2) Q8 all-eight versus singleton component decision, then
+  normalization/genus/one-pole Taylor test; (3) TD6 raw trivariate divisor
+  closure plus universal adjoint; (4) background Double-B exact membership
+  and directional-width landing falsifier.  Literal AS completion enumeration
+  and blind Q8 support rectangles are stopped.  No proof or counterexample to
+  JC2 has been found.
+
+## 2026-08-25 03:14Z LIVE STATE — AWS-ONLY FANOUT
+- LOCAL BOUNDARY: a scoped process audit found no campaign Singular, msolve,
+  Sage, Lean build, or substantial Python worker.  Local swap is about
+  3.17 GiB, residual from earlier pressure rather than live campaign compute.
+  All three research owners acknowledged the hard rule: CAS, Gröbner,
+  symbolic algebra, exact enumeration, and uncertain-duration work run on
+  AWS; local work is orchestration/editing/hashing/status/cloud-review only.
+- Q8 REVIEW/PROMOTION: the bounded no-Bash infinity+primitivity retry returned
+  `CONFIRMED`, report SHA `c77a7330...`.  Residual replays then ran on Box02
+  and matched frozen infinity/primitivity payload SHAs `8d13cb67...` /
+  `f5b37f95...`, rc zero and empty stderr.  `AUDIT.md` now records the exact
+  conditional result: primitive contact partition is all-eight or eight
+  singletons; the all-eight alternative cannot carry the registered actual
+  trajectory, while the singleton alternative remains open.
+- Q8 FIXED-FIBRE SIEVE: pure Singular completed all 126 nonzero `F_127`
+  fibres.  Exactly 123 have squarefree degree-190 `v` eliminants.  At
+  `w=39,56,125` the eliminant degree is 189; quotient dimensions are
+  respectively `190,189,189`.  The `w=25` partition `[2,188]` and `w=47`
+  partition `[1,3,186]` have disjoint proper subset sums.  Interpolation V6
+  (result SHA `90617262...`, coefficient-table SHA `bb61aff1...`) produces a
+  monic `deg_v=190` candidate whose 191 coefficients all have
+  `deg_w<=21`.  This is candidate structure only, not generic
+  specialization/flatness.  The excluded-fibre holdout then passed exactly:
+  at `w=56,125` the degree-189 fibre eliminant divides `H` with quotient `v`
+  and the extra root is not in the localized fibre; at `w=39` the quotient is
+  `v+38`, whose root 89 is already a fibre root, explaining the length-190
+  failure of `v` to be primitive.  Holdout result SHA is `e129efe2...`.
+  Four direct generic relation/basis lanes and 48
+  independent candidate-seeded exact quotient lanes now run on Box02/Box03;
+  the seeded route is explicitly insufficient without direct membership or a
+  generic length bound.  All msolve shape bases remain negative controls.
+- AS TRANSITION: pointwise Q9-to-Q8 review SHA `3dccb4c6...` confirms the
+  first assignment's `(13,13)/(13,14)` rank certificate and also proves why
+  it is not a fibre kill.  The exact whole-fibre Kuranishi zero locus has
+  dimension 13.  For the fixed canonical `Q9=e17,Q8=0` point, all `3^9` Q7
+  kernel states and their Q6 fibres were exhausted on Box02: every path has
+  the constant next residual `R10=x^10`.  Frozen report SHA `cc2cf641...` is
+  under bounded hostile review.  Sixty-six zero/plus/minus-basis AWS lanes
+  across the 13 Q9-locus and 19 Q8-solution-kernel directions then completed
+  66/66 PASS: eight sampled states die at Q7, and the other 58 have the
+  identical `R10=x^10` map on all `3^9` points of their Q7 fibres.
+  Aggregate/stdout SHAs are `3d42d327...` / `de3aa4e5...`.  The predecessor
+  axes were sampled, not exhausted; no branch or all-depth death is inferred.
+- TD6 TRIVARIATE: the nonmutating V14 erratum SHA `048ba9b4...` records that
+  the B3-local lane is not a unit certificate.  V17 ascending P3 quotient
+  completed rc zero (stdout SHA `c38471a0...`): ranks `3470/3602` and
+  `38/132`, 28 original rows, 1,540 genuine P12 multiplier terms, exact
+  remainder `-k/50`, and chart factor `U^17`.  This kills P3 off `U=0`; the
+  remaining origin is already raw-closed.  The two-order frozen package
+  `cases/td6_c1_c2_c3_p3_raw_curve_aws_20260825/` (manifest/freeze SHAs
+  `95869889...` / `ddbf7dff...`, report SHA `a15c85c5...`) therefore closes
+  the whole set-theoretic P3 curve and the fixed section's residual H=0 debt
+  at producer-exact tier, pending hostile review.  V19's exact generic raw-B3
+  mathematics reached the full 28-row/1,530-term P12 remainder `-k/50` and
+  exposed only `t,w,t-2,t^2-4t+2,2t-1` in the cheaper ascending cover, but
+  its final reporting sentinel failed after those results.  Corrected V24 and
+  direct two-order lanes for the genuine quadratic and `t=1/2` curves are
+  active.  No promotion occurs before clean rc-zero custody and divisor
+  closure.
+- FLEET: 512/512 vCPUs remain provisioned.  At the 02:58Z audit box01,
+  r6b, and r6c were saturated; Box02/Box03/r6d had headroom and received the
+  new Q8/AS/TD6 fanout.  Box02 rose from load about 11 to about 38 before the
+  66 AS lanes, with roughly 1.9 TiB still available; source-complete work will
+  continue to fill useful remote capacity without returning heavy jobs to the
+  Mac.  Next full ideation remains due by `13:56Z`, broad web sweep by
+  `2026-08-26T01:26Z`.  No proof or counterexample to JC2 has been found.
+
+## 2026-08-25 03:46Z SIGNIFICANT NEWS — Q8 BOUNDARY / AS QUADRATIC DESIGN / TD6 LAST B3 FACTOR
+- Q8 SHAPE DATA: pure-Singular `stdfglm` conversion returned exact shape
+  bases for all 123 primitive nonzero `F_127` fibres.  The audit checked 861
+  coordinate relations, all 984 original-row remainders, and all 123
+  candidate specializations.  The historical `redSB is not defined` line is
+  a nonfatal harness defect after `stdfglm` assigned the basis; it is pinned
+  and no rerun of the 123 lanes is being mistaken for new evidence.
+- Q8 BOUNDARY: a new exact AWS check proves
+  `H(0,v)=Q8bar(v)C(v)`, `deg C=182`, with `Q8bar` squarefree, occurring
+  exactly once, and coprime to `C`.  Thus `H_v` is a unit at all eight
+  corrected-Q8 projection points.  Report/result/freeze SHAs are
+  `8f3bb1cb...` / `181cabca...` / `4f6b591f...`.  This is projection-only:
+  rational reconstruction plus direct original-row substitution must first
+  make it a quotient component, and characteristic-zero grouping still
+  needs either a lift or a multiplicity-one good-reduction/no-merger theorem.
+  The latter is now the targeted short bridge because a component through all
+  eight contacts would select the already-excluded all-eight alternative.
+- Q8 CUSTODY: the first r6a direct order-race dispatch was caught as a
+  false-positive launcher: every generated input was empty because a pinned
+  descent dependency was absent, while a bare background `wait` returned
+  zero.  It is quarantined.  V2 synced the full closure, added fail-closed
+  preflight/PID waits, produced 15 nonempty inputs, and runs entirely on r6a.
+  The older direct Box02/Box03 lanes remain valid and active.
+- AS TRANSITION: exhaustive `F_3^4` reconstruction gives the exact Q7
+  cokernel map `kappa=(s15,2t6,s17,2t8)` on the four observed active
+  coordinates.  All 28 active-four-plus-one `F_3^5` slices then passed after
+  a preserved V1 output-routing failure and fail-closed V2 relaunch; every
+  slice has exactly three compatible points on its added-coordinate axis.
+  Source bounds license a degree-at-most-two compatibility map in all 32
+  predecessor coordinates only on an explicit unreduced affine-lift chart,
+  so a ~561-point quadratic design plus off-grid controls will solve that
+  chart.  Canonical 0/1/2 digit reduction before exact `/3` carries can create
+  higher-degree parameter functions; a carry-translation theorem or enlarged
+  state remains necessary before global canonical use.
+- TD6: hostile review SHA `def9c739...` confirms the whole `H=P3=0` raw
+  curve and the fixed section's residual `H=0` closure.  Erratum SHA
+  `c40a5083...` changes only the origin label: its unit-chart certificate is
+  transport-band, not first-band.  V22 now closes the whole
+  `t^2-4t+2` B3 factor off the frozen `w=0` origin.  Clean V26 ascending and
+  reverse `t=1/2` lanes are through transport and first band and are the final
+  live B3 factor; whole-B3 and whole fixed-three-center promotion waits for
+  their exact P12/source-lift completion.
+- COMPUTE: all substantive algebra above ran or runs on AWS.  The Mac has no
+  campaign Singular/msolve/Sage/Lean/heavy-Python process; swap has continued
+  down to about 2.96 GiB.  Reviews remain asynchronous and do not block the
+  producer successors.
+
+## 2026-08-25 04:05Z REVIEW/PROMOTION — AS FIXED BRANCH / GLOBAL UNREDUCED CHART / TD6 P3 SOURCE
+- AS FIXED BRANCH: no-Bash hostile review SHA `02d1c6f2...` independently
+  derives the rank-nine Q7 kernel and constant `R10=x^10`, proves the Q6
+  fibre reaches only degrees at most eight, and strengthens the conclusion:
+  every lower restoration below the fixed `c5_5=2`,
+  `w7_7=z7_6=1`, Q8-zero state is terminal.  The exact fixed-branch theorem
+  is promoted in `AUDIT.md`; erratum SHA `456b9261...` corrects only the
+  spectator wording and supplies one explicit structural degree argument.
+- AS GLOBAL UNREDUCED CHART: the 36-shard Box02 design completed rc zero.
+  Across the exact 561-point quadratic design and 64 off-grid controls, the
+  only nonzero cokernel coefficients are the four linear terms
+  `s15,2t6,s17,2t8`; all squares and crosses vanish.  Thus the displayed
+  unreduced affine-lift chart has a 28-dimensional compatibility subspace.
+  This is producer-exact and review-gated.  Canonical reduction is not
+  licensed: 36 reduced controls fail Q8, the other 28 fail Q7, and none
+  survives, exposing the required carry-translation state.
+- TD6 P3: a second readable-source review SHA `8a3a67d4...` confirms the
+  existing `H=P3=0` closure after reading the full 24-file import chain and
+  hand-checking the quotient tower, source lift, denominators, origin, and
+  H-cover.  This hardens custody but does not broaden the fixed-section scope.
+- AWS-ONLY: the local five-sample VM audit showed zero page-outs, swap-ins,
+  or swap-outs.  All live CAS/exact enumeration remains on AWS; new work is
+  routed to Box02, Box03, and r6d rather than the saturated nodes.
+
+## 2026-08-25 04:24Z EVENT UPDATE — TD6 FIXED A3 CLOSES / Q8 HENSEL REDESIGN / AS CARRY HONESTY
+- TD6 FIXED A3: clean V26 `tau=1/2` ascending and reverse both completed rc
+  zero with exact original-row lifts, genuine P12 `-k/50`, and complete
+  `w`-only charts.  The birational divisor package therefore closes all of
+  `B3=0`; with `D(UHB3)`, whole `U=0`, and twice-reviewed whole `H=0`, the
+  fixed source-typed normalized `A3_(C,V,U)` section is producer-exactly
+  empty.  Main report/package SHAs are `eb127a58...` / `86102e8c...`; the
+  clean ascending mirror report/manifest/freeze SHAs are `d30a979d...` /
+  `41cf74e9...` / `b1ea5a77...`.  Hostile review is queued before promotion.
+  The next AWS successor adds the source-proven q2 boundary parameter
+  (`beta`, to avoid collision with `B3`) through a generic-center dual
+  adjoint; no neighborhood/full-TD6 inference is made.
+- Q8 HENSEL: the first fixed-B0 series-matrix Newton implementation passed
+  its base checks but grew past 50 GiB at order eight and is superseded.  A
+  moving-v quotient implementation in
+  `F127[s,v]/(s^N,H(25+s,v))` uses coefficient-by-coefficient corrections by
+  the constant base Jacobian.  At order eight it has leading ideal
+  `(s^8,v^190)`, dimension 1,520, `final_fail=0`, stdout SHA `66fc2454...`,
+  and only 47,644 KiB maximum RSS.  Orders 16/32/64 now fan out on AWS;
+  higher orders plus simultaneous Padé and direct modulo-H substitution are
+  the global-coordinate gate.  The 123-fibre coefficientwise scan exhausted
+  total degree below 122 with only interpolation aliases, so no low-degree
+  formula is inferred.
+- AS CANONICAL HONESTY: the 64-state sampler directly verifies 64 canonical
+  Q7-compatible witnesses at zero **RREF fibre coordinate**, but its frozen
+  wording incorrectly called every affine Q8 particular vector zero.  Exactly
+  13 particulars are zero and 51 are nonzero.  The first next-high launcher
+  failed closed on that assertion after 13 outputs; no result was consumed.
+  A nonmutating erratum and actual-particular V3 replacement are being frozen.
+  The fitted `3^17` fibre count remains model-only because canonical `/3`
+  carry lacks a global degree bound.  The decisive successor groups the full
+  `3^13` Q9 chart by exact integer-carry signatures and runs one honest fibre
+  design per signature.
+- OUTER-LOOP DISPOSITION: although the underlying B3 factors were expected
+  successors of the 01:26Z priorities, their completed union meets that
+  synthesis's explicit "closed TD6 trivariate atlas" trigger.  A fresh blind
+  full-spectrum round was therefore sealed at 04:27Z instead of coalescing
+  the event.  Q8/AS/TD6 AWS producers and background review continue while
+  every research agent independently rescans all 46 avenues.
+
+## 2026-08-25 04:55Z FULL ROUND / AWS LIVE STATE
+- IDEATION: all four `0427Z` whole-46 scans landed.  Root/AS/cube/TD6 SHAs are
+  `a57b8d2...` / `a86ad772...` / `cf8d72b...` / `883f520b...`.  Cube's
+  accidental exposure is confined to Q8/root headings and those votes receive
+  zero independent credit.  Post-collection cross-pollination independently
+  rejected a trivial rank-190 idempotent and an unlabeled AS SCC as proof
+  objects.  Synthesis `xmodel/ideation-20260825T0427Z-synthesis.md` selects
+  AS canonical right-congruence, Q8 full graph/source substitution, and TD6
+  generic-center support-one `N13`/valuative escape.  Next full-round backstop
+  is `16:55Z`; web-sweep backstop remains `2026-08-26T01:26Z`.
+- Q8: moving-`v` orders 16 and 32 froze PASS at formal-local mod-127 scope,
+  report SHAs `fc0d2eb4...` / `2ebc0786...`; 64/128/256 run on AWS.  Exact
+  1,330-sequence order16/32 comparison passed, but no unique common scalar
+  denominator exists anywhere in `d<=31,m<=30`; bounded-negative report SHA
+  `d323771c...`.  Full modulo-H original-row substitution remains mandatory.
+  The draft no-merger lemma is false as worded when a higher-dimensional
+  vertical component passes through a marked point; hostile review is active.
+  The intended application must prove unique full special-fibre component at
+  every full contact via the source Jacobian, not merely `H_v!=0`.
+- AS: 48-shard V2 signature census on Box02 failed closed after ~26 seconds
+  because some zero-section canonical affine particulars have Q7 augmented-
+  rank escape.  No aggregate was consumed; all partial records/logs remain.
+  V3 classifies compatible and incompatible zero sections and carries both
+  exact signatures forward.  A zero-section failure never kills its full 19D
+  fibre.
+- TD6: conditional specialization lemma SHA `e3a3851e...` proves only that an
+  integral beta-adic point in one common affine presentation would reduce to
+  the empty fixed A3 fibre.  The reviewed fixed-center q2 pencil has the
+  stronger support-one compatibility `N13=(k/25)beta`.  Its exact arbitrary-
+  center original-row lift is now first: if the coefficient is a unit over a
+  complete A3 divisor cover, beta is forced zero even for Laurent escapes and
+  fixed-A3 emptiness kills the exact four-parameter family.  Otherwise the
+  source-derived saturated Rees fan is next.  V29 remains a P12/source-regression
+  producer, not a neighborhood test.
+- FLEET/LOCAL: live AWS loads showed five hosts heavily occupied and useful
+  headroom on Box02/r6d.  Q8 orders128/256 and AS/TD6 gates were launched
+  there; two redundant TD6 workers and one superseded Q8 interpolation worker
+  were TERM-stopped only after log/hash custody.  No local campaign CAS runs.
+  Five one-second VM samples had zero swapouts (one sample had eight swapins),
+  so the ~2.9 GiB allocated swap is residual rather than active thrash.
+
+## 2026-08-25 07:10Z Q8 MOD-127 COMPONENT PROMOTED
+- REVIEW/PROMOTION: Claude's independent hostile review
+  `xmodel/max12-912-order3-nu-q8-sparse-contact-component-review-claude-20260825.md`
+  (SHA `ebd0024d...`) returned `CONFIRMED WITH REPAIRS`, finding no wrong
+  mathematics.  The nonmutating repaired successor
+  `xmodel/max12-912-order3-nu-q8-p127-component-reviewed-successor-20260825.md`
+  (SHA `7d28a7b4...`) defines pushforward through the proper projective graph
+  closure, adds source-infinity images to the avoided bad set, derives
+  characteristic-127 separability from the certified `w`-uniformizer, and
+  uses the isolated-root count to bound pushforward degree.  Box03 is recorded
+  as an execution replication, not an independent implementation.
+- EXACT COUNT: the affine sparse bound is 658.  Only positive-order stored
+  lifts are charged: 80 distinct order-eight fibres excluding `w=25`, plus
+  the distinct order-64 `w=25` fibre, give `80*8+64=704>658`.  The immutable
+  older `123+63+68*7=662` ledger is superseded and is not used.  Hence a
+  relevant selected localized source component over `Fbar_127` projects onto
+  the geometrically irreducible candidate `H`.
+- FIREWALL/NEXT: this is not degree one, a global coordinate graph, all-190
+  or all-eight contact grouping, characteristic-zero no-merger, Taylor
+  realization, terminal descent, or a trajectory theorem.  Six exact generic
+  vertical-length races (`dp/lp/Dp`, `std/slimgb`, two variable orders) run on
+  Box02/r6d under independent 64-GiB caps.  Corrected-Q8 rational-contact
+  order-16384 lanes run on Box03 as a separate finite-contact successor.  No
+  substantive computation runs locally.
+
+## 2026-08-25 07:31Z AS FIRST-PREDECESSOR FULL-Q9 PROVISIONAL EXCLUSION
+- EXACT CHECKPOINT: a producer-exact, independently proof-checked formula
+  provisionally excludes
+  the complete 19-trit Q9 affine fibre over the first Q9-compatible
+  corrected-Q10 predecessor, `c5_5=2` with the other 29 predecessor
+  coordinates zero.  No choice of its 19 Q9-kernel trits, 32 raw Q8 trits,
+  and 18 raw Q7 trits satisfies the explicit 23/22/19 source rows plus all 46
+  terminal rows in degrees 9--12.  The DRAT check verifies the emitted CNF,
+  while independent source-to-formula compiler review remains pending.  On
+  that explicit condition this supersedes the earlier 13-trit-chart
+  coverage wording for this predecessor; the earlier pointwise, fixed-slice,
+  and sampled results remain controls rather than extra coverage.
+- CERTIFICATE/CUSTODY: Boolector returned UNSAT, CaDiCaL produced DRAT SHA
+  `b8dbb064...`, and independent `drat-trim` returned `s VERIFIED`.  A
+  terminal-omission SAT point passed direct integer source replay.  Report /
+  manifest / freeze SHAs are `fe32d0bf...` / `827f2d28...` / `3864e788...`;
+  the oversized custody archive is pinned only by SHA
+  `601076db6aa5f27e74315657baf7c5a87c2ad64982011612064ee26c1c3f5649`.
+- COVERAGE/NEXT: conditionally, exactly one of 11,881 compatible predecessor
+  states is dead with its whole Q9/Q8/Q7 fibre.  **The other 11,880 states within the same
+  79-base vertical problem remain open**, together with the separate endpoint
+  families and other associated-top branches.  The AWS-only successor is one
+  symbolic global-predecessor formula with the predecessor equations and raw
+  Q9/Q8/Q7 variables; no all-depth, characteristic-zero, counterexample, or
+  JC2 conclusion follows.
+
+## 2026-08-25 07:42Z TD6 ALL-BETA A3 SCOPE QUARANTINE
+
+- This entry supersedes every same-day sentence that claims or implies a
+  whole/all-`beta` fixed-`A3` closure.  V43/V44/V45 certify their displayed
+  `P12`/`N13` identities only on a common localization and explicitly omit
+  the full staged `N13` source lift; V34/V41 introduce additional pivot
+  denominators.  The generic-open, `H=0`, `B3=0`, and rational-line packages
+  therefore cannot yet be composed into an all-`beta` atlas.  Their frozen
+  bytes remain valid localized/custody evidence.  The direct original-row
+  `U=0` and V46 `V=0, C=-U^2` incompatibilities remain valid at their stated
+  narrow scopes.  The exact repair gate is a denominator-free full source
+  identity, or multiple cleared localized source identities together with an
+  explicit replayed Bezout equation.  Canonical nonmutating erratum SHA-256:
+  `4f6e2bf34cc7c4ea04f66e57a949fb04d4356941ee3762642ca050840f25e1b9`
+  (`xmodel/td6-c1-c2-c3-q2-n13-localization-scope-erratum-20260825.md`).
+
+## 2026-08-25 08:55Z LIVE STATE — SOURCE-COMPLETE SUCCESSORS / AWS-ONLY
+
+- BASIS/CUSTODY: `HEAD=2e6104a417cfe15a93a901aa0a9129094a2ae11b`;
+  the current frozen cases/reviews and canonical corrections remain
+  intentionally uncommitted while AWS producers are active.  Immutable old
+  packages are not rewritten: Q8's old `35,582` residual package is retained
+  as superseded and the reviewed nonmutating successor is SHA `c470fd25...`.
+- CLOCKS: the completed full-spectrum round remains `20260825T0427Z`, with
+  next full round due by `16:55Z`; significant AS news received a whole-list
+  micro-round at report SHA `fa118245...` and did not reset that clock.  The
+  broad web sweep remains due by `2026-08-26T01:26Z`.
+- PROMOTED DELTA: the corrected mod-127 rational-contact theorem (review SHA
+  `65834195...`) proves existentially that at least one of the full contacts
+  `v=26,58,67` is `H`-supported, using
+  `40,960>37,010`; `35,582`/`4,448` are retired.  The arithmetic full-contact
+  bridge is different-model confirmed at review SHA `571221ad...`: common
+  integral six-row source, exact eight-coordinate reductions, no inversion
+  of `w`, full relative Jacobian units, arithmetic completion `R[[w]]`, and
+  exact identity with the primitive/infinity source scheme.  Fibre notation
+  means completed fibre local rings.  The corrected abstract no-merger lemma
+  is confirmed at review SHA `cc722b52...`; its global multiplicity/component
+  checklist is not thereby discharged.
+- Q8 PROVISIONAL DAG: reviewed mod-127 component `7d28a7b4...` plus reviewed
+  rational contact and arithmetic bridge feed two independent successors.
+  The fast bypass asks only for an exact geometric-genus certificate for
+  `H`; normalization/brnoeth, singular-projection branch counting, and
+  independent orders run on Box02/Box03/r6d.  The graph bypass has 126/126
+  clean fixed fibres with all original remainders zero and now interpolates
+  seven coordinate graphs followed by exact substitution modulo `H` on AWS.
+  Six generic-length/seeded/projective races remain background.  The
+  positive-genus specialization composition has a Codex audit SHA
+  `4842ff19...` and a different-model hostile review in progress.
+- AS PROVISIONAL DAG: three exact global-predecessor filtered SAT models
+  (bases 303/513/519) pass the encoded Q9/Q8/Q7 and 46 terminal rows.  The
+  pointwise source-complete successor report SHA `2cad7ac2...` shows the
+  displayed 303/513 points fail reimposed final G8 and the displayed 519
+  point fails a 70-by-16 Q6/H7,J7 plus divided-high system with rank
+  `(16,17)` and a three-row left-null pairing.  This kills only three points.
+  Global final-G8/Q6 formulas for alternate states run in solver portfolios
+  on AWS; hostile source/replay review session 99510 is active.  No filtered
+  state is a mod-81 or all-depth lift.
+- TD6 PROVISIONAL DAG: the 07:42Z localization quarantine controls.  V50
+  duplicates on r6d/Box03 have crossed the old nonlinear-row software failure
+  and audit all 54 arbitrary-degree source rows.  V52 independently reverses
+  and defers nonunit pivots; V53 is an exact ancestry latency discriminator
+  but cannot promote without V50's all-row audit.  All run on AWS with hard
+  caps; no denominator verdict exists yet.
+- COMPUTE BOUNDARY: all seven AWS instances remain provisioned at the full
+  512-vCPU quota.  At 08:48Z box01/r6b/r6c were saturated, box02 load was
+  about 62, and useful idle cores on r6a/box03/r6d were assigned additional
+  solver, genus, and TD6 order attacks.  Every host reports zero configured
+  swap.  On the Mac, a transient 5.6-GiB `lean Scratch.lean` child of a
+  separate Codex process ended before inspection; no campaign CAS/heavy
+  Python remains, and a four-sample VM audit showed zero swap-ins/outs.
+  Local work is editing, orchestration, hashing, status, short low-memory
+  checks, and cloud-review clients only.
+- RANKING/QUEUE: (1) Q8 exact genus certificate or graph modulo-`H`
+  substitution, whichever lands first; (2) AS global source-complete
+  successor and restoration-curvature/Fitting compiler; (3) TD6 V50/V52
+  denominator support and only then a cleared cover/Bezout glue if needed;
+  (4) background generic Q8 length, Double-B, common-cubic, and landing
+  falsifiers.  Reviews run asynchronously.  No proof or counterexample to
+  JC2 has been found.
+
+## 2026-08-25 11:40Z FULL ROUND — HORIZONTAL SOURCE HONESTY
+
+- IDEATION: the significant-news round sealed at `11:20Z` completed with four
+  blind whole-46 scans and three adversarial cross-scans.  Synthesis
+  `xmodel/ideation-20260825T1120Z-synthesis.md` has SHA-256
+  `246281fa867a8e6f015f020af43b972152e30edccff50ddc7b77d39bba914398`.
+  The unanimous distinct ranking is Q8 horizontal landing, AS whole-Q5
+  Cartier/Fitting, TD6 source-DAG/denominator cover, and a 5% global
+  landing/cofinal-ceiling reserve.  The most important hidden assumption is
+  now explicit: specialization before source-horizontal saturation can retain
+  vertical artifacts.
+- Q8 REVIEWED EVENT: the raw finite affine `w=0` interior is exactly the
+  reduced length-eight `Spec(Q[v]/Q8)`; `r6` and the relative determinant are
+  units and both unloaded and loaded non-Q8 loci are empty.  Producer/review
+  SHAs are `bb09d7d...` / `fa649cd...`; review is
+  `CONFIRMED_WITH_REPAIRS`, with the scheme theorem intact and finite custody /
+  wording repairs in flight.  This is not yet the special fibre of the
+  horizontal closure.
+- Q8 DECISIVE LAUNCH: frozen case
+  `cases/max12_912_order3_nu_q8_w0_horizontal_closure_aws_20260825/`
+  computes `Hsrc=I:(w*x5*(x3-2*x5))^infinity` and the separate boundary
+  incidence `Bsrc=(I+(x5*(x3-2*x5))):w^infinity` before setting `w=0`.
+  Generator/runner/prereg SHAs are `d2f5628b...` / `02c610f4...` /
+  `d923ccbf...`; manifest `c2561354...`.  Eight Box02 `std` and eight Box03
+  `slimgb` lanes are live.  Semantic erratum SHA `8ef90ff...` forbids reading
+  `Bsrc` as an irreducible-component selector.  Raw projective jobs remain
+  controls; a fused-saturation race is preferred if repeated saturation
+  dominates runtime.  Every exact `F_w` entry vanishes on the raw `x5=0`
+  cylinder, so the previous augmented-rank equality is explained by a
+  `w`-direction that remains in the boundary; it does not show selected-open
+  first-order approach.  Nonmutating precision erratum
+  `xmodel/ideation-20260825T1120Z-tangent-precision-erratum.md` has SHA-256
+  `552116c1340ddd2c4449919d5695e6d5a5baa56d478a4ca6a53818b1333a3e34`.
+- TD6: V56b has 7/40 source-lifted current rows (`0,13,34,36--39`); rows
+  `36--39` are exact zero and 33 rows remain.  V57 proof-DAG mirrors are live
+  at `/home/ubuntu/runs/td6_v57_dag_r6d_20260825T1048Z` and
+  `/home/ubuntu/runs/td6_v57_dag_box03_20260825T1108Z`.  Frozen V54D report
+  SHA `2302e5a5...` has byte-identical Box03/r6d stdout `01112ab9...` and
+  proves only first-stage denominator support `{U,H}`; it explicitly has no
+  reverse-chart coverage or full source identity.
+- COMPUTE BOUNDARY: every sustained or uncertain job is on AWS.  All seven
+  hosts are active at the 512-vCPU quota and report zero swap.  The Mac has no
+  campaign Singular/Sage/msolve/Lean/Z3/Boolector/heavy-Python process;
+  current sampling had 59% memory available, no swap counter change, and
+  sub-1-MB/s disk traffic.  A separate Codex process that repeatedly spawned
+  a multi-GiB local Lean child remains reversibly stopped, not killed.
+
+## 2026-08-25 11:52Z AS MICRO-ROUND — CARTIER ZERO LOCUS SURVIVES
+
+- Three whole-Q5 plus Q4-Cartier SAT models passed exact nested-integer direct
+  replay on Box02 at
+  `/home/ubuntu/jobs/as_q5_q4_sat_replay_20260825T1150Z`: bases `0000`,
+  `0270`, and `0513`, with full degree-four divided rows
+  `[2,1,0,0,0]`, `[0,1,0,0,0]`, and `[1,2,0,1,2]`.  In every case the unique
+  divergence cokernel coordinate `[x^2y^2]` is zero and all 197 parent rows
+  replay.  Output JSON SHAs are `fed0c739...`, `c5109c14...`, and
+  `92b03502...`.  The second base-513 state shows that the pinned base-513
+  obstruction was pointwise, not fibrewise.
+- The complete 68-by-12 affine successors have now landed for all three
+  states.  Rank/augmented-rank/kernel triples are `4/4/8`, `8/8/4`, and
+  `8/8/4`; explicit `H5,J5` particulars reconstruct maps whose integer replay
+  passes all five Q4 rows modulo 243, all 63 recomputed terminal rows modulo
+  729, and all 197 parent rows.  Q4-only controls break two terminal rows at
+  base `0270` and four at base `0513` (and happen to preserve them at base
+  `0000`).  These are producer-exact chronological Q4 lifts pending hostile
+  review.  Q3 must consume the full Q4 affine kernels, not only the displayed
+  particulars.
+  Source-global Fitting V2 is live on Box02 at
+  `/home/ubuntu/jobs/as_q5_q4_cartier_fitting_20260825T115128Z_v2`, analyzer
+  SHA `dd779edf...`, manifest `b720f079...`; V1 is quarantined for a scope-
+  wrapper failure.
+- DISPOSITION: this event materially advances AS but does not change the
+  11:40Z global ranking, so it is coalesced as a micro-round.  Reversible
+  construction continues while different-model hostile review is prepared.
+
+## 2026-08-25 11:52Z LIVE STATE
+
+- Basis: `HEAD=2e6104a417cfe15a93a901aa0a9129094a2ae11b`; active producer,
+  review, ideation, and canonical-overlay files are intentionally dirty and
+  hash-pinned above pending a coherent freeze.
+- Coordinator / ideators: Sol coordinator; cube/Q8, AS/common-cubic, and TD6
+  persistent owners.  All four participated in the last full round.
+- Last full ideation: `2026-08-25T11:40Z`, round `20260825T1120Z`; next
+  deadline `2026-08-25T23:40Z` or earlier on ranking-changing news.
+- Last broad web sweep: `2026-08-25T01:26Z`,
+  `xmodel/websweep-20260825T0126Z.md`; next deadline
+  `2026-08-26T01:26Z`.
+- Active lanes: Q8 two exact source-horizontal saturations on Box02/Box03,
+  then finite/projective boundary and terminal/Taylor valuation; AS explicit
+  full-Q4 restoration plus whole-Q5 Fitting on Box02; TD6 V56b current rows
+  and V57 proof-DAG on r6d/Box03.  Reviews remain nonblocking.
+- Provisional claims: Q8 raw interior length-eight classification is exact
+  and reviewed-with-repairs but may not be read as `Hsrc|_(w=0)`; AS three
+  chronological full-Q4 lifts are direct-replayed but owe hostile source
+  review and Q3--Q0; TD6 V54D is diagnostic-only and the 07:42Z
+  localization quarantine controls.
+- Review queue/debt: finish Q8 classification V2 custody repairs; hostile
+  review the AS whole-Q5/Cartier compiler, three replays, divergence solve,
+  and full-Q4 reconstruction; review TD6 only after V57 supplies a complete
+  source DAG.
+- Holds/human gates: publication/external disclosure remains human-only.  Do
+  not stop or repurpose AWS instances without auditing live processes and
+  output custody.  Heavy local computation is prohibited.
+- Top gaps: Q8 finite/projective horizontal landing and terminal/Taylor
+  coverage; AS one complete fixed support through every determinant row and
+  unbounded depth; TD6 source identity plus denominator cover; globally
+  `G2-PSC`, invoked `G2-BD`, complete landing, and a cofinal ceiling.
+- Immediate queue/triggers: harvest Q8 saturations; attack AS Q3 over the
+  complete Q4 kernels; close TD6 V57 and only then choose q3 or a cleared
+  cover.  A source-valid Q8 survivor or exclusion, an AS full-Q4/Q3 result,
+  or a TD6 full-DAG endpoint triggers immediate strategy triage.  No proof or
+  counterexample to JC2 has been found.
+
+## 2026-08-25 14:17Z EVENT — DISPLAYED DEGREE-AT-MOST-THREE Q2/Q1 EXCLUSION; SOURCE-CONE FIREWALL
+
+- The Gaussian parent at producer/review SHAs `44834700...` / `47eaa4b...`
+  first excluded the selected homogeneous degree-three/two order-27/order-81
+  digit family over three fixed Q5 predecessor points and their entire
+  reviewed Q4/Q3 fibres.  Its exact successor
+  `xmodel/as-fonly-d7-q3-q2q1-degree1-influence-producer-20260825.md`
+  (SHA `36e3d5e1...`) adds every displayed homogeneous degree-one output digit
+  at both orders.  The `/27` matrix then has rank six on ten active
+  coordinates and exactly 81 accepted assignments per parent.  Every one of
+  all `3*81=243` branchwise-affine `/81` systems is inconsistent at singleton
+  row 8=`x^2y`; residual constants remain `2,2,1`.
+- Different-model review SHA `922727b3...` returned `CONFIRMED` at exactly
+  that displayed-family scope.  The degree-one columns are genuinely active:
+  they change the first rank/count, non-row-8 equations, and `/81` ranks, but
+  never hit row 8.  The review separately **failed** a source-complete
+  degree-at-most-three influence-cone reading.  Higher-degree order-27 digits,
+  source reparametrizations, other carry directions, and the rest of the
+  predecessor scheme remain outside the certificate.  Consequently no
+  complete Q3-fibre, structural-base, `79 -> 76`, complete-mod-243, no-lift,
+  counterexample, or JC2 conclusion is licensed.
+- The nonblocking successors are separated.  A source-first full output-digit
+  influence-cone audit now replaces further degree-by-degree patches.  A
+  separate affine-output normalization lemma is valid for genuine complete
+  determinant-one maps over `Z_3` or `Z/3^n`, but composition with the full
+  normalized predecessor chart remains unproved and must not be
+  read pointwise on incomplete filtered states.  Whole-source work eliminates
+  the low degree-two first-carry variables to the scalar `omega=ry-h*rx` and
+  tests its zero locus over the complete Q5 predecessor formula before
+  attaching Q4/Q3 Fitting strata.
+- The earlier global Fitting V2 is a fail-closed software endpoint: exact
+  assertion inspection found 63, not 76, restoration-dependent equations.
+  Its corrected AWS successor retains those 63 and separately hashes every
+  restoration-independent predecessor assertion.  All substantive compute
+  remains AWS-only.
+
+## 2026-08-25 14:40Z EVENT — GLOBAL Q9 ROW-8 SCALAR IS A REVIEWED NON-OBSTRUCTION
+
+- The corrected exact projection over all 79 compatible structural bases of
+  the current corrected-Q10 source has cleared different-model hostile review.
+  Producer/review SHAs are `2518c72b...` / `903d1181...`; verdict
+  `CONFIRMED`.  It reconstructs 33,225 Q10 states and every one of 11,881
+  nonempty 32-variable Q9 affine fibres, projects to
+  `(c2_1,c2_2,d2_0,d2_1)`, and evaluates the source-oriented scalar
+  `omega=carry(c2_1+2*d2_0)+2*h*carry(2*c2_2+d2_1) (mod 3)`.
+- Among `8,096,356,425,843` completions, each scalar value occurs exactly
+  `2,698,785,475,281` times, and every nonempty fibre has `omega=0`
+  completions.  Thus `omega` kills no Q9 fibre and is retired as a Q9-alone
+  obstruction.  The original preregistration's swapped carry labels are
+  repaired nonmutatingly at SHA `2b2fcef4...`; V1 is a negative control, and
+  corrected V2/V3 are not independent implementations.
+- Scope firewall: the package imposes no Q8-through-Q3 restoration.  It is
+  not a complete map modulo 243, an all-depth lift, a characteristic-zero
+  point, a counterexample, or JC2.  The live successor must compose the
+  `omega=0` slice with the complete downstream state and seek the next
+  source-typed cokernel/Fitting obstruction.
+
+## 2026-08-25 13:33Z EVENT — Q8 ORDINARY/FITTING OVERLAP PROMOTED
+
+- The raw unloaded-overlap source is exactly
+  `I=(e1,e3,e5,e7,e2,e4)` on `A3: w=x1=x3=x5=0`.  The reviewed exact normal
+  Fitting result is `I3(M)=((d2-d4-1)^2)` and
+  `K3=(d2,d4), K2=K1=K0=(1)` for ordinary `delta w=1`.  Consequently the
+  only ordinary tangent locus is the line `d2=d4=0` (`c` free), and its
+  normal tangent is zero; the separate `(4,2)` candidate fails by
+  `729*L7=-432`.  The rank-drop line and its rank-one point `(2,1)` have no
+  ordinary `delta w=1` tangent.
+- Frozen Fitting report / manifest / replay SHAs are `fca71aaa...` /
+  `1045040f...` / `c80c5c62...`; tangent report / manifest / replay SHAs are
+  `e421aec0...` / `a3f4cb3b...` / `009937d2...`.  The raw Grok review
+  `6bdbd48a...` was preserved with its lines 13--20 text collision.  A
+  nonmutating custody cleanup `0c29a5c1...` and a separate read-only Grok
+  confirmation `44985424...` restore the missing preface and reaffirm the
+  `CONFIRMED` mathematical body and firewall.
+- Scope is strictly ordinary first-order/Fitting.  Ramified or weighted arcs,
+  `delta w=0`, higher jets, full
+  `I:(w*x5*(x3-2*x5))^infinity`, coefficient infinity, terminal/Taylor
+  realization, trajectories, general `(9,12)`, maximum twelve, and JC2 remain
+  open.  Exact-Q rank-drop and full-Hsrc saturation lanes remain the arbiter.
+- NARROW ROUTING SUCCESSOR: the normalized unramified slope-two chart
+  `x5=t` at `(d2,d4)=(2,1)` dies at the next coefficient by the exact odd-row
+  constant incompatibility `108`.  Producer/review SHAs are `4f1f4b66...` /
+  `6bf95a6e...`, verdict `CONFIRMED`; manifest/freeze SHAs are
+  `39275137...` / `9ab69a8d...`.  This is not a ramified/Puiseux or
+  moving-`d4` exclusion.  Full pointed saturation, exceptional finite `c`,
+  coefficient infinity, and terminal/Taylor provenance remain open.
+
+## 2026-08-25 12:40Z EVENT — REVIEWED Q4, Q3 SURVIVAL, FINITE Q8 GERMS
+
+- Q8 repaired V2 finite-interior review closed
+  `CONFIRMED_WITH_REPAIRS` at SHA `fefd0fa7...`; its stated length-eight
+  affine theorem has no mathematical defect, while minor wrapper/custody
+  repairs remain nonblocking.  A separate two-engine AWS package proves the
+  finite `x5=0,x3!=0` cylinder is the entire local source germ (report
+  `d33ba8c...`, Grok review `6a550061...`, verdict `CONFIRMED`), excluding
+  selected-open landing there.  The review records the exact five-by-five
+  minor provenance and the regular-local catenary/CM dimension-drop lemma;
+  neither is a mathematical repair.
+- The unloaded-overlap tangent equations reduce first to
+  `(d2,d4)=(0,0)` or `(4,2)`; exact substitution kills `(4,2)` by residual
+  `-432`, and a second IFT closes the `(0,0)` germ.  A broader AWS check then
+  correctly refuted the attempted global smooth-A3 premise: the normal block
+  has additional rank-drop strata, so ramified arcs there remain open.  They
+  are now split by the exact normal Fitting ideal; global horizontal
+  saturation remains authoritative.
+- AS full68 Q4 producer/review SHAs `8407cabc...` / `6a77ff24...` give a
+  different-model `CONFIRMED` pointwise theorem at bases 0000/0270/0513.
+  Full Q4 fibres admit exact Q3 lifts with kernel dimensions `14,10,10`
+  (producer/review `737b45f6...` / `81a9531d...`, verdict `CONFIRMED`).
+  Q4-kernel columns vanish at Q3 and the same ten-column `(H4,J4)` operator
+  controls every parent.  Valuations show
+  degrees 1 and 2 remain at order 27.  The first fused Q2/Q1 attempt failed
+  closed because the next canonical-trit carry is nonlinear, not because the
+  system is inconsistent.  Exact preprocessing leaves 27 active first-carry
+  assignments per base, but a second control proves `/81` remains nonlinear
+  after fixing each branch.  Both false-affinity designs are quarantined;
+  the live successor is a direct simultaneous trit/carry SMT or faithful
+  finite-field encoding with literal replay.  No complete-mod-243 or
+  all-depth inference is licensed.
+- TD6 V64 has replaced the stale live V59/V60 checkpoint.  Its immutable
+  localized H-divisor package (manifest/freeze/report SHAs `51722a5d...` /
+  `b47493ab...` / `096a3f67...`) and hostile review SHA `e78af060...`
+  `CONFIRMED` exact source replay on `H=0,D(U*V*P3*QH)`: row 13 uses only
+  previous row 14 plus first rows, row 0 is a separate quadratic control,
+  genuine P12 is `2885/28/1640`, and the residual is `-k/50`.  Refuse a
+  whole-H or fixed-A3 inference until independent source theorems close
+  `U=0`, `V=0`, `P3=0`, and `QH=0`.  The review also preserves the partial
+  source-manifest inventory, prose-only host IP, cache-first DAG display,
+  marker-only verifier, and unproved QH-removability as nonblocking custody /
+  scope nits.
+- AWS snapshot: about 408/512 vCPUs active, with useful headroom on
+  Box02/Box03/r6d assigned to the nonlinear AS branches, Q8 saturation/rank
+  strata, and TD6 DAG mirrors.  The Mac process audit is clean of campaign
+  CAS/solver/Lean/heavy Python.
+
+## 2026-08-25 12:40Z LIVE STATE
+
+- Ranking remains Q8 horizontal landing, AS fixed-support all-depth, TD6
+  source-DAG/cover, then global landing/cofinal-ceiling reserve.  The next
+  full ideation deadline is `2026-08-25T23:40Z`; web sweep deadline remains
+  `2026-08-26T01:26Z` absent significant external news.
+- Reviews are asynchronous: Q8 cylinder, AS Q4, and AS Q3 are promoted.
+  Failed Claude quota and failed-affinity/Fitting wrappers are diagnostic
+  endpoints only, never mathematical negatives.
+- Immediate gates: exact Q8 selected saturation plus overlap rank-drop and
+  relative-projective charts; AS direct nonlinear trit/carry solving with
+  literal determinant replay, then coefficient-scheme Hensel/Fitting if complete;
+  TD6 narrow row13/P12 source composition and denominator custody.
+- No proof or counterexample to JC2 has been found.
+
+## 2026-08-25 14:53Z — SIGNIFICANT-NEWS WHOLE-PORTFOLIO ROUND CLOSED
+
+- Trigger: the corrected global AS Q9 projection makes `omega` fibrewise
+  surjective/uniform rather than obstructive, while TD6 V64 has independent
+  source-DAG confirmation on `H=0,D(U*V*P3*QH)`.
+- Four owners blindly rescanned all 46 avenues; three adversarial cross-scans
+  followed collection.  Synthesis
+  `xmodel/ideation-20260825T1440Z-synthesis.md` has SHA-256
+  `ae92ae4dc7b8612847e2e578948765a0f9e2f4d0d6700f6b63c76f84e4634628`.
+  A custody-preserving erratum corrects the cube blind note's `zero-partial`
+  reading; the TD6 cross-scan records the same correction.
+- Allocation is now Q8/AS/TD6/global = `40/30/25/5`.  Q8 closes finite,
+  moving-`d4`, and projective coefficient charts; AS first audits every mixed
+  Q3/fresh second difference and then composes the `omega=0` hyperplane with
+  full downstream restoration; TD6 finishes the exact five-piece `H=0`
+  source cover.  A common source-hashed constructible-cover/Fitting compiler
+  is the principal software accelerator.
+- Critical firewalls: global AS `Z/9` linearity is not licensed until possible
+  `(9K)(27U)/243=KU` terms are killed; Q8 infinity must be the closure of the
+  saturated source open and must allow other coordinates to scale; the TD6
+  normalized Bezout identity proves disjointness of `P3` and `QH`, not either
+  leaf's emptiness; positive genus needs honest landing plus degree one.
+- Reviews continue off the producer critical path.  All heavy and
+  uncertain-duration computation remains AWS-only; a fresh Mac audit found
+  no campaign CAS/solver/Lean/heavy-Python workers and a four-second sample
+  showed zero swap-ins and zero swap-outs.  Next full ideation backstop:
+  `2026-08-26T02:53Z`; next web sweep: `2026-08-26T01:26Z`.
+
+## 2026-08-25 15:02Z EVENT — TD6 `V=H=0,D(U)` LEAF CONFIRMED
+
+- V62D is frozen and hostile-review `CONFIRMED`.  Producer report SHA is
+  `52736b96...`; review SHA is `ec0ada3d...`; case manifest/freeze SHAs are
+  `a35040ee...` / `7a816298...`.
+- On the fixed source-typed A3 section with
+  `q_beta=t+beta*t^2+t^25`, impose `V=H=0` and invert `U`.  Exact ranks are
+  `38/132` at first stage and `37/94` at previous/pole stage.  Previous
+  compatibility rows 11 and 13 produce an original-row unit certificate;
+  the second displayed Bezout weight is zero, so row 11 alone suffices.
+  Source and pivot denominator radicals are exactly `{U}`.
+- This proves emptiness for every `beta` only on `V=H=0,D(U)`, closing the
+  `V=0,D(U)` leaf of the V64 five-piece cover.  The certificate hash-pins
+  rather than embeds original row polynomials, and its verifier is a
+  custody/marker check.  Raw `U=0`, `P3=0,D(U)`, and `QH=0,D(U)` remain;
+  there is no whole-H, whole-A3, TD6, SP-2, landing, or JC2 claim.
+
+## 2026-08-25 15:11Z — `jc2-lean` AWS VERIFICATION PASS
+
+- The pending nested-repository snapshot was copied to r6d and verified
+  there; no Lean build ran on the Mac.  `gcd3-69-noncube`, `gcd3-69-core`,
+  and `strip-block` all completed `lake build` under their pinned Lean
+  `4.34.0-rc1` toolchain, and all three package-specific axiom audits passed.
+- Exact source and log hashes, the successful wrapper, host, UTC interval,
+  permitted-axiom output, and two orchestration-only failed attempts are
+  recorded in `cases/jc2_lean_aws_verify_20260825/`.  This verifies the
+  formalization bytes; it does not enlarge their stated mathematical scope.

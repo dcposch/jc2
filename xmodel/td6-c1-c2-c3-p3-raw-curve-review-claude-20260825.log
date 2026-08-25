@@ -1,0 +1,18 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=dontAsk
+⚠ claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login · Unset it to load your organization's connectors
+**Verdict: CONFIRMED.** The review is written to `xmodel/td6-c1-c2-c3-p3-raw-curve-review-claude-20260825.md` (the only repo file created; nothing else touched).
+
+## What the audit found
+
+**The mathematics holds at the claimed scope.** Every identity the frozen bytes make checkable re-derived exactly by hand:
+
+- **Function-field fidelity (charge 2):** `Z²−32Z+128` is irreducible over `Q(U)` (disc 512 nonsquare, constants closed in `Q(U)`); `ZU³` is a nonsquare by odd `U`-valuation; the tower is `Q(U)(V)` since `Z = V²U⁻³`, so `P3` is *derived* to be the degree-4 minimal polynomial — irreducibility is proved, not assumed, and `Res_Z` reproduces `P3` via `Z₁+Z₂=32, Z₁Z₂=128`. No component loss, no nilpotents.
+- **Implementation cross-check:** the two transport event norms printed by the new lanes are exactly the degree-4 field norms of the pivots `-V` and `2U` seen in the sibling v11 lane over a different field implementation: `N(−V)=128U⁶`, `N(2U)=16U⁴`. Ranks, the 2,885-term P12, and the 7,589 inversion count all match v11.
+- **Localization (charge 4):** all denominators are pure `U`-powers, and the charts decompose exactly as `U¹⁷ = U⁶⁺²⁺²⁺⁷` and `U¹⁹ = U⁶⁺²⁺²⁺⁹`; the cleared coefficientwise identity specializes at every curve point with `U≠0` over every field extension, with `−k/50` a unit (`k` has degree 3 < 6 = deg F in the field `K`, per the CONFIRMED two-center review).
+- **Complement and composition (charges 5–6):** `U=0` on the curve forces `V=0` then `C=0` — exactly the origin, killed by the pinned v14 transport certificate, which the V14 B3 erratum does not touch. The four-piece `H=0` union (v11 open off `UVP3`, v12 + origin for `U=0`, v15 + origin for `V=0`, this package + origin for `P3=0`) was verified lane by lane, so "no remaining producer-exact `H=0` debt" is right; `B3=0` correctly remains open and unclaimed.
+
+**Two anomalies chased down and resolved:** the `remainder_sha256 ≠ expected_sha256` mismatch is the producer's established serialization convention (identical pattern in the v7/v11/v15 PASS siblings, and the V14 b-local lane proves the flag reports `false` honestly); and the "two pivot orders" are genuinely independent only at the first-band/P12 stage — transport is byte-shared — which the review flags with its cross-package mitigations.
+
+**Smallest defect:** the charged report and README both call the origin dependency a "unit-chart *first-band* certificate," but the frozen stdout is a *transport*-band incompatibility with the first band skipped. Conclusion unaffected (the transport gate is earlier and stronger); recommended as a one-line successor erratum. Minor custody remarks: the v16→v17 numbering gap and the aggregate-only freezing of the 1,540/2,152 multiplier terms.
+
+**Disclosed limits:** this session had no shell — no hash was recomputed, and the tar.gz-only producers were unread (bytes hash-pinned, on-host source-checked). A closing probe is staged at `/tmp/td6_p3_raw_curve_probe_claude.py` for a shell-bearing session: it recomputes all hashes, extracts and verifies both archives, and lists the exact producer semantics to read.

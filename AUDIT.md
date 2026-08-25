@@ -5,6 +5,239 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **TD6 `V=H=0,D(U)` SOURCE-UNIT PROMOTION (2026-08-25 15:02Z).**  In the
+> fixed source-typed A3 section with
+> `q_beta(t)=t+beta*t^2+t^25`, impose `V=H=0` and invert `U`.  Frozen V62D
+> has exact ranks `38/132` at first stage and `37/94` at previous/pole stage.
+> Previous compatibility rows 11 and 13 yield an exact direct original-row
+> source certificate with unit residual; the normalized displayed Bezout
+> pair has zero second weight, so the row-11 dependency alone already gives
+> the contradiction.  Both the source-coefficient and pivot ledgers have
+> radical support exactly `{U}`.  Two AWS executions agree on the proof
+> artifacts byte for byte.
+>
+> Case manifest/freeze and producer-report SHAs are
+> `a35040ee57baabe6e33260ea012ffb3e5c90513d0022b4cd746fd6f87c018120`,
+> `7a8162981a690972574425e6bb905af71184bd0333b46666bb42f1446c0f6001`,
+> and `52736b96b9b7fab88ae277e00039cb67ffbce7b2c1e976c31b3f7d897adc6322`.
+> Hostile review SHA
+> `ec0ada3d2508fcad7406472934b84ee3ec7c52d768a735264ac9f99a79231403`
+> returned `CONFIRMED`.  The review notes that the certificate source-pins
+> rather than embeds the original row polynomials and that its lightweight
+> verifier is custody/marker-oriented.  These limitations forbid detached
+> use of the witness but do not alter the exact pinned conclusion.
+>
+> **Licensed conclusion:** this closes only `V=H=0,D(U)` (the
+> `V=0,D(U)` leaf) for all `beta` inside the fixed A3 q2 section.  It is not
+> raw `U=0`, either `P3`/`QH` divisor, a whole-`H=0` cover, a whole-A3 or
+> full-TD6 theorem, SP-2, landing, or JC2.
+
+> **TD6 REPAIRED H-OPEN SOURCE-DAG PROMOTION (2026-08-25 14:12Z).**  In the
+> fixed source-typed A3 section with
+> `q_beta(t)=t+beta*t^2+t^25`, impose `H=C-3U^2=0`.  Frozen V64 exactly
+> replays current row 13 through the single previous edge `('X-1',14)` and
+> original first rows; the cached quadratic row `('X-1',0)` is a separate
+> positive control and is not an N13 edge.  Genuine P12 has 2,885 terms, 28
+> nonzero first rows, and 1,640 multiplier terms, replays directly through
+> original first rows, and composes with `N13=(k/25)beta` to the unit residual
+> `-k/50`.  Previous-14 omission, singleton-current omission, and live
+> P12-without-N13 controls all fail as required.  The complete coefficient-
+> leaf plus pinned-P12 denominator radical is exactly
+> `{U,V,P3,QH}`, where
+> `P3=V^4-32V^2U^3+128U^6` and
+> `QH=V^4+8V^2U^3-64U^6`.
+>
+> The exact promoted scope is therefore **only**
+> `H=0,D(U*V*P3*QH)` inside this fixed A3 q2-beta section.  The four divisor
+> strata remain independent source-rebuild obligations; this is not a
+> whole-`H=0`, whole-A3, TD6, SP-2, landing, or JC2 theorem, and it does not
+> audit all unused rows.  Case manifest/freeze and producer-report SHAs are
+> `51722a5dd366b29411487d2c7f38684172cc24332d04cc4b94772ca9cdf13222`,
+> `b47493ab7e4626905d9d0cb2123193ff53b37ded996f69cc0fe4f741cfc552be`,
+> and `096a3f67f22dc26a8e14dabfb920d1f45a8404af7b835050a015f344992afa39`.
+> Hostile review SHA
+> `e78af060f0feeabe90cf5bdbf26b19162d10deff7c41a0de029e0cbeca6bfb0f`
+> returned `CONFIRMED`.
+>
+> The review preserves five non-theorem custody/scope nits: the declared
+> 63-file `SOURCE.sha256` is not a 100-file archive inventory and omits the
+> executed parent even though V64 hash-pins and recomputes that parent before
+> import; the r6d IP is not embedded in run artifacts; the DAG lists the row-0
+> lift-cache block before printing the explicit N13 restriction; the portable
+> verifier is a custody/marker gate rather than algebra; and QH essentiality
+> is not proved.  None licenses dropping QH or broadening the exact open.
+
+> **AS CHRONOLOGICAL Q4 PROMOTION (2026-08-25 12:40Z).**  At exactly the
+> three displayed source-replayed Q5 parents `0000`, `0270`, and `0513`, the
+> complete 68-by-12 degree-five order-81 system (five Q4 divergence rows plus
+> all 63 recomputed terminal rows) is consistent with rank pairs `4/4`,
+> `8/8`, and `8/8` and kernel dimensions `8,4,4`.  Literal integer replay
+> passes the 197 parent rows, Q4 modulo 243, and terminal degrees 7--12
+> modulo 729.  The omission control shows that the five-row J-only section
+> breaks two terminal rows at base `0270` and four at base `0513`.
+> Producer/review SHAs are `8407cabc700df48ccde9ca894d5e6a8944434cc7de65403ff217ceddc4251b1a`
+> and `6a77ff242a4d56461878a25dec7a3321e923f9c29a780ebad6e41d94f9fc6779`;
+> the hostile verdict is `CONFIRMED`.  This promotion is pointwise at three
+> Q5 parents.  It is not whole-Q5 coverage, Q3--Q0, a complete map modulo
+> 243, an all-depth lift, a counterexample, or JC2.
+
+> **AS CHRONOLOGICAL Q3 PROMOTION (2026-08-25 12:45Z).**  Consuming each
+> complete displayed Q4 affine fibre above and adjoining order-81 homogeneous
+> `(H4,J4)`, the exact 67-row Q3-plus-terminal systems are consistent with
+> rank four and kernel dimensions `14,10,10`.  Exact division by 81 in
+> degree three, by 243 in terminal degrees 7--12, full-cube affinity,
+> particulars, kernel bases, omission controls, and literal integer replay
+> were independently reconstructed.  The inherited Q4-kernel columns are
+> identically zero at Q3; the ten-column `(H4,J4)` operator is identical at
+> all three parents, so each Q3 fibre is the full Q4 fibre times a
+> six-dimensional affine solution space.  Producer/review SHAs are
+> `737b45f6509c959fa45a55158cdd705462f5de804827cf0c00e24ca0ffca7a31`
+> and `81a9531d622b1f0ded90eb5701386ce059c6a60a24c4a469f9bff0d99281b973`;
+> verdict `CONFIRMED`.  Degrees one and two remain at valuation three, so
+> this is not Q2/Q1/Q0, a complete map modulo 243, whole-Q5 coverage,
+> all-depth survival, a counterexample, or JC2.
+
+> **AS DISPLAYED DEGREE-AT-MOST-THREE Q2/Q1 PROMOTION (2026-08-25
+> 14:17Z).**  At each of the same three fixed Q5 predecessor points, consume
+> the entire reviewed Q4/Q3 affine fibre and adjoin every displayed
+> homogeneous degree-three, degree-two, and degree-one output digit at orders
+> 27 and 81.  Constants are absent because their derivatives vanish.  The
+> exact 91-row `/27` system has rank six on ten active coordinates and exactly
+> 81 accepted assignments per parent.  On all `3*81=243` branches, the
+> `/81` map is affine on every remaining displayed coordinate and
+> inconsistent: row 8, `[x^2y]`, is identically zero in the remaining
+> variables with residual constants `2,2,1` at parents `0000,0270,0513`.
+> Added degree-one columns are not dummy variables: the trace pair changes
+> the `/27` rank from five to six and the accepted count from 27 to 81;
+> degree-one columns also change non-row-8 `/81` equations and lift ranks
+> `6,7,7` to `7,9,9`, but none hits row 8.  Producer/review SHAs are
+> `36e3d5e141ca48a1a23e07a7f179666456ad91b1bd69efdc6f473bc0a5fc5a16`
+> and
+> `922727b3224931f45533cb1d340653d9a1210c57a8ead3c918d7c90c3be14165`;
+> verdict `CONFIRMED` for the explicitly displayed family.  The Gaussian
+> parent remains pinned at producer/review SHAs `44834700...` / `47eaa4b...`.
+> **Source-complete coverage still fails:** higher-degree order-27 digits,
+> source reparametrizations, other carry directions, and the rest of the
+> predecessor scheme are not covered, and the affine-output normalization
+> lemma does not identify these three incomplete fibres with a global complete
+> chart.  Therefore this is not complete Q3-fibre exclusion, not exclusion of
+> three structural bases, not a `79 -> 76` reduction, and not a complete
+> map/no-lift/counterexample/JC2 theorem.
+
+> **AS GLOBAL Q9 ROW-8 SCALAR NON-OBSTRUCTION (2026-08-25 14:40Z).**
+> Over all 79 compatible structural bases of the corrected current Q10
+> source, the exact affine compiler reconstructs 33,225 Q10 states and
+> 11,881 nonempty Q9 fibres, projects each complete 32-variable Q9 fibre to
+> `(q1,q2,q3,q4)=(c2_1,c2_2,d2_0,d2_1)`, and evaluates
+> `omega=carry(q1+2*q3)+2*h*carry(2*q2+q4) (mod 3)` with the corrected
+> source orientation.  The frozen V2/V3 executions count
+> `8,096,356,425,843` completions and exactly
+> `2,698,785,475,281` occurrences of each scalar value; every nonempty fibre
+> is `zero-partial`.  Producer/review SHAs are
+> `2518c72bac173993ffe3f092da9f84f4b7b7a08411cc01762833c8e90ff40a93`
+> and
+> `903d11810ae57ac97161b7f2ef69f1d35df24b0fe1e0edd8ffba486f2d42281c`;
+> the different-model verdict is `CONFIRMED`.  The original preregistration
+> swapped the `x`/`y` carry labels; nonmutating erratum SHA
+> `2b2fcef41a9d1b5d5dea788a50d7d288148214e28a39a4ac2d3e6da36cc4f9a5`
+> and the corrected source/replay supersede it, while V1 remains a negative
+> control.  V2 and V3 are separate executions of closely related code, not
+> independent implementations.  **Licensed conclusion:** `omega` is not an
+> obstruction at Q9 alone.  **Refused:** Q8-through-Q3 restoration, a
+> complete map modulo 243, all-depth survival, a characteristic-zero point,
+> a counterexample, or JC2.
+
+> **Q8 RAW-OVERLAP ORDINARY/FITTING PROMOTION (2026-08-25 13:33Z).**
+> On the pinned six-row source `I=(e1,e3,e5,e7,e2,e4)` restricted to
+> `A3: w=x1=x3=x5=0`, let `M` be the six-by-three normal Jacobian in
+> `(x1,x3,x5)` and `N=[M|F_w]`.  Two exact AWS engine/order lanes prove
+> `I3(M)=((d2-d4-1)^2)` with its doubled scheme structure and the
+> exact-rank ordinary-`delta w=1` incidence closures
+> `K3=(d2,d4)`, `K2=K1=K0=(1)`.  Thus the only ordinary horizontal tangent
+> locus is the line `d2=d4=0` with `c` free; there
+> `dx1=dx3=dx5=0`, so the tangent stays in the boundary sheet.  The
+> independent two-equation screen is
+> `(d2-2*d4,d4*(d4-2))`; its other point `(4,2)` fails by
+> `729*L7=-432`.  The doubled rank-drop line, including its rank-one point
+> `(d2,d4)=(2,1)`, has no **ordinary** `delta w=1` tangent.
+>
+> Producer-report / case-manifest / replay-stdout SHA-256 values are
+> `fca71aaa93f250eb1e13b70fb5abbe97875488fedb54c85abf1499fc31a247df` /
+> `1045040f598f9b999738f718f792d1e0e126f8113b4a5412e30f6da1c37e5cf1` /
+> `c80c5c62bff716a84ab0ea20d2787bd061fc8fceee80623682419a80d598c54a`
+> for Fitting and
+> `e421aec08ad53e72e77f872d4b518875cade6189d0880a5de0170f0305133dbe` /
+> `a3f4cb3be0afe395966bcaba92ffde13b537bd36502d10db7556b39264a0d6be` /
+> `009937d287e92e057b5e2562d510abde2d062cece42c102e68d5000c04b2a65c`
+> for the tangent screen.  The immutable raw Grok review
+> `6bdbd48a08e099f4ed3ef6e81078cf8b69fb65429f50b8235ee9a45b087abe67`
+> has a text-corrupted preface but coherent mathematical sections 2--9; its
+> nonmutating cleanup
+> `0c29a5c19758257a3dd926865811ef73ef2ebe99adf8702313aa26822390d0f1`
+> and separate read-only confirmation
+> `449854242c96869698d93bea52f39be564a70f0322bba94bc681b4e5d4e2d02e`
+> restore custody and confirm the verdict `CONFIRMED` without broadening.
+> This is an **ordinary first-order/Fitting theorem only**.  It does not
+> exclude ramified or weighted arcs, `delta w=0`, higher jets, the full
+> selected saturation `I:(w*x5*(x3-2*x5))^infinity`, coefficient infinity,
+> Taylor/terminal realization, trajectories, the whole `(9,12)` cell,
+> maximum twelve, or JC2; all remain open.
+
+> **Q8 FINITE-CYLINDER PROMOTION (2026-08-25 13:00Z).**  Exact independent
+> AWS engines give rank five for the full
+> six-row source Jacobian along
+> `x5=d2=d4=0, x1=x3=a, c*a=1`, `a!=0`, while the contained cylinder has
+> dimension two.  The resulting regular-local/domain argument identifies
+> the source and cylinder germs and excludes landing from `D(x5)` at every
+> finite point of that cylinder.  Producer/review SHA-256 values are
+> `d33ba8c125ec32b74f18c67620d19a82484abcf558b0f1a9b3fc99bfe8ba2da1`
+> and
+> `6a55006112a55c2792844e2197fe88f1dadecc551d42006b334f0ad40d19d5a7`;
+> the hostile verdict is `CONFIRMED`.  The computed unit minor is the
+> five-by-five minor on source rows `(e1,e3,e7,e2,e4)` and columns
+> `(d2,d4,x1,x3,x5)`; the dimension-drop step uses that regular local rings
+> are domains, Cohen--Macaulay, and catenary.  This theorem says nothing about
+> `a=0`, coefficient infinity, the overlap rank-drop strata, terminal/Taylor
+> realization, other leaves, or JC2.
+
+> **LATEST Q8 SPECIALIZATION FIREWALL (2026-08-25 11:49Z).**  The exact
+> calculation in
+> `xmodel/max12-912-order3-nu-q8-w0-localized-fibre-classification-20260825.md`
+> (SHA-256
+> `bb09d7dd5d2eda3aafda2272403e0cb2e6a03e43f657ee524929e5c88cf4e1d0`)
+> classifies the naively specialized finite affine scheme at
+> `w=0, x5*(x3-2*x5)!=0`.  Its hostile review (SHA-256
+> `fa649cd0a799d7f8cdbd702cdbb02c2660b57d2fa674a7177c0a3307cfcc23e4`)
+> found no mathematical hole in the length-eight scheme isomorphism, the
+> `r6`/Jacobian unit claims, or the non-Q8 emptiness, but returned
+> `CONFIRMED_WITH_REPAIRS` for custody and exact wording.  This theorem must
+> **not** be cited as the special fibre of the closure of the punctured source
+> until saturation by `w*x5*(x3-2*x5)` has been performed before
+> specialization.  The exact successor computes
+> `I:(w*x5*(x3-2*x5))^infinity`; raw finite and projective boundary jobs are
+> controls only.  Separately,
+> `(I+(x5*(x3-2*x5))):w^infinity` is the horizontal boundary incidence and
+> does not by itself select irreducible components generically contained in
+> that boundary.  No trajectory-landing, coverage, or JC2 conclusion may
+> consume either overreading.
+
+> **LATEST TD6 SCOPE QUARANTINE (2026-08-25 07:42Z).** This entry supersedes
+> every same-day audit or note that claims or implies a whole/all-`beta`
+> fixed-`A3` closure.  V43/V44/V45 prove exact `P12`/`N13` identities only on
+> a common localization and explicitly do not include the full staged `N13`
+> source lift; V34/V41 emit additional pivot denominators.  Consequently the
+> generic-open, `H=0`, `B3=0`, and rational-line packages are quarantined from
+> whole-atlas composition, although their immutable localized identities and
+> custody remain valid.  The direct original-row `U=0` and V46
+> `V=0, C=-U^2` incompatibilities do not consume that staged `N13` lift and
+> remain valid at their stated narrow scopes.  Promotion now requires either
+> a denominator-free full source identity or cleared localized identities
+> with an explicitly replayed Bezout equation.  See the nonmutating erratum
+> `xmodel/td6-c1-c2-c3-q2-n13-localization-scope-erratum-20260825.md`, SHA-256
+> `4f6e2bf34cc7c4ea04f66e57a949fb04d4356941ee3762642ca050840f25e1b9`
+> (case manifest/freeze SHAs `75c6cb496808ff0c9fd58f3988f6b556dd6c8951390c5573c64f4a2c101765ca`
+> / `ea69b7a086d19a7b0448237d8f6b00ebb79abdcfc3c3c424b7ed450b5382d026`).
+
 ## Founding audit — GGV Proposition 4.3 subcase (2), the (8,28) family
 
 > **SUPERSEDING EVIDENCE ERRATUM (2026-08-23).** On a characteristic-zero
@@ -3110,3 +3343,981 @@ EXCLUSION / RECOVERY DOES NOT SUPPLY MATE EXISTENCE**.
   must fail closed on unresolved symbols, table typos, and publisher-version
   drift.  The smallest licensed software is a provenance-bearing exact row
   checker plus bounded Faber/mate certificate packaging, not a mate finder.
+
+## TD6 LICENSED `c1` LINE EMPTY (2026-08-24, DIFFERENT-MODEL-CONFIRMED FIXED-SECTION TIER)
+
+The three producer reports
+`xmodel/td6-c1-line-kill-gate-20260824.md`,
+`xmodel/td6-c1-first-stage-localized-gate-20260824.md`, and
+`xmodel/td6-c1-raw-transport-fibres-gate-20260824.md`, together with hostile
+reviews
+`xmodel/td6-c1-line-kill-review-grok-20260824.md` and
+`xmodel/td6-c1-raw-transport-fibres-review-grok-20260824.md` (review SHA-256
+`d2f8a204ca0e9cdf0c985b7940468e9ef6ef038ac17b245054a6e3a4fe87e7f9` /
+`c524122ca098193075f39205d1833f9e310f8607956c1115ca97b9655fda767d`):
+**CONFIRMED `THE COMPLETE LICENSED NORMALIZED SECTION
+(c1,c2,c3)=(C,1,1) IS EMPTY`**.
+
+- COVER: `C=0`, `C=3`, `C(C-3)J!=0`, and `J=4C^2+20C+1=0` are an exact
+  exhaustive cover over every extension of the coefficient field.  Raw
+  original-row rebuilds cover the two transport exceptions and the `J`
+  quotient; the denominator-cleared polynomial identity covers the open.
+- CERTIFICATE: transport and first ranks are `3470/3602` and `38/132` on
+  every stratum.  The genuine quadratic current row has a full original-row
+  certificate with remainder `-k/50`, and `k` has an explicit inverse in the
+  frozen field.  The obstruction is therefore a nonzero unit after scalar
+  extension.
+- SCOPE: this is one fixed normalized one-parameter center section.  It does
+  not cover simultaneous `c2,c3` motion, other boundary/dead-stretch/F1/pole
+  moduli, TD6, SP-2, a terminal class, or JC2.  An injective sensitivity map
+  at the base nonsolution and a line theorem do not imply a neighborhood.
+
+## MAX12 PARITY-NORMAL `Q12` CHECKPOINT QUARANTINED (2026-08-24, DIFFERENT-MODEL REFUTATION)
+
+Producer report
+`xmodel/max12-912-order3-nu-parity-normal-q12-20260824.md` (SHA-256
+`9616396705d071efac3cf52332c5007a4a045989940bcc8743a545e87f763a1c`)
+with hostile review
+`xmodel/max12-912-order3-nu-parity-normal-q12-review-grok-20260824.md`
+(SHA-256
+`fc0b0216784bdcec8f9b0955c5a6c71d57870ae2265ed927f306d19d31a79c30`):
+**REFUTED / QUARANTINED BEFORE PROMOTION**.
+
+- SMALLEST ERROR: the report displays the reviewed actual-fibre substitution
+  `x1=x5*p^2*(v+1)+x5^2*(3v+1)/(9v)`, but its replay substitutes
+  `x1=x5*p^2*(v+1)+x5^2/(27v)`.  The latter does not satisfy `r2=r4=0`.
+  The determinant depends on `x1`, so a passing replay certifies an off-fibre
+  identity.
+- EXACT COUNTERCHECK: at `p=v=1` on the correct chart,
+  `det(J_N)=25275425185572323328`, whereas the claimed formula gives
+  `169664962152837939200/243`.  The reviewer reconstructs a residual
+  squarefree octic `Q8`, coprime to `Q12`; that identity remains reviewer
+  evidence until independently frozen and reviewed as a replacement.
+- ROLLBACK: the `Q12` producer package and the dependent frozen formal-branch
+  package are byte-preserved and quarantined.  No descendant may consume
+  them.  The correct-chart determinant must reproduce the old wrong slice as
+  a negative control before any `Q8` successor is promoted.
+- UNAFFECTED: the involution typing and completeness of the normal `4x4`
+  block survive.  The separately reviewed parity genus-five exclusion,
+  full-absorption theorem, and DZ20 exclusion do not use the wrong `x1` and
+  remain promoted.  No maximum-twelve or JC2 conclusion ever depended on the
+  quarantined checkpoint.
+- DESCENDANT REVIEW: the dependent formal-branch package is independently
+  `REFUTED` by
+  `xmodel/max12-912-order3-nu-q12-formal-branch-review-claude-20260824.md`
+  (SHA-256
+  `5efb648c0e351dce8179bc0524949faa67d7e8a4389be73296ebaae918ed137c`).
+  Its equivariant IFT template is sound, but the genuine determinant is a
+  unit at every `Q12` root because `gcd(Q8,Q12)=1`; consequently the alleged
+  second germ is empty and those artificial `Q12` contacts are parity-trapped
+  at all orders.  This licenses no new `Q12` route and changes no live scope.
+
+## AS VERTICAL D8 CAPPED-ADJUGATE STATE THEOREM (2026-08-24, DIFFERENT-MODEL-CONFIRMED MATRIX TIER)
+
+`xmodel/as-fonly-d7-vertical-state-sufficiency-20260824.md` (SHA-256
+`410235081a54470a377d8d107a1982d34d507040718b945d11ee99dc4d1e5fe4`)
+with hostile review
+`xmodel/as-fonly-d7-vertical-state-sufficiency-review-grok-20260824.md`
+(SHA-256
+`6ab373bf9214c54f506cd368473aff02ed472a20e9797037f83a9745c384bc17`):
+**CONFIRMED FOR THE DISPLAYED CORRECTED `7x5` MATRIX AND ITS LITERAL-`F3`
+COMPARISON**.
+
+- EXACT STATE: with `H=h^3`, the capped coefficient map is
+  `M(X,Y)=(-A*X+B*Y,-H*X-A*Y)`, `deg X<=2`, `deg Y<=1`.  Its adjugate obeys
+  both products `Msharp*M=M*Msharp=(A^2+H*B)I`.  On nonzero determinant,
+  divisibility of the two adjugate numerators together with the two quotient
+  degree caps is necessary and sufficient.  The determinant-zero strata have
+  the reviewed one-line criteria; the only specialized ranks are `5,3,2,0`.
+- EXHAUSTIVE CONTROL: an independent implementation agrees with direct rank
+  on all `3^13=1,594,323` literal assignments and all `314,127` compatible
+  assignments, including the frozen stratum totals, fibre histogram, and
+  stream hashes.  Removing only the quotient caps creates exactly `202,176`
+  false positives, so the caps are load-bearing state data.
+- SCOPE/NEXT: the theorem is unconditional for the displayed matrix.  Its
+  interpretation as the exact AS successor remains conditional on the still-
+  active different-model review of the corrected integer-source column.  It
+  is not the next divided carry, an algebraic-closure component theorem, an
+  all-depth lift/no-lift result, a characteristic-zero map, a counterexample,
+  or JC2.  The licensed arithmetic successor imposes the next source-divided
+  carry on the two capped quotient polynomials while retaining every
+  determinant-zero stratum and nilpotent predecessor component.
+
+## MAX12 ROOT-FREE UNORDERED CRITICAL-VALUE NORM (2026-08-24, DIFFERENT-MODEL-CONFIRMED STRATIFICATION TIER)
+
+`xmodel/max12-912-order3-critical-value-norm-20260824.md` (SHA-256
+`7339478798e00894c7b975c60aca821ec7ff2da383ffe5165a93cfa361bb6cb6`)
+with hostile review
+`xmodel/max12-912-order3-critical-value-norm-review-grok-20260824.md`
+(SHA-256
+`b6ae9516430073e177a5174684109b437ab278fa04dd066686c58af57715588e`):
+**CONFIRMED EXACT COEFFICIENT-FIELD CASE SPLIT ON THE NORMALIZED LOADED
+ORDER-THREE FIBRE**.
+
+- ROOT-FREE IDENTITY: over the quadratic algebra `z^2=s`, write
+  `f^4=F0+F1*z`, `g^3=G0+G1*z`.  Then
+  `C(T)=Norm(g^3-T*f^4)` is quadratic and
+  `disc_T(C)=4*s*(G0*F1-G1*F0)^2`; `C(1)` is exactly the norm of
+  `g^3-f^4`.  Independent reconstruction matches the monic quadratic
+  resultant and the actual on-fibre Wronskian, including its scaling from
+  arbitrary nonzero constant `nu` to the `nu=1` chart.
+- EXHAUSTIVE OPEN SPLIT: after localizing at `s*Norm(F)`, the disjoint leaves
+  are full absorption, exactly one absorbed root, equal non-unit critical
+  values, and unequal unabsorbed values.  The double-root `s=0` and
+  `B`-meets-`f` strata remain explicit.  Parity is only a positive control
+  inside the equal-value locus; no selected root or premature coprimality
+  firewall is used.
+- SCOPE/NEXT: this stratifies but excludes no residual leaf and supplies no
+  Taylor or terminal equation.  The licensed successor attaches the original
+  seven rows and both Taylor families leafwise, using cube-divisor signatures,
+  exact four-point Hurwitz genus, and descended differential dynamics only
+  after their hypotheses are proved.  Other loads, order one, `(8,12)`,
+  maximum twelve, a counterexample, and JC2 remain open.
+
+## MAX12 GENUINE `Q8` NON-PARITY FORMAL BRANCH (2026-08-24, DIFFERENT-MODEL-CONFIRMED FORMAL-LOCAL TIER)
+
+`xmodel/max12-912-order3-nu-q8-formal-branch-20260824.md` (SHA-256
+`37ce842eece0e79f0768bdfd492be70905bb83ba62af93965b4c4a2a3d6f03a3`)
+with hostile review
+`xmodel/max12-912-order3-nu-q8-formal-branch-review-grok-20260824.md`
+(SHA-256
+`32750e4e350919d7d52984feab06d3cd2d801386caec5848f7c5750bf9e8e846`):
+**CONFIRMED EVERY LOADED `Q8` PARITY CONTACT OF THE GENUINE SEVEN-ROW
+COEFFICIENT FIBRE LIES ON A SECOND SMOOTH NON-PARITY FORMAL COMPONENT**.
+
+- FRESH LINEAGE: all eight source tails and involution characters were
+  reconstructed on the correct `1+3v` chart.  No quarantined `Q12` report,
+  replay, determinant, or branch is consumed.  Independent Gaussian and gcd
+  work reconfirms the corrected `Q8` determinant at every algebraic root.
+- FORMAL GEOMETRY: both the normal and invariant blocks have rank exactly
+  three at every loaded `Q8` point; all named localization factors are units,
+  `Q8` is squarefree, and `gcd(Q8,num(R6'))=1`.  Equivariant implicit
+  elimination leaves `t*Phi(s,t^2)=0`, with
+  `Phi(s,0)=unit*det(J_N)` and `dPhi/ds!=0`.  Hence the completed seven-row
+  fibre is the reduced union of the parity branch `t=0` and a distinct smooth
+  non-parity branch `s=psi(t^2)`.
+- SCOPE/NEXT: this is positive formal coefficient-fibre geometry, not an
+  algebraic or rational Keller trajectory.  It does not impose `r8`, the
+  terminal differential, Kummer descent, either Taylor family, or
+  coprimality, and says nothing about components disjoint from parity.  The
+  licensed successor normalizes the new branch and pulls back `r8` before
+  any `(9,12)`, maximum-twelve, counterexample, or JC2 inference.
+
+## MAX12 SELECTED-`Q8` GLOBAL QUOTIENT (2026-08-25, DIFFERENT-MODEL-CONFIRMED ALGEBRAIC-COMPONENT TIER)
+
+`xmodel/max12-912-order3-nu-q8-global-quotient-gate-20260824.md`
+(SHA-256
+`2102e5d730af7d9bd4a434a99ea9b7213cdf08016becd0e49061f5210ec0feaa`)
+with hostile review
+`xmodel/max12-912-order3-nu-q8-global-quotient-gate-review-claude-20260824.md`
+(SHA-256
+`49e8d9092e257a003f39171d0ec53fca91cc8f5c6e02841816f88aad127e6b39`):
+**CONFIRMED AT STRICT `k=mu=0,nu!=0` SELECTED-COMPONENT SCOPE**.
+
+- EXACT QUOTIENT: after the parity quotient of the geometric `p=1` chart,
+  the punctured non-parity branch is modelled by six source-compiled rows in
+  `(w,c,d2,d4,x1,x3,x5)`, with weight-zero outputs
+  `n=r6/p^9`, `q=r8/p^10`.  The unique algebraic component through each Q8
+  contact is a smooth one-dimensional component; the two modular standard
+  bases are routing evidence only and do not classify the whole open scheme.
+- LOCAL/BOUNDED CERTIFICATES: the exact lift through `w^5` over
+  `Q[v]/(Q8)` is unique with all displayed coefficients units.  The frozen
+  finite boxes exclude the listed low Pade types, every tested
+  `H(w,Z)` rectangle with at most 48 monomials, and all
+  `1<=deg_n,deg_q<=4` relations.  Nothing outside those boxes is inferred.
+- SCALE/TERMINAL DESCENT: along an actual fixed-load trajectory,
+  `pi=p^9=nu/n`, `S=r8^9=nu^10 Z`, and therefore
+  `nu^10 h^3 (Z')^9=j^9 Z^8`.  This uses the full off-parity output `n`, not
+  the parity-only identity that fails off parity.
+- RESIDUAL REVIEW CLOSURE: the review's shell conditions were discharged on
+  AWS and frozen in
+  `xmodel/max12-912-order3-nu-q8-global-quotient-aws-custody-20260825.md`
+  (SHA-256
+  `64d01a190ddd729fc1b3e3b16b64bad1a7d05ee9471a1f8ebd1fb59150dad93b`).
+  The replay returned rc zero with stdout SHA `d05eeb86...`, byte-identical
+  to the frozen payload; the independent probe returned rc zero with stdout
+  SHA `6e6acff2...` and terminal `PROBE-DONE`.  The custody manifest/freeze
+  hashes are `07cad415...` / `da73c423...` and verify locally.
+- SCOPE: removed affine/projective boundaries, both Taylor families, a
+  global quotient equation, normalization/genus, rational trajectory,
+  all-`(9,12)`, maximum twelve, counterexample, and JC2 remain open.
+
+## MAX12 SELECTED-`Q8` TERMINAL BELYI CLASSIFICATION (2026-08-25, DIFFERENT-MODEL-CONFIRMED CORRECTED NECESSARY TIER)
+
+`xmodel/max12-912-order3-terminal-belyi-classification-20260824.md`
+(SHA-256
+`5d8806db54eb2056dd7aafe6fb7dc342c68be1bef7cba06b96beeeaa765273fc`)
+with hostile review
+`xmodel/max12-912-order3-terminal-belyi-classification-review-claude-20260824.md`
+(SHA-256
+`713e41def64d0fc313d254cae5d660e412f5ba9b69bd4d7c0e6c212a4688c52b`)
+and recorded erratum
+`xmodel/max12-912-order3-terminal-belyi-classification-erratum-20260825.md`
+(SHA-256
+`0221a683fc88daeb162d84096e94200989dd3853d3f319455bf13f4e1dd93b1f`):
+**CONFIRMED WITH THE EXPLICIT HYPOTHESIS `Z` NOT IDENTICALLY ZERO**.
+
+- CORRECTED CLASSIFICATION: every selected-branch rational solution with
+  `Z!=0` has `Z=T^3` and
+  `h=C*T^2/(T')^3=C*A^2*B^4/(A'B-AB')^3`.  Polynomiality is equivalent to
+  every finite Wronskian root lying over zero or infinity of `T`, with each
+  zero multiplicity of `T` at most three.
+- DEGREE SPLIT: the unequal-degree strata are incompatible with the
+  noncube condition and `3|deg(h)`.  In the balanced case
+  `deg A=deg B=D`, `lambda=T(infinity)`, and
+  `e=ord_infinity(T-lambda)` give `r+s=e+1` and
+  `deg(h)=3(e+1)`.  The map has exactly three branch values with complete
+  passport `(alpha_i<=3)` over zero, `(beta_j)` over infinity, and
+  `(e,1^(D-e))` over `lambda`, saturating Riemann--Hurwitz.
+- ERRATUM: without `Z!=0`, the displayed terminal identity also admits the
+  trivial family `Z=0`, so three unrestricted producer sentences were
+  literally too broad.  Frozen bytes remain unchanged; every promotion uses
+  `k=mu=0,nu!=0,Z!=0`.  Along an actual trajectory the original row
+  `9*r8'=j/u`, `j!=0`, forces `Z` nonconstant, so the registered
+  actual-trajectory theorem is unaffected.
+- POSITIVE CONTROLS/SCOPE: cyclic controls show the necessary classification
+  alone excludes no trajectory and does not reconstruct coefficient-fibre or
+  Taylor data.  The later exact terminal/Kummer converse and even-contact
+  control remain separate producer-tier successors.  No selected-Q8
+  trajectory, `(9,12)` cell, maximum-twelve case, counterexample, or JC2
+  conclusion follows.
+
+## MAX12 SELECTED-`Q8` INFINITY PASSPORT AND PRIMITIVE CONTACT GROUPING (2026-08-25, DIFFERENT-MODEL-CONFIRMED CONDITIONAL GLOBAL TIER)
+
+The infinity/passport report
+`xmodel/max12-912-order3-nu-q8-infinity-contact-passport-20260824.md`
+(SHA-256
+`89691023f2703eba5c0cd29d65bc8732d837905fe41b01f64ae9d3b908068168`),
+the Galois-primitivity report
+`xmodel/max12-912-order3-nu-q8-galois-primitivity-20260825.md`
+(SHA-256
+`9f37fc3fc7933b911bea56258f677da77a823caa8daf9ce01c03b0884c502c8f`),
+and their joint hostile review
+`xmodel/max12-912-order3-nu-q8-infinity-primitivity-review-claude-20260825.md`
+(SHA-256
+`c77a73307bfda48fdde7792c523e09ee4d565c5782bcf71ed13d13b1d613a57c`):
+**CONFIRMED AT THE REGISTERED ACTUAL-TRAJECTORY, SELECTED-COMPONENT, AND
+FINITE-FIELD-CERTIFICATE SCOPES**.
+
+- INFINITY/PASSPORT: for an actual loaded order-three trajectory whose
+  Kummer-fixed quotient image lies on the selected component through a
+  corrected-`Q8` contact, the induced map from `P1` to the projective
+  normalization is nonconstant and surjective, and that contact's
+  normalization point has complete preimage `{x=infinity}`.  The balanced
+  terminal index is
+  `e_pass=2*ord_infinity(a0)`, hence even and at least two;
+  `deg(h)=3*(e_pass+1)=3 mod 6`, and every survivor attains equality in the
+  Mason--Stothers bound.  The exact `e_pass=2` noncube control satisfies the
+  original row `9*r8'=j/u`; it is a terminal/Kummer control, not a Keller
+  pair.
+- PRIMITIVITY: the corrected octic is irreducible modulo 7 and has squarefree
+  factor pattern `[1,7]` modulo 53.  Dedekind therefore supplies an
+  eight-cycle and a seven-cycle in its Galois action.  The action is
+  transitive and primitive, so the Galois-equivariant partition of the eight
+  contacts by the unique geometric component through each is either one
+  block of eight or eight singleton blocks.  Equivariance uses the
+  `Q`-defined divided quotient scheme and uniqueness of the component through
+  each contact; it is not an extra computed assumption.
+- CONDITIONAL COMBINATION: a selected component containing two contacts
+  cannot carry such a trajectory, because two distinct normalization points
+  would both have to equal the single image of `x=infinity`.  Thus the
+  all-eight alternative carries no registered actual trajectory.  The eight
+  singleton alternative remains completely open, as do components disjoint
+  from the contacts.
+- CUSTODY/REPLAY: infinity manifest/freeze SHAs are `a9e8748f...` /
+  `8d695040...`; primitivity manifest/freeze SHAs are `1a3e44b9...` /
+  `f25fa86f...`.  The no-shell review's residual replays were executed on
+  Box02 at
+  `/home/ubuntu/jc2q8-box02/out/q8_infinity_primitivity_review_residual_20260825T0312Z`:
+  the infinity and primitivity payloads matched byte-for-byte at SHAs
+  `8d13cb67...` and `f5b37f95...`, the latter with rc zero and empty stderr.
+- SCOPE/NEXT: this neither proves the singleton components exist globally
+  with the required Taylor data nor excludes a trajectory on one of them.
+  Exact component grouping, normalization/genus, every charged coefficient
+  and Taylor pole, both Taylor polynomiality families, removed boundaries,
+  `(9,12)`, maximum twelve, a counterexample, and JC2 remain open.
+
+## MAX12 SELECTED-`Q8` MOD-127 PROJECTED COMPONENT (2026-08-25, DIFFERENT-MODEL-CONFIRMED COMPONENT-EXISTENCE TIER)
+
+The repaired nonmutating successor
+`xmodel/max12-912-order3-nu-q8-p127-component-reviewed-successor-20260825.md`
+(SHA-256
+`7d28a7b4b7d3ecd3179efc73f0251754fbfea87614b6eb6daef2d7d649dba202`),
+incorporating the independent hostile review
+`xmodel/max12-912-order3-nu-q8-sparse-contact-component-review-claude-20260825.md`
+(SHA-256
+`ebd0024dfe2ea1623f22ba483b93d76dd9ff2aabe5f9f96eabc7b115928c7164`):
+**CONFIRMED OVER `Fbar_127` THAT A RELEVANT SELECTED-QUOTIENT SOURCE
+COMPONENT PROJECTS ONTO `H`**.
+
+- EXACT DEGREE/CONTACT GATE: origin-augmented sparse mixed volume gives
+  `deg(pi_*Z)<=658`.  The proof now uses only stored positive-order lifts:
+  80 distinct order-eight fibres, all excluding `w=25`, plus the frozen
+  `w=25` order-64 fibre.  Their normalized contact is
+  `80*8+64=704>658`; the older `123+63+68*7=662` count is explicitly
+  superseded and is not consumed.
+- REVIEW REPAIRS: the pushforward is defined on the normalization of the
+  projective graph closure; source-closure points outside the affine chart
+  are included in the generic-line bad set; the unit relative Jacobian makes
+  `w-w_i` a uniformizer and hence forces separability in characteristic 127;
+  and the distinct isolated sparse-root count bounds the pushforward degree.
+  Box03 was an independent execution replication of the pinned Normaliz
+  pipeline, not an independent implementation.  No numerical or mathematical
+  claim changes.
+- SCOPE/NEXT: this is existence of at least one `H`-supported projected source
+  component modulo 127 only.  Source degree one, a global coordinate graph,
+  all-190/all-eight contact coverage, characteristic-zero no-merger, Taylor
+  realization, terminal differential descent, rational trajectories,
+  `(9,12)`, maximum twelve, a counterexample, and JC2 remain open.
+
+## MAX12 SELECTED-`Q8` PINNED PLANE-CURVE INTEGRALITY (2026-08-25, DIFFERENT-MODEL-CONFIRMED STANDALONE-CURVE TIER)
+
+The exact producer report
+`xmodel/max12-912-order3-nu-q8-p127-candidate-plane-integrality-20260825.md`
+(SHA-256
+`b3cddbce9a118c60bf789df374941367a327b6608871a562ddffceebc3b900d0`)
+and hostile review
+`xmodel/max12-912-order3-nu-q8-p127-candidate-plane-integrality-review-claude-20260825.md`
+(SHA-256
+`f2e24aa5baa336067479eab7549f74bd2ceda7f61b5da2a049ea75be73d835dc`):
+**CONFIRMED THAT THE PINNED MONIC DEGREE-190 POLYNOMIAL `H(w,v)` IS
+IRREDUCIBLE OVER `F_127(w)` AND GEOMETRICALLY INTEGRAL OVER `F_127`**.
+
+- ARITHMETIC IRREDUCIBILITY: the squarefree specializations at `w=25` and
+  `w=47` have irreducible-degree partitions `(2,188)` and `(1,3,186)`.
+  Their proper subset-sum sets are disjoint.  Monicity and integrality over
+  the integrally closed ring `F_127[w]` force every hypothetical rational-
+  function-field factor to specialize without degree drop, giving the
+  contradiction.
+- GEOMETRIC INTEGRALITY: the exact point `(w,v)=(71,50)` lies on `H` with
+  `H_v=104!=0`.  Arithmetic irreducibility makes Galois transitive on any
+  geometric components; the rational smooth point would then lie on every
+  conjugate component and be singular.  A repeated geometric component is
+  separately excluded by the `w=25` squarefreeness certificate.
+- REVIEW/CUSTODY: the hostile reviewer read the full pinned JSON and source,
+  hand-rederived 30 specialized coefficients and the complete proof, and
+  found no required repair.  The coordinator independently reran the exact
+  case on AWS r6a with byte-identical input/result/audit outputs and rc zero.
+  The nonmutating replay manifest is
+  `cases/max12_912_order3_nu_q8_p127_candidate_plane_integrality_aws_20260825/REVIEW_REPLAY_MANIFEST.sha256`
+  (SHA-256
+  `cba71f0cac64099f3bc144455c1543bb8c5e4ca2064ccce7797fe9c934022374`).
+  Optional successor hardenings are an explicit maximum-support-key assertion
+  and automatic inclusion of the cross-case candidate JSON in manifests.
+- SCOPE: this theorem concerns the standalone explicit plane curve only.  It
+  does not by itself prove selected-Q8 quotient membership, source-component
+  identity, coordinate reconstruction, contact membership,
+  characteristic-zero lifting, a trajectory exclusion, maximum twelve, or
+  JC2.  Those arrows must be supplied by their separately reviewed packages.
+
+## MAX12 SELECTED-`Q8` PINNED PLANE-CURVE POSITIVE GENUS (2026-08-25, DIFFERENT-MODEL-CONFIRMED STANDALONE-CURVE TIER)
+
+The exact point-count producer
+`xmodel/max12-912-order3-nu-q8-p127-positive-genus-point-count-20260825.md`
+(SHA-256
+`c4c4ebdf59a95ff84c37ebbedcd46608fb32f34077790c9bdbdaac776f64a00a`)
+and hostile Grok review
+`xmodel/max12-912-order3-nu-q8-p127-positive-genus-point-count-review-grok-20260825.md`
+(SHA-256
+`1b79cddc6f3107c9bc722c21135fb0c87fa3e9793311c071c7a5a57a55d5bb8e`):
+**CONFIRMED THAT THE SMOOTH PROJECTIVE NORMALIZATION OF THE PINNED
+GEOMETRICALLY INTEGRAL CURVE `H/F_127` HAS POSITIVE GENUS**.
+
+- EXACT COUNT: over `F_(127^2)`, the frozen fibre-gcd enumeration gives
+  `16,174` affine points, of which `16,168` are smooth and `6` singular.
+  The `16,168` smooth affine points inject into the normalization, whereas a
+  genus-zero curve with the already reviewed smooth `F_127`-point would be
+  `P1` and have only `127^2+1=16,130` points.  Uncounted points at infinity
+  and branches over singular affine points can only strengthen the lower
+  bound.
+- EXECUTION/REVIEW: Box02 and r6d ran the identical pinned python-flint
+  implementation with different 16-shard and 8-shard partitions.  Every
+  adjacent Box02 pair equals the corresponding r6d block, and four sampled
+  fibres passed a direct-evaluation-versus-gcd control.  This is a two-host
+  partitioned replay, not by itself engine diversity.  After that review, an
+  independent pure-Singular implementation on AWS r6a reproduced exactly
+  `16,174/16,168/6` across 16 fail-closed shards.  Its report
+  `xmodel/max12-912-order3-nu-q8-p127-positive-genus-singular-cross-engine-20260825.md`
+  has SHA-256
+  `5ec2ce70d3ed6e680338143dd745805a728b017a4ef039095aa7a7cadbe4be1b`,
+  and its case manifest has SHA-256
+  `214abb00e2de20a205ffc86839752f69c0f27610fd002bd7431d7a82fb4cb20a`.
+  The hostile reviewer independently checked the field modulus,
+  partitions, fibre formula, singular-point test, totals, and genus
+  implication.  Review custody is frozen under
+  `cases/max12_912_order3_nu_q8_p127_positive_genus_point_count_review_grok_20260825/`
+  with manifest SHA-256
+  `8e7a31fd59f352d3df935465df54763e78adf3a1ff461b1bf19d6e84df2768f0`.
+- SCOPE: this is a theorem about the standalone pinned plane curve only.  It
+  proves no quotient membership, characteristic-zero specialization,
+  source-component identity, trajectory exclusion, `(9,12)`, maximum
+  twelve, or JC2.  Those compositions remain separately review-gated.
+
+## MAX12 SELECTED-`Q8` RATIONAL CONTACT ON `H` (2026-08-25, DIFFERENT-MODEL-CONFIRMED MOD-127 EXISTENTIAL TIER)
+
+The nonmutating reviewed erratum
+`xmodel/max12-912-order3-nu-q8-p127-rational-contact-residual-reviewed-erratum-20260825.md`
+(SHA-256
+`c470fd253d59cc2f3377e5a2c03baa345c22b365522a3eb17ae320992fb5d925`),
+incorporating hostile review
+`xmodel/max12-912-order3-nu-q8-p127-rational-contact-residual-review-claude-20260825.md`
+(SHA-256
+`658341959f39cdcad00e5f42d440af8bdb7fb2454b6676c96e6b00bddb10b562`):
+**CONFIRMED THAT AT LEAST ONE OF THE THREE RATIONAL FULL CONTACTS
+`v=26,58,67` LIES ON AN `H`-SUPPORTED MOD-127 SOURCE COMPONENT**.
+
+- CORRECTION: the affine sparse value `658` bounds plane degree; it does not
+  imply `A+B<=658` for the closure in `P1_w x P1_v`, because the
+  bihomogenized target lines share the base point `(infinity,infinity)`.  The
+  old residual constant `35,582` and equal-contact threshold `4,448` are
+  retired.
+- REPAIRED BOUND: the independently frozen coordinate bounds `A<=176` and
+  `B<=550`, minus one `H` summand of bidegree `(21,190)`, give residual
+  `(a,b)<=(155,360)` and
+  `I(H,R)<=190*155+21*360=37,010`.
+- CONTACT GATE: the three distinct full source branches have exact contact
+  lower bounds `16,384+16,384+8,192=40,960>37,010`.  Their full internal
+  Jacobians and localizers are units, so their local intersection
+  contributions are legitimate and additive.  The conclusion is existential
+  only: it identifies neither the contact nor all eight contacts, and proves
+  no characteristic-zero component statement by itself.
+
+## MAX12 SELECTED-`Q8` ARITHMETIC FULL-CONTACT BRIDGE (2026-08-25, DIFFERENT-MODEL-CONFIRMED ARITHMETIC-LOCAL TIER)
+
+The exact producer report
+`xmodel/max12-912-order3-nu-q8-char0-mod127-contact-bridge-20260825.md`
+(SHA-256
+`39ae622919f5eba41e4e1a18d6777749d38c34a1be4a10569f65295815a11490`)
+and hostile review
+`xmodel/max12-912-order3-nu-q8-char0-mod127-contact-bridge-review-claude-20260825.md`
+(SHA-256
+`571221ad8a87c23a1ad15b4b77da3c8b9332c4d93a521d2ef6c143d5f143046d`):
+**CONFIRMED AT THE COMMON INTEGRAL SIX-ROW SOURCE AND EIGHT MARKED CONTACT
+COMPLETIONS**.
+
+- INTEGRAL MODEL: all six divided source rows have 127-integral coefficients
+  and reduce coefficientwise to the frozen mod-127 rows.  The graph rows for
+  `v` and `inv` invert `x5*(x3-2*x5)` but not `w`; therefore they retain the
+  marked `w=0` contacts and present the same localized six-row scheme used by
+  the reviewed characteristic-zero and mod-127 consumers.
+- CONTACT COMPLETION: after a complete unramified splitting-DVR extension,
+  the monic corrected octic has eight integral roots with distinct
+  reductions.  The exact eight-coordinate contact section reduces to the
+  frozen mod-127 section, and the full relative `8 x 8` determinant is a unit
+  at every contact.  Formal implicit-function theory gives arithmetic
+  completed local ring `R[[w]]`, with fibre completions `K[[w]]` and
+  `k[[w]]`; the characteristic-zero germ is the already reviewed selected
+  branch by uniqueness.
+- CUSTODY/SCOPE: producer/replay completed rc zero on r6d; case manifest and
+  freeze SHAs are `d7abdade...` / `e9744c64...`.  Review found only
+  nonblocking phrasing and a static import-pin hardening.  This is a local
+  specialization bridge, not a global `H`-component lift, degree-one theorem,
+  all-eight grouping, Taylor realization, maximum-twelve theorem, or JC2
+  result.
+
+## MAX12 SELECTED-`Q8` POSITIVE-GENUS TRAJECTORY EXCLUSION (2026-08-25, DIFFERENT-MODEL-CONFIRMED STRICT SELECTED-LEAF TIER)
+
+The repaired V2 composition
+`xmodel/max12-912-order3-nu-q8-selected-contact-positive-genus-exclusion-repaired-v2-20260825.md`
+(SHA-256
+`d7e73783191d70a86e5c8786b735d0a596034c1d492559049d13433b8e889209`)
+and hostile Grok review
+`xmodel/max12-912-order3-nu-q8-selected-contact-positive-genus-exclusion-repaired-v2-review-grok-20260825.md`
+(SHA-256
+`f8d5208d9e915f694a9df1c9ae9014612e87c172b794c94bbfcf30f98bdb7996`):
+**CONFIRMED THAT AN ACTUAL ORDER-THREE TRAJECTORY CANNOT LAND ON A
+SELECTED `k=mu=0, nu!=0` COMPONENT MEETING A CORRECTED-`Q8` CONTACT**.
+
+- ATTACHMENT: the common full-source completion is `R0[[w]]`.  The selected
+  generic component has zero closure ideal there and a unique reduced
+  special branch.  Over `Fbar_127` that branch identifies the unique
+  geometric `H`-supported component through the existential winning full
+  contact.  V2 passes first to its finite field of definition and the
+  corresponding unramified DVR, before using geometric integrality or genus.
+- GENUS OBSTRUCTION: the independently reviewed point count gives
+  `g(Htilde)>0`; dominance makes the attached special component have positive
+  geometric genus.  If the selected characteristic-zero component were
+  dominated by the trajectory `P1`, then after a finite DVR extension its
+  function field would be rational.  Properization and the divisorial
+  valuation of the attached special component give a ruled residue field;
+  geometric Lueroth would force that special component to have genus zero, a
+  contradiction.  No unproved arithmetic-genus or global-reducedness claim
+  is used.
+- PROPAGATION: the reviewed primitive partition is one all-eight component
+  or eight singleton characteristic-zero components.  Infinity already
+  excludes the all-eight alternative; in the singleton case the eight
+  characteristic-zero components are `Qbar`-isomorphic, so the genus
+  obstruction propagates.  This makes no claim that all eight special fibres
+  are `H`-supported.
+- CUSTODY: the V2 producer case manifest/freeze SHAs are
+  `1d252c9a80251dd9a549ea4fe9d57f3372c3d39a42e484e33262948631fc999f` /
+  `8ffd390c952353a4e651693d952a05383196d7ae813d9efd70c5d54ddde63087`.
+  The final-review custody manifest/freeze SHAs are
+  `39ce1e9217d0a970822d5a11e899155f475d6492223780b2e1d4e1c043a997b4` /
+  `51250f2e3029f1ec0f02954124cdbbaa40eb0a72ab0706faa904f1f5dc7e8ec1`;
+  all pins verify.
+- SCOPE: the theorem is conditional on the upstream cube/Faber and global-
+  quotient landing of an actual trajectory in this selected contact leaf.
+  It excludes neither components disjoint from the corrected contacts, every
+  `nu!=0` component, the polynomial core, `(8,12)`, all `(9,12)`, maximum
+  twelve, an arbitrary Keller pair, nor JC2.
+
+## AS RESIDUE-BALL COLLISION AND FIXED-SUPPORT COMPACTNESS (2026-08-25, DIFFERENT-MODEL-CONFIRMED CONDITIONAL GLOBAL LEMMA)
+
+The repaired theorem
+`xmodel/as-fonly-residue-ball-collision-compactness-theorem-repaired-20260825.md`
+(SHA-256
+`81ab0e5cce46d2ad93968500362275ae4a7dbf2d3cf080c54ace531218135d71`),
+its nonmutating V2 erratum
+`xmodel/as-fonly-residue-ball-collision-compactness-theorem-repaired-v2-erratum-20260825.md`
+(SHA-256
+`d50426b36d2881ed577568c0c256f7f45f8f7154805b0f97512cc3e54be1ee2f`),
+and final hostile Grok review
+`xmodel/as-fonly-residue-ball-collision-compactness-theorem-v2-review-grok-20260825.md`
+(SHA-256
+`0cd7051300bf3938f6b389b1407a46f9a0c7a2d737e209a44c89c00c49e32a30`):
+**CONFIRMED THAT COLLISION IS AUTOMATIC FOR A COMPLETE FIXED-SUPPORT
+ALL-DEPTH LIFT OF THE AS RESIDUE MAP; IT IS NOT AN EXTRA SOLVER CONDITION**.
+
+- FINITE RINGS: if `F=(P,Q)` over `Z/3^n Z` has the literal polynomial
+  identity `det J(F)=1` and reduces to `(x-x^3,y)`, then for every target in
+  the residue ball over `(0,0)` each of the three source balls over
+  `(0,0),(1,0),(2,0)` contains exactly one preimage.  The digit equation is
+  `JF(x_k)h=(z-F(x_k))/3^k mod 3`; invertibility gives existence and
+  uniqueness, while the distinct x-residues give unit-separated moving
+  collisions.  The colliding points need not be the marked integer
+  representatives.
+- COMPACTNESS/TRANSFER: if the same finite allowed monomial sets and all
+  determinant-coefficient equations have solutions at arbitrarily deep
+  powers of three, nested compact coefficient cylinders (equivalently a
+  finitely branching solution tree) give one compatible `Z_3` map.  Its
+  Hensel collision gives a `Q_3` point of the finite-type affine
+  coefficient/collision scheme; base extension and Nullstellensatz give a
+  `Qbar`, hence complex, constant-Jacobian map with a genuine collision.
+  Actual support may shrink inside the fixed allowed sets but may not grow;
+  a degree cap is only one possible choice and is not synonymous with a
+  lacunary fixed support.
+- CONTROLS: the frozen AWS replay checks the AS reduction, determinant, three
+  moving preimages, and unit separation modulo 9 and 27, with a singular-
+  Jacobian negative control.  These are finite-depth regressions only and do
+  not evidence all-depth survival.
+- CUSTODY: the final V2 review package is
+  `cases/as_fonly_residue_ball_collision_v2_review_20260825/`; its manifest
+  and freeze SHAs are
+  `68164533ab105fc394d15f693f2fd0f6b200d5d67a0be47765e3321b68bc03f3` /
+  `d56b2432de79221dcca11e19385e0f429eca43d9342915fbc86741221ef493d8`.
+- FIREWALL: the lemma consumes only a complete fixed-support map scheme with
+  every determinant row, exact integer reconstruction, one residue
+  component, and arbitrarily deep survival.  Filtered high bands, changing
+  supports, gauges that do not reconstruct the map, and finitely many depths
+  do not qualify.  In particular, the current Q5/H6 state still owes Q4
+  through Q0 and is not a complete map modulo 243; no collision or JC2
+  inference attaches to it.
+
+## AS F-ONLY D7 CORRECTED DIVIDED-FROBENIUS TOP CARRY (2026-08-25, DIFFERENT-MODEL-CONFIRMED FINITE-STATE TIER)
+
+The source erratum
+`xmodel/as-fonly-d7-next-top-carry-frobenius-erratum-20260825.md`
+(SHA-256
+`1129f2c93db930a3040e1626cc34dcfd818e824b356cbd63baac4e8d37c9ea0c`),
+the corrected Q11/Q10 reports
+`xmodel/as-fonly-d7-vertical-next-top-corrected-shards-20260825.md` /
+`xmodel/as-fonly-d7-vertical-next-top10-corrected-shards-20260825.md`
+(SHA-256
+`4d9cebdaaefb7aff260d4d5bec5f24d88ec66cc8613bf5571a81778a70e10082` /
+`b636b00a0c6bc9673cda46efa312b311c71e70c5dd24e92823b2bff205b3a817`),
+and hostile review
+`xmodel/as-fonly-d7-corrected-top-carry-review-claude-20260825.md`
+(SHA-256
+`f3dadb7176dfbaa8673d85c813e5ab672a3d8f85d0b40a9d234bac33f2d6d78c`):
+**CONFIRMED AT THE DISPLAYED DEGREE-12/11/10 SOURCE AND EXACT FINITE-CENSUS
+SCOPE**.
+
+- SOURCE CORRECTION: after the accepted `L,E,F` gates, the next determinant
+  residual is `F1+N+T mod 3`.  Its top rows are
+  `N12={C7,D7}`,
+  `Q11={C7,D6}+{C6,D7}+({UF,D7}+{C7,VF})/3`, and
+  `Q10={C7,D5}+{C6,D6}+{C5,D7}+({UF,D6}+{C6,VF})/3+{UF,VF}/9`.
+  The divisions are exact over the integers, with nonzero controls
+  `2*x^5*y^6` and `x^5*y^5`.  No other divided term can reach degrees
+  12--10.
+- QUARANTINE: the old pure-bracket degree-11 count `602343` and completion
+  count `439108047`, together with the stopped pure degree-10 runner, are
+  wrong-source diagnostics and may not be consumed.  The N12 row/count and
+  every earlier full-C5/first-Cartier gate are unaffected.
+- EXACT CENSUSES: of 1,085,103 visible predecessor states, exactly 629,115
+  satisfy N12; exactly 260,847 also satisfy corrected Q11; and exactly 33,225
+  of those, over 159 of 2,187 structural bases, satisfy corrected Q10.  The
+  six unconstrained degree-six Frobenius spectators give exactly
+  `729*260847=190157463` and `729*33225=24221025` completions at the two
+  stages.  These are nested survival counts, not obstructions or lifts.
+- CUSTODY: result-manifest/freeze SHA-256 pairs are
+  `a9bc1277...` / `e2339110...` for the erratum,
+  `a9a73b2d...` / `7f06a1b9...` for Q11, and
+  `7ee3ae60...` / `e73b854b...` for Q10.  Their frozen verify scripts were
+  executed on Box02 and returned rc zero with terminal PASS strings; stdout
+  SHA-256s are `969b7bb1...`, `dc9ada96...`, and `ad380ca3...`, with empty
+  stderr.  An independent one-shard corrected monolithic run also returned
+  rc zero (stdout SHA `6e303e3a...`), reproducing N12 count `629115` and
+  ordered stream SHA `0fa6cb58...` byte-for-byte against the unaffected old
+  prefix, while giving corrected Q11 count `260847` and ordered stream SHA
+  `93e7298a...`.  This closes the review's named monolithic-agreement debt.
+- SCOPE/NEXT: degree nine and below, canonical carry/state sufficiency there,
+  recurrence, all-depth lifting, bounded support, collision preservation,
+  characteristic-zero polynomial algebraization, a counterexample, and JC2
+  remain open.  The licensed successor is the exact affine-Kuranishi/
+  Cartier-cokernel transition on the frozen Q9 solution fibres, not literal
+  enumeration of their trillions of completions.
+
+## AS F-ONLY D7 Q9 SOURCE-STATE GATE (2026-08-25, DIFFERENT-MODEL-CONFIRMED CANONICAL-REPRESENTATIVE TIER)
+
+`xmodel/as-fonly-d7-vertical-q9-source-state-gate-20260825.md`
+(SHA-256
+`6fb2ce4bcea7ab35102ca60198509f99b1bc1c058dea4181d87641f56ce847ae`)
+with hostile review
+`xmodel/as-fonly-d7-q9-source-state-review-claude-20260825.md`
+(SHA-256
+`ab0c98be9a5793213d2273695162b29f7391837f83d445d38ac016ffe21cee0c`):
+**CONFIRMED FOR THE DISPLAYED CANONICAL-INTEGER Q9 EXTENSION PROBLEM AND
+EXACT FINITE CENSUS**.
+
+- SOURCE/STATE: the complete degree-nine row is
+  `G9=M9/3+{C,D}9+T9`,
+  `T=A*Z_y+W_x*V_y-U_y*Z_x-W_y*V_x`.  Together with `E1`, `E3`, and `F6`
+  this gives 23 affine rows in 32 restored coefficients
+  `C2,D2,C4,D4,W7,Z7`.  The single-Frobenius term
+  `({UF,D5}+{C5,VF})/3` is included automatically by forming `M` over the
+  integers; no other divided term can reach degree nine.  Every division is
+  exact before reduction.
+- EXACT CENSUS: among the 33,225 corrected-Q10 states, 11,881 are compatible
+  and 21,344 incompatible.  Compatible rank/fibre counts are
+  `6615` at rank 13/fibre `3^19`, `2106` at rank 15/fibre `3^17`, and
+  `3160` at rank 16/fibre `3^16`, over 79 of 2,187 structural bases.  The
+  relevant completion total is `8096356425843`; restoring the six proven
+  spectator Frobenius coefficients multiplies it exactly by 729 to
+  `5902243834439547`.
+- NONEMPTY CONTROL: the reviewer hand-checks, independently of the AWS
+  census, the compatible state `c5_5=2` with restored `w7_7=2`, rank 13 and
+  fibre `3^19`.  This is nonemptiness of the displayed finite extension
+  problem, not an all-depth survivor.
+- WORDING ERRATUM: immutable producer wording is corrected by
+  `xmodel/as-fonly-d7-q9-source-state-wording-erratum-20260825.md`
+  (SHA-256
+  `dd607ad56bb43b358e9a9cbda1d82abd5903038bb41bb545a4153b3e1466f2a4`).
+  Spectator-freeness is proved by typed support, not a new-band runtime
+  assertion; `M9/3` integrality is inherited from the D98 degree-nine rows
+  with `KFdiv9=0`, not caused by the corrected-Q10 row.  Neither correction
+  changes a row, division, rank, count, witness, or scope.
+- CUSTODY: the result manifest/freeze hashes are `06b7c540...` /
+  `97755c63...`.  After a deliberately preserved first deployment missing
+  its transitive source closure failed closed, the complete closure was
+  shipped to Box02; `verify_frozen_results.sh` returned rc zero, terminal
+  `PASS-Q9-FROZEN-HASH-AND-AGGREGATE-CHECK`, stdout SHA `09a44521...`, and
+  empty stderr.
+- SCOPE/NEXT: the theorem uses the frozen canonical-integer representative
+  convention.  Degree eight and below, representative-independent state
+  sufficiency, recurrence, all-depth lifting, bounded support, collision,
+  characteristic-zero algebraization, counterexample, and JC2 remain open.
+  The licensed successor is the affine-Kuranishi obstruction on whole Q9
+  solution fibres.
+
+## AS F-ONLY D7 FIRST PREDECESSOR COMPLETE Q9/Q8/Q7 FIBRE EXCLUSION (2026-08-25, PRODUCER-EXACT / INDEPENDENT PROOF-CHECK; SOURCE-COMPILER REVIEW PENDING)
+
+`xmodel/as-fonly-d7-first-predecessor-full-q9-rawq7-exclusion-20260825.md`
+(SHA-256
+`fe32d0bf3a3451546f9bfc77cc0a7e107e82b2bc834a4a6311919e002f2b6530`):
+**PROVISIONAL EMPTY CLAIM FOR THE COMPLETE 19-TRIT Q9 FIBRE OVER THE FIRST
+Q9-COMPATIBLE CORRECTED-Q10 PREDECESSOR ONLY; THE DRAT CHECK VERIFIES THE
+EMITTED CNF, NOT YET THE SOURCE-TO-FORMULA COMPILER**.
+
+- EXACT SCOPE: in the frozen 30-coordinate predecessor ordering, fix
+  `c5_5=2` and every other predecessor coordinate to zero.  There is no
+  assignment over `F_3` to all 19 Q9-kernel coordinates, all 32 raw Q8
+  restoration digits, and all 18 raw Q7 restoration digits satisfying the
+  23 explicit Q9 rows, 22 explicit Q8 rows, 19 explicit Q7 rows, and 46
+  terminal coefficient rows in total degrees 9--12.  The Q9 matrix has rank
+  13 in 32 restored coefficients, so this is the complete affine Q9 fibre,
+  not the earlier 13-trit Q8-compatible subchart.  Q8 and Q7 remain raw:
+  there is no fixed-RREF-section, zero-section, or representative
+  extrapolation premise.
+- SOURCE/CERTIFICATE: the formula reimposes all 23 Q9 source rows as a
+  self-audit, uses exact divided-carry constraints with 32-bit residues
+  modulo 729, and inherits the hash-pinned reviewed raw-Q7 circuit.  Boolector
+  1.5.118 returned UNSAT.  Pinned Z3 4.16.0 bit-blasted the same SMT payload
+  (SHA `0061e1cc...`) to a 6,184,696-variable, 29,430,517-clause CNF (SHA
+  `a25c7ed0...`); CaDiCaL 1.7.3 emitted DRAT SHA `b8dbb064...`, and independent
+  `drat-trim` returned `s VERIFIED` with 67,643 core clauses, 883 core lemmas,
+  6,570,804 resolution steps, and zero RAT lemmas.
+- POSITIVE CONTROL: deleting the terminal rows makes the embedded prior point
+  SAT.  Direct integer replay then verifies all 23/22/19 source rows,
+  recursive-versus-literal `/243` agreement, and exactly one nonzero terminal
+  coefficient.  Thus neither the source equations nor the accepted chart are
+  accidentally inconsistent.
+- CUSTODY: case manifest/freeze SHAs are
+  `827f2d28004feae007bea0a50868755e94f921d05a720df6e21fa543afdeed35` /
+  `3864e7883e9edc899cc18be8ad9516eb5bef4a24fdf8876753db2cce3efad8bf`.
+  The oversized full-custody archive is identified by SHA-256
+  `601076db6aa5f27e74315657baf7c5a87c2ad64982011612064ee26c1c3f5649`.
+- REVIEW/COVERAGE/REFUSAL: the frozen report itself remains `PROVISIONAL
+  PENDING DIFFERENT-MODEL SOURCE/COMPILER REVIEW`.  Conditional on that
+  review, this kills exactly one of the 11,881 Q9-compatible corrected-Q10
+  predecessor states, with its whole Q9/Q8/Q7 fibre.  **The
+  remaining 11,880 states within the same 79-base vertical problem are still
+  open.**  The separate `a` and `g` endpoint families, nonreduced incidence,
+  other associated-top branches, all-depth lifting, bounded support,
+  characteristic-zero algebraization, a counterexample, and JC2 are outside
+  scope.  The next gate is a single symbolic-predecessor formula, not 11,880
+  uncoordinated certificates.
+
+## AS F-ONLY D7 FIRST Q9-WITNESS TO Q8 KURANISHI OBSTRUCTION (2026-08-25, DIFFERENT-MODEL-CONFIRMED POINTWISE TIER)
+
+`xmodel/as-fonly-d7-q9-witness-q8-kuranishi-pointwise-20260825.md`
+(SHA-256
+`0227176cf1f257c0b8981bea0de0b6a2a169763cbcb274ef9d966047c544c09b`)
+with hostile review
+`xmodel/as-fonly-d7-q9-witness-q8-kuranishi-pointwise-review-claude-20260825.md`
+(SHA-256
+`3dccb4c61414a51940d36ede271c32aa43df67a17cc965d6e05078a275e1988c`):
+**CONFIRMED FOR ONE FROZEN CANONICAL Q9 ASSIGNMENT ONLY**.
+
+- EXACT TRANSITION: at predecessor `c5_5=2` and Q9 assignment `w7_7=2`,
+  with every other charged coordinate zero, the 22-row Q8 transition in 32
+  restored coefficients has accepted/full rank pairs `(13,13)` / `(13,14)`,
+  a 19-dimensional accepted-image kernel, Kuranishi rank zero, and cokernel
+  dimension nine.
+- OBSTRUCTION CERTIFICATE: the left-null vector `e_21`, the `x^8` row of
+  `G8`, annihilates the whole coefficient matrix and pairs to `2` with the
+  RHS.  Independent reconstruction reduces the entire bad row to the
+  undivided term `T8=14*x^8=2*x^8 mod 3`; the plus-one orientation control
+  pairs to zero.  The matrix/RHS hashes are `addcbc1e...` / `f2c3b732...`.
+- REQUIRED DISCLAIMER: this does not kill the 19-dimensional Q9 fibre.  The
+  reviewer explicitly exhibits the compatible point `w7_7=1,z7_6=1` and
+  derives the affine obstruction formula on the fibre.  The later producer
+  computation of its 13-dimensional zero locus is therefore a successor,
+  not part of this pointwise promotion.
+- CUSTODY: result manifest/freeze SHAs are `c68c43d...` / `7dde1c07...`.
+  The review's staged independent checker ran on Box02 with rc zero, stdout
+  SHA `03a0aacf...`, and empty stderr, reproducing the matrix/RHS and every
+  rank/certificate assertion.
+- SCOPE/NEXT: other points of the same fibre, other Q9 fibres/rank classes,
+  Q8 state sufficiency, lower carries, recurrence, all-depth lifting,
+  bounded support, characteristic-zero algebraization, a counterexample,
+  and JC2 remain open.
+
+## AS F-ONLY D7 FIXED Q9/Q8 BRANCH TERMINAL (2026-08-25, DIFFERENT-MODEL-CONFIRMED FIXED-BRANCH TIER)
+
+`xmodel/as-fonly-d7-q7kernel-next-high-carry-exclusion-20260825.md`
+(SHA-256
+`cc2cf6417c5d27d5868bc86a6b2d02aac10a2b4976d9548a9d01bc5584db0172`)
+with hostile review
+`xmodel/as-fonly-d7-q7kernel-next-high-review-claude-20260825.md`
+(SHA-256
+`02d1c6f2cde4840541df7ef2cd9ff194e753ca205f33dd0cf81fd4c101ccf7ae`)
+and nonmutating review erratum
+`xmodel/as-fonly-d7-q7kernel-next-high-review-erratum-20260825.md`
+(SHA-256
+`456b9261a2b5d9a93dcbbbfd3fc791a4d987712276bef48cdfdcb4556cb03da4`):
+**CONFIRMED TERMINAL BELOW THE DISPLAYED FIXED PREDECESSOR AND Q9/Q8
+POINT**.
+
+- FIXED STATE: the predecessor is `c5_5=2` with its other 29 coordinates
+  zero; the canonical Q9 survivor is `w7_7=z7_6=1`, equivalently
+  `W7=x^7,Z7=x^6*y`; the Q8 restored vector is zero.  This is one point of
+  the earlier 13-dimensional Q8-survivor chart, not that whole chart.
+- WHOLE Q7/Q6 FIBRE: the 19-row Q7 transition in 18 restored digits is
+  homogeneous of rank nine.  Its exact kernel is `c6=0`, `d6_6` free, and
+  `div(W5,Z5)=0`; all `3^9=19,683` states were exhausted in 27 disjoint AWS
+  shards.  Every state has a nonempty nine-dimensional Q6 fibre because its
+  seven-row divergence map has rank seven.
+- TERMINAL CARRY: on every Q7 state the recursive source carry and literal
+  `(det J-1)/243` calculation agree, with
+  `R12=R11=R9=0` and `R10=x^10`.  Hand reconstruction identifies the unit as
+  `C_x*Z_y=10*x^10=x^10 mod 3`.  Q6 digits enter only through the degree-at-
+  most-eight `S` channel and degree-six divergence; the fixed branch's other
+  unrestored lower channels likewise cap at degree eight.  No later
+  cap-seven correction can cancel degree ten, so every completion below this
+  fixed state is terminal.
+- CUSTODY: aggregate JSON/ordered-stream SHAs are `87f63bdd...` /
+  `6e4df883...`; result-manifest/result-freeze SHAs are `a1eafec7...` /
+  `30754347...`.  All shard sentinels are present and stderr entries empty.
+  The no-shell reviewer independently rederived the kernel, carry identity,
+  Q6 degree bound, and terminality; its custody caveats do not change the
+  mathematical verdict.
+- SCOPE/NEXT: the thirteen other Q8-chart directions and their interactions
+  with Frobenius spectators, other Q9 predecessors, representative/carry
+  translation, the full cap-seven system, all-depth lifting, bounded support,
+  collision, characteristic-zero algebraization, a counterexample, and JC2
+  remain open.  The producer-exact global unreduced affine-chart map is a
+  successor and is not promoted here.
+
+## TD6 FIXED TWO-CENTER SECTION `(C,1,U)` EMPTY (2026-08-25, DIFFERENT-MODEL-CONFIRMED FIXED-SECTION TIER)
+
+`xmodel/td6-c1-c3-two-center-cover-gate-20260824.md`
+(SHA-256
+`2ada2d70fbdb9db2cf6d93c3b8d3ba0b1f19be1dd5530365a0b3b235e230fbd6`)
+with hostile review
+`xmodel/td6-c1-c3-two-center-cover-review-claude-20260825.md`
+(SHA-256
+`56c4ece1224c723f8bbe107f0c9af6776dc0affcb03923a394628838923bde19`)
+and AWS custody supplement
+`xmodel/td6-c1-c3-two-center-cover-review-aws-custody-20260825.md`
+(SHA-256
+`2ca099947a7b53508a98b73a903c9a46b80cde83f81fdb925c3b139d1a331dd1`):
+**CONFIRMED EMPTY AT THE FROZEN FIRST-BAND/P12 GATE OVER EVERY FIELD
+EXTENSION OF `Q`**.
+
+- SOURCE TYPE: the centering jet is
+  `x=C*s+s^2+U*s^3+t*s^4` with `t` retained as a system unknown, and all
+  transport patterns, rhs normalization, pole data, and original 28-row
+  source typing are frozen.  `c2=1` is a restriction, not a proved gauge;
+  `c2=0` and general `c2` are not covered.
+- OPEN COVER: with `H=C-3U^2`, the locus `U*H!=0` is covered by generic and
+  B-local original-row certificates whose chart factors use polynomials
+  `B,T`; the exact resultant `Res_C(B,T)=64U^10` leaves no shared zero off
+  `U=0`.  Both genuine P12 reductions are the unit `-k/50` in the frozen
+  coefficient field.
+- EXCEPTIONAL DIVISORS: all of `U=0` is first-band-inconsistent, including a
+  raw unit-chart rebuild at the origin.  On `H=0`, the raw certificate applies
+  off `U*P(U)` for `P=128U^6-32U^3+1`; `P` is irreducible and squarefree,
+  and the direct rebuild over `Q[U]/(P)` has certified inversions and the same
+  unit remainder `-k/50`.  The intentionally failing V6 denominator contains
+  `P` and is retained as the negative control; V7 works in the quotient and
+  never divides by `P`.
+- CUSTODY: the producer manifest SHA is `e3af7ba9...`.  The no-shell review's
+  independent probe was executed on Box03 after only a harness repair that
+  selects the payload directory rather than a macOS AppleDouble entry.  It
+  returned rc zero; 108 explicit PASS checks plus four INFO lines and a final
+  `PROBE PASSED` occupy 114 stdout lines.  Probe/stdout/time-stderr SHAs are
+  `af2b9164...` / `5dbd5025...` / `d2c1ae07...`; the custody manifest/freeze
+  hashes are `feebc1b3...` / `8c503ad5...` and verify.
+- SCOPE/NEXT: this kills one fixed normalized two-parameter section only.
+  Simultaneous general centers, the `c2=0` boundary, other dead-stretch/
+  boundary/F1/pole moduli, full TD6, SP-2, a landing theorem, a maximum-degree
+  theorem, and JC2 remain open.  The active trivariate `(C,V,U)` atlas and
+  universal-adjoint test are successors, not consequences already proved.
+
+## TD6 FIXED THREE-CENTER `H=P3=0` RAW CURVE EMPTY (2026-08-25, DIFFERENT-MODEL-CONFIRMED FIXED-SECTION TIER)
+
+`xmodel/td6-c1-c2-c3-p3-raw-curve-aws-20260825.md`
+(SHA-256
+`a15c85c5bfd2a4219c2f7540b5e2577f5af123c18b40483a2749118c5ac2bcab`)
+with hostile review
+`xmodel/td6-c1-c2-c3-p3-raw-curve-review-claude-20260825.md`
+(SHA-256
+`def9c7392f156b88252e5f143af505aa684e1135bc99b7beb5ff203d2238788c`)
+and terminology erratum
+`xmodel/td6-c1-c2-c3-p3-raw-curve-erratum-20260825.md`
+(SHA-256
+`c40a508382ec369c0bf5e7cc38f2d2c0246467dbfc633403409f9c999f4bc8df`):
+**CONFIRMED EMPTY ON THE WHOLE SET-THEORETIC `H=P3=0` RAW CURVE OF THE
+FIXED SOURCE-TYPED THREE-CENTER SECTION**.
+
+- FUNCTION FIELD: with `H=C-3U^2` and
+  `P3=V^4-32V^2U^3+128U^6`, the tower
+  `Q(U)[Z,V]/(Z^2-32Z+128,V^2-ZU^3)` is a degree-four field and equals the
+  function field of the irreducible curve `P3=0`; no component or nilpotent
+  adapter is lost.
+- EXACT OBSTRUCTION: two exact pivot orders give transport rank
+  `3470/3602`, first-band rank `38/132`, and genuine P12 remainder `-k/50`.
+  Their original-row lifts use respectively 28 rows/1,540 terms and 38
+  rows/2,152 terms, with plus-one controls.  All cleared certificate divisors
+  are powers of `U`, with complete charts `U^17` and `U^19`, so every point
+  of the curve off `U=0` is excluded over every field extension of `Q`.
+- COMPLEMENT: `P3(0,V)=V^4` and `H(0,C)=C`, so the set-theoretic complement
+  is the raw origin.  Its separately frozen 21-original-row unit-chart
+  certificate is transport-band incompatible.  The immutable producer
+  called it first-band incompatible; the cited erratum corrects only that
+  mechanism label and strengthens neither the set nor the conclusion.
+- COMPOSITION/CUSTODY: together with the previously frozen `H=0` open,
+  `V=0`, `U=0`, and origin strata, this removes the remaining raw `H=0` debt
+  of this fixed section.  Producer manifest/freeze SHAs are `95869889...` /
+  `ddbf7dff...`; the ascending/reverse stdout SHAs are `c38471a0...` /
+  `900c3829...`.  A second readable-source hostile review
+  `xmodel/td6-c1-c2-c3-p3-raw-curve-source-review-claude-20260825.md`
+  (SHA-256
+  `8a3a67d4007efda38bf4ad0223c576b5f470ddef3218514932751e15fb3b8148`)
+  read the full 24-file import closure and independently confirmed the
+  quotient tower, source replay, denominator logic, origin certificate, and
+  H-cover.  Its only caveats are evidentiary and do not change the verdict.
+- SCOPE/NEXT: raw `B3`, a neighborhood in center space, a gauge covering
+  `c2=0` or arbitrary centers, boundary/dead-stretch moduli, full TD6, SP-2,
+  a landing theorem, maximum degree, and JC2 remain open.  The active exact
+  `B3` divisor atlas is a successor, not part of this promotion.
+
+## SELECTED-Q8 NO-MERGER DRAFT REFUTED AND REPAIRED (2026-08-25, CORRECTED ABSTRACT LEMMA DIFFERENT-MODEL-CONFIRMED)
+
+The conditional producer lemma
+`xmodel/max12-912-order3-nu-q8-good-reduction-no-merger-lemma-20260825.md`
+(SHA-256
+`ef0119505d3378781f75fcefd9febe3efb0581e1d7b5c7009c900d251a653170`)
+is superseded by the nonmutating erratum
+`xmodel/max12-912-order3-nu-q8-good-reduction-no-merger-erratum-20260825.md`
+(SHA-256
+`ed7bf01a1d87bf2e0733be8cc0f3d5d8a6b10f13743de8fd1d38e4cb1061a194`),
+whose independent hostile review is
+`xmodel/max12-912-order3-nu-q8-good-reduction-no-merger-erratum-review-claude2-20260825.md`
+(SHA-256
+`cc722b523e4d7111724f236fe56ed9815e47618b7f12425a55442b3ebcc63de8`):
+**THE ORIGINAL ABSTRACT LEMMA IS FALSE AS WORDED; THE CORRECTED ABSTRACT
+LEMMA IS CONFIRMED, WHILE ITS GLOBAL Q8 APPLICATION REMAINS UNDISCHARGED**.
+
+- COUNTEREXAMPLE: over `R=k[[pi]]`, the scheme
+  `Spec R[x,y,z]/(xz,yz,pi*xy)` has reduced special fibre
+  `V(z) union V(x,y)`, a plane plus a line `C`.  At the origin `C` is the
+  unique one-dimensional component, and the total scheme is flat/reduced at
+  `eta_C`; nevertheless the generic fibre is the union of three distinct
+  coordinate axes, and the closures of two of them contain the origin.  A
+  higher-dimensional vertical component invalidates the producer proof's
+  local-containment step.
+- REPAIR: require `C` to be the unique irreducible special-fibre component
+  through each marked point **in every dimension**; more strongly, in the
+  intended application one may prove that the full source special-fibre local
+  ring is a regular one-dimensional local ring.  With that hypothesis, each horizontal
+  curve closure contains `eta_C`; at `eta_C`, flatness plus reduced special
+  fibre makes the local ring a one-dimensional domain, so only one horizontal
+  generic component can dominate `C`.
+- WORDING: use scheme-theoretic closure, not “integral closure inside X.”
+  Normalization is unnecessary and is not generally a closed subscheme of
+  `X`.  The first hostile CLI attempt produced no report because its response
+  exceeded the configured output limit and remains failed closed; the cited
+  second review independently verified both the counterexample and every
+  commutative-algebra step of the repair.
+- Q8 EFFECT: the separately reviewed arithmetic contact bridge now supplies
+  full contact coordinates, scheme identity, regular one-dimensional contact
+  completions, and integral specialization of the eight local branches.  It
+  does not by itself prove that the `H`-supported special component is
+  generically reduced/multiplicity one or that all eight closures dominate
+  that same component.  Those remaining checklist items still block the
+  global no-merger application.  No all-eight component lift,
+  selected-trajectory exclusion, maximum-twelve theorem, or JC2 theorem is
+  promoted by this abstract lemma.
+
+## SELECTED-Q8 `b=1` SLOPE-TWO NEXT-ORDER CONTROL (2026-08-25, DIFFERENT-MODEL-CONFIRMED ROUTING TIER)
+
+Producer report
+`xmodel/max12-912-order3-nu-q8-w0-rankdrop-b1-slope2-next-order-control-20260825.md`
+(SHA-256
+`4f1f4b66abb57bb8c912427359e86f4e54b6563f8a7ae31f5d64bcaba656095f`)
+and hostile review
+`xmodel/max12-912-order3-nu-q8-w0-rankdrop-b1-slope2-next-order-control-review-grok-20260825.md`
+(SHA-256
+`6bf95a6ebdc12d39020b00b60933bab100315834cd8385ac57a70448e490347e`):
+**CONFIRMED ONLY FOR THE NORMALIZED UNRAMIFIED `x5=t` FIRST-JET FAMILY**.
+
+- At the selected leading cone over `(d2,d4)=(2,1)`, the exact substitution
+  `x5=t`, `x3=5t/3+X2t^2`, `x1=U2t^2`,
+  `w=-4t^2/9+W3t^3`, with first jets of `c,d4,u`, makes every leading row
+  vanish.  The next odd equations reduce to three affine equations whose
+  first two force `Q1=-16/27` and `c-6B1+9U2=11/9`; the third differs by the
+  nonzero constant `108`.  Hence the next-coefficient ideal is `(1)` for
+  every finite `c` in this strict chart.
+- Box02 `std/dp` and Box03 `slimgb/block` agree exactly.  Frozen
+  manifest/freeze/replay-output SHAs are `39275137...` / `9ab69a8d...` /
+  `717620e4...`.  Review-run SHA is `57ef0139...`; its custody note discloses
+  a faithful substantive transcription from two streamed adapter chunks,
+  rather than a byte-identical raw-stdout file.
+- FIREWALL: this kills no mixed-order or ramified/Puiseux arc, earlier
+  coefficient drift, moving-`d4` pointed germ, full horizontal saturation,
+  coefficient infinity, terminal/Taylor realization, trajectory, full
+  `(9,12)`, maximum-twelve cell, or JC2.  The full pointed moving-`d4`
+  saturation and coefficient-projective chart remain decisive.

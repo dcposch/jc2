@@ -1,0 +1,28 @@
+ring r=3,(P,Q,s,w,h,fa,fb,fv,X0,X1,X2),dp;
+LIB "primdec.lib";
+option(redSB);
+ideal I=
+  2*P*X0+2*P*fa*s+h^3*s^3,
+  2*P*X1+2*P*fa*w+2*P*fb*s+2*P*fv*h*s+2*Q*X0+2*Q*fa*s+2*fv*h^3*s^2,
+  2*P*X2+P*fb*fv+2*P*fb*w+P*fv^2*h+2*P*fv*h*w+2*Q*X1+2*Q*fa*w+2*Q*fb*s+2*Q*fv*h*s+fa*fb^2+2*fa*fb*fv*h+fa*fv^2*h^2+fv*h^3*s*w,
+  2*Q*X2+Q*fb*fv+2*Q*fb*w+Q*fv^2*h+2*Q*fv*h*w+2*fv*h^3*w^2+h^3*w^3,
+  2*X0*h^3+fa*h^3*s,
+  2*X1*h^3+fa*h^3*w+2*fa*s+fb*h^3*s+fv*h^4*s,
+  2*X2*h^3+2*fa*w+2*fb*fv*h^3+fb*h^3*w+2*fv^2*h^4+fv*h^4*w;
+list L=minAssChar(I);
+print("minass_count");size(L);
+if(size(L)!=13){print("FAIL-global-count");quit;}
+int i; int d4=0; int d5=0; int d6=0; int d7=0;
+for(i=1;i<=size(L);i++){
+  ideal J=std(L[i]);
+  if(size(reduce(I,J))!=0){print("FAIL-source-containment");i;quit;}
+  if(dim(J)==4){d4++;} if(dim(J)==5){d5++;}
+  if(dim(J)==6){d6++;} if(dim(J)==7){d7++;}
+  print("component");i;size(J);dim(J);J;
+}
+print("global_dimension_counts");d4;d5;d6;d7;
+if(d4!=8 || d5!=3 || d6!=1 || d7!=1){
+  print("FAIL-global-dimensions");quit;
+}
+print("PASS-D7-JOINT-MINASSCHAR");
+quit;

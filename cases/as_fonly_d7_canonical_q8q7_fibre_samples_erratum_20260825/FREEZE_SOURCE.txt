@@ -1,0 +1,20 @@
+AS F-ONLY D7 CANONICAL Q8/Q7 FIBRE-COORDINATE ERRATUM SOURCE FREEZE
+date: 2026-08-25Z
+status: SOURCE-AUDITED AWS PRODUCER
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+audit_compiler_sha256:
+  0c457b83814007aa3fa51a7d9023e545543cea4bf969ed6b8823f8cb313c1a1f
+runner_manifest_sha256:
+  51f1e3dee5b0325707f600a114ccef2b49fb85b507d9017f7e27094f343c464b
+source_closure_sha256:
+  4e4be404e8ed3bd1374e28e9c94fcd81c9cbddec3a47d0d0b42d670f992265a9
+source_package_files_sha256:
+  9cc77b069093a96c075e8820e409f3ed03337a0b1558e97618d03c1b2c60622d
+source_archive_sha256:
+  c8fb4bdcaa54e5ac82ba6bd8b2592f4d91bda97f3e1567d020c15b304c3e5d40
+
+scope:
+  Audit and display the distinction between the zero 19-coordinate RREF
+  fibre witness and its generally nonzero 32-vector affine particular for
+  exactly the 64 frozen sampler outputs.  No new lift inference.

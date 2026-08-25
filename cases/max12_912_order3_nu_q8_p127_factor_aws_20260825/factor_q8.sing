@@ -1,0 +1,9 @@
+ring R=127,(v),lp;
+poly Q8=v8+29v7+60v6+61v5+72v4-v3-21v2-5v-21;
+list F=factorize(Q8,1);
+print("Q8-P127-FACTORIZATION");
+print("squarefree_gcd="+string(gcd(Q8,diff(Q8,v))));
+print("factor_count="+string(size(F[1])));
+print("factorization_begin");
+F;
+print("factorization_end");

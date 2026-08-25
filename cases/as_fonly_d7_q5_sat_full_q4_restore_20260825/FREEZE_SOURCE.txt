@@ -1,0 +1,10 @@
+# Source freeze
+
+The exact constructive Q4 restoration producer is pinned by
+`SOURCE_MANIFEST.sha256`.  Its three first input models are the immutable
+Box02 SAT endpoints for structural bases 0000, 0270, and 0513, whose model
+hashes are recorded by each remote run.  Promotion requires every run to
+pass the complete nested-integer parent replay before consuming its Q4 row.
+
+Execution is AWS-only.  The frozen scope ends after all five Q4 rows for
+each displayed model; Q3 through Q0 remain open.

@@ -1,0 +1,10 @@
+# Frozen fused-lower-row source
+
+This source pins the exact whole-kernel Q3 staged control and fused Q3--Q0
+affine gate.  The whole quadratic design is load-bearing evidence that the
+literal determinant row map has no hidden nonlinear dependence at the
+consumed precision.  A result is accepted only with direct full determinant
+replay and the fixed-support/seed checks.
+
+Substantive execution is AWS-only.  Scope remains one finite-depth fibre at
+each exact input model.

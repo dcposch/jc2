@@ -1,0 +1,14 @@
+# Package freeze
+
+The producer source, three AWS result JSON files, per-run output manifests,
+and remote custody hashes are pinned by `MANIFEST.sha256`.  Replay command:
+
+```bash
+env JC2_ROOT=/path/to/jc2 \
+  MODEL_OUTPUT=/path/to/exact/solver.stdout \
+  JOB_DIR=/tmp/full68-replay \
+  bash cases/as_fonly_d7_q5_sat_q4_full68_gate_20260825/run_remote.sh
+```
+
+Status is producer-exact/provisional pending a different-model audit of the
+source-to-68-row compiler and literal determinant orientation.

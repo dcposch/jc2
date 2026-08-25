@@ -1,0 +1,21 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the confirmed producer/review, the exact source compiler, and the unfrozen probe scripts so I can reconstruct source rows over characteristic zero rather than trust modular output.The prompt, fibre compiler, and double-B probe scripts are the source of truth here; I’ll read those next and look for the confirmed root-free-norm producer.I’ll reconstruct the exact double-`B` source rows next, then inspect polynomial sizes and available CAS tools before attempting characteristic-zero elimination.I’ll reconstruct the exact `k=0` source rows and record their sizes and weights before any elimination.The `k=0` tails are small and start at quadratic order, so I can dump the exact rows and run a characteristic-zero standard basis.I’ll run characteristic-zero slices, saturation, and elimination in parallel, plus a modular sanity check from the reconstructed source.The `p=0` slice already has an explicit family; I’ll verify it, then attack the nonzero-`p` locus with saturation and a characteristic-zero `p=1` slice.The `x0`-only family is exact in characteristic zero. Next I’ll run a rational-function Gröbner basis over `Q(p)` and a `p=0` primary decomposition; generic emptiness of the fiber would prove the elimination ideal is nonzero.Integer-coefficient Gröbner bases are swelling over `Q`. I’ll switch to the original rational generators and run msolve at several primes.Singular and msolve disagree on the same prime, so the inputs likely differ. I’ll compare the exact systems and recompute the nonzero-`p` locus.The nonzero-`p` locus is 0-dimensional, and its elimination polynomial is a degree-70 polynomial in `p^9`. I’ll lift those coefficients from several primes.The unsaturated ideal is dimension one and degree five, so a characteristic-zero Gröbner basis should be small. I’ll compute that next instead of the degree-1188 saturation.Wrote `xmodel/max12-912-order3-double-b-p-algebraicity-grok-20260824.md`. Source rows were rebuilt from the fibre compiler at `k=0`, not from modular probe output.
+
+**Over `Q`, the `p=0` slice is a reduced curve of degree five**, in two explicit families:
+
+- Family A: `x1=⋯=x5=0`, `2x0^2=9`, `q` free  
+- Family B: `x1=x2=x4=x5=0`, `4x3^3+81=0`, `x0=x3 q`, `q` free  
+
+On both, `p=r8=0`, so `r8'=0`, which kills actual trajectories on those components via `r8'=j/(9u)`.
+
+**That does not decide `I ∩ Q[p]`.**** The elimination ideal is nonzero if and only if there is no dimension-one component on which `p` varies. A characteristic-zero Groebner basis of the unsaturated ideal was not obtained.
+
+Modulo many primes the complementary picture is stable: a zero-dimensional `p≠0` scheme of degree `1188` whose `p`-minpoly is a **degree-70 polynomial in `p^9`**. Four-prime Farey reconstruction of that polynomial failed (heights too large). msolve’s characteristic-zero “empty” report on the saturation disagrees with Singular at the same prime and was discarded.
+
+If that polynomial lifts, `p` is constant, hence `r8=-3p/10` is constant, and the same terminal row kills the whole double-`B` leaf. The only counterexample to that kill would be a `p`-varying curve; none was constructed.
+
+## Research status
+
+`INCONCLUSIVE`
+
+**Strict scope.** Normalized `(9,12)` order-three double-`B` leaf `k=mu=0`, `nu=1`, `r1=r2=r3=r4=r5=r7=0`, `r6=1`, `3p+10 r8=0`. The elimination ideal in `Q[p]` is neither proved nonzero nor proved zero.

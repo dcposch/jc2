@@ -1,0 +1,36 @@
+AS F-only D7 first-predecessor complete Q9-fibre exclusion — frozen producer
+
+Report:
+  xmodel/as-fonly-d7-first-predecessor-full-q9-rawq7-exclusion-20260825.md
+  SHA-256 fe32d0bf3a3451546f9bfc77cc0a7e107e82b2bc834a4a6311919e002f2b6530
+
+Manifest:
+  cases/as_fonly_d7_first_predecessor_full_q9_rawq7_20260825/MANIFEST.sha256
+  SHA-256 827f2d28004feae007bea0a50868755e94f921d05a720df6e21fa543afdeed35
+
+Full custody:
+  cases/as_fonly_d7_first_predecessor_full_q9_rawq7_20260825/results_box02_full_custody/full_custody.tar.zst
+  SHA-256 601076db6aa5f27e74315657baf7c5a87c2ad64982011612064ee26c1c3f5649
+
+Exact result:
+  Over the first corrected-Q10 predecessor c5_5=2 (all other predecessor
+  coordinates zero), no assignment to all 19 Q9-kernel trits, 32 raw Q8
+  trits, and 18 raw Q7 trits satisfies the explicit 23/22/19 source rows
+  and 46 terminal-high rows.
+
+Certificate:
+  SMT2 0061e1ccd62c849d54db9258247413d8fe80bf8cdf696ef987ea904fae89fd5d
+  CNF  a25c7ed0f48766548fc518f9de2b4c7d4e51e413c085dc30f68d6668f1928369
+  DRAT b8dbb0649833f5c545190e6b56e0efb4c9721385f08a553fdfd92d25ff956eda
+  drat-trim: s VERIFIED
+
+Strict scope:
+  One of 11,881 Q9-compatible corrected-Q10 predecessor states is killed
+  with its entire Q9/Q8/Q7 fibre.  The other 11,880 predecessor states,
+  separate endpoint families, and other associated-top branches remain open.
+
+Verification:
+  shasum -a 256 -c \
+    cases/as_fonly_d7_first_predecessor_full_q9_rawq7_20260825/MANIFEST.sha256
+
+Full replay is AWS-only.

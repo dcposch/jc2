@@ -1,0 +1,37 @@
+// Exact linearly reduced high-layer predecessor ideal over F_3.
+// Degree-four variables:
+// p=u4_0, q=u4_3, r=v4_0, s=v4_1, t=v4_3, w=v4_4.
+// Degree-five variables a,...,g use analyze_degree5.py conventions.
+ring R=3,(p,q,r,s,t,w,a,b,c,d,e,f,g),dp;
+LIB "primdec.lib";
+option(redSB);
+ideal K8=
+ a*c-b^2,
+ a*d+b*c,
+-b*d-c^2,
+ a*f+b*e+c*d,
+-a*g+b*f+c*e+d^2,
+ b*g+c*f-d*e,
+ d*f-e^2,
+-d*g+e*f,
+ e*g-f^2;
+ideal K7=
+ 2*p*c+2*b*r+a*s,
+ 2*p*d+c*r+2*b*s,
+ 2*p*f+2*q*c+2*e*r+d*s+2*b*t+a*w,
+ p*g+2*q*d+f*r+2*e*s+c*t+2*b*w,
+ 2*q*f+2*e*t+d*w,
+ q*g+f*t+2*e*w;
+ideal H=std(K8+K7);
+print("H_size_dim");print(size(H));print(dim(H));
+ideal RH=radical(H);ideal GRH=std(RH);
+print("radical_size_dim");print(size(GRH));print(dim(GRH));
+list MP=minAssGTZ(H);
+print("minimal_associated_count");print(size(MP));
+int i;
+for(i=1;i<=size(MP);i++)
+{
+  ideal Pi=std(MP[i]);
+  print("minimal_prime_size_dim");print(size(Pi));print(dim(Pi));print(Pi);
+}
+print("PASS-HIGH-DECOMPOSITION");

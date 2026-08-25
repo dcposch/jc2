@@ -1,0 +1,20 @@
+AS F-ONLY D7 PURE-N DEGREE-TEN AWS RUNNER SOURCE FREEZE
+date: 2026-08-25Z
+status: PREREGISTERED SOURCE; SYNTAX/MANIFEST PASS; NOT YET EXECUTED
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+runner_manifest_sha256:
+  9cc47a482719504ebbae46e4c6d70f0bd552c464671cf068a7e04ea2157aa5ba
+source_closure_manifest_sha256:
+  1239e5b3fea3eaea34b502c3cf240857c0168b4bd477c99e6d035ddfa96581d8
+compile_next_top3_sha256:
+  f9c62dbd33389ae6d386bd2252701961be1c863781ab1115d023e2481a90e3cb
+
+execution_contract:
+  AWS only; one CPU; 16 GiB VM ceiling; 12-hour timeout.  Reproduce the
+  frozen N12/N11 source runner internally before imposing all eight N10 rows.
+
+scope:
+  Pure quadratic rows 12, 11, and 10 on the charged vertical finite branch.
+  No lower quotient/cross row, recurrence, all-depth, characteristic-zero,
+  no-lift, counterexample, or JC2 claim.

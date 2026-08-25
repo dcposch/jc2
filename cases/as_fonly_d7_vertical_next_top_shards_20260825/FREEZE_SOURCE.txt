@@ -1,0 +1,25 @@
+AS F-ONLY D7 NEXT TOP-CARRY 27-WAY AWS SHARD SOURCE FREEZE
+date: 2026-08-25Z
+status: PREREGISTERED SOURCE; SYNTAX/MANIFEST PASS; NOT YET EXECUTED
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+runner_manifest_sha256:
+  08fdb6c65650ef85438dafe9945d07b27c6ba068b7e5f28387ebc30dafffdd82
+source_closure_manifest_sha256:
+  50d774b2921fbc0b4c51536b4ce7d70a913269f454e55d124d185abcabdc35f4
+compile_shard_sha256:
+  64bbd0e15d0e10296ca81867a390338e41814ca575729e98bf2bd315a33bf893
+aggregate_shards_sha256:
+  09f859fc8316316fef3bf406d3dea6e708395280983962db81d54c9931245ce5
+launch_all_sha256:
+  fdc2e980181dd7e084b3c1177fc6063d4228001bb78ed46ed8d81f4bfd628f88
+
+execution_contract:
+  AWS only; 27 contiguous 81-base shards; one CPU each; 8 GiB virtual-memory
+  ceiling per shard; 12-hour timeout; ordered aggregate Merkle certificate.
+  The monolithic r6d job remains the canonical state-stream hash.
+
+scope:
+  Discovery acceleration for the frozen N12/N11 finite branch only.  Any
+  partial/failed run is no evidence.  No lower row, recurrence, all-depth,
+  characteristic-zero, no-lift, counterexample, or JC2 claim.

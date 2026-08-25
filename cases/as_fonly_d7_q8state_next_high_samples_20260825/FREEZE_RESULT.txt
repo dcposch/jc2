@@ -1,0 +1,43 @@
+AS F-ONLY D7 Q8-STATE / Q9-LOCUS NEXT-HIGH SAMPLE RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT AT SAMPLED-CANONICAL SCOPE;
+        PROVISIONAL PENDING DIFFERENT-MODEL REVIEW
+git_head_at_source_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256:
+  c57f3f341a54f776ce1da7c48fd343ceaf1cc8f78351033e22a35da2ae1a7983
+result_readme_sha256:
+  07ccd72ac9c3f167d6f06f0573682b1fc535f497a2a703cccec7fae70db09560
+verify_result_sha256:
+  58c407f8bb47807260e7d8ea5571b1c1212fff25305aaadc2de4d8d1728603c6
+result_manifest_sha256:
+  89de5d18411f583626839ed3f5296b3fa8991e75a3cdb30d63345c8d8923c911
+source_freeze_sha256:
+  f2922acbe5258faf826a0d2ddcc67077622ebfd6eb7a2b2ef9ed4be38feb7bc7
+source_archive_sha256:
+  f7c57b806f60d9a7482a4955164602e9521b3db2c9f9a0122ab78e81dac167c2
+result_archive_sha256:
+  eaa6a4aa66a925f1e4d2331459a85a25902c6d180cb4891fc5e532433e5128ca
+aggregate_json_sha256:
+  3d42d327476b0fdaba635588b332af2ab2ed415a17cd758a2a38cbdf2495ee8f
+state_json_stream_sha256:
+  2611813853bbd0cf9ed7cb9db323447607513826b6e8e9613bae214bf969fc4c
+
+execution:
+  Box02/ip-172-30-0-186;
+  /home/ubuntu/jobs/as_q8state_next_high_samples_20260825T031215Z;
+  UTC 03:12:48Z--03:13:26Z; rc0;
+  66 parallel lanes, 66/66 PASS, all stderr empty.
+
+result:
+  All 39 low-weight Q8-kernel states and all 27 low-weight Q9-locus states
+  are Q8-compatible.  Four in each family die at Q7.  For the other 58,
+  the entire 3^9 Q7 fibre was exhausted; every high zero count is zero and
+  every exact one-coefficient presentation/stream matches the base
+  R10=x^10 obstruction.
+
+scope:
+  Sampled-canonical in the 19D Q8-kernel and 13D Q9-locus axes, exhaustive
+  only within each reported Q7 fibre.  No rate extrapolation, combined-axis,
+  six-spectator, whole-fibre, fixed-cap/all-depth, counterexample, or JC2
+  claim.

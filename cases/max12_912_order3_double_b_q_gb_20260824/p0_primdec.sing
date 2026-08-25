@@ -1,0 +1,36 @@
+LIB "primdec.lib";
+option(redSB);
+ring R=0,(x0,x1,x2,x3,x4,x5,q),dp;
+poly r1=12*x0*x5+12*x1*x4+12*x2*x3-24*x3*x5*q-12*x4^2*q-4*x4*x5^2;
+poly r2=12*x0*x4+12*x1*x3+6*x2^2-24*x2*x5*q-24*x3*x4*q-4*x3*x5^2-4*x4^2*x5+18*x5^2*q^2;
+poly r3=36*x0*x3+36*x1*x2-72*x1*x5*q-72*x2*x4*q-12*x2*x5^2-36*x3^2*q-24*x3*x4*x5-4*x4^3+108*x4*x5*q^2+20*x5^3*q;
+poly r4=108*x0*x2-180*x0*x5*q+54*x1^2-180*x1*x4*q-36*x1*x5^2-180*x2*x3*q-72*x2*x4*x5-36*x3^2*x5-36*x3*x4^2+252*x3*x5*q^2+126*x4^2*q^2+168*x4*x5^2*q+5*x5^4;
+poly r5=108*x0*x1-144*x0*x4*q-24*x0*x5^2-144*x1*x3*q-60*x1*x4*x5-72*x2^2*q-60*x2*x3*x5-36*x2*x4^2+180*x2*x5*q^2-36*x3^2*x4+180*x3*x4*q^2+132*x3*x5^2*q+144*x4^2*x5*q+16*x4*x5^3-108*x5^2*q^3;
+poly r6=18*x0^2-36*x0*x3*q-12*x0*x4*x5-36*x1*x2*q-16*x1*x3*x5-8*x1*x4^2+36*x1*x5*q^2-8*x2^2*x5-20*x2*x3*x4+36*x2*x4*q^2+32*x2*x5^2*q-4*x3^3+18*x3^2*q^2+72*x3*x4*x5*q+4*x3*x5^3+12*x4^3*q+6*x4^2*x5^2-36*x4*x5*q^3-28*x5^3*q^2;
+poly r7=-216*x0*x2*q-72*x0*x3*x5-36*x0*x4^2+180*x0*x5*q^2-108*x1^2*q-108*x1*x2*x5-108*x1*x3*x4+180*x1*x4*q^2+180*x1*x5^2*q-72*x2^2*x4-72*x2*x3^2+180*x2*x3*q^2+432*x2*x4*x5*q+24*x2*x5^3+216*x3^2*x5*q+216*x3*x4^2*q+72*x3*x4*x5^2-144*x3*x5*q^3+24*x4^3*x5-72*x4^2*q^3-492*x4*x5^2*q^2-40*x5^4*q;
+poly r8=-324*x0*x1*q-108*x0*x2*x5-108*x0*x3*x4+216*x0*x4*q^2+180*x0*x5^2*q-108*x1^2*x5-216*x1*x2*x4-108*x1*x3^2+216*x1*x3*q^2+612*x1*x4*x5*q+36*x1*x5^3-108*x2^2*x3+108*x2^2*q^2+612*x2*x3*x5*q+324*x2*x4^2*q+108*x2*x4*x5^2-108*x2*x5*q^3+324*x3^2*x4*q+54*x3^2*x5^2+108*x3*x4^2*x5-108*x3*x4*q^3-648*x3*x5^2*q^2+9*x4^4-684*x4^2*x5*q^2-228*x4*x5^3*q-4*x5^5;
+ideal I=r1,r2,r3,r4,r5,r6-81,r7,r8;
+ideal G=std(I);
+print("PASS-P0-CHAR0");
+print("basis_size="+string(size(G)));
+print("dimension="+string(dim(G)));
+print("degree="+string(mult(G)));
+list PD=primdecGTZ(G);
+print("nprim="+string(size(PD)));
+int i;
+for (i=1; i<=size(PD); i++) {
+  print("COMPONENT "+string(i));
+  print("c_dim="+string(dim(PD[i][1])));
+  print("c_deg="+string(mult(std(PD[i][1]))));
+  print("rad_dim="+string(dim(PD[i][2])));
+  print("rad_deg="+string(mult(std(PD[i][2]))));
+  print(PD[i][2]);
+}
+ideal C1=x1,x2,x3,x4,x5,2*x0^2-9;
+ideal C2=x1,x2,x4,x5,4*x3^3+81,x0-x3*q;
+ideal H=std(intersect(C1,C2));
+ideal A=simplify(reduce(G,H),2);
+ideal Z=simplify(reduce(H,G),2);
+print("I_mod_intersection_generators="+string(size(A)));
+print("intersection_mod_I_generators="+string(size(Z)));
+quit;

@@ -1,0 +1,50 @@
+AS F-ONLY P=3 D=7 VERTICAL D7 CAP-BOUNDARY SUCCESSOR
+date: 2026-08-24
+status: PRODUCER EXACT; FULL PORTABLE REPLAY PASS; HOSTILE REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256: 3576de6cfba306230477fe7955e2ae159cc3dd241b4613b96d0ff57a05bbbfad
+manifest_sha256: 5dfd46d47b27fb6d9bc094b24389ef39255e6a073fc7ef09ab8941b30ff49f65
+
+consumed_corrected_report_sha256:
+  9cc39af35e1d52c9673755b79392e62bb265f78dc38bd9110cd37a992115c2d8
+consumed_confirmed_source_review_sha256:
+  156053c538c4c826bc0feb345d25d91f015543464e0ab9d7734ab190cd7842c4
+consumed_state_theorem_sha256:
+  410235081a54470a377d8d107a1982d34d507040718b945d11ee99dc4d1e5fe4
+consumed_confirmed_state_review_sha256:
+  6ab373bf9214c54f506cd368473aff02ed472a20e9797037f83a9745c384bc17
+
+deterministic_replay_output_sha256:
+  source: b0c821af0d1263b25a030a23339821202be837d3ec1a262eb4df041118d0e40b
+  joint: 90ffc422981d3f1a399d52792649df037dce621ce5213c6ea5ff9d730c97974a
+  boundary: 31e1d93240016633ca4db86ebb6d70ea927cec4de846e47caa9ac70328cac913
+  hzero: 2036b2baa59aade466cbad7881378696216fd7b8768aa0d12375e7d9c4e00958
+  hgeneric: 52b1b63d934f7a14259acf34b93d97114cc14b590ee1b84e27f732d18b8ef434
+
+deterministic_stream_sha256:
+  states: b37698c1bf30e028a4c06d44980bbd87ec738660ca25b5f4ebedf8d0d5ca8c7f
+  compatible_points: bfb2b6bdd50a6eac4adecbdb2dacb4b09404acbfcc320b0d51f3f0632e51fc76
+
+replay:
+  ./replay_all.sh
+  shasum -a 256 -c MANIFEST.sha256
+
+verdict:
+  The corrected integer source forces eight D7 rows and reduces the reviewed
+  D8 core to the displayed seven-row ideal.  It has 1245/6561 compatible F3
+  base states and 3507 compatible digit points.  Its geometric support has
+  exactly 13 global minimal components: eight h-nonzero closures and five
+  additional h-zero components, with dimensions 4^8,5^3,6^1,7^1.
+
+optional_direct_regressions:
+  Three source-hashed direct eleven-variable minAss runners are packaged but
+  were unfinished at freeze and are not consumed.  Their preregistered target
+  is count 13 and dimension histogram 4^8,5^3,6^1,7^1.  Timeout/OOM is no
+  verdict; disagreement quarantines this component theorem.
+
+scope:
+  Exact D7 source rows, displayed original seven-row ideal, literal-F3 census,
+  and minimal-prime/geometric-support classification only.  The radical does
+  not replace the nonreduced source scheme.  No next carry, recurrence,
+  all-depth lift/no-lift, characteristic-zero, counterexample, or JC2 claim.

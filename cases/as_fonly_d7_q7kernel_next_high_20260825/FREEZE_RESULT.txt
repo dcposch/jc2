@@ -1,0 +1,43 @@
+AS F-ONLY D7 Q7-KERNEL NEXT HIGH-CARRY EXCLUSION RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT AT FIXED Q9/Q8 BRANCH;
+        PROVISIONAL PENDING DIFFERENT-MODEL REVIEW
+git_head_at_source_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256:
+  cc2cf6417c5d27d5868bc86a6b2d02aac10a2b4976d9548a9d01bc5584db0172
+result_readme_sha256:
+  fe26bf0942f5755a096a951481782515c93d1af444d5ecf800fb8d40cbbdbe2c
+verify_result_sha256:
+  12227a47d013a638fbbec7ea67874cb4f5dd2480479fdb5bd7dd26963f0df5a3
+result_manifest_sha256:
+  a1eafec727843f86a65f02e301271d62cc35282ddbe2468e3910fabfb635dc00
+source_freeze_sha256:
+  ad30a4935602ece71499f31af695bc2b482d4ac1425e1c7adf7ba77e3a39a2d0
+source_archive_sha256:
+  d26cdd11b91e5e9b4254eb2fb43fa9d7608b84857041732d6e33fb32017c6b39
+aggregate_json_sha256:
+  87f63bdd0a9408ac1b2a019b4de9e17645625293fc75b3460a334b70e8f0a96f
+aggregate_stdout_sha256:
+  c9b36bd72a1a0c052028263208ed2dd2a8951e5e63347bf28252f7eba20caba9
+ordered_high_stream_sha256:
+  6e4df88330f8a9ee169d3ec105ba08c655f13ae6d5c6a50dbb53f375a1265c10
+
+execution:
+  Box02/ip-172-30-0-186;
+  /home/ubuntu/jobs/as_q7kernel_next_high_20260825T030036Z;
+  UTC 03:01:09Z--03:01:24Z; rc0;
+  27 disjoint parallel shards, 27/27 PASS, all stderr empty.
+
+result:
+  At fixed canonical Q9 x23=x30=1 and Q8=zero, the whole 3^9 Q7 kernel
+  was exhausted.  Q6 divergence is surjective with a nine-dimensional
+  fibre, and all Q6 directions enter the next carry only in degrees <=8.
+  On every Q7 state the exact degrees 12..9 map is the constant R10=x^10;
+  its zero locus is empty.  Hence every Q7/Q6 choice under this fixed Q9/Q8
+  branch is terminal at the next cap-seven carry.
+
+scope:
+  Excludes the thirteen other Q8-chart directions, six pinned Q9 Frobenius
+  spectators, other Q9 predecessors, full fixed-cap/all-depth claims,
+  counterexamples, and JC2.

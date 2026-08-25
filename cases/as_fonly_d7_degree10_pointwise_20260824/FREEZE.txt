@@ -1,0 +1,49 @@
+AS F-ONLY p=3,D=7 DEGREE-TEN POINTWISE GATE
+date: 2026-08-24
+status: PRODUCER EXACT; SOURCE COMPRESSION + INTEGER CONTROLS + STATIC/GENERATED FITTING REPLAYS PASS; HOSTILE REVIEW PENDING
+verdict: RANK ZERO IS THE VERTICAL DEGREE-FIVE-ZERO BRANCH; EVERY NONZERO POINT HAS RANK THREE; THE NONZERO COMPATIBILITY SUPPORT IS EXACTLY TWO ENDPOINT BRANCHES
+git_head_at_freeze: a04affb7247fb5e87cad4e87f5926ab440254b24
+
+report_sha256: e4311a80aef2d3617c7b449e16cb19d34cfe25d31c558bb68f78ddc02fcae4ab
+manifest_sha256: 426210cbdbd61e0ec0fa92d39344d3746c8a4a421df7c07c70f5a0cab968e2a5
+static_fitting_replay_sha256: f1461b2826019bc10069d0222957b47f3fc6d3847af871274349a793c21cc2e5
+generated_fitting_replay_sha256: 2f573c9d55ca73d5483a0d625c9285cfdfb6122b3b437d30d402974ac45249bf
+source_generator_sha256: fd76a59e75de80b871f773879c8911e5dec1905375912b2074793fcdc4ff3ef5
+source_compression_audit_sha256: f72a7cec68d732dc99d867abc24c9822b4e245aec098a795d013e036916bda38
+integer_controls_sha256: ec97e86622ec5c4673135e30d34c6364abc1aa0fd4a32334af2d905f5405202a
+high_radical_audit_sha256: d5b2a9750676f9cc37d2469cd9b1ea7daec6d584ef52a87b801311ba930258ef
+a_chart_audit_sha256: 465f459154dfa370dcfee2f7d7404277895a024de6e302318f6bb19cfb247e90
+g_chart_audit_sha256: 1487dc1ab124e476a1e8bab0a5b65490fc5e2bdb90d2517d14dbd2a8c736fb4c
+
+consumed_confirmed_predecessor:
+  producer_sha256: cbcd8851200f2ab15c29a7b9414c1d720c7aee0aa852b2cd522dcd7d699ae194
+  hostile_review_sha256: 4e915fb6f7e8701d1932b2b28df76db35859520bc94ffe8fb08a1cd679936ae8
+
+one_command_independent_fitting_replay:
+  Singular -q audit_pointwise_static.sing
+
+full_replay:
+  python3 audit_source_compression.py
+  python3 replay_degree10_controls.py
+  Singular -q audit_high_radical_components.sing
+  Singular -q audit_pointwise_static.sing
+  python3 generate_reduced_pointwise.py | Singular -q
+  python3 audit_main_a_chart.py | Singular -q
+  python3 audit_main_g_chart.py | Singular -q
+  shasum -a 256 -c MANIFEST.sha256
+
+typed_separate_boundary_control:
+  The displayed a=1 endpoint passes the degree-ten row but its next residual
+  has cap-boundary coefficient 2*x^3*y^5 in total degree eight.  This is a
+  pointwise negative control, not a proof that the entire a-endpoint family
+  is killed.
+
+scope:
+  Exact pointwise degree-ten augmented-Fitting classification on the
+  different-model-confirmed aligned deep p=3,D=7 predecessor.  The original
+  nonreduced ideal is retained through formation of every Fitting ideal;
+  radicals are used only afterward to describe field support.  The vertical
+  and g controls extend mod 81.  Remaining lower next-carry rows on the full
+  survivor locus, other branches, full D7, all-depth lifting,
+  characteristic-zero lifting/no-lifting, counterexamples, and JC2 remain
+  open.

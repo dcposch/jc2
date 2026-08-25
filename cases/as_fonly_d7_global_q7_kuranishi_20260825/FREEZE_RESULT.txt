@@ -1,0 +1,42 @@
+AS F-ONLY D7 GLOBAL UNREDUCED Q7 KURANISHI RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT ON DISPLAYED UNREDUCED AFFINE-LIFT CHART;
+        PROVISIONAL PENDING DIFFERENT-MODEL REVIEW
+git_head_at_source_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256:
+  fdd9ff902a133a225ae5b3de18fcafab7204b989241b53b39bf97e8d7e762104
+result_readme_sha256:
+  774704e51dc371e2d97d27adfc9a3d69fe9ce05455b95e3b96246184fd5e778d
+verify_result_sha256:
+  a7eefc9cfc4f567c4e07ab920120074be301f17453fd1ae1b0b6e1061fbeee87
+result_manifest_sha256:
+  05d15d29796f864668de2eb5b669138cceff43d8e432e3392672e2b565472eb3
+source_freeze_sha256:
+  f889c8170ec2502316d00efed93033d366863f5afaecec2afda4c0bfc826f616
+presentation_sha256:
+  8207120ff8c5d08204005dd941de2b6bce2b5f62c8b10172b2811ae714306d65
+ordered_shard_json_stream_sha256:
+  10744f1a874446b63e7cac000265e35a72b78a3f36c407dd0c85f10c027a05fc
+source_archive_sha256:
+  37b407ae9c8f7001ce8506aa174048e4c67d772fd19383eab44ca077687eef40
+result_archive_sha256:
+  bb808cb998e00fc46f89c69d586d4eb85dba7557cbf7a51be1bffadcdd89d84d
+
+execution:
+  Box02/ip-172-30-0-186;
+  /home/ubuntu/jobs/as_global_q7_kuranishi_20260825T040000Z;
+  UTC 03:58:57Z--03:59:39Z; rc0;
+  36 parallel lanes; all shard and aggregate stderr empty.
+
+result:
+  Exact 561-point quadratic design plus 64 off-grid controls.  The only
+  nonzero cokernel coefficients are kappa_5=s15, kappa_6=2*t6,
+  kappa_8=s17, kappa_9=2*t8.  The unreduced compatibility locus is affine
+  dimension 28.  Direct canonical reduction controls: 36 fail Q8; 28 pass
+  Q8 and fail Q7 rank (9,10); zero canonical Q7 survivors among controls.
+
+scope:
+  Unreduced affine-lift chart only.  No global canonical carry equivalence,
+  six Frobenius spectators, other predecessors, later rows, fixed-cap/all-
+  depth, counterexample, or JC2 claim.

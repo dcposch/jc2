@@ -1,0 +1,21 @@
+MAX12 (9,12) Q8 GLOBAL-QUOTIENT AWS CUSTODY SUPPLEMENT
+date: 2026-08-25
+status: EXACT BYTE CUSTODY FOR AN ALREADY-CONFIRMED GATE; NO NEW THEOREM
+verdict: R6D FROZEN REPLAY AND INDEPENDENT HOSTILE PROBE BOTH EXITED ZERO WITH PASS ENDPOINTS; PARENT MANIFEST CHECKED EVERY FILE OK
+
+report_sha256: 64d01a190ddd729fc1b3e3b16b64bad1a7d05ee9471a1f8ebd1fb59150dad93b
+registration_sha256: 15bf170d33ffc60546e8ab6db088098ec8a7174d8e50370cb6fe052dcfe52798
+readme_sha256: e0dac90b3a2d64e71a871f63b7b48f3e556ec49b40306d7bf645ce2939dfbbc4
+hostile_probe_source_sha256: 9238fb05bf950953888f71513c4d7e580e6dd2b48455f2294d024941472bc2c3
+frozen_replay_stdout_sha256: d05eeb86d8c11b6463f25b18bff1a59b736a924bd3fcf619aaf23404f4e764a5
+hostile_probe_stdout_sha256: 6e6acff244b6f7b11cc164b2738b79cb64357cffa141956e798ec925943fcf18
+manifest_sha256: 07cad4151e3e305cd5acc3147975467d61d97ed5cbf4bc13f1f6f3ba6490d11b
+
+scope:
+  Execution-custody supplement only. The frozen replay stdout is
+  byte-identical to the parent replay.json. Both nonempty stderr files contain
+  only /usr/bin/time -v accounting with exit status zero; supervisor stderr
+  and manifest stderr are empty. The already-CONFIRMED parent theorem and all
+  of its limitations remain unchanged. No global irreducibility, plane
+  equation, trajectory, all-(9,12), maximum-twelve, counterexample, or JC2
+  claim is added.

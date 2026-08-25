@@ -1,0 +1,22 @@
+AS F-ONLY D7 CORRECTED N12/Q11 27-WAY AWS SHARD SOURCE FREEZE
+date: 2026-08-25Z
+status: PREREGISTERED SOURCE; SYNTAX/MANIFEST PASS; AWS RUN PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+runner_manifest_sha256:
+  9791d00f8f7862dc86d9b9b095aa5519b509ac77d864850f2d12fee0ed1f8e26
+source_closure_manifest_sha256:
+  c2a82d548040cd303c0a33be2410e21c202b86d6a14d126e2d5749659235d84b
+compile_shard_sha256:
+  349ea50953ba6e92d2023ff60965e484eb06e85962bded09d3bfa9b1307dcc30
+consumed_erratum_report_sha256:
+  1129f2c93db930a3040e1626cc34dcfd818e824b356cbd63baac4e8d37c9ea0c
+
+execution_contract:
+  AWS only; 27 contiguous structural-base shards; one CPU and 8 GiB VM per
+  shard; 12-hour timeout; reproduce N12=629115 before accepting corrected
+  Q11 counts.
+
+scope:
+  Corrected rows 12 and 11 only.  No degree ten, lower row, recurrence,
+  all-depth, characteristic-zero, no-lift, counterexample, or JC2 claim.

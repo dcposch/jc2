@@ -1,0 +1,34 @@
+AS F-ONLY D7 ACTIVE-FOUR Q7 COMPATIBILITY RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT ON PREREGISTERED FOUR-COORDINATE SLICE;
+        PROVISIONAL PENDING DIFFERENT-MODEL REVIEW
+git_head_at_source_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256:
+  fcae2dc0442024a4bf166a96b769164c4f3f61997db042154d7807c377015921
+result_readme_sha256:
+  d41e25e406f67a641e698bae2fac59faaab5fb14b81f1c9713d7068572a3f164
+verify_result_sha256:
+  eca41377c5b89d62446fad73cbb08e756b54958cb4c2f30f0b59c41d4f23cc8a
+result_manifest_sha256:
+  267bfd6cb9ec78345e9b0e7bcfcd815a6540d1fcfab95058f40b13e1059d6743
+source_freeze_sha256:
+  c5d37372947bb35f72b0268f6acc527dacb02b34be149c46f9706d155feb5a38
+presentation_json_sha256:
+  fad344a6fe1e9e2ead811541e6684d2f235a5f8764a978e9fe43b87d992e0214
+
+execution:
+  Box02/ip-172-30-0-186;
+  /home/ubuntu/jobs/as_active4_q7_compat_20260825T032738Z;
+  UTC 03:29:06Z--03:29:26Z; rc0; stderr empty.
+
+result:
+  On all 81 points of (t6,t8,s15,s17) in F3^4, the Q7 matrix is
+  constant rank nine with ten-dimensional cokernel.  The only nonzero
+  compatibility coordinates are kappa_5=s15, kappa_6=2*t6,
+  kappa_8=s17, kappa_9=2*t8.  The unique compatible point is the origin.
+
+scope:
+  Exhaustive only on this four-coordinate slice.  Other predecessor
+  coordinates and mixed terms, six Frobenius spectators, other predecessors,
+  fixed-cap/all-depth lifting, counterexamples, and JC2 remain open.

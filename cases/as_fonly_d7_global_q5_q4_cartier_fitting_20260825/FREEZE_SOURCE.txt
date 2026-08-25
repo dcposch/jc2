@@ -1,0 +1,14 @@
+# Frozen source gate
+
+This directory freezes the source-global affine restoration-matrix and
+Cartier/Fitting preprocessing gate before substantive execution.  The exact
+source bytes and both directly consumed parent inputs are pinned in
+`SOURCE_MANIFEST.sha256`.
+
+All symbolic reconstruction, whole-cube equivalence checking, and the
+79 x 3^6 matrix census must run on AWS.  The first output is deliberately
+limited to the complete 76-by-30 displayed restoration subsystem, its exact
+coefficient dependencies and rank strata, and the uneliminated Q4
+`[x^2 y^2]` expression.  It does not by itself classify the right-column or
+Cartier zero locus and makes no complete-map, all-depth, no-lift, or JC2
+claim.

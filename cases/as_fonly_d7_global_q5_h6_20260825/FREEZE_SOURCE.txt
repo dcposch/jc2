@@ -1,0 +1,17 @@
+Frozen UTC: 2026-08-25T09:38:11Z
+
+d0f1d959d7f80d1206bdc8bd03c27025bb3152c07bf9459911e5ace4bb78fa74  PREREGISTRATION.md
+2bdf4bb4743a4bf5904c87b5550df6fa7908e779e6c90645ab2e911bda87805d  solve_global_q5_h6.py
+75e153c3ea2a0de9ce2bf26ba13893e44a4092cd8b1bdd1d45256f12ac023eea  replay_global_q5_h6.py
+8d3c8a797016e7e1d8839cc6de7c9c1e82438a992e9d9b459f3d7ea1c3715dce  emit_global_formula.sh
+237f66eda8d5a1f1976d6fb147ee22507c863b8017bdf8a6c9653c2ee3ab8633  run_boolector_and_replay.sh
+c0c3292805edb61bd6cdd1e7793bdf38f8031eec2e3f90cd7f87aa5395438c32  SOURCE_PACKAGE_FILES.txt
+056a110f530a25b518cec0a149fdbdd69a335860e9219cf92e60f1783f4de881  SOURCE_CLOSURE.sha256
+
+Formula inventory: 142 raw ternary inputs; 197 displayed source/terminal
+equations; all parent exact division gates retained.  Full unpinned accepted
+fibre.  Five-row pointwise certificates are labels only, never replacements
+for the 69 charged Q5/H6,J6 rows.
+
+Substantive execution is AWS-only.  SAT requires direct nested-integer replay;
+UNSAT requires independent proof checking and a replayed omission control.

@@ -1,0 +1,43 @@
+{
+  "case": "max12_912_order3_nu_parity_normal_q12_20260824",
+  "dependency_sha256": {
+    "genus5_replay": "c965bb660cf2f0f55c7ebbed3126b22bfb5d67e178565426aa94ce56f6ce1d9a",
+    "order3_fibre_compiler": "a4fdac5d613e1af82ab135e220fedee5e41384c41e3068bcdf8921f60ababbcf"
+  },
+  "generic_chart": {
+    "conditions": "p*x5*A!=0, A=x3-2*p*x5",
+    "determinant_identity": "det=p^20*(-8388608/243)*v^14*(3*v^2+3*v+1)^7*Q12(v)/(3*v^2-2)^10",
+    "v": "A/(p*x5)"
+  },
+  "involution": {
+    "even_rows_have_zero_normal_linearization": true,
+    "fixed_locus": "a0=a2=a4=a6=k=0",
+    "normal_columns": [
+      "a0",
+      "a2",
+      "a4",
+      "a6"
+    ],
+    "normal_rows": [
+      "r1",
+      "r3",
+      "r5",
+      "r7"
+    ],
+    "odd_rows_vanish_on_fixed_locus": true
+  },
+  "producer_conclusion": "Away from Q12=0 and the already separated p,x5,A chart boundaries, the loaded fibre is scheme-theoretically normal-unramified along the parity fixed locus at first order.",
+  "q12": {
+    "coprime_to": [
+      "v",
+      "A2=3*v^2+3*v+1",
+      "D=3*v^2-2",
+      "A5"
+    ],
+    "is_only_remaining_normal_rank_boundary_on_generic_chart": true,
+    "loaded_points_are_not_removed_by_r6_zero": true,
+    "polynomial": "2893401*v^12+4809213*v^11-2488077*v^10-12217797*v^9-12251574*v^8-5322618*v^7-503280*v^6+391932*v^5+111060*v^4+4608*v^3+8664*v^2+4688*v+480",
+    "squarefree": true
+  },
+  "scope": "exact first-order normal-rank checkpoint only; no exclusion of Q12, no formal-arc trapping claim at Q12, and no non-parity, all-(9,12), maximum-twelve, counterexample, or JC2 conclusion"
+}

@@ -1,0 +1,18 @@
+{
+  "chart_localization": "w*x5*(x3-2*x5) != 0 via inv*w*x5*(x3-2*x5)-1",
+  "engine": "Singular 4.4.1p5, slimgb, dp",
+  "results": {
+    "1000003": {
+      "dim": 1,
+      "size": 607,
+      "vdim": -1
+    },
+    "32003": {
+      "dim": 1,
+      "size": 607,
+      "vdim": -1
+    }
+  },
+  "source_command": "python3 quotient_compiler.py --singular --prime PRIME --localize | Singular -q",
+  "status": "two-prime routing evidence only; no lifted standard-basis or characteristic-zero whole-scheme dimension theorem"
+}

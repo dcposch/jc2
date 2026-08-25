@@ -1,0 +1,26 @@
+MAX12 (9,12) CORRECTED-Q8 ORDER-128 INVARIANT SUPPORT
+date: 2026-08-24
+status: PRODUCER-EXACT FINITE-BOX CERTIFICATE; HOSTILE DIFFERENT-MODEL REVIEW REQUIRED
+verdict: 7,328 EXACT GOOD-REDUCTION MATRICES ARE FULL COLUMN RANK; THE FOUR NATURAL PLANE PAIRS HAVE NO Q-RELATION IN ANY OF THE 229 TESTED RECTANGLES
+
+report_sha256: efbb1d9fce932e688e0872eb7c4659ca26972201460cf8f0ee104c1ad1fa2990
+registration_sha256: 167656b34f29f6170a68e82db810e3dcfa57cf9bc87d1c61da23d21fbdcde100
+readme_sha256: d04745c7ba75eb05f22ff84d7972f2feb943885ce391831c0e58bc01105d6903
+audit_sha256: 04edf65722da9643ec69e944d2034f5b5e31abc1825619f3a52841fcafca6df9
+audit_payload_sha256: bb1977ae11a255dc681e3bb650547cda1d7498d9e0d867dfe42f6b58244167ea
+aws_metadata_sha256: ecabb2af6dbd8af659cb762164541971d238a699dbc30053fdb826633f23324b
+aws_summary_sha256: 32147526bd6522a9ffb5fc672415765cedd3e6f653314fa8064a214f943c3d79
+aws_stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+tested_rectangles_sha256: 5ca5018958874fca091d18a8eafd4a4bd3a089bdb59b4c75232d70310e932ae1
+manifest_sha256: 79d342d138f08e66582c43a5bdd739c9d8aac0061df8cd0e0f1eab52465d305e
+
+scope:
+  Selected corrected-Q8 formal branch and the four pairs (n,q), (theta,Z),
+  (theta,q), (w,q). Exact exclusion is for nonzero Q-coefficient polynomials
+  supported in a rectangle 1<=d_left,d_right<=24 with
+  (d_left+1)(d_right+1)<=108. Eight good reductions, order 128, fit rows
+  w^0..w^111, holdout rows w^112..w^127. One good reduction licenses the
+  bounded Q-exclusion; eight-prime agreement is robustness only. No
+  algebraic-coefficient relation, sparse support outside those rectangles,
+  global equation, normalization, genus, boundary, trajectory, all-(9,12),
+  maximum-twelve, counterexample, or JC2 conclusion follows.

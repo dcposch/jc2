@@ -1,0 +1,36 @@
+AS F-ONLY P=3 D=7 VERTICAL D8 STATE-SUFFICIENCY GATE
+date: 2026-08-24
+status: PRODUCER EXACT; FULL PORTABLE REPLAY PASS; HOSTILE REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256: 410235081a54470a377d8d107a1982d34d507040718b945d11ee99dc4d1e5fe4
+manifest_sha256: ba28e9132b30a9cb7a794dc3da1a55c518c1b9c1253817ffde5fdbb90f539e36
+state_replay_sha256: 66b42abdf3c1d2174b77d609936e4b3f79e59ea302aeccdc660b157d08ac27de
+formal_identity_sha256: 147cb423eb02f303974196ba06a7eb0a7bb632af417c7dab75c1410b4bd354ab
+complete_replay_sha256: c547669f9d2409635e1e13afec149d6f3ff2c473e27fb2472abe51fa8a3b3d22
+
+consumed_corrected_report_sha256:
+  9cc39af35e1d52c9673755b79392e62bb265f78dc38bd9110cd37a992115c2d8
+consumed_corrected_generator_sha256:
+  a71daa0cb525bac229afb91c76987c8f25c1e2d63683caa10ff45d3364c658e5
+
+deterministic_result_hashes:
+  inherited_rank_stream: e86fd1ec2724b5089039378c07e1a19a089042eeb4172b0342474f85d4d8b23d
+  state_stream: 98b9395a186f04acd1db001fe5457fa5dca8c5bd8d5c2c3d6e52df79f8981f77
+
+replay:
+  ./replay_all.sh
+  shasum -a 256 -c MANIFEST.sha256
+
+verdict:
+  The vertical D8 7x5 system is exactly equivalent to two capped adjugate
+  quotients on Delta!=0, to Hu-Av=0 on Delta=0,H!=0, and to the direct
+  B-multiple criterion on Delta=H=0.  The criterion matches all 1594323
+  corrected literal-F3 assignments and all 314127 compatible assignments.
+  Divisibility without quotient caps has exactly 202176 false positives.
+
+scope:
+  Algebraic state theorem for the displayed matrix and exact literal-F3
+  comparison only.  Corrected source interpretation awaits its active
+  hostile review.  No next carry, Fbar family classification, all-depth
+  lift/no-lift, characteristic-zero, counterexample, or JC2 inference.

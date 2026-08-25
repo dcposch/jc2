@@ -1,0 +1,57 @@
+{
+  "case": "max12_912_order3_nu_q8_formal_branch_20260824",
+  "contact": {
+    "fixed_fibre_dimension": 1,
+    "full_jacobian_rank": 6,
+    "full_tangent_dimension": 2,
+    "invariant_rank": 3,
+    "invariant_unit_minor": "rows r2,r4,r6; columns x1,x3,x5",
+    "normal_rank": 3,
+    "normal_unit_minor": "rows r3,r5,r7; columns a2,a4,a6",
+    "q8_coprime_to_r6_derivative_numerator": true,
+    "q8_squarefree": true
+  },
+  "dependency_sha256": {
+    "genus5_replay": "c965bb660cf2f0f55c7ebbed3126b22bfb5d67e178565426aa94ce56f6ce1d9a",
+    "order3_fibre_compiler": "a4fdac5d613e1af82ab135e220fedee5e41384c41e3068bcdf8921f60ababbcf",
+    "q8_erratum_replay": "51168609a477905b25cb551ddd40931d1a6d752d7a1569bdc1b9a394cf8dcd23",
+    "q8_erratum_report": "7f1ed3c7874c743b35ba4f519acdc2555f65c93c467ccb2e894d8d0b7ade1cc2"
+  },
+  "equivariant_formal_normal_form": {
+    "contact_derivative": "dPhi/ds is a unit",
+    "coordinates": "s invariant, t anti-invariant",
+    "equation": "t*Phi(s,t^2)=0",
+    "local_geometry": "two reduced formal curve branches with distinct tangents",
+    "parity_component": "t=0",
+    "second_component": "Phi(s,t^2)=0, smooth and non-parity"
+  },
+  "fresh_lineage": {
+    "correct_x1_factor": "1+3*v",
+    "quarantined_q12_branch_consumed": false
+  },
+  "original_eight_rows": {
+    "involution_character_checked": "r_l has character (-1)^l",
+    "sha256": {
+      "r1": "2b69e9de7171f6d36e8b829f779a516edbbd858efe8590b489198fd00420e862",
+      "r2": "89f14d6c4c87bfdd05686f14b954ed95c538fb30184dd606b2acd2ff2f27e1b0",
+      "r3": "f2d6fcc68f54a8706f8006acf486202fc10d7ec3e185cc499dbfa88f68947411",
+      "r4": "1b00e72f56ef539d52f49d63ea5af428bacc84ef8d43099433597e250bb18af5",
+      "r5": "1a94d04018f26444d56fe6093c6fda3e02d50567f2daf57bd1032d555dbe76ae",
+      "r6": "b4842f92db54265db4c6a81da527e23198da06a480663fbb7813cc52fa436c6b",
+      "r7": "cfa591979bc8bc4405d19362a71f6ef6330ef904b64879eb4edad49375074e2f",
+      "r8": "d727c41fa3f32b4bef54d22b8b33659d1077526a2e86b03f3ae0cbf228b1126f"
+    },
+    "supports": {
+      "r1": 25,
+      "r2": 36,
+      "r3": 42,
+      "r4": 55,
+      "r5": 63,
+      "r6": 84,
+      "r7": 94,
+      "r8": 121
+    }
+  },
+  "producer_conclusion": "Every loaded Q8 contact point of the genuine parity fixed curve lies on a second smooth non-parity formal component of the seven-row constant-invariant fibre.",
+  "scope": "formal high-row coefficient fibre only; not an algebraic or rational Keller trajectory, and no terminal-r8, Taylor, coprimality, disjoint-component, all-(9,12), maximum-twelve, counterexample, or JC2 conclusion"
+}

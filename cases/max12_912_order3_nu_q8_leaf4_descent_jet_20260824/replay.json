@@ -1,0 +1,154 @@
+{
+  "case": "max12_912_order3_nu_q8_leaf4_descent_jet_20260824",
+  "dS_dDelta_at_node": {
+    "gcd_Q8": "1",
+    "inverse_mod_Q8": {
+      "degree": 7,
+      "nonzero": true,
+      "sha256": "9dcbdaa6a99ca5341294ca85493747b5db8d1e45a0743d599e5811803fd5e160",
+      "unit_mod_Q8": true
+    },
+    "value": {
+      "degree": 7,
+      "nonzero": true,
+      "sha256": "386a59430805c0e74525cd485750c7267761ceef04153848e28b57002b297c15",
+      "unit_mod_Q8": true
+    }
+  },
+  "dependency_sha256": {
+    "q8_norm_taylor_terminal_freeze": "807ad9dacbc477972c3c30b3770d84ca27340b5771ec2aad3efc90d7eb3e5b50",
+    "q8_norm_taylor_terminal_json": "bbb9316eb207305400b141dadd27d94fd8fece766ae5d333190ec9f42da5b313",
+    "q8_norm_taylor_terminal_manifest": "036b8656ba53dd3b1b212b2bf5bec6d0eed83f8a56023cf3ebf0b689156d8971",
+    "q8_norm_taylor_terminal_replay": "5536f16ac30da115021835d1a07c3116d7b1cb6675e628726dcfe766533528df",
+    "q8_norm_taylor_terminal_report": "739fbad475bc10540756c7a0180168185523f6e3cfe368225e03efa1abe62d65"
+  },
+  "etale_at_every_Q8_contact": {
+    "Delta": {
+      "constant": {
+        "degree": 0,
+        "nonzero": false,
+        "sha256": "a93875fe509ac2fae0e0939d3ec71c4d978244c7398dd7185ca68c393426a5a6",
+        "unit_mod_Q8": false
+      },
+      "d_dtheta_at_node": {
+        "gcd_Q8": "1",
+        "inverse_mod_Q8": {
+          "degree": 7,
+          "nonzero": true,
+          "sha256": "3b412e697504f932ca1f65e0e64c063a9d4ff6a0f0fcb7327eb12937ba8b4ce8",
+          "unit_mod_Q8": true
+        },
+        "value": {
+          "degree": 7,
+          "nonzero": true,
+          "sha256": "2c651a6265e650c5d72f409a46bb6fe3c572e2c51518ae9794f3b9b06dc9209e",
+          "unit_mod_Q8": true
+        }
+      }
+    },
+    "S": {
+      "constant": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "7011688d46fa49ae29c6e6bdd4128eb8ea6a5118bdcdf036434ee010e2e8d357",
+        "unit_mod_Q8": true
+      },
+      "d_dtheta_at_node": {
+        "gcd_Q8": "1",
+        "inverse_mod_Q8": {
+          "degree": 7,
+          "nonzero": true,
+          "sha256": "1befa5848c2599006cd5face221902aa593569c7c99b602ccf786d67e558fa99",
+          "unit_mod_Q8": true
+        },
+        "value": {
+          "degree": 7,
+          "nonzero": true,
+          "sha256": "30caa5eebba929de017fa52461483c602e14800541c1a308357186f70df4a2a3",
+          "unit_mod_Q8": true
+        }
+      }
+    },
+    "q": {
+      "constant": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "96515608dcfae3970795ad7ef99542a1713ab01c9517aaa827428fe59f7a8c88",
+        "unit_mod_Q8": true
+      },
+      "d_dtheta_at_node": {
+        "gcd_Q8": "1",
+        "inverse_mod_Q8": {
+          "degree": 7,
+          "nonzero": true,
+          "sha256": "5596c3ad7d1d51b0ebe5cf26031276ad43f57a5e2b0449ea26cabc7dbf1054f4",
+          "unit_mod_Q8": true
+        },
+        "value": {
+          "degree": 7,
+          "nonzero": true,
+          "sha256": "87b80678a4a92f8e768bc4cd4f118a425bc797cef61f720392e0ae8a716590cc",
+          "unit_mod_Q8": true
+        }
+      }
+    },
+    "tau": {
+      "constant": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "6e8fe94d12643edd2143a779dc0d3a527be1c3273a540b439d7fa9572f1b0217",
+        "unit_mod_Q8": true
+      },
+      "d_dtheta_at_node": {
+        "gcd_Q8": "1",
+        "inverse_mod_Q8": {
+          "degree": 7,
+          "nonzero": true,
+          "sha256": "88ef8e5d1a6d1c40df6d953bf044c51473480fda0633903302bfff6e35fc8250",
+          "unit_mod_Q8": true
+        },
+        "value": {
+          "degree": 7,
+          "nonzero": true,
+          "sha256": "2011e1ea82ba014d14037329b91f2571f99199215d30314156c6d625614000fe",
+          "unit_mod_Q8": true
+        }
+      }
+    }
+  },
+  "formal_local_conclusion": "Delta, tau, q, and S are all etale quotient coordinates at each Q8 contact, and the terminal differential descends to K without selecting a critical root",
+  "invariant_coordinates": {
+    "Delta": "(beta_plus-beta_minus)^2=4*s*E^2/Norm(F)^2",
+    "S": "r8^9=pi^10*q^9",
+    "field": "all six coordinates are in K=C(x)",
+    "pi": "p^9",
+    "q": "r8/p^10",
+    "tau": "beta_plus+beta_minus",
+    "theta": "a0^2/p^9"
+  },
+  "open": "no global leaf-4 quotient relation or projective boundary is computed; the true Taylor center r/u remains free, so no punctured trajectory is excluded",
+  "parity_formula_negative_control": {
+    "defect": "p^9*R6(v)-nu=unit*t^2+O(t^4)",
+    "invalid_off_parity": "r6=p^9*R6(v)",
+    "t2": {
+      "gcd_Q8": "1",
+      "inverse_mod_Q8": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "a825f1f2331dce727b53ebb9b2cc4c66cc384532d817bb430db8a0a78ba472cb",
+        "unit_mod_Q8": true
+      },
+      "value": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "acbf2d9d456901e47644a63a1ad632fbbc0e50bf7c6ede3fb1ff2167e67e99b0",
+        "unit_mod_Q8": true
+      }
+    }
+  },
+  "terminal_descent": {
+    "first": "S'=j*h^5*R^8",
+    "root_free": "h^3*(S')^9=j^9*S^8",
+    "source": "9*r8'=j/u, r8=u^2*R, u^3=h"
+  }
+}

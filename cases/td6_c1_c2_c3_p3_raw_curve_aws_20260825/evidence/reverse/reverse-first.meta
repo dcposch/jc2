@@ -1,0 +1,16 @@
+lane=reverse-first
+host=ip-172-30-0-186
+supervisor_pid=41668
+start_utc=2026-08-25T02:30:29Z
+archive=/home/ubuntu/td6-aws-handoff-20260824-v17.tar.gz
+archive_sha256=b207bbba13ee20d2719ef15504df632f66674d69072d97b83f4c9970d53e0e98
+source_manifest_sha256=7b00ab87e35ca9b2cff9d31d7e0e75cd5cd4fbf5fbe64d1ad68f300c39a2032f
+producer_sha256=1b492ad26a2f1c0cdc3ae3983068639163118010ffba9e53c9e6d097d56c9a22
+python=/home/ubuntu/venvs/td6/bin/python
+python_version=Python 3.12.3
+python_flint=0.9.0
+command=/usr/bin/time -v timeout 28800 /home/ubuntu/venvs/td6/bin/python /home/ubuntu/runs/td6_v17_p3_reverse_20260825T0228Z/td6-aws-handoff-20260824-v17/jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_c2_c3_p3_quotient.py --reverse-first
+end_utc=2026-08-25T03:14:44Z
+rc=0
+stdout_sha256=900c38298b6dcaf8ed420afd3d947ca237b5581428d396b063de0875b595a30f
+stderr_sha256=9a4107f465243127e69e91d5d59e1a9ec4ef49c82e92a76cfc255e1c09545e59

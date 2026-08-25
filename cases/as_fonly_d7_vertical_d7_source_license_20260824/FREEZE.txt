@@ -1,0 +1,32 @@
+AS F-ONLY P=3 D=7 FULL-E1 DEGREE-SEVEN SOURCE LICENSE
+date: 2026-08-24
+status: PRODUCER EXACT; FULL PORTABLE REPLAY PASS; HOSTILE REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256: 772d3627965037846f291ca5289c3cab26375e7bcea9edb095a95381fed84b27
+manifest_sha256: 7c23f45df72ec3cdbf7ff75ebeda50281fe140d0fe346277801873560f73135c
+source_output_sha256: 57c871277ea660bd1ec57d8936066acaaee8f07f074dca4068cc657a7d4f78bd
+
+consumed_confirmed_d98_source_review_sha256:
+  156053c538c4c826bc0feb345d25d91f015543464e0ab9d7734ab190cd7842c4
+supplemented_d7_report_sha256:
+  3576de6cfba306230477fe7955e2ae159cc3dd241b4613b96d0ff57a05bbbfad
+
+deterministic_internal_sha256:
+  E1_degree7: c5e95b5ee9aeccfd44ce54e35a974cc65cf8fee23e9b15791ef2a24e900d428e
+  full_E1_plus_M_degree7: 4cf87c8cd85756803b3fafea92618d65fe8d6629d68d8d8b95aa79b700c3dfb3
+
+replay:
+  ./replay_all.sh
+  shasum -a 256 -c MANIFEST.sha256
+
+verdict:
+  In the charged vertical normal form, deg(L/3)<=5, deg(Cx+Dy)<=6,
+  deg K(U0,V0)<=6, and the double-Frobenius bracket divided by three is zero
+  mod three.  Therefore full [E1]_7 is exactly the single-Frobenius K/3 row.
+  The independently built [E1+M]_7 gives the eight frozen D7 rows exactly.
+
+scope:
+  Source license for total degree seven only.  This does not independently
+  review the downstream census/components and makes no lower-row, next-carry,
+  lift/no-lift, characteristic-zero, counterexample, or JC2 claim.

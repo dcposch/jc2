@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+: "${FORMULA:?set FORMULA}"
+: "${FORMULA_SHA256:?set FORMULA_SHA256}"
+: "${RESULT_DIR:?set RESULT_DIR}"
+: "${BOOLECTOR_BIN:?set BOOLECTOR_BIN}"
+: "${REWRITE_LEVEL:?set REWRITE_LEVEL}"
+: "${CAP_GIB:?set CAP_GIB}"
+: "${TIMEOUT_SECONDS:?set TIMEOUT_SECONDS}"
+
+mkdir -p "$RESULT_DIR"
+actual=$(sha256sum "$FORMULA" | awk '{print $1}')
+test "$actual" = "$FORMULA_SHA256"
+test -x "$BOOLECTOR_BIN"
+
+date -u +%Y-%m-%dT%H:%M:%SZ > "$RESULT_DIR/start_utc"
+hostname > "$RESULT_DIR/hostname"
+printf '%s\n' "$actual  $FORMULA" > "$RESULT_DIR/INPUT.sha256"
+"$BOOLECTOR_BIN" --version > "$RESULT_DIR/solver.version"
+sha256sum "$BOOLECTOR_BIN" > "$RESULT_DIR/solver.binary.sha256"
+
+set +e
+(
+  ulimit -v $((CAP_GIB * 1024 * 1024))
+  exec /usr/bin/time -v timeout --signal=TERM --kill-after=60s \
+    "$TIMEOUT_SECONDS" "$BOOLECTOR_BIN" -m -d \
+    -rwl"$REWRITE_LEVEL" "$FORMULA"
+) > "$RESULT_DIR/solver.stdout" 2> "$RESULT_DIR/solver.stderr"
+rc=$?
+set -e
+
+printf '%s\n' "$rc" > "$RESULT_DIR/solver.rc"
+date -u +%Y-%m-%dT%H:%M:%SZ > "$RESULT_DIR/end_utc"
+sha256sum "$RESULT_DIR"/solver.stdout "$RESULT_DIR"/solver.stderr \
+  > "$RESULT_DIR/OUTPUT.sha256"
+if test "$rc" -eq 0; then
+  head -n 1 "$RESULT_DIR/solver.stdout" > "$RESULT_DIR/ENDPOINT"
+else
+  printf 'solver-rc-%s\n' "$rc" > "$RESULT_DIR/ENDPOINT"
+fi
+

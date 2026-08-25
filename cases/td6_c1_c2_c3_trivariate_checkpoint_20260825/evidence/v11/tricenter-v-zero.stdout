@@ -1,0 +1,63 @@
+trivariate_first_pivot_order=ascending
+center_stratum=V=0 over Q(C,U)
+trivariate_transport rows=0;pivots=1;events=0
+trivariate_transport rows=250;pivots=251;events=0
+trivariate_transport rows=1500;pivots=684;events=0
+trivariate_transport rows=1750;pivots=934;events=0
+trivariate_transport rows=2000;pivots=1184;events=0
+trivariate_transport rows=2250;pivots=1434;events=0
+trivariate_transport rows=4750;pivots=1716;events=0
+trivariate_transport rows=5000;pivots=1966;events=1
+trivariate_transport rows=5250;pivots=2215;events=1
+trivariate_transport rows=5500;pivots=2465;events=2
+trivariate_transport rows=5750;pivots=2715;events=2
+trivariate_transport rows=6000;pivots=2965;events=2
+trivariate_transport rows=6250;pivots=3215;events=2
+trivariate_transport rows=6500;pivots=3465;events=2
+transport_rank=3470/3602
+transport_compatibility_count=0
+TD6 trivariate transport PASS
+transport_event_count=2
+transport_event[0]=4804,('f', 'X', -1, 2),193;num=(-C + 3*U^2);den=(1)
+transport_event[1]=5282,('g', 'X', 0, 1),1185;num=(2*U);den=(1)
+transport_minor_num_summary=(3, 2, 'e6b803230379a6308a4f44d9907adb36c1a89a202636c859811b5787e50d61da')
+transport_minor_den_summary=(0, 1, 'cba2fbeb391b1b01d10d62b5d049665afdea6dda577ce5ab23077b7cd21fa34b')
+transport_global_factorization_deferred=true
+first_rank=38/132
+first_incompatibility_count=0
+first_minor_num_summary=(17, 5, 'ae133bbf7e4e7333dcea2038b7265e6ece95e62caa653173269c2e0a8810ab39')
+first_minor_den_summary=(0, 1, 'cba2fbeb391b1b01d10d62b5d049665afdea6dda577ce5ab23077b7cd21fa34b')
+first_global_factorization_deferred=true
+TD6 trivariate genuine P12 PASS
+remainder_inverse_sha256=218b4ebe549c262d6b1bca13c6dc3f24eda3c79c80845f780cdb6fc122a43548
+raw_terms=1470
+raw_sha256=bc4cccde0621324988313a6e871114a2a7f33ecde2f380943f9ae41ceae96d02
+remainder_terms=1
+remainder_degree=0
+remainder_sha256=93121eef14c472c3c55b7acaeb1d0eff73b77d462ad8d5b197e8e21b9cda89c4
+expected_sha256=b9445255e063a82f827a01b7e18c3bdd2f3da41de14903a73fc2ae68121df7a0
+remainder_is_expected_constant=true
+remainder_is_constant_unit=true
+source_nonzero_rows=28
+source_multiplier_terms=749
+source_relation_original_row_replay=true
+source_relation_plus_one_negative_control=true
+raw_denominator=(C*U - 3*U^3)
+raw_denominator_summary=(3, 2, '85fec0864be6430058dd3bbfe187027d41a99c70d0d1fae25356c8f08309e557')
+first_denominator=(C*U - 3*U^3)
+first_denominator_summary=(3, 2, '85fec0864be6430058dd3bbfe187027d41a99c70d0d1fae25356c8f08309e557')
+relation_denominator=(C^3*U^3 + 3*C^2*U^5 - 13*C*U^7 - 15*U^9)
+relation_denominator_summary=(9, 4, '24b7284963faffb66a34fdf991beb1874eff8a41728c2427f165395ac4679cb2')
+termwise_denominator=(C^4*U^4 - 22*C^2*U^8 + 24*C*U^10 + 45*U^12)
+termwise_denominator_summary=(12, 4, 'a2a9a0e4c444107c4bcbdfc2d4e983e4511f225296c2012761882cceeaa220eb')
+denominator_factorizations_deferred=true
+certificate_chart_denominator=(C^7*U^7 - 9*C^6*U^9 + 5*C^5*U^11 + 195*C^4*U^13 - 765*C^3*U^15 + 837*C^2*U^17 + 567*C*U^19 - 1215*U^21)
+certificate_chart_denominator_factor=(1, [(C + U^2, 1), (C + 5*U^2, 1), (C - 3*U^2, 5), (U, 7)])
+stratum_localization_killed=true
+whole_stratum_killed=false
+Rat3_inverse_count=7589
+generic_open_killed=false
+full_three_center_family_killed=false
+SP2_killed=false
+JC2_resolved=false
+TD6-C1-C2-C3-RAW-STRATUM PASS

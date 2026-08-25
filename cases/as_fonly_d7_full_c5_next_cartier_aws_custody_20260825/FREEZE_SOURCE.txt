@@ -1,0 +1,27 @@
+AS F-ONLY D7 FULL-C5 / NEXT-CARTIER AWS CUSTODY SOURCE FREEZE
+date: 2026-08-25Z
+status: PREREGISTERED CUSTODY-ONLY SHELL CLOSURE; NO RESULT YET
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+review_sha256:
+  46f4b668702589db9554e82777174aecfe574ced7e6fa5a94e68eb7ed4e7f459
+parent_report_sha256:
+  907dcc72523eb228a7ac6581826460601030e56c996d4df583b2fad274f09a6e
+successor_report_sha256:
+  cfd77aacacf5c47c74e001c26cfb5369e69b7545bd1d301627135f06fd30af15
+source_closure_sha256:
+  10bdbe5b03bda01399522d11d03bfc0d80ecc843b917b1b2aba5e898a49cae29
+runner_manifest_sha256:
+  983b33e056854a8f7193452cf34f3d952212009d80c08bab64a508518aac8061
+runner_sha256:
+  22e332030552253e3d2558dde06c943bf59ac57684fdd62d9a3444ba67ad3b0e
+
+discriminator:
+  On Box02, verify the transported recursive source closure and runner
+  manifest, run both frozen replay_all.sh commands, and separately run both
+  frozen MANIFEST.sha256 checks.  Preserve all metadata and outputs.
+
+scope:
+  Execution custody for the explicit shell residual of an already-CONFIRMED
+  review.  No new theorem, count, carry, recurrence, lift/no-lift,
+  counterexample, or JC2 claim.

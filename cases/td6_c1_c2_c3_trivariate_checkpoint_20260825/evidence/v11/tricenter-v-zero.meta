@@ -1,0 +1,9 @@
+tag=td6_v11_tricenter_raw_20260825T0122Z
+lane=v-zero
+host=ip-172-30-0-45
+archive_sha256=26efce91f5521fee2dbb63527a417b52a8e672fca4c03220d187221bd85a76d6
+producer_sha256=e8f7ff572fdd597c47d461e5e0e27c5e3f247369c681b037261fec0adfb59c8f
+start_utc=20260825T012307Z
+command=timeout --signal=TERM --kill-after=120s 8h python -u c1_c2_c3_trivariate.py --stratum=v-zero
+end_utc=20260825T012520Z
+rc=0

@@ -1,0 +1,221 @@
+started_utc=2026-08-25T15:04:05Z
+host=ip-172-30-0-45
+uname=Linux ip-172-30-0-45 6.17.0-1019-aws #19~24.04.1-Ubuntu SMP Tue Jun 23 18:53:06 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+lake=/usr/bin/lake
+lake_jobs=8
+project=gcd3-69-noncube
+Lake version 5.0.0-src+3447a66 (Lean version 4.34.0-rc1)
+cdbc6c372a2b37ad94430a6cec69cedfa4d36f255bfd968773fd91bf7a1746bf  lean-toolchain
+32bfb16aad8e378b1f6620501cf24bdf9923816161e81613b6195a2c3479bccb  lakefile.toml
+fda62272af472b7b81567febedf50cb391eec4dc8acb19271be3c902dbc2522d  lake-manifest.json
+0245eb720c1da995f95e75ec1fd3f1eff6af92b0c4c1f308edd59fd94b58214c  Challenge.lean
+d47bc2e53c5ee3bd9cec669ecbce963df4decf41682fe46051ae088239ff4c67  Solution.lean
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 8729 file(s)
+⚠ [8745/8748] Built Challenge (18s)
+warning: Challenge.lean:27:8: declaration uses `sorry`
+warning: Challenge.lean:68:8: declaration uses `sorry`
+warning: Challenge.lean:79:8: declaration uses `sorry`
+warning: Challenge.lean:91:8: declaration uses `sorry`
+warning: Challenge.lean:108:8: declaration uses `sorry`
+warning: Challenge.lean:120:8: declaration uses `sorry`
+warning: Challenge.lean:136:8: declaration uses `sorry`
+warning: Challenge.lean:146:8: declaration uses `sorry`
+warning: Challenge.lean:165:8: declaration uses `sorry`
+warning: Challenge.lean:177:8: declaration uses `sorry`
+warning: Challenge.lean:195:8: declaration uses `sorry`
+warning: Challenge.lean:207:8: declaration uses `sorry`
+warning: Challenge.lean:221:8: declaration uses `sorry`
+warning: Challenge.lean:236:8: declaration uses `sorry`
+warning: Challenge.lean:250:8: declaration uses `sorry`
+warning: Challenge.lean:269:8: declaration uses `sorry`
+warning: Challenge.lean:284:8: declaration uses `sorry`
+warning: Challenge.lean:293:8: declaration uses `sorry`
+⚠ [8747/8748] Built Solution (84s)
+warning: Solution.lean:814:29: This simp argument is unused:
+  C_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul, C_add, C_pow, C_ofNat, C_eq_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:814:52: This simp argument is unused:
+  C_eq_natCast
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul, C_add, C_sub, C_pow, C_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:816:29: This simp argument is unused:
+  C_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul, C_add, C_pow, C_ofNat, C_eq_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:816:52: This simp argument is unused:
+  C_eq_natCast
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul, C_add, C_sub, C_pow, C_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1216:25: This simp argument is unused:
+  C_0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_zero, C_mul, C_add, C_sub, C_pow, C_ofNat, C_eq_natCast, zero_mul, mul_zero, add_zero,
+    zero_add, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1216:37: This simp argument is unused:
+  C_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_zero, C_0, C_mul, C_sub, C_pow, C_ofNat, C_eq_natCast, zero_mul, mul_zero, add_zero, zero_add,
+    sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1216:67: This simp argument is unused:
+  C_eq_natCast
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_zero, C_0, C_mul, C_add, C_sub, C_pow, C_ofNat, zero_mul, mul_zero, add_zero, zero_add,
+    sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1217:36: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_zero, C_0, C_mul, C_add, C_sub, C_pow, C_ofNat, C_eq_natCast, zero_mul, mul_zero, add_zero,
+    sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1217:56: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Solution.lean:1217:65: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Solution.lean:1478:29: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Solution.lean:1678:5: Variable name `hB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Solution.lean:1730:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Solution.lean:1795:0: 'GCD369InvariantFibreDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1796:0: 'GCD369ZeroBracketSheet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1797:0: 'GCD369EllipticSheetEquation' depends on axioms: [propext, Quot.sound]
+info: Solution.lean:1798:0: 'GCD369EllipticTerminalForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1799:0: 'GCD369ForbiddenNumerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1800:0: 'GCD369EllipticNonzeroExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1801:0: 'GCD369SpecialFibreDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1802:0: 'GCD369ShiftedDSBracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1803:0: 'GCD369ShiftedDSTerminalDescent' depends on axioms: [propext, Quot.sound]
+info: Solution.lean:1804:0: 'GCD369WeightedWronskianLocal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1805:0: 'GCD369ShiftedDSFinitePlace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1806:0: 'GCD369WeightedWronskianDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1807:0: 'GCD369ShiftedDSPolynomialCube' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1808:0: 'GCD369ShiftedDSNumeratorConstant' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1809:0: 'GCD369ShiftedDSRationalCube' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1810:0: 'GCD369ShiftedDSNoncubeExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:1811:0: 'GCD369DSInfinitySupport' depends on axioms: [propext, Quot.sound]
+info: Solution.lean:1812:0: 'GCD369DSOneRootCube' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8748 jobs).
+'GCD369InvariantFibreDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ZeroBracketSheet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369EllipticSheetEquation' depends on axioms: [propext, Quot.sound]
+'GCD369EllipticTerminalForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ForbiddenNumerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369EllipticNonzeroExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369SpecialFibreDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSBracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSTerminalDescent' depends on axioms: [propext, Quot.sound]
+'GCD369WeightedWronskianLocal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSFinitePlace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369WeightedWronskianDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSPolynomialCube' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSNumeratorConstant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSRationalCube' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSNoncubeExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369DSInfinitySupport' depends on axioms: [propext, Quot.sound]
+'GCD369DSOneRootCube' depends on axioms: [propext, Classical.choice, Quot.sound]
+OK: all eighteen gcd3-69-noncube theorems use only permitted axioms.
+project=gcd3-69-core
+Lake version 5.0.0-src+3447a66 (Lean version 4.34.0-rc1)
+cdbc6c372a2b37ad94430a6cec69cedfa4d36f255bfd968773fd91bf7a1746bf  lean-toolchain
+372506e63284b88591ea80f911d20ea7aadf25b743a207679627a27d98ed0afd  lakefile.toml
+87694105cd4c092ee2abbcd79ecfd615c8fbc6369fa38ebc140f4fa72bb21c66  lake-manifest.json
+ee543bc6b35910bc38b0b1672b5b394f49a04d1cb4a0a8f8c03961cbca6dd9af  Challenge.lean
+070f16763562b824e723b29fa14208192edaf7e52ce59c04aa0eca6974ceed38  Solution.lean
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+Decompressing 8537 already-cached file(s) (192 already decompressed)
+No files to download
+Decompressed 8537 already-cached file(s)
+Completed successfully in 28555 ms!
+⚠ [8745/8748] Built Challenge (10s)
+warning: Challenge.lean:19:8: declaration uses `sorry`
+warning: Challenge.lean:29:8: declaration uses `sorry`
+warning: Challenge.lean:43:8: declaration uses `sorry`
+warning: Challenge.lean:53:8: declaration uses `sorry`
+warning: Challenge.lean:62:8: declaration uses `sorry`
+warning: Challenge.lean:77:8: declaration uses `sorry`
+ℹ [8747/8748] Built Solution (11s)
+info: Solution.lean:142:0: 'GCD369TopRowIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:143:0: 'GCD369KummerAlignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:144:0: 'GCD369SimultaneousDepression' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:145:0: 'GCD369CubeFactorNeutral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:146:0: 'GCD369DavenportStothersCertificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:147:0: 'GCD369DavenportStothersDerivativeIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8748 jobs).
+'GCD369TopRowIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369KummerAlignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369SimultaneousDepression' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369CubeFactorNeutral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369DavenportStothersCertificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369DavenportStothersDerivativeIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+OK: all six gcd3-69-core theorems depend only on permitted axioms.
+project=strip-block
+Lake version 5.0.0-src+3447a66 (Lean version 4.34.0-rc1)
+cdbc6c372a2b37ad94430a6cec69cedfa4d36f255bfd968773fd91bf7a1746bf  lean-toolchain
+15b40db5f3750829ebc269e8c741c3ce146ca3ca4d178d9ebb7ab7b96287b096  lakefile.toml
+097c6636c60aff2f4f307fbff5fcde837002f2889f28dc6d5a049fa8cf0cd6dd  lake-manifest.json
+096d3b067b8a7accf9dd9ff6f4f81df019ff84507107185c23673549982c4bf8  Challenge.lean
+ed2a25d4503ed54c10f69c6b8f435ea45ab6cb2c4f4ba44bfac61515c4f67804  Solution.lean
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+Decompressing 8537 already-cached file(s) (192 already decompressed)
+No files to download
+Decompressed 8537 already-cached file(s)
+Completed successfully in 28489 ms!
+⚠ [8745/8749] Built Challenge (8.0s)
+warning: Challenge.lean:63:8: declaration uses `sorry`
+warning: Challenge.lean:73:8: declaration uses `sorry`
+warning: Challenge.lean:81:8: declaration uses `sorry`
+warning: Challenge.lean:98:8: declaration uses `sorry`
+⚠ [8747/8749] Built Rigidity (9.8s)
+warning: Rigidity.lean:93:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Rigidity.lean:138:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ℹ [8748/8749] Built Solution (7.1s)
+info: Solution.lean:165:0: 'BlockToODEBridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:166:0: 'InnerBlockRigidity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:167:0: 'OuterResidueIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:168:0: 'LogResidueBlockVariety' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8749 jobs).
+'BlockToODEBridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'InnerBlockRigidity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OuterResidueIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LogResidueBlockVariety' depends on axioms: [propext, Classical.choice, Quot.sound]
+OK: all strip-block theorems depend only on permitted axioms.
+finished_utc=2026-08-25T15:10:19Z
+VERDICT=PASS

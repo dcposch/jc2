@@ -1,0 +1,24 @@
+AS F-ONLY PURE-N TOP-THREE RADIAL IDENTITIES IN CHARACTERISTIC THREE
+date: 2026-08-24
+status: PRODUCER EXACT; FULL PORTABLE REPLAY PASS; HOSTILE REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256: 06b17cb522f8d08199f0eadc9019a3e6ea51b0e35d0587014c24839f2ad30e22
+manifest_sha256: 9bce31d7d2f9b0feeb4fe2c21b87696417563bedb027bc3b0c0afb181592b455
+consumed_wronskian_report_sha256:
+  180ff182ed092eb8d1503d8fa24eb47401475493c5726ce6049cec352e0e9a4a
+
+replay:
+  ./replay_all.sh
+  shasum -a 256 -c MANIFEST.sha256
+
+verdict:
+  In radial dehomogenized coordinates the pure quadratic current-digit rows
+  are N12=c0'd0-c0d0', N11=c1'd0-c0d1', and
+  N10=(c2*d0-c0*d2)'.  Every degree-six self-bracket vanishes, so all three
+  rows are independent of the six degree-six Frobenius spectators.
+
+scope:
+  Pure-N source identities and their componentwise N11 consequences only.
+  No predecessor incidence, quotient/cross lower-row, recurrence, all-depth,
+  characteristic-zero, no-lift, counterexample, or JC2 claim.

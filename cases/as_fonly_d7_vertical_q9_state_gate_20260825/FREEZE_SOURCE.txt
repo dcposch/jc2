@@ -1,0 +1,29 @@
+AS F-ONLY D7 Q9 SOURCE-STATE 27-WAY AWS SHARD SOURCE FREEZE
+date: 2026-08-25Z
+status: PREREGISTERED AWS-ONLY PRODUCER; NO RESULT YET
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+runner_manifest_sha256:
+  e951e851efea2a92252075f4800f05446e97091993d46815c77c850907f4df49
+source_closure_sha256:
+  7c639d8489fa1ec0dd04b6d0b84f4d6ab16bd8d463cd6d6c47e715a9bd7aaebb
+compiler_sha256:
+  54d05ebf86af9d75da0cc509e3094ce2e26516b84c73b8a50a36e71dbc9282b2
+corrected_q10_result_freeze_sha256:
+  e73b854b288bc18f9207a47ae4e265b429d054410c586c8ab9ee318ce24a79ec
+
+preregistered controls:
+  visible predecessor 1085103
+  N12 629115
+  corrected Q11 260847
+  corrected Q10 33225
+
+discriminator:
+  Reconstruct canonical integer carry state, attach C2/D2, C4/D4, and
+  W7/Z7, and classify the exact 23-row affine Q9 system in 32 variables.
+  Zero compatible Q10 states is a finite branch obstruction; positive
+  states proceed to lower rows.
+
+scope:
+  No result, lower row, recurrence, all-depth, characteristic-zero,
+  no-lift, counterexample, or JC2 claim.

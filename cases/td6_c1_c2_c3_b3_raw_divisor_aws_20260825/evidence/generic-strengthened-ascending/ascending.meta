@@ -1,0 +1,17 @@
+lane=ascending
+stratum=b3-param
+host=ip-172-30-0-34
+supervisor_pid=8955
+start_utc=2026-08-25T03:35:05Z
+archive=/home/ubuntu/td6-aws-handoff-20260824-v27.tar.gz
+archive_sha256=7dc12cbb62da27fedb412a2bb7578a98b04f7a46e006ba1ca28b73a2127899fd
+source_manifest_sha256=7e16abea9a7dc0a62a09a9442b0a066b9ea7bc9f8645ea9f1c9d9e4d162ee8d2
+producer_sha256=1fb512643f31b4eda6c0e96ca1adbfe3e79599986c7c095b825605a4145fdaea
+python=/home/ubuntu/venvs/td6/bin/python
+python_version=Python 3.12.3
+python_flint=0.9.0
+command=/usr/bin/time -v timeout 28800 /home/ubuntu/venvs/td6/bin/python /home/ubuntu/runs/td6_v27_b3_param_ascending_r6a_20260825T0334Z/td6-aws-handoff-20260824-v27/jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_c2_c3_trivariate.py --stratum=b3-param
+end_utc=2026-08-25T03:44:12Z
+rc=0
+stdout_sha256=f79c616901a39b27d7e00d6ad27a80f5f4f9f3947290d861e4ba803a85721221
+stderr_sha256=f3d073b812db8395f0a4ad00b7c5335c1688475877d8397cf0425072fe865b5a

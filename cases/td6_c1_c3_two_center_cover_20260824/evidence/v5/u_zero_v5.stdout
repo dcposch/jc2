@@ -1,0 +1,51 @@
+first_pivot_order=ascending
+center_stratum=U=0 over Q(C)
+rows=0;pivots=1;events=0;detdeg=0/0
+rows=250;pivots=251;events=0;detdeg=0/0
+rows=1500;pivots=684;events=0;detdeg=0/0
+rows=1750;pivots=934;events=0;detdeg=0/0
+rows=2000;pivots=1184;events=0;detdeg=0/0
+rows=2250;pivots=1434;events=0;detdeg=0/0
+rows=4750;pivots=1716;events=0;detdeg=0/0
+rows=5000;pivots=1966;events=1;detdeg=1/0
+rows=5250;pivots=2215;events=1;detdeg=1/0
+rows=5500;pivots=2465;events=2;detdeg=2/0
+rows=5750;pivots=2715;events=2;detdeg=2/0
+rows=6000;pivots=2965;events=2;detdeg=2/0
+rows=6250;pivots=3215;events=2;detdeg=2/0
+rows=6500;pivots=3465;events=2;detdeg=2/0
+P12 bivariate transport PASS
+first_rank=36/132
+first_incompatibility_count=1
+P12 bivariate first/source replay PASS
+transport_event_count=2
+transport_event[0]=4804,('f', 'X', -1, 2),193;num=(-C);den=(1)
+transport_event[1]=5380,('g', 'X', -1, 2),1289;num=(-C);den=(1)
+transport_chart_denominator=(C^2)
+transport_chart_denominator_factor=(1, [(C, 2)])
+first_source_denominator=(C)
+first_source_denominator_factor=(1, [(C, 1)])
+first_incompatibility[0]_row_index=13
+first_incompatibility[0]_key=('X-2', 14)
+first_incompatibility[0]_residual_sha256=97c09c59824800310009ec5e7448a5cf201f34dac9c8c2a0404d7ffafc7e4146
+first_incompatibility[0]_residual_coordinates=(('-9', '1'), ('3', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('625000000/9', '1'), ('-1093750000/9', '1'), ('87890625', '1'), ('-273437500/9', '1'), ('39062500/9', '1'), ('0', '1'))
+first_incompatibility[0]_source_row_count=1
+first_incompatibility[0]_source_certificate_sha256=7da70a5ea213764e91fea7f52bd0ba57afebd74e1890e6a3f3bbfa265747a803
+first_incompatibility[0]_source_certificate_exact=((13, ('X-2', 14), (('1', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'))),)
+first_incompatibility[0]_source_certificate_relation=sum(coeff_i*(row_i-rhs_i))=-residual
+first_incompatibility[0]_residual_denominator=(1)
+first_incompatibility[0]_residual_denominator_factor=(1, [])
+first_incompatibility[0]_cleared_numerator_gcd=(1)
+first_incompatibility[0]_cleared_numerator_gcd_factor=(1, [])
+first_incompatibility[0]_combination_denominator=(1)
+first_incompatibility[0]_combination_denominator_factor=(1, [])
+first_incompatibility[0]_certificate_chart_denominator=(C^3)
+first_incompatibility[0]_certificate_chart_denominator_factor=(1, [(C, 3)])
+first_incompatibility[0]_residual_unit_on_chart=true
+first_incompatibility[0]_whole_stratum_empty=false
+first_incompatibility_original_row_replay=true
+P12_compile_skipped_first_band_empty=true
+family_killed=false
+SP2_killed=false
+JC2_resolved=false
+TD6-C1-C3-FIRST-BAND-INCONSISTENT-STRATUM PASS

@@ -1,0 +1,57 @@
+AS F-ONLY D7 CANONICAL Q8/Q7 FIBRE SAMPLE RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT AT 64 DISPLAYED CANONICAL ZERO-SECTION POINTS;
+        FITTED FIBRE PRESENTATION IS CONTROL-ONLY;
+        PROVISIONAL PENDING DIFFERENT-MODEL REVIEW
+git_head_at_source_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256:
+  b5510f398050e62c595cf1bcc2555db84466304b74d87a12db31fa47cead9ad7
+result_readme_sha256:
+  6c365f8a0aa2c27707c3a559233707dd49a106ca7efbcd20b71c2c0f519a2fa6
+verify_result_sha256:
+  bdf5dd1db82817e3fe47dc1e8fdcdc291185abaea52951592d53ead72bc4b9b3
+result_manifest_sha256:
+  3a50295c25bcdb4c04c97098aa37640bb1415db6249dba451a1c40ee152ea19c
+source_freeze_sha256:
+  0c296a66b0ec9d7fed1f8dfe28b1d7f24f3295203673571438082a462e4e912f
+aggregate_json_sha256:
+  c829b22e8cf65cc7cc025215b08fdf9ecddea84fc931c418c5c046e996dbb1eb
+aggregate_stdout_sha256:
+  79dfae3797556d3cc7b463252919b555ea2cc7f8da5dfd445777610da9f3067d
+ordered_sample_json_stream_sha256:
+  9cdc77bd0c6f2eff9f01d83b456f5711c5b4f1b8630e04103bf455be8c8294dc
+outputs_manifest_sha256:
+  f5f12c98f3e07953e6946fc97caf9619ee4e079f98d8afb810ba755a402dc779
+remote_verify_stdout_sha256:
+  7defcf0080ba7e733419ed4f660a7ba2307641c77a7afd827d37758dcfdfc32c
+source_archive_sha256:
+  2786a327f7dbfd2ead43c5dfd1716043653269ec13cffd8c786db757492f06d8
+result_archive_sha256:
+  15525b062e1df6d40439e28eef2d541328cd3a5cc7d6c2ae39cb2acf6a09905a
+
+execution:
+  Box02/ip-172-30-0-186;
+  /home/ubuntu/jobs/as_canonical_q8q7_samples_20260825T041000Z;
+  UTC 04:07:56Z--04:08:40Z; rc0;
+  64 parallel lanes; all shard and aggregate stderr empty.
+
+exact_result:
+  All 64 sampled canonical Q9 states directly pass the 23 source rows.
+  Their Q8 systems have rank pair (13,13), zero particular vector, and
+  19-dimensional kernel.  At that exact zero-section vector the Q7 matrix
+  has rank 9/cokernel 10 and zero cokernel RHS, hence a genuine compatible
+  Q7 witness.
+
+control_only:
+  The fitted 19-variable degree-two presentation is kappa_5=s15 and
+  kappa_8=s17 and passes 64 off-grid controls per sample.  Its 3^17 model
+  count is not a whole-fibre theorem because no canonical-carry degree bound
+  or exhaustive equality was proved.
+
+scope:
+  Only 64 Q9 states in the sampled 11-coordinate slice and their directly
+  substituted Q8 zero-section witnesses.  Other Q8 fibre points, other Q9
+  states, two omitted chart directions, six Frobenius spectators, later
+  divided carries, fixed-cap/all-depth lifting, counterexamples, and JC2
+  remain outside scope.

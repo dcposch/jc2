@@ -1,0 +1,33 @@
+AS F-ONLY D7 NEXT TOP-CARRY DIVIDED-FROBENIUS ERRATUM FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT SOURCE CORRECTION; AWS REPLAY PASS;
+        HOSTILE REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256:
+  1129f2c93db930a3040e1626cc34dcfd818e824b356cbd63baac4e8d37c9ea0c
+result_manifest_sha256:
+  a9bc12777cd1cdf708d5df713909a2a3384887e20ff9e11a40da3acf93e68d8a
+remote_results_manifest_sha256:
+  f7955b8d216b41f5cf4a37a6646edf1329b473f5daece380ae615d25f02b972a
+replay_output_sha256:
+  5147309670dc3e0d7caaadc93ddf2a08c1c1b97e57cbf182bae6d40fbed123fd
+
+execution:
+  host Box02 / ip-172-30-0-186 / 34.203.207.55
+  tag as_d7_top_frob_erratum_20260825T003321Z
+  UTC 2026-08-25T00:34:13Z; rc 0; stderr empty
+
+verdict:
+  The full degree-11 row contains ({UF,D7}+{C7,VF})/3.  The full degree-10
+  row also contains ({UF,D6}+{C6,VF})/3 and {UF,VF}/9.  Both omissions have
+  explicit nonzero controls.  N12 is unaffected; old N11 counts and the old
+  N10 runner are quarantined.
+
+replay:
+  ./verify_frozen_result.sh
+
+scope:
+  Universal source correction only.  No corrected census, lower row,
+  recurrence, all-depth, characteristic-zero, no-lift, counterexample, or
+  JC2 claim.

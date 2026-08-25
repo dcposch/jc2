@@ -1,0 +1,16 @@
+
+option(redSB);
+ring R=0,(x0,x1,x2,x3,x4,x5,q),dp;
+ideal C1=x1,x2,x3,x4,x5,2*x0^2-9;
+ideal C2=x1,x2,x4,x5,4*x3^3+81,x0-x3*q;
+ideal G1=std(C1);
+ideal G2=std(C2);
+print("C1_dim="+string(dim(G1)));
+print("C1_deg="+string(mult(G1)));
+print("C1=");
+G1;
+print("C2_dim="+string(dim(G2)));
+print("C2_deg="+string(mult(G2)));
+print("C2=");
+G2;
+quit;

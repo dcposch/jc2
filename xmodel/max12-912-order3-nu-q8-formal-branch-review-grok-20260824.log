@@ -1,0 +1,15 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the formal-branch report, case files, and the related Q8/Q12 materials so I can reconstruct the claims independently.The review skill is for code PRs; this is a mathematical hostile review. Next I’ll load the case files and the earlier Q8/Q12 lineage so the attack is independent.I'll pull the Q8 erratum, the Q12 refutation, and a prior grok review so I can match the house style while reconstructing the identities independently.I’ll reconstruct the tails, chart, and both minors independently, then check the gcds and the equivariant IFT hypotheses against the producer’s claims.Hashes, replay, and an independent Gaussian reconstruction of both minors and the gcd ledger are next.Replay is still compiling the fibre. I’ll start the independent Gaussian reconstruction in parallel so the minors and gcds are not just the producer’s Leibniz expansion.Independent reconstruction holds: both minors are units at every `Q8` root, the chart is `1+3v`, and the IFT hypotheses are present. Writing the review.Hostile different-model review is in `xmodel/max12-912-order3-nu-q8-formal-branch-review-grok-20260824.md`. Charged producer/case hashes are unchanged.
+
+Independent reconstruction (Gaussian `4 x 4` over `Q` at 24 chart samples, explicit `3 x 3` minors, Euclidean gcds, dual `R6'` quotient rule) supports the producer:
+
+- Eight pinned tails; seven-row fibre only (`r8` typed and left off the Jacobian).
+- Genuine chart `1+3v`; no `Q12` descendant pin; the constant-`1/3` slice is only a negative control and reproduces the refuted `Q12` identity.
+- Both named rank-three minors are units at every algebraic `Q8` root (in fact every `3 x 3` of `J_N` and of `J_I` is a unit). Chart denominators `v`, `A2`, `D` are coprime to `Q8`.
+- `gcd(Q8,Q8')=gcd(Q8,num(R6'))=1`; loaded points exist.
+- Unit minors eliminate `a2,a4,a6` and `x1,x3,x5`; the remaining odd equation is `t Phi(s,t^2)=0`; Schur gives `Phi(s,0)=unit det(J_N)`; squarefreeness plus étaleness of `v` against `p` give `dPhi/ds ≠ 0`.
+- Two reduced smooth formal branches with distinct tangents, at seven-row coefficient-fibre scope only.
+
+**Verdict.** `CONFIRMED`
+
+Smallest failing identity or hypothesis: none.

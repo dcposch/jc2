@@ -1,0 +1,38 @@
+{
+  "boundary_checks": {
+    "A5_squarefree": true,
+    "D_or_A2_zero_on_generic_chart": "impossible",
+    "D_squarefree": true,
+    "resultant_A2_D": 27,
+    "resultant_A5_D": 97200
+  },
+  "case": "max12_912_order3_nu_parity_genus5_20260824",
+  "cube_curve": {
+    "equation": "Y^3=(33*v^5+117*v^4+131*v^3+69*v^2+18*v+2)/(3*v^2-2)",
+    "finite_branch_points": 7,
+    "genus": 5,
+    "infinity_branched": false,
+    "infinity_order": -3,
+    "riemann_hurwitz": 8
+  },
+  "generic_chart": {
+    "conditions": "p*x5*A!=0, A=x3-2*p*x5",
+    "r6": "-2304*p^9*v^6*(3*v^2+3*v+1)^3*(33*v^5+117*v^4+131*v^3+69*v^2+18*v+2)/(3*v^2-2)^4",
+    "r8": "6912*p^10*v^8*(3*v^2+3*v+1)^4*(54*v^4+96*v^3+75*v^2+32*v+6)/(3*v^2-2)^5",
+    "v": "A/(p*x5) in K=C(x)",
+    "x5": "-36*p^2*v^2*(3*v^2+3*v+1)/(3*v^2-2)"
+  },
+  "p_zero_branch": {
+    "projection": "r8^9=(2*3^25/11^10)*nu^10",
+    "relations": [
+      "x1=x5^2/3",
+      "x3^2=-x5^3/36",
+      "nu=-11*x3*x5^3/729",
+      "r8=-x5^5/486"
+    ],
+    "terminal_consequence": "r8 is constant, contradiction"
+  },
+  "parent_compiler_sha256": "a4fdac5d613e1af82ab135e220fedee5e41384c41e3068bcdf8921f60ababbcf",
+  "producer_conclusion": "No actual nu!=0 order-three Keller trajectory lies on the full parity specialization q=x0=x2=x4=k=0.",
+  "scope": "full parity specialization only; no generic loaded-fibre, Taylor, all-(9,12), maximum-twelve, counterexample, or JC2 conclusion"
+}

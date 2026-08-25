@@ -1,0 +1,14 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=dontAsk
+⚠ claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login · Unset it to load your organization's connectors
+Review complete. I wrote `xmodel/td6-c1-c2-c3-p3-raw-curve-source-review-claude-20260825.md` (the only file touched) and the verdict is **CONFIRMED**.
+
+**What was verified, in brief:**
+
+- **Custody:** All charged hashes cross-match as strings across both packages' freeze/manifest/dependency pins, the lane metas, and the on-host source-check outputs; the supplement's `MANIFEST` agrees entry-for-entry with `payload/SOURCE.sha256` (24 files, no extras, no hidden files). I read the complete producer/import closure — five load edges are unpinned in Python but covered by the on-host `sha256sum -c` frozen in both lanes.
+- **Function field:** The tower `Q(U)[Z,V]/(Z²−32Z+128, V²−ZU³)` is genuinely the degree-4 function field of the irreducible `P3` (disc 512 nonsquare; odd `U`-valuation; Gauss). The frozen counters `RatU=Quad=Curve=7589` in both lanes prove every inversion ran inside the product-asserted `Curve→Quad→RatU` chain — the 7,589-inversion question closes affirmatively.
+- **`D(U)` coverage:** All original rows are polynomial in the center `(3U², V, U)`, and the only two nonconstant pivot norms are `128U⁶` and `16U⁴` — which I hand-matched to the h-zero certificate's leads `−V` and `2U` at the same rows/pivots. Charts check arithmetically (`U¹⁷ = U⁶·U²·U²·U⁷`, `U¹⁹` likewise). The remainder `−k/50` is a degree-3 polynomial in `S` over the degree-6 field `K`, hence a nonzero constant of the degree-18 field `E` at *every* point of `D(U)`.
+- **Origin and erratum:** I hand-verified the V14 origin certificate's 21-row ±1 combination from first principles (at the origin, `x=t·s⁴` makes each X-row a single unit entry exactly covering the F0 row), residual `1−(5/9)L⁵A² ≠ 0`, unit chart. The B3-local erratum demotes a different lane and — a fact I confirmed by hand — `B3|_{H=0} = P3`, so the whole-`H=0` composition (h-zero chart `U⁶V⁵P3` + V12 chart `V³` + V15 chart `U¹²` + this package + origin) closes set-theoretically without relying on the demoted claim.
+
+**Disclosed gaps (evidentiary, not mathematical):** no hash recomputation and no archive extraction were possible in this no-shell session; the two lanes share one transport elimination (independence covers only the lift stage); `only_U_exception` is printed rather than asserted.
+
+CONFIRMED

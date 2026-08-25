@@ -1,0 +1,39 @@
+AS F-ONLY p=3,D=7 POST-D10 DEGREE-NINE/EIGHT F3 GATE
+date: 2026-08-24
+status: PRODUCER EXACT; STATIC RANK REPLAY + COMPLETE LITERAL-F3 CENSUSES PASS; HOSTILE REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256: ff85614982fb26a7d8aba2859c7d1be6e3274ff8170114f23b247b5172fd0fc9
+manifest_sha256: 1efda261bcd531fd4352c8b3f27ee2cafd77b7bf36dd31a9379d9083733a8f2b
+generator_sha256: 243c357c18dbbe445f665621ceb5c748f96aa026cb73947fe38dd8b7af8e365e
+d9_static_sha256: f3da6733124c0dd165651ce556ac2e1177e46708d99ff78e662e21a3c7f1b61c
+core_rank_static_sha256: c21c231eebbc999421329813cc9dd318999956170cad6156ab76383fa6569787
+
+consumed_confirmed_d10:
+  producer_sha256: e4311a80aef2d3617c7b449e16cb19d34cfe25d31c558bb68f78ddc02fcae4ab
+  hostile_review_sha256: 8ccaa15fd9180660d5ab7e2957737c028a96bb5b28508378e0a3ca93964089b5
+  source_generator_sha256: fd76a59e75de80b871f773879c8911e5dec1905375912b2074793fcdc4ff3ef5
+
+exact_streams:
+  vertical_total: 177147
+  vertical_compatible: 50939
+  vertical_rank_stream_sha256: d7910730247c3da26599fac9c11cb28472ec7591ef49c221a825ef5978e17bee
+  g_endpoint_total: 4374
+  g_endpoint_compatible: 954
+  g_endpoint_rank_stream_sha256: 119580e2aab411d56dc2b41f6118cf9fd03768bb8cc10397c0aa2b29abcd2da8
+
+replay:
+  Singular -q audit_vertical_d9_section.sing
+  Singular -q audit_vertical_core_rank.sing
+  ENUMERATE=1 python3 generate_and_enumerate.py | sed -n '/ENUM-VERTICAL-D98/,$p'
+  BRANCH=g ENUMERATE=1 python3 generate_and_enumerate.py | sed -n '/ENUM-G-ENDPOINT-D98/,$p'
+  shasum -a 256 -c MANIFEST.sha256
+
+scope:
+  Exact source-derived degree-nine/eight high-row systems on the confirmed
+  vertical and g!=0 D10 survivor branches.  The vertical D9 system has a
+  global polynomial section.  The vertical D8 coefficient matrix has only
+  geometric ranks 0,2,3,5.  Compatibility is exhaustively classified only
+  on the literal F3 digit sets stated above.  No algebraic-closure
+  compatibility, next divided carry, full D7, all-depth, characteristic-zero,
+  counterexample, or JC2 conclusion is made.

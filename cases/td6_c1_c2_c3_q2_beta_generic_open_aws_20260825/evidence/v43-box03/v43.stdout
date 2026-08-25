@@ -1,0 +1,86 @@
+beta_parameter_name=beta
+q_beta=t+beta*t^2+t^25
+q_beta_prime=1+2*beta*t+25*t^24
+source_center=(C,V,U)
+source_p_boundary=t^15_fixed
+source_dead_stretch=0_fixed
+source_F1_orbit=frozen
+source_pole_scale_and_data=frozen
+scope_open=D(U*H*B3)
+P12_compiler=genuine_2893_term_source_polynomial
+later_echelon_X0_t12_used=false
+N13_dependency=V34_staged_original_row_replay
+certificate_serializer=canonical_E3_coordinate_v1
+legacy_object_address_digest_used=false
+trivariate_transport rows=0;pivots=1;events=0
+trivariate_transport rows=250;pivots=251;events=0
+trivariate_transport rows=1500;pivots=684;events=0
+trivariate_transport rows=1750;pivots=934;events=0
+trivariate_transport rows=2000;pivots=1184;events=0
+trivariate_transport rows=2250;pivots=1434;events=0
+trivariate_transport rows=4750;pivots=1716;events=0
+trivariate_transport rows=5000;pivots=1966;events=1
+trivariate_transport rows=5250;pivots=2215;events=1
+trivariate_transport rows=5500;pivots=2465;events=2
+trivariate_transport rows=5750;pivots=2715;events=2
+trivariate_transport rows=6000;pivots=2965;events=2
+trivariate_transport rows=6250;pivots=3215;events=2
+trivariate_transport rows=6500;pivots=3465;events=2
+transport_rank=3470/3602
+transport_event_count=2
+transport_matrix_beta_independent=true
+transport_rhs_beta_affine_exact=true
+transport_three_x_sections_exact=true
+direct_qprime_omission_negative_control=true
+first_full_beta_P12_rank=38/132
+first_full_beta_P12_dependent_count=0
+first_full_beta_P12_all_pivots_beta_independent=true
+first_full_beta_P12_pivot_digest=f6eeaf7a7e3692594dda059e33bcc8cc297636277f17bf1a4800f6d0f30f3920
+first_full_beta_P12_original_row_replay=true
+raw_P12_term_count=2893
+raw_P12_beta_degree=1
+raw_P12_base_terms=2893
+raw_P12_base_sha256=8d5c3550fbad393c1e13061d9934ed79e29261db378f1d344c4ea5e587e704da
+remainder_term_count=3
+remainder_beta_degree=1
+remainder_base_is_minus_k_over_50=true
+remainder_beta_tail_terms=2
+remainder_beta_tail_degree=0
+remainder_beta_tail_sha256=0639f8cdff06649312811c4995f3c4a9ea087b8ff60236ebb9353da532afb531
+full_beta_first_original_row_replay=true
+N13_exact_value_sha256=8cf947c9ba6cd70388827bb7db564d0675d94eee621bc54efc2b791aff88b26f
+N13_multiplier_terms=2
+N13_multiplier_beta_degree=0
+N13_multiplier_sha256=aef2b851a14ef65063f60ce1e199e0257c9d5c1a1865950cc7315f0d458a99d6
+P12_N13_polynomial_unit_identity_exact=true
+P12_without_N13_negative_control=true
+beta_division_used=false
+combined_unit_residual_is_minus_k_over_50=true
+raw_P12_denominator=(C*U - 3*U^3)
+raw_P12_denominator_factor=(1, [(U, 1), (C - 3*U^2, 1)])
+raw_P12_denominator_summary=(3, 2, '85fec0864be6430058dd3bbfe187027d41a99c70d0d1fae25356c8f08309e557')
+first_rows_denominator=(C*U - 3*U^3)
+first_rows_denominator_factor=(1, [(U, 1), (C - 3*U^2, 1)])
+first_rows_denominator_summary=(3, 2, '85fec0864be6430058dd3bbfe187027d41a99c70d0d1fae25356c8f08309e557')
+first_relations_denominator=(C^4*U^4 - C^3*V^2*U^3 + 1/4*C^2*V^4*U^2 + C^2*V^2*U^5 - 22*C^2*U^8 - 3/2*C*V^4*U^4 + 21*C*V^2*U^7 + 24*C*U^10 + 9/4*V^4*U^6 - 45*V^2*U^9 + 45*U^12)
+first_relations_denominator_factor=(1/4, [(4*C^2*U^2 - 4*C*V^2*U + 24*C*U^4 + V^4 - 20*V^2*U^3 + 20*U^6, 1), (U, 2), (C - 3*U^2, 2)])
+first_relations_denominator_summary=(12, 11, '1262f7b268075620793899629cf877b1fb852d0c6462b19164fc1985dd24e275')
+termwise_source_denominator=(C^5*U^3 - C^4*V^2*U^2 - 3*C^4*U^5 + 1/4*C^3*V^4*U + 4*C^3*V^2*U^4 - 22*C^3*U^7 - 9/4*C^2*V^4*U^3 + 18*C^2*V^2*U^6 + 90*C^2*U^9 + 27/4*C*V^4*U^5 - 108*C*V^2*U^8 - 27*C*U^11 - 27/4*V^4*U^7 + 135*V^2*U^10 - 135*U^13)
+termwise_source_denominator_factor=(1/4, [(U, 1), (4*C^2*U^2 - 4*C*V^2*U + 24*C*U^4 + V^4 - 20*V^2*U^3 + 20*U^6, 1), (C - 3*U^2, 3)])
+termwise_source_denominator_summary=(13, 15, '1e211906e86958d941ede34e5872238ab75b092332983391c0a714e9670407e5')
+N13_multiplier_denominator=(1)
+N13_multiplier_denominator_factor=(1, [])
+N13_multiplier_denominator_summary=(0, 1, 'cba2fbeb391b1b01d10d62b5d049665afdea6dda577ce5ab23077b7cd21fa34b')
+termwise_source_slot_count=39583
+all_denominator_radicals_subset_U_H_B3=true
+termwise_polynomial_source_clearing_exact=true
+first_source_nonzero_rows=28
+first_source_multiplier_terms=1648
+generic_open_full_beta_family_empty=true
+N13_full_source_lift_in_this_file=false
+raw_U_H_B3_strata_still_charged=true
+full_A3_beta_family_killed=false
+whole_TD6_killed=false
+SP2_killed=false
+JC2_resolved=false
+TD6-A3-Q2-FULL-P12-N13-UNIT-CANONICAL PASS

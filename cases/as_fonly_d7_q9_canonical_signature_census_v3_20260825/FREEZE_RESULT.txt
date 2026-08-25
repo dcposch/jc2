@@ -1,0 +1,37 @@
+AS F-only D7 Q9 canonical-signature census V3 — frozen producer
+
+Report:
+  xmodel/as-fonly-d7-q9-canonical-signature-census-20260825.md
+  SHA-256 d6e1545bd44800eda102995891136e8194fb5171a8ffba13dd6f31d45a6f7d4e
+
+Manifest:
+  cases/as_fonly_d7_q9_canonical_signature_census_v3_20260825/MANIFEST.sha256
+  SHA-256 9fb9b163ff0273dae68ef7e8cb302ac705606f0993b274d4f63c80d91f1f6602
+
+Exact frozen result:
+  1,594,323 states exhausted.
+  Q8 canonical rank pair (13,13) at every state.
+  Q7 zero section: 177,147 rank-(9,9) compatible and
+  1,417,176 rank-(9,10) incompatible.
+  59,049 labelled presentation classes, every class size 27;
+  6,561 compatible and 52,488 incompatible classes.
+
+Independent agreement:
+  Box02 48-shard and r6d 37-shard runs agree on
+  record stream SHA-256
+    49a563074021509150c03446b1b2257f564c1fa839d57504be12006776206a14
+  class table SHA-256
+    c42e62a1fc485874ba820912fb5ae7a3cf366f2cf6de9e261dc90d40e8acea72
+  representative table SHA-256
+    cb21c2768374bb003b0b300587b8a6368c6536eb9ff25a49365dfa9435464846
+
+Strict scope:
+  Canonical zero-section presentation only.  Signature equality is not proved
+  to be transition equivalence.  A Q7-incompatible zero section is not an
+  empty Q8 fibre.  No all-depth/no-lift/JC inference.
+
+Verification:
+  shasum -a 256 -c \
+    cases/as_fonly_d7_q9_canonical_signature_census_v3_20260825/MANIFEST.sha256
+
+Full replay is AWS-only under the commands and source closure in the package.

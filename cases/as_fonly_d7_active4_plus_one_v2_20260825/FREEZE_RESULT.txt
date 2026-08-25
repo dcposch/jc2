@@ -1,0 +1,41 @@
+AS F-ONLY D7 ACTIVE4-PLUS-ONE V2 RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT ON 28 PREREGISTERED FIVE-COORDINATE SLICES;
+        PROVISIONAL PENDING DIFFERENT-MODEL REVIEW
+git_head_at_source_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256:
+  f7fabcf0ee6cc51bcee4c84f8079e0c9046cfda9a581cfb467df015ca383e41c
+result_readme_sha256:
+  d4e4261148cfc342e874e6569882c68e8697679bda4fadd0a2aefeac57c7a982
+verify_result_sha256:
+  38f550df89645c39ba6356f0f7feff75054473feb6b09a331ebe31dde4e32f08
+result_manifest_sha256:
+  ac8c045742221b7e17c0cb7dc208ecbd51fe54cbfda25dc94f9b3fb8ba06ce05
+source_freeze_sha256:
+  f4c21c0eb8671830a868f7d21290d86beeedad6f3465c4b015eb089a6b64c730
+aggregate_json_sha256:
+  b46f04b4d3ce1dec9f9d61dcc5dbd0e128c73eda685e8a5e02797655db67d11f
+ordered_shard_json_stream_sha256:
+  45195188b230c9065d2daef794fe7249f791b2bb0bb52ec78d1c1981ab6fe092
+source_archive_sha256:
+  4fb141317e78d35c4940d60035f67c4d901c2aa82dc626acea2f292cecffef6e
+result_archive_sha256:
+  46d352c412004d0122844157ae2bde06ff11545ebce819d082c1618b064600a8
+
+execution:
+  r6a/ip-172-30-0-34;
+  /home/ubuntu/jobs/as_active4_plus_one_v2_20260825T034300Z;
+  UTC 03:44:31Z--03:44:52Z; rc0;
+  28 parallel lanes, all shard and aggregate stderr empty.
+
+result:
+  Each of 28 active-four-plus-one F3^5 slices has exactly three compatible
+  points: (t6,t8,s15,s17,u)=(0,0,0,0,u).  All other 240 points per slice
+  have Q7 rank pair (9,10).  The Q7 matrix is constant across all 6,804
+  evaluations with SHA f30baed043492c723d80a787571d6cb743626da643a20f031da5b95091e6dd50.
+
+scope:
+  No interactions among two or more of the remaining 28 coordinates, six
+  Frobenius spectators, other predecessors, later carries, fixed-cap/all-depth,
+  counterexample, or JC2 claim.

@@ -1,0 +1,15 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll review the frozen producer and case adversarially from the source artifacts, without trusting report prose or running local solvers. First I need the report, case layout, and review conventions.The case is frozen and the producer is in place. Next I’ll read prior review format, the source files, and the charge-specific artifacts.I’ll load the producer sources, compiler, manifests, and a prior Q9-gate review so the charges can be checked against frozen bytes.The V2/V3 formula split is clear; next I’ll pin monomial orientation in the compiler and independently sum the frozen shard payloads.The orientation derivation is in place. I’ll pull per-shard totals, rank-pair histograms, and custody files next so the counts aren’t taken from the aggregate script.Shard JSON is one-liners, so I’ll take the printed shard summaries from `runner.stdout` and add those counts by hand.I have the independent sums, the orientation derivation, and the custody trail. Next I’ll write the review file with a plain licensed conclusion and classified issues.**CONFIRMED.** The review is at `xmodel/as-fonly-d7-global-row8-q9-projection-review-grok-20260825.md`.
+
+The licensed statement is: **`omega` is not an obstruction at Q9 alone, and each of the 11,881 nonempty Q9 fibres has `omega=0` completions.** Q8 through Q3 restoration, a complete mod-243 map, all-depth lifting, a counterexample, and JC2 are refused.
+
+What was checked, without trusting report prose or the aggregate’s hard-coded totals:
+
+- The consumed compiler is pinned at `54d05ebf…`. Both corrected sources `exec` that prefix; the 13-trit chart is not used. All 33,225 Q10 states and all 79 compatible bases are covered.
+- From `(q1,q2,q3,q4)=(c2_1,c2_2,d2_0,d2_1)` and `C_x+D_y`, the **`x` carry is `2q2+q4` and the `y` carry is `q1+2q3`**. The corrected formula `omega=carry(q1+2q3)+2h·carry(2q2+q4) mod 3` follows. V1 is a swapped-label negative control, not evidence.
+- V2 `8d1b070c…` and V3 `c0951aaf…` reconstruct integer `E/3+M` on every projected tuple, read `[x]` and `[y]` in the `(i,d-i)` orientation, and assert the closed formula before counting.
+- Affine RREF/kernel, 4-coordinate image, and multiplicity `3^(ker_dim-proj_rank)` are sound. Inconsistent systems do not leak into the nonempty count.
+- Hand-sum of all 54 shard stdout records: 27/27 rc 0 on both runs, disjoint 81-block ranges, identical stream hashes, **33,225 / 11,881 / 8,096,356,425,843**, and `omega=0,1,2` each **2,698,785,475,281**.
+- Every nonempty fibre is classified `zero-partial`. Combined with `omega=q3-h q2` on the 9-point `E_1=0` set, every nonempty fibre is uniform, not merely globally balanced. V3 rank-pair/fibre-size controls match the Q9 parent census.
+
+V2 and V3 are **separate executions of closely related source**, not a second implementation. Custody nits (`OUTPUT.sha256` self-hash of an empty file, empty launcher stdout, V1 payloads absent from the case) are not mathematical defects. No AWS replay was launched.

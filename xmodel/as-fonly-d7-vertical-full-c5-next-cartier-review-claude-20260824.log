@@ -1,0 +1,16 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=dontAsk
+⚠ claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set and takes precedence over your claude.ai login · Unset it to load your organization's connectors
+Review complete. Verdict: **CONFIRMED** for the conjunction of both gates at their exact frozen scope, written to `xmodel/as-fonly-d7-vertical-full-c5-next-cartier-review-claude-20260824.md`. No other file was touched.
+
+What the verdict rests on (this session had no shell, so no replays or SHA-256 recomputation — all execution gaps are disclosed in §8 of the report with staged closure commands):
+
+**Hand-verified algebra, from scratch over the integers**
+- Re-derived `det J − 1 = 3L + 9(K+C_x+D_y) + 27(M+W_x+Z_y) + 81N'` from the seed `P = x−x³+3U+9C+27W`, `Q = y+3V+9D+27Z`, matching the twice-confirmed licensed identity.
+- Re-expanded all eight zero-C5 slice rows from `[K_single/3]_7 + [M]_7`, including the `sub6` pivot eliminations and the triangular coordinates (the `2hs`/`2hw` absorptions into `Rr`, `Tt` come out exactly).
+- Computed the full `M5_7` layer by hand: the degree-3 derivative fields reduce mod 3 to spans of `x³, y³`, so the two Cartier rows `(2,5),(5,2)` provably receive nothing (the required `x²y²` derivative coefficients are `3c5_3, 3d5_2, …`), which is precisely why `fc=fd=0` survive and the other six rows change.
+- Verified all five accepted degree-4 coefficients, with `[x²y²]E = 3(c5_3+d5_2+2h²)` over Z — identically zero mod 3, formally divisible, so the successor row `c5_3+d5_2+2h²` is a representative-free carry. Also verified `[x²y²]M ≡ 0 mod 3` by full expansion against the adjoined `C2,C3` layer.
+- Confirmed the rank-formula exponents `3^(6+r−c)` and `3^(23−c)`, the sufficiency argument (all `W,Z` cross terms land at order 81 because the seed Jacobian ≡ I mod 3 — literally true on this branch; no off-by-one, no degree overflow), and uniqueness of the `x²y²` cokernel class through degree six, with degree-5/6 surjectivity witnessed by frozen unit-pivot asserts upstream.
+
+**A check the producers never stated:** the two frozen histograms jointly satisfy an exact one-notch migration conservation — 12 bases drop from fibre 27, 116 from 9, 36 from 3, and exactly those 36 empty (`172+36=208`), with no fibre skipping. That's a strong independent consistency test of both enumerations.
+
+**Findings:** no false identity, no missing hypothesis that breaks a claim. Seven non-blocking remarks (§9), the most substantive being that the successor compiler doesn't re-assert linearity for its appended row, and that the "seed Jacobian" sentence and the degree-5/6 surjectivity facts deserve explicit citations. Separate strict-scope promotable sentences for parent and successor are in §10.

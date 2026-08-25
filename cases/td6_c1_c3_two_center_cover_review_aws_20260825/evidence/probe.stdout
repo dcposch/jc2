@@ -1,0 +1,114 @@
+PASS charged xmodel/td6-c1-c3-two-center-cover-gate-20260824.md
+PASS charged cases/td6_c1_c3_two_center_cover_20260824/MANIFEST.sha256
+PASS manifest README.md
+PASS manifest archives/td6-aws-handoff-20260824-v4.tar.gz
+PASS manifest archives/td6-aws-handoff-20260824-v5.tar.gz
+PASS manifest archives/td6-aws-handoff-20260824-v6.tar.gz
+PASS manifest archives/td6-aws-handoff-20260824-v7.tar.gz
+PASS manifest evidence/v4/b_local.meta
+PASS manifest evidence/v4/b_local.stderr
+PASS manifest evidence/v4/b_local.stdout
+PASS manifest evidence/v4/generic.meta
+PASS manifest evidence/v4/generic.stderr
+PASS manifest evidence/v4/generic.stdout
+PASS manifest evidence/v4/h_zero.meta
+PASS manifest evidence/v4/h_zero.stderr
+PASS manifest evidence/v4/h_zero.stdout
+PASS manifest evidence/v4/launch.meta
+PASS manifest evidence/v4/source_verify.stderr
+PASS manifest evidence/v4/source_verify.stdout
+PASS manifest evidence/v5/intersection_v5.meta
+PASS manifest evidence/v5/intersection_v5.stderr
+PASS manifest evidence/v5/intersection_v5.stdout
+PASS manifest evidence/v5/launch.meta
+PASS manifest evidence/v5/source_verify.stderr
+PASS manifest evidence/v5/source_verify.stdout
+PASS manifest evidence/v5/u_zero_v5.meta
+PASS manifest evidence/v5/u_zero_v5.stderr
+PASS manifest evidence/v5/u_zero_v5.stdout
+PASS manifest evidence/v6/h-b-quotient.stderr
+PASS manifest evidence/v6/h-b-quotient.stdout
+PASS manifest evidence/v6/launch.meta
+PASS manifest evidence/v7/h-b-raw-quotient.stderr
+PASS manifest evidence/v7/h-b-raw-quotient.stdout
+PASS manifest evidence/v7/launch.meta
+PASS manifest covers 32 files
+PASS manifest coverage exhaustive [unlisted=[] missing=[]]
+PASS empty-string sha constant
+PASS evidence/v4/generic.meta stdout pin
+PASS evidence/v4/generic.meta stderr pin
+PASS evidence/v4/b_local.meta stdout pin
+PASS evidence/v4/b_local.meta stderr pin
+PASS evidence/v4/h_zero.meta stdout pin
+PASS evidence/v4/h_zero.meta stderr pin
+PASS evidence/v5/u_zero_v5.meta stdout pin
+PASS evidence/v5/u_zero_v5.meta stderr pin
+PASS evidence/v5/intersection_v5.meta stdout pin
+PASS evidence/v5/intersection_v5.meta stderr pin
+PASS evidence/v6/launch.meta stdout pin
+PASS evidence/v6/launch.meta stderr pin
+PASS evidence/v7/launch.meta stdout pin
+PASS evidence/v7/launch.meta stderr pin
+PASS repo parent hash cases/td6_jet_orbit_adjoint_20260824/replay.py
+PASS repo parent hash cases/td6_boundary_q2_deformation_20260824/replay.py
+PASS repo parent hash cases/td6_moduli_uniform_third_band_20260824/replay.py
+PASS repo parent hash cases/td6_two_chart_next_row_20260824/replay.py
+PASS v4 archive SOURCE.sha256 self-consistent
+PASS v4 archived parent == repo: cases/td6_jet_orbit_adjoint_20260824/replay.py
+PASS v4 archived parent == repo: cases/td6_boundary_q2_deformation_20260824/replay.py
+PASS v4 archived parent == repo: cases/td6_moduli_uniform_third_band_20260824/replay.py
+PASS v4 archived parent == repo: cases/td6_two_chart_next_row_20260824/replay.py
+INFO v4 producer replay.py sha = 8065aecb170851c2d594b7cf96ab2d3c172fd41ab454309fa69f1cd82860304d
+PASS v5 archive SOURCE.sha256 self-consistent
+PASS v5 pinned producer replay.py
+PASS v5 archived parent == repo: cases/td6_jet_orbit_adjoint_20260824/replay.py
+PASS v5 archived parent == repo: cases/td6_boundary_q2_deformation_20260824/replay.py
+PASS v5 archived parent == repo: cases/td6_moduli_uniform_third_band_20260824/replay.py
+PASS v5 archived parent == repo: cases/td6_two_chart_next_row_20260824/replay.py
+INFO v5 producer replay.py sha = 8b4d6a360b3134fc40aab652ae03f523520b35b4e73a5c41dc646715042f9571
+PASS v6 archive SOURCE.sha256 self-consistent
+PASS v6 pinned producer replay.py
+PASS v6 archived parent == repo: cases/td6_jet_orbit_adjoint_20260824/replay.py
+PASS v6 archived parent == repo: cases/td6_boundary_q2_deformation_20260824/replay.py
+PASS v6 archived parent == repo: cases/td6_moduli_uniform_third_band_20260824/replay.py
+PASS v6 archived parent == repo: cases/td6_two_chart_next_row_20260824/replay.py
+INFO v6 producer replay.py sha = 56df638aaa3ae02cf437a32258a920a8a66afb2781c089e30b1774a5b38e65db
+PASS v7 archive SOURCE.sha256 self-consistent
+PASS v7 pinned producer h_b_raw_quotient.py
+PASS v7 archived parent == repo: cases/td6_jet_orbit_adjoint_20260824/replay.py
+PASS v7 archived parent == repo: cases/td6_boundary_q2_deformation_20260824/replay.py
+PASS v7 archived parent == repo: cases/td6_moduli_uniform_third_band_20260824/replay.py
+PASS v7 archived parent == repo: cases/td6_two_chart_next_row_20260824/replay.py
+INFO v7 producer replay.py sha = 56df638aaa3ae02cf437a32258a920a8a66afb2781c089e30b1774a5b38e65db
+PASS T - B == 4U^3(CU+U^3-1)
+PASS B(C,0) == 1
+PASS P == B(3U^2, U)
+PASS generic relation den == (1/4)B U^2 H^2
+PASS generic termwise den == (1/4)B U^3 H^3
+PASS B-local relation den == (1/4)U^2 T
+PASS B-local termwise den == (1/4)U^3 H T
+PASS H-zero relation den == (1/128)U^2 P
+PASS H-zero termwise den == (1/128)U^3 P
+PASS V6 relation den == (1/128)U^3 P (contains P)
+PASS V6 termwise den == (1/128)U^4 P (contains P)
+PASS Res_C(B,T) == 64 U^10
+PASS Res_C(B,(1/4)U^2T) == 4 U^14
+PASS Res_C(B,(1/4)U^3HT) == +-(512U^22-128U^19+4U^16) [[(16, Fraction(4, 1)), (19, Fraction(-128, 1)), (22, Fraction(512, 1))]]
+PASS x * (-128x^5+32x^2) mod P == 1
+PASS gcd(P,P') == 1 (squarefree)
+PASS disc(128y^2-32y+1)=512 nonsquare
+PASS N((2+sqrt2)/16) == 1/128, v2=-7 not divisible by 3
+PASS k = 252-342S+144S^2-36S^3 nonzero
+PASS k gcd with F is a unit
+PASS k * k^-1 == 1 in K
+PASS 3H^3 == 1
+PASS k gcd with F is a unit
+PASS Norm(ALPHA) == 3^28/5^96 (v3=28, not a cube)
+PASS F irreducible mod 31 (Rabin)
+PASS F(0) != 0 (S invertible)
+PASS U=0 and origin residuals identical
+PASS residual nonzero (unit of the field E)
+PASS origin chart is 1 (raw, no inversion)
+PASS U=0 conservative chart C^3
+
+PROBE PASSED: all checks succeeded

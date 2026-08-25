@@ -1,0 +1,20 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the erratum, its case files, and the quarantined D9/D8 producer so the review can check hashes and the retraction independently.This is a mathematical erratum review, not a code-review pass. Next I’ll locate the charged files and any earlier reviews to match the expected report format.I’ll read the prompt, the erratum, a previous review for format, and the charged case files together.Next I’ll inspect the quarantined generator and D10/divided-carry predecessors, then independently reconstruct the Jacobian identities outside tracked paths.Hashes, the witness replay, and an independent Jacobian/Frobenius derivation in `/tmp` are next; the generator will be checked only as a regression.Charged hashes match. I’ll re-check the quarantined manifest from its own directory and run the independent Jacobian derivation.I’ll put the independent integer Jacobian, Frobenius-cross, witness, and preservation checks in a scratch script and run them.Random samples almost never satisfy the two divisibility hypotheses, so I’ll construct `L=3L1` and `E=3E1` directly and tighten the other checks.Independent identities, witnesses, and preservation checks all hold. I’ll write the charged review report next.**Overall verdict: CONFIRMED.** Written to `xmodel/as-fonly-d7-postd10-d98-f3-erratum-review-grok-20260824.md`.
+
+Per-item verdicts are all **CONFIRMED**:
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | `(det J-1)/27 = E1+M+3N` after `L=3L1` and `E=3E1` | CONFIRMED |
+| 2 | Single-cross `[K_Frob/3]`, double-Frob vanishes, max degrees 8 / 9 | CONFIRMED |
+| 3 | Witnesses `2x^7+2x^8` and `2xy^6+2x^4 y^5`; absent from the generator | CONFIRMED |
+| 4 | Vertical D9 / D8 matrix / pivots / rank loci survive; vertical column and all `g`-endpoint claims do not; all six Frobenius directions enter | CONFIRMED |
+| 5 | D10 theorem unaltered; no census / next-carry / D7 / lift / char-0 / JC2 claim | CONFIRMED |
+
+Charged hashes match: erratum `26dd0908…`, MANIFEST `5a3d0f9f…`, FREEZE `cd300999…`, witness replay `0bc6d391…`. Smallest failing identity: none.
+
+**Preserved:** D10 gate; integer orientation and the accepted `L/3` row; vertical D9 global section; six D8 unit pivots, triangular change, `7×5` coefficient matrix, and its rank loci (only `0,2,3,5` on all 2187 F3 bases).
+
+**Retracted:** vertical D8 inhomogeneous column and the `50939/177147` census / hash `d7910730…`; `g f_c=g f_d=0`, the `13×14` system, `954/4374` / hash `119580e2…`; the claim that only four Frobenius directions matter. On the `g` endpoint the omitted degree-nine piece is `2g\,u6_0\,x^4 y^5 + g\,u6_3\,x^7 y^2`.
+
+Quarantined predecessor bytes are unchanged. No AWS. Independent scratch lived only under `/tmp/as_d7_d98_f3_erratum_review/`.

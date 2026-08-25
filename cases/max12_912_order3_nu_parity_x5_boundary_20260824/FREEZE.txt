@@ -1,0 +1,16 @@
+MAX12 (9,12) ORDER-THREE nu!=0 PARITY x5=0 BOUNDARY
+date: 2026-08-24
+status: PRODUCER-EXACT; REVIEW REQUIRED
+verdict: x5=0 FORCES r8=0 AND FAILS THE TERMINAL ROW; A=x3-2*p*x5 IS A REVERSIBLE NONZERO PIVOT
+
+report_sha256: 9f62c226b0bb9ce3ec7ce9d96543ebae5cb6f6ee4bcfd32c00d25f4f27fe51e7
+registration_sha256: 92db1e820f2562143aa2192fac90e7bc61912324c9bf14df6c2132ed80455731
+readme_sha256: 0b6405b069ac2cf7a87501154016ab0401fb3561d60f30898d4004c9d06a3b7a
+replay_sha256: 9f05a4ed65dc544cad2753a77e599dd58a141e841bc27fe18a38436790c69742
+payload_sha256: 30581351bb0d92b128d49dbaf0a06dd81e802149ef408541adf99851444f60ff
+manifest_sha256: be8dd3efa89cb5e767e63b25080322cdeddc506c39aca8f2f313f2dd0ba92ace
+
+scope:
+  Exact only on q=x0=x2=x4=k=0. Does not assert parity exhaustion and does
+  not exclude the remaining A*x5!=0 parity chart, the generic loaded fibre,
+  Taylor boundaries, all (9,12), maximum twelve, a counterexample, or JC2.

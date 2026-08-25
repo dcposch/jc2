@@ -1,0 +1,78 @@
+{
+  "case": "max12_912_order3_nu_q8_hurwitz_support_20260824",
+  "good_reduction": {
+    "Q8_at_root": 0,
+    "all_fraction_denominators_inverted": true,
+    "prime_by_trial_division": true,
+    "six_by_six_jacobian_determinant": 1296
+  },
+  "holdout": 8,
+  "hurwitz_checks": {
+    "Delta_w_coefficient": 551,
+    "E_t_coefficient": 1556,
+    "NormF_constant": 1491,
+    "NormW_constant": 130,
+    "all_Delta_odd_t_coefficients_zero": true,
+    "all_tau_odd_t_coefficients_zero": true,
+    "s_constant": 334,
+    "tau_w_coefficient": 934
+  },
+  "input_sha256": {
+    "cases/max12_912_order3_critical_value_norm_20260824/replay.json": "98967e2ea85c47cdb96f7406edaf9a76c5eb8b932a65fa72c9460936f342a4d6",
+    "cases/max12_912_order3_critical_value_norm_20260824/replay.py": "88f4e2145defe8b548cd5794d171ee7919da77257811a51271df7dbb68e7e4df",
+    "cases/max12_912_order3_nu_q8_invariant_support_20260824/modular_support.py": "c36d6cf1ca538a39923412075fb44be77ed30023107f4eac755722b7d796dea0",
+    "cases/max12_912_order3_nu_q8_invariant_support_20260824/order48-p2003-v522.json": "e67c39e5394eb4ef285fcae722e318b75d5e2c02dd8638a7920d0dc4ce97841d",
+    "xmodel/max12-912-order3-critical-value-norm-20260824.md": "7339478798e00894c7b975c60aca821ec7ff2da383ffe5165a93cfa361bb6cb6",
+    "xmodel/max12-912-order3-critical-value-norm-review-grok-20260824.md": "b6ae9516430073e177a5174684109b437ab278fa04dd066686c58af57715588e"
+  },
+  "max_columns": 36,
+  "max_degrees": [10, 10],
+  "order": 48,
+  "prime": 2003,
+  "q8_root": 522,
+  "relation_searches": {
+    "Delta,Z": {
+      "all_fit_matrices_full_column_rank": true,
+      "full_column_rank_rectangles": 53,
+      "hits": [],
+      "max_tested_columns": 36,
+      "nonzero_fit_nullities": [],
+      "tested_rectangles": 53,
+      "tested_rectangles_sha256": "b9e0cd9cedb61bcdfcd608db186830679153baebcc280f44907a9be01d5449ac"
+    },
+    "tau,Delta": {
+      "all_fit_matrices_full_column_rank": true,
+      "full_column_rank_rectangles": 53,
+      "hits": [],
+      "max_tested_columns": 36,
+      "nonzero_fit_nullities": [],
+      "tested_rectangles": 53,
+      "tested_rectangles_sha256": "b9e0cd9cedb61bcdfcd608db186830679153baebcc280f44907a9be01d5449ac"
+    },
+    "theta,Delta": {
+      "all_fit_matrices_full_column_rank": true,
+      "full_column_rank_rectangles": 53,
+      "hits": [],
+      "max_tested_columns": 36,
+      "nonzero_fit_nullities": [],
+      "tested_rectangles": 53,
+      "tested_rectangles_sha256": "b9e0cd9cedb61bcdfcd608db186830679153baebcc280f44907a9be01d5449ac"
+    },
+    "theta,tau": {
+      "all_fit_matrices_full_column_rank": true,
+      "full_column_rank_rectangles": 53,
+      "hits": [],
+      "max_tested_columns": 36,
+      "nonzero_fit_nullities": [],
+      "tested_rectangles": 53,
+      "tested_rectangles_sha256": "b9e0cd9cedb61bcdfcd608db186830679153baebcc280f44907a9be01d5449ac"
+    }
+  },
+  "scope": "bounded unordered-Hurwitz relation exclusion only; no global equation, normalization, projective boundary, genus, or trajectory",
+  "series_prefix": {
+    "Delta": [0, 551, 597, 679, 1917, 1335, 1794, 689],
+    "Z": [1115, 651, 1424, 1057, 1019, 1285, 355, 665],
+    "tau": [1724, 934, 1602, 1536, 1884, 1178, 1740, 1530],
+    "theta": [0, 1, 635, 285, 261, 1311, 97, 1002]
+  }
+}

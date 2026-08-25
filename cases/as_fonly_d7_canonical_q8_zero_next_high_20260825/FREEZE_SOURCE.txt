@@ -1,0 +1,28 @@
+AS F-ONLY D7 CANONICAL Q8 ZERO-SECTION NEXT-HIGH SOURCE FREEZE
+date: 2026-08-25Z
+status: PREREGISTERED AWS PRODUCER; V3 CORRECTED SOURCE
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+compiler_sha256:
+  2b606ad2e31ce09591ed8541c56b29f973c8f8914e5944950aca89a7d0eea6b9
+aggregate_sha256:
+  b73e715baebee6a7714e57fd16c98ca32c451b3edeac1ec50b79902e9d6b80f9
+run_remote_sha256:
+  479856af9b8de6018372b323ec0439993e6b34ccf387e5bee3e5dcffba5acae0
+runner_manifest_sha256:
+  7953db4b25705f5d12b7b44009041b6d42b5923d7f5fcb24bb7a6ff7099c38b6
+source_closure_sha256:
+  5a156ca9af7efe9bc1fca450dde1a19b88ec5149adff3e397c58c6933a38d4d7
+source_package_files_sha256:
+  0b29af9e71a39742eda6fb194af7142f31c352aacb4a25bf05a8691e4c72158e
+source_archive_sha256:
+  a17f976546a9fa3ea1a96b7d1cccbe14019119c4891a2a96b08b1a7b16c85f75
+
+negative_control:
+  V2 source archive 04d1d70818186e8d70ce84625c46e35164a1188bc40f4b1125dbf628fddc7f13
+  incorrectly asserted y0=0 and stopped rc1.  No V2 result is consumed.
+
+scope:
+  At the actual affine Q8 particulars for the 64 frozen zero RREF-coordinate
+  witnesses, exhaust the Q7 solution fibre against degrees 12 through 9.
+  Other Q8 fibre directions and other Q9 states remain open.

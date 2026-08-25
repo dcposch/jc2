@@ -1,0 +1,77 @@
+// Independent static Singular replay of the D7 degree-ten pointwise gate.
+ring R=3,(h,p,q,r,s,t,w,a,b,c,d,e,f,g),dp;
+LIB "primdec.lib";
+option(redSB);
+
+ideal H=
+ ac+2b2,ad+bc,2bd+2c2,af+be+cd,2ag+bf+ce+d2,bg+cf+2de,
+ df+2e2,2dg+ef,eg+2f2,
+ as+2br+2cp,2bs+cr+2dp,
+ aw+2bt+2cq+ds+2er+2fp,
+ 2bw+ct+2dq+2es+fr+gp,dw+2et+2fq,2ew+ft+gq;
+
+matrix A[8][9]=
+ 2c,0,0,2b,a,0,0,0,0,
+ 2d,0,0,c,2b,0,0,0,0,
+ 2f,2c,0,2e,d,2b,a,0,0,
+ g,2d,0,f,2e,c,2b,0,0,
+ 0,2f,2c,0,0,2e,d,2b,a,
+ 0,g,2d,0,0,f,2e,c,2b,
+ 0,0,2f,0,0,0,0,2e,d,
+ 0,0,g,0,0,0,0,f,2e;
+
+matrix beta[8][1]=
+ 2abh+2bps+2br2,
+ 2ab+ach+cps+cr2,
+ 2ad+2aeh+bc+bdh+2bpw+2bqs+brt+2eps+2er2,
+ 2ae+afh+2bd+2c2+2cdh+cpw+cqs+2crt+fps+fr2,
+ ag+bf+bgh+2bqw+2bt2+ce+2d2+deh+2epw+2eqs+ert,
+ cf+2cgh+cqw+ct2+2de+2dfh+fpw+fqs+2frt,
+ dg+ef+egh+2eqw+2et2,
+ 2f2+2fgh+fqw+ft2;
+
+matrix Aug[8][10]=concat(A,beta);
+ideal GH=std(H);
+ideal RH=std(radical(H));
+ideal Z5=a,b,c,d,e,f,g;
+ideal GZ5=std(Z5);
+ideal A1=std(minor(A,1));
+ideal A1toZ=reduce(A1,GZ5);
+ideal ZtoA1=reduce(Z5,A1);
+ideal A4=minor(A,4);
+ideal RA4=reduce(A4,RH);
+ideal A3=minor(A,3);
+list SR2=sat(H+A3,Z5);
+ideal JR2=std(SR2[1]);
+ideal oneR2=reduce(ideal(1),JR2);
+ideal Aug4=minor(Aug,4);
+list SC=sat(H+Aug4,Z5);
+ideal JC=std(SC[1]);
+ideal RJC=std(radical(JC));
+ideal Ca=b,c,d,e,f,g,s,w;
+ideal Cg=a,b,c,d,e,f,p,q;
+ideal CC=std(intersect(Ca,Cg));
+ideal RtoC=reduce(RJC,CC);
+ideal CtoR=reduce(CC,RJC);
+ideal GV=std(H+Z5);
+ideal betaV=reduce(ideal(beta),GV);
+
+print("H_GB_dim_radical_GB_dim");
+print(size(GH));print(dim(GH));print(size(RH));print(dim(RH));
+print("rank_zero_equals_Z5");
+if(size(A1toZ)==0 && size(ZtoA1)==0){print(1);}else{print(0);}
+print("A4_mod_radical");print(size(RA4));
+print("nonzero_rank_le2_is_empty");
+if(size(oneR2)==0){print(1);}else{print(0);}
+print("compatibility_GB_dim_radical_GB_dim");
+print(size(JC));print(dim(JC));print(size(RJC));print(dim(RJC));
+print("compatibility_radical_equals_endpoint_union");
+if(size(RtoC)==0 && size(CtoR)==0){print(1);}else{print(0);}
+print("vertical_beta_remainders");print(size(betaV));
+
+if(size(A1toZ)!=0 || size(ZtoA1)!=0 || size(RA4)!=0 ||
+   size(oneR2)!=0 || size(RtoC)!=0 || size(CtoR)!=0 || size(betaV)!=0)
+{
+  print("FAIL-STATIC-POINTWISE");exit(1);
+}
+print("PASS-STATIC-POINTWISE");

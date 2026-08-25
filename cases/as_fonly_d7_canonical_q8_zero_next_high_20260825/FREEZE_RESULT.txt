@@ -1,0 +1,48 @@
+AS F-ONLY D7 CANONICAL Q8 ZERO-SECTION NEXT-HIGH RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT AT 64 DISPLAYED ZERO RREF-COORDINATE SECTIONS;
+        PROVISIONAL PENDING DIFFERENT-MODEL REVIEW
+
+report_sha256:
+  22e39c2a15897d60fddedaa05a87efed481e36302c9f9aa06ab74c4e5de19c3b
+result_readme_sha256:
+  c15e5b4292d38d79aa7deab1977b703f08fba332928fb5e5c8a5180201f121a4
+verify_result_sha256:
+  af0a34b19d64438670d6af2ade6441b4bee44ec4f4027859904df64c994da815
+source_freeze_sha256:
+  82a66e46a847e9016682ed73fdfb4511ccb9cc1c881f9d603379d29842c03c09
+result_manifest_sha256:
+  d0d1b6cc5c9d90561d313ed35d87db6e62fd12700a511fd3361b119100826d0f
+aggregate_json_sha256:
+  0f72ec2ff2fc5b6f8340a602acdc40d6f4b8de50995160655e066cee0cd96e83
+aggregate_stdout_sha256:
+  f725bd0768595ee5cbf41dc0ec88736cf1bc54802d157ab943dbad4588369489
+ordered_sample_json_stream_sha256:
+  96c5e8a28a12c1e845e314be03a3e6e61d6cfe25ae5aac5005fb417d9ebd0272
+outputs_manifest_sha256:
+  d09235544e4eefad59c69743c451edb5006d1e612986bd56d923ebf814e55f24
+remote_verify_stdout_sha256:
+  6f9bf08b3916fcd99c8e1798745f7389244f3f20b84d8a5c183880714397c2a8
+result_archive_sha256:
+  19e373471604d19c681039d8c517659fb78fd5ff13927eccb89733c515298fcc
+
+execution:
+  Box02/ip-172-30-0-186;
+  /home/ubuntu/jobs/as_canonical_q8_zero_next_high_20260825T042300Z_v3;
+  UTC 04:23:11Z--04:23:58Z; rc0;
+  64 parallel lanes; every shard and aggregate stderr empty;
+  max reported RSS 32008 KiB, no swap.
+
+result:
+  For every one of 64 sampled Q9 states, directly substitute its actual Q8
+  affine particular y0 (the s=0 RREF coordinate).  The Q7 system has rank
+  pair (9,9) and 9-dimensional solution fibre.  All 19683 Q7 points per
+  state were exhausted with recursive/direct integer-carry equality, and no
+  point zeros every degree-12 through degree-9 high row.  The 64 exact maps
+  occupy 31 quadratic-coefficient signature clusters.
+
+scope:
+  Exclusion only over the zero RREF-coordinate Q8 section at these 64 Q9
+  samples.  The other 17 Q8 compatibility directions, other Q9 states, two
+  omitted chart directions, six Frobenius spectators, fixed-cap/all-depth,
+  counterexamples, and JC2 remain outside scope.

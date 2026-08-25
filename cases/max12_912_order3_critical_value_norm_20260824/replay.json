@@ -1,0 +1,82 @@
+{
+  "case": "max12_912_order3_critical_value_norm_20260824",
+  "complete_split_on_NormF_times_s_nonzero": [
+    "full absorption: W0=W1=0",
+    "exactly one absorption: Norm(W)=0 and (W0,W1)!=(0,0)",
+    "equal non-1 values: Norm(W)!=0 and E=0",
+    "no absorption, unequal values: Norm(W)*E!=0"
+  ],
+  "controls": {
+    "abstract_C_at_1_identity": "PASS",
+    "abstract_discriminant_identity": "PASS",
+    "parity": "f_even=0 and g_odd=0, hence E=0"
+  },
+  "critical_value_norm": {
+    "C(1)": "Norm(G-F)",
+    "C(T)": "Norm(G-TF)=C0+C1*T+C2*T^2",
+    "C0": "G0^2-s*G1^2",
+    "C1": "-2*(G0*F0-s*G1*F1)",
+    "C2": "F0^2-s*F1^2",
+    "E": "G0*F1-G1*F0",
+    "F": "f^4 mod (z^2-s) = F0+F1*z",
+    "G": "g^3 mod (z^2-s) = G0+G1*z",
+    "discriminant": "C1^2-4*C0*C2=4*s*E^2"
+  },
+  "input_hashes": {
+    "cases/max12_912_order3_fibre_20260824/order3_fibre.py": "a4fdac5d613e1af82ab135e220fedee5e41384c41e3068bcdf8921f60ababbcf",
+    "xmodel/max12-912-order3-nu-belyi-collision-boundary-20260824.md": "9b717712e59b70a6b06303f745a9c70b2152e3f624d03162741e3338ef1168b7",
+    "xmodel/max12-912-order3-nu-belyi-collision-boundary-review-grok-20260824.md": "6d34908cbd2ead9769e4090fcab903ec5d5b7bd9db485db1d681708c5d36946e",
+    "xmodel/max12-912-order3-nu-parity-genus5-exclusion-20260824.md": "f37376c96ab7e3c6ed7aa554dd04e2c72c9b2f5092ba6df03f524ea44765515d",
+    "xmodel/max12-912-order3-nu-parity-genus5-review-grok-20260824.md": "903a973ac4975dfdeea77d143ebaa33cdc504d0f75d31dfe5327dad2d9be8528"
+  },
+  "normalization": {
+    "B": "54*(z^2-s)",
+    "actual_fibre_rows": "r1=r2=r3=r4=r5=r7=0, r6=1, r8=rho",
+    "nu": 1,
+    "p": "a7/3",
+    "s": "-(a7+10*rho)/9"
+  },
+  "quadratic_pair_hashes": {
+    "F=f^4": {
+      "even_sha256": "c4eaab9cf463d6bf60f23eaf72632885ff9edbe9803f6baedfaf33263997115f",
+      "even_terms": 1437,
+      "odd_sha256": "38399a4461ca588e79040189d9591fbe73f4cd448207762e533ec6d915496cd4",
+      "odd_terms": 1272
+    },
+    "G=g^3": {
+      "even_sha256": "1e82542f0df8ad229671fb574c521418a758ba972168ca14ca1a325f0631b53a",
+      "even_terms": 3799,
+      "odd_sha256": "e4b1f6e9a6c02fc92feb437bbd029839a4990df37d0d94ec41e49c19ae176e76",
+      "odd_terms": 3301
+    },
+    "f": {
+      "even_sha256": "622d86c93d6a1e81dfd4797220b2edce727dafbeebb2162addd9d8e36617d6fa",
+      "even_terms": 10,
+      "odd_sha256": "6ea2d9048df27d188c86e6e31e1c2871ae560a378c216dfdce626ab2830cab00",
+      "odd_terms": 11
+    },
+    "g": {
+      "even_sha256": "c42c2b43e051c2960e1fb85a46b98b31da82b34f024c7b2aedba7e69e799b50e",
+      "even_terms": 44,
+      "odd_sha256": "41bdcdbaebbbf27c9584c8c92d86619f7d808f087e770efd23b8c88e05a70bbc",
+      "odd_terms": 27
+    }
+  },
+  "scope": "exact coefficient-field stratifier only; no leaf is excluded, no Taylor boundary is dropped, and no max12 or JC2 conclusion follows",
+  "separate_strata": [
+    "s=0 (double B root; split W0=0 versus W0!=0)",
+    "Norm(F)=0 (B meets f; retain until the actual-Keller firewall is applied)"
+  ],
+  "tail_sha256": {
+    "r1": "2b69e9de7171f6d36e8b829f779a516edbbd858efe8590b489198fd00420e862",
+    "r2": "89f14d6c4c87bfdd05686f14b954ed95c538fb30184dd606b2acd2ff2f27e1b0",
+    "r3": "f2d6fcc68f54a8706f8006acf486202fc10d7ec3e185cc499dbfa88f68947411",
+    "r4": "1b00e72f56ef539d52f49d63ea5af428bacc84ef8d43099433597e250bb18af5",
+    "r5": "1a94d04018f26444d56fe6093c6fda3e02d50567f2daf57bd1032d555dbe76ae",
+    "r6": "b4842f92db54265db4c6a81da527e23198da06a480663fbb7813cc52fa436c6b",
+    "r7": "cfa591979bc8bc4405d19362a71f6ef6330ef904b64879eb4edad49375074e2f",
+    "r8": "d727c41fa3f32b4bef54d22b8b33659d1077526a2e86b03f3ae0cbf228b1126f"
+  }
+}
+PASS-MAX12-ORDER3-CRITICAL-VALUE-NORM
+payload_sha256=a96165d3c673ddca777f08834d788abca1b3e9a0fd14347dea3f2e6bee1b4f57

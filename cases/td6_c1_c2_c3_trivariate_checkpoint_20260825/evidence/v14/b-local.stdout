@@ -1,0 +1,72 @@
+trivariate_first_pivot_order=B3-local-scalar
+center_stratum=C,V,U independent
+trivariate_transport rows=0;pivots=1;events=0
+trivariate_transport rows=250;pivots=251;events=0
+trivariate_transport rows=1500;pivots=684;events=0
+trivariate_transport rows=1750;pivots=934;events=0
+trivariate_transport rows=2000;pivots=1184;events=0
+trivariate_transport rows=2250;pivots=1434;events=0
+trivariate_transport rows=4750;pivots=1716;events=0
+trivariate_transport rows=5000;pivots=1966;events=1
+trivariate_transport rows=5250;pivots=2215;events=1
+trivariate_transport rows=5500;pivots=2465;events=2
+trivariate_transport rows=5750;pivots=2715;events=2
+trivariate_transport rows=6000;pivots=2965;events=2
+trivariate_transport rows=6250;pivots=3215;events=2
+trivariate_transport rows=6500;pivots=3465;events=2
+transport_rank=3470/3602
+transport_compatibility_count=0
+TD6 trivariate transport PASS
+transport_event_count=2
+transport_event[0]=4804,('f', 'X', -1, 2),193;num=(-C + 3*U^2);den=(1)
+transport_event[1]=5282,('g', 'X', 0, 1),1185;num=(2*U);den=(1)
+transport_minor_num_summary=(3, 2, 'e6b803230379a6308a4f44d9907adb36c1a89a202636c859811b5787e50d61da')
+transport_minor_den_summary=(0, 1, 'cba2fbeb391b1b01d10d62b5d049665afdea6dda577ce5ab23077b7cd21fa34b')
+transport_global_factorization_deferred=true
+first_rank=38/132
+first_incompatibility_count=0
+first_minor_num_summary=(17, 10, 'afc2e26a3ade83554f12a35b6782b9a9060631020804e9d295f24581f3f37650')
+first_minor_den_summary=(2, 2, '111b6e30bd6af87cc8c383d18798a7302f796ce01930fe6067f0d0af9bce6699')
+first_global_factorization_deferred=true
+TD6 trivariate genuine P12 PASS
+B3_local_precharged_relation_denominator_match=false
+B3_local_precharged_termwise_denominator_match=false
+B3_local_precharged_source_count_match=false
+raw_terms=2893
+raw_sha256=8d5c3550fbad393c1e13061d9934ed79e29261db378f1d344c4ea5e587e704da
+remainder_terms=1681
+remainder_degree=2
+remainder_sha256=862d52c74472e99e80ad1efacde442b833123bafac0a848e96db486c2ef7ec11
+expected_sha256=b9445255e063a82f827a01b7e18c3bdd2f3da41de14903a73fc2ae68121df7a0
+remainder_is_expected_constant=false
+remainder_is_constant_unit=false
+source_nonzero_rows=38
+source_multiplier_terms=2092
+source_relation_original_row_replay=true
+source_relation_plus_one_negative_control=true
+raw_denominator=(C*U - 3*U^3)
+raw_denominator_summary=(3, 2, '85fec0864be6430058dd3bbfe187027d41a99c70d0d1fae25356c8f08309e557')
+first_denominator=(C*U - 3*U^3)
+first_denominator_summary=(3, 2, '85fec0864be6430058dd3bbfe187027d41a99c70d0d1fae25356c8f08309e557')
+relation_denominator=(C^6*V^2*U^13 - 21/4*C^5*V^4*U^12 + 41/3*C^5*V^2*U^15 + 89/8*C^4*V^6*U^11 - 383/6*C^4*V^4*U^14 + 200/3*C^4*V^2*U^17 - 195/16*C^3*V^8*U^10 + 2813/24*C^3*V^6*U^13 - 519/2*C^3*V^4*U^16 + 150*C^3*V^2*U^19 + 233/32*C^2*V^10*U^9 - 5105/48*C^2*V^8*U^12 + 8957/24*C^2*V^6*U^15 - 448*C^2*V^4*U^18 + 515/3*C^2*V^2*U^21 - 9/4*C*V^12*U^8 + 767/16*C*V^10*U^11 - 11335/48*C*V^8*U^14 + 10543/24*C*V^6*U^17 - 4159/12*C*V^4*U^20 + 293/3*C*V^2*U^23 + 9/32*V^14*U^7 - 69/8*V^12*U^10 + 1781/32*V^10*U^13 - 6815/48*V^8*U^16 + 1033/6*V^6*U^19 - 199/2*V^4*U^22 + 22*V^2*U^25)
+relation_denominator_summary=(27, 28, '805868ca07fb906631e8427e8ff1b3cbf7fa14864044d1d46d29e25de0191b3a')
+termwise_denominator=(C^7*V^2*U^14 - 21/4*C^6*V^4*U^13 + 32/3*C^6*V^2*U^16 + 89/8*C^5*V^6*U^12 - 577/12*C^5*V^4*U^15 + 77/3*C^5*V^2*U^18 - 195/16*C^4*V^8*U^11 + 503/6*C^4*V^6*U^14 - 68*C^4*V^4*U^17 - 50*C^4*V^2*U^20 + 233/32*C^3*V^10*U^10 - 1675/24*C^3*V^8*U^13 + 259/12*C^3*V^6*U^16 + 661/2*C^3*V^4*U^19 - 835/3*C^3*V^2*U^22 - 9/4*C^2*V^12*U^9 + 835/32*C^2*V^10*U^12 + 995/12*C^2*V^8*U^15 - 2041/3*C^2*V^6*U^18 + 11969/12*C^2*V^4*U^21 - 1252/3*C^2*V^2*U^24 + 9/32*C*V^14*U^8 - 15/8*C*V^12*U^11 - 2821/32*C*V^10*U^14 + 13595/24*C*V^8*U^17 - 27497/24*C*V^6*U^20 + 3761/4*C*V^4*U^23 - 271*C*V^2*U^26 - 27/32*V^14*U^10 + 207/8*V^12*U^13 - 5343/32*V^10*U^16 + 6815/16*V^8*U^19 - 1033/2*V^6*U^22 + 597/2*V^4*U^25 - 66*V^2*U^28)
+termwise_denominator_summary=(30, 35, '50777d849809fd755f56b465838a1b5942a1673a1e1105e8faf3ec932d8a2f44')
+denominator_factorizations_deferred=false
+relation_denominator_factor=(1/96, [(C*U - V^2 + U^3, 1), (2*C*U - 3*V^2 + 2*U^3, 1), (3*C*U - 3*V^2 + 11*U^3, 1), (4*C*U - 3*V^2 + 4*U^3, 1), (4*C^2*U^2 - 4*C*V^2*U + 28*C*U^4 + V^4 - 24*V^2*U^3 + 24*U^6, 1), (V, 2), (U, 7)])
+termwise_denominator_factor=(1/96, [(C - 3*U^2, 1), (C*U - V^2 + U^3, 1), (2*C*U - 3*V^2 + 2*U^3, 1), (3*C*U - 3*V^2 + 11*U^3, 1), (4*C*U - 3*V^2 + 4*U^3, 1), (4*C^2*U^2 - 4*C*V^2*U + 28*C*U^4 + V^4 - 24*V^2*U^3 + 24*U^6, 1), (V, 2), (U, 8)])
+B3_local_T3_resultant=(64*V^4*U^10)
+B3_local_actual_resultant=(4*V^24*U^32 - 296/3*V^22*U^35 + 3712/9*V^20*U^38 + 19456/9*V^18*U^41 + 16384/9*V^16*U^44)
+B3_local_actual_resultant_factor=(4/9, [(V^2 - 16*U^3, 1), (V^2 + 2*U^3, 1), (9*V^4 - 96*V^2*U^3 - 128*U^6, 1), (V, 16), (U, 32)])
+B3_at_U_zero=(V^4)
+B3_local_denominator_unit_off_UHV=false
+certificate_chart_denominator=(C^10*V^2*U^17 - 21/4*C^9*V^4*U^16 + 5/3*C^9*V^2*U^19 + 89/8*C^8*V^6*U^15 - 5/6*C^8*V^4*U^18 - 130/3*C^8*V^2*U^21 - 195/16*C^7*V^8*U^14 - 391/24*C^7*V^6*U^17 + 223*C^7*V^4*U^20 - 20*C^7*V^2*U^23 + 233/32*C^6*V^10*U^13 + 1915/48*C^6*V^8*U^16 - 10381/24*C^6*V^6*U^19 - 214*C^6*V^4*U^22 + 1730/3*C^6*V^2*U^25 - 9/4*C^5*V^12*U^12 - 631/16*C^5*V^10*U^15 + 18335/48*C^5*V^8*U^18 + 26125/24*C^5*V^6*U^21 - 15089/6*C^5*V^4*U^24 + 134/3*C^5*V^2*U^27 + 9/32*C^4*V^14*U^11 + 147/8*C^4*V^12*U^14 - 4045/32*C^4*V^10*U^17 - 83285/48*C^4*V^8*U^20 + 79117/24*C^4*V^6*U^23 + 2723*C^4*V^4*U^26 - 2680*C^4*V^2*U^29 - 27/8*C^3*V^14*U^13 - 18*C^3*V^12*U^16 + 9075/8*C^3*V^10*U^19 - 8785/16*C^3*V^8*U^22 - 73255/8*C^3*V^6*U^25 + 9843*C^3*V^4*U^28 - 1380*C^3*V^2*U^31 + 243/16*C^2*V^14*U^15 - 891/4*C^2*V^12*U^18 - 50625/32*C^2*V^10*U^21 + 147555/16*C^2*V^8*U^24 - 63333/8*C^2*V^6*U^27 - 4230*C^2*V^4*U^30 + 4545*C^2*V^2*U^33 - 243/8*C*V^14*U^17 + 2997/4*C*V^12*U^20 - 34047/16*C*V^10*U^23 - 60705/16*C*V^8*U^26 + 135909/8*C*V^6*U^29 - 69309/4*C*V^4*U^32 + 5535*C*V^2*U^35 + 729/32*V^14*U^19 - 5589/8*V^12*U^22 + 144261/32*V^10*U^25 - 184005/16*V^8*U^28 + 27891/2*V^6*U^31 - 16119/2*V^4*U^34 + 1782*V^2*U^37)
+certificate_chart_denominator_factor=(1/96, [(C*U - V^2 + U^3, 1), (2*C*U - 3*V^2 + 2*U^3, 1), (3*C*U - 3*V^2 + 11*U^3, 1), (4*C*U - 3*V^2 + 4*U^3, 1), (4*C^2*U^2 - 4*C*V^2*U + 28*C*U^4 + V^4 - 24*V^2*U^3 + 24*U^6, 1), (V, 2), (C - 3*U^2, 4), (U, 11)])
+stratum_localization_killed=false
+whole_stratum_killed=false
+Rat3_inverse_count=7564
+generic_open_killed=false
+full_three_center_family_killed=false
+SP2_killed=false
+JC2_resolved=false
+TD6-C1-C2-C3-TRIVARIATE-GENERIC PASS

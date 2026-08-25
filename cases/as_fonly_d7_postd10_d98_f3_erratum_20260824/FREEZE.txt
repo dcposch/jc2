@@ -1,0 +1,29 @@
+AS F-ONLY POST-D10 D9/D8 OMITTED FROBENIUS CROSS-CARRY ERRATUM
+date: 2026-08-24
+status: SOURCE-HONEST RETRACTION; EXACT INTEGER WITNESSES PASS; HOSTILE REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256: 26dd0908295bfbcc36ad2f0efe59b645ce1dd11411fd88ab8e37337a74fc0d7d
+manifest_sha256: 5a3d0f9f4587064988cfa7ae3a6be399b4d8f24908d0033367e220f07d935978
+witness_replay_sha256: 0bc6d3913fedf322a48a8d79acef1af56d6b3b41f078aa49ecf1b60bc0b463d8
+
+quarantined_predecessor_preserved_unchanged:
+  report_sha256: ff85614982fb26a7d8aba2859c7d1be6e3274ff8170114f23b247b5172fd0fc9
+  manifest_sha256: 1efda261bcd531fd4352c8b3f27ee2cafd77b7bf36dd31a9379d9083733a8f2b
+  freeze_sha256: f03fc06930c12398f714d5af60ed93374ffa80226bf1504d9429747cbdd6fa60
+
+replay:
+  python3 replay_omitted_frobenius_carry.py
+  shasum -a 256 -c MANIFEST.sha256
+
+verdict:
+  The quarantined generator omitted [K_Frob/3] mod 3 from its D8 vertical
+  and D9/D8 g-endpoint inhomogeneous columns.  Its compatibility counts and
+  hashes are retracted.  The vertical D9 global section and vertical D8
+  coefficient-matrix/rank-locus claims survive; affected columns must be
+  regenerated with all six Frobenius variables before reuse.
+
+scope:
+  Exact correction of the stated source omission only.  No corrected census,
+  next-carry, lift/no-lift, full D7, characteristic-zero, counterexample, or
+  JC2 claim is made here.

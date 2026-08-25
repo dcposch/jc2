@@ -1,0 +1,112 @@
+{
+  "balanced_stratum": {
+    "checked_integer_strata": 10660,
+    "degree_h": "3*(e+1)",
+    "degrees": "deg(A)=deg(B)=D",
+    "e": "ord_infinity(T-T(infinity))",
+    "passport": "alpha over 0; beta over infinity; (e,1^(D-e)) over T(infinity)",
+    "riemann_hurwitz": "2*D-2",
+    "support_count": "r+s=e+1"
+  },
+  "case": "max12_912_order3_terminal_belyi_classification_20260824",
+  "cyclic_positive_controls": [
+    {
+      "W_degree": 0,
+      "degree": 1,
+      "h_is_cube": false,
+      "h_multiplicities": [
+        2,
+        4
+      ]
+    },
+    {
+      "W_degree": 2,
+      "degree": 2,
+      "h_is_cube": false,
+      "h_multiplicities": [
+        1,
+        5
+      ]
+    },
+    {
+      "W_degree": 4,
+      "degree": 3,
+      "h_is_cube": true,
+      "h_multiplicities": [
+        0,
+        6
+      ]
+    }
+  ],
+  "divisor_consequence": "Z=T^3 in C(x)",
+  "finite_polynomiality": {
+    "A_root_alpha": "ord(h)=3-alpha, hence alpha<=3",
+    "B_root_beta": "ord(h)=beta+3",
+    "critical_support": "every finite root of W lies in A*B"
+  },
+  "polynomial_power_controls": [
+    {
+      "degree": 1,
+      "degree_h": 2,
+      "h_is_cube_when_residual_degree_allowed": false,
+      "three_divides_degree_h": false
+    },
+    {
+      "degree": 2,
+      "degree_h": 1,
+      "h_is_cube_when_residual_degree_allowed": false,
+      "three_divides_degree_h": false
+    },
+    {
+      "degree": 3,
+      "degree_h": 0,
+      "h_is_cube_when_residual_degree_allowed": true,
+      "three_divides_degree_h": true
+    }
+  ],
+  "rational_reconstruction": {
+    "T": "A/B with gcd(A,B)=1",
+    "W": "A'*B-A*B'",
+    "h": "constant*A^2*B^4/W^3"
+  },
+  "reciprocal_power_controls": [
+    {
+      "degree": 1,
+      "degree_h": 4,
+      "h_is_cube": false,
+      "three_divides_degree_h": false
+    },
+    {
+      "degree": 2,
+      "degree_h": 5,
+      "h_is_cube": false,
+      "three_divides_degree_h": false
+    },
+    {
+      "degree": 3,
+      "degree_h": 6,
+      "h_is_cube": true,
+      "three_divides_degree_h": true
+    },
+    {
+      "degree": 6,
+      "degree_h": 9,
+      "h_is_cube": true,
+      "three_divides_degree_h": true
+    },
+    {
+      "degree": 9,
+      "degree_h": 12,
+      "h_is_cube": true,
+      "three_divides_degree_h": true
+    }
+  ],
+  "scope": "classification of rational solutions to the descended terminal identity with polynomial h; no coefficient-fibre realization, Taylor integrality, all-(9,12), maximum-twelve, or JC2 conclusion",
+  "terminal_constant_check": "for Z=T^3 and h=T^2/(T')^3, h^3*(Z')^9/Z^8=3^9",
+  "terminal_input": "nu^10*h^3*(Z')^9=j^9*Z^8",
+  "unequal_degree_strata": {
+    "classification": "polynomial or reciprocal pure power",
+    "noncube_with_3_divides_degree_h": "EMPTY",
+    "support_count": "r+s=1"
+  }
+}

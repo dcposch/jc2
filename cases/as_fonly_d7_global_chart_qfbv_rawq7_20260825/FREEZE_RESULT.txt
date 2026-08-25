@@ -1,0 +1,43 @@
+AS F-only D7 raw-Q7 global accepted-chart exclusion — frozen producer
+
+Report:
+  xmodel/as-fonly-d7-global-chart-rawq7-exclusion-20260825.md
+  SHA-256 839bbdd0eba339d46b867a45d69a160987148695d9f1a1e584bba3331d4208fa
+
+Manifest:
+  cases/as_fonly_d7_global_chart_qfbv_rawq7_20260825/MANIFEST.sha256
+  SHA-256 6cc08cdf76755c6fd434c883319d9686b43a43af8461458544c7cae088c8d188
+
+Full custody:
+  cases/as_fonly_d7_global_chart_qfbv_rawq7_20260825/results_box02_full_custody/full_custody.tar.zst
+  SHA-256 e61d2c3dfb5aa1254d0df5fdb05156d3da51db8164e6874b2b5506360ec9a9ab
+
+Exact frozen result:
+  The full 13-trit accepted Q9 chart has no assignment of 32 raw Q8 and
+  18 raw Q7 digits satisfying all 23 Q9, 22 Q8, 19 Q7, and 46 terminal-high
+  rows.  The source formula uses no fixed Q7 matrix premise.
+
+Certificate:
+  SMT2 SHA-256
+    46b755e1e274203f838ad663675075379f4df93068e0a7f0028728178edbb417
+  CNF SHA-256
+    19c1551cb284c6f55a32dff2f703426f15eb1001f229f0853c59330a59db79d6
+  DRAT SHA-256
+    5b36f87705de3ba823b44797fc635ec2073a206b3428fb669bd3f5a884387350
+  drat-trim: s VERIFIED
+
+Positive control:
+  Omitting only the terminal rows is SAT; independent integer source replay
+  passes every predecessor row, recursive/literal /243 agreement, and finds
+  one nonzero terminal coefficient.
+
+Strict scope:
+  Frozen accepted aligned F-only D7 chart only.  Exhaustion of all original
+  boundary components is not yet proved.  No all-depth/no-lift/JC inference.
+
+Verification:
+  shasum -a 256 -c \
+    cases/as_fonly_d7_global_chart_qfbv_rawq7_20260825/MANIFEST.sha256
+
+Full replay is AWS-only under the pinned source and commands in the custody
+archive.

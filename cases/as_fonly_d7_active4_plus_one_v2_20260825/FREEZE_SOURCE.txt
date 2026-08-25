@@ -1,0 +1,25 @@
+AS F-ONLY D7 ACTIVE4-PLUS-ONE V2 SOURCE FREEZE
+date: 2026-08-25Z
+status: PREREGISTERED OUTPUT-ROUTING CORRECTION; NO RESULT YET
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+v1_compiler_sha256:
+  f039af4bee4e3de03fc53c068fda3b22b8b7f8bb80eb0b7b44a4f757bbce6833
+v2_wrapper_sha256:
+  85fc9225ca1ac8ed309f16b30c7ab90669c05c01a73d33ef319bfb56751441f9
+unchanged_aggregate_sha256:
+  86e95e890e1733392b7d1a8f8f029fc59d52fbd5f9d5929a25fc74987ec4d00f
+source_closure_stream_sha256:
+  94dbecc80a452a8a76ce48c3a4a6fd38ddc13406bd7ac795a7bbb4749264a20b
+runner_manifest_stream_sha256:
+  43c7269ce4e0f6a7ffc507f404b20eb18c8ef1f17f2a897d59936cf1c7f10fa0
+source_package_files_sha256:
+  d3ee10dd9eb2367c0502c0def8110ee5cf9846129c56d89a420a5ec8e10aa6c3
+
+correction:
+  Save requested OUTPUT_JSON before the pinned V1 bootstrap import and write
+  the final shard JSON there.  No mathematical code or discriminator changes.
+
+scope:
+  Same 28 active-four-plus-one slices as V1.  V1 remains a failed-aggregation
+  negative control and is not result evidence.

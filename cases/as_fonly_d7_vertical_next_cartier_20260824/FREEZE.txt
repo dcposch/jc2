@@ -1,0 +1,32 @@
+AS F-ONLY P=3 D=7 VERTICAL FIRST FOLLOWING CARTIER GATE
+date: 2026-08-24
+status: PRODUCER EXACT; FULL PORTABLE REPLAY PASS; HOSTILE REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256: cfd77aacacf5c47c74e001c26cfb5369e69b7545bd1d301627135f06fd30af15
+manifest_sha256: 0c0d88b80038ed266bc57431cde7d395ebe592497ccdd0e9830480d26a41551f
+source_output_sha256: 1020cb6157c7eeb4e3def9c37f4dc94072392e25666aa0f8df820fc81e29b903
+compiler_output_sha256: e005fdf996d52ab5256cffe7726d8863b88c486882a17fa24075381e84761e24
+
+consumed_full_C5_report_sha256:
+  907dcc72523eb228a7ac6581826460601030e56c996d4df583b2fad274f09a6e
+
+deterministic_internal_sha256:
+  lower_cartier_rows: c46461378a6b3c626932676428fe07fae1e6eb1d7e0cadfb63802ba2ca9a09e9
+  compatible_literal_states: 71ed86c8ed086e46a0b3bba6347a3a7553e5b2a3181b8e938c6a6861fdcf6d79
+
+replay:
+  ./replay_all.sh
+  shasum -a 256 -c MANIFEST.sha256
+
+verdict:
+  The only following de Rham obstruction is
+  c5_3+d5_2+2*h^2=0.  Appending it gives a 20x17 affine gate with
+  23283/1594323 compatible structural-plus-first-Frobenius states, fibre
+  histogram 0^208,3^180,9^1435,27^364, and visible current-digit solution
+  total 1085103.  Every compatible point admits a cap-seven next digit.
+
+scope:
+  One finite next-digit lift on the charged vertical branch.  Visible counts
+  omit all spectator/kernel choices.  No later carry, recurrence, all-depth
+  lift/no-lift, characteristic-zero, counterexample, or JC2 claim.

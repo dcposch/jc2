@@ -1,0 +1,85 @@
+{
+  "B_discriminant": "-1296*nu*(3*nu*p+10*r8)",
+  "case": "max12_912_order3_nu_belyi_collision_20260824",
+  "exact_inputs": {
+    "derivative": "beta_z=g^2*B/f^5",
+    "spectral_coefficient": "[z^18](g^3-f^4)=-3*nu, nu in C*",
+    "terminal_row": "9*r8'=j/u != 0",
+    "wronskian": "B=3*f*g_z-4*g*f_z=54*nu*z^2+18*nu*p+60*r8"
+  },
+  "full_absorption_passports": {
+    "double_B_root_in_W": {
+      "degree_check": 36,
+      "over_0": "3^12",
+      "over_1": [
+        18,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "over_infinity": "4^9",
+      "riemann_hurwitz": 70
+    },
+    "two_distinct_B_roots_in_W": {
+      "degree_check": 36,
+      "over_0": "3^12",
+      "over_1": [
+        18,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "over_infinity": "4^9",
+      "riemann_hurwitz": 70
+    }
+  },
+  "isotrivial_scaling": {
+    "consequence": "lambda^18 in C*, hence lambda in C*",
+    "equation": "C18*lambda^-18=-3*nu",
+    "normal_form": [
+      "f=lambda^-9*F(lambda*z)",
+      "g=lambda^-12*G(lambda*z)"
+    ],
+    "z18_scaling_exponent": -18
+  },
+  "producer_conclusion": "No actual Keller trajectory survives when the complete quadratic B-ramification divisor is absorbed by W=0.",
+  "scope_retained": [
+    "no B root in W",
+    "exactly one simple B root in W",
+    "double B root not in W",
+    "equal non-1 critical values at two distinct B roots",
+    "all Taylor boundaries",
+    "other invariant loads and the order-one core"
+  ],
+  "spectral_top_exponents": [
+    18,
+    0,
+    -18
+  ]
+}

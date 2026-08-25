@@ -1,0 +1,40 @@
+ring r=3,(P,Q,s,w,h,fa,fb,fv,X0,X1,X2),dp;
+option(redSB);
+ideal I=
+  2*P*X0+2*P*fa*s+h^3*s^3,
+  2*P*X1+2*P*fa*w+2*P*fb*s+2*P*fv*h*s+2*Q*X0+2*Q*fa*s+2*fv*h^3*s^2,
+  2*P*X2+P*fb*fv+2*P*fb*w+P*fv^2*h+2*P*fv*h*w+2*Q*X1+2*Q*fa*w+2*Q*fb*s+2*Q*fv*h*s+fa*fb^2+2*fa*fb*fv*h+fa*fv^2*h^2+fv*h^3*s*w,
+  2*Q*X2+Q*fb*fv+2*Q*fb*w+Q*fv^2*h+2*Q*fv*h*w+2*fv*h^3*w^2+h^3*w^3,
+  2*X0*h^3+fa*h^3*s,
+  2*X1*h^3+fa*h^3*w+2*fa*s+fb*h^3*s+fv*h^4*s,
+  2*X2*h^3+2*fa*w+2*fb*fv*h^3+fb*h^3*w+2*fv^2*h^4+fv*h^4*w;
+
+// The two global dimension-five primes coming from the localized dimension-
+// four components.
+ideal G6=s,fa,fv-w,X0,X1,X2;
+ideal G8=s,w,fb+h*fv,X0,X1,X2;
+ideal RG6=reduce(I,std(G6));
+ideal RG8=reduce(I,std(G8));
+if(size(RG6)!=0 || size(RG8)!=0){print("FAIL-global-prime-incidence");quit;}
+
+// Special-fibre primes H2,H3,H4.  H2 is exactly the fibre of G8.  H3 and
+// H4 are not contained in either possible dimension-five global component.
+ideal H2=h,X2,X1,X0,fb,w,s;
+ideal H3=h,X1,X0,w,s,Q,fa*fb^2+P*fb*fv-P*X2;
+ideal H4=h,X0,w,s,P,fb*fv-X2,Q*fv*X1-fa*fb*X2,fa*fb^2-Q*X1;
+ideal H2f=G8+ideal(h);
+ideal a=reduce(H2,std(H2f));
+ideal b=reduce(H2f,std(H2));
+if(size(a)!=0 || size(b)!=0){print("FAIL-H2-fibre-equality");quit;}
+
+ideal r36=reduce(G6,std(H3)); ideal r38=reduce(G8,std(H3));
+ideal r46=reduce(G6,std(H4)); ideal r48=reduce(G8,std(H4));
+if(size(r36)==0 || size(r38)==0 || size(r46)==0 || size(r48)==0){
+  print("FAIL-boundary-noncontainment");quit;
+}
+print("global_dim5_dims");dim(std(G6));dim(std(G8));
+print("H2_fibre_equal");1;
+print("H3_noncontainment_remainder_sizes");size(r36);size(r38);
+print("H4_noncontainment_remainder_sizes");size(r46);size(r48);
+print("PASS-D7-BOUNDARY-DIRECT");
+quit;

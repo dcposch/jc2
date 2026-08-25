@@ -373,8 +373,13 @@ campaign from paying twice for the same failed idea.
   unit basis before rational reconstruction while printing a characteristic-0
   header. A char-0-header `[1]` is only first-prime trace evidence unless an
   independently checked exact rational certificate is present. See `AUDIT.md`.
-- Never run memory-heavy multi-Gröbner jobs on the local machine. Follow
-  `ops/FLEET.md` for machine inventory, caps, telemetry, and kill safety.
+- Run all heavy or uncertain-duration campaign computation on AWS, never on
+  the local machine. This includes CAS/solver jobs, Lean builds, and long or
+  potentially multi-GB exact-Python replays/enumerations. Reserve local
+  execution for editing, orchestration, hashing, status checks, model-review
+  adapters without compute tools, and genuinely short low-memory validation.
+  Follow `ops/FLEET.md` for machine inventory, shipping, caps, telemetry, and
+  kill safety.
 - Third-party tools may mutate shared CLI configuration; adapters must isolate
   or sanitize it, and a new/updated adapter gets a smoke test before use.
 - Lane launchers take prompt files, reject duplicate live tags, record their

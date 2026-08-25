@@ -1,0 +1,106 @@
+LIB "elim.lib";
+ring S=0,(w,c,d2,d4,x1,x3,x5),dp;
+poly se1=-4/9*w*c*d4^2-8/9*c*x3*x5+4/3*c*x5^2+4/9*d2*x3-8/9*d2*x5+4/9*d4*x1-8/9*d4*x3-4/27*d4*x5^2+4/3*d4*x5+4/9*x5;
+poly se2=2/3*w*c^2*x5^2-8/9*w*c*d2*x5-8/9*w*c*d4*x3+8/3*w*c*d4*x5+2/9*w*d2^2-8/9*w*d2*d4-4/27*w*d4^2*x5+2/3*w*d4^2+4/9*w*d4+4/9*x1*x3-8/9*x1*x5-4/9*x3^2-4/27*x3*x5^2+4/3*x3*x5+20/81*x5^3-8/9*x5^2;
+poly se3=4/3*w*c^2*d4*x5-8/9*w*c*d2*d4+32/27*w*c*d4^2-4/81*w*d4^3-8/9*c*x1*x5-4/9*c*x3^2+64/27*c*x3*x5+20/81*c*x5^3-20/9*c*x5^2+4/9*d2*x1-20/27*d2*x3-4/27*d2*x5^2+28/27*d2*x5-20/27*d4*x1-8/27*d4*x3*x5+28/27*d4*x3+56/81*d4*x5^2-4/3*d4*x5+4/9*x3-20/27*x5;
+poly se4=14/27*w^2*c^2*d4^2+28/27*w*c^2*x3*x5-16/9*w*c^2*x5^2-20/27*w*c*d2*x3+16/9*w*c*d2*x5-20/27*w*c*d4*x1+16/9*w*c*d4*x3+56/81*w*c*d4*x5^2-28/9*w*c*d4*x5-20/27*w*c*x5-8/27*w*d2^2-8/27*w*d2*d4*x5+20/27*w*d2*d4+4/9*w*d2-4/27*w*d4^2*x3+52/81*w*d4^2*x5-4/9*w*d4^2-16/27*w*d4+2/9*x1^2-16/27*x1*x3-4/27*x1*x5^2+20/27*x1*x5-4/27*x3^2*x5+10/27*x3^2+52/81*x3*x5^2-8/9*x3*x5+5/243*x5^4-140/243*x5^3+14/27*x5^2;
+poly se5=-4/9*w*c^3*x5^2+20/27*w*c^2*d2*x5+20/27*w*c^2*d4*x3-20/9*w*c^2*d4*x5-8/27*w*c*d2^2+32/27*w*c*d2*d4+16/27*w*c*d4^2*x5-76/81*w*c*d4^2-16/27*w*c*d4-4/27*w*d2*d4^2+16/81*w*d4^3-16/27*c*x1*x3+32/27*c*x1*x5+16/27*c*x3^2+44/81*c*x3*x5^2-152/81*c*x3*x5-224/243*c*x5^3+4/3*c*x5^2-4/9*d2*x1-20/81*d2*x3*x5+40/81*d2*x3+40/81*d2*x5^2-44/81*d2*x5-20/81*d4*x1*x5+40/81*d4*x1-4/27*d4*x3^2+88/81*d4*x3*x5-44/81*d4*x3+16/243*d4*x5^3-328/243*d4*x5^2+16/27*d4*x5+4/9*x1-4/9*x3-8/81*x5^2+40/81*x5;
+poly se6=-4/9*w^2*c^3*d4*x5+4/9*w^2*c^2*d2*d4-16/27*w^2*c^2*d4^2+4/27*w^2*c*d4^3+4/9*w*c^2*x1*x5+2/9*w*c^2*x3^2-32/27*w*c^2*x3*x5-28/81*w*c^2*x5^3+10/9*w*c^2*x5^2-4/9*w*c*d2*x1+20/27*w*c*d2*x3+32/81*w*c*d2*x5^2-28/27*w*c*d2*x5+20/27*w*c*d4*x1+8/9*w*c*d4*x3*x5-28/27*w*c*d4*x3-164/81*w*c*d4*x5^2+4/3*w*c*d4*x5-4/9*w*c*x3+20/27*w*c*x5-8/81*w*d2^2*x5+4/27*w*d2^2-20/81*w*d2*d4*x3+64/81*w*d2*d4*x5-8/27*w*d2*d4-8/27*w*d2-8/81*w*d4^2*x1+4/9*w*d4^2*x3+2/27*w*d4^2*x5^2-80/81*w*d4^2*x5+4/27*w*d4^2-4/27*w*d4*x5+8/27*w*d4+2/9*w-4/27*x1^2-16/81*x1*x3*x5+8/27*x1*x3+28/81*x1*x5^2-8/27*x1*x5-4/81*x3^3+4/9*x3^2*x5-4/27*x3^2+4/81*x3*x5^3-80/81*x3*x5^2+8/27*x3*x5-20/243*x5^4+152/243*x5^3-4/27*x5^2;
+poly se7=-8/81*w^2*c^3*d4^2-16/81*w*c^3*x3*x5+8/27*w*c^3*x5^2+20/81*w*c^2*d2*x3-44/81*w*c^2*d2*x5+20/81*w*c^2*d4*x1-44/81*w*c^2*d4*x3-164/243*w*c^2*d4*x5^2+8/9*w*c^2*d4*x5+20/81*w*c^2*x5+16/81*w*c*d2^2+16/27*w*c*d2*d4*x5-40/81*w*c*d2*d4-8/27*w*c*d2+8/27*w*c*d4^2*x3-104/81*w*c*d4^2*x5+208/729*w*c*d4^2+32/81*w*c*d4-8/81*w*d2^2*d4+8/27*w*d2*d4^2+8/243*w*d4^3*x5-52/243*w*d4^3-4/81*w*d4^2-4/27*c*x1^2+32/81*c*x1*x3+20/81*c*x1*x5^2-40/81*c*x1*x5+8/27*c*x3^2*x5-20/81*c*x3^2-304/243*c*x3*x5^2+416/729*c*x3*x5-40/729*c*x5^4+820/729*c*x5^3-76/243*c*x5^2-4/27*d2*x1*x5+4/27*d2*x1-8/81*d2*x3^2+136/243*d2*x3*x5-100/729*d2*x3+8/243*d2*x5^3-140/243*d2*x5^2+92/729*d2*x5-4/27*d4*x1*x3+112/243*d4*x1*x5-100/729*d4*x1+8/27*d4*x3^2+8/81*d4*x3*x5^2-296/243*d4*x3*x5+92/729*d4*x3-152/729*d4*x5^3+2368/2187*d4*x5^2-28/243*d4*x5-4/27*x1-8/81*x3*x5+4/27*x3+40/243*x5^2-100/729*x5;
+poly se8=-4/81*w^2*c^3*d2*x5-4/81*w^2*c^3*d4*x3+4/27*w^2*c^3*d4*x5+4/81*w^2*c^2*d2^2-16/81*w^2*c^2*d2*d4-76/243*w^2*c^2*d4^2*x5+34/243*w^2*c^2*d4^2+8/81*w^2*c^2*d4+4/27*w^2*c*d2*d4^2-16/81*w^2*c*d4^3+1/243*w^2*d4^4+8/81*w*c^2*x1*x3-16/81*w*c^2*x1*x5-8/81*w*c^2*x3^2-8/27*w*c^2*x3*x5^2+68/243*w*c^2*x3*x5+364/729*w*c^2*x5^3-40/243*w*c^2*x5^2+4/27*w*c*d2*x1+68/243*w*c*d2*x3*x5-40/243*w*c*d2*x3-44/81*w*c*d2*x5^2+124/729*w*c*d2*x5+68/243*w*c*d4*x1*x5-40/243*w*c*d4*x1+4/27*w*c*d4*x3^2-280/243*w*c*d4*x3*x5+124/729*w*c*d4*x3-76/729*w*c*d4*x5^3+1048/729*w*c*d4*x5^2-40/243*w*c*d4*x5-4/27*w*c*x1+4/27*w*c*x3+20/243*w*c*x5^2-40/243*w*c*x5-4/81*w*d2^2*x3+32/243*w*d2^2*x5-16/729*w*d2^2-8/81*w*d2*d4*x1+68/243*w*d2*d4*x3+4/81*w*d2*d4*x5^2-128/243*w*d2*d4*x5+28/729*w*d2*d4-4/81*w*d2*x5+4/81*w*d2+32/243*w*d4^2*x1+4/81*w*d4^2*x3*x5-68/243*w*d4^2*x3-4/27*w*d4^2*x5^2+1004/2187*w*d4^2*x5-4/243*w*d4^2-4/81*w*d4*x3+4/27*w*d4*x5-32/729*w*d4-4/81*x1^2*x5+2/81*x1^2-4/81*x1*x3^2+64/243*x1*x3*x5-32/729*x1*x3+4/243*x1*x5^3-20/81*x1*x5^2+28/729*x1*x5+4/81*x3^3+2/81*x3^2*x5^2-68/243*x3^2*x5+14/729*x3^2-8/81*x3*x5^3+1004/2187*x3*x5^2-8/243*x3*x5-4/2187*x5^5+190/2187*x5^4-1528/6561*x5^3+10/729*x5^2;
+ideal SI=se1,se3,se5,se7,se2,se4;
+ring T=(0,c,b),(t,W,U,X1,X3,X5),(dp(6));
+option(redSB);
+poly q;poly q0;
+print("Q8-W0-RANKDROP-WEIGHTED-REES");
+print("engine=slimgb");
+print("order=block");
+map psi1=S,t^1*W,c,b+1+t*U,b,t*X1,t*X3,t*X5;
+ideal J1=psi1(SI);
+ideal In1;
+for(int i1=1;i1<=size(J1);i1++){q=J1[i1];while(subst(q,t,0)==0){q=q/t;}q0=subst(q,t,0);In1=In1,q0;}
+ideal LeadLoad1=W*X5*(X3-2*X5);
+list LW1=sat(In1,LeadLoad1);ideal CW1=LW1[1];
+ideal GW1=slimgb(CW1);
+int W1empty=0;if(reduce(1,GW1)==0){W1empty=1;}
+print("weight_m=1 loaded_initial_empty="+string(W1empty));
+print("WEIGHT_1_BASIS_BEGIN");GW1;print("WEIGHT_1_BASIS_END");
+map psi2=S,t^2*W,c,b+1+t*U,b,t*X1,t*X3,t*X5;
+ideal J2=psi2(SI);
+ideal In2;
+for(int i2=1;i2<=size(J2);i2++){q=J2[i2];while(subst(q,t,0)==0){q=q/t;}q0=subst(q,t,0);In2=In2,q0;}
+ideal LeadLoad2=W*X5*(X3-2*X5);
+list LW2=sat(In2,LeadLoad2);ideal CW2=LW2[1];
+ideal GW2=slimgb(CW2);
+int W2empty=0;if(reduce(1,GW2)==0){W2empty=1;}
+print("weight_m=2 loaded_initial_empty="+string(W2empty));
+print("WEIGHT_2_BASIS_BEGIN");GW2;print("WEIGHT_2_BASIS_END");
+poly E2q=J2[5];while(subst(E2q,t,0)==0){E2q=E2q/t;}
+poly E2in=subst(E2q,t,0);
+ideal Ker2=U,X1,X3-X5;
+ideal GKer2=slimgb(Ker2);
+int generic_slope2_e2_identity=0;if(reduce(E2in-2/9*W,GKer2)==0){generic_slope2_e2_identity=1;}
+print("generic_slope2_e2_identity="+string(generic_slope2_e2_identity));
+print("generic_slope2_e2_normal_form="+string(reduce(E2in,GKer2)));
+map psi3=S,t^3*W,c,b+1+t*U,b,t*X1,t*X3,t*X5;
+ideal J3=psi3(SI);
+ideal In3;
+for(int i3=1;i3<=size(J3);i3++){q=J3[i3];while(subst(q,t,0)==0){q=q/t;}q0=subst(q,t,0);In3=In3,q0;}
+ideal LeadLoad3=W*X5*(X3-2*X5);
+list LW3=sat(In3,LeadLoad3);ideal CW3=LW3[1];
+ideal GW3=slimgb(CW3);
+int W3empty=0;if(reduce(1,GW3)==0){W3empty=1;}
+print("weight_m=3 loaded_initial_empty="+string(W3empty));
+print("WEIGHT_3_BASIS_BEGIN");GW3;print("WEIGHT_3_BASIS_END");
+map psi4=S,t^4*W,c,b+1+t*U,b,t*X1,t*X3,t*X5;
+ideal J4=psi4(SI);
+ideal In4;
+for(int i4=1;i4<=size(J4);i4++){q=J4[i4];while(subst(q,t,0)==0){q=q/t;}q0=subst(q,t,0);In4=In4,q0;}
+ideal LeadLoad4=W*X5*(X3-2*X5);
+list LW4=sat(In4,LeadLoad4);ideal CW4=LW4[1];
+ideal GW4=slimgb(CW4);
+int W4empty=0;if(reduce(1,GW4)==0){W4empty=1;}
+print("weight_m=4 loaded_initial_empty="+string(W4empty));
+print("WEIGHT_4_BASIS_BEGIN");GW4;print("WEIGHT_4_BASIS_END");
+map psi5=S,t^5*W,c,b+1+t*U,b,t*X1,t*X3,t*X5;
+ideal J5=psi5(SI);
+ideal In5;
+for(int i5=1;i5<=size(J5);i5++){q=J5[i5];while(subst(q,t,0)==0){q=q/t;}q0=subst(q,t,0);In5=In5,q0;}
+ideal LeadLoad5=W*X5*(X3-2*X5);
+list LW5=sat(In5,LeadLoad5);ideal CW5=LW5[1];
+ideal GW5=slimgb(CW5);
+int W5empty=0;if(reduce(1,GW5)==0){W5empty=1;}
+print("weight_m=5 loaded_initial_empty="+string(W5empty));
+print("WEIGHT_5_BASIS_BEGIN");GW5;print("WEIGHT_5_BASIS_END");
+map psi6=S,t^6*W,c,b+1+t*U,b,t*X1,t*X3,t*X5;
+ideal J6=psi6(SI);
+ideal In6;
+for(int i6=1;i6<=size(J6);i6++){q=J6[i6];while(subst(q,t,0)==0){q=q/t;}q0=subst(q,t,0);In6=In6,q0;}
+ideal LeadLoad6=W*X5*(X3-2*X5);
+list LW6=sat(In6,LeadLoad6);ideal CW6=LW6[1];
+ideal GW6=slimgb(CW6);
+int W6empty=0;if(reduce(1,GW6)==0){W6empty=1;}
+print("weight_m=6 loaded_initial_empty="+string(W6empty));
+print("WEIGHT_6_BASIS_BEGIN");GW6;print("WEIGHT_6_BASIS_END");
+map psi7=S,t^7*W,c,b+1+t*U,b,t*X1,t*X3,t*X5;
+ideal J7=psi7(SI);
+ideal In7;
+for(int i7=1;i7<=size(J7);i7++){q=J7[i7];while(subst(q,t,0)==0){q=q/t;}q0=subst(q,t,0);In7=In7,q0;}
+ideal LeadLoad7=W*X5*(X3-2*X5);
+list LW7=sat(In7,LeadLoad7);ideal CW7=LW7[1];
+ideal GW7=slimgb(CW7);
+int W7empty=0;if(reduce(1,GW7)==0){W7empty=1;}
+print("weight_m=7 loaded_initial_empty="+string(W7empty));
+print("WEIGHT_7_BASIS_BEGIN");GW7;print("WEIGHT_7_BASIS_END");
+map psi8=S,t^8*W,c,b+1+t*U,b,t*X1,t*X3,t*X5;
+ideal J8=psi8(SI);
+ideal In8;
+for(int i8=1;i8<=size(J8);i8++){q=J8[i8];while(subst(q,t,0)==0){q=q/t;}q0=subst(q,t,0);In8=In8,q0;}
+ideal LeadLoad8=W*X5*(X3-2*X5);
+list LW8=sat(In8,LeadLoad8);ideal CW8=LW8[1];
+ideal GW8=slimgb(CW8);
+int W8empty=0;if(reduce(1,GW8)==0){W8empty=1;}
+print("weight_m=8 loaded_initial_empty="+string(W8empty));
+print("WEIGHT_8_BASIS_BEGIN");GW8;print("WEIGHT_8_BASIS_END");
+print("Q8_W0_RANKDROP_WEIGHTED_REES_PASS");
+exit;

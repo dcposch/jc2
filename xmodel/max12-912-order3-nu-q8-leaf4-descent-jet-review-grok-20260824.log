@@ -1,0 +1,15 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the charged report, the case directory, and the pinned freeze so the review is grounded in those artifacts only.I'll load the report, case artifacts, and a recent hostile-review template so the write-up matches this repo's style.Next I’ll pin the parent jet, the reviewed formal-branch and critical-value-norm reports, and verify hashes before reconstructing the algebra.I’ll inspect the parent jet machinery, the genus-five `R6` formula, and a previous GAP review so the reconstruction can actually attack the claims.I’ll verify the charged hashes and run the registered replay, then reconstruct the jet and unit claims independently.Charged hashes match. Next I’ll run the registered replay and an independent reconstruction that checks denominators, evenness, and the `R6` defect.Replay matched. I’ll now reconstruct the jet independently and attack the denominators, evenness, discriminant identity, and `R6` defect.Wrote `xmodel/max12-912-order3-nu-q8-leaf4-descent-jet-review-grok-20260824.md`. Charged hashes matched, the registered replay matched, and an independent reconstruction over `E=Q[v]/(Q8)` re-solved the jet, re-expanded `disc_T C=4s E^2`, and Euclidean-certified every named denominator and `theta`-derivative.
+
+The six attacks all hold at the stated formal-local scope:
+
+1. `theta`, `pi`, `q`, and `S` have Kummer character zero and need no ninth or tenth root. `S=pi^{10} q^9` is algebraic off parity. (`pi` and `S` have nonzero geometric weight; the producer claimed character zero, not weight zero.)
+2. `p^9 R6(v)-nu` vanishes on parity and fails by a unit times `t^2` on the second branch. That formula is not used off parity.
+3. `tau` and `Delta` come from the pair-norm with no chosen Wronskian root. `s`, `Norm(F)`, `Norm(W)`, `E/t`, `D1`, `T1`, `Q1`, `S0`, `S1` are units at all eight contacts.
+4. `Delta` is even, vanishes at the node, and has unit derivative in `theta`, so it is an étale local parameter on the parity-involution quotient. `dS/dDelta` is a unit.
+5. `9 r8'=j/u`, `r8=u^2 R`, `u^3=h` imply `h^3(S')^9=j^9 S^8` as a necessary identity, not a converse.
+6. No numbered claim promotes a fibre identity to a trajectory, global quotient, Taylor constraint, or punctured exclusion.
+
+No illicit off-parity `r6=p^9 R6(v)`, no chosen root, no hidden vanishing denominator, and no missing ninth-root descent.
+
+**Verdict.** `CONFIRMED`

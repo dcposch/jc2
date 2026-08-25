@@ -1,0 +1,29 @@
+AS F-ONLY D7 SOURCE-CORRECTED Q10 27-WAY AWS SHARD SOURCE FREEZE
+date: 2026-08-25Z
+status: PREREGISTERED AWS-ONLY PRODUCER; NO RESULT YET
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+runner_manifest_sha256:
+  b030858e63fe8feae0fc154dac2d5f4b74e1a8a6c240ec31538705e06131f009
+source_closure_sha256:
+  01273d08ff570fb45c043d3707aa57209f7344a5ee7d749641a79adc24cc7849
+compiler_sha256:
+  3837508e6f0ffabbcdecfdc19a9ade1e4068bbece6aba80cfdc6b9937e25a686
+source_erratum_report_sha256:
+  1129f2c93db930a3040e1626cc34dcfd818e824b356cbd63baac4e8d37c9ea0c
+corrected_q11_result_freeze_sha256:
+  7f06a1b9a9af468a94099de3476e7c726721e0ed0e605797a2b87d38c4c17335
+
+preregistered controls:
+  visible predecessor 1085103
+  N12 629115
+  corrected Q11 260847
+
+discriminator:
+  Exact visible-state count after the full corrected Q10, including
+  ({UF,D6}+{C6,VF})/3 and {UF,VF}/9.  Zero is a finite branch obstruction;
+  positive proceeds to lower quotient/current-next cross rows.
+
+scope:
+  No result, lower row, recurrence, all-depth, characteristic-zero,
+  no-lift, counterexample, or JC2 claim.

@@ -1,0 +1,42 @@
+AS F-ONLY P=3 D=7 VERTICAL FULL-C5 D7 GATE
+date: 2026-08-24
+status: PRODUCER EXACT; FULL PORTABLE REPLAY PASS; HOSTILE REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256: 907dcc72523eb228a7ac6581826460601030e56c996d4df583b2fad274f09a6e
+manifest_sha256: 9454ffa7cc0f14c2eaa5095b8ba45f78d3033c2022967d6c0011550e5e198cb7
+
+output_sha256:
+  source: 619a6cd94502a8ce9d72ff087c1ab8bdb19a1c686112c603dbe9d35a523e05dc
+  lower_divergence: 59eef6ea1dfe00f6a6a906b6144cb6d026e04e546ca66a3524d2e3244682a74d
+  compiler: e6d39a00d12e9bc2e87f621dfdf3e76b93b868308af1a60735297eebfe333770
+
+consumed_confirmed_d98_source_review_sha256:
+  156053c538c4c826bc0feb345d25d91f015543464e0ab9d7734ab190cd7842c4
+consumed_d7_source_license_report_sha256:
+  772d3627965037846f291ca5289c3cab26375e7bcea9edb095a95381fed84b27
+consumed_confirmed_d8_state_review_sha256:
+  6ab373bf9214c54f506cd368473aff02ed472a20e9797037f83a9745c384bc17
+
+deterministic_internal_sha256:
+  accepted_degree4_rows: e0276627b10f9879ac187ce9274c97441077592ec01a1add94710268f3998d08
+  full_D7_rows: b4a522561ba435cc6797384bcb9ab81731193ab7ea7d36151a1b13af56f50128
+  compatible_literal_states: 2a4857f137938d56e4edea7988f0404fe4ff5bd954440b27870a811865fb8c7b
+
+replay:
+  ./replay_all.sh
+  shasum -a 256 -c MANIFEST.sha256
+
+verdict:
+  The true homogeneous-C5 extension is a 19x17 affine system.  Exactly
+  24303/1594323 structural-plus-first-Frobenius states admit visible current
+  digits; the structural fibre histogram is 0^172,3^100,9^1539,27^376 and
+  the visible current-digit solution total is 3253689.  The accepted x2y2
+  Cartier row is identically zero.  Lower accepted rows can be completed
+  without changing D7.
+
+scope:
+  Charged vertical branch through full degree-five current digits and the D7
+  boundary.  Six derivative-zero degree-six spectators and lower divergence
+  kernels are omitted from the visible count.  No following divided carry,
+  all-depth lift/no-lift, characteristic-zero, counterexample, or JC2 claim.

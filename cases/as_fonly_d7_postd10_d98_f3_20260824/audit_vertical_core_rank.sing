@@ -1,0 +1,34 @@
+LIB "primdec.lib";
+option(redSB);
+ring R=3,(P,Q,Rr,T,s,w,h),dp;
+matrix A[7][5]=
+ -P,0,0,Rr*s,0,
+ -Q,-P,0,T*s+Rr*w,Rr*s,
+ 0,-Q,-P,T*w,T*s+Rr*w,
+ 0,0,-Q,0,T*w,
+ -h^3,0,0,-P,0,
+ 0,-h^3,0,-Q,-P,
+ 0,0,-h^3,0,-Q;
+ideal I5=minor(A,5); ideal I4=minor(A,4); ideal I3=minor(A,3);
+ideal I2=minor(A,2); ideal I1=minor(A,1);
+ideal Del=P^2+h^3*Rr*s,-P*Q+h^3*(Rr*w+T*s),Q^2+h^3*T*w;
+ideal Low=h,P,Q;
+ideal Zero=P,Q,h,Rr*s,T*s+Rr*w,T*w;
+ideal rI5=std(radical(I5)); ideal rI4=std(radical(I4));
+ideal rI3=std(radical(I3)); ideal rI2=std(radical(I2));
+ideal rI1=std(radical(I1));
+ideal rDel=std(radical(Del)); ideal rLow=std(radical(Low));
+ideal rZero=std(radical(Zero));
+if (size(reduce(rI5,rDel))!=0 || size(reduce(rDel,rI5))!=0)
+{ ERROR("FAIL-I5-DEL"); }
+if (size(reduce(rI4,rDel))!=0 || size(reduce(rDel,rI4))!=0)
+{ ERROR("FAIL-I4-DEL"); }
+if (size(reduce(rI3,rLow))!=0 || size(reduce(rLow,rI3))!=0)
+{ ERROR("FAIL-I3-LOW"); }
+if (size(reduce(rI2,rZero))!=0 || size(reduce(rZero,rI2))!=0)
+{ ERROR("FAIL-I2-ZERO"); }
+if (size(reduce(rI1,rZero))!=0 || size(reduce(rZero,rI1))!=0)
+{ ERROR("FAIL-I1-ZERO"); }
+print("rank_loci_radical_gb_sizes");
+print(size(rI5)); print(size(rI4)); print(size(rI3)); print(size(rI2)); print(size(rI1));
+print("PASS-VERTICAL-CORE-RANK-STRATA");

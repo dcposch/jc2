@@ -1,0 +1,43 @@
+AS F-ONLY D7 Q9-WITNESS TO Q8 POINTWISE KURANISHI RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT; PROVISIONAL PENDING DIFFERENT-MODEL REVIEW
+git_head_at_source_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+report_sha256:
+  0227176cf1f257c0b8981bea0de0b6a2a169763cbcb274ef9d966047c544c09b
+result_readme_sha256:
+  e0e04f524271bd833cb3426ae492e92c251063fb745104660176025ffa99df07
+result_manifest_sha256:
+  c68c43d844ea9f996ddb3b8464738c52b39800f5d225b388d3ca7dd99007dd7c
+source_freeze_sha256:
+  c94194341b32809b4a11580cd7282bab46da57e8c3192b47bc02e720effc2a19
+source_archive_sha256:
+  5a253765f9b4556d2a985823db4c8c2bbd0d22327f53f694a10a73492930d9ad
+stdout_sha256:
+  f40ee012df867221aa7a21a4382562a8bed01dd45346f88cc6cb429e4b5b6dc9
+stderr_sha256:
+  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+transition_matrix_sha256:
+  addcbc1ee35e97e868e6d12984bcbad151dbce3409448574256d48b1d85b1c0a
+transition_rhs_sha256:
+  f2c3b732c4343ffeb6bc4c832569e129a5eaff22a2869f0bb49c6c34da3098fd
+
+execution:
+  host Box02 / ip-172-30-0-186 / 34.203.207.55
+  tag as_q9_q8_kuranishi_v3_20260825T020224Z
+  UTC 2026-08-25T02:02:55Z--02:03:06Z
+  rc 0; stderr empty; maximum RSS 20688 KiB
+
+result:
+  accepted rank pair (13,13); accepted-image kernel dimension 19;
+  full rank pair (13,14); Kuranishi rank on that kernel 0 and cokernel
+  dimension 9.  The sparse left-null certificate lambda=e_21, which is the
+  x^8 coefficient row of G_8, has lambda*A=0 and lambda*b=2 in F3.  A +1
+  RHS perturbation in that coordinate changes the pairing to zero.
+
+scope:
+  Exact incompatibility of the first canonical Q9 coefficient assignment.
+  Its 16--19 dimensional affine fibre is not classified, so this does not
+  kill the predecessor, a rank class, D7, or any all-depth branch.  V1 and
+  V2 are retained as assertion-failure negative controls.  No lift/no-lift,
+  counterexample, or JC2 claim.

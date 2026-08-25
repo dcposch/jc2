@@ -1,0 +1,370 @@
+{
+  "boundary_control": {
+    "P_family": "[y^ell]P=u^ell*f^(ell)(r)/ell!, 0<=ell<=9",
+    "P_family_digests": [
+      {
+        "ell": 0,
+        "sha256": "9301e890259ddbe5afb5c5daf574655cbf9b06368e6a8862c214cbe31992e41b",
+        "terms": 107
+      },
+      {
+        "ell": 1,
+        "sha256": "ec58a169d0363ba555eca8e27b414dd9db3dc15a52b07b9e8b6a422ffcd9f2ed",
+        "terms": 106
+      },
+      {
+        "ell": 2,
+        "sha256": "b51fdeefa0e9595c33b181318514b2e3b49336fbd1e70e824e65fe0300250fe3",
+        "terms": 90
+      },
+      {
+        "ell": 3,
+        "sha256": "db3c12017d3a4a02c5c4b03efd712ec73c08489a8e27e9bf3fbb6cc69e1eb1c0",
+        "terms": 74
+      },
+      {
+        "ell": 4,
+        "sha256": "470b44918d92320dd986be9dced9a7b5b7a8b88ccad2f3745913b851d91ae40e",
+        "terms": 58
+      },
+      {
+        "ell": 5,
+        "sha256": "8bd31b207428d461f693bafa3333292bbb219d4b9a02149d289a98b1485dc643",
+        "terms": 42
+      },
+      {
+        "ell": 6,
+        "sha256": "37e7840b6f64290675a0221a0d560035065b75b115c987ec9fd5dd63441a09da",
+        "terms": 26
+      },
+      {
+        "ell": 7,
+        "sha256": "cc407dd511106d8119a16228ef9c5596b4d5d52b3d367484e23983194a558a4d",
+        "terms": 10
+      },
+      {
+        "ell": 8,
+        "sha256": "c968a75d4f4bb49b55a160bd1119d3463143473469b7ad9a59beb28ccd938692",
+        "terms": 1
+      },
+      {
+        "ell": 9,
+        "sha256": "8d1bbcc156b12f0f914fd76b31271860c9981ac1ac3188c3db91551d829577bf",
+        "terms": 1
+      }
+    ],
+    "Q_family": "[y^ell]Q=u^ell*g^(ell)(r)/ell!, 0<=ell<=12",
+    "Q_family_digests": [
+      {
+        "ell": 0,
+        "sha256": "56603b7f6e7ccfc2b00491cda2ec49151366f63bf91fb1e0982d5ff0b7d2e0e2",
+        "terms": 170
+      },
+      {
+        "ell": 1,
+        "sha256": "d5bf54f9bb87df111d4fb045f5284288671c86e101978afbbc12840cce47964d",
+        "terms": 154
+      },
+      {
+        "ell": 2,
+        "sha256": "a26d6586254373a58eedb151d6cc053d7b2db5f1a39510af984ae1f46fa097a6",
+        "terms": 138
+      },
+      {
+        "ell": 3,
+        "sha256": "77b6c75471a5b586d6efd2b321d11e199d639523fc7498fee4bf526528da6571",
+        "terms": 122
+      },
+      {
+        "ell": 4,
+        "sha256": "146f05c53b911019a7fb7f36a79dc4eee251f455c7c0ebad562350841e1f405f",
+        "terms": 106
+      },
+      {
+        "ell": 5,
+        "sha256": "f6730b87d97ab8f0ea23277ced99f9065dade38ba88db61b5d82a962029a830f",
+        "terms": 90
+      },
+      {
+        "ell": 6,
+        "sha256": "7b14781b7294c7b1ff4a09722a7df1de84e933bd3c07ad79c33b491d8bf6e8b1",
+        "terms": 74
+      },
+      {
+        "ell": 7,
+        "sha256": "31b83e82b8dd60523e0e7b38d6376ff0120d6b13f96821168fc730a4a649402b",
+        "terms": 58
+      },
+      {
+        "ell": 8,
+        "sha256": "bd131025fa4c85f300d2e0948495c808f2f0775bbe7b6da57ebd10351df8ce24",
+        "terms": 42
+      },
+      {
+        "ell": 9,
+        "sha256": "245f57067d87b9540dcce283cd99a7e812b09dcd14698c73cbf1a32c0cdc1fa8",
+        "terms": 26
+      },
+      {
+        "ell": 10,
+        "sha256": "0726d0e2293b54ccfee818f8a86d6d40438750cc8ad30eab88ebae7ce2df5bf6",
+        "terms": 10
+      },
+      {
+        "ell": 11,
+        "sha256": "c725e5049c2292936bfa0aa8ad142d039245d3b15be1f47324542c54e1b04c15",
+        "terms": 1
+      },
+      {
+        "ell": 12,
+        "sha256": "8d1bbcc156b12f0f914fd76b31271860c9981ac1ac3188c3db91551d829577bf",
+        "terms": 1
+      }
+    ],
+    "charged_polynomiality": "all 10 P-family and all 13 Q-family coefficients remain in C[x]",
+    "depression": "z=u*y+r with r=A/9 and r/u in C(x)",
+    "f_squarefree": true,
+    "gcd_f_g": "1",
+    "old_z0_negative_control": "f(r)-f(0) and g(r)-g(0) have respective monic leading terms r^9 and r^12",
+    "source_values": "P(x,0)=f(r); Q(x,0)=g(r)",
+    "spectral_center_only": {
+      "f_at_zero": "0",
+      "f_z_at_zero_unit": true,
+      "g_at_zero_unit": true
+    }
+  },
+  "case": "max12_912_order3_nu_q8_normalization_jet_20260824",
+  "coefficient_field": {
+    "Q8_irreducible_mod_7": true,
+    "Q8_monic_mod_7": [
+      5,
+      1,
+      4,
+      2,
+      6,
+      1,
+      2,
+      4,
+      1
+    ],
+    "field": "Q[v]/(Q8)"
+  },
+  "critical_value_norm_leaf": {
+    "E_first_nonzero_degree": 1,
+    "E_lead_gcd_Q8": "1",
+    "E_lead_inverse_mod_Q8": {
+      "degree": 7,
+      "nonzero": true,
+      "sha256": "cbb8465b21317aa250a55c1f9e55673a080893fae7bd0d0984268d3f1c79b9e6",
+      "unit_mod_Q8": true
+    },
+    "E_series": [
+      {
+        "degree": 0,
+        "nonzero": false,
+        "sha256": "a93875fe509ac2fae0e0939d3ec71c4d978244c7398dd7185ca68c393426a5a6",
+        "unit_mod_Q8": false
+      },
+      {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "c289f3c14b0c9402cf78db10e71a4f4ce0e0c42d5f231e1e7e0c7f39726f248d",
+        "unit_mod_Q8": true
+      },
+      {
+        "degree": 0,
+        "nonzero": false,
+        "sha256": "a93875fe509ac2fae0e0939d3ec71c4d978244c7398dd7185ca68c393426a5a6",
+        "unit_mod_Q8": false
+      },
+      {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "0f7a9224e2640432564407040d1c84ce35aaccbda882c2ca63ffffe62772d121",
+        "unit_mod_Q8": true
+      }
+    ],
+    "NormF_series": [
+      {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "2f3665c3c64380ebe340a52c30bee34a6f1aab1c9cf2ac33786066423b6b3cf9",
+        "unit_mod_Q8": true
+      },
+      {
+        "degree": 0,
+        "nonzero": false,
+        "sha256": "a93875fe509ac2fae0e0939d3ec71c4d978244c7398dd7185ca68c393426a5a6",
+        "unit_mod_Q8": false
+      },
+      {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "b82084f490871c68037ef9237652ac318fdb834e5e1e0691bb7a2ffc743aed1b",
+        "unit_mod_Q8": true
+      },
+      {
+        "degree": 0,
+        "nonzero": false,
+        "sha256": "a93875fe509ac2fae0e0939d3ec71c4d978244c7398dd7185ca68c393426a5a6",
+        "unit_mod_Q8": false
+      }
+    ],
+    "NormW_series": [
+      {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "0e804599725c3dd5e117a231490df85f1ff8730d537da072471d6b7165c5108f",
+        "unit_mod_Q8": true
+      },
+      {
+        "degree": 0,
+        "nonzero": false,
+        "sha256": "a93875fe509ac2fae0e0939d3ec71c4d978244c7398dd7185ca68c393426a5a6",
+        "unit_mod_Q8": false
+      },
+      {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "58ae0c6c2f50eb693b641821cc546c2f85e67f0659bcaeda6295920c661a38bc",
+        "unit_mod_Q8": true
+      },
+      {
+        "degree": 0,
+        "nonzero": false,
+        "sha256": "a93875fe509ac2fae0e0939d3ec71c4d978244c7398dd7185ca68c393426a5a6",
+        "unit_mod_Q8": false
+      }
+    ],
+    "constant_scaling": "nu->1 rescales the pair data but preserves the vanishing of s, E, Norm(W), and Norm(F)",
+    "node_leaf": "s*Norm(F)*Norm(W)!=0 and E=0 (equal non-1 values)",
+    "punctured_formal_branch_leaf": "s*Norm(F)*Norm(W)*E!=0 (unabsorbed unequal values)",
+    "quadratic": "B/(54*nu)=z^2-s",
+    "s": "-p/3-10*r8/(9*nu)",
+    "s_series": [
+      {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "ee22f38eb836c7fbc56a5a7d50aa24503c5a6de323ecfefeced3fa88d2d151cf",
+        "unit_mod_Q8": true
+      },
+      {
+        "degree": 0,
+        "nonzero": false,
+        "sha256": "a93875fe509ac2fae0e0939d3ec71c4d978244c7398dd7185ca68c393426a5a6",
+        "unit_mod_Q8": false
+      },
+      {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "f075641e8cd04f56393b3476f8ab8d9e7bf0d2b4285b59935b8e111b060be6b1",
+        "unit_mod_Q8": true
+      },
+      {
+        "degree": 0,
+        "nonzero": false,
+        "sha256": "a93875fe509ac2fae0e0939d3ec71c4d978244c7398dd7185ca68c393426a5a6",
+        "unit_mod_Q8": false
+      }
+    ]
+  },
+  "dependency_sha256": {
+    "critical_value_norm_replay": "88f4e2145defe8b548cd5794d171ee7919da77257811a51271df7dbb68e7e4df",
+    "critical_value_norm_report": "7339478798e00894c7b975c60aca821ec7ff2da383ffe5165a93cfa361bb6cb6",
+    "critical_value_norm_review": "b6ae9516430073e177a5174684109b437ab278fa04dd066686c58af57715588e",
+    "genus5_replay": "c965bb660cf2f0f55c7ebbed3126b22bfb5d67e178565426aa94ce56f6ce1d9a",
+    "order3_fibre_compiler": "a4fdac5d613e1af82ab135e220fedee5e41384c41e3068bcdf8921f60ababbcf",
+    "q8_formal_replay": "a55cfc7fe46f43287f34750b287a6dfb66f9454b8eb77b02f41e681e00b32210",
+    "q8_formal_report": "37ce842eece0e79f0768bdfd492be70905bb83ba62af93965b4c4a2a3d6f03a3",
+    "q8_formal_review": "32750e4e350919d7d52984feab06d3cd2d801386caec5848f7c5750bf9e8e846"
+  },
+  "normalization": {
+    "Kummer_character": 0,
+    "coefficient_digests": {
+      "a2_t": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "f63e7613c430fbeadda154b1a35864c8bb6286f0450442b93a294fd9b47f1506",
+        "unit_mod_Q8": true
+      },
+      "a2_t3": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "e04d00c06ec07f8119af6765a80d975f9d269aac28c2afc01b0ca517b7906d37",
+        "unit_mod_Q8": true
+      },
+      "a4_t": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "58ae91e96f70c755a03a7e2173a866cb9de9ad5763bf7993c4dfc3227e7733b7",
+        "unit_mod_Q8": true
+      },
+      "a4_t3": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "6d0e6d717c73f559d9619c8caea930fe1345eb8f44263b9f561ea4a579ebe48d",
+        "unit_mod_Q8": true
+      },
+      "a6_t": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "12e20325695f24844f7f0406e96248f15399dcaa5b5fd26167e3365be198b22b",
+        "unit_mod_Q8": true
+      },
+      "a6_t3": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "f1d9120f3e4a289d4991741b06e382545505d217f1457e791d81d17013f55fad",
+        "unit_mod_Q8": true
+      },
+      "p_t2": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "4e230538616971fe0cdef18c2796351724d48523244c7d6e852b8f2fa68f4a07",
+        "unit_mod_Q8": true
+      },
+      "x1_t2": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "e5c568fcb13df88a195de7f0fbad1b07fbd1ea2f70f4ec10784121a1e6280db5",
+        "unit_mod_Q8": true
+      },
+      "x3_t2": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "adbdbae341a2d79c398abe9822871fbfb66f9adfa10e212c7a31577f1b45be8b",
+        "unit_mod_Q8": true
+      },
+      "x5_t2": {
+        "degree": 7,
+        "nonzero": true,
+        "sha256": "ed21e05ae06be8bab6f9902dfb711d7879bf585b8dad3dcebcb6323456cb86fc",
+        "unit_mod_Q8": true
+      }
+    },
+    "involution_character": "odd",
+    "parameter": "t=a0",
+    "r8_t2": {
+      "degree": 7,
+      "nonzero": true,
+      "sha256": "a7d592e52a395bf3fb969b04b1f01b9306d9dcfaf8c9d4d83d91ea1a55fde35c",
+      "unit_mod_Q8": true
+    },
+    "seven_rows_through_even2_odd3": "PASS",
+    "v_t2": {
+      "degree": 7,
+      "nonzero": true,
+      "sha256": "fb61957689cc5675e228301f411d98e6531d252ff465d5ce79918c3620c14c8d",
+      "unit_mod_Q8": true
+    }
+  },
+  "producer_conclusion": "The Q8 non-parity branch has invariant parameter a0, moves quadratically in v, and has a nonzero quadratic r8 pullback. It cannot meet its parity node above a finite x-place.",
+  "scope": "lowest formal jet and local node-contact/boundary control only; no global normalization, no exclusion of the punctured branch, and no all-(9,12), maximum-twelve, counterexample, or JC2 conclusion",
+  "terminal_pullback": {
+    "differential": "18*p0*C(v0)*a0*a0'+O(a0^3*a0')=j/u",
+    "finite_node_contact": "impossible for polynomial h",
+    "infinity_if_a0_vanishes_order_e": "necessary H=3*(2*e+1)",
+    "normalized": "r8=rho0+C*t^2+O(t^4), C!=0",
+    "weighted": "r8=p0^10*R8(v0)+p0*C(v0)*a0^2+O(a0^4)"
+  }
+}

@@ -1,0 +1,57 @@
+trivariate_transport rows=0;pivots=1;events=0
+trivariate_transport rows=250;pivots=251;events=0
+trivariate_transport rows=1500;pivots=684;events=0
+trivariate_transport rows=1750;pivots=934;events=0
+trivariate_transport rows=2000;pivots=1184;events=0
+trivariate_transport rows=2250;pivots=1434;events=0
+trivariate_transport rows=4750;pivots=1716;events=0
+trivariate_transport rows=5000;pivots=1966;events=1
+trivariate_transport rows=5250;pivots=2215;events=1
+trivariate_transport rows=5500;pivots=2465;events=2
+trivariate_transport rows=5750;pivots=2715;events=2
+trivariate_transport rows=6000;pivots=2965;events=2
+trivariate_transport rows=6250;pivots=3215;events=2
+trivariate_transport rows=6500;pivots=3465;events=2
+TD6 trivariate transport PASS
+transport_rank=3470/3602
+transport_event_count=2
+transport_event[0]=4804,('f', 'X', -1, 2),193;num=(-C + 3*U^2);den=(1)
+transport_event[1]=5282,('g', 'X', 0, 1),1185;num=(2*U);den=(1)
+transport_minor_num=(85988814176858736022924359538562907258501404151846766798778241932419782413925223637789102199602599905416012549154258060898810809269229300866806254847259938056734630890576971456749789410282652870405536830099689602495278032691738286859367804257795555336152645151105150884198466756935808064099546754732728004455566406250*C*U - 257966442530576208068773078615688721775504212455540300396334725797259347241775670913367306598807799716248037647462774182696432427807687902600418764541779814170203892671730914370249368230847958611216610490299068807485834098075214860578103412773386666008457935453315452652595400270807424192298640264198184013366699218750*U^3)
+transport_minor_den=(1)
+transport_minor_num_factor=(85988814176858736022924359538562907258501404151846766798778241932419782413925223637789102199602599905416012549154258060898810809269229300866806254847259938056734630890576971456749789410282652870405536830099689602495278032691738286859367804257795555336152645151105150884198466756935808064099546754732728004455566406250, [(U, 1), (C - 3*U^2, 1)])
+transport_minor_den_factor=(1, [])
+first_rank=38/132
+first_incompatibility_count=0
+first_minor_num=(-134672897568225860595703125000*C^4*V^2*U^6 - 1077383180545806884765625000000*C^4*U^9 + 202009346352338790893554687500*C^3*V^4*U^5 + 1616074770818710327148437500000*C^3*V^2*U^8 - 4309532722183227539062500000000*C^3*U^11 - 101004673176169395446777343750*C^2*V^6*U^4 - 740700936625242233276367187500*C^2*V^4*U^7 + 7811028058957099914550781250000*C^2*V^2*U^10 + 10773831805458068847656250000000*C^2*U^13 + 16834112196028232574462890625*C*V^8*U^3 + 202009346352338790893554687500*C*V^6*U^6 - 4242196273399114608764648437500*C*V^4*U^9 - 24241121562280654907226562500000*C*V^2*U^12 + 30166729055282592773437500000000*C*U^15 - 50502336588084697723388671875*V^8*U^5 + 303014019528508186340332031250*V^6*U^8 + 13938644898311376571655273437500*V^4*U^11 - 30301401952850818634033203125000*V^2*U^14 + 16160747708187103271484375000000*U^17)
+first_minor_den=(1)
+first_minor_num_factor=(-16834112196028232574462890625, [(C - 3*U^2, 1), (2*C*V^2*U + 16*C*U^4 - V^4 - 14*V^2*U^3 + 16*U^6, 1), (4*C^2*U^2 - 4*C*V^2*U + 24*C*U^4 + V^4 - 20*V^2*U^3 + 20*U^6, 1), (U, 3)])
+first_minor_den_factor=(1, [])
+TD6 trivariate genuine P12 PASS
+remainder_inverse_sha256=218b4ebe549c262d6b1bca13c6dc3f24eda3c79c80845f780cdb6fc122a43548
+raw_terms=2893
+raw_sha256=8d5c3550fbad393c1e13061d9934ed79e29261db378f1d344c4ea5e587e704da
+remainder_terms=1
+remainder_degree=0
+remainder_sha256=93121eef14c472c3c55b7acaeb1d0eff73b77d462ad8d5b197e8e21b9cda89c4
+expected_sha256=b9445255e063a82f827a01b7e18c3bdd2f3da41de14903a73fc2ae68121df7a0
+remainder_is_expected_constant=true
+remainder_is_constant_unit=true
+source_nonzero_rows=28
+source_multiplier_terms=1489
+source_relation_original_row_replay=true
+source_relation_plus_one_negative_control=true
+raw_denominator=(C*U - 3*U^3)
+raw_denominator_factor=(1, [(U, 1), (C - 3*U^2, 1)])
+first_denominator=(C*U - 3*U^3)
+first_denominator_factor=(1, [(U, 1), (C - 3*U^2, 1)])
+relation_denominator=(C^4*U^4 - C^3*V^2*U^3 + 1/4*C^2*V^4*U^2 + C^2*V^2*U^5 - 22*C^2*U^8 - 3/2*C*V^4*U^4 + 21*C*V^2*U^7 + 24*C*U^10 + 9/4*V^4*U^6 - 45*V^2*U^9 + 45*U^12)
+relation_denominator_factor=(1/4, [(4*C^2*U^2 - 4*C*V^2*U + 24*C*U^4 + V^4 - 20*V^2*U^3 + 20*U^6, 1), (U, 2), (C - 3*U^2, 2)])
+termwise_denominator=(C^5*U^5 - C^4*V^2*U^4 - 3*C^4*U^7 + 1/4*C^3*V^4*U^3 + 4*C^3*V^2*U^6 - 22*C^3*U^9 - 9/4*C^2*V^4*U^5 + 18*C^2*V^2*U^8 + 90*C^2*U^11 + 27/4*C*V^4*U^7 - 108*C*V^2*U^10 - 27*C*U^13 - 27/4*V^4*U^9 + 135*V^2*U^12 - 135*U^15)
+termwise_denominator_factor=(1/4, [(4*C^2*U^2 - 4*C*V^2*U + 24*C*U^4 + V^4 - 20*V^2*U^3 + 20*U^6, 1), (U, 3), (C - 3*U^2, 3)])
+Rat3_inverse_count=7589
+generic_open_killed=true
+full_three_center_family_killed=false
+SP2_killed=false
+JC2_resolved=false
+TD6-C1-C2-C3-TRIVARIATE-GENERIC PASS

@@ -1,0 +1,40 @@
+ring r=3,(P,Q,s,w,fa,fb,fv,X0,X1,X2),dp;
+LIB "primdec.lib";option(redSB);
+ideal I=
+  2*P*X0+2*P*fa*s,
+  2*P*X1+2*P*fa*w+2*P*fb*s+2*Q*X0+2*Q*fa*s,
+  2*P*X2+P*fb*fv+2*P*fb*w+2*Q*X1+2*Q*fa*w+2*Q*fb*s+fa*fb^2,
+  2*Q*X2+Q*fb*fv+2*Q*fb*w,
+  2*fa*s,
+  2*fa*w;
+ideal G=std(I);print("gb_size_dim");size(G);dim(G);
+list L=minAssGTZ(I);print("minass_count");size(L);
+if(size(L)!=6){print("FAIL-hzero-count");quit;}
+ideal H1=X0,fa,w*X1-fv*X1-s*X2,w*fb-fb*fv+X2,s*fb+X1;
+ideal H2=X2,X1,X0,fb,w,s;
+ideal H3=X1,X0,w,s,Q,fa*fb^2+P*fb*fv-P*X2;
+ideal H4=X0,w,s,P,fb*fv-X2,Q*fv*X1-fa*fb*X2,fa*fb^2-Q*X1;
+ideal H5=fa,Q,P;
+ideal H6=fb,w,s,Q,P;
+list C=H1,H2,H3,H4,H5,H6;
+int i; int j; int d4=0; int d5=0; int d6=0; int d7=0; int matchcount=0;
+for(i=1;i<=size(L);i++){
+  ideal J=std(L[i]);
+  if(dim(J)==4){d4++;} if(dim(J)==5){d5++;}
+  if(dim(J)==6){d6++;} if(dim(J)==7){d7++;}
+  print("component");i;size(J);dim(J);J;
+}
+for(j=1;j<=size(C);j++){
+  ideal A=std(C[j]);
+  int hits=0;
+  for(i=1;i<=size(L);i++){
+    ideal B=std(L[i]);
+    if(size(reduce(A,B))==0 && size(reduce(B,A))==0){hits++;}
+  }
+  print("displayed_prime_match_count");j;hits;
+  if(hits==1){matchcount++;}
+}
+print("hzero_dimension_counts");d4;d5;d6;d7;
+if(d4!=3 || d5!=1 || d6!=1 || d7!=1){print("FAIL-hzero-dimensions");quit;}
+if(matchcount!=6){print("FAIL-hzero-displayed-primes");quit;}
+print("PASS-D7-HZERO");quit;

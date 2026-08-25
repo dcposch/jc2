@@ -1,0 +1,49 @@
+first_pivot_order=B-local-scalar
+center_stratum=C,U independent
+rows=0;pivots=1;events=0;detdeg=0/0
+rows=250;pivots=251;events=0;detdeg=0/0
+rows=1500;pivots=684;events=0;detdeg=0/0
+rows=1750;pivots=934;events=0;detdeg=0/0
+rows=2000;pivots=1184;events=0;detdeg=0/0
+rows=2250;pivots=1434;events=0;detdeg=0/0
+rows=4750;pivots=1716;events=0;detdeg=0/0
+rows=5000;pivots=1966;events=1;detdeg=2/0
+rows=5250;pivots=2215;events=1;detdeg=2/0
+rows=5500;pivots=2465;events=2;detdeg=3/0
+rows=5750;pivots=2715;events=2;detdeg=3/0
+rows=6000;pivots=2965;events=2;detdeg=3/0
+rows=6250;pivots=3215;events=2;detdeg=3/0
+rows=6500;pivots=3465;events=2;detdeg=3/0
+P12 bivariate transport PASS
+first_rank=38/132
+P12 bivariate first/source replay PASS
+P12 bivariate genuine polynomial PASS
+P12 bivariate reduction PASS
+raw_terms=2893;raw_degree=2
+raw_sha256=1b3f382685d38bc656980e27b682ecaa88bd719ae7e736fa33f8557b3de16cb8
+remainder_sha256=93121eef14c472c3c55b7acaeb1d0eff73b77d462ad8d5b197e8e21b9cda89c4
+expected_sha256=b9445255e063a82f827a01b7e18c3bdd2f3da41de14903a73fc2ae68121df7a0
+source_nonzero_rows=28
+source_multiplier_terms=1564
+source_relation_sha256=f96678072a1475aae3d473693d3b9b657ee80a53ff6a90f0114f88ab979cf9e2
+raw_denominator=(C*U - 3*U^3)
+raw_denominator_factor=(1, [(U, 1), (C - 3*U^2, 1)])
+first_denominator=(C*U - 3*U^3)
+first_denominator_factor=(1, [(U, 1), (C - 3*U^2, 1)])
+relation_denominator=(C^2*U^4 + 7*C*U^6 - C*U^3 + 6*U^8 - 6*U^5 + 1/4*U^2)
+relation_denominator_factor=(1/4, [(4*C^2*U^2 + 28*C*U^4 - 4*C*U + 24*U^6 - 24*U^3 + 1, 1), (U, 2)])
+relation_denominator_sha256=0c1152e5db7caabeb5b7b9aae5bdf195e988c3a9fe1618bbd5ed4b37c43b8508
+cleared_relation_coefficients_polynomial=true
+termwise_identity_denominator=(C^3*U^5 + 4*C^2*U^7 - C^2*U^4 - 15*C*U^9 - 3*C*U^6 + 1/4*C*U^3 - 18*U^11 + 18*U^8 - 3/4*U^5)
+termwise_identity_denominator_factor=(1/4, [(C - 3*U^2, 1), (4*C^2*U^2 + 28*C*U^4 - 4*C*U + 24*U^6 - 24*U^3 + 1, 1), (U, 3)])
+termwise_identity_denominator_sha256=5c306166026f7e8d10950c66838a3b3b85da2e023abe9b4ed3ecb3b66ef97c41
+termwise_polynomial_clear_checks=true
+B_at_U_zero=1
+B_local_T_resultant=(64*U^10)
+B_local_T_resultant_factor=(64, [(U, 10)])
+B_local_relation_resultant=(4*U^14)
+B_local_relation_resultant_factor=(4, [(U, 14)])
+B_local_termwise_resultant=(512*U^22 - 128*U^19 + 4*U^16)
+B_local_termwise_resultant_factor=(4, [(128*U^6 - 32*U^3 + 1, 1), (U, 16)])
+B_local_denominator_unit_off_UH=true
+TD6-C1-C3-MPOLY-P12-GENERIC PASS

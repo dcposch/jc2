@@ -1,0 +1,43 @@
+AS F-ONLY D7 SOURCE-CORRECTED Q11 27-WAY AWS SHARD RESULT FREEZE
+date: 2026-08-25Z
+status: PRODUCER EXACT; PORTABLE HASH/AGGREGATE CHECK;
+        INDEPENDENT SOURCE/RESULT REVIEW PENDING
+git_head_at_freeze: 2e6104a417cfe15a93a901aa0a9129094a2ae11b
+
+source_erratum_report_sha256:
+  1129f2c93db930a3040e1626cc34dcfd818e824b356cbd63baac4e8d37c9ea0c
+source_erratum_freeze_sha256:
+  e23391101129c0822ed2f906053919860db02ed2ae5776285bace5764f326385
+report_sha256:
+  4d9cebdaaefb7aff260d4d5bec5f24d88ec66cc8613bf5571a81778a70e10082
+result_manifest_sha256:
+  a9a73b2d2b4c646a8351788595a9a43dc0b7c08f5b55c23718eb77c74c6714e3
+remote_results_manifest_sha256:
+  23b55c7b44f90cda8e31b48afc85b861f8471d36a67c6e1de5cecf7c693d1d45
+aggregate_output_sha256:
+  e30d6af3d37b94027a7aef9aa2d39a9bba696185eb65d9c062d66055a2ae1528
+remote_results_archive_sha256:
+  0ffaf046f8f3ac29b598cdbffe847eaa4679a2a482f1aa0d9e8879d9ef526a4d
+ordered_shard_merkle_sha256:
+  7a28180435e4e4c86e9dfb054e628bbd9070949e045a2d7b73ac30609daa2df7
+
+execution:
+  host Box02 / ip-172-30-0-186 / 34.203.207.55
+  tag as_d7_corrected_q11_20260825T003952Z
+  UTC 2026-08-25T00:40:38Z--00:42:51Z
+  overall_rc 0; aggregate_rc 0; aggregate stderr empty
+
+verdict:
+  Of 1085103 visible predecessor states, 629115 pass the valid N12 control
+  and 260847 pass the full corrected Q11.  The six current-digit
+  degree-six Frobenius spectators give exactly 729 completions per visible
+  survivor, for 190157463 completions.
+
+replay:
+  ./verify_frozen_results.sh
+
+scope:
+  Exact sharded count/Merkle producer pending independent review.  Corrected
+  degrees 12 and 11 only.  Old source-incomplete 602343 N11 count is
+  quarantined.  No degree-10/lower-row, recurrence, all-depth,
+  characteristic-zero, no-lift, counterexample, or JC2 claim.

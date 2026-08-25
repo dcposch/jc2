@@ -1,0 +1,49 @@
+first_pivot_order=sparse-scalar
+center_stratum=C=3U^2 over Q(U)
+rows=0;pivots=1;events=0;detdeg=0/0
+rows=250;pivots=251;events=0;detdeg=0/0
+rows=1500;pivots=684;events=0;detdeg=0/0
+rows=1750;pivots=934;events=0;detdeg=0/0
+rows=2000;pivots=1184;events=0;detdeg=0/0
+rows=2250;pivots=1434;events=0;detdeg=0/0
+rows=4750;pivots=1716;events=0;detdeg=0/0
+rows=5000;pivots=1966;events=0;detdeg=0/0
+rows=5250;pivots=2215;events=0;detdeg=0/0
+rows=5500;pivots=2465;events=1;detdeg=1/0
+rows=5750;pivots=2715;events=1;detdeg=1/0
+rows=6000;pivots=2965;events=1;detdeg=1/0
+rows=6250;pivots=3215;events=1;detdeg=1/0
+rows=6500;pivots=3465;events=1;detdeg=1/0
+P12 bivariate transport PASS
+first_rank=38/132
+first_incompatibility_count=0
+P12 bivariate first/source replay PASS
+P12 bivariate genuine polynomial PASS
+P12 bivariate reduction PASS
+raw_terms=2885;raw_degree=2
+raw_sha256=066e7b06b0a60ff8b7ad1b2cec8c91d96f85865f03830ed45321c3d8213b0a6e
+remainder_sha256=93121eef14c472c3c55b7acaeb1d0eff73b77d462ad8d5b197e8e21b9cda89c4
+expected_sha256=b9445255e063a82f827a01b7e18c3bdd2f3da41de14903a73fc2ae68121df7a0
+source_nonzero_rows=28
+source_multiplier_terms=1524
+source_relation_original_row_replay=true
+source_relation_sha256=f8d2a9ca75d9cbd066c810898bd97963a3df89d3e01a435eb8e8833fecd072c4
+raw_denominator=(U)
+raw_denominator_factor=(1, [(U, 1)])
+first_denominator=(U)
+first_denominator_factor=(1, [(U, 1)])
+relation_denominator=(U^9 - 1/4*U^6 + 1/128*U^3)
+relation_denominator_factor=(1/128, [(128*U^6 - 32*U^3 + 1, 1), (U, 3)])
+relation_denominator_sha256=8925d6520a878d93ccb4d84a20716e7e04049e5f9c5bb9fa3ec539c879a2a79b
+cleared_relation_coefficients_polynomial=true
+termwise_identity_denominator=(U^10 - 1/4*U^7 + 1/128*U^4)
+termwise_identity_denominator_factor=(1/128, [(128*U^6 - 32*U^3 + 1, 1), (U, 4)])
+termwise_identity_denominator_sha256=708a7377f89e3fa3f7c10f22c8e98d45eb5a4d6171874c3e05da731fe682aeba
+termwise_polynomial_clear_checks=true
+H_B_modulus=(128*U^6 - 32*U^3 + 1)
+H_B_modulus_factor=(1, [(128*x^6 + (-32)*x^3 + 1, 1)])
+H_B_modulus_squarefree=true
+H_B_transport_denominator_gcd=(1)
+H_B_raw_denominator_gcd=(1)
+H_B_first_denominator_gcd=(1)
+H_B_relation_denominator_gcd=(x^6 + (-1/4)*x^3 + 1/128)

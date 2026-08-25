@@ -3,6 +3,7 @@
 systems/
 runs/
 *.tgz
+*.tar.zst
 *.out
 # third-party fetched artifacts (others' copyright — never commit)
 crosscheck/
@@ -21,3 +22,12 @@ cases/*_rebuilt.pkl
 .lane-locks/
 .singularhistory
 .grok-review-*/
+
+# root-level transient launcher/archive checks (case-local custody is tracked)
+/archive_check.stdout
+/extract.stderr
+/launcher.pid
+/launcher.rc
+/launcher.stderr
+/launcher.stdout
+/sourcecheck.stdout

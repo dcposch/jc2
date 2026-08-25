@@ -1,0 +1,44 @@
+H_B_modulus=128*x^6 + (-32)*x^3 + 1
+H_B_modulus_factor=(1, [(128*x^6 + (-32)*x^3 + 1, 1)])
+H_B_modulus_irreducible_squarefree=true
+H_B_u_inverse=(-128)*x^5 + 32*x^2
+H_B_raw_quotient_source=true
+quotient_transport rows=0;pivots=1
+quotient_transport rows=250;pivots=251
+quotient_transport rows=1500;pivots=684
+quotient_transport rows=1750;pivots=934
+quotient_transport rows=2000;pivots=1184
+quotient_transport rows=2250;pivots=1434
+quotient_transport rows=4750;pivots=1716
+quotient_transport rows=5000;pivots=1966
+quotient_transport rows=5250;pivots=2215
+quotient_transport rows=5500;pivots=2465
+quotient_transport rows=5750;pivots=2715
+quotient_transport rows=6000;pivots=2965
+quotient_transport rows=6250;pivots=3215
+quotient_transport rows=6500;pivots=3465
+H_B raw quotient transport PASS
+transport_rank=3470/3602
+first_rank=38/132
+first_incompatibility_count=0
+first_pivot_count=38
+H_B raw quotient genuine P12 PASS
+remainder_inverse_sha256=218b4ebe549c262d6b1bca13c6dc3f24eda3c79c80845f780cdb6fc122a43548
+raw_terms=2885
+raw_sha256=87dede8d978d53c17d10e5454dc3d747a894b8696816b449424dd37b306a487f
+remainder_terms=1
+remainder_degree=0
+remainder_sha256=93121eef14c472c3c55b7acaeb1d0eff73b77d462ad8d5b197e8e21b9cda89c4
+expected_sha256=b9445255e063a82f827a01b7e18c3bdd2f3da41de14903a73fc2ae68121df7a0
+remainder_is_expected_constant=true
+remainder_is_constant_unit=true
+source_nonzero_rows=28
+source_multiplier_terms=1540
+source_relation_original_row_replay=true
+source_relation_plus_one_negative_control=true
+KP_inverse_count=7590
+H_B_stratum_empty=true
+family_killed=false
+SP2_killed=false
+JC2_resolved=false
+TD6-C1-C3-H-B-RAW-QUOTIENT PASS
