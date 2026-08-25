@@ -1,0 +1,107 @@
+// Independent exact original-row identity check for the squarefree cubic.
+ring R=0,
+  (x,y,
+   a0,a1,a2,r0,r1,r2,r3,r4,r5,
+   s0,s1,s2,s3,s4,s5,s6,s7,
+   p60,p61,p62,p63,p64,p65,p66,
+   p50,p51,p52,p53,p54,p55,
+   q80,q81,q82,q83,q84,q85,q86,q87,q88,
+   q90,q91,q92,q93,q94,q95,q96,q97,q98,q99,
+   m0,m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,
+   n0,n1,n2,n3,n4,n5,n6,n7,n8,n9,n10,n11,
+   b0,b1,b2,b3,b4,lam),dp;
+
+proc B(poly f, poly g)
+{
+  return(diff(f,x)*diff(g,y)-diff(f,y)*diff(g,x));
+}
+
+number c43=4/3;
+number c29=2/9;
+number c49=4/9;
+number c481=4/81;
+number c23=2/3;
+number c581=5/81;
+
+poly K=x*y*(x-y);
+poly aa=a0*y2+a1*x*y+a2*x2;
+poly RR=r0*y5+r1*x*y4+r2*x2*y3+r3*x3*y2+r4*x4*y+r5*x5;
+poly ss=s0*y7+s1*x*y6+s2*x2*y5+s3*x3*y4+s4*x4*y3+s5*x5*y2+s6*x6*y+s7*x7;
+poly pp6=p60*y6+p61*x*y5+p62*x2*y4+p63*x3*y3+p64*x4*y2+p65*x5*y+p66*x6;
+poly pp5=p50*y5+p51*x*y4+p52*x2*y3+p53*x3*y2+p54*x4*y+p55*x5;
+poly qq8=q80*y8+q81*x*y7+q82*x2*y6+q83*x3*y5+q84*x4*y4+q85*x5*y3+q86*x6*y2+q87*x7*y+q88*x8;
+poly qq9=q90*y9+q91*x*y8+q92*x2*y7+q93*x3*y6+q94*x4*y5+q95*x5*y4+q96*x6*y3+q97*x7*y2+q98*x8*y+q99*x9;
+poly mm10=m0*y10+m1*x*y9+m2*x2*y8+m3*x3*y7+m4*x4*y6+m5*x5*y5+m6*x6*y4+m7*x7*y3+m8*x8*y2+m9*x9*y+m10*x10;
+poly nn11=n0*y11+n1*x*y10+n2*x2*y9+n3*x3*y8+n4*x4*y7+n5*x5*y6+n6*x6*y5+n7*x7*y4+n8*x8*y3+n9*x9*y2+n10*x10*y+n11*x11;
+poly bb=b0*y4+b1*x*y3+b2*x2*y2+b3*x3*y+b4*x4;
+
+poly P9=K^3;
+poly Q12=K^4;
+
+// Complete degree-18 package, followed by its explicit solution.
+poly U8=qq8;
+poly E18g=B(P9,nn11)+B(U8,Q12);
+poly W11=3*nn11-4*K*U8;
+if (E18g-K^2*B(K,W11)!=0) { print("FAIL_DEGREE18_PACKAGE"); exit(17); }
+poly Q11g=c43*K*U8;
+if (B(P9,Q11g)+B(U8,Q12)!=0) { print("FAIL_DEGREE18_SOLUTION"); exit(18); }
+
+// Complete degree-17 package before the reduced-point divisibility step.
+poly E17g=B(P9,mm10)+B(U8,Q11g)+B(ss,Q12);
+poly W16=K^2*(3*mm10-4*K*ss)-(2/3)*U8^2;
+if (E17g-B(K,W16)!=0) { print("FAIL_DEGREE17_PACKAGE"); exit(10); }
+
+// Degree 17 after the reduced-point landing P8=K*R5.
+poly P8a=K*RR;
+poly Q11a=c43*K^2*RR;
+poly Q10a=c43*K*ss+c29*RR^2;
+poly E17=B(P9,Q10a)+B(P8a,Q11a)+B(ss,Q12);
+if (E17!=0) { print("FAIL_DEGREE17_IDENTITY"); exit(11); }
+
+// The degree-16 residual modulo K is exactly (4/9)R^2[K,R].
+poly E16pre=B(P9,qq9)+B(P8a,Q10a)+B(ss,Q11a)+B(pp6,Q12);
+poly W15=K^2*(3*qq9-4*K*pp6)-(4/3)*K*RR*ss+(4/27)*RR^3;
+if (E16pre-B(K,W15)!=0) { print("FAIL_DEGREE16_PACKAGE"); exit(16); }
+ideal GK=std(K);
+poly E16mod=reduce(E16pre,GK);
+poly expected16mod=reduce(c49*RR^2*B(K,RR),GK);
+if (E16mod-expected16mod!=0) { print("FAIL_DEGREE16_MOD_K"); exit(12); }
+
+// Degree 16 after the reduced-point landing R5=K*a2.
+poly P8=K^2*aa;
+poly Q11=c43*K^3*aa;
+poly Q10=c43*K*ss+c29*K^2*aa^2;
+poly Q9=c43*K*pp6+c49*aa*ss-c481*K*aa^3+(lam/3)*K^3;
+poly E16=B(P9,Q9)+B(P8,Q10)+B(ss,Q11)+B(pp6,Q12);
+if (E16!=0) { print("FAIL_DEGREE16_IDENTITY"); exit(13); }
+
+// Complete degree-15 packaging.
+poly F14=-(4/3)*K^2*aa*pp6+(4/9)*K*aa^2*ss-(2/3)*ss^2
+          -(5/81)*K^2*aa^4-lam*K^4*aa;
+poly Z14=K^2*(3*qq8-4*K*pp5)+F14;
+poly E15=B(P9,qq8)+B(P8,Q9)+B(ss,Q10)+B(pp6,Q11)+B(pp5,Q12);
+if (E15-B(K,Z14)!=0) { print("FAIL_DEGREE15_PACKAGE"); exit(14); }
+
+// Explicit reduced family after P7=K*b4.
+poly ssb=K*bb;
+poly Q10b=c43*K*ssb+c29*K^2*aa^2;
+poly Q9b=c43*K*pp6+c49*aa*ssb-c481*K*aa^3+(lam/3)*K^3;
+poly Q8b=(4/3)*K*pp5+(4/9)*aa*pp6-(4/27)*aa^2*bb
+          +(2/9)*bb^2+(5/243)*aa^4+(lam/3)*K^2*aa;
+poly E15b=B(P9,Q8b)+B(P8,Q9b)+B(ssb,Q10b)+B(pp6,Q11)+B(pp5,Q12);
+if (E15b!=0) { print("FAIL_DEGREE15_FAMILY"); exit(15); }
+
+print("DEGREE18_PACKAGE_IDENTITY_ZERO");
+print("DEGREE18_SOLUTION_IDENTITY_ZERO");
+print("DEGREE17_IDENTITY_ZERO");
+print("DEGREE17_PACKAGE_IDENTITY_ZERO");
+print("DEGREE16_PACKAGE_IDENTITY_ZERO");
+print("DEGREE16_MOD_K_IDENTITY_ZERO");
+print("DEGREE16_IDENTITY_ZERO");
+print("DEGREE15_PACKAGE_IDENTITY_ZERO");
+print("DEGREE15_FAMILY_IDENTITY_ZERO");
+print("BASE_PARAMETER_COUNT 16");
+print("FRESH_DEGREE15_KERNEL 6");
+print("PREDICTED_FULL_DIMENSION 22");
+print("PASS_IDENTITIES");
+quit;

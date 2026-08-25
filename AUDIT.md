@@ -5,6 +5,78 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **WHOLE ORDER-THREE `(9,12)` TERMINAL BELYI CLASSIFICATION
+> (2026-08-25 20:13Z).**  For every actual characteristic-zero partial-`y`
+> `(9,12)` Keller trajectory on the nontrivial order-three Kummer branch,
+> write `u^3=h` with `h in C[x]`, `h` noncube, `3|deg(h)`, and `j in C*`.
+> Universal Faber covariance and the original terminal row give
+>
+> `r8=u^2 R`, `9 r8'=j/u`, `T:=r8^3 in C(x)`, and
+> `h=(j^3/27) T^2/(T')^3`.
+>
+> Here `T` is automatically nonconstant.  Writing reduced `T=A/B` and
+> `W=A'B-AB'` gives
+> `h=(j^3/27)A^2B^4/W^3`.  Polynomiality says that every finite zero of
+> `W` lies over `0` or infinity and every `A`-root has multiplicity at most
+> three.  The noncube and `3|deg(h)` hypotheses eliminate both unequal-degree
+> cases.  Thus `deg A=deg B=D`, and after scaling `T(infinity)=1` the complete
+> passport is
+>
+> `(alpha_i<=3) | (beta_j) | (e,1^(D-e))`,
+> `r+s=e+1`, `deg(h)=3(e+1)`,
+>
+> saturating Riemann--Hurwitz.  Producer/review SHAs are `28f33b99...` /
+> `5da99825...`; the hostile verdict is `CONFIRMED`.  The new content is the
+> branch-wide scope composition; the divisor/passport algebra reuses the
+> already reviewed selected-Q8 classifier.
+>
+> This is necessary-only.  The cyclic `D=1,2` rows remain terminal positive
+> controls, and every candidate must still realize the full `(k,mu,nu)` lower
+> fibre, the original terminal row, both true-center Taylor families, and all
+> finite/projective boundaries.  Nothing here covers the order-one or B8
+> leaves, excludes a trajectory, or resolves JC2.
+
+> **FIXED-D12 SQUAREFREE POISSON RECURRENCE — METHOD CONTROL
+> (2026-08-25 20:13Z).**  On the squarefree homogeneous stratum
+> `P9=K^3,Q12=K^4`, hostile review independently confirms the rational
+> centralizer lemma, the unique decreasing-degree formal cube root
+> `R=P^(1/3)`, the four nonnegative resonances `9,6,3,0`, and the complete
+> reduced-point/UFD recurrence through homogeneous Jacobian rows 18--12.
+> The successive obstruction shapes are `K|P8`, then `P8=K^2 A2`,
+> `P7=K B4`, `K|C4 W6`, `K|C4` and `K|W6`, and finally `K|N3 R5`, with the
+> displayed eight root-allocation charts at the two product rows.
+>
+> Producer/review SHAs are `ff082a2c...` / `a5492704...`; verdict
+> `CONFIRMED`.  The separate AWS original-bracket package has report SHA
+> `c8504fdd...` but was not consumed by that hand rederivation.  The old
+> dimensionally invalid `(lambda/3)V` formula remains a disclosed negative
+> control.  This is neither a scheme/radical theorem nor a result below row
+> 12.  Because every fixed-total-D12 family is classically closed, the
+> recurrence is compiler/method evidence only and adds no live frontier.
+
+> **ALL FIXED-TOTAL-D12 COUNTEREXAMPLE ENVELOPES CLASSICALLY CLOSED
+> (2026-08-25 19:44Z).**  Guccione--Guccione--Valqui's primary-source-checked
+> version of the Heitmann theorem says that every characteristic-zero JC2
+> counterexample satisfies
+> `gcd(deg_total(P),deg_total(Q)) >= 16`.  Hence every Keller pair with both
+> total degrees at most 12 is an automorphism: the gcd is at most 12.  This
+> closes the broad fixed-D12 B9/B8 envelopes, every degree-drop stratum, and
+> the strict `(9,12)` and `(8,12)` subfamilies (whose gcds are 3 and 4).
+> Earlier same-day language treating any finite D12 envelope or either strict
+> pair as a live counterexample frontier is superseded.  The genuinely live
+> labels retain only the partial-`y` bounds while allowing unbounded
+> coefficient-`x` and total degrees.
+>
+> Producer/review SHAs are `def1c2a1...` / `511d8a55...`; independent verdict
+> `CONFIRMED`.  The theorem is stated over an arbitrary characteristic-zero
+> field, so it applies directly to `Q_3` and finite extensions.  Consequently,
+> any one complete nested fixed-D12 AS collision scheme surviving at all
+> 3-adic depths would produce a forbidden characteristic-zero counterexample
+> and therefore must die at some finite, not presently effective, depth.
+> This does not join unrelated finite-level points, identify the death depth,
+> close unbounded-total partial-`y` families, or resolve JC2.  Completed D12
+> computations below remain valid only at their exact method/control scopes.
+
 > **FIXED-D12 `(9,12)` BINARY-CUBIC FIRST-BANDS PROMOTION (2026-08-25
 > 18:42Z).**  Over an algebraically closed characteristic-zero field, normalize
 > `P9=K^3,Q12=K^4` and use the exhaustive nonzero binary-cubic root types

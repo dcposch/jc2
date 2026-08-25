@@ -299,6 +299,29 @@ exact claim without overreading it, replay the cheapest decisive check, map it
 to the claim DAG and avenue graph, and assign follow-up. Bank a negative sweep
 too; absence of a hit is weak evidence, not evidence of absence.
 
+### Classical frontier admissibility gate
+
+Before registering compute, every lane must state separately the actual total
+degrees, partial-`y` degrees, weighted degrees, and whether any total/
+coefficient-`x` cap is finite.  It must then reconcile that honest scope with
+the classical closed-case ledger and primary sources.  In particular, the
+Guccione--Guccione--Valqui/Heitmann theorem requires
+`gcd(deg_total P,deg_total Q) >= 16` for a characteristic-zero
+counterexample.  Thus every envelope with both total degrees at most `12`
+(and every fixed pair such as `(9,12)` or `(8,12)`) is counterexample-closed,
+even when its partial-`y` label looks like a live global frontier.
+
+For the mechanically covered cases, attach the deterministic output of
+`ops/frontier_gate.py` to `REGISTRATION.md`.  A
+`REFUSE_CLASSICALLY_CLOSED` verdict blocks frontier compute.  Such a lane may
+run only after being relabelled `method-control`, with a named live client and
+a strict cost/stop condition; its output cannot be advertised as advancing
+the closed degree frontier.  `NOT_CLOSED_BY_THIS_GATE` means only that this
+one theorem is inconclusive.  Unbounded-total partial-`y` work must say
+`--total-unbounded` explicitly and still pass every other classical/history
+check.  Any significant routing news reruns this gate across active lanes
+before further capacity is allocated.
+
 ## Capacity allocation
 
 Default portfolio targets, adjusted when evidence demands it:
@@ -335,14 +358,15 @@ At each coordinator tick:
 1. read the newest `LIVE STATE` and any events since it;
 2. sweep local lanes and remote machines; verify exact process identities and
    stop idle paid capacity within standing authority;
-3. harvest finished work, apply the provisional gate, and start hostile review
+3. rerun the classical frontier gate on new scopes or significant news;
+4. harvest finished work, apply the provisional gate, and start hostile review
    immediately for promotable claims;
-4. propagate review outcomes through the claim DAG without blocking unrelated
+5. propagate review outcomes through the claim DAG without blocking unrelated
    work;
-5. test the 12-hour ideation and 24-hour sweep deadlines and all event triggers;
-6. rebalance the portfolio, launch the next bounded lanes, and assign a stop
+6. test the 12-hour ideation and 24-hour sweep deadlines and all event triggers;
+7. rebalance the portfolio, launch the next bounded lanes, and assign a stop
    condition to each;
-7. append findings, corrections, dead ends, costs, and decisions to `notes.md`,
+8. append findings, corrections, dead ends, costs, and decisions to `notes.md`,
    then append a fresh `LIVE STATE` block.
 
 Before launch, check active tags, prior `xmodel/` reports, `AUDIT.md`, and
@@ -393,7 +417,9 @@ campaign from paying twice for the same failed idea.
   kill safety.
 - New heavy runners fail closed off AWS before importing a CAS or allocating
   large objects, require a registered AWS job tag, and record the remote
-  hostname in custody.  A coordinator process-tree/swap-delta audit
+  hostname in custody.  New counterexample/frontier runners also record the
+  classical admissibility verdict described above before launch.  A
+  coordinator process-tree/swap-delta audit
   is part of each live-state checkpoint; allocated swap without new pageouts
   is historical occupancy, not by itself active thrashing.
 - Third-party tools may mutate shared CLI configuration; adapters must isolate

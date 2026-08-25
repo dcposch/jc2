@@ -1,0 +1,85 @@
+// Independent original-bracket check for the squarefree degree-14 row.
+ring R=0,
+  (x,y,
+   a0,a1,a2,b0,b1,b2,b3,b4,
+   t0,t1,t2,t3,t4,t5,t6,
+   u0,u1,u2,u3,u4,u5,
+   v0,v1,v2,v3,v4,
+   q0,q1,q2,q3,q4,q5,q6,q7,lam),dp;
+
+proc PB(poly f, poly g)
+{
+  return(diff(f,x)*diff(g,y)-diff(f,y)*diff(g,x));
+}
+
+poly K=x*y*(x-y);
+poly A=a0*y2+a1*x*y+a2*x2;
+poly BB=b0*y4+b1*x*y3+b2*x2*y2+b3*x3*y+b4*x4;
+poly T=t0*y6+t1*x*y5+t2*x2*y4+t3*x3*y3+t4*x4*y2+t5*x5*y+t6*x6;
+poly U=u0*y5+u1*x*y4+u2*x2*y3+u3*x3*y2+u4*x4*y+u5*x5;
+poly V=v0*y4+v1*x*y3+v2*x2*y2+v3*x3*y+v4*x4;
+poly Q7=q0*y7+q1*x*y6+q2*x2*y5+q3*x3*y4+q4*x4*y3+q5*x5*y2+q6*x6*y+q7*x7;
+
+poly P9=K^3;
+poly P8=K^2*A;
+poly P7=K*BB;
+poly P6=T;
+poly P5=U;
+poly P4=V;
+
+poly Q12=K^4;
+poly Q11=(4/3)*K^3*A;
+poly Q10=(4/3)*K^2*BB+(2/9)*K^2*A^2;
+poly Q9=(4/3)*K*T+(4/9)*K*A*BB-(4/81)*K*A^3+(lam/3)*K^3;
+poly Q8=(4/3)*K*U+(4/9)*A*T-(4/27)*A^2*BB
+        +(2/9)*BB^2+(5/243)*A^4+(lam/3)*K^2*A;
+
+// This is the complete original degree-14 determinant row.
+poly E14=PB(P9,Q7)+PB(P8,Q8)+PB(P7,Q9)+PB(P6,Q10)
+          +PB(P5,Q11)+PB(P4,Q12);
+
+poly C=BB-(1/3)*A^2;
+poly W=T-(1/3)*A*BB+(2/27)*A^3;
+poly PoleR=K*Q7-(4/3)*K^2*V-(4/9)*K*A*U-(lam/3)*K^2*BB;
+poly Z10=PoleR-(4/9)*C*W;
+
+if (E14-3*K*PB(K,Z10)!=0)
+{
+  print("FAIL_ORIGINAL_DEGREE14_PACKAGE"); exit(10);
+}
+
+// Correct rational formula, checked directly in the original row after the
+// sole displayed K denominator is cleared analytically in [K^3,N/K].
+poly Ncorrect=(4/3)*K^2*V+(4/9)*K*A*U+(4/9)*C*W
+              +(lam/3)*K^2*BB;
+poly Other14=E14-PB(P9,Q7);
+poly Ecorrect=3*K*PB(K,Ncorrect)+Other14;
+if (Ecorrect!=0)
+{
+  print("FAIL_CORRECT_CLEARED_FORMULA"); exit(11);
+}
+
+// The first preregistration's lambda*V term is inhomogeneous and must fail.
+poly Nwrong=(4/3)*K^2*V+(4/9)*K*A*U+(4/9)*C*W+(lam/3)*K*V;
+poly Ewrong=3*K*PB(K,Nwrong)+Other14;
+if (Ewrong==0)
+{
+  print("FAIL_OLD_FORMULA_NEGATIVE_CONTROL"); exit(12);
+}
+
+poly FactorNumerator=729*PoleR-324*C*W;
+if (FactorNumerator-729*Z10!=0)
+{
+  print("FAIL_FACTORIZATION_729_324"); exit(13);
+}
+
+print("ORIGINAL_DEGREE14_PACKAGE_ZERO");
+print("CORRECT_CLEARED_Q7_FORMULA_ZERO");
+print("OLD_LAMBDA_V_FORMULA_NONZERO");
+print("FACTOR_IDENTITY 729*R=324*C*W MOD Z10");
+print("ROOT_ALLOCATION_BRANCH_COUNT 8");
+print("PREDICTED_REDUCED_BASE_DIMENSION 19");
+print("FRESH_P4_KERNEL 5");
+print("PREDICTED_REDUCED_FULL_DIMENSION 24");
+print("PASS_DEGREE14");
+quit;

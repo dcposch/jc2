@@ -7,6 +7,45 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-25
 
+> **WHOLE ORDER-THREE PASSPORT PROMOTED / LIVE REALLOCATION (20:15Z).**
+> Hostile review `CONFIRMED` the first branch-wide consequence of the
+> universal Faber theorem (producer/review SHAs `28f33b99...` /
+> `5da99825...`).  Every actual nontrivial order-three partial-`y` `(9,12)`
+> trajectory has nonconstant `T=r8^3 in C(x)` with
+> `h=(j^3/27)T^2/(T')^3`, hence the balanced three-value Belyi passport
+> `(alpha_i<=3)|(beta_j)|(e,1^(D-e))`, `r+s=e+1`,
+> `deg h=3(e+1)`.  The theorem is necessary-only: cyclic `D=1,2` terminal
+> controls survive, and the full lower `(k,mu,nu)` fibre, original terminal
+> row, 23 true-center Taylor members, and all boundaries remain charged.
+> Separately, the strict-D12 squarefree fractional-power recurrence through
+> rows 18--12 is Grok-`CONFIRMED` (producer/review `ff082a2c...` /
+> `a5492704...`) at reduced-point/UFD method-control scope.
+>
+> Significant-news synthesis
+> `xmodel/ideation-20260825T2015Z-synthesis.md` (SHA `74822d77...`)
+> deduplicates raw Ore/high-row/FT2 work and reallocates the live cycle to
+> passport-aware lower-fibre/Taylor realization, beginning with the unhandled
+> `k!=0` chart and cyclic-passport Kummer valuation controls.  Remaining
+> fixed-D12/fixed-support AS solver races were stopped without a verdict;
+> live Double-B/Q8 landing, TD6, and global trajectory jobs remain on AWS.
+> No theorem here closes the order-one or B8 leaves, global landing, or JC2.
+
+> **CLASSICAL FRONTIER CORRECTION (19:44Z).**  Primary-source verification and
+> an independent hostile scope audit (`CONFIRMED`, producer/review SHAs
+> `def1c2a1...` / `511d8a55...`) show that the GGV/Heitmann condition
+> `gcd(deg_total(P),deg_total(Q)) >= 16` closes **every** counterexample family
+> with both total degrees at most 12.  This includes the broad fixed-D12
+> B9/B8 envelopes and all degree-drop strata, not only exact `(9,12)` and
+> `(8,12)`.  All earlier same-day allocation to fixed-D12 counterexample
+> search is superseded; completed work is retained as compiler/recurrence and
+> finite-death method control, and obsolete strict-cap AWS races were stopped.
+> The live transfer must keep only partial-`y` bounds and remove every finite
+> coefficient-`x`/total-degree cap.  A new deterministic prelaunch gate,
+> `ops/frontier_gate.py` (SHA `d709794d...`, four tests passing), now refuses
+> classically closed frontier jobs unless explicitly relabelled method-only.
+> TD6 and global landing/cofinality work are unaffected.  Significant-news
+> whole-portfolio reconciliation is in progress before the next allocation.
+
 > **LATEST STRATEGY OVERLAY (17:25Z).**  Four sealed blind all-46 reports and
 > adversarial cross-reading now select one core-first fork: impose exact
 > proportional/common-power leading faces on each complete D12 family, then

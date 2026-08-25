@@ -41,6 +41,92 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
+## Superseding strategy overlay (2026-08-25 20:15Z)
+
+The significant-news synthesis is
+[`xmodel/ideation-20260825T2015Z-synthesis.md`](xmodel/ideation-20260825T2015Z-synthesis.md),
+SHA-256 `74822d77ed2063ae8eeb3feb8ca4ce9fdd9b8bb448864663c5f33de4c6a7806b`.
+It consumes the fixed-total-D12 classical closure below, the blind 19:40Z /
+19:50Z mini-round, and two completed hostile reviews.
+
+The first new live theorem is branch-wide.  On every actual nontrivial
+order-three partial-`y` `(9,12)` trajectory, universal Faber covariance and
+the original terminal row imply
+
+```text
+T:=r8^3 in C(x),       h=(j^3/27)*T^2/(T')^3,
+```
+
+with `T` nonconstant.  The selected terminal divisor proof therefore applies
+without selected Q8, `k=mu=0`, or `nu!=0`: after balancing, `T` is a
+three-value Belyi map with passport
+`(alpha_i<=3)|(beta_j)|(e,1^(D-e))`, `r+s=e+1`, and
+`deg h=3(e+1)`.  Producer/review SHAs are `28f33b99...` / `5da99825...`;
+the hostile verdict is `CONFIRMED`.  This is a necessary classification;
+cyclic `D=1,2` rows remain terminal positive controls.
+
+The raw `21 x 23` Ore restart and standalone FT2/high-row proposal are
+deduplicated.  The reviewed Faber theorem already integrates all high rows
+with unbounded coefficient-`x` degree, and the strict-D12 squarefree
+recurrence through rows 18--12 is now independently `CONFIRMED` only as a
+reduced-point/UFD method control.  The first genuinely new gate must combine
+the complete lower fibre
+
+```text
+r1=r2=r4=r5=r7=0,       r3=mu,       r6=nu,
+```
+
+with `r8`, the original terminal row, and both complete true-center Taylor
+families.  It starts in parallel on the unhandled `k!=0` component chart and
+on exact Kummer valuation/initial systems for the cyclic passports.  A mere
+dimension, another Laurent coefficient, or agreement at sampled total-degree
+caps is not a pass.
+
+The next-cycle scheduling target is **50% unbounded order-three lower
+fibre/Taylor/passport, 25% TD6 source-complete cover, 15% global
+landing/cofinality, and 10% genuinely unbounded AS/support-growth transfer
+and certificates**.  Selected-Q8 landing and Double-B membership lie inside
+the first allocation and remain live; fixed-D12 theorem search receives zero.
+All heavy work is AWS-only and every new lane must record
+`--partial-y-degrees 9 12 --total-unbounded` through the frontier gate.
+
+This still leaves the order-one `(9,12)` leaf, both `(8,12)` nontrivial
+leaves, power-core strata, and the global landing/cofinality wall.  No item
+here proves or disproves JC2.
+
+## Superseding strategy overlay (2026-08-25 19:44Z)
+
+The primary-source-checked GGV/Heitmann theorem requires
+`gcd(deg_total(P),deg_total(Q)) >= 16` for every characteristic-zero
+counterexample.  An independent hostile audit confirms the immediate routing
+consequence: **every** coefficient envelope with both total degrees at most 12
+is already counterexample-closed, including the broad fixed-D12 B9/B8 cells,
+all their degree-drop strata, and the exact `(9,12)` / `(8,12)` subfamilies.
+See
+[`xmodel/sol-fixed-total-d12-classical-closure-v2-20260825.md`](xmodel/sol-fixed-total-d12-classical-closure-v2-20260825.md)
+(SHA `def1c2a1...`) and its `CONFIRMED` review
+[`xmodel/sol-fixed-total-d12-classical-closure-review-as-20260825.md`](xmodel/sol-fixed-total-d12-classical-closure-review-as-20260825.md)
+(SHA `511d8a55...`).
+
+This supersedes every allocation or frontier statement below that treats a
+finite D12 family as a live counterexample search.  Completed B9/B8
+Kuranishi, residue-tower, and binary-cubic recurrence artifacts remain useful
+method controls and may imply a non-effective finite death depth for a single
+complete nested collision scheme; they do not advance a still-open D12
+counterexample frontier.  The only live B9/B8 transfer retains partial-`y`
+degrees `(9,12)` or `(8,12)` while allowing unbounded coefficient-`x` and
+total degrees.  Such a transfer must rebuild its filtration and centralizer
+arguments: the squarefree binary-cubic rational centralizer cannot simply be
+relabelled when a partial-`y` leading core is composite.  TD6 and global
+landing/cofinality routes are unchanged.
+
+Before new compute, `ops/frontier_gate.py` records the honest degree notion
+and refuses classically closed frontier lanes; a closed family may run only as
+a cost-capped method control with a named live client.  Significant-news
+whole-portfolio reconciliation is now replacing the stale 17:25Z allocation.
+No statement here closes the unbounded-total partial-`y` theorem or resolves
+JC2.
+
 ## Superseding strategy overlay (2026-08-25 17:25Z)
 
 The latest sealed whole-portfolio decision record is

@@ -5797,3 +5797,44 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   leaves base dimensions `13,11,11` (full dimensions `21,19,19` after the
   universal fresh kernel), and the complete degree-15 gate is live on dual
   AWS hosts.  These later numbers remain producer-tier until frozen/reviewed.
+
+## 2026-08-25 20:35Z EVENT — CLASSICAL CLOSURE CORRECTION / UNBOUNDED D1 GATE LIVE
+
+- The characteristic-zero degree theorem of Guccione--Guccione--Valqui,
+  building on Heitmann, gives
+  `gcd(deg_total(P),deg_total(Q)) >= 16` for a counterexample.  Consequently
+  every campaign envelope in which both *actual total degrees* are at most
+  twelve is already classically empty.  This closes fixed-D12 B9/B8 and
+  exact `(9,12)`/`(8,12)` only at that honest bounded-total scope; it does not
+  touch the live unbounded-total partial-`y` cells.  The corrected V2 note and
+  independent audit are promoted; the earlier byte-frozen overbroad note is
+  retained as a negative-control artifact.
+- Hostile review confirms the branch-wide order-three terminal theorem.  In
+  the nontrivial `(9,12)` Kummer branch, the terminal rational map is balanced
+  Belyi data with
+  `h=(j^3/27)T^2/(T')^3`; this is necessary only.  The cyclic `D=1,2`
+  passports survive as positive controls, and the full lower fibre, both
+  Taylor families, load boundaries, and original-source replay remain due.
+- The first nonduplicate successor is therefore the cyclic `D=1` passport
+  against the complete `k!=0` lower Faber fibre with all `(mu,nu)`, followed
+  by exact global Taylor membership.  Its preregistered source adapter uses
+  the corrected character convention
+  `sigma(t)=zeta^2*t`, `a_i=t^(i mod 3)A_i(s)`, and tail quotient exponent
+  `2*i mod 3`.
+- The first Box03 AWS smoke failed closed before algebra because the new
+  source-closure manifest omitted two files pinned transitively by the parent.
+  After staging those exact frozen files, a fresh wrapper lane passed: all
+  eight rows were emitted and the swapped-character negative produced 394
+  failures.  This is source evidence only; the closure manifest is being
+  repaired before promotion.
+- Two characteristic-zero navigation lanes are live under 128-GiB/two-hour
+  caps: Box03 standard Gröbner tag
+  `max12_912_order3_d1_rows_20260825T202325Z_box03_singular` and Box02
+  `slimgb` tag `max12_912_order3_d1_rows_20260825T2028Z_box02_slimgb`.
+  Five r6d finite-field probes cover two generic loads and the `mu=0`,
+  `nu=0`, and `mu=nu=0` strata.  These probes are navigation only and cannot
+  establish a characteristic-zero section or exclusion.
+- TD6 V73B/C and the new dual-AWS V73D batch lanes remain CPU-bound with no
+  verdict.  V74/V75 source/manifest hardening is ready but awaits a valid V73
+  artifact.  The Mac has no campaign CAS, solver, Lean, or exact-algebra
+  worker; all substantive computation is AWS-only.
