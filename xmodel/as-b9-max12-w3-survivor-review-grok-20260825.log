@@ -1,0 +1,44 @@
+I'll hostile-review the producer result against the frozen package: first I'll load the writeup, the frozen case files, and any related audit notes so the integer identities can be recomputed independently.The writeup is loaded. Next I’ll inspect the frozen case package and any producer scripts so the identities can be recomputed independently.I’ll recompute the identities independently and pull the AWS evidence, hashes, and prior review format in parallel.I’ll recompute the Jacobian independently and check hashes, leading faces, and the residue/max-12 claims the writeup leans on.Independent recomputation matches the frozen identities. Next I’ll write the review: math holds, and I’ll separate terminology and custody nits from the licensed claim.**Verdict: `CONFIRMED`**
+
+Archived as `xmodel/as-b9-max12-w3-survivor-review-grok-20260825.md`. Identities were rebuilt in python-flint and a second dense engine, without importing or running `replay.py`.
+
+## Strongest exact claim
+
+With `u=x+y^3`, the tame elementary automorphism `B9=(u,y+u^4)` has Jacobian `1`. Over `F_3`, `G9=A∘B9=(u-u^3,y+u^4)` is etale, of actual partial-`y` and total degrees `(9,12)`, with unit leading `y` faces `(-1,1)`, and is not injective. It is a source transform of the Artin–Schreier seed, not the conjugate `B9^{-1}∘A∘B9`.
+
+The integer lift
+
+```text
+P = u - u^3 + 18 u y
+Q = y + u^4 + 3 u^2 y + 18 y^2
+```
+
+satisfies, coefficientwise in `Z[x,y]`,
+
+```text
+det J(P,Q) = 1 - 81 u^4 + 54 y - 162 u^2 y + 648 y^2 ≡ 1 (mod 27),
+```
+
+keeps the same degree pair and unit faces, and reduces to `G9` modulo `3`. The W2 truncation has determinant `1-9u^4 ≡ 1 (mod 9)` and is not `1` modulo `27`. Omitting either `18`-term breaks the modulo-`27` gate. This is one explicit fixed-support determinant-one point over `Z/27` on the `(9,12)` checksum face.
+
+## Sharpest non-claim
+
+One finite-depth point over `Z/27`. Not a `Z/81` or all-depth tower, not a `Z_3` or characteristic-zero map, not a counterexample, not a maximum-twelve theorem, not TD6, not a classification of every lift of `G9`, not a group conjugate of `A`, and not a JC2 resolution.
+
+---
+
+## Mathematical audit
+
+**Expansions.** Mixed binomial terms are present over `Z`: `-3x^2 y^3` and `-3x y^6` in `P`, and `4,6,4` on the `u^4` face of `Q`. Replacing `u^3` by the Freshman form `x^3+y^9` already changes the Jacobian modulo `27`. The `6x^2 y^6` term vanishes modulo `3` only because `6≡0`, which is not Freshman's dream.
+
+**Determinant.** The README product in `(u,y)` coordinates expands to the claimed polynomial; the `(x,y)` Jacobian of the substituted pair matches it monomial-for-monomial (eleven terms, no extras). Every nonconstant coefficient is divisible by `27`. The identity is sharp: `54y` has 3-adic valuation exactly `3`, so it is not `1` modulo `81`. The older `+18u^4` shorthand is correctly rejected (`-72u^4 ≡ +9u^4 (mod 27)`).
+
+**Degrees, faces, reduction, collision.** Actual partial-`y` and total degrees of both `(P,Q)` and `G9` are `(9,12)`; leading faces are `-y^9` and `y^{12}`. No support overflow. Reduction modulo `3` is `G9`; modulo `9` is W2. The collision `(0,0),(2,2)↦(0,0)` holds on the special fibre (the fibre also contains `(0,2)`). Over `Z/27` those points do not collide. Independently, `B9^{-1}∘A∘B9` differs from `G9` in hundreds of monomials.
+
+**Custody.** SOURCE, MANIFEST, and FREEZE hashes recompute. Box02 and Box03 `replay.stdout` are byte-identical at `f9e55a4f3cfc6c3b85b2d4c9ec724e0d757e083b0e82e0ff0e387d7125ea1aef`; payload SHA-256 rebuilt from the independent expansions is `d4482e42f617a4693e7142725ae37de45e3285926408d56c6ad1b746cb405f2e`. Both `rc=0`. Both omission controls fail as claimed.
+
+## Defects
+
+**Mathematical:** none.
+
+**Terminology / custody / exposition (non-blocking):** “tame-equivalent” is slightly looser than “right-composition / source transform,” but the construction never says conjugate. Replay label `source_reduction=B9` names the source automorphism, not the reduced map `G9`. Job tag `T1607Z` sits after the recorded end times. “Serious counterexample-side client” is colour; the refusal list is the actual claim boundary.

@@ -1,0 +1,28 @@
+// Auto-generated exact three-band obstruction ideal.
+option(redSB);
+ring R=0,(s1,s2,s3,s4,s5,s6,s7,s8,s9,t1,t2,t3,t4,t5,t6,t7,t8),dp;
+ideal I=s1^2,
+  s1*s2,
+  s7*s8+s6*s9,
+  s8^2+2*s7*s9,
+  s8*s9,
+  s9^2,
+  5*s2^3-60*s1*t1+17*s1*s2*s3+7*s1^2*s4,
+  24*s2*t1-12*s2^2*s3+24*s1*t2-9*s1*s3^2-5*s1*s2*s4+2*s1^2*s5,
+  13*s1*s2*s8+8*s1^2*s9,
+  168*s9*t5+168*s8*t6+168*s7*t7+168*s6*t8-35*s6^3-168*s5*s6*s7-63*s5^2*s8-84*s4*s7^2-168*s4*s6*s8-126*s4*s5*s9-32*s3*s7*s8-32*s3*s6*s9+2*s2*s8^2+4*s2*s7*s9+40*s1*s8*s9,
+  48*s9*t6+48*s8*t7+48*s7*t8-18*s6^2*s7-24*s5*s7^2-36*s5*s6*s8-18*s5^2*s9-19*s4*s7*s8-7*s4*s6*s9-5*s3*s8^2-10*s3*s7*s9-s2*s8*s9+4*s1*s9^2,
+  72*s9*t7+72*s8*t8-18*s6*s7^2-27*s6^2*s8-22*s5*s7*s8-22*s5*s6*s9-14*s4*s8^2-10*s4*s7*s9-16*s3*s8*s9-2*s2*s9^2,
+  120*s9*t8-10*s7^3-22*s6*s7*s8-7*s6^2*s9-2*s5*s8^2-34*s5*s7*s9-16*s4*s8*s9-14*s3*s9^2,
+  5*s7^2*s8+10*s6*s8^2-8*s6*s7*s9+2*s5*s8*s9-8*s4*s9^2;
+ideal G=std(I);
+print("STRATUM double");
+print("ALGORITHM std");
+print("INPUT_GENERATORS "+string(size(I)));
+print("GB_GENERATORS "+string(size(G)));
+print("DIMENSION "+string(dim(G)));
+print("GROEBNER_BEGIN");
+print(G);
+print("GROEBNER_END");
+print("PASS");
+quit;

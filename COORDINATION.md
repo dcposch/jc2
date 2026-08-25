@@ -391,6 +391,11 @@ campaign from paying twice for the same failed idea.
   adapters without compute tools, and genuinely short low-memory validation.
   Follow `ops/FLEET.md` for machine inventory, shipping, caps, telemetry, and
   kill safety.
+- New heavy runners fail closed off AWS before importing a CAS or allocating
+  large objects, require a registered AWS job tag, and record the remote
+  hostname in custody.  A coordinator process-tree/swap-delta audit
+  is part of each live-state checkpoint; allocated swap without new pageouts
+  is historical occupancy, not by itself active thrashing.
 - Third-party tools may mutate shared CLI configuration; adapters must isolate
   or sanitize it, and a new/updated adapter gets a smoke test before use.
 - Lane launchers take prompt files, reject duplicate live tags, record their

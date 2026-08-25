@@ -1,0 +1,22 @@
+I'll audit the producer report and case independently, fail-closed, and write a verdict that doesn't take the claimed hashes, ranks, or cardinalities on faith. First I need the report, case layout, and any review conventions already in the repo.The `/review` skill is for code diffs; this is a mathematical audit. Next I’ll read the producer report, the case, prior review format, and the prompt so the charges stay independent.I’ll read the producer report, a nearby B9 review for format, and the case metadata before charging the hashes and counts.I’ve got the claim surface. Next I’ll pin hashes, read the compiler, and walk the boxed results without running the heavy replay locally.Compiler and freeze are in hand. I’ll hash the boxed artifacts, read `result.json`, and inspect the parent linear-window source next.I’ll pull parent construction, V2/V3 controls, SMT/ANF, solver logs, and independent hashes next so the ranks and counts aren’t taken from the report.I’ll independently hash the freeze, count the boxed artifacts, and parse the witness degrees so those numbers don’t come from the producer’s summary.I have the independent hashes, counts, and source trail. Next I’ll write a fail-closed verdict that separates compiler correctness from the two identical-host replays and from solver agreement on the already-empty formula.**CONFIRMED.** Verdict is in `xmodel/as-b9-max12-full-fibre-quadratic-3p11-review-grok-20260825.md` (SHA-256 `19198646a082ee2f69e2ef8c38bb588461ac005408ca3016fe77cef6b32eef3c`).
+
+All seven charges pass. No mathematical defects. The licensed object is a finite-set `F_3`-digit count over one B9 mod-243 parent and one consumed `3^10` D12 family, not a scheme or global theorem.
+
+**What holds**
+
+- After the stored outer `/243`, the remaining linear divisor really is `3^5`. Using `3^10` on those arrays would be the off-by-five error the producer refuses. `243^2 det J(T)` first appears in this `3^10 → 3^11` carry.
+- Full inventory: `91+91=182` D12 digits, `276` determinant slots through degree 22, all `165` parent directions.
+- The active/spectator change is in `GL(165,Z)`. Ranks `18`, `56`, `108` are what this source computed on both hosts; row-versus-column rank of `A3` matches the parent’s first gate.
+- Raw quadratic span rank `16` sits inside the rank-`56` spectator image, so the reduced system is the zero polynomial — not a sample of `3^18` points.
+- Cardinalities `3^109` and `3^183` are digit-tuple counts of the displayed parameterization (`18+91` predecessors, plus fresh kernel `74`).
+- Stored supports, reduced modulo `177147`, have honest degree pairs `(12,12)` and `(12,12)`. `P_{(0,12)} ≡ 27702`. V3’s false `(9,12)` assertion is the right negative control.
+
+**What was not collapsed**
+
+1. Source/compiler correctness (this review).
+2. Two source-identical AWS V4 replays (result SHA `7a1b5da26974ee5e5f4fb42ade1575abc0b18d9de54349c8fdcc08ab4a267379`).
+3. Z3 4.16 / Boolector SAT on the already empty SMT (eighteen bounded bits, no equations). That matching the zero-active witness is expected, not a second proof.
+
+No local compiler, Jacobian, or SAT replay was run. The linear-window rank table that produced `165` is consumed hash-pinned and still awaiting its own hostile review; a later reject of that table would punch through these cardinalities, not through the D12 inventory or the divided-equation typing.
+
+Non-blocking only: the producer’s “183-file source closure” is actually 85 hashed paths (`183` is the family exponent); the 190-point BV check is vacuous at zero equations.

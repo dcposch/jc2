@@ -5,6 +5,525 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **FIXED-D12 `(9,12)` BINARY-CUBIC FIRST-BANDS PROMOTION (2026-08-25
+> 18:42Z).**  Over an algebraically closed characteristic-zero field, normalize
+> `P9=K^3,Q12=K^4` and use the exhaustive nonzero binary-cubic root types
+> `K=L^3,L^2M,LMN`.  For the displayed representatives, the complete
+> degree-18 map and degree-17 fresh map have rank/kernel/cokernel data
+>
+> `L^3: 11/10; 10/9/8`,
+> `L^2M: 12/9; 11/8/7`,
+> `LMN: 12/9; 11/8/7`.
+>
+> Projecting the full quadratic source `[P8,Q11]` gives respectively 6, 6,
+> and 7 nonzero quadrics, all of coefficient-span rank 6.  Exact Singular
+> standard bases, without radicalization, give nonunit nonreduced obstruction-
+> scheme dimensions `7,6,6`.  The zero lower-face solution forces nonunitness;
+> these schemes are not yet Keller branches and no root type is excluded.
+>
+> Separately, the displayed finite common-cubic witness has
+> `v3(Disc(K))=15` under every coefficient continuation by multiples of
+> `3^11`, so any characteristic-zero continuation of that literal tuple would
+> have squarefree type `LMN`.  This conditional typing neither creates nor
+> rescues a continuation.  Fixed total D12 forces the distinct partial-`y`
+> Kummer core to order one and does not identify it with the homogeneous `K`.
+>
+> Producer/review SHAs are `2a185d6d...` / `7b589ed2...`; hostile verdict
+> `CONFIRMED_WITH_REPAIRS`, with no mathematical defect.  The active
+> fail-closed custody roots are V3 manifest/freeze SHAs `38466426...` /
+> `b4374cb2...`; V1/V2 and stale `OUTPUT.sha256` files are negative controls.
+> The repairs correct manifest counts/wording and type one hardcoded SAT-JSON
+> field as a separately proved D12 identity.  This proves no later-band
+> emptiness, full binary-cubic classification, maximum-12 theorem,
+> counterexample, or JC2.
+
+> **B9 COMMON-CUBIC POINTWISE `3^12` OBSTRUCTION PROMOTION (2026-08-25
+> 18:28Z).**  At the one displayed normalized common-cubic witness modulo
+> `3^11`, the complete 299-row next-digit system in all 149 coefficient/core
+> digits has ranks `rank(J)=94`, `rank([J|rhs])=95`, kernel dimension 55, and
+> left-cokernel dimension 205.  The three exact target gauges occupy three of
+> the kernel directions.
+>
+> A singleton certificate is determinant row 12, coefficient `[x^2 y^2]`:
+> its entire 149-column fresh row is zero modulo three, while the divided
+> residual is 1 and the required right-hand side is 2.  Thus no fresh digit
+> lifts this point to `3^12`.  All 11,026 mixed fresh-fresh increments of that
+> coefficient vanish modulo `3^12`.
+>
+> Producer/review SHAs are `9dfbcf88...` / `c4275438...`; hostile verdict
+> `CONFIRMED`; case manifest/freeze SHAs are `fdec8739...` / `4bb04b3a...`.
+> The review independently reconstructs all 299 rows and replays the gate on
+> both Box03 and r6d without local computation.
+>
+> This is one witness and one digit.  The same carry is nonconstant on the
+> complete finite family, so this promotion excludes neither the reviewed
+> `3^150` parameterization nor the common-cubic locus, B9, a `Z_3` point,
+> maximum 12, a counterexample, or JC2.
+
+> **B9 COMMON-CUBIC WITNESS JACOBIAN/SNF PROMOTION (2026-08-25 18:23Z).**
+> At the displayed normalized common-cubic mod-`3^11` witness, the exact
+> integer Jacobian of all 276 determinant plus 23 top-core equations is
+> `299 x 149`, with rational rank 146, mod-3 rank 94, rational right nullity
+> 3, and mod-3 tangent dimension 55.  The complete 3-adic Smith valuation
+> histogram is
+>
+> `{0:94,1:29,2:8,3:1,10:3,11:7,12:2,13:2}`.
+>
+> Its determinantal-ideal valuation is 205 while its largest individual Smith
+> valuation is 13; these are distinct conditioning quantities.  Every
+> rank-146 row subsystem has common residual precision at most `N=11`, so the
+> classical maximal-minor inequality fails (`N>410` would be required).  This
+> is failure of that criterion, not failure of lifting or of a sharper
+> Smith-coordinate/dilatation route.
+>
+> The rational kernel is exactly the two constant target translations and the
+> degree-compatible shear `Q -> Q+tP`; target scaling is not an exact kernel
+> direction.  Producer/review SHAs are `9c05e2cb...` / `1cb00022...`;
+> hostile verdict `CONFIRMED`; case manifest/freeze SHAs are `eabb8067...` /
+> `82e57eb5...`.  The review independently reconstructs the matrix entrywise
+> on AWS r6d; Box03/r6d producer runs remain same-source custody.
+>
+> This is a pointwise conditioning/kernel theorem.  It supplies no local
+> row-ideal theorem, Smith Hensel radius, all-depth lift or exclusion,
+> full-family result, maximum-12 theorem, counterexample, or JC2.
+
+> **TD6 RATIONAL-LINES DEPENDENCY/N13 CORRECTION (2026-08-25 18:22Z).**
+> Hostile review of the fixed-A3 q2-beta V45/V46 rational-line package is
+> `CONFIRMED_WITH_REPAIRS`, SHA `2e76f499...`; the nonmutating erratum is
+> `xmodel/td6-c1-c2-c3-q2-beta-rational-raw-lines-dependency-erratum-20260825.md`,
+> SHA `9cdcba8c...`, with new case manifest/freeze-file SHAs
+> `d4eed1e1...` / `83f832ae...`.
+>
+> The exact D(U) algebra survives.  On `V=0,C=-U^2,D(U)`, V46 gives a
+> genuine 13-original-row first-J unit obstruction; reviewed V70 supplies the
+> only missing endpoint, the raw origin, so that whole line is empty in the
+> fixed section.  On `V=0,C=3U^2,D(U)` and
+> `V=0,C=-5U^2,D(U)`, genuine P12 and original first-row identities compose
+> with the abstract scalar `N13=(k/25)beta`, but the package does not construct
+> a staged original-source N13 lift.  The earlier N13 erratum remains in force.
+>
+> The frozen prose that used V33/V69 as a whole-`U=0` endpoint theorem was
+> false at freeze time: V33 covers only `D(C)` and misses the origin.  V70 is a
+> later fresh endpoint theorem; it repairs endpoint custody but not N13 source
+> typing.  For the B3 atlas, the exact remaining routed debt is therefore
+> `V=0,C=-5U^2,D(U)` (the `C=3U^2` line lies on the separately reviewed H=0
+> cover).  This correction licenses no whole-B3, whole-A3, TD6, SP-2, landing,
+> ceiling, or JC2 claim.
+
+> **TD6 V66 GENERIC-`B3` SOURCE-DAG PROMOTION (2026-08-25 18:20Z).**
+> In the fixed source-typed normalized A3 q2-beta section, the reviewed
+> birational chart of `B3=0` over `Q(t,w)` has an exact original-row source
+> DAG with unit P12/N13 residual `-k/50` on
+> `D(t*w*(t-2)*(2t-1)*(t^2-4t+2))`.  Its stage ranks are
+> `3470/3602 -> 38/132 -> 38/94 -> 25/56`; current row 13 uses only previous
+> edge `('X-1',14)` plus original first rows, while `('X-1',0)` is a separate
+> quadratic control.  The complete emitted denominator radical is exactly
+> `{t,w,t-2,2t-1,t^2-4t+2}`.
+>
+> Producer/review SHAs are `50361e08...` / `57d00b8c...`; hostile verdict
+> `CONFIRMED`; case manifest/freeze SHAs are `7a7ea735...` / `5782cc53...`.
+> Box02/r6d are two custody executions of one source.  Every excluded divisor
+> remains a separate original-source obligation; this is not a whole-`B3`
+> theorem, whole A3, TD6, SP-2, landing, ceiling, or JC2.
+
+> **TD6 V67 FINITE-`B3` FACTOR-OPEN PROMOTION (2026-08-25 18:09Z).**
+> In the fixed source-typed normalized A3 q2-beta section, the two exact
+> function-field factors `2t-1=0` over `Q(w)` and
+> `t^2-4t+2=0` over `Q(t)(w)` admit the reviewed raw-center
+> parameterization with `w=V0/U0`.  On each factor, the complete original-row
+> source DAG has ranks
+> `3470/3602 -> 38/132 -> 38/94 -> 25/56`; current row 13 uses the genuine
+> previous edge `('X-1',14)` plus original first rows, and the genuine
+> first-only P12 composition has unit residual `-k/50`.  Polynomial beta and
+> direct `q_beta'=1+2*beta*t+25*t^24` are retained.
+>
+> Every emitted leaf/stage denominator is a power of the curve parameter
+> `w`; the complete chart factors are `w^27` and `w^23`.  Thus the exact
+> all-beta incompatibility holds on `D(w)` of those two curves.  The symbol
+> `U_POLY` in legacy output means `w`, not raw `U0`.  At `w=0` the
+> parameterization reaches the raw origin; that endpoint is not consumed by
+> this package.
+>
+> Producer/review SHAs are `32cf1bf2...` / `a124abb2...`; hostile verdict
+> `CONFIRMED`; case manifest/freeze SHAs are `c4c6fa50...` / `1a3b8db3...`.
+> Dual Box02/Box03 runs are custody executions of one source.  This promotion
+> does not consume the pending V66 generic-chart review and proves no whole
+> factor, whole `B3=0`, whole A3, TD6, SP-2, landing, ceiling, or JC2.
+
+> **B9 NORMALIZED COMMON-CUBIC FINITE-GATE PROMOTION (2026-08-25
+> 18:03Z).**  Over one fixed reviewed B9 mod-243 parent, impose all 276
+> determinant rows together with the 23 coefficient rows
+> `P9=P_(0,9)H^3`, `Q12=Q_(0,12)H^4` for a monic binary cubic `H`.  A
+> source-independent 149-coordinate compiler gives complete linear-family
+> dimensions `55,81,99,116,133` through modulus `3^10`.  At the transition to
+> `3^11`, its 133 predecessor coordinates split invertibly into 17 active and
+> 116 spectators; the fresh operator has rank/kernel/cokernel `94/55/205`,
+> the spectator image has rank 38, and the reduced obstruction system has no
+> equations.  The resulting displayed finite parameterization has `3^95`
+> liftable predecessor tuples and `3^150` complete next-stage tuples.
+>
+> A literal witness with
+> `H=y^3+119880*x*y^2+40581*x^2*y` replays all 299 rows modulo
+> `3^11=177147`, has leading units, and has exact degree pair `(9,12)`.
+> Producer/review SHAs are `b3a86bbd...` / `7c49a939...`; hostile verdict
+> `CONFIRMED`.  An independent hostile reconstruction has SHA `c739e502...`.
+> Producer manifest/freeze SHAs are `53663a8e...` / `86e01887...`; the
+> reconstruction manifest/freeze SHAs are `da6821a9...` / `2194fd67...`.
+> Independent corrected V3 emitters agree byte-for-byte on nontrivial SMT SHA
+> `5af9efbe...`; the SAT claim itself rests on the compiler and exact witness,
+> not on the stopped V3 solvers.
+>
+> The original V2 `UNSAT` remains retracted as a zero-divisor encoding
+> negative control.  The exponents above are cardinalities of one displayed
+> finite `F_3`-digit parameterization, not scheme dimensions.  This promotion
+> proves no survival to `3^12`, inverse-limit/`Z_3` point, characteristic-zero
+> Keller pair, selected-Q8 landing, maximum-12 theorem, counterexample, or
+> JC2.
+
+> **TD6 V71 FIXED-A3 Q2-BETA WHOLE-`H=0` COVER PROMOTION (2026-08-25
+> 17:58Z).**  In the fixed source-typed normalized A3 section
+> `(c1,c2,c3)=(C,V,U)` with `q_beta=t+beta*t^2+t^25`, the compatibility
+> system has no solution anywhere on `H=C-3U^2=0`, for every beta.  The exact
+> reviewed constructible cover is
+>
+> `V64: H=0,D(U V P3 QH)`,
+> `V62D: H=V=0,D(U)`,
+> `V65: H=P3=0,D(U)`,
+> `V65: H=QH=0,D(U)`,
+> `V70: U=0`,
+>
+> with
+> `P3=V^4-32V^2U^3+128U^6` and
+> `QH=V^4+8V^2U^3-64U^6`.  This is the exhaustive split: either `U=0`, or
+> on `D(U)` one of `V,P3,QH` vanishes, or all are nonzero.  Every leaf is
+> consumed only on its reviewed localization; V70 replaces the withdrawn
+> V33/V69 whole-`U=0` sentence.
+>
+> Producer/review SHAs are `7b51c5f0...` / `4ec0f26f...`; hostile verdict
+> `CONFIRMED`; case manifest/freeze SHAs are `ca23e481...` / `41bb693a...`.
+> The normalized P3/QH Bezout identity is a correct optional disjointness
+> check, not a hidden cover step.  This proves whole `H=0` only in the fixed
+> A3 q2-beta section.  It proves nothing on `H!=0`, other source moduli, whole
+> A3, TD6, SP-2, global landing, a complexity ceiling, or JC2.
+
+> **B9 NORMALIZED EXACT RATIONAL/SNF CORE PROMOTION (2026-08-25 17:57Z).**
+> Over the displayed B9 mod-243 parent, the complete normalized
+> `(P<=9,Q<=12)` determinant equation after removing the outer factor 243 is
+>
+> `E(T)=b+A*T+243 det J(T)`
+>
+> on all 276 rows and 146 variables.  Exact rational ranks are
+> `rank(A)=142`, right-kernel dimension 4, left-kernel dimension 134, and
+> `rank([A|-b])=143`; hence only the linear truncation `A*T=-b` is rationally
+> inconsistent.  The 3-adic Smith valuation histogram is
+>
+> `{0:85,1:30,2:12,3:2,5:2,6:2,8:3,10:1,12:2,13:1,17:1,18:1}`.
+>
+> Its cumulative counts below valuations 1 through 5 are exactly
+> `85,115,127,129,129`, explaining the reviewed finite linear-window ranks
+> while showing that the apparent rank-129 stall is not rational rank.
+> Primitive integer bases of both kernels multiply `A` to zero exactly.
+>
+> Projection to the primitive left kernel gives the necessary 134-row
+> quadratic system `C^T(b+243 det J(T))`.  Its constant is nonzero with
+> 3-adic content valuation 21; it has 4,556 nonzero mixed P-Q terms whose
+> coefficient vectors have rational span rank 68.  Producer/review SHAs are
+> `ba9bfc93...` / `0af06035...`; hostile verdict `CONFIRMED`; case
+> manifest/freeze SHAs are `190dc489...` / `db64f099...`.
+>
+> The projected system is necessary, not sufficient, and a nonzero quadratic
+> polynomial may have zeros.  Image-coordinate reconstruction remains
+> required.  This proves no emptiness, common-cubic statement, earlier-parent
+> coverage, inverse-limit/`Z_3` point or exclusion, maximum-12 theorem,
+> counterexample, or JC2.
+
+> **TD6 V65 P3/QH LOCALIZED SOURCE-DAG PROMOTION (2026-08-25 17:38Z).**
+> In the fixed source-typed normalized A3 section
+> `(c1,c2,c3)=(C,V,U)` with `q_beta=t+beta*t^2+t^25` and direct `q_beta'`,
+> V65 proves separate original-row unit identities on
+> `H=P3=0,D(U)` and `H=QH=0,D(U)`.  The two exact curve fields retain the
+> genuine source equations; no weighted source scaling or generic
+> fraction-field substitution is used.
+>
+> The N13 current row 13 has exactly previous edge `('X-1',14)` plus original
+> first rows.  `('X-1',0)` is a distinct quadratic cache/control entry, not an
+> N13 edge.  The P12 client is the genuine 2,885-term current row with 28
+> nonzero original first rows, reduced first-only; its composition with N13
+> is the exact residual `-k/50`.  The leaf/stage denominator ledger has only
+> `U`, with complete chart factor `U^13`.  Omitting direct `q_beta'` changes
+> N13 and is retained as a fail-closed reporter control.
+>
+> Producer/review SHAs are `936f5470...` / `e9f585da...`; hostile verdict
+> `CONFIRMED`; case manifest/freeze SHAs are `8cb2736e...` / `7243954e...`.
+> Dual Box02/r6d normalized streams are byte-identical, but remain two runs of
+> one source.  This licenses only the two displayed loci inside the fixed A3
+> q2-beta section.  It is not by itself whole `H=0`, a whole curve, full A3,
+> TD6, SP-2, landing, a complexity ceiling, or JC2.
+
+> **B9 FIXED-D12 LEADING SHEAR / ORDER-ONE INTERFACE PROMOTION (2026-08-25
+> 17:34Z).**  Conditional on an exact fixed-total-D12 Keller pair over a
+> finite extension of `Q_3` reducing to B9, the degree-22 determinant row
+> gives `J(P12,Q12)=0`.  In characteristic zero the two nonzero degree-12
+> binary forms are proportional: `P12=cQ12`.  The unit `y^12` coefficient of
+> `Q12` makes `c` unique and integral, and B9 reduction gives `c in 3O`.
+> Thus the target shear `(P-cQ,Q)` is integral, determinant preserving,
+> identity modulo three, and removes the whole degree-12 face of `P`.
+>
+> For the displayed broad mod-`3^11` witness the ratio is `c=27702`, while
+> the `x^3 y^9` coefficient of `P12-cQ12` is
+> `59049=3^10 !=0 mod3^11`.  This excludes that point only as an exact-lift
+> representative; it does not exclude the complete `3^183` finite family.
+> Conditional on a nonautomorphic exact lift, reviewed degree routing leaves
+> the broad partial-`y` cell `(9,12)`, not the stricter total-degree box.
+> There the identities `a9=h^3,b12=h^4` and the total-D12 cap make `b12` a
+> nonzero constant, hence `h` constant and the partial-`y` Kummer class order
+> one after the licensed scalar extension.  The B8 identities
+> `a8=h^2,b12=h^3` give the analogous order-one result.  This does not make
+> the separate total-homogeneous binary cubic/quartic constant.
+>
+> Producer/review SHAs are `82c70147...` / `1cb8f1c1...`; hostile verdict
+> `CONFIRMED`.  The selected corrected-Q8 source is an order-three `p=1`
+> divided-row chart and cannot receive this order-one fixed-D12 object;
+> denominator clearing or the `p=q=0` special fibre does not license a
+> specialization.  The only licensed successor is complete-family
+> leading-face incidence, the integral shear, and an original-row order-one
+> common-core compiler.  This is not an exact lift, family-incidence verdict,
+> all-depth point, common-cubic/quartic classification, maximum-12 theorem,
+> counterexample, or JC2.
+
+> **B9 COMMON-CUBIC V2 ZERO-DIVISOR RETRACTION (2026-08-25 17:31Z).**
+> The first normalized common-cubic emitter used one bit-vector constructor
+> both for residues modulo `177147` and for the raw modulus.  It therefore
+> emitted `177147 mod177147=0`: all 407 `bvurem` gates had zero divisors and
+> every intended `h_i<177147` bound became the impossible `h_i<0`.  The
+> invalid SMT SHA is `182bc9f7...`; deterministic bit-blasting gives the
+> trivial `p cnf 0 1`, SHA `69ee12c3...`.  Quarantine every V2 Boolector,
+> Z3, CaDiCaL, and DRAT `UNSAT` result as an encoding negative control.  It
+> proves no common-cubic emptiness or family death.
+>
+> Nonmutating erratum:
+> `xmodel/as-b9-9-12-common-cubic-v2-zero-divisor-erratum-20260825.md`,
+> SHA `cb07f729...`; synthesis correction:
+> `xmodel/ideation-20260825T1700Z-synthesis-erratum.md`, SHA `5dfca997...`.
+> The reviewed normalized `3^162` finite family is unaffected.  Corrected V3
+> independent emitters agree on nontrivial formula SHA `5af9efbe...`, but no
+> V3 solver verdict is promoted.  Future emitters must type residue and raw
+> modulus constants separately, reject zero divisors, and assert nontrivial
+> formula controls before launch.
+
+> **B9 NORMALIZED `(9,12)` FIRST NONLINEAR FAMILY PROMOTION (2026-08-25
+> 17:29Z).**  Over one fixed reviewed B9 mod-243 parent, consume the complete
+> normalized family at modulus `3^10` with 145 predecessor digit coordinates,
+> 55 coefficients for `P` of total degree at most 9, 91 coefficients for `Q`
+> of total degree at most 12, and all 276 ambient D12 determinant rows.  At
+> the first nonlinear transition to `3^11=177147`, the 145 coordinates split
+> invertibly into 17 active and 128 spectator directions.  The fresh operator
+> has rank/kernel `85/61`; the spectator image in its 191-dimensional left
+> cokernel has rank/kernel `44/84`; and the rank-15 full quadratic coefficient
+> span lies inside that image.  Hence the reduced obstruction system has zero
+> equations.
+>
+> The displayed finite `F_3`-digit parameterization has `3^101` predecessor
+> tuples (`17+84`) and `3^162` complete next-stage tuples after the fresh
+> kernel.  One zero-active witness literally replays all 276 determinant rows
+> modulo `177147`; the box caps and unit `y^9,y^12` faces give honest
+> partial-`y` and total degree pairs `(9,12)`.  Producer/review SHAs are
+> `0b4d7a58...` / `1c7fdb1b...`; hostile verdict `CONFIRMED`; case
+> manifest/freeze SHAs are `6b0a0503...` / `2005e878...`.
+>
+> The two AWS hosts ran one implementation.  The empty residual SMT merely
+> re-encodes the computed zero reduced equations and is not an independent
+> proof.  This licenses a finite count over one consumed mod-`3^10` family,
+> not the complete earlier mod-243 fibre, a scheme dimension, modulus
+> `3^12`, an inverse limit/`Z_3` point, common-cubic landing,
+> characteristic-zero map, counterexample, maximum-12 theorem, or JC2.
+
+> **B8 COMPLETE FIXED-D12 W2/W3 FAMILY PROMOTION (2026-08-25 17:27Z).**
+> In the degree-compatible 81+91 coefficient envelope, the W2 fresh operator
+> has rank 104 and kernel dimension 68, so the complete W2 fibre is `A^68`.
+> The W3 Kuranishi ANF has polynomial-span rank 81, quadratic rank 42,
+> tangent rank 41, and 39 pure-linear consequences.  Exact elimination leaves
+> 29 variables and five generators
+>
+> `(s22, s26+2*s22*s26, s22^2, s26^2+s19*s22, s22*s27)`.
+>
+> Over `F_3` these generate the ideal `(s22,s26)` itself, not merely its
+> radical.  Hence the compatible predecessor scheme is reduced `A^27`; the
+> constant fresh rank-104 operator gives the trivial `A^68` fibre, and the
+> complete W3 scheme is `A^27 x A^68=A^95`.  All 276 determinant rows and
+> the original support caps are retained.  Ten emitted points replay
+> literally; their actual partial-`y` and total degree pairs are `(8,12)`.
+>
+> Producer/review SHAs are `aab880a2...` / `31a61ed2...`; hostile verdict
+> `CONFIRMED`; case manifest/freeze SHAs are `56d201df...` / `ff855910...`.
+> Polarization and interpolation agree, and independent AWS Singular `std`
+> and `slimgb` paths confirm the ideal equality.  The V1 verifier's false
+> PASS after a printed FAIL is quarantined; only fail-closed V2 is consumed.
+> This is a complete finite W3 scheme, not a W4 family, inverse limit,
+> `Z_3`/characteristic-zero map, common-quartic survivor, counterexample,
+> maximum-12 theorem, selected Q8/TD6 object, or JC2.
+
+> **B9 COMPLETE FIXED-D12 LINEAR WINDOW AND FIRST NONLINEAR FAMILY PROMOTION
+> (2026-08-25 17:25Z).**  Fix the reviewed B9 mod-243 parent and allow all
+> `91+91=182` coefficients of two total-degree-at-most-12 outputs, retaining
+> all 276 determinant rows.  Different-model review confirms the complete
+> linear-window rank/kernel/projection sequence
+>
+> `3^6:108/74/0`, `3^7:147/109/35`, `3^8:162/129/55`,
+> `3^9:164/147/73`, `3^10:164/165/91`.
+>
+> Writing `F=F5+243T`, the quadratic self-term has factor
+> `243^2=3^10`; it first enters the divided carry from `3^10` to `3^11`.
+> At that complete nonlinear transition, 165 predecessor coordinates split
+> into 18 active and 147 spectator directions.  Fresh rank/kernel are
+> `108/74`; spectator rank/kernel are `56/91`; and the rank-16 full
+> constant/linear/quadratic obstruction span lies in the spectator image.
+> The reduced obstruction system therefore has zero equations, giving
+> `3^109` liftable predecessor digit tuples and `3^183` complete next-stage
+> tuples.  Literal reconstruction passes all 276 rows modulo `177147`.
+>
+> Linear producer/review SHAs are `7f72ee08...` / `72daa21...`; nonlinear
+> producer/review SHAs are `2992772c...` / `19198646...`; both hostile
+> verdicts are `CONFIRMED`.  The `3^183` number is a finite staged
+> parameterization count, not an affine-scheme, smoothness, flatness, or
+> inverse-limit claim.  The displayed nonlinear witness has actual
+> partial-`y` and total degree pairs `(12,12)`, not `(9,12)`, and its top
+> faces are not proportional modulo `3^11`.  That kills only the displayed
+> representative as an exact-lift representative.  It does not kill the
+> complete family, the pinned parent, the B9 seed, all fixed-D12 maps, or
+> prove a `Z_3` point, characteristic-zero map/collision, counterexample,
+> maximum-12 theorem, or JC2.
+
+> **B8 EXPLICIT FIXED-D12 `Z/27` POINT PROMOTION (2026-08-25 17:25Z).**
+> For the oriented B8 residue seed
+> `G8=(y+u^2,u^3-u)`, `u=x+y^4`, use the complete degree-compatible envelope
+> with 81 first-coordinate slots (`total<=12,y<=8`), 91 second-coordinate
+> slots (`total<=12,y<=12`), and all 276 determinant rows.  Its fresh
+> operator has rank 104 and nullity 68.  The frozen W2/W3 digits produce one
+> literal pair modulo 27 with determinant one, actual partial-`y` and total
+> degree pairs `(8,12)`, unit leading `y` faces, and reduction `G8`.  The W2
+> parent alone fails modulo 27, and the older 182-slot V1 representative is a
+> genuine degree-overflow negative control.
+>
+> Producer/review SHAs are `60d344d1...` / `2de83505...`; the hostile verdict
+> is `CONFIRMED`.  Dual-AWS RREF runs plus direct algebra support the one-point
+> theorem; they are not independent mathematical votes.  This is one
+> fixed-support point over `Z/27`, not the complete 68-dimensional family,
+> a `Z/81` or all-depth tower, `Z_3`/characteristic-zero map, selected Q8 or
+> TD6 object, counterexample, maximum-12 theorem, or JC2.
+
+> **TD6 RAW-`U=0` ORIGINAL-SOURCE REPAIR PROMOTION (2026-08-25 17:25Z).**
+> V70 rebuilds the missing `C=U=0` strata from original source rows.  On
+> `C=U=0,D(V)`, exact dual-AWS replay gives a source-local obstruction with
+> complete chart factor `V^3`; at `C=V=U=0`, an original transport row gives
+> a denominator-one unit obstruction.  Together with the corrected reviewed
+> V33 open `U=0,D(C)`, the exact set cover
+>
+> `V(U) = [V(U)∩D(C)] union [V(C,U)∩D(V)] union V(C,V,U)`
+>
+> restores whole raw `U=0` only in the fixed source-typed A3 q2-beta section.
+> Producer/review SHAs are `9013ec37...` / `2a352086...`; hostile verdict
+> `CONFIRMED`; case manifest/freeze SHAs are `80087727...` / `3807f223...`.
+> This paragraph supersedes the “unrun `C=U=0`” state in the 16:22Z
+> correction below, but not its warning about V33/V69.  It proves no staged
+> N13, whole `H`, B3, A3, TD6, SP-2, landing, complexity ceiling, or JC2
+> statement.
+
+> **AS D7 COMPLETE THREE-FIBRE CONES MODULO 729 PROMOTION (2026-08-25
+> 16:10Z).**  At each pinned reviewed Q3 fibre `0000`, `0270`, and `0513`,
+> write `F=F0+27T` with all 72 coefficients of both total-degree-at-most-seven
+> output polynomials free in `T in (Z/27)^72`.  Exact bilinearity gives
+>
+> `det J(F)-1=D0+27L(T)+729 det J(T_P,T_Q)`.
+>
+> Hence modulo 729 the complete gate is the linear congruence
+> `D0/27+L(T)=0 mod27` on all 91 determinant coefficients.  The three
+> Bockstein rank/kernel sequences are
+> `27/45 -> 36/81 -> 47/106` at `0000` and
+> `27/45 -> 43/74 -> 49/97` at `0270,0513`.  Exactly a 61-dimensional
+> projection of the prior `3^81` module and 52-dimensional projections of
+> the prior `3^74` modules lift; adjoining the 45-dimensional fresh kernel
+> gives `3^106,3^97,3^97` solutions.  Literal integer particulars make every
+> determinant coefficient divisible by 729 and reduce to `(x-x^3,y)`.
+>
+> Producer/review SHAs are `5bfaec75...` / `b63fe3ca...`; hostile Grok
+> verdict `CONFIRMED`.  Case manifest/freeze SHAs are `80eca89d...` /
+> `bda8b4b...`.  Box02 and r6d are two executions of one implementation.
+> **Refused:** a fourth global linear Bockstein.  Modulo 2187 the term
+> `729 det J(T_P,T_Q)` survives and varies quadratically over the liftable
+> predecessor strata, while the fresh order-729 digit is linear.  The theorem
+> covers only these three fibres, not the whole predecessor scheme, an
+> all-depth point, collision, characteristic-zero counterexample, no-lift
+> theorem, or JC2.
+
+> **TAME RIGHT-COMPOSED MAX-12 RESIDUE SEEDS AND B9 `Z/27` PROMOTION
+> (2026-08-25 16:23Z).**  Over `F_3`, let `A(s,t)=(s-s^3,t)`.  For
+> `B9=(u=x+y^3,v=y+u^4)`, the source transform `G9=A∘B9` has actual
+> partial-`y` and total degrees `(9,12)`, leading coefficients `(-1,1)`,
+> determinant one, and three fibres of size three.  For
+> `B8=(u=x+y^4,v=y+u^2)`, the determinant-one target orientation
+> `phi(P,Q)=(Q,-P)` gives `G8=phi∘A∘B8` with degree pairs `(8,12)`,
+> leading coefficients `(1,1)`, and the same fibre census.  Over `Z`, each
+> `B` and its displayed inverse are integral with determinant one and the raw
+> composite has `det J(A∘B)=1-3u^2`.
+>
+> Different-model review SHA `4848e6dc...` returned `CONFIRMED` with no
+> mathematical error against producer SHA `ead76b83...` and frozen-case
+> manifest SHA `1c39d8af...`.  The directory slug says `conjugate`, but the
+> maps are **not** group conjugates; `G8` also includes the target orientation
+> `phi`.  These are finite-field seeds only and prove no Q8/TD6 landing,
+> maximum-12 theorem, lift, counterexample, or JC2 result.
+>
+> Separately, with `u=x+y^3`,
+>
+> `P=u-u^3+18uy`,
+> `Q=y+u^4+3u^2y+18y^2`
+>
+> has exact determinant
+> `1-81u^4+54y-162u^2y+648y^2`, hence determinant one modulo 27, while
+> retaining actual degree pair `(9,12)` and reducing to `G9`.  Omission of
+> either coefficient-18 term fails the mod-27 gate.  Producer/review SHAs are
+> `034c756c...` / `bacc7533...`, hostile verdict `CONFIRMED`; case
+> manifest/freeze SHAs are `edd7b18d...` / `25ed9108...`.  This licenses one
+> finite-depth fixed-D12 point only—not `Z/81`, all depth, `Z_3`, a
+> characteristic-zero map, counterexample, maximum twelve, TD6, or JC2.
+>
+> **Reviewed continuation through `Z/243`.**  The same residue branch has the
+> explicit representative
+>
+> `P=u-u^3+18uy+81(2uy+xy^2)`,
+> `Q=y+u^4+3u^2y+72y^2+81(y^2+x^4y^2+xy^11)`.
+>
+> Its literal integer determinant is one modulo 243, it reduces to `G9`, and
+> both its actual partial-`y` and total-degree pairs remain `(9,12)`.  The
+> divided `Z/81` residual and both displayed mod-three primitives were
+> independently reconstructed; hostile Grok review returned `CONFIRMED` with
+> no mathematical error.  Producer/review SHAs are `9597217a...` /
+> `d7326f26...`; case manifest/freeze SHAs are `27f0eff2...` /
+> `b61ab900...`.  The determinant is not one modulo 729.  This promotes one
+> branch through `Z/243`, not the complete D12 predecessor scheme, an inverse
+> limit, characteristic-zero collision/map, counterexample, maximum-12
+> theorem, TD6, or JC2.
+
+> **TD6 RAW-`U=0` SCOPE CORRECTION (2026-08-25 16:22Z).**  Hostile review of
+> the V33 theorem and V69 canonical-digest repair returned
+> `CONFIRMED_WITH_REPAIRS` (review SHA `706f6ad4...`).  The old source
+> transport uses the pivot `-C` twice.  Its true localization factor is
+> therefore `C^2`, and the licensed conclusion is only
+> `U=0,D(C)` inside the fixed source-typed section—not the whole `U=0`
+> divisor.  The intersection `C=U=0` is the distinct, unrun raw
+> `u-h-zero` stratum and cannot be obtained by specializing the old
+> parameterization.
+>
+> The process-address-dependent `repr(E3)` digest explains the prior
+> cross-host hash discrepancy and is custody-only; V69's canonical serializer
+> repairs that reporter.  It does **not** repair the omitted localization.
+> Quarantine every producer composition that consumed a whole-`U=0`,
+> whole-`H=0`, or whole fixed-A3 cover until `C=U=0` is rebuilt from original
+> source rows and reviewed.  This paragraph supersedes the overbroad
+> whole-`U=0` language in provisional reports and historical daily overlays;
+> no promoted Q8/AS result is affected.
+
 > **AS FIXED-SUPPORT LOW-`y` ADIC-ESCAPE PROMOTION (2026-08-25
 > 15:42Z).**  Fix finite allowed monomial sets `S_P,S_Q`, all with
 > `y`-exponent at most eleven.  Let `X_n` be the actual coefficient vectors

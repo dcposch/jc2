@@ -1,0 +1,17 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the producer report, the nine-charge review prompt, and the V3 custody roots so the review stays locked to those exact hashes.The review skill is for code diffs; this is a custody-and-math hostile review of the frozen case. Next I’ll hash the named roots and inventory the V3 package.Named hashes match. I’ll now read the V3 prompt, producer report, and custody documents, and treat V1/V2 as diagnostics only.Hashes of the named roots check out. Next I’ll verify the 102 V3 records, then read sources, evidence, and V1/V2 reviews as diagnostics.V3’s 102 records all verify. I’ll now inspect old-manifest counts, evidence, dual-host hashes, and the V1/V2 diagnostics without running any solver.Charge 8 sits in the Q8/Kummer audit, not in the band compiler. I’ll read that argument and the frozen evidence in parallel.Old `shasum -c` warns on seven lines but still exits 0, so that root is not fail-closed. Next I’ll compare OUTPUT hashes and read the frozen algebraic evidence.Evidence is complete: V3 is fail-closed, the algebraic claims check out on frozen bytes, and the producer’s active-manifest pointer is the repair. Writing the V3 review.**CONFIRMED_WITH_REPAIRS**
+
+Wrote `xmodel/max12-912-order1-binary-cubic-first-two-bands-review-grok-v3-20260825.md` (SHA-256 `7b589ed246615ed4daa33aa9d9fc56a03391f5fd5e3a6c09304dd060e7a320eb`). Producer, case, and**CONFIRMED_WITH_REPAIRS.** The V3 review is at `xmodel/max12-912-order1-binary-cubic-first-two-bands-review-grok-v3-20260825.md` (SHA-256 `7b589ed246615ed4daa33aa9d9fc56a03391f5fd5e3a6c09304dd060e7a320eb`). No case, producer, or prior-review byte was edited.
+
+The mathematics of the first two bands stands. The repairs are custody wording and one SAT-JSON typing issue.
+
+**V3 custody is fail-closed.** All 102 V3 records verify under `LC_ALL=C`. The V1 harvest list is 96 valid hashes plus seven locale-warning lines (103 physical lines), not 89. `shasum -c` on V1 warns and still exits 0, so V1 is fail-open; V2/V3 add only custody documents.
+
+**Mathematics (charges 1–5, 7–9).** The three PGL2 types of a nonzero binary cubic are exhaustive over an algebraically closed characteristic-zero field. Frozen ranks/kernels/cokernels and Singular dimensions 7/6/6 follow the complete maps. Nonunit obstruction ideals are forced by the origin and are not Keller branches. For the literal SAT cubic `(1,119880,40581,0)`, every integral `3^{11}`-continuation has `v_3(Disc)=15`, hence type `LMN` if a continuation exists. Fixed total degree 12 separately forces partial-`y` Kummer order one and conflicts with selected order-three Q8; that is not a statement about the total-homogeneous cubic `K`.
+
+**Repairs.**
+1. The active manifest is `MANIFEST.postrun.v3.sha256`, not V1 `MANIFEST.postrun.sha256`.
+2. V1 valid-record count is 96, already corrected by the immutable count-correction.
+3. `partial_y_kummer_order_from_fixed_D12` in the SAT JSON is a hardcoded D12 identity, not computed from the SAT cubic.
+
+Stale `OUTPUT.sha256` is only the empty-file hash of `launcher.stdout`; every other recorded hash matches. Dual-host algebraic bytes are identical (custody, not a second implementation). V1/V2 review attempts are 72-byte failed-closed logs and were not used as evidence.

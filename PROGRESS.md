@@ -7,6 +7,113 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-25
 
+> **LATEST STRATEGY OVERLAY (17:25Z).**  Four sealed blind all-46 reports and
+> adversarial cross-reading now select one core-first fork: impose exact
+> proportional/common-power leading faces on each complete D12 family, then
+> decide the surviving integral scheme by Smith/Lyapunov--Schmidt,
+> Neron-dilatation/Fitting, or a fully checked quantitative Hensel theorem.
+> The sealed synthesis is
+> `xmodel/ideation-20260825T1700Z-synthesis.md`, SHA-256
+> `a1cd2be8eb99e4ef19338c60d3d3d7721905afcb5268c8f68919ca2df20d74e2`.
+> Its V2 common-cubic solver paragraph is superseded by
+> `xmodel/ideation-20260825T1700Z-synthesis-erratum.md`, SHA-256
+> `5dfca997914867c122de218c56660dcb9d2b3b01b4ae03030216d9da5ac14b17`.
+> The corrected finite SAT micro-round is
+> `xmodel/ideation-20260825T1700Z-synthesis-postscript-common-cubic-sat.md`,
+> SHA-256
+> `8acce4e9502aa93f7d766befadabf82b5e33a2b3815554cdd770ae330d6dc265`.
+> The broad B9 linear and first nonlinear complete-family gates are now
+> hostile-review `CONFIRMED`, with `3^183` finite staged tuples at modulus
+> `3^11`; the displayed `(12,12)` representative fails top-face
+> proportionality, so the full-family incidence is live.  The stricter
+> normalized `(9,12)` family has a hostile-review `CONFIRMED` `3^162` first
+> nonlinear gate and an honest witness.  Its first common-cubic solver verdict is now
+> quarantined: the emitter reduced the modulus constant modulo itself, making
+> bit-vector bounds/divisors zero and the instant `UNSAT` a trivial encoding
+> contradiction.  It proves no family death.  A corrected source-independent
+> AWS compiler and different-model review instead confirm SAT for the intended
+> common-cubic gate: a displayed finite parameterization of `3^150`
+> mod-`3^11` tuples and a literal all-299-row witness.  This is not a scheme
+> dimension and no all-depth point is claimed.
+> Different-model review also confirms the determinant-only exact rational
+> core: rank 142, right kernel 4, left cokernel 134, and a nonzero 134-row
+> quadratic compatibility system; this is not emptiness.  Different-model
+> review confirms that the core-inclusive witness Jacobian has rational rank
+> 146, exactly three target-gauge rational kernel directions, mod-3 rank 94,
+> determinantal valuation 205, and maximum Smith valuation 13.  The classical
+> minor criterion fails but does not decide liftability.  Review also confirms
+> that the displayed point dies at `3^12` by the singleton `[x^2 y^2]` carry;
+> the carry is nonconstant over the finite family, so the full 205-cokernel
+> map on all 150 parameters is being compiled on AWS.  Fixed
+> total D12 also forces both
+> B9 and B8 into the order-one partial-`y` Kummer core, not selected
+> order-three/two/four leaves; their varying total-homogeneous cubic/quartic
+> remains separate.  Hostile review confirms that conditional interface and
+> the selected-Q8 `SCOPE-CONFLICT`.  The binary-cubic first-two-band gate is
+> also `CONFIRMED_WITH_REPAIRS`: all three
+> root types survive in nonreduced schemes of dimensions `7,6,6`, and the
+> complete degree-16/15 continuation is AWS-only.  The explicit B8 mod-27
+> point and its complete W2/W3
+> scheme `A^27 x A^68=A^95` are reviewed `CONFIRMED`, as is TD6 V70 raw
+> `U=0`.  TD6 V65's two localized P3/QH source-DAG theorems are now also
+> confirmed.  Their five-piece V71 composition is hostile-review `CONFIRMED`
+> and excludes the whole `H=0` divisor in the fixed A3/q2-beta section only;
+> V67 is now hostile-review `CONFIRMED` on `D(w)` of both finite B3 factors,
+> and V66 is `CONFIRMED` on the generic B3 chart after its five-factor
+> localization.  Reviewed boundary routing and V70 isolate the remaining
+> whole-B3 source debt to `V=0,C=-5U^2,D(U)` with a genuine staged N13 DAG.
+> Rational-lines erratum SHA `9cdcba8c...` makes the required nonmutating
+> custody repair: V70, not stale V33, supplies the common origin, while the
+> prior N13 source-typing caveat remains intact.
+> Allocation is **AS/D12 40% / max-12 35% / TD6 20% / global 5%**.  All
+> heavy computation remains AWS-only.  Next full round by
+> `2026-08-26T05:00Z`; web sweep by `2026-08-26T01:26Z`.
+
+> **LATEST STRATEGY OVERLAY (16:45Z).**  The exact unit-leading
+> Artin--Schreier source transforms at `(9,12)` and oriented `(8,12)` triggered
+> a new four-owner blind scan of all 46 avenues.  The sealed synthesis is
+> `xmodel/ideation-20260825T1550Z-synthesis.md`, SHA-256
+> `0a96577f557c7fe4f4dadc3bc2ecd74d08e9d9927630b511fa3e8461b4141e91`,
+> and temporarily reallocates **AS/D12 40% / Q8 35% / TD6 20% / global
+> 5%**.  The two finite-field seeds are different-model `CONFIRMED` and are
+> right-compositions/source transforms, not group conjugates; B9 is also
+> reviewed through one fixed-D12 point modulo 243.  Producer-exact whole-
+> family B9 work has continued through the linear window modulo
+> `3^10=59049`, ending in a 165-dimensional staged family; the complete
+> transition to `3^11=177147` is the first gate where the order-243
+> correction's quadratic self-term survives.  B8 has a separately frozen
+> degree-compatible point modulo 27 from a full 172-column gate, with hostile
+> review live.  Finite-depth survival is not an inverse limit,
+> characteristic-zero map, counterexample, max-12 theorem, or JC2 result.
+> Q8 continues its moving-centre/infinity cover and now audits the integral
+> monomial-core bad-reduction boundary rather than importing the seed into a
+> divided generic Kummer chart.  The next full-round backstop is
+> `2026-08-26T04:15Z`; the web sweep remains due
+> `2026-08-26T01:26Z`.
+
+> **REVIEW/PROMOTION AND ROLLBACK UPDATE (16:23Z).**  The complete three-
+> fibre D7 cones modulo 729 are hostile-review `CONFIRMED`: final
+> rank/kernel data are `27/45 -> 36/81 -> 47/106` at `0000` and
+> `27/45 -> 43/74 -> 49/97` at `0270,0513`, giving
+> `3^106,3^97,3^97` solutions.  The next modulus is quadratic over the
+> liftable prior strata, not a fourth global linear Bockstein.  Separately,
+> TD6 hostile review found a load-bearing scope defect in the provisional raw
+> `U=0` composition: two transport pivots contribute `C^2`, so V33/V69 prove
+> only `U=0,D(C)`.  The raw `C=U=0` stratum is unrun.  All provisional
+> whole-`U=0`, whole-`H=0`, and whole fixed-A3 conclusions are quarantined
+> pending an original-source rebuild; the V69 canonical digest repair fixes
+> custody only.  No promoted AS or Q8 theorem is affected.
+
+> **COMPUTE PLACEMENT (16:00Z).**  All three owners and a direct process audit
+> found no campaign Singular, Sage, msolve, Lean, solver, or substantive
+> Python worker on the Mac.  An eight-second sample recorded zero swapouts
+> and zero throttled pages; allocated swap is historical residency.  Every
+> substantive job is on the seven AWS hosts, all of which have zero swap.
+> The fleet consumes the full 512-vCPU quota; new D12 work takes newly freed
+> Box02/Box03/r6d capacity without killing near-terminal source-valid Q8 or
+> TD6 jobs.  The Mac remains limited to editing, hashes, SSH/status, and
+> lightweight cloud reviews.
+
 > **LATEST STRATEGY OVERLAY (14:53Z).**  Significant AS/TD6 news triggered a
 > new four-owner blind scan of all 46 avenues plus three adversarial
 > cross-scans.  The sealed synthesis is

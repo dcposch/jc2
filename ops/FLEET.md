@@ -8,6 +8,11 @@ editing, orchestration, hashing, process/status checks, and genuinely short,
 low-memory validation. If a job's memory or duration is uncertain, ship it to
 AWS. Do not use the former `<8 GB` local-Python allowance: several concurrent
 "small" jobs can still exhaust the Mac's 32 GB and thrash swap.
+New route-specific heavy runners must fail closed unless `uname -s` is
+`Linux`, require a nonempty registered job tag, and record `hostname` before
+starting the computational payload.  `ops/aws_exact_lane.sh` enforces Linux,
+an Amazon EC2 DMI identity, and a nonempty registered lane tag for clients
+that use the shared wrapper.
 
 ## Inventory
 - **box01** (AWS x8i.16xlarge, 64 vCPU / 1 TiB): instance

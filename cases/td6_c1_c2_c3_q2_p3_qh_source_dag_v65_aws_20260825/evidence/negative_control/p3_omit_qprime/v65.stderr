@@ -1,0 +1,32 @@
+Running as unit: run-rc8c31a5c91f5431eaf7812d97c4a09bd.scope; invocation ID: 78c1283156f0413fb6f604734288fa52
+Traceback (most recent call last):
+  File "/home/ubuntu/stage/td6_v65_curve_repaired_20260825T141544Z/td6-aws-handoff-20260825-v65/jc2/cases/td6_c1_c2_c3_q2_curve_source_dag_repaired_v65_20260825/replay.py", line 1160, in <module>
+    main()
+  File "/home/ubuntu/stage/td6_v65_curve_repaired_20260825T141544Z/td6-aws-handoff-20260825-v65/jc2/cases/td6_c1_c2_c3_q2_curve_source_dag_repaired_v65_20260825/replay.py", line 918, in main
+    _, _, _, n13_weights = n13_records[0]
+                           ~~~~~~~~~~~^^^
+IndexError: list index out of range
+Command exited with non-zero status 1
+	Command being timed: "timeout 21600 ./run_v65.sh p3 omit-direct-qprime"
+	User time (seconds): 7352.17
+	System time (seconds): 2.30
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:02:36
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1831088
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 558537
+	Voluntary context switches: 8
+	Involuntary context switches: 8808
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 104
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

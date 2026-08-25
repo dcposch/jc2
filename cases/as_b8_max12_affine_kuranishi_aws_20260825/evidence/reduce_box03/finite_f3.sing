@@ -1,0 +1,10 @@
+option(redSB);
+ring r=3,(s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24,s25,s26,s27,s28),dp;
+ideal I=s22,s26+2*s22*s26,s22^2,s26^2+s19*s22,s22*s27;
+ideal F=I,s0^3-s0,s1^3-s1,s2^3-s2,s3^3-s3,s4^3-s4,s5^3-s5,s6^3-s6,s7^3-s7,s8^3-s8,s9^3-s9,s10^3-s10,s11^3-s11,s12^3-s12,s13^3-s13,s14^3-s14,s15^3-s15,s16^3-s16,s17^3-s17,s18^3-s18,s19^3-s19,s20^3-s20,s21^3-s21,s22^3-s22,s23^3-s23,s24^3-s24,s25^3-s25,s26^3-s26,s27^3-s27,s28^3-s28;
+ideal G=std(F);
+print("DIM "+string(dim(G)));
+print("SIZE "+string(size(G)));
+print("VDIM "+string(vdim(G)));
+print("REDUCE_ORIGINAL "+string(reduce(F,G)));
+quit;

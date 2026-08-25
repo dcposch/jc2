@@ -1,10 +1,30 @@
 #!/usr/bin/env bash
 set -uo pipefail
 
+if [[ "$(uname -s)" != "Linux" ]]; then
+  echo "refusing heavy lane outside AWS: host=$(hostname) os=$(uname -s)" >&2
+  exit 125
+fi
+
+AWS_VENDOR=$(tr -d '\n' < /sys/class/dmi/id/sys_vendor 2>/dev/null || true)
+if [[ "$AWS_VENDOR" != "Amazon EC2" ]]; then
+  echo "refusing heavy lane outside AWS EC2: host=$(hostname) vendor=${AWS_VENDOR:-unknown}" >&2
+  exit 125
+fi
+
+if (( $# < 4 )); then
+  echo "usage: $0 AWS_ROOT AWS_RUN REGISTERED_LANE_TAG COMMAND [ARG ...]" >&2
+  exit 125
+fi
+
 AWS_ROOT=$1
 AWS_RUN=$2
 AWS_NAME=$3
 shift 3
+if [[ -z "$AWS_ROOT" || -z "$AWS_RUN" || -z "$AWS_NAME" ]]; then
+  echo "refusing unregistered heavy lane: root, run directory, and lane tag are required" >&2
+  exit 125
+fi
 AWS_START=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 
 cd "$AWS_ROOT" || exit 125

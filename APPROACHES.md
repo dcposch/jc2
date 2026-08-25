@@ -41,6 +41,144 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
+## Superseding strategy overlay (2026-08-25 17:25Z)
+
+The latest sealed whole-portfolio decision record is
+[`xmodel/ideation-20260825T1700Z-synthesis.md`](xmodel/ideation-20260825T1700Z-synthesis.md)
+(SHA-256
+`a1cd2be8eb99e4ef19338c60d3d3d7721905afcb5268c8f68919ca2df20d74e2`).
+Its post-cutoff common-cubic solver paragraph is corrected by
+[`xmodel/ideation-20260825T1700Z-synthesis-erratum.md`](xmodel/ideation-20260825T1700Z-synthesis-erratum.md),
+SHA-256
+`5dfca997914867c122de218c56660dcb9d2b3b01b4ae03030216d9da5ac14b17`.
+The corrected finite SAT micro-round is
+[`xmodel/ideation-20260825T1700Z-synthesis-postscript-common-cubic-sat.md`](xmodel/ideation-20260825T1700Z-synthesis-postscript-common-cubic-sat.md),
+SHA-256
+`8acce4e9502aa93f7d766befadabf82b5e33a2b3815554cdd770ae330d6dc265`.
+Four independent blind all-46 scans converge on a **core-first** fork:
+intersect each complete finite D12 family with its necessary proportional or
+common-power leading-form scheme, then apply exact Smith/Lyapunov--Schmidt,
+Neron-dilatation/Fitting, or quantitative Hensel analysis to the surviving
+scheme.  Stop treating selected digit strings as the arbiter.  The temporary
+allocation is **AS/D12 40% / maximum-12 35% (25% fixed-cap order one, 10%
+general Q8) / TD6 20% / global 5%**.
+
+- **B9 broad family.**  Different-model review confirms the complete linear
+  window through `3^10` and the first nonlinear transition to `3^11` over one
+  pinned mod-243 parent.  The latter has `3^109` liftable predecessor digit
+  tuples and `3^183` complete next-stage tuples; this is a finite staged
+  count, not an affine/smooth/all-depth scheme.  Its displayed `(12,12)`
+  witness fails proportionality of the top faces, so only the complete
+  family intersection `P_12=cQ_12` remains live.
+- **B9 normalized family.**  A complete producer-exact `(P<=9,Q<=12)` first
+  nonlinear gate has `3^101` predecessor projections and `3^162` complete
+  mod-`3^11` digit tuples, with an honest `(9,12)` witness; different-model
+  review now confirms this strict finite-family statement.  The first emitted
+  common-cubic formula is **quarantined**: its
+  bit-vector helper reduced the modulus constant modulo itself, so bounds and
+  divisors used zero and the instant dual-solver `UNSAT` was a trivial
+  encoding contradiction.  It proves no family emptiness.  A corrected
+  source-independent AWS compiler and different-model review now confirm SAT
+  for the intended `P_9=aH^3,Q_12=bH^4` gate: a complete displayed finite
+  parameterization of `3^150` mod-`3^11` tuples and a literal witness replaying
+  all 276 determinant plus 23 top-core rows.  This is not a scheme dimension
+  or an all-depth point.  Separately, different-model review confirms the determinant-only
+  exact rational core: rank `142`, right kernel 4, left cokernel 134, and a
+  genuinely nonzero 134-row quadratic compatibility system.  It is the next
+  exact object, not an emptiness theorem.  At the literal common-cubic witness,
+  different-model review confirms core-inclusive rational rank 146 with
+  exactly three target-gauge kernel directions, mod-3 rank 94, determinantal
+  valuation 205, and maximum Smith valuation 13.  The classical minor test
+  fails without deciding liftability.  Different-model review confirms that
+  the displayed point itself dies at `3^12` by singleton determinant carry
+  `[x^2 y^2]`; that carry varies on the family, so the complete 205-cokernel
+  next-digit map over all 150 parameters is the live AWS arbiter.
+- **Fixed-cap maximum 12.**  Total degree at most 12 forces the partial-`y`
+  routing factor `h` to be constant in both B9 and B8.  These seeds therefore
+  lie on the order-one polynomial core, not selected order-three Q8 or B8
+  order-two/order-four leaves.  The varying total-homogeneous binary
+  cubic/quartic is a separate necessary constraint.  Different-model review
+  confirms this corrected conditional interface and the selected-Q8
+  `SCOPE-CONFLICT`; selected Q8 remains part of the general unbounded-total
+  theorem only.  The denominator-free binary-cubic first-two-band computation
+  is review-confirmed on all three root types; its nonreduced obstruction
+  schemes have dimensions `7,6,6`, so none is excluded there.  Complete
+  degree-16/15 incidence continues on AWS without waiting for review.
+- **B8/TD6.**  Both the explicit B8 mod-27 `(8,12)` point and the complete
+  fixed-D12 W2/W3 scheme are review-confirmed: the latter is the reduced
+  predecessor `A^27` with constant fresh fibre `A^68`, hence `A^95` at W3.
+  This is finite-depth, not an inverse limit.  TD6 V70 is review-confirmed
+  and repairs whole raw `U=0` only inside the fixed
+  source-typed A3 q2-beta section.  V65's separate P3/QH localized
+  source-DAG theorems are also review-confirmed.  Their five-piece V71
+  composition is now review-confirmed and excludes the entire `H=0` divisor
+  in that fixed section only.  V66 is review-confirmed on the generic B3
+  chart after inverting its five exact factors, and V67 is review-confirmed
+  on `D(w)` of both finite factors.  Boundary routing plus V70 leaves the
+  original-source staged-N13 repair on `V=0,C=-5U^2,D(U)` as the precise
+  whole-B3 debt.  Rational-lines dependency erratum SHA `9cdcba8c...`
+  replaces the stale V33 endpoint citation with reviewed V70 without
+  pretending that endpoint repair supplies the missing staged N13 lift.
+
+Reviews run in the background while source-valid research advances.  All
+CAS, solver, exact-Python algebra, Lean, and other heavy work is AWS-only;
+the Mac is limited to editing, hashes, SSH/status, and lightweight cloud
+review.  The next blind-round backstop is `2026-08-26T05:00Z` and the web
+sweep remains due `2026-08-26T01:26Z`.  No item here proves or disproves JC2.
+
+## Superseding strategy overlay (2026-08-25 16:45Z)
+
+The latest completed significant-news whole-portfolio decision record is
+[`xmodel/ideation-20260825T1550Z-synthesis.md`](xmodel/ideation-20260825T1550Z-synthesis.md)
+(SHA-256
+`0a96577f557c7fe4f4dadc3bc2ecd74d08e9d9927630b511fa3e8461b4141e91`).
+Four blind all-46 scans select the temporary scheduling allocation
+**AS/D12 40% / Q8 35% / TD6 20% / global 5%**.  This changes execution, not
+theorem status.
+
+- **AS/max-12 disproof pincer.**  Different-model review confirms two exact
+  noninjective `F_3` residue maps with unit leading faces at actual degree
+  pairs `(9,12)` and oriented `(8,12)`.  They are tame source
+  right-compositions/transforms of the Artin--Schreier seed, not group
+  conjugates; the `(8,12)` map also uses a determinant-one target
+  orientation.  The B9 branch is reviewed through `Z/243`; its complete
+  fixed-D12 family then survives producer-exactly through the linear window
+  modulo `3^10=59049`.  The current family dimension is 165 in staged
+  coordinates.  Since the correction begins at order `243`, its quadratic
+  self-term first enters the transition to modulus `3^11=177147`; that full
+  family gate is the critical disproof experiment.  B8 independently has a
+  producer-exact degree-compatible `Z/27` point from a complete 172-column
+  gate; hostile review is live.  Finite survival at any displayed depth is
+  not an all-depth point, characteristic-zero map, counterexample, max-12
+  theorem, or JC2 result.
+- **Q8/max-12 proof interface.**  The new B9 object lies on the integral
+  monomial-core/bad-reduction boundary, not the licensed selected order-three
+  Kummer open.  Keep the live moving-centre, finite, original-J, and
+  coefficient-infinity jobs, while auditing the denominator-cleared original
+  rows along `3=p=0`.  Require a horizontal source map or record `NO HIT`;
+  shared `(9,12)` numerology is not landing.
+- **D7 calibration.**  The complete three-fibre D7 output cones modulo 729
+  are now different-model `CONFIRMED`, with final rank/kernel sequences
+  `27/45 -> 36/81 -> 47/106` and
+  `27/45 -> 43/74 -> 49/97`.  At modulus 2187 the quadratic term survives;
+  do not write a fourth global linear Bockstein.  This lane is a mechanism
+  donor and explicit finite-death calibration under the reviewed low-`y`
+  escape theorem.
+- **TD6 correction.**  Hostile review found that the V33/V69 raw-`U=0`
+  transport uses two `-C` pivots.  It proves only `U=0,D(C)`, not whole
+  `U=0`; `C=U=0` is a separate unrun raw stratum.  Every provisional
+  whole-`U=0`, whole-`H=0`, or whole fixed-A3 composition is quarantined
+  pending an original-source rebuild.  There is no direct B8/B9-to-TD6
+  interface: residue function-field degree, pole source, and p=3 integrality
+  all disagree.
+
+Run fast point branches only as finders and complete affine/Fitting families
+as arbiters.  Reviews remain asynchronous.  All CAS, exact-Python algebra,
+SAT, and Lean builds are AWS-only; the Mac is restricted to editing, hashes,
+orchestration, status, and lightweight cloud review.  The next full blind
+round is due by `2026-08-26T04:15Z` absent an earlier trigger; the web sweep
+remains due by `2026-08-26T01:26Z`.  No item here proves or disproves JC2.
+
 ## Superseding strategy overlay (2026-08-25 14:53Z)
 
 The latest completed whole-portfolio decision record is

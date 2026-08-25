@@ -1,0 +1,20 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the producer note, frozen case, and parent reviews so the source chain and claimed identities are in front of the audit.The z9 parent review and frozen solver source are next, so I can pin the fibre chain and the claimed identity against actual code.The z27 solver’s unreduced `stage1_to_T` and the parent z9 reconstruction are the first places a duplicated-parameter or carry bug could hide. I’ll read those next, along with frozen results and custody.I’ll pin launch/replay custody and the Q3 parent maps next so T versus stored P/Q can be checked without executing anything locally.The identity, fibre pins, rank arithmetic, and T↔P/Q payload all check. I’ll write the review with those charges separated and the next-modulus firewall explicit.**CONFIRMED.** Written to `xmodel/as-fonly-d7-q3-full-output-cone-z27-review-grok-20260825.md`.
+
+This was a read/search review only: no Bash, Python, CAS, or solver on the Mac, and the frozen AWS jobs were not re-launched.
+
+| Category | Verdict |
+|---|---|
+| Mathematics | **CONFIRMED** |
+| Source typing | **CONFIRMED** (non-blocking notes only) |
+| Software | **CONFIRMED** (non-blocking notes only) |
+| Custody | **CONFIRMED** — two executions of one implementation |
+| Wording / scope | **CONFIRMED**, including the mod-2187 firewall |
+
+**Strongest licensed theorem.** At each pinned reviewed Q3 fibre `0000`, `0270`, and `0513`, the complete D7 cone `F=F0+27T` with `T∈(Z/27)^{72}` is a nonempty linear module for `det J≡1 (mod 729)` on all 91 coefficients of degrees 0–12. Ranks/kernels are `27/45 → 36/81 → 47/106` and `27/45 → 43/74 → 49/97`. Liftable prior dimensions are 61 of 81 and 52 of 74; adding the 45-dimensional fresh top-digit kernel gives `3^{106}` and `3^{97}` solutions.
+
+The identity `det J(F0+27T)−1 = D0 + 27·A·T + 729·det J(T_P,T_Q)` is the bilinear expansion of `P_x Q_y − P_y Q_x − 1`. Modulo 729 the quadratic vanishes, so the problem is exactly `D0/27 + A·T ≡ 0 (mod 27)`. Inputs are the full Q3 fibres (kernels 14/10/10), not reset representatives. Stored `P,Q` have degree ≤ 7, reduce to `(x−x^3,y)` mod 3, and match `P0+27T`. The constant slot of `det J−1` is divisible by 729 at all three fibres by hand. Pair and mixed controls are 1296 / 1008 / 720 / 720.
+
+**Refused:** whole predecessor scheme, a fourth global linear Bockstein, modulus 2187, order-729 digits, all-depth lift, `Z_3` point, collision, characteristic-zero counterexample, no-lift, JC2.
+
+Modulo 2187 the term `729·det J(T_P,T_Q)` survives and is quadratic on the 61- or 52-dimensional liftable prior; the honest successor is a quadratic Kuranishi/Fitting or trit-SAT gate on that stratum, not another linear Bockstein.

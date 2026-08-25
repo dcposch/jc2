@@ -1,0 +1,16 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll audit the producer notes and case artifacts independently, fail-closed, and write the review without trusting the producer. First I'll load the review materials and any existing review conventions.The review skill is for git diffs, not this math audit. I’ll read the producer note, case files, and prior hostile-review style so the verdict matches the repo’s fail-closed standard.I’ll read the solver, AWS logs, hashes, and parent chain next, then decide what can be reconstructed independently versus what needs an AWS replay.I’ll hash the frozen artifacts, parse the machine result, and audit how the parent builds `A` and `b` so the reconstruction is independent of the producer’s narrative.Parent dual-AWS already pins `A` to the same hash. Next I’ll check that the 146 T-coordinates used for `J(T)` match the parent’s column order, then independently verify hashes, Smith arithmetic, and the projected payload.I have enough of the algebra to run a source-independent reconstruction: hashes, Smith arithmetic, `b` from the pinned Jacobian, kernel checks, and the projected P-Q payload. SNF stays off the local machine.Independent reconstruction matched the hashes, kernels, ranks, and every projected P-Q term. I’ll write the fail-closed verdict with source-independent work separated from the single-host FLINT run.**CONFIRMED.** The verdict is in `xmodel/as-b9-9-12-exact-core-cokernel-review-grok-20260825.md` (SHA-256 `0af060358620b911a4cc9437bba28a49f7889bd6bb8e7ac573e2882d5ba2ed84`).
+
+All seven charges hold. The linear truncation `A*T=-b` is rationally inconsistent; the projected polynomial is a compatibility system, not an emptiness theorem. No common-cubic or all-depth conclusion is licensed.
+
+This review did **not** rerun the producer and did **not** call FLINT SNF. It rebuilt `A` and `b` from the pinned W5 Jacobian (146 unit columns, 25 ms), then checked kernels, modular rank-nullity, the combinatorial count `4556`, and every projected P-Q term against that reconstruction. That is source-independent of `exact_core_cokernel.py`. The r6d python-flint 0.9.0 job is one source-identical execution, not a second engine; it is also not dual-host. Dual-AWS identity is used only for the parent linear-window result, whose stage ranks `85,115,127,129,129` match the Smith cumulative counts.
+
+| Charge | Verdict |
+|---|---|
+| 1. `E(T)=b+A*T+243 det J(T)` from the pinned parent | **CONFIRMED** |
+| 2. 276 rows, 146 variables, hashes of `A` and `b` | **CONFIRMED** (`c073c6e6…`, `da68b06f…`) |
+| 3. `rank_Q A=142`, augmented 143, linear insolubility | **CONFIRMED** (modular rank + 4-dimensional exact kernel) |
+| 4. Kernels 4/134, primitive, exact multiplication | **CONFIRMED** (residual 0 on the reconstructed `A`) |
+| 5. Smith 3-adic histogram and window ranks | **CONFIRMED** (raw invariant factors remain one-engine FLINT) |
+| 6. 4556 P-Q terms, coeff rank 68, valuation 21, payload hashes | **CONFIRMED** (4556 is combinatorial: every nonzero polar) |
+| 7. Firewall: compatibility, not emptiness | **CONFIRMED** |

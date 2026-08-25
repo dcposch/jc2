@@ -1,0 +1,17 @@
+I'll hostile-review the producer result against both frozen packages, starting by reading the review skill and the three artifacts so I can recompute independently.The frozen package and parent look complete. Next I’ll read their READMEs, manifests, and replay sources so the independent recomputation is against the actual frozen artifacts.I’ll read both replay sources and the AWS evidence next, then recompute the determinant, residual, and linearized identities from scratch rather than replaying the producer code.Parent and W5 digits are consistent so far. I’ll pull prior hostile-review format, evidence hashes, and then expand the Jacobian independently.There’s a W6 successor already on disk; I’ll inspect it and then run an independent Jacobian expansion so the W5 identities are checked against a different implementation.I’ll run an independent Jacobian expansion and hash audit next, using a different polynomial engine than the producer replay.Hashes check out. The independent script double-counted `u`; I’ll fix that and rerun the Jacobian expansion.Independent expansion matches the frozen payload. I’ll write the hostile-review report with the verdict and the exact claim/non-claim.**CONFIRMED.** There is no mathematical error. Custody, terminology, and exposition defects are non-blocking.
+
+The review is in `xmodel/as-b9-max12-w5-survivor-review-grok-20260825.md`. Identities were rebuilt from the displayed formulae with a dense `Z[x,y]` engine and a second `(u,y)` Jacobian; neither frozen `replay.py` was executed.
+
+### Mathematics
+With `u=x+y^3`, mixed binomial terms of `u^3` and `u^4` are present. The displayed pair has a 33-term Jacobian, constant term `1`, and every other coefficient divisible by `243` but not all by `729` (minimum 3-adic valuation of `det-1` is exactly 5). So `det J(P,Q)≡1 (mod 243)` and not modulo `729`.
+
+The `Z/81` parent is exactly `1+81(-u^4+2y-6u^2 y+32 y^2)`. Its divided residual modulo three is `2(u^4+y+y^2)`: sign and factor of two are correct. `D(R,S)=R_x-u^3 R_y+S_y` is the right special-fibre operator after `A∘B9`. Both primitives hold over `F_3` and fail over `Z`; characteristic-three Frobenius is not used over `Z`. Degrees are `(9,12)` for both total and partial `y`. The new digit sits in the fixed D12 box (the `y^{14}` terms of `xy^{11}` and `x^4 y^2` in `(u,y)` cancel). Omitting the whole order-`81` digit fails modulo `243`.
+
+### Custody
+SOURCE / MANIFEST / FREEZE hashes recompute for this package and the parent. Box02 and Box03 stdout are byte-identical at `86afa339…`, payload digest `04ccf436…` rebuilds independently, both `rc` are `0`. The parent W3 review is already **CONFIRMED**.
+
+### Strongest exact claim
+One explicit fixed-D12 branch through `Z/243`: the displayed `(P5,Q5)` has `det J≡1 (mod 243)`, reduces to `G9`, and has actual degrees `(9,12)`.
+
+### Sharpest non-claim
+Not the complete D12 predecessor scheme, not an inverse limit or `Z_3` point, not a characteristic-zero map/collision, not a counterexample, not a max-12 theorem, not TD6, not JC2. The identity does not hold modulo `729`.

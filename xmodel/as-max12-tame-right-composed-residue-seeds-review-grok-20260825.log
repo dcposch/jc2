@@ -1,0 +1,40 @@
+I'll review the producer report and frozen case independently, recompute the load-bearing identities, and keep the claim as narrow as those files support.I'll load the frozen case files, hashes, and verification script so I can recompute the identities from those sources rather than from the producer writeup.I'll read the AWS custody records and independently recompute the maps, inverses, degrees, and fibre census rather than trusting the producer script.I’ll recompute the maps independently and check hashes, prior review format, and any over-claim in the producer language.I’ll recompute the maps, inverses, Jacobians, degrees, and fibre census in an independent script, and I’ll hash the frozen artifacts against the manifest.Local SymPy is missing, so I’ll recompute with a standalone bivariate polynomial engine over `Z` instead of the producer’s script.Independent recomputation matches the frozen identities. I’ll write the review to the usual xmodel path and keep the claim exactly as licensed.**CONFIRMED**
+
+No load-bearing identity fails. Right-composition is not conjugation. Both displayed inverses and `det J(B)=1` hold over `Z`. The partial-`y` and total-degree pairs are exactly `(9,12)` and oriented `(8,12)`, with constant unit leading `y` coefficients. Over `Z`, `det J(A∘B)=1-3u^2`; the target swap/sign has determinant one and preserves that Jacobian. The `F_3^2` census is three fibres of size three. Source/output hashes, rc files, environments, two-host agreement, and scope markers match. No hidden promotion to a mod-9 lift, Q8/TD6 landing, characteristic-zero map, counterexample, maximum-12 theorem, or JC2 was found.
+
+Review file: `xmodel/as-max12-tame-right-composed-residue-seeds-review-grok-20260825.md`
+
+### Strongest exact claim
+
+Let `A(s,t)=(s-s^3,t)` and `B_{m,k}=(u,v)` with `u=x+y^m`, `v=y+u^k`. Over `Z`, each displayed `B` is inverted by `y=t-s^k`, `x=s-(t-s^k)^m`, both compositions are the identity, `det J(B)=1`, and `det J(A∘B)=1-3u^2`.
+
+- `G9=A∘B_{3,4}` has `deg_y=(9,12)`, total degree `(9,12)`, leading `y` coefficients `(-1,1)`.
+- `G8=φ∘A∘B_{4,2}` with `φ(P,Q)=(Q,-P)` has `deg_y=(8,12)`, total degree `(8,12)`, leading `y` coefficients `(1,1)`, and still `det J(G8)=1-3u^2`.
+
+Those leading coefficients are constants in `Z^x` and remain units in `F_3`. Reduction mod `3` makes both Jacobians the constant polynomial `1`. On `F_3^2` each reduced map has image size 3 and every fibre size 3. These are source-coordinate transforms of `A` (for `G8`, after a determinant-one target orientation), not group conjugates `B^{-1}∘A∘B`.
+
+### Sharpest non-claim
+
+Finite-field residue seeds with those degree faces only. This does not land either seed on a normalized Q8 or TD6 chart, does not produce a lift modulo nine, does not give an all-depth branch, a characteristic-zero Keller map, a counterexample, a maximum-12 theorem, or a JC2 conclusion.
+
+### Mathematical errors
+
+None.
+
+### Naming / custody / exposition defects (non-blocking)
+
+1. The frozen directory is named `as_frontier_conjugate_seeds_20260825` while the theorem is that the maps are *not* conjugates. Do not read the path as mathematics.
+2. One producer sentence calls both maps “tame right-compositions `A∘B`”. `G8` is `φ∘A∘B`; unoriented `A∘B_{4,2}` has `deg_y=(12,8)`.
+3. The replay asserts partial-`y` degrees and only prints total degrees. Independent expansion confirms the printed total-degree pairs.
+4. The replay asserts `1-3u^2` only for the unoriented composite; direct expansion shows the oriented `G8` Jacobian is still `1-3u^2` over `Z`.
+
+Independent expansion (no SymPy, no producer import) recovered
+
+```text
+G9 = (-y^9 - 3x y^6 - 3x^2 y^3 + y^3 - x^3 + x,
+       y^{12} + 4x y^9 + 6x^2 y^6 + 4x^3 y^3 + y + x^4)
+G8 = (y^8 + 2x y^4 + y + x^2,
+      y^{12} + 3x y^8 + 3x^2 y^4 - y^4 + x^3 - x)
+```
+
+and the complete nine-point fibres. Box02 and r6d stdout SHA-256 both `1653dd2c98046bcb188ea6a5cf07bb77237dc241f9fa19d722e2d34ae0d3ca38`; all twenty manifest hashes recompute.

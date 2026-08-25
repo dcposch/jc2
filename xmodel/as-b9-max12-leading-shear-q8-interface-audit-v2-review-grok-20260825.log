@@ -1,0 +1,19 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start with the review skill and the frozen V2 report, then check each claim independently without mutating producer or V1 bytes.The task is a mathematical hostile review of a frozen note, not a code-diff review. I’ll hash-check the V2 report, treat V1 as negative scope only, and then verify the eight claims from the sources.SHA of the V2 note matches. Next I’ll read the report, the V1 scope-control, and nearby reviews so the verdict format stays consistent.I’ll pull the source identities, Q8 scope, degree-routing notes, and the frozen witness so each claim can be checked independently of the V2 prose.I’ll pull the frozen witness coefficients, the Kummer identities, the degree-routing hypothesis, and a recent review so the eight claims can be checked independently.The frozen witness has `Q_{(0,12)} ≡ 156736`, not `1`, so the claimed ratio `c = 27702` is already suspect. I’ll pull the stored degree-12 coefficients and the remaining source notes next.The `c=27702` ratio survives because `Q_{(0,12)} ≡ 1` through valuation `3^6`. Next I’ll check degree routing, Kummer identities, and the selected Q8 source.The eight claims hold under the stated hypotheses. I’ll write the review to a distinct path and leave the producer and V1 bytes untouched.**CONFIRMED**
+
+The V2 note is a conditional routing theorem about an exact fixed-total-D12 Keller pair over a finite extension of `Q_3` reducing to B9. All eight charges hold. Producer SHA `82c70147…` and V1 SHA `9f7eb4bf…` are unchanged. The review is at `xmodel/as-b9-max12-leading-shear-q8-interface-audit-v2-review-grok-20260825.md` (SHA-256 `1cb8f1c193203808f97f143f66eed60fc0469f13821497fa1d663dd21ac26b27`).
+
+| Charge | Verdict | What was checked |
+|---|---|---|
+| 1 Conditional scope | **CONFIRMED** | Exact `O[x,y]` hypothesis; finite `3^{183}` families do not satisfy it |
+| 2 Equal-degree proportionality | **CONFIRMED** | `J(P12,Q12)=12 y^{22}(a'b-ab')`; char 0 kills the Wronskian kernel; zero faces and the `y=0` line do not give a counterexample |
+| 3 Unique integral scalar | **CONFIRMED** | B9 residue: `Q`’s `y^{12}` coeff is a unit, `P12⊂3O`, so `c∈3O`; shear is integral, `det=1`, id mod 3, and removes the face |
+| 4 Displayed-witness failure | **CONFIRMED** | Frozen faces give `c=27702` (via `Q_{(0,12)}≡1 mod 3^6`) and `(x^3 y^9)` residual `59049≠0`; one point, not the family |
+| 5 Broad-cell-only landing | **CONFIRMED** | Imported hypothesis is the history-stop G-route of `(10,12)`/`(11,12)`, conditional on a nonautomorphic lift; no silent strict total-degree `(9,12)` box |
+| 6 Fixed-D12 Kummer collapse | **CONFIRMED** | `b12` is a nonzero constant, so `h` is constant and `[h]=1` after the licensed scalar extension; B8 analogue on `a8=h^2`, `b12=h^3`; homogeneous `K` can still vary |
+| 7 Selected-Q8 scope conflict | **CONFIRMED** | Source is order-three, `p=1`, divided odd rows, refuses the order-one core; `p=q=0` and denominator clearing do not specialize into it |
+| 8 Successor honesty | **CONFIRMED** | Only complete-family incidence, integral shear, original-row order-one common-core compiler; refusal list matches |
+
+V1’s degree-three `h_one`/`h_three` pair was not used: those cores have `deg_x h=3` and would force total degree 24.
+
+No sentence in V2 is stronger than these eight items once §2’s nonautomorphic condition and §3’s `(9,12)` route are read onto the later summary lines. No all-depth, Taylor/terminal, maximum-twelve, counterexample, or JC2 claim is present.

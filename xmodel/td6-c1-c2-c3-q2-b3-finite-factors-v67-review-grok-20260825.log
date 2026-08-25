@@ -1,0 +1,19 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the V67 report, case package, and review conventions so the audit can check the claimed factor source DAGs without touching producer files.The V67 report is loaded. Next I’ll inventory the case package, prior reviews, and the named V66/V68 producer reports so the audit can follow the claimed factor provenance.I’ll use the V68 review as the format template, then read the V67 package files and the V66/V68 producer reports named for provenance.I’ll hash the freeze, extract the source archive to `/tmp`, run the custody verifier, and inspect DAGs, ledgers, and stdout without replaying the producer.Custody files are in place. Next I’ll extract the archive, run `verify.py`, and start reading source plus evidence.`verify.py` passed. I’ll now inspect the V67 producer source, runbooks, stdout, DAGs, and denominator ledgers.The producer is 1,163 lines. I’ll grep parameterization, ancestry, P12, and denominators, then read the stdout and DAG artifacts.The center map matches the printed formulae. Next I’ll inspect how the curve parent builds `U_CURVE`/`Z_CURVE` for the two factors, then finish N13, P12, and denominator source.Box02’s source-check list is thinner than Box03’s. I’ll independently diff dual-host streams, recompute MANIFEST hashes, and compare V67 against V65/V66.I have enough to close the attacks: the algebra holds, dual-host streams differ only in artifact paths, and the remaining items are custody nits. Writing the review.The two factor opens survive as all-beta source-DAG certificates on `D(w)` only. Review: `xmodel/td6-c1-c2-c3-q2-b3-finite-factors-v67-review-grok-20260825.md`.
+
+What was checked, without rerunning the producer: the V67 report and frozen case, the 137 KiB source archive in `/tmp`, `verify.py`, both Box02/Box03 theorem streams, both q-prime omission controls, and the V66/V68 provenance reports.
+
+The attacks that were supposed to flip it do not:
+
+- Center map and inverse are identities on `D(w)`; `t` is a unit and not 2 on both components.
+- Generator `x` / `U_POLY` is the curve parameter `w=V0/U0`, not raw `U0`. `w=0` is the origin and is not consumed.
+- Polynomial beta, direct `q'=1+2βt+25t^{24}`, frozen p/F1/pole data, ranks `3470/3602 → 38/132 → 38/94 → 25/56`.
+- N13 goes through exactly `('X-1',14)`; `('X-1',0)` is cache/control only.
+- Genuine P12 is 28 first rows, 2,893 terms on `2t-1` and 2,885 on the quadratic, glued to `-k/50`.
+- Denominator radical is only `w` (stage `w^11`, charts `w^{27}` / `w^{23}`).
+- Dual-host stdout differs in exactly two artifact-path lines; DAGs/ledgers match; both omission runs lose N13 then hit the reporter `IndexError`.
+- Scope stays the two factor opens `D(w)` in fixed A3 q2.
+
+Nits that do not require a producer repair: Box02’s recorded `source-check.txt` lists the parent `SOURCE.sha256` rather than the executed V67 producer (the archive pin and dual DAGs still close it); V66 is named not hash-pinned; leftover `only_U` naming for `w`.
+
+CONFIRMED

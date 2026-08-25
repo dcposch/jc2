@@ -1,0 +1,17 @@
+I'll pick up from the interrupted B8 review: read the prior prompt and transcript, then finish only the remaining expansion, custody, and wording checks before writing the standalone verdict.The prior transcript stopped after independent math checks; I’ll load the producer package, erratum, and leftover expansion/custody artifacts next.I’ll use the completed B9 review as the format template and load the frozen B8 sources, hashes, and AWS records next.I’ll read the V2 replay, hash files, and AWS stdout next so the remaining expansion and custody checks sit on the frozen record rather than a local run.Independent substitution of the digits already matches; I’ll now finish AWS custody, V1 control, cube wording, and git state from the frozen files.I have the remaining expansions, AWS records, V1 control, and hash DAG. Next I’ll write the standalone verdict with mathematics separated from typing, software, custody, and wording.**CONFIRMED**
+
+The standalone verdict is in `xmodel/as-b8-max12-w3-survivor-review-grok-20260825.md`.
+
+Mathematics is confirmed independently by hand in `Z[x,y]` and `F_3`: `B8` and `T8` have determinant one, `G8=T8∘A∘B8` is a right-composition (not a conjugate), `D8` matches the direct Jacobian including the characteristic-three `+R_y`, the 81+91 envelope and 276 rows are complete, the W2/W3 digits substitute, the residual is `-u^4+9u^2 y^8-3y^8`, parent-without-W3 fails modulo 27, and `det J(P,Q)≡1 (mod 27)` with exact degrees `(8,12)`. V1 is a real `y`-degree overflow. Dual-AWS V2 stdout is byte-identical.
+
+| Dimension | Verdict |
+|---|---|
+| Mathematics | CONFIRMED |
+| Source typing | CONFIRMED (non-blocking `source_reduction=B8` label) |
+| Software | CONFIRMED (particular digits by substitution; rank 104/68 is dual-AWS plus RREF audit) |
+| Custody | CONFIRMED |
+| Wording / scope | CONFIRMED |
+
+**Strongest exact claim:** one explicit determinant-one pair over `Z/27` in the fixed `(8,12)` D12 envelope.
+
+**Sharpest non-claim:** not a predecessor family, inverse limit, `Z_3` or characteristic-zero map, maximum-twelve theorem, counterexample, selected Q8/TD6, or JC2.

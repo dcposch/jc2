@@ -1,0 +1,10 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the producer note, the case directory, and how AWS replay is expected to run so the audit can fail closed.I’ll pull prior review format, the V2 erratum, AWS replay conventions, and the case sources next.I’ll read the V2/V3 emitters, independent compiler, witness replay, and result JSON next.The empty ANF hash matching the parent quadratic is a real flag; I’ll inspect the fixed-audit emitter, witness payload, V3 results, and AWS access next.I’ll hash the freeze, audit constructors, replay the witness, and inspect V2 SMT zeros and the independent compiler’s parent chain.I’ll run the hash, constructor, SMT-byte, witness, and parent-H uniqueness checks locally; those are short validations.H is unique at the parent, so I’ll re-run the independent compiler as a short local validation to reproduce the stage ranks.I have the evidence. Next I’ll write the fail-closed verdict, charge by charge.**CONFIRMED.** Verdict is in `xmodel/as-b9-9-12-common-cubic-3p11-review-grok-20260825.md`.
+
+V2 is an invalid formula (`177147 mod 177147 = 0`), bit-blasts to `p cnf 0 1`, and is not consumed. V3 SMT `5af9efbe…` is byte-identical across Box03, r6d, and the independent `modulus_bv` repair: 14 residue constructors, two raw-modulus uses, 64-bit overflow bound, 276+23 rows.
+
+The independent compiler at `46019958…` does not read producer SMT. Stage ranks `94/55, 123/81, 131/99, 132/116, 132/133`, split `17+116`, fresh `94/55/205`, spectator rank 38, and empty residual all reproduced, including a short local re-run that matched the frozen Box02 bytes.
+
+`3^{95}` and `3^{150}` are confirmed as displayed `F_3`-digit counts, not as a scheme dimension. The parent monic cubic is uniquely `[1,81,0,0]` among all `81^3` candidates with `h_i ≡ 0 (mod 3)` modulo 243, so the 149-coordinate box is complete for this parent. Witness `H = [1, 119880, 40581, 0]` replays all 299 rows, leading units `(2,1)`, parent modulo 243, and exact degrees `(9,12)`.
+
+This remains one-parent finite-depth integral congruence, not a characteristic-zero Q8 landing.

@@ -1,0 +1,27 @@
+I'll start by loading the review skill and reading the producer reports plus frozen cases so the charges can be checked against the actual source.This is a mathematical source review, not a git-diff review. I’ll read the producer reports, frozen cases, and earlier hostile-review format next.Next I’ll read both producer reports and inventory the frozen cases so the nine charges can be checked against source and custody.I’ll read the solvers, READMEs, and frozen JSON next so the parent, ambient, and Bockstein claims can be audited without local execution.The Jacobian identity is algebraic; next I’ll check the parent maps, frozen results, the 141-row corroboration, and whether those pair controls actually test anything.The 141-row corroboration and parent `(P5,Q5)` are next, along with hash sidecars and whether those 8,281 pair checks actually pin down the identity.The 11-term particulars already match. I’ll trace the remaining hashes, timestamps, stage JSON, and the pair-control claim next.I have enough to write the hostile review: the identities, ranks, particular, and dual-host custody check out; remaining issues are wording and undeposited hashes, not mathematics.**CONFIRMED**
+
+The complete fixed-D12 cone over the displayed B9 mod-243 point is a linear congruence through determinant modulus `3^10`. The quadratic `243^2 det J(T)` is invisible on that window and is not licensed as a linear Bockstein at `3^11`.
+
+**Strongest exact claim.** With `F = (P5,Q5)+243 T` and `T` in both copies of every total-degree-at-most-12 monomial (182 coefficients), `det J(F)-1 = D5 + 243 A(T) + 3^{10} det J(T)` holds over `Z`. The 276-row ambient through degree 22 is complete. Successive Bocksteins are consistent and give
+
+| modulus | rank | kernel | projection |
+|---:|---:|---:|---:|
+| 729 | 108 | 74 | 0 |
+| 2187 | 147 | 109 | 35 |
+| 6561 | 162 | 129 | 55 |
+| 19683 | 164 | 147 | 73 |
+| 59049 | 164 | 165 | 91 |
+
+The first-gate 11-term particular reconstructs from `(P5,Q5)` by hand and matches the TD6 owner's 141-row run. That particular fails at 2187; the 74-dimensional fibre does not.
+
+**Refused.** Complete earlier mod-243 fibre, inverse limit / `Z_3`, characteristic-zero collision, counterexample, maximum-twelve theorem, no-lift, TD6, JC2, or a linear gate at `177147`.
+
+| Axis | Verdict |
+|---|---|
+| Mathematics | CONFIRMED |
+| Source typing | CONFIRMED |
+| Software | CONFIRMED |
+| Custody | CONFIRMED (Box02/Box03 are two executions of one implementation) |
+| Wording | non-blocking: pair controls are a `243^2`-valuation check, not a coefficientwise `det J(T)` match; source-closure SHA `c9ea6b8c...` is not deposited |
+
+Review: `xmodel/as-b9-max12-full-fibre-linear-window-review-grok-20260825.md`. No local Bash/Python/CAS; no AWS replay.

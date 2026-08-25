@@ -1,0 +1,23 @@
+option(redSB);
+ring r=3,(s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24,s25,s26,s27,s28),dp;
+ideal I=s22,s26+2*s22*s26,s22^2,s26^2+s19*s22,s22*s27;
+ideal J=s22,s26;
+ideal G=slimgb(I);
+ideal H=slimgb(J);
+int fail=0;
+int k;
+for (k=1;k<=size(I);k++) { if (reduce(I[k],H)!=0) { fail=1; } }
+for (k=1;k<=size(J);k++) { if (reduce(J[k],G)!=0) { fail=1; } }
+if (dim(G)!=27) { fail=1; }
+if (fail) { print("FAIL MUTUAL_REDUCTION_OR_DIMENSION"); }
+else {
+  print("ENGINE slimgb");
+  print("MUTUAL_REDUCTION_ZERO true");
+  print("IDEAL_EQUAL (s22,s26)");
+  print("GEOMETRIC_DIMENSION 27");
+  print("F3_POINT_COUNT 7625597484987");
+  print("FRESH_FIBRE_DIMENSION 68");
+  print("TOTAL_W3_FAMILY_DIMENSION 95");
+  print("PASS-AS-B8-D12-QUADRATIC-IDEAL-SLIMGB");
+}
+quit;

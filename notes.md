@@ -5543,3 +5543,257 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   V65/V67 and V68 review.  Promote only exact reviewed scopes; use the AS D7
   lane for an explicit escape mechanism and stop indefinite low-y digit
   chasing after the bounded pass.  No proof or counterexample to JC2 exists.
+
+## 2026-08-25 17:00Z EVENT — TD6 RAW `U=0` SCOPE REPAIRED AND CONFIRMED
+
+- Hostile review of V33 found that its apparent denominator-one statement
+  omitted two transport pivots `-C` and one first-source factor `C`; V33 is
+  valid only on `U=0,D(C)`.  The nonmutating scope erratum is
+  `xmodel/td6-c1-c2-c3-q2-beta-u-zero-scope-erratum-20260825.md`, SHA
+  `df746976...`.  V69 fixed serialization/custody only and did not remove
+  this mathematical localization debt.
+- V70 rebuilt the two missing raw charts directly from the original source.
+  On `C=U=0,D(V)`, exact dual-AWS replay gives transport rank `3470/3602`,
+  first rank `36/132`, the original-row `('X-2',14)` obstruction, and
+  complete chart `V^3`.  At `C=V=U=0`, transport rank is `3468/3602` and an
+  original transport row gives a denominator-one unit obstruction.  The two
+  hosts produced byte-identical rc-zero streams; wrong-row and direct-`q'`
+  omission controls passed.
+- Combining those source theorems gives the exact set cover
+  `V(U)=[V(U) intersect D(C)] union [V(C,U) intersect D(V)] union V(C,V,U)`.
+  The V70 producer report SHA is `9013ec37...`; hostile review is
+  `CONFIRMED`, SHA `2a352086...`.  Thus whole raw `U=0` is restored only in
+  the fixed source-typed A3 `q_beta=t+beta*t^2+t^25` section.  It does not
+  discharge staged-N13 denominator debt or imply whole H/B3/A3, TD6, SP-2,
+  landing, or JC2.
+
+## 2026-08-25 17:25Z EVENT — CORE-FIRST WHOLE-PORTFOLIO ROUND
+
+- Four independent blind scans of all 46 avenues were sealed before
+  cross-reading.  Synthesis:
+  `xmodel/ideation-20260825T1700Z-synthesis.md`, SHA `a1cd2be8...`.
+  Consensus is to stop selected-point digit chasing as the arbiter: impose
+  complete-family proportional/common-power leading incidence first, then
+  run exact Smith/Lyapunov--Schmidt, Neron-dilatation/Fitting, or checked
+  quantitative Hensel on the surviving integral scheme.
+- Fixed total D12 makes the coefficient of `y^12` constant.  In the
+  partial-`y` routing identities `a9=h^3,b12=h^4` and
+  `a8=h^2,b12=h^3`, this forces `h` constant.  The B9/B8 seeds therefore lie
+  on the order-one partial-`y` Kummer core, not selected order-three/two/four
+  leaves.  This is distinct from the still-variable total-homogeneous binary
+  cubic/quartic leading core.
+- Temporary scheduling is AS/D12 40%, maximum-12 35% (25 fixed-cap order
+  one, 10 general Q8), TD6 20%, global/web/cofinality 5%.  All substantive
+  computation is AWS-only.  Next full-round backstop is 2026-08-26 05:00Z;
+  web sweep remains due 01:26Z.
+
+## 2026-08-25 17:31Z EVENT — B8/B9 FAMILY PROMOTIONS AND V2 RETRACTION
+
+- B8 complete W2/W3 family hostile review is `CONFIRMED`, SHA `31a61ed2...`.
+  The W2 fibre is `A^68`; the exact W3 Kuranishi ideal reduces to
+  `(s22,s26)`, so the compatible predecessor is reduced `A^27` and the full
+  finite W3 scheme is `A^27 x A^68=A^95`.  The V1 false-PASS verifier remains
+  quarantined.  This is finite-depth only.
+- Normalized B9 first nonlinear family hostile review is `CONFIRMED`, SHA
+  `1c7fdb1b...`: over one fixed mod-243 parent the `3^145` predecessor family
+  has `3^101` liftable predecessor tuples and `3^162` complete mod-`3^11`
+  tuples, with an honest `(9,12)` witness.  These are finite digit counts,
+  not scheme dimensions or an inverse limit.
+- Independent source audit retracted the instant normalized common-cubic V2
+  `UNSAT`.  The bit-vector constructor reduced the raw modulus `177147`
+  modulo itself, producing zero bounds/divisors; the formula bit-blasts to
+  the trivial `p cnf 0 1`.  Erratum SHA `cb07f729...`; synthesis erratum SHA
+  `5dfca997...`.  The reviewed parent family is unaffected.  Independent V3
+  emitters agree on corrected nontrivial formula SHA `5af9efbe...`; its AWS
+  solvers are live and no verdict is licensed.
+
+## LIVE STATE — 2026-08-25 17:32Z
+
+- Mac: no campaign Singular, Sage, msolve, solver, Lean, or substantive
+  Python process.  Only editing/hashing/SSH/status and lightweight cloud
+  review clients are local.  This AWS-only rule is hard policy.
+- B9 normalized: independent source audit has produced a literal corrected
+  common-cubic SAT witness and a
+  complete provisional `3^150` mod-`3^11` family; hostile review is live.
+  Redundant raw V3 solvers were stopped after preserving their snapshots.
+  Original V2 is an immutable negative control.  Exact rational/FLINT
+  Smith-cokernel diagnostics are review-confirmed: determinant-only rank 142,
+  right kernel 4, left cokernel 134, and a genuine nonzero quadratic
+  compatibility system.  The normalized
+  determinant-only nonlinear family itself is reviewed and promoted at
+  strict one-parent finite scope.
+- B9 broad: complete proportional-leading V2 solver live on AWS; the broad
+  linear/nonlinear family is reviewed.  Follow only the complete incidence,
+  never the displayed nonproportional `(12,12)` point.
+- Maximum 12: corrected fixed-D12 order-one/source-conflict V2 hostile review
+  is live.  Selected order-three Q8 continues only for the general
+  unbounded-total theorem; start the order-one binary-cubic proof gate.
+- B8: the complete finite `A^95` W3 theorem is reviewed.  Next exact clients
+  are common-quartic incidence and a complete W4/dilatation gate on all 95
+  parameters, AWS-only.
+- TD6: V70 whole raw `U=0` is reviewed only in fixed source-typed A3
+  q2-beta.  V65 P3/QH localized source-DAG theorems are review-confirmed;
+  their five-piece V71 composition is review-confirmed and excludes whole
+  `H=0` in that fixed section only.  V67 finite factors are dual-AWS producer
+  PASS and under hostile review; r6d mirrors remain corroborative.
+- Fleet placement: Box01/r6b/r6c are saturated; favor Box02/r6a/r6d for new
+  jobs and use Box03 selectively.  Reviews are asynchronous and do not block
+  source-valid producer work.  No proof or counterexample to JC2 exists.
+
+## 2026-08-25 17:39Z MICRO-ROUND — NORMALIZED COMMON-CUBIC SAT
+
+- The intended normalized common-cubic gate is producer-exact SAT modulo
+  `3^11` over the one displayed B9 mod-243 parent.  A source-independent AWS
+  compiler, not consuming either SMT formula, gives complete linear-family
+  exponents `55,81,99,116,133` through `3^10`; at the first quadratic gate it
+  finds 17 active plus 116 spectator predecessor coordinates, fresh
+  rank/kernel/cokernel `94/55/205`, spectator rank 38, and zero residual
+  equations.  Hence the displayed finite predecessor/full exponents are
+  `95/150`.  A separate implementation replays one witness against all 276
+  determinant and 23 top-core rows with exact degrees `(9,12)`.
+- Producer report SHA `b3a86bbd...`; independent hostile reconstruction SHA
+  `c739e502...`; different-model promotion review is live.  This is one
+  finite parent family only, not a scheme dimension, `3^12`, inverse limit,
+  `Z_3` point, characteristic-zero map, counterexample, or JC2.
+- Synthesis micro-round postscript SHA `8acce4e9...`; it preserves the V2
+  retraction and the corrected SAT at their distinct lifecycle tiers.
+- **Coalescing decision:** this is a micro-round, not a new full all-46 scan.
+  The 17:00Z round already ranked the common-core SAT branch first and
+  prescribed exact Smith/dilatation/Hensel on survivors.  The V2 correction
+  retracts an unpromoted formula and the corrected SAT does not change the
+  global ranking or trust perimeter.  It therefore does not reset the
+  12-hour clock.
+- The theorem-interface pass yields one direct bridge: feed the finite
+  common-core survivor to a core-inclusive exact Jacobian/SNF/Fitting and
+  quantitative Hensel test.  The reviewed residue-ball collision theorem is
+  downstream only after an all-depth point.  The selected order-three Q8
+  source remains `SCOPE-CONFLICT`; in parallel the fixed-cap order-one
+  binary-cubic proof gate has started on the three root-multiplicity strata.
+
+## 2026-08-25 17:58Z MICRO-ROUND — TD6 FIXED-SECTION `H=0` CLOSED
+
+- V71 composition review is `CONFIRMED`, SHA `4ec0f26f...`.  The reviewed
+  V64 generic open, V62D `V=0`, V65 P3/QH curves, and repaired V70 `U=0`
+  pieces exhaust the whole `H=0` divisor for every beta in the fixed
+  source-typed A3 q2 section.  No localized certificate is specialized onto
+  its denominator zero.
+- This is coalesced as a micro-round: the 17:00Z packet and synthesis already
+  charged completion of these exact near-terminal leaves, and the expected
+  reviewed composition does not change the global ranking.  It does not reset
+  the full-round clock.  The interface pass has `NO HIT` to AS/B9 or selected
+  Q8; the next TD6 client is the source-valid `H!=0`/B3 atlas and then one
+  genuinely transverse licensed modulus.  No whole-A3, TD6, SP-2, landing,
+  ceiling, or JC2 conclusion follows.
+
+## 2026-08-25 18:03Z EVENT — COMMON-CUBIC FINITE GATE PROMOTED / AWS-ONLY REAUDIT
+
+- Different-model hostile review of the corrected normalized common-cubic
+  finite gate is `CONFIRMED`, SHA `7c49a939...`.  It independently audits the
+  source split that repaired V2, the 299-row compiler, the invertible
+  17-active/116-spectator parameterization, the zero reduced obstruction, and
+  the literal all-row witness.  The licensed finite counts are `3^95`
+  predecessor tuples and `3^150` complete mod-`3^11` tuples over one parent.
+  They are not scheme dimensions or evidence of an inverse limit.
+- The core-inclusive exact Jacobian/SNF producer at that witness is frozen:
+  rational rank/right nullity `146/3`, mod-3 rank/tangent dimension `94/55`,
+  left cokernel 153, Smith determinant valuation 205, and maximum individual
+  valuation 13.  Its three rational kernel vectors are exactly two target
+  translations and `Q -> Q+tP`.  The classical minor criterion would require
+  precision above 410; a Smith-coordinate threshold near 26 is only
+  conditional on the still-unproved row-ideal/cokernel hypotheses.  Hostile
+  review and the reduced 3-to-153 Kuranishi calculation are live.
+- A fresh process-tree audit finds no campaign Singular, Sage, msolve, solver,
+  Lean, or substantive exact-Python worker on the Mac.  Only lightweight cloud
+  review clients remain local.  All heavy computation, including every new
+  B9, binary-cubic, B8, and TD6 calculation, is dispatched to AWS; owner audits
+  agree and report no local worker requiring termination.
+
+## 2026-08-25 18:09Z EVENT — TD6 V67 FINITE `B3` FACTORS PROMOTED
+
+- V67 hostile review is `CONFIRMED`, SHA `a124abb2...`; producer SHA is
+  `32cf1bf2...`, and case manifest/freeze SHAs are `c4c6fa50...` /
+  `1a3b8db3...`.  On both exact factors `2t-1=0` and
+  `t^2-4t+2=0`, the fixed-A3 q2-beta original-row DAG and genuine P12
+  composition give the unit residual `-k/50` on `D(w)` for polynomial beta.
+- The complete denominator radical is `{w}`, where `w=V0/U0` is the curve
+  parameter, not raw `U0`.  The endpoint `w=0` is the raw origin and is not
+  silently consumed.  V66 generic-chart review and the separate endpoint
+  composition remain live; no whole-B3, whole-A3, TD6, SP-2, or JC2 claim is
+  promoted.
+
+## 2026-08-25 18:17Z MICRO-ROUND — ONE COMMON-CUBIC POINT DIES AT `3^12`
+
+- The full 299-row tangent/cokernel gate at the displayed normalized
+  common-cubic mod-`3^11` witness is producer-exact `UNSAT` for the next digit:
+  rank/augmented-rank `94/95`, kernel 55, and left cokernel 205.  Thirty-one
+  cokernel coordinates see the carry.  The smallest certificate is the single
+  determinant slot `[x^2 y^2]`: all 149 fresh columns vanish modulo three,
+  while the divided carry is nonzero.  A separate literal convolution replay
+  reconstructs that row without consuming the matrix/Gaussian solver.
+- Producer report SHA is `9dfbcf88...`; case manifest/freeze SHAs are
+  `fdec8739...` / `4bb04b3a...`; hostile review is live.  This kills only one
+  displayed point, not the reviewed `3^150` mod-`3^11` family.  The critical
+  successor is the exact Cartier-carry polynomial on the complete family,
+  eliminating only its zero locus if it is not constant.
+- This is coalesced into the existing core-first micro-round: the 17:00Z round
+  already selected complete-family common-core continuation, and a pointwise
+  death does not change that ranking or reset the 12-hour ideation clock.
+  The characteristic-zero binary-cubic top bands are graded degrees 19 down,
+  so they cannot by themselves decide this low-degree characteristic-three
+  carry; the interface audit is `NO HIT`.
+
+## 2026-08-25 18:22Z EVENT — TD6 GENERIC/FINITE `B3` OPENS CONFIRMED; ONE SOURCE LINE LEFT
+
+- V66 hostile review is `CONFIRMED`, SHA `57d00b8c...`: its exact generic
+  B3 source-DAG theorem is localized at
+  `t*w*(t-2)*(2t-1)*(t^2-4t+2) != 0`.  V67 hostile review is `CONFIRMED`,
+  SHA `a124abb2...`, on `D(w)` of both finite factors.  Neither result absorbs
+  an omitted divisor.
+- Rational-lines review is `CONFIRMED_WITH_REPAIRS`, SHA `2e76f499...`.
+  Nonmutating erratum SHA `9cdcba8c...` retracts the freeze-time use of stale
+  V33 as an endpoint theorem and replaces it with the reviewed V70 origin.
+  The D(U) identities remain correct, but the `C=3U^2` and `C=-5U^2` P12
+  lines use abstract N13 glue rather than a staged original-source N13 lift.
+- The `C=-U^2` B3 line is source-closed by V46 plus V70; `C=3U^2` is covered
+  by the separately reviewed whole-H=0 composition.  Thus the precise
+  whole-B3 debt in this fixed section is now
+  `V=0,C=-5U^2,D(U)`.  A fail-closed dual-AWS V65/V67-style source-DAG repair
+  is the immediate TD6 client.
+
+## 2026-08-25 18:23Z EVENT — COMMON-CUBIC WITNESS SNF CONFIRMED / FAMILY CARRY MIGRATES
+
+- Hostile review of the core-inclusive witness Jacobian/SNF is `CONFIRMED`,
+  SHA `1cb00022...`; producer SHA is `9c05e2cb...`.  An independent AWS r6d
+  reconstruction matches the `299 x 149` matrix entrywise.  Ranks are 146
+  over Q and 94 over F3; the exact rational kernel is precisely two target
+  translations plus `Q -> Q+tP`.  Smith determinant valuation 205 and maximum
+  invariant valuation 13 are kept distinct.  Uniform precision `N=11` fails
+  the classical `N>410` minor test but proves neither lifting nor nonexistence.
+- Complete-family diagnostics confirm that the `[x^2 y^2]` next carry is not
+  constant: among 557 exact canonical controls its values 0/1/2 occur
+  135/306/116 times.  The first zero, active coordinate 4 set to 2, still
+  fails the complete next gate at singleton determinant row `[x^4 y^5]`.
+  Sampling is only a finder.  The arbiter is now the exact full 205-cokernel
+  map, compiled affine-linearly in the 55 final fresh-kernel coordinates and
+  then reduced to a Fitting/Kuranishi system on the 95 predecessor parameters.
+- Hostile review of the pointwise next-digit obstruction is also `CONFIRMED`,
+  SHA `c4275438...`; its dual-AWS independent reconstruction verifies the
+  complete rank `94/95` system and the singleton `[x^2 y^2]` certificate.
+  The promotion remains strictly one-witness/one-digit.
+
+## 2026-08-25 18:42Z EVENT — BINARY-CUBIC FIRST BANDS CONFIRMED
+
+- The fixed-D12 `(9,12)` order-one binary-cubic first-two-band hostile review
+  is `CONFIRMED_WITH_REPAIRS`, SHA `7b589ed2...`; producer SHA is
+  `2a185d6d...`.  Exact obstruction-scheme dimensions for cubic types
+  `L^3,L^2M,LMN` are `7,6,6`; all are nonunit/nonreduced, so no type is killed.
+- Custody consumes only V3 manifest/freeze SHAs `38466426...` / `b4374cb2...`.
+  The older locale-contaminated manifests and stale empty-stdout hashes remain
+  negative controls; the repairs alter no algebra.  The literal finite B9
+  cubic has stable discriminant valuation 15 and is conditionally squarefree
+  under exact continuation, but the reviewed pointwise `3^12` obstruction
+  already shows that this literal point has no such continuation.
+- Producer work did not block on review: exact degree-16 incidence already
+  leaves base dimensions `13,11,11` (full dimensions `21,19,19` after the
+  universal fresh kernel), and the complete degree-15 gate is live on dual
+  AWS hosts.  These later numbers remain producer-tier until frozen/reviewed.

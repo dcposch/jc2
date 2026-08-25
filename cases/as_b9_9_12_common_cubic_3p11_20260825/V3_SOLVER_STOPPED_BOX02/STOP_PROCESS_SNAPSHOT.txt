@@ -1,0 +1,9 @@
+    PID    PPID    PGID     ELAPSED   RSS STAT CMD
+ 202064       1  202064       05:05  3584 Ss   bash -c ulimit -v 67108864; /usr/bin/time -v timeout 14400 /usr/bin/boolector -m common_cubic_v3.boolector.smt2 > boolector.stdout 2> boolector.stderr; printf "%s\n" "$?" > boolector.rc
+ 202065       1  202065       05:05  3572 Ss   bash -c ulimit -v 134217728; /usr/bin/time -v timeout 14400 /home/ubuntu/jobs/as_fullfibre_qfbv_20260825T0602Z_v2/z3_4_16/bin/z3 -smt2 common_cubic_v3.smt2 > z3.stdout 2> z3.stderr; printf "%s\n" "$?" > z3.rc
+ 202067  202064  202064       05:05  1560 S    /usr/bin/time -v timeout 14400 /usr/bin/boolector -m common_cubic_v3.boolector.smt2
+ 202068  202065  202065       05:05  1556 S    /usr/bin/time -v timeout 14400 /home/ubuntu/jobs/as_fullfibre_qfbv_20260825T0602Z_v2/z3_4_16/bin/z3 -smt2 common_cubic_v3.smt2
+ 202069  202067  202069       05:05  2100 S    timeout 14400 /usr/bin/boolector -m common_cubic_v3.boolector.smt2
+ 202070  202068  202070       05:05  2100 S    timeout 14400 /home/ubuntu/jobs/as_fullfibre_qfbv_20260825T0602Z_v2/z3_4_16/bin/z3 -smt2 common_cubic_v3.smt2
+ 202071  202069  202069       05:05 17773464 R /usr/bin/boolector -m common_cubic_v3.boolector.smt2
+ 202072  202070  202070       05:05 72244368 R /home/ubuntu/jobs/as_fullfibre_qfbv_20260825T0602Z_v2/z3_4_16/bin/z3 -smt2 common_cubic_v3.smt2
