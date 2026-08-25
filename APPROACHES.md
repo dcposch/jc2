@@ -41,6 +41,240 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
+## Superseding strategy overlay (2026-08-25 23:28Z)
+
+The formalization lane has a clean exact checkpoint at nested commit
+`5f7cc487...`: an AWS build and axiom audit passed for the 45-theorem aligned
+`(6,9)` noncube project and the four-theorem max-11 partial-`y` routing
+project.  This removes proof-assistant build drift as a campaign risk for
+those exact modules.  It does not change avenue ranking: the `(6,9)` result is
+one aligned branch, while the max-11 module composes an abstract `Good`
+predicate and therefore certifies routing logic rather than the missing
+mathematical hypotheses.  New formal work should continue asynchronously
+behind theorem discovery and never gate independent research lanes.
+
+## Superseding strategy overlay (2026-08-25 23:20Z)
+
+The active computational frontier is now three small, source-typed boundary
+problems rather than broad support discovery.  D1 is localized at its sole
+double-root point: dual AWS Newton analysis leaves one nilpotent ray
+`alpha=2 beta`, with the next numerator carrying the quadratic
+`5L^2+18L+15`; a finite 125-dimensional local quotient is navigation only.
+The next D1 gate must incorporate the remaining load/target interactions and
+decide formal liftability, not merely recompute that quotient.
+
+For order-two `(8,12)`, the corrected strict compiler now localizes at
+`j!=0` and races the same frozen input on Box03 and r6d.  Its V1 predecessor
+is permanently quarantined, and the independent divisor-19 theorem is used
+only as a logically separate sub-stratum deletion.  For TD6, only the
+correctly typed staged simultaneous all-q producer remains live; every V77
+q3-specific datum and the failed V78 p12 path are negative controls.  These
+three lanes run concurrently on AWS and do not wait on one another's reviews.
+
+## Superseding strategy overlay (2026-08-25 23:16Z)
+
+The first TD6 transverse diagnostic V77 is quarantined at its q3-specific
+scope.  Its adapter inadvertently perturbed the imported q2 coefficient as
+well as q3, so the reported derivative is a `q2+q3` direction.  Its quoted
+first-minor digest is also exactly the serialized zero scalar, not a nonzero
+derivative.  Both defects invalidate every pure-q3 rank or remainder
+inference.  The V76 theorem on the fixed q2-beta section and V77's
+unperturbed base identity are unchanged.
+
+The simultaneous strategy remains correct but its source typing must make
+each coefficient slot explicit.  V78's `p12` lane stopped with a sparse-zero
+`KeyError` while indexing the absent derivative; that rc1 is a software
+negative control, not evidence that the projection is nonzero.  The independently assembled staged
+lane uses the corrected vector convention and remains live on AWS.  It is
+producer evidence only until every coordinate basis vector, direct q-prime
+term, and original-row projection passes a frozen dual-host audit.
+
+## Superseding strategy overlay (2026-08-25 23:13Z)
+
+Strict D1 is now a one-point problem.  The independently reviewed order-20
+normal obstruction excludes every squarefree common-cubic centre, uniformly
+in slope and fixed loads.  Since the full reduced exceptional support was
+already `P(2,3)`, only its unique double-root point `(-3:2)` can support a
+nonunit global endpoint.  Producer/review SHAs are `1b6e629a...` /
+`6883ef76...`.
+
+Allocation should therefore stop spending compute on generic common cubics.
+The primary D1 lane is the completed local ring/normal cone at the normalized
+double root, retaining nilpotents and all weight layers from 21 onward.  The
+dual global saturations remain useful only as independent endpoint checks or
+as sources of the same local component; their duration does not block the
+local attack.  A local unit proves strict-D1 exclusion after the reviewed
+bounded split; a local nonunit is only a formal survivor until constant-field
+rationality and both Taylor boundaries are proved.
+
+## Superseding strategy overlay (2026-08-25 23:10Z)
+
+The whole order-four `(8,12)` stratum with `mu4=0` is now independently
+closed.  Davenport--Stothers equality and Shioda's unique order-four Hall
+orbit force the terminal coefficient into a nineteenth-power divisor class;
+the reviewed exact-differential orders then force the Kummer core itself to
+be a fourth power.  Producer/review SHAs are `a5d40fd8...` / `a40827f9...`.
+The same invariant removes the all-six-loads-zero point of the finite
+order-two `U=2,[6,2]` client.
+
+This reallocates the `(8,12)` lane sharply: order four now starts at the
+genuinely loaded wall `mu4!=0`; order two keeps only nonzero lower/tail loads
+and must use the corrected `j`-localized strict compiler plus both finite
+Taylor boundaries; order one remains separate.  The classical `U<=2`
+bounded-pole closure and terminal divisor theorem should be applied before
+any solver launch, so AWS effort is reserved for strict or `U>=3` survivors.
+
+## Superseding strategy overlay (2026-08-25 23:06Z)
+
+The first order-two `U=2,[6,2]` strict-saturation launch is a deliberate
+negative control, not a result: it omitted the localization `j!=0`, so its
+closure necessarily includes the irrelevant terminal-zero common-quartic
+component.  Both V1 AWS jobs were stopped before endpoint use.  The corrected
+workflow is to saturate by `j` as part of the source open, then by the strict
+parameters, cut the boundary, and only then remove the coefficient origin.
+V2 will be source-reviewed and dual-raced independently.  Neither a V1 unit
+nor nonunit would have had mathematical standing.
+
+This correction changes no Faber tail, Kummer character, terminal ODE,
+common-quartic support, or compiled target row.  It is exactly the kind of
+compiler/source boundary that background review is meant to catch while the
+proof lanes continue.  The Shioda/divisor theorem review and the order-two
+client repair proceed concurrently on AWS-only compute.
+
+## Superseding strategy overlay (2026-08-25 23:02Z)
+
+The repaired whole `(8,12)` coefficient-infinity source audit is now
+independently `CONFIRMED` (original/erratum/review SHAs `092dfb6d...` /
+`aa90155e...` / `f45836ca...`).  It licenses both nontrivial Kummer source
+types, their complete loads and terminal row, the exact bounded-pole split,
+the `U=1` residue exclusion, and the common-quartic strict exceptional support
+`P(2,3,4)`.  The order-two load differential is nonzero away from the square
+quartics `c=0,p^2=4r`; even so its rank is at most three, while the order-four
+coefficient differential is zero.  First-order transversality is therefore
+not an available shortcut in either client.
+
+The operational fork is now exact.  Dual AWS saturations race on the finite
+order-two `U=2,[6,2]` client.  In parallel a Shioda/Davenport--Stothers plus
+divisor-19 argument is under hostile review for the entire order-four
+`mu4=0` branch, and the remaining loaded/order-four and `U>=3` bounded lanes
+stay explicit.  A nonunit saturation will be treated only as a survivor
+scheme; a unit result must pass normalized dual-host endpoint comparison
+before promotion.  No review blocks these computations.
+
+## Superseding strategy overlay (2026-08-25 22:52Z)
+
+TD6 V76 is now independently `CONFIRMED`: the complete fixed, source-typed A3
+section with `q=t+beta*t^2+t^25` is empty for every `(C,V,U,beta)`.  The proof
+uses the exact scheme cover `D(UHB3) union V(U) union V(H) union V(B3)` and
+reviewed original-source theorems on all four leaves.  Producer/review SHAs
+are `0281a5fc...` / `7eff6c61...`.  This removes the fixed section from the
+live queue but says nothing about its transverse source moduli.
+
+The first transverse q3-gamma experiment finished independently on two AWS
+hosts with matching exact invariants.  Gamma changes the reduced first-stage
+remainder by three affine monomials; it does not supply a gamma-independent
+unit identity.  Thus the campaign should not serialize q3, q4, and later jets
+or infer openness from the fixed slice.  The next TD6 gate is one simultaneous
+original-row/Fitting or source-syzygy calculation in the finite 32-slot
+remaining-jet block, with denominator strata carried explicitly.  That work
+continues independently of D1 and `(8,12)` reviews and remains AWS-only.
+
+## Superseding strategy overlay (2026-08-25 22:45Z)
+
+The whole nontrivial `(8,12)` terminal layer is now exact and independently
+reviewed.  In the order-four and order-two Kummer branches it reduces to the
+linear differential equations `8hA'+6h'A=j` and `8vA'+4v'A=j`.  Local divisor
+orders rule out `U=1` and force a root of multiplicity at least five or six;
+the first order-two survivor is the single `U=2`, `[6,2]` divisor profile with
+`T^2=(x-b)/(x-a)`.  Producer/review SHAs are `1cd824c9...` / `db67f16d...`.
+
+This changes allocation from an unrestricted Kummer search to two parallel
+gates: eliminate the finite `U=2`, `[6,2]` client against every lower row, and
+use divisor/Stothers constraints to attack the whole order-four branch while
+the common-quartic Rees deformation is compiled independently.  The AWS
+compiler for the finite client has passed, but a compiler pass is not an
+emptiness result.  The general `(8,12)` source audit remains repair-tier only:
+its Kummer typing, targets, common-quartic support, and bounded-degree split
+survive, while its old §7 load derivatives must be replaced by the frozen
+erratum before promotion.
+
+In parallel, D1 continues without waiting for its long global saturations:
+the squarefree common-cubic normal obstruction is under hostile review and
+the discriminant point is attacked separately.  TD6 has completed the
+generic and whole-`B3` fixed-A3 pieces and is reviewing their full union while
+the transverse all-source-jet gate is designed.  All substantive algebra,
+formal checking, and solver work remains AWS-only.
+
+## Superseding strategy overlay (2026-08-25 22:25Z)
+
+The common-power boundary mechanism is now a general theorem rather than a
+single `(9,12)` calculation.  For a depressed monic degree-`m` polynomial
+`f` and `g=F_n(f)`, independent hostile review confirms that the first
+`m-1` unloaded tails vanish exactly on reduced support
+
+```text
+f=K^(m/d),       g=K^(n/d),       d=gcd(m,n),
+```
+
+and that this prime locus is `A^(d-1)`, projectively `P(2,...,d)`.  The
+producer/review SHAs are `7d5271e8...` / `29bd2184...`.  It unifies the live
+common-cubic `(9,12)` and common-quartic `(8,12)` exceptional supports and
+prevents further compute from being wasted rediscovering their radicals.
+Each passport must still prove that its own weighted loads and lower Faber
+terms disappear on the exceptional fibre; neither scheme thickness nor
+normal lifting follows from the theorem.
+
+The cyclic-D1 client has therefore advanced to the exact strict-slope gate.
+Different-model review `CONFIRMED` the frozen two-parameter Rees compiler and
+the implication of its global projective-boundary ideal (design/review SHAs
+`bdb369f1...` / `d6e54b5b...`).  Independent Box02 and r6d characteristic-
+zero jobs are computing that same gate in isomorphic coordinates.  `H=(1)`
+would exclude all strict finite-load coefficient-infinity arcs in D1;
+`H!=(1)` would only expose a survivor scheme for deformation analysis.  Work
+continues without waiting on that endpoint: one lane derives the normal cone
+and discriminant strata of the common-cubic locus, another builds the
+independent `(8,12)` common-quartic coefficient-infinity client, and TD6
+finishes its fixed-A3 cover before attacking all remaining source jets in one
+simultaneous Fitting gate.  Every substantive computation is AWS-only.
+
+This is a sharper finite set of boundary problems, not a resolution.  The
+slope-three/finite-coefficient D1 interfaces, common-root scheme thickness,
+Taylor/terminal realization, other passports, full TD6 moduli, global
+landing/cofinality, and JC2 remain open.
+
+## Superseding strategy overlay (2026-08-25 21:30Z)
+
+The cyclic-D1 route has split exactly at coefficient infinity.  A
+different-model hostile review confirms that, after the licensed source shear,
+every Taylor-realizable D1 section satisfying
+`d_i<=3(9-i)` has ordinary total degrees `(27,36)` and is therefore
+counterexample-closed by GGV/Heitmann.  The producer/review SHAs are
+`14240376...` / `423d0615...`.  D1 effort must no longer be spent on bounded
+coefficient poles or on additional fixed-load finite-field fingerprints; its
+only live target is the strict weighted pole sector.
+
+At that boundary, the strongest provisional successor is now structural
+rather than computational.  A Mason--Stothers argument identifies the reduced
+eight-tail exceptional support with
+
+```text
+C=z^3+pz+r,       f=C^3,       g=C^4,
+E_red=P(2,3).
+```
+
+The proof uses `r1=...=r8=0` to obtain
+`deg(g^3-f^4)<=15`, whereas polynomial abc would require degree at least 16
+unless `g^3=f^4`.  It also reduces rational ramification denominators to
+`n=1` on the generic common-cubic locus, `n|2` on `r=0`, and `n|3` on
+`p=0`.  The numerator remains unbounded, so this is not a finite-jet or D1
+closure.  Producer/same-model/different-model review SHAs are `de7dd223...` /
+`a7bd6275...` / `a274c8d8...`; the hostile verdict is `CONFIRMED`.  Exact AWS work now targets
+scheme thickness and normal deformation of these three strata, using a
+two-parameter Rees model rather than an unproved single-parameter weight-20
+ansatz.  TD6 continues independently through V73 to the staged V74/V75
+source-cover chain.  All heavy work remains AWS-only, and no statement here
+closes D1, the other passports, global landing, or JC2.
+
 ## Superseding strategy overlay (2026-08-25 20:15Z)
 
 The significant-news synthesis is

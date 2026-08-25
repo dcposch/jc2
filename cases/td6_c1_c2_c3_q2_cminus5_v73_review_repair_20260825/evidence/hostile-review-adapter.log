@@ -1,0 +1,144 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll inspect the frozen case and xmodel surfaces as an adversarial referee, without modifying or executing anything. First I need the readable source, evidence, and the claimed theorem's load-bearing points.The xmodel is a producer report, not a proof. Next I’ll inventory the frozen case, hashes, and readable source so the eight load-bearing points can be checked independently.I’ll read the freeze docs, source, and evidence next, treating stored PASS strings as non-authoritative.I’ll read the replay source and theorem artifacts next, then check dual-host stdout and the q-prime control without executing anything.The rest of `main()`, parent `compile_previous`, and the theorem artifacts are next; the printed `4*beta*f2[10]` claim and the omit-q-prime path look like they need independent source checks.The omit-q-prime control looks like a different producer than V73K. I’ll pin that against the parent compiler, `4*beta*f2[10]`, and the theorem artifacts.The eight load-bearing points check out from the readable source and artifacts. One package repair remains: the omit-q-prime control is a predecessor producer, not a V73K run.# Hostile review: TD6 V73K `C=-5U^2,V=0,D(U)`
+
+Inspection only. No producer, `verify.py`, or shell hash recomputation was run. Stored `PASS` strings were ignored as proof.
+
+---
+
+## Findings
+
+**1. [Low] Source typing is the raw line, not the parent `b3half` weighted center.**
+
+`replay_v73.py` pins `c1_c2_c3_p3_quotient.py` at `f8c46d2c…` and asserts `COMPONENT == "b3half"`. That parent mode is a dummy `Q(U)` tower (`Z^2=2`, outer `V^2=U^3`, intended degree 1) whose *geometric* center is the weighted `t=1/2` chart
+
+`U=w^2/y_w`, `V=w^3/y_w`, `C=x_w w^4/y_w^2`
+
+with `x_w=19/9`, `y_w=32/9`, hence `V≠0`. V73K overwrites `r.fb.CENTER` to the raw point `(-5U^2,0,U)` and checks `V=0`, `C+5U^2=0`, and the raw sextic `B3=0` by direct substitution (`100U^6-120U^6+20U^6=0`). Transport is the frozen `t^15` / dead-stretch-0 / `F1_*` / `POLE_*` data; `q`’s `β t^2` term is the dual source `("g","X",0,2)` rather than a weighted rescaling of `q`. `weighted_scaling_used=false` matches the code path.
+
+The parent `b3half` descent audits (`rational_constant_subfield`, `curve_base_subfield`) are **not** replayed on identity coefficients. Residual/inverse TSV slots are only the `Q(U)` components `0,4,8,12,16,20`, which is consistent with descent but is not the parent’s full audit. This does not license a different center.
+
+**2. [Confirmed] Hash-pinned outer `range(40)` intercept reconstructs exactly `('X-1',0..11)`.**
+
+`qd.compile_previous` is `jet_orbit_adjoint` wrapping `base.compile_x_previous` in `td6_boundary_q2_deformation_20260824/replay.py`. The only `range(40)` in that function is the outer degree loop; each degree is independent (no accumulator). Inner loops are `enumerate(f1)`, `enumerate(f2)`, and `range(1,len(f1))`. Patching `qd.base.range` therefore hits exactly the intended iterator; non-`(40,)` calls go to `builtins.range`.
+
+Staged GE on the *unintercepted* 40-row pack yields `used_previous_indices=[0..11]` with keys `('X-1',0)..('X-1',11)` in order, so `pack()` did not skip any of those degrees. The intercepted compile is then zipped against `selected_degrees`, not against pack indices. Both theorem stdouts emit intercept count 1 and those twelve keys. No pole row enters the support.
+
+**3. [Medium] Direct `q'` is retained in the theorem run; the omit-q-prime control is a predecessor producer, not V73K.**
+
+Parent formula of `compile_x_previous` at degree 11:
+
+- `2·Q_PRIME[0]·f2[11] = 2 f2[11]`
+- `2·Q_PRIME[1]·f2[10] = 2·(2β)·f2[10] = 4β f2[10]`
+- `Q_PRIME[24]` needs `f2[-13]`, absent
+
+The degree-1 piece of `q'=1+2β t+25 t^{24}` at degree 11 is exactly `4β f2[10]`. The printed string is not extracted from the compiled polynomial; it is true by that formula together with the post-compile assert `qd.Q_PRIME[1]==BetaPoly([0,2])`. Intercepting the outer loop still enumerates all of `f2`, so `f2[10]` is not dropped.
+
+Theorem Box02/Box03: `direct_qprime_retained=true`, dependents `[('X-1',11),('X-1',13)]`.
+
+The frozen control is **not** that source:
+
+| | Theorem (V73K) | `evidence/control/box03-qprime` |
+|---|---|---|
+| tag | `…_k_single_positive_…T2107Z` | `…_b_qprime_…T1927Z` |
+| source list | includes `V73C_PREREGISTRATION.md` | omits it |
+| dependency | 12 rows, `0..11` | 6 odd rows `1,3,5,7,9,11` |
+| lift | one aggregate convolution | per-edge `previous_edge_*` DAG |
+| `Q_PRIME[1]` | asserted `2β` | `direct_qprime_retained=false` |
+| DAG extras | `aggregate_*_sha256` | absent |
+
+V73K as written cannot emit that control: `assert qd.Q_PRIME[1]==BetaPoly([0,2])` and `assert used_previous_keys==[('X-1',d) for d in range(12)]` are unconditional. Preregistration’s “both modes” gate is therefore not discharged by frozen `replay_v73.py`. Residual digest and residual-factor TSV still match the theorem (`3884ec0c…`, `8763f53f…`), and `('X-1',13)` is absent — that much is usable support, from a different binary.
+
+**4. [Confirmed] `('X-1',11)` residual is β-independent, U-supported, unit on `D(U)` after inverse.**
+
+GE records `residual.degree==0` with digest `3884ec0c…` in both theorem hosts and in the predecessor omit run. TSV (byte-identical on all three copies):
+
+- numerators: `Q`-multiples of `x` (`U`), empty denominator factors, U-order 1
+- inverse: constant numerators, denominator `x`, U-order 1
+
+`BetaPoly.inverse` requires degree 0; `residual*inverse==1` is asserted in the coefficient field. Normalized target `{(): -1}` has canonical digest `d8bcc0ed…` on both theorem identities *and* the omit identity, so the unit polynomial is the same object. Vanishing locus of the residual is only `U=0`. Endpoint `U=0` is not consumed.
+
+**5. [Confirmed] Ancestry is original previous-plus-first, not echelon rows; signs check.**
+
+- Staged left-null on packed `compile_previous(bands94)` plus poles: combination replay equals `{(): -residual}`.
+- Same scalar weights on raw `compile_previous(bands132)` (intercepted) give `aggregate_raw`.
+- One exact batch division through **first-stage pivots** (normalized singleton leading 1, no other pivot in the tail, reconstructed-input replay).
+- Remainder remapped 132→94 equals the target; lift of quotients through GE combinations, then **negated**, so `aggregate_raw − lift = remainder`.
+- `first_rows` are `qd.pack('X-2', first_band_polynomials(bands132))`, the original first-band polynomials on the 132-chart, not the stored echelon forms (`solve_stage` copies rows). Thirteen nonzero first multipliers.
+- One convolution `raw_previous + first_relation` is asserted equal to `{(): -residual}`. Normalization is scalar multiplication of that replay by `residual^{-1}`, not a second convolution. Bilinearity makes that the same as reconvolving scaled multipliers.
+
+Dead V72 current/N13 body after `return` is unreachable.
+
+**6. [Confirmed] Lex exponent-vector leading-monomial argument is a valid integral-domain certificate.**
+
+Coefficient ring is a univariate polynomial ring over `ECurve`. `ECurve` inverts with a product check against `1`; Quad `Z^2-32Z+128` / Curve `V^2-ZU^3` (here dummy `Z^2=2`, `V^2=U^3`) are constructed as fields. Thus `ECurve[β]` is a domain, and the source polynomials sit in a polynomial ring over a domain.
+
+Lex on exponent vectors, with a fixed variable order (`sorted` of variables appearing in the two factors), is a monomial order, so `lm(fg)=lm(f)lm(g)` and the product of leading coefficients is the leading coefficient. `nonzero_product_witness` asserts that product is a nonzero `BetaPoly` and checks exponent additivity. It does **not** need to form the omitted convolution.
+
+- Omission of `('X-1',0)`: multiplier is a source-constant `{(): weight}`; delta `-m·r`; witness `lm=(0,30)`.
+- Plus-one: delta is the selected original row; `max(selected_row)` uses Python tuple order, not lex, but only nonzeroness is required. Valid, weaker.
+- Wrong-row `('X-1',1)`: `r_wrong≠r` by polynomial inequality; `m·(r_wrong-r)` witnessed nonzero with a **different** leading-coefficient digest than omission (`4741f098…` vs `89ffc253…`).
+
+Stdout domain tag `Q(U)_exact_field_polynomial_beta` is slightly narrower than the true ring `Q(U)(algebraic constants)[β]`; that does not break the domain property.
+
+**7. [Confirmed] Numerator/denominator and leaf-denominator ledgers charge only `U`.**
+
+Residual TSV factors every `Q[U]` coordinate of residual and inverse. Leaf ledger enumerates coordinate denominators of transport-chart inverse, residual, inverse, dependency weights, first/previous pivot leads, raw previous multipliers and selected original previous rows, first multipliers and selected original first rows, and the two normalized multiplier families. Emitted denominators: `1` and `x^k` for `k=1..8`. `leaf_denominator` and `transport_chart` share summary `(8,1,7f4f8056…)`; `leaf_denominator.factor()=(1,[(x,8)])`; monic product is `x^{16}`. `certificate_chart_factor_set=['x']`. No other prime is localized.
+
+**8. [Confirmed] Dual-host theorem outputs agree after the registered provenance cut; freeze design is a custody manifest, not algebra.**
+
+Box02/Box03 start together at `2026-08-25T21:07:22Z`, end `21:38:37Z` / `21:39:02Z`, wall ~31m, RSS ~1.69GB — independent runs, not a copy. After dropping exactly
+
+`aws_hostname=`, `aws_run_tag=`, and the four `*_path=` lines,
+
+every remaining stdout line agrees (including `aws_platform=Linux` and all mathematical lines). The four theorem artifacts are text-identical across hosts. Claimed artifact digests are consistent across xmodel, `MANIFEST.sha256`, stdout, DAG internal links, and `verify.py`’s expected table:
+
+| artifact | digest |
+|---|---|
+| DAG | `27a26a20…` |
+| identity | `be5b6bc8…` |
+| leaf ledger | `112776f2…` |
+| residual factors | `8763f53f…` |
+
+`FREEZE.sha256` hashes `MANIFEST.sha256` and the xmodel producer report. `verify.py` is a marker/custody checker; it does not replay division, convolution, or the LM witnesses. Control has no `rc` / `launch.meta` / timestamps in the freeze. Hashes were not recomputed in this session.
+
+Scope firewall holds: `whole_B3_killed=false` and the sibling killed flags are present; nothing in the DAG claims whole B3, A3, TD6, SP-2, landing, or JC2.
+
+---
+
+## Strongest exact claim that survives
+
+In the already fixed, source-typed normalized A3 section with
+`q_β=t+β t^2+t^{25}` and direct `q_β'=1+2β t+25 t^{24}`,
+on the raw open line `V=0`, `C=-5U^2`, `D(U)`:
+
+the previous-stage row `('X-1',11)` is dependent, with β-degree 0 and
+residual digest `3884ec0c…`. Its exact `Q[U]` numerators are supported
+only at `U`, it has no residual denominator, and its inverse
+denominator is only `U`. There is an exact left-null combination of
+the twelve original parent-compiler rows `('X-1',0),…,('X-1',11)`
+which, after one exact first-stage division and lift to thirteen
+original first-band rows, convolves to that residual; scalar
+normalization yields `-1` on `D(U)`. Therefore those licensed
+original source rows cannot vanish simultaneously on this line, for
+every β. The degree-11 contribution of the `t^1` term of `q'` is
+`4β f2[10]` by the pinned parent formula.
+
+This does not consume `U=0`, does not kill whole `B3` or whole A3,
+and is not a TD6 / SP-2 / landing / JC2 theorem.
+
+---
+
+## Required repairs
+
+1. **Control provenance (required for the frozen package, not for the identity).** Label `evidence/control/box03-qprime` as a predecessor (per-edge, six odd rows) support control, not a V73K `--omit-direct-qprime` execution. Either guard the `Q_PRIME[1]` and `range(12)` asserts so frozen `replay_v73.py` can reproduce omit-mode, or drop “both modes” from the V73K pass gate. Attach `rc` / launch metadata if the control remains in the freeze.
+
+2. **Recommended, not required.** Assert parent `b3half` rational/curve descent on identity multipliers, or dump their `flat_ratu` support, so the “`Q(U)` adapter” claim is audited on the combination and not only on the residual TSV.
+
+3. **Not required.** Extract `4β f2[10]` from the compiled degree-11 polynomial; parent-formula inspection already certifies it.
+
+No algebraic change to the positive original-row identity, the residual, or the LM controls is required.
+
+---
+
+CONFIRMED_WITH_REPAIRS
+adapter exited 0 but required report is absent: xmodel/td6_v73k_hostile_review_20260825.md

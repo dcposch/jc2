@@ -1,0 +1,16 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the review skill and every source file named in the request, then independently try to break the claimed implication.The producer note and preregistration are in. Next I’ll read the remaining source files and a few existing review reports so the format matches.I’ll look at existing review format and the Faber/shear identities next, without using the same-model review.I have enough to derive the implication independently. Next I’ll write the hostile review with a verdict, the independent argument, and a strict firewall.**CONFIRMED.** After the allowed source shear, the bounded D1 sector really does force ordinary total degrees `(27, 36)`, so it cannot contain a characteristic-zero Jacobian counterexample.
+
+The report is `xmodel/max12-912-order3-d1-classical-degree-split-review-grok-20260825.md`. Target SHA pin: `1424037680ac7ceeb0927388c59e5028f43ca9b7d37916cfea61809ca5ed7361`. Same-model review was not used.
+
+Independent checks that held:
+
+- The shear `(x,y)↦(x,y-q(x))` changes only `R0`, leaves depressed `f,g` and every `A_i` alone, and preserves Keller and automorphism status. The pair `(27,36)` is for the sheared representative.
+- `t^3=s` is étale at `s=1`, `t` is a unit, and `v(u)=-2` with ramification index one.
+- Stage-B membership in `L[x]` is what converts pole order at `s=1` into `x`-degree.
+- Under `d_i≤3(9-i)`, each `[y^ℓ]P` has `x`-degree at most `27-ℓ`. The term `h^3 y^9` is monic of total degree `27` and cannot cancel.
+- Every monomial of `F_{12}+k F_6` has Faber weight `12`, including the `e_k=1` terms, which are strictly better in the pole bound. Then `[y^ℓ]Q` has `x`-degree at most `36-ℓ`, and `h^4 y^{12}` forces total degree `36`.
+- Cancellation, zeros, degree drop, finite constant extension, and residual constant shear do not drop those top terms.
+- GGV/Heitmann applies to ordinary total degrees over any characteristic-zero field; `gcd(27,36)=9<16`.
+
+The complementary sector `d_i>3(9-i)` for some `i`, Stage-A/B existence, the full `k=0` chart, higher passports, the order-one leaf, `(8,12)`, the full `(9,12)` cell, and JC2 remain untouched. Non-blocking: the degree identities do not use `k≠0`, so the bounded sector is also closed on `k=0`.

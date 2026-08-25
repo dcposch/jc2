@@ -1,0 +1,19 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll read the three charged files, verify their hashes, and then derive the V2 claims by hand without any CAS or other computation.Hashes match. I’ll independently re-derive the load differential, square locus, and rank claims from the charged sources, without treating any prior verdict as evidence.The four V2 identities check out by hand. I’ll write the standalone hostile report with hashes, the `CONFIRMED` verdict, and a full derivation.**CONFIRMED.** The V2 theorem (original audit with the erratum’s replacement of §7 `(7.2)` and the load-direction sentence) holds. Report: `xmodel/max12-812-order24-coefficient-infinity-review-grok-v2-20260825.md`.
+
+Charged hashes match:
+
+| File | SHA-256 |
+|---|---|
+| original audit | `092dfb6d7de3e57ae153dcf3365fa2884ce289710b6c80c3193a2bc7f7d7853e` |
+| erratum V2 | `aa90155ec8a182f4f451c77fc9548cf8035889efc230afdaea622f84eb18c495` |
+| first review | `2f0a03a99ba6563034cdaf84ffc06f6d78ddd377144201d40aa4352ac71c6b55` |
+
+Independent hand derivation of the four required items:
+
+1. At `f=K^2`, the monic eighth root is `w=K^{1/4}`. Holding `f` fixed, `∂/∂k_j(H_F(w)-g(z(w)))=w^j-F_j(z(w))=[K^{j/4}]_-` for `j=2,6,10`. The sign is that of `H_F-g`. No variation of `w` is hidden.
+2. Vanishing of any one of those three full negative parts is equivalent to `K` being a square in `L[z]` (UFD). For `K=z^4+pz^2+cz+r`, including degenerates, the square locus is exactly `c=0`, `p^2=4r`. Already `r_1=c/2` and `r_2=(4r-p^2)/8` in the `k_2` seven-row cut out the same locus.
+3. Expansion `(7.1)` is correct: constant and linear terms in `E` are polynomial, so every coefficient direction is in the kernel. Order-four first differential is zero; order-two rank is at most three, strictly less than seven. Non-transversality survives. Finite determinacy is not granted.
+4. The erratum is narrow: it does not alter or strengthen §§0–6, the unloaded fibre, bounded-degree split, Mason support, Rees equations, charts, denominators, or the firewall. The only residual conflict is the superseded false `(7.2)` still printed in the immutable original, which V2 does not consume.
+
+Smallest failing identity in V2: none. Scope remains reduced support and source typing, not a saturation, Taylor, or JC2 verdict.

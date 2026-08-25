@@ -5,6 +5,270 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **NESTED LEAN COMMIT `5f7cc487...` — FINAL AWS BUILD/AUDIT PASS
+> (2026-08-25 23:28Z).**  On r6d, the exact source archive with SHA-256
+> `a9a5b6ec...` built under Lean `4.34.0-rc1` and Lake
+> `5.0.0-src+3447a66`.  `gcd3-69-noncube` passed the declared-axiom audit for
+> all 45 named solution theorems, and `max11-partial-y` passed it for all four
+> named solution theorems.  Only `propext`, `Classical.choice`, and
+> `Quot.sound` (or subsets) occur.  The `Challenge.lean` `sorry` warnings are
+> expected statement scaffolding; the audited declarations live in
+> `Solution.lean`.
+>
+> This promotes build integrity and the formal statements at their exact
+> scope.  `gcd3-69-noncube` formalizes the aligned `(6,9)` noncube exclusion
+> branch.  `max11-partial-y` formalizes the abstract certificate
+> `Max11RouteClassification`, `Max11UniquePrimitive`,
+> `Max12FirstPrimitives`, and `MaxPartialDegreeElevenClosure`; because its
+> predicate `Good` is abstract, it does not alone establish the underlying
+> mathematical routing hypotheses, the full automorphism theorem, or JC2.
+> Captured streams and custody metadata are manifest-frozen in
+> `cases/jc2_lean_final_5f7cc48_aws_verify_20260825/`.
+
+> **TD6 V77 `q3` DERIVATIVE QUARANTINE (2026-08-25 23:16Z).**  The frozen
+> V77 producer's `configure_qd_gamma()` assigned the dual perturbation to
+> `qd.B`, but in the imported source compiler `B` is the `q2` coefficient.
+> A pure `q3` line at `beta=0` must keep `qd.B=0` and vary only the transport
+> key `('g','X',0,3)` together with `Q_PRIME[2]`.  V77's advertised `q3`
+> derivative is therefore a contaminated `q2+q3` direction.  Independently,
+> digest `c0730fa1...` is the canonical serialization of the zero E3 scalar,
+> so V77's prose claim that its selected first-minor derivative was nonzero is
+> false.  Every
+> V77 q3-specific rank/remainder/source-support conclusion is quarantined
+> by the immutable erratum report SHA `4169eb1b...` (case freeze
+> `5723530b...`) pending a corrected rerun.  Its base identity and
+> the independently reviewed V76 fixed-`q2` section theorem are unaffected.
+
+> **D1 SQUAREFREE COMMON-CUBIC STRICT BOUNDARY EMPTY
+> (2026-08-25 23:13Z).**  In the exact ordinary isotrivial strict-D1 chart,
+> no formal or Puiseux coefficient-infinity arc can be centred at a squarefree
+> depressed common cubic `K0=z^3+p0*z+c0`.  Moving monic division
+> `f=K^3+KQ+R` and reducedness of `L[z]/(K0)` force
+> `v(Q)>=6`, `v(R)>=9`.  Through weight 20 the complete negative part then
+> has denominator at most `K^2` and a moving numerator `S` of degree at most
+> five.  Its first six tails determine `S` triangularly.  After subtracting
+> the exact constant-field row-3/row-6 targets
+> `mu*Lambda^15*K+nu*Lambda^18`, those tails vanish, so row eight also
+> vanishes—contradicting the unit leading target
+> `Lambda^20*(1+tau)`.
+>
+> The argument is uniform in strict slope and in all fixed constants
+> `k,mu,nu`, including every zero-load stratum.  It permits arbitrary regular
+> motion of `p,c`; inverse-substitution contamination and every `K^-3` layer
+> begin only at weight 21.  Combined with the reviewed common-cubic support
+> theorem, any nonunit global strict-D1 endpoint has reduced projective
+> support contained in the single double-root point `(-3:2)` of `P(2,3)`.
+>
+> Producer/review SHAs are `1b6e629a...` / `6883ef76...`; the unique-output
+> hostile verdict is `CONFIRMED`.  The squarefree proof intentionally fails
+> in the nonreduced residue algebra at the double-root point.  It neither
+> excludes nor constructs a lift there, controls local thickness, proves a
+> rational section, handles finite coefficient load or another passport, nor
+> resolves JC2.
+
+> **WHOLE `(8,12)` ORDER-FOUR `mu4=0` STRATUM EMPTY
+> (2026-08-25 23:10Z).**  On an actual order-four Kummer trajectory with
+> `mu4=0`, the first six tails vanish and `r7!=0`.  Thus
+> `W=g^2-f^3` is a nonzero degree-at-most-five polynomial attaining the
+> order-four Davenport--Stothers bound.  Shioda's `St(4)=1` classification,
+> transferred across characteristic-zero algebraically closed fields, puts
+> the pair in the unique Hall orbit.  Monic/depressed normalization gives
+> `r7=-(27/2)*alpha^(-19)`, so every finite order of `r7` is divisible by 19.
+>
+> The independently reviewed terminal differential gives finite orders
+> `(4-m)/gcd(4,m)-1` for `dx/u`, forbids multiplicity four by residue, and
+> gives four infinity zeros of order `U-1`.  Divisor balance and the
+> 19-divisibility force exactly one finite root of multiplicity `4U`, making
+> `h` a fourth power and contradicting Kummer order four.  Hence this entire
+> stratum is empty for every `U`.  The same DS divisibility also excludes the
+> order-two `U=2,[6,2]` sub-stratum
+> `k10=k6=k2=mu2=mu4=mu6=0`, since its terminal `T` has divisor orders
+> `+1,-1`.
+>
+> Producer/review SHAs are `a5d40fd8...` / `a40827f9...`; the unique-output
+> hostile verdict is `CONFIRMED`.  This does not touch order four with
+> `mu4!=0`, the remaining loaded order-two client, the order-one leaf, all of
+> `(8,12)`, maximum twelve, or JC2.
+
+> **`(8,12)` ORDER-TWO STRICT-SATURATION V1 QUARANTINE
+> (2026-08-25 23:06Z).**  The V1 client/compiler retained the required
+> terminal parameter `j` in its ring and row seven, but failed to impose the
+> source open `j!=0`.  Saturation only by the strict parameters and coefficient
+> irrelevant ideal therefore leaves a guaranteed spurious `j=0`, all-load-
+> zero common-quartic component.  Its two AWS races were stopped before
+> endpoint use.  No V1 unit/nonunit, component, or timeout is admissible
+> evidence.  V2 must localize or saturate by `j` before strict saturation and
+> receive a new source hash/review.  The emitted tail formulas and reviewed
+> common-quartic reduced-support theorem are unaffected.
+
+> **WHOLE `(8,12)` COEFFICIENT-INFINITY SOURCE AUDIT — REPAIRED
+> (2026-08-25 23:02Z).**  For an actual partial-`y` `(8,12)` Keller pair on
+> either nontrivial Kummer branch, the reviewed character descent gives
+> `g=F12(f)` in order four and
+> `g=F12(f)+k10*F10(f)+k6*F6(f)+k2*F2(f)` in order two, with complete target
+> gauges and terminal row `8r7'=j/u`, `j!=0`.  The infinity residue excludes
+> `U=1`.  If all coefficient poles obey
+> `d_i<=(U+1)(8-i)`, the actual total degrees are exactly
+> `(8(U+1),12(U+1))`; Heitmann closes this bounded sector only for `U<=2`.
+>
+> The strict Rees exceptional fibre is the ordinary unloaded seven-tail
+> system.  Its reduced support is exactly
+> `f=K^2,g=K^3`, `K=z^4+pz^2+cz+r`, a prime `A^3` with projectivization
+> `P(2,3,4)`.  At this locus the order-four coefficient differential is zero.
+> In order two the repaired load derivative is
+> `[K^(j/4)]_-`, `j in {2,6,10}`; it vanishes precisely when
+> `K` is a square, equivalently `c=0,p^2=4r`.  Hence the seven-tail
+> differential has rank at most three and neither branch is linearly
+> transverse.  No finite-determinacy inference follows.
+>
+> Original/erratum/review SHAs are `092dfb6d...`, `aa90155e...`, and
+> `f45836ca...`; the V2 hostile verdict is `CONFIRMED`.  The immutable original
+> identities `F10(K^2)=K^5`, `F6(K^2)=K^3`, `F2(K^2)=K` are false and are not
+> consumed.  This theorem supplies source typing, reduced support, the degree
+> split, residue gate, strict-saturation design, and first differential only;
+> it does not give a strict-saturation endpoint, lift, Taylor realization,
+> whole `(8,12)` closure, or JC2.
+
+> **TD6 FIXED-A3 `q2`-BETA SECTION EMPTY (2026-08-25 22:52Z).**  In the
+> fixed, source-typed normalized A3 section with center `(C,V,U)`,
+> `q_beta=t+beta*t^2+t^25`, and the live derivative
+> `q_beta'=1+2*beta*t+25*t^24`, the normalized compatibility system has no
+> solution over any point of `Spec Q[C,V,U]`, for every polynomial `beta`.
+> The proof is the exhaustive constructible cover
+>
+> `D(U*H*B3) union V(U) union V(H) union V(B3)`,
+>
+> where `H=C-3U^2` and
+> `B3=4C^2U^2-4CV^2U+24CU^4+V^4-20V^2U^3+20U^6`, together with reviewed
+> original-source emptiness theorems V57, V70, V71, and V75 on its four
+> leaves.  The generic denominator radical is exactly `{U,H,B3}`; the
+> divisors are covered at raw scheme scope, so no unproved density or
+> specialization step enters the union.
+>
+> Producer/surface-repair/review SHAs are `0281a5fc...`, `1fadddd1...`, and
+> `7eff6c61...`; the unique-output hostile verdict is `CONFIRMED` with no
+> required repair.  This theorem is confined to the normalized
+> `(C,V,U,beta)` family.  It does not cover any transverse `q3,...,q24`
+> modulus, a different A3/source section, whole TD6, SP-2, landing, or JC2.
+
+> **WHOLE `(8,12)` TERMINAL EXACT-DIFFERENTIAL/DIVISOR THEOREM
+> (2026-08-25 22:45Z).**  On every actual nontrivial partial-`y` `(8,12)`
+> Kummer trajectory, the original terminal row is equivalent to an exact
+> differential.  In the order-four branch, with `u^4=h` and `r7=u^3 A`, it is
+>
+> `8h A' + 6h' A = j`;
+>
+> in the order-two branch, with `h=v^2`, `u^2=v`, and `r7=u A`, it is
+>
+> `8v A' + 4v' A = j`.
+>
+> At infinity `dx/u=-q^(U-2)t^-1 dq`, so `U=1` is impossible.  At a finite
+> root of multiplicity `k`, the order of `dx/u` is
+> `(4-k)/gcd(4,k)-1` in order four and `(2-k)/gcd(2,k)-1` in order two.
+> Exactness therefore forbids order-four multiplicity four and order-two
+> multiplicity four; for `U>=2` it requires respectively a root of
+> multiplicity at least five or six.  In the smallest remaining order-two
+> case `U=2`, the divisor profile is uniquely `[6,2]`; after
+> `v=(x-a)^3(x-b)` and `T=u/(x-a)^2`,
+> `T^2=(x-b)/(x-a)` and `r7=j*T/(4(b-a))`.
+>
+> Producer/review SHAs are `1cd824c9...` / `db67f16d...`; the different-model
+> hostile verdict is `CONFIRMED`.  These are necessary terminal constraints,
+> not existence: lower Faber rows, loads, coefficient-infinity deformation,
+> Taylor realization, and all source/projective boundaries remain due.
+
+> **GENERAL FABER EXCEPTIONAL-SUPPORT THEOREM (2026-08-25 22:25Z).**  Let
+> `L` be a characteristic-zero field, let `f` be depressed monic of degree
+> `m>=2`, and put `g=F_n(f)`, `d=gcd(m,n)`, `a=m/d`, and `b=n/d`.  If the
+> first `m-1` ordinary unloaded Faber tails vanish, then
+>
+> `g^a=f^b`, and uniquely `f=K^a`, `g=K^b`
+>
+> for a depressed monic degree-`d` polynomial `K`; conversely this common-root
+> form makes every tail vanish.  Indeed the tail order gives
+> `deg(g^a-f^b)<=lcm(m,n)-m-n`, while Mason--Stothers after division by the
+> common gcd makes a nonzero difference satisfy the impossible inequality
+> `N-e<=N-e-1`.  UFD, monicity, and depression then give `K` over `L` itself.
+>
+> Consequently the radical of the first-`m-1` tail ideal is the prime
+> common-root locus `A^(d-1)`, with weighted projectivization
+> `P(2,3,...,d)` for `d>=2` and empty projectivization for `d=1`.  Thus the
+> `(9,12)` and `(8,12)` unloaded clients have reduced supports respectively
+> `f=K^3,g=K^4`, `K` cubic, and `f=K^2,g=K^3`, `K` quartic.
+>
+> Producer/same-model/different-model review SHAs are `7d5271e8...`,
+> `c95524a0...`, and `29bd2184...`; the hostile verdict is `CONFIRMED` with
+> no required repair.  This is a radical theorem for ordinary unloaded tails.
+> A Rees client must separately prove that its lower terms and loads vanish
+> with positive weight and that its exceptional rows are those tails.  It
+> says nothing about nilpotent thickness, lifting, rational sections, Taylor
+> realization, a passport, a counterexample, or JC2.
+
+> **D1 STRICT-SLOPE REES UNIT TEST — SOURCE REVIEW (2026-08-25 22:25Z).**
+> The frozen D1 compiler correctly forms, in the polynomial coefficient ring
+> `Q[q,rho,B,k,mu,nu]`, the eight homogenized rows after
+> `Lambda=q^3*rho`, saturates the interior ideal by `q*rho`, cuts
+> `q=rho=0`, and then saturates by the full projective irrelevant ideal.
+> Different-model hostile review SHA `d6e54b5b...` `CONFIRMED` producer/design
+> SHA `bdb369f...` and the frozen source closure, including the raw-versus-
+> shifted load convention, all weight identities, the isotrivial descent,
+> polynomial rather than rational load ring, product saturation, and the
+> common-cubic chart cover.
+>
+> For a later source-valid characteristic-zero global run, `H=(1)` excludes
+> every strict coefficient-infinity rational, formal, or Puiseux D1 arc with
+> nonzero projective leading coefficient and finite `(k,mu,nu)`; `H!=(1)`
+> gives only a finite-type projective-boundary survivor.  The two independent
+> AWS runs are still computing `K=I:(q*rho)^infinity`, so this entry records
+> the reviewed implication and compiler, not either endpoint.  A timeout,
+> smoke, nonunit chart, or still-running process licenses no D1 conclusion.
+
+> **D1 WEIGHTED-INFINITY REDUCED SUPPORT (2026-08-25 21:45Z).**  On the
+> finite-load exceptional fibre of the strict cyclic-D1 coefficient-pole
+> sector, the Rees weights send `k,mu,nu,r8` to zero and the descended rows,
+> on the étale `t=1` sheet and its cube-root orbit, are exactly the first
+> eight ordinary Faber tails of `f` and `g=F12(f)`.  Their vanishing gives
+> `g(z(w))=w^12+O(w^-9)` and hence
+> `deg_z(g^3-f^4)<=15`.  Dividing by `gcd(g^3,f^4)`, Mason--Stothers would
+> force `36-e<=35-e` unless `g^3=f^4`.  UFD and depression therefore give
+>
+> `f=(z^3+pz+r)^3`, `g=(z^3+pz+r)^4`.
+>
+> Thus the saturated exceptional ideal has reduced support exactly the
+> common-cubic cone, and its weighted projectivization is `P(2,3)`, including
+> both axes and the discriminant locus.  Rational pole equivariance reduces
+> the slope denominator to `1` generically, a divisor of `2` on `r=0`, and a
+> divisor of `3` on `p=0`; the numerator remains unbounded.
+>
+> Producer/same-model/different-model review SHAs are `de7dd223...`,
+> `a7bd6275...`, and `a274c8d8...`; the hostile verdict is `CONFIRMED` with
+> no missing hypothesis.  This classifies reduced order-zero support only.
+> It proves neither reducedness nor a formal lift, rational section, Taylor
+> realization, D1 exclusion, counterexample, or JC2.
+
+> **D1 BOUNDED-POLE DEGREE SPLIT (2026-08-25 21:30Z).**  Consider a
+> Taylor-realizable cyclic `D=e=1` order-three `(9,12)` pair in the reviewed
+> normalization
+> `s=x/(x-1)`, `t^3=s`, `u=t^2/(s-1)^2`, after the allowed polynomial source
+> shear makes the Taylor centre `R0` regular at `s=1`.  Put
+> `d_i=max(0,-v_(s-1)(A_i))`.  If
+>
+> `d_i <= 3(9-i)` for every `0<=i<=7`,
+>
+> then the sheared polynomial coordinates have exact ordinary total degrees
+> `(27,36)`.  The upper bounds follow coefficientwise from `v(u)=-2`, Taylor
+> membership in `L[x]`, and the exact Faber grading
+> `sum e_i(9-i)+6e_k+j=12`; the uncancellable top coefficients
+> `[y^9]P=h^3` and `[y^12]Q=h^4` give equality.  The GGV/Heitmann necessary
+> condition excludes a counterexample because `gcd(27,36)=9<16`.
+>
+> Producer/same-model/different-model review SHAs are `14240376...`,
+> `acadfdd2...`, and `423d0615...`; the hostile different-model verdict is
+> `CONFIRMED`.  Hence every live D1 counterexample client must satisfy the
+> strict complementary inequality `d_i>3(9-i)` for at least one `i`.  This
+> does not close that coefficient-infinity sector, certify a Stage-A section,
+> solve Taylor membership, cover another passport, or resolve JC2.
+
 > **WHOLE ORDER-THREE `(9,12)` TERMINAL BELYI CLASSIFICATION
 > (2026-08-25 20:13Z).**  For every actual characteristic-zero partial-`y`
 > `(9,12)` Keller trajectory on the nontrivial order-three Kummer branch,

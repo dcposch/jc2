@@ -425,7 +425,12 @@ campaign from paying twice for the same failed idea.
 - Third-party tools may mutate shared CLI configuration; adapters must isolate
   or sanitize it, and a new/updated adapter gets a smoke test before use.
 - Lane launchers take prompt files, reject duplicate live tags, record their
-  true exit status, and keep one task and deliverable path per tag.
+  true exit status, and keep one task and deliverable path per tag.  Every
+  model-review prompt names exactly one report path whose basename matches the
+  lane tag, explicitly instructs the reviewer to write that file and no other,
+  and is smoke-checked for that destination before launch.  Referee text left
+  only in adapter stdout is a failed-delivery draft, not promotion evidence;
+  preserve it and rerun through a fresh output-explicit prompt.
 - A campaign win requires a global proof or an explicit characteristic-zero
   counterexample at its honest evidence tier. Failure of selected formal
   families to algebraize, or closure within one book/chart/degree range, is

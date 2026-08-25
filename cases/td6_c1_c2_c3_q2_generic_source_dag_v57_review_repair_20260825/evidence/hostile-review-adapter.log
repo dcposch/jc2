@@ -1,0 +1,228 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll inspect the V57 case and xmodel write-up without modifying or executing anything, then audit the claimed A3 q2-beta scope against the stored artifacts.The review skill is for git diffs, so I’ll audit the V57 case and xmodel directly. Next I’ll read the artifacts and any prior hostile-review format.Prior hostile-review format and the V57 artifacts are next: stdout, DAG, ledger, source archive, and parent imports.The stored DAG is a hash header, not an edge list. I’ll inspect the archive source, parent SHA, V43 pins, and related producer cases without executing.I’ll use the V60 hostile-review format as the template, then read V57 producer source from the archive without extracting it.Next I’ll read the V57 producer and its parent import chain, which is where the algebraic claims actually live.The middle of `replay.py` was truncated; I’ll read it in sections so the N13 lift and glue algebra aren’t missing.I’ll trace `q_beta'`, the parent import chain, packing, and `factors_only_allowed` in the archived producers.# Hostile review: TD6 V57 generic source DAG
+
+Referee pass of the frozen V57 claim only. Operations: full read of the charged case and xmodel; `tar` listing and extract-to-stdout of the producer and parent chain; `cmp`/`diff` of dual-host artifacts; hand reconstruction of every ledger product. No producer execution, no `verify.py` run, no CAS, no byte-hash recomputation. Stored `PASS` strings are not authority.
+
+Claim surfaces: `xmodel/td6-c1-c2-c3-q2-generic-source-dag-v57-aws-20260825.md`, `cases/td6_c1_c2_c3_q2_generic_source_dag_v57_aws_20260825/`. Producer actually executed: archive path `.../td6_c1_c2_c3_q2_full_source_glue_dag_v57_20260825/replay.py` via `run_v57.sh`. Internal tarball directory is `td6-aws-handoff-20260825-v55v56/` (Finding 6).
+
+Import/hash pin chain actually executed, in order:
+
+1. V57 `replay.py` pins and imports `td6_c1_c2_c3_q2_full_p12_n13_unit_canonical_20260825/replay.py` (`PARENT_SHA256=3cc0fc3b…`) and scans pinned `V43_CANONICAL.stdout` (`a53cc30d…`). Parent `main()` is **not** called.
+2. That parent pins and imports `td6_c1_c2_c3_q2_n13_v34_20260825/replay.py` (`1743dc29…`). V34 `main()` is not called.
+3. V34 pins and imports `td6_c1_c2_c3_q2_beta_dual_20260825/replay.py` (`cf3f3f02…`). Dual defines `H = C - 3*U**2`.
+4. Dual pins and imports `c1_c2_c3_trivariate.py` (`1fb51264…`), then calls `tri.configure()`.
+5. Trivariate pins `td6_c1_c3_two_center_cover_20260824/replay.py` (`56df638a…`).
+6. That file imports `first_c1_c3_mpoly.py` **without** a hash pin. Pencil then pins `td6_jet_orbit_adjoint_20260824/replay.py` (`fb138b0f…`), which pins the q2 compiler `td6_boundary_q2_deformation_20260824/replay.py` (`0ba18447…`) and the moduli field `td6_moduli_uniform_third_band_20260824/replay.py` (`7a21f949…`). Pencil also loads `c1_rational_transport.py`, `fast_evec.py`, and `fast_efield.py` without SHA asserts.
+
+---
+
+## Finding 1 — Source typing, polynomial beta, retained `q_beta'`
+
+**Severity: holds (repair: banner timing).** Center is the generic chart `(C,V,U)`. No stronger center equation is imposed.
+
+- V57 sets `r.fb.CENTER = (Rat3(C), Rat3(V), Rat3(U))` and clears the X-power cache before transport. It does not take `h-zero`, `u-zero`, `b3-param`, or any other `center_coordinates()` branch. Default `STRATUM` is `generic` (`sys.argv[1:] == []`).
+- Dual defines `H = C - 3*U**2`. Trivariate defines
+  `B3 = 4 C^2 U^2 - 4 C V^2 U + 24 C U^4 + V^4 - 20 V^2 U^3 + 20 U^6`, matching the printed polynomial.
+- After transport, `n.configure_qd(direct_qprime=True)` installs
+  `qd.Q_PRIME = {0: 1, 1: BetaPoly([0, 2]), 24: 25}`
+  on the adjoint module, i.e. the coefficient list of `1 + 2 beta t + 25 t^24`. `first_band_polynomials` reads that module-level `Q_PRIME`. `compile_previous` / `compile_current` copy it onto the deformation module for the duration of `compile_x_*`.
+- `--omit-direct-qprime` is absent. V57 does **not** rerun V43’s omit-qprime matrix inequality, and it does not pin that V43 marker.
+
+The banners `q_beta=t+beta*t^2+t^25` and `q_beta_prime=1+2*beta*t+25*t^24` are printed at the top of `main()`, **before** `configure_qd`. They are not asserts. The live install is the `configure_qd(direct_qprime=True)` call.
+
+**Repair.** Move those two prints to after `configure_qd`. Optionally pin V43’s `direct_qprime_omission_negative_control=true` or rerun the omit inequality on the live first band.
+
+**Survival.** The producer is source-typed as the fixed A3 q2-beta section on independent `(C,V,U)` with the direct polynomial derivative retained in the compiler.
+
+---
+
+## Finding 2 — Unique current-row N13 dependency; original current → previous/pole → first edges; no linear-only packing
+
+**Severity: material on the advertised previous/pole key list; algebra of the unique current-row lift holds.**
+
+**What is algebraically checked (not a digest).**
+
+- Echelon first/previous/current still go through `qd.pack`, which asserts every nonzero monomial has length 1 (the V48 failure class). That packer is **not** applied to the replayed 132-variable originals.
+- First band is affine (`nr.affine_polynomial`); packing it is a format conversion.
+- `source_records` keeps `g.clean(polynomial)` at every degree, including zeros and degree 2. Raw previous = `compile_previous` + `compile_pole_previous` on the 132-variable bands (54 rows, 36 quadratic). Raw current = `compile_current` on those same 132-variable bands.
+- `divide_polynomial` replays `remainder + sum quotient * pivot == original` before returning.
+- `lift_previous_key` divides a **raw** 132-variable previous polynomial by first pivots and asserts `source_replay(relation, first_rows) == raw - embed(remainder94)`.
+- `lift_current_key` divides the raw current polynomial by first pivots, remaps, divides by previous/pole pivots, then rebuilds a composed first relation with scale `-1` on the nested previous-first product (the free-module correction `first_only - previous_rel * prev_first`). It asserts the composed replay against original first rows **and** raw previous/pole rows equals `raw_current - embed(remainder56)`.
+- Staged left-null: the unique weighted reduced current row equals `{(): -n13}`, with `n13 == (k/25) beta`.
+
+**Unique current-row N13.** `current_dependent` is filtered to `('X0', 13)` with nonzero rhs; `len(n13_records) == 1`. Frozen DAG: `current_row_index=13`, `current_row_key=('X0', 13)`, `N13_left_null_support=1`, `previous_nonzero_rows=1`, `composed_first_nonzero_rows=28`. `remainder56`, staged left-null, and `{(): -n13}` share digest `fd4415b2…`, so the reduced current row is already the scalar `-n13` with left-null weight 1.
+
+**The advertised previous-key list is the lift cache, not N13 support.**
+
+```text
+required_current = sorted(set(n13_weights) | {12})   # [12, 13]
+previous_rows_source_lifted_keys = sorted(previous_first_relations_by_key)
+# frozen: ('X-1', 0) … ('X-1', 12), ('X-1', 14)     # 14 keys, no P1
+quadratic_source_positive_control_key=('X-1', 0)
+```
+
+`('X-1', 0)` is forced **before** current lift as the first raw quadratic previous row. The other cache keys are whatever nonzero previous multipliers arise from lifting **both** P12 and N13. The DAG records **one** N13 previous original-row summand and does **not name its key**. No `P1` key appears in the cache, so N13’s unique previous original-row edge is an `X-1` row, not a pole original row. Pole rows sit in the previous/pole **echelon** (`previous_pole_v50_rank=38/94`) as packed pivots; they are not N13 original-row summands.
+
+`proof_rule=exact_edge_substitution_in_free_equation_module` is a proof-representation choice (V57 does not expand the giant 132-variable N13 source polynomial). Nested products of previous-first multipliers are intentionally not expanded beyond the `-1` correction above. That is not linear-only packing.
+
+**Repair.** Print `N13_previous_edge_keys=[…]` from the nonzero support of `previous_relation132`, distinct from the lift cache and from `quadratic_source_positive_control_key`. Do not describe that cache as N13’s previous/pole ancestry. If a pole original-row edge is claimed, it must appear as a nonzero `P1` multiplier.
+
+**Survival.** Arbitrary-degree original polynomials are the objects replayed. Row 13’s original-row DAG is: current `('X0', 13)` → exactly one `X-1` previous original row → original first rows. The 14-key previous list does not survive as N13 support.
+
+---
+
+## Finding 3 — Genuine P12 original-row replay and residual `-k/50`
+
+**Severity: holds for the live remainder/scalar identity and the 2,893-term compiler; material on the DAG flag that names a fully expanded `P12 - M*N13`.**
+
+P12 is `compile_current(...)[12]` on the 132-variable bands, looked up as `raw_current_rows[('X0', 12)]` via `source_records`, not the packed later-echelon `X0,t12` row. Live checks:
+
+- `len(projection(p12_raw, 0)) == 2893` and digest `8d5c3550…`, matching pinned V43 `raw_P12_base_sha256`.
+- `lift_current` of that raw polynomial (so P12 **does** get an original-row replay through first and previous, with the composed remainder56 identity).
+- The **glue** uses `p12_remainder94` (after first pivots, before previous): `projection(remainder94, 0) == {(): -k/50}`.
+- `tail = beta_tail(remainder94, -k/50)`, remapped to 132 variables; digest `0639f8cd…` matches V43 `remainder_beta_tail_sha256`.
+- `n13 == (k/25) beta` and `k * k.inverse() == E3(1)`.
+- `M := (25/k) * tail`; `M * n13 == tail * beta`.
+
+Let `R` be that first-pivot remainder. Then `R = -k/50 + beta * tail`, so `R - M * n13 = -k/50`. Sign of the residual is the written `-k/50`. The last multiplier identity is automatic from `n13 = (k/25) beta` and the definition of `M`. Nontrivial live algebra is the 2,893-term compiler, the first-remainder projection, and the invertibility of `k`.
+
+**V43 first-only identity is pinned, not re-expanded.** Parent `main()` proves `first_source + M*N13 = P12 - (-k/50)` against original first rows (28 nonzero rows, 1,648 multiplier terms, 39,583 termwise slots). V57 scans six V43 stdout markers, including `full_beta_first_original_row_replay=true` and `P12_N13_polynomial_unit_identity_exact=true`. DAG line `P12_source_edge=V43_CANONICAL.stdout` is accurate. DAG line `P12_minus_multiplier_times_N13_equals_minus_k_over_50=true` names the **full** polynomial identity; the live V57 assert is the remainder identity.
+
+**Typing of `k`.**
+
+```text
+S = E3(qd.uniform.S_FIELD)
+k = E3(252) - 342*S + 144*S**2 - 36*S**3
+```
+
+`S_FIELD` generates the moduli field inside `E`. `k` is an `E`-constant in the `(C,V,U)` chart, not a polynomial in `C,V,U`. Inversion is in `E`; `50` is inverted in `Q`. `N13_multiplier_denominator=(1)` on V43, and V57’s `P12_unit`/`N13_scalar` land on ledger key `1`, so `k` contributes no extra `(C,V,U)` leaf factor. V57 does not print `e3_rat3_coordinates(k)`.
+
+**Repair.** Rename the DAG flag to `P12_first_remainder_minus_M_n13_equals_minus_k_over_50=true`. Print `k_is_residue_field_unit=true`. If the full V43 identity is charged to V57, re-assert `exact_first_source_replay` on the live P12 object rather than only scanning stdout.
+
+**Survival.** Residual `-k/50` is the exact beta-degree-0 first remainder of genuine 2,893-term P12. `k` is typed nonzero in `E`. The live V57 glue is scalar on that remainder plus staged `n13`. The original-row P12/N13 syzygy remains a V43 pin.
+
+---
+
+## Finding 4 — Required-edge omission and P12-without-N13
+
+**Severity: material on the advertised “required edge”; both controls are exact against weaker statements.**
+
+**One-required-edge omission.** `omitted_index = min(n13_weights)`. Support size 1 ⇒ row 13. The control is `staged_without_one != {(): -n13}`. With singleton support that is `{} != {(): -n13}`, i.e. `n13 ≠ 0`. It does **not** drop the unique previous original-row multiplier or a first-row edge and re-test. `omitted_row_index=13` in the DAG records that fact.
+
+**P12 without N13.** `M * 0 != tail * beta`, i.e. `tail ≠ 0`. Together with `R = -k/50 + beta*tail` this says first rows alone do not produce `P12` with residual `-k/50`. V43’s parent has the stronger in-memory test `first_source_identity != P12 - (-k/50)`. V57 does not re-assert that object inequality.
+
+Neither control tests omission of the unique `X-1` previous edge.
+
+**Repair.** Rename to `N13_singleton_current_row_omission_negative_control=true`. If a previous-edge control is wanted, drop the unique nonzero `previous_relation132` slot and assert the composed replay fails. Re-assert V43’s `first_source != P12 + k/50` on the live P12 objects.
+
+**Survival.** Both controls hit real identities (`n13 ≠ 0`, `tail ≠ 0`). They do not certify a two-edge previous/first omission.
+
+---
+
+## Finding 5 — Eleven denominator-ledger entries; radical `{U, H, B3}`
+
+**Severity: holds for the printed leaf-coefficient ledger.** Independent irreducibility of `B3` over `Q` was not re-proved (no CAS). Termwise products for the N13 path are not expanded (`factored_clear_scalar_expansion_required=false`).
+
+Header plus 11 data rows; stdout `DAG_leaf_denominator_count=11`. Gate is `b.factors_only_allowed`, which returns true iff Flint `factor()` emits only `U`, `H=C-3U^2`, and `B3`. Hand expansion of every claimed product:
+
+| denominator | claimed factors | reconstructs? |
+|---|---|---|
+| `1` | `[]` | yes (unit) |
+| `C-3U^2` | `H` | yes |
+| `CU-3U^3` | `U H` | yes |
+| `C^2-6CU^2+9U^4` | `H^2` | yes |
+| line 5 (9 terms) | `(1/4) H B3` | yes |
+| line 6 | `(1/4) U H B3` | yes (= line 5 × `U`) |
+| line 7 | `(1/4) H B3 U^2` | yes (= line 5 × `U^2`) |
+| line 8 (11 terms) | `(1/4) B3 H^2` | yes |
+| line 9 | `(1/4) U B3 H^2` | yes (= line 8 × `U`) |
+| line 10 | `(1/4) U^2 B3 H^2` | yes (= line 8 × `U^2`) |
+| `U` | `U` | yes |
+
+No extra prime appears. Units `1/4` are in `Q`. Multiplicity is leaf-occurrence count, not algebraic multiplicity of a prime. First labels are N13 weights / first multipliers / previous rows, plus later `N13_scalar`, `P12_unit`, `P12_beta_tail`, `N13_multiplier`.
+
+**Not in the 11 lines.** P12’s own first-row multipliers (V43 `first_relations_denominator` is line 10’s polynomial, but V43’s **termwise** `(1/4) U B3 H^3` is only a DAG string `v43_termwise_denominator=(1/4)*U*B3*H^3`, copied from V43 stdout, not fed through V57’s ledger). Transport’s two events are not ledgered. Leafwise radical still cannot grow under products/sums; extra **powers** of `H` can (V43 termwise `H^3` vs V57 leaf max `H^2`).
+
+The banner `DAG_leaf_denominator_radical_subset_U_H_B3=true` is printed after the ledger is built; the actual assert is inside `allowed_leaf_denominator_ledger`. Flint emitted `B3` as a single factor. `B3` is not an obvious `(2CU-V^2+p U^3)(2CU-V^2+q U^3)` over `Q` (`p+q` cannot be both 12 and 20).
+
+**Repair.** State that the radical is the **leaf-coefficient** radical of the N13 DAG plus P12 tail/unit/multiplier, not a termwise LCM of every N13 edge, and that V43 termwise `H^3` is a parent pin. Optional: emit that LCM as one extra line.
+
+**Survival.** The 11-line ledger is internally exact as printed. The open it supports is leaf support on the post-transport generic chart.
+
+---
+
+## Finding 6 — Dual-host equality, archive/manifest custody, uncharged imports
+
+**Severity: repair / nit. No uncharged mathematical parent that V57 actually calls for a different theorem.**
+
+**Holds.**
+
+- Proof DAG and denominator ledger are byte-identical across r6d and Box03 (`cmp` exit 0). Both match the hashes printed in xmodel/README/`verify.py`/`MANIFEST.sha256`.
+- Stdout differs only in the two absolute artifact paths (`td6_v57_dag_r6d_20260825T1048Z` vs `..._box03_20260825T1108Z`). Rank/digest/marker lines agree.
+- Both `rc` files are `0\n`. Stderr `Exit status: 0`. RSS `1050484` / `1051132` KiB match README. Box03 `start_utc`/`end_utc` match README. `run_v57.sh` is `PYTHONHASHSEED=0` plus the pinned producer.
+- Immediate parent `3cc0fc3b…` and V43 stdout `a53cc30d…` are the same objects frozen in the generic-open V43 case. First-pivot digest `f6eeaf7a…` and P12 tail/multiplier digests match V43.
+- `V57_SOURCE.sha256` pins the producer, parent, V43 stdout, V34, dual, trivariate, compiler, and moduli files that the chain actually loads.
+
+**Uncharged import-time SHA.** `two_center_cover/replay.py` `exec_module`s `first_c1_c3_mpoly.py` with no hash pin. Pencil loads `c1_rational_transport.py`, `fast_evec.py`, `fast_efield.py` with `expected=None`. Those four files **are** listed in `V57_SOURCE.sha256`. Dual `tri.configure()` at import sets field/pivot flags; it does not change V57’s later `CENTER = (C,V,U)` assignment.
+
+**Packaging nits.**
+
+- Tarball member prefix is `td6-aws-handoff-20260825-v55v56/`, while the frozen file is `td6-aws-handoff-20260825-v57.tar.gz`. Extra V55/V56 shard files and `run_v55.sh`/`run_v56.sh` sit in the tar and are **absent** from `V57_SOURCE.sha256`. V57 does not import them.
+- `__pycache__/replay.cpython-314.pyc` is in the tar, unlisted. AWS venv is the campaign 3.12 interpreter; that pyc would not be loaded.
+- r6d `start_utc` is `2026-08-25T10:54:37Z`; README says `10:54:38Z` (one second). End time matches.
+- Host IPs `100.26.198.153` / `98.80.65.144` do not appear in stdout/stderr.
+- `verify.py` is custody: hashes, `rc`, and `assert marker in out`. It never imports `replay.py`, never reconstructs a ledger product, and never checks `q_beta_prime`, `k * k.inverse()`, or `previous_nonzero_rows=1`.
+
+**Repair.** Name the archive tree `...-v57/`. Either hash-pin `first_c1_c3_mpoly.py` (and the three pencil helpers) at import, or document that `V57_SOURCE.sha256` is the pin. Drop the 3.14 pyc and the unused V55/V56 members from a V57-only archive. Fix the one-second start-time drift. Do not cite `verify.py` PASS as algebra.
+
+**Survival.** Dual-host DAG/ledger equality and the parent SHA chain hold as frozen bytes. Independent byte-level hashing was not recomputed in this session.
+
+---
+
+## Finding 7 — Refusal of divisor / whole-A3 / transverse-modulus / TD6 / SP-2 / landing / JC2
+
+**Severity: holds on the charged surfaces.**
+
+xmodel, README, producer terminal lines, and `verify.py` all keep:
+
+- `raw_U_H_B3_strata_still_separate=true` / `raw_divisor_cover_complete=false`
+- `full_A3_beta_family_killed=false`
+- `whole_TD6_killed=false`
+- `SP2_killed=false`
+- `JC2_resolved=false`
+
+Unused previous/current rows are explicitly not audited (`full_unused_previous_current_row_audit_complete=false`; V55/V56 named as an independent cross-check). No transverse-modulus, landing, or second-chart glue is proved. The printed `two_chart_glue_required_form=a*d1+b*d2=(U*H*B3)^N` is a banner with no computation; it must not be read as a two-chart certificate.
+
+`generic_open_localization_repaired=true` and `composed_localized_source_identity_exact=true` are post-ledger banners. The supported statement is the dependency-closed DAG plus V43 pin on `D(U H B3)`, not a divisor cover.
+
+---
+
+## Strongest exact claim
+
+On the **fixed source-typed A3 q2-beta section** with center `(C,V,U)`, `q_beta = t + beta t^2 + t^{25}`, and live compiler derivative `q_beta' = 1 + 2 beta t + 25 t^{24}`, after transport to 132 free variables:
+
+1. Current row `('X0', 13)` is the unique N13 left-null support. Its staged value is `N13 = (k/25) beta`, with `k = 252 - 342 S + 144 S^2 - 36 S^3` a unit of the campaign residue field `E` (`k * k^{-1} = 1`).
+2. The raw 132-variable current polynomial of that row reduces, by exact sparse division and original-row replay, through original first rows and **exactly one** original previous `X-1` row, to the scalar `-N13`. Pole original rows are not N13 summands. Quadratic source rows are retained; the linear packer is used only on reduced echelon / affine first-band rows.
+3. Genuine `compile_current[12]` is the 2,893-term polynomial with V43 base digest `8d5c3550…`. Its first-pivot remainder has beta-degree-0 part `-k/50`. The scalar `M = (25/k) tail` satisfies `R - M * N13 = -k/50`. The full original-row identity `first_source + M N13 = P12 + k/50` is the pinned V43 certificate, not a live V57 expansion.
+4. Every V57 leaf-coefficient denominator factors through `U`, `H = C-3U^2`, and the printed `B3`. V43’s termwise clear `(1/4) U B3 H^3` is a parent pin with the same radical.
+
+This is an exact localized source identity on **`D(U H B3)` inside that fixed section**. It does not kill `U=0`, `H=0`, or `B3=0`; it is not a whole-A3, transverse-modulus, TD6, SP-2, landing, or JC2 theorem.
+
+---
+
+## Repairs
+
+1. Emit `N13_previous_edge_keys` from the unique nonzero previous original-row slot; stop treating the 14-key lift cache as N13 ancestry.
+2. Rename the singleton omission and the DAG `P12_minus_multiplier_times_N13_…` flag to match the identities actually asserted.
+3. Move `q_beta` / `q_beta'` prints after `configure_qd`; print `k_is_residue_field_unit=true`.
+4. Hash-pin `first_c1_c3_mpoly.py` (and the three unpinned pencil helpers) at import, or state that `V57_SOURCE.sha256` is the pin.
+5. Rename the archive tree to `...-v57/`; drop unused V55/V56 members and the 3.14 pyc; fix the one-second r6d start-time.
+6. Label the ledger as leaf-coefficient radical; keep V43 termwise `H^3` as a parent pin.
+7. Delete or compute `two_chart_glue_required_form=…`.
+
+None of these repairs changes the center, the compiler, the unique current row, the 2,893-term P12 object, the residual `-k/50`, or the `{U,H,B3}` radical.
+
+---
+
+CONFIRMED_WITH_REPAIRS
+adapter exited 0 but required report is absent: xmodel/td6_v57_generic_hostile_review_20260825.md

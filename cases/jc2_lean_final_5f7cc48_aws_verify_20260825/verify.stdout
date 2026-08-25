@@ -1,0 +1,275 @@
+started_utc=2026-08-25T23:22:34Z
+host=ip-172-30-0-45
+uname=Linux ip-172-30-0-45 6.17.0-1019-aws #19~24.04.1-Ubuntu SMP Tue Jun 23 18:53:06 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+lake=/usr/bin/lake
+lake_jobs=8
+project=gcd3-69-noncube
+Lake version 5.0.0-src+3447a66 (Lean version 4.34.0-rc1)
+cdbc6c372a2b37ad94430a6cec69cedfa4d36f255bfd968773fd91bf7a1746bf  lean-toolchain
+32bfb16aad8e378b1f6620501cf24bdf9923816161e81613b6195a2c3479bccb  lakefile.toml
+fda62272af472b7b81567febedf50cb391eec4dc8acb19271be3c902dbc2522d  lake-manifest.json
+a3ec681d6a55801e53e52210e54496f66271f5e4549d68060afbb8d71a592fb3  Challenge.lean
+1ea6119982f5bc7c43ac1c3dbc358d2ef99fab2873acec34813b7293079a3d2b  Solution.lean
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+Decompressing 8537 already-cached file(s) (192 already decompressed)
+No files to download
+Decompressed 8537 already-cached file(s)
+Completed successfully in 12120 ms!
+⚠ [8745/8748] Built Challenge (5.5s)
+warning: Challenge.lean:41:8: declaration uses `sorry`
+⚠ [8747/8748] Built Solution (42s)
+warning: Solution.lean:82:13: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Solution.lean:88:28: This simp argument is unused:
+  Derivation.leibniz_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_range_succ, C_mul, C_pow, coeff_C, coeff_C_mul, coeff_mul_C, coeff_mul_X_pow', coeff_X,
+    coeff_X_pow, hkappa, div_eq_mul_inv, Derivation.leibniz, Derivation.leibniz_inv, hOfNat] at h4
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:90:8: This simp argument is unused:
+  hOfNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at h4
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:140:13: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Solution.lean:146:28: This simp argument is unused:
+  Derivation.leibniz_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_range_succ, C_mul, C_pow, coeff_C, coeff_C_mul, coeff_mul_C, coeff_mul_X_pow', coeff_X,
+    coeff_X_pow, hkappa, div_eq_mul_inv, Derivation.leibniz, Derivation.leibniz_inv, hOfNat] at h3
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:148:8: This simp argument is unused:
+  hOfNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at h3
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:205:13: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Solution.lean:211:28: This simp argument is unused:
+  Derivation.leibniz_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_range_succ, C_mul, C_pow, coeff_C, coeff_C_mul, coeff_mul_C, coeff_mul_X_pow', coeff_X,
+    coeff_X_pow, hkappa, div_eq_mul_inv, Derivation.leibniz, Derivation.leibniz_inv, hOfNat] at h2
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:213:8: This simp argument is unused:
+  hOfNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at h2
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:266:13: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Solution.lean:272:28: This simp argument is unused:
+  Derivation.leibniz_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_range_succ, C_mul, C_pow, coeff_C, coeff_C_mul, coeff_mul_C, coeff_mul_X_pow', coeff_X,
+    coeff_X_pow, hkappa, div_eq_mul_inv, Derivation.leibniz, Derivation.leibniz_inv, hOfNat] at h1
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:274:8: This simp argument is unused:
+  hOfNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at h1
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1117:29: This simp argument is unused:
+  C_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul, C_add, C_pow, C_ofNat, C_eq_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1117:52: This simp argument is unused:
+  C_eq_natCast
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul, C_add, C_sub, C_pow, C_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1119:29: This simp argument is unused:
+  C_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul, C_add, C_pow, C_ofNat, C_eq_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1119:52: This simp argument is unused:
+  C_eq_natCast
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [C_mul, C_add, C_sub, C_pow, C_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1751:25: This simp argument is unused:
+  C_0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_zero, C_mul, C_add, C_sub, C_pow, C_ofNat, C_eq_natCast, zero_mul, mul_zero, add_zero,
+    zero_add, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1751:37: This simp argument is unused:
+  C_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_zero, C_0, C_mul, C_sub, C_pow, C_ofNat, C_eq_natCast, zero_mul, mul_zero, add_zero, zero_add,
+    sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1751:67: This simp argument is unused:
+  C_eq_natCast
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_zero, C_0, C_mul, C_add, C_sub, C_pow, C_ofNat, zero_mul, mul_zero, add_zero, zero_add,
+    sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1752:36: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_zero, C_0, C_mul, C_add, C_sub, C_pow, C_ofNat, C_eq_natCast, zero_mul, mul_zero, add_zero,
+    sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1752:56: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Solution.lean:1752:65: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Solution.lean:1784:4: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Derivation.leibniz, Derivation.leibniz_pow, hOfNat, add_zero, nsmul_eq_mul] at hbeta
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:1784:14: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Derivation.leibniz, Derivation.leibniz_pow, hOfNat, zero_mul, nsmul_eq_mul] at hbeta
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Solution.lean:2046:29: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Solution.lean:2246:5: Variable name `hB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Solution.lean:2298:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Solution.lean:2548:0: 'GCD369InvariantFibreDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2549:0: 'GCD369AlignedKellerFibreDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2550:0: 'GCD369ZeroBracketSheet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2551:0: 'GCD369EllipticSheetEquation' depends on axioms: [propext, Quot.sound]
+info: Solution.lean:2552:0: 'GCD369EllipticTerminalForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2553:0: 'GCD369ForbiddenNumerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2554:0: 'GCD369EllipticNonzeroExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2555:0: 'GCD369SpecialFibreDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2556:0: 'GCD369ShiftedDSBracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2557:0: 'GCD369ShiftedDSTerminalDescent' depends on axioms: [propext, Quot.sound]
+info: Solution.lean:2558:0: 'GCD369WeightedWronskianLocal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2559:0: 'GCD369ShiftedDSFinitePlace' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2560:0: 'GCD369WeightedWronskianDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2561:0: 'GCD369ShiftedDSPolynomialCube' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2562:0: 'GCD369ShiftedDSNumeratorConstant' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2563:0: 'GCD369ShiftedDSRationalCube' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2564:0: 'GCD369ShiftedDSNoncubeExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2565:0: 'GCD369AlignedNoncubeExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:2566:0: 'GCD369DSInfinitySupport' depends on axioms: [propext, Quot.sound]
+info: Solution.lean:2567:0: 'GCD369DSOneRootCube' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8748 jobs).
+'GCD369AlignedKellerRow4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369AlignedKellerRow3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369AlignedKellerRow2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369AlignedKellerRow1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369PolynomialEvalDerivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369RationalPresentationNonconstant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369LowerBracketIdentity' depends on axioms: [propext, Quot.sound]
+'GCD369LowerFirstIntegrals' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369KummerInvariantWeights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369InvariantFibreDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369KummerInvariantLanding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369KummerFibreDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369AlignedKellerFibreDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ZeroBracketSheet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369HighRowZeroSheet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ZeroSheetTerminalExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369EllipticTerminalRow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369EllipticSheetEquation' depends on axioms: [propext, Quot.sound]
+'GCD369EllipticTerminalForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369EllipticCubedTerminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ForbiddenNumerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369EllipticNonzeroExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369EllipticNonzeroExclusionAutoRoot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369EllipticClearedNonzeroExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369EllipticRationalPresentationExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369EllipticConstantExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369EllipticConstantTerminalExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369SpecialFibreDichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369EllipticZeroXToZeroSheet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369EllipticShiftedDSParameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369HighRowShiftedDS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSTerminalRow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSBracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSTerminalDescent' depends on axioms: [propext, Quot.sound]
+'GCD369WeightedWronskianLocal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSFinitePlace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369WeightedWronskianDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSPolynomialCube' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSNumeratorConstant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSRationalCube' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSNoncubeExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369ShiftedDSRationalPresentationExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369AlignedNoncubeExclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GCD369DSInfinitySupport' depends on axioms: [propext, Quot.sound]
+'GCD369DSOneRootCube' depends on axioms: [propext, Classical.choice, Quot.sound]
+OK: all 45 gcd3-69-noncube theorems use only permitted axioms.
+project=max11-partial-y
+Lake version 5.0.0-src+3447a66 (Lean version 4.34.0-rc1)
+cdbc6c372a2b37ad94430a6cec69cedfa4d36f255bfd968773fd91bf7a1746bf  lean-toolchain
+32a97eb29cc90813ddec3b962a8f13df20d479805b4a6d78dc2ad6acb86ddb0f  lakefile.toml
+2f2133d6fd2ad36897cd37ff67d3ffcd2824aea94785bc42bbc5e2a2c56f224f  lake-manifest.json
+f423d65549a591a1ad2d09d159b3848027c847535910501145bb6a0aacf718c2  Challenge.lean
+e2c5220842727f46c3c0d26dfe6b23b2b3399a9db765eac784e26fb7db4eff43  Solution.lean
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+Decompressing 8537 already-cached file(s) (192 already decompressed)
+No files to download
+Decompressed 8537 already-cached file(s)
+Completed successfully in 12303 ms!
+⚠ [8745/8748] Built Challenge (4.6s)
+warning: Challenge.lean:17:8: declaration uses `sorry`
+warning: Challenge.lean:23:8: declaration uses `sorry`
+warning: Challenge.lean:31:8: declaration uses `sorry`
+warning: Challenge.lean:43:8: declaration uses `sorry`
+ℹ [8747/8748] Built Solution (5.1s)
+info: Solution.lean:85:0: 'Max11RouteClassification' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:86:0: 'Max11UniquePrimitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:87:0: 'MaxPartialDegreeElevenClosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:88:0: 'Max12FirstPrimitives' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8748 jobs).
+'Max11RouteClassification' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Max11UniquePrimitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Max12FirstPrimitives' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MaxPartialDegreeElevenClosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+OK: all 4 max11-partial-y theorems use only permitted axioms.
+finished_utc=2026-08-25T23:27:58Z
+VERDICT=PASS

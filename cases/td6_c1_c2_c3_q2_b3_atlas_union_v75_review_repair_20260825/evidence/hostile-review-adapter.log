@@ -1,0 +1,1023 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll inspect the frozen V75 atlas, the V73 package, and any hostile review as an algebraic referee—read-only, no execution. First I'll locate those surfaces and their load-bearing dependencies.The review skill is for code diffs; this charge is a frozen algebraic referee job. Next I’ll inventory the V75 atlas, the xmodel, and the V73 package.I found the V75 freeze, the V73 case, and a review prompt. Next I’ll read those plus prior hostile reviews without replaying anything.I’ll pull the V75/V74 sources, V73 review status, and prior leaf reviews in parallel so the union can be checked against each claimed leaf.V73’s review is still pending on the producer surface. I’ll read the V74/V75 sources and stdout next, then check whether each named leaf is actually reviewed.The B3 identities look internally consistent; the live risks are V73’s unreviewed status, V66’s denominator set, and whether the case tree actually covers `C=0`. I’ll inspect those next.I'll inspect the V73 package,I'll start V74 consumption, hashes, by and mapping algebraic the freeze, V74 claims without/V75 evidence running producer or, and the V replay code.70/V46 xmodel reviews so the audit can compare claims against custody.I'll start by reading V75's claim and the V66–V74 producer/review files so the decision-tree audit is pinned to actual theorems, not summaries.The package trees are in place; next I’ll read V73 review status, claimed theorem markers, and V74 consumption codeNext I’ll. pin V75’s case-tree gate and the producer/review files that define the claimed leaves.Next I’ll read the freeze README, manifests, SOURCE pins, and the V70/V46 reviews so claims can be checked against hashes.I’ll now pull the V66–V68 producers/reviews and V75’s bundled stdout so the chart coordinates and exact theorems are pinned.I’ll now pull the V70/V46 reviews, V75 producer note, and producer stdout so the theorem statements can be compared line-by-line.I’ll keep going through the remaining review verdicts and V70/V46/V74 so the leaf list can be checked against actual theorems.V66’s `(C,V)` are chart coordinates `(t,w)`, so the raw `C=0` hole I was worrying about is not a V66 gap. Next I’ll check the reviews, stdout, and V73 source against that tree.Review.md is missing so far; I’ll read producer claims, the V73 log, and V74’s consumption of those artifacts.V73’s review log exists but the required report file is missing; I’ll hash artifacts and inspect how V74 consumes them.I have the reviews; next I’ll read V74/V75 stdout and replay gates, then hunt failed runs and the V46 xmodel files.Hashes and theorem-line diffs are next, along with V33/V45/N13 shortcuts and V74’s “source-repaired” claim.V73 is still unreviewed and is the load-bearing D(U) branch of V74. I’ll inspect that source and the V70/V46 scopes next, rather than taking V74’s markers as proof.I’ll hash-compare V73 vs V74 copies, dual-host sources, and check whether V74 pins V73 replay source.V70’s “whole U=0” may be a union with V33, so I’ll pin that cover and the V46/V74 leaves next.V73 rebuilds the raw center, but it still takes `U_CURVE` from the `b3half` adapter. I need to check whether that `U` is the line coordinate or the finite-factor chart parameter.# Adversarial audit: V70/V46 as consumed by V74/V75
+
+Freeze: `/Users/dc/code/math/jc2/cases/td6_c1_c2_c3_q2_b3_atlas_union_repaired_v75_aws_20260825/`  
+Producer note: `/Users/dc/code/math/jc2/xmodel/td6-c1-c2-c3-q2-b3-atlas-union-repaired-v75-aws-20260825.md`  
+`FREEZE.sha256`: `9e0dcee2…` → `MANIFEST.sha256`; `1a385e44…` → the xmodel note.  
+Status on the freeze: dual-AWS producer-exact; hostile review pending. Producers were not executed.
+
+---
+
+## 1. V70: origin piece vs whole raw `U=0`
+
+**Confirmed V70 theorem is a two-leaf producer plus a three-piece cover.**
+
+Producer (hostile-reviewed `CONFIRMED`) actually ran two strata only:
+
+| leaf | locus | complete chart | stdout SHA-256 |
+|---|---|---|---|
+| `u-h-zero` | `C=U=0 ∩ D(V)` | `V^3` | `2431ed0217d8d71dce2929a8581036d0e11921396dff661466288901243f4ebd` |
+| `origin` | `C=V=U=0` | `1` | `90df496c59c8283c85cec26521a2b422d6ca8d658aa0e8802c968052cd505d67` |
+
+It is **not** whole `H=0`. Dual’s `H=C-3U^2` makes the first leaf the same set as `H=U=0` on `D(V)`, but the open `C=3U^2`, `U≠0` is outside V70.
+
+Whole raw `U=0` is **not** a single V70 producer identity. The review’s Charge 6 cover is:
+
+```text
+V(U) = [V(U) ∩ D(C)] ∪ [V(C,U) ∩ D(V)] ∪ V(C,V,U)
+```
+
+- `U=0 ∩ D(C)` = erratum-corrected **V33** (`CONFIRMED_WITH_REPAIRS`), chart `C^3`
+- `C=U=0 ∩ D(V)` = V70 `u-h-zero`
+- origin = V70 origin
+
+Quote, xmodel V70 review Charge 6:
+
+> V70 therefore restores a whole raw-`U=0` theorem here, and nothing stronger.
+
+Survival sentence that V75 token-matches:
+
+> Whole raw `U=0` in this fixed q2-beta section
+
+**V74 uses the origin piece only.** That is the right special case for the line `V=0,C=-5U^2`: `U=0` forces `C=V=U=0`. Source and stdout:
+
+```text
+line_closed_endpoint_U_zero_source_theorem=reviewed_V70_origin
+line_U_zero_substitution_is_origin=true
+line_cover=D(U)_union_V(U)
+```
+
+`replay_v74.py` loads `evidence/v70/origin.stdout` and requires `source_center=C=V=U=0`, `raw_center_stratum=origin`, `v70_transport_complete_certificate_denominator=(1)`, `v70_transport_whole_raw_stratum_empty=true`. It does **not** require the phrase `Whole raw U=0`.
+
+**V75 claims the stronger whole-`U=0` cover from the same review, without the producer leaves.** Prereg / README / case tree:
+
+```text
+"U=0": "V70-whole-U-zero"
+```
+
+Stdout: `V70_whole_U_zero_source_theorem_reviewed=true`.  
+`evidence_gate` never opens a V70 stdout. It only does:
+
+```python
+assert v70_review.rstrip().endswith("CONFIRMED")
+require(v70_review, ("Whole raw `U=0`", "fixed source-typed A3 q2-beta section"))
+```
+
+That is a real scope split, not a wording nit. V74’s origin use is a licit special case of the reviewed origin leaf. V75’s `U=0` leaf is the three-piece union, which load-bears **V33** as well as V70 `u-h-zero`. Neither V33 nor `u-h-zero.stdout` is in the V75 closure.
+
+Why that matters for `B3=0`: `B3|_{U=0}=V^4`, so `B3=0 ∩ {U=0}` is the C-axis `{U=V=0, C free}`. Origin is only the point `C=0`. The rest of that axis sits in V33’s `U=0 ∩ D(C)`, not in V70 origin and not in `u-h-zero`.
+
+---
+
+## 2. V75 bundles V70 review.md only — no producer stdout
+
+V75 `SOURCE.sha256` (both hosts) pins exactly:
+
+```text
+2a3520866a537a80d17d2f66c2433ba7fcf895606027d755993a1c95402853f6  evidence/v70/review.md
+```
+
+There is no `evidence/v70/origin.stdout` and no `u-h-zero.stdout` under V75. V74 *does* pin origin stdout (`90df496c…`) plus the same review. V75 then consumes host-local `evidence/v74/v74.stdout`, which is only an origin-scoped union, not a whole-`U=0` certificate.
+
+**Custody hole.** The printed line `V70_whole_U_zero_source_theorem_reviewed=true` is not producer-backed inside V75. It is a review-token.
+
+The freeze copy of the review is the real xmodel review: `xmodel/td6-c1-c2-c3-q2-beta-u-h-zero-v70-review-grok-20260825.run` records `report_sha256=2a3520866a537a80d17d2f66c2433ba7fcf895606027d755993a1c95402853f6`. File text matches `/Users/dc/code/math/jc2/xmodel/td6-c1-c2-c3-q2-beta-u-h-zero-v70-review-grok-20260825.md` and ends `CONFIRMED`.
+
+---
+
+## 3. V46: locus, repairs, erratum, N13, V33/V45
+
+**Producer / review files found**
+
+| role | path |
+|---|---|
+| Producer report (stale freeze-time prose) | `xmodel/td6-c1-c2-c3-q2-beta-rational-raw-lines-aws-20260825.md` |
+| Hostile review | `xmodel/td6-c1-c2-c3-q2-beta-rational-raw-lines-review-grok-20260825.md` |
+| Prompt | `xmodel/td6-c1-c2-c3-q2-beta-rational-raw-lines-review-grok-20260825-prompt.md` |
+| Dependency erratum | `xmodel/td6-c1-c2-c3-q2-beta-rational-raw-lines-dependency-erratum-20260825.md` |
+| Freeze | `cases/td6_c1_c2_c3_q2_beta_rational_raw_lines_aws_20260825/` |
+| Executed leaf | `td6_c1_c2_c3_q2_cplus1_first_incompatibility_canonical_20260825/replay.py` (`9b1670abf55a20f26f02abcc593083ce07dd2b1e4afa0571ac8b9a0f890203c7`) |
+
+**Exact locus.** `--stratum=v-cplus1-zero` only: `V=0, C=-U^2` over `Q(U)`, i.e. `D(U)`. Bundled stdout SHA-256 `01fa0f2ef212#f Ad1280f7b1versarial report: V73 packagecc4530da867df331b0892053c and V74 consumption
+
+Inspection44 only.f No3 producered, `verify.pyf89e1`, or replay wasbbf6706` matches the original executed. Listed rational SHA--256lines values MANIFEST.
+
+ are takenTheorem from the frozen manifests lines from bundled and cross `v46.-checked bystdout`:
+
+``` full-file readstext
+source_ wherecenter=V= the files are shortC+U^. Stored2=0 over `PASS` strings Q(U)
+ are not treatedraw as proofs_center_str.
+
+---
+
+##atum=v- 1. Completedcplus1- V73 hostile reviewzero
+scope_?
+
+**No completedopen=fraction_ Vfield_of_73 hostileprinted_raw_ review exists.**stratum
+first
+
+|_full_beta Surface_P12_ | Statusrank=37/ |
+|---|---|132
+first_
+| Exactfull_beta_ producer status | `P12_inxcompatibilitymodel[/0]_td6key=('X--c1-2', 12c2-c)
+first_full3-q2_beta_P-cminus512_in-previous-xcompatibility[0]_11-v73source_row_-aws-202count=13
+60825.md`first_full_beta_P12 line 3: **`_compatibility_certificatedual-AWS producer_denominator=(U-exact; hostile^6)
+first review pending.`** |
+_full|_ Packagebeta README_P12_ | `cases/only_U_td6_cexception=true
+1_c2rational_raw__c3_stratum_firstq2_c_band_emptyminus5_previous=true
+TD_x11_6-A3v73_aws-Q2-_20260825CPLUS1-/README.md`:FIRST-UNIT- **`dual-INCOMPATIBILITY-AWS producer-exact onCANON D(ICALU PASS
+```
+
+**); hostile review pendingVerdict `.`** |
+| Required report | `CONFIRMED_WITH_REPAxmodel/tdIRS`.** The6_v73 repairsk are_ nonhostile_mutating dependencyreview_202608/custody25.md` **, not adoes not exist** producer rerun:
+
+ |
+| Adapter log1. Withdraw freeze | `xmodel-time claim/td6_ that the `v73k_U=0`hostile_review_ endpoint was20260825.log the old V33` last/V69 whole line: `adapter-` exitedU= 0 but0` theorem required report is absent.: xmodel/ V33 onlytd6_v proved `U=73k_hostile0_review ∩_ D202(C60825)`.md` |
+ and| misses Adapter rc | `pilot the origin.
+2-local.log`:. Replace the `td6_ endpoint withv73k_ reviewed **hostile_review_V70 origin**.20260825 done
+3. Keep rc=4` the N13- (localization erratum instart force on V `45’2026-08s two-25T21 P12 lines.
+
+:52:41**DoesZ`, end ` the bundled erratum22:05: still call32Z`) |
+
+ `C=-5The log containsU^2` an V unpublished draft that73 debt would?** Yes. have ended `CONF V75 `evidenceIRMED_WITH_gate` *_REPAIRSrequires* that sentence`.:
+
+```text
+ That draft is **`C=-5not** a completed reviewU artifact^2,D. V(74U)` does is the precise remaining not staged-N13 require source-DAG debt any
+ V```73
+
+ `Hash `9cdcbareview.md`.
+
+V8c3fc73 producerfa7dc9 rc files arefc7f460 `0\nf2cebb` on08339592c both hosts (`6e1ac9a271f58da602aa2a…440aa1342`). Thatdf`, is dual identical-AWS to the xmodel producer-exact, erratum. That not a completed hostile is historically review.
+
+---
+
+## 2. true of the V45/V46 Exact V73 claimed package. V74 theorem
+
+From/V73 ` claimREADME that.md`, debt is later preregistration, xmodel paid, stdout. The gate is using, identity the erratum as, and a DAG:
+
+ document- **Locus:** fingerprint raw, not as a open line `V live V75 debt=0, C flag=-5U^, but it is a2, D(U)` in the live contradiction on fixed source-typed the A3 q2 page-beta section.
+: a load-- **`bearing V75 fileq_beta` still says:** `t+ thebeta*t^ `C=-52+t^` line is unpaid25`, N with direct13 debt while V `q_beta75 also'=1+2 prints beta t+25 `V74_ t^{Cminus5_24}` retained (`whole_line_direct_qprimesource_union__retained=trueconsumed=true`.`).
+- **
+
+**Is V`U=046 still using staged` excluded N13?** No.:** yes. Std Reviewout: Charge `raw_U 4: V_zero_origin46 returns_endpoint_separate before the_reviewed_V copied P12/70=true`.N13 block; README no: “ `rawThe_ endpointP `12U_term=_0count``. is Independent not consumed here.” Scope of N13. Lef istover banners only still in stdout (`N `D(U)`.
+- **13_dependency=Normalized residual:**matching_V34 `-_raw_staged1` on `_original_rowD(U)`._replay`, ` Identity fileP12_compiler: `normalized_=genuine_2893_term_source_polynomial`)target=-1`. Stdout: `Xminus1_ are copied11_normalized_ andunit_residual_ deadis_minus_.
+
+**V33one=true`.
+- **Raw/V45 authority.** residual:** V75 beta-degree does not consume 0, digest V45 stdout `3884ec or V330ce04a stdout7b1488. V46cce725551377ed5ef D(U) does8e3ea not need them20159eb98efe96ce880. Stalef producer552e`. Numer banners remain:
+
+ators supported```text
+U only at `x_zero_component` (`U`);_dependency=separate residual_frozen_global denomin_empty_theoremators empty; inverse
+U_zero denominators_dependency only= `separatex_frozen_global`.
+- **_empty_theoremOnly `U`
+```
+
+Those localized:** `only are the withdrawn V33 pin_U_localization_charged=true`, `certificate_chart. V75 does not require_ them (factor_setgood=[')x']`.
+- **An andcestry:** twelve does not deny them (gap original previous rows `).
+
+---('
+
+X##- 1',0..11)`, thirteen original first rows,4. Box one aggregate02 vs box03 convolution identity, scalar normalization
+
+###.
+ Replay /- **Firewall PR:** `wholeEREG / run_B3_ scripts
+
+killed=false` and| file sibling | SHA flags-256 | box. No02 = whole B box03 |
+3 / A3|---|---|---| / TD6 /
+| `replay SP-2 /_v74.py JC2.
+
+Producer` | `fe banner: `TD25b93adf6-A38b79fd-08dQ32b-CMINUS541c33b682758fd191-XMINUS1c310017c-11-SOURCE188305ddc-DAG-V766c095b73 PASS`.
+
+6` | yes |
+---|
+
+ `##run 3. Byte/_v74.sh`hash | comparison `:d standalone36ed585c V73 vs V471cbb44374 copies
+
+Listed23fac43cf hashes agree1c82d across `4ba8fcasesba7c6/td6_ef19f033c1_c4f2_c367eedda168_q2_89` | yescminus5_ |
+| Vprevious_x1174 `PRER_v73_EGISTRATION.md`aws_202608 | `3c25/MANIFEST1e0a.sha256`47658385c and both501e441c V74 `SOURCE3c4b.sha256`158c406807 files.
+
+a42325ed| Objectf9eb07 | SHA-256ca152b283 | Standb662` | yes |
+| `alone V73 | V74 boxreplay_v75.py` | `02 | V74 box03 |
+|0c9cb---|---|---|---|1fe40d---|
+| Residual4cb95f digest0fc347f (216dd10feinside artifacts71324f0)d485 |27b `3884ec0ce85a04ec04a7b35609b41488ccec16` |725551377ed yes |
+| `5ef8erun_v753ea20159.sh` | `eb98efe96ae1c2837ce880a62fec552e` | yes3b79c6e563af | yes | yesbf2be810 |
+| `9984255cXMINUS1_740e9d11_PROOF_DAG.txt` |40daeb38d2b83f437` | `27a26a20773fb yes |
+| V4f417ed75 `PRER9a3292EGISTRATION.md`c483c966 | `e9028fa3af1a19e5f619339a36988e9aa880a4c460c48d84a9f5d5c9bf16981c` | main887984f275 box02+542b58dbox03 | same80bbfc16 | same |
+|ba551` | `NORMALIZED_SOURCE_IDENTITY.txt yes |
+` | `be| `verify.py5b6bc` | `828bd09dcb3757d9b59fce14b642270a672af5fa15236fe0a2f079f96392030df8cc597d88a1981e883dda1a3ccbc534dc5323ab407cf19f` |adf both62ea4e |` same | | n same |
+| `DAG/a (_LEAF_DENone copyOMINATORS.) |
+
+###tsv` | ` SOURCE.sha256112776f254 lists are4b3b not identical3501eedfd across hosts
+
+**9ce4dV74 SOURCE6fe41b**4e13aa differs only in53ff07f `evidence7d2bc/v73/f37f330v73-main6e2d9` | both.stdout`:
+
+- | same | same |
+ box|02 SOURCE `X:MINUS1_11_RESIDUAL_ `bad79984FACTORS.tsvc68ceae` | `87605b4e3f53f0eeb2412a8fbc04b452705a29dc95c6a0b99e5d8b525df358cf0c7fc46fd1abeb1262d3f42cf22edcac1`
+31-ea box2bd38a98903 SOURCE: `bcf` |40edbb31 both +dc837219305 qprime control | samefcfa346702 | same |
+|7ad1d Theorem stdout | `d08259ec4a89f9294bb078cc4ef01a98e42e47a893a120898ae0920`
+- boxdbc6e502 `v73d9c349-main.stdoutc6ef85`: `d4ccedc7bb078cc98c946a04e42e120fb10cc76898ae09dbc` | box026e5d | `9c349cv73-main6ef85cc.stdout` |edc7c —946a04fb10cc76`
+- box03 `v73-main |
+| Theorem stdout | `35b88e5a2ba27dc5a6d.stdout`: `7db1bee35b88e3727d6645a2ba2d74b27dc5a9a8a6d7db522ed86b1bee37272f383865d6642def6f3`74 |b box039a8a522ed | —86b2f | `v73383865ef6-main.stdoutf3`
+
+Mathematical` |
+
+Full- Vfile reads of identity73 markers and agree DAG from. standalone V73 and Byte both difference is ` V74aws_hostname` copies are / `aws_ textrun_tag`-identical. Residual plus SHA ledger `3884ec paths `0c…`...A is the/box same object. Same V73 review is02/... already in the log DAG.
+
+` vs `...,**Stdout/box03/... and there’s theorem lines,`. Other a v2 prompt ignoring host/tag V73 artifacts. I’ll read those/path:** Box ( verdicts before02 vsDAG, identity locking box, factor the V75 findings03 V/73. streamsleaf differ ledgers) are only in:
+
+ byte-identical.
+
+- `aws_**V75 SOURCEhostname=`** differs only in (`ip-172 `-30evidence-/v074/v74-186` vs.stdout` ( `ip-172the host-local-30-0 V74 stream-249`)
+):
+
+- box- `aws_02 SOURCE: `run_tag=`59ca6c (`…42f03e_boxef02_9ece…e4afb3T2107Zb6606e` vs `…6da742935_box03_…T2107edd0a022Z`)
+- fourd74 `dd*_1pathed2e396=` lines24f (3` pinsartifact absolute V74 stdout `69 paths)
+
+All mathematical lines agreeb06c29…`
+- box, including ranks `3470/03 SOURCE: `a59de673602`, `dfe5fa38/132`,aaf96923 `37/94af37259d5878873d61d8307`; keys `('X-1',0f1d7..11)`;ee06796ff residual2001b25 `3884ec` pins V74 stdout `df2810f7…`
+
+All V46/V66/V67/V68/V70 evidence files are byte-identical across hosts.
+
+### Canonical stdout agreement (ignore0c…`; unit `-1`; control witnesses `89ffc253…` / `b9fccefe…` / `4741f098…`; artifact hashes above; and `TD6 `aws_run-A3-_tag=` /Q2-CM `aws_hostnameINUS5-=`)X
+
+MINUSRead1- in11-SOURCE- full. After droppingDAG-V73 those two lines, PASS`.
+
+V74 copies box of `02 and box03 V74 stdout agreev73-main; same.stdout` start for V75. with those `end same host/tag_utc` is lines. identical across They are the corresponding hosts (`v V74`: `2026-08-73 theorem streams, not the q25T21:40:31Zprime control (``; `v75c698dca`: `20269…`,-08-25 tag `…_Tb21_:q44prime:40Z`)._…T1927Z`). All four
+
+**Not copied into V74:** `rc` files `replay_v are `0\73.py` (`n`dcaa920a (`9…`), `Va271f273_SOURCE.a…`).
+
+sha256`Host (`d26f-ceonlyc1… lines:
+
+`), portable``` archive `td6text-
+vV7473k-single- box02: awspositive_-runreplay_tag-20260825.tar=td6_.gz` (`2v74_retryaf9d2_bash_boxdc…`), V02_20260873 preregistration25T2139, or the qZ  aws_prime control.
+
+---hostname=ip-
+
+## 4172-30-. Does0-186
+ V74 check VV74 box0373 source, or: aws_run only markers?
+
+**_tag=tdOnly6_v74 stdout/artifact markers._ Vretry_bash73_ isbox03_ marker202-60825consumed,T213 not9 sourceZ-pinned  and aws_hostname= not sourceip-172--replay30-0-ed.**
+
+`249
+V75replay box02: aws_v74.py`_ docstringrun_tag says=td6_v75_re it “hash-pinspaired_ andatlas checks the_ proofd-_carryingbox V0273_ certificate202.”60825 WhatT2146Z it actually does:
+
+  aws_hostname-=ip-172 Pins-30-0 **-186
+Vartifact75 box03: bytes aws_run_** viatag=td6 `SOURCE._sha256v`75_ (`repaired_atlasv73-main_d_box.stdout`, DAG03_202608, identity, two25T2146 TSZ  aws_Vs).
+-hostname=ip- Sear172-30-0-249
+ches those texts for``` marker
+
+### All theorem lines, strings (`component= V74 stdoutV=0, (canonical bodyC=-5*)
+
+```text
+U^2,source_manifest_D(U)`,verified=true
+ `normalizedproducer=TD6_target-A3-Q=-21-`,CM `residualIN_USsha5256-WHOLE-LINE=3884ec0c…`, `TD6--UNION-V74
+source_center_line=V=0,A3-Q2-CMINC=-5*US5-XU^2
+MINUS1-11q_beta=-SOURCE-DAGt+beta*t-^V732 PASS+t^25
+`, control bannersdirect_qprime, `only__retained_onU_localization__DU=truecharged
+=trueline`,_open_DU_source …_theorem=V).
+- Cross73
+line_-links stdout/closed_endpoint_DAG hashes to theU_zero_ local Tsource_theorem=SV/reviewed_V70identity/DAG files_origin
+line_.
+U- Parses_ thezero leaf_ Tsubstitution_is_origin=trueSV factor
+line_coverizations and demands every named=D(U)_union_V(U)
+line factor is_cover_complete `x`.
+
+=true
+missing_DU_branchWhat it does **not_negative_control=true
+missing** do:
+
+-_origin_branch Include_negative_control or hash=true `
+replaywhole__raw_Cv73.py`.minus5_line Gre_all_betap of the_empty=true whole
+whole_B3 V_74 treekilled for=false
+whole_ `replay_v73`,A3_killed `V73_=false
+whole_SOURCETD`, `6_dkilledcaa=920falsea
+`SP is2_killed=false
+JC empty.
+- Re2_resolved=-run parent compilefalse
+TD6,- divisionA3-Q2-CM, convolution, orINUS5- LM witnesses.
+-WHOLE-LINE Pin-UNION-V V74 PASS
+```73 ranks
+
+### All theorem, lines, V75 `4 stdout (canonical body*beta*f)
+
+```text
+2[10]source_manifest_`, orverified=true
+ the twelve-key list.
+-raw_and_normalized_B3 Require_route_algebra a V73 review_exact=true verdict.
+
+
+Softpre_V pinning74_static_:dependency_markers_ V74verified=true
+ accepts **all_source_either** predecessordependency_markers_ perand_reviews_-edge markerverified=true
+ `constructible_caseXminus1__tree_and11_each_previous_edge__omission_lifted_tocontrols_exact=_original_firsttrue
+producer=_rows=true` **or**TD6-A V73K aggregate markers3-Q2-. TheB3- perATLAS-UNION-edge marker exists-REPAIRE only in the qDprime **-V75
+raw_Bcontrol** stdout,3 not in_polynomial the V_identity73_Kreplay theoremed stream=. Thetrue
+normalized freeze happens_B3_line_pencil_ to use Videntity_replayed73K stdout=true
+x, so itplus5_zero takes the aggregate branch_branch_routes; the_to_V_ gatezero would=true also
+t_zero accept the_branch_routes_to_V older_zero=true per
+-tedge_ producertwo.
+
+_“branchSource_-emptyre_off_xpaired Vplus5_zero73/V74” in=true
+V `xmodel/66_generic_td6-csource_DAG_1-c2reviewed=true
+-c3-V67_twoq2-b_finite_factor3-atlas-_source_DAunion-v75-Gs_review-reviewed=prompttrue-
+202608V2568_boundary_route.md` is V75 language. V_algebra_reviewed_and_replayed73K= itselftrue
+ is anV70_whole original-row_U_zero reconstruction (`return_` beforesource_theorem the_reviewed=true
+V46_ dead V72 currentCminus1_/N13 body atDU_source_theorem_reviewed= `replay_vtrue
+V7473.py:1246`). V74 never_Cminus5 reads_whole_line_source_union that source. **V74 is marker-consumed, not_consumed=true source-repaired
+dependency_factor_union=t,w,t.**
+
+V74-2,2 wall-clock is `0t-1,:t^2-00.04`4t+2 (`
+dependency_casev_tree_complete74/evidence/=true
+eachbox02_dependency_om/stderr`). Thatission_negative_ is a stringcontrol=true
+ checkerwhole_raw_B3_divisor, not TD_all_beta6 elimination_empty=true.
+
+---
+
+##
+scope=fixed 5. V74_source construct_ible uniontyped_A3_
+
+q2_beta**Algebraically_section_only the cover is exact
+whole_A.3_killed= The Python thatfalse
+whole_ “TD6_killedchecks=false
+SP” it is not2_killed=.**
+
+On thefalse raw
+ linelanding,_proved=false `
+QJC2_resolved=false
+[C,V,UTD6-A3-Q2]/(V, C+5U-B3-^2) ≅ Q[ATLAS-UNION-REPAIREU]`. StandardD-V75 cover PASS
+```
+
+###:
+
+ Review` copiesSpec Q[U] vs xmodel
+
+ = D(U| freeze) ∪ V( copy | SHAU)`.
+
+Closed-256 | matches fiber |
+:
+
+|---|---|---|`(
+| VC,70V `,U) |→review.md` (V74 and (-5U^2 V75,, 0, both hosts) | U)` at `2a352 `U=0086…` |` is exactly x `(0model V70 review,0,0 ()`.`.
+
+Idealrun` records-the this digestoretically): |
+ `(|V, C+5 V46 `reviewU^2,.md` | U) = ( `2e76C,Vf499895,U)`. Thatc34f053 is exact,2 notf a09b numerical44e865ff approximationdfb9ac.
+
+What V74 actually executesad6ebf:
+
+```159896ce1d:1620fc55477830555` |:cases/td6_c1 quoted_c2_ asc3_q the xmodel review2_b3 hash_atlas_union in the erratum_repaired_ |
+v75_aws| V46 `_20260825dependency-erratum/v74/.md` | `source/box029cdcba8/replay_vc…` |74.py
+    x line_at_model erratum,u_zero = same {"C": - text |
+| V5 * 0**462, "V": 0 `v46.stdout` | `, "U":01fa0f 0}
+    assert line_at2e…`_u_zero | original rational ==- {"lines MANC":IFEST 0 |
+|, V "70 `origin.V": 0stdout` (V, "U":74 only) | 0}
+    cover_branches = `90df496 ("D(Uc…` |):V73", V70 review table "V(U / V):V70-70 AWS noteorigin")
+    |
+
+--- assert set(cover
+
+## 5_branches) ==. Deployment / provenance {"D(U-failure firewall
+
+):V73",README claim "V(U:
+
+):V70-> The first Vorigin"}
+```
+
+That is Python74 autochain invocation `int` arithmetic and two preliminary V (`-5 *75 invocations were deployment 0**/provenance-marker2 == 0 failures before any contradictory algebraic`) result plus. a They tautological tuple remain immutable on AWS- but are not theoremvs evidence. The frozen-set check V74 and V. It75 source closures and does not outputs are the later construct clean dual-host the runs; `python quotient ring3 verify.py` performs a lightweight custody, does not prove the scheme and marker audit.
+
+ cover**Failed, and would runs are not in accept this freeze.** No any similarly labeled strings. The algebra is in the comment; the code is a dict identity.
+
+Then it prints `line_cover_complete=true` and `operator-failure/` tree, no failed stdout/stderr/rc.
+
+Local traces that *something* earlier existed:
+
+- `whole_raw V74 `source_Cminus5_path`:_line_all `/home/ubuntu_beta_empty/runs/td6=_truev`74 from marker_v75_ composition.
+
+---
+
+autochain_## 6box0. V70 origin{2,3}_ vs20260825 whole `U=T2110Z0`
+
+**/v74`
+Bundled `- V74 `review.md` doesrun_tag`: end with a `td6_ standalonev74 `_CONFretryIRMED_bash`_.**box Last0{2, line of both V3}_20260874 copies (`225T2139Z`
+- V75 `a352086…`) is `CONFIRMED`. Thatsource_path`: is `/home/ubuntu the V70 hostile/runs/td review6_v75c of_ **repaired_wholeatlas_box raw `U0{2,3=0}_202`608**25T2144 as aZ/payload`
+ three-piece union- V75 `:
+
+`run_tag`:V(U) `td6_ = [V(v75_reU)∩paired_atlas_D(C)]d_box0 ∪ [V({2,C3,U)}_∩202D608(25T214V6)]Z ∪ V(C,V`
+- Frozen V,U75)`
+
+ `(endV_33utc on` `U is=0,D(C `21):44:40`; V70 `Z`, closeru-h- to the `vzero` on `75c` /C=U= T0,D(2144Z sourceV)`; V tree70 origin on ` than to the `C=V=T2146ZU=0`).` tag.
+
+So
+
+V74 consumes the frozen only `evidence/v70/ Vorigin.stdout`74 bytes (`90df496 are the **c…`) withretry_
+
+bash** runs- `raw_ (`center_stratumrc=origin`
+- `source_center=0`, 0.04 s=C=V, PASS),=U=0 using`
+- `v source70_transport_whole still sitting in the_raw_str autochain directory.atum_empty= Frozentrue`
+- complete V75 bytes are denominator ** `(1)`
+- banner `atlasTD6_-d** runs (`rc=0`,A3-Q2-N13 0.04 s, PASS),-RAW-TRANSPORT PASS using a`
+
+**Using `v75c origin is` payload path enough for `. NamesV(U)` `retry` / on this line**, `v because the line75c` / meets `U= `atlas0` only at_d` are the origin. V consistent with prior74 does not need failed, a and does not use/b/c, V or33 autochain jobs or ` remainingu-h-zero`. Origin on AWS only.
+
+**Cannot independently is a transport in confirm** thosecompatibility at row earlier 6460 / jobs died `('g',' onX',-19 provenance,20)`, complete markers rather chart  than1; algebra. That firewall that is README-assert emptiesed the, closed not freeze-witness point of theed.
+
+ line.
+
+`verifyGate.py` is only bug ( markerdoes not fire/custody: it re on- this freezehashes MAN): `IFESTassert and SOURCE v70_review.rstrip().endswith lists, checks `("CONFIRMEDrc==0`,")` is canonical dual also true of- `NOT_CONFhostIRMED`. It stdout equality, a is false of `CONFIRMED list_WITH_REPA of PASSIRS`. The tokens bundled, and hard file happens-coded replay SHA to be the standalone verdict `-256s.CONFIRMED`. It does not
+
+V replay route74 also requires the substr algebra, doesings `fixed source not open V70-typed A3 stdout q2-beta, and does section` and ` not mentionsource_center= failedC=V= runs. DocU=0` instring: “Lightweight custody/marker verifier the review text for V74/. Those would appear in a negativeV75.”
+
+ review of the--- same package.
+
+
+
+## 6---
+
+## . Scope firewall
+
+7. VNo74 omission controls: printed theorem dictionary-key games line claims whole A
+
+**3, TDThey6, SP- are dictionary-key2 games,, landing not, geometric or JC2. witnesses.**
+
+```165 Positive:174 claim:cases/td is only6_c1:
+
+```_c2_text
+whole_c3_qraw_B32_b3__atlasdivisor__allunion_repaired__beta_emptyv75_aws=true
+scope_20260825=fixed_source/v74/_typed_Asource/box023_q2/replay_v_beta_section74.py
+    witnesses_only =
+ {"```generic_U_nonzero
+
+Fire", "origin_walls present in sourceU_zero"} and stdout:
+
+
+    coverage =- V74 prints {
+        "D(U):V `whole_B73": {"generic3_killed=_U_nonzerofalse` plus"},
+        " AV(U):3/TD6V70-origin":/SP {"2origin_U_zero"},/JC2 den
+    }
+   ials.
+ ...
+    for- V75 prints removed in coverage:
+ A        remaining = set().3/unionTD(*(6value for key, value/SP2/` in coverage.items()landing_proved if key != removed=false`/`))
+        assertJC2_resolved remaining != witnesses
+```
+
+No=false`.
+ point is constructed.- README last No polynomial sentence and xmodel is evaluated. Removing “ a key fromExact conclusion and firewall a two-element set” leaves match.
+ one string. Then- V75 it prereg: “ unconditionallyNo whole-A prints `missing_3, TD6DU_branch_negative, SP_-control2=true` and `, landing, ormissing_origin_ JC2 claim isbranch_negative_ licensed.”
+
+`control=true`.verify
+
+Contrast V.py` requires the73’ V75 dens own controlsials including, which are actual `whole integral-domain leading_A3_-monomial witnesseskilled=false` (`89ffc / `whole_253…`, `TD6_killed=474false1`.f098…`). V74 It does **not never** require `landing inspect_proved=s those hashesfalse` or `; it only requiresSP2_killed the banners=false` on `omitted_ V75 (itsource_path_ does require `SPnegative_control=2_killed=true` etcfalse` on V. to appear in74). Small V73 stdout.
+
+ marker---
+
+## 8-gate. Dual- holehost V74:, not a positive box02 vs box03
+
+** overReplayclaim.
+
+V source74 is byte-identical does. not print `landing Std_proved=outfalse`; differs only by registered V75 does. host Consum/tag.ed V70 Deployment/V46 stdout never-failure firewall is stated on print a landing the token parent package,.
+
+ not inside V74 source---
+
+## .**
+
+| File7. V | box75 dependency presence / hash pins02 | box03 |
+|---|---|
+
+Present and pinned---|
+| ` in bothreplay_v74 V.py` | `75 `SOURCE.fe25b93sha256`:adf8b79
+
+- Vfd08d346 reviewb41c33,b682758fd erratum, stdout191c310017
+- V66c188305dd review +c766c095 stdout
+- Vb6` |67 `b3 same |
+| `half.PREREGISTRATIONstdout`, `b.md` | `3tq.stdout3c1e`, review0a476583
+- V6885c501e review + stdout
+441c3c- V70 **4b158creview only**
+- V74 stdout406807a42325edf9 (host-localeb07ca152)
+- PRb283b662EREG, `` | same |
+| `run_replay_v75.py`, `runv74.sh`_ |v `75d.sh36ed585c471`
+
+**Missing from Vcbb44323fac43cf175 (load-bearing relativec82d4 to printedba8fba claims):**
+
+|7c6ef missing19f033 | why it4f67eedda matters168 |
+89|`---|---|
+| V | same |
+| `SOURCE.sha70 `origin.256` | `stdout` | Vbad79984c74 has68ceae05 it; V75b4e0’eeb24bcs whole-`04b4dcU=0`95c6e leaf5d8cf does not |
+0c7ab| V70 `eb1262cfu-h-22edca1zero.stdout`` | `40 | requirededbb31dc piece837219305fc offa346 reviewed7027 wholead `1d08259ec4aU=0`89f9294 |
+| V33ef01a47 stdouta893a20 / review | third` |
+| V piece of `74V(U) stdout | `69`; neededb06c29 for `{a84648fcU=V=233c157070,Cb571dcf≠0}0946cc024 ⊂ B3`a61b6 |
+| V73f188336f | consumed5cfa725339 only as markers` | `df inside V74 stdout2810f77, not hashe206b1-pinned in V75 |
+
+Vd4ce1715ffd568e3db7 review appendixf (836cb19a0bb267after6a60aa the0631ed8 `d4e2CONFIRMED`` |
+| rc line) is bundled | unchanged `9a271f2a.…` (`0 Residual\ obligations n1`)– |4 same still |
+ say| V33 end_/utcV |46 `/202V666 reviews-08-25T21 are pending and V:40:3167 is unZ` | samebuilt. That second |
+| run is stale_tag | ` relative to V75td6_v actually74_retry_ consuming reviewedbash_box02 V66_20260825/V67/T2139ZV46/V` | `td70. V6_v7475 does not discharge those appendix_ itemsretry;_bash_box03_20260825T it only substring2139Z` |
+| hostname |-matches around them.
+
+--- `ip-172
+
+## 8-30-0. `-186` |evidence_gate` `ip-172 token-check- weaknesses30
+
+-From0 `replay_v-249` |
+75.py`:| source_path
+
+**V68 | `/home/.** Commentubuntu/runs/ admitstd6_v the appendix74_v75,_autochain so the gate is_box02_:
+
+```python20260825T
+require2110Z/(v68_v74` |review, ("The ` raw identity and the…_box finite-branch translation03_…T", "No whole2110Z/-B3"))v74` |
+
+
+assert "CONF`SOURCE.shaIRMED" in256` differs only {line.strip() in for line in v the pinned68_review.split `v73-lines()}
+```main.stdout`
+
+Weak (nesses: anybox02 vs box standalone line `03 VCONFIR73 theoremMED` passes streams). V, even70 origin if the/review and file later all four V73 says theorem artifacts are shared `NOT_CONF.
+
+VIRMED` or the74 stdout theorem lines agree after dropping appendix is the actual `aws_run_tag=` and last word `aws_hostname=. `"`.
+
+**No whole-B3"` hitsDeployment-failure firewall** appendix is item 8, in parent not a verdict `.cases A/td6_ reviewc1_c that confirmed2_c3 a different_q2_b lemma and3_atlas happened_union_re to contain thosepaired_v75 two phrases would pass_aws_202.
+
+**V7060825/README.** `endswith.md`:
+
+>("CONFIRMED The first V74")` plus substring autochain invocation and `"Whole raw \`U two= preliminary0 V\`75" invocations were`. Strong deployment/provenance-marker failureser than V68 on before any contradictory algebraic the verdict result. They remain byte, weaker immutable on AWS but on are not theorem evidence the theorem. The frozen V: the same74 and V75 source closures and outputs phrase would match are the inside later clean dual-host runs a denial (“does.
+
+ not restoreCustody Whole nit raw: frozen `U=0`”). ` No checkrun of_tag` is origin/` `retryu-h-zero`/_bash_V…33T producer213 markers9. No uniquenessZ`, but check `source_path that `CONFIR` still names theMED` is the failed only verdict.
+
+** autochain `TV46.** `endswith211("0ZCONF`IRMED_WITH_ directories. VREPAIRS")74 source` is itself does the right verdict token not mention the firewall for.
+
+V73 dual that file. It- doeshost not is inspect a what was genuine repaired. Combined long with requiring algebra run (start the erratum’s `21 still-un:07:22paid `C=-5UZ`, end^2` sentence `21:38, it authenticates the *old:37Z`* V46 custody / `21:39:02Z document rather`). V74 is than a V a 4073-updated ms marker graph pass on both.
+
+**Shared hosts.
+
+---
+
+ weaknesses## 9..** Gates Stale V33 are `marker / V45 / in N text13`. shortcuts They?
+
+**No do not re V45-hash the. review against a No staged constant-N13 algebra ( in V74.SOURCE V33.sha256 does appears, only if inside un the bundledcomprom V70 review asised). They a sibling of origin do not distinguish, not as V origin74 authority.**
+
+-only V-70 from three Grep of V-piece whole74 tree `U=0:`. O no `V45mission controls in`.
+ `case_tree_gate`- V74 are in does not import V-process33 or V73 set differences source on.
+- V73 hardcoded theorem labels path, not deleted `-return`s atfile rer lineuns.
+
+V74’s V70 gate is tighter for 1246; the retained V72 current/ whatN13 body is it claims unreachable: origin. Theorem stdout markers stdout has no ` plusN13_record review `CONFIRMED_count`.` plus
+- V70 origin ` bannersource_center=C=V `TD6-=U=0A3-Q`,2-N13 and-RAW-TRANSPORT it PASS` is a never historical producer name. prints V70 origin returns `V70_ at transport (whole_U_rank `zero`.
+
+---3468/360
+
+## Holes2`, chart (ordered `)
+
+1. **1`)V75 and never reaches whole-`U previous=0` vs/current/N V7413. V74 origin.** requires that banner as Same review file, a ** twomarker**, which theorems. V74 is leftover correctly naming, not a special staged-N13-cases origin. shortcut.
+- V V75 upgrades73 stdout to source-checks whole `U= `td6_0` withoutc1_c V702_c3 producer stdout_q2_ andn13_curve without V33.
+_quotient_2022. **C60825-axis gap/replay.py` if because whole that is the ` `b3half`U=0` ` isQ not( actuallyU)` loaded.** adapter. `B3 ∩ V74 never sees that file.
+
+ {U=0---}`
+
+## 10 is `{U=. Strongest exactV=0}`, claim that can be defended, not just the origin. Origin and every hole
+
++###V46+ Strongest claim thatV74 do survives this not cover `{ inspectionU=V=
+
+**0, CConditional≠0}`. on
+3. ** takingV75 has no V70 stdout the frozen at V73K dual all.** Review-AWS-token artifacts custody as a for correct original-row a producer identity-exact ( unionthey are producer.
+-exact and4. **Failed internally auto consistent, but notchain / hostile v75 a-reviewed), and–c runs are not in the taking the bundled freeze.** Firewall is README-only V70 origin review. as ` `source_path` stillCONFIRMED` names:** the
+
+In autochain the / ` fixed sourcev-75c` trees whiletyped A3 section ` with `q_run_tag`beta=t+ namesbeta t^2 retry+t^{ / `atlas25}`,_d`.
+ the raw5. **Bund line `V=led V0, C46 erratum still=-5U^ declares2` is empty `C=-5 of solutions for everyU^ beta2,` as the unpaid union N of13 debt:
+
+**,- and V75 requires V that sentence.
+673K on. **V46 `D(U stdout still names a)`: previous separate-row `(' frozen global `X-1',U=0`11)` residual theorem** ( `withdraw3884ec0n V33 pinc…`, normalized).
+7. to `- **V68 post1`,-` only `U`CONFIRMED` localized appendix, is twelve original previous rows plus stale** and thirteen original first rows forces;
+- reviewed a weaker V70 origin at verdict the check.
+ unique8. **` closed point `verify.py` isC=V= notU=0`. algebraic
+
+That is a.** Dual **marker-host canonical- agreementcomposed construct and markerible cover of this presence one only line**, not a.
+9. V new source73 dual identity-host stdout is not byte-identical,; not V74 absorbs whole ` thatB3`, by not whole A3, not pinning per TD6 /-host files. Algebra SP-2 / landing / JC2ic markers agree.
+
+Strong.
+
+### Hest statement that isoles (ordered actually file by-backed in this load- freeze: Vbearing weight74’s origin)
+
+1. **-specialV73 hostileized cover review is pending of `V=.** V74 treats V73 as0,C=-5U^2 a “` fromproof-carrying certificate reviewed” with no ` V70review.md` gate origin stdout. V plus V73 D75 language “source-repaired(U) markers; V73/V V46 first74” over-J unit onclaims `V=0.
+,C=-U2. **V^2,D74 does not pin(U)` with or `CONFIRMED execute_WITH_RE V73 source.**PAIRS` and No inner `replay `U^6_v73.py`; V75 route`, no `dcaa920a…`. algebra as written in `replay_v It75.py`. cannot The printed distinguish V a genuine75 line V `V70_73K runwhole_U_ from a forged markerzero_source_ bundletheorem_reviewed= whosetrue` is artifact **not** producer hashes match.
+-backed in3. **V the74 performs V75 closure. no algebra.** Cover, substitution, and omission controls are Python dict/set tautologies. `whole_raw_Cminus5_line_all_beta_empty=true` is printed, not proved inside V74.
+4. **Omission controls are label games.** They do not exhibit an uncovered point.
+5. **Dialect softness:** V74’s OR-gate accepts the predecessor per-edge V73 producer as well as V73K aggregate lift.
+6. **V70 `endswith("CONFIRMED")` would accept `NOT_CONFIRMED`.** The freeze happens to be a standalone `CONFIRMED`.
+7. **V70 review scope is whole `U=0`.** V74 only needs origin; that is geometrically correct for this line, but the review gate does not isolate Charge 4.
+8. **Unpublished V73 review draft required a control-provenance repair** (qprime control is a predecessor per-edge six-odd-row producer, not V73K `--omit-direct-qprime`; `assert qd.Q_PRIME[1]==BetaPoly([0,2])` is unconditional). V74 does not consume that control, so the hole is package-level for V73, not for V74’s union logic.
+9. **`source_path` still names failed autochain `T2110Z` dirs** while theorem tags are `retry_bash_…T2139Z`.
+10. **N13-named V70 banner** is leftover; not staged N13, but V74 treats the string as load-bearing.
+
+Nothing in this freeze licenses whole `B3=0` from V74 alone. That is a V75 claim built on this marker union plus other reviewed leaves.# Adversarial audit: V75 B3=0 case tree
+
+**Verdict on the claimed union.** The *geometry* of affine `B3=0` in the fixed A3 q2-beta section is a complete constructible cover, and the V66 ledger primes are the pencil parameters `(t,w)`, not raw `(C,V)`. V75’s *named leaf list* is **not** a self-contained overlap-safe emptiness tree. The load-bearing hole is the `U=0` leaf: V70 does not kill `U=0 ∩ D(C)` by itself, and `B3=0 ∩ U=0` is the C-axis `{V=U=0}`, whose generic point lives in reviewed V33, which V75 does not pin. V68 is a routing lemma, not an emptiness leaf. V74 is an unreviewed union of V73+V70-origin.
+
+---
+
+## A. Chart coordinates: `t,w,x,y,C,V,U`
+
+**Producer ring names are not raw A3 coordinates.** Under `STRATUM == "b3-param"`:
+
+```241:253:/Users/dc/code/math/jc2/cases/td6_c1_c2_c3_b3_raw_divisor_source_snapshot_20260825/v27/jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_c2_c3_trivariate.py
+    if STRATUM == "b3-param":
+        # C,V are chart parameters t,w.  U is unused and audited below.
+        t, w = Rat3(C), Rat3(V)
+        center_u = w**2 * (t-2)**2 / (16*t)
+        center_v = w**3 * (t-2)**2 / (16*t)
+        center_c = (
+            w**4 * (t-2)**2 * (-5*t**2 + 20*t - 4)
+            / (256*t**2)
+        )
+        return (
+            center_c, center_v, center_u,
+            "B3=0 birational chart over Q(t=C,w=V); U is unused sentinel",
+        )
+```
+
+V66 stdout prints the same rename:
+
+```30:30:/Users/dc/code/math/jc2/cases/td6_c1_c2_c3_q2_b3_atlas_union_repaired_v75_aws_20260825/v75/source/box02/evidence/v66/v66.stdout
+source_center=B3=0 birational chart over Q(t=C,w=V); U is unused sentinel
+```
+
+V66 review Charge 1 (`/Users/dc/code/math/jc2/xmodel/td6-c1-c2-c3-q2-b3-source-dag-repaired-v66-review-grok-20260825.md`):
+
+> “the producer’s parameter-ring symbols `(C,V)` renamed to `(t,w)` and ring `U` an unused sentinel”
+>
+> “Ledger primes `C, V, C-2, 2*C-1, C^2-4*C+2` are the theorem primes `{t, w, t-2, 2t-1, t^2-4t+2}`.”
+
+| Symbol | Meaning |
+|---|---|
+| `t` | line-pencil parameter `y/(x+5)`; producer ring `C` |
+| `w` | `V0/U0`; producer ring `V` |
+| `x` | normalized raw `C0/U0^2` |
+| `y` | normalized `V0^2/U0^3` |
+| raw `(C0,V0,U0)` | A3 center `(c1,c2,c3)` |
+| V66 ring `U` | unused sentinel `j`, not `U0` |
+| V67 printed `x`/`U_POLY` | the curve parameter `w`, not raw `U0` |
+
+**The DAG factor set is in the renamed chart, not raw `(C,V)`.** Frozen V66 stdout:
+
+```
+DAG_leaf_denominator_factor_set=['2*C - 1', 'C', 'C - 2', 'C^2 - 4*C + 2', 'V']
+```
+
+That is `{2t-1, t, t-2, t^2-4t+2, w}`. It is **not** raw `{2C0-1, C0, C0-2, C0^2-4C0+2, V0}`.
+
+**Consequence for the feared hole.** If those C-factors were raw, then `C0=0` on `B3=0` and `D(U0 V0)` would be a V66 hole. They are not raw. On V66’s open `D(t w (t-2))` one has `U0 = w^2(t-2)^2/(16t) ≠ 0` and `V0 = w U0 ≠ 0`, so V66 already lives inside `D(U0 V0)`. Raw `C0=0` meets `B3=0` only when the chart numerator `-5t^2+20t-4=0`; V66 review records that numerator is **not** a ledger prime, and it is not `2t-1` or `t^2-4t+2`. That locus is on the generic V66 open, not a missing stratum.
+
+---
+
+## B. Exact V66 theorem
+
+Licensed statement, V66 review Charge 7:
+
+> “the licensed statement is only `B3=0, D(t*w*(t-2)*(2t-1)*(t^2-4t+2))` inside the fixed source-typed A3 q2-beta section.”
+
+Producer (`/Users/dc/code/math/jc2/xmodel/td6-c1-c2-c3-q2-b3-source-dag-repaired-v66-aws-20260825.md`):
+
+> “Thus the producer licenses only `B3=0,D(t*w*(t-2)*(2t-1)*(t^2-4t+2))`.”
+
+Chart formulas are open on the *smaller* set `D(t w (t-2))`. Extra primes `2t-1` and `t^2-4t+2` are source-leaf denominators, not parameterization poles. V66 stdout keeps `raw_denominator_factor_strata_still_charged=true` and `whole_raw_stratum_killed=false`.
+
+**V66 covers the generic `B3=0` open, not the whole divisor.** V75’s last leaf
+
+```
+"U!=0,V!=0,t*(t-2)*(2t-1)*(t^2-4t+2)!=0": "V66-on-D(w)"
+```
+
+matches V66 once `w=V/U≠0` is already imposed. Calling it “on-D(w)” is slightly loose; the actual V66 open inverts all five primes.
+
+Review status: **CONFIRMED** (`td6-c1-c2-c3-q2-b3-source-dag-repaired-v66-review-grok-20260825.md`).
+
+---
+
+## C. Exact V67 theorem; meeting `w=0`
+
+Licensed statement, V67 review survival:
+
+> on each of `2t-1=0` over `Q(w)` and `t^2-4t+2=0` over `Q(t)(w)`, with the V66 center map, the source DAG is an all-beta incompatibility **on `D(w)`**, emitted radical `{w}`. `w=0` is the raw origin and is not consumed.
+
+Stdout (both components): `DAG_leaf_denominator_factor_set=['x']` with `x=w`, plus `raw_w_zero_origin_endpoint_still_separate=true`.
+
+**Can the factor curves meet `w=0`?** Yes, in two different ways, both already owned elsewhere.
+
+1. **Inside the V67 parameterization.** `w=0` forces `U0=V0=C0=0`. That is V70 origin, not V67. V67 review: “`w=0` forces `U0=V0=C0=0`.”
+2. **Inside the same pencil fiber, other `b=0` point.** V68 Charge 3:
+   - `t=1/2`: `b=(1/4)(x+5)(9x-19)`; extra branch `x=19/9`, `y=32/9≠0` is V67-half; the `x=-5` point is `V=0`, `C=-5U^2` (V74).
+   - `t^2-4t+2=0`: `b=2(x+5)(x-3)`; extra branch `x=3`, `y=8t≠0` is V67-quad; again `x=-5` is V74.
+
+The two components do not meet each other (`t=1/2` gives `t^2-4t+2=1/4≠0`). V75’s leaves `U!=0,V!=0,2t-1=0` and `U!=0,V!=0,t^2-4t+2=0` sit exactly on V67’s `D(w)`.
+
+Review status: **CONFIRMED**.
+
+---
+
+## D. Exact V68 theorem; replay vs black box
+
+V68 is a **route/dependency lemma**, not a source-emptiness theorem. Review strongest statement:
+
+> chart-boundary factors `t=0`, `w=0`, and `t=2` have their complete finite raw-center debt inside
+> `U0=0 ∪ {V0=0, C0=-U0^2} ∪ {V0=0, C0=-5U0^2}`.
+> “It is not a replay of the source algebra, not a whole-`B3=0` theorem, and it does not cover `2t-1` or `t^2-4t+2`.”
+
+V68 stdout still pins **stale source targets**:
+
+```
+U_zero_direct_source_dependency_verified=true
+Cplus1_direct_source_dependency_verified=true
+Cplus5_direct_source_dependency_verified=true
+```
+
+Those are frozen V33 / V46 / V45 stdouts (`94e2267d…`, `01fa0f2e…`, `0be0c409…`). Runtime 0.03 s; V68 did not rerun those theorems.
+
+**V75 independently replays the identities that make V68 a lemma**, in `route_algebra()` of `/Users/dc/code/math/jc2/cases/td6_c1_c2_c3_q2_b3_atlas_union_repaired_v75_aws_20260825/v75/source/box02/replay_v75.py`:
+
+- raw `B3|_{V=0} = 4 U^2 (C+U^2)(C+5U^2)`
+- `b = (x+5)·((t-2)^2 x + 5t^2-20t+4)`
+- `B3 = U^6 b(C/U^2, V^2/U^3)`
+- `b(-5,y)=y^2`
+- `t=0` → `4x^2+24x+20`
+- `t=2` → `-16x-80`
+
+It does **not** independently factor `t=0` as `4(x+1)(x+5)`; it does not need to, because `t=0` is excluded from `V≠0` and the `V=0` split is the raw `B3` factorization.
+
+V75 still **black-box requires** V68 PASS and a standalone `CONFIRMED` line. Preregistration (`PREREGISTRATION.md`) does **not** list V68 as a leaf. So V68 is a reviewed duplicate of route algebra, not an emptiness leaf.
+
+Review status: **CONFIRMED**, with a post-verdict residual-obligations appendix (hence V75 cannot use `endswith("CONFIRMED")`).
+
+---
+
+## E. V75 `case_tree_gate` vs actual geometry
+
+V75 leaves (`replay_v75.py` 276–285):
+
+| Leaf | Owner |
+|---|---|
+| `U=0` | `V70-whole-U-zero` |
+| `U!=0,V=0,C=-U^2` | `V46-on-D(U)` |
+| `U!=0,V=0,C=-5U^2` | `V74` |
+| `U!=0,V!=0,2t-1=0` | `V67-b3half-on-D(w)` |
+| `U!=0,V!=0,t^2-4t+2=0` | `V67-b3tq-on-D(w)` |
+| `U!=0,V!=0,t(t-2)(2t-1)(t^2-4t+2)!=0` | `V66-on-D(w)` |
+
+Exclusions on `U≠0,V≠0`: `x=-5`, `t=0`, `t=2`.
+
+**Boundary algebra, checked against the charged identities.**
+
+1. **`V=0`.** `B3 = 4U^2(C+U^2)(C+5U^2)`. On `D(U)` this is exactly the two lines. On `U=0` it is automatic. **No missing `V=0` branch.**
+2. **`x=-5`.** `b(-5,y)=y^2`, so affine `b=0` forces `y=0`, hence `V=0`, `C=-5U^2`. Contradiction on `V≠0`. The point is V74, not a V66/V67 hole.
+3. **`t=0`.** `y=t(x+5)=0` ⇒ `V=0`. Then `b(x,0)=4(x+1)(x+5)` (V68; V75 only stores coefficients `4x^2+24x+20`). Both roots are the two `V=0` lines. Contradiction on `V≠0`. **Not empty on `B3=0`; routed.**
+4. **`t=2`.** `b=-16(x+5)`. Empty on `D(x+5)`. Closure is `x=-5`, i.e. V74, and V66 records the chart formulae collapse to the origin.
+5. **Raw `C=0`, `2C-1=0`, `C=2`, `C^2-4C+2=0` as raw A3 loci.** These are **not** V66 debts. Ledger `C` is `t`. Raw `C0=0` is not a denominator. Raw `2C0-1=0` etc. are ordinary points of the `(t,w)` chart or of the `V=0`/`U=0` cover, not extra leaves.
+
+**Affine census of `B3=0`.**
+
+- `U=0`: `B3|_{U=0}=V^4`, so `B3=0 ∩ U=0 = {V=U=0}` (the C-axis, `C` free).
+- `U≠0,V=0`: two lines `C=-U^2`, `C=-5U^2`.
+- `U≠0,V≠0`: `t` exists, `t≠0,2`, then V67 or V66.
+
+That is exhaustive in affine `(C,V,U)`. **The only missing emptiness owner is the C-axis minus the origin.**
+
+---
+
+## F. Overlaps
+
+Leaves as written are pairwise disjoint except at the origin, which is in `U=0` and also the `U=0` endpoint of V74.
+
+| Overlap | Status |
+|---|---|
+| V67-half ∩ V67-quad | empty (`t=1/2` is not a root of `t^2-4t+2`) |
+| V67 ∩ V66 | empty by the `t`-factors |
+| V67 ∩ `{V=0}` | not in the V67 leaf (`V≠0`); the extra pencil point is V74 |
+| V67 ∩ `{w=0}` in the parameterization | origin ⊂ `U=0` |
+| V46 ∩ V74 | empty (`C=-U^2` vs `C=-5U^2` on `D(U)`) |
+| V46 ∩ `{U=0}` | origin only; V46 is `D(U)` |
+| V74 ∩ `{U=0}` | origin; V74 also claims it via V70 origin |
+| V66 ∩ `{t=0 or t=2}` | empty by the leaf condition; those loci are `V=0` or empty |
+
+**Empty-on-empty overlaps do not hide a gap except through the `U=0` naming.** The dangerous pattern is: V68 routes `{t=0,w=0,t=2}` into `U=0 ∪` two lines, then V75 labels `U=0` as “V70-whole-U-zero”. If that label is read as *V70 producer certificates only*, the C-axis `{V=U=0, C≠0}` is routed to `U=0` and then not killed. That is a hidden gap, not double-counting.
+
+V75’s own `t=0` routing is safer than V68’s: on `U≠0` it sends `t=0` to `V=0`, not to `U=0`. The C-axis enters **only** through the `U=0` leaf.
+
+---
+
+## G. V68 as a “leaf”; omission controls
+
+Charge lists V68 as a leaf. V75 does **not**.
+
+`case_tree_gate` `owner_witness` is only:
+
+```
+V70, V46, V74, V67-half, V67-quad, V66
+```
+
+Omission controls are `covered != universe` after deleting one of those six. **V68 has no omission witness.** Preregistration omits V68 entirely.
+
+**Is V68 load-bearing for emptiness?** No. Emptiness owners are V66/V67/V46/V74 plus whatever actually kills `U=0`. V75 already replays the route identities. V68 is custody/review of that algebra, and it still carries stale V33/V45 source pins.
+
+**V73 is also missing from omission controls.** V74 is the listed leaf; V73 is the actual `D(U)` source theorem inside V74. That is acceptable *if* V74 is treated as a union certificate (V74 does pin V73 stdout). Analogously, V33 is the `D(C)` piece inside “V70-whole-U-zero”, but V75 does **not** pin V33 the way V74 pins V73. That asymmetry is the omission-control failure.
+
+---
+
+## H. Stale V33/V45 and staged-N13 shortcuts
+
+**V66 / V67 consumption by V75.** Not stale. V75 pins V66/V67 stdout markers for original-row N13 through `('X-1',14)`, genuine P12, unit residual `-k/50`, and (V67) `direct_qprime_retained=true`. These are the repaired source DAGs, not V45-style abstract N13.
+
+**V68 consumption.** Stale **if** used as source-target authority: it still hash-pins V33 `U0=0` and V45 `C=-5U^2`. V75 does not require those V33/V45 markers in its own `evidence_gate`, and its case tree names V70 and V74 instead. The residual risk is documentary: V75 still requires `TD6-A3-Q2-B3-BOUNDARY-ROUTES-V68 PASS`, whose body asserts those stale dependencies.
+
+**V46 erratum vs V74.** V75 `require()`s the erratum sentence
+
+> `` `C=-5U^2,D(U)` is the precise remaining staged-N13 source-DAG debt ``
+
+and then consumes V74 as closing that same line. That is a freeze-time marker, not a current hole, **provided V73/V74 are accepted**. It is not a staged-N13 shortcut in the case tree; it is a confusing pin of a superseded sentence.
+
+**V74 / V73.** Intended to replace V45’s abstract-N13 identity by an original-source DAG on `V=0,C=-5U^2,D(U)`. V73 hostile review exists only as `/Users/dc/code/math/jc2/xmodel/td6_v73k_hostile_review_20260825.log`, verdict `CONFIRMED_WITH_REPAIRS`, with a required custody repair of a predecessor q-prime control. V75 does not pin that review, only V74’s `line_open_DU_source_theorem=V73`.
+
+**V33.** Still the correct theorem for `U=0 ∩ D(C)` (`CONFIRMED_WITH_REPAIRS` in `/Users/dc/code/math/jc2/xmodel/td6-c1-c2-c3-q2-beta-u-zero-review-grok-20260825.md`). V75 never pins it. Replacing “stale V33 whole-`U=0`” by “V70-whole-U-zero” **drops** the one V33 open that `B3=0` actually needs.
+
+---
+
+## I. Review status and what V75 actually pins
+
+| Package | Independent review | What V75 gates |
+|---|---|---|
+| V66 | **CONFIRMED** (bundled `evidence/v66/review.md`, copy of grok review) | `endswith("CONFIRMED")` **and** many stdout markers |
+| V67 | **CONFIRMED** (bundled review + both component stdouts) | same |
+| V68 | **CONFIRMED** as a standalone line; appendix continues after the verdict | `"CONFIRMED" in splitlines()` plus two phrases; **not** last-byte |
+| V70 | **CONFIRMED** | `endswith("CONFIRMED")` plus substrings `"Whole raw \`U=0\`"` and `"fixed source-typed A3 q2-beta section"`. **No V70 stdout.** |
+| V46 | **CONFIRMED_WITH_REPAIRS** | `endswith("CONFIRMED_WITH_REPAIRS")` + stdout + erratum phrases |
+| V33 | **CONFIRMED_WITH_REPAIRS** on `U=0 ∩ D(C)` | **not pinned** |
+| V45 | D(U) P12/abstract-N13 only; not original-source | **not used** (replaced by V73/V74) |
+| V73 | **CONFIRMED_WITH_REPAIRS** in adapter **log only**; `xmodel/td6_v73k_hostile_review_20260825.md` was never written | **not pinned**; V74 stdout names it |
+| V74 | **pending** (V75 xmodel: “hostile review pending”) | stdout markers only |
+| V75 | **pending** | n/a |
+
+V75 pins *copies* of the V66/V67/V68/V70/V46 review files, not merely the token, but the live asserts are substring/endswith checks. V68 is deliberately weaker (`CONFIRMED` anywhere as a full line) because of the residual-obligations appendix. V70 is token-matched into a “whole `U=0`” claim whose supporting composition includes unpinned V33.
+
+V70 producer itself is explicit (`td6-c1-c2-c3-q2-beta-u-h-zero-v70-aws-20260825.md`):
+
+> “Together with the hostile-reviewed V33 theorem on `U=0,C!=0`, these are a producer-exact three-piece constructible cover of the whole raw `U=0` divisor.”
+>
+> `V(U) = [V(U) ∩ D(C)] ∪ [V(C,U) ∩ D(V)] ∪ V(C,V,U)`
+>
+> “The first piece is the corrected, hostile-reviewed V33 scope; the last two are V70. Restoration of a whole-`U=0` theorem is review-gated.”
+
+V70 *producer certificates* are only `C=U=0 ∩ D(V)` and the origin. `C=U=0 ∩ D(V)` is **off** `B3=0` (`B3=V^4`).
+
+---
+
+## Holes (severity)
+
+1. **Load-bearing: `U=0` leaf is not V70.** `B3|_{U=0}=V^4`, so `B3=0 ∩ U=0` is the C-axis `{V=U=0}`. Origin is V70 origin. `{V=U=0, C≠0}` is inside V33’s `U=0 ∩ D(C)` (complete chart `C^3`, no `V` denominator). V75 names this leaf `V70-whole-U-zero`, pins no V33 stdout/review, and pins no V70 stdout. Token `"Whole raw \`U=0\`"` in the V70 review refers to the **three-piece union with V33**. This is the missing stratum.
+
+2. **V74 is an unreviewed union, and V73 is a black box.** V75 treats V74 as a closed emptiness leaf. V74 is producer-exact, review pending, and only marker-audits V73. V73’s review is a log with `CONFIRMED_WITH_REPAIRS` plus a required control-provenance repair. Not a staged-N13 shortcut if V73K is the identity that ran; it is an incomplete review pin.
+
+3. **V68 listed as a leaf in the charge, absent from omission controls.** Routing lemma, independently replayed. Stale V33/V45 pins remain inside the required V68 PASS. Not an algebraic gap if (1) is repaired.
+
+4. **Documentary contradiction.** V75 requires the V46 erratum to still call `C=-5U^2,D(U)` “the precise remaining staged-N13 source-DAG debt” while claiming V74 closed it.
+
+5. **Non-holes.** V66 C-factors are `t`, not raw `C`. `D(U0 V0)` is not a V66 hole. V67 `w=0` is origin or V74. `x=-5`, `t=0`, `t=2` arguments in `case_tree_gate` match the algebra on `U≠0,V≠0`. Overlaps among the six named leaves are empty-on-empty except origin.
+
+---
+
+## Strongest statement that actually holds
+
+In the fixed source-typed A3 q2-beta section, affine `B3=0` decomposes as
+
+```text
+{V=U=0}
+  ∪ {V=0, C=-U^2, D(U)}
+  ∪ {V=0, C=-5U^2}          # including origin
+  ∪ {U≠0, V≠0, 2t-1=0}
+  ∪ {U≠0, V≠0, t^2-4t+2=0}
+  ∪ {U≠0, V≠0, t(t-2)(2t-1)(t^2-4t+2)≠0}.
+```
+
+Emptiness of the last five pieces is the reviewed/producer chain V46, V73∪V70-origin (packaged as V74), V67, V66, with V75 independently discharging `x=-5`, `t=0`, `t=2` on `D(UV)`. Emptiness of `{V=U=0}` is V33 on `C≠0` plus V70 origin, **not** V70 alone. V68 is a routing lemma whose V33/V45 targets are superseded. The listed set V66/V67/V68/V70/V46/V74 is therefore **not** a complete overlap-safe constructible decision tree for `B3=0` until V33 is restored as an explicit `U=0 ∩ D(C)` leaf (or V75 pins the V70∘V33 composition with V33 artifacts), and until V74/V73 are review-gated rather than marker-gated.
+
+**Required repair for a whole-`B3=0` union:** add V33 (`U=0 ∩ D(C)`) as an owned leaf with stdout+review pins; restrict the V70 leaf to origin (and optionally the unused `C=U=0 ∩ D(V)`); stop treating V68 as an emptiness leaf; pin V73 review (or a repaired V74 review) rather than V74 PASS strings alone; stop requiring the superseded “remaining staged-N13 debt” sentence as if it were current atlas state.The union algebra is exact; the load-bearing gaps are custody and review-filing, not a missing `B3=0` stratum. Findings follow from independent expansion and source/review inspection. No producer, `verify.py`, or CAS was run. Stored `PASS`/`CONFIRMED` strings are not treated as proofs.
+
+---
+
+# Hostile review: repaired TD6 V74/V75 `B3=0` atlas
+
+Surfaces read:  
+`cases/td6_c1_c2_c3_q2_b3_atlas_union_repaired_v75_aws_20260825/`,  
+`xmodel/td6-c1-c2-c3-q2-b3-atlas-union-repaired-v75-aws-20260825.md`,  
+V73 package `cases/td6_c1_c2_c3_q2_cminus5_previous_x11_v73_aws_20260825/` and the unpublished V73 review draft in `xmodel/td6_v73k_hostile_review_20260825.log`, plus the named V66/V67/V68/V70/V46 reviews.
+
+---
+
+## Findings
+
+**1. [Confirmed] V74’s scheme cover of the raw line is exact.**  
+On `V=0`, `C=-5U^2` one has `Q[C,V,U]/(V,C+5U^2) \cong Q[U]`, and  
+`Spec Q[U] = D(U) \cup V(U)`.  
+The closed fibre is `(C,V,U)=(-5U^2,0,U)` at `U=0`, i.e. the origin: `(V, C+5U^2, U)=(C,V,U)`. V73 is scoped to `D(U)` only. Reviewed V70 origin (`source_center=C=V=U=0`, complete denominator `(1)`, stdout SHA `90df496c…`) empties that unique closed point. Origin is enough for this line; V33 and V70 `u-h-zero` are not required here.
+
+**2. [Medium] V74 does not prove that cover. It marker-gates it.**  
+`replay_v74.py` is a ~40 ms string checker. The substitution is Python `{"C": -5*0**2, "V": 0, "U": 0}`. The cover is a tautological two-element set. Omission “controls” remove dictionary keys `generic_U_nonzero` / `origin_U_zero`. V73 source (`replay_v73.py`, `dcaa920a…`) is not in the V74 tree; only theorem stdout/DAG/identity/TSVs are pinned. Soft OR-gate accepts either V73K aggregate markers or a predecessor per-edge banner. `whole_raw_Cminus5_line_all_beta_empty=true` is printed from that composition, not recomputed.
+
+**3. [Confirmed] Coefficient-wise raw `B3`, weighted lift, and line pencil.**  
+Independent expansion in `Q[C,V,U]` and `Q[x,y]` / `Q[x,t]`:
+
+```text
+B3 = 4C²U² - 4C V²U + 24C U⁴ + V⁴ - 20 V²U³ + 20 U⁶
+B3|_{V=0} = 4U²(C+U²)(C+5U²)
+b(x,y) = 4x² - 4xy + 24x + y² - 20y + 20
+B3(C,V,U) = U⁶ b(C/U², V²/U³)     (wt(C,V²,U)=(2,3,1))
+y = t(x+5)  ⇒  b = (x+5)·((t-2)² x + 5t² - 20t + 4)
+b(-5,y) = y²
+t=0  ⇒  b = 4(x+1)(x+5)
+t=2  ⇒  b = -16(x+5)
+```
+
+V75’s lift loop sends monomials of `b` to `(xdeg, 2 ydeg, 6-2xdeg-3ydeg)` and asserts equality with `B3`. The `t=0`/`t=2` specializations match the displayed coefficient dicts.
+
+**4. [Confirmed] The six constructible leaves cover affine `B3=0`, overlap-safely, once the leaves hold.**  
+`B3|_{U=0}=V⁴`, so `B3=0 ∩ {U=0}` is the C-axis `{U=V=0}`. On `D(U)∩{V=0}` the two lines are V46 and V74. On `D(UV)`, `x=-5` forces `b=y²≠0`; `t=0` forces `y=0` hence `V=0`; `t=2` forces `b=-16(x+5)≠0`. Remaining `B3=0` points lie in the V66 birational chart
+
+```text
+U0 = w²(t-2)²/(16t),  V0 = w³(t-2)²/(16t),
+C0 = w⁴(t-2)²(-5t²+20t-4)/(256 t²),
+```
+
+whose inverse on that open is `w=V/U`, `t=y/(x+5)`. Finite factors `2t-1` and `t²-4t+2` are V67 on `D(w)` (extra branches `x=19/9` and `x=3`, both `V≠0`). Chart poles `t=0`, `w=0`, `t=2` route to `U=0` and the two `V=0` lines (V68, independently re-proved in V75). Overlaps are empty-on-empty. V66 ring names `(C,V)` are the chart parameters `(t,w)`, not raw `C`; there is no raw-`C=0` hole in V66.
+
+**5. [Medium] V75’s `U=0` leaf is the V70 three-piece cover, loaded only as a review token.**  
+V75 prints `V70_whole_U_zero_source_theorem_reviewed=true` from
+
+```python
+assert v70_review.rstrip().endswith("CONFIRMED")
+require(v70_review, ("Whole raw `U=0`", "fixed source-typed A3 q2-beta section"))
+```
+
+The pinned file (`2a352086…`) is the real V70 review and does restore
+
+```text
+V(U) = [V(U)∩D(C)] ∪ [V(C,U)∩D(V)] ∪ V(C,V,U)
+```
+
+with erratum-corrected V33 on `U=0∩D(C)`, V70 `u-h-zero` on `C=U=0∩D(V)`, and origin. That cover includes the C-axis `{U=V=0,C≠0}`. V75 does not pin V33, `u-h-zero.stdout`, or even V70 `origin.stdout`. Origin+V46+V74 alone would miss `{U=V=0,C≠0}`. The emptiness of that axis is therefore licensed only by accepting the hashed V70 review as a three-piece theorem, not by producer bytes in the V75 closure. This is reviewed V70, not the withdrawn V33 whole-`U=0` claim.
+
+**6. [Confirmed] Consumed leaf scopes match the tree; stale V45 / staged-N13 are not used as emptiness theorems.**
+
+| Leaf | Status | Exact open used by V75 |
+|---|---|---|
+| V66 | grok `CONFIRMED`; stdout `c7c3342a…` | `B3=0`, `D(t w (t-2)(2t-1)(t²-4t+2))` |
+| V67 | grok `CONFIRMED`; both factor stdouts | `2t-1=0` and `t²-4t+2=0` on `D(w)` |
+| V68 | grok `CONFIRMED` (appendix after the verdict line) | route lemma only |
+| V70 | grok `CONFIRMED` | whole `U=0` as the three-piece cover above |
+| V46 | grok `CONFIRMED_WITH_REPAIRS`; stdout `01fa0f2e…` | `V=0,C=-U²,D(U)`, first-J, independent of N13 |
+| V73 | producer-exact; official `review.md` absent | `V=0,C=-5U²,D(U)`, residual `3884ec0c…` → `-1` |
+| V74 | this union | whole raw `C=-5U²` line |
+
+V73 `return`s before the dead V72 current/N13 body. V46 returns before copied P12/N13. V75 requires the V46 erratum sentence that `C=-5U²,D(U)` was the remaining staged-N13 debt, then pays that debt with V74/V73 rather than V45. V68 stdout still has `U_zero_direct_source_dependency_verified` / `Cplus5_direct_source_dependency_verified` (V33/V45 pins); V75 does not require those three lines and does not use them as leaves.
+
+**7. [Medium] V73 has no filed hostile-review artifact.**  
+Producer status is still “hostile review pending.” `xmodel/td6_v73k_hostile_review_20260825.md` does not exist; the adapter log contains an unpublished draft ending `CONFIRMED_WITH_REPAIRS`, whose only required repair is that `evidence/control/box03-qprime` is a predecessor six-odd-row/per-edge producer, not a V73K `--omit-direct-qprime` run. That control is not consumed by V74/V75. Source inspection in this pass agrees with that draft on center overwrite `(-5U²,0,U)`, outer `range(40)` intercept of `('X-1',0..11)`, unit residual on `D(U)`, original previous-plus-first convolution, lex leading-monomial controls, and U-only ledgers. A v2 custody-repair package exists separately and is not in the V75 freeze.
+
+**8. [Low] V68 is a routing lemma, not a `B3=0` leaf; V75 omission controls are label games.**  
+`case_tree_gate` owners are V70, V46, V74, V67-half, V67-quad, V66. Each omitted owner leaves a genuine nonempty constructible stratum (C-axis, `C=-U²`, `C=-5U²`, a finite-factor curve, or the generic chart). The implementation is a set-difference on hardcoded strings, not a geometric point. V68 is load-bearing as the reviewed translation of `{t,w,t-2}` into those raw strata; V75 also replays the polynomial identities. Omitting V68 would not uncover a new `B3=0` point if V75’s own `route_algebra()` is kept.
+
+**9. [Low] Token gates are weaker than the hash pins.**  
+`endswith("CONFIRMED")` is true of `NOT_CONFIRMED`. V68 accepts any standalone line `CONFIRMED` because the file continues after the verdict. Actual pinned reviews are the intended files (V70 `2a352086…`, V46 `2e76f499…`, V66/V67/V68 copies match their xmodel reviews). SOURCE.sha256, not the substring tests, is what authenticates them.
+
+**10. [Confirmed] Dual-host checker closure, with a README-only failure firewall.**  
+`replay_v74.py` = `fe25b93a…`, `replay_v75.py` = `0c9cb1fe…` on both hosts. Canonical stdout (drop `aws_run_tag=` / `aws_hostname=`) agrees. V74 SOURCE lists differ only in per-host V73 stdout (`d4bb078c…` vs `35b88e5a…`); V75 SOURCE lists differ only in per-host V74 stdout (`69b06c29…` vs `df2810f7…`). All four `rc` files are `0\n`. Tags `td6_v74_retry_bash_…T2139Z` and `td6_v75_repaired_atlas_d_…T2146Z` match the “later clean run” story; `source_path` still names autochain `T2110Z` / `v75c` trees. Failed invocations are not in this freeze; the claim that they died on provenance markers rather than algebra is README-asserted, not freeze-witnessed. `verify.py` is marker/custody only.
+
+**11. [Confirmed] Scope firewall holds.**  
+Stdout and source print `scope=fixed_source_typed_A3_q2_beta_section_only` and deny whole A3, TD6, SP-2, landing, and JC2. V74 also denies whole `B3`. Nothing here licenses a transverse-center, other-modulus, landing, or JC2 statement.
+
+---
+
+## Strongest exact claim that survives
+
+In the already fixed, source-typed A3 section with `q_β=t+β t²+t²⁵`, the raw affine divisor `B3=0` is empty for every β, as the constructible union of:
+
+- the reviewed V70 three-piece cover of raw `U=0` (needed because `B3|_{U=0}=V⁴`);
+- reviewed V46 on `V=0`, `C=-U²`, `D(U)`;
+- V73K’s original-row unit on `V=0`, `C=-5U²`, `D(U)` (residual `3884ec0c…`, normalized `-1`, only `U` localized) with reviewed V70 origin at the closed point (V74);
+- reviewed V67 on `2t-1=0` and `t²-4t+2=0` over `Q(w)`;
+- reviewed V66 on `B3=0` in `D(t w (t-2)(2t-1)(t²-4t+2))`;
+
+together with the polynomial identities `b(-5,y)=y²`, `t=0 ⇒ y=0`, and `t=2 ⇒ b=-16(x+5)` on `D(UV)`.
+
+This is a dependency union in that one section. It is not whole A3, another TD6 modulus, TD6, SP-2, a landing theorem, or JC2.
+
+---
+
+## Required repairs
+
+1. **File a canonical V73 review** (or consume the v2 custody-repair package) so V74’s `D(U)` leaf is not only a marker bundle plus an unpublished log. Record that the q-prime control is predecessor evidence, not a V73K omit-run. No change to the positive `('X-1',11)` identity is required.
+
+2. **Pin the three V70-cover producer bytes in V75** (V33 `U=0∩D(C)`, V70 `u-h-zero`, V70 origin), or pin a dedicated whole-`U=0` union stdout. Do not license the C-axis solely by substring search in the V70 review.
+
+3. **Replace `endswith("CONFIRMED")` / “`CONFIRMED` in lines” by equality with a standalone verdict line.** Same for V68.
+
+4. **Stop requiring the V46 erratum’s unpaid-`C=-5` sentence as a live V75 gate**, or restate it as historical V45/V46 status superseded by V73/V74.
+
+5. **Recommended:** pin `replay_v73.py` in V74; drop the per-edge OR-gate; replace dict-key omission controls by named constructible witnesses; assert that V68’s `U_zero`/`Cplus5` pins are not V75 authority.
+
+No algebraic change to `B3`, the pencil, or the six-leaf case split is required.
+
+---
+
+CONFIRMED_WITH_REPAIRS
+adapter exited 0 but required report is absent: xmodel/td6_v75_b3_union_hostile_review_20260825.md

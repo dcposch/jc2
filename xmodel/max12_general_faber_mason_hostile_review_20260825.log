@@ -1,0 +1,55 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll inspect both artifacts from first principles, without modifying or executing them, and start by locating the producer writeup, the independent review, and the claimed SHA-256.I have the two target files and the SHA-256 pointer. Next I’ll read them in full and check the hash without changing anything.The hashes match. I’ll now check Faber conventions, the Mason–Stothers hypotheses, and nearby client writeups for any hidden gaps.The (9,12) Mason–Stothers writeup is the special case this theorem generalizes. I’ll read that producer and its hostile reviews next, looking for issues that still apply.SHA-256 of the producer matches the charged target `7d5271e8caf6d6d071819e8b2a670ac79d2063882a90d4916060b3e4deb95919`. The independent review was not used as evidence.
+
+## Findings
+
+**1. Spectral degree bound — severity: none.**  
+For monic depressed `f` of degree `m≥2` one has a unique formal inverse root `z(w)=w+O(w^{-1})` in `L((w^{-1}))` with `f(z(w))=w^m`. Vanishing of `r_1,…,r_{m-1}` is exactly `T=O(w^{-m})`. The binomial expansion
+
+```text
+W(z(w))=(w^n-T)^a-w^N=sum_{j=1}^a binom(a,j) w^{n(a-j)}(-T)^j
+```
+
+has `j`-th summand of order at most `N-j(n+m)`, strictly decreasing in `j`, so the series is `O(w^{N-m-n})`.
+
+A nonzero polynomial `P=c z^k+⋯` with `c≠0` cannot hide a larger degree under `z(w)=w+O(w^{-1})`: `z(w)^k=w^k+O(w^{k-2})` (the `O(w^{-1})` correction never produces `w^{k-1}` from the leading term), and every lower `z`-power contributes at most `w^{k-1}`. The coefficient of `w^k` is exactly `c`. Thus `deg_z W=deg_w W(z(w))` whenever `W≠0`, and `deg_z W≤D:=N-m-n`. If `D<0` the series has only negative powers, so `W=0`. This includes both divisibility edges: `a=1` gives `W=-T` and `D=-m`; `b=1` gives `D=-n`.
+
+**2. Mason–Stothers — severity: none.**  
+It remains to treat `D≥0`, equivalently `(a-1)(b-1)≥1`. For nonzero `W`, the monic `D_0=gcd(g^a,f^b)` of degree `e` divides `W`, so `0≤e≤deg W≤D=N-m-n<N`. The apparent edge `e=N` is impossible on this range; independently, a monic degree-`N` common divisor of the two monic degree-`N` powers would force `W=0`.
+
+After `A=g^a/D_0`, `B=-f^b/D_0`, `C=-W/D_0` one has `A+B+C=0`. Pairwise coprimality: `gcd(A,B)=1` by construction of `D_0`, and any prime dividing two of `{A,B,C}` divides the third. Signs do not affect degrees, radicals, or coprimality. Then `deg A=deg B=N-e` and `deg C≤D-e<N-e`, so the Mason maximum is `N-e`. Characteristic zero makes the Wronskian form of Mason–Stothers available over `L` (or after scalar extension to an algebraic closure, which does not change degrees or coprimality). Primes of `A` divide `g` and primes of `B` divide `f`, so `deg rad(AB)≤deg rad(fg)≤m+n` without any squarefree hypothesis on `f` or `g`, while `deg rad(C)≤deg C≤D-e`. Pairwise coprimality adds the radical degrees:
+
+```text
+N-e ≤ deg rad(ABC)-1 ≤ (m+n)+(D-e)-1 = N-e-1.
+```
+
+A nonzero constant `W` forces `e=0` and a constant `C`, which contributes no radical roots; the displayed bound remains valid (and is even stronger if one omits the `D-e` slack). Contradiction in every remaining case, so `W=0`.
+
+**3. UFD and depression over the same field — severity: none.**  
+From `g^a=f^b` in the UFD `L[z]` and `gcd(a,b)=1`, each monic irreducible `p` satisfies `a∣v_p(f)` and `b∣v_p(g)`. The monic product `K=∏ p^{v_p(f)/a}` therefore lies in `L[z]`, has degree `d`, and is the unique monic solution of `f=K^a`, `g=K^b`. No algebraic closure is required: one never extracts coefficient roots, only lower powers of irreducibles already in `L[z]`. The coefficient of `z^{m-1}` in `K^a` is `a c_{d-1}`; characteristic zero makes `a` invertible in `L`, so depression of `f` forces `K` depressed.
+
+**4. Converse from the Faber definition — severity: none.**  
+If `f=K^a` with `K` monic depressed of degree `d`, the unique monic formal `m`-th root `w=f(z)^{1/m}` coincides with the unique monic formal `d`-th root `K(z)^{1/d}`. The inverse root therefore satisfies `K(z(w))=w^d` exactly in `L((w^{-1}))`, hence `K^b(z(w))=w^n` with `T=0`. The given characterizing identity says that the unique monic degree-`n` polynomial with this expansion is `F_n(f)`, so `g=K^b` and every tail vanishes. This is a formal Laurent identity, not an analytic branch at infinity.
+
+**5. Scheme boundary — severity: none.**  
+Geometric points of `{r_1=⋯=r_{m-1}=0}` over an algebraic closure are exactly the points of the power locus, by (2)–(4) applied to the residue field. The power map `A_L^{d-1}→A_L^{m-1}` is a closed immersion: in descending order, the coefficient of `z^{m-d+j}` in `K^a` is `a c_j` plus a polynomial in `c_{j+1},…,c_{d-2}`, and `a∈L^×` gives a triangular polynomial inverse on the high `d-1` coordinates, so the image is the graph of a polynomial map and is a closed prime copy of `A_L^{d-1}`. Nullstellensatz over the algebraic closure, followed by contraction along the faithfully flat extension `L→\overline{L}`, yields that the radical of `(r_1,…,r_{m-1})` is this prime. The producer never claims the tail ideal itself is reduced.
+
+The parameter `c_j` has weight `d-j`. After depression the weights are `2,3,…,d`, so the reduced weighted projectivization is `P(2,3,…,d)` for `d≥2`. For `d=1` the only monic depressed `K` is `z`, the affine locus is the origin of `A_L^{m-1}`, and `Proj` of that cone is empty.
+
+**6. Clients and Rees firewall — severity: none.**  
+`(m,n)=(9,12)` gives `(d,a,b)=(3,3,4)`, `N-m-n=15`, first eight tails, `K=z^3+pz+c`, reduced support `f=K^3`, `g=K^4`, projectively `P(2,3)`.  
+`(m,n)=(8,12)` gives `(d,a,b)=(4,2,3)`, `N-m-n=4`, first seven tails, depressed monic quartic `K`, reduced support `f=K^2`, `g=K^3`, projectively `P(2,3,4)`.  
+Both have `a,b≥2`, so Mason is needed and applies. The producer correctly refuses to identify a weighted Rees exceptional fibre with these ordinary unloaded tails until that client proves that lower Faber terms and loads acquire positive Rees weight and vanish, and that the descended exceptional rows are the ordinary first `m-1` tails. Reduced support is not promoted to scheme reducedness, lifting, exclusion, rationality, Taylor polynomiality, a passport closure, or JC2.
+
+**Wording nit, not a repair.** The statement uses a monic degree-`n` Faber polynomial rather than writing `n≥1`. That convention is already in the characterization.
+
+## Strongest confirmed theorem
+
+Over a characteristic-zero field `L`, for monic depressed `f` of degree `m≥2` and `g=F_n(f)` with `n≥1`, vanishing of the first `m-1` Faber tails is equivalent to the existence of a unique monic depressed `K∈L[z]` of degree `d=gcd(m,n)` with `f=K^{m/d}` and `g=K^{n/d}`. The reduced zero scheme of those tails in the affine space of depressed monic degree-`m` polynomials is the closed prime power locus `A_L^{d-1}`; for `d≥2` its weighted projectivization is `P(2,3,…,d)`, and for `d=1` the projective locus is empty. In particular this is the reduced support of the ordinary unloaded `(9,12)` eight-tail system and of the ordinary unloaded `(8,12)` seven-tail system. The tail ideal need not be reduced, and the identification with a Rees exceptional fibre is not included.
+
+## Required repairs
+
+None.
+
+CONFIRMED
+adapter exited 0 but required report is absent: xmodel/max12_general_faber_mason_hostile_review_20260825.md

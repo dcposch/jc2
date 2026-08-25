@@ -5838,3 +5838,255 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   verdict.  V74/V75 source/manifest hardening is ready but awaits a valid V73
   artifact.  The Mac has no campaign CAS, solver, Lean, or exact-algebra
   worker; all substantive computation is AWS-only.
+
+## 2026-08-25 21:30Z EVENT — D1 DEGREE SPLIT CONFIRMED / EXCEPTIONAL SUPPORT REDUCED
+
+- Grok hostile review SHA `423d0615...` independently `CONFIRMED` producer
+  SHA `14240376...`: after the polynomial source shear makes `R0` regular at
+  `s=1`, the inequalities `d_i<=3(9-i)` force exact ordinary total degrees
+  `(27,36)`.  GGV/Heitmann excludes that whole sector because its gcd is 9.
+  Every live cyclic-D1 counterexample client is therefore strict weighted
+  coefficient infinity.
+- Producer SHA `de7dd223...`, independent same-model proof SHA
+  `a7bd6275...`, and different-model hostile review SHA `a274c8d8...`
+  (`CONFIRMED`) classify the reduced exceptional support by a
+  CAS-free spectral/Mason argument: eight vanished tails force
+  `deg(g^3-f^4)<=15`, polynomial abc forces `g^3=f^4`, and UFD/depression give
+  exactly `f=(z^3+pz+r)^3`, `g=(z^3+pz+r)^4`.  Thus
+  `E_red=P(2,3)`.  Rational pole denominators reduce to `1` generically,
+  `1 or 2` on `r=0`, and `1 or 3` on `p=0`; the numerator remains unbounded.
+  The theorem is now promoted to the trust ledger, at reduced-support scope.
+- The first AWS smoke of the exceptional compiler failed closed before
+  Singular on an unclosed Python bracket.  The immutable failure is retained;
+  a nonmutating hash-anchored successor will use AWS only and target
+  nilpotent/embedded thickness plus normal deformation, not rediscover the
+  now-proved reduced support.  Local process audits show no campaign heavy
+  worker and a five-second sample showed zero swapins/swapouts.
+- TD6 V73 H/J/K and both V74/V75 watchers remain live on Box02/Box03 without
+  a proof-grade terminal.  The exact intended chain is V73 source-unit on
+  `V=0,C=-5U^2,D(U)`, V74 whole-line closure with reviewed V70 at `U=0`, then
+  V75 whole raw `B3=0` inside the fixed source-typed A3 q2-beta section.  No
+  whole-A3, TD6, SP-2, landing, or JC2 claim follows.
+
+## 2026-08-25 22:25Z EVENT — GENERAL FABER SUPPORT PROMOTED / PARALLEL BOUNDARY GATES
+
+- General producer SHA `7d5271e8...`, same-model reconstruction SHA
+  `c95524a0...`, and different-model hostile review SHA `29bd2184...`
+  (`CONFIRMED`) prove: for characteristic-zero `g=F_n(f)`, the first `m-1`
+  unloaded tails vanish exactly on the reduced common-`gcd(m,n)`-root locus.
+  The proof is the spectral degree bound for `g^a-f^b`, Mason--Stothers,
+  UFD, and a triangular inverse to the power map.  The radical is prime
+  `A^(d-1)`, with weighted `Proj P(2,...,d)`.  This includes both common
+  cubic `(9,12)` and common quartic `(8,12)` clients and classifies neither
+  nilpotents nor deformations.
+- D1 design SHA `bdb369f1...` and different-model review SHA `d6e54b5b...`
+  (`CONFIRMED`) freeze the strict-slope unit-ideal test.  It strips the three
+  affine loads before weighted substitution, uses `Lambda=q^3*rho`, keeps
+  `k,mu,nu` polynomial, saturates by `q*rho` before the boundary cut, and
+  saturates there by the full irrelevant ideal.  Box02 normal/global and r6d
+  B/global runs are independently active at `START_K_SATURATION`.  Until an
+  exact endpoint appears, no unit/nonunit or D1 claim is licensed.
+- TD6 V73's repaired original-source theorem on
+  `V=0,C=-5U^2,D(U)` is canonical-review `CONFIRMED` (repair/review SHAs
+  `624b80aa...` / `6cd2ebd8...`).  Repaired V57 generic-open and V75 whole-
+  `B3` union reviews are now live in parallel; V76 whole fixed-A3 review is
+  review-gated on both.  The post-V76 source-modulus inventory finds a finite
+  32-slot same-root deformation block and recommends one simultaneous all-q
+  original-row/Fitting gate rather than serial q3/q4 lanes; this remains
+  producer strategy, not a theorem.
+- Independent live research continues on the D1 common-cubic normal cone and
+  discriminant, the `(8,12)` common-quartic coefficient-infinity atlas, and
+  TD6 transverse source moduli.  All substantive algebra is on AWS.  A fresh
+  local audit found no campaign algebra engine; allocated swap is historical
+  and the five-second delta was 12 swapins/0 swapouts.
+
+## 2026-08-25 22:45Z EVENT — `(8,12)` TERMINAL DIVISORS PROMOTED / NEW GATES
+
+- Producer SHA `1cd824c9...` and different-model hostile review SHA
+  `db67f16d...` (`CONFIRMED`) promote the whole nontrivial `(8,12)` terminal
+  theorem.  The order-four row is `8hA'+6h'A=j`; the order-two row is
+  `8vA'+4v'A=j`.  Exact-differential orders exclude `U=1`, force a finite
+  root of multiplicity at least five/six, and leave at order-two `U=2` only
+  the `[6,2]` profile with `T^2=(x-b)/(x-a)` and
+  `r7=j*T/(4(b-a))`.  These are necessary conditions, not realized sections.
+- The source-typed AWS compiler for that finite `[6,2]` client passed cleanly
+  (`PASS-MAX12-812-ORDER2-U2-62-TAIL-COMPILER`, all-tail SHA `6eed03d4...`).
+  It establishes exact row emission, not unit ideal or exclusion.  The larger
+  `(8,12)` source audit received `REPAIR` only in §7: coefficient directions
+  remain zero at first order, but load directions are negative parts of
+  `K^(j/4)` and need not vanish.  Its immutable erratum is under fresh review;
+  the surviving core is not yet promoted as a whole.
+- Two provisional structural attacks now run behind those reviews.  In D1,
+  the common-cubic squarefree stratum appears obstructed by the order-20 row,
+  potentially leaving only the double-root projective point; hostile review
+  and a separate discriminant computation are mandatory before promotion.
+  In `(8,12)` order four with `mu4=0`, Davenport--Stothers equality plus the
+  terminal divisor may force a divisor-19 contradiction; this too is being
+  frozen and reviewed, not asserted as a theorem here.
+- TD6 repaired V57 generic and V75 whole-`B3` pieces are now independently
+  `CONFIRMED`; V76 reviews their claimed whole fixed-A3 union.  A tempting
+  contracting-dilation shortcut to the fixed slice fails because the source
+  normalization leaves only a finite boundary stabilizer and gives opposite
+  weights to retained moduli, so the next honest gate is simultaneous in all
+  remaining source jets.  Dual AWS q3-gamma runs agree on their exact
+  intermediate expressions and continue the source-support audit.
+- The Mac remains coordination-only.  Dual D1 characteristic-zero
+  saturations, the TD6 exact jobs, the `(8,12)` compiler, and the Lean bridge
+  all run on AWS; the Lean bridge has passed the 24-theorem build/axiom gate
+  and is finishing its standalone import probe.
+
+## 2026-08-25 22:52Z EVENT — TD6 FIXED SECTION CLOSED / TRANSVERSE GATE SELECTED
+
+- V76 producer SHA `0281a5fc...`, nonmutating surface repair SHA
+  `1fadddd1...`, and unique-output hostile review SHA `7eff6c61...`
+  (`CONFIRMED`, no required repair) exclude the complete fixed source-typed
+  A3 family `q=t+beta*t^2+t^25` for every `(C,V,U,beta)`.  The theorem glues
+  V57/V70/V71/V75 over the exact cover
+  `D(UHB3) union V(U) union V(H) union V(B3)`.  It is not a transverse,
+  whole-TD6, SP-2, landing, or JC2 result.
+- The dual Box02/Box03 V77 q3-gamma jobs both ended rc0.  They agree on all
+  mathematical expression hashes: rank `3470/3602`, one gamma RHS pivot,
+  four raw gamma monomials, and a three-monomial affine reduced gamma
+  remainder.  The base remainder remains `-k/50`, but gamma does not preserve
+  it as a scalar; later compatibility/source syzygies are genuinely needed.
+  Host-dependent full stdout/time hashes differ and are not used as a byte-
+  identity claim.
+- The failed contraction idea is now a negative control: source normalization
+  leaves only a finite boundary stabilizer and opposite weights among retained
+  moduli.  TD6 therefore advances directly to a simultaneous all-q
+  original-row/Fitting gate over the finite 32-slot transverse block, with
+  the exact denominator stratification retained.  This successor remains
+  producer work until frozen dual-AWS endpoints and hostile review.
+
+## 2026-08-25 23:02Z EVENT — `(8,12)` SOURCE AUDIT PROMOTED / DUAL SATURATION
+
+- The repaired source audit is now canonical: original SHA `092dfb6d...`,
+  immutable erratum SHA `aa90155e...`, and unique-output hostile review SHA
+  `f45836ca...` with verdict `CONFIRMED`.  The only discarded mathematics is
+  the original §7 claim that `F_j(K^2)` is a pure power.  The correct load
+  derivative is `[K^(j/4)]_-`; its full or seven-row vanishing is equivalent
+  to the quartic square locus `c=0,p^2=4r`.
+- The review independently preserves the two Kummer source types, terminal
+  target, infinity residue, exact degree formula, Heitmann split, unloaded
+  exceptional fibre, common-quartic `P(2,3,4)` support, chart cover, and
+  strict-saturation firewall.  It explicitly preserves the rank-zero/order-
+  four and rank-at-most-three/order-two nontransversality warning.
+- The order-two `U=2,[6,2]` strict saturation now races the identical input
+  SHA `e3cbb667...` on r6d and Box03 under 256/192-GiB, four-hour caps.
+  Both are same-engine Singular 4.3.2 lanes; a normalized endpoint comparison
+  is required.  The order-four `mu4=0` Shioda/Hall divisor-19 elimination is
+  frozen at producer tier and under a separate hostile review.
+
+## 2026-08-25 23:06Z EVENT — `(8,12)` SATURATION V1 QUARANTINED
+
+- Before either V1 AWS race returned, source audit found that the emitted
+  polynomial ring contains the terminal constant `j`, while the saturation
+  omits the required open condition `j!=0`.  At `j=0` with all other loads
+  zero, the common-quartic family is a guaranteed spurious survivor.  Thus a
+  V1 nonunit would be predetermined and a V1 endpoint of either sign is not
+  proof-grade.
+- Both V1 Singular children on r6d and Box03 were stopped by their owner and
+  their exact sources/logs retained as negative controls.  This affects no
+  reviewed tail identity or raw exceptional support.  A nonmutating V2 must
+  add `j`-localization, freeze a new input hash, pass source review, and then
+  be dual-raced on AWS.  The independent Shioda/divisor review remains live.
+
+## 2026-08-25 23:10Z EVENT — ORDER-FOUR `mu4=0` ELIMINATED
+
+- The Shioda/Hall producer SHA `a5d40fd8...` and unique-output hostile review
+  SHA `a40827f9...` now give a canonical `CONFIRMED` theorem: every actual
+  order-four `(8,12)` Kummer trajectory with `mu4=0` is impossible, uniformly
+  in `U`.  The first six vanishing tails give an order-four
+  Davenport--Stothers equality triple; Shioda's unique Hall orbit makes
+  `r7` a nonzero scalar times a nineteenth power.  Terminal divisor orders,
+  the multiplicity-four residue obstruction, and degree balance force `h`
+  to be a fourth power, contradicting Kummer order four.
+- The same nineteenth-power divisor constraint excludes the order-two
+  `U=2,[6,2]` sub-stratum with all three Faber loads and all three constant
+  tail loads zero, because `r7=(j/4)T` has finite divisor orders `+1,-1`.
+  This optimization is theorem-level and logically independent of the V1
+  compiler quarantine.
+- Remaining `(8,12)` scope: order four `mu4!=0`; loaded order-two strict and
+  Taylor boundaries; order one; and bounded `U>=3`.  No full branch,
+  maximum-twelve, or JC2 conclusion is claimed.
+
+## 2026-08-25 23:13Z EVENT — D1 SQUAREFREE BOUNDARY ELIMINATED
+
+- Producer SHA `1b6e629a...` and unique-output hostile review SHA
+  `6883ef76...` (`CONFIRMED`) exclude every strict D1 coefficient-infinity
+  arc centred on the squarefree open of the common-cubic boundary.  Exact
+  normal division forces weights `v(Q)>=6,v(R)>=9`; through weight 20 all
+  negative layers reduce to a degree-at-most-five numerator over `K^2`, whose
+  first six tails are a unit-triangular coordinate system.  Cancelling the
+  exact row-3/row-6 targets then makes row eight zero, contradicting its unit
+  target.
+- The hostile review expressly checks that `k,mu,nu` are fixed constant-field
+  loads, that moving `p,c` is absorbed into the moving cubic/inverse, that
+  target coincidences do not rescue lower valuations, and that inverse or
+  denominator-`K^3` contamination starts at weight 21.  Zero-load strata and
+  all strict slopes are included.
+- Combining this with the common-cubic support theorem leaves only the
+  normalized double-root point `K=(z-1)^2(z+2)`, represented by `(-3:2)` in
+  weighted `P(2,3)`.  A displayed nilpotent identity proves why the
+  squarefree argument cannot cross that point.  The double-root local chart
+  is live on AWS; dual global saturations continue without blocking it.
+
+## 2026-08-25 23:16Z EVENT — TD6 V77 q3 CLAIMS QUARANTINED
+
+- V78's Box02 `p12` lane failed closed with a sparse-zero `KeyError` while
+  indexing an absent first-minor derivative.  Audit separately traced a
+  source mismatch to frozen V77: `configure_qd_gamma()` assigns
+  `EDual(0,1)` to `qd.B`, but `B` is the imported q2 coefficient.  A pure q3
+  line at `beta=0` must set `B=0` and vary only transport key
+  `('g','X',0,3)` plus the matching direct `Q_PRIME[2]` contribution.
+- V77 therefore computed a q2+q3 direction.  Moreover digest `c0730fa1...`
+  is the exact encoding of the zero E3 scalar, so the prose assertion that
+  the selected first-minor derivative was nonzero is independently false.
+  Its q3-specific derivative, rank, affine remainder, and source-support
+  interpretations are quarantined.
+  V77's unperturbed base identity and the canonical V76 fixed-q2 theorem do
+  not consume this adapter and remain valid.
+- The stopped V78 p12 endpoint is retained as an rc1 software negative
+  control, not a mathematical projection result.  The
+  separately assembled staged all-q lane uses corrected simultaneous typing
+  (`B=epsilon_2`) and remains live on AWS under a 32-GiB/12-hour cap.  No
+  transverse theorem will be promoted without explicit basis-vector and
+  original-row projection controls plus a corrected dual-host replay.
+
+## 2026-08-25 23:20Z EVENT — CORRECTED BOUNDARY JOBS LIVE ON AWS
+
+- D1 double-root package closure/freeze SHAs are `0e1669dc...` /
+  `ffe59d5d...`.  Box03 and r6d V3 Newton outputs agree byte-for-byte and
+  isolate the unique low-weight ray `alpha=2*beta`,
+  `Q1=q(z-1)(z+2)`, `R2=q^2/3`.  The next pure numerator modulo `K` is
+  `(q^4/243)(5L^2+18L+15)`, insensitive to the recorded Q2/R3 and scalar
+  target corrections.  A Box03 exact local ideal returned rc0, empty stderr,
+  basis size 101 and `VDIM=125`; an independent r6d order remains live.  This
+  is a finite local survivor scheme, not a formal/rational arc or D1 result.
+- The order-two `(8,12)` V2 freeze SHA is `f8b70380...`.  It adds the missing
+  `j`-saturation, passed source review SHA `b7666bb1...`, keeps the all-tail
+  hash `6eed03d4...`, and emits strict input SHA `021654e7...`.  Identical
+  source archive SHA `4d084b21...` now races on r6d and Box03 under four-hour
+  caps.  V2 deliberately does not fold in the divisor-19 optimization.
+- TD6 V77's two defects are frozen in erratum report SHA `4169eb1b...` and
+  case freeze `5723530b...`.  The corrected V78 ledger/freeze SHAs are
+  `0f54f23b...` / `1515dd88...`; only the Box03 staged simultaneous lane is
+  live.  Every heavy execution named here is remote AWS work.
+
+## 2026-08-25 23:28Z EVENT — EXACT NESTED LEAN CHECKPOINT PASSES ON AWS
+
+- Nested commit `5f7cc487f446a03c693f43ad81bae4da850b073b` was exported
+  with archive SHA-256 `a9a5b6ec...` and verified on r6d under Lean
+  `4.34.0-rc1`, Lake `5.0.0-src+3447a66`, with eight Lean jobs.  Both builds
+  and both project-specific axiom scripts returned `PASS`.
+- `gcd3-69-noncube` audited all 45 named solution theorems; the exact scope is
+  the aligned `(6,9)` noncube exclusion branch.  `max11-partial-y` audited
+  `Max11RouteClassification`, `Max11UniquePrimitive`,
+  `Max12FirstPrimitives`, and `MaxPartialDegreeElevenClosure`; its `Good`
+  predicate is abstract, so this is a formal composition certificate rather
+  than a standalone proof of its mathematical premises or of JC2.
+- Exact stdout/stderr, source-archive custody, explanation, and hashes are in
+  `cases/jc2_lean_final_5f7cc48_aws_verify_20260825/`.  The warnings about
+  `sorry` occur in challenge scaffolding, not in the audited solution
+  declarations.  This build was AWS-only under the campaign's hard local
+  compute prohibition.

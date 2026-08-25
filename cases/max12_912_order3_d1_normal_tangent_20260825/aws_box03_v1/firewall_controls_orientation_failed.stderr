@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jobs/max12_912_order3_d1_firewall_controls_20260825T224323Z_box03/repo/cases/max12_912_order3_d1_normal_tangent_20260825/verify_firewall_controls.py", line 217, in <module>
+    main()
+  File "/home/ubuntu/jobs/max12_912_order3_d1_firewall_controls_20260825T224323Z_box03/repo/cases/max12_912_order3_d1_normal_tangent_20260825/verify_firewall_controls.py", line 202, in main
+    "tail_profile_controls": tail_profile_controls(source),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jobs/max12_912_order3_d1_firewall_controls_20260825T224323Z_box03/repo/cases/max12_912_order3_d1_normal_tangent_20260825/verify_firewall_controls.py", line 137, in tail_profile_controls
+    raise FirewallControlFailure(("profile above diagonal", row, column))
+FirewallControlFailure: ('profile above diagonal', 2, 0)
