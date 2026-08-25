@@ -121,6 +121,23 @@ day or inserts the completed day directly below this preamble (see
 > every independent predecessor assertion separately.  No complete-mod-243
 > or all-depth map is claimed.
 >
+> A later source-first successor now gives the first reviewed **complete
+> fixed-D7 output-digit cones modulo 243** at the same three pinned Q3 fibres
+> `0000`, `0270`, and `0513`.  It writes
+> `F=F_*+27U+81V` with every coefficient of both degree-at-most-seven output
+> polynomials free (72 combined `Z/9` coordinates), imposes all 91
+> coefficients of `det J(F)-1` in total degrees zero through twelve, and
+> replays exact integer determinant divisibility by 243.  The mod-3
+> rank/kernel is `27/45` at all three fibres; the Bockstein rank/kernel is
+> `36/81`, `43/74`, and `43/74`, so all three cones are nonempty.  Producer /
+> fresh hostile-review SHAs are `9ac1edbb...` / `2322e0bc...`; the Grok
+> verdict is `CONFIRMED`, and case manifest/freeze SHAs are `7aba646c...` /
+> `379c072d...`.  This supersedes the displayed degree-at-most-three
+> exclusions at these fibres, but **only** there.  It supplies no
+> terminal-mod-729 or order-243 continuation, no whole-predecessor coverage,
+> no all-depth `Z_3` lift, no collision/counterexample, and no JC2 conclusion.
+> Exact Jacobian/SNF and quadratic-Kuranishi successors are live on AWS.
+>
 > TD6 V64 is now frozen and different-model `CONFIRMED` (producer report /
 > review SHAs `096a3f67...` / `e78af060...`).  On the fixed source-typed A3
 > q2-beta section restricted to `H=0`, current row 13 traces through exactly

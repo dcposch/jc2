@@ -139,8 +139,18 @@ that ranking.
   `2,698,785,475,281` occurrences of each value.  Hence this scalar kills no
   Q9 fibre and should be quotient-coordinated before the next obstruction;
   no Q8-through-Q3 restoration, complete map modulo 243, all-depth lift,
-  counterexample, or JC2 claim follows.  The live successor now builds the
-  complete fixed-support output-digit influence cone and composes the
+  counterexample, or JC2 claim follows.  The complete fixed-support
+  output-digit influence cone has now been built and fresh-hostile-review
+  `CONFIRMED` at the three pinned Q3 fibres: all 72 `Z/9` coordinates in
+  `F=F_*+27U+81V` are present, all 91 determinant rows vanish modulo 243,
+  and the exact mod-3/Bockstein rank/kernel pairs are
+  `27/45 -> 36/81,43/74,43/74` (producer/review SHAs `9ac1edbb...` /
+  `2322e0bc...`).  Thus those three full cones survive modulo 243 and the
+  earlier displayed degree-at-most-three exclusions do not close them.  This
+  remains three-fibre evidence only: terminal modulus 729, order-243 digits,
+  the rest of the predecessor scheme, and all-depth survival are open.  The
+  live successor computes the exact coefficient-scheme Jacobian/SNF and
+  quadratic Kuranishi obstruction while composing the
   `omega=0` slice with the actual Q8/Q7/Q6/Q5/Q4/Q3 restoration state before
   full 63-row Fitting strata.  Once a
   complete finite precision lands, run full coefficient-scheme

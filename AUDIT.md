@@ -181,6 +181,38 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > complete map modulo 243, all-depth survival, a characteristic-zero point,
 > a counterexample, or JC2.
 
+> **AS THREE-FIBRE COMPLETE FIXED-D7 OUTPUT-CONE PROMOTION MODULO 243
+> (2026-08-25 15:28Z).**  At each of the reviewed pinned Q3 fibres `0000`,
+> `0270`, and `0513`, let
+> `F=F_*+27U+81V`, where `U,V` range over every coefficient of both
+> degree-at-most-seven output polynomials.  Equivalently, the compiler solves
+> a 72-coordinate `Z/9` congruence module.  It imposes every one of the 91
+> coefficients of `det J(F)-1` in total degrees zero through twelve and
+> directly reconstructs an integer representative with determinant
+> congruent to one modulo 243.  Fresh-fresh terms are multiples of 729; 72
+> doubling controls, all 1,296 cross-component pairs, and the complete
+> Q3-kernel/fresh mixed designs verify the exact linear/Bockstein reduction.
+>
+> The mod-3 rank/kernel is `27/45` at all three fibres.  Bockstein
+> rank/kernel is `36/81` at `0000` and `43/74` at both `0270` and `0513`,
+> yielding nonempty modules of sizes `3^81`, `3^74`, and `3^74`.
+> Producer SHA is
+> `9ac1edbb9a757addf4b8a4923b510cd63770e539a54156d6543cecabaa039cd4`;
+> fresh different-model review SHA is
+> `2322e0bc0b89280c567d8aecbdce4f42319faf0d8fba9265bea5a81936ffa869`
+> with verdict `CONFIRMED`.  Case manifest/freeze SHAs are
+> `7aba646cfc648a3c487160542006e3ca898a19ec42bff2adc738ac1a9f83a52d`
+> and
+> `379c072d60be55d83f62a0e4d86d7426d30a95f3175c7c625b9b8dc381e75b94`.
+> The review independently traced the source chain, orientation, seed,
+> degree support, Bockstein arithmetic, and exact three-fibre scope.
+>
+> **Firewall:** this proves complete order-27/order-81 fixed-D7 output cones
+> only over the three displayed Q3 fibres.  It does not impose the next
+> order-243 digits or terminal modulus 729, cover the whole Q5/global
+> predecessor scheme, construct an all-depth `Z_3` lift, produce a collision
+> or counterexample, or settle JC2.
+
 > **Q8 RAW-OVERLAP ORDINARY/FITTING PROMOTION (2026-08-25 13:33Z).**
 > On the pinned six-row source `I=(e1,e3,e5,e7,e2,e4)` restricted to
 > `A3: w=x1=x3=x5=0`, let `M` be the six-by-three normal Jacobian in

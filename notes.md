@@ -5310,6 +5310,28 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   `omega=0` slice with the complete downstream state and seek the next
   source-typed cokernel/Fitting obstruction.
 
+## 2026-08-25 15:28Z EVENT — THREE COMPLETE FIXED-D7 OUTPUT CONES SURVIVE MODULO 243
+
+- At each reviewed pinned Q3 fibre `0000`, `0270`, and `0513`, the exact
+  source-first compiler writes `F=F_*+27U+81V` with all 72 coefficients of
+  the two degree-at-most-seven output corrections free over `Z/9`.  Every one
+  of the 91 coefficients of `det J(F)-1`, total degrees zero through twelve,
+  vanishes modulo 243 at a reconstructed literal integer representative.
+- Mod-3 rank/kernel is `27/45` at each fibre.  The Bockstein rank/kernel data
+  are `36/81`, `43/74`, and `43/74`, hence the three exact module sizes are
+  `3^81`, `3^74`, and `3^74`.  The 72 doubling controls, all 1,296 P/Q pair
+  controls, and complete Q3-kernel/fresh mixed designs verify the source
+  linearization and carry arithmetic.
+- Producer/review SHAs are `9ac1edbb...` / `2322e0bc...`; the fresh
+  post-barrier Grok verdict is `CONFIRMED`.  Case manifest/freeze SHAs are
+  `7aba646c...` / `379c072d...`.  The theorem supersedes the earlier
+  degree-at-most-three point-family exclusions only at these three fibres.
+- Firewall: no order-243 digit or terminal-mod-729 gate has been imposed; the
+  rest of the global predecessor scheme is not covered.  There is no
+  all-depth `Z_3` lift, collision, counterexample, or JC2 conclusion.  The
+  exact 91-by-72 integer Jacobian/SNF, localized-row-ideal test, and full
+  45-to-64 quadratic Kuranishi map are running on AWS.
+
 ## 2026-08-25 13:33Z EVENT — Q8 ORDINARY/FITTING OVERLAP PROMOTED
 
 - The raw unloaded-overlap source is exactly
