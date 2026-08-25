@@ -203,6 +203,17 @@ first-gate result or correction to an unpromoted provisional formula may be
 coalesced when the global ranking and trust perimeter are unchanged. Record
 the coalescing decision explicitly in the next synthesis or `LIVE STATE`.
 
+Every new provisional or promoted theorem also triggers a **theorem-interface
+composition pass**.  Normalize it to object, hypotheses, field/ring, degree or
+support bounds, and conclusion; search the claim DAG for results whose
+conclusions discharge those hypotheses or whose hypotheses consume the new
+conclusion; and test the cheapest exact pairings before treating the theorem
+as an isolated endpoint.  Record a new bridge, a scope mismatch, or `NO HIT`.
+This pass is bounded and does not interrupt unrelated work.  In particular,
+compare proof-side degree/automorphy theorems with counterexample-side
+integrality, specialization, compactness, and collision lemmas: their labels
+may differ even when their theorem interfaces compose.
+
 If a critical event arrives during an open full round and invalidates a
 load-bearing snapshot assumption, mark that round `ABORTED` and reseal. If it
 does not invalidate the packet, take any safe emergency action, finish the

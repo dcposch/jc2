@@ -5,6 +5,38 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **AS FIXED-SUPPORT LOW-`y` ADIC-ESCAPE PROMOTION (2026-08-25
+> 15:42Z).**  Fix finite allowed monomial sets `S_P,S_Q`, all with
+> `y`-exponent at most eleven.  Let `X_n` be the actual coefficient vectors
+> over `Z/3^n` giving complete maps with those supports,
+> `F=(x-x^3,y) mod 3`, and every coefficient of `det J(F)-1` zero.  Then
+> `X_n` is empty for some finite `n`.
+>
+> If every `X_n` were nonempty, their closed cylinders in the finite
+> coefficient ball `Z_3^N` would be nested and nonempty, producing one exact
+> `F in Z_3[x,y]^2` with determinant one.  The different-model-confirmed
+> theorem that every characteristic-zero Keller pair of maximum actual
+> partial `y`-degree at most eleven is an automorphism applies over `Q_3`.
+> After setting `G=F-F(0)`, the matrix `JG(0)` lies in `GL_2(Z_3)`.  The
+> degree-by-degree formal-inverse recursion uses only `JG(0)^(-1)` and no
+> integer division, so the polynomial `Q_3` inverse is integral.  Reducing
+> its two composition identities would make `(x-x^3,y)` a polynomial
+> automorphism over `F_3`, impossible because it collapses the three
+> `F_3` values of `x`.
+>
+> Producer and hostile Grok review SHAs are
+> `5b089614ce9a2faf8e27843f08912971c14528b5e6ff6fc8cf3cf2c251997af2`
+> and
+> `c8c120433145ebfbc4f8232316ebbca3f4e53384c00b4d6e2462edc3abf8d0b0`;
+> verdict `CONFIRMED`, with no missing hypothesis.  The imported
+> maximum-eleven producer/review SHAs are `7eda0a46...` / `d9522acb...`.
+> **Licensed:** the complete total-D7 AS scheme terminates at some finite
+> depth, and arbitrary-depth AS solutions with `y`-degree at most eleven
+> cannot remain in a fixed finite envelope.  **Refused:** an effective depth,
+> certificate, support-growth rate, a uniform depth over all envelopes,
+> next-step death of any displayed fibre, deletion of nonreduced strata,
+> arbitrary-residue reduction, or JC2.
+
 > **SELECTED-Q8 FROZEN-`d4` POLYNOMIAL-`c` LANDING-CENTRE PROMOTION
 > (2026-08-25 15:25Z).**  From the pinned six quotient rows
 > `(e1,e3,e5,e7,e2,e4)`, substitute `d4=1,d2=2+u`, put

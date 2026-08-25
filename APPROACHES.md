@@ -66,7 +66,16 @@ AS 30% / TD6 25% / global 5%**.  This is scheduling, not theorem evidence.
   global `Z/9` module, compile every mixed Q3-kernel/fresh term: an order-nine
   predecessor direction can leave `(9K)(27U)/243=KU`.  Use a named base
   algebra and Fitting strata if any mixed block survives, and in all cases
-  intersect `omega=0` with every downstream Q8--Q3 restoration row.
+  intersect `omega=0` with every downstream Q8--Q3 restoration row.  A new
+  different-model-`CONFIRMED` bridge (producer/review SHAs `5b089614...` /
+  `c8c12043...`) proves non-effectively that every fixed finite AS support
+  with `y`-exponents at most eleven dies at some finite 3-adic depth.  Thus
+  D7 computation is now an explicit-certificate/support-growth calibration,
+  not a possible all-depth branch; counterexample-relevant AS work must
+  eventually leave every such finite envelope or reach `y`-degree at least
+  twelve.  Keep the current bounded next-depth gate because its obstruction
+  mechanism may quantify that escape, but stop indefinite digit chasing
+  after a bounded non-informative pass.
 - **TD6:** complete the exact five-piece `H=0` source cover.  V64 gives the
   generic open, and reviewed V62D (review SHA `ec0ada3d...`) now closes
   `V=0,D(U)` for all `beta` by a direct source-unit certificate.  The
@@ -79,7 +88,14 @@ AS 30% / TD6 25% / global 5%**.  This is scheduling, not theorem evidence.
   and exact cover semantics.  Positive genus needs honest component landing
   and a degree-one/birational map; Greenberg needs a complete integral scheme
   and an effective bound.  Complete landing and a cofinal/absolute complexity
-  ceiling remain the proof-wide wall.
+  ceiling remain the proof-wide wall.  The theorem-interface composition
+  check found no direct p-adic counterexample chart in Q8 or TD6: Q8 already
+  uses nonunit `1/3,1/9` Kummer/depression normalizations in residue
+  characteristic three, while TD6 has `3H^3=1` and normalized roots of
+  valuation `-1/6`.  Neither frozen jet scheme reconstructs an integral
+  global map or preserves an AS collision.  Any reuse requires an explicit
+  undo-normalization/integral-descent theorem; this is a scope conflict, not
+  a negative theorem about the normalized proof lanes.
 
 All sustained or uncertain computation is AWS-only.  Reviews remain
 asynchronous and scope-matched.  The next full ideation round is due by

@@ -35,6 +35,23 @@ day or inserts the completed day directly below this preamble (see
 > is `2026-08-26T02:53Z`; the web sweep is due
 > `2026-08-26T01:26Z`.  No ideation claim resolves JC2.
 
+> **AS LOW-`y` ADIC-ESCAPE PROMOTION (15:42Z).**  A new composition of the
+> reviewed maximum-actual-`y`-degree-eleven theorem with 3-adic compactness
+> and integral formal inversion is different-model `CONFIRMED` (producer /
+> review SHAs `5b089614...` / `c8c12043...`).  For any one fixed finite pair
+> of allowed AS monomial sets whose `y`-exponents are at most eleven, the
+> complete determinant-one solution set reducing to `(x-x^3,y)` is empty at
+> some finite precision.  Otherwise nested compactness gives an exact
+> `Z_3` map; the maximum-eleven theorem makes its `Q_3` generic fibre a
+> polynomial automorphism; centering at `F(0)` and the unit linear part make
+> its unique formal, hence polynomial, inverse integral; reduction would
+> invert the noninjective AS special fibre.  Thus the complete D7 tree is
+> guaranteed to terminate and arbitrarily deep low-`y` solutions must escape
+> every finite support envelope.  This is non-effective: it gives no empty
+> depth, certificate, rate, next-fibre exclusion, arbitrary-residue
+> reduction, or JC2 conclusion.  The exact D7 Bockstein/Kuranishi lanes
+> continue only as finite-certificate and support-growth calibrations.
+
 > **Q8 FROZEN-CENTRE PROMOTION (15:25Z).**  On the pinned six-row source,
 > substitute `d4=1,d2=2+u`, keep `c` as a polynomial variable, and set
 > `C=I:(w*x5*(x3-2*x5))^infinity`.  The frozen Box02 `std/dp` endpoint proves
