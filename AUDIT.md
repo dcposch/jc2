@@ -5,6 +5,40 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **SELECTED-Q8 FROZEN-`d4` POLYNOMIAL-`c` LANDING-CENTRE PROMOTION
+> (2026-08-25 15:25Z).**  From the pinned six quotient rows
+> `(e1,e3,e5,e7,e2,e4)`, substitute `d4=1,d2=2+u`, put
+> `A=x3-2*x5`, and work over the polynomial ring
+> `Q[w,u,x1,x3,x5,c]`.  For
+> `C=I:(w*x5*A)^infinity`, the frozen Box02 `std/dp` endpoint computes
+> `GC=std(C)` and then
+> `GL=std(GC+(w,u,x1,x3,x5))=(1)`.  Since no polynomial in `c` is inverted
+> and the centre does not specialize `c`, the selected horizontal closure in
+> this frozen-`d4` slice has no landing at that centre for any finite
+> geometric `c`.
+>
+> The scope-repaired V2 report SHA is
+> `46a955fa0ef90b3b042b42fbeac7631171bb1e4b1537e7d09f53c3054eb887da`.
+> Fresh read-only Grok review SHA
+> `f5a985135c6e747e3a534d23af44604adbf26ea2ae39da2acba946db89f5406c`
+> returns `CONFIRMED` with no repairs; its manifest/freeze SHAs are
+> `1605d57f739c7a23b3bd1b6e0b69b75984cce90cc093bd7dbe6922358c43f5b3`
+> and
+> `b99cb20f828e5ffafc2d23c88b970835e482666540b2fe3b173742993169dfeb`.
+> The original Box02 result manifest/freeze SHAs remain
+> `5c3fa2d4235b4b21f4c9754e0038a94ce874ca14dfcdbf14ed99e29cfe588ac9`
+> and
+> `a716262617be8fa35eaab82f18f0f3909b7217b8567d17b2ce0fa1f768ecbdcb`.
+> The historical output marker `C_PARAMETER_BASIS` encloses `GL`, not `C` or
+> `GC`.
+>
+> **Firewall:** this is one host/engine/order and no original-generator
+> cofactor identity or Box02 in-run version capture.  It proves neither
+> `GC=(1)` nor global selected-open emptiness.  Moving `d4`, the rest of the
+> rank-drop line and full `Hsrc`, coefficient and other projective infinity,
+> Taylor/terminal realization, trajectories, all `(9,12)`, maximum twelve,
+> and JC2 remain open.
+
 > **TD6 `V=H=0,D(U)` SOURCE-UNIT PROMOTION (2026-08-25 15:02Z).**  In the
 > fixed source-typed A3 section with
 > `q_beta(t)=t+beta*t^2+t^25`, impose `V=H=0` and invert `U`.  Frozen V62D

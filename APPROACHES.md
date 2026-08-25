@@ -54,6 +54,12 @@ AS 30% / TD6 25% / global 5%**.  This is scheduling, not theorem evidence.
   source-horizontal projective/infinity cover.  Compare saturation then
   homogenization with homogenization then saturation, retain every source
   row/localizer, and add joint charts for coordinates that scale with `c`.
+  A fresh different-model-`CONFIRMED` theorem now proves
+  `std(C+(w,u,x1,x3,x5))=(1)` for
+  `C=I:(w*x5*(x3-2*x5))^infinity` over polynomial `c`, only at the frozen slice
+  `d4=1,d2=2+u` landing centre (producer/review SHAs `46a955fa...` /
+  `f5a98513...`).  It does not prove `C=(1)` or global finite-`c` emptiness;
+  moving `d4`, full `Hsrc`, and `c=infinity` remain the Q8 critical path.
   Only source-horizontal survivors receive terminal and Taylor tests.
 - **AS:** `zero-partial` means `omega` is a surjective affine coordinate, not
   a source-zero class.  Before treating the fresh `27U+81V` equations as one

@@ -35,6 +35,21 @@ day or inserts the completed day directly below this preamble (see
 > is `2026-08-26T02:53Z`; the web sweep is due
 > `2026-08-26T01:26Z`.  No ideation claim resolves JC2.
 
+> **Q8 FROZEN-CENTRE PROMOTION (15:25Z).**  On the pinned six-row source,
+> substitute `d4=1,d2=2+u`, keep `c` as a polynomial variable, and set
+> `C=I:(w*x5*(x3-2*x5))^infinity`.  The frozen Box02 `std/dp` endpoint proves
+> `std(C+(w,u,x1,x3,x5))=(1)` in `Q[w,u,x1,x3,x5,c]`; consequently no finite
+> geometric value of `c` occurs at this selected landing centre in the
+> frozen-`d4` slice.  A nonmutating V2 repaired the earlier overbroad wording,
+> and fresh hostile review returned `CONFIRMED` with no repairs (V2/review
+> SHAs `46a955fa...` / `f5a98513...`; review manifest/freeze SHAs
+> `1605d57f...` / `b99cb20f...`).  This is one engine and no cofactor: it does
+> not prove `C=(1)`, empty the global selected open, allow `d4` drift, cover
+> `c=infinity`, or settle full `Hsrc`, Taylor/terminal realization,
+> trajectories, `(9,12)`, maximum twelve, or JC2.  Exact moving-`d4`,
+> independent-engine, and coefficient-infinity AWS lanes remain live; the
+> `40/30/25/5` allocation is unchanged.
+
 > **LATEST LIVE OVERLAY (14:17Z).**  The repaired finite corrected-Q8
 > classification is now independently reviewed at V2: producer SHA-256
 > `47873250...`, Grok review SHA-256 `fefd0fa7...`, verdict
