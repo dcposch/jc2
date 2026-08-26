@@ -41,6 +41,219 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
+## Superseding strategy overlay (2026-08-26 02:10Z — TD6 dead stretch)
+
+V80B is independently confirmed only as a pure-axis discriminator at the
+single center `(C,V,U)=(1,1,1)`, `beta=0`.  There `d10,d15` have zero
+compatibility tables and the other nine dead-stretch axes are individually
+inconsistent.  Their equal-looking first scalars sit at shifted keys and do
+not imply a common form or a joint block obstruction.
+
+The next TD6 gate is therefore the already launched dual-AWS V81B compiler:
+one source-provenanced joint matrix for all 22 licensed q directions and all
+eleven dead-stretch axes over symbolic centers.  The fixed V80B vector is a
+specialization control only.  The two V81A attempts stopped before any
+mathematical column, first on a missing dependency and then on scalar/jet
+operator dispatch; they are deployment/software controls only.
+Producer/review SHAs are `18017371...` / `3dad10e5...`.
+
+## Superseding strategy overlay (2026-08-26 02:07Z — portfolio synthesis)
+
+Four independent whole-46 scans converge on the same immediate ordering.
+First close the now-confirmed order-four genus-one theorem's source premise:
+race exact componentwise `(q,y)` nonconstancy, prime-lift/good-reduction,
+graph, and `a6=0` complement certificates on AWS.  In parallel identify the
+signature `(4,4,2)` Kummer target with the fixed lemniscatic elliptic curve
+and emit a regular-differential contradiction, but do not let that replace
+the source projection proof.
+
+Second, turn D1's reviewed `la^20` endpoint into an explicit syzygy and
+strict Groebner cone, then recurse on the exceptional coefficient faces of a
+normalized Rees/tropical graph.  Third, replace serial TD6 coordinates by one
+source-provenanced 33-axis adjoint/Fitting/Kuranishi object over symbolic
+centers.  Fourth, race tree leaf-pruning against Kummer eigensheaf degree
+blocks as the uniform terminal-to-lower-tail bridge.  Reviews and small Lean
+certificates trail discovery asynchronously.  Synthesis SHA is
+`40bd626bd1f1b77c8e5d52d1be35a57f89b2407218ecdcb52b7853b496831022`.
+The next blind-round backstop is `2026-08-26T14:07Z`, with immediate rounds
+on significant news; quiet web sweep remains due `2026-08-27T00:59Z`.
+
+## Superseding strategy overlay (2026-08-26 01:59Z — D1)
+
+The corrected-A replay and hostile review now isolate the earlier D1 conflict
+to one malformed hand-factored E8 equation.  A compiler derived byte-for-byte
+from the pinned reviewed-B equations reproduces the same fixed-datum theorem
+in independent LPDP-contraction and global-dp encodings: for
+`a=1,h=q2=k=nu=0,mu=2/3` and weight
+`(la,tau,rho,q1,q0,r2,r1,r0)=(4,1,1,22,22,30,30,30)`, the full weighted
+initial ideal contains `la^20`; its all-coordinate torus is therefore empty.
+This is one exact support/weight cone, not fan coverage or a D1 theorem.
+
+The next D1 work is proof extraction, not another opaque saturation replay:
+recover an explicit syzygy/preimage witnessing `la^20`, derive and audit the
+coefficient nonvanishing and strict term-order inequalities defining its
+Groebner cone, eliminate the associated principal open, then recurse on the
+exceptional coefficient faces.  These AWS jobs run provisionally while
+review remains asynchronous.  Corrected result/review SHAs are
+`fe96e656...` / `3e881064...`.
+
+## Superseding strategy overlay (2026-08-26 01:46Z — TD6)
+
+The V78B/V78C all-q genuine-P12 tensor is independently `CONFIRMED` on the
+fixed-A3 generic open.  Dual simultaneous runs and two dual-host 22-shard
+unions give one exact table: the reduced P12 sensitivity is supported through
+`q14`, while `q16,...,q24` are P12 source syzygies despite nonzero raw
+derivatives and 14 live lambda-prime rows.  This replaces serial uncertainty
+about the q support with a frozen finite tensor; it does not promote a
+nonlinear neighborhood or another current row.
+
+Allocation now moves immediately to the eleven dead-stretch source slots and
+to one joint adjoint-symbol/Fitting construction over the 22 q directions,
+dead stretch, centers, and licensed source rows.  High-q P12 zeros must not be
+discarded from that joint source space: they can act through other rows and
+multiplier variation.  V80B dual AWS shards and the next nonlinear compiler
+run without waiting on further prose review.  Reconciliation/review SHAs are
+`76a0b548...` / `a3599e65...`.
+
+## Superseding strategy overlay (2026-08-26 01:25Z — formal/API hygiene)
+
+The frozen C1 cube formalization at nested commit `d97de48d...` now has an
+AWS `lake build`, direct Lean check, and named axiom audit with rc zero and no
+`sorryAx`.  This removes build drift for those three exact declarations but
+does not change avenue ranking or replace independent mathematical review;
+the moving nested checkout remains a separate input.  Formalization should
+continue asynchronously behind discovery.
+
+An exact AWS probe also resolves the Singular `sat` return-type ambiguity:
+on the fleet version, assignment of the ideal-valued `sat(I,J)` to a list
+wraps the *whole* ideal as `L[1]`.  Existing list-wrapper clients therefore
+need no global quarantine.  The D1 A-fast/inverse-B disagreement must be
+resolved from its actual saturation, localization, or encoding semantics,
+not from a nonexistent generator-truncation bug.  Lean result/freeze SHAs are
+`fee3d5d2...` / `035d1860...`; API-control SHA is `efbcdcfa...`.
+
+## Superseding strategy overlay (2026-08-26 01:08Z)
+
+The terminal extremal-abc problem now has two complementary exact frontends.
+The independently confirmed logarithmic-derivative theorem writes it as a
+signed moment configuration; at `U=3` this gives exactly three order-two and
+ten order-four affine terminal classes.  A pulled-forward literature sweep
+identifies the same objects with Davenport--Zannier weighted bicolored plane
+trees.  Pakovich--Zvonkin supply the tree/polynomial correspondence, while
+Lu--Song's 2026 prescribed-passport counting algorithm and constructive
+permutation model provide an independent census and a practical generator.
+
+The maximum-twelve lane should therefore use a count-certified tree pipeline:
+apply the weighted-tree existence inequality to integer passports, compute an
+independent exact class count, construct and canonicalize every tree, realize
+its Belyi pair over the actual algebraic field, and shard the remaining tails
+and Taylor boundaries by tree on AWS.  Unitrees are only the rational subset
+and may not be used as an exhaustiveness shortcut.  In parallel, search for a
+tree-local leaf-removal, cut, sign, or path identity expressing the first
+unresolved lower-tail obstruction uniformly in `U`; enumeration alone cannot
+close unbounded `U`.
+
+The confirmed moment theorem/review SHAs are `8e1535aa...` / `91772fd7...`;
+the source-linked sweep SHA is `bb1aa29f...`.  The literature connection is a
+terminal frontend and current strategy input, not yet a campaign theorem
+about any lower tail.  The terminal/lower-tail firewall remains absolute.
+
+## Superseding strategy overlay (2026-08-26 00:37Z)
+
+The nontrivial `(8,12)` terminal layer is now a classified extremal-abc
+problem, not an unrestricted rational-map search.  Independent hostile review
+confirmed that every order-two or order-four terminal map is balanced and has
+passport
+`(alpha_i)|(beta_j)|(U-1,1^(D-U+1))`, with
+`U-1<=D<=m(U-1)` and exact Kummer order given by the multiplicity gcd.
+For `U=2`, the only clients are order two `D=1` and order four `D=1,3`.
+
+Allocation should exploit this immediately.  The loaded order-four
+coefficient curve should be normalized and quotiented by the deck `mu4`, then
+tested against the two explicit order-four passports, including infinity and
+boundary points.  In parallel, larger `U` work should enumerate extremal-abc
+monodromy/passport types and compile the remaining six tails directly on each
+type; terminal compatibility alone is never a lower-tail certificate.
+Producer/review SHAs are `149691f1...` / `b9cf3070...`.
+
+## Superseding strategy overlay (2026-08-26 00:37Z — D1)
+
+The D1 fan correction is independently `CORRECTION_CONFIRMED`, including a
+full-source AWS replay of both exact finite successors.  The tied
+`alpha=2*beta` solver remains valid on its own chart, but bounded truncation
+and raw-weight case splitting cannot certify coverage of the double-root
+point.
+
+The next decisive gate is an exact finite-variable tropical initial-ideal
+test at each correction ray, beginning with the target-facing
+`(vLambda,vTau,vRho;vQ;vR)=(4,1,1;22;30)` residue.  Survival in the full
+initial ideal supplies a genuine Puiseux lift criterion; failure exposes the
+next exact obstruction.  After that point test, traverse every support mask
+and cone with a certified finite fan.  Dual AWS encodings run without waiting
+for the tied solver or review.  Firewall/review SHAs are `466736cd...` /
+`ec9fe740...`.
+
+## Superseding strategy overlay (2026-08-26 00:37Z — TD6)
+
+The repaired V77R pure-`q3` source-support theorem is independently
+`CONFIRMED` on the fixed-A3 generic open.  It proves the exact P12 and
+lambda-prime identities but also confirms that the selected first-minor
+derivative is zero, so serial one-coordinate rank growth is not the right
+abstraction.  The dual simultaneous 22-slot V78B computation and its 44
+proof-carrying shards must first agree exactly.  The next finite source block
+is the eleven dead-stretch coefficients `d6,...,d16`, followed by one joint
+constructible/Fitting gate over centers, all licensed q slots, and that block.
+First-order emptiness at the fixed section is not a nonlinear neighborhood
+theorem.
+
+## Superseding strategy overlay (2026-08-26 00:16Z)
+
+The D1 double-root problem is no longer a single-ray problem.  Exact negative
+controls show that a hand fan based only on the three raw leading weights
+misses correction-enabled cancellations from higher coefficients of an
+earlier polynomial `QR/K` layer.  In particular, rays in
+`3*beta/2<alpha<2*beta` and on the row-three target face
+`alpha=15/2, 5<beta<6` survive the advertised first obstruction.
+
+The live toric elimination remains valid only on its preregistered tied
+chart `alpha=2*beta`; it runs as one branch and cannot close the double-root
+point.  The priority successor is a correction-aware Newton--Puiseux compiler
+that carries the images of every earlier rational layer at each weight,
+quotients only genuinely tail-invisible polynomial directions, and proves
+fan coverage before branch elimination.  The correction-firewall SHA is
+`466736cd...`; the correction is independently confirmed by the 00:37Z
+overlay above.
+
+## Superseding strategy overlay (2026-08-26 00:01Z)
+
+The independently confirmed terminal-power theorem gives one common exact
+interface for all three `(8,12)` Kummer orders.  For orders four and two, the
+terminal tail descends to a rational map satisfying
+`d(T')^e=(e*j/8)^e*T^(e-1)`; every surviving degree `U>=2` map is
+three-value/Belyi-type, while `U=1` is empty.  For order one, the polynomial
+core is now restricted to a nonzero constant or a single-root pure power
+`c*(x-a)^U`, `U>=2`.
+
+This changes allocation, not the proof status of `(8,12)`.  Passport and
+differential-identity enumeration on the nontrivial leaves can proceed in
+parallel with the live coefficient/Taylor clients.  The order-one successor
+should split the constant core from the normalized one-place core and retain
+all nine Faber constants and both Taylor boundary families.  Neither lane may
+infer lower-tail compatibility from the terminal equation alone.  Producer
+and hostile-review SHAs are `a4d7d6a1...` / `e322d508...`.
+
+## Superseding strategy overlay (2026-08-25 23:56Z)
+
+The broad V77 q3 source quarantine is retracted.  A dual-AWS negative control
+proved that the assigned legacy variable `qd.B` is dead after V77 replaces
+the live `Q_PRIME`; V77's transport and direct derivative are pure q3, not
+q2+q3.  Its raw/remainder q3 identities and dual-unit computation therefore
+return to producer tier.  The selected first-minor digest remains exact zero,
+so no nonzero-minor or rank-growth claim is restored.  A corrected V77R race
+now injects q2 through the actual live `Q_PRIME[1]` slot, while the independent
+V78B P12 race continues.  Neither result is promoted before exact dual-host
+agreement and hostile review.
+
 ## Superseding strategy overlay (2026-08-25 23:28Z)
 
 The formalization lane has a clean exact checkpoint at nested commit

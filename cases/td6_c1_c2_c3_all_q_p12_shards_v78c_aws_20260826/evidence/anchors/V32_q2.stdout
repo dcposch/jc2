@@ -1,0 +1,101 @@
+beta_parameter_name=beta
+q_beta=t+beta*t^2+t^25
+q_beta_prime=1+2*beta*t+25*t^24
+source_center=(C,V,U)
+source_p_boundary=t^15_fixed
+source_dead_stretch=0_fixed
+source_F1_orbit=frozen
+source_pole_scale_and_data=frozen
+q2_orbit_class=reviewed_fixed-chart-transverse
+target_shear_absorption=false_by_frozen_orbit_audit
+scope_open=D(U*(C-3U^2)*B3)
+B3_divisor_name_reserved_not_beta=true
+trivariate_transport rows=0;pivots=1;events=0
+trivariate_transport rows=250;pivots=251;events=0
+trivariate_transport rows=1500;pivots=684;events=0
+trivariate_transport rows=1750;pivots=934;events=0
+trivariate_transport rows=2000;pivots=1184;events=0
+trivariate_transport rows=2250;pivots=1434;events=0
+trivariate_transport rows=4750;pivots=1716;events=0
+trivariate_transport rows=5000;pivots=1966;events=1
+trivariate_transport rows=5250;pivots=2215;events=1
+trivariate_transport rows=5500;pivots=2465;events=2
+trivariate_transport rows=5750;pivots=2715;events=2
+trivariate_transport rows=6000;pivots=2965;events=2
+trivariate_transport rows=6250;pivots=3215;events=2
+trivariate_transport rows=6500;pivots=3465;events=2
+transport_rank=3470/3602
+transport_event_count=2
+transport_beta_rhs_pivot_count=1
+transport_matrix_beta_derivative_zero=true
+transport_rhs_beta_derivative_retained=true
+transport_section_beta_constant_count=1
+first_beta_coefficient_count=221
+first_beta_without_direct_qprime_count=1
+direct_qprime_omission_negative_control=true
+first_rank=38/132
+first_dependent_count=0
+first_minor_base_sha256=978690d3cc3a645c435b69f5b6558351c4eb57cb3663e315f52d4053efdbed52
+first_minor_beta_sha256=c0730fa1f8764164b2ac0a74523849b49f4362d41bc81845d086d6373fdb65c1
+first_dual_original_row_replay=true
+genuine_P12_source_compiler=true
+raw_base_terms=2893
+raw_beta_terms=2
+raw_base_sha256=8d5c3550fbad393c1e13061d9934ed79e29261db378f1d344c4ea5e587e704da
+raw_beta_sha256=816da33cd8e77b035740b7811e56d9ac8742160974a690506dec35d9b002d6a0
+remainder_base_terms=1
+remainder_beta_terms=2
+remainder_beta_degree=1
+remainder_base_sha256=93121eef14c472c3c55b7acaeb1d0eff73b77d462ad8d5b197e8e21b9cda89c4
+remainder_beta_sha256=1acfd5c0169b466d16c6d87de34b3ec0f5b78f6bb073a6191e9bed2ac36775b3
+dual_unit_inverse_terms=3
+dual_remainder_base_is_minus_k_over_50=true
+dual_remainder_is_unit_exactly=true
+lambda_zero_source_row_support=28
+lambda_prime_source_row_support=14
+lambda0_bprime_terms=3330
+lambdaprime_b0_terms=3330
+lambda0_bprime_sha256=e0f1edc5da18a605c65fe4c44a55cf842fe3159c3a6583c0885c4548712ef118
+lambdaprime_b0_sha256=a8c2b146349774c8c6547f361db6d82df2fa0565fb5467875bab6f159bffdf7c
+derivative_source_identity_exact=true
+lambda_prime_omission_negative_control=true
+raw_base_denominator=(C*U - 3*U^3)
+raw_base_denominator_factor=(1, [(U, 1), (C - 3*U^2, 1)])
+raw_base_denominator_summary=(3, 2, '85fec0864be6430058dd3bbfe187027d41a99c70d0d1fae25356c8f08309e557')
+raw_beta_denominator=(1)
+raw_beta_denominator_factor=(1, [])
+raw_beta_denominator_summary=(0, 1, 'cba2fbeb391b1b01d10d62b5d049665afdea6dda577ce5ab23077b7cd21fa34b')
+first_base_denominator=(C*U - 3*U^3)
+first_base_denominator_factor=(1, [(U, 1), (C - 3*U^2, 1)])
+first_base_denominator_summary=(3, 2, '85fec0864be6430058dd3bbfe187027d41a99c70d0d1fae25356c8f08309e557')
+first_beta_denominator=(C - 3*U^2)
+first_beta_denominator_factor=(1, [(C - 3*U^2, 1)])
+first_beta_denominator_summary=(2, 2, '111b6e30bd6af87cc8c383d18798a7302f796ce01930fe6067f0d0af9bce6699')
+relation_base_denominator=(C^4*U^4 - C^3*V^2*U^3 + 1/4*C^2*V^4*U^2 + C^2*V^2*U^5 - 22*C^2*U^8 - 3/2*C*V^4*U^4 + 21*C*V^2*U^7 + 24*C*U^10 + 9/4*V^4*U^6 - 45*V^2*U^9 + 45*U^12)
+relation_base_denominator_factor=(1/4, [(4*C^2*U^2 - 4*C*V^2*U + 24*C*U^4 + V^4 - 20*V^2*U^3 + 20*U^6, 1), (U, 2), (C - 3*U^2, 2)])
+relation_base_denominator_summary=(12, 11, '1262f7b268075620793899629cf877b1fb852d0c6462b19164fc1985dd24e275')
+relation_beta_denominator=(C^4*U^3 - C^3*V^2*U^2 + 1/4*C^2*V^4*U + C^2*V^2*U^4 - 22*C^2*U^7 - 3/2*C*V^4*U^3 + 21*C*V^2*U^6 + 24*C*U^9 + 9/4*V^4*U^5 - 45*V^2*U^8 + 45*U^11)
+relation_beta_denominator_factor=(1/4, [(U, 1), (4*C^2*U^2 - 4*C*V^2*U + 24*C*U^4 + V^4 - 20*V^2*U^3 + 20*U^6, 1), (C - 3*U^2, 2)])
+relation_beta_denominator_summary=(11, 11, 'e72627ddef0f6ca9a038efb8ecdd59d969be8123b3b23e041c124b08bf6b135e')
+termwise_dual_denominator=(C^5*U^3 - C^4*V^2*U^2 - 3*C^4*U^5 + 1/4*C^3*V^4*U + 4*C^3*V^2*U^4 - 22*C^3*U^7 - 9/4*C^2*V^4*U^3 + 18*C^2*V^2*U^6 + 90*C^2*U^9 + 27/4*C*V^4*U^5 - 108*C*V^2*U^8 - 27*C*U^11 - 27/4*V^4*U^7 + 135*V^2*U^10 - 135*U^13)
+termwise_dual_denominator_factor=(1/4, [(U, 1), (4*C^2*U^2 - 4*C*V^2*U + 24*C*U^4 + V^4 - 20*V^2*U^3 + 20*U^6, 1), (C - 3*U^2, 3)])
+termwise_dual_denominator_summary=(13, 15, '1e211906e86958d941ede34e5872238ab75b092332983391c0a714e9670407e5')
+termwise_dual_slot_count=71664
+dual_denominator_radical_subset_U_H_B3=true
+dual_termwise_polynomial_clearing_exact=true
+source_nonzero_rows=28
+source_base_multiplier_terms=1489
+source_beta_support_terms=1248
+source_union_multiplier_terms=1515
+source_beta_coefficient_count=1248
+source_multiplier_base_projection_sentinel=true
+fixed_111_whole_beta_control=dependency_td6_boundary_qb_pencil
+first_order_generic_open_empty=true
+beta_independent_unit_identity=false
+finite_beta_neighborhood_killed=false
+full_beta_family_killed=false
+full_four_parameter_family_killed=false
+whole_TD6_killed=false
+SP2_killed=false
+JC2_resolved=false
+TD6-C1-C2-C3-Q2-BETA-DUAL-ADJOINT PASS

@@ -1,0 +1,24 @@
+# Dual AWS v2 compile custody
+
+Both compilers returned rc zero, empty compiler stderr, the unique v2 compiler
+PASS marker, and identical nine generator-initial records.
+
+```text
+Box02 payload 25eb0a0d70422df1e031fbe6faefa9e6d3ec7fe949de342d45f0f66fe4bfdd0a
+d72c1e5352b0621c306c3973dcccc3a1d0c9b4be43bafb16c802746bfe90d5c9  compiled/control2_rees_v2_A_factored_sat_dp.sing
+684c5e352cd08c3248a9f36eef1e8e202ebc3c6eb60760dacae1a9987f7cbd83  compiled/control2_rees_v2_B_expanded_inverse_lpdp.sing
+
+r6d payload 0dcd183b4b051b12882d32be54659a312b5ecc03369ee892a188613438070635
+2b416cb8209dd9d220d8f57ec78044bddb7d83d5ea4899d59ab7b4b6b4f49e52  compiled/control2_rees_v2_A_factored_sat_dp.sing
+c905f1b507fda84f62950198bd9528718798c0498ee31e8cc7679479d677693b  compiled/control2_rees_v2_B_expanded_inverse_lpdp.sing
+```
+
+After replacing only the embedded job tag, the cross-host hashes are
+
+```text
+8775a4831d1dab28974b93ceee9e24294f5cce864eb0ef32d12b1cb078b8268c  A.normalized
+3475b11f23a9e2508181c7cb7fe4e7a868c86428ebe526e7f5db0fedf49698dc  B.normalized
+```
+
+No solver verdict is encoded here.
+

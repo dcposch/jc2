@@ -1,0 +1,45 @@
+LIB "paraplanecurves.lib";
+option(redSB);
+
+ring R=0,(q,v,h),dp;
+poly H=1+10341/484*q-177147/1936*q^2-53636175/7744*q^3
+       -2681119845/30976*q^4-63407820033/123904*q^5
+       -750433487193/495616*q^6-3587901148629/1982464*q^7;
+poly L2=5184+16537365/121*q+15077178/11*q^2
+        +6133360581/968*q^3+3027619377/242*q^4
+        +192547983033/30976*q^5;
+poly L1=-419904/11+865008801/484*q-1745783685/484*q^2;
+number L0=8503056/121;
+poly Faff=q*H*v^3+L2*v^2+L1*v+L0;
+poly F=homog(Faff,h);
+list FF0=factorize(F,1);
+print("PROJECTIVE_DEGREE="+string(deg(F)));
+print("PROJECTIVE_FACTOR_COUNT="+string(size(FF0[1])));
+
+def RP1=paraPlaneCurve(F,"local");
+int param_ok=testParametrization(F,RP1);
+print("PARAMETRIZATION_TEST="+string(param_ok));
+setring RP1;
+print("PARAMETRIZATION_BEGIN");
+print(PARA);
+print("PARAMETRIZATION_END");
+print("PARAM_COMMON_GCD="+string(gcd(PARA[1],gcd(PARA[2],PARA[3]))));
+
+poly Qnum=PARA[1];
+poly Vnum=PARA[2];
+poly Hom=PARA[3];
+poly QA=9261*Qnum-484*Hom;
+poly QB=27*Qnum+4*Hom;
+
+list fQ=factorize(Qnum,1);
+list fV=factorize(Vnum,1);
+list fH=factorize(Hom,1);
+list fQA=factorize(QA,1);
+list fQB=factorize(QB,1);
+print("Q_FACTORS_BEGIN"); print(fQ[1]); print(fQ[2]); print("Q_FACTORS_END");
+print("V_FACTORS_BEGIN"); print(fV[1]); print(fV[2]); print("V_FACTORS_END");
+print("H_FACTORS_BEGIN"); print(fH[1]); print(fH[2]); print("H_FACTORS_END");
+print("QA_FACTORS_BEGIN"); print(fQA[1]); print(fQA[2]); print("QA_FACTORS_END");
+print("QB_FACTORS_BEGIN"); print(fQB[1]); print(fQB[2]); print("QB_FACTORS_END");
+print("PARAMETERIZATION_AND_BRANCH_FACTORIZATION=PASS");
+quit;

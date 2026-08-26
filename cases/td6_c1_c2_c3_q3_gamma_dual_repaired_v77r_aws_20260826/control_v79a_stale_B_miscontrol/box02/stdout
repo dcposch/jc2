@@ -1,0 +1,83 @@
+./RUNBOOK.md: OK
+./V19_RUNBOOK.md: OK
+./V24_ERRATUM.md: OK
+./V27_ERRATUM.md: OK
+./V28_RUNBOOK.md: OK
+./V29_ERRATUM.md: OK
+./V32_SENTINEL_ERRATUM.md: OK
+./V77_PREREGISTRATION.md: OK
+./V77_RUNBOOK.md: OK
+./V78_PREREGISTRATION.md: OK
+./V79_PREREGISTRATION.md: OK
+./jc2/cases/td6_boundary_q2_deformation_20260824/replay.py: OK
+./jc2/cases/td6_c1_c2_c3_all_q_vector_ad_20260825/replay.py: OK
+./jc2/cases/td6_c1_c2_c3_all_q_vector_ad_repaired_20260825/replay.py: OK
+./jc2/cases/td6_c1_c2_c3_q2_beta_dual_20260825/replay.py: OK
+./jc2/cases/td6_c1_c2_c3_q3_gamma_dual_20260825/replay.py: OK
+./jc2/cases/td6_c1_c2_c3_q3_gamma_dual_repaired_20260825/replay.py: OK
+./jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/c1_c3_thickening.py: OK
+./jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/c1_pencil.py: OK
+./jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/c1_rational_transport.py: OK
+./jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/fast_efield.py: OK
+./jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/fast_evec.py: OK
+./jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/replay.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_c2_c3_p3_quotient.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_c2_c3_trivariate.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_pencil.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_rational_transport.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/fast_efield.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/fast_evec.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/first_c1_c3_mpoly.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/h_b_raw_quotient.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/replay.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/transport_c1_c3_mpoly.py: OK
+./jc2/cases/td6_jet_orbit_adjoint_20260824/replay.py: OK
+./jc2/cases/td6_moduli_uniform_third_band_20260824/replay.py: OK
+./jc2/cases/td6_moduli_uniformity_20260824/replay.py: OK
+./jc2/cases/td6_two_chart_first_band_20260824/replay.py: OK
+./jc2/cases/td6_two_chart_next_row_20260824/replay.py: OK
+./run_v27.sh: OK
+./run_v28.sh: OK
+./run_v77.sh: OK
+./run_v77r.sh: OK
+./run_v78.sh: OK
+./run_v78b.sh: OK
+aws_platform=Linux
+aws_hostname=ip-172-30-0-186
+aws_run_tag=td6_v79_v77r_box02_20260825T2354Z
+producer=TD6-V77R-PURE-Q3-SCALAR-AUDIT
+V32_base_source_sha256=dcc7003def824c0d2a88998cbf22a66f022a32714f05754c505e8d825bd91742
+gamma_parameter_name=gamma
+q_gamma=t+gamma*t^3+t^25
+q_gamma_prime=1+3*gamma*t^2+25*t^24
+base_q2_beta=0
+source_center=(C,V,U)
+source_p_boundary=t^15_fixed
+source_dead_stretch=0_fixed
+source_F1_orbit=frozen
+source_pole_scale_and_data=frozen
+q3_source_license=degree25_boundary_coefficient_after_q0_q1_normalization
+target_shear_absorption=false_by_frozen_orbit_audit
+scope_open=D(U*(C-3U^2)*B3)
+B3_divisor_name_reserved_not_gamma=true
+trivariate_transport rows=0;pivots=1;events=0
+trivariate_transport rows=250;pivots=251;events=0
+trivariate_transport rows=1500;pivots=684;events=0
+trivariate_transport rows=1750;pivots=934;events=0
+trivariate_transport rows=2000;pivots=1184;events=0
+trivariate_transport rows=2250;pivots=1434;events=0
+trivariate_transport rows=4750;pivots=1716;events=0
+trivariate_transport rows=5000;pivots=1966;events=1
+trivariate_transport rows=5250;pivots=2215;events=1
+trivariate_transport rows=5500;pivots=2465;events=2
+trivariate_transport rows=5750;pivots=2715;events=2
+trivariate_transport rows=6000;pivots=2965;events=2
+trivariate_transport rows=6250;pivots=3215;events=2
+trivariate_transport rows=6500;pivots=3465;events=2
+transport_rank=3470/3602
+transport_event_count=2
+transport_gamma_rhs_pivot_count=1
+transport_matrix_gamma_derivative_zero=true
+transport_rhs_gamma_derivative_retained=true
+transport_q3_source_omission_negative_control=true
+transport_section_gamma_constant_count=3

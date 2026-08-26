@@ -5,7 +5,189 @@ day or inserts the completed day directly below this preamble (see
 `COORDINATION.md`). Detail lives in `notes.md` (tick-level) and `AUDIT.md`
 (promotion ledger); historical entries are not live policy or queue state.
 
+## 2026-08-26
+
+> **TD6 V80B ELEVEN DEAD-STRETCH PURE-AXIS POINT DISCRIMINATOR CONFIRMED
+> (02:10Z).**  At the single source-typed center `(C,V,U)=(1,1,1)`,
+> `beta=0`, and zero dead stretch, dual AWS runs give byte-identical exact
+> transport tables.  Pure axes `d10,d15` have zero compatibility tables;
+> each of `d6,d7,d8,d9,d11,d12,d13,d14,d16` is individually affine-
+> inconsistent after all 3,470 pivot rows and matrix variation are replayed.
+> Producer/review SHAs are `18017371...` / `3dad10e5...`, verdict
+> `CONFIRMED`.  Equal displayed residual scalars occur at shifted source keys,
+> so this is not a nine-axis or joint-block kill, generic-center theorem,
+> neighborhood, family, TD6, SP-2, or JC2 result.  A dual-AWS V81B successor
+> now forms the joint 22-q plus eleven-dead-axis problem over symbolic
+> centers.  Both V81A attempts are retained as pre-result controls: the first
+> lacked the fleet `flint` environment and the second stopped on unsupported
+> scalar/jet operator dispatch before emitting any column.
+
+> **FOUR-INDEPENDENT-RESEARCHER WHOLE-PORTFOLIO IDEATION ROUND COMPLETED
+> EARLY (02:07Z).**  All four packets independently rescanned the canonical
+> 46 avenues plus current gaps/news before synthesis.  Consensus puts the
+> now-confirmed order-four genus-one source-projection gate first, followed by
+> certified D1 cone/fan continuation, the joint TD6 33-axis adjoint/Fitting
+> object, and a tree/eigensheaf route from terminal passports to lower tails.
+> New connections include the fixed `(4,4,2)` lemniscatic elliptic target,
+> Kummer eigensheaf degree kills, a symbolic Fourier attack on the order-four
+> gcd-three star family, and labeled DZ permutations as a possible G2-PSC
+> sheet bridge.  Synthesis SHA is `40bd626b...`; its four pinned input SHAs
+> are recorded there.  New work is AWS-only and reviews remain asynchronous.
+> Next blind-round backstop is `2026-08-26T14:07Z`, or immediately on
+> significant news; quiet web-sweep backstop remains `2026-08-27T00:59Z`.
+
+> **ORDER-FOUR RESIDUAL KUMMER GENUS-ONE THEOREM HOSTILE-REVIEW CONFIRMED
+> (02:05Z).**  For the exact reconstructed residual plane, independent review
+> confirms geometric irreducibility, Newton arithmetic genus seven, four
+> ordinary torus nodes, and one top `(2,7)` cusp of delta three and
+> `ord(v)=-6`.  Its normalization is rational and
+> `div(v)=8P_0-P_ul-P_A-6P_B`; consequently the geometrically irreducible
+> degree-four cover `Y:y^4=v` has genus one.  Producer/review SHAs are
+> `cd6c37c1...` / `59fb3385...`.  Nonmutating erratum SHA `26a083fc...`
+> corrects only the displayed tangent coefficient from `1/52488` to `3/8`
+> in the named `Q=q+4/27` coordinate; all orders, delta, divisor, and genera
+> are unchanged.  The order-four source leaf is **not yet eliminated**:
+> componentwise nonconstancy of `(q,y)=(a5^2/a6^3,a6^2)` and the `a6=0`
+> complement remain live AWS premises.
+
+> **D1 FIXED-WEIGHT FULL-INITIAL TORUS OBSTRUCTION DUAL-CONFIRMED;
+> BAD A INPUT ISOLATED (01:59Z).**  Exact source comparison finds the only
+> control-2 A/B mismatch at E8, where the hand-factored A row differs by
+> `-25134148616192/43046721`; no promoted theorem consumed that A endpoint.
+> A clean compiler now copies all nine reviewed B polynomials byte-for-byte
+> and recomputes the contraction directly in LPDP on Box03 and global DP on
+> r6d.  Both special fibres mutually reduce to the frozen 35-generator B
+> ideal and contain `la^20`, so the eight-coordinate torus is empty at the
+> exact fixed axis/loads/support/weight `(4,1,1,22,22,30,30,30)`.  Result /
+> hostile-review SHAs are `fe96e656...` / `3e881064...`, verdict
+> `CORRECTED_A_CONFIRMED`.  This is one Gröbner cone datum, not moving-axis,
+> nonzero-`q2`, other-support/weight, fan coverage, D1, or JC2.  AWS now
+> extracts the witnessing syzygy and its exact cone inequalities while full
+> fan work continues.
+
+> **TD6 22-DIRECTION GENUINE-P12 SOURCE TENSOR CONFIRMED (01:46Z).**
+> Hostile reconstruction confirms that dual simultaneous AWS runs and 44
+> independently assembled one-coordinate shards give the identical 23-line
+> table SHA `e14ff29c...`.  On the fixed source-typed A3 generic open, the
+> first conormal map is zero; the reduced genuine-P12 sensitivity is nonzero
+> exactly for `q2,...,q14` and zero for `q16,...,q24`, while all 22
+> directions retain 14 lambda-prime rows.  `q15` is the lower target-shear
+> gauge, q2/q3 reproduce V32/V77R, and denominator radicals stay inside
+> `{U,H,B3}`.  Reconciliation/review SHAs are `76a0b548...` /
+> `a3599e65...`.  This is a square-zero source-support theorem at an
+> already-empty fixed section, not a nonlinear neighborhood, family, full
+> TD6, SP-2, or JC2 result.  Dual AWS V80B shards now test the eleven
+> dead-stretch source slots without waiting on review.
+
+> **FROZEN C1 CUBE LEAN CHECKPOINT PASSED ON AWS; SINGULAR `sat` API
+> FALSE ALARM CLOSED (01:25Z).**  At exact nested commit `d97de48d...`, r6d
+> completed `lake build`, a direct `Solution.lean` check, and 51 named axiom
+> reports with rc zero.  The three new C1 no-common-root declarations are
+> present, contain no `sorryAx`, and use only `propext`, `Classical.choice`,
+> and `Quot.sound`; result/manifest-freeze SHAs are `fee3d5d2...` /
+> `035d1860...`.  This is build and axiom hygiene for the frozen formal
+> statements, not an independent proof of their source mathematics, all
+> `(6,9)`, or JC2.  Separately, an exact r6d probe in both relevant Singular
+> ring orders proves that `list L=sat(I,J); L[1]` preserves the complete
+> multi-generator ideal on the fleet version.  Thus no result is invalidated
+> by that wrapper; the D1 A-fast/unit versus inverse-B/nonunit discrepancy is
+> real and still being diagnosed.  Probe-result SHA is `efbcdcfa...`.
+
+> **TERMINAL LOG-DERIVATIVE AND COMPLETE `U=3` LIST CONFIRMED; WEIGHTED-
+> TREE FRONTEND FOUND (01:08Z).**  Independent hostile rederivation confirms
+> that every reviewed nontrivial `(8,12)` terminal map is equivalently a
+> signed moment configuration
+> `T'/T=sum n_i/(x-c_i)=kappa/prod(x-c_i)`, with moments through degree
+> `U-2` zero and the next moment nonzero.  For `U=3` this gives exactly three
+> affine order-two classes and ten affine order-four classes, with all
+> radicand profiles and gcd exclusions checked.  Producer/review SHAs are
+> `8e1535aa...` / `91772fd7...`.  A pulled-forward web sweep then identified
+> these terminal triples exactly with Davenport--Zannier weighted bicolored
+> plane trees; Lu--Song's July-2026 theorem supplies an exact prescribed-
+> passport count and their January permutation model is constructive.
+> Sweep SHA is `bb1aa29f...`.  This is a terminal frontend only: all lower
+> tails, Taylor boundaries, unbounded `U`, `(8,12)`, and JC2 remain open.
+
+> **TD6 V77R PURE-`q3` SOURCE SUPPORT CONFIRMED (00:39Z).**  Dual AWS
+> reconstruction and hostile review confirm exact source typing, original-row
+> P12, lambda-prime, and denominator identities on the fixed-A3,
+> `beta=gamma=0` generic open.  A genuine live-`q2` deletion control changes
+> the table, while the selected first-minor derivative is exactly zero: no
+> rank-growth claim survives.  Manifest/report/review SHAs are `d27d5d16...`
+> / `546aca7b...` / `13e6df09...`.  This is a square-zero first-order theorem
+> at one fixed section only.  Dual simultaneous 22-slot V78B and 44
+> proof-carrying V78C AWS shards now test the joint source block; neither a
+> nonlinear neighborhood nor TD6 is closed.
+
+> **NONTRIVIAL `(8,12)` TERMINAL MAPS CLASSIFIED BY EXTREMAL ABC
+> (00:37Z).**  Different-model hostile rederivation `CONFIRMED` that every
+> exact order `m=2,4` terminal solution is balanced: after scaling,
+> `T=A/B` with coprime monic `A,B` of the same degree `D`, `G=A-B`
+> squarefree, `deg rad(ABG)=D+1`, and passport
+> `(alpha_i)|(beta_j)|(U-1,1^(D-U+1))`.  Here `r+s=U`,
+> `U-1<=D<=m(U-1)`, and exact Kummer order is equivalent to
+> `gcd(m,alpha_i,beta_j)=1`; conversely these data reconstruct exactly the
+> terminal differential equation.  The zero-at-infinity alternative is
+> empty.  In particular `U=2` leaves only `D=1` in order two (radicand
+> profile `[3,1]`, hence `[6,2]` for `h`) and `D=1,3` in order four
+> (profiles `[5,3]`, `[7,1]`).  Producer/review SHAs are `149691f1...` /
+> `b9cf3070...`.  This is a terminal passport theorem only; it does not
+> solve the remaining tails, either Taylor boundary, `(8,12)`, or JC2.
+
+> **D1 DOUBLE-ROOT FAN CORRECTION INDEPENDENTLY CONFIRMED (00:37Z).**
+> Text-only hostile algebra review and a frozen full-source AWS replay
+> confirm both correction-enabled finite successors: `R_(2beta)=U/9`
+> cancels the weight-`3beta` tail on `3beta/2<alpha<2beta`, while on
+> `alpha=15/2`, `5<beta<6`, the correction `R_(15-beta)=-1/2` produces
+> exactly the allowed row-three load `(2/3)/K`.  The tied
+> `alpha=2beta` compiler remains exact on that branch; only the withdrawn
+> fan-completeness claim was wrong.  Firewall/replay-freeze/review SHAs are
+> `466736cd...` / `bbbd7aec...` / `ec9fe740...`.  These are finite negative
+> controls, not formal lifts.  The next proof-grade gate is a finite-variable
+> tropical initial-ideal/residue test followed by certified fan traversal,
+> running on AWS.
+
+> **D1 DOUBLE-ROOT NEWTON-FAN COVERAGE RETRACTED (00:16Z).**  Two exact
+> negative controls show that the hand seven-case fan omitted higher
+> coefficients of an earlier polynomial `QR/K` layer.  On
+> `3*beta/2<alpha<2*beta`, the permitted correction `R_(2beta)=U/9`
+> cancels the advertised `Q^3/K^2` obstruction identically.  On the target
+> face `alpha=15/2`, `5<beta<6`, another correction makes the weight-15
+> negative part exactly `(2/3)/K`, an allowed row-three load.  Therefore the
+> earlier “only ray `alpha=2*beta`” statement is not a complete fan theorem.
+> The live toric package remains exact and useful solely on its preregistered
+> tied branch `alpha=2*beta`; no endpoint may be promoted to whole
+> double-root or whole-D1 scope.  Correction-firewall SHA is `466736cd...`;
+> this entry is superseded by the 00:37Z confirmation above.
+
+> **`(8,12)` TERMINAL-POWER/BELYI THEOREM CONFIRMED (00:01Z).**  Independent
+> hostile rederivation confirmed the exact terminal identity
+> `d(T')^e=(e*j/8)^e*T^(e-1)` for the nontrivial Kummer orders `e=2,4`,
+> with `T=r7^e` and the minimal radicand `d=v,h`, respectively.  It gives the
+> complete finite zero/pole dictionary, rules out multiplicity `e`, leaves no
+> finite critical point away from `T=0,infinity`, forces `U!=1`, and makes
+> every surviving `U>=2` terminal map three-value/Belyi-type.  On the
+> order-one leaf, rationality of the terminal primitive is equivalent to
+> `q` being a nonzero constant or `c*(x-a)^U` with `U>=2`; degree one is
+> impossible.  Producer/review SHAs are `a4d7d6a1...` / `e322d508...`.
+> This is a terminal necessary condition only: the other six tails, nine
+> Faber constants, both Taylor boundaries, polynomial Keller existence,
+> whole `(8,12)`, maximum twelve, and JC2 remain open.
+
 ## 2026-08-25
+
+> **TD6 V77 SOURCE QUARANTINE NARROWED AFTER DUAL AWS CONTROL (23:56Z).**
+> The earlier claim that `qd.B=epsilon` contaminated q3 by q2 was wrong:
+> imported `B` is read only while the module's initial objects are built,
+> whereas V77 constructs transport directly and replaces the live
+> `Q_PRIME`.  Both Box02 and r6d reproduced the inertness of `B`; their rc1
+> endpoints are failed software controls because the test incorrectly
+> required dead state to change the first rows.  The broad source quarantine
+> is withdrawn and V77's q3 identities return to producer tier.  The separate
+> correction remains: digest `c0730fa1...` is exact zero, so the selected
+> first-minor derivative was not nonzero.  Correction report/freeze SHAs are
+> `5cde470c...` / `6705bb93...`; a repaired dual rerun uses a real
+> `Q_PRIME[1]` q2 leak.  No q3 theorem is promoted yet.
 
 > **FINAL AWS LEAN CHECKPOINT PASSED (23:28Z).**  Exact nested commit
 > `5f7cc487...` built on r6d under Lean `4.34.0-rc1`: all 45 named

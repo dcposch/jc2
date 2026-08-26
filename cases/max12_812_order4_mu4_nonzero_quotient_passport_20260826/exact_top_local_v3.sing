@@ -1,0 +1,44 @@
+ring Q=0,(q,v),dp;
+
+poly H=
+ -3587901148629/1982464*q^7-750433487193/495616*q^6
+ -63407820033/123904*q^5-2681119845/30976*q^4
+ -53636175/7744*q^3-177147/1936*q^2+10341/484*q+1;
+poly L2=
+ 5184+16537365/121*q+15077178/11*q^2+6133360581/968*q^3
+ +3027619377/242*q^4+192547983033/30976*q^5;
+poly L1=-419904/11+865008801/484*q-1745783685/484*q^2;
+poly lA=9261*q-484;
+poly lB=27*q+4;
+poly Q2=120771*q^2+189396*q+30976;
+
+ideal IH=std(ideal(lA*lB^6));
+ideal I2=std(ideal(Q2*lB^3));
+int h_identity=(reduce(H,IH)==0);
+int l2_identity=(reduce(L2,I2)==0);
+print("HTOP_LA_LB6_IDENTITY="+string(h_identity));
+print("L2_Q2_LB3_IDENTITY="+string(l2_identity));
+poly hscale=H/(lA*lB^6);
+poly l2scale=L2/(Q2*lB^3);
+print("HTOP_SCALE="+string(hscale));
+print("L2_SCALE="+string(l2scale));
+
+poly A=subst(q*H/lB^6,q,-4/27);
+poly B=subst(L2/lB^3,q,-4/27);
+poly C=subst(L1,q,-4/27);
+poly Disc=B^2-4*A*C;
+print("TOP_LOCAL_A="+string(A));
+print("TOP_LOCAL_B="+string(B));
+print("TOP_LOCAL_C="+string(C));
+print("TOP_LOCAL_DISCRIMINANT="+string(Disc));
+print("TOP_LOCAL_TWO_DISTINCT_SLOPES="+string(Disc!=0));
+
+poly LeftPq=v^3+16537365/121*v^2+865008801/484*v;
+poly LeftTransverse=subst(LeftPq,v,81/22);
+print("LEFT_TRANSVERSE="+string(LeftTransverse));
+print("LEFT_ONE_SMOOTH_TANGENCY="+string(LeftTransverse!=0));
+
+int certificate=h_identity*l2_identity*(Disc!=0)*(LeftTransverse!=0);
+print("EXACT_TOP_LOCAL_V3_CERTIFICATE="+string(certificate));
+print("EXACT_TOP_LOCAL_V3_COMPLETE=1");
+quit;

@@ -1,0 +1,50 @@
+LIB "normal.lib";
+LIB "primdec.lib";
+
+ring RX=32003,(q,v),dp;
+poly PX=
+ q*v^3-177*q^2*v^3+5876*q^3*v^3+14518*q^4*v^3
+ +13809*q^5*v^3+2194*q^6*v^3+6850*q^7*v^3+9022*q^8*v^3
+ +5184*v^2+7338*q*v^2+6161*q^2*v^2-3354*q^3*v^2
+ -10416*q^4*v^2+3072*q^5*v^2
+ +2558*v-7274*q*v-5794*q^2*v-345;
+ideal IX=PX;
+list FFX=factorize(PX,1);
+print("X_FACTOR_COUNT="+string(size(FFX[1])));
+ideal SX=PX,diff(PX,q),diff(PX,v);
+list SAX=sat(SX,ideal(q*v));
+ideal STX=std(SAX[1]);
+print("X_TORUS_SING_DIM="+string(dim(STX)));
+print("X_TORUS_SING_BEGIN");
+print(STX);
+print("X_TORUS_SING_END");
+int gx=genus(IX);
+print("X_COMPLETE_GEOMETRIC_GENUS="+string(gx));
+
+ring RY=32003,(q,y),dp;
+poly PY=
+ q*y^12-177*q^2*y^12+5876*q^3*y^12+14518*q^4*y^12
+ +13809*q^5*y^12+2194*q^6*y^12+6850*q^7*y^12+9022*q^8*y^12
+ +5184*y^8+7338*q*y^8+6161*q^2*y^8-3354*q^3*y^8
+ -10416*q^4*y^8+3072*q^5*y^8
+ +2558*y^4-7274*q*y^4-5794*q^2*y^4-345;
+ideal IY=PY;
+list FFY=factorize(PY,1);
+print("Y_FACTOR_COUNT="+string(size(FFY[1])));
+int gy=genus(IY);
+print("Y_COMPLETE_GEOMETRIC_GENUS="+string(gy));
+
+ring RC=32003,(s,t),dp;
+poly PC=
+ s^2*t^21-177*s^4*t^18+5876*s^6*t^15+14518*s^8*t^12
+ +13809*s^10*t^9+2194*s^12*t^6+6850*s^14*t^3+9022*s^16
+ +5184*t^16+7338*s^2*t^13+6161*s^4*t^10-3354*s^6*t^7
+ -10416*s^8*t^4+3072*s^10*t
+ +2558*t^8-7274*s^2*t^5-5794*s^4*t^2-345;
+ideal IC=PC;
+list FFC=factorize(PC,1);
+print("C_FACTOR_COUNT="+string(size(FFC[1])));
+int gc=genus(IC);
+print("C_COMPLETE_GEOMETRIC_GENUS="+string(gc));
+print("MOD32003_COMPLETE_GENUS=PASS");
+quit;

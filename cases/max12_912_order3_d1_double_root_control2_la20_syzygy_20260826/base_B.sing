@@ -1,0 +1,65 @@
+// Exact finite control-2 Rees degeneration v2, encoding B.
+LIB "elim.lib";
+ring R=0,(u,v,s,la,tau,rho,q1,q0,r2,r1,r0),(lp(3),dp(8));
+option(redSB);
+poly E1=(4/9)*s^52*q1*r1+(4/9)*s^52*q0*r2;
+poly E2=(4/3)*s^52*q1*r2+(4/9)*s^52*q1*r0+(4/9)*s^52*q0*r1+(2/9)*s^60*r2^2;
+poly E3=(-2/3)*s^60*la^15+(-4/81)*s^66*q1^3+(-8/9)*s^52*q1*r2+(8/9)*s^52*q1*r1+(8/9)*s^52*q0*r2+(4/9)*s^52*q0*r0+(4/9)*s^60*r2*r1;
+poly E4=(-4/27)*s^66*q1^2*q0+(4/3)*s^52*q1*r2+(-16/27)*s^52*q1*r1+(4/9)*s^52*q1*r0+(-16/27)*s^52*q0*r2+(4/9)*s^52*q0*r1+(8/9)*s^60*r2^2+(4/9)*s^60*r2*r0+(2/9)*s^60*r1^2;
+poly E5=(-4/27)*s^66*q1^3+(-4/27)*s^74*q1^2*r2+(-4/27)*s^66*q1*q0^2+(-8/9)*s^52*q1*r2+(4/9)*s^52*q1*r1+(-8/27)*s^52*q1*r0+(4/9)*s^52*q0*r2+(-8/27)*s^52*q0*r1+(-16/27)*s^60*r2^2+(4/3)*s^60*r2*r1+(4/9)*s^60*r1*r0;
+poly E6=(8/81)*s^66*q1^3+(-8/27)*s^66*q1^2*q0+(-8/81)*s^74*q1^2*r1+(-20/81)*s^74*q1*q0*r2+(-4/81)*s^66*q0^3+(4/3)*s^60*r2^2+(-8/9)*s^60*r2*r1+(8/9)*s^60*r2*r0+(4/9)*s^60*r1^2+(2/9)*s^60*r0^2;
+poly E7=(-4/27)*s^66*q1^3+(16/81)*s^66*q1^2*q0+(-8/27)*s^74*q1^2*r2+(-4/81)*s^74*q1^2*r0+(-4/27)*s^66*q1*q0^2+(-4/27)*s^74*q1*q0*r1+(-8/81)*s^82*q1*r2^2+(8/9)*s^52*q1*r2+(-40/81)*s^52*q1*r1+(8/27)*s^52*q1*r0+(-8/81)*s^74*q0^2*r2+(-40/81)*s^52*q0*r2+(8/27)*s^52*q0*r1+(-32/27)*s^60*r2^2+(4/3)*s^60*r2*r1+(-16/27)*s^60*r2*r0+(-8/27)*s^60*r1^2+(4/9)*s^60*r1*r0;
+poly E8=-1*s^81*la^20*tau-1*s^80*la^20+(1/243)*s^88*q1^4+(8/81)*s^66*q1^3+(-4/27)*s^66*q1^2*q0+(8/81)*s^74*q1^2*r2+(-8/81)*s^74*q1^2*r1+(8/81)*s^66*q1*q0^2+(-20/81)*s^74*q1*q0*r2+(-4/81)*s^74*q1*q0*r0+(-8/81)*s^82*q1*r2*r1+(-28/27)*s^52*q1*r2+(16/27)*s^52*q1*r1+(-28/81)*s^52*q1*r0+(-4/81)*s^74*q0^2*r1+(-4/81)*s^82*q0*r2^2+(16/27)*s^52*q0*r2+(-28/81)*s^52*q0*r1+(64/81)*s^60*r2^2+(-8/9)*s^60*r2*r1+(4/9)*s^60*r2*r0+(2/9)*s^60*r1^2+(-8/27)*s^60*r1*r0;
+poly LT=1*s^4*la-1*s^4*tau^3*rho;
+ideal TOY_VERTICAL=s,u*s-1;
+ideal GTV0=std(TOY_VERTICAL);
+ideal GTV=eliminate(GTV0,u);
+if (reduce(1,std(GTV))!=0) { print("FAIL_B_VERTICAL_CONTROL"); quit; }
+ideal TOY_FACTOR=s*(q1-1),u*s-1;
+ideal GTF0=std(TOY_FACTOR);
+ideal GTF=eliminate(GTF0,u);
+ideal SGTF=std(GTF);
+if (reduce(1,SGTF)==0 || reduce(q1-1,SGTF)!=0) { print("FAIL_B_FACTOR_CONTROL"); quit; }
+print("PASS_B_SYNTHETIC_CONTROLS");
+print("AWS_TAG=max12_912_order3_d1_double_root_control2_rees_v2_20260826T005028Z_r6d_B");
+print("ENCODING=B_EXPANDED_REES_INVERSE_ELIM_LPDP_V2");
+print("START_B_REES_INVERSE_ELIMINATION");
+ideal J=E1,E2,E3,E4,E5,E6,E7,E8,LT,u*s-1;
+ideal GJ=std(J);
+ideal C=eliminate(GJ,u);
+print("B_CONTRACTION_GENERATORS="+string(size(C)));
+ideal H=C,s;
+ideal GH=std(H);
+print("B_SPECIAL_FIBRE_GENERATORS="+string(size(GH)));
+poly TORUS=la*tau*rho*q1*q0*r2*r1*r0;
+ideal JT=GH,v*TORUS-1;
+ideal GJT=std(JT);
+ideal HT=eliminate(GJT,v);
+ideal GHT=std(HT);
+print("B_TORUS_SPECIAL_FIBRE_GENERATORS="+string(size(GHT)));
+if (reduce(1,GHT)==0)
+{
+  print("TORUS_SPECIAL_FIBRE_IS_UNIT=1");
+}
+else
+{
+  print("TORUS_SPECIAL_FIBRE_IS_UNIT=0");
+}
+print("TORUS_SPECIAL_FIBRE_BASIS_BEGIN");
+GHT;
+print("TORUS_SPECIAL_FIBRE_BASIS_END");
+ideal P=GHT,la-1,tau-1,rho-1,q1-1,q0+1,r2-1,r1-1,r0+2;
+ideal GP=std(P);
+if (reduce(1,GP)==0)
+{
+  print("RESIDUE_IDEAL_IS_UNIT=1");
+  print("CONTROL2_REES_RESIDUE_SURVIVES=0");
+}
+else
+{
+  print("RESIDUE_IDEAL_IS_UNIT=0");
+  print("CONTROL2_REES_RESIDUE_SURVIVES=1");
+}
+print("FIREWALL=EXACT_ONLY_FOR_FROZEN_AXIS_FIXED_LOAD_SUPPORT_WEIGHT_AND_RESIDUE");
+print("PASS_D1_DOUBLE_ROOT_CONTROL2_REES_V2_B");
+quit;

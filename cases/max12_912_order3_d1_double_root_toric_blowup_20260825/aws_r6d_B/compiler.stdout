@@ -1,0 +1,124 @@
+{
+  "aws_tag": "max12_912_order3_d1_double_root_toric_20260825T235300Z_r6d_B",
+  "charged_source_sha256": "67343b569db54f61f4a9e56e4262c0bf4fa781323a1287addbaf4fff93844623",
+  "chart": {
+    "K": "z^3+p*z+c",
+    "Qhat": "q2*z^2+q1*z+q0",
+    "Rhat": "r2*z^2+r1*z+r0",
+    "axis_cusp": [
+      "p=-3*a^2",
+      "c=2*a^3+h"
+    ],
+    "boundary": "x=y=la=tau=rho=0,a=1,h=0",
+    "f": "K^3+K*x*Qhat+x^2*Rhat",
+    "interior_saturation": "x*y*tau*rho",
+    "kbar": "x*y*k",
+    "leading_Q": [
+      "Qhat(1)=0",
+      "Qhat(-2)=0",
+      "Qhat'(1)!=0"
+    ],
+    "leading_R": "27*Rhat(1)=Qhat'(1)^2",
+    "retained_Rhat_directions": 3,
+    "targets": {
+      "3": "la^15*mu",
+      "6": "la^18*nu",
+      "8": "la^20*(1+tau)"
+    },
+    "toric": [
+      "x*y=la^6",
+      "la=tau^3*rho"
+    ]
+  },
+  "firewall": "unit excludes the preregistered chart; nonunit is only a total-load-space survivor and does not prove a fixed-load lift",
+  "ordinary_weight_report": {
+    "1": {
+      "support": 25,
+      "weight": 13
+    },
+    "2": {
+      "support": 36,
+      "weight": 14
+    },
+    "3": {
+      "support": 42,
+      "weight": 15
+    },
+    "4": {
+      "support": 55,
+      "weight": 16
+    },
+    "5": {
+      "support": 63,
+      "weight": 17
+    },
+    "6": {
+      "support": 84,
+      "weight": 18
+    },
+    "7": {
+      "support": 94,
+      "weight": 19
+    },
+    "8": {
+      "support": 121,
+      "weight": 20
+    }
+  },
+  "outputs": {
+    "toric_A_factored_sat_dp.sing": "351e8588b2266e98c0b6bc059d1e62c70f7d4c79e8d9fa861ad43f9525e5f008",
+    "toric_B_expanded_inverse_lpdp.sing": "0fcb06e54e41dea07dd63b271e94959f1f010eb7f47c2773886f73f5e6d7926a"
+  },
+  "rows": {
+    "1": {
+      "charged_sha256": "4797a0343d2c4f0a994e23c36d6518ca8f6c37146c4e734f4594981450397209",
+      "charged_support": 6,
+      "raw_sha256": "4797a0343d2c4f0a994e23c36d6518ca8f6c37146c4e734f4594981450397209",
+      "raw_support": 6
+    },
+    "2": {
+      "charged_sha256": "ce8105be485cb19246d7214e1d01518a11a63455858cd29db661f771e55850e8",
+      "charged_support": 11,
+      "raw_sha256": "ce8105be485cb19246d7214e1d01518a11a63455858cd29db661f771e55850e8",
+      "raw_support": 11
+    },
+    "3": {
+      "charged_sha256": "25e9d48b22760f3e7be5b9fcb7e0448cf51d4b0055e64505cc3559a685df6830",
+      "charged_support": 17,
+      "raw_sha256": "5c9dd3f54305d3d20beb1b2385f767b204e52a29f1833600585f1dbc92bdef37",
+      "raw_support": 16
+    },
+    "4": {
+      "charged_sha256": "0c573bb8108a9ec354a802e67c7bb8fc34176c3371ec35c9ba929bd2298d1b76",
+      "charged_support": 25,
+      "raw_sha256": "0c573bb8108a9ec354a802e67c7bb8fc34176c3371ec35c9ba929bd2298d1b76",
+      "raw_support": 25
+    },
+    "5": {
+      "charged_sha256": "1c70e6e805c1b4d06d30860b8a530bd9d3c2c4b082e943b5e08530221399b822",
+      "charged_support": 31,
+      "raw_sha256": "1c70e6e805c1b4d06d30860b8a530bd9d3c2c4b082e943b5e08530221399b822",
+      "raw_support": 31
+    },
+    "6": {
+      "charged_sha256": "43241d67fd25730a9690098ef213966361fd7bfa4c94ecf91f0cfbe85205620f",
+      "charged_support": 35,
+      "raw_sha256": "24c962cdc6467ddadbda767f3c42894ad04d44314e4d79d4e288753f823c0cbb",
+      "raw_support": 34
+    },
+    "7": {
+      "charged_sha256": "69f7c5a09093566f8f1bcb1161750f2b06b119a62fc59f75c6750c937d9b035e",
+      "charged_support": 57,
+      "raw_sha256": "69f7c5a09093566f8f1bcb1161750f2b06b119a62fc59f75c6750c937d9b035e",
+      "raw_support": 57
+    },
+    "8": {
+      "charged_sha256": "e936bbd3c161debe29cd030aad8c1e9e70e5ed930851902781790cb82111b738",
+      "charged_support": 78,
+      "raw_sha256": "c753d12fb278e9bd73c0104c32bbaeaacc89987411e07fd4c7b92c1ee157153a",
+      "raw_support": 76
+    }
+  }
+}
+payload_sha256=a7f36da003999cca059b6f6e39cd36411a1c88316474ddb09e91fe3ba4c70df2
+PASS_D1_DOUBLE_ROOT_TORIC_COMPILER

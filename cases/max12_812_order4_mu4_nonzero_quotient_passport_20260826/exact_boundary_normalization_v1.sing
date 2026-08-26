@@ -1,0 +1,68 @@
+ring Q=0,(q,v),dp;
+option(redSB);
+
+poly P=
+ q*v^3+10341/484*q^2*v^3-177147/1936*q^3*v^3
+ -53636175/7744*q^4*v^3-2681119845/30976*q^5*v^3
+ -63407820033/123904*q^6*v^3-750433487193/495616*q^7*v^3
+ -3587901148629/1982464*q^8*v^3
+ +5184*v^2+16537365/121*q*v^2+15077178/11*q^2*v^2
+ +6133360581/968*q^3*v^2+3027619377/242*q^4*v^2
+ +192547983033/30976*q^5*v^2
+ -419904/11*v+865008801/484*q*v-1745783685/484*q^2*v
+ +8503056/121;
+
+poly Left=5184*v^2-419904/11*v+8503056/121;
+poly Htop=
+ -3587901148629/1982464*q^7-750433487193/495616*q^6
+ -63407820033/123904*q^5-2681119845/30976*q^4
+ -53636175/7744*q^3-177147/1936*q^2+10341/484*q+1;
+poly L2=
+ 5184+16537365/121*q+15077178/11*q^2+6133360581/968*q^3
+ +3027619377/242*q^4+192547983033/30976*q^5;
+
+list FFP=factorize(P,1);
+list FFL=factorize(Left,1);
+list FFH=factorize(Htop,1);
+print("P_FACTOR_COUNT="+string(size(FFP[1])));
+print("LEFT_FACTORIZATION_BEGIN"); print(FFL); print("LEFT_FACTORIZATION_END");
+print("TOP_FACTORIZATION_BEGIN"); print(FFH); print("TOP_FACTORIZATION_END");
+
+ideal ST=P,diff(P,q),diff(P,v);
+list SST=sat(ST,ideal(q*v));
+ideal N=std(SST[1]);
+print("TORUS_SING_DIM="+string(dim(N)));
+print("TORUS_SING_VDIM="+string(vdim(N)));
+print("TORUS_SING_IDEAL_BEGIN"); print(N); print("TORUS_SING_IDEAL_END");
+poly Hess=diff(diff(P,q),q)*diff(diff(P,v),v)-diff(diff(P,q),v)^2;
+ideal NH=std(N,ideal(Hess));
+print("TORUS_HESSIAN_UNIT="+string(reduce(1,NH)==0));
+
+poly PqLeft=subst(diff(P,q),q,0);
+poly LeftRepeated=gcd(Left,diff(Left,v));
+poly LeftBad=gcd(LeftRepeated,PqLeft);
+print("LEFT_REPEATED_DEGREE="+string(deg(LeftRepeated)));
+print("LEFT_BOUNDARY_SMOOTH="+string(deg(LeftBad)==0));
+print("LEFT_PQ_BEGIN"); print(PqLeft); print("LEFT_PQ_END");
+
+poly TopRepeated=gcd(Htop,diff(Htop,q));
+poly TopBad=gcd(TopRepeated,L2);
+print("TOP_REPEATED_DEGREE="+string(deg(TopRepeated)));
+print("TOP_BOUNDARY_SMOOTH="+string(deg(TopBad)==0));
+print("TOP_REPEATED_BEGIN"); print(TopRepeated); print("TOP_REPEATED_END");
+
+int certificate=
+ (size(FFP[1])==1)
+ *(dim(N)==0)
+ *(vdim(N)==4)
+ *(reduce(1,NH)==0)
+ *(deg(LeftBad)==0)
+ *(deg(TopBad)==0);
+print("EXACT_BOUNDARY_NORMALIZATION_CERTIFICATE="+string(certificate));
+if (certificate==1)
+{
+  print("RESIDUAL_GEOMETRIC_GENUS=3");
+  print("GENUS_REASON=TORIC_ARITHMETIC_7_MINUS_FOUR_ORDINARY_TORUS_NODES");
+}
+print("EXACT_BOUNDARY_NORMALIZATION_COMPLETE=1");
+quit;

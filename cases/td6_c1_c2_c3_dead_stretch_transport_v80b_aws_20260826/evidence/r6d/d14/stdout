@@ -1,0 +1,79 @@
+aws_platform=Linux
+aws_hostname=ip-172-30-0-45
+aws_run_tag=td6_v80b_dead_r6d_20260826T0137Z_d14
+./RUNBOOK.md: OK
+./V19_RUNBOOK.md: OK
+./V24_ERRATUM.md: OK
+./V27_ERRATUM.md: OK
+./V28_RUNBOOK.md: OK
+./V29_ERRATUM.md: OK
+./V32_SENTINEL_ERRATUM.md: OK
+./V77_PREREGISTRATION.md: OK
+./V77_RUNBOOK.md: OK
+./V78_PREREGISTRATION.md: OK
+./V79_PREREGISTRATION.md: OK
+./V80A_DEPLOYMENT_ERRATUM.md: OK
+./jc2/cases/td6_boundary_q2_deformation_20260824/replay.py: OK
+./jc2/cases/td6_c1_c2_c3_all_q_vector_ad_20260825/replay.py: OK
+./jc2/cases/td6_c1_c2_c3_all_q_vector_ad_repaired_20260825/replay.py: OK
+./jc2/cases/td6_c1_c2_c3_dead_stretch_transport_v80b_20260826/PREREGISTRATION.md: OK
+./jc2/cases/td6_c1_c2_c3_dead_stretch_transport_v80b_20260826/replay_shard.py: OK
+./jc2/cases/td6_c1_c2_c3_q2_beta_dual_20260825/replay.py: OK
+./jc2/cases/td6_c1_c2_c3_q3_gamma_dual_20260825/replay.py: OK
+./jc2/cases/td6_c1_c2_c3_q3_gamma_dual_repaired_20260825/replay.py: OK
+./jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/c1_c3_thickening.py: OK
+./jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/c1_pencil.py: OK
+./jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/c1_rational_transport.py: OK
+./jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/fast_efield.py: OK
+./jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/fast_evec.py: OK
+./jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/replay.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_c2_c3_p3_quotient.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_c2_c3_trivariate.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_pencil.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_rational_transport.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/fast_efield.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/fast_evec.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/first_c1_c3_mpoly.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/h_b_raw_quotient.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/replay.py: OK
+./jc2/cases/td6_c1_c3_two_center_cover_20260824/transport_c1_c3_mpoly.py: OK
+./jc2/cases/td6_jet_orbit_adjoint_20260824/replay.py: OK
+./jc2/cases/td6_moduli_uniform_third_band_20260824/replay.py: OK
+./jc2/cases/td6_moduli_uniformity_20260824/replay.py: OK
+./jc2/cases/td6_two_chart_first_band_20260824/replay.py: OK
+./jc2/cases/td6_two_chart_next_row_20260824/replay.py: OK
+./launch_v80_host.sh: OK
+./run_v27.sh: OK
+./run_v28.sh: OK
+./run_v77.sh: OK
+./run_v77r.sh: OK
+./run_v78.sh: OK
+./run_v78b.sh: OK
+./run_v80_one.sh: OK
+./run_v80_shard.sh: OK
+producer=TD6-A3-DEAD-STRETCH-TRANSPORT-V80B-SHARD
+dead_level=d14
+pole_chart=x=r^-25;y=r^5+sum(d_m*r^m,m=6..16)+zeta*r^17
+fixed_pole_leading_patterns=true
+pole_chart_determinant=-25*r^-9_independent_of_dead_stretch=true
+scope=transport_source_incidence_at_fixed_A3_zero_dead_stretch
+dead_stretch_binomial_derivative_positive_control=true
+dead_stretch_wrong_shift_negative_control=true
+dead_stretch_matrix_derivative_omission_failures=13
+dead_stretch_matrix_derivative_omission_negative_control=true
+transport_rank=3470/3602;free=132
+dead_derivative_row_keys=3046
+dead_derivative_terms=23682
+dead_derivative_only_row_keys=3046
+differentiated_original_pivot_rows_replayed=3470
+transport_compatibility_forms=13
+transport_compatibility_affine_rank=0/132
+transport_compatibility_affine_consistent=false
+transport_compatibility_first_inconsistency_index=0
+transport_compatibility_first_inconsistency_sha256=0458f40e62da3f7fc5d841ab77d1d10a1215791299991bba2285073d090cccda
+transport_compatibility_digest=40fea83911e3456577ad70f3fcb9c95d105dc682ef202ba034f983d6e4fae5ae
+transport_compatibility_table=/home/ubuntu/runs/td6_v80b_dead_r6d_20260826T0137Z/d14/evidence/DEAD_D14_TRANSPORT_COMPATIBILITY.tsv
+transport_compatibility_table_entries=373
+transport_compatibility_table_sha256=aee20602cbaa65f2d6a12ad9b7b7fb48b63e724f68c8df2440e2b89bf19c991b
+fixed_section_square_zero_no_family_firewall=true
+TD6-A3-DEAD-STRETCH-TRANSPORT-V80B-SHARD PASS

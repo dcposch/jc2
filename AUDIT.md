@@ -5,6 +5,352 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **TD6 V80B DEAD-STRETCH TRANSPORT POINT DISCRIMINATOR — HOSTILE REVIEW
+> CONFIRMED (2026-08-26 02:10Z).**  At the exact source point
+> `(C,V,U)=(1,1,1)`, `beta=0`, and
+> `x=r^-25, y=r^5+sum_(m=6)^16 d_m r^m+zeta*r^17`, each pure `d_m`
+> derivative was computed from
+> `j*binom(j-1,k)*r^(m-5+12k)`, with all 3,470 original pivot rows replayed
+> and a nonzero matrix-derivative omission control on every axis.  The two
+> AWS hosts give byte-identical eleven-entry tables.
+>
+> Axes `d10` and `d15` have the exact zero compatibility table.  Each of
+> `d6,d7,d8,d9,d11,d12,d13,d14,d16` is affine-inconsistent as a pure axis;
+> its first leftover is a parameter-free nonzero constant at the shifted key
+> `('f','F0',m-20,0)`.  Equal displayed constants at distinct keys are not a
+> common cokernel coordinate, and no joint eleven-column matrix was formed.
+>
+> Case MANIFEST/FREEZE SHAs are
+> `c8acfd5cf2e8a1aa8fcd9489ddbee8864c7cbf9b8cea298c7b4d94d466320152`
+> / `627bc3bcec2ed06a3dabf09f34cff985a719675fe42489854f138d3a908b40df`;
+> vector SHA is
+> `daee0d286817482b1865ef365adfda07820a01a6438982c273f7d7967dd322d1`;
+> producer/review SHAs are
+> `1801737136ed237b83a71fbaee2ad1d3d97ce64eccd7a9ff8c8f0d57a28827d3`
+> / `3dad10e57ba372298ba0b766adaeb8d452591bb08e5e11c7bee8ec25cfd488ca`.
+> The separate review-custody MANIFEST/FREEZE SHAs are
+> `2c4e104998ee328146b83fb889f6f9d2b0570a5de3eaf08fa8e6d0ba15ccc991`
+> / `a2e4c474a0edeaa66347ab1f0acf88c255153ab88d5ac8c0454bb62d0bb0a512`.
+> Verdict: **CONFIRMED** at pure-axis, fixed-point, first-order transport
+> scope only.  This is not a joint-axis kernel/kill, interaction with the 22
+> q directions, generic-center statement, neighborhood, family, full TD6,
+> SP-2, or JC2 theorem.  V80A remains a pre-math hash-pin deployment-negative.
+
+> **`(8,12)` ORDER-FOUR RESIDUAL / KUMMER GENUS-ONE THEOREM — HOSTILE
+> REVIEW CONFIRMED (2026-08-26 02:05Z).**  Let `P in Q[q,v]` be the exact
+> reconstructed 18-term residual plane polynomial and let `X` be the
+> normalization of its closure in the toric surface of
+> `conv{(0,0),(0,2),(1,3),(8,3)}`.  The polygon has seven interior lattice
+> points.  `P` is geometrically irreducible; the dense torus contains four
+> reduced ordinary nodes; the repeated top point at `q=-4/27` is one branch
+> with semigroup `(2,7)`, delta three, and `ord(v)=-6`; every other boundary
+> place is accounted for and smooth.  Therefore
+>
+> `g(X)=7-4-3=0`, and
+> `div_X(v)=8P_0-P_ul-P_A-6P_B`.
+>
+> Since the two simple poles show that `v` is not a proper power, the Kummer
+> curve `Y:y^4=v` is geometrically irreducible of degree four.  Its four
+> divisor valuations contribute `0+3+3+2=8` to ramification, so
+> Riemann--Hurwitz gives `g(Y)=1`.
+>
+> Producer SHA-256 is
+> `cd6c37c145e325a48dbf382453bde4c727b98a576897d10a1f9b3752ebdd1756`;
+> independent hostile-review SHA-256 is
+> `59fb338533ff47a25d00893684caa3076bb7bb7bc2a43ab788cabbc0eb932c6a`.
+> The immutable producer wrote `1/52488` as the coefficient of `Q^3` with
+> `Q=q+4/27`; that number is the coefficient of `l_B^3=(27Q)^3`, while the
+> named-coordinate coefficient is `3/8`.  Nonmutating erratum SHA-256 is
+> `26a083fcfa805a52fdb295ceaaf94ae7497047d8545a2323a48a688ac39e2300`.
+> This changes no local order or promoted invariant.
+>
+> Verdict: **CONFIRMED** for the reconstructed residual plane and its Kummer
+> curve.  Exact membership of the cleared plane relation in the corrected
+> `r7`-saturated source is only containment.  An order-four source-leaf
+> elimination remains conditional on proving that every relevant source
+> component maps nonconstantly to `(q,y)=(a5^2/a6^3,a6^2)` and on handling
+> the `a6=0` complement.  Nonconstancy of `rho=r7^4` alone is insufficient.
+
+> **D1 CONTROL-2 CORRECTED A / FIXED-WEIGHT FULL-INITIAL OBSTRUCTION —
+> HOSTILE REVIEW CONFIRMED (2026-08-26 01:59Z).**  The frozen factored-A
+> renderer is invalid precisely at E8: an exact r6d identity control gives
+> `A_E8-B_E8=-25134148616192/43046721`, while E1--E7 and LT agree.  This
+> nonzero base constant explains the obsolete A-fast unit result.  The
+> Singular `sat` list wrapper is unrelated and remains semantically complete.
+> No top-level promoted theorem consumed the bad A endpoint; the expanded-B
+> source and its focused certificate review are unaffected.
+>
+> The corrected compiler hash-pins expanded B SHA `c905f1b5...`, extracts
+> `E1,...,E8,LT` byte-for-byte, and changes only the contraction algorithm
+> and term order.  Registered Box03 `(lp(1),dp(8))` and r6d global-`dp`
+> executions both returned rc zero with empty CAS stderr.  Their contraction
+> bases have order-dependent sizes 403 and 546, but each special fibre has
+> 35 generators and mutually reduces in both directions with the frozen B
+> ideal.  Both contain `la^20` and the full torus product; torus saturation
+> has exponent one and is the unit ideal.
+>
+> Therefore, for the pinned expanded equations with
+> `a=1,h=q2=k=nu=0,mu=2/3` and
+> `w(la,tau,rho,q1,q0,r2,r1,r0)=(4,1,1,22,22,30,30,30)`, the full weighted
+> initial ideal contains `la^20`.  It has empty intersection with the
+> eight-coordinate torus, so no arc at this exact fixed datum has a torus
+> leading coefficient.  `la^20` is an S-polynomial/full-initial consequence,
+> not the initial form of submitted E8.
+>
+> Corrected result SHA-256 is
+> `fe96e6561a8c66076bda4aefdd4d05544c184d13cd4e88bb394b5f6a92b3793c`;
+> hostile-review SHA-256 is
+> `3e881064695525137ddc85e705b77be76638224806cb0589d85f568c81d2f5e6`.
+> Verdict: **CORRECTED_A_CONFIRMED** at the one fixed axis/load/support/weight
+> scope.  This is not an independent derivation of the eight equations and
+> proves nothing about coordinate axes, moving axis or loads, nonzero `q2`,
+> another support/weight/cone, full fan coverage, D1, or JC2.
+
+> **TD6 V78B/V78C ALL-`q` GENUINE-P12 SOURCE TENSOR — HOSTILE REVIEW
+> CONFIRMED (2026-08-26 01:46Z).**  On the fixed source-typed A3 section,
+> over the square-zero extension in the 22 licensed coordinates
+> `q2,...,q14,q16,...,q24`, localized on
+> `D(U*(C-3U^2)*B3)`, the first-stage conormal map is zero.  Coefficient
+> `q15` is excluded exactly as the lower target-shear gauge of the frozen
+> `p=t^15` source.
+>
+> The genuine-P12 derivative is reduced against the original first rows,
+> with an exact source lift and varying-multiplier/lambda-prime terms.  Its
+> reduced support is exactly `q2,...,q14`: those thirteen columns are
+> nonzero, whereas `q16,...,q24` are exact P12 source syzygies.  Their raw
+> derivatives remain nonzero and all 22 columns retain 14 lambda-prime rows,
+> so the sharp cutoff is not an omitted-variation artifact.  Denominator
+> radicals introduce no prime outside `{U,H=C-3U^2,B3}`.  The q2 and q3
+> columns reproduce frozen V32 and corrected reviewed V77R respectively.
+>
+> Dual V78B simultaneous runs and the two independently assembled 22-shard
+> V78C unions all give the same 23-line table, SHA-256
+> `e14ff29cf5ca4301640215f10c3f0911df169cfac03b79624b6e18d088f360ef`.
+> Reconciliation report SHA-256 is
+> `76a0b548e40c9f234c780f11054aac1e68dcab4f4de9b4e558e61c844200c627`;
+> hostile-review SHA-256 is
+> `a3599e65f88015f60a3131572716affda748d8dc5963e3648bb35842246a1861`.
+> Verdict: **CONFIRMED** at strict square-zero/source-support scope.  The
+> base open was already empty from its unit remainder, so this proves no
+> nonlinear q-neighborhood, q-family, other current row, all-beta statement,
+> full TD6, SP-2, or JC2 conclusion.
+
+> **FROZEN C1 CUBE LEAN BUILD/AXIOM AUDIT — AWS PASS
+> (2026-08-26 01:25Z).**  The exact nested commit
+> `d97de48d83cabdb094c708540dcfe0d00f9a0957` was archived with SHA-256
+> `40fd09da952ae3d0aca5e8fb53497fd3aa3e259fd3d0a16cb1af3a6c53785c46`;
+> its `gcd3-69-cube/Solution.lean` has SHA-256
+> `dabf4b5b356f637650dfcda293567ee9b1fe382d3e18e06bf45a25a869c9604d`.
+> The corrected r6d verifier returned rc zero after `lake build` and a direct
+> Lean check.  Its 51 named axiom records contain the three declarations
+> `GCD369CubeC1NoCommonRootOnUZeroChart`,
+> `GCD369CubeC1NoCommonRootOnVZeroChart`, and
+> `GCD369CubeC1NoCommonRoot`; none contains `sorryAx`, and each uses only
+> `[propext, Classical.choice, Quot.sound]`.  The failed V1 harness is retained
+> as a software negative control: it required a nonexistent `Challenge.lean`
+> and recorded no theorem verdict.  Result SHA-256 is
+> `fee3d5d21f94c78729cfcc3239d060bc3e4c62ce891427fb630964e3ca77ed41`;
+> the manifest pointer freeze has SHA-256
+> `035d18606a1047492367f204a5c44de92bf8855f9675c8eda07a61ec98cdd2c4`.
+> Verdict: **PASS_BUILD_AND_NO_SORRYAX** at that immutable source only.  This
+> audit checks compilation and declared-axiom hygiene; it does not
+> independently rederive the source mathematics, extend C1 to other cube
+> boundaries, close `(6,9)`, or prove/disprove JC2.
+
+> **SINGULAR `sat` RETURN-TYPE/API CONTROL — FALSE QUARANTINE WITHDRAWN
+> (2026-08-26 01:25Z).**  A frozen exact r6d probe tested both ordinary `dp`
+> and the A-fast block order `(lp(1),dp(8))`.  Native `sat(I,J)` returns an
+> ideal.  Assigning it to `list L` creates a one-entry list whose `L[1]` is
+> the complete ideal, not its first generator; direct and wrapped ideals
+> mutually reduce to zero.  Only `sat_with_exp` natively returns the
+> two-entry `(ideal,int)` list.  Therefore the earlier first-generator-
+> truncation diagnosis was wrong and no mathematical claim is quarantined
+> merely for using `list L=sat(...); L[1]`.  The A-fast unit-special-fibre
+> versus inverse-B nonunit discrepancy remains an unresolved mathematical/
+> encoding comparison.  Result SHA-256 is
+> `efbcdcfae2c24b7d896348d7b3f22de340cee2dea80af3928f7120c37d56ba0b`.
+> This is a software/API control, not a D1 endpoint.
+
+> **`(8,12)` TERMINAL LOG-DERIVATIVE / COMPLETE `U=3` CLASSIFICATION —
+> HOSTILE REVIEW CONFIRMED (2026-08-26 01:08Z).**  Under the independently
+> confirmed extremal-abc theorem, put
+> `P=rad(A)*rad(B)=prod_i(x-c_i)` and assign signed nonzero weights
+> `n_i=alpha_i` at zeros of `A` and `n_i=-beta_i` at zeros of `B`.  Then
+>
+> `T'/T=kappa/P=sum_i n_i/(x-c_i)`,
+> `sum_i n_i*c_i^k=0` for `0<=k<=U-2`, and
+> `kappa=sum_i n_i*c_i^(U-1)!=0`.
+>
+> Equivalently `P'(c_i)=kappa/n_i`.  Conversely, distinct support with these
+> moments reconstructs coprime equal-degree `A,B`, makes `A-B` squarefree of
+> exact degree `D-U+1`, and recovers precisely the terminal differential
+> equation.  Nonvanishing of `kappa` and `D>=U-1` are conclusions, not
+> hidden hypotheses.
+>
+> At `U=3`, each signed multiplicity profile has exactly one affine support.
+> The order-two leaf has exactly the three classes
+> `(1,1|-2)`, `(1,2|-3)`, `(2|-1,-1)`.  The order-four leaf has exactly ten:
+> the two-zero pairs `(1,1),(1,2),(1,3),(1,4),(2,3),(3,3),(3,4)` and the
+> one-zero/two-pole pairs `(1,1),(1,2),(1,3)`.  The review independently
+> checked every degree, radicand exponent including uncharged zeros, gcd
+> exclusion, collision, and same-sign permutation quotient.
+>
+> Target SHA-256 is
+> `8e1535aac96785ecf72df6ed22cdd239031d89d82e84fbe0d2078ce6b786c5dc`;
+> hostile-review SHA-256 is
+> `91772fd704b7622da3367810101f0efb171594222b8696d241a6b76682c07c20`.
+> Verdict: **CONFIRMED** at terminal-equation scope.  For general fixed `U`,
+> the displayed moments give finitely many integer profiles and a square
+> algebraic presentation after affine gauge; they do not by themselves prove
+> reducedness or a finite geometric census.  No lower tail, Taylor
+> polynomialization, Keller pair, whole Kummer leaf, bound on `U`, `(8,12)`,
+> or JC2 conclusion is licensed.
+
+> **`(8,12)` NONTRIVIAL TERMINAL EXTREMAL-ABC CLASSIFICATION — HOSTILE
+> REVIEW CONFIRMED (2026-08-26 00:37Z).**  For exact Kummer order
+> `m in {2,4}`, the reviewed identity
+> `d*(T')^m=(m*j/8)^m*T^(m-1)` admits no zero-at-infinity branch.  Every
+> solution has `U>=2`, and after normalizing its finite nonzero value at
+> infinity it has a reduced presentation `T=A/B` with coprime monic
+> polynomials of a common degree `D`.  Put `G=A-B` and
+> `W=A'*B-A*B'`.  If the zero and pole multiplicities are
+> `alpha_1,...,alpha_r` and `beta_1,...,beta_s`, then
+>
+> `1<=alpha_i<=m`, `r+s=U`, `deg G=D-U+1`,
+> `G` is squarefree, and
+> `W=kappa*A*B/(rad(A)*rad(B))`.
+>
+> Hence `deg rad(A*B*G)=D+1`: `A-B=G` is an equality case of polynomial
+> abc, with exact passport
+> `(alpha_i)|(beta_j)|(U-1,1^(D-U+1))` and
+> `U-1<=D<=m*(U-1)`.  Its minimal radicand is
+> `c*prod(x-a_i)^(m-alpha_i)*prod(x-b_j)^(m+beta_j)`, and its class has
+> exact order `m` exactly when
+> `gcd(m,alpha_1,...,alpha_r,beta_1,...,beta_s)=1`.  The converse
+> reconstructs the terminal equation only.  At `U=2`, this leaves `D=1`
+> for order two and `D=1,3` for order four.
+>
+> The producer theorem SHA-256 is
+> `149691f1784ffccea9473a63efaec4a7d0eea56f9c1e1ba267610b104022920e`;
+> the independent hostile-review SHA-256 is
+> `b9cf307094a3128ae459714d6a84e49d4f004308d97b5d5b8298afb1e300b149`.
+> Verdict: **CONFIRMED** at terminal necessary-and-sufficient passport scope.
+> No lower tail, Taylor realization, coefficient-boundary closure, Keller
+> pair, whole `(8,12)` theorem, or JC2 conclusion is licensed.
+
+> **TD6 V77R PURE-`q3` SOURCE-SUPPORT THEOREM — HOSTILE REVIEW CONFIRMED
+> (2026-08-26 00:37Z).**  Dual AWS reconstruction and different-model
+> hostile review confirm that V77R differentiates the actual live `q3`
+> source slot, contains no hidden `q2`, and satisfies the exact original-row
+> P12, lambda-prime, and termwise denominator identities on the fixed-A3,
+> `beta=gamma=0`, generic open `D(U*(C-3U^2)*B3)`.  The repaired genuine
+> `q2` injection changes the live table, so it is an effective deletion
+> control.  The selected first-minor derivative is exactly zero; no rank
+> growth or nonzero-minor claim survives.  Case-manifest/report/review SHAs
+> are
+> `d27d5d1665e825690b220caba977c23a3870d6ee8ecb55fc4538632a4885047c` /
+> `546aca7bea8ea15eb279ae0450d06adc079b79505b94c49f81569e4230f5321f` /
+> `13e6df09a5753cb8a02fd3679f873c54a52a04b0fd9cba3bfecb035a1cd1ffef`.
+>
+> Verdict: **CONFIRMED** only as a strict square-zero first-order
+> source-support theorem at that fixed section.  It proves no neighborhood,
+> family, nonlinear obstruction, complete TD6 stratum, or JC2 result.  The
+> simultaneous 22-slot V78B/V78C calculation remains a producer lane and
+> must reconcile both hosts before use.
+
+> **D1 DOUBLE-ROOT NEWTON-FAN COVERAGE CORRECTION
+> (2026-08-26 00:37Z; INDEPENDENT REVIEW CONFIRMED).**  The previously used
+> seven-case comparison of the raw weights `beta+alpha`, `2*alpha`, and
+> `3*beta` is incomplete at the nonreduced cubic
+> `K=(z-1)^2*(z+2)`: once the leading numerator of `QR/K` is polynomial,
+> higher coefficients in that same layer can arrive at the next visible
+> weight and cancel the separately inspected `R^2/K^2` or `Q^3/K^2` term.
+>
+> Two exact identities force the correction.  With `L=z-1`, `U=z+2`,
+> `K=L^2*U`, and `N=L*U`, on `3*beta/2<alpha<2*beta` take
+> `Q=t^beta*N` and
+> `R=t^alpha*L+t^(2*beta)*U/9`.  The first quotient `N*L/K=1` is
+> polynomial, while at weight `3*beta`
+> `(4/9)*N*(U/9)/K=(4/81)*U/L` cancels
+> `-(4/81)*N^3/K^2=-(4/81)*U/L`.  Separately, for
+> `alpha=15/2`, `5<beta<6`, take
+> `Q=t^beta*L` and
+> `R=t^alpha*N-(1/2)*t^(15-beta)`.  At weight 15 the `QR` correction plus
+> the `R^2` layer is
+> `(2/9)*(1/L^2-1/(L*U))=(2/3)/K`, exactly an allowed row-three target.
+> These are negative controls for fan completeness, not formal lifts.
+>
+> The current toric package is still source-correct on its explicitly
+> registered tied branch `alpha=2*beta`, where no earlier `QR/K` layer
+> exists.  Its result must remain confined to that branch.  The immutable
+> correction firewall is
+> `xmodel/max12-912-order3-d1-double-root-newton-fan-correction-firewall-20260825.md`,
+> SHA-256
+> `466736cdd1a76607e6475c98d9da4b55096e88813d911722954549bdcba702c0`.
+> A frozen full-source AWS replay independently reproduces both controls;
+> its source-closure and result-manifest SHAs are
+> `936ac9f82184db43da7a0e0e2bb38c6b6b210401fcb7d41f1e7925f23557a56e`
+> and `ae36f8c80d25aa72bb536b14586e3a7691a71a2b2c93dbbf99f7b6b1a3a3d421`.
+> Text-only hostile rederivation gives verdict **CORRECTION_CONFIRMED**,
+> review SHA-256
+> `ec9fe740de4d330fbeaba7a5af5db4e56b36d62f417f051f3c35f85599edd3f1`.
+> Until a correction-aware Newton--Puiseux tree retains all earlier-layer
+> images, there is no complete double-root fan, no whole-D1 exclusion, and
+> no JC2 consequence.
+
+> **`(8,12)` TERMINAL-POWER/BELYI THEOREM — HOSTILE REVIEW CONFIRMED
+> (2026-08-26 00:01Z).**  Let `e` be the exact nontrivial Kummer order
+> (`e=4` with minimal radicand `d=h`, or `e=2` with `h=v^2` and `d=v`).
+> The universal terminal row `8*r7'=j/u` and inverse Kummer character imply
+> that `T=r7^e` lies in the exact fixed field `L(x)` and satisfies
+>
+> `d*(T')^e=(e*j/8)^e*T^(e-1)`.
+>
+> The independent hostile review rederived the character descent, the
+> constants `j^2/16` and `j^4/16`, and the complete local dictionary.  At a
+> finite point with `k=ord_a(d)`, `1<=k<e` gives a zero of `T` of order
+> `e-k`, `k=e` is impossible, and `k>e` gives a pole of order `k-e`;
+> uncharged zeros have order exactly `e`, and there is no finite critical
+> point away from the zero and pole fibres.  At infinity, `T` has no pole and
+> either `ord_infinity(T-lambda)=U-1` for `lambda!=0`, or
+> `ord_infinity(T)=e*(U-1)`.  Thus `U=1` is impossible and every surviving
+> `U>=2` map has branch values in `{0,infinity,lambda}`.  The differential
+> identity, rather than the passport alone, reconstructs `d`.
+>
+> On the order-one leaf `h=q^4`, a rational primitive for `1/q` exists
+> exactly when `q` is a nonzero constant or `q=c*(x-a)^U` with `U>=2`; no
+> degree-one `q` survives, and the displayed cases have explicit rational
+> primitives.  Target SHA-256 is
+> `a4d7d6a1173b5a0b785aa61a4c80ad5f46e4ea83f1d73103917c425608666633`;
+> independent-review SHA-256 is
+> `e322d508c2af66aebb408b2794bd017b05e96cf9ca67f0fc74be8407406f67e1`.
+> The verdict is **CONFIRMED** at exactly terminal-equation scope.  It does
+> not solve the other six tails, the Faber constants, either Taylor family,
+> polynomial Keller existence, a complete Kummer leaf, `(8,12)`, maximum
+> twelve, or JC2.
+
+> **CORRECTION TO TD6 V77 ERRATUM — `qd.B` IS INERT
+> (2026-08-25 23:56Z).**  The 23:16Z erratum below correctly identified the
+> zero digest but incorrectly inferred q2 contamination from
+> `qd.B=EDual(0,1)`.  In the imported module, `B` is consumed only by its
+> initial `Q_PRIME` and `build_first_band_system`; V77 calls neither live
+> object after configuration.  It constructs transport with boundary
+> `{1:1,25:1}`, uses the unique q3 source key `('g','X',0,3)`, and replaces
+> the downstream compiler's live derivative table by
+> `{0:1,2:3*gamma,24:25}`.  Thus the `B` assignment is stale state and V77's
+> q3 derivative is not a `q2+q3` direction.
+>
+> Dual AWS V77R controls confirmed this by leaving the first rows unchanged
+> when only `B` changed; both runs ended rc1 solely because the negative
+> control expected the opposite.  The broad q3 source quarantine is therefore
+> withdrawn, restoring V77's raw/remainder q3 columns, differentiated source
+> identity, dual-unit result, and denominator audit to **producer tier**, not
+> theorem tier.  The independent digest correction survives unchanged:
+> `c0730fa1...` encodes exact zero, so V77's selected first minor has zero—not
+> nonzero—q3 derivative.  The immutable correction report SHA is
+> `5cde470c...`, with case freeze `6705bb93...`.  A clean rerun must use an
+> actual `Q_PRIME[1]` injection as its q2-leak control before promotion.
+
 > **NESTED LEAN COMMIT `5f7cc487...` — FINAL AWS BUILD/AUDIT PASS
 > (2026-08-25 23:28Z).**  On r6d, the exact source archive with SHA-256
 > `a9a5b6ec...` built under Lean `4.34.0-rc1` and Lake

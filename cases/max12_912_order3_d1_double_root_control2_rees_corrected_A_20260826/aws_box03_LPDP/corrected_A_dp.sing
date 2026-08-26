@@ -1,0 +1,58 @@
+// Corrected direct-saturation A from pinned expanded B polynomials.
+LIB "elim.lib";
+ring R=0,(s,la,tau,rho,q1,q0,r2,r1,r0),dp;
+option(redSB);
+poly E1=(4/9)*s^52*q1*r1+(4/9)*s^52*q0*r2;
+poly E2=(4/3)*s^52*q1*r2+(4/9)*s^52*q1*r0+(4/9)*s^52*q0*r1+(2/9)*s^60*r2^2;
+poly E3=(-2/3)*s^60*la^15+(-4/81)*s^66*q1^3+(-8/9)*s^52*q1*r2+(8/9)*s^52*q1*r1+(8/9)*s^52*q0*r2+(4/9)*s^52*q0*r0+(4/9)*s^60*r2*r1;
+poly E4=(-4/27)*s^66*q1^2*q0+(4/3)*s^52*q1*r2+(-16/27)*s^52*q1*r1+(4/9)*s^52*q1*r0+(-16/27)*s^52*q0*r2+(4/9)*s^52*q0*r1+(8/9)*s^60*r2^2+(4/9)*s^60*r2*r0+(2/9)*s^60*r1^2;
+poly E5=(-4/27)*s^66*q1^3+(-4/27)*s^74*q1^2*r2+(-4/27)*s^66*q1*q0^2+(-8/9)*s^52*q1*r2+(4/9)*s^52*q1*r1+(-8/27)*s^52*q1*r0+(4/9)*s^52*q0*r2+(-8/27)*s^52*q0*r1+(-16/27)*s^60*r2^2+(4/3)*s^60*r2*r1+(4/9)*s^60*r1*r0;
+poly E6=(8/81)*s^66*q1^3+(-8/27)*s^66*q1^2*q0+(-8/81)*s^74*q1^2*r1+(-20/81)*s^74*q1*q0*r2+(-4/81)*s^66*q0^3+(4/3)*s^60*r2^2+(-8/9)*s^60*r2*r1+(8/9)*s^60*r2*r0+(4/9)*s^60*r1^2+(2/9)*s^60*r0^2;
+poly E7=(-4/27)*s^66*q1^3+(16/81)*s^66*q1^2*q0+(-8/27)*s^74*q1^2*r2+(-4/81)*s^74*q1^2*r0+(-4/27)*s^66*q1*q0^2+(-4/27)*s^74*q1*q0*r1+(-8/81)*s^82*q1*r2^2+(8/9)*s^52*q1*r2+(-40/81)*s^52*q1*r1+(8/27)*s^52*q1*r0+(-8/81)*s^74*q0^2*r2+(-40/81)*s^52*q0*r2+(8/27)*s^52*q0*r1+(-32/27)*s^60*r2^2+(4/3)*s^60*r2*r1+(-16/27)*s^60*r2*r0+(-8/27)*s^60*r1^2+(4/9)*s^60*r1*r0;
+poly E8=-1*s^81*la^20*tau-1*s^80*la^20+(1/243)*s^88*q1^4+(8/81)*s^66*q1^3+(-4/27)*s^66*q1^2*q0+(8/81)*s^74*q1^2*r2+(-8/81)*s^74*q1^2*r1+(8/81)*s^66*q1*q0^2+(-20/81)*s^74*q1*q0*r2+(-4/81)*s^74*q1*q0*r0+(-8/81)*s^82*q1*r2*r1+(-28/27)*s^52*q1*r2+(16/27)*s^52*q1*r1+(-28/81)*s^52*q1*r0+(-4/81)*s^74*q0^2*r1+(-4/81)*s^82*q0*r2^2+(16/27)*s^52*q0*r2+(-28/81)*s^52*q0*r1+(64/81)*s^60*r2^2+(-8/9)*s^60*r2*r1+(4/9)*s^60*r2*r0+(2/9)*s^60*r1^2+(-8/27)*s^60*r1*r0;
+poly LT=1*s^4*la-1*s^4*tau^3*rho;
+print("AWS_TAG=max12_912_order3_d1_double_root_control2_rees_corrected_A_20260826T013127Z_box03_LPDP");
+print("ENCODING=CORRECTED_A_EXPANDED_DIRECT_SAT_DP");
+ideal I=E1,E2,E3,E4,E5,E6,E7,E8,LT;
+ideal CS=s;
+ideal C=sat(I,CS);
+print("A_CONTRACTION_GENERATORS="+string(size(C)));
+ideal H=C,s;
+ideal GH=std(H);
+print("A_SPECIAL_FIBRE_GENERATORS="+string(size(GH)));
+print("FULL_SPECIAL_FIBRE_BASIS_BEGIN");
+GH;
+print("FULL_SPECIAL_FIBRE_BASIS_END");
+ideal EXPECTED=4*r1^2+8*r2*r0+12*r1*r0+9*r0^2,4*r2*r1-r0^2,2*q0*r1+2*q1*r0+3*q0*r0,4*r2^2-4*r1*r0-3*r0^2,q0*r2+q1*r1,2*q1*r2-q0*r0,r2*r0^2+r1*r0^2+r0^3,q0*r0^2,q1*r0^2,q1*r1*r0,2*q1^2*r1+q0^2*r0,28*r1*r0^3+17*r0^4,2*q1^3*r0+3*q1^2*q0*r0-q0^3*r0,8*q1^2*q0^2+8*q1*q0^3+3*q0^4,8*q1^3*q0-q0^4,4*q1^4-8*q1*q0^3-3*q0^4,tau^3*rho-la,r0^5,q0^4*r0,q1*q0^3*r0,q0^5,q1*q0^4,la^5*r1*r0^2+la^5*r0^3,la^5*r0^4,8*la^15*r2+4*la^15*r1+3*r1*r0^2+3*r0^3,14*la^15*r0^2-3*r0^4,112*la^15*r1*r0+15*r0^4,2*la^15*q1*r0-la^15*q0*r0,la^15*q1*r1+la^15*q0*r0,la^15*q1^2+la^15*q1*q0,la^15*q0^2*r0,la^15*q1*q0^2,la^15*q0^4,la^20,s;
+ideal GE=std(EXPECTED);
+int i;
+for (i=1; i<=size(GH); i++)
+{
+  if (reduce(GH[i],GE)!=0) { print("FAIL_GH_NOT_IN_B"); quit; }
+}
+for (i=1; i<=size(GE); i++)
+{
+  if (reduce(GE[i],GH)!=0) { print("FAIL_B_NOT_IN_GH"); quit; }
+}
+print("PASS_A_B_SPECIAL_FIBRE_MUTUAL_REDUCTION");
+if (reduce(la^20,GH)!=0) { print("FAIL_LA20_MEMBERSHIP"); quit; }
+print("LA20_IN_FULL_SPECIAL_FIBRE=1");
+poly TORUS=la*tau*rho*q1*q0*r2*r1*r0;
+if (reduce(TORUS,GH)!=0) { print("FAIL_TORUS_MEMBERSHIP"); quit; }
+print("TORUS_IN_FULL_SPECIAL_FIBRE=1");
+ideal CT=TORUS;
+list SX=sat_with_exp(GH,CT);
+ideal GSX=std(SX[1]);
+print("TORUS_SATURATION_EXPONENT="+string(SX[2]));
+if (SX[2]!=1 || reduce(1,GSX)!=0) { print("FAIL_TORUS_SATURATION"); quit; }
+ideal GHT=std(sat(GH,CT));
+if (reduce(1,GHT)!=0) { print("FAIL_TORUS_UNIT"); quit; }
+print("TORUS_SPECIAL_FIBRE_IS_UNIT=1");
+ideal P=GHT,la-1,tau-1,rho-1,q1-1,q0+1,r2-1,r1-1,r0+2;
+ideal GP=std(P);
+if (reduce(1,GP)!=0) { print("FAIL_RESIDUE_UNIT"); quit; }
+print("RESIDUE_IDEAL_IS_UNIT=1");
+print("CONTROL2_REES_RESIDUE_SURVIVES=0");
+print("FIREWALL=FROZEN_EXPANDED_SOURCE_FIXED_AXIS_LOAD_SUPPORT_WEIGHT_ONLY");
+print("PASS_CONTROL2_REES_CORRECTED_A_DP");
+quit;

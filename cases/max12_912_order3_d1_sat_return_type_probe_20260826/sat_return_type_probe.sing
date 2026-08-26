@@ -1,0 +1,97 @@
+// Exact Singular elim.lib sat() return-type/coercion probe, dp chart.
+LIB "elim.lib";
+ring Rdp=0,(s,la,tau,rho,q1,q0,r2,r1,r0),dp;
+option(redSB);
+ideal I=s*q1,s*q0;
+ideal J=s;
+
+ideal D=sat(I,J);
+ideal GD=std(D);
+print("DIRECT_TYPE="+typeof(D));
+print("DIRECT_SIZE="+string(size(D)));
+print("DP_DIRECT_REDUCE_Q1="+string(reduce(q1,GD)));
+print("DP_DIRECT_REDUCE_Q0="+string(reduce(q0,GD)));
+
+list L=sat(I,J);
+print("LIST_COERCED_TYPE="+typeof(L));
+print("LIST_COERCED_SIZE="+string(size(L)));
+print("LIST_ENTRY1_TYPE="+typeof(L[1]));
+ideal C=L[1];
+ideal GC=std(C);
+print("ENTRY1_IDEAL_SIZE="+string(size(C)));
+print("DP_ENTRY1_REDUCE_Q1="+string(reduce(q1,GC)));
+print("DP_ENTRY1_REDUCE_Q0="+string(reduce(q0,GC)));
+ideal DmodC=reduce(D,GC);
+ideal CmodD=reduce(C,GD);
+print("DP_DIRECT1_MOD_ENTRY1="+string(reduce(D[1],GC)));
+print("DP_DIRECT2_MOD_ENTRY1="+string(reduce(D[2],GC)));
+print("DP_ENTRY11_MOD_DIRECT="+string(reduce(C[1],GD)));
+print("DP_ENTRY12_MOD_DIRECT="+string(reduce(C[2],GD)));
+
+list E=sat_with_exp(I,J);
+print("SAT_WITH_EXP_TYPE="+typeof(E));
+print("SAT_WITH_EXP_SIZE="+string(size(E)));
+print("SAT_WITH_EXP_ENTRY1_TYPE="+typeof(E[1]));
+print("SAT_WITH_EXP_ENTRY2_TYPE="+typeof(E[2]));
+ideal DE=E[1];
+ideal GDE=std(DE);
+print("SAT_WITH_EXP_REDUCE_Q1="+string(reduce(q1,GDE)));
+print("SAT_WITH_EXP_REDUCE_Q0="+string(reduce(q0,GDE)));
+print("SAT_WITH_EXP_EXPONENT="+string(E[2]));
+
+if (size(D)!=2 || reduce(q1,GD)!=0 || reduce(q0,GD)!=0)
+{
+  print("FAIL_DIRECT_SATURATION");
+  quit;
+}
+if (size(L)!=1 || typeof(L[1])!="ideal" || size(C)!=2)
+{
+  print("FAIL_LIST_COERCION_SHAPE");
+  quit;
+}
+if (reduce(q1,GC)!=0 || reduce(q0,GC)!=0 ||
+    reduce(D[1],GC)!=0 || reduce(D[2],GC)!=0 ||
+    reduce(C[1],GD)!=0 || reduce(C[2],GD)!=0)
+{
+  print("FAIL_LIST_COERCION_IDEAL_EQUALITY");
+  quit;
+}
+if (size(E)!=2 || typeof(E[1])!="ideal" || typeof(E[2])!="int" ||
+    reduce(q1,GDE)!=0 || reduce(q0,GDE)!=0)
+{
+  print("FAIL_SAT_WITH_EXP_SHAPE");
+  quit;
+}
+
+// Repeat in the exact A-fast block order.
+ring Rlp=0,(s,la,tau,rho,q1,q0,r2,r1,r0),(lp(1),dp(8));
+option(redSB);
+ideal I=s*q1,s*q0;
+ideal J=s;
+ideal D=sat(I,J);
+ideal GD=std(D);
+list L=sat(I,J);
+ideal C=L[1];
+ideal GC=std(C);
+ideal DmodC=reduce(D,GC);
+ideal CmodD=reduce(C,GD);
+print("LPDP_DIRECT_TYPE="+typeof(D));
+print("LPDP_DIRECT_SIZE="+string(size(D)));
+print("LPDP_LIST_SIZE="+string(size(L)));
+print("LPDP_LIST_ENTRY1_TYPE="+typeof(L[1]));
+print("LPDP_ENTRY1_SIZE="+string(size(C)));
+print("LPDP_DIRECT1_MOD_ENTRY1="+string(reduce(D[1],GC)));
+print("LPDP_DIRECT2_MOD_ENTRY1="+string(reduce(D[2],GC)));
+print("LPDP_ENTRY11_MOD_DIRECT="+string(reduce(C[1],GD)));
+print("LPDP_ENTRY12_MOD_DIRECT="+string(reduce(C[2],GD)));
+if (size(D)!=2 || size(L)!=1 || typeof(L[1])!="ideal" || size(C)!=2 ||
+    reduce(q1,GD)!=0 || reduce(q0,GD)!=0 ||
+    reduce(q1,GC)!=0 || reduce(q0,GC)!=0 ||
+    reduce(D[1],GC)!=0 || reduce(D[2],GC)!=0 ||
+    reduce(C[1],GD)!=0 || reduce(C[2],GD)!=0)
+{
+  print("FAIL_LPDP_LIST_COERCION_IDEAL_EQUALITY");
+  quit;
+}
+print("PASS_SAT_RETURN_TYPE_PROBE");
+quit;

@@ -1,0 +1,37 @@
+ring A=0,(q,w),dp;
+poly H=
+ -3587901148629/1982464*q^7-750433487193/495616*q^6
+ -63407820033/123904*q^5-2681119845/30976*q^4
+ -53636175/7744*q^3-177147/1936*q^2+10341/484*q+1;
+poly L2=
+ 5184+16537365/121*q+15077178/11*q^2+6133360581/968*q^3
+ +3027619377/242*q^4+192547983033/30976*q^5;
+poly L1=-419904/11+865008801/484*q-1745783685/484*q^2;
+poly L0=8503056/121;
+poly Ftop=q*H+L2*w+L1*w^2+L0*w^3;
+poly Fshift=subst(Ftop,q,q-4/27);
+
+ring R=0,(q,w),ds;
+LIB "hnoether.lib";
+poly f=imap(A,Fshift);
+number aa=-29/209088;
+number bb=7047/484;
+number cc=-46235367/121;
+number slope=-bb/(2*cc);
+poly fdes=subst(f,w,w+slope*q^3);
+list INV=invariants(fdes);
+int branches=size(INV)-1;
+print("TOP_QB_REPEATED_SLOPE="+string(slope));
+print("TOP_QB_DELTA_REPLAY="+string(delta(fdes)));
+print("TOP_QB_BRANCHES="+string(branches));
+print("TOP_QB_INVARIANTS_BEGIN");
+print(INV);
+print("TOP_QB_INVARIANTS_END");
+if (branches==1)
+{
+  print("TOP_QB_BETA="+string(INV[1][1]));
+  print("TOP_QB_SEMIGROUP="+string(INV[1][2]));
+  print("TOP_QB_CONDUCTOR="+string(INV[1][5]));
+}
+print("EXACT_TOP_HN_V5_COMPLETE=1");
+quit;

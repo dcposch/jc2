@@ -1,0 +1,15 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the review skill and the frozen producer case so the charge can be checked against the AWS outputs only.The review skill is for code diffs; this is a frozen-case audit, so I’ll match prior hostile-review format and inspect the producer case and report next.There’s a dedicated review prompt for this charge. I’ll read that, a recent hostile-review template, and the frozen case files together.I’ll inventory the frozen case, source archives, and prior similar reviews, then hash and read the AWS certificates without running any producer replay.I’ll read the dual-host stdout/stderr, V79a control failure, source archive, and hashes without running producer code.Stdout is in hand. Next I’ll read the archived source, V79a control failure, and parent V32/V77 pins without unpacking into the tree.Hashes match the freeze. I’ll extract the V79a/V79b replay sources, SOURCE manifests, and the source-typing/zero-digest controls next.V79a and V79b differ only in the repaired replay and V79 preregistration. I’ll extract those sources and read the source-typing and control logic.I’ll inspect the V32 parent for `qd.B` vs `Q_PRIME` reads, compare original V77, and check denominator factorizations plus normalized-byte equality.I have the frozen source, dual-host certificates, and hand factorizations. Next I’ll write the single charged report and leave every other file untouched.**Verdict: `CONFIRMED`.** The charged V77R case is a first-order source-support audit on `D(U*(C-3U^2)*B3)` at `beta=0`. No load-bearing defects.
+
+The report is `xmodel/td6_v77r_pure_q3_repaired_hostile_review_20260826.md`. No other file was edited. Frozen AWS outputs were read and hashed; no Python, CAS, solver, Lean, or replay was run.
+
+What holds:
+
+1. **Source typing.** `q=t+gamma*t^3+t^25`, singleton `('g','X',0,3)`, direct `Q_PRIME[2]=3*gamma`. Stale `qd.B` does not change first rows after `Q_PRIME` replacement; a real `Q_PRIME[1]` q2 leak does.
+2. **Zero minor.** `c0730fa1…` is `e3_digest(E3())`. It is not first-minor rank growth. First rank stays `38/132` with no leftover rows.
+3. **Ancestry.** Genuine P12 is the reviewed 2,893-term base plus a 4-term q3 derivative; remainder is `-k/50` plus 3 affine terms; 28 original rows / 14 lambda-prime; omission of either source row or lambda-prime is detected.
+4. **Denominators.** Hand reconstruction gives radical `{U,H,B3}` only. The 77,512-slot figure is the termwise Leibniz LCM, not a post-sum monomial count. Termwise LCM is `(1/4) U B3 H^3`.
+5. **Custody.** Dual-host normalized stdout is `f6aaf1c9…`. Archives are closed. V79a is a software-control failure at `assert first_rows_q2_leak != first_rows` after transport, before the theorem gates.
+6. **Scope.** Automatic dual emptiness on an already-unit generic open. No gamma-neighborhood, family, TD6, SP-2, or JC2 claim.
+
+Recommendations only: thinner V79b `launch.meta`, stale “V76 provisional” banner, and hash-pinned but unexpanded 4-term/3-term polynomials.

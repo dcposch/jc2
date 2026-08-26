@@ -1,0 +1,66 @@
+// Frozen exact D1 double-root toric blow-up chart.
+LIB "elim.lib";
+ring R=0,(u,v,p,c,a,h,x,y,la,tau,rho,q2,q1,q0,r2,r1,r0,k,mu,nu),(lp(2),dp(18));
+option(redSB);
+poly E1=(-4/9)*p*x^3*q2*r2+(2/3)*x^3*y*r2*k+(-4/27)*x^3*q2^2*q1+(4/9)*x^3*q2*r0+(4/9)*x^3*q1*r1+(4/9)*x^3*q0*r2;
+poly E2=(8/81)*p*x^3*q2^3+(-4/9)*p*x^3*q2*r1+(-4/9)*p*x^3*q1*r2+(-4/9)*c*x^3*q2*r2+(2/9)*x^4*r2^2+(-1/9)*x^3*y*q2^2*k+(2/3)*x^3*y*r1*k+(-4/27)*x^3*q2^2*q0+(-4/27)*x^3*q2*q1^2+(4/9)*x^3*q1*r0+(4/9)*x^3*q0*r1;
+poly E3=(8/27)*p^2*x^3*q2*r2+(-4/9)*p*x^3*y*r2*k+(20/81)*p*x^3*q2^2*q1+(-8/27)*p*x^3*q2*r0+(-8/27)*p*x^3*q1*r1+(-8/27)*p*x^3*q0*r2+(8/81)*c*x^3*q2^3+(-4/9)*c*x^3*q2*r1+(-4/9)*c*x^3*q1*r2+(-4/27)*x^4*q2^2*r2+(4/9)*x^4*r2*r1+(-2/9)*x^3*y*q2*q1*k+(2/3)*x^3*y*r0*k+(-8/27)*x^3*q2*q1*q0+(-4/81)*x^3*q1^3+(4/9)*x^3*q0*r0-1*la^15*mu;
+poly E4=(-20/243)*p^2*x^3*q2^3+(4/27)*p^2*x^3*q2*r1+(4/27)*p^2*x^3*q1*r2+(4/9)*p*c*x^3*q2*r2+(-8/27)*p*x^4*r2^2+(4/27)*p*x^3*y*q2^2*k+(-2/9)*p*x^3*y*r1*k+(16/81)*p*x^3*q2^2*q0+(16/81)*p*x^3*q2*q1^2+(-4/27)*p*x^3*q1*r0+(-4/27)*p*x^3*q0*r1+(-4/9)*c*x^3*y*r2*k+(20/81)*c*x^3*q2^2*q1+(-8/27)*c*x^3*q2*r0+(-8/27)*c*x^3*q1*r1+(-8/27)*c*x^3*q0*r2+(5/243)*x^4*q2^4+(-4/27)*x^4*q2^2*r1+(-8/27)*x^4*q2*q1*r2+(4/9)*x^4*r2*r0+(2/9)*x^4*r1^2+(-2/9)*x^3*y*q2*q0*k+(-1/9)*x^3*y*q1^2*k+(-4/27)*x^3*q2*q0^2+(-4/27)*x^3*q1^2*q0;
+poly E5=(-4/81)*p^3*x^3*q2*r2+(2/27)*p^2*x^3*y*r2*k+(-40/243)*p^2*x^3*q2^2*q1+(4/81)*p^2*x^3*q2*r0+(4/81)*p^2*x^3*q1*r1+(4/81)*p^2*x^3*q0*r2+(-32/243)*p*c*x^3*q2^3+(4/27)*p*c*x^3*q2*r1+(4/27)*p*c*x^3*q1*r2+(20/81)*p*x^4*q2^2*r2+(-4/9)*p*x^4*r2*r1+(2/9)*p*x^3*y*q2*q1*k+(8/27)*p*x^3*q2*q1*q0+(4/81)*p*x^3*q1^3+(4/27)*c^2*x^3*q2*r2+(-8/27)*c*x^4*r2^2+(4/27)*c*x^3*y*q2^2*k+(-2/9)*c*x^3*y*r1*k+(16/81)*c*x^3*q2^2*q0+(16/81)*c*x^3*q2*q1^2+(-4/27)*c*x^3*q1*r0+(-4/27)*c*x^3*q0*r1+(-4/27)*x^4*y*q2*r2*k+(16/243)*x^4*q2^3*q1+(-8/81)*x^4*q2^2*r0+(-20/81)*x^4*q2*q1*r1+(-20/81)*x^4*q2*q0*r2+(-4/27)*x^4*q1^2*r2+(4/9)*x^4*r1*r0+(-2/9)*x^3*y*q1*q0*k+(-4/27)*x^3*q1*q0^2;
+poly E6=(8/243)*p^3*x^3*q2^3+(4/27)*p^2*x^4*r2^2+(-2/27)*p^2*x^3*y*q2^2*k+(-8/81)*p^2*x^3*q2^2*q0+(-8/81)*p^2*x^3*q2*q1^2+(-20/81)*p*c*x^3*q2^2*q1+(-8/243)*p*x^4*q2^4+(4/27)*p*x^4*q2^2*r1+(28/81)*p*x^4*q2*q1*r2+(-8/27)*p*x^4*r2*r0+(-4/27)*p*x^4*r1^2+(4/27)*p*x^3*y*q2*q0*k+(2/27)*p*x^3*y*q1^2*k+(8/81)*p*x^3*q2*q0^2+(8/81)*p*x^3*q1^2*q0+(-4/81)*c^2*x^3*q2^3+(16/81)*c*x^4*q2^2*r2+(-4/9)*c*x^4*r2*r1+(2/9)*c*x^3*y*q2*q1*k+(8/27)*c*x^3*q2*q1*q0+(4/81)*c*x^3*q1^3+(-8/81)*x^5*q2*r2^2+(2/81)*x^4*y*q2^3*k+(-2/27)*x^4*y*q2*r1*k+(-4/27)*x^4*y*q1*r2*k+(4/81)*x^4*q2^3*q0+(2/27)*x^4*q2^2*q1^2+(-4/27)*x^4*q2*q1*r0+(-16/81)*x^4*q2*q0*r1+(-8/81)*x^4*q1^2*r1+(-20/81)*x^4*q1*q0*r2+(2/9)*x^4*r0^2+(-1/9)*x^3*y*q0^2*k+(-4/81)*x^3*q0^3-1*la^18*nu;
+poly E7=(-8/729)*p^4*x^3*q2*r2+(4/243)*p^3*x^3*y*r2*k+(100/2187)*p^3*x^3*q2^2*q1+(8/729)*p^3*x^3*q2*r0+(8/729)*p^3*x^3*q1*r1+(8/729)*p^3*x^3*q0*r2+(40/729)*p^2*c*x^3*q2^3+(4/81)*p^2*c*x^3*q2*r1+(4/81)*p^2*c*x^3*q1*r2+(-28/243)*p^2*x^4*q2^2*r2+(4/27)*p^2*x^4*r2*r1+(-2/27)*p^2*x^3*y*q2*q1*k+(-8/81)*p^2*x^3*q2*q1*q0+(-4/243)*p^2*x^3*q1^3+(8/81)*p*c^2*x^3*q2*r2+(16/81)*p*c*x^4*r2^2+(-8/81)*p*c*x^3*y*q2^2*k+(-2/27)*p*c*x^3*y*r1*k+(-32/243)*p*c*x^3*q2^2*q0+(-32/243)*p*c*x^3*q2*q1^2+(-4/81)*p*c*x^3*q1*r0+(-4/81)*p*c*x^3*q0*r1+(8/81)*p*x^4*y*q2*r2*k+(-56/729)*p*x^4*q2^3*q1+(16/243)*p*x^4*q2^2*r0+(40/243)*p*x^4*q2*q1*r1+(52/243)*p*x^4*q2*q0*r2+(8/81)*p*x^4*q1^2*r2+(-4/27)*p*x^4*r1*r0+(2/27)*p*x^3*y*q1*q0*k+(4/81)*p*x^3*q1*q0^2+(-2/27)*c^2*x^3*y*r2*k+(-20/243)*c^2*x^3*q2^2*q1+(-4/81)*c^2*x^3*q2*r0+(-4/81)*c^2*x^3*q1*r1+(-4/81)*c^2*x^3*q0*r2+(-16/729)*c*x^4*q2^4+(8/81)*c*x^4*q2^2*r1+(20/81)*c*x^4*q2*q1*r2+(-8/27)*c*x^4*r2*r0+(-4/27)*c*x^4*r1^2+(4/27)*c*x^3*y*q2*q0*k+(2/27)*c*x^3*y*q1^2*k+(8/81)*c*x^3*q2*q0^2+(8/81)*c*x^3*q1^2*q0+(8/243)*x^5*q2^3*r2+(-4/27)*x^5*q2*r2*r1+(-8/81)*x^5*q1*r2^2+(4/81)*x^4*y*q2^2*q1*k+(-2/27)*x^4*y*q1*r1*k+(-4/27)*x^4*y*q0*r2*k+(8/81)*x^4*q2^2*q1*q0+(8/243)*x^4*q2*q1^3+(-8/81)*x^4*q2*q0*r0+(-4/81)*x^4*q1^2*r0+(-4/27)*x^4*q1*q0*r1+(-8/81)*x^4*q0^2*r2;
+poly E8=(-28/6561)*p^4*x^3*q2^3+(-4/729)*p^4*x^3*q2*r1+(-4/729)*p^4*x^3*q1*r2+(-28/729)*p^3*c*x^3*q2*r2+(-16/729)*p^3*x^4*r2^2+(8/729)*p^3*x^3*y*q2^2*k+(2/243)*p^3*x^3*y*r1*k+(32/2187)*p^3*x^3*q2^2*q0+(32/2187)*p^3*x^3*q2*q1^2+(4/729)*p^3*x^3*q1*r0+(4/729)*p^3*x^3*q0*r1+(4/81)*p^2*c*x^3*y*r2*k+(40/729)*p^2*c*x^3*q2^2*q1+(8/243)*p^2*c*x^3*q2*r0+(8/243)*p^2*c*x^3*q1*r1+(8/243)*p^2*c*x^3*q0*r2+(28/2187)*p^2*x^4*q2^4+(-8/243)*p^2*x^4*q2^2*r1+(-20/243)*p^2*x^4*q2*q1*r2+(4/81)*p^2*x^4*r2*r0+(2/81)*p^2*x^4*r1^2+(-2/81)*p^2*x^3*y*q2*q0*k+(-1/81)*p^2*x^3*y*q1^2*k+(-4/243)*p^2*x^3*q2*q0^2+(-4/243)*p^2*x^3*q1^2*q0+(16/729)*p*c^2*x^3*q2^3+(4/81)*p*c^2*x^3*q2*r1+(4/81)*p*c^2*x^3*q1*r2+(-8/81)*p*c*x^4*q2^2*r2+(4/27)*p*c*x^4*r2*r1+(-2/27)*p*c*x^3*y*q2*q1*k+(-8/81)*p*c*x^3*q2*q1*q0+(-4/243)*p*c*x^3*q1^3+(20/243)*p*x^5*q2*r2^2+(-4/243)*p*x^4*y*q2^3*k+(2/81)*p*x^4*y*q2*r1*k+(4/81)*p*x^4*y*q1*r2*k+(-8/243)*p*x^4*q2^3*q0+(-4/81)*p*x^4*q2^2*q1^2+(4/81)*p*x^4*q2*q1*r0+(16/243)*p*x^4*q2*q0*r1+(8/243)*p*x^4*q1^2*r1+(20/243)*p*x^4*q1*q0*r2+(4/81)*c^3*x^3*q2*r2+(4/81)*c^2*x^4*r2^2+(-2/81)*c^2*x^3*y*q2^2*k+(-2/27)*c^2*x^3*y*r1*k+(-8/243)*c^2*x^3*q2^2*q0+(-8/243)*c^2*x^3*q2*q1^2+(-4/81)*c^2*x^3*q1*r0+(-4/81)*c^2*x^3*q0*r1+(4/81)*c*x^4*y*q2*r2*k+(-28/729)*c*x^4*q2^3*q1+(8/243)*c*x^4*q2^2*r0+(20/243)*c*x^4*q2*q1*r1+(32/243)*c*x^4*q2*q0*r2+(4/81)*c*x^4*q1^2*r2+(-4/27)*c*x^4*r1*r0+(2/27)*c*x^3*y*q1*q0*k+(4/81)*c*x^3*q1*q0^2+(-1/27)*x^5*y*r2^2*k+(-4/2187)*x^5*q2^5+(4/243)*x^5*q2^3*r1+(4/81)*x^5*q2^2*q1*r2+(-4/81)*x^5*q2*r2*r0+(-4/81)*x^5*q2*r1^2+(-8/81)*x^5*q1*r2*r1+(-4/81)*x^5*q0*r2^2+(2/81)*x^4*y*q2^2*q0*k+(2/81)*x^4*y*q2*q1^2*k+(-2/27)*x^4*y*q0*r1*k+(2/81)*x^4*q2^2*q0^2+(4/81)*x^4*q2*q1^2*q0+(1/243)*x^4*q1^4+(-4/81)*x^4*q1*q0*r0+(-4/81)*x^4*q0^2*r1-1*la^20*tau-1*la^20;
+poly AX=p+3*a^2;
+poly CU=c-2*a^3-h;
+poly LT=la-tau^3*rho;
+poly XY=x*y-la^6;
+poly QA=q2+q1+q0;
+poly QB=4*q2-2*q1+q0;
+poly QD=2*q2+q1;
+poly RA=r2+r1+r0;
+poly LC=27*RA-QD^2;
+poly INTERIOR=x*y*tau*rho;
+ideal I=E1,E2,E3,E4,E5,E6,E7,E8,AX,CU,LT,XY;
+// Independent inverse-variable controls.
+ideal TOY_PURE=x,y,tau,rho,u*INTERIOR-1;
+ideal GTP0=std(TOY_PURE);
+ideal GTP=std(eliminate(GTP0,u));
+if (reduce(1,GTP)!=0) { print("FAIL_B_PURE_BOUNDARY_CONTROL"); quit; }
+ideal TOY_ARC=rho-tau,la-tau^4,x-tau^8,y-tau^16,u*INTERIOR-1;
+ideal GTA0=std(TOY_ARC);
+ideal GTA=eliminate(GTA0,u);
+ideal TOY_ARC_BOUNDARY=GTA,x,y,la,tau,rho;
+ideal GTAB=std(TOY_ARC_BOUNDARY);
+if (reduce(1,GTAB)==0) { print("FAIL_B_STRICT_ARC_CONTROL"); quit; }
+print("PASS_B_SYNTHETIC_CONTROLS");
+print("AWS_TAG=max12_912_order3_d1_double_root_toric_20260825T235300Z_r6d_B");
+print("ENCODING=B_EXPANDED_INVERSE_ELIM_LP_DP");
+print("SOURCE_ROWS=EIGHT_CHARGED_ORDINARY_TAILS_NO_TRUNCATION");
+print("LOADS=k_mu_nu_POLYNOMIAL_COORDINATES_NOT_INVERTED");
+print("START_B_INTERIOR_INVERSE_ELIMINATION");
+ideal JU=I,u*INTERIOR-1;
+ideal GU=std(JU);
+ideal S=eliminate(GU,u);
+ideal GS=std(S);
+print("B_AFTER_INTERIOR_ELIM="+string(size(GS)));
+ideal BOUNDARY=GS,x,y,la,tau,rho,a-1,h,QA,QB,LC;
+print("START_B_BOUNDARY_QD_INVERSE_ELIMINATION");
+ideal JV=BOUNDARY,v*QD-1;
+ideal GV=std(JV);
+ideal H0=eliminate(GV,v);
+ideal H=std(H0);
+print("B_H_GENERATORS="+string(size(H)));
+if (reduce(1,H)==0)
+{
+  print("D1_DOUBLE_ROOT_TORIC_H_IS_UNIT=1");
+}
+else
+{
+  print("D1_DOUBLE_ROOT_TORIC_H_IS_UNIT=0");
+  print("H_BASIS_BEGIN");
+  H;
+  print("H_BASIS_END");
+}
+print("FIREWALL=UNIT_EXCLUDES_THIS_CHART;NONUNIT_IS_ONLY_A_TOTAL_LOAD_SPACE_SURVIVOR");
+print("PASS_D1_DOUBLE_ROOT_TORIC_B");
+quit;

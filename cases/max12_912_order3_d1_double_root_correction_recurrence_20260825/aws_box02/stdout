@@ -1,0 +1,36 @@
+{
+  "aws_tag": "max12_912_order3_d1_double_root_correction_20260826T002500Z_box02",
+  "charged_source_sha256": "67343b569db54f61f4a9e56e4262c0bf4fa781323a1287addbaf4fff93844623",
+  "control_1": {
+    "Q": "t^16*(z-1)*(z+2)",
+    "R": "t^28*(z-1)+t^32*(z+2)/9",
+    "normalized_alpha": "7",
+    "normalized_beta": "4",
+    "omitted_correction_has_nonzero_t48": true,
+    "row_digest": "8732b4e81bb979f63d4b8578f3adab9dcc013ebfc8a149fe9dd99c8a550d51eb",
+    "tails_through_t48": "all zero"
+  },
+  "control_2": {
+    "Q": "t^22*(z-1)",
+    "R": "t^30*(z-1)*(z+2)-t^38/2",
+    "normalized_alpha": "15/2",
+    "normalized_beta": "11/2",
+    "omitted_correction_changes_t60_pattern": true,
+    "row_digest": "a9af9cdc2992f97f16c0740c3e02db8955ef7d443e8d90a3ce7d530720e91b56",
+    "tails_at_t60": {
+      "1": "0",
+      "2": "0",
+      "3": "2/3",
+      "4": "0",
+      "5": "0",
+      "6": "0",
+      "7": "0",
+      "8": "0"
+    },
+    "tails_below_t60": "all zero"
+  },
+  "firewall": "finite successors only; no formal lift and no complete fan",
+  "strict_slope": "Lambda=t^4,tau=t,rho=t"
+}
+payload_sha256=e6811a80a085178e03d21ce9d24a9a1338fbf87a4ba6511774b102e8a8012ab4
+PASS_D1_DOUBLE_ROOT_CORRECTION_CONTROLS
