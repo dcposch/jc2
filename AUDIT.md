@@ -5,6 +5,503 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **D1 UNIT-AXIS COVARIANCE OVER THE SMOOTH DOUBLE-ROOT DISCRIMINANT —
+> HOSTILE REVIEW CONFIRMED (2026-08-26 05:18Z).**  For the frozen ordinary-
+> tail source and fixed loads `k=nu=0,mu=2/3`, the literal promoted V8
+> multipliers obey the exact coordinate action at
+> `p=-3a^2,c=2a^3+h`.  Their common negative axis character is exactly
+> `-3`; after the minimal clearing by `a^3`, the full identity is
+> `sum_i a^(11-i) F_i(hats) E_i=a^23 W_V8(hats)`, with universal 48-term
+> witness SHA `53cf4b65...`.  Its distinguished terms are coefficient-one
+> `a^3*Lambda^20` and `a^3*Lambda^20*tau`.  Moreover
+> `Delta=-27h(4a^3+h)` and the chart Jacobian is `-6a`, so on `D(a)` the
+> normalized coordinate change is etale and the V8 obstruction descends to
+> the smooth discriminant.
+>
+> Result/freeze/review/promotion SHAs are
+> `a061aea2bab3abcd9a8e88a3e86f18de233f46515cd2965bafa79ff1516642e2`,
+> `003788e80c359fa715d799f3fe66a35929b105c772d139865e87f123c1a9bda2`,
+> `f81c5b054c2ff331176bd39005ad8f826b92efbfd5e16b1f7f20ae7dcbab7226`,
+> and
+> `b8a1122709bca351e396f7a2985cc65e79138c6079ec52d56cfb10fc93125df2`.
+> Verdict: **UNIT_AXIS_COVARIANCE_CONFIRMED**.  The theorem assumes `a` is
+> a unit (`v(a)=0`) and uses the fixed loads/source and reviewed V8 cone.
+> Positive axis valuation is excluded from the licensed scope, not proved
+> impossible.  Triple root, moving loads, other source charts or normals,
+> the whole fan, D1, and JC2 remain open.
+
+> **TD6 PREVIOUS/POLE 24-KERNEL STAGE A — HOSTILE REVIEW CONFIRMED;
+> V83 PRODUCER OPEN AND V84 DEPLOYMENT-NEGATIVE (2026-08-26 05:18Z).**
+> On the common symbolic-center first-order presentation, the 22 licensed
+> q directions and dead-stretch directions `d10,d15` have zero cumulative
+> previous/pole conormal with unit denominator.  Thus `Q_prev=Q` and the
+> kernel dimension remains 24.  Producer/review SHAs are `6867c915...` /
+> `b47b613f...`; the frozen case MANIFEST/FREEZE SHAs are `918bd017...` /
+> `02b8da31...`.  The review does not compose incompatible Dual types and
+> makes no current-stage or nonlinear inference.
+>
+> V83 producer SHA `440b3fd2...` gives an exact selected rank-38 open
+> `D(U*H*B3*R38)`, where
+> `R38=C*V^2*U+8*C*U^4-(1/2)*V^4-7*V^2*U^3+8*U^6`; it does not assert rank
+> drop on `R38=0`.  V84 report SHA `8f3a6f4c...` records two byte-consistent
+> AWS failures before any K2 table: the inherited scalar source-RHS
+> propagator cannot coerce a symbolic coefficient to `Fraction`.  Verdict:
+> **STAGE A CONFIRMED; V83 PRODUCER-TIER; V84 HARNESS FAILURE / NO K2
+> MATHEMATICAL VERDICT**.  Current, K2, nonlinear integration, rank-drop
+> fibres, TD6, SP-2, and JC2 remain open.
+
+> **ORDER-TWO FIRST-NORMAL PRINCIPAL-PART/UFD ERRATUM V2 — HOSTILE REVIEW
+> CONFIRMED (2026-08-26 05:15Z).**  For
+> `K=z^4+p*z^2+c*z+r`, `N=n3*z^3+n2*z^2+n1*z+n0`, the exact first-normal
+> tail remains
+> `[(3/8)N^2/K+k10*K^(5/2)]_-`, followed by a unitriangular change from
+> negative `z`-coefficients to negative `w=K^(1/4)`-coefficients.  Hence on
+> `k10=0`, `q1=...=q7=0` if and only if `K|N^2`.  Away from the zero-normal
+> section the sliced support consists exactly of the square family `S` and
+> the `[2,1,1]`/`[3,1]` discriminant family `D`; the square family solves the
+> full first gate for arbitrary `k10`.
+>
+> Precisely, with `I=(q1,...,q7)`, `A=(p,c,r)`,
+> `B=(n0,n1,n2,n3,k10)`,
+> `I*=((I:A^infinity):B^infinity)` and
+> `I0*=(((I+(k10)):A^infinity):B^infinity)`, one has
+> `V(I0*)_red=S union D`.  On
+> `O=V(k10) intersect D(A) intersect D(n0,n1,n2,n3)`,
+> `(V(I*) intersect O)_red=((S union D) intersect O)_red`, and
+> `S union D` is contained in `V(I*) intersect V(k10)`.  Every possible
+> residual point lies at `k10=n0=n1=n2=n3=0` with nonsquare `K`.  The
+> unproved implication `k10!=0, q1=...=q7=0 => K square` would remove that
+> residual reduced set; it is not part of this theorem.
+>
+> Corrected theorem/review SHAs are
+> `4c9d9cfc58eb4ca2a33c9bf83beb485c15f0796fa36d2ffe4826c3fdeeac374d`
+> and
+> `08a5ca51461afb1753b21ee7fcf4bf8ed3719cb6edafb7d2020043ad63ab9efa`.
+> Verdict: **CONFIRMED**.  Immutable V1/review SHAs
+> `988d659f0a25f14a612d316608a8dc7c36d839c3f253c35e7e785d33e5923fb5`
+> and
+> `affd9b6004abc8078e2ae5b3ddc88307d7242d3ac8aa18eac36a21da0fed3639`
+> remain `REPAIR`; only V1's global saturation-before-slice equality is
+> withdrawn.  No equality of nonreduced ideals, radical/reducedness,
+> strict arc, higher contact, terminal-passport/Taylor closure, order-two
+> exclusion, `(8,12)`, maximum twelve, or JC2 follows.
+
+> **ORDER-ONE TERMINAL `r7` PURE-POWER COMPONENT CRITERION — HOSTILE
+> REVIEW CONFIRMED (2026-08-26 05:14Z).**  For every genuine order-one
+> client with `U>=2`, the reviewed terminal row gives
+> `r7=lambda+gamma*(x-a)^(1-U)`, `gamma!=0`, and therefore
+> `div_P1(r7-lambda)=(U-1)([infinity]-[a])`.  If a projective coefficient
+> component met by the source has normalization `X`, the source map
+> `P1->X` has degree `n`, and `R` is the descended `r7`, then `X` is
+> rational and
+> `div_X(R-lambda)=d(Q0-Qinf)` with `d*n=U-1`; both the source map and `R`
+> are power maps after coordinates.  Thus multiple pole support, or more
+> than two branch values for `R` (apart from the degree-one exception), is
+> an exact component rejector after complete normalization/graph and chart-
+> boundary closure.  The equality `d=U-1` downstairs is licensed only when
+> the source map is independently birational; in particular `U=2` forces
+> `d=n=1`.
+>
+> Theorem/review SHAs are
+> `bbd744fa0c3875f11d5f0038dbbdea461e2656c6a9eb98d2b9050c1eae31712a`
+> and
+> `44af62f2c21651471156bfd034b1dfcbf652d786f7cb7e05729f0494a432aae5`.
+> Verdict: **CONFIRMED EXACT NECESSARY TERMINAL CRITERION**.  It does not
+> establish characteristic-zero component coverage, birationality, lower
+> Faber tails, either Taylor boundary, polynomiality, strict Rees closure,
+> order-one emptiness, `(8,12)`, maximum twelve, or JC2.
+
+> **FIXED-LOAD ORDER-TWO INVARIANT-QUOTIENT ORIGINAL PAIR — DUAL AWS
+> TIMEOUT CONTROL (2026-08-26 05:13Z).**  Tuple A at `p=32003` on Box03
+> and tuple B at `p=65521` on Box02 passed their frozen source hashes,
+> six-load specialization, and deck-parity sentinels, then both timed out
+> at the preregistered one-hour cap with `rc=124`, zero swap, and last marker
+> `ORDER2_QUOTIENT_SAT_START`.  Neither reached `SAT_DONE`, elimination,
+> quotient image, fixed locus, nor genus.  Report/manifest SHAs are
+> `394acff27597e34be703c57a143f4cca7711a2b12978551088cba3a96a77ffae`
+> and
+> `669851790d6c41e7c79c30448e5f20dbb3bffd75f70c32f1e3414f2a501bb05e`.
+> Verdict: **TIMEOUT / NO MATHEMATICAL VERDICT**.  Runtime and small memory
+> use are not geometry; no longer monolithic rerun is promoted.
+
+> **D1 COMPLETE FIXED-CHART q-LINEAR TRANSVERSE-`h` LIFT — HOSTILE REVIEW
+> CONFIRMED (2026-08-26 04:54Z).**  On the pinned ordinary-tail chart
+> `a=1,p=-3,c=2+h,k=nu=0,mu=2/3`, with full Q/R support, the complete
+> 24-column filtered system has rank nine and the free-zero correction
+> `F1-=h*q1/36`, `F2-=h*q0/72`.  The exact product is a 48-term polynomial
+> row identity, not a congruence: its `h=0` slice is the reviewed q2 witness
+> and the entire charged h-linear Q-R, `R^2/Q^3`, and `Q^2*R` union vanishes.
+> Its unique least term is `Lambda^20` uniformly on
+> `alpha=15/2,beta=5+u,delta=5+v`, `u,v>0,T>0`, if and only if `eta>=0`.
+> At `eta=0`, every closed-corner tie has positive open-quadrant load.
+>
+> Result/freeze/review/promotion SHAs are
+> `7d3973e84c37d158a1f88796fdd5747e32d13e7fabd071ece80f6ea5a4c7942d`,
+> `85a6ddb3b72fce2b2cce6399ba69315bd869ad9eae76461de6963a446ed648ff`,
+> `2c3dbbd50089892197dd5ad5c0fb90776b5c2d2dea4ac2752f3b1a3218cc7d4c`,
+> and
+> `b503f6a70c39c256ba27f27823d5788bf5787badc507efa3079433064eb142e3`;
+> every freeze entry rechecks.  Verdict:
+> **HQ_LINEAR_FILTERED_LIFT_CONFIRMED**.  This closes the positive-eta
+> filtered transport problem for this exact finite witness and fixed chart;
+> it does not prove coordinate covariance, moving-axis/load or other-normal
+> coverage, the triple-root chart, the full double-root fan, D1, or JC2.
+
+> **D1 THIRD GRADED TRANSVERSE-`h` LIFT — HOSTILE REVIEW CONFIRMED
+> (2026-08-26 04:38Z).**  Starting from the reviewed V6 71-term identity,
+> the exact scalar `h^2` correction `(5/24,-2/9,0,...,0)` cancels the
+> complete eight-term h-squared Q-R coefficient while preserving every
+> lower-h grade.  The resulting exact 57-term row-module witness has unique
+> least term `Lambda^20`, uniformly on
+> `alpha=15/2,beta=5+u,delta=5+v`, `u,v>0,T>0`, if and only if
+> `eta>=5/2`.  At equality all eight new `h*q^2*r` competitors have positive
+> open-quadrant load; below it an explicitly present term becomes subtarget.
+>
+> Result/freeze/review/promotion SHAs are
+> `a790c5015f2f7a27fc4681a4e29cf059d775d4a232e16523e0966c19f3bb8335`,
+> `0c5ab55da33f5296cd64a82ddfb03591cc45a6b32415c402a59014af6410475b`,
+> `32b63dec622ce24e777f872e898d2004da10f18c2aab49ee695f11d1f7177494`,
+> and
+> `a0bb826cb902f73424d3562d0a8d7938baa9c6415361ec2c2db921e17f0a8177`;
+> all freeze entries recheck.  Verdict:
+> **H2_QR_SYZYGY_LIFT_CONFIRMED** at the fixed-chart scalar-`h^2` scope.
+> The next q-linear multiplier support, `eta<5/2`, higher h grades, an
+> h-adic/formal lift, moving source/load data, fan coverage, D1, and JC2
+> remain open.
+
+> **ORDER-TWO EXACT FIRST NORMAL/DIVISIBILITY JET — HOSTILE REVIEW
+> CONFIRMED (2026-08-26 04:32Z).**  Put
+> `K=z^4+p*z^2+c*z+r` and, in the exact one-parameter order-two chart, write
+> `C=K^2+Lambda*N` with normal coordinates `n0,n1,n2,n3`.  Every pulled
+> Keller row `Phi_l` is divisible by `Lambda^2` as a polynomial identity.
+> Hence `Theta_l=Phi_l/Lambda^2` is exact on `D(Lambda)`, and its first
+> boundary row `q_l=Theta_l mod Lambda` is quadratic in the four normal
+> coordinates plus `k10` times the exact load derivative.  None of
+> `k6,k2,mu2,mu4,mu6,J` occurs at this grade.  Therefore
+> `Q1*=((q1,...,q7):(p,c,r)^infinity):(n0,n1,n2,n3,k10)^infinity`
+> is the exact necessary landing scheme for arcs whose first nonzero
+> normal/load contact has order one.
+>
+> Theorem/review/promotion SHAs are
+> `827e76bde5d394ab17f7c05561a1bf254b6fdf8fc3453dd60400d16e80061fdc`,
+> `27275f3d13471521bec0016d4fbc6e12d5bf8e539deeb4694fe0c01f04b025bd`,
+> and
+> `26b8a5717beeb5dcd09c2c69ee2ec032ed97e925f79aafc4a4c946cf482acd33`;
+> the source freeze rechecks from the repository root.  Verdict:
+> **CONFIRMED EXACT NECESSARY FIRST-CONTACT THEOREM**.  A nonunit `Q1*`
+> identifies only further exact strata, while a unit excludes order-one
+> contact only and forces higher contact.  This is not the full Rees boundary,
+> an AWS endpoint, an emptiness result, order-two closure, `(8,12)`, maximum
+> twelve, or JC2.
+
+> **D1 SECOND GRADED TRANSVERSE-`h` LIFT — HOSTILE REVIEW CONFIRMED
+> (2026-08-26 04:32Z).**  In the same fixed full-`q2` control-2 chart, the
+> exact scalar correction
+> `(5/2,-25/18,0,1/4,-1/3,0,0,0)` cancels both the complete h-linear Q-R
+> grade and the complete next `R^2/Q^3` grade.  The resulting exact 71-term
+> row-module witness has unique least term `Lambda^20`, uniformly on
+> `alpha=15/2,beta=5+u,delta=5+v`, `u,v>0,T>0`, if and only if
+> `eta>=15/4`; equality is strict because all tying competitors carry
+> positive open-quadrant load.
+>
+> Result/freeze/review/promotion SHAs are
+> `a69e542e57b33e7961299c658d1652aab9d2dd75dcd165532781f64aabf6cf5a`,
+> `b80a754f32d8e6d0c1aff05f7392c95643628217e3c575e33965d8bb87bc7131`,
+> `41e0580853ae386623a704cd6227b4cec86966a70e629915c4b54a942c716397`,
+> and
+> `2d2084a1aa05f65a1789e47517f05e75f932e99a21b42ec6952785ee620ab494`;
+> the freeze rechecks.  Verdict: **H_GRADE5_KERNEL_LIFT_CONFIRMED** at the
+> fixed-chart scalar-correction scope.  Polynomial-multiplier support,
+> an h-adic/formal lift, moving axes or loads, full fan coverage, D1, and JC2
+> remain open.
+
+> **TD6 FIRST GENERIC SURJECTIVITY — HOSTILE REVIEW CONFIRMED AND PROMOTED
+> (2026-08-26 04:16Z).**  On the fixed source-typed A3/F1 presentation over
+> `K=E(C,V,U)`, after the reviewed rank-3,470 transport echelon, the packed
+> FIRST coefficient map `A0:K^132 -> K^38` has rank 38: all 38 packed rows
+> are nonzero and none is dependent.  Hence `A0` is surjective.  For every
+> well-typed square-zero perturbation preserving this presentation, the
+> derivative equation `A0*x1=b1-A1*x0` is solvable, including the varying-
+> matrix term.  The generic FIRST conormal is therefore zero for every such
+> perturbation, not only the 24 implemented transport-kernel axes.  Composed
+> with reviewed V81C, V78, and V82S2, the whole 24-dimensional transport
+> kernel survives transport plus FIRST.
+>
+> Corollary/review/promotion SHAs are
+> `b1352aa1c9e218cf7ee5df7d6c03ff99e603a86f57a24cb391dbba102a2579c1`,
+> `b24ab0d33b2c0fd82b6ba49a8b845e3e73af822e926f4f07f507dfcc684c3c83`,
+> and
+> `7786868ef36b57fc9a8ae6f166373f61403ac11251bf9c0377aca12e5f64620d`.
+> Verdict: **CONFIRMED** on the generic rank-38 open.  The evidence does not
+> identify that open with `D(U*H*B3)` and does not cover rank-drop fibres,
+> previous/pole/current, second order, a nonlinear family, full TD6, SP-2,
+> or JC2.  Further isolated generic FIRST-axis computations are redundant.
+
+> **D1 FIRST GRADED TRANSVERSE-`h` SYZYGY LIFT — HOSTILE REVIEW CONFIRMED
+> (2026-08-26 04:20Z).**  In the fixed full-`q2` control-2 chart, the complete
+> worst `h`-linear Q-R coefficient consists of eight terms.  Its exact
+> eight-row scalar-correction map has rank three and free-zero solution
+> `(g1,g2)=(11/6,-11/12)`.  Adding those `h` corrections cancels the whole
+> Q-R grade and gives a 90-term exact row-module witness.  On
+> `alpha=15/2,beta=5+u,delta=5+v`, `u,v>0`, its unique least term is
+> `Lambda^20` uniformly if and only if `eta>5`.  The five ties at `eta=5`
+> are retained as the next filtered grade and are not branch survivors.
+>
+> Result/freeze/review/promotion SHAs are
+> `c9469bb0041ba34e16732e33b3944f04217009f35473275429b708fc060d680e`,
+> `f166e2ba9aa8e2c4715f14a4f29ed7dd4296755ed5de551de94784be3e911471`,
+> `7ac62c8bd0667340aab5fcdd4d6d35b5e184536fb6e9f5c98f6c9955fdea54c7`,
+> and
+> `b4cce36c310f6c86291caf2f635d31f0555c9f882b2614b1930a876d2d295ad2`;
+> every freeze entry rechecks.  Verdict:
+> **H_QR_SYZYGY_LIFT_CONFIRMED** at the stated fixed-chart scope.  This is
+> not scalar-support completeness, an h-adic lift, moving-source/load data,
+> full fan coverage, D1, or JC2.
+
+> **D1 FIRST TRANSVERSE-`h` TRANSPORT THRESHOLD — HOSTILE REVIEW CONFIRMED
+> (2026-08-26 04:16Z).**  Restoring `p=-3,c=2+h` while retaining the full
+> `q2` support and the reviewed q-corrected multipliers gives a dual-AWS,
+> byte-identical 98-term witness.  Its `h=0` slice is literally the reviewed
+> 37-term witness.  On
+> `alpha=15/2,beta=5+u,delta=5+v`, `u,v>0`, the unchanged witness has unique
+> least term `Lambda^20` uniformly if and only if `eta=wt(h)/L>=15/2`;
+> strictness at equality comes from positive `u` or `v`.  Below that threshold
+> this particular witness is only a negative control, not evidence of a
+> surviving arc.
+>
+> Result/freeze/review SHAs are
+> `6ddb1343c7b30d0e4e6daf7e5f13ea364205e1a776c60534d02da26a7c529f14`,
+> `0ff05368ab7a5751617db6a6b9a31e67545439ed5fb688cb15238ef879637b68`,
+> and
+> `ed70c255ee6809b03e6dd40149766365cac92858b85ac4a881afa73ac3ce1d77`;
+> all 23 freeze entries recheck.  Verdict:
+> **H_FIRST_TRANSPORT_CONFIRMED** at fixed source/load/open-quadrant scope.
+> New graded corrections already improve the producer-tier low-`eta` range;
+> this theorem alone gives no equality-support, moving-source, full-fan, D1,
+> or JC2 result.
+
+> **ORDER-TWO `U=2,[6,2]` ONE-PARAMETER REES PRESENTATION — HOSTILE REVIEW
+> CONFIRMED (2026-08-26 04:12Z).**  Put `R=1+tau`, twist odd coefficients by
+> `C_odd=R B_odd`, leave even coefficients unchanged, set `J=Rj`, and set
+> `Lambda=tau^3 varrho`.  After localizing at `R`, the complete seven-row
+> strict-Rees family with all seven retained loads is the flat pullback of
+> the displayed one-`Lambda` family.  Generic-chart saturation, restriction
+> to the central boundary, and coefficient-irrelevant saturation give the
+> same closed subscheme in the two presentations, scheme-theoretically.
+> The original polynomial ring does not invert `R`; the exact load-bearing
+> identity is
+> `K+(tau,varrho)=(K:R^infinity)+(tau,varrho)`, because `R=1` modulo
+> `(tau,varrho)`.  Thus nilpotents and embedded components at the boundary
+> are preserved; the false off-boundary identity `K=K_R cap S` is not used.
+>
+> Theorem/main-review/localization-delta/promotion SHAs are
+> `5abd181a99d8e568635067320260ccc4555a3613949a600ce21560697eba1b6b`,
+> `1da9974dde45fd73c757eb315d50bc9e8abaa028ebb8d5894ca2ea4b2bd6d2de`,
+> `0fa0dc4afb160ae4b9ed6bc195e1158e44b92cdc5bb5ea1619a146e9d52aac96`,
+> and
+> `82167b862a779d1104e3fb904d71627b799f48074241d8496fc1051d0a7afa2f`.
+> Verdict: **CONFIRMED ALGEBRAIC REDUCTION**.  The live AWS saturations are
+> experiments and supply no emptiness, Taylor-realizability, profile,
+> order-two, `(8,12)`, maximum-twelve, or JC2 conclusion.
+
+> **D1 CONTROL-2 FULL-`q2` WITNESS REGION — HOSTILE REVIEW CONFIRMED
+> (2026-08-26 04:02Z).**  The reviewed 37-term exact witness has 35
+> non-target terms and precisely fifteen distinct strict halfspaces.  On the
+> fixed `alpha=15/2` slice, with `T>0`, these are necessary and sufficient
+> for the two inequalities `beta>5` and `delta>5`, where
+> `delta=wt(q2)/L`.  The control-2 source semantics separately give
+> `delta>beta` whenever `q2` activates later than the leading
+> `q1*z+q0` layer.  Hence over the full charged window `5<beta<6`, the same
+> monomial witness excludes every later `q2` activation.  Together with the
+> reviewed `q2=0` theorem, the identically-zero versus later-activating
+> `q2` support gap is closed on this fixed axis/cusp/load chart.
+>
+> Cone result/freeze/review SHAs are
+> `0ed5eab56c10e7114850a9cbb915825d9a4f5f2360c97b25a644c8a64c6a14d7`,
+> `c54c33be036410957d02ede886e3d237c9bc2675d73493b028c2fd4d4f1ff4de`,
+> and
+> `5f0997738ed3c2dfcb871177b241d14263db7ba9dc0155ccafc1633d2bfa9192`.
+> Verdict: **Q2_WITNESS_CONE_CONFIRMED** for one explicit witness and the
+> charged later-layer premise.  This is not a full Groebner cone/fan,
+> equality-face saturation, moving axis/cusp/load theorem, other-support
+> result, full double-root locus, D1, or JC2.
+
+> **TD6 COMPLETE 24-DIRECTION TRANSPORT-KERNEL FIRST GATE — HOSTILE REVIEW
+> CONFIRMED (2026-08-26 04:00Z).**  On the fixed source-typed A3/F1 slice
+> over the generic center field `E(C,V,U)`, the V82S2 dual-AWS shards replay
+> the two remaining dead-kernel directions `d10,d15` from nonzero raw source
+> columns through all 3,470 transport rows and the first source band.  Both
+> axes have unit denominator and zero first conormal; omission controls are
+> nonzero.  Combining this with the reviewed V81C theorem
+> `ker(transport)=Q^22+span(d10,d15)` and the reviewed V78 zero first
+> conormal on the 22 q-directions proves that exactly all 24 directions in
+> the transport kernel survive the first gate.
+>
+> Producer/review SHAs are
+> `e18147d25c8be32f6db71eeed76be1dc50aa94ec44908ce1d9564859d7ecd757`
+> / `3f62b23d43e134eedb53ecd6e78511ca10606f46e6c0007d510596d9516bd93b`;
+> case MANIFEST/FREEZE SHAs are
+> `7f1eefc70d50db24023f1eb79037c8ae4ff1df2a45d2a8bee30a4f34c5f0224a`
+> / `f683d403d4b3fcdf67135834cad407b530602c6b49c60ff4ad952d1cfaada5f3`.
+> Verdict: **CONFIRMED** at generic fraction-field, fixed-A3, square-zero
+> first-gate scope.  This is a reviewed composition, not a one-ring 24-axis
+> run, and proves no previous/pole/current compatibility, nonlinear family,
+> full TD6, SP-2, or JC2 result.
+
+> **`(8,12)` COMPLETE EXACT-ORDER-FOUR COEFFICIENT-INFINITY LEAF —
+> HOSTILE REVIEW CONFIRMED AND PROMOTED (2026-08-26 03:50Z).**  The reviewed
+> source audit proves that the exact-order-four load has precisely the two
+> alternatives `mu4=0` and `mu4!=0`, with no omitted lower Faber load.  The
+> already confirmed Hall--Shioda/divisor-19 theorem eliminates `mu4=0`.
+> For `mu4!=0`, the exact `r7`-saturated coefficient curve has a monic
+> good-reduction model whose special fibre is prime; hence its exact
+> characteristic-zero quotient is a one-dimensional domain.  Its
+> `(q,y)=(a5^2/a6^3,a6^2)` map is nonconstant on every geometric component,
+> covers the `a6=0` complement, and lands on the lemniscatic genus-one curve
+> `Z^2=X^3-16X`.  Deck invariance descends a genuine source map to
+> `P1_x`, contradicting genus one.  Therefore the complete exact-order-four
+> coefficient-infinity leaf is empty for every source degree `U`.
+>
+> Loaded theorem/review and final promotion SHAs are
+> `0ac7da1db8eb37c638f4d8014ffc4e62741c808212dccd5c6e8cbb1d4602d49b`,
+> `4ac21da89bb61b427d6c77ce265a13d043ab81ec71a8fe2f21bc294f231d1699`,
+> and
+> `d0b2e9bce38fc9293e79816c1cbbba14d5b5161d764bfcdc722954d7659f25a9`.
+> Complementary `mu4=0` theorem/review SHAs are `a5d40fd8...` /
+> `a40827f9...`.  Verdict: **CONFIRMED** at exact-order-four necessary-source
+> scope.  Exact order two, order one, all `(8,12)`, maximum twelve, and JC2
+> remain open.
+
+> **D1 CONTROL-2 FIRST FULL-`q2` SYZYGY LIFT — HOSTILE REVIEW CONFIRMED
+> (2026-08-26 03:45Z).**  For the pinned ordinary-tail eight-row module with
+> fixed axis/cusp, `a=1,k=nu=0,mu=2/3`, and full support
+> `Q=q2*z^2+q1*z+q0`, dual AWS encodings prove the literal identity
+> `W'=sum_i F_i'E_i(full q2)=W+q2*CORR`, where
+> `F1'=F1+q2/12`, `F2'=F2-q2/9`, and the other six multipliers are
+> unchanged.  This is an exact polynomial identity, not a congruence modulo
+> `q2^2`.  At the charged weight
+> `(L,T,H;wt(q2);wt(q1),wt(q0);wt(r2),wt(r1),wt(r0))`
+> `=(4,1,1;23;22,22;30,30,30)`, its 37 terms have unique least term
+> `Lambda^20` of weight 80.  Thus `Lambda^20` belongs to the weighted
+> initial ideal and the nine-coordinate leading torus is empty.
+>
+> Freeze/result/review SHAs are
+> `994ef6231c4ec705c8b14bda418f046ce0ce45603e6b597141eac6d1884e4c34`,
+> `5c81cd8bfaf80d34ad9211fafdc50ab58a4582c68988f5de4c6bdeb593a66213`,
+> and
+> `2a2ff048c299a8878ea28211b72f0d0ad98f27216ae5c3462eb3bc076083ac7d`.
+> Verdict: **Q2_SYZYGY_LIFT_CONFIRMED** at this one weight and fixed
+> source/load/support scope.  It is not yet an all-`q2`-valuation theorem,
+> a moving-source result, fan coverage, D1, or JC2; the separately frozen
+> symbolic witness-cone certificate remains under review.
+
+> **D1 CONTROL-2 SAMPLED `BETA=5` EQUALITY-FACE OBSTRUCTION — HOSTILE
+> REVIEW CONFIRMED (2026-08-26 03:20Z).**  For the frozen double-root cubic
+> `K=(z-1)^2(z+2)`, fixed data
+> `a=1,h=q2=k=nu=0,mu=2/3`, support
+> `Q=q1*z+q0`, `R=r2*z^2+r1*z+r0`, and the single weight
+> `(4,1,1,20,20,30,30,30)`, two independent AWS contractions compute the
+> same 41-generator special fibre.  One uses direct `s`-saturation in global
+> `dp`; the other uses double-inverse elimination in `(lp(3),dp(8))`.  Both
+> reduced bases contain `Lambda^20`, and both eight-coordinate torus
+> localizations are the unit ideal.  Hence no valued point with all eight
+> leading coefficients nonzero realizes this exact equality-face weight.
+>
+> Dual-freeze/result/review SHAs are
+> `c8c541b2a098b396b32bd3e905189ca54f2dd11c44ecc7b74c0cf98ed5570a34`,
+> `c42f8d470de0692f7f7eead4887702a91e70c0505453cea6843469303b837503`,
+> and
+> `7ec9333928b53a8f357b5aa33aa76bf4dd5ba7a2d4995162ba70cb9b82e2be72`.
+> Verdict: **BETA5_DUAL_CONFIRMED** at this one ray and fixed-source/support
+> scope.  It does not cover other positive splits `L=3T+H`, nonzero `q2`,
+> moving axes or loads, other supports, a whole Groebner cone/fan, D1, or
+> JC2.
+
+> **`(8,12)` COMPLETE `U=4` TERMINAL MOMENT CLASSIFICATION — HOSTILE
+> REVIEW CONFIRMED (2026-08-26 03:13Z).**  For exact Kummer order
+> `m in {2,4}` and four finite support points, affine normalization to
+> `(0,1,x,y)` reduces the moments through degree two to a linear formula for
+> `y` and a genuine quadratic for `x` with discriminant
+> `4*n1*n2*n3*n4`.  The degree-three moment is nonzero on distinct support
+> by the Vandermonde argument.  Exhausting the exact-order profile box
+> `3<=D<=3m`, quotienting by affine maps and same-sign relabelling, and
+> retaining collision-free roots gives:
+>
+> - `m=2`: five profiles, all viable, five affine classes (one rational and
+>   four quadratic);
+> - `m=4`: thirty-six profiles, thirty-five viable, forty-four affine
+>   classes (five rational and thirty-nine quadratic), with unique empty
+>   profile `(3,3|-3,-3)`.
+>
+> Every retained class satisfies the charged reconstruction of coprime monic
+> `A,B`, `deg(A-B)=D-3`, squarefreeness of `A-B`, the exact Wronskian
+> identity, and radicand degree `4m`.  Existence agrees with
+> `3*gcd(parts)<=D`; this is used as a Boolean edge-count checksum, not as a
+> formula for the number of affine classes.  Galois-conjugate roots remain
+> distinct precisely when no allowed same-sign affine permutation identifies
+> them.
+>
+> Registration/enumerator/payload/review SHAs are
+> `cfbd82dd8e03aa5f7c753e442e9994b011a2fa1fe1e0bdeea197a9663570e354`,
+> `31f9b51beca1702ba23443ced509350d7769c2ef52dad5a62051e33883c347ae`,
+> `8719cb71fa2e70d2aa11e20243e252fafd7e0aad2ef782449faff754fac143ee`,
+> and `2eced03bdfb10e8ec39500b88bef7d2cb4709b582aa3ad70a687d108c7d266f7`.
+> Verdict: **CONFIRMED** at the `U=4` terminal differential-equation scope
+> only.  No lower Faber tail, Taylor polynomiality, source landing, bound on
+> `U`, whole Kummer leaf, `(8,12)`, maximum-twelve, or JC2 statement follows.
+
+> **TD6 V81C GENERIC 33-AXIS TRANSPORT RANK/KERNEL — HOSTILE REVIEW
+> CONFIRMED (2026-08-26 03:10Z).**  Over the generic symbolic-center field
+> `E(C,V,U)`, on the fixed source-typed A3/F1 slice
+> `p=t^15, q=t+t^25` and pole chart
+> `x=r^-25, y=r^5+sum_(m=6)^16 d_m*r^m+zeta*r^17`, dual AWS shards replay
+> all 3,470 transport pivot rows for each of the eleven dead-stretch axes.
+> The generic and point tables are byte-identical across hosts.  Directions
+> `d10,d15` have zero leftover tables; the other nine directions have an
+> exact lower-triangular minor on distinct original F0 derivative keys, with
+> common nonzero diagonal `15625/3`.  Hence the dead block has rank nine and
+> kernel `span(d10,d15)`.
+>
+> Combining this with the separately reviewed V78 theorem that all 22
+> licensed q-transport columns vanish gives the concatenated 33-axis
+> fraction-field transport map rank nine and kernel dimension 24, namely
+> the 22 q directions together with `d10,d15`.  This conclusion is licensed
+> by the frozen union assembler and review; it is not represented as an
+> executed 33-variable one-ring calculation.
+>
+> Producer/review SHAs are
+> `47327fc9087954377d0855c2891462bcde82387f554e84e6e0e2981700c6c5d5`
+> / `dfac352887f645a9dd1f03a32b4701372b32de3a445bfd496c74109e64381ebb`;
+> case MANIFEST/FREEZE SHAs are
+> `3f11741fcc521ca137aa88b74b08b1aa486dbfb6da46f5da3d508d0f04d91b68`
+> / `40f5d7aa63fb23c543ff7d906582622fde20a70f3ad903a86cf8f622e29044a2`.
+> Verdict: **CONFIRMED** at generic fraction-field, first-order transport
+> source-incidence scope.  It proves no denominator-cleared atlas,
+> first/previous/current compatibility, nonlinear neighborhood, family,
+> full TD6, SP-2, or JC2 statement.
+
+> **D1 CONTROL-2 SLOPE-UNIFORM LEADING-TORUS OBSTRUCTION — HOSTILE REVIEW
+> CONFIRMED (2026-08-26 03:05Z).**  A frozen AWS certificate and literal
+> replay give an eight-term polynomial `W` in the fixed unhomogenized
+> nine-generator ideal `J` for
+> `a=1,h=q2=k=nu=0,mu=2/3` and the five-coefficient support.  For every
+> positive rational `L,T,H` with `L=3T+H`, assign
+> `w(q_i)=beta*L`, `w(r_i)=(15/2)*L`, and the charged
+> `Lambda,tau,rho` weights.  For every rational `beta>5`, the unique
+> least-weight term of `W` is `Lambda^20`; hence
+> `Lambda^20 in in_w(J)` and the eight-coordinate leading torus is empty.
+> The standard valued-arc lemma then excludes the charged control-2 face
+> `alpha=15/2`, `5<beta<6`, on exactly this fixed support.
+>
+> Target/review SHAs are
+> `b6349549a115a44ac8534d7801a15fa7e3f8c7a8211cce69ce723cd019301a49`
+> / `6e86154863020e71fc5a1a69bdcad6912e98b163e32b3b85aa8e44833ef8cd1a`.
+> The witness identity is a replayed membership certificate, not a new
+> derivation of the nine rows.  The equality face `beta=5`, the control-2
+> endpoint `beta=6`, moving axes or loads, nonzero `q2`, later support
+> activation, other support masks, the tied ray, the control-1 chart, full
+> fan coverage, D1, and JC2 are not licensed by this theorem.
+
 > **TD6 V80B DEAD-STRETCH TRANSPORT POINT DISCRIMINATOR — HOSTILE REVIEW
 > CONFIRMED (2026-08-26 02:10Z).**  At the exact source point
 > `(C,V,U)=(1,1,1)`, `beta=0`, and

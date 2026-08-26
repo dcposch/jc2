@@ -1,0 +1,98 @@
+python_flint_version=0.9.0
+./README.md: OK
+./V81A_DEPLOYMENT_ERRATUM.md: OK
+./V81A_MATH_HARNESS_ERRATUM.md: OK
+./V81A_PREREGISTRATION.md: OK
+./V81C_PREREGISTRATION.md: OK
+./launch_v81c_host.sh: OK
+./payload/RUNBOOK.md: OK
+./payload/V19_RUNBOOK.md: OK
+./payload/V24_ERRATUM.md: OK
+./payload/V27_ERRATUM.md: OK
+./payload/V28_RUNBOOK.md: OK
+./payload/V29_ERRATUM.md: OK
+./payload/V32_SENTINEL_ERRATUM.md: OK
+./payload/V77_PREREGISTRATION.md: OK
+./payload/V77_RUNBOOK.md: OK
+./payload/V78C_PREREGISTRATION.md: OK
+./payload/V78_PREREGISTRATION.md: OK
+./payload/V79_PREREGISTRATION.md: OK
+./payload/jc2/cases/td6_boundary_q2_deformation_20260824/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_all_q_vector_ad_20260825/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_all_q_vector_ad_repaired_20260825/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_all_q_vector_ad_repaired_20260825/replay_shard.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_q2_beta_dual_20260825/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_q3_gamma_dual_20260825/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_q3_gamma_dual_repaired_20260825/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_q_dead_joint_transport_v81c_20260826/replay.py: OK
+./payload/jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/c1_c3_thickening.py: OK
+./payload/jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/c1_pencil.py: OK
+./payload/jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/c1_rational_transport.py: OK
+./payload/jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/fast_efield.py: OK
+./payload/jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/fast_evec.py: OK
+./payload/jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/replay.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_c2_c3_p3_quotient.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_c2_c3_trivariate.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_pencil.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_rational_transport.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/fast_efield.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/fast_evec.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/first_c1_c3_mpoly.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/h_b_raw_quotient.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/replay.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/transport_c1_c3_mpoly.py: OK
+./payload/jc2/cases/td6_jet_orbit_adjoint_20260824/replay.py: OK
+./payload/jc2/cases/td6_moduli_uniform_third_band_20260824/replay.py: OK
+./payload/jc2/cases/td6_moduli_uniformity_20260824/replay.py: OK
+./payload/jc2/cases/td6_two_chart_first_band_20260824/replay.py: OK
+./payload/jc2/cases/td6_two_chart_next_row_20260824/replay.py: OK
+./payload/run_v27.sh: OK
+./payload/run_v28.sh: OK
+./payload/run_v77.sh: OK
+./payload/run_v77r.sh: OK
+./payload/run_v78.sh: OK
+./payload/run_v78b.sh: OK
+./payload/run_v78c_shard.sh: OK
+./run_v81c.sh: OK
+producer=TD6-A3-GENERIC-DEAD-TRANSPORT-V81C-SHARD
+aws_hostname=ip-172-30-0-45
+aws_run_tag=td6_v81c_r6d_d8_20260826T0225Z
+ring=E(C,V,U)[eps_d8]/eps_d8^2
+dead_axis=d8
+q15_target_shear_gauge_excluded=true
+base_beta=0;base_dead_stretch=0
+scope=generic_center_single_dead_axis_transport_source_incidence_only
+V80B_use=specialization_control_only
+q_transport_columns_consumed=false
+no_joint_kernel_or_first_previous_current_or_kuranishi_claim=true
+trivariate_transport rows=0;pivots=1;events=0
+trivariate_transport rows=250;pivots=251;events=0
+trivariate_transport rows=1500;pivots=684;events=0
+trivariate_transport rows=1750;pivots=934;events=0
+trivariate_transport rows=2000;pivots=1184;events=0
+trivariate_transport rows=2250;pivots=1434;events=0
+trivariate_transport rows=4750;pivots=1716;events=0
+trivariate_transport rows=5000;pivots=1966;events=1
+trivariate_transport rows=5250;pivots=2215;events=1
+trivariate_transport rows=5500;pivots=2465;events=2
+trivariate_transport rows=5750;pivots=2715;events=2
+trivariate_transport rows=6000;pivots=2965;events=2
+trivariate_transport rows=6250;pivots=3215;events=2
+trivariate_transport rows=6500;pivots=3465;events=2
+symbolic_center_asserted_before_transport=true
+symbolic_center_asserted_after_transport=true
+transport_rank=3470/3602;free=132
+transport_event_count=2
+base_transport_parameterization_exact=true
+d8_derivative_rows=3116;terms=24412;omission_failures=32;compatibility_forms=32;entries=1160;generic_sha=1677932db17e3b27def30d6d52fda4fea6985dfa743f6352f21d5dd300d4d1df;point_sha=a69aef0562e43b12c788b9390dc9424bc188b495d035c7910e6b7b1be7a89fce
+d8_generic_table=/home/ubuntu/runs/td6_v81c_dead_shards_r6d_20260826T0225Z/lanes/d8/evidence/GENERIC_DEAD_D8_TRANSPORT_COMPATIBILITY.tsv
+d8_point_table=/home/ubuntu/runs/td6_v81c_dead_shards_r6d_20260826T0225Z/lanes/d8/evidence/POINT_CVU111_DEAD_D8_TRANSPORT_COMPATIBILITY.tsv
+d8_original_3470_pivot_rows_replayed=true
+symbolic_center_asserted_after_dead_column=true
+V80B_selected_point_table_hash_reproduced=true
+single_axis_result_not_a_joint_kernel=true
+generic_family_killed=false
+whole_TD6_killed=false
+SP2_killed=false
+JC2_resolved=false
+TD6-A3-GENERIC-DEAD-TRANSPORT-V81C-SHARD PASS

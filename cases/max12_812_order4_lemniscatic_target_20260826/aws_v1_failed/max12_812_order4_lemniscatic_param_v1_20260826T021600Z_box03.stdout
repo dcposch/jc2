@@ -1,0 +1,82 @@
+PROJECTIVE_DEGREE=11
+PROJECTIVE_FACTOR_COUNT=1
+   ? exponent must be non-negative
+   ? error occurred in or before paraplanecurves.lib::deltaLocMod line 1688: `      poly g=f+var(1)^mu+var(2)^mu;  //to obtain a convenient Newton-polygon`
+   ? expected poly-expression. type 'help poly;'
+   ? leaving paraplanecurves.lib::deltaLocMod (0)
+   skipping text from `[` error at token `]`
+   ? leaving paraplanecurves.lib::deltaLocMod (1731)
+   ? leaving paraplanecurves.lib::geomGenusLA (1479)
+   ? leaving paraplanecurves.lib::adjointIdealAtWork (652)
+   ? leaving paraplanecurves.lib::adjointIdeal (578)
+   ? leaving paraplanecurves.lib::paraPlaneCurve (324)
+   ? rTT is no name of a ring/qring
+   ? error occurred in or before paraplanecurves.lib::testParametrization line 2690: `  setring rTT;`
+   ? leaving paraplanecurves.lib::testParametrization (0)
+   skipping text from `;` error at token `)`
+PARAMETRIZATION_TEST=0
+   ? RP1 is no name of a ring/qring
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 22: `setring RP1;`
+PARAMETRIZATION_BEGIN
+`PARA`
+PARAMETRIZATION_END
+   ? `PARA` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 26: `print("PARAM_COMMON_GCD="+string(gcd(PARA[1],gcd(PARA[2],PARA[3]))));`
+   ? wrong type declaration. type 'help string;'
+   ? `PARA` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 28: `poly Qnum=PARA[1];`
+   ? expected poly-expression. type 'help poly;'
+   ? `PARA` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 29: `poly Vnum=PARA[2];`
+   ? expected poly-expression. type 'help poly;'
+   ? identifier `Hom` in use
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 30: `poly Hom=PARA[3];`
+   ? wrong type declaration. type 'help poly;'
+   ? `Qnum` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 31: `poly QA=9261*Qnum-484*Hom;`
+   ? expected poly-expression. type 'help poly;'
+   ? `Qnum` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 32: `poly QB=27*Qnum+4*Hom;`
+   ? expected poly-expression. type 'help poly;'
+   ? `Qnum` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 34: `list fQ=factorize(Qnum,1);`
+   ? `Vnum` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 35: `list fV=factorize(Vnum,1);`
+   ? factorize(`proc`,`int`) failed
+   ? expected factorize(`poly`,`int`)
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 36: `list fH=factorize(Hom,1);`
+   ? `QA` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 37: `list fQA=factorize(QA,1);`
+   ? `QB` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 38: `list fQB=factorize(QB,1);`
+Q_FACTORS_BEGIN
+   ? `fQ` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 39: `print("Q_FACTORS_BEGIN"); print(fQ[1]); print(fQ[2]); print("Q_FACTORS_END");`
+   ? `fQ` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 39: `print("Q_FACTORS_BEGIN"); print(fQ[1]); print(fQ[2]); print("Q_FACTORS_END");`
+Q_FACTORS_END
+V_FACTORS_BEGIN
+   ? `fV` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 40: `print("V_FACTORS_BEGIN"); print(fV[1]); print(fV[2]); print("V_FACTORS_END");`
+   ? `fV` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 40: `print("V_FACTORS_BEGIN"); print(fV[1]); print(fV[2]); print("V_FACTORS_END");`
+V_FACTORS_END
+H_FACTORS_BEGIN
+   ? `fH` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 41: `print("H_FACTORS_BEGIN"); print(fH[1]); print(fH[2]); print("H_FACTORS_END");`
+   ? `fH` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 41: `print("H_FACTORS_BEGIN"); print(fH[1]); print(fH[2]); print("H_FACTORS_END");`
+H_FACTORS_END
+QA_FACTORS_BEGIN
+   ? `fQA` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 42: `nt("QA_FACTORS_BEGIN"); print(fQA[1]); print(fQA[2]); print("QA_FACTORS_END");`
+   ? `fQA` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 42: `nt("QA_FACTORS_BEGIN"); print(fQA[1]); print(fQA[2]); print("QA_FACTORS_END");`
+QA_FACTORS_END
+QB_FACTORS_BEGIN
+   ? `fQB` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 43: `nt("QB_FACTORS_BEGIN"); print(fQB[1]); print(fQB[2]); print("QB_FACTORS_END");`
+   ? `fQB` is not defined
+   ? error occurred in or before /home/ubuntu/jobs/max12_812_order4_lemniscatic_param_v1_20260826T021600Z_box03/src/cases/max12_812_order4_lemniscatic_target_20260826/lemniscatic_param_v1.sing line 43: `nt("QB_FACTORS_BEGIN"); print(fQB[1]); print(fQB[2]); print("QB_FACTORS_END");`
+QB_FACTORS_END
+PARAMETERIZATION_AND_BRANCH_FACTORIZATION=PASS

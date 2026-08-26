@@ -1,0 +1,114 @@
+// Explicit la^20 Rees preimage, fixed control-2 weight/support.
+LIB "elim.lib";
+ring R=0,(s,la,tau,rho,q1,q0,r2,r1,r0),(lp(1),dp(8));
+option(redSB);
+poly E1=(4/9)*s^52*q1*r1+(4/9)*s^52*q0*r2;
+poly E2=(4/3)*s^52*q1*r2+(4/9)*s^52*q1*r0+(4/9)*s^52*q0*r1+(2/9)*s^60*r2^2;
+poly E3=(-2/3)*s^60*la^15+(-4/81)*s^66*q1^3+(-8/9)*s^52*q1*r2+(8/9)*s^52*q1*r1+(8/9)*s^52*q0*r2+(4/9)*s^52*q0*r0+(4/9)*s^60*r2*r1;
+poly E4=(-4/27)*s^66*q1^2*q0+(4/3)*s^52*q1*r2+(-16/27)*s^52*q1*r1+(4/9)*s^52*q1*r0+(-16/27)*s^52*q0*r2+(4/9)*s^52*q0*r1+(8/9)*s^60*r2^2+(4/9)*s^60*r2*r0+(2/9)*s^60*r1^2;
+poly E5=(-4/27)*s^66*q1^3+(-4/27)*s^74*q1^2*r2+(-4/27)*s^66*q1*q0^2+(-8/9)*s^52*q1*r2+(4/9)*s^52*q1*r1+(-8/27)*s^52*q1*r0+(4/9)*s^52*q0*r2+(-8/27)*s^52*q0*r1+(-16/27)*s^60*r2^2+(4/3)*s^60*r2*r1+(4/9)*s^60*r1*r0;
+poly E6=(8/81)*s^66*q1^3+(-8/27)*s^66*q1^2*q0+(-8/81)*s^74*q1^2*r1+(-20/81)*s^74*q1*q0*r2+(-4/81)*s^66*q0^3+(4/3)*s^60*r2^2+(-8/9)*s^60*r2*r1+(8/9)*s^60*r2*r0+(4/9)*s^60*r1^2+(2/9)*s^60*r0^2;
+poly E7=(-4/27)*s^66*q1^3+(16/81)*s^66*q1^2*q0+(-8/27)*s^74*q1^2*r2+(-4/81)*s^74*q1^2*r0+(-4/27)*s^66*q1*q0^2+(-4/27)*s^74*q1*q0*r1+(-8/81)*s^82*q1*r2^2+(8/9)*s^52*q1*r2+(-40/81)*s^52*q1*r1+(8/27)*s^52*q1*r0+(-8/81)*s^74*q0^2*r2+(-40/81)*s^52*q0*r2+(8/27)*s^52*q0*r1+(-32/27)*s^60*r2^2+(4/3)*s^60*r2*r1+(-16/27)*s^60*r2*r0+(-8/27)*s^60*r1^2+(4/9)*s^60*r1*r0;
+poly E8=-1*s^81*la^20*tau-1*s^80*la^20+(1/243)*s^88*q1^4+(8/81)*s^66*q1^3+(-4/27)*s^66*q1^2*q0+(8/81)*s^74*q1^2*r2+(-8/81)*s^74*q1^2*r1+(8/81)*s^66*q1*q0^2+(-20/81)*s^74*q1*q0*r2+(-4/81)*s^74*q1*q0*r0+(-8/81)*s^82*q1*r2*r1+(-28/27)*s^52*q1*r2+(16/27)*s^52*q1*r1+(-28/81)*s^52*q1*r0+(-4/81)*s^74*q0^2*r1+(-4/81)*s^82*q0*r2^2+(16/27)*s^52*q0*r2+(-28/81)*s^52*q0*r1+(64/81)*s^60*r2^2+(-8/9)*s^60*r2*r1+(4/9)*s^60*r2*r0+(2/9)*s^60*r1^2+(-8/27)*s^60*r1*r0;
+poly LT=1*s^4*la-1*s^4*tau^3*rho;
+print("AWS_TAG=max12_912_order3_d1_double_root_control2_la20_syzygy_minexp_v3_20260826T023300Z_box03_LPDP");
+print("ENCODING=EXPANDED_DIRECT_SAT_LPDP_MINIMUM_INDIVIDUAL_EXPONENT_LIFT");
+ideal CS=s;
+ideal TOYI=s^2*(q1+1);
+list TOYS=sat_with_exp(TOYI,CS);
+int TOYN=TOYS[2];
+ideal TOYC=TOYS[1];
+if (TOYN!=2) { print("FAIL_TOY_SAT_EXPONENT"); quit; }
+ideal TOYSC=s^TOYN*TOYC;
+matrix TOYL=lift(TOYI,TOYSC);
+matrix TOYR=matrix(TOYSC)-matrix(TOYI)*TOYL;
+if (TOYR!=0) { print("FAIL_TOY_LIFT_ORIENTATION"); quit; }
+print("PASS_TOY_SATURATION_AND_LIFT");
+ideal I=E1,E2,E3,E4,E5,E6,E7,E8,LT;
+list SW=sat_with_exp(I,CS);
+ideal C=SW[1];
+int N=SW[2];
+print("S_SATURATION_EXPONENT="+string(N));
+print("S_SATURATION_GENERATORS="+string(size(C)));
+ideal CD=sat(I,CS);
+ideal CDSTD=std(CD);
+int i,j;
+for (i=1; i<=size(C); i++)
+{
+  if (reduce(C[i],CDSTD)!=0) { print("FAIL_SAT_FORWARD"); quit; }
+}
+for (i=1; i<=size(CDSTD); i++)
+{
+  if (reduce(CDSTD[i],C)!=0) { print("FAIL_SAT_REVERSE"); quit; }
+}
+print("PASS_SAT_WITH_EXP_DIRECT_EQUALITY");
+ideal H=C,s;
+ideal TARGET=la^20;
+matrix LH=lift(H,TARGET);
+matrix RH=matrix(TARGET)-matrix(H)*LH;
+if (RH!=0) { print("FAIL_H_LIFT"); quit; }
+print("PASS_H_LIFT");
+ideal USED;
+list HCOEFF;
+int nused=0;
+for (i=1; i<=size(C); i++)
+{
+  if (LH[i,1]!=0)
+  {
+    nused++;
+    USED[nused]=C[i];
+    HCOEFF[nused]=LH[i,1];
+    print("USED_C_INDEX="+string(i));
+  }
+}
+if (nused==0) { print("FAIL_EMPTY_H_SUPPORT"); quit; }
+print("USED_C_GENERATORS="+string(nused));
+if (nused!=1) { print("FAIL_MINEXP_REQUIRES_ONE_USED_GENERATOR"); quit; }
+ideal ISTD=std(I);
+int M=0;
+poly TEST=USED[1];
+while (reduce(TEST,ISTD)!=0 && M<N)
+{
+  M++;
+  TEST=s*TEST;
+}
+if (reduce(TEST,ISTD)!=0) { print("FAIL_MINEXP_NOT_FOUND"); quit; }
+print("INDIVIDUAL_SATURATION_EXPONENT="+string(M));
+ideal SUN=s^M*USED;
+matrix LU=lift(I,SUN);
+matrix RU=matrix(SUN)-matrix(I)*LU;
+if (RU!=0) { print("FAIL_USED_C_LIFT"); quit; }
+print("PASS_USED_C_LIFT");
+ideal FINAL;
+poly cc,hc;
+for (i=1; i<=size(I); i++)
+{
+  cc=0;
+  for (j=1; j<=nused; j++)
+  {
+    hc=HCOEFF[j];
+    cc=cc+LU[i,j]*hc;
+  }
+  FINAL[i]=cc;
+}
+poly TAIL=LH[size(C)+1,1];
+poly CHECK=s^M*la^20-s^(M+1)*TAIL;
+for (i=1; i<=size(I); i++)
+{
+  CHECK=CHECK-I[i]*FINAL[i];
+}
+if (CHECK!=0) { print("FAIL_FINAL_REES_IDENTITY"); CHECK; quit; }
+print("PASS_FINAL_REES_IDENTITY");
+print("CERTIFICATE_FINAL_I_COEFFS_BEGIN");
+FINAL;
+print("CERTIFICATE_FINAL_I_COEFFS_END");
+print("CERTIFICATE_TAIL_BEGIN");
+TAIL;
+print("CERTIFICATE_TAIL_END");
+poly DEHOMOGENIZED=subst(la^20-s*TAIL,s,1);
+print("DEHOMOGENIZED_WITNESS_BEGIN");
+DEHOMOGENIZED;
+print("DEHOMOGENIZED_WITNESS_END");
+print("FIREWALL=FIXED_WEIGHT_SUPPORT_PREIMAGE_ONLY_CONE_INEQUALITIES_NOT_YET_AUDITED");
+print("PASS_CONTROL2_LA20_SYZYGY_MINEXP_V3_LPDP");
+quit;

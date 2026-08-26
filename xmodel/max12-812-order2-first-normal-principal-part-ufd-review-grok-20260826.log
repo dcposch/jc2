@@ -1,0 +1,17 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by hashing the target file, reading it, and checking charged parent hashes before attacking the five points by hand.The target hash matches. Next I’ll read the theorem, the review prompt, and locate charged parent sources.Parent hashes are next, then I’ll read the charged sources and a prior review for the report format.All charged hashes match. I’ll read the parent theorem, its review, and the source audit next.Parent hashes match. I’ll read RESULTS and a prior review format, then derive the charged identities by hand.The identities in §§1–3 hold by hand; the remaining gap is the §4 reduced-support equality when saturation is taken before the `k10=0` slice. I’ll write the full report now.**REPAIR.** The report is in `xmodel/max12-812-order2-first-normal-principal-part-ufd-review-grok-20260826.md`.
+
+The target hash is `988d659f0a25f14a612d316608a8dc7c36d839c3f253c35e7e785d33e5923fb5`. All seven charged parent hashes match. No coefficient identity failed.
+
+The identities that survive: `(1.1)` with coefficient `+3/8` and load `+k10 K^(5/2)`; the `z`-polynomial-part convention; no hidden order-two term from `z_Lambda(w)`; unitriangularity of `w0=z+O(z^-1)` on the first seven negative coefficients; four vanishing coefficients of `R/K` force `R=0`; `K|N^2 iff D_K|N` including `[1,1,1,1]`; every coefficient of `(3.3)`–`(3.6)`; the square family solves the full first gate for arbitrary `k10`. The note does not claim Padé exclusion, radical equality, reducedness, or order-two closure.
+
+The missing hypothesis is the displayed reduced-support equality of §4. Saturation is taken in the full first-gate space *before* the slice `k10=0`. The argument proves
+
+```text
+support_red V( ((Q1+(k10)):(p,c,r)^∞):(n0,...,k10)^∞ )
+  = (3.3)|_{k10=0} ∪ (3.5).
+```
+
+It does not control squarefree zero-normal limits of hypothetical `k10≠0` branches of `V(Q1)`, which §5 leaves open. Repair: state the sliced-then-saturated equality, and treat equality for `Q1*` itself as requiring the Padé lemma.
+
+Full scope firewall is kept: no strict arc, no `[6,2]`, no Taylor boundary, no order-two / `(8,12)` / max-twelve / JC2 closure.

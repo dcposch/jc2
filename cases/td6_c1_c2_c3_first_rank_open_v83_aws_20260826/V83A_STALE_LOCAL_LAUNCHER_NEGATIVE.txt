@@ -1,0 +1,11 @@
+Observed 2026-08-26T04:55Z.
+
+Local PID 19663 was a stale V83A deployment launcher.  Its loop parsed the
+quoted strings `r6d 100.26.198.153` and `box03 98.80.65.144` with zsh's
+non-POSIX field-splitting semantics, leaving `host` empty.  Child PID 19665
+was therefore hung in:
+
+    ssh -i /Users/dc/.ssh/claude-cli.pem -o BatchMode=yes ubuntu@ mkdir -p /home/ubuntu/incoming
+
+The launcher emitted no mathematical producer output.  It is deployment-
+negative custody only and is unrelated to the corrected V83B remote jobs.

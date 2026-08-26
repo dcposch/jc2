@@ -1,0 +1,10 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll review the named target and charged sources only, by hand, without running CAS tools or enumerating the worktree. First I need the review conventions and the exact bytes of the claim.The claim is loaded. Next I’ll hash the named bytes, pull only the charged sources, and attack the algebra by hand.Target hash matches. I’ll hash the charged sources next and read them without walking the rest of the tree.Charged hashes match. I’ll read the client, tails, frozen V2 input, and the one-parameter compiler package next.Hashes match. Next I’ll read the V2 equations, tails, and one-parameter freeze so the row identities can be checked by hand.The algebra holds. I’ll write the hostile review to the named path only, with recomputed hashes and a single verdict token.The one-parameter reduction is **CONFIRMED**. The review is only in `xmodel/max12-812-order2-u2-62-oneparameter-rees-reduction-review-grok-20260826.md`.
+
+Independently recomputed target SHA-256 is `5abd181a99d8e568635067320260ccc4555a3613949a600ce21560697eba1b6b`, matching the pin. All five charged sources rematch. Smallest failing identity: none.
+
+After localizing `R=1+tau`, the automorphism `C_odd=R B_odd`, `J=Rj` plus `Lambda=tau^3 varrho` turns every frozen V2 row into `(0.1)`, including the four target monomials `Lambda^{14,16,18,19}` and `J/4`. The toric map is torsion-free over the PID `Q[Lambda]`, hence flat; ramification of `tau^3` thickens the divisor `V(Lambda)` in the two-parameter base, not the closed-point fibre in coefficient-load space. `D(Lambda J)=D(tau varrho j)` on the unit chart, so sequential saturation and the final irrelevant saturations agree as schemes, including nilpotents. All seven loads remain; the toy `(x-Lambda m)` is a correct negative control, and the reduction does not project. The compiler package is consistent with that theorem and does not promote an endpoint. Live AWS jobs were not used as evidence.
+
+Equality of the two boundary schemes is not emptiness, Taylor realization, exclusion of `[6,2]`, order-two closure, `(8,12)`, maximum twelve, or JC2.
+
+CONFIRMED

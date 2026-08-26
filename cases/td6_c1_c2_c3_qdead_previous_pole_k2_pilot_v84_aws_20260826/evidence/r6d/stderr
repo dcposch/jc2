@@ -1,0 +1,51 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/runs/td6_v84_k2_pilot_r6d_20260826T0500Z/source/payload/jc2/cases/td6_c1_c2_c3_qdead_previous_pole_k2_shard_v84_20260826/replay.py", line 861, in <module>
+    main()
+  File "/home/ubuntu/runs/td6_v84_k2_pilot_r6d_20260826T0500Z/source/payload/jc2/cases/td6_c1_c2_c3_qdead_previous_pole_k2_shard_v84_20260826/replay.py", line 748, in main
+    q_rhs = v81.propagate_q(rows, records)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/runs/td6_v84_k2_pilot_r6d_20260826T0500Z/source/payload/jc2/cases/td6_c1_c2_c3_q_dead_joint_transport_v81b_20260826/replay.py", line 280, in propagate_q
+    value = source_jet(key)
+            ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/runs/td6_v84_k2_pilot_r6d_20260826T0500Z/source/payload/jc2/cases/td6_c1_c2_c3_q_dead_joint_transport_v81b_20260826/replay.py", line 265, in source_jet
+    base = from_vector(r.t.source_vector(key))
+                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/runs/td6_v84_k2_pilot_r6d_20260826T0500Z/source/payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/transport_c1_c3_mpoly.py", line 169, in source_vector
+    value = cp.source_rhs(key)
+            ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/runs/td6_v84_k2_pilot_r6d_20260826T0500Z/source/payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_pencil.py", line 404, in source_rhs
+    return E(qd.source_rhs(key).value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/runs/td6_v84_k2_pilot_r6d_20260826T0500Z/source/payload/jc2/cases/td6_moduli_uniform_third_band_20260824/replay.py", line 304, in __init__
+    coefficients = [K(value)]
+                    ^^^^^^^^
+  File "/home/ubuntu/runs/td6_v84_k2_pilot_r6d_20260826T0500Z/source/payload/jc2/cases/td6_moduli_uniform_third_band_20260824/replay.py", line 175, in __init__
+    coefficients = [QQ(value)]
+                    ^^^^^^^^^
+  File "/usr/lib/python3.12/fractions.py", line 264, in __new__
+    raise TypeError("argument should be a string "
+TypeError: argument should be a string or a Rational instance
+Command exited with non-zero status 1
+	Command being timed: "timeout 21600 bash run_v84.sh"
+	User time (seconds): 12.21
+	System time (seconds): 0.11
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 291540
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 72270
+	Voluntary context switches: 13
+	Involuntary context switches: 24
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1352
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

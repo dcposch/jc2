@@ -41,6 +41,203 @@ unconditional, is not the canonical reading. The exact pure-boundary and Henon
 results are dual-confirmed; the local implication/countermodel/bridge work is
 single-model decisive partial unless separately promoted.
 
+## Superseding strategy overlay (2026-08-26 05:18Z — smooth-D1 and TD6 K2 repair)
+
+D1 V9 is now hostile-review confirmed (review/promotion SHAs `f81c5b05...` /
+`b8a11227...`): the fixed-chart V8 obstruction transports across the entire
+smooth double-root discriminant after localizing at the root-axis coordinate
+`a`.  This retires further work on that smooth cell.  D1 effort moves to the
+weighted triple-root charts (`v(a)>0`) and only then to moving loads or other
+normals; the unit-axis theorem must not be read as excluding positive axis
+valuation.
+
+TD6 Stage A is also hostile-review confirmed (producer/review SHAs
+`6867c915...` / `b47b613f...`): the full licensed 24-dimensional kernel
+survives previous/pole at first order.  V83 gives one exact principal
+rank-38 open `D(U*H*B3*R38)`, leaving `R38=0` for alternate-minor/raw-fibre
+coverage.  The first K2 pilot is a dual-AWS deployment-negative, not a
+mathematical result: an inherited scalar propagator failed on symbolic
+coefficients before constructing a quadratic table.  The immediate TD6
+successor is therefore the smallest typed symbolic-center source-RHS repair,
+followed by the same bounded dual-host K2 pilot and one independent Spencer/
+symbol control.  Broad K2 sharding waits only for that repaired pilot, not
+for another review round.
+
+## Superseding strategy overlay (2026-08-26 05:15Z — exact order-two/order-one screens)
+
+The order-two first-normal principal-part theorem is now repaired and
+hostile-review confirmed (corrected theorem/review SHAs `4c9d9cfc...` /
+`08a5ca51...`).  On `k10=0`, the first seven rows are exactly the negative
+principal part of `(3/8)N^2/K`, so their vanishing is equivalent to
+`K|N^2`.  Slicing and then saturating has precisely the square and
+discriminant reduced supports; the same equality holds for the full
+saturation on the actual nonzero first-contact open.  The only possible
+extra special-fibre support is at `k10=N=0` with nonsquare `K`.  Therefore
+the high-value order-two split is now: impose terminal/Taylor/next-jet data
+separately on the explicit square and discriminant strata, while proving or
+falsifying the nonzero-`k10` Pade support lemma that would remove the residual
+zero-normal limit.  Immutable V1 SHA `988d659f...` remains `REPAIR` only at
+its withdrawn global saturation-before-slice equality; modular component
+agreement remains navigation rather than a characteristic-zero radical.
+
+Order one now has a reviewed exact pre-genus rejector (theorem/review SHAs
+`bbd744fa...` / `44af62f2...`).  A genuine source forces the complete
+descended `r7` graph on every actual coefficient-component normalization to
+be a pure-power map with one zero and one pole; if the source-map degree is
+`n`, its degree `d` satisfies `d*n=U-1`.  Complete divisor and critical-value
+tests therefore precede generic projection genus, but must retain all
+infinity/chart points and must not assume birationality.
+
+The original pair of random fixed-load order-two invariant-quotient probes
+both timed out inside source saturation before producing any quotient data
+(report/manifest SHAs `394acff2...` / `66985179...`).  This is no geometric
+evidence.  Monolithic saturation is deprioritized in favor of the exact
+first-normal strata and proof-carrying componentwise successors; independently
+capped cross-controls remain navigation only.
+
+## Superseding strategy overlay (2026-08-26 04:54Z — coverage/Kuranishi pivot)
+
+V8 is now hostile-review confirmed: one exact 48-term q-linear row identity
+covers every `eta>=0` in the fixed full-Q/R D1 chart.  Further positive-h
+grades there are retired.  D1 now receives a smaller, sharper allocation for
+coordinate-action transport over the smooth discriminant and the weighted
+triple-root charts; a dual-AWS smooth-discriminant transport is already
+producer-positive but remains review-gated.
+
+The significant-news synthesis SHA `e16c128c...` pins three clean whole-46
+scans and one packet explicitly degraded by sibling-heading exposure.  New
+allocation is order two/order one `50%`, D1 coverage `15%`, TD6 Kuranishi
+`30%`, protected global/formal work `5%`.  Order two is split into its exact
+square/discriminant first-normal branches and next divided jets.  Order one
+tests the full divisor/critical values of `r7` before genus.  On the source
+the divisor order is `U-1`; on a component normalization reached with degree
+`n`, its pure-power degree is `d` with `d*n=U-1`, and `d=U-1` requires a
+birational source map.  The explicit correction SHA is `de42e834...`.  TD6 freezes
+`Q_prev=Q` and advances to the quadratic Kuranishi map plus one symbol-
+involutivity control.  Global landing/coverage and a cofinal ceiling remain
+unchanged.
+
+The dual-prime `Q1*` endpoint has two matching modular components, but this
+is navigation only.  Principal-part/UFD producer SHA `988d659f...` proves
+the exact `k10=0` criterion `K|N^2`; its review and the nonzero-`k10`
+Padé/ideal theorem are the live characteristic-zero gates.
+
+## Superseding strategy overlay (2026-08-26 04:32Z — first-contact recursion)
+
+The live order-two family now has a reviewed exact first normal gate.  In the
+chart `C=K^2+Lambda*N`, all seven rows divide polynomially by `Lambda^2`, and
+their first boundary ideal `Q1*` depends only on the four normal coordinates
+and `k10`.  The dual-prime AWS endpoint is a discriminator: a unit pushes all
+arcs to higher contact, while each nonunit component becomes an exact stratum
+to classify and immediately test against Taylor/terminal constraints.  It is
+not itself the full Rees boundary or an order-two verdict.  Promotion SHA is
+`26b8a571...`.
+
+The D1 filtered complex has now passed three reviewed grades.  Exact scalar
+corrections successively lower the uniform threshold from `eta>5` to
+`eta>=15/4` and then `eta>=5/2`.  The next wall is the complete eight-term
+`h*q^2*r` grade, which cannot be reached by another scalar multiplier; the
+24-column `h*q_j*E_i(0)` map is live on dual AWS.  A support-cutoff or
+discriminant-localized finite-determinacy theorem is still required;
+independent saturation of already cancelled grades is retired.  The latest
+promotion SHA is `a0bb826c...`.
+
+## Superseding strategy overlay (2026-08-26 04:16Z — filtered linear gates)
+
+TD6's packed FIRST map is now reviewed surjective on its exact generic
+rank-38 open: `K^132 -> K^38` has zero cokernel, so every well-typed
+square-zero perturbation of the same presentation passes FIRST.  Further
+generic FIRST-axis work is formally retired; rank-drop fibres remain distinct,
+and the live frontier is previous/pole/current followed by quadratic
+Kuranishi/Fitting data.  Corollary/review/promotion SHAs are `b1352aa1...`,
+`b24ab0d3...`, and `7786868e...`.
+
+In D1, the unchanged full-`q2` witness transports across the first transverse
+`h` normal uniformly iff `eta>=15/2`, now hostile-review confirmed.  This is
+a threshold of one witness, not a branch below it.  The first sparse
+row-module correction is now also reviewed: it cancels the complete worst
+`h`-linear Q-R grade and improves the uniform range to `eta>5`.  Later
+producer-tier grades lower the threshold further.  This validates the
+significant-news decision to recurse through one filtered obstruction complex
+instead of independent saturations.  Moving source/load data, equality faces,
+full fan coverage, D1, and JC2 remain open.
+
+## Superseding strategy overlay (2026-08-26 04:15Z — significant-news synthesis)
+
+Four independent whole-46 scans after complete exact-order-four elimination,
+D1 full-`q2` closure, and TD6 first-kernel closure converge on one allocation.
+Exact order two/order one now receives 40% of new attention and capacity,
+centered on the universal six-load invariant quotient, the reviewed
+one-`Lambda` `U=2,[6,2]` reduction, and a two-class cyclic-receiver falsifier.
+D1 receives 30% for the filtered obstruction complex, the combined `eta=5`
+grade/equality faces, and discriminant-localized finite determinacy.  TD6
+receives 25% for complete previous/pole/current maps and the first licensed
+quadratic Kuranishi/Fitting object.  The remaining 5% protects global/AS
+diversification and reusable proof interfaces.
+
+No new exact-order-four production is licensed; already running class shards
+may finish only as controls.  Generic TD6 FIRST-axis work is retired.  Reviews
+remain asynchronous, and genus-zero quotient components are parameterized as
+counterexample-side leads rather than discarded.  Synthesis SHA is
+`0e19862745acce9fd2b60ba0f562f987902d1481bf732bdc21bcd92fd3612c24`;
+its four independently frozen input SHAs are recorded there.  The next blind
+whole-portfolio backstop is `2026-08-26T16:05Z`, with immediate rounds on
+significant news; the quiet web sweep remains due `2026-08-27T00:59Z`.
+All heavy computation is AWS-only.  No global landing, cofinal degree bound,
+all-`(8,12)`, maximum-twelve, or JC2 conclusion follows.
+
+## Superseding strategy overlay (2026-08-26 04:02Z — D1 full `q2`)
+
+The corrected D1 witness now has a reviewed complete strict halfspace region.
+At `alpha=15/2` it has unique monomial initial term exactly when
+`beta>5,delta>5`.  The separately charged control-2 semantics for a later
+`q2` activation give `delta>beta`, so the reviewed `q2=0` theorem and the new
+cone theorem together close the first omitted-support coordinate throughout
+`5<beta<6` on the frozen axis/cusp/load chart.  Result/freeze/review SHAs are
+`0ed5eab5...`, `c54c33be...`, and `5f099773...`.
+
+D1 work moves to the transverse `h` normal, then the remaining axis/load and
+support coordinates, using sparse filtered syzygy corrections rather than
+repeated opaque saturations.  The three equality faces of this witness remain
+separate full-initial localization clients.  Nothing here supplies a full
+Groebner fan, moving-source theorem, full double-root result, D1, or JC2.
+
+## Superseding strategy overlay (2026-08-26 04:00Z — TD6 first kernel)
+
+The complete 24-dimensional generic transport kernel now survives the first
+source gate at reviewed scope.  V82S2 confirms unit-denominator zero first
+conormal for the two nontrivial dead-kernel directions `d10,d15`; reviewed
+V78 already supplies the same conclusion for all 22 q-directions, and reviewed
+V81C identifies their direct sum as the entire transport kernel.  Producer/
+review SHAs are `e18147d2...` / `3f62b23d...`; case MANIFEST/FREEZE SHAs are
+`7f1eefc7...` / `f683d403...`.
+
+Further isolated first-stage axes are no longer the proof-discriminating TD6
+work.  Complete the live previous/pole/current maps on the full kernel, then
+form the quadratic Kuranishi/second-conormal object on its surviving kernel.
+This is still fixed-A3, generic-field, square-zero source incidence; it gives
+no nonlinear neighborhood, family, full TD6, SP-2, or JC2 theorem.
+
+## Superseding strategy overlay (2026-08-26 03:50Z — order four eliminated)
+
+The entire `(8,12)` exact-order-four coefficient-infinity leaf is now
+independently confirmed empty for every source degree `U`.  The two exhaustive
+load strata close by complementary mechanisms: Hall--Shioda/divisor 19 for
+`mu4=0`, and exact source dominance of the lemniscatic elliptic target
+`Z^2=X^3-16X` for `mu4!=0`.  Loaded theorem/review/promotion SHAs are
+`0ac7da1d...`, `4ac21da8...`, and `d0b2e9bc...`; complementary theorem/review
+SHAs are `a5d40fd8...` / `a40827f9...`.
+
+Order-four source projection is therefore retired as a live proof gap.  Its
+prime-lift, invariant-target, and genus-obstruction machinery remains reusable,
+but the `(8,12)` frontier is now exact order two and order one.  The immediate
+order-two target is a divisibility-safe, checkpointed replacement for the timed-
+out `U=2,[6,2]` strict-Rees monolith, followed by the complete terminal-profile
+and lower-tail/Taylor bridge.  D1 cone recursion and TD6 higher compatibility
+continue independently.  A significant-news whole-46 micro-round is in flight;
+its synthesis may supersede this provisional allocation.  No all-`(8,12)`,
+maximum-twelve, or JC2 conclusion is licensed.
+
 ## Superseding strategy overlay (2026-08-26 02:10Z — TD6 dead stretch)
 
 V80B is independently confirmed only as a pure-axis discriminator at the

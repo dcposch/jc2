@@ -6588,3 +6588,400 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   ideation and quiet web-sweep backstops are respectively
   `2026-08-26T14:07Z` and `2026-08-27T00:59Z`, both pulled forward by
   significant news.
+
+## 2026-08-26 03:05Z EVENT — D1 SLOPE-UNIFORM CONTROL-2 FACE CONFIRMED
+
+- Independent hostile review SHA
+  `6e86154863020e71fc5a1a69bdcad6912e98b163e32b3b85aa8e44833ef8cd1a`
+  confirms target SHA
+  `b6349549a115a44ac8534d7801a15fa7e3f8c7a8211cce69ce723cd019301a49`.
+  The eight-term witness belongs to the fixed unhomogenized ideal, and for
+  every positive rational split `L=3T+H` and every `beta>5` its unique
+  least-weight term is `Lambda^20`.
+- The exact geometric consequence is the fixed-cubic/load/five-coefficient
+  control-2 face `alpha=15/2`, `5<beta<6`: its leading torus is empty, so
+  higher terms in the same coordinates cannot rescue an arc.  This is not a
+  complete Groebner cone or fan theorem.
+- The equality face `beta=5` has now independently returned the unit torus
+  saturation and `la^20` on Box02 global-dp and r6d LPDP encodings.  Its
+  producer report SHA is `c42f8d47...`; review is live, so the boundary is
+  still provisional.  The first exact witness preimage exponent is 80, with
+  the same `W`; omitted-support/load layers continue on AWS.
+
+## 2026-08-26 03:10Z EVENT — TD6 V81C GENERIC TRANSPORT KERNEL CONFIRMED
+
+- Hostile review SHA
+  `dfac352887f645a9dd1f03a32b4701372b32de3a445bfd496c74109e64381ebb`
+  confirms producer SHA
+  `47327fc9087954377d0855c2891462bcde82387f554e84e6e0e2981700c6c5d5`.
+  The case MANIFEST/FREEZE SHAs are `3f11741f...` / `40f5d7aa...` and their
+  relative-path verification passes.
+- Over `E(C,V,U)` on the fixed A3/F1 pole slice, the eleven dead directions
+  have exact rank nine and kernel `span(d10,d15)`.  Together with the
+  reviewed 22 zero q-transport columns, the concatenated 33-axis transport
+  map has rank nine and kernel dimension 24.
+- Dual V82Q producers already agree that all 22 q directions also lie in
+  the first-stage kernel.  V82S tests `d10,d15`; V82P has been launched on
+  both AWS hosts and conditionally advances each surviving dead direction
+  through previous/pole source rows.  These successors are producer-tier
+  until frozen and reviewed.  No nonlinear family or full TD6 claim follows.
+
+## 2026-08-26 03:11Z EVENT — ORDER-FOUR V2 PRIME-LIFT NEAR-PASS HELD
+
+- The seeded V2 Box03 prime lane and r6d `a6` lane both closed rc zero with
+  outer validators PASS and zero swap.  Exact stdout SHAs are `cc74e37b...`
+  and `cd97e2c...`; the `a6` two-sided saturation equality is clean.
+- Producer audit found one missing prime-lift control: V2 proves ideal and
+  native-special-fibre equality after computing `std(GredRaw)`, but does not
+  explicitly prove that the raw coefficientwise reduction of the monic
+  characteristic-zero basis is itself a Groebner basis.  That is required
+  by the stated monic good-reduction lemma.  The repeated Singular
+  `GQ is no standard basis` messages are an unset software attribute after
+  scalar normalization, not themselves a mathematical failure, but they
+  made the omitted raw-leading-ideal check especially visible.
+- No source-primality or order-four elimination claim consumes V2.  A small
+  V3 raw-leading-ideal/Buchberger control is launching on AWS while the
+  source-logic hostile review and all downstream work remain asynchronous.
+
+## 2026-08-26 03:12Z LIVE STATE
+
+- Mac compute boundary: the AWS-only guard is live; every lane owner reports
+  no local CAS, Lean build, solver, or heavy Python worker.  A five-second VM
+  sample recorded zero pageouts, swap-ins, and swap-outs, with 68% memory
+  free.  The allocated swap is historical.  All substantive computation is
+  remote.
+- Confirmed new results are the D1 slope-uniform open face and TD6 V81C
+  transport kernel.  The D1 `beta=5` endpoint, TD6 V82 first/higher gates,
+  U=4 terminal review/lower-tail shards, and order-four V3 prime lift remain
+  live and do not block one another.
+- The nested Lean repository is clean at `7d130a24...`; its newest change
+  only repairs normalization tactics for already stated Faber component
+  conjunctions.  The reviewed source-to-landing gap remains open.
+- The 02:07Z full all-46 round remains the last full ideation round.  These
+  events trigger asynchronous whole-portfolio deltas but do not yet reset
+  the `2026-08-26T14:07Z` blind-round backstop.
+
+## 2026-08-26 03:13Z EVENT — COMPLETE `U=4` TERMINAL CENSUS CONFIRMED
+
+- Hostile review SHA
+  `2eced03bdfb10e8ec39500b88bef7d2cb4709b582aa3ad70a687d108c7d266f7`
+  independently rederives the normalized quadratic, its discriminant
+  `4*n1*n2*n3*n4`, profile exhaustiveness, affine/Galois quotient rules,
+  sample certificates, and AWS custody.  All charged V2 hashes supersede the
+  canceled V1 prompt's mistyped pins.
+- Exact totals are five order-two profiles/classes (one rational, four
+  quadratic) and thirty-six order-four profiles, thirty-five viable, forty-
+  four classes (five rational, thirty-nine quadratic).  The sole empty
+  profile is `(3,3|-3,-3)`.  Payload SHA is `8719cb71...`; registration and
+  enumerator SHAs are `cfbd82dd...` / `31f9b51b...`.
+- The result classifies only the `U=4` terminal differential equation.
+  Forty-nine one-class AWS shards now test the first genuine lower-tail
+  discriminator, with an aggregate checksum.  A new cross-lane proposal
+  first compares order-four radicand residues with the lemniscatic
+  `{1,1,2}` Kummer signature, but that comparison is not consumed until its
+  cover identification is separately source-audited.
+
+## 2026-08-26 03:20Z EVENT — D1 SAMPLED `BETA=5` RAY CONFIRMED
+
+- Hostile review SHA
+  `7ec9333928b53a8f357b5aa33aa76bf4dd5ba7a2d4995162ba70cb9b82e2be72`
+  confirms dual result SHA
+  `c42f8d470de0692f7f7eead4887702a91e70c0505453cea6843469303b837503`;
+  all 24 entries in dual-freeze SHA `c8c541b2...` recheck from the case root.
+- For the frozen control-2 source with `q2=0`, global-`dp` direct saturation
+  and block-order double-inverse elimination give the identical 41-element
+  special fibre at `(L,T,H;q;r)=(4,1,1;20,20;30,30,30)`.  It contains
+  `Lambda^20`, and both eight-coordinate torus localizations equal `(1)`.
+- This confirms only the sampled `beta=5` split/ray.  Other positive splits,
+  later `q2`, moving source data, other support masks, fan coverage, D1, and
+  JC2 remain open.  Separately, a corrected full-`q2` witness and its
+  symbolic halfspaces have completed dual AWS production but remain
+  producer-tier until their hostile review chain closes.
+
+## 2026-08-26 03:45Z EVENT — D1 FIRST FULL-`q2` LIFT CONFIRMED
+
+- Hostile review SHA
+  `2a2ff048c299a8878ea28211b72f0d0ad98f27216ae5c3462eb3bc076083ac7d`
+  confirms result SHA `5c81cd8b...` and all 35 entries in freeze SHA
+  `994ef623...`; both AWS encodings are source-closed, rc zero, diagnostic
+  clean, sub-cap, and zero-swap.
+- The correction `F1'=F1+q2/12`, `F2'=F2-q2/9` transports the old witness
+  as an exact full-polynomial identity.  At the one registered weight
+  `(4,1,1;23;22,22;30,30,30)`, `Lambda^20` is the unique least term among
+  all 37 terms, excluding the full-support leading torus there.
+- A dual-AWS symbolic successor has frozen the complete 15 distinct witness
+  halfspaces; at `alpha=15/2` their producer-tier intersection is exactly
+  `beta>5,delta>5`.  A narrow hostile review now charges that reduction and
+  the separate control-2 premise `delta>beta`.  Moving axes/loads, equality
+  faces, later normal coordinates, fan coverage, D1, and JC2 remain open.
+
+## 2026-08-26 03:50Z EVENT — COMPLETE EXACT-ORDER-FOUR LEAF ELIMINATED
+
+- The source-to-lemniscatic theorem SHA `0ac7da1d...` has hostile review SHA
+  `4ac21da89bb61b427d6c77ce265a13d043ab81ec71a8fe2f21bc294f231d1699`,
+  verdict `CONFIRMED`, with no failing identity or missing hypothesis at its
+  exact scope.  Root rechecked every V2 and V3 freeze/result entry from the
+  repository root; all pass.
+- The loaded `mu4!=0` coefficient curve is one-dimensional and prime, every
+  geometric component maps nonconstantly through the deck invariants
+  `(a5^2/a6^3,a6^2)` to the lemniscatic elliptic curve, and descent would
+  give an impossible nonconstant `P1`-to-genus-one map.  The separately
+  reviewed Hall--Shioda/divisor-19 theorem eliminates `mu4=0`.
+- Final promotion SHA `d0b2e9bc...` therefore records the complete exact-
+  order-four coefficient-infinity leaf as empty for every `U`.  Exact order
+  two and order one remain; all `(8,12)`, maximum twelve, and JC2 are not
+  yet proved.  This significant news triggered a new blind whole-46 delta
+  from every research lane while order-two, D1, and TD6 successors continue.
+
+## 2026-08-26 04:00Z EVENT — TD6 FULL TRANSPORT KERNEL SURVIVES FIRST GATE
+
+- V82S2 producer/review SHAs `e18147d2...` / `3f62b23d...` and case
+  MANIFEST/FREEZE SHAs `7f1eefc7...` / `f683d403...` all recheck.  The
+  review verdict is `CONFIRMED`; archived-launcher and raw-column-attestation
+  nits are non-load-bearing and do not change the theorem.
+- On the generic fixed-A3 source slice, `d10,d15` have nonzero raw source
+  columns, pass all transport rows, and have zero first conormal with unit
+  denominator.  Together with reviewed V81C/V78, every one of the 24
+  transport-kernel directions survives the first source gate.
+- This is a reviewed composition rather than one simultaneous 24-axis ring.
+  V82Q and typed V82P3 continue through previous/pole/current on dual AWS;
+  only after those stages should the campaign form the quadratic Kuranishi
+  object.  No nonlinear family, TD6, SP-2, or JC2 conclusion follows.
+
+## 2026-08-26 04:02Z EVENT — D1 FIXED-CHART FULL-`q2` GAP CLOSED
+
+- Cone result/freeze/review SHAs `0ed5eab5...` / `c54c33be...` /
+  `5f0997738ed3c2dfcb871177b241d14263db7ba9dc0155ccafc1633d2bfa9192`
+  recheck, and the review verdict is `Q2_WITNESS_CONE_CONFIRMED`.
+- The 37-term witness yields fifteen distinct strict inequalities.  On
+  `alpha=15/2` they are equivalent to `beta>5,delta>5`.  The source-typed
+  later-layer premise `delta>beta` therefore excludes every later `q2`
+  activation over the control-2 interval `5<beta<6`; reviewed `q2=0` covers
+  the complementary support choice.
+- This closes one support normal only on the frozen axis/cusp/load chart.
+  Equality faces and moving source data remain.  The first transverse `h`
+  transport is under review, and its low-`eta` sparse correction V5 is now
+  executing on Box03 and r6d with 4-GiB/900-second caps.
+
+## 2026-08-26 04:10Z LIVE STATE — AWS-ONLY BOUNDARY RECHECKED
+
+- The local placement guard caught and terminated a campaign Singular process
+  at 04:04Z.  A fresh exact process audit then found zero local campaign CAS,
+  solver, Lean/Lake, or heavy-Python workers; every lane owner independently
+  reported the same.  Local live campaign children are text-only reviews.
+- A five-second VM sample recorded zero swap-ins and zero swap-outs, with 68%
+  memory free.  The approximately 18.6 GiB still allocated by macOS is
+  historical swap occupancy, not active campaign thrashing.
+- Order-two, D1, and TD6 heavy successors are on Box02, Box03, and r6d with
+  registered tags and RAM/time caps.  The guard remains live on the Mac and
+  all future substantive computation is AWS-only.
+
+## 2026-08-26 04:12Z EVENT — ORDER-TWO ONE-LAMBDA REES REDUCTION CONFIRMED
+
+- Main hostile review SHA `1da9974d...` and narrow localization-delta review
+  SHA `0fa0dc4a...` both confirm theorem SHA `5abd181a...`; promotion SHA is
+  `82167b86...`.
+- For the source-typed order-two `U=2,[6,2]` client, twisting odd coefficients
+  and `j` by `R=1+tau` and setting `Lambda=tau^3 varrho` identifies the full
+  seven-row family with a flat pullback of a one-parameter family while
+  retaining all loads.  Although the original ring does not invert `R`, the
+  central scheme is unchanged because
+  `K+(tau,varrho)=(K:R^infinity)+(tau,varrho)` as ideals.
+- This promotes a scheme-equivalent presentation only.  The exact-Q and
+  good-prime AWS endpoints remain live producer experiments and give no
+  emptiness, Taylor, order-two, maximum-twelve, or JC2 verdict yet.
+
+## 2026-08-26 04:15Z EVENT — SIGNIFICANT-NEWS IDEATION SYNTHESIS
+
+- Synthesis SHA
+  `0e19862745acce9fd2b60ba0f562f987902d1481bf732bdc21bcd92fd3612c24`
+  pins four independently frozen whole-46 packets with SHAs `2f485cda...`,
+  `08478b39...`, `f7d5446d...`, and `7d5f9252...`.
+- Consensus retires order-four production and generic TD6 FIRST-axis work.
+  The active ordering is: order-two invariant quotient plus one-Lambda and
+  cyclic-receiver falsifiers; D1 filtered obstruction/finite determinacy;
+  TD6 staged kernel then quadratic Kuranishi; protected global/formal work.
+  Approximate new allocation is `40/30/25/5` respectively.
+- Genus-zero quotient components are routed immediately to exact Taylor and
+  terminal constraints as counterexample-side leads.  Reviews remain in the
+  background.  The next blind whole-portfolio round is due by
+  `2026-08-26T16:05Z` or sooner on significant news; quiet web sweep remains
+  `2026-08-27T00:59Z`.
+
+## 2026-08-26 04:16Z EVENT — TD6 GENERIC FIRST SURJECTIVITY CONFIRMED
+
+- Structural corollary/review/promotion SHAs are `b1352aa1...`,
+  `b24ab0d3...`, and `7786868e...`.  The packed source map after transport is
+  `A0:K^132 -> K^38` of rank 38, with no dependent packed row.
+- Hence `A0*x1=b1-A1*x0` is solvable for every well-typed square-zero
+  perturbation of the same presentation.  The varying-matrix term is retained;
+  the result explains all axis-specific FIRST zeros and composes with the
+  reviewed 24-dimensional transport kernel.
+- This holds only on the unspecified generic maximal-minor open, not every
+  fibre of `D(U*H*B3)`.  Redundant V81B/V82R aggregate jobs were preserved and
+  safely stopped on AWS; V82Q/P3/P4 remain live through previous/pole/current.
+
+## 2026-08-26 04:16Z EVENT — D1 FIRST `h` THRESHOLD CONFIRMED; V6 PRODUCED
+
+- Result/freeze/review SHAs `6ddb1343...` / `0ff05368...` / `ed70c255...`
+  confirm that the unchanged 98-term q-corrected witness works uniformly iff
+  `eta>=15/2` on the fixed `u,v>0` quadrant.  All 23 freeze entries recheck.
+- This negative-control threshold triggered sparse graded repair rather than a
+  branch claim.  The dual-AWS V6 producer now solves the combined
+  `h*r^2+q^3` grade inside the five-dimensional correction kernel: its full
+  scalar correction yields a 71-term witness with producer-tier uniform range
+  `eta>=15/4`.  RESULT/FREEZE SHAs are `a69e542e...` / `b80a754f...`.
+- V6 is under narrow hostile review.  Its next eight low-weight terms have
+  type `h^2*q*r`; a source-preflighted dual-AWS correction continues without
+  waiting.  No low-`eta` survivor, full h-adic lift, moving-source theorem,
+  D1, or JC2 claim is made.
+
+## 2026-08-26 04:20Z EVENT — D1 FIRST GRADED `h` LIFT CONFIRMED
+
+- V5 result/freeze/review/promotion SHAs are `c9469bb0...`, `f166e2ba...`,
+  `7ac62c8b...`, and `b4cce36c...`; all case-freeze entries recheck.
+- Exact RREF of the eight worst h-linear Q-R terms gives rank three and
+  correction `(g1,g2)=(11/6,-11/12)`.  The resulting 90-term witness is an
+  exact row identity and works uniformly iff `eta>5` on the fixed full-q2
+  open quadrant.
+- Equality `eta=5` and lower grades remain filtered-lift clients rather than
+  source branches.  V6/V7 remain producer-tier pending their own reviews;
+  V8 and a separate all-subtarget finite-support solve continue AWS-only.
+
+## 2026-08-26 04:32Z EVENT — ORDER-TWO FIRST NORMAL JET CONFIRMED
+
+- Theorem/review/promotion SHAs are `827e76bd...`, `27275f3d...`, and
+  `26b8a571...`; the source freeze rechecks from the repository root.
+- In the exact `C=K^2+Lambda*N` chart, every pulled row is polynomially
+  divisible by `Lambda^2`.  The divided first-boundary rows depend only on
+  `n0,n1,n2,n3,k10`; the saturated ideal `Q1*` is the exact necessary scheme
+  for first normal/load contact of order one.
+- Dual-prime 64-GiB/one-hour AWS producers are live on Box03 and r6d.  A unit
+  would force higher contact, while nonunit components become exact successor
+  strata; neither outcome by itself closes order two.
+
+## 2026-08-26 04:32Z EVENT — D1 SECOND GRADED `h` LIFT CONFIRMED
+
+- Result/freeze/review/promotion SHAs are `a69e542e...`, `b80a754f...`,
+  `41e05808...`, and `2d2084a1...`; all frozen entries recheck.
+- The full scalar correction `(5/2,-25/18,0,1/4,-1/3,0,0,0)` cancels the
+  complete h-linear Q-R and next `R^2/Q^3` grades.  Its exact 71-term witness
+  works uniformly iff `eta>=15/4` on the fixed open quadrant.
+- V7 review and the V8 24-column `h*q_j*E_i(0)` solve continue asynchronously;
+  there is no multiplier-support, h-adic, moving-source, D1, or JC2 claim.
+
+## 2026-08-26 04:32Z LIVE STATE — 512-VCPU AWS CEILING RECONCILED
+
+- The `personal/us-east-1` API inventory finds exactly seven running campaign
+  instances: one 128-vCPU and six 64-vCPU hosts, totaling the user-authorized
+  512-vCPU campaign ceiling.  No additional instance was launched blindly.
+- Box03 and r6d have ample CPU/RAM headroom and now carry the new Q1*, D1 V8,
+  and TD6 rank-open lanes.  If more job-level parallelism is needed, an idle
+  large host may be stopped and replaced by several <=1-TiB workers only after
+  its live processes and output custody are audited; the total stays <=512.
+- The local AWS-only guard remains live.  Direct inspection finds no campaign
+  CAS, solver, Lean/Lake, or substantive exact-Python worker on the Mac.
+
+## 2026-08-26 04:38Z EVENT — D1 THIRD GRADED `h` LIFT CONFIRMED
+
+- Result/freeze/review/promotion SHAs are `a790c501...`, `0c5ab55d...`,
+  `32b63dec...`, and `a0bb826c...`; every frozen case entry rechecks.
+- The scalar `h^2` correction `(5/24,-2/9,0,...,0)` cancels the complete
+  h-squared Q-R grade and yields an exact 57-term witness, uniformly valid
+  iff `eta>=5/2` on the fixed open quadrant.
+- The next wall consists of eight explicit `h*q^2*r` terms and requires
+  q-linear multipliers.  V8 charges all 24 columns `h*q_j*E_i(0)` on Box03
+  and r6d without waiting on this review.  No full support, h-adic, moving-
+  source, D1, or JC2 claim is licensed.
+
+## 2026-08-26 04:51Z EVENT — SIGNIFICANT-NEWS SYNTHESIS
+
+- Synthesis SHA `e16c128c...` pins root/D1/order-two/TD6 input SHAs
+  `7c4aa105...`, `e3c9270d...`, `07fd84bd...`, and `6e1ba646...`.  The TD6
+  packet discloses sibling-heading-only exposure and is not counted as an
+  independent overlapping vote; three clean whole-46 inputs remain.
+- Allocation moves to `50/15/30/5` for order two/order one, D1 coverage,
+  TD6 Kuranishi, and protected global/formal work.  Immediate gates are exact
+  Q1 branches/next jets, order-one `r7` divisor, D1 coordinate action/triple
+  root, and TD6 K2 plus a Spencer control.
+- The next blind backstop is 16:40Z, with immediate rounds on route-changing
+  news.  The quiet web sweep remains due 2026-08-27 00:59Z.
+
+## 2026-08-26 04:51Z LIVE STATE — ORDER-TWO `Q1*` TWO-COMPONENT NAVIGATION
+
+- Dual-prime RESULTS/custody SHAs `c474e05f...` / `818f5d15...` recheck.
+  Both primes give `Q1*` nonunit, dimension four, and exactly two minimal
+  primes of dimensions three and four.
+- Printed bases match componentwise: the three-dimensional prime contains
+  `k10` and has discriminant support; the four-dimensional prime has free
+  `k10` and the exact square relations including `c=0,p^2=4r`.
+- Principal-part/UFD producer SHA `988d659f...` proves the exact formula and
+  `k10=0` criterion `K|N^2`.  Review, nonzero-`k10` cancellation, exact
+  ideal/radical equality, and scheme thickness remain open.  Modular
+  agreement is no characteristic-zero component theorem.
+
+## 2026-08-26 04:54Z EVENT — D1 V8 FIXED-CHART NORMAL CLOSED
+
+- Result/freeze/review/promotion SHAs are `7d3973e8...`, `85a6ddb3...`,
+  `2c3dbbd5...`, and `b503f6a7...`; every frozen entry rechecks.
+- The q-linear correction `F1-=h*q1/36,F2-=h*q0/72` gives one exact 48-term
+  identity whose unique least term is `Lambda^20` uniformly iff `eta>=0` on
+  the fixed full-support open chart.  Positive-h production there is closed.
+- Dual-AWS V9 has already producer-confirmed the exact coordinate characters,
+  minimal `a^3` clearing, discriminant identity, and universal transported
+  witness over `D(a)`.  It remains review-gated.  The weighted triple-root
+  chart, moving loads/other normals, all D1, and JC2 remain open.
+
+## 2026-08-26 05:00Z CORRECTION — ORDER-ONE `r7` DOWNSTAIRS DEGREE
+
+- The 04:51Z synthesis correctly records
+  `div_P1(r7-lambda)=(U-1)(infinity-a)` on the source, but its first
+  downstairs wording implicitly treated the source-to-component map as
+  birational.
+- On a coefficient-component normalization reached with degree `n`, the
+  correct necessary form is `div_X(R-lambda)=d(Q0-Qinfinity)` with
+  `d*n=U-1`.  Only `n=1` licenses `d=U-1`.
+- The component falsifier remains strong: genus zero, one zero place, one
+  pole place, a pure-power `R` with at most two branch values, and the degree
+  divisibility above.  Producer criterion SHA is `bbd744fa...`; review is
+  pending.  The explicit synthesis erratum SHA is `de42e834...`.
+
+## 2026-08-26 05:18Z EVENT — D1 SMOOTH-DISCRIMINANT TRANSPORT CONFIRMED
+
+- V9 result/freeze/review/promotion SHAs are `a061aea2...`, `003788e8...`,
+  `f81c5b05...`, and `b8a11227...`; the 55-entry freeze and 12-entry source
+  closure recheck.
+- Minimal axis clearing is exactly `a^3`; the universal 48-term covariance
+  identity transports the reviewed V8 unique-least-term obstruction over
+  `D(a)`, with `Delta=-27h(4a^3+h)` and chart Jacobian `-6a`.
+- The license is fixed source/loads and `v(a)=0`.  Positive axis valuation
+  and the triple root remain the next weighted two-chart problem; V10 is
+  preregistered and source-frozen but was not launched before this checkpoint.
+
+## 2026-08-26 05:18Z EVENT — TD6 STAGE A CONFIRMED; K2 PILOT FAILS CLOSED
+
+- Stage-A producer/review SHAs `6867c915...` / `b47b613f...` confirm
+  `Q_prev=Q`, dimension 24, only on the common symbolic-center first-order
+  presentation.  V83 producer SHA `440b3fd2...` records the selected
+  rank-38 open `D(U*H*B3*R38)`; `R38=0` is unresolved raw-fibre debt.
+- Dual-AWS V84 reached the frozen rank-3470/free-132 checkpoint on both hosts
+  and then failed before constructing any K2 table at a symbolic-to-scalar
+  `Fraction` coercion.  Report SHA `8f3a6f4c...`; this licenses no K2 claim.
+- Existing V82P4 current-stage processes remain live on Box03 and r6d.
+  The next TD6 action is a typed symbolic-center source-RHS repair and the
+  same bounded pilot, followed asynchronously by a Spencer control.
+
+## 2026-08-26 05:18Z LIVE STATE — CHECKPOINT GATE AND AWS-ONLY PLACEMENT
+
+- Seven running AWS instances total the authorized 512 vCPUs.  Direct load
+  samples put box01, Box02, r6a, r6b, and r6c at or near saturation; Box03
+  and r6d retain the available campaign headroom.  Every host reports zero
+  swap.  No new instance can be added without first stopping another.
+- Direct inspection finds zero local campaign CAS, solver, Lean/Lake, or
+  substantive exact-Python workers.  The broad local placement guard was
+  stopped after it was found to collide with the user's independently owned
+  `jc2-lean` formalization; all coordinator-launched heavy work remains
+  AWS-only by policy and launch review.
+- Research writers are frozen for the parent-repository checkpoint.  The
+  nested Lean repository is clean at pushed commit `f05587d`; active AWS
+  processes continue remotely and do not block the local commit.

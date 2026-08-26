@@ -1,0 +1,10 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll audit the pinned nested commit and `Solution.lean` from exact git bytes, recompute the SHA-256, then write only the requested review file.I'll pull the pinned `Solution.lean` bytes, recompute the hash, and look at nearby cube-landing reviews for the expected format.The hash matches. Next I’ll extract the pinned `Solution.lean` and scan the rest of that commit for a source-to-landing map.The landing theorem is a 156-line addition. I’ll inventory the pinned file and search the rest of that commit for any source-to-landing map.I'll pull the theorem inventory, inductive constructors, and the branch proofs the landing theorem actually uses.Next I’ll read the remaining branch theorems and search the pinned tree for any theorem that actually maps source data into the landing type.I’ll check the cube-trajectory source list against the constructors, and inspect classical/`sorry` usage plus nearby Lean interfaces.I have the hash, constructors, consumed theorems, and a confirmed missing source-to-landing map. I’ll write the review file next.Two counts in the review were off. I’ll correct them before finishing.Wrote `xmodel/jc2-lean-cube-f0b5823-landing-source-review-grok-20260826.md`.
+
+Pinned `gcd3-69-cube/Solution.lean` at `f0b5823c2d008807fa6524401faf2e1413d7a5f8` was read with `git show`. Recomputed SHA-256 is `6407444078ad5ea0ce93ec55440b2629d10676abcff6614887ef47c97e8e0de2`.
+
+`GCD369CubeTrajectoryLandingEmpty` has type `GCD369CubeTrajectoryLanding K → False`. It is `cases` on ten constructors, each dispatched to an existing branch exclusion. Six constructors are already uninhabitable on their own (non-integral degree, `(-1/16)=0`, identically zero Wronskian, curve-plus-nonconstancy, DS boundary Bezout). No theorem in the pinned nested project maps cube/Keller/source data into `GCD369CubeTrajectoryLanding K`.
+
+Smallest missing declaration: `GCD369CubeSourceToTrajectoryLanding : GCD369CubeCoreSource K → GCD369CubeTrajectoryLanding K`.
+
+FORMAL_GLUE_ONLY

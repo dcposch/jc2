@@ -54,7 +54,11 @@ that use the shared wrapper.
   `i-07eeaf8ba6f0bc419`, current IP `100.26.198.153`.  Its TD6 environment is
   `/home/ubuntu/venvs/td6` (Python 3.12 / python-flint 0.9.0).
 
-The seven running instances total the account's current 512-vCPU quota.
+The seven running instances total the user-authorized 512-vCPU campaign
+ceiling.  Do not exceed that total.  The coordinator may replace an audited,
+idle large instance with several smaller AWS workers of at most 1 TiB RAM when
+independent lanes would benefit from job-level parallelism; stop/replace only
+after every live process and output has been identified and preserved.
 The four `r6*` nodes were added on 2026-08-24 for independent Double-B,
 Q8, AS, and TD6 work.  Their public IPs change on stop/start; resolve from the
 instance IDs before use.  Do not stop or repurpose one until its exact live

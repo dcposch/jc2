@@ -1,0 +1,28 @@
+started_utc=2026-08-26T02:32:27Z
+host=ip-172-30-0-45
+dmi=Amazon EC2
+uname=Linux ip-172-30-0-45 6.17.0-1019-aws #19~24.04.1-Ubuntu SMP Tue Jun 23 18:53:06 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+job_tag=jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d
+expected_commit=f0b5823c2d008807fa6524401faf2e1413d7a5f8
+archive_sha256=856c337c42b6dea21abaafc65ac794e39a1deaf47c4c72462871cf2bcf59d982
+solution_sha256=6407444078ad5ea0ce93ec55440b2629d10676abcff6614887ef47c97e8e0de2
+lake=Lake version 5.0.0-src+3447a66 (Lean version 4.34.0-rc1)
+lean=Lean (version 4.34.0-rc1, x86_64-unknown-linux-gnu, commit 3447a668783dbce1a8fdb97101dd067687b2b418, Release)
+cdbc6c372a2b37ad94430a6cec69cedfa4d36f255bfd968773fd91bf7a1746bf  lean-toolchain
+744608a4d1eddf8abee420254b4406250c0c47616715fe5f03289e9316f77ef9  lakefile.toml
+d0f8cb08555d8f3b614bf6b0dbf6a414b137a8660113430c6a0641f8ecfe6e41  lake-manifest.json
+6407444078ad5ea0ce93ec55440b2629d10676abcff6614887ef47c97e8e0de2  Solution.lean
+lean_jobs=4
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+Decompressing 8537 already-cached file(s) (192 already decompressed)
+No files to download
+Decompressed 8537 already-cached file(s)
+Completed successfully in 12348 ms!
+✖ [8745/8746] Building Solution (7.1s)
+trace: .> LEAN_PATH=/home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/packages/Cli/.lake/build/lib/lean:/home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/packages/batteries/.lake/build/lib/lean:/home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/packages/Qq/.lake/build/lib/lean:/home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/packages/aesop/.lake/build/lib/lean:/home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/packages/importGraph/.lake/build/lib/lean:/home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/packages/plausible/.lake/build/lib/lean:/home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/packages/mathlib/.lake/build/lib/lean:/home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/build/lib/lean /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.34.0-rc1/bin/lean /home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/Solution.lean -o /home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/build/lib/lean/Solution.olean -i /home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/build/lib/lean/Solution.ilean -c /home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/build/ir/Solution.c --setup /home/ubuntu/jobs/jc2_lean_cube_f0b5823_aws_verify_20260826T023000Z_r6d/source/jc2-lean/gcd3-69-cube/.lake/build/ir/Solution.setup.json --json
+info: stderr:
+libc++abi: terminating due to uncaught exception of type lean::exception: failed to create thread: Resource temporarily unavailable
+error: Lean exited with code 134
+Some required targets logged failures:
+- Solution

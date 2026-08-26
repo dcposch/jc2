@@ -1,0 +1,39 @@
+// beta=5 face: expanded direct saturation, global dp.
+LIB "elim.lib";
+ring R=0,(s,la,tau,rho,q1,q0,r2,r1,r0),dp;
+option(redSB);
+poly E1=(4/9)*s^50*q1*r1+(4/9)*s^50*q0*r2;
+poly E2=(4/3)*s^50*q1*r2+(4/9)*s^50*q1*r0+(4/9)*s^50*q0*r1+(2/9)*s^60*r2^2;
+poly E3=(-2/3)*s^60*la^15+(-4/81)*s^60*q1^3+(-8/9)*s^50*q1*r2+(8/9)*s^50*q1*r1+(8/9)*s^50*q0*r2+(4/9)*s^50*q0*r0+(4/9)*s^60*r2*r1;
+poly E4=(-4/27)*s^60*q1^2*q0+(4/3)*s^50*q1*r2+(-16/27)*s^50*q1*r1+(4/9)*s^50*q1*r0+(-16/27)*s^50*q0*r2+(4/9)*s^50*q0*r1+(8/9)*s^60*r2^2+(4/9)*s^60*r2*r0+(2/9)*s^60*r1^2;
+poly E5=(-4/27)*s^60*q1^3+(-4/27)*s^70*q1^2*r2+(-4/27)*s^60*q1*q0^2+(-8/9)*s^50*q1*r2+(4/9)*s^50*q1*r1+(-8/27)*s^50*q1*r0+(4/9)*s^50*q0*r2+(-8/27)*s^50*q0*r1+(-16/27)*s^60*r2^2+(4/3)*s^60*r2*r1+(4/9)*s^60*r1*r0;
+poly E6=(8/81)*s^60*q1^3+(-8/27)*s^60*q1^2*q0+(-8/81)*s^70*q1^2*r1+(-20/81)*s^70*q1*q0*r2+(-4/81)*s^60*q0^3+(4/3)*s^60*r2^2+(-8/9)*s^60*r2*r1+(8/9)*s^60*r2*r0+(4/9)*s^60*r1^2+(2/9)*s^60*r0^2;
+poly E7=(-4/27)*s^60*q1^3+(16/81)*s^60*q1^2*q0+(-8/27)*s^70*q1^2*r2+(-4/81)*s^70*q1^2*r0+(-4/27)*s^60*q1*q0^2+(-4/27)*s^70*q1*q0*r1+(-8/81)*s^80*q1*r2^2+(8/9)*s^50*q1*r2+(-40/81)*s^50*q1*r1+(8/27)*s^50*q1*r0+(-8/81)*s^70*q0^2*r2+(-40/81)*s^50*q0*r2+(8/27)*s^50*q0*r1+(-32/27)*s^60*r2^2+(4/3)*s^60*r2*r1+(-16/27)*s^60*r2*r0+(-8/27)*s^60*r1^2+(4/9)*s^60*r1*r0;
+poly E8=-1*s^81*la^20*tau-1*s^80*la^20+(1/243)*s^80*q1^4+(8/81)*s^60*q1^3+(-4/27)*s^60*q1^2*q0+(8/81)*s^70*q1^2*r2+(-8/81)*s^70*q1^2*r1+(8/81)*s^60*q1*q0^2+(-20/81)*s^70*q1*q0*r2+(-4/81)*s^70*q1*q0*r0+(-8/81)*s^80*q1*r2*r1+(-28/27)*s^50*q1*r2+(16/27)*s^50*q1*r1+(-28/81)*s^50*q1*r0+(-4/81)*s^70*q0^2*r1+(-4/81)*s^80*q0*r2^2+(16/27)*s^50*q0*r2+(-28/81)*s^50*q0*r1+(64/81)*s^60*r2^2+(-8/9)*s^60*r2*r1+(4/9)*s^60*r2*r0+(2/9)*s^60*r1^2+(-8/27)*s^60*r1*r0;
+poly LT=1*s^4*la-1*s^4*tau^3*rho;
+print("AWS_TAG=max12_912_order3_d1_double_root_control2_beta5_face_v1_20260826T025500Z_box02_A");
+print("ENCODING=EXPANDED_DIRECT_SAT_GLOBAL_DP_BETA5_FACE");
+print("FACE_WEIGHT=4,1,1,20,20,30,30,30");
+ideal I=E1,E2,E3,E4,E5,E6,E7,E8,LT;
+ideal CS=s;
+ideal C=sat(I,CS);
+print("CONTRACTION_GENERATORS="+string(size(C)));
+ideal H=C,s;
+ideal GH=std(H);
+print("SPECIAL_FIBRE_GENERATORS="+string(size(GH)));
+print("FACE_ENCODING=A_DIRECT_SAT_DP");
+poly WFACE=la^20+1/243*q1*q0^3+1/54*q1*r2*r1+7/108*q1*r1^2+1/54*q1*r2*r0-1/54*q0*r1*r0+1/108*q1*r0^2;
+if (reduce(WFACE,GH)!=0) { print("FAIL_WITNESS_FACE_MEMBERSHIP"); quit; }
+print("PASS_WITNESS_FACE_MEMBERSHIP");
+print("FACE_SPECIAL_FIBRE_BASIS_BEGIN"); GH; print("FACE_SPECIAL_FIBRE_BASIS_END");
+ideal P=GH,la-1,tau-1,rho-1,q1-1,q0+1,r2-1,r1-1,r0+2;
+ideal GP=std(P);
+if (reduce(1,GP)==0) { print("DISPLAYED_RESIDUE_SURVIVES=0"); } else { print("DISPLAYED_RESIDUE_SURVIVES=1"); }
+poly TORUS=la*tau*rho*q1*q0*r2*r1*r0;
+ideal CT=TORUS;
+ideal GHT=std(sat(GH,CT));
+print("TORUS_FACE_BASIS_BEGIN"); GHT; print("TORUS_FACE_BASIS_END");
+if (reduce(1,GHT)==0) { print("TORUS_FACE_IS_UNIT=1"); } else { print("TORUS_FACE_IS_UNIT=0"); print("TORUS_FACE_DIM="+string(dim(GHT))); }
+print("FIREWALL=EXACT_BETA5_EQUALITY_FACE_FIXED_SOURCE_LOAD_SUPPORT_ONLY");
+print("PASS_CONTROL2_BETA5_FACE_A");
+quit;

@@ -1,0 +1,81 @@
+option(redSB);
+
+proc require_zero(poly f, string label)
+{
+  if (f != 0)
+  {
+    print("FAIL_"+label);
+    print(f);
+    exit(1);
+  }
+  print(label+"=1");
+}
+
+ring R=0,T,dp;
+
+// The exact residual plane P(q,v)=q H(q)v^3+L2(q)v^2+L1(q)v+L0.
+poly q=T^2*(T-1);
+poly D=(T-1)*(21*T-22)*(3*T-2)^6;
+number N=5184;
+poly H=1+10341/484*q-177147/1936*q^2-53636175/7744*q^3
+       -2681119845/30976*q^4-63407820033/123904*q^5
+       -750433487193/495616*q^6-3587901148629/1982464*q^7;
+poly L2=5184+16537365/121*q+15077178/11*q^2
+        +6133360581/968*q^3+3027619377/242*q^4
+        +192547983033/30976*q^5;
+poly L1=-419904/11+865008801/484*q-1745783685/484*q^2;
+number L0=8503056/121;
+
+// Substitute v=N/D and clear D^3.  This is the decisive arithmetic check.
+poly clearedP=q*H*N^3+L2*N^2*D+L1*N*D^2+L0*D^3;
+require_zero(clearedP,"RESIDUAL_PLANE_PULLBACK");
+
+// Exact degree-three q-map and all charged branch places.
+if (deg(q) != 3) { print("FAIL_Q_MAP_DEGREE"); exit(2); }
+if (deg(D) != 8) { print("FAIL_V_DENOMINATOR_DEGREE"); exit(3); }
+print("Q_MAP_DEGREE=3");
+print("V_NUMERATOR=5184");
+print("V_DENOMINATOR_DEGREE=8");
+require_zero(27*q+4-(3*T-2)^2*(3*T+1),"QB_BRANCH_FACTORIZATION");
+require_zero(9261*q-484-(21*T-22)*(441*T^2+21*T+22),
+             "QA_BRANCH_FACTORIZATION");
+require_zero(22*N-81*subst(D,T,0),"LEFT_VALUE_81_OVER_22");
+
+// Put S=24(T-1)/(3T-2).  Then S=0,1,infinity at the three
+// non-four-divisible branch places T=1,22/21,2/3.
+poly Snum=24*(T-1);
+poly Sden=3*T-2;
+require_zero(Snum-Sden-(21*T-22),"S_MINUS_ONE_NUMERATOR");
+
+// This is the cleared form of
+// (1/v)/(S(S-1))=(3T-2)^8/124416.
+poly ratioClear=124416*D*Sden^2
+                -N*Snum*(Snum-Sden)*Sden^8;
+require_zero(ratioClear,"KUMMER_FOURTH_POWER_REMOVAL");
+print("KUMMER_CONSTANT_FOURTH_POWER=124416");
+print("BRANCH_T_VALUES=1,22/21,2/3");
+print("V_DIVISOR_ORDERS=8,-1,-1,-6");
+
+// Independent cleared checks of the lemniscatic Weierstrass map.  On
+// xi^4=S(S-1), W=2S-1, set X=2(W+1)/xi^2 and Z=4(W+1)/xi^3.
+ring E=0,(S,xi,W,Wp),dp;
+ideal IE=xi^4-S*(S-1),W-(2*S-1),W*Wp-8*xi^3;
+ideal GE=std(IE);
+poly cubicClear=16*(W+1)^2-8*(W+1)^3+32*(W+1)*xi^4;
+poly differentialClear=W*(2*Wp*xi-4*(W+1))+4*(W+1);
+if (reduce(cubicClear,GE) != 0)
+{
+  print("FAIL_WEIERSTRASS_CUBIC");
+  exit(4);
+}
+if (reduce(differentialClear,GE) != 0)
+{
+  print("FAIL_REGULAR_DIFFERENTIAL_PULLBACK");
+  exit(5);
+}
+print("WEIERSTRASS_CUBIC=Z^2-X^3+16X");
+print("WEIERSTRASS_CUBIC_IDENTITY=1");
+print("REGULAR_DIFFERENTIAL_IDENTITY=dX/Z+dxi/W");
+print("REGULAR_DIFFERENTIAL_PULLBACK=1");
+print("LEMNISCATIC_PARAMETER_CERTIFICATE_V3=PASS");
+quit;

@@ -1,0 +1,67 @@
+// Literal replay of the frozen LPDP la^20 preimage and finite cone support.
+ring R=0,(s,la,tau,rho,q1,q0,r2,r1,r0),(lp(1),dp(8));
+poly E1=(4/9)*s^52*q1*r1+(4/9)*s^52*q0*r2;
+poly E2=(4/3)*s^52*q1*r2+(4/9)*s^52*q1*r0+(4/9)*s^52*q0*r1+(2/9)*s^60*r2^2;
+poly E3=(-2/3)*s^60*la^15+(-4/81)*s^66*q1^3+(-8/9)*s^52*q1*r2+(8/9)*s^52*q1*r1+(8/9)*s^52*q0*r2+(4/9)*s^52*q0*r0+(4/9)*s^60*r2*r1;
+poly E4=(-4/27)*s^66*q1^2*q0+(4/3)*s^52*q1*r2+(-16/27)*s^52*q1*r1+(4/9)*s^52*q1*r0+(-16/27)*s^52*q0*r2+(4/9)*s^52*q0*r1+(8/9)*s^60*r2^2+(4/9)*s^60*r2*r0+(2/9)*s^60*r1^2;
+poly E5=(-4/27)*s^66*q1^3+(-4/27)*s^74*q1^2*r2+(-4/27)*s^66*q1*q0^2+(-8/9)*s^52*q1*r2+(4/9)*s^52*q1*r1+(-8/27)*s^52*q1*r0+(4/9)*s^52*q0*r2+(-8/27)*s^52*q0*r1+(-16/27)*s^60*r2^2+(4/3)*s^60*r2*r1+(4/9)*s^60*r1*r0;
+poly E6=(8/81)*s^66*q1^3+(-8/27)*s^66*q1^2*q0+(-8/81)*s^74*q1^2*r1+(-20/81)*s^74*q1*q0*r2+(-4/81)*s^66*q0^3+(4/3)*s^60*r2^2+(-8/9)*s^60*r2*r1+(8/9)*s^60*r2*r0+(4/9)*s^60*r1^2+(2/9)*s^60*r0^2;
+poly E7=(-4/27)*s^66*q1^3+(16/81)*s^66*q1^2*q0+(-8/27)*s^74*q1^2*r2+(-4/81)*s^74*q1^2*r0+(-4/27)*s^66*q1*q0^2+(-4/27)*s^74*q1*q0*r1+(-8/81)*s^82*q1*r2^2+(8/9)*s^52*q1*r2+(-40/81)*s^52*q1*r1+(8/27)*s^52*q1*r0+(-8/81)*s^74*q0^2*r2+(-40/81)*s^52*q0*r2+(8/27)*s^52*q0*r1+(-32/27)*s^60*r2^2+(4/3)*s^60*r2*r1+(-16/27)*s^60*r2*r0+(-8/27)*s^60*r1^2+(4/9)*s^60*r1*r0;
+poly E8=-1*s^81*la^20*tau-1*s^80*la^20+(1/243)*s^88*q1^4+(8/81)*s^66*q1^3+(-4/27)*s^66*q1^2*q0+(8/81)*s^74*q1^2*r2+(-8/81)*s^74*q1^2*r1+(8/81)*s^66*q1*q0^2+(-20/81)*s^74*q1*q0*r2+(-4/81)*s^74*q1*q0*r0+(-8/81)*s^82*q1*r2*r1+(-28/27)*s^52*q1*r2+(16/27)*s^52*q1*r1+(-28/81)*s^52*q1*r0+(-4/81)*s^74*q0^2*r1+(-4/81)*s^82*q0*r2^2+(16/27)*s^52*q0*r2+(-28/81)*s^52*q0*r1+(64/81)*s^60*r2^2+(-8/9)*s^60*r2*r1+(4/9)*s^60*r2*r0+(2/9)*s^60*r1^2+(-8/27)*s^60*r1*r0;
+poly LT=1*s^4*la-1*s^4*tau^3*rho;
+print("AWS_TAG=max12_912_order3_d1_double_root_control2_la20_witness_replay_v1_20260826T024500Z_r6d");
+print("EXPECTED_PRODUCER_STDOUT_SHA256=a0611ede0e667d45f569a954fdaa73818f0ebea328212b8c46d4ccb0aa29fe08");
+print("ENCODING=LITERAL_NINE_GENERATOR_REES_IDENTITY_AND_TERM_ENUMERATION");
+ideal I=E1,E2,E3,E4,E5,E6,E7,E8,LT;
+ideal FINAL;
+FINAL[1]=1/108*s^60*q1^2-7/72*s^46*r2+1/8*s^46*r1-5/18*s^38*q1+1/8*s^38*q0+115/24*s^16;
+FINAL[2]=1/12*s^38*q1-5/36*s^38*q0-29/9*s^16;
+FINAL[3]=0;
+FINAL[4]=-1/24*s^38*q1+3/2*s^16;
+FINAL[5]=-1/24*s^38*q0-25/24*s^16;
+FINAL[6]=1/24*s^38*q1;
+FINAL[7]=3/8*s^16;
+FINAL[8]=-s^16;
+FINAL[9]=0;
+poly TAIL=-1/243*s^7*q1*q0^3-1/54*s*q1*r2*r1-7/108*s*q1*r1^2-1/54*s*q1*r2*r0+1/54*s*q0*r1*r0-1/108*s*q1*r0^2-la^20*tau;
+poly CHECK=s^96*la^20-s^97*TAIL;
+int i;
+for (i=1; i<=9; i++) { CHECK=CHECK-I[i]*FINAL[i]; }
+if (CHECK!=0) { print("FAIL_LITERAL_REES_IDENTITY"); CHECK; quit; }
+print("PASS_LITERAL_REES_IDENTITY");
+poly W=subst(la^20-s*TAIL,s,1);
+poly EXPECT=la^20*tau+la^20+1/243*q1*q0^3+1/54*q1*r2*r1+7/108*q1*r1^2+1/54*q1*r2*r0-1/54*q0*r1*r0+1/108*q1*r0^2;
+if (W-EXPECT!=0) { print("FAIL_DEHOMOGENIZED_WITNESS"); quit; }
+print("PASS_DEHOMOGENIZED_WITNESS");
+poly WZ=972*la^20*tau+972*la^20+4*q1*q0^3+18*q1*r2*r1+63*q1*r1^2+18*q1*r2*r0-18*q0*r1*r0+9*q1*r0^2;
+if (WZ-972*W!=0) { print("FAIL_PRIMITIVE_INTEGRAL_SCALE"); quit; }
+print("PASS_PRIMITIVE_INTEGRAL_SCALE");
+print("WITNESS_BEGIN"); W; print("WITNESS_END");
+poly REM=W;
+poly TERM,MON;
+intvec EX;
+int TC=0; int C80=0; int C81=0; int C82=0; int C88=0; int OTHER=0;
+int WT;
+print("TERM_ENUMERATION_BEGIN");
+while (REM!=0)
+{
+  TERM=lead(REM); EX=leadexp(TERM); TC++;
+  if (EX[1]!=0) { print("FAIL_TERM_HAS_S"); quit; }
+  if (EX[4]!=0) { print("FAIL_TERM_HAS_RHO"); quit; }
+  WT=4*EX[2]+EX[3]+EX[4]+22*EX[5]+22*EX[6]+30*EX[7]+30*EX[8]+30*EX[9];
+  print("TERM_INDEX="+string(TC));
+  print("TERM_EXP="+string(EX));
+  print("TERM_WEIGHT="+string(WT));
+  print("TERM="+string(TERM));
+  if (WT==80) { C80++; MON=TERM/leadcoef(TERM); if (MON!=la^20) { print("FAIL_WEIGHT80_NONLA20"); quit; } }
+  else { if (WT==81) { C81++; } else { if (WT==82) { C82++; } else { if (WT==88) { C88++; } else { OTHER++; } } } }
+  REM=REM-TERM;
+}
+print("TERM_ENUMERATION_END");
+if (TC!=8 || C80!=1 || C81!=1 || C82!=5 || C88!=1 || OTHER!=0) { print("FAIL_TERM_WEIGHT_MULTISET"); quit; }
+print("TERM_COUNT="+string(TC));
+print("WEIGHT_MULTISET=80x1,81x1,82x5,88x1");
+print("PASS_UNIQUE_LA20_MINIMUM_AT_REGISTERED_WEIGHT");
+print("FIREWALL=FIXED_SOURCE_WITNESS_AND_ITS_FINITE_STRICT_HALFSPACES_ONLY");
+print("PASS_CONTROL2_LA20_WITNESS_REPLAY_V1");
+quit;

@@ -1,0 +1,134 @@
+python_flint_version=0.9.0
+./README.md: OK
+./README_V83.md: OK
+./SOURCE.sha256: OK
+./V81A_DEPLOYMENT_ERRATUM.md: OK
+./V81A_MATH_HARNESS_ERRATUM.md: OK
+./V81A_PREREGISTRATION.md: OK
+./V82P2_REPORTER_ERRATUM.md: OK
+./V82P3_TYPED_COMPOSITION_ERRATUM.md: OK
+./V82P4_PREREGISTRATION.md: OK
+./V82P_PREREGISTRATION.md: OK
+./V82S_PREREGISTRATION.md: OK
+./V82_PREREGISTRATION.md: OK
+./V83_PREREGISTRATION.md: OK
+./launch_v82_host.sh: OK
+./launch_v82s_host.sh: OK
+./payload/RUNBOOK.md: OK
+./payload/SOURCE.sha256: OK
+./payload/V19_RUNBOOK.md: OK
+./payload/V24_ERRATUM.md: OK
+./payload/V27_ERRATUM.md: OK
+./payload/V28_RUNBOOK.md: OK
+./payload/V29_ERRATUM.md: OK
+./payload/V32_SENTINEL_ERRATUM.md: OK
+./payload/V77_PREREGISTRATION.md: OK
+./payload/V77_RUNBOOK.md: OK
+./payload/V78C_PREREGISTRATION.md: OK
+./payload/V78_PREREGISTRATION.md: OK
+./payload/V79_PREREGISTRATION.md: OK
+./payload/jc2/cases/td6_boundary_q2_deformation_20260824/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_all_q_vector_ad_20260825/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_all_q_vector_ad_repaired_20260825/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_all_q_vector_ad_repaired_20260825/replay_shard.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_first_rank_open_v83_aws_20260826/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_kernel_dead_current_shard_v82p4_20260826/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_kernel_dead_first_shard_v82s_20260826/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_q2_beta_dual_20260825/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_q3_gamma_dual_20260825/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_q3_gamma_dual_repaired_20260825/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_q_dead_joint_first_fitting_v82_20260826/replay.py: OK
+./payload/jc2/cases/td6_c1_c2_c3_q_dead_joint_transport_v81b_20260826/replay.py: OK
+./payload/jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/c1_c3_thickening.py: OK
+./payload/jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/c1_pencil.py: OK
+./payload/jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/c1_rational_transport.py: OK
+./payload/jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/fast_efield.py: OK
+./payload/jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/fast_evec.py: OK
+./payload/jc2/cases/td6_c1_c3_first_ideal_eps2_20260824/replay.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_c2_c3_p3_quotient.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_c2_c3_trivariate.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_pencil.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/c1_rational_transport.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/fast_efield.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/fast_evec.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/first_c1_c3_mpoly.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/h_b_raw_quotient.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/replay.py: OK
+./payload/jc2/cases/td6_c1_c3_two_center_cover_20260824/transport_c1_c3_mpoly.py: OK
+./payload/jc2/cases/td6_jet_orbit_adjoint_20260824/replay.py: OK
+./payload/jc2/cases/td6_moduli_uniform_third_band_20260824/replay.py: OK
+./payload/jc2/cases/td6_moduli_uniformity_20260824/replay.py: OK
+./payload/jc2/cases/td6_two_chart_first_band_20260824/replay.py: OK
+./payload/jc2/cases/td6_two_chart_next_row_20260824/replay.py: OK
+./payload/run_v27.sh: OK
+./payload/run_v28.sh: OK
+./payload/run_v77.sh: OK
+./payload/run_v77r.sh: OK
+./payload/run_v78.sh: OK
+./payload/run_v78b.sh: OK
+./payload/run_v78c_shard.sh: OK
+./run_v81b.sh: OK
+./run_v82.sh: OK
+./run_v82p4.sh: OK
+./run_v82s.sh: OK
+./run_v83.sh: OK
+producer=TD6-A3-FIRST-RANK-OPEN-V83
+aws_hostname=ip-172-30-0-45
+aws_run_tag=td6_v83_first_rank_open_r6d_v83b_20260826T0430Z
+coefficient_field=E(C,V,U)
+source_center=(C,V,U);symbolic=true
+licensed_chart_factors=U,C-3U^2,B3
+assumed_rank_open_D_U_H_B3=false
+quadratic_or_family_claim=false
+trivariate_transport rows=0;pivots=1;events=0
+trivariate_transport rows=250;pivots=251;events=0
+trivariate_transport rows=1500;pivots=684;events=0
+trivariate_transport rows=1750;pivots=934;events=0
+trivariate_transport rows=2000;pivots=1184;events=0
+trivariate_transport rows=2250;pivots=1434;events=0
+trivariate_transport rows=4750;pivots=1716;events=0
+trivariate_transport rows=5000;pivots=1966;events=1
+trivariate_transport rows=5250;pivots=2215;events=1
+trivariate_transport rows=5500;pivots=2465;events=2
+trivariate_transport rows=5750;pivots=2715;events=2
+trivariate_transport rows=6000;pivots=2965;events=2
+trivariate_transport rows=6250;pivots=3215;events=2
+trivariate_transport rows=6500;pivots=3465;events=2
+symbolic_center_asserted_before_transport=true
+symbolic_center_asserted_after_transport=true
+transport_rank=3470/3602;free=132
+transport_event_count=2
+packed_first_rank=38/132
+packed_first_dependent_count=0
+all_first_pivot_source_combinations_replayed=true
+selected_minor_size=38x38
+selected_minor_rows=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37
+selected_minor_columns=0,1,2,3,4,5,7,10,14,19,23,26,28,29,30,31,32,33,34,35,39,42,46,52,57,63,71,78,86,95,103,110,116,121,125,128,130,131
+selected_minor_equals_pivot_product_by_unit_lower_elimination=true
+selected_minor_E_unit_exact=(('1', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'), ('0', '1'))
+selected_minor_E_unit_sha256=d698d748c63e93d3ba1c862ff1412bcdcc8fc8ae76be1c78757c487f5cbff0af
+first_pivot_ledger=FIRST_PIVOT_LEDGER.tsv
+first_pivot_ledger_sha256=475d9ed061ea36e0f683724374463ffd31e5b3bd552ac104a258f32dbd7cb9f0
+selected_minor_rational_sha256=8a2bfeebe249a8e4ec070381deba68ee55305b5d1e9090ba38f28e7f99410439
+selected_minor_numerator=(C^4*V^2*U^6 + 8*C^4*U^9 - 3/2*C^3*V^4*U^5 - 12*C^3*V^2*U^8 + 32*C^3*U^11 + 3/4*C^2*V^6*U^4 + 11/2*C^2*V^4*U^7 - 58*C^2*V^2*U^10 - 80*C^2*U^13 - 1/8*C*V^8*U^3 - 3/2*C*V^6*U^6 + 63/2*C*V^4*U^9 + 180*C*V^2*U^12 - 224*C*U^15 + 3/8*V^8*U^5 - 9/4*V^6*U^8 - 207/2*V^4*U^11 + 225*V^2*U^14 - 120*U^17)
+selected_minor_denominator=(1)
+selected_minor_numerator_factor=(1/8, [(C - 3*U^2, 1), (2*C*V^2*U + 16*C*U^4 - V^4 - 14*V^2*U^3 + 16*U^6, 1), (4*C^2*U^2 - 4*C*V^2*U + 24*C*U^4 + V^4 - 20*V^2*U^3 + 20*U^6, 1), (U, 3)])
+selected_minor_denominator_factor=(1, [])
+selected_entry_denominator_factor=(1, [(U, 1), (C - 3*U^2, 1)])
+full_first_matrix_denominator_factor=(1, [(U, 1), (C - 3*U^2, 1)])
+licensed_chart_radical=(C^3*U^3 - C^2*V^2*U^2 + 3*C^2*U^5 + 1/4*C*V^4*U - 2*C*V^2*U^4 - 13*C*U^7 - 3/4*V^4*U^3 + 15*V^2*U^6 - 15*U^9)
+rank38_principal_open_polynomial=(C^5*V^2*U^7 + 8*C^5*U^10 - 3/2*C^4*V^4*U^6 - 15*C^4*V^2*U^9 + 8*C^4*U^12 + 3/4*C^3*V^6*U^5 + 10*C^3*V^4*U^8 - 22*C^3*V^2*U^11 - 176*C^3*U^14 - 1/8*C^2*V^8*U^4 - 15/4*C^2*V^6*U^7 + 15*C^2*V^4*U^10 + 354*C^2*V^2*U^13 + 16*C^2*U^16 + 3/4*C*V^8*U^6 + 9/4*C*V^6*U^9 - 198*C*V^4*U^12 - 315*C*V^2*U^15 + 552*C*U^18 - 9/8*V^8*U^8 + 27/4*V^6*U^11 + 621/2*V^4*U^14 - 675*V^2*U^17 + 360*U^20)
+rank38_principal_open_radical=(C^4*V^2*U^4 + 8*C^4*U^7 - 3/2*C^3*V^4*U^3 - 12*C^3*V^2*U^6 + 32*C^3*U^9 + 3/4*C^2*V^6*U^2 + 11/2*C^2*V^4*U^5 - 58*C^2*V^2*U^8 - 80*C^2*U^11 - 1/8*C*V^8*U - 3/2*C*V^6*U^4 + 63/2*C*V^4*U^7 + 180*C*V^2*U^10 - 224*C*U^13 + 3/8*V^8*U^3 - 9/4*V^6*U^6 - 207/2*V^4*U^9 + 225*V^2*U^12 - 120*U^15)
+rank38_principal_open_factor=(1/8, [(2*C*V^2*U + 16*C*U^4 - V^4 - 14*V^2*U^3 + 16*U^6, 1), (4*C^2*U^2 - 4*C*V^2*U + 24*C*U^4 + V^4 - 20*V^2*U^3 + 20*U^6, 1), (C - 3*U^2, 2), (U, 4)])
+rank38_factor_ledger=FIRST_RANK_OPEN_FACTORS.tsv
+rank38_factor_ledger_sha256=bb990f4f6164d35ecf1af2151a951332ac55cc752dbda0435ca957867506ee7a
+raw_fibre_successor_count=1
+raw_fibre_successor_ledger=RAW_FIBRE_SUCCESSORS.tsv
+raw_fibre_successor_ledger_sha256=56e9c2027a76a61273e44408664d499d089bafe75427401c3686df67e412af0e
+pivot_omission_negative_control=true
+plus_one_negative_control=true
+rank37_row_omission_control=true
+principal_open_is_not_promoted_to_D_U_H_B3=true
+rank_drop_fibres_require_raw_source_rebuild=true
+K2_launched=false;awaiting_stage_A_Q_prev=true
+TD6-A3-FIRST-RANK-OPEN-V83 PASS
