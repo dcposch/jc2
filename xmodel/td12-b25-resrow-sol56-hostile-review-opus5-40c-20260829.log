@@ -1,0 +1,20 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+## `PASS_WITH_REPAIR`
+
+Written to `xmodel/td12-b25-resrow-sol56-hostile-review-opus5-40c-20260829.md` (body 37413 B, `2e5a062f`). All four input file hashes and all four body seals recomputed and matched.
+
+**Sol's core is right, derived independently.** Starting from `J(f^F,Dev)=x^(-u)` I collected the coefficients myself before comparing:
+
+- **The `p^(I-1)` error is real.** The `a=0` term is `i·λ_f·p^(i-1)·L_j[T_j]`; Fable clears that `p^(i-1)` on the left and forgets it on the right. Correct exponent is `p^(I-i) = p^m`. The two agree iff `i=1` — the unique exceptional value, excluded twice (`r=3i/2` forces `i` even; the window needs `i≥16`).
+- **`R_17 = -d/dη Σ(25i-a)P_a T_(17-a)` holds identically.** At `j=17`, `kbar-D-j+a = a-D`, so every summand is `(D-a)(P_a T_(17-a))'`.
+- **Both residues vanish** — at every point of `P¹`, for arbitrary rational inputs. No prior-row solvability, ring membership, or child condition needed.
+
+**Three strengthenings Sol didn't claim.** The collapse is structural, not numerical: the coefficients coincide iff `j = kbar`, and since `0 < kbar < nu` the first resonance *is* the total-derivative row on any such state. I derived a closed form covering all resonances, `Res[p^m R_j] = m·(Res[p^(m-1)p'S_j] − ν·Res[p^m U_j])`, whose overall factor `m` makes the `j=17` vacuity manifest. And the explicit solution plus its full `C_17 p^(-i)` gauge are both on-weight (class 0 mod 25), closing the last place a condition could hide.
+
+**Repairs, confined to Sol's §6 frontier guidance:** the `j=42` consumption list omits the free gauge `C_17`, which enters `T_18..T_41` affinely — so `j=42` is two affine conditions in one unpinned constant, not a window-data functional; and "outside B24" rests on an untyped `P_a` ↔ window-depth identification, logged as `OPEN(WINDOW-INDEX-B25)`.
+
+**Two custody findings.** Sol never charged the Grok review — so the two models found the same slip independently, which is genuine corroboration. And Grok's surviving countermodel ("simple pole of `RHS_17` at an A-root") is structurally impossible: `R_17` has no simple-pole part anywhere.
+
+**Decisions.** Stop `TD12-B25-RESROW/v1` at `j=17` — upgraded from provisional to reviewed; Fable's and Grok's descendants are answered and closed. Do not launch `j=42`: four independent blockers. `j=42` is neither shown nonvacuous nor vacuous — `OPEN(J42-NONVACUITY)`.
+
+Disclosure: my first control run reported `False` on two checks from a sign slip in my own helper (`p^(-I)` for `p^(I)`); fixed and re-run, all consistent. The producer's error persists after that fix and the §4 desk derivation doesn't depend on the checker. `charge_basis=` absent, `jc2-lean` untouched, no commit or push, canonical files read but not edited.

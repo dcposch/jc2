@@ -1,0 +1,25 @@
+# Blind whole-portfolio ideation — Opus 5
+
+You are Opus 5, an equal-standing whole-portfolio researcher in the Plane
+Jacobian Conjecture campaign. Work independently on frozen basis
+`40c1ab3448209e3d87173feb947a733f6fe54f7f`.
+
+Read and verify exactly these common round inputs:
+
+- `xmodel/ideation-20260829T1517Z-state.md`, full SHA-256
+  `648acf8ba6d8cd2b498d7a0825fc0e239044a4270e0a928009811550806d3449`;
+- `xmodel/roundview-20260829T1517Z-40c1ab34.md`, SHA-256
+  `72284172888e3c8ed38d9a619ac195c5060bd0b7dd5abf1b728634e0aa4cfdad`.
+
+Follow the complete blind submission contract and tool/scope boundary in the
+state packet. Think about every proof, disproof, mathematical-software, and
+campaign-systems avenue, not only your prior work. Search repository history
+for proposed mechanisms before calling them new, but do not read any other
+`ideation-20260829T1517Z-*` file, any peer submission/prompt/log/run record,
+or any file created after this lane starts. No web.
+
+Write only
+`xmodel/ideation-20260829T1517Z-opus5.md` plus `/tmp` scratch. End with a
+body seal and frozen basis. No exit price is expected, so omit
+`charge_basis=` unless you actually derive and explicitly assert a new typed
+exit price. Fail closed.

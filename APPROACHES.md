@@ -7,6 +7,55 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 16:35Z — close the valuation-one K00 seed; move td12 upstream)
+
+- **Promote grade four and use radical-first scheduling.** Different-model
+  review promotes
+  `phi(Lambda_(4,r))=Q_r(u-(s^2,st/8,16t^2,0,0,0))`, the proper
+  dimension-13 nonreduced survivor, and its prime reduced locus
+  `A^12 x G_m`. For every later ideal `J`,
+  `sqrt(I4+J)=sqrt(sqrt(I4)+J)`, so scheme and radical inputs cannot differ
+  in geometric existence, unit/proper status, reduced minimal primes, or
+  dimension. Retain the scheme input only for nilpotent, embedded, tangent,
+  multiplicity, or lifting questions.
+- **Close exactly the normalized valuation-one K00 seed at grade five.**
+  Independent exact reconstructions show that on `D(k10_0)` the grade-five
+  locus projects to `s=t=0`. Its fibre there is nonempty, so the bare affine
+  ideals remain proper; however `ell(s,t)=0` is precisely the
+  higher-valuation leak and is excluded from the valuation-one client.
+  Therefore `V(I5) intersect (D(s) union D(t))` is empty: the normalized
+  valuation-one, `C6=1`, `k10_0!=0` seed dies. Stop grade-six work against
+  that seed and do not spend AWS on its scheme refinements. Avenue 36 as a
+  whole remains open for other valuations or supports, but no replacement is
+  armed without a separately typed normalization and source client.
+- **Put td12 occurrence/coverage ahead of further local rows.** Exact-pair
+  completions, trees, and finite coefficient maps already exist after an
+  actual boundary vertex is named. What is missing is a theorem selecting
+  td12/U1 and a named B25 or S17 occurrence from a hypothetical minimal
+  counterexample. `TD12-U1-ACTUAL-LANDING` is the narrow conditional form of
+  that same occurrence problem, not a new avenue or cheaper substitute. Do
+  not relaunch pair-constructor searches or call an uninstantiated formal jet
+  a `PairRef`.
+- **Bank the repaired S map and stop first-resonance arithmetic.** The
+  reviewed S bridge promotes the shear/floor/sibling/degree theorem and makes
+  `FLOOR-COORD` operationally WLOG via an explicit generic source
+  translation; future value packets must serialize the gauge and triangular
+  transport. Occurrence, positive-order values, cap, `PairRef`, and the
+  terminal reduced-deviation row remain open. The reviewed B recurrence makes
+  `j=17` an identically vacuous total derivative. The S `j=13` statement is
+  conditional on typing the analogous terminal row. The next B algebraic
+  resonance is `j=42`, but no positive-order `P_a` values, pinned `C_17`, or
+  reviewed index-to-window map exists; do not launch it.
+- **Close round `20260829T1517Z` without a numbered-avenue rerank.** The
+  radical/scheme geometric split, full period-two K00 renormalization,
+  post-G4 translated-quadratic functor, G6 valuation-one continuation,
+  translation-Ward row without a packet, cross-grade row proportionality,
+  and Hermite slot count are stopped or interface-blocked. Avenue 2 remains
+  principal. Trial the reviewed opt-in `CAPRUN/v1` helper without migrating
+  callers. No campaign-owned heavy AWS mathematics is currently justified;
+  the 512-vCPU quota is a ceiling and separately owned capacity is outside
+  campaign inspection.
+
 ## Superseding strategy overlay (2026-08-29 15:07Z — close grade-three K00; hold grade five behind checkpoint)
 
 - **Promote the remaining grade-three rank strata with their repairs.**

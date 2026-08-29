@@ -7,6 +7,67 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
+> **K00 GRADE FOUR PROMOTED; NORMALIZED VALUATION-ONE SEED DIES AT
+> GRADE FIVE (16:35Z).** Grok's hostile review of Opus grade four returns
+> `PASS_WITH_REPAIR`; integration `fbe5b580...`/body `917207a7...` promotes
+> the closed form `phi(Lambda_(4,r))=Q_r(u-mu)`, the proper dimension-13
+> nonreduced survivor, and its prime reduced `A^12 x G_m` locus. The radical
+> identity `sqrt(I+J)=sqrt(sqrt(I)+J)` means the scheme and radical inputs
+> cannot differ in geometric existence or unit/proper status.
+>
+> Opus's blind grade-five discovery, independent Fable and Grok
+> reconstructions, and Sol's structural replay agree after two repairs: on
+> `D(k10_0)` the locus projects to `s=t=0`, but its fibre there is nonempty
+> and not a point. Binding integration is `7e9e5916...`/body `11d0d69d...`.
+> The grade-five bare ideals therefore remain proper over `s=t=0`; the
+> promoted conclusion is instead emptiness on `D(s) union D(t)`, the
+> normalized valuation-one source open. Thus there is no contradiction
+> between Fable's affine survivor and the source-compatible seed kill.
+> Stop all later-grade work whose only client is the normalized
+> valuation-one, `C6=1`, `k10_0!=0` seed. Avenue 36, other valuations,
+> finite jets, arcs, maps, counterexamples, and JC2 remain open.
+
+> **S BRIDGE AND B FIRST-RESONANCE REPAIRS PROMOTED; OCCURRENCE REMAINS
+> THE GAP (16:35Z).** Fresh S integration `e235723c...`/body `dcc03cbc...`
+> promotes the repaired shear/floor/rigidity/sibling/degree map while keeping
+> the malformed Opus producer seal quarantined. Generic source translation
+> makes `FLOOR-COORD` operationally WLOG, but future source packets must
+> serialize the gauge and triangular transport. No S occurrence, values,
+> cap, `PairRef`, or terminal reduced-deviation row follows.
+>
+> Opus hostile review and integration `344239fb...`/body `c0d1e19d...`
+> promote the B `j=17` total-derivative identity: both proposed residues are
+> identically zero, so no route kill occurs. S `j=13` is the same conclusion
+> only conditionally on typing the analogous terminal row. The phrase
+> “`j=42` lies outside B24/two indices deeper” is superseded: no reviewed map
+> identifies `P_a` index with window depth. `j=42` is only the next algebraic
+> resonance, blocked by absent values and the free `C_17`. Source-interface
+> audit `a98ad176...`/body `76faa25a...` confirms that exact completions are
+> conditionally present; actual td12/U1/B25/S17 occurrence/coverage is the
+> missing global arrow and now the principal proof task.
+
+> **ROUND `20260829T1517Z` CLOSES; CAPRUN PILOT PASSES; RESOURCE POLICY
+> HARDENED (16:35Z).** Four sealed blind reports and three clean
+> cross-pollination reports close in synthesis `f602fb81...`/body
+> `2f5b6271...`. No numbered avenue reranks. Full K00 renormalization,
+> translated-quadratic and linear-tower extrapolations are refuted; Ward,
+> cross-grade row proportionality, and Hermite counting are interface-blocked.
+> Avenue 2 remains principal; Avenue 36 remains open but temporarily unarmed
+> pending a source-typed replacement seed.
+>
+> The opt-in `CAPRUN/v1` pilot (`ops/run_capped.py` `4435279d...`, tests
+> `96775b17...`) passes 17/17 ordinary and optimized regressions plus
+> byte-compilation after internal hostile repair. No caller is migrated and no
+> mathematical claim depends on it. Fable's separate G5 primary did launch
+> four uncertain local Singular subjobs that reached 60-second caps; all are
+> `RESOURCE_CAP_NO_VERDICT` and unused, but the launch violated the AWS-only
+> rule. Future uncertain CAS must fail closed before local execution. No
+> campaign-owned heavy AWS mathematics is active or currently justified;
+> the 512-vCPU quota is a ceiling and separately owned workloads are outside
+> campaign inspection. Web sweep remains due `2026-08-30T03:40Z`; quiet
+> ideation deadline is `2026-08-30T04:35Z`; systems checkpoint is
+> `2026-08-31T16:35Z`.
+
 > **K00 GRADE THREE CLOSES TO ONE REDUCED PLANE; GRADE FOUR SURVIVES
 > PROVISIONALLY (15:07Z).**  Fable combined hostile review
 > `4dbd356a...`/body `b3dd864a...` returns `PASS_WITH_REPAIR` separately on

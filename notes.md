@@ -13491,3 +13491,122 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   Do not launch it before this canonical checkpoint is sealed. Different-
   model review still gates promotion, and all heavy or uncertain CAS remains
   AWS-only.
+
+## 2026-08-29 16:35Z REVIEW/PROMOTION EVENT — G4, S BRIDGE, AND FIRST RESONANCE BANKED
+
+- Grok's hostile review of the Opus grade-four producer returns
+  `PASS_WITH_REPAIR`. Coordinator integration `fbe5b580...`/body
+  `917207a7...` promotes
+  `phi(Lambda_(4,r))=Q_r(u-(s^2,st/8,16t^2,0,0,0))`, the proper
+  dimension-13 nonreduced survivor, and its prime reduced
+  `A^12 x G_m` locus. The identity
+  `sqrt(I4+J)=sqrt(sqrt(I4)+J)` makes radical-first computation complete for
+  geometric existence, properness, reduced primes, and dimension; retain the
+  scheme only for nilpotent, embedded, tangent, multiplicity, or lifting
+  questions.
+- Fable independently reconstructs the S mathematics; the malformed Opus
+  producer remains quarantined, and fresh coordinator integration
+  `e235723c...`/body `dcc03cbc...` supplies binding custody and promotes the
+  shear/floor/rigidity/sibling/degree core. Generic source
+  translation makes `FLOOR-COORD` operationally WLOG only when the gauge and
+  triangular transport are serialized. It supplies no occurrence, values,
+  cap, `PairRef`, or terminal row.
+- Opus hostile review and integration `344239fb...`/body `c0d1e19d...`
+  promote the route-general first-resonance identity
+  `R_kbar=-(sum_a(D-a)P_a T_(kbar-a))'`. B `j=17` is therefore an
+  identically vacuous total derivative and retains the free homogeneous
+  constant `C_17`. S `j=13` is conditional on first typing its analogous
+  landed row. `j=42` is only the next algebraic resonance: there is no
+  reviewed index/window map, no positive-order value packet, and no reason
+  to launch it.
+- Source-interface audit `a98ad176...`/body `76faa25a...` confirms that the
+  exact-pair completion, tree, and finite-functional machinery already
+  exists conditionally. The missing global arrow is actual
+  td12/U1/B25/S17 occurrence/coverage from a hypothetical minimal
+  counterexample.
+
+## 2026-08-29 16:35Z K00 EVENT — NORMALIZED VALUATION-ONE SEED CLOSES AT GRADE FIVE
+
+- Opus's blind discovery, independent Fable and Grok reconstructions, Sol's
+  exact structural audit, and Fable's separate two-input primary agree on the
+  source-compatible conclusion. Binding integration is
+  `7e9e591672a9f1a6b1e8b5bc56053947fa3a665b8541d91e20d90894e465f546`
+  (body `11d0d69d...`).
+- On `D(k10_0)`, every reduced grade-five point projects to `s=t=0`. The
+  fibre at that origin is nonempty and not a point, so the bare affine ideals
+  remain proper. But the frozen valuation-one client requires
+  `ell(s,t)!=(0,...,0)`. Therefore
+  `V(I_G5) intersect D(k10_0) intersect (D(s) union D(t))` is empty and the
+  complete normalized valuation-one, `C6=1`, `k10_0!=0` seed dies.
+- Stop its grade-six and later descendants and its scheme-primary AWS
+  refinements. Avenue 36 remains open for another valuation or support, but
+  no replacement is armed without a separately typed normalization and
+  source client. Fable's richer three-prime, multiplicity, nilpotence, and
+  capped primary-decomposition claims remain unpromoted.
+
+## 2026-08-29 16:35Z SYSTEMS EVENT — CAPRUN PILOT PASSES; LOCAL-CAS POLICY HARDENED
+
+- Independent internal hostile audit passes the opt-in `CAPRUN/v1` pilot:
+  `ops/run_capped.py` hashes to `4435279d...`, its test file hashes to
+  `96775b17...`, 17/17 ordinary and 17/17 optimized fixtures pass, and
+  byte-compilation succeeds. The pilot handles leader-exit descendants,
+  signal/capture races, inherited ignored `SIGCHLD`, hard-link and FIFO
+  custody failures, bounded post-KILL failure, and adaptive lifecycle
+  polling.
+- Binding limitations remain exact-PGID scope, inherited per-process CPU,
+  sampled RSS with disclosed overshoot, and typed incomplete cleanup for an
+  unkillable process. No caller is migrated in this checkpoint and no
+  mathematical claim depends on the helper.
+- Fable's separate grade-five primary launched four uncertain local Singular
+  refinements; each reached its 60-second cap and is recorded
+  `RESOURCE_CAP_NO_VERDICT`. None is used. The launch nevertheless violated
+  the AWS-only rule for uncertain CAS: external lanes must fail closed before
+  such local work. A 60-second desk ceiling is not permission to discover
+  computational cost locally.
+
+## 2026-08-29 16:35Z ROUND `20260829T1517Z` — CLOSED AND SYNTHESIZED
+
+- Frozen basis is `40c1ab34...`; roundview is `72284172...`; state is
+  `648acf8b...`/body `a2ed440...`. Blind reports are Sol `4d51f329...`,
+  Fable `8790a5e9...`, Opus `7d545367...`, and Grok `b01c4882...`.
+  Cross-pollination packet is `fc6a6843...`; Fable `16f3d35b...`, Opus
+  `17225ba6...`, and Grok `fa37693c...` all finish cleanly. Synthesis is
+  `f602fb81...`/body `2f5b6271...`.
+- No numbered avenue reranks. The radical/scheme geometric split, full
+  period-two K00 renormalization, post-G4 translated-quadratic functor, G6
+  valuation-one continuation, untyped translation-Ward row, cross-grade row
+  proportionality, and Hermite slot count are stopped or interface-blocked.
+  Avenue 2 remains principal. Avenue 36 remains open but has no current
+  source-typed seed.
+- This was the first fully balanced four-researcher round followed by three
+  independent adversarial comparisons. Reviews ran in the background and did
+  not block provisional downstream reasoning; promotion waited only for the
+  relevant binding integration.
+
+## 2026-08-29 16:35Z LIVE STATE — OCCURRENCE FIRST; ATOMIC CHECKPOINT
+
+- Authoritative basis is commit `40c1ab34...` plus the hash-sealed artifacts
+  and canonical overlays of round `20260829T1517Z`; this entry requests the
+  next atomic commit/push checkpoint. Sol coordinates and all four models
+  remain equal-standing whole-portfolio researchers. No research or review
+  lane is live at the freeze boundary.
+- Principal proof task: prove or disprove the actual occurrence/coverage
+  arrow from a hypothetical minimal counterexample to td12/U1 and a named
+  B25 or S17 vertex. Only after a named occurrence should a lane serialize
+  its source values and completion. Do not relaunch pair construction,
+  `j=42`, or homogeneous-window work.
+- Principal counterexample task: design a source-typed higher-valuation or
+  different-support successor to the closed valuation-one K00 seed. Do not
+  run G6 against the dead seed or spend AWS on its scheme census. The richer
+  Fable grade-five scheme claims are optional review debt, not a current
+  client.
+- No campaign-owned heavy AWS mathematics is active or presently justified.
+  Heavy or uncertain work remains AWS-only under the 512-vCPU account quota;
+  separately owned instances and workloads are outside campaign inspection.
+- Last full ideation closed `2026-08-29T16:35Z`; the next quiet-round deadline
+  is `2026-08-30T04:35Z`, earlier on significant news. The last web sweep was
+  `2026-08-29T03:40Z`; the next is due `2026-08-30T03:40Z`. CAPRUN acceptance
+  resets the next systems checkpoint to `2026-08-31T16:35Z`.
+- Historical uses of “dashboard” meant internal state classifications, not a
+  user-facing product. The authoritative operator interface is this chat,
+  backed by the newest `LIVE STATE` and the hash-sealed repository record.

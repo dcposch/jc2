@@ -5,6 +5,149 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **K00 GRADE-FIVE NORMALIZED VALUATION-ONE SEED — PROMOTED CLOSED
+> (2026-08-29 16:35Z).** Opus's blind discovery
+> `7d5453672b51dcc6ee47859c8336a7f77c4840891ca021ef066a20a18a895e7a`
+> (body `ce6be254...`) receives independent exact reconstructions from Fable
+> cross-pollination `16f3d35b...`/body `4449c061...`, Grok hostile
+> cross-pollination `fa37693c...`/body `a430e8ee...`, and Sol structural
+> audit `8d4d270c...`/body `25802ec5...`. Fable's later two-input primary
+> `542ff264...`/body `c3b42935...` independently agrees. Binding coordinator
+> integration is
+> `7e9e591672a9f1a6b1e8b5bc56053947fa3a665b8541d91e20d90894e465f546`
+> (6478-byte body
+> `11d0d69ddeff40ad7d26ee360fb7035b77c9909af06ad3507e5c3ba6c1510f6b`).
+>
+> On the promoted grade-three plane set
+> `ell=(2s,t/8,s,t,s,2t)`,
+> `mu=(s^2,st/8,16t^2,0,0,0)`, and `w=u-mu`. The seven literal grade-five
+> rows are affine in `(v,k10_0)`, independent of `(d*_4,k10_1)`, with
+>
+> ```text
+> G5_r = DQ_r(w)[v]
+>        + (1/2) D^2 c3_r(ell)[w,w]
+>        + k10_0 DM4_r(ell)[u-mu/2].
+> ```
+>
+> On the reduced grade-four locus their base residuals have the exhaustive
+> self-similar, origin, and two conjugate `s=+-8it` branches. Exact
+> rational/Gaussian elimination shows that `k10_0!=0` excludes every point
+> with `(s,t)!=(0,0)`. Thus the reduced grade-five locus projects to the
+> origin of the leading plane. The full fibre is not a point and is proper;
+> exact witnesses include `s=t=0`, `u=v=0`, `k10_0=z=1` and a distinct
+> nonzero-`u` witness. Do not call the bare ideal unit.
+>
+> Frozen source semantics require a normalized valuation-one prefix
+> `d_i=Lambda*x_i+O(Lambda^2)` with `x=ell(s,t)!=0`, `C6=1`, and
+> `k10_0!=0`. The origin is the previously reviewed higher-valuation leak,
+> not a valuation-one point. Hence the promoted source-compatible statement
+> is exactly
+>
+> ```text
+> V(I_G5) intersect D(k10_0) intersect (D(s) union D(t)) = empty.
+> ```
+>
+> This closes that complete normalized valuation-one seed and stops its
+> grade-six/later descendants. It does not close the proper origin fibre,
+> another valuation/support, Avenue 36, an arc, germ, map, counterexample, or
+> JC2. Fable's three-prime census, multiplicities, exact nilpotency indices,
+> and capped primary-decomposition refinements remain unpromoted.
+
+> **K00 GRADE-FOUR RANK-ZERO-PLANE THEOREM — PROMOTED WITH REPAIRS
+> (2026-08-29 16:35Z).** Opus producer `0d2a9861...`/body `f6356d97...`
+> receives Grok different-model hostile review `1ec95a45...`/body
+> `41da5999...`, verdict `PASS_WITH_REPAIR`. Binding integration is
+> `fbe5b580662b7f77326c61f5fec54b3a9a2059f1684f52994fee8652efc49448`
+> (5663-byte body `917207a71e7aea537e0a079205dfa91fec853a4b00bff01ceaffe597701117c7`).
+> Generatorwise,
+>
+> ```text
+> phi(Lambda_(4,r)) = Q_r(u-(s^2,st/8,16t^2,0,0,0)).
+> ```
+>
+> `d*_3` and `k10_0` disappear at this grade. With the Rabinowitsch
+> localizer the ideal is proper, dimension 13 and multiplicity 8; its prime
+> radical is `(RA,RB,zk-1)`, so the reduced locus is `A^12 x G_m`. The
+> scheme is nonreduced with nilpotency index three. The correct ambient
+> description is `{RA=RB=0} subset A^14_(s,t,u,v) x G_m_k`, or its
+> Rabinowitsch graph, not an ambiguous `A^15 x D(k)` product.
+>
+> For every later ideal `J`, the ordinary identity
+> `sqrt(I4+J)=sqrt(sqrt(I4)+J)` proves that scheme and radical inputs have
+> identical point sets, unit/proper status, reduced quotient, minimal primes,
+> and dimension. Only nilpotents, embedded structure, multiplicity,
+> tangent/Fitting modules, and lifts can differ. This repairs the impossible
+> geometric-divergence outcomes proposed in two blind cards.
+
+> **TD12 SIBLING/S17 MAP-LEVEL BRIDGE — PROMOTED WITH MATERIAL REPAIRS
+> (2026-08-29 16:35Z).** The original Opus producer remains quarantined for
+> a false body seal. Fable's fresh different-model reconstruction
+> `40438835...`/body `e6f86217...` passes the mathematical shear, branch-free
+> Newton floor, floor dichotomy/rigidity, sibling identity, and degree-floor
+> core. Binding fresh integration is
+> `e235723ca49c51a0dfedb98daa05227e9878f3a9113c855f277ff4a515aac40e`
+> (7175-byte body
+> `dcc03cbcacae146eefa57c4c3f82c7406134577aae46484b7de4a28b0d707cd7`).
+>
+> For a normalized type-`(2,3)` source pair, generic source translation
+> `(f,g) o (x+c,y)` outside a finite exceptional set preserves the S17 cell
+> and normalized type while arranging `ord_x f=ord_x g=0`; higher
+> corrections transform triangularly. Thus `FLOOR-COORD` is operationally a
+> WLOG gauge, not a theorem about one already frozen literal representative.
+> Any future `PairPack` must serialize `c`, the exceptional-set check, and
+> the transport. The degree conclusions are lower floors only. No occurrence,
+> positive-order source value, cap, serialized `PairRef`, terminal deviation,
+> route kill, or JC2 consequence is promoted.
+
+> **TD12 B FIRST RESONANCE — PROMOTED VACUOUS; NO ROUTE KILL
+> (2026-08-29 16:35Z).** Sol producer receives Opus hostile review
+> `068ed91b...`/body `2e5a062f...`, verdict `PASS_WITH_REPAIR`; binding
+> integration is
+> `344239fb02ba0e812791c3c780b1c4b12cf3b3dfc2bd2a9b16f38a05d50b602d`
+> (4891-byte body
+> `c0d1e19d63bc1d6a27ffb80cc4376be11397e407669fdd90a4b60a33e0109d7a`).
+> At any landed recurrence with `O=kbar-D`, the resonant forcing satisfies
+>
+> ```text
+> R_kbar = -(sum_a (D-a) P_a T_(kbar-a))'.
+> ```
+>
+> Hence B `j=17` is identically an exact derivative and both deck-orbit
+> residues vanish. The solution retains the free homogeneous constant
+> `C_17`; no route kill follows. `j=42` is only the next algebraic resonance.
+> Current policy retracts “outside B24/two indices deeper”: no reviewed
+> `P_a`-index/window-depth map exists, no positive-order values are supplied,
+> and `C_17` is unpinned. S `j=13` is a conditional route-general corollary
+> only after its analogous terminal row and landing are typed; the S bridge
+> does not provide them.
+
+> **TD12 SOURCE INTERFACE — COMPLETION PRESENT, OCCURRENCE ABSENT
+> (2026-08-29 16:35Z).** Coordinator audit
+> `a98ad176a916c400f0aa0bc115ab69c6185b3986eedaac5542f1dd2a180ad849`
+> (5998-byte body
+> `76faa25a53603c7d1ffcb44bd9dbffe0ba65a3086948637236091f711f5731bd`)
+> finds exact-pair-to-completion/tree/finite-functional constructions already
+> present once an exact pair and actual vertex are named. The missing arrow
+> is a global occurrence/coverage theorem from a hypothetical minimal
+> counterexample to td12/U1 and a named B25 or S17 occurrence.
+> `TD12-U1-ACTUAL-LANDING` is the smallest conditional statement of that same
+> gap, not an independent avenue. The tempting Statement-9.6 `nu=25/17`
+> degree coincidences both violate `n=1 mod 3` and were already audited;
+> they are duplicate, not a new source bridge.
+
+> **CAPRUN/v1 OPT-IN SOFTWARE PILOT — HOSTILE AUDIT PASS
+> (2026-08-29 16:35Z).** `ops/run_capped.py`
+> (`4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2`)
+> and `ops/test_run_capped.py`
+> (`96775b17fb681a6a1a90b54d6fb28b143424b66165f6039e7cd43f692271b024`)
+> pass 17/17 ordinary and optimized regressions plus byte-compilation after
+> independent internal hostile audit. Repairs cover same-PGID descendants after
+> leader exit, signal/capture races, inherited `SIGCHLD=SIG_IGN`, hard-link
+> and FIFO custody failures, bounded post-KILL failure, and adaptive polling.
+> Scope is exact PGID only; CPU is inherited per process; RSS is sampled with
+> disclosed overshoot; an unkillable process yields typed incomplete cleanup.
+> No caller is migrated, and no mathematical claim depends on this pilot.
+
 > **K00 RANK-FIVE AND GRADE-THREE RANK-AT-MOST-ONE CORES PROMOTED;
 > COMPLETE GRADE-THREE INCIDENCE IS THE RANK-ZERO PLANE
 > (2026-08-29 15:07Z).**  Sol's rank-five producer
