@@ -1,0 +1,188 @@
+{
+  "D22": {
+    "H_division": {
+      "Q22_sha256": "e8eb577b323cad48dbfce2515f0851126c84e6bfd2eb3450208ce043dfbdc4ca",
+      "Q22_terms": 523,
+      "R22_sha256": "37023c755120bd7b5da7b6d0df1bb96982dcf8241ac1f16e155bf8419d93f5e7",
+      "R22_terms": 778,
+      "max_Q22_degree": 9,
+      "max_R22_degree": 7,
+      "status": "EXACT_MATCH"
+    },
+    "M_reduction": {
+      "Y22_sha256": "ec210046166afb026e6a382ec6f5fce0a5a7ef43327e5e547c8ba9f6330bd2b9",
+      "Y22_terms": 621,
+      "max_Y22_degree": 10,
+      "max_rM22_degree": 6,
+      "rM22_sha256": "49ab438543e717ddd4cf34ec36d2b32988cb9197ec1a2a10ce83f98bbdb4d289",
+      "rM22_terms": 680,
+      "status": "EXACT_MATCH_AND_TRACE_REPLAY",
+      "trace_steps": 621
+    },
+    "independent_sha256": "2aed3fee594725ff942a71ebc75b9c13406bb29d8696280e64ee922813cc43d0",
+    "term_count": 778
+  },
+  "charged_hashes": {
+    "producer_certificate": "6346ab6afb307fea83516f742ca53b90e5eb8d42c2e1d5bef083920de23e434a",
+    "producer_compiler": "059d9f32351f5bb5132e0a9cb10e68c35f78ac8504a8323732463f9126897b95",
+    "producer_direct": "069ab7a5fdb133aa2ffb0063e5f36c5664a070798de6ea00520698207e24838d",
+    "producer_freeze": "838b1160f3ddf38fcbf360bd200ee2057e72da2b1b0ba8788d43b83720cdd043",
+    "producer_preregistration": "72e8ba988a0aaeccb86f473bf89b66847481c4e645998f5456e2ad0acb803541",
+    "producer_readme": "64f63865feeb1bd7e64ad6c8be1bc3abd28d3dc995a5a65ef8971a6954606870",
+    "producer_report": "59e9bf2c6713b84ef848bae693a7e88f62c679ff56bad34fce4d3a28548663f3",
+    "producer_result": "e20f4a67953eeab86d21bea5fbaf149dffe20b65b0af052354490b3bc04aa8da",
+    "source": "28b9b05c02224aadec30d52b66ed22db80aabe416ffdc0186f6931f1978f1876"
+  },
+  "dependency_hashes": {
+    "d3_freeze": "012acfe5ca560757269fd6e332ed3c4bab2f1005bce43113109f31b705ffe022",
+    "d3_raw": "28b9b05c02224aadec30d52b66ed22db80aabe416ffdc0186f6931f1978f1876",
+    "d4r1_hold_freeze": "6beafdb470ec9c4c88fd8c6e3d2ccaf3b4312c477ddabc4576203f7e9c19c954",
+    "d5_design_freeze": "9954063b99931a37dc7df2bd56e82570d6a2d0f036d995d2a95e19d109cf47ce",
+    "m_cokernel_audit": "2803b705d41b332cabd12249b0a0be17cdd18e8f2f251fe7b242bf55fc9bb289",
+    "preregistration": "72e8ba988a0aaeccb86f473bf89b66847481c4e645998f5456e2ad0acb803541"
+  },
+  "dependency_scope": {
+    "d4r1_freeze_hash_read_only": true,
+    "d4r1_result_consumed": false,
+    "local_naturality": "LOCKED_OUT_OF_D5G",
+    "target_verdict": "NONE"
+  },
+  "independent_derivation": {
+    "chart": "x=t^3*X, y=t^-1, F=t^8*f, G=t^12*g",
+    "coefficient": "D_n=sum_(i+j=n)((12-j)F_i'*G_j+(i-8)F_i*G_j')",
+    "jacobian": "J(f,g)=t^-22*(12*F_X*G-8*F*G_X-t*(F_X*G_t-F_t*G_X))"
+  },
+  "mutations": {
+    "add_H": "EXACT: delta Q=1, delta R=0, delta Y=X/52, delta rM=-12/13",
+    "drop_f_0_1": {
+      "changed_coefficients": 243,
+      "independent_series_sha256": "8f8c1c0240c3ae5267ca027f5624ca0d9d0636e94addf6620fa6ac597793b0e5"
+    },
+    "replace_i_minus_8_by_i_minus_7": {
+      "changed_coefficients": 31428,
+      "independent_series_sha256": "6f28428246f17a55f546e4845ef54bcece5d07c3bb6419ec9576d75a995f8bb7"
+    }
+  },
+  "raw_structural_replay": {
+    "D0": "ZERO_FROM_17_NONZERO_PRECOMBINATION_CONTRIBUTIONS",
+    "all_contribution_digests_sha256": "cbe21f966bc15d70336ce18176c5954600b32b7d5320dc9e67f8a79f6a5ace45",
+    "contribution_counts_D0_through_D22": [
+      17,
+      225,
+      941,
+      1579,
+      2141,
+      2629,
+      3045,
+      3391,
+      3642,
+      3671,
+      3805,
+      3878,
+      3859,
+      3598,
+      3453,
+      3258,
+      3017,
+      2751,
+      2488,
+      2223,
+      1935,
+      1652,
+      1374
+    ],
+    "independent_series_sha256": "0b82d31ddccfe5415fbe5916dd7ec50966e61a0aa71b15ca6cb6025b560bbd6f",
+    "positive_slots": 400,
+    "support_census": {
+      "F": {
+        "all_slots": 141,
+        "counts_weight_0_through_22": [
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11,
+          10,
+          9,
+          7,
+          6,
+          5,
+          3,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "positive_slots": 124,
+        "weight_zero_slots": 17
+      },
+      "G": {
+        "all_slots": 301,
+        "counts_weight_0_through_22": [
+          25,
+          24,
+          23,
+          22,
+          21,
+          20,
+          19,
+          18,
+          17,
+          16,
+          15,
+          14,
+          13,
+          11,
+          10,
+          9,
+          7,
+          6,
+          5,
+          3,
+          2,
+          1,
+          0
+        ],
+        "positive_slots": 276,
+        "weight_zero_slots": 25
+      }
+    },
+    "term_counts_D0_through_D22": [
+      0,
+      131,
+      503,
+      839,
+      1132,
+      1375,
+      1594,
+      1795,
+      1915,
+      2036,
+      2078,
+      2116,
+      2109,
+      2057,
+      1950,
+      1847,
+      1703,
+      1556,
+      1408,
+      1265,
+      1006,
+      942,
+      778
+    ],
+    "total_contributions": 58572,
+    "total_final_terms": 32135
+  },
+  "scope": "literal generic raw D0..D22 plus exact H and M decompositions; no local naturality, equations, target, face, or JC2 verdict",
+  "status": "PASS-D5G-INDEPENDENT-HOSTILE-AUDIT"
+}

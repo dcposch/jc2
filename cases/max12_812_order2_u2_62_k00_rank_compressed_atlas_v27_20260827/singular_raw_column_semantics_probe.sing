@@ -1,0 +1,22 @@
+ring R=0,(x,y),dp;
+ideal A;
+A[1]=x;
+A[2]=x;
+A[3]=y;
+ideal B=x,x,y;
+ideal C=A,y,y;
+print("A_NCOLS="+string(ncols(A)));
+print("A_SIZE="+string(size(A)));
+print("B_NCOLS="+string(ncols(B)));
+print("B_SIZE="+string(size(B)));
+print("C_NCOLS="+string(ncols(C)));
+print("C_SIZE="+string(size(C)));
+if ((ncols(A)!=3)||(size(A)!=3)||(ncols(B)!=3)||(size(B)!=3)||
+    (ncols(C)!=5)||(size(C)!=5)||(A[1]!=A[2])||(B[1]!=B[2])||
+    (C[1]!=C[2])||(C[4]!=C[5]))
+{
+  print("RAW_COLUMN_SEMANTICS=FAIL");
+  quit;
+}
+print("RAW_COLUMN_SEMANTICS=PASS");
+quit;

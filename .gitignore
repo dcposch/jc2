@@ -24,7 +24,33 @@ cases/*_rebuilt.pkl
 .singularhistory
 .grok-review-*/
 
-# root-level transient launcher/archive checks (case-local custody is tracked)
+# model-lane provenance snapshots from the legacy whole-worktree recorder;
+# schema-2 records use .run.v2 and remain versioned
+/xmodel/*.run
+!/xmodel/m2-caseiii-two-pole-e5-local-index-r3-hostile-review-opus5-20260829.run
+!/xmodel/m2-td8-cv-weight-contact-gate-hostile-review-fable5-20260829.run
+!/xmodel/m2-td12-u1-trunk-consumer-hostile-review-opus5-20260829.run
+!/xmodel/m2-td8-equal-join-zero-side-initialization-primary-grok46-20260829.run
+
+# regenerable remote-job working trees and bulky execution products; direct
+# compact summaries, manifests, and result files remain versioned
+/cases/**/aws_*/*/
+/cases/**/results_*/
+/cases/**/evidence/*/
+/cases/**/custody/*/
+/cases/**/compiled/
+/cases/**/output/*/
+/cases/**/payload/
+/cases/**/run/
+/cases/**/work/
+/cases/**/preflight/source_archive_replay/
+!/cases/max12_812_order2_u2_62_k00_grade7_fitting_atlas_v26_20260827/aws_box02_r1d_exact_prepass/output/
+!/cases/max12_812_order2_u2_62_k00_grade7_fitting_atlas_v26_20260827/aws_box02_r1d_exact_prepass/output/SUPERSEDED.md
+*.tar
+*.tar.gz
+*.whl
+
+# root-level transient launcher/archive checks (legacy tracked custody is retained)
 /archive_check.stdout
 /extract.stderr
 /launcher.pid

@@ -1,0 +1,86 @@
+UTC=2026-08-28T06:22:54Z
+MARKERS_BEGIN
+MARKERS_END
+LOGS_BEGIN
+/home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart0.log 78
+SCOPE=core
+BRANCH=none
+CHART=0
+FIELD=mod
+GENERATOR_COUNT=37
+VARIABLE_COUNT=57
+/home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart1.log 78
+SCOPE=core
+BRANCH=none
+CHART=1
+FIELD=mod
+GENERATOR_COUNT=37
+VARIABLE_COUNT=57
+/home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart2.log 78
+SCOPE=core
+BRANCH=none
+CHART=2
+FIELD=mod
+GENERATOR_COUNT=37
+VARIABLE_COUNT=57
+/home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart3.log 78
+SCOPE=core
+BRANCH=none
+CHART=3
+FIELD=mod
+GENERATOR_COUNT=37
+VARIABLE_COUNT=57
+/home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart4.log 78
+SCOPE=core
+BRANCH=none
+CHART=4
+FIELD=mod
+GENERATOR_COUNT=37
+VARIABLE_COUNT=57
+/home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart5.log 78
+SCOPE=core
+BRANCH=none
+CHART=5
+FIELD=mod
+GENERATOR_COUNT=37
+VARIABLE_COUNT=57
+LOGS_END
+PROCESS_TREE_BEGIN
+ 384230  383943  384230  384230 S bash             3576 bash /home/ubuntu/jobs/ggv_8_28_tail3_source_r1_20260828T050159Z/cases/ggv_8_28_upper_endpoint_tail3_desk_20260828/TARGETS/job_worker.sh /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2 chart0 /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart0.sing 40 6 21600
+ 384235  384230  384230  384230 S time             1552 /usr/bin/time -v timeout --foreground --signal=TERM --kill-after=60s 21600 prlimit --as=42949672960 --fsize=6442450944 --cpu=43200 -- Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart0.sing
+ 384236  384235  384230  384230 S timeout          2104 timeout --foreground --signal=TERM --kill-after=60s 21600 prlimit --as=42949672960 --fsize=6442450944 --cpu=43200 -- Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart0.sing
+ 384237  384236  384230  384230 R Singular        33811540 Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart0.sing
+ 384248  383943  384248  384248 S bash             3572 bash /home/ubuntu/jobs/ggv_8_28_tail3_source_r1_20260828T050159Z/cases/ggv_8_28_upper_endpoint_tail3_desk_20260828/TARGETS/job_worker.sh /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2 chart1 /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart1.sing 40 6 21600
+ 384253  384248  384248  384248 S time             1552 /usr/bin/time -v timeout --foreground --signal=TERM --kill-after=60s 21600 prlimit --as=42949672960 --fsize=6442450944 --cpu=43200 -- Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart1.sing
+ 384254  384253  384248  384248 S timeout          2104 timeout --foreground --signal=TERM --kill-after=60s 21600 prlimit --as=42949672960 --fsize=6442450944 --cpu=43200 -- Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart1.sing
+ 384255  384254  384248  384248 R Singular        35867988 Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart1.sing
+ 384266  383943  384266  384266 S bash             3560 bash /home/ubuntu/jobs/ggv_8_28_tail3_source_r1_20260828T050159Z/cases/ggv_8_28_upper_endpoint_tail3_desk_20260828/TARGETS/job_worker.sh /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2 chart2 /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart2.sing 40 6 21600
+ 384271  384266  384266  384266 S time             1560 /usr/bin/time -v timeout --foreground --signal=TERM --kill-after=60s 21600 prlimit --as=42949672960 --fsize=6442450944 --cpu=43200 -- Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart2.sing
+ 384272  384271  384266  384266 S timeout          2104 timeout --foreground --signal=TERM --kill-after=60s 21600 prlimit --as=42949672960 --fsize=6442450944 --cpu=43200 -- Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart2.sing
+ 384273  384272  384266  384266 R Singular        35450044 Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart2.sing
+ 384284  383943  384284  384284 S bash             3604 bash /home/ubuntu/jobs/ggv_8_28_tail3_source_r1_20260828T050159Z/cases/ggv_8_28_upper_endpoint_tail3_desk_20260828/TARGETS/job_worker.sh /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2 chart3 /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart3.sing 40 6 21600
+ 384289  384284  384284  384284 S time             1556 /usr/bin/time -v timeout --foreground --signal=TERM --kill-after=60s 21600 prlimit --as=42949672960 --fsize=6442450944 --cpu=43200 -- Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart3.sing
+ 384290  384289  384284  384284 S timeout          2104 timeout --foreground --signal=TERM --kill-after=60s 21600 prlimit --as=42949672960 --fsize=6442450944 --cpu=43200 -- Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart3.sing
+ 384291  384290  384284  384284 R Singular        35191932 Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart3.sing
+ 384302  383943  384302  384302 S bash             3568 bash /home/ubuntu/jobs/ggv_8_28_tail3_source_r1_20260828T050159Z/cases/ggv_8_28_upper_endpoint_tail3_desk_20260828/TARGETS/job_worker.sh /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2 chart4 /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart4.sing 40 6 21600
+ 384307  384302  384302  384302 S time             1556 /usr/bin/time -v timeout --foreground --signal=TERM --kill-after=60s 21600 prlimit --as=42949672960 --fsize=6442450944 --cpu=43200 -- Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart4.sing
+ 384308  384307  384302  384302 S timeout          2104 timeout --foreground --signal=TERM --kill-after=60s 21600 prlimit --as=42949672960 --fsize=6442450944 --cpu=43200 -- Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart4.sing
+ 384309  384308  384302  384302 R Singular        35620436 Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart4.sing
+ 384320  383943  384320  384320 S bash             3536 bash /home/ubuntu/jobs/ggv_8_28_tail3_source_r1_20260828T050159Z/cases/ggv_8_28_upper_endpoint_tail3_desk_20260828/TARGETS/job_worker.sh /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2 chart5 /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart5.sing 40 6 21600
+ 384325  384320  384320  384320 S time             1556 /usr/bin/time -v timeout --foreground --signal=TERM --kill-after=60s 21600 prlimit --as=42949672960 --fsize=6442450944 --cpu=43200 -- Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart5.sing
+ 384326  384325  384320  384320 S timeout          2104 timeout --foreground --signal=TERM --kill-after=60s 21600 prlimit --as=42949672960 --fsize=6442450944 --cpu=43200 -- Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart5.sing
+ 384327  384326  384320  384320 R Singular        35511428 Singular -q /home/ubuntu/jobs/ggv_8_28_tail3_core_mod_r6d_r2_20260828T050159Z/runs/tail3_core_mod_r6d_call_20260828T051902Z_383943_cutoff3_core_mod_r6d_r2/chart5.sing
+PROCESS_TREE_END
+TELEMETRY_TAIL_BEGIN
+2026-08-28T06:20:44Z	307500312	0	118740078592	384230:33308800,384248:34984192,384266:34574392,384284:34556076,384302:34781328,384320:34836612,
+2026-08-28T06:21:14Z	306500868	0	118740070400	384230:33345664,384248:35182868,384266:34848840,384284:34496684,384302:35143844,384320:35035276,
+2026-08-28T06:21:45Z	305508636	0	118740070400	384230:33583240,384248:35303708,384266:35014740,384284:34834624,384302:35143844,384320:35156112,
+2026-08-28T06:22:15Z	304658292	0	118740066304	384230:33583240,384248:35492136,384266:35211364,384284:35000524,384302:35266736,384320:35344540,
+2026-08-28T06:22:45Z	303414328	0	118740066304	384230:33818424,384248:35666232,384266:35334252,384284:35199196,384302:35659812,384320:35518624,
+TELEMETRY_TAIL_END
+MemAvailable:   303080348 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Filesystem         1-blocks        Used    Available Capacity Mounted on
+/dev/root      206900281344 88143454208 118740049920      43% /
+PRESTOP_SNAPSHOT=PASS

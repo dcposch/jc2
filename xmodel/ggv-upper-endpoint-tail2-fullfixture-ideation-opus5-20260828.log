@@ -1,0 +1,25 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written. Only `xmodel/ggv-upper-endpoint-tail2-fullfixture-ideation-opus5-20260828.md` was added; the modified-tracked-file list is unchanged from the session-start snapshot (including `jc2-lean`, which was already dirty and which I never entered).
+
+## Status: **REDUCTION**
+
+**What I verified from literal source.** I rebuilt the whole fixture from the recurrence alone (deriving `G1,G2,G3` rather than assuming them) and diffed against all 513 frozen generators: rows D0–D3 vanish identically, rows D4–D21 match term-for-term, and row D22 matches with exactly one extra constant `−1` — the folded-in affine target.
+
+**The main new object.** Because there is no `G22` slot, `D22` is purely the deficit of the ideal solution, and `−L_22(R)·A ≡ 8(A^5R)′`. So the 18 literal row-22 equations collapse to one closed form:
+
+```
+A^5·Φ_22 = X^5/40 − X/8 + γ,   γ ∈ K
+```
+
+Since `X^5−5X+40γ = X·A + (−4X+40γ)`, `A` never divides the numerator, and `N(ρ)=0` needs `γ=ρ/10`. **At least three of the four roots of `A` must have `v_ρ(Φ_22) = −5` exactly** — an exact, cover-free necessary condition.
+
+**Supporting structure, all verified:**
+- `E(F,G) = F_X(12−t∂_t)G + G_X(t∂_t−8)F`; rows D4–D21 are *equivalent* to `G ≡ Σ c_{12−2k}t^{12−2k}F^{k/4} mod t^22`. The five polynomial modes are derived, not posited, and the exact RREF kernel census (1,0,1,0,1,0,1,0,1 then 0,0,0) confirms them independently.
+- `2G·E(F,G) = E24(F, G²−F³)` — a square-root-free, localization-free degree-3 lane.
+- `R_n = G_n − (3/2)HF_n` absorption: `F_n` cancels out of `D_n` entirely, making the system triangular.
+- Two invisible additive gauges, `F_8[X^0]` and `G_12[X^0]` (the second appears new) — a scheme identity needing no cover.
+- Rows 4–6 give zero conditions; the first 15 appear at row 7.
+
+**On the charged question:** the cutoff-5 two-branch mechanism **fails**, it does not split. At cutoff 2, `2c−1 = 3 < 4`, so there is no linear prefix at all and every charged row is quadratic; `V0`, `E13/E14/E15`, `K17` are prefix-defined and have no meaning here. What transfers verbatim is the endpoint determinant `1+ab−cd` with the same four carriers, and the `F_8[X^0]` gauge.
+
+**Two honest limitations.** I have no exclusion and no witness. The ranked-#1 experiment rests on an inequality `v(c_22) ≥ v(c_21)−2` that I state as a conjecture with a strategy — the heuristic that `v(c_n) ≈ 4v(ε)` independent of `n` would close it, but I have not handled the sub-modes or the unit factor rigorously. And rows 16–21 of the condition census are predicted, not verified; the carried cascade ran out of room at row 15.

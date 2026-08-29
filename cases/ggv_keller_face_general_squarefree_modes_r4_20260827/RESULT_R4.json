@@ -1,0 +1,231 @@
+{
+  "claims_not_made": [
+    "existence of a polynomial jet for squarefree linear H",
+    "general nonsquarefree mode/provenance theorem",
+    "raw polynomial-source lift or genuine GGV landing",
+    "GGV family exclusion, G2-PSC, G2-BD, JC2"
+  ],
+  "endpoint": {
+    "confirmed_ode_change": "g=-8H^2d gives 2Hg'+H'g=2H",
+    "degree_1": "endpoint survives uniquely with Y=1/(6H')",
+    "degree_ge_2": "excluded: nonzero degree-y Y maps to degree y+deg(H)-1>=1",
+    "denominator_provenance": "coefficients of the six modes divide only powers of H",
+    "pole_rows": [
+      {
+        "d_pole_order": 1,
+        "leading_scalar": -12
+      },
+      {
+        "d_pole_order": 2,
+        "leading_scalar": -4
+      },
+      {
+        "d_pole_order": 3,
+        "leading_scalar": 4
+      },
+      {
+        "d_pole_order": 4,
+        "leading_scalar": 12
+      },
+      {
+        "d_pole_order": 5,
+        "leading_scalar": 20
+      },
+      {
+        "d_pole_order": 6,
+        "leading_scalar": 28
+      },
+      {
+        "d_pole_order": 7,
+        "leading_scalar": 36
+      },
+      {
+        "d_pole_order": 8,
+        "leading_scalar": 44
+      },
+      {
+        "d_pole_order": 9,
+        "leading_scalar": 52
+      },
+      {
+        "d_pole_order": 10,
+        "leading_scalar": 60
+      },
+      {
+        "d_pole_order": 11,
+        "leading_scalar": 68
+      },
+      {
+        "d_pole_order": 12,
+        "leading_scalar": 76
+      }
+    ],
+    "residual_equation": "-20HH'd-8H^2d'=1",
+    "squarefree_fixture_checks": {
+      "cubic": {
+        "M_monomials_checked": "Y=X^d, 0<=d<=24",
+        "degree": 3,
+        "gcd_H_Hprime": "1"
+      },
+      "degree_eight": {
+        "M_monomials_checked": "Y=X^d, 0<=d<=24",
+        "degree": 8,
+        "gcd_H_Hprime": "1"
+      },
+      "linear": {
+        "M_monomials_checked": "Y=X^d, 0<=d<=24",
+        "degree": 1,
+        "gcd_H_Hprime": "1"
+      },
+      "quadratic": {
+        "M_monomials_checked": "Y=X^d, 0<=d<=24",
+        "degree": 2,
+        "gcd_H_Hprime": "1"
+      },
+      "quintic": {
+        "M_monomials_checked": "Y=X^d, 0<=d<=24",
+        "degree": 5,
+        "gcd_H_Hprime": "1"
+      }
+    },
+    "squarefree_pole_reduction": "d=-Y/(2H), Y polynomial, hence 4HY'+6H'Y=1"
+  },
+  "nonsquarefree_stop": {
+    "B_nonconstant": "an odd multiplicity is present, so the squarefree six-weight list remains the rational list",
+    "effect": "endpoint differential equation still exists, but squarefree uniqueness/pole provenance cannot be transported through the perfect-square branch unchanged",
+    "fourth_power_weights": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "minimal_square_H_X2_weights": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22
+    ],
+    "multiplicity_rule": "weight n has a rational leading mode iff 4 divides (12-n)e_p for every finite prime multiplicity e_p of H",
+    "smallest_counterexample": "H=X^2, n=22, r=X^(-5), exact control mode t^22*F^(-5/4)=t^22*X^(-5) for F=X^4"
+  },
+  "pins": {
+    "endpoint_audit": {
+      "path": "xmodel/ggv-superelliptic-endpoint-criterion-hostile-audit-actual-20260827.md",
+      "sha256": "d382c21f416afdc150d621506c38076aa4ec2b96e4680c0a938ddd56f06394ed"
+    },
+    "opus_ideation": {
+      "path": "xmodel/ideation-20260827T1349Z-opus5.md",
+      "sha256": "1c17b61f00079802b20fc459550eea7bc7b09bcdcc98f27c233bde91cf348968"
+    },
+    "r3_freeze": {
+      "path": "cases/ggv_8_28_keller_face_rational_mode_exclusion_r3_20260827/FREEZE.sha256",
+      "sha256": "e752b86b5a8953649a3ce8c55379d18eca2dc1bdc8ab4fcd030c63dd64071823"
+    },
+    "r3_report": {
+      "path": "xmodel/ggv-8_28-keller-face-rational-mode-exclusion-r3-sol-20260827.md",
+      "sha256": "b1851156c83657fa85eb875df7e191a99fd339bfcb79ca1a752742ddff9f70b7"
+    },
+    "r3_review": {
+      "path": "xmodel/ggv-8_28-keller-face-rational-mode-exclusion-r3-hostile-review-grok-20260827.md",
+      "sha256": "27fcd25640f62a92c147863e7a8ef8ca4b7b004f05d54450c8d2d8811c97cdc6"
+    }
+  },
+  "rollback": "retain reviewed R3 exactly at H=X^8-1; the additive theorem extends its rational-mode and exclusion proof only to nonconstant squarefree H of degree at least 2; make no H=A^2B family claim",
+  "scope": {
+    "field": "characteristic-zero K",
+    "nonsquarefree_stage": "stopped at H=X^2 because a new rational homogeneous mode occurs at weight 22",
+    "squarefree_theorem": "nonconstant squarefree H, F0=H^2, G0=H^3, alpha=12, beta=8, through weight 22"
+  },
+  "squarefree_modes": {
+    "exact_modes": [
+      {
+        "leading": "H^3",
+        "term": "F^(3/2)",
+        "weight": 0
+      },
+      {
+        "leading": "t^4*H^2",
+        "term": "t^4*F",
+        "weight": 4
+      },
+      {
+        "leading": "t^8*H",
+        "term": "t^8*F^(1/2)",
+        "weight": 8
+      },
+      {
+        "leading": "t^12",
+        "term": "t^12",
+        "weight": 12
+      },
+      {
+        "leading": "t^16*H^(-1)",
+        "term": "t^16*F^(-1/2)",
+        "weight": 16
+      },
+      {
+        "leading": "t^20*H^(-2)",
+        "term": "t^20*F^(-1)",
+        "weight": 20
+      }
+    ],
+    "first_residual_ode": "r_n'/r_n=((12-n)/4)H'/H",
+    "nonweights_through_22": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      21,
+      22
+    ],
+    "normal_form_mod_t22": "G=F^(3/2)+c4*t^4*F+c8*t^8*F^(1/2)+c12*t^12+c16*t^16*F^(-1/2)+c20*t^20*F^(-1)+t^22*d+O(t^23)",
+    "valuation_lemma": "squarefree nonconstant H makes a nonzero rational solution possible iff (12-n)/4 is integral",
+    "weights_through_22": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20
+    ]
+  },
+  "status": "PASS-GENERAL-SQUAREFREE-MODES-AND-STOP-SQUARE-W22-RESONANCE"
+}

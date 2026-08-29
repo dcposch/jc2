@@ -1,0 +1,159 @@
+{
+  "checks": {
+    "V0R1_pins_and_types": {
+      "base_V0": {
+        "endpoint_families": 11,
+        "row_census": [
+          36,
+          54,
+          58,
+          81,
+          89,
+          120,
+          131
+        ],
+        "schema_sha256": "796eb0847e7b0bb7972c2fd7b3db10bd2dcfd2fd85c5bbaa47e3a239f8b02673",
+        "semantic_witnesses": 5,
+        "tails_byte_sha256": "d72f774c53c7dcb259eefc10ff2a02202e1049b61c17486b1ba22e3773813848",
+        "tails_canonical_sha256": "6eed03d486e1cd9e8d990eed74a105293d383882bbae77d204eac190cce387e8"
+      },
+      "coordinate_types": [
+        "raw_total_shifted_jets",
+        "mapped_D1_relative_jets"
+      ],
+      "r1_schema_sha256": "0f6bec4983bc8d682b64db5ac23f2d1bb64b8613e2812e95f2cab2b041494b44",
+      "tail_denominators": [
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384,
+        32768,
+        65536,
+        131072,
+        262144,
+        524288,
+        1048576,
+        8388608
+      ],
+      "tail_weight_rows_checked": 569,
+      "target_scales": {
+        "2": "1",
+        "4": "1",
+        "6": "1",
+        "7": "1/4"
+      }
+    },
+    "V1R1_naturality_plus_a7": {
+      "additional": [
+        {
+          "T": 26,
+          "contact": [
+            7,
+            8,
+            7
+          ],
+          "field": "F1000003",
+          "id": "D1_A7_LOAD_TIE",
+          "row_coefficients_compared": 189
+        }
+      ],
+      "base_representatives": 11,
+      "base_row_coefficients_compared": 2247,
+      "total_representatives": 12,
+      "total_row_coefficients_compared": 2436
+    },
+    "V2R1_coordinate_typed_root_maps": {
+      "computed_determinants": {
+        "-1": {
+          "mapped_D1": [
+            "6",
+            "6",
+            "6"
+          ],
+          "raw_total": [
+            "6",
+            "3/2",
+            "3/2"
+          ]
+        },
+        "1": {
+          "mapped_D1": [
+            "-6",
+            "-6",
+            "-6"
+          ],
+          "raw_total": [
+            "-6",
+            "-3/2",
+            "-3/2"
+          ]
+        }
+      },
+      "coordinate_systems": [
+        "raw_total",
+        "mapped_D1"
+      ],
+      "decks": 2,
+      "factor_conflation_mutations_fired": 12,
+      "hensel_depth": 10,
+      "localization": "D(rho)",
+      "map_depth": 3,
+      "raw_D1_commutation_equalities": 48,
+      "triangular_inversion_equalities": 96
+    },
+    "V3R1_support_plus_a7": {
+      "additional": [
+        {
+          "active": [
+            "A",
+            "C",
+            "R",
+            "k10",
+            "k6",
+            "p"
+          ],
+          "id": "D1_A7_LOAD_TIE",
+          "maxima": {
+            "A": 1,
+            "C": 1,
+            "R": 0,
+            "k10": 0,
+            "k2": 0,
+            "k6": 1,
+            "p": 1
+          }
+        }
+      ],
+      "base_tables_checked": 12,
+      "current_G20_maxima": {
+        "A": 3,
+        "C": 3,
+        "R": 1,
+        "k10": 2,
+        "k2": 0,
+        "k6": 0,
+        "p": 3
+      },
+      "total_tables_checked": 13
+    },
+    "V4_base_provenance": {
+      "artifacts_hash_checked": 24,
+      "confirmed_but_unpromoted_families": 1,
+      "filename_inference": "forbidden",
+      "promoted_families": 10
+    }
+  },
+  "elapsed_seconds": 4.247,
+  "r1_schema_sha256": "0f6bec4983bc8d682b64db5ac23f2d1bb64b8613e2812e95f2cab2b041494b44",
+  "scope": "additive coordinate-typed root-map repair; V46 source naturality preserved; endpoint union remains conditional",
+  "status": "PASS-UNIFORM-CONTACT-NATURALITY-V46R1-ROOT-REPAIR"
+}

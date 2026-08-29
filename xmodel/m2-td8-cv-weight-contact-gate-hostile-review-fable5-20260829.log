@@ -1,0 +1,18 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review complete and written to `xmodel/m2-td8-cv-weight-contact-gate-hostile-review-fable5-20260829.md` (body `f972253c…`, full `34bd7b35…`).
+
+## Verdict: `PASS_WITH_REPAIR` — survival stands, two "PROVED" rows don't
+
+The lead verdict `CV_CONFIGURATION_FORMALLY_SURVIVES` holds up: I reconstructed every charged layer on-page and exhibited the repaired witness myself. But two genuine repairs are required:
+
+**R1 — the `(2,1)` chain is not "any finite length."** Prop 4.2's printed proof carries the standing inequality `d_F + d_{h_j,F} ≥ α_j·d_F + 1 − u`. On the A-vertex tower, with the reviewed `D=14`, `κ̄=5`, an all-`(2,1)` tower gives `7(3−j) ≥ 5`, so `j ≤ 2`: the pure chain is capped at tower length `m_A ≤ 3` — at most **two** recursion steps at the cv vertex. The packet's three- and four-step runs are not source-legal, and "the source does not pin `m_A`" is wrong: for the degree-one chain it pins `m_A ∈ {2,3}` (`m_A = 1` dies against the route's `deg q = 15` via Prop 8.1(ii)).
+
+**R2 — the "double root" is the wrong polynomial and misses a boundary.** Prop 7.3's printed `p(c) = a` forces the recursion's `p := p_F` to be the f-pattern *including* the fiber constant, so `p = p_{f−a,H} + a`. The double root belongs to `p_H − a`; for `a ≠ 0` the recursion quadratic has distinct roots and the pure-power collapse simply doesn't occur (I verified: remainder degrees 0, 4, 8), so "subtop forced by the recursion" is an `a = 0` artifact. And even for `p_H − a`, `Δ_A = 2` allows the contact boundary `θ = 7` (separation exactly at the cv vertex, two simple roots) — Grok's "a split at H would be a V₂ event" begs the question. `H° = A` itself is confirmed robustly.
+
+**What passed cleanly:** the four-vertex budget census (Grok's Item-4 refusal of printed Prop 7.5 `(22)` is exactly right per SIGRAY-AUDIT/REDUCTION — `δ_a = 0` is genuinely unforced), the quadratic `k_j | 2` law, the `M* = 21 ⟹ some k_j = 2` inference (definitional via Not 8.1's gcd plus Prop 8.1's printed proof line; it even forces `k_j ∈ {1,2}` independently of the H-side), and the entire pole/place census (row 4, formulas (18)/(19), Prop 5.7, SOL-PROP58 replacement — all verbatim).
+
+**Compatibility with the exact-separation report (`ec355795…`):** two real divergences, one resolved each way. Grok correctly corrects that report's `δ_a = 0` clause (which rode quarantined print in its §2.6); that report correctly includes the `θ = 7` boundary Grok's double-root claim excludes.
+
+**Cheapest next discriminator:** the δ-ledger makes the full tower book at A a small finite desk enumeration (`α`-budget `8/7`, `k_j ∈ {1,2}`, gcd laws, H-side degree law) — it converts the contact gate into finitely many typed `V_{2,a}` alternatives, and the same ledger run at the trunk may narrow Theorem C's defect profile for free.
+
+Custody all verified (target hash, body self-hash, five custody files with byte counts, packet seals, 351/351 replay with `-O` identity, charged-stdout hash, one of ten mutations replicated).

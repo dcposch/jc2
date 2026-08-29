@@ -1,0 +1,97 @@
+{
+ "status": "PRESERVED_BOUNDED_REAL_P2_SOURCE_REPLAY_PASS_PLUS_LIGHT_EXACT_E5_E6_GATE",
+ "date_utc": "2026-08-28",
+ "scope": "residue-A, B=84, a00pp, finite raw 184-row Euler/J-source truncation only",
+ "repair_provenance": {
+  "historical_real_p2_replay": "PASS under the schema-v1 runner; independently reproduced by the hostile review",
+  "schema_v2_repair": "semantic-chain and custody code changed; no new heavy real-source replay was run during this bounded repair",
+  "new_light_check": "the exact registered p2 root frame and corrected W coordinates were replayed through E, the corrected-243 E5 pair, and cube-form E6 using integer modular arithmetic"
+ },
+ "prime": 105337,
+ "from_exponent": 1,
+ "to_exponent": 2,
+ "modulus": 11095883569,
+ "shape": {
+  "source_rows": 184,
+  "nominal_coordinates": 190,
+  "nominal_tail_coordinates": 180,
+  "structurally_absent_tail_coordinates": 8,
+  "essential_tail_coordinates": 172,
+  "fixed_coordinates": 8,
+  "x_side_coordinates": 2,
+  "essential_coordinates": 182,
+  "jacobian_rank_mod_p": 129,
+  "tangent_kernel_dimension": 53,
+  "left_cokernel_dimension": 55
+ },
+ "dead_tail_gate": {
+  "labels": [
+   ["tf1", 39], ["tf1", 41], ["tf2", 39], ["tf2", 41],
+   ["tg1", 39], ["tg1", 41], ["tg2", 39], ["tg2", 41]
+  ],
+  "literal_nonzero_jacobian_entries": 0,
+  "structural_reason": "selected bands are even and at most 42; an r=39 or r=41 term needs another odd slot of at least 5 to reach an even band, giving at least 44 or 46"
+ },
+ "newton": {
+  "coefficient_frame_matches_committed_p2": true,
+  "correction_matches_committed_essential_182_p2": true,
+  "nonzero_pre_correction_quotients": 29,
+  "nonzero_correction_coordinates": 24,
+  "nonzero_left_cokernel_syndrome_entries": 0,
+  "all_184_rows_zero_mod_p2": true,
+  "minus_F_over_p_sha256": "82155c419d48873523ce08be0eeb228155ff0e72338a4867c1f35b34fd71b917",
+  "correction_sha256": "e3a15fa66ed6f08e3f1c78eb793226ad750ab67a9216ce3dadbaeae82ad79c26",
+  "corrected_coordinate_point_sha256": "c8bee81b9e56a32d7695f9905951c7798e6d88a6b9c72725ad08e4bce08530b4",
+  "replay_rows_sha256": "6dcd92ad68f2696c96641138cdda56e78a7d92a5011cf6d0f8a827240d01a6de",
+  "left_cokernel_syndrome_sha256": "bc0bc65933c16c8eac27b007fdd18b0bcdc72082e3a2d1d8babb14d394696cca"
+ },
+ "necessary_template_gate": {
+  "interpretation": "finite eliminated E5/E6 tie check only; not a template, parked, inverse-row, reconstruction, or D25 replay",
+  "r3": 11012141449,
+  "A1": 786496672,
+  "A2": 8038065910,
+  "W1": 10092159227,
+  "W2": 4041263462,
+  "W1_unit": true,
+  "W2_unit": true,
+  "first_E_term_mod_p2": 4315102731,
+  "second_E_term_mod_p2": 6780780838,
+  "E_residue_mod_p2": 0,
+  "E_zero_mod_p2": true,
+  "corrected_243_E5_HM_pole1": 5143408652,
+  "corrected_243_E5_HM_pole2": 5143408652,
+  "HM_unit": true,
+  "corrected_243_E5_residues_mod_p2": [0, 0],
+  "cube_E6_s1F": 9120266557,
+  "s1F_unit": true,
+  "cube_E6_residue_mod_p2": 0,
+  "gate_sha256": "39702f29d6e1a0b6f45864eca343b555620b41d8cb747b60bca057b3799804e3"
+ },
+ "elimination_scope": {
+  "over_C": "On the registered radical locus with W1*W2 nonzero, the two E5 equations admit a common HM exactly when E=0. HM is then nonzero. The cube-form E6 admits nonzero s1F=2^8*HM/7^16.",
+  "over_registered_p_adic_ring": "The same pointwise equivalence holds over Z/(105337^N) and Z_105337 because 2,3,7,a_i-4 and the registered radical/chart values are units; the E6 coefficient ratio is already a literal cube, so no new root extraction is required.",
+  "limitation": "This equivalence covers only the eliminated E5/E6 tie block and does not establish that the raw 184 rows imply E or that upstream template/D25 equations lift."
+ },
+ "x_side_exact_controls": {
+  "alpha_basis_rows_sha256": "4a5102a3bfb8e5f1f7ec934142923f276185545d520d4d72a0cac1e7521d57c0",
+  "beta_basis_rows_sha256": "844e19d5b4457854b80680ca9e4cea4a5a14639837340175808ecc85ec20ce43",
+  "perturbed_y_alpha37_beta41_rows_sha256": "3f2c7a204c8543180fd03188b14260cd36259db0a92758fded70ca856a79fe85"
+ },
+ "registries": {
+  "essential_labels_sha256": "bd945fa0f1ea334c0e941fbfed57b501b429880bb1f2015e4d68318493927224",
+  "source_row_labels_sha256": "74f2df5c4c6b7fb64be985933c6c1204fed051a7d4de426b665db793ff2bc0dd",
+  "source_jacobian_sha256": "ced228b17a07b21a45c923375b488dc5962f9e1c2aa6311c01b849504d16ac51",
+  "source_jacobian_rref_sha256": "261999a17497e6fc0b7e06fd9a80d186485527d55bcad62eb3ab8fe1f7aee956",
+  "left_cokernel_basis_sha256": "d553f801d1a05615974edb980790967d891c76be50a6a7bdd347121cc911c89a",
+  "base_point_coordinates_sha256": "2f56868cc0de178c0cb6331bc543ea01baf7160a887e028b4a9908e6e88642cc",
+  "valuation_e2_sha256": "c1a858fbe53c291038b0386c124dbfd4bc79400eedc6b9d5d49a4088736d08f8"
+ },
+ "bounded_local_resources": {
+  "wall_seconds": 7.32,
+  "maximum_resident_bytes": 325648384,
+  "swap_operations": 0
+ },
+ "historical_schema_v1_runner_sha256": "5ba4b9115f7807c04d8c41b68e22b3f039a51396a848e5bda8d1205bb9013053",
+ "historical_schema_v1_sealed_state_payload_sha256": "ce3a145ea936e597a424da1beb8de97c3972c1e92a0a8ef69a7804f2d0cf2f81",
+ "finite_scope_warning": "This preserves only the known p^2 raw 184-row source congruence and adds a necessary eliminated E5/E6 tie check. It is not D43 template-branch evidence. No p^3-or-higher run, parked/source equivalence, full residue-A/template/D25 point, indefinite or formal-smooth lift, Z_p point, characteristic-zero point, formal germ, ambient Keller map, or JC2 conclusion is claimed."
+}

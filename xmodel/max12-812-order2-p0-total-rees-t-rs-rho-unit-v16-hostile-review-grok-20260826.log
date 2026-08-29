@@ -1,0 +1,16 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by inspecting the V16 package, its RESULTS, and the frozen V12–V14/V9 sources so I can rederive the characteristic-zero rho-unit claim independently.I'll read RESULTS, freeze files, and a recent hostile review so the audit format and claimed identities are clear before checking hashes.The prompt, V16/V14 compilers, and a recent hostile review of the same family will set the expected audit bar.I'll load the V14 compiler, V9 exports, lane artifacts, and a comparable hostile review so the identities can be checked independently.I'll hash freeze files and artifacts, pull the V9 exact-Q polynomials, and reconstruct the identities independently.Hashes match the freeze pins. Next I’ll recompute artifact hashes and expand the identities exactly, without a Groebner engine.I'll expand the identities exactly, then read the fail-closed predecessors, compiler JSON, and V9 coefficient pins.Sympy is unavailable, so I’ll expand the identities with an exact multivariate polynomial ring in the standard library.Identities hold. Next I’ll confirm freeze-line hashes, reconstruct the V14→V16 script diff, and reduce the F65521 coefficients.Independent expansions and custody checks agree with the lemma. I’ll write the hostile review at the required path and make no other edits.The hostile review is at `xmodel/max12-812-order2-p0-total-rees-t-rs-rho-unit-v16-hostile-review-grok-20260826.md`. No other files were edited.
+
+The characteristic-zero lemma holds. Independently over `Q`, after the T-rs substitution `cs=rs*qcs`, `c0=rs*qc0`, `c1=rs*qc1`:
+
+- total `Tg10_3` is divisible by `rs`, not by `rs^2`;
+- the four-term Delta identity, the B decomposition, and  
+  `35*rs^2*k*U = 32768*P126+4096*P2+8192*qcs*P3+12288*rho^2*qcs*P1`  
+  are zero as polynomials, with both negative controls genuinely nonzero;
+- `rho*(-32*rho*qcs^2*V)-1 = -U`, so the claimed inverse follows once `U` is in the localized ideal.
+
+Saturation by `rs` then restriction to `D(k)` is the ordinary colon-and-Rabinowitsch encoding, not a quotient-ring trick. V16 changes only `SpecialDk` from the illegal three-argument `std` to `std(std(J,rho),1-v*k)`, which is `J+(rho,1-v*k)`. F65521 is an encoding control, not the proof. V12–V15 are fail-closed and are not used as evidence.
+
+Scope is the T-rs chart on `D(k)` at the grade-12 prefix only.
+
+VERDICT: CONFIRMED

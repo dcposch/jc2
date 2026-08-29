@@ -1,0 +1,16 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll treat this as a hostile mathematical audit of the charged affine-`mu2` Faber note, starting by verifying the SHA-256 and reading that document plus any artifacts it charges.SHA-256 matches. Next I’ll read the charged classification note and the related review format, then derive the identities by hand.SHA-256 is confirmed. I’ll read the review prompt, a prior hostile-review template, and the charged artifacts next.I’ll hash the charged artifacts and read the frozen compiler, RESULT, and ordinary Faber source so the connections can be checked against that representation.ConnectionsConnections (1.4) match my hand expansion. Next I’ll check that those are the frozen ordinary Faber tails, not a second Laurent convention, and I’ll pull the charged source definition.The hash loop lost `shasum` on PATH. I’ll rehash with an explicit binary and then write the review.Hashes of the charged pins match. I’ll write the hostile review from the hand derivations, without treating PASS tokens or the exact-Q labels as evidence.The target SHA-256 matched. The hostile review is at `xmodel/max12-812-order2-exact-square-affine-mu2-faber-connection-hostile-review-grok-20260826.md`. No other file was edited.
+
+**Overall verdict: CONFIRMED.**
+
+The six attacks all survive hand rederivation. Inverse series `(1.2)` has no `w^{-4}` term, and `R1,...,R7` are the ordinary inverse-root Faber tails of `f=Q^2`, not a second Laurent numbering. On `c=0`, `R4=h4+(p/2)h2` vanishes identically, so `p` stays free.
+
+The raw identity `c^5+128 R5-96 p R3-(12 p^2+32 r)R1=0` holds before any predecessor equation and puts `c^5` in `(R1,R3,R5)`, so there is no reduced support on `D(c)`. The reduced support of `(1.6)` is the square locus union the affine-Faber graph with coefficient `2048 mu2`. Both component ideals are prime of dimension three. Chebyshev is the section `s=0`, not a third minimal prime. The Pell remainder, its discriminant, and `R10=-D^4(s+D)/512` are identities on the graph and are not source rows.
+
+**Smallest failing identity:** none.
+
+**Strongest exact theorem that survives:** over characteristic zero, `rad(I)=I_square cap I_affine` for the seven-row ordinary-Faber receiver `R1=R3=...=R7=0`, `R2=mu2` on the exact-square chart `k10=1`.
+
+**Scope firewall:** this is not total-Rees accessibility, not a strict-arc statement, not `k10=0`, not terminal `[6,2]` or Taylor, and not an order-two or JC2 verdict.
+
+CONFIRMED

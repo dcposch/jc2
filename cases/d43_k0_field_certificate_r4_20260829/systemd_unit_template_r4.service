@@ -1,0 +1,185 @@
+# D43 K0 field certificate, R4.  Install root-owned 0444 at
+#   /etc/systemd/system/jc2-d43-k0-field-cert-r4.service
+# Drop-ins are forbidden; the supervisor refuses a delegated cgroup.
+# Replace the <...> sentinels with the absolute, root-owned, symlink-free
+# paths named in the coordinator authorization record.  Every sentinel is
+# re-verified on-host by aws_supervisor_r4.py; editing this file alone
+# authorizes nothing.
+#
+# The R4 choreography (the R3 review's REPAIR-1)
+# ----------------------------------------------
+# R3 shipped a correct privilege boundary and an incorrect deployment order.
+# Its sealed authorization template told the coordinator to mint by hand, then
+# dry-run, then start the unit -- while this unit's own ExecStartPre=+ mints
+# again.  The mint is one-shot by construction (spent/<digest>.spent, O_EXCL,
+# written before anything else exists), so an honest launch on a correctly
+# configured host would have died MINT_ALREADY_SPENT at ExecStartPre, before
+# the supervisor and before any mathematics.  That is the same
+# never-executed-integration class as R1's -I import and R2's lease.
+#
+# R4 has exactly ONE launch path, and it is this unit.  There is no external
+# mint, no external dry run, and no other supported order:
+#
+#   ExecStartPre=+   runs as ROOT (the "+" prefix drops the sandbox as well as
+#                    the User=/Group= drop).  Mints, exactly once per
+#                    authorization digest, a service-owned 0700 run directory
+#                    inside the root-owned sealed parent, holding a root-owned
+#                    0444 claim token.  A second start of this unit dies here.
+#   ExecStartPre=    NO "+", so systemd runs it with this unit's full
+#                    User=jc2k0 / Group=jc2k0 and the identical sandbox and
+#                    mount namespace that ExecStart= gets.  It is the on-host
+#                    dry run: it calls the supervisor's own
+#                    verify_custody_preconditions against the tree root just
+#                    minted and stops there.  It creates, writes and removes
+#                    nothing, and it never reaches claim_authorization_lease,
+#                    so it cannot consume the one-shot claim; a non-zero exit
+#                    aborts the start before ExecStart= runs.
+#   ExecStart=       runs UNPRIVILEGED as jc2k0.  Its only writable path is
+#                    that run directory, where it verifies the same
+#                    preconditions again and then takes the one-time
+#                    authorization lease.  It can neither write in the sealed
+#                    parent nor forge or alter the root-owned claim token: the
+#                    capability set is empty, so CAP_DAC_OVERRIDE and CAP_CHOWN
+#                    are unavailable, and a POSIX ACL cannot smuggle write
+#                    access in because the ACL mask surfaces in the group-class
+#                    bits the supervisor rejects.
+#   ExecStopPost=+   runs as ROOT and seals the finished run directory back to
+#                    root-owned and read-only.  systemd runs it even when a
+#                    start aborts, so a refused dry run still seals whatever
+#                    the mint created.
+#
+# ExecStartPre commands complete before the next command's mount namespace is
+# set up, so ReadWritePaths=<run directory> below resolves against a directory
+# that already exists when the dry run and the supervisor start.
+# ReadWritePaths lifts only the ProtectSystem=strict read-only remount; it
+# grants no DAC permission, which is exactly why R2's comment ("the run parent
+# must be writable") did not make the run parent writable.
+#
+# What the dry run costs.  The mint has already spent the digest by the time
+# the dry run executes, so a dry-run refusal does NOT leave the coordinator
+# record reusable: it retires it, exactly as a supervisor refusal does.  What
+# the dry run buys is that a misconfigured host is refused by the service
+# identity, in the service sandbox, before the supervisor stages any source or
+# takes any lease -- and its JSON lands in the journal.  The only check that
+# costs nothing is custody_selftest_r4.py --pre-mint-advisory, which runs
+# before the unit is started, requires the run directory NOT to exist, and
+# refuses to run once anything has been minted.
+#
+# Exec prefix discipline: no Exec* directive in this unit may carry "-", "!",
+# "!!" or ":".  "-" would make a failed mint or a failed dry run non-fatal and
+# let ExecStart= run anyway; the others would change the identity the dry run
+# is supposed to prove.  Only the root mint and the root retirement carry "+".
+
+[Unit]
+Description=JC2 D43 K0 field certificate R4 (AWS custody, one core, zero swap)
+DefaultDependencies=no
+After=network-online.target
+Requires=network-online.target
+RefuseManualStop=no
+
+[Service]
+Type=oneshot
+User=jc2k0
+Group=jc2k0
+Restart=no
+WorkingDirectory=/
+RuntimeMaxSec=300
+TimeoutStartSec=300
+
+# one core, no swap, bounded memory and tasks
+CPUAffinity=0
+AllowedCPUs=0
+CPUQuota=100%
+MemoryMax=1G
+MemoryHigh=896M
+MemorySwapMax=0
+TasksMax=24
+LimitNPROC=24
+LimitFSIZE=4M
+LimitCORE=0
+Delegate=no
+
+# containment
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+ProtectProc=invisible
+RestrictSUIDSGID=yes
+RestrictRealtime=yes
+RestrictNamespaces=yes
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged @resources @obsolete @mount @debug
+CapabilityBoundingSet=
+AmbientCapabilities=
+# The run directory -- not its parent -- is the only writable path.  Root
+# created it and chowned it to jc2k0; the sealed parent stays root-owned and
+# unwritable, which is what makes the supervisor's parent gate satisfiable.
+ReadWritePaths=<ABSOLUTE_RUN_DIRECTORY>
+ReadOnlyPaths=<ABSOLUTE_PACKET_ARCHIVE_DIRECTORY>
+
+# exact environment allowlist; the supervisor rejects anything else
+Environment=HOME=/var/empty
+Environment=LANG=C.UTF-8
+Environment=LC_ALL=C.UTF-8
+Environment=PATH=/usr/bin:/bin
+Environment=TZ=UTC
+Environment=PYTHONHASHSEED=0
+Environment=PYTHONNOUSERSITE=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OMP_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=MKL_NUM_THREADS=1
+Environment=NUMEXPR_NUM_THREADS=1
+Environment=VECLIB_MAXIMUM_THREADS=1
+
+# 1. root: mint the one-shot claim.  A second start of this unit dies here
+#    with MINT_ALREADY_SPENT and never reaches the dry run or the supervisor.
+#    This is the ONLY mint; the coordinator never runs mint_claim_r4.sh.
+ExecStartPre=+<ABSOLUTE_BASH> --noprofile --norc \
+  <ABSOLUTE_PACKET_DIR>/mint_claim_r4.sh \
+  <ABSOLUTE_RUN_DIRECTORY> \
+  <ABSOLUTE_AUTHORIZATION_JSON> \
+  jc2k0
+
+# 2. jc2k0, in this unit's sandbox: the on-host dry run.  No "+", so systemd
+#    applies User=/Group= and every sandbox setting above, exactly as for
+#    ExecStart= below.  It calls aws_supervisor_r4.verify_custody_preconditions
+#    against the tree step 1 just minted and stops there: no lease, no writes,
+#    no directory creation.  A non-zero exit aborts the start, so ExecStart=
+#    never runs against a tree the service identity could not verify.
+ExecStartPre=<ABSOLUTE_PYTHON3> -I -B \
+  <ABSOLUTE_PACKET_DIR>/custody_selftest_r4.py \
+  --on-host-dry-run \
+  --run-path <ABSOLUTE_RUN_DIRECTORY> \
+  --authorization <ABSOLUTE_AUTHORIZATION_JSON> \
+  --out -
+
+# 3. jc2k0: the supervisor.  It re-verifies the same preconditions and only
+#    then takes the one-time authorization lease.
+ExecStart=<ABSOLUTE_BASH> --noprofile --norc \
+  <ABSOLUTE_PACKET_DIR>/aws_worker_r4.sh \
+  <ABSOLUTE_PYTHON3> \
+  <ABSOLUTE_PACKET_DIR>/aws_supervisor_r4.py \
+  <ABSOLUTE_AUTHORIZATION_JSON>
+
+# 4. root: seal the finished run directory back to root-owned and read-only.
+#    systemd runs ExecStopPost= even when the start aborted at step 1 or 2, so
+#    a refused dry run still seals whatever the mint created.  If step 1 itself
+#    refused, there is no run directory and this exits RETIRE_ABSENT rc 72,
+#    which is logged and changes no custody state.
+ExecStopPost=+<ABSOLUTE_BASH> --noprofile --norc \
+  <ABSOLUTE_PACKET_DIR>/retire_claim_r4.sh \
+  <ABSOLUTE_RUN_DIRECTORY>
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,103 @@
+{
+  "a1": {
+    "clear_exponent": 8,
+    "direct_multiplier_sha256": {
+      "13": "a6f59709bd00a4503350020a7f61283eb3553b0e37b535182ddaa328da67f10c",
+      "14": "81a61de8fbdbc3d0b9929b2460cb1f90b58fb3c4c3096f92e07fc3f11ca18738",
+      "15": "5bebcddf912541fa5de6a75ab8c84aceb6d875031886b49da58e1078ddf94bff",
+      "17": "998cef2730d90ce691f61a7175f2a3c3b3eb185854aa0e698fc6cf7a031fa6f7",
+      "18": "99e71f272011868dae8e852fa76e4a561a95abfc588e427ec448914c1cd0ce06",
+      "19": "ff03cf679df0f3bd43c25b938f206bd1e621a8663764ddbaa1e58199ec501dc8"
+    },
+    "direct_multiplier_term_counts": {
+      "13": 17,
+      "14": 8,
+      "15": 8,
+      "17": 3,
+      "18": 1,
+      "19": 1
+    },
+    "ordinary_certificate": "a1^8 lies in the six-row A1 branch ideal",
+    "quotient_multiplier_sha256": {
+      "15": "5bebcddf912541fa5de6a75ab8c84aceb6d875031886b49da58e1078ddf94bff",
+      "17": "998cef2730d90ce691f61a7175f2a3c3b3eb185854aa0e698fc6cf7a031fa6f7",
+      "18": "99e71f272011868dae8e852fa76e4a561a95abfc588e427ec448914c1cd0ce06",
+      "19": "ff03cf679df0f3bd43c25b938f206bd1e621a8663764ddbaa1e58199ec501dc8"
+    },
+    "quotient_multiplier_term_counts": {
+      "15": 8,
+      "17": 3,
+      "18": 1,
+      "19": 1
+    },
+    "reduced_sha256": {
+      "15": "f1ba9645dfa6bf283a72d062c7a0ddf40e7e4891871eb26711b82b411b928925",
+      "17": "273a4e05adaa3d2abf42bfe874f9ef95c0ff86491f3291246300fbe0f782281a",
+      "18": "cedb2019c4c19e65801ebd59cd8e1472665195700c82dd78fcaa7395c8c1a7f2",
+      "19": "3420376f438d05e8885d189efbbd133e51511a89ecc0916c2dadbdd776d0d006"
+    },
+    "reduced_term_counts": {
+      "15": 7,
+      "17": 9,
+      "18": 10,
+      "19": 24
+    },
+    "row_names": [
+      "Tg13_1",
+      "Tg14_2",
+      "Tg15_3",
+      "Tg17_5",
+      "Tg18_6",
+      "Tg19_7"
+    ]
+  },
+  "a2": {
+    "combination_sha256": "2685f6c05d30219ddd252201ca7ba2fa21f072f819cf64408c3941e55fc0bb84",
+    "identity": "Tg16_6-(3/32)*rs1*Tg13_2=(21/1024)*a1^2*rs1^2",
+    "obstruction_sha256": "2685f6c05d30219ddd252201ca7ba2fa21f072f819cf64408c3941e55fc0bb84"
+  },
+  "branch_cover": {
+    "identity": "Tg14_3=-(3/16)*a1*aa0*rs1 after e0=e1=ee0=ell1=0",
+    "interpretation": "on D(a1), field points lie in V(rs1) union V(aa0)",
+    "sha256": "5d34a3f30e93062348090610cbc13ad76aa477e1832e0e27e4fe0f1c13a7bdb9"
+  },
+  "conclusion": "The prior radical split has no surviving field point: A2 is killed at grade16 and A1 is killed by grade19.",
+  "firewalls": [
+    "rho was specialized to zero",
+    "raw frozen source rows only",
+    "no unspecialized-rho, Rees-chart, Gate-T, or JC2 conclusion"
+  ],
+  "localizers": {
+    "A1": "D(a1) only; Laurent powers stop at a1^-8 and clear to a1^8",
+    "A2": "D(a1*rs1); no division is needed to form the exact two-row identity",
+    "branch_cover": "D(a1), then the field-point split aa0*rs1=0",
+    "inherited_cascade": "D(a1); its discarded Case B used D(ell1)"
+  },
+  "mutation": {
+    "monomial": [
+      [
+        "a1",
+        1
+      ],
+      [
+        "aa0",
+        1
+      ],
+      [
+        "cs1",
+        2
+      ],
+      [
+        "ell2",
+        1
+      ]
+    ],
+    "residual_sha256": "bdbc1c36e9784a362722b59d51aae231baa0b0c878e0b97a36178b8cb1aa7cef",
+    "residual_term_count": 1,
+    "row": "Tg19_7"
+  },
+  "named_row_count": 70,
+  "scope": "frozen raw ordered-a1 rho-zero rows through grade19 over Q; A1 has an ordinary a1-saturation certificate, while the prior A1/A2 split is radical/field-point",
+  "status": "PASS-ORDERED-A1-RHO0-RAW-D-A1-EMPTY-THROUGH-G19",
+  "v37_sha256": "ba034c8cebaa27c5630872b9cf06d152e4577170486ac34ad7f695ead871845b"
+}

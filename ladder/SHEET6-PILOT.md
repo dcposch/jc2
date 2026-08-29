@@ -3,6 +3,17 @@
 Status: COMPLETE. Prop 9.1 PASS (11/11); Stmt 9.6 DISCREPANCY — thesis row (B)=(75,51) is a
 p. 52 arithmetic slip (spurious, benign direction; corrected list {(21,15),(20,16)}); see §3.
 
+**2026-08-28 supersession of the readiness list.**  The actual-weight theorem
+`c253bd12...` / hostile gate `727f5850...` supplies Corollary 7.1, and the
+reviewed singleton first-separation construction supplies disjoint exit
+charges.  Together with the Section 9 repair `2763d970...` / `0729a576...`,
+this review-closes `counterexample => td>=6`.  Printed equation (22) is not
+restored.  Multipole selected-exit disjointness is now GREEN through MFE
+(`c74fc0f9...`), and the mixed-root window plus MP1+MP4+MP5/D5 excludes the
+two-pole `td=6` pole-chain root-meet branch.  Degree-six
+termination/coverage, SF1 landing, and broader root routes behind earlier
+`M>=2` jumps remain open pending their stated reach audits.
+
 ### 0. SHEET6.md spec (read, §2/§7)
 Pilot = Prop 9.1 (11-row multiplicity table, types (α,β) ∈ {(2,3),(3,4),(2,5),(3,5),(4,5),(5,6)})
 + Stmt 9.6: propagation from Q(G) = (j,2j,3,2,5); Diophantine
@@ -82,9 +93,12 @@ deg(p,q) ∈ {(21,15),(75,51),(20,16)} + λ-classification (i)-(v). Diff vs thes
   common shape of all propagation lemmas St 9.6-9.11; RHS is always (D_G-coeff + n·degp_G-coeff)/(κ+n)
   read off Q(G) — a solve_ratio(Q_G, root-pattern) library call. (3) Q(F) propagation via Prop 9.3
   (a)-(d) implemented; (e)-(h) same shape.
-- [x] Missing for td=6: (1) Prop 9.3 cases III/IV arithmetic ((e)-(m)) + St 3.16/3.18-driven derivation
+- [x] Historical readiness list (now partly superseded): (1) Prop 9.3 cases III/IV arithmetic ((e)-(m)) + St 3.16/3.18-driven derivation
   of admissible root-pattern families per (M_G,ν_G) — currently hand-read per lemma; (2) λ-bookkeeping
-  (St 9.3/9.4 inequalities, Σλ ≤ td−2 = 4 budget) and Cor 7.1 generalization — genuine math, not
-  enumeration (SHEET6 §6.2); (3) characteristic-sequence assembly + St 9.12-analogue termination;
-  (4) foundations audit of §§3-8 remains the load-bearing risk — reinforced by the p. 52 erratum found
+  (St 9.3/9.4 inequalities, `sum lambda_i^exit <= td-2 = 4`) and Cor 7.1
+  generalization — now review-closed for singleton chains; (3)
+  characteristic-sequence assembly + St 9.12-analogue termination — now
+  closed only for `td<=5`, not degree six; (4) the Sections 3--9 foundation
+  stack has since been audited and repaired at the scopes recorded in
+  `SIGRAY-AUDIT.md` and `AUDIT.md` — reinforced by the p. 52 erratum found
   here: unrefereed arithmetic does contain slips, and machine re-derivation catches them.

@@ -1,0 +1,49 @@
+{
+  "charged_sha256": {
+    "cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json": "ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0",
+    "cases/ggv_8_28_upper_endpoint_uniform_d16_d17_fullmodes_20260828/RESULT.json": "2a6f363df8fb4aef94f01d7a938e3bfcff15f6db49af3164e36367c9a6d1929a",
+    "cases/ggv_8_28_upper_endpoint_uniform_d16_d17_fullmodes_20260828/verify_uniform_d16_d17.py": "5904d7b19dc5d46d31a781150c4b6de9e62e32812b554006e92f78f9d76fd5d9",
+    "cases/ggv_8_28_upper_endpoint_uniform_d18_d22_fullmodes_20260828/EVIDENCE.sha256": "1f6369c5cba8c3a149d83b3550f125b3125f7450c06419b4e7046e49ed96ad57",
+    "cases/ggv_8_28_upper_endpoint_uniform_d18_d22_fullmodes_20260828/README.md": "0b9e0c17ad94a8b11f857a65f18caa34f45e771658be52d1452bba512af2ffd4",
+    "cases/ggv_8_28_upper_endpoint_uniform_d18_d22_fullmodes_20260828/RESULT.json": "f46d7afd8b4e1e7cb5c60b029f8660dc2f1bf0e8770724808a3451c8c4e9e684",
+    "cases/ggv_8_28_upper_endpoint_uniform_d18_d22_fullmodes_20260828/SOURCE.sha256": "1ab354e526a44d3aa7be2ff41fa4bbc7c0dbba8f059c033417651bd28325eefe",
+    "cases/ggv_8_28_upper_endpoint_uniform_d18_d22_fullmodes_20260828/verify_uniform_d18_d22.py": "49d1acaf1a8b066e9de15005e97ce948b8b33bd38315a1e77dcdf945c9b9761d",
+    "xmodel/ggv-upper-endpoint-uniform-d18-d22-fullmodes-sol-ultra-20260828.md": "ecf83ac7b380a18f939e60671a4e97290f9f68b51536c236b81f71bb6a6c5bb8"
+  },
+  "checker_sha256": "2ec7b1b0d326dfe88e7439cb7253309b60f2557b19deea8efe2c22d75c57c8e8",
+  "checks": {
+    "failed": 0,
+    "failures": [],
+    "passed": 289,
+    "total": 289
+  },
+  "d16_d17_prefix_role": "independently replayed in this Laurent ring; also pinned to the frozen D16/D17 producer/result whose prior Grok 4.6 hostile review returned PASS. This packet remains conditional on that prefix.",
+  "date": "2026-08-28",
+  "independent_method": [
+    "nine-mode Laurent recurrence through weight 22, not the D18--D22 producer",
+    "termwise reconstruction of raw D18--D22 generators from all 513 serialized rows",
+    "three-way replay of window, kernel, dropped-mode, quotient-A, and endpoint mutations",
+    "G18 22x5 rank 5, G19 21x3 rank 3, G20 20x2 rank 2, G21 19x1 rank 1, all nullity 0",
+    "complete g22 including regular part; D22_raw=-L22(g22); standard-library Fraction arithmetic only"
+  ],
+  "reviewer": "Grok 4.6",
+  "schema": "jc2.ggv.upper_endpoint.uniform_d18_d22_fullmodes.hostile_review.grok46.v1",
+  "scope_firewall": [
+    "characteristic-zero field-valued emptiness of the complete fixed upper branch-P endpoint fixture only",
+    "conditional on the reviewed D8--D17 complete-mode prefix",
+    "no scheme ideal certificate, other GGV branch, unrestricted branch-P, Keller-pair, or JC2 claim",
+    "c16 is retained and may be nonzero; c18 and c20 are killed at their birth rows, never by D19 or D21",
+    "positive lower-window jets after polar kill can only strengthen emptiness"
+  ],
+  "status": "PASS",
+  "verdicts": {
+    "D18/c18": "PASS",
+    "D19": "PASS",
+    "D20/c20": "PASS",
+    "D21": "PASS",
+    "endpoint_transfer_sign": "PASS",
+    "literal_raw_window_source_custody": "PASS",
+    "overall": "PASS",
+    "scope": "PASS"
+  }
+}

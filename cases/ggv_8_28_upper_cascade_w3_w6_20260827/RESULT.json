@@ -1,0 +1,218 @@
+{
+  "firewalls": [
+    "No D22=1 endpoint is imposed or constructed.",
+    "The square controls have E identically zero and hence D22=0.",
+    "No D23 row is imposed, so q1 is not licensed as a landing consequence here.",
+    "No branch exclusion, landing theorem, counterexample, or JC2 conclusion is made."
+  ],
+  "gate_mutations": {
+    "P_D3_mutation_rejected": true,
+    "P_D4_mutation_rejected": true,
+    "P_D6_mutation_rejected": true,
+    "P_c2_D5_mutation_rejected": true,
+    "P_positive_gate_control": true,
+    "Q_D3_mutation_rejected": true,
+    "Q_D4_mutation_rejected": true,
+    "Q_D6_mutation_rejected": true,
+    "Q_positive_gate_control": true
+  },
+  "method": "exact Fraction arithmetic, Laurent identities, characteristic modes, rational row reduction",
+  "q1_separators": [
+    {
+      "augmented_by_F1_equals_H_rank": 14,
+      "branch": "P",
+      "operator_rank": 13,
+      "q1_member": false,
+      "square_control_D0_D6_zero": true,
+      "square_control_endpoint": "D22=0 (indeed E identically zero)"
+    },
+    {
+      "augmented_by_F1_equals_H_rank": 13,
+      "branch": "Q",
+      "operator_rank": 12,
+      "q1_member": false,
+      "square_control_D0_D6_zero": true,
+      "square_control_endpoint": "D22=0 (indeed E identically zero)"
+    }
+  ],
+  "schema": "GGV-8_28-UPPER-CASCADE-W3-W6-v1",
+  "scope": "fixed D3 raw windows; squarefree branch shapes; zero rows D1..D6 only",
+  "theorem": {
+    "P": {
+      "H": "A^2; deg A=4; A squarefree",
+      "components": {
+        "A_divides_V_dimension": 60,
+        "ambient_raw_F1_to_F6_and_G1_to_G6_dimension": 210,
+        "c2_zero_dimension": 63
+      },
+      "parameters": [
+        "F1=H*V, deg V<=7",
+        "F2=(V^2+H*Z)/4, deg Z<=6",
+        "F3=(V*Z+A*T)/8, deg T<=9",
+        "F4,F5,F6 arbitrary in their raw windows",
+        "c4,c6 arbitrary",
+        "c2=0 or A divides V"
+      ]
+    },
+    "Q": {
+      "H": "A^2*B; deg A=3; deg B=2; A,B squarefree and coprime",
+      "ambient_raw_F1_to_F6_and_G1_to_G6_dimension": 210,
+      "dimension": 61,
+      "parameters": [
+        "F1=H*V, deg V<=7",
+        "F2=(V^2+H*Z)/4, deg Z<=6",
+        "F3=(V*Z+A*B*T)/8, deg T<=8",
+        "F4,F5,F6 arbitrary in their raw windows",
+        "c4 arbitrary"
+      ]
+    },
+    "intermediate_exact_gates": [
+      "D2: H divides F1^2",
+      "D3: H divides F1",
+      "D4: rad(H) divides 4*F2-V^2",
+      "D5+D6 force H divides 4*F2-V^2",
+      "P D5 mode gate: c2=0 or A divides V",
+      "P D6: A divides 8*F3-V*Z",
+      "Q D6: A*B divides 8*F3-V*Z"
+    ]
+  },
+  "universal_formula_checks": {
+    "checked_R3_through_R6": 4,
+    "laurent_terms_R6": 10
+  },
+  "valid_exact_fixtures": [
+    {
+      "A": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "B": null,
+      "F_degrees": [
+        16,
+        15,
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "G_degrees": [
+        24,
+        23,
+        22,
+        21,
+        20,
+        19,
+        18
+      ],
+      "active_c2": false,
+      "branch": "P",
+      "constants": {
+        "c2": "0",
+        "c4": "-3/2",
+        "c6": "5/3"
+      },
+      "row_zero": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "A": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "B": null,
+      "F_degrees": [
+        16,
+        15,
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "G_degrees": [
+        24,
+        23,
+        22,
+        21,
+        20,
+        19,
+        18
+      ],
+      "active_c2": true,
+      "branch": "P",
+      "constants": {
+        "c2": "2",
+        "c4": "-3/2",
+        "c6": "5/3"
+      },
+      "row_zero": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "A": [
+        "0",
+        "-2/5",
+        "0",
+        "1"
+      ],
+      "B": [
+        "-1",
+        "0",
+        "1"
+      ],
+      "F_degrees": [
+        16,
+        15,
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "G_degrees": [
+        24,
+        23,
+        22,
+        21,
+        20,
+        19,
+        18
+      ],
+      "active_c2": false,
+      "branch": "Q",
+      "constants": {
+        "c4": "7/5"
+      },
+      "row_zero": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ]
+}

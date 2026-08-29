@@ -1,0 +1,470 @@
+{
+  "calculation": {
+    "base_F_three_halves": {
+      "weight7": [
+        {
+          "A_exponent": 0,
+          "coefficient": "3/16",
+          "monomial": [
+            "f5",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/4",
+          "monomial": [
+            "f6"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/1024",
+          "monomial": [
+            "v",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": 1,
+          "coefficient": "3/32",
+          "monomial": [
+            "v",
+            "w"
+          ]
+        },
+        {
+          "A_exponent": 2,
+          "coefficient": "3/2",
+          "monomial": [
+            "f7"
+          ]
+        }
+      ],
+      "weight8": [
+        {
+          "A_exponent": 0,
+          "coefficient": "3/32",
+          "monomial": [
+            "f5",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/16",
+          "monomial": [
+            "f6",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/4",
+          "monomial": [
+            "f7"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-3/4096",
+          "monomial": [
+            "v",
+            "v",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/8",
+          "monomial": [
+            "w",
+            "w"
+          ]
+        },
+        {
+          "A_exponent": 2,
+          "coefficient": "3/2",
+          "monomial": [
+            "f8"
+          ]
+        }
+      ],
+      "weight9": [
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/16",
+          "monomial": [
+            "w",
+            "w"
+          ]
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "3/4",
+          "monomial": [
+            "f5",
+            "w"
+          ]
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "-3/256",
+          "monomial": [
+            "v",
+            "w",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/32",
+          "monomial": [
+            "f6",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/16",
+          "monomial": [
+            "f7",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/4",
+          "monomial": [
+            "f8"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-1/8192",
+          "monomial": [
+            "v",
+            "v",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": 2,
+          "coefficient": "3/2",
+          "monomial": [
+            "f9"
+          ]
+        }
+      ]
+    },
+    "fractional_recurrence": "n*A^4*y_n=sum_{1<=i<=n}(((alpha+1)*i-n)*F_i*y_{n-i})",
+    "full_negative_parts": {
+      "g8": [
+        {
+          "A_exponent": -1,
+          "coefficient": "3/32",
+          "monomial": [
+            "c6"
+          ]
+        }
+      ],
+      "g9_after_c6_zero": [
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/16",
+          "monomial": [
+            "w",
+            "w"
+          ]
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "3/4",
+          "monomial": [
+            "f5",
+            "w"
+          ]
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "-3/256",
+          "monomial": [
+            "v",
+            "w",
+            "z"
+          ]
+        }
+      ],
+      "g9_before_D8_mode_kill": [
+        {
+          "A_exponent": -3,
+          "coefficient": "-1/128",
+          "monomial": [
+            "c6"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/16",
+          "monomial": [
+            "w",
+            "w"
+          ]
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "3/64",
+          "monomial": [
+            "c6",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "3/4",
+          "monomial": [
+            "f5",
+            "w"
+          ]
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "-3/256",
+          "monomial": [
+            "v",
+            "w",
+            "z"
+          ]
+        }
+      ]
+    },
+    "mode_coefficients": {
+      "F_one_half_weight1": [
+        {
+          "A_exponent": 0,
+          "coefficient": "1/2",
+          "monomial": []
+        }
+      ],
+      "F_three_quarters_weight2": [
+        {
+          "A_exponent": -1,
+          "coefficient": "3/32",
+          "monomial": []
+        },
+        {
+          "A_exponent": 1,
+          "coefficient": "3/16",
+          "monomial": [
+            "z"
+          ]
+        }
+      ],
+      "F_three_quarters_weight3": [
+        {
+          "A_exponent": -3,
+          "coefficient": "-1/128",
+          "monomial": []
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "3/64",
+          "monomial": [
+            "z"
+          ]
+        },
+        {
+          "A_exponent": 1,
+          "coefficient": "3/32",
+          "monomial": [
+            "v"
+          ]
+        }
+      ]
+    },
+    "post_substitution": {
+      "F4": "V/16+Z^2/64+A*W",
+      "T": "A*V"
+    },
+    "raw_row_congruences": {
+      "D8_mod_A3": [
+        {
+          "A_exponent": 2,
+          "coefficient": "-9/4",
+          "monomial": [
+            "ap",
+            "c6"
+          ]
+        }
+      ],
+      "D9_mod_A2_after_c6_zero": [
+        {
+          "A_exponent": 1,
+          "coefficient": "21/4",
+          "monomial": [
+            "ap",
+            "w",
+            "w"
+          ]
+        }
+      ]
+    }
+  },
+  "literal_raw_mutations": {
+    "c6_mode_kill": {
+      "D8": {
+        "11": "-9",
+        "3": "-9",
+        "7": "18"
+      },
+      "assignment": "F=(A^2+t/2)^2; add c6*t^6*F^(3/4) through G7; all raw later slots zero",
+      "closed_form": "-(9/4)*A^2*A'",
+      "literal_json_equals_independent_recurrence_rows_D4_through_D21": true,
+      "live_linear_scaling_mutations_c6_equals_minus1_and_2": {
+        "-1": {
+          "11": "9",
+          "3": "9",
+          "7": "-18"
+        },
+        "2": {
+          "11": "-18",
+          "3": "-18",
+          "7": "36"
+        }
+      },
+      "rows_D4_through_D7": "zero"
+    },
+    "d9_square_sign": {
+      "D9": {
+        "3": "-21",
+        "7": "21"
+      },
+      "assignment": "F=(A^2+t/2)^2+A*t^4; G=F^(3/2) through G8; G9 and later raw slots zero",
+      "closed_form": "+(21/4)*A*A'",
+      "literal_json_equals_independent_recurrence_rows_D4_through_D21": true,
+      "live_sign_and_power_mutations_W_equals_minus1_and_2": {
+        "-1": {
+          "3": "-21",
+          "7": "21"
+        },
+        "2": {
+          "3": "-84",
+          "7": "84"
+        }
+      },
+      "mutation_law": "D9(-W)=D9(W), D9(2W)=4*D9(W)",
+      "rows_D4_through_D8": "zero"
+    }
+  },
+  "mode_schedule": [
+    {
+      "F_exponent": "1",
+      "birth_weight": 4,
+      "role": "free_polynomial",
+      "support_at_weight_9": true
+    },
+    {
+      "F_exponent": "3/4",
+      "birth_weight": 6,
+      "role": "free_polynomial",
+      "support_at_weight_9": true
+    },
+    {
+      "F_exponent": "1/2",
+      "birth_weight": 8,
+      "role": "free_polynomial",
+      "support_at_weight_9": true
+    },
+    {
+      "F_exponent": "1/4",
+      "birth_weight": 10,
+      "role": "free_polynomial",
+      "support_at_weight_9": false
+    },
+    {
+      "F_exponent": "0",
+      "birth_weight": 12,
+      "role": "free_polynomial",
+      "support_at_weight_9": false
+    },
+    {
+      "F_exponent": "-1/4",
+      "birth_weight": 14,
+      "role": "forced_rational",
+      "support_at_weight_9": false
+    },
+    {
+      "F_exponent": "-1/2",
+      "birth_weight": 16,
+      "role": "forced_rational",
+      "support_at_weight_9": false
+    },
+    {
+      "F_exponent": "-3/4",
+      "birth_weight": 18,
+      "role": "forced_rational",
+      "support_at_weight_9": false
+    },
+    {
+      "F_exponent": "-1",
+      "birth_weight": 20,
+      "role": "forced_rational",
+      "support_at_weight_9": false
+    }
+  ],
+  "schema": "jc2.ggv.upper_endpoint.uniform_d9_fullmodes.result.v1",
+  "scope_firewall": [
+    "field-radical divisibility only; no scheme-theoretic A|W claim",
+    "no endpoint emptiness, unrestricted branch-P, Keller-pair, or JC2 conclusion",
+    "c14,c16,c18,c20 remain mandatory in every continuation reaching their birth weights; they have empty causal support at weight 9, not permission for deletion",
+    "no AWS or heavy CAS was used"
+  ],
+  "source": {
+    "context_bytes_consulted_sha256": {
+      "cases/ggv_8_28_upper_endpoint_branch_p_20260827/CHARACTERISTIC_CROSSCHECK.md": "e74ce3db552e34585c7a312d2e7bb093beca1da6d6afd4ff8ffa830bfe61c56a",
+      "xmodel/ggv-upper-endpoint-tail2-fullfixture-ideation-hostile-audit-sol-ultra-20260828.md": "a080f03b0656561b6b7f0b4d1ecd856c2d2fa99c45dc1bee75c29f397665de6a",
+      "xmodel/ggv-upper-endpoint-uniform-tail-local-obstruction-hostile-audit-sol-ultra-20260828.md": "d2ab35e1d417645d597070df8b1d75cf50cd062307a5a4a88988712cbf148192"
+    },
+    "generator_count": 513,
+    "raw_system": "cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json",
+    "raw_system_sha256": "ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0",
+    "variable_count": 303
+  },
+  "status": "PASS_EXACT_FIELD_POINT_DIVISIBILITY",
+  "theorems": {
+    "T3_D8_c6_mode_kill": {
+      "causality": "modes c10,c12,c14,c16,c18,c20 are not born by weight 8",
+      "complete_weight8_modes": [
+        "c4*F4 (polynomial)",
+        "c6*(3/(32*A)+3*A*Z/16) (sole polar term)",
+        "c8*A^2 (polynomial)"
+      ],
+      "conclusion": "c6=0",
+      "hypotheses": [
+        "D4=...=D8=0",
+        "the reviewed D7 conclusion T=A*V",
+        "the reviewed leading D8 conclusion F4-V/16-Z^2/64=A*W"
+      ],
+      "laurent_obstruction": "polar(g8)=3*c6/(32*A)",
+      "raw_congruence": "D8_raw=-(9/4)*c6*A^2*A' mod A^3",
+      "setting": "characteristic-zero field point of the complete fixed branch-P 303-variable fixture"
+    },
+    "T4_D9_square_defect": {
+      "causality": "modes c10,c12,c14,c16,c18,c20 are not born by weight 9",
+      "complete_weight9_modes": [
+        "c4*F5 (polynomial)",
+        "c6*(F^(3/4))_3=0 by T3",
+        "c8*(F^(1/2))_1=c8/2 (polynomial)"
+      ],
+      "conclusion": "A divides W",
+      "hypotheses": [
+        "D9=0",
+        "c6=0"
+      ],
+      "laurent_obstruction": "polar(g9)=-3*W^2/(16*A^2)+W*(3*F5/4-3*V*Z/256)/A",
+      "raw_congruence": "D9_raw=(21/4)*A*A'*W^2 mod A^2",
+      "reason": "A=X^4-1 is squarefree, so A|W^2 implies A|W at a field point",
+      "setting": "same field point, after T3"
+    }
+  }
+}

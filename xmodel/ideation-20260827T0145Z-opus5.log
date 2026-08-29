@@ -1,0 +1,25 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report delivered.
+
+**File:** `xmodel/ideation-20260827T0145Z-opus5.md` (857 lines, 47,684 bytes)
+**SHA-256:** `60e198036854cce58a74e30a11db4df20d62e10e31b61f2a698c93a1594736b0`
+
+All seven charged packet hashes re-verified unchanged after writing; the report is my only repository edit.
+
+## What the submission contains
+
+**Disposition vector (all 46 rows):** four changes — row 5 `raise` (AS‑TRI is a degree descent that bites via *integrality*, not automorphy), row 18 `reopen` (as a proof tool, not a CE hunt), row 19 `raise`, row 31 `raise`. Everything else `unchanged`, with explicit statements of which raises I declined to repeat from last round.
+
+**Main new mechanism (§3), hand-derived from the frozen `.poly` bytes:** the actual-total landing system is homogeneous for a **rank-two** grading lattice — the campaign's own sigma-grade plus a second grading `deg_2` (`rs,cs,ρ ↦ 0`; `c0,c1,a0,a1,e1 ↦ 1`; `k ↦ 2`) under which every row has degree exactly 2. Verified monomial-by-monomial on 30 monomials of 7 rows. Consequences:
+
+- All three promoted certificates (`T-rs`, `T-c0`, `T-c1`) are bihomogeneous with exactly the bidegrees the gradings force — the bigrading would have found `(C1)` by a small linear solve.
+- **Theorem:** on the `rs` and `cs` charts, every certificate of the promoted staged type must carry `k^M` with `M ≥ 1`. So `T-rs`'s `D(k)` hypothesis is structural, and `k=0` is provably outside the instrument's reach. I rerank this to proof-side bottleneck #2.
+- **Typed prediction** for the live V19 lane: `M ≥ 1`, `N + 2M ≥ 7`, minimal `cs⁵·k·(1+ρW)` — two free negative controls, plus a finite linear ansatz replacing the 26-generator lift.
+
+**Unconditional companion theorem (§3.5):** `V(k) ∩ V(Tg10_1..4) ⊆ V(c0,c1)`, by four lines of hand algebra. The `k=0` complements of the `c0`/`c1` charts collapse into stage two; on `rs`/`cs` they shrink to `V(qc0,qc1)`. So the newly-top-ranked bottleneck arrives with its own cheap attack.
+
+**Scope correction (§3.6):** every row consumed by the four promoted certificates lies in `J1` and vanishes identically on `V(J1)`. The "six certificates of the same shape" budget for stage two is wrong.
+
+**Disproof side (§4):** the exact source-gauge group of the AS109 lift set (`x ↦ x+τ` for *all* `τ ∈ Z₁₀₉`, by Fermat), with an explicit gauge section — one of the two ingredients the `AS109 SUPPORT GRAMMAR STOP` names as missing — and the arithmetic `(deg_y, v₁₀₉)` Newton polygon whose first corner is exactly AS‑TRI.
+
+**One disclosure I flagged in the report:** a repo-wide `grep` for `Tg10_2` incidentally returned two lines from a co-lane blind submission. I did not open the file; both lines were already verbatim in the sealed freeze. All later searches excluded this round's ideation files, and nothing in the report derives from it.

@@ -1,0 +1,20 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the load-bearing AS109 files in full, then hunt the history for an existing `(m,6)` top-band equation before deriving the two Jacobian bands from scratch.The load-bearing files are next; I'll read them in full before touching history search or any derivation.Next I’ll extract Card F3 and the §7.2/Card 4 cross-review, then search history for an existing general `(m,6)` top-band identity.I’ll now search the AS109 history for a pre-existing general `(m,6)` top-band identity, and pull W2/W3 gauge-conductor notes so novelty can be separated from reuse.I’ll pull the sextic preflight, Sol Card 3, and the polar/wild-symplectic gates next, then derive the two Jacobian bands with an exact arithmetic check.I have the band identities and the history split; next I’ll hash the charged files and run exact Python checks on the two Jacobian rows and the controls.All checks passed: both bands are tautological on the promoted leading data. I’ll write the isolation report with that verdict and the Card F3 stop.**Verdict: `TWO_BANDS_TAUTOLOGICAL`.** Written to `xmodel/as109-n6-top-two-y-bands-face-isolation-grok-20260827.md`.
+
+The top two `y`-bands of `det J=1` do not add any exact integral constraint beyond the already-promoted `n=6` common-core / divisibility conditions.
+
+**Band `y^{m+5}`** is only
+\[
+6p_m'q_6-m p_m q_6'=0,
+\]
+the leading Wronskian already in the history-stop and the sextic-preflight `n=6` top row. On \(p_m=\alpha h^{m/d}\), \(q_6=\beta h^{6/d}\) it is the zero polynomial.
+
+**Band `y^{m+4}`** is not a leading-form identity (Fable’s “only \(p_m,q_6\)” is false). It is
+\[
+5p_m'q_5-m p_m q_5'+6p_{m-1}'q_6-(m-1)p_{m-1}q_6'=0,
+\]
+one linear ODE for the next coefficients. Every summand has \(v_{109}\ge 2\), so reductions modulo \(109\) and \(109^2\) are \(0=0\). After dividing by the universal \(109^2\), the relation still does not constrain \((h,\alpha,\beta,d,H)\). In \(K(x)\) the mismatch branch restates \(3\mid H\) or \(6\mid H\), already promoted.
+
+Controls: the determinant-one automorphism \(u=x+y\), \(v=y+u^6\), \((P,Q)=(u+v^2,v)\) occupies residual type \((12,6)\) with \(H=0\); common-power families \((K^{m/d},K^{6/d})\) occupy both residual \(d\) with Jacobian \(0\); seed terms never enter either charged band; unequal contents and zero next coefficients do not produce a leftover of valuation \(0\) or \(1\).
+
+**Stop under Card F3.** Do not descend to lower bands. The W2/W3 gauge-conductor is a bounded-category duplicate of the reviewed polar-conductor / wild-symplectic gates; both of its outcomes leave the unrestricted exact-lift state unchanged. No successor of that kind is available. Floor six and residual \(n=6\) are unchanged; no lift is constructed or excluded.

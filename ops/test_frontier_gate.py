@@ -49,16 +49,18 @@ class FrontierGateTests(unittest.TestCase):
         self.assertEqual(result["verdict"], "METHOD_CONTROL_ONLY")
 
     def test_unbounded_total_partial_y_is_not_misclosed(self) -> None:
-        rc, result = run_gate(
-            "--partial-y-degrees",
-            "9",
-            "12",
-            "--total-unbounded",
-            "--tag",
-            "test-partial-y",
-        )
-        self.assertEqual(rc, 0)
-        self.assertEqual(result["verdict"], "NOT_CLOSED_BY_THIS_GATE")
+        for lower in (8, 9):
+            with self.subTest(lower=lower):
+                rc, result = run_gate(
+                    "--partial-y-degrees",
+                    str(lower),
+                    "12",
+                    "--total-unbounded",
+                    "--tag",
+                    f"test-partial-y-{lower}-12",
+                )
+                self.assertEqual(rc, 0)
+                self.assertEqual(result["verdict"], "NOT_CLOSED_BY_THIS_GATE")
 
 
 if __name__ == "__main__":

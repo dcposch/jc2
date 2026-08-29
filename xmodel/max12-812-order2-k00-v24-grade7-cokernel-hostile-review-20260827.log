@@ -1,0 +1,18 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+The review is written to `xmodel/max12-812-order2-k00-v24-grade7-cokernel-hostile-review-20260827.md`.
+
+## Verdict: PASS at the narrow scope, with one material finding against the modular diagnostic
+
+**The exact block holds.** I rebuilt everything on AWS with an independent implementation — own tokenizer/parser (no `ast`), own monomial packing and variable ordering, Laplace rather than Leibniz determinants, and a different derivation of the matrix (substitute `d_j → x_j·Λ + y_j·Λ⁶`, read off the `Λ⁷` coefficient of `y_j`). Everything agrees coefficientwise: the 7×7 matrix vs. V23, the 226-term witness `W`, all 14 covector entries, all 7 column annihilations per covector, `b` at `[175,241,327,424,538,634,795]`, all 35 prior rows (34 nonzero), and both compatibility polynomials at 110,117 and 83,298 terms. I proved the iff rather than asserting it, and confirmed it numerically in both directions.
+
+**The check I expected to break it didn't.** The honest V20R2 source has 169 free columns including `d_*_7`, `k10_4..17`, `k6_*`, `k2_*`, `mu*`. I perturbed each one and found that *exactly* `d_*_1..d_*_6` and `k10_0..k10_3` move any grade-0..7 root. The producer's newest-variable list is a theorem, not an assumption. Separately, `k6_0` is pre-substituted out of the DAG entirely, so I rebuilt its column from `load_K6.txt`: it reproduces V23's forbidden column and is nonzero, so `k6_0=0` is load-bearing.
+
+**Material finding.** The producer flagged, but did not test, whether its localized prior ideal is proper. It is not: `size(G)=1`, `G[1]=1`, `dim(G)=-1`. The zero normal forms are vacuous — everything reduces to zero mod the unit ideal. It reproduces at 32003, 1000003 and 2147483629, so it is not bad reduction. `RESULT.json`'s `modular_reduction_status` must be treated as withdrawn. The PASS survives because modular membership and chart nonemptiness are both outside the allowed adjudication, and `RESULT_V24.md`'s prose caveat is correct.
+
+Three things worth your attention beyond the verdict:
+
+- **Don't compute grade eight.** The charged chart has no points at four primes. The next gate should be exact-`Q` nonemptiness of the same stratum on `D(k10_0·W)`. If it's empty over `Q`, V22/V23/V24 are all true and all vacuous.
+- Three of my six pivot-set mutations didn't fire. I ran them down rather than reporting failures: row 5 is supported on column 6 alone, so those constructions provably regenerate `L1` itself. They're degenerate controls, not counterexamples.
+- The un-localized ideal probe (does the stratum sit entirely inside `k10_0·W=0`?) was still running at 23 min / 4.5 GiB when I filed; it's recorded as open, and it can't change the verdict either way.
+
+Also logged: five non-material defects (evidence manifest omits the freeze transcript and launch telemetry; `RESULT_V24.md` hash-pinned nowhere; hardcoded `True` flags in the JSON payload; the `C6` name collides with the normalized coordinate `C6`; the sign-mutation control is narrower than it needs to be). No canonical ledger was edited and `jc2-lean` was not touched.

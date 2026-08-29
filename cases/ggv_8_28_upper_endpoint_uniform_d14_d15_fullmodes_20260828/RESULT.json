@@ -1,0 +1,1041 @@
+{
+  "calculation": {
+    "D14_first_conclusion": "Delta7=A*U",
+    "D14_second_conclusion": "c14=0 by the exact raw G14 polynomial window",
+    "D14_square_raw_mod_A2": [
+      {
+        "A_exponent": 1,
+        "coefficient": "-3",
+        "monomial": [
+          "a_x",
+          "f7",
+          "f7"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "3/4",
+        "monomial": [
+          "a_x",
+          "f7",
+          "q",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "3/8",
+        "monomial": [
+          "a_x",
+          "f7",
+          "r",
+          "v"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "3",
+        "monomial": [
+          "a_x",
+          "f7",
+          "t"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "-3/64",
+        "monomial": [
+          "a_x",
+          "q",
+          "q",
+          "z",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "-3/64",
+        "monomial": [
+          "a_x",
+          "q",
+          "r",
+          "v",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "-3/8",
+        "monomial": [
+          "a_x",
+          "q",
+          "t",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "-3/256",
+        "monomial": [
+          "a_x",
+          "r",
+          "r",
+          "v",
+          "v"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "-3/16",
+        "monomial": [
+          "a_x",
+          "r",
+          "t",
+          "v"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "-3/4",
+        "monomial": [
+          "a_x",
+          "t",
+          "t"
+        ]
+      }
+    ],
+    "D15_c14_causal_firewall": "the two pieces cancel; D15 does not independently constrain c14",
+    "D15_c14_predecessor_mixed_piece": [
+      {
+        "A_exponent": 0,
+        "coefficient": "3",
+        "monomial": [
+          "a_x",
+          "c14"
+        ]
+      }
+    ],
+    "D15_c14_same_row_piece": [
+      {
+        "A_exponent": 0,
+        "coefficient": "-3",
+        "monomial": [
+          "a_x",
+          "c14"
+        ]
+      }
+    ],
+    "D15_c14_total": [],
+    "D15_conclusion": "U=A*Y",
+    "D15_raw_mod_A2": [
+      {
+        "A_exponent": 1,
+        "coefficient": "3/4",
+        "monomial": [
+          "a_x",
+          "u",
+          "u"
+        ]
+      }
+    ],
+    "D15_remaining_polar_after_second_divisibility": [],
+    "Delta7": "F7-T/2-Q*Z/8-R*V/16",
+    "Delta8": "F8-T*Z/8-Q*V/16-R^2/4",
+    "c14_operator_identity": "L14(c14/A)=0; it is a rational homogeneous mode, not a polynomial raw kernel",
+    "combined_conclusion": "F7=T/2+Q*Z/8+R*V/16+A^2*Y and c14=0",
+    "complete_modes_D14": [
+      "c4*F10",
+      "c6=0",
+      "c8*T/2",
+      "c10=0",
+      "c12*(F^0)_2=0",
+      "c14/A"
+    ],
+    "complete_modes_D15": [
+      "c4*F11",
+      "c6=0",
+      "c8*(U/(2A)+holomorphic)",
+      "c10=0",
+      "c12*(F^0)_3=0",
+      "c14*(-1/(4A^3))=0 after D14"
+    ],
+    "factored_low_window_equations": {
+      "C13": "q0*H0-3*q0^2*v0/128-3*q0*r0^2/16+3*t0^2/16+3*t0*y0/4=0",
+      "C14": "t0*H0-3*q0^2*r0/16-3*q0*t0*v0/64-3*r0^2*t0/16-3*t0^2*z0/64+3*y0^2/8=0",
+      "C15": "y0*H0-q0^3/16-3*q0*r0*t0/8-3*q0*v0*y0/64-3*r0^2*y0/16-3*t0^2*v0/128-3*t0*y0*z0/32-3*y0^2/16=0"
+    },
+    "g14_polar": [
+      {
+        "A_exponent": -2,
+        "coefficient": "3/8",
+        "monomial": [
+          "f7",
+          "f7"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "-3/32",
+        "monomial": [
+          "f7",
+          "q",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "-3/64",
+        "monomial": [
+          "f7",
+          "r",
+          "v"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "-3/8",
+        "monomial": [
+          "f7",
+          "t"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "3/512",
+        "monomial": [
+          "q",
+          "q",
+          "z",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "3/512",
+        "monomial": [
+          "q",
+          "r",
+          "v",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "3/64",
+        "monomial": [
+          "q",
+          "t",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "3/2048",
+        "monomial": [
+          "r",
+          "r",
+          "v",
+          "v"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "3/128",
+        "monomial": [
+          "r",
+          "t",
+          "v"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "3/32",
+        "monomial": [
+          "t",
+          "t"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "1",
+        "monomial": [
+          "c14"
+        ]
+      }
+    ],
+    "g14_polar_after_first_divisibility": [
+      {
+        "A_exponent": -1,
+        "coefficient": "1",
+        "monomial": [
+          "c14"
+        ]
+      }
+    ],
+    "g15_polar_after_c14_kill": [
+      {
+        "A_exponent": -2,
+        "coefficient": "-3/16",
+        "monomial": [
+          "u",
+          "u"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "1/2",
+        "monomial": [
+          "c8",
+          "u"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "3/4",
+        "monomial": [
+          "f8",
+          "u"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "-3/64",
+        "monomial": [
+          "q",
+          "u",
+          "v"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "-3/16",
+        "monomial": [
+          "r",
+          "r",
+          "u"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "-3/32",
+        "monomial": [
+          "t",
+          "u",
+          "z"
+        ]
+      }
+    ],
+    "g15_polar_before_c14_kill": [
+      {
+        "A_exponent": -3,
+        "coefficient": "-1/4",
+        "monomial": [
+          "c14"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "-3/16",
+        "monomial": [
+          "u",
+          "u"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "1/2",
+        "monomial": [
+          "c8",
+          "u"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "3/4",
+        "monomial": [
+          "f8",
+          "u"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "-3/64",
+        "monomial": [
+          "q",
+          "u",
+          "v"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "-3/16",
+        "monomial": [
+          "r",
+          "r",
+          "u"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "-3/32",
+        "monomial": [
+          "t",
+          "u",
+          "z"
+        ]
+      }
+    ],
+    "gauge_invariant_low_jet_parameter": "H0=c8/2+3*F8(0)/4",
+    "positive_lower_window_compatibilities": {
+      "G13_X0": [
+        {
+          "A_exponent": 0,
+          "coefficient": "1/2",
+          "monomial": [
+            "c8",
+            "q0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/4",
+          "monomial": [
+            "f80",
+            "q0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-3/128",
+          "monomial": [
+            "q0",
+            "q0",
+            "v0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-3/16",
+          "monomial": [
+            "q0",
+            "r0",
+            "r0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/16",
+          "monomial": [
+            "t0",
+            "t0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/4",
+          "monomial": [
+            "t0",
+            "y0"
+          ]
+        }
+      ],
+      "G14_X0": [
+        {
+          "A_exponent": 0,
+          "coefficient": "1/2",
+          "monomial": [
+            "c8",
+            "t0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/4",
+          "monomial": [
+            "f80",
+            "t0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-3/16",
+          "monomial": [
+            "q0",
+            "q0",
+            "r0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-3/64",
+          "monomial": [
+            "q0",
+            "t0",
+            "v0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-3/16",
+          "monomial": [
+            "r0",
+            "r0",
+            "t0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-3/64",
+          "monomial": [
+            "t0",
+            "t0",
+            "z0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/8",
+          "monomial": [
+            "y0",
+            "y0"
+          ]
+        }
+      ],
+      "G15_X0": [
+        {
+          "A_exponent": 0,
+          "coefficient": "1/2",
+          "monomial": [
+            "c8",
+            "y0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "3/4",
+          "monomial": [
+            "f80",
+            "y0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-1/16",
+          "monomial": [
+            "q0",
+            "q0",
+            "q0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-3/8",
+          "monomial": [
+            "q0",
+            "r0",
+            "t0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-3/64",
+          "monomial": [
+            "q0",
+            "v0",
+            "y0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-3/16",
+          "monomial": [
+            "r0",
+            "r0",
+            "y0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-3/128",
+          "monomial": [
+            "t0",
+            "t0",
+            "v0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-3/32",
+          "monomial": [
+            "t0",
+            "y0",
+            "z0"
+          ]
+        },
+        {
+          "A_exponent": 0,
+          "coefficient": "-3/16",
+          "monomial": [
+            "y0",
+            "y0"
+          ]
+        }
+      ]
+    },
+    "post_D13_prefix": {
+      "F4": "V/16+Z^2/64+A^2*R",
+      "F5": "R/2+Z*V/64+A^2*Q",
+      "F6": "Q/2+R*Z/8+V^2/256+A^2*T",
+      "killed_modes": [
+        "c6",
+        "c10"
+      ]
+    },
+    "surviving_c8_term": "c8*Y/2 is polynomial after U=A*Y; D15 does not kill c8"
+  },
+  "complete_mode_schedule": [
+    {
+      "F_exponent": "1",
+      "birth_A_power": 4,
+      "birth_weight": 4,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D14": true,
+      "support_at_D15": true
+    },
+    {
+      "F_exponent": "3/4",
+      "birth_A_power": 3,
+      "birth_weight": 6,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D14": true,
+      "support_at_D15": true
+    },
+    {
+      "F_exponent": "1/2",
+      "birth_A_power": 2,
+      "birth_weight": 8,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D14": true,
+      "support_at_D15": true
+    },
+    {
+      "F_exponent": "1/4",
+      "birth_A_power": 1,
+      "birth_weight": 10,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D14": true,
+      "support_at_D15": true
+    },
+    {
+      "F_exponent": "0",
+      "birth_A_power": 0,
+      "birth_weight": 12,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D14": true,
+      "support_at_D15": true
+    },
+    {
+      "F_exponent": "-1/4",
+      "birth_A_power": -1,
+      "birth_weight": 14,
+      "continuation_status": "retained_mandatory",
+      "role": "forced_rational",
+      "support_at_D14": true,
+      "support_at_D15": true
+    },
+    {
+      "F_exponent": "-1/2",
+      "birth_A_power": -2,
+      "birth_weight": 16,
+      "continuation_status": "retained_mandatory",
+      "role": "forced_rational",
+      "support_at_D14": false,
+      "support_at_D15": false
+    },
+    {
+      "F_exponent": "-3/4",
+      "birth_A_power": -3,
+      "birth_weight": 18,
+      "continuation_status": "retained_mandatory",
+      "role": "forced_rational",
+      "support_at_D14": false,
+      "support_at_D15": false
+    },
+    {
+      "F_exponent": "-1",
+      "birth_A_power": -4,
+      "birth_weight": 20,
+      "continuation_status": "retained_mandatory",
+      "role": "forced_rational",
+      "support_at_D14": false,
+      "support_at_D15": false
+    }
+  ],
+  "literal_G14_polynomial_kernel": {
+    "D14_generator_indices_zero_based": [
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340
+    ],
+    "D14_row_sha256": "35548a74a3af2126abfeda0519d1600bcf8cf5e24fc0f7dd4050bc2fe9f84caf",
+    "columns": [
+      {
+        "G14_degree": 1,
+        "literal_D14": {
+          "0": "-8",
+          "12": "128",
+          "16": "-40",
+          "4": "64",
+          "8": "-144"
+        },
+        "slot": "g_1_1"
+      },
+      {
+        "G14_degree": 2,
+        "literal_D14": {
+          "1": "-16",
+          "13": "160",
+          "17": "-48",
+          "5": "96",
+          "9": "-192"
+        },
+        "slot": "g_2_4"
+      },
+      {
+        "G14_degree": 3,
+        "literal_D14": {
+          "10": "-240",
+          "14": "192",
+          "18": "-56",
+          "2": "-24",
+          "6": "128"
+        },
+        "slot": "g_3_7"
+      },
+      {
+        "G14_degree": 4,
+        "literal_D14": {
+          "11": "-288",
+          "15": "224",
+          "19": "-64",
+          "3": "-32",
+          "7": "160"
+        },
+        "slot": "g_4_10"
+      },
+      {
+        "G14_degree": 5,
+        "literal_D14": {
+          "12": "-336",
+          "16": "256",
+          "20": "-72",
+          "4": "-40",
+          "8": "192"
+        },
+        "slot": "g_5_13"
+      },
+      {
+        "G14_degree": 6,
+        "literal_D14": {
+          "13": "-384",
+          "17": "288",
+          "21": "-80",
+          "5": "-48",
+          "9": "224"
+        },
+        "slot": "g_6_16"
+      },
+      {
+        "G14_degree": 7,
+        "literal_D14": {
+          "10": "256",
+          "14": "-432",
+          "18": "320",
+          "22": "-88",
+          "6": "-56"
+        },
+        "slot": "g_7_19"
+      },
+      {
+        "G14_degree": 8,
+        "literal_D14": {
+          "11": "288",
+          "15": "-480",
+          "19": "352",
+          "23": "-96",
+          "7": "-64"
+        },
+        "slot": "g_8_22"
+      },
+      {
+        "G14_degree": 9,
+        "literal_D14": {
+          "12": "320",
+          "16": "-528",
+          "20": "384",
+          "24": "-104",
+          "8": "-72"
+        },
+        "slot": "g_9_25"
+      },
+      {
+        "G14_degree": 10,
+        "literal_D14": {
+          "13": "352",
+          "17": "-576",
+          "21": "416",
+          "25": "-112",
+          "9": "-80"
+        },
+        "slot": "g_10_28"
+      }
+    ],
+    "conclusion": "no polynomial raw G14 homogeneous kernel can realize or cancel c14/A",
+    "matrix_shape": [
+      26,
+      10
+    ],
+    "nullity": 0,
+    "rank": 10,
+    "raw_G14_window": {
+      "lower": 1,
+      "slots": [
+        "g_1_1",
+        "g_2_4",
+        "g_3_7",
+        "g_4_10",
+        "g_5_13",
+        "g_6_16",
+        "g_7_19",
+        "g_8_22",
+        "g_9_25",
+        "g_10_28"
+      ],
+      "upper": 10
+    }
+  },
+  "literal_raw_mutations": {
+    "D14_Delta7_square": {
+      "all_513_generators_match_independent_determinant_recurrence": true,
+      "first_residual_row": 14,
+      "literal_row_provenance": {
+        "nonzero_generators": [
+          {
+            "generator_index_zero_based": 318,
+            "generator_sha256": "c73aa94185c1e89fa1c28dff555416ff9654a03c1d42defae7181be6369c5008",
+            "value": "12",
+            "x_degree": 3
+          },
+          {
+            "generator_index_zero_based": 322,
+            "generator_sha256": "1edbb3e0e46bd1f4920a1463838c16740db179089d886640e998e448dcff061b",
+            "value": "-12",
+            "x_degree": 7
+          }
+        ],
+        "row": 14,
+        "row_sha256": "35548a74a3af2126abfeda0519d1600bcf8cf5e24fc0f7dd4050bc2fe9f84caf"
+      },
+      "live_scaling_mutations": {
+        "-1": {
+          "3": "12",
+          "7": "-12"
+        },
+        "2": {
+          "3": "48",
+          "7": "-48"
+        }
+      },
+      "prior_rows_zero": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "residual": {
+        "3": "12",
+        "7": "-12"
+      },
+      "scaling_power": 2
+    },
+    "D15_c8_survival": {
+      "all_513_generators_match_direct_recurrence": true,
+      "assignment": "F=(A^2+t/2)^2+A^2*X*t^7; G=F^(3/2)+t^8*F^(1/2) through G15",
+      "conclusion": "D15 does not kill c8",
+      "folded_D22_generator_value": "-1",
+      "mode": "c8=1",
+      "rows_D4_through_D15": "zero"
+    },
+    "D15_second_square": {
+      "all_513_generators_match_independent_determinant_recurrence": true,
+      "first_residual_row": 15,
+      "literal_row_provenance": {
+        "nonzero_generators": [
+          {
+            "generator_index_zero_based": 342,
+            "generator_sha256": "6b7ebc3cdd93b7cbf73b60df88ea16820d306090a3dd73382fa5e5af3469355f",
+            "value": "-3",
+            "x_degree": 1
+          },
+          {
+            "generator_index_zero_based": 346,
+            "generator_sha256": "7f4b92bd92d9ee2172c7913e8d38fdbd374360d63f8c2065c5856dd2f44f9e34",
+            "value": "3",
+            "x_degree": 5
+          }
+        ],
+        "row": 15,
+        "row_sha256": "4e7f3882153593594004cf817ce6f76e776cc10af09bc57e01a9202013d39b68"
+      },
+      "live_scaling_mutations": {
+        "-1": {
+          "1": "-3",
+          "5": "3"
+        },
+        "2": {
+          "1": "-12",
+          "5": "12"
+        }
+      },
+      "prior_rows_zero": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "residual": {
+        "1": "-3",
+        "5": "3"
+      },
+      "scaling_power": 2
+    },
+    "F8_constant_gauge_invariance": {
+      "all_D4_through_D22_zero_before_affine_target_fold": true,
+      "fixed_combination": "H0=c8/2+3F8(0)/4",
+      "live_scalars": {
+        "-1": {
+          "H0": "0",
+          "characteristic_c8": "3/2",
+          "folded_D22_generator_value": "-1"
+        },
+        "1": {
+          "H0": "0",
+          "characteristic_c8": "-3/2",
+          "folded_D22_generator_value": "-1"
+        },
+        "2": {
+          "H0": "0",
+          "characteristic_c8": "-3",
+          "folded_D22_generator_value": "-1"
+        }
+      },
+      "transformation": "F8(0)->F8(0)+lambda, c8->c8-3lambda/2"
+    },
+    "c14_birth_laurent_mutations": {
+      "D14_and_D15_row_sha256": [
+        "35548a74a3af2126abfeda0519d1600bcf8cf5e24fc0f7dd4050bc2fe9f84caf",
+        "4e7f3882153593594004cf817ce6f76e776cc10af09bc57e01a9202013d39b68"
+      ],
+      "D15_correction": "RETRACTED standalone image: predecessor mixed +3*c14*A' cancels same-row -3*c14*A'",
+      "D15_predecessor_mixed_piece": "+3*c14*A'",
+      "D15_same_row_piece": "-3*c14*A'",
+      "birth_pole": "c14/A",
+      "cleared_numerator_A_times_pole": {
+        "c14=-1": "-1",
+        "c14=1": "1",
+        "c14=2": "2"
+      },
+      "next_row_if_not_killed": "-c14/(4*A^3)",
+      "source_window_crosscheck": "see literal_G14_polynomial_kernel rank/nullity certificate"
+    }
+  },
+  "schema": "jc2.ggv.upper_endpoint.uniform_d14_d15_fullmodes.result.v1",
+  "scope_firewall": [
+    "field-radical A-adic consequences only; no scheme divisibility",
+    "the positive lower-window compatibility equations beginning at G13 are not claimed exhausted here",
+    "c14 is derived to vanish on this cascade; c16,c18,c20 remain mandatory and unconstrained",
+    "c8 is retained and source-replayed nonzero; no unit normalization is used",
+    "no endpoint, Keller-pair, unrestricted branch-P, or JC2 conclusion",
+    "standard-library exact arithmetic only; no CAS or AWS"
+  ],
+  "source": {
+    "authoritative_raw_system": "cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json",
+    "authoritative_raw_system_sha256": "ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0",
+    "predecessor_checker": "cases/ggv_8_28_upper_endpoint_uniform_d12_d13_fullmodes_20260828/verify_uniform_d12_d13.py",
+    "predecessor_checker_sha256": "e5e2543ca50fc48623ccccf34f548f6171e79b31e6f80c8cfe6f5ca2b6798879",
+    "predecessor_result": "cases/ggv_8_28_upper_endpoint_uniform_d12_d13_fullmodes_20260828/RESULT.json",
+    "predecessor_result_sha256": "06ca0152a7d05dd7b4549e74138b482fc572a62acae718751e7230577c5f28c8",
+    "raw_generator_count": 513,
+    "raw_variable_count": 303
+  },
+  "status": "PASS_EXACT_FIELD_POINT_A_ADIC_CASCADE_THROUGH_D15",
+  "theorems": {
+    "D14": {
+      "causal_order": "the A^-2 square cannot be canceled by c14/A; after Delta7=A*U, c14/A is the sole pole",
+      "defect": "F7-T/2-Q*Z/8-R*V/16",
+      "first_conclusion": "A divides Delta7 at field points",
+      "second_conclusion": "c14=0",
+      "successor_firewall": "D15 does not kill c14: its predecessor mixed +3*c14*A' cancels its same-row -3*c14*A' exactly"
+    },
+    "D15": {
+      "after_D14": "Delta7=A*U and c14=0",
+      "c8_status": "survives; its c8*U/(2A) term becomes polynomial after U=A*Y",
+      "conclusion": "F7=T/2+Q*Z/8+R*V/16+A^2*Y and c14=0",
+      "new_A_adic_branch_invariant": "none",
+      "new_positive_lower_window_invariants": [
+        "C14=0",
+        "C15=0"
+      ]
+    },
+    "positive_lower_window_core": {
+      "gauge_invariant_parameter": "H0=c8/2+3*F8(0)/4",
+      "live_equations": {
+        "C13": "q0*H0-3*q0^2*v0/128-3*q0*r0^2/16+3*t0^2/16+3*t0*y0/4=0",
+        "C14": "t0*H0-3*q0^2*r0/16-3*q0*t0*v0/64-3*r0^2*t0/16-3*t0^2*z0/64+3*y0^2/8=0",
+        "C15": "y0*H0-q0^3/16-3*q0*r0*t0/8-3*q0*v0*y0/64-3*r0^2*y0/16-3*t0^2*v0/128-3*t0*y0*z0/32-3*y0^2/16=0"
+      },
+      "status": "exact necessary scalar compatibilities; not eliminated or normalized"
+    }
+  }
+}

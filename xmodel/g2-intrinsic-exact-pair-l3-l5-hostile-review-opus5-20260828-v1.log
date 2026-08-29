@@ -1,0 +1,25 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Done. Report written to `xmodel/g2-intrinsic-exact-pair-l3-l5-hostile-review-opus5-20260828-v1.md`.
+
+## Verdict: REPAIR
+
+All three live hashes matched. The mathematics of both Sol packets is correct — I found no counterexample and no false formula — but two typings are not usable as written.
+
+**Independently reproved (not taken from either report):**
+- **`y` generates the local factor.** `K(C_i) = K(x)(y)` for a nonvertical plane component, and `K(C_i) ⊗ K((u)) = ∏_T K((z_T))` shows a *global* primitive element is automatically a *local* one at every place. That closes Sol 1's gesture and makes the reduced denominator exactly `e_S`. A constant series *forces* `e_S = 1` — a conclusion, not an excluded case.
+- Orbit `e_S` / stabilizer `κ/e_S`, via `K[[z]]⊗K[[t]] = ∏_{ξ∈μ_e}K[[t]]` — exactly `e_S` points above `S` regardless of how oversized `κ` is.
+- No collisions: separability within a component, `y`-resultant across components; surjectivity via `ord_t|_{K(C_i)} = (κ/e_S)·ord_S`.
+- Prop 3.1 `(*)`/`(**)` rederived from the initial `t`-form of `A(t)∏(y−r_i)`.
+
+**Three source-level findings neither report records:**
+- **Sigray Statement 3.1 (p. 10) has no proof and appears exactly once in the 67-page paper** — yet it is the sole cite for L4 coverage. I prove it from Lemma 2.1(i) by a one-line valuation argument.
+- **Definition 3.1's "we obtain `e_m = 1`" *is* the reduced-denominator claim**, also unproved. So Sol §2 supplies a load-bearing source step, not a decoration.
+- Prop 3.1's proof silently uses the same fact; plus two printed typos (p. 14 `x^{-j}` vs `x^{-j/κ}`; p. 15 "form (4)" must be (3)). Sol 1's Prop 3.1 page pin is off by one — it is pp. 14–15.
+
+**The two load-bearing repairs:**
+- **R1** Sol 2's terminal record ("factor + `N` beyond every contact") is sufficient but *not evaluable at the node* — it quantifies over roots not yet computed — and "exact local factor" is ambiguous. Smallest repair: record `(h, chart, κ, truncation F)` with certificate **`deg p_{h,F} = 1`** (= Statement 3.9(i)). Also: Hensel must be applied to the shifted `t`-cleared equation, not to `h(t^{-κ},y)`. On necessity — separation is needed for the *ramification* reading but not for *place identity*.
+- **R2** Chart *disjointness* is definitional and unconditional; only *coverage* needs the normalized rectangle. `y − x²` has a boundary place in neither chart, so both ledger lines need the hypothesis attached.
+
+**Checker** at `cases/g2_intrinsic_exact_pair_l3_l5_opus5_review_20260828/`: 264 checks, PASS, 0.8 s, stdlib only. Each curve carries a certified root factorization *and* a certified birational parametrization, with Sigray's recursion as a third engine; mutations M2–M8 all fire, and five out-of-band sabotages are each caught (6/2/47/1/52 failures). Sol 2's own artifact runs and passes, but is pure `Z/κ` arithmetic — it cannot reach any curve-level hazard.
+
+The hybrid firewall holds: nothing here bears on `H-TRUNC`, source/place completeness, or any VGG/GGV corridor. Targets and canonical files are byte-unchanged; `jc2-lean` untouched.

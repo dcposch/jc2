@@ -1,0 +1,44 @@
+{
+  "charged_sha256": {
+    "cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json": "ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0",
+    "cases/ggv_8_28_upper_endpoint_uniform_d14_d15_fullmodes_20260828/RESULT.json": "7546618aa5a40ed983014159c1d39337396607562912570c97cfe2ee779394ea",
+    "cases/ggv_8_28_upper_endpoint_uniform_d14_d15_fullmodes_20260828/verify_uniform_d14_d15.py": "53f2a7a276be4a0aa7f77cc031e270d573fc78b5db64cdb76a0cf6c502e52517",
+    "cases/ggv_8_28_upper_endpoint_uniform_d16_d17_fullmodes_20260828/RESULT.json": "2a6f363df8fb4aef94f01d7a938e3bfcff15f6db49af3164e36367c9a6d1929a",
+    "cases/ggv_8_28_upper_endpoint_uniform_d16_d17_fullmodes_20260828/verify_uniform_d16_d17.py": "5904d7b19dc5d46d31a781150c4b6de9e62e32812b554006e92f78f9d76fd5d9",
+    "xmodel/ggv-upper-endpoint-uniform-d16-d17-fullmodes-sol-ultra-20260828.md": "4f7b363addd020e95096ffa289ff96408b21fc4b1c09cfd6235571956117408a"
+  },
+  "checker_sha256": "0b3bccc3fb0bcf3d44c5b5a81d392a4ba224db505b489a2779e8e99e76eaffb0",
+  "checks": {
+    "failed": 0,
+    "failures": [],
+    "passed": 361,
+    "total": 361
+  },
+  "date": "2026-08-28",
+  "independent_method": [
+    "nine-mode Laurent recurrence and square-root cube, not the producer",
+    "termwise reconstruction of raw D16 and D17 generators",
+    "three-way replay of every mutation against all 513 serialized generators",
+    "G16 24x7 rank 7 and G17 23x6 rank 6",
+    "standard-library Fraction arithmetic only"
+  ],
+  "reviewer": "Grok 4.6",
+  "schema": "jc2.ggv.upper_endpoint.uniform_d16_d17_fullmodes.hostile_review.grok46.v1",
+  "scope_firewall": [
+    "necessary characteristic-zero field-point / polynomial-window consequences on the fixed 303-variable 513-generator branch-P fixture only",
+    "K17_uniform is a structural ancestor candidate; no cutoff-three K transport",
+    "no endpoint emptiness, scheme divisibility, unrestricted branch-P, Keller, or JC2 claim",
+    "c16 is uniquely forced by D16 polynomiality and is not killed; c18 and c20 remain mandatory and unborn",
+    "C13--C17 and H0 remain live; no gauge slice or square-root branch is selected"
+  ],
+  "status": "PASS",
+  "verdicts": {
+    "D16": "PASS",
+    "D17_A2_relation": "PASS",
+    "D17_causal_cancellation": "PASS",
+    "gauge_invariance_modes": "PASS",
+    "literal_controls": "PASS",
+    "lower_window_equations": "PASS",
+    "overall": "PASS"
+  }
+}

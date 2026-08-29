@@ -1,0 +1,30 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review written to `xmodel/ggv-keller-face-general-multiplicity-endpoint-r5-hostile-review-opus5-20260827.md` (sha256 `48fff5d5…`). That `.md` is the only file I created; the `.log`/`.run`/`-prompt` siblings are harness scaffolding, present for every review in `xmodel/`.
+
+## Verdicts
+
+| # | Item | Verdict |
+|---|---|---|
+| 1 | Custody, prereg, additive history, dependency scope | **CONFIRMED** |
+| 2 | `q_n e_i ∈ Z` ⟺ `4 \| δ(12−n)` | **CONFIRMED** |
+| 3 | Exact lift `t^n R_q (F/H²)^((12−n)/8)`, subtraction completeness | **CONFIRMED** |
+| 4 | Mode schedules through weight 22 | **CONFIRMED** |
+| 5 | `−20HH'd−8H²d'=1`, `g=−8H²d` ⟹ `2Hg'+H'g=2H` | **CONFIRMED** |
+| 6 | `g=Bz/A`, `Bz'+(3/2)B'z=A`, rational ⟹ polynomial | **CONFIRMED** |
+| 7 | Degree law, `b=4,6,8` excluded, `b=0,2` survive | **CONFIRMED** |
+| 8 | `4a₀+D·a₂=0` | **CONFIRMED** + field caveat + invariant |
+| 9 | Verifier | **GAP/REPAIR** |
+| 10 | Scope | **CONFIRMED** |
+
+**No mathematical claim in the R5 document is refuted.** All 9 pinned hashes verify, R4's chain verifies 4/4, everything is untracked/additive.
+
+Key independent results:
+- A **second derivation route** the producer doesn't give: `E(F, F^{3/2}W) = F^{3/2}[−(8F−tF_t)W_X − tF_XW_t]` with first integral `Φ = t⁸/F`, so `ker E(F,·) = F^{3/2}·{series in Φ}` and `Ψ_n ∝ F^{3/2}Φ^{n/8}`. Rationality of `Φ^{n/8}` *is* the integrality condition.
+- The endpoint extraction is **stronger than stated**: no `F_j` (`j≥1`) can contaminate weight 22, so `F=H²` is not needed.
+- (0.3) has a coordinate-free reading: `4a₀+Da₂ = −(8/D)·res_∞(A√B dz)`.
+- Base extension in §3 is **unnecessary** — `D ∈ K` (divide by `lc(B)`, don't rescale `B`).
+- `d = −v/(8A⁵B)` is **never** polynomial, making the "not a jet" firewall an identity.
+
+The one real failure is the harness. `verify_r5.py` has a dead `if`, and its "cross-multiplied endpoint identity" reduces to `2·A·B·A == 2·A·A·B` — deleting the whole 15-line block still PASSes; `g'` is never computed anywhere. The core claim (that `Ψ_n` annihilates `E` to all orders) is tested only by the tautologies `q == 2γ` and `12−8γ−n == 0`. And one mutation escapes: `a < b−1` → `a < b` still PASSes, because the two rules coincide at every `b` when `deg H = 8`. Smallest discriminator: `deg H = 4`, `H = X²(X−1)(X+1)` (`b=2, a=1`), a true survivor (`v = 1/3`) the mutant wrongly excludes.
+
+I did not write a memory file, since the charge said to touch no file other than the review.

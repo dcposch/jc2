@@ -1,0 +1,8 @@
+lane=d43_high_hensel_v2_real_kernel_shift_review_20260828T2020Z
+host=ip-172-30-0-34
+start_utc=2026-08-28T20:23:35Z
+argv=taskset -c 0 timeout 180 env JC2_D43_HOSTILE_REAL=1 PYTHONHASHSEED=0 python3 -m unittest -v cases.test_d43_source_high_hensel.SemanticChainHostileTests.test_real_d43_free_column67_kernel_shift_is_rejected 
+end_utc=2026-08-28T20:23:35Z
+rc=1
+stdout_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_sha256=1e5cee083a3f942a18c173af5f55710efdeae4a72a28a7334bfe1a6e758382f1

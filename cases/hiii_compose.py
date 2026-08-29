@@ -7,8 +7,9 @@ with BOTH kill sets active:
     k*max(1, ceil(C(mu-1))) >= ceil(mu(kap_G-rho_G)/nu_G); N1 gcd(kap,nu)=1
     at every nu>=2 vertex (drop children/entries violating it identically).
   - Result 1 (SHEET6-H3, 048f2d9): IV-terminals classified by the (l)/(m)
-    consistency tests + the psi-budget kill (St 9.4 (25), psi = ceil(R)-1),
-    via h3_check.iv_dispositions.
+    consistency tests + the conditional psi-budget kill
+    (psi = ceil(R)-1), via h3_check.iv_dispositions. Budget conclusions use
+    the accepted Section 7 weighted inequality / first-separation ledger.
 Case I/II branches are inherited UNCHANGED from sheet6_campaign.step (the
 (a)-(d) arithmetic is uncontested); only III-outcomes are replaced.
 Internal gate: E5 child closed forms reproduce cong_survivors' witnesses on
@@ -71,12 +72,15 @@ def e5_iii_outcomes(node, mu):
         T = lcm(b, mu - 1)                      # period of kapF-in-Z and M_F
         fams = {}
         for nuF in range(2, NUF_SPAN * T + 2):
+            assert nuF >= 2                     # explicit nonroot scope
             kapF = C * (1 + k * nuF)
             if kapF.denominator != 1:
                 continue
             MF = gcd(mu - 1, 1 + k * nuF)
             if MF < 2:
-                continue                        # Prop 8.4 kill
+                # nuF starts at 2 above, so this is a certified nonroot
+                # Proposition 8.4 kill; it cannot hide a root terminal.
+                continue
             fams.setdefault((nuF % T, MF), []).append(nuF)
         for (r, MF), lst in sorted(fams.items()):
             base = min(lst)
@@ -188,7 +192,8 @@ def step_e5(node):
 
 
 def run_compose(entries, td, budget, label, show=8):
-    print(f"\n=== COMPOSE {label}: td={td}, budget={budget} ===")
+    print(f"\n=== COMPOSE {label}: td={td}, budget={budget} "
+          "[conditional Section 7 ledger] ===")
     surv_shapes, opens_all, sf1 = {}, {}, []
     for name, Lam, sanct, node in entries:
         na, nb = LF(node.nu)
@@ -221,10 +226,17 @@ def run_compose(entries, td, budget, label, show=8):
                 elif o[0] == 'CONT':
                     _, dl, child, why = o
                     nl = lam + dl
-                    if nl > budget or child.M == 1:
+                    if nl > budget:
                         continue
-                    if LF(child.nu) == (0, 1) and LF(child.kap) == (0, 1):
-                        sf1.append((name, nl, str(child)[:60]))
+                    disposition = sc.dispose_constructed_child(child)
+                    if disposition in (sc.TERMINAL_ROOT_M1,
+                                       sc.TERMINAL_ROOT_M_GT1):
+                        sf1.append((name, nl, child.M, disposition,
+                                    str(child)[:60]))
+                        continue
+                    if disposition == sc.KILL_NR_M1:
+                        continue
+                    assert disposition == sc.KEEP
                     sh = child.shape()
                     if sh in seen and seen[sh] <= nl:
                         continue
@@ -238,6 +250,8 @@ def run_compose(entries, td, budget, label, show=8):
                 continue
             seen_h.add(key)
             rows, _ = hc.iv_dispositions(nd, lam, td)
+            if any(v == 'OPEN_s_tail' for _, v, _ in rows):
+                opens.append((f"IV parametric s>{hc.SMAX}: NO_VERDICT at {nd}", lam))
             surv = [(s, R) for s, v, R in rows if v == 'SURVIVOR']
             if surv:
                 n_iv_surv += 1
@@ -263,10 +277,12 @@ def run_compose(entries, td, budget, label, show=8):
         for t in tr:
             print(f"      | {t[:118]}")
     if sf1:
-        ded = sorted({(n, l, c) for n, l, c in sf1})
-        print(f"--- {label}: SF1 (nu,kap)=(1,1) children: {len(ded)}")
-        for n, l, c in ded:
-            print(f"    SF1[{n}] lam={l} {c}")
+        ded = sorted(set(sf1))
+        print(f"--- {label}: root-signature terminal children: {len(ded)}")
+        for n, l, M, disposition, c in ded:
+            print(f"    SF1[{n}] lam={l} M={M} [{disposition}] {c}")
+    # Backward-compatible return value contains the IV ledger only; root
+    # terminals are deliberately reported above as a separate, non-killed set.
     return surv_shapes, opens_all
 
 
@@ -320,10 +336,11 @@ def pin_entry_nodes(lam_target):
         Mpin = gcd(P, Pg)
         assert PIN_EXPECT[(D, P, nu, Lam)] == Mpin, "pin vs table (23)"
         tag = f"({al},{be})D{D}P{P}nu{nu}Mpin{Mpin}"
-        if Mpin == 1:
+        pole_node = Node(Fr(D, P), nu, Mpin, D + Dg, P)
+        if sc.dispose_m1(pole_node, certified_nonroot=True) == sc.KILL_NR_M1:
             print(f"[{tag}] ENTRY DEAD: M = gcd({P},{Pg}) = 1 (Prop 8.4)")
             continue
-        ent.append((tag, Lam, True, Node(Fr(D, P), nu, Mpin, D + Dg, P)))
+        ent.append((tag, Lam, True, pole_node))
     return ent
 
 
@@ -340,7 +357,7 @@ if __name__ == "__main__":
             tot[lam_t] = s_
         s6, _ = run_compose(pin_entry_nodes(6), 6, 4, "PIN td=6")
         tot[6] = s6
-        print("\n==== PINNED GRAND: "
+        print("\n==== PINNED GRAND (IV classes; roots reported separately): "
               + ", ".join(f"td{k}: {len(v)}" for k, v in tot.items())
               + " ====")
         sys.exit(0)
@@ -356,5 +373,5 @@ if __name__ == "__main__":
         tot[lam_t] = s_
     s6, _ = run_compose(sc.entry_nodes(6), 6, 4, "td=6")
     tot[6] = s6
-    print("\n==== COMPOSED GRAND: "
+    print("\n==== COMPOSED GRAND (IV classes; roots reported separately): "
           + ", ".join(f"td{k}: {len(v)}" for k, v in tot.items()) + " ====")

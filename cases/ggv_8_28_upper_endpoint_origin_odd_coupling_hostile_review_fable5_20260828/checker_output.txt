@@ -1,0 +1,31 @@
+PASS A(start) frozen sha256 xmodel/ggv-upper-endpoint-origin-odd-coupling-sol-ultra-20260828.md
+PASS A(start) frozen sha256 cases/ggv_8_28_upper_endpoint_origin_odd_coupling_20260828/verify_origin_odd_coupling.py
+PASS A(start) frozen sha256 cases/ggv_8_28_raw_to_global_m_cokernel_interface_d3_20260827/RAW_INPUT.json
+PASS B slot-level chart/name/exponent verification (all 442 slots)
+PASS B maps.F_raw_to_chart string matches audited law
+PASS B maps.G_raw_to_chart string matches audited law
+PASS B window census: F = [max(0,ceil((w-8)/3)), 16-w] (nonempty w=0..14); G = [max(0,ceil((w-12)/3)), 24-w] (nonempty w=0..21); all contiguous, no slots outside the law through weight 22
+PASS B boundary slot existence/absence for the n=22 window
+PASS C D22[X0] == +f_1_0*g_0_1 - f_0_1*g_1_0 (complete literal enumeration); got {('f_0_1', 'g_1_0'): -1, ('f_1_0', 'g_0_1'): 1}
+PASS D neighbors: exactly (11,11)+1 and (7,15)-1 contribute; (10,12) killed by 12-j=0, (8,14) by i-8=0; every other pair lacks a required X0/X1 slot: {'contrib': [('t2', 7, 15, -1), ('t1', 11, 11, 1)], 'prefactor_zero': [('t2', 8, 14), ('t1', 10, 12)]}
+PASS E f_1_0=F11[X1]=P_x(0), f_0_1=F7[X0]=P_y(0), g_1_0=G15[X1]=Q_x(0), g_0_1=G11[X0]=Q_y(0); so D22[X0] = P_x*Q_y - P_y*Q_x |_(0,0) = J(P,Q)(0)
+PASS F Laurent identity: sum_n D_n t^(n-21) == t * J_{x,y}(P,Q)(X t^3, 1/t) for a generic exact pair
+PASS F Keller fixtures (P,Q)=(x,y) and (x+y^3,y): J=+1 gives D22=+1 exactly, all other D_n=0 (target is +1, not -1)
+PASS G every raw slot has total degree i+j == weight mod 2
+PASS G all four coupling slots carry ODD raw weights (11,7,15,11)
+PASS G odd-weights-zero => P,Q supported on even total degree only (hence invariant under (x,y)->(-x,-y))
+PASS G no degree-1 monomial survives => grad P(0) = grad Q(0) = 0
+PASS G restricting D22[X0] to the odd-zero section gives identically 0, so D22=1 is impossible there
+PASS H report firewall sentences present byte-exactly; the odd-q-gates => odd-raw-weights converse is NOT asserted anywhere in the frozen text
+PASS I mutation detected: sign flip on (7,15) term
+PASS I mutation detected: retaining structural zero (10,12)
+PASS I mutation detected: retaining structural zero (8,14)
+PASS I mutation detected: omitting the true (7,15) term
+PASS I mutation detected: wrong chart offset (base 8 -> 9)
+PASS I mutation detected: parity law flipped to w+1 mod 2
+PASS I mutation detected: endpoint target sign -1 instead of +1
+PASS J(end) frozen sha256 xmodel/ggv-upper-endpoint-origin-odd-coupling-sol-ultra-20260828.md
+PASS J(end) frozen sha256 cases/ggv_8_28_upper_endpoint_origin_odd_coupling_20260828/verify_origin_odd_coupling.py
+PASS J(end) frozen sha256 cases/ggv_8_28_raw_to_global_m_cokernel_interface_d3_20260827/RAW_INPUT.json
+
+PASS_HOSTILE_AUDIT_UPPER_ENDPOINT_ORIGIN_ODD_COUPLING_FABLE5

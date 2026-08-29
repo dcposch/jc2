@@ -1,0 +1,108 @@
+{
+  "schema_id": "JC2-GATE-T-STRICT-UAC-UNIFORM-CONTACT-NATURALITY-V46R1",
+  "schema_version": 1,
+  "date": "2026-08-27",
+  "status": "PROVISIONAL_PENDING_DIFFERENT_MODEL_REVIEW",
+  "base": {
+    "schema_path": "cases/max12_812_order2_gate_t_uniform_contact_naturality_v46_20260827/SCHEMA.json",
+    "schema_sha256": "796eb0847e7b0bb7972c2fd7b3db10bd2dcfd2fd85c5bbaa47e3a239f8b02673",
+    "verifier_path": "cases/max12_812_order2_gate_t_uniform_contact_naturality_v46_20260827/verify_uniform_naturality.py",
+    "verifier_sha256": "8e49fc87ebeffb74e4c33f79ae248846c7de3ce4f4fb2ad07ac85751d8841ec7",
+    "result_path": "cases/max12_812_order2_gate_t_uniform_contact_naturality_v46_20260827/run_v0_v4/result.json",
+    "result_sha256": "25a5fb3e0a8dff1a0d841823dfe44265775e793431445878ab49193c846d67ce",
+    "freeze_path": "cases/max12_812_order2_gate_t_uniform_contact_naturality_v46_20260827/FREEZE.sha256",
+    "freeze_sha256": "b39f66e2cb7cac16dd1c940814b44e8aff3cd7c7df1ad9347beb5f558187ae22",
+    "hostile_review_path": "xmodel/max12-812-order2-gate-t-uniform-contact-naturality-v46-hostile-review-grok-20260827.md",
+    "hostile_review_sha256": "13450b727aad5a27f40ba22333b91b03765009a41de8aa36c330a5cd02347e71"
+  },
+  "repair_scope": {
+    "supersedes": [
+      "SCHEMA.json shifted_root block only",
+      "V46 result shifted_root diagonal_determinants display only",
+      "V46 verifier check_shifted_root mixed-coordinate witness only"
+    ],
+    "preserves": [
+      "V46 normative seven source primitives",
+      "V46 coefficient-ring jet-reindexing naturality theorem",
+      "V46 569-tail custody",
+      "V46 load and target schedules",
+      "V46 polar support tables",
+      "V46 endpoint provenance and lifecycle"
+    ],
+    "exclusions": [
+      "rho=0 ramified fibre",
+      "endpoint union promotion",
+      "D23_A8D3 promotion",
+      "per-endpoint compiler-semantic and alias-map obligations",
+      "equality faces",
+      "positive-order leading loads",
+      "k=0",
+      "staged Rees and terminal/Taylor receivers",
+      "global G2 obligations",
+      "Gate T",
+      "order two",
+      "maximum twelve",
+      "JC2"
+    ]
+  },
+  "coordinate_types": {
+    "raw_total_shifted_jets": {
+      "A": ["az_(a+n)", "ac_(a+n)"],
+      "C": ["ez_(c+n)", "ec_(c+n)"],
+      "R": ["cs_(r+n)", "rs_(r+n)"]
+    },
+    "mapped_D1_relative_jets": {
+      "A": ["AzD1_n", "AcD1_n"],
+      "C": ["CzD1_n", "CcD1_n"],
+      "R": ["BzD1_n", "BcD1_n"]
+    },
+    "raw_to_D1": {
+      "az_(a+n)": "AzD1_n",
+      "ac_(a+n)": "AcD1_n",
+      "ez_(c+n)": "2*CzD1_n",
+      "ec_(c+n)": "2*CcD1_n",
+      "cs_(r+n)": "BzD1_n",
+      "rs_(r+n)": "4*BcD1_n"
+    }
+  },
+  "hensel": {
+    "equation": "lambda(sigma)^2=-P(sigma)/2",
+    "leading": "lambda_0=epsilon*rho, epsilon in {+1,-1}",
+    "recurrence": "2*lambda_0*lambda_n=-ell_n-sum(1<=i<n,lambda_i*lambda_(n-i))",
+    "localization": "D(rho)"
+  },
+  "raw_total_root_map": {
+    "variable_order": ["z_coefficient", "constant_coefficient"],
+    "orientation_order": ["minus", "plus"],
+    "A_n_minus_plus": "ac_(a+n) +/- sum(i=0..n,lambda_i*az_(a+n-i))",
+    "C_n_minus_plus": "(ec_(c+n) +/- sum(i=0..n,lambda_i*ez_(c+n-i)))/2",
+    "R_n_minus_plus": "rs_(r+n)/4 +/- sum(i=0..n,lambda_i*cs_(r+n-i))",
+    "leading_determinants": ["-2*lambda_0", "-lambda_0/2", "-lambda_0/2"]
+  },
+  "mapped_D1_root_map": {
+    "variable_order": ["z_coefficient", "constant_coefficient"],
+    "orientation_order": ["minus", "plus"],
+    "A_n_minus_plus": "AcD1_n +/- sum(i=0..n,lambda_i*AzD1_(n-i))",
+    "C_n_minus_plus": "CcD1_n +/- sum(i=0..n,lambda_i*CzD1_(n-i))",
+    "R_n_minus_plus": "BcD1_n +/- sum(i=0..n,lambda_i*BzD1_(n-i))",
+    "leading_determinants": ["-2*lambda_0", "-2*lambda_0", "-2*lambda_0"]
+  },
+  "required_factor_conflation_mutations": [
+    "wrong mapped-D1 C formula (CcD1 +/- lambda*CzD1)/2",
+    "wrong mapped-D1 R formula (BcD1 +/- lambda*BzD1)/4",
+    "paste raw-total determinant triple into mapped-D1 map"
+  ],
+  "additional_representatives": [
+    {
+      "id": "D1_A7_LOAD_TIE",
+      "reason": "exercise the actual a=7 k6*C load-tie boundary in addition to V46's ordinary a=6 representative",
+      "a": 7,
+      "c": 8,
+      "r": 7,
+      "T": 26,
+      "field": "F1000003",
+      "maxima": {"p": 1, "A": 1, "C": 1, "R": 0, "k10": 0, "k6": 1, "k2": 0},
+      "active": ["p", "A", "C", "R", "k10", "k6"]
+    }
+  ]
+}

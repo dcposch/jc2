@@ -1,0 +1,19 @@
+{
+  "case": "ggv_8_28_upper_endpoint_lambda0_endpoint_kernel_strata_r3_20260828",
+  "math_payload": "byte-identical frozen r2 build_strata_scripts.py and inputs",
+  "adapter_fix": "replace six reserved standalone NF tokens by NFIELD in the r2 selfcheck materialization",
+  "negative_control": "the original NF declaration must trigger Singular reserved-name failure",
+  "generated_worker_sha256": "8c5705b1124efead1649724d3db7eb03f33e8ff44311ce6114d6a3f8efaf90da",
+  "lanes": {
+    "p": "ggv_lambda0_endpoint_strata_p_r3_20260828T135000Z_r6a",
+    "c8q1": "ggv_lambda0_endpoint_strata_c8q1_r3_20260828T135000Z_r6b",
+    "c8p": "ggv_lambda0_endpoint_strata_c8p_r3_20260828T135000Z_r6c",
+    "q1p_triple": "ggv_lambda0_endpoint_strata_q1p_triple_r3_20260828T135000Z_r6d"
+  },
+  "resources": {
+    "cpu_list": [1],
+    "address_space_bytes": 103079215104,
+    "master_seconds": 7200,
+    "swap_total_kib": 0
+  }
+}

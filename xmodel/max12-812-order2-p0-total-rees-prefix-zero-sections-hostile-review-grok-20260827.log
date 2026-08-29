@@ -1,0 +1,21 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll review the provisional claim as a different-model hostile reviewer: first the preregistration, then the frozen polynomial bytes and fibre promotions independently.I'll gather the case files, prior hostile-review format, and the frozen polynomial bytes next.I'll inspect the frozen polynomial format, V9/V17 custody, and how previous reviews parsed rows independently.I'll independently parse the frozen rows with a monomial scanner and evaluate the three assignments, controls, and hashes.Term-count mismatches need a parser check: I'll inspect those four rows before treating the evaluations as exact.Independent evaluation matches the three zero sections, both controls, and the chart-compatibility claims. I'll write the hostile-review report next.The three prefix assignments are exact zeros in `Q[rho]`. The report is `xmodel/max12-812-order2-p0-total-rees-prefix-zero-sections-hostile-review-grok-20260827.md`, SHA-256 `959603e311fb02254488c57c49edc1b79837dc72987d3b9253c8c176eebb1623`.
+
+Independent monomial parse of the 22 frozen exact-Q files (not the producer AST replay) gives:
+
+| Claim | Verdict | Residual |
+|---|---|---|
+| `CS0` (`cs=1`, `k=0`, `rho` free) | **CONFIRMED** | all 22 rows `0` in `Q[rho]` |
+| `A00` (`a0=1`, `J1=0`, `rho` free) | **CONFIRMED** | all 22 rows `0` in `Q[rho]` |
+| `A10` (`a1=1`, `J1=0`, `rho` free) | **CONFIRMED** | all 22 rows `0` in `Q[rho]` |
+| Witness `cs=e1=1`, `k=12/5`, `rho=0` | **CONFIRMED** | `Tg12_2=0`, `Tg14_5=-21/320` |
+| Negative control `cs=k=1`, `e1=rho=0` | **CONFIRMED** | `Tg12_2=-5/128` |
+| Unlocalized `T-cs` bilinears + `1-u*cs` | **CONFIRMED** | all `0`; `cs=1` so saturation does not cut the point out |
+| `1-v*k` at `CS0` | **CONFIRMED** as impossible | `k=0` forces `1-v*k=1` |
+| `J2` chart relations at `A00`/`A10` | **CONFIRMED** | `a1=a0*qa1` and `a0=a1*qa0` hold |
+| This prefix cannot empty those fibres or put `rho^N` in the ideal | **CONFIRMED** | horizontal `Q[rho]`-section |
+| Unexported grade-13 / other grade-14 rows | **GAP** | not in the frozen prefix |
+| `k=k10` as registered common localizer | **GAP** | routing hypothesis, not algebra of these 22 rows |
+| Full compiled `J2` charts | **GAP** | source prefix only |
+
+`CS0` is off `D(cs*k)` and does not touch the promoted localized `T-cs` fibre theorem. Input hashes match the V9/V17 pins, including `Tg10_2`, `Tg10_4`, and `Tg14_5`.

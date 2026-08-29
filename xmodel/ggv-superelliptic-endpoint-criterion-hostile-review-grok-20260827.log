@@ -1,0 +1,26 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the ideation note, the frozen R1–R3 artifacts, and the cokernel audit so the review stays scoped to this rational ODE rather than the polynomial result.The ideation names R1–R3 hashes and Card A dependencies; next I’ll locate those artifacts and the cokernel audit so the review can separate them.I'll read the review prompt, the R1–R3 producer/review reports, and the cokernel audit next, matching the format of prior hostile reviews.I’ve got the ODE and the R3 wall in view; next I’ll pull R1, the contamination line, and pre-round history, then rebuild an independent exact checker.I’ll check pre-round history and R2 scope next, then rebuild the exact checker so producer verdict strings aren’t used as evidence.I’ll rebuild the criterion, degree bound, and examples in pure `Fraction` arithmetic so the verdicts rest on independent algebra, not producer strings.The algebra checks out on the ODE side; I’m writing the referee report with separate verdicts and the firewall between an endpoint theorem and a GGV exclusion.The report is at `xmodel/ggv-superelliptic-endpoint-criterion-hostile-review-grok-20260827.md`.
+
+A correct rational endpoint solver is not a GGV family exclusion. Independently, the ODE criterion `A ∈ im(N_B)` holds in characteristic zero; the jet theorem does not extend past the reviewed R3 edge.
+
+| Item | Verdict |
+|---|---|
+| Rational criterion `A ∈ im(N_B)` | **CONFIRMED** |
+| Denominator statement | **REFUTED** as written |
+| de Rham computation | **CONFIRMED** |
+| Displayed examples | **CONFIRMED** |
+| General `(α,β,N)` formula | **GAP/REPAIR** |
+| Mode-completeness bridge | **GAP/REPAIR** (open) |
+| Degree-uniform GGV use | **REFUTED** as a present license |
+| History / novelty | **CONFIRMED** with the disclosed contamination |
+| Final scope | **GAP/REPAIR** |
+
+The equivalence `L(g)=2H` iff `A = B v' + (3/2) B' v` survives finite-place and infinity valuations, with `deg g = 1` forced and `N_B` injective precisely when `B` is nonconstant. Direct substitution recovered all five displayed examples, including the escape `H=X^2(X^2-1)` that kills “solvable iff `deg B ≤ 1`”.
+
+The wording “denominator exactly `A0`” fails on `H=X^2`: `g=X/2` solves the ODE and has reduced denominator `1`. Poles have order *at most* `e/2`; the denominator *divides* `A0`. The enclosing linear system with denominator `A0` is still a bound.
+
+`[w dX]=-(4/5)[dX/w]` on `w^2=X^8-1` is confirmed by the exact identity `d(X^k w)=((k+4)X^{k+7}-k X^{k-1})ω`, and is equivalent to the rational ODE in the function field.
+
+`deg A < deg B-1` is a sufficient ODE exclusion, and a jet exclusion only for the reviewed R3 edge `F_0=(X^8-1)^2`. It is not licensed for `X^{16}-1`, for general square/cube edges, or for any `lib/families.py` object. Extra homogeneous modes appear as soon as `H` is a square (every even weight, including `22`).
+
+The integrating factor is convergent with Grok’s one line, not sole-novel. The closed-form criterion, the degree bound, and the Pell/de Rham distinction are nonduplicate relative to pre-round history.

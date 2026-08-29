@@ -1,0 +1,14 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Done. The deliverable is written to `xmodel/max12-812-order2-p0-total-rees-j2-grade15-certificate-design-fable5-20260827.md` — my only repository write — and it contains outcome 1 (explicit certificates) for T-a0 and outcomes 2+3 (exact obstruction + AWS spec) for T-a1.
+
+**Headline results**
+
+**T-a0 is closed at the desk.** Two exact, residual-zero-verified identities among the frozen specialized rows:
+- A human-checkable 6-row certificate `a0³(1+3qa1²ρ²) = −16·Tg15_6 − 2rs1·Tg12_2 − 2rs2·Tg11_2 − 4cs1·Tg12_3 − 6ρ²cs1·Tg12_1 + (6cs1·ell1 − 8ρ²cs2)·Tg11_1` — correctly typed with exceptional power a0³, localizer s=1, unit W=3qa1²ρ.
+- Stronger: **`a0³` alone lies in the row ideal** (13 rows, 32 printed cofactors, no unit at all), so the saturation is the unit ideal and the whole T-a0 chart of the truncated model is the empty scheme — not merely its ρ=0 fibre — with no residual localizer stratum. Emptiness is monotone under adding deeper source grades, so it extends to the full registered source conditional on the provenance chain. I also proved the anchor is forced: any certificate must use Tg15_6 with cofactor constant exactly −16, and grade 15 is indispensable (grades 11–14 have no pure exceptional terms).
+
+**T-a1 resists, provably.** Exact-Q linear elimination refutes typed certificates `a1^N·k^M(1+ρW)` at (N,M) = (3,0), (3,1), (4,0) (cap-stable), and mod 2³¹−1 at (3,2), (4,1). The (3,0) case has a fully hand-checkable proof: the −16 anchor on Tg15_3 is forced, and `a1·k·rs1²` — machine-verified to divide no other ρ-free monomial in all 31 rows — is uncancellable. Interestingly, the grade-13 row Tg13_2 actively defends the chart: on the {a1,rs1,k} family it clashes with Tg15_3 (`k·rs1² = (96/5)a1²` vs `−(32/5)a1²`), so no obstruction witness point exists there either. The decisive unbounded question reduces cleanly to `1 ∈ ((I:a1^∞):k^∞)+(ρ)`; local Singular times out on it even mod p, so it's specified as a hash-ready AWS job (V24) with the cheap ρ=0 obstruction subjob, positive/negative controls, caps, and stop rules.
+
+**Custody:** FREEZE_R1 verified, `output_r1/RESULT.json` rehashed (`ce4d0adb…`) with a byte-identical rerun of the frozen script; only `output_r1` used per the V1 erratum; all 42 raw coefficient hashes re-gated; my own independent parser/weight-table/substitution pipeline reproduced all 84 chart rows and the full pure cubic vector from literal bytes; the V22R1 Grok review has meanwhile landed CONFIRMED WITH REPAIRS with no coefficient changes.
+
+**Ranked successors** (in the doc): (1) different-model review of the two T-a0 certificates → promote "T-a0 chart empty"; (2) freeze/launch AWS V24; (3) grade-16/17 export only if V24's obstruction branch fires; (4) terminal receiver afterwards. Nothing here touches Gate T, order two, max twelve, or JC2.

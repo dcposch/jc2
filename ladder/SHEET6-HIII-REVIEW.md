@@ -1,13 +1,35 @@
 # SHEET6-HIII-REVIEW.md — Adversarial review + composition of SHEET6-H3 (048f2d9) and SHEET6-III (e5d42e7)
 
-Reviewer: Claude (adversarial pass, 2026-08-07). Status: COMPLETE.
+## Controlling supersession (2026-08-28)
+
+This review remains evidence for the local chart arithmetic, E5 discrepancy,
+and gcd calculations, but it is **not** the current root-survivor census.
+Three later corrections control:
+
+1. The `H3-psi` arithmetic is sound, while its global inequality is now
+   proved through actual cluster weights (`c253bd12...`, hostile gate
+   `727f5850...`) and disjoint singleton first-separation exit sets.  It is
+   not a consequence of the printed `(22)`/literal-`Y` ledger alone.
+2. Corrected Proposition 8.4 is nonroot only.  At `(0,y)`, `M=1` is allowed
+   and Statement 8.5 gives divisibility only.
+3. The composed `td=6 residual = 0`, `13 ext`, and `SF1 -> 1` counts below
+   came from capped pre-root-aware engines and are withdrawn as exhaustive
+   claims.  The later case-I theorem excludes the enumerated all-`M=1`
+   root layer analytically (so the old `l=98` case-IV diagnostic is not a
+   legal root meet in that layer), while post-jump/off-axis root/SF1 sectors
+   remain open.
+
+The separate corrected Section 9 packet `2763d970...` / `0729a576...`
+review-closes only `counterexample => td>=6`.  It does not exclude `td=6`.
+
+Historical reviewer: Claude (adversarial pass, 2026-08-07). Status: COMPLETE.
 Scope: two parallel unreviewed results on the sheet-6 campaign; neither saw
 the other. Tasks: (A) refute each; (B) compose the kill sets and produce the
 definitive residual table. Ground truth: refs/sigray_full.pdf read on-page
 (pp. 8-12, 16-19, 27-32, 39-45, 48-60). Cross-check engine:
 cases/hiii_compose.py (new, additive; both existing engines re-run).
 
-Verdicts:
+Historical verdicts (subject to the controlling supersession above):
 - Front 1 (psi-budget derivation, H3-psi): **CONFIRMED**
 - Front 2 (§5b consistent exhibit / blanket-H3 FALSE): **CONFIRMED, with
   rider: witness dies under the other result's E5 bound (WEAKENED as a
@@ -21,9 +43,9 @@ Verdicts:
   composition -> 1 by new psi-at-root lemma (ext-only)**
 
 ## 1. Front 1 — psi-budget derivation (Result 1's core kill)
-Verdict: **CONFIRMED** (re-derived independently from the PDF; every transport
-ingredient is a printed statement; no chart-orientation error; correct budget
-family (25))
+Current verdict: **CONFIRMED AFTER GLOBAL-LEDGER REPAIR** (the chart/psi
+transport is re-derived from printed statements; the budget inequality uses
+the later actual-weight/first-separation repair, not printed `(22)`)
 
 - All chart ingredients read on-page and verbatim: Thm 6.1's proof (p. 28)
   prints "k_f = d_{(0,x)} and l_f = deg(p_{(0,x)})"; Prop 6.5's proof (p. 32)
@@ -40,7 +62,9 @@ family (25))
   F_0..F_n: pairwise-different membership in V_a cap T_a^searrow is printed
   in Prop 8.4's proof (Props 6.7/6.8, p. 45); (0,y) in V_a (Def 3.4) and in
   T_a^searrow (Thm 6.1); St 9.5's printed proof applies 9.4 to the whole
-  sequence. No gap found.
+  sequence. No gap was found in the arithmetic/sequence part.  The printed
+  Section 7 derivation of the global budget was later found invalid and has
+  been replaced by the reviewed actual-weight theorem.
 - Suspected flaw #1 (chart orientation): checked — transported Thm 6.1 reads
   d_{(0,y)} < deg(p_{(0,y)}), SAME direction as (l); the repaired argument
   uses no sign clash, only the magnitude transport, which this review
@@ -55,16 +79,19 @@ family (25))
   terminals (9.7(iii)/9.8(iii)/9.9(iii)/9.10(iii)) have R in {3,4}, psi in
   {2,3}; every route from row 4 to them passes a printed lambda>=2
   annotation (9.6(ii)-(iv) p. 51; 9.11(ii)-(iv) p. 58; E2-E4 additions are
-  lambda=0 loops that only sit after those). G2 CLOSED as claimed, thesis
-  td<=5 repairable with printed data only (AF2 not needed for row 4).
-- Engine h3_check.py re-run (2026-08-07): reproduces §5 table exactly
+  lambda=0 loops that only sit after those). G2 is closed in the corrected
+  reconstruction using the actual-weight/first-exit budget (AF2 is not
+  needed for row 4); the printed thesis alone does not prove that budget.
+- Historical capped engine h3_check.py re-run (2026-08-07): reproduced §5 table
   (r4: 0 SURV; r10/M2: 0; r10/M4: 15 classes/134 pairs; r2,r3: 0; r8/M2,
   r9/M3: all-dead by (m); r6/M3: 6; r11/M5: 22; grand total 1477 (shape,s)
-  pairs; SF1 = 28). psi-kill uses recorded lambda (a lower bound, terminal's
+  pairs; SF1 = 28). These are no longer exhaustive counts. The psi-kill uses
+  recorded exit-charge minima (a lower bound, terminal's
   lambda_{F_n} omitted) — a fortiori sound.
 - Residual conditionality (correctly flagged in the doc): engine-lambda
   minima = AF2; possibility-completeness of the propagation surface = H1/H2/
-  H4/AF3. The psi-budget THEOREM itself is unconditional on those.
+  H4/AF3. The repaired singleton psi-budget theorem itself is unconditional
+  on those campaign enumeration hypotheses.
 
 ## 2. Front 2 — the §5b consistent exhibit (blanket-H3-false witness)
 Verdict: **CONFIRMED as stated** (every PRINTED constraint holds; blanket H3
@@ -79,8 +106,10 @@ exhibit certifies H3-falsity only under the mixed (pre-E5) reading of Prop
   N^2, type (4,5): k_f/k_g = 4/5 (Lemma 2.1(ii)), k_g/k_f = 5/4 not in N*
   ((iv)), l_f <= k_f ((iii)); Prop 6.1 at (0,y): 4j != 8j; St 9.2 data
   consistent; root M free per printed terminals "for some M in N" (9.7(iii)
-  p. 53, 9.8(iii) p. 55, 9.9(iii)/9.10(iii) pp. 56-57) so Prop 8.4
-  satisfiable; psi_max = 1 (k_f/l_f = 2), (25): Sum lambda = 2 <= 3. Chain
+  p. 53, 9.8(iii) p. 55, 9.9(iii)/9.10(iii) pp. 56-57); corrected Prop 8.4
+  is inapplicable at the root, and Statement 8.5 gives only divisibility.
+  Thus psi_max = 1 (k_f/l_f = 2), and the repaired exit inequality allows
+  Sum lambda = 2 <= 3. Chain
   arithmetic (F0->F1 III mu4: 36/33 = 12/11; F1->F2 IIa_0 s=1: kap=2,
   D/i=5, M=3, lam=0; F2->F3 III mu3: 8/6 = 4/3, lam=1) all re-verified.
   No printed constraint located that the exhibit violates — concurring
@@ -177,8 +206,9 @@ honestly flagged).
 - The tails3 N1 kills ((4/3,6s+2,3,8s+4) all s; four odd-s restrictions)
   re-run and reproduced.
 
-## 5. Front 5 — COMPOSITION: the definitive residual table
-Verdict: **COMPUTED** (new engine cases/hiii_compose.py, additive; internal
+## 5. Front 5 — HISTORICAL COMPOSITION (not a definitive current residual table)
+Verdict: **COMPUTED FOR THE CAPPED 2026-08-07 ENGINE, WITHDRAWN AS
+EXHAUSTIVE** (new engine cases/hiii_compose.py, additive; internal
 gate reproduces tails3's cong_survivors witnesses from the E5 closed forms;
 campaign gate untouched and PASS; frontier=0 at depth cap everywhere, so the
 exclusions are cap-clean). Composed semantics: BFS with (i) case-III steps
@@ -189,7 +219,8 @@ filter on entries and children (dropped only when gcd>1 identically), (iii)
 case I/II branches inherited unchanged, (iv) IV terminals classified by
 (j)/(k)/(l)/(m) + psi-budget (h3_check.iv_dispositions).
 
-RESULT (exact, 2026-08-07 run):
+HISTORICAL RESULT (exact for that 2026-08-07 run, not for the root-aware
+unbounded state space):
 - td=3: 0. td=4: 0 — G2 stays closed under composition; row 5 fully closed.
 - td=5: r10/M2 fully closed. **r10/M4 (SANCTIONED): 2 residual classes**
   (down from Result 1's 15): both reached by a single IIb mu=4 k=1 step
@@ -226,10 +257,11 @@ shapes are the thesis's OWN St 9.7/9.10 hypothesis shapes at td=5 — row 10
 remains externally covered (Orevkov/Domrina/Zoladek, RECON), so this is an
 independent-reproof residue, not a JC-risk.
 
-## 6. Front 6 — SF1 (case-I root-termination) reality + composed coverage
+## 6. Front 6 — SF1 (case-I root-termination) reality + historical composed coverage
 Verdict: **CONFIRMED REAL** (the gap exists in the printed thesis and in both
-engines' modeling), **and largely closed by composition + a new psi-at-root
-lemma**: 28 -> 2 -> 1 surviving child, on an AF3-superset entry only.
+legacy engines' modeling).  The old claim that composition plus a
+psi-at-root lemma reduced `28 -> 2 -> 1` is a capped historical count, not
+an exhaustive present census.
 
 - Reality: (0,y) in V_{2,a} is possible — St 3.1's forms (3)/(4) include the
   j=0 coefficient, so two roots with c_0 != c_0* have O(P,P*) = 0 and
@@ -283,18 +315,20 @@ lemma**: 28 -> 2 -> 1 surviving child, on an AF3-superset entry only.
   td6-ext ones ride exactly such IIb k=1 steps. The AF2 audit (campaign §6
   item 5) should now explicitly decide IIb pricing; it is the single
   highest-leverage open item left on the sanctioned board.
-- Stack for the composed verdicts: H1, H2, H4, AF2, AF3(sanction), H5a,
-  H5b, + Result 1's H3q (proved from printed statements), + engine
+- Historical stack for the composed verdicts: H1, H2, H4, AF2,
+  AF3(sanction), H5a, H5b, + Result 1's H3q (now justified globally by the
+  actual-weight/first-exit repair), + engine
   fidelity of hiii_compose.py (gated against tails3's witnesses; frontier
   0; PIT asserts on every emitted E5 family).
 
 ## 8. Overall verdict
 
-Both results SURVIVE adversarial review; neither is refuted; each truncates
-the other's residual book.
+The local results survived the 2026-08-07 adversarial review.  Their numeric
+residual composition is historical and not a current exhaustive book.
 
 - SHEET6-H3 (048f2d9): Fronts 1-2 CONFIRMED. The psi-budget theorem is
-  correct and printed-statement-solid; G2 closure stands; blanket-H3-FALSE
+  correct after the actual-weight/first-exit global repair; G2 closure
+  stands in the corrected reconstruction; blanket-H3-FALSE
   stands relative to the printed thesis. WEAKENED item: the §5b witness and
   the 43-class survivor book are mixed-reading artifacts — under H5a/H5b
   the witness chain is inconsistent (its first III step costs lambda >= 8)
@@ -307,8 +341,9 @@ the other's residual book.
   tail-child dies ((m)-impossible IV, psi-kill, or route removed).
   "EXCLUDED mod H3+H5" labels upgrade to "mod H3q+H5" (H3 discharged).
   Recommend PROMOTE.
-- COMPOSED HEADLINE: **td=6 single-pole SANCTIONED entries are fully
-  EXCLUDED** conditional on {H1, H2, H4, AF2, AF3-sanction, H5a, H5b} +
+- HISTORICAL COMPOSED HEADLINE — **WITHDRAWN AS AN EXHAUSTIVE CURRENT
+  CLAIM**: the capped engine reported `td=6` single-pole sanctioned entries
+  fully excluded conditional on {H1, H2, H4, AF2, AF3-sanction, H5a, H5b} +
   the proved H3q — no case survives at td=6 on the thesis's own M-menu.
   THE residual after composition: **2 sanctioned classes, both td=5
   r10/M4** ((1/3,7,3,5)@lam1 and (2/3,3s+2,3,2s+2)@lam1 odd-s, both R=3,
@@ -317,7 +352,7 @@ the other's residual book.
   r8/M6 ext; the other SF1 hit dies by the new psi-at-root lemma, §6).
   Out of scope and still open: the two-pole (3,3) configuration (campaign
   §6 item 4).
-- Next actions in leverage order: (1) AF2 audit deciding IIb extra-orbit
+- Historical next actions (superseded by root-aware exact recensus): (1) AF2 audit deciding IIb extra-orbit
   pricing (kills both sanctioned residuals if it extends the per-root
   rule); (2) AF3 sanction proof (kills the 13 ext classes + last SF1);
   (3) lambda_{(0,y)} >= 1 lemma (independent kill of both residuals);

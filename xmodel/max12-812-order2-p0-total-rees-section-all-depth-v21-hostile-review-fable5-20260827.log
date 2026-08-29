@@ -1,0 +1,20 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+**Verdict: CONFIRMED.** The report is written at `xmodel/max12-812-order2-p0-total-rees-section-all-depth-v21-hostile-review-fable5-20260827.md`, and nothing else was edited. I tried to refute the claim and could not — every check passed independently.
+
+What I did, mapped to the review mandate:
+
+1. **Custody**: All nine hashes match, including the producer report at `172755de690977d90448a6b6c6ac0abf0d9437dfecb46983638919eb241c7ffe`. I also reran the frozen V21 replay to a scratch path: it regenerates `RESULT.json` **byte-for-byte** (same SHA-256) in 0.07 s.
+
+2. **Specializations**: I hand-derived the four coefficient tuples from the literal V20 emitter formulas before reading V21's version — the `sigma^{3+2}` shifts, index-to-weight pairing, and rho powers all check out. One derivation shortcut in V21 (dropping `ez`/`ec` from `n1`/`n0`) is exact because a name census shows those lists, like all load names, are disjoint from `{cs, a0, a1, rho}` and hence zeroed under all four assignments.
+
+3. **Independent evaluation**: I wrote my own untruncated `Q[sigma,rho]` evaluator (transposed keys, naive powering, my own specialization table) plus a polynomial-free pure-number path at 10 random points. All 569 tails, all four sections, all seven rows: exact match with the claim, per-tail contribution records included. I also hand-verified the key sums, e.g. the A00 row-6 `(−4ρ⁶+σ⁵)³` expansion and the three graded cancellations (234−234=0 etc.), and the A10 row-7 sum `(−45+18+36−12)/128 = −3/128`.
+
+4. **Exhaustive output confirmed** exactly as displayed — and additionally nothing exists *above* grade 15 (homogeneity caps A00/A10 at three `σ⁵` factors; CS0 contributions top out at grade 12).
+
+5. **No hidden truncation**: after assignment everything is a finite polynomial; deeper jet names and delayed loads (even the shift-20 `k2` load invisible to V20's `MAX_DEGREE=14` window) are identically zeroed by the assignments themselves. The zeros are genuine cancellations, not vacuous — up to 63 individually-nonzero tails cancel per CS0 row.
+
+6. **Bridges and modular**: both V20 result files hash-match with the required status/characteristic/empty-section fields, and my computation independently *reproves* the bridged content (no `σ¹³/σ¹⁴` terms exist). All six modular residues recomputed and hand-checked (e.g. `22002·16 ≡ −1 mod 32003`).
+
+7. **Scope**: the producer's firewall is accurate — grade 15 kills only the two named horizontal points (rho-uniformly, which is the notable strength), and CS0/Z00 persistence makes deeper exports of *this* source family provably futile for those residuals, while claiming nothing about Rees/chart equations, arcs, or chart nonemptiness.
+
+One structural observation worth carrying forward (labeled as interpretation in the report): the source is `Q(x)²` plus corrections; Z00/CS0 stay perfect squares, while A00/A10 add `σ⁵(x²−ρ²)`-type non-square perturbations first detected at cubic order `σ¹⁵` — which makes the all-depth zeros structurally expected rather than accidental.

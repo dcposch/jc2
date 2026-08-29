@@ -1,7 +1,16 @@
 # SHEET6 CAMPAIGN — systematic td=6 case enumeration + bash (Sigray engine)
 
-Status: HISTORICAL PHASE-3 LEDGER (completed 2026-08-07; terminal-class
-checksum updated 2026-08-24). Phases 1-2 remain below as provenance. Phase 3 =
+Status: HISTORICAL PHASE-3 LEDGER (completed 2026-08-07; corrected
+2026-08-28).  The four single-pole and four two-pole classes below are the
+reviewed **nonroot/IV ledger**, not an exhaustive root/SF1 census: the old
+engines pruned root-signature `M=1` children, so their root counts remain
+withdrawn.  The later case-I window plus MP1+MP4+MP5/D5 excludes the entire
+`td=6,m=2` pole-chain root-meet branch analytically; broader post-jump/off-axis
+root and SF1 completeness remains open.  Actual-weight
+Corollary 7.1 and MFE restore selected-exit inequality budgets with shared
+suffixes counted once, but printed equation (22), the zero-`delta` ledger
+and MP8-style equality conclusions remain quarantined. Phases 1-2
+remain below as provenance. Phase 3 =
 AF2 derivation (SHEET6-AF2.md) + two-pole attack (SHEET6-2POLE.md) + entry-M
 pin (SHEET6-AF3.md) + L1 merged-pattern (SHEET6-L1.md), all promoted by
 SHEET6-A2P-REVIEW.md and SHEET6-A3L1-REVIEW.md. CANONICAL SURVIVOR BOOK:
@@ -12,16 +21,16 @@ single-pole: 4 r9/M2 terminal classes
 residue A only, funneled through the UNIQUE merged child (6,12,3,2,5)@lam0
 with rigid coefficient template (a1/a2 = 2+sqrt(3), unique up to scale),
 then branching to 4 two-pole terminal classes (2 slack-1, 2 slack-0).
-Thus the terminal-class book has **8 classes total**. "UNIQUE merged child"
+Thus the reviewed nonroot/IV book has **8 classes total**. "UNIQUE merged child"
 means one intermediate two-pole Q-datum, not one terminal class, one full
 configuration, or one global survivor.
 Errata found: E1-E10 (five proof-level). lam_root>=1 lemma REFUTED
 (SHEET6-LROOT.md): case IV's own hypothesis (0,y) not in V_2a forces
-lambda_root = 0 (single root direction — no branch separates at the root);
-the Prop 7.5 (22) ledger balances at 0 for all 8; book stays 8. Yield: all
-8 carriers forced to a SINGLE x-side cv cluster (kappa=1, unsplit below
-height R); slack-0 classes totally budget-rigid (delta_a = 0 on EVERY
-fiber). The coefficient-level lift subsequently survived and was promoted as
+lambda_root = 0 in the identified local exit allocation (single root
+direction).  The former deductions that printed (22) balances exactly at
+zero, that every carrier has only one global cv cluster, and that
+`delta_a=0` on every fibre are withdrawn: Corollary 7.1 supplies an
+inequality, not that equality ledger. The coefficient-level lift subsequently survived and was promoted as
 a FORMAL-CANDIDATE by SHEET6-LT-REVIEW.md; it is not still a pending lift.
 The exact analytic equality control in
 `xmodel/d73-strict-or-equality-20260824.md` shows that direction multiplicity
@@ -39,9 +48,11 @@ REDUCTION.md, AUDIT.md, and APPROACHES.md.
   {1,4,5,7,10}.
 - Notation 9.1: Q(F) = (D_F, deg p_F, ν_F, M_F, κ̄_F), κ̄ := κ_F(1−π(F)). St 9.1:
   pole vertices have κ̄ = D_F + D_g,F. St 9.2: at root (0,y): D=d, ν=1, κ̄=1.
-- Prop 9.2/St 9.5: characteristic sequence F0=pole → F_{i+1}=F_i° → (0,y), finite;
-  Σ λ_{F_i} ≤ td−2 (St 9.4 via Cor 7.1). Prop 8.4 (REQUIRES Ta,pole singleton):
-  M_F ≠ 1 for every F in the tree ⇒ any M=1 outcome kills the chain.
+- Prop 9.2/St 9.5: characteristic sequence F0=pole → F_{i+1}=F_i° → (0,y), finite.
+  Actual-weight Cor 7.1 applied to disjoint first-separation exits repairs
+  `Σlambda_(F_i) <= td-2`. Corrected Prop 8.4 (singleton-pole hypothesis)
+  gives `M_F!=1` only at certified **nonroot** down vertices; it gives no
+  root kill.
 - Prop 9.3: per step G=F+c, exactly one of cases I / II / III / IV; (a)-(d) give for
   I,II: deg(p)/deg(q) = (D_G+n·deg p_G)/(i(κ̄_G+n)), i := deg(p_G)/mult(p,c);
   D_F = (D_G+n·deg p_G)/ν_G; κ̄_F = (κ̄_G+n)/ν_G ∈ N (⇒ n ≡ −κ̄_G mod ν_G);
@@ -50,10 +61,19 @@ REDUCTION.md, AUDIT.md, and APPROACHES.md.
   (m) d_F·M_G/deg p_G ∈ N. Verified (k) reproduces 9.7(iii)/9.9(iii)/9.10(iii)
   terminals exactly ((4s+3)²j/(4s+3) etc.).
 - Root-pattern template (extracted from all six proofs of St 9.6-9.11; St 8.4:
-  mult(p,c)=:μ | M_G, regularity ⇒ μ = max mult): μ=1 ⇒ M_F=gcd(ν,nν+1)=1 KILL.
-  Case I and II(b) and III: M_F | gcd(μ−1, ·) ⇒ μ=2 gives M_F=1 KILL; μ≥3 gives
-  λ_F ≥ 1 (regularity argument). Case II(a): p=(η^ν−c^ν)^μ·Π_k, deg p=(k+μ)ν,
-  deg q=(k+l+1)ν+1; k>0 ⇒ l=0 (St 8.2); k=0 ⇒ l ≥ 0 free. Solve ratio eq with
+  mult(p,c)=:μ | M_G; for an alternative root of multiplicity at least μ,
+  Prop 6.7 makes its realizable microstep positive, the raw St 6.2 inequality
+  makes it down, and repaired Prop 6.8 carries it to the next down vertex
+  (`c3d6ff92...`, sweep r2 `581219e0...`), contradicting regularity.  Hence
+  μ = max mult): μ=1 ⇒ M_F=gcd(ν,nν+1)=1.  This is an NR-M1 kill only
+  after constructing the child; the `nu_F=1` member may be the root and must
+  be recorded.  In case I / II(b) / III, `M_F | gcd(mu-1,...)`; for `mu=2`,
+  IIb and III force `nu_F>=2` and are NR-M1, while case I can reach the root.
+  For `mu>=3`, lambda_F≥1 (regularity argument). Case II(a): p=(eta^nu-c^nu)^mu·Pi_k, deg p=(k+mu)nu,
+  deg q=(k+l+1)ν+1. In the `mu=2` IIa branches solved below, nonroot
+  regularity and St 8.2 force `l=0`; in general `k>0` supplies positive
+  exit charge rather than a universal `l=0` theorem. St 8.2 is not used at
+  the root. For k=0, l ≥ 0 is free. Solve the ratio equation with
   n = n0+m·ν_G. λ-rule (REVERSE-ENGINEERED, audit flag AF2 below): each of the k
   extra roots contributes max(1, D_F/i − κ̄_F); matches all six lemmas
   (9.6: λ≥2,3,2 for (A),(B),(C); k=0 ⇒ λ=0; 9.11: λ≥2,2).
@@ -83,8 +103,9 @@ REDUCTION.md, AUDIT.md, and APPROACHES.md.
 ## 0c. Phase-1 standing hypotheses and later dispositions
 
 - H1: Prop 9.3 case split + (a)-(m) arithmetic correct (foundations audit pending).
-- H2: chain kills = {M=1 via Prop 8.4 (single-pole only), λ-budget via St 9.4,
-  no-applicable-case}; AF2: λ-rule as reverse-engineered above.
+- H2 (repaired, no longer a reading convention): chain kills = {certified
+  nonroot `M=1` via Prop 8.4, first-separation EXIT budget via actual-weight
+  Cor 7.1/St 9.4, no-applicable-case}; AF2: λ-rule as derived above.
 - H3 (historical only): blanket case-IV root kill. **REFUTED** by
   SHEET6-H3.md/SHEET6-LROOT.md; replaced where applicable by H3q, while the
   eight canonical terminal classes survive the resulting ledger.
@@ -168,7 +189,8 @@ I → (1,1,2,3) λ≥3; III k=1 ν-family (1/2, 45+54t, 2, 23+27t) λ≥1 → IV
 ## 4. λ-budget & assembly (Σλ ≤ td−2 = 4)
 
 BFS over chains (Prop 9.2 characteristic sequence), state = (Q-shape, Σλ):
-- kills: child M_F=1 (Prop 8.4; single-pole only), Σλ > 4 (St 9.4/9.5), and every
+- kills: a child `M_F=1` only after it is certified nonroot (corrected Prop
+  8.4; single-pole only), Σλ > 4 (repaired St 9.4/9.5), and every
   λ≥1-costing branch is pruned unsolved when remaining budget < 1 (I/IIa_k/IIb/III
   all cost λ ≥ 1 per AF2+ceil; only IIa_0 (k=0) is free).
 - λ uses ceil(D_F/i − κ̄_F) per extra root (κ_H(π(H)−1) ∈ N, St 9.4 proof line).
@@ -224,14 +246,17 @@ decides which tails enter the canonical book.
 
 ## 6. Historical open list and superseding dispositions
 
-Current terminal-class endpoint: eight classes; `lambda_root=0`; a unique
+Current reviewed nonroot/IV endpoint: eight classes; local
+`lambda_root=0`; a unique
 two-pole merged datum but four two-pole terminal classes; and a reviewed
 formal-candidate coefficient template.  A multiple direction collision can
 attain equality in the local delta bound, so that cheap strictness attack is
 retired. The coefficient path continues through the reviewed R6/deeper-tower
 window and redesigned R1 toward global template realizability/opposite-side
-balance and algebraization. The campaign-level gaps are full
-landing/coverage plus G2-PSC and G2-BD.
+balance and algebraization. Legacy root-signature counts are not evidence;
+the case-I window removes the enumerated all-`M=1` root layer without a
+census, while post-jump/off-axis root/SF1 coverage remains open. The campaign-level
+gaps are full landing/coverage plus G2-PSC and G2-BD.
 The numbered phase-1 list is retained below with dispositions so it cannot be
 mistaken for the launch queue.
 
@@ -271,9 +296,11 @@ mistaken for the launch queue.
    sanction (or bashing the superset tails) closes it.
    **RESOLVED (SHEET6-AF3.md)**: sanction REFUTED — thesis pins M =
    gcd(deg p, deg p_g) exactly (Not 8.1 + Prop 5.1(iii), table (23)); r9→M2
-   (the "ext" value) is forced, r8→M3, all other rows entry-dead (M=1 vs
-   Prop 8.4, any td ≤ 6). Single-pole td6 = 4 r9/M2 classes, unconditional
-   at entry; td≤5 residual 0 independent of AF2. Engine: hiii_compose `pin`.
+   (the "ext" value) is forced, r8→M3, all other rows entry-dead (nonroot
+   pole `M=1` vs corrected Prop 8.4, any td ≤ 6). Single-pole td6 has four
+   r9/M2 nonroot-IV classes, unconditional at entry; the reviewed Section 9
+   reconstruction closes td≤5 using actual-weight Cor 7.1. Engine:
+   hiii_compose `pin` (historical IV output; not a current root census).
 7. **mu-completeness at entries (M-pin makes the menu issue MOOT here)**: μ | M with M from the menu; if pole-vertex M can
    exceed deg p_F divisors (j-rescaling), larger μ become possible. All μ ≥ 7
    branches die instantly in spot checks (ratio > deg-bound), but a uniform μ-bound

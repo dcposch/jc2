@@ -1,0 +1,18 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review complete. Report written to `xmodel/max12-812-order2-p0-total-rees-allrows-g13-g14-v20-hostile-review-opus5-20260827.md` (sha256 `8665e43c…`). No other campaign file was touched; the case tree re-verifies against `FREEZE.sha256` (12/12) after the review.
+
+## Verdict: CONFIRMED WITH REPAIRS
+
+**What I could not break.** Every number in the producer report is exactly right.
+
+- **Custody:** all six claimed hashes reproduce; 62/62 evidence entries rehash after remapping the remote `/home/ubuntu/jobs/<tag>/source/...` prefixes onto `aws_q_v20/`, `aws_p65521_v20/`; no local file is missing from either manifest.
+- **Clean-room replication:** I re-implemented the arithmetic with different data structures and recomputed all seven rows at grades 0–14 (15.5 s, 35 MB, bounded). It reproduces all **14 exported coefficients byte-for-byte in both characteristics**, all 42 V9 comparisons, and the V17 `Tg14_5` bytes.
+- **Sections:** I evaluated them myself, twice (own parser, own engine). 56/56 zero as claimed — and in fact **420/420** across grades 0–14, vanishing *termwise*, no cancellation.
+- **Positive control the producer didn't supply:** the same evaluator *does* return nonzero on six other one-name sections (`c0,c1` at grade 10; `e0,e1` at 12; `ee0,ee1` at 14, each `3/32·ρ^{0,2}`). The test is not vacuous.
+- **Engine:** I replayed both frozen `.sing` locally — stdout hash `9765b765…` byte-identical to AWS — and mutation probes confirm all five guard classes fire.
+
+**New structural result:** at grades 13–14 *no single tail expansion* contributes a surviving monomial, so the section verdict there is independent of all 569 rational tail coefficients; at grades ≤ 12 it holds only after exact cancellation.
+
+**Five repairs (none changes a number):** (R1) the two "characteristics" are one exact-Q computation printed twice; (R2) the four `V20_SECTION_*` flags are unguarded echoes — the decisive claim had zero engine coverage; (R3) the "separate restricted-AST replay" counters have no artifact anywhere in the frozen or harvested trees; (R4) the inference needed grades 0–9, never checked — I closed it (identically zero); (R5) latent, untriggered `coefficient_term_counts` defect in the mod-p lane.
+
+The inference stands within its model: the first grade at which this source could break `CS0`/`A00`/`A10`/`Z00` is ≥ 15. It is an exported-prefix, degree-14-truncated, seven-row statement — not a formal source arc, not ideal membership, and it says nothing about Gate T, order two, maximum twelve, or JC2.

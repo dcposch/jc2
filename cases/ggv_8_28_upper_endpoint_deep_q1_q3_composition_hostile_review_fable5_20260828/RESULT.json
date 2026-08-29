@@ -1,0 +1,52 @@
+{
+  "case": "ggv_8_28_upper_endpoint_deep_q1_q3_composition_hostile_review_fable5_20260828",
+  "date": "2026-08-28",
+  "reviewer": "fable5-independent-different-model",
+  "target": {
+    "path": "xmodel/ggv-upper-endpoint-deep-q1-q3-composition-sol-ultra-20260828.md",
+    "sha256": "6958c3986022e28484ea1a0a15a0b09a562dbd94cc2154ade4fe6dbc35000715"
+  },
+  "verdict": "REPAIR",
+  "verdict_detail": "All displayed identities (1)-(5),(8)-(14) CONFIRMED by exact symbolic recomputation; two wording/scope repairs (D1 normalization factor 512, D2 unjustified localization K[X,1/A]) and one hypothesis-completeness note (D3: A|T unnamed); no conclusion changes.",
+  "items": {
+    "1_licensing_firewall": "CONFIRMED (q1 needs D23=0, q3 needs D23=D24=D25=0, per R7R1 n+22<N; nothing from D0..D22 alone)",
+    "2_q1_parametrization": "CONFIRMED (R0=lambda*A, V0=3lambda*A*A', S=3lambda*A'; T_A bridge F1=T_A(A^2 R0); squarefree kernel dim 1 vs 4 control)",
+    "3_q3_coefficient": "CONFIRMED (Lagrange q_n=2/(n+2)[t^n]F^((n+2)/8) reproved n=1,2,3; coefficients 1/4,-3/32,11/512 extracted independently; N=S^3+A(16U-2SQ); sheet p^2=-A gives identical rational ODE)",
+    "4_exactness_ode": "CONFIRMED as equation; REPAIR D1: correct primitive is pC/256, not 'p*c/512 with C=256c' (off by exactly 512)",
+    "5_polynomiality_degrees": "CONFIRMED with REPAIR D2 (poles away from A must be excluded first, -2m*A(beta) coefficient); (1-2m)A'(alpha) at simple roots verified; deg N<=9 from windows deg F_n<=16-n; leading (2d+4)lc(C); deg C<=6",
+    "6_c_structure_13": "CONFIRMED (C=27lam^3(A')^2+Ar, deg r<=2; identity (13) verified in all 11 parameters)",
+    "7_d12_composition": "CONFIRMED (consumes only reviewed exact-D=0,c2!=0 A|(QS+4U); exact factorization -3A'(r+6lamQ+36lam^3A''); degree <=2<4; formulas (3),(4); A|L exact quotient)",
+    "8_lambda0_and_controls": "CONFIRMED (lambda=0 => S=U=0; alternate double-divisibility route verified, constants 3,16 only; control U=48A', C=256A passes q3 with U!=0 and fails D12)",
+    "9_scope": "CONFIRMED (char 0, base-extension stable, radical sheet harmless, exact-D=0 c2!=0 only; no promotion to scheme membership, branch emptiness, endpoint exclusion, Keller, or JC2)"
+  },
+  "defects": [
+    {"id": "D1", "class": "normalization-repair", "text": "primitive wording 'p*c/512, C=256c' inconsistent with ODE 2AC'+A'C=N by factor 512; correct primitive pC/256", "impact": "none (presentation only)"},
+    {"id": "D2", "class": "localization-gap-repair", "text": "(11) asserts C in K[X,1/A] a priori; needs pole exclusion away from A (-2m*A(beta) leading coefficient) before the (1-2m)A'(alpha) step", "impact": "none after one-line repair"},
+    {"id": "D3", "class": "hypothesis-completeness-note", "text": "deep condition A|T (T=AU) is used via prefix (6) and the consumed D12 atom but not named in section 1", "impact": "none (embedded in displayed prefix)"}
+  ],
+  "checker": {
+    "path": "xmodel/ggv-upper-endpoint-deep-q1-q3-composition-hostile-review-fable5-20260828-check.py",
+    "sha256": "55f4f84686d3e11a7ae706d5f5b102f43caca4ce54b151d431df6634189d88a5",
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -B xmodel/ggv-upper-endpoint-deep-q1-q3-composition-hostile-review-fable5-20260828-check.py",
+    "exit_code": 0,
+    "sections_pass": 32,
+    "mutations_detected": ["S2b 11/512->12/512", "S2c -3/32->-1/8", "S5b ODE normalization factor 512", "S13c D12 omission", "S14a 9lam^3/2->9lam^3/4", "S14b 6lam^2->3lam^2"],
+    "controls": ["S6b non-squarefree A=X^4 rational solution C=1/X", "S8d q1 kernel dim 1 vs 4", "S13a-b U=48A' passes q3, fails D12"],
+    "output_log_sha256": "7f696647afac605145f58dcf7e5b0520c2d33dfa8d950b0d6086d7a7174b55be",
+    "output_tail": "OVERALL: ALL 32 CHECKS PASS (6 mutations detected; squarefree and D12 load-bearing controls held)"
+  },
+  "frozen_inputs": [
+    {"path": "xmodel/ggv-upper-endpoint-deep-q1-q3-composition-sol-ultra-20260828.md", "sha256": "6958c3986022e28484ea1a0a15a0b09a562dbd94cc2154ade4fe6dbc35000715"},
+    {"path": "xmodel/ggv-upper-endpoint-active-c2-d8-d15-hostile-review-fable5-20260828.md", "sha256": "042dbacdd4d7fe6e014ccfb7d82d030e633e4a1291a313b9d022d1b78e4e36a8"},
+    {"path": "xmodel/ggv-upper-endpoint-active-c2-d8-d15-hostile-review-fable5-20260828-check.py", "sha256": "505cfd93279ffe8189d25a681b8490ba71edbc5567bc5eecea70e0e2bfc52796"},
+    {"path": "xmodel/ggv-quarter-root-characteristic-de-rham-tower-r7r1-sol-20260827.md", "sha256": "9d35c678cfc257c5c518f87c19df25942cbaca3b5aa8186a22507f1f1e1f3ae1"},
+    {"path": "xmodel/ggv-quarter-root-characteristic-de-rham-tower-r7r1-hostile-review-fable5-20260827.md", "sha256": "7ab758fa002c75cd28d81540e8f63fd8cd0de97fad791afedfeb5fb610c6cb29"},
+    {"path": "xmodel/ggv-survivor-q1-q2-de-rham-gates-fable5-hostile-review-opus5-20260827.md", "sha256": "46736edc8aa391e50d3c6a1604937bcad85361c25c25f9e3b4c184e19f8afed1"}
+  ],
+  "custody": {
+    "addendum_not_read": "xmodel/ggv-upper-endpoint-deep-q1-composition-addendum-r1-sol-ultra-20260828.md",
+    "jc2_lean_untouched": true,
+    "frozen_inputs_unmodified": true,
+    "producer_checkers_imported": false
+  }
+}

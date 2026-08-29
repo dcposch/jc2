@@ -1,0 +1,64 @@
+You are Grok 4.6 acting as an independent hostile mathematical reviewer in the
+plane Jacobian conjecture campaign. Work in /Users/dc/code/math/jc2.
+
+Audit the proposed uniform complete-fixture characteristic cascade through
+D10--D13. The charged artifacts are:
+
+  e24eb71b8df1a4c93fb4d156e2dd5084e53abccd332e793aaa584307e6d32a29
+    xmodel/ggv-upper-endpoint-uniform-d10-d11-fullmodes-independent-sol-ultra-20260828.md
+  8ebe5f4f099e6cf15b0a4703dfb348aa6cc72df8fdbc60b1d095925fa3746d21
+    cases/ggv_8_28_upper_endpoint_uniform_d10_fullmodes_audit_20260828/verify_uniform_d10.py
+  8ff338bdd47b7a53ba1515a7889823620120f92d718a03349fb9e3fd27014236
+    cases/ggv_8_28_upper_endpoint_uniform_d10_fullmodes_audit_20260828/RESULT.json
+  e0f9037a7ca005a58b779ecce341ccbb3c349c0dfcbdf9a0e79c120624ad0047
+    xmodel/ggv-upper-endpoint-uniform-d12-d13-fullmodes-sol-ultra-20260828.md
+  e5e2543ca50fc48623ccccf34f548f6171e79b31e6f80c8cfe6f5ca2b6798879
+    cases/ggv_8_28_upper_endpoint_uniform_d12_d13_fullmodes_20260828/verify_uniform_d12_d13.py
+  06ca0152a7d05dd7b4549e74138b482fc572a62acae718751e7230577c5f28c8
+    cases/ggv_8_28_upper_endpoint_uniform_d12_d13_fullmodes_20260828/RESULT.json
+
+Authoritative literal raw source:
+
+  ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0
+    cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json
+
+Contextual dependency D8/D9 is provisional and under a separate hostile
+review. Reconstruct it as needed, but make your verdict on D10--D13 explicit
+and conditional if that dependency fails.
+
+Required hostile review:
+
+1. Verify all hashes and independently reconstruct the relevant raw rows and
+   Laurent recurrence; do not merely run or trust producer checkers.
+2. Audit the complete nine-mode causality
+   c4,c6,c8,c10,c12,c14,c16,c18,c20. Later modes may have no causal support
+   yet, but may not be silently omitted. Replay at least one literal gauge
+   point requiring nonzero c16.
+3. Check the honest cross terms and exact causal order:
+
+     D10: A | Delta5,  Delta5=F5-R/2-ZV/64; no mode kill.
+     D11: after Delta5=A*S, first A|S, then c10=0; hence
+          F5=R/2+ZV/64+A^2 Q.
+     D12: A | Delta6,
+          Delta6=F6-Q/2-RZ/8-V^2/256; no mode kill.
+     D13: after Delta6=A*S, A|S and no further pole/mode kill; hence
+          F6=Q/2+RZ/8+V^2/256+A^2 T.
+
+4. Independently verify each raw congruence, sign, power of A, and the use of
+   squarefreeness/characteristic zero. Search for missing order-one terms or
+   allowed characteristic cancellations after each divisibility substitution.
+5. Replay or replace live source-level mutations, especially omission of
+   ZV/64 and the all-cross-term Delta6 regression. Attempt to falsify each row.
+6. Enforce scope: characteristic-zero field points of the complete fixed
+   303-variable fixture only; no scheme divisibility, endpoint emptiness,
+   unrestricted branch-P, Keller-pair, or JC2 inference.
+
+Give a separate PASS/REPAIR/FAIL verdict for D10, D11, D12, and D13 and one
+overall verdict. Write a self-contained report to:
+
+  xmodel/ggv-upper-endpoint-uniform-d10-d13-fullmodes-hostile-review-grok46-20260828.md
+
+End with SHA-256 values for every charged artifact, your report body/file,
+and each new checker. Do not edit canonical top-level files. Do not access,
+list, search, build, status, or modify jc2-lean. Use only light local exact
+arithmetic; no heavy local CAS.

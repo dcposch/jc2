@@ -1,0 +1,2013 @@
+{
+  "baseline_count": 12,
+  "chamber_records_sha256": "ecd642fe8360d95a38e5c33e564fd21541087ef4624b2c9dd482d2b8617eeb43",
+  "chambers": [
+    {
+      "G": 14,
+      "T_C2": 16,
+      "a": 1,
+      "active_facets": [
+        {
+          "kind": "RA2",
+          "primitive": {
+            "A": 2,
+            "C": 0,
+            "R": 1,
+            "coefficient": "-3/8",
+            "fixed_sigma": 12,
+            "load": null,
+            "pole": 2,
+            "summand": "unloaded"
+          },
+          "r_bound": 3,
+          "rhs": 16
+        }
+      ],
+      "c": 3,
+      "class": "raised_subtail",
+      "d": 2,
+      "endpoint_authority_sha256": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da",
+      "endpoint_id": "D23_LOW_A6",
+      "endpoint_review_sha256": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3",
+      "id": "A1D2_R3",
+      "inventory": [
+        {
+          "A": 2,
+          "C": 0,
+          "R": 0,
+          "coefficient": "5/32",
+          "first_grade": 16,
+          "fixed_sigma": 14,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 16,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 14,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "29b323c67a87c866f31b2dc1e180c6e54fbc933ccafee47ebe63017f31081308",
+      "predecessor": {
+        "r": 2,
+        "reasons": [
+          "RA2"
+        ],
+        "witnesses": {
+          "RA2": [
+            {
+              "A": 2,
+              "C": 0,
+              "R": 1,
+              "coefficient": "-3/8",
+              "first_grade": 16,
+              "fixed_sigma": 12,
+              "load": null,
+              "pole": 2,
+              "summand": "unloaded"
+            }
+          ]
+        }
+      },
+      "presburger_clause": "a=1 and d=2 and c=3 and r>=3",
+      "primitive_count": 3,
+      "r_min": 3,
+      "registered_r0": 2,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 15,
+      "T_C2": 16,
+      "a": 2,
+      "active_facets": [
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 0,
+            "R": 3,
+            "coefficient": "5/16",
+            "fixed_sigma": 10,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 2,
+          "rhs": 15
+        },
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 1,
+            "R": 1,
+            "coefficient": "5/8",
+            "fixed_sigma": 11,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 2,
+          "rhs": 15
+        },
+        {
+          "kind": "OTHER_GLOBAL_POLE",
+          "primitive": {
+            "A": 0,
+            "C": 0,
+            "R": 4,
+            "coefficient": "-5/128",
+            "fixed_sigma": 12,
+            "load": "k10",
+            "pole": 3,
+            "summand": "k10"
+          },
+          "r_bound": 2,
+          "rhs": 16
+        }
+      ],
+      "c": 3,
+      "class": "baseline",
+      "d": 1,
+      "endpoint_authority_sha256": "973f7953d42fdd994d9c7da8ea70fceffc2e8da9002b33f38ea1a17c6922d6d1",
+      "endpoint_id": "D1_A2_A5",
+      "endpoint_review_sha256": "e03de4e1fc1816a7141c6bb8060b4a75c2a6b5a08ea4d56ca63582b875cad335",
+      "id": "A2D1",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 0,
+          "R": 3,
+          "coefficient": "5/16",
+          "first_grade": 16,
+          "fixed_sigma": 10,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 16,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 16,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 15,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "c254b7dc20a7fd27a17089f7828099b6b7608414029e0d4d1691be42cf719efc",
+      "predecessor": null,
+      "presburger_clause": "a=2 and d=1 and c=3 and r>=2",
+      "primitive_count": 4,
+      "r_min": 2,
+      "registered_r0": 2,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 16,
+      "T_C2": 18,
+      "a": 2,
+      "active_facets": [
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 0,
+            "R": 3,
+            "coefficient": "5/16",
+            "fixed_sigma": 10,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 3,
+          "rhs": 16
+        },
+        {
+          "kind": "RA2",
+          "primitive": {
+            "A": 2,
+            "C": 0,
+            "R": 1,
+            "coefficient": "-3/8",
+            "fixed_sigma": 12,
+            "load": null,
+            "pole": 2,
+            "summand": "unloaded"
+          },
+          "r_bound": 3,
+          "rhs": 18
+        }
+      ],
+      "c": 4,
+      "class": "baseline",
+      "d": 2,
+      "endpoint_authority_sha256": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da",
+      "endpoint_id": "D23_LOW_A6",
+      "endpoint_review_sha256": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3",
+      "id": "A2D2",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 18,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 2,
+          "C": 0,
+          "R": 0,
+          "coefficient": "5/32",
+          "first_grade": 18,
+          "fixed_sigma": 14,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 18,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 16,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "aa76089b220cdd27e817db51eb855d29074eb429ed6e42eaecbb3d19ce31b234",
+      "predecessor": null,
+      "presburger_clause": "a=2 and d=2 and c=4 and r>=3",
+      "primitive_count": 4,
+      "r_min": 3,
+      "registered_r0": 3,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 17,
+      "T_C2": 20,
+      "a": 2,
+      "active_facets": [
+        {
+          "kind": "RA2",
+          "primitive": {
+            "A": 2,
+            "C": 0,
+            "R": 1,
+            "coefficient": "-3/8",
+            "fixed_sigma": 12,
+            "load": null,
+            "pole": 2,
+            "summand": "unloaded"
+          },
+          "r_bound": 5,
+          "rhs": 20
+        }
+      ],
+      "c": 5,
+      "class": "raised_subtail",
+      "d": 3,
+      "endpoint_authority_sha256": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da",
+      "endpoint_id": "D23_LOW_A6",
+      "endpoint_review_sha256": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3",
+      "id": "A2D3_R5",
+      "inventory": [
+        {
+          "A": 2,
+          "C": 0,
+          "R": 0,
+          "coefficient": "5/32",
+          "first_grade": 18,
+          "fixed_sigma": 14,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 20,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 17,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "f97dad19f583a482af962f32b7f9f87ea8c98ce551ddd144476fd23394c18c10",
+      "predecessor": {
+        "r": 4,
+        "reasons": [
+          "RA2"
+        ],
+        "witnesses": {
+          "RA2": [
+            {
+              "A": 2,
+              "C": 0,
+              "R": 1,
+              "coefficient": "-3/8",
+              "first_grade": 20,
+              "fixed_sigma": 12,
+              "load": null,
+              "pole": 2,
+              "summand": "unloaded"
+            }
+          ]
+        }
+      },
+      "presburger_clause": "a=2 and d=3 and c=5 and r>=5",
+      "primitive_count": 3,
+      "r_min": 5,
+      "registered_r0": 3,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 17,
+      "T_C2": 18,
+      "a": 3,
+      "active_facets": [
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 0,
+            "R": 3,
+            "coefficient": "5/16",
+            "fixed_sigma": 10,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 3,
+          "rhs": 17
+        },
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 1,
+            "R": 1,
+            "coefficient": "5/8",
+            "fixed_sigma": 11,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 3,
+          "rhs": 17
+        }
+      ],
+      "c": 4,
+      "class": "baseline",
+      "d": 1,
+      "endpoint_authority_sha256": "973f7953d42fdd994d9c7da8ea70fceffc2e8da9002b33f38ea1a17c6922d6d1",
+      "endpoint_id": "D1_A2_A5",
+      "endpoint_review_sha256": "e03de4e1fc1816a7141c6bb8060b4a75c2a6b5a08ea4d56ca63582b875cad335",
+      "id": "A3D1",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 18,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 18,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 17,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "53540a57526c76317df74d21bd05ed49f8b13ec8c1d32eaaf55c69a1d946825f",
+      "predecessor": null,
+      "presburger_clause": "a=3 and d=1 and c=4 and r>=3",
+      "primitive_count": 3,
+      "r_min": 3,
+      "registered_r0": 3,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 18,
+      "T_C2": 20,
+      "a": 3,
+      "active_facets": [
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 0,
+            "R": 3,
+            "coefficient": "5/16",
+            "fixed_sigma": 10,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 3,
+          "rhs": 18
+        },
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 1,
+            "R": 1,
+            "coefficient": "5/8",
+            "fixed_sigma": 11,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 3,
+          "rhs": 18
+        },
+        {
+          "kind": "OTHER_GLOBAL_POLE",
+          "primitive": {
+            "A": 0,
+            "C": 0,
+            "R": 4,
+            "coefficient": "-5/128",
+            "fixed_sigma": 12,
+            "load": "k10",
+            "pole": 3,
+            "summand": "k10"
+          },
+          "r_bound": 3,
+          "rhs": 20
+        },
+        {
+          "kind": "OTHER_GLOBAL_POLE",
+          "primitive": {
+            "A": 1,
+            "C": 0,
+            "R": 2,
+            "coefficient": "-5/32",
+            "fixed_sigma": 13,
+            "load": "k10",
+            "pole": 2,
+            "summand": "k10"
+          },
+          "r_bound": 3,
+          "rhs": 20
+        },
+        {
+          "kind": "RA2",
+          "primitive": {
+            "A": 2,
+            "C": 0,
+            "R": 1,
+            "coefficient": "-3/8",
+            "fixed_sigma": 12,
+            "load": null,
+            "pole": 2,
+            "summand": "unloaded"
+          },
+          "r_bound": 3,
+          "rhs": 20
+        }
+      ],
+      "c": 5,
+      "class": "baseline",
+      "d": 2,
+      "endpoint_authority_sha256": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da",
+      "endpoint_id": "D23_LOW_A6",
+      "endpoint_review_sha256": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3",
+      "id": "A3D2",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 0,
+          "R": 3,
+          "coefficient": "5/16",
+          "first_grade": 19,
+          "fixed_sigma": 10,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 19,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 2,
+          "C": 0,
+          "R": 0,
+          "coefficient": "5/32",
+          "first_grade": 20,
+          "fixed_sigma": 14,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 20,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 18,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "de715f626f76f882344c1e5aae8bab6498af5481275e81faea5618361829a81a",
+      "predecessor": null,
+      "presburger_clause": "a=3 and d=2 and c=5 and r>=3",
+      "primitive_count": 5,
+      "r_min": 3,
+      "registered_r0": 3,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 19,
+      "T_C2": 22,
+      "a": 3,
+      "active_facets": [
+        {
+          "kind": "RA2",
+          "primitive": {
+            "A": 2,
+            "C": 0,
+            "R": 1,
+            "coefficient": "-3/8",
+            "fixed_sigma": 12,
+            "load": null,
+            "pole": 2,
+            "summand": "unloaded"
+          },
+          "r_bound": 5,
+          "rhs": 22
+        }
+      ],
+      "c": 6,
+      "class": "raised_subtail",
+      "d": 3,
+      "endpoint_authority_sha256": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da",
+      "endpoint_id": "D23_LOW_A6",
+      "endpoint_review_sha256": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3",
+      "id": "A3D3_R5",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 22,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 2,
+          "C": 0,
+          "R": 0,
+          "coefficient": "5/32",
+          "first_grade": 20,
+          "fixed_sigma": 14,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 22,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 19,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "9f132a5d1e3a46cbecf67ae8c594ad5d31358a97e8cf0533395bc57f77b91892",
+      "predecessor": {
+        "r": 4,
+        "reasons": [
+          "RA2"
+        ],
+        "witnesses": {
+          "RA2": [
+            {
+              "A": 2,
+              "C": 0,
+              "R": 1,
+              "coefficient": "-3/8",
+              "first_grade": 22,
+              "fixed_sigma": 12,
+              "load": null,
+              "pole": 2,
+              "summand": "unloaded"
+            }
+          ]
+        }
+      },
+      "presburger_clause": "a=3 and d=3 and c=6 and r>=5",
+      "primitive_count": 4,
+      "r_min": 5,
+      "registered_r0": 4,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 19,
+      "T_C2": 20,
+      "a": 4,
+      "active_facets": [
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 0,
+            "R": 3,
+            "coefficient": "5/16",
+            "fixed_sigma": 10,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 4,
+          "rhs": 19
+        },
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 1,
+            "R": 1,
+            "coefficient": "5/8",
+            "fixed_sigma": 11,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 4,
+          "rhs": 19
+        }
+      ],
+      "c": 5,
+      "class": "baseline",
+      "d": 1,
+      "endpoint_authority_sha256": "973f7953d42fdd994d9c7da8ea70fceffc2e8da9002b33f38ea1a17c6922d6d1",
+      "endpoint_id": "D1_A2_A5",
+      "endpoint_review_sha256": "e03de4e1fc1816a7141c6bb8060b4a75c2a6b5a08ea4d56ca63582b875cad335",
+      "id": "A4D1",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 20,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 20,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 19,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "4908328a28e1e94a9590c2e44f380aa7494bc23f8be5b79923d76105bf93de62",
+      "predecessor": null,
+      "presburger_clause": "a=4 and d=1 and c=5 and r>=4",
+      "primitive_count": 3,
+      "r_min": 4,
+      "registered_r0": 4,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 20,
+      "T_C2": 22,
+      "a": 4,
+      "active_facets": [
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 0,
+            "R": 3,
+            "coefficient": "5/16",
+            "fixed_sigma": 10,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 4,
+          "rhs": 20
+        },
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 1,
+            "R": 1,
+            "coefficient": "5/8",
+            "fixed_sigma": 11,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 4,
+          "rhs": 20
+        }
+      ],
+      "c": 6,
+      "class": "baseline",
+      "d": 2,
+      "endpoint_authority_sha256": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da",
+      "endpoint_id": "D23_LOW_A6",
+      "endpoint_review_sha256": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3",
+      "id": "A4D2",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 0,
+          "R": 3,
+          "coefficient": "5/16",
+          "first_grade": 22,
+          "fixed_sigma": 10,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 21,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 2,
+          "C": 0,
+          "R": 0,
+          "coefficient": "5/32",
+          "first_grade": 22,
+          "fixed_sigma": 14,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 22,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 20,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "955f3ef6fe18831fd7afdc52ae515a9fda6117b929e0671e2be1e4b8647eed87",
+      "predecessor": null,
+      "presburger_clause": "a=4 and d=2 and c=6 and r>=4",
+      "primitive_count": 5,
+      "r_min": 4,
+      "registered_r0": 4,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 21,
+      "T_C2": 24,
+      "a": 4,
+      "active_facets": [
+        {
+          "kind": "RA2",
+          "primitive": {
+            "A": 2,
+            "C": 0,
+            "R": 1,
+            "coefficient": "-3/8",
+            "fixed_sigma": 12,
+            "load": null,
+            "pole": 2,
+            "summand": "unloaded"
+          },
+          "r_bound": 5,
+          "rhs": 24
+        }
+      ],
+      "c": 7,
+      "class": "raised_subtail",
+      "d": 3,
+      "endpoint_authority_sha256": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da",
+      "endpoint_id": "D23_LOW_A6",
+      "endpoint_review_sha256": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3",
+      "id": "A4D3_R5",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 23,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 2,
+          "C": 0,
+          "R": 0,
+          "coefficient": "5/32",
+          "first_grade": 22,
+          "fixed_sigma": 14,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 24,
+          "fixed_sigma": 17,
+          "load": "k6",
+          "pole": 1,
+          "summand": "k6"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 24,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 21,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "33be0e94c5582aba422fe0facff4dd51bbd01a9029c54e18b9505b0bac011bd0",
+      "predecessor": {
+        "r": 4,
+        "reasons": [
+          "RA2"
+        ],
+        "witnesses": {
+          "RA2": [
+            {
+              "A": 2,
+              "C": 0,
+              "R": 1,
+              "coefficient": "-3/8",
+              "first_grade": 24,
+              "fixed_sigma": 12,
+              "load": null,
+              "pole": 2,
+              "summand": "unloaded"
+            }
+          ]
+        }
+      },
+      "presburger_clause": "a=4 and d=3 and c=7 and r>=5",
+      "primitive_count": 5,
+      "r_min": 5,
+      "registered_r0": 4,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 21,
+      "T_C2": 22,
+      "a": 5,
+      "active_facets": [
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 1,
+            "R": 1,
+            "coefficient": "5/8",
+            "fixed_sigma": 11,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 5,
+          "rhs": 21
+        }
+      ],
+      "c": 6,
+      "class": "baseline",
+      "d": 1,
+      "endpoint_authority_sha256": "973f7953d42fdd994d9c7da8ea70fceffc2e8da9002b33f38ea1a17c6922d6d1",
+      "endpoint_id": "D1_A2_A5",
+      "endpoint_review_sha256": "e03de4e1fc1816a7141c6bb8060b4a75c2a6b5a08ea4d56ca63582b875cad335",
+      "id": "A5D1",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 22,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 22,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 21,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "17c742c90c3a6c26ab36de89b809b6eba3512115c1d82913e7ff0ab4ed31ed02",
+      "predecessor": null,
+      "presburger_clause": "a=5 and d=1 and c=6 and r>=5",
+      "primitive_count": 3,
+      "r_min": 5,
+      "registered_r0": 5,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 22,
+      "T_C2": 24,
+      "a": 5,
+      "active_facets": [
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 0,
+            "R": 3,
+            "coefficient": "5/16",
+            "fixed_sigma": 10,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 5,
+          "rhs": 22
+        },
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 1,
+            "R": 1,
+            "coefficient": "5/8",
+            "fixed_sigma": 11,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 5,
+          "rhs": 22
+        }
+      ],
+      "c": 7,
+      "class": "baseline",
+      "d": 2,
+      "endpoint_authority_sha256": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da",
+      "endpoint_id": "D23_LOW_A6",
+      "endpoint_review_sha256": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3",
+      "id": "A5D2",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 23,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 2,
+          "C": 0,
+          "R": 0,
+          "coefficient": "5/32",
+          "first_grade": 24,
+          "fixed_sigma": 14,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 24,
+          "fixed_sigma": 17,
+          "load": "k6",
+          "pole": 1,
+          "summand": "k6"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 24,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 22,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "229b802fe6eb706b759a21f45edf33c8e070eafeb6c97c888207d04c58d341e7",
+      "predecessor": null,
+      "presburger_clause": "a=5 and d=2 and c=7 and r>=5",
+      "primitive_count": 5,
+      "r_min": 5,
+      "registered_r0": 5,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 23,
+      "T_C2": 26,
+      "a": 5,
+      "active_facets": [
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 0,
+            "R": 3,
+            "coefficient": "5/16",
+            "fixed_sigma": 10,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 5,
+          "rhs": 23
+        },
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 1,
+            "R": 1,
+            "coefficient": "5/8",
+            "fixed_sigma": 11,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 5,
+          "rhs": 23
+        },
+        {
+          "kind": "OTHER_GLOBAL_POLE",
+          "primitive": {
+            "A": 1,
+            "C": 0,
+            "R": 2,
+            "coefficient": "-5/32",
+            "fixed_sigma": 13,
+            "load": "k10",
+            "pole": 2,
+            "summand": "k10"
+          },
+          "r_bound": 5,
+          "rhs": 26
+        },
+        {
+          "kind": "RA2",
+          "primitive": {
+            "A": 2,
+            "C": 0,
+            "R": 1,
+            "coefficient": "-3/8",
+            "fixed_sigma": 12,
+            "load": null,
+            "pole": 2,
+            "summand": "unloaded"
+          },
+          "r_bound": 5,
+          "rhs": 26
+        }
+      ],
+      "c": 8,
+      "class": "baseline",
+      "d": 3,
+      "endpoint_authority_sha256": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da",
+      "endpoint_id": "D23_LOW_A6",
+      "endpoint_review_sha256": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3",
+      "id": "A5D3",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 0,
+          "R": 3,
+          "coefficient": "5/16",
+          "first_grade": 25,
+          "fixed_sigma": 10,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 24,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 2,
+          "C": 0,
+          "R": 0,
+          "coefficient": "5/32",
+          "first_grade": 24,
+          "fixed_sigma": 14,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 0,
+          "R": 2,
+          "coefficient": "3/8",
+          "first_grade": 26,
+          "fixed_sigma": 16,
+          "load": "k6",
+          "pole": 1,
+          "summand": "k6"
+        },
+        {
+          "A": 0,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 25,
+          "fixed_sigma": 17,
+          "load": "k6",
+          "pole": 1,
+          "summand": "k6"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 26,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 23,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "70c27992b4826a81468c884e1ebcbd8077f57fee35c4bf2b6028365e28783a60",
+      "predecessor": null,
+      "presburger_clause": "a=5 and d=3 and c=8 and r>=5",
+      "primitive_count": 7,
+      "r_min": 5,
+      "registered_r0": 5,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 23,
+      "T_C2": 24,
+      "a": 6,
+      "active_facets": [
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 1,
+            "R": 1,
+            "coefficient": "5/8",
+            "fixed_sigma": 11,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 6,
+          "rhs": 23
+        }
+      ],
+      "c": 7,
+      "class": "baseline",
+      "d": 1,
+      "endpoint_authority_sha256": "829ac12faceed48ad0ec599a60764d038835895bf33c2abce0dceb141605ea0f",
+      "endpoint_id": "D1_A6_A7",
+      "endpoint_review_sha256": "3e601cf34eb23270daa067794087155b7179607d27af01f84a60624447f949e3",
+      "id": "A6D1",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 24,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 24,
+          "fixed_sigma": 17,
+          "load": "k6",
+          "pole": 1,
+          "summand": "k6"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 24,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 23,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "f3ad1ef960b1c6d5e2198ed84b0d2c8b877e281cd2c3ff2229b0c05f894de84e",
+      "predecessor": null,
+      "presburger_clause": "a=6 and d=1 and c=7 and r>=6",
+      "primitive_count": 4,
+      "r_min": 6,
+      "registered_r0": 6,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 24,
+      "T_C2": 26,
+      "a": 6,
+      "active_facets": [
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 1,
+            "R": 1,
+            "coefficient": "5/8",
+            "fixed_sigma": 11,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 6,
+          "rhs": 24
+        }
+      ],
+      "c": 8,
+      "class": "baseline",
+      "d": 2,
+      "endpoint_authority_sha256": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da",
+      "endpoint_id": "D23_LOW_A6",
+      "endpoint_review_sha256": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3",
+      "id": "A6D2",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 25,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 2,
+          "C": 0,
+          "R": 0,
+          "coefficient": "5/32",
+          "first_grade": 26,
+          "fixed_sigma": 14,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 25,
+          "fixed_sigma": 17,
+          "load": "k6",
+          "pole": 1,
+          "summand": "k6"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 26,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 24,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "4d80c48f0a777a9da19c68d4fedaf999ab88b3eddbebcde060c5313612994eda",
+      "predecessor": null,
+      "presburger_clause": "a=6 and d=2 and c=8 and r>=6",
+      "primitive_count": 5,
+      "r_min": 6,
+      "registered_r0": 6,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    },
+    {
+      "G": 25,
+      "T_C2": 28,
+      "a": 6,
+      "active_facets": [
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 0,
+            "R": 3,
+            "coefficient": "5/16",
+            "fixed_sigma": 10,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 6,
+          "rhs": 25
+        },
+        {
+          "kind": "UNIQUE_G",
+          "primitive": {
+            "A": 0,
+            "C": 1,
+            "R": 1,
+            "coefficient": "5/8",
+            "fixed_sigma": 11,
+            "load": "k10",
+            "pole": 1,
+            "summand": "k10"
+          },
+          "r_bound": 6,
+          "rhs": 25
+        }
+      ],
+      "c": 9,
+      "class": "baseline",
+      "d": 3,
+      "endpoint_authority_sha256": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da",
+      "endpoint_id": "D23_LOW_A6",
+      "endpoint_review_sha256": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3",
+      "id": "A6D3",
+      "inventory": [
+        {
+          "A": 0,
+          "C": 0,
+          "R": 3,
+          "coefficient": "5/16",
+          "first_grade": 28,
+          "fixed_sigma": 10,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 1,
+          "R": 1,
+          "coefficient": "5/8",
+          "first_grade": 26,
+          "fixed_sigma": 11,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 2,
+          "C": 0,
+          "R": 0,
+          "coefficient": "5/32",
+          "first_grade": 26,
+          "fixed_sigma": 14,
+          "load": "k10",
+          "pole": 1,
+          "summand": "k10"
+        },
+        {
+          "A": 0,
+          "C": 0,
+          "R": 1,
+          "coefficient": "1/2",
+          "first_grade": 28,
+          "fixed_sigma": 22,
+          "load": "k2",
+          "pole": 1,
+          "summand": "k2"
+        },
+        {
+          "A": 0,
+          "C": 0,
+          "R": 2,
+          "coefficient": "3/8",
+          "first_grade": 28,
+          "fixed_sigma": 16,
+          "load": "k6",
+          "pole": 1,
+          "summand": "k6"
+        },
+        {
+          "A": 0,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 26,
+          "fixed_sigma": 17,
+          "load": "k6",
+          "pole": 1,
+          "summand": "k6"
+        },
+        {
+          "A": 0,
+          "C": 2,
+          "R": 0,
+          "coefficient": "3/8",
+          "first_grade": 28,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 2,
+          "summand": "unloaded"
+        },
+        {
+          "A": 1,
+          "C": 1,
+          "R": 0,
+          "coefficient": "3/4",
+          "first_grade": 25,
+          "fixed_sigma": 10,
+          "load": null,
+          "pole": 1,
+          "summand": "unloaded"
+        }
+      ],
+      "inventory_sha256": "9b1c63d0deff232ab71110a79361a45c883f6df47f7e383225fbc6166e6fb677",
+      "predecessor": null,
+      "presburger_clause": "a=6 and d=3 and c=9 and r>=6",
+      "primitive_count": 8,
+      "r_min": 6,
+      "registered_r0": 6,
+      "tail_certified_by_nonnegative_R_coefficients": true,
+      "v47r1_literal_coefficient_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"
+    }
+  ],
+  "compressed_chamber_family_count": 3,
+  "compressed_presburger_formula": "(2<=a<=6 and d=1 and c=a+1 and r>=a) OR (1<=a<=6 and d=2 and c=a+2 and r>=a and r>=3) OR (2<=a<=6 and d=3 and c=a+3 and r>=a and r>=5)",
+  "compressed_presburger_formula_sha256": "1827f42b4517a547e84c70db72c690a19a68432d40d8027d16bc87f75f3ced5c",
+  "fan_cover_status": "NOT_CLAIMED",
+  "global_pole_inequality_count": 417,
+  "negative_control_count": 8,
+  "negative_controls": [
+    {
+      "a": 1,
+      "c": 3,
+      "d": 2,
+      "id": "A1D2_R2_RA2",
+      "mutation_accepts": true,
+      "mutation_disabled_exact_reasons": [
+        "RA2"
+      ],
+      "r": 2,
+      "reasons": [
+        "RA2"
+      ],
+      "witnesses": {
+        "RA2": [
+          {
+            "A": 2,
+            "C": 0,
+            "R": 1,
+            "coefficient": "-3/8",
+            "first_grade": 16,
+            "fixed_sigma": 12,
+            "load": null,
+            "pole": 2,
+            "summand": "unloaded"
+          }
+        ]
+      }
+    },
+    {
+      "a": 2,
+      "c": 5,
+      "d": 3,
+      "id": "A2D3_R3_RA2",
+      "mutation_accepts": true,
+      "mutation_disabled_exact_reasons": [
+        "RA2"
+      ],
+      "r": 3,
+      "reasons": [
+        "RA2"
+      ],
+      "witnesses": {
+        "RA2": [
+          {
+            "A": 2,
+            "C": 0,
+            "R": 1,
+            "coefficient": "-3/8",
+            "first_grade": 19,
+            "fixed_sigma": 12,
+            "load": null,
+            "pole": 2,
+            "summand": "unloaded"
+          }
+        ]
+      }
+    },
+    {
+      "a": 2,
+      "c": 5,
+      "d": 3,
+      "id": "A2D3_R4_RA2",
+      "mutation_accepts": true,
+      "mutation_disabled_exact_reasons": [
+        "RA2"
+      ],
+      "r": 4,
+      "reasons": [
+        "RA2"
+      ],
+      "witnesses": {
+        "RA2": [
+          {
+            "A": 2,
+            "C": 0,
+            "R": 1,
+            "coefficient": "-3/8",
+            "first_grade": 20,
+            "fixed_sigma": 12,
+            "load": null,
+            "pole": 2,
+            "summand": "unloaded"
+          }
+        ]
+      }
+    },
+    {
+      "a": 3,
+      "c": 6,
+      "d": 3,
+      "id": "A3D3_R4_RA2",
+      "mutation_accepts": true,
+      "mutation_disabled_exact_reasons": [
+        "RA2"
+      ],
+      "r": 4,
+      "reasons": [
+        "RA2"
+      ],
+      "witnesses": {
+        "RA2": [
+          {
+            "A": 2,
+            "C": 0,
+            "R": 1,
+            "coefficient": "-3/8",
+            "first_grade": 22,
+            "fixed_sigma": 12,
+            "load": null,
+            "pole": 2,
+            "summand": "unloaded"
+          }
+        ]
+      }
+    },
+    {
+      "a": 4,
+      "c": 7,
+      "d": 3,
+      "id": "A4D3_R4_RA2",
+      "mutation_accepts": true,
+      "mutation_disabled_exact_reasons": [
+        "RA2"
+      ],
+      "r": 4,
+      "reasons": [
+        "RA2"
+      ],
+      "witnesses": {
+        "RA2": [
+          {
+            "A": 2,
+            "C": 0,
+            "R": 1,
+            "coefficient": "-3/8",
+            "first_grade": 24,
+            "fixed_sigma": 12,
+            "load": null,
+            "pole": 2,
+            "summand": "unloaded"
+          }
+        ]
+      }
+    },
+    {
+      "a": 1,
+      "c": 4,
+      "d": 3,
+      "id": "E_A1D3_R20_A3",
+      "mutation_accepts": true,
+      "mutation_disabled_exact_reasons": [
+        "A3"
+      ],
+      "r": 20,
+      "reasons": [
+        "A3"
+      ],
+      "witnesses": {
+        "A3": [
+          {
+            "A": 3,
+            "C": 0,
+            "R": 0,
+            "coefficient": "-1/16",
+            "first_grade": 18,
+            "fixed_sigma": 15,
+            "load": null,
+            "pole": 3,
+            "summand": "unloaded"
+          }
+        ]
+      }
+    },
+    {
+      "a": 7,
+      "c": 8,
+      "d": 1,
+      "id": "A7D1_K6_TIE",
+      "mutation_accepts": true,
+      "mutation_disabled_exact_reasons": [
+        "NONUNIQUE_G"
+      ],
+      "r": 7,
+      "reasons": [
+        "NONUNIQUE_G"
+      ],
+      "witnesses": {
+        "NONUNIQUE_G": [
+          {
+            "A": 0,
+            "C": 1,
+            "R": 0,
+            "coefficient": "3/4",
+            "first_grade": 25,
+            "fixed_sigma": 17,
+            "load": "k6",
+            "pole": 1,
+            "summand": "k6"
+          }
+        ]
+      }
+    },
+    {
+      "a": 9,
+      "c": 12,
+      "d": 3,
+      "id": "A9D3_K2_TARGET",
+      "mutation_accepts": true,
+      "mutation_disabled_exact_reasons": [
+        "NONUNIQUE_G",
+        "OTHER_GLOBAL_POLE",
+        "G_TARGET_WALL",
+        "T_TARGET_WALL"
+      ],
+      "r": 9,
+      "reasons": [
+        "NONUNIQUE_G",
+        "OTHER_GLOBAL_POLE",
+        "G_TARGET_WALL",
+        "T_TARGET_WALL"
+      ],
+      "witnesses": {
+        "G_TARGET_WALL": [
+          {
+            "G": 31,
+            "required": "G<28"
+          }
+        ],
+        "NONUNIQUE_G": [
+          {
+            "A": 0,
+            "C": 0,
+            "R": 1,
+            "coefficient": "1/2",
+            "first_grade": 31,
+            "fixed_sigma": 22,
+            "load": "k2",
+            "pole": 1,
+            "summand": "k2"
+          },
+          {
+            "A": 0,
+            "C": 1,
+            "R": 0,
+            "coefficient": "3/4",
+            "first_grade": 29,
+            "fixed_sigma": 17,
+            "load": "k6",
+            "pole": 1,
+            "summand": "k6"
+          }
+        ],
+        "OTHER_GLOBAL_POLE": [
+          {
+            "A": 1,
+            "C": 0,
+            "R": 0,
+            "coefficient": "1/4",
+            "first_grade": 34,
+            "fixed_sigma": 25,
+            "load": "k2",
+            "pole": 2,
+            "summand": "k2"
+          }
+        ],
+        "T_TARGET_WALL": [
+          {
+            "T_C2": 34,
+            "required": "T_C2<32"
+          }
+        ]
+      }
+    }
+  ],
+  "negative_mutation_count": 8,
+  "presburger_formula": "(a=1 and d=2 and c=3 and r>=3) OR (a=2 and d=1 and c=3 and r>=2) OR (a=2 and d=2 and c=4 and r>=3) OR (a=2 and d=3 and c=5 and r>=5) OR (a=3 and d=1 and c=4 and r>=3) OR (a=3 and d=2 and c=5 and r>=3) OR (a=3 and d=3 and c=6 and r>=5) OR (a=4 and d=1 and c=5 and r>=4) OR (a=4 and d=2 and c=6 and r>=4) OR (a=4 and d=3 and c=7 and r>=5) OR (a=5 and d=1 and c=6 and r>=5) OR (a=5 and d=2 and c=7 and r>=5) OR (a=5 and d=3 and c=8 and r>=5) OR (a=6 and d=1 and c=7 and r>=6) OR (a=6 and d=2 and c=8 and r>=6) OR (a=6 and d=3 and c=9 and r>=6)",
+  "presburger_formula_sha256": "e0d55bbc0415dedfc448134b56ce94b3bef64756d8989f8e2e3589d743b4ee73",
+  "raised_subtail_count": 4,
+  "schema_sha256": "29d206524de1eb2faadaa3d25a261376c7be380f5b669ed9cf5fa436b263cafe",
+  "scope": "exact 12+4 semilinear rays in the registered V47 box; no strict-fan cover claim",
+  "status": "PASS-GATE-T-STRICT-UAC-PRESBURGER-CHAMBERS-V48-PRODUCER",
+  "support_miner_comparison_cell_count": 24,
+  "unique_AC_inequality_count": 424,
+  "universal_cancelled_signature_count": 40,
+  "universal_grade_cap": 34,
+  "universal_nonzero_primitive_count": 425,
+  "universal_table_sha256": "9dfb45d24a6a0f3341f7d0ae14941ecd65fc3902b3c75092dc6883c6e1121863",
+  "v46_scope_attached": "reviewed V0,V1,V3,V4 source naturality only; no shifted-root V2",
+  "v47r1_scope_attached": "reviewed exact 16-manifest literal contraction; endpoint types/localizations inherited"
+}

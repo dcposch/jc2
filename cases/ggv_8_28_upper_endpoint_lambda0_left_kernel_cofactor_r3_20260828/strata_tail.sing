@@ -1,0 +1,33 @@
+
+// Bounded exact content/Fitting-strata census; no standard basis is computed.
+poly RAW_CONTENT=0;
+int zero_minor_count=0;
+int content_i;
+for(content_i=1;content_i<=size(LEFT_MINORS);content_i=content_i+1)
+{
+  if(LEFT_MINORS[content_i]==0)
+  {
+    zero_minor_count=zero_minor_count+1;
+  }
+  else
+  {
+    if(RAW_CONTENT==0) { RAW_CONTENT=LEFT_MINORS[content_i]; }
+    else { RAW_CONTENT=gcd(RAW_CONTENT,LEFT_MINORS[content_i]); }
+  }
+}
+if(RAW_CONTENT==0) { print("FATAL_ALL_RAW_MINORS_ZERO"); quit; }
+list CONTENT_FACTORS=factorize(RAW_CONTENT,1);
+print("RAW_ZERO_MINORS="+string(zero_minor_count));
+print("RAW_CONTENT_UNIT="+string(RAW_CONTENT==1));
+print("RAW_CONTENT="+string(RAW_CONTENT));
+print("CONTENT_FACTOR_DATA="+string(CONTENT_FACTORS));
+write("COFACTOR_CONTENT.txt","RAW_ZERO_MINORS="+string(zero_minor_count));
+write("COFACTOR_CONTENT.txt","RAW_CONTENT_UNIT="+string(RAW_CONTENT==1));
+write("COFACTOR_CONTENT.txt","RAW_CONTENT="+string(RAW_CONTENT));
+write("COFACTOR_CONTENT.txt","CONTENT_FACTOR_DATA="+string(CONTENT_FACTORS));
+print("RESIDUAL_FITTING_IDEAL_GENERATORS="+string(size(LEFT_MINORS)));
+print("ENDPOINT_QUADRATIC=x14*x72+x1*x97");
+print("RESIDUAL_RIGHT_KERNEL_PULLBACK=PENDING_COMPONENT_STRATA");
+print("STRATA_GCD_PASS=1");
+quit;
+

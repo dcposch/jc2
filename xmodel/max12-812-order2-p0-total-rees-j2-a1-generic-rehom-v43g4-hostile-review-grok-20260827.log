@@ -1,0 +1,30 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by locating the frozen V43G4 case, its freeze hashes, and the harvested evidence so the review can recompute custody before attacking the identity.I'll inspect the frozen case, a recent hostile-review template, and the V43G4 producer files next.I'll read the producer files, a recent hostile-review template, and the V43G3 predecessor so the attack points stay comparable.I have the producer claim and script; next I’ll pull freeze/evidence files, the V43G3 predecessor, and a recent review format so the replay can be independent.I’ve already spotted a `q_at_zero` serialization mismatch and a preregistration product-level discrepancy; next I’ll recompute hashes and inspect V43G3 plus the V43 compiler.Hashes match. I’ll inspect G3 multipliers, the V43 compiler, and Laurent grammar next, then run an independent exact replay.I’ll start the independent exact replay now and, in parallel, audit the Laurent grammar, mutation control, and converter formula.I’ll write a strict independent replay and also byte-compare the G3 lift script against the frozen G2 decision input.I’ll now run a self-contained exact replay: parse the 58 Laurent files independently, regenerate the V43 rows, and check all four layers.The independent replay matched on every layer. I’ll write the hostile review next, including the repairable documentation issues that do not touch the identity.**PASS at the exact claimed scope.** Independent exact replay supports
+
+```text
+5*t^6*a1^4 = sum_i H_i Tg_i
+```
+
+in `Q[t, X19_total]`, `t=rho^2`, on the frozen ordered-`a1` grade-through-19 corpus. Eleven multipliers are nonzero, all on grades 11–15. The left coefficient has `t`-valuation 6, so this is not a cofactor-nonzero-at-zero certificate.
+
+The report is in `xmodel/max12-812-order2-p0-total-rees-j2-a1-generic-rehom-v43g4-hostile-review-grok-20260827.md`. Producer and ledger files were not touched.
+
+| Attack | Verdict |
+|---|---|
+| 1 Custody (G3 freeze, 58 multipliers, V43, 59/66, 58/64, unique `ez9`) | **PASS** |
+| 2 Fail-closed Laurent parser; matrix writes unused | **PASS** |
+| 3 Four-layer exact `Q` replay | **PASS** |
+| 4 LCM 5, `t`-clearing 6, content 1, levels 3 and 4, zero drops | **PASS** |
+| 5 Named rows, hashes, zero pivot, `Tg15_7` mutation | **PASS** |
+| 6 Weighted homogenization; serialization cannot hide a failed replay | **PASS** |
+| 7 Converter: `v(0)=0`; exponent `4+6M`; `M=104` not replayed | **PASS** (gate correctly withheld) |
+| 8 Scope firewall | **PASS** |
+
+What was actually checked, not trusted from status strings:
+
+- Rehashed G4 freeze (133/133), G4 evidence (128/128), G3 freeze (83/83), G2 freeze (24/24). Charged result/freeze SHAs `ae7beed3…0015` and `77792779…1b91` match.
+- Regenerated the 59 literal rows from the pinned V43 compiler; unique `ez9` pivot is `Tg19_2 : (3/8)t*a1*ez9`.
+- Reparsed all 58 Laurent files. Layer 1 product is `1`; cleared product is `5 t^6`; residue projection drops nothing; rehomogenized product against **literal** total rows is exactly `5 t^6 a1^4`.
+- Converter formula `5 a1^{4+6M}` is correct and unused: `a1^104` is a citation, not an input.
+
+Repairable and non-blocking: missing AWS source-manifest harvest, PREREG “levels 15 and 20” vs stored 3 and 4, JSON field `q_at_zero=5` meaning the cofactor, and a producer mutation that multiplies one monomial rather than replaying the full mutated sum.

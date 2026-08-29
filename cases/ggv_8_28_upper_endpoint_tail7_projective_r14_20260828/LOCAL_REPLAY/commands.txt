@@ -1,0 +1,5 @@
+python3 -B ../compile_projective_r14.py --output ../R14
+python3 -B ../verify_projective_r14.py
+/opt/homebrew/bin/Singular -q ../R14/r14_nullstellensatz_q.sing
+/opt/homebrew/bin/Singular -q ../R14/r14_nullstellensatz_replay_q.sing
+

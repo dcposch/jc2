@@ -1,0 +1,74 @@
+{
+  "format": "GGV_UPPER_ACTIVE_C2_D11_D13_EXTENSION_V1",
+  "verdict": "REPAIR_PREFIX_AND_PASS_EXACT_EXTENSION",
+  "field_scope": "characteristic-zero field points; squarefree quartic A; radical semantics",
+  "q1_dependency": false,
+  "reviewed_dependency": "q1-free D1..D9 implies A divides T",
+  "charged_prefix": {
+    "D8_K_lift": "PASS",
+    "D8_H_lift_on_c2_nonzero": "PASS",
+    "D9_product": "PASS",
+    "D9_D10_force_A_divides_P": "PASS",
+    "residual_D10": "PASS",
+    "deepest_D11_factor": "PASS",
+    "D_zero_mod_A_survives_deepest_D11": "REFUTED; one A factor leaves a possible simple pole",
+    "clean_repair": "impose exact D=0 or retain the additional D11 valuation condition"
+  },
+  "exact_D_zero_extension": {
+    "definitions": {
+      "E": "2048F6-2SP1-4QSU-8U^2",
+      "L": "QS+4U",
+      "M": "P1+2QU",
+      "N11": "5c2*L*(4E+L^2)+6E*M"
+    },
+    "g11_negative": "N11/(4194304*A)",
+    "g12_deepest": "(3E^2-2S*N11)/(33554432*A^2)",
+    "field_radical_conclusion_on_c2_nonzero": [
+      "A divides E",
+      "A divides L"
+    ],
+    "postlift_D12": "J*(20c2*J+3N)/(8388608*A)",
+    "postlift_D13_deepest": "-S*J*(20c2*J+3N)/(33554432*A^2)",
+    "J": "P1-SQ^2/2",
+    "N": "8192F7-e1*S+QJ"
+  },
+  "literal_survivor": {
+    "base_field": "Q",
+    "A": ["-1", "0", "0", "0", "1"],
+    "S": "1",
+    "Q": "1",
+    "U": "-1/4",
+    "R": "-1",
+    "Z": ["1", "0", "0", "0", "-1/2"],
+    "P1": "1/2",
+    "F4": ["1/32", "0", "0", "0", "-1/32", "0", "0", "0", "1/256"],
+    "F5": ["-1/256", "0", "0", "0", "1/512"],
+    "F6": ["1/4096"],
+    "F7_through_F15": "zero",
+    "c2": "1",
+    "c6": "1",
+    "c14": "-6139/17179869184",
+    "other_modes": "zero",
+    "D0_through_D15": "zero",
+    "literal_F_and_G_windows": "PASS",
+    "G12": ["4093/268435456"],
+    "G13": [],
+    "G14": [],
+    "G15": [],
+    "q1": false
+  },
+  "c2_zero_companion": {
+    "kept_separate": true,
+    "g9_negative": "3D*P0/(65536*A)",
+    "g10_deepest": "3*(P0*(P0-2SD)+H*D^2)/(524288*A^2)",
+    "field_radical_conclusion": "A divides P0 and rootwise H*D^2=0"
+  },
+  "not_claimed": [
+    "scheme divisibility",
+    "q1 exclusion",
+    "endpoint emptiness",
+    "unrestricted branch-P exclusion",
+    "Keller theorem",
+    "JC2"
+  ]
+}

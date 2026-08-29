@@ -1,0 +1,15 @@
+diff --git a/setup.py b/setup.py
+index d0b798a..1664f53 100644
+--- a/setup.py
++++ b/setup.py
+@@ -52,6 +52,10 @@ else:
+     except ImportError:
+         extensions = do_cythonize()
+ 
++# HENS-CT AWS lane: the analytic extensions are unrelated to exact Ore-ideal
++# arithmetic and fail against this host's PassageMath/FLINT header combination.
++extensions = []
++
+ setup(
+     name = "ore_algebra",
+     version = "0.5",

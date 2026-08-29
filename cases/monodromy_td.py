@@ -512,7 +512,7 @@ def sheet_profile_configurations(n: int) -> dict[Profile, tuple[tuple[PoleRow, .
 
 
 def configuration_survives_entry_filter(config: Sequence[PoleRow]) -> bool:
-    """Apply only Prop. 8.4's proved singleton-pole b=1 kill.
+    """Apply corrected nonroot Prop. 8.4 at a singleton-pole b=1 entry.
 
     There is no promoted multi-pole analogue, so b=1 vertices in a multi-pole
     configuration remain.  The optional H5a/N1 condition gcd(a,nu)=1 is not

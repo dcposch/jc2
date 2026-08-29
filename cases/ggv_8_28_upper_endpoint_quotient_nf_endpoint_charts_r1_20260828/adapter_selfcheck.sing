@@ -1,0 +1,41 @@
+// Tiny exact parser and reducer check for the endpoint-chart adapter vocabulary.
+ring ambient=0,(q0,q2,c4),dp;
+ideal FIXTURE_IDEAL=q2;
+ideal FIXTURE_SB=std(FIXTURE_IDEAL);
+poly ZERO_NF=reduce(q2,FIXTURE_SB);
+poly NONZERO_NF=reduce(q0+1,FIXTURE_SB);
+if(ZERO_NF!=0 || NONZERO_NF==0)
+{
+  print("FATAL_REDUCER_FIXTURE");
+  quit;
+}
+matrix R[2][3]=q0,1,q2,0,q0,1;
+matrix PIVOT_MINOR[2][2]=R[1,1],R[1,2],R[2,1],R[2,2];
+poly DELTA=reduce(det(PIVOT_MINOR),FIXTURE_SB);
+matrix CR_1_1[2][2]=R[1,3],R[1,2],R[2,3],R[2,2];
+matrix CR_1_2[2][2]=R[1,1],R[1,3],R[2,1],R[2,3];
+matrix Y[3][1];
+Y[3,1]=DELTA;
+Y[1,1]=-reduce(det(CR_1_1),FIXTURE_SB);
+Y[2,1]=-reduce(det(CR_1_2),FIXTURE_SB);
+poly CHECK=reduce(R[1,1]*Y[1,1]+R[1,2]*Y[2,1]+R[1,3]*Y[3,1],FIXTURE_SB);
+if(CHECK!=0)
+{
+  print("FATAL_CRAMER_FIXTURE");
+  quit;
+}
+matrix C[4][4];
+int i;
+for(i=1;i<=4;i=i+1){ C[i,i]=1; }
+matrix K[4][2]=1,0,0,1,q0,1,1,q0;
+poly ECOEFF=reduce(K[1,1]*K[3,2]+K[1,2]*K[3,1]+K[2,1]*K[4,2]+K[2,2]*K[4,1],FIXTURE_SB);
+ideal COMPLEMENT_IDEAL=FIXTURE_IDEAL,DELTA;
+ideal COMPLEMENT_SB=std(COMPLEMENT_IDEAL);
+poly COMPLEMENT_UNIT_NF=reduce(1,COMPLEMENT_SB);
+print("SELFTEST_ZERO_NF="+string(ZERO_NF==0));
+print("SELFTEST_NONZERO_NF="+string(NONZERO_NF!=0));
+print("SELFTEST_CRAMER_IDENTITY="+string(CHECK==0));
+print("SELFTEST_ENDPOINT_CROSS_TERM_PARSED="+string(ECOEFF));
+print("SELFTEST_COMPLEMENT_PARSED="+string(COMPLEMENT_UNIT_NF==0));
+print("ENDPOINT_CHART_ADAPTER_SELFCHECK_PASS=1");
+quit;

@@ -1,0 +1,29 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written and verified.
+
+`xmodel/ideation-20260827T0635Z-opus5-crossreview.md` — SHA-256 `7db079e57e5d9a9e6e96192835b4733297f5d643f177ff05888eb4cc1be43486`, 1,139 lines. All seven input hashes matched.
+
+**What I actually verified rather than quoted.** I re-parsed all 70 ordered-`a1` row files, matched 70/70 against V37's pins, and reproduced V37's census exactly (51 nonzero rows, 65 variables, all ten per-grade term counts). Every numeric claim below came from those bytes.
+
+**The six adjudications:**
+
+1. **Fable5's shape floor — sound.** All three legs check out: `rho` has sigma-weight 0 and all 70 rows are weight-homogeneous (verified), so `rho=0` is a weight-preserving graded map used in the *safe* direction; fixed-weight completeness holds because all 65 row variables have weight ≥1. Adding ideal multiplication gives the complete lattice: **nine `a1`-shapes excluded forever**, minimal open frontier exactly `{(4,0) w20, (1,4) w21, (2,3) w22, (3,2) w23}`. Fable5's V34 cross-check replays to the digit (`Tg19_7 = -7077888`; `ell1` is the unique weight-1 variable and vanishes at the point). Three scope limits it omits, plus a gap I close with `L43`: pure `k^j` shapes were never tested and are excluded forever for `j ≤ 4`.
+
+2. **Grok's dual — the rewrite is wrong and self-refuting.** `λ(φ19)` = sum of squares = `7855/6912 ≠ 0`, while `λ` annihilates `I_19`. Dual read as primal. Its transcription is exact and the transport mechanism is salvageable; §2.5 states the correct form.
+
+3. **My `L43` — mathematics survives, strategy does not.** Maximum (not merely maximal), dimension 43, min hitting set 22, all confirmed. But `L43` lies in `{a1=0}`, outside the chart's unit locus, and the honest receiver equations live in a different ring. **I withdraw the avenue-32 raise and the "no algebraic closure route" bottleneck.**
+
+4. **My cascade — every displayed residual replays exactly, no hidden division.** I also found a shorter Case B kill and upgraded the first radical rung to an exact identity: `a1²·e1³ ∈ I` with verified multipliers.
+
+5. **Sol's symbol result — verified entry by entry** (matrix, both Bezout certificates, all 30 term counts, the 552/28/0 support facts). It refutes Grok's Card C decisive branch and shows my Card A and Sol's blind Card B are the same experiment.
+
+6. **K00 — integrated, and it reframes everything.** The targets enter at σ-grades 28/32/36/38 while exports stop at 19. That, not any deep degeneracy, is why `K00`/`Z00`/`CS0`/`L43` exist.
+
+**New and free:** `a1^4 ∈ I_20` implies some grade-20 row is nonzero at the V34 point — so the W20 span may be unnecessary.
+
+**Verdict:** yes, distinct capability, but instrumental (exact replay, preflight, verification) rather than theoretical, and docked for the receiver scope error. Ranking on correctness-adjusted gain: Sol > Fable 5 ≈ Opus 5 > Grok.
+
+Two things to flag, both outside the frozen scope of this report:
+
+- Concurrent lanes landed post-snapshot artifacts *during* my session that touch exactly the two items I was told to self-audit — `...j2-a1-l43-support-hostile-review-sol-...` and `...j2-a1-radical-cascade-hostile-review-sol-...`, plus V38 and a V39 W19 `Tg19_7` case. I did not read them; they postdate my inputs. You may want a short follow-up pass.
+- V38 is sweeping `a1^i k^j` for `i≥1`, weight ≤25, including lanes like `i4_j1`. Per §1, `(4,1)` and `(5,0)` are multiples of the still-open `(4,0)` — if `(4,0)` resolves as a nonmember at grade 20 those lanes are redundant, and the nine forever-excluded shapes below weight 19 are already wasted compute.

@@ -1,0 +1,18 @@
+windows=pinned RAW_INPUT.json floors verified
+D22_X0=F11[X1]*G11[X0]-F7[X0]*G15[X1]  (pairs (11,11)+, (7,15)-)
+T5: deg(T5(d))=deg(d)+3, lc=(k+10), zero kernel, primitive ok
+q7/q9/q11/q13 parameterization derived; b1,k1 forced by floors
+q5,q15 automatic on slice (h5=h15=0); h7..h13 collapse verified
+G11/G15 complete-mode reconstruction matches closed forms;
+  F10/F12/F14 and c10..c20 provably absent
+R[X1]=10*(3*c6*b2+2*c8*a2);  D22[X0]=-48*a1*(3*c6*b2+2*c8*a2)
+5*D22[X0]+6*F7[X0]*R[X1]=0 as a polynomial identity
+G15 polynomial => R=0 coefficientwise => D22[X0]=0, not +1 or -1
+c2_not_load_bearing=True (harmless scope narrowing)
+mutations: b1/k1 restore, c8-drop, 3/4->3/8, 5/4->3/4,
+  residue sign/scale, pair-law sign flip: all detected
+Q=X mutation: q7..q15 witnesses exact, G11/G15 windows legal,
+  G15 polynomial, D22[X0]=(2^50/375)*th^2 -> 1 at th^2=375/2^50
+  => fixed-slice residue identity does NOT survive Q=X (M6)
+frozen_hashes=verified_start_and_end
+PASS_HOSTILE_ORIGIN_RESIDUE_SLICE_FABLE5

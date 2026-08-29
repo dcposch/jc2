@@ -1,0 +1,24 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+## Verdict: **PASS**
+
+Report written to `xmodel/max12-812-order2-k00-d8-hostile-review-opus5-20260827.md` (the only repository file I touched).
+
+**What I reproduced independently**, from `tails.json` with a reviewer-written emitter — no producer status string used as evidence:
+
+- **Matrix**: my own emitter (own polynomial arithmetic, own serialization) produces a file **byte-identical** to both frozen lanes, `15837b4e…cbabc30`, 2996 × 5544, 92 821 nonzeros. Shape derived, not accepted. It also reproduces all six V9 matrices, and each `D_k` (k ≤ 7) is exactly the leading block of D8.
+- **Rank over exact ℚ**: recomputed the whole ladder by sparse rational elimination — 4, 28, 106, 294, 676, 1372, and **2547 = 2547 consistent at D8** (7 m 51 s, 230 MB). No finite field enters this. Six primes (five unrelated to 65521) agree as a separate cross-check.
+- **Lift**: strict parse gives 492 `x` lines, zero `y` lines. Two replays — a coefficientwise replay of all 2 996 equations, and an ordering-free *polynomial* replay: decoding into `q₁..q₆` and forming `Σqₗrₗ − r₇` gives 62 terms, all of degree 9–10, **none of degree ≤ 8**.
+- **Hand checks**: `r₁`'s linear part cancels termwise (`d5: (84−180+36−3+81−18)/2048 = 0`, etc.); V8's identity `r7₂ = −(1/512)r1₂ − (1/128)r3₂` verified termwise.
+
+**Two things I proved that the producer asserts but doesn't:**
+
+1. The consistency ⟺ membership equivalence is *tight* — degree-≤6 multipliers are the complete space, since every `rₗ ∈ m²` sends discarded degree-≥7 terms into `m⁹`.
+2. **D8 is strictly stronger than D7.** Perturbing the RHS by a degree-8 monomial leaves the entire D7 prefix untouched yet flips 2547/2547 to 2547/2548. So V10 is genuine new content, not a restatement. A random RHS and single-monomial perturbations at degrees 2, 4, 6, 8 are all inconsistent — the PASS is not vacuous.
+
+**Findings (none changes the verdict):** one `EVIDENCE.sha256` line fails, on the review-*request* document (untracked, mtime 4 min after the manifest) — 27/28 evidentiary lines verify. The validator reads the rank integers from metadata rather than recomputing them. The p-lane's 492 entries are *exactly* the exact entries reduced, so it's a correlated software control — which is what the producer says.
+
+**Self-caught reviewer error, reported for honesty:** my first mod-p run at `p = 2³¹−1` returned 2924/2925 "inconsistent" — an overflow of my own delayed-reduction accumulator (valid only while `(rows+1)p² < 2⁶⁴`), not a producer defect. Guarded and re-run.
+
+**Firewall held.** Loads dropped (17/27/28/41/45/63/68 terms), `a6 ↦ 1`. I flag one scope point: since `a6` has weight 2 while `a1,a3,a5` are odd, `C6=1` is a weighted-Kummer normalization, not a plain dehomogenization — V10 states its claim on the slice, so nothing is wrong, but no off-slice statement is licensed. No inference to polynomial, local, or formal membership; no claim about a finite obstruction in either direction. V11–V13 carry `FAILURE.md`/no result and were not used.
+
+No AWS job launched, no CAS, no web, no ledger edited, `jc2-lean` untouched.

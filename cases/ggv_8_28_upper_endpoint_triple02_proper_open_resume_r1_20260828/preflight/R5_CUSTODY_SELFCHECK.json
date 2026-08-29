@@ -1,0 +1,23 @@
+{
+  "bounded_launcher_reap_controls": true,
+  "cgroup_procs_content_controls": true,
+  "clean_promotion": "EXACT_ENDPOINT_DEAD_ON_NODE1_PROPER_OPEN_ONLY",
+  "complete_manifest_and_archive_controls": true,
+  "detached_child_rejected": true,
+  "late_failure_mutations": [
+    "containment_preflight_failure",
+    "late_archive_failure",
+    "late_worker_exit",
+    "launcher_reap_failure",
+    "missing_scope_marker",
+    "nonempty_orphan_census",
+    "observed_swap_then_final_zero",
+    "systemd_final_fault",
+    "terminal_archive_replay_failure",
+    "terminal_manifest_generator_failure",
+    "terminal_manifest_replay_failure",
+    "whole_timeout_with_worker_rc_zero",
+    "wrong_recorded_pgid"
+  ],
+  "nonempty_orphan_census_rejected": true
+}

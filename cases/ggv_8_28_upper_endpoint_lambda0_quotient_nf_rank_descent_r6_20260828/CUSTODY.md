@@ -1,0 +1,18 @@
+# Custody
+
+```text
+2bef7a6d5d1ac2b7b688112fcae0062f5881e962de3de5112149dd1b07537afb  PREREGISTRATION.md
+ed9e9957aae074df3074373ef8f75b12833dd6a4ef80352e2db3703d8a5ad963  PREREGISTRATION.sha256
+9ceb7bf6ee7d6bee5996cbb03eccc3b9529b0a1d23e29c06c568960c9a6d7f12  SOURCE.sha256
+c12349499f4fc6dd05fe9546a070246ebf091a97ad009891f498fbce9e70fea8  build_rank_descent.py
+7ba6c106ff62a3bfc289be408d151bda7e85d73cb5868543d86ebe926f272b0a  frozen r5 normal-form reducer
+4324c7393e4b5830058b868f81d64128894937ed32eaec463539e7ef3745bc92  custody/ggv_lambda0_quotient_nf_rank_descent_r6_SOURCE.tar.gz
+fb778b1a7078314fa1fb941d39327cb9d99eab2ad2aa5a4c6c88f45062e26173  custody/ggv_lambda0_quotient_nf_descent_p_r6_20260828T161500Z_r6c.terminal.tar.gz
+99cccf8c0508aa8818b00541eab0f29a1596ecbf7dcad9d9beee1a220b2419e6  custody/ggv_lambda0_quotient_nf_descent_c8p02_r6_20260828T161500Z_r6e.terminal.tar.gz
+```
+
+Each terminal archive has 69 internal evidence entries and zero replay
+mismatches.  The separately preserved custodian stderr sidecars are empty;
+custodian stdout stayed outside the internal evidence tree until after final
+hashing, preventing post-hash mutation.
+

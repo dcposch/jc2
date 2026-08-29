@@ -1,0 +1,10 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll inspect only the licensed V4/V3 package trees and verify hashes by hand, then write a single hostile-review report.Hashes and the licensed V4/V3 trees are next; I’ll checksum the named files and read only the frozen compiler/evidence chain.Advertised RESULT, freeze, and manifest hashes match. Next I’ll checksum the full frozen-source → compiled-input → AWS-output chain.The freeze loop lost `PATH`; I’ll re-run checksums with `/usr/bin/shasum` and then inspect the compiler and engine artifacts.Freeze and RESULTS hashes check out. Next I’ll read the engine artifacts, compiled Singular, and the V3/V4 compilers.Engine `rc=0` and `PASS_LOCALIZED_MEMBERSHIP` are on disk. Next I’ll inspect the compilers, compiled Singular, and V3 controls.The compiled Singular is large, so I’ll grep the load-bearing identities and follow the V3→V2 pin chain.I’ll verify nested compiled hashes, V3 control stdout, and the source/Laurent sections of the compiled Singular.Custody and algebra check out. I’ll write the single hostile-review report with a `CONFIRMED` verdict.Hostile review is in `xmodel/max12-812-order2-square-lowcontact-c1-c2-localized-review-grok-20260826.md`.
+
+**Verdict: `CONFIRMED`.**
+
+Advertised RESULT / manifest / freeze hashes all matched, including the V3 negative-control freeze. Exact-Q engine `rc=0` with validator `PASS_LOCALIZED_MEMBERSHIP`, not just a printed PASS token. The seven source/Faber rows, unitriangular Laurent bridge, integral `c=1` identity, and localized `c=2` saturation all hold on `D(p*k0)`. V3 exact-Q and `F_65521` fail only unlocalized `c=2` membership, with raw remainder `(3/8) ell1 a0 a1 bs1 + (3/32) ell1 a1^2 br1`.
+
+This licenses arcwise/set-theoretic vanishing of the finite `c=1,2` leading corrections on the generic-square first-normal chart `D(p*k0)`, and nothing larger.
+
+`ORDER2_SQUARE_LOWCONTACT_LOCALIZED_CONFIRMED`

@@ -1,0 +1,37 @@
+{
+  "format": "GGV_UPPER_UNIT_ROOT_TRANSPORT_OPUS5_REVIEW_V1",
+  "verdict": "REPAIR_THEOREM_TRUE",
+  "reviewer": "Opus5",
+  "checker_sha256": "cbf8498e77c639ebb08cda6c9f02a849e0b40f32c680cad4fe1120d30b6c9b6b",
+  "report_sha256": "21064740203c49d7ffd5280b64f7e86e6936e1ca55b75cec2a5755cdd1227cc2",
+  "theorem": {
+    "local_hypothesis": "alpha is a simple root of A and V0(alpha) is nonzero",
+    "rows": "D7 through D21 zero and D22 target one",
+    "conclusion": "no field-valued endpoint point exists",
+    "g22_A_support": [-2, 0, 2, 4, 6, 8],
+    "endpoint_min_A_exponent": 1,
+    "endpoint_terms_checked": 432,
+    "q1_dependency": false,
+    "global_D9_repair_dependency": false,
+    "local_D7_D8_D9_rungs_used": true,
+    "squarefree_corollary": "if A is squarefree, every gcd(A,V0) != A stratum is field-empty"
+  },
+  "repairs": [
+    "the normalized pre-D7 prefix is not identical to the pinned post-D7/post-D9 fixed prefix",
+    "the missing local D7 through D15 ladder must be proved rather than imported by normalization",
+    "the theorem avoids the global q1-free D9 divisor theorem but consumes local D7, D8, and D9 rungs",
+    "the charged producer checker does not compute the load-bearing g22 order bound"
+  ],
+  "strengthenings": [
+    "only the selected root must be simple; global squarefreeness is needed for the divisor corollary",
+    "a regular raw G22 receiver would not rescue the endpoint",
+    "at a V0-unit root the branch condition automatically forces c2=0"
+  ],
+  "mutations": {
+    "skip_D7_D9_D11_D13_D15": "deepens the g16 pole from -2 to -20,-16,-12,-8,-4",
+    "retain_c18": "leaves c18/A^3",
+    "mode_normalization_off_by_one": "570 of 570 nontrivial checks fail",
+    "endpoint_minus40_to_minus39": "destroys the A^-5 kernel"
+  },
+  "scope": "characteristic-zero field-valued reduced branch-P endpoint; not scheme, landing, coverage, Keller, or JC2"
+}

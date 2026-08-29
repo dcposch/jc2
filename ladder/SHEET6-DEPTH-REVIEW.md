@@ -1,9 +1,21 @@
 # SHEET6-DEPTH-REVIEW.md — Adversarial review of SHEET6-DEPTH.md (2c81954), the Chain-Depth Closure Lemma
 
-Reviewer: Claude (adversarial deep-dive, 2026-08-12). Status: COMPLETE.
+> **2026-08-28 ROOT-SCOPE REPAIR.** The first rollback was overbroad. A
+> genuine contact-zero root merge is in `V_{2,a}\V_{1,a}` and is case I,
+> not IV, but case-I equations still give `X_root=mu(1-w)`. In the reviewed
+> all-`mu=1` anatomy, top-degree cancellation gives
+> `w=l/(r+l) in (0,1)`. Consequently `W={2}` excludes every all-`M=1`
+> root meet at `td=6,m=2`, and that finite root layer is restored. Root
+> `M=1` itself remains legal; mixed-`mu`/off-axis root completeness is not
+> promoted. Different-model evidence: `b8d6e686...` / `656c257e...`;
+> coordinator integration `d534f083...`. The safe stabilization theorem is
+> still `d0<=2*gen(W)+2`.
+
+Historical reviewer: Claude (adversarial deep-dive, 2026-08-12). Status: COMPLETE.
 Scope: the keystone conservation law w := (κ̄ − ρ)/ν and everything hung on
 it — DS1 (characteristic rigidity), DS2 (step law), DS3 (resonance budget),
-DS4 (menu factorization), the Lemma (§6), the restored finite book (§8) —
+DS4 (menu factorization), the Lemma (§6), and the historically claimed
+finite book (§8) —
 re-derived from the printed record independently, case branch by case
 branch, plus the SIGRAY-AUDIT interaction and adversarial machine
 extension. Ground truth: refs/sigray_full.pdf re-read on-page this session:
@@ -36,11 +48,13 @@ Verdicts:
   d₀ ≤ 2·gen+2; the sharper gen+2 is empirically tight at gen 3 and never
   violated (§4). One substantive fix owed; finiteness and td = 6 unaffected.
 - Front 5 (mechanical): **CONFIRMED + EXTENDED, no violation found** (§5).
-- Front 6 (final book spec): **DELIVERED** (§6).
+- Front 6 (historical final book spec): **DELIVERED FOR THE REVIEWED
+  ALL-`M=1` MODEL**, with case-I root repair and mixed/off-axis boundary.
 
-Net: **the lemma STANDS** (claims 1, 2, 3, 5, 6 at their stated tiers;
-claim 4's constant stands machine-verified with its proof owing one
-repair, safe fallback 2·gen+2). The finite-book restoration (§8) stands.
+Current net: the nonroot conservation/depth-invariance lemma stands with the
+safe `2*gen+2` bound. The all-`M=1` root layer is finite and empty at
+`td=6,m=2`; broader mixed/off-axis and coefficient-realizability layers are
+separate.
 
 ---
 
@@ -79,10 +93,10 @@ w-law re-derived here from the printed equations:
 
 | case | equations | w-law (i-normalized, μ = 1) | where it occurs in the lemma |
 |---|---|---|---|
-| (I) F ∈ V₂ₐ\V₁ₐ | (a)–(d) | handshake κ̄_m − D/i = w_e | I-family (ν = 1) merges only — a segment CHILD has ν_F ≥ 2 ⟹ V₁ₐ (DS1b), so (I) cannot occur inside a segment |
+| (I) F ∈ V₂ₐ\V₁ₐ | (a)–(d) | handshake κ̄_m − D/i = w_e | strict lattice/contact meets, including genuine contact-zero root meets; a segment CHILD has ν_F ≥ 2 ⟹ V₁ₐ (DS1b), so (I) cannot occur inside a segment |
 | (II) F ∈ V₁ₐ, u = α_{j−1} | (a)–(d) | w_F = w_G·n/Δ (chain); handshake w_e (merge) | every within-segment edge (DS1d); every non-0 merge edge |
 | (III) F ∈ V₁ₐ, u > α_{j−1} | (e)–(h), ν := ν_F | **w drifts: κ̄_m − D/i = ν_e·w_e** (equivalently a chain-shaped (III) step would give w_F = ν_G·w_G·n/Δ — re-derived here from (g),(h)) | ONLY the ZCH 0-edge (§5c): the 0-direction pole has coefficient 0 at π(G_m), so π(G_m) is off its support, hence not characteristic — (III) forced. Inside a segment (III) is excluded by DS1(d) |
-| (IV) F = (0,y) | (i)–(m) | n* = ν_e − κ̄_e forced; handshake w_e = 1 − l_f/i₀ < 1 | root merges only (§5d) |
+| (IV) F = (0,y), outside V₂ₐ | (i)–(m) | n* = ν_e − κ̄_e forced; handshake w_e = 1 − l_f/i₀ < 1 | only non-V₂ root endpoints satisfying Prop 9.3(IV), never genuine contact-zero root merges |
 
 So the single case whose step law breaks conservation is (III), and the
 lemma's §5c is precisely the correction that moves the engine's 0-edge
@@ -176,9 +190,11 @@ St 6.2 "in particular" clause anywhere in the doc. Front 2 is clean.
   not assumed (0-coefficient at π(G_m) ⟹ off-support ⟹ non-
   characteristic; V₁ₐ membership from ν_m ≥ 2; u > α_{j−1} strict by
   descent-consecutiveness). Check 7's model matches (n = n′ν_m ∈ ℕ*).
-- Root (§5d): (k) is (c) with n forced to ν_e − κ̄_e; (j) ⟺ n* ≥ 1;
-  handshake 1 − D/i = w_e re-derived; w < 1 NECESSARY for root merges —
-  confirmed, with one directionality nit in §8(iii) (see §7 item 3).
+- Root (§5d), superseded case label: a genuine merge is case I. Proposition
+  8.1(i), Statement 3.17, case-I (c),(d), and Statement 9.2 give
+  `X_root=mu(1-w)`; in the all-`mu=1` pattern `(r,r+l)`, Proposition
+  8.1(iv) gives `w=l/(r+l)<1`. The old case-IV algebra remains only for a
+  root endpoint satisfying its separate non-`V_2` hypothesis.
 
 ## 4. Front 4 — d₀ = gen(W)+2: the one real flaw
 
@@ -276,19 +292,21 @@ enumeration workflow as-is. All layers finite per (m, td).
        reachable only if arriving w's stand in integer ratio ν_e ≥ 2.
        Coefficient layer per cell (out of pattern book): Prop 8.1(iv)
        rigid solve + the MP §8-item-3 coefficient-vs-ratio match.
-    R. Root layer (printed + H1): case (IV), n* = ν_e − κ̄_e ≥ 1 forced
-       ((j): κ̄_e < ν_e — keep as the engine filter; w_e = 1 − l_f/i₀ ∈
-       (0,1) is the implied frame-free necessary form: root merges dead
-       whenever W ∩ (0,1) = ∅), plus (l) d < deg p_G, (m) M-divisibility,
-       l odd, l ≤ td−2, k_f = (r+l)l_f, ψ = r+l−1.
+    R. Corrected all-`mu=1` root layer: a genuine merge is case I and obeys
+       `w=l/(r+l) in (0,1)`, equivalently `l=r*w/(1-w) in N*`. Thus for
+       fixed finite `W` and `r<=m` there is at most one `l` per `(w,r)`.
+       Mixed-`mu`/off-axis roots are outside this book. A non-`V_2` root
+       endpoint may instead satisfy case IV and its separate (j)--(m) tests.
     S. Suffix layer (printed): MP2 restored kill below G*, single-pole
        engine, St 9.4 budget Σλ ≤ td−1−ψ. (Check 5's w ≡ 3/2 on St
        9.6(v) suggests the closure extends to M ≥ 2 suffixes — unproved,
        correctly out of scope.)
 
-    Instance td = 6, m = 2: W = {2}, d₀ = 2; J′ = {IIa (2,3,1), M = 2,
+    Historical nonroot instance td = 6, m = 2: W = {2}, d₀ = 2;
+    J′ = {IIa (2,3,1), M = 2,
     child (5, 3, 1/2)} exactly (corrected model removes ZCH pre-suffix);
-    R empty (w = 2 ≥ 1); matches the promoted record cell-for-cell.
+    R is empty because every genuine all-`M=1` root meet needs
+    `w=l/(r+l)<1`, while `W={2}`. The interior residue remains nonroot.
 
 ## 7. Required fixes (none demote the lemma)
 
@@ -303,13 +321,11 @@ enumeration workflow as-is. All layers finite per (m, td).
    audit-corrected St 3.8, or the equivalent lattice argument (at a
    strict V₂ₐ meet the contact exponent is in the common lattice, else
    some branch jumps and the vertex is V₁ₐ). One line.
-3. **§8 engine fix (iii) directionality**: "root filter strengthened to
-   w < 1 ... subsumes the κ̄ < ν pin" is backwards — (j) κ̄ < ν IMPLIES
-   w < 1, not conversely (reachable hairline witness: (ρ, ν, κ̄) =
-   (ν/(ν+1), ν, ν), w = ν/(ν+1) < 1, (j) fails). w < 1 is the correct
-   frame-free necessary filter (and the right one-line td = 6 kill); the
-   per-edge engine should keep (j)+(k)+(l)+(m). At td = 6 both kill
-   everything — no promoted conclusion touched.
+3. **§8 engine fix (iii), final scope**: a genuine root merge must use the
+   case-I identity `X=mu(1-w)` and, on all-`mu=1` anatomy,
+   `w=l/(r+l)`. Do not relabel it case IV or omit `l>=1`. For a distinct
+   non-`V_2` case-IV endpoint, retain the stronger per-edge (j)+(k)+(l)+(m)
+   tests; `w<1` alone does not imply (j).
 4. Cosmetic: §1 vs §3 edge-naming conventions (F = G + c vs G = F + c,
    both printed-faithful) deserve a one-line note; check 3's entry
    congruence (q-shape pin) deserves a code comment; the doc's `jumps()`

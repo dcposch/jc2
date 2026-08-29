@@ -1,0 +1,111 @@
+{
+  "schema_id": "JC2-GATE-T-STRICT-UAC-THREE-ROW-LINKER-V47R1",
+  "schema_version": 1,
+  "date": "2026-08-27",
+  "status": "PROVISIONAL_PENDING_DIFFERENT_MODEL_REVIEW",
+  "repair_scope": {
+    "repairs": "V47 hostile-review item 5: executable term-exact contraction of the frozen 569-tail V46 emitter to the literal three-row coefficients",
+    "preserves": [
+      "all six frozen V47 producer artifacts byte-for-byte",
+      "V47 reviewed algebra, census, 12 baselines, 4 raised subtails, negatives, walls and theorem-type firewalls",
+      "V46R1 coordinate-typed raw-total to mapped-D1 jet map",
+      "all resolved endpoint localizations and theorem types"
+    ],
+    "withholds": [
+      "endpoint replacement until a different-model hostile review of V47R1 passes",
+      "any contact outside the sixteen V47 manifests",
+      "rho=0, equality faces, positive-order leading loads, staged Rees charts, terminal receiver",
+      "Gate T, order two, maximum twelve, either global G2 obligation, JC2"
+    ]
+  },
+  "coordinate_types": {
+    "raw_total_leading": {
+      "A": ["AzRaw_0", "AcRaw_0"],
+      "C": ["EzRaw_0", "EcRaw_0"],
+      "chart": "A0=AzRaw_0*z+AcRaw_0; C0=(EzRaw_0*z+EcRaw_0)/2"
+    },
+    "mapped_D1_relative": {
+      "A": ["AzD1_0", "AcD1_0"],
+      "C": ["CzD1_0", "CcD1_0"],
+      "chart": "A0=AzD1_0*z+AcD1_0; C0=CzD1_0*z+CcD1_0"
+    },
+    "raw_to_D1": {
+      "AzRaw_n": "AzD1_n",
+      "AcRaw_n": "AcD1_n",
+      "EzRaw_n": "2*CzD1_n",
+      "EcRaw_n": "2*CcD1_n",
+      "SRaw_n": "BzD1_n",
+      "QRaw_n": "4*BcD1_n"
+    }
+  },
+  "literal_slots": {
+    "Phi1": "row 1 at G=10+a+c",
+    "Phi2": "row 2 at G=10+a+c",
+    "Phi4": "row 4 at T_C2=10+2*c",
+    "target_walls": {"Phi2_mu2": 28, "Phi4_mu4": 32},
+    "lower_jet_policy": "contact shift is implemented by sigma^a,sigma^c,sigma^r; all retained relative jets through the mechanically derived support maxima remain independent symbolic variables"
+  },
+  "expected_coefficients": {
+    "raw_total": {
+      "Phi1_G": "(3/8)*(AcRaw_0*EzRaw_0+AzRaw_0*EcRaw_0)",
+      "Phi2_G": "(3/8)*(AcRaw_0*EcRaw_0+rho^2*AzRaw_0*EzRaw_0)",
+      "Phi4_T_C2": "(3/32)*(EcRaw_0^2+rho^2*EzRaw_0^2)"
+    },
+    "mapped_D1": {
+      "Phi1_G": "(3/4)*(AcD1_0*CzD1_0+AzD1_0*CcD1_0)",
+      "Phi2_G": "(3/4)*(AcD1_0*CcD1_0+rho^2*AzD1_0*CzD1_0)",
+      "Phi4_T_C2": "(3/8)*(CcD1_0^2+rho^2*CzD1_0^2)"
+    },
+    "mapped_D1_canonical_sha256": "ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850",
+    "raw_total_canonical_sha256": "00720abb62b26d965c87a1ecce0aff5d593833bfa205a221c0cda8cb4687ff95"
+  },
+  "source_pins": {
+    "v47_schema": {"path":"cases/max12_812_order2_gate_t_strict_uac_three_row_linker_v47_20260827/SCHEMA.json","sha256":"b1770cc0254098343c27600136f0ec1d95084623a4f48eed5216409106703ab2"},
+    "v47_generated": {"path":"cases/max12_812_order2_gate_t_strict_uac_three_row_linker_v47_20260827/GENERATED_MANIFESTS.json","sha256":"070d5a96627ac300f87791b9386e809de21b52317581b01731cde5dc55c7ecaa"},
+    "v47_verifier": {"path":"cases/max12_812_order2_gate_t_strict_uac_three_row_linker_v47_20260827/verify_three_row_linker.py","sha256":"903c6932a53ec5c0a1d2f7e7a7266135131fdc23512e8562f2b5b36ff20c0111"},
+    "v47_result": {"path":"cases/max12_812_order2_gate_t_strict_uac_three_row_linker_v47_20260827/run_v0_v9/result.json","sha256":"a8be0c67b113f0c92e077fc2ff3ef591edee6b859f2e83ed1abca38ec44c367b"},
+    "v47_report": {"path":"cases/max12_812_order2_gate_t_strict_uac_three_row_linker_v47_20260827/RESULT.md","sha256":"e53dd54948f5f67c855ddde8bc705f67b24c9e384aec269269d446c40a449871"},
+    "v47_freeze": {"path":"cases/max12_812_order2_gate_t_strict_uac_three_row_linker_v47_20260827/FREEZE.sha256","sha256":"6ad0ac3f496a7ec67247494dd536fcc1508642b44d22e8147c4406df02f04774"},
+    "v47_hostile_review": {"path":"xmodel/max12-812-order2-gate-t-strict-uac-three-row-linker-v47-hostile-review-grok-20260827.md","sha256":"a4103c4f59799cdf7467ba9b613d503d6f94ae56346ba3ff7d54a04d784432a5"},
+    "three_row_fable_review": {"path":"xmodel/max12-812-order2-gate-t-strict-uac-three-row-syzygy-interface-hostile-review-fable5-20260827.md","sha256":"21caf37bc73c35373cbba9a701adcb29357a846dae5695923e27860e980f9c58"},
+    "v46_schema": {"path":"cases/max12_812_order2_gate_t_uniform_contact_naturality_v46_20260827/SCHEMA.json","sha256":"796eb0847e7b0bb7972c2fd7b3db10bd2dcfd2fd85c5bbaa47e3a239f8b02673"},
+    "v46_verifier": {"path":"cases/max12_812_order2_gate_t_uniform_contact_naturality_v46_20260827/verify_uniform_naturality.py","sha256":"8e49fc87ebeffb74e4c33f79ae248846c7de3ce4f4fb2ad07ac85751d8841ec7"},
+    "v46r1_schema": {"path":"cases/max12_812_order2_gate_t_uniform_contact_naturality_v46r1_20260827/SCHEMA_R1.json","sha256":"0f6bec4983bc8d682b64db5ac23f2d1bb64b8613e2812e95f2cab2b041494b44"},
+    "v46r1_verifier": {"path":"cases/max12_812_order2_gate_t_uniform_contact_naturality_v46r1_20260827/verify_uniform_naturality_r1.py","sha256":"7c571dcd5c545bba64569fe38f826b3b33cac455540f22cecd1c35b37bc88c85"},
+    "v46r1_result": {"path":"cases/max12_812_order2_gate_t_uniform_contact_naturality_v46r1_20260827/run_v0_v4_r1/result.json","sha256":"fd50f3d70b0ebdbecf1307891a9b017f264dc22e5e1fc4bc2a8839b5fdbbfe6a"},
+    "v46r1_report": {"path":"cases/max12_812_order2_gate_t_uniform_contact_naturality_v46r1_20260827/RESULT.md","sha256":"60729c65debd9499aa69a7db2d67c38628ca1b078e0e84a05de34c690b54f3f4"},
+    "v46r1_freeze": {"path":"cases/max12_812_order2_gate_t_uniform_contact_naturality_v46r1_20260827/FREEZE.sha256","sha256":"830dbd173b4302c63c53e6d27b49adde856677fc467e8d5e79c34cfc41abf1c7"},
+    "v46r1_review": {"path":"xmodel/max12-812-order2-gate-t-uniform-contact-naturality-v46r1-hostile-review-grok-20260827.md","sha256":"a2a6a5e204b78485509a314b71bd8ab877ea4cdd9dbad8f2af637b0d753614ac"},
+    "v46r1_promotion": {"path":"xmodel/max12-812-order2-gate-t-uniform-contact-naturality-v46r1-promotion-sol-20260827.md","sha256":"b862e00f6ac80c3392cd365aad5d7001608e2a75fabfa4a76bb2f4c751e1f0fc"},
+    "tails": {"path":"cases/max12_812_order2_u2_62_strict_rees_20260825/aws_compile_v2_jsat/run/output/compiled_v2/tails.json","byte_sha256":"d72f774c53c7dcb259eefc10ff2a02202e1049b61c17486b1ba22e3773813848","canonical_sha256":"6eed03d486e1cd9e8d990eed74a105293d383882bbae77d204eac190cce387e8","row_census":[36,54,58,81,89,120,131],"total_census":569},
+    "tail_emitter": {"path":"cases/max12_812_order2_square_load_ladder_20260826/compile_square_load_ladder.py","sha256":"77f25216f0ab17abb3a8f4be271b2ea38f883806a72523cdca1be659df90dcdc"}
+  },
+  "manifest_coefficient_pins": [
+    {"id":"A2D1","a":2,"c":3,"r_min":2,"G":15,"T_C2":16,"maxima":{"p":1,"A":1,"C":1,"R":0,"k10":0,"k6":0,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A3D1","a":3,"c":4,"r_min":3,"G":17,"T_C2":18,"maxima":{"p":1,"A":1,"C":1,"R":0,"k10":0,"k6":0,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A4D1","a":4,"c":5,"r_min":4,"G":19,"T_C2":20,"maxima":{"p":1,"A":1,"C":1,"R":0,"k10":0,"k6":0,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A5D1","a":5,"c":6,"r_min":5,"G":21,"T_C2":22,"maxima":{"p":1,"A":1,"C":1,"R":0,"k10":0,"k6":0,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A6D1","a":6,"c":7,"r_min":6,"G":23,"T_C2":24,"maxima":{"p":1,"A":1,"C":1,"R":0,"k10":0,"k6":0,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A2D2","a":2,"c":4,"r_min":3,"G":16,"T_C2":18,"maxima":{"p":2,"A":2,"C":2,"R":0,"k10":0,"k6":0,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A3D2","a":3,"c":5,"r_min":3,"G":18,"T_C2":20,"maxima":{"p":2,"A":2,"C":2,"R":1,"k10":1,"k6":0,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A4D2","a":4,"c":6,"r_min":4,"G":20,"T_C2":22,"maxima":{"p":2,"A":2,"C":2,"R":1,"k10":1,"k6":0,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A5D2","a":5,"c":7,"r_min":5,"G":22,"T_C2":24,"maxima":{"p":2,"A":2,"C":2,"R":1,"k10":1,"k6":0,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A6D2","a":6,"c":8,"r_min":6,"G":24,"T_C2":26,"maxima":{"p":2,"A":2,"C":2,"R":1,"k10":1,"k6":1,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A5D3","a":5,"c":8,"r_min":5,"G":23,"T_C2":26,"maxima":{"p":3,"A":3,"C":3,"R":2,"k10":2,"k6":1,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A6D3","a":6,"c":9,"r_min":6,"G":25,"T_C2":28,"maxima":{"p":3,"A":3,"C":3,"R":2,"k10":2,"k6":2,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A1D2_R3","a":1,"c":3,"r_min":3,"G":14,"T_C2":16,"maxima":{"p":2,"A":2,"C":2,"R":0,"k10":0,"k6":0,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A2D3_R5","a":2,"c":5,"r_min":5,"G":17,"T_C2":20,"maxima":{"p":3,"A":3,"C":3,"R":0,"k10":2,"k6":0,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A3D3_R5","a":3,"c":6,"r_min":5,"G":19,"T_C2":22,"maxima":{"p":3,"A":3,"C":3,"R":0,"k10":2,"k6":0,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"},
+    {"id":"A4D3_R5","a":4,"c":7,"r_min":5,"G":21,"T_C2":24,"maxima":{"p":3,"A":3,"C":3,"R":1,"k10":2,"k6":0,"k2":0},"expected_d1_sha256":"ad0c9b15ce394e554c178521fadb32b3c71318cf3a8d700a2311aceb9d12a850"}
+  ],
+  "required_mutations": [
+    "map raw C jets to D1 without the forced factor two",
+    "double the expected Phi1 normalization",
+    "double the expected Phi4 normalization",
+    "inject an extra relative A jet into Phi1[G]",
+    "omit one frozen tail term from row 1",
+    "open the row-2 target wall G<28",
+    "open the row-4 target wall T_C2<32",
+    "replace the full 16-manifest coefficient-pin set by a proper subset"
+  ]
+}

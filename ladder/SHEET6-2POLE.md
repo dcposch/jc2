@@ -1,5 +1,23 @@
 # SHEET6-2POLE.md — the two-pole (3,3) configuration at td = 6
 
+> **2026-08-28 CANONICAL SUPERSESSION — multipole scope and root menu.**
+> Actual-weight `(C7.1*)` and the two-chain selected-exit shared inequality
+> are **GREEN**: the reviewed contact-tree attachment theorem deduplicates
+> selected witnesses and the shared suffix globally (`f55a00f5...`,
+> integration `c74fc0f9...`). Neither printed (22),
+> literal `delta_a`, nor `(22-cl)` may establish it. Corrected Proposition
+> 8.4 kills `M=1` only at certified nonroot vertices; the root is never
+> killed by it. At a root merge the menu must include `l>=1` (the
+> `mu=(1,1), l=1` pattern is locally ODE-solvable). A genuine root merge
+> is Proposition 9.3 case I. Its exact handshake is
+> `X_root=mu(1-w)=A/B`, so every actual parent has `0<w<1`. MP1+MP4+MP5/D5
+> carry both forced row-1 chains through their last nonroot parents with
+> exact alphabet `W={2}`. Therefore the pole-chain root-meet branch is
+> analytically excluded (`645b9424...`). The old l-free phase-3
+> enumerator remains invalid evidence, root `M=1` remains legal, and AWS
+> diagnostics are still relevant to distinct SF1/root-landing questions.
+> This sheet does not exclude the interior residue or `td=6` overall.
+
 Status: PROMOTED (2026-08-07, SHEET6-A2P-REVIEW.md: mathematical core
 CONFIRMED on all fronts; three bookkeeping fixes applied — derived IIb
 pricing now engine default, 95.6% histogram, §2d M_pole pin; survivor book
@@ -17,8 +35,11 @@ is 0 through the merge, §5a); an explicit exhibit passing every located
 printed constraint + the composed kill set exists and is hand-verified
 (§6a): two row-1 poles first-step-merging into (D,deg p,ν,M,κ̄) =
 (6,12,3,2,5), suffix to the St-9.7 shape (42,126,7,3,5), case-IV terminal
-with R=3, Σλ = 2 <= 3 (slack 1). Root merges ARE excluded (§5b phase 3).
-Residual book: 3 merge classes / 9 IV-classes, cap-stable; 2 survive even
+with R=3, Σλ = 2 <= 3 (slack 1). The branch in which the two pole chains
+first meet at the root is analytically excluded; no root-merge AWS census is
+a premise.
+Residual book: the historical 3-merge/9-IV list is not current census
+evidence; 2 survive even
 the λ-root strengthening. Missing lemma for EXCLUDED: §6c (L1 merged-
 pattern inadmissibility is the highest-value target — it would close the
 whole book at once). Until then, td=6 exclusion is conditional on closing
@@ -72,11 +93,14 @@ Structure facts (all from printed statements):
   V_{2,a} — (0,y) in V_{1,a} is impossible — and BOTH terminal steps are
   Prop 9.3 case (I), never case (IV): the case-IV hypothesis
   "F not in V_{1,a} cup V_{2,a}" fails).
-- (iii) M=1 kill PARTIALLY RESTORED: for F on {G_m} cup (suffix), the
+- (iii) M=1 kill PARTIALLY RESTORED: for every **nonroot** F on {G_m} cup
+  (suffix), the
   descent from F is regular at every step and (0,y) is regular over the
   shared H := F_{n-1} (a second predecessor of any suffix vertex would be a
   third pole), so Prop 8.3's induction + the p. 45 Bezout run verbatim:
-  M_F = 1 is contradictory ON THE SHARED SUFFIX AND AT G_m (interior case).
+  M_F = 1 is contradictory on the nonroot shared suffix and at a nonroot
+  G_m (interior case). The root itself is never killed by corrected
+  Proposition 8.4.
   Above G_m (pre-merge segments) the propagation stops at the non-regular
   step: M = 1 is NOT killable there. In the root-merge case 8.3(iii) fails
   at the last step (p_{(0,y)} has two roots, deg != mult), so no M=1 kill
@@ -117,28 +141,29 @@ share a puncture path with a pole; Not 9.3's Y(P_i) is empty).
    coordinates p = (η^ν−c_1^ν)^{μ_1}(η^ν−c_2^ν)^{μ_2}·Π_k. This
    two-equation consistency is the resultant-type relation tying the
    poles; it replaces "splice/linking data" in the Eggers-Wall frame.
-3. SHARED BUDGET: St 9.4 (p. 49) applies to ANY pairwise-different
-   F_1..F_n in Va cap Ta&, hence to the UNION of both chains (shared
-   suffix counted once):
-       Σ_{F in C_1 ∪ C_2} λ_F  <=  td − 1 − ψ  =  5 − ψ,   ψ >= 1,
-   i.e. Σλ <= 4 SHARED, not per-pole. The ψ upgrade (SHEET6-H3 §4a /
+3. SHARED SELECTED-EXIT BUDGET (GREEN): the reviewed contact-tree attachment
+   theorem makes selected cv witnesses globally pairwise distinct over the
+   set-theoretic union of both pole paths, with the shared suffix and merge
+   arrivals counted once. Weighted Corollary 7.1 therefore gives:
+       Σ_{F in C_1 ∪ C_2} λ_F^exit  <=  td − 1 − ψ  =  5 − ψ,   ψ >= 1,
+   i.e. `Σlambda^exit<=4` SHARED, not per-pole. The ψ upgrade (SHEET6-H3 §4a /
    HIII-REVIEW §6 psi-at-root) also transports: ρ_root = l_f/k_f exactly,
    so ψ = ceil(k_f/l_f) − 1 at any root-termination, and k_f =
    deg(p_{(0,y)}) >= i_1μ_1 + i_2μ_2 (both arrival orbits) in the
    root-merge case.
-4. NO OTHER PRINTED TIE: §§5-9 were swept for statements coupling two pole
+4. NO OTHER TIE FROM THE CORRECTED REVIEWED PACKAGE: §§5-9 were swept for statements coupling two pole
    vertices; Prop 5.8/5.7, the shared tree/budget and Lemma 2.1's global
    normalization are the complete list. (Prop 7.5's Euler-characteristic
    identity (22) is the source of Cor 7.1 and is already counted in 3.)
 
-### 2c. Entry M-menu without Prop 8.4
+### 2c. Entry M pin without a multipole Prop 8.4 kill
 
-M_F := gcd(deg p_F, deg p_{h_j,F} family) (Not 8.1, p. 38). The campaign
-menu (AF3) is M | gcd(D,P) = gcd(2,2) = 2, i.e. M in {1,2}. Single-pole
-runs drop M=1 (Prop 8.4); here BOTH M_i in {1,2} are live at entry, and by
-§1c(iii) M=1 nodes are killable only at/below the merge. St 8.4 (p. 42)
-still pins the chain-orbit multiplicity per edge: μ_i | M_{G_i} at every
-step, so M=1 ancestry forces μ=1 patterns (§4c).
+M_F := gcd(deg p_F, deg p_{h_j,F} family) (Not 8.1, p. 38). The
+definition-level pole pin is `M_{P_i}=gcd(2,3)=1`; there is no live `M=2`
+entry for this row-1 family. In the multipole pre-merge region that entry
+`M=1` is not killed. Statement 8.4 still pins the chain-orbit multiplicity
+per edge: `mu_i | M_{G_i}` at every step, so `M=1` ancestry forces `mu=1`
+patterns (§4c).
 
 ### 2d. M_pole pin (added per SHEET6-A2P-REVIEW front 7)
 
@@ -223,7 +248,7 @@ with i·μ_i = deg p_{H_i} (full), and μ_i > dp/dq whenever dp > dq.
   segments + merge.
 - Root merge: terminal step is the I-like merge pattern with child
   (ν,κ̄,D) = (1, 1, l_f) (St 9.2), so κ̄_i + n_i = ν_i, i.e. BOTH parents
-  need κ̄ < ν (the case-IV condition (j) reappears); ψ = ceil(k_f/l_f)−1
+  need κ̄ < ν by case-I equation (d); ψ = ceil(k_f/l_f)−1
   with k_f = i(μ_1+μ_2+k)·[+ other roots], l_f = D_root.
 
 ### 4c. Two rigidity facts inside the calculus (exact)
@@ -235,11 +260,13 @@ with i·μ_i = deg p_{H_i} (full), and μ_i > dp/dq whenever dp > dq.
    dp/dq = 1 = ratio, impossible since ρ < κ̄.) Consequence: M=1 ancestry
    (μ=1 forced, §2c) descends λ-free — the budget CANNOT kill M=1
    pre-merge segments; only the merge-time M-kill (§4b) can.
-2. Root-merge ratio rigidity at μ_1 = μ_2 = 1: the I-like merged ratio is
-   (2+k)/(k+2) = 1 — impossible. So two M=1 chains can never terminate
-   together at (0,y); an M=1 chain must merge INTO an interior vertex.
-   Root merges need μ_1 + μ_2 + k > k + 2, i.e. some μ_i >= 2, i.e. at
-   least one chain arrives with M >= 2 at a κ̄ < ν vertex.
+2. Root-meet rigidity at `mu_1=mu_2=1`: the old `(2+k)/(k+2)=1`
+   argument omitted the legal `l>=1` q-only factors and is false. The clean
+   exclusion uses DEPTH. The corrected case-I root degrees are `(2,2+l)`,
+   so each incoming parent must have `w=l/(2+l) in (0,1)`; the row-1
+   `td=6` ancestry has only `W={2}`. Thus two all-`M=1` chains cannot
+   terminate together at the root, while mixed-`mu` root meets remain a
+   separate census problem.
 
 ## 5. Budget arithmetic and engine runs (cases/twopole_check.py)
 
@@ -275,21 +302,20 @@ residue classes + 6 IV classes** (the legacy-priced 3+9 book in §6 is
 superseded; A′ repriced out, B halved — and B dies at entry under the §2d
 M_pole pin, leaving A + 2 boundary classes as the true survivor set).
 
-Phase 3 (root merges = meet at (0,y)): ZERO solutions, two independent
-structural grounds: (i) any edge with μ_i = 1 fails the St 8.2 searrow
-test at an I-like root pattern (μ_i·(k+2) > μ_1+μ_2+k forces μ_i >= 2 −
-k/(k+2) > 1), and μ_1 = μ_2 = 1 forces ratio (2+k)/(k+2) = 1, impossible
-(§4c.2); (ii) (μ_1,μ_2) >= (2,2) needs both parents M>=2 with κ̄ < ν,
-whose min combined pre-merge cost is 3+3 = 6 > 4 >= 5−ψ. So a two-pole
-counterexample MUST merge at an interior vertex of V_{2,a} and terminate
-through the shared suffix. (Engine confirms: 0 solutions at both cap
-levels even before budget filtering.)
+Phase 3 (root merges = meet at `(0,y)`): the historical zero count is
+invalid evidence because its menu omitted `l>=1`. The corrected local root
+family includes `mu=(1,1), l=1`; it is locally ODE-solvable in isolation.
+The valid case-I edge theorem requires `0<w<1` at every actual root parent.
+MP1+MP4+MP5/D5 carry each forced row-1 chain through the last nonroot parent
+with exact alphabet `W={2}`, so the pole-chain root-meet branch is excluded
+analytically (`645b9424...`). No root-aware AWS enumeration is a
+premise of that conclusion.
 
 ## 6. Outcome: CONSISTENT-EXHIBIT (Q-level), the distinguished target
 
 ### 6a. The exhibit (hand-verified exact; every datum ABSOLUTE, no j-unit)
 
-    P1 = P2 :  Q = (D, deg p, ν, M, κ̄) = (2, 2, 2, 2, 5)      λ = 0 each
+    P1 = P2 :  Q = (D, deg p, ν, M, κ̄) = (2, 2, 2, 1, 5)      λ = 0 each
        |            (row 1 of (23); p = η²−c_i², type (2,3))
        | merged case-II step (hyp M-PAT), μ=(1,1), n=(5,5), λ=0:
        |   p_{G_m} ⊃ (η³−c₁³)(η³−c₂³)   [dp=6]
@@ -320,7 +346,7 @@ the campaign's other survivors: unchecked = Puiseux realizability
 (St 3.16/3.18 side conditions, H4), h-family realizability, AF2 λ-minima,
 plus the new M-PAT (merged-pattern shape rule, §4a).
 
-### 6b. The full residue book (cap-stable at 2 cap levels)
+### 6b. Historical residue book (not an exhaustive current census)
 
 3 merge-residue classes; 9 IV-survivor (shape,Σλ) classes on them:
 - A: G_m = (1/2,3,2,5)@Σλ0 (the exhibit): (1/3,7,3,5)@2 R3,
@@ -374,9 +400,11 @@ Any ONE of the following closes the two-pole configuration:
    g-pole branches at infinity of local degree 3 each (type (2,3),
    row-1 data), whose Eggers-Wall chains merge IMMEDIATELY (first °-step)
    at a V_{2,a} vertex with data (D, deg p, ν, M, κ̄) = (6, 12, 3, 2, 5)
-   [or the (1/5,6,5,5)-child variant], then run the §6a suffix. Root
-   merges are impossible (§5b phase 3). Any Puiseux-data search should
-   start from exactly this template.
+   [or the (1/5,6,5,5)-child variant], then run the §6a suffix. All-`M=1`
+   root merges are excluded analytically by DEPTH/§4c.2 using `W={2}`.
+   Only mixed-`mu`/SF1/off-axis root completeness still needs the corrected
+   `l>=1` menu and AWS diagnostics. Any Puiseux-data search should start
+   from exactly this template.
 4. Domrina-Orevkov parallel (§3): as at td=4, the multi-dicritical/
    multi-pole case is a separate enumeration of comparable size, not a
    corollary — but here it is also where the exclusion currently FAILS,
@@ -387,7 +415,9 @@ Any ONE of the following closes the two-pole configuration:
 ## 8. Trust perimeter and limitations
 
 - Everything is Q-level necessary-condition arithmetic (campaign tier):
-  H1 (Prop 9.3 (a)-(m)), H2 (kill set incl. Y-disjointness in St 9.4),
+  H1 (Prop 9.3 (a)-(m)); the multipole selected-exit budget uses the
+  reviewed global contact-tree attachment theorem rather than literal
+  `Y`-disjointness or printed (22);
   H4 (patterns/regularity for SINGLE-pole steps), AF2 (λ-rule), AF3
   (entry menu, here {1,2}), H5a/b (E5-III in the suffix), H3q (IV
   dispositions) — plus NEW: M-PAT (§4a merged shapes; per-root rules
@@ -408,5 +438,6 @@ Any ONE of the following closes the two-pole configuration:
     cd cases && python3 twopole_check.py     # ~3 min, exact arithmetic
     # phase 1: 163 shapes; phase 2: 52389 merges -> 3 residue classes
     # (kill histogram: 50097 restored-8.4 / 1373 suffix-dead / 336 N1);
-    # phase 3: 0 root merges. Raised-caps stability run: see SHEET6-2POLE
-    # session log (216390 merges, same 3 classes).
+    # historical phase 3: 0 root merges, but its l-free menu is invalid
+    # evidence. The all-M=1 root exclusion is analytic (DEPTH/§4c.2).
+    # Raised-caps nonroot stability: see the SHEET6-2POLE session log.

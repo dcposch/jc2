@@ -1,5 +1,21 @@
 # SHEET6-LT-REVIEW.md — Adversarial review of SHEET6-LROOT (c8f8bc8) and SHEET6-TEMPLATE (3f06c21), plus R1 gate
 
+> **2026-08-28 CANONICAL SUPERSESSION — historical review scope.** This
+> 2026-08-07 review remains provenance for the local `lambda_root^exit=0`
+> argument and the LR2 inequality. It is no longer hostile confirmation of
+> printed Proposition 7.5: actual-weight `(C7.1*)` is **GREEN**
+> (`c253bd12...` / `727f5850...`) and singleton first-separation is
+> **GREEN**, while printed (22), literal `delta_a`, `(22-cl)`, slack
+> equalities, and categorical no-refinement conclusions are quarantined.
+> Front 2 is therefore an actual-weight strict-specialization question
+> `w_i(z)>b_i^+`, not a `delta`-strictness theorem. Corrected Proposition
+> 8.4 is nonroot-only. MFE now gives the multipole selected-exit inequality
+> with the shared suffix counted once (`c74fc0f9...`). The old exhaustive
+> `td=6` counts remain withdrawn; the case-I window plus MP1+MP4+MP5/D5
+> excludes the two-pole `td=6` pole-chain root-meet branch, but broader
+> post-jump/off-axis root completeness stays open.
+> Later dated claims below are read subject to this box.
+
 Reviewer: Claude (adversarial pass, 2026-08-07). Status: COMPLETE.
 Scope: the two unreviewed endgame results (λ_root refutation + template
 lift) and the GO/NO-GO gate on the proposed decisive experiment R1.
@@ -31,7 +47,7 @@ Verdicts:
   g co-staging; SOLVABLE endpoint). Sizing 10²-10³ CONFIRMED credible.
   After amendments: GO.
 
-## 1. Front 1 — λ_root refutation (LR1) and the (22) itemization
+## 1. Front 1 — λ_root refutation (LR1) and historical `(22)` itemization
 
 Verdict: **CONFIRMED**. LR1 re-derived from the page; the itemization of
 (22) re-derived from Prop 7.5's proof; both alternate readings probed —
@@ -81,7 +97,7 @@ neither resurrects λ_root.
   line 81: `assert ... == 4 or True` is a vacuous assert (the R = 4 value
   is nonetheless correct: ν/(ρ+ν−κ̄) = 5/(5/4) = 4, re-checked).
 
-## 2. Front 2 — is δ-strictness really the last kill surface?
+## 2. Front 2 — actual-weight strict specialization (historical `delta` discussion superseded)
 
 Verdict: **CONFIRMED** after a genuine hunt. No printed statement forces
 δ_a > 0 at any survivor; Prop 7.3's mult ≥ 2 case is exactly where the
@@ -367,14 +383,12 @@ GO. Without them: NO-GO (either failure mode wastes the run).
 
 Both results SURVIVE adversarial review on their mathematical content.
 
-1. SHEET6-LROOT (c8f8bc8): **PROMOTE with corrections.** λ_root = 0
-   forced at every case-IV terminal — CONFIRMED, reading-robust (neither
-   the E10 swap nor the literal-E9 reading resurrects it); book stays 8;
-   LR2's x-side pin and the slack-0 total rigidity (δ_a = 0 ∀a) stand;
-   δ-strictness at mult ≥ 2 collisions is genuinely the last printed-
-   adjacent kill surface. Required edits: E10 filing fixes (front 6),
-   the two §2 wording nitpicks and (24)-sign note (front 1), and the
-   vacuous assert in lroot_ledger.py line 81.
+1. SHEET6-LROOT (c8f8bc8): **historical promotion superseded in the
+   Section-7 ledger scope.** The local `lambda_root=0` conclusion is
+   reading-robust, but the asserted literal-`delta` total rigidity and its
+   printed-ledger consequences are quarantined by the 2026-08-28
+   actual-weight packet. Any strictness target is `w_i(z)>b_i^+` and
+   requires a separately reviewed theorem.
 2. SHEET6-TEMPLATE (3f06c21): **PROMOTE as FORMAL-CANDIDATE with
    corrections.** The lift, the forced tower (2,3),(3,4), the h2-collapse
    re-derivation of L1c, the (F_i) identities, and the leak-free ladder

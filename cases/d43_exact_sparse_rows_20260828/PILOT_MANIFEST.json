@@ -1,0 +1,108 @@
+{
+ "D": 43,
+ "absolute_depth": 75,
+ "authorization": {
+  "build_sparse_checkpoints": true,
+  "fanout_after_pilot": false,
+  "pilot_band20": true
+ },
+ "aws": {
+  "expected_hostname": "",
+  "expected_instance_id": "",
+  "expected_nproc": 0,
+  "expected_product": "",
+  "expected_vendor": "Amazon EC2",
+  "registration_status": "UNREGISTERED_REVIEW_PACKET_DO_NOT_LAUNCH",
+  "required_run_tag": ""
+ },
+ "claim_boundary": {
+  "JC2_counterexample": null,
+  "banked_NF_presentation_equivalence": null,
+  "exact_D43_source_point": null,
+  "output_meaning": "exact pure-y source-row emission on one proposed finite D43 support"
+ },
+ "expected_registry_sha256": "b3fce1ef76e01c4698b97f7e4cc3562f4da3cd022b301ddde15b1ae086298ce6",
+ "full_checkpoint_inputs": {
+  "f": {
+   "basename": "jet_f_02_B.pkl",
+   "bytes": 29261066,
+   "sha256": "102500c71d97eda78761c0f450d00c033edf63e42c487c63e559de869fdb08a7"
+  },
+  "g": {
+   "basename": "jet_g_05_GB21.pkl",
+   "bytes": null,
+   "sha256": null
+  },
+  "observed_incomplete_g": {
+   "basename": "jet_g_03_G0p2.pkl",
+   "bytes": 337919305,
+   "sha256": "782f99c0282bcd6eec50e131591e1cac8e6ad3cf6f5705a09d206c0f42cb3fbc"
+  },
+  "producer_code_sha256": {
+   "build_tails43.py": "92ea21461ad86274473b984fdbf64c4103f18f320e4e60d0aec430ab29999231",
+   "directionb_strike.py": "7f1e4121689966fc61261141d60b2a2321746209818573e3dbce984c00bfac2b",
+   "r1_experiment.py": "d70b7ee1d40cee51e5e84011bc14d03a3bd59321c13fe8299816506b863dda72"
+  },
+  "producer_consumer_code_status": "BLOCKED_R1_HASH_MISMATCH_REQUIRES_PINNED_PRODUCER_COPY_OR_COMPATIBILITY_PROOF",
+  "status": "BLOCKED_MISSING_FINAL_G_GB42_AND_GB21_CHECKPOINTS"
+ },
+ "resource_contract": {
+  "address_space_bytes": 549755813888,
+  "cpu_list": "2",
+  "file_size_bytes": 137438953472,
+  "kill_after_seconds": 60,
+  "minimum_disk_free_bytes": 107374182400,
+  "minimum_memory_available_kib": 536870912,
+  "timeout_seconds": 86400,
+  "zero_swap_required": true
+ },
+ "schema": "jc2.d43.exact-selected-source-manifest.v1",
+ "scope": {
+  "alpha": 0,
+  "beta": 0,
+  "e5_W_quartics": "DEFERRED_EXACT_SOURCE_RELATIONS_NOT_IMPOSED",
+  "inhomogeneous_row20_plus42": true,
+  "pin42": true,
+  "pure_y": true
+ },
+ "shard_plan": [
+  {"band": 6, "id": "band06", "targets": 9},
+  {"band": 8, "id": "band08", "targets": 10},
+  {"band": 10, "id": "band10", "targets": 9},
+  {"band": 12, "id": "band12", "targets": 9},
+  {"band": 14, "id": "band14", "targets": 10},
+  {"band": 16, "id": "band16", "targets": 10},
+  {"band": 18, "id": "band18", "targets": 9},
+  {"band": 20, "id": "band20", "targets": 10},
+  {"band": 22, "id": "band22", "targets": 10},
+  {"band": 24, "id": "band24", "targets": 9},
+  {"band": 26, "id": "band26", "targets": 10},
+  {"band": 28, "id": "band28", "targets": 10},
+  {"band": 30, "id": "band30", "targets": 9},
+  {"band": 32, "id": "band32", "targets": 10},
+  {"band": 34, "id": "band34", "targets": 10},
+  {"band": 36, "id": "band36", "targets": 10},
+  {"band": 38, "id": "band38", "targets": 10},
+  {"band": 40, "id": "band40", "targets": 10},
+  {"band": 42, "id": "band42", "targets": 10}
+ ],
+ "source_sha256": {
+  "cases/d43_exact_sparse_rows_20260828/selected_rows.py": "05c244b6bf19334d61bdd79835b56f6e1f8cf8f4e3556e6eea51330c4d705755",
+  "cases/d43_full_certificate_p105337.json": "6e50a00f651b4e6ea0a5666d7507c499ff86e86d7eed9c0c17cd7add247eec7c",
+  "cases/d43_full_certificate_p105673.json": "3c2bef3987cb4644c49f992cacbe36f688ecf97cfcdbe32f83267f749b1f58d9",
+  "cases/directionb_strike.py": "7f1e4121689966fc61261141d60b2a2321746209818573e3dbce984c00bfac2b",
+  "cases/r1_experiment.py": "1214f58eac807128eb7d6edb32726e8cf0923241e7340cbe78bdd5c0aca5d7c1",
+  "directionb_tails_D21.pkl": "b4ba8dfcd9755fb3201780cd97c1d2ef38bd26d2d1b023521a0e62a3d6db169e",
+  "xmodel/d43-direct-exact-sparse-source-preflight-gpt56-20260828.md": "480c7dcd52543a438cf9588d4842273c717cc3695bade2ff87c923b9d9ea262c"
+ },
+ "status": "REVIEW_FROZEN_UNREGISTERED_BAND20_ONLY_DO_NOT_LAUNCH",
+ "support": [
+  "tf1_47", "tf1_52", "tf1_57", "tf1_62", "tf1_67", "tf1_72",
+  "tf2_47", "tf2_52", "tf2_57", "tf2_62", "tf2_67", "tf2_72",
+  "tg1_47", "tg1_52", "tg1_57",
+  "tg2_47", "tg2_52", "tg2_57",
+  "tg01_52", "tg01_62", "tg02_52", "tg02_62"
+ ],
+ "support_sha256": "6d050cb75c561305e5676e57f987322cf71fce38e56766644c3250be4af2c970",
+ "target_registry_sha256": "25603a9e25d5926b0617ada9af61e9ef408977587abb29074d6d87c544825651"
+}

@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+set -euo pipefail
+if [[ "$(uname -s)" != Linux ]]; then exit 125; fi
+vendor=$(tr -d '\n' < /sys/class/dmi/id/sys_vendor 2>/dev/null || true)
+if [[ "$vendor" != "Amazon EC2" || $# -ne 8 ]]; then exit 125; fi
+aws_root=$1; aws_job=$2; tag=$3; characteristic=$4; algorithm=$5
+cap_kib=$6; engine_timeout=$7; archive_sha=$8
+package=cases/max12_812_order2_p0_total_rees_t_rs_rho_unit_v15_20260826
+math_package=cases/max12_812_order2_p0_total_rees_t_rs_rho_unit_v14_20260826
+mkdir -p "$aws_job/run"
+{
+  printf 'tag=%s\n' "$tag"; printf 'host=%s\n' "$(hostname)"
+  printf 'launcher_pid=%s\n' "$$"; printf 'start_utc=%s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  printf 'characteristic=%s\n' "$characteristic"; printf 'algorithm=%s\n' "$algorithm"
+  printf 'engine_timeout_seconds=%s\n' "$engine_timeout"; printf 'per_process_virtual_memory_cap_kib=%s\n' "$cap_kib"
+  printf 'source_archive_sha256=%s\n' "$archive_sha"; printf 'singular_version=%s\n' "$(Singular --version 2>&1 | head -1)"
+  printf 'deployment_successor=V15\n'; printf 'mathematical_package=V14\n'
+} > "$aws_job/launch_registration.txt"
+printf '%s\n' "$$" > "$aws_job/launcher.pid"
+(cd "$aws_root/$package" && sha256sum -c FREEZE.sha256) > "$aws_job/v15_freeze_check.stdout"
+(cd "$aws_root/$math_package" && sha256sum -c FREEZE.sha256) > "$aws_job/v14_freeze_check.stdout"
+cd "$aws_root"
+export JC2_REGISTERED_AWS_LANE="$tag"; ulimit -v "$cap_kib"
+set +e
+timeout 300 python3 "$math_package/compile_rho_unit_v14.py" "$aws_job/compiled" --characteristic "$characteristic" --algorithm "$algorithm" > "$aws_job/compiler.stdout" 2> "$aws_job/compiler.stderr"
+compiler_rc=$?
+set -e
+printf 'compiler_rc=%s\n' "$compiler_rc" > "$aws_job/compiler.validation"; if [[ "$compiler_rc" -ne 0 ]]; then exit "$compiler_rc"; fi
+script=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["script"])' "$aws_job/compiled/result.json")
+set +e
+bash ops/aws_exact_lane.sh "$aws_root" "$aws_job/run" "$tag" timeout "$engine_timeout" Singular -q "$script"
+engine_rc=$?
+set -e
+printf 'engine_rc=%s\n' "$engine_rc" > "$aws_job/engine.validation"; if [[ "$engine_rc" -ne 0 ]]; then exit "$engine_rc"; fi
+stdout="$aws_job/run/${tag}.stdout"; stderr="$aws_job/run/${tag}.stderr"
+set +e
+python3 "$math_package/validate_rho_unit_v14.py" --compiler-result "$aws_job/compiled/result.json" --stdout "$stdout" --stderr "$stderr" --characteristic "$characteristic" --algorithm "$algorithm" --output "$aws_job/RESULT.json" > "$aws_job/validator.stdout" 2> "$aws_job/validator.stderr"
+validator_rc=$?
+set -e
+printf 'validator_rc=%s\n' "$validator_rc" > "$aws_job/validator.validation"; if [[ "$validator_rc" -ne 0 ]]; then exit "$validator_rc"; fi
+printf 'validator=PASS_T_RS_RHO_UNIT_V14_VIA_V15_DEPLOYMENT\n' >> "$aws_job/validator.validation"
+: > "$aws_job/EVIDENCE.sha256"
+for artifact in "$aws_job/RESULT.json" "$aws_job/compiled/result.json" "$script" "$aws_job"/compiled/*.ideal "$aws_job"/compiled/*.polys "$stdout" "$stderr" "$aws_job"/run/*.meta; do sha256sum "$artifact" >> "$aws_job/EVIDENCE.sha256"; done
+

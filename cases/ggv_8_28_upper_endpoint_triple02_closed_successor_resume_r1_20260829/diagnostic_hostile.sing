@@ -1,0 +1,11 @@
+// Hostile fixture: Singular may diagnose invalid list slot 2 with rc=0.
+ring hostile=0,(x,y),dp;
+LIB "elim.lib";
+ideal I=x*y;
+ideal D=x;
+list HOSTILE_SAT_RESULT=sat(I,D);
+print("HOSTILE_SAT_TYPE="+typeof(HOSTILE_SAT_RESULT));
+print("HOSTILE_SAT_SIZE="+string(size(HOSTILE_SAT_RESULT)));
+print("HOSTILE_INVALID_SLOT="+string(HOSTILE_SAT_RESULT[2]));
+print("HOSTILE_END_MARKER=1");
+quit;

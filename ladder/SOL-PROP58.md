@@ -1,10 +1,10 @@
-Status: PROMOTED (2026-08-12, SOL-PROP58-REVIEW.md: all fronts CONFIRMED,
-Grok concurs; conditions applied — citation repointed to the full EuDML
-text (refs/chau1999_apm71_full.pdf, Thm 4.4 pp. 304-305, hypotheses =
-Keller + monic-in-y only), Chau Thm 4.4 entered in the external trust
-ledger, the "Theorem 4.1(ii) independent check" claim DEMOTED to
-overclaim, minor patches N1-N3/N7-N8 per the review). Authored by GPT 5.6
-Sol; reviewed by Fable + Grok.
+Status: PROMOTED (2026-08-12; review patches physically incorporated
+2026-08-28). \`SOL-PROP58-REVIEW.md\`: all fronts CONFIRMED; Grok concurs.
+The citation points to the full local Chau text, Theorem 4.4 is recorded in
+the external trust ledger, and review patches N1--N4/N7--N8 are incorporated.
+Independent 2026-08-28 audit \`47eef092...\` also supplies an internal
+positive-pole transport proof. Authored by GPT 5.6 Sol; reviewed by Fable +
+Grok.
 
 # Proposition 5.8: the pole-mass identity on every fiber
 
@@ -123,8 +123,8 @@ Statement 3.8. Proposition 5.3(ii),(viii) has its ratio inverted in print;
 the correct formula is
 \(d_{g,F}=(k_g/k_f)d_F=(\beta/\alpha)d_F\). The repaired \(q\)-half of
 Proposition 5.4 underlies Statement 5.2(ii), Proposition 5.7, and table
-(23). Finally, Proposition 5.1's gap at finite nonzero asymptotic
-\(g\)-values is irrelevant here, because only actual \(g\)-poles enter.
+(23). Finally, the promoted Proposition 5.1 repair separates finite
+punctures from actual \(g\)-poles; only the latter enter here.
 
 Source-location correction: table (23) is not on pp. 26--30. It is in
 Proposition 9.1 on printed p. 46. It lists the possible *individual* pole
@@ -402,9 +402,12 @@ nonproper-value set is needed. This is Chau's definition of
 Suppose \(\Delta_a^{\mathrm{pole}}>0\). Then some boundary component \(E\)
 satisfies
 \(p(E)=a\) and \(q|_E\) is nonconstant. Equivalently, \(\Phi(E)\) is the
-projective vertical line \(\{a\}\times\mathbf P^1\). Formula (12) also shows
-directly that, for generic \(b\in\mathbf C\) (in particular, avoiding the
-finite values of \(g\) at the other punctures),
+projective vertical line \(\{a\}\times\mathbf P^1\). On every component
+\(\Gamma\subset f^{-1}(a)\), the restriction of \(g\) is nonconstant:
+otherwise both \(df\) and \(dg\) annihilate \(T\Gamma\), contradicting
+\(J(f,g)\ne0\). Formula (12) therefore shows directly that, for generic
+\(b\in\mathbf C\), avoiding the finitely many branch values of
+\(g|_{\overline R_a}\) as well as the finite \(g\)-values at punctures,
 
 \[
 \#\mathcal F^{-1}(a,b)
@@ -421,7 +424,7 @@ irreducible component of \(E_{\mathcal F}\).
 This is impossible by Nguyen Van Chau's theorem. In
 [N. V. Chau, *Non-zero constant Jacobian polynomial maps of
 \(\mathbf C^2\)*, Ann. Polon. Math. 71 (1999), 287--310,
-Theorem 4.4(E1), printed pp. 304--305](https://matwbn.icm.edu.pl/ksiazki/apm/apm71/apm7135.pdf),
+Theorem 4.4(E1), printed pp. 304--305](../refs/chau1999_apm71_full.pdf),
 the exceptional set of a nonzero constant-Jacobian map is a finite union of
 polynomially parametrized curves
 
@@ -463,7 +466,8 @@ d
 
 This is Proposition 5.8 at its printed strength. \(\square\)
 
-There is a useful independent source check in the same Chau paper.
+There is a corroborating statement in the same Chau paper, not an
+independent proof.
 Theorem 4.1(ii), printed pp. 301--302, explicitly identifies the geometric
 degree with the sum of the local degrees at the poles of \(Q\) on \(P=0\).
 Applying it to \((P-a,Q)\) gives the every-\(a\) pole-order equality in one
@@ -510,8 +514,8 @@ For all finite fibers, the corresponding hypothesis is
 p(E)\in\mathbf C\text{ and }q|_E\text{ nonconstant}.
 \]
 
-On a graph resolution this is equivalent to the affine exceptional set
-having no vertical-line component: that set is the union of the affine
+On a graph resolution this is equivalent to the affine asymptotic/non-proper
+value set having no vertical-line component: that set is the union of the affine
 images of boundary components, so each vertical curve component is
 dominated by a component with constant finite \(p\) and nonconstant \(q\).
 This condition is resolution-independent. Components with

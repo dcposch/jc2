@@ -2,6 +2,16 @@
 
 Status: COMPLETE + PROMOTED AS-IS (2026-08-07, SHEET6-A2P-REVIEW.md: all
 fronts CONFIRMED; E6 proven at proof-level; two bonus tightenings noted).
+**2026-08-28 scope correction:** the local per-direction pricing remains
+promoted, now attached to the unique first-separation exit set rather than
+literal nested `Y(F)`.  Actual-weight Corollary 7.1 supplies the singleton
+global budget and, with the separately reviewed contact-tree attachment
+theorem, the multipole selected-exit union budget. The old exhaustive
+SF1/root census is superseded pending the
+root-aware AWS rerun, except that the reviewed mixed-root/case-I theorem
+plus MP1+MP4+MP5/D5 now analytically excludes the `td=6,m=2` pole-chain
+root-meet branch. Broader off-axis/post-jump and SF1
+completeness remain pending.
 Auditor: Claude. Mission: SHEET6-CAMPAIGN.md §6
 item 5 + SHEET6-HIII-REVIEW.md §§5/7 flagged asymmetry (IIb extra-orbit
 pricing). Ground truth read on-page: refs/sigray_full.pdf pp. 27-45, 48-55
@@ -14,13 +24,15 @@ VERDICT:
   St 9.3 (24) mechanism), and the 0-root adds its own ν_F-discounted term.
   There is NO coherent free reading: for gap > 0 the extra directions are
   forced to climb by St 6.2 alone (regularity not even needed), they land in
-  Y(F) by Notation 9.3, and (24) prices them; λ_F is by DEFINITION the sum.
+  distinct alternative-direction subtrees, and corrected (24) prices the cv
+  flag owned by that step's first-separation exit set.
 - **Both sanctioned residual classes are EXCLUDED**: the single IIb μ=4 k=1
   step at r10/M4 that carries both has gap = 12 − 5 = 7, so λ_F ≥ 8 > 3 =
   td−2 ((26)/St 9.5 alone; ψ-budget not needed). The kill is sign-robust
   (§4): under the PRINTED (mis-signed) (24) the bound is 17 > 3.
-- **Composed sanctioned residual (single-pole, td ≤ 6) = 0. SF1 residual = 0.
-  AF3-superset book: 13 → 4** (§5).
+- **Historical composed nonroot/IV residual (single-pole, td ≤ 6) = 0;
+  AF3-superset book: 13 → 4** (§5).  The old `SF1 residual = 0` claim is not
+  exhaustive after the root-scope correction and awaits the root-aware rerun.
 - **AF2's general rule is now DERIVED from St 9.3 (24)** (§2), modulo one
   new thesis erratum (E6, a sign slip in (24) as printed — repaired against
   its own proof and its three p. 53 usages) — every λ-badge the campaign,
@@ -57,14 +69,17 @@ So the intended (24) is
 corrected (24); §4 shows the two residual kills do NOT depend on the fix
 (the printed-literal version prices HIGHER).
 
-Supporting cast, all read on-page: Not 9.3 (p. 49): λ_F := Σ_{H∈Y(F)}
-κ_H(π(H)−1), Y(F) = curve vertices over F on branches through F. St 9.4
-(25)/(26) + St 9.5 (p. 49-50): Σ_i λ_{F_i} ≤ td−1−ψ, ≤ td−2 over the
-characteristic sequence. St 7.1 (p. 35): H ∈ T_{a,cv} ⇒ π(H) > 1. St 7.3
-(p. 35): a branch with a T_a↗ vertex has a T_{a,cv} vertex. Cor 7.1
-(p. 39): global budget. St 6.1/6.2 (p. 29): ↘/↗ dichotomy on T_a⁺ and the
-step criterion "F = G + c ∈ T_a↘ iff d_G < (1−π(G))mult(p_G,c)". Prop 6.7
-(p. 33): F ∈ T_a↘, deg p_F > 1 ⇒ every F∗c ∈ T_a⁺. Prop 8.1(i) (p. 39-40):
+Supporting cast: literal Not 9.3 defines nested `Y(F)` sets and cannot be
+summed along a chain.  The reviewed replacement assigns each cv flag to its
+unique singleton-chain first-separation exit set `E_i`; repaired St 9.4/9.5
+then gives `sum_i lambda_i^exit <= td-1-psi`, hence `<=td-2`, by
+actual-weight Cor 7.1 (`c253bd12...`, gate `727f5850...`). St 7.1 (p. 35):
+H ∈ T_{a,cv} ⇒ π(H) > 1. St 7.3 (p. 35): a branch with a T_a↗ vertex has a
+T_{a,cv} vertex. St 6.1/6.2 (p. 29): ↘/↗ dichotomy on T_a⁺ and the
+step criterion "F = G + c ∈ T_a↘ iff d_G < (1−π(G))mult(p_G,c)". Repaired
+Props 6.7/6.8 (pp. 33-34; `c3d6ff92...`): a down parent with deg p>1 has
+positive microsteps, and every selected down microstep reaches a same-branch
+pole/next down vertex. Prop 8.1(i) (p. 39-40):
 (ξ^δ p(η))^i = f_F⁺, i = deg(p_F)/M*_F — hence mult(p_F, c*) = i·mult(p, c*)
 for EVERY root (true multiplicities are the reduced pattern's times i).
 St 8.4 (p. 42): mult(p,c) | M_G. St 3.18 (p. 18): every root of p_F yields
@@ -78,25 +93,33 @@ reduced pattern p of Prop 8.1 has roots: the c-orbit (mult μ), possibly 0
 (mult 1; exactly the IIb/III patterns), and k extra ν_F-orbits c_1..c_k
 (templated simple). For any root c* of p with direction ≠ that of G:
 
-- (R1) F ∗ (εc*) exists (St 3.18) and H₁ := F + c* ∈ T_a⁺ (Prop 6.7;
-  deg p_F > 1 whenever p has > 1 root, i.e. except the μ=1 M=1-kill).
-- (R2) THE CLIMB. By St 6.2 (applied to the pair H₁ = F + c*):
-  H₁ ∈ T_a↘ ⟺ d_F < (1−π(F))·mult(p_F, c*). Multiplying by κ_F > 0 and
+- (R1) Corrected St 3.18 gives a realizable one-grid-step point
+  `E:=F*_(κ)(εc*)`; Proposition 6.7 puts `E` in `T_a+` when `deg p_F>1`
+  (the only exception is already the μ=1, M=1 kill).  Proposition 3.2
+  separately names the next vertex `H₁:=F+c*`.  These points need not be
+  equal; sweep r2 `581219e0...` supersedes the former conflation.
+- (R2) THE CLIMB.  Exact Statement 3.9 for the fixed fibre polynomial,
+  applied to the microstep `E`, gives the same raw sign test as St 6.2:
+  `E in T_a↘` iff `d_F < (1−π(F))*mult(p_F,c*)`.  Multiplying by κ_F > 0 and
   using D_F = κ_F d_F, κ̄_F = κ_F(1−π(F)), mult(p_F,c*) = i·w (Prop 8.1(i),
   w := mult(p, c*)):
-      **H₁ ∈ T_a↘  ⟺  D_F/(i·w) < κ̄_F  ⟺  gap(c*) := D_F/(i·w) − κ̄_F < 0.**
-  So if gap(c*) > 0, H₁ ∉ T_a↘, hence H₁ ∈ T_a↗ (St 6.1) — UNCONDITIONALLY,
-  no regularity needed. If gap(c*) ≤ 0, H₁ ∈ T_a↗ still follows from
-  regularity (Not 9.2: G is the only ↘ V_a vertex over F; H₁ ∈ V_a, H₁° = F,
-  H₁ ≠ G since directions at F are distinct vertices) — this is the thesis's
-  own printed inference ("F + c₁ ∈ T_a↗", "F + 0 ∈ T_a↗", "H ∈ T_a↗ [by]
-  the regularity condition", pp. 53-54).
-- (R3) THE PRICE. H₁ ∈ T_a↗ on branch P ⇒ ∃H = I_P(π(H)) ∈ T_{a,cv}
+      **E ∈ T_a↘  ⟺  D_F/(i·w) < κ̄_F  ⟺  gap(c*) := D_F/(i·w) − κ̄_F < 0.**
+  If `gap<0`, repaired Proposition 6.8 transports the down microstep along
+  the same branch to the next down vertex `H₁`; regularity forbids this for
+  an alternative direction.  Equality is excluded by Statement 6.1, so a
+  regular step forces `gap>0`.  Then `E in T_a↗` unconditionally.  This is
+  the corrected Proposition 6.7/6.8 bridge `c3d6ff92...` (Opus5 review
+  `eb37373b...`, correction `050ccddd...`; Lemma 6.1 R2 `2fdbbee9...`,
+  Opus5 review `5193e7b0...`, correction `607e0dcf...`), and it recovers the thesis's printed regularity inference
+  without assuming the next vertex positive at the outset.
+- (R3) THE PRICE. `E ∈ T_a↗` on branch P ⇒ ∃H = I_P(π(H)) ∈ T_{a,cv}
   (St 7.3; printed usage p. 53: "Since G* ∈ T_a↗, there exists H = I_Q(w) ∈
-  T_{a,cv}"). H ∈ Y(F) by Notation 9.3 (P realizes F). Corrected (24):
+  T_{a,cv}").  This alternative-direction subtree first separates at F, so
+  H belongs to F's exit set. Corrected (24):
       contribution(c*) ≥ D_F/(i·w) − κ̄_F = gap(c*)        (c* ≠ 0)
       contribution(0)  ≥ gap(0)/ν_F                        (c* = 0).
-- (R4) ADDITIVITY + FLOORS. λ_F is BY DEFINITION the sum over Y(F).
+- (R4) ADDITIVITY + FLOORS. `lambda_F^exit` is the sum over the distinct cv
+  flags owned by F's first-separation exit set.
   Distinct directions give distinct H (branches separate at F: O(P,P') =
   π(F) < π(H), so I_P(π(H)) ≠ I_{P'}(π(H))), and every Y(F)-term is > 0
   (St 7.1: π(H) > 1). Each certified term is ≥ 1 (κ_H(π(H)−1) ∈ N, the
@@ -111,9 +134,9 @@ with gap(c*) = D_F/(i·mult(p,c*)) − κ̄_F. On the campaign's templates
 (extra orbits simple, w = 1, all gaps equal): **λ_F ≥ k·max(1, ⌈gap⌉)
 (+ the IIb 0-term max(1, ⌈gap/ν_F⌉))**, gap = D_F/i − κ̄_F. Trust
 perimeter per part: the ⌈·⌉ needs the St 9.4-line integrality; the
-max(·,1) floor on gap ≤ 0 roots needs H4-regularity; the gap-part for
-gap > 0 roots needs NEITHER (R2) — strictly smaller perimeter than AF2
-was booked under. AF2 as reverse-engineered (campaign §0a) is exactly the
+max(·,1) floor is automatic after regularity forces every alternative gap
+strictly positive; the gap-part for gap > 0 roots needs no regularity once
+the direction is fixed. AF2 as reverse-engineered (campaign §0a) is exactly the
 k·max(1,⌈gap⌉) clause: **DERIVED**. Every λ-badge in SHEET6-CAMPAIGN/H3/
 III/HIII-REVIEW is retro-validated; the E5 λ-bound's AF2-dependence
 (SHEET6-III §5) upgrades to (24)-derived.
@@ -160,8 +183,10 @@ entry Q(G) = (4j,4j,4,4,9) --IIb μ=4, k=1, ν_F=7-->:
 The step's price:
   gap = D_F/i − κ̄_F = 12 − 5 = **7**;   gap/ν_F = 1.
   - Climb: by (R2), the c₁-direction is in T_a↘ iff 12 < 5 — FALSE; the
-    0-direction identically; both climb by St 6.2 + St 6.1 + Prop 6.7,
-    NO regularity input.
+    0-direction identically; both realizable microsteps climb by the raw
+    St 6.2 sign + St 6.1, after Prop 6.7 types them in `T_a+`.  Prop 6.8
+    is needed only for the general negative-gap contradiction in R2.  No
+    regularity input is used here.
   - Price: corrected (24): the two curve vertices contribute ≥ 7 and ≥ 1;
     λ_F ≥ 8. Integer bounds — no ⌈·⌉/integrality needed.
   - Budget: St 9.5/(26): Σ λ_{F_i} ≤ td − 2 = 3 over ANY characteristic
@@ -225,14 +250,18 @@ New thesis errata:
 
 Trust perimeter of the two kills (§4): Prop 9.3 (a)-(d) + Prop 8.1 +
 St 3.17 arithmetic (= H1, the layer that produced the cell), the cell's own
-(b)-template, corrected-or-printed (24) (sign-robust), St 6.1/6.2, Prop
-6.7, St 7.3, Not 9.3, St 7.1, St 9.5/(26). NOT engaged: regularity (H4's
+(b)-template, corrected-or-printed (24) (sign-robust), St 6.1/6.2, repaired
+Props 6.7/6.8, St 7.3, Not 9.3, St 7.1, St 9.5/(26). NOT engaged by the
+two numerical kills: regularity (H4's
 wlog), the St 9.4-integrality line, ψ/H3q, N1/H5a/H5b, AF3, Prop 8.4.
 
 Honesty items (no new standing hypothesis is introduced — **no H6**):
-- The max(·,1) floors on gap ≤ 0 roots (used by the general rule, NOT by
-  §4's kills) still ride H4-regularity, exactly as the thesis's own λ ≥ 1
-  floors do (pp. 53-54); the ⌈·⌉ on fractional gaps still rides the
+- The max(·,1) floors in the general rule (not §4's kills) ride H4
+  regularity plus the repaired 6.7/6.8 bridge: a negative alternative gap
+  would force a second down vertex and is excluded; every surviving gap is
+  positive, so its ceiling is already at least one.  This is the corrected
+  form of the thesis's own λ ≥ 1 floor (pp. 53-54).  The ⌈·⌉ on fractional
+  gaps still rides the
   St 9.4-proof line "κ_G(π(G)−1) ∈ N" — both pre-existing perimeter items
   of AF2, now localized to the parts that need them. Conversely, gap > 0
   pricing is now REGULARITY-FREE (§2 R2) — a strict tightening of what

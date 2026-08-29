@@ -1,0 +1,72 @@
+test_real_d43_free_column67_kernel_shift_is_rejected (cases.test_d43_source_high_hensel.SemanticChainHostileTests.test_real_d43_free_column67_kernel_shift_is_rejected) ... /home/ubuntu/d43-high-review-87w9m0/source/cases/eplus43.py:119: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/ubuntu/d43-high-review-87w9m0/source/cases/valuation_e2.py' mode='r' encoding='UTF-8'>
+  src = open(src_path).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/ubuntu/d43-high-review-87w9m0/source/cases/d25_eplus.py:139: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/ubuntu/d43-high-review-87w9m0/source/cases/d23_atlas_p105337.json' mode='r' encoding='UTF-8'>
+  _ATLAS[p] = json.load(open(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/ubuntu/d43-high-review-87w9m0/source/cases/directionb_window.py:68: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/directionb_tails_D21.pkl'>
+  st = pickle.load(open(STATE, "rb"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/ubuntu/d43-high-review-87w9m0/source/cases/directionb_residual32_emit.py:65: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/directionb_tails_D21.pkl'>
+  st = pickle.load(open(STATE, "rb"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ERROR
+
+======================================================================
+ERROR: test_real_d43_free_column67_kernel_shift_is_rejected (cases.test_d43_source_high_hensel.SemanticChainHostileTests.test_real_d43_free_column67_kernel_shift_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/d43-high-review-87w9m0/source/cases/test_d43_source_high_hensel.py", line 308, in test_real_d43_free_column67_kernel_shift_is_rejected
+    context = H.prepare_d43_context(certificate, reference)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/d43-high-review-87w9m0/source/cases/d43_source_high_hensel.py", line 628, in prepare_d43_context
+    point, env, alpha, beta, _provenance, _diag = C.GW.build_operator_point(
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/d43-high-review-87w9m0/source/cases/d43_graph_witness.py", line 92, in build_operator_point
+    dval, diag = DE.reconstruct_point(p, parked_point, env)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/d43-high-review-87w9m0/source/cases/d25_eplus.py", line 658, in reconstruct_point
+    dv = full_point_f(p, cellval, env, tg=t)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/d43-high-review-87w9m0/source/cases/d25_eplus.py", line 540, in full_point_f
+    for nm in _occ_names(p):
+              ^^^^^^^^^^^^^
+  File "/home/ubuntu/d43-high-review-87w9m0/source/cases/d25_eplus.py", line 509, in _occ_names
+    for _lab, d in V.row22_rows(p):
+                   ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/d43-high-review-87w9m0/source/cases/valuation_e.py", line 434, in row22_rows
+    hdr, allrows = parse_ms_rows(
+                   ^^^^^^^^^^^^^^
+  File "/home/ubuntu/d43-high-review-87w9m0/source/cases/valuation_e.py", line 394, in parse_ms_rows
+    lines = open(path).read().split('\n')
+            ^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/d43-high-review-87w9m0/source/cases/directionb_core23_p105337.ms'
+
+----------------------------------------------------------------------
+Ran 1 test in 1.462s
+
+FAILED (errors=1)
+Command exited with non-zero status 1
+	Command being timed: "taskset -c 0 timeout 180 env JC2_D43_HOSTILE_REAL=1 PYTHONHASHSEED=0 /home/ubuntu/d43-high-review-87w9m0/venv/bin/python -m unittest -v cases.test_d43_source_high_hensel.SemanticChainHostileTests.test_real_d43_free_column67_kernel_shift_is_rejected"
+	User time (seconds): 1.58
+	System time (seconds): 0.05
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.64
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 122512
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 31631
+	Voluntary context switches: 11
+	Involuntary context switches: 11
+	Swaps: 0
+	File system inputs: 224
+	File system outputs: 9168
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

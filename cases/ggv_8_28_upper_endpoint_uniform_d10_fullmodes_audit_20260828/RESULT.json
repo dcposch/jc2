@@ -1,0 +1,754 @@
+{
+  "calculation": {
+    "D10_D11_extension": {
+      "D10_raw_mod_A2": [
+        {
+          "A_exponent": 1,
+          "coefficient": "-9",
+          "monomial": [
+            "a_x",
+            "f5",
+            "f5"
+          ]
+        },
+        {
+          "A_exponent": 1,
+          "coefficient": "9",
+          "monomial": [
+            "a_x",
+            "f5",
+            "u"
+          ]
+        },
+        {
+          "A_exponent": 1,
+          "coefficient": "9/32",
+          "monomial": [
+            "a_x",
+            "f5",
+            "v",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": 1,
+          "coefficient": "-9/4",
+          "monomial": [
+            "a_x",
+            "u",
+            "u"
+          ]
+        },
+        {
+          "A_exponent": 1,
+          "coefficient": "-9/64",
+          "monomial": [
+            "a_x",
+            "u",
+            "v",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": 1,
+          "coefficient": "-9/4096",
+          "monomial": [
+            "a_x",
+            "v",
+            "v",
+            "z",
+            "z"
+          ]
+        }
+      ],
+      "D11_c10_residual_mod_A3": [
+        {
+          "A_exponent": 2,
+          "coefficient": "-3",
+          "monomial": [
+            "a_x",
+            "c10"
+          ]
+        }
+      ],
+      "D11_raw_mod_A2": [
+        {
+          "A_exponent": 1,
+          "coefficient": "15/4",
+          "monomial": [
+            "a_x",
+            "r",
+            "r"
+          ]
+        }
+      ],
+      "Delta5": "F5-R/2-Z*V/64",
+      "Delta6": "F6-R*Z/8-V^2/256",
+      "after_D10_radical": "Delta5=A*S",
+      "complete_modes_D10": [
+        "c4*F6",
+        "c6*(F^(3/4))_4=0",
+        "c8*Z/8",
+        "c10*A"
+      ],
+      "complete_modes_D11": [
+        "c4*F7",
+        "c6*(F^(3/4))_5=0",
+        "c8*V/16",
+        "c10/(4*A)"
+      ],
+      "g10_polar": [
+        {
+          "A_exponent": -2,
+          "coefficient": "3/8",
+          "monomial": [
+            "f5",
+            "f5"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/8",
+          "monomial": [
+            "f5",
+            "u"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/256",
+          "monomial": [
+            "f5",
+            "v",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/32",
+          "monomial": [
+            "u",
+            "u"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/512",
+          "monomial": [
+            "u",
+            "v",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/32768",
+          "monomial": [
+            "v",
+            "v",
+            "z",
+            "z"
+          ]
+        }
+      ],
+      "g11_polar_after_D10": [
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/16",
+          "monomial": [
+            "r",
+            "r"
+          ]
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "1/4",
+          "monomial": [
+            "c10"
+          ]
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "3/4",
+          "monomial": [
+            "f6",
+            "r"
+          ]
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "-3/32",
+          "monomial": [
+            "r",
+            "u",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "-3/1024",
+          "monomial": [
+            "r",
+            "v",
+            "v"
+          ]
+        }
+      ],
+      "g11_polar_after_second_divisibility": [
+        {
+          "A_exponent": -1,
+          "coefficient": "1/4",
+          "monomial": [
+            "c10"
+          ]
+        }
+      ],
+      "post_D9_substitution": {
+        "F4": "V/16+Z^2/64+A^2*R",
+        "W": "A*R"
+      }
+    },
+    "D8_D9_independent_replay": {
+      "D8_raw_mod_A3": [
+        {
+          "A_exponent": 2,
+          "coefficient": "-9/4",
+          "monomial": [
+            "a_x",
+            "c6"
+          ]
+        }
+      ],
+      "D9_raw_mod_A2": [
+        {
+          "A_exponent": 1,
+          "coefficient": "21/4",
+          "monomial": [
+            "a_x",
+            "w",
+            "w"
+          ]
+        }
+      ],
+      "g8_polar": [
+        {
+          "A_exponent": -1,
+          "coefficient": "3/32",
+          "monomial": [
+            "c6"
+          ]
+        }
+      ],
+      "g9_polar_after_c6_zero": [
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/16",
+          "monomial": [
+            "w",
+            "w"
+          ]
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "3/4",
+          "monomial": [
+            "f5",
+            "w"
+          ]
+        },
+        {
+          "A_exponent": -1,
+          "coefficient": "-3/256",
+          "monomial": [
+            "v",
+            "w",
+            "z"
+          ]
+        }
+      ]
+    },
+    "forced_mode_series_firewall": {
+      "checked_weights": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "conclusion": "c16 is mandatory and occurs with both signs; c14,c18,c20 remain mandatory continuation coordinates",
+      "identity_one": "B^3=F^(3/2)-(3/2)t^8 F^(1/2)+(3/8)t^16 F^(-1/2) mod t^22",
+      "identity_two": "B^3+(3/2)t^8B=F^(3/2)-(3/8)t^16 F^(-1/2) mod t^22"
+    }
+  },
+  "complete_mode_schedule": [
+    {
+      "F_exponent": "1",
+      "birth_A_power": 4,
+      "birth_weight": 4,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D10": true,
+      "support_at_D11": true
+    },
+    {
+      "F_exponent": "3/4",
+      "birth_A_power": 3,
+      "birth_weight": 6,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D10": true,
+      "support_at_D11": true
+    },
+    {
+      "F_exponent": "1/2",
+      "birth_A_power": 2,
+      "birth_weight": 8,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D10": true,
+      "support_at_D11": true
+    },
+    {
+      "F_exponent": "1/4",
+      "birth_A_power": 1,
+      "birth_weight": 10,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D10": true,
+      "support_at_D11": true
+    },
+    {
+      "F_exponent": "0",
+      "birth_A_power": 0,
+      "birth_weight": 12,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D10": false,
+      "support_at_D11": false
+    },
+    {
+      "F_exponent": "-1/4",
+      "birth_A_power": -1,
+      "birth_weight": 14,
+      "continuation_status": "retained_mandatory",
+      "role": "forced_rational",
+      "support_at_D10": false,
+      "support_at_D11": false
+    },
+    {
+      "F_exponent": "-1/2",
+      "birth_A_power": -2,
+      "birth_weight": 16,
+      "continuation_status": "retained_mandatory",
+      "role": "forced_rational",
+      "support_at_D10": false,
+      "support_at_D11": false
+    },
+    {
+      "F_exponent": "-3/4",
+      "birth_A_power": -3,
+      "birth_weight": 18,
+      "continuation_status": "retained_mandatory",
+      "role": "forced_rational",
+      "support_at_D10": false,
+      "support_at_D11": false
+    },
+    {
+      "F_exponent": "-1",
+      "birth_A_power": -4,
+      "birth_weight": 20,
+      "continuation_status": "retained_mandatory",
+      "role": "forced_rational",
+      "support_at_D10": false,
+      "support_at_D11": false
+    }
+  ],
+  "literal_raw_mutations": {
+    "D10_Delta5_square": {
+      "all_513_serialized_generators_match_independent_determinant_recurrence": true,
+      "first_residual_row": 10,
+      "literal_row_provenance": {
+        "nonzero_generators": [
+          {
+            "generator_index_zero_based": 204,
+            "generator_sha256": "c331dfa254520f20c75d82d5b792716006c2dcd8880a7a17e618f31c5d7b5104",
+            "value": "36",
+            "x_degree": 3
+          },
+          {
+            "generator_index_zero_based": 208,
+            "generator_sha256": "badacd8dc39a20e230a6382409c14a967479283d20214bd47b1dc1652efdb31c",
+            "value": "-36",
+            "x_degree": 7
+          }
+        ],
+        "row": 10,
+        "row_sha256": "c01df295017b89708417ca86226b4fdb7b3e4a9b53238f2b533cb160e99ccfff"
+      },
+      "live_scaling_mutations": {
+        "-1": {
+          "3": "36",
+          "7": "-36"
+        },
+        "2": {
+          "3": "144",
+          "7": "-144"
+        }
+      },
+      "prior_rows_zero": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "residual": {
+        "3": "36",
+        "7": "-36"
+      },
+      "scaling_power": 2
+    },
+    "D10_ZV_cross_term_regression": {
+      "conclusion": "dropping Z*V/64 from Delta5 is detected",
+      "exact_square_D4_through_D22": "zero before affine target fold",
+      "exact_square_assignment": "Z=V=1,R=0; F=S^2,G=S^3 with S=A^2+t/2+t^2/8+t^3/16",
+      "literal_row_provenance": {
+        "nonzero_generators": [
+          {
+            "generator_index_zero_based": 204,
+            "generator_sha256": "c331dfa254520f20c75d82d5b792716006c2dcd8880a7a17e618f31c5d7b5104",
+            "value": "9/1024",
+            "x_degree": 3
+          },
+          {
+            "generator_index_zero_based": 208,
+            "generator_sha256": "badacd8dc39a20e230a6382409c14a967479283d20214bd47b1dc1652efdb31c",
+            "value": "-9/1024",
+            "x_degree": 7
+          }
+        ],
+        "row": 10,
+        "row_sha256": "c01df295017b89708417ca86226b4fdb7b3e4a9b53238f2b533cb160e99ccfff"
+      },
+      "mutation": "set F5=0 and continue F^(3/2) through G9",
+      "mutation_D10": {
+        "3": "9/1024",
+        "7": "-9/1024"
+      },
+      "mutation_rows_D4_through_D9": "zero",
+      "required_literal_F5": "1/64=Z*V/64"
+    },
+    "D11_c10": {
+      "all_513_serialized_generators_match_independent_determinant_recurrence": true,
+      "first_residual_row": 11,
+      "literal_row_provenance": {
+        "nonzero_generators": [
+          {
+            "generator_index_zero_based": 234,
+            "generator_sha256": "1bb189479f46702d0d416af39f95e13a8f2393882688fae606d8a3495f2b0606",
+            "value": "-12",
+            "x_degree": 3
+          },
+          {
+            "generator_index_zero_based": 238,
+            "generator_sha256": "dc7fffde9411db99a49076ef466f5effdaf8c549da6a8d73f737414045a307f0",
+            "value": "24",
+            "x_degree": 7
+          },
+          {
+            "generator_index_zero_based": 242,
+            "generator_sha256": "b569da1b3f77c899a9698c22c9d4f4a24f6bd379fc148f2d52556a50ddcfd1e5",
+            "value": "-12",
+            "x_degree": 11
+          }
+        ],
+        "row": 11,
+        "row_sha256": "d291db36af030476edafe09c277fe1a157ee4befe102eb18f411c4f9252603bc"
+      },
+      "live_scaling_mutations": {
+        "-1": {
+          "11": "12",
+          "3": "12",
+          "7": "-24"
+        },
+        "2": {
+          "11": "-24",
+          "3": "-24",
+          "7": "48"
+        }
+      },
+      "prior_rows_zero": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "residual": {
+        "11": "-12",
+        "3": "-12",
+        "7": "24"
+      },
+      "scaling_power": 1
+    },
+    "D11_second_square": {
+      "all_513_serialized_generators_match_independent_determinant_recurrence": true,
+      "first_residual_row": 11,
+      "literal_row_provenance": {
+        "nonzero_generators": [
+          {
+            "generator_index_zero_based": 234,
+            "generator_sha256": "1bb189479f46702d0d416af39f95e13a8f2393882688fae606d8a3495f2b0606",
+            "value": "-15",
+            "x_degree": 3
+          },
+          {
+            "generator_index_zero_based": 238,
+            "generator_sha256": "dc7fffde9411db99a49076ef466f5effdaf8c549da6a8d73f737414045a307f0",
+            "value": "15",
+            "x_degree": 7
+          }
+        ],
+        "row": 11,
+        "row_sha256": "d291db36af030476edafe09c277fe1a157ee4befe102eb18f411c4f9252603bc"
+      },
+      "live_scaling_mutations": {
+        "-1": {
+          "3": "-15",
+          "7": "15"
+        },
+        "2": {
+          "3": "-60",
+          "7": "60"
+        }
+      },
+      "prior_rows_zero": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "residual": {
+        "3": "-15",
+        "7": "15"
+      },
+      "scaling_power": 2
+    },
+    "D8_c6": {
+      "all_513_serialized_generators_match_independent_determinant_recurrence": true,
+      "first_residual_row": 8,
+      "literal_row_provenance": {
+        "nonzero_generators": [
+          {
+            "generator_index_zero_based": 141,
+            "generator_sha256": "238071ae0c94d999c59a3bc0af5815aced6acfeb1e78ddd5f5a56f5e311982a9",
+            "value": "-9",
+            "x_degree": 3
+          },
+          {
+            "generator_index_zero_based": 145,
+            "generator_sha256": "274523c3025dcf36eb2c3c07e5eb41dccaa22048d043e3e0ca2a4bba5829fbff",
+            "value": "18",
+            "x_degree": 7
+          },
+          {
+            "generator_index_zero_based": 149,
+            "generator_sha256": "a6dae2ec7a0f195856f76697d05f55fea11c032ba726f261dfd3e78fdbde1e09",
+            "value": "-9",
+            "x_degree": 11
+          }
+        ],
+        "row": 8,
+        "row_sha256": "4368f936ea1e21b24c4e76bebcb5bc7b448bb05f7e7570673311aa19c24172ae"
+      },
+      "live_scaling_mutations": {
+        "-1": {
+          "11": "9",
+          "3": "9",
+          "7": "-18"
+        },
+        "2": {
+          "11": "-18",
+          "3": "-18",
+          "7": "36"
+        }
+      },
+      "prior_rows_zero": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "residual": {
+        "11": "-9",
+        "3": "-9",
+        "7": "18"
+      },
+      "scaling_power": 1
+    },
+    "D9_W_square": {
+      "all_513_serialized_generators_match_independent_determinant_recurrence": true,
+      "first_residual_row": 9,
+      "literal_row_provenance": {
+        "nonzero_generators": [
+          {
+            "generator_index_zero_based": 173,
+            "generator_sha256": "f3b895940547c4c740675c95b36447c6bc777d3df612c581f160cfefa02f5f5b",
+            "value": "-21",
+            "x_degree": 3
+          },
+          {
+            "generator_index_zero_based": 177,
+            "generator_sha256": "391eed97c1d3dbbbbb1fb8a961975633f636bd26c43b741354343a611e561704",
+            "value": "21",
+            "x_degree": 7
+          }
+        ],
+        "row": 9,
+        "row_sha256": "dbab393c1bd71f7ba0093899b6714458f88864c8805bb22e0ac06659cd3cf859"
+      },
+      "live_scaling_mutations": {
+        "-1": {
+          "3": "-21",
+          "7": "21"
+        },
+        "2": {
+          "3": "-84",
+          "7": "84"
+        }
+      },
+      "prior_rows_zero": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "residual": {
+        "3": "-21",
+        "7": "21"
+      },
+      "scaling_power": 2
+    },
+    "forced_negative_mode_firewall": {
+      "all_513_generators_replayed_at_both_points": true,
+      "point_one": {
+        "F": "(A^2+t/2)^2+t^8",
+        "G": "(A^2+t/2)^3",
+        "all_D4_through_D22_zero_before_affine_target_fold": true,
+        "folded_D22_generator_value": "-1",
+        "required_modes": {
+          "c16": "3/8",
+          "c8": "-3/2"
+        }
+      },
+      "point_two": {
+        "F": "(A^2+t/2)^2+t^8",
+        "G": "(A^2+t/2)^3+(3/2)t^8(A^2+t/2)",
+        "all_D4_through_D22_zero_before_affine_target_fold": true,
+        "folded_D22_generator_value": "-1",
+        "required_modes": {
+          "c16": "-3/8"
+        }
+      }
+    }
+  },
+  "schema": "jc2.ggv.upper_endpoint.uniform_d10_d11_fullmodes_audit.result.v1",
+  "scope_firewall": [
+    "field-radical divisibility only; no scheme-theoretic divisibility assertion",
+    "the Z*V/64 term is mandatory in the uniform fixture and has a literal live regression",
+    "c14,c16,c18,c20 are retained forced rational continuation coordinates, not set to zero",
+    "the literal F8 gauge points requiring c16=+/-3/8 are replayed against all 513 generators",
+    "no endpoint emptiness, full branch-P classification, Keller-pair theorem, or JC2 conclusion",
+    "no CAS, AWS, floating point, interpolation, or root evaluation"
+  ],
+  "source": {
+    "authoritative_raw_system": "cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json",
+    "authoritative_raw_system_sha256": "ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0",
+    "charged_provisional_result": "cases/ggv_8_28_upper_endpoint_uniform_d9_fullmodes_20260828/RESULT.json",
+    "charged_provisional_result_sha256": "9ca90959f284052bf669911c15e675892c1749b0bfed3cb4fd6462156e61b059",
+    "charged_provisional_script": "cases/ggv_8_28_upper_endpoint_uniform_d9_fullmodes_20260828/verify_uniform_d9.py",
+    "charged_provisional_script_sha256": "f4e40d3324a9dc9058b6ec80a01458468b3a90d0d3b4794841e76450c42e8dbc",
+    "independence": "no import from charged script; Laurent recurrence and all 513 raw evaluations reconstructed here",
+    "literal_rows": "D4 through D22 inclusive",
+    "raw_generator_count": 513,
+    "raw_variable_count": 303
+  },
+  "status": "PASS_EXACT_FIELD_POINT_CASCADE_THROUGH_D11",
+  "theorems": {
+    "D10_square_defect": {
+      "complete_born_modes": [
+        "c4",
+        "c6=0",
+        "c8",
+        "c10"
+      ],
+      "conclusion": "A divides Delta5 at field points",
+      "extra_mode_kill": "none",
+      "honest_uniform_defect": "Delta5=F5-R/2-Z*V/64",
+      "hypothesis": "D10=0",
+      "polar_identity": "polar(g10)=3*Delta5^2/(8*A^2)",
+      "post_D9_notation": "W=A*R",
+      "raw_congruence": "D10=-9*A*A'*Delta5^2 mod A^2",
+      "reason": "A=X^4-1 is squarefree"
+    },
+    "D11_second_divisibility_and_mode_kill": {
+      "causal_step_one": {
+        "conclusion": "A divides S at field points",
+        "raw_congruence": "D11=+(15/4)A*A'*S^2 mod A^2"
+      },
+      "causal_step_two": {
+        "conclusion": "c10=0",
+        "no_cancellation": "all base order-one terms and c4,c8 modes are polynomial; c6=0 and c12 is not born",
+        "raw_congruence": "D11=-3*c10*A^2*A' mod A^3",
+        "remaining_pole": "c10/(4*A)",
+        "substitution": "S=A*Q"
+      },
+      "combined_conclusion": "F5=R/2+Z*V/64+A^2*Q and c10=0",
+      "notation": [
+        "Delta5=A*S",
+        "Delta6=F6-R*Z/8-V^2/256"
+      ],
+      "polar_identity": "polar(g11)=-3*S^2/(16*A^2)+(c10/4+(3/4)*S*Delta6)/A"
+    },
+    "independent_D8_D9_replay": {
+      "conclusions": [
+        "c6=0",
+        "A divides W"
+      ],
+      "hypotheses": [
+        "characteristic-zero field point of the fixed branch-P fixture",
+        "T=A*V",
+        "F4-V/16-Z^2/64=A*W",
+        "D4 through D9 vanish"
+      ],
+      "raw_congruences": [
+        "D8=-(9/4)c6*A^2*A' mod A^3",
+        "D9=+(21/4)A*A'*W^2 mod A^2 after c6=0"
+      ]
+    }
+  }
+}

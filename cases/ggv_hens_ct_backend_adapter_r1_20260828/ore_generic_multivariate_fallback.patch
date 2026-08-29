@@ -1,0 +1,12 @@
+diff --git a/src/ore_algebra/ore_algebra.py b/src/ore_algebra/ore_algebra.py
+--- a/src/ore_algebra/ore_algebra.py
++++ b/src/ore_algebra/ore_algebra.py
+@@ -1691,7 +1691,7 @@ class OreAlgebra_generic(Parent):
+             try:
+                 from sage.rings.polynomial.multi_polynomial_libsingular import MPolynomialRing_libsingular
+                 R = self._commutative_ring = MPolynomialRing_libsingular(self.base_ring(), 1, self.variable_names())
+-            except ImportError:
++            except (ImportError, NotImplementedError):
+                 pass
+         return R
+ 

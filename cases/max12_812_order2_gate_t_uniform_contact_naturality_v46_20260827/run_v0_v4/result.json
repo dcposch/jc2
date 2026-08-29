@@ -1,0 +1,459 @@
+{
+  "checks": {
+    "V0_pins": {
+      "endpoint_families": 11,
+      "row_census": [
+        36,
+        54,
+        58,
+        81,
+        89,
+        120,
+        131
+      ],
+      "schema_sha256": "796eb0847e7b0bb7972c2fd7b3db10bd2dcfd2fd85c5bbaa47e3a239f8b02673",
+      "semantic_witnesses": 5,
+      "tails_byte_sha256": "d72f774c53c7dcb259eefc10ff2a02202e1049b61c17486b1ba22e3773813848",
+      "tails_canonical_sha256": "6eed03d486e1cd9e8d990eed74a105293d383882bbae77d204eac190cce387e8"
+    },
+    "V1_naturality": {
+      "representatives": [
+        {
+          "T": 16,
+          "contact": [
+            2,
+            3,
+            2
+          ],
+          "family": "D1_A2_A5",
+          "field": "Q",
+          "primitive_equal": true,
+          "row_coefficients_compared": 119
+        },
+        {
+          "T": 24,
+          "contact": [
+            6,
+            7,
+            6
+          ],
+          "family": "D1_A6_A7",
+          "field": "F1000003",
+          "primitive_equal": true,
+          "row_coefficients_compared": 175
+        },
+        {
+          "T": 28,
+          "contact": [
+            8,
+            9,
+            8
+          ],
+          "family": "D1_A8",
+          "field": "F1000003",
+          "primitive_equal": true,
+          "row_coefficients_compared": 203
+        },
+        {
+          "T": 30,
+          "contact": [
+            9,
+            10,
+            9
+          ],
+          "family": "D1_A9",
+          "field": "F1000003",
+          "primitive_equal": true,
+          "row_coefficients_compared": 217
+        },
+        {
+          "T": 20,
+          "contact": [
+            2,
+            5,
+            3
+          ],
+          "family": "D23_LOW_A6",
+          "field": "Q",
+          "primitive_equal": true,
+          "row_coefficients_compared": 147
+        },
+        {
+          "T": 18,
+          "contact": [
+            1,
+            4,
+            2
+          ],
+          "family": "D23_E",
+          "field": "Q",
+          "primitive_equal": true,
+          "row_coefficients_compared": 133
+        },
+        {
+          "T": 30,
+          "contact": [
+            7,
+            10,
+            7
+          ],
+          "family": "D23_A7",
+          "field": "F1000003",
+          "primitive_equal": true,
+          "row_coefficients_compared": 217
+        },
+        {
+          "T": 30,
+          "contact": [
+            8,
+            10,
+            8
+          ],
+          "family": "D23_A8D2",
+          "field": "F1000003",
+          "primitive_equal": true,
+          "row_coefficients_compared": 217
+        },
+        {
+          "T": 38,
+          "contact": [
+            8,
+            11,
+            8
+          ],
+          "family": "D23_A8D3",
+          "field": "F1000003",
+          "primitive_equal": true,
+          "row_coefficients_compared": 273
+        },
+        {
+          "T": 38,
+          "contact": [
+            9,
+            12,
+            9
+          ],
+          "family": "D23_A9",
+          "field": "F1000003",
+          "primitive_equal": true,
+          "row_coefficients_compared": 273
+        },
+        {
+          "T": 38,
+          "contact": [
+            10,
+            11,
+            10
+          ],
+          "family": "AGE10_CEILING",
+          "field": "F1000003",
+          "primitive_equal": true,
+          "row_coefficients_compared": 273
+        }
+      ],
+      "total_representatives": 11
+    },
+    "V2_mutations_and_shifted_root": {
+      "generated_current_map_entries": 48,
+      "mutations": {
+        "C_factor_1": {
+          "first_grade": 15,
+          "first_row": 1
+        },
+        "R_factor_1": {
+          "first_grade": 16,
+          "first_row": 1
+        },
+        "analytic_only_A8D3": "rejected",
+        "drop_ell1": {
+          "first_grade": 16,
+          "first_row": 2
+        },
+        "k2c_to_k2load": "rejected_syntactically",
+        "omit_J_target": {
+          "first_grade": 38,
+          "first_row": 7
+        },
+        "rho0_as_general_rho": "rejected",
+        "stage_zero_pairs": "rejected_by_generated_lower_ideal",
+        "wrong_C2_ceiling": "rejected_at_A8D3_A9_AGE10"
+      },
+      "shifted_root": {
+        "deck_branches": 2,
+        "diagonal_determinants": [
+          "-2*lambda0",
+          "-lambda0/2",
+          "-lambda0/2"
+        ],
+        "hensel_depth": 10,
+        "localization": "D(rho)",
+        "shifted_map_depth": 3,
+        "triangular_inversion_coefficients": 24
+      }
+    },
+    "V3_support": {
+      "current_G20_maxima": {
+        "A": 3,
+        "C": 3,
+        "R": 1,
+        "k10": 2,
+        "k2": 0,
+        "k6": 0,
+        "p": 3
+      },
+      "details": [
+        {
+          "active": [
+            "A",
+            "C",
+            "R",
+            "k10",
+            "p"
+          ],
+          "family": "D1_A2_A5",
+          "maxima": {
+            "A": 1,
+            "C": 1,
+            "R": 0,
+            "k10": 0,
+            "k2": 0,
+            "k6": 0,
+            "p": 1
+          }
+        },
+        {
+          "active": [
+            "A",
+            "C",
+            "R",
+            "k10",
+            "k6",
+            "p"
+          ],
+          "family": "D1_A6_A7",
+          "maxima": {
+            "A": 1,
+            "C": 1,
+            "R": 0,
+            "k10": 0,
+            "k2": 0,
+            "k6": 0,
+            "p": 1
+          }
+        },
+        {
+          "active": [
+            "A",
+            "C",
+            "R",
+            "k10",
+            "k6",
+            "p"
+          ],
+          "family": "D1_A8",
+          "maxima": {
+            "A": 1,
+            "C": 2,
+            "R": 0,
+            "k10": 0,
+            "k2": 0,
+            "k6": 2,
+            "p": 2
+          }
+        },
+        {
+          "active": [
+            "A",
+            "C",
+            "R",
+            "k10",
+            "k6",
+            "p"
+          ],
+          "family": "D1_A9",
+          "maxima": {
+            "A": 1,
+            "C": 3,
+            "R": 0,
+            "k10": 0,
+            "k2": 0,
+            "k6": 3,
+            "p": 3
+          }
+        },
+        {
+          "active": [
+            "A",
+            "C",
+            "R",
+            "k10",
+            "p"
+          ],
+          "family": "D23_LOW_A6",
+          "maxima": {
+            "A": 3,
+            "C": 3,
+            "R": 1,
+            "k10": 2,
+            "k2": 0,
+            "k6": 0,
+            "p": 3
+          }
+        },
+        {
+          "active": [
+            "A",
+            "C",
+            "R",
+            "k10",
+            "p"
+          ],
+          "family": "D23_E",
+          "maxima": {
+            "A": 3,
+            "C": 3,
+            "R": 2,
+            "k10": 2,
+            "k2": 0,
+            "k6": 0,
+            "p": 3
+          }
+        },
+        {
+          "active": [
+            "A",
+            "C",
+            "R",
+            "k10",
+            "k2",
+            "k6",
+            "p"
+          ],
+          "family": "D23_A7",
+          "maxima": {
+            "A": 3,
+            "C": 3,
+            "R": 2,
+            "k10": 2,
+            "k2": 1,
+            "k6": 3,
+            "p": 3
+          }
+        },
+        {
+          "active": [
+            "A",
+            "C",
+            "R",
+            "k10",
+            "k2",
+            "k6",
+            "p"
+          ],
+          "family": "D23_A8D2",
+          "maxima": {
+            "A": 2,
+            "C": 3,
+            "R": 1,
+            "k10": 1,
+            "k2": 0,
+            "k6": 3,
+            "p": 3
+          }
+        },
+        {
+          "active": [
+            "A",
+            "C",
+            "R",
+            "k10",
+            "k2",
+            "k6",
+            "p"
+          ],
+          "family": "D23_A8D3",
+          "maxima": {
+            "A": 9,
+            "C": 10,
+            "R": 8,
+            "k10": 8,
+            "k2": 8,
+            "k6": 10,
+            "p": 10
+          }
+        },
+        {
+          "active": [
+            "A",
+            "C",
+            "R",
+            "k10",
+            "k2",
+            "k6",
+            "p"
+          ],
+          "family": "D23_A9",
+          "maxima": {
+            "A": 7,
+            "C": 9,
+            "R": 7,
+            "k10": 6,
+            "k2": 7,
+            "k6": 9,
+            "p": 9
+          }
+        },
+        {
+          "active": [
+            "A",
+            "C",
+            "R",
+            "k10",
+            "k2",
+            "k6",
+            "p"
+          ],
+          "family": "AGE10_CEILING",
+          "maxima": {
+            "A": 7,
+            "C": 10,
+            "R": 6,
+            "k10": 6,
+            "k2": 6,
+            "k6": 10,
+            "p": 10
+          }
+        },
+        {
+          "active": [
+            "C",
+            "k6",
+            "p"
+          ],
+          "family": "AGE20_RECEDING_AC",
+          "maxima": {
+            "A": 0,
+            "C": 0,
+            "R": 0,
+            "k10": 0,
+            "k2": 0,
+            "k6": 0,
+            "p": 0
+          }
+        }
+      ],
+      "raw_bound_policy": "cancellation only raises valuation; raw census over-retains; useful P bound consumes reviewed first polar grade",
+      "tables_checked": 12
+    },
+    "V4_provenance": {
+      "artifacts_hash_checked": 24,
+      "confirmed_but_unpromoted_families": 1,
+      "filename_inference": "forbidden",
+      "promoted_families": 10
+    }
+  },
+  "elapsed_seconds": 4.795,
+  "schema_sha256": "796eb0847e7b0bb7972c2fd7b3db10bd2dcfd2fd85c5bbaa47e3a239f8b02673",
+  "scope": "desk verifier for normative schema; endpoint union remains conditional at D23_A8D3",
+  "status": "PASS-UNIFORM-CONTACT-NATURALITY-V46-V0-V4"
+}

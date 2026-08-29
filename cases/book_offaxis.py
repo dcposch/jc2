@@ -5,7 +5,9 @@ exact integer/Fraction arithmetic throughout.
 
 Sector: BOOK-ENUM.md erratum — the book enumerated only the all-b=1 axis;
 entries with b_i >= 2 carry M = b_i (MP4) down their chains (mu_e | M by
-St 8.4) and can meet in mixed merges (all mu_e >= 2), never enumerated.
+St 8.4) and can meet in mixed merges (all mu_e >= 2), already for m = 2
+when both entry b-values are at least 2; these were never enumerated by the
+on-axis book.
 
 Step-1 census filters (all printed/promoted tier):
   - layer E reused: global type (al,be), td = sum Lambda_i, per-pole
@@ -18,11 +20,16 @@ Step-1 census filters (all printed/promoted tier):
 GATE: book_enum.gate() must PASS (on-axis td=6 record unchanged) before
 any off-axis output is produced.
 
-Stage R (2026-08-12, BOOK-OFFAXIS 6-9): R1 off-axis w-law (clean +
+Historical stage R (2026-08-12, BOOK-OFFAXIS 6-9): R1 off-axis w-law (clean +
 dirty transport, per-pole alphabet w_closure_off) and R2 general-mu
 merge handshakes (cases I/II/III/IV of Prop 9.3) applied to every merge
-cell; exact shape solve at pinned joins.  Recount: 2251/2691 DEAD,
-440 alive, 0 open; td=7 CLOSED (asserted).
+cell; exact shape solve at pinned joins.  Its 2251/2691 DEAD, 440 alive,
+td=7 CLOSED output is RETRACTED.  In addition to the refuted alphabet, the
+2691 rows impose M_G | sum(mu_e) on all-mixed nodes; that divisibility needs
+the conditional epsilon=0,k=0 anatomy. Treat them only as conditional
+skeletons. The legacy OPEN rider name says "unbounded", but the 2026-08-29
+correction proves the reduced chain `(w,M)` set finite; the live rider is
+unresolved mixed/full-cell quotient and downstream coverage.
 """
 from math import gcd
 from fractions import Fraction as Fr
@@ -106,13 +113,18 @@ def hierarchies(leaves):
 
 
 def merge_cells(bs):
-    """All (hierarchy, mu-assignment, emitted-M) cells for pole M-vector bs
+    """Conditional (hierarchy, mu-assignment, emitted-M) skeletons for bs.
     (indexed leaves).  Constraints used (printed tier only):
       St 8.4/8.5: leaf arrival mu | b_i (M non-increasing in divisibility);
-      MP6(d)/subadditivity (valid incl. mixed, MP-REVIEW l.120): M_G | sum mu_e;
+      MP6(d): M_G | sum mu_e only on the epsilon=0,k=0 subcase;
       inner-merge arrival mu_e | emitted M of the child merge;
       MP2: interior G* emits M >= 2 (root-merge G* = (0,y) cells kept, tagged).
-    Returns list of dicts {tree, mus, Ms, classes, root_interior}."""
+    All-mixed nodes with extra/nonchain p-roots can have emitted M values
+    outside this list. Thus the return is never a completeness-safe
+    superset; every consumer must retain the legacy-named
+    OPEN_UNBOUNDED_MIXED_OR_POSTJUMP rider, now read as an unresolved
+    mixed/full-cell quotient rather than unbounded reduced chain state.
+    Returns conditional skeleton dicts only."""
     leaves = tuple(range(len(bs)))
     cells = []
 
@@ -132,7 +144,9 @@ def merge_cells(bs):
             klass = 'MIXED' if all(mu >= 2 for mu in mus) else 'MP6'
             inner = [k for o in combo for k in o[1]]
             desc = "(" + ",".join(o[2] for o in combo) + ")"
-            for MG in divisors(sum(mus)):        # M_G | sum mu_e
+            # Conditional epsilon=0,k=0 skeleton.  This divisibility is not
+            # exported as an all-mixed theorem; see the function firewall.
+            for MG in divisors(sum(mus)):
                 yield MG, inner + [klass], f"{desc}->M{MG}"
 
     for tree in set(hierarchies(leaves)):
@@ -344,7 +358,12 @@ def solve_arr(non0, zero, inner_mus, M_G, inner0_mu=None):
 
 
 def expand2(node, bs):
-    """expand() with tree structure retained: yields (emitted_M, struct),
+    """Conditional epsilon=0,k=0 skeleton with tree structure retained.
+
+    This deliberately mirrors the historical finite recount.  It omits
+    all-mixed nodes whose extra/nonchain degree contribution invalidates
+    M_G | sum(mu), so callers must retain an unbounded OPEN rider.
+    Yields (emitted_M, struct),
     struct = ('leaf', i, mu) | ('G', children_structs, M_G)."""
     if node[0] == 'leaf':
         for mu in divisors(bs[node[1]]):
@@ -398,7 +417,7 @@ def cell_verdict(struct, interior, pdata):
             else:
                 chinfo.append(('inner', ch[2], None))
                 verdicts.append(walk(ch, False))
-        if is_top and not interior:          # root merge = (0,y): R2.1 IV
+        if is_top and not interior:          # genuine root merge: case I
             v = 'ALIVE'
             for (k, mu, idx) in chinfo:
                 if k == 'leaf' and all(w >= 1 for w in pdata[idx]['W']):
@@ -663,14 +682,16 @@ def priced_pole(w0, b, budget):
 
 def stage_rp_census(cen):
     """Stage R' : the honest grid recount under the CORRECTED alphabets.
-    Finding (doc 10 P5): with the refuted M-law removed and the printed
-    eps-cells included, the per-pole alphabet is bounded ONLY by the
-    St 9.4 budget (R1.5's finiteness is gone) and contains post-jump
-    states of unbounded numerator/M; the stage-R grid solve (whose loop
-    bounds scale with num(w)*M) is therefore NOT certifiably complete
-    for ANY b >= 2 entry.  Sound consequence: no grid cell may be
-    declared DEAD at this level -- every off-axis cell is OPEN at grid
-    tier, and per-panel decisions must come from per-route pricing
+    Corrected finding (doc 10 P5, 2026-08-29): the reduced per-pole `(w,M)`
+    alphabet is finite and effective at fixed St 9.4 budget. The stage-R
+    grid remains NOT certifiably complete for ANY b >= 2 entry because it
+    does not quotient last-vertex nu/kbar, full pattern degree, or
+    partner-dependent mixed/full-cell families. Sound consequence: no grid
+    cell may be declared DEAD at this level -- every enumerated conditional
+    skeleton is OPEN at grid tier, and every row retains the legacy-named
+    mixed/post-jump rider. The 2691 skeletons are not a completeness-safe
+    superset.
+    Per-panel decisions must come from per-route pricing
     (adjudicate_td7 for td = 7).  This function reports that recount."""
     out = {}
     for (m, td), d in sorted(cen.items()):
@@ -687,7 +708,8 @@ def stage_rp_census(cen):
                             n += 1
             rows.append({'entry': fmt_entry(al, be, poles), 'bs': bs,
                          'counts': {'DEAD': 0, 'ALIVE': 0, 'OPEN': n},
-                         'capped': True})
+                         'capped': True,
+                         'unbounded_open': 'MIXED_OR_POSTJUMP'})
         out[(m, td)] = rows
     return out
 
@@ -953,7 +975,7 @@ if __name__ == '__main__':
     print("MP4 sanity (prime/beta-minimal Lambda force b=1): PASS")
     cen = census()
     report(cen)
-    print("\n== MERGE-CELL CENSUS (hierarchies x mu x M, printed-tier) ==")
+    print("\n== CONDITIONAL MERGE SKELETONS (epsilon=0,k=0 M-divisibility) ==")
     mc = merge_census(cen)
     tot_mix = tot_mp6 = 0
     for (m, td), rows in sorted(mc.items(), key=lambda kv: (kv[0][1], kv[0][0])):
@@ -962,7 +984,9 @@ if __name__ == '__main__':
             star = ' PRIME-td' if td in (7, 11, 13) else ''
             print(f"m={m} td={td:2d} {r['entry']}: cells={r['cells']} "
                   f"mixed={r['mixed']} mp6-anatomy={r['mp6']}{star}")
-    print(f"TOTAL cells: mixed={tot_mix} mp6-anatomy={tot_mp6}")
+    print(f"TOTAL conditional skeletons: mixed={tot_mix} "
+          f"mp6-anatomy={tot_mp6}")
+    print("RIDER: OPEN_UNBOUNDED_MIXED_OR_POSTJUMP on every off-axis entry")
 
     print("\n== STAGE R RECOUNT (R1 w-law + R2 handshakes, BOOK-OFFAXIS "
           "6-8) ==")
@@ -1014,8 +1038,9 @@ if __name__ == '__main__':
             cap = ' CAPPED' if r['capped'] else ''
             print(f"m={m} td={td:2d} {r['entry']}: dead={c['DEAD']} "
                   f"alive={c['ALIVE']} open={c['OPEN']}{cap}")
-    print(f"STAGE R' TOTAL: dead={tD} alive={tA} open={tO} of "
-          f"{tD + tA + tO} cells (superset semantics; alive != existent)")
+    print(f"STAGE R' CONDITIONAL SKELETON TOTAL: dead={tD} alive={tA} "
+          f"open={tO} of {tD + tA + tO} skeletons")
+    print("RIDER: OPEN_UNBOUNDED_MIXED_OR_POSTJUMP; not a complete cell count")
     for td in sorted(per_td):
         D, A, O = per_td[td]
         print(f"  td={td:2d}: dead={D} alive={A} open={O}" +

@@ -1,0 +1,19 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by mapping the case, preregistrations, freezes, and harvested R1 roots so the review is grounded in files rather than producer claims.I'll hash the listed files independently and read both preregistrations, the erratum, and the freeze manifests next.The R1 wrapper and V1 exporter are in view; next I’ll hash freeze entries, read launchers/results, and pull the V20/V21 upstream contracts.I’ll rehash freeze and evidence with the remote-to-local remap, then pull V20/V21 sources and prior reviews.I’ll hash freeze/evidence independently, then compare the V20 emitter to V22 and read the V21 theorem.Freeze and evidence match. Next I’ll audit the replay module, tails, Singular scripts, and run an independent polynomial reconstruction.I’ll inspect sample polynomials, the generated Singular, compiler resources, and V20-vs-V22 source diffs, then run an independent reconstruction in `/tmp`.The case also has harvest-custody files that `list_dir` hid; I’ll read them as untrusted producer artifacts and then run the independent algebra checks.I’ll write independent parsers and a clean-room reconstruction in `/tmp`, without using the producer harvest verifier.Clean-room reconstruction matched all 14 grade-15 files and all 35 historical bridges. Re-running the rest of the independent audit.I have independent reconstruction, section, and bridge results. Next I’ll confirm a few remaining custody details and write the verdict report.**Verdict: CONFIRMED WITH REPAIRS.**
+
+Report: `xmodel/max12-812-order2-p0-total-rees-allrows-g15-v22r1-hostile-review-grok-20260827.md`  
+SHA-256 `f49329ceeffe20cea673a927afae5b4b7bfeac56b8d2a17abaefc09603eda80b`. No campaign, case, ledger, or `jc2-lean` file was edited.
+
+The seven grade-15 polynomials are exactly the cutoff-15 actual-total rows of the frozen 569-tail source. A clean-room reconstruction (V20 formulas plus one extra jet, `MAX_DEGREE = 15` before construction) reproduces all fourteen harvested files byte-for-byte and all 35 historical V9/V20 polynomials as exact identities. Named sections from the full polynomial bytes match V21: CS0 and Z00 zero; A00 only row 6 equals `-1/16`; A10 row 3 equals `-1/16`, row 5 equals `-(3/32)rho^2`, row 7 equals `-(3/128)rho^4`.
+
+V1 failed only on byte identity of equal polynomials (the erratum’s two `Tg10_1` strings are the same polynomial). R1’s monkey-patch can defer only that named tag; all 35 semantic equalities are still ordinary-Singular guards before PASS, and they hold.
+
+Repairs are to claims, not coefficients:
+
+1. F65521 is Q-then-reduce plus a char-65521 Singular check, not an independent modular reconstruction.
+2. The failed V1 trees are not harvested, so the erratum’s stderr hashes cannot be rehashed here.
+3. Source-sensitivity is `delta ≠ 0`, not a true `+1` re-emit.
+4. Term counts are taken from the Q dict even on the F65521 result (untriggered: no coefficient vanishes mod 65521).
+5. CS0/Z00 at grade 15 follow from sigma-weight 15; A00/A10 are the discriminating content.
+
+This does not certify a J2 chart, a formal arc, the Rees equations, Gate T, order two, maximum twelve, or JC2.

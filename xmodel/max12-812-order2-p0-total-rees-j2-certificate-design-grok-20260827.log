@@ -1,0 +1,32 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the design skill and the V22R1/V23R1 materials, then inspect the chart polynomial bytes independently before writing the certificate design.This is independent algebraic research, not the software-design loop. I’ll gather V22R1/V23R1 artifacts, the Fable5 design, and the chart polynomial bytes next.I have the file map. Next I’ll read the Grok prompt, V22R1 promotion packet, V23 control erratum, and the Fable5 design so the complementary route is grounded.I’ll inspect the chart polynomial bytes directly and pull the supporting producer/census code, without relying on V23 prose.Polynomials are in hand. Next I’ll parse them independently, check the unit-factor identities, and look at prior certificate/AWS specs for the experiment shape.I’ll parse every chart polynomial independently and test the unit-factor and torsion identities by exact arithmetic.Unit identities check out. I’ll now reduce `Tg15_6` against the grade-11/12 core and the other sparse rows.`e0 e1` is in the ideal, so the last `Tg15_6` leftover should cancel. I’ll replay the full cofactor combination and then try the ordered-a1 cubics.Identities replay at residual zero. I’ll write the design document with the T-a0 cofactors, the ordered-a1 obstruction, and the ranked Box02 AWS spec.I have residual-zero replays on two independent parsers. Writing the design document next.T-a0 has an exact six-row identity with residual zero. Ordered T-a1 does not copy that pattern; it is specified as a small homogeneous linear-algebra job on Box02.
+
+The write is only `xmodel/max12-812-order2-p0-total-rees-j2-certificate-design-grok-20260827.md` (SHA-256 `0ff19a91…`). Canonical files, case inputs, and `jc2-lean` were not touched. No AWS job was launched.
+
+**T-a0 certificate (ideal membership, replayed twice to remainder 0):**
+
+```text
+(-1/16) a0^3 (1 + 3 qa1^2 rho^2)
+  = Tg15_6
+    - (3/8) cs1 ell1 Tg11_1
+    + (1/2) cs2 rho^2 Tg11_1
+    + (1/8) rs2 Tg11_2
+    + (3/8) cs1 rho^2 Tg12_1
+    + (1/8) rs1 Tg12_2
+    + (1/4) cs1 Tg12_3
+```
+
+That is exceptional power `a0^3` times the rho-unit `1 + rho W` with `W = 3 qa1^2 rho`. No cofactor inverts `rho`, `qa1`, a jet, or `a0`. The coordinate `k` is absent. This is chart-level membership, not the A00 point value; `qa1=0` recovers A00 as a face.
+
+**Core facts checked from the V23R1 bytes, not from JSON prose:**
+
+- Grade 10 vanishes on both charts.
+- `Tg11_1 = (3/8) a0 (e1+qa1 e0)` and `Tg11_2 = (3/8) a0 (e0+qa1 rho^2 e1)` do produce `a0 U e0` and `a0 U e1` with `U = 1 - qa1^2 rho^2`, itself a rho-unit. That determinant is real, but **not needed** for the cubic: on `U=0` the cubic unit is `4 ≠ 0`.
+- Independently, `Tg12_3 + (1/2) ell1 Tg11_1 - (1/2) rho^2 Tg12_1 = (3/16) e0 e1`.
+- `Tg11_3,5,7` are rho-powers of `Tg11_1`; `Tg14_6` lies in `(Tg11_1, Tg11_2)`.
+
+**Ordered T-a1:** the same cofactors kill row 6 (residual 0), which has no cubic. Grade 11 only gives `a1 e0` and `a1 rho^2 e1`, not `a1 e1`. The cubics sit in rows 3/5/7 with 87–124 terms and `k`. Copying the k-free six-row shape cannot cancel those `k`-summands; that is a sparse-ansatz obstruction, not a membership obstruction.
+
+**Box02 queue (structured Macaulay linear algebra, not Groebner):** A replay of the T-a0 identity (mandatory control), then concurrent B1 `a1^3`, B2 `a1^3(1+rho W)`, and C a T-a0 `W=0` hunt seeded by `Tg15_6 - rho^2 Tg15_4`. B3 (`k` retained) only if B1/B2 miss. Cap: 64 GiB, 1800 s, 8 threads.
+
+This does not empty T-a0 without the rho-unit localizer, does not prove `W=0`, and does not claim Gate T, order two, maximum twelve, or JC2.

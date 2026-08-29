@@ -1,6 +1,28 @@
 # SHEET6-REVIEW.md — Adversarial review of SHEET6-CAMPAIGN.md (commit 4835b13)
 
-Reviewer: Claude (adversarial pass, 2026-08-07). Status: COMPLETE.
+## Controlling supersession (2026-08-28)
+
+This is a historical audit of the 2026-08-07 campaign snapshot.  Its source
+errata E2--E4, the diagnosis that the printed G2/G3 proof is incomplete, and
+the 14-row table check remain valid.  It is not the current proof-status or
+root-survivor ledger:
+
+- actual-weight Corollary 7.1 is now repaired and hostile-reviewed at
+  `c253bd12...` / `727f5850...`; printed `(22)`, literal `delta_a`, and
+  nested literal `Y(F)` sums remain invalid;
+- corrected Proposition 8.4 kills `M=1` only at nonroot down vertices;
+  `M_(0,y)=1` is allowed and Statement 8.5 gives only divisibility;
+- MFE now proves the multipole selected-exit inequality with shared suffixes
+  counted once (`c74fc0f9...`); it does not restore printed `(22)`;
+- the corrected Section 9 reconstruction `2763d970...` / `0729a576...`
+  review-closes `counterexample => td>=6`, although the printed proof stays
+  incomplete and no argument excludes `td=6`;
+- every root/SF1 count from the capped legacy engines remains withdrawn.
+  The case-I window plus MP1+MP4+MP5/D5 now excludes the two-pole `td=6`
+  pole-chain root-meet branch; broader root routes behind earlier
+  `M>=2` jumps and off-axis/SF1 completeness are still open.
+
+Historical reviewer: Claude (adversarial pass, 2026-08-07). Status: COMPLETE.
 Verdicts: 1 CONFIRMED (E2+E3+E4), 2 CONFIRMED (G2), 3 CONFIRMED (G3),
 4 CONFIRMED (14 rows), 5 CONFIRMED (spot-checked), 6 CONFIRMED (honest).
 Overall: SHEET6-CAMPAIGN.md stands; one cosmetic count slip (r10/M4: 5 not
@@ -61,10 +83,10 @@ Verdict: CONFIRMED (no alternative route exists in the printed thesis)
   at j=2, M=2 (M=2 is the thesis's own hypothesis in 9.6, so no AF3 dependence).
   9.6(iii): Q(F1) = (7j,21j,7,3,5), lambda_F1 >= 2 — statement permits = 2.
   F1 matches St 9.7's hypothesis (j',3j',7,3,5) exactly (j' = 7j). 9.7(iii):
-  F2 = (0,y), Q = (j',3j',1,M,1), "for some M in N" — M free, and Prop 8.4
-  itself (if it applies to (0,y) at all) forces M != 1, i.e. AWAY from the
-  M=1 kill. Sum lambda = 2 <= 2: (26) HOLDS. No element has M = 1 (2, 3,
-  M>=2). Neither stated mechanism fires. Same escape via 9.6(iii)->9.7(iv)
+  F2 = (0,y), Q = (j',3j',1,M,1), "for some M in N" — M is free.
+  Corrected Proposition 8.4 does not apply at `(0,y)`, so either `M=1` or
+  `M>1` is compatible there; Statement 8.5 gives only divisibility. Sum
+  lambda = 2 <= 2: (26) HOLDS. Neither stated mechanism fires. Same escape via 9.6(iii)->9.7(iv)
   [no lambda stated]->9.10(iii). Checked: none of the four case-IV
   possibilities (9.7(iii), 9.8(iii), 9.9(iii), 9.10(iii)) carries any lambda
   or M annotation that could kill it.
@@ -229,11 +251,10 @@ visible; (3) cosmetic thesis-side finds worth adding to §7 errata if desired:
 St 9.7-9.10 possibility (i) prints "M_G = 1" for what the proofs derive as
 M_F = 1, and 9.8(iv)/9.10(iv) print "Q(G)" for Q(F).
 
-WEAKEST LINK of the campaign (unchanged by this review, and correctly
-self-reported): H3 — every td=6 "EXCLUDED mod H3" verdict and the G2 repair
-hang on the unproven root-vertex kill, and AF2's lambda-rule is still
-reverse-engineered. Those are the right next targets, not this document's
-claims. Recommendation: PROMOTE the campaign's findings (errata E2-E4 and
+Historical weakest-link assessment: H3 was then unproved.  It has since been
+replaced for singleton paths by the reviewed H3-psi/actual-weight first-exit
+budget; the current root-aware enumeration and multipole global-disjointness
+gates are separate and remain open. Recommendation at the time: PROMOTE the campaign's findings (errata E2-E4 and
 gaps G2/G3 are publishable-grade observations about the thesis, pending the
 §§2-4 foundations audit the campaign already lists); DEMOTE nothing.
 

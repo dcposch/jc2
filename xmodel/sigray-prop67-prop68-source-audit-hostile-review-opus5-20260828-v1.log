@@ -1,0 +1,16 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+**Verdict: REPAIR.** Report written to `xmodel/sigray-prop67-prop68-source-audit-hostile-review-opus5-20260828-v1.md` (2,352 words). Producer hash and all seven pinned dependency hashes recomputed and matched at read time.
+
+**Props 6.7/6.8 are true** (6.7 with the lattice rider). Producer's two headline diagnoses confirmed; I re-derived corrected St. 3.11 from scratch with no Prop. 3.1 hypothesis, so the licence for (3.3)–(3.5) is solid, and `me−nd>0` checks exactly.
+
+Defects found in the producer's proof:
+
+1. **`h=h_G` is still unlicensed** (§3.3). Prop. 6.3 yields only `F ⪯ G`, not `m_G=m_F`; the producer's offered alternative presupposes the prefix it can't get. Both are needed: Prop. 6.3 for the prefix, then a zero-bracket kill of `m_G>m_F`. Load-bearing; supplied.
+2. **§5 omits `d_E>0`** and asserts "first vertex above `G` is `H`". Supplied via no-vertex-between ⇒ `H` on branch `P`, Prop. 5.3(ix) ⇒ `π(H)≤v`, monotonicity ⇒ `d_H>0`.
+3. **Cyclic residual lemma is TRUE** but the sketch omits the two facts that make it work: stabiliser is exactly `μ_{ν_F}`, and `ζ↦ζ^{β_j/e_j}` is an automorphism. Proved both.
+4. §2.1's Prop. 5.1/no-first-corner pins are **spurious**; `κd_{g,F}=β/α` is reciprocal (conclusion invariant, `α,β≥2`).
+5. `m=1` tested, not assumed: impossible (`deg p_H = m ≥ 2`).
+
+Blast radius confirmed, documentary only. Also: the source corroborates the repair at Prop. 6.3, p. 30 — the producer missed this. Lemma 6.1 is an unaudited prerequisite.
+
+Custody note: `ladder/SIGRAY-AUDIT.md` changed under me mid-session (`5ef83d36` → `1bb4b035`, 06:06:26) — not my write; the producer's pin no longer matches live.

@@ -1,0 +1,151 @@
+{
+  "c2_zero_companion": {
+    "D9": "3D*P0/(65536A) CONFIRMED complete",
+    "anchors": "D-branch and P0-branch scalar controls PASS",
+    "deepest_D10": "3[P0(P0-2SD)+HD^2]/(524288A^2) CONFIRMED at A^-2",
+    "field_radical": "A|P0; per-root H*D^2=0 split; NOT merged with c2!=0"
+  },
+  "charged_D8_D11": {
+    "D9": "3DP/(65536A) CONFIRMED complete",
+    "deepest_D10": "3P(P-2SD)/(524288A^2) CONFIRMED complete at A^-2",
+    "deepest_D11": "D*B11/(1048576A^2) CONFIRMED complete at A^-2, B11 as displayed",
+    "deepest_D8": "3K^2/(32768A^2) CONFIRMED complete at A^-2",
+    "residual_D10": "D(20c2D+3Egen)/(524288A) CONFIRMED complete",
+    "residual_D8": "-5c2(S^2-2Z)^3/(65536A) CONFIRMED complete",
+    "rootwise_A_divides_P": "anchors PASS: D=0,P!=0 dies at deep D10"
+  },
+  "exact_D0_forcing": {
+    "complete_D11": "N11/(4194304A) CONFIRMED complete negative part",
+    "deepest_D12": "(3E^2-2S*N11)/(33554432A^2) CONFIRMED at A^-2",
+    "field_radical": "at each root of squarefree A over char-0: N11=0 and 3E^2=0 force E=0, then N11=5c2L^3 forces L=0 on c2!=0; distinct roots give A|E and A|L; units used: 3, 5, c2 only"
+  },
+  "format": "GGV_UPPER_ACTIVE_C2_D8_D15_HOSTILE_REVIEW_FABLE5_V1",
+  "frozen_inputs_sha256": {
+    "cases/ggv_8_28_upper_endpoint_active_c2_d11_d13_extension_20260828/README.md": "c4c2263ec64f1a41ee0ae0f25a1fd5403a53a69041d9933950a300318ea60d2e",
+    "cases/ggv_8_28_upper_endpoint_active_c2_d11_d13_extension_20260828/RESULT.json": "568934cecfd224cfdff6f8af0791f71f54426ccc0fc5384fc4d0d90a2712c02e",
+    "cases/ggv_8_28_upper_endpoint_active_c2_d11_d13_extension_20260828/verify_active_c2_extension.py": "112650dc27b0e13d76979d5adca9315919ee65cb8d9eaf717c1685f99d96de26",
+    "cases/ggv_8_28_upper_endpoint_q1_prefix_d7_d8_target_20260828/verify_q1_prefix_target.py": "fceb189badafad877c1142b8925480516111790707954d2000421b8190fde119",
+    "xmodel/ggv-upper-endpoint-active-c2-d8-d11-prefix-sol-ultra-20260828-check.py": "00111feefcddd0532aa70204b69d90e5943b3e08b5ef7d97b44fcfa62f5b0372",
+    "xmodel/ggv-upper-endpoint-active-c2-d8-d11-prefix-sol-ultra-20260828.md": "e3b777f851dcb49c1a2caeafa3048fd20771319ecd9f74e8ca74321602b4d1f6",
+    "xmodel/ggv-upper-endpoint-active-c2-d8-d13-independent-audit-extension-20260828.md": "da189b7fa2ce12656dfbd965c2ed76a0f26b90255a4c99e0fa1322d0c98d5577"
+  },
+  "generic_determinant_control": {
+    "A": "X^4-2",
+    "all_rows_0_to_15_zero": true,
+    "all_ten_modes_nonzero": true
+  },
+  "literal_fixture": {
+    "A": "X^4-1",
+    "D0_to_D15": "all zero as literal polynomials",
+    "G12": "4093/268435456",
+    "G13_G14_G15": "0",
+    "P1": "1/2",
+    "Q": "1",
+    "R": "-1",
+    "S": "1",
+    "U": "-1/4",
+    "Z": "1-X^4/2",
+    "c14_forced_unique": "-6139/17179869184",
+    "c2": "1",
+    "c6": "1",
+    "q1_free": "VERIFIED: the linear system A'R0+2AR0'=A, deg R0<=4, is inconsistent over Q",
+    "windows": "deg F_n <= 16-n and deg G_n <= 24-n for n=1..15"
+  },
+  "modes": {
+    "10": "1/4",
+    "12": "0",
+    "14": "-1/4",
+    "16": "-1/2",
+    "18": "-3/4",
+    "2": "5/4",
+    "20": "-1",
+    "4": "1",
+    "6": "3/4",
+    "8": "1/2"
+  },
+  "mutation_wrong_mode_exponent": {
+    "c14_exponent": "-1/2 instead of -1/4",
+    "row_14": "nonzero as required",
+    "rows_0_to_13": "still zero"
+  },
+  "mutations": {
+    "M1_wrong_D8": "K-for-K^2 and 3/65536-for-3/32768 both caught",
+    "M2_A_divides_D_only": "with D=A*d1 the full weight-11 negative part is (N11+4*d1*B11r0)/(4194304A): a surviving simple pole",
+    "M3_drop_c6": {
+      "c14_retune_rescues_D0_D15": "5/17179869184",
+      "first_polar_failure_weight": 14
+    },
+    "M4_wrong_c14": "c14=0 and c14=c*+1 both leave the weight-14 pole; unique root c*",
+    "M5_perturb_F7": "D0..D12 stay clean; D13 pole is exactly 6139/(8192A) with c6 retained",
+    "M6_delete_born_mode_c14": "recurrence without the c14 mode leaves the identical weight-14 pole as c14=0: modes may not be deleted"
+  },
+  "postlift_D12_D13": {
+    "D11_poles": "all vanish after E=A*e1, L=A*ell",
+    "complete_D12": "J(20c2J+3N)/(8388608A) CONFIRMED complete",
+    "deepest_D13": "-S*J(20c2J+3N)/(33554432A^2) CONFIRMED entire A^-2",
+    "subleading_D13_symbols": [
+      "c2",
+      "c6",
+      "c8",
+      "e1",
+      "el",
+      "f7",
+      "f8",
+      "p1",
+      "q",
+      "s"
+    ],
+    "subleading_D13_terms": 25
+  },
+  "row_census": {
+    "10": {
+      "min_A_power": -11,
+      "sha256": "513a0440f8a8709726fd8075b50f063e12ab0a47133dde88ea512f692aba0836",
+      "terms": 57
+    },
+    "11": {
+      "min_A_power": -13,
+      "sha256": "678cf4a01c7f26fdac6a8efa2180bf5cb620e76c30ffb45bffc4c40ccf47985e",
+      "terms": 79
+    },
+    "12": {
+      "min_A_power": -15,
+      "sha256": "9f4f796016c15d8906ffcab3ed07a893bb18429a7f202b75d2b8a507595a3faa",
+      "terms": 118
+    },
+    "13": {
+      "min_A_power": -17,
+      "sha256": "67b12bc8672de296b67235e7cf63e5d5c683800e3f6bc600ae98b6fe47c92790",
+      "terms": 160
+    },
+    "14": {
+      "min_A_power": -19,
+      "sha256": "d6e839c6b12349d94239641e3cc50122918d8f7117919888127d2829f8bd0d08",
+      "terms": 227
+    },
+    "15": {
+      "min_A_power": -21,
+      "sha256": "32f4c484a0c9bd077bb50028289833d6fd1a6543ebc6eaafcf12154228fe3b50",
+      "terms": 304
+    },
+    "8": {
+      "min_A_power": -7,
+      "sha256": "a074ffb6b520049b150f311e4cc56d1651e32bf2799e9c82c323a8903070a59a",
+      "terms": 26
+    },
+    "9": {
+      "min_A_power": -9,
+      "sha256": "9a894571b026fe5b30c40322607cb1ad8dc6501246e4525e9352d993a7d9f28b",
+      "terms": 37
+    }
+  },
+  "scope": "characteristic-zero field points, squarefree quartic A, radical semantics, plus one literal rational fixture; no scheme membership, endpoint emptiness, branch-P exclusion, Keller, or JC2 claim",
+  "valuation_defect": {
+    "charged_claim": "the branch D=0 mod A survives the deepest D11",
+    "exact_residual": "with D=A*d1, g11^- = (N11 + 4*d1*B11r0)/(4194304*A), B11r0 = -3072F6S+3P1S^2+6QS^2U+12SU^2",
+    "impact": "A|D alone survives deepest D11 only on the extra codimension condition N11+4*d1*B11r0 = 0 mod A; it is not automatic",
+    "status": "REFUTED (confirming the extension's repair)"
+  },
+  "verdict": "REPAIR",
+  "verdict_detail": "charged D8-D11 identities CONFIRMED; the charged claim that D=0 mod A survives the deepest D11 is REFUTED (the extension's repair is correct and is the only mathematical defect found in the charged report); the exact D=0 extension through D15, the literal survivor, and the c2=0 companion all PASS"
+}

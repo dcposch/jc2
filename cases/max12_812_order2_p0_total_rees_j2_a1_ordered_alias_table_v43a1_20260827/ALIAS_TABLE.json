@@ -1,0 +1,97 @@
+{
+  "schema_id": "JC2-ORDERED-A1-V37-V43-ALIAS-TABLE-V43A1",
+  "schema_version": 1,
+  "scope": {
+    "rho0_ring": "Q[X19_rho0]",
+    "total_ring": "Q[rho,X19_total]",
+    "rho_weight": 0,
+    "coefficient_repackaging": "t=rho^2; t is not a positive-weight source symbol"
+  },
+  "source_pins": {
+    "typed_parser": {
+      "path": "cases/max12_812_order2_p0_total_rees_j2_typed_census_v23_20260827/census_j2_typed_v23.py",
+      "sha256": "14f2de22d8cabaea12ac7fc7bf72cca275edbbb6a35dc7c0556a6e18e67c4501"
+    },
+    "v37_loader": {
+      "path": "cases/max12_812_order2_p0_total_rees_j2_a1_graded_ladder_v37_20260827/solve_graded_ladder_v37.py",
+      "sha256": "ba034c8cebaa27c5630872b9cf06d152e4577170486ac34ad7f695ead871845b"
+    },
+    "v43_total_compiler": {
+      "path": "cases/max12_812_order2_p0_total_rees_j2_a1_total_dvr_w30_v43_20260827/compile_total_dvr_w30_v43.py",
+      "sha256": "0de6a2b279aeeab8c5a635c1d7658958f3f49f0f94f8473355d281cae9438b00"
+    },
+    "v43_census_addendum": {
+      "path": "cases/max12_812_order2_p0_total_rees_j2_a1_total_dvr_w30_v43_20260827/PREREGISTRATION_CENSUS_ADDENDUM.md",
+      "sha256": "266dfb8962cbeb1af73d4f03947670148b71a00eebd5e2a91fce9c78b99bf658"
+    },
+    "actual_total_v46_schema": {
+      "path": "cases/max12_812_order2_gate_t_uniform_contact_naturality_v46_20260827/SCHEMA.json",
+      "sha256": "796eb0847e7b0bb7972c2fd7b3db10bd2dcfd2fd85c5bbaa47e3a239f8b02673"
+    },
+    "actual_total_v46r1_schema": {
+      "path": "cases/max12_812_order2_gate_t_uniform_contact_naturality_v46r1_20260827/SCHEMA_R1.json",
+      "sha256": "0f6bec4983bc8d682b64db5ac23f2d1bb64b8613e2812e95f2cab2b041494b44"
+    }
+  },
+  "alphabets": {
+    "rho0_positive_count": 65,
+    "rho0_positive": [
+      "a1", "aa0", "aa1", "aaa0", "aaa1", "ac3", "ac4", "ac5",
+      "ac6", "ac7", "ac8", "az3", "az4", "az5", "az6", "az7",
+      "az8", "cs1", "cs2", "cs3", "cs4", "cs5", "cs6", "cs7",
+      "e0", "e1", "ec3", "ec4", "ec5", "ec6", "ec7", "ec8", "ec9",
+      "ee0", "ee1", "ell1", "ell2", "ell3", "ell4", "ell5", "ell6",
+      "ell7", "ell8", "ez3", "ez4", "ez5", "ez6", "ez7", "ez8",
+      "k", "k1", "k10_3", "k10_4", "k10_5", "k10_6", "k2c",
+      "k6", "k6_1", "rs1", "rs2", "rs3", "rs4", "rs5", "rs6", "rs7"
+    ],
+    "total_positive_count": 66,
+    "total_positive": [
+      "a1", "aa0", "aa1", "aaa0", "aaa1", "ac3", "ac4", "ac5",
+      "ac6", "ac7", "ac8", "az3", "az4", "az5", "az6", "az7",
+      "az8", "cs1", "cs2", "cs3", "cs4", "cs5", "cs6", "cs7",
+      "e0", "e1", "ec3", "ec4", "ec5", "ec6", "ec7", "ec8", "ec9",
+      "ee0", "ee1", "ell1", "ell2", "ell3", "ell4", "ell5", "ell6",
+      "ell7", "ell8", "ez3", "ez4", "ez5", "ez6", "ez7", "ez8", "ez9",
+      "k", "k1", "k10_3", "k10_4", "k10_5", "k10_6", "k2c",
+      "k6", "k6_1", "rs1", "rs2", "rs3", "rs4", "rs5", "rs6", "rs7"
+    ],
+    "general_only": ["ez9"]
+  },
+  "load_aliases": {
+    "ordered_total_k10": [
+      {"jet_index": 0, "symbol": "k", "sigma_weight": 4},
+      {"jet_index": 1, "symbol": "k1", "sigma_weight": 5},
+      {"jet_index": 2, "symbol": "k2c", "sigma_weight": 6},
+      {"jet_index": 3, "symbol": "k10_3", "sigma_weight": 7},
+      {"jet_index": 4, "symbol": "k10_4", "sigma_weight": 8},
+      {"jet_index": 5, "symbol": "k10_5", "sigma_weight": 9},
+      {"jet_index": 6, "symbol": "k10_6", "sigma_weight": 10}
+    ],
+    "ordered_total_k6": [
+      {"jet_index": 0, "symbol": "k6", "sigma_weight": 12},
+      {"jet_index": 1, "symbol": "k6_1", "sigma_weight": 13}
+    ],
+    "collision_firewall": {
+      "ordered_total_k10_jet_2": "k2c",
+      "ordered_total_k2_leading": "k2",
+      "d1_k2_leading": "k2load",
+      "canonical_images": {
+        "k2c": "total.k10[2]",
+        "k2": "total.k2[0]",
+        "k2load": "d1.k2[0]"
+      },
+      "pairwise_distinct": ["k2c", "k2", "k2load"],
+      "ordered_grade_le_19_presence": {
+        "k2c": true,
+        "k2": false,
+        "k2load": false
+      },
+      "forbidden_identifications": [
+        ["k2c", "k2"],
+        ["k2c", "k2load"],
+        ["k2", "k2load"]
+      ]
+    }
+  }
+}

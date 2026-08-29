@@ -1,0 +1,72 @@
+You are Grok 4.6 acting as an independent hostile mathematical reviewer in the
+plane Jacobian conjecture campaign. Work in /Users/dc/code/math/jc2.
+
+Audit the corrected, frozen uniform complete-fixture D14/D15 packet:
+
+  830639eca8bf76bba512abc8528f763925a11092b661b1531d3f66b01c1c77fc
+    xmodel/ggv-upper-endpoint-uniform-d14-d15-fullmodes-sol-ultra-20260828.md
+  53f2a7a276be4a0aa7f77cc031e270d573fc78b5db64cdb76a0cf6c502e52517
+    cases/ggv_8_28_upper_endpoint_uniform_d14_d15_fullmodes_20260828/verify_uniform_d14_d15.py
+  7546618aa5a40ed983014159c1d39337396607562912570c97cfe2ee779394ea
+    cases/ggv_8_28_upper_endpoint_uniform_d14_d15_fullmodes_20260828/RESULT.json
+
+Authoritative raw source:
+
+  ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0
+    cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json
+
+Earlier D8--D13 steps are dependencies under separate reviews; reconstruct
+what you need and make D14/D15 verdicts conditional if any dependency fails.
+
+Important audit history: a superseded packet falsely claimed that D15 itself
+killed c14. Do not repeat that claim. The corrected packet says the complete
+c14 characteristic mode is homogeneous at D15: the same-row contribution
+-3*c14*A' and predecessor mixed contribution +3*c14*A' cancel exactly. The
+only proposed c14 kill is D14 polynomiality after the D14 square divisibility.
+
+Required hostile review:
+
+1. Verify every charged hash. Independently reconstruct the Laurent recurrence
+   and literal raw D13--D15 rows; do not merely trust producer code.
+2. Retain all nine modes. In particular c14 first appears as c14/A. Check
+
+     Delta7=F7-T/2-Q*Z/8-R*V/16,
+     polar(g14)=3*Delta7^2/(8*A^2)+c14/A.
+
+   Audit the causal D14 claim: the order-two term forces A|Delta7; after
+   Delta7=A*U, raw G14 polynomiality/kernel rank 10/nullity 0 leaves c14/A
+   uncancellable and forces c14=0.
+3. Recompute both c14 contributions at D15 before imposing c14=0. Verify or
+   refute their exact cancellation. Treat any claim that D15 independently
+   constrains c14 as an error.
+4. Only after the valid D14 c14=0 conclusion, audit
+
+     Delta8=F8-T*Z/8-Q*V/16-R^2/4,
+     polar(g15)=-3*U^2/(16*A^2)
+                +U*(3*Delta8/4+c8/2)/A,
+     D15_raw=+(3/4)*A*A'*U^2 (mod A^2).
+
+   Check A|U, c8 survival, and
+   F7=T/2+Q*Z/8+R*V/16+A^2*Y.
+5. Audit the literal G14 lower-window kernel claim, the c8=1 survival point,
+   all 513 source generators, source-level mutations, signs/powers, and every
+   characteristic-zero/squarefree use.
+6. Independently derive C13,C14,C15 and their dependence on the invariant
+   H0=c8/2+3*F8(0)/4. Ensure all three remain live necessary equations and
+   that no gauge is normalized.
+7. Scope firewall: fixed 303-variable fixture and characteristic-zero
+   field-radical necessities only; no scheme, endpoint, unrestricted branch-P,
+   Keller, or JC2 conclusion.
+
+Return separate PASS/REPAIR/FAIL verdicts for D14 square divisibility, D14
+c14 kill, the D15 c14 cancellation, D15 divisibility/c8 survival, and
+C13--C15, plus an overall verdict. Write only a new review/checker/result:
+
+  xmodel/ggv-upper-endpoint-uniform-d14-d15-fullmodes-corrected-r1-hostile-review-grok46-20260828.md
+  xmodel/ggv-upper-endpoint-uniform-d14-d15-fullmodes-corrected-r1-hostile-review-grok46-check.py
+  xmodel/ggv-upper-endpoint-uniform-d14-d15-fullmodes-corrected-r1-hostile-review-grok46-RESULT.json
+
+End with exact SHA-256 values for all charged and new artifacts. Do not edit
+the charged packet or canonical top-level files. Do not access, list, search,
+build, status, or modify jc2-lean. Light local exact arithmetic only; no heavy
+local CAS.

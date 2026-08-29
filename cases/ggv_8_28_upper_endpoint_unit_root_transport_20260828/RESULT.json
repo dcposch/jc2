@@ -1,0 +1,159 @@
+{
+  "coefficientwise_normalization": {
+    "definition": "Fbar_i=V0^-i*F_i; gbar_n=V0^-n*g_n; cbar_m=V0^-m*c_m",
+    "fractional_power_recurrence_weights_checked": "1..22",
+    "important_non_symmetry": "the normalization is used only for characteristic regularity; it is not asserted to preserve the global raw windows or determinant row",
+    "mode_scaling_weights_checked": {
+      "c10": "10..22",
+      "c12": "12..22",
+      "c14": "14..22",
+      "c16": "16..22",
+      "c18": "18..22",
+      "c20": "20..22",
+      "c4": "4..22",
+      "c6": "6..22",
+      "c8": "8..22"
+    },
+    "normalized_prefix": "Fbar_0=A^4, Fbar_1=A^2, Fbar_2=(1+A^2*Zbar)/4, Fbar_3=(Zbar+A*Tbar)/8, Zbar=Z/V0^2, Tbar=T/V0^3",
+    "regularity_equivalence": "V0 is a DVR unit, so gbar_n is regular iff g_n is regular"
+  },
+  "live_mutations": {
+    "endpoint_A3Aprime_coefficient_changed_from_minus_40_to_minus_39": {
+      "optional_kernel_residual_scalar": 1,
+      "reason": "the c22*A^-5 cancellation is destroyed"
+    },
+    "mode_scaling_V0_power_changed_from_minus_m_to_minus_m_plus_1": {
+      "failed_weight_checks": 99,
+      "reason": "mutated total power is V0^(-(n-1)), not V0^(-n)"
+    }
+  },
+  "local_newton_model": {
+    "H": "epsilon^-4*F(alpha+epsilon,epsilon^2*s)",
+    "Q": "a(epsilon)^2+V0(alpha+epsilon)*s/2",
+    "exact_fraction_trials": [
+      {
+        "leading_square_terms": 3,
+        "terms_in_H": 36,
+        "terms_in_correction": 19
+      },
+      {
+        "leading_square_terms": 3,
+        "terms_in_H": 24,
+        "terms_in_correction": 12
+      },
+      {
+        "leading_square_terms": 3,
+        "terms_in_H": 58,
+        "terms_in_correction": 35
+      }
+    ],
+    "identity": "H=Q^2+epsilon^2*(a^2*Z*s^2/4+V0*Z*s^3/8)+epsilon^3*a*T*s^3/8+sum_(i>=4)epsilon^(2i-4)*F_i*s^i",
+    "leading_square": "H(0,s)=(A'(alpha)^2+V0(alpha)*s/2)^2",
+    "substitution": "X=alpha+epsilon, A=epsilon*a(epsilon), t=epsilon^2*s"
+  },
+  "mixed_root_D12_fixture": {
+    "B": "1+X+X^2+X^3",
+    "all_three_B_roots": "B is squarefree; C,V0,Nred are units modulo B, so the denominator C^3*B^2 has exact order two at every B-root",
+    "bezout_identity_rechecked": true,
+    "gcd_B_Bprime": "1",
+    "gcd_B_Nred": "1",
+    "gcd_B_V0": "1",
+    "unit_root_alpha_minus_1": {
+      "A_prime": "-4",
+      "C": "-2",
+      "Nred": "-3969/4096",
+      "V0": "8",
+      "g12_local_order": -2,
+      "leading_q": "16+4*s"
+    }
+  },
+  "mode_firewall": [
+    {
+      "beta": "3/4",
+      "coefficient_index": 2,
+      "epsilon_exponent": -1,
+      "leading_coefficient_at_a_eq_v_eq_1": "3/32",
+      "leading_q_exponent": "3/2",
+      "mode": "c6",
+      "weight": 8
+    },
+    {
+      "beta": "1/4",
+      "coefficient_index": 1,
+      "epsilon_exponent": -1,
+      "leading_coefficient_at_a_eq_v_eq_1": "1/4",
+      "leading_q_exponent": "1/2",
+      "mode": "c10",
+      "weight": 11
+    },
+    {
+      "beta": "-1/4",
+      "coefficient_index": 0,
+      "epsilon_exponent": -1,
+      "leading_coefficient_at_a_eq_v_eq_1": "1",
+      "leading_q_exponent": "-1/2",
+      "mode": "c14",
+      "weight": 14
+    },
+    {
+      "beta": "-1/2",
+      "coefficient_index": 0,
+      "epsilon_exponent": -2,
+      "leading_coefficient_at_a_eq_v_eq_1": "1",
+      "leading_q_exponent": "-1",
+      "mode": "c16",
+      "weight": 16
+    },
+    {
+      "beta": "-3/4",
+      "coefficient_index": 0,
+      "epsilon_exponent": -3,
+      "leading_coefficient_at_a_eq_v_eq_1": "1",
+      "leading_q_exponent": "-3/2",
+      "mode": "c18",
+      "weight": 18
+    },
+    {
+      "beta": "-1",
+      "coefficient_index": 0,
+      "epsilon_exponent": -4,
+      "leading_coefficient_at_a_eq_v_eq_1": "1",
+      "leading_q_exponent": "-2",
+      "mode": "c20",
+      "weight": 20
+    }
+  ],
+  "scope": "This is conditional on the reviewed branch-P prefix, mode schedule, and fixed characteristic cascade. It proves no raw-normal-form landing, no q1 implication, no scheme statement, and no JC2 result.",
+  "source_pins": {
+    "cases/ggv_8_28_upper_endpoint_q1_post_d11_d12_obstruction_20260828/RESULT.json": "b2e0e3b9ed6ffb20328a044ae4172d0290597e5cbf088b62928ef480c24b4561",
+    "cases/ggv_8_28_upper_endpoint_q1_post_d11_d12_obstruction_20260828/verify_q1_d12_obstruction.py": "24381cd505e9d507083c49f18c4eb45a3f55bee87446c2d0aa11a33b6fa203fb",
+    "cases/ggv_8_28_upper_endpoint_uniform_d18_d22_fullmodes_20260828/RESULT.json": "f46d7afd8b4e1e7cb5c60b029f8660dc2f1bf0e8770724808a3451c8c4e9e684",
+    "cases/ggv_8_28_upper_endpoint_uniform_d18_d22_fullmodes_20260828/verify_uniform_d18_d22.py": "49d1acaf1a8b066e9de15005e97ce948b8b33bd38315a1e77dcdf945c9b9761d",
+    "xmodel/ggv-upper-endpoint-q1-fixed-proper-divisor-d12-obstruction-sol-ultra-20260828.md": "9903780f612f07c8afd6bd6d6318d4a086ae59c59e6a7e554609f2de1a1eb258",
+    "xmodel/ggv-upper-endpoint-uniform-d18-d22-fullmodes-hostile-review-grok46-20260828.md": "a294cdf70f0496b360855b1b88e6f362e752e0bda33498902eb6fba7785e23a5",
+    "xmodel/ggv-upper-endpoint-uniform-d18-d22-fullmodes-sol-ultra-20260828.md": "ecf83ac7b380a18f939e60671a4e97290f9f68b51536c236b81f71bb6a6c5bb8",
+    "xmodel/ggv-upper-endpoint-uniform-d7-d22-A-dependency-audit-sol-ultra-20260828.md": "e2d02b32f5274323c47ca7a981f2dfb51e7035538a8b6b8136dd4e6bed316054",
+    "xmodel/ideation-20260828T0702Z-fable5.md": "c3d6c88e2b52569cdd4653cc3e4d8748bdae08fe94673a417578cd6d2242497f",
+    "xmodel/ideation-20260828T0702Z-opus5.md": "9339a398c2dee3251203893d8d33abdffecb4bdb361fd2289d7579b806e1177e"
+  },
+  "status": "PASS_EXACT_UNIT_ROOT_TRANSPORT_DISCRIMINATOR",
+  "transport_conclusion": {
+    "endpoint_operator": "L22(R)=-40*A^3*A'*R-8*A^4*R'",
+    "endpoint_orders_for_A_power_k": {
+      "-1": 2,
+      "-2": 1,
+      "0": 3,
+      "1": 4,
+      "2": 5,
+      "3": 6,
+      "4": 7,
+      "5": 8,
+      "6": 9
+    },
+    "fixed_cascade_use": "the reviewed D7-D21 characteristic divisibility argument uses only regularity and A-adic valuation after the reduced prefix; global quotient names become local DVR quotients",
+    "g22_order_without_optional_kernel": ">=-2",
+    "local_ring": "Kbar[X]_(X-alpha), equivalently its DVR completion",
+    "optional_c22_A^-5_kernel_scalar": 0,
+    "verdict": "D22_raw is in the maximal ideal (X-alpha), contradicting target 1"
+  }
+}

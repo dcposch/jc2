@@ -1,6 +1,13 @@
 # SHEET6-AF3.md — the entry-M sanction, decided (campaign §6 item 6)
 
-Status: COMPLETE + PROMOTED (SHEET6-A3L1-REVIEW.md: pin airtight, all gcds re-derived, kill-hunt negative) (2026-08-07, this session). Target: SHEET6-CAMPAIGN.md §6
+Status: PROMOTED AT THE ENTRY/NONROOT-IV LAYER; ROOT CENSUS UNDER CORRECTION
+(2026-08-28).  The pole pin and four nonroot-IV classes survive.  Corrected
+Proposition 8.4 is nonroot only, so the old root-`M` restriction and every
+exhaustive SF1/root count below are superseded pending the reviewed root-aware
+AWS rerun.  Actual-weight Corollary 7.1 plus first-separation exits restores
+the displayed inequality budgets; printed equation (22) is not restored.
+Original status: COMPLETE + PROMOTED (SHEET6-A3L1-REVIEW.md: pin airtight,
+all gcds re-derived, kill-hunt negative) (2026-08-07). Target: SHEET6-CAMPAIGN.md §6
 item 6 (AF3 entry-M menu), the last conditionality on the single-pole td=6
 book. Ground truth read on-page: refs/sigray_full.pdf (printed page = pdf
 page). Engine: cases/hiii_compose.py new additive `pin` mode (existing `iib`
@@ -20,7 +27,8 @@ are not ill-formed; they are the unique thesis-consistent entries. Route
 (b) (§4-§5): all four survive every located printed statement; the two R=4
 classes sit at exact budget boundary. **Final single-pole td=6 residual =
 4 classes, now UNCONDITIONAL at the entry layer** (§6). Consolation prizes:
-td≤5 rows 1,5,7,10 and td6 rows 2,3,6,11 die AT ENTRY (M=1 vs Prop 8.4),
+td≤5 rows 1,5,7,10 and td6 rows 2,3,6,11 die AT ENTRY (nonroot pole
+`M=1` vs corrected Prop 8.4),
 closing G3's mathematical content and making the td≤5 sanctioned residual 0
 independent of AF2 (§3).
 
@@ -47,8 +55,9 @@ Nothing in 1-4 uses |T_a,pole| = 1 or 2: the A2P front-7(c) "pole pin" and
 this "row-entry pin" are the same statement. The single-pole chain entry
 F_0 is the pole vertex itself (Prop 9.2, p. 50; entry Q per St 9.1, p. 48),
 so the entry M is pinned. Kill usage (M=1 ⇒ dead) additionally needs
-Prop 8.4 (p. 44, requires T_a,pole = {G}) — available in every single-pole
-configuration by definition.
+corrected Prop 8.4 (p. 44, requires T_a,pole = {G} and a nonroot starting
+vertex) — available because every pole vertex is nonroot in a single-pole
+configuration.
 
 Trust perimeter: Prop 4.2 + Prop 5.1 + Not 8.1 + Prop 9.1's table — all
 inside the campaign's standing H1-tier trust. One cite-slip found in Prop
@@ -132,11 +141,12 @@ entry at td=6 budgets. Checks passed by all four (engine + hand): Prop 9.3
 (k)/(l)/(m) at the terminal ((m) evaluates to 1 ∈ N in all four); ψ-budget
 at ψ = ceil(R)−1; N1 (H5a) at every ν ≥ 2 vertex; E5-priced III (none on
 the surviving routes); AF2 derived-IIb pricing (none on the routes: pure
-IIa); μ | M at each step; M ≠ 1 along the chain INCLUDING the terminal:
-by St 8.5 (p. 42; applicable since case IV has (0,y) ∉ V_2,a) M_{(0,y)}
-divides M_G, and Prop 8.4 (p. 44 — (0,y) ∈ T_a& ∩ V_a) forbids 1, forcing
-M_{(0,y)} = 3 (classes 1,3) resp. ∈ {2,4} (classes 2,4) — satisfiable,
-adds only divisibility on k_f.
+   IIa); μ | M at each step; `M != 1` at every certified nonroot chain
+   vertex.  At the terminal, repaired Statement 8.5 gives only
+   `M_(0,y) | M_G`.  Corrected Proposition 8.4 has no root clause, so the
+   allowed root divisors are `{1,3}` in classes 1,3 and `{1,2,4}` in
+   classes 2,4.  This is satisfiable and adds only divisibility constraints
+   on the root data.
 
 Entry realizability (new, positive): the pinned r9 entry exists at the
 pattern layer. Prop 5.3(iii)/(v)/(vi) + Prop 5.4(ii) (pp. 24-26) force,
@@ -167,17 +177,20 @@ residual is NOT vacuous at the leaf-pattern layer.
   l_f < k_f (Thm 6.1 p. 28), k_f ≥ R·l_f from the terminal; d_F = l_f =
   P_G/R propagates back to j-divisibility on the entry unit (3 | j′ for
   classes 1,3; 2 | j′-type for 2,4) — constraints, not contradictions.
-- **Prop 8.4/8.5 at the terminal**: see §4 — consistent, no kill.
+- **Statement 8.5 at the terminal**: see §4 — divisibility is consistent;
+  corrected Proposition 8.4 is unavailable at the root.
 - Conclusion: SHEET6-H3 §4b's finding extends verbatim to td=6: a
   ψ-consistent case-IV terminal is killed by NO located printed statement.
 
 ## 6. Final single-pole td=6 statement
 
-**Single-pole td=6 residual = exactly the 4 classes of §4, on the forced
+**Single-pole td=6 nonroot-IV ledger = exactly the 4 classes of §4, on the forced
 entry r9 Q=(3,6,5,2,8) of a type-(3,5) normalized counterexample — now
 UNCONDITIONAL at the entry layer** (the AF3 conditionality is resolved:
 no sanction hypothesis remains in the stack; standing hypotheses now
-{H1, H2, H4, AF2-derivation, H5a/b} + proved H3q/ψ-budget). All other
+{H1, H4, AF2-derivation, H5a/b} + actual-weight Corollary 7.1,
+first-separation exits and H3q/ψ-budget).  This is not an exhaustive root/SF1
+census until the root-aware AWS replay lands. All other
 single-pole configurations at every td ≤ 6 are entry-dead (pin + Prop 8.4)
 or chain-closed (r4/M2, r8/M3). SF1 residual stays 0 (its last class rode
 r8/M6, now entry-dead — doubly covered with AF2's kill). Two-pole (3,3)
@@ -206,10 +219,11 @@ math; none located in print.
   printed puts every H ∈ T_a,cv on a ray through EVERY ancestor of H (all
   rays pass I_P(0) = (0,y)), so Σλ_{F_i} would double-count and (25) would
   fail as stated. Every §9 usage (and St 9.4's own proof via Cor 7.1,
-  which needs a plain cv-subset) requires the branch-at-F reading: λ_F =
-  cv-mass of branches leaving the characteristic path at F. This is the
-  campaign's H2 reading; flagged because the pin argument's neighbors
-  (St 9.4/9.5) lean on it.
+  which needs a plain cv-subset) cannot be used literally.  The reviewed
+  repair assigns each cv cluster to its unique first-separation exit set;
+  these sets are disjoint, and actual-weight Corollary 7.1 applies once to
+  their union.  This is now a theorem-level replacement for H2, not a
+  branch-at-F convention.  Printed equation (22) remains unproved.
 - Engine: hiii_compose.py `pin` mode + PIN_EXPECT assertion table
   (additive; `iib` output byte-identical; both gates PASS).
 
@@ -217,8 +231,12 @@ math; none located in print.
 
     cd cases && python3 sheet6_campaign.py gate     # PASS (unchanged)
     python3 hiii_compose.py iib                     # unchanged: td6: 4
-    python3 hiii_compose.py pin                     # pinned entries:
+    python3 hiii_compose.py pin                     # historical pinned-IV run:
                                                     # td3 0, td4 0, td5 0,
                                                     # td6 4 (r9/Mpin2)
+
+The pinned pole and nonroot-IV output remains useful.  Its old exhaustive
+root/SF1 interpretation is superseded by the root-aware engine repair and
+must be regenerated on AWS.
 
 Exact arithmetic throughout; pdf pages cited = printed pages.

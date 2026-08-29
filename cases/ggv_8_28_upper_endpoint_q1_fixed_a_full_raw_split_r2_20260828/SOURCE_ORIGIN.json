@@ -1,0 +1,54 @@
+{
+  "schema": "GGV-8_28-QGATE-SPLIT-SOURCE-ORIGIN-v2",
+  "created_utc": "2026-08-28T10:35:35Z",
+  "predecessor_math_job": {
+    "local_archive": "../ggv_8_28_upper_endpoint_q1_fixed_a_full_raw_20260828/aws_box03_r1_no_verdict",
+    "remote_namespace": "/home/ubuntu/jobs/ggv_q1_fixed_a_fulltail_r1_20260828T094558Z_box03",
+    "terminal": "NO_VERDICT_Q_COMPILE",
+    "worker_rc": 36,
+    "monitor_rc": 0,
+    "source_manifest_sha256": "7de7f3e7ac530e1c8f8e6b6f43fb2b0a5095640a0d9a11ef31833bb3e106986a",
+    "evidence_ledger_sha256": "41d27dbc921add9bd4f1035ab70ba52c90ffc3257e2c4cf5dd68fd35c54e388a",
+    "scope": "It emitted one complete lambda=0 directory but timed out before reduction and made no mathematical verdict."
+  },
+  "split_r1_packaging_audit": {
+    "lambda0_namespace": "/home/ubuntu/jobs/ggv_q1_fixed_split_lambda0_resume_r1_20260828T102630Z_r6a",
+    "lambda0_terminal": "NO_VERDICT_EMISSION_VALIDATION",
+    "lambda0_worker_rc": 1,
+    "lambda1_namespace": "/home/ubuntu/jobs/ggv_q1_fixed_split_lambda1_compile_r1_20260828T102630Z_r6d",
+    "lambda1_terminal": "NO_VERDICT_NO_MARKER",
+    "lambda1_worker_rc": 143,
+    "lambda1_monitor_rc": 0,
+    "cause": "The macOS tar writer preserved com.apple.provenance pax metadata; GNU tar materialized six unpinned AppleDouble ._* names beside the frozen lambda=0 files. The fail-closed directory census rejected them before reduction. Lambda1 was stopped by its exact registered PGID before accepting any output.",
+    "classification": "PACKAGING_ADAPTER_FAILURE_NOT_MATHEMATICAL",
+    "mathematical_computation_accepted": false
+  },
+  "v2_packaging_repair": {
+    "method": "Rebuild tar from the frozen file list with COPYFILE_DISABLE=1, verify archive listing contains exactly 30 registered files, and verify extracted source census before launch.",
+    "source_byte_changes_from_v1": "Only the two runner paths and V2 custody/preregistration/manifests change. Mathematical compiler, validator, reducer, dependencies, and six lambda=0 input bytes are unchanged."
+  },
+  "copied_emission": {
+    "system_id": "lambda_0_full_qgates",
+    "files": {
+      "Q_GATE_SYSTEM.json": {"bytes": 58975191, "sha256": "7c4beff1ec5b6e64fafcf800d965e2ea614bcd5d53d14195551f5322f418ab78"},
+      "qgates_p65497_dp_slimgb.sing": {"bytes": 2995909, "sha256": "22e9471e6dea9fc2fb28bd03d5dd4920a4a4d46e04fd6cbe9400a73fa6334a00"},
+      "qgates_p65519_dp_slimgb.sing": {"bytes": 3007030, "sha256": "f719353450c7ffa388a2f05d7908fe74afe730278c65762dc8f1acf94d34c610"},
+      "qgates_p65521_lp_std.sing": {"bytes": 2962714, "sha256": "acc863503d0ad258b42a22211ed4d87e4f58c68c043bb816e4f139678b75dd53"},
+      "qgates_q_lp_std.sing": {"bytes": 3717972, "sha256": "3c96a8e7188af3da3c88081d79d51161b47be81d5ca49af9417aef6a0b1a55eb"},
+      "qgates_q_lp_tracked.sing": {"bytes": 3718299, "sha256": "8813547c3dcf01cf0ae3d8be30aaaa9108191219125cd6be385e2de91c976bd1"}
+    }
+  },
+  "frozen_math_code": {
+    "compile_q_gates.py": "b487d8b532d303421386c66638a6d7953aa5a4dcf74208cd07c6db885c511201",
+    "compile_fixed_q1_raw.py": "82284effbd507693cb8deb00e33b108d0f62d3d3861ce487e75d2e3f98b8fbea",
+    "reduce_q_gates.py": "47d644bf803dfc2c3e65b57110aca8e4ae32a878794b9def6787adf21f4128b6",
+    "compile_lambda1_slice.py": "624dbdde607891769c0b692b6cdfc7f8b6c4b967568155186e1c6a3572dae396",
+    "validate_emitted_qgate.py": "54af9aac42385524951fd5228502fbb55dd64ad0436ebfc8a6091b5edd546c16"
+  },
+  "firewall": {
+    "no_peer_ideation_consumed": true,
+    "no_jc2_lean_access": true,
+    "no_top_level_canonical_mutation": true,
+    "heavy_or_uncertain_work_aws_only": true
+  }
+}

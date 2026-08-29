@@ -1,0 +1,27 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review complete. Written to `xmodel/m2-caseiii-two-pole-e5-local-index-r3-hostile-review-opus5-20260829.md` (body `45ec4167…67df`).
+
+## Verdict: `PASS_WITH_REPAIR`
+
+**Target hash `885e5cc2…7092` verified byte-exact.** All four packet hashes, the sealed embedded field `a26d992f…b471`, both suites (1,532,749 checks, 11.4 s each), and byte-identical certificate regeneration all check out. R1/R2 packets confirmed byte-untouched.
+
+**Everything charged replicated exactly** under from-scratch re-implementations sharing no code with the packet:
+
+| Claim | Result |
+|---|---|
+| Theorem D proof (4 parts) | recomputed line by line, correct; `s=1202` witness verified end-to-end |
+| Box census | 93,735 / 92,772 / `{1:92083,2:486,3:136,4:63,5:4}` / 0 violations / 1,815 μ=1 singletons — exact |
+| Cap-free census | 90,957 keys, max fibre 12, max member 1202, **29,444 equality keys** — exact |
+| §7.4 refutation | candidate counts 4/6/15/57/213, `legal_patterns = 0`; canonical `cell_check` agrees |
+| Theorems E/F censuses | 357,260 / 439,730 / 75,713, 0 violations, violator `M = {1}` — exact |
+| Lemma T1′ | proof correct; μ=1 restriction *necessary* (260 counterexamples at μ≥2) |
+| Source lines | every citation exact (`:219-265`, `:273-357`, `:305-309`, `:320-323`, `:325-328`, `:329-336`, `:337-357`, `:165`, `:39`, `:49-54`, MP1 `:82`, DS1(c) `:116`) |
+| Mutations | all 10 fire with the exact claimed messages |
+
+Both R2 blockers are properly repaired, and Theorem F is a genuine upgrade from empirical to proved — I checked the two `ν=1` sub-cases its printed proof skips are vacuous.
+
+**The one repair (§8 migration only, unexecuted):** the structural scope guard cannot exclude a `ν_G = 1` (case-I) merge, yet the DIFFICULT loop enumerates integer κ̄ only — licensed by DS1(c), which requires `ν_G ≥ 2`. Non-vacuous: **1,290** in-scope rows are alive only via a `ν=1` pattern at fractional κ̄ (witness `μ=2, μ₀=3, w=1, w_U=3/2 → κ̄=5/2, (dp,dq)=(6,5)`), where legacy says ALIVE and the E5 branch would say DEAD. R3 also over-reads the R2 review's "sufficient", which was about routing only.
+
+Two other notes: the `r₀=4` failure is **generic** (186 MP2-alive violators, smaller witnesses than `(44,46)`), not the knife-edge §4's framing suggests; and the R2 review's own 57,960/9/27 deep-search figures do not replicate under any of nine readings I tried — R3's decision to document rather than incorporate was correct.
+
+**Best next lemma:** the EQUAL-regime (δ=0) kill lemma — `dq/D ≤ 2 + 1/M` gives the finite menu `κ̄ ∈ ℤ ∩ (w, μw(2+1/M_G)]`, making the one regime with zero kill power decidable.

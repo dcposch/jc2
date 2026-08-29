@@ -1,0 +1,19 @@
+ring r=0,(x,y),dp;
+matrix S[2][2]=x,1,y,1;
+poly D=det(S);
+if(D!=x-y){ print("FATAL_DETERMINANT_ADAPTER"); quit; }
+poly G=0;
+G=gcd(G,D);
+if(G==0){ print("FATAL_GCD_ADAPTER"); quit; }
+list FF=factorize(D);
+string factor_literal=string(FF);
+if(size(factor_literal)==0){ print("FATAL_FACTOR_STRING_ADAPTER"); quit; }
+kill FF;
+kill S;
+kill D;
+matrix S[1][1]=x;
+poly D=det(S);
+if(D!=x){ print("FATAL_KILL_REDECLARE_ADAPTER"); quit; }
+print("MINOR_BACKEND_ADAPTER_SELFCHECK_PASS");
+quit;
+

@@ -1,6 +1,7 @@
 #!/bin/sh
 # Generic research-lane runner.
 # Usage: ops/lane.sh <adapter> <unique-tag> <promptfile>
+main() {
 set -u
 
 if [ "$#" -ne 3 ]; then
@@ -61,21 +62,7 @@ sha256_file() {
   printf '%s\n' "$sha_value"
 }
 
-sha256_stdin() {
-  if command -v sha256sum >/dev/null 2>&1; then
-    sha_line=$(sha256sum) || return 1
-  elif command -v shasum >/dev/null 2>&1; then
-    sha_line=$(shasum -a 256) || return 1
-  else
-    echo "no SHA-256 tool available" >&2
-    return 1
-  fi
-  sha_value=${sha_line%% *}
-  [ -n "$sha_value" ] || return 1
-  printf '%s\n' "$sha_value"
-}
-
-for existing in "xmodel/$tag.log" "xmodel/$tag.md" "xmodel/$tag.run"; do
+for existing in "xmodel/$tag.log" "xmodel/$tag.md" "xmodel/$tag.run" "xmodel/$tag.run.v2"; do
   if [ -e "$existing" ]; then
     echo "duplicate tag refused; choose a new attempt tag: $tag ($existing exists)" >&2
     exit 3
@@ -102,25 +89,15 @@ trap 'forward_signal INT' INT
 trap 'forward_signal TERM' TERM
 
 log_file=xmodel/$tag.log
-run_file=xmodel/$tag.run
+run_file=xmodel/$tag.run.v2
 report_file=xmodel/$tag.md
 start_utc=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
 prompt_sha=$(sha256_file "$prompt_file") || exit 2
 adapter_sha=$(sha256_file "$adapter_script") || exit 2
 basis=$(git rev-parse HEAD 2>/dev/null || echo UNKNOWN)
-pre_status=$(git status --porcelain=v1 --untracked-files=all) || exit 2
-pre_status_sha=$(printf '%s\n' "$pre_status" | sha256_stdin) || exit 2
-pre_diff_sha=$(git diff --binary HEAD | sha256_stdin) || exit 2
-pre_untracked_sha=$(
-  git ls-files --others --exclude-standard |
-    while IFS= read -r untracked_path; do
-      printf '%s ' "$untracked_path"
-      sha256_file "$untracked_path" || exit 1
-    done |
-    sha256_stdin
-) || exit 2
 
 {
+  echo "run_schema=2"
   echo "tag=$tag"
   echo "adapter=$adapter"
   echo "pid=$$"
@@ -130,14 +107,7 @@ pre_untracked_sha=$(
   echo "prompt_sha256=$prompt_sha"
   echo "adapter_sha256=$adapter_sha"
   echo "start_utc=$start_utc"
-  echo "pre_status_sha256=$pre_status_sha"
-  echo "pre_diff_sha256=$pre_diff_sha"
-  echo "pre_untracked_sha256=$pre_untracked_sha"
-  if [ -n "$pre_status" ]; then
-    printf '%s\n' "$pre_status" | sed 's/^/pre_porcelain=/'
-  else
-    echo "pre_porcelain=CLEAN"
-  fi
+  echo "provenance_scope=DECLARED_LANE_INPUTS"
   echo "initial_status=RUNNING"
 } > "$run_file"
 
@@ -173,19 +143,11 @@ if [ "$post_prompt_sha" != "$prompt_sha" ] || [ "$post_adapter_sha" != "$adapter
 fi
 
 end_utc=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
-post_status=$(git status --porcelain=v1 --untracked-files=all) || post_status=ERROR
-post_status_sha=$(printf '%s\n' "$post_status" | sha256_stdin) || post_status_sha=ERROR
 {
   echo "end_utc=$end_utc"
   echo "exit_code=$rc"
   echo "post_prompt_sha256=$post_prompt_sha"
   echo "post_adapter_sha256=$post_adapter_sha"
-  echo "post_status_sha256=$post_status_sha"
-  if [ -n "$post_status" ]; then
-    printf '%s\n' "$post_status" | sed 's/^/post_porcelain=/'
-  else
-    echo "post_porcelain=CLEAN"
-  fi
   if [ -s "$report_file" ]; then
     echo "report=$report_file"
     echo "report_sha256=$(sha256_file "$report_file" || echo ERROR)"
@@ -205,3 +167,8 @@ post_status_sha=$(printf '%s\n' "$post_status" | sha256_stdin) || post_status_sh
 
 echo "$tag done rc=$rc start=$start_utc end=$end_utc" >> pilot-local.log
 exit "$rc"
+}
+
+# Parsing the complete function before execution makes an already-running
+# lane immune to later atomic rewrites of this launcher.
+main "$@"

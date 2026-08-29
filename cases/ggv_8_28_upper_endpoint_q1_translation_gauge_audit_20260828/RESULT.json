@@ -1,0 +1,65 @@
+{
+  "active_q1": {
+    "F1_equals_a_F0_prime": true,
+    "G1_equals_a_G0_prime": true,
+    "V0=3lambda*A*A_prime": [
+      "0",
+      "0",
+      "0",
+      "-16",
+      "0",
+      "0",
+      "0",
+      "16"
+    ],
+    "a=3lambda/4": "1",
+    "lambda": "4/3",
+    "weight_one_killed_by_X_to_X_minus_a_t": true
+  },
+  "formal_equivariance": {
+    "branch_P_F0_G0_fixed": true,
+    "chain_rule": "t*d_t tau_a(P)=tau_a(t*d_t P-a*t*P_X); the two a*t*F_X*G_X terms cancel, so E(tau_a F,tau_a G)=tau_a E(F,G)",
+    "operator": "E=F_X*(12-t*d_t)G+((t*d_t)-8)F*G_X",
+    "target_t22_fixed": true,
+    "upper_degree_bounds_preserved": true
+  },
+  "literal_window_counterexamples": {
+    "F8_equals_X": {
+      "forbidden_coefficient": "F9[X^0]=-1",
+      "source_window": "F8[X^0..X^8]",
+      "target_window": "F9[X^1..X^7]",
+      "transformed_F9": [
+        "-1",
+        "0",
+        "0",
+        "-7040",
+        "0",
+        "0",
+        "0",
+        "91520"
+      ]
+    },
+    "G12_equals_X": {
+      "forbidden_coefficient": "G13[X^0]=-1",
+      "source_window": "G12[X^0..X^12]",
+      "target_window": "G13[X^1..X^11]",
+      "transformed_G13": [
+        "-1",
+        "0",
+        "0",
+        "100800",
+        "0",
+        "0",
+        "0",
+        "-5581440",
+        "0",
+        "0",
+        "0",
+        "29953728"
+      ]
+    }
+  },
+  "solution_locus_cancellation": "OPEN_NOT_PROVED",
+  "status": "PASS_EXACT_NEGATIVE_TRANSLATION_GAUGE_AUDIT",
+  "verdict": "the formal determinant equation is translation-equivariant, but the frozen raw Newton-support space is not; lambda cannot be gauged to zero without an additional solution-locus cancellation theorem"
+}

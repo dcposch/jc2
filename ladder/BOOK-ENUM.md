@@ -16,11 +16,15 @@ inline mechanical arsenal, 75 survivors** across 18 panels (9 panels are
 EMPTY — every entry off the all-M=1 axis or no entry at all; this includes
 all of td = 7, 11, 13, the multi-pole shadow of the prime-td theorem:
 partitions of a prime td always force a prime or β-minimal Λ_i companion
-whose type admits only b ≥ 2 partners). No ROOT cell survives anywhere:
-every reachable w-alphabet lies in w ≥ 1 (entry w0 = a(b(α+β)−1)/(bν) > 1
+whose type admits only b ≥ 2 partners). No ROOT cell survives in this
+all-`b=1`/all-`M=1` pattern sweep; mixed-`mu`/off-axis configurations are
+not enumerated here. Every enumerated reachable
+w-alphabet lies in w ≥ 1:
+(entry w0 = a(b(α+β)−1)/(bν) > 1
 and cascades expand while resonant steps never cross 1 in the swept range),
-so the case-(IV) w < 1 window is empty — the td=6 root-kill argument is
-td-uniform over the whole sweep. Survivors: 31 IIa, 33 ZCH, 11 family-I
+so the corrected case-I root window `w=l/(r+l) in (0,1)` is empty — the
+td=6 root-kill argument is td-uniform over the whole all-`M=1` sweep.
+Survivors: 31 IIa, 33 ZCH, 11 family-I
 (all at r = 3), concentrated at w ∈ {2, 3, 4, 6}. The single largest
 surviving class is the promoted **residue-A cell IIa (r,ν,l) = (2,3,1),
 M = 2, child (κ̄, D/i, ρ) = (5, 3, 1/2) at w = 2** — present in 10 of the
@@ -36,8 +40,8 @@ ZCH cells appear only where the alphabet holds two w's at integer ratio
 | T trees | Σ(r−1) = m−1, r(G) ≤ m, no merge below G* | `set_partitions`/`block_partitions`, recursive branch hierarchies (budget exact by construction) | — |
 | C′ chains | w0 = a(b(α+β)−1)/(bν); resonant steps Δ \| num(w); cascade w ↦ w(r+l)/(lν+1); d0 ≤ 2·gen+2 | `w0_of`; `w_closure` (verbatim from promoted depth_closure_check.py); `merge_cascade_ws`; d0 recorded per entry-w0 in JSON | M=1 emission only (MP7); I r=2 even-l cascade excluded (log-obstruction); ZCH cascade gated by reach law |
 | J′ jump cells | κ̄_m ∈ (w, (r+1)w] ∩ ℤ; ν determined per (κ̄_m, l); IIa/ZCH/I gcd menu; joins force equal w; ZCH w-ratio ν_e ≥ 2 | `window_cells`, `child_datum`, `enum_context`, `zch_reachable` | mp7_l0_M1, mp7_l0_impossible, M1_mp2, mp9_nu1_even_l (I r=2), zch_w_ratio; M ≥ 2, gcd(M,ν)=1, M \| r (non-ZCH) asserted |
-| R root cells | case (IV): w_e = 1 − l_f/i0 < 1 necessary; l odd; St 9.4 ψ = r+l−1 | `enum_root` | root_w_window (W ∩ (0,1) = ∅), root_even_l, root_st94 (l > td−r) |
-| S suffix | MP2 + single-pole engine + St 9.4 | NOT run here (per-cell bash next); MP8 encoded: `lambda_spent = 0`, `suffix_budget = td−2` (root: td−1−ψ) per survivor | — |
+| R root cells | genuine all-`mu=1` root meet is case I: `w=l/(r+l) in (0,1)`, equivalently `l=rw/(1-w) in N*`; parity and St 9.4 `psi=r+l-1` are later filters | `enum_root` | `root_w_window` (`W cap (0,1)=empty`); parity/budget remain diagnostics but are never reached |
+| S suffix | MP2 + single-pole engine + MFE/St 9.4 | NOT run here (per-cell bash next); selected-exit spend is 0 before the suffix and the MFE cap is `td−2` (root: `td−1−psi`); legacy JSON keys `lambda_spent`/`suffix_budget` have only this selected-exit meaning | — |
 
 ## 2. The gate (mandatory; PASS)
 
@@ -54,8 +58,10 @@ i = 2 — the residue-A configuration (a1/a2 = 2±√3, cases/l1_ode_check.py);
 the engine-model ZCH (2,3) cell is now killed pre-suffix by the corrected
 case-(III) w-ratio law (`zch_w_ratio`, was suffix-killed in the promoted
 record — same verdict, earlier mechanism); ν=1 cells l ∈ {2,4} die by the
-even-l log-obstruction, l=1 by M=1+MP2; all 4 root candidates die by the
-w < 1 window (w = 2 ≥ 1). Nothing else exists.
+even-l log-obstruction, l=1 by M=1+MP2; all 4 historical root candidates
+die analytically because a genuine all-`M=1` case-I root requires
+`w=l/(r+l)<1`, while `W={2}`. Nothing else exists in this all-`M=1`
+pattern book.
 
 ## 3. Per-(m, td) census (td = 6..14, m = 2..⌊td/3⌋)
 
@@ -80,8 +86,8 @@ w < 1 window (w = 2 ≥ 1). Nothing else exists.
     m=4 td=14    1   0   1 |    0     0     0 | (off-axis)
     TOTAL                  |  421   346    75 |
 
-root_even_l / root_st94 never fire (root_w_window kills every root
-candidate first — no alphabet reaches w < 1). Full per-panel data incl.
+root_even_l / root_st94 never fire (`root_w_window` kills every root
+candidate first — no alphabet reaches `(0,1)`). Full per-panel data incl.
 off-axis entry tags, per-w0 closures W/gen/d0, and complete survivor
 records: systems/book/book_m{m}_td{td}.json.
 
@@ -116,9 +122,11 @@ panel (the single (2,3)^4 entry at Λ = (3,3,3,3)) is the largest panel:
 
 ## 5. What the survivors need next (the per-cell bash)
 
-Each surviving cell carries `lambda_spent = 0` (MP8: the entire pre-merge
-+ merge region is budget-transparent) and `suffix_budget = td − 2`; the
-remaining kill surface is exactly the S layer plus the coefficient layer:
+Each surviving cell carries selected-exit spend zero before the suffix
+(the legacy JSON field is `lambda_spent = 0`) and MFE cap
+`suffix_budget = td − 2`.  This is not a claim that the full literal
+`sum lambda` vanishes or that printed `(22)` is restored.  The remaining
+kill surface is the S layer plus the coefficient layer:
 
 1. **Prop 8.1(iv) rigid solve** per cell (à la cases/l1_ode_check.py
    families A/Z): the merge-local ODE identity with the l extra q-orbits;
@@ -128,8 +136,8 @@ remaining kill surface is exactly the S layer plus the coefficient layer:
 2. **Suffix engine run** from the child datum Q = (D, deg p, ν_cell, M,
    κ̄_m) at i ≥ 2 (child_kap/child_D_over_i/child_rho in the JSON) under
    the promoted single-pole kill set (hiii_compose E5/N1/AF2/H3q, as in
-   tdu_bash) with budget Σλ ≤ td − 2 — the td=6 precedent killed the ZCH
-   cell's analogue at this layer.
+   tdu_bash) with selected-exit budget `sum lambda^exit <= td−2` — the
+   td=6 precedent killed the ZCH cell's analogue at this layer.
 3. **ZCH cells**: verify the ratio-partner is realizable as an actual
    0-direction chain (the book only checks the arithmetic w-ratio law);
    the case-(III) per-edge solve with n′ ∈ (1/ν_m)ℕ* is in
@@ -164,9 +172,10 @@ remaining kill surface is exactly the S layer plus the coefficient layer:
 - **MP9 even-l log-obstruction** applied at r = 2, ν = 1 in both jump and
   cascade position (it is a local ODE identity at the merge); NOT applied
   at r ≥ 3 (unproved there — those cells survive into §4).
-- **Root candidates** at contexts whose alphabet misses (0,1) are banked
-  with w = '-' and killed by `root_w_window` (the l-range 1..td−2 printed
-  cap); root_even_l/root_st94 are implemented but never fire in the sweep.
+- **Root candidates** at contexts whose alphabet misses `(0,1)` are killed
+  analytically by the corrected case-I law before any `l` enumeration.
+  The historical `l<=td-2`, parity and Statement-9.4 code paths are retained
+  only as diagnostics and are not completeness dependencies.
 - **d0 ≤ 2·gen(W)+2** (the promoted DEPTH-REVIEW constant) is recorded per
   entry w0 in the JSON (`entry_w0` → W, gen, d0); menu content is
   depth-free via §5b, so d0 is metadata, not a cap.

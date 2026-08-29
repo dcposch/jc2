@@ -1,6 +1,53 @@
 # REDUCTION.md — from a planar Keller counterexample to the campaign books
 
-**Status (2026-08-16): hostile dependency audit / consolidation master.**
+**Status (2026-08-27): hostile dependency audit / consolidation master;
+normalization/fidelity distinction synchronized with `TRANSPORT.md`.**
+
+## Current frontier overlay — 2026-08-28 12:24Z
+
+The pure Sigray architecture now has two additional promoted inputs:
+
+- intrinsic L3/L4/L5-exact for every normalized Lemma 2.1 rectangle/NE-corner
+  fibre, with terminal records `(h,chart,kappa,F)`, exact place/deck-orbit
+  bijection and the rescaling
+  `ord_t=(kappa/e_S)ord_S`; and
+- the complete Proposition 4.2 positive-tree repair, including the unique
+  terminal `(1,0,c)` shift, terminal degree
+  `(mu_F-1)deg p_F+1`, Facts A/B and zero-safe downstream formulas.
+
+These close the local place-constructor and positive-tower steps.  They do
+**not** close the route described in the Executive verdict below.  The first
+large missing implication is still a total, provenance-preserving landing of
+every full configuration, including off-axis and post-jump `M>=2` states.
+`RPMC(C)`, independently sourced type control and a cofinal `td`/complexity
+ceiling remain downstream.
+
+Before that architecture may safely consume the later source, the current
+source-trust queue is the active full audits of Sections 7 and 8, followed by
+the exact Section 9 items used by the promoted books. Proposition 5.4 and
+Propositions 6.7/6.8 are now review-closed; Statement 3.9's auxiliary-`h`
+`kappa` condition remains mandatory at every derived-tower use. The completed Statement 6.2
+consumer sweep r2 (`581219e0...`) confirms its omitted
+`H in V_a cap T_a+` hypothesis causes no current rollback only after composing
+repaired Propositions 6.7/6.8 (`c3d6ff92...`): the former controls a
+one-grid-step child, while the latter carries a down microstep to the next
+down vertex on the same branch. Both repairs are explicit dependencies.
+Lemma 6.1 R2 `2fdbbee9...`, Opus5 review `5193e7b0...`, correction
+`607e0dcf...`, and integration `bb033a71...` discharge the last
+Proposition-6.8 review rider. Proposition 5.1's
+forced-puncture repair and
+non-leakage theorem are now promoted (`a0470416...`, `dc549047...`,
+`11059166...`): every finite threshold lies in `T_a^-`, every pole threshold
+lies in `T_a^+`, and the pole book is unchanged.  The unique `T_a^0` flag is
+typed by the leading-Jacobian predicate rather than a sided tower length.
+
+The four-model adjudication is
+`xmodel/ideation-20260828T1149Z-synthesis.md` (`c043ab47...`).  Its proposed
+constant-corner ancestor theorem and translated-pair strengthening are now
+different-model confirmed (`882485d6...`, `ca63eb5e...`): condition (7) is
+automatic on `T_a^+` for every target shift.  The separate `CORNER-M1`
+consequence remains provisional pending its own explicit review and is not
+used below as a premise.
 
 ## Executive verdict
 
@@ -22,15 +69,16 @@ What is presently supportable is weaker:
    in a standard Newton-polygon frame. This is an existential selection from
    all counterexamples, not a normalization theorem for every given
    counterexample.
-2. Independently, any chosen counterexample can be minimized in Sigray's
-   source/target polynomial-automorphism equivalence class and put in
-   Sigray's rectangular normal form without changing its field-extension
-   degree. No theorem transports the GGV corner/admissible-chain data through
-   this second normalization. The GGV data are therefore not an input to the
-   sheet construction as currently written.
+2. For the globally selected GGV pair, [TRANSPORT.md](TRANSPORT.md)
+   Theorems 2.1 and 3.1 give an explicit Sigray-normalized representative of
+   the same pair, with unchanged field-extension degree; equations
+   (4.1)–(4.5) retain the native pre-Laurent GGV ledger losslessly.  This
+   closes the T2-to-T4 normalization fork.  It does **not** translate a GGV
+   chain into a decorated Sigray pole tree: later Laurent-chain records are
+   only recoverable metadata, and the sheet construction still does not
+   consume the GGV packet with the fidelity required by `G2-PSC`.
 3. A Sigray-normalized counterexample has pole/tree data and, after the
-   promoted repair of Sigray's unproved Proposition 5.8 (modulo the
-   review-identified one-line patch recorded in T7), a finite **entry menu**
+   promoted repair of Sigray's unproved Proposition 5.8, a finite **entry menu**
    at each fixed topological degree. This is the strongest general finite
    reduction presently justified.
 4. The passage from an entry menu to a complete **full-configuration** book
@@ -455,7 +503,7 @@ corrected Statement 3.18 and Proposition 5.3(v),(ix). It further uses the
 standard surface facts disclosed in §2.5 and the every-fiber defect argument.
 The equality
 \(M_F=b_F\) specifically uses Notations 5.1–5.2, Proposition 5.1(i),(iii), the
-ladder of Proposition 4.2 with \(h_0=g\), Notation 8.1, and Statement
+audit-corrected ladder of Proposition 4.2 with \(h_0=g\), Notation 8.1, and Statement
 5.2(i)/Statement 2.1. It is not a consequence of the mass formula alone.
 
 **Sources.** Sigray thesis pp. 25–28; [SHEET6-TDUNIFORM.md](SHEET6-TDUNIFORM.md)
@@ -464,13 +512,10 @@ ladder of Proposition 4.2 with \(h_0=g\), Notation 8.1, and Statement
 [SHEET6-MULTIPOLE.md](SHEET6-MULTIPOLE.md) `MP4`. Sigray prints no proof
 of Proposition 5.8. Its every-fiber form is replaced by
 [SOL-PROP58.md](SOL-PROP58.md), whose external input is Chau's published
-Theorem 4.4 excluding a vertical exceptional component. The review identifies
-one owed line not incorporated into that promoted file: before equating a
-generic fiber count with \(\deg(g|_{\overline R_a})\), prove that \(g\) is
-nonconstant on every component \(\Gamma\subset f^{-1}(a)\). If \(g\) were
-constant on \(\Gamma\), both \(df\) and \(dg\) would annihilate
-\(T\Gamma\), contradicting \(J(f,g)\ne0\). One must then avoid the finitely
-many branch values as well as finite puncture values.
+Theorem 4.4 excluding a vertical exceptional component. The review's owed
+nonconstancy/branch-value line is now physically incorporated in that file.
+Independent audit `47eef092...` also supplies an internal positive-pole
+transport proof from repaired Proposition 5.1 sidedness.
 
 **Verdict.**
 
@@ -478,11 +523,8 @@ many branch values as well as finite puncture values.
   **UNCONDITIONAL relative to the audit-corrected/rederived local
   pole-identification inputs (Statement 3.18, Proposition 5.3(v),(ix), and
   Propositions 5.5–5.6), the standard surface facts of §2.5, Chau's published
-  theorem, and the one-line repair written above**. At the artifact level,
-  `SOL-PROP58.md` remains stale: its header says all review patches are
-  incorporated although N2 is absent from its body. This master document
-  supplies that missing micro-step; the status drift must still be fixed in
-  the promoted source before external publication.
+  theorem**. The promoted source now physically contains the review's
+  nonconstancy, branch-value, citation, and terminology repairs.
 - The complete entry parameterization and \(M=b\) pin:
   **CONDITIONAL on the corrected Sigray/TDU/MP package**.
 - Finiteness of the entry menu once those formulas hold: **UNCONDITIONAL**
@@ -517,8 +559,9 @@ all-\(b_i=1\) entry hypothesis, Theorem MP and the depth theorem consume:
 - `P3`: the \(y\)-side convention that Proposition 9.2 characteristic
   sequences terminate at \((0,y)\), with the \((0,x)\) placement used in
   Statement 9.4;
-- `P4`: the entry pin—Notations 5.1–5.2, Proposition 5.1(i),(iii), Proposition
-  4.2 with \(h_0=g\), Notation 8.1, Statement 5.2(i), and Statement 2.1;
+- `P4`: the entry pin—Notations 5.1–5.2, Proposition 5.1(i),(iii), the fully
+  corrected Proposition 4.2 with \(h_0=g\), Notation 8.1, Statement 5.2(i),
+  and Statement 2.1;
 - the corrected continuation/tree inputs Statements 3.9, 3.17(i), 3.18,
   Proposition 6.2, and the unaudited Proposition 6.8 used to manufacture a
   same-branch pole; and
@@ -618,10 +661,14 @@ configuration** is **NOT ESTABLISHED**, especially for \(s\ge3\).
 #### T9(c). Multi-pole, some `b_i>=2`
 
 `cases/book_enum.py` explicitly increments `entries_offaxis` and executes
-`continue`; no cell is generated for such an entry. The later off-axis work
-finds that at a fixed printed budget the post-jump state set has unbounded
-numerator and \(M\), while the grid loop bounds scale with those quantities.
-[BOOK-OFFAXIS.md](BOOK-OFFAXIS.md) §10 P5 therefore records:
+`continue`; no cell is generated for such an entry. The 2026-08-29 cap-free
+chain theorem corrects the later off-axis diagnosis: at a fixed printed
+budget the reduced post-jump state set `(w,M)` is finite and effective
+(`3dab7f08...`, `bf4c56ae...`). What remains unbounded or unquotiented is
+last-vertex `nu`, `kbar`, full pattern degree, and partner-dependent
+mixed/full-cell data. The old grid does not preserve or classify those data
+completely. [BOOK-OFFAXIS.md](BOOK-OFFAXIS.md) §10 P5 therefore still
+records, for this corrected reason:
 
 \[
   0\ \mathrm{DEAD}/0\ \mathrm{ALIVE}/2691\ \mathrm{OPEN}
@@ -755,15 +802,15 @@ their replacement status are:
 |---|---|---|---|
 | Not. 2.1; Lem. 2.1; Not. 2.3–2.4; St. 2.1, pp. 7–9 | Polynomial equivalence, rectangular normal form, global type \((\alpha,\beta)\). | **thesis-page** | Audited in [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md); verified or verified-with-nit, with the concrete argument rederived. Still depends on the cited Abhyankar input at its broadest formulation. |
 | Definitions/Notations and Statements 3.1–3.18; Prop. 3.1–3.2, pp. 10–18 | Eggers–Wall vertices, \(\pi,\kappa,\nu\), pattern roots, continuation, characteristic descent, degree transport. | **thesis-page** | The audit found multiple errata. Not. 3.5 is ill-defined under the printed P-presentation; St. 3.8 is false under that reading. The Q/jump/max reading is forced and internally proved in `xmodel/sol-h5a.md`, reviewed in `xmodel/grok-h5a-review.md`, and promoted in [AUDIT.md](AUDIT.md) §H5a. St. 3.18 needs the repaired conclusion \(F*(\varepsilon c)\). St. 3.14 retains a cross-fiber conjugation-twist gap. |
-| Props. 4.1–4.6, pp. 19–23 | Approximate-root comparisons and the ladder later used by tower kills. | **thesis-page** | Prop. 4.2 has a genuine constant-leading-part gap in [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md); there is no general promoted replacement. Particular tower uses claim to avoid the bad corner, so those uses are conditional on that guard. |
-| Prop. 5.1; Not. 5.1–5.3; St. 5.1–5.2; Props. 5.2–5.7, pp. 23–28 | Pole status, ratios, \(\nu\)-menu, \(\Lambda\), lower bound, and the entry formulas. | **thesis-page** | Prop. 5.1's printed proof has a finite-nonzero-asymptotic gap; pole-only uses with \(g(P)=\infty\) avoid it. Prop. 5.3(ii),(viii) print inverted ratios and are internally corrected. Prop. 5.4 omits its q-half; [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) supplies a repair. Props. 5.5–5.7 are used only with the audit's corrections. |
-| Prop. 5.8, p. 28 | \(d=\sum\Lambda\) on **every** fiber. | **thesis-page; printed proof absent** | Replaced mathematically by [SOL-PROP58.md](SOL-PROP58.md), [SOL-PROP58-REVIEW.md](SOL-PROP58-REVIEW.md), Chau Theorem 4.4, and the N2 micro-step written in T7. The promoted source file's header says its review patches are incorporated, but N2 and several wording/link patches remain stale in its body. This replacement repairs only the mass/entry layer. |
+| Props. 4.1–4.6, pp. 19–23 | Approximate-root comparisons and the ladder later used by tower kills. | **thesis-page plus internal repair** | Prop. 4.2's constant-leading-part gap has a promoted complete repair: producer `10bc55d5...`, Opus5 review `47f2b608...`.  Permit one terminal `(k,l,s)=(1,0,c)` shift, retain its final degree/`M_F`, delete the circular p. 20 Remark, and use Facts A/B plus cross-multiplied identities at downstream `l=0` sites.  Pole characteristic paths are corner-free.  Prop. 4.3/(7) is unchanged. |
+| Prop. 5.1; Not. 5.1–5.3; St. 5.1–5.2; Props. 5.2–5.7, pp. 23–28 | Pole status, ratios, \(\nu\)-menu, \(\Lambda\), lower bound, and the entry formulas. | **thesis-page plus internal repairs** | Prop. 5.1 has the promoted forced-centre/sided-threshold repair `11059166...`. Prop. 5.3(ii),(viii) print inverted ratios, and its proof of (iv) misses a linear/constant branch; the pole degree pin repairs (iv). Prop. 5.4 omits its q-half; R2 `be9e4b74...`, Opus5 review `c3f0bfde...` and integration `6375bc05...` completely repair it. St. 5.2(i)'s middle D-ratio is also inverted. Props. 5.5–5.7 are used only with the audit's corrections. |
+| Prop. 5.8, p. 28 | \(d=\sum\Lambda\) on **every** fiber. | **thesis-page; printed proof absent** | Replaced mathematically by [SOL-PROP58.md](SOL-PROP58.md), [SOL-PROP58-REVIEW.md](SOL-PROP58-REVIEW.md), and Chau Theorem 4.4; review patches are physically incorporated. Independent audit `47eef092...` also proves positive-pole transport without exact Statement 3.14 alignment. This replacement repairs only the mass/entry layer. |
 | Props./Statements 6.1–6.2, pp. 28–30 | Initial tree order/root comparisons and degree laws. | **thesis-page** | Included in the 72-item audit. St. 6.2 needs an omitted \(H\in T_a^+\) hypothesis; concrete consumers must show it. Prop. 6.2 prints an F/G hypothesis swap, repaired in the audit. |
-| Remaining §6, Props./Statements 6.3–6.8, pp. 31–34, especially Props. 6.7–6.8 | Later root/branch comparisons and manufacture of same-branch pole ancestors. | **thesis-page** | **Outside the systematic audit.** Proposition 6.8 is nevertheless load-bearing in `SHEET6-MULTIPOLE.md`'s MP5–MP6 tree-coverage argument. No standalone promoted replacement exists. |
-| Not./St./Props. of §7, especially St. 7.1–7.3, Prop. 7.2, Prop. 7.5 (22), Cor. 7.1 | Critical-value vertices, Euler equality, and budget accounting. | **thesis-page** | Not covered by the 72-item audit of §§2–5 and §6 through Proposition 6.2. Imported in the MP/book trust perimeter; no single standalone promoted replacement. |
-| Not. 8.1; St. 8.1–8.5; Props. 8.1–8.4; Cor. 8.1, pp. 39–45 | Pattern identity, entry \(M\), multiplicity divisibility, \(M=1\) propagation and single-pole kill. | **thesis-page** | Re-used and partially rederived in the promoted MP/TDU documents, but not independently replaced as a complete theorem package. These are load-bearing for T7–T9. |
-| Table (23); Not. 9.1–9.3; St. 9.1–9.6; Props. 9.1–9.3, pp. 46–52 | Entry seeds, characteristic sequences, cases I–IV, charges, shared budget, and step arithmetic. | **thesis-page** | §§7–9 have no comprehensive audit. Prop. 9.3 requires the E5 repair; St. 9.3(24) requires the E6 sign repair. [SHEET6-CAMPAIGN.md](SHEET6-CAMPAIGN.md) and satellites rederive particular clauses and exhibit false printed case eliminations, but do not replace all of §§7–9. |
-| Thm. 9.1, p. 60 | Claimed \(d\ge6\). | **thesis-page; incomplete proof** | Not used. Replaced for the conclusion by refereed-published Żołądek Theorem 6.12. |
+| Remaining §6, Props./Statements 6.3–6.8, pp. 31–34, especially Props. 6.7–6.8 | Later root/branch comparisons and manufacture of same-branch pole ancestors. | **thesis-page plus internal repair** | Prop. 6.7 has complete producer/review repair (`c3d6ff92...`, `eb37373b...`, mandatory correction `050ccddd...`): cyclic semi-invariance, corrected St. 3.11, and a tower-prefix/two-case closure replace the printed shortcuts. Prop. 6.8 uses `d_(F_n)<=d_F-n/kappa`, not `u-n/kappa`, and explicit same-branch ancestry. Sweep r2 (`581219e0...`) distinguishes the microstep from the next vertex. Lemma 6.1 R2 `2fdbbee9...`, Opus5 review `5193e7b0...`, and correction `607e0dcf...` discharge its last review rider; consumers need no provisional tag. |
+| Not./St./Props. of §7, especially St. 7.1–7.3, Prop. 7.2, Prop. 7.5 (22), Cor. 7.1 | Critical-value vertices, Euler accounting, and budget inequalities. | **thesis-page plus internal replacement** | Printed per-puncture `delta` and equality (22) remain invalid/unproved, and fixed-baseline `(22-cl)` is false.  The reviewed actual-cluster-weight theorem (`c253bd12...`, Terra gate `727f5850...`) proves exactly Cor. 7.1's inequality without transporting `kappa` across fibres.  First-separation exit sets replace nested literal `Y(F)` sets on a singleton chain; MFE (`c74fc0f9...`) proves the multipole selected-exit partition, including pairwise-distinct attachments and a shared suffix counted once. |
+| Not. 8.1; St. 8.1–8.5; Props. 8.1–8.4; Cor. 8.1, pp. 39–45 | Pattern identity, entry \(M\), multiplicity divisibility, \(M=1\) propagation and single-pole kill. | **thesis-page plus internal repairs** | Source audit `5fc6b163...`, Opus review `fa25c8af...`, and cyclic repair/final gate `37b83208...` / `a2b4d37c...` close the local package at corrected scope. Proposition 8.4 kills `M=1` only at nonroot down vertices; at `(0,y)`, Statement 8.5 gives divisibility and permits `M=1`. Statement 8.2 is nonroot only. |
+| Table (23); Not. 9.1–9.3; St. 9.1–9.6; Props. 9.1–9.3, pp. 46–52 | Entry seeds, characteristic sequences, cases I–IV, charges, shared budget, and step arithmetic. | **thesis-page plus internal repair** | Comprehensive source audit `2763d970...` and GPT-5.5 review `0729a576...` catalogue the sign, denominator, row-label, transition-family and nested-`Y` defects. With actual-weight Cor. 7.1 and first-separation exits, the repaired row-4 graph and `td>=6` assembly pass. Root Proposition 8.4 is not used. No `td=6` exclusion follows. |
+| Thm. 9.1, p. 60 | Claimed \(d\ge6\). | **thesis-page; incomplete proof; internal reconstruction** | The printed proof remains incomplete. The conclusion has both the reviewed internal reconstruction above and the independent refereed-published Żołądek Theorem 6.12. Neither excludes `d=6`. |
 
 The compact current trust-set declaration is
 [paper2/main.tex](paper2/main.tex) §“The trust set and the errata ledger”:
@@ -780,11 +827,12 @@ part of the chain's actual proof surface.
 
 | Internal source | Replaces or proves | Remaining perimeter |
 |---|---|---|
-| [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) | A statement-by-statement audit of 72 items in §§2–5 and §6 through Proposition 6.2, thesis pp. 7–30: 21 verified, 33 verified-with-nit, 9 new errata, 2 known errata, 7 gaps; supplies several corrected derivations. | It does not cover Propositions 6.3–6.8 or §§7–9. Prop. 4.2, St. 3.14, and guarded Prop. 5.1 issues remain as stated. |
+| [SIGRAY-AUDIT.md](SIGRAY-AUDIT.md) | A statement-by-statement audit of 72 items in §§2–5 and §6 through Proposition 6.2, thesis pp. 7–30: 21 verified, 32 verified-with-nit, 13 errata, 2 known errata, 4 source gaps; supplies corrected derivations and records campaign replacements separately. | It does not itself cover Propositions 6.3–6.8 or §§7–9. Proposition 4.2, Proposition 5.1, Proposition 5.4, Proposition 5.8, and Lemma 6.1/Proposition 6.8 now have the cited reviewed replacement packets; Statement 3.14 retains its exact-alignment gap. |
 | `xmodel/sol-h5a.md`, `xmodel/grok-h5a-review.md`, [AUDIT.md](AUDIT.md) §H5a | Forces the Q/jump/max interpretation of \(\kappa_F\) and repairs the H5a coherence problem; E5 is then applied. | The equal-index assertion \(U_{7C}\) is a separate conjecture, though the 17-cell \(td=7\) tower result does not need it. |
-| [SOL-PROP58.md](SOL-PROP58.md), [SOL-PROP58-REVIEW.md](SOL-PROP58-REVIEW.md) | Replaces the missing proof of Sigray Prop. 5.8 at every-fiber strength, completed in this master by T7's one-line N2 repair. | Imports audit-corrected Statement 3.18, Proposition 5.3(v),(ix), and Propositions 5.5–5.6 for the local pole identification, plus Chau Theorem 4.4 and standard surface foundations for the global every-fiber argument. The source header overstates patch incorporation: N2 and the review's N1/N3/N4 wording/link cleanups remain stale. It explicitly does not repair off-axis, merge, suffix, or book completeness. |
+| [SOL-PROP58.md](SOL-PROP58.md), [SOL-PROP58-REVIEW.md](SOL-PROP58-REVIEW.md), independent audit `47eef092...` | Replaces the missing proof of Sigray Prop. 5.8 at every-fiber strength by two routes: relative surface geometry plus Chau 4.4, and positive-pole transport. | Imports audit-corrected Statement 3.18, Proposition 5.3(v),(ix), Propositions 5.5–5.6, repaired Proposition 5.1 for the internal route, plus Chau and standard surface foundations for the external route. It explicitly does not repair off-axis, merge, suffix, or book completeness. |
+| `xmodel/sigray-section7-weighted-euler-inequality-repair-sol-ultra-20260828.md`, Terra review `727f5850...`, coordinator integration `7ec37063...` | Replaces printed equation (22) only at the inequality strength actually needed: actual cluster weights plus one-point specialization prove Cor. 7.1; singleton first-separation exits repair Statement 9.4; the reviewed Section 9 assembly yields `td>=6`. | Does not prove (22), `(22-cl)`, cross-fibre `kappa` constancy, multipole cross-chain disjointness, MP8's equality-based no-charge claim, `td!=6`, landing, or JC2. |
 | [SHEET6-TDUNIFORM.md](SHEET6-TDUNIFORM.md), [SHEET6-TDU-REVIEW.md](SHEET6-TDU-REVIEW.md) | Closed-form single-pole entry table, \(M=b\), and the prime-\(d\) single-pole theorem. | Composite single-pole searches survive; no uniform finite residual; exact corrected thesis/promoted perimeter is expanded in T7–T9. |
-| [SHEET6-MULTIPOLE.md](SHEET6-MULTIPOLE.md), [SHEET6-MP-REVIEW.md](SHEET6-MP-REVIEW.md) | `MP0`–`MP9`: finite merge topology, entry pin, pure \(M=1\) anatomy, resonant first-jump calculus. | All-\(\mu\ge2\) mixed merges, post-jump \(M\ge2\) chains, general reachability, and coefficients remain. Its local marked-event landing theorem survives; only a **full-configuration** reading is broader than this perimeter. |
+| [SHEET6-MULTIPOLE.md](SHEET6-MULTIPOLE.md), [SHEET6-MP-REVIEW.md](SHEET6-MP-REVIEW.md) | `MP0`–`MP7` local merge topology, entry pin, pure \(M=1\) anatomy, and resonant first-jump calculus, with the nonroot scope correction. | MP8's equality-based global no-charge claim is quarantined despite the restored inequality budget. All-\(\mu\ge2\) mixed merges, post-jump \(M\ge2\) chains, root-aware reachability, coefficients, and full-configuration landing remain. |
 | [SHEET6-DEPTH.md](SHEET6-DEPTH.md), [SHEET6-DEPTH-REVIEW.md](SHEET6-DEPTH-REVIEW.md) | Finite \(w\)-alphabet and depth-invariant local jump menu on the \(M=1\) axis. | Does not prove a finite full-configuration book off the axis or after a jump. Correct safe depth metadata are \(2\,\mathrm{gen}(W)+2\). |
 | [BOOK-ENUM.md](BOOK-ENUM.md), `cases/book_enum.py` | Concrete on-axis local-cell enumeration for \(6\le d\le14\). | Explicitly skips off-axis entries; does not cover all downstream mixed contexts; conservative cell aggregation is not a per-entry coverage certificate. |
 | [BOOK-OFFAXIS.md](BOOK-OFFAXIS.md) | Off-axis entry census and partial chain/price laws; special \(d=7\) classification. | Its §10 P5 says the generic grid has no completeness certificate. Earlier contradictory sections are superseded. |
@@ -831,18 +879,72 @@ not “every counterexample carries the selected minimal-pair data.” No
 argument relates the selected pair's \(td\) to that of an arbitrary original
 pair.
 
-### CRITICAL 3 (`G2-PSC`) — the GGV-to-sheet arrow is absent and the reduced GGV object is often ill-typed
+### CRITICAL 3 (`G2-PSC`) — normalization is compatible, but the GGV-to-sheet fidelity arrow is absent
 
-There is no theorem translating GGV corners/admissible chains into Sigray
-pole/tree decorations. The early GGV standardization is a polynomial-ring
-automorphism and preserves a Keller pair, but the per-family §4 reductions
-used by the farm pass through Laurent automorphisms and finish with a map not
-in \(\operatorname{Aut}\mathbf C[x,y]\). Proposition 4.3 lands at
-\([P,Q]=x^2\), whereas Sigray assumes a constant-Jacobian polynomial pair.
+There is still no theorem translating GGV corners/admissible chains, with
+their paired-fibre provenance, into Sigray pole/tree decorations.
+[TRANSPORT.md](TRANSPORT.md) does remove the former normalization conflict:
+the T2-selected pre-Laurent polynomial pair is explicitly Sigray-normalized
+by determinant-one rotations, with the native polygon ledger recoverable.
+But the per-family §4 reductions used by the farm pass through Laurent
+automorphisms and finish with a map not in
+\(\operatorname{Aut}\mathbf C[x,y]\). Proposition 4.3 lands at
+\([P,Q]=x^2\), whereas Sigray assumes a constant-Jacobian polynomial pair;
+those later records remain metadata, not polynomial Sigray inputs.
 
-One can re-normalize the selected counterexample independently in Sigray's
-sense, but then the GGV data are discarded. Calling this a sequential
-reduction is mathematically misleading.
+Thus the honest sequential arrow currently reaches the same selected pair
+in both normalization frames, not a decorated pole tree.  The coarse GGV
+ledger does not determine fibre tags, pole status, residual \(Q\)
+cancellation, or the full Eggers–Wall/MacLane decorations.  That remaining
+packet-to-tree fidelity theorem is exactly `G2-PSC`.
+
+**Reviewed typed-interface sharpening (2026-08-27 20:14Z).**  Producer report
+`xmodel/g2-psc-typed-source-to-pole-tree-interface-sol-ultra-20260827.md`
+(`4c3f2236...`) and Opus5 hostile review (`f7de3ae1...`) separate three
+arrows.  An actual pre-Laurent polynomial pair and fibre canonically determine
+the Newton--Puiseux boundary forest and direct residual/order data, provided
+the full reviewed Sigray Proposition 4.2 erratum packet is used.  One coefficient-complete,
+source-provenanced type-II.b occurrence and compatible branch evaluation
+determine one flag segment only after supplying the cumulative VGG source
+map, a common `P/Q` face-root witness, and an `H-TRUNC` certificate.  Neither
+arrow proves `G2-PSC`.
+
+Live `CornerData` still has no coefficient field, polynomial pair, fibre,
+face polynomial/root, deck action, or cumulative ring map.  More sharply,
+the fixed native x-fraction category `K[X^{+-1/l},Y]` and its direction
+interval cannot express the other infinity chart at all.
+
+**Transpose discriminator (2026-08-27 21:16Z).**  Sol audit `41e37484...`
+and different-model Fable5 review `097db69b...` prove the formerly conjectural
+abstract part of **CONJECTURE A**: signed conjugation carries all fourteen
+GGV5 complete-chain clauses and VGG 5.17--5.18/(5.9) to a y-fraction source
+theory, after reversing the oriented endpoint/order conventions.  But the
+same fixed pair cannot be an input to both source theories: their pair-sign
+conditions are mutually exclusive for every finite support in every
+`L^(l)`.  Thus the theorem produces the other chart of a conjugated pair, not
+the missing chart of the fixed pair.  VGG's `psi_2` Laurent reflection changes
+the compactification and does not alter this conclusion.
+
+At live `8_28`, all four roots of `(z^4-alpha)^21` already form one admissible
+deck orbit.  The pure-Sigray architecture bypasses `G2-PSC` by constructing
+the intrinsic two-chart forest and pole tags directly from the exact pair,
+and the different-model-reviewed normalization--Kummer theorem now supplies
+its intrinsic exact-pair L3--L5 layer.  A finite terminal is an evaluable
+record `(h,chart,kappa,F)` carrying `deg p_{h,F}=1`; two-chart coverage uses
+the normalized Lemma 2.1 rectangle/NE-corner hypothesis, and a raw cover
+order must be divided by `kappa/e_S` before it is read as a place order.  The
+hybrid VGG/GGV source route still owes `H-TRUNC`, source coverage and terminal
+certification.  VGG Proposition 7.3 and Corollary 7.4 supply only a narrower
+same-pair native common-power corridor, with `ell(P)=alpha*R^12` and
+`ell(Q)=beta*R^8` in the live case; they do not recover the other chart.
+
+The target must retain the later-book labels and approximate-root degrees at
+every vertex on each pole ancestor path, not only at pole vertices.  General
+hybrid-source all-root admissibility remains open.  The corrected typed
+interface, transpose theorem, fixed-pair obstruction and intrinsic exact-pair
+L3--L5 theorem are promoted; `G2-PSC`, hybrid `H-TRUNC`/coverage, remaining
+Sigray source/decorations, landing, `RPMC(C)`, a degree bound and every JC2
+consequence remain unproved.
 
 ### CRITICAL 4 — no canonical universal endpoint or full-configuration landing theorem
 
@@ -864,6 +966,21 @@ none of which is presently stated in one theorem:
    every cell kill; and
 5. a fail-closed coverage certificate showing that no transition was skipped.
 
+The endpoint cannot be a finite set of literal cells. The reviewed
+`td=8` equal-join route already contains infinitely many full formal cells
+with one reduced successor, and the repaired U1 theorem packages such joins
+as labelled arithmetic-progression families with periodic `M` and P0 menus.
+The minimally plausible codomain is therefore a finite exceptional residue
+plus finitely many **normalized semilinear family records**, each carrying
+its parameter progression, full-frame affine laws, coefficient character,
+consumer list, exceptional values, and exact provenance. U1 supplies the
+first reviewed record schema. U2 (`nu_G=1`, unbounded `lex`) and the
+case-III Q+E5 transition layer remain named leaks. U2 is now narrowed: its
+absorbed normal form and transport are reviewed, and fixed arrival data with
+a P0-only continuation to P1 allow only finitely many outer parameters, but
+first P2 boundaries and nested U2 are not covered. None of these leaks may be
+hidden by a numerical cap or an `OPEN`-dropping enumerator.
+
 The natural first repair is to turn the existing **marked-first-event landing
 theorem** into a typed, certified map: select the earliest resonant/
 \(M\ne1\) event, include its complete pole-side subtree, and explicitly type
@@ -871,12 +988,18 @@ the unused branches and downstream continuation.
 
 ### CRITICAL 5 — the off-axis sector has no completeness theorem
 
-[BOOK-OFFAXIS.md](BOOK-OFFAXIS.md) §10 P5 is explicit: for any
-\(b\ge2\) entry, the generic grid loop has no completeness certificate. At a
-fixed budget, reachable states can have unbounded numerator and \(M\), and
-the solver's proved bounds scale with them. The reported 2691 generic cells
-are therefore all `OPEN`; they are not an exhaustive book whose survivors
-have merely not yet been killed.
+[BOOK-OFFAXIS.md](BOOK-OFFAXIS.md) §10 P5 remains explicit: for any
+\(b\ge2\) entry, the generic grid loop has no completeness certificate. The
+old reason “reduced numerator and \(M\) are unbounded at fixed budget” is
+false and retired. The cap-free chain theorem proves that reduced `(w,M)`
+set finite. Completeness still fails because neutral fibres retain unbounded
+last-vertex indices and `kbar`, U1 equal-arrival merges form reviewed
+semilinear full-cell families, and U2 has unbounded `lex` and infinitely many
+candidate successor weights. The reviewed fixed-data theorem makes only the
+P0-to-P1 terminal slice finite; no theorem covers its first P2 boundary,
+nested U2, or makes every partner-dependent consumer uniform on those fibres.
+The reported 2691 generic cells are therefore still all `OPEN`; they are not
+an exhaustive book whose survivors have merely not yet been killed.
 
 This gap already occurs at two poles. The older parenthetical claim that a
 mixed all-\(\mu_e\ge2\) merge requires \(s\ge3\) is **false**:
@@ -985,8 +1108,9 @@ substantial and caught real errors, but the book also imports Propositions
 partly incorrect source plus a distributed set of clause-specific repairs.
 The most serious unresolved or guarded items are:
 
-- Proposition 4.2's constant-leading-part gap, directly inside the tower
-  trust set;
+- Proposition 4.2 is no longer an open gap, but every consumer must import
+  its full constant-shift/downstream-typing erratum rather than the printed
+  positive-exponent statement;
 - Statement 3.14's cross-fiber conjugation issue;
 - Proposition 5.1 outside the pole-only \(g(P)=\infty\) use;
 - the un-audited §7 Euler/critical-value layer;
@@ -1081,6 +1205,11 @@ Before another cell is killed, define four noninterchangeable objects:
 3. a **route book** within a stated transition grammar; and
 4. a **full-configuration book**.
 
+Item 4 must now be read as a family-aware codomain, not a finite literal-cell
+list: normalized semilinear records plus a finite exceptional residue, with
+every consumer and unclassified transition retained fail-closed. A finite
+reduced `(w,M)` automaton is an internal quotient, not the endpoint.
+
 Then formalize the existing conditional marked-first-event theorem as a total
 typed configuration-to-record map and extend its record through every
 downstream context needed by a kill. The proof/compiler must retain every
@@ -1090,12 +1219,24 @@ are global and which are only local observations.
 
 ### 5.2 Highest-leverage mathematical repair: a cap-free `M>=2` state theorem
 
-Find an invariant, monovariant, or proof-producing finite automaton for
-\(M\ge2\) segments and all-\(\mu\ge2\) merges, including the post-jump
-two-event case. The \(M=1\) invariant \(w\) is the model, but the off-axis
-audit explains exactly where its lowest-terms proof fails. Budget alone
-cannot solve this: zero/low-cost escapes already occur, and state numerator
-and \(M\) are unbounded under the current description.
+Extend the now-proved finite reduced P0 automaton to all-\(\mu\ge2\) merges
+and the post-jump two-event case. The chain layer is no longer the obstacle:
+fixed entry and budget give finitely many reduced `(w,M)` states. The live
+problem is a proof-producing **semilinear full-cell quotient** retaining
+last-vertex indices, affine `kbar`, exceptional values, and every
+partner-dependent merge consumer. Budget alone cannot solve this because
+zero-price neutral and equal-arrival affine families remain, even while their
+reduced successors are finite.
+
+The reviewed split is now explicit. U1 (`nu_G>=2`, equal nonzero arrivals,
+`k=lex=0`) is representable by arithmetic-progression records with periodic
+finite consumers and coefficient rigidity `Rad(T)=T^r-A`. U2
+(`nu_G=1`, unbounded `lex`) has reviewed normal form and transport, and its
+fixed-data P0-to-P1 terminal slice admits only finitely many outer `L`, but it
+can still vary the reduced successor before that continuation. The next
+theorem must cover every source-licensed first P2 boundary and then nested U2,
+or emit the residue in a finite higher-level family language; enumerating
+either regime to a cap is not a completeness argument.
 
 This repair simultaneously addresses the generic off-axis hole and the
 post-jump hole inside the purported on-axis full book. Without it, increasing
@@ -1106,9 +1247,8 @@ the enumerator's caps is evidence gathering, not a completeness proof.
 Write a self-contained theorem, independent of Sigray's narrative, whose
 conclusion is exactly the entry/tree/transition object consumed by the
 compiler. Reprove the required parts of §§2–9 with the H5a, E5, E6, ratio,
-epsilon, and Proposition 5.8 repairs incorporated into the statements. Either
-prove Proposition 4.2 at its constant-leading corner or exclude that corner
-as an explicit hypothesis at every consumer.
+epsilon, Proposition 5.8 and the reviewed Proposition 4.2 constant-shift/
+downstream-typing repairs incorporated into the statements.
 
 Only after these three repairs is it meaningful to claim an end-to-end
 reduction. At that point the highest-leverage **exclusion** target is the
@@ -1145,7 +1285,7 @@ to all of the following.
 - Is the exact external version of every GGV proposition identified, with
   published/preprint status?
 - Is the Sigray trust set proved in one corrected source, including §§7–9 and
-  the Proposition 4.2 corner?
+  the complete reviewed Proposition 4.2 corner/downstream-typing erratum?
 - Is \(B(d,E)\) defined as entries, local cells, routes, or complete
   configurations?
 - Is there a total, fail-closed landing map for single-pole, on-axis,
@@ -1256,3 +1396,55 @@ would not prove KJN, `G2-BD`, or the Jacobian conjecture: the global
 transport/source, full landing, off-axis coverage, and type-provenance gaps in
 Section 3 would still have to be discharged. None of those gaps is closed by
 the corrected arrows above.
+
+### 7.5 Physical-chart and exit-localization correction
+
+VGG Corollary 7.4 does not supply the second physical infinity chart of the
+same fixed pair.  Under signed transpose its live packet is subsumed by native
+Corollaries 7.1/7.2 on the same `upper_dir=(-3,1)` edge; the 12/8 powers are
+correct native face data.  VGG minimal re-selection is also chart-rigid: its
+final oriented minimal transition is diagonal affine (followed only by the
+translation of Proposition 5.20).  Therefore every reduction argument must
+obtain the other physical chart from an intrinsic exact-pair constructor, not
+from transpose or VGG re-selection.
+
+The old aggregate `C74-PLACE` label is retired.  Different-model hostile
+review `xmodel/g2-intrinsic-exact-pair-l3-l5-hostile-review-opus5-20260828-v1.md`
+(`5d219c53...`) establishes the following split after its mandatory repairs:
+
+```text
+common/source-side
+L1 native face-power custody                                      available
+L2 root/multiplicity/component convention                         available
+
+intrinsic exact-pair constructor
+L3-exact all-root prefixes are actual fibre truncations           available
+L4-exact the two charts cover all boundary places                 available
+         only for a normalized Lemma 2.1 rectangle/NE-corner fibre
+L5-exact certified terminal deck orbits biject normalized places available
+         terminal record `(h,chart,kappa,F)` must carry `deg p_{h,F}=1`
+
+hybrid VGG/GGV selected-source constructor
+L3-hybrid selected translations are actual truncations            open (H-TRUNC)
+L4-hybrid selected-source leaves cover both physical charts       open
+L5-hybrid uncertified source leaves are terminal places           open / ill-typed
+```
+
+For an intrinsic terminal, `orbit size = e_S`, `stabilizer size =
+kappa/e_S`, and `e_S = kappa/gcd(kappa,supp F)` with the empty-support
+convention `gcd(kappa,{})=kappa`.  The unique continuation is Hensel lifting
+on the shifted, `t`-cleared equation, not on the original Laurent equation.
+Also `ord_t=(kappa/e_S)ord_S`; signs may be read on the cover, but numerical
+place orders require this rescaling.  None of these intrinsic facts licenses
+the hybrid arrows.
+
+If every nonzero mismatch subtree is assumed to have a first exit, summing
+over first exits merely repartitions the `RPMC(C)` sum.  Thus the previously
+stated `EXIT-RPMC(C)` is equivalent to `RPMC(C)` under its clause 1, not a
+cheaper implication.  A future local exit module may still organize a proof,
+but it must produce a genuinely stronger inequality and must be invariant
+under the permitted blowups/translations; no such theorem is promoted.
+
+Frozen orientation is `(m,n)=(beta,alpha)=(3,2)` with
+`(alpha,beta)=(2,3)`.  Proximity-closed means closed under the full relation
+“proximate to,” including the second predecessor of a satellite point.

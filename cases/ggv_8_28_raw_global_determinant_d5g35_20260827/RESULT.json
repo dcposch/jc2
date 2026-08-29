@@ -1,0 +1,493 @@
+{
+  "D23_D24_mutations": {
+    "D23_plus_1": {
+      "R7R1_effect": "revokes q1 and every higher-row license; q0 remains licensed if rows through D22 hold",
+      "gate_verdict": "REJECTED",
+      "mutated_X0_generator": [
+        [
+          [],
+          "1"
+        ]
+      ],
+      "mutated_X0_sha256": "49e1d506dc64fc56fd8259c7bc14618ece27a4c5a7262b18de5d017645901501",
+      "mutation": "D23->D23+1",
+      "original_X0_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "D24_plus_1": {
+      "R7R1_effect": "revokes q2 and every higher-row license; q0,q1 remain licensed if rows through D23 hold",
+      "gate_verdict": "REJECTED",
+      "mutated_X0_generator": [
+        [
+          [],
+          "1"
+        ]
+      ],
+      "mutated_X0_sha256": "49e1d506dc64fc56fd8259c7bc14618ece27a4c5a7262b18de5d017645901501",
+      "mutation": "D24->D24+1",
+      "original_X0_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "dense_negative_control": "adding 1 to either dense D23 or D24 disagrees with the independently recomputed determinant coefficient"
+  },
+  "R7R1_interface": {
+    "cutoff_rule": "E=t^22+O(t^N) licenses exactly q_n with n+22<N",
+    "dependency_status": "PROVISIONAL CORRECTED R7R1; DIFFERENT-MODEL REVIEW PENDING",
+    "finite_tower_claim": "NOT MADE: exact E licenses an infinite de Rham tower; bounded raw support does not truncate Q",
+    "full_gate_consequence": "would give the exact polynomial identity E=t^22: D35 is structurally zero after cancellation and all higher rows vanish by support",
+    "licenses": [
+      {
+        "congruence": "mod t^23",
+        "licensed": [
+          "q0"
+        ],
+        "not_licensed": [
+          "q1",
+          "q2"
+        ],
+        "required_rows": "D0..D21=0,D22=1"
+      },
+      {
+        "congruence": "mod t^24",
+        "licensed": [
+          "q0",
+          "q1"
+        ],
+        "not_licensed": [
+          "q2"
+        ],
+        "required_rows": "D0..D21=0,D22=1,D23=0"
+      },
+      {
+        "congruence": "mod t^25",
+        "licensed": [
+          "q0",
+          "q1",
+          "q2"
+        ],
+        "not_licensed": [],
+        "required_rows": "D0..D21=0,D22=1,D23=0,D24=0"
+      }
+    ],
+    "q1": "F1/(4*p^5) dX exact in L only after the D23 gate",
+    "q2": "(F2/(4H)-F1^2/(16H^3)) dX rationally exact only after the D24 gate"
+  },
+  "census": {
+    "D23_contributions": 1106,
+    "D23_terms": 626,
+    "D24_contributions": 896,
+    "D24_terms": 494,
+    "D34_exact_terms": [
+      [
+        [
+          "f_2_0",
+          "g_3_1"
+        ],
+        4,
+        "2"
+      ],
+      [
+        [
+          "f_2_0",
+          "g_4_4"
+        ],
+        5,
+        "8"
+      ],
+      [
+        [
+          "f_2_1",
+          "g_3_0"
+        ],
+        4,
+        "-3"
+      ],
+      [
+        [
+          "f_3_4",
+          "g_3_0"
+        ],
+        5,
+        "-12"
+      ]
+    ],
+    "D35_contribution_identity": "(-18+18)*f_2_0*g_3_0*X^4=0",
+    "D35_contributions": 2,
+    "D35_terms": 0,
+    "target_generators": 734,
+    "total_contributions": 63012,
+    "total_final_terms": 34528,
+    "weights": 36
+  },
+  "claims_not_made": [
+    "target-gate solution",
+    "Keller specialization",
+    "finite de Rham tower",
+    "GGV landing",
+    "8_28 face/family exclusion",
+    "G2-PSC",
+    "G2-BD",
+    "counterexample",
+    "JC2"
+  ],
+  "custody": {
+    "D0_through_D22_byte_equal_to_frozen_independently_hostile_audited_D5G": true,
+    "D22_certificate_reused_unchanged": "6346ab6afb307fea83516f742ca53b90e5eb8d42c2e1d5bef083920de23e434a",
+    "direct_D0_D35_sha256": "c2b50ac6515477fb227aaaecfad44305d44a1286c49d37fc94783afd28612a70",
+    "frozen_D5G_direct_sha256": "069ab7a5fdb133aa2ffb0063e5f36c5664a070798de6ea00520698207e24838d",
+    "target_gate_sha256": "31c9a0ba1cfa600d8eeabe85b206cc18a47e621d58ddd7f52beb464c8bf6ae65"
+  },
+  "exact_target_gate": {
+    "artifact_sha256": "31c9a0ba1cfa600d8eeabe85b206cc18a47e621d58ddd7f52beb464c8bf6ae65",
+    "generator_count": 734,
+    "status": "UNSOLVED-EXACT-GATE; NO SPECIALIZATION CLAIM",
+    "target": "D0=...=D21=0, D22=1, D23=...=D35=0"
+  },
+  "independent_dense_control": {
+    "D23_D24_mutation_status": "PASS: EACH DIFFERS EXACTLY IN ITS NAMED CONSTANT COEFFICIENT",
+    "D23_numeric_sha256": "e24ebacdd1e9bd1645cef7eee77eae95dda2df4f2d57d40c42c1e388480c613f",
+    "D23_plus_1_full_series_sha256": "99f4807163b6073d89e19a20fdaf64e5df2481d918fd47b4589e11802c9a328b",
+    "D24_numeric_sha256": "ec3c229d89491d202a15a48b3345f1c7e5115918329f33303cb3989cf241a115",
+    "D24_plus_1_full_series_sha256": "f6911e9ef0aa3c126d91288c6ca9d4c007b2b08d9b1d1445086e78584863f992",
+    "E0_through_E35_sha256": "6f164fca16821a3441e46713a7b90489145eeb9d39537e1a66c63e2dfa23df82",
+    "assignment_sha256": "38b1b380ba247636891fccba92859a16cf4549eb29ba4a6f040657604b387d69",
+    "nonzero_weight_count": 34,
+    "status": "PASS-INDEPENDENT-DENSE-QXT-ALL-D0-D35"
+  },
+  "pins": {
+    "d3_raw": {
+      "path": "cases/ggv_8_28_raw_to_global_m_cokernel_interface_d3_20260827/RAW_INPUT.json",
+      "sha256": "28b9b05c02224aadec30d52b66ed22db80aabe416ffdc0186f6931f1978f1876"
+    },
+    "d5g_certificate": {
+      "path": "cases/ggv_8_28_raw_global_determinant_d5g_20260827/D22_CERTIFICATE.json",
+      "sha256": "6346ab6afb307fea83516f742ca53b90e5eb8d42c2e1d5bef083920de23e434a"
+    },
+    "d5g_direct": {
+      "path": "cases/ggv_8_28_raw_global_determinant_d5g_20260827/DIRECT_DETERMINANT.json",
+      "sha256": "069ab7a5fdb133aa2ffb0063e5f36c5664a070798de6ea00520698207e24838d"
+    },
+    "d5g_freeze": {
+      "path": "cases/ggv_8_28_raw_global_determinant_d5g_20260827/FREEZE.sha256",
+      "sha256": "838b1160f3ddf38fcbf360bd200ee2057e72da2b1b0ba8788d43b83720cdd043"
+    },
+    "d5g_independent_hostile_audit": {
+      "path": "xmodel/ggv-8_28-raw-global-determinant-d5g-hostile-audit-sol-ultra-20260827.md",
+      "sha256": "14913814fce76629836da359f630727b92167d3a23912c9fa265ac8d71f800d2"
+    },
+    "preregistration": {
+      "path": "cases/ggv_8_28_raw_global_determinant_d5g35_20260827/PREREGISTRATION.md",
+      "sha256": "3eb156e7400abbf0fe0e21f705d5246d681b911fc1eff8ebec4db1b38e303b95"
+    },
+    "r7_audit": {
+      "path": "xmodel/ggv-quarter-root-characteristic-de-rham-tower-r7-hostile-audit-sol2-20260827.md",
+      "sha256": "2dd9d8f11e0fadff303c8afade0c1f4e52f1a1df4b5afffcea17d5e3d7890a18"
+    },
+    "r7r1_freeze": {
+      "path": "cases/ggv_quarter_root_characteristic_r7r1_20260827/FREEZE.md",
+      "sha256": "489647cf5726c46401f4c48c394de64d01ff73fff3a5d3168231428add1c0ea5"
+    },
+    "r7r1_pending_different_model_review_prompt": {
+      "path": "xmodel/ggv-quarter-root-characteristic-de-rham-tower-r7r1-hostile-review-fable5-prompt-20260827.md",
+      "sha256": "dd2ae15c4d33837aa65972070980bb0500ceeb41f6daa5c5d5775a623bfe8419"
+    },
+    "r7r1_report": {
+      "path": "xmodel/ggv-quarter-root-characteristic-de-rham-tower-r7r1-sol-20260827.md",
+      "sha256": "9d35c678cfc257c5c518f87c19df25942cbaca3b5aa8186a22507f1f1e1f3ae1"
+    },
+    "r7r1_verifier": {
+      "path": "cases/ggv_quarter_root_characteristic_r7r1_20260827/verify_r7r1.py",
+      "sha256": "1cdf577a2775e7cb1b9c44d0f92edeb6f612a1b52aa659a280390b37d49babaa"
+    },
+    "structural_D35_addendum": {
+      "path": "cases/ggv_8_28_raw_global_determinant_d5g35_20260827/STRUCTURAL_D35_ADDENDUM.md",
+      "sha256": "1131ebafe5fdd60dc062e2796c283352bbd1c13ac505c71b7db5174d32804258"
+    }
+  },
+  "row_census": [
+    {
+      "contribution_count": 17,
+      "contributions_sha256": "8fbc4bb3a1b108ffb22d2243a41c57867225c52aac05573237c556eb1aacbcfb",
+      "term_count": 0,
+      "terms_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "weight": 0
+    },
+    {
+      "contribution_count": 225,
+      "contributions_sha256": "0612848573a5ee9bd95ceda84a872640662ffdd8be1829d257d553659af0ea64",
+      "term_count": 131,
+      "terms_sha256": "e1604575ef706f7ab016cb9d2ed865208af2d439f45a8b0db52b87dd60dcfdb1",
+      "weight": 1
+    },
+    {
+      "contribution_count": 941,
+      "contributions_sha256": "28ba53179dba2a3efd009a45d69bf33cc61a009ab8b25326d27a3f820f9be7be",
+      "term_count": 503,
+      "terms_sha256": "feca8e0964472db4398e50161ef614c9fded2f981b3d3738d88d959ba6441b71",
+      "weight": 2
+    },
+    {
+      "contribution_count": 1579,
+      "contributions_sha256": "862cbf42624f4c24fccf04e5932e24ecffa01a3994a94ac6d82d5f385f242073",
+      "term_count": 839,
+      "terms_sha256": "e0594b965622e89232c6c067c7b1ca5d3737996a563eb612b6f5f98bd130bee1",
+      "weight": 3
+    },
+    {
+      "contribution_count": 2141,
+      "contributions_sha256": "6a5c18a6b1788cb71c387d917f8ac96a5fbf74f969301ad21e339a71c99e6da7",
+      "term_count": 1132,
+      "terms_sha256": "c0f626095d83379919807648915182c879306349feee77dd313d7582ef1368d7",
+      "weight": 4
+    },
+    {
+      "contribution_count": 2629,
+      "contributions_sha256": "a92ce80762f376766d7b01a7904b90d035c809cf184e4caf1cd1ea6c84de5b85",
+      "term_count": 1375,
+      "terms_sha256": "bd560c692afea34700a674e22a597b3de0fe2e17e8e94ea8780fd4f0d007e6bb",
+      "weight": 5
+    },
+    {
+      "contribution_count": 3045,
+      "contributions_sha256": "4eb95731956d4a2787f8c84ebb6170cafa23013b60741456d6731c1b6b4d306d",
+      "term_count": 1594,
+      "terms_sha256": "90ce84d19b21923056b599ab155f353bafbcf033aa6299fc2b66a1f82e9f512b",
+      "weight": 6
+    },
+    {
+      "contribution_count": 3391,
+      "contributions_sha256": "395f8f4e6da8ff72478cbafb24be6f94f4485498a4bfae09f2dd1b9b83bb02cf",
+      "term_count": 1795,
+      "terms_sha256": "51268801e52dff0d16322c6269a9ffb2727ea91fbf670e833ed1e1ef1a964487",
+      "weight": 7
+    },
+    {
+      "contribution_count": 3642,
+      "contributions_sha256": "e76d1c087b14b774e629453b0a82eaf4933709383063f73b6ad1f514cb8736f5",
+      "term_count": 1915,
+      "terms_sha256": "778379cee5863ab8ba05351a319211ecd05af4e8e9df5aa899e5d04750b9a85a",
+      "weight": 8
+    },
+    {
+      "contribution_count": 3671,
+      "contributions_sha256": "124a151a0ab084d6e633b4b1b4b14b9a86c9a3833567ea8e40a63cce5155a2ad",
+      "term_count": 2036,
+      "terms_sha256": "379d5c76307956e0c4859f20766ca3ee5038c2c1499d49512a039da4d1490693",
+      "weight": 9
+    },
+    {
+      "contribution_count": 3805,
+      "contributions_sha256": "4b23a4bb6b50ad8934d2fd98ca2d2187d1b275d8a326f5d591ca7e138195275d",
+      "term_count": 2078,
+      "terms_sha256": "52496efd2ea4d98cc3480d8bbd509fad8ebb8a87ae3eae878e95056611662881",
+      "weight": 10
+    },
+    {
+      "contribution_count": 3878,
+      "contributions_sha256": "74d114ccc2c63983acc8cc956f4522040713894014c4a2a607a5ae80ea7659e0",
+      "term_count": 2116,
+      "terms_sha256": "6cb4855560d149171c0674bf00a4f2f8155b4d667037a0579be0a7635a91907e",
+      "weight": 11
+    },
+    {
+      "contribution_count": 3859,
+      "contributions_sha256": "12f2a660a8f94f27d01957ca1fb737f541e3d2edd0d6d556bfb400965bb44065",
+      "term_count": 2109,
+      "terms_sha256": "ae5a648d50950473f9f5eee55464b13a345738c7c9903d283d52485cec84d173",
+      "weight": 12
+    },
+    {
+      "contribution_count": 3598,
+      "contributions_sha256": "ba2c0aee3152843bd99e48a86d9b0ebc922ec8bb8f538c1053aa0610857d3ef9",
+      "term_count": 2057,
+      "terms_sha256": "84f1fa936d4497f4fd0b0be145820121cf395da7d93c795588df90a4ec1da584",
+      "weight": 13
+    },
+    {
+      "contribution_count": 3453,
+      "contributions_sha256": "a6f81304938c9d0594125ec23f7982a4b3c5ccce800201a46dd70d7cfef02998",
+      "term_count": 1950,
+      "terms_sha256": "5e8adf5c278db06f93e71b2d9a193c8293a1699bd5934cee72bf4d27f3f11ccf",
+      "weight": 14
+    },
+    {
+      "contribution_count": 3258,
+      "contributions_sha256": "333455cbe860c4e0ce1e557552573651aab5d7df36f1c00073764dad0e390b71",
+      "term_count": 1847,
+      "terms_sha256": "a40f4380fbc61cea30dc29b4464dc5345f95989455f8b63569784917af68b73e",
+      "weight": 15
+    },
+    {
+      "contribution_count": 3017,
+      "contributions_sha256": "66fc4e7aca371f71eb3f6d6e648a6dbee6a71fa2aca40bd27110fad8b606a0dd",
+      "term_count": 1703,
+      "terms_sha256": "bc57e6ea7e3f63c17dbc38a5f2c5bf7a5a26cafd4bdbce615928788a16c449c0",
+      "weight": 16
+    },
+    {
+      "contribution_count": 2751,
+      "contributions_sha256": "1bc6993d9b6d6069d0f4c723eff85fd0d42d8514a35fcaee4518c236ccc4a919",
+      "term_count": 1556,
+      "terms_sha256": "c9ae105cb5b4a689f94ccb9ae1e57c1f23675f0f9f016b981eff42d47cc5b19c",
+      "weight": 17
+    },
+    {
+      "contribution_count": 2488,
+      "contributions_sha256": "df60d098a384f04104187779896c6fe0504b12ebeca0a2462e89754a9333ee1d",
+      "term_count": 1408,
+      "terms_sha256": "400fae45e5056579577408e28d485aba5c2e87f55aed1b2f9f81842850efd876",
+      "weight": 18
+    },
+    {
+      "contribution_count": 2223,
+      "contributions_sha256": "ad3f94bfc611fce769ae5ad4bb382948d643ce886d646d68e5c50d83f94d93a7",
+      "term_count": 1265,
+      "terms_sha256": "c2a7cc5b403ec626ff1668fd6d01de77c5a1ff63a85b8c303de7f870e47d1544",
+      "weight": 19
+    },
+    {
+      "contribution_count": 1935,
+      "contributions_sha256": "1f6d48ce855464046c2f85b886e45d0fe6738065b573b06d4e28bb8956d25f33",
+      "term_count": 1006,
+      "terms_sha256": "ab24327500760709b850cdfeb9554adb91817b8c341723db7a3b3c715d67aaa6",
+      "weight": 20
+    },
+    {
+      "contribution_count": 1652,
+      "contributions_sha256": "6f45b60f5a2eb28cb6b9f6a5760b77e86de79afbf7b3a8ed7bec7438ad25743d",
+      "term_count": 942,
+      "terms_sha256": "0f467ee86731f633a5f99fb4f0107606d785f12016715f2a5afc09b3af0744c4",
+      "weight": 21
+    },
+    {
+      "contribution_count": 1374,
+      "contributions_sha256": "c1d43daee342a6f362772aaba449b76d5496b2e7964a69d6fea49210d6ba1ccb",
+      "term_count": 778,
+      "terms_sha256": "4ecdf0736341aba601c78f509ab27067906db32b3b287145be44cd05b6458b42",
+      "weight": 22
+    },
+    {
+      "contribution_count": 1106,
+      "contributions_sha256": "4d45faac59f47aec60867be9584931b400d3bb390f8f0664d3705c49d50239b1",
+      "term_count": 626,
+      "terms_sha256": "7b5ad4a59cdfb700135ceee56c2b7a0d1009f2fc5c1c1132371923781e916b61",
+      "weight": 23
+    },
+    {
+      "contribution_count": 896,
+      "contributions_sha256": "19ff074483fdb459d73d540b929fa8e2411c8dc04c2e9d834df3fb01603f2f49",
+      "term_count": 494,
+      "terms_sha256": "e0c13f3d358c6ebb12dc8c4be69b073aa0291d7c8c9c67d7ceda07704816c1c8",
+      "weight": 24
+    },
+    {
+      "contribution_count": 700,
+      "contributions_sha256": "8f68b1336e6802e7210421b145ef4119b76ae13ea707c926645d8b9942e72b2f",
+      "term_count": 385,
+      "terms_sha256": "695e77c13d440a1c0d3d578fd25cc2e979cd4d23a37b9fef60bd858179f97fb1",
+      "weight": 25
+    },
+    {
+      "contribution_count": 536,
+      "contributions_sha256": "154a42f13e86f2ace4379e1e2f3ddeb34755bf73b0d3806cb55293f17f847530",
+      "term_count": 285,
+      "terms_sha256": "7251a393a760ee615fe7d3d8be2a249068b8031791c71c59b207cd7011ee97cb",
+      "weight": 26
+    },
+    {
+      "contribution_count": 411,
+      "contributions_sha256": "78aac5a53c49001925f8e467e2002caaf9fdbaed2903afc215c2356d25f5afd1",
+      "term_count": 215,
+      "terms_sha256": "a3454c33d926919826b55c075b2dc1227cc54f6fc8850986769cccef09df7bdc",
+      "weight": 27
+    },
+    {
+      "contribution_count": 295,
+      "contributions_sha256": "523149b0728229ebeaf4bbab3ce77f0a4321bf0a990fd0b7fd2da84430b95628",
+      "term_count": 150,
+      "terms_sha256": "70a2bef34ae43c21636070e9f8e3cee99883ec6cda24f5a3217d10eba4119e5f",
+      "weight": 28
+    },
+    {
+      "contribution_count": 204,
+      "contributions_sha256": "29be5f395664f04ee08ff39d466ab617cb11d366bdc61563772885fe31cfc42d",
+      "term_count": 101,
+      "terms_sha256": "ba17665f7aa00b4621a2eb5451bed17ed673bea54b3ace75dde8d7048464ecca",
+      "weight": 29
+    },
+    {
+      "contribution_count": 136,
+      "contributions_sha256": "bdbe988c54f7f9f06883287254db6ee0a3fb70fc0b46c32fe30b5eda06c269b8",
+      "term_count": 63,
+      "terms_sha256": "94fdfd887edb5fca1dd5cc9c3f8875e9d9d385234c644067fa985e51e867a3d3",
+      "weight": 30
+    },
+    {
+      "contribution_count": 82,
+      "contributions_sha256": "dbde83e9f524cb4d4959831546e81ab0d5bfb35fac493648bd84b17cd2896563",
+      "term_count": 41,
+      "terms_sha256": "122ccec68f368fa1e6b88e71cc852e393949e7b8509d8f0b366767f825504a89",
+      "weight": 31
+    },
+    {
+      "contribution_count": 44,
+      "contributions_sha256": "32f6ff29eae76b3c81f3584c9174c55cc9017c9fb0ee4daad02ddec918553739",
+      "term_count": 19,
+      "terms_sha256": "9955605343c8d600acc31f9947c0dda87d436072718a6f294c44710f469b8260",
+      "weight": 32
+    },
+    {
+      "contribution_count": 20,
+      "contributions_sha256": "08d63196f93c3303146934616df81c61f5e5707e363f7ef08f96d9c927ce2a01",
+      "term_count": 10,
+      "terms_sha256": "a2b0e101b22b7cc8e036a8250d07dc8e58788ba55f16270689f156e7d8dcbeec",
+      "weight": 33
+    },
+    {
+      "contribution_count": 8,
+      "contributions_sha256": "31c390c88af5fdaedeb4d4733047dd0c5954aa7bf9c3e4bdd08056bcba48f514",
+      "term_count": 4,
+      "terms_sha256": "befc599d36ea545e07b8cd665d09dbe0c49c7d07812c0739d0365e238e8af3cc",
+      "weight": 34
+    },
+    {
+      "contribution_count": 2,
+      "contributions_sha256": "d68899691a3c444bc7f3d3149992a41cb52ab55c1408bf6243d9e72bb05e1a21",
+      "term_count": 0,
+      "terms_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "weight": 35
+    }
+  ],
+  "scope": "complete direct raw determinant D0..D35 from the frozen D3 source, exact target gate, and provisional corrected-R7R1 q1/q2 cutoff interface",
+  "source_completeness": {
+    "D35": "STRUCTURALLY ZERO AFTER EXACT -18+18 CANCELLATION",
+    "highest_potentially_nonzero_determinant_row": 34,
+    "maximum_pair_sum": 35,
+    "polygon_census": {
+      "F": {
+        "maximum_positive_weight": 14,
+        "polygon_enumeration_sha256": "0bcef3b5f9ae63d9145cc8ced06a7df680a1347db91d37d8ee01c0018d9bae1f",
+        "positive_weight_count": 124,
+        "row_count": 141,
+        "weight_zero_count": 17
+      },
+      "G": {
+        "maximum_positive_weight": 21,
+        "polygon_enumeration_sha256": "5a4114c9d1b6422b5a02b5c800af770a9c30958d3465da272715c1e63f44b1ff",
+        "positive_weight_count": 276,
+        "row_count": 301,
+        "weight_zero_count": 25
+      }
+    },
+    "raw_positive_total": 400,
+    "rows_beyond_35": "STRUCTURALLY ZERO BY SUPPORT",
+    "status": "PASS-INDEPENDENT-COMPLETE-POLYGON-ENUMERATION"
+  },
+  "source_sha256": "28b9b05c02224aadec30d52b66ed22db80aabe416ffdc0186f6931f1978f1876",
+  "status": "PASS-D5G35-COMPLETE-RAW-DETERMINANT-AND-UNSOLVED-TARGET-GATE",
+  "verdict": {
+    "complete_compiler": "PASS",
+    "landing_or_face": "NO VERDICT",
+    "q1_q2_interface": "TYPED AND CONDITIONAL",
+    "specialization": "NO VERDICT",
+    "target_gate": "FROZEN BUT UNSOLVED"
+  }
+}

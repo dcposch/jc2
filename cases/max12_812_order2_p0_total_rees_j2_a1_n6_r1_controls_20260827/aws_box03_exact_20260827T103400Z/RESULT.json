@@ -1,0 +1,52 @@
+{
+  "census_addendum_sha256": "266dfb8962cbeb1af73d4f03947670148b71a00eebd5e2a91fce9c78b99bf658",
+  "compiler_result_sha256": "25f580911a9203f9de2158b18773d6ed1d79440c5f4fb19e330a7c4f060f3b9a",
+  "coordinate_sha256": "afa0192510f66c6a648f32f5ea898a4d23a8e032e0e34265f1861ab15bf84460",
+  "first_link_failure": {
+    "cause": "missing -lgivaro -lgmpxx -lgmp in the first compiler-harvest C++ link",
+    "observed_rc": 1,
+    "role": "failed attempt only; resumed build/solve/validator provide certifying result"
+  },
+  "recovered_source_manifest_entries": 834,
+  "recovered_source_manifest_sha256": "033213c1d59bd77b6a4d7bd68faf714a4a62db16515b02a58d4f6e2c9c080a25",
+  "recovered_source_snapshot_sha256": "2d7f396a9d63957fe2597b64bb7af1bd03acd726504bef6cce1646916fa7c187",
+  "registered_aws_lane": "max12_812_order2_p0_total_rees_j2_a1_n6_r1_controls_20260827T103400Z_box03",
+  "row_mutation": {
+    "all_original_product_residuals_zero": true,
+    "changed_coefficient_by": [
+      1,
+      1
+    ],
+    "changed_monomial": [
+      [
+        "a1",
+        1
+      ],
+      [
+        "aa0",
+        1
+      ],
+      [
+        "cs1",
+        2
+      ],
+      [
+        "ell2",
+        1
+      ]
+    ],
+    "detected_product_count": 6,
+    "products_checked": 607,
+    "residual_records_path": "/home/ubuntu/jobs/max12_812_order2_p0_total_rees_j2_a1_n6_r1_controls_20260827T103400Z_box03/output/tg19_7_row_mutation_residuals.json",
+    "residual_records_sha256": "a9649ec4df7dded55e30600c7eebbc06631978bb5b02c836151a1cd123521398",
+    "row": "Tg19_7"
+  },
+  "schema_version": 1,
+  "scope": "additive custody, V42, and genuine Tg19_7 row-data mutation replay for frozen exact N6 functional",
+  "solution_sha256": "d0c04857c1b58d6bc8671eada4f8a7d2001c945be2a13d08ebde2fd53b4cf713",
+  "status": "PASS-A1-N6-R1-ADDITIVE-CONTROLS",
+  "strengthened_corollary": "a1^i is not in J0 for every 0<=i<=6, by the ideal property from a1^6 nonmembership",
+  "v42_scope_correction": "V42 a1^8 membership is in its six-row A1 branch ideal, not globally before branch clearing",
+  "v42_sha256": "f4ec72933793bf08aabc600df7cdcd47b8de2c54f45c0d30341e13ac0b676459",
+  "v43_sha256": "0de6a2b279aeeab8c5a635c1d7658958f3f49f0f94f8473355d281cae9438b00"
+}

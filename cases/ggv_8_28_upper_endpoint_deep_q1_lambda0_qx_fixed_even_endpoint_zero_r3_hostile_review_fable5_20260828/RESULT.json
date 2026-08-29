@@ -1,0 +1,64 @@
+{
+  "review_id": "ggv_8_28_upper_endpoint_deep_q1_lambda0_qx_fixed_even_endpoint_zero_r3_hostile_review_fable5_20260828",
+  "date": "2026-08-28",
+  "reviewer": "Fable 5 (independent hostile desk audit, standard library only)",
+  "verdict": "PASS_WITH_PRECISION_REPAIR",
+  "theorem_status": "CONFIRMED",
+  "first_questionable_line": {
+    "file": "xmodel/ggv-upper-endpoint-deep-q1-lambda0-qx-fixed-even-endpoint-zero-r3-sol-ultra-20260828.md",
+    "lines": "94-95",
+    "text": "modes born after weight 10 have not entered by G15",
+    "classification": "precision repair only; c12 enters G12 (constant load) and c14 enters G14 (A^-1 carrier); both have zero load on G11[X0], G13[X0], G15[X1], R15 for verified reasons (F5=0 t5 residual for c10, F^0 flat for c12, F1=0 t1 residual for c14); c16,c18,c20 genuinely unborn",
+    "companion": "producer checker lines 252-254 (numerological asserts) replaced by a computed census"
+  },
+  "system": {
+    "size": "50x55",
+    "rank": 50,
+    "dimension": 5,
+    "free_coordinates": ["d15_4", "d15_5", "d15_6", "d15_8", "d15_9"],
+    "basis_sha256": "feb2e87498b4928ac5ec117523af2b0c2b0074d96945f920ff7a888c5972e7b5",
+    "basis_replay": "all 5 basis vectors replay all 50 original gate equations via full nonlinear series recomputation",
+    "f0": "-(2^29/75)a1+(2^28/225)a4"
+  },
+  "identities": {
+    "G11_X0": "-c4*f0 (only c4 loads)",
+    "G13_X0": "(3/4)*c6*f0 (only c6 loads)",
+    "G15_X1_c4_load": "c4*F11[X1] exactly (A^4*u11=F11)",
+    "R15": "-(7*2^19/3)*c6*a4+(2^29/15)*c8*a2 (base,c2,c4,c10,c12,c14 zero; pole order <= 1 for every label/basis)",
+    "endpoint": "E=f0*(c6*(-2^21*a1/5-2^19*a4/3)+c8*(2^29*a2/75)) after exact c4 cancellation",
+    "syzygy": "E=(f0/5)*R15+(4/3)*(-2^21*a1/5+2^20*a4/15)*G13_X0, verified coefficientwise per c-mode incl. all-zero modes",
+    "ideal_type": "ring-level ideal membership with polynomial multipliers (valid over any Q-algebra); not a field/radical step",
+    "target": "+1 pinned upstream; exclusion uses only target != 0 and is target-sign robust",
+    "d22_pair_census": "windows from RAW_INPUT.json give exactly (11,11,+1) and (7,15,-1)"
+  },
+  "r2_control": {
+    "location": "basis vector a=(0,1,0,0,0)",
+    "g8_g12": "polynomial and in literal windows (c2=c6=1)",
+    "first_failure": "G13[X0]=-2^27/25 for c6=1; D0..D13=0",
+    "repair": "c6=0 repairs G13; next failure G14 pole, remainder mod A = -5X^2/2^34",
+    "endpoint_before": "2^50/375",
+    "endpoint_after_c6_0": "0",
+    "consistency": "theorem hypotheses exclude the c6=1 point (G13 floor) and predict T=0 at the c6=0 point; no contradiction"
+  },
+  "controls": [
+    "gates re-derived from (F/F0)^((n+2)/8) via Euler ODE recurrence; h15 unit columns match frozen q15 closed form",
+    "odd-row linearity certified at non-basis point a=(1,2,3,4,5) for all labels",
+    "mode census computed for base,c2..c14; c16,c18,c20 structurally unborn (shift > 15)",
+    "frozen hashes verified at start and end"
+  ],
+  "mutations_all_detected": [
+    "M1 dropped equation row -> dimension 6",
+    "M2 dropped variable column d13_0 -> free census wrong",
+    "M3 wrong pivot/free set -> name mismatch",
+    "M4 omitted c6 characteristic mode -> coupling 2^50/375 lost",
+    "M5 c12/c14 treated as unborn -> refuted by nonzero G12/G14 loads",
+    "M6 residue sign flip -> syzygy identity fails",
+    "M7 endpoint relative-sign flip -> c4 cancellation destroyed",
+    "M8 wrong target sign -> exclusion still holds, 0 != +-1, target != 0",
+    "M9 nonzero mod-A remainder rejected as polynomial by strict test"
+  ],
+  "surviving_scope": "char-0; A=X^4-1, Q=X, r=e=F8=F10=F12=F14=0, F1=F3=F5=F6=0, fixed F2=-A^3Q/8, F4=A^2Q^2/256, F7=A*f (pinned branch divisibility), literal odd raw windows, q7..q15 exactness with primitive caps, branch normalization (A^4)^(m/4)=A^m, G13 literal lower floor, G15 polynomial, pinned endpoint target +1, arbitrary scalar modes. NOT promoted: arbitrary Q/e/F8, full lambda=0, four-root endpoint, Keller, JC2.",
+  "checker": "xmodel/ggv-upper-endpoint-deep-q1-lambda0-qx-fixed-even-endpoint-zero-r3-hostile-review-fable5-20260828-check.py",
+  "checker_final_line": "PASS_FABLE5_HOSTILE_R3_QX_FIXED_EVEN_ENDPOINT_ZERO",
+  "run_command": "PYTHONDONTWRITEBYTECODE=1 python3 -B xmodel/ggv-upper-endpoint-deep-q1-lambda0-qx-fixed-even-endpoint-zero-r3-hostile-review-fable5-20260828-check.py"
+}

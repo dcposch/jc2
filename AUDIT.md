@@ -5,6 +5,4866 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **`td=8` CV REVIEW — LOCAL CENSUS PASSES WITH REPAIRS; DISPLAYED WITNESS
+> REMAINS CROSS-LANE-INCOMPATIBLE (2026-08-29 07:24Z).** Grok46 primary
+> `93c58d63af6ff9e000531c077b10c86ef1a9d4d6f54b6b343d1f98c7d6183ecd`
+> (body `39f94bf51b4c78e90ba5e48a0f35f81c8db64a4650fcf9f6ee9fe9104a38cfeb`)
+> received Fable5 review
+> `34bd7b357166d6a6860bf7714ffd2c5a3343eee361fabc234a927580673e836d`
+> (body `f972253c571a547eab2bf67c79298d59a47fb800a4b367710458e343d93a2fa6`),
+> verdict `PASS_WITH_REPAIR` at its isolated cv-recursion scope.
+>
+> Promote the independently reconstructed pieces: the four cv weights are
+> `2,2,2,1`; printed `delta_a=0` is not licensed; `M*_A=21` forces
+> `k_j in {1,2}` and at least one `k_j=2`; the two row-4 poles and four-place
+> census pass. A pure `(2,1)` chain is not arbitrary: Proposition 4.2 caps it
+> at `m_A in {2,3}`. The double-root claim applies to `p_H-a`, only for
+> `theta>7`; at `theta=7` a split quadratic is allowed and still has charge
+> two. Off the `a=0` fibre, the asserted pure-power collapse is false.
+>
+> Do **not** promote the report's repaired survival witness across the common
+> transport tower. It still uses a degree-one `(2,1)` opener and never tests
+> the separately reviewed mandatory `(2,3)` first approximate-root stage.
+> Thus the global witness remains quarantined. A new producer argument
+> `9ee0dcde...` uses that pinned tower and provisionally forces contact through
+> `theta=7`; it awaits a different-model reconstruction. The review launcher
+> was rewritten while its shell was waiting and failed only in post-run
+> bookkeeping; prompt/adapter/report/log hashes were reverified and the run is
+> marked `RECOVERED_REPORT`, with unknown child exit code, rather than silently
+> relabelled `DONE`. No landing, realization, exact total lambda, or JC2
+> consequence follows.
+
+> **Q+E5 CASE-III R3 — MERGE-LOCAL PATTERN FIBRES ARE FINITE; ENGINE
+> MIGRATION STILL FAILS ON `nu_G=1` (2026-08-29 07:13Z).** Fable5 R3
+> `885e5cc261449890e23d54cb024f19f339424f6138938d2396c2e655244c7092`
+> (body `a902c94e8f073af11df103bacb65376521e8ec2dc74678be67126c2fa024a0b6`)
+> received Opus5 review
+> `9660ffe9302061c9daf7bc31c8eda57fb9412315283c868d8d072655d2033570`
+> (body `45ec4167440c2e17ed3929b1e225df50e738a55f16b6cecce560f127cf0767df`).
+> Verdict: `PASS_WITH_REPAIR`; every charged theorem and number passes, but
+> the proposed engine migration remains unlicensed.
+>
+> For fixed two-pole case-III state and Q+E5 menu, every pattern fibre is
+> finite and effectively bounded; at `mu=1` it is a singleton. The
+> arity-graded law
+> `dq/D <= (r0+1)+((r0+1)delta+1)/M` has the stated exact equality profile,
+> and in the campaign range `r0 in {2,3}` every violator of the old
+> two-pole constant has `M=1`, hence is MP2-dead. This fails generically from
+> `r0=4`. The correct zero-chain T1 law at `mu=1` is
+> `dp|dq iff M=dp iff w/(kbar-w) in N*`; `{3,4}` is only the `w=2` encoding.
+> No incoming-index bound exists or is needed.
+>
+> The remaining software blocker is nonvacuous: the proposed structural
+> guard admits case-I `nu_G=1` rows where `kbar` may be fractional, but the
+> replacement loop scans only integer `kbar` and can turn legal `ALIVE` rows
+> into `DEAD`. Add a case-I negative control and retain the legacy solver on
+> that branch. `NUCAP=500` stays; no canonical engine edit is authorized.
+> The best next merge-local lemma is the equal-regime `delta=0` finite
+> `kbar` menu plus a complete existence solve. No landing, realization,
+> multipole/inner-tree, full-book, ceiling, or JC2 consequence follows.
+
+> **`td=12` U1 FIRST TRUNK — FORMAL SURVIVAL SUSTAINED; THREE UNPRICED
+> POLE EXITS BECOME THE DECISIVE BUDGET GATE (2026-08-29 07:10Z).** Grok46
+> primary
+> `599e2a9123194c580b89b822f5b7a218fa5e9735b16bcb744e0f0e4231584271`
+> (body `ea43c28125b61710d1af58a90de1928a7c05f93734950c6d89814cd3c99d5be2`)
+> received Opus5 review
+> `91b36515950f038d08a444df16f9c09ee9763adb7950d46e9c50e43451f25c0f`
+> (body `86ccd2f1f36a37fce7f038ce3a162468f61aea4974dfd778a370ab3e04fa7e3e`).
+> Charges 1,2,3,7 pass; 4,5,6 pass with repair. Lead verdict
+> `FAMILY_SURVIVES_FIRST_TRUNK` and cell verdict `TRUNK_T1_SURVIVES` are
+> sustained at formal-cell/reduced-pattern scope.
+>
+> The fixed dirty trunk from `(9/2,2)` has the exact one-orbit T1 solution
+> `B/A=9/8`; Statement 3.9 adds the sheet-level consumer
+> `i_F=3n*i_G`. A cap-free maximal-budget recheck gives 13 one-step edges
+> and exactly two P1-fitting terminals, `(2/3,3)` at `nu_F=25` and
+> `(3/4,4)` at `nu_F=17`. Repair the packet's false free-text `C_iv`
+> annotation, enforce its recorded N1/R1 filters before reuse, and state
+> completeness at maximal budget ten rather than the selected terminal's
+> budget nine.
+>
+> Crucially, the claimed slack assumes the three identical `b=2` pole-entry
+> vertices price zero. The source declares those prices unknown; only merge
+> lambda zero is proved. A positive price at one symmetric entry contributes
+> at least three overall, making `8+3` exceed both terminal budgets and
+> killing the whole first-trunk family. Thus the next exact discriminator is
+> the single `(a,b,nu)=(1,2,3)`, `M=2`, `w=3/2` pole exit set, not another
+> trunk ODE. No landing, realizability, complete td=12 book, ceiling, or JC2
+> consequence follows.
+
+> **`td=8` STATEMENT-3.9 COEFFICIENT TRANSPORT — FORMAL SURVIVAL PASSES
+> WITH REPAIR (2026-08-29 06:58Z).** Fable5 primary
+> `910d3216ad7476b743eb920e3d68026f05efc8ffe1a409c476fb90ce277f6ad4`
+> (body `3b7851eaaee3f35c23de8d201eb22ad664ab2dba1614d6d4fc04cba562461171`)
+> received independent Opus5 review
+> `e469e94dbf4393fe820345678c2582ca7f7a528695c25d065fb224b4f796cf61`
+> (body `0de875253b50684042f8913f5b29781e58d4a7ff38d3a640831808e9b55705d8`).
+> Verdict: `PASS_WITH_REPAIR`; the charged answer remains
+> `ST39_TRANSPORT_SURVIVES` for every `t>=0` at formal top/tower scope.
+>
+> The exact product law and chart normalizer one are valid. The invariant
+> primitive pairs begin `(2,3)`, then `(7,6)`, with only optional inert
+> `k=1` shifts between fixed drops; q-side `beta` is forced to zero, not
+> free. The exponent on `L_1/L_2` is `-5`, and because
+> `L_1/L_2=omega^3` the soluble twin identity is
+> `(A_1/A_2)^2=omega^(-15)`. This identity is derived, not obstructive.
+> The family therefore survives every presently checked leading-coefficient
+> constraint, but no `(0,y)` treetop initialization, joint subtop gluing,
+> exact lambda, landing, polynomial-pair realization, route exclusion, or
+> JC2 consequence follows.
+
+> **`td=8` EXACT-SEPARATION CALCULUS — REVIEWED WITH A GRADING REPAIR;
+> EXACT LAMBDA STILL OPEN (2026-08-29 06:58Z).** Opus5 primary
+> `991e1b350ad2f8b2b82808fdc84dec71154f9ae17250c18953a36ac8f6588508`
+> (body `f1ae6c2b1dd94ab2dcf26dfb16e149067eab0617b549817d5620c728d6936d11`)
+> received Fable5 review
+> `ec3557953c6387ce35dcf4efe1df267fb828771119c479eb00c8f1793e0ee370`
+> (body `463a8f4860f950445a9ff784b1c1b41729762bbebd530477b2e1b53717d564a7`).
+> Verdict: `PASS_WITH_REPAIR`.
+>
+> Reindex the subtop pieces by the `kappa_F`-grading
+> `P'_k=p_{n-(kappa_H/kappa_F)k}`; the producer's literal ambient-layer
+> indexing is false when the ratio exceeds one, but its numerical results
+> are unchanged. The reviewed law is
+> `Delta=(kappa_H/kappa_F)(tau_0-kbar_F)`. Each A-charge is two exactly when
+> `theta>=7`; the endpoint `theta=7` may be split quadratic. The trunk charge
+> is two exactly with no ramification jump and the printed one-unit area
+> defect; merge lambda is zero. Since the ceiling is six, an actual route
+> requires all three positive charges to equal two. Printed data leave
+> `P'_2(c*)` and the complete contact profile free, so no exact cost, route
+> kill, landing, or realization is promoted.
+
+> **U2 ABSORBED NORMAL FORM PROMOTED; FINITENESS CONFIRMED ONLY FOR FIXED-DATA
+> P0-TO-P1 PATHS (2026-08-29 06:58Z).** Grok46 primary
+> `9c20947be6d2ac6aad19176fae66f0b4acfb6ec6bce257a2169d8d266c667613`
+> (body `49fdda2b84e4a405f6432239546826a943326a5357f10efb26eaa8b2a149a1b6`)
+> received Fable5 review
+> `e156f94ca83026fe04b287100ca79f72325c80a82f8ed3f3f8a94044db440740`
+> (body `2a59c1961b9bf0a1677edc43289670f67ea42442b0f1e1928f4db78cb2645c8b`).
+> Its lead verdict is `REPAIR_REQUIRED`, but layers (a), (b), and (d) pass:
+> `p=Rad^mu`, `q=Rad*S`,
+> `r Rad S'-L Rad' S=C'!=0`,
+> `M=gcd(r*mu,r+L)`, `kbar=w(r+L)/L`,
+> `w_tr=w(r+L-1)/L`, and `lambda_G=0`, together with the recorded
+> parity/power-family and low-degree controls. The displayed
+> `r*mu/(r+L)` is the ODE slope, not frame weight `rho_G=w/L`.
+>
+> Sol's independent quantifier repair
+> `3989703ae243705166843dfe5183bbc83cba44d9284071e49deca19cd935933e`
+> (body `aa6f8685d56c8c7582082717bf802649fa5966282ae76c4666c2c0b6fc9f1bf0`)
+> received Opus5 review
+> `9a1775f6c9de92e8204098be3a422222f159d0a4f74baf13a75b1d43598c4a58`
+> (body `eba44e04f3628e2fa7214c12a6bcefda5c9c3371c6f4af677660c51827967804`),
+> verdict `PASS_AT_CONDITIONAL_P0P1_SCOPE`. For fixed absorbed
+> `(r,mu,w)`, fixed numerical budget (uniformly one may take `td-2`), and
+> the reviewed P0 grammar, only finitely many `L` reach a P1 terminal. The
+> broad headline `U2_REDUCED_FINITE` remains quarantined: P2, later merges,
+> nested U2, landing, and a finite full ledger are not proved.
+
+> **`td=8` QUADRATIC-CV PRIMARY — CROSS-LANE WITNESS QUARANTINED PENDING
+> HOSTILE REVIEW (2026-08-29 06:58Z).** Grok46 primary
+> `93c58d63af6ff9e000531c077b10c86ef1a9d4d6f54b6b343d1f98c7d6183ecd`
+> (body `39f94bf51b4c78e90ba5e48a0f35f81c8db64a4650fcf9f6ee9fe9104a38cfeb`)
+> provisionally returned
+> `CV_CONFIGURATION_FORMALLY_SURVIVES`, but its displayed repeated `(2,1)`
+> construction is incompatible with the reviewed coefficient-transport
+> tower, whose unavoidable first pair is `(2,3)` and whose later pre-drop
+> pairs all have `k=1`. It also infers a double quadratic from charge two,
+> omitting the allowed `theta=7` split-quadratic endpoint. Compatible pinned
+> double-root examples exist with one, two, and three stages, so neither flaw
+> kills the family. The later Fable review corrects the quadratic endpoint but
+> does not impose the pinned `(2,3)` opener, so the top 07:24Z quarantine still
+> controls the primary's witness and headline.
+
+> **TRIPLE02 CLOSED-SUCCESSOR R3 — ARCHIVE CONTENT IS BOUND, BUT A REAL
+> PATH-SWAP RACE BLOCKS EVERY PILOT (2026-08-29 03:51Z).** Fable R3
+> `4ffa10477238c0726ba8b470a2ce6110671f823f6cebc1501a71bd48f7f97c0c`
+> (body `ea71583070a6c51c11c6201b8a3f8f74d541652116a880dd8f6ed412c0759f76`)
+> received Opus review
+> `1110c09d8528b536c231eb48e7fdae7c69869d042d0c292d6221ff9c0153397a`
+> (body `206ebc55548c7218a4966990050510da38279461a9d9279cc3cc5533f959685c`).
+> Verdict: `PASS_SOURCE_FOR_DISPOSABLE_REHEARSAL`, explicitly not a pilot
+> authorization.
+>
+> R3 correctly re-hashes the charged archive, authenticates its complete
+> member/manifest/directory census, and binds all decision inputs to a fresh
+> byte-identical extraction. Its inherited mathematics and 19 decision gates
+> survive; the reviewer adds 77 hostile fixtures and six positive controls.
+> However, the authority hashes the archive by path, walks the extraction,
+> then opens the archive again by path. A same-uid concurrent rename in that
+> interval promotes forged decision bytes while printing the honest digest;
+> the reviewer reproduced this without patched functions in 6/6 timing/file-
+> count controls. R4 must open once, hash and parse through the same descriptor,
+> bind the marker to that computed digest, and reject concurrent mutation.
+> Also exercise `swap_zero`, reject JSON booleans as latch integers, and make
+> malformed late CLI paths emit a fail-closed marker. Fable owns R4. No AWS,
+> Singular, mathematical promotion, or JC2 consequence is licensed.
+
+> **K0 CERTIFICATE R3 — MATHEMATICS/CUSTODY CORE SURVIVES; DEPLOYMENT
+> CHOREOGRAPHY STILL FAIL-CLOSED (2026-08-29 03:40Z).** Opus5 R3
+> `039352d912fb01cacbd508e81d9b1e684456fc3e2d1e0e32083bfcf663d3456f`
+> (body `80ed2c4ea8a741764e812661b78f73a73a265517c7c65331c578ecfedcc7e011`)
+> received Grok review
+> `49c6dd90c1ec9d87b15ecf0b6f3bbac22f6fa3d0d96d25f1d740cf8a758b3eeb`
+> (body `4071ad8ee28a8b8d10147567f9c6521fc4f4be83a04fb3edab24662843325421`).
+> Verdict: `PASS_WITH_REPAIR`, which the authorization correctly refuses
+> because it requires literal `PASS`.
+>
+> R3 repairs the R2 privilege contradiction: root mints a 0444 one-shot
+> claim in the service-owned 0700 run directory; the service verifies then
+> burns/leases; all 13 P11 mutations fire. R2-to-R3 mathematical diffs and
+> the Python unconditional/conditional separation reproduce. The new
+> blocking defect is the sealed launch order: the template directs an
+> external mint, then dry-run, then unit start, while the unit's
+> `ExecStartPre=+` mints again. Because the spent marker is one-shot, an
+> honest run necessarily dies `MINT_ALREADY_SPENT` before either engine.
+> Repair the unit/template into one mint -> service dry-run -> supervisor
+> sequence; do not duplicate the dry-run inside `run_job`. GP, systemd, and
+> root-owned deployment remain unexecuted debt. Opus owns R4. No AWS action
+> or mathematical adverse evidence results.
+
+> **Q+E5 TWO-POLE THEOREM LAYER CONFIRMED; R2 SOFTWARE REPAIR REQUIRED
+> (2026-08-29 03:30Z).** Fable5 producer
+> `6624f2955b6cc6b92eec4b57a479696873c7f7eccb72f34f296a31f06ac89da2`
+> (body `01deb67e278153f607ee9483761cfe0657dabf475458b5071d9f397ddf7ca1e8`)
+> received independent Opus5 review
+> `1b4df6433443322121254ba5dbc7b727516429fdc59dce963813e080587cfe07`
+> (body `c12bbca2d6dc093a71a5907b3032f031d042590553ffbe86fb41761c7d357b4c`).
+> Verdict on the packet is `REPAIR_REQUIRED`; the following theorem residue
+> is independently confirmed.
+>
+> For a genuine two-pole case-III merge in the difficult regime,
+> `dq/D <= 2*delta+3` and
+> `kbar <= mu*w*(2*delta+3)`; equality forces `D=M=1` and is MP2-dead.
+> More sharply,
+> `dq/D <= 2+(2*delta+1)/M`, with equality exactly on the stated odd-divisor
+> family `M | 2*delta+1`, `s=A=1`, `nu_G=delta+M`, `D=M`; this is attained
+> on 12 of the 17 promoted cells. Under promoted Q+E5,
+> `mu0*nu_G*w_U=delta*kbar+mu*w` gives the three merge-local regimes.
+> Incoming `nu_U` is absent and free; no incoming-index cap follows or is
+> needed.
+>
+> Quarantine R2 §7.4 and §8.3. The alleged infinite fibre at fixed
+> `(kbar,nu_G)` uses NE-illegal cells (`dp=2*dq` forces negative `lex` in
+> the tail); the fibre is finite. The proposed
+> `dp | dq iff kbar in {3,4}` is only the `w=2` specialization; the general
+> test is `dp | dq iff M=dp`, equivalently the appropriate divisor condition
+> on `kbar-mu*w`. Fable owns fresh R3. No canonical engine edit, cap removal,
+> AWS action, landing, or JC2 consequence is licensed.
+
+> **LANDING-LEDGER LL-1 R3 — PROVENANCE REPAIR PASSES
+> (2026-08-29 03:30Z).** Fable R3
+> `f501bf91815aa7862fe36f665ea7ec7d379bc4c5f26502c4a0273bf97eff9aa6`
+> (body `d2876414c67a5b9fd692fb79977094bca4c6424eaf979f7f3455fe36785bffa1`)
+> passed different-model Grok review
+> `47ad69838a7d4aa68b1723119fd7a96ac11aff644e5c5509604c6b3e2539eb1d`
+> (body `618b609fe21a3812137815cbe380aec865186fe9cc9e29be4013c9dfdd34e006`).
+> The five current source pins reproduce, the A1 tautology is deleted, the
+> 26-shape/351-route figures are parsed from pinned fixture assertions and
+> removed from proved scope, all 33 mathematical functions are byte-identical
+> to R2, and compile/validate plus 139 tests pass in ordinary and optimized
+> modes with byte-identical output. Accept R3 as the reviewed LL-1 source
+> snapshot for `td=6,m=2` only. Four low errata remain: one algebraically
+> tautological sub-loop, one derived rather than parsed count, a hard-coded
+> but independently true empty decision-diff, and an overly strong
+> `ENGINE-REC` trust label. They do not warrant R4. No grammar completeness,
+> total landing, ceiling, AWS, or JC2 claim follows.
+
+> **`td=8` PROPOSITION 8.1(iv) LOCAL FAMILY — PROMOTED AT VERTEX-LOCAL
+> PATTERN SCOPE (2026-08-29 03:30Z).** Sol's route-specialized producer
+> `aeb7714e656b7c112ce2933b48b6da6c18fdec3136b2d2651c44e6d9874c5584`
+> passed Fable review
+> `c2a112fa84e0c11085f285ddab79999caf6b00d8a8fe37a84390a13ee7cfc675`
+> (body `d6e743dda2a613cd6264f4d36eb66ae15f00a4fdeda335281e72bc1955acf1b8`).
+> Independently, Grok producer
+> `2d9fa6fa73da2f8d276301ef9f2153eb305f3e87e5bb307d127ee4adcfcf94a1`
+> (body `cc7035dec2949f674064f7495c209abbf1037dee3179f1abd876a8e292366416`)
+> passed Fable review
+> `13b6e430ee3dec615e964e3455368bbc113c2b1c076f118de17e260e8d4911fa`
+> (body `9e594a2343bfcdfe8b2631506543139210f1fa178f4a616c7e09d93ba54da82b`).
+>
+> For `nu=4+3t`, `t>=0`, the reviewed equal-join cell satisfies printed
+> Proposition 8.1(iv) iff its two orbit values are opposite and nonzero.
+> Up to scale,
+> `p=(eta^(2*nu)-a^2)^3` and
+> `q=ominus*eta*(eta^(2*nu)-a^2)`; all root, eta, gcd, searrow,
+> multiplicity, and orbit conditions hold, the exceptional set is empty,
+> and the full exponent is `i=14`. The neighboring `(21,15)` and `(85,35)`
+> patterns are likewise rigid with ratios `3/2` and `4/3`. The book pair
+> `(X,kbar)` equals the printed `(delta,1-u)` only up to common factor
+> `kappa_F`, harmless because `ominus` absorbs it. Frame `rho=2/3` must not
+> be confused with ODE ratio `6*nu/(2*nu+1)`.
+>
+> This is one local rigidity law, not independent evidence twice. It rules
+> out a vertex-local ODE kill of the D2 family, but proves no cross-vertex
+> coefficient transport, exact lambda, source landing, realizability,
+> degree bound, counterexample, or JC2 conclusion.
+
+> **U1 SEMILINEAR QUOTIENT — REPAIRED THEOREM RESIDUE PROMOTED; U2 OPEN
+> (2026-08-29 03:30Z).** Opus5 producer
+> `7ed65bc22f836230dada03776a1b3c6f9110c955a35b52fa28c21d0811a6c99d`
+> (body `bacf0d6ba789655ebbfd0b9da7018b8e10303fab149b38ef052587fadc5278d2`)
+> received Grok review
+> `8755bd5d3d1cd2721d32e5956c5b139b2cc6e0e805662d5278ededff896135ba`
+> (body `cf935fe9674aa36cf7f73eaaee841c7b38307707a6e39416d1a0afe02a0c6d39`).
+> Verdict is `REPAIR_REQUIRED` on the report as written, but review §8
+> authorizes the following explicit repaired residue at formal pattern tier.
+>
+> U1 consists of equal nonzero arrivals with `nu_G>=2`, no 0-arrival, and
+> `k=lex=0`. Legal members form an explicit finite union of arithmetic
+> progressions (possibly empty), with
+> `M=gcd(mu-eps,r*nu+1)`, constant downstream `w` and modeled lambda,
+> periodic `M`/P0 menu, and affine unbounded full-frame data. General
+> Proposition 8.1(iv) reduces on U1 to `Rad(T)=T^r-A`, `A!=0`: it rigidifies
+> coefficients rather than killing the family. No numerical `kbar` cap is
+> required at the combinatorial pattern tier.
+>
+> The unique `td=12,m=3,[2,2,2]` source row is type `(2,3)` with three
+> identical `(4,1,2,3)` poles. Its star U1 family and fixed dirty trunk reach
+> a terminal at recorded lower-bound cost eight against ceiling nine. This
+> is a conditional infinite pattern-tier budget-fitting witness only.
+> Quarantine the producer's unconditional legality iff, monotonic-direction
+> wording, constant-menu claim, other-types rider, and Theorem F's refuted
+> incoming-index dependency. U2 (`nu_G=1`, unbounded `lex`) is distinct and
+> not covered. No gluing, exact cost, landing, or polynomial map follows.
+
+> **`td=8` EXACT-LAMBDA ATTACK — PARTIAL, NO COST PROMOTION
+> (2026-08-29 03:30Z).** Grok primary
+> `99b136da9930c76f833de66c437ffb7ef8b07ab017e0e6719fbb7c888c16e919`
+> (body `00a7b77a078711726f8d8537366ba2aa5e69ffd407f0e7536a6989da0792b719`)
+> replays 103 checks in both modes and proves that the recorded prices are
+> exactly the lower-bound sum `2+2+2=6`, not the true lambdas. The linear
+> model gives two on each incoming `(21,15)` step and `3/2` on the trunk;
+> trunk integrality forces a positive correction but does not distinguish
+> exact two from three or more. Top patterns do not determine equality in
+> corrected Statement 9.3(24). The typed missing datum is the first
+> extra-branch subtop jet `(r_*,p_*)`, equivalently one Newton--Puiseux step,
+> from which `Delta(F)=kappa_{I(u_0)}(u_0-1)` is computed. This report is a
+> provisional discriminator, not an independently reviewed exact-cost
+> theorem; Opus owns the jet computation.
+
+> **FINITE REDUCED P0 R2 IMPLEMENTATION — REVIEW PASS
+> (2026-08-29 03:30Z).** Opus5 review
+> `11d45ecaab58e82d3a5ef44bb14b5a90b617a8be8d287a1e947447fff43d1069`
+> (body `2f51e5d7b56c995496509767a24f9ec1824987f07b30f7b76d688e2b9726c32e`)
+> returns `PASS_IMPLEMENTATION_R2`. It independently reconstructs the
+> charged 69-state/295-edge closure and the 152-state/658-edge lex-active
+> regression, verifies all manifests and ordinary/optimized suites, and
+> confirms that R2 changes no promoted mathematics or legacy reduced-edge
+> semantics. Nonblocking errata: one test's prose overstates which
+> predecessor graph it executes; a cost-arithmetic test can accept a
+> fabricated but arithmetically consistent parent; and two old module names
+> remain. R2 is the canonical executable for the promoted finite reduced
+> chain theorem at its existing scope.
+
+> **PEER EQUAL-JOIN SEMILINEAR REPORT — PROVISIONAL; HOSTILE REVIEW ACTIVE
+> (2026-08-29 02:47Z).**  Opus5 producer
+> `7ed65bc22f836230dada03776a1b3c6f9110c955a35b52fa28c21d0811a6c99d`
+> (body `bacf0d6ba789655ebbfd0b9da7018b8e10303fab149b38ef052587fadc5278d2`)
+> supplies an exact semilinear classification, general merge
+> Proposition-8.1(iv) identity, and a `td=12,m=3` formal witness.  Root replay
+> passes 5,810 ordinary and optimized checks, and the current entry census
+> confirms the witness's global `(2,3)` type and three `(4,1,2,3)` poles.
+>
+> **No clause is promoted yet.**  Grok 4.6 is independently checking every
+> theorem, the exact trunk/budget, and the claimed exhaustiveness of full-
+> parameter consumers.  The producer predates Fable's refutation of Sol's
+> incoming-index theorem and invokes that false result inside Theorem F;
+> therefore semilinear sufficiency is already known to require narrowing or
+> repair even if Theorems A--E and the formal witness survive.
+
+> **LANDING-LEDGER LL-1 R2 — MATHEMATICS PASSES, PROVENANCE R3 REQUIRED
+> (2026-08-29 02:43Z).**  Grok 4.6 review
+> `8f56d1e4f2b159bbddf170010d9ac85337639e00e3b4ea537e0cc218a7b9bcf0`
+> (body `3673da4736301d645edc4ab08ea3cb60b1563df6c565200eac7cdaa57972472f`)
+> returns `PASS_AT_LL1_SCOPE` on Fable R2 `19df817d...`/body `29e892da...`.
+> It independently confirms the `nu=1` family-I normalization, uniform D9
+> death including `s(0)=0`, empty real `UNCOVERED`, unique IIa child, and
+> the 13 admissible terminals/9 route-dead residue under the licensed P0/P1
+> rules.  Two current-source hashes in the producer do not reproduce and
+> A1's 26-shape check is tautological.  These cause no wrong mathematical
+> verdict but bar treating R2 as a reproducible trust snapshot.  Fresh R3
+> must re-pin current sources and replace or delete the false parity gate.
+
+> **K0 R2 — MATHEMATICS CONFIRMED; LEASE PRIVILEGE DESIGN UNSATISFIABLE
+> (2026-08-29 02:40Z).**  Fable5 review
+> `824e24d794e8828de6a3f5b9c9b0b40bf93305f72a06fd91275a6e89933f3602`
+> (body `5cac28d3387e56b1159577612d62c2bc01db9040e7888b54257d80e9280f6009`)
+> independently confirms the rank-432 algebra, modular witnesses, 58
+> mandatory failures, four survivors, theorem separation, and deterministic
+> battery.  It returns `PASS WITH REPAIR`: the runner requires its parent be
+> root-owned and non-writable, then asks `User=jc2k0` to create the lease in
+> that directory.  `ReadWritePaths` cannot override Unix ownership, so every
+> real run fails before mathematics.  This is fail-closed and cannot produce
+> a false verdict, but no AWS launch is licensed.  Opus owns fresh R3.
+
+> **TRIPLE02 CLOSED-SUCCESSOR R2 — REHEARSAL-SCOPE PASS, PILOT BLOCKED
+> (2026-08-29 02:40Z).**  Opus5 review
+> `e524ba78a0ebe3468259f85fec148494b5ec6c4f160941333f67013b1dfb518e`
+> (body `c4f90652eb665dad8b396150704340a12a9bef746e67d17cc5fe83ecab5b451d`)
+> confirms unchanged mathematical builders, exact archive/census claims,
+> rank bound six, and R2 decision mechanics, but demonstrates a same-UID
+> forgery: `derive_late_decision` trusts a mutable extracted tree without
+> re-verifying its manifest against the frozen archive hash.  Verdict is
+> `PASS_FOR_DISPOSABLE_LIVE_LINUX_REHEARSAL`, not pilot authorization.  The
+> cheaper and safer course is fresh R3 with decision-time archive/extraction
+> binding before spending AWS; Fable owns it.
+
+> **CASE-III TWO-POLE “INCOMING-INDEX” THEOREM — REPAIR REQUIRED;
+> Q+E5 LOCAL-INDEX CORE RETAINED (2026-08-29 02:22Z).**  Fable5 review
+> `350b5190eaae7a285510d62bc687d56fe1b0a92eedab714254d420a7995f5393`
+> (body `9cbb1a7cccb23ddf0db2d380932aecb7bdef140954727d4e46af34a25aefd681`)
+> rejects the headline of Sol producer
+> `406e78d220b62910e6296866db998bd0e7d898b2e6a618fe0aa70ffbeb73fd46`
+> (body `8a16cad9cc3211f90e86b1cc31a3fe2991f3817138ae9da4f6dbc56ddf7b5c43`).
+>
+> **Quarantine the incoming-index claim and every cap-removal consequence.**
+> R1 used `X=mu0*(kbar-nu_U*w_U)`, the printed-(g),(h) mixed reading already
+> superseded by the promoted H5a/Q+E5 correction.  At the promoted tier the
+> exact identity is
+> `mu0*nu_G*w_U=delta*kbar+mu*w`; incoming `nu_U` cancels and remains free.
+> Thus R1 bounds the wrong index, Opus's earlier bound soundly bounds neither
+> one, and `NUCAP=500` stays until the legacy solver is rebuilt on Q+E5.
+>
+> **Retain only the reading-independent arithmetic, provisionally pending a
+> repaired packet.**  For a genuine two-pole case-III merge in the difficult
+> regime, `D=nu_G*A-delta`, `A>=s>=1`, hence
+> `dq/D<=2*delta+3` and `kbar<=mu*w*(2*delta+3)`.  Fable independently swept
+> 6,346,105 cells with zero violations.  Equality has `D=1`, hence `M=1`, and
+> is MP2-dead.  With two equal nonzero arrivals the displayed constant can
+> fail (`dq/D=3*delta+4`), so the theorem is strictly two-pole.  A Q+E5 R2
+> and different-model review must precede any engine edit.
+
+> **`td=8` EQUAL-JOIN AFFINE FAMILY — PROMOTED AT RECORDED BOOK SCOPE
+> (2026-08-29 02:18Z).**  Sol producer
+> `9a778862816aa96d251c33aac7e98a2fb3bfc1b3fc7c83f4463ac862de31815a`
+> (body `bd35c43baf91c6306d4bb651a09e4886340ab7eb836ffd41d6b1ba6a85ea02d7`)
+> passed different-model Grok 4.6 review
+> `d3f378a1c5ed6a649b53885ce2d965c4fad4acad64b98df96ed2ed71ad6b2d8e`
+> (body `a53a78dbabaaa6f1c2a30247ad016b99bf2d2011132736a2e8b7c5f098552c49`).
+> Verdict: **`PASS_AT_RECORDED_BOOK_SCOPE`**.
+>
+> Promote the exact formal-cell theorem.  The unique off-axis
+> `td=8,m=2` entry has two identical `(Lambda,a,b,nu)=(4,1,2,3)` poles.
+> Each admits the printed `(21,15)` step to frame
+> `(nu,kbar,X,rho,w,M)=(7,5,7,1/3,2/3,3)` with recorded lambda lower bound
+> two.  For every integer `t>=0`, the equal join
+> `nu_G=4+3t` has
+> `(dp,dq,M,kbar,X,rho,w)=(24+18t,9+6t,3,6+4t,16+12t,2/3,4/3)`, both
+> case-II labels `37+28t`, and satisfies the full proportion/frame laws.
+> Its fixed trunk `(85,35)` has label `22+17t`, frame
+> `(kbar,X,rho,w,M)=(7,17,1/5,2/5,5)`, and terminal `j=3`, `psi=1`.
+> The three recorded lower bounds are `2+2+2=6`, exactly the printed
+> `td-1-psi` filter ceiling.  Affine identities, not the finite scan, prove
+> infinitely many distinct full cells with one reduced join state `(4/3,3)`.
+>
+> **Scope firewall.**  The recorded prices are lower bounds, not proved
+> exact costs; the family is formal book data, not a landed or geometrically
+> realizable configuration.  Proposition 8.1(iv), completeness of all
+> `td=8` merges, source landing, a degree ceiling, and JC2 remain open.  The
+> result proves that a finite reduced-state quotient does not make the full
+> cell book finite and that semilinear cell records are necessary.
+
+> **FINITE REDUCED P0 CHAIN THEOREM — DIRECT DUAL REVIEW PROMOTION
+> (2026-08-29 02:10Z).**  Sol producer
+> `239393d7747b6166544342100cfe56b9353860fc7f36cd31620f8fdd04299bad`
+> (body `8587625b2f12e486f9a3a3773ee5f4dcac7f853edcaddf69221dbab9ea7b1bcb`)
+> passed Fable5 review
+> `3dab7f080ebc9ae5568d76cb4a60085646f2365ee7a277c6a0dd8028d4135b1f`
+> / body `28fc400c6879a288f3f09a85668d3cd8e56ea88e518dfcdaaa41f26692651320`
+> and Grok 4.6 review
+> `bf4c56ae3afdd34197ff4296c8f90112c6661ca09477bf498e7d9d2b038a0912`
+> / body `c95fbe402dd4d9791290e914f7fbb9d12632400ae898ec2d9cc873db990f86a1`.
+>
+> **Promote at stated scope.** Conditional on BOOK-OFFAXIS P0, fixed initial
+> `(w0,M0)` and fixed modeled lambda budget give a finite, cap-free,
+> effectively computable reduced chain closure `(w,M)`. Zero-price moves are
+> neutral divisor drops or numerator-contracting resonances; every other
+> step costs at least one. Dirty parameters have derived finite `k`, `lex`,
+> and divisor menus, while pure-epsilon free indices are exact congruence
+> fibres. The charged `(3/2,2,B=5)` result is 69 states, 295 edges, maximum
+> numerator 3, maximum `M=25`, state hash `c2835aaf...`; the old 70 and
+> “unbounded reduced numerator/M” statements are false.
+>
+> Fable's independently derived identity
+> `E(l*a*(1+k+lex)-kbar*d*C)=l*a*T` proves the load-bearing divisibility.
+> Its phantom-absorption lemma explains why the legacy reduced map agrees
+> despite 41 reachable menus with illegal all-divisor pure-epsilon edges:
+> residue zero always realizes `M'=E`, and neutral drops simulate each
+> phantom at the same modeled price. Do not use legacy edge data as an
+> arrival-congruence certificate.
+>
+> The separate td-7 frozen-partner theorem is also promoted: on the odd
+> neutral ray, `g*((3h-4)l-2)=3h` has only `(h,l,g)=(3,1,3)`, producing
+> `(5,7,M=1)` and an MP2 kill; all odd `h>=5` are empty. Chain-1 supplies a
+> case-II, not case-III, handshake. No other partner or shape follows.
+>
+> R2 `3a7c604b...`/body `995f310e...` subsequently passed Opus5
+> implementation review `11d45eca...`/body `2f51e5d7...`; it fixes
+> minimum-cost predecessor records, adds a nonvacuous lex regression, and
+> does not alter this promoted theorem. Full-cell indices, merges,
+> consumer uniformity, landing, degree bounds, and JC2 remain outside.
+
+> **M2 BUDGET QUOTIENT — CHAIN THEOREM CONFIRMED; MERGE CLAIMS REPAIRED
+> (2026-08-29 01:55Z).**  Opus5 producer
+> `ffb83ec1fcbfbbb18573a030e80e22c20a7d78bb92a5e7a6a5ce4d7b9b96e7af`
+> (body `b161421ccb04a62307b87be4a60f130ded64fe53228bd600c960f2c502632283`)
+> received different-model hostile review
+> `5192c007536cc2b36e813c23ab16b9badba85d61bec6a56646d561c0f1ff4bfa`
+> (replayed first-36,337-byte body seal
+> `7af0e75fb1b62dd9394fd60f63de1bbbb6e5b76526f025eb4b4e393aa27506ed`).
+> Verdict: **`REPAIR_REQUIRED`**, with the following promoted-safe residue.
+>
+> For every typed pattern
+> `dp=eps+nu*P`, `dq=1+nu*s`, `M=gcd(dp,dq)`, one has
+> `M | T=P-s*eps` and `T!=0`.  If `eps=0`, use `T=P>=1`; if
+> `eps>=1`, root multiplicity excludes `dp=eps*dq`.  Thus `M` is a function
+> of `nu mod |T|`.  This is a valid uniform replacement for the older
+> conditional `M` laws, not a proof that `M | sum mu_e` survives extras.
+>
+> On the P0 **chain layer**, the repaired theorem is confirmed.  The
+> simultaneous degeneracy is `C=0 iff k=lex=0`; it yields constant reduced
+> successor data and arithmetic-progression `nu` fibres.  Negative `C` is
+> positivity-bounded and positive `C` is bounded through the case-I/II
+> integrality estimate.  Zero-cost steps divide `M` and do not increase the
+> reduced numerator; at most `B` charged steps give
+> `M<=M_entry*2^B`.  Hence the reachable reduced `(w,M)` set at fixed entry
+> and budget is finite and effective.  This does not yet certify Sol's fresh
+> implementation packet, which remains under two independent source reviews.
+>
+> Quarantine Opus Theorems 2.3 (`C_e=0` for **some** edge), 2.4 (the
+> case-III incoming-index bound), 3.3 (zero-cost merge implies `eps=0`), and
+> the whole-configuration constant in 3.5.  Theorem 4 applies to case-I/II
+> edges; applying it to a case-III zero edge fails on all 17 promoted cells,
+> and the resulting bound fails on 16.  The exact 17-cell regeneration into
+> three linear families survives.  Equal-`(mu,w)` arrivals also give a legal
+> infinite **formal local** family with constant child `w` and periodic `M`;
+> reachability, total budget, trunk termination, and the correct off-class
+> equation are unproved.
+>
+> Separate Sol theorem `406e78d2...`/body `8a16cad9...` proposes a direct
+> incoming-`nu_H` bound for every two-pole case-III merge and passes 130,095
+> bounded checks in both modes.  It remains provisional until Fable5 hostile
+> reconstruction; do not use it to alter the canonical engine yet.
+
+> **LANDING-LEDGER `td=6,m=2` HAND-RUN — CORE CONFIRMED, FALSE OPEN
+> FAMILY RETRACTED (2026-08-29 01:38Z).**  Fable5 producer
+> `26bdd150a5a4bace23069b65f3234de6080fc7fb083f46a92773ec276a6fc689`
+> (body `83fe23123f35275e551ef8d1704da1181dea9c346a4915cd0e15c6db82998700`)
+> proposes a typed, fail-closed landing ledger.  Independent Grok 4.6
+> hostile review
+> `62d8f55ee6a34ccd960121e9e64498fbb3ee3a92a8a4681fec4290fc9c7bc5da`
+> (replayed body seal
+> `88c1d66f09314e8717234b8617da84cd78a7fe95da90b31a120721272d678e79`)
+> returns **`REPAIR_REQUIRED`**.
+>
+> Promoted-safe arithmetic is the unique `(2,3)` entry with `nu=2`,
+> `W={2}`, dead root meet, unreachable ZCH, unique admitted IIa cell
+> `(2,3,1)->Q(6,12,3,2,5)`, its first P0 successor, and both terminal
+> budgets.  The record schema's full frames, explicit provenance,
+> conservative `UNCOVERED` state, and cap firewall are also retained as a
+> sound design direction.
+>
+> Quarantine Section 5.4, the proposed zero-chain lemma, `eps_q` as an
+> independent degree slot at `nu=1`, and A2 as printed.  MP6(c) absorbs the
+> eta factor at `nu=1`: Fable's `(l,eps_q=1)` cell has the same degrees as
+> family I with `L=l+1`.  Thus odd `L` is killed by `M=1` plus MP2, while
+> every even `L` is killed by D9's exact log obstruction, including the
+> `s(0)=0`/eta-normalized subcase.  The smallest purported survivor `(2,8)`
+> must be a permanent negative-control `DEAD`, not `UNCOVERED`.
+>
+> Repair by normalizing away the duplicate `nu=1` degree slot (or identifying
+> it with family I before classification), allowing an empty `UNCOVERED`
+> list, failing on any unclassified candidate or theorem-killed open row, and
+> adding the D9 mutation.  This verifies neither full grammar completeness
+> nor geometric landing/coverage.
+
+> **TRIPLE02 NODE-1 CLOSED-SUCCESSOR R1 — MATHEMATICAL SOURCE NARROWLY
+> CONFIRMED; CUSTODY REJECTED (2026-08-29 01:16Z).**  Exact Sol-ultra
+> hostile review `ad25f496...` (body seal `019ac48b...`) matches all seven
+> frozen charges and independently confirms the source-level node-2 seed
+> `(g1,g2,Delta_node1)`, no reentry into the settled `D(Delta_node1)` open,
+> structural rank bound six, the repaired two-containment saturation theorem,
+> and complete generated chart/endpoint contracts for ranks zero through six.
+> This retains a provisional mathematical payload only; no Singular result or
+> closed-successor endpoint theorem was produced.
+>
+> R1 is **`REPAIR_REQUIRED / NO AWS`**.  The late authority reads an
+> allowlisted copied candidate after freezing the archive without deriving or
+> binding it to the classifier, so a bounded `NO_VERDICT` can be replaced by
+> either positive mathematical string and the public marker can disagree with
+> the reviewed archive.  Stage results are self-hashed but not bound to the
+> current job identity/nonce or regenerated by the classifier; fabricated
+> one-line stages with no identity files pass the real classifier.  Finally,
+> neither success path has fail-safe containment after supervisor `SIGKILL`.
+> The packet also accepts an empty nonce and unmanifested empty directories.
+> Require one content-addressed decision record and marker, exact regenerated
+> job-bound stages, nonempty nonce/lease binding, exact all-member archive
+> equality, and externally owned systemd runtime/kill containment.  A fresh
+> R2 and different-model source review must precede a disposable live-Linux
+> rehearsal; only then may a bounded node-2 pilot be considered.
+
+> **D43 EXACT-SPARSE V3 CUSTODY REJECTED; MATHEMATICAL SOURCE TESTS
+> NARROWLY CONFIRMED (2026-08-29 01:00Z).**  Independent Opus5 hostile
+> review `6e01e5d7...` (body seal `1b90552a...`) replayed all five charged
+> roots, 34/34 seal entries, deterministic archive bytes, 49/49 bounded
+> fixtures, literal collapsed-D21 equality, zero production asserts, and
+> optimized-Python refusal.  Within its packet boundary it found no
+> mathematical-source regression; the explicit v2-to-v3 shared-function
+> byte diff remains unadjudicated.  `validate_exact_inventory` enforces the
+> forecast, so a future success could only say that emission reproduced the
+> preregistered 29-live/155-zero inventory, not that the run discovered it.
+>
+> V3 is **`REPAIR_REQUIRED / NO AWS`**.  The sole positive terminal authority
+> shape-checks and copies candidate digests and `exact_inventory` instead of
+> binding them.  A bounded negative control reached
+> `EXACT_A00PP_184_RAW_J_ROWS_EMITTED_NO_SOLVE` with return code zero and no
+> failed gates while carrying a wrong lease digest, `live_rows=-7`,
+> `exact_zero_rows=9999`, and a sidecar naming a nonexistent archive.  Extra
+> unmanifested directory members are also accepted.  Reparenting alone was
+> correctly caught, but one orphan gate is vacuous in each execution mode,
+> and launcher post-mortem failure is printed outside the archive without
+> gating an already-positive terminal.  Require independent binding of every
+> candidate receipt and named archive, exact inventory types/values, full
+> member-set equality, nonvacuous gate provenance, authority-bearing
+> post-mortem evidence, value-forgery regressions, and the v2 shared-function
+> diff in a fresh v4 seal before rereview.  No row, inventory, point, solve,
+> template, Keller, or JC2 claim exists.
+
+> **ASYMPTOTIC-COMPLEMENT COVER AND SMOOTH-IRREDUCIBLE RIGIDITY —
+> PROMOTED; EULER/INERTIA SCOPE REPAIRED (2026-08-29 00:58Z).**  Opus5
+> primary report `542f6212...` proposed the `ACS` mechanism; independent
+> Grok 4.6 review `54fd5073...` (body seal `75405dc8...`) separated and
+> reconstructed its claims.  For a complex Keller map of geometric degree
+> `d` with nonproperness set `A`,
+> `C^2 minus F^{-1}(A) -> C^2 minus A` is a connected finite etale cover of
+> degree `d`.  This gives Euler multiplicativity and the corresponding
+> index-`d` subgroup of the target-complement fundamental group.
+>
+> On a finite stratification of `A` by smooth connected curves `C_i` on
+> which the affine-fibre deficit is constant `delta_i`, with all
+> singularities, component intersections, and deficit jumps in `S`, the
+> correct compactly-supported identity is
+> `sum_i delta_i*e_c(C_i) + sum_{p in S} delta(p) = d-1`.  It is a signed
+> constructible-function identity: `e_c(C_i)` can be negative.  It is not a
+> positive decomposition and supplies no topological-degree ceiling.
+>
+> The repaired rigidity theorem is unconditional: if `A(F)` is empty or
+> smooth and irreducible, then `F` is a polynomial automorphism.  In the
+> nonempty case, Jelonek plus Abhyankar--Moh--Suzuki makes `A` a coordinate
+> line; the connected cover forces the reduced inverse curve to be a smooth
+> irreducible `A^1`, and a second coordinate change plus the constant
+> Jacobian makes `F` triangular.  Thus a counterexample's `A(F)` must be
+> reducible or singular.
+>
+> Per irreducible component, unmarked meridian monodromy is conjugacy-
+> invariant and the marked generic inertia profile is locally constant.
+> The latter is not determined by conjugacy in `S_d`; vertical/horizontal
+> multisets need not agree.  The proposed residue-A two-pencil test is
+> `NOT-TYPED`: the banked vertical data do not group ends by target component
+> and no horizontal finite-end list exists.  These theorems construct no
+> asymptotic curve, do not repair the target/source meridian interface, do
+> not bound `d`, and prove no landing, template, Keller-counterexample, or
+> JC2 conclusion.
+
+> **D43 TWO-FRAME NONEMPTINESS INFERENCE REFUTED; ARITH-SPREAD
+> REPLACEMENT PROMOTED (2026-08-29 00:44Z).**  Fable5 report
+> `db51f061...` found a denominator hole in the provisional C1 inference;
+> independent Grok 4.6 hostile review `8154dba9...` (body seal
+> `f567d52a...`) confirmed it.  Two honest nonempty special fibres, even at
+> complete-split frames of the promoted Galois field `K0`, do **not** imply
+> that the characteristic-zero ideal is proper.  A Bezout identity over
+> `K0` need not be integral at either frame.  The constant system
+> `{105337*105673}` (or `{105337*105673,x}`) is an exact countermodel to the
+> inference.  Retire all wording that the two banked primes form a generic-
+> nonemptiness or non-unit-ideal "shield."
+>
+> The clean finite replacement is a certificate-content theorem.  Put
+> `A_S=A[1/5]`, let `F` be one frozen finite system over `A_S`, and set
+> `I=(F) intersect A_S`.  If its `K0`-fibre is empty, then `I` is nonzero;
+> every maximal ideal `P` with nonempty geometric special fibre contains
+> `I`, so every finite product of distinct such `P` divides `I`.  Therefore
+> the product of their residue norms divides the 210-free numerator of the
+> ideal norm of `I`, and also that of every cleared Bezout content.  At the
+> two registered degree-one frames this conditional divisor is exactly
+> `105337*105673=11131276801`.  No finite census proves generic
+> nonemptiness, and no unproved estimate of the form `N(D) about 10^(5k)` is
+> available.
+>
+> The infinite-prime replacement is the Chevalley dichotomy.  For one frozen
+> finite-type `A_S`-scheme, nonempty geometric fibres over infinitely many
+> distinct rational primes imply a nonempty geometric generic fibre;
+> geometrically empty/unit-ideal fibres over infinitely many distinct primes
+> imply an empty generic fibre.  If the generic fibre is nonempty, every
+> closed fibre except finitely many is geometrically nonempty.  A single
+> `UNIT`, any finite list of `PROPER` fibres, or failure to find an `F_p`
+> point has no such characteristic-zero meaning.  Complete splitting and
+> Galois stability are conveniences, not hypotheses.  Applying either
+> theorem to a future exact-row packet still requires one frozen system and
+> the emitter-reduction gate; it proves no row, point, template, germ, Keller
+> map, or JC2 result.
+
+> **D43 COEFFICIENT ALGEBRA IS ONE DEGREE-432 FIELD — PROMOTED
+> (2026-08-29 00:33Z).**  Opus5 primary report `6d3d53c...` proves that
+> the displayed rank-432 algebra is
+> `K0=Q(zeta_168,cuberoot(3+sqrt3),cuberoot(3-sqrt3))`: its degree-48
+> pre-cubic base is `Q(zeta_168)`, and the two Kummer classes are independent.
+> Independent Grok 4.6 hostile review `07f20be...` (body seal
+> `877e451f...`) recomputed the cyclotomic maps both ways, character
+> certificates at 673 and 1009, all eight nontrivial Kummer classes, both
+> registered frames, the `p^2` replay, and the fourth-root identities.  It
+> confirms that `K0/Q` is Galois and nonabelian, its only idempotents are
+> `0,1`, its rational ramification set is exactly `{2,3,7}`, and the displayed
+> order is finite etale of rank 432 over `Z[1/42]`.  The two registered primes
+> split completely into 432 frames; that frame count is corroboration, not the
+> proof of fieldness.
+>
+> Conditional on the separately hashed bridge polynomial
+> `E=(9+5*r3)A1*W1^4+(9-5*r3)A2*W2^4` (`e1b99600...`), the explicit
+> `q0=(A2/A1)*(1+i)*(r3-1)/2` satisfies the required fourth-power ratio, so
+> Rail E is exactly the four branches `W1/W2=i^k*q0` already over `K0`.
+> This conditional theorem must be replayed if the displayed E bytes change.
+> It deletes coefficient-product/idempotent fanout and makes nonzero
+> coefficient normal forms invertible; it does not delete any W-side Fitting
+> complement or prove a row, point, raw-J existence, template survival, germ,
+> Keller map, or JC2 result.  The separate Opus certificate packet
+> `2fac39ec...` has now passed Fable5 source review `29e9496e...`/body seal
+> `df389c19...` for exactly one pinned PARI 2.15.4 rehearsal.  That review
+> independently recomputed the character witnesses and found no route to a
+> wrong positive.  The licensed AWS rehearsal returned fail-closed
+> `NO_VERDICT` terminal `d4efc712...` before either engine: `python3 -I`
+> omitted the sealed runner's directory from the module path, so its bare
+> sibling import raised `ModuleNotFoundError`.  GP was not invoked and has
+> still never been parsed.  R1's authorization/run lease is retired; R2 must
+> repair the isolated import path and all eight reviewed fail-closed design
+> defects before any new seal, review, or dual-engine terminal is credited.
+> This certificate lifecycle debt is not a defect in the promoted paper
+> theorem.
+
+> **TRIPLE02 NODE-1 PROPER OPEN — ENDPOINT DEAD, PROMOTED
+> (2026-08-28 23:55Z).**  Independent Fable5 source review
+> `b886d8bb...` passed the sealed R5 repair with the mathematical Singular
+> program fixed at `f5050f12...`.  The isolated r6d run
+> `ggv_triple02_proper_open_resume_r5_20260828T233745Z_r6d` then completed
+> production in 8.82 seconds with return code zero, zero swap, clean sticky
+> timeout/resource/containment latches, and empty PGID and job-tag orphan
+> censuses.  Its immutable terminal archive is `4b8ffc1c...`.
+>
+> Different-model terminal review by Grok 4.6 (`34265f13...`, body seal
+> `c5a1b3a6...`) independently inventoried and privately extracted the
+> archive, replayed all 489 embedded manifest hashes and all 16 worker
+> artifact hashes, reran the classifier byte-for-byte, and checked the exact
+> two-containment saturation certificate.  Both active-basis generators have
+> `Delta*b_i in I` while `I` reduces into the stable proper basis, the full
+> right transform and 424 original-row kernel checks pass, and all ten
+> coefficients of `E=x14*x72+x1*x97` reduce to zero with two nonzero semantic
+> plants.  The promoted terminal is exactly
+> `EXACT_ENDPOINT_DEAD_ON_NODE1_PROPER_OPEN_ONLY`.
+>
+> Scope is literal TRIPLE02 node 1 on `D(Delta)` in
+> `Q[q0,q2,c4,c6]` with `dp` order.  This is not a result on
+> `V(I,Delta)`, a later recursive node, the whole TRIPLE02 component, another
+> quotient component, the ambient endpoint locus, nilpotents/scheme structure,
+> or JC2.  The closed successor remains an independent required branch.
+
+> **D43 RAW-SOURCE/TEMPLATE FIREWALL AND EXACT-SPARSE RERANK
+> (2026-08-28 20:00Z).**  Independent Fable5 audit `69db2cd8...` corrects
+> the 19:08Z wording below.  The 184 pristine Euler rows on 182 essential
+> coordinates are the complete finite **raw-J truncation**, not alone the
+> intended residue-A/template source locus.  The exact elimination lemma
+> `e1b99600...`, independently checked, proves that after localizing at
+> `W1*W2`, the literal E5 pair with existential `HM`, the E6 cube tie, and
+> nonzero scale project exactly to
+> `(9+5*r3)A1W1^4+(9-5*r3)A2W2^4=0` plus one unit condition.  `HM` and
+> `s1F=(2^8/7^16)HM` can then be reconstructed and every literal tie replayed.
+> This closes only E5/E6/unit equivalence; it does not supply other upstream
+> or all-depth template equations.  Parked reconstruction remains unnecessary
+> for raw source existence and load-bearing for NF equivalence/reuse.
+>
+> Opus5 hostile audit `456edb3a...` upgrades the exact-sparse shape evidence:
+> independent source evaluation gives exactly 29 live rows in bands
+> 20/30/40, tail degree at most two, and rank 22 in the 22 tail columns at
+> each registered witness.  Hence the exact core has seven residual
+> conditions in `W1,W2`.  E5/E6 fix only their fourth-power ratio; the J rows
+> supply the common-scale condition.  The old claims `[K:K0] <= 16` and
+> degree `432 -> 6912` are false and must be removed.  Hostile packet review
+> `283d47df...` also finds that v1 retains independent `HW1/HW2` in rank-6048
+> raw `R_ext` while claiming the rank-432 `a00pp` collapse.  Its raw-D21
+> self-regression therefore cannot certify the forecast lane.  Relation-E
+> wording, source-first `HW_i=hW_i`, same-run conditional fanout, parallel f/g
+> receipts, and broken preflight/checker/test sidecar hashes require a
+> coherent v2 reseal.
+>
+> The high-Hensel schema-v2 work now binds the entire deterministic history
+> and checks E/W-units per state; the registered `p^2` point passes.  Its
+> Newton system still contains only the raw 184 rows, so no success may be
+> called template-branch evidence or survival, and any failure is local to
+> the deterministic correction history.  Recompute any intended-locus rank
+> or smoothness statement after adjoining E.  TRIPLE02 R4 is resealed with
+> the mathematical payload unchanged and custody repaired, but remains
+> review-gated.
+
+> **D43 HIGH-LIFT / EXACT-SPARSE SOURCE AUDIT AND ENDPOINT CUSTODY GATE
+> (2026-08-28 19:33Z).**  The mathematical core of the pristine-source
+> high-Hensel packet passes two independent reviews.  Producer
+> `85d59be6...`, Fable5 review `35965e65...`, and Sol hostile review
+> `17cab0b4...` agree on the exact 182-coordinate evaluator, the eight
+> identically zero nominal columns, the band-42
+> `42*S_M*G_M*(3 alpha-2 beta)*P4P1` value law, radical lifting, rank 129,
+> 55-dimensional left cokernel, and the committed all-184 `p^2` replay.
+> No wrong mathematics is found in that bounded result.
+>
+> AWS launch is still **blocked**.  The v1 resume validator checks the current
+> point but does not replay/bind the deterministic history: adding `p` times
+> a genuine kernel vector yields another valid `p^2` point accepted with the
+> old history.  The packet also lacks a route harness enforcing EC2/job/input
+> identity, timeout, RSS, zero swap, and no-orphan custody, and its
+> machine-readable forbidden-claim lists drift.  These are provenance and
+> scope defects, not a refutation of the point.  Require schema-v2 full chain
+> replay, exact firewall equality, a dedicated AWS supervisor, resealing, and
+> hostile rereview before `p^3+`.
+>
+> Exact-sparse preflight `539d6407...` proves a direct source-first lower
+> block: ten row-20 equations are affine in ten lower tails over
+> `K0[W1,W2]`, specialize to zero at both registered points, and have
+> coefficient/augmented rank four at both primes.  It also proves that the
+> published 89/101-variable slices are nonlinear and that the common
+> 22-coordinate modular support gives only shape evidence—29 quadratic live
+> rows, not an exact source point.  Promotion requires exact all-184 source
+> emission, exact E5 W quartics, exact quadratic solving, all-row replay, and
+> only then two-prime regression.  The live exact builder has seven of nine
+> orbit checkpoints and is still in `GB42`; no final g checkpoint exists, so
+> general selected-row sharding cannot consume the incomplete prefix.
+>
+> Separately, TRIPLE02 hostile R2 `fa9c8f00...` finds the repaired algebra
+> sound—self-contained saturation, `c4`, full `C`, no repivot, counts,
+> kernel replay and endpoint plant all pass—but returns
+> `REPAIR_LAUNCH_BLOCKED`.  Its supervisor misidentifies the outer `time` PID
+> as the setsid worker group while Singular escapes into another session;
+> orphan censuses are not gates, a late nonzero worker exit can preserve a
+> mathematical terminal, and one advertised transform mutation alters only
+> a counter.  No endpoint AWS verdict is licensed until containment, atomic
+> downgrade, and a real transform-entry mutation are resealed and rereviewed.
+
+> **D43 ESSENTIAL-SOURCE COORDINATE REPAIR (2026-08-28 19:08Z).**
+> Hostile review `9ad0bef5...` supersedes the coordinate-obstruction clause
+> of preflight `891096dd...`.  The eight source labels missing from the banked
+> map are offsets `39,41` in the four `tf/tg` families, i.e. absolute
+> levels 71 and 73.  In the exact source evaluator they can occur through an
+> orbit only in odd slots 39/41; their other-orbit slots 59/61 are truncated;
+> every nonzero companion slot is at least six; and every selected row has an
+> even band at most 42.  Hence none of the 184 source polynomials contains any
+> of these eight variables.  The advertised 190-coordinate zero locus is the
+> 182-coordinate essential source zero locus times affine eight-space.
+>
+> The two unmatched bank coordinates `uW1,uW2` are exact inverse-chart
+> auxiliaries, with common rows `W1*uW1-1` and `W2*uW2-1`.  Thus direct
+> source existence uses 184 pristine rows on 182 essential coordinates, or
+> 186 rows on the 184-coordinate inverse-chart extension.  Common provenance
+> for the other 32 parked rows and the 509 reducer plus 184 raw-to-NF traces
+> is not a prerequisite for a point of this source scheme; it remains
+> load-bearing for presentation equivalence and transport of banked geometry.
+>
+> The source-existence gate is still open.  Its Jacobian rank is 129, so 55
+> dependent rows require exact localized generation, a dimension-53 proof, or
+> an equivalent formal-smoothness/right-inverse theorem.  Adding the two
+> inverse rows explains the assembled rank increase `129 -> 131` without
+> invoking the other parked rows.  The existing all-184 `p^2` replay proves
+> only one first correction.  Finally, `source_rows` is a pure-y value
+> evaluator: nonzero `alpha,beta` lifting requires the exact x-side formula,
+> while the currently replayed correction is valid because both corrections
+> are zero and the code fails closed otherwise.  No `Z_p`, characteristic-zero,
+> germ, polynomial Keller, or JC2 conclusion follows.
+
+> **D43 SOURCE/NF DISTINCTION AND ENDPOINT-RESUME HOSTILE GATE
+> (2026-08-28 18:50Z).**  D43 emitter preflight `891096dd...` corrects the
+> execution dependency without promoting a point.  A separately verified
+> source scheme need not first lift all 509 elements of the modular D23
+> reduced Groebner basis: those traces are required for equivalence to the
+> banked NF presentation.  Its initial claim that source existence first
+> required a 190-to-184 coordinate descent plus exact `26+3+5` parked-row
+> provenance is superseded by `9ad0bef5...`: the eight unmatched tails are
+> invisible, the two `uW` coordinates are exact inverse auxiliaries, and those
+> parked-source obligations belong to presentation equivalence.  The rank-432
+> `H^2=6` coefficient/specialization skeleton
+> `5420b5c0...` fails closed until those gates exist; six light tests
+> `9896fb10...` pass at both registered primes and the banked `p^2` frame.
+> Even an all-row `p^2` correction would not alone be a `Z_p` point or prove
+> localized generation/formal smoothness.
+>
+> Endpoint timeout review `a5400d24...` is independently
+> `REPAIR_LAUNCH_BLOCKED`.  It confirms the proper-saturation colon dichotomy
+> and that the 257-step pure-Delta loop is mathematically futile, but rejects
+> omission of `c4`: that variable occurs in the original matrix and reappears
+> in a sealed lifted kernel, including endpoint-consumed row 97.  The repaired
+> adapter must state an inherited-saturation trust boundary or supply reverse
+> containment witnesses, bind all missing per-lane sources, reconstruct the
+> full `105 x 105` right transform, base-change exactly 11,135 entries without
+> repivoting, enforce lane-specific kernel/row/endpoint counts, and pass the
+> specified adversarial mutations.  No AWS launch is licensed before a fresh
+> hostile source review.
+
+> **TRIPLE03 COMPLETE CERTIFIED GEOMETRIC COVER — ENDPOINT DEAD
+> (2026-08-28 18:29Z).**  The root `D(Delta)` semantic replay
+> `18533774...`/custody `b367ddc1...` passes a bordered-plus-`Delta` plant
+> and an endpoint-plus-one plant in the same pinned quotient reducer.  It
+> reproduces the original delta, 21 endpoint coefficients, and 66 bordered
+> identities byte-for-byte; all actual endpoint coefficients, all 66
+> bordered identities, and all 636 full-row kernel identities reduce to
+> zero.  AWS terminal archive `db522621...` is rc0, diagnostic-clean, and
+> zero-swap.
+>
+> Scoped union theorem `dd162daa...` composes this root open with the
+> independently planted R5 `V(Delta)` archive `b31a9b14...`: its eight-node
+> finite recursion has six certified empty opens, two endpoint-dead proper
+> opens, and an empty final closed successor.  Under the two packets'
+> explicit shared residual/rank/pivot/kernel and geometric-cover contracts,
+> `E=x14*x72+x1*x97` vanishes on the complete certified fiberwise kernel at
+> every complex geometric point of the literal `q1=c8=q2=0` TRIPLE03
+> component.  Tier is exact, conditional packet-local, set-theoretic
+> geometric endpoint death.  It does **not** prove unsaturated ideal
+> membership, scheme/radical equality, reducedness, nilpotent death, another
+> component, or an ambient HENS-CT endpoint theorem.  The four capped
+> branches remain `TIMEOUT_NO_VERDICT`; Q1P03 retains its uncovered proper
+> remainder.
+
+> **IDEATION HISTORY-CHECKSUM CORRECTION / RESIDUE-A SOURCE INDEX
+> (2026-08-28 18:22Z).**  Canonical addendum `41e17e93...` supersedes the
+> `SUBST-TRANSPORT` queue item in sealed synthesis `0002169e...` without
+> altering the frozen file.  The proposed coefficient transport is a
+> duplicate of the already promoted TEMPLATE E4--E6 and existing R1/R6
+> program, not a new proof avenue.  More importantly, the inference
+> `J(f,h_1)=2g => m_{G_m}=1` is false: Proposition 4.2 tests the leading
+> bracket `J(f_F^+,h_{1,F}^+)`, which may vanish while lower layers supply
+> the full nonzero identity.  R6's live `(1,2)`, `(2,3)->(6,17)`, and
+> `(2,5)->(6,23)` towers have `m_{G_m}=2` and carry `q` in `h_2`; they are
+> exact counter-scenarios to the attempted stop step.  The row-1 exponent
+> ratio `(k_0,l_0)=(2,3)` remains valid.
+>
+> Conditional report `87cfc52b...` is sound at its repaired scope: on the
+> minimal `m_{G_m}=1` genome it gives a simultaneous two-parent Laurent
+> seed over a finite extension of `Q(sqrt(3))`.  It survives, is compatible
+> over `C`, substantially reproduces the existing E4--E6 pins, and cannot
+> close residue A or exclude the other genomes.  The authoritative deepest
+> exact carrier is instead D43 at fixed `B=84`: the reviewed modular
+> 184-variable/218-row family is nonempty at two primes and the pristine
+> 184-row source model lifts through `p^2`.  No common integral 218-row
+> model, all-row `p^2` lift, flatness, standard smoothness,
+> characteristic-zero point, germ, or Keller pair follows.  Independent
+> next-step audit `96bad83b...` returns **NO-AWS-YET** and preregisters a
+> common-ring, two-prime, parked/reducer/raw-to-NF, P4P1, and fail-closed
+> package.  Later reviews `891096dd...`/`9ad0bef5...` restrict that package to
+> NF-presentation equivalence: direct source existence instead needs the
+> rank-129 local-generation/formal-smoothness gate.  D75 and `B=168` remain
+> unauthorized/held.
+
+> **IDEATION CROSS-ROUND DISPOSITION (2026-08-28 18:06Z).**  Four sealed
+> cross-reviews (`a64a58af...`, `13db3c55...`, `80c3f0d4...`,
+> `10cee374...`) are integrated in `0002169e...`.  The two-parent Q-level
+> matcher is retired as a discriminator because its two systems are
+> identical and already solved.  The live coefficient attack is
+> `SUBST-TRANSPORT`: actual Puiseux substitution plus h-family
+> `ominus`-constant compatibility across one edge, with a direct source
+> audit of the h-index supplying `q` at the merge.  `A47.1/A47.2` are exact
+> elementary identities; `A47-BUDGET`, `RES-AV`, `Q-GHOST`, and a
+> different-to-cv injection are not promoted.  Every GGV endpoint job now
+> requires a planted nonzero NF control in addition to the reducer/parser/
+> pivot gates.
+
+> **MIXED-MULTIPLICITY ROOT WINDOW / TWO-POLE `td=6` ROOT CLOSURE —
+> PROMOTED (2026-08-28 17:53Z).**  The mixed-root integration
+> `aaa4d179...` proves, for each actual parent edge of a genuine
+> contact-zero merge at `(0,y)`,
+> `X_root=mu_e(1-w_e)=A/B` and `0<w_e<1`.  The proof uses Proposition 9.3
+> case I, Proposition 8.1(i),(iv), Statement 3.17, and the raw searrow sign;
+> it does not apply Statement 8.2 globally at the root.  If one incoming
+> `mu_e=1`, repaired MP6 yields the stronger `A=sum(mu)`, `B=r+l`,
+> `M_root=gcd(sum(mu),r+l)`, and `psi=r+l-1`.  For all `mu_e>=2`, only the
+> edgewise window is licensed: do not infer those degree formulas, `k=0`,
+> or absence of northeast roots.
+>
+> Coordinator integration `645b9424...`, following independent Sol
+> `PROMOTE` and Grok `REPAIR` cross-reviews, closes the pole-chain
+> root-meet branch at `td=6,m=2`.  The repaired proof is MP4 (two row-1 `M=1`
+> entries), MP1 (one merge), MP5/D5 strictly at nonroot pre-merge parents,
+> and the exact `W(2)={2}` depth alphabet; the root theorem requires those
+> same parents to have `0<w<1`.  Do not cite `L1a(b)` or Proposition 8.4
+> at `(0,y)`.  No AWS count is a premise.  The conclusion does not exclude
+> the interior residue `Q=(6,12,3,2,5)`, prove SF1/root landing
+> completeness, or extend to an off-axis/post-jump sector without an exact
+> incoming alphabet.
+>
+> **Datum correction:** the row-1 pole record in `SHEET6-2POLE.md` and
+> `SHEET6-LROOT.md` had slot four mistyped as `M=2`.  MP4 and Notation 8.1
+> give `M=gcd(2,3)=1`, so the corrected record is
+> `Q=(2,2,2,1,5)`.  The typo caused no derived numerical error: the depth
+> value `w=(5-2/2)/2=2` does not use the `M` slot, and every propagation
+> argument already invoked the correct `M=1` through MP4.  Frozen ideation
+> packets retain the old bytes as provenance and must not be cited for this
+> slot.
+
+> **MULTIPOLE SELECTED-EXIT ATTACHMENT / MFE INEQUALITY — PROMOTED
+> (2026-08-28 17:03Z).** Frozen producer `86b491ad...`, first hostile
+> review `ac49c025...`, repair `9f4526f2...`, independent Fable5 hostile
+> review `f55a00f5...` (`PASS-WITH-REPAIR`), and coordinator integration
+> `c74fc0f9...` close the cross-chain/shared-suffix disjointness blocker.
+> Definition 3.3 gives `I_P(t)=I_Q(t)` iff `t<=O(P,Q)`, so post-split
+> remerging is impossible and rootward segments are well-defined. The
+> selected-exit witness assignment is injective over the set-theoretic union
+> `U^full` of all pole segments; merge arrivals are excluded before pricing.
+>
+> Mandatory repair: at a pole endpoint, contact with that pole ray need not
+> equal the endpoint height. The correct invariant is
+> `min(v_j,O(P,P_j))`; it equals the endpoint height, so the ray's
+> intersection with `U^full` is still exactly the rootward interval through
+> its base. With this repair, actual-weight `(C7.1*)` proves
+> `sum lambda_F^exit<=td-1-psi`, counting a shared suffix once. This does
+> not restore printed `(22)`, literal `delta_a`, `(22-cl)`, cross-fibre
+> `kappa`, equality/slack, MP8 no-refinement, a root census, or a `td=6`
+> conclusion.
+
+> **ALL-`M=1` ROOT-MEET REPAIR — PROMOTED AT DEPTH/H1 SCOPE
+> (2026-08-28 16:59Z).** Terra producer `b8d6e686...`, different-model
+> hostile review `656c257e...` (`PASS-WITH-REPAIR`), and coordinator
+> integration `d534f083...` establish the corrected theorem. A genuine
+> contact-zero merge has `(0,y) in V_{2,a}\V_{1,a}` and is Proposition 9.3
+> case I. With lower root `F`, upper parent `G`, and
+> `P_G=i*mu` derived from Proposition 8.1(i) plus Statement 3.17, the
+> case-I equations give `X_F=D_F/i=mu(1-w_G)`. In the reviewed
+> all-`mu=1`, `r`-way anatomy, Proposition 8.1(iv)'s root top-degree
+> cancellation gives `X_F=r/(r+l)` and hence
+> `w_G=l/(r+l) in (0,1)`.
+>
+> Therefore `W={2}` excludes the all-`M=1` root meet at `td=6,m=2`
+> analytically. The historical l-free phase-3 zero is still retracted and
+> is not evidence. Root `M=1` remains legal (the local `r=2,l=1` model has
+> `w=1/3`); mixed-`mu`/off-axis/SF1 root completeness, coefficient
+> realizability, the interior residue `Q=(6,12,3,2,5)`, and any full
+> `td=6` or JC2 conclusion remain outside the theorem. The safe general
+> stabilization bound remains `d0<=2*gen(W)+2`.
+
+> **AWS QUOTIENT-NF RANK REPAIR — ALL SIX BRANCH RANKS CERTIFIED
+> (2026-08-28 16:22Z).**  R5/r6 use the required pinned ambient standard
+> basis and normal-form every entry, update and determinant.  Exact
+> residual/total ranks are `9/104` (`P`, `C8P02`), `6/101` (`Q1P02`,
+> `TRIPLE02`), and `4/99` (`Q1P03`, `TRIPLE03`).  For `P`/`C8P02`, all 11
+> formal size-10 minors have zero NF and explicit size-9 witnesses are
+> nonzero; for the other four branches the next-size structural replay and
+> lower-rank witnesses are likewise complete.  R6 result/custody hashes are
+> `84910832...` / `49e1a88d...`; terminal archives and manifests are frozen
+> with zero swap.  Strict scope is
+> `NO_VERDICT_QUOTIENT_NF_RANK_CERTIFICATE_ONLY`: no kernel endpoint,
+> Fitting component, radical, saturation or rank-locus conclusion follows.
+
+> **ROOT COMPLETENESS CORRECTION (2026-08-28 16:22Z).**  Cap repair
+> `93f98e4d...` solves MU1 exactly and makes every other uncharged
+> truncation visible as `OPEN/NO_VERDICT`; hostile re-review is active.
+> Consistency audit `160df0c0...` additionally retracts the old DEPTH/MP
+> universal root-`w<1` inference: a root merge may have `(0,y) in V_{2,a}`
+> and be Proposition 9.3 case I, so the case-IV filter cannot kill that
+> branch.  Nonroot depth invariance remains; old exhaustive root/SF1 books
+> do not.  Multipole first-exit candidate `86b491ad...` is under hostile
+> review and is not yet canonical evidence.
+
+> **AWS QUOTIENT-RING RANK/MINOR CENSUS — SIX BRANCHES RETRACTED AS
+> ADAPTER FAILURE (2026-08-28 15:38Z).**  Correction sidecar
+> `fc5957b8...` catches the Singular unreduced-representative trap: on a
+> branch whose ideal contains `q2`, the old quotient script reported a
+> nonzero factor `q2^2`.  Therefore every r2/r3 rank, minor, gcd, factor and
+> rank-locus claim for `P`, `C8P02`, `Q1P02`, `Q1P03`, `TRIPLE02`, and
+> `TRIPLE03` is `ADAPTER_FAILURE/NO_VERDICT`; the packets remain preserved as
+> failure evidence.  Only ordinary-ring `C8`, `Q1`, and `C8_Q1` censuses
+> retain their exact, census-only status.  Replacement contract: pinned
+> ambient `std(I)`, normal form after every entry/row/minor operation, an
+> explicit nonzero rank witness plus vanishing of all next minors, and a
+> mandatory `q2 mod (q2)=0` negative control.  Ambient gcd/factor displays
+> are diagnostics only.
+
+> **SIGRAY SECTIONS 7--9 AND ROOT-`M` SCOPE — COROLLARY 7.1 REPAIRED;
+> ROOT RECENSUS ACTIVE (2026-08-28 15:50Z).**  The later-`M` producer
+> `5fc6b163...` and
+> Opus hostile review `fa25c8af...` establish the local order lemma, the
+> UFD/valuation repair of Proposition 8.1, corrected Statement 8.4, and the
+> nonroot form of Proposition 8.4.  The missed Statement 8.5 congruence is
+> independently repaired by `37b83208...` and passes Terra review/addendum/
+> final gate `008a7e69...`, `70a72671...`, `a2b4d37c...`.  Corrected
+> Proposition 8.4 excludes `M=1` at nonroot down vertices only.  It has no
+> root clause.  At `(0,y)`, Statement 8.5 supplies `M_root | M_last` and
+> permits divisor `1`; Statement 8.2 is likewise nonroot only.
+>
+> Section 7's printed per-puncture subtraction and equation `(22)` remain
+> invalid/unproved.  The abstract cyclic quotient, centred cross-fibre
+> transport `tau`, EW2 orbit bridge, every-point realization, and
+> no-duplication claims pass final review.  However the fixed-baseline route
+> at reviewed SHA `cbc7d6d2...` **fails** final Terra delta gate
+> `758c0226...`: roots of `P(z)-a` need not preserve zero/nonzero coefficient
+> status, so jump/max `kappa_F` can change.  The formal witness
+> `K=e=2,n=3,P(z)=z` is decisive against that inference.  Do not promote
+> `(22-cl)` or any fixed-`b_i` Euler calculation from that report.
+>
+> A separate actual-weight repair `c253bd12...` integrates the cluster
+> weight and uses one-point proper local-degree specialization to dominate
+> the generic jump baseline.  Exact Terra hostile review `727f5850...`
+> passes the amended theorem and rejects only its superseded multiplicity
+> strengthening.  This proves the Corollary 7.1 **inequality** needed by
+> the singleton Section 9 budgets without restoring `(22)` or `(22-cl)`.
+> Combined with the disjoint singleton-chain first-separation exit sets, the
+> Section 9 producer `2763d970...` and GPT-5.5 review `0729a576...` now
+> review-close the repaired theorem `counterexample => td>=6` at the internal
+> repair tier; no root Proposition 8.4 clause is used.
+> Section 9 still does not exclude `td=6`.  Multipole shared budgets retain
+> a separate cross-chain/shared-suffix disjointness obligation.  The weaker
+> inequality also does not restore MP8's stronger equality-based assertion
+> that no refinement can charge the pure `M=1` region.
+>
+> Static consumer audit `a7fb8f1d...` finds a second blast radius: several
+> finite-state engines discard `M=1` children before recognizing root
+> signature `(nu,kappa-bar)=(1,1)`.  Pole-entry and certified nonroot kills
+> are sound, but HIII/SF1 and root-terminal censuses are undercounts; the old
+> two-pole phase-3 zero is invalid evidence until the missing `l>=1` root
+> menu is rerun.  Canonical prose and engines must distinguish `NR-M1` from
+> `ROOT-M`; no exhaustive root census may be cited before the reviewed
+> root-aware AWS replay.
+
+> **LEMMA 6.1 / PROPOSITION 6.8 AND EVERY-FIBER PROPOSITION 5.8 —
+> CAMPAIGN REPLACEMENTS PROMOTED (2026-08-28 14:00Z).**  Lemma 6.1 R2
+> `2fdbbee9...`, different-model hostile review `5193e7b0...`, mandatory
+> correction `607e0dcf...`, and integration `bb033a71...` close the last
+> outstanding review rider on Proposition 6.8.  The review independently
+> confirms the fixed-pair defect sign, common-divisibility grid, both axis
+> orientations, Proposition 4.4 transport and the residual degree
+> contradiction.  Repaired Propositions 6.7/6.8 therefore give the
+> microstep-to-next-vertex bridge without a provisional tag.  The printed
+> Statement 6.2 remains defective exactly at its omitted
+> `H in V_a cap T_a^+` hypothesis; consumers must and do establish it before
+> invoking the bridge.
+>
+> Sigray Proposition 5.8 remains a source GAP because no proof is printed,
+> but not a campaign trust gap.  The dual-reviewed relative-surface proof in
+> `SOL-PROP58.md` plus Chau 4.4 proves equation (20) for every finite fiber.
+> Independent audit `47eef092...` supplies a second internal proof by
+> transporting positive pole thresholds and their complete presentation
+> sets, preserving `d_g`, `deg p`, `kappa`, `nu`, and `Lambda`; it does not
+> assume Statement 3.14's exact `eta` alignment.  Proposition 5.4 remains a
+> separate dependency of the downstream `nu` menu and entry arithmetic.
+> Full integration record: `bb033a71...`.
+
+> **PROPOSITION 5.4 AND THE MISSING POLE DEGREE PIN — PROMOTED WITH SOURCE
+> ERRATA (2026-08-28 13:29Z).**  The printed Proposition 5.3(iv) proof misses
+> the real linear-`p`/constant-`q` bracket branch.  At the immediate
+> pre-threshold flag, however, the positive-region first relation and legal
+> common-`K` Statement 3.9 transport give
+> `alpha*deg p_(g,F)=beta*deg p_F`; hence
+> `deg p_F>=alpha>=2`.  Deck-character projectors then prove the omitted
+> Proposition 5.4 `q`-half, because every wrong component would lie in the
+> zero kernel of `alpha*p*R'-beta*p'*R`, impossible at a simple root.
+> R2 `be9e4b74...`, Opus5 review `c3f0bfde...`, coordinator integration
+> `6375bc05...`; exact checkers replay 1,788 + 943 PASS.  Proposition 5.4
+> moves from GAP to repaired ERRATUM.  Statement 5.2(i) is also an ERRATUM:
+> correct is `D_F/D_(g,F)=alpha/beta`.  Proposition 5.8 and realizability of
+> the resulting menu remain separate.
+
+> **PROPOSITIONS 6.7/6.8 — OPUS5 REVIEW CLOSED; ONE SHORT PREREQUISITE
+> REVIEW OWED (2026-08-28 13:29Z).**  Opus5 review `eb37373b...`, mandatory
+> correction addendum `050ccddd...`, and coordinator integration
+> `1e66bff1...` retain both conclusions after repairs.  The producer's
+> `h=h_G` shortcut was genuinely invalid: Proposition 6.3 gives only a tower
+> prefix.  If the child tower extends, its zero bracket forces equality of
+> the residual order/degree ratios, contradicting the strict Statement 3.11
+> inequality; otherwise Proposition 6.4 closes directly.  Opus also completes
+> the exact cyclic stabilizer and the microstep-to-vertex bridge.  Its initial
+> reciprocal-ratio and finite-threshold criticisms were wrong and are
+> withdrawn in `050ccddd...`.
+>
+> The remaining exposed prerequisite is Lemma 6.1.  Its printed last
+> inference is incomplete, but producer repair `651231a8...` gives a shorter
+> proof: a nonempty tower at `deg p_F=1` would yield
+> `q^alpha=s*p^beta`, forcing `alpha|beta`, impossible.  Fable5 review was
+> attempted but blocked by its account cap, so Proposition 6.8 and every
+> Statement 6.2 next-vertex consumer remain explicitly provisional on that
+> different-model check.  Proposition 6.7 itself is promoted.  No identified
+> downstream conclusion rolls back.  **Historical rider:** the 14:00Z block
+> above records the successful Opus5 review and supersedes this provisional
+> status.
+
+> **GGV LAMBDA-ZERO RAW COFACTOR AND FIRST ENDPOINT COMPONENT PORTFOLIO —
+> EXACT PASS / NO SURVIVOR YET (2026-08-28 13:21Z).**  R4 result
+> `7926216f...` certifies the frozen 106-by-105 matrix has generic rank 105
+> and a calibrated left kernel whose 106 raw signed-maximal-minor slots are
+> nonzero exactly at `{81,93}`.  The raw ideal stays `(M81,M93)`; after
+> factoring only for set-theoretic analysis, its rank-drop set is
+> `V(c8*q1*P)`.  The residual quotients are exactly
+> `c6-5q0^2/6144` and
+> `c8+(3/64)q0*c6-(5/131072)q0^3`, so their common zero set lies in `c8=0`.
+> No ideal or scheme equality is inferred.
+>
+> Three parallel, guarded, zero-swap AWS lanes give strict component result
+> `e0c50ab...` (custody `743877cd...`).  On generic `c8=0`, the right kernel
+> has dimension 1 and the complete endpoint pullback is zero.  On generic
+> `q1=0`, the kernel has dimension 4 and all ten diagonal/cross coefficients
+> vanish.  Six exact rational points of `P=0`, all away from `c8*q1=0`, have
+> one-dimensional kernels and zero endpoint, but this is not a function-field
+> theorem.  Combined verdict is strictly
+> `NO_VERDICT_COMPONENT_INTERSECTIONS_PENDING`; symbolic generic `P` and all
+> pairwise/triple rank-jump strata remain live.  Generic component death never
+> licenses intersection death when nullity rises.
+
+> **SIGRAY PROPOSITIONS 6.7/6.8 — PRODUCER EVENT; SUPERSEDED BY THE 13:29Z
+> REVIEW BLOCK (2026-08-28 13:04Z).**
+> Source audit `c3d6ff92...` proves the printed conclusions after exact
+> repairs.  Proposition 6.7's chosen-root argument needs cyclic
+> semi-invariance of every residual `p_(H,F)`, and its derived-`h_F` use of
+> Statement 3.9 must be replaced by Statement 3.11; the decisive inequality
+> is `m(e-n/kappa)-n(d-m/kappa)=me-nd>0`.  Proposition 6.8's printed bound
+> `d_(F_n)<=u-n/kappa` is false; the correct induction is
+> `d_(F_n)<=d_F-n/kappa`, which terminates, and the final branch represents
+> every ancestor.
+>
+> Sweep r2 `581219e0...` also corrects the earlier `d64b043c...` dependency
+> claim: Proposition 6.7 controls the one-step `G*_kappa c`, not the next
+> vertex `G+c`.  A down microstep reaches the next down vertex through
+> repaired Proposition 6.8's same-branch pole.  Therefore no current theorem
+> rolls back if these repairs pass review, but both are load-bearing for all
+> Statement 6.2 regularity consumers.  The 13:29Z block records the completed
+> review, its correction addendum and the remaining Lemma 6.1 review gate.
+
+> **UNIT-`S` RELATIVE ORDERS FOUR AND FIVE ARE REGULAR — DIFFERENT-MODEL
+> CONFIRMED WITH CHECKER REPAIRS (2026-08-28 12:48Z).**  On the reviewed
+> active-`c2`, exact-`D=0`, lambda-nonzero branch, the D12 lifts give
+> `Fbar=L^4+eps*L^3*J1+eps^2*L*H2+...`; every order-four characteristic mode
+> is regular.  At order five the only possible polar part has residue a
+> nonzero local unit times `J*(20*c2*J+3*N)`, precisely the numerator already
+> forced divisible by `A` by residual D12.  The newborn `c10` term and the
+> fifth normalized coefficient are regular.  Producer hashes `874bcd98...`,
+> `aa88f190...`; Opus5 hostile review `5df1d312...`; coordinator integration
+> `5888c28a...`; both stored checkers replay PASS.
+>
+> The review repairs evidence coverage: the order-four checker uses a
+> truncated `raw_f2` surrogate and one decorative mutation; the order-five
+> checker omits explicit `c10/f5` coverage and contains a tautological final
+> product assert.  Opus independently reconstructs full jets, all modes and
+> the product, so the theorem stands.  This is local face regularity
+> conditional on the reviewed-with-repair upstream cascade, not a raw-window
+> or endpoint result.  Stop blind order expansion after five; require a
+> structural invariance theorem or raw endpoint coupling before resuming.
+
+> **SIGRAY STATEMENT 6.2 CONSUMER SWEEP — OMITTED DOMAIN, NO IDENTIFIED
+> DOWNSTREAM ERROR (2026-08-28 12:46Z).**  The printed iff is exact, but the
+> unproved “in particular” clause needs `H in V_a cap T_a^+` before its strict
+> inequality implies `H in T_a^down`.  Initial sweep `d64b043c...` checks the
+> consumers but conflates a one-step point with the next vertex.  Sweep r2
+> `581219e0...` and the 13:04Z repair block supersede that dependency claim:
+> every regularity consumer needs repaired Propositions 6.7 **and** 6.8.
+
+> **NO FIRST CONSTANT CORNER ON `T_a^+`; CONDITION (7) RESTORED FOR EVERY
+> TARGET SHIFT — DIFFERENT-MODEL CONFIRMED (2026-08-28 12:38Z).**  For every
+> normalized Keller pair, fibre `a`, target constant `b`, and
+> `F in T_a^+`, `(g-b)^+_F` is not a scalar constant.  If it were, choose a
+> common `kappa` for the two fixed curves and descend one flag at a time.
+> Statement 3.9 keeps `d_(g-b)=0`; Statement 3.18 gives fibre multiplicity
+> `mu_f>=1`; and
+> `delta_0(child)-delta_0(parent)=1-mu_f-mu_(g-b)<=0`.  Thus the parent tower
+> is nonempty and its order relation forces the same zero-exponent corner.
+> Iteration reaches an axis, where a nonconstant polynomial cannot have a
+> scalar leading part.  Target translation preserves the normalized pair, so
+> the argument is uniform in `b` and removes the previously reported deep
+> negative-order sliver.
+>
+> Restore the **statement**, but not the circular printed justification, of
+> Sigray's p. 20 Remark.  Condition (7) is automatic on `T_a^+`; it remains a
+> genuine shifted hypothesis on `T_a^-`, supplied at punctures by the
+> separately promoted Proposition 5.1 repair.  Later `(1,0,c)` corners remain
+> possible and retain their terminal-degree/`M_F` correction.  The same
+> review confirms that Statement 3.9's printed auxiliary-`h` pole-order
+> hypothesis is load-bearing: a consumer using a derived `h_j` must refine
+> to an `h_j`-suitable `kappa` (or use Statement 3.11), rather than treating
+> fibre suitability as enough.  Opus producer `882485d6...`; Sol Ultra
+> hostile review `ca63eb5e...`; exact checker `5893a14...`; root replay PASS.
+
+> **SIGRAY PROPOSITION 5.1 FORCED-PUNCTURE REPAIR AND NON-LEAKAGE —
+> DIFFERENT-MODEL CONFIRMED (2026-08-28 12:31Z).**  At a fibre puncture `P`,
+> the unique admissible centre is `b_P=g(P)` when finite and `b_P=0` at a
+> pole.  With `A=f-a`, `B_P=g-b_P` and
+> `rho_P(v)=d_(A,I_P(v))+d_(B_P,I_P(v))+v-1`, condition (7) holds at every
+> flag; `rho_P` is continuous, nonnegative and nonincreasing, has slope at
+> most `-1` while positive, and has a unique first rational zero `u_P`.
+> That zero is exactly the first nonzero leading Jacobian.
+>
+> The threshold `F_P^*=I_P(u_P)` is in `T_a^+` exactly when `g(P)=infinity`
+> and in `T_a^-` exactly when `g(P)` is finite; it never lies in `T_a^0`.
+> A zero-bracket degree-ratio limit proves this sidedness without Proposition
+> 4.4 or a derived-`h` use of Statement 3.9.  Hence the repaired all-puncture
+> definition does **not** leak finite thresholds into `T_{a,pole}`: the pole
+> set, its `m=0`, `M`, `Q`, `Lambda` data and the topological-degree mass
+> formula are literally unchanged.  The repair also proves the source's
+> unproved Statement 7.2 and supplies Proposition 7.3's missing shift/(7)
+> step.  At the unique `d_(f-a)=0` flag, sided tower length is undefined and
+> the leading-Jacobian predicate must be used instead; Proposition 7.2 and
+> the rest of §§7--9 remain outside this promotion.
+>
+> The producer checker replays 54,854 grouped checks.  Opus independently
+> reconstructed the Laurent bracket and threshold laws and found a genuine
+> checker-coverage hole: the producer's constant-`q` tests cannot detect a
+> bracket-sign mutation, although Opus's independent nonconstant-`q` ring
+> check verifies the sign.  Producer SHA `a0470416...`; checker
+> `f719ef53...`; Opus5 review `dc549047...` (`REPAIR`); coordinator
+> integration `11059166...`; root replay PASS.
+
+> **COMPLETE FIXED UPPER BRANCH-P ENDPOINT FIXTURE — FIELD-VALUED EMPTY IN
+> CHARACTERISTIC ZERO; DIFFERENT-MODEL CONFIRMED (2026-08-28 06:23Z).**
+> Continue from the independently reviewed complete-mode prefix through D17.
+> Retain live `c8`, possibly nonzero `c16`, and all nine characteristic
+> modes.  Successive exact polynomial-window conditions give
+>
+> `D18: c18=0`,
+> `(3B/4+c8/2)E+3C^2/8-N/2=A^2*O`,
+>
+> `D19: (3B/4+c8/2)H+3CE/4-O/2=A^2*P`,
+>
+> `D20: c20=0`,
+> `(3B/4+c8/2)J+3CH/4+3E^2/8-P/2=A^2*S`,
+>
+> `D21: (3B/4+c8/2)K+3CJ/4+3EH/4-S/2=A^2*U`.
+>
+> Here `E,H,J,K` are the exact cross-term-completed defects recorded in the
+> frozen packet.  The new modes are killed only at their birth rows: if
+> retained causally, D19's `c18` predecessor/same-row pieces are `+9/-9`
+> times `c18*A'/A^2`, and D21's `c20` pieces are `+12/-12` times
+> `c20*A'/A^3`; each pair cancels.
+>
+> After D21, the complete `g22` has A-exponent support
+> `{-2,0,2,4,6,8}`.  Raw `G22` is absent and the literal convention gives
+>
+> `D22_raw=-L22(g22) in (A)`, `A=X^4-1`.
+>
+> The authoritative endpoint target is the full polynomial identity
+> `D22(X)=1`, impossible because `A` is nonconstant.  This is not merely a
+> constant-jet contradiction.  An optional homogeneous `c22/A^5` is
+> annihilated by `L22` and cannot change it.
+>
+> Grok46 independently rebuilt the nine-mode recurrence through weight 22,
+> all 100 raw D18--D22 coefficients, the literal `G18..G21` window ranks
+> `5,3,2,1`, endpoint sign and mutations, and passed 289/289 checks.  Two
+> separate Sol packets independently replay all 513 generators, literal
+> windows, endpoint sign and scaled first-residual mutations.  **RETIRE the
+> fixed endpoint and every one of its
+> tail specializations.**  Promote only characteristic-zero field-valued
+> emptiness of this fixed `A=X^4-1,V0=1` fixture.  This is not a scheme unit,
+> the full q1-negative locus, the genuine general-`V0` branch-P family,
+> another GGV branch, a Keller-pair theorem, or JC2.  Producer SHA
+> `ecf83ac...`; Grok46 review SHA `a294cdf7...` (`PASS`); independent Sol
+> endpoint packet SHAs `2b134d94...` and `cd24f249...` (both `PASS`).
+
+> **CUTOFF-3 AWS MODULAR R2 — ORDERLY SUPERSEDED STOP / NO MATHEMATICAL
+> EVIDENCE (2026-08-28 06:27Z).**  The complete reviewed fixed-fixture
+> D18--D22 endpoint contradiction strictly subsumed the six modular
+> discovery charts while all six logs still contained only their 78-byte
+> census headers.  The immutable pre-stop snapshot contained no terminal,
+> resource, return-code, standard-basis, unit, certificate, point, or result
+> marker.  The registered stop command revalidated PID=PGID, SID, and
+> namespace membership, then sent TERM to exactly PGIDs
+> `384230,384248,384266,384284,384302,384320`; it sent no KILL.  Worker
+> failures caused the runner to write only operational incomplete/stop
+> markers, stop its guard, and exit naturally.  Every final log adds only
+> post-signal `halt 1`, which is not algebraic evidence.
+>
+> Final registered-SID, hostwide-Singular, namespace-path, descendant and
+> orphan censuses are empty; available memory is 514,946,308 KiB and swap is
+> zero.  The inner 39-entry evidence manifest, complete 43-member archive,
+> and final eight-entry custody manifest replay.  Therefore each chart is
+> exactly **OPERATIONAL SUPERSEDED STOP — NON-EVIDENCE**, not a unit,
+> nonunit, point, timeout, or counterexample result, and the subsumed target
+> must not be restarted.  Stop-report SHA `424a556b...`; archive SHA
+> `b7988ca2...`; final-custody-manifest SHA `47dc1345...`.
+
+> **FULL FIXED BRANCH-P `D16`--`D17` CONTINUATION — DIFFERENT-MODEL
+> CONFIRMED (2026-08-28 06:02Z).**  Continue from the reviewed D15 prefix and
+> define
+>
+> `B=F8-Y/2-TZ/8-QV/16-R^2/4`,
+> `C=F9-QR/2-TV/16-YZ/8`.
+>
+> The complete weight-sixteen coefficient is
+>
+> `polar(g16)=(3B^2/8+c8*B/2+c16)/A^2`,
+>
+> so the literal polynomial `G16` window requires
+>
+> `3B^2+4c8*B+8c16=8A^2*M`.
+>
+> This uniquely determines `c16` when continuation exists but does not kill
+> it: literal all-row-zero fixtures require `c16=+3/8` and `-3/8`.  Under
+> the additive `F8` gauge, the fixed coordinates are
+>
+> `Bhat=B+2c8/3`, `J16=c16-c8^2/6`,
+> `(3/8)Bhat^2+J16=A^2*M`.
+>
+> Before applying D16, D17's predecessor `+6c16*A'/A` and same-row
+> `-6c16*A'/A` cancel exactly.  After the D16 relation, polynomiality is
+>
+> `(3B+2c8)C-2M=4A^2*N`.
+>
+> Both `A`-adic lifts are live; stopping after one factor leaves an explicit
+> nonzero literal D17 residual.  Four lower-window equations `C16,0/1` and
+> `C17,0/1` join the retained `C13--C15` core without normalization.
+>
+> Grok46 independently reconstructed the nine-mode recurrence and literal
+> D16/D17 rows, replayed all 513 generators, gauges, both-sign points and
+> mutations, and passed 361/361 checks.  **CONTINUE at D18 with `c18,c20`
+> retained.**  `K17_uniform=(3B+2c8)C-2M` is only a structural ancestor
+> candidate of the cutoff-three invariant; no transport is asserted.  This
+> is a characteristic-zero field-point necessity on the fixed fixture, not
+> endpoint emptiness, scheme divisibility, unrestricted branch P, a Keller
+> theorem, or JC2.  Producer SHA `4f7b363a...`; Grok46 review SHA
+> `c2015d74...` (`PASS`).
+
+> **FULL FIXED BRANCH-P `D14`--`D15` CASCADE — DIFFERENT-MODEL CONFIRMED
+> AFTER CAUSAL REPAIR (2026-08-28 05:32Z).**  Continue from the reviewed
+> D8--D13 prefix and put
+>
+> `Delta7=F7-T/2-QZ/8-RV/16`.
+>
+> The complete weight-fourteen coefficient and raw leading class are
+>
+> `polar(g14)=3*Delta7^2/(8*A^2)+c14/A`,
+> `D14_raw=-3*A*A'*Delta7^2  (mod A^2)`.
+>
+> The order-two square first forces `A|Delta7`.  After writing
+> `Delta7=A*U`, the sole remaining pole is `c14/A`; the literal polynomial
+> `G14` window has matrix shape `26x10`, rank `10`, nullity `0`, so it cannot
+> store that rational mode and polynomiality forces `c14=0`.
+>
+> The causal order matters.  Before imposing the D14 conclusion, D15 has
+> same-row contribution `-3*c14*A'` and predecessor mixed contribution
+> `+3*c14*A'`; they cancel exactly.  Thus D15 does **not** independently kill
+> `c14`, correcting the superseded same-row-only claim.  With `c14=0`, put
+>
+> `Delta8=F8-TZ/8-QV/16-R^2/4`.
+>
+> Then
+>
+> `polar(g15)=-3*U^2/(16*A^2)+U*(3*Delta8/4+c8/2)/A`,
+> `D15_raw=(3/4)*A*A'*U^2  (mod A^2)`,
+>
+> so `A|U` and
+> `F7=T/2+QZ/8+RV/16+A^2*Y`; `c8` survives.  The live lower-window
+> equations `C13,C14,C15` depend on the gauge-invariant
+> `H0=c8/2+3*F8(0)/4` and are retained, not solved away.
+>
+> Grok46 independently rebuilt the Laurent recurrence and raw D13--D15
+> rows, replayed all 513 generators, verified the cancellation, rank test,
+> literal `c8=1` survival point, gauges and mutations, and passed 334/334
+> checks.  **CONTINUE provisionally at D16.**  This remains a
+> characteristic-zero field-point necessity on the complete fixed fixture,
+> not scheme divisibility, cutoff emptiness, unrestricted branch P, a
+> Keller-pair theorem, or JC2.  Producer SHA `830639ec...`; corrected
+> Grok46 review SHA `e4788bb8...` (`PASS`).
+
+> **FULL FIXED BRANCH-P `D10`--`D13` SQUARE-DEFECT CASCADE —
+> DIFFERENT-MODEL CONFIRMED (2026-08-28 05:07Z).**  Continue from the reviewed
+> D8/D9 prefix
+>
+> `T=A*V`, `F4=V/16+Z^2/64+A^2*R`, `c6=0`, `A=X^4-1`.
+>
+> At D10 put `Delta5=F5-R/2-Z*V/64`.  The complete born-mode schedule has no
+> competing pole and
+>
+> `polar(g10)=3*Delta5^2/(8*A^2)`,
+> `D10_raw=-9*A*A'*Delta5^2  (mod A^2)`.
+>
+> Hence `Delta5=A*S` field-radically.  D11 then has
+>
+> `polar(g11)=-3*S^2/(16*A^2)+(c10/4+(3/4)S*Delta6)/A`,
+> `Delta6=F6-R*Z/8-V^2/256`,
+> `D11_raw=(15/4)*A*A'*S^2  (mod A^2)`.
+>
+> The order-two class first forces `S=A*Q`; only after that substitution is
+> `c10/(4*A)` the sole pole, with
+> `D11_raw=-3*c10*A^2*A' mod A^3`, so scalar `c10=0`.  Thus
+>
+> `F5=R/2+Z*V/64+A^2*Q`.
+>
+> At D12 redefine
+> `Delta6=F6-Q/2-R*Z/8-V^2/256`.  Then
+>
+> `D12_raw=-6*A*A'*Delta6^2  (mod A^2)`,
+>
+> so `Delta6=A*S`.  D13 gives
+>
+> `D13_raw=(9/4)*A*A'*S^2  (mod A^2)`,
+>
+> hence `S=A*T` and
+>
+> `F6=Q/2+R*Z/8+V^2/256+A^2*T`.
+>
+> There is no D10/D12 mode kill and no second D13 mode consequence; `c12`
+> is the exact additive `G12[X^0]` gauge.  All nine modes remain serialized,
+> and two literal gauge points requiring `c16=+3/8` and `-3/8` replay against
+> all 513 generators.
+>
+> Grok46 independently reconstructed the raw rows and Laurent/square-root
+> calculations, isolated every omitted cross term (`ZV/64`, `Q/2`, `RZ/8`,
+> `V^2/256`), and passed 499 checks with no falsifier.  **CONTINUE at D14.**
+> These are characteristic-zero field-point necessities only, not scheme
+> divisibility, endpoint or cutoff emptiness, unrestricted branch P, a
+> Keller-pair theorem, or JC2.  D10/D11 producer report SHA `e24eb71b...`;
+> D12/D13 report SHA `e0f9037a...`; Grok46 review SHA `9363d7cc...` (`PASS`).
+
+> **CUTOFF-3 AWS MODULAR R1 — CONTAINMENT ABORT / NO MATHEMATICAL EVIDENCE
+> (2026-08-28 04:51Z).**  The immutable six-chart modular `core` launch passed
+> analyzer/source/evidence replay, r6d identity, pinned Singular hash,
+> 390-GiB memory and 86-GiB disk gates, and zero swap.  Immediate live-tree
+> audit found that GNU `timeout` had placed each Singular process in an
+> unrecorded inner PGID, so guard RSS and termination coverage were false.
+> The coordinator terminated the six namespace-validated inner groups; the
+> delegated stop separately validated and terminated the remaining
+> runner/guard group.  No unvalidated process was signalled, no KILL was
+> needed, final namespace census was empty, and swap remained zero.
+>
+> Every chart log contains only `SCOPE=core`, its chart, `FIELD=mod`, the
+> 37-generator/57-variable census, a blank line, and wrapper `halt 1`.
+> There is no rc, completed basis, `STD_SECONDS`, `UNIT`, certificate, point,
+> or terminal algebraic marker.  Therefore the run is **OPERATIONAL ABORT —
+> NON-EVIDENCE**, not a timeout, unit, nonunit, or point result.  Repair must
+> cover actual Singular RSS/termination and pass a live descendant-death
+> regression in a new immutable source/run namespace before relaunch.
+> Abort-report SHA `29445b3a...`; custody-R1 manifest SHA `f45db4a2...`.
+
+> **FULL FIXED BRANCH-P `D8` MODE KILL AND `D9` SQUARE DEFECT —
+> DIFFERENT-MODEL CONFIRMED (2026-08-28 04:49Z).**  Continue on a
+> characteristic-zero field point of the complete 303-variable fixture from
+> the reviewed conclusions
+>
+> `T=A*V`,  `F4-V/16-Z^2/64=A*W`,  `A=X^4-1`.
+>
+> The complete characteristic continuation retains
+> `c4,c6,c8,c10,c12,c14,c16,c18,c20`.  At weights eight and nine only the
+> first three have causal support.  The full weight-eight coefficient has
+>
+> `polar(g8)=3*c6/(32*A)`,
+>
+> while every base, `c4`, and `c8` contribution is polynomial.  Hence the
+> same `D8` equation has the additional exact consequence `c6=0`; its raw
+> sign is
+>
+> `D8_raw=-(9/4)*c6*A^2*A'  (mod A^3)`.
+>
+> With this scalar mode killed, the complete negative part at weight nine is
+>
+> `-3*W^2/(16*A^2)+(3*F5*W/4-3*V*W*Z/256)/A`,
+>
+> so
+>
+> `D9_raw=(21/4)*A*A'*W^2  (mod A^2)`.
+>
+> Since `gcd(A,A')=1` and `A` is squarefree in characteristic zero, `D9=0`
+> forces `A|W` on field points.  The ordering is load-bearing: before
+> `c6=0`, `g9` contains `-c6/(128*A^3)`, so a direct D9 square-defect proof
+> is false.
+>
+> Grok46 independently rebuilt every frozen raw coefficient in `D4..D9`
+> (201 coefficients, 10,960 terms), rederived the Laurent and square-root
+> expansions, replayed the source mutations, and passed 189 hostile checks.
+> Polynomial `G8/G9` additions, gauges, mixed modes, nonconstant `W`, and a
+> fake polynomial `k6` do not cancel the obstruction.  The prompt's extra
+> `f` in a 65-character charged hash was a custody transcription only; live
+> bytes match the frozen 64-hex digest.
+>
+> **CONTINUE at D10.**  This is a characteristic-zero field-radical
+> necessary cascade on the fixed fixture.  It is not scheme divisibility,
+> cutoff-two/three emptiness, unrestricted branch P, a Keller-pair theorem,
+> or JC2.  Producer report SHA `ccf78403...`; checker SHA `f4e40d33...`;
+> different-model Grok46 review SHA `0a075a73...` (`PASS`).
+
+> **OPUS5 CUTOFF-TWO FIVE-MODE REDUCTION — FAILED; CORRECTED NINE-MODE
+> SUBCLAIMS SEPARATELY RETAINED (2026-08-28 04:15Z).**  Independent exact
+> reconstruction confirms the charged report's 303-variable/513-generator
+> source census, the two absent-coordinate additive gauges, the triangular
+> `R_n=G_n-(3/2)H*F_n` absorption identity, and the count of five free
+> polynomial characteristic modes.  Its central Theorem D is nevertheless
+> false: in `K[X]_A[[t]]` the continuation through weight 21 also contains
+>
+> `c14*t^14*F^(-1/4)+c16*t^16*F^(-1/2)`
+>
+> `+c18*t^18*F^(-3/4)+c20*t^20*F^(-1)`.
+>
+> These four constants are not free raw kernels, but raw polynomiality can
+> force them to unique nonzero values.  Literally, with
+> `U=A^2+t/2`, `F=U^2+t^8`, and `G=U^3`, all raw rows through `D21` and the
+> mathematical `D22` vanish, while the continuation has
+> `c8=-3/2,c16=3/8`.  The five-mode endpoint leaves
+> `-3/(512*A^14)`; the omitted `c16` term cancels it.  This is a cover-free
+> raw counterexample to the claimed equivalence, not merely a wording defect.
+>
+> After replacing `Phi22` by the complete nine-mode coefficient
+> `widehat(Phi22)`, the endpoint calculation survives exactly:
+>
+> `D22=1 <=> A^5*widehat(Phi22)=X^5/40-X/8+gamma`.
+>
+> At least three roots of `A=X^4-1` then carry exact order-five poles (the
+> possible fourth carries order three).  The independent polynomial identity
+> `2G*E(F,G)=E24(F,G^2-F^3)` and its triangular converse also survive, as do
+> the source/gauge/absorption claims above.  The advertised 96+5 exact
+> reduction, truncated endpoint, broad claim that the tail-five mechanism
+> fails, and incomplete INEQ plan do not survive.  A successor must retain
+> `c14,c16,c18,c20`, their lower-window determination, and
+> `Xi=G^2-F^3`, then pass the literal gauge mutation.
+>
+> **PROMOTION FIREWALL:** no cutoff-two point, exclusion, full branch-P,
+> Keller-pair, or JC2 conclusion follows.  Charged Opus5 SHA
+> `4facfc4a...`; independent Sol audit SHA `a080f03b...`
+> (`FAIL AS AN EXACT REDUCTION; substantial salvageable core`).
+
+> **TAIL-4 SQUARE-TAIL ENDPOINT STRATUM — DIFFERENT-MODEL CONFIRMED EMPTY
+> ON CHARACTERISTIC-ZERO FIELD POINTS (2026-08-28 04:09Z).**  In the frozen
+> upper branch-P specialization with every raw deformation parameter of
+> weight below four equal to zero, the literal prefix has 286 retained
+> variables, rank `76`, nullity `210`, and 375 remaining generators.  The
+> endpoint is exactly `1+p32*p171-p86*p91=0`, with all four carriers retained.
+>
+> Eight exact squarefree radical steps through `D15` give, with
+> `C=X^4-1` and `H=C^2`,
+>
+> `F4=H*V`, `F5=V/2+H*R`, `F6=R/2+H*U`, `F7=U/2+H*Q`.
+>
+> Monic eliminations then give the carrier
+> `c=b*s+(3/4)*v*r+(3/16)*v^2` and three scalar equations in
+> `x=V0,v=R0,r=U0,b,h`.  The additive slice `F8[X^0]=0` is a literal
+> determinant symmetry, not a carrier normalization.  Rows through `D18`
+> add the exact invariant `v*(b*v+r^2)=0`.
+>
+> On `v=0`, a frozen six-generator polynomial cofactor packet reconstructs
+> the literal constant `1` from the endpoint, carrier relation, scalar core,
+> and `v`, with no division.  On `v!=0`, putting `tau=r/v` gives
+>
+> `x=(tau^2/2)*(12*tau^2+6*tau+1)`,
+>
+> `v=-(3/4)*tau^2*P3(tau)`,
+> `P3=(4*tau+1)*(16*tau^2+6*tau+1)`.
+>
+> An exact ten-cofactor combination of staged compatibilities through `D20`
+> is `tau^9*P3(tau)^3`.  Since the open condition forces
+> `tau*P3(tau)!=0`, this is impossible.  Its fourteen literal source rows
+> lie in `D17`--`D20`; the endpoint and `D21/D22` are not used on the open
+> branch.  The displayed roots of `P3` are only points on the already-closed
+> `v=0` boundary.
+>
+> Grok46 independently rebuilt the specialization from the pinned raw
+> recurrence, every progressive compatibility/remainder model, scalar and
+> carrier formula, `D18` provenance, both certificates, and hostile
+> mutations using fresh exact code.  No mathematical defect or missed field
+> branch was found.
+>
+> **STOP tail 4.**  The eight divisibility steps are field-radical, so this
+> is not upstream scheme emptiness.  It excludes only the fixed cutoff-four
+> square-tail endpoint specialization; it does not exclude cutoff three,
+> unrestricted branch P, another GGV branch, a Keller pair, or JC2.
+> Producer RESULT SHA `f5b3b6ec...`; different-model Grok46 review SHA
+> `adbe2aa4...` (`PASS`).
+
+> **FULL FIXED BRANCH-P `D7/D8` SQUARE-DEFECT THEOREM — INDEPENDENTLY
+> CONFIRMED AFTER LOCAL REPAIR (2026-08-28 04:00Z).**  Let `A=X^4-1` in the
+> complete 303-variable fixed branch-P fixture, with the reviewed head
+>
+> `F2=(1+A^2*Z)/4`, `F3=(Z+A*T)/8`.
+>
+> Fresh exact Laurent arithmetic and literal raw-row mutations confirm the
+> universal polar identities
+>
+> `A^2*(F^(3/2))_7 = -(3/1024)*T^2 mod A`,
+>
+> and, after the first field-radical consequence `T=A*V`,
+>
+> `A^2*(F^(3/2))_8 = (3/8)*(F4-V/16-Z^2/64)^2 mod A`.
+>
+> The complete characteristic-mode census through weights seven and eight
+> cannot cancel either order-two pole.  In particular
+> `(F^(3/4))_2=3/(32*A)+(3/16)*A*Z` has exact pole order one.  Therefore
+> every characteristic-zero field point satisfies
+>
+> `D7=0 => A|T`,
+>
+> `D8=0 and T=A*V => A|(F4-V/16-Z^2/64)`.
+>
+> Literal raw data also give a point satisfying rows through `D6` with
+> `T=1`, so `D7` is the first forcing row.  The producer's displayed sign
+> for the intermediate operator image required repair:
+> `L7((F^(3/2))_7)=-(27/256)*A*A'*T^2 mod A^2`, while the raw `D7` residual
+> has the opposite positive sign.  This does not affect divisibility.
+>
+> **CONTINUE the uniform cascade.**  These are necessary field-radical
+> conditions, not a raw-ideal unit or an emptiness theorem for cutoff two or
+> three.  They make the cutoff-three `D7/D8` steps and cutoff-four `D8` step
+> specializations of one full-fixture identity; they prove nothing about an
+> unrestricted branch-P family, another GGV branch, a Keller pair, or JC2.
+> Grok46 producer SHA `f6950b25...`; independent Sol audit SHA
+> `d2ab35e1...` (`REPAIR / promote Theorems 1--2`).
+
+> **TAIL-5 SQUARE-TAIL ENDPOINT STRATUM — DIFFERENT-MODEL CONFIRMED EMPTY
+> ON CHARACTERISTIC-ZERO FIELD POINTS (2026-08-28 03:43Z).**  In the frozen
+> upper branch-P specialization with every raw deformation parameter of
+> weight below five equal to zero, exact progressive elimination and six
+> squarefree radical steps give
+>
+> `F5=H*V`, `F6=V/2+H*R`, `F7=R/2+H*Q`, where `H=(X^4-1)^2`,
+>
+> together with the literal endpoint `1+a*b-c*d=0`, the exact carrier
+> reconstruction `c=(3/16)*V0*(V0+4*R0)`, and three scalar core equations.
+> The additive slice `F8[X^0]=0` is licensed because that coordinate occurs
+> in no determinant generator; no endpoint carrier is normalized or
+> inverted.
+>
+> Rows 16--17 add the tracked invariant
+> `K17=V0*(b*V0+R0^2)=0`.  On `V0=0`, a frozen six-generator,
+> division-free cofactor identity reconstructs `1` from the endpoint,
+> carrier relation, scalar core, and `V0`.  On `V0!=0`, putting
+> `tau=R0/V0` reduces the core to `12*tau^2+6*tau+1=0`; exact reduction in
+> `Q[tau]/(12*tau^2+6*tau+1)` makes `1` a linear combination of eight
+> tracked row-16--18 compatibilities.  The rational expansion has thirteen
+> nonzero rows and exact ranks `20/38/58`; no endpoint equation and no
+> `D19` or later row enters this second certificate.  The two branches are
+> exhaustive over a field, hence the entire fixed tail-5 endpoint stratum
+> has no characteristic-zero field-valued point.
+>
+> Fable5 independently rebuilt all 513 raw determinant generators, the
+> 252-variable specialization, prefix rank `89`/nullity `163`, all 312
+> substituted constraints, every radical model and carrier lift, `K17`,
+> both unit certificates, their literal-source provenance, and six hostile
+> mutations using fresh code rather than the producer analyzer.  It found
+> no mathematical defect.  The only nits are documentation-level, including
+> a second unused additive gauge line on `G12[X^0]`.
+>
+> **STOP tail 5.**  This is a field-radical theorem, not scheme emptiness.
+> It excludes only the fixed square-tail cutoff-five specialization; it does
+> not exclude cutoff four, unrestricted branch P, another GGV branch, a
+> Keller pair, or JC2.  Producer RESULT SHA `a4f627c1...`; different-model
+> Fable5 review SHA `0312ef63...` (`PASS — independently confirmed as
+> stated`).
+
+> **TAIL-6 SQUARE-TAIL ENDPOINT STRATUM — DIFFERENT-MODEL CONFIRMED EMPTY
+> ON CHARACTERISTIC-ZERO FIELD POINTS (2026-08-28 02:31Z).**  In the frozen
+> upper branch-P specialization with every raw deformation parameter of
+> weight below six equal to zero, the literal endpoint generator is
+>
+> `-1-p32*p110=0`, with `p32=G_15[X^1]` and `p110=F_7[X^0]`.
+>
+> Hence both carriers are units at every endpoint field point, without any
+> normalization.  Exact progressive elimination of row 12 identifies its
+> compatibility space with the coefficients of `F_6^2` modulo
+> `(X^4-1)^2`; row 13 then identifies the next space and scalar obstruction.
+> Field-radical reduction gives
+>
+> `F_6=(X^4-1)^2 V`, with `V_0=0` or `V_0=4*p110`.
+>
+> On each branch, tracked row-14/15 elimination reconstructs `p110^2`
+> directly from substituted literal source rows.  The two sparse witnesses
+> are independently reproduced by Fable5, including all twelve selected-row
+> hashes and progressive provenance.  Together with the endpoint generator,
+> either branch is the unit ideal by the division-free identity
+>
+> `1=(1-p32*p110)*(1+p32*p110)+p32^2*p110^2`.
+>
+> Fable5 rebuilt the 220-variable, 260-prefix-equation system from the pinned
+> raw source, independently recomputed rank `98`, nullity `122`, all 253
+> remaining constraints, every row-12--15 rank and compatibility, both
+> sparse witnesses, and two live mutations with nonzero exact residuals.
+> It also confirmed that no `D23`, `G22`, localization, normalization,
+> Singular run, modular inference, or AWS calculation enters the proof.
+>
+> **STOP tail 6.**  Rows 12--13 use field-radical implications, so this is a
+> characteristic-zero field-valued emptiness theorem, not a scheme-level
+> certificate for the unreduced upstream ideal.  It excludes only the fixed
+> square-tail cutoff-six specialization; it does not exclude cutoff five,
+> unrestricted branch P, another GGV branch, a Keller pair, or JC2.
+> Producer SHA `c62acd1b...`; different-model Fable5 review SHA
+> `040583c6...` (`CONFIRMED`, with one non-load-bearing upstream weight-file
+> manifest note).
+
+> **TAIL-7 SQUARE-TAIL ENDPOINT STRATUM — DIFFERENT-MODEL CONFIRMED EMPTY
+> ON CHARACTERISTIC-ZERO FIELD POINTS (2026-08-28 01:53Z).**  In the frozen
+> upper branch-P specialization with every raw deformation parameter of
+> weight below seven equal to zero, the literal endpoint generator is
+>
+> `-1-p32*p87=0`, with `p87=F_7[X^0]`.
+>
+> Hence `p87` is a unit at every endpoint field point.  Exact row-14
+> elimination has rank ten on the eleven same-row slots and leaves sixteen
+> homogeneous quadrics supported exactly on `p78,...,p87`.  A row-21
+> compatibility is `-(3/4)*p86*p87^2=0`, so in characteristic zero
+> `p86=0`.  Homogeneity then licenses dehomogenizing this necessary row-14
+> subsystem at `p87=1` without asserting a torus action on the full residual.
+> The resulting sixteen quadrics in `p78,...,p85` have ordered-term SHA
+> `30607ce7...`, byte-identical to the frozen eight-variable block.  That
+> block has both the audited AWS literal `J[1]=1` and a separately replayed
+> exact identity `1=sum h_i*f_i` with eight nonzero degree-two cofactors.
+> Thus the entire characteristic-zero **field-valued tail-7 endpoint
+> stratum is empty**.
+>
+> Opus5 clean-room review independently reproduced the source hashes,
+> endpoint generator, every triangular rank, the row-21 monomial, all
+> sixteen row-14 quadrics, the byte match, a live mutation, and the direct
+> cofactor expansion.  It also found that row 21 is redundant: the
+> `p87=1` row-14 block is already a unit with `p86` free, and it assembled an
+> ephemeral whole-ideal certificate over `Q`.  Those stronger scheme and
+> positive-characteristic extensions remain provisional until their new
+> cofactors are frozen; the promoted theorem is the producer's narrower
+> characteristic-zero field statement.
+>
+> **STOP tail 7.**  This excludes only the fixed square-tail specialization;
+> it does not exclude tail 6, the unrestricted branch-P endpoint family,
+> another GGV branch, a Keller pair, or JC2.  Producer SHA `8eed5736...`;
+> different-model Opus5 review SHA `a0803865...` (`CONFIRMED`, with only
+> conservative scope/structure repairs).
+
+> **ZERO-TAIL ARTIN SECTION — WHOLE CLASS TOWER AND ALGEBRAIC-PRIMITIVE
+> FILTER PASS, BUT THE RAW ENDPOINT IS EMPTY (2026-08-28 00:41Z).**  On the
+> reviewed rows-30--34 slice set every newest slot, and every later allowed
+> slot, to zero.  With `A=X^4-1`, `B=A'`, and
+>
+> `R=Q[u,v]/(uv,u^4,v^2)`,  
+> `F=A^4+4u*A^2*B*t^2+2u^2*B^2*t^4+v*t^6`,
+>
+> both selected signs have the exact whole Hensel series
+>
+> `Q=P^2=epsilon*A+u*B*s^2+(v/4)*s^6`.
+>
+> Consequently every licensed class row vanishes and the assembled
+> algebraic-primitive differential has the polynomial primitive
+> `beta=-(u/4)A*s^24-(v/8)X*s^28`.  Opus5 independently confirms every
+> coefficient and sign and supplies a Hensel-free proof using `m^4=0`.
+> Thus `GATE-ALG-PRIM` makes no further cut on this section: this is a
+> concrete strictness warning, not a converse or a polynomial-`G` result.
+> Producer SHA `525c408e...`; different-model Opus5 review SHA
+> `1fd7b33d...`.
+>
+> The honest polynomial-window interface nevertheless kills the entire
+> displayed Artin section already at the endpoint.  The frozen `G` polygon
+> has `G_22=0`.  Direct expansion for every allowed `G_16,G_18,G_20` gives
+> `D_22 in (u,v)S[X]`; hence `D_22-1` is a unit over `R`, so the raw endpoint
+> fibre product is the empty scheme.  Independently, the full characteristic
+> solution
+>
+> `W=Phi(s)-(epsilon/8)(X^5/5-X)s^22-(u/4)A*s^24-(v/8)X*s^28`
+>
+> reconstructs modulo `(u,v)` to
+> `G_22=p^-10(c_22-(epsilon/8)(X^5/5-X))`, which no `X`-constant `c_22`
+> can make zero.  This raw certificate is rollback-independent for the
+> displayed `F` and was also rediscovered independently in the Opus review.
+> Producer SHA `c068afae...`; different-model Grok46 review SHA
+> `5c90b8e3...` (all seven atoms confirmed; zero repairs or gaps).
+>
+> **STOP this zero-tail section.**  Continue only from a genuine reduced
+> endpoint seed with some positive-weight `F_i` nonzero, so a term
+> `F_i*G_(22-i)` can supply the scalar endpoint.  This eliminates one
+> specialized section, not the 24-slot class family, branch P, the GGV face,
+> any Keller family, or JC2.
+
+> **ROWS 31--34 OF THE ROW-30 CLASS SLICE — DIFFERENT-MODEL CONFIRMED
+> SCHEME-THEORETIC DESCENDANT (2026-08-28 00:34Z).**  Continue the exact
+> row-30 slice below over its nonreduced base `Q[u,v]/(uv,u^4)`, adjoining
+> the literal branch-P newest slots at rows 31--34.  The row-31 and row-33
+> odd-slot maps are split surjections onto their three-dimensional licensed
+> receivers: their pivots are rational units, remain valid over the whole
+> Artin base, and require no localization at `u`.  Row 32 has residue ideal
+> `(u^2*v,u^5)`, already contained in `(uv,u^4)`.  Row 34 has residue ideal
+> `(v^2,u^3*v,u^6)` and therefore adds exactly `v^2`.
+>
+> After the six unit-pivot eliminations, the complete class-slice ring
+> through row 34 is a polynomial ring in 24 free newest-slot coordinates
+> over
+>
+> `R_34=Q[u,v]/(uv,u^4,v^2)`.
+>
+> The base has length five with basis `1,u,u^2,u^3,v`, radical `(u,v)`,
+> `m^4=0`, and socle `<u^3,v>`; in particular `v` is nonzero but
+> square-zero.  Thus the reduced `v`-axis is killed at row 34 while a genuine
+> nilpotent `v` tangent remains.  The review independently proves the
+> odd-receiver quotient nondegeneracy, rather than relying only on finite
+> denominator-window stability.
+>
+> These are necessary de Rham **class** equations on one two-parameter
+> symbolic slice.  They are not raw determinant equations `D_23..D_34`, do
+> not construct or descend polynomial `G`, and establish no endpoint,
+> branch-P family exclusion, Keller pair, landing, or JC2 conclusion.
+> Producer SHA `e5a2c968...`; different-model Fable5 review SHA
+> `2606eb02...` (all six charged atoms confirmed; zero repairs, gaps, or
+> refutations).
+
+> **RANK-ONE NONLINEAR CONTROL AND CLOSED-FORM RECURRENCE —
+> DIFFERENT-MODEL CONFIRMED WITH NARROW SCOPE (2026-08-28 00:18Z).**  For
+> the control `H=X^4`, where class row `m=n+22` is
+> `rho_n=Res_(X=0)(q_n)=0`, one exact degree-at-most-five prefix chart
+> (`rho_1=...=rho_5=0`, seed 23 fixture frozen in the review) has cumulative
+> restricted Jacobian ranks
+>
+> `0,1,2,3,4,5,6,7,7,8,9,10,11`
+>
+> for `rho_6,...,rho_18`.  Thus the eleven non-mod-8 functions
+> `rho_7,...,rho_13,rho_15,...,rho_18` have generically independent
+> differentials, hence are algebraically independent, on that irreducible
+> 25-parameter toy prefix chart.  This proves finite nonlinear carry is not
+> generically zero there.  It does not test their common survivor loci,
+> infinite independence, branch P, raw determinants, or polynomial descent.
+> A second degree-three seed does **not** retain the producer's last two rank
+> increments after tangent restriction; its corrected tail is `...,6,6,6`.
+>
+> On the separate fixed point
+> `F=X^8+(X^7+X^4+1)t`, the exact residue sequence is
+>
+> `c_n=(2n/(n+2))*binom((n+2)/8,n)`.
+>
+> Its primitive eight-step recurrence is
+> `D7(n)c_(n+8)=N7(n)c_n`, with
+> `D7=n(n+1)(n+3)(n+4)(n+5)(n+6)(n+7)` and
+> `N7=-(1/8)*prod_(i=0)^6((7n-2)/8+i)`.  Factored two-step operators on
+> each four-section follow by `n=b+4k`; rows 23--30 are a sufficient union
+> test because the sole nonnegative forward singularity is at `n=0`.
+> This is a proof-of-method, not a campaign-wide or family-uniform `N0`, and
+> the fixture itself already fails row 23.  The producer's fitted operators
+> were not independent evidence, and its unsectioned negative-search box was
+> misreported.  Opus5 source SHA `e9f2a333...`; different-model Sol hostile
+> review SHA `d2b564d6...`.
+
+> **ROW-30 NONLINEAR CLASS CARRY — DIFFERENT-MODEL CONFIRMED ON ONE EXACT
+> SYMBOLIC SLICE (2026-08-28 00:05Z).**  On upper branch P take
+> `A=X^4-1`, `H=A^2`, and the two-parameter polynomial-window family
+>
+> `F_1=F_3=F_5=F_7=0`,
+> `F_2=4u*A^2*A'`, `F_4=2u^2*(A')^2`, `F_6=v`.
+>
+> It satisfies the licensed **class** rows 23--29 over `Q[u,v]`:
+> `q_1=q_3=q_5=q_7=0`, `q_2=uA'`, `q_4=0`, and `q_6=v/4`.
+> After the row-30 branch-P `A^15` gauge, its first uncancellable nonlinear
+> remainder is
+>
+> `(uv/4)*A'/A + (u^4/4)*(A')^4/A^3`.
+>
+> At `1,-1,i,-i` and infinity the ordinary residues are respectively
+> `(uv/4+45u^4/2, uv/4-45u^4/2, uv/4+45i*u^4/2,
+> uv/4-45i*u^4/2; -uv)`.  Their ideal is `(uv,u^4)`, with radical `(u)`;
+> hence `u=1,v=0` is an explicit rational class prefix passing rows 23--29
+> and failing row 30 (residue `45/2`).  This proves genuine nonlinear class
+> carry on this exact desk slice and confirms row 30 as the first useful
+> candidate after universally dead row 28 and new-slot-surjective row 29.
+>
+> This is not a solution of raw determinant rows `D_23..D_29`, does not
+> include `D_22=1` or construct polynomial `G`, and proves no endpoint,
+> family exclusion, Keller pair, or JC2 statement.  Producer SHA
+> `e487bd6f...`; independently frozen prefix-construction SHA `a9b67ee1...`;
+> different-model Grok46 review SHA `ccf1d977...` (all charged atoms
+> confirmed; only the non-load-bearing prior row-29 rank citation was not
+> rebuilt there).
+
+> **ALGEBRAIC-PRIMITIVE GATE FILTER — DIFFERENT-MODEL CONFIRMED WITH FIELD
+> REPAIR (2026-08-28 00:00Z).**  Put `Q=P^2` on the selected branch
+> `P(0)=p`, `p^4=H`, and define
+>
+> `alpha_F=-(s^21/16)*(d_s(s^2*P^2)-2p^2*s)dX`
+> `       =sum_(n>=1) -(n+2)q_n*s^(n+22)dX/16`.
+>
+> R7R1 gives `W_X=alpha_F` after removing the row-22 term, for
+> `W=G/P^12`.  Therefore every actual polynomial-`G` face point forces
+> `alpha_F` to be `d_X`-exact in the fixed finite algebraic extension
+> `E'=K(F)(X,s,P,p)` (after the harmless coefficient-field extension needed
+> to contain an actual `G`; algebraic de Rham base change injects the
+> resulting zero class back to the F-only field).  Existence of a primitive
+> in `E'` is a finite exact algebraic-integration decision: Hermite reduction,
+> all algebraic residues, and the complete residual de Rham class, not merely
+> rational residues.
+>
+> This one-way condition implies every licensed coefficient class by
+> coefficient extraction, finite trace if needed, and the characteristic-zero
+> pole-order lemma forcing the extracted primitives to be regular on `V_H`.
+> Its converse is false in shape: coefficientwise rational primitives may
+> assemble to a logarithm.  Requiring the primitive to start at `s^23` is
+> redundant, because lower coefficients of any primitive are `X`-constants
+> and may be subtracted.  No example yet proves that this filter cuts strictly
+> beyond the class tower on the actual gate family, and it gives no polynomial
+> `G` reconstruction, window descent, raw endpoint, or JC2 consequence.
+> Test it only on genuine tower survivors, not random points that already die
+> a class row.  Fable5 producer SHA `d53c352d...`; different-model Opus5
+> review SHA `e9f2a333...`.
+
+> **HOMOGENEOUS `NU` LAW AND MOD-8 CLASS-ROW DEATH — DIFFERENT-MODEL
+> CONFIRMED WITH SPLIT SCOPE (2026-08-27 23:35Z).**  From the all-row
+> Lagrange formula, the part of `q_n` homogeneous of degree `d` in the
+> positive `F_i` slots is
+>
+> `[q_n]_d = (2/(n+2))*binom((n+2)/8,d)*p^nu*S_(n,d)`,
+> `nu=n+2-8d`,
+>
+> where `S_(n,d)=sum_(i_1+...+i_d=n)F_(i_1)...F_(i_d)`.  Thus `nu`, mapped
+> to campaign receiver `m=n+22` with `m-nu=20+8d`, controls the source
+> divisor.  For the full polynomial-numerator source, the receiver capacity
+> is `0` when `nu>=0` and every `e_i*nu` is divisible by four,
+> `|Z_nu|-1` when `nu>=0` and
+> `Z_nu={a_i:4 does not divide e_i*nu}` is nonempty, and
+> `r-1+k_nu` when `nu<0`.  A frozen window's realized rank is only bounded
+> by the minimum of this capacity and its source dimension, and is zero when
+> the binomial prefactor vanishes; generic maximal rank is unproved.  The
+> exact rank harness therefore remains necessary (the capacity overpredicts
+> P row 35 and the squarefree control row 31).
+>
+> If `8 | n+2`, then `F^((n+2)/8)` has polynomial `X`-coefficients and so
+> does `q_n`.  Consequently every licensed **class gate** at
+> `m=n+22 == 4 (mod 8)` is identically vacuous, for all `H,F` and in every
+> `F`-degree.  In particular row 28 has no nonlinear class remainder to
+> test.  This does not make the raw determinant polynomial `D_m` vanish and
+> does not remove polynomial-window/descent conditions.
+>
+> Retain the finite raw target `D_0..D_34` as a stronger system whose
+> solutions satisfy every derived class row, but not as a row-34 cutoff for
+> the infinite class tower.  Do not promote the submitted ordinary/ordinary
+> perfect pairing, avenue-33 reopen, degree-two row-28 discriminator, harness
+> retirement, or family-uniform `N0`.  Opus5 producer SHA `66735327...`;
+> different-model Sol review SHA `70fd8be4...`.
+
+> **FIXED-RECEIVER GATE RECURRENCE — DIFFERENT-MODEL CONFIRMED WITH
+> REPAIRS (2026-08-27 23:30Z).**  Fix a computable characteristic-zero
+> field `K`, a nonzero `H in K[X]`, `A=K[X,H^-1]`,
+> `F=H^2+sum_(i=1)^d F_i*t^i`, and `p^4=H`.  Let
+> `Q=P^2=sum_(n>=0)q_n*s^n` on the chosen branch obtained from `t=sP` and
+> `P=F(t)^(1/8)`.  For `b mod 4`, put `m_0=b+22` and
+>
+> `C_b(z)=sum_(k>=0) [p^(-m_0) q_(b+4k) dX] z^k`
+>
+> in the fixed receiver `V_(m_0)=coker(nabla_(m_0))`,
+> `nabla_m=d+(m/4)dH/H`.  This is the correctly gauge-transported licensed
+> row series, in sector `b+2 mod 4`; the previously proposed literal series
+> `sum H^k q_(b+4k)z^k` is algebraic but is a different class series.
+>
+> Every scalar coordinate of every `C_b` is D-finite over `K(z)` and hence
+> P-recursive.  Algebraic four-section extraction followed by Hermite and
+> polynomial reduction supplies an exact creative-telescoping certificate;
+> a safe structural order bound is
+> `(field degree)*deg_X(d_Hermite)+dim(N_V)`.  The descent remains valid when
+> `p^4=H` is disconnected: use the module grading
+> `O(V_H|_U)=direct_sum p^j A`, with the relevant power of `p` a unit in
+> `A`, rather than a nonexistent global `mu4` action.  Singular-index
+> analysis then computes a finite deciding prefix at every fixed point;
+> take the maximum over the four residues and include the recurrence startup
+> indices even when the forward coefficient has no nonnegative integer root.
+>
+> The same theorem holds generically over an irreducible fixed-`H` parameter
+> cell, but it gives no numerical `N0` uniform on a positive-dimensional
+> cell: exceptional integer roots can occur on a countable non-closed union
+> of specialization loci.  Varying `H` additionally requires stratification.
+> No row independence, nonlinear nonvacuity, polynomial-window descent,
+> endpoint verdict, family exclusion, or JC2 consequence follows.  Producer
+> SHA `71befadb...`; different-model Opus5 review SHA `60670d0a...`.  The
+> cited Chen--Kauers--Koutschan order-bound attribution to Corollary 15 was
+> separately checked against the primary paper by the coordinator.  This
+> block supersedes older lines below saying that gate-coordinate
+> P-recursiveness or an effective **pointwise** prefix remains open; only a
+> numerical cell-uniform prefix remains open.
+
+> **FROZEN BI-FACE RAW-LATTICE SEPARATION — DIFFERENT-MODEL CONFIRMED WITH
+> SHARP FAMILY SCOPE (2026-08-27 23:30Z).**  On the shared frozen ordered
+> 442-slot `R0_ARTIFICIAL_CUSP_CONTROL` lattice, the upper branch-P fixture
+> and lower FACEPIN graph have zero scheme-theoretic fibre product already
+> at the doubly fixed raw boundary coefficients (independently on the
+> `F` and `G` sides).  The upper map to the raw lattice is surjective, so its
+> fixed/linear fixture is a closed subscheme; this repairs the producer's
+> contrary private-variable sentence.  The separation is carried by the
+> lower localizer `rho!=0`.
+>
+> The maximum licensed family statement is: arbitrary monic quartic `A`,
+> `H=A^2`, `c2=0`, and upper branch-P data with top coefficient `v_7=0`
+> (equivalently `deg V<=6`), crossed with the full lower torus
+> `a*b*rho!=0`, remain separated, with arbitrary allowed `Z,T` and live raw
+> slots.  It is **not** a separation of the full branch-P stratum.  Off that
+> codimension-one locus the eight boundary rows are simultaneously
+> compatible, for example
+> `a=b=1`, `v_7=-14rho`, `z_6=168rho^2`, `tt_9=-560rho^3`.
+> Consequently G2 must not be launched on this pair.
+>
+> The live 45-line upper manifest verifies, and every mathematical byte used
+> by the coefficient argument matches both reports, but earlier manifest
+> states are not archived and cannot be replayed; retain that custody gap.
+> This artificial-control theorem establishes no nonlinear-ideal result,
+> GGV `8_28` face/family exclusion, Keller statement, degree bound, or JC2
+> consequence.  Producer SHA `18e3e299...`; same-model replay
+> `8bad7ca0...`; different-model Opus5 review `349e98b0...`.
+
+> **CURRENT POST-SEAL CORRECTION (updated 2026-08-28 01:53Z).**  The 01:53Z,
+> 00:41Z, 00:34Z, 00:18Z, 00:05Z, 00:00Z, 23:35Z, and two 23:30Z blocks above, the detailed sections “G2 CORRIDOR / PHYSICAL-CHART
+> CORRECTION,” “FINITE-END / MARKED-COMPONENT FILTER,” “UPPER GATE TORSOR
+> TARGET-BUDGET THEOREM,” and the linear-realization erratum immediately
+> below are the current authority over older open-status, 21:16Z corridor,
+> and 19:37Z stable-range language.  In
+> particular, Corollary 7.4 supplies no missing physical chart,
+> `C74-PLACE` is retired as an aggregate target, `EXIT-RPMC(C)` is not cheaper
+> than `RPMC(C)`, and licensed realized-linear equality stops at row 27 rather
+> than row 30.
+
+> **UPPER GATE NEW-SLOT LINEAR REALIZATION — E0 DIFFERENT-MODEL CORRECTION
+> (2026-08-27 22:53Z).**  For row `m=n+22`, the reviewed all-row formula has
+> new-slot part
+>
+> `(q_n)_lin=(1/4)F_n*p^(n-6)`.
+>
+> If `k_m=1`, then `H^(m/4)` is polynomial up to a harmless constant after
+> the same geometric base change used for character language.  Relative to
+> `p^m`, exactness is measured by
+> `nabla_m(c)=H^(-m/4)d(H^(m/4)c)`.  For `m>=28`,
+> `H^(m/4)F_n/(4H^7)` is polynomial and therefore has a polynomial
+> primitive.  Thus every `k_m=1` row with `m>=28` has identically
+> class-exact **`F_n`-linear part**.  Equivalently, for
+> `j=m mod 4` and `e=(n-6-j)/4`, the licensed cleared equation is
+>
+> `4H*c' + j*H'*c = H^(e+1) F_n`,
+>
+> not the copied shifted equation with right side merely `F_n`.
+>
+> Independent exact-Q reduction on the literal frozen windows gives
+>
+> ```text
+> rows          23 24 25 26 27 28 29 30 31 32 33 34 | 35 36
+> P licensed     3  4  3  4  3  0  3  0  3  0  3  0 |  1  0
+> Q licensed     4  5  4  4  4  0  4  1  4  0  4  1 |  2  0
+> ```
+>
+> Hence degree-one rank is `26/35` through row 34 and `27/37` over the
+> whole frozen P/Q window; there is no new `F_n` slot after row 36.  The old
+> realized stable-range equality through row 30 is mathematically wrong at
+> rows 28/30; the uniform licensed equality range is rows 23--27.
+>
+> Retain unchanged the receiver law `dim H1=r-1+k_m`, the torsor theorem,
+> the abstract `42/51/12/87` twelve-row generator ceilings, the P58/Q52
+> not-before height arithmetic, and the literal row-25/26 operators.  The
+> correction concerns realized degree-one maps only.  Nonlinear carry classes
+> may still cut later rows, and no theorem presently proves them generically
+> nonzero, independent, finitely determining, or sufficient for polynomial
+> descent.  It does not touch any live rows-1--22 endpoint computation.
+>
+> Fable5 producer SHA is `b3f3886c...`; different-model Sol hostile-review
+> SHA is `5beb5550...`.  Fable's proposed raw `D28` `0 versus 4` experiment is
+> not licensed: it drops the affine `D22=1` target, becomes symbolic/bilinear
+> when `F6` is left free, supplies no lower-target point, and would measure
+> polynomial descent/window support rather than the class presentation.
+
+> **ALL-ROW QUARTER-ROOT COEFFICIENT FORMULA — DIFFERENT-MODEL CONFIRMED
+> (2026-08-27 22:40Z).**  Let `R` be a characteristic-zero field (or a
+> suitable Q-algebra), let `F(t)` have constant term `p^8` with `p` a unit,
+> and let `phi(t)=F(t)^(1/8)` be the chosen **pre-reversion** root with
+> `phi(0)=p`.  If `t=s*phi(t)`, `P(s)=phi(t(s))`, and
+> `P(s)^2=sum_(n>=0) q_n s^n`, then for every `n>=0`
+>
+> `q_n = 2/(n+2) [t^n] phi(t)^(n+2)`
+> `    = 2/(n+2) [t^n] F(t)^((n+2)/8)`.
+>
+> Lagrange--Buermann proves the formula for `n>=1`, and `n=0` is direct.
+> It implies exactly
+> `q_n=(1/4)p^(n-6)F_n+R_n(F_1,...,F_(n-1))` and the deck-character law
+> `sigma(q_n)=zeta^(n+2)q_n`.  On the frozen `F_i=0` for `i>=15` window,
+> `P(s)` satisfies
+> `P^8=sum_(i=0)^14 F_i s^i P^i`; hence `P,Q=P^2` have algebraic degree at
+> most 14 and the **raw** sequence `(q_n)` is P-recursive.
+>
+> Do not transfer that last statement automatically through the
+> `X`-dependent de Rham quotient or residue maps: gate-coordinate
+> P-recursiveness, creative telescoping, an effective pointwise prefix, and
+> a uniform family bound all remain open.  The notation `[t^n]P^(n+2)` is
+> safe only when that `P` denotes the pre-reversion `phi(t)`, not the
+> post-reversion `P(s)`.  Opus5 producer and Sol hostile-review SHAs are
+> `8c539104...` and `8bad7ca0...`.
+
+> **LOWER TWO-ROOT ENDPOINT ODE — UNIFORM LOCAL NECESSITY
+> DIFFERENT-MODEL CONFIRMED (2026-08-27 22:40Z).**  In characteristic zero,
+> take `rho!=0`, an integer `gamma>=1`,
+> `K=xi*(xi-rho)^gamma`, and a polynomial `g` satisfying
+>
+> `4K*g' - 3K'*g = 4K`.
+>
+> Root evaluation forces `g(0)=g(rho)=0`.  Writing
+> `g=(xi-rho)h` and evaluating the divided equation at `rho` gives
+> `h(rho)=4/(4-3gamma)`, so the multiple root supplies no further local
+> obstruction.  Leading degrees force either `deg(g)=1` or
+> `deg(g)=3deg(K)/4`.  The first alternative is impossible because a linear
+> polynomial cannot have the two distinct forced zeros.  Therefore
+> polynomial solvability necessarily requires
+> `4 | deg(K)=gamma+1`, equivalently `gamma=3 (mod 4)`.  This removes the
+> earlier finite-range restriction on the necessity statement.  It proves
+> neither sufficiency, a full lower-face classification, nor any GGV-family
+> exclusion.  Fable5 producer SHA is `edd383ad...`; Opus5 hostile-review SHA
+> is `8c539104...`.
+
+> **LOWER LF40 R0 EXECUTABLE TARGET BUG — CONTAINED; R1 CUSTODY PASSES
+> DIFFERENT-MODEL REVIEW (2026-08-27 21:33Z).**  The promoted FACEPIN
+> recurrence and target specification were correct, and the frozen JSON rows
+> encoded `Dtil_17=-1`.  The R0 JSON-to-Singular serializer nevertheless
+> emitted the homogeneous degree-zero row
+> `f_0_1*g_1_0-f_1_0*g_0_1=0`, dropping the required constant `1`.  The R0
+> AWS process was stopped immediately on discovery and harvested as
+> fail-closed non-evidence.  It had completed only row 0 and was still
+> computing row 1, so the defective row 17 had never entered its ideal and no
+> wrong mathematical conclusion or reusable terminal basis exists.
+>
+> R1 applies the target map at the solver-serialization boundary and refuses
+> to compile unless `ideal ROW_17` begins with
+> `1+f_0_1*g_1_0-f_1_0*g_0_1`.  A fresh AWS compiler replay changed exactly
+> the Singular program and its checksum manifest; the program's only content
+> change is that `+1`.  All 740 generators then match the JSON rows, with one
+> and only one numeric target constant.  The R1 freeze `70af5634...`, archive
+> `3895fa95...`, and program `435c350f...` replayed on r6b before the corrected
+> lane `ggv_8_28_lf40_v1_targetfix_r1_20260827T210915Z_r6b` started.  Internal
+> review `f95d4926...` and different-model Fable5 review `e49ef51e...` both
+> pass.  Fable5 independently rebuilt every generator from `RAW_INPUT.json`,
+> recovered the target sign from the chart identity and tiny `J=1` witness,
+> and rejected seven omission/sign/placement mutations without importing the
+> producer serializer.  Its one new custody gap was writable staging
+> directories around read-only files.  The registered r6b source tree was
+> hardened with `chmod -R a-w` at 21:32Z; all 48 freeze entries then replayed
+> and no writable path remained while Singular continued uninterrupted.  The
+> executable repair is promoted at compiler-custody scope; any terminal
+> algebra verdict still needs independent review.  The exact erratum is in
+> the case directory.  No family exclusion or JC2 result follows.
+
+> **GGV TRANSPOSE EQUIVARIANCE — ABSTRACT THEOREM PASSES; SAME-FIXED-PAIR
+> CHART SUPPLY FAILS (2026-08-27 21:16Z).**  Fable5 independently checked the
+> signed conjugation against primary GGV/VGG sources and confirms that all
+> fourteen GGV5 Theorem 2.20 clauses, VGG Propositions 5.17--5.18, and the
+> multiplicity bound (5.9) transport to the y-fraction category after the
+> required reversal of direction order and `st/en`, `Pred/Succ`.  Clause 13
+> also depends on GGV2 Definition 3.21; the naive-convention claim is repaired
+> from “first fails at clause 5” to “fails no later than clause 5.”
+>
+> This is an abstract conjugated-source theorem, not the other chart of one
+> fixed pair.  The two source-pair sign conditions are mutually exclusive for
+> every finite-support pair in every `L^(l)`, with no rectangle hypothesis;
+> at the live corner the rejected fixed-pair sign is `28-8=20>0`.  VGG's
+> Laurent reflection `psi_2` changes the compactification (`x=infinity` maps
+> to `x'=0`) and does not repair object identity.  Thus full anti-standard
+> chaining is unavailable as a same-pair source.  Fable review SHA is
+> `097db69b...`; the Sol audit is `41e37484...`.
+>
+> A pure-Sigray exact-pair route genuinely bypasses `G2-PSC` for intrinsic
+> two-chart boundary-place enumeration and pole tagging, but not the Sigray
+> decoration, landing, delay, or degree obligations.  The post-seal source
+> audit recorded below confirms the exact 12/8 common powers but refutes their
+> interpretation as an opposite physical chart: they are native same-edge
+> content already subsumed by VGG 7.1/7.2.  It replaces `C74-PLACE` by L1--L5
+> and proves that the stated `EXIT-RPMC(C)` is equivalent to `RPMC(C)` under
+> its own exit clause.  No `G2-PSC`, degree ceiling, family exclusion, or JC2
+> conclusion follows.
+
+> **R7R1/R7R2 RANK-TWO AND IRREGULARITY CUT — SOURCE-PINNED WITH SCOPE
+> REPAIRS (2026-08-27 21:30Z).**  The source audit confirms the two
+> mathematical cores but narrows their joint consequence.  For an **actual**
+> short exact sequence of finite-rank algebraic connections on a connected
+> smooth affine complex curve,
+>
+> `0 -> A -> E -> B -> 0`,
+>
+> the de Rham long exact sequence gives
+> `h1(E)=h1(A)+h1(B)-rank(delta)<=h1(A)+h1(B)`.  Regularity is not needed for
+> this inequality itself.  It applies to a rank-two client only after an
+> extension or filtration with the named row connections has been exhibited;
+> keeping two series together does not supply that filtration, and an
+> arbitrary irreducible rank-two connection remains outside R1.  Thus close
+> the naive filtered rank-bundling branch, not every possible higher-rank
+> client.
+>
+> R2 is source-confirmed over `C`.  For a polynomial client,
+> `P^8=F(X,sP)` is a nonzero algebraic equation over `C(X,s)`, and `W`, being
+> rational in `X,s,P`, is algebraic too.  After shrinking `A^2` so that the
+> normalization in the finite function-field extension is finite etale, the
+> cyclic modules generated by `P,W` embed as submodules of an algebraic
+> `j_+q_+O` object.  Hotta--Takeuchi--Tanisaki Theorem 6.1.5 and closure under
+> subquotients then make them regular holonomic.  On the surface the precise
+> conclusion is vanishing of the irregularity complexes along `s=0`, `Z(H)`,
+> and every boundary divisor after algebraic compactification, not a
+> curve-style scalar `Irr_x`.  Algebraic nonproper direct image is covered;
+> the analogous analytic theorem requires properness.
+>
+> Withdraw “a rational exponential twist is the only escape.”  What the
+> regularity theorem proves is that regular-holonomic inputs cannot acquire
+> positive irregularity under algebraic six operations, subquotients,
+> extensions, or cohomology.  Any revival must therefore exhibit a
+> Keller-forced irregular input or an operation outside that
+> regularity-preserving closure.  A global rational exponential twist is one
+> sufficient construction, not a necessary form: formal exponential factors
+> may appear only after ramification/modification and can have fractional
+> phases (the Airy phases `+/- (2/3)z^(3/2)` are the standard warning).
+> Retain the rank-one index law and Avenue 25's branch-cycle CSP carve-out.
+> The primary-source review debt is complete: target/review SHA
+> `6e4f197aaa3c68983cd9e479e8d1e41994d33d277a9413f816ea3a664302d759`;
+> source-audit report
+> `xmodel/ggv-r7r2-r1-r2-source-custody-audit-sol-ultra-20260827.md`, SHA
+> `58273d10804f50e793d1d0136270988f490bfe6b6c00da6604bcd9799367e231`.
+> The pinned authorities are HTT 5.3.4, 5.3.6, 6.1.1, 6.1.5, and
+> 6.1.11--6.1.12; Deligne II.6.2/II.6.19; Roucairol 2.1--2.8; Kedlaya
+> 6.4.1; and Guzzetti Section 4.1.  No endpoint, family exclusion, or JC2
+> conclusion follows.
+
+> **TYPED `G2-PSC` INTERFACE — OPUS5 HOSTILE REVIEW CONFIRMED WITH
+> REPAIRS (2026-08-27 20:14Z).**  The producer's three-arrow separation
+> survives: an exact pre-Laurent pair plus a fibre canonically determines its
+> Newton--Puiseux boundary forest and direct residual/order data, while one
+> coefficient-complete, source-provenanced GGV occurrence can determine only
+> one decorated flag segment.  The latter statement requires three explicit
+> inputs omitted or hidden in the producer: the cumulative source map from
+> VGG `arXiv:1401.1784` Propositions 5.17--5.18, the common `P/Q` face-root
+> witness from VGG Theorem 7.6(2), and an `H-TRUNC` hypothesis equating the
+> accumulated GGV translations with the actual branch truncation.  Live
+> `CornerData` remains neither a typed source object nor enough information
+> to determine the decorated target.
+>
+> In the fixed native category `K[X^{+-1/l},Y]`, with `rho>0` and
+> `sigma<=0`, no enrichment of one chain can express the other infinity
+> chart.  That chart requires a separately proved transposed/y-fraction run
+> (already filed as `TRANSPORT.md` Conjecture A) or a pure-Sigray route; this
+> does not rule out such a conjugated source theory.  At the live one-edge
+> `8_28` corner the all-root issue is already closed:
+> `p_0=lambda*(z^4-alpha)^21`; the four roots form one deck orbit, and each
+> passes VGG (5.9), with `m_lambda=21`, bound `4`, and `3|21`.  The live
+> residue is therefore transposed-chart expressibility plus pole-path
+> reachability/gluing and corrected Q/jump/max data, not root enumeration.
+> General all-root admissibility remains open.
+>
+> The target must carry `Q(F)`, `M_F`, and the later-book labels at every
+> vertex on each pole ancestor path, including the non-pole approximate-root
+> degrees, and must type the `T_a^-` tower.  The forest-compiler `EXACT`
+> label is withdrawn because its full decoration also inherits the filed,
+> then-unrepaired Sigray Proposition 4.2 tower gap (superseded by the
+> `10bc55d5...` / `47f2b608...` complete erratum below).  The cheapest next
+> discriminator is a desk-scale transpose-equivariance audit of all fourteen
+> GGV5 clauses and VGG 5.17--5.18/(5.9), not merely feeding `(28,8)` to the
+> old x-fraction port.  No `G2-PSC`, landing, family exclusion, or JC2 result
+> follows.  Producer/review SHAs are `4c3f2236...` / `f7de3ae1...`.
+
+> **ARTIFICIAL D5G35 TARGET GATE — EMPTY BY ALREADY-PROMOTED COMPOSITION;
+> LIFECYCLE CORRECTION (2026-08-27 19:37Z).**  On the named artificial
+> fixture `H=X^8-1`, `F0=H^2`, `G0=H^3`, the affine target
+>
+> `D0=...=D21=0,  D22=1,  D23=...=D34=0`
+>
+> is **empty**.  The promoted R3 theorem already excludes every polynomial-X
+> formal jet with the weaker congruence through row 22; R4 gives the same
+> conclusion for squarefree `H`.  Opus5 independently regenerated all 734
+> frozen generators and verified more sharply that the first 626 generators,
+> through `D22`, generate the unit ideal.  The promoted R7R1 review had also
+> recorded the same `q0` obstruction, but the later D5G35 lifecycle update
+> failed to propagate it.
+>
+> Verdict: **RELABEL THE ARTIFICIAL TARGET `EMPTY-BY-COMPOSITION (R3; R4)`;
+> RETAIN THE D5G35 COMPILER.**  No determinant/compiler identity is wrong.
+> The error was the live `UNSOLVED` status and the resulting compute direction.
+> The branch-P/Q gates on genuine R5/R6 survivor shapes remain open; `q1/q2`
+> compilers must be anchored there rather than to this vacuous fixture.
+> Fable5 producer and Opus5 hostile-review SHAs are `df7a92a1...` and
+> `ce1d7cb...`.  This block supersedes every older current-status sentence
+> below that calls the 734-generator artificial target unsolved.
+
+> **UPPER-FACE DE RHAM GATE LAW — FABLE5 HOSTILE-REVIEW CONFIRMED WITH
+> CAPACITY REPAIRS (2026-08-27 19:37Z).**  In characteristic zero, write
+> `H=h0*product(p_i^e_i)`, put `U=A^1-Z(H)`, and let
+> `r=deg(rad(H))`.  For every row `m=n+22` licensed by the promoted R7R1
+> identity, the F-side condition is the vanishing of `[q_n dX]` in
+>
+> `H^1_dR(U, nabla_m),   nabla_m=d+(m/4)dH/H`,
+>
+> and
+>
+> `dim H^1_dR(U,nabla_m)=r-1+k_m`,
+> `k_m=1 iff 4 divides e_i*m for every i`.
+>
+> The same `k_m` is exactly the promoted R5 rational-mode schedule because
+> `4|e_i(12-m)` iff `4|e_i*m`.  Independently, the new row's determinant
+> slot is governed by `4HR'+(m-12)H'R`, whose kernel is that R5 mode.
+> The actual row-25 and row-26 operators are `4Hc'+H'c` and
+> `4Hc'+2H'c`, with exact codimensions `(3,4)` on P and `(4,4)` on Q.
+>
+> The frozen D3 polygon has 121, not 126, parameters in `F1,...,F12`.
+> Rows 23--34 impose at most `42/51/12/87` class conditions on
+> P/Q/`r=1`/the `r=8` control, leaving dimensions at least
+> `79/70/109/34`.  The submitted `>=114` bound and control count are
+> withdrawn.  The historical claim here that realized stable-range equality
+> on the control stops at row 30 is superseded by the 22:53Z E0 correction:
+> in the licensed exact-`p` presentation it stops at row 27.
+> This capacity theorem covers only the determinant-anchored sub-tower
+> through row 34.  The exact identity `E=t^22` licenses an infinite tower,
+> for which no capacity bound or nonemptiness theorem is proved.  Integer-
+> shifting the twist changes a finite window presentation and can make it
+> vacuous; use the exact `p`-power carried by `q_n`.
+>
+> Verdict: **PROMOTE THE GATE LAW, R5 `H^0`/`H^1` IDENTIFICATION,
+> ROW-25/26 OPERATORS, AND REPAIRED FINITE-SUBTOWER COUNTS AT THE STATED
+> SCOPE.**  Rank-two/irregularity and passport-rigidity consequences remain
+> proposed research.  Opus5 producer and Fable5 review SHAs are
+> `a9b2eb90...` and `1cc41972...`.
+
+> **UPPER CASCADE THROUGH `D6` — FABLE5 HOSTILE-REVIEW PROMOTED ON THE
+> REDUCED GEOMETRIC SUPPORT (2026-08-27 19:37Z).**  On the squarefree
+> characteristic-zero survivor branches, the exact field-point prefix is
+>
+> `F1=HV,  F2=(V^2+HZ)/4`,
+>
+> with `F3=(VZ+AT)/8` on P and `F3=(VZ+ABT)/8` on Q, using the degree
+> bounds in the frozen report.  The final reduced dimensions are `63` and
+> `60` on the two P components, intersection dimension `59`, and `61` on Q.
+> The branch-Q row-five intermediate stratum is `26+c`, maximum `29`, not
+> `24+c`/`28`.  The formulas classify field-valued points and the underlying
+> reduced support, **not** the full coefficient scheme: dual-number tangent
+> solutions disprove the producer's scheme wording.
+>
+> On this reviewed reduced cascade, Grok46 separately confirms `q2=Z/16`.
+> The simultaneous `q1` handles are
+> `V=A'R+2AR'`, `deg R<=4`, on P and
+> `V=2A'BR+3AB'R+4ABR'`, `deg R<=3`, on Q, with `A,B`
+> squarefree and coprime on Q.  These parametrize the `F1/q1` intersection,
+> not the full endpoint.  Producer/review SHAs are `6e3d9104...` /
+> `7358e662...`; composition-review SHA is `4ccd001c...`.
+
+> **FIXED-`H` ENDPOINT MECHANICS — GROK46/OPUS5 REVIEWS WITH SCOPE AND
+> SIGN REPAIRS (2026-08-27 19:37Z).**  For fixed `H`, homogenizing
+> `D22=1` to `D22=lambda`, assigning positive row weights and weight 22 to
+> `lambda`, and saturating `J=I:lambda^infinity` gives
+>
+> `V(I) intersect D(lambda) nonempty`
+> `iff J is proper`
+> `iff J localized/completed at the unique positive-weight origin is proper`.
+>
+> The statement is false for unsaturated `I` and does not extend verbatim
+> over weight-zero face parameters.  It detects one finite fixed-face
+> coefficient scheme, not global algebraization or a Keller map.
+>
+> On the frozen upper prefix, `D22=-L22(g22)`.  Thus polynomial `g22`
+> forces `D22 in (H)`, incompatible with target 1.  For `H=A^2B`, the
+> corrected rational target form is
+> `g22=v/(8A^5B)` with `Bv'+(3/2)B'v=A`; the submitted sign was reversed.
+> The lower `G17` window has eight free slots and does not share this rigid
+> architecture.  Sol/Grok review SHA is `4ccd001c...`; Fable5/Opus5 review
+> SHA is `ce1d7cb...`.
+
+> **LOWER `8_28` FACEPIN AND FULL RAW COMPILER — OPUS5 HOSTILE-REVIEW
+> PROMOTED WITH SOURCE REPAIRS (2026-08-27 19:37Z).**  Conditional on the
+> primary GGV reduction to the raw pre-final constant-J pair with exact
+> polygons `2S/3S`, the lower edge is
+>
+> `K_rho=xi(xi-rho)^7`,
+> `F0=a*K_rho^2,  G0=b*K_rho^3,  a*b*rho != 0`.
+>
+> The edge is not simple; the clean proof uses the generated-corner identity
+> and gives `gamma=7`.  GGV22 line 1132 contains a `(1,0)`/`(0,1)` slip and
+> later silently swaps P/Q, so orientation is pinned by polygon, not letter.
+> The literal recurrence through rows 0--40 has 442 raw slots and 774 raw
+> coefficient generators; FACEPIN eliminates 34 row-zero generators, leaving
+> 740 in 408 variables.  Saturate by the exact product `a*b*rho*f_0_8*g_0_12`
+> only.  Target row 17 is `-1`; all other rows are zero.
+>
+> Verdict: **PROMOTE THE CONDITIONAL FAMILY PIN, SOURCE CORRECTIONS, AND
+> COMPILER SPECIFICATION.**  A characteristic-zero unit ideal would exclude
+> only the last `(72,108)` GGV case conditional on the reduction and raise
+> that conditional degree bound from 108 to 125; it would not prove JC2.
+> Producer/review SHAs are `94c10fd8...` / `681357ce...`.
+
+> **K00 GRADE-SEVEN CONSTANT-KERNEL COMPRESSION — OPUS5 HOSTILE-REVIEW
+> CONFIRMED AT BIG-RING SCOPE (2026-08-27 19:37Z).**  For the frozen
+> grade-seven matrix, exact symbolic reconstruction gives a constant left
+> covector `l0` and two constant right covectors `v1,v2` with
+> `l0*A=0` and `A*v1=A*v2=0`; the compatibility polynomial `l0*b` has 690
+> terms and uses all 33 ambient variables.  The two maximal-minor scalar
+> classes and moving-rank-one adjugate structure are also confirmed.
+> Because `l0*b` is not in `Q[d0_1,...,d5_1]`, it **cannot** be adjoined to
+> the six-variable BASE4 ideal.  It is a big-ring/full-compatibility
+> preconditioner only.  Quotienting the visible gauge directions is safe for
+> grade seven but not automatically for prolongation.  Producer/review SHAs
+> are `df7a92a1...` / `ce1d7cb...`.
+
+> **K00 V27 SIX-VARIABLE RANK FILTRATION — FABLE5 HOSTILE-REVIEW
+> CONFIRMED WITH AN `I2` CENSUS REPAIR (2026-08-27 19:46Z).**  In
+> `R=Q[d0_1,...,d5_1]`, for the frozen V26 grade-seven matrix `A` and base
+> ideal `B`, exact reconstruction of all 3,381 literal minors gives
+>
+> `I4(A) subset B+I5(A)` and `I3(A) subset B+I5(A)`.
+>
+> Hence
+>
+> `J2=B+I5(A)=B+I5(A)+I4(A)+I3(A)`
+>
+> is proper homogeneous of affine dimension three, and every geometric
+> point of the promoted rank-`<=4` base scheme actually has `rank(A)<=2`.
+> Adding all `2 x 2` minors gives a proper homogeneous ideal
+> `J1=J2+I2(A)` of affine dimension two.  Thus the ideals and their radicals
+> are distinct, and `V(J2)` has a nonempty rank-exactly-two stratum over
+> `Qbar`, nonconstructively.
+>
+> The producer's claimed `I2` membership census `237/351` is false.  The
+> reviewed exact count is **291 outside and 60 inside**.  Singular retained
+> all 441 minor slots, but `size()` counted only nonzero slots; the producer
+> loop inspected only an initial segment.  The same `size()`-bounded pattern
+> is a latent false-pass hazard in reverse-inclusion guards.  All successors
+> must use `ncols()` and the R3 artifact requires an additive erratum.  R1/R2
+> conclusions survive because the reviewer independently reduces every
+> relevant minor to zero.
+>
+> Verdict: **PROMOTE THE RANK-`<=2` COLLAPSE, DIMENSION-THREE BASE,
+> DIMENSION-TWO `I2` CUT, DISTINCT RADICALS, AND NONEMPTY ALGEBRAIC
+> RANK-EXACT-TWO STRATUM, WITH THE 291/60 CENSUS.**  The homogeneous origin
+> remains a trivial rational point and carries no witness information.  No
+> explicit/rational rank-two point, full `P6`, later grade, jet/arc,
+> receiver, source reachability, order-two/maximum-twelve claim,
+> counterexample, or JC2 result follows.  R1/R2/R3 producer SHAs are
+> `19c87955...`, `c42c0482...`, `5f9700c7...`; Fable5 review SHA is
+> `738f4603...`.
+
+> **BRANCH-Q `q1`, ROW-THREE, TRANSVERSALITY, AND `q2` SHARPENINGS —
+> GROK46 HOSTILE-REVIEW CONFIRMED WITH AN `A`-SQUAREFREE REPAIR
+> (2026-08-27 18:02Z).**  Over a characteristic-zero field, let
+> `H=A^2 B`, where `deg(A)=3`, `deg(B)=2`, **both `A` and `B` are
+> squarefree**, and `gcd(A,B)=1`.  In the frozen 16-dimensional
+> `F1 in K[X]_(<=15)` window, the R7R1 branch-Q differential `q1 dX` is
+> exact precisely when
+>
+> `F1 in image(T_Q),   T_Q(Q)=4ABQ'-(6A'B+AB')Q,   deg(Q)<=11`.
+>
+> `T_Q` is injective, so the image has rank 12 and codimension four; the
+> associated quartic cover has genus three.  The squarefreeness of `A` was
+> missing from the charged Opus5 box and is load-bearing: on repeated-root
+> or collision strata extra primitives occur and the codimension can drop.
+>
+> On branch P, for squarefree quartic `A` and `H=A^2`, polynomial solutions
+> through the raw lower prefix `D1=D2=D3=0` exist exactly when
+> `A^2 | F1`; this is an existential row-three statement, with `F2` and the
+> weight-two kernel parameter still free, and says nothing about rows four
+> and above.  The exact linear intersections are
+>
+> `dim(im(T_A) intersect A*K[X]_(<=11))=9`,
+> `dim(im(T_A) intersect A^2*K[X]_(<=7))=5`, and
+> `dim(im(T_Q) intersect AB*K[X]_(<=10))=7`.
+>
+> For `q2`, trace descent needs no `mu4` hypothesis.  In the 15-dimensional
+> `F2` window the linear exact subspace has codimension four on P and five
+> on Q, and the residue maps are surjective.  After the affine term from
+> `F1` is included, every `F1` admits some `F2` solving `q2`; therefore
+> `q2` gives **no branch-level cut on `F1`**.  Finally,
+> `R_n=G_n-(3/2)HF_n` gives
+> `D_n=L_n(R_n)+mixed_n(F_<n,R_<n)`; polynomial homogeneous kernels occur
+> at even `n=2,...,12` on P and at `n=4,8,12` on Q.  This organizes, but
+> does not linearize, the accumulated nonlinear prefix.
+>
+> Verdict: **PROMOTE THESE FIVE NARROW ATOMS WITH THE REPAIRED
+> HYPOTHESES.**  Their different-model review is
+> `xmodel/ggv-qgate-opus-new-claims-hostile-review-grok46-20260827.md`
+> (`56a4b940...`; body `3c07c056...`), reviewing source `46736edc...`.
+> The promoted R7R1 and D5G35 rows license `q1` only with `D23=0` and `q2`
+> only with `D24=0`.  The then-current statement that the 734-generator
+> artificial target was unsolved is superseded by the 19:37Z
+> `EMPTY-BY-COMPOSITION` correction above.
+> No upper-face landing, family exclusion, Keller pair, counterexample, or
+> JC2 statement follows.
+
+> **SQUAREFREE PERFECT-SQUARE-BRANCH `q1` GATE — OPUS5 HOSTILE-REVIEW
+> CONFIRMED (2026-08-27 17:25Z).**  Let `char(K)=0`, let
+> `A in K[X]` be monic, squarefree, and degree four, put `H=A^2`, and let
+> `L=K(X)(p)` with `p^4=H` and `p^2=epsilon A`.  On the frozen artificial
+> D3 window `F1 in K[X]_(<=15)`, the R7R1 differential
+> `q1 dX=F1 dX/(4p^5)` is exact in `L` if and only if
+>
+> `F1 in image(T_A),     T_A(Q)=2A Q'-3A'Q,     deg(Q)<=12`.
+>
+> The operator is injective, including after base extension and either
+> twist `epsilon=+/-1`; hence its image has dimension 13 in the
+> 16-dimensional raw numerator window and the gate has codimension exactly
+> three.  For `A=X^4-1`, independent exact engines reproduce rank 13.  The
+> `q2` trace descent is valid, and the fixed fill `F1=0,F2=1` has residue
+> `-3/64` at `X=1`, so that one fill is nonexact.  Fable producer and Opus5
+> review full-file/body SHAs are `bb9c54af...`, `46736edc...`, and
+> `432645eb...`.
+>
+> Verdict: **PROMOTE THE BRANCH-P `q1` THEOREM, RANK FIXTURE, AND FIXED
+> `q2` NEGATIVE CONTROL ONLY.**  The `q1` instrument is licensed only when
+> row `D23=0` is imposed; `q2` also needs `D24=0`.  Promoted D5G35 supplies
+> those rows on the named artificial fixture.  Its then-current `UNSOLVED`
+> status is superseded by the 19:37Z `EMPTY-BY-COMPOSITION` correction; the
+> corresponding genuine survivor-`H` gates remain open.  The surrounding
+> claim that the face decouples into
+> F-only gates, unique G-completion, and one endpoint is refuted: rows
+> `D1,...,D14` govern 367 raw slots, and branch P has polynomial kernels for
+> even weights through 12.  Do not infer that `q1` is the first prefix gate,
+> that `q2` cuts `F1`, or that no nonlinear elimination is needed.
+>
+> The branch-Q operator, transversality dimensions, squarefree branch-P
+> row-three gate, and `q2` surjectivity first derived in this review have now
+> passed the separate Grok46 review recorded immediately above.  The
+> recommended successor remains the lower prefix cascade, not another tower
+> row.
+
+> **LOWER `(4,-1)` DETERMINANT GRADING — GROK HOSTILE-REVIEW CONFIRMED
+> WITH MAJOR SCOPE REPAIRS (2026-08-27 17:04Z).**  Under
+> `x=tau^-4 xi`, `y=tau`, `F=tau^8 f`, and `G=tau^12 g`, exact coordinate
+> calculation gives
+>
+> `Etil=12F_xi G-8F G_xi-tau(F_xi G_tau-F_tau G_xi)
+>       =-tau^17 J(f,g)`.
+>
+> The coefficient recurrence is the D5G recurrence with lower weights
+> `nu_F=8-4i+j`, `nu_G=12-4i+j`.  The frozen D3 polygons recount exactly as
+> 141 F-slots plus 301 G-slots; `F_17` is empty,
+> `G_17=Q[xi]_(<=7)`, and 28 G-slots remain at weights 18 through 24, so
+> determinant rows can continue through weight 40.  At row zero,
+> `Dtil_0=0` forces `F0=alpha K^2`, `G0=beta K^3` in the UFD, with
+> `xi|K` from the raw window.  On the unshifted unmixed endpoint the exact
+> ODE is `4Kg'-3K'g=4K`; rational poles of `g` are impossible and
+> `deg(g)=1` or `3deg(K)/4`.  For
+> `K=xi(xi-rho)^gamma`, solvability necessarily requires
+> `gamma=3 mod 4`.  The displayed degree-six solution at `gamma=7` is exact
+> for this ODE only.  Producer/review SHAs are `9f9d3d05...` and
+> `72f10ad7...`.
+>
+> Verdict: **PROMOTE THESE IDENTITIES, WINDOWS, AND NECESSITY STATEMENTS;
+> DO NOT PROMOTE `NU17` AS SPECIFIED.**  The native control is
+> `f=B^2-x-y^8`, whose upper face is `X^16-1`, not the monomial upper face
+> inferred from `B^2`.  Lower pinning is not proved for the raw lattice or
+> whole GGV family; row 17 is not a complete face fixture; the general
+> face-endpoint iff, multiplicity sufficiency, drop-in D5G regrade,
+> farm-wide filter, and every face/family exclusion are withdrawn.  The
+> clean successor is a three-object pinning read followed, where licensed,
+> by a fresh lower compiler through `Dtil_40` with target `Dtil_17=-1` and
+> every other row zero.  No GGV landing, `G2-PSC`, `G2-BD`, or JC2 result
+> follows.
+
+> **D5G ARTIFICIAL-FIXTURE RAW-GLOBAL COMPILER — OPUS5 HOSTILE-REVIEW
+> CONFIRMED (2026-08-27 16:48Z; supersedes the 15:43Z hold).**  On the
+> named `R0_ARTIFICIAL_CUSP_CONTROL` support, with fixed
+> `F0=(X^8-1)^2`, `G0=(X^8-1)^3` and 400 positive-weight raw slots, a
+> different-model audit independently reconstructs all 32,135 terms and
+> 58,572 source contributions in `D0,...,D22`.  It confirms the exact
+> decompositions `D22=H*Q22+R22` and `D22=M(Y22)+rM22`, including the
+> illustrative custody mutation `D22 -> D22+H` with changes
+> `Delta(Q,R,Y,rM)=(1,0,X/52,-12/13)`.  Producer/freeze/internal-review/
+> promotion-review SHAs are `59e9bf2c...`, `838b1160...`,
+> `14913814...`, and `d9e65315...`.
+>
+> Verdict: **PROMOTE THE NARROW RAW-COMPILER AND GLOBAL-QUOTIENT CUSTODY
+> THEOREM.**  The dense specialization is a weak regression check, but the
+> independent full symbolic reconstruction carries the claim.  The support
+> is an artificial control fixture, not an established genuine `8_28`
+> family face.  No lower Keller row, endpoint target, specialization,
+> local/global naturality, GGV exclusion, `G2-PSC`, `G2-BD`, counterexample,
+> or JC2 conclusion follows.
+
+> **R6 RATIONAL-ENDPOINT SURVIVOR LOCUS — OPUS5 HOSTILE-REVIEW CONFIRMED
+> (2026-08-27 16:48Z; supersedes the 15:55Z hold).**  Over an algebraically
+> closed characteristic-zero field, write the unique monic
+> `H=A^2B`, with `B` squarefree; common factors of `A` and `B` are allowed.
+> For `b=deg(B)>=1`, the R5 endpoint survivors are exactly
+> `H=(Bv'+(3/2)B'v)^2B`, with the degree and leading coefficient of `v`
+> fixed by `h,b`.  The normalized map is injective, its image is
+> constructible, and the stratum has closure codimension
+> `(h+b-2)/2`.  Including the perfect-square stratum, the full survivor
+> locus has codimension exactly `floor(h/2)`; at `h=8`, precisely the
+> `b=0,2` strata survive and each has dimension four.  Producer/freeze/
+> internal-review/promotion-review SHAs are `ed0e3460...`, `9c23f3f5...`,
+> `44d2d8a0...`, and `d9e65315...`.
+>
+> Verdict: **PROMOTE AS PARAMETER COMPRESSION FOR R5'S NECESSARY ENDPOINT
+> FILTER ONLY.**  The producer regression harness is tautological and does
+> not carry the theorem; the independent audit does.  Endpoint survival is
+> not a formal jet, raw landing, face/family exclusion, global automorphism,
+> cofinality result, counterexample, or JC2 theorem.
+
+> **K00 V24R6R1 SELECTED `D(W)` PREFIX — OPUS5 HOSTILE-REVIEW CONFIRMED
+> (2026-08-27 16:48Z; supersedes the 15:55Z hold).**  In the frozen
+> six-variable leading ring the exact graded syzygy
+> `W=A1*Q1+A3*Q3+A4*Q4` holds with explicit degree-four cofactors.  Hence
+> `(Q1,...,Q5,F10,zW-1)=(1)`, the selected leading-base/F10 `D(W)` chart is
+> empty, and adjoining `W=0` is redundant.  Under the frozen exact-Q
+> substitution into the 36-generator normalized source, the
+> `D(k10_0 W)` prior-prefix chart is also empty as a scheme.  The Opus5
+> audit independently replays the syzygy, seven-actual/eight-logical slot
+> alignment, `z` cancellation, characteristic-zero lift, and full
+> embedding (`d9e65315...`).
+>
+> Verdict: **PROMOTE EXACTLY THOSE TWO OPEN-CHART EMPTINESS RESULTS.**  The
+> logical zero `Q6` coefficient is a serialization convention, and the
+> mutations are engine checks rather than evidence.  The result says that
+> the chosen witness minor vanishes on the whole base scheme; it does not
+> empty that scheme.  Other rank-five minors, rank at most four, the
+> chart-free Fitting atlas, later grades, a jet/arc, receiver, order two,
+> maximum twelve, and JC2 remain open.
+
+> **R7R1 QUARTER-ROOT CHARACTERISTIC/DE RHAM TOWER — FABLE5
+> HOSTILE-REVIEW CONFIRMED WITH `D35` REPAIR (2026-08-27 16:48Z).**  Over
+> `L=K(X)(p)`, `p^4=H`, the corrected transform with
+> `P=F^(1/8)`, `s=t/P`, `W=G/P^12`, and `Q=P^2` is exact.  The normalized
+> target `E=t^22` is attainable for some `G` over `L` exactly when every
+> differential `q_n dX` is exact in `L`, with
+> `w_(n+22)'=-(n+2)q_n/16`; the full homogeneous kernel is
+> `C_L[[s]]`.  A congruence `E=t^22+O(t^N)` licenses exactly the rows with
+> `n+22<N`; in particular `q2=F2/(4H)-F1^2/(16H^3)` needs determinant rows
+> through weight 24.  The trace descent, degenerate Kummer cases, and
+> conditional `mu4` character statement all pass.  Producer/freeze/review
+> SHAs are `9d35c678...`, `489647cf...`, and `7ab758fa...`.
+>
+> The frozen D3 polygons have maximum potentially nonzero determinant row
+> `D34`, not `D35`: the sole top slots are proportional to `x^2,x^3` and
+> their bracket cancels.  Verdict: **PROMOTE THE CORRECTED ALL-ORDER
+> DIFFERENTIAL THEOREM AND FINITE LICENSING SCHEDULE; REPAIR THE SUCCESSOR
+> CEILING TO 34.**  This is a necessary formal-edge criterion, not a finite
+> decision bound, raw landing, family exclusion, or JC2 result.
+
+> **D5G35 FULL ARTIFICIAL-FIXTURE DETERMINANT RANGE — GROK HOSTILE-REVIEW
+> CONFIRMED (2026-08-27 17:22Z; supersedes the 16:48Z hold).**  The additive
+> compiler extension serializes `D0,...,D34` from the frozen D3 polygons and
+> a different-model four-product engine reproduces D5G byte for
+> byte through weight 22.  It finds 626 terms/1,106 contributions in `D23`,
+> 494/896 in `D24`, and four terms in `D34`; `D35` cancels identically.  The
+> exact target is the 734-generator system
+> `D0=...=D21=0`, `D22=1`, `D23=...=D34=0`, with `D35` automatic.  Report
+> freeze, and review SHAs are `f0fe0f5d...`, `1668795f...`, and
+> `ba7162fe...`.
+>
+> Verdict at 17:22Z: **PROMOTE THE COMPLETE COMPILER, THEN-FROZEN TARGET,
+> AND CONDITIONAL R7R1 CUTOFF INTERFACE.**  The `D23+1` / `D24+1` mutations
+> are target sentinels, not independent audits of their nonconstant terms;
+> the independent sparse and dense engines supply that audit.  The target's
+> historical `UNSOLVED` label is superseded by the 19:37Z
+> `EMPTY-BY-COMPOSITION` correction.  Compiler promotion does not construct a
+> source, identify a genuine family face, make the de Rham tower finite, or
+> prove a GGV/JC2 conclusion.
+
+> **K00 V26R1F INTRINSIC LEADING-BASE RANK-`<=4` LOCUS — FABLE5
+> HOSTILE-REVIEW CONFIRMED (2026-08-27 17:34Z; supersedes the 16:48Z
+> hold).**  In
+> `R=Q[d0_1,d1_1,d2_1,d3_1,d4_1,d5_1]`, let `A` be the frozen `7 x 7`
+> grade-seven newest-variable matrix and let `B` be the six nonzero literal
+> grade-two rows together with `F10`.  All 49 literal `6 x 6` minors of `A`
+> vanish identically.  Of its 441 literal `5 x 5` minors, 90 are nonzero as
+> polynomials and the 54 distinct values lie in two scalar classes.  For the
+> **full** Fitting ideal, `J=B+I5(A)` is proper and `dim(R/J)=3`.
+> Consequently the rank-`<=4` locus `Spec(R/J)` is a nonempty
+> three-dimensional affine scheme over an algebraic closure of `Q`.
+> Producer/source-freeze/evidence/review SHAs are `86742147...`,
+> `3d04cc18...`, `f012cc1a...`, and `6790ec5c...`.
+>
+> Verdict: **PROMOTE THIS INTRINSIC SIX-VARIABLE THEOREM ONLY.**  Fable5
+> independently reconstructed every minor, closed the dangerous
+> 54-minor-to-9-generator compaction by proving the two scalar classes,
+> verified both ideal inclusions and all 36 Buchberger pairs, and recovered
+> properness and dimension without trusting Singular status attributes.
+> Opus5 had already promoted the V24R6R1 `W` dependency (`d9e65315...`), so
+> the rollback label is released at this narrow leading-base scope.  No
+> rational point, rank-exactly-five chart, complete rank atlas, full `P6`
+> source, later grade, reachability, jet/arc, receiver, order-two maximum-12
+> instance, counterexample, or JC2 conclusion follows.  The warning-tainted
+> R1D directory now carries an additive `SUPERSEDED.md`; only R1F is
+> admissible evidence.
+
+> **DEGREE-EIGHT RAW-SUPPORT STAGING — CORRECTION REQUIRED (2026-08-27
+> 16:48Z).**  Grok producer `43a949b2...` and different-model audit
+> `5735ee90...`: the audit confirms the producer's D3 windows/counts,
+> `D22` constant-coordinate formula,
+> injective high-weight maps and cokernels, rational-mode schedules,
+> endpoint branches, negative control, and weight-11 ranks.  It refutes the
+> claimed universal weight-15-first incidence.  On the generic `Q`
+> (`delta=1`) and generic `P` (`delta=2`) strata, already
+> `D1=0` forces `G1=(3/2)HF1`, and `D2=0` forces
+> `H|F1^2`, equivalently `AB|F1` for `H=A^2B`.
+>
+> Verdict: **RETAIN THE LISTED EXACT LEMMAS; WITHDRAW THE UNCONDITIONED
+> 127-PARAMETER SAMPLER, ITS FINITE-FIELD TRIALS, AND ITS STOP RULE.**  Any
+> successor must compile the conditioned prefix sequentially from weight
+> one.  On the perfect-square branch the multiplicity gcd must be stratified
+> as `delta=2,4,8`; weight-one homogeneous modes occur for `delta=4,8`, so
+> the displayed gate is not proved there, and for `4|delta` the first
+> nonpolynomial scheduled mode is weight 13.  Shared roots imply only
+> `gcd(A,B)|v`, not `B|A`.  Optional
+> homogeneous modes do not repair a nonpolynomial particular solution,
+> scaling preserves support while translation can leave the frozen windows,
+> and the endpoint scalar cannot repair a nonconstant polynomial residue.
+
+> **R5 GENERAL-MULTIPLICITY MODES AND RATIONAL ENDPOINT FILTER — OPUS5
+> HOSTILE-REVIEW CONFIRMED (2026-08-27 15:55Z).**  Let
+> `H=h0*product_i p_i^e_i`.  At weight `n`, a nonzero rational homogeneous
+> mode for the `H^2/H^3` edge exists exactly when
+> `4 | e_i(12-n)` for every factor, equivalently
+> `4 | gcd(e_i)(12-n)`.  The exact lift
+> `t^n R_q(F/H^2)^((12-n)/8)` requires no root of `h0` and annihilates the
+> full nonlinear homogeneous equation.
+>
+> After subtracting the lower modes, the normalized constant endpoint reduces
+> to `2Hg'+H'g=2H`.  For `H=A^2B`, `B` squarefree, it is rationally soluble
+> exactly when `A=Bv'+(3/2)B'v` for a polynomial `v`.  For degree eight this
+> excludes squarefree-part degrees `4,6,8`; degrees zero and two survive, and
+> centered `B=z^2-D` has the sole condition `4a0+D*a2=0`.  The normalization
+> can be performed over `K` itself, and the last condition has an invariant
+> residue-at-infinity interpretation.  Producer/freeze/review SHAs are
+> `fd164042...`, `3d8ba267...`, and `48fff5d5...`.
+>
+> Opus5 found no mathematical error, but the frozen producer verifier has a
+> dead branch, tautological endpoint checks, and an escaping degree-rule
+> mutation.  Those are software defects: the review independently rederived
+> every theorem item with exact arithmetic and live countertests.  An
+> additive strong verifier is still required before treating the harness as
+> protection.
+>
+> Verdict: **PROMOTE R5 AS A NECESSARY RATIONAL-ENDPOINT FILTER ONLY.**  The
+> weight-22 right side is an inherited nonzero constant normalization.
+> Endpoint survival constructs neither a polynomial residual nor a formal
+> jet.  No raw support/landing, GGV family exclusion, global automorphism,
+> `G2-PSC`, `G2-BD`, cofinality, counterexample, or JC2 result follows.
+
+> **R6 ENDPOINT-SURVIVOR PARAMETRIZATION — INTERNAL AUDIT PASS,
+> DIFFERENT-MODEL REVIEW PENDING
+> (2026-08-27 15:55Z).**  With R5 now promoted, every positive-`b` survivor
+> is parametrized by
+> `H=(Bv'+(3/2)B'v)^2B`, with `B` monic squarefree and the leading
+> coefficient of `v` fixed.  The fixed-`b` constructible image has dimension
+> `(h-b+2)/2` and closure codimension `(h+b-2)/2`; the perfect-square branch
+> has dimension/codimension `h/2`.  Hence the full monic degree-`h` survivor
+> locus has codimension exactly `floor(h/2)`.  Producer/freeze/audit SHAs are
+> `ed0e3460...`, `9c23f3f5...`, and `44d2d8a0...`.
+>
+> Verdict: **PROVISIONAL HOLD.**  The audit shares the producer model family
+> and does not satisfy the promotion gate.  Opus5 cross-review is live.  The
+> intended ceiling remains a search-space compiler only, not a jet, raw
+> landing, family exclusion, or global JC2 theorem.
+
+> **K00 V24R6R1 SELECTED `D(W)` PREFIX — EXACT UNIT/SYZYGY INTERNAL AUDIT
+> PASS; DIFFERENT-MODEL REVIEW PENDING (2026-08-27 15:55Z).**  In the six-leading-variable ring,
+> the exact global identity
+> `W=A1*Q1+A3*Q3+A4*Q4` holds over `Q`.  Equivalently,
+> `(Q1,...,Q5,F10,zW-1)` is the unit ideal.  A separate exact embedding into
+> the full 36-generator normalized V24 source replays, including the logical
+> zero `Q6` slot and load-bearing drop/add mutations.  Producer/result,
+> additive syzygy, and review SHAs are `8da4f616...` / `b0a53786...`,
+> `8cd2afdd...`, and `f9d2afcb...`.
+>
+> Verdict: **PROVISIONAL HOLD.**  Producer and internal auditor share a model
+> family; Opus5 cross-review is live.  If confirmed, the maximum promotion is
+> emptiness of the selected prior-prefix `D(W)` and normalized
+> `D(k10_0W)` charts.  Every remaining point has `W=0`; because `W` lies in
+> the base ideal, that equation is redundant there.  This does
+> not analyze the chart-free Fitting/rank locus, other rank-five minors,
+> later grades, a jet/arc, a receiver, order two, maximum twelve, or JC2.
+
+> **D5G DIRECT RAW-GLOBAL DETERMINANT AND `H`-MULTIPLE CUSTODY — INTERNAL
+> AUDIT PASS; DIFFERENT-MODEL REVIEW PENDING (2026-08-27 15:43Z).**  From the
+> literal D3 `2S/3S` support, fixed `F0=(X^8-1)^2`,
+> `G0=(X^8-1)^3`, and 400 named positive-weight raw slots, D5G compiles the
+> exact coefficients `D0,...,D22` of
+> `12F_XG-8FG_X-t(F_XG_t-F_tG_X)`.  The independent audit reconstructs all
+> 32,135 combined terms and 58,572 differentiated source contributions in a
+> separate sparse implementation.  It confirms
+> `D22=H*Q22+R22`, `deg(R22)<8`, and
+> `D22=M(Y22)+rM22`, `deg(rM22)<7`, including the complete 621-step
+> reduction trace.
+>
+> The illustrative custody mutation `D22 -> D22+H` gives exactly
+> `Delta Q22=1`, `Delta R22=0`, `Delta Y22=X/52`, and
+> `Delta rM22=-12/13`.  Thus factorwise values really do lose a live global
+> quotient.  Producer/freeze/review SHAs are `59e9bf2c...`, `838b1160...`,
+> and `14913814...` (audit freeze `e51084fb...`).  D4R1 bytes are read only
+> as a lifecycle hold; no local cleanup result enters the computation.
+>
+> Verdict: **PROVISIONAL HOLD.**  The producer and internal auditor share a
+> model family; Opus5 cross-review is live.  The maximum possible promotion
+> is the narrow raw-coordinate compiler and global `H`-multiple custody
+> result.  Do not infer `D1=...=D21=0`,
+> `R22=1`, `Q22=0`, local naturality, a Keller specialization, a GGV
+> face/family exclusion, `G2-PSC`, `G2-BD`, a counterexample, or JC2.
+
+> **D4R1 FACTOR-LOCAL RAW-TO-MORSE CLEANUP DAG — FABLE5
+> HOSTILE-REVIEW CONFIRMED (2026-08-27 15:47Z).**  Over
+> `A=Q[c]/(c^8-1)`, with the four factor/deck/orientation tags retained, the
+> exact 49,964-node formal cleanup DAG uses all 400 positive-weight D3 raw
+> slots as free leaves and compiles the twelve named local series through
+> weight 22.  Fable5 independently rebuilt the DAG with a
+> different composition engine, replayed two random full-support points, and
+> checked the defining formal identities and all three constant-unit
+> inversions.
+>
+> The legal five-row specialization evaluates exactly to
+> `U14=c`, `U16=-1/4`, `U20=-c^2/8`, `U22=c/16`.  The review also finds that
+> deleting `f_2_2` breaks the displayed precursor identity but still leaves
+> `U14=c`; therefore the five-row witness is not minimal and no minimality
+> claim is promoted.  Producer/freeze/review SHAs are `8b3dd3c...`,
+> `6beafdb4...`, and `971816d0...`.
+>
+> Verdict: **PROMOTE THE FACTOR-LOCAL COMPILER AND THE SUPPORT-ONLY
+> NON-OBSTRUCTION.**  Raw `F14` support alone cannot exclude local `U14=X`.
+> This does not impose all Keller rows, glue a global `E22`, control its
+> `H`-multiple, prove local/global naturality, give a global polynomial
+> automorphism, exclude a face/family, or establish either scoped `G2-PSC` /
+> `G2-BD` obligation or any JC2 result.
+
+> **GENERAL-SQUAREFREE `H^2/H^3` RATIONAL-MODE THEOREM — R4 GROK
+> HOSTILE-REVIEW CONFIRMED (2026-08-27 15:18Z).**  Let `K` have
+> characteristic zero and let nonconstant squarefree `H in K[X]`.  For
+> `F,G in K[X][[t]]` with `F0=H^2`, `G0=H^3`, the complete rational
+> homogeneous modes through weight 22 are the exact weights
+> `0,4,8,12,16,20`; weight 22 has no kernel.  After subtracting them, a
+> prospective
+> `12F_XG-8FG_X-t(F_XG_t-F_tG_X)=t^22+O(t^23)` reduces to
+> `4HY'+6H'Y=1`.  This is impossible for `deg(H)>=2`; for degree one the
+> unique endpoint solution is `Y=1/(6H')`, which constructs no jet.  Grok
+> independently rederived the square-root branch, exact mode lift,
+> logarithmic-residue completeness, finite-pole and infinity provenance,
+> endpoint signs, and degree law.  Producer/freeze/review SHAs are
+> `11cad1db...`, `9235df1b...`, and `5187676b...`.
+>
+> The repeated-root stop is also exact: for `H=X^2`, `F=X^4`,
+> `t^22F^(-5/4)=t^22X^-5` is a homogeneous mode.  The producer verifier has
+> tautological fixtures and one false “dense” comment, but the reviewer
+> independently proved every theorem item; this is a nonblocking software
+> repair.
+>
+> Verdict: **PROMOTE THE GENERAL-SQUAREFREE FORMAL REPLACEMENT-EDGE
+> EXCLUSION FOR `deg(H)>=2`, DEGREE-ONE SILENCE, AND THE `H=X^2` STOP.**
+> No raw-source provenance, GGV landing/family exclusion, Keller pair,
+> `G2-PSC`, `G2-BD`, cofinality, counterexample, or JC2 result follows.
+
+> **D4 FIRST RAW-TO-MORSE CLEANUP FREEZE — QUARANTINED BEFORE PROMOTION
+> (2026-08-27 15:04Z).**  The exact identity with
+> `u=H+t^6X-t^8/2` and `R=t^14X-t^16/4` is a polynomial precursor-square
+> decomposition.  Producer `bf81b905...` / freeze `8a79c549...` incorrectly
+> labels the X-dependent remainder `R` as the Morse critical-value series
+> `U(t)`, which must be scalar in each factor field.  The already-launched
+> Fable5 review was stopped when the producer disclosed the error.
+>
+> Verdict: **NO D4 CLAIM IS PROMOTED.**  An additive repaired freeze must
+> evaluate the actual critical-section DAG under the five-row specialization
+> and prove `U14=c` in `Q[c]/(c^8-1)`, then undergo fresh hostile review.
+> D3's fail-closed missing-interface result is unaffected.  No support-only
+> obstruction or non-obstruction, global `E22`, or face theorem follows.
+> D4R1 later supplied and passed exactly that repair; its promoted scope is
+> recorded in the newer block above.
+
+> **V43C6 FIRST C5 TYPED-TRANSPORT OBSTRUCTION — FABLE5 HOSTILE-REVIEW
+> CONFIRMED (2026-08-27 14:58Z).**  The frozen C5 proof uses 25 literal rows
+> over a 67-symbol alphabet.  V20R2 contains no serialized C5 ring/row map:
+> recursive inspection finds no `a1`, `Tg`, or interface key.  On the exact
+> frozen V47 endpoint `A1D2_R3`, the reviewed V46 contact map defines 28
+> source-symbol images and leaves 39 unavailable, and sends
+> `a1=Az_0` to zero.  Its target coefficient ring localized at
+> `(-2*rho^2)k10_0` is a nonzero domain, so zero is not a unit and the map
+> cannot extend from `S[a1^-1]`.  Pushing the ordinary C5 identity through
+> the finite map therefore yields only the tautology `0=0`; row-module
+> transport is not reached.  Producer/freeze/review SHAs are `cee2a228...`,
+> `394f5390...`, and `ad855507...`.
+>
+> Verdict: **PROMOTE THE UNAVAILABLE V20R2 INTERFACE AND ZERO-IMAGE
+> OBSTRUCTION FOR THIS NAMED V47 ENDPOINT CLASS ONLY.**  This does not refute
+> the reviewed C5 certificate, preclude another typed receiver, or prove a
+> source, terminal, Gate T, order-two, maximum-twelve, GGV, or JC2 statement.
+
+> **SUPERELLIPTIC RATIONAL ENDPOINT CRITERION — TWO HOSTILE AUDITS
+> CONFIRMED (2026-08-27 14:54Z).**  Let `K` have characteristic zero and
+> write nonzero `H=A^2 B` with `A,B in K[X]` and `B` squarefree.  Then
+> `2H g' + H'g = 2H` has a solution `g in K(X)` if and only if there is
+> `v in K[X]` with `A = Bv' + (3/2)B'v`.
+>
+> Sol and Grok independently checked the valuation reduction, both
+> directions, examples, and the general radical-cover formula.  Required
+> repairs are part of the theorem record: the bridge from `M(Y)=1` is
+> `g=4HY`; a reduced denominator divides `A` but need not equal it; the
+> injectivity/codimension statement for `N_B(v)=Bv'+(3/2)B'v` assumes
+> `deg(B)>=1`, while constant `B` has constants in its kernel and is
+> surjective; and general radical covers must be normalized/minimal with the
+> character and prescribed `K(X)` primitive line tagged.  For `H=X^8-1`,
+> on `w^2=H`, exact reduction gives
+> `[w dX]=-(4/5)[dX/w]!=0`.  Producer/audit/review SHAs are
+> `1c17b61f...`, `d382c21f...`, and `066095c4...`.
+>
+> Verdict: **PROMOTE THE RATIONAL ENDPOINT CRITERION AND ITS PINNED
+> `X^8-1` NONEXACTNESS FIXTURE ONLY.**  The producer disclosed one
+> contaminating search-result line naming the integrating factor, so that
+> observation receives no novelty credit.  No general-`H` rational-mode
+> completeness for the preceding GGV equations, raw-source provenance,
+> landing, face/family exclusion, `G2-PSC`, `G2-BD`, cofinality, counterexample,
+> or JC2 conclusion follows.
+
+> **GGV `M` POLYNOMIAL COKERNEL — SEVEN-DIMENSIONAL WITH FULL
+> `H`-MULTIPLE MOBILITY (2026-08-27 14:54Z).**  For `H=X^8-1` and
+> `M(Y)=4HY'+6H'Y`, `M` is injective on `Q[X]` and
+> `Q[X] = im(M) direct-sum Q[X]_(degree<=6)`.  The exact monomial law is
+> `M(X^d)=4(d+12)X^(d+7)-4dX^(d-1)`, giving canonical reductions
+> `[X^7]=0` and `[X^n]=((n-7)/(n+5))[X^(n-8)]` for `n>=8`.
+> Independent recalculation repairs the tempting but false inference that a
+> rootwise carrier determines a single obstruction vector:
+> `r(HX^i)=-(12/(i+13))X^i` for every `0<=i<=6`, so multiplication by `H`
+> followed by canonical remainder is an isomorphism on the complement.
+> Audit SHA is `2803b705...`.
+>
+> Verdict: **PROMOTE THE EXACT POLYNOMIAL QUOTIENT AND THE FULL-MOBILITY
+> REPAIR.**  It becomes a finite endpoint test only after a typed raw compiler
+> produces one global polynomial `E22`; the unknown global `H`-multiple can
+> otherwise move through all seven coordinates.  No raw provenance, GGV
+> exclusion, or global result follows.
+
+> **R2 CARRIER SQUARE-CLASS TABLE — EXACT-Q ARITHMETIC PRUNING ONLY
+> (2026-08-27 14:54Z).**  In the pinned normalized R2 chart, branch two gives
+> `U11(c)^2=lambda*c/36`.  Independent hostile audit confirms that it can
+> occur on `Phi1` exactly in square class `1`, on `Phi2` exactly in square
+> class `-1`, on `Phi4` exactly in square class `+/-2`, and never on `Phi8`.
+> For `lambda=1`, only the `X-1` factor is eligible.  The normalization and
+> residue descent remain defined over the factor residue fields.  Producer
+> and review SHAs are `24210961...` and `39a28831...`.
+>
+> Verdict: **PROMOTE AS EXACT-Q SEARCH/COMPILER METADATA ONLY.**  Kummer
+> square-class descent is not new campaign machinery; the novelty is this
+> R2 application and table.  The obstruction vanishes over `Qbar` and `C`,
+> does not invalidate the mixed local typing fixture, and proves no complex
+> face/family exclusion or `G2-PSC` / `G2-BD` statement.
+
+> **K00 V24 GRADE-SEVEN CONDITIONAL COMPATIBILITY — OPUS5 HOSTILE-REVIEW
+> CONFIRMED (2026-08-27 14:54Z).**  On the frozen normalized valuation-one
+> source with `C6=1`, `k6_0=0`, and over the prior coefficient ring localized
+> at `W`, the literal grade-seven newest-variable matrix has rank five and a
+> free rank-two left kernel.  The system `A*y+b=0` is soluble exactly when
+> the two frozen polynomials `Comp1` and `Comp2` vanish.  Producer review and
+> adjudication SHAs are `d547baa2...` and `0bd97113...`.
+>
+> Verdict: **PROMOTE ONLY THE CONDITIONAL EXACT CRAMER/LEFT-KERNEL THEOREM.**
+> The prior localized chart's nonemptiness/properness, `W=0`, later grades,
+> compatible jets, arcs, receiver incidence, order two, maximum twelve, and
+> JC2 remain open.  The producer's modular-zero JSON field was computed after
+> localization to a unit ideal and is withdrawn as evidence.
+
+> **EXACT PURE TOTAL ORDERED-`a1` CERTIFICATE — V43C5 V2 GROK
+> HOSTILE-REVIEW CONFIRMED (2026-08-27 14:03Z).**  In the ordinary
+> polynomial ring `S=Q[t,X19_total]`, for the frozen literal total raw
+> ordered-`a1` rows through grade 19, there is an exact identity
+>
+> `a1^628 = sum_j M_j(t,X) R_j(t,X)`
+>
+> using 25 of the 59 nonzero rows.  The serialized proof has 950 expression
+> nodes.  It combines the separately reviewed C4 identity `a1^104 in J0`
+> and G4 identity `5*t^6*a1^4 in J` by an exact same-ring geometric-sum
+> circuit; there is no localization and no division by `t`.  Grok
+> independently regenerated the literal 70-slot/59-nonzero/11-zero corpus,
+> replayed both source identities and the complete DAG, checked the exact map
+> `t -> rho^2`, and confirmed all nine controls.  Proof/result/freeze/review
+> SHAs are `f8426bcf...`, `215a64b...`, `dab07efa...`, and `0ab2a7ef...`.
+>
+> Verdict: **PROMOTE EXACTLY `a1^628 IN J_TOTAL` FOR THE FROZEN ORDINARY
+> RAW GRADE-THROUGH-19 ORDERED CHART.**  Under `t -> rho^2` this is the pure
+> requested form with `N=628` and `W=0`; equivalently its raw `D(a1)`
+> saturation is the unit ideal.  It supplies no source-reachability or
+> terminal-receiver chain map, no normalized K00 identification, and no
+> Gate T, order-two, maximum-twelve, GGV-family, or JC2 result.
+
+> **GGV `8_28` ARTIFICIAL SQUAREFREE REPLACEMENT EDGE — R3 GROK
+> HOSTILE-REVIEW CONFIRMED (2026-08-27 13:59Z).**  Let `K` be any
+> characteristic-zero field and `H=X^8-1`.  There is no polynomial-`X`
+> formal jet `F,G in K[X][[t]]` with
+> `F_0=H^2`, `G_0=H^3`, and
+>
+> `12F_XG-8FG_X-t(F_XG_t-F_tG_X)=t^22+O(t^23)`.
+>
+> The proof classifies all six homogeneous rational modes through weight 21
+> in `K(X)[[t]]`, including the two negative-power modes, and reduces the
+> endpoint to `4HY'+6H'Y=1`; squarefreeness controls the poles and the degree
+> law excludes polynomial `Y`.  Grok independently rederived the formal
+> branch, linearization, six modes, valuation/pole argument, substitution,
+> and degree obstruction.  Producer/freeze/review SHAs are `b1851156...`,
+> `e752b86b...`, and `27fcd256...`.
+>
+> Verdict: **PROMOTE ONLY NONEXISTENCE OF THE CHARGED ARTIFICIAL
+> `H^2/H^3` REPLACEMENT-EDGE JET THROUGH `t^22`.**  This does not exclude
+> the original non-Keller `8_28` witness, the original `8_28` Keller family,
+> multiple-root or other square/cube edges, a GGV family, `G2-PSC`, `G2-BD`,
+> a counterexample, or JC2.
+
+> **EXACT ORDERED-`a1` SPECIAL-FIBRE CERTIFICATE — V43C4 GROK
+> HOSTILE-REVIEW CONFIRMED (2026-08-27 13:28Z).**  In the ordinary
+> 65-variable polynomial ring `Q[X19_rho0]`, the 51 frozen raw rows through
+> grade 19 contain `a1^104`.  The assumption-free certificate uses sixteen
+> literal rows and an exact serialized DAG with 732 expression nodes, 71
+> derivation nodes, and 29 checkpoints.  It rebases the old `(e1,ee0)` labels
+> to `(G,Q0)` before the cubic clear and deletes its final three assumption
+> multipliers only after expanding a direct factor of each to zero over `Q`.
+> Grok independently rebuilt and replayed the complete DAG, signs, factors,
+> clears, branch combinations, final monomial, and registered mutations.
+> Proof/result/freeze/review SHAs are `3e0e80c0...`, `629a0763...`,
+> `67c1bb91...`, and `6a8ab201...`.
+>
+> Verdict: **PROMOTE EXACTLY `a1^104 IN J0` FOR THE FROZEN RAW
+> GRADE-THROUGH-19 ORDERED CHART.**  The reviewed invalidation of the
+> uncorrected C1/C2 tree remains true; C4 is a distinct repaired successor.
+> This special-fibre identity alone proves no total-`rho`, saturated-Rees,
+> terminal-receiver, Gate T, order-two, maximum-twelve, or JC2 statement.
+> The separate C5 converter must lift it into the same total ring and replay
+> the prospective exponent 628 before any ordered-chart closure claim.
+
+> **GGV `8_28` ROOTWISE CUSP CARRIER CLASSIFICATION — R2 GROK
+> HOSTILE-REVIEW CONFIRMED (2026-08-27 13:45Z).**  At every simple root of
+> `H=X^8-1`, formal Morse normalization gives `F=u^2+U(t)` and permits the
+> unrestricted sidecar
+> `G=W+V*u+Q*u^2+Gamma*u^3+O(u^4)`, `Gamma(0)=1`.  The determinant chain
+> rule cancels the moving-coordinate terms, and its constant channel is
+> exactly `V(t)*(t*U'(t)-8*U(t))`; neither `Q`, `Gamma-1`, nor any `u^4+`
+> coefficient can create another constant carrier.  Vanishing through
+> weight 21 forces the first weight-22 carrier to be exactly
+> `6*V_8*U_14` where `V_8!=0`, or `(9/2)*U_11^2` where `V_8=0`.  Restoring
+> the determinant unit gives the corresponding factorwise identities
+> `6*H'(c)*V_8(c)*U_14(c)=1` and
+> `(9/2)*H'(c)*U_11(c)^2=1`; different etale factors may take different
+> branches.  Grok independently rederived the Morse chart, chain rule,
+> three low-`u` channels, induction, both branches, and mixed-factor control.
+> Producer/freeze/review SHAs are `0f8f3833...`, `453f7821...`, and
+> `b271a295...`.
+>
+> Verdict: **PROMOTE FORMAL/ROOTWISE TWO-CARRIER COMPLETENESS THROUGH WEIGHT
+> 22, INCLUDING UNRESTRICTED LOCAL HIGHER-`u` SIDECARS.**  This is not a
+> raw `2S/3S` provenance compiler or a global polynomial coordinate change;
+> it does not place the global `H`-multiple in R1's `M(Y)` image.  No full
+> face/family exclusion, Keller pair, `G2-PSC`, `G2-BD`, or JC2 result
+> follows.
+
+> **GGV `8_28` KELLER-FACE RAW/LOCAL TYPE WALL — R1 GROK
+> HOSTILE-REVIEW CONFIRMED (2026-08-27 13:43Z).**  For
+> `S=conv{(0,0),(1,0),(8,28),(0,4)}`, the exact raw `2S/3S` slices show that
+> `F_14` contains only the source monomial `x^2`, `G_21` contains only
+> `x^3`, and `G_22` is empty.  Thus the rootwise cusp interpolant
+> `U_14=X` is not itself a raw polynomial `F_14` row; it would correspond
+> to `x*y^(-3)`.  Inside each of the two normalized scalar-carrier ansatzes,
+> the complete weight-22 contribution is in the image of
+> `M(Y)=4HY'+6H'Y`, with `H=X^8-1`: respectively
+> `M(A((3/2)P+C))` and `M(3A^2/4)`.  Since every nonzero polynomial `Y` of
+> degree `d` gives degree `d+7` with leading coefficient
+> `(4d+48)lc(Y)`, `M(Y)=1` has no polynomial solution; in particular
+> `M(X/48)=1+(13/12)H`.  Grok independently rederived all slices,
+> recurrences, identities, and the degree obstruction and confirmed all
+> fifteen charged items.  Producer/freeze/review SHAs are `66121bdd...`,
+> `05cbb5c...`, and `d40cd78f...`.
+>
+> Verdict: **PROMOTE ONLY THE RAW/LOCAL TYPE REPAIR AND FAILURE OF THE TWO
+> NAMED POLYNOMIAL UNIT-CARRIER ANSATZES.**  The R0 rootwise identity remains
+> valid at its stated local scope.  Approximate-root cleanup can mix lower
+> raw jets into `U_14`; no typed-normal-form completeness, full face/family
+> exclusion, Keller pair, `G2-PSC`, `G2-BD`, counterexample, or JC2 result
+> follows.
+
+> **FIRST HONEST WEIGHTED K00 STRATUM — V22R1 GROK HOSTILE-REVIEW
+> CONFIRMED (2026-08-27 13:22Z).**  On the normalized valuation-one prefix
+> `d_i=Lambda*x_i+O(Lambda^2)` with `k10=kappa+O(Lambda)` and `kappa!=0`,
+> the complete K10 degree-three lift leaves the exact quartic `F10`.  The
+> reviewed degree-four dual annihilates all 603 truncated generators and
+> pairs with `F10` as `25/45056`, so `F10` is nonzero modulo
+> `T=(Q1,...,Q6)`.  Honest V20 weights make the first canonical contracted
+> equation
+>
+> `kappa*F10(x)=0` at weighted grade 6.
+>
+> Hence the open `D(F10)` part of this prefix is excluded.  Independent
+> lexicographic and degree-order Gröbner bases over `Q` show that
+> `L=(Q1,...,Q6,F10)` is proper of affine dimension three, so its
+> projectivization remains nonempty of dimension two over an algebraic
+> closure.  Producer report/freeze/evidence/review SHAs are `494075c5...`,
+> `19c5a441...`, `99d6b1e6...`, and `f834cb99...`.
+>
+> Verdict: **PROMOTE ONLY THE GRADE-SIX `D(F10)` EXCLUSION AND THE EXACT
+> NONEMPTY CLOSED REMAINDER.**  The review consumes the now-reviewed V20/V21
+> source dependencies.  It does not decide `F10=0`, grades 7--19, other
+> coefficient valuations, a finite full jet, an arc, K00 closure incidence,
+> order two, maximum twelve, or JC2.
+
+> **ORDERED-`a1` CONSTRUCTIVE CASCADE — V43C2 INVALIDATION GROK
+> CONFIRMED (2026-08-27 13:14Z).**  The uncorrected right branch advertised
+> modulo `G=e1-4*a1*ell1` retains a multiplier of the old assumption `e1`.
+> Independent circuit reconstruction gives
+> `root642=a1^3*Z*K`, where `Z` has exactly 24,429 nonzero terms and
+> `K|_(ell1=0)=a1^36`; both factors are nonzero in the polynomial domain.
+> The strict branch-combination guard therefore correctly rejects the
+> claimed `a1^104` certificate.  Producer invalidation/base-freeze/review
+> SHAs are `59d1e39c...`, `10217738...`, and `008e0d52...`.
+>
+> Verdict: **WITHDRAW `M=104` AND THE CONDITIONAL CONVERTER EXPONENT 628
+> FROM THE UNCORRECTED V43C1/C2 DERIVATION ONLY.**  Reviewed V42 radical
+> closure and the V43G4 identity `5*t^6*a1^4 in J` are unchanged.  The exact
+> change of basis `e1=G+4*a1*ell1`, `ee0=Q0-4*aa0*ell1` is a legitimate
+> successor design, not yet a certificate; its serialized C3 replay remains
+> provisional until completion and hostile review.
+
+> **COMMON MIXED K00 `LAMBDA<=19` SOURCE COMPILER — V20R2 GROK
+> HOSTILE-REVIEW CONFIRMED (2026-08-27 13:08Z).**  For the frozen normalized
+> K00 seven-row source, the corrected construction first contracts the 66
+> exact six-row syzygies to the scalar universal quotient and only then
+> applies an honest weighted parameter map.  It compiles all 569 literal
+> tails through grade 19 to 140 coefficient equations on 169 source columns,
+> with five boundary zeros imposed before the remaining 164 free columns,
+> and records a 309,343-node exact DAG.  All 87 seven-row controls replay,
+> `h*r7=sum_i u_i*r_i` has `h(0)=20`, and the contracted target agrees term
+> for term.  Grok independently rebuilt the source and fresh syzygy module,
+> replayed the rational and finite-field fixtures plus six mutations, and
+> confirmed that contraction precedes specialization.  Producer report,
+> clean harvest, and review SHAs are `9e304f58...`, `b205bd9f...`, and
+> `c37cdc4f...`.
+>
+> Verdict: **PROMOTE V20R2 ONLY AS THE EXACT TYPED COMMON-SOURCE AND SCALAR
+> CONTRACTION COMPILER THROUGH `LAMBDA^19`.**  It proves no constructible
+> stratum cover, compatible jet, obstruction, arc, closure incidence, order
+> two, maximum twelve, or JC2 result.  Each rank stratum still requires an
+> exact lift or rational dual; V22 begins that separate endpoint analysis.
+
+> **K00 THREE DIRECTIONAL LOCAL-NONMEMBERSHIP CLASSES — V21R1 OPUS5
+> HOSTILE-REVIEW CONFIRMED (2026-08-27 12:57Z).**  In the exact normalized
+> local ring `R_m=Q[d0,...,d5]_(d0,...,d5)`, let
+> `J_X=(r1,...,r6)+E_X` and
+> `D_X=h*a7^X-sum_i u_i*a_i^X` for `X=K10,K6,K2`, with every polynomial
+> taken literally from the frozen V17 source.  Exact rational functionals on
+> the quotients through degrees 4, 3, and 2 annihilate the full truncated
+> images and pair with the targets as
+> `25/45056`, `45/11264`, and `-25/352`.  Hence
+>
+> `D_K10 notin (J_K10)_m`, `D_K6 notin (J_K6)_m`, and
+> `D_K2 notin (J_K2)_m`.
+>
+> Opus5 independently rebuilt all matrices byte-for-byte across architecture,
+> replayed both syzygy modules and every pairing/mutation, obtained exact
+> rank jumps `108/109`, `30/31`, and `6/7`, and supplied a second
+> Gröbner-free finite-truncation proof that annihilates every true syzygy.
+> Producer result/evidence and review SHAs are `b514ef72...`, `00159ec0...`,
+> and `aa1a57cd...`.
+>
+> Verdict: **PROMOTE THE THREE SEPARATE `LOCAL_NONZERO` BRANCH CONCLUSIONS.**
+> V18R2's three first-incompatible-cutoff certificates may now be consumed
+> without waiting for monolithic V17-Q; compatible lifts, representations,
+> colon/global fields, mixed-load coupling, Lambda weights, grade-19
+> targets/`Jdet`, honest-source reachability, arc exclusion, K00 closure,
+> order two, maximum twelve, and JC2 remain unproved.
+
+> **ONE-CHAIN GGV `8_28` FIBRE-TAGGED POLE CONTROL — NON-KELLER,
+> DIFFERENT-MODEL CONFIRMED WITH R1 REPAIRS (2026-08-27 12:51Z).**  The
+> explicit pair `f=B^2-x-y^8`,
+> `g_tau=B^3-2x^2*y^2+y^12+tau*x*y^15`, with
+> `B=x*(x*y^4-1)^7`, exactly realizes the complete live one-edge `8_28`
+> GGV record.  Independent replay confirms both infinity charts, 72 sheets,
+> two ramification-28 plus sixteen unramified places, Q/jump/max
+> `1 -> 4 -> 28`, baseline pole mass 276, and the non-Keller witness
+> `Jac(f,g_1)|_(x=0)=-12*y^11+8*y^22`.  The mutation `tau:1 -> 2` preserves
+> the current GGV ledger but cancels the `y`-chart residual only at `c=-1`,
+> dropping one pole `12 -> 11` and the mass `276 -> 275`.
+>
+> Grok's first review confirms the mathematics but caught an in-review
+> contextual `TRANSPORT.md` hash drift and an overstrong “minimal packet”
+> label (`971147c5...`).  The additive R1 wrapper pins the exact R0 verifier,
+> changes only that contextual digest, and matches all 75 mathematical leaves;
+> the follow-up review passes both custody and scope repairs (`8f20bc6b...`).
+> Only the `y` residual/root/pole vector and `x*y^15` provenance are forced by
+> this collision; the other packet fields are merely sufficient or
+> example-supported.
+>
+> Verdict: **PROMOTE ONLY THIS EXACT NON-KELLER PACKET-FIDELITY CONTROL.**
+> It proves the coarse GGV ledger insufficient for arbitrary polynomial
+> controls with that ledger, not for Keller pairs.  It is not a general
+> packet-to-tree functor, `G2-PSC`, source/landing theorem, degree ceiling,
+> counterexample, or JC2 result.
+
+> **BOUNDED STRICT UNIQUE-`AC` PRESBURGER CHAMBER COMPILER — V48 GROK
+> DIFFERENT-MODEL CONFIRMED (2026-08-27 12:43Z).**  From four frozen atoms
+> and four binomial summands, an independent exact enumerator reproduces 425
+> nonzero and 40 cancelled aggregate primitives, including the three
+> load-bearing cancellations `R^4`, `R^2C`, and `R^2A`.  The resulting 424
+> unique-`AC` and 417 global-pole inequalities solve analytically to exactly
+> the reviewed twelve baseline plus four raised rays, and reject all eight
+> frozen controls with their exact witnesses.  All sixteen V47 inventory
+> hashes, the independent miner's 24 cells, the producer replay, eight
+> reason-disable mutations, and hostile boundary/cancellation mutations pass.
+> Producer schema/compiler/output/result/freeze SHAs are `29d20652...`,
+> `1a7dfe1c...`, `43ff2925...`, `2d1c9545...`, and `e6a76532...`; hostile
+> review SHA is `4c64eb6a...`.
+>
+> Verdict: **PROMOTE V48 ONLY AS THE BOUNDED SEMILINEAR COMPILER OF THE
+> ALREADY-REVIEWED V47/V47R1 PREDICATE ON ITS REGISTERED BOX.**  V47/V47R1
+> retain endpoint authority, localizations, and theorem types.  V48 proves no
+> strict-fan cover, exhaustiveness outside the box, new endpoint, unit ideal,
+> `rho=0`, equality/positive-load face, staged Rees/receiver result, Gate T,
+> order two, maximum twelve, `G2-PSC`, `G2-BD`, JC2, or counterexample.
+
+> **FOUNDATIONS NORMALIZATION/FIDELITY DISTINCTION — SUPERSEDING CORRECTION
+> (2026-08-27).**  The 2026-08-17 foundations entry below predates the
+> reviewed theorem in `ladder/TRANSPORT.md`.  For the globally selected GGV
+> minimal polynomial pair, Theorems 2.1 and 3.1 now prove an explicit
+> Sigray-normalized representative of the same pair, and equations
+> (4.1)–(4.5) preserve the native pre-Laurent GGV ledger losslessly.  Grok's
+> hostile review found the theorem sound with non-load-bearing errata, now
+> folded; its review SHA is `aa7fe37b...` and the theorem-file SHA before
+> this editorial fold was `39a607c8...`.
+>
+> This repairs only the T2-to-T4 normalization fork.  It does **not** close
+> `G2-PSC`: no theorem yet converts the paired, fibre-tagged GGV packet into
+> a decorated Sigray pole tree, and post-Laurent `[P,Q]=x^j` records are only
+> recoverable valuation metadata, not polynomial Sigray inputs.  The coarse
+> ledger does not determine fibre tags, pole status, residual
+> `Q`-cancellation, or the complete Eggers–Wall/MacLane decorations.
+
+> **STRICT UNIQUE-`AC` THREE-ROW LITERAL CONTRACTION — V47R1 GROK
+> DIFFERENT-MODEL CONFIRMED (2026-08-27 12:02Z).**  For exactly the sixteen
+> frozen contacts
+> `A2D1,A3D1,A4D1,A5D1,A6D1,A2D2,A3D2,A4D2,A5D2,A6D2,A5D3,A6D3,
+> A1D2_R3,A2D3_R5,A3D3_R5,A4D3_R5`, executable contraction of all 569
+> literal source tails at generic shifted jets gives, in mapped-D1
+> coordinates,
+>
+> `Phi1[G]=(3/4)(AcD1_0*CzD1_0+AzD1_0*CcD1_0)`,
+>
+> `Phi2[G]=(3/4)(AcD1_0*CcD1_0+rho^2*AzD1_0*CzD1_0)`,
+>
+> `Phi4[T_C2]=(3/8)(CcD1_0^2+rho^2*CzD1_0^2)`.
+>
+> All 48 charged coefficient slots agree exactly.  Every retained extra jet
+> has zero support in those slots; pad-`+1` probes exclude a missed boundary
+> jet.  The raw-total companion has the required factor-two/four scaling.
+> Eight live mutations fire, including row-tail deletion, a false
+> `c_factor=1`, and displaced target slots.  A second sparse-rational engine
+> with nonaliased zero dictionaries independently reproduces the complete
+> records digest.  Producer result/freeze/review SHAs are `43547b06...`,
+> `bca113ab...`, and `ff76e8d...`.
+>
+> Verdict: **PROMOTE ONLY THE REPLACEMENT OF THE MOVING-ROOT ALLOCATION STEP
+> ON THESE SIXTEEN ALREADY-RESOLVED CONTACTS.**  Each contact inherits its
+> previously reviewed endpoint localization and theorem type.  This creates
+> no new endpoint, unit ideal, chamber or fan cover; it drops no
+> `D(p*k10)`, `D(p*k0)`, `D(rho)`, equality, positive-load, ramified, or
+> off-family condition.  The `(8,3,8)` endpoint remains unpromoted.  No
+> terminal receiver, `G2-PSC`, `G2-BD`, Gate T, order-two, maximum-twelve,
+> JC2, or counterexample conclusion follows.
+
+> **AS109 RESIDUAL `n=6` LOW-WITT/COMMON-CORE CARTIER GATE — GROK
+> DIFFERENT-MODEL CONFIRMED (2026-08-27 11:47Z).**  Let
+> `P=x-x^109+109A,Q=y+109B` be an exact integral AS109 lift with
+> `deg_y Q=6`, `deg_y P=m>=12`, `d=gcd(m,6) in {3,6}`, and primitive
+> leading common core
+> `p_m=alpha*h^(m/d), q_6=beta*h^(6/d)`.  Put `b=6/d`.  On the content
+> stratum `v_109(beta)=1`, the coefficientwise first-Witt row
+> `a_5'+6b_6=0` forces
+>
+> `(bar h)^b in im(d/dx:F_109[x]->F_109[x])`.
+>
+> Equivalently, every coefficient of `(bar h)^b` at exponent `109k-1`
+> vanishes.  With `Hbar=deg(bar h)` after reduction, this gives
+> `b*Hbar!=108 mod 109`: for `d=6`, exclude `Hbar=108 mod 109`; for
+> `d=3`, exclude `Hbar=54 mod 109`.  If also `v_109(alpha)=1` and
+> `gcd(m/d,109)=1`, then `bar h in F_109[x^109]`, so the Cartier condition
+> is automatic.  The condition is therefore a genuine discriminator only
+> on the complementary valuation-one slice and is vacuous when
+> `deg((bar h)^b)<108`.
+>
+> Grok independently expanded the packed determinant over `Z[x,y]`, derived
+> every first-Witt coefficient row and the univariate Cartier cokernel,
+> audited Gauss content and degree drop, reconstructed the UFD/Frobenius
+> positive control, replayed the frozen case byte-for-byte, and distinguished
+> the new low-row/common-core coupling from the stopped top-two bands,
+> wild-symplectic floor, and polar-conductor work.  Producer/review/freeze
+> SHAs are `c79dfbf...`, `d2b55dce...`, and `fcb578ae...`.
+>
+> Verdict: **PROMOTE EXACTLY THIS VALUATION-ONE, BRANCH-LOCAL NECESSARY
+> CONDITION.**  It neither shows that the branch is populated nor constrains
+> `v_109(beta)>=2`; it does not empty residual `n=6`, raise the target floor
+> to seven, construct or rule out a lift, justify W2/W3, bound support,
+> produce a characteristic-zero counterexample, or decide JC2.
+
+> **ORDERED `T-a1` GENERIC CERTIFICATE REHOMOGENIZED IN THE LITERAL TOTAL
+> RING — V43G4 GROK HOSTILE-REVIEW CONFIRMED (2026-08-27 11:46Z).**  In
+> `S=Q[t,X19_total]`, with `t=rho^2` and all 66 positive-weight variables,
+> the frozen grade-through-19 ordered-`a1` corpus satisfies the exact
+> polynomial identity
+>
+> `5*t^6*a1^4 = sum_i H_i*Tg_i`.
+>
+> Exactly eleven multipliers are nonzero, on
+> `Tg11_2,Tg11_7,Tg12_2,Tg12_7,Tg13_5,Tg13_7,Tg14_5,Tg14_7,Tg15_3,
+> Tg15_5,Tg15_7`; hence the identity already lies in the named
+> grade-through-15 subideal.  The rational content LCM is five, the Laurent
+> pole is exactly six for the serialized witness, the surviving
+> rehomogenized product levels are three and four, the unique `ez9` pivot row
+> `Tg19_2` has zero multiplier, and a literal `Tg15_7` coefficient mutation
+> leaves a nonzero residual.
+>
+> Grok rehashed the G2/G3/G4 freezes, all 58 Laurent multipliers, and the
+> literal V43 compiler; regenerated all 59 total rows; reparsed the
+> multipliers under a stricter grammar; and independently replayed the raw
+> `Q(t)`, denominator-cleared, sigma-projected, and total-rehomogenized
+> identities over exact rationals.  Producer result/freeze/review SHAs are
+> `ae7beed3...`, `77792779...`, and `8a34756e...`; the independently reviewed
+> full generic `Q(t)` unit has review SHA `e6cd1412...`.
+>
+> Verdict: **PROMOTE EXACTLY THE DISPLAYED TOTAL POLYNOMIAL IDENTITY AND ITS
+> GENERIC-FIBRE UNIT CONSEQUENCE.**  The coefficient `5*t^6` vanishes at
+> `t=0`, so this is not an `a1^N U(t)` identity with `U(0)!=0` and does not
+> yet close the ordered chart.  If an explicit total special identity
+> `a1^M-B=tH` is separately replayed, the audited algebraic converter would
+> produce exponent `4+6M`; the currently sought `M=104` input and the
+> resulting exponent 628 are not promoted here.  Minimal row support or
+> global minimal pole order is also not claimed.  No terminal receiver,
+> source/landing coverage, `G2-PSC`, `G2-BD`, Gate T, order-two,
+> maximum-twelve, JC2, or counterexample conclusion follows.
+
+> **UNIFORM CONTACT-SHIFT SOURCE NATURALITY AND TYPED SHIFTED-ROOT
+> INTERFACE — V46R1 DIFFERENT-MODEL CONFIRMED AND NARROWLY PROMOTED
+> (2026-08-27 10:57Z).**  For arbitrary nonnegative `(a,c,r)`, the explicit
+> lower-contact quotient and jet reindexing
+> `ez,ec -> 2*CzD1,2*CcD1`, `rs -> 4*BcD1` commutes coefficientwise with
+> all seven formal source emitters.  This is a coefficient-ring theorem over
+> `Z[1/2]`; it uses no root, localization, or serial per-grade actual-total
+> export.  It preserves the frozen 569 tails, load delays `4/12/20`, and
+> target grades/scales `28/32/36/38` with `1,1,1,1/4`.
+>
+> On `D(rho)`, V46R1 additively supersedes only V46's mixed-coordinate root
+> display.  With `lambda^2=-P/2`, its raw-total maps have determinants
+> `(-2*lambda0,-lambda0/2,-lambda0/2)` for `(A,C,R)`, while the mapped-D1
+> maps are unscaled and have determinants `(-2*lambda0)` in all three
+> coordinates.  The two typed maps commute at every relative jet and invert
+> triangularly using only `lambda0`; factor-of-two/four conflations fail at
+> the leading block.  The actual `(7,8,7;T=26)` load-tie representative also
+> passes all seven rows, with `k6=1` active and `k2=0` inactive.
+>
+> V46/V46R1 review SHAs are `13450b72...` / `a2a6a5e2...`; additive
+> promotion SHA is `b862e00f...`.  Verdict: **PROMOTE EXACTLY THIS
+> INFRASTRUCTURE INTERFACE.**  Serial `ACT-TOT-G22/G24+` exporters leave the
+> mathematical critical path, but every endpoint still needs a frozen
+> manifest, complete load/target inventory, derived maxima, generated alias
+> map, chamber-compiler semantic check, localization/theorem type, and
+> reviewed D1 authority.  The `(8,3,8)` family remains confirmed but
+> unpromoted.  No endpoint union, emptiness theorem, `rho=0` or equality
+> face, positive-load or `k=0` case, staged Rees/receiver result, global
+> `G2-PSC`/`G2-BD`, Gate T, order two, maximum twelve, JC2, or counterexample
+> conclusion follows.
+
+> **K00 UNLOADED LOCAL MEMBERSHIP AND ORDER-ZERO REPRESENTATION SPACE —
+> TWO GROK HOSTILE REVIEWS CONFIRMED (2026-08-27 10:52Z).**  Put
+> `R=Q[d0,...,d5]`, `m=(d0,...,d5)`, and let `r1,...,r7` be the frozen
+> unloaded K00 rows in the normalized `C6=1` chart.  V14R1 gives the exact
+> polynomial identity
+>
+> `(63*d4+20)*r7=u1*r1+...+u6*r6`,
+>
+> with all six displayed rational multipliers frozen and replayed, and with
+> `63*d4+20` taking the nonzero value `20` at the origin.  Hence
+> `r7 in (r1,...,r6)R_m`.  Since the same factor is a unit modulo every
+> power of `m`, `r7` belongs to `(r1,...,r6)+m^N` for every `N>=1`.
+> Therefore no D9-or-higher pure-coefficient filtered search can produce a
+> first obstruction; the reviewed V9/V10 finite compatibilities are initial
+> instances of this all-depth local identity.
+>
+> The complete polynomial syzygy module `Syz_R(r1,...,r7)` has 87 frozen
+> generators.  Its
+> origin-evaluation image has exact rank one, spanned by
+>
+> `(-200,0,-960,0,-5120,0,-40960)`.
+>
+> The displayed vector is the origin of an exactly replayed polynomial
+> syzygy; its seventh coordinate is a unit in `R_m`, so it gives a local
+> representation of `r7` by the first six rows.  Conversely, localization is
+> exact: clearing the unit denominator of any local syzygy multiplies its
+> origin by a nonzero scalar.  Therefore every representation
+>
+> `r7=q1*r1+...+q6*r6` in `R_m`
+>
+> satisfies `q2(0)=q4(0)=q6(0)=0`.  Grok independently reconstructed the
+> tails and rows, replayed every frozen identity and the unit-seventh witness,
+> recomputed all 609 origin constants and their ranks over `Q`, and proved
+> completeness by a fresh `syz` computation plus two-sided module reduction.
+> V14R1 report/evidence/review SHAs are `039590c8...` / `4e0ac1bb...` /
+> `25e6a3f2...`.  V16R1 report/evidence/review SHAs are `65fb96a9...` /
+> `4796e5d6...` / `dc0b2d80...`.
+>
+> Verdict: **PROMOTE EXACTLY THIS UNLOADED, ORDER-ZERO, LOCAL-AT-`m`,
+> `C6=1` STATEMENT.**  It removes the apparent unit-constant `M6` freedom
+> suggested by the quadratic relation `Q6=0`, but constrains no positive-order
+> multiplier term.  Stop every further pure-coefficient D9+ Macaulay lane.
+> It does not compute the six-row first-order load
+> cokernel, couple the three load directions, restore their `Lambda` weights,
+> include `mu2,mu4,mu6,Jdet`, restrict to the honest source image, or prove
+> a mixed formal deformation, convergence, closure incidence, Taylor
+> realization, order two,
+> maximum twelve, or JC2.
+
+> **ORDERED `T-a1` EXACT N=6 RHO-ZERO DUAL — OPUS5 REVIEW REPAIRED AND
+> PROMOTED (2026-08-27 10:38Z).**  Let
+> `J0 subset Q[X19^tot]` be generated by the rho-zero specializations of all
+> 70 named frozen raw ordered-`a1` rows of grades 10--19 (51 are nonzero).
+> The total alphabet has 66 positive-weight variables; `ez9` is a spectator
+> in `J0`.  The complete weight-30 Macaulay family has 284,766 row products.
+> The `a1^6` incidence component has 26,200 product equations and 66,076
+> monomials including the target.  An exact rational functional of support
+> 3,395 satisfies
+>
+> `Lambda(a1^6)=1` and `Lambda(m*g)=0`
+>
+> for every one of the 284,766 unrestricted complementary-weight products.
+> Therefore `a1^6 notin J0`.  If `a1^i` belonged to `J0` for any
+> `0<=i<=6`, multiplication by `a1^(6-i)` would contradict this result;
+> hence all pure powers through six are absent.  No attribution to V38 is
+> needed for that corollary.
+>
+> Opus5 passed the load-bearing exact theorem and requested additive custody
+> and control repairs (`64e49a36...`).  R1 ran the pinned V42 replay and
+> applied V42's actual `Tg19_7` source-row coefficient mutation before
+> product formation.  All 607 original weight-11 multiples had residual
+> zero, while the mutation was detected in exactly six, with canonical
+> residual-record SHA `a9649ec4...`.  The original compiler source manifest
+> SHA `033213c1...` was recovered: all 834 entries checked `OK`, and a frozen
+> source snapshot has SHA `2d7f396a...`.  R1 also pins the census addendum
+> and explicitly records the failed first C++ link (`rc=1`, missing
+> Givaro/GMP libraries); the later resumed build, exact solve, and full
+> validator all exited zero.  The independent `F_65519` replay passed but is
+> corroborative only.
+>
+> Producer/review/R1-promotion/result SHAs are `7345d4a8...`, `64e49a36...`,
+> `a3749a7c...`, and `a8537d4b...`.  Verdict: **PROMOTE EXACTLY
+> `a1^i notin J0` FOR `0<=i<=6`.**  This is a rho-zero, raw,
+> grade-through-19 statement.  It excludes a normalized total-rho
+> certificate at those exponents by specialization, but says nothing
+> negative about exponent seven or higher, later rows, the total-chart
+> generic fibre, source/landing coverage, Gate T, order two, maximum twelve,
+> or JC2.  V42's separate `a1^8` membership is in its six-row A1 branch
+> ideal, not the unsplit ideal before branch clearing.
+
+> **GATE-T GENERAL-`RHO` CONTACT `(ord A,ord C,ord R)=(2,5,>=3)` — V45
+> DIFFERENT-MODEL CONFIRMED AND NARROWLY PROMOTED (2026-08-27 10:37Z).**
+> After the reviewed generic-square first-normal, half-weight, and exact
+> reduced `M=0` gates, this single strict unit-load unique-`AC` contact is
+> empty on `D(rho*k)`, with `d=3,G=17,T=20`.  V44 constructs all seven
+> unspecialized general-`rho` rows through grade 20 from the frozen 569 tails
+> before quotienting; V44R1 repairs only a false postcondition and V44R3 only
+> the failed parser/cross-lane custody.  The contact has exactly twenty lower
+> vanishings and 119 zero coefficients in grades 0--16.  Its generated
+> 29-entry total-to-D1 map has the forced factor two on `C`, factor four on
+> the constant `R` family, and distinguishes the `k10` jet `k2c` from the
+> leading `k2` load.  The reviewed maxima, imported from `B23` then
+> fail-closed against total support, are
+> `p/A/C=3,R=1,k10=2,k6=k2=0`, with `k6,k2` inactive.
+>
+> The seven mapped rows give 147 independent coefficient identities through
+> grade 20.  The compiler's second 147-count deck is their `rho`-even replay,
+> not additional orientation evidence.  Both root allocations instead come
+> from the pinned symbolic `B23` endpoint, whose residue
+> `(3/2)lambda^2*cv^2` pulls back to `(3/2)rho^2*cv^2`; `D(p*k0)` pulls back
+> to exactly `D(rho*k)`.  Stage-zero pairs are killed as required by the
+> Kummer erratum.  `RA^2/L^2` blocks the cheap direct-three-row shortcut at
+> `r=3,4`; its possible `r>=5` use is a distinct raised subtail.
+>
+> Producer/review/additive-promotion SHAs are `234cc402...`, `a3540345...`,
+> and `99d32a77...`.  Verdict: **PROMOTE EXACTLY THIS ONE CLOSED-`R`
+> CONTACT.**  No strict-fan or generic-square cover, equality/positive-load
+> face, `k=0`, `rho=0`, staged Rees/terminal receiver, `G2-PSC`, `G2-BD`, Gate T,
+> order-two, maximum-twelve, JC2, or counterexample statement follows.
+
+> **ORDERED `T-a1` TOTAL-RHO DVR CERTIFICATE CRITERION AND TYPED CORPUS —
+> FABLE5 CORRECTION-REVIEW CONFIRMED (2026-08-27 08:57Z).**  For the literal
+> grade-through-19 ordered-`a1` total ideal `J`, with `K=J:a1^infinity`,
+> the following are equivalent: `K+(rho)=(1)`; a cleared identity
+> `a1^N V(rho) in J` with `V(0)!=0`; and, after weight-zero projection and
+> even-part extraction, an identity
+>
+> `a1^N U(rho^2) in J`, with `U(0)=1`.
+>
+> Thus honest special-fibre emptiness is exactly a fixed-weight module
+> question over `Q[rho^2]_(rho^2)`, not an assumed commutation of saturation
+> with specialization.  Fable5 independently rederived the chart/colon
+> theorem, specialization direction, four-way equivalence, counterexample,
+> and repaired augmented-module syzygy control.
+>
+> The literal total corpus has **66**, not 65, positive-weight variables,
+> plus the sole weight-zero variable `rho`.  The unique extra variable is
+> `ez9`, occurring only as `(3/8)rho^2*a1*ez9` in `Tg19_2`; it vanishes on
+> specialization and is a free positive-weight spectator for the rho-zero
+> ideal.  Consequently V42's rho-zero radical conclusion and V38's `N>=6`
+> floor survive unchanged.  Fable independently regenerated all 70 rows and
+> reproduced the corrected weight-30 census: 59 nonzero total rows, 460,485
+> products, 1,370,353 support monomials, and a target component with 224,938
+> products, 687,758 monomials, and 8,567,907 incidences; maximum `rho^2`
+> degree is four.  Producer/prior-review/erratum/correction-review SHAs are
+> `e3d263d5...`, `a836a978...`, `d322d417...`, and `98003865...`.
+>
+> Verdict: **THE REDUCTION AND CORRECTED RING ARE PROMOTED; THE CERTIFICATE
+> RESULT IS NOT.**  The stale 65-variable census is withdrawn.  The old
+> two-argument Singular `syz` call was fail-closed and produced no false
+> mathematical verdict.  Whether any admissible `N,U` exists remains open;
+> a positive result would close only this frozen ordered total chart, not
+> the terminal receiver, coverage, Gate T, order two, maximum twelve, or JC2.
+
+> **KUMMER BASE CHANGE SURVIVES, BUT THE CLAIMED STAGE-ZERO/`D1AC` ROOT
+> COMPOSITION IS WITHDRAWN — OPUS5 HOSTILE REVIEW (2026-08-27 08:57Z).**
+> The rank-two map `k[p0] -> k[rho]`, `p0=-2rho^2`, is globally finite
+> faithfully flat, including at the ramified fibre.  The named Rees
+> algebras, six standard charts, and terminal quotient commute with it; the
+> three root-coordinate matrices are invertible precisely on `D(rho)`.
+> Opus5 independently reconstructed all seven total and charged source rows
+> and confirmed the exact formal identity through grade 16.  At frozen grade
+> 15 its image ideal deflates to two binomials: rows 4 and 6 vanish, while
+> rows 3, 5, and 7 are scalar `p`-multiples of row 1.
+>
+> However, the instantiated source map sends every generator of
+> `J1=(rs,cs,c0,c1)` and `J2=(a0,a1)` to zero.  Hence the producer's claimed
+> composition of the stage-zero root matrices with the charged `D1AC`
+> orientations is trivial and is **REFUTED**.  The charged endpoints use
+> shifted root pairs one contact level deeper; each such import needs its own
+> finite-jet proof.  The exact row map lands only on the terminal raw-row
+> quotient and extends to none of the six charts, whose denominators all map
+> to zero.  Producer/review/additive-erratum SHAs are `1b583d5a...`,
+> `d62b3f22...`, and `614ddcdb...`.
+>
+> Verdict: **PROMOTE THE FINITE-FLAT BASE CHANGE AND NARROW RAW-ROW IDENTITY;
+> WITHDRAW THE ROOT-COMPOSITION AND STRATEGIC-STOP CLAIMS.**  No previously
+> promoted chart or ramified theorem depended on the bad sentence.  The
+> later shifted-root contact compositions remain provisional until reviewed
+> independently; nothing here proves a generic-square cover, Gate T, order
+> two, maximum twelve, or JC2.
+
+> **K00 UNLOADED GLOBAL NONMEMBERSHIP AND FILTERED DEGREE-EIGHT
+> COMPATIBILITY — TWO HOSTILE REVIEWS CONFIRMED (2026-08-27 10:05Z).**  Let
+> `r1,...,r7` be the frozen ordinary tails with all loads zero, in the K00
+> transverse coordinates
+> `d0=256*C0-C6^4,d1=C1,d2=16*C2-C6^3,d3=C3,d4=8*C4-3*C6^2,d5=C5`.
+> Exact-Q V8 proves
+>
+> `r7 notin (r1,...,r6)` over `Q[C6,C6^-1,d0,...,d5]`,
+>
+> and independently after the Kummer normalization `C6=1` in
+> `Q[d0,...,d5]`.  Exact-Q V9 proves
+>
+> `r7 in (r1,...,r6)+(d0,...,d5)^8` at `C6=1`,
+>
+> and exact-Q V10 strengthens this to
+>
+> `r7 in (r1,...,r6)+(d0,...,d5)^9` at `C6=1`.
+>
+> The complete cumulative ranks through degrees 2--8 equal their augmented
+> ranks `4,28,106,294,676,1372,2547`.  V10's 492-entry rational multiplier
+> jet replays all 2,996 equations and the ordering-free polynomial identity.
+> Opus5 independently re-emitted the `2996 x 5544` matrix byte-for-byte,
+> recomputed the exact-Q ranks, replayed the certificate, and used a
+> degree-eight RHS mutation to confirm that D8 is strictly stronger than D7.
+> Thus global polynomial nonmembership and finite filtered compatibility
+> coexist; neither raw `dp` remainder degree is a canonical obstruction.
+> V8/V9/V10 result SHAs are `d3adc56f...` / `bd1c6368...` / `1b31b4bd...`;
+> the Grok and Opus5 review SHAs are `6c4ebd6d...` and `7f0c3aea...`.
+>
+> Verdict: **PROMOTE EXACTLY THE GLOBAL NONMEMBERSHIP AND THE TWO DISPLAYED
+> FILTERED MEMBERSHIPS (V10 SUPERSEDES V9 AS THE CURRENT DEPTH).**  They do
+> not prove local or formal membership, mixed `Lambda`/load/`mu`/`Jdet`
+> reachability, the closure-first incidence, Taylor realization, a receiver
+> theorem, Gate T, order two, maximum twelve, or JC2.  Any pure-coefficient
+> filtered obstruction must occur in degree at least nine.  Genuine local
+> membership and the mixed terminal-order test remain separate obligations.
+
+> **ORDERED `T-a1` RAW `rho=0` PREFIX HAS NO POINT ON `D(a1)` — OPUS5
+> HOSTILE-REVIEW CONFIRMED (2026-08-27 08:02Z).**  In the 70-file frozen
+> source corpus through grade 19, after the ordered-chart specialization
+> `rs=cs=c0=c1=a0=0` and then `rho=0`, the prior exact cascade forces
+> `e0=e1=ee0=ell1=0` and the field-point cover `aa0*rs1=0` on `D(a1)`.
+> The `D(rs1)` branch is killed at grade 16 by
+>
+> `Tg16_6-(3/32)rs1*Tg13_2=(21/1024)a1^2*rs1^2`.
+>
+> On the `rs1=0` branch, exact elimination and denominator clearing give
+>
+> `a1^8 in (Tg13_1,Tg14_2,Tg15_3,Tg17_5,Tg18_6,Tg19_7)
+>             +(e0,e1,ee0,ell1,rs1)`.
+>
+> Opus5 re-parsed and re-hashed all 70 raw files, rebuilt the identities with
+> independent rational arithmetic and polynomial division, and checked them
+> in a second algebra engine.  Producer/review SHAs are `5d4c42ff...` /
+> `a4f6b931...`; producer replay is `f4ec7293...`.
+>
+> Verdict: **OVER EVERY CHARACTERISTIC-ZERO FIELD, THE FROZEN RAW
+> ORDERED-`a1`, `rho=0` SYSTEM THROUGH GRADE 19 HAS NO POINT WITH
+> `a1!=0`.**  Equivalently, some non-effective power `a1^N` lies in the
+> unsplit raw ideal; the promoted V38 floor forces `N>=6`.  The displayed
+> `a1^8` is only a branch-ideal certificate, not that global membership.
+> Every one of the four diagonal rows is necessary in the reduced A1 core;
+> the reviewer supplies an exact drop-`Tg19_7` witness.  The producer's
+> one-coefficient mutation check is inert and is replaced by this drop-one
+> control.  The result does not commute saturation with specialization and
+> makes no general-rho, total-chart, Rees, Gate-T, order-two, maximum-twelve,
+> or JC2 claim.
+
+> **AS109 ONE-SIDED TARGET `y`-DEGREE FLOOR SIX — PRIMARY-SOURCE AND
+> DIFFERENT-MODEL CONFIRMED (2026-08-27 07:50Z).**  Let
+> `P=x-x^109+109A,Q=y+109B` be an exact integral polynomial lift over
+> `Z_109` with Jacobian one.  Moskowicz 2018, Theorem 2.7, makes a
+> characteristic-zero Keller pair automorphic when either leading partial-
+> degree invariant belongs to `{1,4}` union the primes.  For
+> `n=deg_y Q<=5`, the target invariant
+> `gcd(n,deg_x q_n)` is always in that set, including constant leading
+> coefficients via `gcd(n,0)=n`.  This contradicts the reviewed 109-ball
+> Hensel theorem, under which every exact AS109 lift is noninjective over
+> `Q_109`.  Producer/review SHAs are `3d6d09fd...` / `bc136621...`; the
+> frozen replay is `4413482e...`.
+>
+> Verdict: **EVERY EXACT INTEGRAL POLYNOMIAL AS109 LIFT HAS
+> `deg_y Q=deg_y B>=6`.**  At the first residual `n=6`, necessity sharpens
+> to `6|deg_x(q_6)`, `deg_y P>=12`, `3|deg_y P`, and, for the common core
+> of degree `H`, `d=3 => 3|H`, `d=6 => 6|H`.  The same source interface
+> also excludes every prime target degree and degree four; six is merely the
+> first unexcluded degree.  The exact seed-preserving source-translation
+> gauge and its `deg_x A<=108` section are confirmed but are not proof
+> dependencies.  Stop all `n=2,3,4,5` support searches as history
+> duplicates.  This is coordinate-specific and conditional on lift
+> existence; it neither excludes `n=6`, constructs or rules out a lift,
+> bounds support, supplies a counterexample, nor proves JC2.
+
+> **ORDERED `T-a1` LOW-WEIGHT CERTIFICATE FLOOR AND GRADE-19
+> COMPATIBILITY — FABLE5 HOSTILE-REVIEW CONFIRMED (2026-08-27 07:50Z).**
+> In the ordinary raw ordered-`a1`, `rho=0` ideal generated by all frozen
+> rows through grade 19, every one of the sixteen targets
+> `a1^i*k^j` with `i>=1` and `5i+4j<=25` is an exact-Q nonmember.  Fable5
+> independently enumerated every complementary-weight product, checked all
+> emitted rational duals, and separately reproduced the exact ranks and
+> rank-one target increments.  Weights 17--19 are final against all future
+> higher-weight rows; weights 20--25 are only relative to the prefix through
+> grade 19.  Producer/review SHAs are `97e3af98...` / `68764042...`;
+> the 32-lane harvest replay is `63820a1c...`.
+>
+> Independently, `Tg19_7` is outside the weight-19 ideal generated by the
+> other 69 frozen rows.  The complete system has 802 products and the
+> target component has exact rank 92, rising to 93 after adjoining the
+> target; a four-coordinate Q-dual and a 24-term equivalent residual both
+> replay.  Producer/review SHAs are `dbec09d...` / `68764042...`.
+>
+> Verdict: **NO MONOMIAL LOCALIZER CERTIFICATE OF THE DISPLAYED SHAPES
+> EXISTS AT THIS RAW PREFIX, AND `Tg19_7` IS A GENUINELY NEW ORDINARY
+> WEIGHT-19 COMPATIBILITY CONDITION.**  These are nonmembership statements,
+> not evidence that the raw locus is nonempty; they are compatible with a
+> higher-exponent radical certificate.  They do not cover `a1`-saturation,
+> general rho, an honest Rees/total chart, Gate T, or JC2.  A V37 dual is a
+> separator, not a primal quotient identity: the proposed rewrite of its
+> five-term obstruction is withdrawn, and a nonzero evaluation on a future
+> generator only invalidates that separator.
+
+> **RAW `rho=0` SUPPORT AND SYMBOL STRUCTURE THROUGH GRADE 19 — EXACT
+> CROSS-REPLAY CONFIRMED (2026-08-27 07:50Z).**  The 51 nonzero ordered-
+> `a1` rows have 4,997 monomial supports and 88 inclusion-minimal supports
+> (11 singletons, 54 pairs, 23 triples).  Eleven forced singleton vertices
+> plus eleven disjoint residual supports prove the minimum hitting-set size
+> is 22; the exhibited `L43` attains it, so the maximum coordinate-linear
+> zero-section has dimension 43, with `k` free and `a1=0`.  Opus5 produced
+> the result; Sol and Fable5 independently replayed it (`0fbb4524...`,
+> `b9cc1e8e...`, `163f0aee...`).
+>
+> On `D(a1)`, the grades-14--19 first-occurrence symbol has rank exactly
+> two: rows 1 and 2 split the two newcomer directions, `e0=0` removes the
+> apparent third, and rows 3--7 form the compatibility block.  Sol's exact
+> symbol report `a049794b...` was independently checked in both cross-
+> reviews.  The fixed-weight shape-floor argument is likewise confirmed at
+> raw `rho=0` scope.
+>
+> Verdict: **USE SUPPORT AND SYMBOL AS LAUNCH GATES, NOT AS RECEIVER
+> GEOMETRY.**  `L43` is a coordinate-linear section of the raw prefix, not
+> an irreducible component, all-depth solution, honest receiver, or source-
+> to-`[6,2]` pullback.  General-rho fixed-weight completeness does not follow
+> because rho has weight zero.
+
+> **SECOND-STAGE `T-a0` PURE CUBIC — TWO-MODEL HOSTILE REVIEW CONFIRMED
+> AND PROMOTED (2026-08-27 05:30Z).**  In the literal V23R1 chart over
+> `V(J1)`, with `a1=a0*qa1`, an exact thirteen-row polynomial identity puts
+> `a0^3` in the source-row ideal.  Every cofactor is polynomial, no divided
+> row or rational-function cofactor is used, all terms have sigma weight 15,
+> and the staged type is exceptional power `a0^3`, genuine localizer `1`,
+> rho factor `1` (`W=0`).  Grok independently replayed the identity over
+> exact Q and coefficientwise over F65521; Opus independently regenerated
+> both charts from the unspecialized source rows, reconstructed the lift, and
+> found the stronger pure-power form.  Producer/review/promotion SHAs are
+> `0a7e904b...`, `c6bb46ae...` / `1ddb4fcb...`, and `3e3aa876...`.
+>
+> Verdict: **THE WHOLE REGISTERED `T-a0` CHART IS THE ZERO RING.**  Saturation
+> absorbs `a0^3`; neither `a0`, `qa1`, `rho`, `k`, nor any jet is inverted,
+> and adding later source rows cannot reopen the chart.  V24's own
+> rational-function lift is explicitly excluded from the evidence: it
+> localized at a pure power of rho and failed its preregistered normalization
+> rule.  The theorem does not close ordered `T-a1`, the terminal receiver,
+> source/landing coverage, deck/square, Gate T, order two, maximum twelve, or
+> JC2.
+
+> **ORDERED `T-a1` FINITE-PREFIX ROUTING — GRADE-17 CURVE SURVIVES, ONE
+> RATIONAL POINT DIES AT GRADE 18 (2026-08-27 05:30Z).**  On the six-coordinate
+> support `ell2,cs1,rs2,aa0,ee1,ec3` with `a1=48`, exact Q and F65521
+> Groebner screens of all 56 literal rows through grade 17 return a proper
+> dimension-one ideal.  Its `aa0=0` branch has
+> `cs1=12/ell2`, `rs2=-(20/9)ell2^2`, `ee1=32ell2`,
+> `ec3=576/ell2`, `ell2^5=243/2`; sigma scaling supplies a rational point
+> that replays all 56 frozen rows exactly.  V32 Q result/evidence SHAs are
+> `2d8eba90...` / `9d7432e5...`; the F65521 pair is
+> `4b75d6e9...` / `f5d331e0...`.
+>
+> A separately reconstructed actual-total grade-18 source check bridges all
+> 56 earlier rows and evaluates the seven new rows at the rational point.
+> Six vanish and `Tg18_6=16210220612075905068`; there are no new weight-18
+> variables on that point.  Exact Q and F65521 validators both return
+> `inconsistent`, and the harvested 29-file evidence manifests replay with
+> zero hash mismatches (Q result/evidence/compiler SHAs
+> `22018489...` / `6c484375...` / `22f64fbb...`; F65521
+> `c8d74e26...` / `60ec68fd...` / `9f5fd6e4...`).
+>
+> Verdict: **THE DISPLAYED RATIONAL GRADE-17 POINT DOES NOT PROLONG TO GRADE
+> 18, BUT THE `T-a1` CHART IS NOT CLOSED.**  The dimension-one grade-17
+> scheme may have other grade-18 points.  The next sound discriminator is
+> symbolic reduction of `Tg18_6` on that curve, not a claim that the entire
+> curve or chart has died.
+
+> **NAMED-SECTIONS ALL-DEPTH SOURCE CENSUS — FABLE5 HOSTILE-REVIEW
+> CONFIRMED AND PROMOTED (2026-08-27 03:18Z).**  An untruncated exact
+> `Q[sigma,rho]` evaluation of all 569 frozen canonical tails gives
+> `Tg15_6(A00)=-1/16`; on `A10` it gives
+> `Tg15_3=-1/16,Tg15_5=-(3/32)rho^2,Tg15_7=-(3/128)rho^4`; every other
+> coefficient vanishes.  Thus grade 15 is the first and only nonzero source
+> grade on either displayed pure `J2` point.  On `CS0` and the terminal
+> origin `Z00`, all seven complete row series vanish identically at every
+> grade.  Fable5 independently derived the specializations, re-evaluated all
+> tails with a separate implementation and numeric controls, and regenerated
+> the frozen result byte-for-byte.  Producer/review/promotion SHAs are
+> `172755de...`, `f0c57c1f...`, and `01f15a0f...`.
+>
+> Verdict: **GRADE 15 KILLS THE TWO NAMED `A00/A10` HORIZONTAL WITNESSES,
+> BUT NO DEEPER ROW OF THIS LITERAL FINITE-TAIL SOURCE CAN KILL `CS0` OR
+> `Z00`.**  The first result does not empty either `J2` chart or put `a0/a1`
+> in a radical.  The all-depth zeros do not include unwritten Rees/chart
+> equations, routing, another source family, or a full formal arc.  Deeper
+> exports aimed only at `CS0/Z00` are forbidden as futile; the next source
+> object for stage two is the full grade-15 export.
+
+> **ORDERED ACTUAL-TOTAL `T-cs` DIRECT CERTIFICATE — HOSTILE-REVIEW
+> CONFIRMED AND PROMOTED (2026-08-27 02:45Z).**  Independent exact replay
+> confirms the honest polynomial membership
+> `cs^447*k^164` in the ideal generated by all 21 V9 rows, `Tg14_5`,
+> `rs-cs*qrs,c0-cs*qc0,c1-cs*qc1,qrs`.  The certificate type is
+> exceptional power `cs^447`, genuine localizer `k^164`, and rho factor
+> `1` (`W=0`); none of `cs,k,rho` is inverted in the final identity.
+> The reviewer independently reconstructed the honest-presentation bridge,
+> grade-10 `cs^6*k^2*rho^6` identity, rho-zero Laurent rewrite and
+> denominator clearing, and cubic composition.  Producer/review/promotion
+> SHAs are `7af66e58...`, `f16e1114...`, and `ddc3b8b4...`.
+>
+> Verdict: **THE WHOLE REGISTERED ORDERED `T-cs` TOTAL-FAMILY STRATUM IS
+> THE ZERO RING ON `D(k)`.**  Since `D(k)` is intrinsic to the named
+> unit-`k10` Gate-T family, all four ordered `J1` chart strata are now
+> closed there.  Arcs on `V(J1)` still route to the two `J2` stages and
+> the terminal receiver.  The global off-family load-timing sibling,
+> source/landing coverage, deck/square bridge, order two, maximum twelve,
+> and JC2 remain open.  Exponents are sufficient, not minimal; V19 is now
+> optional independent/exponent evidence, not a prerequisite.
+
+> **STAGED RHO-UNIT CONVERSE — NARROW CORRECTION (2026-08-27 02:45Z).**
+> Empty total chart fibre after saturation/localization implies only a
+> cleared containment `f^N*s^m in J+(rho)`.  It does not in general imply
+> `f^N*s^m*(1+rho*W) in J`, because the rho cofactor need not be divisible
+> by the cleared monomial.  Producer/review/correction SHAs are
+> `7af66e58...`, `f16e1114...`, and `593f953b...`.
+>
+> Verdict: **THE FORWARD DIRECT-CERTIFICATE THEOREM `16ec6f54...` AND ALL
+> OF ITS FORWARD CONSEQUENCES REMAIN PROMOTED; ONLY THE STRONG CONVERSE
+> READING IS WITHDRAWN.**  Specialized or fibre-level units remain screens
+> unless total-chart saturation custody or a direct identity is supplied.
+
+> **`J1=0` 22-ROW PREFIX NAVIGATION — HOSTILE-REVIEW CONFIRMED WITH SCOPE
+> REPAIR (2026-08-27 02:45Z).**  All grade-10 rows vanish on
+> `J1=(rs,cs,c0,c1)=0`; twelve rows survive, first at grade 11.  Exact
+> `Q[rho]` sections `A00` and `A10` prove respectively
+> `a0,a1 notin radical(I22+J1)`, so neither standard `J2` chart can be
+> emptied by these rows.  The terminal receiver of this prefix is also
+> nonempty, but its witness is the origin/`rho`-line, not `A00/A10`.
+> Producer/review/promotion SHAs are `f9c8aab8...`, `bedb8dfe...`, and
+> `3ac8aaf5...`.
+>
+> Verdict: **NO `J2` OR TERMINAL EMPTINESS SEARCH MAY REUSE ONLY THIS
+> PREFIX.**  The producer's terminal conclusion survives with the corrected
+> witness; the original implication from the two unit points is withdrawn.
+> Unexported rows and fully compiled stage-two equations are outside scope.
+
+> **EXPORTED TOTAL-PREFIX HORIZONTAL ZERO-SECTIONS — HOSTILE-REVIEW
+> CONFIRMED (2026-08-27 02:20Z).**  Independent exact parsing of the frozen
+> 21 grade-10--12 rows plus `Tg14_5` confirms three `Q[rho]`-sections:
+> `CS0` has `cs=1,k=0` and every other source coefficient zero; `A00` has
+> `a0=1,J1=0`; and `A10` has `a1=1,J1=0`.  All 22 rows vanish identically
+> in `rho`.  `CS0` also satisfies the honest `T-cs` bilinears and
+> `1-u*cs=0`, but cannot satisfy `1-v*k=0`; `A00` and `A10` are compatible
+> with their standard ordered second-stage chart relations.  The independent
+> controls recover `Tg14_5=-21/320` at the promoted localized-fibre witness
+> and `Tg12_2=-5/128` at the negative-control point.  Producer/review SHAs
+> are `0ca4647a...` / `959603e3...`; preregistration/replay SHAs are
+> `1c4661ac...` / `9eb848f0...`.
+>
+> Verdict: **THESE 22 EXPORTED ROWS CANNOT EMPTY THE THREE NAMED LOCI OR
+> PUT A POWER OF `rho` IN THEIR PREFIX IDEALS.**  This is a lower-bound and
+> routing theorem for the frozen prefix, not a point of the full source or a
+> Keller map.  Unexported grade-13, other grade-14, higher, and stage-two
+> equations are not covered.  `CS0` lies off `D(k)` and therefore does not
+> contradict the promoted localized `T-cs` special-fibre theorem.  A
+> display-only V9 term census overcounts `Tg10_5,Tg11_5,Tg12_4,Tg12_5` by
+> one term each; frozen polynomial bytes, SHA custody, and every theorem are
+> unchanged.
+
+> **UNIT-`k10` GATE-T LOCALIZER FILING — HOSTILE-REVIEW CONFIRMED
+> (2026-08-27 02:20Z).**  In the literal source series, `k=k0` is its
+> constant coefficient; do **not** identify `k` with the whole series
+> `k10`.  The named post-`M=0`, unit-`k10` Gate-T family is registered on
+> `D(k)`.  Thus every existing `D(k)` theorem and every polynomial factor
+> `k` is retained literally, while `V(k)` and `V(k10)` must not be listed as
+> two additional on-family chart residuals.  Over the coefficient ring the
+> series becomes a formal unit only after localizing at its constant term;
+> the field-valued shorthand `k != 0` is not the same ring statement.
+> Producer/review SHAs are `a09232d6...` / `678a087d...`.
+>
+> Verdict: **`D(k)` IS SCOPE-INTRINSIC TO THIS NAMED UNIT-LOAD FAMILY, NOT
+> A LICENSE TO DROP `k` FROM CERTIFICATES.**  Its complement remains one
+> global sibling load-timing fan.  That fan is open and may contain distinct
+> delayed/positive-order and zero-leading-load strata; this filing neither
+> collapses nor closes them, and it does not rewrite the earlier staged-
+> calculus promotion's broader unlocalized residual statement.
+
+> **ORDERED ACTUAL-TOTAL `T-c1` CUBIC CERTIFICATE — HOSTILE-REVIEW
+> CONFIRMED AND PROMOTED (2026-08-27 01:37Z).**  Direct expansion of the
+> literal actual-total rows gives
+> `c1^3=(32/3)c1*Tg10_2-(128/3)a1*Tg10_4
+> -rs*((5/2)rho^2 cs^2 k c1+(5/96)rs^2 k c1)
+> -c0*(4a0 c1-4a1 c0)`.  The identity is exact over Q, integral after
+> multiplication by 96, and coefficientwise valid modulo 65521.  Its
+> staged-certificate type is exceptional power `c1^3`, genuine localizer
+> `1`, rho factor `1` (`W=0`), source rows `Tg10_2,Tg10_4`, and ordered
+> base equations `rs,c0`; the unused ordered equation `cs=0` only makes the
+> identity stronger.  Saturation absorbs `c1^3`; `c1` is never inverted.
+> Producer/review/promotion SHAs are `95117024...`, `40ea0ff3...`, and
+> `133ad884...`; literal-source custody for both consumed rows is the prior
+> independent Fable5 rederivation `139ecb67...`.
+>
+> Verdict: **THE WHOLE ORDERED REGISTERED `T-c1` STRATUM IS THE ZERO RING
+> FOR THE TOTAL FAMILY.**  This supersedes and withdraws the interim
+> `V(c1) ∩ ordered T-c1 ∩ V(rho)` residual recorded below: the missing
+> `Tg10_4` summand cancels the leftover term.  The earlier review was right
+> that an exceptional coordinate is not a chart-ring unit, and its `T-c0`
+> theorem and source rederivation are unchanged.  This does not close the
+> unordered standard chart as a separate object, `T-cs`, either second-stage
+> chart, the receiver, deck/square, Gate T, order two, maximum twelve, or
+> JC2.
+
+> **`T-cs` GRADE-14 DECISIVE SPECIAL FIBRE — EXACT WITNESS AND FULL-LOCUS
+> THEOREM PROMOTED (2026-08-27 01:10Z).**  Opus5 found, and Grok
+> independently reparsed from the raw frozen rows, the point with only
+> `cs=e1=u=1`, `k=12/5`, `v=5/12` nonzero.  It kills all 21 grade-10--12
+> charted rows and four localization equations while
+> `Tg14_5=-21/320`.  More strongly, on `qrs=rho=0,D(cs*k)` the prefix fibre
+> is an irreducible rational 31-fold cut out by
+> `12e1^2=5cs^4k` and one equation linear in `ell2`; grade 14 restricts to
+> `-(21/320)cs*e1^2=-(7/256)cs^5k`, hence is nowhere zero.  Producer/review/
+> promotion SHAs are `d9e5f439...`, `7fbd9423...`, and `5fd19f35...`.
+>
+> Verdict: **GRADE 14 IS EXACTLY DECISIVE ON THE REGISTERED LOCALIZED
+> SPECIAL FIBRE, AND THE DROP-GRADE-14 IDEAL IS PROPER OVER Q AND F65521.**
+> The redundant V18R1 negative-control engines were terminated after their
+> provisional positive tokens; abort ledger SHA `0708935c...`.  They are not
+> validator PASSes.  The result is conditional on frozen V9/V17 source
+> bytes, supplies no explicit cofactors, and is not automatically a direct
+> total-family certificate: V19's lift must still be cleared and checked for
+> exceptional-power/localizer/rho-cofactor type.  No whole `T-cs`, `k=0`,
+> Gate-T, order-two, maximum-twelve, or JC2 conclusion follows.
+
+> **ACTUAL-TOTAL `T-c0` CHART — SOURCE-REEXTRACTED, TYPE-REPAIRED, AND
+> PROMOTED (2026-08-27 00:52Z).**  Fable5 independently reimplemented the
+> corrected literal actual-total emitter and exactly reproduced all twelve
+> grade-10/11/12 total/frozen exports for rows 2 and 4, with deck,
+> specialization, vanishing, and finite-field controls.  On the honest
+> `c0` Rees chart,
+> `3c0^2(1+rho^2 qc1^2)=32*Tg10_4-3rho^2(c1+c0 qc1)(c1-c0 qc1)`.
+> Saturation absorbs the exceptional `c0^2`; `c0` is not inverted.  Thus
+> rho is a unit on the full registered `T-c0` chart, without ordering or a
+> genuine localizer.  Producer/review/promotion SHAs are `6a29aac9...`,
+> `139ecb67...`, and `cd6f34da...`.
+>
+> Verdict: **THE FULL REGISTERED `T-c0` CHART HAS EMPTY RHO-ZERO FIBRE.**
+> At this review stage the companion `T-c1` calculation had only a
+> `c1`-localized partial and conservatively recorded
+> `V(c1) ∩ (ordered T-c1 stratum) ∩ V(rho)` as an uncovered residual.
+> That interim residual is superseded and withdrawn by the later reviewed
+> cubic certificate above.  Treating an exceptional coordinate as a
+> chart-ring unit was nevertheless real wrong mathematics in the original
+> producer argument; the repair changes the mechanism, while the later
+> theorem closes the chart by saturation rather than inversion.  No
+> `T-cs`, second-stage, receiver, deck/square, order-two, maximum-twelve, or
+> JC2 conclusion follows.
+
+> **AS109 ONE-SIDED TARGET-DEGREE OBSTRUCTION — HOSTILE-REVIEW CONFIRMED
+> AND PROMOTED (2026-08-27 00:50Z).**  If
+> `P=x-x^109+109A` and `Q=y+109B` lie in `Z_109[x,y]` with exact
+> `det J(P,Q)=1`, then `deg_y(Q)>=2`, equivalently `deg_y(B)>=2`.  Under
+> `deg_y Q=1`, the top Jacobian coefficient gives
+> `(p_m/q_1^m)'=0`; Gauss valuation makes the resulting constant a multiple
+> of 109, so an integral residue-preserving target shear strictly lowers
+> `deg_y P`.  Iteration would make `P` independent of `y`, forcing it linear
+> in `x`, contrary to `P=x-x^109 mod 109`.  Producer/review/promotion SHAs
+> are `e645d822...`, `4a49110d...`, and `696152da...`.
+>
+> Verdict: **THE FLOOR SHAPES `(deg_y A,deg_y B)=(12,0),(12,1)` ARE
+> EXCLUDED WHEN COMPOSED WITH THE REVIEWED TWO-SIDED FLOOR.**  This is a
+> characteristic-zero theorem over the 109-adic integers, not over
+> `F_109`.  It supplies no bound on `deg_y A`, max-12 routing, lift
+> existence/nonexistence, support bound, marked collision, residue-field or
+> series statement, or JC2 conclusion.  In the separately reviewed
+> top-shear integrality criterion, valuation zero is integral but
+> residue-changing; only negative valuation is nonintegral.
+
+> **LOCALIZED RHO-UNIT CERTIFICATE CALCULUS FOR STAGED REES CHARTS —
+> REVIEW-REPAIRED AND PROMOTED (2026-08-27 00:40Z).**  In an honest total
+> source presentation, a certificate
+> `f_i^N*s*(1+rho*W)` in the ideal generated by the Rees-chart bilinears,
+> literal source rows, and ordered-stratum equations makes the `rho=0`
+> fibre empty after localizing at the genuine factor `s`.  The exceptional
+> chart power `f_i^N`, genuine localizer `s`, and stratum equations are
+> distinct certificate fields.  Standard charts and least-index strata
+> cover set-theoretically, and the blowup universal property then excludes
+> positive-rho DVR arcs.  Producer/review/promotion SHAs are
+> `43adf317...`, `db160c13...`, and `16ec6f54...`.
+>
+> Verdict: **A DIRECT TOTAL-FAMILY CERTIFICATE REMOVES SPECIAL-FIBRE
+> BASE-CHANGE EQUALITY, PAIRWISE OVERLAP/GLUING, AND NILPOTENT ANALYSIS FROM
+> THE EMPTINESS ENDPOINT ONLY.**  Source provenance, residual localizer
+> strata, the terminal receiver, the generic deck/square comparison, and
+> an effective decisive-grade bound remain.  The collision geometry is a
+> staged `J1`-then-`J2` tree, not the single blowup of
+> `(rs,cs,c0,c1,a0,a1)`.  The promoted `T-rs` theorem is unchanged: in the
+> repaired type it has an exceptional `rs` power and genuine localizer
+> `k`; it was not literally an instance of the original bilinear-only
+> statement.
+
+> **TD6 H19R1 RAW-P13 COORDINATE-12 SHORTCUT — CONFIRMED NEGATIVE
+> DIAGNOSTIC (2026-08-27 00:35Z).**  H19R1 reconstructs literal CURRENT
+> degree 13 from the same six compiler-loop families as H15, retains all
+> 132 transport variables and all 22 q coordinates, and matches the frozen
+> 2,757-term parent.  Dual AWS outputs are byte-identical.  Before and after
+> exact `F=0`, raw coordinate 12 consists only of
+> `(27,):500000000/(27U)` and `(29,):-1562500000/(27U)`, not H18's
+> `(3500000000/9)*(U/V)`.  A genuine pre-aggregation omission changes the
+> latter coefficient to `-1625000000/(27U)`.  Producer-result/review SHAs
+> are `65736264...` / `fda7c2ff...`.
+>
+> Verdict: **THE DIRECT RAW-UNIT ROUTE FAILS; THE H18 THEOREM DOES NOT.**
+> The successor must track coordinate 12 through the original-FIRST affine
+> solve and emit explicit cancellation/membership multipliers, then clear
+> independent total `F`.  The raw four-addend census is not yet the exact
+> support canceled by FIRST.  No original-FIRST membership, total-`F`,
+> whole-TD6, or JC2 claim follows.
+
+> **PRIME-RAY `3p` ONE-EDGE NECESSARY-CHAIN ARITHMETIC — REVIEW-REPAIRED
+> AND CONFIRMED (2026-08-26 23:46Z).**  For every prime `p>=7` with
+> `p=3 mod 4`, the globally-minimal GGV necessary-chain arithmetic has a
+> fixed `(3,-1)` starting edge at scale `3p`, exactly `(3p-13)/4` one-edge
+> final chains, and exactly `(p-3)/2` chains carrying one MN family.  The
+> first-edge Algorithm-6 integer is `(3p-1)/4`; CRT and Dirichlet make its
+> prime-factor complexity unbounded and disprove a fixed shortcut
+> `Delta0 | C(3)*p^e`.  Repaired producer/review/promotion SHAs are
+> `8217cc3f...`, `7f3fd203...`, and `2f5859cb...`.
+>
+> Verdict: **A PRIME-INDEPENDENT FINITE MENU OF LITERAL INSTANCES AND THE
+> PROPOSED FACTOR SHORTCUT ARE INVALID FOR THIS INTERFACE.**  Parametric
+> templates remain viable.  The result concerns globally minimal standard
+> pairs only; it cannot be applied to nonminimal prime shears without a new
+> bridge.  Covering-system nonemptiness is not a Keller-pair witness.  No
+> arbitrary gcd-`3p` theorem, realized-length bound, counterexample, or JC2
+> conclusion follows.
+
+> **ACTUAL-TOTAL FIFTH-ROW GRADE-14 SOURCE COEFFICIENT — FABLE5 AND OPUS5
+> CONFIRMED (2026-08-26 23:46Z).**  Two independent exact sparse-arithmetic
+> implementations reproduce the frozen V17 export byte-for-byte.  The
+> coefficient has 304 monomials, is nonzero and rho-even, agrees exactly
+> with V9 at grades 10--12, and specializes to
+> `-(21/320)*b^5*w^2`; the `11/5` load control gives
+> `-(41/640)*b^5*w^2`.  Exact-Q result/polynomial SHAs are `25d40556...` /
+> `91d96924...`; review/promotion SHAs are `b4540858...`, `f0d8a9cd...`,
+> and `2c7f624c...`.
+>
+> Verdict: **THE V17 COEFFICIENT EXPORT AND LOW-GRADE SOURCE BRIDGE ARE
+> PROMOTED.**  This is not itself a Rees-chart or rho-unit theorem.  A
+> display-only V9 validator bug counted a leading minus sign as an extra
+> term in 14 files; erratum SHA `8e18cef4...` changes no polynomial,
+> manifest, identity, or prior theorem.
+
+> **TD6 ALL-22-`q` P13/FIRST COORDINATE-12 UNIT — HOSTILE-REVIEW
+> CONFIRMED (2026-08-26 23:45Z).**  On the frozen normalized three-center
+> slice `F=0,D(U*H*B3)`, with q15 absent only under the reviewed target
+> shear, all 22 displayed q coordinates arbitrary and untruncated, and all
+> 94 quotient variables free, the exact normal form of literal CURRENT
+> degree 13 modulo all 38 original FIRST rows has E3 coordinate 12
+> `(3500000000/9)*(U/V)`.  It is independent of every q and quotient
+> variable.  Since `B3=V^4` and `U*H=V^2-4U^3`, both U and V are units on
+> the registered open.  Producer/review/promotion SHAs are `0f152a88...`,
+> `cb4a85e...`, and `4120d6b6...`; the controlling terminology erratum
+> replaces “238 scalar terms” by 238 E3-vector records and 535 nonzero
+> scalar entries.
+>
+> Verdict: **LITERAL P13 TOGETHER WITH ORIGINAL FIRST HAS NO COMMON ZERO
+> ON THIS EXACT NORMALIZED LOCALIZED SLICE; P12 IS UNNECESSARY.**  The
+> dual H18 runs are custody replays, not independent P13 recomputations.
+> Original-FIRST membership multipliers and a denominator-cleared total-F
+> identity remain un-emitted certificate debt.  The result does not restore
+> q15 as a source modulus, cover omitted moduli or boundaries, supply a
+> total-Rees/source cover, close TD6, prove SP-2, or resolve JC2.
+
+> **ACTUAL-TOTAL `T-rs` CHART RHO-UNIT LEMMA — HOSTILE-REVIEW CONFIRMED
+> (2026-08-26 23:29Z).**  On the chart
+> `cs=rs*qcs,c0=rs*qc0,c1=rs*qc1`, let `J` be the `rs`-saturation of the
+> four hash-pinned exact-Q V9 rows
+> `Tg10_1/rs,Tg10_2/rs,Tg10_3/rs,Tg12_6/rs^2`.  The exact certificate puts
+> `k*U` in `J`, where
+> `U=1+32*rho^2*qcs^2*(8*rho^2*qcs^2+3)`.  Hence on `D(k)`, rho has inverse
+> `-32*rho*qcs^2*(8*rho^2*qcs^2+3)`.  Producer/review/promotion SHAs are
+> `3e1dd8fe...`, `b32de58c...`, and `52b59e8d...`.
+>
+> Verdict: **THE ACTUAL-TOTAL `T-rs` CHART IS RHO-FREE ON `D(k)` FOR THIS
+> HASH-PINNED PREFIX.**  The review checks and expands the frozen V9 row
+> files but does not independently re-extract them from the complete total
+> emitter, so their source provenance remains an explicit upstream
+> dependency.  The result does not cover `T-cs`, the `c0,c1,a0,a1` charts,
+> the closed receiver, overlaps, `k=0`, global Gate T, order two, maximum
+> twelve, or JC2.
+
+> **AS109 EXACT-LIFT PARTIAL-`y` FLOOR RAISED TO TWELVE — THEOREM-INTERFACE
+> COMPOSITION, DIFFERENT-MODEL CONFIRMED (2026-08-26 23:01Z).**  Compose the
+> promoted theorem that every characteristic-zero Keller pair of maximum
+> actual partial `y`-degree at most eleven is an automorphism with the
+> reviewed AS109 109-ball Hensel theorem, which makes every exact integral
+> lift of `(x-x^109,y)` noninjective over `Q_109`.  If
+> `P=x-x^109+109A` and `Q=y+109B` had both correction `y`-degrees at most
+> eleven, then the full pair would have maximum actual `y`-degree at most
+> eleven and would be an automorphism, contradiction.  Producer/review SHAs
+> are `c76f26a6...` / `430ffa3c...`.
+>
+> Verdict: **CONDITIONALLY ON AN EXACT INTEGRAL POLYNOMIAL AS109 LIFT,
+> `max(deg_y A,deg_y B) >= 12`.**  This supersedes the older conditional
+> `>=9` floor.  It is coordinate-specific and supplies no support bound,
+> lift, marked collision, degree-exactly-twelve routing, arbitrary-support
+> no-go, counterexample, or JC2 result.
+
+> **D1 EXCEPTIONAL UNIQUE-`AC` BLOCK `E=(a,d)=(1,3)` — HOSTILE-REVIEW
+> CONFIRMED (2026-08-26 19:38Z).**  On the generic square/D1 chart
+> `D(p*k0)`, the complete seven-row source through grade 18 has eight polar
+> primitives and a unique pole-three family `-(1/16)A^3/L^3`.  After the
+> reviewed opposite-root allocation of the exact leading `A,C` forms, the
+> two root functionals have terminal units
+> `+(1/2)au^3*lambda^3` and `-(1/2)au^3*lambda^3`.  Every pole-at-most-two
+> family, including the full `C^2/RA^2` collision and the exact second
+> `RA^2` correction, is `L`-divisible in the `L^3` numerator.  No leading
+> `R` coefficient is inverted, so the result covers the full closed tail
+> `ord(A)=1,ord(C)=4,ord(R)>=2`.  Producer/review/promotion SHAs are
+> `f2b947dd...`, `984783ea...`, and `2ff74f69...`.
+>
+> Verdict: **THE ROUTED EXCEPTIONAL BLOCK `E` IS EMPTY ON `D(p*k0)`.**
+> This is a separate narrow promotion, not an import into the eleven-block
+> low-`a` producer.  A strict unique-`AC`, `d=2,3` composition remains
+> conditional on the still-open `a=8,d=3` high-memory producer and its
+> review.  The theorem does not cover an equality/positive-load face,
+> `p*k0=0`, another D1 face, landing, order two, maximum twelve, or JC2.
+
+> **TD6 `q13` POLYNOMIAL EXTENSION OF THE `q14` QUOTIENT FUNCTIONAL —
+> HOSTILE-REVIEW CONFIRMED (2026-08-26 19:35Z).**  On `F=0` inside
+> `D(U*H*B3)`, with `q2=...=q12=0`, q15 absent only under the reviewed
+> target shear, and arbitrary untruncated `q13,q14,q16,...,q24`, the exact
+> original-FIRST pivot block has one enlarged cyclic SCC of determinant
+> exactly one and a two-sided polynomial inverse.  Literal P12 has complete
+> nonconstant q support exactly `(13,)` and `(14,)`, total q-degree one,
+> and no mixed q13*q14 term.  Its pure-q14 empty-parameter E3-coordinate-0
+> functional is exactly the promoted nonzero V89H7 value.  Producer/review/
+> promotion SHAs are `646dd116...`, `49865ee9...`, and `474fb982...`.
+>
+> Verdict: **THE REVIEWED SPLITTING-INDEPENDENT `q14` FUNCTIONAL EXTENDS
+> POLYNOMIALLY ACROSS ARBITRARY `q13` IN THIS EXACT RESIDUE SCOPE.**  This
+> restores no `q2,...,q12`, totalizes no q15 source modulus, and proves no
+> unit ideal, source-point exclusion, total-Rees lift, whole TD6, SP-2, or
+> JC2 statement.  A full-q structural basis-change client is live on AWS.
+
+> **TD6 SPLITTING-INDEPENDENT `q14` DUAL QUOTIENT FUNCTIONAL — HOSTILE-
+> REVIEW CONFIRMED (2026-08-26 19:10Z).**  On `F=0` inside
+> `D(U*H*B3)`, with `q2=...=q13=0`, q15 absent only under the reviewed
+> target shear, and arbitrary untruncated `q14,q16,...,q24`, the exact
+> 38-row original-FIRST pivot block has a two-sided polynomial inverse.
+> Its monic pivot-free-tail normal form kills the whole original-FIRST
+> ideal.  The single coefficient functional extracting the empty-parameter,
+> pure-`q14`, E3 scalar coordinate zero annihilates that ideal but takes
+> literal P12 to the explicit nonzero value
+> `N/[V^3*(V^2-4U^3)^2]`.  On `F=0`, `B3=V^4` and
+> `U*H=V^2-4U^3`, so no unregistered factor is inverted.  A fresh-prime
+> replay gives `159760 mod 1000033`.  Producer/review/promotion SHAs are
+> `49b9dcba...`, `99f7124e...`, and `7d1709d0...`.
+>
+> Verdict: **LITERAL P12 HAS A NONZERO `q14` COKERNEL CLASS MODULO FULL
+> ORIGINAL FIRST+`(F)` IN THIS EXACT RESIDUE SCOPE.**  This is not a unit-
+> ideal or source-point exclusion, low-q unit chart, q15 source theorem,
+> total-Rees lift, whole-TD6, SP-2, or JC2 result.  The exact q13 extension
+> is running separately.
+
+> **ELEVEN LOW-`a` D1 UNIQUE-`AC`, `d=2,3` STRICT TAILS — HOSTILE-
+> REVIEW CONFIRMED (2026-08-26 18:29Z).**  Exact Q and two independent
+> good-prime lanes reconstruct the complete seven-row moving-root source and
+> leave the terminal local double-pole unit on `D(p*k0)`.  The promoted
+> triples `(a,d,r_floor)` are
+> `(1,2,2)`, `(2,2,3)`, `(2,3,3)`, `(3,2,3)`, `(3,3,4)`,
+> `(4,2,4)`, `(4,3,4)`, `(5,2,5)`, `(5,3,5)`, `(6,2,6)`, and
+> `(6,3,6)`.  Producer/review/promotion SHAs are `04324859...`,
+> `841f0d6c...`, and `8b92c22b...`.
+>
+> Verdict: **THESE ELEVEN CLOSED `R`-ORDER TAILS ARE EMPTY.**  The routed
+> cell `(1,3,2)` is deliberately excluded from this eleven-block theorem:
+> its independently reconstructed correction `-(3/8)R*A^2/L^2` is nonzero.
+> It is now closed only by the separate pole-three `E` promotion above.
+> This eleven-block promotion does not include
+> the `a=7` load tie, the `a=8,9` load-first chambers, equality/target-shadow
+> faces, `p*k0=0`, other D1 faces, landing, order two, maximum twelve, and
+> JC2.
+
+> **D1 `a=7`, UNIQUE-`AC` `d=2,3` LOAD-TIE CELLS — HOSTILE-REVIEW
+> CONFIRMED (2026-08-26 18:32Z).**  The complete moving-root source has pole
+> ceiling two through terminal grades 28 and 30.  After the tied
+> `(3/4)C(A+k60)/L` column forces `A+k60=0`, the two root functionals leave
+> `(3/8)(c0+lambda*c1)^2` and `(3/8)(c0-lambda*c1)^2`; these generate the
+> unit ideal on the two exact-contact charts before radicals.  Exact Q and
+> two good-prime controls agree.  Review/promotion SHAs are `1ae7f6d9...`
+> and `b5c38f1b...`.
+>
+> Verdict: **THE TWO CELLS `a=7,d=2,3,ord(R)>=7` ARE EMPTY ON
+> `D(p*k0)`.**  No leading coefficient of `R` or `k60` is inverted.  The
+> result does not cover the load-first `a=8,9` chambers, target shadows,
+> equality or positive-order-leading-load faces, another D1 face, landing,
+> order two, maximum twelve, or JC2.
+
+> **D1 `a=8,d=2` UNIQUE-`AC` LOAD-FIRST TAIL — HOSTILE-REVIEW
+> CONFIRMED (2026-08-26 18:50Z).**  The complete source gives an exhaustive
+> `D(k60) union V(k60)` split.  On `D(k60)`, the unshadowed grade-27
+> `(3/4)k60*C/L` row is already a unit on both exact-`C` charts.  On
+> `V(k60)`, the grade-28 load tie is followed by the complete pole-two
+> terminal pair `(3/8)(c0 +/- lambda*c1)^2`, which generates the unit ideal
+> before radicals, including the rank-one face.  Exact Q and two independent
+> primes agree; review/promotion SHAs are `0558ea1e...` / `9cc68702...`.
+>
+> Verdict: **THE STRICT TAIL `ord(A)=8,ord(C)=10,ord(R)>=8` IS EMPTY ON
+> `D(p*k0)`.**  This does not include `a=8,d=3`, any `a=9` cell, target-
+> shadow/equality/positive-load faces, another D1 face, landing, the square
+> component, order two, maximum twelve, or JC2.
+
+> **TD6 HIGH-`q` TOTAL-`F` K-REPAIRED IDENTITY — HOSTILE-REVIEW
+> CONFIRMED (2026-08-26 18:29Z).**  On `D(U*H*B3)`, after setting
+> `q2=...=q14=0`, using the reviewed shear to remove q15, and retaining
+> arbitrary untruncated `q16,...,q24`, the exact raw P12 and all 38 raw
+> FIRST rows satisfy a unit identity modulo total `F`.  The repair clears
+> the sole `K=2R38` denominator and uses
+> `B3=K+2F*(2CU-V^2+2U^3)` coefficientwise; it inverts neither `K`, `F`,
+> nor any q polynomial.  Producer/review/promotion SHAs are `8db237a7...`,
+> `ea95d613...`, and `5e924e44...`.
+>
+> Verdict: **`(P12_raw,FIRST_raw,F)` IS THE UNIT IDEAL ON THIS HIGH-`q`
+> RESIDUE BLOCK.**  This is not a P12/FIRST-only theorem and gives no low-q
+> unit-chart cover, source/Rees lift, whole-TD6, SP-2, or JC2 conclusion.
+
+> **DELAYED AFFINE-FABER `A`, `H=15,v(a)=3` INTERNAL KERNEL FAN —
+> HOSTILE-REVIEW CONFIRMED (2026-08-26 17:58Z).**  In the normalized
+> repeated-`A` coefficient chart on `D(E*M)`, with the fixed delayed load
+> schedule and leading loads on the corrected affine graph, the rational
+> kernel order `q>0` has the exhaustive internal partition
+> `(0,6) union {6} union (6,infinity]`.  The center-independent quadratic
+> two-chart block excludes `0<q<6`; at `q=6` the complete seven-row
+> grade-42 predecessor is already the unit ideal on both projective kernel
+> charts; for `q>6`, the complete 365-term graph-relative support has unique
+> least term `-E*lambda^3*M^3/16`.  The endpoint `q=infinity` is included.
+> Review/promotion SHAs are `da35a8c2...` / `ce4fa70f...`.
+>
+> Verdict: **THE FIXED `H=15,v(a)=3` INTERNAL DELAYED-CHART KERNEL FAN IS
+> EMPTY FOR EVERY RATIONAL `q>0` ON `D(E*M)`.**  The result does not cover
+> `q=0`, `v(a)<3`, `K10=0`, `E*M=0`, another load/normal slope, or literal
+> source/total-Rees landing.  Although the displayed rows do not divide by
+> `K10`, the graph neighbourhood itself was selected using nonzero `K10`.
+> No order-two, maximum-twelve, or JC2 conclusion follows.
+
+> **D1 UNIT-LOAD UNIQUE-`AC`, `d=1` COMPOSITION — HOSTILE-REVIEW
+> CONFIRMED (2026-08-26 17:06Z).**  The repaired complete producer contains
+> all eleven primitive polar families through grade 38, including the old
+> omission sentinels `A_7` and `k10_6`; exact Q and the independent good-
+> prime control agree on 10,407 analytic and 6,921 literal monomials.  A
+> fresh review independently confirms pole ceiling three, the complete
+> seven-row bridge, the plus-sign order-three recurrence, and terminal
+> coefficient `-J/4`, excluding every `a>=10,c=a+1,r>=a` on `D(J)`.
+> A separate review confirms the universal odd-pole generating functional,
+> which remains conditional on a separately proved source ceiling and target
+> placement in each application.
+>
+> The already reviewed bands `a=2..5`, `a=6..7`, `a=8`, and `a=9` now have
+> explicit narrow promotion custody.  A distinct composition review checks
+> the exhaustive `k6` splits and all closed `r>a` faces and confirms their
+> union with the `a>=10` tail.  New-tail review/promotion SHAs are
+> `a4eff964...` / `d4aceedb...`; universal review/promotion SHAs are
+> `0263315e...` / `dbdd2b80...`; low-band promotion SHAs are `973f7953...`
+> / `829ac12f...`; ladder review/promotion SHAs are `bd5b3dd5...` /
+> `85533441...`.
+>
+> Verdict: **THE NORMALIZED INTEGRAL UNIT-LOAD UNIQUE-`AC`, `d=1` CELL
+> `a>=2,c=a+1,r>=a` IS EMPTY ON `D(p*k0*J)`.**  This does not close the
+> `d=2,3`, `C2/R3/RC/A2` or equality faces, positive-order leading load,
+> `p=0`, `k0=0`, landing, the square component, order two, maximum twelve,
+> or JC2.
+
+> **HOMOGENEOUS DELAYED AFFINE-FABER `A` CONE — HOSTILE-REVIEW
+> CONFIRMED (2026-08-26 17:06Z).**  On `D(E*M)`, the complete quadratic
+> predecessor excludes `0<q<2H/5`; exact parsing of all 371 support terms
+> proves that `-E*M^3*lambda^3/16` is the unique minimum for `q>=2H/5`
+> whenever `v(a)>=H/3` and every effective lower load/visible target has
+> valuation at least `14H/5`.  The proof is homogeneous after ramification,
+> includes unequal kernel orders and `K10=0`, and uses the reviewed
+> complement pivot.  Review/promotion SHAs are `9c537ad4...` /
+> `bde78801...`.
+>
+> Combined with the confirmed square-normal first-block bridge below, this
+> excludes the repeated-`A` delayed-source region `0<H<=15`, `p,m` units,
+> and `v(a)>=H/3`.  Earlier center faces, `H>15`, factor degeneracies,
+> other load slopes, global source/Rees coverage, order two, maximum twelve,
+> and JC2 remain outside the theorem.
+
+> **LITERAL `H=15` DELAYED-`A` GATE-A COMPOSITION — HOSTILE-REVIEW
+> CONFIRMED (2026-08-26 17:14Z).**  On the fixed delayed schedule with
+> `K10` a unit, exact centered-octic division `C=Q^2+Delta` is a polynomial
+> two-sided coordinate map.  At `ord(Delta)=15` and
+> `Q mod sigma=z^2(z^2+p)` on `D(p)`, the untied grade-30 first block forces
+> `Delta/sigma^15 mod sigma=m*z*(z^2+p)` with `m` a unit.  The exact
+> `D(M)` inverse then gives the repeated-`A` closed point and positive
+> kernel order, so the reviewed fixed-ray theorem excludes every arc with
+> `ord(a)>=5`.  Theorem/review/promotion SHAs are `a1a2b098...`,
+> `e9dea9b0...`, and `d877d6c5...`.
+>
+> Verdict: **ARCWISE SOURCE EXCLUSION ONLY FOR THE FIXED
+> `H=15,D(p*m*K10),ord(a)>=5` CELL.**  This is a literal Gate-A bridge,
+> not a total-Rees atlas.  `K10=0`, other slopes, earlier center faces,
+> factor degeneracies, terminal/Taylor, order two, maximum twelve, and JC2
+> remain outside this theorem.
+
+> **SQUARE-NORMAL FIRST-BLOCK DIVISIBILITY — HOSTILE-REVIEW CONFIRMED
+> (2026-08-26 17:06Z).**  For monic quartic `Q` and cubic `N`, the first
+> four negative coefficients of `N^2/Q` vanish iff `Q|N^2`.  In a UFD this
+> is iff `Q_half=prod f^ceil(e/2)` divides `N`.  On
+> `Q=A^2D`, with `A,D` coprime and `D` squarefree, degree forces
+> `N=MAD`.  The review independently checks the reciprocal signs,
+> polynomial division, degree argument, repeated-factor specialization,
+> and ordinary lower-unitriangular connection.  Theorem/review/promotion
+> SHAs are `56123a6f...`, `85389a28...`, and `eb303252...`.
+>
+> Verdict: **PROMOTED ONLY FOR AN UNTIED FIRST NORMAL BLOCK.**  A load or
+> target tying that block requires the combined predecessor; no total-Rees,
+> base-change, order-two, maximum-twelve, or JC2 conclusion follows.
+
+> **TD6 V89H1 HIGH-TAIL DENOMINATOR OBSTRUCTION — FAIL-CLOSED NEGATIVE
+> (2026-08-26 17:06Z).**  The q16--q24 FIRST graph is square-zero and the
+> normalized P12/source replay reaches the expected q-independent unit, but
+> its common denominator contains
+> `K=2*C*V^2*U+16*C*U^4-V^4-14*V^2*U^3+16*U^6=2*R38`.
+> This is exactly the already registered V83 rank-minor factor.  Hence H1
+> proves only a rational collapse on `D(U*H*B3*K)`, not the claimed result
+> on `D(U*H*B3)`, and cannot seed the proposed low-q radical theorem there.
+> RESULT/denominator/K-formula SHAs are `0fd09839...`, `6e1e8ec1...`, and
+> `2db6935d...`; all H1-dependent descendants are withdrawn.
+>
+> The exact repair identity
+> `K-B3=-2*F*(2*C*U-V^2+2*U^3)` is being composed with a denominator-
+> cleared H1 relation.  This negative does not alter the reviewed V86 or
+> V87R1/V88 identities.
+
+> **DELAYED-LOAD AFFINE-FABER `A` VALUATIVE COMPOSITION — HOSTILE-REVIEW
+> CONFIRMED (2026-08-26 16:28Z).**  On the fixed delayed-load ray and the
+> registered weighted repeated-`A` neighborhood inside `D(p*m*K10)`, the
+> exact coefficient maps are two-sided on `D(M)`.  The first complementary
+> polar term either gives a unit or places genuine complements at valuation
+> at least twice the kernel order.  Complete ordinary rows exclude every
+> rational `0<q<6`; the reviewed center-complete identity
+> `[sigma^45](E*H3+H5)=-E*lambda^3*M^3/16` excludes every `q>=6`, including
+> unequal, ramified, and infinite kernel orders.  Loads and targets cannot
+> reach that coefficient.  The earlier literal q6 producer remains repaired
+> at its overstated full-face scope and is not used as that theorem.
+>
+> Composition theorem/review/promotion SHAs are `fef0524a...`,
+> `a6d434b5...`, and `0c4d2427...`; formal identity review/promotion SHAs
+> are `7349330c...` / `d818e828...`.
+>
+> Verdict: **THE REGISTERED FIXED DELAYED-LOAD `A` NEIGHBORHOOD IS EMPTY
+> ON `D(p*m*K10)`.**  This is not a literal source/total-Rees atlas and does
+> not cover other slopes or receivers, the whole `A` fan, order two,
+> maximum twelve, or JC2.
+
+> **D1 UNIFORM `a>=13` GRADE-38 RECURRENCE — HOSTILE-REVIEW CONFIRMED
+> (2026-08-26 16:25Z).**  On `D(J)`, after the registered square/D1 gates,
+> every source monomial through grade 38 has pole order at most two for
+> `ord(A)=a>=13`, `ord(C)=a+1`, `ord(R)>=a`.  The exact complete-row
+> functional
+> `Phi7-(p/4)Phi5-(p^2/32)Phi3-(p^3/128)Phi1` annihilates the source part
+> modulo `sigma^39`; the sole odd target leaves `-sigma^38*J/4`, hence the
+> unit ideal on `D(J)`.  Symbolic raising variables cover the whole rational
+> cone after ramification without inversion.  The first pole-order-three
+> term is `k2*C/L^3` at grade 39; its grade-38 appearance at `a=12` is a
+> negative control, not a survival claim.
+>
+> Producer result/evidence/freeze SHAs are `09ca3214...`, `0a65d8b2...`,
+> and `95609016...`; different-model review SHA is `7a067603...` and
+> promotion SHA is `29e2ac11...`.
+>
+> Verdict: **THE DISPLAYED D1 HIGH-CONTACT CONE IS EMPTY ON `D(J)`.**
+> Contacts `a<=12`, `V(J)`, other D1 cells, the whole square component,
+> order two, `(8,12)`, maximum twelve, and JC2 remain outside the theorem.
+
+> **TD6 V87R1/V88 TOTAL-`(F,q)` PLUS q15 SHEAR — HOSTILE-REVIEW
+> CONFIRMED (2026-08-26 16:25Z).**  V87R1 supplies the exact repair required
+> by the first V87 review: all 39 q2-only source specializations and the
+> actual cleared `h_F,h_2` tables equal the promoted V86 objects in a common
+> encoding.  V88 is a two-sided determinant-one integral target shear on all
+> 3,602 section coordinates.  With its derivative term, literal raw P12 and
+> all 38 FIRST rows are exactly q15-independent.  Therefore on
+> `D(U*H*B3)` the promoted identity has remainder
+> `F*h_F+sum_{e=2..14,16..24}q_e*h_e`, with q15 arbitrary and no `F` or q
+> inversion.
+>
+> V87/V87R1/V88 result SHAs are `6e22c6ac...`, `824344bc...`, and
+> `c34ae948...`; the controlling repair addendum, fresh different-model
+> review, and promotion SHAs are `572c4b4c...`, `068b33a7...`, and
+> `e3089afe...`.
+>
+> Verdict: **NO RETAINED DVR ARC CAN HAVE POSITIVE `F` AND ALL 22
+> TRANSVERSE q JETS; q15 MAY BE ARBITRARY.**  A unit among those 22 jets,
+> omitted source moduli, a total-Rees chart, whole A3, TD6, SP-2, and JC2
+> remain open.
+
+> **D1 FIXED `a=9` FULL COMPOSITION — HOSTILE-REVIEW CONFIRMED
+> (2026-08-26 15:58Z).**  On `D(p*k0)`, the complete literal-Faber source
+> cell `ord(A)=9,ord(C)=10,ord(R)>=9` is empty.  `D(k60)` dies at grade 27.
+> On `V(k60)`, the exhaustive `D(k60_1)` and `V(k60_1)` successors die at
+> grade 30: the first uses `c1=0,c0^2=0`; the second uses the exact compact
+> ideal containing `c1*c0` and `2*c0^2-p*c1^2`, hence `c0^3,c1^3`, against
+> the cubed exact-contact Bezout equation.  No radical is taken and positive
+> finite valuations of either load jet have generic point in an already
+> empty open.
+>
+> Producer/evidence/freeze SHAs for the grade-30 endpoint are
+> `bbb1d718...`, `dc223883...`, and `6881229b...`; final different-model
+> review SHA is `8524bd1e...`; promotion SHA is `dfabe082...`.  The review
+> prompt's earlier grade-27 review digest was a transcription error; the
+> unique on-disk review/promotion pin is `95e9990b...`, and the final review
+> rederived those rows independently.
+>
+> Verdict: **THE NAMED FIXED `a=9` CELL IS EMPTY ON `D(p*k0)`.**  Contacts
+> `a>=10`, `p=0`, `k0=0`, other D1 cells, the whole square component, order
+> two, `(8,12)`, maximum twelve, and JC2 remain outside this theorem.
+
+> **AFFINE-FABER `A` q6 SCOPE REPAIR; FORMAL WEIGHTED SUCCESSOR IS
+> PRODUCER-TIER (2026-08-26 15:50Z).**  The frozen literal q6 calculation
+> correctly derives `G3-(p/4)G1=-(3/8)m*x6*y6` and obtains the unit ideal on
+> both registered projective kernel charts.  It does not justify its claimed
+> full relative-order-six scope: the compiler sets `a=s^5*a5` and omits the
+> tied `a6` moving-center jet, with analogous gaps after ramification.
+> Different-model hostile review SHA `06e27093...` therefore returns
+> **REPAIR**; no displayed identity is declared false.
+>
+> The controlling successor substitutes algebraically independent formal
+> center, discriminant, normal-scale, kernel, complement, load, and target
+> variables into all seven frozen tails.  Exact Q gives
+> `H3=-(3/8)t^42*lambda^2*M*X*Y-(1/16)t^45*lambda^3*M^3` and
+> `H5=(3/8)t^42*E*lambda^2*M*X*Y` modulo `t^46`, so the grade-45
+> combination is `-E*lambda^3*M^3/16`.  Result/evidence/freeze SHAs are
+> `5736a3b0...`, `86883cc1...`, and `0ef7cfc8...`.  This is not promoted:
+> different-model hostile review independently confirms this polynomial
+> identity (SHA `7349330c...`), and identity-only promotion SHA is
+> `d818e828...`.  The exact two-sided source-coordinate
+> cover, iterative complement absorption, and separate `q<6` homogeneous
+> face are under a second review and remain outstanding for the whole ray.
+
+> **TD6 V87 ALL-LICENSED-q REVIEW REPAIR; V88 q15 PRODUCER
+> (2026-08-26 15:50Z).**  Hostile review independently recovers V87's exact
+> identity with all 22 licensed q jets and finds no algebraic or denominator
+> defect, but returns **REPAIR** because V87 did not emit a coefficientwise
+> common-encoding comparison of its q2-only specialization with frozen V86.
+> Review SHA is `c4f3ea4a...`; the bounded exact comparator is required
+> before promotion.  Separately, V88's dual-AWS producer verifies the
+> determinant-one q15 target shear on all 6,507 transport rows, all 38 FIRST
+> maps, and literal P12 (result/evidence/freeze SHAs `c34ae948...`,
+> `e3ffec3f...`, `20f9a6ca...`).  V87+repair+V88 has not yet passed fresh
+> hostile review and supplies no whole TD6, SP-2, or JC2 conclusion.
+
+> **TD6 LITERAL TOTAL-`(F,q2)` RAW-SOURCE IDENTITY — HOSTILE-REVIEW
+> CONFIRMED (2026-08-26 15:14Z).**  On the normalized three-center source
+> slice `q=t+beta*t^2+t^25`, the genuine raw degree-twelve polynomial and
+> all 38 FIRST maps satisfy
+> `U^12*H^3*B3=aP*P12+sum(ai*FIRST_i)+F*hF+beta*hbeta` in the localization
+> by `U*H*B3`.  The beta ring is untruncated, both the affine-transport and
+> direct-`q'` beta paths are live, the common denominator is exactly `U*H`,
+> and neither `F` nor `beta` is inverted.  Thus no retained DVR arc on this
+> open can kill all raw rows while both `v(F)>0` and `v(beta)>0`.
+>
+> Producer/evidence/freeze/source-manifest SHAs are `22fb1c6c...`,
+> `49211758...`, `82083dd2...`, and `d86ec282...`.  The initial review
+> assignment had a manifest-path typo and is cancelled no-verdict custody.
+> Corrected different-model review SHA `9e70d6ce...` independently recovers
+> the identity and returns **CONFIRMED**; promotion SHA is `677513a2...`.
+>
+> Verdict: **SIMULTANEOUS POSITIVE-`F`, POSITIVE-`q2` ARCS ARE EXCLUDED ON
+> THIS LITERAL NORMALIZED SLICE.**  Unit-`q2`, other q jets, dead stretch,
+> correction, orbit/pole, centering, boundary moduli, a total-Rees cover,
+> whole fixed A3, TD6, SP-2, and JC2 remain open.
+
+> **DELAYED-LOAD AFFINE-FABER `K` FACE — REPAIRED COMPOSITE HOSTILE-REVIEW
+> CONFIRMED (2026-08-26 15:05Z).**  On `D(D)`, the complete-source
+> exceptional `K` face with
+> `k10=Lambda^12*K10`, `k6=Lambda^8*K6`, and
+> `k2=Lambda^4*K2` has no formal or Puiseux successor.  The squarefree
+> `D(r)` branch is killed by `Q0 | N1^2`; on `r=0` the sole first-normal
+> survivor maps to `(b,e,m)=(0,p,p*x)` on `D(e*m)`.  The `L!=0` chart is
+> then killed by the reviewed e-open K2 unit through the exact
+> source/analytic row bridge.  On the omitted early-kernel chart `L=0`, the
+> correct strict transform `6*u3-L*m^3` and the homogeneous rows
+> `u3=-2*y*h`, `u4=h^2-e*y^2` force all projective leading coordinates to
+> vanish.
+>
+> The first hostile review correctly returned **REPAIR** because the producer
+> omitted that `L=0` Newton face (producer/review SHAs `6178089b...` /
+> `dc4273c7...`).  The controlling V2 addendum SHA is `7c731df0...`; an
+> intermediate addendum `8b17b8c...` is superseded because it misstated the
+> post-saturation power.  Fresh different-model review of the repaired
+> composite returns **CONFIRMED** (SHA `abce4bc1...`); promotion SHA is
+> `3b59e6c5...`.
+>
+> Verdict: **NO DELAYED-LOAD EXCEPTIONAL `K` SUCCESSOR ON THIS `D(D)` SOURCE
+> RAY.**  This removes neither the exceptional `A` face nor `D=0`, other load
+> slopes, the exact-square/Pell receiver, the total source fan, order two,
+> `(8,12)`, maximum twelve, or JC2.
+
+> **NORMALIZED AFFINE-FABER GENERIC `J` EXCLUSION — HOSTILE REVIEW
+> CONFIRMED (2026-08-26 14:03Z).**  In the completed centered ordinary-
+> Faber coefficient chart with `k10=1`, the three odd rows
+> `(R1,R3,R5)` generate the complete odd-coordinate ideal `(c,u,n3)` on
+> `U=D(D*(5D+2s)*(5D-2s))`.  Their exact Jacobian determinant is
+> `-25*D^3*(5D+2s)*(5D-2s)^2/2^17`.  Parity then forces `R7=0`, so
+> adjoining `J-4R7` and saturating by `J` gives the unit ideal in the
+> completion.  This excludes `J`-nonzero formal, ramified, and nilpotent
+> arcs in that normalized completion; only the disjoint `A` and `K`
+> resonances remain on `D(D)`.
+>
+> Producer, different-model hostile-review, and promotion SHAs are
+> `fe1193ab...`, `08a6bec0...`, and `99d0af60...`; verdict
+> **CONFIRMED**.  The review independently reconstructed the coordinate
+> isomorphism, parity, ordinary-Faber differential, determinant, and formal
+> implicit-function argument.
+>
+> Verdict: **NORMALIZED COMPLETE-LOCAL EXCLUSION ONLY.**  No literal
+> total-Rees/source identification, two-sided load normalization,
+> moving-center import, `A`/`K` classification, terminal/Taylor condition,
+> order-two, `(8,12)`, maximum-twelve, or JC2 conclusion follows.
+
+> **CORRECTION — PROVISIONAL DELAYED-LOAD `A` SOURCE EXCLUSION
+> QUARANTINED (2026-08-26 14:03Z).**  Producer SHA `9419c08b...` correctly
+> computes the delayed-load timing, UFD first-normal split, repeated-root
+> null vector, and normalized no-further-correction cubic residual, but it
+> skips admissible higher normal jets.  On the repeated-root branch,
+> `E=t^3N3+t^4N4+...` gives
+> `R1[t^7]=(3/4)v*m0-(3/8)v^2*x`; the legal constant jet
+> `m0=v*x/2` cancels the proposed pole.  Arbitrary `k[[sigma]]` arcs have
+> further correction grades before the terminal tie at `sigma^57`.
+>
+> Independent audit and repaired total-Rees design SHAs are
+> `dfb1cc84...` and `9f91fe43...`; verdict **REPAIR**.  The producer was
+> never promoted.  Dual-AWS cancellation result/evidence/freeze SHAs are
+> `2ca188fc...`, `2db358d8...`, and `b2cf86a4...`.  Its strongest surviving
+> source statement is the direct
+> rejection of the frozen squarefree rational normalized witness, whose
+> first unloaded rows are `R2=3/3200` and `R6=3/6400`.  The repeated-root
+> `A` tower is live and requires a correction-complete sequential solve.
+> A later Grok review (`0dca581a...`) returned `CONFIRMED` while omitting
+> this explicit jet; it is quarantined as contradicted review evidence.
+> A fresh output-explicit Grok adjudication independently re-expanded the
+> `t^7` residue, verified that parity and the DVR condition permit
+> `m0=v*x/2`, and returned **PRIOR_REVIEW_REPAIR** (SHA `a4158b74...`).
+> Thus the correction is now externally adjudicated: the normalized `A5`
+> identity survives only as a zero-higher-correction initial form, not as a
+> correction-complete source obstruction.
+
+> **GENERIC-SQUARE D1 CONTACT `a=9`, `D(k60)` — GRADE-27 EXACT-CONTACT
+> EXCLUSION CONFIRMED (2026-08-26 14:50Z).**  On the fixed-contact chart
+> `ord(A)=9`, `ord(C)=10`, `ord(R)>=9` and `D(p*k0*k60)`, the complete
+> literal-Faber source has no earlier nonzero row and begins with
+> `(3/4)c1*k60`, `(3/4)c0*k60`.  Since `k60` is a unit, both coefficients
+> of the leading linear `C` polynomial vanish, contradicting exact contact.
+> The argument works directly over characteristic-zero ramified DVRs and
+> uses no radical or projected chart.
+>
+> Producer result/evidence/freeze SHAs are `3679d0db...`, `f878c18a...`,
+> and `be2a611f...`; hostile-review and promotion SHAs are `95e9990b...`
+> and `14d01a82...`, verdict **CONFIRMED**.  Exact Q is the theorem
+> endpoint; `F_65521` is a software control.  V1's fractional-exponent
+> parse failure is preserved as no-verdict custody; V2's one-token
+> grade-38 target repair cannot affect grade 27.
+>
+> Verdict: **NO FIXED `a=9` D1 ARC ON `D(p*k0*k60)`.**  The branch
+> `V(k60)`, higher contacts, other D1 cells, the remaining square component,
+> order two, `(8,12)`, maximum twelve, and JC2 remain open.
+
+> **ORDER-TWO `p=0` CUSP — RAW GRADE-12 UNIT, HOSTILE REVIEW
+> CONFIRMED (2026-08-26 11:34Z).**  After the promoted sharp third-tail
+> gate forces `M=0`, work at the quadruple-root cusp on
+> `D(rs*k0)`.  Put `d=rs` and `u=c1/d`.  The complete raw grade-ten
+> equations reduce, without a radical or conductor loss, to
+> `c0=0`, `c1=d*u`, `a0=3*cs*u`, and
+> `5*k0*d+96*u^2=0`; thus `D(d*u)=D(rs*k0)`.
+>
+> In the complete seven-tail source, before any grade-eleven pivot,
+> radical, saturation, or projected-sheet equation, the sixth row at
+> absolute sigma-grade twelve is exactly
+> `E_(6,12)=-(21/1024)d^3*u^2`.  Row six has no target there, and the
+> coefficient is a unit on the registered open.  The exact-Q collector
+> and an independent focused reconstruction of all 120 sixth-row
+> monomials agree; distinct Box03 and r6d lanes pass, with `F_65521` used
+> only as a software control.  All moving-center/correction jets,
+> `k10,k6,k2`, and frozen targets were retained at their exact weights.
+>
+> Producer result/evidence/freeze SHAs are `fadb2794...`, `9008a545...`,
+> and `0fc1d6f...`.  Hostile-review and promotion SHAs are
+> `d1a0d83e...` and `cf03801e...`; verdict **CONFIRMED**.
+>
+> Verdict: **NO PROLONGATION OF THE POST-`M=0`, `p=0` CUSP OPEN
+> `D(rs*k0)` THROUGH GRADE TWELVE.**  This does not establish a total
+> Cech/normalized-Rees cover or moving-`p` propagation.  The residual
+> `C/A` charts, all-zero higher-contact receiver, `k0=0`, other infinity
+> supports or terminal profiles, full square branch, all order two,
+> `(8,12)`, maximum twelve, and JC2 remain open.  Generic V12/unbounded
+> `d=1` fan output is quarantined and was not used.
+
+> **ORDER-TWO `p=0` ODD COLLISION SHEET — RAW GRADE-14 UNIT, HOSTILE
+> REVIEW CONFIRMED (2026-08-26 10:41Z).**  After the promoted sharp
+> third-tail gate forces `M=0`, the grade-eleven/twelve support on the
+> quadruple-root odd component is
+> `e0=a0=ell1=0`, `12e1^2-5k0*b^4=0`, with `b=cs` and
+> `b*k0!=0`.  Its rational normalization is
+> `w=e1/b^2`, `k0=(12/5)w^2`.  In the complete terminal `[6,2]` source,
+> the fifth row at absolute `sigma`-grade fourteen is exactly
+> `E_(5,14)=-(21/320)b^5w^2=-(21/320)b*e1^2=-(7/256)k0*b^5`.
+> Source and full DAG roots are both `270200`, proving target absence.
+> The row is already raw before `F`, all grade-13 pivots, radical, or
+> saturation, and hence is a unit on `D(b*w)=D(b*k0)`.
+>
+> The grade-14 producer freeze is `b018dc4e...`.  A separately implemented
+> exact-Q collector, freeze `9a4f6014...`, processes all 89 canonical
+> fifth-tail monomials, with 42 contributing and 249 raw coefficient
+> monomials cancelling to the displayed unit before modular controls;
+> Box03 and r6d both pass, and `21/320` is nonzero modulo 32003 and 65521.
+> Hostile-review and promotion SHAs are `5cbfe1d8...` and `f48401b5...`;
+> verdict **CONFIRMED**.  The earlier exact grade-13 triangular theorem is
+> correct but unnecessary for this elimination.  Prior radical-engine
+> timeouts remain deployment-negative only.
+>
+> Verdict: **NO TERMINAL `[6,2]` PROLONGATION OF THE NORMALIZED ODD
+> COMPONENT `V(rs) INTERSECT D(cs*k0)`**.  Gate A and the two typed Taylor
+> pullbacks are retired only because this sheet is already dead; they are
+> not proved.  The separate `D(rs)` cusp, positive-order/fractional/ramified
+> load or base slopes, other infinity supports or terminal profiles, the
+> full square branch, all order two, `(8,12)`, maximum twelve, and JC2
+> remain open.
+
+> **ORDER-TWO GENERIC-SQUARE VERTICAL `c=3,r>=2` — HOSTILE REVIEW
+> CONFIRMED (2026-08-26 10:40Z).**  On the generic-square first-normal
+> open `D(p*k0)`, the seven complete source/Faber rows through absolute
+> grades thirteen--fifteen exclude every finite-order arc with nonzero
+> leading `A`, `ord(A)=0`, `ord(C)=3`, and `ord(R)>=2`.  Grade thirteen
+> gives `L|A0*E3`.  In the faithfully flat etale splitting `L=u*v`, this
+> allocates `A0` and `E3` to opposite roots.  Grade fourteen gives
+> `L^2*H14=-(3/8)B2*A0^2 (mod L)`, forcing the complementary factor into
+> `B2` when `r=2`; it is automatic for `r>=3`.  Grade fifteen then gives
+> `L^3*H15=-(1/16)A0^3 (mod v)`, a nonzero contradiction on either deck
+> chart.  The exact certificate is symbolically independent of `B3`, so
+> it covers all `r>=3`, not sampled values.
+>
+> Producer/result-manifest/freeze SHAs are `c03ad204...`, `cb474217...`,
+> and `a13d10fb...`; exact-Q input/stdout SHAs are `ca1f0692...` /
+> `af96bae6...`.  Hostile-review and promotion SHAs are `af10cf34...` and
+> `3c35bb9e...`; verdict **CONFIRMED**.  The independent `F_65521` control
+> also passes, but exact Q alone carries the characteristic-zero claim.
+>
+> Verdict: **ARCWISE/SET-THEORETIC EXCLUSION OF THE VERTICAL
+> `a=0,c=3,r>=2` FACE ON `D(p*k0)` ONLY**.  No scheme structure,
+> `r=1`, horizontal `a>0`, `p=0`, `k0=0`, ramified or zero/infinity
+> support, fan exhaustion, whole square branch, exact order two, maximum
+> twelve, or JC2 claim follows.
+
+> **ORDER-TWO GENERIC-SQUARE LOW `C` CONTACTS ONE AND TWO — HOSTILE
+> REVIEW CONFIRMED (2026-08-26 09:45Z).**  On the generic-square
+> first-normal chart `D(p*k0)`, the complete seven source/Faber rows force
+> the finite leading `C` correction to vanish when its `sigma`-contact is
+> one or two.  The moving `w`/`z` Laurent transformation is exactly lower
+> unitriangular.  Contact one is governed by an integral grade-11/12
+> rootwise identity.  At contact two, the corresponding unlocalized
+> grade-14 identity fails by the exact obstruction
+> `(3/8)ell1*a0*a1*bs1+(3/32)ell1*a1^2*br1`; this negative control agrees
+> over `Q` and `F_65521`.  In the proper saturation by `p*k0`, the
+> obstruction is zero and the grade-14 remainder is `(3/8)C^2` at an
+> `A`-root.  Together with the preceding `L|A*C` row and squarefreeness of
+> `L=z^2+p/2` on `D(p)`, this kills the linear leading `C` at both roots.
+>
+> Producer result/result-manifest, hostile-review, and promotion SHAs are
+> `b8ae74e5...`, `6931164b...`, `ca1a669d...`, and `3447ce8c...`;
+> verdict **CONFIRMED**.  The review rehashed the nested source chain,
+> verified exact engine `rc=0`, saturation semantics and properness, all
+> seven rows, the Laurent bridge, and both immutable unlocalized controls.
+>
+> Verdict: **ARCWISE/SET-THEORETIC CONTACT RAISING FOR FINITE `c=1,2` ON
+> `D(p*k0)` ONLY**.  This is not reduced scheme structure and does not cover
+> positive horizontal `A` contact, `p=0`, `k0=0`, the exact-square zero
+> section, fan exhaustiveness, the square branch, order two, maximum twelve,
+> or JC2.
+
+> **ORDER-TWO SQUARE THIRD-TAIL SHARPENING — HOSTILE REVIEW CONFIRMED
+> (2026-08-26 09:35Z).**  In the complete matched source chart
+> `K=L^2+Lambda*R`, `N=L*M+Lambda*S`, `k10=Lambda*kappa`, put
+> `T=2*L*R+M`, `B=R^2+S`, and
+> `P=T*(12*B*L^2-T^2)`.  The exact divided source rows are the
+> lower-unitriangular Faber image of the negative Laurent coefficients of
+> `P/(16*L^3)`.  The denominator has degree six: six rows already force
+> `L^3|P`, while the producer replayed all seven frozen rows over exact `Q`
+> with independent `F_65521` controls.
+>
+> For fixed `p!=0`, `P=-M^3 mod L`, squarefreeness of
+> `L=z^2+p/2`, and `deg(M)<=1` force `M=0`.  At `p=0`, the full condition
+> is `z^6|P`, not merely `z^2|P`; for `M=alpha*z+beta` and arbitrary linear
+> `R,S`, `[z^0]P=-beta^3` and
+> `[z^3](P|beta=0)=-alpha^3`, hence again `M=0`.  The source replay also
+> confirms that the displayed integral tangent `p=Lambda*p1` and integral
+> positive-order load contribute no negative term at this divided grade.
+>
+> Producer result/source/evidence SHAs are `5a966b1d...`, `96cb2824...`,
+> and `6ae5fe22...`; hostile review, promotion, and custody-manifest SHAs
+> are `26273432...`, `dfc44850...`, and `7b24c1ef...`.  Review verdict:
+> **CONFIRMED**.  V1 remains a deployment-negative unavailable-coefficient-
+> API attempt; V2 changes only coefficient extraction.
+>
+> Verdict: **EXACT NECESSARY THIRD-TAIL GATE FOR FIXED `p` OR THE DISPLAYED
+> INTEGRAL-`Lambda` BASE/LOAD TANGENT**.  Fractional or ramified slopes of
+> `p` or `k10`, post-`M=0` cusp/odd faces, fan exhaustiveness,
+> terminal/Taylor conditions, strict arcs, the square component, order two,
+> `(8,12)`, maximum twelve, and JC2 remain open.
+
+> **TD6 CURRENT FOREIGN-DENOMINATOR NESTED IDENTITIES — HOSTILE REVIEW
+> CONFIRMED (2026-08-26 08:57Z).**  For the literal V82QSD factors in
+> `Q[C,V,U]`, `F=C*U-V^2+U^3`, exact polynomial identities give
+> `G=V^4+4F^2` and
+> `L=4U^3G^2+V^4(V^2+4U^3)(V^2+2F)^2`.  On `D(U)`, with
+> `x=V^2/U^3`, `s=F/U^3`, `g=x^2+4s^2`, one has
+> `L/U^15=4g^2+x^2(x+4)(x+2s)^2`.  The specializations are
+> `L=V^8(V^2+8U^3)` on `F=0` and
+> `L=V^4(V^2+4U^3)(V^2+2F)^2` on `G=0`.
+>
+> The exact characteristic-zero normalized intersection is
+> `rad(g,L/U^15)=(x,s) intersect (x+4,s^2+4)`.  Thus the earlier
+> `x=0_or_-4` sentinel names only the `x`-support; it neither drops the
+> `s` conditions nor factors `L` globally.  Producer report/manifest/freeze,
+> hostile-review, and promotion SHAs are `ef88290d...`, `1c2a1070...`,
+> `a5dabcd1...`, `a3e13150...`, and `6037e902...`; verdict
+> **CONFIRMED**.
+>
+> Verdict: **EXACT DENOMINATOR-DIVISOR ROUTING ALGEBRA ONLY**.  Generic
+> `L=0,D(UVFG)` remains a hypersurface debt.  No CURRENT coefficient,
+> numerator cancellation, presentation cover, source fibre, rank, family,
+> Kuranishi map, TD6, SP-2, landing, or JC2 claim follows.
+
+> **ORDER-TWO GENERIC-SQUARE HIGH-CONTACT `A`-PROLONGATION AND FIRST
+> MOVING-`p` TANGENT — HOSTILE REVIEW CONFIRMED (2026-08-26 08:39Z).**
+> On `D(p*k0)`, after the reviewed half-weight radical `C=R=0`, retain the
+> high-contact cone `ord_sigma(R)>=2, ord_sigma(C)>=4`.  The complete
+> fixed-base grade-fourteen and grade-fifteen negative receivers satisfy
+> `Num15=-A0^3 mod L` after the grade-fourteen equation.  The exact first
+> base tangent `p -> p+2*sigma*ell` adds a cleared numerator `Delta` with
+> `Num14=-12*B0*A0^2 mod L`, `Delta=12*ell*B0*A0^2 mod L`, and
+> `Delta=-ell*Num14 mod L`.  Hence the moving separator remains
+> `-A0^3 mod L`; because `L=z^2+p/2` is squarefree of degree two and
+> `deg(A0)<=1`, `A0=0`.
+>
+> The exact complete-source rows satisfy
+> `g14=T(p)h14` and
+> `g15=T(p)h15moving+2*ell*(dT/dp)(p)h14`.  The moving review explicitly
+> reconciles the earlier split-expansion concern: the denominator motion
+> and numerator motion combine into the displayed complete `Delta`, with
+> no leftover.  Fixed review SHA is `00640cd4...`; V5 result/source/evidence
+> SHAs are `74551fe8...`, `a2a665a4...`, `38024516...`; moving review and
+> promotion SHAs are `a3bbee7b...` and `f499bcba...`, both reviews
+> **CONFIRMED**.  V1's factor-two error and the V3/V4 wrapper/validator
+> failures remain quarantined and supply no endpoint.
+>
+> Verdict: **EXACT HIGH-CONTACT LEADING-DIRECTION EXCLUSION ONLY**.  Lower
+> rays, higher base jets, `p=0`, `k0=0`, fan coverage, terminal/Taylor
+> receivers, the square branch, order two, `(8,12)`, maximum twelve, and
+> JC2 remain open.
+
+> **ORDER-TWO GENERIC-SQUARE HALF-WEIGHT RECEIVER — HOSTILE REVIEW
+> CONFIRMED (2026-08-26).**  Under
+> `Lambda=sigma^2`, `M=sigma^3*A`, `S=sigma*C`, the complete grade-ten
+> negative receiver is
+> `[(3/8)(L*A+C)^2/L^2+(5/16)k10*R^3/L]_-`.  On `D(p*k10)`, its raw
+> nonreduced source scheme has reduced support exactly `C=R=0`, with `A`
+> free.  The seven source rows retain the mixed `A*C` correction omitted by
+> the earlier zero-correction slice.  Exact-Q result and hostile-review SHAs
+> are `eb2cd803...` and `49744ab9...`; the review identifies only a
+> one-nibble prompt-pin transcription error, not an evidence or theorem
+> defect.  Verdict: **ONE NORMALIZED RAY ONLY**; no fan, square-branch, or
+> order-two inference follows.
+
+> **ORDER-TWO NONSQUARE DISCRIMINANT K3 NECESSARY GATE — HOSTILE REVIEW
+> CONFIRMED (2026-08-26).**  The exact complete-source rows and analytic
+> K2 rows are related by an invertible lower-unitriangular polynomial
+> transform before localization.  On the nonsquare first-contact chart
+> `D(b*m)`, their raw K2 scheme is `(kappa,e,U^2,F)`, and its exhaustive
+> primitive correction ray has weights `(1,2,2,2)` after
+> `rho=sigma^2`.  The last three complete-source successor rows force
+> `chi=0`, then `U1^2=0`, and then the nonzero monomial
+> `-216*b^3*t^7`; the localized ideal is the unit ideal.
+>
+> Promotion/review/source-result/evidence-manifest SHAs are
+> `96f59880...`, `308691f9...`, `d0327db2...`, and `6eb104a3...`.
+> The custody-repaired hostile review is **CONFIRMED**.  Verdict:
+> **NONSQUARE DISCRIMINANT FIRST-NORMAL COMPONENT EXCLUDED ON `D(b*m)`**.
+> The square intersection, terminal/Taylor closure, all order two,
+> `(8,12)`, maximum twelve, and JC2 remain open.
+
+> **TD6 V84R2 TEN-PAIR PREVIOUS/POLE QUADRATIC GATE — HOSTILE REVIEW
+> CONFIRMED (2026-08-26 06:52Z).**  On the fixed source-typed A3
+> presentation with symbolic centers `(C,V,U)`, and only on the producer's
+> common generic principal open, exact rank-3470 transport and rank-38 FIRST
+> reduction leave a rank-38/94 previous/pole system with one leftover.  Its
+> quadratic pairing vanishes for every unordered pair in
+> `Sym^2 span(q2,q3,q4,q5)`.  The dual-AWS table is the identical 93-byte
+> header-only file SHA `b93bed47...`; the denominator is the unit `(1,[])`,
+> file SHA `8041f53d...`.
+>
+> Case MANIFEST/FREEZE, source archive, producer, hostile-review V2, and
+> promotion SHAs are `096557b2...`, `4a6e81d7...`, `71934436...`,
+> `caf1cee1...`, `cbfc5616...`, and `545a342a...`; the review verdict is
+> **CONFIRMED**.  The review charged licensed q singletons, Dual quadratic
+> conventions, q-prime, exact original-row replay through previous/pole,
+> serializer controls, both AWS streams, and all custody hashes.
+>
+> The current base system remains inconsistent.  Verdict: **EXACT NARROW
+> PREVIOUS/POLE VANISHING ONLY**.  This is not a Kuranishi map at a full
+> solution and does not cover the other 290 quadratic pairs, current,
+> rank-drop fibres, nonlinear lifting or a family, TD6, SP-2, landing, or
+> JC2.  The next exact gate is `S_cur` on the reviewed 24-dimensional
+> Stage-A kernel.
+
+> **ORDER-TWO NONZERO-LOAD PADÉ SUPPORT AND COMPLETE FIRST-NORMAL
+> REDUCED SUPPORT — HOSTILE REVIEW CONFIRMED (2026-08-26 05:49Z).**  Put
+> `K=z^4+p*z^2+c*z+r`, `N=n3*z^3+n2*z^2+n1*z+n0`, and
+> `F=(3/8)N^2/K+k10*K^(5/2)`.  The reviewed unitriangular tail identity
+> turns `q1=...=q7=0` into `F-[F]^z_+=O(z^-8)`.  If `k10!=0`, multiplying
+> by `K` forces the `z^-1,z^-2,z^-3` coefficients of `K^(7/2)` to vanish.
+> With `d=p^2-4r`, their exact factorizations imply either directly
+> `c=d=0`, or, under `c!=0`, the contradictory system
+> `p*c^2=5d^2/8`, `c^4=5d^3/2`, `0=76d^4`.  Thus
+> `K=(z^2+p/2)^2` over the base field.
+>
+> Consequently the raw reduced first-normal support is exactly
+> `Lsq union D union Z`: the arbitrary-`k10` square/load family, the
+> `k10=0` discriminant family, and the `k10=N=0` zero-normal section.
+> Sequential saturation by `(p,c,r)` and
+> `(n0,n1,n2,n3,k10)` deletes `Z` and retains the full closures of `Lsq`
+> and `D`.  The residual special-fibre set `E` from the corrected V2
+> theorem is empty.  Theorem/review SHAs are
+> `2c917b9fe9af3c23d615a3f9061a5c981d26e5e69a75138aacb33f308619ecf5`
+> / `73c30502e0466bcc6757605e5be736dabf14d2f3bfaacd302d88b94cd12dc8e6`
+> (`CONFIRMED`); AWS coefficient-control result/freeze/manifest SHAs are
+> `cd644142...` / `8e1acd13...` / `f160bce5...`; promotion SHA is
+> `40790378...`.  This is reduced first-normal support only: nilpotent
+> thickness, componentwise next jets, later contact, terminal/Taylor
+> conditions, a strict arc, order-two exclusion, `(8,12)`, maximum twelve,
+> and JC2 remain open.
+
 > **D1 UNIT-AXIS COVARIANCE OVER THE SMOOTH DOUBLE-ROOT DISCRIMINANT —
 > HOSTILE REVIEW CONFIRMED (2026-08-26 05:18Z).**  For the frozen ordinary-
 > tail source and fixed loads `k=nu=0,mu=2/3`, the literal promoted V8
@@ -3537,11 +8397,14 @@ xmodel/sol-clift.md; cases/d43_char0_lift.py + d43_char0_lift_p105337.json.
   prediction). NO first-order local obstruction to lifting the D43 witness.
 - EXACT: full special-fiber Jacobian rank of the 218-row system at the witness
   is 131 (tangent dim 53), with a certified unit 131x131 minor (det=810 mod p).
-- NOT OBTAINED: common integral 218-row model (the d43red band .pkl checkpoints
-  are ABSENT locally -- artifact-recovery item, likely box01), all-218 integral
-  p^2 replay, local Krull dimension (Singular std capped 10 CPU-min), localized
-  generation, p-flatness => the unit minor is NOT a standard-smooth certificate;
-  Stacks 02H6 not invocable. X_43(C) != empty REMAINS OPEN.
+- NOT OBTAINED: common integral 218-row model, all-218 integral p^2 replay,
+  local Krull dimension (Singular std capped 10 CPU-min), localized generation,
+  or p-flatness; hence the unit minor is NOT a standard-smooth certificate and
+  Stacks 02H6 is not invocable.  Historical artifact note: the d43red band
+  checkpoints were absent when this screen ran, but were later recovered and
+  audited in `sol-d43int.md`.  They contain prime-specific modular rows only,
+  with no integral coefficients or membership traces, so recovery does not
+  close the common-model gap.  X_43(C) != empty REMAINS OPEN.
 - VERDICT: STAGE 2 OPEN -- no local obstruction found, no Hensel certificate.
   Next concrete item: recover/re-derive the band checkpoints to build the
   common integral model, then the dimension/flatness certificate.
@@ -6117,3 +10980,923 @@ and hostile review
   coefficient infinity, terminal/Taylor realization, trajectory, full
   `(9,12)`, maximum-twelve cell, or JC2.  The full pointed moving-`d4`
   saturation and coefficient-projective chart remain decisive.
+
+## G2 CORRIDOR / PHYSICAL-CHART CORRECTION (2026-08-27, SOURCE-AUDITED)
+
+The post-freeze source review
+`xmodel/g2-c74-place-exit-rpmc-hostile-review-opus5-20260827.md`
+(SHA-256
+`968b42ced94bd6c59b33bfdab30677e2ad6ad91a349fc978a271c01083d11e7d`)
+and the independent normalizer audit
+`xmodel/g2-vde-normalizer-chart-tracking-source-audit-sol-ultra-20260827.md`
+(SHA-256
+`a5a9c04a6cb1d8b4b65fe64ae9365cf5b51cf2a9761843f75709ce4c42778566`)
+supersede every positive use of VGG Corollary 7.4 as the missing physical
+infinity chart of one fixed pair.
+
+- **Same-edge subsumption.**  Abstract signed-transpose transport remains
+  correct, and the live common powers are exactly 12 and 8.  But applying
+  VGG 7.3/7.4 to the transposed pair is subsumed by native 7.1/7.2 and, for
+  live `8_28`, certifies the same physical edge
+  `(-3,1)=upper_dir`.  Native 7.2 is strictly stronger when `l>1`.  Thus the
+  powers are retained as native face custody; no second-chart coverage is
+  obtained.
+- **No normalizer escape inside the VGG perimeter.**  Van den Essen's general
+  normalizer is tame and need not be affine, but the proof of VGG Proposition
+  4.7 forces the final transition between oriented minimal representatives
+  to be affine.  Unique factorization makes its linear part diagonal; an
+  anti-diagonal part would swap the ordered degrees.  Proposition 5.20 adds
+  only a translation.  Same-orbit VGG minimal re-selection therefore
+  preserves the two physical place sets separately and cannot expose the
+  missing chart.
+- **`C74-PLACE` was mislocalized.**  Replace it by five separately typed
+  obligations: L1 native face-power custody (**available**); L2 root-set and
+  multiplicity convention (**available after the component convention
+  below**); L3 actual Puiseux-truncation compatibility `H-TRUNC` (**open**);
+  L4 all-place/two-chart coverage (**belongs to the intrinsic exact-pair
+  constructor and is open**); L5 deck-orbit/leaf-place bijection without
+  duplication (**open**).  The certified direction alone supplies neither
+  L4 nor L5.
+- **`EXIT-RPMC(C)` is not cheaper.**  With its stated clause 1 that every
+  nonzero mismatch subtree exits, its exit sum is exactly the original
+  `RPMC(C)` sum.  Hence `EXIT-RPMC(C) <=> RPMC(C)` under clause 1.  The exit
+  language may localize a future proof, but removes no inequality or proof
+  cost and supplies no degree bound by itself.
+- **Typing repairs.**  Frozen orientation gives
+  `(m,n)=(beta,alpha)=(3,2)`, whereas `(alpha,beta)=(2,3)`; the component-sort
+  bit is load-bearing.  A retained center set must be closed under the full
+  relation “proximate to,” not merely the parent relation.
+- **Custody erratum.**  The correct primary-source SHA-256 values are VGG TeX
+  `b4908fd596d555c745b3bdce9613e64c056052d7237efc1419d9c24c0e6004d5`
+  and GGV5 TeX
+  `8f5571e527c4e579b185f7e75dcf48cd6c92fa88c82c46c33019d38ab89d78f5`.
+  The earlier two full hashes were false despite matching short prefixes.
+  The old prototype mathematics replays unchanged, but its custody wrapper
+  is stale after `ladder/TRANSPORT.md` changed and must be emitted as R2
+  before reuse.
+
+The preferred coverage source is now the intrinsic exact-pair two-chart
+constructor.  The later 2026-08-28 normalization--Kummer theorem and Opus5
+review promote its properly typed `L3/L4/L5-exact` layer; the hybrid
+VGG/GGV L3--L5 layer remains open.  `G2-PSC(4.0)`, Sigray
+decoration/tower trust, landing, `G2-BD`, `RPMC(C)`, a cofinal type bound,
+and JC2 all remain open.
+
+## FINITE-END / MARKED-COMPONENT FILTER (2026-08-27, INDEPENDENTLY CONFIRMED)
+
+The producer
+`xmodel/g2-finite-end-asymptotic-monodromy-connection-sol-ultra-20260827.md`
+(`0f201502...`) and hostile review
+`xmodel/g2-finite-end-asymptotic-monodromy-hostile-review-sol-ultra-20260827.md`
+(SHA-256
+`738aba3d33934b1a99166c664b30559e0a839a507b492d9c5504ee2d79302ef1`)
+confirm, for a smooth connected generic fibre,
+
+```text
+sum_(finite ends S) e_S = td + b1(C) - 1.
+```
+
+This is Chau 1999's second printed equation `(4.4)` on p. 305; the page and
+formula must accompany the duplicated equation number.  Chau's Theorem C
+gives the two-coordinate mass coupling.  After the necessary normalization-
+descent step, each normalized asymptotic component has coordinate degrees
+`(alpha*h_j,beta*h_j)`.  Consequently the number of generic branch values of
+each complete **marked** component profile is divisible by `alpha`.
+
+For the clean residue-A `alpha=2` census the resulting parity filter is
+exactly `169 -> 48`; `(0,3,12)` is an old transitive row rejected by parity,
+while all 48 survivors retain banked transitive unmarked witnesses.  An
+`e=1` boundary end is a marked fixed point indistinguishable from an affine
+fixed sheet in an ordinary passport.  Braid orbits here are on branch values,
+not blocks of source sheets.  Promote only this necessary marked filter and
+the known mass identity/coupling: no family exclusion, realizability theorem,
+primitive-monodromy bound, or degree ceiling follows.
+
+## UPPER GATE TORSOR TARGET-BUDGET THEOREM (2026-08-27, INDEPENDENTLY REVIEWED)
+
+Opus5's blind-round proposal
+`xmodel/ideation-20260827T2137Z-opus5.md` (`49dd042a...`) and independent
+review
+`xmodel/ideation-20260827T2137Z-opus5-hostile-review-sol-ultra.md`
+(SHA-256
+`0ccdc259358267fc805c2af477bc6b0f48620dbd2e76c016cdb85caee1ba3cba`)
+establish the following narrow theorem.  For
+`U=A1-Z(H)` and the possibly disconnected finite etale torsor
+`V_H={p^4=H}->U`,
+
+```text
+H1_dR(V_H) = direct_sum_(j=0)^3 H1_dR(U,d+(j/4)dH/H),
+b1(V_H) = 4(r-1)+gcd(4,e_1,...,e_r),
+dim H1_dR(U,nabla_m) = r-1+k_m
+```
+
+for every integer `m`, where `r=deg rad(H)` and `k_m=1` exactly when
+`4 | m e_i` for every root multiplicity `e_i`.  Any four consecutive row
+target spaces therefore total `b1(V_H)`, reproducing the frozen twelve-row
+totals `42/51/12/87`.
+
+Scope is load-bearing: the infinite tower repeatedly maps new nonlinear
+classes into four periodic target spaces; it is not one copy of
+`H1(V_H)`.  Target dimension bounds realized codimension only from above.
+For the full 124 positive-`F` slots, Krull height gives not-before bounds
+P row 58 and Q row 52; it proves no collapse there.  For `n>=15`, `F_n=0`,
+so later rows are purely nonlinear constraints on old blocks and no global
+linear-time `GATE-MARCH` solver follows.  Finally, if the tower ever forced
+the `F`-origin, then frozen `G22` is empty and `D22=0` for every `G`, directly
+contradicting the target `D22=1`; free `G` slots are not an endpoint no-go.
+
+## UPPER BRANCH-P D7--D9 DIVISOR REPAIR (2026-08-28, REVIEWED AND q1-FREE)
+
+The provisional producer
+`xmodel/ggv-upper-endpoint-q1-prefix-d7-d9-divisor-target-sol-ultra-20260828.md`
+and independent exact hostile review
+`xmodel/ggv-upper-endpoint-d7-d9-q1-free-hostile-review-codex-20260828.md`
+(SHA-256
+`1874b9dbaf5b28c05ed30d36d1006a677b86b884288b66c0854f96caaffba4a8`)
+establish a stronger theorem than the producer stated.
+
+Over any characteristic-zero field, let `A` be a monic squarefree quartic
+and assume the reviewed reduced branch-P prefix
+
+```text
+F0=A^4,
+F1=A^2 V0,
+F2=(V0^2+A^2 Z)/4,
+F3=(V0 Z+A T)/8,
+```
+
+with the literal raw bounds and branch condition `c2=0 or A|V0`.  Then
+polynomial characteristic rows through weight nine, equivalently the
+reviewed raw characteristic parametrization through `D9`, imply
+
+```text
+A | T
+```
+
+at field points.  The proof uses neither `V0=A'R0+2AR0'`, `R0`, q1, nor
+D23.  The repair is therefore to delete those hypotheses, not to weaken the
+conclusion.
+
+For `c2=0`, put `C=gcd(A,V0)`, `A=CB`, `V0=CV1`.  D7 first gives `B|T`;
+writing `T=BU`, the proper-`C` D9 residue is the uncancellable
+`-8B^4U^3`.  On `C=A`, including active `c2,c6`, the full leading class is
+`-8T^3/65536`.  The argument is division-free when `V1` vanishes at a
+`C`-root.  Independent generalized-binomial reconstruction retains every
+born mode and a separate raw engine supplies four literal D0--D8 survivors,
+three outside q1; every one dies at D9.
+
+After `T=A U0`, the c2-zero successor is also q1-free:
+
+```text
+A^2 | W[-16V0W+A(64F5-U0Z)],
+F4-V0U0/16-Z^2/64=A W.
+```
+
+It forces only the complementary factor `B|W` in the divisor notation.
+All conclusions are field/radical statements; no scheme divisibility,
+complete endpoint emptiness, unrestricted branch-P theorem, Keller theorem,
+or JC2 conclusion is licensed.  The failed translation shear remains
+invalid on the frozen raw windows and is not used.
+
+## FIXED PROPER-DIVISOR D12 OBSTRUCTION (2026-08-28, FABLE5 PASS)
+
+The producer
+`xmodel/ggv-upper-endpoint-q1-fixed-proper-divisor-d12-obstruction-sol-ultra-20260828.md`
+and different-model hostile review
+`xmodel/ggv-upper-endpoint-q1-fixed-proper-divisor-d12-obstruction-hostile-review-fable5-20260828.md`
+(SHA-256
+`848988d7dcc5d4d40b5ae62a683535de4f6a4648947c09ad5f52d3187d4ecc3d`)
+prove that the one frozen q1-compatible proper-divisor D11 prefix has no D12
+extension.  Fable5 independently reconstructs the full prefix, the
+characteristic recurrence, every literal new slot, the 28-by-16 rational
+matrix of ranks `12/13`, the dual
+
+```text
+20[X^0]+10[X^4]+4[X^8]+[X^12]
+```
+
+with base pairing `11009739/16384`, the Bezout data, and seven hostile
+mutations.  Its independent checker SHA is `e933da5b...` and root replay
+passes.
+
+The review strengthens the fixture result.  With `N12` the exact weight-12
+characteristic numerator,
+
+```text
+3A*D12_base = 2A*N12' - 8A'*N12,
+```
+
+so `D12=0` would force
+
+```text
+G12=Nred/(12*C^3*B^2)+(3/2)A^2F12+c12.
+```
+
+The first term has exact pole orders `3,2,2,2` at the four roots of
+`A=X^4-1`.  Hence the prefix has no extension even with arbitrary-degree
+polynomial `F12,G12`, and regularity at any one root already obstructs the
+row.  In the literal windowed system the affine equations generate the unit
+ideal over `Q`, a fixture-level scheme statement only.
+
+Documentation repair: the producer's name `g12_polar` denotes the complete
+rational characteristic coefficient, including a nonzero polynomial part;
+interpret it as `g12_char` or “polar class of.”  A future checker V2 should
+verify dependency hashes before dynamic import.  Neither issue changes the
+mathematics or current frozen bytes.  No universal proper-divisor, endpoint,
+branch-P, Keller, or JC2 theorem follows from this single fixture.
+
+## UPPER BRANCH-P UNIT-ROOT ENDPOINT TRANSPORT (2026-08-28, OPUS5 REPAIR — THEOREM TRUE)
+
+The producer
+`xmodel/ggv-upper-endpoint-unit-root-transport-sol-ultra-20260828.md`
+(SHA-256
+`98f5e97d570e4d73f4824888731162eb63588e51edfba8cff9c309fae619005f`)
+and independent Opus5 hostile review
+`xmodel/ggv-upper-endpoint-unit-root-transport-hostile-review-opus5-20260828-r1.md`
+(SHA-256
+`21064740203c49d7ffd5280b64f7e86e6936e1ca55b75cec2a5755cdd1227cc2`)
+establish the following repaired theorem.
+
+Work over a characteristic-zero field with the reviewed reduced branch-P
+prefix
+
+```text
+F0=A^4,
+F1=A^2 V0,
+F2=(V0^2+A^2 Z)/4,
+F3=(V0 Z+A T)/8,
+```
+
+the literal raw bounds, the branch condition `c2=0 or A|V0`, zero rows
+`D7,...,D21`, and endpoint target `D22=1`.  If `alpha` is a simple root of
+`A` and `V0(alpha) != 0`, no field-valued endpoint point exists.  Indeed,
+the complete locally reconstructed auxiliary coefficient has
+
+```text
+A-support(g22) = {-2,0,2,4,6,8}.
+```
+
+Thus `ord_alpha(g22)>=-2`, and the original-coordinate endpoint operator
+sends every one of its 432 terms into `(X-alpha)`; it cannot equal the
+constant target `1`.  Consequently, when `A` is squarefree, every divisor
+stratum `gcd(A,V0) != A` is field-empty.  Only the deep locus `A|V0`
+remains.
+
+The review repairs three evidentiary errors.  First, coefficientwise
+normalization gives
+`Fbar3=(Zbar+A*Tbar)/8`, not the pinned post-D7 form with `A^2`; the
+producer falsely identified the normalized pre-D7 prefix with the pinned
+post-D7/post-D9 fixed prefix.  Second, the missing local D7--D15 ladder must
+be proved, and Opus5 proves it directly.  Third, the producer checker did
+not compute the load-bearing `g22` order bound.  The independent checker
+`cases/ggv_8_28_upper_endpoint_unit_root_transport_review_opus5_20260828/verify_unit_root_transport_review_opus5.py`
+(SHA-256
+`cbf8498e77c639ebb08cda6c9f02a849e0b40f32c680cad4fe1120d30b6c9b6b`)
+rebuilds the full general-prefix ladder and all 432 endpoint terms; root
+replay and both custody manifests pass.
+
+Neither q1 nor the global q1-free D9 divisor theorem is a premise, although
+the local D7, D8, and D9 rungs are load-bearing.  Only the selected root
+must be simple; global squarefreeness is used for the divisor-stratum
+corollary.  A hypothetical regular raw `G22` receiver would not repair the
+contradiction.  This proves only characteristic-zero field emptiness on the
+unit-root strata: it is not scheme emptiness, an exclusion of `A|V0`, an
+unrestricted branch-P result, a Keller theorem, or JC2.
+
+## DEEP q1/q3 FULL-SYSTEM COMPOSITION (2026-08-28, OPUS5 R1 REVIEWED)
+
+The producer
+`xmodel/ggv-upper-endpoint-deep-q1-q3-composition-sol-ultra-20260828.md`
+(SHA-256
+`6958c3986022e28484ea1a0a15a0b09a562dbd94cc2154ade4fe6dbc35000715`)
+and independent repaired review
+`xmodel/ggv-upper-endpoint-deep-q1-composition-addendum-r1-sol-ultra-20260828.md`
+(SHA-256
+`76529aa25dc648e5aab40e20e5426a8c90ec496a4cafbf704c0c2102cd1d9eff`)
+establish the following composition on the active `c2!=0`, exact-`D=0`
+deep successor.  The independent checker
+`cases/ggv_8_28_upper_endpoint_deep_q1_composition_r1_20260828/verify_deep_q1_composition_r1.py`
+has SHA-256
+`a5e6479f20cd7fcd50b317e174fd192512e5295de9c2126e717c005cb22acf69`
+and root replay returns `PASS_EXACT_DEEP_Q1_COMPOSITION_R1`.
+
+After D23 licenses q1,
+
+```text
+A|V0  ==>  R0=lambda A,  S=3lambda A'.
+```
+
+After D25 licenses q3, put
+
+```text
+N=S^3+A(16U-2SQ).
+```
+
+Exactness of `q3=N/(512p)`, `p^2=A`, is equivalent after scalar rescaling
+to `2AC'+A'C=N` with `C in K[X,1/A]`.  Root-pole and infinity-degree
+arguments force `C` to be polynomial of degree at most six and then
+
+```text
+C=27lambda^3(A')^2+A r,            deg r<=2.
+```
+
+Composing the resulting identity with the reviewed D12 lift
+`A|(QS+4U)` gives
+
+```text
+r=-6lambda Q-36lambda^3 A'',
+U=-(3lambda/4)(A'Q+A Q')-(9lambda^3/2)A A''',
+L=QS+4U=-3lambda A(Q'+6lambda^2 A''').
+```
+
+Thus `lambda=0` forces `S=U=0`.  D12 is load-bearing: without `A|U`, the
+legal mutation `C=A,U=48A'` satisfies the q3 equation.
+
+The review simultaneously **refutes** the predecessor addendum's claim
+that the constant shear `X -> X-(3lambda/4)t` makes the two lambda branches
+equivalent.  It preserves the formal determinant and target but not the
+lower raw-window bounds: `F8=X` creates forbidden `F9[X0]`, and `G12=X`
+creates forbidden `G13[X0]`.  The `lambda!=0` branch therefore remains
+distinct.  The theorem does not cover other D-valuations or the `c2=0`
+companion and does not prove endpoint emptiness, branch-P emptiness, a
+Keller theorem, or JC2.
+
+## DEEP `lambda=0` q5--q13 ODD TAIL (2026-08-28, OPUS5 REVIEWED)
+
+Independent report
+`xmodel/ggv-upper-endpoint-deep-q1-lambda0-odd-gate-tail-independent-sol-ultra-20260828.md`
+has SHA-256
+`b649e0821a07fa8d3ed861169b608a5b4dcd8356452f875b8b218693d3cb69a0`.
+Its self-contained checker
+`cases/ggv_8_28_upper_endpoint_deep_q1_lambda0_odd_gate_tail_20260828/verify_lambda0_odd_gate_tail.py`
+has SHA-256
+`c063ccc20c12785d092f56c65e2def86215ae1cc49fb6c3cf8ab4754e1c782ca`;
+root replay returns `PASS_EXACT_LAMBDA0_ODD_GATE_TAIL` and rejects the q9
+`2^23 -> 2^22` denominator mutation.
+
+On the reviewed `c2!=0`, exact-`D=0`, `lambda=0` successor, write `p^2=A`.
+The independent reconstruction confirms the exact q5, q7, q9, q11, and q13
+coefficients with the authoritative raw windows
+`r[0..3], f[0..5], F9[1..7], F11[1..5], F13[2..3]`.  For a polynomial `h`,
+
+```text
+p^3 h dX is exact  <=>  h=(5A'd+2Ad')/2 for some d in K[X].
+```
+
+The proof excludes all rational poles at the simple roots of `A` and away
+from `A`, proves sufficiency by differentiating `p^5d`, and shows the
+polynomial operator has zero kernel.  For every fixed legal even prefix the
+five gates are a homogeneous system of 40 coefficient equations in 24 raw
+and 25 primitive variables.  Zero kernel makes projection to the raw
+variables injective, so the raw survivor has dimension at least nine
+universally.  Two unrelated exact squarefree quartics give rank 40 and
+dimension exactly nine; that equality is fixture evidence, not a universal
+generic-rank theorem.
+
+A separate valuation proof shows every monomial in every even q-gate has at
+least one factor of `A`.  Hence every even coefficient is polynomial and its
+one-form is automatically exact in characteristic zero.  The five odd gates
+and all even gates therefore do not exclude this branch.  The next licensed
+target is q15, the first odd coefficient without a new raw `F15` receiver,
+composed with the endpoint and half-step equations.  Nothing here covers
+`lambda!=0`, another D-valuation, `c2=0`, all deep endpoints, a Keller pair,
+or JC2.
+
+## ACTIVE-`c2` D8--D15 CASCADE REPAIR (2026-08-28, FABLE5 REVIEWED)
+
+Different-model hostile review
+`xmodel/ggv-upper-endpoint-active-c2-d8-d15-hostile-review-fable5-20260828.md`
+has SHA-256
+`042dbacdd4d7fe6e014ccfb7d82d030e633e4a1291a313b9d022d1b78e4e36a8`.
+Its independent standard-library checker has SHA-256
+`505cfd93279ffe8189d25a681b8490ba71edbc5567bc5eecea70e0e2bfc52796`;
+root replay returns `FABLE5_HOSTILE_ACTIVE_C2_D8_D15=REPAIR`.  The reviewed
+case README and RESULT hashes are respectively
+`09eff19007d854d850603c699d2c0713b37b0c01f7250f248fc688d6339a51a9`
+and `868d64e9777ad3d1ac4cb2424e8b6e52338d862ab776f95b4efba708d5e705e1`.
+
+The review independently reconstructs the characteristic recurrence and
+confirms every displayed D8--D13 identity.  It also confirms the exact
+`D=0` branch: D11 and D12 force `A|E` and then `A|L` at characteristic-zero
+field points on `c2!=0`; the post-lift D12/D13 classes, the separate `c2=0`
+companion, and the literal legal D0--D15 non-q1 fixture all replay.
+
+The charged predecessor's sole mathematical defect is its claim that
+`D=0 mod A` automatically survives the deepest D11 condition.  Writing
+`D=A*d1`, the complete weight-11 negative part is
+
+```text
+(N11+4*d1*B11r0)/(4194304*A),
+B11r0=-3072F6S+3P1S^2+6QS^2U+12SU^2.
+```
+
+Thus mere `A|D` generally leaves a simple pole; the exact equation `D=0` is
+a valid successor, while a nonzero first valuation must satisfy the extra
+residue congruence.  This repair supersedes only the false valuation
+sentence, not the frozen producer bytes or the exact-`D=0` extension.
+Fable also sharpens the literal fixture: `c6` is retained but not forced at
+D15, since `c6=0` with `c14=5/2^34` still replays.  These are exact recurrence
+and field/radical statements, not scheme divisibility, endpoint emptiness,
+branch-P emptiness, a Keller theorem, or JC2.
+
+## DEEP `lambda=0` q15 GATE (2026-08-28, OPUS5 REVIEWED)
+
+Independent report
+`xmodel/ggv-upper-endpoint-deep-q1-lambda0-q15-independent-sol-ultra-20260828.md`
+has SHA-256
+`188317138e60224f5a7e9dc1de18ab339384c5246c1cabf12acc20657dac7d5f`.
+Its exact checker
+`cases/ggv_8_28_upper_endpoint_deep_q1_lambda0_q15_20260828/verify_lambda0_q15.py`
+has SHA-256
+`6c63fe47ebf35dd56e286ab358b0932f1dad9143875fde30c216a425119e442a`;
+root replay returns `PASS_EXACT_LAMBDA0_Q15`.
+
+Finite raw support gives `max(i+j)=14+21=35`, so D35 is the last possible
+determinant row and D36,D37 vanish identically.  After the full D23--D35
+tail this licenses q15 without inventing a raw row.  The exact formula for
+`q15=p^3h15` includes the new three-odd-partition term
+`3*A*r^3/2^33`; deleting it fails the checker.
+
+The gate is not an exclusion.  On the exact allowed slice `r=0`, q5 is zero
+and q7--q15 form 50 homogeneous coefficient equations in 20 raw plus 35
+primitive variables.  Injectivity of the reviewed `T5` connection gives a
+universal raw survivor dimension at least five for every fixed legal even
+prefix; two unrelated squarefree fixtures have rank 50 and dimension five,
+which proves generic equality.  In particular, the all-odd-zero section
+survives every odd q-gate.  This is a pre-raw-endpoint fiber statement: the
+subsequently reviewed origin row below excludes that section immediately.
+The correct successor is the full odd-fiber/raw-window/four-root
+intersection, not q17 in isolation and not an all-even resultant.  Nothing
+here excludes the endpoint, another lambda/D/`c2` branch, a Keller pair, or
+JC2.
+
+## ORIGIN ODD COUPLING AND PARITY REDUCTION (2026-08-28, OPUS5 REVIEWED)
+
+The coordinator producer
+`xmodel/ggv-upper-endpoint-origin-odd-coupling-sol-ultra-20260828.md`
+has SHA-256
+`3e4a0f03acec2ee5e3cdfff558c481e14735408aa18486d23215958ed8d4bb3a`.
+The independent Opus5 report
+`xmodel/ggv-upper-endpoint-deep-q1-lambda0-even-subbranch-origin-coupling-independent-sol-ultra-20260828.md`
+has SHA-256
+`c940ba048f5edf60b3018670c8914acc469f55f30101f211a6aedb5d591b6714`;
+its checker
+`cases/ggv_8_28_upper_endpoint_deep_q1_lambda0_even_subbranch_20260828/verify_even_subbranch_reduction.py`
+has SHA-256
+`23f46a95170fb77f2f5c340b1c6fb570881062d67102fca6dfdeae2f5ea37c4d`
+and root replay returns `PASS_EXACT_LAMBDA0_EVEN_SUBBRANCH_REDUCTION`.
+
+Different-model hostile review
+`xmodel/ggv-upper-endpoint-origin-odd-coupling-hostile-review-fable5-20260828.md`
+has SHA-256
+`7f19cf192e765c61bab4c737677f9cab65b4724fe12b062edb791aba57e8eeee`;
+its standalone checker has SHA-256
+`313af556af6240be81842de275c66a373fd5f14453c50b964db07ac6d9890aa0`.
+Root replay returns
+`PASS_HOSTILE_AUDIT_UPPER_ENDPOINT_ORIGIN_ODD_COUPLING_FABLE5`.  It
+re-enumerates all 442 slots from the frozen raw source, independently derives
+the target `+1` sign using the Laurent-chart identity and Keller fixtures,
+detects seven mutations, and confirms that the producer does not conflate
+vanishing odd q-gates with vanishing odd raw weights.  Verdict: PASS without
+repair.
+
+The authoritative raw floors leave exactly two constant-coefficient
+contributions at weight 22:
+
+```text
+D22[X0]=F11[X1] G11[X0]-F7[X0] G15[X1]=1.
+```
+
+These are the four original linear coefficients and hence exactly
+`J(P,Q)(0)=1`.  Weight parity equals ordinary total-degree parity for every
+raw slot.  Therefore `F_odd=0` forces both displayed `F` factors to vanish,
+so the all-even section is empty independently of every q-gate.  With
+`s=t^2`, the even raw equations reduce to the 232-slot Laurent family
+`Jac(f/s^4,g/s^6)=-1/2`; this family is not automatically the AS109 sextic
+normal form because its supports and polynomial-base hypotheses differ.
+
+The review also supplies the decisive generalization control.  For
+
+```text
+A=X^4-1, Q=X, e=F8=r=0, c2=c6=1,
+```
+
+there are exact legal odd coefficients and primitive witnesses satisfying
+q7--q15.  Complete characteristic reconstruction puts G11 and G15 in their
+literal windows and gives origin pairing `2^50/375`, which scales to one
+after adjoining `theta^2=375/2^50`.  Thus q-gates, origin, and the G11/G15
+windows are jointly consistent.  The fixture is **not** a full endpoint
+survivor: the remaining characteristic windows, determinant rows, and
+four-root equations were not imposed.  In particular, the fixed
+`Q=e=F8=0` G15 residue exclusion must not be generalized to arbitrary `Q`.
+
+## FIXED ORIGIN-RESIDUE SLICE (2026-08-28, FABLE5 REVIEWED)
+
+The producer
+`xmodel/ggv-upper-endpoint-origin-residue-slice-sol-ultra-20260828.md`
+has SHA-256
+`7202f70380c8379d85dab82e4ef06f47b1312ba840775d8581eaa629ed328e30`;
+its checker has SHA-256
+`de371953d4bc22da7cfc39c4e94221097eac7612b7b4a8b44afe0fd14ecb76e0`.
+Independent hostile review
+`xmodel/ggv-upper-endpoint-origin-residue-slice-hostile-review-fable5-20260828.md`
+has SHA-256
+`37103f26f661e9e974cb3ad0e06bd0065c93a779601e1ee7762e04eaa058f597`;
+its standalone checker has SHA-256
+`ce1ce5b42aa72d7f9d7aa87b2dd2bfb4caf72b69d507bd830da3b2dac2d46f8f`.
+Root replay returns `PASS_HOSTILE_ORIGIN_RESIDUE_SLICE_FABLE5`.
+
+On the exact slice
+
+```text
+A=X^4-1,  Q=e=F8=r=0,
+```
+
+the complete q7--q13 parameterization, with q5 and q15 automatic, and the
+full ten-mode characteristic give
+
+```text
+5 D22[X0] + 6 F7[X0] R[X1] = 0,
+```
+
+where `R` is the G15 pole remainder.  Polynomiality of G15 forces `R=0`,
+hence `D22[X0]=0`, contradicting the target one.  Symbolic F10/F12/F14 are
+retained and proved absent from the relevant coefficient; `c2!=0` is not
+load-bearing.  The review independently reconstructs the exact `Q=X`
+mutation and therefore confirms the firewall: this identity is false for
+arbitrary Q.  The theorem excludes only the named fixed slice.
+
+## q1/q3 FABLE5 REVIEW ADDENDUM (2026-08-28, REPAIRED AND CONFIRMED)
+
+Fable5 report
+`xmodel/ggv-upper-endpoint-deep-q1-q3-composition-hostile-review-fable5-20260828.md`
+has SHA-256
+`61edbc23745341bd984ba19747394ea5d387cce26d5969b3596175df40e4a74c`;
+its checker has SHA-256
+`55f4f84686d3e11a7ae706d5f5b102f43caca4ce54b151d431df6634189d88a5`.
+The frozen README and RESULT hashes are respectively
+`3d7c13a9f78d80c9b580261a59b7fea5d4a78cf26c15905e10456831083c020f`
+and
+`f6c5908dc2ad82cf04161d68b457986d009ecd0150ff09f692abd004847f4975`;
+root replay returns all 32 checks PASS.
+
+The D23/q1 and D25/q3 equations, both lambda sheets, squarefree root
+argument, infinity bound, D12 composition, and `lambda=0 => S=U=0` all
+survive.  Three precision repairs are mandatory:
+
+1. The primitive normalization is `p*C/256`; equivalently, if the primitive
+   is written `p*c/512`, then `C=c/2`, not `C=256c`.
+2. Before asserting `C in K[X,1/A]`, exclude a pole of order `m>=1` at
+   `beta` with `A(beta)!=0`: the highest pole in `2AC'+A'C` has nonzero
+   leading coefficient `-2m*A(beta)`.  The existing simple-root argument
+   then handles poles over `A`.
+3. Name the already reviewed `A|T` hypothesis explicitly alongside `A|V0`;
+   it is consumed by the displayed prefix and D12 lift.
+
+These are normalization, localization, and hypothesis-completeness repairs;
+none changes the formulas or allocation.  The control `U=48A', C=256A`
+still shows that q3 alone does not imply D12.
+
+## FIXED `Q=X` EVEN-PREFIX ENDPOINT EXCLUSION (2026-08-28, FABLE5 REVIEWED)
+
+The producer
+`xmodel/ggv-upper-endpoint-deep-q1-lambda0-qx-fixed-even-endpoint-zero-r3-sol-ultra-20260828.md`
+has SHA-256
+`a6e49a08a6fc92c71f9f9ee34079b5626f6a00a20499b06e50c8b8451f3338be`;
+its checker has SHA-256
+`49e61d547e8b30e6ffc3c792f1dffdb6ae8e960aec490047e5c544fee222adf1`.
+Independent hostile review
+`xmodel/ggv-upper-endpoint-deep-q1-lambda0-qx-fixed-even-endpoint-zero-r3-hostile-review-fable5-20260828.md`
+has SHA-256
+`8b91115e9416e2cc509e73d1823cda920d9d4a7d77732d839f169683b1537406`;
+its standalone checker has SHA-256
+`4538a1fec0ca0d8b3eb30eda1f3a822bea4d00a50a54d23074581811f32d899a`.
+Coordinator root replay returns
+`PASS_FABLE5_HOSTILE_R3_QX_FIXED_EVEN_ENDPOINT_ZERO`.
+
+On
+
+```text
+A=X^4-1, Q=X, r=e=F8=F10=F12=F14=0,
+```
+
+the independently reconstructed q7--q15 system has 55 variables, 50
+equations, rank 50, and free primitive coordinates
+`d15[X4],d15[X5],d15[X6],d15[X8],d15[X9]`.  Writing them as
+`a0,...,a4`, the complete mode census gives
+
+```text
+G13[X0] = (3/4)c6*f0,
+R15 = -(7*2^19/3)c6*a4 + (2^29/15)c8*a2,
+endpoint = (f0/5)R15
+         + (4/3)(-2^21*a1/5+2^20*a4/15)G13[X0].
+```
+
+The last line is coefficientwise polynomial ideal membership, with no
+division or case split.  The literal G13 lower floor makes `G13[X0]=0` and
+G15 polynomiality makes its residue coordinate `R15=0`; hence the endpoint
+is zero and cannot equal the target one.  This excludes the whole named
+fixed even prefix for arbitrary displayed characteristic scalars.
+
+One precision repair is mandatory.  The producer's statement that modes
+born after weight ten have not entered by G15 is false if read globally:
+`c12` enters G12 through `F^0=1`, and `c14` enters G14 through `A^-1`.
+Their loads on the four audited odd coordinates are nevertheless zero:
+`c12` has no positive-degree coefficient in `F^0`, while the relevant c14
+coefficient is killed by `F1=0`.  The producer checker's two numeric
+assertions do not establish this census; the independent checker computes
+it.  The theorem is unchanged.  Nothing extends here to arbitrary Q,
+nonzero e/F8/later even tails, the whole lambda-zero branch, a Keller pair,
+or JC2.
+
+## ACTIVE-`c2` LITERAL D16--D22 TAIL POINT (2026-08-28, FABLE5 REVIEWED)
+
+The producer
+`xmodel/ggv-upper-endpoint-active-c2-literal-d16-d22-tail-sol-ultra-20260828.md`
+has SHA-256
+`a4bfbb1437c0e67a8f55439d6b9bd6d0a60a70340d41e6481068cf148ad50a3c`.
+Independent hostile review
+`xmodel/ggv-upper-endpoint-active-c2-literal-d16-d22-tail-hostile-review-fable5-20260828.md`
+has SHA-256
+`64f9d4a1bbafc12e5a8db51ef1be33c2254c689c02a743005f5756d771a177e9`;
+its standalone checker has SHA-256
+`2c5f69e58a049427bb8d8eac166adc320a0d58f4e78994ae786ec2c957f0a219`.
+Coordinator root replay returns
+`PASS_HOSTILE_FABLE5_ACTIVE_C2_LITERAL_D16_D22_TAIL`.
+
+For the one displayed rational specialization, independent reconstruction
+uniquely forces
+
+```text
+c16=0, c18=16369/2^47, c20=0,
+G16=G17=G18=G19=G20=G21=0.
+```
+
+Every homogeneous determinant row through D22 then vanishes, so the point
+fails the separate endpoint equation `D22=1`.  Its formal weight-22 class is
+
+```text
+g22=(9207/2^57)A^-5,
+L22(R)=-40A^3*A'R-8A^4R',
+ker L22=K*A^-5.
+```
+
+Thus this `g22` is pure kernel and cannot supply the missing constant.  The
+review also proves the point has no q1 representation with `deg R0<=4`.
+
+Two producer-quality defects do not affect the mathematics.  Its advertised
+`-40 -> -39` control was an arithmetic tautology rather than an operator
+mutation; the review executes the real mutation.  Its "complete schedule"
+wording omits the `b=22` kernel rung, although the producer correctly states
+the quotient modulo `K*A^-5`.  This is a point-level terminal diagnostic,
+not a universal deep-locus theorem or endpoint exclusion.
+
+## GENERIC QUADRATIC-Q FIXED-FACE EXCLUSION (2026-08-28, PROVISIONAL)
+
+The exact symbolic report
+`xmodel/ggv-upper-endpoint-deep-q1-lambda0-quadratic-q-generic-symbolic-sol-ultra-20260828.md`
+has SHA-256
+`0775a496a0b2d174fe944a6caa0ab695155b0381cbf0b1c799c6a382ce8058bd`.
+Its custody/shape checker has SHA-256
+`83ab6c75e60b0a54ef1d930787e0dfa87d77310a411e7239647faaaca05381e9`;
+coordinator replay returns PASS and all three source-hash/rank/row-ideal
+mutations fail.  The frozen AWS coefficient-field stdout has SHA-256
+`965024b915610c9b96787faa6b91215a28f7a7496b22b306ceea6cc41ca3e27c`.
+
+On the fixed face
+
+```text
+A=X^4-1, Q=q0+q1*X+q2*X^2, S=U=0,
+e=F8=F10=F12=F14=0, c2=1,
+```
+
+with exact q7--q15 and all literal G9/G11/G13/G15 polynomial/window rows,
+the homogeneous receiver system has 106 equations in 105 variables.  Over
+`Q(q0,q1,q2,c4,c6,c8)` it has rank 105 and row ideal equal to the ideal of
+all receiver variables.  Hence the odd fiber is zero and the origin endpoint
+cannot equal one on a nonempty Zariski-open subset of the six-parameter
+space.
+
+This is a generic theorem only.  Specializations `c8=0`, `q1=0`, and several
+coordinate planes have smaller rank; their generic endpoint reductions are
+navigation, not a proof on the full rank-drop variety.  A precision addendum
+is also required: `c10,c12,c14` are omitted because their **odd receiver
+loads** through G15 vanish on this even prefix, not because they are globally
+unborn.  Specifically c10 needs odd coefficients through F5, c12 multiplies
+`F^0`, and c14's G15 load uses F1.  The theorem does not release e/F8/even
+tails or impose G16--G21/four-root equations, and awaits independent hostile
+review before promotion.
+
+## INTRINSIC EXACT-PAIR L3/L4/L5 (2026-08-28, OPUS5 REPAIR PROMOTED)
+
+The provisional theorem
+`xmodel/g2-intrinsic-exact-pair-l3-l5-newton-puiseux-sol-ultra-20260828.md`
+has SHA-256
+`841c848eb98aa234fe6429006b3f84958c042869db395d61f2394a6c6c7c81d0`.
+Independent same-model review
+`xmodel/g2-intrinsic-exact-pair-l5-reduced-denominator-independent-review-sol-ultra-20260828.md`
+has SHA-256
+`5e8bc3c54007e9c471a8cb86b51929172c0b749156b1843c013c259d41ea70d9`.
+Its checker has SHA-256
+`c5327500112b22ba9bd6175d8f78722844f05a647ad1459d5bab0ed794a566ed`;
+coordinator replay passes all 8,190 support subsets and both adversarial
+controls.  Genuinely different-model hostile review
+`xmodel/g2-intrinsic-exact-pair-l3-l5-hostile-review-opus5-20260828-v1.md`
+has SHA-256
+`5d219c53cc800e81171f7237af730f05d865088e36171d222050ccdda5dff0ed`.
+Its independent curve-level checker has SHA-256
+`26e24ec9667b2525efe20288db67aa8a7897038f8acb0f4f1a0549bb9d0f5154`;
+coordinator replay passes all 264 checks, including oversized covers,
+horizontal/vertical/reducible controls, escaping branches, premature
+prefixes and eight named mutations.  Opus verdict `REPAIR` confirms the
+theorem after the scope and terminal-record corrections below.
+
+For a squarefree exact fibre and one physical infinity chart, let
+`e_S=ord_S(1/x)` and choose a common `kappa` divisible by every e_S.  Local
+normalization and the fact that the transverse plane coordinate generates
+the completed local factor give reduced Puiseux denominator e_S.  The common
+Kummer action then has
+
+```text
+leaf orbit size = e_S,
+leaf stabilizer size = kappa/e_S,
+complete-leaf orbits <--> normalized boundary places.
+```
+
+Sigray Proposition 3.1 supplies the exact residual-root multiplicity count,
+so retaining every root makes intrinsic prefixes actual strict truncations.
+Chart disjointness is definitional.  Chart **coverage** needs the normalized
+Lemma 2.1 rectangle/NE-corner fibre hypothesis: at a boundary place where
+both x and y had poles, the NE-corner monomial would be the unique term of
+least valuation in `f-a`, a contradiction.  Coverage is false for an
+arbitrary reduced plane curve (`y-x^2` has both coordinates infinite at its
+boundary place).  Under the normalized-counterexample hypothesis, the two
+charts supply the intrinsic exact-pair versions of L3, L4, and L5.
+
+Four repairs are recorded.  First, the older C74 wording that the reduced
+denominator equals the ambient Kummer index is false: `Y^2-u` on `u=t^4`
+has reduced denominator/orbit two and stabilizer two.  The denominator merely
+divides the ambient index, with equality exactly for trivial stabilizer.
+Second, an arbitrary finite prefix is an ancestor, not a terminal leaf.  The
+minimal evaluable terminal record is
+
+```text
+(h, chart, kappa, strict truncation F at level N),  deg p_{h,F}=1.
+```
+
+The residual-degree certificate says exactly one complete root extends F,
+fixes its deck orbit and normalized place, and licenses
+`e_S=kappa/gcd(kappa,supp F)` (empty-support convention
+`gcd(kappa,{})=kappa`).  Continuation is the unique Hensel lift of the simple
+residual root on the **shifted, t-cleared equation**, not on the unshifted
+Laurent equation.  The older “exact local factor plus cutoff beyond every
+contact” condition is sufficient but stronger than necessary, ambiguous and
+not node-evaluable.  Third, the coverage hypothesis above must travel with
+L4-exact.  Fourth, raw cover orders satisfy
+`ord_t=(kappa/e_S)ord_S`; cover substitution is sign-safe, but numerical
+place orders must be divided by `kappa/e_S`.
+
+Opus also supplies proofs omitted in the source: the plane coordinate is a
+local primitive element, hence has exact reduced denominator `e_S`; Sigray
+Definition 3.1's finite reduced-denominator termination follows; and
+Statement 3.1's two-chart coverage follows under Lemma 2.1.  Source pins are
+Proposition 3.1 statement p. 14/proof p. 15 and Statement 3.9 p. 15; the two
+printed exponent/formula-number typos are catalogued in the review.
+
+The promoted split is `L3/L4/L5-exact AVAILABLE` with the hypotheses and
+certificate above.  Hybrid VGG `H-TRUNC`, source coverage, and uncertified-
+leaf terminality remain open/ill-typed.  This theorem does not itself repair
+Sigray decorations or Proposition 4.2; the separately reviewed Proposition
+4.2 erratum immediately below does.  Landing, `RPMC(C)`, a cofinal degree
+bound, and JC2 remain open.
+
+## SIGRAY PROPOSITION 4.2 CONSTANT-SHIFT ERRATUM (2026-08-28, OPUS5 REPAIR PROMOTED)
+
+Producer theorem
+`xmodel/sigray-prop42-constant-shift-repair-sol-ultra-20260828.md` has
+SHA-256
+`10bc55d53f9cf9a9e6a4535787f6e208a25f0ebfbd6dbd803f68b00f8ca8f5cd`.
+Its exact standard-library checker has SHA-256
+`8396a44c5f81f011a8a343124bd0de21329d0f1756a99fcf4cc9df718baf3e14`;
+coordinator replay passes 125,788 grouped assertions.  Different-model
+hostile review
+`xmodel/sigray-prop42-constant-shift-repair-hostile-review-opus5-20260828-r1.md`
+has SHA-256
+`47f2b608f47bc7f426c6cf3e8634c8704bdd675aa909eb63e3f4c6861c21dfb1`.
+Opus verdict `REPAIR` independently confirms the core theorem and supplies
+the mandatory downstream typing completion.
+
+At a positive-tree fibre flag, write the leading forms as
+`f_F^+=xi^d p(eta)` and `h_F^+=xi^e q(eta)`.  The fibre origin forces p to
+have a root.  Thus a zero leading bracket is
+
+```text
+d*p*q' - e*p'*q = 0,
+```
+
+and has exactly three cases: `e<0` is impossible because
+`(q^(kappa*d)*p^(-kappa*e))'=0`; `e=0` forces q constant; and `e>0` gives
+the ordinary coprime positive-power dependence.  In the zero-order case the
+unique legal data are `(k,l,s)=(1,0,c)` and `h_next=h-c`.  Its new leading
+order is negative, so the next bracket is nonzero and `delta_next=0`.  The
+terminal degree and entry label are
+
+```text
+deg p_{h_m,F} = (mu_F-1) deg p_F + 1,
+M_F = gcd(M_F^*, (mu_F-1) deg p_F + 1).
+```
+
+The terminal member must still be emitted.  The corner forces
+`d_F>(1-pi(F))deg p_F`, hence lies in `T_a^nearrow`; it cannot occur on the
+pole characteristic paths in `T_a^searrow`.
+
+This is a **complete erratum only with all downstream patches**.  Type
+`L_F in N^m`, state `gcd(k,0)=k`, and permit zero only in the final form
+above.  Delete the invalid p. 20 Remark that condition (7) is automatic and
+continue carrying (7) where the thesis states it.  Fact A, from Statement
+3.9, transports the same zero order/constant to the parent and restores
+Proposition 4.4 comparability; it also replaces the divisions in
+Propositions 6.2/6.3 by cross-multiplied identities.  Fact B excludes a
+constant leading part at either axis for every nonconstant tower member and
+restores Propositions 4.5, 5.2, 5.3(ii), and 6.5.  Importing only the
+`l in N` change is an incomplete repair.
+
+Accordingly `ladder/SIGRAY-AUDIT.md` promotes Proposition 4.2 from `GAP` to
+`ERRATUM WITH COMPLETE REPAIR`, changing its 72-item census to
+21 verified, 33 verified-with-nit, 10 errata, 2 known errata and 6 gaps.
+Proposition 4.3/condition (7), Proposition 5.1 at finite nonzero punctures,
+later source/audit gaps, full landing, `RPMC(C)`, the cofinal ceiling and JC2
+remain untouched.
+
+## HENS-CT BACKEND CONTROL (2026-08-28, EXACT UPSTREAM PASS / CONTROL TIMEOUT)
+
+Frozen packet
+`cases/ggv_hens_ct_backend_adapter_r1_20260828/aws_r6c_r1_timeout_control/`
+contains 231 manifest-replayed files.  Its archive has SHA-256
+`00963a460db79d21d152d2d3a47cf2aa1a3e6d23c6482714fdf500fc5f9e8891`.
+
+The repaired generic Sage-parent bridge passes the upstream algebraic-
+integral gate: it emits a genuine order-two telescoper and nonzero Ore/field
+certificates, with both exact remainders zero.  Certificate SHA-256 is
+`8daac27d5f064381b4ee1066a8a4e3479294db3a694cbb67024ec2257d1c2969`.
+
+The charged rank-one control then remains in
+`annihilator_of_composition(ss=ss,xx=xx,yy=ya)` for exactly four hours,
+terminates rc124 at `CONTROL_COMPOSITION`, never enters creative telescoping,
+and emits neither a control candidate nor certificate.  Maximum RSS is
+286,564 KiB and swap remains zero.  Monitor rc is zero; final census SHA-256
+`e3f04796cbbe8e79fd80197b0c9c324bb06fb3375ac6484907f938ed32766638`
+records zero members and zero RSS/swap.
+
+Classify this as an exact upstream software PASS and charged-control
+`TIMEOUT_CONTROL`, not a mathematical PASS, FAIL, or reducer disagreement.
+The real frozen branch was correctly not run.  Do not repeat the same generic
+composition path without a structural backend change.
+
+## LAMBDA-NONZERO UNIT-S FIRST CORRECTION (2026-08-28, INDEPENDENT PASS)
+
+Producer report
+`xmodel/ggv-upper-endpoint-lambda-nonzero-unit-s-first-correction-sol-ultra-20260828.md`
+has SHA-256
+`c3f03f370eec64375af19dc684a17c52ee176b2aa1f6179cfedfa0c3a15cdb9a`;
+its checker has SHA-256
+`872d6020e09ca618efeb209e7f6ba331d359e93ccb2d18b27a30573ab72b9284`.
+Independent report
+`xmodel/ggv-upper-endpoint-lambda-nonzero-unit-s-first-correction-independent-review-sol-ultra-20260828.md`
+has SHA-256
+`79076a9cf41f799218aa9075d219b79547991011b8038b379bd81b995ebf325c`;
+its checker has SHA-256
+`001ef4480924f982b4646d813bad20971ba01e8cf42b132cac73cf95d0021a57`.
+Coordinator replay of both checkers returns PASS.
+
+At a simple root `alpha` of `A`, put `a=A'(alpha)`, `s=S(alpha)`,
+`u=U(alpha)`, and `L=a+s*tau/4`.  Exact `D=0` gives
+
+```text
+R(alpha)=4*s*u,
+F5(alpha)=s^2*u/128,
+H1=u*tau^3*L^2/8
+  =u*tau^3*(s*tau+4*a)^2/128.
+```
+
+Thus the complete relative-order-one correction is divisible by the square
+of the multiplicity-four face factor.  The independent complete mode census
+through relative epsilon order four is
+
+```text
+m=0:  6,4,2,0,-2
+m=2:    5,3,1,-1
+m=4:      4,2,0
+m=6:        3,1
+m=8:          2.
+```
+
+Every mode is therefore regular through order three.  Relative order four
+is the first **possible** face-pole discriminator: the pure mode may have an
+`L^-2` term and the `c2` mode an `L^-1` term, while the other born modes are
+regular.  The producer checker omitted regular correction rows for `c4`,
+`c6`, and the `c8` birth despite claiming a complete partition census; the
+independent checker fills them.  This is a reproducibility-coverage repair,
+not a mathematical repair.  The result does not prove an order-four pole,
+order-four polynomiality, raw-window compatibility, endpoint emptiness, a
+Keller theorem, or JC2.

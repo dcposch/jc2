@@ -1,0 +1,45 @@
+{
+  "case": "ggv_8_28_upper_endpoint_active_c2_literal_d16_d22_tail_hostile_review_fable5_20260828",
+  "date": "2026-08-28",
+  "reviewer": "Fable 5 (hostile, independent)",
+  "verdict": "PASS",
+  "reviewed_report": "xmodel/ggv-upper-endpoint-active-c2-literal-d16-d22-tail-sol-ultra-20260828.md",
+  "reviewed_report_sha256": "a4bfbb1437c0e67a8f55439d6b9bd6d0a60a70340d41e6481068cf148ad50a3c",
+  "checker": "xmodel/ggv-upper-endpoint-active-c2-literal-d16-d22-tail-hostile-review-fable5-20260828-check.py",
+  "checker_marker": "PASS_HOSTILE_FABLE5_ACTIVE_C2_LITERAL_D16_D22_TAIL",
+  "producer_marker_replayed": "PASS_EXACT_ACTIVE_C2_LITERAL_D16_D22_TAIL",
+  "confirmed": {
+    "prefix": "D0..D15=0; c14=-6139/2^34 forced unique; g12=4093/2^28; g13..g15=0; F/G windows",
+    "modes": "ladder c_b t^b F^((12-b)/8), b=0,2..20; per-mode annihilation of all rows through 22; wrong-exponent sensitivity",
+    "windows": "F slots weights 1..14 only, G slots 1..21 only, G22_present=false; G16:2..8 G17:2..7 G18:2..6 G19:3..5 G20:3..4 G21:3..3; 303 variables; endpoint charge D22=1",
+    "born_rows": {"c16": "0", "c18": "16369/140737488355328", "c20": "0", "uniqueness": "affine pole cancellation, unique for m>0"},
+    "tail_rows": "G16..G21 identically zero (window pass therefore vacuous; zero values load-bearing)",
+    "determinant": "D0..D21=0 and homogeneous D22=0 by full literal replay; endpoint D22=1 FAILS at this point",
+    "g22": "9207/144115188075855872 * A^-5 (reduced)",
+    "L22": "-40*A^3*A'*R - 8*A^4*R' from the (i,j)=(0,22) determinant term; -L22(g22)=0; kernel exactly Q*A^-5 via R'/R=-5A'/A",
+    "q1": "no R0 with deg<=4 solves V0=A'R0+2AR0' (inconsistent system); producer report attaches no q1 label"
+  },
+  "mutations_caught": {
+    "c18_zero": "row 18 pole order 3",
+    "c18_wrong": "row 18 non-polynomial",
+    "c6_dropped": "row 14 pole; re-solved c14=5/2^34 differs",
+    "c14_dropped": "row 14 first non-polynomial row",
+    "L22_minus39": "executed; residual -k*A'/A^2 != 0",
+    "g22_sign": "kernel-blind to L22; caught by identity comparison",
+    "g22_numerator": "kernel-blind to L22; caught by identity comparison",
+    "g22_denominator": "operator residual 8k*A'/A != 0",
+    "wrong_window": "mutated G19 window rejected by census comparison",
+    "wrong_mode_exponent": "e_2=1 fails mode annihilation"
+  },
+  "defects": [
+    {"id": 1, "severity": "minor", "finding": "producer -40->-39 mutation is an arithmetic tautology, never applied to the operator", "impact": "none; executed here, claimed residual correct"},
+    {"id": 2, "severity": "minor", "finding": "no g22 mutations in producer battery; sign/numerator mutations are kernel-blind to the endpoint operator", "impact": "none; made explicit and machine-checked here"},
+    {"id": 3, "severity": "note", "finding": "window support checks on identically zero rows are vacuous", "impact": "none; producer asserts exact zero values"},
+    {"id": 4, "severity": "note", "finding": "'complete characteristic schedule' omits the b=22 rung, which is exactly the kernel A^-5", "impact": "wording only; 'modulo K*A^-5' statement already correct"},
+    {"id": 5, "severity": "note", "finding": "producer probe reuses the upstream checker's arithmetic backend (hash-pinned import)", "impact": "producer-side independence limited; independent implementation supplied by this review"},
+    {"id": 6, "severity": "scope", "finding": "window census originates in the branch-P c2=0 fixture (F1=A^2) while the active-c2 point has F1=A^3; windows reused as authoritative slot-existence data per frozen lineage", "impact": "scope note, consistent with the D8..D15 hostile review"}
+  ],
+  "scope": "One exact rational specialization dying only at the endpoint equation D22=1. Not a universal deep-locus theorem, scheme statement, endpoint/branch-P theorem, Keller result, counterexample, or JC2 resolution.",
+  "runtime_seconds": 3.4,
+  "environment": "PYTHONDONTWRITEBYTECODE=1 python3 -B, standard library only"
+}

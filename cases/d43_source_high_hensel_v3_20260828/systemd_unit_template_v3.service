@@ -1,0 +1,48 @@
+[Unit]
+Description=JC2 D43 finite source high-Hensel R3 N16 template (NOT AUTHORIZED)
+
+[Service]
+Type=exec
+User=jc2d43
+Group=jc2d43
+SetLoginEnvironment=no
+WorkingDirectory=/
+UMask=0077
+Environment=HOME=/var/empty
+Environment=LANG=C.UTF-8
+Environment=LC_ALL=C.UTF-8
+Environment=PATH=/usr/bin:/bin
+Environment=TZ=UTC
+Environment=PYTHONHASHSEED=0
+Environment=PYTHONNOUSERSITE=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OMP_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=MKL_NUM_THREADS=1
+Environment=NUMEXPR_NUM_THREADS=1
+Environment=VECLIB_MAXIMUM_THREADS=1
+UnsetEnvironment=BASH_ENV CDPATH DIRECTIONB_STATE DYLD_INSERT_LIBRARIES DYLD_LIBRARY_PATH ENV GLIBC_TUNABLES GLOBIGNORE LD_AUDIT LD_BIND_NOW LD_DEBUG LD_DEBUG_OUTPUT LD_DYNAMIC_WEAK LD_HWCAP_MASK LD_LIBRARY_PATH LD_ORIGIN_PATH LD_PRELOAD LD_PROFILE LD_SHOW_AUXV LD_USE_LOAD_BIAS LOGNAME PYTHONHOME PYTHONINSPECT PYTHONPATH PYTHONSTARTUP PYTHONWARNINGS SHELL SHELLOPTS USER
+ExecStart=/ABSOLUTE/PINNED/RUNTIME/bin/python3 -I -B /ABSOLUTE/SEALED/SOURCE/cases/d43_source_high_hensel_v3_20260828/aws_supervisor_v3.py --authorization /ABSOLUTE/LAUNCH_AUTHORIZATION.json
+ExecStopPost=/ABSOLUTE/PINNED/RUNTIME/bin/python3 -I -B /ABSOLUTE/SEALED/SOURCE/cases/d43_source_high_hensel_v3_20260828/aws_supervisor_v3.py --authorization /ABSOLUTE/LAUNCH_AUTHORIZATION.json --terminalize
+MemoryMax=2147483648
+MemorySwapMax=0
+MemoryOOMGroup=yes
+TasksMax=32
+RuntimeMaxSec=1200
+TimeoutStopSec=60
+KillMode=control-group
+SendSIGKILL=yes
+OOMPolicy=stop
+Delegate=no
+NoNewPrivileges=yes
+PrivateTmp=yes
+InaccessiblePaths=/tmp /var/tmp /dev/shm
+PrivateDevices=yes
+ProtectControlGroups=yes
+ProtectKernelTunables=yes
+ProtectSystem=strict
+ProtectHome=read-only
+RestrictSUIDSGID=yes
+RestrictNamespaces=yes
+LockPersonality=yes
+ReadWritePaths=/ABSOLUTE/FRESH/RUN/PARENT

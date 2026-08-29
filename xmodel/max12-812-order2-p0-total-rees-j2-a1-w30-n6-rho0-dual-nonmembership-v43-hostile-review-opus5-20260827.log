@@ -1,0 +1,31 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/max12-812-order2-p0-total-rees-j2-a1-w30-n6-rho0-dual-nonmembership-v43-hostile-review-opus5-20260827.md` (SHA `64e49a369470fb452b53334d92298a1bdb50d9c897afd197ced8b0312e69afcb`).
+
+## Verdicts
+
+| # | Attack | Verdict |
+|---|---|---|
+| 1 | Rings, alphabet, censuses, `wt(a1^6)=30` | **PASS** |
+| 2 | Weight-30 span completeness | **PASS** |
+| 3 | Rows/products; 284,766 + component censuses | **PASS** |
+| 4 | Solution/certificate parsed independently | **PASS** |
+| 5 | Validator audit | **PASS** on full-product iteration; **REPAIRABLE** on the mutation control |
+| 6 | Custody, termination, exact-Q, serializer sweep | **PASS** on soundness; **REPAIRABLE** ×3 |
+| 7 | Logic of `rho→0` | **PASS**, strengthened |
+| 8 | Firewall | **PASS** |
+
+No `FAIL`. The claim `a1^6 ∉ J0` survives.
+
+**Strongest independent confirmations.** All 5 prompt pins plus 12 traced sub-pins recomputed and matched; both `HARVEST.sha256` verify 13/13 and 21/21. I recomputed the 284,766 census from scratch (generating function over the 66-variable weighted alphabet × hash-pinned `ROW_COUNTS`) — it matches exactly *and* discriminates: 65 vars→284,657, 66→284,766, 67→284,819, so it independently certifies the alphabet, exact-complementary-weight enumeration, and absence of any cutoff. I ran an exact integer replay of all 26,200 component equations against the frozen `.sms`/`.rhs` (1.35 s); all hold, with shift/perturbation controls confirming non-vacuity. The remaining 258,566 products follow from a BFS-closure disjointness argument. `sha256("[]")` = the empty `t`-row hash lets the row-hash collision structure reproduce the 59-nonzero-row count with no computation.
+
+**Three findings worth your attention.**
+
+1. *The report under-claims.* `a1^6 ∉ J0` alone gives `a1^i ∉ J0` for **every** `i ≤ 6`, since `a1^i ∈ J0 ⟹ a1^6 = a1^{6-i}a1^i ∈ J0`. The appeal to V38 is unnecessary for pure powers. Relatedly, V42's `a1^8` lives in the *branch* ideal `I_A1 = J0+(rs1)`, so it does not bound the `J0` frontier — which is now exactly `i ≥ 7` open.
+
+2. *The `Tg15_3` mutation control is tautological.* Perturbing the `a1^6` coefficient shifts the residual by `Λ(a1^6)=1`, which is forced by the two checks bundled in the same `if`. Detection power ≈ 0. A random non-target mutation would be vacuous 95.71% of the time (only 26,464/616,678 entries lie in `supp(Λ)`). The main result doesn't depend on it, but the preregistered V42-style *row* mutation is the real control and isn't implemented.
+
+3. *Custody gaps, none affecting soundness.* The entire custody-hash block (V42/DESIGN/ERRATUM/PREREG) sits in `main()`, which neither harvested lane reaches — the pins were inert at runtime and the preregistered "run the V42 replay first" control has no evidence of discharge. The compiler harvest has no `AWS_SOURCE_MANIFEST.sha256` despite naming one, and its `lanes.log` carries an undisclosed `build rc=1` (missing `-lgivaro -lgmpxx -lgmp`, fixed on resume). The census addendum's absence from the manifest is *not* a breach — it was written 09:17:56 UTC, after the 09:10 freeze.
+
+What makes the result robust is that solve and certify are genuinely separate: the validator never parses `.sms`/`.rhs`, so serializer errors can only produce a wrong `Λ`, which the replay rejects. The one shared component is `reconstruct_rows`/`build_products` — which my census recomputation attacks directly. I did not re-derive the literal row coefficients from the V20/V28/V35 emitter chain; that remains inherited and is listed as review obligation 6.
+
+Cheapest next steps: land the `i ≤ 6` corollary (free); harvest the `F_65519` modp lane (no harvest exists — the preregistered corroboration is undelivered); then preflight exponent 7 at weight 35 (2,715,310 products, ~9.5×).

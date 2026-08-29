@@ -1,6 +1,15 @@
 # SHEET6-TDU-REVIEW.md — Adversarial review of the TD-UNIFORM entry theorem (08fbbda)
 
 Reviewer: Claude (adversarial pass, 2026-08-10). Status: COMPLETE.
+
+**2026-08-28 correction.**  This dated review remains valid for the prime
+entry theorem because every `M=1` kill occurs at a nonroot pole.  Its root
+compatibility sentence is superseded: repaired Statement 8.5 gives only
+`M_(0,y)|3`, so root `M` may be `1` or `3`; corrected Proposition 8.4 has no
+root clause.  The two zero-charge survivors therefore remain unexcluded.
+The chain budgets are now licensed by the reviewed actual-weight Corollary
+7.1 and disjoint first-separation exit sets, not by printed equation (22).
+Root/SF1 numerical completeness still awaits the root-aware AWS rerun.
 Scope: SHEET6-TDUNIFORM.md + the `tduniform` stage of cases/sheet6_campaign.py
 — headline claim: single-pole exclusion at ENTRY for every PRIME td (Theorem
 TDU), plus the composite-residual negative (TDU-neg) and the td≤9 salvage
@@ -186,8 +195,9 @@ Re-derived by hand, then confirmed against the fixed-namespace engine:
   (iv_dispositions) agrees: SURVIVOR, R = 3.
 - Kill-hunt (all promoted weapons tried): pin ✓ passed, μ|M ✓, N1 ✓ at
   both vertices, AF2-IIb inapplicable (no IIb step), E5-III inapplicable
-  (no III step), ψ-upgrade to any ψ ≤ R = 3 still leaves 0 ≤ 5, St 8.5 +
-  Prop 8.4 at (0,y) force M_{(0,y)} = 3 — satisfiable. A Σλ = 0 chain is
+  (no III step), ψ-upgrade to any ψ ≤ R = 3 still leaves 0 ≤ 5, and repaired
+  St 8.5 gives `M_(0,y) in {1,3}` — both satisfiable; corrected Prop 8.4 is
+  unavailable at the root. A Σλ = 0 chain is
   immune to EVERY budget-side refinement; the sheet's "budgets are a
   small-td weapon" mechanism (κ̄ = a(α+β) independent of b, IIa_0
   κ-collapse free) is correctly diagnosed.

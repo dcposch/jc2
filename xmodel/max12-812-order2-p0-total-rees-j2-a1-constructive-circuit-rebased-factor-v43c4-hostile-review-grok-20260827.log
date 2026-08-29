@@ -1,0 +1,14 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll review the charged V43C4 case independently: first the freeze pins and custody chain, then a desk-scale replay of the exact `a1^104` claim.The charged case and predecessor report are next; I’ll inventory those files and hash-check the freeze pins before reading the producer’s conclusions.I’ll hash the freeze files next and inspect the producer, proof JSON, and predecessor invalidation report.The first hash pass hit a restricted PATH; I’ll rehash with Python and then read the producer and predecessor files.Freeze pins match. Next I’ll read the rest of the producer and walk the V42/V37/C1 loader chain.I’ll load C1/V42/V37 without AWS, rehash the row-loader chain, and independently replay the frozen proof.I’ll run an independent replay now: reconstruct the DAG from the frozen proof, expand the three prune factors, and attack the registered mutations.Replay succeeded. Next I’ll reconstruct via `build_proof` (still not `main`), run the mutation attacks, and inspect the prune telemetry.I have independent replay, identities, and mutation results. Next I’ll write the hostile review with nonblocking control notes separated from the exact theorem.The exact `a1^104` theorem holds in the claimed ring. Report:
+
+`xmodel/max12-812-order2-p0-total-rees-j2-a1-constructive-circuit-rebased-factor-v43c4-hostile-review-grok-20260827.md`
+
+Independently, without producer `main` or AWS: every freeze pin and the C1→V42→V37 row-loader chain rehashed live; all 732 expression nodes and 71 derivation nodes reconstructed from the 51 frozen rows; 29 checkpoints held; final target was exactly `a1^104`; the 16 final labels were literal rows only.
+
+The C2 crossed-`e1` obstruction is gone: rebase identities `e1=G+4 a1 ell1` and `ee0=Q0-4 aa0 ell1` have residual zero, old labels are absent before the cubic `ell1` clear, and both sign flips reject. Factors 427/401/399 are direct children of roots 721/723/722 and expand to the zero polynomial over `Q`; replacing them by `a1` (node 371) rejects.
+
+The Tg19_7 “omission” only deletes the term from the serialized `final_certificate` commitment. It is a commitment-integrity check, not a source-row deletion test, and the theorem rests on complete replay rather than that control.
+
+Nonblocking nits (telemetry `root` clobber, missing AWS source tarball) do not bear the algebra. No total-`rho`, saturated-Rees, or exponent-628 claim is accepted.
+
+GROK_CONFIRMED_A1_104_V43C4

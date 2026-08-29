@@ -1,0 +1,24 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+**All five checks: CONFIRMED.** Report written to `xmodel/max12-812-order2-p0-total-rees-j2-a1-v43-compiler-postreview-delta-hostile-review-fable5-20260827.md`.
+
+| # | Check | Verdict |
+|---|-------|---------|
+| 1 | Diff is the complete byte delta | **CONFIRMED** |
+| 2 | Zero-solution of homogeneous cyclic core is sound | **CONFIRMED** |
+| 3 | Full-product replay bars false dual certificates | **CONFIRMED** |
+| 4 | Both versions fail closed on `forced_core_equations=1` | **CONFIRMED** (conditional as posed) |
+| 5 | Launched-lane consumers never call `leaf_peel_dual` | **CONFIRMED** |
+
+Key evidence, executed live in this session (shell available):
+
+1. **Byte delta.** The on-disk compiler hashes to `0de6a2b2...`. I reverse-applied exactly the six displayed line edits (each touched line assert-checked for byte equality against the diff first) and the reconstruction hashes to `c7ed7309...` exactly. Any undisplayed byte difference would have broken that hash, so the diff is complete, and the addendum's in-memory reversal claim is independently reproduced.
+
+2. **Zero-core soundness.** I verified from the code that a peeled pivot can never occur in a still-active equation, so the surviving core involves only never-peeled variables; with every core right-hand side zero, the all-zero assignment solves the core identically, and reverse-order back-substitution uses only final values (later-peeled pivots already assigned, never-pivots correctly defaulted to zero, target pinned to 1). Belt-and-braces: the in-function exact replay at lines 297–302, present in both versions, would catch any unsound functional anyway.
+
+3. **Replay gate.** The only certificate-emitting path requires peel outcome `nonmember` and then unconditionally runs `v37.replay_certificate` (line 574) before any output. v37 (on-disk bytes match its import pin) decodes the *serialized* functional, requires λ(target)=1, and checks λ(P)=0 for **every** rho-zero product — the full list, not just the target component — in exact rationals, raising on any violation. Both replays lie outside the diff, so the delta enlarges what the solver may attempt but cannot weaken the gate.
+
+4. **Fail-closed.** `forced ⊆ core`, so forced=1 forces both gates to return outcome `core`; exact mode then raises at lines 561–562 before any verdict, the modp screen never consults the peel, and preflight emits no verdict. All bytes upstream of the gate are identical between versions, so the reviewed version deterministically fails closed on the same input. **Caveat, flagged in the report:** the census values (23477/47089/1) exist in no locally frozen artifact — no `V43_PREFLIGHT` line, no `aws_*` results dir; they come from an unfrozen AWS run, and I verified the implication only, endorsing no unfrozen outcome. (They are magnitude-consistent with the earlier desk-verified rho0 component dims, 26200 products / 66076 monomials.)
+
+5. **Consumer isolation.** The launched lanes invoke `compile_total_dehom_eliminant_v43.py` (total-dehom) and `compile_rho0_dual_linbox_v43.py` + `validate_rho0_dual_linbox_v43.py` (LinBox). Each digest-gates the compiler to `0de6a2b2...` before importing it, uses only `reconstruct_rows`/`build_products`/`specialize_t0`, and the compiler's `main()` — the sole caller of `leaf_peel_dual` — is `__main__`-guarded, so import can't trigger it. A repo-wide search finds `leaf_peel_dual` only in the compiler itself and two prose files. The remote-tree immutability claim isn't desk-verifiable, but the in-consumer digest gate enforces it rather than assumes it.
+
+The report preserves the firewall: only `c7ed7309...` was covered by the earlier Fable correction review; `0de6a2b2...`'s coverage is exactly that review plus this delta report, and nothing is asserted about `a1^6`, total-rho certificates, Gate T, or JC2. Nothing else in the repo was touched (reconstruction staged in `/tmp`; `jc2-lean` untouched); I also updated my session memory with the custody-chain extension.

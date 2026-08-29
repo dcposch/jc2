@@ -1,0 +1,29 @@
+# AWS registration: K00 local-syzygy constant projection V16
+
+Registered UTC: 2026-08-27T10:16:53Z
+
+```text
+source_payload_sha256=8822a8a9ee280e250d025342b48690d7811b78a6e53abab90ffefa183243cbd3
+freeze_sha256=9d8182b5209abfd806c81467b46d3c0ccd23f3d4f0646eff57dfbd7020fe15d3
+host_alias=Box01
+public_host=54.175.21.169
+expected_private_hostname=ip-172-30-0-237
+tag=max12_812_order2_u2_62_k00_syzproj_v16_q_20260827T101653Z_box01
+remote_job=/home/ubuntu/jobs/max12_812_order2_u2_62_k00_syzproj_v16_q_20260827T101653Z_box01
+field=Q
+timeout_seconds=1800
+virtual_memory_cap_kib=67108864
+```
+
+```text
+source_payload_sha256=8822a8a9ee280e250d025342b48690d7811b78a6e53abab90ffefa183243cbd3
+freeze_sha256=9d8182b5209abfd806c81467b46d3c0ccd23f3d4f0646eff57dfbd7020fe15d3
+host_alias=r6a
+public_host=3.91.104.135
+expected_private_hostname=ip-172-30-0-34
+tag=max12_812_order2_u2_62_k00_syzproj_v16_p65521_20260827T101653Z_r6a
+remote_job=/home/ubuntu/jobs/max12_812_order2_u2_62_k00_syzproj_v16_p65521_20260827T101653Z_r6a
+field=65521
+timeout_seconds=900
+virtual_memory_cap_kib=33554432
+```

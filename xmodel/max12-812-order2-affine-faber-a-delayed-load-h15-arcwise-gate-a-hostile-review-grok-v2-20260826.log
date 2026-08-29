@@ -1,0 +1,17 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll independently hostile-review the specified H15 arcwise-gate theorem: first load the target, charged inputs, and local review conventions, then recompute the algebra rather than trust prior verdicts.I'll load the review conventions and the exact target plus charged inputs next, then hash-check those files before any algebra.The code-review skill doesn’t apply here; I’ll follow the repo’s hostile-review format and start by hashing the charged files.Hashes match the charged pins. Next I’ll read the theorem and the charged inputs in full and ignore prior verdict prose.The Claude log is only a quota error, so I’ll ignore it and independently expand the charged theorems and algebra.Square-division looks polynomial; I’ll independently recompute load/target grades and the first-block kernel next.I’ll expand the square-division and `D(M)` maps over `Q` and independently recompute the first-block kernel, without using finite-field arithmetic.Algebra over `Q` checks out in both directions. I’ll write the single hostile-review file with a `CONFIRMED` verdict and the audit expansions.**CONFIRMED.** The Gate-A composition is a literal arcwise source exclusion on this Newton cell.
+
+Wrote only
+`xmodel/max12-812-order2-affine-faber-a-delayed-load-h15-arcwise-gate-a-hostile-review-grok-v2-20260826.md`
+(SHA-256 `e9dea9b0fa3d80580e26836c30c2d7c43c4ebb916cac0c5a4cac941dd6645add`). Target, producers, ledgers, and `jc2-lean` were not edited. Charged pins recomputed and matched. The Claude quota failure was ignored.
+
+Independent checks:
+
+1. **Square division (2.1)** is a polynomial isomorphism over `Q`: both composites are the identity on the seven-tuples, Jacobian diagonal `2`.
+2. **Timings** under `Lambda=sigma^3`: quadratic polar at grade 30, loads/`mu2` at 42, cubic at 45, later targets at 48+. Moving `Q`/`N` jets and the unitriangular Faber connection cannot occupy grade 30.
+3. **First-block + UFD** on `Q0=z^2(z^2+p)` with `p` a unit, `deg N0<=3`, coprime squarefree type, forces `N0=m z(z^2+p)` with `m` a unit.
+4. **(4.1)--(4.2)** are inverse regular maps on `D(M)`. The closed point is `(0,p,0,0,m,0,0)`, which forces `q>0`. The bound `v(a)>=5` is **not** derived; it stays the named cell hypothesis.
+5. Dividing `Delta` by `sigma^{15}` and absorbing a unit into `lam` or `M` lands on the promoted affine chart with later jets, loads, targets, ramification, and deck data kept. No hidden global root of `Q` and no one-sided Rees map.
+6. This is a genuine DVR-arc exclusion on this cell, not a normalized analogy. `H!=15`, `a<5`, `q=0`, `p/m/K10` degeneracy, other factor/load slopes, total-Rees/saturation, terminal/Taylor, order two, maximum twelve, and JC2 stay firewalled.
+
+Smallest failing identity: none. Smallest missing hypothesis: none that breaks a numbered claim.

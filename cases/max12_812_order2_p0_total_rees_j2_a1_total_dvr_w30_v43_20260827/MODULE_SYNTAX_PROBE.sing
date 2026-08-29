@@ -1,0 +1,33 @@
+ring R=0,(t),dp;
+module M=(1)*gen(1)+(-t)*gen(2);
+vector T=gen(1);
+module E=M,T;
+module Z=syz(E);
+print("PROBE_NROWS="+string(nrows(Z)));
+print("PROBE_NCOLS="+string(ncols(Z)));
+print("PROBE_Z="+string(Z));
+int j;
+for (j=1;j<=ncols(Z);j++)
+{
+  print("PROBE_LAST_"+string(j)+"="+string(Z[2,j]));
+}
+module MP=(1)*gen(1);
+module EP=MP,T;
+module ZP=syz(EP);
+print("PROBE_POS_NCOLS="+string(ncols(ZP)));
+print("PROBE_POS_Z="+string(ZP));
+for (j=1;j<=ncols(ZP);j++)
+{
+  print("PROBE_POS_LAST_"+string(j)+"="+string(ZP[2,j]));
+}
+matrix CHECKP=matrix(EP)*matrix(ZP);
+if (CHECKP!=0) { print("FAIL_PROBE_PRODUCT"); quit; }
+matrix CP[nrows(ZP)][1];
+int i;
+for (i=1;i<=nrows(ZP);i++) { CP[i,1]=ZP[i,1]; }
+write("/tmp/a1_dvr_probe_cert.txt",CP);
+poly UP=ZP[2,1]/subst(ZP[2,1],t,0);
+if (subst(UP,t,0)!=1) { print("FAIL_PROBE_NORMALIZE"); quit; }
+write("/tmp/a1_dvr_probe_u.txt",UP);
+print("PASS_MODULE_SYNTAX_PROBE");
+quit;

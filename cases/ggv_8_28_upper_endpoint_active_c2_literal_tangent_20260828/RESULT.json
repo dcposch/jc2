@@ -1,0 +1,53 @@
+{
+  "format": "GGV_ACTIVE_C2_LITERAL_TANGENT_EXACT_Q_V1",
+  "status": "TANGENT-OBSTRUCTED-AT-THIS-POINT",
+  "scope": "one frozen homogeneous point in the complete preregistered reduced-prefix/raw-window tangent space",
+  "matrix": {
+    "coefficient_rows": 510,
+    "columns": 308,
+    "rank_over_Q": 291,
+    "consistent_for_D22_X0_equals_1": false,
+    "contradiction_source_row": 494,
+    "contradiction_label": [22, 0]
+  },
+  "exact_dual": {
+    "support": 19,
+    "row_labels": "D4[X^0] through D22[X^0]",
+    "coefficients": "1/8^18, 1/8^17, ..., 1/8, 1",
+    "yA": "0, replayed exactly inside frozen producer",
+    "yb": "1, replayed exactly inside frozen producer",
+    "certificate_sha256": "d21fc8538e908f9a1bc6705fd9e5cf99a2c3d0be3f3b8a82318906ef817c0a8b"
+  },
+  "modular_crosschecks": [
+    {"prime": 65521, "rank": 291, "consistent": false, "contradiction_label": [22, 0], "residual": 1},
+    {"prime": 65519, "rank": 291, "consistent": false, "contradiction_label": [22, 0], "residual": 1},
+    {"prime": 65497, "rank": 291, "consistent": false, "contradiction_label": [22, 0], "residual": 1}
+  ],
+  "positive_control": "the zero tangent solves the same system with zero target",
+  "runtime": {
+    "wall_seconds": 5.99,
+    "user_seconds": 5.97,
+    "exact_elimination_seconds": 1.4380100080161355,
+    "max_rss_kib": 23760,
+    "swaps": 0
+  },
+  "custody": {
+    "remote_namespace": "/home/ubuntu/jobs/ggv_active_c2_tangent_exact_q_r1_20260828T084624Z_r6i",
+    "pid_pgid_sid": 73832,
+    "linux_starttime": 29804757,
+    "worker_rc": 0,
+    "monitor_rc": 0,
+    "final_members": 0,
+    "evidence_manifest_sha256": "c05ecfff8ddc0af6ecaabbf1209bf770f02ff089b340ae1e56a0d1de17882a85"
+  },
+  "not_claimed": [
+    "scheme isolation",
+    "absence of nonlinear arcs",
+    "absence of solutions based at other points",
+    "general deep-locus endpoint emptiness",
+    "general-V0 raw landing bridge",
+    "Keller theorem",
+    "JC2"
+  ]
+}
+

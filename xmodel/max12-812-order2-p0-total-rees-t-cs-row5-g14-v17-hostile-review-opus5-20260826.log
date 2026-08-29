@@ -1,0 +1,27 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review complete. Report written to `xmodel/max12-812-order2-p0-total-rees-t-cs-row5-g14-v17-hostile-review-opus5-20260826.md` (the only repository edit).
+
+## What I did
+
+Rather than trust the engine transcript, I re-derived every quantitative claim in exact rational arithmetic, and — after seeing the producer's own `/usr/bin/time -v` record (5.05 s, 28.9 MB) — wrote an **independent second implementation** of the source. It reproduces the producer's grades 10, 11, 12, and 14 **monomial for monomial** (5/18/58/**304**), plus the contributing-tail census 73/73/73/83.
+
+## Findings
+
+**Confirmed.** Literal source `p=-2*rho^2+sum 2*ell_i*sigma^i` at `export_row5_g14_v17.py:128-137`, faithfully generalizing the frozen replay slot-by-slot. Bridge exact over ℚ and mod 65521, with `Ref_d` byte-literal V9 files. 304 monomials, nonzero, rho-degrees `{0:103, 2:116, 4:74, 6:11}` (all even). Specialization exactly `-(21/320)*b^5*w^2`. No modular inference enters the char-0 claim.
+
+**Three defects, none altering the mathematics:**
+
+- **D1 (attestation).** `export_row5_g14_v17.py:268-269` prints `V17_NORMALIZED_ODD_SPECIALIZATION=1` and `V17_NEGATIVE_NORMALIZATION_CONTROL=1` **unconditionally** — the Singular script never tests either, and the validator only re-reads strings the compiler wrote itself. Two of eight registered controls had no independent confirmation until I supplied it.
+- **D2 (upstream V9).** `validate_coeffexport_v9.py:128` counts a leading minus as a separator, so 14 telemetry entries are +1, including all three used here (6/19/59 vs true 5/18/58). Display-only; Singular's own `size(Tg)` and the hash-bound files are correct.
+- **D3 (custody).** Self-generated manifests; launcher outer transcripts never harvested; host alias unrecorded.
+
+**The registered V8 `TPhi` rebuild defect provably cannot reach this bridge:** the three writes occur at lines 1386/1399/1412 of `t_rs0_row5_q.sing`, strictly before the second `TPhi=0;` at line 1432.
+
+**Two qualifications the producer's framing invites overreading:**
+
+1. "With all live correction terms included" — exactly **2 of 304** monomials survive the substitution (`(-3/64)cs*e1^2` and `(-1/128)cs^5*k`); the other 302 are *annihilated* by the seven zeroed variables, not cancelled. The specialization constrains 2 coefficients, not 304. The real check is the bridge and the independent rebuild.
+2. The `11/5` control is genuine (gives `-(41/640)`, ≠ `-(42/640)`), but only k-degrees 0 and 1 survive, so the value is affine: `-3/64 - t/128`, nonzero for all `t ≠ -6`. It tests the exact rational value, **not** the qualitative unit-on-`D(b*w)` conclusion.
+
+I also noticed grade 13 is nonzero (141 terms) but neither exported nor bridged, and confirmed as a free extra control that grades 10–13 all vanish under the odd-sheet substitution.
+
+**Verdict: CONFIRMED** — a source-honest coefficient export with a low-grade bridge. It closes nothing.

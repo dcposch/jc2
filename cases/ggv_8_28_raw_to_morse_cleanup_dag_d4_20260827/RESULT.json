@@ -1,0 +1,706 @@
+{
+  "closed_fibre_checks": {
+    "Gamma0": 1,
+    "Q0": 0,
+    "U0": 0,
+    "V0": 0,
+    "W0": 0,
+    "s0": 0
+  },
+  "critical_section_equations": [
+    {
+      "known_node": 89,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 330,
+      "weight": 1
+    },
+    {
+      "known_node": 395,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 513,
+      "weight": 2
+    },
+    {
+      "known_node": 960,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 1063,
+      "weight": 3
+    },
+    {
+      "known_node": 1592,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 1681,
+      "weight": 4
+    },
+    {
+      "known_node": 2336,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 2412,
+      "weight": 5
+    },
+    {
+      "known_node": 3141,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 3205,
+      "weight": 6
+    },
+    {
+      "known_node": 3965,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 4016,
+      "weight": 7
+    },
+    {
+      "known_node": 4773,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 4816,
+      "weight": 8
+    },
+    {
+      "known_node": 5546,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 5580,
+      "weight": 9
+    },
+    {
+      "known_node": 6268,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 6293,
+      "weight": 10
+    },
+    {
+      "known_node": 6933,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 6952,
+      "weight": 11
+    },
+    {
+      "known_node": 7544,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 7557,
+      "weight": 12
+    },
+    {
+      "known_node": 8110,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 8118,
+      "weight": 13
+    },
+    {
+      "known_node": 8643,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 8646,
+      "weight": 14
+    },
+    {
+      "known_node": 9168,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 9170,
+      "weight": 15
+    },
+    {
+      "known_node": 9660,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 9662,
+      "weight": 16
+    },
+    {
+      "known_node": 10102,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 10104,
+      "weight": 17
+    },
+    {
+      "known_node": 10516,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 10518,
+      "weight": 18
+    },
+    {
+      "known_node": 10909,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 10911,
+      "weight": 19
+    },
+    {
+      "known_node": 11287,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 11289,
+      "weight": 20
+    },
+    {
+      "known_node": 11655,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 11657,
+      "weight": 21
+    },
+    {
+      "known_node": 12017,
+      "rule": "s_n=-(F0''(c))^-1*known_n",
+      "solution_node": 12019,
+      "weight": 22
+    }
+  ],
+  "dag": {
+    "allowed_ops": [
+      "ConstA",
+      "Raw",
+      "Add",
+      "Mul"
+    ],
+    "canonical_compact_encoding_bytes": 8400824,
+    "canonical_compact_encoding_sha256": "bc3bd04c453eef74d19682b020541f64ca1f42557f2c177692f02485ed1a17d7",
+    "coefficient_algebra": "A=Q[c]/(c^8-1)",
+    "node_count": 49964,
+    "op_census": {
+      "Add": 18332,
+      "ConstA": 1204,
+      "Mul": 30028,
+      "Raw": 400
+    },
+    "raw_leaf_count": 400,
+    "storage": "certificate-sized Merkle/digest manifest; compile_cleanup_dag.py deterministically reconstructs every node before checking this result"
+  },
+  "dependency": "DEP-D3",
+  "firewall": {
+    "claims_not_made": [
+      "Keller recurrence for a specialization",
+      "global polynomial automorphism",
+      "8_28 face/family exclusion",
+      "G2-PSC",
+      "G2-BD",
+      "JC2"
+    ],
+    "global_E22_compiled": false,
+    "global_H_multiple_controlled": false
+  },
+  "first_discriminator": {
+    "consequence": "raw F14 support alone cannot exclude local U14=X",
+    "identity": {
+      "F_compact": "H^2+2*t^6*H*X-t^8*H+t^12*X^2",
+      "F_equals_u2_plus_U": [
+        {
+          "X_degree": 0,
+          "coefficient": "1",
+          "t_degree": 0
+        },
+        {
+          "X_degree": 8,
+          "coefficient": "-2",
+          "t_degree": 0
+        },
+        {
+          "X_degree": 16,
+          "coefficient": "1",
+          "t_degree": 0
+        },
+        {
+          "X_degree": 1,
+          "coefficient": "-2",
+          "t_degree": 6
+        },
+        {
+          "X_degree": 9,
+          "coefficient": "2",
+          "t_degree": 6
+        },
+        {
+          "X_degree": 0,
+          "coefficient": "1",
+          "t_degree": 8
+        },
+        {
+          "X_degree": 8,
+          "coefficient": "-1",
+          "t_degree": 8
+        },
+        {
+          "X_degree": 2,
+          "coefficient": "1",
+          "t_degree": 12
+        }
+      ],
+      "H": "X^8-1",
+      "U": "t^14*X-(1/4)*t^16",
+      "cancelled_weights": {
+        "14": "-X+X=0",
+        "16": "1/4-1/4=0"
+      },
+      "legal_nonleading_raw_rows": [
+        {
+          "X_degree": 1,
+          "coefficient": "-2",
+          "slot": "f_1_5",
+          "weight": 6
+        },
+        {
+          "X_degree": 9,
+          "coefficient": "2",
+          "slot": "f_9_29",
+          "weight": 6
+        },
+        {
+          "X_degree": 0,
+          "coefficient": "1",
+          "slot": "f_0_0",
+          "weight": 8
+        },
+        {
+          "X_degree": 8,
+          "coefficient": "-1",
+          "slot": "f_8_24",
+          "weight": 8
+        },
+        {
+          "X_degree": 2,
+          "coefficient": "1",
+          "slot": "f_2_2",
+          "weight": 12
+        }
+      ],
+      "local_unit": "u_X=H'(X)+t^6, whose closed-fibre value H'(c) is a unit",
+      "orientation": "u=H mod t",
+      "u": "H+t^6*X-(1/2)*t^8"
+    },
+    "mutations": {
+      "delete_supporting_row": "REJECTED: sparse identity changes",
+      "flip_minus_half_in_u": "REJECTED: sparse identity changes",
+      "flip_minus_quarter_in_U": "REJECTED: leaves a t^16/2 term where the raw F16 slice is empty",
+      "insert_raw_F14_X": "REJECTED: no D3 slot (14,1); it would pull back to x*y^-3"
+    },
+    "status": "PASS-U14-X-SYNTHESIZED-FROM-LEGAL-LOWER-RAW-ROWS"
+  },
+  "higher_u_sidecar": {
+    "coefficientwise_expansion": "not needed for R2 constant-channel carrier theorem and not claimed",
+    "raw_provenance": "inherited from the same G raw leaves and coordinate DAG",
+    "typed_residual": "R_ge4=G(xi+z(u),t)-W-V*u-Q*u^2-Gamma*u^3 in A[[t,u]], ord_u>=4"
+  },
+  "outputs": {
+    "Gamma": {
+      "0": 1,
+      "1": 49942,
+      "10": 49951,
+      "11": 49952,
+      "12": 49953,
+      "13": 49954,
+      "14": 49955,
+      "15": 49956,
+      "16": 49957,
+      "17": 49958,
+      "18": 49959,
+      "19": 49960,
+      "2": 49943,
+      "20": 49961,
+      "21": 49962,
+      "22": 49963,
+      "3": 49944,
+      "4": 49945,
+      "5": 49946,
+      "6": 49947,
+      "7": 49948,
+      "8": 49949,
+      "9": 49950
+    },
+    "Q": {
+      "0": 0,
+      "1": 48751,
+      "10": 48760,
+      "11": 48761,
+      "12": 48762,
+      "13": 48763,
+      "14": 48764,
+      "15": 48765,
+      "16": 48766,
+      "17": 48767,
+      "18": 48768,
+      "19": 48769,
+      "2": 48752,
+      "20": 48770,
+      "21": 48771,
+      "22": 48772,
+      "3": 48753,
+      "4": 48754,
+      "5": 48755,
+      "6": 48756,
+      "7": 48757,
+      "8": 48758,
+      "9": 48759
+    },
+    "U": {
+      "0": 0,
+      "1": 12475,
+      "10": 15102,
+      "11": 15227,
+      "12": 15325,
+      "13": 15399,
+      "14": 15450,
+      "15": 15453,
+      "16": 15469,
+      "17": 15471,
+      "18": 15473,
+      "19": 15475,
+      "2": 12926,
+      "20": 15477,
+      "21": 15479,
+      "22": 15481,
+      "3": 13331,
+      "4": 13694,
+      "5": 14017,
+      "6": 14302,
+      "7": 14551,
+      "8": 14766,
+      "9": 14949
+    },
+    "V": {
+      "0": 0,
+      "1": 47929,
+      "10": 47992,
+      "11": 48004,
+      "12": 48017,
+      "13": 48031,
+      "14": 48046,
+      "15": 48062,
+      "16": 48079,
+      "17": 48097,
+      "18": 48116,
+      "19": 48136,
+      "2": 47932,
+      "20": 48157,
+      "21": 48179,
+      "22": 48202,
+      "3": 47936,
+      "4": 47941,
+      "5": 47947,
+      "6": 47954,
+      "7": 47962,
+      "8": 47971,
+      "9": 47981
+    },
+    "W": {
+      "0": 0,
+      "1": 28019,
+      "10": 33372,
+      "11": 33685,
+      "12": 33956,
+      "13": 34187,
+      "14": 34382,
+      "15": 34544,
+      "16": 34674,
+      "17": 34778,
+      "18": 34858,
+      "19": 34915,
+      "2": 29002,
+      "20": 34952,
+      "21": 34973,
+      "22": 34977,
+      "3": 29758,
+      "4": 30448,
+      "5": 31075,
+      "6": 31642,
+      "7": 32152,
+      "8": 32608,
+      "9": 33014
+    },
+    "coordinate_q0": {
+      "0": 66,
+      "1": 23560,
+      "10": 23642,
+      "11": 23656,
+      "12": 23671,
+      "13": 23687,
+      "14": 23704,
+      "15": 23722,
+      "16": 23741,
+      "17": 23761,
+      "18": 23782,
+      "19": 23804,
+      "2": 23566,
+      "20": 23827,
+      "21": 23851,
+      "22": 23876,
+      "3": 23572,
+      "4": 23579,
+      "5": 23587,
+      "6": 23596,
+      "7": 23606,
+      "8": 23617,
+      "9": 23629
+    },
+    "coordinate_q1": {
+      "0": 24503,
+      "1": 24504,
+      "10": 24513,
+      "11": 24514,
+      "12": 24515,
+      "13": 24516,
+      "14": 24517,
+      "15": 24518,
+      "16": 24519,
+      "17": 24520,
+      "18": 24521,
+      "19": 24522,
+      "2": 24505,
+      "20": 24523,
+      "21": 24524,
+      "22": 24525,
+      "3": 24506,
+      "4": 24507,
+      "5": 24508,
+      "6": 24509,
+      "7": 24510,
+      "8": 24511,
+      "9": 24512
+    },
+    "coordinate_q2": {
+      "0": 25172,
+      "1": 25173,
+      "10": 25182,
+      "11": 25183,
+      "12": 25184,
+      "13": 25185,
+      "14": 25186,
+      "15": 25187,
+      "16": 25188,
+      "17": 25189,
+      "18": 25190,
+      "19": 25191,
+      "2": 25174,
+      "20": 25192,
+      "21": 25193,
+      "22": 25194,
+      "3": 25175,
+      "4": 25176,
+      "5": 25177,
+      "6": 25178,
+      "7": 25179,
+      "8": 25180,
+      "9": 25181
+    },
+    "critical_shift_s": {
+      "0": 0,
+      "1": 330,
+      "10": 6293,
+      "11": 6952,
+      "12": 7557,
+      "13": 8118,
+      "14": 8646,
+      "15": 9170,
+      "16": 9662,
+      "17": 10104,
+      "18": 10518,
+      "19": 10911,
+      "2": 513,
+      "20": 11289,
+      "21": 11657,
+      "22": 12019,
+      "3": 1063,
+      "4": 1681,
+      "5": 2412,
+      "6": 3205,
+      "7": 4016,
+      "8": 4816,
+      "9": 5580
+    },
+    "inverse_alpha": {
+      "0": 23877,
+      "1": 23882,
+      "10": 23966,
+      "11": 23980,
+      "12": 23995,
+      "13": 24011,
+      "14": 24028,
+      "15": 24046,
+      "16": 24065,
+      "17": 24085,
+      "18": 24106,
+      "19": 24128,
+      "2": 23889,
+      "20": 24151,
+      "21": 24175,
+      "22": 24200,
+      "3": 23896,
+      "4": 23903,
+      "5": 23911,
+      "6": 23920,
+      "7": 23930,
+      "8": 23941,
+      "9": 23953
+    },
+    "inverse_beta": {
+      "0": 26707,
+      "1": 26708,
+      "10": 26717,
+      "11": 26718,
+      "12": 26719,
+      "13": 26720,
+      "14": 26721,
+      "15": 26722,
+      "16": 26723,
+      "17": 26724,
+      "18": 26725,
+      "19": 26726,
+      "2": 26709,
+      "20": 26727,
+      "21": 26728,
+      "22": 26729,
+      "3": 26710,
+      "4": 26711,
+      "5": 26712,
+      "6": 26713,
+      "7": 26714,
+      "8": 26715,
+      "9": 26716
+    },
+    "inverse_gamma": {
+      "0": 27375,
+      "1": 27376,
+      "10": 27385,
+      "11": 27386,
+      "12": 27387,
+      "13": 27388,
+      "14": 27389,
+      "15": 27390,
+      "16": 27391,
+      "17": 27392,
+      "18": 27393,
+      "19": 27394,
+      "2": 27377,
+      "20": 27395,
+      "21": 27396,
+      "22": 27397,
+      "3": 27378,
+      "4": 27379,
+      "5": 27380,
+      "6": 27381,
+      "7": 27382,
+      "8": 27383,
+      "9": 27384
+    }
+  },
+  "pins": {
+    "dep_d3_freeze": {
+      "path": "cases/ggv_8_28_raw_to_global_m_cokernel_interface_d3_20260827/FREEZE.sha256",
+      "sha256": "012acfe5ca560757269fd6e332ed3c4bab2f1005bce43113109f31b705ffe022"
+    },
+    "dep_d3_raw": {
+      "path": "cases/ggv_8_28_raw_to_global_m_cokernel_interface_d3_20260827/RAW_INPUT.json",
+      "sha256": "28b9b05c02224aadec30d52b66ed22db80aabe416ffdc0186f6931f1978f1876"
+    },
+    "dep_d3_report": {
+      "path": "xmodel/ggv-8_28-raw-to-global-M-cokernel-interface-d3-sol-20260827.md",
+      "sha256": "c7ea900bdf0552c50d2a61c5a8f0f41a7b06e24eccedf5e5ab9cef3946c53556"
+    },
+    "dep_d3_result": {
+      "path": "cases/ggv_8_28_raw_to_global_m_cokernel_interface_d3_20260827/RESULT.json",
+      "sha256": "a1d83f3f0ec1635844a3d8c67b59ce437c8d846617ae1250f2cf2e3db4a64b3f"
+    },
+    "preregistration": {
+      "path": "cases/ggv_8_28_raw_to_morse_cleanup_dag_d4_20260827/PREREGISTRATION.md",
+      "sha256": "8983eb7d4156a4d823277fa4f44fbe8ac6b7cbddeea19819ca9be20c0ba019c8"
+    },
+    "r2_result": {
+      "path": "cases/ggv_8_28_keller_face_cusp_unit_carrier_classification_r2_20260827/RESULT_R2.json",
+      "sha256": "0dffbb36c20d0b80498d765168a47cdb9ed2889ffc7bd105dce7ec835f600b1d"
+    },
+    "r2_review": {
+      "path": "xmodel/ggv-8_28-keller-face-cusp-unit-carrier-classification-r2-hostile-review-grok-20260827.md",
+      "sha256": "b271a2958138d8e85c0a8cab068efd7bfa59227a56e5252eb27310a50fb11e24"
+    }
+  },
+  "raw_boundary_relations": {
+    "F0": "(X^8-1)^2 (fixed; D3 weight-zero raw slots specialized accordingly)",
+    "G0": "(X^8-1)^3 (fixed; D3 weight-zero raw slots specialized accordingly)",
+    "positive_weight_rows": "all named D3 raw slots retained as independent leaves"
+  },
+  "scope": "generic symbolic raw 2S/3S rows with fixed H^2/H^3 leading edge; factor-local formal cleanup through weight 22",
+  "source_sha256": "28b9b05c02224aadec30d52b66ed22db80aabe416ffdc0186f6931f1978f1876",
+  "status": "PASS-DEP-D3-FACTOR-LOCAL-CLEANUP-DAG-W22",
+  "tags": {
+    "algebra": "A=Q[c]/(c^8-1), projected factorwise",
+    "chart": "X=xi(t)+z; u=z*(q0+q1*z+q2*z^2+O(z^3))",
+    "deck": "ORIENTED_PLUS_H",
+    "determinant": "u_X(c,0)=H'(c)=8c^7",
+    "factor_ids": [
+      "fac_X_minus_1",
+      "fac_X_plus_1",
+      "fac_X2_plus_1",
+      "fac_X4_plus_1"
+    ],
+    "global_polynomial_automorphism_claim": false,
+    "orientation": "u=H mod t"
+  },
+  "unit_inversions": [
+    {
+      "inverse": [
+        "0",
+        "0",
+        "1/128",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "label": "F_X(c+s,t)=0",
+      "linear_coefficient": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "128",
+        "0"
+      ],
+      "operation": "ImplicitCriticalSection"
+    },
+    {
+      "label": "q0=sqrt(F_XX(xi,t)/2), oriented by H'(c)",
+      "operation": "SeriesSquareRoot",
+      "oriented_root": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "8"
+      ],
+      "two_root_inverse": [
+        "0",
+        "1/16",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "8"
+      ],
+      "inverse": [
+        "0",
+        "1/8",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "label": "alpha=q0^-1",
+      "operation": "SeriesInverse"
+    }
+  ]
+}

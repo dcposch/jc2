@@ -1,0 +1,50 @@
+{
+  "checker": "xmodel/ggv-upper-endpoint-uniform-d14-d15-fullmodes-corrected-r1-hostile-review-grok46-check.py",
+  "checker_sha256": "44af761192103401d91a5080a6e458e46a9cbddc0c37b23a05d55c91c9401a2d",
+  "checks": {
+    "failed": 0,
+    "failures": [],
+    "passed": 334,
+    "total": 334
+  },
+  "date": "2026-08-28",
+  "dependencies": {
+    "D10_D13_hostile_review": "PASS",
+    "D8_D9_hostile_review": "PASS",
+    "d10_result_sha256": "8ff338bdd47b7a53ba1515a7889823620120f92d718a03349fb9e3fd27014236",
+    "d12_result_sha256": "06ca0152a7d05dd7b4549e74138b482fc572a62acae718751e7230577c5f28c8",
+    "d9_result_sha256": "9ca90959f284052bf669911c15e675892c1749b0bfed3cb4fd6462156e61b059",
+    "status": "prefix theorems independently reviewed PASS; D14/D15 remain conditional on those field-point conclusions"
+  },
+  "hashes": {
+    "charged": {
+      "cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json": "ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0",
+      "cases/ggv_8_28_upper_endpoint_uniform_d14_d15_fullmodes_20260828/RESULT.json": "7546618aa5a40ed983014159c1d39337396607562912570c97cfe2ee779394ea",
+      "cases/ggv_8_28_upper_endpoint_uniform_d14_d15_fullmodes_20260828/verify_uniform_d14_d15.py": "53f2a7a276be4a0aa7f77cc031e270d573fc78b5db64cdb76a0cf6c502e52517",
+      "xmodel/ggv-upper-endpoint-uniform-d14-d15-fullmodes-sol-ultra-20260828.md": "830639eca8bf76bba512abc8528f763925a11092b661b1531d3f66b01c1c77fc"
+    },
+    "new": {
+      "xmodel/ggv-upper-endpoint-uniform-d14-d15-fullmodes-corrected-r1-hostile-review-grok46-check.py": "44af761192103401d91a5080a6e458e46a9cbddc0c37b23a05d55c91c9401a2d"
+    }
+  },
+  "overall": "PASS",
+  "reviewer": "Grok 4.6",
+  "schema": "jc2.ggv.upper_endpoint.uniform_d14_d15_fullmodes.corrected_r1.hostile_review.grok46.v1",
+  "scope_firewall": [
+    "characteristic-zero field-radical necessities on the fixed 303-variable / 513-generator branch-P fixture only",
+    "no scheme-theoretic divisibility",
+    "no endpoint, unrestricted branch-P, Keller-pair, or JC2 conclusion",
+    "c16, c18, c20 remain mandatory and unconstrained",
+    "no gauge or unit is normalized"
+  ],
+  "status": "PASS_INDEPENDENT_HOSTILE_REVIEW_CORRECTED_R1_D14_D15",
+  "superseded_error_not_repeated": "D15 does not independently kill c14; same-row -3*c14*A' cancels mixed +3*c14*A' exactly",
+  "verdicts": {
+    "C13_C14_C15": "PASS",
+    "D14_c14_kill": "PASS",
+    "D14_square_divisibility": "PASS",
+    "D15_c14_cancellation": "PASS",
+    "D15_divisibility_c8_survival": "PASS",
+    "overall": "PASS"
+  }
+}

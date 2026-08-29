@@ -1,0 +1,804 @@
+{
+  "firewall": [
+    "no claim that a C5-to-V20R2 map cannot be constructed in future",
+    "no C5 row image or coverage claim",
+    "no endpoint replacement beyond reviewed V47 scope",
+    "no G2-PSC, Gate T, order-two, maximum-twelve, or JC2 claim"
+  ],
+  "first_decisive_obstruction": {
+    "exact_image": "0",
+    "minimality": "one source generator; no row expansion is needed",
+    "reason": "A1D2_R3 has positive A-contact order a=1, so V46's lower ideal kills Az_0",
+    "source_generator": "a1=Az_0 (stage-zero total coefficient)",
+    "stage": "TARGET_GENERATOR_UNIT_GATE_BEFORE_ROW_MODULE_MAP"
+  },
+  "schema_version": 1,
+  "scope": "endpoint-specific C5-to-V20R2/V47-A1D2_R3 type audit only",
+  "search_order": [
+    {
+      "authoritative_equation_count": 140,
+      "authoritative_source_column_count": 169,
+      "authoritative_symbols_include_a1": false,
+      "candidate": "normalized common K00 V20R2",
+      "historical_v19_control": "three prior quotient duals all NOT_TYPED_COMPOSABLE",
+      "scope": "availability/type audit only; no claim that a mathematical map cannot be constructed",
+      "serialized_c5_map_keys": [],
+      "status": "SKIPPED_NO_LITERAL_C5_RING_OR_ROW_MODULE_MAP"
+    },
+    {
+      "candidate": "V47+V47R1 A1D2_R3 endpoint",
+      "complete_extension_variable_images": {
+        "a1": "0",
+        "aa0": "AcD1_0",
+        "aa1": "AzD1_0",
+        "aaa0": "AcD1_1",
+        "aaa1": "AzD1_1",
+        "ac3": "AcD1_2",
+        "ac4": "AcD1_3",
+        "ac5": "AcD1_4",
+        "ac6": "AcD1_5",
+        "ac7": "AcD1_6",
+        "ac8": "AcD1_7",
+        "az3": "AzD1_2",
+        "az4": "AzD1_3",
+        "az5": "AzD1_4",
+        "az6": "AzD1_5",
+        "az7": "AzD1_6",
+        "az8": "AzD1_7",
+        "cs1": "0",
+        "cs2": "0",
+        "cs3": "BzD1_0",
+        "cs4": "BzD1_1",
+        "cs5": "BzD1_2",
+        "cs6": "BzD1_3",
+        "cs7": "BzD1_4",
+        "e0": "0",
+        "e1": "0",
+        "ec3": "2*CcD1_0",
+        "ec4": "2*CcD1_1",
+        "ec5": "2*CcD1_2",
+        "ec6": "2*CcD1_3",
+        "ec7": "2*CcD1_4",
+        "ec8": "2*CcD1_5",
+        "ec9": "2*CcD1_6",
+        "ee0": "0",
+        "ee1": "0",
+        "ell1": "(1/2)*P_1",
+        "ell2": "(1/2)*P_2",
+        "ell3": "(1/2)*P_3",
+        "ell4": "(1/2)*P_4",
+        "ell5": "(1/2)*P_5",
+        "ell6": "(1/2)*P_6",
+        "ell7": "(1/2)*P_7",
+        "ell8": "(1/2)*P_8",
+        "ez3": "2*CzD1_0",
+        "ez4": "2*CzD1_1",
+        "ez5": "2*CzD1_2",
+        "ez6": "2*CzD1_3",
+        "ez7": "2*CzD1_4",
+        "ez8": "2*CzD1_5",
+        "ez9": "2*CzD1_6",
+        "k": "k10_0",
+        "k1": "k10_1",
+        "k10_3": "k10_3",
+        "k10_4": "k10_4",
+        "k10_5": "k10_5",
+        "k10_6": "k10_6",
+        "k2c": "k10_2",
+        "k6": "k6_0",
+        "k6_1": "k6_1",
+        "rs1": "0",
+        "rs2": "0",
+        "rs3": "4*BcD1_0",
+        "rs4": "4*BcD1_1",
+        "rs5": "4*BcD1_2",
+        "rs6": "4*BcD1_3",
+        "rs7": "4*BcD1_4",
+        "t": "rho^2"
+      },
+      "complete_polynomial_extension_ring": {
+        "base": "Q",
+        "generator_count": 63,
+        "generators": [
+          "AcD1_0",
+          "AcD1_1",
+          "AcD1_2",
+          "AcD1_3",
+          "AcD1_4",
+          "AcD1_5",
+          "AcD1_6",
+          "AcD1_7",
+          "AzD1_0",
+          "AzD1_1",
+          "AzD1_2",
+          "AzD1_3",
+          "AzD1_4",
+          "AzD1_5",
+          "AzD1_6",
+          "AzD1_7",
+          "BcD1_0",
+          "BcD1_1",
+          "BcD1_2",
+          "BcD1_3",
+          "BcD1_4",
+          "BzD1_0",
+          "BzD1_1",
+          "BzD1_2",
+          "BzD1_3",
+          "BzD1_4",
+          "CcD1_0",
+          "CcD1_1",
+          "CcD1_2",
+          "CcD1_3",
+          "CcD1_4",
+          "CcD1_5",
+          "CcD1_6",
+          "CzD1_0",
+          "CzD1_1",
+          "CzD1_2",
+          "CzD1_3",
+          "CzD1_4",
+          "CzD1_5",
+          "CzD1_6",
+          "J",
+          "P_1",
+          "P_2",
+          "P_3",
+          "P_4",
+          "P_5",
+          "P_6",
+          "P_7",
+          "P_8",
+          "k10_0",
+          "k10_1",
+          "k10_2",
+          "k10_3",
+          "k10_4",
+          "k10_5",
+          "k10_6",
+          "k2_0",
+          "k6_0",
+          "k6_1",
+          "mu2",
+          "mu4",
+          "mu6",
+          "rho"
+        ],
+        "role": "generous extension retaining every C5 source-jet image; endpoint equations remain in the finite subring"
+      },
+      "contact": {
+        "G": 14,
+        "T_C2": 16,
+        "a": 1,
+        "c": 3,
+        "d": 2,
+        "r_min": 3
+      },
+      "controls": {
+        "finite_unretained_az4_is_missing_not_zero": true,
+        "reverse_transport_rejected": true,
+        "source_D_a1_localization_extension_rejected": true,
+        "stage_zero_a1_to_shifted_AzD1_0_rejected": true,
+        "three_v47_slots_are_not_25_row_module_map": true,
+        "v20_alias_is_not_map": true,
+        "zero_is_not_unit_in_nonzero_domain_localization": true
+      },
+      "endpoint_authority": "D23_LOW_A6",
+      "endpoint_localization": "p*k0 = (-2*rho^2)*k10_0",
+      "endpoint_theorem_type": "arcwise/set-theoretic closed-R-tail emptiness",
+      "finite_defined_count": 28,
+      "finite_manifest_ring": {
+        "base": "Q",
+        "generator_count": 24,
+        "generators": [
+          "rho",
+          "P_1",
+          "P_2",
+          "AzD1_0",
+          "AzD1_1",
+          "AzD1_2",
+          "AcD1_0",
+          "AcD1_1",
+          "AcD1_2",
+          "CzD1_0",
+          "CzD1_1",
+          "CzD1_2",
+          "CcD1_0",
+          "CcD1_1",
+          "CcD1_2",
+          "BzD1_0",
+          "BcD1_0",
+          "k10_0",
+          "k6_0",
+          "k2_0",
+          "mu2",
+          "mu4",
+          "mu6",
+          "J"
+        ],
+        "maxima": {
+          "A": 2,
+          "C": 2,
+          "R": 0,
+          "k10": 0,
+          "k2": 0,
+          "k6": 0,
+          "p": 2
+        }
+      },
+      "finite_manifest_variable_images": {
+        "a1": {
+          "authority": "Az index 0 < contact order 1",
+          "image": "0",
+          "status": "DEFINED_ZERO_LOWER_IDEAL"
+        },
+        "aa0": {
+          "authority": "V46/V46R1 reindexing; relative index 0",
+          "image": "AcD1_0",
+          "status": "DEFINED"
+        },
+        "aa1": {
+          "authority": "V46/V46R1 reindexing; relative index 0",
+          "image": "AzD1_0",
+          "status": "DEFINED"
+        },
+        "aaa0": {
+          "authority": "V46/V46R1 reindexing; relative index 1",
+          "image": "AcD1_1",
+          "status": "DEFINED"
+        },
+        "aaa1": {
+          "authority": "V46/V46R1 reindexing; relative index 1",
+          "image": "AzD1_1",
+          "status": "DEFINED"
+        },
+        "ac3": {
+          "authority": "V46/V46R1 reindexing; relative index 2",
+          "image": "AcD1_2",
+          "status": "DEFINED"
+        },
+        "ac4": {
+          "authority": "relative index 3 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "AcD1_3"
+        },
+        "ac5": {
+          "authority": "relative index 4 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "AcD1_4"
+        },
+        "ac6": {
+          "authority": "relative index 5 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "AcD1_5"
+        },
+        "ac7": {
+          "authority": "relative index 6 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "AcD1_6"
+        },
+        "ac8": {
+          "authority": "relative index 7 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "AcD1_7"
+        },
+        "az3": {
+          "authority": "V46/V46R1 reindexing; relative index 2",
+          "image": "AzD1_2",
+          "status": "DEFINED"
+        },
+        "az4": {
+          "authority": "relative index 3 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "AzD1_3"
+        },
+        "az5": {
+          "authority": "relative index 4 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "AzD1_4"
+        },
+        "az6": {
+          "authority": "relative index 5 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "AzD1_5"
+        },
+        "az7": {
+          "authority": "relative index 6 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "AzD1_6"
+        },
+        "az8": {
+          "authority": "relative index 7 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "AzD1_7"
+        },
+        "cs1": {
+          "authority": "Bz index 1 < contact order 3",
+          "image": "0",
+          "status": "DEFINED_ZERO_LOWER_IDEAL"
+        },
+        "cs2": {
+          "authority": "Bz index 2 < contact order 3",
+          "image": "0",
+          "status": "DEFINED_ZERO_LOWER_IDEAL"
+        },
+        "cs3": {
+          "authority": "V46/V46R1 reindexing; relative index 0",
+          "image": "BzD1_0",
+          "status": "DEFINED"
+        },
+        "cs4": {
+          "authority": "relative index 1 > manifest maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "BzD1_1"
+        },
+        "cs5": {
+          "authority": "relative index 2 > manifest maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "BzD1_2"
+        },
+        "cs6": {
+          "authority": "relative index 3 > manifest maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "BzD1_3"
+        },
+        "cs7": {
+          "authority": "relative index 4 > manifest maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "BzD1_4"
+        },
+        "e0": {
+          "authority": "Cc index 1 < contact order 3",
+          "image": "0",
+          "status": "DEFINED_ZERO_LOWER_IDEAL"
+        },
+        "e1": {
+          "authority": "Cz index 1 < contact order 3",
+          "image": "0",
+          "status": "DEFINED_ZERO_LOWER_IDEAL"
+        },
+        "ec3": {
+          "authority": "V46/V46R1 reindexing; relative index 0",
+          "image": "2*CcD1_0",
+          "status": "DEFINED"
+        },
+        "ec4": {
+          "authority": "V46/V46R1 reindexing; relative index 1",
+          "image": "2*CcD1_1",
+          "status": "DEFINED"
+        },
+        "ec5": {
+          "authority": "V46/V46R1 reindexing; relative index 2",
+          "image": "2*CcD1_2",
+          "status": "DEFINED"
+        },
+        "ec6": {
+          "authority": "relative index 3 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "2*CcD1_3"
+        },
+        "ec7": {
+          "authority": "relative index 4 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "2*CcD1_4"
+        },
+        "ec8": {
+          "authority": "relative index 5 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "2*CcD1_5"
+        },
+        "ec9": {
+          "authority": "relative index 6 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "2*CcD1_6"
+        },
+        "ee0": {
+          "authority": "Cc index 2 < contact order 3",
+          "image": "0",
+          "status": "DEFINED_ZERO_LOWER_IDEAL"
+        },
+        "ee1": {
+          "authority": "Cz index 2 < contact order 3",
+          "image": "0",
+          "status": "DEFINED_ZERO_LOWER_IDEAL"
+        },
+        "ell1": {
+          "authority": "P_i=2*ell_i in the V46 normative P series",
+          "image": "(1/2)*P_1",
+          "status": "DEFINED"
+        },
+        "ell2": {
+          "authority": "P_i=2*ell_i in the V46 normative P series",
+          "image": "(1/2)*P_2",
+          "status": "DEFINED"
+        },
+        "ell3": {
+          "authority": "P index 3 > maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "(1/2)*P_3"
+        },
+        "ell4": {
+          "authority": "P index 4 > maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "(1/2)*P_4"
+        },
+        "ell5": {
+          "authority": "P index 5 > maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "(1/2)*P_5"
+        },
+        "ell6": {
+          "authority": "P index 6 > maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "(1/2)*P_6"
+        },
+        "ell7": {
+          "authority": "P index 7 > maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "(1/2)*P_7"
+        },
+        "ell8": {
+          "authority": "P index 8 > maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "(1/2)*P_8"
+        },
+        "ez3": {
+          "authority": "V46/V46R1 reindexing; relative index 0",
+          "image": "2*CzD1_0",
+          "status": "DEFINED"
+        },
+        "ez4": {
+          "authority": "V46/V46R1 reindexing; relative index 1",
+          "image": "2*CzD1_1",
+          "status": "DEFINED"
+        },
+        "ez5": {
+          "authority": "V46/V46R1 reindexing; relative index 2",
+          "image": "2*CzD1_2",
+          "status": "DEFINED"
+        },
+        "ez6": {
+          "authority": "relative index 3 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "2*CzD1_3"
+        },
+        "ez7": {
+          "authority": "relative index 4 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "2*CzD1_4"
+        },
+        "ez8": {
+          "authority": "relative index 5 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "2*CzD1_5"
+        },
+        "ez9": {
+          "authority": "relative index 6 > manifest maximum 2",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "2*CzD1_6"
+        },
+        "k": {
+          "authority": "V46 load-series identity",
+          "image": "k10_0",
+          "status": "DEFINED"
+        },
+        "k1": {
+          "authority": "k10 index 1 > maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "k10_1"
+        },
+        "k10_3": {
+          "authority": "k10 index 3 > maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "k10_3"
+        },
+        "k10_4": {
+          "authority": "k10 index 4 > maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "k10_4"
+        },
+        "k10_5": {
+          "authority": "k10 index 5 > maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "k10_5"
+        },
+        "k10_6": {
+          "authority": "k10 index 6 > maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "k10_6"
+        },
+        "k2c": {
+          "authority": "k10 index 2 > maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "k10_2"
+        },
+        "k6": {
+          "authority": "V46 load-series identity",
+          "image": "k6_0",
+          "status": "DEFINED"
+        },
+        "k6_1": {
+          "authority": "k6 index 1 > maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "k6_1"
+        },
+        "rs1": {
+          "authority": "Bc index 1 < contact order 3",
+          "image": "0",
+          "status": "DEFINED_ZERO_LOWER_IDEAL"
+        },
+        "rs2": {
+          "authority": "Bc index 2 < contact order 3",
+          "image": "0",
+          "status": "DEFINED_ZERO_LOWER_IDEAL"
+        },
+        "rs3": {
+          "authority": "V46/V46R1 reindexing; relative index 0",
+          "image": "4*BcD1_0",
+          "status": "DEFINED"
+        },
+        "rs4": {
+          "authority": "relative index 1 > manifest maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "4*BcD1_1"
+        },
+        "rs5": {
+          "authority": "relative index 2 > manifest maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "4*BcD1_2"
+        },
+        "rs6": {
+          "authority": "relative index 3 > manifest maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "4*BcD1_3"
+        },
+        "rs7": {
+          "authority": "relative index 4 > manifest maximum 0",
+          "image": null,
+          "status": "MISSING_OUTSIDE_V47R1_FINITE_MAXIMUM",
+          "would_be": "4*BcD1_4"
+        },
+        "t": {
+          "authority": "t->rho^2",
+          "image": "rho^2",
+          "status": "DEFINED"
+        }
+      },
+      "finite_missing_count": 39,
+      "finite_missing_variables": [
+        "ac4",
+        "ac5",
+        "ac6",
+        "ac7",
+        "ac8",
+        "az4",
+        "az5",
+        "az6",
+        "az7",
+        "az8",
+        "cs4",
+        "cs5",
+        "cs6",
+        "cs7",
+        "ec6",
+        "ec7",
+        "ec8",
+        "ec9",
+        "ell3",
+        "ell4",
+        "ell5",
+        "ell6",
+        "ell7",
+        "ell8",
+        "ez6",
+        "ez7",
+        "ez8",
+        "ez9",
+        "k1",
+        "k10_3",
+        "k10_4",
+        "k10_5",
+        "k10_6",
+        "k2c",
+        "k6_1",
+        "rs4",
+        "rs5",
+        "rs6",
+        "rs7"
+      ],
+      "first_minimal_obstruction": {
+        "exact_image": "0",
+        "minimality": "one source generator; no row expansion is needed",
+        "reason": "A1D2_R3 has positive A-contact order a=1, so V46's lower ideal kills Az_0",
+        "source_generator": "a1=Az_0 (stage-zero total coefficient)",
+        "stage": "TARGET_GENERATOR_UNIT_GATE_BEFORE_ROW_MODULE_MAP"
+      },
+      "image_of_a1": "0",
+      "image_of_a1_is_unit": false,
+      "image_of_c5_target": "phi(a1^628)=0^628=0",
+      "row_module_audit": {
+        "available_v47_literal_slots": {
+          "Phi1": 14,
+          "Phi2": 14,
+          "Phi4": 16
+        },
+        "serialized_25_row_module_map_present": false,
+        "status": "NOT_REACHED_AFTER_NONUNIT_A1_IMAGE"
+      },
+      "selection_reason": "smallest reviewed V47 terminal grade T_C2=16",
+      "source_D_a1_map_exists": false,
+      "source_localization": "none (ordinary C5 polynomial ring)",
+      "v46_map_direction": "total coefficient ring to shifted D1 coefficient ring"
+    }
+  ],
+  "source": {
+    "generators": [
+      "a1",
+      "aa0",
+      "aa1",
+      "aaa0",
+      "aaa1",
+      "ac3",
+      "ac4",
+      "ac5",
+      "ac6",
+      "ac7",
+      "ac8",
+      "az3",
+      "az4",
+      "az5",
+      "az6",
+      "az7",
+      "az8",
+      "cs1",
+      "cs2",
+      "cs3",
+      "cs4",
+      "cs5",
+      "cs6",
+      "cs7",
+      "e0",
+      "e1",
+      "ec3",
+      "ec4",
+      "ec5",
+      "ec6",
+      "ec7",
+      "ec8",
+      "ec9",
+      "ee0",
+      "ee1",
+      "ell1",
+      "ell2",
+      "ell3",
+      "ell4",
+      "ell5",
+      "ell6",
+      "ell7",
+      "ell8",
+      "ez3",
+      "ez4",
+      "ez5",
+      "ez6",
+      "ez7",
+      "ez8",
+      "ez9",
+      "k",
+      "k1",
+      "k10_3",
+      "k10_4",
+      "k10_5",
+      "k10_6",
+      "k2c",
+      "k6",
+      "k6_1",
+      "rs1",
+      "rs2",
+      "rs3",
+      "rs4",
+      "rs5",
+      "rs6",
+      "rs7",
+      "t"
+    ],
+    "positive_variable_count": 66,
+    "review_sha256": "0ab2a7ef8a2efc4a1aa911b0857b88a6e7fb137e02c1c87b5c40640cfa4e04ce",
+    "ring": "Q[t,X19_total]",
+    "ring_generator_count_including_t": 67,
+    "source_localizers": [],
+    "supported_row_count": 25,
+    "supported_rows_sha256": {
+      "Tg11_1": "3f30dfd8e9f530540f2cd098493e106c96ecb861c251b47ff17a54f5199cd30c",
+      "Tg11_2": "9af1cb3b34ce5c6d0f30503b6563c922d6b453d3d38e0c3ab0f4b87f0c2b5f39",
+      "Tg11_7": "58cbb13d75e8b0a0bbebd53f533107637bd0064736e50e6484e1044d5acc5414",
+      "Tg12_1": "b7c45cb41dec83210cc519653df7ea34aa71a1d39ffd5a3ce4c72ec0a8dff78a",
+      "Tg12_2": "af5d9cdb6a35d7ac8ef8acf35ffd4ef2eb771f1aa403418ab65370fcaca8e07b",
+      "Tg12_7": "d8e3d98566f68adfe8039c58c1562b67dc3d7ebf37f7ef17931d7f97c235da9a",
+      "Tg13_1": "208b2aa6bd8aa699a2bc4df17b026efcf787962acd193246d096e67ec06faf4b",
+      "Tg13_2": "0db8868dd7d8427632749144d7152aeeb7d989e89e7c7c41fd69c3e85d2f3a9c",
+      "Tg13_4": "1f5f6ca45f2b624658108753928bcc01689e578f111d8769e64349287521cb33",
+      "Tg13_5": "7b246f775c186d8c8b7c9bc91e5e35a790412bd37b76279f3955bc199a64b430",
+      "Tg13_7": "72d9e66dd97ec11c948661748a16bec417ba7e2eca2003a706816b2b24890c3d",
+      "Tg14_1": "7d94f1dccc97aceb703d4cd13070bca4a29f0beef9ff9c259aa8126def95ac67",
+      "Tg14_2": "8b3f9524c702adff149a9e7b7f62539025f28780f9c6e947843201214f545f89",
+      "Tg14_3": "d097a18c189fea4d83b29320b3cd4632616bff145567297e9e05a9e41c05ed48",
+      "Tg14_4": "54313b62f45d397987b995b4d436a7267293c8aafae2e46f5e5a02e84c44d1b8",
+      "Tg14_5": "7986f25a52f8ae35f8f314a603887975fcbabb59fa3f5519091faf573d0f95fe",
+      "Tg14_7": "bcf28c8a927e5700e7473be0bb9e718ab7b0115d0c1ba9a92101024061c72cdd",
+      "Tg15_3": "4131e81a19dfd1a0bd28bde426ae581506be5b33b2aa4e8ecd09259cc17d8942",
+      "Tg15_5": "31454a996a9392a692d253ad38e2cb87b93bbba32772c8f7128cb5ab970fda68",
+      "Tg15_7": "52b233312814cdcfca72b21544c1cc23c2eb58e92c7eea28113ddcd9c210344a",
+      "Tg16_5": "61f046518e0b92d42d224af962c222472b427d2be3fe95bea48152bba4702d16",
+      "Tg16_6": "129d4c53efa45b43ed60c58c4e3e08fc64e88cc525704a059d12381fdc1a3ba1",
+      "Tg17_5": "ae12018a1d789cd3f6af229ae8f44d694330ef3492499b4a47819098af4f3773",
+      "Tg18_6": "a4d2dd977333e8bcf98f8978d39124dccbfa74fcc6e232bd2918b9d973017b20",
+      "Tg19_7": "ed3b9f7387917fdb89b5326cf98021f7a12dfc9993d0bde4fab5529272e3124a"
+    },
+    "t_map_to_total_rho_ring": "t -> rho^2",
+    "target": "a1^628"
+  },
+  "source_pins_sha256": {
+    "c5_proof": "f8426bcf6bb4acbe4a2c12e1897588a7b8ce92bc02da84b7fc02d64d64c145e4",
+    "c5_result": "215a64b27e3ea43fd3238158a5e07e686d3de4c7d12ff5bde0e691f916938299",
+    "c5_review": "0ab2a7ef8a2efc4a1aa911b0857b88a6e7fb137e02c1c87b5c40640cfa4e04ce",
+    "endpoint_promotion": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da",
+    "endpoint_review": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3",
+    "preregistration": "967864722b7302f3f65de29503786e5827a073930f9faf6780bfa858df9fb911",
+    "v19_type_result": "1611dda533320ad9898c7b5b11720c66ed0dc3b51c89e6c51e5c6d8dc9c9ba55",
+    "v20_columns": "2e8ceeb42dcc41752f82fe1df866c28b33e289097b065bf965db25574230919c",
+    "v20_dag": "b9bd2e2ca1319ee3107a0f7cf4e1750386d60bb12213a3a970c4812823abdce6",
+    "v20_report": "9e304f58310fda008a3930b21bf0f49bc198322ee5dd98d805af04068ed5b3c8",
+    "v20_result": "a2147de95bc37e8adb629201e2b39b788b99df3d4586da54af7bd41f269a9f15",
+    "v46_schema": "796eb0847e7b0bb7972c2fd7b3db10bd2dcfd2fd85c5bbaa47e3a239f8b02673",
+    "v46_verifier": "8e49fc87ebeffb74e4c33f79ae248846c7de3ce4f4fb2ad07ac85751d8841ec7",
+    "v46r1_promotion": "b862e00f6ac80c3392cd365aad5d7001608e2a75fabfa4a76bb2f4c751e1f0fc",
+    "v46r1_review": "a2a6a5e204b78485509a314b71bd8ab877ea4cdd9dbad8f2af637b0d753614ac",
+    "v46r1_schema": "0f6bec4983bc8d682b64db5ac23f2d1bb64b8613e2812e95f2cab2b041494b44",
+    "v47_generated": "070d5a96627ac300f87791b9386e809de21b52317581b01731cde5dc55c7ecaa",
+    "v47_schema": "b1770cc0254098343c27600136f0ec1d95084623a4f48eed5216409106703ab2",
+    "v47r1_result": "6c16224703cf79f35073bc41ac8f5cd5d1b8fa24d756aa2891b80df2870c8270",
+    "v47r1_review": "ff76e8d32dfeda28c392cf0d975fde372ebcbed8e178db3a3e020cb823a27a67",
+    "v47r1_schema": "b895315acc241ca8542611cadefee0d4f29217f1ffecf8fbd3761b513b6aa908"
+  },
+  "status": "PASS-C5-TYPED-TRANSPORT-AUDIT-OBSTRUCTION",
+  "transport_status": "NO_TRANSPORT_CERTIFICATE",
+  "verdict": "V20R2 supplies no literal C5 ring/row-module map.  On the smallest reviewed V47 endpoint A1D2_R3, the exact forward contact map sends stage-zero a1 to 0; zero is not a unit in the nonzero localized target domain.  Therefore the C5 identity transports only to a tautological zero identity and gives no endpoint or terminal unit certificate."
+}

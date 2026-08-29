@@ -1,0 +1,17 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review complete. The report is at `xmodel/max12-812-order2-gate-t-drho-d1-a2-composition-hostile-review-fable5-20260827.md` (SHA-256 `518d4b250fa797d64d748017488f5f9daa3900b900f2e91000ca7124d08a220f`), and it is the only campaign artifact I wrote.
+
+**Verdicts:**
+
+| Item | Verdict |
+|---|---|
+| Ring/map (`p0=-2rho²`, localizer `D(p*k)=D(rho*k)`, shifted pairs) | **CONFIRMED** |
+| V28 grade-16 custody | **CONFIRMED** (strengthened to byte-level) |
+| Finite-jet completeness (Lemma CF-D1-A2) | **CONFIRMED** (strengthened) |
+| D1 `a=2` endpoint composition | **CONFIRMED** |
+| Replay adequacy | **GAP** |
+| Strategic scope / firewalls | **CONFIRMED** |
+
+I verified everything by independent derivation, not by trusting the producer or the frozen PASS banners. My own pure-`Fraction` verifier (102 s, in the report's Appendix A) rebuilt all seven general-rho total rows through grade 16 from the 569-tail JSON, matched all 2396 frozen grade-15 terms and all 467 frozen V28 grade-16 face terms byte-for-byte, then ran the decisive check the producer's replay never does: specializing to the contact locus of (0.1) shows **grades 0–14 vanish identically** (a free strengthening — the two-grade window is the complete row content) and the grade-15/16 supports contain **no discarded jet** (`ell2+`, `cs3+`, `az4+`, `k1`, `k2c`, `k10_*`, `k6_*`, targets — all absent). The renamed contact rows equal the frozen D1AC compiler's rows at every grade 0–16, and I re-derived the whole exclusion: unitriangular moving transform, the grade-15 dichotomy `L | A0·C0` (with the degenerate `a1D=0`/`c1D=0` cases killed at grade 15), and the residue `N16(root) = (3/2)·rho²·cv²·theta²` **identically in every free jet** on both decks — so the moving Hensel root (`ell1`), `eta=0` vs unit, and the load all cancel exactly as claimed. The upstream Opus5 refutation is consumed correctly: the vanished stage-zero `J1+J2` coordinates are never used as leading forms; only the shifted pairs carry the composition.
+
+The one defect is evidentiary, not mathematical: the desk replay checks hashes and transcriptions of its own tables, it ignores the Opus5 erratum's directive to pin the R1 wrapper and the seven `Tg15` poly bytes, and producer §8 overstates what it verifies. The report lists the ten missing pins with digests and a four-line repair (R1–R4, no math changes). The composition is not too strong — §8 of the report states the confirmed theorem verbatim with the strengthening — and I judge it **eligible for AUDIT.md promotion as one narrow filing after repairs R1–R2**: this is the first shifted-root contact composition to survive the review the standing Kummer AUDIT entry demanded. An exclusion of one contact remains exactly that; the coverage no-go countermodel checks out, and no `D(rho)` cover, ramified, Gate-T, G2-PSC, G2-BD, or JC2 upgrade is licensed.

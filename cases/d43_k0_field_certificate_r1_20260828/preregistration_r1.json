@@ -1,0 +1,178 @@
+{
+ "aws_route": {
+  "address_space_cap_bytes": 805306368,
+  "artifact_byte_cap": 524288,
+  "artifact_mode": "0444 after fsync; write-once, never overwritten",
+  "authorization_tag_key": "jc2-d43-k0-field-cert-authorization-sha256",
+  "cpuset": "0",
+  "dedicated_service_user": "jc2k0",
+  "effective_cores": 1,
+  "gp_binary_pin": "coordinator-supplied path and SHA-256; runner_r1 refuses an unpinned binary",
+  "gp_subprocess_timeout_seconds": 120,
+  "gp_version": "2.15.4",
+  "host_label": "r6b",
+  "host_label_tag_key": "jc2-host-label",
+  "host_swap_total_must_be_zero": true,
+  "instance_type_allowlist": [
+   "r6i.large",
+   "r6a.large",
+   "r6g.large",
+   "r6id.large",
+   "r6in.large",
+   "r6idn.large"
+  ],
+  "instance_type_pin_status": "PROVISIONAL: the exact type behind the label r6b is coordinator-supplied; the authorization must name one that equals the live IMDS value, and extending the allowlist is a source change and a new R-number",
+  "job_tag_key": "jc2-d43-k0-field-cert-job",
+  "launch_lease": "atomic mkdir of the run path; a pre-existing run path is DUPLICATE_LAUNCH and downgrades to NO_VERDICT, never a re-run",
+  "local_execution_mode": "none; absent a live IMDSv2 identity the supervisor exits without running any mathematics",
+  "memory_max_bytes": 1073741824,
+  "memory_swap_max_bytes": 0,
+  "run_byte_cap": 4194304,
+  "runner_wall_clock_cap_seconds": 240,
+  "schema": "D43-K0-FIELD-CERT-AWS-ROUTE-R1",
+  "systemd_dropins": "forbidden",
+  "tasks_max": 24,
+  "timeout_seconds": 300
+ },
+ "certified_claims": {
+  "E_CONDITIONAL_RATIO_THEOREM": {
+   "conditional_input": "the literal displayed E = (9+5*r3)*A1*W1^4 + (9-5*r3)*A2*W2^4, quoted from the reviewed bridge and NOT re-derived in this packet",
+   "if_E_is_corrected": "this layer must be recomputed; the unconditional layer is untouched",
+   "layers": [
+    "L5"
+   ],
+   "statement": "given that E, the ratio W1/W2 is K0-rational: q0 = u*(1+i)*(r3-1)/2 with u = A2/A1 and i = r3*(1+2*zeta42^14)/3 satisfies E by direct substitution, and the four branches q0*i^k are four distinct elements of K0, so t^4-c splits completely over K0 and no field extension is needed."
+  },
+  "K0_UNCONDITIONAL_THEOREM": {
+   "independent_of": [
+    "the displayed E",
+    "both modular pointbanks",
+    "PARI nffactor",
+    "any absolute primitive polynomial",
+    "any degree-432 or degree-144 irreducibility claim"
+   ],
+   "layers": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4"
+   ],
+   "statement": "K0 is a number field of degree exactly 432, Galois and non-abelian over Q; B = Q(zeta42,r3,h) = Q(zeta_168) of degree 48; [3+r3] and [3-r3] are independent in B*/(B*)^3, spanning (Z/3)^2; K0 has exactly one factor and only the idempotents 0 and 1; K0 is finite etale of rank 432 over Z[1/42]; the ramified rational primes are exactly {2,3,7} and 5 is unramified; both registered frames are degree-1 primes, both primes split completely with exactly 432 frames, and the registered p^2 frame is the unique Hensel lift."
+  }
+ },
+ "charged_theorem": {
+  "path": "xmodel/d43-k0-splitting-primary-research-opus5-20260828.md",
+  "sha256": "6d3d53c20387d324766daaf40eb502df42d9e2776c6ab6053041bc1f3dee1430"
+ },
+ "date_utc": "2026-08-28",
+ "emission_policy": {
+  "component_count": 1,
+  "components": [
+   "K0"
+  ],
+  "enforced_by": "runner_r1._forbidden_language_scan and runner_r1._component_policy over every emitted artifact",
+  "forbidden": "any product decomposition, any component list other than the single literal factor K0, any nontrivial primitive idempotent, any component count other than 1",
+  "idempotents": [
+   0,
+   1
+  ]
+ },
+ "engines": {
+  "count": 2,
+  "independence": "neither reads the other's output; they agree on 21 shared integer observables recomputed separately",
+  "pari_gp": {
+   "file": "k0_field_cert_r1.gp",
+   "gate_count": 79,
+   "observable_count": 21,
+   "version_pinned": "2.15.4"
+  },
+  "stdlib_python": {
+   "files": [
+    "k0_field_checker_r1.py",
+    "k0_algebra_r1.py"
+   ],
+   "gate_count": 36,
+   "uses_pari": false,
+   "uses_third_party": false
+  }
+ },
+ "forbidden_claims": [
+  "a D43 row certificate",
+  "a D43 point, template, or D25 result",
+  "raw-J existence or branch survival",
+  "source/parked presentation equivalence",
+  "a Z_p point, a characteristic-zero point, or a formal germ",
+  "an ambient polynomial Keller map",
+  "a JC2 counterexample",
+  "any tier above the coefficient algebra",
+  "a product decomposition of K0 or any component list other than [K0]",
+  "deriving fieldness or the degree from the two registered frames",
+  "deriving the ramified set from ETALE_LOCALIZATION_PRIMES or SOURCE_DENOMINATOR_PRIMES",
+  "carrying an E-branch index across frames"
+ ],
+ "gate_typing": {
+  "CONDITIONAL": "on the E-conditional path",
+  "CONDITIONAL_PIN": "the literal displayed E",
+  "CONSISTENCY": "would have refuted, cannot prove (the 432-frame count)",
+  "CORROBORATION": "feeds no theorem gate (the pointbank regression)",
+  "EXECUTED": "a finite computation with no theorem content beyond itself",
+  "HARNESS": "the census gate",
+  "PIN": "literal source data",
+  "SECOND_PROOF": "an independent route to the same unconditional statement",
+  "THEOREM": "on the unconditional path"
+ },
+ "mutation_policy": {
+  "census_rule": "deleting a gate is a FAIL, caught by CENSUS_COMPLETE and again by the runner's comparison against the sealed census hash",
+  "gate_unit_tests": 2,
+  "must_fail": 35,
+  "must_fail_rule": "each entry names the gate that has to report the failure; an unnamed failure elsewhere does not count",
+  "must_survive": 2,
+  "must_survive_rule": "a battery in which every mutation fails is testing its plumbing, not the certificate; M_CLASS_REP_EPS_SQUARED (eps -> eps^2) and M_CLASS_GENERATOR_BASIS (a different basis of the same Delta) must PASS"
+ },
+ "object_of_study": {
+  "algebra": "K0 = Q[zeta42,r3,A1,A2,h]/(Phi42(zeta42), r3^2-3, A1^3-(3+r3), A2^3-(3-r3), 2h^2-3)",
+  "basis_rank": 432,
+  "basis_shape": [
+   12,
+   2,
+   3,
+   3,
+   2
+  ],
+  "literal_phi42_pin": "cases/d43_common_integral_emitter.py PHI42 = (1,1,0,-1,-1,0,1,0,-1,-1,0,1,1)",
+  "literal_source_block": "cases/d43_exact_sparse_rows_v2_20260828/selected_rows_v2.py COEFFICIENT_ALGEBRA"
+ },
+ "producer": "Opus 5",
+ "producer_execution": {
+  "aws_launch": false,
+  "bounded_local_tests": "preflight P1-P7: 36/36 Python gates PASS, 35 MUST_FAIL + 2 MUST_SURVIVE + 2 gate unit tests PASS, GP static census 79/79 and 21/21 observables",
+  "cas_run": false,
+  "jc2_lean_accessed": false,
+  "network_accessed": false,
+  "pari_gp_not_run_reason": "no gp on the producer host; the GP layer is hand-reviewed and statically census-audited by preflight_r1.py, and is executed only on the registered AWS host",
+  "pari_gp_run": false
+ },
+ "required_before_execution": [
+  "a hostile source review by a DIFFERENT model with verdict PASS, hash-recorded in the authorization",
+  "a coordinator GO recorded as coordinator_go=true in the authorization",
+  "the coordinator-supplied gp binary path and SHA-256 (runner refuses an unpinned binary)",
+  "an instance type from the registered allowlist matching the live IMDS value exactly"
+ ],
+ "route": "D43-K0-FIELD-CERT-R1",
+ "schema": "d43-k0-field-certificate-prereg-r1",
+ "status": "R1_SOURCE_READY_AWS_NOT_AUTHORIZED",
+ "status_note": "This status field is immutable. Authorization lives in a separate coordinator record whose SHA-256 is the live EC2 tag value; the preregistration is never edited to authorize a launch.",
+ "stop_conditions": [
+  "any pinned source, pointbank, GP-script, census or observable hash drifts",
+  "the two engines disagree on any one of the 21 shared observables",
+  "any GP gate line prints 0, the GP gate count is not 79, the census line disagrees, or any line of GP output fails to parse",
+  "any Python gate fails or is missing from the executed census",
+  "any MUST_FAIL mutation does not fire its named gate, or any MUST_SURVIVE mutation is rejected",
+  "either gate unit test fails",
+  "any artifact would name a component other than K0, a component count other than 1, or a nontrivial idempotent",
+  "any live EC2 identity, tag, authorization, host, gp binary, service user, cgroup, cpuset, swap, memory, tasks, runtime, run-path, manifest, archive or terminal binding fails",
+  "the run path already exists, or any artifact path already exists",
+  "the unit exceeds 300 seconds, the runner exceeds 240 seconds, gp exceeds 120 seconds, any output exceeds its cap, or any swap is nonzero"
+ ]
+}

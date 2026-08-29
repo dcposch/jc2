@@ -1,0 +1,27 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/sigray-prop51-forced-puncture-shift-hostile-review-opus5-20260828-r1.md`.
+
+**Model:** Claude Opus 5 (`claude-opus-5`). **Verdict: REPAIR.**
+
+## What survived
+
+Theorem 3.1's six clauses all hold. I re-derived each from the PDF rather than the producer's prose: `deg p_{f-a,F_v} ≥ 1` at every rational `v` (St 3.18 / Prop 3.1(∗), pp. 14–18); condition (7) for `b_P` at every flag (St 3.15, p. 17); the bracket `ξ^{d+e-1}(d p q' − e p' q)`, verified symbolically over rational `ξ`-exponents against a full bivariate Jacobian; the slope law, descent, and attainment/rationality of the first zero (St 3.8/3.10, pp. 14–16). `b_P = g(P)` is forced and unique at finite punctures. No circularity — the proof never touches Section 7.
+
+## The three repairs
+
+**R1 (load-bearing).** The pole firewall is written as *consumer discipline*, but Notation 5.2 (p. 25) **defines** `T_{a,pole} := {F_P^* : P ∈ R̄_a\R_a} ∩ T_a^+` — quantifying over every puncture. The repair gives finite punctures an `F_P^*` they previously lacked, so non-leakage needs a proof or `Λ(F)` (19) and `td(f,g)` (20) over-count. I supply it: a sidedness lemma showing `F_P^* ∈ T_a^+ ⟺ g(P)=∞`, `∈ T_a^- ⟺ g(P)∈C`, never `T_a^0`. That is exactly the source's Statement 7.2 (p. 35), printed without proof.
+
+**R2.** The typing correction over-corrects. Since `F_P^*` is never on `T_a^0`, the sided towers can be kept; only the single flag `u_0` is untyped. Replacement text supplied.
+
+**R3.** §3's condition-(7) proof cites "the corrected value dictionary of Statement 3.15" but uses only clause (ii) — the fixed point of the audited (i)↔(iii) swap. The swap *is* load-bearing, in §4.
+
+Plus: the frozen checker **passes** with the bracket mutated to `d p q' **+** e p' q` — both call sites pass a constant `q`, so `q'=0` and the sign is never exercised. The sign is correct; the artifact just doesn't certify it.
+
+I separated eleven pre-existing Sigray defects from eight producer defects, and disclosed that my own lemma inherits the Prop 4.4 κ-enlargement debt already on record.
+
+## Hashes
+
+Report full-file SHA256: `dc549047acc39385e3c025a16108098edc82c827495dc53fea81437c81dd334a`
+Body seal (recomputable via `sed '$d' <file> | shasum -a 256`): `0566bc3a1ec19bf32cdd79ee6a382f5e27a37268e5b531917cfd6b163ff7d2f3`
+
+All three frozen inputs still match, as does the source PDF. I created only the report; `ladder/SIGRAY-AUDIT.md` was already dirty before this session.

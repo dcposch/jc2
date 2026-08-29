@@ -1,0 +1,17 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+## Verdict: **CONFIRMED**
+
+Report at `xmodel/max12-812-order2-p0-total-rees-j2-a0-cubic-certificate-hostile-review-opus5-20260827.md` (sha256 `1ddb4fcb…`). That file is my only write; canonical files, case inputs, and `jc2-lean` untouched.
+
+**The identity is exactly true.** Coefficientwise residual over `Q` is literally 0 terms; 800 random points across `p = 32003, 65521, 1000003, 2^31−1` give 0 mismatches. It is discriminating: all 21 coefficient perturbations, all 7 term deletions, 5 mutations of the `1+3q²ρ²` factor, 6 wrong-row substitutions, and 4 structural swaps produce nonzero residuals (each `+1` mutation is caught at 50/50 points in `F_65521`).
+
+**Provenance and typing hold.** All 42 source rows, 84 chart files, 3 input manifests, and both lanes' `EVIDENCE.sha256` rehash correctly; V23R1's `RESULT.json` matches V24's pin. I re-derived the `J1=0`, `a1=a0*qa1` substitution independently and reproduced all 84 chart files, then built the **complete explicit lift in the unspecialized ring** — `H` (31 terms) for the bilinear plus polynomial `L_rs, L_cs, L_c0, L_c1` — so no divided row, no rational-function cofactor, and no unlisted row remains. `s=1`: no localizer, no residual `V(s)`.
+
+**Two defects, both in the evidence package rather than the identity:**
+
+- **V24's own lift is `rho`-localized** (cleared denominator `ρ⁶(3q²ρ²+1)`, `rho`-constant term 0) and fails V24's own preregistered rule. Its ring is `(0,qa1,rho)` — `rho` is inverted, forced by the compiler rejecting nonpositive `wp` weights. The displayed identity is *not* a rewriting of it. `LIFT.txt` must not be cited as the certificate.
+- **The negative control is vacuous:** `a0^2` has weighted degree 10 while every generator is 11–15, so `reduce` can never change it. The `a1` lane is likewise vacuous (pure `3ρ¹²`, no unit factor).
+
+**Beyond the brief:** checking "strongest theorem safe to promote" led me to Fable5's unreviewed `A0-CERT-P`. I verified that §2b — and only §2b — to the same standard: pure `a0^3` from 13 rows, homogeneity ledger 13/13, lift-back with 0 monomials outside `(rs,cs,c0,c1)`, 26 mutations all nonzero, two finite fields clean. That upgrades the conclusion from "empty `ρ=0` fibre" to **the whole `T-a0` chart is the zero ring**. It is the one to promote; the six-row identity is its human-checkable face.
+
+Still open: the ordered `a1` stratum, `V(J1+J2)`, the `k`-localizer residuals and off-family fan, deck/square, decisive-grade bound — and the upstream total-emitter row-provenance debt the theorem is conditional on.

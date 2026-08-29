@@ -1,0 +1,10 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the invalidation note, freeze manifest, and related artifacts so I can rehash them and review the negative result independently.Next I’ll rehash the freeze and v3/v4 evidence, then inspect the producer so I can check nodes 170, 619, and 642 independently.Hashes match the freeze. Next I’ll inspect the producer, v3/v4 source manifests, and how nodes 170, 619, and 642 are built.I’ll hash the C1/V42/V37 pin chain and rebuild the DAG locally so I can inspect nodes 170, 619, and 642 without trusting the AWS transcript.The DAG reconstruction matches the charged hashes. I’ll write the single hostile-review report with the custody table, node semantics, and verdict.The negative result is confirmed. Independent replay of the freeze-pinned producer, not the AWS transcript, is what decides it.
+
+The right `a1^57` certificate still carries a nonzero `assume:e1` multiplier, interned as root 642 = `a1^3 * Z * K`. Node 170 (`Z`) expands over `Q` to 24,429 terms with hash `3c4dcc5f62f3c501f08581369525ca088b15a4ec3d3fa6f56251da288e229a72`. Node 619 is the exponent-three geometric factor `K = a1^36 + a1^18*m*ell1 + (m*ell1)^2`, and `K|_{ell1=0} = a1^36`. The strict `CombineBranches(e1,G)` guard is right to reject the split.
+
+That withdraws only uncorrected `M=104` and the conditional converter exponent 628. V42 radical closure and V43G4’s `5*t^6*a1^4` identity are untouched. The displayed rebase `e1=G+4*a1*ell1`, `ee0=Q0-4*aa0*ell1` is an exact polynomial identity and a successor sketch, not a certificate.
+
+Report: `xmodel/max12-812-order2-p0-total-rees-j2-a1-constructive-cascade-invalidation-v43c2-hostile-review-grok-20260827.md`
+
+GROK_CONFIRMED_INVALIDATION

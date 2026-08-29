@@ -1,0 +1,50 @@
+# AWS launch metadata
+
+Date: 2026-08-26
+
+Frozen source manifest:
+
+```text
+FREEZE.sha256
+SHA-256 9a4f6014f8df125fcfaabad9f659991648e910f53f004a98d1065dd9b969b092
+```
+
+Box03:
+
+```text
+tag=max12_812_order2_p0_odd_row5_g14_replay_20260826T103226Z_Box03
+remote_job=/home/ubuntu/jobs/max12_812_order2_p0_odd_row5_g14_replay_20260826T103226Z_Box03/source/cases/max12_812_order2_p0_odd_grade14_unit_replay_20260826/aws_Box03
+outer_pid=204503
+rc=0
+validator=PASS_P0_ODD_ROW5_G14_REPLAY
+elapsed=0.30s
+max_rss_kib=19604
+result_json_sha256=7ddb31adb16de20e3e73b419fd21747f7e7d6b9900ec48ce06827bdbc7f8604e
+stdout_sha256=e38b718af198f955a95f8b72e1806d54a533f3f90e33ff1fe306546f05116a43
+validation_sha256=25aeed0d70a2b4f9f8739063019c1b45641f21972659cbfc6272c6a8b88dd2af
+compiled_manifest_sha256=41c9ff3537cfb60e2b2a2b0682c30d26c11a509d3cda8fe16e0c03e9ff3ad58c
+freeze_check_sha256=b9ebf7ec2f81e1774fff2d00452f9a958b8afdb0a3b09fcca77b6d66b2f4e77f
+```
+
+r6d:
+
+```text
+tag=max12_812_order2_p0_odd_row5_g14_replay_20260826T103226Z_r6d
+remote_job=/home/ubuntu/jobs/max12_812_order2_p0_odd_row5_g14_replay_20260826T103226Z_r6d/source/cases/max12_812_order2_p0_odd_grade14_unit_replay_20260826/aws_r6d
+outer_pid=267148
+rc=0
+validator=PASS_P0_ODD_ROW5_G14_REPLAY
+elapsed=0.30s
+max_rss_kib=19404
+result_json_sha256=c6becf1776d900aaeca7ff92cc1de632ed464d4290d9ba7b11bf712ad225382b
+stdout_sha256=3f418aab7b0c7918ee0e81e6412b79ca75e93ceb817f29f696d81c294d2b3f20
+validation_sha256=25aeed0d70a2b4f9f8739063019c1b45641f21972659cbfc6272c6a8b88dd2af
+compiled_manifest_sha256=09bbe029fce210522aa85e8955050ac2ed266dad1b59b0ba392f1dfb20ed9327
+freeze_check_sha256=b9ebf7ec2f81e1774fff2d00452f9a958b8afdb0a3b09fcca77b6d66b2f4e77f
+```
+
+The result JSON hashes differ only because the registered lane tag is part
+of the payload.  Both lanes report the same exact polynomial, 89 checked
+tail terms, 42 nonzero individual grade-14 contributions, and the same two
+nonzero modular control coefficients.
+

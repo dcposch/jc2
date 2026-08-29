@@ -1,0 +1,14 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+The cross-review is complete and written to `xmodel/ideation-20260827T0635Z-fable5-crossreview.md` (SHA-256 `163f0aee46efbb127ef07eafa9a68e28f0defc8df3f8d4c1e2d770670c4cda2d`), the only campaign artifact touched. All seven input hashes verified before reading.
+
+Beyond document comparison, I ran a hash-pinned exact desk replay (pinned V23 parser + V28/V30/V33/V35 exports, pure `Fraction` arithmetic, seconds) that materially changed several verdicts:
+
+**Confirmed by replay:**
+- **Opus5's Theorem L is exactly right**: 88 minimal supports (11/54/23), minimum hitting set exactly 22 by my own exhaustive branch-and-bound, `L43` kills all 51 rows with `k` free, all 22 maximality witnesses verbatim, and the `rho`-free grades 10–15 statement holds.
+- **Opus5's Theorem A cascade replays line by line**, including the Case B contradiction through `Tg16_5 → (27/2)cs2³ell1⁴`. One attribution slip: the A2 relation `k·rs1²=(96/5)a1²` comes from `Tg13_2`, not `Tg15_4`. No hidden divisions beyond the declared `a1`, `ell1`, and 2/3-powers (char 5 only enters A2).
+- **All four V37 nonmemberships are now independently verified in full** via a complete divisor-driven check that each frozen dual annihilates every fixed-weight product — which also verifies my own blind shape-floor lemma end-to-end (nine shapes with `i≥1`, `5i+4j≤19` excluded forever; `a1^4` through grade 19 only; one cosmetic fix: the V34 representative has `a1=192`, not 48).
+- The Sol symbol report's entire census (newcomer table, rank-2 symbol matrix, Bezout identities, compatibility term counts including the 587) replays exactly.
+
+**Refuted:** Grok's Card B(iii) rewrite is equivalent to asserting `φ19 ∈ I_19`, which is self-refuting — `λ(φ19)=7855/6912≠0` while `λ` kills the ideal slice (numerically `λ(RHS)=−943/6912≠1`). Grok's V34-point `φ19≠0` negative control is also broken (`φ19` vanishes there identically). The surrounding dual-transport machinery survives with two repairs.
+
+The report delivers the 28-row claim matrix, per-model unique contributions, three merged cards (`T-A1-STRUCTURE-FIRST`, `RECEIVER-CLOSURE-FIRST` around the K00 report's `H_K00` incidence, `GATE-AND-SECTION` tooling), launch/hold/stop decisions (noting the post-snapshot V38/V39 cases already exist — harvest, don't relaunch), and the Opus5 verdict: yes, significant unique capability this round — the highest correctness-adjusted gain of the four blind lanes, with both flagship theorems now second-model confirmed.

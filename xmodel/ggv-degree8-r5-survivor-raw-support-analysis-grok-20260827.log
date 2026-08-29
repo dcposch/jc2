@@ -1,0 +1,23 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start from the pinned R5 and D3 freeze artifacts, then reconstruct the degree-eight raw support independently before attacking branches P and Q.Pinned files and freeze hashes are next; I’ll reconstruct D3 raw support from those rather than from any chart slogan.I’ll pull the D3 raw slots, R5 formulas, and recurrence identities next so the support reconstruction isn’t inferred from slogans.I’ll reconstruct the 2S/3S lattice from D3’s enumerator and independently check the R5 identities before touching P or Q.I’ll pull the R3/R4 mode identities and any prior raw-support work so the P/Q analysis is derived, not restated.Support windows and R5 identities are next: I’ll compute them independently, then test whether raw slots can carry the P/Q modes.The D22 constant term closes on a 2-jet bilinear system; I’ll solve that recurrence next and independently recheck the R5 identities.Sequential exact linear algebra on the raw windows is small enough to run; I’ll solve `D_n=0` weight-by-weight for concrete P and Q fixtures.I have the lemmas and the failed attempts; next I’ll write the report to the required path and touch nothing else.The report is at `xmodel/ggv-degree8-r5-survivor-raw-support-analysis-grok-20260827.md`. R5 was used only as a named provisional premise; every formula taken from it was rederived.
+
+**Raw support (from the D3 lattice, not a chart slogan).** Through weight 22 there are 141 `F` slots and 301 `G` slots. `F_n=0` for all `n≥15` and `G_n=0` for all `n≥22`, so `D_22=1` has no `G_22` handle. It is the mixed bilinear form on positive-weight slots, with constant term
+
+```text
+D_22[X^0] = F_11[X^1] G_11[X^0] - F_7[X^0] G_15[X^1].
+```
+
+**First unrepresentable rational mode** (leading term vs the raw `G_n` window):
+
+- **Q** (generic odd `delta`): weight **16**, leading `H^{-1}` against `span{X^2,…,X^8}`.
+- **P** (`H=A^2`): weight **14**, leading `A^{-1}` against `span{X^1,…,X^{10}}`.
+
+The extra even `P` modes at `n=2,6,10` are polynomial and fit the raw windows. The weight-22 kernel `A^{-5}` is not a raw slot (`G_22` is empty); it can only shift the rational residual in `K(X)`.
+
+**Finite linear object.** For `n=15,…,21`, `L_n(G)=(12-n)(H^2)'G-8H^2 G'` is injective on the raw `G_n` window, with image in `(H)`. First cokernel incidence is at `n=15` (coker dimension 16). Stop rule: first miss of `im(L_n)`, or `mixed_22≠1`.
+
+**Negative fixture (exact).** The leading-edge jet, and the same jet plus any polynomial modes of weights `≤12`, gives `D_n=0` through 21 and `D_22=0`. Occupying the weight-11 kernel produces `D_22` of degree at least 9 and still misses the constant `1`.
+
+**Not obtained.** No exact `D_22=1` fixture on either branch; neither branch is excluded. The `Q` condition `4a_0+D a_2=0` is after an affine change that does not preserve D3 windows; the raw-chart form is `A∈im N_B` via an explicit `4×3` matrix.
+
+No GGV landing, family exclusion, `G2-PSC`, `G2-BD`, cofinality, counterexample, or JC2 claim.

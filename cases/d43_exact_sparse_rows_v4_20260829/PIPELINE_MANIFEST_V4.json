@@ -1,0 +1,201 @@
+{
+ "D": 43,
+ "absolute_depth": 75,
+ "authorization": {
+  "build_independent_sides": true,
+  "conditional_band20_then_all184": true,
+  "solve": false
+ },
+ "aws": {
+  "expected_account_id": "",
+  "expected_hostname": "",
+  "expected_instance_id": "",
+  "expected_instance_type": "",
+  "expected_nproc": 0,
+  "expected_region": "",
+  "registration_status": "UNREGISTERED_REVIEW_PACKET_DO_NOT_LAUNCH",
+  "required_tag_key": "",
+  "required_tag_value": ""
+ },
+ "claim_boundary": {
+  "JC2_counterexample": null,
+  "Keller_map": null,
+  "all_depth_compatibility": null,
+  "banked_NF_presentation_equivalence": null,
+  "displayed_E5_E6_unit_extension": "E plus one W1*W2 unit equation, with mandatory literal HM/s1F reconstruction replay; not imposed by row emission",
+  "exact_a00pp_raw_J_point": null,
+  "exact_a00pp_row_emitter": null,
+  "full_residue_A_template_point": null
+ },
+ "coefficient_algebra": {
+  "EB": "ELIMINATED_BEFORE_A_B_JOIN_AND_REFUSED_IF_SURVIVING",
+  "base": "Q",
+  "basis_generators": [
+   "zeta42",
+   "r3",
+   "A1",
+   "A2",
+   "h"
+  ],
+  "basis_rank": 432,
+  "basis_shape": [
+   12,
+   2,
+   3,
+   3,
+   2
+  ],
+  "field_claim": null,
+  "literal_a00pp_substitution": [
+   "HW1=h*W1",
+   "HW2=h*W2"
+  ],
+  "polynomial_coordinates": [
+   "W1",
+   "W2"
+  ],
+  "relations": [
+   "Phi42(zeta42)=0",
+   "r3^2=3",
+   "A1^3=3+r3",
+   "A2^3=3-r3",
+   "2*h^2=3"
+  ]
+ },
+ "coefficient_algebra_sha256": "a06f7c1bb75f852819b50a2ecf9e362f8209da0fe9eb71af76f66c50a6a0fcaf",
+ "containment": {
+  "boundary": "ONE_WHOLE_JOB_SCOPE_FOR_SUPERVISOR_MONITOR_SIDES_EMITTER_AND_DESCENDANTS",
+  "gate_provenance": "TERMINAL_RECORDS_PER_GATE_EVIDENCE_SOURCE;_CGROUP_GATE_IS_NOT_APPLICABLE_IN_SETSID_PGID_FALLBACK_NEVER_A_COPIED_TRUE;_SUPERVISOR_IS_SETSID_SESSION_LEADER_IN_BOTH_MODES_SO_THE_PGID_CENSUS_PARAMETER_IS_ALWAYS_REAL",
+  "job_tag_environment_variable": "JOB_TAG",
+  "modes": [
+   "systemd_scope",
+   "setsid_pgid"
+  ],
+  "monitor": "STICKY_CONTINUOUS_HOST_AND_CGROUP_TELEMETRY_HEARTBEAT_AND_WRITE_ONCE_VIOLATION_LATCHES",
+  "peer_cancellation": "FIRST_SIDE_FAILURE_CANCELS_AND_REAPS_PEER",
+  "pgid_fallback": "EXACT_SESSION_LEADER_IDENTITY_JOB_TAG_CENSUS_BOUNDED_REAP_EQUIVALENT_FAIL_CLOSED_TERMINAL_INPUTS",
+  "systemd_scope_properties": {
+   "MemoryMax": 962072674304,
+   "MemorySwapMax": 0,
+   "TasksMax": 512
+  }
+ },
+ "expected_registry_sha256": "b3fce1ef76e01c4698b97f7e4cc3562f4da3cd022b301ddde15b1ae086298ce6",
+ "input_sha256": {
+  "cases/d43_full_certificate_p105337.json": "6e50a00f651b4e6ea0a5666d7507c499ff86e86d7eed9c0c17cd7add247eec7c",
+  "cases/d43_full_certificate_p105673.json": "3c2bef3987cb4644c49f992cacbe36f688ecf97cfcdbe32f83267f749b1f58d9",
+  "directionb_tails_D21.pkl": "b4ba8dfcd9755fb3201780cd97c1d2ef38bd26d2d1b023521a0e62a3d6db169e"
+ },
+ "lease": {
+  "host_lock_default_path": "$HOME/.jc2_d43_a00pp_v3_host.lock",
+  "mechanism": "ATOMIC_FRESH_JOB_NAMESPACE_MKDIR_PLUS_NONBLOCKING_KERNEL_FLOCK_HELD_FOR_JOB_LIFETIME",
+  "nonce_hex_length": 64,
+  "record": "RUN_LEASE.json"
+ },
+ "operational_source_list": "cases/d43_exact_sparse_rows_v4_20260829/OPERATIONAL_SOURCE_V4.sha256",
+ "operational_source_list_sha256": "11208fc9b2b5d88612a30971d0432dc235d48555417888d7ae3de468b5474613",
+ "preflight_receipt_max_age_seconds": 259200,
+ "required_operational_paths": [
+  "cases/d43_common_integral_emitter.py",
+  "cases/d43_exact_sparse_rows_20260828/selected_rows.py",
+  "cases/d43_exact_sparse_rows_v4_20260829/aws_preflight_v4.py",
+  "cases/d43_exact_sparse_rows_v4_20260829/job_contract_v4.py",
+  "cases/d43_exact_sparse_rows_v4_20260829/run_conditional_pipeline_aws_v4.sh",
+  "cases/d43_exact_sparse_rows_v4_20260829/selected_rows_v4.py",
+  "cases/d43_full_certificate_p105337.json",
+  "cases/d43_full_certificate_p105673.json",
+  "cases/directionb_strike.py",
+  "cases/r1_experiment.py",
+  "directionb_tails_D21.pkl",
+  "xmodel/d43-e5-e6-elimination-bridge-gpt56-20260828.md",
+  "xmodel/d43-exact-sparse-rows-hostile-review-gpt56-20260828.md",
+  "xmodel/d43-exact-sparse-rows-v2-hostile-review-gpt56-20260828.md",
+  "xmodel/d43-exact-sparse-rows-v3-hostile-review-opus5-20260829.md",
+  "xmodel/d43-exact-sparse-rows-v3-repair-fable5-20260828.md",
+  "xmodel/d43-exact-sparse-source-opus5-hostile-audit-20260828.md",
+  "xmodel/d43-raw-source-template-scope-fable5-audit-20260828.md"
+ ],
+ "resource_contract": {
+  "conditional_emitter_address_space_bytes": 549755813888,
+  "cpu_f": "2",
+  "cpu_g": "3",
+  "file_size_bytes": 137438953472,
+  "kill_after_seconds": 60,
+  "maximum_memory_total_kib": 1073741824,
+  "memory_swap_max_bytes": 0,
+  "minimum_disk_free_bytes": 107374182400,
+  "minimum_memory_available_kib": 838860800,
+  "monitor_interval_seconds": 5,
+  "side_address_space_bytes": 412316860416,
+  "timeout_seconds": 86400,
+  "whole_job_memory_max_bytes": 962072674304,
+  "whole_job_pids_max": 512,
+  "whole_job_timeout_seconds": 259200,
+  "zero_swap_required": true
+ },
+ "revision_provenance": {
+  "hostile_review_sha256": "283d47df4f55a0e83fbf1758cc8ac71fbe5ee8549dcdb1c3a6838c8ccc42b21e",
+  "opus5_audit_sha256": "456edb3ad982da10c13ebe6f41e9ebdf7e7124e1ae4ef76363f253626ad5fea0",
+  "raw_template_scope_audit_sha256": "69db2cd88f9f309ac047fd858134e19735f238d5c6b8d3a346cc24f3f554eda7",
+  "repair_assignment_sha256": "27d96f092e7beafd1061dbd1690463a1b36f44d4a5102607c5f56725da393b19",
+  "template_bridge_sha256": "e1b99600b01f91f7b95df4f7f969481efa1e7b1ee377e83156f3f6b6a8e3c863",
+  "v1_packet_source_seal_sha256": "9b851ede56986fe3154cf962f336fda6185fb7a4a00d07888c93e9b78a06848d",
+  "v2_hostile_review_sha256": "4f6f6c90e0526ab07591e2ec6a97f475e477b534cb6991085764cd693a99020d",
+  "v2_packet_source_seal_sha256": "83635fe45e6f3a9e19d3c93ef963de769f2721653a7bb5333002dd100172fa73",
+  "v3_hostile_review_opus5_body_sha256": "1b90552abddb14bf5946a2e85f0a5ac26dae05d3049ef578db507c766862bd82",
+  "v3_hostile_review_opus5_sha256": "6e01e5d7e7852d094559ab57cd7a256c41390fca99e38a6c55fbea8f12209bd9",
+  "v3_packet_source_seal_sha256": "5423bd88328c338c54072b056d3f64251dc57de6f5112646f9d157f991ab5271",
+  "v3_repair_report_fable5_sha256": "5759cfe81e21e7e4d3967b96152eaed5e789ed0498b039804b17c30853616b75"
+ },
+ "schema": "jc2.d43.a00pp-exact-source-manifest.v4",
+ "scope": {
+  "alpha": 0,
+  "beta": 0,
+  "displayed_template_bridge": "E_PLUS_ONE_W1W2_UNIT_WITH_LITERAL_E5_E6_REPLAY",
+  "inhomogeneous_row20_plus42": true,
+  "pin42": true,
+  "pure_y": true,
+  "solve": false
+ },
+ "source_archive": {
+  "member_census_manifest": "cases/d43_exact_sparse_rows_v4_20260829/SOURCE_ARCHIVE_MANIFEST_V4.sha256",
+  "outer_sha256_pinning": "LITERAL_IN_EXTERNAL_LAUNCHER_PLUS_PACKET_SEAL_AND_REGISTRATION_NOT_IN_THIS_MANIFEST_TO_AVOID_SELF_REFERENCE",
+  "path": "cases/d43_exact_sparse_rows_v4_20260829/d43_v4_source.tar.gz"
+ },
+ "status": "V4_REPAIRED_LAUNCH_NOT_AUTHORIZED",
+ "support": [
+  "tf1_47",
+  "tf1_52",
+  "tf1_57",
+  "tf1_62",
+  "tf1_67",
+  "tf1_72",
+  "tf2_47",
+  "tf2_52",
+  "tf2_57",
+  "tf2_62",
+  "tf2_67",
+  "tf2_72",
+  "tg1_47",
+  "tg1_52",
+  "tg1_57",
+  "tg2_47",
+  "tg2_52",
+  "tg2_57",
+  "tg01_52",
+  "tg01_62",
+  "tg02_52",
+  "tg02_62"
+ ],
+ "support_sha256": "6d050cb75c561305e5676e57f987322cf71fce38e56766644c3250be4af2c970",
+ "target_registry_sha256": "25603a9e25d5926b0617ada9af61e9ef408977587abb29074d6d87c544825651",
+ "terminal": {
+  "candidate_binding": "TERMINAL_REHASHES_EVERY_NAMED_ARTIFACT_AND_CROSSBINDS_EVERY_RECEIPT_DIGEST;_NO_COPIED_DIGEST_WITHOUT_RECORDED_PROVENANCE",
+  "earlier_positive_authorities": "NONE_ALL_STAGE_ARTIFACTS_CARRY_terminal_authority_false",
+  "no_verdict_prefix": "NO_VERDICT_",
+  "positive_status": "EXACT_A00PP_184_RAW_J_ROWS_EMITTED_NO_SOLVE",
+  "post_boundary_fault_object": "TERMINAL_POSTMORTEM_FAULT.json_VOIDS_A_POSITIVE_TERMINAL_AND_FORCES_NONZERO_LAUNCHER_EXIT;_WRITTEN_BESIDE_THE_TERMINAL_OUTSIDE_THE_SEALED_TERMINAL_ARCHIVE_AND_NEVER_OVERWRITTEN",
+  "published_by": "SUPERVISOR_ATOMIC_RENAME_AS_LAST_SUCCESSFUL_ACTION_AFTER_ALL_PAYLOAD_CUSTODY_ARCHIVE_GATES",
+  "single_authority": "TERMINAL.json"
+ }
+}

@@ -17,35 +17,69 @@ run_bounded() {
 }
 
 echo "=== REPOSITORY ==="
-git -C "$repo_root" status --short --branch | sed 's/^/  /'
-
-echo "=== LOCAL LANES ==="
-local_lanes=$(pgrep -fl '[c]odex exec|[g]rok (.* )?(-p|--prompt-file)|[c]laude -p|[d]irectionb_compress|[f]leet_fc1' 2>/dev/null || true)
-if [ -n "$local_lanes" ]; then
-  printf '%s\n' "$local_lanes" | sed 's/^/  /'
-else
-  echo "  (none)"
-fi
+repo_status=$(git -C "$repo_root" status --short --branch -- . ':(exclude)jc2-lean')
+printf '%s\n' "$repo_status" | awk '
+  NR == 1 { print "  " $0; next }
+  {
+    code=substr($0,1,2)
+    if (code == "??") untracked++
+    else {
+      tracked++
+      if (code ~ /M/) modified++
+      if (code ~ /A/) added++
+      if (code ~ /D/) deleted++
+    }
+  }
+  END {
+    printf "  tracked_changes=%d modified=%d added=%d deleted=%d untracked_entries=%d\n",
+           tracked, modified, added, deleted, untracked
+  }
+'
 
 echo "=== REGISTERED RUNS ==="
-run_found=0
-for run_file in "$repo_root"/xmodel/*.run; do
+run_total=0
+run_done=0
+run_recovered=0
+run_failed=0
+run_stale=0
+run_active=0
+local_host=$(hostname)
+for run_file in "$repo_root"/xmodel/*.run "$repo_root"/xmodel/*.run.v2; do
   [ -e "$run_file" ] || continue
-  run_found=1
+  run_total=$((run_total + 1))
   run_tag=$(awk -F= '$1=="tag" {print substr($0,index($0,"=")+1); exit}' "$run_file")
   run_pid=$(awk -F= '$1=="pid" {print $2; exit}' "$run_file")
   run_host=$(awk -F= '$1=="host" {print substr($0,index($0,"=")+1); exit}' "$run_file")
   run_final=$(awk -F= '$1=="final_status" {print $2; exit}' "$run_file")
   if [ -n "$run_final" ]; then
-    echo "  $run_tag: $run_final"
-  elif [ -d "$repo_root/.lane-locks/$run_tag" ] && \
-       [ "$run_host" = "$(hostname)" ] && kill -0 "$run_pid" 2>/dev/null; then
-    echo "  $run_tag: RUNNING pid=$run_pid"
+    case "$run_final" in
+      DONE|done*|exit0) run_done=$((run_done + 1)) ;;
+      RECOVERED_REPORT) run_recovered=$((run_recovered + 1)) ;;
+      *) run_failed=$((run_failed + 1)) ;;
+    esac
   else
-    echo "  $run_tag: STALE-RUNNING pid=$run_pid host=$run_host"
+    run_command=
+    if [ "$run_host" = "$local_host" ] && kill -0 "$run_pid" 2>/dev/null; then
+      run_command=$(ps -o command= -p "$run_pid" 2>/dev/null || true)
+    fi
+    case "$run_command" in
+      *"ops/lane.sh "*"$run_tag"*)
+        run_active=$((run_active + 1))
+        if [ -d "$repo_root/.lane-locks/$run_tag" ]; then
+          echo "  $run_tag: RUNNING pid=$run_pid"
+        else
+          echo "  $run_tag: RUNNING pid=$run_pid (lock missing; exact process matched)"
+        fi
+        ;;
+      *) run_stale=$((run_stale + 1)) ;;
+    esac
   fi
 done
-[ "$run_found" -eq 1 ] || echo "  (none)"
+if [ "$run_total" -eq 0 ]; then
+  echo "  (none)"
+else
+  echo "  summary total=$run_total active=$run_active done=$run_done recovered_reports=$run_recovered failed_or_cancelled=$run_failed stale=$run_stale"
+fi
 
 echo "=== LANE MARKERS (last 5) ==="
 if [ -s "$repo_root/pilot-local.log" ]; then
@@ -100,7 +134,7 @@ fi
 
 echo "=== NEWEST LIVE STATE ==="
 live_state=$(awk '
-  /^## .* LIVE STATE$/ { block=""; capture=1; found=1; next }
+  /^## .* LIVE STATE([[:space:]]|$)/ { block=""; capture=1; found=1; next }
   capture && /^## / { capture=0 }
   capture { block = block $0 ORS }
   END { if (found) printf "%s", block }

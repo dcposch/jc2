@@ -1,0 +1,178 @@
+{
+  "claims_not_made": [
+    "the root-sign packets extend to E22=1",
+    "a polynomial Keller pair or counterexample",
+    "a global GGV-to-Eggers-Wall functor",
+    "G2-PSC, G2-BD, or JC2"
+  ],
+  "cusp_map": {
+    "E2_effect": "U1(c)=0 at every simple H-root",
+    "first_determinant_carrier": "6*H'(c)*V8(c)*U14(c)=1",
+    "first_raw_map": "U1(c)=F1(c), V1(c)=(3/2)F1(c), W1(c)=0",
+    "global_lift_status": "GAP: the H-multiple needs higher-u/global polynomial correction",
+    "normal_form": "F=u^2+U(t), G=u^3+V(t)u+W(t), u=H(X)",
+    "raw_global_E22": "1+(13/12)H",
+    "rootwise_example": "U14=X, V8=1/48",
+    "rootwise_remainder_mod_H": [
+      "1"
+    ]
+  },
+  "face": {
+    "H": "X^8-1",
+    "native_(4,-1)_faces": [
+      "B^2 at weight 8",
+      "B^3 at weight 12"
+    ],
+    "y_edge": [
+      "F_0=H^2",
+      "G_0=H^3"
+    ]
+  },
+  "fibre_ode": {
+    "generic_square_edge": "ord_t(F_X)=4, hence g is finite and g-g(0)=O(t^6)",
+    "on_F=a*t^8": "d(t^-12*G)/dt=-t^9/F_X when E=t^22",
+    "pole_mutation": "PINNED-FINITE for generic tagged fibres"
+  },
+  "jacobian": {
+    "E": "12*F_X*G-8*F*G_X-t*(F_X*G_t-F_t*G_X)",
+    "E1_factor": "2*H*(11*H'*(G1-(3/2)H*F1)-4*H*(G1-(3/2)H*F1)')",
+    "E2_mod_H_after_E1": "-(21/2)*H'*F1^2 mod H",
+    "E2_solution_after_F1=H*a": "G2=(3/2)*H*F2+(3/8)*H*a^2",
+    "consequence": "E1=E2=0 forces H|F1 and the F^(3/2) second coefficient",
+    "coordinate_identity": "Jac(f,g)=t^-22*E",
+    "recurrence": "E_n=sum_(i+j=n)((12-j)F_i'G_j+(i-8)F_iG_j')",
+    "squarefree_H": true
+  },
+  "naive_first_jet": {
+    "E1": "zero",
+    "E2_mod_H": {
+      "13": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-16464",
+        "30576",
+        "-14196"
+      ],
+      "14": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-16464",
+        "32928",
+        "-16464"
+      ]
+    },
+    "F1_lambda": "-14*X^15+lambda",
+    "G1_lambda": "(3/2)*H*F1_lambda",
+    "verdict": "NONEXTENDABLE; cannot be a Keller-compatible pole mutation"
+  },
+  "pins": {
+    "approximate_root_design": {
+      "path": "xmodel/sol-connections.md",
+      "sha256": "3fe165e55704e0a4b5dba3b5968ea995846a81f58b65968fa89521ef8595895c"
+    },
+    "g2_scope": {
+      "path": "ladder/REDUCTION.md",
+      "sha256": "1ff57e1f8a632f33d3558c924dadf26bdd1d389797d48be43515b88718a2e725"
+    },
+    "prior_freeze": {
+      "path": "cases/ggv_8_28_fibre_tagged_newton_eggers_wall_prototype_20260827/FREEZE.sha256",
+      "sha256": "676bdd3ce960221072f037e7160d457a9d1d64c8e7353891f69e9931ae71149b"
+    },
+    "prior_report": {
+      "path": "xmodel/ggv-8_28-fibre-tagged-newton-eggers-wall-prototype-sol-20260827.md",
+      "sha256": "7647f2f118d4fe9fdd060b9e3e9450b58a62e287a80e942cad6de752a3f34ae8"
+    },
+    "transport_scope": {
+      "path": "ladder/TRANSPORT.md",
+      "sha256": "9750aa9d14650a22a410803022d42fa523e3993a21ee9a27714386fa1150047c"
+    }
+  },
+  "same_support_root_sign_packets": {
+    "S_minus": {
+      "E_0_through_E_21": "zero",
+      "E_22": "zero (pre-Keller control only)",
+      "E16_correction_coefficients": [
+        "45/128",
+        "3/64",
+        "-9/128",
+        "3/32",
+        "9/128",
+        "-3/64",
+        "3/128"
+      ],
+      "coefficients": [
+        "-1/4",
+        "1/4",
+        "-1/4",
+        "1/4",
+        "3/4",
+        "1/4",
+        "-1/4",
+        "1/4"
+      ],
+      "factor_signs": {
+        "X+1": -1,
+        "X-1": 1,
+        "X2+1": 1,
+        "X4+1": -1
+      },
+      "full_truncated_support": "identical: F at (0,0..16),(8,0..7); G at (0,0..24),(8,0..15),(16,0..6)",
+      "polynomial_source_status": "REJECTED: G_16 X^0 and X^1 pull back to y^-4 and x*y^-1",
+      "generic_a2_finite_residue_square_by_sign": {
+        "+1": "25/4",
+        "-1": "27/4"
+      },
+      "tagged_fibre_a1_degenerate_root_degree": 3
+    },
+    "S_plus": {
+      "E_0_through_E_21": "zero",
+      "E_22": "zero (pre-Keller control only)",
+      "E16_correction_coefficients": [
+        "21/128",
+        "-9/64",
+        "15/128",
+        "-3/32",
+        "9/128",
+        "-3/64",
+        "3/128"
+      ],
+      "coefficients": [
+        "3/4",
+        "1/4",
+        "-1/4",
+        "1/4",
+        "-1/4",
+        "1/4",
+        "-1/4",
+        "1/4"
+      ],
+      "factor_signs": {
+        "X+1": -1,
+        "X-1": 1,
+        "X2+1": 1,
+        "X4+1": 1
+      },
+      "full_truncated_support": "identical: F at (0,0..16),(8,0..7); G at (0,0..24),(8,0..15),(16,0..6)",
+      "polynomial_source_status": "REJECTED: G_16 X^0 and X^1 pull back to y^-4 and x*y^-1",
+      "generic_a2_finite_residue_square_by_sign": {
+        "+1": "25/4",
+        "-1": "27/4"
+      },
+      "tagged_fibre_a1_degenerate_root_degree": 7
+    }
+  },
+  "polynomial_provenance_filter": {
+    "general_low_coefficient_test": "if S^2=1 mod (X^8-1), q=(S^2-1)/(X^8-1), then q0=q1=0 forces s0^2=1 and s0*s1=0; for root signs S(c)=+/-1, s0=+/-1 forces all signs uniform",
+    "observed_failure": "both nonconstant packets have nonzero i=0,1 coefficients",
+    "t16_Xi_pullback": "G term x^i*y^(3*i-4)",
+    "verdict": "nonconstant root-sign mutation is rejected in this bounded source window"
+  },
+  "scope": "one 8_28 y-infinity face; exact recurrence and cusp packet prototype; formal root-sign packets fail polynomial-source provenance; not a Keller pair; not G2-PSC",
+  "status": "PASS-BOUNDED-KELLER-FACE-JET-PINNING-CONTROL"
+}

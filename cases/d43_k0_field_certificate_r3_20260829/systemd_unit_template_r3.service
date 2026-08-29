@@ -1,0 +1,140 @@
+# D43 K0 field certificate, R3.  Install root-owned 0444 at
+#   /etc/systemd/system/jc2-d43-k0-field-cert-r3.service
+# Drop-ins are forbidden; the supervisor refuses a delegated cgroup.
+# Replace the <...> sentinels with the absolute, root-owned, symlink-free
+# paths named in the coordinator authorization record.  Every sentinel is
+# re-verified on-host by aws_supervisor_r3.py; editing this file alone
+# authorizes nothing.
+#
+# The R3 privilege boundary (the R2 review's REPAIR-1)
+# ----------------------------------------------------
+# R2 asked an unprivileged process to create its authorization lease inside a
+# directory that R2 also required to be root-owned and not group/world
+# writable.  Those two requirements are jointly unsatisfiable, so every R2
+# launch would have failed closed before any mathematics.  R3 splits the two
+# jobs across the privilege boundary:
+#
+#   ExecStartPre=+   runs as ROOT (the "+" prefix drops the sandbox as well as
+#                    the User=/Group= drop) and mints, exactly once per
+#                    authorization digest, a service-owned 0700 run directory
+#                    inside the root-owned sealed parent, holding a root-owned
+#                    0444 claim token.
+#   ExecStart=       runs UNPRIVILEGED as jc2k0.  Its only writable path is
+#                    that run directory, where it takes the one-time
+#                    authorization lease.  It can neither write in the sealed
+#                    parent nor forge or alter the root-owned claim token: the
+#                    capability set is empty, so CAP_DAC_OVERRIDE and CAP_CHOWN
+#                    are unavailable, and a POSIX ACL cannot smuggle write
+#                    access in because the ACL mask surfaces in the group-class
+#                    bits the supervisor rejects.
+#   ExecStopPost=+   runs as ROOT and seals the finished run directory back to
+#                    root-owned and read-only.
+#
+# ExecStartPre commands complete before the ExecStart mount namespace is set
+# up, so ReadWritePaths=<run directory> below resolves against a directory that
+# already exists.  ReadWritePaths lifts only the ProtectSystem=strict read-only
+# remount; it grants no DAC permission, which is exactly why R2's comment
+# ("the run parent must be writable") did not make the run parent writable.
+#
+# Before starting the unit, ops runs, AS THE SERVICE USER:
+#   sudo -u jc2k0 <python3> -I -B <packet>/custody_selftest_r3.py \
+#        --on-host-dry-run --run-path <ABSOLUTE_RUN_DIRECTORY> \
+#        --authorization <ABSOLUTE_AUTHORIZATION_JSON>
+# which executes the real precondition code against the real root-owned tree
+# and consumes nothing: it stops before the lease.  Its JSON output belongs in
+# the coordinator record's custody notes.
+
+[Unit]
+Description=JC2 D43 K0 field certificate R3 (AWS custody, one core, zero swap)
+DefaultDependencies=no
+After=network-online.target
+Requires=network-online.target
+RefuseManualStop=no
+
+[Service]
+Type=oneshot
+User=jc2k0
+Group=jc2k0
+Restart=no
+WorkingDirectory=/
+RuntimeMaxSec=300
+TimeoutStartSec=300
+
+# one core, no swap, bounded memory and tasks
+CPUAffinity=0
+AllowedCPUs=0
+CPUQuota=100%
+MemoryMax=1G
+MemoryHigh=896M
+MemorySwapMax=0
+TasksMax=24
+LimitNPROC=24
+LimitFSIZE=4M
+LimitCORE=0
+Delegate=no
+
+# containment
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+ProtectProc=invisible
+RestrictSUIDSGID=yes
+RestrictRealtime=yes
+RestrictNamespaces=yes
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged @resources @obsolete @mount @debug
+CapabilityBoundingSet=
+AmbientCapabilities=
+# The run directory -- not its parent -- is the only writable path.  Root
+# created it and chowned it to jc2k0; the sealed parent stays root-owned and
+# unwritable, which is what makes the supervisor's parent gate satisfiable.
+ReadWritePaths=<ABSOLUTE_RUN_DIRECTORY>
+ReadOnlyPaths=<ABSOLUTE_PACKET_ARCHIVE_DIRECTORY>
+
+# exact environment allowlist; the supervisor rejects anything else
+Environment=HOME=/var/empty
+Environment=LANG=C.UTF-8
+Environment=LC_ALL=C.UTF-8
+Environment=PATH=/usr/bin:/bin
+Environment=TZ=UTC
+Environment=PYTHONHASHSEED=0
+Environment=PYTHONNOUSERSITE=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OMP_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=MKL_NUM_THREADS=1
+Environment=NUMEXPR_NUM_THREADS=1
+Environment=VECLIB_MAXIMUM_THREADS=1
+
+# root: mint the one-shot claim.  A second start of this unit dies here with
+# MINT_ALREADY_SPENT and never reaches the supervisor.
+ExecStartPre=+<ABSOLUTE_BASH> --noprofile --norc \
+  <ABSOLUTE_PACKET_DIR>/mint_claim_r3.sh \
+  <ABSOLUTE_SEALED_PARENT_DIRECTORY> \
+  <RUN_DIRECTORY_NAME> \
+  <ABSOLUTE_AUTHORIZATION_JSON> \
+  jc2k0
+
+ExecStart=<ABSOLUTE_BASH> --noprofile --norc \
+  <ABSOLUTE_PACKET_DIR>/aws_worker_r3.sh \
+  <ABSOLUTE_PYTHON3> \
+  <ABSOLUTE_PACKET_DIR>/aws_supervisor_r3.py \
+  <ABSOLUTE_AUTHORIZATION_JSON>
+
+# root: seal the finished run directory back to root-owned and read-only
+ExecStopPost=+<ABSOLUTE_BASH> --noprofile --norc \
+  <ABSOLUTE_PACKET_DIR>/retire_claim_r3.sh \
+  <ABSOLUTE_RUN_DIRECTORY>
+
+[Install]
+WantedBy=multi-user.target

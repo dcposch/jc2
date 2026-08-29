@@ -1,0 +1,260 @@
+{
+  "claims_not_made": [
+    "exclusion of the original non-Keller 8_28 witness or the entire GGV 8_28 family",
+    "a global GGV-to-Eggers-Wall functor or G2-PSC",
+    "a Keller pair, counterexample, G2-BD, or JC2"
+  ],
+  "completeness": {
+    "exponent_table": [
+      {
+        "H_exponent": "3",
+        "rational_homogeneous": true,
+        "weight": 0
+      },
+      {
+        "H_exponent": "11/4",
+        "rational_homogeneous": false,
+        "weight": 1
+      },
+      {
+        "H_exponent": "5/2",
+        "rational_homogeneous": false,
+        "weight": 2
+      },
+      {
+        "H_exponent": "9/4",
+        "rational_homogeneous": false,
+        "weight": 3
+      },
+      {
+        "H_exponent": "2",
+        "rational_homogeneous": true,
+        "weight": 4
+      },
+      {
+        "H_exponent": "7/4",
+        "rational_homogeneous": false,
+        "weight": 5
+      },
+      {
+        "H_exponent": "3/2",
+        "rational_homogeneous": false,
+        "weight": 6
+      },
+      {
+        "H_exponent": "5/4",
+        "rational_homogeneous": false,
+        "weight": 7
+      },
+      {
+        "H_exponent": "1",
+        "rational_homogeneous": true,
+        "weight": 8
+      },
+      {
+        "H_exponent": "3/4",
+        "rational_homogeneous": false,
+        "weight": 9
+      },
+      {
+        "H_exponent": "1/2",
+        "rational_homogeneous": false,
+        "weight": 10
+      },
+      {
+        "H_exponent": "1/4",
+        "rational_homogeneous": false,
+        "weight": 11
+      },
+      {
+        "H_exponent": "0",
+        "rational_homogeneous": true,
+        "weight": 12
+      },
+      {
+        "H_exponent": "-1/4",
+        "rational_homogeneous": false,
+        "weight": 13
+      },
+      {
+        "H_exponent": "-1/2",
+        "rational_homogeneous": false,
+        "weight": 14
+      },
+      {
+        "H_exponent": "-3/4",
+        "rational_homogeneous": false,
+        "weight": 15
+      },
+      {
+        "H_exponent": "-1",
+        "rational_homogeneous": true,
+        "weight": 16
+      },
+      {
+        "H_exponent": "-5/4",
+        "rational_homogeneous": false,
+        "weight": 17
+      },
+      {
+        "H_exponent": "-3/2",
+        "rational_homogeneous": false,
+        "weight": 18
+      },
+      {
+        "H_exponent": "-7/4",
+        "rational_homogeneous": false,
+        "weight": 19
+      },
+      {
+        "H_exponent": "-2",
+        "rational_homogeneous": true,
+        "weight": 20
+      },
+      {
+        "H_exponent": "-9/4",
+        "rational_homogeneous": false,
+        "weight": 21
+      }
+    ],
+    "first_residual_ode": "2H*((12-n)H'*r_n-4H*r_n')=0",
+    "normal_form": "G=F^(3/2)+c4*t^4*F+c8*t^8*F^(1/2)+c12*t^12+c16*t^16*F^(-1/2)+c20*t^20*F^(-1) mod t^22",
+    "rational_solution": "r_n=c*H^((12-n)/4); squarefree H forces the exponent integral",
+    "rational_weights_below_22": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20
+    ]
+  },
+  "endpoint": {
+    "degree_obstruction": "nonzero degree-d Y gives degree d+7 and leading coefficient (4d+48)lc(Y), so M(Y)!=1",
+    "fixture": "M(X/48)=1+(13/12)H",
+    "mechanical_degree_mutations": "all monomials Y=X^d for d=0..64",
+    "operator": "E22=-20H H' d-8H^2 d'",
+    "pole_conclusion": "regular E22 forces d to have at most simple poles at the simple H-roots; all denominators arise from powers of H, so d=-Y/(2H) for polynomial Y",
+    "pole_table": [
+      {
+        "H_exponent": 0,
+        "leading_scalar": -12,
+        "pole_order_m": 1
+      },
+      {
+        "H_exponent": -1,
+        "leading_scalar": -4,
+        "pole_order_m": 2
+      },
+      {
+        "H_exponent": -2,
+        "leading_scalar": 4,
+        "pole_order_m": 3
+      },
+      {
+        "H_exponent": -3,
+        "leading_scalar": 12,
+        "pole_order_m": 4
+      },
+      {
+        "H_exponent": -4,
+        "leading_scalar": 20,
+        "pole_order_m": 5
+      },
+      {
+        "H_exponent": -5,
+        "leading_scalar": 28,
+        "pole_order_m": 6
+      },
+      {
+        "H_exponent": -6,
+        "leading_scalar": 36,
+        "pole_order_m": 7
+      },
+      {
+        "H_exponent": -7,
+        "leading_scalar": 44,
+        "pole_order_m": 8
+      },
+      {
+        "H_exponent": -8,
+        "leading_scalar": 52,
+        "pole_order_m": 9
+      },
+      {
+        "H_exponent": -9,
+        "leading_scalar": 60,
+        "pole_order_m": 10
+      }
+    ],
+    "polynomial_operator": "E22=M(Y)=4H Y'+6H'Y",
+    "residual": "after subtracting the five exact modes, D=t^22*d+O(t^23)",
+    "target_weight_mutation": "at target 20 a double-pole homogeneous mode survives; at charged target 22 its leading scalar is -4"
+  },
+  "linearization": {
+    "definition": "R=G-F^(3/2) in K(X)[[t]], using sqrt(F)=H+O(t)",
+    "exact_modes_through_20": [
+      {
+        "F_power": "3/2",
+        "leading_H_power": 3,
+        "weight": 0
+      },
+      {
+        "F_power": "1",
+        "leading_H_power": 2,
+        "weight": 4
+      },
+      {
+        "F_power": "1/2",
+        "leading_H_power": 1,
+        "weight": 8
+      },
+      {
+        "F_power": "0",
+        "leading_H_power": 0,
+        "weight": 12
+      },
+      {
+        "F_power": "-1/2",
+        "leading_H_power": -1,
+        "weight": 16
+      },
+      {
+        "F_power": "-1",
+        "leading_H_power": -2,
+        "weight": 20
+      }
+    ],
+    "identity": "E(F,G)=E(F,R)=12F_XR-8FR_X-t(F_XR_t-F_tR_X)",
+    "mode_identity": "E(F,t^n F^alpha)=t^n F^alpha F_X(12-8alpha-n)"
+  },
+  "pins": {
+    "r0_hostile_review": {
+      "path": "xmodel/ggv-8_28-keller-face-cusp-jet-pinning-hostile-review-grok-20260827.md",
+      "sha256": "171ff47c844331da8971a731c1ffaf20c31ed5b2ba86fdee2d0d81219eb002b0"
+    },
+    "r1_freeze": {
+      "path": "cases/ggv_8_28_keller_face_cusp_jet_pinning_r1_20260827/FREEZE.sha256",
+      "sha256": "05cbb5c046f9aa4b89e1104448e77fd38ec3a146d2422bf84773f81d668bfe3c"
+    },
+    "r2_freeze": {
+      "path": "cases/ggv_8_28_keller_face_cusp_unit_carrier_classification_r2_20260827/FREEZE.sha256",
+      "sha256": "453f7821f88add5d97b65cee41fe3a4df225db5768526746cf4ff1431aa73aa6"
+    },
+    "r2_report": {
+      "path": "xmodel/ggv-8_28-keller-face-cusp-unit-carrier-classification-r2-sol-20260827.md",
+      "sha256": "0f8f3833c8fa16349d52c6d68829e5c86200ab064f84e4172b0ba4039314b733"
+    },
+    "r2_result": {
+      "path": "cases/ggv_8_28_keller_face_cusp_unit_carrier_classification_r2_20260827/RESULT_R2.json",
+      "sha256": "0dffbb36c20d0b80498d765168a47cdb9ed2889ffc7bd105dce7ec835f600b1d"
+    },
+    "r2_verifier": {
+      "path": "cases/ggv_8_28_keller_face_cusp_unit_carrier_classification_r2_20260827/verify_r2.py",
+      "sha256": "74c6c78e4faf527172703d5a115767562d89d9fa20868fc431dcc1f7cd258f15"
+    }
+  },
+  "scope": "formal polynomial-X jet with F0=(X^8-1)^2, G0=(X^8-1)^3 and E=t^22 through grade 22; excludes this exact replacement-edge Keller lift only",
+  "status": "PASS-R3-SQUAREFREE-H2-H3-RATIONAL-MODE-EXCLUSION",
+  "verdict": "no polynomial-X formal jet with this squarefree H^2/H^3 leading edge can satisfy E_0..E_21=0,E_22=1"
+}

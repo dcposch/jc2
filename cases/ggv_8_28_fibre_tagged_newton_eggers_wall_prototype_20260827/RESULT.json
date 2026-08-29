@@ -1,0 +1,141 @@
+{
+  "fidelity_mutation": {
+    "change": "coefficient of x*y^15 from tau=1 to tau=2",
+    "detected_by": "y-infinity paired residual X^24+1+tau*X modulo X^16-1",
+    "same": "support, Newton polygons, GGV ledger, common (4,-1) initial faces, gamma and both fibre-tree sheet counts"
+  },
+  "ggv": {
+    "A0": [
+      8,
+      28
+    ],
+    "A0_prime": [
+      1,
+      0
+    ],
+    "S": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        8,
+        28
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "degrees": [
+      108,
+      72
+    ],
+    "direction": [
+      4,
+      -1
+    ],
+    "final": [
+      "11/4",
+      7
+    ],
+    "gamma": 7,
+    "mn": [
+      3,
+      2
+    ],
+    "native_orientation": [
+      "P=g=B^3+lower",
+      "Q=f=B^2+lower"
+    ],
+    "p_over_q": "3/4"
+  },
+  "non_keller_witness": "Jac(f,g_1)|_{x=0}=-12*y^11+8*y^22",
+  "scope": "one reviewed GGV 8_28 MN chain; non-Keller control; not G2-PSC",
+  "source_pins": {
+    "ladder/TRANSPORT.md": "39a607c8935153c814cd51fb65a2f1c708a9e4ba5e1dd0f38f9c96401fc4a624",
+    "lib/families.py": "729a5ee7dd235ccca2138fd80035e08e3fed87fabf98a8fc4a0c7f9da089bd3e",
+    "tests/test_families.py": "845d42a2d410234f889d5d846f22f7152354896c67ab3d49152469260e892c0d",
+    "xmodel/grok-h5a-review.md": "3b8bd5c9e2a1f4132cff4353e0e7e0fd9b4426cbeea0b0c13d092161018f5d2f",
+    "xmodel/grok-transport-review.md": "aa7fe37ba5c75df5f006d0af918d2315557b4db60b10cbc5954dfbf171cf558a",
+    "xmodel/sol-h5a.md": "dd09069baeeaaa38644963571f929077af016cbbac664aaea9f3f50bee8f6d90"
+  },
+  "status": "PASS",
+  "totals": {
+    "baseline_g_pole_mass": 276,
+    "f_sheets": 72,
+    "mutated_g_pole_mass": 275
+  },
+  "x_infinity": {
+    "Dg_refined": "42",
+    "Q_coarse": [
+      "8",
+      "56",
+      "4",
+      "14",
+      "3"
+    ],
+    "Q_refined": [
+      "28",
+      "14",
+      "7",
+      "1",
+      "19"
+    ],
+    "characteristic_numerators": [
+      7,
+      9
+    ],
+    "deck_orbits": 2,
+    "fibre_0_to_1_delta": {
+      "y_s37": "zeta4-root*zeta14-root/56",
+      "z_s30": "zeta14-root/14"
+    },
+    "fibre_equation": "(z-1)^14=s^28+a*s^56+z^2*s^112",
+    "gcd_chain": [
+      28,
+      7,
+      1
+    ],
+    "jump_indices": [
+      4,
+      7
+    ],
+    "kappa_bar": [
+      "3",
+      "19"
+    ],
+    "orbit_invariant": "zeta4-root^2 / zeta14-root^7 in {+1,-1}",
+    "pi": [
+      "1/4",
+      "9/28"
+    ],
+    "pole_mass": 84,
+    "pole_order_per_place": 42,
+    "presentations": 56,
+    "qmax_kappas": [
+      4,
+      28
+    ],
+    "ramification_per_place": 28
+  },
+  "y_infinity": {
+    "baseline_tau_1_pole_orders": {
+      "12": 16
+    },
+    "fibre_0_to_1_delta_X_t8": "c/16",
+    "fibre_equation": "X^2*(X-t)^14-1-a*t^8-X*t^11=0",
+    "mutation_cancelled_root": "c=-1",
+    "mutation_tau_2_pole_orders": {
+      "11": 1,
+      "12": 15
+    },
+    "next_coefficient": "7/4",
+    "places": 16,
+    "ramification_per_place": 1
+  }
+}

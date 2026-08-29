@@ -1,0 +1,18 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll review the V16R1 syzygy-origin claim from the frozen bytes, not the producer narrative. First I'm locating the case files, review conventions, and the portable evidence manifest.The case directory is in place. Next I’ll read the producer artifacts, freeze/evidence manifests, and a recent hostile-review template so the checks match this repo’s standard.I’ll pull a recent hostile-review format, then independently hash the freeze, read the V16R1 compiler, and start reconstructing the seven rows from the frozen prelude.A prior V14R1 review and the V16 failure note are the right comparison. I’ll hash freeze/evidence from disk, then reconstruct rows and the 87-generator module independently.Hash verification, V16 vs V16R1 source comparison, and independent reconstruction of rows, the 87-generator module, and origin constants come next.I have the V14 `syz(A)` site and the V16 failure branch. Next I’ll verify hashes from disk and independently recompute ranks, identities, and a fresh `syz`.I’ll run hash checks, independent exact-Q rank, and a fresh Singular replay of the 87 identities plus a full `syz` recompute.Hashes match. Next I’ll independently rank the 609 origin constants and run a fresh Singular replay, including a full `syz` recompute.The replay script had one invalid Singular line. I’ll strip that and run the independent `syz` recompute.Independent Singular finished: the frozen 87-generator set equals a fresh `syz(r1,...,r7)`, all identities hold, and the origin vector matches. I’ll write the hostile review from those checks only.**PASS.** The review is in `xmodel/max12-812-order2-k00-syzygy-projection-v16r1-hostile-review-grok-20260827.md`. No other file was written.
+
+The charged claim holds from the frozen bytes, not from producer ranks, branch labels, the validator, or hash claims.
+
+Independently:
+
+- All 12 freeze pins and all 1300 portable `EVIDENCE.sha256` lines match. AWS-absolute `PRODUCER_ARTIFACTS.sha256` was treated as provenance only and remapped.
+- Original V16 is nonpromotable: both lanes already had the rank-one, coordinates-2/4/6-zero span and then quit with `NO_COORD6_FREEDOM`. V16R1 is a new producer on new tags and new source bytes, and it accepts both preregistered branches. This run is `M6_FORCED`.
+- The seven rows reconstruct byte-for-byte from frozen tails at `C6=1`. The 87-generator file is the full V14R1 `syz(r1,...,r7)` write, not a subset. A fresh Singular 4.4.1 process replayed all 87 identities, recomputed `syz(A)` (also 87 generators), and proved two-sided module equality. Six-row `syz` has 66 generators.
+- All 609 origin constants were re-parsed and re-evaluated. Exact-`Q` rank is 1; the `(6,7)` projection has rank 1; rows 2, 4, and 6 vanish. The origin span is `Q·(-200,0,-960,0,-5120,0,-40960)`.
+- The seven serialized base components replay with residual `0`. The origin vector matches by hand evaluation of the constant terms.
+- Localization is exact, so the polynomial origin span controls all of `R_m`. The sign in `q_i=-s_i/s_7` does not affect vanishing.
+- `p=65521` is a reduction of the `Q` matrix (`-40960 ≡ 24561`). The `Q` lane is `ring R=0` with no characteristic leakage.
+
+**Strongest justified theorem:** for the unloaded `C6=1` K00 rows in `R=Q[d0,...,d5]`, `Syz_R(r1,...,r7)` has origin rank one, spanned by that vector, with coordinates 2, 4, and 6 zero. Every local representation `r7=sum q_i r_i` in `R_m` therefore has `q2(0)=q4(0)=q6(0)=0`.
+
+That is only an unloaded order-zero local-constant statement at `C6=1`. It does not prove a first-order load obstruction, a deformation cokernel, honest `Lambda<=19` reachability, closure incidence, order two, maximum twelve, or JC2.

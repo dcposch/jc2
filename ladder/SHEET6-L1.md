@@ -174,8 +174,15 @@ M-PAT. Consequences:
 - A' is impossible unconditionally (its Sigma-lambda = 1 needs a charged
   pre-merge step; all pre-merge steps are lambda-free) — previously A'
   died only through the AF2-derived IIb repricing (A2P front 7).
-- Root merges: re-killed without budgets (they need some mu_i >= 2;
-  phase 3 had already found 0 solutions).
+- Root merges: **not killed by this argument**.  The assertion that they
+  need some `mu_i>=2` used the old `l=0` menu.  With `l>=1`, the
+  all-`mu=1` root cell (including the locally solvable `l=1` case) must be
+  retained, and corrected Proposition 8.4 gives no root `M=1` kill.  The
+  later case-I root-window theorem supersedes this historical disposition:
+  every actual searrow root parent has `0<w<1`, so any independently
+  certified `w>=1` branch excludes the meet.  This paragraph alone does not
+  certify which two-pole routes carry such a branch; that is a separate
+  reach/dependency check, not an AWS root count.
 - M-PAT (SHEET6-2POLE §4a) is DERIVED for everything that survives: the
   hypothesis tier drops out of the two-pole result entirely.
 

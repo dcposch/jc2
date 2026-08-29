@@ -94,6 +94,9 @@ tier and must never be presented as promoted truth.
 A result may enter `PROVISIONAL` only when all of the following are recorded:
 
 1. an exact statement and scope, with failed or excluded stronger readings;
+   the ambient ring, quotient/localization/saturation order, and every
+   specialization must be literal. A conclusion moved between rings must
+   exhibit and audit the map; matching variable names are not a map;
 2. explicit dependencies and provenance;
 3. frozen source/artifact hashes and a replay command when computational;
 4. producer-run attacks, sanity checks, and at least one meaningful negative
@@ -124,7 +127,14 @@ A result may enter `PROVISIONAL` only when all of the following are recorded:
    Aim to resolve high-fanout claims within six hours and ordinary claims by
    the next full ideation round. A miss is review debt, recorded in `LIVE
    STATE`; it is not silent permission to promote.
-5. **Fail closed.** `REFUTED` triggers immediate rollback. `GAP` preserves only
+5. **Immutable review inputs.**  Give every background reviewer a frozen,
+   hash-pinned claim packet (including the exact canonical excerpts it may
+   need) and require it to review those bytes.  Do not make a long review
+   depend on rereading mutable live ledgers, and do not freeze canonical
+   promotion while that review runs.  Later ledger changes are queued for a
+   delta review if they alter the charged claim; unrelated drift is not a
+   custody failure.
+6. **Fail closed.** `REFUTED` triggers immediate rollback. `GAP` preserves only
    the portion actually checked. Corrections are appended promptly to
    `notes.md`, the relevant canonical route/evidence file, and the current
    daily digest.
@@ -182,7 +192,11 @@ Run an immediate strategy update when any of these occurs:
 - an external result or actor changes correctness, route rank, priority,
   publication posture, available artifacts, or competitive status;
 - the active portfolio is stalled, duplicated, or exposed to one fragile
-  premise beyond the limits above.
+  premise beyond the limits above;
+- campaign machinery loses or delays state, duplicates work, misroutes a
+  model or compute job, exposes mutable inputs, materially inflates context or
+  cost, or reports fleet/lane state unreliably.  Treat this as a bounded
+  systems micro-round unless it also changes the mathematical ranking.
 
 A targeted response to a routine local event is a **micro-round**: triage the
 delta, launch or stop bounded work, and bank it without forcing every ideator
@@ -236,6 +250,13 @@ event starts one sooner. Each round follows this protocol:
    inadequate coverage. A rotating specialist lens may be added only after
    the common scan. Model diversity is preferred; duplicate instances still
    think independently.
+   **Every model marked as an equal-standing whole-portfolio researcher in the
+   roster** is invited automatically to every full round.  Each receives the
+   same sealed packet, submission contract, tool boundary, and deadline, and
+   must submit before seeing any other lane's report.  Every submission
+   receives equal post-deduplication consideration: model identity is neither
+   a bonus nor a vote, and operational unavailability degrades but does not
+   block the round.
 3. **Required submission contract.** Each report gives:
    - a compact disposition vector over every numbered avenue: `unchanged`,
      `raise`, `lower`, or `reopen`, with reasons for every change;
@@ -245,6 +266,12 @@ event starts one sooner. Each round follows this protocol:
    - the strongest proof attack and strongest counterexample/falsification
      attack;
    - one software acceleration or decisive experiment;
+   - a short campaign-systems check, independent of the mathematical software
+     proposal: either an `UPGRADE` card with the smallest useful test or
+     implementation, or `NO_CHANGE` with evidence.  Rotate across state
+     freshness, context and retrieval cost, claim/review propagation,
+     duplication, model routing and utilization, adapter reliability, AWS
+     scheduling and cost, reproducibility, and operator/chat-summary quality;
    - no more than three detailed idea cards, each with explicit dependencies,
      cheapest discriminator, interpretation of each outcome, stop condition,
      and expected information gain;
@@ -268,7 +295,14 @@ event starts one sooner. Each round follows this protocol:
 7. **Synthesize and launch.** The coordinator writes a ranked synthesis,
    updates the avenue/claim graphs if needed, assigns owners and reviewers,
    launches reversible lanes immediately, and records why alternatives were
-   deferred or stopped.
+   deferred or stopped.  Deduplicate the systems checks, choose at most one
+   highest-value bounded upgrade for immediate work, and track it only in the
+   canonical `LIVE STATE` queue.  Trial at least one incremental machinery
+   improvement in every rolling 48-hour window unless no candidate clears its
+   measured benefit, regression-risk, and mathematical-opportunity-cost gate;
+   record a reasoned `NO_UPGRADE` rather than changing machinery for its own
+   sake.  Systems work runs beside, and normally does not block, live
+   mathematical research.
 
 Target 60 minutes for blind submissions, 30 for cross-pollination, and 30 for
 synthesis. Close a round within two hours when possible; if an ideator misses
@@ -308,8 +342,13 @@ the classical closed-case ledger and primary sources.  In particular, the
 Guccione--Guccione--Valqui/Heitmann theorem requires
 `gcd(deg_total P,deg_total Q) >= 16` for a characteristic-zero
 counterexample.  Thus every envelope with both total degrees at most `12`
-(and every fixed pair such as `(9,12)` or `(8,12)`) is counterexample-closed,
-even when its partial-`y` label looks like a live global frontier.
+and every explicitly registered fixed actual-total pair such as `(9,12)` or
+`(8,12)` is counterexample-closed.  Historical `max12` and “maximum-12” tags
+normally name a maximum actual partial-`y`-degree frontier; they never
+establish a finite coefficient-`x` or total-degree cap.  Only an explicit
+actual-total pair or total cap licenses `METHOD_CONTROL_ONLY`; an unbounded-
+total partial-`y` lane remains `NOT_CLOSED_BY_THIS_GATE` unless another
+theorem closes its exact scope.
 
 For the mechanically covered cases, attach the deterministic output of
 `ops/frontier_gate.py` to `REGISTRATION.md`.  A
@@ -329,7 +368,8 @@ Default portfolio targets, adjusted when evidence demands it:
 - 35% strongest current critical path;
 - 20% new avenues and cross-avenue connections;
 - 20% adversarial review and replication;
-- 15% software, formalization, and decisive-experiment design;
+- 15% mathematical software, formalization, decisive-experiment design, and
+  bounded campaign-system improvement;
 - 5% external intelligence;
 - 5% state integration and publication readiness.
 
@@ -350,6 +390,11 @@ Choose work by expected information gain per unit time and cost, not by how
 many agents or tokens it consumes. Track event-to-decisive-test time, review
 latency/debt, central gaps resolved, provisional exposure and rollback cost,
 new connections actually tested, and information gained per compute dollar.
+For campaign machinery also track report-to-ingestion latency, stale or
+missing state, context bytes per lane, duplicate work prevented, adapter and
+job failure rates, model/fleet utilization, and time to a sealed replayable
+certificate.  Retain an upgrade only when those measurements or mathematical
+throughput improve without an offsetting reliability regression.
 
 ## Tick, banking, and live state
 
@@ -381,6 +426,7 @@ Use this compact block; append rather than editing an old one:
 - Coordinator / ideators: <active coordinator; full-round research roster>
 - Last full ideation: <UTC / round ID>; next deadline: <UTC>
 - Last broad web sweep: <UTC / report>; next deadline: <UTC>
+- Last system improvement/check: <UTC / result>; next 48-hour checkpoint: <UTC>
 - Active lanes: <tag, owner, inputs, stop condition>
 - Provisional claims: <ID, tier, parents, descendants, review>
 - Review queue/debt: <priority and due time>
@@ -415,6 +461,16 @@ campaign from paying twice for the same failed idea.
   adapters without compute tools, and genuinely short low-memory validation.
   Follow `ops/FLEET.md` for machine inventory, shipping, caps, telemetry, and
   kill safety.
+- `jc2-lean` is a separately owned nested repository.  While an independent
+  formalization lane is active, campaign agents treat the entire nested tree
+  as read-only: package only explicitly named campaign inputs, never run a
+  parent-wide bulk stage/clean/reset that can consume its changes, and regard
+  the parent's modified gitlink as expected status rather than a campaign
+  edit.  Record a new parent gitlink only at an atomic checkpoint where the
+  child worktree is clean, its commit is pushed, and its HEAD is rechecked
+  immediately before staging.  Concurrent local formalization also consumes
+  the Mac's shared CPU/RAM; it does not license local campaign computation,
+  and the coordinator monitors process trees and swap deltas for contention.
 - New heavy runners fail closed off AWS before importing a CAS or allocating
   large objects, require a registered AWS job tag, and record the remote
   hostname in custody.  New counterexample/frontier runners also record the
@@ -422,6 +478,14 @@ campaign from paying twice for the same failed idea.
   coordinator process-tree/swap-delta audit
   is part of each live-state checkpoint; allocated swap without new pageouts
   is historical occupancy, not by itself active thrashing.
+- A process-group guard is valid only if its recorded group includes the
+  actual CAS and every descendant whose RSS or lifetime it must control.
+  Wrappers that create an unrecorded inner PGID (including GNU `timeout`
+  without `--foreground`) are forbidden unless every inner group is itself
+  recorded and validated.  Before a new or repaired heavy runner launches,
+  a live no-CAS dummy regression must show that descendant RSS is included in
+  telemetry and that namespace-validated TERM, then KILL if needed, leaves no
+  nonzombie descendant or orphan; freeze that regression with the source.
 - Third-party tools may mutate shared CLI configuration; adapters must isolate
   or sanitize it, and a new/updated adapter gets a smoke test before use.
 - Lane launchers take prompt files, reject duplicate live tags, record their
@@ -457,9 +521,109 @@ provenance may name the producing or reviewing model.
 
 | Model | Adapter | Notes |
 |---|---|---|
-| Claude (Anthropic) | (session) | interactive session or `claude -p` |
-| GPT / "Sol" (OpenAI) | `ops/adapters/codex.sh` | via Codex CLI, account-default model |
-| Grok (xAI) | `ops/adapters/grok.sh` | via `grok --prompt-file` |
+| Fable 5 (Anthropic) | `ops/adapters/claude.sh` | exact-model pinned; permanent equal-standing whole-portfolio researcher; receives every sealed full-round packet independently; clean same-input ideation rounds through `20260829T0002Z`; distinctive reviewed work includes theorem-interface/lifecycle auditing, compiler custody, K00 compression, the exact localized gate intertwiner, the uniform lower two-root endpoint theorem, the E0 exact-`p` linear-vacuity correction, the reviewed algebraic-primitive gate filter, the reviewed single-root endpoint-transport mechanism, the independent repair of the active-`c2` D8--D15 cascade, the normalization/localization repair of the q1/q3 composition, the clean 442-slot hostile review of raw origin coupling, the fixed origin-residue slice audit, the fixed-`Q=X` ideal-membership exclusion, and the literal active-`c2` D16--D22 audit; normal hostile review remains mandatory |
+| Opus 5 (Anthropic) | `ops/adapters/opus.sh` | exact-model pinned; **permanently admitted as an equal-standing whole-portfolio researcher by the `20260827T2137Z` same-input evaluation**; clean same-input ideation rounds through `20260829T0002Z`; distinctive reviewed work includes the etale-`mu4` torsor target-budget theorem, source-level G2 same-edge/subsumption correction, all-row Lagrange and homogeneous `NU` laws, mod-8 row death, an exact rank-one nonlinear control, closed-form recurrence fixtures, the clean-room repair of unit-root endpoint transport, the repaired full-system q1/q3 deep-locus compression, the exact q5--q13/even-gate tail classification, the reviewed raw-origin/parity coupling with its exact `Q=X` mutation, the generic quadratic-Q fixed-face rank theorem, the promoted degree-432 `K0` field theorem, and the promoted asymptotic-complement covering mechanism; normal hostile review remains mandatory |
+| GPT / "Sol" (OpenAI) | `ops/adapters/codex.sh` | coordinator and equal-standing whole-portfolio researcher; exact `gpt-5.6-sol` with `ultra` reasoning through the pinned adapter; clean same-input ideation through `20260829T0002Z` |
+| Grok (xAI) | `ops/adapters/grok.sh` | equal-standing whole-portfolio researcher; via `grok --prompt-file`; clean same-input ideation through `20260829T0002Z`; its earlier `FACE-NC`/`FACE-CHAR` promotions failed hostile typing review; its 2259Z constant-bundle insight survived only after gauge repair and its Hessian formula proved visibility rather than an obstruction; it independently confirmed the row-30 nonlinear class slice, the promoted `K0` theorem, the ARITH-SPREAD correction, and the scoped asymptotic-complement theorems |
+
+Temporary availability (2026-08-28 03:45Z): a fresh Fable5 launch returns
+the provider's hard usage-limit response, with access advertised to resume
+`2026-09-01 00:00Z`.  Preserve Fable's roster status, but route nonblocking
+new reviews to another model until the adapter smoke test succeeds.  An
+Opus5 task launched before the ceiling remains live; do not assume that this
+licenses a fresh Anthropic launch.
+
+Availability refresh (2026-08-28 06:30Z): a fresh exact-pinned Fable5 task
+completed successfully through `ops/adapters/claude.sh`, including guarded
+read-only shell metadata inspection.  The earlier hard ceiling has therefore
+cleared in practice.  Restore Fable5 to normal equal-standing blind-round and
+review launches; retain ordinary fallback if a later provider limit recurs.
+
+Availability and allocation refresh (2026-08-28 23:20Z): one identical fresh
+shell-capable smoke prompt passed through all four adapters: Fable 5, Opus 5,
+exact `gpt-5.6-sol`, and Grok 4.6.  Evidence is
+`xmodel/model-availability-smoke-20260828T2320Z.md`.  Earlier subscription
+ceiling banners do not override a fresh successful adapter test; paid adapter
+execution is currently usable.  In-product Codex collaboration subagents can
+still hit a separate subscription window, so overflow is routed through the
+working adapters rather than treated as model unavailability.
+
+Sol coordinates and integrates but is not the default owner of all new
+mathematics.  While at least two peer adapters are available, no more than
+half of newly opened independent primary-research packets should default to
+Sol; every significant-news/full ideation round continues to charge Fable,
+Opus, and Grok independently, and between rounds each available peer receives
+primary research as well as review work whenever the frontier decomposes.
+Exceptions for a uniquely local context or an urgent serial dependency are
+recorded in the live ledger.  Promotion still requires a different-model
+hostile check; reviews run in the background and do not block provisional
+descendants.
+
+Availability and allocation refresh (2026-08-29 02:18Z): fresh paid-auth
+Fable5 and Opus5 launches again reached their pinned models with shell tools,
+and a fresh Grok 4.6 launch completed a hostile review before accepting a new
+primary-research packet. Remaining provider quota is not exposed, so a later
+limit banner is handled by rerouting, not by reducing permanent roster
+standing. The live peer-majority allocation is Fable on LL-1, K0 R2 review,
+and the Q+E5 two-pole repair; Opus on equal-join primary research and TRIPLE02 R2
+review; Grok on an independent parametric Prop. 8.1(iv) solve. Sol coordinates,
+integrates, and develops cross-lane deductions.
+
+Allocation refresh (2026-08-29 02:47Z): peer models continue to own the
+majority of active work. Fable independently reviews both parametric
+Proposition 8.1 reports and repairs Q+E5, LL-1 R3, and TRIPLE02 R3; Opus
+repairs K0 R3 and its completed equal-join report is under hostile review;
+Grok independently reviews that semilinear report and attacks exact lambda.
+Sol coordinates, replays, adjudicates, and maintains the cross-lane scope
+firewall. The external pinned Fable/Opus/Grok adapters remain responsive;
+only the separate in-product Codex collaboration pool is quota-blocked.
+
+Availability and allocation refresh (2026-08-29 03:30Z): three fresh
+paid-auth shell-capable calls succeeded with `ANTHROPIC_API_KEY` removed.
+The default `claude` alias identified itself as `claude-fable-5`, the pinned
+Fable call did likewise, and `--model opus` identified
+`claude-opus-5`; all completed without quota or permission errors. Grok 4.6
+also completed the clean rerun of the `20260829T0250Z` blind round and remains
+live on primary and review work. The clean four-model synthesis is
+`d2e34570...`/body `1bc47e35...`; the excluded first Grok submission remains
+tainted and unused. Peer models own the mathematical frontier: Fable handles
+Statement-3.9 coefficient transport, Grok handles U2, and Opus handles the
+first-extra-jet/exact-lambda discriminator. Sol is coordinator/adjudicator.
+Reviews and custody repairs run in the background and do not block provisional
+descendants. Local model adapters showed no swap-in, swap-out, or pageout in
+the sampled interval; all heavy or uncertain computation remains AWS-only.
+
+Allocation refresh (2026-08-29 03:51Z): the fresh model checks have now been
+converted into sustained peer ownership, not one-shot smoke tests. Fable runs
+the td=8 Statement-3.9 transport primary, Q+E5 R3, U2 hostile review, Opus
+exact-separation hostile review, and TRIPLE02 R4; Opus produced the td=8
+exact-separation theorem and runs K0 R4, with further review work harvested as
+lanes close; Grok produced the U2 reduction and now owns the distinct td=12 U1
+trunk-consumer primary. Sol coordinates, verifies seals, integrates reviewed
+residues, and assigns nonduplicate successors. New work continues on
+reasonable provisional confidence while different-model reviews run in the
+background. All current mathematical lanes are desk-scale; AWS remains
+reserved for source-reviewed heavy jobs.
+
+Allocation refresh (2026-08-29 07:24Z): the peer-majority wave has closed at
+a quiescent checkpoint. Fable produced coefficient transport and reviewed U2,
+exact separation, and the cv gate; Opus produced exact separation and reviewed
+transport, U2 terminal finiteness, Q+E5 R3, and the td=12 trunk; Grok produced
+U2, the td=12 trunk, the `(0,y)` initialization, and the cv primary. Sol
+integrated those results and supplied two narrowly scoped U2/A-tower successor
+lemmas rather than duplicating the peer primaries. After the checkpoint, use
+Fable, Opus, and Grok first for the three independent hostile reviews and
+route discriminators recorded only in the newest `LIVE STATE`; Sol retains
+the integrative trunk/cross-lane problem. One Fable wrapper lost its final
+bookkeeping because `ops/lane.sh` changed while it was waiting, although its
+hash-pinned report was recovered. The launcher now parses its complete body
+before execution, and recovered reports are a distinct dashboard state.
 
 Adding a model requires one adapter in `ops/adapters/` and one roster row;
 route documents do not assign permanent jobs by model name.
+Admission requires a sealed same-input evaluation against a standing model.
+At least one independently checked, nonduplicate contribution must change a
+ranked launch, stop, merge, correction, or review decision; eloquence,
+agreement, and duplicate ideas do not qualify.  Newly admitted models receive
+the same blind-round standing and remain subject to normal history checksum,
+scope audit, and different-model promotion rules.

@@ -1,0 +1,86 @@
+# D43 K0 field certificate, R2.  Install root-owned 0444 at
+#   /etc/systemd/system/jc2-d43-k0-field-cert-r2.service
+# Drop-ins are forbidden; the supervisor refuses a delegated cgroup.
+# Replace the <...> sentinels with the absolute, root-owned, symlink-free
+# paths named in the coordinator authorization record.  Every sentinel is
+# re-verified on-host by aws_supervisor_r2.py; editing this file alone
+# authorizes nothing.
+
+[Unit]
+Description=JC2 D43 K0 field certificate R2 (AWS custody, one core, zero swap)
+DefaultDependencies=no
+After=network-online.target
+Requires=network-online.target
+RefuseManualStop=no
+
+[Service]
+Type=oneshot
+User=jc2k0
+Group=jc2k0
+WorkingDirectory=/
+RuntimeMaxSec=300
+TimeoutStartSec=300
+
+# one core, no swap, bounded memory and tasks
+CPUAffinity=0
+AllowedCPUs=0
+CPUQuota=100%
+MemoryMax=1G
+MemoryHigh=896M
+MemorySwapMax=0
+TasksMax=24
+LimitNPROC=24
+LimitFSIZE=4M
+LimitCORE=0
+Delegate=no
+
+# containment
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+ProtectProc=invisible
+RestrictSUIDSGID=yes
+RestrictRealtime=yes
+RestrictNamespaces=yes
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged @resources @obsolete @mount @debug
+CapabilityBoundingSet=
+AmbientCapabilities=
+# the run parent must be writable because the supervisor takes its
+# authorization lease there before it creates the run directory
+ReadWritePaths=<ABSOLUTE_RUN_PARENT_DIRECTORY>
+ReadOnlyPaths=<ABSOLUTE_PACKET_ARCHIVE_DIRECTORY>
+
+# exact environment allowlist; the supervisor rejects anything else
+Environment=HOME=/var/empty
+Environment=LANG=C.UTF-8
+Environment=LC_ALL=C.UTF-8
+Environment=PATH=/usr/bin:/bin
+Environment=TZ=UTC
+Environment=PYTHONHASHSEED=0
+Environment=PYTHONNOUSERSITE=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OMP_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=MKL_NUM_THREADS=1
+Environment=NUMEXPR_NUM_THREADS=1
+Environment=VECLIB_MAXIMUM_THREADS=1
+
+ExecStart=<ABSOLUTE_BASH> --noprofile --norc \
+  <ABSOLUTE_PACKET_DIR>/aws_worker_r2.sh \
+  <ABSOLUTE_PYTHON3> \
+  <ABSOLUTE_PACKET_DIR>/aws_supervisor_r2.py \
+  <ABSOLUTE_AUTHORIZATION_JSON>
+
+[Install]
+WantedBy=multi-user.target

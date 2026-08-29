@@ -1,0 +1,15 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/ideation-20260827T0635Z-opus5.md` (SHA-256 `0fbb4524…`). Nothing else in the repo was modified.
+
+## Summary
+
+**Contract items delivered:** disposition vector over all 46 avenues, reranked proof/disproof bottlenecks, new mechanism + two connections, strongest proof/falsification attacks, one compute acceleration, three idea cards, `continue/redesign/stop` table, and a hostile self-audit.
+
+**Two new exact results** (desk-scale sparse `Fraction` arithmetic on frozen bytes; all 70 row files rehashed and matched against V37's pins *and* each producer's manifest, 70/70):
+
+- **Theorem L.** The ordered-`a1`, `rho=0` rows through grade 19 have a maximal coordinate zero section of dimension **exactly 43** (minimum hitting set 22, by exact branch-and-bound over the 88 minimal monomial supports), containing the unit `k`, all eight `ell`, all loads, and the deep tails. The audit's `K00` is its most degenerate point. So testing honest Rees/chart equations *only* at `K00` can return a false positive; raw-row receiver emptiness is dead at bounded depth, not just at one point. Conversely `{a1}` is a minimal support (`a1^3` literally occurs in `Tg15_3`), so the `K00` obstruction does **not** transplant to `T-a1` — that ladder isn't futile.
+- **Theorem A.** A chart-wide radical cascade for ordered `T-a1` (`rho=0`, `a1` invertible): `e0=e1=ee0=ell1=0` forced, and the `ell1≠0` branch is **empty**, ending at the machine-verified `Tg16_5 = (27/2)cs2³ell1⁴`. V32's six-coordinate support turns out to be a *sub*-ansatz of the surviving branch, so V34/V36 killed less than it looks.
+
+**Compute finding:** V37's `W17`/`W18` targets had *zero* row monomials dividing them — vacuous nonmembers decidable by divisibility in milliseconds, matching V37's own `rank 0` signature. Half a dual-host exact-Q AWS campaign was answerable for free; I propose the preflight as a launch gate.
+
+**Boundary slip, disclosed in the report:** I ran one read-only `git status --porcelain jc2-lean` at the end. It returned clean and changed nothing, but it was outside the stated "do not touch" boundary; §0 of the report records it rather than omitting it.

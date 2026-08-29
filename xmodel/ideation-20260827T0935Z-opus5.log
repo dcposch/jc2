@@ -1,0 +1,23 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Submission written to `xmodel/ideation-20260827T0935Z-opus5.md` (SHA-256 `3295402670b65b0a…`, 685 lines). No other artifact touched; the four canonical ledgers still hash to the packet's snapshot SHAs, and `jc2-lean` was never entered. Other ideators' files exist in `xmodel/` and I did not open them.
+
+## What I found
+
+**The core result.** Three of the campaign's most expensive lanes are the same instrument — a monotone ladder over a filtration index with no termination theorem (`T-a1` exponent `N`, K00 `(d)`-adic degree, AS109 `deg_y` floor). Such a ladder decides only its *negative* branch.
+
+For `T-a1` I proved a theorem (§3.2 of the submission) from already-promoted inputs:
+
+> With `K = J : a1^∞`, `E = K ∩ Q[rho]`, and given the promoted `a1 ∈ √J0`:
+> `K + (rho) = (1)` ⟺ `E ≠ 0` ⟺ the frozen system has no point with `a1 ≠ 0` over `Q(rho)`-bar.
+
+No exponent `N` appears. The `N = 6, 7, 8, …` ladder measures a quantity the criterion does not contain, and it is *guaranteed* to reach a positive rung that means nothing, since `a1 ∈ √J0` is already promoted twice. I checked the theorem against the campaign's own toy counterexample (`J = (f − ρ²x)`), which it reproduces correctly.
+
+**The experiment is a two-token edit.** `compile_total_dehom_eliminant_v43.py` already computes `reduce(1, std(subst(I,t,0)))` as a control, and it passes — that control *is* the `rho = 0` half. Running the same three lines with `t` alive (random `t₀`, then exact over `Q(t)`) decides the entire chart. Both outcomes are decisive: unit ⟹ the chart closes; nonzero ⟹ no certificate exists at any `N`, plus an explicit `rho`-moving obstruction witness.
+
+**A concrete defect.** That script's outcome predicate keys on a generator with nonzero constant term, conflating `E = 0` (failure) with `E ≠ 0 ⊆ (t)` (which, by the theorem, is a *success*) into one `no-unit-eliminant` token. I read this from source; I did not run the lane.
+
+**K00.** The Escape Lemma reduces "genuine local membership" to one colon ideal in six variables — no local ordering, no Mora, no `G = I*T` transform replay (the thing V11/V13 actually failed). It also decides whether the `(d)`-adic ladder can ever terminate.
+
+**Self-refutation reported.** I built a `G_m`-purity bridge from Jelonek ⊗ Shaska claiming graded-degenerable components contain no counterexample, then refuted it with avenue 41 (the dim-3 CE deforms to its linear part). Filed the refutation so it isn't rebuilt. The surviving connection — Jelonek's closedness makes the CE locus *open*, hence dense in its component, contradicting avenue 36's recorded "thin locus" premise — is flagged as conditional on a sweep summary I could not verify without web access.
+
+Disposition vector covers all 46 avenues with six changes (raise 7, 31, 36; lower 19; reopen 18, 41 at tight scope), plus reranked bottlenecks, three idea cards, and continue/redesign/stop for every major lane.

@@ -1,0 +1,30 @@
+# Custody
+
+Core source:
+
+```text
+ee1f279d3f0998e13ff03e335cd79ef1c4f6e17312bd3d926b08714c1e60dc17  PREREGISTRATION.md
+57b19acd1916428ed08ecd65dc5df77ce794f27217942bf615dbf470c69e2ed7  PREREGISTRATION.sha256
+8a2b6b065fcf7f9a9034057c39a978072ddd4ad660f377a6a267409a2e83c8c5  SOURCE.sha256
+7ba6c106ff62a3bfc289be408d151bda7e85d73cb5868543d86ebe926f272b0a  build_nf_rank.py (byte-identical to r4)
+69d7edbcd78d8eacdeeef9a20d611b764537370294c7e6b125185b98581d2a74  adapter_selfcheck.sing
+908b73cd46821ec6a64ebd8e3aa17365616865c089dbdd45644b18baefc28bfb  custody/ggv_lambda0_quotient_nf_rank_r5_SOURCE.tar.gz
+```
+
+Terminal archives:
+
+```text
+05e91087f2cc22993500f9397d3102a6db5a039bbbaf5d9ec040ac4aa8b55500  custody/ggv_lambda0_quotient_nf_p_r5_20260828T160000Z_r6c.terminal.tar.gz
+48c2462839501eec8d5a6ac074d8e9df5df455e3ba9ddf5a9f55218200b3a93b  custody/ggv_lambda0_quotient_nf_c8p02_r5_20260828T160000Z_r6e.terminal.tar.gz
+992dbd0e0a81f6f37901f24c63141607c29c26d2a28195bebc37698c026b8424  custody/ggv_lambda0_quotient_nf_q1p02_r5_20260828T160000Z_r6f.terminal.tar.gz
+9a8cf752e526d29679fa673af1359b81b66302af73998806c022a4e80c306c9c  custody/ggv_lambda0_quotient_nf_q1p03_r5_20260828T160000Z_r6g.terminal.tar.gz
+b947a2d3e81525902a93500026020c2cf9580f070767757389daadb9a6bbe3b2  custody/ggv_lambda0_quotient_nf_triple02_r5_20260828T160000Z_r6h.terminal.tar.gz
+1d1871532a845f2ac964886035c06abcc211ae80f5c68e153850951ba242b809  custody/ggv_lambda0_quotient_nf_triple03_r5_20260828T160000Z_r6i.terminal.tar.gz
+```
+
+The internal evidence manifests replay exactly: 65/65 entries for `P` and
+`C8P02`, and 67/67 entries for each of the four complete branches.  Custodian
+stdout/stderr were redirected outside the evidence tree to avoid r4's
+post-hash transcript race; those raw sidecars are also preserved in
+`custody/` with the terminal archives.
+

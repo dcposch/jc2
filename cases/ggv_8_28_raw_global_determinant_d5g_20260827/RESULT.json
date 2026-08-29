@@ -1,0 +1,84 @@
+{
+  "census": {
+    "D22_contributions": 1374,
+    "D22_terms": 778,
+    "Q22_terms": 523,
+    "R22_terms": 778,
+    "Y22_terms": 621,
+    "rM22_terms": 680,
+    "raw_positive_slots": 400,
+    "total_contributions": 58572,
+    "total_final_terms": 32135,
+    "weights": 23
+  },
+  "certificate_artifact_sha256": "6346ab6afb307fea83516f742ca53b90e5eb8d42c2e1d5bef083920de23e434a",
+  "claims_not_made": [
+    "Keller specialization",
+    "R22=1",
+    "Q22=0",
+    "local/global naturality PASS",
+    "8_28 face/family exclusion",
+    "G2-PSC",
+    "G2-BD",
+    "JC2"
+  ],
+  "direct_artifact_sha256": "069ab7a5fdb133aa2ffb0063e5f36c5664a070798de6ea00520698207e24838d",
+  "exact_replays": {
+    "D0": "ZERO",
+    "H_division": "PASS: D22=H*Q22+R22, deg R22<8",
+    "M_reduction": "PASS: D22=M(Y22)+rM22, deg rM22<7",
+    "independent_dense_specialization": {
+      "E0_through_E22_sha256": "db5ededadbefb2153dba1f1098bbd6b63881eeae7b65b2451e2448d45766ba3e",
+      "assignment_sha256": "2d4f8e2af9b00172e079d1b829f81c76640df7119033cd8572ca9d4938debfce",
+      "nonzero_weight_count": 22,
+      "status": "PASS-INDEPENDENT-DENSE-QXT-SPECIALIZATION"
+    }
+  },
+  "local_naturality_dependency": {
+    "consumed": false,
+    "d4r1_bytes_pinned_as_hold_only": "6beafdb470ec9c4c88fd8c6e3d2ccaf3b4312c477ddabc4576203f7e9c19c954",
+    "status": "LOCKED_PENDING_D4R1_FRESH_HOSTILE_REVIEW"
+  },
+  "mutations": {
+    "add_H": "PASS: R22 unchanged, Q22 increments by 1, M seven-vector changes",
+    "change_i_minus_8_to_i_minus_7": {
+      "mutated_sha256": "32238d8e92f7bb2dfa2fff1d52c2f177661b8bce4ec68067e3e23b18ff256863",
+      "status": "DETERMINANT_DIGEST_CHANGED"
+    },
+    "drop_raw_slot": {
+      "mutated_sha256": "634d64e6cc6670fc20bde402e1e3cc4cbaab729e5e4c5ab0ea29064800021cdc",
+      "slot": "f_0_1",
+      "status": "DETERMINANT_DIGEST_CHANGED"
+    }
+  },
+  "pins": {
+    "d3_freeze": {
+      "path": "cases/ggv_8_28_raw_to_global_m_cokernel_interface_d3_20260827/FREEZE.sha256",
+      "sha256": "012acfe5ca560757269fd6e332ed3c4bab2f1005bce43113109f31b705ffe022"
+    },
+    "d3_raw": {
+      "path": "cases/ggv_8_28_raw_to_global_m_cokernel_interface_d3_20260827/RAW_INPUT.json",
+      "sha256": "28b9b05c02224aadec30d52b66ed22db80aabe416ffdc0186f6931f1978f1876"
+    },
+    "d4r1_hold_freeze": {
+      "path": "cases/ggv_8_28_raw_to_morse_cleanup_dag_d4r1_20260827/FREEZE.sha256",
+      "sha256": "6beafdb470ec9c4c88fd8c6e3d2ccaf3b4312c477ddabc4576203f7e9c19c954"
+    },
+    "d5_design_freeze": {
+      "path": "cases/ggv_8_28_factor_etale_global_e22_gluing_d5_design_20260827/FREEZE.sha256",
+      "sha256": "9954063b99931a37dc7df2bd56e82570d6a2d0f036d995d2a95e19d109cf47ce"
+    },
+    "m_cokernel_audit": {
+      "path": "xmodel/ggv-8_28-M-cokernel-seven-vector-hostile-audit-sol2-20260827.md",
+      "sha256": "2803b705d41b332cabd12249b0a0be17cdd18e8f2f251fe7b242bf55fc9bb289"
+    },
+    "preregistration": {
+      "path": "cases/ggv_8_28_raw_global_determinant_d5g_20260827/PREREGISTRATION.md",
+      "sha256": "72e8ba988a0aaeccb86f473bf89b66847481c4e645998f5456e2ad0acb803541"
+    }
+  },
+  "scope": "literal generic raw determinant D0..D22, exact H division and M reduction; no equations or face verdict",
+  "source_sha256": "28b9b05c02224aadec30d52b66ed22db80aabe416ffdc0186f6931f1978f1876",
+  "status": "PASS-D5G-REVIEW-INDEPENDENT-RAW-GLOBAL-DETERMINANT",
+  "target_status": "NO_TARGET_VERDICT; D0..D21 are generic expressions and are not assumed zero"
+}

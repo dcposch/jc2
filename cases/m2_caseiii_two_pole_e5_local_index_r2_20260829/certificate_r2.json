@@ -1,0 +1,564 @@
+{
+  "certificate_sha256": "bf8e25ebb0af755ad9242ff22d34976a193ff59700fc79ed999628e3fee09c6a",
+  "charged_slice": {
+    "e5_rows": [
+      {
+        "M": 4,
+        "cell": [
+          4,
+          8
+        ],
+        "kbar": 4,
+        "nu_G": 2,
+        "verdict": "T1-dead (kbar in {3,4})"
+      },
+      {
+        "M": 1,
+        "cell": [
+          5,
+          7
+        ],
+        "kbar": 7,
+        "nu_G": 3,
+        "verdict": "M=1, MP2-dead"
+      },
+      {
+        "kbar": 10,
+        "nu_G": 4,
+        "verdict": "dq non-integral, DEAD"
+      }
+    ],
+    "kill_reading_stable": true,
+    "mixed_pin_rows": {
+      "M": 1,
+      "cell": [
+        5,
+        7
+      ],
+      "h_upper": 4,
+      "odd_ray_survivor": 3,
+      "verdict": "MP2-dead (conditional on U_7C)"
+    },
+    "provenance": {
+      "odd_ray_language": "'h odd, h>=3' is a statement about nu_U; meaningful only under the mixed pin (nu_U free under E5)",
+      "promoted_td7_slice": "the promoted @2 cell (9,15,7,3) lives on w_U=1/2 and is untouched and unkilled by this slice",
+      "replays": "BOOK-OFFAXIS.md s8 Step 3 -- a RETRACTED section; legitimate only as the w_U=3/2 entry-state slice of class C, not as 'the' td-7 ray"
+    },
+    "slice": {
+      "mu": 1,
+      "mu0": 2,
+      "w": "2",
+      "w_U": "3/2"
+    }
+  },
+  "counterfixtures": {
+    "consequence": "wholesale replacement of NUCAP in solve_arr's no-pin branch is UNSOUND: the branch also fires on r0>=2 and inner-arrival rows",
+    "equal_join_kbar_unbounded": [
+      {
+        "M": 3,
+        "cell": [
+          24,
+          9
+        ],
+        "kbar": "27",
+        "nu": 4
+      },
+      {
+        "M": 3,
+        "cell": [
+          42,
+          15
+        ],
+        "kbar": "45",
+        "nu": 7
+      },
+      {
+        "M": 3,
+        "cell": [
+          600,
+          201
+        ],
+        "kbar": "603",
+        "nu": 100
+      }
+    ],
+    "inner_arrivals": "an inner-merge edge (0-slot or partner) has unknown w at solve time: the case-II elimination is unavailable and no nu_G bound is derivable from recorded data",
+    "pattern_fibre_infinite_at_fixed_kbar_nu_G": [
+      {
+        "M": 10,
+        "cell": [
+          20,
+          10
+        ],
+        "s": 2
+      },
+      {
+        "M": 13,
+        "cell": [
+          26,
+          13
+        ],
+        "s": 3
+      },
+      {
+        "M": 19,
+        "cell": [
+          38,
+          19
+        ],
+        "s": 5
+      },
+      {
+        "M": 31,
+        "cell": [
+          62,
+          31
+        ],
+        "s": 9
+      },
+      {
+        "M": 67,
+        "cell": [
+          134,
+          67
+        ],
+        "s": 21
+      }
+    ],
+    "r0_2_breaks_constant": [
+      {
+        "cell": [
+          13,
+          7
+        ],
+        "dq_over_D": 7,
+        "mu": 2,
+        "mu0": 3,
+        "two_pole_bound": 5
+      },
+      {
+        "cell": [
+          19,
+          10
+        ],
+        "dq_over_D": 10,
+        "mu": 2,
+        "mu0": 4,
+        "two_pole_bound": 7
+      },
+      {
+        "cell": [
+          20,
+          7
+        ],
+        "dq_over_D": 7,
+        "mu": 3,
+        "mu0": 4,
+        "two_pole_bound": 5
+      },
+      {
+        "cell": [
+          38,
+          13
+        ],
+        "dq_over_D": 13,
+        "mu": 3,
+        "mu0": 6,
+        "two_pole_bound": 9
+      },
+      {
+        "cell": [
+          109,
+          22
+        ],
+        "dq_over_D": 22,
+        "mu": 5,
+        "mu0": 11,
+        "two_pole_bound": 15
+      },
+      {
+        "cell": [
+          195,
+          28
+        ],
+        "dq_over_D": 28,
+        "mu": 7,
+        "mu0": 15,
+        "two_pole_bound": 19
+      }
+    ]
+  },
+  "engine_consequence": {
+    "migration_plan": "report s8 / README: two-pole rows solve by the finite kbar menu x elimination (td7_census_e5.py style); out-of-scope rows keep NUCAP + OPEN",
+    "nucap": "STAYS.  Honest fate is removal-by-rebuild (no nu_H loop exists under E5), not replacement-by-cap; wholesale cap replacement is UNSOUND on r0>=2 and inner-arrival rows (certified countercells)"
+  },
+  "firewall": {
+    "aws_or_fleet_action": false,
+    "canonical_engine_changed": false,
+    "degree_bound": false,
+    "equal_nonzero_join_kbar_bounded": false,
+    "full_merge_grammar": false,
+    "incoming_index_bounded": false,
+    "inner_arrival_merges": false,
+    "jc2": false,
+    "landing": false,
+    "mixed_pin_licensed": false,
+    "multipole_merges": false,
+    "nucap_removal_authorized": false,
+    "realizability": false,
+    "u7c_adjudicated": false
+  },
+  "lemma_A": {
+    "equality": "iff nu_G = delta+1, s = 1, A = 1; then D = M = 1: every sharpness witness is MP2-dead",
+    "sharpness_fixture": {
+      "A": 1,
+      "D": 1,
+      "M": 1,
+      "delta": 1,
+      "dp": 9,
+      "dq": 5,
+      "dq_over_D": "5",
+      "equality_graded": true,
+      "equality_plain": true,
+      "k": 1,
+      "lex": 0,
+      "mu": 2,
+      "mu0": 3,
+      "multiplicities": [
+        1
+      ],
+      "nu_G": 2
+    },
+    "statement": "dq/D <= 2*delta+3 and kbar = mu*w*dq/D <= mu*w*(2*delta+3), reading-independent"
+  },
+  "notation_correction": "REGENERATED (R1's field asserted the inverse): under the promoted Q+E5 pin the case-III handshake carries the merge-local nu_G; the incoming index nu_U (R1's 'h = nu_H') cancels into the state invariant w_U and is FREE -- no incoming bound exists, follows, or is required.  R1's headline bound is the mixed-pin reading, coherent only under CONJECTURE U_7C.",
+  "opus_adjudication": {
+    "correction_direction_1": "too generous: clause 4 nu <= mu0*num(w_0) binds NEITHER index -- as a nu_G bound 16/17 promoted cells violate it; as a nu_U bound the mixed-legal forced-subbook cell (9,15,7,3)@2 violates it (nu_U = 7 > 2); its (4a) route applies the case-II transport to the 0-edge, matching neither recorded case-III reading",
+    "correction_direction_2": "too harsh: Opus did not confuse two symbols -- its s10c states the H5a fork verbatim and declines to adjudicate; the unlicensed step is Theorem 4(4a) fed the 0-edge, not the naming",
+    "r1_said": "Opus Thm 2.4/4 'correctly bounds nu_G' but misnames it nu_H",
+    "sound_replacement": "kbar <= mu*w*(2*delta+3) (reading-free) plus mu0*nu_G*w_U = delta*kbar + mu*w, giving nu_G <= mu*w*(delta*(2*delta+3)+1)/(mu0*w_U) per arriving state; M-graded form tight on the kbar=6 family"
+  },
+  "promoted_book": {
+    "cells": 17,
+    "forced_subbook": [
+      [
+        9,
+        15,
+        7,
+        3
+      ],
+      [
+        10,
+        15,
+        7,
+        5
+      ]
+    ],
+    "graded_equality_cells": [
+      [
+        10,
+        15
+      ],
+      [
+        18,
+        27
+      ],
+      [
+        26,
+        39
+      ],
+      [
+        34,
+        51
+      ],
+      [
+        42,
+        63
+      ],
+      [
+        50,
+        75
+      ],
+      [
+        58,
+        87
+      ],
+      [
+        66,
+        99
+      ],
+      [
+        74,
+        111
+      ],
+      [
+        82,
+        123
+      ],
+      [
+        90,
+        135
+      ],
+      [
+        98,
+        147
+      ]
+    ],
+    "graded_equality_rows": 12,
+    "mixed_pin_index_equals_nu_G": 17,
+    "opus_clause4_violating_cells": [
+      [
+        9,
+        15,
+        7,
+        3,
+        2
+      ],
+      [
+        10,
+        15,
+        7,
+        5,
+        3
+      ],
+      [
+        15,
+        25,
+        12,
+        5,
+        3
+      ],
+      [
+        18,
+        27,
+        13,
+        9,
+        5
+      ],
+      [
+        21,
+        35,
+        17,
+        7,
+        4
+      ],
+      [
+        26,
+        39,
+        19,
+        13,
+        7
+      ],
+      [
+        27,
+        45,
+        22,
+        9,
+        5
+      ],
+      [
+        34,
+        51,
+        25,
+        17,
+        9
+      ],
+      [
+        42,
+        63,
+        31,
+        21,
+        11
+      ],
+      [
+        50,
+        75,
+        37,
+        25,
+        13
+      ],
+      [
+        58,
+        87,
+        43,
+        29,
+        15
+      ],
+      [
+        66,
+        99,
+        49,
+        33,
+        17
+      ],
+      [
+        74,
+        111,
+        55,
+        37,
+        19
+      ],
+      [
+        82,
+        123,
+        61,
+        41,
+        21
+      ],
+      [
+        90,
+        135,
+        67,
+        45,
+        23
+      ],
+      [
+        98,
+        147,
+        73,
+        49,
+        25
+      ]
+    ],
+    "opus_clause4_violations": 16,
+    "solver_recovered": 17
+  },
+  "reading": {
+    "case_iii_handshake": "X = mu0*(kbar - nu_G*w_U)",
+    "pin": "promoted Q+E5 (H5a resolved: sol-h5a.md Props 1-2, grok-h5a-review.md SOUND, BOOK-OFFAXIS.md s11-PRE/s11a)",
+    "u7c_fork": "the mixed/printed pin X = mu0*(kbar - nu_U*w_U) is coherent only under open CONJECTURE U_7C; imposing it on E5-realizable cells forces nu_U = nu_G identically"
+  },
+  "schema": "m2-caseiii-two-pole-e5-local-index-r2",
+  "supersedes_reading_of": "cases/m2_caseiii_two_pole_nuh_bound_r1_20260829 (R1 byte-untouched)",
+  "theorem_B": {
+    "book_equality_rows": 12,
+    "equality": "iff M | 2*delta+1 (M odd), s = 1, A = 1, nu_G = delta+M (then D = M exactly)",
+    "sharpness_fixture": {
+      "A": 1,
+      "D": 3,
+      "M": 3,
+      "delta": 1,
+      "dp": 6,
+      "dq": 9,
+      "dq_over_D": "3",
+      "equality_graded": true,
+      "equality_plain": false,
+      "k": 0,
+      "lex": 1,
+      "mu": 1,
+      "mu0": 2,
+      "multiplicities": [],
+      "nu_G": 4
+    },
+    "statement": "dq/D <= 2 + (2*delta+1)/M with M = gcd(dp,dq)"
+  },
+  "theorem_C": {
+    "elimination": "mu0*nu_G*w_U = delta*kbar + mu*w",
+    "no_incoming_bound": {
+      "arrival_menu": "neutral nu_U = 4 (mod 5): infinite class",
+      "cell": [
+        18,
+        27,
+        13,
+        9
+      ],
+      "conclusion": "no incoming nu_U/nu_H bound follows from the promoted laws, and none is required; the R1 'incoming-index bound' bounded a mixed-pin object that does not occur under E5",
+      "finiteness_source": "finite priced (w_U, M_U) closure x finite kbar menu (Lemma A); no nu_U cap enters",
+      "mu0": 5,
+      "samples": [
+        {
+          "kbar_E5": "6",
+          "kbar_mixed": "3/2",
+          "mixed_matches_cell": false,
+          "nu_U": "4"
+        },
+        {
+          "kbar_E5": "6",
+          "kbar_mixed": "4",
+          "mixed_matches_cell": false,
+          "nu_U": "9"
+        },
+        {
+          "kbar_E5": "6",
+          "kbar_mixed": "13/2",
+          "mixed_matches_cell": false,
+          "nu_U": "14"
+        },
+        {
+          "kbar_E5": "6",
+          "kbar_mixed": "100000000000000000003/2",
+          "mixed_matches_cell": false,
+          "nu_U": "100000000000000000004"
+        }
+      ]
+    },
+    "regimes": {
+      "mu0<mu": {
+        "nu_G_menu": [
+          2,
+          3,
+          4
+        ],
+        "reason": "kbar > w forces mu0*nu_G*w_U < mu0*w",
+        "regime": "mu0<mu",
+        "strict_upper_nu_G": "5"
+      },
+      "mu0=mu": {
+        "forced_nu_G": "3",
+        "legal_case_iii": true,
+        "reason": "delta = 0 degenerates the elimination to nu_G*w_U = w exactly; nu_G = 1 is case-I territory, not a case-III merge",
+        "regime": "mu0=mu"
+      },
+      "mu0>mu": {
+        "delta": 1,
+        "kbar_menu": [
+          {
+            "X": "1",
+            "kbar": 3,
+            "nu_G": 5
+          },
+          {
+            "X": "2",
+            "kbar": 4,
+            "nu_G": 6
+          },
+          {
+            "X": "3",
+            "kbar": 5,
+            "nu_G": 7
+          },
+          {
+            "X": "4",
+            "kbar": 6,
+            "nu_G": 8
+          },
+          {
+            "X": "5",
+            "kbar": 7,
+            "nu_G": 9
+          },
+          {
+            "X": "6",
+            "kbar": 8,
+            "nu_G": 10
+          },
+          {
+            "X": "7",
+            "kbar": 9,
+            "nu_G": 11
+          },
+          {
+            "X": "8",
+            "kbar": 10,
+            "nu_G": 12
+          }
+        ],
+        "kbar_upper": "10",
+        "nu_G_upper": "12",
+        "reason": "kbar = mu*w*dq/D in Z with w < kbar <= mu*w*(2*delta+3); then nu_G = (delta*kbar + mu*w)/(mu0*w_U) once per kbar",
+        "regime": "mu0>mu"
+      }
+    }
+  },
+  "theorem_scope": "TWO-POLE CASE-III INTERIOR MERGES ONLY (one nonzero pole-chain edge, one pole-chain 0-arrival, nu_G >= 2, no inner edges)"
+}

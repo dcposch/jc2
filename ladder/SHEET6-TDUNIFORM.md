@@ -1,5 +1,14 @@
 # SHEET6-TDUNIFORM.md — does the kill machinery give a td-uniform single-pole exclusion?
 
+> **2026-08-28 CANONICAL SUPERSESSION — budget dependency.** The `td-1`
+> and `td-1-psi` inequalities used here are supported by the passed
+> actual-weight Corollary 7.1 (`c253bd12...` / `727f5850...`) and, on a
+> singleton chain, by the reviewed first-separation exit sets. No literal
+> `delta`, printed (22), or `(22-cl)` equality is introduced by that repair.
+> Corrected Proposition 8.4 remains nonroot-only. This sheet's old `td=6`
+> census is not an exhaustive current count pending the separate root-aware
+> rerun, and nothing here excludes `td=6`.
+
 Status: PROMOTED (SHEET6-TDU-REVIEW.md all fronts + sec 10 numeric reconciliation: PRIME THEOREM stands — single-pole excluded at entry for every prime td; authoritative composite survivor table td=4..16: 0/4/16/16/23/71/48/87/212, Sigma-lambda=0 counts -/0/0/2/2/2/4/6/4; C1 namespace fix verified, no further edits). Original status: COMPLETE (2026-08-10, this session; unreviewed). Mission: SHEET6 campaign
 generalization — for EVERY td >= 3, decide which single-pole leaf-table
 entries are excluded by the promoted kill set (entry-M pin SHEET6-AF3, AF2
@@ -15,7 +24,8 @@ VERDICT (headline):
   (deg p, deg p_g) = b(alpha,beta), [nu|alpha & nu|b*beta-1 or nu|beta &
   nu|b*alpha-1], td = a*b*alpha*beta/nu.
 - **The entry-M pin is td-uniform and equals b** (§2): M_F =
-  gcd(deg p_F, deg p_g,F) = b. Every b=1 row dies at entry (Prop 8.4).
+  gcd(deg p_F, deg p_g,F) = b. Every b=1 row dies at a certified nonroot
+  entry (corrected Prop 8.4).
 - **Theorem TDU (§6): for every PRIME td, ALL single-pole configurations
   are excluded at entry** — the prime-td leaf table is exactly
   {(alpha,p): alpha | p-1, nu=alpha, a=b=1}, all with M=1. Unconditional
@@ -70,8 +80,8 @@ h0 = g + Not 8.1, pp. 19-44 — NOTHING in the chain uses td <= 6 or
 |T_a,pole| = 1) gives at every pole vertex
     M_F = gcd(deg p_F, deg p_g,F) = gcd(b*alpha, b*beta) = **b**.
 So the gcd pattern of table (23) and its extension to every td is: **the
-entry M is the p-side multiplier b, full stop.** Kill (Prop 8.4, p. 44,
-needs T_a,pole singleton = single-pole hypothesis): b = 1 => excluded.
+entry M is the p-side multiplier b, full stop.** The corrected singleton,
+nonroot Proposition 8.4 kills `b=1` at the pole entry.
 
 Row-by-row at Lambda <= 6 this reproduces SHEET6-AF3 §2 exactly (rows
 1,2,3,5,6,7,10,11 have b=1: dead; rows 4,8,9 have b=2,3,2: live).
@@ -247,7 +257,8 @@ chain analysis:
 1. The multiplicity data of F is (D,Dg) = a(alpha,beta), (P,Pg) =
    b(alpha,beta) with the (R2) nu-congruences and td = a*b*alpha*beta/nu;
    and M_F = b.
-2. If b = 1, contradiction (Prop 8.4). Hence every single-pole
+2. If b = 1, contradiction at the nonroot pole entry (corrected Proposition
+   8.4). Hence every single-pole
    configuration with (deg p_F, deg p_g,F) primitive is excluded, at
    every td.
 3. **If td is PRIME, every single-pole configuration is excluded**: the
@@ -299,7 +310,7 @@ chains" corner:
   ever-richer mu-menus; the pin, which killed 8/9 rows at td <= 6, kills
   a SHRINKING fraction of the leaf table as td grows composite-smooth.
 - **F3 (budget direction)**: every budget in the machinery (td-2, (25)'s
-  td-1-psi, Cor 7.1's td-1) GROWS with td while psi <= M-1 and forced
+  td-1-psi, actual-weight Corollary 7.1's td-1) GROWS with td while psi <= M-1 and forced
   spend stay O(1). Budgets are a small-td weapon only.
 - **F4 (solver-shape opens, engine not math)**: unlocked parametric
   III-E5 nodes (concrete-kap entries with parametric children), and

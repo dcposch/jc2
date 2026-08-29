@@ -314,7 +314,10 @@ def enum_context(m, td, w, r, balphs, cellmap, etag, zch_only=False):
             note(cellmap, key, 'SURVIVE', data, etag)
 
 def enum_root(m, td, r, joint, cellmap, etag):
-    """R layer at one final-merge context: case (IV), w = 1 - l_f/i0 < 1."""
+    """All-simple genuine root-meet diagnostic: case I, 0 < w < 1.
+
+    This is not the distinct case-IV non-V2 root-endpoint family.
+    """
     wlow = sorted(w for w in joint if 0 < w < 1)
     for l in range(1, td - 1):                        # printed l <= td-2
         if not wlow:

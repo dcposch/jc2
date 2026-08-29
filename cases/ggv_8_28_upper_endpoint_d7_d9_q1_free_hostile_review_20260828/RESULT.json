@@ -1,0 +1,674 @@
+{
+  "adjudication": {
+    "actual_wrong_math_from_q1_label": false,
+    "producer_q1_scoped_theorem": "true",
+    "required_scope_repair": "drop q1/R0/D23 from the D7-D9 theorem and from the post-D9 c2=0 W split; retain q1 only as an optional later restriction",
+    "stronger_theorem": "the same D1..D9 => A|T implication is q1-free"
+  },
+  "independence": "No producer code imported; modes use direct binomial expansion; fixtures use a separate Q[X] engine.",
+  "literal_raw_fixtures": {
+    "C_equals_1_D7_negative_control": {
+      "A": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "T": [
+        "1"
+      ],
+      "V0": [
+        "1"
+      ],
+      "g7_reduced_denominator": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "-2",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "g7_reduced_numerator": [
+        "-3/1024"
+      ],
+      "meaning": "with gcd(A,V0)=1, a T not divisible by A already fails D7"
+    },
+    "active_C_A_fixtures": [
+      {
+        "A": [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "B": [
+          "1"
+        ],
+        "C": [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "D0_through_D8_zero": true,
+        "D9_characteristic_reduced_denominator": [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "3",
+          "0",
+          "0",
+          "0",
+          "-3",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "D9_characteristic_reduced_numerator": [
+          "-5635/24576",
+          "0",
+          "0",
+          "0",
+          "11/16",
+          "0",
+          "0",
+          "0",
+          "-11/16",
+          "0",
+          "0",
+          "0",
+          "11/48"
+        ],
+        "F4": [],
+        "F5": [
+          "-5/192"
+        ],
+        "T": [
+          "1"
+        ],
+        "V0": [],
+        "V1": [],
+        "Z": [],
+        "c2_and_c6_both_nonzero": true,
+        "label": "active_C_A_V1_zero_q1",
+        "modes": {
+          "c10": [],
+          "c12": [],
+          "c14": [],
+          "c16": [],
+          "c18": [],
+          "c2": [
+            "1"
+          ],
+          "c20": [],
+          "c4": [
+            "2"
+          ],
+          "c6": [
+            "3"
+          ],
+          "c8": [
+            "5"
+          ]
+        },
+        "q1_augmented_rank": 5,
+        "q1_member": true,
+        "q1_rank": 5,
+        "raw_F_degrees_1_through_8": [
+          -1,
+          -1,
+          4,
+          -1,
+          0,
+          -1,
+          -1,
+          -1
+        ],
+        "raw_G_degrees_1_through_8": [
+          -1,
+          20,
+          12,
+          16,
+          8,
+          12,
+          4,
+          8
+        ]
+      },
+      {
+        "A": [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "B": [
+          "1"
+        ],
+        "C": [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "D0_through_D8_zero": true,
+        "D9_characteristic_reduced_denominator": [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "3",
+          "0",
+          "0",
+          "0",
+          "-3",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "D9_characteristic_reduced_numerator": [
+          "54653/24576",
+          "0",
+          "0",
+          "0",
+          "-587/64",
+          "0",
+          "0",
+          "0",
+          "907/64",
+          "0",
+          "0",
+          "0",
+          "-1867/192",
+          "0",
+          "0",
+          "0",
+          "5/2"
+        ],
+        "F4": [
+          "9/256"
+        ],
+        "F5": [
+          "-5/192"
+        ],
+        "T": [
+          "1"
+        ],
+        "V0": [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "V1": [
+          "1"
+        ],
+        "Z": [
+          "1/2"
+        ],
+        "c2_and_c6_both_nonzero": true,
+        "label": "active_C_A_non_q1",
+        "modes": {
+          "c10": [],
+          "c12": [],
+          "c14": [],
+          "c16": [],
+          "c18": [],
+          "c2": [
+            "1"
+          ],
+          "c20": [],
+          "c4": [
+            "2"
+          ],
+          "c6": [
+            "3"
+          ],
+          "c8": [
+            "5"
+          ]
+        },
+        "q1_augmented_rank": 6,
+        "q1_member": false,
+        "q1_rank": 5,
+        "raw_F_degrees_1_through_8": [
+          12,
+          8,
+          4,
+          0,
+          0,
+          -1,
+          -1,
+          -1
+        ],
+        "raw_G_degrees_1_through_8": [
+          20,
+          20,
+          16,
+          16,
+          12,
+          12,
+          8,
+          8
+        ]
+      }
+    ],
+    "proper_C_fixtures": [
+      {
+        "A": [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "B": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "C": [
+          "-1",
+          "1"
+        ],
+        "D0_through_D8_zero": true,
+        "D9_characteristic_reduced_denominator": [
+          "-1",
+          "1",
+          "0",
+          "0",
+          "2",
+          "-2",
+          "0",
+          "0",
+          "-1",
+          "1"
+        ],
+        "D9_characteristic_reduced_numerator": [
+          "-137/1048576",
+          "-253/1048576",
+          "-381/1048576",
+          "-509/1048576",
+          "-3/8192",
+          "-1/4096",
+          "-1/8192"
+        ],
+        "F4": [
+          "3585/65536",
+          "-1/128",
+          "-1/128",
+          "-1/128"
+        ],
+        "F5": [],
+        "T": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "V0": [
+          "-1",
+          "1"
+        ],
+        "V1": [
+          "1"
+        ],
+        "Z": [
+          "1/32"
+        ],
+        "label": "proper_C_non_q1_V1_unit",
+        "modes": {
+          "c10": [],
+          "c12": [],
+          "c14": [],
+          "c16": [],
+          "c18": [],
+          "c2": [],
+          "c20": [],
+          "c4": [],
+          "c6": [],
+          "c8": []
+        },
+        "q1_augmented_rank": 6,
+        "q1_member": false,
+        "q1_rank": 5,
+        "raw_F_degrees_1_through_8": [
+          9,
+          8,
+          7,
+          3,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "raw_G_degrees_1_through_8": [
+          17,
+          16,
+          15,
+          11,
+          7,
+          6,
+          2,
+          -1
+        ]
+      },
+      {
+        "A": [
+          "-1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "B": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "C": [
+          "-1",
+          "1"
+        ],
+        "D0_through_D8_zero": true,
+        "D9_characteristic_reduced_denominator": [
+          "-1",
+          "1",
+          "0",
+          "0",
+          "2",
+          "-2",
+          "0",
+          "0",
+          "-1",
+          "1"
+        ],
+        "D9_characteristic_reduced_numerator": [
+          "-7/131072",
+          "-7/16384",
+          "-27/131072",
+          "-35/65536",
+          "-51/131072",
+          "-13/65536",
+          "-19/131072"
+        ],
+        "F4": [
+          "-319/4096",
+          "63/1024",
+          "3/2048",
+          "-1/1024",
+          "65/4096"
+        ],
+        "F5": [],
+        "T": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "V0": [
+          "1",
+          "-2",
+          "1"
+        ],
+        "V1": [
+          "-1",
+          "1"
+        ],
+        "Z": [
+          "1/8",
+          "-1/4",
+          "1/8"
+        ],
+        "label": "proper_C_non_q1_V1_vanishes_at_C_root",
+        "modes": {
+          "c10": [],
+          "c12": [],
+          "c14": [],
+          "c16": [],
+          "c18": [],
+          "c2": [],
+          "c20": [],
+          "c4": [],
+          "c6": [],
+          "c8": []
+        },
+        "q1_augmented_rank": 6,
+        "q1_member": false,
+        "q1_rank": 5,
+        "raw_F_degrees_1_through_8": [
+          10,
+          10,
+          7,
+          4,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "raw_G_degrees_1_through_8": [
+          18,
+          18,
+          15,
+          12,
+          9,
+          6,
+          3,
+          -1
+        ]
+      }
+    ]
+  },
+  "source_hashes": {
+    "cases/ggv_8_28_upper_cascade_w3_w6_20260827/RESULT.json": "54767fceaa1cc6b3feb64d9d07f7af1e2ffd43a725617123e6e6849091b23615",
+    "cases/ggv_8_28_upper_cascade_w3_w6_20260827/verify_upper_cascade.py": "ac3197988a3c0eba6b717194696b28f772550b789426087cbcfb3e6feee5ac37",
+    "cases/ggv_8_28_upper_endpoint_q1_prefix_d7_d8_target_20260828/RESULT.json": "ba900c6eacc7302491105bec49516d2e95dff982959a3904370b7e540216260b",
+    "cases/ggv_8_28_upper_endpoint_q1_prefix_d7_d8_target_20260828/TARGET.json": "c41f04a93f509adb1f430e808c69cd2171439c9e19fb001c6ea2bf0f29633a46",
+    "cases/ggv_8_28_upper_endpoint_q1_prefix_d7_d8_target_20260828/verify_q1_prefix_target.py": "fceb189badafad877c1142b8925480516111790707954d2000421b8190fde119",
+    "xmodel/ggv-8_28-upper-cascade-w3-w6-sol-ultra-20260827.md": "6e3d9104effe39c0dd0e34377bb7bdc6ede4f25f472f9f9c0098706aceffb60a",
+    "xmodel/ggv-upper-endpoint-q1-prefix-d7-d9-divisor-target-sol-ultra-20260828.md": "5b3bd56a1921bb0a4ed7ae9ed7c1eabcf5215533a0aae2a769cdcc81927b5401"
+  },
+  "status": "REPAIR_EXACT_Q1_NOT_REQUIRED",
+  "symbolic_reconstruction": {
+    "D7_active_polar": [
+      {
+        "A_exponent": -1,
+        "coefficient": "3/32",
+        "monomial": [
+          "f4",
+          "t"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "-3/1024",
+        "monomial": [
+          "s",
+          "t",
+          "t"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "-3/2048",
+        "monomial": [
+          "t",
+          "z",
+          "z"
+        ]
+      }
+    ],
+    "D7_c2_zero_polar": [
+      {
+        "A_exponent": -2,
+        "coefficient": "-3/1024",
+        "monomial": [
+          "t",
+          "t",
+          "v"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "3/32",
+        "monomial": [
+          "f4",
+          "t"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "-3/2048",
+        "monomial": [
+          "t",
+          "z",
+          "z"
+        ]
+      }
+    ],
+    "D8_active_polar_sha256": "474656396f50c0da0043c4fa4620741db1945b8043f81b7c1a7450b331ba40af",
+    "D8_c2_zero_polar_sha256": "9a0527d6eb5baf5828e7ade3f6ffdafe74d45fe728ebcaace10337ea02796323",
+    "D9_active_A_minus_3": [
+      {
+        "A_exponent": 0,
+        "coefficient": "-3/65536",
+        "monomial": [
+          "k",
+          "k",
+          "s"
+        ]
+      },
+      {
+        "A_exponent": 0,
+        "coefficient": "3/8192",
+        "monomial": [
+          "k",
+          "s",
+          "s",
+          "t"
+        ]
+      },
+      {
+        "A_exponent": 0,
+        "coefficient": "-3/16384",
+        "monomial": [
+          "k",
+          "t",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": 0,
+        "coefficient": "-3/4096",
+        "monomial": [
+          "s",
+          "s",
+          "s",
+          "t",
+          "t"
+        ]
+      },
+      {
+        "A_exponent": 0,
+        "coefficient": "3/4096",
+        "monomial": [
+          "s",
+          "t",
+          "t",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": 0,
+        "coefficient": "-1/8192",
+        "monomial": [
+          "t",
+          "t",
+          "t"
+        ]
+      }
+    ],
+    "D9_c2_c6_zero_polar_sha256": "435b80c74e9d426ec172cbec23131fbb235e7f89c132e3240cc9439664d57df4",
+    "active_root_reduction": "after D7 J=0: (-12*S*T^2*(S^2-2Z)-8*T^3)/65536; D8 kills S^2-2Z",
+    "all_modes": {
+      "10": "1/4",
+      "12": "0",
+      "14": "-1/4",
+      "16": "-1/2",
+      "18": "-3/4",
+      "2": "5/4",
+      "20": "-1",
+      "4": "1",
+      "6": "3/4",
+      "8": "1/2"
+    },
+    "method": "direct generalized-binomial expansion, not producer recurrence",
+    "post_repair_c2_zero": [
+      {
+        "A_exponent": -2,
+        "coefficient": "-3/16",
+        "monomial": [
+          "v",
+          "w",
+          "w"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "3/4",
+        "monomial": [
+          "f5",
+          "w"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "-3/256",
+        "monomial": [
+          "u0",
+          "w",
+          "z"
+        ]
+      }
+    ],
+    "proper_factorization": "N9=C^3*B^2*(-3*V1*D^2-12*B^2*U*Z*D-8*B^4*U^3+768*C*B^2*F5*D+6144*C^2*B^4*F6*U), D=K-4*U*V1",
+    "proper_root_division_free_reduction": "after D7: P9=12*U^2*V1*(2*B^2*Z-V1^2)-8*B^4*U^3; D8 kills the parenthesis, including when V1=0",
+    "regular_mode_firewall": {
+      "D9_active_leading_variables": [
+        "k",
+        "s",
+        "t",
+        "z"
+      ],
+      "active_minimum_A_powers": {
+        "D7_c2": 0,
+        "D8_c2": -1,
+        "D8_c6": 1,
+        "D9_F5": -2,
+        "D9_F6": -1,
+        "D9_c2": -2,
+        "D9_c6": 0,
+        "D9_same_row_F9": 2
+      },
+      "c4_c8_absent_from_all_D7_D9_polar_targets": true,
+      "c6_regular_on_A_divides_V0": true,
+      "same_row_F9_absent_from_all_D7_D9_polar_targets": true
+    }
+  },
+  "target_sha256": "bfc1dd914bcb07262e671ed36c77faef3ceb9ca438150a798786f0e13906c890",
+  "verdict": "REPAIR"
+}

@@ -1,0 +1,22 @@
+{
+  "case": "ggv_8_28_upper_endpoint_lambda0_endpoint_kernel_components_r1_20260828",
+  "endpoint": "x14*x72+x1*x97",
+  "hosts": {
+    "c8": {"alias": "r6a", "instance_id": "i-02cb2b4a379ffcc64", "product": "r6i.4xlarge", "vcpus": 16, "job_tag": "ggv_lambda0_endpoint_kernel_c8_r1_20260828T132000Z_r6a"},
+    "q1": {"alias": "r6b", "instance_id": "i-0f089e64c378f5da3", "product": "r6i.4xlarge", "vcpus": 16, "job_tag": "ggv_lambda0_endpoint_kernel_q1_r1_20260828T132000Z_r6b"},
+    "p": {"alias": "r6c", "instance_id": "i-040b7a1c2ed72d4cc", "product": "r6i.4xlarge", "vcpus": 16, "job_tag": "ggv_lambda0_endpoint_kernel_p_r1_20260828T132000Z_r6c"}
+  },
+  "rank_drop_set": "V(c8*q1*P)",
+  "resources": {
+    "address_space_bytes": 103079215104,
+    "cpu_list": [1],
+    "file_size_bytes": 34359738368,
+    "master_seconds_per_lane": 3600,
+    "swap_total_kib": 0
+  },
+  "components": [
+    {"name": "C8", "method": "generic_exact_function_field", "seconds": 1800},
+    {"name": "Q1", "method": "generic_exact_function_field", "seconds": 1800},
+    {"name": "P", "method": "six_preregistered_exact_rational_samples", "seconds_each": 300}
+  ]
+}

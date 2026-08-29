@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+if [[ "$(uname -s)" != "Linux" ]]; then exit 125; fi
+vendor=$(tr -d '\n' < /sys/class/dmi/id/sys_vendor 2>/dev/null || true); if [[ "$vendor" != "Amazon EC2" ]]; then exit 125; fi
+if [[ $# -ne 2 ]]; then exit 125; fi
+archive=$1; tag=$2
+case "$tag" in max12_812_order2_square_lowcontact_c2_delta_v4_q_*) ;; *) exit 125 ;; esac
+base="/home/ubuntu/jobs/$tag"; source_root="$base/source"; evidence="$base/evidence"; if [[ -e "$base" ]]; then exit 125; fi
+mkdir -p "$source_root"; tar -xzf "$archive" -C "$source_root"; cd "$source_root"
+sha256sum -c cases/max12_812_order2_square_owner_lowcontact_c1_c2_v4_localized_delta_20260826/FREEZE.sha256 > "$base/prelaunch_freeze.stdout"
+nohup bash cases/max12_812_order2_square_owner_lowcontact_c1_c2_v4_localized_delta_20260826/run_aws.sh "$source_root" "$evidence" "$tag" 16777216 600 1800 > "$base/outer.stdout" 2> "$base/outer.stderr" < /dev/null &
+launcher_pid=$!; printf '%s\n' "$launcher_pid" > "$base/host_launcher.pid"; printf 'tag=%s host=%s pid=%s base=%s\n' "$tag" "$(hostname)" "$launcher_pid" "$base"

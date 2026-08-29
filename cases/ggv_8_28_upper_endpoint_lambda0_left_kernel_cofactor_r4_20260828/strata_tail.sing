@@ -1,0 +1,77 @@
+
+// Bounded exact content/Fitting-strata census; no standard basis is computed.
+// Convert the ideal container to a 1x106 matrix so leading zero slots remain
+// addressable. Singular size(ideal) counts nonzero generators, not slots.
+matrix RAW_MATRIX=matrix(LEFT_MINORS);
+int raw_slot_count=ncols(RAW_MATRIX);
+if(raw_slot_count!=106) { print("FATAL_RAW_SLOT_COUNT="+string(raw_slot_count)); quit; }
+poly RAW_CONTENT=0;
+poly raw_minor;
+int zero_minor_count=0;
+int nonzero_minor_count=0;
+int content_i;
+string nonzero_indices="";
+for(content_i=1;content_i<=raw_slot_count;content_i=content_i+1)
+{
+  raw_minor=RAW_MATRIX[1,content_i];
+  if(raw_minor==0)
+  {
+    zero_minor_count=zero_minor_count+1;
+  }
+  else
+  {
+    nonzero_minor_count=nonzero_minor_count+1;
+    if(nonzero_indices!="") { nonzero_indices=nonzero_indices+","; }
+    nonzero_indices=nonzero_indices+string(content_i);
+    if(RAW_CONTENT==0) { RAW_CONTENT=raw_minor; }
+    else { RAW_CONTENT=gcd(RAW_CONTENT,raw_minor); }
+  }
+}
+print("RAW_SLOT_COUNT="+string(raw_slot_count));
+print("RAW_NONZERO_INDICES="+nonzero_indices);
+if(nonzero_indices!="81,93" || nonzero_minor_count!=2 || zero_minor_count!=104)
+{
+  print("FATAL_RAW_NONZERO_INDEX_SET"); quit;
+}
+print("RAW_NONZERO_INDEX_SET_PASS=1");
+if(RAW_CONTENT==0) { print("FATAL_ALL_RAW_MINORS_ZERO"); quit; }
+poly RAW_MINOR_81=RAW_MATRIX[1,81];
+poly RAW_MINOR_93=RAW_MATRIX[1,93];
+poly RESIDUAL_81=RAW_MINOR_81/RAW_CONTENT;
+poly RESIDUAL_93=RAW_MINOR_93/RAW_CONTENT;
+int recomposition_pass=(RAW_MINOR_81==RAW_CONTENT*RESIDUAL_81 && RAW_MINOR_93==RAW_CONTENT*RESIDUAL_93);
+if(!recomposition_pass) { print("FATAL_CONTENT_RECOMPOSITION"); quit; }
+int content_unit=(deg(RAW_CONTENT)==0);
+list CONTENT_FACTORS=factorize(RAW_CONTENT,1);
+print("RAW_ZERO_MINORS="+string(zero_minor_count));
+print("RAW_CONTENT_UNIT="+string(content_unit));
+print("RAW_CONTENT="+string(RAW_CONTENT));
+print("CONTENT_FACTOR_DATA="+string(CONTENT_FACTORS));
+print("RAW_RANK_DROP_CONDITION=M81_ZERO_AND_M93_ZERO");
+print("CONTENT_RECOMPOSITION_PASS="+string(recomposition_pass));
+print("CONTENT_HYPERSURFACE_PRESENT="+string(!content_unit));
+print("RESIDUAL_FITTING_IDEAL_GENERATORS=2");
+string contentfile="COFACTOR_CONTENT.txt";
+write(contentfile,"RAW_SLOT_COUNT="+string(raw_slot_count));
+write(contentfile,"RAW_NONZERO_INDICES="+nonzero_indices);
+write(contentfile,"RAW_ZERO_MINORS="+string(zero_minor_count));
+write(contentfile,"RAW_CONTENT_UNIT="+string(content_unit));
+write(contentfile,"RAW_CONTENT="+string(RAW_CONTENT));
+write(contentfile,"CONTENT_FACTOR_DATA="+string(CONTENT_FACTORS));
+write(contentfile,"RAW_RANK_DROP_CONDITION=M81_ZERO_AND_M93_ZERO");
+write(contentfile,"SET_THEORETIC_DECOMPOSITION=V(RAW_CONTENT)_UNION_V(RESIDUAL_81,RESIDUAL_93)");
+string stratafile="FITTING_STRATA_RAW.sing";
+write(stratafile,"// Exact raw rank-drop ideal and content/residual decomposition; do not cancel raw generators.");
+write(stratafile,"ring P=0,(q0,q1,q2,c4,c6,c8),dp;");
+write(stratafile,"poly RAW_MINOR_81="+string(RAW_MINOR_81)+";");
+write(stratafile,"poly RAW_MINOR_93="+string(RAW_MINOR_93)+";");
+write(stratafile,"ideal RAW_FITTING_IDEAL=RAW_MINOR_81,RAW_MINOR_93;");
+write(stratafile,"poly RAW_CONTENT="+string(RAW_CONTENT)+";");
+write(stratafile,"poly RESIDUAL_81="+string(RESIDUAL_81)+";");
+write(stratafile,"poly RESIDUAL_93="+string(RESIDUAL_93)+";");
+write(stratafile,"ideal RESIDUAL_FITTING_IDEAL=RESIDUAL_81,RESIDUAL_93;");
+write(stratafile,"// Set-theoretically: V(RAW_FITTING_IDEAL)=V(RAW_CONTENT) union V(RESIDUAL_FITTING_IDEAL).");
+print("ENDPOINT_QUADRATIC=x14*x72+x1*x97");
+print("RESIDUAL_RIGHT_KERNEL_PULLBACK=PENDING_COMPONENT_STRATA");
+print("STRATA_GCD_PASS=1");
+quit;

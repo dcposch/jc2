@@ -1,0 +1,24 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Done.
+
+## Verdict: `REPAIR`
+
+**Byte custody:** all seven assigned hashes match; `SOURCE.sha256` (11/11) and `EVIDENCE.sha256` (4/4) verify. No mismatch.
+
+### What I found
+
+**The theorem is true — I proved it independently.** I rebuilt the entire `D7 → D22` ladder from the *general* reduced branch-P prefix in my own Laurent ring and obtained `ord_alpha(g22) >= -2` (A-exponent support `{-2,0,2,4,6,8}`) and `D22_raw ∈ (X−alpha)` (432 terms, min A-exponent 1). Every rung uses only DVR-valid inference: regularity, `ord(Δ²)≥1 ⟹ ord(Δ)≥1`, and "a nonzero scalar is a unit." **No first failing dependency.**
+
+**But three things in the charged statement are wrong or undelivered:**
+
+1. **Section 2's bridge claim is false.** `(6)` has `Fbar_3=(Zbar+A*Tbar)/8` with **A¹**; the recursively pinned `common_F_prefix` has `F3=(z+A²v)/8` and `F4=v/16+z²/64+A²r`. The pinned cascade begins *after* D7–D15.
+2. **"Uses neither q1 nor the provisional D9 repair" is half wrong.** q1 — correct. D9 — the pinned prefix *is* the D7 (`A|T`) and D9 (`A|W`) conclusion; the local D7/D8/D9 rungs are used. Only the *global* `A|T` theorem is avoided.
+3. **The one new load-bearing step (localizing D7–D15) is asserted in a sentence** with no derivation, no pin, no checker line. I supplied it: `polar(g7) = 3T(AK−2T)/(2048A²)`, which at a V0-unit simple root forces `ord(T)≥1` immediately. Dropping any prefix rung deepens `polar(g16)` from `−2` to `−20/−16/−12/−8/−4`.
+
+**The charged checker is tautological where it matters:** `assert (-i)+(-(n-i)) == -n`, `assert min(k+3)==1`, and `"g22_order...": ">=-2"` as a literal string. Its "Newton identity" collapses to `(a²+vs/2)² = a⁴+a²vs+v²s²/4` because `correction` reuses `h`'s summands.
+
+**Two hypotheses can be dropped** (strengthening): squarefreeness of all of `A` (only simplicity of `alpha` is used), and absence of raw `G22` (since `D22 = L22(G22 − g22)` for any `G22`).
+
+**D12 fixture:** all three `B`-roots confirmed simple V0-unit roots with exact order-2 poles. I added a cross-validation the producer didn't: the fixture's `A^-2` coefficient at `alpha=-1` equals `(3/8)·V0¹²·Δ̄6²` with `Δ̄6 = ±21/2²⁴` — an exact rational square, matching my locally derived normal form.
+
+**Deliverables:** report at `xmodel/ggv-upper-endpoint-unit-root-transport-hostile-review-opus5-20260828-r1.md`; checker at the required path (`cbf8498e…`), 7.8 s, all checks pass, no producer import. `git diff --check` clean on both; only those two new paths added; the 11 pre-existing modified tracked files are untouched.

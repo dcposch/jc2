@@ -1,0 +1,24 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+**Verdict: REPAIR.** Review written to `xmodel/sigray-prop42-constant-shift-repair-hostile-review-opus5-20260828-r1.md` (`47f2b608…`). Producer preserved byte-for-byte (`10bc55d5…` unchanged); all four charged hashes matched on recompute.
+
+## What holds
+
+I re-derived the whole argument from `refs/sigray_full.pdf` and every core claim survives:
+
+- **Fiber residual** (charge 1): `deg p_F ≥ 1` on `T_a^+`, both charts, including the axes. The `f` vs `f−a` distinction of Notation 3.13 is inert *exactly* on `T_a^+` (`d_F>0` puts the leading index above `j=0`) — it would be unsound on `T_a^0`.
+- **Negative order** (charge 2): `(q^A p^B)' = 0` with `A=κd, B=−κe` forces a contradiction by pure degree count. I hunted the named countermodels: `ξ, ξ^{−1}`, monomials, zero polys, cancellations — all require `deg p = 0`. A probe of the checker's own enumeration found **36** counterexamples the moment the `deg(p)≥1` filter is dropped, and **0** across 133920 wider-alphabet checks with it.
+- **Zero order / immediate termination** (charges 3–4): `(1,0,c)` unique under `gcd(k,0)=k`, `f^0` legal, `h−c` non-constant, `δ_next = 0` — verified twice by independent routes that agree.
+- **Degrees** (charge 5): `b=(μ−1)a+1` is literally the paper's own (17) in Prop. 4.6; `M_F` and the four other `Q(F)` slots check out.
+- **Scope** (charge 6): the corner forces `T_a^↗` — corroborated three ways, including the paper's own Prop. 6.4 and Corollary 6.1. I pinned the arrow glyphs via CMSY10 slots 0x25/0x26 plus a semantic cross-check, and supplied the missing chain `T_{a,pole} ⊆ T_a^↘` (Prop. 5.3(vii) + Prop. 6.4, propagated by Statement 6.2).
+
+## Why it is not PASS
+
+The producer claims "ERRATUM WITH **COMPLETE** REPAIR". It isn't. Five printed downstream arguments on `T_a^+`/`T_a^↗` silently need `l_j ≥ 1` (i.e. `d_{h_j,F} ≠ 0`), two of them literally dividing by it: the p. 20 Remark, Prop. 4.4's "In particular" clause, Prop. 5.2, Prop. 5.3(ii), and the ratios inside Props. 6.2/6.3. The `T_a^↘` firewall of §5 does not reach them — they live in the corner-permitted sector.
+
+Four of the five are cheap to fix, and I supplied the patches: **Fact A** (Statement 3.9(i)(ii)(iii) force `d_{h,F^0}=d_{h,F}=0` and the same constant) and **Fact B** (`h^+_{(0,y)}` is a nonzero constant only if `h` is constant, so no corner on the axes). The p. 20 Remark is *not* rescuable — under the erratum it becomes precisely the open statement "no corner at `j=0`", and `SIGRAY-AUDIT.md:54` names that Remark as part of the gap.
+
+So: `SIGRAY-AUDIT.md` may move `GAP → ERRATUM WITH COMPLETE REPAIR` only with items (f) and (g) of my §9 added; otherwise the honest status is `ERRATUM (partial) + residual GAP`. I did not edit it.
+
+## Checker
+
+Replayed: PASS, grouped total **125788**, ~10 s, exit 0 — matching the charge, and I reconstructed every count independently. It is correctly guarded (assertions precede the banner) and has one genuine mutation control. But the 938-item terminal block is **tautological** — `e` is *defined* as `(μ−1)d+1−u`, so `delta_before == −κe` and `delta_after == 0` can never fail — the decisive lemma (`deg p_F ≥ 1`) is assumed as a filter rather than tested, and there is zero downstream coverage, which is exactly where the defect is. The verdict rests on the hand proof, not the sampling.

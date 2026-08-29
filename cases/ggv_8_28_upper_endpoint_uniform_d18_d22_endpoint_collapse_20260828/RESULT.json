@@ -1,0 +1,1312 @@
+{
+  "calculation": {
+    "D18": {
+      "Delta10": "E=F10-D*Z/4-Q^2/4-R*T/2-V*Y/16",
+      "P18": "(3*B/4+c8/2)*E+3*D^2/8-N/2",
+      "conclusion": "c18=0 and P18=A^2*P",
+      "g18_negative": [
+        {
+          "A_exponent": -3,
+          "coefficient": "1",
+          "monomial": [
+            "c18"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "b",
+            "e"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "1/2",
+          "monomial": [
+            "c8",
+            "e"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/8",
+          "monomial": [
+            "d",
+            "d"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "n"
+          ]
+        }
+      ]
+    },
+    "D19": {
+      "Delta11": "H=F11-E*Z/2-D*V/8-Q*T/2-R*Y/2",
+      "P19": "(3*B/4+c8/2)*H+3*D*E/4-P/2",
+      "conclusion": "P19=A^2*S",
+      "g19_negative": [
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "b",
+            "h"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "1/2",
+          "monomial": [
+            "c8",
+            "h"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "d",
+            "e"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "p"
+          ]
+        }
+      ]
+    },
+    "D20": {
+      "Delta12": "K=F12-D*R-E*V/4-E*Z^2/16-3*H*Z/4-Q*Y/2-T^2/4",
+      "P20": "(3*B/4+c8/2)*K+3*D*H/4+3*E^2/8-S/2",
+      "conclusion": "c20=0 and P20=A^2*U",
+      "g20_negative": [
+        {
+          "A_exponent": -4,
+          "coefficient": "1",
+          "monomial": [
+            "c20"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "b",
+            "k"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "1/2",
+          "monomial": [
+            "c8",
+            "k"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "d",
+            "h"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/8",
+          "monomial": [
+            "e",
+            "e"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "s"
+          ]
+        }
+      ]
+    },
+    "D21": {
+      "Delta13": "L=F13-D*Q-2*E*R-E*V*Z/16-3*H*V/8-3*H*Z^2/16-K*Z-T*Y/2",
+      "P21": "(3*B/4+c8/2)*L+3*D*K/4+3*E*H/4-U/2",
+      "conclusion": "P21=A^2*W",
+      "g21_negative": [
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "b",
+            "l"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "1/2",
+          "monomial": [
+            "c8",
+            "l"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "d",
+            "k"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "e",
+            "h"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "u"
+          ]
+        }
+      ]
+    },
+    "D22": {
+      "Delta14": "J=F14-D*T-2*E*Q-E*R*Z/2-E*V^2/64-3*H*R-3*H*V*Z/16-H*Z^3/64-K*V/2-3*K*Z^2/8-5*L*Z/4-Y^2/4",
+      "P22": "(3*B/4+c8/2)*J+3*D*L/4+3*E*K/4+3*H^2/8-W/2",
+      "conclusion": "the complete D22 determinant row lies in the principal ideal (A)",
+      "corrected_shape": "g22=P22/A^2+H22 with H22 polynomial, not only P22/A^2",
+      "full_g22_exponent_census": {
+        "-2": 6,
+        "0": 33,
+        "2": 29,
+        "4": 19,
+        "6": 7,
+        "8": 1
+      },
+      "full_g22_sha256": "e062ce78c5dc556776e3d08e2da949ba5c7e2f080053639fc573c8d181f15d0b",
+      "full_g22_term_count": 95,
+      "minus_L22_min_A_exponent": 1,
+      "minus_L22_sha256": "40485ab48bf5ccc9288fc101983f7827c85bb0d393e749f24e4820604390b030",
+      "minus_L22_term_count": 353,
+      "negative_part": [
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "b",
+            "j"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "1/2",
+          "monomial": [
+            "c8",
+            "j"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "d",
+            "l"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "e",
+            "k"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/8",
+          "monomial": [
+            "h",
+            "h"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "w"
+          ]
+        }
+      ],
+      "polar_image": [
+        {
+          "A_exponent": 1,
+          "coefficient": "18",
+          "monomial": [
+            "a_x",
+            "b",
+            "j"
+          ]
+        },
+        {
+          "A_exponent": 1,
+          "coefficient": "12",
+          "monomial": [
+            "a_x",
+            "c8",
+            "j"
+          ]
+        },
+        {
+          "A_exponent": 1,
+          "coefficient": "18",
+          "monomial": [
+            "a_x",
+            "d",
+            "l"
+          ]
+        },
+        {
+          "A_exponent": 1,
+          "coefficient": "18",
+          "monomial": [
+            "a_x",
+            "e",
+            "k"
+          ]
+        },
+        {
+          "A_exponent": 1,
+          "coefficient": "9",
+          "monomial": [
+            "a_x",
+            "h",
+            "h"
+          ]
+        },
+        {
+          "A_exponent": 1,
+          "coefficient": "-12",
+          "monomial": [
+            "a_x",
+            "w"
+          ]
+        },
+        {
+          "A_exponent": 2,
+          "coefficient": "6",
+          "monomial": [
+            "b",
+            "j_x"
+          ]
+        },
+        {
+          "A_exponent": 2,
+          "coefficient": "6",
+          "monomial": [
+            "b_x",
+            "j"
+          ]
+        },
+        {
+          "A_exponent": 2,
+          "coefficient": "4",
+          "monomial": [
+            "c8",
+            "j_x"
+          ]
+        },
+        {
+          "A_exponent": 2,
+          "coefficient": "6",
+          "monomial": [
+            "d",
+            "l_x"
+          ]
+        },
+        {
+          "A_exponent": 2,
+          "coefficient": "6",
+          "monomial": [
+            "d_x",
+            "l"
+          ]
+        },
+        {
+          "A_exponent": 2,
+          "coefficient": "6",
+          "monomial": [
+            "e",
+            "k_x"
+          ]
+        },
+        {
+          "A_exponent": 2,
+          "coefficient": "6",
+          "monomial": [
+            "e_x",
+            "k"
+          ]
+        },
+        {
+          "A_exponent": 2,
+          "coefficient": "6",
+          "monomial": [
+            "h",
+            "h_x"
+          ]
+        },
+        {
+          "A_exponent": 2,
+          "coefficient": "-4",
+          "monomial": [
+            "w_x"
+          ]
+        }
+      ]
+    },
+    "causal_firewalls": {
+      "c18_D19_predecessor": [
+        {
+          "A_exponent": -2,
+          "coefficient": "9",
+          "monomial": [
+            "a_x",
+            "c18"
+          ]
+        }
+      ],
+      "c18_D19_same_row": [
+        {
+          "A_exponent": -2,
+          "coefficient": "-9",
+          "monomial": [
+            "a_x",
+            "c18"
+          ]
+        }
+      ],
+      "c18_D19_total": [],
+      "c20_D21_predecessor": [
+        {
+          "A_exponent": -3,
+          "coefficient": "12",
+          "monomial": [
+            "a_x",
+            "c20"
+          ]
+        }
+      ],
+      "c20_D21_same_row": [
+        {
+          "A_exponent": -3,
+          "coefficient": "-12",
+          "monomial": [
+            "a_x",
+            "c20"
+          ]
+        }
+      ],
+      "c20_D21_total": [],
+      "conclusion": "c18 and c20 are forced by their birth-row polynomiality, not successor kills"
+    }
+  },
+  "complete_mode_schedule": [
+    {
+      "F_exponent": "1",
+      "birth_A_power": 4,
+      "birth_weight": 4,
+      "continuation_status": "retained_live",
+      "support_at_D22": true
+    },
+    {
+      "F_exponent": "3/4",
+      "birth_A_power": 3,
+      "birth_weight": 6,
+      "continuation_status": "killed_at_D8",
+      "support_at_D22": true
+    },
+    {
+      "F_exponent": "1/2",
+      "birth_A_power": 2,
+      "birth_weight": 8,
+      "continuation_status": "retained_live",
+      "support_at_D22": true
+    },
+    {
+      "F_exponent": "1/4",
+      "birth_A_power": 1,
+      "birth_weight": 10,
+      "continuation_status": "killed_at_D11",
+      "support_at_D22": true
+    },
+    {
+      "F_exponent": "0",
+      "birth_A_power": 0,
+      "birth_weight": 12,
+      "continuation_status": "retained_live",
+      "support_at_D22": true
+    },
+    {
+      "F_exponent": "-1/4",
+      "birth_A_power": -1,
+      "birth_weight": 14,
+      "continuation_status": "killed_at_D14",
+      "support_at_D22": true
+    },
+    {
+      "F_exponent": "-1/2",
+      "birth_A_power": -2,
+      "birth_weight": 16,
+      "continuation_status": "retained_and_forced_by_D16_polynomiality",
+      "support_at_D22": true
+    },
+    {
+      "F_exponent": "-3/4",
+      "birth_A_power": -3,
+      "birth_weight": 18,
+      "continuation_status": "forced_zero_by_D18_polynomiality",
+      "support_at_D22": true
+    },
+    {
+      "F_exponent": "-1",
+      "birth_A_power": -4,
+      "birth_weight": 20,
+      "continuation_status": "forced_zero_by_D20_polynomiality",
+      "support_at_D22": true
+    }
+  ],
+  "correction_to_provisional_claim": "the full g22 has A-exponents -2,0,2,4,6,8; only its polar part is A^-2. The regular part does not threaten the proof because -L22 sends it into (A^3).",
+  "literal_raw_source_replay": {
+    "F_window_termination": {
+      "F15_through_F22_absent": true,
+      "last_weight": 14
+    },
+    "G_window_termination": {
+      "G22_absent": true,
+      "last_weight": 21
+    },
+    "endpoint_target": {
+      "conclusion": "all endpoint generators impose D22(X)=1, not only D22[X^0]=1",
+      "literal_D22_row_sha256": "eda682800b4d242fa6ff8eddd5aa8028d878a27f0253ea0b8a33614640e76b0a",
+      "literal_generator_degrees": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "literal_generator_indices_zero_based": [
+        495,
+        496,
+        497,
+        498,
+        499,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        512
+      ],
+      "raw_polynomial_degree": 17,
+      "target": 1,
+      "zero_row_folded_provenance": {
+        "nonzero_generators": [
+          {
+            "generator_index_zero_based": 495,
+            "generator_sha256": "43d957a5f8c04d732cfcaf25d7602ae7a39cf1ba3e71a6e3731d338bf1cc5216",
+            "value": "-1",
+            "x_degree": 0
+          }
+        ],
+        "row": 22,
+        "row_sha256": "eda682800b4d242fa6ff8eddd5aa8028d878a27f0253ea0b8a33614640e76b0a"
+      }
+    },
+    "mutations": {
+      "D18_P18_live": {
+        "all_513_generators_match_independent_determinant_recurrence": true,
+        "canonical_raw_assignment_nonzero_count": 10,
+        "canonical_raw_assignment_sha256": "b3dd2b596b8391ab7b3fcf32c705a6824f0b10b47ab03496ea92ad13f77195f4",
+        "first_residual_row": 18,
+        "fixed_gauge_data": "F8=1, G8=3*A^2/2, G9=3/4 (c8=0, c16=-3/8)",
+        "label": "D18_P18_live",
+        "late_F_assignment": {
+          "polynomial": {
+            "1": "1"
+          },
+          "weight": 10
+        },
+        "literal_row_provenance": {
+          "nonzero_generators": [
+            {
+              "generator_index_zero_based": 413,
+              "generator_sha256": "c5185052ad93b810d35d09c77d9e2f35777504aac7e015df3a4aa781ecddfce7",
+              "value": "6",
+              "x_degree": 0
+            },
+            {
+              "generator_index_zero_based": 417,
+              "generator_sha256": "c5597d19631b8977d5c18e49e7ac4cf62093cdc9cb0df43d86adb50f9f324f6c",
+              "value": "-36",
+              "x_degree": 4
+            },
+            {
+              "generator_index_zero_based": 421,
+              "generator_sha256": "e314bfab76a0c06a58d9e7e3121e687dcc814cbfdd7ddf35699f59d408d8da61",
+              "value": "30",
+              "x_degree": 8
+            }
+          ],
+          "row": 18,
+          "row_sha256": "f8b973a41d2ea90c55aa16bde6d987d39ebb54262dd17e9d01629c3562353c40"
+        },
+        "live_scaling_mutations": {
+          "-1": {
+            "canonical_raw_assignment_sha256": "2163967db7ee643f19c14df9a870522a7b43af8f3ac6c04a24621e2f2e016ff8",
+            "residual": {
+              "0": "-6",
+              "4": "36",
+              "8": "-30"
+            }
+          },
+          "2": {
+            "canonical_raw_assignment_sha256": "dd909bf2583b9e34d73ee8d20fcdd4c0bf72709697c2e84120a8883dc36accd1",
+            "residual": {
+              "0": "12",
+              "4": "-72",
+              "8": "60"
+            }
+          }
+        },
+        "prior_rows_zero": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "residual": {
+          "0": "6",
+          "4": "-36",
+          "8": "30"
+        }
+      },
+      "D19_P19_live": {
+        "all_513_generators_match_independent_determinant_recurrence": true,
+        "canonical_raw_assignment_nonzero_count": 10,
+        "canonical_raw_assignment_sha256": "3904860a240da59c569d2efbb2858bc0e1350f59ec19c11402095ce44ffc9c9c",
+        "first_residual_row": 19,
+        "fixed_gauge_data": "F8=1, G8=3*A^2/2, G9=3/4 (c8=0, c16=-3/8)",
+        "label": "D19_P19_live",
+        "late_F_assignment": {
+          "polynomial": {
+            "1": "1"
+          },
+          "weight": 11
+        },
+        "literal_row_provenance": {
+          "nonzero_generators": [
+            {
+              "generator_index_zero_based": 435,
+              "generator_sha256": "b72e21035cd10bb3eac8e1e59a109eeccade8ba74029a8e3fe9de879388b71df",
+              "value": "6",
+              "x_degree": 0
+            },
+            {
+              "generator_index_zero_based": 439,
+              "generator_sha256": "7690c74e5a4abdd2ec3d8079676254608a38e0b5e54cd7f46da664cfc1192a52",
+              "value": "-48",
+              "x_degree": 4
+            },
+            {
+              "generator_index_zero_based": 443,
+              "generator_sha256": "b2e217c76016725d9fc58d8605ff667e55b585b93e9cb71411893fba00d64665",
+              "value": "42",
+              "x_degree": 8
+            }
+          ],
+          "row": 19,
+          "row_sha256": "0814a518b63b0a8e0d49461e2175510ab0e1c039c0bc054cd3c92e716d78bac4"
+        },
+        "live_scaling_mutations": {
+          "-1": {
+            "canonical_raw_assignment_sha256": "0061ce8579f143e91f2db0be5cd26fd976ac32fda5ff1334ed09dd02bd166a33",
+            "residual": {
+              "0": "-6",
+              "4": "48",
+              "8": "-42"
+            }
+          },
+          "2": {
+            "canonical_raw_assignment_sha256": "61dfa51c32fe3318d63728a31e68bea5bb4ceaea0290c58b5add0d74868e1caa",
+            "residual": {
+              "0": "12",
+              "4": "-96",
+              "8": "84"
+            }
+          }
+        },
+        "prior_rows_zero": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "residual": {
+          "0": "6",
+          "4": "-48",
+          "8": "42"
+        }
+      },
+      "D20_P20_live": {
+        "all_513_generators_match_independent_determinant_recurrence": true,
+        "canonical_raw_assignment_nonzero_count": 10,
+        "canonical_raw_assignment_sha256": "b1468fecbe7cd8e07d02522f9b0e1f0b8d5a0e17b625c2ec14ecaa9415f87205",
+        "first_residual_row": 20,
+        "fixed_gauge_data": "F8=1, G8=3*A^2/2, G9=3/4 (c8=0, c16=-3/8)",
+        "label": "D20_P20_live",
+        "late_F_assignment": {
+          "polynomial": {
+            "2": "1"
+          },
+          "weight": 12
+        },
+        "literal_row_provenance": {
+          "nonzero_generators": [
+            {
+              "generator_index_zero_based": 457,
+              "generator_sha256": "00f15f847e4db12224b7c75c9db6f96b18bebe30660dc8d705546636c8c250df",
+              "value": "12",
+              "x_degree": 1
+            },
+            {
+              "generator_index_zero_based": 461,
+              "generator_sha256": "81af38393970c35a875df10d783e7da1eacbb2c89d40af93eb1e1f40b151e4a7",
+              "value": "-72",
+              "x_degree": 5
+            },
+            {
+              "generator_index_zero_based": 465,
+              "generator_sha256": "8f161cecb82faa7f6f6aeccb39a1bcf5c4359a820ccc302ff4b2d76c0850a9d9",
+              "value": "60",
+              "x_degree": 9
+            }
+          ],
+          "row": 20,
+          "row_sha256": "d10484e79a5c79694c828a83c62cb88383814e301e189e508459e0ead074eb50"
+        },
+        "live_scaling_mutations": {
+          "-1": {
+            "canonical_raw_assignment_sha256": "4c00a76138129120cb3203f98554b292790f72824485b4a1c4b844d9b5a73cfc",
+            "residual": {
+              "1": "-12",
+              "5": "72",
+              "9": "-60"
+            }
+          },
+          "2": {
+            "canonical_raw_assignment_sha256": "7130cdb9e864a1d87aca5acbb1e55107d9ea70a890b7e0dbd7154a8d552b446a",
+            "residual": {
+              "1": "24",
+              "5": "-144",
+              "9": "120"
+            }
+          }
+        },
+        "prior_rows_zero": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "residual": {
+          "1": "12",
+          "5": "-72",
+          "9": "60"
+        }
+      },
+      "D21_P21_live": {
+        "all_513_generators_match_independent_determinant_recurrence": true,
+        "canonical_raw_assignment_nonzero_count": 10,
+        "canonical_raw_assignment_sha256": "d10ebac024fdb879e81177f2fc4b0a1ed350a76967e9880934d4f9c55ccd2175",
+        "first_residual_row": 21,
+        "fixed_gauge_data": "F8=1, G8=3*A^2/2, G9=3/4 (c8=0, c16=-3/8)",
+        "label": "D21_P21_live",
+        "late_F_assignment": {
+          "polynomial": {
+            "2": "1"
+          },
+          "weight": 13
+        },
+        "literal_row_provenance": {
+          "nonzero_generators": [
+            {
+              "generator_index_zero_based": 477,
+              "generator_sha256": "afe9a4c0fbc556c1de07b0ccf31ae8f8ea795a02bc6de8f6fe034cd112d3c101",
+              "value": "12",
+              "x_degree": 1
+            },
+            {
+              "generator_index_zero_based": 481,
+              "generator_sha256": "c17e98818ad9c905bdf43b1c85b5f74454e6e61aa3006fe703e4c94f0f22693a",
+              "value": "-84",
+              "x_degree": 5
+            },
+            {
+              "generator_index_zero_based": 485,
+              "generator_sha256": "829a294199de33160aa18eebb12fcec99032f7cbf0f82c78c201e89f5df489ec",
+              "value": "72",
+              "x_degree": 9
+            }
+          ],
+          "row": 21,
+          "row_sha256": "be0b550c24c8a1e1ac8e5052f44b2099778927214c3310a40bff645c858608cf"
+        },
+        "live_scaling_mutations": {
+          "-1": {
+            "canonical_raw_assignment_sha256": "0d296f3f04c345606087b28e5b9241f2bab516ab67e9687795d3513a5937301e",
+            "residual": {
+              "1": "-12",
+              "5": "84",
+              "9": "-72"
+            }
+          },
+          "2": {
+            "canonical_raw_assignment_sha256": "6cdee04f029b060c7cc8d92b8f30911c4b134d9737af337c35f6d1396b8b3965",
+            "residual": {
+              "1": "24",
+              "5": "-168",
+              "9": "144"
+            }
+          }
+        },
+        "prior_rows_zero": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "residual": {
+          "1": "12",
+          "5": "-84",
+          "9": "72"
+        }
+      },
+      "D22_nonzero_A_multiple": {
+        "all_513_generators_match_independent_determinant_recurrence": true,
+        "canonical_raw_assignment_nonzero_count": 10,
+        "canonical_raw_assignment_sha256": "b4952ea75937622cab1fdaae586c2292332961674f58052c5f84b1d5029f14dd",
+        "factorization": {
+          "A": "X^4-1",
+          "identity_checked": true,
+          "quotient": {
+            "1": "-12",
+            "5": "84"
+          }
+        },
+        "first_residual_row": 22,
+        "fixed_gauge_data": "F8=1, G8=3*A^2/2, G9=3/4 (c8=0, c16=-3/8)",
+        "label": "D22_nonzero_A_multiple",
+        "late_F_assignment": {
+          "polynomial": {
+            "2": "1"
+          },
+          "weight": 14
+        },
+        "literal_row_provenance": {
+          "nonzero_generators": [
+            {
+              "generator_index_zero_based": 495,
+              "generator_sha256": "43d957a5f8c04d732cfcaf25d7602ae7a39cf1ba3e71a6e3731d338bf1cc5216",
+              "value": "-1",
+              "x_degree": 0
+            },
+            {
+              "generator_index_zero_based": 496,
+              "generator_sha256": "ffc440778eef1e4596ca88ee872d81df4ea8ad50abc9073555bea659edaf7b92",
+              "value": "12",
+              "x_degree": 1
+            },
+            {
+              "generator_index_zero_based": 500,
+              "generator_sha256": "10ea5b61eac5d207fb6a9b0e4a974074b352ef6cbe84a364b461adbc0946ff39",
+              "value": "-96",
+              "x_degree": 5
+            },
+            {
+              "generator_index_zero_based": 504,
+              "generator_sha256": "6c766f19a9283fa4112b0d73cb3fa591111a8e4b6f5939dad1fba2942ccb6180",
+              "value": "84",
+              "x_degree": 9
+            }
+          ],
+          "row": 22,
+          "row_sha256": "eda682800b4d242fa6ff8eddd5aa8028d878a27f0253ea0b8a33614640e76b0a"
+        },
+        "live_scaling_mutations": {
+          "-1": {
+            "canonical_raw_assignment_sha256": "526cf03cfb42c8d3b6f01d36c517ad03eea5349825fcce55f73b53a3f728b3d0",
+            "residual": {
+              "1": "-12",
+              "5": "96",
+              "9": "-84"
+            }
+          },
+          "2": {
+            "canonical_raw_assignment_sha256": "47136c5631db0d0f72c6280c381d8746f28fff36b78845210888cb339b8ac23a",
+            "residual": {
+              "1": "24",
+              "5": "-192",
+              "9": "168"
+            }
+          }
+        },
+        "prior_rows_zero": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "residual": {
+          "1": "12",
+          "5": "-96",
+          "9": "84"
+        }
+      }
+    },
+    "raw_windows": {
+      "G18": {
+        "columns": [
+          {
+            "G_degree": 2,
+            "literal_D_row": {
+              "1": "-16",
+              "13": "352",
+              "17": "-112",
+              "5": "160",
+              "9": "-384"
+            },
+            "slot": "g_2_0"
+          },
+          {
+            "G_degree": 3,
+            "literal_D_row": {
+              "10": "-432",
+              "14": "384",
+              "18": "-120",
+              "2": "-24",
+              "6": "192"
+            },
+            "slot": "g_3_3"
+          },
+          {
+            "G_degree": 4,
+            "literal_D_row": {
+              "11": "-480",
+              "15": "416",
+              "19": "-128",
+              "3": "-32",
+              "7": "224"
+            },
+            "slot": "g_4_6"
+          },
+          {
+            "G_degree": 5,
+            "literal_D_row": {
+              "12": "-528",
+              "16": "448",
+              "20": "-136",
+              "4": "-40",
+              "8": "256"
+            },
+            "slot": "g_5_9"
+          },
+          {
+            "G_degree": 6,
+            "literal_D_row": {
+              "13": "-576",
+              "17": "480",
+              "21": "-144",
+              "5": "-48",
+              "9": "288"
+            },
+            "slot": "g_6_12"
+          }
+        ],
+        "conclusion": "the displayed polynomial raw window is exact and has no homogeneous kernel; Laurent cancellation must occur before insertion into this window",
+        "literal_D_generator_indices_zero_based": [
+          413,
+          414,
+          415,
+          416,
+          417,
+          418,
+          419,
+          420,
+          421,
+          422,
+          423,
+          424,
+          425,
+          426,
+          427,
+          428,
+          429,
+          430,
+          431,
+          432,
+          433,
+          434
+        ],
+        "literal_D_row_sha256": "f8b973a41d2ea90c55aa16bde6d987d39ebb54262dd17e9d01629c3562353c40",
+        "matrix_shape": [
+          22,
+          5
+        ],
+        "nullity": 0,
+        "rank": 5,
+        "raw_G_window": {
+          "lower": 2,
+          "slots": [
+            "g_2_0",
+            "g_3_3",
+            "g_4_6",
+            "g_5_9",
+            "g_6_12"
+          ],
+          "upper": 6
+        },
+        "weight": 18
+      },
+      "G19": {
+        "columns": [
+          {
+            "G_degree": 3,
+            "literal_D_row": {
+              "10": "-480",
+              "14": "432",
+              "18": "-136",
+              "2": "-24",
+              "6": "208"
+            },
+            "slot": "g_3_2"
+          },
+          {
+            "G_degree": 4,
+            "literal_D_row": {
+              "11": "-528",
+              "15": "464",
+              "19": "-144",
+              "3": "-32",
+              "7": "240"
+            },
+            "slot": "g_4_5"
+          },
+          {
+            "G_degree": 5,
+            "literal_D_row": {
+              "12": "-576",
+              "16": "496",
+              "20": "-152",
+              "4": "-40",
+              "8": "272"
+            },
+            "slot": "g_5_8"
+          }
+        ],
+        "conclusion": "the displayed polynomial raw window is exact and has no homogeneous kernel; Laurent cancellation must occur before insertion into this window",
+        "literal_D_generator_indices_zero_based": [
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455
+        ],
+        "literal_D_row_sha256": "0814a518b63b0a8e0d49461e2175510ab0e1c039c0bc054cd3c92e716d78bac4",
+        "matrix_shape": [
+          21,
+          3
+        ],
+        "nullity": 0,
+        "rank": 3,
+        "raw_G_window": {
+          "lower": 3,
+          "slots": [
+            "g_3_2",
+            "g_4_5",
+            "g_5_8"
+          ],
+          "upper": 5
+        },
+        "weight": 19
+      },
+      "G20": {
+        "columns": [
+          {
+            "G_degree": 3,
+            "literal_D_row": {
+              "10": "-528",
+              "14": "480",
+              "18": "-152",
+              "2": "-24",
+              "6": "224"
+            },
+            "slot": "g_3_1"
+          },
+          {
+            "G_degree": 4,
+            "literal_D_row": {
+              "11": "-576",
+              "15": "512",
+              "19": "-160",
+              "3": "-32",
+              "7": "256"
+            },
+            "slot": "g_4_4"
+          }
+        ],
+        "conclusion": "the displayed polynomial raw window is exact and has no homogeneous kernel; Laurent cancellation must occur before insertion into this window",
+        "literal_D_generator_indices_zero_based": [
+          456,
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473,
+          474,
+          475
+        ],
+        "literal_D_row_sha256": "d10484e79a5c79694c828a83c62cb88383814e301e189e508459e0ead074eb50",
+        "matrix_shape": [
+          20,
+          2
+        ],
+        "nullity": 0,
+        "rank": 2,
+        "raw_G_window": {
+          "lower": 3,
+          "slots": [
+            "g_3_1",
+            "g_4_4"
+          ],
+          "upper": 4
+        },
+        "weight": 20
+      },
+      "G21": {
+        "columns": [
+          {
+            "G_degree": 3,
+            "literal_D_row": {
+              "10": "-576",
+              "14": "528",
+              "18": "-168",
+              "2": "-24",
+              "6": "240"
+            },
+            "slot": "g_3_0"
+          }
+        ],
+        "conclusion": "the displayed polynomial raw window is exact and has no homogeneous kernel; Laurent cancellation must occur before insertion into this window",
+        "literal_D_generator_indices_zero_based": [
+          476,
+          477,
+          478,
+          479,
+          480,
+          481,
+          482,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494
+        ],
+        "literal_D_row_sha256": "be0b550c24c8a1e1ac8e5052f44b2099778927214c3310a40bff645c858608cf",
+        "matrix_shape": [
+          19,
+          1
+        ],
+        "nullity": 0,
+        "rank": 1,
+        "raw_G_window": {
+          "lower": 3,
+          "slots": [
+            "g_3_0"
+          ],
+          "upper": 3
+        },
+        "weight": 21
+      }
+    }
+  },
+  "schema": "jc2.ggv.upper_endpoint.uniform_d18_d22_endpoint_collapse.result.v1",
+  "scope_firewall": [
+    "field-valued emptiness only; no scheme-theoretic unit certificate is claimed",
+    "the argument uses the complete D22 polynomial target D22=1, not evaluation at X=0 or A=0",
+    "all positive lower and upper G18--G21 raw-window restrictions remain mandatory; a hypothetical raw point supplies them automatically and the exact window maps have no homogeneous kernel",
+    "c18 and c20 are killed only by their birth-row polynomiality; linked successor cancellations are retained",
+    "c4, c8, c12, c16 and every regular part of g18--g22 are retained; no characteristic mode is silently dropped",
+    "no endpoint carrier, unit, additive gauge, or sign branch is normalized",
+    "the result is conditional on the recursively pinned D8--D17 producer packets until independent hostile review",
+    "standard-library Fraction arithmetic only; no CAS, AWS, or jc2-lean access"
+  ],
+  "source": {
+    "authoritative_raw_system": "cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json",
+    "authoritative_raw_system_sha256": "ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0",
+    "literal_row_sha256": {
+      "18": "f8b973a41d2ea90c55aa16bde6d987d39ebb54262dd17e9d01629c3562353c40",
+      "19": "0814a518b63b0a8e0d49461e2175510ab0e1c039c0bc054cd3c92e716d78bac4",
+      "20": "d10484e79a5c79694c828a83c62cb88383814e301e189e508459e0ead074eb50",
+      "21": "be0b550c24c8a1e1ac8e5052f44b2099778927214c3310a40bff645c858608cf",
+      "22": "eda682800b4d242fa6ff8eddd5aa8028d878a27f0253ea0b8a33614640e76b0a"
+    },
+    "predecessor_checker": "cases/ggv_8_28_upper_endpoint_uniform_d16_d17_fullmodes_20260828/verify_uniform_d16_d17.py",
+    "predecessor_checker_sha256": "5904d7b19dc5d46d31a781150c4b6de9e62e32812b554006e92f78f9d76fd5d9",
+    "predecessor_result": "cases/ggv_8_28_upper_endpoint_uniform_d16_d17_fullmodes_20260828/RESULT.json",
+    "predecessor_result_sha256": "2a6f363df8fb4aef94f01d7a938e3bfcff15f6db49af3164e36367c9a6d1929a",
+    "raw_generator_count": 513,
+    "raw_variable_count": 303
+  },
+  "status": "PASS_EXACT_FIELD_POINT_UNIFORM_UPPER_ENDPOINT_EMPTY_THROUGH_D22",
+  "theorem": {
+    "cascade": [
+      "D18 forces c18=0 and P18 in (A^2)",
+      "D19 forces P19 in (A^2)",
+      "D20 forces c20=0 and P20 in (A^2)",
+      "D21 forces P21 in (A^2)"
+    ],
+    "conclusion": "the uniform full-fixture upper-endpoint field stratum is empty",
+    "contradiction": "1 is not in the proper principal ideal (X^4-1) over a field",
+    "endpoint_identity": "D22=-L22(g22) belongs to (A), A=X^4-1",
+    "hypothesis": "a field-valued point of the authoritative uniform branch-P raw system satisfies every D4--D21 generator",
+    "raw_target": "the eighteen literal endpoint equations require D22(X)=1"
+  }
+}

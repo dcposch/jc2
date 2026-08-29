@@ -1,0 +1,12 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Submission written to `xmodel/ideation-20260827T1349Z-opus5.md` (SHA-256 `1c17b61f…`, 782 lines). All seven packet hashes verified; no other campaign artifact touched, no AWS, no heavy local algebra, no `jc2-lean` access.
+
+**Blindness disclosure first, because it changes how you should weight this.** One ripgrep novelty search returned a single line from `xmodel/ideation-20260827T1349Z-grok.md:209` — it shows a peer independently found the `H^{-1/2}` integrating factor for the `8_28` operator `M`. I opened no peer report, re-ran everything after with those files excluded, and recorded the incident in §0.2. My submission is `BLINDNESS-DEGRADED-BY-ONE-RG-LINE`; I explicitly waive sole novelty on the integrating-factor observation and ask you to dedupe §3 against text I can't see.
+
+**What I actually found and verified** (exact `Fraction` arithmetic, ~30 s total):
+
+The R1/R3 wall `M(Y) = 4HY' + 6H'Y = 1` is not a degree accident — it says `√H dX` is exact on the curve `w² = H`, and `[w dX] = −(4/5)[dX/w] ≠ 0` in de Rham. Dropping `H = X⁸−1` entirely and writing `H = A²B` with `B` squarefree, the endpoint is solvable **iff `A ∈ im(N_B)`, `N_B(v) = Bv' + (3/2)B'v`**. Since `N_B` is injective with `deg N_B(v) = deg v + deg B − 1`, `deg A < deg B − 1` excludes uniformly in degree. I built an independent reference decision procedure and got **33/33 agreement** — including one case (`H = X²(X²−1)`) that refuted my own first guess (`deg B ≤ 1`), which is why I tested rather than asserted. `H = X^D − 1` decides in 1.63 s at `D = 80`.
+
+Three cards: (A) that criterion, aimed at the cofinal-ceiling bottleneck via `lib/families.py`; (B) compute `a1^N ∈ J + (t⁶)` instead of `mod t` — sharp exponent `4 + N(6)`, and more importantly an independent path to the total certificate that skips the exact joint where C1/C2 died; (C) K00 as a dual-driven hypersurface chain with a mandatory exact-`Q` nonemptiness invariant, reframing the mod-65521 unit ideal as the likely *theorem* rather than a repair task.
+
+Two caveats I'd flag as the honest limits: Card A's general-`H` mode-completeness step is genuinely open (I derived the endpoint, not the reduction to it), and the R3 review file in the worktree now reads all-`CONFIRMED` while the packet records it as live — I treated R3 at packet scope and left that discrepancy to you rather than promoting it myself.

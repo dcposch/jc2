@@ -1,5 +1,20 @@
 # SHEET6-LROOT.md — the λ_root ≥ 1 lemma, decided (the 8→4 kill attempt)
 
+> **2026-08-28 CANONICAL SUPERSESSION — weighted Section 7 boundary.**
+> This sheet's 2026-08-07 printed-`(22)`/`delta_a` ledger is retained below
+> as provenance, not as current theorem text. The passed actual-weight
+> packet `c253bd12...` / `727f5850...` makes `(C7.1*)` **GREEN** for every
+> pairwise-distinct cv set, and the reviewed singleton-chain
+> first-separation construction is **GREEN**. LR1's local
+> `lambda_root^exit=0` conclusion and LR2's inequality-based x-side
+> consequence survive. They do **not** restore printed (22), literal
+> per-puncture `delta_a`, fixed-weight `(22-cl)`, any slack equality, or a
+> categorical claim that no refinement can create a charge; those are
+> quarantined. Read the historical `delta` column below as *unspent C7.1
+> budget*, never as literal `delta_a`. Corrected Proposition 8.4 is
+> nonroot-only, so root `M=1` remains allowed. The old `td=6` census is not
+> an exhaustive current count and awaits the separate root-aware rerun.
+
 Status: PROMOTED (SHEET6-LT-REVIEW.md front 1: reading-robust, ledger recomputed; nitpicks filed there). Original status: COMPLETE (2026-08-07, this session; UNREVIEWED). Target:
 SHEET6-A3L1-REVIEW.md final note / SHEET6-CAMPAIGN.md header "next kills":
 does the root vertex (0,y) necessarily carry λ_root ≥ 1 — one unit of the
@@ -30,7 +45,7 @@ the coefficient-template lift — and, for the 4 slack-0 classes, TOTAL
 budget rigidity: every inequality in (22) is an equality, including
 δ_a = 0 for EVERY fiber a ∈ C. One new thesis erratum (E10, §6).
 
-## 1. The budget identity, itemized (the exact ledger)
+## 1. Historical printed-ledger reading (superseded as an exact ledger)
 
 All from §7 of the thesis, read on-page.
 
@@ -147,7 +162,9 @@ series form a single cluster (pairwise contact ≥ π_G ≥ R) with no
 characteristic exponent below π_G, and both p- and g-patterns unsplit
 below π_G on that ray in the slack-0 case (where π_G = R exactly).
 
-Proof. By §1 items 1-5, (22) gives td − 1 ≥ Σλ + Σ_{x-cv vertices}κ(π−1).
+Proof. By the singleton first-separation construction and `(C7.1*)`,
+`td − 1 ≥ Σλ + Σ_{x-cv vertices} κ(π−1)` for the distinct selected exit
+flags and the x-side flag.
 Each x-side cv vertex costs ≥ ψ = R−1 ≥ 2 (§1 item 5 + integrality); two
 would cost ≥ 2ψ > ψ + 1 ≥ ψ + slack = (td−1) − Σλ. So one vertex;
 κ_G ≥ 2 would likewise cost ≥ 2(R−1) > ψ + slack. A split of the x-side
@@ -169,7 +186,7 @@ the unique d = 0 point of the single x-cluster.
 Budget td − 1 = 5. Spend rows: [x-side] + [y-side orbit clusters = Σλ] +
 [λ_root] + [pole clusters] + [δ]. Forced rows in **bold**.
 
-| class | terminal parent Q | k_f, l_f | type; (k_g,l_g) | x | y | root | pole | δ | slack |
+| class | terminal parent Q | k_f, l_f | type; (k_g,l_g) | x | y | root | pole | unspent C7.1 budget | slack |
 |---|---|---|---|---|---|---|---|---|---|
 | SP-1 (1/3,7,3,5)@2 R3 | (21,63,7,3,5) | 63, 21 | (3,5); (105,35) | ≥2 | 2 | **0** | **0** | ≥0 | 1 |
 | SP-2 (1/4,5,4,4)@2 R4 | (15,60,5,4,4) | 60, 15 | (3,5); (100,25) | **3** | **2** | **0** | **0** | **0** | 0 |
@@ -206,7 +223,7 @@ D_g·deg p/ν = 6 = td pins the absolute sizes):
 - **SP-3/SP-4**: one extra λ-free IIa_0 (k=0) chain step below the SP-1/2
   node: single-orbit pattern, NO series leave (all conjugates), no new cv
   mass — ledger identical to SP-1/SP-2, s-uniformly.
-- **Two-pole (residue A)**: both poles row 1, Q = (2,2,2,2,5), Λ = 3+3.
+- **Two-pole (residue A)**: both poles row 1, Q = (2,2,2,1,5), Λ = 3+3.
   L1a is re-derived by the ledger: pre-merge chain patterns are single
   simple orbits, so NO punctures leave pre-merge (zero y-side cv mass
   above G_m — λ = 0 structurally, matching L1 §2); at the merge
@@ -231,7 +248,7 @@ counterexample template is instead STRENGTHENED (5b). No class dies; no
 class is resurrected; canonical book unchanged: td ≤ 5: 0; td = 6: 4
 single-pole r9/M2 + two-pole residue A (4 IV classes).
 
-### 5b. New forced rigidity (the ledger's positive product)
+### 5b. Surviving local rigidity (not a slack-equality ledger)
 
 For EVERY one of the 8 (LR2): the x-side of a carrier is a single
 Puiseux cluster — one cv vertex, κ_G = 1, no x-side splitting or
@@ -240,20 +257,15 @@ constraint feeding the coefficient-template lift (the campaign's other
 endgame thread): any candidate (f,g) must have its ENTIRE x-side Newton
 structure trivial to depth R.
 
-For the 4 slack-0 classes additionally (every ledger row exact):
-1. x-side: π_G = R exactly; both p- and g-patterns unsplit below R
-   (full slopes l_f, l_g the whole way);
-2. y-side: each priced orbit cluster carries exactly ONE cv vertex of
-   mass exactly its (24)-price (e.g. SP-2: κ_H = 1, π_H = 2, twice);
-   no further y-side cv vertex anywhere (pole clusters pure — forced;
-   orbit subtrees unsplit below their cv vertices);
-3. δ_a = 0 for EVERY a ∈ C: no fiber in the whole pencil may carry any
-   g-finite puncture with Λ(P) > κ_{F̂_P}(π(F̂_P)−1) — total
-   non-degeneracy of every direction family at every special value.
+For the four historically labelled slack-0 classes, the old exactness
+claims are quarantined. The available conclusion is only that the selected
+distinct flags exhaust the *displayed C7.1 comparison budget on that
+carrier fibre*; it neither identifies a literal `delta_a` nor proves a
+global slack-zero or no-refinement statement.
 
 ### 5c. The surviving attack surfaces (precise, none printed)
 
-1. **Global compatibility beyond local δ-strictness.** The x-family's direction
+1. **Global compatibility beyond actual-weight strict specialization.** The x-family's direction
    polynomial has degree deg p_G = l_f ≥ 15 (single-pole) at the cv
    vertex, so a* with mult(p_G − a*, c) ≥ 2 EXIST (critical values of a
    nonconstant polynomial). Prop 7.3 proves Λ-mass ≥ κπ−κ and gives
@@ -261,7 +273,7 @@ For the 4 slack-0 classes additionally (every ledger row exact):
    Jacobian-one analytic germ in
    `xmodel/d73-strict-or-equality-20260824.md` attains equality with
    multiplicity 15, so direction multiplicity alone cannot supply the extra
-   unit of δ.  Any kill must use a genuinely global restriction: polynomial
+   unit of actual cluster weight. Any kill must use a genuinely global restriction: polynomial
    realizability, compatibility with the pinned opposite-side templates, or
    an additional branch elsewhere on the same compactified fiber.  The
    dual-confirmed centered control in
@@ -297,10 +309,9 @@ For the 4 slack-0 classes additionally (every ledger row exact):
    patterns (AF3 §4 entry family; L1 §5 rigid merge template) inside one
    polynomial pair of the given type. This is the same Puiseux-transport
    tier as L1 §7(ii), now with BOTH ends of the tree pinned.
-3. **h₁-branch budget (unchanged, L1 §7(i))**: the (22)-ledger charges
-   only g-critical-value vertices; h₁-branches at non-p directions remain
-   outside every printed budget — confirmed here as a structural gap of
-   the counting frame, not closable by re-partitioning (22).
+3. **h₁-branch budget (unchanged, L1 §7(i))**: h₁-branches at non-p
+   directions remain outside the reviewed first-exit/C7.1 budget. The
+   historical printed `(22)` phrasing is not a usable refinement claim.
 
 ## 6. Errata and reading notes banked
 
@@ -330,13 +341,12 @@ St 3.9-3.13, St 3.15 (E10-corrected), St 3.16-3.18, Lemma 2.1, Thm 6.1,
 Prop 5.1/5.3/5.8, Not 5.1/5.2, §7 complete (Not 7.1-7.3, St 7.1-7.3,
 Prop 7.1-7.5, Cor 7.1), St 9.1/9.2/9.3(24)/9.4(25), Prop 9.2/9.3,
 Prop 8.4's proof (descent). Standing campaign hypotheses inherited: H1
-(Prop 9.3 arithmetic), H2 = E9 branch-at-F reading (load-bearing here, as
-in every budget statement; adjudicated by A3L1 front 8), H4, AF2 minima
-(for the y-side prices only — the REFUTATION does not need them: λ_root =
-0 is reading-independent, §2). LR1 is hypothesis-free modulo H1's case
-labels. LR2 uses (22) + integrality only. The §4 balance exhibits are
-Q-level consistency statements (necessary conditions), same tier as every
-campaign survivor.
+(Prop 9.3 arithmetic), H4, and AF2 minima (for the y-side prices only — the
+REFUTATION does not need them: `lambda_root=0` is reading-independent,
+§2). LR2 uses weighted `(C7.1*)`, the singleton first-separation exit
+sets, and integrality; it does not use printed (22). The §4 balance
+exhibits are historical Q-level consistency statements, not literal-delta
+or slack-equality evidence.
 
 ## 8. Reproduction
 

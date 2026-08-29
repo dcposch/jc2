@@ -1,0 +1,70 @@
+You are Grok 4.6 acting as an independent hostile mathematical reviewer in the
+plane Jacobian conjecture campaign. Work in /Users/dc/code/math/jc2.
+
+Audit this frozen uniform complete-fixture D16/D17 packet:
+
+  4f7b363addd020e95096ffa289ff96408b21fc4b1c09cfd6235571956117408a
+    xmodel/ggv-upper-endpoint-uniform-d16-d17-fullmodes-sol-ultra-20260828.md
+  5904d7b19dc5d46d31a781150c4b6de9e62e32812b554006e92f78f9d76fd5d9
+    cases/ggv_8_28_upper_endpoint_uniform_d16_d17_fullmodes_20260828/verify_uniform_d16_d17.py
+  2a6f363df8fb4aef94f01d7a938e3bfcff15f6db49af3164e36367c9a6d1929a
+    cases/ggv_8_28_upper_endpoint_uniform_d16_d17_fullmodes_20260828/RESULT.json
+
+Frozen predecessor and authoritative raw source:
+
+  53f2a7a276be4a0aa7f77cc031e270d573fc78b5db64cdb76a0cf6c502e52517
+    cases/ggv_8_28_upper_endpoint_uniform_d14_d15_fullmodes_20260828/verify_uniform_d14_d15.py
+  7546618aa5a40ed983014159c1d39337396607562912570c97cfe2ee779394ea
+    cases/ggv_8_28_upper_endpoint_uniform_d14_d15_fullmodes_20260828/RESULT.json
+  ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0
+    cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json
+
+Required hostile review:
+
+1. Verify all hashes. Independently reconstruct the full nine-mode Laurent
+   recurrence and literal raw D16/D17 rows; do not trust producer code as the
+   derivation. Audit mode support, especially live c8 and newly born c16;
+   retain c18,c20 and the c12/c4/F8 gauge bookkeeping.
+2. Starting from the independently reviewed D15 completion, check
+
+     B=F8-Y/2-T*Z/8-Q*V/16-R^2/4,
+     polar(g16)=[3*B^2/8+c8*B/2+c16]/A^2,
+     3*B^2+4*c8*B+8*c16=8*A^2*M.
+
+   Check that c16 is uniquely forced if a polynomial continuation exists,
+   can have either sign/nonzero, and is not silently killed or normalized.
+3. Audit the exact additive-gauge action and invariants
+
+     Bhat=B+2*c8/3, J16=c16-c8^2/6,
+     (3/8)*Bhat^2+J16=A^2*M.
+
+   Include c12's accompanying gauge shift if it is required by the complete
+   characteristic family. Test all exact-point/gauge mutations.
+4. Put C=F9-Q*R/2-T*V/16-Y*Z/8. Reconstruct the pre-relation D17 A^-4
+   block, including c16. Check the causal predecessor/same-row c16
+   cancellation and then audit
+
+     (3*B+2*c8)*C-2*M=4*A^2*N.
+
+   Check the two divisibility lifts and the literal mutation intended to
+   catch stopping after only one factor of A. D17 must not be reported as an
+   independent kill of c16.
+5. Independently replay all 513 raw generators for D16/D17 controls; check
+   G16/G17 polynomial-window ranks, signs, powers, lower-window X0/X1 live
+   equations, and preservation of C13--C15/H0.
+6. Scope firewall: fixed 303-variable fixture and characteristic-zero
+   field-point necessities only. K17 is only a structural ancestor candidate;
+   no transport to cutoff-three K, endpoint emptiness, scheme divisibility,
+   unrestricted branch-P, Keller, or JC2 claim.
+
+Return separate PASS/REPAIR/FAIL verdicts for D16, gauge invariance/modes,
+D17 causal cancellation, D17 A^2 relation, literal controls, and lower-window
+equations, plus an overall verdict. Write only:
+
+  xmodel/ggv-upper-endpoint-uniform-d16-d17-fullmodes-hostile-review-grok46-20260828.md
+  xmodel/ggv-upper-endpoint-uniform-d16-d17-fullmodes-hostile-review-grok46-check.py
+  xmodel/ggv-upper-endpoint-uniform-d16-d17-fullmodes-hostile-review-grok46-RESULT.json
+
+End with exact SHA-256 values for every charged and new artifact. Do not edit
+charged packet or canonical files. Do not access, list, search, build, status,
+or modify jc2-lean. Light local exact arithmetic only; no heavy local CAS.

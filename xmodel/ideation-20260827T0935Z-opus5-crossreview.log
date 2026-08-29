@@ -1,0 +1,18 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/ideation-20260827T0935Z-opus5-crossreview.md` (1,366 lines, SHA-256 `0fabd42ec761b648…`). All 14 pinned sources verified 14/14 before reading.
+
+**What the adversarial work turned up:**
+
+1. **Two-fibre criterion — survives, with a better proof.** Re-derived from first principles via a *clearing lemma* (`t^e f^M ∈ I` and `f^m ∈ I+(t)` ⟹ `f^{M+em} ∈ I`) that needs no Noetherian, homogeneity, flatness, or algebraic-closure hypothesis — replacing my blind report's component argument over Q̄. Homogeneity is load-bearing in exactly two places; I exhibit the nonhomogeneous counterexample `J=(ρx−1)` that breaks it, a torsion example where `E≠0 ⊆ (ρ)`, and the contraction trap (elimination must follow dehomogenization).
+
+2. **My own §6.2 "fail-open defect" is withdrawn.** The conflated branch is unreachable: the `t=0` control runs and quits first, and it is exactly the hypothesis that makes the bad case impossible. I also over-claimed that the control "passes today" — no harvested run of that script exists. What survives is a defensive patch that turns the redundancy into a free consistency assertion.
+
+3. **Sol's certificate tree — algebra verified termwise, target wrong, engine right.** Its `clear_power` primitive *is* the clearing lemma, so retargeted to `Q[ρ]_(ρ)[X]` it becomes the ready-made certificate compiler for the eliminant's positive branch.
+
+4. **Grok's specialization probe is wrong** — provably capped at floor 3 (every row has weight ≤ 19 and `wt(a1)=5`), i.e. strictly weaker than the floor already held.
+
+5. **K00: the natural syzygy quotient is identically zero**; the corrected obstruction quotients by `Syz(r₁..r₆)` only. Conditional on V14R1, the D-ladder should stop permanently.
+
+6. **Contact side:** all four three-row syzygies verified exactly here; V45's jet-depth vector is triply corroborated (producer, closed-form (3.2), Fable's tagging). I concede my §6.3 control — vacuous for the P-jets, per Fable's executed check.
+
+Candid capability verdict: on blind ideation Fable was at least as good (two headline items were duplicates, Fable's staging better, two of my claims wrong, and Fable produced the round's one new structural connection). Opus's distinctive value this round is adversarial and verificational — five unique correct results in cross-review, three of which stop or redirect a proposed lane, including two against my own submission.

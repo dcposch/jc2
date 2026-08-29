@@ -1,0 +1,122 @@
+{
+  "claims_not_made": [
+    "typed-normal-form completeness",
+    "exclusion of the full 8_28 family or any GGV family",
+    "a Keller pair, counterexample, G2-PSC, G2-BD, or JC2"
+  ],
+  "operator": {
+    "H": "X^8-1",
+    "M": "M(Y)=4H*Y'+6H'*Y",
+    "degree_obstruction": "nonzero deg-d Y has deg M(Y)=d+7 and leading coefficient (4d+48)lc(Y), so M(Y)=1 has no polynomial solution in characteristic zero",
+    "fixture_M_Y": "1+(13/12)H",
+    "fixture_Y": "X/48",
+    "mechanical_leading_check": "all monomials Y=X^d for d=0..64"
+  },
+  "pins": {
+    "r0_freeze": {
+      "path": "cases/ggv_8_28_keller_face_cusp_jet_pinning_20260827/FREEZE.sha256",
+      "sha256": "6928428f9cc46641a80275e2bbfa62e784c4290ff041f5089ae789507fa8804f"
+    },
+    "r0_report": {
+      "path": "xmodel/ggv-8_28-keller-face-cusp-jet-pinning-sol-20260827.md",
+      "sha256": "3e4e608d32c44b1b0208bd5472257ba1dbe4cadf4ef5efb2ace49d3d47d756be"
+    },
+    "r0_result": {
+      "path": "cases/ggv_8_28_keller_face_cusp_jet_pinning_20260827/RESULT.json",
+      "sha256": "46e1b3434badcea007a914ec71bf60d9758ee76d312dc00d252342d52beed76d"
+    },
+    "r0_verifier": {
+      "path": "cases/ggv_8_28_keller_face_cusp_jet_pinning_20260827/verify.py",
+      "sha256": "ef9acfa90935b32e244367dada67ab35d6454f431f6d43dc35d144b3d08fe46c"
+    }
+  },
+  "raw_slices": {
+    "F14": "only X^2, pulling back to x^2; local U14=X would pull back to x*y^-3",
+    "F_formula": "i in [max(0,ceil((n-8)/3)),16-n], j=8+3i-n",
+    "F_n_8_through_14": {
+      "10": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "11": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "12": [
+        2,
+        3,
+        4
+      ],
+      "13": [
+        2,
+        3
+      ],
+      "14": [
+        2
+      ],
+      "8": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "9": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "G22": "empty raw 3S slice",
+    "G_formula": "i in [max(0,ceil((n-12)/3)),24-n], j=12+3i-n",
+    "G_n_18_through_22": {
+      "18": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "19": [
+        3,
+        4,
+        5
+      ],
+      "20": [
+        3,
+        4
+      ],
+      "21": [
+        3
+      ],
+      "22": []
+    }
+  },
+  "scope": "raw 2S/3S slice typing plus two normalized unit-carrier ansatzes; typed-normal-form completeness remains open",
+  "status": "PASS-R1-BOUNDED-TYPE-REPAIR-AND-E22-IMAGE-OBSTRUCTION",
+  "typed_status": {
+    "completeness_gap": "prove or falsify that every raw 2S/3S jet modulo allowed formal source/target cleanup reduces to the two unit-carrier cases",
+    "local_fixture": "valid modulo H / at every simple H-root",
+    "raw_polynomial_source": "not established; U14=X is not a raw F14 term"
+  },
+  "unit_carrier_cases": {
+    "U11_self": "E22=M((3/4)A^2) for F11=A,G11=(3/2)HA",
+    "V8_U14": "E22=M(A*((3/2)P+C)) for F8=P,G8=(3/2)HP+CH,F14=A,G14=(3/2)HA",
+    "verdict": "neither ansatz can produce global E22=1 with polynomial higher-u data"
+  }
+}

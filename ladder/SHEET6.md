@@ -6,6 +6,23 @@ census and survivor ledger supersede the estimates below; see
 `SHEET6-LT-REVIEW.md`.  The later local strictness disposition is in
 `xmodel/d73-strict-or-equality-20260824.md`.
 
+**2026-08-28 supersession.**  Actual-weight Corollary 7.1
+(`c253bd12...`, hostile gate `727f5850...`) and singleton first-separation
+exits now review-close the corrected Section 9 theorem
+`counterexample => td>=6` (`2763d970...`, `0729a576...`).  Printed equation
+(22), literal `delta`, fixed-baseline transport and exact slack ledgers remain
+quarantined. The independently reviewed contact-tree attachment theorem
+also promotes the multipole selected-exit inequality, with shared suffixes
+counted once; it restores no equality or MP8 no-refinement claim. The
+eight-class count below is the reviewed nonroot/IV ledger,
+  not an exhaustive root/SF1 census. A corrected dual-reviewed case-I theorem
+  now gives `0<w<1` on every genuine root edge.  MP1+MP4+MP5/D5 carry the
+  forced row-1 chains to the last nonroot parents with exact `W={2}`, so the
+  `td=6,m=2` pole-chain root-meet branch is excluded (`645b9424...`).
+  Root `M=1` remains legal; broader off-axis/post-jump roots and SF1
+  completeness remain outside that analytic closure, with AWS runs
+  diagnostic only.
+
 ## Canonical checksum (2026-08-24)
 
 - Żołądek's Theorem 6.12 closes topological degree at most five; the first
@@ -14,23 +31,24 @@ census and survivor ledger supersede the estimates below; see
 - Sigray's thesis *states* the same lower bound, but it is **not a complete
   independent reproof as printed**. The campaign found the omitted row
   coverage and terminal-kill problems recorded in `SHEET6-REVIEW.md`; the
-  later M-pin, H3q/psi-budget, and Case-III work repair the campaign
-  recomposition, not the original one-line proof.
+  later M-pin, H3q/psi-budget, Case-III work and reviewed Section 7/9 packets
+  repair and review-close the campaign recomposition, not the original
+  one-line proof.
 - The realized arithmetic census is **14 rows at Lambda <= 7**, with **six**
   Lambda=6 rows. The td=6 configuration census is six single-pole entries
   plus the one two-pole `(3,3)` configuration, not seven Lambda=6 rows or
   seven partition shapes.
-- After the M-pin and chain composition, the terminal-class book has
+- After the M-pin and chain composition, the reviewed nonroot/IV book has
   **eight** classes: four single-pole `r9/M2` classes and four two-pole
   residue-A classes. The two-pole sector passes through one merged datum
   `Q(G_m)=(6,12,3,2,5)@lambda=0`; "one merged child" does **not** mean one
   terminal class or one global survivor.
 - Blanket H3, the raw Case-III tail list, and an unrestricted two-pole
   analogue are no longer the live to-do list. Blanket H3 is false, the
-  proposed extra root charge is forced to be `lambda_root=0`, and the
+  identified local first-exit root charge is `lambda_root^exit=0`, and the
   coefficient template survived the reviewed lift.  An exact Jacobian-one
   analytic germ subsequently showed that a multiple direction root can attain
-  equality in the local delta bound, so multiplicity alone cannot provide a
+  equality in the local cluster-weight bound, so multiplicity alone cannot provide a
   strictness kill. A later dual-confirmed global-compatibility control showed
   that the bare `x=t s^4` divisibility obstruction disappears under the
   LR2-legal shared centering `T=xy^4-y^3`; fixed-rectangle controls reach only
@@ -84,7 +102,7 @@ census and survivor ledger supersede the estimates below; see
 ## 2. Method skeleton (two structurally distinct engines, not two audited proofs)
 Both: compactify, resolve indeterminacy at infinity, then add Abhyankar-type ARITHMETIC of Puiseux data to the topology.
 - **(A) Żołądek's Newton–Puiseux charts** (originally reconstructed from zbMATH + Nguyen Van Chau arXiv:0804.3172v2 + MIMUW seminar abstract; now checkable against the banked official paper): resolve (f,g) at infinity in BOTH source and target; near each divisor use multivalued charts (x^{−1/m}, ξ) — truncated fractional-power series x(Σc_k x^{−k/m} + ξx^{−n/m}) where ξ replaces the Puiseux tail ("left and right Newton-Puiseux charts", Chau). The Keller map becomes near-monomial in charts; jac≡1 forces rigid exponent+leading-coefficient relations. Topological degree = sheets over infinity = Σ local degrees over dicritical divisors, with Orevkov's identity Σ(ramification excess at infinity) = td − 1. Case analysis = finite enumeration of dicritical/chart configurations for td ≤ 5; each killed by exponent arithmetic or analytic contradiction.
-- **(B) Sigray's decorated Eggers–Wall trees** (verbatim, thesis in hand): Abhyankar normal form (§2: Newton polygons in rectangles, fibers with 2 points at infinity); Eggers–Wall tree of Puiseux expansions of f-fiber branches at infinity (§3); extended Abhyankar fundamental theorem + partial order (§4); td and pole orders of g computed from tree data (§5, Props 5.5/5.8); tree structure symbols ↘↗ (§6); finite critical values budget (§7, Cor 7.1); Jacobian-forced number theory linking neighboring vertices (§8, Prop 8.1); §9: decoration Q(F) = (D_F, deg p_F, ν_F, M_F, κ_F(1−π(F))) propagates along the "characteristic sequence" F₀→…→(0,y), under Diophantine constraints and budget Σλ_{F_i} ≤ td−2 (St 9.4). The intended td≤5 closure is incomplete as printed; the campaign's repaired row selection and terminal arithmetic produce the zero-class result inside this frame.
+- **(B) Sigray's decorated Eggers–Wall trees** (thesis plus reviewed repairs): Abhyankar normal form (§2: Newton polygons in rectangles, fibers with 2 points at infinity); Eggers–Wall tree of Puiseux expansions of f-fiber branches at infinity (§3); extended Abhyankar fundamental theorem + partial order (§4); td and pole orders of g computed from tree data (§5, Props 5.5/5.8); tree structure symbols ↘↗ (§6); actual-weight critical-value inequality (§7, repaired Cor 7.1); Jacobian-forced number theory linking neighboring vertices (§8, Prop 8.1); §9: decoration Q(F) = (D_F, deg p_F, ν_F, M_F, κ_F(1−π(F))) propagates along the "characteristic sequence" F₀→…→(0,y), under Diophantine constraints and the singleton first-separation budget `Σlambda_i^exit <= td-2`. The intended td≤5 closure is incomplete as printed; the campaign's reviewed repair closes it inside the corrected frame.
 - **Intended anchor structure of Sigray §9**: one 11-row multiplicity-data
   table (Prop 9.1) plus six propagation lemmas (St 9.6–9.11), each reduced
   to small Diophantine equations, followed by Statement 9.12. The printed
@@ -98,9 +116,11 @@ Both: compactify, resolve indeterminacy at infinity, then add Abhyankar-type ARI
 - **The forecasted wall-at-9 reading is superseded at td=6**: Sigray
   exhibits a decorated Eggers–Wall tree at td=9 with bidegree `(48,64)`,
   showing that his printed local constraints cannot settle all higher
-  degrees. The completed campaign also found consistent terminal data already
+  degrees. The campaign also found consistent nonroot/IV terminal data already
   at td=6—the eight classes in the checksum—so nine is not the first local
-  survivor and must not be described as the current wall.
+  survivor and must not be described as the current wall. The all-`M=1`
+  root meet is separately closed by the case-I/DEPTH theorem; broader
+  mixed-`mu`/off-axis/SF1 root completeness remains pending.
 
 ## 4. Degree-6 case tree: forecast versus realized census
 - **Leaf table**: the forecast was 20–30 rows at Lambda <= 7. The exact

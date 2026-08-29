@@ -1,0 +1,256 @@
+// Tiny exact two-containment/routing/reducer/endpoint/closed-successor
+// fixtures only.
+ring fixture=0,(x,y,q0,q2),dp;
+LIB "elim.lib";
+
+// Proper fixture: I=(x*y), Delta=x, candidate saturation B=(y).
+ideal PROPER_I=x*y;
+ideal PROPER_SB=std(PROPER_I);
+poly PROPER_DELTA=x;
+ideal PROPER_B=y;
+ideal PROPER_B_SB=std(PROPER_B);
+list PROPER_STABLE_RESULT=sat(PROPER_B_SB,ideal(PROPER_DELTA));
+if(typeof(PROPER_STABLE_RESULT)!="list" || size(PROPER_STABLE_RESULT)!=1 || typeof(PROPER_STABLE_RESULT[1])!="ideal")
+{
+  print("FATAL_PROPER_STABILITY_OBJECT");
+  quit;
+}
+ideal PROPER_STABLE_SB=std(PROPER_STABLE_RESULT[1]);
+int si;
+int PROPER_STABILITY_FAILURES=0;
+for(si=1;si<=size(PROPER_B_SB);si=si+1)
+{
+  if(reduce(PROPER_B_SB[si],PROPER_STABLE_SB)!=0)
+  {
+    PROPER_STABILITY_FAILURES=PROPER_STABILITY_FAILURES+1;
+  }
+}
+for(si=1;si<=size(PROPER_STABLE_SB);si=si+1)
+{
+  if(reduce(PROPER_STABLE_SB[si],PROPER_B_SB)!=0)
+  {
+    PROPER_STABILITY_FAILURES=PROPER_STABILITY_FAILURES+1;
+  }
+}
+int PROPER_NODE_INCLUSION_FAILURES=0;
+for(si=1;si<=size(PROPER_I);si=si+1)
+{
+  if(reduce(PROPER_I[si],PROPER_B_SB)!=0)
+  {
+    PROPER_NODE_INCLUSION_FAILURES=PROPER_NODE_INCLUSION_FAILURES+1;
+  }
+}
+int PROPER_PURE_POWER_REDUCTIONS=0;
+int PROPER_REVERSE_REDUCTIONS=0;
+int PROPER_REVERSE_FOUND=0;
+int proper_exponent;
+poly PROPER_REVERSE_POWER=1;
+poly PROPER_REVERSE_NF=1;
+for(proper_exponent=0;proper_exponent<=8;proper_exponent=proper_exponent+1)
+{
+  if(PROPER_REVERSE_FOUND==0)
+  {
+    PROPER_REVERSE_NF=reduce(PROPER_REVERSE_POWER*y,PROPER_SB);
+    PROPER_REVERSE_REDUCTIONS=PROPER_REVERSE_REDUCTIONS+1;
+    if(PROPER_REVERSE_NF==0)
+    {
+      PROPER_REVERSE_FOUND=1;
+    }
+    else
+    {
+      PROPER_REVERSE_POWER=PROPER_REVERSE_POWER*PROPER_DELTA;
+    }
+  }
+}
+if(reduce(1,PROPER_B_SB)==0 || reduce(PROPER_DELTA,PROPER_B_SB)==0 ||
+   PROPER_STABILITY_FAILURES!=0 || PROPER_NODE_INCLUSION_FAILURES!=0 ||
+   PROPER_REVERSE_FOUND!=1 || PROPER_REVERSE_REDUCTIONS!=2 ||
+   PROPER_PURE_POWER_REDUCTIONS!=0)
+{
+  print("FATAL_PROPER_TWO_CONTAINMENT_FIXTURE");
+  quit;
+}
+
+// Strict proper overideal adversary: Bbad=(y,x-1) passes the weak tests
+// but must fail reverse containment into I:Delta^infinity.
+ideal BAD_B=y,x-1;
+ideal BAD_B_SB=std(BAD_B);
+list BAD_STABLE_RESULT=sat(BAD_B_SB,ideal(PROPER_DELTA));
+if(typeof(BAD_STABLE_RESULT)!="list" || size(BAD_STABLE_RESULT)!=1 || typeof(BAD_STABLE_RESULT[1])!="ideal")
+{
+  print("FATAL_BAD_STABILITY_OBJECT");
+  quit;
+}
+ideal BAD_STABLE_SB=std(BAD_STABLE_RESULT[1]);
+int BAD_WEAK_FAILURES=0;
+for(si=1;si<=size(PROPER_I);si=si+1)
+{
+  if(reduce(PROPER_I[si],BAD_B_SB)!=0)
+  {
+    BAD_WEAK_FAILURES=BAD_WEAK_FAILURES+1;
+  }
+}
+for(si=1;si<=size(BAD_B_SB);si=si+1)
+{
+  if(reduce(BAD_B_SB[si],BAD_STABLE_SB)!=0)
+  {
+    BAD_WEAK_FAILURES=BAD_WEAK_FAILURES+1;
+  }
+}
+int bad_basis_index;
+int bad_exponent;
+int BAD_FOUND;
+int BAD_FOUND_COUNT=0;
+int BAD_REVERSE_REDUCTIONS=0;
+poly BAD_POWER;
+poly BAD_NF;
+for(bad_basis_index=1;bad_basis_index<=size(BAD_B);bad_basis_index=bad_basis_index+1)
+{
+  BAD_POWER=1;
+  BAD_NF=1;
+  BAD_FOUND=0;
+  for(bad_exponent=0;bad_exponent<=8;bad_exponent=bad_exponent+1)
+  {
+    if(BAD_FOUND==0)
+    {
+      BAD_NF=reduce(BAD_POWER*BAD_B[bad_basis_index],PROPER_SB);
+      BAD_REVERSE_REDUCTIONS=BAD_REVERSE_REDUCTIONS+1;
+      if(BAD_NF==0)
+      {
+        BAD_FOUND=1;
+        BAD_FOUND_COUNT=BAD_FOUND_COUNT+1;
+      }
+      else
+      {
+        BAD_POWER=BAD_POWER*PROPER_DELTA;
+      }
+    }
+  }
+}
+if(BAD_WEAK_FAILURES!=0 || reduce(1,BAD_B_SB)==0 ||
+   reduce(PROPER_DELTA,BAD_B_SB)==0 || BAD_FOUND_COUNT>=size(BAD_B))
+{
+  print("FATAL_STRICT_OVERIDEAL_ADVERSARY");
+  quit;
+}
+
+// Empty fixture: I=(x^3), Delta=x, exact exponent 3 with three prior misses.
+ideal EMPTY_I=x^3;
+ideal EMPTY_SB=std(EMPTY_I);
+poly EMPTY_DELTA=x;
+list EMPTY_SAT_RESULT=sat(EMPTY_SB,ideal(EMPTY_DELTA));
+if(typeof(EMPTY_SAT_RESULT)!="list" || size(EMPTY_SAT_RESULT)!=1 || typeof(EMPTY_SAT_RESULT[1])!="ideal")
+{
+  print("FATAL_EMPTY_SATURATION_OBJECT");
+  quit;
+}
+ideal EMPTY_SAT_SB=std(EMPTY_SAT_RESULT[1]);
+int EMPTY_POWER_REDUCTIONS=0;
+int EMPTY_PRIOR_NONMEMBERS=0;
+int EMPTY_FOUND=0;
+int EMPTY_FOUND_EXPONENT=-1;
+int empty_exponent;
+poly EMPTY_POWER=1;
+poly EMPTY_NF=1;
+if(reduce(1,EMPTY_SAT_SB)==0)
+{
+  for(empty_exponent=0;empty_exponent<=8;empty_exponent=empty_exponent+1)
+  {
+    if(EMPTY_FOUND==0)
+    {
+      EMPTY_NF=reduce(EMPTY_POWER,EMPTY_SB);
+      EMPTY_POWER_REDUCTIONS=EMPTY_POWER_REDUCTIONS+1;
+      if(EMPTY_NF==0)
+      {
+        EMPTY_FOUND=1;
+        EMPTY_FOUND_EXPONENT=empty_exponent;
+      }
+      else
+      {
+        EMPTY_PRIOR_NONMEMBERS=EMPTY_PRIOR_NONMEMBERS+1;
+        EMPTY_POWER=reduce(EMPTY_POWER*EMPTY_DELTA,EMPTY_SB);
+      }
+    }
+  }
+}
+if(EMPTY_FOUND!=1 || EMPTY_FOUND_EXPONENT!=3 ||
+   EMPTY_POWER_REDUCTIONS!=4 || EMPTY_PRIOR_NONMEMBERS!=3)
+{
+  print("FATAL_EMPTY_POWER_FIXTURE");
+  quit;
+}
+
+// Reducer adversary and known nonzero normal form.
+ideal REDUCER_I=q2;
+ideal REDUCER_SB=std(REDUCER_I);
+poly REDUCER_ZERO_NF=reduce(q2*(q0+1),REDUCER_SB);
+poly REDUCER_NONZERO_NF=reduce(q0+1,REDUCER_SB);
+if(REDUCER_ZERO_NF!=0 || REDUCER_NONZERO_NF==0)
+{
+  print("FATAL_REDUCER_ADVERSARY");
+  quit;
+}
+
+// Endpoint and bordered plants, including the innocent e+1=0 case.
+poly ENDPOINT_BASE_NF=reduce(y,PROPER_B_SB);
+poly ENDPOINT_PLUS_ONE_NF=reduce(ENDPOINT_BASE_NF+1,PROPER_B_SB);
+poly ENDPOINT_PLUS_TWO_NF=reduce(ENDPOINT_BASE_NF+2,PROPER_B_SB);
+poly ENDPOINT_PLUS_ONE_AFFINE=reduce(ENDPOINT_PLUS_ONE_NF-ENDPOINT_BASE_NF-1,PROPER_B_SB);
+poly ENDPOINT_PLUS_TWO_AFFINE=reduce(ENDPOINT_PLUS_TWO_NF-ENDPOINT_BASE_NF-2,PROPER_B_SB);
+poly BORDERED_PLANT_NF=reduce(ENDPOINT_BASE_NF+PROPER_DELTA,PROPER_B_SB);
+poly INNOCENT_MINUS_ONE=-1;
+poly INNOCENT_PLUS_ONE=reduce(INNOCENT_MINUS_ONE+1,PROPER_B_SB);
+poly INNOCENT_PLUS_TWO=reduce(INNOCENT_MINUS_ONE+2,PROPER_B_SB);
+if(ENDPOINT_BASE_NF!=0 || ENDPOINT_PLUS_ONE_AFFINE!=0 ||
+   ENDPOINT_PLUS_TWO_AFFINE!=0 ||
+   (ENDPOINT_PLUS_ONE_NF==0 && ENDPOINT_PLUS_TWO_NF==0) ||
+   BORDERED_PLANT_NF==0 || BORDERED_PLANT_NF!=reduce(PROPER_DELTA,PROPER_B_SB) ||
+   INNOCENT_PLUS_ONE!=0 || INNOCENT_PLUS_TWO==0)
+{
+  print("FATAL_ENDPOINT_TWO_SHIFT_OR_BORDERED_PLANT");
+  quit;
+}
+
+// Closed-successor separation fixture: J = I + (Delta_parent) contains the
+// parent delta, so the parent's settled open D(Delta_parent) is empty on J:
+// sat(J, Delta_parent) must be the unit ideal, while J itself stays proper.
+ideal SUCCESSOR_J=x*y,y;
+ideal SUCCESSOR_J_SB=std(SUCCESSOR_J);
+poly SUCCESSOR_PARENT_DELTA=y;
+list SUCCESSOR_OPEN_RESULT=sat(SUCCESSOR_J_SB,ideal(SUCCESSOR_PARENT_DELTA));
+if(typeof(SUCCESSOR_OPEN_RESULT)!="list" || size(SUCCESSOR_OPEN_RESULT)!=1 || typeof(SUCCESSOR_OPEN_RESULT[1])!="ideal")
+{
+  print("FATAL_SUCCESSOR_OPEN_OBJECT");
+  quit;
+}
+ideal SUCCESSOR_OPEN_SB=std(SUCCESSOR_OPEN_RESULT[1]);
+if(reduce(SUCCESSOR_PARENT_DELTA,SUCCESSOR_J_SB)!=0 ||
+   reduce(1,SUCCESSOR_J_SB)==0 ||
+   reduce(1,SUCCESSOR_OPEN_SB)!=0)
+{
+  print("FATAL_CLOSED_SUCCESSOR_SEPARATION_FIXTURE");
+  quit;
+}
+
+print("SELFTEST_SUCCESSOR_CONTAINS_PARENT_DELTA=1");
+print("SELFTEST_SUCCESSOR_PROPER=1");
+print("SELFTEST_SUCCESSOR_PARENT_OPEN_EMPTY=1");
+print("SELFTEST_PROPER_STABILITY_FAILURES="+string(PROPER_STABILITY_FAILURES));
+print("SELFTEST_PROPER_NODE_INCLUSION_FAILURES="+string(PROPER_NODE_INCLUSION_FAILURES));
+print("SELFTEST_PROPER_PURE_POWER_REDUCTION_COUNT="+string(PROPER_PURE_POWER_REDUCTIONS));
+print("SELFTEST_PROPER_REVERSE_REDUCTION_COUNT="+string(PROPER_REVERSE_REDUCTIONS));
+print("SELFTEST_STRICT_OVERIDEAL_WEAK_PREDICATES_PASS="+string(BAD_WEAK_FAILURES==0));
+print("SELFTEST_STRICT_OVERIDEAL_REVERSE_REJECTED="+string(BAD_FOUND_COUNT<size(BAD_B)));
+print("SELFTEST_EMPTY_POWER_FOUND="+string(EMPTY_FOUND));
+print("SELFTEST_EMPTY_POWER_EXPONENT="+string(EMPTY_FOUND_EXPONENT));
+print("SELFTEST_EMPTY_POWER_REDUCTION_COUNT="+string(EMPTY_POWER_REDUCTIONS));
+print("SELFTEST_EMPTY_PRIOR_NONMEMBERSHIP_COUNT="+string(EMPTY_PRIOR_NONMEMBERS));
+print("SELFTEST_REDUCER_DISPLAYED_Q2_FACTOR_NF_ZERO="+string(REDUCER_ZERO_NF==0));
+print("SELFTEST_REDUCER_KNOWN_NONZERO_NF="+string(REDUCER_NONZERO_NF!=0));
+print("SELFTEST_ENDPOINT_PLUS_ONE_AFFINE_REPLAY="+string(ENDPOINT_PLUS_ONE_AFFINE==0));
+print("SELFTEST_ENDPOINT_PLUS_TWO_AFFINE_REPLAY="+string(ENDPOINT_PLUS_TWO_AFFINE==0));
+print("SELFTEST_ENDPOINT_TWO_SHIFT_AT_LEAST_ONE_NONZERO="+string(ENDPOINT_PLUS_ONE_NF!=0 || ENDPOINT_PLUS_TWO_NF!=0));
+print("SELFTEST_INNOCENT_PLUS_ONE_ZERO_PLUS_TWO_NONZERO="+string(INNOCENT_PLUS_ONE==0 && INNOCENT_PLUS_TWO!=0));
+print("SELFTEST_BORDERED_PLANT_EQUALS_DELTA="+string(BORDERED_PLANT_NF==reduce(PROPER_DELTA,PROPER_B_SB)));
+print("TRIPLE02_CLOSED_SUCCESSOR_ADAPTER_SELFCHECK_PASS=1");
+quit;

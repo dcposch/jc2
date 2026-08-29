@@ -1,0 +1,50 @@
+{
+  "case": "ggv_8_28_upper_endpoint_lambda0_endpoint_kernel_strata_r2_20260828",
+  "endpoint": "x14*x72+x1*x97",
+  "frozen_matrix_shape": [106, 105],
+  "set_theoretic_rank_drop": "V(c8*q1*P)",
+  "lanes": {
+    "p": {
+      "host": "r6a",
+      "instance_id": "i-02cb2b4a379ffcc64",
+      "product": "r6i.4xlarge",
+      "job_tag": "ggv_lambda0_endpoint_strata_p_r2_20260828T133400Z_r6a",
+      "method": "irreducibility replay and dense exact function-field chart c8=-P0/P1"
+    },
+    "c8q1": {
+      "host": "r6b",
+      "instance_id": "i-0f089e64c378f5da3",
+      "product": "r6i.4xlarge",
+      "job_tag": "ggv_lambda0_endpoint_strata_c8q1_r2_20260828T133400Z_r6b",
+      "method": "exact function field on c8=q1=0"
+    },
+    "c8p": {
+      "host": "r6c",
+      "instance_id": "i-040b7a1c2ed72d4cc",
+      "product": "r6i.4xlarge",
+      "job_tag": "ggv_lambda0_endpoint_strata_c8p_r2_20260828T133400Z_r6c",
+      "method": "factor P|c8, then exact linear charts or irreducible quotient branches"
+    },
+    "q1p_triple": {
+      "host": "r6d",
+      "instance_id": "i-07eeaf8ba6f0bc419",
+      "product": "r6i.8xlarge",
+      "job_tag": "ggv_lambda0_endpoint_strata_q1p_triple_r2_20260828T133400Z_r6d",
+      "method": "factor P|q1 and P|q1,c8, then exact linear charts or irreducible quotient branches"
+    }
+  },
+  "resources": {
+    "cpu_list": [1],
+    "address_space_bytes": 103079215104,
+    "file_size_bytes": 34359738368,
+    "master_seconds": 7200,
+    "swap_total_kib": 0
+  },
+  "strict_scope": {
+    "generic_zero": "GENERIC_ENDPOINT_DEAD_RANK_JUMPS_PENDING",
+    "sample_extrapolation": false,
+    "scheme_equality_claim": false,
+    "rank_jump_recursion_complete": false,
+    "canonical_files_mutated": false
+  }
+}

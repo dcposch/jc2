@@ -1,15 +1,36 @@
-Status: PROVED + PROMOTED (2026-08-12, SHEET6-DEPTH-REVIEW.md: all fronts confirmed; one fix adopted — the printed proof yields d0 <= 2*gen+2, not gen+2; td=6 unaffected; final BOOK(m,td) spec = review doc closing section).
+Status: PROVED for the nonroot chain-depth closure and the all-`M=1`
+root-meet layer, with the corrected case-I proof below. Mixed-`mu`/off-axis
+root completeness is outside this theorem. Historical 2026-08-12 status:
+SHEET6-DEPTH-REVIEW confirmed the then-filed package with one `d0` fix.
 
 # SHEET6-DEPTH.md — the Chain-Depth Closure Lemma: the M=1 jump-cell menu is depth-invariant
 
-**Status: PROVED (2026-08-12), H1 tier (Prop 9.3 printed-step arithmetic) over
-promoted MP0–MP8; machine-verified (cases/depth_closure_check.py, 13/13
-exact checks). Consequence: the demoted "finite book per (m, td)" rider of
+> **2026-08-28 ROOT-SCOPE REPAIR.** A genuine root merge has contact zero,
+> hence `(0,y) in V_{2,a} \ V_{1,a}` and Proposition 9.3 case (I), not case
+> (IV). The prior rollback stopped too early: at a root case-I edge,
+> equations (c),(d), Proposition 8.1(i), Statement 3.17 and Statement 9.2
+> give `X_root=mu(1-w)`, so every such edge still requires `w<1`. For an
+> all-`mu=1`, `r`-way root meet with reduced degrees `(r,r+l)`, `l>=1`,
+> top-degree cancellation in Proposition 8.1(iv) gives
+> `w=l/(r+l) in (0,1)`. Thus `td=6,m=2`, whose reviewed alphabet is
+> `W={2}`, has no all-`M=1` root meet. This does not restore a root clause
+> in Proposition 8.4: root `M=1` is legal and the local `r=2,l=1`, `w=1/3`
+> cell is real. The old engine's omitted `l>=1`, silently capped MU1
+> families, and root-before-`M=1` ordering remain genuine software errors;
+> AWS recensus is diagnostic for the broader SF1/mixed-root scope, not a
+> dependency of this analytic exclusion. Evidence: producer `b8d6e686...`,
+> GPT-5.5 hostile review `656c257e...`, integration `d534f083...`.
+
+**Historical status: PROVED (2026-08-12), H1 tier (Prop 9.3 printed-step arithmetic) over
+the then-promoted MP package; machine-verified (cases/depth_closure_check.py, 13/13
+exact checks). It then claimed that the demoted "finite book per (m, td)" rider of
 Theorem MP (SHEET6-MULTIPOLE.md §0/§5; demotion SHEET6-MP-REVIEW.md Front 5)
-is RESTORED in corrected, sharper form (§8). Two engine-model corrections
+was restored in corrected, sharper form (§8); the root-scope repair above
+retains its all-`M=1` root layer while leaving mixed-`mu`/off-axis roots out
+of scope. Two engine-model corrections
 found en route: the ZCH 0-edge is Prop 9.3 case (III), not (a)–(d) (§5c),
-and the root-merge edge is case (IV) (i)–(m), which *derives* the n = ν−κ̄
-pin (§5d).**
+and the historical case-(IV) root label is false for a genuine merge; the
+correct case-I identity is filed in §5d.**
 
 Ground truth: refs/sigray_full.pdf (printed page = pdf page), re-read
 on-page this session: Def 3.1/3.2, St 3.1–3.2 (p. 10); Def 3.3–3.4,
@@ -41,14 +62,18 @@ every resonant step (n ≥ 2) requires Δ | num(w) and contracts w by a factor
 merged-child data is (κ̄, D/i, ρ) = w·(dq, dp, 1)/(dq−dp), the join forces
 all arriving chains to share w, and per w the admissible cells are finite
 with ν_cell *determined* by (κ̄_merge, l) (§5). Hence the set of w-values
-over all depths is the finite computable closure W(w₀), realized by depth
-d₀ = gen(W)+2, and the map (segment depth) → (reachable jump-cell menu) is
-**constant beyond d₀**: DEPTH-INVARIANCE (Lemma, §6). At td = 6, m = 2:
+over all depths is the finite computable closure W(w₀), and the map
+(segment depth) → (reachable jump-cell menu) stabilizes by the proved safe
+bound d₀ ≤ 2·gen(W)+2; the sharper `gen(W)+2` remains empirical in general.
+Thus the map is
+**constant beyond d₀**: DEPTH-INVARIANCE (Lemma, §6). For the nonroot jump
+layer at td = 6, m = 2:
 W = {2}, d₀ = 2, and the menu is *exactly* the promoted residue cell
 IIa (r,ν,l) = (2,3,1), M = 2, child (κ̄, D/i) = (5,3) — i.e. Q =
-(6,12,3,2,5) — reproducing the 351/351 empirical depth-invariance and
-reproving the root-meet kill in one line (root merges need w < 1). The
-jump-vertex book is therefore **finite per (m, td)** (§8).
+(6,12,3,2,5) — reproducing the 351/351 empirical nonroot
+depth-invariance. Every all-`M=1` root meet instead requires
+`w=l/(r+l)<1`, so that root layer is empty at `td=6`. This statement does
+not cover mixed-`mu`/off-axis roots or exclude the interior residue cell.
 
 ---
 
@@ -276,23 +301,38 @@ arrival coefficient at an off-lattice exponent = characteristic exponent
 of the arriving pole's series); I-family merges (ν_G = 1) are case (I)
 (V_{2,a}\V_{1,a}, lattice meet). All non-0 edges keep the §5a handshake.
 
-### 5d. Root merges: w < 1, and the case-(IV) grounding of the n = ν−κ̄ pin
+### 5d. Correct root edge: case I and the all-`mu=1` formula
 
-(0,y) ∉ V_{1,a} ∪ V_{2,a} (α_j > 0 and O(P,P′) > 0), so a root-merge edge
-is Prop 9.3 **case (IV)**, equations (i)–(m) (p. 51): (i) ν_e = κ_e; (j)
-(1−v)κ_e < ν_e, i.e. κ̄_e < ν_e; (k) d_{(0,y)} = (D_e + (ν_e − κ̄_e)·
-deg p_e)/ν_e. Setting n* := ν_e − κ̄_e ≥ 1, (k) is the (c)-equation with
-the edge parameter FORCED: n_e = n* — this derives, on printed ground, the
-"n_e = ν_e − κ̄_e, both parents κ̄ < ν" pin that SHEET6-MP-REVIEW §2c
-established for MP9's root clause (and (l)–(m) add d < deg p_G and the
-M-divisibility as extra filters). The handshake at the root (κ̄_{(0,y)} =
-1, St 9.2(iii); D_{(0,y)} = l_f, St 9.2(i); D/i = l_f/i₀):
+A genuine root merge has contact zero, so `(0,y) in V_{2,a}\V_{1,a}` and
+Proposition 9.3 selects case I. Here `V_1` uses actual characteristic
+indices `j>=1`; admitting the technical `alpha_0=0` would make Notation 3.4
+ask for undefined `e_{-1}`. Work with lower/rootward `F=(0,y)`, upper parent
+`G=F+c`, and the promoted hypotheses `F,G in V_a cap T_a^searrow`.
 
-    **w_e = 1 − l_f/i₀ ∈ (0,1): root merges require w < 1.**
+Put `P_G=deg(p_G)`, `rho_G=D_G/P_G`,
+`w_G=(kappa-bar_G-rho_G)/nu_G`, and let
+`mu=mult(p_F^red,c)`. Proposition 8.1(i) at the root and Statement 3.17
+derive `P_G=i*mu`. Case-I equations (c),(d), together with Statement 9.2
+`K_F=1`, give
 
-At td = 6, W = {2}: root meets are dead in one line — reproving the §2c
-raised-caps sweep result exactly (machine check 2: every reachable frame
-has w = 2 ≥ 1).
+    D_F=(D_G+n P_G)/nu_G,     1=(K_G+n)/nu_G,
+    X_F:=D_F/i=mu(1-w_G).
+
+Since `D_F,i,mu>0`, every such root edge requires
+
+    **w_G=1-X_F/mu<1.**
+
+For an all-`mu=1`, `r`-way meet, MP6/MP7 give the reduced root degrees
+`(dp,dq)=(r,r+l)`, `r>=2`, `l>=1`. At `u=0`, top-degree cancellation in
+Proposition 8.1(iv) gives `X_F=dp/dq=r/(r+l)`, hence
+
+    **w_G=l/(r+l) in (0,1).**
+
+Therefore `W={2}` excludes the all-`M=1` root layer at `td=6,m=2`, without
+an AWS census. This is not a root-`M=1` kill: the exact local `r=2,l=1`
+cell has `w=1/3` and `M_root=1`. The old case-IV equations remain relevant
+only to a root endpoint satisfying their distinct non-`V_2` hypothesis;
+mixed-`mu`/off-axis root completeness remains outside this theorem.
 
 ---
 
@@ -310,38 +350,31 @@ anatomy). Then:
    than log_{3/2} num(w_0) + 1 resonant steps; all other steps fix w;
 2. (menu factorization) Menu_{≤d}(E) ⊆ Menu(W(w_0)) :=
    ∪_{w ∈ W(w_0)} Menu(w), which is finite by §5b, with the case-(III)
-   ZCH constraint of §5c and the root constraint w < 1 of §5d;
+   ZCH constraint of §5c and the all-`mu=1` case-I root law of §5d;
 3. (stabilization) Menu_{≤d}(E) = Menu_{≤d₀}(E) for all d ≥ d₀ where
-   d₀ = gen(W(w_0)) + 2 ≤ log_{3/2} num(w_0) + 2: **the map
-   depth ↦ reachable jump-cell menu is constant beyond d₀.**
+   the proved safe bound is `d₀ ≤ 2·gen(W(w_0))+2`: **the map
+   depth ↦ reachable jump-cell menu is constant beyond such a d₀.**  The
+   sharper `gen(W)+2` bound is machine-verified through generation four but
+   lacks a complete chaining proof in general.
 
 *Proof.* 1 is DS1–DS3 (§2–§4). 2 is DS4 (§5): each edge's contribution to
-the merged child is a function of (w_e, cell) alone; joins force shared
-handshakes. 3: (⊇ for large d) an l = 0 step maps a state (w, ν, 1) to
-(w, ν′, 1) and preserves the menu contribution — for integer w every
-ν′ ≥ 2 is admissible (n_e = w(νν′ − 1) ∈ ℕ*, κ̄′ = w(ν′+1) ∈ ℤ), for
-w = a/b the admissible ν′ form the congruence class ν′ ≡ −1 (mod b)
-(nonempty, self-reproducing) whenever the state admits any continuation —
-so every menu item realized at some depth ≤ d₀ is realized at every
-larger depth along an l = 0 tail, or else lies on a w-branch with no
-continuation, which contributes to no deeper menu either. (⊆) a menu item
-at depth d > d₀ has a w-generation history of ≤ log_{3/2} num(w_0)
-resonant steps; replaying exactly those steps (and one l = 0 step to
-realize the same (ν, n)-admissibility class, available by the congruence
-argument) realizes the same (w, cell) pair — with identical per-edge
-integrality since menu admissibility from a state (w, ν, n) depends only
-on that state and l = 0 tails reproduce the state family — at depth
-≤ d₀. ∎
+the merged child is a function of `(w_e,cell)` alone; joins force shared
+handshakes. For 3, neutral `l=0` steps preserve `w`, while each resonant
+step advances one generation of the finite closure. Replaying a deep path
+may require one neutral alignment step between consecutive resonant steps,
+and one terminal alignment step, which gives the safe
+`2·gen(W)+2` bound. The earlier compression to one neutral step total did
+not prove `gen(W)+2`; see SHEET6-DEPTH-REVIEW §4. ∎
 
-**At td = 6, m = 2** (entry (ρ, ν, κ̄) = (1, 2, 5)): W = {2}, gen = 0,
+**Nonroot layer at td = 6, m = 2** (entry (ρ, ν, κ̄) = (1, 2, 5)): W = {2}, gen = 0,
 d₀ = 2; reachable frames are exactly {(2, ν, 2ν+2) : ν ≥ 2} (the
 phase-4 record's 24 μ1-shapes; check 6); the menu is constant from depth 1
 and equals the promoted record: jump cell IIa (2,3,1), M = 2, child
 (κ̄, D/i, ρ) = (5, 3, 1/2) = Q(6,12,3,2,5) at i = 2 — explaining the
 351/351 pair depth-invariance — plus the suffix-dead engine-model ZCH
 (2,3) cell, which the corrected §5c model removes pre-suffix; ν = 1 cells
-only l ∈ {1,2,4} (l = 1 has M = 1; l = 2,4 are MP9's even-l ODE-dead);
-root meets: none (w = 2 ≥ 1).
+only l ∈ {1,2,4} in that historical diagnostic. All-`M=1` root meets are
+also excluded: case I requires `w=l/(r+l)<1`, whereas `W={2}`.
 
 ---
 
@@ -352,11 +385,13 @@ check 6, ~seconds; 13/13 PASS this session:
 
 1. **Step laws** on every BFS edge (td=6 depth ≤ 12; all entries depth 8):
    w′ = w·n/Δ; Δ | num(w) at resonant steps; contraction ≤ 2/3.
-2. **td=6 record**: W = {2}; no resonant step exists (Δ | 2 empty);
+2. **td=6 nonroot record**: W = {2}; no resonant step exists (Δ | 2 empty);
    cumulative jump menu constant depths 1–12; equals promoted cell + the
-   suffix-dead ZCH; ν=1 cells l ∈ {1,2,4}; w ≥ 1 everywhere (no root).
+   suffix-dead ZCH; ν=1 diagnostic cells l ∈ {1,2,4}; `w>=1` excludes
+   every all-`M=1` root edge by the corrected case-I law of §5d.
 3. **All m=2, b=1 entries with td ≤ 12** (10 entries, types (2,3)…(5,6)):
-   BFS w-sets ⊆ W(w_0); menus stabilized at d₀ = gen+2 vs depth 8.
+   BFS w-sets ⊆ W(w_0); menus empirically stabilized at d₀ = gen+2 vs
+   depth 8, while the theorem uses the safe `2·gen+2` bound.
    Sample: w_0 = 4 gives W = {4, 2} (gen 1), w_0 = 6 gives W = {6, 4, 2}.
 4. **Closed-form Menu(w)** (§5b ν-determination) ⊇ every swept frame menu.
 5. **St 9.6(v) cross-check**: the printed λ=0 family has w ≡ 3/2 (s ≤ 20).
@@ -370,33 +405,36 @@ pass); `python3 twopole_check.py l1only` for the phase-4 baseline.
 
 ---
 
-## 8. Consequence: the finite book, restored
+## 8. Finite all-`M=1` book; broader root sectors remain separate
 
-**Theorem (finite jump-vertex book).** For every (m, td), the multi-pole
-reduction of Theorem MP terminates in a FINITE book: BOOK(m, td) as in
-SHEET6-MP-REVIEW §5c with layer C replaced by
+The 2026-08-12 packet's all-`M=1` pattern book is retained after replacing
+its false case-IV root label by the case-I theorem in §5d and replacing its
+sharp stabilization proof by the safe bound. This does not promote a mixed-
+`mu`/off-axis or coefficient-realizability book. Layer C is
 
     C′. Chain layer (CLOSED; H1): an M=1 segment is coded, up to
         menu-equivalence, by its invariant w; per entry w_0 =
         a(b(α+β)−1)/(bν) and the finite closure W(w_0) (§4); segments of
-        arbitrary depth realize no jump-cell data beyond depth
-        d₀ = gen(W)+2 (Lemma §6); M=1-emitting merges map w by
+        arbitrary depth realize no jump-cell data beyond the safe bound
+        d₀ ≤ 2·gen(W)+2 (Lemma §6); M=1-emitting merges map w by
         ·(r+l)/(lν+1) (§5b), composed ≤ m−1 times (MP1).
 
-and layer J indexed by (w, cell) instead of (frame, cell), with the added
-filters: join ⟹ equal handshakes; ZCH ⟹ w-ratio ν_e ≥ 2 across edges
-(§5c); root cells ⟹ w = 1 − l_f/i₀ < 1 (§5d). Layers E, T, R, S are
-unchanged (printed). Every layer is finite: the demoted rider of
-SHEET6-MULTIPOLE §0/§5 ("reduces, for each (m, td), to a finite book of
-jump-vertex cells") holds with the book so corrected. ∎
+and layer J indexed by `(w,cell)` instead of `(frame,cell)`, with the added
+filters: join implies equal handshakes; ZCH implies `w`-ratio `nu_e>=2`
+across edges (§5c); an all-`mu=1` case-I root meet has at most one
+`l=r*w/(1-w) in N*` for each fixed `(w,r)` (§5d). Since `W` is finite and
+`r<=m`, this root layer is finite. Layers E, T and the all-`M=1` jump/root
+layer therefore form a finite pattern book. Mixed-`mu`/off-axis root
+packages and coefficient/Puiseux realizability are not covered. ∎
 
 Required engine fixes when the book is next run (no promoted conclusion
 changes): (i) l1_merges/all_merges: ZCH edges must use the case-(III)
 solve (n′ ∈ (1/ν)ℕ*, handshake ν_e·w_e) — the current (a)–(d) model
 over-generates (its td=6 extras were suffix-dead); (ii) phase-4
 zch_children (ν_F = 1 chain steps) can be deleted (DS1, St 3.16 iff);
-(iii) phase-3 root filter can be strengthened to w < 1 (§5d), which also
-subsumes the κ̄ < ν pin via case (IV)(j).
+(iii) a genuine all-`M=1` root meet must be modeled as case I with
+`w=l/(r+l)<1`; retain `l>=1`, recognize root before applying the nonroot
+`M=1` kill, and do not use a finite `l` cap as completeness evidence.
 
 ---
 

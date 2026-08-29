@@ -1,0 +1,8 @@
+lane=d43_high_hensel_v2_real_kernel_shift_review_r1_20260828T2024Z
+host=ip-172-30-0-34
+start_utc=2026-08-28T20:24:19Z
+argv=taskset -c 0 timeout 180 env JC2_D43_HOSTILE_REAL=1 PYTHONHASHSEED=0 /home/ubuntu/d43-high-review-87w9m0/venv/bin/python -m unittest -v cases.test_d43_source_high_hensel.SemanticChainHostileTests.test_real_d43_free_column67_kernel_shift_is_rejected 
+end_utc=2026-08-28T20:24:21Z
+rc=1
+stdout_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_sha256=8c90d4b141a6176cbbb9735e0debdef1fcdede031faa120f199dbfdc124f5a23

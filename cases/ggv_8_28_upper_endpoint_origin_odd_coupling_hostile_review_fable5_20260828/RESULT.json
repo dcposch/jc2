@@ -1,0 +1,43 @@
+{
+  "case_id": "ggv_8_28_upper_endpoint_origin_odd_coupling_hostile_review_fable5_20260828",
+  "date": "2026-08-28",
+  "reviewer": "Fable 5 (compact independent hostile audit)",
+  "verdict": "PASS",
+  "first_defect": null,
+  "replay_marker": "PASS_HOSTILE_AUDIT_UPPER_ENDPOINT_ORIGIN_ODD_COUPLING_FABLE5",
+  "replay_command": "PYTHONDONTWRITEBYTECODE=1 python3 -B xmodel/ggv-upper-endpoint-origin-odd-coupling-hostile-review-fable5-20260828-check.py",
+  "audited_report": {
+    "path": "xmodel/ggv-upper-endpoint-origin-odd-coupling-sol-ultra-20260828.md",
+    "sha256": "3e4a0f03acec2ee5e3cdfff558c481e14735408aa18486d23215958ed8d4bb3a"
+  },
+  "producer_checker_not_trusted": {
+    "path": "cases/ggv_8_28_upper_endpoint_origin_odd_coupling_20260828/verify_origin_odd_coupling.py",
+    "sha256": "f23a6d959dc9a8854f051c16a1fe287dea91d5b66b01a63198a64715c08c04c8",
+    "imported_or_executed": false
+  },
+  "raw_source": {
+    "path": "cases/ggv_8_28_raw_to_global_m_cokernel_interface_d3_20260827/RAW_INPUT.json",
+    "sha256": "28b9b05c02224aadec30d52b66ed22db80aabe416ffdc0186f6931f1978f1876",
+    "slots_verified": {"F": 141, "G": 301, "total": 442}
+  },
+  "findings": {
+    "chart_map_and_slots": "CONFIRMED: all 442 slots satisfy X=x*y^3, t=1/y; F X^i at weight w is x^i y^(8+3i-w), G is x^i y^(12+3i-w); names, monomials, chart images, nonnegative exponents all verified",
+    "window_census": "CONFIRMED: F window [max(0,ceil((w-8)/3)), 16-w] nonempty w=0..14; G window [max(0,ceil((w-12)/3)), 24-w] nonempty w=0..21; contiguous; no slots outside the law",
+    "d22_x0_enumeration": "CONFIRMED: complete symbolic enumeration over all a+b=22 gives D22[X0] = +f_1_0*g_0_1 - f_0_1*g_1_0 = F11[X1]*G11[X0] - F7[X0]*G15[X1]",
+    "neighbors": "CONFIRMED: (10,12) killed by 12-j=0, (8,14) by i-8=0 (both have the required slots); every other pair lacks a required X0/X1 slot in the frozen data",
+    "slot_identification": "CONFIRMED: f_1_0=P_x(0), f_0_1=P_y(0), g_1_0=Q_x(0), g_0_1=Q_y(0), unique carriers of the linear monomials; expression is literally J(P,Q)(0)",
+    "endpoint_sign_convention": "CONFIRMED target +1: exact Laurent identity sum_n D_n t^(n-21) = t * J(P,Q)(X t^3, 1/t) verified on a generic exact pair; Keller fixtures (x,y) and (x+y^3,y) give D22=+1, all other D_n=0",
+    "parity_theorem": "CONFIRMED: total degree = w mod 2 for all slots; the four coupling slots have odd weights 11/7/15/11; odd-zero section => even-degree-only P,Q, (x,y)->(-x,-y) invariance, zero gradients at origin, D22[X0]=0, contradicting D22=+1",
+    "firewall": "ADEQUATE, no precision repair required: the odd-q-gates => odd-raw-weights converse is never asserted; sections 1/3/5 firewall sentences byte-pinned; lemma does not prove q5-q15 fiber intersection empty, endpoint exclusion, Keller, or JC2; non-blocking style note on the 'smallest exact coupling' phrase",
+    "mutations_detected": [
+      "sign flip on (7,15) term",
+      "retaining structural zero (10,12)",
+      "retaining structural zero (8,14)",
+      "omitting the true (7,15) term",
+      "wrong chart offset (base 8 -> 9)",
+      "parity law flipped to w+1 mod 2",
+      "endpoint target sign -1 instead of +1"
+    ]
+  },
+  "frozen_hashes_verified": "at audit start and end; all bytes preserved"
+}

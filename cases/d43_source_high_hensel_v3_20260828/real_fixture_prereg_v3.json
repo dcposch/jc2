@@ -1,0 +1,28 @@
+{
+ "schema": "d43-pristine-source-high-hensel-real-fixture-prereg-v3",
+ "status": "NOT_RUN_BY_V3_PRODUCER_AWS_REVIEW_OPT_IN",
+ "environment_gate": "JC2_D43_V3_REAL_FIXTURE=1",
+ "construction": "for every coordinate, (deterministic_p2_coordinate + 105337*kernel_digit) mod 105337^2",
+ "required_pre_rejection_gates": [
+  "the selected digit is an exact kernel vector of the 184-by-182 source Jacobian mod 105337",
+  "all 184 raw source rows vanish at the shifted point mod 105337^2",
+  "the E/W/E5/E6 necessary template gate passes at the shifted point",
+  "at least one coordinate differs from deterministic p2"
+ ],
+ "required_rejection": "semantic state-chain replay mismatch",
+ "additional_mutations": [
+  "delete the final history coordinate_point_sha256",
+  "replace the final history coordinate_point_sha256 with 64 zeroes"
+ ],
+ "prior_independent_corrected_checker_sha256": "7d58174e73e30612cfda3354dee546cb7eed108e63fd8223364321916359185d",
+ "prior_aws_evidence_readme_sha256": "47d09920579b020a9f5fe59f12e3557a9d4d1b61f4de88cec18496c7b6f82249",
+ "prior_result_only_not_v3_execution_evidence": {
+  "changed_coordinates": 16,
+  "nonzero_kernel_digits": 16,
+  "raw_rows_zero": 184,
+  "template_gate_pass": true,
+  "validator_rejection": "semantic state-chain replay mismatch",
+  "maximum_rss_kib": 210988,
+  "swap_count": 0
+ }
+}

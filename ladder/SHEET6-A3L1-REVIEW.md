@@ -1,6 +1,18 @@
 # SHEET6-A3L1-REVIEW.md — Adversarial review of SHEET6-AF3 (cec5b3b) and SHEET6-L1 (62335cc)
 
 Reviewer: Claude (adversarial pass, 2026-08-07). Status: COMPLETE.
+**2026-08-28 supersession.**  The pole pin and interior L1 witness survive,
+but the root use of Proposition 8.4 below is a genuine proof gap, not a
+nitpick: corrected Proposition 8.4 is nonroot only and root `M=1` is allowed.
+The eta-law proof is supplied instead by the reviewed cyclic
+semi-invariance packet `37b83208...` / final gate `a2b4d37c...`.  Literal
+`Y(F)` is replaced on singleton chains by first-separation exits and
+actual-weight Corollary 7.1.  MFE now proves multipole selected-exit
+disjointness with shared suffixes deduplicated (`c74fc0f9...`).  The old
+capped root counts remain withdrawn.  The mixed-root edge theorem plus
+MP1+MP4+MP5/D5 excludes the `td=6,m=2` pole-chain root-meet branch
+analytically, while broader root routes behind earlier `M>=2` jumps and
+off-axis root completeness remain open.
 Scope: the two coupled unreviewed results (AF3 entry-M pin + L1 merged-
 pattern lemma; L1a leans on the AF3 pin). Ground truth: refs/
 sigray_full.pdf re-read on-page this review (pp. 17-19, 23-34, 38-58 —
@@ -109,10 +121,11 @@ Verdict: **CONFIRMED**; no missed kill found after a genuine hunt.
   St 3.16's (0,y)-exclusion (on-page); λ_root already charged — St 9.4's
   proof (p. 49) prices the T_a,cv ∩ T_a,x vertex AS ψ via Cor 7.1
   (re-read; the ψ-budget is that charge, not an extra); St 8.5 at the
-  terminal gives M_{(0,y)} | M_F only divisibility. One NITPICK: AF3 §4's
-  "Prop 8.4 forbids M_{(0,y)} = 1" needs (0,y) ∈ T_a^searrow, which no
-  printed statement supplies — but this is a consistency remark, not a
-  kill or a survival condition; no verdict touched.
+  terminal gives `M_(0,y) | M_F` only divisibility. AF3 §4's claim that
+  Proposition 8.4 forbids root `M=1` is false at the corrected scope:
+  `(0,y)` is excluded.  This is a genuine proof gap in that compatibility
+  sentence, though it has no weight in the pole pin or four nonroot-IV
+  classes.
 - Entry realizability (AF3 §4): verified exactly. Prop 5.4 (p. 26) parity
   (ii) is forced (6 ≡ 1, 10 ≡ 0 mod 5); with p = η(η⁵−A), p_g =
   B(η¹⁰−(5/3)Aη⁵+(5/9)A²): 3pp_g′−5p′p_g = (25/9)A³B verified by exact
@@ -148,21 +161,15 @@ Verdict: **CONFIRMED** at every vertex and every merge depth.
   η extra by the same third-pole argument (i₀ ≥ 2 holds: i₀ = full
   pattern degree of the last pre-merge vertex, ≥ 2 even for immediate
   merges). Three shapes exhaustive. ✓
-- DERIVATION GAP (closed here, kill-direction): §1a's "ν-equivariance
-  makes e0 ≡ 1 mod ν" overstates — equivariance alone only makes q's
-  exponents constant mod ν. What actually forces grade-1 purity is the
-  graded decomposition of 8.1(iv): L(q_j) has grade j−1, RHS ⊖p grade 0
-  (IIa), so q_j for j ≠ 1 solves the homogeneous equation, whose only
-  polynomial solutions are c·p^{1/ρ} — a non-polynomial unless 1/ρ ∈ N,
-  and in THAT resonant case no grade-1 inhomogeneous solution exists at
-  all (its top can never cancel: dq ≡ 0 ≢ 1 mod ν), so the cell is EMPTY
-  rather than differently-shaped. Either way dq ≡ 1 mod ν and the three-
-  family menu is exhaustive; every enumerated cell is unaffected. The
-  printed anchor is St 8.5's proof (p. 43): "p_G(η) = p̃(η^ν), by
-  Proposition 4.6, one gets p_{h,G}(η) = ηr(η^ν)" — same inference,
-  thesis's own words, for the non-merge case. ZCH grading (p grade 1)
-  gives the same conclusion, with in-grade resonance possible exactly
-  when ν+1 | l — reproducing the (2,3) degeneracy found in front 5.
+- DERIVATION GAP (closed by the later reviewed repair): bare equivariance
+  does not force grade-one purity.  The cyclic semi-invariance theorem
+  `37b83208...` (Terra final gate `a2b4d37c...`) shows that at a certified
+  nonroot, nonmerge down vertex every residual is a single effective
+  stabilizer character; the unique nonzero root orbit, direct positivity
+  and the reduced ODE force the terminal character to be one.  Hence
+  `q=eta*r(eta^nu)` and `gcd(nu,deg q)=1`.  This supplies exactly the
+  nonroot eta law used by the three-family menu.  It is not a root use of
+  Statement 8.2 or Proposition 8.4.
 - Engine note: phase 4's zch_children PRE-MERGE nodes (p_red = η, ν=1)
   are not legitimate V_a vertices (previous bullet); pure over-generation
   — harmless, since it only adds parent candidates and all in-caps pairs
@@ -177,7 +184,9 @@ Verdict: **CONFIRMED**, and the two mechanisms agree beautifully.
   Residue at t = a_1 for l = 2: −2/(a_1−a_2)³ (hand-checked; matches the
   doc's value); for general even l the residue is ±binom(2m−2,m−1)
   (a_1−a_2)^{−(2m−1)} ≠ 0, m = (l+2)/2. Log terms ⇒ c′ = 0 ⇒ contradicts
-  ⊖ ≠ 0. Odd l has M = 1 (restored 8.4) — nothing left over. The e0 = 1
+  ⊖ ≠ 0. Odd `l` has `M=1` and is killed only for a certified nonroot
+  merge; at the root it must be retained (the `l=1` cell is locally
+  solvable). The e0 = 1
   variants are the same q = ps form with s(0) = 0 and are covered by the
   same argument (the doc's separate cell checks are belt-and-braces).
 - Independent full-η linear algebra (this review, own code, gauge
@@ -240,16 +249,18 @@ Verdict: **CONFIRMED**.
 
 - Engine reproduction (this review's runs): phases 1-3: 133 shapes /
   47970 merges = 46337 + 745 + 336 + 552 / residues A@0 (4 IV) + B@1
-  (2 IV) / 0 root merges — byte-identical to L1 §6 and to A2P front 7's
+  (2 IV) / 0 root merges — historical output byte-identical to L1 §6 and to A2P front 7's
   derived-IIb rerun. Phase 4: 26 pre-merge shapes (all M=1, λ=0) / 18427
-  = 17199 M=1-killed + 601 ν=1 (325 on child (1,1,2,4) + 276 on
+  = 17199 then-`M=1`-killed + 601 ν=1 (325 on child (1,1,2,4) + 276 on
   (1/2,1,2,3), both L1b-dead) + 276 ZCH (suffix-DEAD) + 351 residue pairs
   — ALL 351 landing on the single child (1/2,3,2,5)@0 = Q(G_m) =
   (6,12,3,2,5), with the same 4 IV classes.
 - First-step closed forms re-derived by hand from (1+n)/(5+n) = dp/dq:
   IIa: n = ((8−l)ν−1)/(lν+1), n odd ⇒ ν+1 | 8 at l=1 ⇒ (3,1,5) UNIQUE
   (ν=7 gives even n); l ≥ 2 all fail (2ν+1 | 8 etc.); I: n = 8/l − 1 ⇒
-  (1,2,3), (1,4,1) [L1b-dead]; ZCH: (2,1,5) [M=1], (2,3,1) [§5-dead].
+  (1,2,3), (1,4,1) [L1b-dead]; ZCH: (2,1,5) [nonroot M=1],
+  (2,3,1) [historical §5-dead].  The root portions of these counts are
+  superseded by the root-aware rerun.
   Uniqueness of the merged child datum within caps: CONFIRMED, at every
   merge depth (the 2POLE §7.3 "immediate merge" correction stands).
 - B and A' deaths: structural, from front 4 — B's μ=(2,2) needs
@@ -281,9 +292,11 @@ Verdict: **CONFIRMED**.
 - E8: on-page ✓ (§1). E9: Not 9.3's literal Y(F) (p. 49 re-read: "∃P:
   F = I_P(u) and H = I_P(π(H))") puts every cv vertex on a common ray
   with every chain vertex root-ward of its separation point, so the
-  literal Σλ over a chain recounts each H; St 9.4's proof feeds ∪Y(F_i)
-  ∪ {G} to Cor 7.1 as a plain set — the branch-at-F reading is forced.
-  REAL definition/usage mismatch, correctly the standing H2 reading. ✓
+  literal Σλ over a chain recounts each H.  The reviewed replacement assigns
+  each cv flag to its unique first-separation exit set and applies
+  actual-weight Corollary 7.1 once to the disjoint singleton union plus the
+  x-side flag.  This discharges H2 for singleton chains; a multipole union
+  still needs cross-chain/shared-suffix disjointness. ✓
 - AF2 consistency: pin mode sets IIB_DERIVED = True (A2P fix 1) —
   checked in code; `iib` and gate outputs unchanged.
 
@@ -292,11 +305,10 @@ Verdict: **CONFIRMED**.
 Both results SURVIVE adversarial review; nothing is refuted, nothing
 demoted. Recommend **PROMOTE BOTH**, with three cosmetic notes:
 
-1. SHEET6-AF3 (cec5b3b): promote as-is. One nitpick: §4's "Prop 8.4
-   forces M_{(0,y)} ≠ 1" silently assumes (0,y) ∈ T_a^searrow (not
-   printed); it is a consistency remark with no verdict weight — suggest
-   a hedge word. The pin, the 11-row table, the refutation arithmetic,
-   the 4-class book, and both §5 negative results are exactly right.
+1. SHEET6-AF3 (cec5b3b): retain the pin, 11-row table, refutation arithmetic
+   and four nonroot-IV classes.  Replace its root sentence: repaired
+   Statement 8.5 gives divisibility only and corrected Proposition 8.4 does
+   not forbid `M_(0,y)=1`.  Root/SF1 completeness awaits the reviewed rerun.
 2. SHEET6-L1 (62335cc): promote as-is, with (a) §1a's eta-law
    justification rewritten per front 4 (graded-ODE + resonance-emptiness,
    not bare equivariance — conclusion unchanged, every enumerated cell

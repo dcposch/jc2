@@ -1,5 +1,23 @@
 # SHEET6-MP-REVIEW.md — Adversarial review of SHEET6-MULTIPOLE.md (0827409), the Theorem MP synthesis
 
+> **2026-08-28 CANONICAL SUPERSESSION — MP2/MP3 and MP8.** The historical
+> review below is retained for its local merge calculations and explicit
+> interior witness. MP2/MP3 now have nonroot scope only; root `M=1` is
+> permitted. Actual-weight Corollary 7.1 and the multipole selected-exit
+> shared inequality are green after the independent Fable5 attachment gate
+> (`f55a00f5...`, integration `c74fc0f9...`): selected witnesses are
+> globally distinct and the shared suffix is counted once. Nevertheless
+> literal (22), literal
+> `delta_a`, `(22-cl)`, equality/slack assertions, and MP8's categorical
+> no-refinement conclusion are quarantined. MP8 retains only local
+> `lambda=0`/witness content. The root menu must include `l>=1`; its
+> `kappa-bar<nu` parent test remains necessary. A later dual-model re-audit
+> replaces the invalid phase-3 census: every genuine root edge is case I
+> and requires `0<w<1`. MP1+MP4+MP5/D5 give `W={2}` at every actual
+> two-pole `td=6` pole-chain root parent, excluding that root-meet branch
+> analytically. Root `M=1` stays legal; broader mixed-`mu`/off-axis root
+> completeness and overall `td=6` exclusion do not follow.
+
 Reviewer: Claude (adversarial synthesis-grafting pass, 2026-08-12). Status:
 COMPLETE. Scope: the SYNTHESIS layer only — the per-angle A1/A2 contents were
 adversarially voted inside the workflow (3/3 each) and their records are NOT
@@ -37,8 +55,10 @@ Verdicts:
   shows no printed budget can supply it (§5; parameterization spec §5c)
 - Front 6 (mechanization): **DONE, ALL PASS** (/tmp/mp_check.py, §6)
 
-Net: **MP0–MP8 stand as printed. MP9 stands with its root-meet ground
-corrected. Theorem O stands. The finite-book rider is the one demotion.**
+Historical net (superseded at the scopes stated above): MP0–MP7 retain their
+local content after the nonroot MP2/MP3 correction; MP8 is conditional and
+does not stand as a literal-`(22)` theorem. The finite-book and root-menu
+caveats remain independent.
 
 ## 1. Front 1 — clause provenance and quarantine integrity
 
@@ -49,12 +69,12 @@ promoted sheets:
 |---|---|---|---|
 | MP0 | A1/A2 (cross) | D1: Prop 6.8 + St 3.16/3.17(i) + Prop 5.3(v) | 2POLE §1b/§1c |
 | MP1 | A2 (unique-predecessor adopted) | D2: edge count Σ(r−1) = −1 + m leaves (verified: gives m−1) | 2POLE §1c(ii) at m=2 |
-| MP2/MP3 | A1.T2 = A2(4); A1.T3 correction | D3: P1 + 8.3(iii) single-root + p.45 Bezout | 2POLE §1c(iii) |
+| MP2/MP3 | A1.T2 = A2(4); A1.T3 correction | D3, nonroot scope only | 2POLE §1c(iii) |
 | MP4 | A2(1) ⊇ A1's β-minimal | D4: (19) + St 5.2 + St 2.1 arithmetic (re-done here, §3b) | L1a(a)/A3L1 fronts 1–2 |
 | MP5 | A1/A2 (k=0 manufacture in both, §9) | D5: St 8.4/8.2 + Prop 6.8 same-branch | L1a(b) |
 | MP6 | A1.T4/T5 = A2(3) = A3.P4 | D6: St 3.17(i)/8.1(i)/(v) + gcd arithmetic | L1a(c) 3-shape menu |
 | MP7 | A1/A2 | D7: gcd + (iv) degeneration + St 9.2(ii) | L1 §0/§4 |
-| MP8 | A1.T7 = A2.Prop B | D8: (22) itemization + F*_P argument | LROOT §1–2 |
+| MP8 | selected-exit inequality plus local no-exit anatomy | global witness disjointness proved in the later contact-tree repair; equality/no-refinement still quarantined | `f55a00f5...` / `c74fc0f9...` |
 | MP9 | A1/A2 + D9's new residue closed form | D9 | L1 §4–§6, 2POLE §4b/§5b |
 
 - **Quarantine honored.** The three §7 blocks (prime-partition kill,
@@ -128,7 +148,17 @@ promoted sheets:
 Σ(r−1) = 1: exactly one merge, r = 2, G\* = G_m; escape set = the two
 pre-merge segments = 2POLE §1c(iii). Consistent.
 
-### 2c. The one composition flaw: MP9's root-meet citation
+### 2c. Root-meet menu correction; analytic all-`M=1` disposition
+
+> **Canonical disposition.** The `l>=1` root family must be included in the
+> symbolic menu.
+> Proposition 9.3(d) supplies only the necessary parent filter
+> `kappa-bar<nu`; the historical capped sweep below is not an exhaustive
+> root count. The later re-audit proves more without using that sweep:
+> case-I equations give `X_root=mu(1-w)`, and the all-`mu=1` root anatomy
+> gives `w=l/(2+l) in (0,1)`. This contradicts the exact row-1 `td=6`
+> alphabet `W={2}` and excludes that sector. It does not cover mixed-`mu`
+> or off-axis root configurations.
 
 MP9 (root meet) claims "Empty at td = 6 by reach (2POLE §5b phase 3)". Two
 problems with that citation: (i) phase 3's printed grounds fail for the
@@ -138,19 +168,20 @@ rigidity (2+k)/(k+2) = 1 both presuppose the *l-free* I-like root pattern
 ratio is 2/(2+l) ≠ 1 — indeed MP9 itself proves l = 1 *locally solvable*;
 (ii) the engine's phase-3 MENU is l-free (`dp, dq = mu1+mu2+k, k+2`,
 twopole_check.py:253), so it never enumerated the l ≥ 1 root family at all.
-**The kill is nevertheless real and was re-established here on an
-l-INDEPENDENT ground:** the terminal edge into (0,y) is Prop 9.3 case (I)
+The review then proposed an `l`-independent filter: the terminal edge into (0,y) is Prop 9.3 case (I)
 (root merge ⇒ (0,y) ∈ V_{2,a}, case (IV) hypothesis fails — 2POLE
 §1c(ii)), and (d) with child κ̄ = 1 (St 9.2(iii), on-page) forces
 n_e = ν_e − κ̄_e ≥ 1, i.e. **κ̄ < ν at both parents, whatever the pattern
 shape**. Independent raised-caps sweep (/tmp/mp_check.py check 5: ν ≤ 48,
 l ≤ 8, depth ≤ 8 vs the engine's 24/4/6): 50 reachable M=1/λ=0 chain
-shapes from the row-1 entry, **zero with κ̄ < ν**. So td = 6 root meets
-with μ = (1,1) are reach-dead. Required fix: MP9's citation should read
-"κ̄ < ν unreachability along M=1/λ=0 chains (Prop 9.3(d) at child κ̄ = 1;
-engine sweep)", and the phase-3 root menu should gain the l-family before
-any reuse at general td (where the doc correctly marks the residual OPEN).
-Same tier as before (H1 + capped sweep) — no tier change, no new survivor.
+shapes from the row-1 entry, zero with `kappa-bar<nu`. That is a bounded
+diagnostic, not an exhaustion theorem: the later exact hostile witness has
+an uncharged MU1 solution only at `l=98`, beyond the old caps. Thus the
+necessary parent filter survives, but that bounded sweep did not establish
+the claimed reach-death. The later dual-model case-I/DEPTH proof does: at
+`td=6,m=2`, every all-`mu=1` parent would require
+`w=l/(2+l) in (0,1)`, contradicting `W={2}`. AWS remains diagnostic for
+mixed-`mu`/off-axis/SF1 completeness, not a premise of this exclusion.
 
 ## 3. Front 3 — page fidelity (all six re-read on-page this session)
 
@@ -223,7 +254,9 @@ partitions td = ΣΛ_i, Λ_i ≥ β; finitely many (a_i,b_i,ν_i) per Λ_i via
 (19) + St 5.2(ii)); tree shapes (MP1: ≤ m−1 merges, Σ(r−1) = m−1, r ≤ m);
 merge-local anatomy (MP6: μ⃗ = 1 at all-M=1 merges, k = 0, family ∈
 {IIa, ZCH, I}, M from the gcd menu, M | r ≤ m outside ZCH, gcd(M,ν) = 1);
-root cells (ν = 1, l ≤ td−2 via ψ = r+l−1 and (25) — finite per td). At H1
+all-`mu=1` root cells (ν = 1, `w=l/(r+l)`, equivalently
+`l=rw/(1-w) in N*`; finite for fixed finite `W` and `r<=m`). Mixed-`mu`
+and off-axis roots are outside this parameterization. At H1
 tier, the per-edge Prop 9.3 equations make (l, n_e, ν) **finite per parent
 frame**: for the all-μ=1 IIa jump, cross-multiplying (b) gives
 ν·(rκ̄_e − (r+l)ρ_e − l·n_e) = ρ_e + n_e, so n_e ≤ (rκ̄_e − (r+l)ρ_e −1)/l,
@@ -238,10 +271,12 @@ by κ̄′ = (κ̄+n)/ν (Prop 9.3(d)) and demonstrably GROWS along admissible
 M=1/λ=0 chains (the engine's own parent list at td = 6 contains κ̄ = 5, 6,
 8, 10; my raised-caps sweep reached 50 frames and was cap-, not
 constraint-, terminated). At pattern level the survivor menu is already
-infinite (IIa: all l odd, ν ≥ 3 odd). Worse, the doc's own **MP8 proves
-no printed budget can charge the M=1 region — so no printed statement can
-bound pre-merge chain depth either**: the obstruction half structurally
-undermines the reduction half's finiteness. Empirically the merged-child
+infinite (IIa: all l odd, ν ≥ 3 odd). The old assertion that MP8 proves no
+budget or refinement can charge the `M=1` region is withdrawn: it used the
+invalid equality `(22)`. Only specified local exit sets with
+`lambda_F^exit=0` survive; actual cluster weight may jump. The later
+contact-tree repair proves the global selected-exit inequality, but neither
+zero total charge nor no-refinement follows from it. Empirically the merged-child
 datum was depth-invariant at td = 6 (351/351 pairs, one child), which
 suggests a *child-invariance/closure lemma* exists — but none is stated or
 proved in MP0–MP9, §5, or the quarantined §7. **Demotion: §0's "reduces
@@ -278,9 +313,11 @@ cap-stability protocol.** notes.md's "finite-book at every level"
        (§5a). Coefficient layer: Prop 8.1(iv) rigid solve (à la
        l1_ode_check families A/Z), then the §8-item-3 coefficient-vs-ratio
        match (never yet run).
-    R. Root cells (printed + H1; finite per td): ν = 1, all-μ=1, l odd,
-       l ≤ td−2, k_f = (r+l)l_f, ψ = r+l−1, both parents κ̄ < ν (Prop
-       9.3(d) at child κ̄ = 1 — l-independent, §2c), Prop 9.3 case (I).
+    R. Root cells (printed + H1 + DEPTH; all-μ=1 only): ν = 1,
+       w = l/(r+l), equivalently l = rw/(1-w) in N*, l ≤ td−2,
+       k_f = (r+l)l_f, ψ = r+l−1, and every parent κ̄ < ν (Prop 9.3(d)
+       at child κ̄ = 1). Fixed finite W and r≤m give at most one l per
+       (w,r). Mixed-μ/off-axis roots are outside this book.
     S. Suffix (printed): restored M ≠ 1 kill (MP2) + single-pole engine +
        St 9.4: Σλ ≤ td − 1 − ψ over the union, shared suffix once.
 
@@ -298,10 +335,10 @@ NOT covered by this file.)
 
 ## 7. Required fixes (none demote MP0–MP8)
 
-1. **MP9 root-meet citation** → replace "(2POLE §5b phase 3)" by the κ̄ < ν
-   ground of §2c; add the l-family to the phase-3 root menu before any
-   general-td reuse (latent enumeration gap, currently masked by the κ̄ < ν
-   filter at td = 6).
+1. **MP9 root-meet citation — RESOLVED BY LATER SUPERSESSION.** Do not cite
+   2POLE phase 3. The governing `td=6` all-`M=1` proof is the case-I/DEPTH
+   identity `w=l/(2+l)` against `W={2}`. Any future engine must still add
+   the `l>=1` family before mixed-`mu` or general-td reuse.
 2. **§0/§5 finiteness rider** → reword per §5b: "finitely generated book;
    finite per parent frame; global finiteness conditional on chain-depth
    closure (empirically depth-invariant at td = 6)". Add the closure lemma

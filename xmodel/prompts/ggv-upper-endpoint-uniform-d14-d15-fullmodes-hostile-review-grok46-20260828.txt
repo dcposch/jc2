@@ -1,0 +1,59 @@
+You are Grok 4.6 acting as an independent hostile mathematical reviewer in the
+plane Jacobian conjecture campaign. Work in /Users/dc/code/math/jc2.
+
+Audit the proposed uniform complete-fixture D14/D15 characteristic cascade:
+
+  206bd3e8b8d06e9e334ea76cb28e1fe5b447bd9b29d4740c947f0e553f491bef
+    xmodel/ggv-upper-endpoint-uniform-d14-d15-fullmodes-sol-ultra-20260828.md
+  061743e081be5944cd3af34fa9d9d71cf24bee12f8bfafa49c5a980dad0bf40c
+    cases/ggv_8_28_upper_endpoint_uniform_d14_d15_fullmodes_20260828/verify_uniform_d14_d15.py
+  757e8e40ce5bcd0181b11ae28b6c4302ef08c60a3db9b679fb798fd40ba2da07
+    cases/ggv_8_28_upper_endpoint_uniform_d14_d15_fullmodes_20260828/RESULT.json
+
+Authoritative raw source:
+
+  ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0
+    cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json
+
+Earlier D8--D13 steps are dependencies under separate reviews; reconstruct
+what you need and make D14/D15 verdicts conditional if any dependency fails.
+
+Required hostile review:
+
+1. Verify every hash and independently reconstruct the Laurent recurrence and
+   literal raw D13--D15 rows; do not merely trust producer code.
+2. Retain all nine modes. In particular c14 is the first forced negative mode
+   born at its row and must be treated as c14/A, not silently omitted.
+3. Check the honest defect
+
+     Delta7=F7-T/2-QZ/8-RV/16.
+
+   Audit the causal D14 claim: leading order two forces A|Delta7; after
+   Delta7=A*U, c14/A is the sole remaining pole and forces c14=0.
+4. Independently check the redundant D15 detection
+   `-c14/(4A^3)` and `D15_raw = +3*c14*A' (mod A)`, then, after c14=0,
+   audit the D15 square defect and A|U, including the role of
+
+     Delta8=F8-TZ/8-QV/16-R^2/4
+
+   and the surviving c8 term. Confirm the final completion
+
+     F7=T/2+QZ/8+RV/16+A^2*Y.
+
+5. Audit the literal G14 lower-window kernel claim (rank 10/nullity 0), the
+   c8=1 survival point, source-level mutations, signs/powers, and all
+   characteristic-zero/squarefree uses.
+6. Derive and check the exact lower-degree X^0 compatibilities C13,C14,C15
+   and their dependence on gauge-invariant H0=c8/2+3F8(0)/4. Ensure the
+   report does not incorrectly discard these live equations.
+7. Scope firewall: fixed 303-variable fixture and field-radical necessities
+   only; no scheme, endpoint, unrestricted branch-P, Keller, or JC2 claim.
+
+Return separate PASS/REPAIR/FAIL verdicts for D14, the independent c14 D15
+check, D15 divisibility, and C13--C15, plus an overall verdict. Write:
+
+  xmodel/ggv-upper-endpoint-uniform-d14-d15-fullmodes-hostile-review-grok46-20260828.md
+
+End with exact SHA-256 values for all charged/new artifacts. Do not edit
+canonical top-level files. Do not access, list, search, build, status, or
+modify jc2-lean. Light local exact arithmetic only; no heavy local CAS.

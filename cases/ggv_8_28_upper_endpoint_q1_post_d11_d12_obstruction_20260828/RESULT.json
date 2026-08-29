@@ -1,0 +1,206 @@
+{
+  "characteristic_certificate": {
+    "Nred_at_C_root_X1": "-12",
+    "bezout_mod_B": {
+      "B_cofactor": {
+        "0": "42217087/30240000",
+        "1": "-25267069/211680000",
+        "10": "1089/196000",
+        "2": "4486127/105840000",
+        "3": "11291477/105840000",
+        "4": "1751237/1960000",
+        "5": "-44699917/52920000",
+        "6": "-89007/560000",
+        "7": "-358983/3920000",
+        "8": "52173/1568000",
+        "9": "27351/1568000"
+      },
+      "Nred_cofactor": {
+        "0": "1128448/2480625",
+        "1": "34816/50625",
+        "2": "-1982464/2480625"
+      },
+      "identity": "Nred_cofactor*Nred+B_cofactor*B=1"
+    },
+    "division_quotient_mod_A4": {
+      "0": "76545/524288",
+      "1": "10935/262144",
+      "2": "3645/524288"
+    },
+    "division_remainder_mod_A4": {
+      "0": "94983/131072",
+      "1": "18999/8192",
+      "10": "-1002885/131072",
+      "11": "-355419/65536",
+      "12": "-337923/131072",
+      "13": "-40857/32768",
+      "14": "11907/131072",
+      "15": "13851/65536",
+      "2": "593793/131072",
+      "3": "458715/65536",
+      "4": "1044975/131072",
+      "5": "200367/32768",
+      "6": "397185/131072",
+      "7": "-117147/65536",
+      "8": "-802035/131072",
+      "9": "-117753/16384"
+    },
+    "division_remainder_sha256": "bcff9bba05a4080f17267348bc0708c3c476a605e1d8bd9c10ef0e043f010655",
+    "gcd_N12_A4": {
+      "0": "-1",
+      "1": "-1",
+      "2": "-1",
+      "3": "-1",
+      "4": "1",
+      "5": "1",
+      "6": "1",
+      "7": "1"
+    },
+    "local_B_root_verdict": "independent of the C-root: Nred is a unit modulo B, C is a unit modulo B, and the B^2 denominator gives a pole at each of the three B-roots",
+    "new_terms_are_regular": {
+      "F12": "(3/2)*A^2*F12",
+      "c12": "constant c12*F^0"
+    },
+    "recurrence_numerator": {
+      "0": "456477/524288",
+      "1": "618903/262144",
+      "10": "-1994835/262144",
+      "11": "-355419/65536",
+      "12": "-103617/32768",
+      "13": "-92649/65536",
+      "14": "4131/65536",
+      "15": "13851/65536",
+      "16": "76545/524288",
+      "17": "10935/262144",
+      "18": "3645/524288",
+      "2": "2378817/524288",
+      "3": "458715/65536",
+      "4": "484215/65536",
+      "5": "389799/65536",
+      "6": "98385/32768",
+      "7": "-117147/65536",
+      "8": "-1374435/262144",
+      "9": "-909219/131072"
+    },
+    "recurrence_numerator_sha256": "3b2c49c70c41e503e81a3236fec0e5fe4074907a599d65f4635e340a356552c9",
+    "reduced_denominator_without_scalar_12": {
+      "0": "-1",
+      "1": "1",
+      "4": "2",
+      "5": "-2",
+      "8": "-1",
+      "9": "1"
+    },
+    "reduced_numerator": {
+      "0": "-456477/524288",
+      "1": "-781329/524288",
+      "10": "18225/524288",
+      "11": "3645/524288",
+      "2": "-1141011/524288",
+      "3": "-1290903/524288",
+      "4": "-558477/262144",
+      "5": "-403665/262144",
+      "6": "-368895/262144",
+      "7": "-35235/262144",
+      "8": "34263/524288",
+      "9": "54675/524288"
+    },
+    "reduced_shape": "g12_polar=Nred/(12*C^3*B^2)"
+  },
+  "direct_raw_D12_certificate": {
+    "augmented_rank": 13,
+    "base_row": {
+      "0": "206301/131072",
+      "1": "792939/131072",
+      "10": "518493/32768",
+      "11": "112641/16384",
+      "12": "78069/32768",
+      "13": "-81/512",
+      "14": "-4617/32768",
+      "16": "3645/131072",
+      "17": "1215/131072",
+      "2": "458715/32768",
+      "3": "474969/16384",
+      "4": "1474869/32768",
+      "5": "989709/16384",
+      "6": "2173137/32768",
+      "7": "492627/8192",
+      "8": "3080607/65536",
+      "9": "1945911/65536"
+    },
+    "base_row_sha256": "910f64447319dfa8dc76dd5c72bc8d8e450ae542dc6d2534bb966eb892663af4",
+    "c12_G12_X0_column_is_zero": true,
+    "coefficient_rows": 28,
+    "dual_functional": "20*[X^0]+10*[X^4]+4*[X^8]+[X^12]",
+    "dual_pairing_with_base": "11009739/16384",
+    "dual_pairing_with_every_new_column": "0",
+    "homogeneous_nullity": 4,
+    "matrix_rank": 12,
+    "operator": "D12_base+12*F12'*G0+4*F12*G0'-8*F0*G12'",
+    "variables": [
+      "F12_X2",
+      "F12_X3",
+      "F12_X4",
+      "G12_X0",
+      "G12_X1",
+      "G12_X2",
+      "G12_X3",
+      "G12_X4",
+      "G12_X5",
+      "G12_X6",
+      "G12_X7",
+      "G12_X8",
+      "G12_X9",
+      "G12_X10",
+      "G12_X11",
+      "G12_X12"
+    ]
+  },
+  "literal_weight12_slots": {
+    "F": {
+      "2": "f_2_2",
+      "3": "f_3_5",
+      "4": "f_4_8"
+    },
+    "G": {
+      "0": "g_0_0",
+      "1": "g_1_3",
+      "10": "g_10_30",
+      "11": "g_11_33",
+      "12": "g_12_36",
+      "2": "g_2_6",
+      "3": "g_3_9",
+      "4": "g_4_12",
+      "5": "g_5_15",
+      "6": "g_6_18",
+      "7": "g_7_21",
+      "8": "g_8_24",
+      "9": "g_9_27"
+    }
+  },
+  "mutations": {
+    "dual_weight_20_changed_to_19": {
+      "nonzero_new_column_pairings": {
+        "G12_X1": "8"
+      }
+    },
+    "legal_F12_X2_plus_2X3_plus_3X4": {
+      "polar_remainder_unchanged": true
+    },
+    "legal_c12_equals_5": {
+      "polar_remainder_unchanged": true,
+      "value": "5"
+    }
+  },
+  "scope": "This kills only the one frozen rational D11 prefix.  It is not a universal proper-divisor theorem, not a proof of single-root transport for arbitrary prefixes, and not an endpoint or JC2 result.",
+  "source_pins": {
+    "cases/ggv_8_28_raw_to_global_m_cokernel_interface_d3_20260827/RAW_INPUT.json": "28b9b05c02224aadec30d52b66ed22db80aabe416ffdc0186f6931f1978f1876",
+    "cases/ggv_8_28_upper_endpoint_q1_post_d9_d11_survivor_20260828/EVIDENCE.sha256": "a9386173dbcdcc114f7faf2210be9c4eae1659bcb493fa3ed629134aac508992",
+    "cases/ggv_8_28_upper_endpoint_q1_post_d9_d11_survivor_20260828/RESULT.json": "d03a0fafdc2fde7f3e43ed53da3c631f4f3350c46dab1c1bda169de91a84eee0",
+    "cases/ggv_8_28_upper_endpoint_q1_post_d9_d11_survivor_20260828/SOURCE.sha256": "a180b0e83b11c8c553c2edf029c06f057cb94dae6741beda1335c76f655a6c5e",
+    "cases/ggv_8_28_upper_endpoint_q1_post_d9_d11_survivor_20260828/TARGET.json": "0f55c51ce513ca205f9efba372408f4938f90929b2a033e0640616cf20f66c93",
+    "cases/ggv_8_28_upper_endpoint_q1_post_d9_d11_survivor_20260828/verify_q1_post_d9_d11.py": "499d73d88df20c2404596f4402a46f0884b1d0703ff6e4016c8bba87a3f2e0ac"
+  },
+  "status": "PASS_EXACT_Q1_D11_SURVIVOR_D12_OBSTRUCTION",
+  "target_sha256": "02070d01044cdfe4c9f511d798abbd08e74d20bf28f4a98fd60d5c716cd6adb3"
+}

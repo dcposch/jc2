@@ -1,0 +1,167 @@
+{
+ "schema": "d43-k0-field-certificate-prereg-r2",
+ "route": "D43-K0-FIELD-CERT-R2",
+ "status": "R2_SOURCE_READY_AWS_NOT_AUTHORIZED",
+ "status_note": "This status field is immutable. Authorization lives in a separate coordinator record whose SHA-256 is the live EC2 tag value; the preregistration is never edited to authorize a launch.",
+ "date_utc": "2026-08-29",
+ "producer": "Opus 5",
+ "supersedes": {
+  "packet": "cases/d43_k0_field_certificate_r1_20260828",
+  "reason": "the single licensed R1 rehearsal returned a fail-closed NO_VERDICT before either engine (python3 -I omitted the script directory from sys.path, so runner_r1's bare sibling import raised ModuleNotFoundError), and the R1 hostile source review listed D1-D13 to repair. R1 is not patched; its authorization and run lease are retired.",
+  "r1_terminal_fault": "RUNNER_EXIT / ModuleNotFoundError: No module named 'k0_field_checker_r1'",
+  "r1_source_review": "xmodel/d43-k0-field-certificate-r1-hostile-review-fable5-20260829.md",
+  "r1_source_review_verdict": "PASS_FOR_PINNED_GP_REHEARSAL"
+ },
+ "charged_theorem": {
+  "path": "xmodel/d43-k0-splitting-primary-research-opus5-20260828.md",
+  "sha256": "6d3d53c20387d324766daaf40eb502df42d9e2776c6ab6053041bc1f3dee1430",
+  "independent_review": "xmodel/d43-k0-field-theorem-hostile-review-grok46-20260829.md",
+  "independent_review_sha256": "07f20be55add0fea0ff6329ce0d4ca386024af33edad33254d46451fd575a94a",
+  "scope_note": "the promoted paper theorem is fixed and is not broadened here; this packet is certificate engineering plus mathematical gate repair, and it re-proves nothing that the reviewed theorem report already establishes"
+ },
+ "object_of_study": {
+  "algebra": "K0 = Q[zeta42,r3,A1,A2,h]/(Phi42(zeta42), r3^2-3, A1^3-(3+r3), A2^3-(3-r3), 2h^2-3)",
+  "basis_shape": [12, 2, 3, 3, 2],
+  "basis_rank": 432,
+  "literal_phi42_pin": "cases/d43_common_integral_emitter.py PHI42 = (1,1,0,-1,-1,0,1,0,-1,-1,0,1,1)",
+  "literal_source_block": "cases/d43_exact_sparse_rows_v2_20260828/selected_rows_v2.py COEFFICIENT_ALGEBRA",
+  "literal_E_source": "xmodel/d43-e5-e6-elimination-bridge-gpt56-20260828.md, parsed by E_LITERAL_PIN",
+  "literal_q0_source": "xmodel/d43-k0-splitting-primary-research-opus5-20260828.md section 8.2, parsed by Q0_LITERAL_PIN"
+ },
+ "certified_claims": {
+  "K0_UNCONDITIONAL_THEOREM": {
+   "layers": ["L0", "L1", "L2", "L3", "L4"],
+   "statement": "K0 is a number field of degree exactly 432, Galois and non-abelian over Q; B = Q(zeta42,r3,h) = Q(zeta_168) of degree 48; [3+r3] and [3-r3] are independent in B*/(B*)^3, spanning (Z/3)^2; K0 has exactly one factor and only the idempotents 0 and 1; K0 is finite etale of rank 432 over Z[1/42]; the ramified rational primes are exactly {2,3,7} and 5 is unramified; both registered frames are degree-1 primes, both primes split completely with exactly 432 frames, and the registered p^2 frame is the unique Hensel lift.",
+   "engines": 2,
+   "census": "layer-restricted: only L0-L4 non-corroboration gates feed this boolean",
+   "independent_of": ["the displayed E", "both modular pointbanks", "PARI nffactor", "any absolute primitive polynomial", "any degree-432 or degree-144 irreducibility claim", "every CORROBORATION-typed gate"]
+  },
+  "E_CONDITIONAL_RATIO_THEOREM": {
+   "layers": ["L5"],
+   "statement": "given the literal displayed E = (9+5*r3)*A1*W1^4 + (9-5*r3)*A2*W2^4 read out of the sealed E5/E6 bridge, the ratio W1/W2 is K0-rational: q0 = u*(1+i)*(r3-1)/2 with u = A2/A1 and i = r3*(1+2*zeta42^14)/3 satisfies E by direct substitution, and the four branches q0*i^k are four distinct elements of K0, so t^4-c splits completely over K0 and no field extension is needed.",
+   "engines": 1,
+   "engine_note": "single-engine stdlib Python. k0_field_cert_r2.gp carries no cube-root layer and cannot substitute q0 into E; its L5 block reads the literal E data and certifies the base-level reduction chain only. That is corroboration and the terminal says so; the R1 terminal's E_CONDITIONAL flag was an overstatement (review defect D7).",
+   "census": "layer-restricted: only L5 non-corroboration gates feed this boolean",
+   "if_E_is_corrected": "this layer must be recomputed; the unconditional layer is untouched"
+  }
+ },
+ "gate_typing": {
+  "PIN": "literal source data",
+  "CONDITIONAL_PIN": "the literal displayed E and q0, parsed from sealed external files",
+  "THEOREM": "on the unconditional path",
+  "EXECUTED": "a finite computation with no theorem content beyond itself",
+  "CONSISTENCY": "would have refuted, cannot prove (the 432-frame count)",
+  "SECOND_PROOF": "an independent route to the same unconditional statement",
+  "CONDITIONAL": "on the E-conditional path",
+  "CORROBORATION": "feeds no theorem boolean (the pointbank regression)",
+  "HARNESS": "the three layer-restricted census gates"
+ },
+ "engines": {
+  "count": 2,
+  "independence": "neither reads the other's output; they agree on 29 shared integer observables recomputed separately, of which 25 belong to the unconditional layers and 4 are E-layer corroboration",
+  "pari_gp": {
+   "file": "k0_field_cert_r2.gp",
+   "gate_count": 110,
+   "observable_count": 29,
+   "version_pinned": "2.15.4",
+   "status": "NEVER PARSED BY ANY GP. Hand-reviewed and statically census-audited only."
+  },
+  "stdlib_python": {
+   "files": ["k0_field_checker_r2.py", "k0_algebra_r2.py"],
+   "gate_count": 42,
+   "uses_pari": false,
+   "uses_third_party": false
+  }
+ },
+ "mutation_policy": {
+  "must_fail": 58,
+  "must_survive": 4,
+  "theorem_separation_controls": 19,
+  "gate_unit_tests": 5,
+  "must_fail_rule": "each entry names the gate that has to report the failure; an unnamed failure elsewhere does not count",
+  "must_survive_rule": "a battery in which every mutation fails is testing its plumbing, not the certificate",
+  "separation_rule": "an entry may pin the pair (unconditional_k0_theorem, e_conditional_ratio_theorem) it must report; the battery refuses unless at least one entry reports (true,false) and at least one reports (true,true)",
+  "census_rule": "deleting a gate is a FAIL, caught by the layer-restricted census gates and again by the runner's comparison against the sealed census hash"
+ },
+ "emission_policy": {
+  "components": ["K0"],
+  "idempotents": [0, 1],
+  "component_count": 1,
+  "forbidden": "any product decomposition, any component list other than the single literal factor K0, any nontrivial primitive idempotent, any component count other than 1",
+  "enforced_by": "runner_r2._forbidden_language_scan and runner_r2._component_policy over every emitted artifact"
+ },
+ "aws_route": {
+  "schema": "D43-K0-FIELD-CERT-AWS-ROUTE-R2",
+  "host_label": "r6b",
+  "host_label_tag_key": "jc2-host-label",
+  "job_tag_key": "jc2-d43-k0-field-cert-job",
+  "authorization_tag_key": "jc2-d43-k0-field-cert-authorization-sha256",
+  "instance_type": "r6i.large",
+  "instance_type_pin_status": "EXACT. R1 shipped a six-member allowlist because the type behind the label r6b was unknown; the R1 rehearsal ran on r6i.large, so R2 pins that single type. Any other type is a source change and a new R-number.",
+  "gp_version": "2.15.4",
+  "gp_binary_pin": "coordinator-supplied path and SHA-256, verified by runner_r2 against the on-disk binary; execution_pins_r2.json additionally records the binary hash observed on the R1 rehearsal host for reporting only",
+  "dedicated_service_user": "jc2k0",
+  "effective_cores": 1,
+  "cpuset": "0",
+  "memory_max_bytes": 1073741824,
+  "memory_swap_max_bytes": 0,
+  "host_swap_total_must_be_zero": true,
+  "tasks_max": 24,
+  "timeout_seconds": 300,
+  "runner_wall_clock_cap_seconds": 240,
+  "gp_subprocess_timeout_seconds": 120,
+  "address_space_cap_bytes": 805306368,
+  "artifact_byte_cap": 524288,
+  "run_byte_cap": 4194304,
+  "artifact_mode": "0444 after fsync; created with O_CREAT|O_EXCL on the final name, never overwritten and never staged through a temporary sidecar",
+  "launch_lease": "two exclusive leases, both taken before any try block: an authorization lease named after the record digest in the run parent, then an atomic mkdir of the run path. A used authorization can never be presented again, even with a fresh run path.",
+  "local_execution_mode": "none; absent a live IMDSv2 identity the supervisor exits without running any mathematics",
+  "isolated_interpreter": "python3 -I -B is retained and is now a checked property: runner_r2 refuses to run outside isolated mode and loads its sealed siblings by manifest-verified path, never through sys.path",
+  "systemd_dropins": "forbidden"
+ },
+ "producer_execution": {
+  "aws_launch": false,
+  "pari_gp_run": false,
+  "pari_gp_not_run_reason": "no gp on the producer host; the GP layer is hand-reviewed and statically census-audited by preflight_r2.py, and is executed only on the registered AWS host. No claim is made that the GP syntax or API has run.",
+  "cas_run": false,
+  "network_accessed": false,
+  "jc2_lean_accessed": false,
+  "canonical_ledger_edited": false,
+  "bounded_local_tests": "preflight P1-P10: 42/42 Python gates PASS, 58 MUST_FAIL + 4 MUST_SURVIVE + 5 gate unit tests PASS, GP static census 110/110 and 29/29 observables, 8 isolated-import controls, 33 authorization-record controls plus the artifact and run-directory collision controls, 10 gate-surface controls"
+ },
+ "required_before_execution": [
+  "a hostile source review by a DIFFERENT model with verdict exactly PASS, hash-recorded in the authorization",
+  "a coordinator GO recorded as coordinator_go=true in the authorization",
+  "the coordinator-supplied gp binary path and SHA-256 (runner refuses an unpinned binary)",
+  "a live IMDS instance type equal to r6i.large",
+  "a fresh authorization digest: no authorization is ever presented twice"
+ ],
+ "stop_conditions": [
+  "any pinned source, bridge, review, pointbank, GP-script, census or observable hash drifts",
+  "the two engines disagree on any one of the 29 shared observables",
+  "any GP gate line prints 0, the GP gate count is not 110, the census line disagrees, or any line of GP output fails to parse",
+  "any Python gate fails or is missing from its layer census",
+  "any MUST_FAIL mutation does not fire its named gate, any MUST_SURVIVE mutation is rejected, or any theorem-separation control reports the wrong pair",
+  "any gate unit test fails",
+  "any artifact would name a component other than K0, a component count other than 1, or a nontrivial idempotent",
+  "any live EC2 identity, tag, authorization, host, gp binary, service user, cgroup, cpuset, swap, memory, tasks, runtime, run-path, lease, manifest, archive or terminal binding fails",
+  "the authorization lease or the run path already exists, or any artifact path already exists",
+  "the sealed module load fails its manifest or authorization binding, or the interpreter is not isolated",
+  "the unit exceeds 300 seconds, the runner exceeds 240 seconds, gp exceeds 120 seconds, any output exceeds its cap, or any swap is nonzero"
+ ],
+ "forbidden_claims": [
+  "a D43 row certificate",
+  "a D43 point, template, or D25 result",
+  "raw-J existence or branch survival",
+  "source/parked presentation equivalence",
+  "a Z_p point, a characteristic-zero point, or a formal germ",
+  "an ambient polynomial Keller map",
+  "a JC2 counterexample",
+  "any tier above the coefficient algebra",
+  "a product decomposition of K0 or any component list other than [K0]",
+  "deriving fieldness or the degree from the two registered frames",
+  "deriving the ramified set from ETALE_LOCALIZATION_PRIMES or SOURCE_DENOMINATOR_PRIMES",
+  "carrying an E-branch index across frames",
+  "that the PARI/GP engine has been parsed, executed, or corroborated by any run"
+ ]
+}

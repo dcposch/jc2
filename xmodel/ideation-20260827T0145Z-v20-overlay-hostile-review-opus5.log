@@ -1,0 +1,26 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/ideation-20260827T0145Z-v20-overlay-hostile-review-opus5.md` (SHA-256 `d73eeb59958fea0a3db3c2046e2b0cdb87604e94f35dda5b8404d7b9fcf1bd91`). Both target hashes matched before reading; no other repository file touched.
+
+## Verdicts
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | Char-0 point, `A=Q[w,s]/(w⁴+1,s²−5/12)` | **CONFIRMED** — `A` free of rank 8, in fact the degree-8 field `Q(ζ₈,√15)`; 22/22 rows zero; extends to honest `T-cs` with `qrs=qc0=qc1=0`, `cs·k1·rho=1`, `k=0` |
+| 2 | 13/14 nonzero, only `Tg14_5` zero, `Tg13_6=35/128` | **CONFIRMED** exactly |
+| 3 | Grade-13 kill identity + set-theoretic conclusion | **CONFIRMED** — 27-term residual, 0 terms outside `(k,rs,c0,c1)`; `qrs=0` *is* available (chart generator) and *is* load-bearing |
+| 4 | `RS0` annihilates all 36 rows | **CONFIRMED**, and *termwise*; **GAP** on transfer to the promoted `T-rs` relation list |
+| 5 | Factor-two `e0e1` repair | **CONFIRMED** both columns; Fable's *printed residual* is itself wrong by −2 |
+| 6 | `Tg14_5\|_{J1}` scope repair | **CONFIRMED** exactly — 62 terms, 12 with `k`, all match; row does **not** die on `qa1=0` |
+| 7 | `M≥1` via `CS0` | **CONFIRMED**, and survives enlargement to 36 rows |
+| 8 | Parity-refined `cs^(3m+6)k^(3m+2)` | **CONFIRMED** existence-only; even-part step justified; saturation used once, correctly flagged |
+
+## What I found beyond confirmation
+
+- **Fable's own erratum has an error.** The exact residual of the memo's bad `e0e1` formula is `−(1/2)·ell1·[(8/3)Tg11_1|]` in *both* columns, not `a0e1ell1 + a1e0ell1` (off by −2, and omits the `V(k)` load term).
+- **`u` is overloaded.** The memo defines `u := c0` (= 0 at the point) but writes `u = 1`; the true referent is the `cs`-Rabinowitsch variable of `1−u·cs`, which is not a generator of `K` at all. Fable copied it unflagged.
+- **The collapse is stronger than cited and genuinely radical.** `V(k)∩V(Tg10_1..4) ⊆ V(c0,c1)` needs neither `rs=0` nor `rho≠0` (every `rs`-monomial in the grade-10 rows carries `k`; `Tg10_2` covers `rho=0`). It is *not* ideal membership: `c0 ∉ (k,Tg10_1..4)` by a degree-1 grading argument.
+- **`RS0` is not a `T-cs` point** (`rs−cs·qrs ↦ 1`), so `CS0`/`RS0` must not be pooled.
+- **The `(cs−rho)` control defeats the torsion chain twice** — at step 5 as Fable says, and also at the parity step, since `cs−rho` is `rho`-odd.
+- Independent cross-checks: the `F65521` embedding `w↦7669, s↦43638` reproduces the memo's point digit-for-digit; positive controls break 15–26 of 36 rows; Fable's `Tg14_6` next-stratum coefficients (`15/128`, `3/32`, `9/32`, `−3/64`) all match.
+
+Nine ledger corrections are listed as safe to promote now (§11), including reversing the "drop the `M≥1` gate" decision and dropping the "unreviewed V20 bytes" qualifier at the *custody* level while keeping the source-provenance debt. All work was sub-second local reads; nothing was launched or mutated.

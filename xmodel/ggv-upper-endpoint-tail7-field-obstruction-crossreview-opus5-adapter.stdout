@@ -1,0 +1,22 @@
+## Review complete — overall verdict **CONFIRMED**
+
+Both charged pins matched, so I proceeded. Everything substantive reproduced from a clean-room rederivation that never touched the producer's compiler or verifier.
+
+**Atoms 1–4: CONFIRMED.** Custody is clean (23/23, 12/12, 14/14, plus AWS 12/12 after remapping the AWS-absolute paths). My own RREF over the frozen `TAIL_DEFORMATION_SYSTEM.json` reproduced the row-14 rank 10, free mode `p43`, and exactly 16 degree-2 compatibilities supported exactly on `p78..p87`; the row-21 relation at its actual index (2 of 18); and every rank/free/compat count in the frozen certificate. After `p87=1, p86=0` my polynomials are term-for-term identical to the frozen shared block, and both published hashes (`30607ce7…`, `3e586cc2…`) recompute from my data. I expanded `1 = Σ hᵢfᵢ` in my own exact-ℚ arithmetic against my own generators — not trusting Singular, and not substituting the AWS `J[1]=1` line.
+
+**Atom 5: REPAIRED** — four findings, all conservative-direction, none weakening the obstruction:
+
+1. **The row-21 step is redundant.** The nine-variable system with `p86` left *free* is already the unit ideal (I verified the `liftstd` cofactors independently: `Σ Hᵢfᵢ = 36036` exactly). So `(C21) ⟹ p86=0`, and the whole triangular pass over rows 15–21, is not load-bearing.
+2. **The characteristic scope isn't sharp.** Denominators are exactly `{2,3,5,7,11,13}`; the same certificate reduces mod every other prime.
+3. **The scheme disclaimer is stricter than the evidence requires.** I assembled one explicit certificate against the frozen constraints themselves — `1 = Σ cofⱼ·constraintⱼ` over `constraints[0..25]` and `constraints[180]` — so `1 ∈ J` and the locus is empty *as a scheme* over ℚ.
+4. **Wording:** the endpoint equation is a literal frozen generator (`constraints[180]`), not an elimination output; withholding `p32` preserves rather than produces it.
+
+Two things worth flagging about method. My first mutation control was a **dud** — I perturbed a coefficient that provably cannot reach the left cokernel — and I report it as such rather than quietly swapping in the working one (`eq1`, `p85*p87: 12→13`, which does break the identity). And the live-vs-frozen stdout hashes initially disagreed; `od -c` isolated it to a single trailing newline from the producer's capture harness, not a content difference.
+
+Also verified: the `p87≠0` premise is genuinely load-bearing (`P87ZERO UNIT=0, DIM=5`), the scaling firewall census matches exactly (4018/86/2, free `p46`,`p77`, `w32=w87=0`), and the conclusion nowhere uses a global diagonal action.
+
+**Execution gaps stated in the report:** the upstream compile from `RAW_DIRECT_SYSTEM.json` rests on hash custody, not recomputation (the charge licenses the frozen JSON as the starting point); the tail-8/9/10/11 history claims were not re-derived.
+
+Ephemeral helpers removed; Appendix A quotes the library's exact bytes, and the code block extracted from the report re-hashes to the stated `7f88befb…`. No ledger was edited — the five showing as modified were already dirty at session start (mtimes predate my work).
+
+Report SHA-256: **`a08038654ce37632fac8bf3d69b9c885b67294f6ba78f3b56310e522f3e6de1b`**

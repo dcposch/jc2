@@ -1,0 +1,19 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll audit the frozen V15 target and custody chain read-only, starting with hash checks of the named manifests and the producer report.Producer and result-manifest hashes match. Next I’ll hash the remaining named custody files and read the producer report.Custody hashes match. Next I’ll inspect AWS evidence, the V14 compiler, and the freeze chain.I’ll hash the AWS artifacts, then read the V14 compiler, run records, and V13/V14 negative-control reports.Hashes match. Next I’ll read the V13/V14 reports, the V13 compiler, and the AWS run records.I’ll read the V12 r=1 compiler path, the Singular input, and the prior review’s grade-13 identities.I’ll verify manifests, walk the V14→V1 freeze chain to the shared-Faber tails, and inspect the V13/V14 negative-control evidence.Evidence and the freeze chain check out. I’ll write the hostile-review report with an explicit verdict on each load-bearing question.**CONFIRMED.** Independent hostile review is in `xmodel/max12-812-order2-square-r1-v15-hostile-review-grok-20260826.md` (SHA-256 `3af4885a1d5e850dee800801b9e8a3fd17c315260f7b6ef63da8e490b2dfd5a7`). No failing identity.
+
+All named manifests rehashed. Exact Q and `F_65521` differ by the ring-characteristic token only. Marker-only stdout is byte-identical across fields; neither stream contains `?`, `// **`, `error occurred`, `=FAIL`, or the old `no standard basis` warning.
+
+| # | Charge | Verdict |
+|---|---|---|
+| 1 | Seven exact source rows; V15 compiles frozen V14 and does not consume D1 | holds |
+| 2 | Grade-13 proper part is `(5/16) k10 R0^3/L`; competitors polynomial or higher grade | holds |
+| 3 | Invertible lower-unitriangular Faber image, with recurrence and proper numerator | holds |
+| 4 | Cubic remainder; common zeros on `D(p*k10)` force `b0=b1=0` (set-theoretic) | holds |
+| 5 | Localization `inv*p*k0-1`; radical standardized before every `reduce` | holds |
+| 6 | V13 fails at the premature hand-check; V14 fails only on `/usr/bin/time -v` stderr; V15 changes only that | holds |
+| 7 | `R0=0` contact-raises `ord(R)`; not an empty square branch and not the zero section | holds |
+| 8 | Firewall: licensed claim is only this normalized `r=1` receiver on `D(p*k10)` | holds |
+
+This licenses only arcwise/set-theoretic elimination of the normalized `r=1` receiver on `D(p*k10)` after the frozen first-normal, half-weight, and `M=0` gates. It does not license V12’s unbounded D1 claim, any all-load fan, `p=0`, `k10=0`, positive-order loads, terminal/Taylor closure, scheme structure, the whole square branch, order two, `(8,12)`, maximum twelve, or JC2.
+
+ORDER2_SQUARE_R1_V15_CONFIRMED

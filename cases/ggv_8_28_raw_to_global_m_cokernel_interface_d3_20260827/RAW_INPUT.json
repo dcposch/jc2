@@ -1,0 +1,4963 @@
+{
+  "ambient": {
+    "chart": "Q[t,X]",
+    "cokernel": "Q[X]/im(M) as a Q-vector-space quotient, represented by Q[X]_{<=6}",
+    "global_endpoint": "Q[X]",
+    "local": "kappa_p[[t,u]] for each listed factor p",
+    "raw": "Q[f_i_j,g_i_j] on the listed 2S/3S slots"
+  },
+  "control_id": "R0_ARTIFICIAL_CUSP_CONTROL",
+  "factor_registry": [
+    {
+      "degree": 1,
+      "factor_id": "fac_X_minus_1",
+      "polynomial": "X-1"
+    },
+    {
+      "degree": 1,
+      "factor_id": "fac_X_plus_1",
+      "polynomial": "X+1"
+    },
+    {
+      "degree": 2,
+      "factor_id": "fac_X2_plus_1",
+      "polynomial": "X^2+1"
+    },
+    {
+      "degree": 4,
+      "factor_id": "fac_X4_plus_1",
+      "polynomial": "X^4+1"
+    }
+  ],
+  "firewalls": {
+    "H_multiple": "fully live; r o (H*) is an isomorphism on Q[X]_{<=6}",
+    "branch_bits": "do not determine E22 or its seven-vector",
+    "claims_not_made": [
+      "8_28 face/family exclusion",
+      "G2-PSC",
+      "G2-BD",
+      "Keller pair",
+      "JC2"
+    ],
+    "r3": "scope firewall only; not consumed as a source pair"
+  },
+  "formal_root_sign_packets": {
+    "S_minus": {
+      "deck_tag": "R0:S_minus",
+      "factor_signs": {
+        "fac_X2_plus_1": 1,
+        "fac_X4_plus_1": -1,
+        "fac_X_minus_1": 1,
+        "fac_X_plus_1": -1
+      },
+      "orientation_tag": "u=H mod t",
+      "polynomial_source_status": "REJECTED"
+    },
+    "S_plus": {
+      "deck_tag": "R0:S_plus",
+      "factor_signs": {
+        "fac_X2_plus_1": 1,
+        "fac_X4_plus_1": 1,
+        "fac_X_minus_1": 1,
+        "fac_X_plus_1": -1
+      },
+      "orientation_tag": "u=H mod t",
+      "polynomial_source_status": "REJECTED"
+    },
+    "scope": "R0 formal packets, retained only as factor/deck-tag controls; polynomial source rejected in R0"
+  },
+  "literal_artificial_raw_face": {
+    "F_nonzero_slots": [
+      {
+        "chart_image": "1*t^0*X^0",
+        "coefficient": "1",
+        "raw_exponents": {
+          "x": 0,
+          "y": 8
+        },
+        "slot": "f_0_8",
+        "weight": 0
+      },
+      {
+        "chart_image": "1*t^14*X^2",
+        "coefficient": "1",
+        "raw_exponents": {
+          "x": 2,
+          "y": 0
+        },
+        "slot": "f_2_0",
+        "weight": 14
+      },
+      {
+        "chart_image": "-14*t^13*X^3",
+        "coefficient": "-14",
+        "raw_exponents": {
+          "x": 3,
+          "y": 4
+        },
+        "slot": "f_3_4",
+        "weight": 13
+      },
+      {
+        "chart_image": "91*t^12*X^4",
+        "coefficient": "91",
+        "raw_exponents": {
+          "x": 4,
+          "y": 8
+        },
+        "slot": "f_4_8",
+        "weight": 12
+      },
+      {
+        "chart_image": "-364*t^11*X^5",
+        "coefficient": "-364",
+        "raw_exponents": {
+          "x": 5,
+          "y": 12
+        },
+        "slot": "f_5_12",
+        "weight": 11
+      },
+      {
+        "chart_image": "1001*t^10*X^6",
+        "coefficient": "1001",
+        "raw_exponents": {
+          "x": 6,
+          "y": 16
+        },
+        "slot": "f_6_16",
+        "weight": 10
+      },
+      {
+        "chart_image": "-2002*t^9*X^7",
+        "coefficient": "-2002",
+        "raw_exponents": {
+          "x": 7,
+          "y": 20
+        },
+        "slot": "f_7_20",
+        "weight": 9
+      },
+      {
+        "chart_image": "3003*t^8*X^8",
+        "coefficient": "3003",
+        "raw_exponents": {
+          "x": 8,
+          "y": 24
+        },
+        "slot": "f_8_24",
+        "weight": 8
+      },
+      {
+        "chart_image": "-2*t^0*X^8",
+        "coefficient": "-2",
+        "raw_exponents": {
+          "x": 8,
+          "y": 32
+        },
+        "slot": "f_8_32",
+        "weight": 0
+      },
+      {
+        "chart_image": "-3432*t^7*X^9",
+        "coefficient": "-3432",
+        "raw_exponents": {
+          "x": 9,
+          "y": 28
+        },
+        "slot": "f_9_28",
+        "weight": 7
+      },
+      {
+        "chart_image": "3003*t^6*X^10",
+        "coefficient": "3003",
+        "raw_exponents": {
+          "x": 10,
+          "y": 32
+        },
+        "slot": "f_10_32",
+        "weight": 6
+      },
+      {
+        "chart_image": "-2002*t^5*X^11",
+        "coefficient": "-2002",
+        "raw_exponents": {
+          "x": 11,
+          "y": 36
+        },
+        "slot": "f_11_36",
+        "weight": 5
+      },
+      {
+        "chart_image": "1001*t^4*X^12",
+        "coefficient": "1001",
+        "raw_exponents": {
+          "x": 12,
+          "y": 40
+        },
+        "slot": "f_12_40",
+        "weight": 4
+      },
+      {
+        "chart_image": "-364*t^3*X^13",
+        "coefficient": "-364",
+        "raw_exponents": {
+          "x": 13,
+          "y": 44
+        },
+        "slot": "f_13_44",
+        "weight": 3
+      },
+      {
+        "chart_image": "91*t^2*X^14",
+        "coefficient": "91",
+        "raw_exponents": {
+          "x": 14,
+          "y": 48
+        },
+        "slot": "f_14_48",
+        "weight": 2
+      },
+      {
+        "chart_image": "-14*t^1*X^15",
+        "coefficient": "-14",
+        "raw_exponents": {
+          "x": 15,
+          "y": 52
+        },
+        "slot": "f_15_52",
+        "weight": 1
+      },
+      {
+        "chart_image": "1*t^0*X^16",
+        "coefficient": "1",
+        "raw_exponents": {
+          "x": 16,
+          "y": 56
+        },
+        "slot": "f_16_56",
+        "weight": 0
+      }
+    ],
+    "G_nonzero_slots": [
+      {
+        "chart_image": "-1*t^0*X^0",
+        "coefficient": "-1",
+        "raw_exponents": {
+          "x": 0,
+          "y": 12
+        },
+        "slot": "g_0_12",
+        "weight": 0
+      },
+      {
+        "chart_image": "-1*t^21*X^3",
+        "coefficient": "-1",
+        "raw_exponents": {
+          "x": 3,
+          "y": 0
+        },
+        "slot": "g_3_0",
+        "weight": 21
+      },
+      {
+        "chart_image": "21*t^20*X^4",
+        "coefficient": "21",
+        "raw_exponents": {
+          "x": 4,
+          "y": 4
+        },
+        "slot": "g_4_4",
+        "weight": 20
+      },
+      {
+        "chart_image": "-210*t^19*X^5",
+        "coefficient": "-210",
+        "raw_exponents": {
+          "x": 5,
+          "y": 8
+        },
+        "slot": "g_5_8",
+        "weight": 19
+      },
+      {
+        "chart_image": "1330*t^18*X^6",
+        "coefficient": "1330",
+        "raw_exponents": {
+          "x": 6,
+          "y": 12
+        },
+        "slot": "g_6_12",
+        "weight": 18
+      },
+      {
+        "chart_image": "-5985*t^17*X^7",
+        "coefficient": "-5985",
+        "raw_exponents": {
+          "x": 7,
+          "y": 16
+        },
+        "slot": "g_7_16",
+        "weight": 17
+      },
+      {
+        "chart_image": "20349*t^16*X^8",
+        "coefficient": "20349",
+        "raw_exponents": {
+          "x": 8,
+          "y": 20
+        },
+        "slot": "g_8_20",
+        "weight": 16
+      },
+      {
+        "chart_image": "3*t^0*X^8",
+        "coefficient": "3",
+        "raw_exponents": {
+          "x": 8,
+          "y": 36
+        },
+        "slot": "g_8_36",
+        "weight": 0
+      },
+      {
+        "chart_image": "-54264*t^15*X^9",
+        "coefficient": "-54264",
+        "raw_exponents": {
+          "x": 9,
+          "y": 24
+        },
+        "slot": "g_9_24",
+        "weight": 15
+      },
+      {
+        "chart_image": "116280*t^14*X^10",
+        "coefficient": "116280",
+        "raw_exponents": {
+          "x": 10,
+          "y": 28
+        },
+        "slot": "g_10_28",
+        "weight": 14
+      },
+      {
+        "chart_image": "-203490*t^13*X^11",
+        "coefficient": "-203490",
+        "raw_exponents": {
+          "x": 11,
+          "y": 32
+        },
+        "slot": "g_11_32",
+        "weight": 13
+      },
+      {
+        "chart_image": "293930*t^12*X^12",
+        "coefficient": "293930",
+        "raw_exponents": {
+          "x": 12,
+          "y": 36
+        },
+        "slot": "g_12_36",
+        "weight": 12
+      },
+      {
+        "chart_image": "-352716*t^11*X^13",
+        "coefficient": "-352716",
+        "raw_exponents": {
+          "x": 13,
+          "y": 40
+        },
+        "slot": "g_13_40",
+        "weight": 11
+      },
+      {
+        "chart_image": "352716*t^10*X^14",
+        "coefficient": "352716",
+        "raw_exponents": {
+          "x": 14,
+          "y": 44
+        },
+        "slot": "g_14_44",
+        "weight": 10
+      },
+      {
+        "chart_image": "-293930*t^9*X^15",
+        "coefficient": "-293930",
+        "raw_exponents": {
+          "x": 15,
+          "y": 48
+        },
+        "slot": "g_15_48",
+        "weight": 9
+      },
+      {
+        "chart_image": "203490*t^8*X^16",
+        "coefficient": "203490",
+        "raw_exponents": {
+          "x": 16,
+          "y": 52
+        },
+        "slot": "g_16_52",
+        "weight": 8
+      },
+      {
+        "chart_image": "-3*t^0*X^16",
+        "coefficient": "-3",
+        "raw_exponents": {
+          "x": 16,
+          "y": 60
+        },
+        "slot": "g_16_60",
+        "weight": 0
+      },
+      {
+        "chart_image": "-116280*t^7*X^17",
+        "coefficient": "-116280",
+        "raw_exponents": {
+          "x": 17,
+          "y": 56
+        },
+        "slot": "g_17_56",
+        "weight": 7
+      },
+      {
+        "chart_image": "54264*t^6*X^18",
+        "coefficient": "54264",
+        "raw_exponents": {
+          "x": 18,
+          "y": 60
+        },
+        "slot": "g_18_60",
+        "weight": 6
+      },
+      {
+        "chart_image": "-20349*t^5*X^19",
+        "coefficient": "-20349",
+        "raw_exponents": {
+          "x": 19,
+          "y": 64
+        },
+        "slot": "g_19_64",
+        "weight": 5
+      },
+      {
+        "chart_image": "5985*t^4*X^20",
+        "coefficient": "5985",
+        "raw_exponents": {
+          "x": 20,
+          "y": 68
+        },
+        "slot": "g_20_68",
+        "weight": 4
+      },
+      {
+        "chart_image": "-1330*t^3*X^21",
+        "coefficient": "-1330",
+        "raw_exponents": {
+          "x": 21,
+          "y": 72
+        },
+        "slot": "g_21_72",
+        "weight": 3
+      },
+      {
+        "chart_image": "210*t^2*X^22",
+        "coefficient": "210",
+        "raw_exponents": {
+          "x": 22,
+          "y": 76
+        },
+        "slot": "g_22_76",
+        "weight": 2
+      },
+      {
+        "chart_image": "-21*t^1*X^23",
+        "coefficient": "-21",
+        "raw_exponents": {
+          "x": 23,
+          "y": 80
+        },
+        "slot": "g_23_80",
+        "weight": 1
+      },
+      {
+        "chart_image": "1*t^0*X^24",
+        "coefficient": "1",
+        "raw_exponents": {
+          "x": 24,
+          "y": 84
+        },
+        "slot": "g_24_84",
+        "weight": 0
+      }
+    ],
+    "formula": {
+      "B": "x*(x*y^4-1)^7",
+      "f": "B^2-2*x^8*y^32+y^8",
+      "g": "B^3-3*x^16*y^60+3*x^8*y^36-y^12"
+    },
+    "join_to_local_cusp_fixture": "ABSENT: no serialized raw-to-Morse cleanup map",
+    "scope": "literal artificial R0 face assignment; separate from the local cusp fixture"
+  },
+  "local_carrier_fixture": {
+    "U11": "UNSPECIFIED_AND_INACTIVE_IN_THIS_V8_NONZERO_FIXTURE",
+    "U14": "X",
+    "V8": "1/48",
+    "branch_by_factor": {
+      "fac_X2_plus_1": "V8_NONZERO__V8_U14",
+      "fac_X4_plus_1": "V8_NONZERO__V8_U14",
+      "fac_X_minus_1": "V8_NONZERO__V8_U14",
+      "fac_X_plus_1": "V8_NONZERO__V8_U14"
+    },
+    "deck_tag": "ORIENTED_PLUS_H",
+    "determinant_tag": "H'(c)",
+    "higher_u_sidecars": "UNSERIALIZED",
+    "orientation_tag": "u=H mod t",
+    "raw_to_morse": {
+      "required_but_absent": "cleanup_DAG",
+      "status": "ABSENT_IN_FROZEN_R0_R1_R2_INPUT"
+    },
+    "scope": "R0 hand-specified rootwise fixture; not a raw descendant"
+  },
+  "maps": {
+    "F_raw_to_chart": "x^i*y^j -> t^(8+3*i-j)*X^i",
+    "G_raw_to_chart": "x^i*y^j -> t^(12+3*i-j)*X^i",
+    "M": "Y -> 4*(X^8-1)*Y' + 48*X^7*Y",
+    "local_determinant": "u_X(c,0)=H'(c)",
+    "local_orientation": "u=H mod t"
+  },
+  "quarantined_global_polynomial_control": {
+    "E22": "1+(13/12)*(X^8-1)",
+    "preimage": "X/48",
+    "raw_descendant": false,
+    "scope": "hand-specified R0/R1 polynomial identity; reducer positive control only"
+  },
+  "raw_slots_through_weight_22": {
+    "F": [
+      {
+        "chart_image": "t^0*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 8
+        },
+        "raw_monomial": "x^0*y^8",
+        "slot": "f_0_8",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 11
+        },
+        "raw_monomial": "x^1*y^11",
+        "slot": "f_1_11",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 14
+        },
+        "raw_monomial": "x^2*y^14",
+        "slot": "f_2_14",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 17
+        },
+        "raw_monomial": "x^3*y^17",
+        "slot": "f_3_17",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 20
+        },
+        "raw_monomial": "x^4*y^20",
+        "slot": "f_4_20",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 23
+        },
+        "raw_monomial": "x^5*y^23",
+        "slot": "f_5_23",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 26
+        },
+        "raw_monomial": "x^6*y^26",
+        "slot": "f_6_26",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 29
+        },
+        "raw_monomial": "x^7*y^29",
+        "slot": "f_7_29",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 32
+        },
+        "raw_monomial": "x^8*y^32",
+        "slot": "f_8_32",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 35
+        },
+        "raw_monomial": "x^9*y^35",
+        "slot": "f_9_35",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 38
+        },
+        "raw_monomial": "x^10*y^38",
+        "slot": "f_10_38",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 41
+        },
+        "raw_monomial": "x^11*y^41",
+        "slot": "f_11_41",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 44
+        },
+        "raw_monomial": "x^12*y^44",
+        "slot": "f_12_44",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 47
+        },
+        "raw_monomial": "x^13*y^47",
+        "slot": "f_13_47",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 50
+        },
+        "raw_monomial": "x^14*y^50",
+        "slot": "f_14_50",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^15",
+        "raw_exponents": {
+          "x": 15,
+          "y": 53
+        },
+        "raw_monomial": "x^15*y^53",
+        "slot": "f_15_53",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^16",
+        "raw_exponents": {
+          "x": 16,
+          "y": 56
+        },
+        "raw_monomial": "x^16*y^56",
+        "slot": "f_16_56",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^1*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 7
+        },
+        "raw_monomial": "x^0*y^7",
+        "slot": "f_0_7",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 10
+        },
+        "raw_monomial": "x^1*y^10",
+        "slot": "f_1_10",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 13
+        },
+        "raw_monomial": "x^2*y^13",
+        "slot": "f_2_13",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 16
+        },
+        "raw_monomial": "x^3*y^16",
+        "slot": "f_3_16",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 19
+        },
+        "raw_monomial": "x^4*y^19",
+        "slot": "f_4_19",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 22
+        },
+        "raw_monomial": "x^5*y^22",
+        "slot": "f_5_22",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 25
+        },
+        "raw_monomial": "x^6*y^25",
+        "slot": "f_6_25",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 28
+        },
+        "raw_monomial": "x^7*y^28",
+        "slot": "f_7_28",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 31
+        },
+        "raw_monomial": "x^8*y^31",
+        "slot": "f_8_31",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 34
+        },
+        "raw_monomial": "x^9*y^34",
+        "slot": "f_9_34",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 37
+        },
+        "raw_monomial": "x^10*y^37",
+        "slot": "f_10_37",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 40
+        },
+        "raw_monomial": "x^11*y^40",
+        "slot": "f_11_40",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 43
+        },
+        "raw_monomial": "x^12*y^43",
+        "slot": "f_12_43",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 46
+        },
+        "raw_monomial": "x^13*y^46",
+        "slot": "f_13_46",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 49
+        },
+        "raw_monomial": "x^14*y^49",
+        "slot": "f_14_49",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^15",
+        "raw_exponents": {
+          "x": 15,
+          "y": 52
+        },
+        "raw_monomial": "x^15*y^52",
+        "slot": "f_15_52",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^2*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 6
+        },
+        "raw_monomial": "x^0*y^6",
+        "slot": "f_0_6",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 9
+        },
+        "raw_monomial": "x^1*y^9",
+        "slot": "f_1_9",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 12
+        },
+        "raw_monomial": "x^2*y^12",
+        "slot": "f_2_12",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 15
+        },
+        "raw_monomial": "x^3*y^15",
+        "slot": "f_3_15",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 18
+        },
+        "raw_monomial": "x^4*y^18",
+        "slot": "f_4_18",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 21
+        },
+        "raw_monomial": "x^5*y^21",
+        "slot": "f_5_21",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 24
+        },
+        "raw_monomial": "x^6*y^24",
+        "slot": "f_6_24",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 27
+        },
+        "raw_monomial": "x^7*y^27",
+        "slot": "f_7_27",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 30
+        },
+        "raw_monomial": "x^8*y^30",
+        "slot": "f_8_30",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 33
+        },
+        "raw_monomial": "x^9*y^33",
+        "slot": "f_9_33",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 36
+        },
+        "raw_monomial": "x^10*y^36",
+        "slot": "f_10_36",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 39
+        },
+        "raw_monomial": "x^11*y^39",
+        "slot": "f_11_39",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 42
+        },
+        "raw_monomial": "x^12*y^42",
+        "slot": "f_12_42",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 45
+        },
+        "raw_monomial": "x^13*y^45",
+        "slot": "f_13_45",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 48
+        },
+        "raw_monomial": "x^14*y^48",
+        "slot": "f_14_48",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^3*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 5
+        },
+        "raw_monomial": "x^0*y^5",
+        "slot": "f_0_5",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 8
+        },
+        "raw_monomial": "x^1*y^8",
+        "slot": "f_1_8",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 11
+        },
+        "raw_monomial": "x^2*y^11",
+        "slot": "f_2_11",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 14
+        },
+        "raw_monomial": "x^3*y^14",
+        "slot": "f_3_14",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 17
+        },
+        "raw_monomial": "x^4*y^17",
+        "slot": "f_4_17",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 20
+        },
+        "raw_monomial": "x^5*y^20",
+        "slot": "f_5_20",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 23
+        },
+        "raw_monomial": "x^6*y^23",
+        "slot": "f_6_23",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 26
+        },
+        "raw_monomial": "x^7*y^26",
+        "slot": "f_7_26",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 29
+        },
+        "raw_monomial": "x^8*y^29",
+        "slot": "f_8_29",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 32
+        },
+        "raw_monomial": "x^9*y^32",
+        "slot": "f_9_32",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 35
+        },
+        "raw_monomial": "x^10*y^35",
+        "slot": "f_10_35",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 38
+        },
+        "raw_monomial": "x^11*y^38",
+        "slot": "f_11_38",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 41
+        },
+        "raw_monomial": "x^12*y^41",
+        "slot": "f_12_41",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 44
+        },
+        "raw_monomial": "x^13*y^44",
+        "slot": "f_13_44",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^4*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 4
+        },
+        "raw_monomial": "x^0*y^4",
+        "slot": "f_0_4",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 7
+        },
+        "raw_monomial": "x^1*y^7",
+        "slot": "f_1_7",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 10
+        },
+        "raw_monomial": "x^2*y^10",
+        "slot": "f_2_10",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 13
+        },
+        "raw_monomial": "x^3*y^13",
+        "slot": "f_3_13",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 16
+        },
+        "raw_monomial": "x^4*y^16",
+        "slot": "f_4_16",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 19
+        },
+        "raw_monomial": "x^5*y^19",
+        "slot": "f_5_19",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 22
+        },
+        "raw_monomial": "x^6*y^22",
+        "slot": "f_6_22",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 25
+        },
+        "raw_monomial": "x^7*y^25",
+        "slot": "f_7_25",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 28
+        },
+        "raw_monomial": "x^8*y^28",
+        "slot": "f_8_28",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 31
+        },
+        "raw_monomial": "x^9*y^31",
+        "slot": "f_9_31",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 34
+        },
+        "raw_monomial": "x^10*y^34",
+        "slot": "f_10_34",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 37
+        },
+        "raw_monomial": "x^11*y^37",
+        "slot": "f_11_37",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 40
+        },
+        "raw_monomial": "x^12*y^40",
+        "slot": "f_12_40",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^5*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 3
+        },
+        "raw_monomial": "x^0*y^3",
+        "slot": "f_0_3",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 6
+        },
+        "raw_monomial": "x^1*y^6",
+        "slot": "f_1_6",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 9
+        },
+        "raw_monomial": "x^2*y^9",
+        "slot": "f_2_9",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 12
+        },
+        "raw_monomial": "x^3*y^12",
+        "slot": "f_3_12",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 15
+        },
+        "raw_monomial": "x^4*y^15",
+        "slot": "f_4_15",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 18
+        },
+        "raw_monomial": "x^5*y^18",
+        "slot": "f_5_18",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 21
+        },
+        "raw_monomial": "x^6*y^21",
+        "slot": "f_6_21",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 24
+        },
+        "raw_monomial": "x^7*y^24",
+        "slot": "f_7_24",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 27
+        },
+        "raw_monomial": "x^8*y^27",
+        "slot": "f_8_27",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 30
+        },
+        "raw_monomial": "x^9*y^30",
+        "slot": "f_9_30",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 33
+        },
+        "raw_monomial": "x^10*y^33",
+        "slot": "f_10_33",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 36
+        },
+        "raw_monomial": "x^11*y^36",
+        "slot": "f_11_36",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^6*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 2
+        },
+        "raw_monomial": "x^0*y^2",
+        "slot": "f_0_2",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 5
+        },
+        "raw_monomial": "x^1*y^5",
+        "slot": "f_1_5",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 8
+        },
+        "raw_monomial": "x^2*y^8",
+        "slot": "f_2_8",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 11
+        },
+        "raw_monomial": "x^3*y^11",
+        "slot": "f_3_11",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 14
+        },
+        "raw_monomial": "x^4*y^14",
+        "slot": "f_4_14",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 17
+        },
+        "raw_monomial": "x^5*y^17",
+        "slot": "f_5_17",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 20
+        },
+        "raw_monomial": "x^6*y^20",
+        "slot": "f_6_20",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 23
+        },
+        "raw_monomial": "x^7*y^23",
+        "slot": "f_7_23",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 26
+        },
+        "raw_monomial": "x^8*y^26",
+        "slot": "f_8_26",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 29
+        },
+        "raw_monomial": "x^9*y^29",
+        "slot": "f_9_29",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 32
+        },
+        "raw_monomial": "x^10*y^32",
+        "slot": "f_10_32",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^7*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 1
+        },
+        "raw_monomial": "x^0*y^1",
+        "slot": "f_0_1",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 4
+        },
+        "raw_monomial": "x^1*y^4",
+        "slot": "f_1_4",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 7
+        },
+        "raw_monomial": "x^2*y^7",
+        "slot": "f_2_7",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 10
+        },
+        "raw_monomial": "x^3*y^10",
+        "slot": "f_3_10",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 13
+        },
+        "raw_monomial": "x^4*y^13",
+        "slot": "f_4_13",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 16
+        },
+        "raw_monomial": "x^5*y^16",
+        "slot": "f_5_16",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 19
+        },
+        "raw_monomial": "x^6*y^19",
+        "slot": "f_6_19",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 22
+        },
+        "raw_monomial": "x^7*y^22",
+        "slot": "f_7_22",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 25
+        },
+        "raw_monomial": "x^8*y^25",
+        "slot": "f_8_25",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 28
+        },
+        "raw_monomial": "x^9*y^28",
+        "slot": "f_9_28",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^8*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 0
+        },
+        "raw_monomial": "x^0*y^0",
+        "slot": "f_0_0",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 3
+        },
+        "raw_monomial": "x^1*y^3",
+        "slot": "f_1_3",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 6
+        },
+        "raw_monomial": "x^2*y^6",
+        "slot": "f_2_6",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 9
+        },
+        "raw_monomial": "x^3*y^9",
+        "slot": "f_3_9",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 12
+        },
+        "raw_monomial": "x^4*y^12",
+        "slot": "f_4_12",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 15
+        },
+        "raw_monomial": "x^5*y^15",
+        "slot": "f_5_15",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 18
+        },
+        "raw_monomial": "x^6*y^18",
+        "slot": "f_6_18",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 21
+        },
+        "raw_monomial": "x^7*y^21",
+        "slot": "f_7_21",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 24
+        },
+        "raw_monomial": "x^8*y^24",
+        "slot": "f_8_24",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^9*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 2
+        },
+        "raw_monomial": "x^1*y^2",
+        "slot": "f_1_2",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 5
+        },
+        "raw_monomial": "x^2*y^5",
+        "slot": "f_2_5",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 8
+        },
+        "raw_monomial": "x^3*y^8",
+        "slot": "f_3_8",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 11
+        },
+        "raw_monomial": "x^4*y^11",
+        "slot": "f_4_11",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 14
+        },
+        "raw_monomial": "x^5*y^14",
+        "slot": "f_5_14",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 17
+        },
+        "raw_monomial": "x^6*y^17",
+        "slot": "f_6_17",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 20
+        },
+        "raw_monomial": "x^7*y^20",
+        "slot": "f_7_20",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^10*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 1
+        },
+        "raw_monomial": "x^1*y^1",
+        "slot": "f_1_1",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 4
+        },
+        "raw_monomial": "x^2*y^4",
+        "slot": "f_2_4",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 7
+        },
+        "raw_monomial": "x^3*y^7",
+        "slot": "f_3_7",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 10
+        },
+        "raw_monomial": "x^4*y^10",
+        "slot": "f_4_10",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 13
+        },
+        "raw_monomial": "x^5*y^13",
+        "slot": "f_5_13",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 16
+        },
+        "raw_monomial": "x^6*y^16",
+        "slot": "f_6_16",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^11*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 0
+        },
+        "raw_monomial": "x^1*y^0",
+        "slot": "f_1_0",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 3
+        },
+        "raw_monomial": "x^2*y^3",
+        "slot": "f_2_3",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 6
+        },
+        "raw_monomial": "x^3*y^6",
+        "slot": "f_3_6",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 9
+        },
+        "raw_monomial": "x^4*y^9",
+        "slot": "f_4_9",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 12
+        },
+        "raw_monomial": "x^5*y^12",
+        "slot": "f_5_12",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^12*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 2
+        },
+        "raw_monomial": "x^2*y^2",
+        "slot": "f_2_2",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 5
+        },
+        "raw_monomial": "x^3*y^5",
+        "slot": "f_3_5",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 8
+        },
+        "raw_monomial": "x^4*y^8",
+        "slot": "f_4_8",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^13*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 1
+        },
+        "raw_monomial": "x^2*y^1",
+        "slot": "f_2_1",
+        "weight": 13
+      },
+      {
+        "chart_image": "t^13*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 4
+        },
+        "raw_monomial": "x^3*y^4",
+        "slot": "f_3_4",
+        "weight": 13
+      },
+      {
+        "chart_image": "t^14*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 0
+        },
+        "raw_monomial": "x^2*y^0",
+        "slot": "f_2_0",
+        "weight": 14
+      }
+    ],
+    "G": [
+      {
+        "chart_image": "t^0*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 12
+        },
+        "raw_monomial": "x^0*y^12",
+        "slot": "g_0_12",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 15
+        },
+        "raw_monomial": "x^1*y^15",
+        "slot": "g_1_15",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 18
+        },
+        "raw_monomial": "x^2*y^18",
+        "slot": "g_2_18",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 21
+        },
+        "raw_monomial": "x^3*y^21",
+        "slot": "g_3_21",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 24
+        },
+        "raw_monomial": "x^4*y^24",
+        "slot": "g_4_24",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 27
+        },
+        "raw_monomial": "x^5*y^27",
+        "slot": "g_5_27",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 30
+        },
+        "raw_monomial": "x^6*y^30",
+        "slot": "g_6_30",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 33
+        },
+        "raw_monomial": "x^7*y^33",
+        "slot": "g_7_33",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 36
+        },
+        "raw_monomial": "x^8*y^36",
+        "slot": "g_8_36",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 39
+        },
+        "raw_monomial": "x^9*y^39",
+        "slot": "g_9_39",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 42
+        },
+        "raw_monomial": "x^10*y^42",
+        "slot": "g_10_42",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 45
+        },
+        "raw_monomial": "x^11*y^45",
+        "slot": "g_11_45",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 48
+        },
+        "raw_monomial": "x^12*y^48",
+        "slot": "g_12_48",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 51
+        },
+        "raw_monomial": "x^13*y^51",
+        "slot": "g_13_51",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 54
+        },
+        "raw_monomial": "x^14*y^54",
+        "slot": "g_14_54",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^15",
+        "raw_exponents": {
+          "x": 15,
+          "y": 57
+        },
+        "raw_monomial": "x^15*y^57",
+        "slot": "g_15_57",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^16",
+        "raw_exponents": {
+          "x": 16,
+          "y": 60
+        },
+        "raw_monomial": "x^16*y^60",
+        "slot": "g_16_60",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^17",
+        "raw_exponents": {
+          "x": 17,
+          "y": 63
+        },
+        "raw_monomial": "x^17*y^63",
+        "slot": "g_17_63",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^18",
+        "raw_exponents": {
+          "x": 18,
+          "y": 66
+        },
+        "raw_monomial": "x^18*y^66",
+        "slot": "g_18_66",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^19",
+        "raw_exponents": {
+          "x": 19,
+          "y": 69
+        },
+        "raw_monomial": "x^19*y^69",
+        "slot": "g_19_69",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^20",
+        "raw_exponents": {
+          "x": 20,
+          "y": 72
+        },
+        "raw_monomial": "x^20*y^72",
+        "slot": "g_20_72",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^21",
+        "raw_exponents": {
+          "x": 21,
+          "y": 75
+        },
+        "raw_monomial": "x^21*y^75",
+        "slot": "g_21_75",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^22",
+        "raw_exponents": {
+          "x": 22,
+          "y": 78
+        },
+        "raw_monomial": "x^22*y^78",
+        "slot": "g_22_78",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^23",
+        "raw_exponents": {
+          "x": 23,
+          "y": 81
+        },
+        "raw_monomial": "x^23*y^81",
+        "slot": "g_23_81",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^0*X^24",
+        "raw_exponents": {
+          "x": 24,
+          "y": 84
+        },
+        "raw_monomial": "x^24*y^84",
+        "slot": "g_24_84",
+        "weight": 0
+      },
+      {
+        "chart_image": "t^1*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 11
+        },
+        "raw_monomial": "x^0*y^11",
+        "slot": "g_0_11",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 14
+        },
+        "raw_monomial": "x^1*y^14",
+        "slot": "g_1_14",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 17
+        },
+        "raw_monomial": "x^2*y^17",
+        "slot": "g_2_17",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 20
+        },
+        "raw_monomial": "x^3*y^20",
+        "slot": "g_3_20",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 23
+        },
+        "raw_monomial": "x^4*y^23",
+        "slot": "g_4_23",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 26
+        },
+        "raw_monomial": "x^5*y^26",
+        "slot": "g_5_26",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 29
+        },
+        "raw_monomial": "x^6*y^29",
+        "slot": "g_6_29",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 32
+        },
+        "raw_monomial": "x^7*y^32",
+        "slot": "g_7_32",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 35
+        },
+        "raw_monomial": "x^8*y^35",
+        "slot": "g_8_35",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 38
+        },
+        "raw_monomial": "x^9*y^38",
+        "slot": "g_9_38",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 41
+        },
+        "raw_monomial": "x^10*y^41",
+        "slot": "g_10_41",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 44
+        },
+        "raw_monomial": "x^11*y^44",
+        "slot": "g_11_44",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 47
+        },
+        "raw_monomial": "x^12*y^47",
+        "slot": "g_12_47",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 50
+        },
+        "raw_monomial": "x^13*y^50",
+        "slot": "g_13_50",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 53
+        },
+        "raw_monomial": "x^14*y^53",
+        "slot": "g_14_53",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^15",
+        "raw_exponents": {
+          "x": 15,
+          "y": 56
+        },
+        "raw_monomial": "x^15*y^56",
+        "slot": "g_15_56",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^16",
+        "raw_exponents": {
+          "x": 16,
+          "y": 59
+        },
+        "raw_monomial": "x^16*y^59",
+        "slot": "g_16_59",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^17",
+        "raw_exponents": {
+          "x": 17,
+          "y": 62
+        },
+        "raw_monomial": "x^17*y^62",
+        "slot": "g_17_62",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^18",
+        "raw_exponents": {
+          "x": 18,
+          "y": 65
+        },
+        "raw_monomial": "x^18*y^65",
+        "slot": "g_18_65",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^19",
+        "raw_exponents": {
+          "x": 19,
+          "y": 68
+        },
+        "raw_monomial": "x^19*y^68",
+        "slot": "g_19_68",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^20",
+        "raw_exponents": {
+          "x": 20,
+          "y": 71
+        },
+        "raw_monomial": "x^20*y^71",
+        "slot": "g_20_71",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^21",
+        "raw_exponents": {
+          "x": 21,
+          "y": 74
+        },
+        "raw_monomial": "x^21*y^74",
+        "slot": "g_21_74",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^22",
+        "raw_exponents": {
+          "x": 22,
+          "y": 77
+        },
+        "raw_monomial": "x^22*y^77",
+        "slot": "g_22_77",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^1*X^23",
+        "raw_exponents": {
+          "x": 23,
+          "y": 80
+        },
+        "raw_monomial": "x^23*y^80",
+        "slot": "g_23_80",
+        "weight": 1
+      },
+      {
+        "chart_image": "t^2*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 10
+        },
+        "raw_monomial": "x^0*y^10",
+        "slot": "g_0_10",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 13
+        },
+        "raw_monomial": "x^1*y^13",
+        "slot": "g_1_13",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 16
+        },
+        "raw_monomial": "x^2*y^16",
+        "slot": "g_2_16",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 19
+        },
+        "raw_monomial": "x^3*y^19",
+        "slot": "g_3_19",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 22
+        },
+        "raw_monomial": "x^4*y^22",
+        "slot": "g_4_22",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 25
+        },
+        "raw_monomial": "x^5*y^25",
+        "slot": "g_5_25",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 28
+        },
+        "raw_monomial": "x^6*y^28",
+        "slot": "g_6_28",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 31
+        },
+        "raw_monomial": "x^7*y^31",
+        "slot": "g_7_31",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 34
+        },
+        "raw_monomial": "x^8*y^34",
+        "slot": "g_8_34",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 37
+        },
+        "raw_monomial": "x^9*y^37",
+        "slot": "g_9_37",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 40
+        },
+        "raw_monomial": "x^10*y^40",
+        "slot": "g_10_40",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 43
+        },
+        "raw_monomial": "x^11*y^43",
+        "slot": "g_11_43",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 46
+        },
+        "raw_monomial": "x^12*y^46",
+        "slot": "g_12_46",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 49
+        },
+        "raw_monomial": "x^13*y^49",
+        "slot": "g_13_49",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 52
+        },
+        "raw_monomial": "x^14*y^52",
+        "slot": "g_14_52",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^15",
+        "raw_exponents": {
+          "x": 15,
+          "y": 55
+        },
+        "raw_monomial": "x^15*y^55",
+        "slot": "g_15_55",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^16",
+        "raw_exponents": {
+          "x": 16,
+          "y": 58
+        },
+        "raw_monomial": "x^16*y^58",
+        "slot": "g_16_58",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^17",
+        "raw_exponents": {
+          "x": 17,
+          "y": 61
+        },
+        "raw_monomial": "x^17*y^61",
+        "slot": "g_17_61",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^18",
+        "raw_exponents": {
+          "x": 18,
+          "y": 64
+        },
+        "raw_monomial": "x^18*y^64",
+        "slot": "g_18_64",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^19",
+        "raw_exponents": {
+          "x": 19,
+          "y": 67
+        },
+        "raw_monomial": "x^19*y^67",
+        "slot": "g_19_67",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^20",
+        "raw_exponents": {
+          "x": 20,
+          "y": 70
+        },
+        "raw_monomial": "x^20*y^70",
+        "slot": "g_20_70",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^21",
+        "raw_exponents": {
+          "x": 21,
+          "y": 73
+        },
+        "raw_monomial": "x^21*y^73",
+        "slot": "g_21_73",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^2*X^22",
+        "raw_exponents": {
+          "x": 22,
+          "y": 76
+        },
+        "raw_monomial": "x^22*y^76",
+        "slot": "g_22_76",
+        "weight": 2
+      },
+      {
+        "chart_image": "t^3*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 9
+        },
+        "raw_monomial": "x^0*y^9",
+        "slot": "g_0_9",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 12
+        },
+        "raw_monomial": "x^1*y^12",
+        "slot": "g_1_12",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 15
+        },
+        "raw_monomial": "x^2*y^15",
+        "slot": "g_2_15",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 18
+        },
+        "raw_monomial": "x^3*y^18",
+        "slot": "g_3_18",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 21
+        },
+        "raw_monomial": "x^4*y^21",
+        "slot": "g_4_21",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 24
+        },
+        "raw_monomial": "x^5*y^24",
+        "slot": "g_5_24",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 27
+        },
+        "raw_monomial": "x^6*y^27",
+        "slot": "g_6_27",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 30
+        },
+        "raw_monomial": "x^7*y^30",
+        "slot": "g_7_30",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 33
+        },
+        "raw_monomial": "x^8*y^33",
+        "slot": "g_8_33",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 36
+        },
+        "raw_monomial": "x^9*y^36",
+        "slot": "g_9_36",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 39
+        },
+        "raw_monomial": "x^10*y^39",
+        "slot": "g_10_39",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 42
+        },
+        "raw_monomial": "x^11*y^42",
+        "slot": "g_11_42",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 45
+        },
+        "raw_monomial": "x^12*y^45",
+        "slot": "g_12_45",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 48
+        },
+        "raw_monomial": "x^13*y^48",
+        "slot": "g_13_48",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 51
+        },
+        "raw_monomial": "x^14*y^51",
+        "slot": "g_14_51",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^15",
+        "raw_exponents": {
+          "x": 15,
+          "y": 54
+        },
+        "raw_monomial": "x^15*y^54",
+        "slot": "g_15_54",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^16",
+        "raw_exponents": {
+          "x": 16,
+          "y": 57
+        },
+        "raw_monomial": "x^16*y^57",
+        "slot": "g_16_57",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^17",
+        "raw_exponents": {
+          "x": 17,
+          "y": 60
+        },
+        "raw_monomial": "x^17*y^60",
+        "slot": "g_17_60",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^18",
+        "raw_exponents": {
+          "x": 18,
+          "y": 63
+        },
+        "raw_monomial": "x^18*y^63",
+        "slot": "g_18_63",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^19",
+        "raw_exponents": {
+          "x": 19,
+          "y": 66
+        },
+        "raw_monomial": "x^19*y^66",
+        "slot": "g_19_66",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^20",
+        "raw_exponents": {
+          "x": 20,
+          "y": 69
+        },
+        "raw_monomial": "x^20*y^69",
+        "slot": "g_20_69",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^3*X^21",
+        "raw_exponents": {
+          "x": 21,
+          "y": 72
+        },
+        "raw_monomial": "x^21*y^72",
+        "slot": "g_21_72",
+        "weight": 3
+      },
+      {
+        "chart_image": "t^4*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 8
+        },
+        "raw_monomial": "x^0*y^8",
+        "slot": "g_0_8",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 11
+        },
+        "raw_monomial": "x^1*y^11",
+        "slot": "g_1_11",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 14
+        },
+        "raw_monomial": "x^2*y^14",
+        "slot": "g_2_14",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 17
+        },
+        "raw_monomial": "x^3*y^17",
+        "slot": "g_3_17",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 20
+        },
+        "raw_monomial": "x^4*y^20",
+        "slot": "g_4_20",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 23
+        },
+        "raw_monomial": "x^5*y^23",
+        "slot": "g_5_23",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 26
+        },
+        "raw_monomial": "x^6*y^26",
+        "slot": "g_6_26",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 29
+        },
+        "raw_monomial": "x^7*y^29",
+        "slot": "g_7_29",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 32
+        },
+        "raw_monomial": "x^8*y^32",
+        "slot": "g_8_32",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 35
+        },
+        "raw_monomial": "x^9*y^35",
+        "slot": "g_9_35",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 38
+        },
+        "raw_monomial": "x^10*y^38",
+        "slot": "g_10_38",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 41
+        },
+        "raw_monomial": "x^11*y^41",
+        "slot": "g_11_41",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 44
+        },
+        "raw_monomial": "x^12*y^44",
+        "slot": "g_12_44",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 47
+        },
+        "raw_monomial": "x^13*y^47",
+        "slot": "g_13_47",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 50
+        },
+        "raw_monomial": "x^14*y^50",
+        "slot": "g_14_50",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^15",
+        "raw_exponents": {
+          "x": 15,
+          "y": 53
+        },
+        "raw_monomial": "x^15*y^53",
+        "slot": "g_15_53",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^16",
+        "raw_exponents": {
+          "x": 16,
+          "y": 56
+        },
+        "raw_monomial": "x^16*y^56",
+        "slot": "g_16_56",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^17",
+        "raw_exponents": {
+          "x": 17,
+          "y": 59
+        },
+        "raw_monomial": "x^17*y^59",
+        "slot": "g_17_59",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^18",
+        "raw_exponents": {
+          "x": 18,
+          "y": 62
+        },
+        "raw_monomial": "x^18*y^62",
+        "slot": "g_18_62",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^19",
+        "raw_exponents": {
+          "x": 19,
+          "y": 65
+        },
+        "raw_monomial": "x^19*y^65",
+        "slot": "g_19_65",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^4*X^20",
+        "raw_exponents": {
+          "x": 20,
+          "y": 68
+        },
+        "raw_monomial": "x^20*y^68",
+        "slot": "g_20_68",
+        "weight": 4
+      },
+      {
+        "chart_image": "t^5*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 7
+        },
+        "raw_monomial": "x^0*y^7",
+        "slot": "g_0_7",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 10
+        },
+        "raw_monomial": "x^1*y^10",
+        "slot": "g_1_10",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 13
+        },
+        "raw_monomial": "x^2*y^13",
+        "slot": "g_2_13",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 16
+        },
+        "raw_monomial": "x^3*y^16",
+        "slot": "g_3_16",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 19
+        },
+        "raw_monomial": "x^4*y^19",
+        "slot": "g_4_19",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 22
+        },
+        "raw_monomial": "x^5*y^22",
+        "slot": "g_5_22",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 25
+        },
+        "raw_monomial": "x^6*y^25",
+        "slot": "g_6_25",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 28
+        },
+        "raw_monomial": "x^7*y^28",
+        "slot": "g_7_28",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 31
+        },
+        "raw_monomial": "x^8*y^31",
+        "slot": "g_8_31",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 34
+        },
+        "raw_monomial": "x^9*y^34",
+        "slot": "g_9_34",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 37
+        },
+        "raw_monomial": "x^10*y^37",
+        "slot": "g_10_37",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 40
+        },
+        "raw_monomial": "x^11*y^40",
+        "slot": "g_11_40",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 43
+        },
+        "raw_monomial": "x^12*y^43",
+        "slot": "g_12_43",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 46
+        },
+        "raw_monomial": "x^13*y^46",
+        "slot": "g_13_46",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 49
+        },
+        "raw_monomial": "x^14*y^49",
+        "slot": "g_14_49",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^15",
+        "raw_exponents": {
+          "x": 15,
+          "y": 52
+        },
+        "raw_monomial": "x^15*y^52",
+        "slot": "g_15_52",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^16",
+        "raw_exponents": {
+          "x": 16,
+          "y": 55
+        },
+        "raw_monomial": "x^16*y^55",
+        "slot": "g_16_55",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^17",
+        "raw_exponents": {
+          "x": 17,
+          "y": 58
+        },
+        "raw_monomial": "x^17*y^58",
+        "slot": "g_17_58",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^18",
+        "raw_exponents": {
+          "x": 18,
+          "y": 61
+        },
+        "raw_monomial": "x^18*y^61",
+        "slot": "g_18_61",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^5*X^19",
+        "raw_exponents": {
+          "x": 19,
+          "y": 64
+        },
+        "raw_monomial": "x^19*y^64",
+        "slot": "g_19_64",
+        "weight": 5
+      },
+      {
+        "chart_image": "t^6*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 6
+        },
+        "raw_monomial": "x^0*y^6",
+        "slot": "g_0_6",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 9
+        },
+        "raw_monomial": "x^1*y^9",
+        "slot": "g_1_9",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 12
+        },
+        "raw_monomial": "x^2*y^12",
+        "slot": "g_2_12",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 15
+        },
+        "raw_monomial": "x^3*y^15",
+        "slot": "g_3_15",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 18
+        },
+        "raw_monomial": "x^4*y^18",
+        "slot": "g_4_18",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 21
+        },
+        "raw_monomial": "x^5*y^21",
+        "slot": "g_5_21",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 24
+        },
+        "raw_monomial": "x^6*y^24",
+        "slot": "g_6_24",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 27
+        },
+        "raw_monomial": "x^7*y^27",
+        "slot": "g_7_27",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 30
+        },
+        "raw_monomial": "x^8*y^30",
+        "slot": "g_8_30",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 33
+        },
+        "raw_monomial": "x^9*y^33",
+        "slot": "g_9_33",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 36
+        },
+        "raw_monomial": "x^10*y^36",
+        "slot": "g_10_36",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 39
+        },
+        "raw_monomial": "x^11*y^39",
+        "slot": "g_11_39",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 42
+        },
+        "raw_monomial": "x^12*y^42",
+        "slot": "g_12_42",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 45
+        },
+        "raw_monomial": "x^13*y^45",
+        "slot": "g_13_45",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 48
+        },
+        "raw_monomial": "x^14*y^48",
+        "slot": "g_14_48",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^15",
+        "raw_exponents": {
+          "x": 15,
+          "y": 51
+        },
+        "raw_monomial": "x^15*y^51",
+        "slot": "g_15_51",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^16",
+        "raw_exponents": {
+          "x": 16,
+          "y": 54
+        },
+        "raw_monomial": "x^16*y^54",
+        "slot": "g_16_54",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^17",
+        "raw_exponents": {
+          "x": 17,
+          "y": 57
+        },
+        "raw_monomial": "x^17*y^57",
+        "slot": "g_17_57",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^6*X^18",
+        "raw_exponents": {
+          "x": 18,
+          "y": 60
+        },
+        "raw_monomial": "x^18*y^60",
+        "slot": "g_18_60",
+        "weight": 6
+      },
+      {
+        "chart_image": "t^7*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 5
+        },
+        "raw_monomial": "x^0*y^5",
+        "slot": "g_0_5",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 8
+        },
+        "raw_monomial": "x^1*y^8",
+        "slot": "g_1_8",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 11
+        },
+        "raw_monomial": "x^2*y^11",
+        "slot": "g_2_11",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 14
+        },
+        "raw_monomial": "x^3*y^14",
+        "slot": "g_3_14",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 17
+        },
+        "raw_monomial": "x^4*y^17",
+        "slot": "g_4_17",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 20
+        },
+        "raw_monomial": "x^5*y^20",
+        "slot": "g_5_20",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 23
+        },
+        "raw_monomial": "x^6*y^23",
+        "slot": "g_6_23",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 26
+        },
+        "raw_monomial": "x^7*y^26",
+        "slot": "g_7_26",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 29
+        },
+        "raw_monomial": "x^8*y^29",
+        "slot": "g_8_29",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 32
+        },
+        "raw_monomial": "x^9*y^32",
+        "slot": "g_9_32",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 35
+        },
+        "raw_monomial": "x^10*y^35",
+        "slot": "g_10_35",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 38
+        },
+        "raw_monomial": "x^11*y^38",
+        "slot": "g_11_38",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 41
+        },
+        "raw_monomial": "x^12*y^41",
+        "slot": "g_12_41",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 44
+        },
+        "raw_monomial": "x^13*y^44",
+        "slot": "g_13_44",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 47
+        },
+        "raw_monomial": "x^14*y^47",
+        "slot": "g_14_47",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^15",
+        "raw_exponents": {
+          "x": 15,
+          "y": 50
+        },
+        "raw_monomial": "x^15*y^50",
+        "slot": "g_15_50",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^16",
+        "raw_exponents": {
+          "x": 16,
+          "y": 53
+        },
+        "raw_monomial": "x^16*y^53",
+        "slot": "g_16_53",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^7*X^17",
+        "raw_exponents": {
+          "x": 17,
+          "y": 56
+        },
+        "raw_monomial": "x^17*y^56",
+        "slot": "g_17_56",
+        "weight": 7
+      },
+      {
+        "chart_image": "t^8*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 4
+        },
+        "raw_monomial": "x^0*y^4",
+        "slot": "g_0_4",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 7
+        },
+        "raw_monomial": "x^1*y^7",
+        "slot": "g_1_7",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 10
+        },
+        "raw_monomial": "x^2*y^10",
+        "slot": "g_2_10",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 13
+        },
+        "raw_monomial": "x^3*y^13",
+        "slot": "g_3_13",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 16
+        },
+        "raw_monomial": "x^4*y^16",
+        "slot": "g_4_16",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 19
+        },
+        "raw_monomial": "x^5*y^19",
+        "slot": "g_5_19",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 22
+        },
+        "raw_monomial": "x^6*y^22",
+        "slot": "g_6_22",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 25
+        },
+        "raw_monomial": "x^7*y^25",
+        "slot": "g_7_25",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 28
+        },
+        "raw_monomial": "x^8*y^28",
+        "slot": "g_8_28",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 31
+        },
+        "raw_monomial": "x^9*y^31",
+        "slot": "g_9_31",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 34
+        },
+        "raw_monomial": "x^10*y^34",
+        "slot": "g_10_34",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 37
+        },
+        "raw_monomial": "x^11*y^37",
+        "slot": "g_11_37",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 40
+        },
+        "raw_monomial": "x^12*y^40",
+        "slot": "g_12_40",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 43
+        },
+        "raw_monomial": "x^13*y^43",
+        "slot": "g_13_43",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 46
+        },
+        "raw_monomial": "x^14*y^46",
+        "slot": "g_14_46",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^15",
+        "raw_exponents": {
+          "x": 15,
+          "y": 49
+        },
+        "raw_monomial": "x^15*y^49",
+        "slot": "g_15_49",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^8*X^16",
+        "raw_exponents": {
+          "x": 16,
+          "y": 52
+        },
+        "raw_monomial": "x^16*y^52",
+        "slot": "g_16_52",
+        "weight": 8
+      },
+      {
+        "chart_image": "t^9*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 3
+        },
+        "raw_monomial": "x^0*y^3",
+        "slot": "g_0_3",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 6
+        },
+        "raw_monomial": "x^1*y^6",
+        "slot": "g_1_6",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 9
+        },
+        "raw_monomial": "x^2*y^9",
+        "slot": "g_2_9",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 12
+        },
+        "raw_monomial": "x^3*y^12",
+        "slot": "g_3_12",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 15
+        },
+        "raw_monomial": "x^4*y^15",
+        "slot": "g_4_15",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 18
+        },
+        "raw_monomial": "x^5*y^18",
+        "slot": "g_5_18",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 21
+        },
+        "raw_monomial": "x^6*y^21",
+        "slot": "g_6_21",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 24
+        },
+        "raw_monomial": "x^7*y^24",
+        "slot": "g_7_24",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 27
+        },
+        "raw_monomial": "x^8*y^27",
+        "slot": "g_8_27",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 30
+        },
+        "raw_monomial": "x^9*y^30",
+        "slot": "g_9_30",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 33
+        },
+        "raw_monomial": "x^10*y^33",
+        "slot": "g_10_33",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 36
+        },
+        "raw_monomial": "x^11*y^36",
+        "slot": "g_11_36",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 39
+        },
+        "raw_monomial": "x^12*y^39",
+        "slot": "g_12_39",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 42
+        },
+        "raw_monomial": "x^13*y^42",
+        "slot": "g_13_42",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 45
+        },
+        "raw_monomial": "x^14*y^45",
+        "slot": "g_14_45",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^9*X^15",
+        "raw_exponents": {
+          "x": 15,
+          "y": 48
+        },
+        "raw_monomial": "x^15*y^48",
+        "slot": "g_15_48",
+        "weight": 9
+      },
+      {
+        "chart_image": "t^10*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 2
+        },
+        "raw_monomial": "x^0*y^2",
+        "slot": "g_0_2",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 5
+        },
+        "raw_monomial": "x^1*y^5",
+        "slot": "g_1_5",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 8
+        },
+        "raw_monomial": "x^2*y^8",
+        "slot": "g_2_8",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 11
+        },
+        "raw_monomial": "x^3*y^11",
+        "slot": "g_3_11",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 14
+        },
+        "raw_monomial": "x^4*y^14",
+        "slot": "g_4_14",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 17
+        },
+        "raw_monomial": "x^5*y^17",
+        "slot": "g_5_17",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 20
+        },
+        "raw_monomial": "x^6*y^20",
+        "slot": "g_6_20",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 23
+        },
+        "raw_monomial": "x^7*y^23",
+        "slot": "g_7_23",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 26
+        },
+        "raw_monomial": "x^8*y^26",
+        "slot": "g_8_26",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 29
+        },
+        "raw_monomial": "x^9*y^29",
+        "slot": "g_9_29",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 32
+        },
+        "raw_monomial": "x^10*y^32",
+        "slot": "g_10_32",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 35
+        },
+        "raw_monomial": "x^11*y^35",
+        "slot": "g_11_35",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 38
+        },
+        "raw_monomial": "x^12*y^38",
+        "slot": "g_12_38",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 41
+        },
+        "raw_monomial": "x^13*y^41",
+        "slot": "g_13_41",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^10*X^14",
+        "raw_exponents": {
+          "x": 14,
+          "y": 44
+        },
+        "raw_monomial": "x^14*y^44",
+        "slot": "g_14_44",
+        "weight": 10
+      },
+      {
+        "chart_image": "t^11*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 1
+        },
+        "raw_monomial": "x^0*y^1",
+        "slot": "g_0_1",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 4
+        },
+        "raw_monomial": "x^1*y^4",
+        "slot": "g_1_4",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 7
+        },
+        "raw_monomial": "x^2*y^7",
+        "slot": "g_2_7",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 10
+        },
+        "raw_monomial": "x^3*y^10",
+        "slot": "g_3_10",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 13
+        },
+        "raw_monomial": "x^4*y^13",
+        "slot": "g_4_13",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 16
+        },
+        "raw_monomial": "x^5*y^16",
+        "slot": "g_5_16",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 19
+        },
+        "raw_monomial": "x^6*y^19",
+        "slot": "g_6_19",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 22
+        },
+        "raw_monomial": "x^7*y^22",
+        "slot": "g_7_22",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 25
+        },
+        "raw_monomial": "x^8*y^25",
+        "slot": "g_8_25",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 28
+        },
+        "raw_monomial": "x^9*y^28",
+        "slot": "g_9_28",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 31
+        },
+        "raw_monomial": "x^10*y^31",
+        "slot": "g_10_31",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 34
+        },
+        "raw_monomial": "x^11*y^34",
+        "slot": "g_11_34",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 37
+        },
+        "raw_monomial": "x^12*y^37",
+        "slot": "g_12_37",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^11*X^13",
+        "raw_exponents": {
+          "x": 13,
+          "y": 40
+        },
+        "raw_monomial": "x^13*y^40",
+        "slot": "g_13_40",
+        "weight": 11
+      },
+      {
+        "chart_image": "t^12*X^0",
+        "raw_exponents": {
+          "x": 0,
+          "y": 0
+        },
+        "raw_monomial": "x^0*y^0",
+        "slot": "g_0_0",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 3
+        },
+        "raw_monomial": "x^1*y^3",
+        "slot": "g_1_3",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 6
+        },
+        "raw_monomial": "x^2*y^6",
+        "slot": "g_2_6",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 9
+        },
+        "raw_monomial": "x^3*y^9",
+        "slot": "g_3_9",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 12
+        },
+        "raw_monomial": "x^4*y^12",
+        "slot": "g_4_12",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 15
+        },
+        "raw_monomial": "x^5*y^15",
+        "slot": "g_5_15",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 18
+        },
+        "raw_monomial": "x^6*y^18",
+        "slot": "g_6_18",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 21
+        },
+        "raw_monomial": "x^7*y^21",
+        "slot": "g_7_21",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 24
+        },
+        "raw_monomial": "x^8*y^24",
+        "slot": "g_8_24",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 27
+        },
+        "raw_monomial": "x^9*y^27",
+        "slot": "g_9_27",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 30
+        },
+        "raw_monomial": "x^10*y^30",
+        "slot": "g_10_30",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 33
+        },
+        "raw_monomial": "x^11*y^33",
+        "slot": "g_11_33",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^12*X^12",
+        "raw_exponents": {
+          "x": 12,
+          "y": 36
+        },
+        "raw_monomial": "x^12*y^36",
+        "slot": "g_12_36",
+        "weight": 12
+      },
+      {
+        "chart_image": "t^13*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 2
+        },
+        "raw_monomial": "x^1*y^2",
+        "slot": "g_1_2",
+        "weight": 13
+      },
+      {
+        "chart_image": "t^13*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 5
+        },
+        "raw_monomial": "x^2*y^5",
+        "slot": "g_2_5",
+        "weight": 13
+      },
+      {
+        "chart_image": "t^13*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 8
+        },
+        "raw_monomial": "x^3*y^8",
+        "slot": "g_3_8",
+        "weight": 13
+      },
+      {
+        "chart_image": "t^13*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 11
+        },
+        "raw_monomial": "x^4*y^11",
+        "slot": "g_4_11",
+        "weight": 13
+      },
+      {
+        "chart_image": "t^13*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 14
+        },
+        "raw_monomial": "x^5*y^14",
+        "slot": "g_5_14",
+        "weight": 13
+      },
+      {
+        "chart_image": "t^13*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 17
+        },
+        "raw_monomial": "x^6*y^17",
+        "slot": "g_6_17",
+        "weight": 13
+      },
+      {
+        "chart_image": "t^13*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 20
+        },
+        "raw_monomial": "x^7*y^20",
+        "slot": "g_7_20",
+        "weight": 13
+      },
+      {
+        "chart_image": "t^13*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 23
+        },
+        "raw_monomial": "x^8*y^23",
+        "slot": "g_8_23",
+        "weight": 13
+      },
+      {
+        "chart_image": "t^13*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 26
+        },
+        "raw_monomial": "x^9*y^26",
+        "slot": "g_9_26",
+        "weight": 13
+      },
+      {
+        "chart_image": "t^13*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 29
+        },
+        "raw_monomial": "x^10*y^29",
+        "slot": "g_10_29",
+        "weight": 13
+      },
+      {
+        "chart_image": "t^13*X^11",
+        "raw_exponents": {
+          "x": 11,
+          "y": 32
+        },
+        "raw_monomial": "x^11*y^32",
+        "slot": "g_11_32",
+        "weight": 13
+      },
+      {
+        "chart_image": "t^14*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 1
+        },
+        "raw_monomial": "x^1*y^1",
+        "slot": "g_1_1",
+        "weight": 14
+      },
+      {
+        "chart_image": "t^14*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 4
+        },
+        "raw_monomial": "x^2*y^4",
+        "slot": "g_2_4",
+        "weight": 14
+      },
+      {
+        "chart_image": "t^14*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 7
+        },
+        "raw_monomial": "x^3*y^7",
+        "slot": "g_3_7",
+        "weight": 14
+      },
+      {
+        "chart_image": "t^14*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 10
+        },
+        "raw_monomial": "x^4*y^10",
+        "slot": "g_4_10",
+        "weight": 14
+      },
+      {
+        "chart_image": "t^14*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 13
+        },
+        "raw_monomial": "x^5*y^13",
+        "slot": "g_5_13",
+        "weight": 14
+      },
+      {
+        "chart_image": "t^14*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 16
+        },
+        "raw_monomial": "x^6*y^16",
+        "slot": "g_6_16",
+        "weight": 14
+      },
+      {
+        "chart_image": "t^14*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 19
+        },
+        "raw_monomial": "x^7*y^19",
+        "slot": "g_7_19",
+        "weight": 14
+      },
+      {
+        "chart_image": "t^14*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 22
+        },
+        "raw_monomial": "x^8*y^22",
+        "slot": "g_8_22",
+        "weight": 14
+      },
+      {
+        "chart_image": "t^14*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 25
+        },
+        "raw_monomial": "x^9*y^25",
+        "slot": "g_9_25",
+        "weight": 14
+      },
+      {
+        "chart_image": "t^14*X^10",
+        "raw_exponents": {
+          "x": 10,
+          "y": 28
+        },
+        "raw_monomial": "x^10*y^28",
+        "slot": "g_10_28",
+        "weight": 14
+      },
+      {
+        "chart_image": "t^15*X^1",
+        "raw_exponents": {
+          "x": 1,
+          "y": 0
+        },
+        "raw_monomial": "x^1*y^0",
+        "slot": "g_1_0",
+        "weight": 15
+      },
+      {
+        "chart_image": "t^15*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 3
+        },
+        "raw_monomial": "x^2*y^3",
+        "slot": "g_2_3",
+        "weight": 15
+      },
+      {
+        "chart_image": "t^15*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 6
+        },
+        "raw_monomial": "x^3*y^6",
+        "slot": "g_3_6",
+        "weight": 15
+      },
+      {
+        "chart_image": "t^15*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 9
+        },
+        "raw_monomial": "x^4*y^9",
+        "slot": "g_4_9",
+        "weight": 15
+      },
+      {
+        "chart_image": "t^15*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 12
+        },
+        "raw_monomial": "x^5*y^12",
+        "slot": "g_5_12",
+        "weight": 15
+      },
+      {
+        "chart_image": "t^15*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 15
+        },
+        "raw_monomial": "x^6*y^15",
+        "slot": "g_6_15",
+        "weight": 15
+      },
+      {
+        "chart_image": "t^15*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 18
+        },
+        "raw_monomial": "x^7*y^18",
+        "slot": "g_7_18",
+        "weight": 15
+      },
+      {
+        "chart_image": "t^15*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 21
+        },
+        "raw_monomial": "x^8*y^21",
+        "slot": "g_8_21",
+        "weight": 15
+      },
+      {
+        "chart_image": "t^15*X^9",
+        "raw_exponents": {
+          "x": 9,
+          "y": 24
+        },
+        "raw_monomial": "x^9*y^24",
+        "slot": "g_9_24",
+        "weight": 15
+      },
+      {
+        "chart_image": "t^16*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 2
+        },
+        "raw_monomial": "x^2*y^2",
+        "slot": "g_2_2",
+        "weight": 16
+      },
+      {
+        "chart_image": "t^16*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 5
+        },
+        "raw_monomial": "x^3*y^5",
+        "slot": "g_3_5",
+        "weight": 16
+      },
+      {
+        "chart_image": "t^16*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 8
+        },
+        "raw_monomial": "x^4*y^8",
+        "slot": "g_4_8",
+        "weight": 16
+      },
+      {
+        "chart_image": "t^16*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 11
+        },
+        "raw_monomial": "x^5*y^11",
+        "slot": "g_5_11",
+        "weight": 16
+      },
+      {
+        "chart_image": "t^16*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 14
+        },
+        "raw_monomial": "x^6*y^14",
+        "slot": "g_6_14",
+        "weight": 16
+      },
+      {
+        "chart_image": "t^16*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 17
+        },
+        "raw_monomial": "x^7*y^17",
+        "slot": "g_7_17",
+        "weight": 16
+      },
+      {
+        "chart_image": "t^16*X^8",
+        "raw_exponents": {
+          "x": 8,
+          "y": 20
+        },
+        "raw_monomial": "x^8*y^20",
+        "slot": "g_8_20",
+        "weight": 16
+      },
+      {
+        "chart_image": "t^17*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 1
+        },
+        "raw_monomial": "x^2*y^1",
+        "slot": "g_2_1",
+        "weight": 17
+      },
+      {
+        "chart_image": "t^17*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 4
+        },
+        "raw_monomial": "x^3*y^4",
+        "slot": "g_3_4",
+        "weight": 17
+      },
+      {
+        "chart_image": "t^17*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 7
+        },
+        "raw_monomial": "x^4*y^7",
+        "slot": "g_4_7",
+        "weight": 17
+      },
+      {
+        "chart_image": "t^17*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 10
+        },
+        "raw_monomial": "x^5*y^10",
+        "slot": "g_5_10",
+        "weight": 17
+      },
+      {
+        "chart_image": "t^17*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 13
+        },
+        "raw_monomial": "x^6*y^13",
+        "slot": "g_6_13",
+        "weight": 17
+      },
+      {
+        "chart_image": "t^17*X^7",
+        "raw_exponents": {
+          "x": 7,
+          "y": 16
+        },
+        "raw_monomial": "x^7*y^16",
+        "slot": "g_7_16",
+        "weight": 17
+      },
+      {
+        "chart_image": "t^18*X^2",
+        "raw_exponents": {
+          "x": 2,
+          "y": 0
+        },
+        "raw_monomial": "x^2*y^0",
+        "slot": "g_2_0",
+        "weight": 18
+      },
+      {
+        "chart_image": "t^18*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 3
+        },
+        "raw_monomial": "x^3*y^3",
+        "slot": "g_3_3",
+        "weight": 18
+      },
+      {
+        "chart_image": "t^18*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 6
+        },
+        "raw_monomial": "x^4*y^6",
+        "slot": "g_4_6",
+        "weight": 18
+      },
+      {
+        "chart_image": "t^18*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 9
+        },
+        "raw_monomial": "x^5*y^9",
+        "slot": "g_5_9",
+        "weight": 18
+      },
+      {
+        "chart_image": "t^18*X^6",
+        "raw_exponents": {
+          "x": 6,
+          "y": 12
+        },
+        "raw_monomial": "x^6*y^12",
+        "slot": "g_6_12",
+        "weight": 18
+      },
+      {
+        "chart_image": "t^19*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 2
+        },
+        "raw_monomial": "x^3*y^2",
+        "slot": "g_3_2",
+        "weight": 19
+      },
+      {
+        "chart_image": "t^19*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 5
+        },
+        "raw_monomial": "x^4*y^5",
+        "slot": "g_4_5",
+        "weight": 19
+      },
+      {
+        "chart_image": "t^19*X^5",
+        "raw_exponents": {
+          "x": 5,
+          "y": 8
+        },
+        "raw_monomial": "x^5*y^8",
+        "slot": "g_5_8",
+        "weight": 19
+      },
+      {
+        "chart_image": "t^20*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 1
+        },
+        "raw_monomial": "x^3*y^1",
+        "slot": "g_3_1",
+        "weight": 20
+      },
+      {
+        "chart_image": "t^20*X^4",
+        "raw_exponents": {
+          "x": 4,
+          "y": 4
+        },
+        "raw_monomial": "x^4*y^4",
+        "slot": "g_4_4",
+        "weight": 20
+      },
+      {
+        "chart_image": "t^21*X^3",
+        "raw_exponents": {
+          "x": 3,
+          "y": 0
+        },
+        "raw_monomial": "x^3*y^0",
+        "slot": "g_3_0",
+        "weight": 21
+      }
+    ]
+  },
+  "schema": "GGV-8_28-D3-RAW-TO-GLOBAL-v1",
+  "scope": "artificial frozen control only; symbolic raw 2S/3S slots through weight 22"
+}

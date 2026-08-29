@@ -1,6 +1,26 @@
 # SHEET6-H3.md — Settling H3 (root-vertex kill of case-IV terminals)
 
-Status: COMPLETE + PROMOTED (2026-08-07, SHEET6-HIII-REVIEW.md: psi-budget
+## Controlling correction (2026-08-28)
+
+This is a historical 2026-08-07 producer, not the current survivor census.
+Its singleton-path `H3-psi` arithmetic survives, but its global sum must be
+read as a sum of **disjoint first-separation exit charges**, not the literal
+nested `Y(F_i)` weights used in the thesis.  The required inequality is now
+supplied by the actual-weight Corollary 7.1 repair `c253bd12...`, passed by
+the exact Terra hostile gate `727f5850...`; printed Proposition 7.5 `(22)`,
+the literal per-puncture `delta_a`, and fixed-baseline `(22-cl)` remain
+quarantined.  Thus the singleton `H3-psi` budget is promoted, but not “from
+printed thesis statements alone.”
+
+Corrected Proposition 8.4 applies only to a **nonroot** down vertex.  At
+`(0,y)`, `M=1` is allowed and Statement 8.5 supplies divisibility only.  The
+43-class and 28-hit books below were produced by a mixed-reading, capped
+pre-repair engine and are historical/non-exhaustive; a root-aware recensus is
+pending the exact unbounded-MU1 engine gate.  Independently, the corrected
+Sections 3--9 reconstruction `2763d970...` / `0729a576...` now review-closes
+`counterexample => td>=6`; it does not exclude `td=6`.
+
+Historical status: COMPLETE + PROMOTED (2026-08-07, SHEET6-HIII-REVIEW.md: psi-budget
 CONFIRMED, G2 closure stands; the §5 survivor book is SUPERSEDED by the
 composition, cases/hiii_compose.py). Auditor: Claude. All thesis citations read
 on-page (refs/sigray_full.pdf; page numbers = printed = pdf pages).
@@ -10,10 +30,10 @@ load-bearing): does a characteristic sequence terminating at the root vertex
 (refs/sigray_full.pdf)? Candidate: case IV (l) forces d_F < deg p_G at the
 root; Thm 6.1 (l_f < k_f) plus a chart-matching argument should forbid it.
 
-VERDICT: (b) H3 FALSE as a blanket kill — an explicit case-IV terminal chain
+HISTORICAL VERDICT: (b) H3 FALSE as a blanket kill — an explicit case-IV terminal chain
 satisfying every printed normalization constraint exists (§5b, r10/M4) —
-BUT a PROVED quantitative replacement (Theorem H3-psi, §4a) kills, from
-printed thesis statements alone: 100% of the IV-terminals of the thesis's
+BUT a quantitative replacement (Theorem H3-psi, §4a) kills, using the
+currently reviewed actual-weight/first-exit budget: 100% of the IV-terminals of the thesis's
 own St 9.12 chains (gap G2 is thereby CLOSED, §6(ii)), and, together with
 the (l)/(m)-consistency tests, closes the IV side of 8 of the 14
 IV-carrying campaign runs — including 6 of the 9 sanctioned ones
@@ -140,15 +160,19 @@ Read on-page (pp. 48-51):
     (l) d_F < deg(p_G); (m) d_F M_G/deg(p_G) in N.
   [(1-v)kappa_G = kappa-bar_G in campaign notation. Campaign extraction §0a
   verbatim-confirmed.]
-- St 9.4 (p. 49) IS A ONE-PARAMETER FAMILY OF BUDGETS, not just (26):
+- St 9.4 (p. 49) PRINTS A ONE-PARAMETER FAMILY OF BUDGETS, not just (26):
   "Let F_1,...,F_n in V_a cap T_a^searrow be pairwise different. Assume that
   for psi in N one has psi l_f < k_f. Then
       sum_i lambda_{F_i} <= td(f,g) - 1 - psi.        (25)
   In particular, sum_i lambda_{F_i} <= td(f,g) - 2.   (26)"
-  Proof (read): (0,x) in T_a^nearrow => exists G in T_{a,cv} cap T_{a,x}
+  Attempted printed proof (read): (0,x) in T_a^nearrow => exists G in T_{a,cv} cap T_{a,x}
   (St 7.3); St 3.11 => pi(G) > psi; kappa_G(pi(G)-1) in N and > psi-1, so
   >= psi; Cor 7.1 (global budget td-1) => sum lambda + psi <= td - 1.
-  I.e. the x-side pole direction eats psi units of the global td-1 budget,
+  The printed derivation is not itself licensed because its Section 7
+  ledger uses the invalid `(22)`/literal-`Y` machinery.  The 2026-08-28
+  actual-weight repair plus singleton first-separation ownership proves the
+  same inequality.  Thus the x-side pole direction eats psi units of the
+  repaired global td-1 budget,
   and psi is limited ONLY by psi < k_f/l_f. St 9.5/9.12 use only psi = 1;
   psi >= 2 is available whenever k_f/l_f > 2 — and case IV's own data
   certifies exactly that (§4).
@@ -180,20 +204,26 @@ vertex (Prop 9.2), with terminal step in case (IV) of Prop 9.3, G :=
 F_{n-1}. Set
     R := deg(p_G)/d_F   (d_F = d_{(0,y)}, the value in 9.3(k)),
     psi := ceil(R) - 1  (= the largest integer < R; R > 1 by (l)).
-Then psi >= 1 and
-    sum_{i=0}^{n} lambda_{F_i} <= td(f,g) - 1 - psi.        (*)
+For each edge let `E_i` be its first-separation exit set and put
+`lambda_i^exit = sum_(H in E_i) kappa_H(pi(H)-1)`.  Then psi >= 1 and
+    sum_{i=0}^{n} lambda_i^exit <= td(f,g) - 1 - psi.        (*)
 In particular any characteristic sequence whose terminal step is case IV
-with sum lambda_{F_i} > td - 1 - psi is contradictory.
+with sum of exit charges greater than `td - 1 - psi` is contradictory.
 
 Proof. By (l) (p. 51), d_F < deg(p_G), so R > 1 and psi >= 1. By the §2a
 chain (Lemma 2.1(i), St 3.12, St 3.17(i)): k_f >= deg(p_G) and l_f = d_F,
 hence k_f/l_f >= R > psi, i.e. psi l_f < k_f. The F_i are pairwise
 different elements of V_a cap T_a^searrow (Props 6.7/6.8/9.2 — same use as
-St 9.5). Statement 9.4, inequality (25), applied with THIS psi (not just
-psi = 1 as in (26)/St 9.5) gives (*). QED.
+St 9.5).  Assign each critical-value cluster to its unique first-separation
+edge.  The `E_i` are disjoint, and the x-side `psi` cluster lies in the
+other tree component.  Apply repaired Corollary 7.1 once to this distinct
+union; the actual-weight bound gives (*). QED.
 
 Remarks.
-- (*) uses only printed thesis statements; the sole "new" content is
+- The arithmetic certification of `psi` uses only the printed thesis
+  statements; the global inequality additionally uses the reviewed
+  actual-weight Corollary 7.1 and singleton first-separation theorem.  The
+  arithmetic content is
   noticing that case IV's own condition (l) certifies the hypothesis
   psi l_f < k_f of St 9.4 at psi = ceil(R)-1, because the terminal step
   pins l_f = d_F and k_f >= deg(p_G). This is the chart-matching argument
@@ -214,8 +244,8 @@ Remarks.
 A case-IV terminal with data satisfying (j),(k),(l),(m) and
 sum lambda <= td - 1 - psi violates NO statement of the thesis that this
 audit could locate (§§2-8 swept for root-vertex constraints: Lemma 2.1
-(i)-(iv), Prop 6.1, Thm 6.1, Prop 6.5, St 3.12, St 9.2, Prop 8.4 at the
-root — all satisfiable by such data; Lemma 2.1(iv) k_g/k_f = beta/alpha
+(i)-(iv), Prop 6.1, Thm 6.1, Prop 6.5, St 3.12 and St 9.2; corrected
+Prop 8.4 imposes no condition at the root.  Lemma 2.1(iv) k_g/k_f = beta/alpha
 not in N* is automatic from alpha >= 2; the root M is a free parameter
 even in the thesis's own terminal possibilities "for some M in N",
 9.7(iii)/9.9(iii)/9.10(iii)). The consistency region is nonempty AND
@@ -293,9 +323,10 @@ hand-check in cases/h3_check.py run log):
   k_f = deg(p_{(0,y)}) >= 8j; single-root case k_f = 8j.
   Normalization audit: l_f < k_f (Thm 6.1) ok; (k_g,l_g) = (5/4)(8j,4j) =
   (10j,5j) in N^2, k_f/k_g = 4/5 = alpha/beta ok (Lemma 2.1(i),(ii));
-  k_g/k_f = 5/4 not in N* (Lemma 2.1(iv)) ok; M_{(0,y)} != 1 (Prop 8.4)
-  satisfiable (root M is unconstrained by the chain — thesis's own
-  terminals print "M in N"); budget: psi_max = 1 (k_f/l_f = 2), St 9.4:
+  k_g/k_f = 5/4 not in N* (Lemma 2.1(iv)) ok; corrected Prop 8.4 supplies
+  no root restriction, so `M_(0,y)=1` is allowed (Statement 8.5 gives only
+  `M_(0,y)|M_G`; the thesis's terminals print "M in N"); budget:
+  psi_max = 1 (k_f/l_f = 2), repaired singleton exit inequality:
   Sum lambda = 2 <= td - 1 - 1 = 3 ok. EVERY printed constraint holds.
 The td=6 survivors have the same structure; recurring surviving IV-parent
 families: (1/2,nu,2,(nu+1)/2) [R=2], (1/3,nu,3,(nu+1)/3) [R=3/2],
@@ -306,8 +337,8 @@ families: (1/2,nu,2,(nu+1)/2) [R=2], (1/3,nu,3,(nu+1)/3) [R=3/2],
 
 (i) CAMPAIGN td=6 TABLE (SHEET6-CAMPAIGN.md §5). Replace the single
 hypothesis H3 by the PROVED kill set {(l)-test, (m)-test, psi-budget (*)}
-(call it H3q; trust perimeter = the printed statements + H1/H4 + AF2 for
-engine-lambda minima). Then:
+(call it H3q; current trust perimeter = the printed arithmetic statements,
+actual-weight/first-exit repair, H1/H4, and AF2 for engine exit minima). Then:
 - r2 and r3: both IV shapes killed by (*) (psi=2) => "EXCLUDED mod H3"
   upgrades to EXCLUDED (mod H1,H2,H4,AF2/AF3) — H3 no longer needed.
 - r8/M2 and r9/M3 (both SANCTIONED): every IV hit has case IV impossible
@@ -328,7 +359,8 @@ Net: the IV book shrinks from "~100 shapes, all hostage to H3" to
 28 at td=6), each pinned with Q-data and R in {3/2, 2, 5/3, 3}.
 
 (ii) THESIS td<=5 PROOF (St 9.12, p. 60). G2 is CLOSED, in the thesis's
-favor: every IV-terminal of every row-4 chain dies by St 9.4's (25) at
+favor: every IV-terminal of every row-4 chain dies by the repaired form of
+St 9.4's (25) at
 psi = ceil(R)-1 in {2,3}, computable from the terminal's own printed data,
 with the printed lambda >= 2 annotations of St 9.6(iii)/(iv)/9.11 — no
 engine input needed. St 9.12's proof is repairable verbatim: replace "or
@@ -339,7 +371,11 @@ thesis's td>=6 theorem REMAINS incomplete as printed for the G3 rows: row
 any printed statement located here — so "incomplete as printed" is now
 sharpened from "unwritten cases" to "cases the printed kill set provably
 does not decide" (row 10 stays covered by Orevkov/Domrina/Zoladek
-externally, as RECON already notes).
+externally, as RECON already notes).  Current status: the separate corrected
+Section 9 reconstruction `2763d970...`, hostile-reviewed at `0729a576...`,
+does cover rows 1, 5, 7 and 10 by their pinned nonroot pole `M=1` and closes
+row 4 with repaired first-exit budgets.  Hence `counterexample => td>=6` is
+review-closed at the internal repair tier, while `td=6` remains open.
 
 (iii) III-TAIL PRIORITY (campaign §6 items 2-3). PRIORITY RISES SHARPLY.
 Every surviving IV chain in §5 passes through a case-III step (or IIb/
@@ -355,11 +391,11 @@ closure inherits the same targets. The two-pole (3,3) configuration
 
 ## 7. Side findings + trust perimeter
 
-- SF1 (NEW GAP, campaign-level): sequences can also TERMINATE at (0,y)
+- SF1 (HISTORICAL PRE-ROOT-AWARE SCAN): sequences can also TERMINATE at (0,y)
   via cases I/II/III (Prop 9.3's (I)-(III) do not exclude F = (0,y); only
   ONE of the four cases can apply, and which one depends on V_{1,a}/V_{2,a}
   membership of (0,y), i.e. on the root count of p_{(0,y)} — St 3.16).
-  The engine models termination ONLY via case IV. A scan (h3_check.py,
+  The old engine modeled termination ONLY via case IV. A capped scan (h3_check.py,
   bottom) finds 28 CONT children with (nu_F, kap_F) = (1,1) — exactly the
   root's St 9.2 signature — all case-I self-loop shapes (1/2,1,2,1) and
   (1/3,1,3,1) at lambda >= 1..2, on r10/M4 and td=6 entries r8/M6, r9/M6,
@@ -367,11 +403,15 @@ closure inherits the same targets. The two-pole (3,3) configuration
   there consistently (k_f/l_f = 2 resp. 3, psi = 1 resp. 2 — budget holds).
   These are additional survivor-candidates OUTSIDE the IV book. Row 4 is
   unaffected (its printed possibility list contains no (nu,kap)=(1,1)
-  shape, verified against St 9.6-9.11), so (ii) above stands.
+  shape, verified against St 9.6-9.11), so (ii) above stands.  These counts
+  are not exhaustive: the old `KMAX` truncation misses zero-cost unbounded
+  MU1 families (for example the exact `l=98` root witness).  Use only the
+  forthcoming root-aware recensus after hostile review.
 - Trust perimeter of §4a: printed statements Lemma 2.1, Thm 6.1, St 3.12,
-  St 3.17, Prop 9.3(IV), St 9.4/(25), St 8.1/8.3 — all read on-page here;
-  plus the campaign's H1 (Prop 9.3 arithmetic) and, for engine-lambda
-  minima only, AF2. The row-4 repair (§6(ii)) avoids AF2 entirely.
+  St 3.17, Prop 9.3(IV), St 8.1/8.3 — all read on-page here; the reviewed
+  actual-weight repair `c253bd12...` / `727f5850...`; and the singleton
+  first-separation ownership theorem.  Engine exit-charge minima additionally
+  use AF2.  The row-4 repair (§6(ii)) avoids AF2 entirely.
 - The survivors of §5 are Q-level consistent chains (necessary conditions).
   Conditions NOT decidable at Q-level and not checked: 9.3(IV)(i)
   (nu_G = kappa_G), Puiseux-structural admissibility of each step
@@ -389,11 +429,11 @@ closure inherits the same targets. The two-pole (3,3) configuration
 
 ## 8. Reproduction
 
-    cd cases && python3 h3_check.py          # full sweep, ~4 min, exact
+    cd cases && python3 h3_check.py          # historical capped sweep only
     # prints the §5 table counts, per-hit dispositions, survivor traces
     # (incl. the §5b exhibit) and the SF1 root-lookalike scan (28 hits).
     python3 sheet6_campaign.py report        # unchanged campaign digest
 
-h3_check.py is read-only w.r.t. the campaign driver (imports step/
+h3_check.py was read-only w.r.t. the campaign driver (imports step/
 entry_nodes; BFS replicates bash() including budget/M=1/loop pruning and
-depth cap 7).
+depth cap 7).  It is not the current exhaustive root-aware certificate.

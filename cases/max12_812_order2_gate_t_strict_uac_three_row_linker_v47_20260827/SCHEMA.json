@@ -1,0 +1,188 @@
+{
+  "schema_id": "JC2-GATE-T-STRICT-UAC-THREE-ROW-LINKER-V47",
+  "schema_version": 1,
+  "date": "2026-08-27",
+  "status": "PROVISIONAL_PENDING_DIFFERENT_MODEL_REVIEW",
+  "scope": {
+    "base_ring": "Z[1/6]",
+    "theorem_type": "radical/set-theoretic and normalized-DVR-arc emptiness",
+    "direct_lemma_open": "D(rho) intersect (D(A0c) union D(A1))",
+    "endpoint_localization_policy": "retain the resolved frozen endpoint localization; the direct lemma never removes an upstream chart factor",
+    "transport_direction": "D1 emptiness to total arcs by factorization through the frozen jet-reindexing map",
+    "reverse_transport": "forbidden",
+    "scheme_unit_ideal": false,
+    "root_allocation_used": false,
+    "baseline_box": "a=1..6, d=1..3, c=a+d>=3, registered strict r-floor",
+    "exclusions": [
+      "rho=0 ramified fibre",
+      "equality faces",
+      "positive-order leading loads",
+      "a=7 k6 tie and all later load-first cells",
+      "G>=28 row-2 target wall",
+      "T_C2>=32 row-4 target wall",
+      "exceptional E=(a,d)=(1,3)",
+      "contacts (a,c,r)=(2,5,3),(2,5,4)",
+      "registered cells (a,d,r)=(1,2,2),(3,3,4),(4,3,4)",
+      "staged Rees charts and terminal receiver",
+      "strict-fan cover, Gate T, order two, maximum twelve, JC2"
+    ]
+  },
+  "equation_names": {
+    "three_row": "g-triple-v1",
+    "uniform_emitter": "emitter-7-v1"
+  },
+  "tuple_convention": {
+    "fields": ["a", "d", "c", "r_min"],
+    "relation": "c=a+d",
+    "tail_meaning": "r>=r_min",
+    "unlabelled_triples": "forbidden"
+  },
+  "generated_manifest_path": "cases/max12_812_order2_gate_t_strict_uac_three_row_linker_v47_20260827/GENERATED_MANIFESTS.json",
+  "chart": {
+    "L": "z^2-rho^2",
+    "A0": "A1*z+A0c",
+    "C0": "(C1*z+C0c)/2",
+    "shifted_leading_names": ["A0c", "A1", "C0c", "C1"],
+    "forbidden_stage_zero_names": ["a0", "a1", "c0", "c1", "rs", "cs"]
+  },
+  "literal_rows": {
+    "Phi1": "h1",
+    "Phi2": "h2",
+    "Phi4": "h4+(P/2)*h2",
+    "row_origin": "general_rho_literal_Phi",
+    "forbidden_rows": ["h4", "unbridged_H", "rho0_face_as_general_rho"]
+  },
+  "coefficient_pins": {
+    "AC_primitive": {
+      "summand": "unloaded", "load": null, "fixed_sigma": 10,
+      "R": 0, "A": 1, "C": 1, "pole": 1, "coefficient": "3/4"
+    },
+    "C2_primitive": {
+      "summand": "unloaded", "load": null, "fixed_sigma": 10,
+      "R": 0, "A": 0, "C": 2, "pole": 2, "coefficient": "3/8"
+    },
+    "g1": "(3/8)*(A0c*C1+A1*C0c)",
+    "g2": "(3/8)*(A0c*C0c+rho^2*A1*C1)",
+    "g4": "(3/32)*(C0c^2+rho^2*C1^2)"
+  },
+  "purity_policy": {
+    "G": "10+a+c",
+    "T_C2": "10+2*c",
+    "unique_through_G": "exactly AC_primitive, at G",
+    "global_pole_policy_through_T_C2": "only C2_primitive may have pole>=2; all others have pole=1",
+    "target_walls": {"G_strict_upper": 28, "T_C2_strict_upper": 32},
+    "allocation_local_pole_bit": "forbidden"
+  },
+  "source_pins": {
+    "lemma": {
+      "path": "xmodel/max12-812-order2-gate-t-strict-uac-three-row-syzygy-interface-sol-20260827.md",
+      "sha256": "2354703a559a5da2b4f2032560a5740b2cda1f3160f5c6598dcdbe1c4c1432be"
+    },
+    "original_replay": {
+      "path": "xmodel/max12-812-order2-gate-t-strict-uac-three-row-syzygy-interface-replay-20260827.py",
+      "sha256": "56edb06f57c657534b46f1c406363de7821e240ccc1eb7d8529be7eeb2c5c3f4"
+    },
+    "hostile_review": {
+      "path": "xmodel/max12-812-order2-gate-t-strict-uac-three-row-syzygy-interface-hostile-review-grok-20260827.md",
+      "sha256": "591049f064bbedbfd8ddf9482e94fa76257543c56115cf8322d2831c52b4f004"
+    },
+    "support_miner": {
+      "path": "cases/max12_812_order2_square_owner_d1_unique_ac_d23_small_a_support_miner_20260826/mine_support.py",
+      "sha256": "0e94e5408b8a3b5db06c8eff5c759df1c75a2e8bb4563aa4964f42c39952fe9a"
+    },
+    "tails": {
+      "path": "cases/max12_812_order2_u2_62_strict_rees_20260825/aws_compile_v2_jsat/run/output/compiled_v2/tails.json",
+      "byte_sha256": "d72f774c53c7dcb259eefc10ff2a02202e1049b61c17486b1ba22e3773813848",
+      "canonical_sha256": "6eed03d486e1cd9e8d990eed74a105293d383882bbae77d204eac190cce387e8",
+      "row_census": [36, 54, 58, 81, 89, 120, 131],
+      "total_census": 569
+    },
+    "tail_emitter": {
+      "path": "cases/max12_812_order2_square_load_ladder_20260826/compile_square_load_ladder.py",
+      "sha256": "77f25216f0ab17abb3a8f4be271b2ea38f883806a72523cdca1be659df90dcdc"
+    },
+    "uniform_schema": {
+      "path": "cases/max12_812_order2_gate_t_uniform_contact_naturality_v46_20260827/SCHEMA.json",
+      "sha256": "796eb0847e7b0bb7972c2fd7b3db10bd2dcfd2fd85c5bbaa47e3a239f8b02673"
+    },
+    "uniform_freeze": {
+      "path": "cases/max12_812_order2_gate_t_uniform_contact_naturality_v46_20260827/FREEZE.sha256",
+      "sha256": "b39f66e2cb7cac16dd1c940814b44e8aff3cd7c7df1ad9347beb5f558187ae22"
+    },
+    "uniform_review": {
+      "path": "xmodel/max12-812-order2-gate-t-uniform-contact-naturality-v46-hostile-review-grok-20260827.md",
+      "sha256": "13450b727aad5a27f40ba22333b91b03765009a41de8aa36c330a5cd02347e71",
+      "consumed_scope": "V0,V1,V3,V4 only; V2 shifted-root maps are not consumed"
+    }
+  },
+  "endpoint_authorities": {
+    "D1_A2_A5": {
+      "status": "promoted",
+      "domain": "d=1,a=2..5,c=a+1,closed r>=a",
+      "localization": "D(p*k10)",
+      "theorem_type": "arcwise/set-theoretic fixed-band emptiness",
+      "authority": {"path": "xmodel/max12-812-order2-square-d1-finite-band-a2-a5-promotion-20260826.md", "sha256": "973f7953d42fdd994d9c7da8ea70fceffc2e8da9002b33f38ea1a17c6922d6d1"},
+      "review": {"path": "xmodel/max12-812-order2-square-d1-finite-band-a2-a5-hostile-review-grok-20260826.md", "sha256": "e03de4e1fc1816a7141c6bb8060b4a75c2a6b5a08ea4d56ca63582b875cad335"}
+    },
+    "D1_A6_A7": {
+      "status": "promoted",
+      "domain": "d=1,a=6..7,c=a+1,closed r>=a",
+      "localization": "D(p*k10)",
+      "theorem_type": "arcwise/set-theoretic fixed-band emptiness",
+      "authority": {"path": "xmodel/max12-812-order2-square-d1-load-transition-a6-a7-promotion-20260826.md", "sha256": "829ac12faceed48ad0ec599a60764d038835895bf33c2abce0dceb141605ea0f"},
+      "review": {"path": "xmodel/max12-812-order2-square-d1-load-transition-a6-a7-v2-hostile-review-grok-20260826.md", "sha256": "3e601cf34eb23270daa067794087155b7179607d27af01f84a60624447f949e3"}
+    },
+    "D23_LOW_A6": {
+      "status": "promoted",
+      "domain": "eleven listed d=2,3 low-a closed R tails",
+      "localization": "D(p*k0)",
+      "theorem_type": "arcwise/set-theoretic closed-R-tail emptiness",
+      "authority": {"path": "xmodel/max12-812-order2-square-d1-unique-ac-d23-lowa6-local-row-promotion-20260826.md", "sha256": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da"},
+      "review": {"path": "xmodel/max12-812-order2-square-d1-unique-ac-d23-lowa6-local-row-hostile-review-grok-20260826.md", "sha256": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3"}
+    }
+  },
+  "baseline_manifests": [
+    {"id":"A2D1","a":2,"d":1,"c":3,"r_min":2,"G":15,"T_C2":16,"endpoint_id":"D1_A2_A5","authority_sha256":"973f7953d42fdd994d9c7da8ea70fceffc2e8da9002b33f38ea1a17c6922d6d1","review_sha256":"e03de4e1fc1816a7141c6bb8060b4a75c2a6b5a08ea4d56ca63582b875cad335","inventory_sha256":"c254b7dc20a7fd27a17089f7828099b6b7608414029e0d4d1691be42cf719efc"},
+    {"id":"A3D1","a":3,"d":1,"c":4,"r_min":3,"G":17,"T_C2":18,"endpoint_id":"D1_A2_A5","authority_sha256":"973f7953d42fdd994d9c7da8ea70fceffc2e8da9002b33f38ea1a17c6922d6d1","review_sha256":"e03de4e1fc1816a7141c6bb8060b4a75c2a6b5a08ea4d56ca63582b875cad335","inventory_sha256":"53540a57526c76317df74d21bd05ed49f8b13ec8c1d32eaaf55c69a1d946825f"},
+    {"id":"A4D1","a":4,"d":1,"c":5,"r_min":4,"G":19,"T_C2":20,"endpoint_id":"D1_A2_A5","authority_sha256":"973f7953d42fdd994d9c7da8ea70fceffc2e8da9002b33f38ea1a17c6922d6d1","review_sha256":"e03de4e1fc1816a7141c6bb8060b4a75c2a6b5a08ea4d56ca63582b875cad335","inventory_sha256":"4908328a28e1e94a9590c2e44f380aa7494bc23f8be5b79923d76105bf93de62"},
+    {"id":"A5D1","a":5,"d":1,"c":6,"r_min":5,"G":21,"T_C2":22,"endpoint_id":"D1_A2_A5","authority_sha256":"973f7953d42fdd994d9c7da8ea70fceffc2e8da9002b33f38ea1a17c6922d6d1","review_sha256":"e03de4e1fc1816a7141c6bb8060b4a75c2a6b5a08ea4d56ca63582b875cad335","inventory_sha256":"17c742c90c3a6c26ab36de89b809b6eba3512115c1d82913e7ff0ab4ed31ed02"},
+    {"id":"A6D1","a":6,"d":1,"c":7,"r_min":6,"G":23,"T_C2":24,"endpoint_id":"D1_A6_A7","authority_sha256":"829ac12faceed48ad0ec599a60764d038835895bf33c2abce0dceb141605ea0f","review_sha256":"3e601cf34eb23270daa067794087155b7179607d27af01f84a60624447f949e3","inventory_sha256":"f3ad1ef960b1c6d5e2198ed84b0d2c8b877e281cd2c3ff2229b0c05f894de84e"},
+    {"id":"A2D2","a":2,"d":2,"c":4,"r_min":3,"G":16,"T_C2":18,"endpoint_id":"D23_LOW_A6","authority_sha256":"8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da","review_sha256":"841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3","inventory_sha256":"aa76089b220cdd27e817db51eb855d29074eb429ed6e42eaecbb3d19ce31b234"},
+    {"id":"A3D2","a":3,"d":2,"c":5,"r_min":3,"G":18,"T_C2":20,"endpoint_id":"D23_LOW_A6","authority_sha256":"8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da","review_sha256":"841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3","inventory_sha256":"de715f626f76f882344c1e5aae8bab6498af5481275e81faea5618361829a81a"},
+    {"id":"A4D2","a":4,"d":2,"c":6,"r_min":4,"G":20,"T_C2":22,"endpoint_id":"D23_LOW_A6","authority_sha256":"8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da","review_sha256":"841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3","inventory_sha256":"955f3ef6fe18831fd7afdc52ae515a9fda6117b929e0671e2be1e4b8647eed87"},
+    {"id":"A5D2","a":5,"d":2,"c":7,"r_min":5,"G":22,"T_C2":24,"endpoint_id":"D23_LOW_A6","authority_sha256":"8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da","review_sha256":"841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3","inventory_sha256":"229b802fe6eb706b759a21f45edf33c8e070eafeb6c97c888207d04c58d341e7"},
+    {"id":"A6D2","a":6,"d":2,"c":8,"r_min":6,"G":24,"T_C2":26,"endpoint_id":"D23_LOW_A6","authority_sha256":"8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da","review_sha256":"841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3","inventory_sha256":"4d80c48f0a777a9da19c68d4fedaf999ab88b3eddbebcde060c5313612994eda"},
+    {"id":"A5D3","a":5,"d":3,"c":8,"r_min":5,"G":23,"T_C2":26,"endpoint_id":"D23_LOW_A6","authority_sha256":"8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da","review_sha256":"841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3","inventory_sha256":"70c27992b4826a81468c884e1ebcbd8077f57fee35c4bf2b6028365e28783a60"},
+    {"id":"A6D3","a":6,"d":3,"c":9,"r_min":6,"G":25,"T_C2":28,"endpoint_id":"D23_LOW_A6","authority_sha256":"8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da","review_sha256":"841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3","inventory_sha256":"9b1c63d0deff232ab71110a79361a45c883f6df47f7e383225fbc6166e6fb677"}
+  ],
+  "raised_subtail_manifests": [
+    {"id":"A1D2_R3","a":1,"d":2,"c":3,"r_min":3,"G":14,"T_C2":16,"endpoint_id":"D23_LOW_A6","authority_sha256":"8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da","review_sha256":"841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3","inventory_sha256":"29b323c67a87c866f31b2dc1e180c6e54fbc933ccafee47ebe63017f31081308"},
+    {"id":"A2D3_R5","a":2,"d":3,"c":5,"r_min":5,"G":17,"T_C2":20,"endpoint_id":"D23_LOW_A6","authority_sha256":"8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da","review_sha256":"841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3","inventory_sha256":"f97dad19f583a482af962f32b7f9f87ea8c98ce551ddd144476fd23394c18c10","corroborating_total_promotion_sha256":"99d32a774795a113678487f52f53e0315939db2fe1b9cbf66ef775a5d031ba29"},
+    {"id":"A3D3_R5","a":3,"d":3,"c":6,"r_min":5,"G":19,"T_C2":22,"endpoint_id":"D23_LOW_A6","authority_sha256":"8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da","review_sha256":"841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3","inventory_sha256":"9f132a5d1e3a46cbecf67ae8c594ad5d31358a97e8cf0533395bc57f77b91892"},
+    {"id":"A4D3_R5","a":4,"d":3,"c":7,"r_min":5,"G":21,"T_C2":24,"endpoint_id":"D23_LOW_A6","authority_sha256":"8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da","review_sha256":"841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3","inventory_sha256":"33be0e94c5582aba422fe0facff4dd51bbd01a9029c54e18b9505b0bac011bd0"}
+  ],
+  "negative_controls": [
+    {"id":"A1D2_R2_RA2","a":1,"d":2,"c":3,"r":2,"reason":"RA2"},
+    {"id":"A2D3_R3_RA2","a":2,"d":3,"c":5,"r":3,"reason":"RA2"},
+    {"id":"A2D3_R4_RA2","a":2,"d":3,"c":5,"r":4,"reason":"RA2"},
+    {"id":"A3D3_R4_RA2","a":3,"d":3,"c":6,"r":4,"reason":"RA2"},
+    {"id":"A4D3_R4_RA2","a":4,"d":3,"c":7,"r":4,"reason":"RA2"},
+    {"id":"E_A1D3_R20_A3","a":1,"d":3,"c":4,"r":20,"reason":"A3"},
+    {"id":"A7D1_K6_TIE","a":7,"d":1,"c":8,"r":7,"reason":"NONUNIQUE_G"},
+    {"id":"A9D3_K2_TARGET","a":9,"d":3,"c":12,"r":9,"reason":"K2_OR_TARGET"}
+  ],
+  "required_mutations": [
+    "g1 coefficient 3/8 to 3/4",
+    "g4 coefficient 3/32 to 3/16",
+    "drop the factor 1/2 from C0",
+    "accept RA2 as C2",
+    "drop uniqueness through G on a=7",
+    "open G<28 on a synthetic target-wall manifest",
+    "open T_C2<32 on a synthetic target-wall manifest",
+    "substitute stage-zero names for shifted leading jets",
+    "offer rho=0 face rows as general-rho rows",
+    "replace Phi4 by h4",
+    "change AC primitive coefficient 3/4 to 1",
+    "pass an ambiguous unlabelled tuple"
+  ]
+}

@@ -1,0 +1,82 @@
+You are Grok 4.6 acting as an independent hostile mathematical reviewer in the
+plane Jacobian conjecture campaign. Work in /Users/dc/code/math/jc2.
+
+Audit this frozen producer packet, which provisionally claims field-valued
+emptiness of the complete fixed upper branch-P endpoint fixture:
+
+  ecf83ac7b380a18f939e60671a4e97290f9f68b51536c236b81f71bb6a6c5bb8
+    xmodel/ggv-upper-endpoint-uniform-d18-d22-fullmodes-sol-ultra-20260828.md
+  49d1acaf1a8b066e9de15005e97ce948b8b33bd38315a1e77dcdf945c9b9761d
+    cases/ggv_8_28_upper_endpoint_uniform_d18_d22_fullmodes_20260828/verify_uniform_d18_d22.py
+  f46d7afd8b4e1e7cb5c60b029f8660dc2f1bf0e8770724808a3451c8c4e9e684
+    cases/ggv_8_28_upper_endpoint_uniform_d18_d22_fullmodes_20260828/RESULT.json
+  0b9e0c17ad94a8b11f857a65f18caa34f45e771658be52d1452bba512af2ffd4
+    cases/ggv_8_28_upper_endpoint_uniform_d18_d22_fullmodes_20260828/README.md
+  1ab354e526a44d3aa7be2ff41fa4bbc7c0dbba8f059c033417651bd28325eefe
+    cases/ggv_8_28_upper_endpoint_uniform_d18_d22_fullmodes_20260828/SOURCE.sha256
+  1f6369c5cba8c3a149d83b3550f125b3125f7450c06419b4e7046e49ed96ad57
+    cases/ggv_8_28_upper_endpoint_uniform_d18_d22_fullmodes_20260828/EVIDENCE.sha256
+
+Frozen predecessor and authoritative source:
+
+  5904d7b19dc5d46d31a781150c4b6de9e62e32812b554006e92f78f9d76fd5d9
+    cases/ggv_8_28_upper_endpoint_uniform_d16_d17_fullmodes_20260828/verify_uniform_d16_d17.py
+  2a6f363df8fb4aef94f01d7a938e3bfcff15f6db49af3164e36367c9a6d1929a
+    cases/ggv_8_28_upper_endpoint_uniform_d16_d17_fullmodes_20260828/RESULT.json
+  ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0
+    cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json
+
+Required hostile review:
+
+1. Verify every charged hash. Independently reconstruct the complete
+   nine-mode Laurent recurrence through weight 22 and the literal raw rows
+   D18--D22; do not import the producer checker as the derivation. Recursively
+   replay the D16/D17 prefix or state its exact conditional role.
+2. Retain live c8 and possibly nonzero c16. Check all cross terms in the
+   producer's E,H,J,K,ELL definitions. Confirm or falsify exactly:
+
+     polar(g18)=c18/A^3+[(3B+2c8)E/4+3C^2/8-N/2]/A^2,
+     polar(g19)=[(3B+2c8)H/4+3CE/4-O/2]/A^2,
+     polar(g20)=c20/A^4+[(3B+2c8)J/4+3CH/4+3E^2/8-P/2]/A^2,
+     polar(g21)=[(3B+2c8)K/4+3CJ/4+3EH/4-S/2]/A^2.
+
+   Audit why literal polynomial-window compatibility forces c18=0 and
+   c20=0 at their birth rows and forces each remaining numerator into A^2.
+3. Before applying those kills, check the complete linked successor modes:
+   at D19 the c18 predecessor/same-row pieces should be +9/-9 times
+   c18*A'/A^2; at D21 the c20 pieces should be +12/-12 times c20*A'/A^3.
+   A successor row must not be credited with either kill.
+4. Independently reconstruct the literal G18--G21 degree windows, ranks and
+   nullities from all 513 serialized raw generators. Test that the recursive
+   characteristic coefficients really agree with a hypothetical raw point
+   in those admitted windows; mere polynomiality in a larger window is not
+   enough. Add live mutations that catch a dropped mode, cross term,
+   quotient A, and endpoint sign/window error.
+5. After the D21 relation, reconstruct the complete g22, including its
+   regular part, and determine its minimum A exponent. Verify the literal
+   convention and sign
+
+     D22_raw=-L22(g22),
+     L22(R)=-40*A^3*A'*R-8*A^4*R'.
+
+   Check that min A exponent >= -2 implies D22_raw in (A), that an optional
+   homogeneous c22/A^5 is annihilated, and that the authoritative row-22
+   target is the full polynomial 1 with no raw F22/G22 slot. Try hard to find
+   a missing predecessor, an allowed pole below -2, or a raw-window escape.
+6. Scope firewall: at most characteristic-zero field-valued emptiness of the
+   complete fixed upper branch-P fixture, conditional on the reviewed
+   D8--D17 prefix. No scheme ideal certificate, other GGV branch, unrestricted
+   branch-P, Keller-pair, or JC2 claim.
+
+Return separate PASS/REPAIR/FAIL verdicts for D18/c18, D19, D20/c20, D21,
+literal raw-window/source custody, endpoint transfer/sign, and scope, plus an
+overall verdict. Write only:
+
+  xmodel/ggv-upper-endpoint-uniform-d18-d22-fullmodes-hostile-review-grok46-20260828.md
+  xmodel/ggv-upper-endpoint-uniform-d18-d22-fullmodes-hostile-review-grok46-check.py
+  xmodel/ggv-upper-endpoint-uniform-d18-d22-fullmodes-hostile-review-grok46-RESULT.json
+
+End with exact SHA-256 values for every charged and new artifact. Do not edit
+the charged packet or canonical files. Do not access, list, search, build,
+status, or modify jc2-lean. Light local exact arithmetic only; no heavy local
+CAS.

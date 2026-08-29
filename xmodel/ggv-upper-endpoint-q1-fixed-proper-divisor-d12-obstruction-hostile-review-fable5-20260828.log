@@ -1,0 +1,16 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+## Verdict: PASS
+
+The D12 obstruction claim is correct, and I confirmed it with a fully independent rebuild — my checker implements its own polynomial and Gaussian-rational arithmetic and imports no campaign code. Every serialized artifact in the producer packet (N12, quotient/remainder, gcd = A·B, Nred, Bezout cofactors, base row, the 28×16 census of rank 12 / augmented rank 13, and the dual pairing 11009739/16384) reproduced exactly. No mathematical error; custody clean.
+
+**The review's main addition** is an exact bridge identity the producer never stated: `3A·base = 2A·N12′ − 8A′·N12`, equivalently `base = 8A⁴·(g12_char)′`. With the F12-elimination identity `12F12′G0 + 4F12G0′ = 12A⁴(A²F12)′`, this shows D12 = 0 *forces* `G12 = Nred/(12C³B²) + (3/2)A²F12 + c12`. That upgrades the packet in two ways: the obstruction holds even for F12, G12 of **arbitrary degree** (the raw window is not needed for infeasibility, only for the producer's dual certificate — a would-be illicit `G12_X13` column escapes the dual with pairing −104), and it is **root-local**: exact pole orders 3, 2, 2, 2 at X = 1, −1, i, −i, verified via Nred(1) = −12, Nred(−1) = −3969/4096, Nred(±i) = 2511/4096 ∓ 1377/4096·i with exact Gaussian arithmetic. Each B-root obstructs even if G12 is allowed poles at all other roots, which is precisely the decoupled failure the single-root transport / two-scale model predicts — one honest data point for that proposal, which remains unreviewed and unpromoted by this fixture.
+
+**All eight mandatory checks passed**, including: predecessor legality (formulas, windows, D0..D11 ≡ 0, A∤W, G²=F³ through weight 11 pinning G as the true F^(3/2)); the recurrence coefficients verified by two independent routes at 66 lower-weight pairs plus weight 12 (noting G11 = 0 and F8..F11 = 0 silence the i = 1, 8..11 terms on this fixture); the 16-slot inventory rebuilt from RAW_INPUT with the w = 3x−y+8/12 law re-verified on all 442 records; nullity 4 realized by explicit in-window null vectors; and a seven-mutation hostile matrix, each caught by a named check — notably, the null vectors catch operator sign/coefficient mutations that rank, augmented rank, and the dual functional are all blind to.
+
+**Two nits, no verdict impact:** "g12_polar = Nred/(12C³B²)" is actually the full coefficient (it contains a nonzero degree-2 polynomial part; the strict polar part is the separately-serialized remainder/(12A⁴)), and the checkers exec their pinned predecessors at import time before asserting the hash pins.
+
+Deliverables:
+- Report: `xmodel/ggv-upper-endpoint-q1-fixed-proper-divisor-d12-obstruction-hostile-review-fable5-20260828.md` — sha256 `848988d7dcc5d4d40b5ae62a683535de4f6a4648947c09ad5f52d3187d4ecc3d`
+- Checker: `…-check.py` — sha256 `e933da5b6b329758eb44a2001c95f7a0e339b79ca49c59db84d6fbce17a55ef6`, prints `ALL CHECKS PASSED` with the mutation matrix
+
+Scope firewalls are stated in the report: this kills only the one frozen rational D11 prefix; no proper-divisor-stratum, branch-P, transport-universal, scheme-unit, endpoint, or JC2 conclusion is licensed.

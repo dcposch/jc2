@@ -1,0 +1,36 @@
+// Exact negative/mutation control for quotient normal-form rank adapter.
+ring ambient=0,(q0,q2),dp;
+poly DISPLAYED_FACTOR=q2;
+ideal I=DISPLAYED_FACTOR;
+ideal PINNED_SB=std(I);
+poly FACTOR_NF=reduce(DISPLAYED_FACTOR,PINNED_SB);
+poly MUTATION_NF=reduce(DISPLAYED_FACTOR+1,PINNED_SB);
+matrix RAW[2][2]=q2,q0,0,1;
+matrix REDUCED[2][2];
+int i;
+int j;
+for(i=1;i<=2;i=i+1)
+{
+  for(j=1;j<=2;j=j+1)
+  {
+    REDUCED[i,j]=reduce(RAW[i,j],PINNED_SB);
+  }
+}
+poly RAW_DETERMINANT=det(RAW);
+poly DETERMINANT_NF=reduce(RAW_DETERMINANT,PINNED_SB);
+matrix MUTATED[2][2]=q2+1,0,0,1;
+poly MUTATED_RAW_DETERMINANT=det(MUTATED);
+poly MUTATED_DETERMINANT_NF=reduce(MUTATED_RAW_DETERMINANT,PINNED_SB);
+print("DISPLAYED_Q2_AMBIENT_NONZERO="+string(DISPLAYED_FACTOR!=0));
+print("DISPLAYED_Q2_NF_ZERO="+string(FACTOR_NF==0));
+print("RAW_Q2_MINOR_AMBIENT_NONZERO="+string(RAW_DETERMINANT!=0));
+print("RAW_Q2_MINOR_NF_ZERO="+string(DETERMINANT_NF==0));
+print("MUTATED_MINOR_NF_NONZERO="+string(MUTATED_DETERMINANT_NF!=0));
+print("ENTRY_Q2_NF_ZERO="+string(REDUCED[1,1]==0));
+if(DISPLAYED_FACTOR==0 || FACTOR_NF!=0 || MUTATION_NF==0 || RAW_DETERMINANT==0 || DETERMINANT_NF!=0 || MUTATED_DETERMINANT_NF==0 || REDUCED[1,1]!=0)
+{
+  print("FATAL_ADVERSARIAL_Q2_REDUCER_SELFCHECK");
+  quit;
+}
+print("ADVERSARIAL_Q2_REDUCER_SELFCHECK_PASS");
+quit;

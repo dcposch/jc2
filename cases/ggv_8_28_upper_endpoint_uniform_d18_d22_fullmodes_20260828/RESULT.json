@@ -1,0 +1,1232 @@
+{
+  "calculation": {
+    "defects": {
+      "E": "F10-C*Z/4-Q^2/4-R*T/2-V*Y/16",
+      "ELL": "F14-C*T-2*E*Q-E*R*Z/2-E*V^2/64-3*H*R-3*H*V*Z/16-H*Z^3/64-J*V/2-3*J*Z^2/8-5*K*Z/4-Y^2/4",
+      "H": "F11-E*Z/2-Q*T/2-R*Y/2-C*V/8",
+      "J": "F12-C*R-E*V/4-E*Z^2/16-3*H*Z/4-Q*Y/2-T^2/4",
+      "K": "F13-C*Q-2*E*R-E*V*Z/16-3*H*V/8-3*H*Z^2/16-J*Z-T*Y/2"
+    },
+    "endpoint": {
+      "D22_raw_mod_A": [],
+      "complete_g22_A_exponents": [
+        -2,
+        0,
+        2,
+        4,
+        6,
+        8
+      ],
+      "conclusion": "D22_raw is in (A), so it cannot equal the target polynomial 1",
+      "minimum_A_exponent": -2,
+      "optional_c22_note": "L22(c22/A^5)=0, so an unrecorded endpoint homogeneous scalar changes nothing",
+      "raw_identity": "D22_raw=-L22(g22)"
+    },
+    "linked_mode_firewalls": {
+      "c18_at_D19": {
+        "predecessor": [
+          {
+            "A_exponent": -2,
+            "coefficient": "9",
+            "monomial": [
+              "a_x",
+              "c18"
+            ]
+          }
+        ],
+        "same_row": [
+          {
+            "A_exponent": -2,
+            "coefficient": "-9",
+            "monomial": [
+              "a_x",
+              "c18"
+            ]
+          }
+        ],
+        "sum": []
+      },
+      "c20_at_D21": {
+        "predecessor": [
+          {
+            "A_exponent": -3,
+            "coefficient": "12",
+            "monomial": [
+              "a_x",
+              "c20"
+            ]
+          }
+        ],
+        "same_row": [
+          {
+            "A_exponent": -3,
+            "coefficient": "-12",
+            "monomial": [
+              "a_x",
+              "c20"
+            ]
+          }
+        ],
+        "sum": []
+      }
+    },
+    "polar_coefficients": {
+      "g18_before_relation": [
+        {
+          "A_exponent": -3,
+          "coefficient": "1",
+          "monomial": [
+            "c18"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/16",
+          "monomial": [
+            "b",
+            "d",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "b",
+            "f10"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/16",
+          "monomial": [
+            "b",
+            "q",
+            "q"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/8",
+          "monomial": [
+            "b",
+            "r",
+            "t"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/64",
+          "monomial": [
+            "b",
+            "v",
+            "y"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/8",
+          "monomial": [
+            "c8",
+            "d",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "1/2",
+          "monomial": [
+            "c8",
+            "f10"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/8",
+          "monomial": [
+            "c8",
+            "q",
+            "q"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/4",
+          "monomial": [
+            "c8",
+            "r",
+            "t"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/32",
+          "monomial": [
+            "c8",
+            "v",
+            "y"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/8",
+          "monomial": [
+            "d",
+            "d"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "n"
+          ]
+        }
+      ],
+      "g19_before_relation": [
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/32",
+          "monomial": [
+            "b",
+            "d",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/8",
+          "monomial": [
+            "b",
+            "e",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "b",
+            "f11"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/8",
+          "monomial": [
+            "b",
+            "q",
+            "t"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/8",
+          "monomial": [
+            "b",
+            "r",
+            "y"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/16",
+          "monomial": [
+            "c8",
+            "d",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/4",
+          "monomial": [
+            "c8",
+            "e",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "1/2",
+          "monomial": [
+            "c8",
+            "f11"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/4",
+          "monomial": [
+            "c8",
+            "q",
+            "t"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/4",
+          "monomial": [
+            "c8",
+            "r",
+            "y"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "d",
+            "e"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "o"
+          ]
+        }
+      ],
+      "g20_before_relation": [
+        {
+          "A_exponent": -4,
+          "coefficient": "1",
+          "monomial": [
+            "c20"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/4",
+          "monomial": [
+            "b",
+            "d",
+            "r"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/16",
+          "monomial": [
+            "b",
+            "e",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/64",
+          "monomial": [
+            "b",
+            "e",
+            "z",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "b",
+            "f12"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-9/16",
+          "monomial": [
+            "b",
+            "h",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/8",
+          "monomial": [
+            "b",
+            "q",
+            "y"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/16",
+          "monomial": [
+            "b",
+            "t",
+            "t"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "c8",
+            "d",
+            "r"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/8",
+          "monomial": [
+            "c8",
+            "e",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/32",
+          "monomial": [
+            "c8",
+            "e",
+            "z",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "1/2",
+          "monomial": [
+            "c8",
+            "f12"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/8",
+          "monomial": [
+            "c8",
+            "h",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/4",
+          "monomial": [
+            "c8",
+            "q",
+            "y"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/8",
+          "monomial": [
+            "c8",
+            "t",
+            "t"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "d",
+            "h"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/8",
+          "monomial": [
+            "e",
+            "e"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "p"
+          ]
+        }
+      ],
+      "g21_before_relation": [
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/4",
+          "monomial": [
+            "b",
+            "d",
+            "q"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/2",
+          "monomial": [
+            "b",
+            "e",
+            "r"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/64",
+          "monomial": [
+            "b",
+            "e",
+            "v",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "b",
+            "f13"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-9/32",
+          "monomial": [
+            "b",
+            "h",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-9/64",
+          "monomial": [
+            "b",
+            "h",
+            "z",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/4",
+          "monomial": [
+            "b",
+            "j",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/8",
+          "monomial": [
+            "b",
+            "t",
+            "y"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "c8",
+            "d",
+            "q"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1",
+          "monomial": [
+            "c8",
+            "e",
+            "r"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/32",
+          "monomial": [
+            "c8",
+            "e",
+            "v",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "1/2",
+          "monomial": [
+            "c8",
+            "f13"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/16",
+          "monomial": [
+            "c8",
+            "h",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/32",
+          "monomial": [
+            "c8",
+            "h",
+            "z",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "c8",
+            "j",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/4",
+          "monomial": [
+            "c8",
+            "t",
+            "y"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "d",
+            "j"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "e",
+            "h"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "s"
+          ]
+        }
+      ],
+      "g22_after_D21": [
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/4",
+          "monomial": [
+            "b",
+            "d",
+            "t"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/2",
+          "monomial": [
+            "b",
+            "e",
+            "q"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/8",
+          "monomial": [
+            "b",
+            "e",
+            "r",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/256",
+          "monomial": [
+            "b",
+            "e",
+            "v",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "b",
+            "f14"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-9/4",
+          "monomial": [
+            "b",
+            "h",
+            "r"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-9/64",
+          "monomial": [
+            "b",
+            "h",
+            "v",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/256",
+          "monomial": [
+            "b",
+            "h",
+            "z",
+            "z",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/8",
+          "monomial": [
+            "b",
+            "j",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-9/32",
+          "monomial": [
+            "b",
+            "j",
+            "z",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-15/16",
+          "monomial": [
+            "b",
+            "k",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/16",
+          "monomial": [
+            "b",
+            "y",
+            "y"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "c8",
+            "d",
+            "t"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1",
+          "monomial": [
+            "c8",
+            "e",
+            "q"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/4",
+          "monomial": [
+            "c8",
+            "e",
+            "r",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/128",
+          "monomial": [
+            "c8",
+            "e",
+            "v",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "1/2",
+          "monomial": [
+            "c8",
+            "f14"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/2",
+          "monomial": [
+            "c8",
+            "h",
+            "r"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/32",
+          "monomial": [
+            "c8",
+            "h",
+            "v",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/128",
+          "monomial": [
+            "c8",
+            "h",
+            "z",
+            "z",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/4",
+          "monomial": [
+            "c8",
+            "j",
+            "v"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-3/16",
+          "monomial": [
+            "c8",
+            "j",
+            "z",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-5/8",
+          "monomial": [
+            "c8",
+            "k",
+            "z"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/8",
+          "monomial": [
+            "c8",
+            "y",
+            "y"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "d",
+            "k"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/4",
+          "monomial": [
+            "e",
+            "j"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "3/8",
+          "monomial": [
+            "h",
+            "h"
+          ]
+        },
+        {
+          "A_exponent": -2,
+          "coefficient": "-1/2",
+          "monomial": [
+            "u"
+          ]
+        }
+      ]
+    },
+    "relations": {
+      "D18": "c18=0; (3*B+2*c8)*E/4+3*C^2/8-N/2=A^2*O",
+      "D19": "(3*B+2*c8)*H/4+3*C*E/4-O/2=A^2*P",
+      "D20": "c20=0; (3*B+2*c8)*J/4+3*C*H/4+3*E^2/8-P/2=A^2*S",
+      "D21": "(3*B+2*c8)*K/4+3*C*J/4+3*E*H/4-S/2=A^2*U"
+    }
+  },
+  "literal_raw_window_certificates": {
+    "G18": {
+      "columns": [
+        {
+          "G_degree": 2,
+          "literal_D_row": {
+            "1": "-16",
+            "13": "352",
+            "17": "-112",
+            "5": "160",
+            "9": "-384"
+          },
+          "slot": "g_2_0"
+        },
+        {
+          "G_degree": 3,
+          "literal_D_row": {
+            "10": "-432",
+            "14": "384",
+            "18": "-120",
+            "2": "-24",
+            "6": "192"
+          },
+          "slot": "g_3_3"
+        },
+        {
+          "G_degree": 4,
+          "literal_D_row": {
+            "11": "-480",
+            "15": "416",
+            "19": "-128",
+            "3": "-32",
+            "7": "224"
+          },
+          "slot": "g_4_6"
+        },
+        {
+          "G_degree": 5,
+          "literal_D_row": {
+            "12": "-528",
+            "16": "448",
+            "20": "-136",
+            "4": "-40",
+            "8": "256"
+          },
+          "slot": "g_5_9"
+        },
+        {
+          "G_degree": 6,
+          "literal_D_row": {
+            "13": "-576",
+            "17": "480",
+            "21": "-144",
+            "5": "-48",
+            "9": "288"
+          },
+          "slot": "g_6_12"
+        }
+      ],
+      "conclusion": "the displayed polynomial raw window is exact and has no homogeneous kernel; Laurent cancellation must occur before insertion into this window",
+      "literal_D_generator_indices_zero_based": [
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434
+      ],
+      "literal_D_row_sha256": "f8b973a41d2ea90c55aa16bde6d987d39ebb54262dd17e9d01629c3562353c40",
+      "matrix_shape": [
+        22,
+        5
+      ],
+      "nullity": 0,
+      "rank": 5,
+      "raw_G_window": {
+        "lower": 2,
+        "slots": [
+          "g_2_0",
+          "g_3_3",
+          "g_4_6",
+          "g_5_9",
+          "g_6_12"
+        ],
+        "upper": 6
+      },
+      "weight": 18
+    },
+    "G19": {
+      "columns": [
+        {
+          "G_degree": 3,
+          "literal_D_row": {
+            "10": "-480",
+            "14": "432",
+            "18": "-136",
+            "2": "-24",
+            "6": "208"
+          },
+          "slot": "g_3_2"
+        },
+        {
+          "G_degree": 4,
+          "literal_D_row": {
+            "11": "-528",
+            "15": "464",
+            "19": "-144",
+            "3": "-32",
+            "7": "240"
+          },
+          "slot": "g_4_5"
+        },
+        {
+          "G_degree": 5,
+          "literal_D_row": {
+            "12": "-576",
+            "16": "496",
+            "20": "-152",
+            "4": "-40",
+            "8": "272"
+          },
+          "slot": "g_5_8"
+        }
+      ],
+      "conclusion": "the displayed polynomial raw window is exact and has no homogeneous kernel; Laurent cancellation must occur before insertion into this window",
+      "literal_D_generator_indices_zero_based": [
+        435,
+        436,
+        437,
+        438,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        448,
+        449,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455
+      ],
+      "literal_D_row_sha256": "0814a518b63b0a8e0d49461e2175510ab0e1c039c0bc054cd3c92e716d78bac4",
+      "matrix_shape": [
+        21,
+        3
+      ],
+      "nullity": 0,
+      "rank": 3,
+      "raw_G_window": {
+        "lower": 3,
+        "slots": [
+          "g_3_2",
+          "g_4_5",
+          "g_5_8"
+        ],
+        "upper": 5
+      },
+      "weight": 19
+    },
+    "G20": {
+      "columns": [
+        {
+          "G_degree": 3,
+          "literal_D_row": {
+            "10": "-528",
+            "14": "480",
+            "18": "-152",
+            "2": "-24",
+            "6": "224"
+          },
+          "slot": "g_3_1"
+        },
+        {
+          "G_degree": 4,
+          "literal_D_row": {
+            "11": "-576",
+            "15": "512",
+            "19": "-160",
+            "3": "-32",
+            "7": "256"
+          },
+          "slot": "g_4_4"
+        }
+      ],
+      "conclusion": "the displayed polynomial raw window is exact and has no homogeneous kernel; Laurent cancellation must occur before insertion into this window",
+      "literal_D_generator_indices_zero_based": [
+        456,
+        457,
+        458,
+        459,
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475
+      ],
+      "literal_D_row_sha256": "d10484e79a5c79694c828a83c62cb88383814e301e189e508459e0ead074eb50",
+      "matrix_shape": [
+        20,
+        2
+      ],
+      "nullity": 0,
+      "rank": 2,
+      "raw_G_window": {
+        "lower": 3,
+        "slots": [
+          "g_3_1",
+          "g_4_4"
+        ],
+        "upper": 4
+      },
+      "weight": 20
+    },
+    "G21": {
+      "columns": [
+        {
+          "G_degree": 3,
+          "literal_D_row": {
+            "10": "-576",
+            "14": "528",
+            "18": "-168",
+            "2": "-24",
+            "6": "240"
+          },
+          "slot": "g_3_0"
+        }
+      ],
+      "conclusion": "the displayed polynomial raw window is exact and has no homogeneous kernel; Laurent cancellation must occur before insertion into this window",
+      "literal_D_generator_indices_zero_based": [
+        476,
+        477,
+        478,
+        479,
+        480,
+        481,
+        482,
+        483,
+        484,
+        485,
+        486,
+        487,
+        488,
+        489,
+        490,
+        491,
+        492,
+        493,
+        494
+      ],
+      "literal_D_row_sha256": "be0b550c24c8a1e1ac8e5052f44b2099778927214c3310a40bff645c858608cf",
+      "matrix_shape": [
+        19,
+        1
+      ],
+      "nullity": 0,
+      "rank": 1,
+      "raw_G_window": {
+        "lower": 3,
+        "slots": [
+          "g_3_0"
+        ],
+        "upper": 3
+      },
+      "weight": 21
+    }
+  },
+  "schema": "jc2.ggv.upper_endpoint.uniform_d18_d22_fullmodes.result.v1",
+  "scope_firewall": [
+    "field-valued emptiness in characteristic zero, not scheme-theoretic ideal membership",
+    "the fixed upper branch-P fixture only; no claim about other GGV branches or global JC2",
+    "the result depends on the reviewed D8--D17 prefix and literal polynomial degree windows",
+    "no truncated characteristic schedule is used; c16 is retained and may be nonzero",
+    "c18 and c20 are killed by their birth-row polynomial windows, never by successor rows",
+    "positive lower-window equations can only strengthen emptiness and are not discarded as existence evidence",
+    "standard-library exact arithmetic only; no CAS, AWS, or jc2-lean state"
+  ],
+  "source": {
+    "authoritative_raw_system": "cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json",
+    "authoritative_raw_system_sha256": "ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0",
+    "predecessor_checker": "cases/ggv_8_28_upper_endpoint_uniform_d16_d17_fullmodes_20260828/verify_uniform_d16_d17.py",
+    "predecessor_checker_sha256": "5904d7b19dc5d46d31a781150c4b6de9e62e32812b554006e92f78f9d76fd5d9",
+    "predecessor_result": "cases/ggv_8_28_upper_endpoint_uniform_d16_d17_fullmodes_20260828/RESULT.json",
+    "predecessor_result_sha256": "2a6f363df8fb4aef94f01d7a938e3bfcff15f6db49af3164e36367c9a6d1929a",
+    "raw_generator_count": 513,
+    "raw_variable_count": 303,
+    "row_sha256": {
+      "18": "f8b973a41d2ea90c55aa16bde6d987d39ebb54262dd17e9d01629c3562353c40",
+      "19": "0814a518b63b0a8e0d49461e2175510ab0e1c039c0bc054cd3c92e716d78bac4",
+      "20": "d10484e79a5c79694c828a83c62cb88383814e301e189e508459e0ead074eb50",
+      "21": "be0b550c24c8a1e1ac8e5052f44b2099778927214c3310a40bff645c858608cf",
+      "22": "eda682800b4d242fa6ff8eddd5aa8028d878a27f0253ea0b8a33614640e76b0a"
+    },
+    "row_targets": {
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 1
+    }
+  },
+  "status": "PASS_FIXED_UPPER_BRANCH_P_ENDPOINT_EMPTY_OVER_CHARACTERISTIC_ZERO_FIELDS",
+  "theorem": {
+    "conclusion": "no field point satisfies the fixed upper branch-P endpoint system: D4=...=D21=0 and D22=1",
+    "hypotheses": [
+      "characteristic-zero field point of the complete fixed 303-variable branch-P fixture",
+      "the independently checked D8--D17 complete-mode prefix",
+      "all nine characteristic modes c4,c6,c8,c10,c12,c14,c16,c18,c20 retained causally",
+      "literal raw G18--G21 degree windows and absent raw G22"
+    ],
+    "proof_core": "D18 and D20 kill c18 and c20 before their successor cancellations; D18--D21 give four exact A^2 quotient relations; the resulting complete g22 has pole order at most two, so the literal endpoint -L22(g22) lies in (A), contradicting target 1"
+  }
+}

@@ -1,0 +1,29 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+The frozen artifacts are untouched, and the only file I created is the report.
+
+## Verdicts
+
+| object | verdict |
+|---|---|
+| A2 identity `Tg16_6-(3/32)rs1*Tg13_2=(21/1024)a1²rs1²` | **CONFIRMED** |
+| A1 ordinary branch certificate `a1^8` | **CONFIRMED** |
+| Branch coverage from `Tg14_3` | **CONFIRMED** |
+| Combined raw-field-point theorem | **CONFIRMED**, scope sharpened |
+
+**Eligible for `AUDIT.md` promotion** at the exact scope, subject to four textual corrections.
+
+## What I did independently
+
+I ran the producer replay (it reproduces `RESULT.json` exactly) but rebuilt everything from the frozen bytes with three non-shared implementations: my own strict tokenizer (no `ast`) plus sparse `Fraction` Laurent arithmetic; an ordinary **division-algorithm** lift instead of the producer's divided differences; and Singular for cross-engine confirmation. All 70 row files re-hashed against the pinned containers without importing V37; the 42 grade-10–15 ordered-`a1` rows re-derived from the V9/V20/V22 sources; census (51 rows, 6651 terms, 65 variables) reproduced from bytes. My lift produced multipliers **hash-identical** to the banked ones.
+
+Custody facts the producer doesn't state but that hold: V37 resolves to the full `Tg1x_y_q.poly`, not the `_at_point` sparse restrictions; and no row among the 70 contains `rs, cs, c0, c1, a0`, so all ten grades share one chart.
+
+## Findings
+
+- **The mutation control is inert.** `h19` is a single monomial and the residual is always `h19·delta ≠ 0`, so the test cannot fail. I replaced it with a drop-one `std` census — **each** of the four diagonal rows is load-bearing — plus an explicit witness over `K = Q[t]/(96t⁵+1)` at which `Tg13_1=Tg14_2=Tg15_3=Tg17_5=Tg18_6=0` but `Tg19_7 = -(1/4)t⁴ ≠ 0`. Grade 19 really is where A1 dies.
+- **Scope probe (positive, not a caveat):** the same cleared multipliers applied to the *unspecialized* rows leave a 968-term residual, every term divisible by one of `e0,e1,ee0,ell1,rs1`. So the certificate is `a1^8 ∈ (six rows) + (e0,e1,ee0,ell1,rs1)`, demonstrably not raw membership.
+- **A cascade step the pinned V41 replay never asserted:** on the branch `e1=0`, `ee0=0` needs `Tg12_1|e0=0 = (3/8)a1·ee0 + (3/8)aa0·e1`. I closed it; the argument was fine, the replay script was incomplete.
+- **Two strengthenings the producer under-claims:** the cleared multipliers are *integer* polynomials and the rows lie in `Z[1/2]`, so A1 closes in every characteristic ≠ 2; and the combined theorem holds over every field with char ∉ {2,3,7}, not just algebraically closed char 0.
+- **The sharpest overread, in the other direction:** the theorem *does* formally imply `∃N ≥ 5` with `a1^N ∈ I_19`, by the Nullstellensatz plus V37's banked `a1^4 ∉ I_19`. It is non-effective — no bound, no certificate — and must be recorded as a consequence, never as a certificate.
+
+Also flagged: an attribution error (the prior review never claimed A2 survives), two unrelated 24-term `Tg19_7` objects whose juxtaposition invites conflation, and a firewall list that names `rho=0` but not the chart's own `rs=cs=c0=c1=a0=0`.

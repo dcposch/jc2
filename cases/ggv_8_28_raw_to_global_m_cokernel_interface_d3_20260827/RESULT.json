@@ -1,0 +1,333 @@
+{
+  "firewall": {
+    "H_multiple_status": "FULLY_LIVE",
+    "claims_not_made": [
+      "8_28 face/family exclusion",
+      "G2-PSC",
+      "G2-BD",
+      "Keller pair",
+      "counterexample",
+      "JC2"
+    ],
+    "r3_consumed_as_source": false,
+    "sixteen_branch_bits_determine_E22": false
+  },
+  "mutations": {
+    "changed_13_over_12_to_1": {
+      "seven_vector": [
+        "1/13",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "status": "NONZERO_REMAINDER_DETECTED"
+    },
+    "dropped_factor_tag": "REJECTED",
+    "dropped_orientation_tag": "REJECTED",
+    "illegal_raw_F14_X": "REJECTED: would require raw x*y^-3, not a 2S lattice point"
+  },
+  "pins": {
+    "m_cokernel_audit": {
+      "path": "xmodel/ggv-8_28-M-cokernel-seven-vector-hostile-audit-sol2-20260827.md",
+      "sha256": "2803b705d41b332cabd12249b0a0be17cdd18e8f2f251fe7b242bf55fc9bb289"
+    },
+    "preregistration": {
+      "path": "cases/ggv_8_28_raw_to_global_m_cokernel_interface_d3_20260827/PREREGISTRATION.md",
+      "sha256": "87fd708fa0e6d1a554724489d3b3b6065e2c6f89c1c1a11414a2ac0b147d4541"
+    },
+    "r0_freeze": {
+      "path": "cases/ggv_8_28_keller_face_cusp_jet_pinning_20260827/FREEZE.sha256",
+      "sha256": "6928428f9cc46641a80275e2bbfa62e784c4290ff041f5089ae789507fa8804f"
+    },
+    "r0_result": {
+      "path": "cases/ggv_8_28_keller_face_cusp_jet_pinning_20260827/RESULT.json",
+      "sha256": "46e1b3434badcea007a914ec71bf60d9758ee76d312dc00d252342d52beed76d"
+    },
+    "r0_review": {
+      "path": "xmodel/ggv-8_28-keller-face-cusp-jet-pinning-hostile-review-grok-20260827.md",
+      "sha256": "171ff47c844331da8971a731c1ffaf20c31ed5b2ba86fdee2d0d81219eb002b0"
+    },
+    "r0_verifier": {
+      "path": "cases/ggv_8_28_keller_face_cusp_jet_pinning_20260827/verify.py",
+      "sha256": "ef9acfa90935b32e244367dada67ab35d6454f431f6d43dc35d144b3d08fe46c"
+    },
+    "r1_freeze": {
+      "path": "cases/ggv_8_28_keller_face_cusp_jet_pinning_r1_20260827/FREEZE.sha256",
+      "sha256": "05cbb5c046f9aa4b89e1104448e77fd38ec3a146d2422bf84773f81d668bfe3c"
+    },
+    "r1_result": {
+      "path": "cases/ggv_8_28_keller_face_cusp_jet_pinning_r1_20260827/RESULT_R1.json",
+      "sha256": "392f6c0c3ca70a35b9b466944c243a927430838abe022eb960d7f2315e1684f3"
+    },
+    "r1_review": {
+      "path": "xmodel/ggv-8_28-keller-face-cusp-jet-pinning-r1-hostile-review-grok-20260827.md",
+      "sha256": "d40cd78f4f0afc12d09f8d1e99724de9fd5125fddc064089d6ca0870c7d777e0"
+    },
+    "r2_freeze": {
+      "path": "cases/ggv_8_28_keller_face_cusp_unit_carrier_classification_r2_20260827/FREEZE.sha256",
+      "sha256": "453f7821f88add5d97b65cee41fe3a4df225db5768526746cf4ff1431aa73aa6"
+    },
+    "r2_result": {
+      "path": "cases/ggv_8_28_keller_face_cusp_unit_carrier_classification_r2_20260827/RESULT_R2.json",
+      "sha256": "0dffbb36c20d0b80498d765168a47cdb9ed2889ffc7bd105dce7ec835f600b1d"
+    },
+    "r2_review": {
+      "path": "xmodel/ggv-8_28-keller-face-cusp-unit-carrier-classification-r2-hostile-review-grok-20260827.md",
+      "sha256": "b271a2958138d8e85c0a8cab068efd7bfa59227a56e5252eb27310a50fb11e24"
+    },
+    "r3_result_scope_firewall": {
+      "path": "cases/ggv_8_28_keller_face_rational_mode_exclusion_r3_20260827/RESULT_R3.json",
+      "sha256": "3d69dfbd6c0e28afafdfc7bbb0cf4ebe57d8522938ddd46b418f71123c1da006"
+    },
+    "r3_review_scope_firewall": {
+      "path": "xmodel/ggv-8_28-keller-face-rational-mode-exclusion-r3-hostile-review-grok-20260827.md",
+      "sha256": "27fcd25640f62a92c147863e7a8ef8ca4b7b004f05d54450c8d2d8811c97cdc6"
+    }
+  },
+  "preserved_tags": {
+    "deck": "ORIENTED_PLUS_H",
+    "determinant": "H'(c)",
+    "factors": [
+      {
+        "degree": 1,
+        "factor_id": "fac_X_minus_1",
+        "polynomial": "X-1"
+      },
+      {
+        "degree": 1,
+        "factor_id": "fac_X_plus_1",
+        "polynomial": "X+1"
+      },
+      {
+        "degree": 2,
+        "factor_id": "fac_X2_plus_1",
+        "polynomial": "X^2+1"
+      },
+      {
+        "degree": 4,
+        "factor_id": "fac_X4_plus_1",
+        "polynomial": "X^4+1"
+      }
+    ],
+    "factorwise_branches": {
+      "fac_X2_plus_1": "V8_NONZERO__V8_U14",
+      "fac_X4_plus_1": "V8_NONZERO__V8_U14",
+      "fac_X_minus_1": "V8_NONZERO__V8_U14",
+      "fac_X_plus_1": "V8_NONZERO__V8_U14"
+    },
+    "orientation": "u=H mod t"
+  },
+  "quarantined_reducer_controls": {
+    "H_action_matrix": {
+      "basis": [
+        "X^0",
+        "X^1",
+        "X^2",
+        "X^3",
+        "X^4",
+        "X^5",
+        "X^6"
+      ],
+      "consequence": "the global H-multiple can move every cokernel coordinate",
+      "determinant_nonzero": true,
+      "diagonal": [
+        "-12/13",
+        "-6/7",
+        "-4/5",
+        "-3/4",
+        "-12/17",
+        "-2/3",
+        "-12/19"
+      ]
+    },
+    "H_times_basis": [
+      {
+        "input": "H*X^0",
+        "seven_vector": [
+          "-12/13",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "input": "H*X^1",
+        "seven_vector": [
+          "0",
+          "-6/7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "input": "H*X^2",
+        "seven_vector": [
+          "0",
+          "0",
+          "-4/5",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "input": "H*X^3",
+        "seven_vector": [
+          "0",
+          "0",
+          "0",
+          "-3/4",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "input": "H*X^4",
+        "seven_vector": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-12/17",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "input": "H*X^5",
+        "seven_vector": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-2/3",
+          "0"
+        ]
+      },
+      {
+        "input": "H*X^6",
+        "seven_vector": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-12/19"
+        ]
+      }
+    ],
+    "fixture_1_plus_13H_over_12": {
+      "input": [
+        {
+          "X_degree": 0,
+          "coefficient": "-1/12"
+        },
+        {
+          "X_degree": 8,
+          "coefficient": "13/12"
+        }
+      ],
+      "preimage_Y": [
+        {
+          "X_degree": 1,
+          "coefficient": "1/48"
+        }
+      ],
+      "remainder": [],
+      "replay": "P == M(Y) + remainder",
+      "seven_vector_X0_through_X6": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "steps": [
+        {
+          "cancelled_X_degree": 8,
+          "leading_coefficient": "13/12",
+          "subtract_M_of": {
+            "X_degree": 1,
+            "coefficient": "1/48"
+          }
+        }
+      ]
+    },
+    "one": {
+      "input": [
+        {
+          "X_degree": 0,
+          "coefficient": "1"
+        }
+      ],
+      "preimage_Y": [],
+      "remainder": [
+        {
+          "X_degree": 0,
+          "coefficient": "1"
+        }
+      ],
+      "replay": "P == M(Y) + remainder",
+      "seven_vector_X0_through_X6": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "steps": []
+    }
+  },
+  "raw_census": {
+    "F14": [
+      "t^14*X^2"
+    ],
+    "F_slots_through_weight_22": 141,
+    "G21": [
+      "t^21*X^3"
+    ],
+    "G22": [],
+    "G_slots_through_weight_22": 301,
+    "literal_face_nonzero_F": 17,
+    "literal_face_nonzero_G": 25,
+    "total_slots": 442
+  },
+  "scope": "artificial frozen R0 control only; interface/type obstruction, not a face exclusion",
+  "source_sha256": "28b9b05c02224aadec30d52b66ed22db80aabe416ffdc0186f6931f1978f1876",
+  "status": "STOP-FIRST-MISSING-PROVENANCE",
+  "typed_compilation": {
+    "first_missing_provenance_field": {
+      "expected_type": "serialized exact derivation DAG from named raw slots through formal cleanup",
+      "observed": "ABSENT_IN_FROZEN_R0_R1_R2_INPUT",
+      "path": "local_carrier_fixture.raw_to_morse.cleanup_DAG",
+      "smallest_concrete_witness": {
+        "R1_conclusion": "raw F14 contains only X^2; U14=X is not a direct raw row",
+        "literal_raw_F14_slice": [
+          "t^14*X^2"
+        ],
+        "local_value": "U14=X",
+        "needed_repair": "a source-pinned nonlinear cleanup DAG (including sidecars) deriving U14, or a proof that no such derivation exists"
+      }
+    },
+    "global_E22": null,
+    "reason_no_output": "the explicit R0 polynomial control is quarantined and cannot substitute for a raw-to-Morse derivation",
+    "seven_vector": null
+  }
+}

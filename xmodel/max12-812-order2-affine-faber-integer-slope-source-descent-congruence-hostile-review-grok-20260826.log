@@ -1,0 +1,23 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by reading the charged theorem, related source identities, and any existing review conventions so the hostile review can attack the five claims independently.I'll pull the charged theorem, the source identities, and a recent hostile-review template so the report matches this project's pin/verdict format.The prompt, theorem, and a recent matching review are next — I'll read those plus the source identities before attacking the five claims.I'll read the source identities and a comparable confirmed review, then independently check the charged SHA and the five attack points.I’ll pin hashes and pull nearby review conventions plus H17/Gate-A context so the five attacks sit on the same charged artifacts.I'll independently check monic-square division, the valuation arithmetic on the balanced ray, and Galois non-invariance of `sigma^{17}` before writing the report.The square-division check tripped an assertion, so I’ll debug the expansion and rerun the valuation arithmetic.The arithmetic checks out. Next I’ll write the hostile review from the independent reconstruction, without touching charged artifacts.Wrote the unique report
+
+`xmodel/max12-812-order2-affine-faber-integer-slope-source-descent-congruence-hostile-review-grok-20260826.md`
+
+Charged theorem SHA `596bf326…` matches the pin. Charged artifacts, shared ledgers, and `jc2-lean` were not edited.
+
+**Verdict.** On an actual rational germ at unramified `T=1`, integer-ray scaling and the unique centered monic-square division keep every `C_i` and every coefficient of `Delta` in `L((tau))`. With `sigma^3=Lambda` and exact cell order `ord_sigma Delta=H`, the vector minimum converts as `ord_tau Delta=alpha H/3`, so **`3|alpha H`**. Units, Hensel cube roots, and cancellation inside the square map do not change that.
+
+On the balanced ray `alpha=4`:
+
+| `H` | `4H/3` | descends? |
+|---|---|---|
+| 15 | 20 | congruence-compatible |
+| 16 | `64/3` | excluded |
+| 17 | `68/3` | excluded |
+| 18 | 24 | congruence-compatible |
+
+The Gate-A lift `tau=s^3`, `varrho=s^3`, `sigma=s^4` is a ramified formal point: `sigma^{17}=s^{68}` is not in `L((s^3))`, and `mu_3` sends the leading form to a nontrivial character. Flat toric base change equates algebraic boundary schemes; it does not descend series in `s^4` to series in `s^3`. No exclusion of H17 at other slopes, of the ramified IFT, or of Taylor / order two / `(8,12)` / max twelve / JC2.
+
+Smallest counterexample to the theorem: none. Smallest descent-obstruction witness on this ray: `(alpha,H)=(4,16)`.
+
+CONFIRMED

@@ -1,0 +1,53 @@
+You are Grok 4.6 acting as an independent hostile mathematical reviewer in the
+plane Jacobian conjecture campaign. Work in /Users/dc/code/math/jc2.
+
+Charge: audit the frozen proposed uniform full-fixture D8-mode/D9 square-defect
+theorem in:
+
+  xmodel/ggv-upper-endpoint-uniform-d9-fullmodes-sol-ultra-20260828.md
+
+Charged report SHA-256:
+
+  ccf78403684ef7ee7e9f85336b4ccf86a01d679ba61b6327f4d2400ece16490e
+
+Frozen packet:
+
+  cases/ggv_8_28_upper_endpoint_uniform_d9_fullmodes_20260828/
+
+Primary authoritative raw source:
+
+  cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json
+
+Raw source SHA-256:
+
+  ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0
+
+Required hostile review:
+
+1. Verify all charged hashes and reconstruct the relevant raw D4..D9 rows
+   independently, not merely by trusting the producer checker.
+2. Audit the full characteristic-mode causality. In particular verify that
+   after the already reviewed D7 and first D8 square-defect consequences,
+   polynomiality at D8 really forces c6=0; no born mode, raw kernel, gauge,
+   or allowed window coefficient can cancel the claimed pole.
+3. Only after that, verify the full g9 polar numerator and the exact raw
+   congruence D9_raw == +(21/4) A A' W^2 mod A^2, including sign, powers,
+   squarefree field-radical implication A|W, and all hypotheses.
+4. Explicitly retain/check the complete nine-mode continuation firewall
+   c4,c6,c8,c10,c12,c14,c16,c18,c20. Later modes may have empty causal
+   support at n<=9, but must not be silently deleted from the formalism.
+5. Replay or independently replace every live mutation. Search for a literal
+   raw field point or local Laurent mutation falsifying either claimed step.
+6. Check scope: complete fixed 303-variable branch-P fixture at these rows,
+   characteristic-zero field points only; no scheme divisibility, endpoint
+   emptiness, full branch-P, Keller-pair, or JC2 inference.
+
+Verdict must be exactly one of PASS, REPAIR, or FAIL, with a precise list of
+promotable statements and defects. Write a self-contained report to:
+
+  xmodel/ggv-upper-endpoint-uniform-d9-fullmodes-hostile-review-grok46-20260828.md
+
+End with SHA-256 values for the charged report, producer checker, producer
+RESULT, your report body/file, and every new checker you create. Do not edit
+canonical top-level files. Do not access, list, search, build, status, or
+modify jc2-lean. Use only light local exact arithmetic; no heavy local CAS.

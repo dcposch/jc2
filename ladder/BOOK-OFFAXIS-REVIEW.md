@@ -1,5 +1,16 @@
 # BOOK-OFFAXIS-REVIEW.md — Adversarial review of BOOK-OFFAXIS.md (b9db83e + 36505a6), the off-axis closure package
 
+> **2026-08-28 controlling root supersession.** This historical review
+> accepted a case-IV formula at a genuine root meet. That label is wrong:
+> a contact-zero meet lies in `V2\V1` and is case I. The later
+> hostile-confirmed theorem (`aaa4d179...`) nevertheless recovers and
+> strengthens the needed conclusion edgewise: every actual searrow root
+> parent has `0<w<1`, for arbitrary `mu`. Therefore the `td=7` row-1
+> `w=2` branch still kills the root-meet subcase, but not §10's interior
+> survivors or the full panel. Read every case-IV *root-meet* sentence
+> below subject to this replacement; ordinary nonmerge case-IV terminals
+> are unaffected.
+
 Reviewer: Claude (adversarial deep-dive, 2026-08-12). Status: COMPLETE.
 Scope: the off-axis soundness repair in full — the census (§1–§5), the two
 closure lemmas R1 (§6) and R2 (§7), the td = 7 kill (§8), the stage-R

@@ -102,8 +102,12 @@ F = I_Q(α_{j'}(Q)), so O(P,Q) ≥ u (Def 3.3), and ν_F = e_{j'−1}(Q)/e_{j'}(
   can NEVER be applied against case III — no extra kill from 8.5.
 - **(S3) p-pattern** [St 3.16 part 2]: p_F(η) = η^l p̃(η^{ν_F}) with l =
   mult(p_F,0), nonzero roots in full ν_F-orbits, exactly one direction per
-  orbit (St 3.18 unique-ε). Regularity (St 6.2): other existing directions have
-  mult < μ; thesis pattern takes the k orbits simple:
+  orbit (St 3.18 unique-ε).  Prop 6.7 makes the realizable microstep positive;
+  if an alternative multiplicity were at least μ, the raw St 6.2 inequality
+  makes that microstep down and repaired Prop 6.8 carries it to the next down
+  vertex on the same branch (`c3d6ff92...`, sweep r2 `581219e0...`).
+  Regularity therefore gives: other existing directions have mult < μ;
+  thesis pattern takes the k orbits simple:
   **p(η) = η^μ (η^ν − c_1^ν)…(η^ν − c_k^ν)**, deg p = μ + kν, ν := ν_F.
 - **(S4) q-pattern** [Prop 8.1(iv)]: ord_0 of δpq′ − (1−u)p′q = p forces
   mult(q, 0) = 1 exactly (l_q ≥ 2 gives ord > μ, l_q = 0 gives ord μ−1 with

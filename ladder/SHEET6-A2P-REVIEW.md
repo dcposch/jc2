@@ -1,6 +1,16 @@
 # SHEET6-A2P-REVIEW.md — Adversarial review of SHEET6-AF2 (2934a2d) and SHEET6-2POLE (284d847)
 
 Reviewer: Claude (adversarial pass, 2026-08-07). Status: COMPLETE.
+**2026-08-28 supersession.**  This dated review correctly found the local
+AF2 pricing and the interior two-pole witness.  It did not prove printed
+equation (22), and literal `Y(F)` is nested.  Actual-weight Corollary 7.1 is
+now review-closed, and MFE supplies the global selected-exit union with a
+shared suffix counted once (`c74fc0f9...`).  This does not restore printed
+`(22)` or a full literal `sum lambda` equality.  Corrected Proposition 8.4
+is nonroot only.  The mixed-root edge theorem plus MP1+MP4+MP5/D5 now
+excludes the `td=6,m=2` pole-chain root-meet branch analytically, while
+broader root routes behind earlier `M>=2` jumps and off-axis/SF1
+completeness remain open.
 Scope: the two unreviewed load-bearing results (AF2-IIb pricing + two-pole
 configuration). Ground truth: refs/sigray_full.pdf read on-page this
 review (pp. 16-19, 24-35, 38-47, 48-60 — every formula quoted below
@@ -20,9 +30,10 @@ Verdicts:
 - Front 3 (gap=7 arithmetic): **CONFIRMED** (recomputed from thesis
   definitions; the (nu,n) = (7,11) cell is the UNIQUE solution of its
   Diophantine, so the kill closes the whole mu=4 k=1 branch)
-- Front 4 (shared budget): **CONFIRMED** (Cor 7.1 is one global
-  Euler-characteristic budget; union reading correct and strongest;
-  per-pole variants have no printed basis)
+- Front 4 (shared budget): **CONCLUSION CONDITIONAL ON MULTIPOLE
+  DISJOINTNESS**. Cor 7.1 is one global inequality, but the union of two
+  chains may be summed only after their first-exit flags are proved pairwise
+  distinct with the shared suffix deduplicated. Printed (22) is not a basis.
 - Front 5 (merge legality / 8.4 entry points): **CONFIRMED** (8.4's proof
   audited line-by-line: singleton enters ONLY via the two Prop 8.3
   invocations; no statement forbids the lambda=0 merge; St 8.5 explicitly
@@ -77,30 +88,37 @@ printed sign is refuted by the thesis's own proof and all of its own uses.
 Verdict: **CONFIRMED**; the "no free reading" claim survives an explicit
 hunt, and is now BETTER supported than the doc itself states.
 
-- (R1) re-verified: St 3.18 (p. 18, verbatim): "If 0 is a root of p_F,
-  then F*0 exists. If c in C* is a root of p_F, then there exists a
-  unique nu_F-th root of unity eps such that F*eps c exists." Prop 3.2
-  (p. 18) defines F + c := G*c — direction vertices ARE V_a vertices, so
-  St 6.2's standing hypothesis (F,G in V_a cap T_a^+) is met; Prop 6.7
-  (p. 33) gives T_a^+ membership (deg p_F > 1 holds: 36j).
-- (R2) re-verified: St 6.2 (p. 29) is an iff; multiplying by kappa_F > 0
-  turns it into gap(c*) < 0, so gap > 0 forces the climb through St 6.1's
-  dichotomy (Prop 6.1: d != (1-u)deg) with NO regularity. Independent
+- (R1) corrected: St 3.18 supplies the realizable microstep `E=F*_kappa
+  (eps*c)`, while Prop 3.2 separately names the next vertex `F+c`; they need
+  not coincide.  Prop 6.7 gives `E in T_a+` (`deg p_F=36j>1`).  If the raw
+  sign is down, repaired Prop 6.8 transports that microstep to the next down
+  vertex on the same branch.  This Prop 6.7/6.8 composition (`c3d6ff92...`,
+  sweep correction `581219e0...`) replaces the earlier microstep/vertex
+  conflation and is different-model review-closed (`eb37373b...`, mandatory
+  correction `050ccddd...`; Lemma 6.1 R2/review/correction
+  `2fdbbee9...`/`5193e7b0...`/`607e0dcf...`).
+- (R2) re-verified after that repair: the exact microstep calculation is the
+  same inequality as St 6.2; multiplying by kappa_F > 0 turns it into
+  `gap(c*)<0`.  Regularity forbids a down alternative next vertex, and
+  Statement 6.1 forbids equality, so every alternative gap is positive and
+  its microstep climbs with no further regularity input. Independent
   cross-check: St 8.2 (p. 41) is a second printed form of the same test
   (its proof shows sign(d_F - (1-pi)mult) = sign(deg p - deg q * w)); on
   the IIb grammar dp - dq = (mu-1)nu > 0, so the 0-root and all simple
   extras climb in EVERY solved IIb cell — i.e. inside IIb the max(1,.)
   floor and its H4 crutch are never even engaged. A strict tightening
   beyond AF2 §2 R2.
-- (R3) re-verified: St 7.3 (p. 35) verbatim; H in Y(F) by Not 9.3 (the
-  branch through F + c* realizes F); corrected (24) prices gap(c*), and
+- (R3) re-verified locally: St 7.3 supplies H on the alternative subtree;
+  that subtree first separates at F, so H belongs to F's repaired exit set.
+  Corrected (24) prices gap(c*), and
   gap(0)/nu_F for c* = 0 (mult(p_F, .) = i*w by Prop 8.1(i), whose proof
   prints deg(p) = deg(p_F)/i = M*_F).
-- (R4) absorption hunt (the strong claim): lambda_F is DEFINED (Not 9.3,
-  p. 49) as the sum over the set Y(F), so the only free reading would be
+- (R4) absorption hunt (the strong local claim): the repaired
+  `lambda_F^exit` sums the flags owned at this first separation, so the only
+  free reading would be
   H(0-branch) = H(c_1-branch) as tree vertices. Blocked: branches
   separate at F, contact pi(F) < 1 < pi(H) (St 7.1, p. 35), so the two
-  cv vertices are distinct members of Y(F). Other candidate readings all
+  cv vertices are distinct members of the exit set. Other candidate readings all
   fail on printed text: 0 cannot be the searrow continuation in (b)
   (mu >= 2 = mult(p,c), and p. 54 prints "In the case (b) F + 0 in
   T_a^nearrow, therefore lambda_F >= 1" — verbatim, as quoted); the k
@@ -153,31 +171,34 @@ of its Diophantine, so the exclusion covers the entire branch.
 
 ## 4. Front 4 — is the two-pole budget shared?
 
-Verdict: **CONFIRMED** — shared Sigma over the union is the correct and
-strongest reading; read from the proofs, not the statements.
+Current verdict: **CONDITIONAL PASS.** A shared sum is the strongest valid
+form once the two chains' first-exit flags are globally deduplicated; that
+multipole disjointness lemma is not supplied by the singleton Section 9
+repair.
 
-- St 9.4's proof (p. 49) reduces to Corollary 7.1 (p. 39): td >= 1 +
-  Sigma kappa_{F_i}(pi(F_i)-1) over ANY subset {F_1..F_n} of T_{a,cv} —
-  a single global bound from Prop 7.5's Euler-characteristic identity
-  (22) (p. 38) plus delta_a >= 0 (Prop 7.4). Nothing in §7 or §9 is
+- The reviewed actual-weight theorem `c253bd12...` / `727f5850...` gives
+  `td >= 1 + Sigma kappa_F(pi(F)-1)` over any **pairwise distinct** set of
+  cv flags.  This no longer rests on printed Prop 7.5 (22) or literal
+  `delta_a`. Nothing in the resulting inequality is
   per-pole; td is never split between poles except in Prop 5.8's (20),
   which is a statement about pole ORDERS (Lambda), not lambda-budgets.
-- The union C_1 ∪ C_2 (shared suffix counted once) is a pairwise-different
-  family in V_a cap T_a^searrow, so (25) applies to it directly: Sigma
-  lambda <= td-1-psi = 5-psi shared. A per-pole <=4-each reading is a
+- If the union `C_1 union C_2` is replaced by globally defined first-exit
+  sets and the shared suffix is counted once, a proof of cross-chain
+  distinctness would let Cor 7.1 apply directly and give
+  `Sigma lambda^exit <= td-1-psi = 5-psi` shared.  That distinctness proof
+  is presently owed. A per-pole <=4-each reading is a
   strictly weaker corollary (apply 9.4 per chain); a per-pole-2-each
   reading has NO printed basis. The 2POLE doc used the strongest
   constraint available — adversarially safe.
 - Exhibit budget re-verified: psi = 2 is certified (psi*l_f = 84 < 126 =
   k_f), budget 3, Sigma lambda = 2, slack 1.
-- Rider (pre-existing H2, inherited unchanged, worth restating): 9.4's
-  proof implicitly needs the Y(F_i) disjoint. Under the LITERAL Not 9.3
+- The old H2 rider is now resolved only for a singleton chain.  Under the
+  LITERAL Not 9.3
   ("exists P: F = I_P(u) and H = I_P(pi(H))") a cv vertex charged at F_j
   also lies on branches through every lower chain vertex, so literal
-  Y-sets are nested-overlapping; the working reading (cv vertex charged
-  where its branch leaves the chain) restores disjointness and is what
-  both engines and the thesis's own applications use. Flagged in both
-  docs' H2 already; no change.
+  Y-sets are nested-overlapping.  The singleton first-separation theorem
+  replaces this reading convention.  Its multipole cross-chain analogue is
+  the remaining condition in this front.
 - lambda_{pole} = 0 re-verified as printed-supported: Prop 5.5 (p. 26,
   g(P) = infty iff the branch meets T_{a,pole}) + St 3.15(ii) (d_g = 0
   gives g(P) in C*) + St 7.2: a branch through a pole vertex cannot carry
@@ -187,16 +208,20 @@ strongest reading; read from the proofs, not the statements.
 
 ## 5. Front 5 — merge legality; Prop 8.4's proof line by line
 
-Verdict: **CONFIRMED** on both halves.
+Verdict: **CONFIRMED for nonroot starting vertices and the interior merge
+analysis.**  The root is excluded from corrected Proposition 8.4.
 
-- Prop 8.4 proof (pp. 44-45), full inference inventory: (1) sequence
+- Corrected Prop 8.4 proof (pp. 44-45), full inference inventory, starts at
+  a **nonroot** down vertex: (1) sequence
   F_0..F_n descends and lands at (0,y) — Props 6.7/6.8, unconditional;
   (2) "From Proposition 8.3, and by induction we have M_H = 1" — the ONLY
   consumer of the singleton hypothesis, via 8.3's regularity hypothesis;
   (3) Bezout representation of M_H = 1 — St 8.1, unconditional; (4) the
   (k,l) transport — Cor 6.1 + Prop 6.3, unconditional; (5) k = 1 uses
   deg = mult at (0,y), i.e. 8.3(iii)'s one-root p_{(0,y)} — the SAME
-  entry point (last induction step); (6) l in N contradicts Thm 6.1.
+  entry point (last induction step); (6) l in N contradicts Thm 6.1.  If
+  the starting vertex itself is `(0,y)`, the sequence has length zero and
+  this proof does not start.
   NO second entry point exists. Notably the printed proof never justifies
   8.3's hypothesis at all — singleton => regularity is supplied by 2POLE
   §1b's Prop 6.8 subtree argument, which this review re-derived and
@@ -329,25 +354,26 @@ Verdict: **WEAKENED (bookkeeping only; no verdict flips)**. Three items:
   lambda_root >= 1). Not adjudicated here — it refines a flagged
   hypothesis, does not contradict either result, and every consequence
   is a kill.
-- SF1: no interaction (two-pole suffix tracks (nu,kap) = (1,1) children;
-  none appear in any residue; AF2's SF1 -> 0 stands single-pole).
+- SF1: the dated scan found no interaction, but its global zero count is not
+  exhaustive after root-signature `M=1` was restored; AWS rerun pending.
 
 ## 8. Overall verdict
 
 Both results SURVIVE adversarial review. Neither is refuted; the two-pole
 residue book needs a one-flag refresh.
 
-- SHEET6-AF2 (2934a2d): **CONFIRMED on all fronts — recommend PROMOTE
-  as-is.** E6 is real (front 1); the derivation is printed-statement
-  solid with the trust perimeter exactly as stated (front 2, with two
+- SHEET6-AF2 (2934a2d): **local pricing CONFIRMED with the first-exit
+  replacement.** E6 is real (front 1); the derivation is review-closed with
+  actual-weight Corollary 7.1 rather than printed (22) (front 2, with two
   bonus tightenings found: gap > 0 is automatic inside solved IIb cells,
   and 9.8-9.10's lambda=0 => k=0 lines corroborate the pricing); the
   r10/M4 kill is exact, unique-cell, sign-robust (front 3); the
-  recomposition reproduces bit-for-bit (td<=5: 0, td6: 4 AF3-ext,
-  SF1: 0).
+  historical nonroot/IV recomposition reproduces bit-for-bit (td<=5: 0,
+  td6: 4 AF3-ext); the SF1 zero awaits root-aware replay.
 - SHEET6-2POLE (284d847): **CONFIRMED on its mathematical core**
-  (8.4-anatomy front 5; shared budget front 4; exhibit front 6; root
-  merges impossible), **WEAKENED on bookkeeping**: suffix priced under
+  (nonroot 8.4 anatomy front 5; exhibit front 6), **CONDITIONAL on the
+  shared-budget disjointness and root recensus, and WEAKENED on
+  bookkeeping**: suffix priced under
   the superseded IIb rule (book 9 -> 8 under the derived rule, re-run
   verified), "96.6%" should read 95.6%, and the pole M=2 labels are
   contradicted by the Not 8.1 + Prop 5.1(iii) computation (residue B
@@ -357,11 +383,12 @@ residue book needs a one-flag refresh.
   constraint with slack 1. Recommend PROMOTE after: (1) IIB_DERIVED
   default in twopole_check, §6b reprinted (6 classes, or 4 citing (c));
   (2) percentage fix; (3) a §2c note on M_pole = gcd(P, P_g).
-- NET STATE. (a) td <= 5: sanctioned residual 0 — the last two classes
+- CURRENT SUPERSEDING STATE. (a) td <= 5 is review-closed by the corrected
+  Section 9 theorem — the last two classes
   (r10/M4) are excluded by a derived, sign-robust, regularity-free
   lambda-bound (and independently vacuous under §7(c)). (b) Single-pole
-  td6: sanctioned 0; AF3-superset book 4 classes (all r9, R in {3,4});
-  SF1 0. (c) Two-pole td6: NOT excluded at Q-level; residue book after
+  td6: historical nonroot/IV book 4 classes (all r9, R in {3,4}); root/SF1
+  recensus pending. (c) Two-pole td6: NOT excluded at Q-level; residue book after
   this review's composition (derived IIb): residue A (the exhibit,
   Sigma-lambda 2, slack 1; 4 IV classes, 2 robust to lambda_root >= 1)
   + residue B's two boundary R5@1 classes (which die under either

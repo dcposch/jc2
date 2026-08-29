@@ -44,25 +44,29 @@ that use the shared wrapper.
   Job dir: ~/stuck7 (out/ + lanes.log).
   Current 2026-08-25 boot IP: `98.80.65.144` (the older IP in the preceding
   historical sentence is stale).
-- **r6a** (AWS r6i.16xlarge, 64 vCPU / 512 GiB): instance
-  `i-02cb2b4a379ffcc64`, current IP `3.91.104.135`.
-- **r6b** (AWS r6i.16xlarge, 64 vCPU / 512 GiB): instance
-  `i-0f089e64c378f5da3`, current IP `34.204.74.226`.
-- **r6c** (AWS r6i.16xlarge, 64 vCPU / 512 GiB): instance
-  `i-040b7a1c2ed72d4cc`, current IP `54.167.205.167`.
-- **r6d** (AWS r6i.16xlarge, 64 vCPU / 512 GiB): instance
-  `i-07eeaf8ba6f0bc419`, current IP `100.26.198.153`.  Its TD6 environment is
+- **r6a** (AWS r6i.4xlarge, 16 vCPU / 128 GiB): instance
+  `i-02cb2b4a379ffcc64`, current IP `34.229.212.201`.
+- **r6b** (AWS r6i.4xlarge, 16 vCPU / 128 GiB): instance
+  `i-0f089e64c378f5da3`, current IP `54.224.45.13`.
+- **r6c** (AWS r6i.4xlarge, 16 vCPU / 128 GiB): instance
+  `i-040b7a1c2ed72d4cc`, current IP `18.209.172.161`.
+- **r6d** (AWS r6i.8xlarge, 32 vCPU / 256 GiB): instance
+  `i-07eeaf8ba6f0bc419`, current IP `54.84.212.87`.  Its TD6 environment is
   `/home/ubuntu/venvs/td6` (Python 3.12 / python-flint 0.9.0).
 
-The seven running instances total the user-authorized 512-vCPU campaign
-ceiling.  Do not exceed that total.  The coordinator may replace an audited,
-idle large instance with several smaller AWS workers of at most 1 TiB RAM when
-independent lanes would benefit from job-level parallelism; stop/replace only
-after every live process and output has been identified and preserved.
-The four `r6*` nodes were added on 2026-08-24 for independent Double-B,
-Q8, AS, and TD6 work.  Their public IPs change on stop/start; resolve from the
-instance IDs before use.  Do not stop or repurpose one until its exact live
-processes and output custody are audited.
+As verified from the AWS control plane at 2026-08-28T19:14Z, the seven
+campaign instances total **336 vCPUs**.  A separate user-owned 16-vCPU
+formalization instance also counts against the 512-vCPU account quota and is
+outside this campaign's inspection/control scope, so current total allocation
+is **352 vCPUs** and current headroom is **160 vCPUs**.  Do not exceed the
+account total or inspect, stop, retag, or repurpose that separate instance. The
+coordinator may add smaller workers of at most 1 TiB RAM, or replace an
+audited idle instance, when independent lanes benefit from job-level
+parallelism; stop/replace only after every live process and output has been
+identified and preserved.  The four `r6*` nodes were resized/restarted on
+2026-08-28.  Their public IPs change on stop/start; resolve from the instance
+IDs before use.  Do not stop or repurpose one until its exact live processes
+and output custody are audited.
 - **ultramem** (GCP): RETIRED 2026-08-16 per DC (AWS-only policy).
   Instance stopped/terminated; two disks remain in dclanker (jc-b 200G,
   ultramem-1 100G, ~$15-30/mo) holding old run outputs — deletion is

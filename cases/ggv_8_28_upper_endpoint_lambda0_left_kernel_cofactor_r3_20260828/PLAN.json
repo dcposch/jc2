@@ -1,0 +1,30 @@
+{
+  "case": "ggv_8_28_upper_endpoint_lambda0_left_kernel_cofactor_r3_20260828",
+  "endpoint": "x14*x72+x1*x97",
+  "host": {
+    "alias": "r6d",
+    "instance_id": "i-07eeaf8ba6f0bc419",
+    "product": "r6i.8xlarge",
+    "vcpus": 32
+  },
+  "job_tag": "ggv_lambda0_left_kernel_cofactor_r3_20260828T124900Z_r6d",
+  "matrix": {
+    "columns": 105,
+    "rows": 106,
+    "source_sha256": "56f09440c924ba7c32ca15c74e585533ab79023c8dfaf17bc6abd47077132d7c"
+  },
+  "resources": {
+    "address_space_bytes": 206158430208,
+    "cpu_list": [1],
+    "file_size_bytes": 34359738368,
+    "master_seconds": 7200,
+    "swap_total_kib": 0
+  },
+  "stages": [
+    {"name": "ADAPTER_SELFCHECK", "seconds": 60},
+    {"name": "BUILD_EXACT_SCRIPT", "seconds": 60},
+    {"name": "PARSE_FULL_MATRIX", "seconds": 60},
+    {"name": "EXACT_LEFT_KERNEL_COFACTOR", "seconds": 5400},
+    {"name": "EXACT_CONTENT_STRATA", "seconds": 1200}
+  ]
+}

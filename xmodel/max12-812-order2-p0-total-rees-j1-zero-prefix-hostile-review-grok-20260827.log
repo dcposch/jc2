@@ -1,0 +1,15 @@
+cli=grok 1.0.5 (5115b46bc909) [stable] permission=bypassPermissions output=plain
+I'll start by reading the producer document, the case preregistration, and the expected review format so the hostile check is grounded in those files.Next I’ll read the preregistration, the replay script, and a previous hostile-review writeup so the independent check matches the expected format.I’ll pull the review prompt, a recent matching writeup for format, and the frozen V9/V17 polynomial locations next.I’ll inspect a nearby hostile-review writeup for structure, then start an independent parser against the frozen polynomials.I’ll read the related zero-section review and sample polynomials, then run an independent parser on the frozen inputs.I’ll look up “terminal receiver” in the campaign docs, then run an independent parser on the frozen rows.I’ll run a fresh recursive-descent parser on the 22 frozen polynomials and specialize `J1=0` with exact rationals—without touching the producer replay.The specialization checks out. I’ll grab remaining custody hashes and a clean canonical dump, then inspect the terminal-receiver inference more closely.The census matches the producer; the terminal-receiver “therefore” does not follow from A00/A10, but the origin section still saves the operational claim. I’ll write the single review file now.I need to fix a hash typo I left in the custody table.**CONFIRMED.** The review is in `xmodel/max12-812-order2-p0-total-rees-j1-zero-prefix-hostile-review-grok-20260827.md`.
+
+Independent recursive-descent parse of the 22 frozen exact-Q files, with `rs=cs=c0=c1=0` by monomial support, reproduces the producer census:
+
+- all seven grade-10 rows vanish, as do the five stage-one rows and also `Tg11_4`, `Tg11_6`;
+- 12 of 22 rows survive, first at grade 11;
+- `Tg12_2` with only `e1` retained is exactly `(3/32)e1^2`;
+- `A00` and `A10` kill all 22 rows as polynomials in `Q[rho]`.
+
+The inference `a0,a1 ∉ rad(I+J1)` from those unit points is valid over `Q` (evaluation homomorphisms, no radical computation). A `J2`-chart emptiness search on this prefix is therefore futile.
+
+The leap from `A00`/`A10` to the terminal receiver `V(J1+J2)` is **not** valid: those points have `a0=1` or `a1=1`. The same bytes still make that receiver nonempty, via the origin/`rho`-line, which the producer did not cite. That is finding M1, not a census defect.
+
+This is a source-prefix fact on `V(J1)`. It is not a compiled Rees chart, not unexported source, and not Gate T.

@@ -1,0 +1,12 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Everything is verified and the deliverable is written. Final summary:
+
+## TL;DR — the grade-16 boundary is **alive**, not empty
+
+I verified V27 and V28 from literal bytes, then found what the round was fishing for — except with the opposite sign: instead of an emptiness certificate, I constructed **exact rational witnesses proving the grade-16 `rho=0, a1≠0` stratum is nonempty**, predicting **V29 = nonunit**. Everything is in the sole lane write, `xmodel/max12-812-order2-p0-total-rees-j2-grade16-boundary-strategy-fable5-20260827.md`.
+
+**Verification (task 1).** V27 replays completely in my own code: 23 nonzero rho=0 generators, 53 products, rank 46, `a1³` nonmember; the two-coordinate dual reduces to eight byte lookups (`Tg11_1 = (3/8)a1·e0` has no `a1·aa0`; `Tg15_3` carries `−1/16·a1³` and `−3/16·a1·aa0·rs2`, ratio exactly 3). V28's lanes agree mod p, and the point-death is robust because the killing row `Tg16_4` contains no new jets. I additionally re-implemented the source emitter from the pinned 569-tail file and matched all 49 exported rows at random points — the whole export chain checks out against the registered source itself.
+
+**Structure and witness (tasks 2–3).** Four of seven grade-16 rows are old-variable-only; `Tg11_1` forces `e0=0` on the stratum, collapsing row 3's jet part. On the support `{a1,aa0,cs1,ec3,rs2}` the entire system reduces to a triangular tower ending in `Tg16_4 = (1/8)a1²aa0(r−1)` with `r = a1⁶/(48aa0⁵)` — V28's point had `r = 1/48`, which *is* the `−47/384`. Setting `r=1` gives witness `a1=aa0=48, cs1=8, ec3=384, rs2=−32` (all 49 rows vanish, jets zero), and one support extension (`aaa1 = 35/3`) yields a **unit-k witness** — refuting every typed `a1^N k^M(1+ρW)` certificate from grades ≤ 16, all `(N,M)`.
+
+**The fork (tasks 4–6).** V29-nonunit: freeze the witness as a trivial validator case rather than extracting from Singular. V29-unit: treat as a defect and evaluate its lift at the witness to locate the broken byte. My symbolic-jet engine shows the witness family **dies at grade 17** via a jet-free constant `−20736·u¹⁷` (plus an `rs4` clash), so the grade-17 stratum is genuinely open — the ranked queue is: witness freeze (V30w), grade-17 export with honest jets (V30), and a rho-direction torsion probe at the witness (V31), which connects this to the missing Gate-T total-vs-special comparison — the campaign's real fallback if strata keep surviving. Memory updated with the new branch state.

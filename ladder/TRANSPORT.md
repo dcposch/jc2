@@ -3,13 +3,16 @@
 **Status (2026-08-17): THEOREM at the pre-Laurent normalization layer.**
 The coordinate-cusp obstruction, exact target-degree formula, orbitwise
 lexicographic minimality, and signed-axis transport are proved below.  The
-machine gate is [cases/transport_check.py](cases/transport_check.py).
+arithmetic regression fixture is
+[cases/transport_check.py](cases/transport_check.py); it does not verify the
+three theorems.
 
-**Scope.** Work over \(\mathbf C\).  This document repairs REDUCTION gap G2
-for the GGV-selected polynomial standard pair.  It does not turn a GGV
-admissible chain into a decorated Eggers–Wall tree, does not apply to the
-post-Laurent \([P,Q]=x^j\) objects, and does not repair book coverage or the
-absence of an upper bound on topological degree.
+**Scope.** Work over \(\mathbf C\).  This document repairs the T2-to-T4
+normalization fork for the GGV-selected polynomial standard pair.  It does
+not repair `G2-PSC`: it does not turn a GGV admissible chain into a decorated
+Eggers–Wall tree, does not apply to the post-Laurent \([P,Q]=x^j\) objects,
+and does not repair book coverage or the absence of an upper bound on
+topological degree.
 
 ## 0. Verdict
 
@@ -203,8 +206,10 @@ then every coordinate \(h\) satisfies
 #### Proof
 
 If \(e=\deg_{r,s}h\), every term of the top face becomes a scalar multiple
-of \(H^e\).  The scalar is nonzero by Theorem 1.1.  Every lower face has
-ordinary degree less than \(De\). \(\square\)
+of \(H^e\).  The sum of those scalar coefficients is the coefficient of
+\(Z^e\) in \(\operatorname{in}_{r,s}h(cZ^r,dZ^s)\), hence is nonzero by
+Theorem 1.1.  Every lower face has ordinary degree less than \(De\).
+\(\square\)
 
 ## 2. Orbitwise minimality of a rectangular cusp pair
 
@@ -296,8 +301,9 @@ ordered degree pair. \(\square\)
 
 Two points are worth isolating.
 
-1. The theorem is stronger than global GGV minimality.  It proves minimum
-   degree inside this pair's entire Sigray equivalence class directly.
+1. This is different from global GGV minimality: it proves minimum degree
+   inside this pair's Sigray equivalence class, whereas GGV minimizes a gcd
+   over all counterexamples.  Neither assertion implies the other.
 2. Ordinary nondivisibility of \(rD_L,sD_L\) alone would not be enough:
    \(P^s-Q^r\) can cancel.  Theorem 1.1 is exactly what excludes such a
    cancellation in a *coordinate* of a target automorphism.
@@ -350,9 +356,11 @@ degrees, so the rotated representative remains almost normalized and keeps
 Jacobian one.  On exponents it sends \((i,j)\) to \((j,i)\), giving the two
 displayed rectangles.  The five numerical assertions follow from
 \(0<a<b\), \(1<\alpha<\beta\), and
-\(\gcd(\alpha,\beta)=1\).  They are precisely Sigray's rectangular
-normal-form conditions and type definition.  Polynomial automorphisms
-preserve the function-field extension and noninvertibility. \(\square\)
+\(\gcd(\alpha,\beta)=1\).  They satisfy Sigray's rectangular normal-form
+conditions and type definition; the strict inequality \(l_f<k_f\), obtained
+here directly from \(a<b\), is stronger than the weak inequality printed in
+Sigray Lemma 2.1(iii).  Polynomial automorphisms preserve the function-field
+extension and noninvertibility. \(\square\)
 
 For this selected-pair branch, Theorem 3.1 bypasses the Abhyankar inputs used
 by Sigray Lemma 2.1: GGV supplies the rectangles, and Theorem 2.1 supplies
@@ -462,7 +470,7 @@ explicit Sigray representative.  It does not say that corner data alone
 determine pole status, fiber tags, residual \(g\)-cancellations, or Sigray's
 decorations.
 
-## 5. Exact machine instances
+## 5. Exact arithmetic regression fixtures
 
 Run from the repository root:
 
@@ -470,8 +478,10 @@ Run from the repository root:
 python3 cases/transport_check.py
 ```
 
-The gate reads the live `(8,28)` object from `lib/families.py` and the reviewed
-td-7 JSON certificate.  It exits zero and prints `"status": "PASS"`.
+The fixture reads the live `(8,28)` object from `lib/families.py` and the
+reviewed td-7 JSON certificate.  It exits zero and prints `"status":
+"PASS"`.  It checks the stated lattice, degree, orientation, and mass
+arithmetic; it does not verify Theorems 1.1, 2.1, or 3.1.
 
 ### 5.1 Conditional pre-Laurent `(72,108)` family-record transport
 
@@ -700,12 +710,21 @@ decorated Sigray Eggers–Wall pole tree.  The present theorem does not do so;
 the GGV \(P\)-polygon alone does not determine residual \(Q\)-cancellation or
 pole status.
 
-**CONJECTURE A (native transposed admissibility).**  After changing from the
-x-fraction Laurent convention to the transposed y-fraction convention, all
-fourteen GGV5 complete-chain conditions should admit a convention-by-convention
-transposed formulation.  Only the exact rational valuation ledger and its
-inverse are proved here; native re-certification is not needed for (6.1).
+**THEOREM A (abstract native transposed admissibility; external additive
+proof).**  After changing from the x-fraction Laurent convention to the
+signed-conjugate y-fraction convention, all fourteen GGV5 complete-chain
+conditions admit a convention-by-convention transposed formulation, with
+direction order reversed and `st/en`, `Pred/Succ` transported accordingly.
+This additive theorem is proved in
+`xmodel/g2-transpose-equivariance-hostile-audit-sol-ultra-20260827.md` and
+different-model confirmed in
+`xmodel/g2-transpose-equivariance-hostile-review-fable5-20260827.md`
+(`097db69b...`).  It is a theorem about the conjugated source pair.  The
+x- and y-native pair-sign conditions are mutually exclusive on one fixed
+finite-support pair, so Theorem A does **not** supply its other physical
+infinity chart and does not prove `G2-PSC`.
 
 No conjecture identifying residue-A or the td-7 formal record with the
 `(8,28)` representative is viable under the normalized degree data: the
-machine gate proves those frames are different.
+fixture checks the unequal degree pairs, and Theorem 2.1 supplies the
+Aut-class-invariance interpretation.

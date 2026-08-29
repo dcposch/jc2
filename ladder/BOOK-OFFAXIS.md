@@ -3,8 +3,21 @@
 Mission: adjudicate the off-axis sector flagged by both external reviewers and
 the BOOK-ENUM.md closing erratum. The book enumerated only all-b=1 entry
 configurations; entries with b_i >= 2 propagate M = b_i down their chains and
-can meet in MIXED MERGES (all mu_e >= 2, legal at m >= 3). The prime-td
+can meet in MIXED MERGES (all mu_e >= 2), already at `m=2` when both entry
+values have `b_i>=2`. The prime-td
 multi-pole exclusion was retracted pending this adjudication.
+
+**2026-08-28 root-classification correction and extension.** A genuine
+contact-zero root merge is in `V2\V1` and is Proposition 9.3 case I, not
+case IV.  The hostile-confirmed mixed-root window (`aaa4d179...`) gives,
+for every actual searrow parent edge,
+`X_R=mu_e(1-w_e)=A/B` and hence `0<w_e<1`, with no `mu_e=1`
+hypothesis.  If one `mu_e=1`, repaired MP6 supplies the stronger
+`A=sum mu`, `B=r+l` anatomy; those identities must not be extended to an
+all-`mu>=2` root.  Thus any independently certified `w>=1` branch kills a
+root meet, including the row-1 branch in the `td=7` entry.  This closes only
+the root-meet subcase; §10's 62 interior cells and the full `td=7` panel
+remain open.
 
 Status: MIXED AFTER TRIPLE REVIEW (2026-08-12, BOOK-OFFAXIS-REVIEW.md;
 Fable + Grok + GPT converged on identical verdicts): R1.0-R1.2 (rigidity
@@ -49,8 +62,8 @@ superseded by §8–§9).
   b = 1 forced iff Λ β-minimal or Λ prime), MP5 (M=1 propagation), MP6
   (merge anatomy; k = 0 needs some μ_e = 1), MP7 (l = 0 kill; resonant
   jumps), MP8 (budget transparency proved on the pure M=1 forest ONLY),
-  line 120: mixed merges all-μ_e >= 2 obey only MP6(b)/(d) subadditivity,
-  legal only m >= 3 downstream of an earlier jump.
+  historical line 120 claimed mixed merges were legal only at `m>=3`
+  downstream of an earlier jump; §3 corrects this for off-axis entries.
 - TEMPLATE-ATTACK.md §1a: L6 law + i-sync. SHEET6-DEPTH.md DS1 (§2).
 - SHEET6-TDUNIFORM.md §1 menu / tdu_rows b-parameterization.
 
@@ -128,9 +141,14 @@ merges, MP-REVIEW l.120), MP2 (interior G* emits M ≥ 2; G* = (0,y)
 root-merge cells kept, tagged). Conservative superset: no l/ν expansion,
 no non-ZCH M | r cap, no root-merge St 9.2 arithmetic.
 
-**2691 merge cells over the 23 entries: 700 contain a MIXED (all-μ_e ≥ 2)
-merge, 1991 are pure MP6-anatomy** (some μ_e = 1 at every merge — full
-MP6(a)-(e) applies there). Highlights:
+**The legacy generator records 2691 conditional merge skeletons over the 23
+entries: 700 contain a MIXED (all-μ_e ≥ 2) merge, 1991 are pure MP6-anatomy**
+(some μ_e = 1 at every merge — full MP6(a)-(e) applies there).  The 700
+mixed rows impose `M_G | sum(mu_e)`, which is justified only on the
+`epsilon=0,k=0` subcase.  They are therefore diagnostic skeletons, not an
+exhaustive or completeness-safe superset of the all-mixed sector; omitted
+`k>0`/zero-root degree contributions and their emitted `M_G` remain
+explicitly OPEN. Highlights:
 - **ERRATUM CORRECTION (sharpening)**: mixed merges are structurally
   available already at **m = 2** (both b_i ≥ 2, both μ_e = 2: td8 [2,2]
   5 cells; td12 [2,2],[3,3],[2,2]; td13 [2,3] 3 cells; td14 [2,5]).
@@ -295,8 +313,10 @@ chain vertex H needs μ_e | M_H | gcd(·, dq_H), dq_H ≡ 1 (mod ν_H), so
 Merge G, r ≥ 2 arriving edges H_e → G, mult μ_e = mult(p_G^red, c_e)
 (μ_e | M_{H_e}, St 8.4). X_G := D_G/i_G. Edges classified by Prop 9.3
 (p. 50): non-0 arrivals at G ∈ V_{1,a} are case (II) (DS1(d) argument,
-M-free), G ∈ V_{2,a}\V_{1,a} case (I), 0-direction case (III), G = (0,y)
-case (IV) — exhaustive.
+M-free), G ∈ V_{2,a}\V_{1,a} case (I), and a 0-direction at an interior
+`V_1` merge is case (III).  A genuine root merge is the `V_2\V_1` case-I
+specialization.  Case IV instead describes a root endpoint outside both
+`V_1` and `V_2`, so it is not a merge case.
 
 **R2.1 (generalized handshake; the equal-w join law is the μ = 1
 shadow).** For every case-(I)/(II) edge, Prop 9.3(c),(d) i-normalized by
@@ -305,8 +325,12 @@ X_G = μ_e(ρ_e + n_e)/ν_e, hence eliminating n_e = ν_eκ̄_G − κ̄_e ∈ �
 
     **X_G = μ_e·(κ̄_G − w_e)**        (case I/II)
     **X_G = μ₀·(κ̄_G − ν_e·w_e)**     (case III, 0-edge; DEPTH §5c gen.)
-    **w_e = 1 − D_{(0,y)}/(μ_e·i₀) < 1** (case IV root, D = l_f ≥ 1;
-        n_e = ν_e − κ̄_e forced, κ̄_e < ν_e both parents — DEPTH §5d gen.)
+
+At a genuine root merge `R`, Proposition 8.1 top cancellation and the
+case-I handshake sharpen this to
+
+    **X_R = μ_e(1−w_e) = A/B,**
+    **w_e = 1 − A/(μ_e B) in (0,1).**
 
 and Prop 9.3(b) is the consistency X_G/κ̄_G = dp_G/dq_G. Consequences:
 (i) two arrivals with equal μ and both non-0 share w (DS4 5a is μ ≡ 1);
@@ -385,11 +409,11 @@ re-killed by M-divisibility.) So w₂ ≡ 3/2 at every depth, μ₂ ∈ {1,2}.
 - family I (ν_G = 1, case (I) all edges): same handshakes as I/II rows
   above — dead identically.
 
-**Step 4 (root merge dies).** G* = (0,y): R2.1 case IV: every arriving
-edge needs w_e = 1 − l_f/(μ_e i₀) < 1 (l_f = d_{(0,y)} ≥ 1, D8/MP9);
-chain 1 arrives with w = 2 ≥ 1 — dead. ∎
+**Step 4 (root merge dies; corrected branch).** G* = (0,y): the genuine
+meet is case I, and the mixed-root window forces `0<w_e<1` on every
+arriving edge. Chain 1 arrives with w = 2 ≥ 1 — dead. ∎
 
-**Theorem (td = 7 panel closed).** With BOOK-ENUM's on-axis record, the
+**RETRACTED HISTORICAL CLAIM (td = 7 panel closed).** With BOOK-ENUM's on-axis record, the
 off-axis sector at td = 7 is EMPTY at H1 tier (Prop 9.3 arithmetic over
 promoted MP0–MP8 + R1 + R2). The prime-td exclusion at td = 7 is
 RESTORED. (td = 11, 13 remain partially open: see §9 recount.)
@@ -405,8 +429,9 @@ at 0; case III with the R1.5 arrival law gcd(ν_H, μ₀) = 1 ∪ {ν_i});
 R2.1(ii) pins (κ̄, X) at any unequal-μ pole pair, then the cell equation
 X/κ̄ = dp/dq forces **(dp, dq) = M_G·(d₀, q₀)** (lowest terms) and the
 R2.2 shape solve runs exactly: searrow (S), NE m_j·dq < dp, dq ≡ 1 (ν),
-κ̄ ∈ ℤ at ν_G ≥ 2, ε/0-chain accounting; root cells die per-edge when
-every w ∈ W_i has w ≥ 1 (R2.1 case IV). Inner-merge arrivals keep known
+κ̄ ∈ ℤ at ν_G ≥ 2, ε/0-chain accounting; root cells die when some
+independently certified incoming alphabet has `w>=1` (the case-I
+mixed-root window). Inner-merge arrivals keep known
 μ_e (used in (S) and w_e > 0) but unknown w_e — never used to kill.
 Loop bounds (proved): 0-edge vs equal-(μ,w) partners with μ₀ < μ has
 κ̄ > 0 only for ν_H < μw/(μ₀w₀) (finite menu, exhaustive); μ = 1
@@ -522,7 +547,8 @@ resonance from 2/3 needs Δ | 2 — none).
 Chain 1 is frozen at (μ, w, M) = (1, 2, 1), λ = 0 (MP5/MP8/DS3; §8 Step 1
 unchanged). Chain 2's priced states are P0-closed from (3/2, 2). At the
 single merge G (r = 2), with X = κ̄ − 2 from chain-1's case-II handshake:
-- Root merge: DEAD (w₁ = 2 ≥ 1, R2.1(iv)) — §8 Step 4 unchanged.
+- Root merge: DEAD (`w₁=2`, contradicting the case-I mixed-root window)
+  — §8 Step 4's verdict survives with the corrected branch.
 - Chain-1 at 0: needs w₂ = 2ν_{H₁} ≥ 4 (μ₂ = 1) or w₂ > 2 (μ₂ ≥ 2):
   no priced state reaches w > 3, and w = 3 has M = 1 (μ₂ = 1 only): DEAD.
 - Unequal-μ non-0 pairs: κ̄ = (μ₂w₂ − 2)/(μ₂ − 1) with X > 0 forces
@@ -610,18 +636,27 @@ the 299 slack routes are robust to a single extra unit.
 refuted W_off alphabet (G1 M-law + missing ε-cells + the l | b
 conflation). Under the corrected priced alphabet the honest grid-level
 statement, now implemented as stage_rp_census, is:
-- the per-pole state set is bounded ONLY by the St 9.4 budget (P0
-  replaced R1.5's refuted finiteness by budget-boundedness), and at
-  budget td − 2 ≥ 5 it already contains post-jump states of unbounded
-  numerator and M (e.g. the (3/2, 2) closure at budget 5 has 70 states
-  up to M = 25; b = 3, 5 poles are worse);
-- the §9 grid solve's PROVEN loop bounds scale with num(w)·M_G, so no
-  completeness certificate exists for any b ≥ 2 entry at any td;
-- hence **NO off-axis grid cell is certifiably DEAD at printed tier:
-  the recount is 0 DEAD / 0 ALIVE / 2691 OPEN** (superset semantics;
-  per-entry rows in the engine output, all CAPPED), and panel decisions
-  must come from per-route pricing. Executed for td = 7 (P4: G2 shut,
-  62 cells budget-fitting). At td ≥ 8 the budget td − 2 ≥ 6 exceeds
+- **2026-08-29 correction:** the reduced per-pole P0 state set `(w,M)` is
+  finite and effectively computable at every fixed entry and St 9.4 budget.
+  The cap-free `(3/2,2)` closure at budget 5 has **69**, not 70, states,
+  maximum reduced numerator 3 and maximum `M=25`; the old engine returns the
+  same reduced map only because its illegal pure-epsilon divisor children
+  are absorbed by legal neutral drops. Different-model reviews
+  `3dab7f08...` and `bf4c56ae...` prove the general chain theorem via the
+  resolvent identity `E(l*a*(1+k+lex)-kbar*d*C)=l*a*T`;
+- the §9 grid solve is still not complete: its loops and records concern
+  last-vertex `nu`, `kbar`, full pattern degree, partner-dependent merge
+  legality, and mixed/full-cell families, none of which the finite reduced
+  `(w,M)` theorem quotients for all consumers;
+- hence **NO off-axis grid skeleton is certifiably DEAD at printed tier:
+  the conditional recount is 0 DEAD / 0 ALIVE / 2691 OPEN**, and every
+  entry additionally carries the legacy-named
+  `OPEN_UNBOUNDED_MIXED_OR_POSTJUMP` rider. After the 2026-08-29 correction,
+  that string means **unresolved mixed/full-cell quotient and downstream
+  coverage**, not unbounded reduced chain numerator or `M`.
+  These are not superset-complete cell counts; panel decisions must come
+  from a separately proved per-route cover. Executed for td = 7 (P4: G2
+  shut, 62 cells budget-fitting). At td ≥ 8 the budget td − 2 ≥ 6 exceeds
   the ≤ 5-unit cost of the td-7-style escape routes, so budget pricing
   alone cannot close any td ≥ 8 panel — those panels need either the
   T1-rigidity solves or new printed λ/ψ units. td = 11/13 remain open

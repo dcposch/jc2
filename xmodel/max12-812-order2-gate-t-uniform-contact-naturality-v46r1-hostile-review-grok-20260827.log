@@ -1,0 +1,18 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll independently rederive the V46R1 root-map repair from the listed artifacts only: hash-check them, then attack custody, maps, Hensel, mutations, a=7 coverage, and scope.Hashes first, then I’ll read the six artifacts and independently rederive the maps.Hashes match. Next I’ll read the R1 artifacts, the prior V46 review, and V46 source files needed for the custody check.I’ll read the prior V46 review and frozen V46 source next, then independently rederive the maps instead of trusting the PASS label.I’ll pin V46 custody, inspect the superseded root block, and independently replay the maps rather than trust R1’s PASS.V46 pins are intact. Next I’ll read the superseded root block and polar/support code, then run an independent replay.I’ll run an independent Fraction replay: hashes, Jacobians, Hensel, commutation, a=7 support/naturality, and the R1 verifier with no output writes.Importing the verifier left a `__pycache__` behind. I’ll remove that side effect, then confirm no other campaign files changed.Replay matches the frozen checks. I’ll write the independent review to the specified path only.Independent hostile review is in `xmodel/max12-812-order2-gate-t-uniform-contact-naturality-v46r1-hostile-review-grok-20260827.md`. Producer `PASS` and the prior V46 verdicts were not treated as evidence. All six charged hashes matched; R1 `checks` replayed byte-identically with no output write.
+
+| Item | Verdict |
+|---|---|
+| Custody / supersession | **CONFIRMED** |
+| Raw-total map | **CONFIRMED** |
+| Mapped-D1 map | **CONFIRMED** |
+| Hensel / inversion / commutation | **CONFIRMED** |
+| Mutations / Jacobians | **CONFIRMED** |
+| `a=7` load-tie coverage | **CONFIRMED** |
+| Scope / infrastructure | **CONFIRMED** |
+
+**Smallest counterexample:** none. **Repair:** none.
+
+V46 source primitives, tails, support, and endpoint lifecycle are unchanged; only the mixed root witness is superseded. Raw maps are `A=ac±λ az`, `C=(ec±λ ez)/2`, `R=rs/4±λ cs` with leading dets `(-2λ0, -λ0/2, -λ0/2)`. After `ez,ec→2 CzD1,2 CcD1` and `rs→4 BcD1` the D1 maps are unscaled with det `-2λ0`. They commute, invert triangularly, and Hensel is unique on `D(ρ)`. The verifier computes `ad−bc` of the six 2×2s; leftover `/2`, leftover `/4`, and a pasted raw determinant triple all fail at the leading block. `(7,8,7;T=26)` has maxima `p/A/C=1`, `R=k10=0` active, `k6=1` active, `k2=0` inactive, 189 coefficients, both jet-map directions equal.
+
+**V46+R1 is eligible for narrow infrastructure promotion** as the unique typed root-map linker input. Serial `ACT-TOT-G22/G24+` exporters stay off the critical path. Endpoint union and `(8,3,8)` are not promoted.

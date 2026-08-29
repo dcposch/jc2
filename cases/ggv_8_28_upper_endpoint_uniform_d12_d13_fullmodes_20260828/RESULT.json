@@ -1,0 +1,566 @@
+{
+  "calculation": {
+    "D12_conclusion": "Delta6=A*S",
+    "D12_extra_mode_kill": "none",
+    "D12_raw_mod_A2": [
+      {
+        "A_exponent": 1,
+        "coefficient": "-6",
+        "monomial": [
+          "a_x",
+          "f6",
+          "f6"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "6",
+        "monomial": [
+          "a_x",
+          "f6",
+          "q"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "3/2",
+        "monomial": [
+          "a_x",
+          "f6",
+          "r",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "3/64",
+        "monomial": [
+          "a_x",
+          "f6",
+          "v",
+          "v"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "-3/2",
+        "monomial": [
+          "a_x",
+          "q",
+          "q"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "-3/4",
+        "monomial": [
+          "a_x",
+          "q",
+          "r",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "-3/128",
+        "monomial": [
+          "a_x",
+          "q",
+          "v",
+          "v"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "-3/32",
+        "monomial": [
+          "a_x",
+          "r",
+          "r",
+          "z",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "-3/512",
+        "monomial": [
+          "a_x",
+          "r",
+          "v",
+          "v",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": 1,
+        "coefficient": "-3/32768",
+        "monomial": [
+          "a_x",
+          "v",
+          "v",
+          "v",
+          "v"
+        ]
+      }
+    ],
+    "D13_conclusion": "S=A*T",
+    "D13_extra_mode_kill": "none; c12 is the exact additive G12 constant gauge",
+    "D13_raw_mod_A2": [
+      {
+        "A_exponent": 1,
+        "coefficient": "9/4",
+        "monomial": [
+          "a_x",
+          "s",
+          "s"
+        ]
+      }
+    ],
+    "D13_remaining_polar_after_second_divisibility": [],
+    "Delta6": "F6-Q/2-R*Z/8-V^2/256",
+    "Delta7": "F7-Q*Z/8-R*V/16",
+    "combined_conclusion": "F6=Q/2+R*Z/8+V^2/256+A^2*T",
+    "complete_modes_D12": [
+      "c4*F8",
+      "c6=0",
+      "c8*R/2",
+      "c10=0",
+      "c12"
+    ],
+    "complete_modes_D13": [
+      "c4*F9",
+      "c6=0",
+      "c8*Q/2",
+      "c10=0",
+      "c12*(F^0)_1=0"
+    ],
+    "g12_polar": [
+      {
+        "A_exponent": -2,
+        "coefficient": "3/8",
+        "monomial": [
+          "f6",
+          "f6"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "-3/8",
+        "monomial": [
+          "f6",
+          "q"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "-3/32",
+        "monomial": [
+          "f6",
+          "r",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "-3/1024",
+        "monomial": [
+          "f6",
+          "v",
+          "v"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "3/32",
+        "monomial": [
+          "q",
+          "q"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "3/64",
+        "monomial": [
+          "q",
+          "r",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "3/2048",
+        "monomial": [
+          "q",
+          "v",
+          "v"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "3/512",
+        "monomial": [
+          "r",
+          "r",
+          "z",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "3/8192",
+        "monomial": [
+          "r",
+          "v",
+          "v",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": -2,
+        "coefficient": "3/524288",
+        "monomial": [
+          "v",
+          "v",
+          "v",
+          "v"
+        ]
+      }
+    ],
+    "g13_polar_after_D12": [
+      {
+        "A_exponent": -2,
+        "coefficient": "-3/16",
+        "monomial": [
+          "s",
+          "s"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "3/4",
+        "monomial": [
+          "f7",
+          "s"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "-3/32",
+        "monomial": [
+          "q",
+          "s",
+          "z"
+        ]
+      },
+      {
+        "A_exponent": -1,
+        "coefficient": "-3/64",
+        "monomial": [
+          "r",
+          "s",
+          "v"
+        ]
+      }
+    ],
+    "post_D11_prefix": {
+      "F4": "V/16+Z^2/64+A^2*R",
+      "F5": "R/2+Z*V/64+A^2*Q",
+      "killed_modes": [
+        "c6",
+        "c10"
+      ]
+    }
+  },
+  "complete_mode_schedule": [
+    {
+      "F_exponent": "1",
+      "birth_A_power": 4,
+      "birth_weight": 4,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D12": true,
+      "support_at_D13": true
+    },
+    {
+      "F_exponent": "3/4",
+      "birth_A_power": 3,
+      "birth_weight": 6,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D12": true,
+      "support_at_D13": true
+    },
+    {
+      "F_exponent": "1/2",
+      "birth_A_power": 2,
+      "birth_weight": 8,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D12": true,
+      "support_at_D13": true
+    },
+    {
+      "F_exponent": "1/4",
+      "birth_A_power": 1,
+      "birth_weight": 10,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D12": true,
+      "support_at_D13": true
+    },
+    {
+      "F_exponent": "0",
+      "birth_A_power": 0,
+      "birth_weight": 12,
+      "continuation_status": "retained_mandatory",
+      "role": "free_polynomial",
+      "support_at_D12": true,
+      "support_at_D13": true
+    },
+    {
+      "F_exponent": "-1/4",
+      "birth_A_power": -1,
+      "birth_weight": 14,
+      "continuation_status": "retained_mandatory",
+      "role": "forced_rational",
+      "support_at_D12": false,
+      "support_at_D13": false
+    },
+    {
+      "F_exponent": "-1/2",
+      "birth_A_power": -2,
+      "birth_weight": 16,
+      "continuation_status": "retained_mandatory",
+      "role": "forced_rational",
+      "support_at_D12": false,
+      "support_at_D13": false
+    },
+    {
+      "F_exponent": "-3/4",
+      "birth_A_power": -3,
+      "birth_weight": 18,
+      "continuation_status": "retained_mandatory",
+      "role": "forced_rational",
+      "support_at_D12": false,
+      "support_at_D13": false
+    },
+    {
+      "F_exponent": "-1",
+      "birth_A_power": -4,
+      "birth_weight": 20,
+      "continuation_status": "retained_mandatory",
+      "role": "forced_rational",
+      "support_at_D12": false,
+      "support_at_D13": false
+    }
+  ],
+  "literal_raw_mutations": {
+    "D12_Delta6_square": {
+      "all_513_generators_match_independent_determinant_recurrence": true,
+      "first_residual_row": 12,
+      "literal_row_provenance": {
+        "nonzero_generators": [
+          {
+            "generator_index_zero_based": 263,
+            "generator_sha256": "afbf9dc1137ad4f31f752b20e355629c6985b908419ba5a6a53919f20e4403ea",
+            "value": "24",
+            "x_degree": 3
+          },
+          {
+            "generator_index_zero_based": 267,
+            "generator_sha256": "6d28231372fcb29a29e04789a0fd575c8e0d1b5010f578cdf7f31ec3c3e3200b",
+            "value": "-24",
+            "x_degree": 7
+          }
+        ],
+        "row": 12,
+        "row_sha256": "aa06fc9b10eb9e154e9f7646b886eafe3fbc0dd71fc2ce0c1adbea6262ae8c99"
+      },
+      "live_scaling_mutations": {
+        "-1": {
+          "3": "24",
+          "7": "-24"
+        },
+        "2": {
+          "3": "96",
+          "7": "-96"
+        }
+      },
+      "prior_rows_zero": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "residual": {
+        "3": "24",
+        "7": "-24"
+      },
+      "scaling_power": 2
+    },
+    "D13_second_square": {
+      "all_513_generators_match_independent_determinant_recurrence": true,
+      "first_residual_row": 13,
+      "literal_row_provenance": {
+        "nonzero_generators": [
+          {
+            "generator_index_zero_based": 291,
+            "generator_sha256": "a5463ae207b42b1e9f9a8f4311f2b7958c2b00507c94e0923524d8ec15ae84b2",
+            "value": "-9",
+            "x_degree": 3
+          },
+          {
+            "generator_index_zero_based": 295,
+            "generator_sha256": "6e77d1317a6111fc2b43275fac92d3dc2ead65df67ad7b683b16e7b88db46d1f",
+            "value": "9",
+            "x_degree": 7
+          }
+        ],
+        "row": 13,
+        "row_sha256": "aa794ef212b7f985a0e75db864b483f352504b9519f77de9247295bcbf9880ab"
+      },
+      "live_scaling_mutations": {
+        "-1": {
+          "3": "-9",
+          "7": "9"
+        },
+        "2": {
+          "3": "-36",
+          "7": "36"
+        }
+      },
+      "prior_rows_zero": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "residual": {
+        "3": "-9",
+        "7": "9"
+      },
+      "scaling_power": 2
+    },
+    "Delta6_all_terms_regression": {
+      "conclusion": "dropping any part of the complete Delta6 correction is detected",
+      "exact_square_assignment": "Z=V=1,R=Q=X in S=A^2+t/2+t^2/8+t^3/16+(X/2)t^4+(X/2)t^5",
+      "literal_row_provenance": {
+        "nonzero_generators": [
+          {
+            "generator_index_zero_based": 260,
+            "generator_sha256": "ebe1308069bf3fa60e8a14761a1c9bde6b00779f219f410fd6365bc6ddf847a2",
+            "value": "15/1024",
+            "x_degree": 0
+          },
+          {
+            "generator_index_zero_based": 261,
+            "generator_sha256": "fc5e66e1b3526f9a79a0d44b9ce3b2bf7719c2ec92a12c5f44b784619a7fcc29",
+            "value": "75/32",
+            "x_degree": 1
+          },
+          {
+            "generator_index_zero_based": 263,
+            "generator_sha256": "afbf9dc1137ad4f31f752b20e355629c6985b908419ba5a6a53919f20e4403ea",
+            "value": "3/8192",
+            "x_degree": 3
+          },
+          {
+            "generator_index_zero_based": 264,
+            "generator_sha256": "b958eece5c72890505b885e2161abec2690d09773bcff3a3bce8bd70b34865db",
+            "value": "45/512",
+            "x_degree": 4
+          },
+          {
+            "generator_index_zero_based": 265,
+            "generator_sha256": "5e957484ad335d237b3401042a07e1c17984bae59fe41571ff11afaaa166b5ab",
+            "value": "75/16",
+            "x_degree": 5
+          },
+          {
+            "generator_index_zero_based": 267,
+            "generator_sha256": "6d28231372fcb29a29e04789a0fd575c8e0d1b5010f578cdf7f31ec3c3e3200b",
+            "value": "-3/8192",
+            "x_degree": 7
+          },
+          {
+            "generator_index_zero_based": 268,
+            "generator_sha256": "e287daa34d7b7966431c34cc14b152b5f50fd63f13b2a61d870007f88b584dd8",
+            "value": "-105/1024",
+            "x_degree": 8
+          },
+          {
+            "generator_index_zero_based": 269,
+            "generator_sha256": "597a33c13dd4e0257d9f319fa43a77001fbaaf9270f6d934196e975104d53a49",
+            "value": "-225/32",
+            "x_degree": 9
+          }
+        ],
+        "row": 12,
+        "row_sha256": "aa06fc9b10eb9e154e9f7646b886eafe3fbc0dd71fc2ce0c1adbea6262ae8c99"
+      },
+      "mutation": "set F6=0 and continue F^(3/2) through G11",
+      "mutation_D12": {
+        "0": "15/1024",
+        "1": "75/32",
+        "3": "3/8192",
+        "4": "45/512",
+        "5": "75/16",
+        "7": "-3/8192",
+        "8": "-105/1024",
+        "9": "-225/32"
+      },
+      "mutation_rows_D4_through_D11": "zero",
+      "required_literal_F6": "1/256+(5/8)X=Q/2+R*Z/8+V^2/256"
+    },
+    "c12_additive_gauge": {
+      "all_D4_through_D22_zero_before_affine_target_fold": true,
+      "assignment": "G12[X^0]=c12=1; every other raw variable zero",
+      "conclusion": "c12 is a global additive gauge and must not be killed",
+      "folded_D22_generator_value": "-1"
+    }
+  },
+  "schema": "jc2.ggv.upper_endpoint.uniform_d12_d13_fullmodes.result.v1",
+  "scope_firewall": [
+    "field-radical prefix only; no scheme-theoretic divisibility",
+    "c12 is retained as an exact additive gauge, not killed",
+    "c14,c16,c18,c20 remain mandatory forced rational modes",
+    "no claim beyond D13 and no endpoint, Keller-pair, or JC2 conclusion",
+    "standard-library exact rational arithmetic only; no CAS or AWS"
+  ],
+  "source": {
+    "authoritative_raw_system": "cases/ggv_8_28_upper_endpoint_branch_p_20260827/RAW_DIRECT_SYSTEM.json",
+    "authoritative_raw_system_sha256": "ead2fa404a741c5bc55934de6a1651d417701422f4b5311e3de7e3dccca0e5a0",
+    "predecessor_checker": "cases/ggv_8_28_upper_endpoint_uniform_d10_fullmodes_audit_20260828/verify_uniform_d10.py",
+    "predecessor_checker_sha256": "8ebe5f4f099e6cf15b0a4703dfb348aa6cc72df8fdbc60b1d095925fa3746d21",
+    "predecessor_result": "cases/ggv_8_28_upper_endpoint_uniform_d10_fullmodes_audit_20260828/RESULT.json",
+    "predecessor_result_sha256": "8ff338bdd47b7a53ba1515a7889823620120f92d718a03349fb9e3fd27014236",
+    "raw_generator_count": 513,
+    "raw_variable_count": 303
+  },
+  "status": "PASS_EXACT_FIELD_POINT_CASCADE_THROUGH_D13",
+  "theorems": {
+    "D12": {
+      "conclusion": "A divides Delta6 at field points",
+      "defect": "F6-Q/2-R*Z/8-V^2/256",
+      "extra_mode_kill": "none",
+      "raw_congruence": "D12=-6*A*A'*Delta6^2 mod A^2"
+    },
+    "D13": {
+      "after_D12": "Delta6=A*S",
+      "c12_status": "global additive G12[X^0] gauge, source-replayed",
+      "conclusion": "F6=Q/2+R*Z/8+V^2/256+A^2*T",
+      "extra_mode_kill": "none",
+      "raw_congruence": "D13=+(9/4)*A*A'*S^2 mod A^2"
+    }
+  }
+}

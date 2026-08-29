@@ -1,0 +1,44 @@
+{
+  "schema": "GGV-8_28-LAMBDA0-QGATE-RESUME-SOURCE-ORIGIN-v3",
+  "created_utc": "2026-08-28T10:39:42Z",
+  "original_emission": {
+    "remote_namespace": "/home/ubuntu/jobs/ggv_q1_fixed_a_fulltail_r1_20260828T094558Z_box03",
+    "terminal": "NO_VERDICT_Q_COMPILE",
+    "system_id": "lambda_0_full_qgates",
+    "system_bytes": 58975191,
+    "system_sha256": "7c4beff1ec5b6e64fafcf800d965e2ea614bcd5d53d14195551f5322f418ab78",
+    "scope": "Complete emitted bytes, no prior reduction or mathematical verdict."
+  },
+  "resume_failures": [
+    {
+      "namespace": "/home/ubuntu/jobs/ggv_q1_fixed_split_lambda0_resume_r1_20260828T102630Z_r6a",
+      "terminal": "NO_VERDICT_EMISSION_VALIDATION",
+      "cause": "macOS pax/AppleDouble directory-census mismatch",
+      "classification": "PACKAGING_ADAPTER_FAILURE"
+    },
+    {
+      "namespace": "/home/ubuntu/jobs/ggv_q1_fixed_split_lambda0_resume_r2_20260828T103535Z_r6a",
+      "terminal": "NO_VERDICT_EMISSION_VALIDATION",
+      "cause": "validator compared the historical original compiler path with the relocated successor path despite identical pinned bytes",
+      "passed_before_stop": ["exact six-file census", "exact size/hash replay", "canonical JSON replay", "263 equation hash replays"],
+      "classification": "PROVENANCE_ADAPTER_FAILURE"
+    }
+  ],
+  "v3_repair": {
+    "mathematical_source_changes": false,
+    "validator_change": "Pin the recovered JSON's original path/digest map exactly; independently hash the relocated byte-identical executable source. Do not rewrite the recovered JSON.",
+    "lambda1_job": "/home/ubuntu/jobs/ggv_q1_fixed_split_lambda1_compile_r2_20260828T103535Z_r6d continues independently and is not altered"
+  },
+  "frozen_bytes": {
+    "compile_q_gates.py": "b487d8b532d303421386c66638a6d7953aa5a4dcf74208cd07c6db885c511201",
+    "compile_fixed_q1_raw.py": "82284effbd507693cb8deb00e33b108d0f62d3d3861ce487e75d2e3f98b8fbea",
+    "reduce_q_gates.py": "47d644bf803dfc2c3e65b57110aca8e4ae32a878794b9def6787adf21f4128b6"
+  },
+  "firewall": {
+    "resume_without_recompile": true,
+    "no_peer_ideation_consumed": true,
+    "no_jc2_lean_access": true,
+    "no_top_level_canonical_mutation": true,
+    "heavy_or_uncertain_work_aws_only": true
+  }
+}

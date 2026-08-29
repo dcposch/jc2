@@ -1,0 +1,17 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/max12-812-order2-p0-total-rees-j2-v34-terminal-receiver-strategy-opus5-20260827.md` (651 lines, SHA-256 `04974b5c…`). It is the only file I wrote; the 9 modified files in `git status` are the pre-existing campaign wave, and `jc2-lean` was untouched.
+
+**What the audit found**
+
+V34's four numbers are all confirmed — and I confirmed `DIM=0`, `SIZE=12`, `UNIT_IDEAL=0`, `VDIM=5` by hand from the printed basis, without a Groebner engine (the 12 leading terms give standard monomials `{1,rs2,aa0,ee1,ec3}`, which also proves the printed set *is* the reduced `dp` basis).
+
+Beyond confirmation, four things that were not in the frozen evidence:
+
+1. **Kummer form and rationality.** The ideal is prime over `Q` with residue field `Q(2^{1/5})`; `ee1^5 = 2^16·3^10`, `ec3^5 = 2^9·3^5·5^10`, and with `θ=ee1/72` every coordinate is a `Q`-multiple of a power of `θ`. Reduced over `Q̄` (5 distinct points, multiplicity 1). Sigma scaling by `u=θ²` clears every root: the orbit is a single sigma-orbit through the **rational** point `a1=192, ell2=21/4, cs1=11, rs2=−35, aa0=−96, ee1=576, ec3=2400, ρ=0`, which I verified kills **all 63** literal rows of grades 10–18 by direct substitution — a stronger, Groebner-free form of the survival claim.
+2. **A completeness gap closed.** V34 appended only `Tg18_6` and never recorded why. I restricted all 63 rows: exactly six are nonzero on this support, on the diagonal `Tg{g}_{g−12}`, and those six rows are jet-blind at the point (full Jacobian check), so V34's zero-jet convention hid nothing here.
+3. **The survivor is at `k=0`**, hence off the named unit-`k10` family. That reframes the next question from "does it survive grade 19" to "can it be moved onto `D(k)`" — where I show `k` is first-order reachable.
+4. **The terminal receiver already gets cut.** Its rows are the ordered rows at `a1=0`, free on disk. Grade 12 alone forces `e0=e1=0` unconditionally (one-line proof from frozen coefficients), and on `D(k)` grades 13–14 force `ee0=rs1=0` with a small branch split. `Z00` is at `k=0`, so the promoted all-depth zero-section does not protect the on-family receiver.
+
+**Ranking effect:** finite-grade `a1^N(1+ρW)` certificates are now refuted through grade 18 (was 16); the receiver rises from "blocked" to cheapest live object; and the cards are ordered B (on-family repair) and C (receiver census) ahead of A (grade-19), because B decides whether A's answer is even on-family.
+
+One residual trust boundary I state plainly: I proved the five points lie on `G_V32+P18`, but the *upper* bound — no sixth point — still rests on the frozen Singular run, since recomputing it needs a Groebner engine I was not permitted to use.

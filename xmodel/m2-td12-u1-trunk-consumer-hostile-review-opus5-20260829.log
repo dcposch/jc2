@@ -1,0 +1,32 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review complete. Written to `xmodel/m2-td12-u1-trunk-consumer-hostile-review-opus5-20260829.md` (body seal `86ccd2f1`); no other repo file touched.
+
+## Verdicts
+
+| charge | verdict |
+|---|---|
+| unique `td=12,m=3,[2,2,2]` entry + U1 merge | **PASS** |
+| dirty trunk step from `(9/2,2)` | **PASS** |
+| exact Prop 8.1(iv) and `B/A = 9/8` | **PASS** |
+| Statement 3.9 / gauge compatibility | **PASS_WITH_REPAIR** |
+| lambda `{8,9}` and slack-one | **PASS_WITH_REPAIR** |
+| complete cap-free one-step menu | **PASS_WITH_REPAIR** |
+| independence from merge AP parameter `n` | **PASS** |
+
+`FAMILY_SURVIVES_FIRST_TRUNK` / `TRUNK_T1_SURVIVES` sustained.
+
+## What I recomputed independently
+
+Re-derived the ODE from `t' = νt/η` rather than checking the report's algebra, and got the closed form **`B/A = (ν+2)/(ν−1)`** — which reproduces the printed `SHEET6-TEMPLATE` §2b `F_s` solve at ν=7 (I expanded that identity separately: `(6B−9A)t + 3AB`, constant `(9/2)A²`). That's corroboration on a second printed cell. Re-enumerated the whole 13-edge menu by hand from P0/R1.2/R1.3; it matches field-for-field. Replay reproduces `checks=134` under both modes and both payload hashes.
+
+## The three repairs
+
+1. **The `b=2` pole entries are unpriced and share the budget.** `BOOK-OFFAXIS` §2(c1)/§3 declare off-axis `M≥2` budget status UNKNOWN *in both directions*; MP5/MP8's "chains free" is a **b=1** clause. So `λ_poles = 0` is optimistic-but-superset-safe, not derived, and §8's "the only remaining local unknown that can still spend the slack" is wrong — it's the only *trunk-local* one. Three identical poles ⇒ the answer is 0 or ≥3, and ≥3 kills the charged route *and* the `(3/4,4)` sibling. **This displaces the cv jet as best next discriminator.**
+
+2. **Sheet-level St 3.9(i) is exact and is the `n`-consumer.** The template proves it exact on the analogue (`mult(p_{F_s},c_m) = 12 = deg p_{G_m}`); transporting gives `i_F = 3n·i_G`. The report names this consumer but never writes the relation, understating it.
+
+3. **Menu-completeness budget circularity.** Charged at 9 (the advertised terminal's own budget); the maximal `td=12` budget is 10 since `ψ ≥ 1`. I closed the gap rather than only flagging it — no edge costs 10, so completeness survives.
+
+Also: the sealed payload carries a wrong unchecked annotation `"C_iv_general": "225 u^2 / 136"` (that's `ρ·(B/A)`); correct is `1800u²/17`, which is what the report text and the test both say.
+
+One attack that failed: the shallow/deep assignment in §4 looks inverted against `BOOK-OFFAXIS`'s "trunk below the merge", but `SHEET6-TEMPLATE` §0 pins π with poles deepest and `(0,y)` shallowest — merges *are* deeper, and the report is right. The two source families just use opposite F/G letters.

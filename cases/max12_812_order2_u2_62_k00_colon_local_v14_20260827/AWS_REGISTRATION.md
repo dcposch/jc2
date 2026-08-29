@@ -1,0 +1,35 @@
+# AWS registration: K00 colon-local V14
+
+Registered UTC: 2026-08-27T09:45:58Z
+
+Exact-Q lane:
+
+```text
+source_payload_sha256=899bbe8655753585af310f762eaee1e853251394abe00ff2ac1c591702d618b0
+freeze_sha256=82873f2178e0dc34ffeca0c581e8850912df48e93b6b488ebb2079377ee3f482
+host_alias=Box01
+public_host=54.175.21.169
+expected_private_hostname=ip-172-30-0-237
+tag=max12_812_order2_u2_62_k00_colon_local_v14_q_20260827T094558Z_box01
+remote_job=/home/ubuntu/jobs/max12_812_order2_u2_62_k00_colon_local_v14_q_20260827T094558Z_box01
+field=Q
+timeout_seconds=1800
+outer_timeout_seconds=2100
+virtual_memory_cap_kib=67108864
+```
+
+Good-prime control:
+
+```text
+source_payload_sha256=b34029c1293b33dd8f3f327c0c60fac27ac79c143ac520040689e517c7f281a1
+freeze_sha256=82873f2178e0dc34ffeca0c581e8850912df48e93b6b488ebb2079377ee3f482
+host_alias=r6a
+public_host=3.91.104.135
+expected_private_hostname=ip-172-30-0-34
+tag=max12_812_order2_u2_62_k00_colon_local_v14_p65521_20260827T094558Z_r6a
+remote_job=/home/ubuntu/jobs/max12_812_order2_u2_62_k00_colon_local_v14_p65521_20260827T094558Z_r6a
+field=65521
+timeout_seconds=900
+outer_timeout_seconds=1200
+virtual_memory_cap_kib=33554432
+```

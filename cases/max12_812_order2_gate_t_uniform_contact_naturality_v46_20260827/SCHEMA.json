@@ -1,0 +1,308 @@
+{
+  "schema_id": "JC2-GATE-T-STRICT-UAC-UNIFORM-CONTACT-NATURALITY-V46",
+  "schema_version": 1,
+  "date": "2026-08-27",
+  "status": "PROVISIONAL_PENDING_DIFFERENT_MODEL_REVIEW",
+  "scope": {
+    "coefficient_base": "Z[1/2]",
+    "contact_shifts": "arbitrary nonnegative integers (a,c,r)",
+    "transport": "formula-level source identity only",
+    "strict_fan_linking": "only the eleven listed reviewed endpoint families",
+    "localization": "source naturality uses none; shifted-root maps use D(rho)",
+    "exclusions": [
+      "rho=0 ramified fibre",
+      "equality faces",
+      "positive-order leading loads",
+      "k10-leading coefficient zero",
+      "unlisted endpoint contacts",
+      "six staged Rees charts",
+      "terminal/Taylor receiver",
+      "global Gate T",
+      "order two",
+      "maximum twelve",
+      "JC2"
+    ]
+  },
+  "normative_series": {
+    "P": "p0 + 2*sum(i>=1,ell_i*sigma^i)",
+    "S": "sum(i>=0,cs_i*sigma^i)",
+    "Q": "sum(i>=0,rs_i*sigma^i)",
+    "Az": "sum(i>=0,az_i*sigma^i)",
+    "Ac": "sum(i>=0,ac_i*sigma^i)",
+    "Ez": "sum(i>=0,ez_i*sigma^i)",
+    "Ec": "sum(i>=0,ec_i*sigma^i)"
+  },
+  "normative_primitives": {
+    "Ctot": "sigma^2*S",
+    "Rtot": "(P^2+sigma^2*Q)/4",
+    "N3": "sigma^3*Az",
+    "N2": "sigma^3*Ac",
+    "N1": "sigma^3*(P*Az+Ez)/2",
+    "N0": "sigma^3*(P*Ac+Ec)/2",
+    "F6": "2*P",
+    "F5": "2*Ctot",
+    "F4": "P^2+2*Rtot",
+    "F3": "2*P*Ctot+sigma^2*N3",
+    "F2": "Ctot^2+2*P*Rtot+sigma^2*N2",
+    "F1": "2*Ctot*Rtot+sigma^2*N1",
+    "F0": "Rtot^2+sigma^2*N0"
+  },
+  "jet_reindexing_map": {
+    "direction": "total coefficient ring to shifted D1 coefficient ring",
+    "lower_ideal": [
+      "az_i=ac_i=0 for i<a",
+      "ez_i=ec_i=0 for i<c",
+      "cs_i=rs_i=0 for i<r"
+    ],
+    "p0": "p",
+    "ell_i": "ell_i",
+    "az_i": "0 if i<a else AzD1_(i-a)",
+    "ac_i": "0 if i<a else AcD1_(i-a)",
+    "ez_i": "0 if i<c else 2*CzD1_(i-c)",
+    "ec_i": "0 if i<c else 2*CcD1_(i-c)",
+    "cs_i": "0 if i<r else BzD1_(i-r)",
+    "rs_i": "0 if i<r else 4*BcD1_(i-r)",
+    "loads": "identity on all three load series",
+    "targets": "identity",
+    "proof_note": "coefficient extraction commutes with this explicit jet reindexing map; bare sigma-adic continuity is not the justification"
+  },
+  "d1_primitives": {
+    "Kc": "sigma^(r+2)*Bz",
+    "Kr": "P^2/4+sigma^(r+2)*Bc",
+    "N3": "sigma^(a+3)*AzD1",
+    "N2": "sigma^(a+3)*AcD1",
+    "N1": "sigma^3*(P*sigma^a*AzD1/2+sigma^c*CzD1)",
+    "N0": "sigma^3*(P*sigma^a*AcD1/2+sigma^c*CcD1)"
+  },
+  "load_delays_sigma": {
+    "k10": 4,
+    "k6": 12,
+    "k2": 20
+  },
+  "target_schedule": {
+    "2": {"name": "mu2", "grade": 28, "scale": "1"},
+    "4": {"name": "mu4", "grade": 32, "scale": "1"},
+    "6": {"name": "mu6", "grade": 36, "scale": "1"},
+    "7": {"name": "J", "grade": 38, "scale": "1/4"}
+  },
+  "tails": {
+    "path": "cases/max12_812_order2_u2_62_strict_rees_20260825/aws_compile_v2_jsat/run/output/compiled_v2/tails.json",
+    "byte_sha256": "d72f774c53c7dcb259eefc10ff2a02202e1049b61c17486b1ba22e3773813848",
+    "canonical_sha256": "6eed03d486e1cd9e8d990eed74a105293d383882bbae77d204eac190cce387e8",
+    "row_census": [36, 54, 58, 81, 89, 120, 131],
+    "total_census": 569,
+    "monomial_order": ["F0", "F1", "F2", "F3", "F4", "F5", "F6", "k10", "k6", "k2"],
+    "lambda_weights": [8, 7, 6, 5, 4, 3, 2, 2, 6, 10],
+    "load_nonlinearity": "at most one of k10,k6,k2, exponent one"
+  },
+  "aliases": {
+    "total": {
+      "P_positive_jets": "ell{index}, index>=1",
+      "S": ["cs", "cs1", "cs2", "cs{index>=3}"],
+      "Q": ["rs", "rs1", "rs2", "rs{index>=3}"],
+      "Az": ["a1", "aa1", "aaa1", "az{index>=3}"],
+      "Ac": ["a0", "aa0", "aaa0", "ac{index>=3}"],
+      "Ez": ["c1", "e1", "ee1", "ez{index>=3}"],
+      "Ec": ["c0", "e0", "ee0", "ec{index>=3}"],
+      "k10": ["k", "k1", "k2c", "k10_{index>=3}"],
+      "k6": ["k6", "k6_{index>=1}"],
+      "k2": ["k2", "k2_{index>=1}"]
+    },
+    "d1": {
+      "Az": "AzD1_{relative index}",
+      "Ac": "AcD1_{relative index}",
+      "Cz": "CzD1_{relative index}",
+      "Cc": "CcD1_{relative index}",
+      "Bz": "BzD1_{relative index}",
+      "Bc": "BcD1_{relative index}",
+      "k10": "k10_{relative index}",
+      "k6": "k6_{relative index}",
+      "k2": "k2load_{relative index}"
+    },
+    "collision_firewall": {
+      "total_k10_jet_2": "k2c",
+      "total_k2_leading": "k2",
+      "d1_k2_leading": "k2load",
+      "warning": "D1 a1,a0,c1,c0 denote shifted leading jets, not total stage-zero jets"
+    }
+  },
+  "shifted_root": {
+    "equation": "lambda(sigma)^2=-P(sigma)/2",
+    "deck_leading": "lambda_0=epsilon*rho, epsilon in {+1,-1}",
+    "recurrence": "2*lambda_0*lambda_n=-ell_n-sum(1<=i<n,lambda_i*lambda_(n-i))",
+    "A_jet": "AcD1_n +/- sum(i=0..n,lambda_i*AzD1_(n-i))",
+    "C_jet": "(CcD1_n +/- sum(i=0..n,lambda_i*CzD1_(n-i)))/2",
+    "R_jet": "BcD1_n +/- sum(i=0..n,lambda_i*BzD1_(n-i))",
+    "localization": "D(rho)",
+    "deck_rule": "rho -> -rho exchanges epsilon=+1 and epsilon=-1"
+  },
+  "polar_inventory": [
+    {"name": "AC", "fixed_delay": 10, "exponents": {"A": 1, "C": 1}},
+    {"name": "C2", "fixed_delay": 10, "exponents": {"C": 2}},
+    {"name": "RA2", "fixed_delay": 12, "exponents": {"R": 1, "A": 2}},
+    {"name": "A3", "fixed_delay": 15, "exponents": {"A": 3}},
+    {"name": "k10R3", "fixed_delay": 10, "exponents": {"R": 3}, "load": "k10"},
+    {"name": "k10RC", "fixed_delay": 11, "exponents": {"R": 1, "C": 1}, "load": "k10"},
+    {"name": "k10R2A", "fixed_delay": 13, "exponents": {"R": 2, "A": 1}, "load": "k10"},
+    {"name": "k10A2", "fixed_delay": 14, "exponents": {"A": 2}, "load": "k10"},
+    {"name": "k6C", "fixed_delay": 17, "exponents": {"C": 1}, "load": "k6"},
+    {"name": "k2R", "fixed_delay": 22, "exponents": {"R": 1}, "load": "k2"}
+  ],
+  "semantic_witnesses": [
+    {
+      "role": "actual-total source_block, Kummer-specialized and only modulo sigma^13",
+      "path": "cases/max12_812_order2_p0_total_rees_t_rs0_discovery_20260826/compile_t_rs0_discovery.py",
+      "sha256": "3aa6bbbbe539607461c5f27b400aeedd335a4d18e01e40d730f5537da4f45938"
+    },
+    {
+      "role": "D1 source_coefficients shape",
+      "path": "cases/max12_812_order2_square_owner_r1_d1_ac_symbolic_20260826/compile_r1_d1_ac.py",
+      "sha256": "e024a13d24a11519f70b535d4b47c47c62538a684b8bc71e79216410cd8ecb7c"
+    },
+    {
+      "role": "tail/load/target emitter",
+      "path": "cases/max12_812_order2_square_load_ladder_20260826/compile_square_load_ladder.py",
+      "sha256": "77f25216f0ab17abb3a8f4be271b2ea38f883806a72523cdca1be659df90dcdc"
+    },
+    {
+      "role": "formula theorem, before reviewed wording repair",
+      "path": "xmodel/max12-812-order2-gate-t-uniform-contact-shift-naturality-interface-sol-20260827.md",
+      "sha256": "1cfa10b45d83ba4ecd98861c1f82e9bd41056d1cef7eaa43ad2802aa73aada5d"
+    },
+    {
+      "role": "different-model formula/interface hostile review",
+      "path": "xmodel/max12-812-order2-gate-t-uniform-contact-shift-naturality-interface-hostile-review-fable5-20260827.md",
+      "sha256": "b66f8c0cf342e497e9117306de3d4aaa5d8b537c5929f99d2b32765ed855f164"
+    }
+  ],
+  "endpoint_families": [
+    {
+      "id": "D1_A2_A5",
+      "domain": "d=1, a=2..5, c=a+1, closed r>=a",
+      "test": {"a": 2, "c": 3, "r": 2, "T": 16, "field": "Q"},
+      "status": "promoted",
+      "authority": {"path": "xmodel/max12-812-order2-square-d1-finite-band-a2-a5-promotion-20260826.md", "sha256": "973f7953d42fdd994d9c7da8ea70fceffc2e8da9002b33f38ea1a17c6922d6d1"},
+      "review": {"path": "xmodel/max12-812-order2-square-d1-finite-band-a2-a5-hostile-review-grok-20260826.md", "sha256": "e03de4e1fc1816a7141c6bb8060b4a75c2a6b5a08ea4d56ca63582b875cad335"}
+    },
+    {
+      "id": "D1_A6_A7",
+      "domain": "d=1, a=6..7, c=a+1, closed r>=a",
+      "test": {"a": 6, "c": 7, "r": 6, "T": 24, "field": "F1000003"},
+      "status": "promoted",
+      "authority": {"path": "xmodel/max12-812-order2-square-d1-load-transition-a6-a7-promotion-20260826.md", "sha256": "829ac12faceed48ad0ec599a60764d038835895bf33c2abce0dceb141605ea0f"},
+      "review": {"path": "xmodel/max12-812-order2-square-d1-load-transition-a6-a7-v2-hostile-review-grok-20260826.md", "sha256": "3e601cf34eb23270daa067794087155b7179607d27af01f84a60624447f949e3"}
+    },
+    {
+      "id": "D1_A8",
+      "domain": "d=1, a=8, c=9, closed r>=8",
+      "test": {"a": 8, "c": 9, "r": 8, "T": 28, "field": "F1000003"},
+      "status": "promoted",
+      "authority": {"path": "xmodel/max12-812-order2-square-d1-a8-k6-mu2-v3-promotion-20260826.md", "sha256": "3d847561946751c68a081db55f2f514b3808c22f7ac6e236fcbff10911ab1ce6"},
+      "review": {"path": "xmodel/max12-812-order2-square-d1-a8-k6-mu2-v3-hostile-review-grok-20260826.md", "sha256": "b5944e1582a2df9ff37224bd7c5875520321f0ee0998c63c8ceeeedfbb66bba2"}
+    },
+    {
+      "id": "D1_A9",
+      "domain": "d=1, a=9, c=10, closed r>=9",
+      "test": {"a": 9, "c": 10, "r": 9, "T": 30, "field": "F1000003"},
+      "status": "promoted",
+      "authority": {"path": "xmodel/max12-812-order2-square-d1-a9-full-composition-promotion-20260826.md", "sha256": "dfabe08283e8fe9cb1ea6cef28a9eac6a4728d0f7c482e8c642b2835798d0459"},
+      "review": {"path": "xmodel/max12-812-order2-square-d1-a9-full-composition-hostile-review-grok-v3-20260826.md", "sha256": "8524bd1e20ecfc3931df5c9df9e88f6673de5a7f348b015954884acdddd558eb"}
+    },
+    {
+      "id": "D23_LOW_A6",
+      "domain": "the eleven d=2,3 baselines in the reviewed low-a block",
+      "test": {"a": 2, "c": 5, "r": 3, "T": 20, "field": "Q"},
+      "status": "promoted",
+      "authority": {"path": "xmodel/max12-812-order2-square-d1-unique-ac-d23-lowa6-local-row-promotion-20260826.md", "sha256": "8b92c22bebae73e3efd793c7c7541c53caf8e956f5ce181240c164f3362864da"},
+      "review": {"path": "xmodel/max12-812-order2-square-d1-unique-ac-d23-lowa6-local-row-hostile-review-grok-20260826.md", "sha256": "841f0d6ccbb596fa4ace3f08760f039eb288030efa91075112e915d1320592a3"}
+    },
+    {
+      "id": "D23_E",
+      "domain": "exceptional baseline (a,c,r)=(1,4,2)",
+      "test": {"a": 1, "c": 4, "r": 2, "T": 18, "field": "Q"},
+      "status": "promoted",
+      "authority": {"path": "xmodel/max12-812-order2-square-d1-e-a1d3-opposite-root-pole3-promotion-20260826.md", "sha256": "2ff74f6914a3316104d7a406ca6d6d4ede2cf8332221dfcccd7461f9d925176e"},
+      "review": {"path": "xmodel/max12-812-order2-square-d1-e-a1d3-opposite-root-pole3-hostile-review-grok-20260826.md", "sha256": "984783eab8342d2523a6e1d7365785f5d37746d0393fc30cfad206bb5658b774"}
+    },
+    {
+      "id": "D23_A7",
+      "domain": "(a,d,r)=(7,2,7),(7,3,7)",
+      "test": {"a": 7, "c": 10, "r": 7, "T": 30, "field": "F1000003"},
+      "status": "promoted",
+      "authority": {"path": "xmodel/max12-812-order2-square-d1-a7-loadtie-dual-functional-promotion-20260826.md", "sha256": "b5c38f1b2e2e5ec6f2ac32fb350f11686dac5cb45eabe8cf1ea67d20726bd362"},
+      "review": {"path": "xmodel/max12-812-order2-square-d1-a7-loadtie-dual-functional-hostile-review-grok-20260826.md", "sha256": "1ae7f6d95b7d707b3fe54b07a59fbd103435d13b4a0a764b6495215785d26530"}
+    },
+    {
+      "id": "D23_A8D2",
+      "domain": "(a,c,r)=(8,10,8)",
+      "test": {"a": 8, "c": 10, "r": 8, "T": 30, "field": "F1000003"},
+      "status": "promoted",
+      "authority": {"path": "xmodel/max12-812-order2-square-d1-a8-d2-loadfirst-dual-promotion-20260826.md", "sha256": "9cc6870289ec0697e438c3999616194d3955e3bc875cd69cad855fd16d28c3b9"},
+      "review": {"path": "xmodel/max12-812-order2-square-d1-a8-d2-loadfirst-dual-hostile-review-grok-20260826.md", "sha256": "0558ea1e668245b983e217ef329a6ccf0baf5a8f5769f669f43a245d24990e21"}
+    },
+    {
+      "id": "D23_A8D3",
+      "domain": "(a,c,r)=(8,11,8)",
+      "test": {"a": 8, "c": 11, "r": 8, "T": 38, "field": "F1000003"},
+      "status": "confirmed_but_unpromoted",
+      "authority": null,
+      "review": {"path": "xmodel/max12-812-order2-square-d1-a8d3-targetshadow-chamber-hostile-review-grok-20260826.md", "sha256": "02cbae00f16eea7ba03e0ccb54e2e52d0b788264da80053a82a110bd4cfe74cc"},
+      "rejected_route": {"path": "xmodel/max12-812-order2-square-d1-a8d3-moving-connection-rankjump-route-promotion-20260826.md", "sha256": "451dd9eb7efdf4a1f26b0d8e5b5fa7048436bcabc2c58cd2084173b9304cbfb1", "status": "PROMOTED ROUTE FALSIFICATION ONLY"},
+      "literal_row_policy": "four reviewed odd SourcePhi rows only; reject analytic-only bridge"
+    },
+    {
+      "id": "D23_A9",
+      "domain": "(a,d,r)=(9,2,9),(9,3,9)",
+      "test": {"a": 9, "c": 12, "r": 9, "T": 38, "field": "F1000003"},
+      "status": "promoted",
+      "authority": {"path": "xmodel/max12-812-order2-square-d1-a9-d23-j38-r3-tail-promotion-20260826.md", "sha256": "551ca2f6f8aaf75fd67019d055e43ae862150de62d51cb0bd8755d4d0085a19a"},
+      "review": {"path": "xmodel/max12-812-order2-square-d1-a9-d23-j38-r3-tail-hostile-review-grok-20260826.md", "sha256": "f922fab0828ff0470ada62fa22bd84a9383233b27948bca12726f1c3aa7785f5"}
+    },
+    {
+      "id": "AGE10_CEILING",
+      "domain": "a>=10, c>=a+1, r>=a, T=38",
+      "test": {"a": 10, "c": 11, "r": 10, "T": 38, "field": "F1000003"},
+      "status": "promoted",
+      "authority": {"path": "xmodel/max12-812-order2-square-d1-age10-cge-a1-source-ceiling-corollary-promotion-20260826.md", "sha256": "470ea478c9463d62d39a428962fd9dd5845f4bf882388f84594c82a211634fb8"},
+      "review": {"path": "xmodel/max12-812-order2-square-d1-age10-cge-a1-source-ceiling-corollary-hostile-review-grok-v2-20260826.md", "sha256": "f75d885da6b39af85127540fa8ede8a17d1f83a3a2d5279bb5c641f2bd98e15b"},
+      "parent_authority": {"path": "xmodel/max12-812-order2-square-d1-age10-j38-order3-promotion-20260826.md", "sha256": "d4aceedbead2d0c27546e143ae8bb2b820faa32dd08454c58650f280593d0fb2"},
+      "parent_review": {"path": "xmodel/max12-812-order2-square-d1-age10-j38-order3-hostile-review-grok-20260826.md", "sha256": "a4eff964e517e9050191bba938cb3573e90c904c7bcf0d492cfe36fce0dd60a2"}
+    }
+  ],
+  "support_expectations": {
+    "D1_A2_A5": {"maxima": {"p": 1, "A": 1, "C": 1, "R": 0, "k10": 0, "k6": 0, "k2": 0}, "active": ["p", "A", "C", "R", "k10"]},
+    "D1_A6_A7": {"maxima": {"p": 1, "A": 1, "C": 1, "R": 0, "k10": 0, "k6": 0, "k2": 0}, "active": ["p", "A", "C", "R", "k10", "k6"]},
+    "D1_A8": {"maxima": {"p": 2, "A": 1, "C": 2, "R": 0, "k10": 0, "k6": 2, "k2": 0}, "active": ["p", "A", "C", "R", "k10", "k6"]},
+    "D1_A9": {"maxima": {"p": 3, "A": 1, "C": 3, "R": 0, "k10": 0, "k6": 3, "k2": 0}, "active": ["p", "A", "C", "R", "k10", "k6"]},
+    "D23_LOW_A6": {"maxima": {"p": 3, "A": 3, "C": 3, "R": 1, "k10": 2, "k6": 0, "k2": 0}, "active": ["p", "A", "C", "R", "k10"]},
+    "D23_E": {"maxima": {"p": 3, "A": 3, "C": 3, "R": 2, "k10": 2, "k6": 0, "k2": 0}, "active": ["p", "A", "C", "R", "k10"]},
+    "D23_A7": {"maxima": {"p": 3, "A": 3, "C": 3, "R": 2, "k10": 2, "k6": 3, "k2": 1}, "active": ["p", "A", "C", "R", "k10", "k6", "k2"]},
+    "D23_A8D2": {"maxima": {"p": 3, "A": 2, "C": 3, "R": 1, "k10": 1, "k6": 3, "k2": 0}, "active": ["p", "A", "C", "R", "k10", "k6", "k2"]},
+    "D23_A8D3": {"maxima": {"p": 10, "A": 9, "C": 10, "R": 8, "k10": 8, "k6": 10, "k2": 8}, "active": ["p", "A", "C", "R", "k10", "k6", "k2"]},
+    "D23_A9": {"maxima": {"p": 9, "A": 7, "C": 9, "R": 7, "k10": 6, "k6": 9, "k2": 7}, "active": ["p", "A", "C", "R", "k10", "k6", "k2"]},
+    "AGE10_CEILING": {"maxima": {"p": 10, "A": 7, "C": 10, "R": 6, "k10": 6, "k6": 10, "k2": 6}, "active": ["p", "A", "C", "R", "k10", "k6", "k2"]}
+  },
+  "support_sentinels": [
+    {
+      "id": "AGE20_RECEDING_AC",
+      "a": 20,
+      "c": 21,
+      "r": 20,
+      "T": 38,
+      "maxima": {"p": 0, "A": 0, "C": 0, "R": 0, "k10": 0, "k6": 0, "k2": 0},
+      "active": ["p", "C", "k6"],
+      "note": "k6C first appears at grade 38 while AC and C2 are outside the window"
+    }
+  ],
+  "required_mutations": [
+    "R scaling 4 -> 1",
+    "C scaling 2 -> 1",
+    "delete moving 2*sigma*ell1 term",
+    "replace shifted pairs by killed stage-zero pairs",
+    "confuse total k10 jet k2c with D1 k2 load k2load",
+    "replace reviewed terminal T by universal 10+2c",
+    "accept analytic-only A8D3 route",
+    "infer promoted status from filename instead of pinned authority hash",
+    "relabel rho=0 face rows as general-rho rows"
+  ]
+}

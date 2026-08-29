@@ -1,0 +1,39 @@
+{
+  "case": "ggv_8_28_upper_endpoint_origin_residue_slice_hostile_review_fable5_20260828",
+  "date": "2026-08-28",
+  "reviewer": "fable5",
+  "verdict": "PASS",
+  "first_defect": null,
+  "scope": "A=X^4-1, lambda=0, c2!=0 (verified unused), exact D=0, Q=e=F8=r=0, characteristic zero; no promotion to arbitrary Q, other A, other branch, full endpoint, Keller, or JC2",
+  "confirmed": [
+    "T5 exactness theorem: zero kernel, deg T5(d)=deg d+3, lc=(k+10), primitive identity d(p^5 d)=p^3 T5(d) dX",
+    "completeness of f=4T5(a0+a1X+a2X^2), F9=4T5(b0+b2X^2+b3X^3+b4X^4), F11=4T5(A(k0+k2X^2))/A, F13=4T5(A^2 ell13)/A^2",
+    "missing q9/q11 primitive X coefficients forced by literal RAW_INPUT constant floors: F9[X0]=-4b1, F11[X0]=-4k1",
+    "q5 and q15 automatic on the slice (h5=h15=0 from complete frozen h formulas)",
+    "complete G11=(3/2)A^2F11+(5/4)c2*A*F9+c4*F7 and G15=(5/4)c2*A*F13+c4*F11+(1/A)((3/4)c6*F9+(1/2)c8*f); F10/F12/F14 and c10..c20 provably absent; c16+ unborn",
+    "full remainder R=20c8a1+10(3c6b2+2c8a2)X+30c6b3X^2+(30c6(b0+b4)+20c8a0)X^3",
+    "R[X1]=10*(3*c6*b2+2*c8*a2)",
+    "D22[X0]=F11[X1]G11[X0]-F7[X0]G15[X1] re-derived from pinned windows, pairs (11,11)+1 and (7,15)-1, J(P,Q)(0) checksum",
+    "5*D22[X0]+6*F7[X0]*R[X1]=0 exact polynomial identity; c4 cancellation; D22[X0]=-48a1(3c6b2+2c8a2)",
+    "G15 polynomial => R=0 coefficientwise => D22[X0]=0, contradicting target +1 (and -1): slice empty",
+    "Q=X mutation replay: q7..q15 witnesses exact, G11/G15 windows legal, G15 polynomial, D22[X0]=(2^50/375)th^2 -> +1 at th^2=375/2^50; no arbitrary-Q promotion"
+  ],
+  "scope_findings": [
+    "c2!=0 is not load-bearing (c2 absent from R and from the endpoint identity): harmless scope narrowing",
+    "slice needs no constraint on F10/F12/F14; theorem insensitive to them",
+    "coefficient domain: identities over Z[1/2,1/3,1/5]; exclusion holds for points over any characteristic-zero field; parameterization completeness is field-level, residue identity ring-level"
+  ],
+  "mutations_detected": [
+    "restore forbidden primitive X coefficient (b1 in d9, k1 in k): floor violation",
+    "drop c8 characteristic mode: recurrence-reconstruction mismatch (internal 5/6-identity alone would rebalance; recurrence is the detector)",
+    "fractional coefficient (3/4)c6->(3/8)c6 and (5/4)c2->(3/4)c2: mismatch",
+    "residue coefficient/sign mutations (+2c8a2->-2c8a2, 10->-10, 6->-6): identity breaks",
+    "target +1->-1: exclusion sign-robust; pair-law sign flip breaks J(P,Q)(0) checksum",
+    "substitute Q=X into fixed-slice conclusion: refuted by exact counterexample",
+    "h11 denominator 2^15->2^14 on the live Q=X lane: detected"
+  ],
+  "checker": "xmodel/ggv-upper-endpoint-origin-residue-slice-hostile-review-fable5-20260828-check.py",
+  "checker_marker": "PASS_HOSTILE_ORIGIN_RESIDUE_SLICE_FABLE5",
+  "producer_replay": "PASS_EXACT_ORIGIN_RESIDUE_SLICE_EXCLUSION (attestation only; not trusted, not imported)",
+  "frozen_hashes_verified": "start_and_end"
+}

@@ -1,0 +1,21 @@
+cli=grok 1.0.5 (5115b46bc909) permission=bypassPermissions output=plain
+I'll start by verifying the base prompt hash and reading its full instructions before writing the retry report.The prompt hash matches. Next I’ll inspect the frozen producer package and related review artifacts so the audit can stay fail-closed.I’ll read the package pins, previous hostile-review format, and the producer’s core claims next.I’ll pull previous hostile-review format, the replay client, and the exact-result artifacts so the audit can be reconstructed independently.I’ll match the prior review format and start independent hash, dual-host, and algebraic checks.I’ll verify pins and dual-host identity, then independently check the polynomial identities and the DAG/remainder tables.Custody pins check out. Next I’ll inspect V87/V85 algebra, independently factor the denominators, and audit the DAG and multipliers.I’ll independently check the identities in flint, the DAG’s nilpotence, and the multiplier table.The identities and DAG check out. Next I’ll match the F multiplier independently, confirm nested compiler pins, and inspect whether a local source replay is feasible.The algebraic and custody checks close. I’ll write the grok-v2 report with a `CONFIRMED` verdict.**CONFIRMED**
+
+Hostile review is in `xmodel/td6-v89h4-high-q-total-f-k-repair-hostile-review-grok-v2-20260826.md`. The base-prompt report path was not created. Producer files, ledgers, top-level files, and `jc2-lean` were not edited.
+
+On the high-q residue (`q2..q14=0`, `q15` omitted as target shear, `q16..q24` retained), the frozen 2,651 multipliers give the exact identity
+
+```text
+(1/8) B3^2 U^2 H^2 = a_P P12 + sum_i a_i FIRST_i + F (2 A G)
+```
+
+localized at `D(U H B3)`, with `A=(1/8) B3 U^2 H^2` and `B3=K+2FG`. That is a total-F unit-ideal theorem on this residue block, not a P12/FIRST-only, low-q, source-point, A3, TD6, SP-2, or JC2 result.
+
+Independent checks that closed:
+
+- All six charged pins, 32/32 evidence rows, 9/9 freeze rows, 23/23 SOURCE rows at the case root and inside the tarball
+- Distinct Box02 / r6d hosts, `rc=0`, byte-identical math stdout and five outputs
+- Preclear denominator exactly `(1/8) K B3 U^2 H^2` with K-exponent 1
+- Flint identities `B3=K+2FG` and `KA+2AFG=AB3=(1/8)B3^2 U^2 H^2`
+- 242-edge bipartite DAG with `N^2=0`; F multiplier equals `2AG`; P12 slot 0 equals a scalar times `KA`; FIRST term counts match the H1 inventory
+- Final common denominator `UH`; omitting P12, FIRST-0, or F breaks the identity

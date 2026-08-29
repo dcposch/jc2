@@ -1,0 +1,13 @@
+ring R=(0,q,r),(x,y),wp(1,2);
+poly f=x*(1-q^2*r^2);
+poly g=y-x^2;
+ideal I=f,g;
+degBound=2;
+ideal G=std(I);
+print("PROBE_G_SIZE="+string(size(G)));
+print("PROBE_X_NF="+string(reduce(x,G)));
+matrix L=lift(I,ideal(x));
+print("PROBE_LIFT="+string(L));
+poly replay=L[1,1]*I[1]+L[2,1]*I[2]-x;
+print("PROBE_RESIDUAL="+string(replay));
+quit;
