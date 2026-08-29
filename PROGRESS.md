@@ -7,6 +7,42 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
+> **FOUR-MODEL ROUND CLOSES; BOTH DESCENDANTS PROMOTED, NO AVENUE RERANK
+> (13:15Z).**  Round `20260829T1224Z` is synthesized in
+> `xmodel/ideation-20260829T1224Z-synthesis.md`.  Four blind whole-portfolio
+> reports and three adversarial cross-pollination passes close on frozen basis
+> `ccb6cd52...`.  History and type review reject or defer every proposed new
+> major lane: max12 U2/U3 is duplicate; the Lipshitz codomain reduction uses
+> forbidden variable multiplication and wrong quantifier shape; the Bezout
+> deficit remains family-local; `OFF-DIM2` lacks a complete-map client;
+> `DIRTY-V2A` would double-count an existing P0/MFE price; and S17 beyond-floor
+> work has neither a source packet nor a homogeneous obstruction.  The cheap
+> residual `TWIN-ORDER` fact is exact but supplies no closure law.  No numbered
+> avenue changes rank; Avenue 2 stays principal and K00 remains protected.
+>
+> Fable review `d00a8eab...`/body `42eed3cc...` returns `PASS` on LL1-R4.
+> At its exact one-fibre/two-pole, `td=6`, `m=2` scope, 166/166 checks,
+> manifest 6/6, independent legacy replay, and ordinary/optimized identity
+> promote the lower-floor-only `13 -> 7` software consumer.  The validator
+> imports the compiler, so its independent evidence is the frozen book,
+> separately authored legacy checker, pinned manifest/output, and mutation
+> battery; no attainment or occurrence follows.
+>
+> Opus review `0f5968bf...`/body `66b15f5d...` returns
+> `PASS_WITH_REPAIR` on the formal td12 cascade.  The corrected binomial lift
+> solves all homogeneous rows through `s<=r=3i/2`; B24 is transparent for
+> even `i>=16`, S16 for even `i>=12`, and failure at `r+1` is not an
+> obstruction.  Stop homogeneous-window descendants.  The next primary is a
+> route-separated global source bridge or the genuine distant inhomogeneous
+> row, not a coefficient emitter against absent `PairRef`/jet data.
+>
+> The selected machinery trial is deterministic non-authoritative
+> `ROUNDVIEW/v1`, with hash/anchor fail-closure and an explicit no-second-queue
+> firewall.  Current lanes move to versioned `FALLACY-v2.md` so the
+> charge-basis provenance repair does not mutate v1 bytes pinned by LL1-R4;
+> audit confirms no wrong mathematics resulted.  All current work is
+> desk-scale; AWS is idle, and heavy or uncertain CAS remains AWS-only.
+
 > **DESK-SCALE DESCENDANTS COMPLETE; BOTH REMAIN PROVISIONAL
 > (12:20Z).** `TD12-FORMAL-CASCADE-RANK/v1`
 > (`30aa2926...`, corrected by integral-index erratum `b50d8fdf...`) factors

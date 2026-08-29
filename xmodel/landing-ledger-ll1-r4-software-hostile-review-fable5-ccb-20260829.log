@@ -1,0 +1,18 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+The review is complete and the sealed report is written. The mirror is cleaned up, and no repository file other than the review report itself was created or modified (`jc2-lean` was already dirty at session start; `pilot-local.log` is being appended by something outside this session — I didn't touch it).
+
+## Verdict: `PASS`
+
+**Report:** `xmodel/landing-ledger-ll1-r4-software-hostile-review-fable5-ccb-20260829.md` — sealed body 18898 bytes, SHA-256 `42eed3cc26ae4b74d0be79910f7cc38f7b28e640d316e3f0d36faab968d84ce8` (neighbor cuts pinned; full file `d00a8eab…`, 19443 bytes).
+
+**What was verified, all by recomputation:**
+
+- **Custody:** producer report hash + body seal (6753/`f645432f…` with both neighbor cuts), manifest 6/6, all 7 canonical pins, all 8 evidence pins, all 6 body-prefix seals, and the full frozen R3/legacy-checker baseline — every hash reproduces byte-exactly.
+- **Execution:** compiler, validator, 166-check acceptance suite, and the frozen legacy checker all run rc=0 in ordinary and `-O` modes with byte-identical stdout matching the report's four hashes (`f1a5f875…`, `5001bdea…`, `a078cdd8…`, `4498beac…`). Emitted book/summary are byte-identical to the committed artifacts across three regenerations. No `assert` exists in any executable.
+- **Independent recompute (no packet code imported):** all 16 legacy cell prices match frozen R3; all full prices match R4; **exactly four movers** — (17,5)@nu2, (51,15)@nu7, (85,25)@nu12 at 2→3 and (119,35)@nu17 at 1→2, each one flag at delta=2/3 with eps floors 1,1,1,0. The 16-cell delta spectrum {1, 1/2, 1/3, 1/4, 1/6, 2, 2/3} makes 2/3 the *only* value where the two rules differ, so the mover set is sharp. Inventory 13→7 with the exact six removals and zero additions; terminal arithmetic re-derived from scratch for both books. The full-carrier walk's cells are a strict subset (11) of the legacy 16, so the audit's key set is exhaustive for both graphs.
+- **Carrier leakage:** none. The FULL type appears only in pricing metadata, the audit rows, and mults-bearing cells; all 17 nonzero components FULL-typed with correct floors, all epsilon/pure-epsilon components REPRESENTATIVE, every `attainment` key in the tree is `false`, and the frozen legacy checker (a genuinely independent implementation) agrees on every number.
+- **Nine added mutations** (evidence/R3-book/checker/canonical byte flips, wrong floor rule, epsilon leakage, gutted constants, tampered book, and a coordinated rule+gates mutant) all fail closed — the coordinated mutant is stopped by two further structurally separate gates (P0 menu pin, boundary-terminal parity) even with the audit deleted.
+
+One structural observation, no repair required: the validator's re-derivation is independent of the emitted book but not of the compiler code (it imports it) — same architecture as reviewed R3, and compensated by the frozen R3 parity, suite constants, manifest, and the independent legacy checker, as demonstrated empirically.
+
+**Maximum safe promotion:** the packet as the LL1-R4 typed software consumer at LL-1 scope only — carrier typing, piecewise floor, four-mover replay, 13→7 inventory, all `LOWER_FLOOR_ONLY`/no-attainment. No occurrence, realization, attainment, completeness, ceiling, td≠6, or JC2 claim; generic MP8/MFE stays REPRESENTATIVE; engine counts stay fixture-cited.

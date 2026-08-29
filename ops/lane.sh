@@ -36,7 +36,7 @@ case "$adapter" in
 esac
 
 adapter_script=$script_dir/adapters/$adapter.sh
-fallacy_file=$repo_root/FALLACY.md
+fallacy_file=$repo_root/FALLACY-v2.md
 charge_validator=$script_dir/validate_charge_basis.py
 [ -x "$adapter_script" ] || {
   echo "unknown adapter: $adapter" >&2
@@ -143,7 +143,7 @@ lane_tmp_dir=$(mktemp -d "$lane_tmp_root/jc2-lane.XXXXXX") || {
 }
 chmod 700 "$lane_tmp_dir" || exit 2
 prompt_snapshot=$lane_tmp_dir/original-prompt.txt
-fallacy_snapshot=$lane_tmp_dir/FALLACY.md
+fallacy_snapshot=$lane_tmp_dir/FALLACY-v2.md
 charge_validator_snapshot=$lane_tmp_dir/validate_charge_basis.py
 model_prompt_file=$lane_tmp_dir/model-prompt.txt
 
@@ -177,9 +177,9 @@ if [ "$prompt_snapshot_sha" != "$prompt_sha" ] || \
   exit 2
 fi
 
-fallacy_marker='# FALLACY.md: campaign reasoning guardrail'
+fallacy_marker='# FALLACY-v2.md: campaign reasoning guardrail'
 if grep -F "$fallacy_marker" "$prompt_snapshot" >/dev/null 2>&1; then
-  echo "prompt already contains the FALLACY.md appendix marker; run refused" >&2
+  echo "prompt already contains the FALLACY-v2.md appendix marker; run refused" >&2
   exit 2
 fi
 if ! {
@@ -213,7 +213,7 @@ basis=$(git rev-parse HEAD 2>/dev/null || echo UNKNOWN)
   echo "adapter_sha256=$adapter_sha"
   echo "charge_basis_validator=ops/validate_charge_basis.py"
   echo "charge_basis_validator_sha256=$charge_validator_sha"
-  echo "fallacy=FALLACY.md"
+  echo "fallacy=FALLACY-v2.md"
   echo "fallacy_bytes=$fallacy_bytes"
   echo "fallacy_sha256=$fallacy_sha"
   echo "model_prompt=$model_prompt_file"

@@ -1,0 +1,25 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Written and sealed: `xmodel/ideation-20260829T1224Z-crosspoll-opus5.md` (body 41859 / `5bc4307f…`, full `229da012…`). One file, no others; no canonical edits, no web, no AWS, no `jc2-lean`.
+
+## What the verification turned up
+
+All five seals verified. One custody note: Fable seals by **byte offset**, the other three by `## Seal` heading split — a mechanical verifier assuming one convention reports a false `INPUT_MUTATED` on Fable's file. That bears directly on Fable's own sealed-archive proposal.
+
+## Attacks that landed
+
+**On my own three cards — all withdrawn.**
+- `BEZOUT-CEIL`: identity verified exactly on 7 controls, and the ceiling `td ≤ 7776` is real. But `AUDIT.md:7485` / `:3027` record that `(72,108)` is the branch the campaign already conditionally excludes. **My ceiling applies exactly and only where it isn't needed.** I also had the bridge direction backwards (floors on `Σ i_p` give *ceilings* on `td`, not the reverse), and the ≤36 / 215.6 statistic is cosmetic — high contact at infinity is what a small-`td` pair *requires*.
+- `LIPSHITZ-CODOMAIN`: only the **∃**-fragment of ⟨Z,+,|⟩ is decidable (Robinson: multiplication is first-order definable, so the full theory isn't). Coverage-as-entailment is **∀∃** — outside the fragment by construction. And the U2 family `ν = tK` that I cited as the reason to adopt the fragment is precisely what ejects it.
+- `OFF-DIM2`: the theorem is fine; the sweep I proposed over germ truncations and farm leaves is a category error that would have read truncation artifacts as kills. One honest client (char-3 AS), and it's a positive control that must pass.
+- `CHARGE-BASIS-LINT`: duplicate — `ops/validate_charge_basis.py` exists and `ops/lane.sh` invokes it.
+
+**On peers.**
+- **Grok's `i=16, r=24` is not admissible.** `AUDIT.md:385/495` show 16 and 24 are *normalized level counts*, and the rider is `i=6n`. The repair makes the test *cheaper*: `i=6, r=9`.
+- **Fable's rigidity corollary is refuted.** The non-torsion certificate is exact (I reverified `v₍₂₊ᵢ₎((4+3i)/5) = −1`), but `|B/C| = 1` makes swap = inversion = complex conjugation, and `X² − (9/4)X + 45/32` is irreducible over ℚ — an exchanging automorphism demonstrably exists. Worse, the payoff it was meant to buy ("32 not 16") is already at `AUDIT.md:384`.
+- **Sol's `TERMINAL-EK` has no independent `b1(C)`** — without one the checksum is tautological.
+
+**Systems:** I ran the existing validator on all four reports. Sol's `charge_basis` cites `AUDIT.md:45`, which resolves to *"validator disposition is `VALID:2:2/3,2/3`"* — a charge_basis citing a prior charge_basis validation. **The citation-resolution check I proposed would have passed it silently.** That's the strongest available argument for Sol's measure-first card, which is what I selected.
+
+Slate: M1 `DIRTY-V2A-EXIT-TYPE` (repaired), M2 merged Grok+Sol `S17-FIRST-CHILD`, M3 `TWIN-ORDER` kill-branch-only, plus Sol's measurement. All desk. I recorded one dissent: 3 of 4 lanes rank M2 first; I rank M1 first because M2's input is `AUDIT.md:490`'s named missing datum.
+
+I did **not** open the two in-flight hostile reviews on disk (cascade-rank, LL1-R4) — they're untracked and unintegrated at basis. The slate is disclosed as conditional on them landing as the blind lanes assumed.

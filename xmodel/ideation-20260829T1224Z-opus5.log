@@ -1,0 +1,20 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Done. Report written to `xmodel/ideation-20260829T1224Z-opus5.md`, sealed.
+
+## Verification
+
+Packet full `f79671cf…` and body `f33cd978…` (8546 bytes) both verified; all eight canonical file hashes recomputed and matching. Basis `ccb6cd52`. No peer lane artifact read, no web, no heavy compute, `jc2-lean` untouched, exactly one file written.
+
+Report body: 39035 bytes, SHA-256 `0bade1558867775ebc36a4ee943acb21e39f2903827a331515d5819b31f59ffb`.
+
+## The three substantive findings
+
+**1. `CRITICAL 7` / `AUDIT (G5)` is wrong on one branch.** For `J = const`, all affine fibre intersections are transverse, so Bezout gives the *exact identity* `td = deg f · deg g − Σ_{p∈L∞} i_p`. On the GGV22 degree-pinned branch that is `td ≤ 72·108 = 7776`. The canonical "no upper bound on td" holds only on the `deg ≥ 125` branch. I checked it against three controls. Sub-observation flagged as conditional: `72:108` reduces to `2:3`, and `SHEET6-MULTIPOLE.md` §1/D4 fix Sigray type by `2 ≤ α < β`, `gcd = 1`, `deg p/deg p_g = α/β` — so *if* pole order equals degree in the normalized frame (the one step I did not verify), the current type-`(2,3)` td12 lane is running on exactly the ceilinged branch. That unverified step is the card's cheapest discriminator, a single source read.
+
+**2. New mechanism `LIPSHITZ-CODOMAIN`.** The campaign read its own proof that the U2 two-parameter family is non-semilinear (`ν = tK`, gaps 72,144,216,…) as a defeat for a uniform record language. It is a defeat for Presburger only — `ν = tK` is precisely one divisibility atom, and the existential theory of ⟨ℤ,+,<,|⟩ is decidable. That makes `CRITICAL 4`'s fail-closed coverage certificate an entailment check rather than an enumeration. I state explicitly that it does *not* buy a td ceiling.
+
+**3. Sharpening `OFF-DIM2`.** Clopen diagonal (banked, and externally published) forces `dim V(I + det A) ∈ {∅, 2}` exactly, with `Off` smooth — a one-line fail-closed discriminator for the collision lane, which avenue 32's row says lacks a client.
+
+Dispositions: 1 `raise`, 4 `lower`, 27 `reopen` (narrow), 32 `raise`, remaining 42 `unchanged`. I did not raise 25/26/28/31 and said why the 09:35Z prohibition still binds. Systems card is one bounded `UPGRADE` (a `charge_basis` linter). Two memories saved, including the novelty-search record — Favre–Jonsson was already declined twice, which is why I did not pitch it.
+
+Two caveats worth your attention: the Bezout ceiling inherits GGV22's existential selection and its preprint tier, and Card B's external decidability input is unpinned pending the next sweep.

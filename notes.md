@@ -13213,3 +13213,85 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - The significant-news trigger supersedes the quiet ideation deadline. The
   next web sweep remains due `2026-08-30T03:40Z`; the next systems checkpoint
   remains due `2026-08-31T09:30Z`.
+
+## 2026-08-29 13:15Z REVIEW/PROMOTION EVENT — CASCADE TRANSPARENT, LL1-R4 PASSES
+
+- Opus hostile review `0f5968bf...`/body `66b15f5d...`, run
+  `3f1cd347...`, returns `PASS_WITH_REPAIR` on
+  `TD12-FORMAL-CASCADE-RANK/v1`. Coordinator integration
+  `97ba497f...`/body `3dfaa862...` promotes root-floor factorization,
+  injectivity, intrinsic cokernel two for B/three for sibling, and both
+  natural-cap tables with `n_*>=1`.
+- With clamped floors `max(0,m_j*i-s)`, the polynomial type-`(2,3)` response
+  solves all homogeneous rows through `s<=r=3i/2`. B24 is transparent for
+  even `i>=16` and S16 for even `i>=12`; direct-entry `i=6n` is not a theorem
+  premise. Failure of this lift at `r+1` is not an obstruction. Genuine
+  content remains at the distant inhomogeneous row.
+- Stop every homogeneous-window descendant. The checker uses `i=30` for the
+  matrix controls and `(i,r)=(6,9)` for the order-two binomial control;
+  stdout hash `35f6f171...` binds route identity. No `PairRef`, source vector,
+  cap, completion, occurrence, gate, landing, or exclusion follows.
+- Fable hostile software review `d00a8eab...`/body `42eed3cc...`, run
+  `3e881fd1...`, returns `PASS` on LL1-R4. Ordinary/optimized execution is
+  byte-identical, all 166 checks pass, manifest 6/6 verifies, the independent
+  legacy checker agrees, and the exact delta is four movers, six removals,
+  no additions, `13 -> 7`.
+- Promote only the `td=6`, `m=2`, one-fixed-fibre/two-pole lower-floor
+  consumer. Every price is `LOWER_FLOOR_ONLY`, `attainment=false`. The
+  validator imports the compiler, so independent evidence comes from the
+  frozen R3 book, separately authored legacy checker, pinned manifest/output,
+  and mutation battery. The frozen provisional inventory label remains
+  historical and manifest-bound.
+
+## 2026-08-29 13:15Z ROUND `20260829T1224Z` — CLOSED AND SYNTHESIZED
+
+- Basis is `ccb6cd52...`. State packet is `f79671cf...`/body `f33cd978...`.
+  Blind reports are Fable `fd51a7f4...`, Opus `f237dead...`, Grok
+  `25aa3a04...`, and Sol `3f0020b5...`; all run records are `DONE`.
+- Cross-pollination packet is `ef080d99...`/body `13628007...`. Reports are
+  Fable `ae0b8956...`, Opus `229da012...`, and Grok `1e7fec45...`; all three
+  runs are `DONE`. Synthesis is
+  `xmodel/ideation-20260829T1224Z-synthesis.md`, body 15485 bytes,
+  `8df39263...`.
+- No numbered avenue reranks. Max12 U2/U3 is duplicate; `EN-AUDIT-7` lacks
+  splice decorations; the Bezout bound is family-local and untyped at its
+  proposed bridge; `LIPSHITZ-CODOMAIN` uses variable multiplication and the
+  wrong quantifier class; `OFF-DIM2` lacks a complete-map client;
+  `S17-BEYOND-FLOOR` is absorbed by the stronger formal lift;
+  `DIRTY-V2A` would double-count an existing priced transition; and
+  `TERMINAL-EK` has no exact-pair client.
+- The Gaussian non-torsion fact in `TWIN-ORDER` is exact but supplies no
+  independence or closure law. A short derive-or-`OPEN` attempt remains
+  admissible. K00 stays protected as the strongest bounded characteristic-
+  zero counterexample seed.
+- Primary next math is route-separated `TD12-GLOBAL-SOURCE-BRIDGE/v1`:
+  derive finite source support or source-provenanced `P_0,...,P_i`, or attack
+  the distant inhomogeneous row. Parallel lanes are an actual finite-pole
+  scope lift, stripped `TWIN-ORDER`, and K00 chart-free continuation. Review
+  is background and nonblocking.
+- Same-model equality preflight `xmodel/ll1-r4-equality-profiles-v1-preflight-sol56-20260829.md`
+  finds five zero-slack terminal states but six route profiles because
+  `(2/7,7,4)` has two incoming paths. Every profile is scalar-consistent and
+  the general termwise-equality mechanism is already known. Defer the active
+  lane until an occurrence/source/EN-decoration client exists; no kill or
+  attainment claim is licensed.
+
+## 2026-08-29 13:15Z SYSTEMS/RESOURCE STATE
+
+- The round selects one bounded trial, `ROUNDVIEW/v1`: deterministic,
+  non-authoritative, hash-bound prompt slicing of the newest overlay, exact
+  46-row inventory, and historical heading index. It must fail closed and
+  never become a second queue or authority.
+- Current lanes now consume versioned `FALLACY-v2.md`, which says to declare
+  `charge_basis` only for a new price and to cite the underlying mathematical
+  source. The observed `AUDIT.md:45`
+  reference cited an earlier validator disposition, but the declaration only
+  consumed a promoted price and no conclusion depended on that provenance
+  loop. No wrong mathematics resulted; no validator rewrite is needed.
+  Hash-pinned `FALLACY.md` v1 stays byte-immutable so LL1-R4 remains exactly
+  replayable on its reviewed source set.
+- No heavy local process or AWS instance is active. All current work is
+  desk-scale; heavy or uncertain CAS stays AWS-only. Web sweep deadline is
+  `2026-08-30T03:40Z`, systems checkpoint `2026-08-31T09:30Z`, and the next
+  quiet full-round floor is twelve hours after closure absent significant
+  news.

@@ -5,6 +5,78 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **ROUND `20260829T1224Z` CHARGE-BASIS CITATION AUDIT — NO WRONG MATH;
+> MINIMAL GUARDRAIL REPAIR (2026-08-29 13:15Z).**  Opus cross-pollination
+> found that Sol's blind-round declaration cited the line recording an older
+> validator disposition rather than the mathematical statement proving the
+> floor.  The JSON was arithmetically valid and merely consumed an already
+> promoted LL-1 price; no theorem, replay, or promotion depended on the
+> circular citation.  Thus this was a provenance defect, not wrong
+> mathematics.  Hash-pinned `FALLACY.md` v1 remains immutable so LL1-R4
+> replays on its reviewed bytes; current lanes now consume versioned
+> `FALLACY-v2.md`.  Its smallest binding repair says to declare
+> `charge_basis` only for a new exit-price assertion, not for consumption of
+> a promoted price, and to cite its mathematical source rather than validator
+> output.  The existing validator remains unchanged.
+
+> **LL1-R4 TYPED SOFTWARE CONSUMER — PROMOTED AT LL-1 LOWER-FLOOR SCOPE
+> (2026-08-29 13:15Z).**  Producer
+> `c2d627a002d9bb60cb467e65b5ffebc8969dba9bcde0ded1fb1426f5db72fbf5`
+> received different-model Fable 5 hostile software review
+> `d00a8eab571bf09b26bf4f6fde7d83953df51255b11debfb92c350e54f98cb6b`
+> (body
+> `42eed3cc26ae4b74d0be79910f7cc38f7b28e640d316e3f0d36faab968d84ce8`),
+> verdict `PASS`.  The run is `DONE` with stable inputs and
+> `charge_basis_status=VALID:1:2/3`.
+>
+> Ordinary and optimized runs are byte-identical; 166/166 checks pass; the
+> six-entry manifest verifies; and the separately authored legacy checker
+> reproduces exactly four movers, six removals, no additions, and inventory
+> `13 -> 7`.  Every emitted price is `LOWER_FLOOR_ONLY` with
+> `attainment=false`.  The validator imports the compiler and is therefore
+> not code-independent; independence comes from the frozen R3 book, legacy
+> checker, pinned evidence and manifest, and negative mutation battery.
+>
+> Maximum scope is the typed `td=6`, `m=2`, one-fixed-fibre/two-pole-path-union
+> consumer of the promoted full-actual-first-separation floor.  The packet's
+> historical provisional inventory label is manifest-pinned and is not
+> rewritten; this canonical entry supersedes it.  No attainment, occurrence,
+> landing, realizability, other-td result, degree bound, counterexample, or
+> JC2 conclusion follows.
+
+> **TD12 FORMAL CASCADE RANK — PROMOTED AS A ROUTE-SEPARATED FORMAL-ENVELOPE
+> THEOREM; HOMOGENEOUS WINDOW KILL REFUTED (2026-08-29 13:15Z).**  Producer
+> `30aa29260c2bc3b206f757a90fe42ec6dcd98c733a7bf073bd0a86c9f48cdf67`
+> and erratum `b50d8fdf41033bdd5d786db7948fba5b1cb304e09739208a429948fdbc2ad13a`
+> received different-model Opus 5 hostile review
+> `0f5968bf0a95d15ca5e9c119044daa9470321ae4586c20af50bd03f5587ac274`
+> (body
+> `66b15f5d535d68a84c1324cdea826a067ceeb25345a637a8c53e79db07b7afc9`),
+> verdict `PASS_WITH_REPAIR`.  Coordinator integration
+> `97ba497fffcf0a0ee5c9ee259acc325810659a9fd5376a47b38c87476fd2c5b4`
+> (body
+> `3dfaa86248c9dcc14dcb018b900104242fa98ed71bc33f699102cd8b15136b82`)
+> is binding.
+>
+> The root-floor factorization and injectivity of `T_s` are exact; its
+> intrinsic cokernel has dimension two for B and three for sibling.  The
+> sharp natural-cap endpoint formula needs `n_*>=1`, which holds here because
+> `q>=2` and `0<M<nu`; the published B and sibling cap tables survive.  With
+> clamped floors `max(0,m_j*i-s)`, the polynomial type-`(2,3)` g-side response
+> solves every homogeneous row through `s<=r=3i/2`, not only through `s<=i`.
+> Hence B24 is formally transparent for even `i>=16`, and S16 for even
+> `i>=12`.  Direct-entry `i=6n` is not a premise of this theorem.
+>
+> The response has `J=0`; failure of this lift at `s=r+1` is not an
+> obstruction.  Genuine Keller content remains at the distant inhomogeneous
+> row `s*=D_F+D_g-kbar_F`.  Matrix controls use `i=30`, while the order-two
+> binomial control uses `(i,r)=(6,9)`.  The checker derives `(M,q)` from the
+> multiplicity tuple, so route identity is bound by the published
+> ordinary/optimized stdout hash `35f6f171...`, not by internal assertions
+> alone.  Stop all homogeneous-window cascade descendants.  No `PairRef`,
+> source vector or cap, completion, occurrence, gate, landing, exclusion,
+> exact Keller pair, degree bound, counterexample, or JC2 conclusion follows.
+
 > **TD12 FORMAL CASCADE RANK CLOSES ONLY THE JET ENVELOPE — PROVISIONAL,
 > NOT PROMOTED (2026-08-29 12:20Z).** Sol report
 > `30aa29260c2bc3b206f757a90fe42ec6dcd98c733a7bf073bd0a86c9f48cdf67`

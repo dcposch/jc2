@@ -1,0 +1,35 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review written and sealed to `xmodel/td12-formal-cascade-rank-v1-hostile-review-opus5-ccb-20260829.md` (body 25485 / `66b15f5d…`).
+
+## Verdicts
+
+| Component | Verdict |
+|---|---|
+| C1 custody / seals / control reproduction | **PASS** |
+| C2 eta→t factorization (3.1)–(3.2), floors | **PASS** |
+| C3 injectivity on `C[t]` (Thm 4.1) | **PASS** |
+| C4 nominal + intrinsic cokernel `q` (Thm 4.2) | **PASS** |
+| C5 sharp resonance formula (4.5) + tables | **PASS_WITH_REPAIR** |
+| C6 formal binomial response through `s≤i` | **PASS_WITH_REPAIR** |
+| C7 scoping of "no B24/S16 formal kill" | **PASS_WITH_REPAIR** |
+| C8 rank thm vs structured-image vs `PairRef` | **PASS** |
+| C9 R1 erratum | **PASS_WITH_REPAIR** |
+| C10 `check.py` controls | **PASS_WITH_REPAIR** |
+
+Nothing fails. All five hashes and both body seals verify; controls reproduce byte-identically ordinary and `-O` (648 B, `35f6f171…`), and both table hashes reproduce from an independently written implementation.
+
+## What the attacks found
+
+**The two repairs that matter both make the packet stronger than it claims.**
+
+The lemma's reach is `s ≤ r = 3i/2`, not `s ≤ i`. `E_s` only needs `G_s` polynomial, whose floor is exactly `m·r − s ≥ 0`; `s ≤ i` is what the *bookkeeping* variable `Z_s` needs. Measured sharp — first failure lands at exactly `s = r+1` in every instance. So the rider `i ≥ depth` weakens to `3i/2 ≥ depth`: **B `i ≥ 16`** (not 24), **S `i ≥ 12`** (not 16), both confirmed by direct computation at the real routes.
+
+The under-emphasized point in §6.4: the lift *is* the `J ≡ 0` solution, so it satisfies every homogeneous row. All Keller content sits in the single inhomogeneous row at `s*`, far above both windows. Fable's proposed kill lane isn't merely unproved — it's structurally dead as a window strategy.
+
+**Gaps in the packet's own evidence, which I closed rather than accepted:** the checker verifies the factorization only in pre-divided `t`-level form (the `d/deta → d/dt` chain rule, where an error would live, was untested); it rank-samples 4 of 24/16 orders and emits the rest from a closed formula; and it controls the binomial lemma at `s=2` only, at `i=6` — never at `i ≥ depth`. I verified the eta-level chain rule directly, every order by exact rank, and `E_s = 0` to `s=26`/`s=18` at the real routes.
+
+Smaller repairs: (4.5) has an unstated `n_* ≥ 1` rider; the §0 disposition token is printed bare without the rider that appears in the body; the erratum's "the checker uses `i=30, r=45`" is false for the order-two control (`i=6, r=9`) though its conclusion survives; 13/14 mutations killed, the survivor being caught by the published stdout hash rather than an assertion.
+
+No exit or charge claim is made, so no `charge_basis=` line is emitted — declaring one would assert a basis that doesn't exist.
+
+Two things to flag: `pilot-local.log` and `jc2-lean` show as modified in git, but neither is mine (the former is the campaign runner's append-only log for other lanes; the latter was already dirty at session start). And I did not read the `ideation-20260829T1224Z-*` lane material, per the brief.

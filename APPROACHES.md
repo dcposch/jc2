@@ -7,6 +7,54 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 13:15Z — close 1224 round; move td12 upstream)
+
+- **Keep the numbered portfolio fixed.** Four blind researchers and three
+  adversarial cross-pollination passes found no promotion-worthy new avenue.
+  Avenue 2 remains principal; Avenue 3 remains mechanism supply pending an
+  actual client; avenues 1, 4, 27, and 32 do not move; and Avenue 36/K00 keeps
+  protected counterexample-side ownership.
+- **Promote LL1-R4 only as its typed software consumer.** Different-model
+  hostile review passes all 166 checks, the six-entry manifest, independent
+  legacy replay, mutation controls, and ordinary/optimized identity. The
+  exact result remains one fixed fibre, the two-pole path union, `td=6`,
+  `m=2`, and lower floors only: four movers, six removals, none added, and
+  `13 -> 7`. The validator imports the compiler, so do not call it
+  code-independent. No attainment is asserted and no surviving row occurs
+  merely because it has zero slack.
+- **Stop every homogeneous-window td12 cascade descendant.** Opus hostile
+  review promotes the route-separated quotient theorem and strengthens the
+  formal lift: with clamped floors it solves all homogeneous rows through
+  `s<=r=3i/2`. Thus B24 is transparent for even `i>=16` and S16 for even
+  `i>=12`; failure at `r+1` is not an obstruction. The next primary is
+  `TD12-GLOBAL-SOURCE-BRIDGE/v1`: derive a finite-support,
+  source-provenanced `P_0,...,P_i` packet from a hypothetical minimal
+  counterexample, or attack the distant inhomogeneous row. Keep B and sibling
+  routes separate, and do not call a ready template a `PairRef`.
+- **Deduplicate the new proposals aggressively.** Do not relaunch the max12
+  U2/U3 passport census, introduce a second dirty-transport charge, or run
+  S17 beyond-floor arithmetic without source data. The Bezout identity stays
+  family-local; `OFF-DIM2` lacks a complete-map client; and the proposed
+  Lipshitz reduction fails because `nu=tK` is variable multiplication and
+  coverage is not existential. The exact non-torsion fact in `TWIN-ORDER`
+  earns at most a short derive-or-`OPEN` check unless a closure law appears.
+- **Run three independent successors without waiting on review queues.** In
+  addition to the td12 global source bridge, test the actual finite-pole
+  scope of the promoted attachment theorem and run only a stripped
+  `TWIN-ORDER` derive-or-`OPEN` check; retain K00 chart-free continuation as
+  a separate falsification lane. The five LL1 zero-slack terminal states hide
+  six scalar-consistent route profiles, so bank them until an actual
+  occurrence/source/decoration client exists. Review remains background debt
+  once provisional confidence is reasonable.
+- **Trial one bounded systems improvement.** `ROUNDVIEW/v1` may compile the
+  newest overlay, exact 46-row inventory, and heading index into a
+  hash-bound prompt slice with fail-closed anchors and determinism tests. It
+  is non-authoritative and must never become a second queue. Current lanes use
+  versioned `FALLACY-v2.md`, which requires charge-basis declarations only
+  for new price assertions and direct mathematical-source citations; pinned
+  v1 remains immutable for old packet replay. Current work is desk-scale;
+  AWS is idle, and all heavy or uncertain CAS remains AWS-only.
+
 ## Superseding strategy overlay (2026-08-29 12:20Z — bank U2, source, LL-1, and cascade precursor)
 
 - **Retire the corrected labelled `NESTED-U2-P0-U2-RAY/v1` at td12.** An

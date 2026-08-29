@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Focused regression for FALLACY.md delivery and charge-basis declarations."""
+"""Focused regression for versioned fallacy delivery and charge declarations."""
 
 from __future__ import annotations
 
@@ -15,7 +15,8 @@ import unittest
 
 OPS = Path(__file__).resolve().parent
 ROOT = OPS.parent
-SOURCE_APPENDIX = ROOT / "FALLACY.md"
+SOURCE_APPENDIX = ROOT / "FALLACY-v2.md"
+LEGACY_APPENDIX = ROOT / "FALLACY.md"
 SOURCE_LANE = OPS / "lane.sh"
 SOURCE_VALIDATOR = OPS / "validate_charge_basis.py"
 COPY_SOURCE = object()
@@ -43,10 +44,10 @@ class LaneFallacyTest(unittest.TestCase):
         shutil.copy2(SOURCE_VALIDATOR, root / "ops" / "validate_charge_basis.py")
         (root / "ops" / "lane.sh").chmod(0o755)
         if appendix is COPY_SOURCE:
-            shutil.copy2(SOURCE_APPENDIX, root / "FALLACY.md")
+            shutil.copy2(SOURCE_APPENDIX, root / "FALLACY-v2.md")
         elif appendix is not None:
             assert isinstance(appendix, bytes)
-            (root / "FALLACY.md").write_bytes(appendix)
+            (root / "FALLACY-v2.md").write_bytes(appendix)
 
         adapter = adapters / "fake.sh"
         adapter.write_text(
@@ -58,7 +59,7 @@ set -eu
 cp "$1" "$FAKE_CAPTURE"
 printf '%s\n' "$1" > "$FAKE_PROMPT_PATH"
 if [ "${FAKE_MODE:-}" = mutate_appendix ]; then
-  printf '\nmutation during adapter run\n' >> FALLACY.md
+  printf '\nmutation during adapter run\n' >> FALLACY-v2.md
 fi
 mkdir -p xmodel
 if [ -n "${FAKE_REPORT_SOURCE:-}" ]; then
@@ -113,6 +114,10 @@ fi
         appendix = SOURCE_APPENDIX.read_bytes()
         self.assertGreater(len(appendix), 0)
         self.assertLessEqual(len(appendix), 2048)
+        self.assertEqual(
+            sha256(LEGACY_APPENDIX.read_bytes()),
+            "c63bd1673b2b180173799f5bee07f7fc0e51047945a41010a28a0aeeeeb92253",
+        )
         root = self.make_repo()
 
         result, prompt, capture, prompt_path = self.run_lane(root, "delivery")
@@ -124,6 +129,7 @@ fi
 
         run = parse_run(root / "xmodel" / "delivery.run.v2")
         self.assertEqual(run["run_schema"], "2")
+        self.assertEqual(run["fallacy"], "FALLACY-v2.md")
         self.assertEqual(run["prompt_sha256"], sha256(prompt.read_bytes()))
         self.assertEqual(run["fallacy_sha256"], sha256(appendix))
         self.assertEqual(run["fallacy_bytes"], str(len(appendix)))
