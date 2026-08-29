@@ -7,6 +7,52 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
+> **ALL `e=2,m=1` BOUNDARY LOAD-ORDER FACES PROVISIONALLY CLOSE;
+> NAIVE ALL-`e` INDUCTION REFUTED (22:44Z).** A sealed exact corollary and
+> ordinary/optimized replay show that the promoted G0--G7 fan uses only the
+> K10 unit and transverse order-one open: K6, K2, `mu2`, `mu4`, and `mu6`
+> may have arbitrary positive order or vanish identically. The declared C6,
+> K10, and Jdet unit opens remain in scope. Hence every
+> boundary load-order face on the normalized generic K00 ray has the same
+> empty G0--G7 prefix at `e=2,m=1`. The enlarged scope remains review-gated;
+> Grok exhausted its usage balance before model work, and the same frozen
+> packet is now under Fable hostile reconstruction. The packet also refutes
+> the tempting
+> coefficient-blind extension to all ramification indices by an exact
+> `e=3,m=1` full-source jet over `Q(i)` surviving G0--G8. It is not an arc;
+> G9 is the first undecided equation and the next ramified target.
+
+> **FIRST RAMIFIED V20R2 CELL PROMOTED EMPTY AT GRADE SEVEN
+> (22:33Z).** Opus independently rebuilds all 569 frozen tails, the literal
+> `e=2,m=1` load scale, the promoted G3 reduction, and both complete rank
+> fans. Binding integration `0eb501b4...`/body `f779bac9...` promotes
+> `V(G0,...,G7) intersect D(k10[0]) intersect union_i D(d_i[1])=empty`
+> for the normalized `B11111` cell, hence its full grade-38 packet is empty.
+> The corrected K10 coefficient is `5/65536`; the missing grade-two center is
+> `nu2=(s^2,st/8,16t^2,0,0,0)`. This closes one ramified source cell only,
+> not other load faces, other `(e,m)`, closure incidence, maps, or JC2.
+
+> **UNLOADED K00 ZERO SET IDENTIFIED GLOBALLY; RECENTERING REVIEW LIVE
+> (22:31Z).** Exact AWS power certificates and a fresh direct replay prove
+> `sqrt(r1,...,r7)=J`, where
+> `J=(d0-2d4-d4^2,8d1-(1+d4)d3,d2-d4-16d3^2,d5-2d3)`.
+> All four generators have explicit fifth-power identities in the original
+> seven rows; the 28 multiplier polynomials are individually serialized and
+> mutation checked. Producer `96d88f49...`/body `41d6460a...` is under Fable
+> hostile review. The theorem applies when the unloaded rows vanish in a
+> reduced ring; mixed loaded equations do not set that ideal to zero, so no
+> uniform ramification or arc conclusion is yet licensed.
+
+> **`R4-00` RANK-ZERO EXCLUSION INDEPENDENTLY REPRODUCED; NONZERO-RANK
+> UNIT PACKETS UNDER REVIEW (22:30Z).** Fable, Opus, and an independent Sol
+> replay agree that the next-rank-zero cell reaches one of three grade-14
+> branches and is killed sharply by a raw row-six unit at grade 18. In
+> parallel, exact AWS grade-19 packets for R1+, R1-, and R2 now produce unit
+> cofactors with fresh second-process replay. Those three packets remain
+> `PRODUCER_UNREVIEWED`; Opus hostile replay runs without blocking the base
+> jobs. Thus the sole literal integer cell is plausibly closed but is not yet
+> promoted empty.
+
 > **R4-02 PROMOTED EMPTY; R4-00 IS THE SOLE LITERAL INTEGER CELL
 > (21:40Z).** Fable independently reconstructs the valuation-four
 > next-rank-two source and confirms every attack. Binding integration

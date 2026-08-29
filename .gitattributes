@@ -3,3 +3,9 @@
 
 # Captured Singular version banners are immutable evidence bytes.
 singular.version -whitespace
+
+# Remote execution receipts are immutable custody bytes; do not normalize or
+# flag whitespace emitted by the underlying programs.
+*.stdout -whitespace
+*.stderr -whitespace
+*.meta -whitespace

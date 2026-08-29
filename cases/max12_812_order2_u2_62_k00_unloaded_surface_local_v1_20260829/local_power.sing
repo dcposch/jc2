@@ -1,0 +1,65 @@
+execute(read("prelude_Q.sing"));
+
+ideal I=r1,r2,r3,r4,r5,r6,r7;
+poly f0=d0-2*d4-d4^2;
+poly f1=8*d1-(1+d4)*d3;
+poly f2=d2-d4-16*d3^2;
+poly f5=d5-2*d3;
+ideal J=f0,f1,f2,f5;
+ideal GJ=std(J);
+ideal RI=reduce(I,GJ);
+int input_containment=(size(simplify(RI,2))==0);
+poly badf2=d2-d4-15*d3^2;
+ideal BAD=f0,f1,badf2,f5;
+int mutation_detected=(size(simplify(reduce(I,std(BAD)),2))!=0);
+print("K00_SURFACE_INPUT_CONTAINMENT="+string(input_containment));
+print("K00_SURFACE_MUTATION_DETECTED="+string(mutation_detected));
+print("K00_SURFACE_DIM="+string(dim(GJ)));
+if ((input_containment!=1)||(mutation_detected!=1)||(dim(GJ)!=2))
+{
+  print("K00_SURFACE_LOCAL_FAIL=PREFLIGHT");
+  quit;
+}
+
+ring L=0,(d0,d1,d2,d3,d4,d5),ds;
+ideal IL=imap(R,I);
+poly lf0=d0-2*d4-d4^2;
+poly lf1=8*d1-(1+d4)*d3;
+poly lf2=d2-d4-16*d3^2;
+poly lf5=d5-2*d3;
+ideal JL=lf0,lf1,lf2,lf5;
+option(redSB);
+ideal GL=std(IL);
+write("LOCAL_STANDARD_BASIS.txt",GL);
+print("K00_SURFACE_LOCAL_STD_SIZE="+string(size(GL)));
+print("K00_SURFACE_LOCAL_STD_DIM="+string(dim(GL)));
+
+intvec first=0,0,0,0;
+poly target;
+poly base;
+int i;
+int n;
+for (i=1;i<=4;i++)
+{
+  if (i==1) { base=lf0; }
+  if (i==2) { base=lf1; }
+  if (i==3) { base=lf2; }
+  if (i==4) { base=lf5; }
+  target=base;
+  first[i]=0;
+  for (n=1;n<=64;n++)
+  {
+    if ((first[i]==0)&&(reduce(target,GL)==0)) { first[i]=n; }
+    target=target*base;
+  }
+  print("K00_SURFACE_LOCAL_FIRST_POWER_"+string(i)+"="+string(first[i]));
+}
+if ((first[1]==0)||(first[2]==0)||(first[3]==0)||(first[4]==0))
+{
+  print("K00_SURFACE_LOCAL_ENDPOINT=RESOURCE_CAP_NO_VERDICT");
+}
+else
+{
+  print("K00_SURFACE_LOCAL_ENDPOINT=SCREEN_SUPPORTS_LOCAL_RADICAL_J");
+}
+quit;

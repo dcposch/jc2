@@ -5,6 +5,39 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **FIRST RAMIFIED K00 SOURCE CELL — REVIEWED GRADE-SEVEN EXCLUSION
+> PROMOTED (2026-08-29 22:33Z).** Sol producer `66b4f59e...` (11,123-byte
+> body `c9a96bd9...`) and replay `981b39f9...` receive Opus independent
+> reconstruction `07c4ad13...` (23,079-byte body `48734eae...`), verdict
+> `CONFIRM_WITH_CORRECTIONS`. Binding integration is
+> `0eb501b414f2162d14a73725a46410b7e799adc70932cdfb8a05f4196ff0bb1a`
+> (4,690-byte body
+> `f779bac98cea2892513a7f6cd40708ec0d8fcb4e9f5426479595c083135c4270`).
+>
+> On the normalized `Lambda=t^2`, `ord_t(d)=1`, `ord_t(k10)=0`,
+> `B11111` source cell,
+>
+> ```text
+> V(G0,...,G7) intersect D(k10[0])
+>                 intersect (union_i D(d_i[1])) = empty.
+> ```
+>
+> Therefore the full 273-equation grade-38 cell is empty. Nonzero leading
+> ranks die at G3. On the old plane, the complete G5 fan kills ranks two and
+> one by G6; the centered G6 fan kills ranks two, one and zero at literal G7.
+> The final rank-zero obstruction is the pair
+> `t(3s^2-64t^2)=s(s^2-192t^2)=0`, whose only common zero violates the
+> first-coefficient open.
+>
+> Promotion binds three material repairs: `mu=nu2=(s^2,st/8,16t^2,0,0,0)`;
+> the G4 variable is `w=d[2]-nu2`, not raw `d[2]`; and the row-six replay
+> check is positive source sensitivity rather than a verdict-changing
+> negative control (row six is decisive in G3, not after G3). The corrected
+> row-two K10 witness is `5/65536`; the obsolete `5/32768` omitted the cubic
+> contribution. K6/K2 cannot arrive by G7 and are not mathematically
+> exercised. No other load-order cell, `(e,m)`, support, closure atlas,
+> attainment, map, counterexample, or JC2 conclusion follows.
+
 > **K00 VALUATION FOUR `R4-02` — REVIEWED GRADE-15 EXCLUSION
 > PROMOTED; `R4-00` SOLE INTEGER RESIDUAL (2026-08-29 21:40Z).**
 > Opus producer `a4fe05d3...` (23,493-byte body `32f79463...`)

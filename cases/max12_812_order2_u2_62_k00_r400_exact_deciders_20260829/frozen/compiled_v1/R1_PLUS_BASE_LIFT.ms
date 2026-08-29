@@ -1,0 +1,12 @@
+s, t, kappa, A8, B8, q, ii, zinv, ws, wt
+0
+1+ii^2,
+3200*t^2*kappa^3-4608*t^3*kappa*ii+800*s*t*kappa^3*ii+1728*s*t^2*kappa-50*s^2*kappa^3+216*s^2*t*kappa*ii-9*s^3*kappa,
+18*B8*q+144*A8*q*ii+160*kappa*q^2*ii-800*t*kappa^2*q*ii+1152*t^2*q-2880*t^3*kappa-100*s*kappa^2*q-288*s*t*q*ii+500*s*t*kappa^3-18*s^2*q+135*s^2*t*kappa,
+9*A8*B8+10*kappa*B8*q+80*kappa*A8*q*ii+256*t*q^2-50*t*kappa^2*B8+576*t^2*A8-320*t^2*kappa*q-1600*t^3*kappa^2-32*s*q^2*ii-50*s*kappa^2*A8-18*s*t*B8+80*s*t*kappa*q*ii-1152*s*t^3-9*s^2*A8+5*s^2*kappa*q+75*s^2*t*kappa^2+18*s^3*t,
+9*B8^2-576*A8^2+160*kappa*B8*q*ii-1280*kappa*A8*q+4096*t*q^2*ii+6400*t*kappa^2*A8+1152*t^2*B8-5120*t^2*kappa*q*ii+36864*t^4+512*s*q^2-100*s*kappa^2*B8+2304*s*t*A8-1280*s*t*kappa*q-9600*s*t^2*kappa^2-18*s^2*B8+80*s^2*kappa*q*ii-3456*s^2*t^2+50*s^3*kappa^2+9*s^4,
+32768*q^3*ii+540*kappa*B8^2-34560*kappa*A8^2+13824*t*B8*q+110592*t*A8*q*ii-34560*t^2*kappa*B8-614400*t^2*kappa^2*q*ii+884736*t^3*q-2764800*t^4*kappa-1728*s*B8*q*ii+13824*s*A8*q-69120*s*t*kappa*A8-153600*s*t*kappa^2*q-331776*s*t^2*q*ii+768000*s*t^2*kappa^3+540*s^2*kappa*B8+9600*s^2*kappa^2*q*ii-41472*s^2*t*q+259200*s^2*t^2*kappa+1728*s^3*q*ii-4000*s^3*kappa^3-675*s^4*kappa,
+2048*q^3+540*kappa*A8*B8-864*t*B8*q*ii+6912*t*A8*q-17280*t^2*kappa*A8-38400*t^2*kappa^2*q-55296*t^3*q*ii+128000*t^3*kappa^3-162*s*B8*q-1296*s*A8*q*ii-480*s*kappa*q^2*ii+540*s*t*kappa*B8+12000*s*t*kappa^2*q*ii-24192*s*t^2*q+95040*s*t^3*kappa+270*s^2*kappa*A8+900*s^2*kappa^2*q+3456*s^2*t*q*ii-7500*s^2*t*kappa^3+162*s^3*q-1755*s^3*t*kappa,
+2048*q^3+540*kappa*A8*B8-864*t*B8*q*ii+6912*t*A8*q-17280*t^2*kappa*A8-38400*t^2*kappa^2*q-55296*t^3*q*ii+128000*t^3*kappa^3-54*s*B8*q-432*s*A8*q*ii+480*s*kappa*q^2*ii+540*s*t*kappa*B8+7200*s*t*kappa^2*q*ii-17280*s*t^2*q+77760*s*t^3*kappa+270*s^2*kappa*A8+300*s^2*kappa^2*q+1728*s^2*t*q*ii-4500*s^2*t*kappa^3+54*s^3*q-945*s^3*t*kappa,
+1-kappa*q*zinv,
+1-t*wt-s*ws

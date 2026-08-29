@@ -1,0 +1,18 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review complete. Wrote `xmodel/k00-ram-e2m1-g7-rankfan-hostile-review-opus5-20260829.md` (23,079 bytes, standalone `<!-- BODY-END -->`, no seal block).
+
+## Verdict: `CONFIRM_WITH_CORRECTIONS`
+
+**Everything mathematical checks out exactly.** I rebuilt R/A10/A6/A2 from the 569 tails in pure stdlib without touching the producer's serialized rows, then confirmed: the ord_d stencil, the surface `R_r(D(S,T))≡0`, `G4 = Q_r(w)`, the G4 cone, all five identities (3.3), `det = −Δ²`, the (3.5) survivor, (3.6) `= −q³/16, εiq³/32, q³/128`, `G6_r = Q_r(ρ)`, (4.5) W-rows, (4.6), (4.7), and the rank-zero cubics. My sectors are *equal as exact rational dictionaries* to the engine's. Both replays PASS identically; zero bare `assert`s, so `-O` isn't vacuous. **No discrepancy anywhere.**
+
+The erratum is exactly right: `[t³]A10 = DM4(ell)[u] + A10^[3](ell) = DM4(ell)[u−mu/2]` for all seven rows, witness `5/32768 / −5/65536 / 5/65536`. All three claimed survivals hold — and `M4(ell) ≡ 0` (not periodicity) is why K10 can't reach G6.
+
+**Three material corrections:**
+
+1. **`mu` is never defined** in the certificate. The identity only holds for `mu = (s², st/8, 16t², 0,0,0)`.
+2. **The grade-2 centering is missing.** §2 says "retain `Q_r(w)=0`" without saying `w = d[2] − nu2`. Verbatim in raw `d[2]`, G4 carries `s,t` terms — §2 is false as literally written. §4 defines `nu3`, `nu4`; `nu2` (= `mu`) is the omitted one, needed twice.
+3. **§5 control 6 is mis-justified.** Row 6 is *not* load-bearing post-G3 — rows `{1,2,3,4,5}` close the whole fan, and the G5 rank-one branch already dies by `−q³/16`. Row 6 earns its keep at **G3**, inside the promoted input.
+
+**Beyond the charge**, two things worth having: I re-derived the promoted G3 reduction from scratch (`V(G2)` is strictly bigger than the ell-plane, so G3 does real work; row 6's y-free `(p/65536)(192q²−p²)` kills rank-one), and I found the reusable exact form of the support step — `V(G2)=V(G4)=V(G6)=V(A,B)` with `A³,B³` in the ideal but `A²,B²` not.
+
+One honest scope note: deleting the K6 and K2 sectors entirely leaves the replay passing. That's mathematically correct below grade 14/22 and confirms "no K6/K2 assumption is needed" — but those columns are covered by the custody hash alone, which the certificate should say.

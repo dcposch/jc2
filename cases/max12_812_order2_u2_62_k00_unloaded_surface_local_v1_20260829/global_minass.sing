@@ -1,0 +1,49 @@
+LIB "primdec.lib";
+execute(read("prelude_Q.sing"));
+
+ideal I=r1,r2,r3,r4,r5,r6,r7;
+poly f0=d0-2*d4-d4^2;
+poly f1=8*d1-(1+d4)*d3;
+poly f2=d2-d4-16*d3^2;
+poly f5=d5-2*d3;
+ideal J=f0,f1,f2,f5;
+ideal GJ=std(J);
+ideal RI=reduce(I,GJ);
+int input_containment=(size(simplify(RI,2))==0);
+poly badf2=d2-d4-15*d3^2;
+ideal BAD=f0,f1,badf2,f5;
+int mutation_detected=(size(simplify(reduce(I,std(BAD)),2))!=0);
+print("K00_SURFACE_INPUT_CONTAINMENT="+string(input_containment));
+print("K00_SURFACE_MUTATION_DETECTED="+string(mutation_detected));
+print("K00_SURFACE_DIM="+string(dim(GJ)));
+if ((input_containment!=1)||(mutation_detected!=1)||(dim(GJ)!=2))
+{
+  print("K00_SURFACE_MINASS_FAIL=PREFLIGHT");
+  quit;
+}
+
+list P=minAssGTZ(I);
+print("K00_SURFACE_MINASS_COUNT="+string(size(P)));
+int i;
+int j;
+int origin;
+poly z;
+for (i=1;i<=size(P);i++)
+{
+  ideal Pi=P[i];
+  ideal GP=std(Pi);
+  origin=1;
+  for (j=1;j<=size(Pi);j++)
+  {
+    z=Pi[j];
+    z=subst(subst(subst(subst(subst(subst(z,d0,0),d1,0),d2,0),d3,0),d4,0),d5,0);
+    if (z!=0) { origin=0; }
+  }
+  write("MINASS_"+string(i)+".txt",Pi);
+  print("K00_SURFACE_MINASS_"+string(i)+"_DIM="+string(dim(GP)));
+  print("K00_SURFACE_MINASS_"+string(i)+"_ORIGIN="+string(origin));
+  print("K00_SURFACE_MINASS_"+string(i)+"_IN_J="+string(size(simplify(reduce(Pi,GJ),2))==0));
+  print("K00_SURFACE_J_IN_MINASS_"+string(i)+"="+string(size(simplify(reduce(J,GP),2))==0));
+}
+print("K00_SURFACE_MINASS_ENDPOINT=EXACT_COMPONENTS_SERIALIZED");
+quit;

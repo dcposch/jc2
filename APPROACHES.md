@@ -7,6 +7,41 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 22:44Z — close the `e=2,m=1` boundary; attack the first resonance)
+
+- **Promote the first ramified exclusion; provisionally generalize only over
+  its exact coefficient-independent scope.** Independent reconstruction
+  confirms that the normalized `e=2,m=1,ord(k10)=0,B11111` cell is empty at
+  G7. A new sealed replay proves that K6, K2, `mu2`, `mu4`, and `mu6` do not
+  enter the argument, so every positive-or-infinite boundary load-order face
+  at `e=2,m=1`, still on the declared C6/K10/Jdet unit opens, has the same
+  empty prefix; Fable is reviewing that enlarged
+  corollary after Grok exhausted its balance before model work. Do not
+  extrapolate in `e`: an exact `e=3,m=1` full-source fixture
+  survives G0--G8 once the second surface coefficient is retained. Attack its
+  G9 carry first, while classifying the associated rank-one resonance rather
+  than attempting a coefficient-blind induction.
+- **Exploit the exact unloaded graph as a recentering engine, with the mixed
+  source firewall explicit.** Direct fifth-power certificates prove globally
+  that the reduced unloaded K00 zero set is exactly
+  `D(S,T)=(2S+S^2,(1+S)T/8,S+16T^2,T,S,2T)`. This licenses exact graph
+  recentering whenever an unloaded coefficient block vanishes in a reduced
+  ring. It does not put a loaded trajectory on the graph, because its source
+  equations contain K10/K6/K2 and targets. The next theorem target is a
+  graded induction that isolates precisely when the unloaded block vanishes
+  and records resonant load collisions.
+- **Keep the R4 review and ramified work asynchronous.** The R4-00 rank-zero
+  cell is independently reproduced empty at grade 18. Exact grade-19 unit
+  packets now provisionally kill R1+, R1-, and R2; hostile Opus replay runs
+  in the background while base jobs continue. Descendant strategy may treat
+  those packets as provisionally true, but the literal integer atlas is not
+  promoted closed until the unit packets pass source and localizer review.
+- **Preserve proof-side breadth.** QCS glue-or-kill work and the global
+  actual-map selector remain independent proof avenues. Counterexample-side
+  narrowing does not establish source completeness, attainment, or a map.
+  Heavy/uncertain algebra remains AWS-only; exact review and new descendants
+  proceed concurrently rather than waiting on one queue.
+
 ## Superseding strategy overlay (2026-08-29 21:40Z — one literal integer cell)
 
 - **Concentrate the literal V20R2 atlas on `R4-00`.** Independent review
