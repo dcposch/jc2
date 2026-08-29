@@ -5,6 +5,32 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **K00 VALUATION FOUR `R4-02` — REVIEWED GRADE-15 EXCLUSION
+> PROMOTED; `R4-00` SOLE INTEGER RESIDUAL (2026-08-29 21:40Z).**
+> Opus producer `a4fe05d3...` (23,493-byte body `32f79463...`)
+> receives Fable independent reconstruction `3d9500d3...`
+> (20,330-byte body `83ccbb0f...`), with all seven attack areas
+> `CONFIRMED`. Binding integration is
+> `649943461185f1f580f069e76da4252daf207689ff5baa6dab2c05ba7c8f1bea`
+> (4,550-byte body
+> `0e4dc8077e53fec6d69eb572db6e17ef3f2944fcd0736f2c7ffb9fbd37df888a`).
+>
+> On the old-plane, next-rank-two stratum, grade 11 forces
+> `A(d[6])=B(d[6])=0`. Three raw grade-15 cokernel combinations reduce to
+> nonzero scalars times
+> `Phi=v(64v^2-3u^2)` and `Psi=u(192v^2-u^2)`; their common vanishing
+> contradicts `Delta=u^2+64v^2!=0`. The two registered branches have
+> localized units `(3/64)v^3` and `-(3/8)v^3`. No later jet, K2/K6
+> load, cone variable, or target can rescue them.
+>
+> Promotion reads grade-12/13 cokernel vanishing sequentially modulo the
+> grade-11 equations, uses both charts for the uniform contradiction, and
+> drops an auxiliary digest whose serialization was unspecified. The parent
+> rank fan then leaves exactly `R4-00` as the literal valuation-four—and
+> hence sole literal integer—residual. This is reduced field-valued
+> finite-jet scope only; `R4-00` nonemptiness, ramified DVR incidence,
+> maps, counterexamples, and JC2 remain open.
+
 > **K00 NORMALIZED V20R2 VALUATION THREE — REVIEWED FINITE-JET
 > EXCLUSION PROMOTED; STALE PREFLIGHT QUARANTINED
 > (2026-08-29 21:31Z).** Sol source packet `6940e1ea...` (19,763-byte

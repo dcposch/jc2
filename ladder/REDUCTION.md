@@ -3,6 +3,19 @@
 **Status (2026-08-27): hostile dependency audit / consolidation master;
 normalization/fidelity distinction synchronized with `TRANSPORT.md`.**
 
+## Current frontier overlay — 2026-08-29 21:40Z
+
+The unconditional Keller-to-book chain is unchanged. On the independent
+literal normalized V20R2 route, the old-plane next-rank-two cell is now
+reviewed empty at grade 15. Hence `R4-02` closes and `R4-00` is the sole
+remaining integer-`Lambda` cell across all valuations. Its six-equation
+grade-12 entry solve is active; no point or attainment is inferred.
+
+The ramified `e=2,m=1,B11111` source remains logically independent.
+Therefore even an `R4-00` exclusion would close only the literal section
+functor, not the valuative source, another load/support face, an actual map,
+or the bridge from these finite systems to JC2.
+
 ## Current frontier overlay — 2026-08-29 21:31Z
 
 The unconditional Keller-to-book chain is unchanged. On the independent

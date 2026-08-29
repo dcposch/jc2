@@ -1,0 +1,14 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review complete. **Verdict: `PASS_WITH_MINOR_REPAIRS` — all seven attack areas CONFIRMED, nothing GAP or REFUTED.** The report is written at `xmodel/k00-r4-02-branch-closure-hostile-review-fable5-20260829.md`, ending with a unique standalone body-end marker and no seal.
+
+**What I did.** Full clean-room rebuild of the seven literal rows from the frozen 569 tails and the V20R2 compiler in `/tmp/k00r402rev/` (stdlib-only, exact `Fraction` / formal `1/v_y` / `Q[r]/(r²−192)` arithmetic), with two independent evaluation paths that agree on all 140 row-grade cells at 8 random rational points. The producer replay and Opus scratch were never read or executed.
+
+**Core results, all verified coefficient-exactly:**
+- **Custody**: every pin matches (report full/body, both parents full/body, tails, compiler), and the pinned inputs are blob-identical across all three basis commits.
+- **Grade 11** is exactly `α_iA₆+β_iB₆` with genuinely no inhomogeneity — the hidden mechanism is the exact identity `polar_M2(ell, cone) ≡ 0`, which I verified separately.
+- **The three raw grade-15 identities D1, D2, D3** hold byte-exactly with every jet, load, and target symbolic; their support is exactly `{s,t,u_y,v_y,A₆,B₆,A₇,B₇,κ,k10[1]}`, which by itself settles the no-rescue question. The reason no `A₈`-terms survive: the q-parts of those three combinations vanish *as forms*.
+- **Branch units** `(3/64)v³, −(1/8)v³` and `(−3/8)v³, v³` (r-free, so descent is sound), the **uniform `Φ=Ψ=0` vs `Δ≠0` contradiction**, and the **§6.3 five-row unit-ideal certificate** all check out exactly on both branches.
+- **Negative control**: an exact witness satisfies all 49 rows at grades 8–14 (grade 15 is the first kill), and the grade-16 values `v₆=0, u₆=(625/432)κ³` are confirmed on both branches — I found the clean mechanism (`K2@16` pins `u₆`; the same D-combos pin `v₆`).
+- **R4-00-alone** is sound exactly as conditioned on the reviewed parents; the successor's entry system (six affine quadrics, row 6 identically zero) is verified.
+
+**Repairs required (all wording-level):** (1) §5's "K@12,13 identically zero" is true only modulo (G11) — raw `K1@12 = −(3/8192)A₆²+(3/524288)B₆²`; (2) §10's attribution of the uniform emptiness to the single `v_y`-localized unit is loose (the uniform cell needs the Φ,Ψ pair and the `u_y`-chart at `v_y=0`); (3) `CERTIFICATE_DIGEST` isn't independently recomputable — pin its serialization or drop it. One incidental: my only false intermediate reading (`P1(ell)` W-membership) was a bug in my own comparison code; the claim is exactly right.

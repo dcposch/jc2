@@ -13915,3 +13915,22 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   hostile review run concurrently.
 - No point, arc, map, attainment, source-wide closure, other load face,
   support, or JC2 conclusion is claimed.
+
+## 2026-08-29 21:40Z REVIEW EVENT — R4-02 PROMOTED EMPTY
+
+- Fable hostile review `3d9500d3...`/body `83ccbb0f...` independently
+  reconstructs the 569-tail next-rank-two source with two exact evaluation
+  paths and confirms all seven attack areas. Binding integration
+  `64994346...`/body `0e4dc807...` promotes the grade-15 exclusion.
+- Grade 11 forces `A(d[6])=B(d[6])=0`. At grade 15 the exact projected
+  equations are scalar multiples of
+  `Phi=v(64v^2-3u^2)` and `Psi=u(192v^2-u^2)`, incompatible with the
+  rank-two open. The original branch units are `(3/64)v^3` and
+  `-(3/8)v^3`.
+- Repairs are wording/custody only: grade-12/13 cokernel vanishing is modulo
+  grade 11, the uniform proof needs both charts rather than one localized
+  unit, and the unspecified auxiliary certificate serialization is dropped.
+- `R4-00` is now the sole literal normalized integer residual across all
+  valuations. Its grade-12 entry solve remains active. This says nothing
+  about its nonemptiness, a ramified DVR closure, another support/load face,
+  an actual map, counterexample, or JC2.

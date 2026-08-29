@@ -7,6 +7,19 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
+> **R4-02 PROMOTED EMPTY; R4-00 IS THE SOLE LITERAL INTEGER CELL
+> (21:40Z).** Fable independently reconstructs the valuation-four
+> next-rank-two source and confirms every attack. Binding integration
+> `64994346...`/body `0e4dc807...` promotes the exact grade-15
+> obstruction: grade 11 forces the next normal pair to zero, while grade 15
+> gives
+> `Phi=v(64v^2-3u^2)=0` and `Psi=u(192v^2-u^2)=0`, incompatible with
+> `u^2+64v^2!=0`. The branch units are `(3/64)v^3` and
+> `-(3/8)v^3`. Thus `R4-02` is empty and `R4-00`—both first visible
+> coefficients on the old plane—is the sole unresolved cell in the literal
+> normalized integer atlas. Its grade-12 entry solve remains active; no
+> nonemptiness, attainment, ramified-closure, map, or JC2 claim follows.
+
 > **VALUATION THREE PROMOTED EMPTY; LITERAL INTEGER FRONTIER IS NOW
 > VALUATION FOUR (21:31Z).** Fable independently rebuilds the complete
 > valuation-three fan and all three remaining grade-12 cells with 79 exact

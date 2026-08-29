@@ -7,6 +7,21 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 21:40Z — one literal integer cell)
+
+- **Concentrate the literal V20R2 atlas on `R4-00`.** Independent review
+  promotes the uniform grade-15 exclusion of every old-plane
+  next-rank-two point, so `R4-02` is empty. With all other integer
+  valuations reviewed empty, `R4-00` is the sole literal normalized
+  `K[[Lambda]]` cell. Its active grade-12 entry solve is exactly six affine
+  quadrics `Q_i(z)+kappa*polar_M2_i(x,z)=0`, row six zero, followed by all
+  later literal rows. Do not infer nonemptiness from the packet.
+- **Keep `R4-00` and the ramified atlas independent.** Closing `R4-00`
+  would finish the integer section functor only. The ramified
+  `e=2,m=1,B11111` rank-zero prefix and its grade-7 continuation remain a
+  separate source-incidence route, alongside other load faces, `C6=0`, and
+  other supports.
+
 ## Superseding strategy overlay (2026-08-29 21:31Z — close valuation three)
 
 - **Concentrate the literal integer atlas on valuation four.** Two independent
