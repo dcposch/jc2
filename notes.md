@@ -13295,3 +13295,199 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   `2026-08-30T03:40Z`, systems checkpoint `2026-08-31T09:30Z`, and the next
   quiet full-round floor is twelve hours after closure absent significant
   news.
+
+## 2026-08-29 14:30Z REVIEW/PROMOTION EVENT — FINITE-s CARRIER BANKED; K00 RANK TWO CLOSED
+
+- Grok finite-pole audit `ab0eec5f...`/body `ab2a44a8...`, run
+  `9c44f231...`, returns `PASS` on basis `92ebe92a`; integration
+  `bf51df72...`/body `0bd06bb2...` promotes the formerly withheld finite-s
+  clause of the reviewed attachment theorem.
+- For `U=union_j I_(P_j)([0,v_j])`, the exact attachment formula is
+  `a(P)=max_j min(v_j,O(P,P_j))`. It handles shared prefixes, endpoints,
+  repeated presentations, arbitrary-arity/nested merges, arrivals, and
+  no-reentry. Complete actual exit-carrier sets are pairwise disjoint and
+  enter one C7.1 union. Scope is one fibre/component, finite s, complete
+  distinct carrier plus lower floor only; it is never attainment.
+- No current `s>=3` object is a typed consumer. Generic MP8/MFE remains
+  `REPRESENTATIVE`; no `m=3,4` book, td12 source object, or td11 skeleton is
+  repriced. Bank the theorem with no numerical delta, descendant, avenue
+  rerank, or AWS job.
+- K00 discovery `ac843e4c...`, exact packet `55fb39ea...`, and Grok hostile
+  review `6bb957b4...`/body `ecdb4254...`, run `57796334...`, are bound by
+  integration `8c273911...`/body `788cb8d2...`. Verdict is
+  `PASS_WITH_REPAIR`.
+- The seven literal grade-three rows satisfy `P3=C u+c3` with
+  `C=A[:,1..6]`. For `H=J2+I3([C|c3])`, labelled Laplace identities give
+  `H subset J2+I2(A)`, while every nonzero literal `2x2` minor `q` has
+  `q^4 in H`; unresolved counts are `291,60,36,0`. Therefore
+  `sqrt(H)=sqrt(J2+I2(A))`, so no rank-exactly-two point lifts through grade
+  three and `V(P6+I3(A)) intersect D(I2(A))` is empty.
+- The sole repair is census wording: labelled `I3(E3)` has 1,225 slots,
+  412 zero and 813 nonzero. Stop every full-`P6` rank-two chart. Preserve the
+  selected chart's old `RESOURCE_CAP_NO_VERDICT`; the new theorem supersedes
+  its target without converting its 21,000-second run into evidence.
+- Scope firewall: rank at most one, rank five, later grades, source
+  reachability, arcs, closure incidence, order two, maximum twelve, a Keller
+  pair, counterexample, and JC2 all remain open.
+
+## 2026-08-29 14:30Z LIVE/REVIEW STATE — K00 SUCCESSORS AND BOTH TD12 BRIDGES REMAIN PROVISIONAL
+
+- K00 rank-five/MAX5CLASS and rank-at-most-one producer reports are under one
+  combined Fable 5 hostile review. Neither is canonical; the reviewed
+  rank-two stop does not imply either result.
+- Fable 5's B global-source bridge is under Grok 4.6 hostile review. Opus 5's
+  sibling bridge is under internal audit. Preserve route separation and do
+  not infer source values, caps, occurrence, or a `PairRef` from either
+  producer report.
+- Sol's sealed RESROW correction `edfec0a0...`/body `9c72c20e...` remains
+  provisional. It replaces Fable C4's `p^(I-1)` factor by `p^(I-i)`; at
+  `j=17` the corrected right side is an exact derivative, making both
+  proposed orbit residues identically zero. Stop `TD12-B25-RESROW/v1` at
+  `j=17` provisionally.
+- The next algebraically possible resonance is `j=42`, which would require
+  data through `P_42` and therefore lies outside B24. This is frontier
+  guidance only: no `j=42` descendant, route kill, or promotion is licensed
+  before independent review and a source-bearing client.
+- These were desk-scale exact/review tasks. No new heavy computation follows;
+  all heavy or uncertain CAS remains AWS-only.
+
+## 2026-08-29 14:40Z REVIEW/PROMOTION EVENT — B SOURCE-BRIDGE CORE PASSES WITH REPAIRS
+
+- Fable B bridge `0175063f...`/body `539ecec1...` receives different-model
+  Grok review `20684d3e...`/body `dab4058f...`, run `8800a77b...`, verdict
+  `PASS_WITH_REPAIR`. Integration `c6c1d5fe...`/body `89fc2555...` is
+  binding on basis `92ebe92a`.
+- Scope begins with a characteristic-zero polynomial nonautomorphism of type
+  `(2,3)` and a named actual B occurrence `(a,S,F)` with
+  `(nu,kbar,X,M,w)=(25,17,25,3,2/3)`. The chart is functorial from that pair,
+  occurrence, and finite Puiseux prefix, not from the pair alone. Its pieces
+  are finite polynomial functionals, but their pair-specific support bound
+  is not a uniform cap.
+- Greedy subtraction below `s*=25(i+r)-17` uses only drops in `25 Z`, has at
+  most `i+r-1` slots, cannot exhaust the deviation, and lands exactly at
+  `s*`. The landing row is
+  `25pT'+(25i-17)p'T=(kappa_F/(i lambda_f))p^(1-i)`.
+- Exact identity `25pq'-17p'q=25p(AB+(8B-9A)t)` makes that row soluble iff
+  `8B=9A`. The unique on-weight solution is
+  `T=kappa_F q p^(-i)/(25 i lambda_f A B)`. This is the reviewed T1
+  solvability condition and supplies no route kill or terminal-object
+  identification.
+- Repaired C4 operator
+  `L_j[T]=25pT'+(25i+j-17)p'T` has rational kernel exactly at
+  `j=17 mod 25`; the first primitive is
+  `(p^i T_17)'=RHS_17/(25 i lambda_f)`. No nonzero or independent residue
+  condition is promoted. Sol's exact-derivative/vacuity result at `j=17`
+  remains provisional, as does `j=42` outside B24.
+- The uniform constructible/etale scheme remains outline-only. No uniform
+  degree or `kappa_F` cap, serialized `PairRef`, positive-order source value,
+  occurrence theorem, gate/tree landing, route exclusion, counterexample, or
+  JC2 conclusion follows.
+
+## 2026-08-29 14:40Z PROVISIONAL STATE — S INTERNAL AUDIT AND K00 GRADE FOUR
+
+- Sol internal S-bridge audit `1a6472f8...`/body `d0c1c700...` gives
+  `PASS_WITH_MATERIAL_REPAIRS` for the mathematics and
+  `FAIL_PRODUCER_BODY_SEAL` for custody. Opus producer full SHA is
+  `3595fb88...`; its actual pre-seal body is 42,545 bytes and hashes to
+  `c4825be2...`, not the claimed 42,816-byte/body digest.
+- Provisional safe content includes repaired source shear, branch-free
+  Newton floor, floor dichotomy/equality classification, immediate
+  sibling-floor identity, and degree lower bounds. None is promoted before
+  different-model review and repaired custody.
+- A generic source translation `x -> x+c` provisionally preserves normalized
+  type and the S17 cell while arranging `ord_x f=ord_x g=0`. This would make
+  `FLOOR-COORD` a WLOG gauge, not a new research fork. It says nothing about
+  the already fixed literal coordinates and requires serialized transport
+  for any future frozen `PairRef` or value vector.
+- Opus's `K00-GRADE4-RANK0-PLANE` primary lane is active. It conditionally
+  substitutes the provisional grade-three compatible two-plane, retains
+  `k10_0!=0`, and tests the seven literal grade-four rows. No report or
+  verdict exists yet; no upstream or downstream K00 claim is promoted.
+
+## 2026-08-29 14:54Z SYSTEMS INCIDENT/FOLLOW-UP — BOUNDED WAIT-AUTHORITATIVE PROCESS HELPER
+
+- Four hung ad hoc Singular desk invocations--three Opus scratch probes and
+  Fable's `Singular --version` query--printed their expected stdout but did
+  not close cleanly because the stdin/termination contract was incomplete.
+  A wall watchdog using `while kill -0 "$pid"; do ...; done; wait` can keep polling
+  an unreaped completed child instead of making `wait` authoritative. The
+  coordinator terminated only each validated exact PGID. No orphan or broad
+  process kill occurred. All four stalls followed the expected output and
+  revise no report verdict or mathematical replay.
+- Read-only search finds nine bare loops with this risk shape: the
+  signal-cleanup path in `ops/lane.sh`, seven upper-endpoint
+  supervisor scripts, and the root-aware recensus worker. D43's explicitly
+  bounded heartbeat/deadline loops and one-shot liveness checks remain in the
+  broader audit perimeter but are not the same unbounded finding.
+- Next systems-maintenance packet: one repo-owned capped-process helper with
+  a wait-authoritative parent and separate bounded telemetry. It must close
+  stdin unless streaming is explicit; require `quit;` in generated Singular
+  scripts; enforce wall, CPU, and RSS caps; record PID/PGID/start identity and
+  process-group telemetry; send TERM to the validated exact PGID; wait a
+  bounded grace interval; KILL only that PGID if necessary; and reap exactly
+  once.
+- Prohibit broad process-name matching, unscoped `pgrep`/`pkill`, unresolved
+  globs, and indefinite `kill -0` loops. Review the helper and then migrate
+  the nine call sites as a bounded software task. No helper implementation,
+  call-site patch, or active-lane mutation is part of this checkpoint.
+
+## 2026-08-29 15:07Z K00 REVIEW CLOSE — COMPLETE GRADE-THREE INCIDENCE PROMOTED; GRADE FOUR PROVISIONAL
+
+- Fable combined review full SHA `4dbd356a...`, body 29,665 bytes /
+  `b3dd864a...`, run `5d0e33ce...`, and log `c8511e6a...` all verify on
+  frozen basis `92ebe92a`; the runner is `DONE`, exit zero. All 27 resolvable
+  input-ledger hashes match, including Sol rank-five producer
+  `0a3af03e...`/body `5c039749...` and Grok rank-at-most-one producer
+  `e0947368...`/body `33c9ff07...`. Fable returns `PASS_WITH_REPAIR` on each.
+  Binding integration is `d453b956...`/body `f288a121...`.
+- Rank-five core: the 441 literal `5x5` minors comprise 351 zeros and 90
+  nonzeros in exactly two rational-scalar classes, represented by `W` and
+  `M`, with `I5(A) subset B2 subset B`. Direct replay also gives
+  `I4(A),I3(A) subset B`, hence `rank(A)<=2` on all of `V(B)`.
+  Coordinator repair: because `B subset P6`, the variety direction is
+  `V(P6) subset V(B)`, not the reversed arrow printed once in review §3.3.
+  This is a text-only repair; ranks three through five are empty on the
+  larger `V(B)` and therefore also on `V(P6)`.
+- Rank-at-most-one core: with `C=A[:,1..6]`, `E3=[C|c3]`,
+  `J1=B+I2(A)`, `R1=J1+I2(E3)`, and `J0=J1+I1(C)`, exact replay gives
+  `sqrt(R1)=J0` and
+  `R0=J0=(2d3-d5,d2-d4,16d1-d5,d0-2d4)`. Thus the rank-exactly-one
+  compatible locus is empty. The rank-zero compatible locus is the reduced
+  plane `(d0,...,d5)=(2s,t/8,s,t,s,2t)`, where `A=c3=0` and every `u`
+  works.
+- Composition with the already promoted rank-two obstruction gives the
+  maximum reviewed theorem, set-theoretically over an algebraic closure:
+  `V(B,P3_1,...,P3_7)=Pi x A^6_u`. This is complete grade-three compatible
+  incidence over the leading base `V(B)`, not defining-ideal equality,
+  full-`P6` solvability, a later-grade lift, source point, arc, Keller pair,
+  counterexample, or JC2 conclusion.
+- Binding text/custody repairs: the rank-five membership column is generated
+  by the `std`, not printed `slimgb`, lift; the old 6,985-byte transcript is
+  not archived; `I1C_NCOLS=20` is the proportionality-simplified rather than
+  literal 42-slot count; and direct normal forms replace the underspecified
+  sampling justification for `I1(A),(c3) subset J0`. The generic artifact
+  ledger headed `charge_basis` was required by a sloppy prompt and is not an
+  exit declaration; the validator correctly records `charge_basis=ABSENT`.
+  Fable's reviewer-new two-minimal-prime decomposition of `J1` and exact
+  minimal fourth-power observations remain provisional and unconsumed.
+- Stop every rank-three through rank-five Fitting/localizer job and every
+  selected grade-three rank-one `I2(E3)` chart. Do not relabel historical
+  capped jobs. The only surviving K00 branch after grade three is grade four
+  over the rank-zero plane.
+- Opus grade-four primary `0d2a9861...`/body 40,012 bytes /
+  `f6356d97...` is `DONE` and sealed but requires different-model review.
+  It provisionally proves the generatorwise identity
+  `phi(Lambda_4,r)=Q_r(u-(s^2,st/8,16t^2,0,0,0))`. Consequently `d*_3`
+  and `k10_0` disappear identically at grade four. With `z*k10_0-1`, the
+  ideal is proper, dimension 13 and multiplicity 8; its prime radical cuts
+  out irreducible `A^12 x G_m` by
+  `16u1-4u3+u5=2st` and
+  `u0-4u2+2u4=s^2-64t^2`. The scheme is nonreduced with nilpotency index
+  three. These two coupled equations are the full geometric constraint; no
+  separate variable block is constrained and no branch kill follows.
+- The preregistered `K00-G5-RANK0-PLANE` successor must run both a
+  radical-input variant and a scheme-input variant. At grade five `d*_3`
+  and `k10_0` return, while `d*_4` and `k10_1` still disappear on the plane.
+  Do not launch it before this canonical checkpoint is sealed. Different-
+  model review still gates promotion, and all heavy or uncertain CAS remains
+  AWS-only.

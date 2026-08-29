@@ -1,0 +1,23 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start from the frozen campaign basis and reconstruct the grade-three data from atlas/compiler labels, without treating the provisional Sol report as a premise.I'll verify the frozen basis and pull the atlas/compiler labels plus the V27/K00 grade-three sources.The basis matches. Next I’ll reconstruct grade-three data from the atlas and the reviewed V27 base, then look at how similar sealed reports are structured.No existing V27/K00 result owns the rank-≤1 grade-three stratum. I’ll locate the atlas, compiler labels, and a sealed-report template next.Atlas hash matches. Next I’ll extract ring variables, A, and the seven grade-three rows so P3 and E3 can be rebuilt independently.Grade-three rows never contain `k10_0`; that variable first appears at Lambda grade 4. I’ll resolve the atlas vs source-label hash mismatch and inspect how P6 is compiled.Label hashes match the atlas. Next I’ll reconstruct `P3 = C u + c3` in exact arithmetic, then run a capped Singular pass on the two Fitting strata.Reconstruction is exact. I’ll emit a capped Singular script from the atlas labels and run the two Fitting-stratum ideals under the 60s/1GB desk limit.I’ll drop the primdec block from the first pass so `size()` never bounds a positional loop, then run the capped script.The Fitting ideals finished well under the desk cap. Next I’ll read the bases and run a small prime/radical pass to see which strata actually survive.J1 prime decomposition exceeded the cap. I’ll keep power tests and Rabinowitsch, and restrict minAss to the small ideals J0, R0, and R1.Fresh `J1` matches the reviewed V27 base. I’ll seal the report with the rank-one emptiness, the surviving rank-zero plane, and the explicit firewall.I'll make the full-file hash convention explicit so a reviewer can recompute it by zeroing that field.Sealed report: `xmodel/k00-grade3-rankle1-primary-grok46-92e-20260829.md`  
+Basis: `92ebe92ad5986a47f01af9ed901260595dfed869`
+
+**Disposition:** `PASS_K00_G3_RANKLE1_CHARTFREE`
+
+Over the reviewed rank-at-most-one base `V(J1)`, grade-three solvability splits cleanly:
+
+| Stratum | Outcome |
+|---|---|
+| `rank(C)=1` | Compatible locus **empty**. `I3(E3)=0` is automatic and is not compatibility. `I2(E3)` cuts `J1` down to a 2-plane on which `C=0`. Rank-exactly-one points of `V(J1)` exist (`J1+(z(2d3_1-d5_1)-1)` is proper, dimension 2) and fail `I2(E3)=0`. |
+| `rank(C)=0` | **Survives** as the reduced 2-plane `J0=R0=(2d3_1-d5_1,\ d2_1-d4_1,\ 16d1_1-d5_1,\ d0_1-2d4_1)`. On it `A=0`, `c3=0`, and every `u` solves `P3`. |
+
+`P3=Cu+c3` with `C=A[:,1..6]` was rebuilt from the seven literal `(Lambda_grade,row)=(3,1..7)` labels. Fresh `J1` equals reviewed V27 `BASE2`. The Sol rank-two note was a branch pointer only, not a premise. Desk cost was 0.19 s / ~28 MB; no AWS packet.
+
+`k10_0` is not a variable of this six-variable ring and is not imposed. It first appears as a `P6` polynomial variable at Lambda grade 4; retain `k10_0!=0` there, on the rank-zero plane.
+
+**Successors.** Rank-one: none at grade three (empty). Rank-zero: adjoin the seven grade-four rows on the 2-plane and keep `D(k10_0)`.
+
+**Not proved:** rank-two review, rank five, full `P6`, later grades, a formal/convergent arc, Keller pair, counterexample, order-two exclusion, or JC2. `minAss(J1)` is `OPEN`.
+
+Body SHA-256: `33c9ff079d97933b3c2f59984e2593f4ee70111de8174b0fda063eeb3f08f2dc`  
+Full-file SHA-256 (file with that field zeroed): `3e2b13b2f064e28200972a57da87d6daca300144fd2dc36b0f53c6bbc1455cfc`

@@ -7,6 +7,109 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 15:07Z — close grade-three K00; hold grade five behind checkpoint)
+
+- **Promote the remaining grade-three rank strata with their repairs.**
+  Fable 5 independently reconstructs both the maximal-minor classification
+  and the rank-at-most-one compatibility theorem.  Thus `I5(A) subset B`,
+  every rank-five localizer on `V(B)` is unit, and no full-`P6` rank-five
+  chart should run.  On `J1=B+I2(A)`, grade-three compatibility is exactly
+  the reduced rank-zero plane
+  `(d0_1,...,d5_1)=(2s,t/8,s,t,s,2t)`; every `u` works there and the
+  rank-exactly-one compatible locus is empty.  The report's reversed variety
+  arrow is corrected to `B subset P6`, hence `V(P6) subset V(B)`; this is a
+  text repair and strengthens, rather than weakens, the inherited stop.
+- **Use the maximum reviewed grade-three incidence theorem.**  The prior
+  exact containments give `rank(A)<=2` on `V(B)`; the reviewed chart-free
+  theorem excludes compatible rank two, and the new review excludes
+  compatible rank one.  Therefore, over an algebraic closure, the full
+  grade-three compatible geometric locus of the leading base `V(B)` is
+  exactly that reduced two-plane, with `u` free.  This is a geometric
+  incidence statement on `V(B)`, not a full-`P6`, later-grade, source, arc,
+  Keller-pair, counterexample, or JC2 theorem.
+- **Keep Fable's reviewer-generated refinements provisional.**  Its new
+  two-minimal-prime decomposition of `J1` and the claim that fourth power is
+  the exact minimal radical exponent have not received different-model
+  review and are not used by the promoted core.  The checksum ledger headed
+  `charge_basis` is prompt-induced input metadata only; the run correctly
+  records `charge_basis=ABSENT` because no exit price is asserted.
+- **Grade four survives, but remains a primary.**  Opus's exact desk result
+  conditionally identifies the seven plane-specialized grade-four rows with
+  the grade-two quadrics at
+  `u-(s^2,st/8,16t^2,0,0,0)`.  The `d*_3` and `k10_0` coefficients disappear,
+  the localized ideal is proper, and its reduced locus is
+  `A^12 x G_m` cut out by two coupled `(s,t,u)` equations; the scheme itself
+  is nonreduced of nilpotency index three.  Record this as provisional until
+  different-model replay.  Its smallest successor is the two-variant
+  `K00-G5-RANK0-PLANE` gate, where `d*_3` and `k10_0` return; do not launch it
+  before the present canonical checkpoint is sealed.
+
+## Superseding strategy overlay (2026-08-29 14:40Z — promote B bridge core; keep value gates open)
+
+- **Use the B bridge only after a named actual occurrence.**  Different-model
+  review promotes the finite greedy deviation ledger, exact landing at
+  `s*=25(i+r)-17`, and the landing ODE.  Its solvability condition is exactly
+  `8B=9A`, with a unique on-weight rational solution, so the distant row
+  passes on the reviewed T1 cell and does not kill B.  The chart depends on
+  the pair plus occurrence and Puiseux prefix; it is not a pair-only or
+  uniform constructor.  Keep `OCCURRENCE-B25`, positive-order source values,
+  and pair-specific support as the live gates.  Do not infer a uniform
+  scheme, cap, serialized `PairRef`, degree bound, or route exclusion.
+- **Retain only the repaired C4 operator.**  Rational resonance occurs at
+  `j=17 mod 25`, and the first primitive is
+  `(p^i T_17)'=RHS_17/(25 i lambda_f)`.  The reviewed bridge does not make
+  its residue functionals nonzero.  Keep Sol's exact-derivative claim at
+  `j=17` and next-candidate `j=42` provisional; stop the `j=17` descendant
+  provisionally and do not launch `j=42` without a source-bearing client.
+- **Keep the S route one review tier behind.**  Internal audit finds the
+  mathematics repairable but the Opus producer body seal false.  The generic
+  source translation `x -> x+c` provisionally gives an Aut-equivalent S17
+  normalization with `ord_x f=ord_x g=0`, making `FLOOR-COORD` an
+  operational gauge rather than a research fork.  It does not alter fixed
+  literal coordinates or transport future frozen values automatically.
+  Require a different model and repaired custody before promotion.
+- **Continue the conditional K00 grade-four desk lane.**  Opus is testing
+  the seven literal grade-four rows over Grok's provisional rank-zero
+  two-plane with `k10_0!=0`.  Treat it as an active descendant, not evidence;
+  its upstream rank-at-most-one theorem is still under combined Fable review.
+
+## Superseding strategy overlay (2026-08-29 14:30Z — bank finite-s; close K00 rank two)
+
+- **Promote the carrier theorem, not a numerical consumer.**  The reviewed
+  rooted-prefix proof works for every finite pole-path union on one fixed
+  fibre/component, with attachment
+  `a(P)=max_j min(v_j,O(P,P_j))`.  Complete actual exit carriers are
+  disjoint and may enter one C7.1 union, so
+  `FULL_ACTUAL_EXIT=FULL_ACTUAL_FIRST_SEPARATION` now has finite-s scope.
+  It is still lower-floor-only and never attainment.  No current `s>=3`
+  book or td12 source object carries the required typed client; bank the
+  theorem without repricing, spawning a consumer by analogy, or changing an
+  avenue rank.  Generic MP8/MFE remains `REPRESENTATIVE`.
+- **Close the K00 grade-three rank-exact-two branch chart-free.**  Independent
+  reconstruction confirms `P3=A[:,1..6]u+c3` and, for
+  `H=J2+I3([A[:,1..6]|c3])`, the radical equality
+  `sqrt(H)=sqrt(J2+I2(A))`.  Thus every putative rank-two lift through grade
+  three collapses to rank at most one.  Stop all full-`P6` rank-two minor
+  charts and do not rerun the old capped selected chart; its historical
+  status stays `RESOURCE_CAP_NO_VERDICT`.  Preserve K00 as a protected
+  falsification avenue through the independent rank-at-most-one and
+  rank-five branches, both still under combined Fable review.
+- **Keep td12 source bridges review-gated and route-separated.**  Fable's B
+  global-source bridge is under Grok hostile review, and Opus's sibling
+  bridge is under internal audit.  Neither producer report changes the
+  canonical route.  A sealed Sol correction provisionally shows that
+  Fable's `j=17` RESROW form used the wrong integrating factor: after repair
+  the right side is an exact derivative and both residues vanish.  The next
+  possible resonance is `j=42`, needs `P_42`, and lies outside B24.  Stop the
+  `j=17` descendant provisionally, but launch no `j=42` lane before review
+  and an actual source-bearing client.
+- **Exploit stops immediately, promote asynchronously.**  The reviewed K00
+  rank-two stop frees all computation formerly aimed at minor charts; the
+  finite-s theorem needs no computation.  Continue provisional K00 and td12
+  descendants in parallel while their hostile reviews run.  No new heavy
+  computation is licensed by this delta; heavy or uncertain CAS remains
+  AWS-only.
+
 ## Superseding strategy overlay (2026-08-29 13:15Z — close 1224 round; move td12 upstream)
 
 - **Keep the numbered portfolio fixed.** Four blind researchers and three

@@ -7,6 +7,103 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
+> **K00 GRADE THREE CLOSES TO ONE REDUCED PLANE; GRADE FOUR SURVIVES
+> PROVISIONALLY (15:07Z).**  Fable combined hostile review
+> `4dbd356a...`/body `b3dd864a...` returns `PASS_WITH_REPAIR` separately on
+> the rank-five and rank-at-most-one producers; binding integration is
+> `d453b956...`/body `f288a121...`.  The maximal-minor census and memberships
+> give `I5(A) subset B`, while direct replay of `I4(A),I3(A) subset B`
+> gives `rank(A)<=2` on `V(B)`.  Correct the review's reversed arrow:
+> `B subset P6` implies `V(P6) subset V(B)`, so ranks three through five are
+> empty on both, and no such chart/localizer job should run.
+>
+> On `J1=B+I2(A)`, the grade-three compatibility ideal has radical
+> `J0=(2d3-d5,d2-d4,16d1-d5,d0-2d4)`, while rank-zero compatibility equals
+> `J0` as an ideal.  Thus the compatible rank-exactly-one locus is empty and
+> the rank-zero locus is the reduced plane
+> `(d0,...,d5)=(2s,t/8,s,t,s,2t)`, with every `u` free.  Composed with the
+> reviewed rank-two obstruction, the full grade-three compatible geometric
+> incidence over `V(B)` is exactly that plane times `A^6_u`, over an
+> algebraic closure.  Repairs pin the rank-five lift to `std`, correct the
+> simplified `I1C` count, replace sampling by normal forms, and treat the
+> prompt-induced checksum `charge_basis` heading as metadata; the run
+> correctly records `charge_basis=ABSENT`.  Fable's new minimal-prime
+> decomposition and exact-minimal-power refinements remain provisional.
+>
+> Opus grade-four primary `0d2a9861...`/body `f6356d97...` is complete but
+> still requires different-model review.  On the reviewed plane it finds
+> `phi(Lambda_4,r)=Q_r(u-(s^2,st/8,16t^2,0,0,0))`: `d*_3` and `k10_0`
+> disappear, the localized ideal is proper of dimension 13, its reduction is
+> irreducible `A^12 x G_m` cut out by two coupled equations, and the scheme
+> has nilpotency index three.  There is no branch kill.  The two-variant
+> `K00-G5-RANK0-PLANE` successor is preregistered because `d*_3` and
+> `k10_0` return at grade five, but it must not launch before this checkpoint
+> is sealed.  No later-grade lift, source point, counterexample, or JC2
+> conclusion follows.
+
+> **TD12 B SOURCE-BRIDGE CORE PASSES; S BRIDGE AND K00 GRADE FOUR STAY
+> PROVISIONAL (14:40Z).**  Grok different-model review
+> `20684d3e...`/body `dab4058f...` returns `PASS_WITH_REPAIR` on Fable's B
+> bridge; integration `c6c1d5fe...`/body `89fc2555...` promotes only C1--C3
+> and the repaired C4 operator/first primitive for a named actual occurrence
+> of the B state.  The finite native chart is functorial from the pair plus
+> that occurrence and prefix.  Greedy fractional-power subtraction uses
+> only drops in `25 Z`, terminates, and lands exactly at
+> `s*=25(i+r)-17`.  The landing ODE is soluble iff `8B=9A`, with unique
+> `T=kappa_F q p^(-i)/(25 i lambda_f A B)`, so the distant source row passes
+> on the already reviewed T1 ratio rather than killing the route.
+>
+> Below landing,
+> `L_j=25p d/deta+(25i+j-17)p'` has rational kernel exactly at
+> `j=17 mod 25`; the promoted first primitive is
+> `(p^i T_17)'=RHS_17/(25 i lambda_f)`.  No nonzero residue condition is
+> promoted.  Sol's stronger `j=17` vacuity/`j=42` frontier remains
+> provisional.  Theorem B's uniform scheme remains outline-only; no uniform
+> cap, serialized `PairRef`, source value, occurrence, route kill, or JC2
+> conclusion follows.
+>
+> Sol's internal S-bridge audit `1a6472f8...`/body `d0c1c700...` returns
+> mathematical `PASS_WITH_MATERIAL_REPAIRS` but custody
+> `FAIL_PRODUCER_BODY_SEAL`: Opus's actual 42,545-byte pre-seal body hashes
+> to `c4825be2...`, not its claimed seal.  Its generic `x -> x+c` insight
+> provisionally closes `FLOOR-COORD` WLOG while proving nothing about fixed
+> literal coordinates or future value transport; different-model review is
+> still required.  Opus's conditional K00 grade-four rank-zero-plane lane is
+> active with no report or verdict.
+
+> **FINITE-`s` CARRIER AND K00 RANK-TWO OBSTRUCTION PROMOTED; ALL NEWER
+> DESCENDANTS REMAIN REVIEW-GATED (14:30Z).**  Grok finite-pole audit
+> `ab0eec5f...`/body `ab2a44a8...` returns `PASS`, and integration
+> `bf51df72...`/body `0bd06bb2...` promotes the formerly withheld finite-s
+> extension of full-actual first separation.  On one fibre/component,
+> `a(P)=max_j min(v_j,O(P,P_j))` gives the unique attachment to any finite
+> pole-path union; complete actual exit carriers are disjoint and may enter
+> one C7.1 union.  The tag remains
+> `FULL_ACTUAL_EXIT=FULL_ACTUAL_FIRST_SEPARATION`, complete distinct carrier
+> plus lower floor only, never attainment.  No present `s>=3` object is a
+> typed consumer, so no price, book, rank, launch, or avenue changes.
+>
+> The K00 grade-three discovery `ac843e4c...`, frozen packet `55fb39ea...`,
+> and different-model Grok review `6bb957b4...`/body `ecdb4254...`
+> (`PASS_WITH_REPAIR`) are bound by integration `8c273911...`/body
+> `788cb8d2...`.  With `P3=C u+c3`, `C=A[:,1..6]`, and
+> `H=J2+I3([C|c3])`, labelled Laplace identities and exact fourth-power
+> certificates give `sqrt(H)=sqrt(J2+I2(A))`; the unresolved minor counts at
+> powers `1,2,3,4` are `291,60,36,0`.  Hence no rank-exactly-two leading
+> point lifts through grade three and
+> `V(P6+I3(A)) intersect D(I2(A))` is empty.  The only repair is the labelled
+> `I3(E3)` census `1225=412+813`.  Stop every full-`P6` rank-two chart; keep
+> the old selected-chart outcome `RESOURCE_CAP_NO_VERDICT` as history.
+>
+> K00 rank five and rank at most one are producer-complete but remain under
+> combined Fable review.  Fable's td12 B global-source bridge remains under
+> Grok review; Opus's sibling bridge remains under internal audit.  A sealed
+> Sol RESROW correction `edfec0a0...`/body `9c72c20e...` provisionally
+> repairs the integrating factor and makes the claimed `j=17` residue pair
+> identically zero.  The next possible resonance is `j=42`, requiring
+> `P_42` outside B24; no descendant is licensed.  These review-state notes
+> are not promotions, and no JC2 conclusion follows.
+
 > **FOUR-MODEL ROUND CLOSES; BOTH DESCENDANTS PROMOTED, NO AVENUE RERANK
 > (13:15Z).**  Round `20260829T1224Z` is synthesized in
 > `xmodel/ideation-20260829T1224Z-synthesis.md`.  Four blind whole-portfolio

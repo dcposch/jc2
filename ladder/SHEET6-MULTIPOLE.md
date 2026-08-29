@@ -1,5 +1,26 @@
 # SHEET6-MULTIPOLE.md — the m-pole analogue of Prop 8.4: the maximal printed-tier kill, its exact frontier, and the honest obstruction
 
+> **2026-08-29 FINITE-`s` CARRIER-SCOPE RIDER — FULL ACTUAL FIRST
+> SEPARATION PROMOTED.**  Finite-pole audit `ab0eec5f...`/body
+> `ab2a44a8...`, integration `bf51df72...`/body `0bd06bb2...`, promotes the
+> finite-arity clause deliberately withheld in the earlier two-pole rider.
+> On one fixed fibre and physical component, for
+> `U=union_(j=1..s) I_(P_j)([0,v_j])`, `1<=s<infinity`, every physical ray
+> has last attachment height
+> `a(P)=max_j min(v_j,O(P,P_j))`.  Thus `U` is rootward closed, an off-`U`
+> flag attaches uniquely at `I_P(a(P))`, and no ray re-enters after exit.
+> With the inherited corrected 3.13/3.18 and 6.7/6.8 typing, complete actual
+> cv sets below up non-chain microchildren attach at their base vertices,
+> are pairwise disjoint across directions and vertices, and enter one
+> actual-weight C7.1 union with the separate x-side witness. Shared prefixes,
+> endpoints, repeated presentations, arbitrary-arity/nested merges, and
+> arrivals are included. The carrier tag is therefore finite-s:
+> `FULL_ACTUAL_FIRST_SEPARATION=FULL_ACTUAL_EXIT`, complete distinct actual
+> carrier plus lower floor only, never attainment. This supersedes only the
+> older rider's withholding of the finite-union generalization; generic
+> MP8/MFE remains `REPRESENTATIVE`, and no current `s>=3` book or td12 source
+> object is a typed numerical consumer. No reprice or descendant follows.
+
 > **2026-08-29 CARRIER-TYPE RIDER — representative MP8 versus reviewed
 > two-pole full exit.** Generic MP8/MFE remains `REPRESENTATIVE`: one
 > selected Statement-7.3 witness per priced direction, with shared suffixes

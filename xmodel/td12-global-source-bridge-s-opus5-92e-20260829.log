@@ -1,0 +1,29 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Done. Wrote exactly `xmodel/td12-global-source-bridge-s-opus5-92e-20260829.md` (body 42816 bytes, SHA-256 `c0c03d4e…`), basis `92ebe92a` verified unchanged.
+
+## Disposition
+
+**`BRIDGE_AVAILABLE_AT_MAP_LEVEL / VALUE_LEVEL_STILL_OPEN`** — not `PAIRREF_ABSENT`.
+
+A hypothetical normalized counterexample realizing the `nu=17` state **does** canonically supply the completion and every coefficient map. Notation 3.9 gives the completion; Statement 3.7 the graded functionals; and the display inside the proof of Statement 3.9 (p. 15) gives the whole parent→child map in closed form. The first-child vector is not an auxiliary object — it *is* `p_{f,F∗c}`, the child's own top polynomial. What is absent is a finite list of values, and I pinned part of it.
+
+## Maximum theorem
+
+The new lever: **Proposition 4.1 is the ceiling dichotomy; it has an exact floor mirror, and the floor is computable.** With `σ_h(u) := min{J − um : (J,m) ∈ supp h}`:
+
+- the least x-exponent of `h^F` is `σ_h(u)`, and its coefficient polynomial is the `(1,−u)`-minimal Newton face — **branch-free, fibre-free, prefix-free**;
+- `σ_f + σ_g ≤ 1−u`, with `J(f_u^↓, g_u^↓) = 1` on equality and `0` otherwise (derived from the printed chart identity, *not* from Abhyankar 17.4, whose hypotheses Sigray never reproduces);
+- `s*` sits exactly `κ_F·Γ(u)` rows above the floor and `s*` rows below the ceiling — so the distant inhomogeneous row is addressable from the *other* end, no intermediate jets;
+- **floor rigidity**: `Γ(u)=0` for `u>0` iff `{f_u^↓,g_u^↓} = {c₁x, c₂y}`, `c₁c₂=1`. The floor rows are then *fully determined*.
+
+Sibling-specific: the two evaluations have **identical** floors, not conjugate ones. That is the real coupling — and it is exactly why no trace/norm form exists there, so I built none. Galois conjugacy stays unforced; Fable's asymmetric level-1 exhibit survives verbatim.
+
+Hard new number: `deg_y f ≥ 68i`, `deg f = k_f+l_f ≥ 136i`, `deg g ≥ 204i` — repairing from below the `deg_y f`/`deg_y g` entry the charged report lists twice as *unpinned*.
+
+## Blocker and descendant
+
+One lemma separates the two branches: `FLOOR-COORD` — is `ord_x f + ord_x g = 0`? Not derivable on the frozen basis; `x | f` is not obviously absurd (`f̃(0,y)g_y(0,y) ≡ 1` is consistent). The smallest descendant is `TD12-S17-FLOOR-COORD/v1`: desk-scale, needs no route, cell, `PairRef`, or index `i`.
+
+Two custody notes: `pdftotext -layout` inverted Notation 2.4 — bbox geometry confirms `α/β = k_f/k_g`, so type `(2,3)` does give ratio `3/2`; and the p. 15 proof literally prints `x^{−κ}` where `1/κ` is meant (two errata recorded). A desk control shows `(V)` genuinely *fails* at a double root that is not a tree direction, so it is a source input, not formal.
+
+No exit price is asserted, so `charge_basis` is absent. No commit, no push, `jc2-lean` untouched.

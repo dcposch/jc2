@@ -749,6 +749,82 @@ is AWS-only. The next broad web sweep is due `2026-08-30T03:40Z`; the next
 systems checkpoint is due `2026-08-31T09:30Z`; absent significant news, the
 next full ideation round is no earlier than twelve hours after this closure.
 
+Allocation and systems refresh (2026-08-29 14:30Z): two independently
+reviewed results are now canonical. The finite-s full-actual attachment
+theorem is banked at one-fibre/one-component, complete-carrier,
+lower-floor-only scope; no current `s>=3` object is a typed consumer, so it
+spawns no reprice or compute. The K00 grade-three radical obstruction closes
+every rank-exact-two full-`P6` chart; stop those engines immediately without
+relabeling the historical capped selected chart. K00 rank five and rank at
+most one continue provisionally under one combined Fable hostile review.
+Fable's td12 B source bridge is under Grok hostile review, while Opus's
+sibling bridge is under internal audit. Sol's sealed RESROW correction stops
+the proposed `j=17` descendant provisionally; `j=42` is only an outside-B24
+frontier marker pending review, not a launch. Producer confidence may still
+fan out nonconflicting work, but promotion remains review-gated. No new heavy
+job is licensed; all heavy or uncertain CAS remains AWS-only.
+
+Allocation and systems refresh (2026-08-29 14:40Z): Grok's different-model
+review now promotes only the Fable B bridge C1--C3 core and repaired C4
+operator/first primitive at named-actual-occurrence scope. The distant
+inhomogeneous row passes uniquely on the reviewed T1 ratio; there is no
+B-route kill, uniform scheme/cap, serialized `PairRef`, or source-value
+packet. Sol's `j=17` vacuity and `j=42` frontier remain provisional. The
+Opus S bridge has completed internal mathematical audit with material
+repairs, but its producer body seal fails and different-model review remains
+mandatory; the generic-source-translation `FLOOR-COORD` simplification is
+provisional. Opus also owns the active conditional K00 grade-four
+rank-zero-plane desk lane. These lanes remain asynchronous and nonblocking;
+no new heavy launch is licensed, and heavy or uncertain CAS remains
+AWS-only.
+
+Systems maintenance refresh (2026-08-29 14:54Z): four hung ad hoc desk
+Singular invocations--three Opus scratch probes and Fable's
+`Singular --version` query--exposed the same lifecycle defect, not a
+mathematical or resource incident. All four printed their expected stdout
+but did not close cleanly because the
+stdin/termination contract was incomplete; a wall watchdog using
+`while kill -0 "$pid"; do ...; done; wait` could continue on an unreaped
+completed child. The coordinator terminated only each validated exact
+process group; no orphan remained. The stalls occurred after the expected
+output and revise no report verdict or mathematical replay. A read-only audit
+found nine bare loops of this form: one signal-cleanup loop in `ops/lane.sh`
+and eight case supervisor/worker telemetry loops. Bounded D43
+heartbeat/deadline polling and one-shot status checks are lower-priority
+audit targets, not equivalent findings.
+
+The next systems-maintenance target is one repo-owned capped-process helper
+or supervisor contract. It must close stdin unless input is deliberately
+streamed, terminate Singular scripts with explicit `quit;`, make `wait`/the
+reaped child status authoritative, and enforce wall, CPU, and RSS caps while
+recording process-group telemetry. Cancellation must validate PID, PGID, and
+available start identity; send TERM to the exact PGID; allow a bounded grace
+period; then KILL only that exact PGID and reap once. Broad name matching,
+unscoped `pgrep`/`pkill`, and indefinite `kill -0` polling are forbidden.
+The helper and call-site migration require their own reviewed software
+packet; no code changes or active-lane mutation belong in this checkpoint.
+
+Allocation refresh (2026-08-29 15:07Z): Fable's combined K00 review and the
+binding coordinator integration promote the rank-five and rank-at-most-one
+cores with repairs. Together with the prior rank-two obstruction, the full
+grade-three compatible geometric incidence over `V(B)` is exactly the
+reduced plane `(2s,t/8,s,t,s,2t)` times free `u`, over an algebraic closure.
+Stop all rank-three through rank-five Fitting/localizer jobs and every
+selected grade-three rank-one `I2(E3)` chart; preserve historical cap labels.
+The repaired containment is `B subset P6`, hence
+`V(P6) subset V(B)`. Fable's new minimal-prime decomposition and exact
+minimal-power refinements stay provisional, and its prompt-induced generic
+`charge_basis` ledger is only input metadata; the validated exit status is
+`charge_basis=ABSENT`.
+
+Opus's grade-four rank-zero-plane primary is now DONE and provisionally finds
+a proper 13-dimensional nonreduced survivor with prime reduced locus
+`A^12 x G_m`; `d*_3` and `k10_0` vanish at grade four but return at grade
+five. It awaits different-model review. `K00-G5-RANK0-PLANE` is registered in
+both radical-input and scheme-input variants but must not launch before this
+canonical checkpoint is sealed. No other K00 computation is licensed by this
+delta; heavy or uncertain CAS remains AWS-only.
+
 Adding a model requires one adapter in `ops/adapters/` and one roster row;
 route documents do not assign permanent jobs by model name.
 Admission requires a sealed same-input evaluation against a standing model.

@@ -1,0 +1,29 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Done. Wrote `xmodel/k00-grade4-rank0-plane-primary-opus5-92e-20260829.md` (40688 bytes full file, body 40012 bytes, body SHA-256 `f6356d97…`) — the only repository file created or touched.
+
+## Disposition: `PASS_K00_G4_RANK0_PLANE_PROPER`
+
+**The governing find** is an exact generatorwise identity for all seven literal rows:
+
+```
+phi(Λ_{4,r})  =  Λ_{2,r}( u − μ(s,t) ),    μ = (s², st/8, 16t², 0,0,0)
+```
+
+The shift is unique (72 linear equations, zero free columns) and well-defined exactly modulo the plane. Since `σ: (s,t,u) ↦ (s,t,u−μ)` is a polynomial automorphism, grade four on this plane *is* grade two in six variables.
+
+**Answers to the four questions**
+
+1. **Proper**, not unit. `NF(1)=1`, dim 13, mult 8, std/slimgb agree.
+2. Radical is **prime**: `16u1−4u3+u5 = 2st`, `u0−4u2+2u4 = s²−64t²`, `k≠0`. Locus irreducible ≅ `A¹² × G_m`. The scheme is **non-reduced** — `RA³, RB³ ∈ I₄` but `RA², RB² ∉ I₄`. Three exact rational witnesses, verified by direct substitution into the literal rows.
+3. Grade four constrains **no block separately** — all four eliminations are `(0)` (or just the localizer), and each projection is a genuine surjection (explicit sections; a finite-morphism certificate `s⁴−Qs²−16P²=0` for the `u` projection). The entire content is two coupled equations, codimension two in `(s,t,u)`.
+4. Nonempty, so no branch kill. Grade five is the first grade where `k10_0` and `d*_3` actually bite; the successor is preregistered in both ideal-level and radical-level variants.
+
+**Structural reason for the collapse:** the grade-4 `d*_3` coefficient matrix *equals* the grade-3 `d*_2` coefficient matrix `C = A[:,1..6]` (all 42 entries), which is zero on the plane. So the newest block disappearing is proved, not observed.
+
+**Things you should weigh:**
+- Everything is conditional on the upstream plane being exhaustive — I verified only that grades 2 and 3 vanish identically on it, in both engines, and labelled that an independent check.
+- One sub-run hit the 60 s CPU cap (`rc=-24`, 59.7 s) when I asked for Gröbner data on the *mutated* systems. I re-scoped to identity-level observables rather than raising the cap; no claim rests on the killed run.
+- This Darwin kernel refuses to lower `RLIMIT_AS`/`DATA`/`RSS`, so the 1 GiB cap was enforced by an external RSS watchdog — weaker than an in-process limit, and disclosed as such. Peak RSS elsewhere ≤ 10 MB; swapout counter never moved.
+- The digest *convention* was read from the producer source; the polynomial *content* was reconstructed independently from `exact_terms`, and cross-checked 49/49 against a second label artifact from a different case directory.
+
+One incidental corroboration: the dimension-2 embedded prime of the grade-two quadric ideal is exactly the upstream 2-plane, recovered by primary decomposition rather than Fitting conditions.

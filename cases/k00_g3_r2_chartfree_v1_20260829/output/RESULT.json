@@ -1,0 +1,105 @@
+{
+  "affine_checks": {
+    "C_equals_A_first_six_bad": 0,
+    "affine_reconstruction_bad": 0,
+    "second_derivative_bad": 0
+  },
+  "artifacts": {
+    "HRAW_TO_H.matrix": {
+      "bytes": 129139,
+      "sha256": "739c73d90ce9cf6248e2c76e8c5341ac5b5739ebf5cfacc9c61575c53e25fdc4"
+    },
+    "H_BASIS.txt": {
+      "bytes": 16610,
+      "sha256": "286133422a89c5d6881bce3b20a8a946bc31a58a642d16e0b28167e1ce42b78a"
+    },
+    "H_TO_Q4.matrix": {
+      "bytes": 21869823,
+      "sha256": "919a3b02ee9149e318f6f0cf8c39b42425dc5aa699e5bf80a93b54f78de08c42"
+    },
+    "I2_NONZERO_LITERAL_INDICES.txt": {
+      "bytes": 1309,
+      "sha256": "18cc2eeb683a5cb5be5e2d6f55f3b730cf3ef3c45a9b5fb4abe23088aa804853"
+    },
+    "SOURCE_LABELS.json": {
+      "bytes": 728747,
+      "sha256": "daa4a3b7deee43d4d36de13a7811ae693af3751684e5c87531bd525ac467c9a4"
+    },
+    "producer.sing": {
+      "bytes": 646495,
+      "sha256": "a315f7c8eec43a909b4a7007bc21c30358a3fa82cbf7f8566bcd754074f7daf1"
+    },
+    "producer.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "producer.stdout": {
+      "bytes": 22024007,
+      "sha256": "bf43c0839fe0b11b6db80f5be74063ac009768adf588456f98202bd4aab7a870"
+    },
+    "replay.sing": {
+      "bytes": 22668706,
+      "sha256": "feffc9f49cd4d2bc54838561aeb79febe26830545cd6d09778701d6cf26be945"
+    },
+    "replay.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "replay.stdout": {
+      "bytes": 233,
+      "sha256": "b6bd20c19d59b078fa4f3c2781c3c2d342f540e8fcba4e88342b864337c00688"
+    }
+  },
+  "basis_commit": "92ebe92ad5986a47f01af9ed901260595dfed869",
+  "certificate_type": "explicit_two_stage_Hraw_to_H_and_H_to_all_q4",
+  "counterexample_claim": false,
+  "counts": {
+    "H_basis": 20,
+    "H_dimension": 2,
+    "H_to_q4_matrix_shape": [
+      20,
+      351
+    ],
+    "H_to_q4_nonzero": 2434,
+    "Hraw_ncols": 2457,
+    "Hraw_nonzero": 1633,
+    "Hraw_to_H_matrix_shape": [
+      2457,
+      20
+    ],
+    "Hraw_to_H_nonzero": 123,
+    "I2A_literal": 441,
+    "I2A_nonzero": 351,
+    "I2A_zero": 90,
+    "I3A_literal": 1225,
+    "I3A_nonzero": 813,
+    "I3E3_literal": 1225,
+    "I3E3_nonzero": 813
+  },
+  "full_P6_consequence": "EVERY_I2_MINOR_CHART_IS_SET_THEORETICALLY_EMPTY_PENDING_INDEPENDENT_PROMOTION_REVIEW",
+  "jc2_claim": false,
+  "mathematical_scope": "NO_RANK_EXACT_TWO_LEADING_POINT_LIFTS_THROUGH_LITERAL_LAMBDA_GRADE_THREE",
+  "mutations": {
+    "C_entry": "PASS",
+    "H_to_q4_coefficient": "PASS",
+    "Hraw_to_H_coefficient": "PASS",
+    "c3_entry": "PASS",
+    "forced_unit": "PASS",
+    "known_proper": "PASS",
+    "q4_target": "PASS"
+  },
+  "power_unresolved_profile": {
+    "1": 291,
+    "2": 60,
+    "3": 36,
+    "4": 0
+  },
+  "same_code_family_replay_not_independent": true,
+  "source_hashes": {
+    "cases/max12_812_order2_u2_62_k00_grade7_fitting_atlas_v26_20260827/aws_box02_r2_held_compile/output/ATLAS_EXACT_POLYNOMIALS.json": "d7ec6d18d58265421ff315fa00e38cd32992ac12f7d8166cf6c436e23bf06501",
+    "cases/max12_812_order2_u2_62_k00_rank_compressed_atlas_v27_20260827/aws_r6a_r2_exact_base3/output/BASE3_R2_STANDARD_BASIS.txt": "c8aa23e46f909e70c2c8d302ca67a415496df9a969f99817d2ef593f60f614c0",
+    "xmodel/k00-chartfree-next-sol56-20260829.md": "ac843e4c3da54a60d96f8b15961f1d75ffb45ca7ebef1664d44c755fffb25d76",
+    "xmodel/k00-v27-base4-base3-base2-hostile-review-fable5-20260827.md": "738f46030a73fea2a06a8e3139ed9aa5e2001b72a579e459357af81f6801647a"
+  },
+  "status": "PASS_K00_G3_R2_CHARTFREE_OBSTRUCTED_PRODUCER_EXPLICIT_CERTIFICATES"
+}
