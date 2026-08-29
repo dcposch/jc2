@@ -7,6 +7,48 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
+> **K00 VALUATION TWO CLOSES; V20R2 FINITE FRONTIER IS NOW 3--5
+> (19:40Z).** Three different models independently reconstruct all six
+> reduced rank cells from the frozen 569 tails. Binding integration
+> `efffbe97...`/body `614a04b6...` promotes the exact characteristic-zero
+> theorem: no normalized exact-valuation-two field-valued jet survives
+> through grade eight, hence no same-source formal arc has that valuation.
+> The cell-five replay under-check is repaired by an independent ideal-
+> membership computation; the K6 delay uses an exact constant-term
+> cancellation; and the seven-row K10 calendar is `2+2r`, not the contracted
+> row's `2+3r`. The `d=0` case separately dies at grade 19 by the Jacobian
+> target. Together with valuation one and valuations at least six, exactly
+> finite valuations 3, 4, and 5 remain possible on this support, none
+> attained. This is a finite-jet theorem, not a map or JC2 conclusion.
+
+> **ROUND `20260829T1808Z` CLOSES; PROOF-SIDE NOVELTY FAILS ITS TYPE
+> GATES (19:40Z).** Four sealed blind reports and three clean adversarial
+> cross-reviews close in synthesis `76f068f8...`/body `46778d2c...`, with no
+> numbered-avenue rerank. The U1 Hamiltonian--Kummer launch is stopped;
+> `EXCESS-e`, atypical-to-excess, AM-2 feasibility, and the sextet character
+> test remain conjectural, underdetermined, or conditional. Opus's proposed
+> selector conflates Sigray pole vertices with proper roots. Canonically
+> `E_P=Delta_P/(alpha beta)=sum_(F in S_P)a_Fb_F/nu_F`; residue-A has both
+> pole vertices on the Y root and ratio `4/3`, not one. The three external
+> comparisons inherited variants of this error, so `SCALE-AUDIT`, the
+> duplicate inertia launch, and every avenue raise based on them are rejected.
+
+> **VALUATIONS FOUR AND FIVE NARROW PROVISIONALLY; SEAL TOOL HARDENED
+> (19:40Z).** The valuation-four producer excludes leading ranks one/two at
+> grade 12 and next rank one at grade 15, leaving typed `R4-00/R4-02`
+> residuals pending different-model review. The valuation-five producer is
+> `REPAIR_REQUIRED`: its leading rank exclusions survive a missing grade-13
+> split, but its residual digest and coefficient locus are malformed; audit
+> is `fee02eb0...`/body `53cd0fd2...`, and a new v2 producer is required.
+> Post-synthesis addendum `f99ef467...`/body `32c48c82...` supersedes the
+> helper hashes printed in the synthesis. The opt-in BODY-END helper anchors
+> every operation to one verified parent-directory descriptor and now passes
+> 13/13 ordinary and optimized tests plus byte compilation, including
+> expected-basis, FIFO, concurrent parent replacement, durability-warning,
+> CRLF, and attributed multi-file failures. Final hostile re-review is
+> `PASS`; no caller is migrated. All work was desk-scale; no campaign AWS job
+> is active, and heavy/uncertain CAS remains AWS-only.
+
 > **GLOBAL SELECTOR RESET; ABSTRACT U1 INTERFACE NO-GO PROMOTED
 > (17:58Z).** Three independent occurrence attacks agree that the only
 > unconditional proof spine reaches a Sigray-normalized globally selected

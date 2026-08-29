@@ -7,6 +7,45 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 19:40Z — close K00 valuation two; reject mistyped selector cards)
+
+- **Narrow Avenue 36 on V20R2 to finite valuations 3--5.** Three
+  different-model exact reconstructions promote the full valuation-two rank
+  fan exclusion through grade eight. Leading rank one/two die at grade six;
+  on the old plane all three next-rank cells die at grade eight. The repaired
+  composition also kills `d=0` at grade 19, so valuations one, two, every
+  valuation at least six, and infinity are closed on this normalized support.
+  Valuations 3, 4, and 5 remain possible and none is attained. This narrows
+  Avenue 36 without reranking it or constructing a map.
+- **Run the remaining literal jet fans under separate review states.** The
+  valuation-four producer provisionally excludes leading ranks one/two and
+  next rank one, leaving `R4-00/R4-02`; different-model review is the next
+  gate. The valuation-five leading exclusions survive an internal repair,
+  but its residual hash and coefficient typing fail custody. Require a new
+  sealed v2 residual before review or descendants. Launch valuation three
+  independently; do not infer a period or renormalization theorem.
+- **Keep the global selector ahead of conditional td12 work.** The proposed
+  U1 Hamiltonian--Kummer receiver lacks an actual varying D-stable source and
+  a typed map to distinct PCB excess events. `EXCESS-e` budget subtraction,
+  atypical-to-excess, AM-2 contact feasibility, and inherited sextet
+  characters remain conjectural, underdetermined, or conditional. None
+  supplies the missing actual td/type/entry/U1 selector.
+- **Reject the pole-vertex/root shortcut and its launches.** For a proper
+  root `P`, the exact formula sums over its attachment set:
+  `E_P=Delta_P/(alpha beta)=sum_(F in S_P)a_Fb_F/nu_F`. Reduced entry files
+  generally omit `B`, `mu_P`, and `S_P`. Residue-A attaches both mass-three
+  vertices to the Y root, giving root ratio `4/3` while global energy is one.
+  Thus the proposed `RPMC(1)` equality, `SCALE-AUDIT`, per-entry root
+  assignment, and dependent avenue raises are stopped. The existing capacity
+  conjectures retain their prior tiers.
+- **Next parallel allocation.** Counterexample work runs valuation three,
+  reviews valuation four, and repairs valuation five concurrently. Proof work
+  attacks an actual-map global selector or a correctly typed
+  `WEIGHT-AT-ATYPICAL`/PCB-excess bridge with prove/falsify/bypass ownership;
+  no target inequality is assumed. Conditional character, scale, AM-2, and
+  inertia cards stay parked until their named source objects exist. Current
+  work is desk-scale; heavy or uncertain computation remains AWS-only.
+
 ## Superseding strategy overlay (2026-08-29 17:58Z — reset the global selector; close K00 valuations at least six)
 
 - **Separate the global selector from the conditional td12 laboratory.**  The

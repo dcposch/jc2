@@ -13709,3 +13709,85 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   four models, including math and system-upgrade ideation; (3) synthesize and
   start background hostile reviews without blocking reasonable provisional
   descendants; (4) run the web sweep only when due or on external news.
+
+## 2026-08-29 19:40Z ROUND `20260829T1808Z` — CLOSED; K00 VALUATION TWO PROMOTED
+
+- All four blind whole-portfolio reports and all three adversarial
+  cross-reviews are sealed on basis `e930fa90...`; every external runner is
+  `DONE`, exit zero, with stable declared inputs and no charge basis. Synthesis
+  is `76f068f879e658a5588669da329bb6773fcd1c9abc6bb9bda70f150fabd7ae82`
+  (12,604-byte body `46778d2c...`). The round closed in 92 minutes and is not
+  degraded.
+- Three different models independently reconstruct the 569-tail K00
+  valuation-two source and all six reduced rank cells. Binding integration
+  `efffbe97...`/body `614a04b6...` promotes no field-valued jet through grade
+  eight and hence no same-source valuation-two formal arc. Repairs bind the
+  cell-five ideal membership, constant K6 cancellation, literal-versus-
+  contracted load calendars, and the `d=0` grade-19 target. V20R2 now leaves
+  precisely finite valuations 3, 4, and 5 possible, none attained.
+- No numbered avenue reranks. U1 Hamiltonian--Kummer is stopped;
+  `EXCESS-e`, atypical-to-excess, AM-2, and sextet characters do not clear
+  their type/source gates. The proposed rootwise selector conflates pole
+  vertices with proper roots. Correctly
+  `E_P=Delta_P/(alpha beta)=sum_(F in S_P)a_Fb_F/nu_F`; residue-A's Y root
+  has ratio `4/3`, not one. `SCALE-AUDIT`, duplicate inertia work, and their
+  avenue raises are rejected.
+
+## 2026-08-29 19:40Z K00/SYSTEMS MICRO-ROUND — R4 NARROWED; R5 REPAIR REQUIRED; SEAL HARDENED
+
+- Valuation-four producer `be37360e...`/body `3bb710d3...` excludes leading
+  ranks one/two at grade 12 and next rank one at grade 15, leaving exact
+  `R4-00/R4-02` residual packets through grade 19. It is provisional pending
+  different-model review.
+- Valuation-five producer `82e6512d...` is not promotable as written.
+  Internal audit `fee02eb0...`/body `53cd0fd2...` restores a missing
+  grade-13 `tau*f=0` split and confirms that both leading nonzero-rank cells
+  still die, but the printed residual hash covers a private shorthand and
+  the coefficient locus is neither minimal nor full. Require a new sealed v2
+  producer; no residual descendant is licensed.
+- Post-synthesis addendum `f99ef467...`/body `32c48c82...` supersedes the
+  systems hashes printed in the synthesis. Final opt-in `ops/seal.py`
+  (`7649bcba...`) and tests (`0c160fe6...`) anchor every operation to one
+  verified parent-directory descriptor. Thirteen ordinary and optimized
+  regressions plus byte compilation pass. Expected-basis checks, attributed
+  multi-file errors, FIFO/nonregular refusal, CRLF, same-inode and parent-path
+  rewrite detection, post-install verification, and typed durability warnings
+  are covered. Final hostile re-review is `PASS`; no lane caller is migrated.
+
+## 2026-08-29 19:40Z LIVE STATE — PUSH CHECKPOINT; VALUATION THREE NEXT
+
+- Authoritative basis is commit `e930fa90b8ee9d86220a2cff72fba94e04b20baa`
+  plus synthesis `76f068f8...`, K00 integration `efffbe97...`, systems
+  addendum `f99ef467...`, and the sealed post-cutoff producers/audits named
+  above. Atomic scoped commit and push are the immediate action.
+- Coordinator/roster: Sol coordinates; Sol, Fable 5, Opus 5, and Grok 4.6
+  remain equal-standing whole-portfolio researchers. Identity is not a vote:
+  the three external cross-reviews independently pass K00 but all inherit or
+  introduce variants of the root/vertex error rejected by canonical exact
+  history.
+- Claim DAG: K00-R2 is `PROMOTED`, parents frozen V20R2 source plus promoted
+  r1/r>=6 results, no descendants yet. K00-R4 is `PROVISIONAL`, reviewer
+  unassigned, residual `R4-00/R4-02`. K00-R5 producer is
+  `REPAIR_REQUIRED`; its only licensed child is a new v2 repair. The seal
+  helper is `INTERNAL-REVIEWED OPT-IN SOFTWARE`, with no callers or
+  mathematical clients.
+- Immediate parallel queue after push: (1) literal valuation-three jet fan;
+  (2) different-model R4 hostile review; (3) fresh R5 v2 residual repair,
+  then different-model review; (4) one proof owner on an actual global
+  selector or correctly typed `WEIGHT-AT-ATYPICAL`/PCB-excess bridge, with
+  falsify/bypass attacks and no assumed inequality.
+- Principal proof gap remains global actual td/type/entry/U1 selection or a
+  bypass, followed by source-typed family-aware td12 detour exclusion.
+  Principal counterexample gap is V20R2 valuations 3--5 or a different
+  support. Conditional character, scale, AM-2, and inertia cards remain
+  parked behind named source objects.
+- Resource state: no campaign-owned AWS mathematics is active. All new exact
+  replays use seconds and tens of MiB locally; heavy or uncertain CAS remains
+  AWS-only under the 512-vCPU quota. No Singular load was launched locally.
+- Clocks: last full ideation round closed `2026-08-29T19:40Z`; quiet deadline
+  `2026-08-30T07:40Z`. Last broad web sweep `2026-08-29T03:40Z`; next
+  deadline `2026-08-30T03:40Z`, and no early sweep is requested. Last systems
+  trial `2026-08-29T19:40Z`; next rolling checkpoint
+  `2026-08-31T19:40Z`.
+- Holds/human gates: none. The user-owned formalization workload is
+  independent and remains outside campaign inspection, evidence, and control.

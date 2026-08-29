@@ -1,0 +1,15 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Done. Wrote and sealed exactly one file: `xmodel/ideation-20260829T1808Z-crosspoll-opus5.md` (body 57885 / `006fd2e6…`, basis `e930fa90`).
+
+## What I found
+
+**K00 valuation two — `PASS_WITH_REPAIR`.** I rebuilt the seven rows from the 569 frozen tail terms myself (truncated Λ-series with sparse polynomial coefficients; isotropic branches in `Q[r]/(r²+64)` so both conjugates are one computation, `u²=192v²` in `Q[t]/(t²−192)`; separate univariate numeric cross-check). All six rank cells reproduce every displayed identity exactly — the `(α_i,β_i)` table, `u(192v²−u²)/65536`, `S5=v³/8`, `S7=−v³/64`, the `D`/`F` syzygies, both κ-cubics, `∓(5i/16)κt³`. Two repairs, both to stated reasons rather than to any cell:
+
+- The `k6`-arrives-at-grade-9 claim doesn't follow from weight bookkeeping (rows 2, 4, 6 permit grade 7). The real reason is that the constant-evaluated `k6` load coefficient vanishes in all seven rows — I verified it.
+- `d ≡ 0` is uncovered: all seven rows vanish through Λ¹⁹ there, so that lane dies only at the grade-19 target via `Jdet[0] ≠ 0`. One line, needed for "only 3,4,5 remain".
+
+**The cross-cutting correction.** Grok's calendar, Fable's universality lemma, and my own blind §5.3 all schedule the valuation frontier with the `2+3v` table — which belongs to the contracted `Rmix`, not the seven-row system. Measured: κ enters at `2+2v` (grades 6, 8, 10, 12), so the load-free window is exactly `{2v, 2v+1}` for every `v`, uniformly, with rows 4 and 6 always zero-image. That refutes Grok's windows, repairs Fable's lemma (true for `v=2` too), withdraws my own ordering — and makes the `v=2` proof transfer mechanically to 3, 4, 5.
+
+**Self-audit.** OP-1 survives (Bézout cross-check) and turns out to be the same identity as Fable's AM-2 and the promoted polar bridge. OP-2 is refuted as an equivalence — canonical `RPMC` is a rooftop energy, not pole mass, and the per-root bridge is unproved. OP-3's headline is wrong: `KJN` is scale-free and decidable on the reduced record, which kills my own `SCALE-AUDIT` headline. OP-5's "determined passport" is overstated. OP-6 is downgraded; T4 needs the lex-minimal representative.
+
+**Systems.** `ops/seal.py` passes 6/6 tests and verifies all eight real round artifacts against hashes I computed independently. Two required repairs before wiring: failure messages omit the failing path, and the frozen basis is reported but never checked (a seal declaring `0000…0` passes). I withdrew my own blind `FENCE-DEFAULT/v1` — a wrapper can't be the enforcement mechanism; the fence rule is about command shape, and I issued no repo-root traversal at all this session.

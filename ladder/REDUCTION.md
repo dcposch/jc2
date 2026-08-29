@@ -3,6 +3,46 @@
 **Status (2026-08-27): hostile dependency audit / consolidation master;
 normalization/fidelity distinction synchronized with `TRANSPORT.md`.**
 
+## Current frontier overlay — 2026-08-29 19:40Z
+
+The unconditional proof-side chain remains exactly the 17:58Z chain below;
+round `20260829T1808Z` supplies no new selector arrow. In particular, a
+Sigray pole vertex is not a proper root. For the attachment set `S_P`, the
+already proved local identities are
+
+```text
+E_P=Delta_P/(alpha beta)
+   =sum_(F in S_P) a_F b_F/nu_F,
+
+RPMC(C) iff
+sum_(F in S_P) a_F b_F/nu_F <= C mu_P/B.
+```
+
+The unordered reduced entry datum generally omits `B`, `mu_P`, and `S_P`.
+Residue-A attaches both mass-three vertices to the Y root, so its root ratio
+is `4/3` even though the global KJN energy is one. Consequently the proposed
+one-entry/one-root `SCALE-AUDIT`, the blind `RPMC(1)` equality, and an
+`ENERGY=POLE-MASS` launch are stopped: the energy/pole-mass equality is
+already Proposition 3.1 of `xmodel/sol-rpmc.md`; attachment custody is the
+actual missing object. The filed residue-A template is not an actual
+characteristic-zero Keller map, so this does not refute universal RPMC.
+
+The U1 Hamiltonian--Kummer composition likewise supplies no arrow: the
+reviewed U1 row is fixed-fibre, and no varying D-stable source algebra or map
+to distinct PCB excess events is typed. `EXCESS-e`, atypical-to-excess,
+AM-2 feasibility, and sextet characters remain conjectural or conditional.
+The global selector/bypass and then actual source-typed detour exclusion stay
+the proof frontier.
+
+On the independent normalized V20R2 K00 route, exact valuation two is now
+promoted impossible through grade eight. Together with valuation one,
+valuations at least six, and `d=0`, this leaves exactly finite valuations 3,
+4, and 5 possible, none attained. Valuation four is provisionally narrowed
+to `R4-00/R4-02` pending different-model review. The valuation-five leading
+rank exclusions survive an internal repair, but its residual type/hash is
+`REPAIR_REQUIRED`; it supplies no client. These finite-jet facts constrain a
+counterexample ansatz and do not enter the proof-side Keller-to-book chain.
+
 ## Current frontier overlay — 2026-08-29 17:58Z
 
 The global and conditional arrows must now be kept in two separate chains.

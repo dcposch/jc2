@@ -5,6 +5,75 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **K00 NORMALIZED V20R2 EXACT VALUATION TWO — FULL RANK FAN PROMOTED
+> IMPOSSIBLE (2026-08-29 19:40Z).** Sol producer `2ebd1d7...` (11,680-byte
+> body `c596347c...`) is independently reconstructed from the frozen 569
+> tails by Grok `50d2a108...`/body `20e87709...`, Opus
+> `34e90f29...`/body `006fd2e6...`, and Fable
+> `3e4eed76...`/body `a0c7f687...`. Binding integration is
+> `efffbe97ab962990cc2e3a4bf8077cb12cc911c43f71864427e8a4accd6081fc`
+> (6,045-byte body
+> `614a04b6ca4e4c3620fbb3ca8928d4075dcec9814824dbf2b669fe049a41651d`).
+>
+> Over any characteristic-zero field, retain the exact normalized V20R2
+> source `C6=1`, `k10[0]=kappa!=0`, the five displayed boundary zeros,
+> `Jdet[0]!=0`, and
+> `d=Lambda^2x+Lambda^3y+Lambda^4z+...` with `x!=0`. The leading reduced
+> cone is `A=B=0`; `rank DQ` is zero, one, or two according to
+> `Delta=u^2+64v^2`. Leading rank one and rank two die at grade six. Rank
+> zero is the old plane, and its next rank-two, rank-zero, and both rank-one
+> branches die at grade eight. These six cells exhaust the source open, so no
+> field-valued compatible jet through grade eight and no same-source formal
+> arc of valuation two exists.
+>
+> Repairs are part of the promoted package. Fable supplies the exact
+> terminal-row membership modulo `(W_A,W_B)` that the producer replay
+> under-verified. K6's delay uses vanishing of its full constant-evaluated
+> coefficient, not `k6[0]=0` alone. The literal seven-row K10 load arrives at
+> `2+2r`; `2+3r` is the contracted-row transverse calendar. Finally `d=0`
+> dies at grade 19 by `Jdet[0]!=0`. Composing with the valuation-one and
+> valuation-at-least-six theorems leaves exactly finite valuations 3, 4, and
+> 5 possible on this support, none attained. No scheme, occurrence, map,
+> counterexample, other support, or JC2 claim follows. This block supersedes
+> the earlier valuation-two `y=0`-only frontier without retracting it.
+
+> **ROUND-1808 ROOT/POLE-VERTEX CORRECTION; U1 CONNECTION LAUNCH STOPPED
+> (2026-08-29 19:40Z).** Internal hostile audit `6471f8d7...`/body
+> `8856538b...` and binding synthesis `76f068f8...`/body `46778d2c...`
+> reject the round's proposed per-entry selector. The already promoted exact
+> identities are
+>
+> ```text
+> E_P=Delta_P/(alpha beta),
+> Delta_P=sum_(F in S_P) Lambda(F),
+> Lambda(F)=alpha beta a_F b_F/nu_F.
+> ```
+>
+> Thus `RPMC(C)` is the attachment-sum inequality
+> `sum_(F in S_P)a_Fb_F/nu_F <= C mu_P/B`, not one inequality per pole
+> vertex. In residue-A both mass-three vertices attach to the Y root:
+> `(B,alpha,beta,mu_Y,Delta_Y)=(84,2,3,63,6)`, giving root ratio `4/3`
+> while global KJN energy is one. The blind equality claim is false.
+> Opus's cross-review instead called `ENERGY=POLE-MASS` unproved, but
+> `xmodel/sol-rpmc.md` Proposition 3.1 already proves it; Fable and Grok also
+> inherited root/vertex variants. Reduced records usually omit `B,mu_P,S_P`,
+> so `SCALE-AUDIT` cannot manufacture them. The filed residue-A object is
+> book-relative, not a characteristic-zero polynomial counterexample to
+> universal `RPMC(1)`. No capacity theorem or avenue changes tier.
+>
+> Terminology rider: Opus's immutable blind report uses table-local labels
+> `G1`--`G7`; its bare `G2`, repeated in that model's cross-review, means only
+> “bounded/cofinal type menu.” It denotes neither campaign obligation
+> `G2-PSC` nor `G2-BD`, and the canonical queue retains the descriptive name
+> rather than that local label.
+>
+> Separately, U1 Hamiltonian--Kummer audit `66f119e0...`/body `ad2d79d8...`
+> is upheld by all three external cross-reviews. The conditional connection
+> formula is known, but the reviewed U1 row is fixed-fibre, the displayed
+> form is twisted-exact, and no typed injection sends its characters to
+> distinct positive PCB events. `U1-HAM-KUM-CONN/v1` is `STOP` until its
+> four-object reopen gate is met; no Avenue-16 raise follows.
+
 > **GLOBAL TD/TYPE/ENTRY SELECTOR ABSENT; ABSTRACT `U1*(R)` INTERFACE
 > NO-GO PROMOTED; PCB DERIVATION REFUTED (2026-08-29 17:58Z).**  Three blind
 > occurrence/coverage attacks are Opus `acd21ced...`, Grok `1d79eeee...`,
