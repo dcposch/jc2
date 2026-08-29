@@ -1,0 +1,26 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/k00-v20r2-valuative-comparison-hostile-review-opus5-20260829.md` (687 lines, one standalone `BODY-END`, no seal, no exit price, no `charge_basis`). Only that file was written; `jc2-lean` was never touched.
+
+## Verdict: `PASS_WITH_REPAIRS_AND_ONE_MATERIAL_OMISSION`
+
+**Custody is byte-exact** — full SHA, 11063 body bytes, body SHA all reproduced; all 8 pinned hashes resolved to real files. The seal freezes `31777ce9` rather than the coordinator's `0375694a`, but `31777ce9` is an ancestor and no commit between them touches any pinned case directory.
+
+**What I confirmed by independent recomputation**, not by trusting the report:
+- All 569 tails: **zero** weight violations, **zero** load-nonlinear monomials. The target weights (mu2:14, mu4:16, mu6:18, Jdet:19) are *forced* by row weight `12+l`, not fitted.
+- The stencil (3.1) — reproduced exactly, and the stated `>=` are in fact **equalities**.
+- Normalization (2.2) is **byte-identical** to lines 890–891 of the pinned compiler. So §2 supplies the Kummer justification V20R2 itself lacked — the report undersells this.
+- All census numbers (331/326/316/10/273) and all ten calendar entries. Strongest check: the *same* labelling rule at `e=1`, depth Λ¹⁹ gives 169/164 — exactly V20R2's own independently reported counts.
+- Both negative controls, verified by hand. The closure preregistration actually *mandates* the §6 control.
+- The endpoint is honestly typed; §8 never crosses into claiming a point, arc, map, or JC2 consequence.
+
+**The material omission.** The report emits the source and stops without looking at its own grade-2 block, which is desk-scale and collapses. Exactly, over ℚ:
+
+- The six grade-2 quadrics have **rank 4**, with two universal syzygies `Q1+Q3+Q7=0` and `3Q1+4Q3+Q5=0`. No item of the §7 producer contract would detect these.
+- `Q4 = (P−8R)(P+8R)`, all six lie in `(P,R)`, and via the involution `d_i → (−1)^i d_i` the grade-2 locus is **exactly the linear space `V(P,R)`** — six quadrics reduce to two linear conditions.
+- Grade 3 yields two `d[2]`-free cubics that factor as `u(192v²−u²)` and `v(64v²−3u²)`; their only common zero is `u=v=0`. So grades 2–3 pin the leading jet to a **2-plane**, on which grade 3 is vacuous and `d[2]` is free.
+
+Two consequences that cut both ways for the report: the cell **survives** grades 2–3 (not empty), but grades 2–3 are `e`-independent, so the same collapse applies to V20R2's own `e=1` packet and **separation from V20R2 first occurs at grade 4** — not at grade 2 where the calendar front-loads its content.
+
+I flagged 10 additive repairs (none touching the endpoint), five silently-omitted load/target faces, and the fact that 33 of the 273 equations are trivial or pure target definitions — the whole multiplier sector is vacuous at cutoff 38.
+
+Prime scans (`p⁴`, then `p+1`) were how I found the closed forms; every verdict rests on the exact arguments that superseded them. Grade 4 is untouched and marked as the boundary — with a specific two-syzygy binary-quartic attack that could decide the cell by hand before any 273-equation producer is commissioned.

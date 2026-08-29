@@ -1,0 +1,18 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/k00-ram-e2m1-g5-prefix-hostile-review-opus5-20260829.md` (31,151 bytes, unique standalone end marker, no seal, no exit price, no `charge_basis`). It is my only repository write.
+
+## Verdict: PASS_WITH_MATERIAL_REPAIRS
+
+I rebuilt everything from the raw 569-monomial `tails.json` with review-local polynomial code; the producer engine was never imported for a mathematical conclusion, only executed once to check its own banners.
+
+**Confirmed.** All custody hashes; the 569-term census, weight law and stencil (3.1); `e=2/m=1/B11111` typing against the pinned compiler's Λ-shifts and target weights; the 331/326/316/10 and 273 census; `V(Q) = V(A,B)` exactly (`y0³,y1³` in the ideal, no degree‑1 part ⇒ nonreduced); the rank fan; `G4_r = Q_r(w)` and `G5_r = DQ_r(w)[v] + ½D²c3_r(ell)[w,w]` in all seven rows with `d[2],d[3],d[4]` fully symbolic; `d[4]` free; the witness solving G0–G5; the calendar grades G6/G7, G14/G15, G22, G29/G33/G37/G38; K6/G15 = 3/2048 and K2/G22 = 1/32.
+
+**The grade‑3 kill is stronger than claimed.** Rows 4 and 6 have identically zero `DQ` on the cone and rows 1,3,5,7 are proportional, so grade 3 yields five *u‑free* cubic conditions with `al⁵, be⁵` in their ideal. Rank 2 and both rank‑1 sign branches die directly, over any characteristic‑zero field, using only the six nonzero unloaded quadrics — no transported theorem needed.
+
+**Three refutations:**
+
+1. **`K10/G7 = 5/32768` is wrong; the true value is `5/65536`.** The replay computes the grade‑7 K10 coefficient as `DM4(ell)[u]` and drops `A10^[3](ell) = −5/65536`. Verified two independent ways. The K6 branch of the same replay *does* include its quadratic piece, so this is an isolated omission. Fixing it leaves `RESIDUAL_SHA256` unchanged, since the residual doesn't serialize witness values.
+2. **"four nonzero 2×2 minors"** — there are 36, in 19 rational classes from 4 row pairs. The substance (every nonzero minor ∝ Δ) holds.
+3. **G7 is not the cheapest continuation** — G6 is a nonzero purely unloaded equation introducing no new column (`d[5]` is free through G6, `d[6]` through G7).
+
+**Four gaps:** the declared basis `31777ce9` doesn't contain the certificate's own parent packet (no content drift though); `F10` in the transported theorem is undefined and is *not* obviously redundant — `M4_l` is not in `span{Q}`; certificate §2 has zero replay backing (`EMPTY_AT_G3` is an unconditional print); and two of six mutation controls are vacuous, with the described `t⁴→t²` mutation provably invisible at G4 on the plane.
