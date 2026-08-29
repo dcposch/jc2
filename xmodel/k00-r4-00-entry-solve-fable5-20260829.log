@@ -1,0 +1,14 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Done. The deliverable `xmodel/k00-r4-00-entry-solve-fable5-20260829.md` is written (the only repository file touched), with all four input hashes verified against the task pins and every mathematical claim rebuilt clean-room from the frozen tails and compiler — the producer replay was never used as an oracle.
+
+**Headline result: the grade-12 entry is solved exactly, and one of the three fan cells is provably empty.**
+
+**Grade-12 solve.** The literal six-live-row system `Q(z)+κ·polar_M2(x,z)=0` over the full `(s,t,s1,t1,κ)` base has solution set exactly the reduced cone `A(z)=B(z)=0`: two explicit row combinations equal `(3/16384)A(z)B(z)` and `(3/524288)(B(z)²−64A(z)²)`, and `A(z)³, B(z)³` lie in the row ideal by displayed multipliers — no radical, no chart, no normalization; `s1,t1,az,bz` are inert.
+
+**The next linearization** turned out to be a constant-matrix ladder: at every grade 13–19 the new jet moves through the single matrix `T=(1/2048)[[p,q],[−4q,p/16]]` with `p=6uz+5κs`, `q=−6vz+5κt` — a κ-shifted copy of the leading fan. Its reduced rank fan (rank 2: `p²+64q²≠0`; rank 1: needs `i`; rank 0: `p=q=0`) is the required cell split. Universally, grade 14 re-forces the pure certificate pair on `(A7,B7)`, and grade 19 converts the `Jdet[0]≠0` source open into the residual's survival open.
+
+**Cell verdicts through grade 19:**
+- **Rank 0 is EMPTY over every char-0 field** — grade-14 rows force three explicit rays, grade-16 combos force `A8=B8=0` there, and row 6 at grade 18 becomes the exact unit `(5κ/3)⁹/2¹⁹` (rational ray) or `/2²⁰` (conjugate rays). An end-to-end control confirmed the unit on the pristine rows with all ~90 other window unknowns random.
+- **Rank 1 and rank 2** narrow to fully serialized residuals (canonical blocks with SHA-256 digests): rank 1 to one base cubic plus a four-line/two-conic overdetermination over `Q(i)` (553 numeric probes, zero hits — typed OPEN, numerically empty); rank 2 to five closed base conditions `X1..X5`, where exact rational Newton found a degenerate (Jacobian rank 2) candidate component with `D≠0` at residual `3·10⁻¹⁴` — typed OPEN, not claimed either way, since the float noise floor made desk elimination uncertain.
+
+Per lane discipline I stopped local computation there and specified the cheapest successor: two frozen AWS packets (primary decomposition of `(X1..X5)` saturated by `D,κ` for rank 2; the analogous `Q(i)` job for rank 1), which would settle all of R4-00. The report ends with the standalone `<!-- BODY-END -->` and no seal block, and makes no attainment, periodicity, max-12, or JC2 claim.
