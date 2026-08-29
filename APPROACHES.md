@@ -7,6 +7,32 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 21:23Z — close valuation five; enter the ramified atlas)
+
+- **Promote valuation five and concentrate the integer fan on three/four.**
+  Independent hostile reconstruction confirms the repaired V20R2
+  valuation-five exclusion: ranks two and one die at grade 14, and rank zero
+  dies scheme-theoretically at grade 19 by
+  `5*Jdet[0] in I_140`. Combined with the already promoted valuation one,
+  two, infinity, and at-least-six exclusions, the literal normalized
+  `K[[Lambda]]` frontier is now valuations three and four. Valuation three
+  has a review-gated grade-12 closure; valuation four has reviewed residual
+  `R4-00 disjoint-union R4-02`, with `R4-02` provisionally killed.
+  Continue these cells independently, without inferring a recurrence.
+- **Treat ramified source incidence as a parallel first-class frontier.**
+  `K00-V20R2-VALUATIVE-COMPARISON/v1` returns
+  `RAMIFIED_RESIDUAL_EMITTED`, not an unramified-reduction theorem. Its
+  first missing cell is `e=2,m=1,B11111`, with 273 equations through
+  `t^38`, 326 free columns, and 316 syntactically live columns. Review the
+  Kummer action and census in the background while attacking the cell
+  provisionally. A surviving finite system is not an arc or point; a cell
+  exclusion would still cover only this ramification/load face.
+- **Do not let the counterexample-side narrowing absorb proof-side capacity.**
+  QCS remains the minimal exact proof-side bridge target, with
+  `Xi=d-s-sum_i b_i`, `STRICT-COLLIDE-POLY`, and the pole-incidence /
+  suspension-map formulation at their actual tiers. The global
+  td/type/entry selector or a bypass remains the outer proof bottleneck.
+
 ## Superseding strategy overlay (2026-08-29 20:51Z — promote R4 narrowing; retype QCS)
 
 - **Reduce valuation four to two reviewed residual packets.** The exact
@@ -16,7 +42,12 @@ later correction and live-overlay sections cite post-survey campaign evidence.
   two cells independently; neither is known nonempty. Valuation three has a
   fresh grade-12 full-fan exclusion under hostile review, and valuation five
   has a repaired full exclusion under hostile review. Keep all three at
-  their actual review tiers; infer no cross-valuation periodicity.
+  their actual review tiers; infer no cross-valuation periodicity. Even if
+  the integer atlas closes, it exhausts only the registered unramified
+  `K[[Lambda]]` section functor. Run the provisional
+  `K00-V20R2-VALUATIVE-COMPARISON/v1` gate before claiming closure incidence:
+  a DVR can have `Lambda=u*t^e`, and `x^2-Lambda` is the minimal failure of
+  unramified-section detection.
 - **Use the minimal PCB margin before building the full geometry packet.**
   The exact generic margin is `Xi=d-s-sum_i b_i`. It requires an actual pair
   and generic fibre, complete quotient-line/baseline inventory, and `d,s`.
@@ -36,8 +67,11 @@ later correction and live-overlay sections cite post-survey campaign evidence.
   provisional boundary-complex formulation: a pole-incidence boundary on
   the auxiliary quotient events and a suspension of its cycle space onto
   `H1(F)` would prove QCS by rank-nullity. Bare positive filling data cannot
-  force these maps; the fixed labelled degree-six PALF test is the bounded
-  next topology discriminator.
+  force these maps. A provisional exact follow-up already stops the proposed
+  matched degree-six PALF test: its local equality germ has genus-two `A4`
+  Milnor fibre while the separate passport has genus one, and the Euler five
+  is mixed interior/end data. Do not run an unrestricted mapping-class or
+  Kirby search; require one common labelled surface/boundary packet first.
 - **Keep the outer proof selector and conditional td12 laboratory separate.**
   These new identities sharpen a possible bypass but supply no actual
   td/type/entry/U1 selector, no `PairRef`, and no book-budget charge.

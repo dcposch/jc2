@@ -3,6 +3,26 @@
 **Status (2026-08-27): hostile dependency audit / consolidation master;
 normalization/fidelity distinction synchronized with `TRANSPORT.md`.**
 
+## Current frontier overlay — 2026-08-29 21:23Z
+
+The unconditional Keller-to-book chain is unchanged. On the separate
+normalized V20R2 route, valuation five is now reviewed empty: ranks two and
+one die at grade 14, and rank zero dies at grade 19 by the scheme-theoretic
+certificate `5*Jdet[0] in I_140`. Hence the literal integer-`Lambda`
+frontier is valuations three and four only. Valuation three has a
+review-gated grade-12 closure; valuation four has the reviewed
+`R4-00 disjoint-union R4-02` residual, with `R4-02` provisionally killed.
+None is attained.
+
+This does not close the source in the valuative sense. The provisional exact
+`K00-V20R2-VALUATIVE-COMPARISON/v1` packet emits the first missing
+closure-first cell at ramification index `e=2`, coefficient order `m=1`,
+and load face `B11111`. Its 273 equations through `t^38` are a new
+finite source packet under review and attack, not a surviving point or arc.
+Thus integer-valuation closure and ramified closure are distinct gates.
+`C6=0`, other load faces and supports, receiver/Gate-T, and the global
+selector remain separate.
+
 ## Current frontier overlay — 2026-08-29 20:51Z
 
 The unconditional Keller-to-book chain is unchanged. The new proof-side

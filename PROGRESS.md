@@ -7,6 +7,25 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
+> **VALUATION FIVE PROMOTED EMPTY; FIRST RAMIFIED SOURCE CELL EMITTED
+> (21:23Z).** Fable's independent exact engine confirms every rank-fan and
+> grade-19 claim in the repaired valuation-five producer. Binding integration
+> `e9e73046...`/body `97d61bdc...` folds in four display/custody repairs:
+> rank two and rank one die at grade 14, while on rank zero the polynomial
+> certificate `5*Jdet[0] in I_140` gives scheme-theoretic emptiness at grade
+> 19 on the declared unit open. Thus the normalized V20R2 integer-valuation
+> frontier is now only three and four, neither attained; no periodicity,
+> closure-incidence, map, or JC2 claim follows.
+>
+> The separate valuative-comparison packet `98fb3853...`/body
+> `c15bda71...` confirms that this shrinking integer atlas is not a
+> closure atlas. It emits, but does not solve or assert nonempty, the first
+> missing ramified source cell `e=2,m=1,B11111`: 273 literal equations
+> through `t^38`, 326 free columns, and 316 syntactically live columns.
+> Independent review and a provisional downstream attack run concurrently.
+> The cell remains unpromoted; `C6=0`, other load faces and supports, and
+> the global selector remain separate.
+
 > **VALUATION FOUR NARROWING PROMOTED; VALUATION THREE REACHES A
 > REVIEW-GATED GRADE-12 CLOSURE (20:51Z).** Fable independently rebuilds the
 > valuation-four literal rows and confirms all seven attacked claims.
@@ -23,7 +42,11 @@ day or inserts the completed day directly below this preamble (see
 > unreachable after the certified empty prefix, never silently empty. A
 > different-model hostile review is active, so valuation three is not yet
 > promoted. The valuation-five v2 repair and its hostile review likewise
-> remain review-gated at this cutoff.
+> remain review-gated at this cutoff. A new sealed source-incidence audit
+> adds a separate, unreviewed warning: even a closed integer atlas exhausts
+> only literal `K[[Lambda]]` V20R2 sections. Closure-first DVR arcs may have
+> `Lambda=u*t^e`, `e>1`; the exact valuative-comparison packet is now active
+> before any K00-wide inference.
 
 > **GENERIC PCB RETYPED EXACTLY; POINTWISE ANALYTIC STRICTNESS ROUTE
 > BLOCKED (20:51Z).** Opus independently confirms the quotient-collision
@@ -47,6 +70,11 @@ day or inserts the completed day directly below this preamble (see
 > `sum_i b_i(d_i-1)` as an auxiliary quotient-braid length and isolates
 > missing pole-incidence and suspension maps; an unlabelled `D4` PALF control
 > shows positivity and filling counts alone cannot supply the `s-1` kernel.
+> Its sealed follow-up stops the proposed labelled degree-six test before
+> Kirby calculus: the exact equality germ has an `A4` genus-two Milnor fibre,
+> incompatible with the passport's genus-one page. The common Euler value
+> five mixes four interior cycles with one end/component event; both topology
+> reports remain provisional pending hostile review.
 
 > **K00 VALUATION TWO CLOSES; V20R2 FINITE FRONTIER IS NOW 3--5
 > (19:40Z).** Three different models independently reconstruct all six

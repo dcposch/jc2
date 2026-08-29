@@ -1,0 +1,37 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review complete. Wrote exactly one repository file: `xmodel/k00-r3-source-threat-packet-hostile-review-opus5-20260829.md`.
+
+## What I did
+
+I rebuilt the whole packet independently — my own polynomial ring over ℚ(i), my own series engine, my own tail reconstruction from `tails.json` bytes — importing nothing from the packet's replay or the pinned R2 engine. Then I ran the supplied replay ordinary and optimized (both PASS, 13.4s/13.3s).
+
+## Verdicts
+
+| Item | Verdict |
+|---|---|
+| 1 source/zeros/custody/slots/census | CONFIRMED + replay repair |
+| 2 raw & contracted calendars | CONFIRMED |
+| 3 cone & rank fan | CONFIRMED |
+| 4 grade-9 exclusions | CONFIRMED |
+| 5 grade-11/12 old-plane | CONFIRMED |
+| 6 K10-shifted `(U,V)` fan | CONFIRMED (strongest part) |
+| 7 ER0/ER1/ER2 | CONFIRMED at grade 11; **residual list REFUTED as minimal** |
+| 8 successor contract | CONFIRMED, contract to be shortened |
+| 9 replay/opposite-order/mutations | DONE |
+| 10 scope | CONFIRMED |
+
+## Two findings dominate
+
+**Custody break.** The replay hashes `a6eec646…`, not the declared `bac4b688…`. Not a line-ending artifact — I tested all four normalizations. Its mtime is 86 seconds *after* the packet was sealed, and the packet's "Observed output" omits the `RUNTIME_SECONDS=` line the shipped script prints. Blocking.
+
+**All three residual cells die at grade 12.** On ER1(±), `row4 − (εi/2)(row3+row1/8) = (25/384)κ²t⁶/V²` — a unit on the retained localizer. On ER2, the grade-12 cokernel collapses to two binary quadratics whose resultant is `c·κ⁸(s²+64t²)¹²`, and on the isotropic walls their only common root forces `Δ_eff = 0`, which ER2 excludes. Verified symbolically and at nine independent rational points. So "carrying every grade-12–19 equation" overstates the residual by seven grades.
+
+I flagged this as a **review-side result requiring producer confirmation**, not something I promote on my own arithmetic.
+
+## Two corrections I made mid-review
+
+I initially doubted the "164 free columns" — the pinned compiler's `source_columns()` confirms 169 total, 5 `FIXED_ZERO`, 164 free. Correct as written. And I first analyzed the `u²=192v²` branch by splitting into rational and √3 parts, valid only if `a,b ∈ ℚ`; over the extension field the packet's route is right, and its `1/8` and `−1/64` reproduce exactly after the row-4 relation `b = −2r(1+4a)`.
+
+## Repairs worth acting on
+
+Beyond re-sealing: §5.2's isotropic justification is **wrong as stated** (the two displayed identities degenerate to `0=0` there; the real argument is `D = t(u−8iε′v)²`). The contracted supports aren't derivable from the two pinned artifacts — I verified them against an unpinned prior AWS output. And the replay's 98-slot and 122-column checks are tautologies over constants; the structural degree argument I give proves both liveness and dormancy outright.

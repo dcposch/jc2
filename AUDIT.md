@@ -5,6 +5,34 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **K00 NORMALIZED V20R2 VALUATION FIVE — REVIEWED FINITE-JET
+> EXCLUSION PROMOTED (2026-08-29 21:23Z).** Opus producer
+> `91dcf173...` (60,345-byte body `a13c02ed...`) receives Sol's
+> independent grade-19/custody audit `bcb5f8dc...` (7,616-byte body
+> `ad1da4e3...`) and Fable hostile reconstruction `aa2ad0af...`
+> (24,000-byte body `0d249cbd...`), verdict `PASS_WITH_REPAIRS`.
+> Binding integration is
+> `e9e730463d1180c5126d059435bc2a6df12274173f638e28f5b28c7165c643b4`
+> (5,716-byte body
+> `97d61bdc38564ba5c30312d3221c72f5210df42512bd980a2771b15d59346ff5`).
+>
+> Over every characteristic-zero field, the registered V20R2 source has no
+> exact-valuation-five point satisfying all rows through grade 19 on
+> `D(k10[0]*Jdet[0])`: leading ranks two and one die at grade 14; leading
+> rank zero dies at grade 19. On the rank-zero cell the stronger polynomial
+> identity `5*Jdet[0] in I_140` holds over `Q[LIVE]`, so it is empty over
+> every `Q`-algebra where `Jdet[0]` is a unit. The typed residual is
+> `Z x A^58`, with 78 live coordinates and canonical digest
+> `02b4cb9f...`.
+>
+> Promotion folds in the corrected `M4` vector, the nonproportional but
+> `(A,B)`-spanned row-two `k10[6]` coefficient, the distinction between
+> ten replay-pinned mathematical files and separately checked contextual
+> reports, and removal of unlicensed other-valuation prose. The latter is
+> redundant with independently promoted valuation-six/at-least-seven work
+> and is not relaunched. No claim follows on `Jdet[0]=0`, a ramified DVR
+> closure, another load/support face, an arc/map, a counterexample, or JC2.
+
 > **K00 NORMALIZED V20R2 VALUATION FOUR — REVIEWED TWO-CELL NARROWING
 > PROMOTED (2026-08-29 20:51Z).** Sol producer `be37360e...` (10,719-byte
 > body `3bb710d3...`) receives Fable different-model review `2ce2e4bf...`

@@ -13818,16 +13818,63 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   `R4-00/R4-02`; valuation three has a sealed exact grade-12 closure under
   Fable review; valuation five has a sealed v2 exclusion under Fable review.
   Opus is independently reviewing the valuation-three source fan. R4-00 and
-  R4-02 successor producers run without waiting on one another.
+  R4-02 successors run without waiting on one another. Provisional R4-02
+  producer `a4fe05d3...`/body `32f79463...` kills the entire next-rank-two
+  cell at grade 15 and is under Fable review; R4-00 remains active.
+- Source scope: sealed audit `9c6b6ecb...`/body `44bedad6...` finds the
+  integer valuation partition exhaustive only for literal normalized
+  `K[[Lambda]]` sections. Closure-first arcs can have
+  `Lambda=u*t^e`, `e>1`, and need a ramified `(e,m,load-order)` atlas unless
+  an unramified-reduction theorem is proved. The bounded valuative-comparison
+  packet is active; `C6=0`, delayed-load faces, other cones, receiver/Gate-T,
+  and the global selector remain separate obligations.
 - Proof states: QCS identities are promoted, QCS itself is open, residue A is
   source-underdetermined, and `STRICT-COLLIDE-POLY` is the cheapest local
   strictness discriminator. Provisional filling report `88802822...`/body
   `9c413232...` types `K` as an auxiliary quotient-braid length and isolates
   unconstructed pole-incidence and suspension maps. A five-stabilization
   `D4` PALF shows filling plus positivity and counts alone cannot force the
-  pole kernel. Its labelled degree-six PALF discriminator is active; none of
-  this is promoted before hostile review.
+  pole kernel. Follow-up `56c1d9e4...`/body `181e5bdd...` stops its own
+  proposed labelled degree-six search: the equality germ is an `A4` genus-two
+  Milnor fibre and cannot embed in the passport's genus-one page; Euler five
+  splits as four interior cycles plus one end/component event. Both reports
+  remain provisional before hostile review, and no untyped PALF search runs.
 - No web sweep runs before its `2026-08-30T03:40Z` deadline. All current
   exact replays are seconds-scale and use no campaign AWS. Heavy or uncertain
   CAS remains AWS-only. The user-owned formalization is independent and
   outside campaign inspection, evidence, and control.
+
+## 2026-08-29 21:23Z REVIEW EVENT — VALUATION FIVE PROMOTED EMPTY
+
+- Fable hostile reconstruction `aa2ad0af...`/body `0d249cbd...` confirms
+  all ten valuation-five attacks, including a separate exact engine and a
+  truncation-free numeric path. Its verdict is `PASS_WITH_REPAIRS`.
+- Binding integration `e9e73046...`/body `97d61bdc...` promotes the exact
+  V20R2 valuation-five exclusion. Ranks two and one die at grade 14. On rank
+  zero, `5*Jdet[0] in I_140` gives scheme-theoretic emptiness at grade 19
+  over every `Q`-algebra with `Jdet[0]` a unit.
+- The integration corrects the displayed `M4` vector, the row-two
+  `k10[6]` wording, replay-versus-contextual custody, and unlicensed
+  other-valuation prose. The review's proposed valuation-at-least-six
+  successor is already independently promoted and is not duplicated.
+- Literal normalized integer valuations now leave only three and four.
+  Valuation three remains review-gated; valuation four remains
+  `R4-00/R4-02` pending its active successors. No closure-incidence,
+  source-exhaustiveness, map, counterexample, or JC2 statement is made.
+
+## 2026-08-29 21:23Z SOURCE EVENT — FIRST RAMIFIED V20R2 CELL EMITTED
+
+- Sealed `K00-V20R2-VALUATIVE-COMPARISON/v1`
+  `98fb3853...`/body `c15bda71...` returns
+  `RAMIFIED_RESIDUAL_EMITTED`. There is no licensed reduction from a
+  closure-first pullback `Lambda=u(t)t^e` to an `e=1`
+  `K[[Lambda]]` section.
+- The first missing cell is `e=2,m=1,B11111`. Its literal source contains
+  273 equations through grade 38, 331 labelled / 326 free / 316
+  syntactically live columns, with arrivals at unloaded grades 2/3, K10
+  grade 6, K6 grades 14/15, K2 grade 22, multiplier targets 29/33/37, and
+  Jacobian target 38.
+- This is a typed finite source, not a surviving solution. Opus hostile
+  review and a provisional exact attack run in parallel. The result does not
+  cover `C6=0`, other load-order faces or cones, receiver/Gate-T, another
+  support, or the global selector.

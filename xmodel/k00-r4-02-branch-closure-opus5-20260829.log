@@ -1,0 +1,27 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Done. `xmodel/k00-r4-02-branch-closure-opus5-20260829.md` is the only repository file written.
+
+## Result
+
+**Both `R4-02` branches are empty, and both close at grade 15.**
+
+The reviewed pair extracted only the row-6 cubic `Ψ = u_y(192v_y²−u_y²)` at grade 15, which vanishes identically on both branches — that is why the packet stayed open. The other target-free cokernel rows carry a second cubic that nobody had extracted:
+
+```
+D1 := 16 G_7,15 − G_5,15 + (1/128) G_1,15 = (3/4096)·v_y(64v_y² − 3u_y²) + A_6[…] + B_6[…]
+D2 := G_3,15 + 8 G_5,15 + (3/16) G_1,15   = −(1/512)·v_y(64v_y² − 3u_y²) + A_6[…] + B_6[…]
+```
+
+These are polynomial identities on the stratum with every jet, load and target free. Grade 11 is exactly `G_i,11 = α_i A_6 + β_i B_6` with no inhomogeneity, so rank two forces `A_6 = B_6 = 0` and kills every bracket. Then `Φ := v_y(64v_y²−3u_y²)` must vanish, giving `(3/64)v_y³ = 0` on `u_y=0` and `−(3/8)v_y³ = 0` on `u_y²=192v_y²` — units in the localization at `v_y`. Five of the eighty-four literal equations suffice: `G_1,11`, `G_2,11`, `G_1,15`, `G_5,15`, `G_7,15`.
+
+Since `D1`/`D2` hold with `u_y` free, the argument extends without any case split: `Φ = Ψ = 0` with `Δ_y ≠ 0` is contradictory, so the **whole** old-plane next-rank-two cell is empty. The valuation-four grade-19 residual reduces to `R4-00` alone.
+
+Grade 14 does *not* kill either branch — it pins `t=0`, `s=−(25/12)κ²` (nonzero, so `x≠0` survives), consuming the reviewed row-4 five-term equation.
+
+## Confidence
+
+Three separate supports. The identities were re-verified through a from-scratch numeric evaluator sharing no code with the elimination (20 exact random points, generic `u_y`; 20 more for the grade-11 structure). Every structural fact in the Fable review reproduced independently. Most importantly, a negative control that withholds *only* the five grade-15 cokernel rows runs consistently to grade 19 on both branches — so the machinery does not manufacture contradictions, and grade 15 is the unique kill.
+
+Two things to flag. An earlier version of that control used a non-auto-reducing substitution store and re-solved `b_6` three times; I discarded it and redid it triangularly — the reported control is the corrected one. And the emptiness is set-theoretic over characteristic-zero fields (`1` in the localized reduced ideal), not a scheme-theoretic claim about a nonreduced cell; the report says so explicitly.
+
+Total compute 2.1 s per branch symbolically, 13.9 s for validation. No AWS packet needed. Cheapest successor is the `R4-00` grade-12 entry solve — better conditioned than expected, since `C3_i(ell) = 0` for all seven rows, so no cubic inhomogeneity enters it.
