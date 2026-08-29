@@ -6,6 +6,9 @@ Check before promotion.
   series. Separate strict-below from at-level parting and denominator shedding.
 - **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
   flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
 - **Pole/interior.** Use pole identities only after checking the vertex class
   and every source hypothesis.
 - **Floor/attainment.** A lower bound is not exact; equality needs a theorem or

@@ -7,6 +7,48 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 12:20Z — bank U2, source, LL-1, and cascade precursor)
+
+- **Retire the corrected labelled `NESTED-U2-P0-U2-RAY/v1` at td12.** An
+  actual landing is impossible by the reviewed representative-AF2 ledger:
+  source equality forces three `(1,2,3)` pole chains at `(w,M)=(3/2,2)`;
+  the two inner `w=1`, `3|M` arrivals cost at least five each, and the outer
+  `w=2` sibling costs at least one, so `11>td-2=10`. Stop source-gluing,
+  absolute-index, and realization work on this labelled family. Do not infer
+  that other U2 routes, other one-P0 labels, or all td12 configurations die.
+- **Keep the carrier distinction explicit.** This kill is a
+  `REPRESENTATIVE` selected-exit/MFE consumer. It neither uses nor proves the
+  LL-1 `FULL_ACTUAL_FIRST_SEPARATION` bridge. Separately, the stronger
+  two-pole attachment theorem now has independent Sol/Opus derivations and a
+  clean Grok hostile pass. Promote the dictionary
+  `FULL_ACTUAL_EXIT=FULL_ACTUAL_FIRST_SEPARATION` at complete-carrier,
+  lower-floor-only scope, and bank the exact LL-1 `13 -> 7` replay. Do not
+  infer attainment or turn any surviving reduced row into occurrence.
+- **Split the td12 recurrence source by realized route.** The universal
+  coefficient formula is shared, but the `nu=25` B route and `nu=17`
+  sibling route need separate exact-pair/fibre/completion packets. Only the
+  two `nu=17` siblings share one parent jet family; no Galois conjugacy is
+  automatic. Fable's reviewed absorption identity proves that the
+  same-order Keller equation cannot generate its fresh f-side piece: an
+  explicit g-side response absorbs it. On an actual type-`(2,3)` occurrence
+  `r=3i/2` is fixed, but the exact pair, scale, contact ledger, lower jets and
+  support caps remain absent. Quarantine the proposed one-dimensional
+  cascade count. The completed **provisional** typed precursor instead finds
+  an injective reduced operator with nominal cokernel two for B and three for
+  sibling; its sole leading resonance changes only a sharp endpoint-cap
+  count. More decisively, for `r=3i/2 in Z` the truncated binomial response
+  absorbs every formal row through `s<=i`, so there is no formal depth-window
+  kill under the separate `i>=depth` rider. This same-model result awaits
+  hostile review. Prioritize route-separated exact-pair/completion/source-cap
+  packets; do not invent missing coefficients or call a formal jet envelope
+  a `PairRef`.
+- **Trigger the significant-news outer loop after the atomic checkpoint.**
+  Ask every research model to reconsider the entire avenue inventory in
+  light of the U2 kill and LL-1 bridge closure, including new
+  mathematical connections and campaign-software improvements. Reviews stay
+  in the background; no current task needs AWS unless that round yields a
+  reviewed heavy coefficient/CAS packet.
+
 ## Superseding strategy overlay (2026-08-29 10:42Z — sharpen the td12 landing target)
 
 - **Use the repaired arrival-subtree floor, not merge-free M-descent.** An

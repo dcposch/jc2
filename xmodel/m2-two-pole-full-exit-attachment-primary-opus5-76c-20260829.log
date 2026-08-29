@@ -1,0 +1,16 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written and sealed. Summary of the attack:
+
+## Verdict: `PROVED_FULL_TWO_POLE_ATTACHMENT`
+
+**The blocker falls, and it falls to Definition 3.3 alone.**
+
+**Part A — physical flag tree (proved).** The ultrametric inequality `O(P,R) ≥ min(O(P,Q),O(Q,R))` follows in two lines from Statement 3.2's coherent Ω; I also gave an Ω-free deck-substitution proof so Part A does not rest on a Statement the thesis never proves. With the forced convention `O(P,P)=∞`, `~` is an equivalence and `I_P(t)=I_Q(t) ⟺ t ≤ O(P,Q)`. The decisive structural fact: **`O(P,Q)` is one height-independent number**, so the identification predicate is downward closed in `t` and cannot switch back on. Rootward restriction, no-remerging, the vertex subtree, and unique attachment to the two-pole union all follow.
+
+**Part B — orbit interface (proved; countermodel refuted).** There is no second quotient. I swept every tree-valued construction in Sections 3–9: the cyclic group acts on the **root set of `p_F` in ℂ**, and corrected Statement 3.18 is a *section* into the tree, not a quotient map. The MFE abstract countermodel violates **Definition 3.3(ii) read with Definition 3.2 and Statement 3.2(ii)** — it requires `I_{P₁}(w)=I_{P₂}(w)` at `w > O(P₁,P₂)`.
+
+**Part C — full exit consumer (proved at floor scope).** `E_all(F,c)` attaches at `F` for *every* ray of the cluster; sets are pairwise disjoint across directions and across vertices of `U`; one Corollary-7.1 application gives `Σ_{F∈U∩V_a} λ_F^full ≤ td−1−ψ` with the shared suffix counted once. Applied to LL-1: the four `δ=2/3` cells move `2,2,2,1 → 3,3,3,2`, epsilon directions untouched.
+
+**Why the prior blocker was a perimeter omission, not a gap:** the frozen selected-orbit lemma's own proof uses the witness ray *only* through `I_P(u)=F` and non-arrival of the direction — both hold for every ray of `P(F,c)`. The strong/weak asymmetry the stable rereview identified is a **quantifier position, not a hypothesis**.
+
+Honest limits (§8): H5a `κ_F`, the St-9.4 integrality line, `(C7.1*)`, repaired 6.7/6.8 and `L_safe` are declared inputs, not re-proved here; the attachment theorem is H5a-free but the numeric floor is not. I did not re-run the checker, so the 13→7 inventory is inherited. No attainment is claimed, and this is not a promotion.

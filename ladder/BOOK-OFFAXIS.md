@@ -501,9 +501,15 @@ Every P0/P2 consumer must declare one of two types: `REPRESENTATIVE`, which
 keeps the displayed AF2 summand below, or `FULL_ACTUAL_EXIT`, which uses the
 piecewise floor above and proves disjointness before summing. Generic
 MFE-selected witnesses are `REPRESENTATIVE`; do not reprice them by analogy.
-The frozen LL-1 R3 book used the old values and is quarantined from numerical
-promotion pending its reviewed full-exit reprice. The reviewed td12 13-edge
-menu is unchanged because all dirty nonzero defects there are integral.
+The reviewed two-pole attachment theorem gives the precise alias
+`FULL_ACTUAL_EXIT=FULL_ACTUAL_FIRST_SEPARATION`: complete distinct actual cv
+carriers with the lower floor above, never attainment. It licenses the LL-1
+reprice at exactly four nonintegral cells, changing total floors to
+`3,3,3,2` and the reduced-superset inventory `13 -> 7`; integration
+`8cb13514...`, stable Grok review `1b3be27d...`. The frozen LL-1 R3 JSON
+remains immutable legacy input and is superseded numerically by the reviewed
+reprice/R4 consumer. The reviewed td12 13-edge menu is unchanged because all
+dirty nonzero defects there are integral.
 
 ## 10. LAMBDA-BUDGET REPAIR — EXECUTED (2026-08-12; St 9.3 (24) pricing
 ## of the off-axis escapes against the shared St 9.4 budget)

@@ -13081,3 +13081,135 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Immediate action: run seal and focused regressions, campaign-scoped stage,
   commit/push, verify the exact remote hash and clean campaign status, then
   launch the shared recurrence without waiting on further background review.
+
+## 2026-08-29 11:24Z REVIEW/CORRECTION EVENT — LABELLED ONE-P0 U2 TD12 ROUTE DIES BY 11>10
+
+- Sol producer `6eb9b888...`/body `f37ce04e...` receives independent Grok46
+  hostile review `9798a068...`/body `8f489f45...`, verdict
+  `PASS_WITH_REPAIR`. Correction delta `63a1f15e...`/body `71681036...`
+  declares the finite-chain consumer `REPRESENTATIVE`, separates target
+  `nu_G=1` from free incoming `nu_H`, and keeps every price a lower floor.
+- An actual typed td12 landing of the corrected labelled route forces type
+  `(2,3)`, three disjoint `(1,2,3)` pole chains, and seed `(w,M)=(3/2,2)`.
+  Each inner arrival must have `w=1` and `3|M`; the cap-free closure gives
+  minimum modeled price five. The outer sibling must reach `w=2`, so it is
+  not free. The promoted selected-exit/MFE attachment gives the shared
+  contradiction `5+5+1=11>td-2=10`.
+- Scope is intentionally narrow: the corrected labelled
+  `NESTED-U2-P0-U2-RAY/v1` is dead as an actual landing, including fixed-`t`
+  ray members. Other U2/one-P0 labels, all td12, landing, gluing,
+  realization, degree bounds, counterexamples and JC2 remain open.
+- In parallel, Sol and blind Opus independently derived and provisionally
+  converged on the stronger two-pole full actual first-separation attachment
+  theorem. Comparison
+  `32402983...`/body `1026e3a2...` is sealed; Grok hostile review is live and
+  the canonical LL-1 inventory remains 13 meanwhile.
+- Significant-news action after the next atomic checkpoint: a blind
+  multi-model whole-portfolio ideation round, including machinery upgrades.
+  All current work is desk-scale; AWS remains idle until a reviewed heavy
+  packet warrants it.
+
+## 2026-08-29 11:46Z PRIMARY/REVIEW EVENT — TD12 RECURRENCE ABSORBS ITS FRESH JET
+
+- Fable primary `1a602643...`/body `d5b099c2...` and Sol different-model
+  hostile disposition `876d1717...`/body `45d79d5e...` yield
+  `PASS_WITH_REPAIR`, campaign outcome `SOURCE_UNDERDETERMINED`.
+- The exact top-relative Keller convolution has RHS order
+  `s*=D_F+D_g-kbar_F`, outside the B depth-24 and sibling depth-16 windows.
+  Order zero gives `G_0=c_g p^r`. On either actual type-`(2,3)` route,
+  `D_g/D_F=3/2` and `r=3i/2`; Fable's claim that r itself is missing is
+  corrected.
+- New algebra: `A_s[dP]+B_s[(r*c_g/i)p^(r-i)dP]=0` whenever the response is
+  polynomial. Thus the order-s equation cannot solve its fresh f-side piece
+  on its own. Two explicit level-one choices change the B or one sibling
+  diagonal coefficient while satisfying the complete order-one equation.
+  They are formal coefficient choices, not extendable exact pairs.
+- Route typing: B25 and S17 are alternative route states and need separate
+  PairRef/completion/contact/jet/cap packets. Only the two S17 evaluations
+  share one P/G family. The claimed exactly-one infinity cokernel and cascade
+  codimension are quarantined until a finite domain/target/rank theorem is
+  proved.
+- Immediate safe descendant is a desk-scale formal cascade-rank lane. No
+  non-top vector, depth gate, recurrence implementation, software migration,
+  AWS job, landing, exclusion, counterexample or JC2 result is licensed.
+
+## 2026-08-29 11:55Z REVIEW/PROMOTION EVENT — TWO-POLE CARRIER CLOSES LL-1 13 TO 7
+
+- Sol theorem `82d2f6c3...`, blind Opus theorem `f7853d39...`, and comparison
+  `32402983...` receive clean Grok46 hostile review B
+  `1b3be27d...`/body `3be6ab6b...`, verdict `PASS_WITH_REPAIR` with validator
+  `VALID:2:2/3,2/3`. Integration `8cb13514...`/body `c2141599...` applies
+  the sole nomenclature repair.
+- Definition 3.3 supplies the physical common-prefix tree/no-remerge law.
+  Corrected Statement 3.18 separates effective root orbits from actual
+  children and physical places. Universal Statement 7.3 gives every place
+  through an exit child a same-ray cv carrier. Full sets attach uniquely,
+  are disjoint across directions/vertices, and enter one C7.1 union.
+- Canonical dictionary:
+  `FULL_ACTUAL_EXIT=FULL_ACTUAL_FIRST_SEPARATION` means complete distinct
+  actual carriers plus a lower floor only. It never means attainment;
+  `REPRESENTATIVE` remains a weaker one-witness consumer.
+- Exactly four LL-1 nonzero `delta=2/3` floors rise from one to two. Cell
+  totals become `3,3,3,2`; zero/epsilon terms and td12 remain unchanged.
+  Ordinary/`-O` stdout SHA `4498beac...` is identical and the
+  reduced-superset inventory is now seven, not 13. The legacy JSON stays
+  immutable input; menu/pooling/ALIVE semantics are inherited.
+- The first Grok attempt is permanently
+  `TRANSIENT_INPUT_MUTATION_NO_PROMOTION`, recorded by quarantine
+  `b139a21a...`; its matching endpoint hashes do not rehabilitate it. Review
+  B is the only Grok promotion evidence. No landing, occurrence, degree
+  bound, counterexample or JC2 conclusion follows.
+
+## 2026-08-29 12:20Z PROVISIONAL DESCENDANTS — CASCADE NEGATIVE, LL1-R4 COMPLETE
+
+- `TD12-FORMAL-CASCADE-RANK/v1` report `30aa2926...`/body `805e5512...`
+  and exact checker `ea911af...` are locally sealed. The root-floor quotient
+  operator is injective; its nominal/intrinsic cokernel is two for B and
+  three for sibling. The unique leading resonance changes a sharp
+  endpoint-cap count only when the cap terminates on its monomial.
+- More importantly, the type-`(2,3)` truncated binomial response absorbs
+  every formal Keller row through `s<=i`. Thus order two is not a genuine
+  compatibility bite, and no B24/S16 formal obstruction is forced under
+  `i>=depth`. Integral-index erratum `b50d8fdf...`/body `f0e82363...` makes
+  explicit that the full floor and binomial statements require
+  `i,r in Z_{>0}`, `r=3i/2`; the checker uses `(i,r)=(30,45)`.
+- This is same-model formal evidence, not a `PairRef`, source realization, or
+  gate verdict. It remains provisional pending hostile review. The next
+  source deliverables are the separate `TD12-B25-PAIRPACK/v1` and
+  `TD12-S17-SIBLING-PARENT-PAIRPACK/v1` completion/jet/cap packets.
+- LL1-R4 software report `c2d627a0...`/body `f645432f...` is locally
+  complete. Compiler, independent validator, manifest, mutation controls,
+  and ordinary/optimized acceptance runs agree at 166/166. Frozen R3 and the
+  legacy checker are unchanged; the exact delta is four movers, six removed,
+  none added, and inventory `13 -> 7`.
+- The carrier mathematics and legacy numerical replay are promoted, but the
+  new R4 executable remains `PROVISIONAL_SOFTWARE_AWAITING_DIFFERENT_MODEL_REVIEW`.
+  Its review must attack carrier leakage into epsilon rows, old/new graph
+  replay, mover exhaustiveness, mutation closure, and optimized behavior.
+- Consistency audit found one missing negation in the frozen Fable U2 review's
+  final summary. Erratum `09ac8eef...`/body `26631d03...` restores
+  edgewise-`notin V_{2,a}`. The review's controlling A9 proof and canonical
+  compiler rule were already correct, so no mathematical result changes.
+
+## 2026-08-29 12:20Z LIVE STATE — ATOMIC CHECKPOINT AND SIGNIFICANT-NEWS ROUND
+
+- Promoted roots: the corrected labelled one-P0 U2 td12 landing is dead at
+  `REPRESENTATIVE` scope; the two-pole full-actual-first-separation carrier
+  closes the LL-1 typing defect and the reviewed reduced inventory is seven;
+  the route-separated td12 coefficient recurrence and own-order absorption
+  identity are exact, with source packets still absent.
+- Provisional roots: `TD12-FORMAL-CASCADE-RANK/v1` has no formal depth-window
+  kill; LL1-R4 implements the promoted reprice. Each has one different-model
+  review debt and no further descendant fanout yet.
+- All computations in this checkpoint are tiny exact desk controls. No heavy
+  local jobs or AWS instances are active; heavy or uncertain CAS remains
+  AWS-only under `ops/FLEET.md`.
+- Atomic next action: finish the scoped consistency/test/seal battery, commit
+  and push the containing campaign checkpoint, verify exact remote equality
+  and a clean campaign-scoped status, then launch the significant-news blind
+  whole-portfolio ideation round without waiting for the two background
+  reviews. Every research model must scan all proof/disproof avenues, current
+  gaps, the new U2/LL1/source evidence, and software/system improvements.
+- The significant-news trigger supersedes the quiet ideation deadline. The
+  next web sweep remains due `2026-08-30T03:40Z`; the next systems checkpoint
+  remains due `2026-08-31T09:30Z`.

@@ -1,5 +1,18 @@
 # SHEET6-2POLE.md — the two-pole (3,3) configuration at td = 6
 
+> **2026-08-29 FULL-ACTUAL-FIRST-SEPARATION RIDER.** On one fixed fibre,
+> Definition 3.3's physical-prefix tree and corrected Statements 3.18/3.13
+> give every actual up non-chain microchild a complete set of distinct
+> same-ray cv carriers with a unique attachment to the two-pole path union.
+> Sets from distinct directions and vertices are disjoint and enter one
+> actual-weight C7.1 union (`1b3be27d...`, integration `8cb13514...`). The
+> canonical alias
+> `FULL_ACTUAL_FIRST_SEPARATION=FULL_ACTUAL_EXIT` means complete carrier plus
+> a lower floor only—never attainment. This licenses the four LL-1
+> `delta=2/3` reprices and the exact `13 -> 7` reduced-superset replay. It
+> does not reprice the `REPRESENTATIVE` selected-witness MP8 consumer below,
+> assert occurrence of an `ALIVE` row, or exclude td6.
+
 > **2026-08-28 CANONICAL SUPERSESSION — multipole scope and root menu.**
 > Actual-weight `(C7.1*)` and the two-chain selected-exit shared inequality
 > are **GREEN**: the reviewed contact-tree attachment theorem deduplicates

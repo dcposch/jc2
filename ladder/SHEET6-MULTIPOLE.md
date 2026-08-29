@@ -1,5 +1,20 @@
 # SHEET6-MULTIPOLE.md — the m-pole analogue of Prop 8.4: the maximal printed-tier kill, its exact frontier, and the honest obstruction
 
+> **2026-08-29 CARRIER-TYPE RIDER — representative MP8 versus reviewed
+> two-pole full exit.** Generic MP8/MFE remains `REPRESENTATIVE`: one
+> selected Statement-7.3 witness per priced direction, with shared suffixes
+> deduplicated. It must not receive the full-set floor by analogy. A separate
+> reviewed theorem (`1b3be27d...`, integration `8cb13514...`) proves on one
+> fixed fibre and **two-pole** path union that every actual up non-chain
+> microchild's complete distinct cv carrier set attaches uniquely, full sets
+> from different directions/vertices are disjoint, and their whole union fits
+> one C7.1 budget. Its carrier tag is
+> `FULL_ACTUAL_FIRST_SEPARATION=FULL_ACTUAL_EXIT`, meaning a lower floor only,
+> never attainment. This closes the LL-1 carrier defect and licenses its
+> exact `13 -> 7` reduced-superset replay. The hostile proof observes that
+> the attachment argument appears to extend to finite pole unions, but that
+> generalization is not promoted here.
+
 > **2026-08-28 CANONICAL SUPERSESSION — root scope and MP8.** This dated
 > synthesis is preserved below as provenance. Corrected Proposition 8.4 is
 > nonroot-only: MP2/MP3 apply only to `U \ {(0,y)}`, and root `M=1` is

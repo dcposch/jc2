@@ -7,8 +7,76 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
-> **STABLE REREVIEWS CLOSE Q+E5 AND LL-1; THE U2 SOURCE FLOOR IS
-> CORRECTED (10:16--10:42Z).** Grok46 review
+> **DESK-SCALE DESCENDANTS COMPLETE; BOTH REMAIN PROVISIONAL
+> (12:20Z).** `TD12-FORMAL-CASCADE-RANK/v1`
+> (`30aa2926...`, corrected by integral-index erratum `b50d8fdf...`) factors
+> the reduced operator and finds nominal cokernel two for B versus three for
+> sibling, not a shared one-dimensional condition.  Its leading resonance
+> affects only a sharp endpoint cap.  For `r=3i/2 in Z`, the truncated
+> binomial response absorbs every formal Keller row through `s<=i`; hence
+> order two is not a genuine bite and no depth-24/depth-16 formal obstruction
+> follows when `i>=depth`.  This is not a `PairRef`; route-separated exact
+> pair/completion/source-cap packets remain the next gate.
+>
+> LL1-R4 (`c2d627a0...`) now encodes the promoted carrier distinction without
+> changing frozen R3 or the legacy checker.  Compiler, independent validator,
+> manifest, mutation suite, and ordinary/`-O` runs pass 166/166, reproducing
+> exactly four movers, six removals, no additions, and `13 -> 7`.  Its math
+> inputs are promoted, but the new executable is provisional pending
+> different-model software review.  A separate sealed erratum `09ac8eef...`
+> restores one missing `notin` in the older Fable U2 review summary; its A9
+> proof and all canonical mathematics already used the correct
+> edgewise-non-`V_{2,a}` condition, so no result changes.
+
+> **TWO-POLE FULL-EXIT BRIDGE PASSES; LL-1 SHRINKS `13 -> 7`
+> (11:55Z).** Sol and blind Opus independently derive the physical-prefix
+> attachment theorem; clean Grok46 hostile review
+> `1b3be27d...`/body `3be6ab6b...` returns `PASS_WITH_REPAIR`, and
+> integration `8cb13514...`/body `c2141599...` applies its nomenclature-only
+> repair.  Full actual flag sets below distinct non-chain directions attach
+> uniquely to the two-pole path union, are pairwise disjoint, and fit in one
+> actual-weight C7.1 budget.  `FULL_ACTUAL_EXIT` and
+> `FULL_ACTUAL_FIRST_SEPARATION` are the same complete lower-floor carrier;
+> neither means attainment.  The four LL-1 `delta=2/3` cells now have total
+> floors `3,3,3,2`; exact ordinary/`-O` replay reduces the
+> reduced-superset inventory from 13 to seven.  Menu completeness and
+> `ALIVE` semantics are inherited; no occurrence, landing, other-td result,
+> degree bound, counterexample, or JC2 conclusion follows.  The first Grok
+> attempt is retained only as a transient-input custody quarantine.
+
+> **TD12 SOURCE RECURRENCE IS SYMBOLIC BUT NOT A GENERATOR
+> (11:46Z).** Fable5 primary `1a602643...`/body `d5b099c2...` receives Sol
+> hostile disposition `876d1717...`/body `45d79d5e...`:
+> `PASS_WITH_REPAIR`, campaign result `SOURCE_UNDERDETERMINED`.  The exact
+> top-relative Keller convolution and a new own-order absorption identity
+> survive; explicit level-one choices prove that the fresh B/sibling
+> diagonal coefficient is not identified by its same-order equation.  For
+> an actual type-`(2,3)` route the ratio already gives `r=3i/2`, correcting
+> Fable's “unpinned r” claim.  The `nu=25` B route and `nu=17` sibling route
+> require separate `PairRef`/completion/jet packets; only the two sibling
+> roots share one `P_k` family.  The claimed one-dimensional infinity
+> cokernel/cascade count remains unproved.  No non-top vector, depth gate,
+> implementation, or AWS run is licensed; a desk-scale typed cascade-rank
+> lane is the only immediate executable descendant.
+
+> **THE CORRECTED LABELLED ONE-P0 U2 ROUTE IS DEAD AT `td=12`
+> (11:24Z).** Grok46 hostile review `9798a068...`/body `8f489f45...`
+> returns `PASS_WITH_REPAIR` on Sol producer `6eb9b888...`/body
+> `f37ce04e...`; correction delta `63a1f15e...`/body `71681036...`
+> declares the finite-chain prices `REPRESENTATIVE` rather than
+> full-actual-exit.  Equality in the reviewed source floor forces type
+> `(2,3)` and three disjoint `(a,b,nu)=(1,2,3)` pole chains starting at
+> `(w,M)=(3/2,2)`.  The corrected inner frame forces two arrivals at `w=1`
+> with `3|M`; the cap-free P0 closure prices each at least five.  The outer
+> sibling must reach `w=2`, which cannot happen for free.  The promoted
+> selected-exit/MFE inequality therefore gives `5+5+1=11>td-2=10`.
+> This kills only an actual landing of the corrected labelled
+> `NESTED-U2-P0-U2-RAY/v1`, including its fixed-`t` semilinear members—not
+> other U2/one-P0 routes, all td12, landing, gluing, realization, a degree
+> bound, a counterexample, or JC2.
+
+> **STABLE REREVIEWS CLOSE Q+E5; LL-1 FAILS PROMOTION; THE U2 SOURCE FLOOR
+> IS CORRECTED (10:16--10:42Z).** Grok46 review
 > `3c5587c0...`/body `2bf0c579...` returns `PASS_WITH_REPAIR` on the
 > equal-regime Q+E5 fixed-index consumer.  For fixed typed case-III state,
 > target `nu_G`, positive `M_G`, and integer `kbar_G`, the exact menu is
@@ -36,7 +104,8 @@ day or inserts the completed day directly below this preamble (see
 > `max(beta,2alpha)` when the arrival multiplicity is at least two.  Since the
 > corrected family fixes three multiplicity-three arrival subtrees,
 > `td>=3max(beta,2alpha)>=12`: it is excluded through `td=11` (hence at td8),
-> but **not** at td12.  Equality forces type `(2,3)` and three pole entries
+> but the source floor **alone** does not remove td12.  Equality forces type
+> `(2,3)` and three pole entries
 > `(a,b,nu)=(1,2,3)` of mass four.  A compatible td12 ledger is only formal
 > and is not the labelled route; the two inner `w=1` arrivals, outer sibling
 > landing, T1/transport, i-synchronization, gluing, and realization remain

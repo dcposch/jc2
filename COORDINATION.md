@@ -681,6 +681,44 @@ background/nonblocking. The lane guardrail now also forbids merge-free-to-St
 conflation. All listed work is desk-scale; AWS remains idle until a reviewed
 heavy packet exists.
 
+Allocation and systems refresh (2026-08-29 11:55Z): Grok independently
+returns `PASS_WITH_REPAIR` on Sol's labelled one-P0 U2 td12 budget kill. The
+route is promoted only at actual-landing, `REPRESENTATIVE` selected-exit
+scope: `5+5+1>10`; other U2/one-P0 routes and all-td12 remain open. Stop
+source/gluing/index work on that dead label and recycle it as a regression
+fixture. In parallel, Sol and blind Opus independently converged on the
+strong two-pole actual-first-separation attachment theorem; clean Grok review
+now passes it with a nomenclature-only repair. The full-carrier bridge closes
+the former LL-1 typing defect and licenses the exact `13 -> 7` replay. The shared td12
+recurrence audit is fail-closed at source: B and sibling routes need separate
+realized pair/completion packets, while the two sibling evaluations share one
+parent jet family without an automatic Galois-conjugacy claim. Fable's
+primary plus Sol hostile disposition
+now promote the exact symbolic recurrence and own-order absorption identity,
+while correcting `r=3i/2` on each actual type-`(2,3)` route and quarantining
+the claimed one-dimensional cascade count. No vector or recurrence engine is
+licensed; a typed desk-scale cascade-rank precursor may run independently.
+This reviewed route kill is significant news, so after the next atomic
+checkpoint launch a blind whole-portfolio ideation round across all proof,
+disproof, and machinery avenues; descendants and reviews continue without
+blocking it. Current work is desk-scale and AWS remains reserved for a
+reviewed heavy coefficient/CAS packet.
+
+Allocation and systems refresh (2026-08-29 12:20Z): two desk-scale
+descendants are locally complete without blocking the significant-news
+round. `TD12-FORMAL-CASCADE-RANK/v1` is provisional: the reduced operator is
+injective with nominal cokernel two for B and three for sibling, while the
+integral type-`(2,3)` binomial response (`r=3i/2 in Z`) absorbs all formal
+rows through `s<=i`; no depth-window obstruction follows under
+`i>=depth`. The route-separated exact-pair/completion/source-cap packets are
+therefore the next source deliverables. LL1-R4 deterministically implements
+the promoted full-actual carrier and exact `13 -> 7` replay, with an
+independent validator and 166/166 acceptance checks, but remains provisional
+software pending different-model review. Both reviews are background debt;
+neither serializes the checkpoint or whole-portfolio ideation. No heavy
+local process was used, and AWS remains idle until a reviewed heavy packet
+exists.
+
 Adding a model requires one adapter in `ops/adapters/` and one roster row;
 route documents do not assign permanent jobs by model name.
 Admission requires a sealed same-input evaluation against a standing model.

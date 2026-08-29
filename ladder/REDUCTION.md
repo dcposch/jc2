@@ -970,9 +970,11 @@ At the current formal-route tier the endpoint cannot be a finite list of
 literal candidate cells. The repaired U1 theorem packages equal joins as
 labelled arithmetic-progression families with periodic `M` and P0 menus, and
 the reviewed one-P0 U2 route below supplies infinitely many locally legal
-records even though the formerly advertised `t=2` ray is N1-dead. A future
-source-landing theorem could still exclude those families; until it does, the
-minimally plausible codomain is a finite exceptional residue plus normalized
+records even though the formerly advertised `t=2` ray is N1-dead. The
+reviewed representative-budget theorem now excludes every **actual td12
+landing of that corrected labelled route**; its formal local records remain
+useful evidence that an intermediate compiler cannot be a finite literal-cell
+list. The minimally plausible codomain is a finite exceptional residue plus normalized
 **family records**, each carrying
 its parameter progression, full-frame affine laws, coefficient character,
 consumer list, exceptional values, and exact provenance. U1 supplies the
@@ -992,13 +994,14 @@ three-vertex route with one neutral P0 segment has, for every fixed
 `t=5 mod 6`, a semilinear family `K=1 mod 6`; varying both `t` and `K`
 introduces `nu=tK` and is not one semilinear family. Its three relevant
 arrival multiplicities are all three, so the reviewed source-mass
-replacement gives `td>=3*max(beta,2alpha)>=12`, excluding it only through
-`td=11`, not at `td=12`. Equality forces type `(2,3)` and three
-`(a,b,nu)=(1,2,3)` pole entries, but the available formal ledger arrives at
-weight `2/3`, whereas the labelled inner frame requires weight one. Its
-source scale, actual weight-one landing, coefficient gluing, unused-sibling
-upstream data, and absolute-index or `prod(nu_seg)` boundedness are
-uncovered. Merge-free alone cannot invoke Statement 8.5: every edge needs
+replacement gives `td>=3*max(beta,2alpha)>=12`. At equality, type `(2,3)`
+and three `(a,b,nu)=(1,2,3)` pole entries are forced. The corrected inner
+frame then requires two weight-one arrivals with multiplicity divisible by
+three; the cap-free reduced P0 closure prices them at least five each, and
+the outer sibling costs at least one, contradicting the representative MFE
+budget `td-2=10`. Thus this labelled family is conditionally dead as an
+actual td12 landing, without a source, gluing, or realization construction.
+Merge-free alone still cannot invoke Statement 8.5: every edge needs
 its own `G notin V_{2,a}` or direct M-divisibility certificate. General
 nonintegral/rational first
 boundaries, other positive P0 compositions, unclassified transitions, and
@@ -1025,11 +1028,13 @@ an actual adjacent direct `nu=1` U2 edge finite. They do not cover a
 nonintegral/rational first boundary, a general positive intervening P0
 composition, an unclassified transition, recursively variable bases, or
 make every partner-dependent consumer uniform on those fibres. The reviewed
-one-P0 family makes this gap concrete: fixed `t` gives a semilinear ray, and
-the repaired pole-mass theorem excludes it only at `td<=11`. Its td12
-equality profile is forced to three type-`(2,3)` off-axis pole entries, while
-the required weight-one arrival states, coefficient gluing, sibling upstream
-data and any absolute-index bound remain outside its local legality record.
+one-P0 family still makes the record-language issue concrete: fixed `t`
+gives a semilinear ray, while varying both parameters is bilinear. Its
+reviewed td12 representative-budget contradiction now prevents any actual
+landing of that corrected labelled route, so it is no longer a surviving
+off-axis configuration. Other one-P0 labelings, nonintegral/rational
+boundaries, unclassified U2 transitions, and recursively variable bases
+remain uncovered.
 Do not restore the withdrawn `td>=15` argument: a merge-free regular path can
 contain dirty `V_{2,a}` vertices at which M-divisibility changes.
 The reported 2691 generic cells are therefore still all `OPEN`; they are not
@@ -1274,12 +1279,10 @@ typing, full degrees/indices, and `(nu,kbar)`. One reviewed neutral-P0 route
 already forces the family language beyond one finite semilinear union: fixed
 `t=5 mod 6` gives one linear ray in `K=1 mod 6`, whereas varying both
 parameters introduces the non-Presburger product `nu=tK`. Its reviewed
-source-mass floor is exactly strong enough to exclude `td<=11`; the surviving
-td12 equality target has type `(2,3)`, three `(1,2,3)` poles, and still owes
-the labelled weight-one arrivals. The next theorem must bound its absolute
-index/product of characteristic indices, reject that equality profile by
-edgewise dirty-transport/T1/source or coefficient gluing, or extend the
-record language while covering
+source-mass floor forces the td12 equality profile to type `(2,3)` and three
+`(1,2,3)` poles; the reviewed representative-AF2 closure then excludes the
+labelled route by `5+5+1>10`. The next theorem must extend that strategy to
+other one-P0/U2 labels or extend the record language while covering
 the remaining nonintegral/rational boundaries, P0 compositions,
 unclassified transitions, and recursively variable bases. Enumerating any
 regime to a cap is not a completeness argument.

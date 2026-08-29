@@ -5,6 +5,162 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **TD12 FORMAL CASCADE RANK CLOSES ONLY THE JET ENVELOPE — PROVISIONAL,
+> NOT PROMOTED (2026-08-29 12:20Z).** Sol report
+> `30aa29260c2bc3b206f757a90fe42ec6dcd98c733a7bf073bd0a86c9f48cdf67`
+> (body `805e551279f47ff7cecc235f906a940b80ad384e1db05178f6792240448ee853`),
+> corrected by integral-index erratum
+> `b50d8fdf41033bdd5d786db7948fba5b1cb304e09739208a429948fdbc2ad13a`
+> (body `f0e82363af25b5ada505fbd87e73d48e4d06f9e9e729d9fdc5bb5185f3ebb4a9`),
+> freezes separate B and sibling polynomial domains and targets. Different-
+> model hostile review remains pending.
+>
+> The reduced `Z` operator is injective with nominal/intrinsic cokernel two
+> for B and three for sibling, not one. The single leading resonance changes
+> only a sharp endpoint target: under the conditional, source-unpinned
+> natural cap, B has cokernel one for `s=1..8` then two, while sibling has two
+> for `s=1..4` then three. On the formal type-`(2,3)` envelope, with
+> `i,r in Z_{>0}`, `r=3i/2`, and `i>=depth`, the truncated binomial response
+> supplies image solutions through `s<=i`; hence no formal compatibility
+> kill is forced in B24 or S16.
+>
+> Exact checker `ea911af...` has byte-identical ordinary/optimized output
+> SHA `35f6f171...`. This is not a `PairRef`, source lift/cap, vector, gate,
+> landing, or exclusion result. Route-separated B25 and S17 source packets
+> remain the concrete next producers, and no software/AWS migration is
+> licensed.
+
+> **TWO-POLE FULL ACTUAL FIRST SEPARATION — PROMOTED; LL-1 INVENTORY
+> `13 -> 7` (2026-08-29 11:55Z).** Independent Sol and Opus proofs
+> `82d2f6c3...`/body `0c808734...` and
+> `f7853d39...`/body `2fe6a14c...`, with comparison
+> `32402983...`/body `1026e3a2...`, received fresh stable-basis Grok46
+> hostile review
+> `1b3be27da8ba495d80cbf473d844055583a672d136ccea40611dfe9fc0b7023e`
+> (body `3be6ab6b8db8ba7c89c0f382f201a17b2bae6000720d2c04ef2de3925b90a47a`),
+> verdict `PASS_WITH_REPAIR`.  Coordinator integration
+> `8cb13514cc5bd78ea31583af59892ea4cfc04413eef641f25620dec2bc34d95b`
+> (body `c2141599234e14c92d3b1d69e6ca3a4fcb7968414c1c4490e1b5bfb34007c0e7`)
+> applies the sole nomenclature repair.  All 20 charged inputs remained
+> stable; validator disposition is `VALID:2:2/3,2/3`.  An earlier review
+> attempt is explicitly quarantined for a transient source mutation and is
+> not promotion evidence.
+>
+> Definition 3.3 gives the physical-flag common-prefix tree with no
+> remerging.  Corrected Statement 3.18 maps an effective root orbit to an
+> actual microchild without conflating root multiplicity, series, places or
+> flags.  For every physical place through an up non-chain child, universal
+> Statement 7.3 and corrected 3.13 give a same-ray cv flag whose unique
+> outer intersection with the two-pole union is its attachment vertex.
+> Complete flag sets from distinct directions and attachment vertices are
+> disjoint and enter one actual-weight C7.1 union with the x-side witness.
+>
+> The mandatory dictionary is
+>
+> ```text
+> FULL_ACTUAL_EXIT = FULL_ACTUAL_FIRST_SEPARATION
+>   = complete distinct actual carrier + lower floor only.
+> ```
+>
+> It never asserts attainment.  `REPRESENTATIVE` remains a different,
+> weaker one-witness consumer.  This closes the sole carrier defect in the
+> stable LL-1 rereview.  Exactly four `delta=2/3` cells receive nonzero floor
+> two; their total floors are `3,3,3,2`, with zero/epsilon terms unchanged.
+> Ordinary and optimized replay have stdout SHA
+> `4498beacf2f119d4f3d1b1750e857549e98f76900899983dd32db5d4e5da0011`
+> and reduce the frozen reduced-superset inventory from 13 to seven.  The
+> legacy `ll1_book.json` remains immutable input; the reviewed reprice is its
+> superseding numerical consumer.
+>
+> Menu completeness, pooled replay and `ALIVE`-as-superset are inherited,
+> not strengthened.  No attainment, occurrence, landing, realizability,
+> other-td result, degree bound, counterexample, `G2-PSC`, `G2-BD`, or JC2
+> conclusion follows.
+
+> **TD12 FIRST-CHILD SOURCE RECURRENCE — EXACT SYMBOLIC SYSTEM AND
+> OWN-ORDER ABSORPTION PASS; SOURCE PACKETS REMAIN ABSENT
+> (2026-08-29 11:46Z).** Fable5 primary
+> `1a60264334ae99f60ff79f1ed8b4a75cb42abf30f5e4ae8001a51b9064056d84`
+> (body `d5b099c2627b86d11345b8283080fcd746c1a0352cc8058182951710e5065feb`)
+> received Sol different-model hostile disposition
+> `876d1717efdc69865cfae6c8b5d4ef983440a5f0997a9edf3cf13a2a5cc70aab`
+> (body `45d79d5ed605e7a17a121971a747c10b1f4b30d4b9db805d2c090f3528f0c1dd`),
+> verdict `PASS_WITH_REPAIR`; campaign disposition is
+> `SOURCE_UNDERDETERMINED`.
+>
+> For one exact typed completion, with top-relative pieces `P_a,G_b`, the
+> source-backed Keller convolution is
+>
+> ```text
+> sum_(a+b=s) ((D_F-a)P_a G_b'-(D_g-b)P_a'G_b)
+>   = kappa_F * 1_(s=D_F+D_g-kbar_F).
+> ```
+>
+> Order zero gives `G_0=c_g p^r` and `D_F*r=D_g*i`.  On either hypothetical
+> type-`(2,3)` route occurrence, `D_g/D_F=3/2`, hence `r=3i/2`; `r` is not a
+> missing input.  The genuinely new absorption identity says that, whenever
+> the displayed response is polynomial,
+>
+> ```text
+> A_s[dP]+B_s[(r*c_g/i)p^(r-i)dP]=0.
+> ```
+>
+> Thus the order-`s` equation cannot solve its fresh f-side piece by itself.
+> Explicit zero/nonzero level-one choices give different B and sibling
+> diagonal coefficients while satisfying that full order-one equation.
+> This is formal coefficient nonidentifiability, not two Keller pairs or a
+> deep extension.  The leading coefficients `v_B,0` and `v_S±,0` are fixed
+> and nonzero, so the first normalization/delay guard passes structurally.
+>
+> Repairs are binding.  The `nu=25` B state and `nu=17` sibling state are
+> alternative routes and share no `PairRef`, completion, parent, `c_g`, or
+> source ladder.  Only the two `nu=17` evaluations share one `P_k` family.
+> For general symbolic `r<i`, absorption requires `p^(i-r)|dP`.  The reduced
+> `Z` equation is exact, but the proposed exactly-one infinity cokernel,
+> numerical cascade codimension and “first bite at order two” are
+> quarantined pending explicit domains, targets, root floors and caps.
+>
+> No non-top vector, depth-24/depth-16 gate verdict, standalone recurrence
+> engine, software migration, AWS run, landing, exclusion, degree bound,
+> counterexample or JC2 conclusion is licensed.  Any future concrete producer
+> must be route-separated: `TD12-B25-PAIRPACK/v1` versus one common-parent
+> `TD12-S17-SIBLING-PARENT-PAIRPACK/v1`.  A desk-scale formal cascade-rank
+> lane may proceed first, but it must not call a formal jet envelope a
+> `PairRef`.
+
+> **LABELLED ONE-P0 NESTED-U2 `td=12` LANDING — DEAD BY THE SHARED
+> REPRESENTATIVE BUDGET (2026-08-29 11:24Z).** Sol producer
+> `6eb9b8882766a33a23cbd37564eed252b71c39c158cb1f572ffe0a6f721a9654`
+> (body `f37ce04ef928bcb99ff8528880b1ac3e5891f598d37397da554f811dfa31cbc6`)
+> received independent Grok46 hostile review
+> `9798a068b609bcd713734d04dab4085e50d1ca02a03fe59e9d58ede6a2b12ffe`
+> (body `8f489f453181f1a323c28baf81b7420e86e48f73961afb49aee707312bbc2388`),
+> verdict `PASS_WITH_REPAIR`. Correction delta
+> `63a1f15e4fc7bc46a746f18f51f7a5984863af09c749af1708c4592f725bf64c`
+> (body `716810365cd2158c5bba027ebabb3e901b3d26656f1ae0c2a011fae52d4ab401`)
+> declares the consumer `REPRESENTATIVE`, separates target `nu_G=1` from
+> free incoming `nu_H`, and preserves every lower bound as a floor rather
+> than an attainment claim.
+>
+> Under an actual typed landing of the corrected labelled route, source-mass
+> equality forces type `(alpha,beta)=(2,3)` and three disjoint one-pole
+> pre-merge chains, each seeded by `(a,b,nu)=(1,2,3)` at
+> `(w,M)=(3/2,2)`. The corrected inner target
+> `(nu_G,X_G,kbar_G)=(1,6,3)` forces both inner arrivals to `w_H=1` with
+> `3|M_H`. The reviewed cap-free reduced P0 closure has the unique eligible
+> state `(w,M,lambda_min)=(1,3,5)` through budget five, so the two chains
+> cost at least ten. The outer sibling must move to labelled weight two;
+> zero-price moves cannot increase reduced weight, so it costs at least one.
+> The promoted selected-exit/MFE attachment sums these representative AF2
+> prices over the three disjoint paths once. Hence `5+5+1=11>td-2=10`.
+>
+> This supersedes only the earlier statement that this **labelled equality
+> landing** remained open. It does not exclude other U2 routes, other
+> one-P0 labelings, or all `td=12` configurations, and proves no landing,
+> gluing, realization, degree bound, `G2-PSC`, `G2-BD`, counterexample, or
+> JC2 conclusion. It is logically independent of, and did not consume, the
+> LL-1 full-actual-exit theorem/reprice later promoted above.
+
 > **NESTED-U2 SOURCE-MASS FLOOR — `td>=15` PROOF FAILS; REVIEWED
 > REPLACEMENT IS `td>=12` FOR THE CORRECTED FAMILY
 > (2026-08-29 10:42Z).** Sol's provisional report
@@ -14,6 +170,13 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > `f9dd2035bbe5a47561cce263ba1288a9245526dec748c3ef031545e443bf510f`
 > (body `1ca3948f97114d56e1c5aae916fa086d459d036550f2e218bcf31923710c3e12`),
 > verdict `FAIL` at the headline scope with a proved partial salvage.
+> Coordinator erratum
+> `09ac8eefc75cafa777b1164a65eecd520427ba61a7000c79d33d7d5e454f6219`
+> (body `26631d03b002cc47e709e5a71d03d7467ea3547be2f1cef661af97abdb1cd882`)
+> restores the missing `notin` in the frozen review's fourth
+> maximum-safe-promotion bullet.  Its controlling A9 audit and the canonical
+> compiler rule already had the correct edgewise-non-`V_{2,a}` hypothesis;
+> no mathematical conclusion or downstream result changes.
 >
 > A one-pole incoming subtree is merge-free, but that does **not** certify
 > the lower vertex of every edge lies outside `V_{2,a}`.  Statement 8.5 has
@@ -38,9 +201,11 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > and one outer-sibling arrival multiplicities equal to three, hence
 > `td>=3max(beta,2alpha)>=12`, with equality only at type `(2,3)` and three
 > pole entries `(a,b,nu)=(1,2,3)`, each of mass four.  Thus the family is
-> excluded at `td<=11`, including td8, but remains open at td12.  The review's
-> td12 ledger is a formal arithmetic skeleton at arrival weight `2/3`, not
-> the labelled route, whose inner frame requires weight one.  T1 solves,
+> excluded at `td<=11`, including td8; this **source floor alone** does not
+> remove td12.  The later route-specific representative-budget theorem above
+> does remove the corrected labelled td12 landing.  The review's td12 ledger
+> is a formal arithmetic skeleton at arrival weight `2/3`, not the labelled
+> route, whose inner frame requires weight one.  T1 solves,
 > full transport/terminal data, absolute i-sync, gluing, landing, realization,
 > `G2-PSC`, `G2-BD`, a counterexample, and JC2 remain unproved.
 >
@@ -97,10 +262,11 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > consumer `sum_d price(F,d)`, while the all-flag first-separation theorem is
 > proved only on a singleton-pole characteristic path.  The required strong
 > ambient orbit-tree attachment/full-flag lemma is an explicit blocker.
-> Therefore no `charge_basis` is declared and the canonical LL-1 inventory
-> remains 13.  Prove that strong attachment lemma or a direct two-pole
-> first-separation-set theorem, then tag the affected consumers
-> `FULL_ACTUAL_EXIT`, before applying the conditional 13-to-7 replay.
+> At that review stage no `charge_basis` was declared and the canonical LL-1
+> inventory remained 13.  The later theorem and stable review recorded above
+> close exactly this blocker, supply the typed full carrier, and license the
+> 13-to-7 replay.  Preserve this entry as the provenance of the former
+> fail-closed disposition, not as current frontier state.
 
 > **SEALED-ARTIFACT `G2` TERMINOLOGY RIDER (2026-08-29 09:55Z).** Seven
 > sealed post-round reports use bare `G2` only inside a maximum-scope
