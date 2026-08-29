@@ -1,0 +1,19 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start by reading the campaign guardrail and the valuation-six claim packet, then reconstruct the frozen 569-tail source independently.I'll verify the claim-packet hashes, then pull the reviewed dependency packets and frozen 569-tail artifacts.Hashes match. Next I’ll read the dependency packets, a prior review template, and the frozen source artifacts.Basis is frozen at `93db679d`. Next I’ll hash the cited artifacts and extract `D6^[2]`, `Q1`, and `Q3` from the tails and `K_VECTOR`.Hashes match the cited custody pins. Next I’ll inspect the tail format, compiler contraction, and `K_VECTOR` so the quadratics can be rebuilt from source.I’ll read the compiler’s contraction map, source-column ledger, and the quadratic-normal extractor so the reconstruction is independent of the producer.I’ll reconstruct the quadratics, contraction, and grade-19 census from the frozen tails and V14 multipliers in one exact-arithmetic pass.I have the multipliers and chart. Next I’ll run an independent exact reconstruction of the quadratics, the identity, and the grade-19 census.Reconstruction checks out. I’ll write the hostile review with per-claim verdicts, mutation controls, and a sealed body.Hostile review is in `xmodel/k00-valuation6-hand-obstruction-hostile-review-grok46-93d-20260829.md`.
+
+**Overall: `CONFIRMED`.** Independently reconstructed from the frozen 569 tails, V14 multipliers, and `K_VECTOR` on basis `93db679d`.
+
+| Claim | Verdict |
+|---|---|
+| Source/boundary ledger; `Lambda^6 \| d` kills grades `<12` | **CONFIRMED** |
+| Grade-19 census, every load, Jacobian `-5 Jdet[0]` | **CONFIRMED** |
+| Extraction of `D_{K6}^{[2]}`, `Q1`, `Q3` | **CONFIRMED** |
+| `D_{K6}^{[2]} = -4 Q1 - 32 Q3` | **CONFIRMED** (leftover `{}`) |
+| Raw G12 rows 1,3 impose `Q1(x)=Q3(x)=0` before quotient/sat | **CONFIRMED** |
+| Emptiness of `Lambda^6 \| d` on `D(Jdet[0])`, including `x=0` | **CONFIRMED**; `k6[0]=0` required; `k10[0]` unit and `x\neq 0` unused |
+| 19-jet / same-source formal arc; nothing outside this client | **CONFIRMED** |
+| Remaining positive valuations `{2,3,4,5}`, not existence | **CONFIRMED** on `D(Jdet[0]) ∩ D(k10[0])` |
+
+Mutations (one `D6^{[2]}` coefficient, `-32 → -31`, `Q1→Q2`, `h(0)`, Jacobian sign) all break the claimed identity. No `charge_basis` line.
+
+Seal: body `22926` bytes, SHA-256 `45a6b8d83df5fa99cc2762bef82fb1ed331bc7bca7aeac9ee59afcf38d63020a`.

@@ -13610,3 +13610,102 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Historical uses of “dashboard” meant internal state classifications, not a
   user-facing product. The authoritative operator interface is this chat,
   backed by the newest `LIVE STATE` and the hash-sealed repository record.
+
+## 2026-08-29 17:58Z GLOBAL-INTERFACE EVENT — TD12 SELECTOR ABSENT; U1* NO-GO PROMOTED
+
+- Blind whole-interface attacks by Opus `acd21ced...`, Grok `1d79eeee...`,
+  and Fable `fc1c709d...`, followed by Grok hostile review `444c309e...`
+  and independent Sol audit `2d30bbf1...`, agree on the global arrow. The
+  unconditional spine selects some globally GGV-minimal standard pair,
+  preserves that pair and its topological degree through Sigray
+  normalization, proves `td>=6`, and gives a finite entry menu at each fixed
+  degree. It does not select td12/type `(2,3)`/three poles/U1/B25/S17.
+- Binding integration `4c2fd1de...`/body `0943feb5...` promotes the abstract
+  `U1*(R)` interface no-go for every odd `R>=3`. The load-bearing `k=1`
+  subfamily passes nondegenerate local T1. This is a formal necessary-data
+  family showing reduced-law insufficiency, not occurrence or a map.
+- The proposed Section-7/Riemann--Hurwitz derivation of
+  `td>=s+sum wt` is refuted because it drops component and finite-ramification
+  terms and conflates places with finite-value flags. The bare inequality on
+  actual maps remains unsupported and undecided. `PCB-EXCESS` is recorded as
+  an exact conjectural bridge, not consumed as truth.
+
+## 2026-08-29 17:58Z TD12 EVENT — QUARTET REPAIRED TO SEXTET
+
+- Fable hostile review `440b6c4a...` returns `REPAIRABLE` on Sol producer
+  `b7f07776...`; binding integration `2fcf8b9d...`/body `67bd9c0c...`
+  supersedes the first-nonneutral quartet. Conditional on a named actual
+  td12 three-pole U1 source occurrence, the reduced survivors are A7, C5,
+  B25, S17, D13, and E11.
+- D13/E11 were wrongly deleted by treating P1-shaped interior vertices as
+  absorbing. Exact continuations can lower terminal `psi`; the reviewed
+  lower-floor totals meet the common numerical ceiling and pass current local
+  T1. A7/C5 tails
+  replay as well. None of this asserts an actual tail or a map.
+- Replace the two-detour target by
+  `TD12-U1-FAMILY-AWARE-DETOUR-EXCLUSION/v2`: retain full source/Puiseux
+  provenance and cover A7/C5/D13/E11, W1--W3, pure-epsilon descendants, and
+  any unclassified actual event. The upstream td/type/entry/U1 selector is an
+  independent gap.
+
+## 2026-08-29 17:58Z K00 EVENT — VALUATIONS AT LEAST SIX CLOSE; R2 OLD-PLANE NARROWS
+
+- Grok independently confirms the exact V20R2 valuation-six obstruction.
+  Producer `c9563ced...`, review `a4795743...`, and binding integration
+  `6c2ca262...`/body `49f496bd...` prove that `C6=1`, `k6[0]=0`,
+  `Jdet[0]!=0`, and `Lambda^6|d` are incompatible. Grade 12 gives
+  `Q1=Q3=0`; the grade-19 contraction then forces `Jdet[0]=0`. The separately
+  reviewed valuation-at-least-seven result is retained as provenance but
+  subsumed. With valuation one already dead, V20R2 leaves only valuations
+  2--5 possible, none attained.
+- Opus review `5d9cd05c...` promotes only the producer's exact valuation-two,
+  old-plane `y=0` grade-eight kill, through binding integration
+  `1e3e50e7...`/body `3e8f271f...`. The grade-six locus is reduced
+  set-theoretically to `A=B=0`; `rank DQ` is at most two there, so the proposed
+  ambient-rank grade-seven Fitting preflight is universally soluble and
+  stopped. Reviewer-new nonzero-`y` grade-eight conclusions remain
+  unreviewed and are the smallest potential successor.
+- Custody incident: the Opus review used a repo-wide recursive grep that
+  traversed the fenced `jc2-lean` tree, and later commands statted it. It
+  reports no modification/build and no Lean evidence was used. The violation
+  is disclosed; the unsafe stronger claim that nothing was read is rejected.
+
+## 2026-08-29 17:58Z LIVE STATE — SIGNIFICANT-NEWS CHECKPOINT; FULL ROUND NEXT
+
+- Basis: commit `93db679d3160c957b0610297afccc1f2fad53125` plus the sealed
+  integrations `4c2fd1de...`, `2fcf8b9d...`, `6c2ca262...`, and
+  `1e3e50e7...` and their pinned producers/reviews; atomic commit/push is the
+  immediate action.
+- Coordinator / ideators: Sol coordinates; Sol, Fable 5, Opus 5, and Grok
+  4.6 remain equal-standing blind whole-portfolio researchers.
+- Last full ideation: `2026-08-29T16:35Z`, round `20260829T1517Z`; quiet
+  deadline `2026-08-30T04:35Z`, but the selector reset, sextet correction,
+  and K00 valuation closure are significant news and trigger a fresh round
+  immediately after the clean checkpoint.
+- Last broad web sweep: `2026-08-29T03:40Z`; next deadline
+  `2026-08-30T03:40Z`. Do not sweep early.
+- Last system improvement/check: CAPRUN accepted `2026-08-29T16:35Z`; next
+  48-hour checkpoint `2026-08-31T16:35Z`. Every future ideation round retains
+  a software/system-improvement section.
+- Active lanes: none at the checkpoint boundary. All eight external
+  producer/reviewer runners in this delta are `DONE`, exit zero, with no
+  charge basis. No campaign-owned AWS mathematics is active; heavy or
+  uncertain CAS remains AWS-only under the 512-vCPU account ceiling.
+- Provisional claims: Opus reviewer-derived valuation-two nonzero-`y`
+  grade-eight rank-stratum conclusions are
+  `REVIEW_DERIVED_UNREVIEWED`, with no descendants. `PCB-EXCESS` is a
+  conjectural target, not a provisional theorem.
+- Review queue/debt: no promoted claim awaits review. First candidate after
+  the round is a fresh different-model audit of the reviewer-derived K00 r2
+  nonzero-`y` packet, if the round still ranks it highly.
+- Holds/human gates: none. The user-owned formalization workload remains
+  independent and outside campaign inspection or control.
+- Top gaps: proof side—global actual td/type/entry/U1 selection or bypass,
+  then source-typed four-family td12 detour exclusion; counterexample side—
+  normalized V20R2 valuations 2--5 or a different support. See the newest
+  overlays in `APPROACHES.md`, `ladder/REDUCTION.md`, and `AUDIT.md`.
+- Immediate queue/triggers: (1) seal, validate, commit, and push this atomic
+  checkpoint; (2) launch one blind same-packet whole-portfolio round to all
+  four models, including math and system-upgrade ideation; (3) synthesize and
+  start background hostile reviews without blocking reasonable provisional
+  descendants; (4) run the web sweep only when due or on external news.

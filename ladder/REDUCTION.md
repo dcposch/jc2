@@ -3,6 +3,55 @@
 **Status (2026-08-27): hostile dependency audit / consolidation master;
 normalization/fidelity distinction synchronized with `TRANSPORT.md`.**
 
+## Current frontier overlay — 2026-08-29 17:58Z
+
+The global and conditional arrows must now be kept in two separate chains.
+The maximum reviewed global implication is
+
+```text
+JC2 false
+  -> exists a globally GGV-minimal standard counterexample
+  -> the same pair admits the reviewed Sigray normalization, preserving td
+  -> td >= 6
+  -> at each fixed td, the repaired theorem gives a finite entry menu.
+```
+
+This chain does **not** select `td=12`, type `(2,3)`, three poles, U1, B25,
+or S17. GGV global minimality is not topological-degree minimality. The
+abstract `U1*(R)` family for every odd `R>=3` now proves more sharply that
+the charged reduced merge/trunk/budget interface cannot supply that selector:
+it admits type `(2,3)`, `R` poles, `td=4R`, U1, and a reviewed locally
+T1-compatible P1 continuation in its load-bearing `k=1` subfamily. These are
+formal necessary-data configurations, not maps. The proposed derivation of
+the pole-count bound `td>=s+sum wt` from Section 7/Riemann--Hurwitz is false;
+the bare actual-map inequality is unsupported and undecided. `PCB-EXCESS` is
+an unproved candidate bridge, not an available arrow.
+
+The separate td12 laboratory begins only after assuming an actual normalized
+three-pole U1 occurrence with complete pair/fibre/merge/neutral-prefix
+provenance. Even there the reviewed first-nonneutral target is a **sextet**,
+not a quartet:
+
+```text
+A7, C5, B25, S17, D13, E11.
+```
+
+D13 and E11 are not terminal merely because their current vertices have P1
+shape; exact locally admissible continuations lower terminal `psi`. Thus the
+next conditional arrow is `TD12-U1-FAMILY-AWARE-DETOUR-EXCLUSION/v2`, which
+must source-type and exclude A7/C5/D13/E11 together with W1--W3 and
+pure-epsilon descendants before a B25/S17 landing follows. Passing reduced
+local laws or a lower floor never proves actual occurrence or attainment.
+
+On the independent K00 route, the exact normalized V20R2 source now excludes
+valuation one and every valuation at least six. Only valuations 2--5 remain
+possible on that support, none attained. Within valuation two, the old-plane
+`y=0` branch is excluded through grade eight; the proposed grade-seven
+ambient-rank Fitting packet is false as a discriminator and is stopped.
+Reviewer-derived nonzero-`y` rank-stratum claims are not yet promoted. These
+K00 results constrain a counterexample ansatz and do not supply any arrow in
+the proof-side Keller-to-book chain.
+
 ## Current frontier overlay — 2026-08-28 12:24Z
 
 The pure Sigray architecture now has two additional promoted inputs:

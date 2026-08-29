@@ -7,6 +7,60 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 17:58Z — reset the global selector; close K00 valuations at least six)
+
+- **Separate the global selector from the conditional td12 laboratory.**  The
+  promoted unconditional spine is only
+  `JC2 false -> some GGV-minimal standard pair -> the same pair in a
+  Sigray-normalized frame with td preserved -> td>=6 -> a finite entry menu
+  at each fixed td`.  No reviewed arrow selects `td=12`, type `(2,3)`, three
+  poles, U1, B25, or S17.  GGV minimality minimizes its published base-scale
+  invariant, not topological degree.  Avenue 2 remains principal, but its
+  first target is now an actual, provenance-preserving degree/type/entry/U1
+  selector or a proof that no such selection is needed; local td12 work stays
+  explicitly conditional.
+- **Promote the abstract `U1*(R)` interface no-go, not an occurrence
+  theorem.**  For every odd `R>=3`, exact reduced configuration data of
+  type `(2,3)` with `R` identical pole entries
+  `(a,b,nu_P)=(1,2,3)`, `td=4R`, and a U1 star pass the present local
+  merge/trunk laws and have a P1-compatible continuation; the `k=1` family
+  also passes the reviewed local T1 row.  Thus those reduced laws cannot by
+  themselves select or exclude td12/U1.  These are formal necessary-data
+  configurations, not polynomial maps.  The proposed derivation of
+  `td >= s+sum wt` from Section 7/Riemann--Hurwitz is false: components and
+  finite ramification cannot be dropped.  The bare inequality on actual maps
+  remains unsupported and undecided.  `PCB-EXCESS` is only a precisely named
+  conjectural repair target.
+- **Replace the conditional first-nonneutral quartet by a sextet.**  Given an
+  actual td12 three-pole U1 occurrence and retained source provenance, the
+  surviving first nonneutral reduced rows are A7, C5, B25, S17, D13, and
+  E11.  D13 and E11 cannot be deleted by their immediate terminal budgets:
+  continued P1-shaped interior paths can lower terminal `psi`, and exact
+  locally T1-compatible witnesses have lower-floor totals reaching the
+  shared numerical ceiling.  Hence the
+  correct conditional task is
+  `TD12-U1-FAMILY-AWARE-DETOUR-EXCLUSION/v2`, covering all four detour
+  starts plus W1--W3 and pure-epsilon descendants with full source/Puiseux
+  typing.  Reduced tails are non-exclusion witnesses, not realizations.
+- **Strengthen Avenue 36's exact source stop and retain the remaining
+  valuations.**  On normalized V20R2, `C6=1`, `k6[0]=0`, and
+  `Jdet[0]!=0`, grade 12 plus the grade-19 contraction exclude every formal
+  solution with valuation `v_Lambda(d)>=6`.  Together with the promoted
+  valuation-one kill, only valuations 2, 3, 4, and 5 remain possible on this
+  support; none is known to occur.  At valuation two, the old-plane `y=0`
+  branch is independently excluded through grade eight.  The proposed
+  grade-seven ambient-rank Fitting packet has zero exclusion power and is
+  stopped.  Reviewer-derived claims about the nonzero-`y` rank strata remain
+  provisional and require a fresh different-model review before use.
+- **Rebalance without speculative heavy compute.**  Proof work should attack
+  the global actual-realizability/selector interface and the source-typed
+  four-family detour exclusion in parallel.  Counterexample work should
+  investigate V20R2 valuations 2--5, beginning with an independent review of
+  the exact nonzero-`y` valuation-two strata before any successor
+  computation.  All current certificates are desk-scale; no campaign-owned
+  AWS job is licensed by this delta.  This significant-news checkpoint
+  triggers a fresh blind whole-portfolio round immediately after commit.
+
 ## Superseding strategy overlay (2026-08-29 16:35Z — close the valuation-one K00 seed; move td12 upstream)
 
 - **Promote grade four and use radical-first scheduling.** Different-model

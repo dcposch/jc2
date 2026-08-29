@@ -7,6 +7,51 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
+> **GLOBAL SELECTOR RESET; ABSTRACT U1 INTERFACE NO-GO PROMOTED
+> (17:58Z).** Three independent occurrence attacks agree that the only
+> unconditional proof spine reaches a Sigray-normalized globally selected
+> counterexample with `td>=6` and a finite entry menu at each fixed degree.
+> Nothing reviewed selects `td=12`, type `(2,3)`, three poles, U1, B25, or
+> S17.  Integration `4c2fd1de...`/body `0943feb5...` promotes the abstract
+> `U1*(R)` interface family for every odd `R>=3`: current reduced local laws
+> admit it, including a reviewed nondegenerate T1 continuation for the
+> load-bearing `k=1` subfamily.  This proves insufficiency of the interface,
+> not occurrence or a map.  The proposed Section-7/Riemann--Hurwitz proof of
+> `td>=s+sum wt` is refuted; the bare actual-map inequality is unsupported
+> and undecided, while `PCB-EXCESS` is only a named missing lemma.
+
+> **TD12 CONDITIONAL QUARTET REJECTED; SIX FIRST-NONNEUTRAL ROWS SURVIVE
+> (17:58Z).** Fable's hostile replay returns `REPAIRABLE` and binding
+> integration `2fcf8b9d...`/body `67bd9c0c...` replaces A7/C5/B25/S17 by
+> A7, C5, B25, S17, D13, and E11.  D13/E11 cannot be discarded by treating
+> a P1-shaped interior vertex as terminal: exact continuations reduce
+> terminal `psi`; their computed lower-floor totals meet the common ceiling,
+> and they pass every current local
+> filter and T1 row.  A7/C5 tails replay as well.  The new conditional target
+> is `TD12-U1-FAMILY-AWARE-DETOUR-EXCLUSION/v2`, source-typing all four
+> detour families plus W1--W3 and pure-epsilon descendants.  These formal
+> records show local-law insufficiency; no actual occurrence theorem, map,
+> counterexample, or JC2 conclusion is refuted.
+
+> **K00 V20R2 VALUATIONS AT LEAST SIX DIE; VALUATION-TWO OLD-PLANE BRANCH
+> NARROWS (17:58Z).** Exact producer/reviewer reconstruction and integration
+> `6c2ca262...`/body `49f496bd...` prove that, with `C6=1`, `k6[0]=0`, and
+> `Jdet[0]!=0`, no normalized V20R2 formal solution has
+> `v_Lambda(d)>=6`.  Grade 12 gives two exact quadrics and the grade-19
+> contraction forces the Jacobian target to vanish.  Together with the
+> valuation-one theorem, only valuations 2--5 remain possible on this
+> support; none is attained.
+>
+> Opus review and integration `1e3e50e7...`/body `3e8f271f...` separately
+> promote the valuation-two, `y=0` old-plane exclusion through grade eight.
+> Set-theoretically the grade-six locus is `A(y)=B(y)=0`; there
+> `rank DQ(y)<=2`, with lower-rank substrata, so the proposed ambient-rank
+> grade-seven Fitting packet is stopped and is in fact universally soluble.
+> Reviewer-new nonzero-`y` grade-eight claims remain unreviewed.  One review
+> run improperly traversed and later statted the fenced `jc2-lean` tree; it
+> reported no modification/build and no Lean evidence was used, but the
+> access violation is recorded rather than erased.
+
 > **K00 GRADE FOUR PROMOTED; NORMALIZED VALUATION-ONE SEED DIES AT
 > GRADE FIVE (16:35Z).** Grok's hostile review of Opus grade four returns
 > `PASS_WITH_REPAIR`; integration `fbe5b580...`/body `917207a7...` promotes

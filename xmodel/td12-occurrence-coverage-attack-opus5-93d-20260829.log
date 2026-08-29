@@ -1,0 +1,22 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written and sealed: `xmodel/td12-occurrence-coverage-attack-opus5-93d-20260829.md` (body 51552 bytes, SHA-256 `19d15346…`, basis `93db679d…`, `charge_basis=ABSENT`).
+
+## What I found
+
+**The answer to question 3 is no, and I can prove it at interface level.**
+
+I built the exact quantified implication graph (§2) and found the arrow set is closed under a single operation the interface cannot see: **pole inflation**. Concretely I constructed `U1*(r)` — for every odd `r ≥ 3`, an abstract configuration of type `(2,3)` with `r` poles `(1,2,3)`, a U1 star merge of arity `r` with equal arrivals `(μ,w)=(2,3/2)`, and `td = 4r`. It satisfies every promoted configuration axiom I could enumerate (T7, MP0/MP1, St 8.4, U1 Theorem B/C/C′, MP2, N1, R1.0, R1.3/R1.4, Prop 8.1(iv), ASM′/NM′ **with equality**, Cor 7.1*/St 9.4). Its `r=3` member *is* the campaign's reviewed td=12 record — I re-derived `ν_F=25`, `κ̄=17`, `X=25`, `λ≥8`, budget 9, slack 1, sibling at `ν_F=17` with slack 0, and `B/A=9/8` from the general law rather than copying them.
+
+Exact closed forms, verified for all odd `r` in [3,59] (zero failures):
+- P1-fitting trunk terminals are indexed by divisors `k | 3r−1`, `ν_F = 3r+2(3r−1)/k`, `M_F = k+2`, `w_F = (k+1)/(k+2)`, `ψ = k+1`;
+- **total charge floor `λ = 3r−1`, independent of `k`**; budget `4r−k−2`; **slack `= r−k−1`**.
+
+So the budget layer gets *looser* as td grows. The td=12 "slack one" and sibling saturation — the two facts that make the reviewed exact-charge theorem sharp — are strictly r=3 phenomena of the tightest member.
+
+Sharpest single statement: **12 = 3 × 4**, where only `4 = min_type max(β,2α)` (uniquely at `(2,3)`) is premise-derived; the `3` is a hypothesised merge arity. The reviewed source-mass floor really proves `td ≥ 4R`, with equality forcing type `(2,3)` and `R` poles `(1,2,3)` — r-uniformly.
+
+Also: the earliest-marked-event construction is **undefined**, not merely incomplete, in the off-axis sector (`M_P = b ≥ 2` at the pole, so there is no `M=1` baseline to break) — i.e. the strongest reviewed landing theorem doesn't apply to the sector td12/U1/B25/S17 live in. Neutral quotienting turned out **sound** on chain edges ((w,M) is a sufficient statistic there) but unsound at case-III merges and every index-reading consumer.
+
+**Proposed lemma (PCB):** replace the constant `1` by `s` in the repaired Corollary 7.1*: `td ≥ s + Σ wt`. One-constant edit, conservative at `s=1`, and it kills every one-step terminal of `U1*(r)` at every `r`. I gave a proof skeleton anchored on an exact Riemann–Hurwitz identity I derived (`Σ_{non-pole ∞}(e_F−1) = 2g−2+d+s`, which also yields: a generic fibre of a counterexample always has a non-pole place at infinity), with the one open step stated as open — the flag/place bridge FALLACY-v2 forbids assuming.
+
+Two caveats I want to be explicit about: `U1*(r)` is an abstract admissible configuration, **not** a polynomial pair, so Theorem NG is a statement about the recorded interface, not about realizability; and PCB is proposed, not proved. I also note honestly that PCB is untestable inside the Keller class (`s ≥ 2` already forces `td ≥ 6`), so its falsification test has to be an internal audit of the Euler integration.

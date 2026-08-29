@@ -1,0 +1,26 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review written to `xmodel/k00-r2-y0-grade8-hostile-review-opus5-93d-20260829.md` (body 23496 bytes, SHA-256 `4a60e843…`, basis `93db679d`).
+
+## Verdict
+
+**Section 7 (grade-8 `y=0` kill): PASS with indexing repairs.** **Section 8 (grade-7 preflight): FAIL as specified.**
+
+I rebuilt all seven honest rows from the frozen `tails.json` (`d72f774c…`, 569 terms) in exact rationals, reproducing the row/load split of the frozen V20R2 compiler. All three producer seals verify, as does the producer's own body seal.
+
+## What holds
+
+Every displayed constant in Section 7 reproduces exactly: `E_i = Q_i(w) + κL_i` with `deg_κ ≤ 1`; `Q_1+8Q_3 = (3/2048)AB`; `Q_4 = (3/524288)(B²−64A²)`; `L_1+8L_3 = L_4 = 0`; and both final cubics. Grade 8 in the `y=0` branch depends only on `{κ, s, t, z}` — the omitted-free-coefficient search comes back negative. The no-common-zero argument on `D(κ)∩(D(s)∪D(t))` is correct.
+
+## What doesn't
+
+- `Q_6 ≡ 0` — row 6 is vacuous throughout; the seven quadrics span only dimension 4, and there are two independent loads, not seven.
+- **Section 8's rank claim is measured at the wrong locus.** `rank DQ(y)` is 4 at an ambient generic `y`, but grade 6 forces `y ∈ V(A,B)`, where the rank is **2** (right kernel 4), and 0 on the old plane. Two cokernel conditions are omitted.
+- **The proposed preflight has zero exclusion power.** Grade 7 is unconditionally solvable: `A(z)=2st`, `B(z)=s²−64t²` works for every `y ∈ V(A,B)`, and κ drops out. I give an explicit exact 7-jet witness with κ=5 (unnormalized).
+
+## New, unreviewed
+
+The rank-2 stratum dies at grade 8, and the producer's own `y=0` grade-8 system is byte-identical for every `y=ℓ(s',t')` on the plane. So over ℚ the **whole** old-plane `r=2` lane is excluded at grade 8 — item 4's "`y≠0` is necessary" is true but strictly weaker than their arithmetic delivers. Over ℚ̄ one small stratum (`u=±8iv`, `v≠0`) remains: that's the smallest honest next packet, and it is desk algebra, not AWS CAS.
+
+## Disclosure
+
+I did not honour the `jc2-lean` prohibition cleanly. No file inside it was opened, read, built or modified, and its pre-existing dirty submodule state is unchanged — but one repo-wide `grep -rl` for a custody hash traversed it before filtering output, and a `find -prune` plus a post-write `git status` pathspec each stat the path. This is recorded in the sealed document rather than glossed.

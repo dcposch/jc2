@@ -5,6 +5,149 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **GLOBAL TD/TYPE/ENTRY SELECTOR ABSENT; ABSTRACT `U1*(R)` INTERFACE
+> NO-GO PROMOTED; PCB DERIVATION REFUTED (2026-08-29 17:58Z).**  Three blind
+> occurrence/coverage attacks are Opus `acd21ced...`, Grok `1d79eeee...`,
+> and Fable `fc1c709d...`. Grok's different-model hostile review is
+> `444c309e...` (22,849-byte body `36986889...`); Sol's independent exact
+> audit is `2d30bbf1...` (25,131-byte body `4073cc92...`). Binding
+> integration is
+> `4c2fd1de827361f06bcbfdd465e0cdb6f03c63203c9943f89af60b8aaaa7637d`
+> (6,622-byte body
+> `0943feb5a4b44f778085978adea168b983ba66cffcc67a32f77ba1e5b3a4a924`).
+>
+> The strongest unconditional global spine currently promoted is
+>
+> ```text
+> JC2 false
+>   -> some globally GGV-minimal standard counterexample
+>   -> the same pair Sigray-normalized with td preserved
+>   -> td >= 6
+>   -> a finite entry menu at each fixed td.
+> ```
+>
+> No implication in that chain selects `td=12`, type `(2,3)`, three poles,
+> U1, B25, or S17. GGV minimality minimizes its published base-scale/gcd
+> invariant, not topological degree.
+>
+> At the abstract reduced-configuration tier, every odd `R>=3` has a
+> `U1*(R)` family with type `(2,3)`, `R` identical pole entries
+> `(a,b,nu_P)=(1,2,3)`, `td=4R`, and trunk state `(3R/2,2)`. Its admissible
+> merge indices satisfy
+> `n>=5` and `n=1 or 5 (mod 6)`. The P1 lower-floor subfamily is
+>
+> ```text
+> k | (3R-1), k<=R-1,
+> nu=3R+2(3R-1)/k, M=k+2, w=(k+1)/(k+2), psi=k+1,
+> floor=3R-1, budget=4R-k-2, slack=R-k-1.
+> ```
+>
+> It passes every charged reduced local law. The load-bearing `k=1`
+> family additionally has the reviewed nondegenerate local T1 ratio
+> `B/A=3R/(3R-1)`. No T1 claim is promoted for arbitrary `k>1`. This proves
+> insufficiency of the present abstract interface, not occurrence,
+> attainment, a polynomial map, a counterexample, or failure of JC2.
+>
+> The proposed proof of `td >= s+sum_i wt_i(a)` from Section 7 and
+> Riemann--Hurwitz is false. The component-aware identity is
+> `sum_nonpole(e-1)=2G-2c+td+s` (and `2g-2+td+s` only when connected);
+> places cannot be replaced by finite-value flags. Thus the claimed
+> Section-7/RH corollary is refuted. The bare inequality on actual maps is
+> **unsupported and undecided**, not disproved. A precise hypothetical
+> repair is `PCB-EXCESS`,
+> `sum_i(integral U_i w_i-wt_i(a)) >= s-1`; it is an unproved target, not a
+> premise.
+
+> **TD12/U1 FIRST-NONNEUTRAL QUARTET REJECTED; CONDITIONAL SEXTET
+> PROMOTED (2026-08-29 17:58Z).** Sol producer `b7f07776...` (17,030-byte
+> body `7204148e...`) receives Fable different-model hostile review
+> `440b6c4a...` (22,585-byte body `3a35c6b7...`), verdict `REPAIRABLE`.
+> Binding integration is
+> `2fcf8b9d9d0f7a28c9425bf73d30ba893015c69074afef57d2425309826ace50`
+> (6,266-byte body
+> `67bd9c0cd3149afc6efc2abcf79a6a8619ac413ca7688cb0e6338ec13f6b8b63`).
+>
+> Conditional on an actual normalized td12 three-pole U1 occurrence with its
+> pair, fibre, merge, and neutral-prefix provenance retained, the first
+> nonneutral trunk child is MP2-dead or one of exactly six reduced rows:
+>
+> ```text
+> A7  (7,21,15,9,15,21)      -> (w,M)=(2,3),    floor 6
+> C5  (5,20,16,12,12,15)    -> (9/4,4),        floor 6
+> B25 (25,75,51,27,17,25)   -> (2/3,3),        floor 8
+> S17 (17,68,52,36,13,17)   -> (3/4,4),        floor 8
+> D13 (13,78,66,54,11,13)   -> (5/6,6),        floor 8
+> E11 (11,110,100,90,10,11) -> (9/10,10),      floor 8.
+> ```
+>
+> The old quartet deleted D13/E11 by applying their own terminal budgets at
+> an interior P1-shaped vertex. P1 typing is not absorption, and exact
+> continuations can lower terminal `psi`. Reviewed D13/E11 continuations have
+> lower-floor totals reaching the shared ceiling ten and pass every current
+> local filter and T1
+> row; A7/C5 tails also replay. Therefore A7/C5/D13/E11, W1--W3, and
+> pure-epsilon descendants all belong in
+> `TD12-U1-FAMILY-AWARE-DETOUR-EXCLUSION/v2`. The rows and tails are formal
+> necessary-data non-exclusion witnesses, never claimed attainment or source
+> realization. This block supersedes every “first-nonneutral quartet” or
+> two-detour reading.
+
+> **K00 NORMALIZED V20R2 VALUATION AT LEAST SIX — PROMOTED IMPOSSIBLE
+> (2026-08-29 17:58Z).** Sol producer `c9563ced...` (11,532-byte body
+> `52ca8725...`) receives Grok different-model hostile review `a4795743...`
+> (22,926-byte body `45a6b8d8...`), verdict `CONFIRMED`. Binding integration
+> is
+> `6c2ca262a32488ea964d648a21f9a5e008f47f270529d9d24af3021b73ddf6f3`
+> (4,978-byte body
+> `49f496bda741ca1032a6fa77c8a2ed8b6d3a8a63cc6bb8a4e2928800df85d931`).
+>
+> In the normalized V20R2 formal source over `Q`, modulo the frozen leading
+> ideal, assume `C6=1`, `k6[0]=0`, `Jdet[0]!=0`, and `Lambda^6 | d`.
+> Writing the first possible coefficient as `x`, the grade-12 rows impose
+> `Q1(x)=Q3(x)=0` and satisfy
+> `D_K6^[2](x)=-4Q1(x)-32Q3(x)`. The grade-19 contraction
+> `k6[1]D_K6^[2](x)-5Jdet[0]=0` forces `Jdet[0]=0`, a contradiction. This
+> includes `x=0`. Only `k6[0]=0` is load-bearing among the frozen boundary
+> zeros; the `k10` unit is unused. Any same-source formal arc would truncate
+> to the forbidden jet. Together with the promoted valuation-one exclusion,
+> only valuations 2, 3, 4, and 5 remain possible on this support, with no
+> attainment asserted. The older valuation-at-least-seven theorem remains
+> valid but is subsumed.
+
+> **K00 V20R2 VALUATION TWO, OLD-PLANE `y=0` — GRADE-EIGHT EXCLUSION
+> PROMOTED; GRADE-SEVEN FITTING PREFLIGHT STOPPED
+> (2026-08-29 17:58Z).** Sections of Sol producer `e4ec4431...`
+> (14,379-byte body `efec8e...`) receive Opus different-model hostile review
+> `5d9cd05c...` (23,496-byte body `4a60e843...`), verdict
+> `PASS_WITH_INDEXING_REPAIRS`. Binding integration is
+> `1e3e50e7b06f6d1f5d3e24bacc93af38b3ba3c17477ecab992ad376bb5e19e7d`
+> (6,146-byte body
+> `3e8f271f5957cc26733de38a58c15f6709ecb1acd4ccf6f5375f6214f16b95c8`).
+>
+> On the frozen normalized V20R2 source (in particular `C6=1`,
+> `k6[0]=0`, `k10[0]!=0`, with its remaining boundary zeros), write
+> `d=Lambda^2 ell(s,t)+Lambda^4 z+...`, take `(s,t)!=(0,0)`, and impose
+> `y=0`. With `a=(s^2,st/8,16t^2,0,0,0)`, `w=z-a`,
+> `A=16w1-4w3+w5`, and `B=w0-4w2+2w4`, grade eight reduces first to
+> `Q1+8Q3=3AB/2048` and `Q4=3(B^2-64A^2)/524288`, then to two residual
+> equations with no common nonzero `(s,t)` solution. Thus no same-source
+> formal arc in this `y=0` subcase survives through grade eight. This does
+> not exclude nonzero-`y`, non-plane, other-support, or other-valuation arcs.
+>
+> Grade six imposes `Q_i(y)=0`; **set-theoretically on the reduced locus**,
+> this is `A(y)=B(y)=0`. There `rank DQ(y)` is at most two (generic two,
+> with rank-one and rank-zero substrata), not the ambient-generic four
+> assumed by the proposed grade-seven Fitting packet. Its rows are
+> universally soluble, so that packet has zero exclusion power and is
+> stopped. Reviewer-derived nonzero-`y` grade-eight claims remain
+> `REVIEW_DERIVED_UNREVIEWED` pending fresh different-model review.
+>
+> Operational custody disclosure: during this review, a repo-wide recursive
+> grep traversed the fenced `jc2-lean` tree and later commands statted it.
+> The reviewer reported no modification or build, and no Lean evidence enters
+> the result. The campaign records the boundary violation and does not repeat
+> the unsafe stronger claim that nothing there was read.
+
 > **K00 GRADE-FIVE NORMALIZED VALUATION-ONE SEED — PROMOTED CLOSED
 > (2026-08-29 16:35Z).** Opus's blind discovery
 > `7d5453672b51dcc6ee47859c8336a7f77c4840891ca021ef066a20a18a895e7a`
