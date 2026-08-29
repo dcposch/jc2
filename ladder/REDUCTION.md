@@ -3,6 +3,23 @@
 **Status (2026-08-27): hostile dependency audit / consolidation master;
 normalization/fidelity distinction synchronized with `TRANSPORT.md`.**
 
+## Current frontier overlay — 2026-08-29 21:31Z
+
+The unconditional Keller-to-book chain is unchanged. On the independent
+literal normalized V20R2 source, valuation three is now reviewed empty
+through grade 12; the stale upstream preflight is quarantined and two
+independent row reconstructions carry the theorem. Together with the other
+promoted valuation exclusions, only valuation four remains in the integer
+`K[[Lambda]]` partition, narrowed to `R4-00 disjoint-union R4-02`.
+
+This is not a source-wide closure theorem. In the ramified
+`e=2,m=1,B11111` cell, a provisional exact attack kills nonzero leading
+ranks at grade 3 but leaves a rank-zero witness through grade 5; grade 7 is
+the first sharp K10 successor. That cell remains under review/attack. Other
+load faces, `C6=0`, other supports, receiver/Gate-T, and the global proof
+selector remain independent obligations. No surviving finite packet is
+attainment, an arc, or a map.
+
 ## Current frontier overlay — 2026-08-29 21:23Z
 
 The unconditional Keller-to-book chain is unchanged. On the separate

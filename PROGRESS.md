@@ -7,6 +7,27 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
+> **VALUATION THREE PROMOTED EMPTY; LITERAL INTEGER FRONTIER IS NOW
+> VALUATION FOUR (21:31Z).** Fable independently rebuilds the complete
+> valuation-three fan and all three remaining grade-12 cells with 79 exact
+> checks; Opus separately reconstructs the source fan and reaches the same
+> endpoint. Binding integration `e6381332...`/body `d1ff817c...`
+> quarantines the source packet's mismatched preflight digest and relies on
+> the independent reconstructions plus the sealed `02fb368a...` endpoint
+> replay. Leading ranks one/two die at grade 9, the old-plane successor cells
+> die by grade 12, and no same-source exact-valuation-three formal section
+> exists. Combining all reviewed integer valuations leaves only valuation
+> four on the literal normalized V20R2 section functor, with
+> `R4-00/R4-02` neither attained. The ramified `e=2,m=1` source remains a
+> separate active frontier.
+>
+> Its first exact attack is provisionally sharp through grade 5: all
+> nonzero leading ranks die at grade 3, while the old rank-zero plane has a
+> genuine finite-prefix witness. The restricted calendar delays K10 from
+> generic grade 6 to sharp grade 7, K6 from 14 to 15, with K2 at 22 and
+> targets at 29/33/37/38. This is a surviving prefix, not an arc or
+> attainment; independent review and the grade-7 continuation are active.
+
 > **VALUATION FIVE PROMOTED EMPTY; FIRST RAMIFIED SOURCE CELL EMITTED
 > (21:23Z).** Fable's independent exact engine confirms every rank-fan and
 > grade-19 claim in the repaired valuation-five producer. Binding integration

@@ -7,6 +7,26 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 21:31Z — close valuation three)
+
+- **Concentrate the literal integer atlas on valuation four.** Two independent
+  hostile reconstructions confirm the complete valuation-three fan and the
+  three grade-12 endpoint kills. The stale source-preflight digest is
+  quarantined; the theorem is carried by the reconstructions and the sealed
+  endpoint replay. Together with valuations one, two, five, infinity, and at
+  least six, this leaves only the reviewed
+  `R4-00 disjoint-union R4-02` packet on the literal normalized
+  `K[[Lambda]]` source. Continue `R4-00` and the review of the provisional
+  `R4-02` kill concurrently.
+- **Do not confuse the one-cell integer frontier with valuative closure.**
+  The separate `e=2,m=1,B11111` packet is already outside the integer
+  partition. Its first provisional attack kills nonzero leading ranks at
+  grade 3, leaves the old rank-zero plane with a genuine grade-5 prefix
+  witness, and makes grade 7 the first sharp K10 successor. Review and that
+  continuation run concurrently. Any eventual valuation-four closure would
+  finish only the literal section functor, not ramified DVR incidence, other
+  load faces, `C6=0`, or other supports.
+
 ## Superseding strategy overlay (2026-08-29 21:23Z — close valuation five; enter the ramified atlas)
 
 - **Promote valuation five and concentrate the integer fan on three/four.**

@@ -13878,3 +13878,40 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   review and a provisional exact attack run in parallel. The result does not
   cover `C6=0`, other load-order faces or cones, receiver/Gate-T, another
   support, or the global selector.
+
+## 2026-08-29 21:31Z REVIEW EVENT — VALUATION THREE PROMOTED EMPTY
+
+- Fable full-fan review `c9711e2e...`/body `611ff99b...` independently
+  rebuilds all 569 tails and runs 79 exact checks plus eight sensitivity
+  probes. Opus source review `6cad7b80...`/body `c567c05e...` separately
+  confirms the source fan and independently reaches the grade-12 endpoint.
+- Binding integration `e6381332...`/body `d1ff817c...` promotes exact
+  valuation-three field-valued finite-jet emptiness and the immediate
+  same-source formal-section exclusion. All branches die by grade 12;
+  grades 13--19 are unreachable after the empty prefix, not silently zero.
+- The source packet's declared preflight SHA `bac4b688...` does not match
+  committed bytes `a6eec646...`. That replay/transcript is quarantined.
+  Independent reconstructions plus the sealed endpoint replay
+  `02fb368a...` carry the theorem; no sealed producer is rewritten.
+- The literal normalized integer atlas now has only valuation four,
+  `R4-00/R4-02`, still with no attainment. Ramified `e>1`, other
+  load/support faces, arcs/maps, the atlas-to-JC2 bridge, and JC2 itself
+  remain open.
+
+## 2026-08-29 21:36Z RAMIFIED EVENT — E2M1 PREFIX REACHES GRADE FIVE
+
+- Sealed provisional certificate `a6fd11f1...`/body `0b6bb668...` and
+  replay `b4fd505d...` attack the first missing
+  `e=2,m=1,B11111` cell. Ordinary and optimized replay pass; residual
+  canonical bytes have SHA `f471559d...`.
+- Every nonzero leading-matrix rank dies at literal grade 3. Rank zero is
+  `x=ell(s,t)`; its exact residual begins
+  `G4=Q(w)` and
+  `G5=DQ(w)[v]+(1/2)D2c3(ell)[w,w]`, and a genuine finite prefix witness
+  exists.
+- On the rank-zero plane the generic K10 grade-6 term cancels and grade 7 is
+  sharp. K6 cancels at generic grade 14 and is sharp at 15; K2 is sharp at
+  22; targets arrive at 29/33/37/38. The grade-7 continuation and Opus
+  hostile review run concurrently.
+- No point, arc, map, attainment, source-wide closure, other load face,
+  support, or JC2 conclusion is claimed.

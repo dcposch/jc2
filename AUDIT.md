@@ -5,6 +5,35 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **K00 NORMALIZED V20R2 VALUATION THREE — REVIEWED FINITE-JET
+> EXCLUSION PROMOTED; STALE PREFLIGHT QUARANTINED
+> (2026-08-29 21:31Z).** Sol source packet `6940e1ea...` (19,763-byte
+> body `c2fffead...`) and endpoint producer `e84f2951...`
+> (11,923-byte body `0dca07ec...`) receive independent Opus source review
+> `6cad7b80...` (27,921-byte body `c567c05e...`) and Fable full-fan
+> review `c9711e2e...` (19,677-byte body `611ff99b...`). Binding
+> integration is
+> `e638133202c6e3fe95f64e1bcdc6363cb4e77c58caf9d6a530fb94a63944e1a7`
+> (6,300-byte body
+> `d1ff817cb29ca4b29ce2e1093a0a3cd206318b19a76d7a0fc70203bedde766ae`).
+>
+> On the declared source, leading ranks one/two die at grade 9. On the old
+> plane, next rank two dies at grade 11 and next rank one at grade 12. The
+> next-rank-zero block uses the shifted effective coordinates
+> `U=u_z+5kappa*s/6`, `V=v_z-5kappa*t/6`; effective rank zero dies at
+> grade 11, and both effective-rank-one signs plus effective rank two die at
+> grade 12 by exact localized unit/resultant certificates. The case tree is
+> exhaustive, so no same-source exact-valuation-three formal section exists.
+>
+> The packet declares replay SHA `bac4b688...`, while the committed
+> preflight bytes have SHA `a6eec646...`. The declared transcript is not
+> promotion evidence. The independent reconstructions and endpoint replay
+> `02fb368a...` supersede it mathematically; the drift remains recorded.
+> Promotion also binds the contracted `K_VECTOR.txt` hash `940d9e42...`,
+> uses structural rather than hard-coded censuses, and corrects the
+> isotropic-source and quotient-`v^3` wording. No scheme, ramified-DVR,
+> other support/load face, map, counterexample, or JC2 claim follows.
+
 > **K00 NORMALIZED V20R2 VALUATION FIVE — REVIEWED FINITE-JET
 > EXCLUSION PROMOTED (2026-08-29 21:23Z).** Opus producer
 > `91dcf173...` (60,345-byte body `a13c02ed...`) receives Sol's

@@ -1,0 +1,18 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/qcs-a2-filling-and-labelled-obstruction-hostile-review-opus5-20260829.md` (40,810 bytes, one standalone `<!-- BODY-END -->`, no seal, no exit price, no `charge_basis`). Basis resolved to `0375694aa21fd8db3b465ef2098ca539106a1582`; all six custody pins verified byte-exactly.
+
+## Summary of findings
+
+**Confirmed as stated (recomputed, not voted):** `K = Σbᵢ(dᵢ−1)` is exactly the weighted finite-ramification / vanishing-**zero**-cycle dimension and a positive half-twist length after morsification (rider: needs `bᵢ ∈ Z₊`, which holds). The rank-nullity implication from surjective `∂_P`, `Ψ` is valid, and I verified its target `K ≥ δ+s−1` is *literally* the promoted `Ξ ≥ 0`. The five-stabilization `D⁴` PALF, its unimodular handle matrix, the `A₄` germ (`μ=4`, one branch, genus-2 Milnor fibre, two moving points, jump `5 = 4+1`), and the whole passport (`A₆` verified by group order, `G=1`, `Σ₁,₄`, `G_m ⊔ A¹`) all check out.
+
+**Independent cross-check worth having:** the promoted margin `Ξ = d−s−Σbᵢ` *is* Riemann–Hurwitz for `g|_{F_a}`, since `Jac=1` makes `g` étale on affine fibres.
+
+**Three things I attacked successfully:**
+
+1. **Report 1's pole-endpoint claim is REFUTED.** The germ's two colliding points are *finite-value* ends, not poles — so the natural `∂_P` is zero on the only collision the campaign has computed.
+2. **`A²`-filling/PALF is a category error.** `Jac(f,g)=1` makes `f` a **submersion**: no interior critical points, no page vanishing 1-cycles at all. The lane is empty structurally, so §3's control refutes a hypothesis nobody could hold.
+3. **Report 2 both underclaims and overclaims.** Underclaims: `2G+s=4` is forced, so the passport genus isn't a free choice — the obstruction is germ-intrinsic, and "try an alternative germ" aims at the wrong knob. Overclaims: "invalidates neither … the degree-six dependency control" — it *does* invalidate it as a **joint** witness.
+
+**New exact content:** a closed-form **GENUS-BUDGET** `(b−1)(d₁−m) + gcd(b,m) ≥ s+1` with `Ξ = 1−s` throughout the promoted family, which bites only for pure-power `φ`. That yields two **repaired controls** — notably `(b,d₁,s)=(5,3,2)` at the *same* `d=6`, `b=5`, `s=2`, pole orders `(5,1)`, `Ξ=−1`, with an explicit transitive `A₆` Hurwitz witness. So report 2's obstruction is real but does **not** close the lane.
+
+**Ruling:** they sharpen the *typing* of the barrier while report 2 demolishes its only joint witness. The barrier is currently unwitnessed but not refuted. Cheapest next discriminator: GLUE-OR-KILL at `(5,3,2)`; do not run any mapping-class/Kirby search.

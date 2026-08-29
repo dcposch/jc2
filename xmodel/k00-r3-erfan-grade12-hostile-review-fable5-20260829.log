@@ -1,0 +1,19 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review complete. The report is written to `xmodel/k00-r3-erfan-grade12-hostile-review-fable5-20260829.md` (the only repository write), ending with a single standalone body-end marker and no seal.
+
+## Verdict: PASS_WITH_REPAIRS — every mathematical claim CONFIRMED, one custody FAIL
+
+**Custody.** Certificate, replay, packet, tails, compiler, and library all match their pins (body hashes included; basis = HEAD). The **source preflight fails custody**: on-disk `a6eec646…` vs the pin `bac4b688…` recorded both in my tasking and in the sealed packet's own §8, and the file is untracked so the sealed bytes are unrecoverable. The Opus review lane for the upstream packet also produced no report (96-byte log). So the branch-completeness packet the certificate charges was unreviewed *and* without valid replay evidence.
+
+**Response: full independent reconstruction.** I wrote a fresh parser/arithmetic stack (no import of the pinned engine, and a different localization-decision method — clearing bounded inverse-variable degree by base powers in a domain), rebuilt the seven rows from the 569 tails, confirmed tail semantics against the pinned compiler, and re-derived the *entire* fan, not just the grade-12 endpoint: 79 checks, 8 sensitivity probes, ~10 s. Highlights:
+
+- **The 5/6 shift is forced, not assumed**: `2M4_i(ell(s,t),q) = (5/6)[alpha_i(s,−t)A(q)+beta_i(s,−t)B(q)]` holds for all seven rows; grade 11 is exactly the `[[U,−V],[64V,U]]` block (scalars 3/1024, 3/16384) plus a coker-compatible inhomogeneity matching the certified h1, h2, with no other jet dependence — so the E0/E1(±)/E2 split is complete.
+- **ER1(±)**: C1/C3, the unit identity `12288·C1 − 6144j·C3 = 800t⁶κ²qV²`, and the Bezout certificate all verified (both signs separately; wrong-ray and 6144→6143 probes detect).
+- **ER2**: N1/N3 are exact binary quadratic *forms* (no dropped terms), the coefficient table is literal, the closed resultant formula equals the 4×4 homogeneous Sylvester determinant, `Res = −(5⁸/(2⁷⁶3⁴))κ⁸(s²+64t²)¹²` exactly, both rays and the Δ contradiction hold.
+- **Upstream kills re-proved**: L2/L1 at grade 9, N2 at 11, N1 at 12, E0 at 11. Two subtleties worth recording: N1's grade-11 row 4 is exactly `(3/256)v_y²(s−8εit)` — linear, single ray, no conjugate leak — and its grade-12 kill row is universally jet-blind, hence d[8]-robust; the L2 "quotient constants 1/8, −1/64" are really `v³`-multiples (wording repair, kill still honest).
+- **Census machine-verified**: exactly 38 columns reach grade ≤ 12; the only deep-column routes are three quadric polarizations killed by `DQ(ell)≡0`; no K2 or target column arrives before grade 14/15.
+- The producer replay passes in plain and `-O` (~5.0 s), byte-identical output, all four hashes matching the certificate.
+
+**Repairs for promotion**: re-pin or formally supersede the drifted preflight (provenance only — its mathematical content is re-proved in my report §4); cite this review in place of the absent Opus packet review; two minor wording fixes. No mathematical repair, no AWS or Gröbner escalation needed.
+
+**Closure statement**: with the upstream fan independently re-derived, this **closes exact valuation three on the normalized V20R2 support at finite-jet and formal-arc scope** (field-valued, characteristic zero, this normalized support only — no scheme claim, no other valuation, no JC2 inference). Cheapest successor: one re-pinned single-seal closure replay folding the preflight content and grade-12 endpoint, then retire the lane.
