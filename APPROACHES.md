@@ -7,6 +7,52 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 08:04Z — td8 affine route killed; move to td12 and nested U2)
+
+- **Retire the reviewed `td=8` affine equal-join family.** Independent
+  different-model reconstructions confirm the trunk arity correction. For a trunk flag,
+  `q=kappa_H/kappa_F>=2` gives weight at least three; if `q=1`, a lone flag
+  would retain all `2i` places and acquire impossible weight `3/2`, so at
+  least two flags contribute total weight at least four. Therefore the
+  actual-weight ledger is at least `2+2+3+1=8>7`, uniformly in `t`. The old
+  charge-two trunk profile was per ray and undercounted the exit set. Do not
+  identify one place/flag with one conjugate Puiseux series. Stop coefficient
+  transport, `(0,y)` realization, layer-10, and A-side endpoint work on this
+  family except for archival review closure. This kills one formal route,
+  not all `td=8` configurations.
+- **Bank the A-tower theorem as valid but strategically subsumed.** Grok's
+  review confirms that the mandatory `(2,3)` tower forces both A-charges
+  exactly two and pins the local first-child discriminant, after proof-text
+  repairs. That closes the former A-side ambiguity; the stronger trunk
+  contradiction now ends the route before source realization matters.
+- **Restore exact zero at every actual pole.** Fable independently confirms
+  the universal pole-purity argument. The previous `td=12` proposal to add a
+  symmetric `+3` was a pole/interior-child typing regression and is withdrawn;
+  no false route kill resulted. The U1 family still survives its first trunk.
+  Fable's hostile review now confirms that the B-extra charge is exactly
+  eight: distinct-orbit partings cost two flags of at least eight, while
+  conjugate shedding forces one flag of at least sixteen. The next necessary
+  source test is pure-power children through 24 normalized levels. Obtain the
+  first B-child coefficient vector or its coupled Keller recurrence; do not
+  return to pole pricing.
+- **Promote U2 through integral first boundaries, then attack direct nesting.**
+  Fable passes the fixed-data theorem for P0 prefixes reaching either P1 or a
+  first `nu>=2` equality boundary with integral `kbar`. A new producer result
+  provisionally makes the first direct `nu=1` U2-to-U2 pair finite through an
+  exact divisibility equation and an ODE obstruction at its sole resonance.
+  Review the edge typing next, then handle intervening P0 chains and recursively
+  variable base data; do not claim full-cell finiteness yet.
+- **Re-rank the M2 frontier.** Put the reviewed td12 U1 source-jet gate and
+  nested-U2 recursion first, followed by Q+E5's `delta=0` existence solve and
+  the remaining finite configuration families. The td8 route kill is
+  significant-news under the outer loop, so it triggers a fresh whole-portfolio
+  ideation round after the atomic checkpoint. Reviews remain background and
+  provisional descendants remain allowed.
+- **Keep computation proportional.** All current advances are exact desk
+  algebra; no AWS launch is warranted yet. The f-only layer-10 construction is
+  explicit and, after the route kill, no longer a useful CAS target. Reserve
+  AWS for the first reviewed joint coefficient system large enough to benefit.
+
 ## Superseding strategy overlay (2026-08-29 07:24Z — transport/root tier survives; price the remaining exits)
 
 - **Retire leading-coefficient transport as a `td=8` kill gate.** Fable's

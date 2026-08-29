@@ -7,6 +7,59 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
+> **TD12 U1 B-CHARGE IS EXACTLY EIGHT; ITS NEXT GATE IS 24 SOURCE
+> LEVELS (08:15Z).** Fable review `3f214db8...`/body `8ef16e10...`
+> returns `PASS_WITH_REPAIR` on Sol producer `2a151eef...`/body
+> `b25217e9...`. Distinct-orbit partings create two flags of weight at least
+> eight; conjugate shedding creates one flag with denominator ratio at least
+> two and weight at least sixteen. Both violate the `td=12` ledger, so
+> `N=i`, `tau_0=25`, `kappa_H=kappa_F`, and `lambda_B=8`, excluding nine.
+> Survival now requires pure-power children with unchanged denominator at
+> normalized levels `1,...,24`. This is a necessary source-jet gate, not a
+> realization theorem; the sibling `nu_F=17` terminal and the full td12 book
+> remain open.
+
+> **REVIEWED TRUNK-ARITY CORRECTION KILLS THE `td=8` AFFINE EQUAL-JOIN
+> FAMILY (08:04Z).** Sol producer `3c2c9a7e...`/body `688dbf41...`
+> receives independent Grok and Opus `PASS_WITH_REPAIR` reviews
+> `a5c342e4...`/body `fdb2a6e6...` and
+> `d9db2440...`/body `51f3ed7c...`. The old charge-two trunk profile was a
+> correct per-ray computation but an incorrect exit-set consumer. For a flag,
+> `q=kappa_H/kappa_F>=2` gives weight at least three. If `q=1`, one flag would
+> retain all `2i` places and have impossible weight `3/2`, so there are at
+> least two flags and total weight at least four. Thus the route costs at least
+> `2+2+3+1=8>7` for every affine parameter and is excluded. This is one
+> formal-family kill, not a global `td=8`, degree-ceiling, source-realization,
+> counterexample, or JC2 result. Audit other uses of the invalid shortcut
+> “one flag means all conjugate series stay together.”
+
+> **A-TOWER PASSES; TD12 POLE PRICE IS ZERO; U2 FIRST-BOUNDARY FINITENESS
+> PASSES (07:44--07:59Z).** Grok review `facab9ad...`/body `b48b1c19...`
+> confirms after proof-text repairs that the full `(2,3)` tower forces both
+> td8 A-charges exactly two; this valid theorem is now strategically subsumed
+> by the trunk kill. Fable review `48525c6f...`/body `8c872c12...` confirms
+> universal pole price zero, correcting the prior td12 pole/interior-child
+> conflation and removing the proposed symmetric `+3` kill without changing
+> the earlier survival verdict. Fable review `11173576...`/body `f2543399...`
+> separately passes fixed-data U2 finiteness through first integral
+> `nu>=2` equality boundaries. Rational `nu=1` nesting remains outside that
+> promoted theorem.
+
+> **NEXT FRONT: TD12 DEPTH-24 SOURCE JET AND DIRECT NESTED U2
+> (08:00Z, PROVISIONAL).** Sol producer `2a151eef...`/body `b25217e9...`
+> forces the td12 first-trunk B-charge to exactly eight and reduces source
+> realization to 24 successive pure-power child tests; Fable review is
+> active. Sol producer `99bbe233...`/body `11e44767...` gives an uncapped
+> finite enumeration for the first direct nested U2 pair and kills its sole
+> vertical resonance by a polynomial-ODE degree argument; different-model
+> review is queued. The explicit f-only td8 layer-10 construction is no
+> longer strategically live after the reviewed route kill. Opus review
+> `ac1006f0...`/body `0dee7367...` nevertheless passes the zero-side formal
+> assignment conditionally while correcting its root invariants, replacing
+> nine misindexed layers by an exact shear, and exposing a printed root-chart
+> convention conflict. Queue source adjudication, not more realization work
+> on the dead family. No AWS compute is indicated for these desk-scale gates.
+
 > **PROVISIONAL FULL-TOWER ARGUMENT FORCES BOTH `td=8` A-CHARGES TO TWO
 > (07:20Z).** Sol producer `9ee0dcde...`/body `3b9c8cac...` combines the
 > reviewed `(2,3)` tower with the exact Jacobian band. It derives cusp

@@ -12653,3 +12653,203 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   entry and attack td8 layer 10 in parallel, and let Sol integrate the trunk
   budget equation. Run a full ideation round by 15:23Z or on significant
   review/news; run the broad sweep by 2026-08-30 03:40Z.
+
+## 2026-08-29 07:31Z CHECKPOINT EVENT — CAMPAIGN STATE PUSHED
+
+- Commit `cd770c92e8307cffe82e985e54ba99abf6713459` (`Checkpoint M2
+  research and campaign infrastructure`) was pushed to `origin/master`; the
+  remote ref matched exactly. The campaign-scoped tree was clean immediately
+  afterward. The independently owned formalization path was excluded from
+  staging and all repository checks.
+- The checkpoint includes the reviewed transport/separation/Q+E5 wave, the
+  provisional A-tower/zero-side/U2-boundary reports, and the schema-2 lane,
+  status, ignore, and recovery improvements. Three different-model reviews
+  were launched immediately afterward without blocking new desk work.
+
+## 2026-08-29 07:44Z REVIEW EVENT — U2 FIRST EQUALITY BOUNDARY PASSES
+
+- Fable review `111735765957ef971b720a8dcb373fbe32664047e4028a5a1634b020be405939`
+  (body `f254339913a87162dc80ab0cc155f75fe09ca1c4875c106273a0a5344eadfe0e`)
+  returns `PASS` on Sol's first-P2-boundary theorem `8c46e6bf...`/body
+  `220aa975...`. For fixed absorbed U2 data and fixed budget, only finitely
+  many outer `L` can reach a first `nu>=2` root-multiplicity equality boundary
+  with integral `kbar=lW/(l-m)`. The proof is uniform in equality-string
+  length, child multiplicity, and everything after the cut.
+- Promote only this conditional theorem and its union with the reviewed
+  P0-to-P1 result. Coverage of first departures without the integral equality
+  law, and nested `nu=1` data whose base itself varies, remain outside it.
+
+## 2026-08-29 07:50Z REVIEW EVENT — BOTH TD8 A-COPY CHARGES ARE TWO
+
+- Grok review `facab9ad6a5e586c1e3ece4dc63d01e2dc68d0179c780e88bf9fca37fd43970c`
+  (body `b48b1c190336df0689e8a9521c41ce6ca4870f149960df28856de8bc9a88f22a`)
+  returns `PASS_WITH_REPAIR` on Sol's A-tower producer `9ee0dcde...`/body
+  `3b9c8cac...`. The full `(2,3)` approximate-root tower forces both
+  extra-direction f-branches to stay double through every level with
+  positive f-order, at both A-copies and for every affine parameter. Hence
+  both A-charges are exactly two and
+  `B R_1(B)^2=4 C R_2(B)` locally at each copy.
+- Repair the proof text: resonance permits both a drop and no drop; a common
+  h-factor need not persist when its order reaches zero; derive the initial
+  h-order explicitly; and allow an absent shift stage. None changes the
+  theorem or charge. A-side discriminants no longer control the budget.
+
+## 2026-08-29 07:59Z REVIEW EVENT — TD12 POLE PRICE IS EXACTLY ZERO
+
+- Fable review `48525c6fbc9416cbeef7a12764173e0abf484c411b773767c6a6e593adcd53e6`
+  (body `8c872c1251fcb24519bd2ee18338d7bcf2bbdc19de70384e7cb3ba79df18c1ea`)
+  returns `PASS` on Sol's pole audit `8fd4d1d0...`/body `9fcc2c5c...`.
+  Every actual pole vertex has empty literal and selected critical-value exit
+  sets: a ray through a pole has `g(P)=infinity`, while a ray carrying a cv
+  flag has finite `g(P)`. The `(1,2,3), M=2` row independently exhausts its
+  two effective pole directions with orders `1+3=4`.
+- Supersede the prior Opus statement that the three pole entries were
+  unpriced. It transferred genuine uncertainty at interior off-axis chain
+  vertices to the pole vertices themselves. No wrong exclusion resulted—the
+  reviewed first-trunk family survived—but the proposed symmetric `+3` kill
+  is impossible and must not be reused.
+
+## 2026-08-29 08:00Z PROVISIONAL FRONTIER EVENT — ARITY, TD12 DEPTH, AND NESTED U2
+
+- Sol producer `3c2c9a7e...`/body `688dbf41...` finds a possible decisive
+  correction at the td8 trunk: the reviewed charge-two profile was per ray.
+  A split of the multiplicity-`2i` group creates at least two distinct cv
+  flags, each of weight at least two; an unsplit group has normalized level
+  `17/2`, whose denominator jump forces weight at least three. Thus total
+  trunk exit weight is provisionally at least three and
+  `2+2+3+1>7` kills the whole affine route. Independent Opus and Grok hostile
+  reviews are active; no promotion occurs before adjudication.
+- Sol producer `2a151eef...`/body `b25217e9...` provisionally forces the
+  td12 first-trunk B-charge to exactly eight: two B-descendant cv flags would
+  already violate the td12 actual-weight bound, so all `i=6n` sheets remain
+  together through normalized level 24. The first source gate is
+  `deg gcd(C_1,C_1')=i-1`, recursively through those 24 levels. Formal
+  A/B interpolation passes the first top/weight gate but does not realize a
+  Keller pair. Fable hostile review is active.
+- Sol producer `99bbe233...`/body `11e44767...` provisionally proves
+  finiteness for the first *direct* nested U2-to-U2 boundary. The two
+  parameters obey an explicit integral edge equation; its sole vertical
+  resonance has outer degree divisible by arrival count and is killed by a
+  short polynomial-ODE degree lemma. Intervening P0 chains and recursively
+  varying base data remain open. Different-model review is queued for the
+  next wave.
+- The reduced td8 f-only layer-10 question is independently explicit:
+  `C y^i Phi_A(x^17 y^10)^i` realizes all nine silent faces and the target
+  tenth face. This remains producer-checked and becomes strategically moot
+  if the trunk-arity kill passes; do not spend CAS/AWS time on that f-only
+  gate.
+
+## 2026-08-29 08:00Z SYSTEMS EVENT — FORMALIZATION SEARCH BOUNDARY HARDENED
+
+- One subagent used an overbroad filename-listing command that emitted names
+  under the excluded formalization path. It read no contents and performed no
+  build, status, edit, or control operation there, but the listing itself
+  violated the campaign boundary. The incident is recorded rather than
+  hidden.
+- Added a parent `.ignore` rule so ripgrep-style broad searches neither
+  descend into nor enumerate that path, and corrected `COORDINATION.md` from
+  the stale weaker "read-only" wording to a complete no-enter/no-enumerate/
+  no-search/no-read/no-build/no-status/no-modify/no-control rule. Future Git
+  checks remain explicitly campaign-scoped.
+
+## 2026-08-29 08:08Z REVIEW EVENT — ZERO-SIDE FORMAL ASSIGNMENT SURVIVES, SOURCE CHART AMBIGUITY EXPOSED
+
+- Opus review `ac1006f013c0f78ca7429e134d2a67d8cc06c4aba21626acf7434f600cdcfe0a`
+  (body `0dee73677e476253dd57abd4d007dbd6912c40d668352878bdf7fc7c08ca42a3`)
+  returns `PASS_WITH_REPAIR_AND_NARROWING` on Grok's `(0,y)` producer
+  `741b7198...`/body `3d072913...`. Conditional on the Theorem-6.1 chart
+  convention, a single global formal top/tower assignment still exists for
+  every `t`; the shared-gauge and no-cycle claims pass.
+- Repair `M*_R=5`, `i_R=17i_tr`, `delta_R=3`, `R_R=-2`, and the printed
+  `d_h=(mu_R-1)l_f+1`; their product identity survives. Replace the claimed
+  nine root-graded layers by the exact shear: the trunk polynomial is a
+  diagonal through `5i_tr+1` root layers and its `C[eta^17]` support is forced.
+  The reduced-`i` transfer claim is unproved and `i=1` is not admissible.
+- More importantly, the printed source appears internally inconsistent about
+  the root chart: Notation 3.10/Statement 3.12 suggest the opposite swap from
+  the proofs of Theorem 6.1, Statement 9.4, and Proposition 9.3(IV). Under the
+  former reading the route dies immediately; under the latter, which Opus
+  judges authoritative, the formal assignment survives. Queue a narrow
+  page-image/source-convention adjudication before reusing any root-chart
+  formula. The already reviewed trunk-arity kill is independent and makes
+  further source-realization work on this family unnecessary.
+
+## 2026-08-29 08:10Z SECOND REVIEW EVENT — TD8 TRUNK KILL PASSES WITH A CLEANER DICHOTOMY
+
+- Opus review `d9db244079c521a2e3643c824b715adb4c934d843f9da18e9140c80d6758f012`
+  (body `51f3ed7c6c77a10e21f053875a323b633fc7e6499641d0b61ad3518f521de0c5`)
+  independently returns `PASS_WITH_REPAIR` on the trunk-arity producer
+  `3c2c9a7e...`/body `688dbf41...`, agreeing with Grok's route-kill verdict.
+- Replace the producer's place/series shortcut by the ramification
+  dichotomy. For each flag `q=kappa_H/kappa_F` and `tau_0>=17/2`. If
+  `q>=2`, its weight is at least three. If `q=1`, no characteristic shedding
+  occurs; a unique flag would retain all `2i` places and have nonintegral
+  weight `3/2`, so there must be at least two flags and total weight at least
+  four. Equality three requires `q=2, tau_0=17/2`.
+- The route kill remains valid and has now passed two independent hostile
+  reviews. Audit other consumers for the generic false inference that one cv
+  flag implies all conjugate Puiseux series stay together. The one-unit kill
+  margin still depends on the x-side charge being exactly one.
+
+## 2026-08-29 08:15Z REVIEW EVENT — TD12 B-CHARGE EIGHT AND DEPTH-24 GATE PASS
+
+- Fable review `3f214db8c12d022c2852dfadbbc268d105484343a8f6d4664765a08d3efcea03`
+  (body `8ef16e10a62e7723f1294bf345b2ea23164add2b490df08ec061fcff17409895`)
+  returns `PASS_WITH_REPAIR` on Sol producer `2a151eef...`/body
+  `b25217e9...`. It verifies the pinned row, exact charge eight, exclusion of
+  charge nine, all 24 pure-power child levels, the residue/gcd calculation,
+  and A/B interpolation at formal-compatibility scope.
+- The producer repeated the flag/series shortcut just exposed in the td8
+  review. Repair by cases: a parting into distinct direction-orbits creates
+  two flags of weight at least eight; a conjugate parting creates one flag
+  with `q>=2`, while `tau_0>=25`, hence weight at least sixteen. Both give
+  `12>=17`, impossible. Thus no parting occurs, `N=i`, `tau_0=25`, `q=1`,
+  and `lambda_B=8` exactly.
+- The first missing source datum remains the B-child coefficient vector. The
+  review's nonblocking observation that the earlier pole-review report was
+  absent was a concurrent-artifact race: the report is now present and
+  verifies at full `48525c6f...`, body `8c872c12...`. The sibling
+  `(3/4,4)@nu_F=17` terminal is not priced by this result; no full-book,
+  landing, realization, counterexample, or JC2 conclusion follows.
+
+## 2026-08-29 08:16Z LIVE STATE — TD8 ROUTE KILLED; TD12 DEPTH-24 GATE REVIEWED
+
+- Basis: `cd770c92e8307cffe82e985e54ba99abf6713459` plus the reviewed wave
+  recorded below. The human requested an atomic commit/push; verification is
+  in progress. The separately owned `jc2-lean` tree is excluded from every
+  campaign query and staging operation.
+- Reviewed mathematical state: the td8 affine equal-join family is killed by
+  trunk exit arity, with independent Grok and Opus reviews; both A-charges
+  remain validly equal to two but are strategically subsumed. Actual td12
+  pole price is zero, while the U1 `nu_F=25` B-charge is exactly eight and
+  yields a necessary depth-24 pure-power source gate. Fixed-data U2 finiteness
+  now covers P0-to-P1 and first integral `nu>=2` equality boundaries.
+- Provisional DAG: direct nested U2 finiteness `99bbe233...`/body
+  `11e44767...` awaits different-model review. It covers one direct
+  U2-to-U2 edge only; intervening P0 chains and recursively varying base data
+  remain open. No expensive descendant has been launched.
+- Active lanes: none. The completed peer wave used Grok for A-tower and td8
+  arity review, Opus for zero-side and an independent arity review, and Fable
+  for U2 boundary, pole purity, and td12 depth-24 review. Sol coordinated and
+  supplied the cross-lane deductions.
+- Outer-loop clocks: the last sealed full ideation round is
+  `20260829T0250Z`, synthesis `d2e34570...`, closed 03:23Z. The reviewed td8
+  route kill is significant news and fires the next whole-portfolio
+  four-model round immediately after this checkpoint, ahead of the 15:23Z
+  quiet deadline. The last broad web sweep is
+  `xmodel/websweep-20260829T0340Z.md`; its next quiet deadline remains
+  2026-08-30 03:40Z.
+- Resources: every current discriminator is desk-scale; AWS is idle by
+  design. Heavy coefficient/CAS work remains AWS-only and will start only
+  when a reviewed joint source packet is sufficiently specified. No campaign
+  heavy computation is running locally.
+- Systems: the broad-search boundary incident enumerated filenames but read
+  no formalization contents and made no changes. `.ignore` and the corrected
+  no-enter/no-enumerate rule now fail closed around that tree. The next
+  48-hour campaign-systems checkpoint is 2026-08-31 07:24Z.
+- Immediate queue: finish scoped verification and push this checkpoint;
+  then launch the significant-news four-model ideation round without waiting
+  on the different-model review of direct nested U2. In parallel, review that
+  U2 theorem, adjudicate the source root-chart convention only if it informs
+  another live family, and seek the td12 B-child coefficient vector/Keller
+  recurrence. No proof or counterexample to JC2 exists yet.

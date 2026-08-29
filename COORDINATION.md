@@ -461,16 +461,13 @@ campaign from paying twice for the same failed idea.
   adapters without compute tools, and genuinely short low-memory validation.
   Follow `ops/FLEET.md` for machine inventory, shipping, caps, telemetry, and
   kill safety.
-- `jc2-lean` is a separately owned nested repository.  While an independent
-  formalization lane is active, campaign agents treat the entire nested tree
-  as read-only: package only explicitly named campaign inputs, never run a
-  parent-wide bulk stage/clean/reset that can consume its changes, and regard
-  the parent's modified gitlink as expected status rather than a campaign
-  edit.  Record a new parent gitlink only at an atomic checkpoint where the
-  child worktree is clean, its commit is pushed, and its HEAD is rechecked
-  immediately before staging.  Concurrent local formalization also consumes
-  the Mac's shared CPU/RAM; it does not license local campaign computation,
-  and the coordinator monitors process trees and swap deltas for contention.
+- `jc2-lean` is a separately owned nested repository and is outside the
+  campaign's inspection boundary. Campaign agents must not enter, enumerate,
+  search, read, build, status, modify, or control it. Scope every parent Git
+  query explicitly away from that path; never stage its gitlink. The parent
+  `.ignore` excludes it from ripgrep-style broad searches. Concurrent local
+  formalization may consume shared CPU/RAM, but campaign contention checks
+  remain system-level and must not identify or inspect that nested workload.
 - New heavy runners fail closed off AWS before importing a CAS or allocating
   large objects, require a registered AWS job tag, and record the remote
   hostname in custody.  New counterexample/frontier runners also record the
@@ -508,8 +505,9 @@ campaign from paying twice for the same failed idea.
 2. Read `notes.md` from the bottom through the newest `LIVE STATE` and all
    later events. Historical `STRATEGY` and `STANDING QUEUE` blocks are
    provenance, not current policy.
-3. Check both repository statuses and the basis commit. Sweep exact local lane
-   tags and `ops/FLEET.md` machines; harvest before relaunching anything.
+3. Check the campaign repository's explicitly scoped status and basis commit,
+   excluding `jc2-lean` without inspecting it. Sweep exact local lane tags and
+   `ops/FLEET.md` machines; harvest before relaunching anything.
 4. Resolve overdue review, ideation, and web-sweep clocks. Continue the outer
    loop. Never silently promote, publish, spend beyond authority, or discard
    another lane's work.
@@ -618,6 +616,20 @@ the integrative trunk/cross-lane problem. One Fable wrapper lost its final
 bookkeeping because `ops/lane.sh` changed while it was waiting, although its
 hash-pinned report was recovered. The launcher now parses its complete body
 before execution, and recovered reports are a distinct dashboard state.
+
+Allocation refresh (2026-08-29 08:15Z): the post-checkpoint wave remains
+peer-heavy. Grok reviewed both the A-tower theorem and the rank-changing td8
+trunk-arity kill; Fable reviewed U2 first-boundary finiteness and exact pole
+purity and the td12 depth-24 successor; Opus independently reviewed both the
+td8 zero-side initialization and trunk-arity correction.
+Sol supplied the cross-lane trunk, td12, and direct-nested-U2 deductions and
+integrates them rather than opening duplicate peer tasks. The reviewed td8
+route kill is significant-news and therefore triggers a fresh whole-portfolio
+ideation round after the next atomic checkpoint. All review lanes are now
+quiescent. No current gate needs heavy
+compute; AWS remains idle until a reviewed joint coefficient packet warrants
+it. A parent `.ignore` and an explicit no-enumeration rule now enforce the
+formalization-tree boundary for broad search tools.
 
 Adding a model requires one adapter in `ops/adapters/` and one roster row;
 route documents do not assign permanent jobs by model name.

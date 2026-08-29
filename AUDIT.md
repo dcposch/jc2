@@ -5,6 +5,146 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **`td=8` AFFINE EQUAL-JOIN ROUTE — KILLED BY TRUNK EXIT ARITY
+> (2026-08-29 08:04Z).** Sol producer
+> `3c2c9a7ed79cc6d05ec3ba7098c1dc89cabb3547791d777c4bf8971d1ae28e39`
+> (body `688dbf41e3e3b6c777ec7267c8114569c4507261eb6dea9003dc6236c330494c`)
+> received independent Grok46 review
+> `a5c342e49aaa0ede12b857ed7742c6474737becabab0dcf7a10fbdedb26a8978`
+> (body `fdb2a6e6d17b08e521ce0a27d1703e4890586268f7afb684db95d4164897c0ae`),
+> and independent Opus5 review
+> `d9db244079c521a2e3643c824b715adb4c934d843f9da18e9140c80d6758f012`
+> (body `51f3ed7c6c77a10e21f053875a323b633fc7e6499641d0b61ad3518f521de0c5`),
+> both verdict `PASS_WITH_REPAIR`; maximum safe consequence
+> `ROUTE_KILLED_BY_TRUNK_ARITY`.
+>
+> At the `(85,35)` trunk, corrected Statement 9.3 gives every cv flag in
+> the multiplicity-`2i` extra-direction component actual weight at least
+> two. Write `q=kappa_H/kappa_F`. The exact area law has
+> `tau_0>=17/2`. If any flag has `q>=2`, that flag alone has weight
+> `q(tau_0-7)>=3`. If `q=1`, no characteristic level and hence no conjugate
+> shedding occurs. Were there only one flag, it would carry all `2i` places,
+> and the area law would give the impossible nonintegral weight `3/2`;
+> therefore this branch has at least two distinct flags and total weight at
+> least four. Thus the whole trunk exit set costs at least three, never two;
+> equality three is possible only at the knife edge `q=2, tau_0=17/2`.
+> Together with the two A-exit floors and the x-side unit, actual weight is
+> at least `2+2+3+1=8>td-1=7`, uniformly in the affine parameter.
+>
+> The earlier Opus/Fable descent formula remains correct for one selected
+> ray. Withdraw only its consumer statement that three per-ray charges equal
+> to two imply route survival: the proposed `2i -> i` split has two cv flags
+> and total trunk cost at least four. Cite Definition 3.3 for non-remerging,
+> Statement 3.13 for raywise uniqueness, and use actual-weight Corollary 7.1
+> on an explicitly distinct flag set; do not revive literal nested `Y(F)`.
+> Do not infer “one cv flag means all Puiseux series stay together”: flags
+> count places/rays, not conjugate series. The proof above instead uses the
+> ramification dichotomy, and other consumers of that shortcut require audit.
+> This excludes one formal affine family, not every `td=8` configuration, a
+> degree range, a polynomial source, a counterexample, or JC2.
+
+> **`td=12` U1 B-DIRECTION — EXACT CHARGE EIGHT; DEPTH-24 SOURCE GATE
+> (2026-08-29 08:15Z).** Sol producer
+> `2a151eef1e661464ada47b0e387051733f9c2cb39cc7893366f5b1e09e15e829`
+> (body `b25217e9b733efcc28d263c9df057d6ebcac61976002dd1c815e8063591caaae`)
+> received Fable5 review
+> `3f214db8c12d022c2852dfadbbc268d105484343a8f6d4664765a08d3efcea03`
+> (body `8ef16e10a62e7723f1294bf345b2ea23164add2b490df08ec061fcff17409895`),
+> verdict `PASS_WITH_REPAIR`.
+>
+> For the `(2/3,3)@nu_F=25` terminal, every cv flag below the B-direction
+> has actual weight at least eight. A parting into distinct direction-orbits
+> creates two distinct flags and costs at least sixteen. A conjugate parting
+> instead gives one orbit-level flag but forces
+> `q=kappa_H/kappa_F>=2`; since the descent integral always gives
+> `tau_0>=D_F/i=25`, that flag also costs at least
+> `q(tau_0-17)>=16`. Either contradicts `td>=1+sum wt(H)` at `td=12`.
+> Hence no sheet parts before the cv level, `N=i`, `tau_0=25`, `q=1`,
+> and the exact first-exit charge is eight; nine is impossible.
+>
+> The necessary source test is therefore a pure `i`-th-power child at each
+> integer normalized level `1,...,24`, with no denominator jump; a split is
+> first allowed at level 25. For direct pole entries `i=6n`, so the first
+> test is `deg gcd(C_1,C_1')=6n-1`. The A/B interpolation proves only formal
+> top/arrival/weight compatibility, not the coupled Keller recurrences or
+> realization. The smallest missing datum is the first B-child coefficient
+> vector. The pole-review artifact that appeared absent during the concurrent
+> Fable session is present and verifies at full hash `48525c6f...` and body
+> hash `8c872c12...`; that race observation is closed. The sibling
+> `(3/4,4)@nu_F=17` terminal is untouched. No landing, full-book `td=12`
+> exclusion, counterexample, degree ceiling, or JC2 consequence follows.
+
+> **`td=8` A-COPY FULL TOWER — BOTH A-CHARGES EXACTLY TWO
+> (2026-08-29 07:50Z).** Sol producer `9ee0dcde...`/body `3b9c8cac...`
+> received Grok46 review
+> `facab9ad6a5e586c1e3ece4dc63d01e2dc68d0179c780e88bf9fca37fd43970c`
+> (body `b48b1c190336df0689e8a9521c41ce6ca4870f149960df28856de8bc9a88f22a`),
+> verdict `PASS_WITH_REPAIR`. The mandatory `(2,3)` approximate-root tower
+> keeps both extra-direction f-branches double at every positive-order level,
+> at each A-copy and for all affine parameters. Hence both A-charges are two
+> and `B R_1(B)^2=4 C R_2(B)` locally at each copy. Repair the written proof
+> by allowing both resonance continuations, dropping the universal common
+> h-factor claim once its order is zero, deriving the initial h-order, and
+> allowing an absent shift stage. None changes the theorem. This result is
+> now subsumed strategically by the reviewed trunk-arity kill, but remains a
+> valid local theorem.
+
+> **`td=12` POLE ENTRIES — EXACT PRICE ZERO; PRIOR `+3` GATE WAS A
+> TYPING REGRESSION (2026-08-29 07:59Z).** Sol primary
+> `8fd4d1d01bcb082b6f7dfd0ccb91cee072a1e7e2fdb6a319c099075b0b39a9de`
+> (body `9fcc2c5c1f987189cc1eaf0dcc98a6748da4b6ba4a67b2969c24f05340e1dcd7`)
+> received Fable5 review
+> `48525c6fbc9416cbeef7a12764173e0abf484c411b773767c6a6e593adcd53e6`
+> (body `8c872c1251fcb24519bd2ee18338d7bcf2bbdc19de70384e7cb3ba79df18c1ea`),
+> verdict `PASS`. A ray through a pole has `g(P)=infinity`; a ray containing
+> a cv flag has finite `g(P)`. Therefore literal and selected pole exit sets
+> are empty universally. The td12 `(1,2,3),M=2` row also exhausts its two
+> effective pole directions with orders `1+3=4`.
+>
+> Supersede the prior statement that the three pole vertices were unpriced.
+> It imported the genuine uncertainty of an interior off-axis chain vertex
+> into the pole vertex itself. The mistake caused no false exclusion—the U1
+> first-trunk family was retained—but its proposed symmetric `+3` kill is
+> impossible. A separately inserted interior child would be a new object and
+> would require its own Q-datum.
+
+> **U2 FIRST `nu>=2` EQUALITY BOUNDARY — CONDITIONAL FINITENESS PASSES
+> (2026-08-29 07:44Z).** Sol producer `8c46e6bf...`/body `220aa975...`
+> received Fable5 review
+> `111735765957ef971b720a8dcb373fbe32664047e4028a5a1634b020be405939`
+> (body `f254339913a87162dc80ab0cc155f75fe09ca1c4875c106273a0a5344eadfe0e`),
+> verdict `PASS`. For fixed absorbed U2 data and budget, a P0 prefix ending
+> immediately before a first `nu>=2` root-multiplicity equality boundary
+> with `l|M` and integral `kbar=lW/(l-m)` admits only finitely many outer
+> parameters `L`, uniformly in the equality-string length, child
+> multiplicity, and all later data. Together with the reviewed P0-to-P1
+> theorem this closes those two first-departure types only. It does not cover
+> rational-`kbar` `nu=1` boundaries, nested variable base data, an intervening
+> unclassified transition, full cells, landing, or JC2.
+
+> **`td=8` `(0,y)` INITIALIZATION — FORMAL EXISTENCE PASSES ONLY AFTER
+> ROOT-CHART AND LAYER REPAIRS (2026-08-29 08:08Z).** Grok primary
+> `741b7198...`/body `3d072913...` received Opus5 review
+> `ac1006f013c0f78ca7429e134d2a67d8cc06c4aba21626acf7434f600cdcfe0a`
+> (body `0dee73677e476253dd57abd4d007dbd6912c40d668352878bdf7fc7c08ca42a3`),
+> verdict `PASS_WITH_REPAIR_AND_NARROWING`. Conditional on the chart
+> convention used by the proofs of Theorem 6.1, Statement 9.4, and
+> Proposition 9.3(IV), one global formal top/tower assignment exists for all
+> `t`; shared gauges and the no-cycle claim pass.
+>
+> Correct the root invariants to `M*_R=5`, `i_R=17i_tr`, `delta_R=3`,
+> `R_R=-2` and the printed formula to `d_h=(mu_R-1)l_f+1`; the load-bearing
+> product identity is unchanged. The supposed nine `kappa_F`-graded layers
+> are misindexed because `kappa_(0,y)=1`: the exact object is a shear whose
+> trunk diagonal spans `5i_tr+1` root layers and automatically lies in
+> `C[eta^17]`. Withdraw the reduced-`i` transfer; `i=1` is inadmissible.
+> Notation 3.10/Statement 3.12 appear to print the opposite root-chart swap
+> from the three proof-level anchors; under that reading the family dies in
+> one line. Treat the source convention as an explicit ambiguity pending a
+> narrow page-image adjudication. The independent reviewed trunk-arity kill
+> already excludes this family, so none of these conditional formal facts
+> licenses renewed realization work.
+
 > **`td=8` CV REVIEW — LOCAL CENSUS PASSES WITH REPAIRS; DISPLAYED WITNESS
 > REMAINS CROSS-LANE-INCOMPATIBLE (2026-08-29 07:24Z).** Grok46 primary
 > `93c58d63af6ff9e000531c077b10c86ef1a9d4d6f54b6b343d1f98c7d6183ecd`

@@ -1,0 +1,24 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Written: `xmodel/m2-td8-equal-join-zero-side-initialization-hostile-review-opus5-20260829.md` (35335 bytes, body SHA-256 `0dee7367…a42a3`, full-file `ac1006f0…cfe0a`). No other file touched.
+
+## Custody
+
+Producer hash `741b7198…218f` verified before reading. All six declared sources plus the PDF recomputed — all MATCH. The producer's body hash `3d072913…696f1` reproduces at 25126 bytes (rstrip + `\n` convention).
+
+## Lead verdict
+
+`PASS_WITH_REPAIR_AND_NARROWING` at formal-treetop scope. The existence claim survives for every `t ≥ 0` after nine repairs; two of the producer's *negative* claims do not.
+
+## What I found
+
+**The biggest item (R1).** The chart identification `k_f = d_{(0,x)} = deg(p_{(0,y)})` is printed **both ways** in the source. Theorem 6.1's proof, St 9.4's proof (`(0,x) ∈ T_a^↗`) and Prop 9.3(IV) (`(0,y) ∈ T_a^&`) all support the producer's reading. But Notation 3.2 + 3.9 + St 3.7 + Notation 3.10 give the opposite, and only that reading makes printed St 3.12's two inequalities come out as equalities. Under the Notation-3.10 reading, `l_f = 85 i_tr > k_f = 51 i_tr` violates Lemma 2.1(iii) for every `t ≥ 0` in one line — so the producer's §0 claim that no source-level incompatibility exists at the printed tier is **REFUTED as stated**. My judgement is that the Theorem-6.1 convention is authoritative (three anchors to one), so the route is not dead — but that is a judgement about which line carries an erratum, not a theorem.
+
+**Exact arithmetic (64 values of `t`, `Fraction` only, 0 failures).** Case IV (i)–(m), `d_{(0,y)} = 51 i_tr`, `R = 5/3`, `ψ = 1`, all four Lemma 2.1 inequalities, `k_tr(t)`, the Bezout identity, and every exponent integrality claim: CONFIRMED.
+
+**REFUTED sub-claims.** `M*_R = 1` — Notation 8.1 excludes `deg p_{h_m}`; correct value is `5`, corroborated by printed St 8.4 saturating at `5|5`. `d_h = μ_R l_f + 1` — printed Prop 4.2(iv) is `(μ_R−1) l_f + 1`. "`κ = κ_F = 17`" at `(0,y)` — contradicts the report's own `κ_{(0,y)} = 1`. The §7 `i_tr`-transfer — `i_tr = 1` is inadmissible (`k_g = 127.5`) and the condition count is `t`-linear.
+
+`(★_R)` survives all three input errors, because only `i_R R_R = −34 i_tr` enters.
+
+**New results.** The shear `[η^i]p_tr = [η^i]p_{i_tr+10i/17}` (`17|i`) *forces* `p_tr ∈ C[η^17]` from the `(0,y)` side — a free corroboration of the reviewed trunk shape — and shows `P_10` is a diagonal across `140(4+3t)+1` layers, not one. Also `D_tr = 17 i_tr` independent of `κ_tr`, and the `(0,y)` q-side monomial forced by Prop 8.1(iv) alone rather than by the out-of-scope interior `β = 0`.
+
+Cheapest next discriminator: **D1**, settle the chart convention (desk, minutes) — it gates everything and could kill the family outright.
