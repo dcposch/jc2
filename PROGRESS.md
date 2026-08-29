@@ -7,6 +7,41 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
+> **STABLE REREVIEWS CLOSE Q+E5 AND LL-1; THE U2 SOURCE FLOOR IS
+> CORRECTED (10:16--10:42Z).** Grok46 review
+> `3c5587c0...`/body `2bf0c579...` returns `PASS_WITH_REPAIR` on the
+> equal-regime Q+E5 fixed-index consumer.  For fixed typed case-III state,
+> target `nu_G`, positive `M_G`, and integer `kbar_G`, the exact menu is
+> finite and each member has a unique degree/slot record; existence is an
+> exact no-partition R2.2 predicate.  The repairs split pattern inputs from a
+> sufficient route envelope, keep `mu0` typed until `mu0=mu` is invoked, and
+> update the shifted current E5 citation.  This licenses a new standalone
+> checker only after software review; legacy `cell_check`, `solve_arr`, and
+> `NUCAP=500` remain untouched.
+>
+> Opus5 stable review `3e3cea4a...`/body `7b23f8ca...` returns
+> `UNTYPED_NO_PROMOTION` on the LL-1 reprice.  It independently verifies all
+> 16 cells, exactly four conditional `delta=2/3` increases, unchanged td12,
+> and the conditional 13-to-7 replay.  LL-1 is two-pole, however, and its MFE
+> ledger carries selected witnesses, not every actual cv flag.  The strong
+> orbit-tree attachment or a direct two-pole first-separation theorem is still
+> missing, so the canonical LL-1 inventory remains 13.
+>
+> Fable5 review `f9dd2035...`/body `1ca3948f...` returns `FAIL` on Sol's
+> provisional `td>=15` U2 source-mass proof `28f9918e...`/body
+> `42993a40...`.  Merge-free does not imply edgewise exclusion from
+> `V_{2,a}`, so Statement 8.5 cannot be composed to `M_H|b_P`; the canonical
+> off-axis source itself records dirty merge-free `M:2->3` steps.  The
+> reviewed replacement is subtree mass at least `beta` always and at least
+> `max(beta,2alpha)` when the arrival multiplicity is at least two.  Since the
+> corrected family fixes three multiplicity-three arrival subtrees,
+> `td>=3max(beta,2alpha)>=12`: it is excluded through `td=11` (hence at td8),
+> but **not** at td12.  Equality forces type `(2,3)` and three pole entries
+> `(a,b,nu)=(1,2,3)` of mass four.  A compatible td12 ledger is only formal
+> and is not the labelled route; the two inner `w=1` arrivals, outer sibling
+> landing, T1/transport, i-synchronization, gluing, and realization remain
+> open.
+
 > **FOUR-MODEL ROUND CORRECTS THE EXIT LAW; ONE-P0 U2 FAMILY SURVIVES
 > WITH A RECORD REPAIR (09:30--09:35Z).** Round `20260829T0820Z` is
 > synthesized in `xmodel/ideation-20260829T0820Z-synthesis.md`. Cross-review

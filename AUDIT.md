@@ -5,6 +5,103 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **NESTED-U2 SOURCE-MASS FLOOR — `td>=15` PROOF FAILS; REVIEWED
+> REPLACEMENT IS `td>=12` FOR THE CORRECTED FAMILY
+> (2026-08-29 10:42Z).** Sol's provisional report
+> `28f9918e18eae42580584afbd98a36418ac98ecabf078c829e20484159baeb3c`
+> (body `42993a409e5ed4d2f4c4bb253e05e6ebf1b0e2f22dbd2eaf80bf71aa076d7f71`)
+> received independent Fable5 review
+> `f9dd2035bbe5a47561cce263ba1288a9245526dec748c3ef031545e443bf510f`
+> (body `1ca3948f97114d56e1c5aae916fa086d459d036550f2e218bcf31923710c3e12`),
+> verdict `FAIL` at the headline scope with a proved partial salvage.
+>
+> A one-pole incoming subtree is merge-free, but that does **not** certify
+> the lower vertex of every edge lies outside `V_{2,a}`.  Statement 8.5 has
+> that edgewise hypothesis.  Regular dirty `V_{2,a}` vertices can change M;
+> `BOOK-OFFAXIS` itself records a merge-free `(w,M)=(3/2,2)` dirty step to
+> `M=3` and retracts the old unrestricted M-descent.  Therefore
+> `mu|M_H|M_P=b_P` is unlicensed in general.  The proposed universal ASM
+> bound `min(2beta,mu*alpha)`, the derived `td>=15`, and the claimed td12
+> removal are withdrawn for `mu>=3`.  The inequality on actual trees remains
+> open there; the review refutes the proof/interface, not an actual tree.
+>
+> The source-backed replacement for an actual arrival subtree is
+>
+> ```text
+> mass >= beta                         always,
+> mass >= max(beta,2alpha)             when mu>=2.
+> ```
+>
+> In the one-leaf case, MP5 gives the contrapositive `mu>=2 => b_P>=2`;
+> in the multi-leaf case two pole floors suffice.  Incoming subtrees at
+> nested merges are disjoint.  The corrected labelled family fixes two inner
+> and one outer-sibling arrival multiplicities equal to three, hence
+> `td>=3max(beta,2alpha)>=12`, with equality only at type `(2,3)` and three
+> pole entries `(a,b,nu)=(1,2,3)`, each of mass four.  Thus the family is
+> excluded at `td<=11`, including td8, but remains open at td12.  The review's
+> td12 ledger is a formal arithmetic skeleton at arrival weight `2/3`, not
+> the labelled route, whose inner frame requires weight one.  T1 solves,
+> full transport/terminal data, absolute i-sync, gluing, landing, realization,
+> `G2-PSC`, `G2-BD`, a counterexample, and JC2 remain unproved.
+>
+> Compiler rule: the repaired floor is universally attachable; the stronger
+> old ASM is attachable only with a pole-adjacent, edgewise-non-`V_{2,a}`, or
+> direct `M_H|b_P` certificate.  Merge-free alone is never that certificate.
+
+> **Q+E5 EQUAL REGIME — FIXED-INDEX MENU AND NO-PARTITION PREDICATE PASS
+> ON A STABLE BASIS (2026-08-29 10:16Z).** Sol producer
+> `bccf157880bf868d6c204f300a62a2e96a2ee5ce4d1d2be94789079110155cb8`
+> (body `b27e7436eab58c75fbf5949626214c50942ff9ec6316b65a6069e765e7cecd91`)
+> received fresh Grok46 review
+> `3c5587c0f0d59110054db044d10ba03db12ed010bf9d2f177432d8284cb3022f`
+> (body `2bf0c579a8c289b0ee7373b9b76f423aa0e7d60a3b541a3d4c7cdfeb718b95f4`),
+> verdict `PASS_WITH_REPAIR`; all eleven charged sources matched before and
+> after.
+>
+> At Q/max+E5 R2.2 factor-grammar scope, fix a certified two-pole case-III
+> equal-regime state, positive `M_G`, forced target `nu_G>=2`, and integer
+> menu value `K=kbar_G`.  The integer menu is finite and exact.  Each K fixes
+> `X_G`, its reduced ratio, `(dp,dq)`, `D`, `s`, `Sm`, `mmax`, and `kmin`;
+> the stated inequalities decide pattern existence without a partition
+> search.  The witness fibre `(k,lex,mults)` need not be unique.  Success is
+> only `PATTERN_EXISTS_REALIZATION_UNCHECKED`; failure of the whole typed menu
+> is local `PATTERN_DEAD`.
+>
+> Three repairs are binding: split the pattern-algebra input from the
+> sufficient, not proved-minimal, route-facing envelope; cite the current
+> shifted E5 passage while preserving the producer's historical hash table;
+> and state `dp ≡ mu0 (mod nu_G)`, `Sm=(dp-mu0)/nu_G-mu`, and
+> `mu0|M_U` before invoking the contract identity `mu0=mu`.  Target `nu_G`
+> remains distinct from incoming `nu_U`.  This licenses a new standalone
+> exact-rational checker only after a separate software review.  It does not
+> license changing canonical cell verdicts, migrating/bypassing legacy
+> `cell_check`, editing `solve_arr`, or changing `NUCAP=500`.
+
+> **LL-1 FULL-EXIT REPRICE — CONDITIONAL ARITHMETIC VERIFIED; TWO-POLE
+> CARRIER BRIDGE UNPROVED (2026-08-29 10:36Z).** Sol producer
+> `aaa7496bd6182bd124935b8534307ad3167fffe9393efad3e56cf349942ddeb7`
+> (body `2d873e680cfdc464fc0bc707aec5c072ba9310ee0600a98786643c0ca8c93ac5`)
+> received fresh stable-basis Opus5 review
+> `3e3cea4aa6e0bda907dd291a0f1e62e1ffa744e84463e5596c2e0e0e408a166b`
+> (body `7b23f8cadfc8e4afcbebd64add68449bd8e08f2cacfc6dede26d651dc681e302`),
+> verdict `UNTYPED_NO_PROMOTION`; all fourteen charged sources matched before
+> and after.  The immediately preceding retry-A API failure produced no
+> report or verdict and remains fail-closed evidence only.
+>
+> The review independently reproduces ordinary/`-O` checker output, all 16
+> LL-1 cells, exactly four nonzero `delta=2/3` conditional price increases,
+> unchanged zero/epsilon summands and td12 menu arithmetic, old and new
+> pooled graphs, and the conditional 13-to-7 terminal inventory.  No
+> arithmetic error was found.  The upgrade is nevertheless not licensed:
+> LL-1 is a two-pole packet governed by the multipole selected-witness MFE
+> consumer `sum_d price(F,d)`, while the all-flag first-separation theorem is
+> proved only on a singleton-pole characteristic path.  The required strong
+> ambient orbit-tree attachment/full-flag lemma is an explicit blocker.
+> Therefore no `charge_basis` is declared and the canonical LL-1 inventory
+> remains 13.  Prove that strong attachment lemma or a direct two-pole
+> first-separation-set theorem, then tag the affected consumers
+> `FULL_ACTUAL_EXIT`, before applying the conditional 13-to-7 replay.
+
 > **SEALED-ARTIFACT `G2` TERMINOLOGY RIDER (2026-08-29 09:55Z).** Seven
 > sealed post-round reports use bare `G2` only inside a maximum-scope
 > **nonclaim**: `m2-u2-one-p0-nested-boundary-r1-sol56`, its Grok review,

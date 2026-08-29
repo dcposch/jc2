@@ -977,7 +977,11 @@ minimally plausible codomain is a finite exceptional residue plus normalized
 its parameter progression, full-frame affine laws, coefficient character,
 consumer list, exceptional values, and exact provenance. U1 supplies the
 first reviewed semilinear schema. U2 (`nu_G=1`, unbounded `lex`) and the
-case-III Q+E5 transition layer remain named leaks. U2 is now narrowed: its
+case-III Q+E5 transition map remain named leaks. At a fixed certified
+equal-regime case-III state, Q+E5 now has a reviewed finite exact integer
+menu and no-partition R2.2 existence predicate; what remains open is the
+typed route-to-state map, arrival/i-sync/offset data, and realization, not the
+fixed-state pattern fibre. U2 is now narrowed: its
 absorbed normal form and transport are reviewed; fixed arrival data with a
 P0-only continuation to P1 and a first integral `nu>=2` equality boundary
 allow only finitely many outer parameters; and an actual adjacent direct
@@ -986,9 +990,17 @@ not apply to a contracted stage-R row without adjacency, down-tree typing,
 full degrees/indices, and its last `(nu,kbar)` frame. A reviewed labelled
 three-vertex route with one neutral P0 segment has, for every fixed
 `t=5 mod 6`, a semilinear family `K=1 mod 6`; varying both `t` and `K`
-introduces `nu=tK` and is not one semilinear family. Its source scale,
-landing, coefficient gluing, unused siblings, and absolute-index or
-`prod(nu_seg)` boundedness are uncovered. General nonintegral/rational first
+introduces `nu=tK` and is not one semilinear family. Its three relevant
+arrival multiplicities are all three, so the reviewed source-mass
+replacement gives `td>=3*max(beta,2alpha)>=12`, excluding it only through
+`td=11`, not at `td=12`. Equality forces type `(2,3)` and three
+`(a,b,nu)=(1,2,3)` pole entries, but the available formal ledger arrives at
+weight `2/3`, whereas the labelled inner frame requires weight one. Its
+source scale, actual weight-one landing, coefficient gluing, unused-sibling
+upstream data, and absolute-index or `prod(nu_seg)` boundedness are
+uncovered. Merge-free alone cannot invoke Statement 8.5: every edge needs
+its own `G notin V_{2,a}` or direct M-divisibility certificate. General
+nonintegral/rational first
 boundaries, other positive P0 compositions, unclassified transitions, and
 recursively variable base data remain uncovered. None of these leaks may be
 hidden by a numerical cap or an `OPEN`-dropping enumerator.
@@ -1013,9 +1025,13 @@ an actual adjacent direct `nu=1` U2 edge finite. They do not cover a
 nonintegral/rational first boundary, a general positive intervening P0
 composition, an unclassified transition, recursively variable bases, or
 make every partner-dependent consumer uniform on those fibres. The reviewed
-one-P0 family makes this gap concrete: fixed `t` gives a semilinear ray, but
-source landing, coefficient gluing, unused siblings and any absolute-index
-bound remain outside its local legality record.
+one-P0 family makes this gap concrete: fixed `t` gives a semilinear ray, and
+the repaired pole-mass theorem excludes it only at `td<=11`. Its td12
+equality profile is forced to three type-`(2,3)` off-axis pole entries, while
+the required weight-one arrival states, coefficient gluing, sibling upstream
+data and any absolute-index bound remain outside its local legality record.
+Do not restore the withdrawn `td>=15` argument: a merge-free regular path can
+contain dirty `V_{2,a}` vertices at which M-divisibility changes.
 The reported 2691 generic cells are therefore still all `OPEN`; they are not
 an exhaustive book whose survivors have merely not yet been killed.
 
@@ -1257,9 +1273,13 @@ result without a row-to-actual-edge refinement/coverage theorem carrying
 typing, full degrees/indices, and `(nu,kbar)`. One reviewed neutral-P0 route
 already forces the family language beyond one finite semilinear union: fixed
 `t=5 mod 6` gives one linear ray in `K=1 mod 6`, whereas varying both
-parameters introduces the non-Presburger product `nu=tK`. The next theorem
-must bound its absolute index/product of characteristic indices, reject it by
-source or coefficient gluing, or extend the record language while covering
+parameters introduces the non-Presburger product `nu=tK`. Its reviewed
+source-mass floor is exactly strong enough to exclude `td<=11`; the surviving
+td12 equality target has type `(2,3)`, three `(1,2,3)` poles, and still owes
+the labelled weight-one arrivals. The next theorem must bound its absolute
+index/product of characteristic indices, reject that equality profile by
+edgewise dirty-transport/T1/source or coefficient gluing, or extend the
+record language while covering
 the remaining nonintegral/rational boundaries, P0 compositions,
 unclassified transitions, and recursively variable bases. Enumerating any
 regime to a cap is not a completeness argument.

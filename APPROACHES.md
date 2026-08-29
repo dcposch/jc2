@@ -7,6 +7,40 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 10:42Z — sharpen the td12 landing target)
+
+- **Use the repaired arrival-subtree floor, not merge-free M-descent.** An
+  actual arrival subtree has pole mass at least `beta`, and at least
+  `max(beta,2alpha)` when its arrival multiplicity is at least two.  The
+  stronger `min(2beta,mu*alpha)` bound is licensed only by a pole-adjacent,
+  edgewise-`G notin V_{2,a}`, or direct `M_H|b_P` certificate.  The corrected
+  one-P0 U2 family has three multiplicity-three subtrees, hence `td>=12`, not
+  15.  At equality the only pole profile is type `(2,3)` with three
+  `(a,b,nu)=(1,2,3)` poles.  Attack its still-unbuilt `w=1` arrivals and the
+  necessary dirty `M=2`-to-a-multiple-of-`3` transport/T1/gluing data; do not
+  call the formal `w=2/3` ledger a member of the labelled route or an actual
+  tree.
+- **Bank Q+E5 at fixed-state pattern scope.** The forced-index integer menu
+  and no-partition R2.2 predicate have a fresh stable-basis Grok review.
+  Preserve the split between pattern-algebra inputs and the sufficient
+  route-facing envelope, and keep target `nu_G` distinct from incoming
+  `nu_U`.  A standalone exact checker is useful after separate software
+  review; do not migrate or bypass `cell_check`, edit `solve_arr`, or change
+  `NUCAP=500`.
+- **Keep LL-1 at the legacy inventory while attacking its exact bridge.** The
+  four nonintegral reprices and 13-to-7 graph replay are conditionally exact,
+  but the two-pole ledger is selected-witness typed.  Prove the strong ambient
+  orbit-tree attachment theorem or a direct two-pole first-separation-set
+  theorem before tagging those consumers `FULL_ACTUAL_EXIT`.
+- **Run the shared td12 source recurrence next.** Extract the depth-24 B-child
+  vector and both depth-16 sibling vectors from one coupled Keller/source
+  recurrence, with review in the background.  In parallel, pursue the newly
+  rigid U2 equality landing and the row-to-actual-edge map.  These remain
+  desk-scale; AWS stays reserved for a reviewed coefficient/CAS packet.
+- **Carry the two new semantic tripwires into every lane.** Merge-free is not
+  synonymous with the edgewise `V_{2,a}` hypothesis of Statement 8.5, and a
+  fixed target index is not an incoming index or a legacy search variable.
+
 ## Superseding strategy overlay (2026-08-29 09:35Z — correct the exit floor; run td12 and both U2 branches)
 
 - **Use the full actual exit set and keep carriers typed.** Multiplicity

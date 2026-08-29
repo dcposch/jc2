@@ -101,11 +101,14 @@ forced μ = 1 arrival (MP5), so their G* obeys full MP6 anatomy.
 
 Thesis pp. 41-45 read verbatim (sigray_full.pdf):
 
-(a) **M-divisibility needs no M=1** (St 8.5, p. 42): F ∈ T_a^↘ ∩ V_a,
-G = F°, G ∉ V_{2,a} ⟹ M_G | M_F. So down every merge-free segment the
-M-value divides b_i non-increasingly, and arrivals obey μ_e | M (St 8.4,
-p. 42, mult(p,c) | M_G — verbatim, no M=1 hypothesis). A b ≥ 2 chain MAY
-still arrive with μ_e = 1 (any divisor).
+(a) **M-divisibility needs no M=1, but it is edgewise-V2 typed** (St 8.5,
+p. 42): F ∈ T_a^↘ ∩ V_a, G = F°, G ∉ V_{2,a} ⟹ M_G | M_F.
+Thus the M-value divides b_i non-increasingly only along a segment whose
+successive lower vertices are each certified outside V_{2,a}.  Merge-free is
+not enough: the regular dirty V_{2,a} escapes in (c1), R1.3/R1.4 and the §8
+retraction can change M without creating an MP0 merge.  Arrivals still obey
+μ_e | M (St 8.4, p. 42, mult(p,c) | M_G — verbatim, no M=1 hypothesis).
+A b ≥ 2 chain MAY still arrive with μ_e = 1 (any divisor).
 
 (b) **Pattern shape** (St 3.18, used in St 8.5's proof): at a non-merge
 chain vertex G ∉ V_{2,a}, p_G = ⊖(η^ν − c^ν)^l, c ≠ 0 — the l-fold

@@ -13001,3 +13001,83 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   campaign-scoped stage/commit/push, exact remote-hash check, and clean scoped
   status. The separately owned formalization tree is excluded from all of
   those operations.
+
+## 2026-08-29 10:16Z REVIEW EVENT — Q+E5 FIXED-INDEX CONSUMER PASSES ON STABLE BASIS
+
+- Grok46 fresh review `3c5587c0...`/body `2bf0c579...` returns
+  `PASS_WITH_REPAIR` on the equal-regime Q+E5 producer. All eleven charged
+  sources match at launch and verdict. For a fixed certified case-III state,
+  fixed `M_G`, forced target `nu_G`, and integer `kbar_G`, the exact menu is
+  finite and each member has a unique degree/slot record; one inequality
+  decides R2.2 pattern existence without partition enumeration.
+- Repairs: distinguish pattern inputs from a sufficient route envelope; use
+  `mu0` in the congruence/divisibility formulas before invoking `mu0=mu`; and
+  update the shifted current E5 citation while preserving historical producer
+  hashes. Pattern existence is not route/source/ODE/realization.
+- Maximum software consequence is a new standalone exact checker after its
+  own review. Legacy `cell_check` searches the wrong index and omits N1 in the
+  relevant control, so no migration, `solve_arr` edit, verdict change, or
+  `NUCAP=500` change is licensed.
+
+## 2026-08-29 10:36Z REVIEW EVENT — LL-1 REPRICE ARITHMETIC PASSES, CARRIER TYPE DOES NOT
+
+- Stable Opus5 retry-B `3e3cea4a...`/body `7b23f8ca...` returns
+  `UNTYPED_NO_PROMOTION`; retry A ended in an API server error after final
+  hash verification but before any report/verdict and remains fail-closed.
+  All fourteen inputs match before/after in retry B.
+- Ordinary and `-O` checker output, all 16 cells, exactly four conditional
+  `delta=2/3` increases, zero/epsilon terms, td12 arithmetic, pooled old/new
+  BFS, and the conditional 13-to-7 inventory all reproduce. No arithmetic
+  error exists.
+- LL-1 is a two-pole packet whose MFE consumer selects one witness per
+  direction. The all-flag first-separation theorem is singleton-pole only,
+  and the strong ambient orbit-tree attachment lemma remains a blocker.
+  Therefore the canonical inventory stays 13. Smallest repair: prove that
+  strong lemma or a direct two-pole first-separation theorem, then add an
+  explicit `FULL_ACTUAL_EXIT` carrier tag.
+
+## 2026-08-29 10:41Z REVIEW/CORRECTION EVENT — ONE-P0 U2 SOURCE FLOOR IS 12, NOT 15
+
+- Fable5 hostile review `f9dd2035...`/body `1ca3948f...` returns `FAIL` on
+  the provisional source-mass proof `28f9918e...`/body `42993a40...`.
+  One pole does imply a merge-free incoming path, but merge-free does not
+  imply each edge's lower vertex is outside `V_{2,a}`. Statement 8.5 is
+  edgewise-V2 typed; BOOK-OFFAXIS records dirty regular `M:2->3` steps and
+  retracts the old unrestricted M-descent. Thus `mu|M_H|b_P`, general ASM at
+  `mu>=3`, and `td>=15` are unlicensed.
+- Reviewed replacement: subtree pole mass is at least `beta` always and at
+  least `max(beta,2alpha)` for `mu>=2`; nested incoming subtrees are disjoint.
+  The corrected family fixes three multiplicity-three arrivals, so
+  `td>=3max(beta,2alpha)>=12`. This excludes it through td11, including td8,
+  but leaves td12 open. Equality forces type `(2,3)` and three
+  `(a,b,nu)=(1,2,3)` poles of mass four.
+- The review's td12 arithmetic ledger is formal and arrives at weight `2/3`;
+  it is not the labelled family, whose inner frame needs two weight-one
+  arrivals. The new exact target is those two inner landings plus the outer
+  sibling branch from the three forced off-axis entries, with dirty
+  transport/T1, full edge handshakes, i-sync, coefficient gluing, and
+  realization still owed. No actual counterexample or JC2 conclusion.
+
+## 2026-08-29 10:44Z LIVE STATE — STABLE REVIEWS CLOSED; CHECKPOINT INTEGRATION
+
+- Stable basis remains pushed `c3598b92598c1596e6c6331f4c877619b432a115`
+  while the three peer reviews close. Grok owns the successful Q+E5 review,
+  Opus the LL-1 source/type audit, Fable the U2 source-mass correction, and
+  Sol the independent replay and integration. Reviews did not serialize
+  provisional descendants.
+- Next mathematics remains the shared td12 first-child recurrence as primary:
+  one depth-24 B sequence plus two depth-16 sibling sequences. In parallel,
+  attack the U2 td12 equality landing and row-to-actual-edge refinement, and
+  the strong two-pole full-exit attachment bridge. Q+E5 checker construction
+  is a software-reviewed side lane, not an engine migration.
+- Two reusable semantic tripwires are added to the lane appendix:
+  merge-free is not edgewise `V_{2,a}`-free, and a fixed target index is not
+  an incoming index or a legacy search variable.
+- Outer clocks remain: full ideation quiet deadline `2026-08-29T21:35Z`, web
+  sweep deadline `2026-08-30T03:40Z`, systems checkpoint
+  `2026-08-31T09:30Z`. All current work is desk-scale; AWS is idle and remains
+  mandatory for any heavy or uncertain CAS packet. No proof or counterexample
+  to JC2 exists.
+- Immediate action: run seal and focused regressions, campaign-scoped stage,
+  commit/push, verify the exact remote hash and clean campaign status, then
+  launch the shared recurrence without waiting on further background review.

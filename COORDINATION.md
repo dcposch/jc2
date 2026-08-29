@@ -666,6 +666,21 @@ deadline is `2026-08-29T21:35Z`, the next broad web-sweep deadline remains
 `2026-08-31T09:30Z`. All current work is desk-scale; AWS is idle and reserved
 for a reviewed joint coefficient/CAS packet.
 
+Allocation and systems refresh (2026-08-29 10:44Z): the stable-basis review
+wave again has peer-majority ownership. Grok independently passed the Q+E5
+fixed-index pattern consumer with interface repairs; Opus verified the LL-1
+reprice arithmetic but correctly refused promotion at the missing two-pole
+full-flag carrier bridge; Fable found the edgewise-`V_{2,a}` defect in Sol's
+provisional U2 source-mass proof and proved the weaker family floor `td>=12`.
+Sol coordinates, independently replays the corrected bound, and integrates
+the weakest dispositions. The next primary goes to the shared td12 child
+recurrence; the U2 td12 equality landing, row-to-actual-edge coverage, and
+two-pole attachment theorem proceed independently as slots free. Reviews stay
+background/nonblocking. The lane guardrail now also forbids merge-free-to-St
+8.5 inference without edgewise V2 typing and fixed-target/incoming-index
+conflation. All listed work is desk-scale; AWS remains idle until a reviewed
+heavy packet exists.
+
 Adding a model requires one adapter in `ops/adapters/` and one roster row;
 route documents do not assign permanent jobs by model name.
 Admission requires a sealed same-input evaluation against a standing model.
