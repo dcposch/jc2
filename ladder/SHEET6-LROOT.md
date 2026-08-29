@@ -156,23 +156,33 @@ Remarks.
 ## 3. The x-side quantum: one cv vertex, κ_G = 1, for all 8
 
 **Lemma LR2.** For any survivor-class carrier (all have ψ ≥ 2, Σλ = 2,
-slack ≤ 1): the x-component of T_a carries EXACTLY ONE cv vertex G, with
-κ_G = 1 and π_G ∈ [R, R + slack]; equivalently, all l_f x-side Puiseux
-series form a single cluster (pairwise contact ≥ π_G ≥ R) with no
-characteristic exponent below π_G, and both p- and g-patterns unsplit
-below π_G on that ray in the slack-0 case (where π_G = R exactly).
+slack ≤ 1), the x-component of T_a carries exactly one cv vertex G, with
+κ_G = 1 and π_G ∈ [R, R + slack]. Every x-side place ray and every
+conjugate Puiseux representative has the same truncation through G:
+pairwise place contact is at least π_G, and no characteristic exponent
+occurs at or below π_G. Splitting or a first characteristic exponent
+strictly above G is not excluded. In the slack-0 case π_G = R, and the
+independent slope equality retains the full f- and g-pattern degrees below
+G.
 
 Proof. By the singleton first-separation construction and `(C7.1*)`,
 `td − 1 ≥ Σλ + Σ_{x-cv vertices} κ(π−1)` for the distinct selected exit
-flags and the x-side flag.
-Each x-side cv vertex costs ≥ ψ = R−1 ≥ 2 (§1 item 5 + integrality); two
-would cost ≥ 2ψ > ψ + 1 ≥ ψ + slack = (td−1) − Σλ. So one vertex;
-κ_G ≥ 2 would likewise cost ≥ 2(R−1) > ψ + slack. A split of the x-side
-f-tree below height π_G would put punctures in ≥ 2 subtrees with no common
-vertex above the split, hence ≥ 2 cv vertices: excluded. In the slack-0
-case κ_G(π_G−1) = ψ exactly forces π_G = R = k_f/l_f = k_g/l_g (Lemma
-2.1(ii)), which by the slope law needs deg p_{·} ≡ l_f and deg p_{g,·} ≡
-l_g below G (any early split lowers a slope and pushes π_G up). ∎
+flags and the x-side flag. Each x-side cv vertex costs
+≥ ψ = R−1 ≥ 2 (§1 item 5 + integrality); two would cost
+≥ 2ψ > ψ + 1 ≥ ψ + slack = (td−1) − Σλ. So there is one vertex, and
+κ_G ≥ 2 would likewise cost ≥ 2(R−1) > ψ + slack.
+
+The recorded y-side pole vertices already exhaust the Proposition 5.8 pole
+mass td=6, so no x-side place is a g-pole. Proposition 7.2 therefore puts a
+cv vertex H_P on every x-side place ray P; uniqueness forces H_P=G. Hence
+`G=I_P(π_G)=I_Q(π_G)` for any two x-side places P,Q, and Definition 3.3
+gives `O(P,Q)≥π_G`. For one place with characteristic denominators e_j,
+Notation 3.5 gives κ_G=κ/e_j at
+`α_j≤π_G<α_(j+1)`. Since every genuine characteristic step strictly lowers
+e_j and κ_G=1, necessarily j=0 and `π_G<α_1`; all conjugates therefore
+agree through G. In the slack-0 case κ_G(π_G−1)=ψ forces
+π_G=R=k_f/l_f=k_g/l_g (Lemma 2.1(ii)); the separate slope law retains the
+full pattern degrees below G. ∎
 
 Note the pleasant mechanism: on the x-ray, d_{f−a}(u) = k_f − u·l_f and
 d_g(u) = k_g − u·l_g vanish at the SAME height k_f/l_f = k_g/l_g — the
@@ -221,8 +231,10 @@ D_g·deg p/ν = 6 = td pins the absolute sizes):
   (κ_G(π_G−1) ∈ {2,3}, π_G ≥ 3), in a third y-side cv vertex above a
   cluster, or in δ — nothing pins it, nothing kills it.
 - **SP-3/SP-4**: one extra λ-free IIa_0 (k=0) chain step below the SP-1/2
-  node: single-orbit pattern, NO series leave (all conjugates), no new cv
-  mass — ledger identical to SP-1/SP-2, s-uniformly.
+  node. Its single cyclic direction-orbit creates no distinct
+  place/direction-orbit exit at this node and hence no new first-separation
+  cv flag here. This alone does not exclude conjugate shedding within the
+  continuing place. The ledger is identical to SP-1/SP-2, s-uniformly.
 - **Two-pole (residue A)**: both poles row 1, Q = (2,2,2,1,5), Λ = 3+3.
   L1a is re-derived by the ledger: pre-merge chain patterns are single
   simple orbits, so NO punctures leave pre-merge (zero y-side cv mass
@@ -250,12 +262,12 @@ single-pole r9/M2 + two-pole residue A (4 IV classes).
 
 ### 5b. Surviving local rigidity (not a slack-equality ledger)
 
-For EVERY one of the 8 (LR2): the x-side of a carrier is a single
-Puiseux cluster — one cv vertex, κ_G = 1, no x-side splitting or
-characteristic exponent below height R ≥ 3. This is a new, checkable
-constraint feeding the coefficient-template lift (the campaign's other
-endgame thread): any candidate (f,g) must have its ENTIRE x-side Newton
-structure trivial to depth R.
+For EVERY one of the 8 (LR2), the x-side of a carrier has one cv vertex
+with κ_G=1, and all place rays and conjugate representatives share one
+truncation through that vertex at height at least R≥3. A split or first
+characteristic exponent strictly above it remains possible. This is a
+checkable constraint feeding the coefficient-template lift: any candidate
+(f,g) must have its x-side Newton structure common through depth R.
 
 For the four historically labelled slack-0 classes, the old exactness
 claims are quarantined. The available conclusion is only that the selected

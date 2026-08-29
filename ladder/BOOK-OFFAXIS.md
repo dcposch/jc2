@@ -467,6 +467,41 @@ MP6-anatomy cells with equal w were NOT deep-solved here (DS4 menu +
 suffix machinery not rerun off-axis); λ/budget of NE orbits still
 unpriced (R3 unchanged).
 
+## 2026-08-29 FULL-EXIT FLOOR CORRECTION (PROMOTED; attainment remains open)
+
+The AF2 formulas below remain valid for one selected ray/witness. They are
+not automatically the total price of a nonzero direction. For a nonzero up
+direction of reduced series multiplicity `m`, put
+
+```text
+delta = X_F/m-kbar_F > 0.
+```
+
+If the consumer inserts the **full actual exit set** of that direction into
+Corollary 7.1, Statements 7.3 and 3.13 plus Definition 3.3 give the stronger
+total lower floor
+
+```text
+delta          when delta is a positive integer,
+ceil(2*delta)  when delta is nonintegral.
+```
+
+Multiplicity counts cover-level Puiseux series, not physical places; the
+place-to-flag map may be many-to-one. “No divergence/no shedding” is a
+strictly-below-cv statement, exact-level separation remains admissible, and
+the printed `kappa` convention at simultaneous exact contact/characteristic
+height must be fixed explicitly. The floor is robust under either reading
+because an at-level jump enters a more expensive branch. It is never an
+attainment theorem.
+
+Every P0/P2 consumer must declare one of two types: `REPRESENTATIVE`, which
+keeps the displayed AF2 summand below, or `FULL_ACTUAL_EXIT`, which uses the
+piecewise floor above and proves disjointness before summing. Generic
+MFE-selected witnesses are `REPRESENTATIVE`; do not reprice them by analogy.
+The frozen LL-1 R3 book used the old values and is quarantined from numerical
+promotion pending its reviewed full-exit reprice. The reviewed td12 13-edge
+menu is unchanged because all dirty nonzero defects there are integral.
+
 ## 10. LAMBDA-BUDGET REPAIR — EXECUTED (2026-08-12; St 9.3 (24) pricing
 ## of the off-axis escapes against the shared St 9.4 budget)
 

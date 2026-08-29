@@ -966,19 +966,31 @@ none of which is presently stated in one theorem:
    every cell kill; and
 5. a fail-closed coverage certificate showing that no transition was skipped.
 
-The endpoint cannot be a finite set of literal cells. The reviewed
-`td=8` equal-join route already contains infinitely many full formal cells
-with one reduced successor, and the repaired U1 theorem packages such joins
-as labelled arithmetic-progression families with periodic `M` and P0 menus.
-The minimally plausible codomain is therefore a finite exceptional residue
-plus finitely many **normalized semilinear family records**, each carrying
+At the current formal-route tier the endpoint cannot be a finite list of
+literal candidate cells. The repaired U1 theorem packages equal joins as
+labelled arithmetic-progression families with periodic `M` and P0 menus, and
+the reviewed one-P0 U2 route below supplies infinitely many locally legal
+records even though the formerly advertised `t=2` ray is N1-dead. A future
+source-landing theorem could still exclude those families; until it does, the
+minimally plausible codomain is a finite exceptional residue plus normalized
+**family records**, each carrying
 its parameter progression, full-frame affine laws, coefficient character,
 consumer list, exceptional values, and exact provenance. U1 supplies the
-first reviewed record schema. U2 (`nu_G=1`, unbounded `lex`) and the
+first reviewed semilinear schema. U2 (`nu_G=1`, unbounded `lex`) and the
 case-III Q+E5 transition layer remain named leaks. U2 is now narrowed: its
-absorbed normal form and transport are reviewed, and fixed arrival data with
-a P0-only continuation to P1 allow only finitely many outer parameters, but
-first P2 boundaries and nested U2 are not covered. None of these leaks may be
+absorbed normal form and transport are reviewed; fixed arrival data with a
+P0-only continuation to P1 and a first integral `nu>=2` equality boundary
+allow only finitely many outer parameters; and an actual adjacent direct
+`nu=1` U2-to-U2 edge has a reviewed finite parameter set. The latter does
+not apply to a contracted stage-R row without adjacency, down-tree typing,
+full degrees/indices, and its last `(nu,kbar)` frame. A reviewed labelled
+three-vertex route with one neutral P0 segment has, for every fixed
+`t=5 mod 6`, a semilinear family `K=1 mod 6`; varying both `t` and `K`
+introduces `nu=tK` and is not one semilinear family. Its source scale,
+landing, coefficient gluing, unused siblings, and absolute-index or
+`prod(nu_seg)` boundedness are uncovered. General nonintegral/rational first
+boundaries, other positive P0 compositions, unclassified transitions, and
+recursively variable base data remain uncovered. None of these leaks may be
 hidden by a numerical cap or an `OPEN`-dropping enumerator.
 
 The natural first repair is to turn the existing **marked-first-event landing
@@ -995,9 +1007,15 @@ false and retired. The cap-free chain theorem proves that reduced `(w,M)`
 set finite. Completeness still fails because neutral fibres retain unbounded
 last-vertex indices and `kbar`, U1 equal-arrival merges form reviewed
 semilinear full-cell families, and U2 has unbounded `lex` and infinitely many
-candidate successor weights. The reviewed fixed-data theorem makes only the
-P0-to-P1 terminal slice finite; no theorem covers its first P2 boundary,
-nested U2, or makes every partner-dependent consumer uniform on those fibres.
+candidate successor weights. The reviewed fixed-data theorems make the
+P0-to-P1 terminal slice, the first integral `nu>=2` equality boundary, and
+an actual adjacent direct `nu=1` U2 edge finite. They do not cover a
+nonintegral/rational first boundary, a general positive intervening P0
+composition, an unclassified transition, recursively variable bases, or
+make every partner-dependent consumer uniform on those fibres. The reviewed
+one-P0 family makes this gap concrete: fixed `t` gives a semilinear ray, but
+source landing, coefficient gluing, unused siblings and any absolute-index
+bound remain outside its local legality record.
 The reported 2691 generic cells are therefore still all `OPEN`; they are not
 an exhaustive book whose survivors have merely not yet been killed.
 
@@ -1232,11 +1250,19 @@ The reviewed split is now explicit. U1 (`nu_G>=2`, equal nonzero arrivals,
 `k=lex=0`) is representable by arithmetic-progression records with periodic
 finite consumers and coefficient rigidity `Rad(T)=T^r-A`. U2
 (`nu_G=1`, unbounded `lex`) has reviewed normal form and transport, and its
-fixed-data P0-to-P1 terminal slice admits only finitely many outer `L`, but it
-can still vary the reduced successor before that continuation. The next
-theorem must cover every source-licensed first P2 boundary and then nested U2,
-or emit the residue in a finite higher-level family language; enumerating
-either regime to a cap is not a completeness argument.
+fixed-data P0-to-P1 terminal slice, its first integral `nu>=2` equality
+boundary, and an actual adjacent direct `nu=1` U2 edge admit only finitely
+many outer parameters. A generic stage-R row cannot consume the direct-edge
+result without a row-to-actual-edge refinement/coverage theorem carrying
+typing, full degrees/indices, and `(nu,kbar)`. One reviewed neutral-P0 route
+already forces the family language beyond one finite semilinear union: fixed
+`t=5 mod 6` gives one linear ray in `K=1 mod 6`, whereas varying both
+parameters introduces the non-Presburger product `nu=tK`. The next theorem
+must bound its absolute index/product of characteristic indices, reject it by
+source or coefficient gluing, or extend the record language while covering
+the remaining nonintegral/rational boundaries, P0 compositions,
+unclassified transitions, and recursively variable bases. Enumerating any
+regime to a cap is not a completeness argument.
 
 This repair simultaneously addresses the generic off-axis hole and the
 post-jump hole inside the purported on-axis full book. Without it, increasing

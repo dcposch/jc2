@@ -12853,3 +12853,151 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   U2 theorem, adjudicate the source root-chart convention only if it informs
   another live family, and seek the td12 B-child coefficient vector/Keller
   recurrence. No proof or counterexample to JC2 exists yet.
+
+## 2026-08-29 09:18Z ROUND/CORRECTION EVENT — FULL-EXIT SAFE FLOOR REPLACES TWO FALSE GENERALIZATIONS
+
+- Significant-news round `20260829T0820Z` collected blind Fable5, Opus5,
+  Grok46 and Sol56 reports against packet `65afb334...`, then independent
+  Fable/Opus/Grok cross-pollination. Synthesis is
+  `xmodel/ideation-20260829T0820Z-synthesis.md`.
+- Literal “multiplicity `m` means exactly `m` physical places/flags” is
+  false: `m` counts cover-level Puiseux series. The certified replacement is
+  full-actual-exit coverage: every physical place through an up child has a
+  unique same-ray cv flag, the place-to-flag map can be many-to-one, and each
+  distinct flag is charged once.
+- The blind Opus formula
+  `min(num(delta),2ceil(delta))` is false generally; integrality constrains
+  `q(tau_0-kbar)`, not `q*delta`. For the full actual exit set, the safe lower
+  floor is `delta` for positive integral defect and `ceil(2delta)` otherwise.
+  Attainment is separate. The td8 trunk kill and td12 B-charge remain valid
+  after the carrier repair.
+- Blind Sol/Fable/Grok also misread the U2 scalar label `C'` as a derivative.
+  Opus caught the notation error; the proposed resonant family does not
+  refute the actual direct-edge ODE theorem. `ARITY-CEIL` is blind to
+  characteristic insertions and stops; `EXIT-RH` is untyped/duplicate;
+  `PIC-DISC` is banked as a future landing-record validator.
+
+## 2026-08-29 09:25Z REVIEW/PROMOTION EVENT — DIRECT U2 EDGE AND BOTH TD12 SIBLING TESTS CLOSE
+
+- Fable review `5cf66cd0...` plus source/index delta review `fff0e6a4...`
+  promote the direct nested-U2 theorem only for an actual adjacent edge.
+  Fixed pre-inner data give finitely many T1-alive pairs; the resonance is
+  killed by an ODE with nonzero constant right side. A generic stage-R row
+  still lacks adjacency, down-tree typing, full degrees/indices and the last
+  `(nu,kbar)` frame.
+- Fable `PASS` `70cf67b2...`/body `9b53f3ce...` confirms the td12 sibling
+  `(nu,dp,dq)=(17,68,52)` has two nonzero directions, one `q=1`,
+  `tau_0=17` flag of exact weight four in each, and total charge `4+4=8`.
+  Its necessary source condition is 16 pure-power levels per direction.
+- Grok `PASS` `432a4152...`/body `438c6054...` independently verifies the
+  sibling T1 solve: `B+C=9A/4`, `BC=45A^2/32`, so
+  `B/A=(9+/-3i)/8`, one unordered ratio point after common dilation. The
+  next common discriminator is the coupled first-child recurrence for these
+  two depth-16 gates and the earlier depth-24 B gate.
+
+## 2026-08-29 09:32Z REVIEW EVENT — ONE-P0 U2 FAMILY PASSES AFTER `dq_0` REPAIR
+
+- Opus review `84c648a7...`/body `11bcc272...` returns
+  `PASS_WITH_REPAIR` on Sol record `19fcd013...`/body `ce5cf269...`.
+  The sealed producer's inner-U2 `dq_0=4` is the illegal unabsorbed value;
+  exact correction delta `4dde1c47...`/body `2ac65012...` sets `dq_0=3`.
+- The old `t=2`, `nu=2K` ray is uniformly dead by N1/L6. For
+  `t=5 mod 6`, `K=1 mod 6` passes the full reviewed local predicate set;
+  fixed `t` gives one semilinear ray and primitive full-index ratio
+  `(1,2,2tK)`. Allowing both variables gives the bilinear product `nu=tK`
+  and not one semilinear family.
+- This is a formal-route coverage witness. It does not prove source landing
+  or actual occurrence. The sharp consumers are an absolute-index or
+  `prod(nu_seg)` bound, source/gluing failure, and a family language that can
+  represent the remaining variable-base residue.
+
+## 2026-08-29 09:35Z SYSTEMS/REPRICE EVENT — PROMPT FIREWALL PASSES; LL-1 CHANGE UNDER REVIEW
+
+- Added the 2,013-byte semantic `FALLACY.md` appendix to every new lane via a
+  private hash-pinned snapshot. `ops/lane.sh` records original and composed
+  hashes, detects mutation, cleans temporary state, and validates only
+  explicitly declared exact `charge_basis` records. Absence is recorded,
+  not inferred. Focused fake-adapter regression passes 4/4 groups.
+- Exact legacy sweep `aaa7496b...`/body `2d873e68...` finds td12's 13-edge
+  menu unchanged, but four LL-1 cells with defect `2/3` rise one unit:
+  `(17,5)@2`, `(51,15)@7`, `(85,25)@12`, `(119,35)@17`. Replaying the
+  frozen graph provisionally reduces ALIVE/FRAGILE rows from 13 to 7. Generic
+  MFE representative/raywise floors are untyped for this upgrade and remain
+  unchanged. Independent arithmetic/scope review is active before canonical
+  LL-1 promotion.
+
+## 2026-08-29 09:36Z LIVE STATE — CORRECTION-RICH ROUND CLOSED; ATOMIC CHECKPOINT NEXT
+
+- Basis is pushed commit `eaad172e59742ef8cfd055eace9bc6d3b2da8463` plus
+  the current reviewed/provisional wave. The separately owned formalization
+  tree remains excluded from every campaign query and staging operation.
+- Reviewed mathematics: td8 affine route killed; td12 B exact charge eight;
+  td12 sibling exact `4+4` and T1-alive; direct adjacent nested-U2 finite;
+  one-P0 U2 fixed-scale semilinear family alive after `dq_0=3`; td6 LR2
+  carrier proof repaired. No proof or counterexample to JC2 exists.
+- Review-gated state: Fable audits the full-exit carrier/safe-floor theorem;
+  Opus audits the LL-1 reprice. A Grok Q+E5 review observed a live mutation
+  of `ladder/REDUCTION.md` during its read and is custody-invalid for
+  promotion; preserve it only as diagnostic and relaunch from the stable
+  checkpoint. Q+E5 remains provisional.
+- Allocation after checkpoint: shared td12 first-child recurrence as primary;
+  row-to-actual-edge coverage and one-P0 source/gluing/index bound in
+  parallel; fresh stable-basis Q+E5 review; then family-aware landing/LL-2.
+  K00 remains the protected bounded characteristic-zero counterexample seed.
+- Outer clocks: last full ideation round `20260829T0820Z`, closed with this
+  synthesis; next quiet deadline `2026-08-29T21:35Z`. Last web sweep remains
+  `20260829T0340Z`; next deadline `2026-08-30T03:40Z`. The systems trial
+  resets the 48-hour checkpoint to `2026-08-31T09:30Z`.
+- Resources: all live work is desk-scale and AWS is idle by design. Heavy or
+  uncertain CAS remains AWS-only and starts only from a reviewed packet.
+- Immediate queue: harvest the two safe-floor reviews, run focused and
+  campaign tests, seal synthesis, scoped-stage/commit/push, verify the remote
+  hash and clean campaign status, then relaunch Q+E5 on the stable basis and
+  open peer-owned td12/U2 successors without waiting on background review.
+
+## 2026-08-29 09:49Z REVIEW/CUSTODY EVENT — SAFE FLOOR PASSES; TWO DERIVED REVIEWS FAIL CLOSED
+
+- Fable `PASS_WITH_REPAIR` `56e95db5...`/body `00284d5f...` promotes the
+  full-actual-exit safe lower floor with two source-faithful riders: agreement
+  and no-shedding are asserted strictly below the cv level, and exact-contact
+  `kappa` may depend on the printed representative choice. At-level jumps can
+  only enter a more expensive branch, so the calibrated td8 and td12
+  conclusions survive. The closed round synthesis is sealed at
+  `91521dc1...`/body `d62e2b77...`.
+- The Opus LL-1 reprice review changed custody while live because
+  `ladder/BOOK-OFFAXIS.md` moved from `7679db8a...` to `40104334...`.
+  Diagnostic `847ca047...`/body `58964a03...` is therefore
+  `INPUT_MUTATED/NO_PROMOTION`; it preserves arithmetic diagnostics but no
+  hostile-review pass. The provisional 13-to-7 LL-1 inventory requires a
+  fresh review from the pushed basis.
+- The Grok Q+E5 review had already failed closed for the analogous live
+  `REDUCTION.md`/`FALLACY.md` mutation. Diagnostic `6d7361b4...`/body
+  `d03ddad0...` is not promotion evidence. Q+E5 remains provisional and gets
+  a new review only after the basis is stable.
+- Seven sealed post-round theorem/review reports used bare `G2` only in
+  maximum-scope nonclaims. Their bytes remain immutable; the canonical
+  `AUDIT.md` rider reads each as “neither `G2-PSC` nor `G2-BD`,” with no
+  change to any verdict.
+
+## 2026-08-29 09:50Z LIVE STATE — REVIEW CUSTODY CLOSED; CHECKPOINT FREEZE
+
+- Reviewed mathematics: the full-exit safe floor, td8 affine-route kill,
+  td12 B and sibling charges, td12 sibling T1 point, actual-edge nested-U2
+  finiteness, repaired one-P0 local family, and td6 LR2 carrier bridge are
+  banked at their recorded scopes. No proof or counterexample to JC2 exists.
+- Provisional state: LL-1 safe-floor repricing and the Q+E5 equal-regime slot
+  map have useful producer arithmetic but no valid hostile-review pass. Their
+  mutation diagnostics are preserved; both relaunch from the next pushed
+  commit rather than reusing an old run.
+- Next mathematics: shared td12 first-child recurrence; U2 row-to-actual-edge
+  refinement and one-P0 source/gluing/index consumers in parallel; fresh
+  stable-basis LL-1 and Q+E5 reviews; then landing/LL-2. K00 remains the
+  protected bounded characteristic-zero counterexample seed.
+- Outer clocks: ideation quiet deadline `2026-08-29T21:35Z`; web sweep
+  deadline `2026-08-30T03:40Z`; systems checkpoint
+  `2026-08-31T09:30Z`. Every current discriminator is desk-scale. AWS is idle
+  and remains mandatory for heavy or uncertain CAS work.
+- Immediate action is atomic: focused verification, synthesis seal,
+  campaign-scoped stage/commit/push, exact remote-hash check, and clean scoped
+  status. The separately owned formalization tree is excluded from all of
+  those operations.

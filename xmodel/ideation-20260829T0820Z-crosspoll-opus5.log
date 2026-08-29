@@ -1,0 +1,18 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Done. Wrote `xmodel/ideation-20260829T0820Z-crosspoll-opus5.md` (sealed; body `6e8a9d19…`/43568 bytes, full file `8bef2ec9…`), plus full-file hash instructions. No canonical edits, no commit, no `jc2-lean` access.
+
+**What the six charges returned:**
+
+1. **`Λ = min(num(δ), 2⌈δ⌉)` — REFUTED.** Reconstructing from the pinned axioms `(A2)/(A4)/(A5)`, the `num(δ)` term smuggles the `q=1` pin (`τ₀ = D_F/m` *exactly*) into the `q≥2` branch, where `τ₀` is free. Safe law: `Λ ≥ δ` if `δ∈ℤ`, else `⌈2δ⌉`. It overprices by exactly one unit for `den(δ)≥3, frac(δ)≤1/2` — never underprices. All three calibration points have `den(δ)∈{1,2}`, where the two laws agree identically, so the 3/3 fit was blind to its own failure mode. The multi-flag branch **never binds** (`⌈2δ⌉ ≤ 2⌈δ⌉`), and its per-flag descent floor is **proved**, not conjectural — `(A2)` uses the *total* `m`, so splitting can't lower any flag's floor. I had named that the weakest hypothesis; it was the wrong call.
+
+2. **`PLACE-CONSERVATION` — REFUTED as a gap.** It's proved on-page in §3.1 of the same review whose §4 I was worried about (St 7.3 with its hypothesis discharged by `D_F/m > kbar_F`, plus St 3.13 uniqueness). The actually load-bearing step is about *series*, not places: `q=1 ⇒ no characteristic level ⇒ N ≡ m`. My blind card 2 is withdrawn.
+
+3. **Sol's U2 family — REFUTED as a refutation.** In the reviewed absorbed form `C'` is a nonzero *constant* (`C = μC'/(r+L)`; the free-admissibility lemma requires constancy), not `dC/dT`. Sol solved a different equation. Independently, the family has `L=r`, already proved universally dead. The producer's `R|K` lemma checks out line by line.
+
+4. **`PIC-DISC`** identity re-derived and correct, but its only non-tautological residue is `h² | d^ρ(Y)`. **`EXIT-RH`/`ARITY-CEIL` — my own — refuted**: St 3.13 caps cv flags at one per place, so the ledger is structurally blind to Lemma 2.2's `r → ∞`.
+
+5. **Week-waster: my own `Λ`.** Four of four lanes converged on that functional, three rank the slack-0 sibling first, and the error is one unit in the kill-licensing direction — a false kill would read as out-of-sample confirmation and de-fund the depth-24 gate.
+
+6. **Systems trial pre-run and negative.** Grok's literal denylist scores 0 hits on both producers it was built to catch; the td12 producer contains "series" zero times while repeating the inference. No prose lint works — I propose a declared `charge_basis` field with a four-fixture pass/fail trial.
+
+I also corrected the memory that recorded the now-refuted conjecture, since it was wrong on every load-bearing point.

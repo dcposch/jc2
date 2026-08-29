@@ -7,12 +7,69 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 09:35Z — correct the exit floor; run td12 and both U2 branches)
+
+- **Use the full actual exit set and keep carriers typed.** Multiplicity
+  counts cover-level Puiseux series, not physical places; a cv flag counts
+  neither. Every physical place through a nonzero up child has a unique
+  same-ray cv carrier, and the full set of distinct carriers covers all such
+  places, possibly many-to-one. For positive
+  `delta=D/m-kbar`, the safe total-exit lower floor is `delta` when integral
+  and `ceil(2*delta)` otherwise. It is a floor, not an attained price. The
+  proposed general formula `min(num(delta),2*ceil(delta))` is withdrawn.
+  “No divergence/no shedding” is always a strictly-below-cv statement;
+  exact-level separation and the printed choice-sensitive `kappa` convention
+  must stay explicit.
+  The reviewed td8 kill and td12 B-charge remain valid after this repair;
+  the legacy nonintegral reprice is provisional and awaits a fresh
+  stable-basis hostile review before any ledger changes.
+- **Put the shared td12 source recurrence first.** The sibling
+  `(nu,dp,dq)=(17,68,52)` survives T1 at the rigid ratio
+  `B/A=(9+/-3i)/8` and has two nonzero directions of exact charge four.
+  Together with the earlier exact B-charge eight, the live necessary tests
+  are two depth-16 pure-power sequences and one depth-24 sequence. Extract
+  all first-child coefficient vectors from one coupled Keller/source
+  recurrence; record vectors as forward-generator data and review in the
+  background.
+- **Split U2 work by interface.** The direct nested theorem is promoted only
+  for an actual adjacent U2-to-U2 edge. A contracted stage-R row still needs
+  a refinement carrying adjacency, down-tree typing, full indices/degrees,
+  and the last `(nu,kbar)` frame. Separately, the reviewed one-P0 route has
+  infinitely many locally legal records: for fixed `t=5 mod 6` it is
+  semilinear in `K=1 mod 6`, while varying both parameters is bilinear. Use
+  it to attack absolute-index/product-of-`nu` boundedness, source landing,
+  and coefficient gluing—not as a contradiction to the direct-edge theorem.
+- **Review Q+E5 before touching the engine.** The provisional equal-regime
+  consumer fixes `nu_G`, `M_G`, and `kbar_G`, then derives a unique degree
+  pair and one bounded-multiplicity existence inequality. Legacy
+  `cell_check` searches other indices and omits N1, so it cannot be reused as
+  this predicate. Its first hostile-review attempt failed closed on live
+  source mutation. Keep `NUCAP=500` and all legacy verdicts until a fresh
+  stable-basis review and regression coverage pass.
+- **Keep the outer portfolio stable.** Avenue 2 remains principal with the
+  internal order td12 recurrence, U2 coverage/gluing, Q+E5, then
+  family-aware landing and type/cofinal control. Do not raise avenues 25,
+  26, 28, or 31: local flag arity is not target inertia, a type menu, or a
+  positive Euler decomposition, and the component-labelled `A(F)` packet is
+  still absent. K00 remains the protected bounded characteristic-zero
+  counterexample seed.
+- **Run the inference firewall as campaign infrastructure.** Every new model
+  prompt receives the compact `FALLACY.md` appendix. Exit claims can declare
+  an exact machine-checked `charge_basis`; absence is recorded, never
+  inferred from prose. All current mathematics is desk-scale. Reserve AWS
+  for a reviewed joint coefficient/CAS packet and keep heavy work off the
+  local host.
+
 ## Superseding strategy overlay (2026-08-29 08:04Z — td8 affine route killed; move to td12 and nested U2)
 
-- **Retire the reviewed `td=8` affine equal-join family.** Independent
-  different-model reconstructions confirm the trunk arity correction. For a trunk flag,
+- **Retire the reviewed `td=8` affine equal-join family.** The independent
+  Opus reconstruction confirms the trunk arity correction; Grok reached the
+  same verdict but its proof repeated the series/place shortcut and is not a
+  second sound reconstruction. For a trunk flag,
   `q=kappa_H/kappa_F>=2` gives weight at least three; if `q=1`, a lone flag
-  would retain all `2i` places and acquire impossible weight `3/2`, so at
+  in the full actual exit set, together with physical-place coverage and no
+  conjugate shedding, would retain all `2i` series in one common prefix and
+  acquire impossible weight `3/2`, so at
   least two flags contribute total weight at least four. Therefore the
   actual-weight ledger is at least `2+2+3+1=8>7`, uniformly in `t`. The old
   charge-two trunk profile was per ray and undercounted the exit set. Do not
@@ -1092,8 +1149,8 @@ review-closed: the class/primitive gates pass, but the raw endpoint is empty.
   It refutes any full branch-P separation: the explicit compatible point
   `a=b=1`, `v_7=-14rho`, `z_6=168rho^2`, `tt_9=-560rho^3` satisfies all eight
   boundary rows off that locus.  Carry the `R0_ARTIFICIAL_CUSP_CONTROL`
-  firewall and the unreplayable-manifest-history gap.  Do not launch G2 on
-  this pair.
+  firewall and the unreplayable-manifest-history gap.  Do not launch either
+  `G2-PSC` or `G2-BD` on this pair.
 - **External intelligence — Matysiak SSRN 7229358/7229458 is no JC2
   progress.**  Fable5's full-text first audit finds the headline proof stops
   at algebraic injectivity and simply asserts surjectivity, while its second

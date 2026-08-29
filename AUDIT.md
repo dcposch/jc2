@@ -5,26 +5,188 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **SEALED-ARTIFACT `G2` TERMINOLOGY RIDER (2026-08-29 09:55Z).** Seven
+> sealed post-round reports use bare `G2` only inside a maximum-scope
+> **nonclaim**: `m2-u2-one-p0-nested-boundary-r1-sol56`, its Grok review,
+> `m2-u2-nested-nu1-boundary-r1-hostile-review-fable5`,
+> `m2-u2-direct-edge-isync-source-audit-sol56`,
+> `m2-u2-one-p0-semilinear-family-record-r1-sol56`, its Opus review, and
+> `td6-lr2-place-proof-repair-hostile-review-sol56`. Preserve their sealed
+> bytes and cited hashes. In every listed occurrence, read “no `G2`
+> conclusion” as “neither `G2-PSC` nor `G2-BD` is established.” This is a
+> terminology repair only; it changes no mathematical verdict. New reports
+> must use the scoped names directly.
+
+> **FULL-ACTUAL-EXIT COVERAGE AND SAFE DEFECT FLOOR — PROMOTED;
+> LITERAL “`m` PLACES” AND THE NUMERATOR FORMULA WITHDRAWN
+> (2026-08-29 09:38Z).** Sol source audit
+> `05f68f4b7278a8ac1216ba82b40e7081bfff66f351380ccd671d12a955784d84`
+> (body `1608a44660e094e0fa8cf05b4f1db3b97173243a9e8319a7f55d4c44f0f1cb85`)
+> received independent Fable5 review
+> `56e95db58e53aa030ef1100cc1640d115105a77607d40e3f160e77b46174a34d`
+> (body `00284d5fefa49f998439f772025f845b5d0050bd38dcb6967db637a1a045aa35`),
+> verdict `PASS_WITH_REPAIR`.
+>
+> For a nonzero up child, `m=mult(p_F,c*)` counts cover-level Puiseux
+> **series**, not physical places. A physical place may carry several
+> conjugate series, several places may share one cv flag, and the promoted
+> MFE witness subset is not exhaustive inside later branches. The certified
+> replacement is `FULL-EXIT-COVERAGE`: every physical place through the up
+> child has a unique same-ray cv flag; the set of all distinct such flags
+> covers every place and is charged once per flag. No equality between the
+> numbers of flags, places, and series follows.
+>
+> Put `delta=D/m-kbar>0`. For the **full actual exit set**, total actual
+> weight has the universal lower floor
+>
+> ```text
+> delta          if delta is a positive integer,
+> ceil(2*delta)  if delta is nonintegral.
+> ```
+>
+> This is a floor, never an attainment statement. The proposed general
+> equality `min(num(delta),2*ceil(delta))` does not follow: integrality
+> constrains `q(tau_0-kbar)`, not `q*delta`, and shedding can make
+> `tau_0>D/m`. The exact `delta=4/3` axiomatic profile in the source audit
+> has weight three, disproving the claimed deduction of floor four without
+> claiming a realizable Sigray-tree or Keller counterexample. A characteristic
+> GRID law might restore a numerator branch but is presently conjectural.
+>
+> Two qualification repairs are binding. “No divergence/no shedding” means
+> strictly below the cv level; separation exactly at that level may be
+> admissible, and Proposition 3.1(*) counts series agreeing strictly below
+> it. Also, printed `kappa_H` can be choice-sensitive when an exact place
+> contact is simultaneously one place's characteristic exponent. The floor
+> and the td8/td12 conclusions are robust under either fixed reading because
+> an at-level jump moves only to a more expensive branch; consumers must not
+> assume place-independent `kappa_H` without a separate convention theorem.
+> The reviewed td8 route kill and td12 exact B-charge eight survive unchanged.
+
+> **ONE-P0 NESTED-U2 FAMILY — FIXED-SCALE SEMILINEAR RAYS SURVIVE;
+> THE OLD `t=2` RAY DIES BY N1 (2026-08-29 09:32Z).** Sol record
+> `19fcd0133c72eba01dc4a554638111760a8813231a3b983a752d7d7528f58f82`
+> (body `ce5cf26906d3c736e75c791c3600be201b65279aabbbacbf0b12014d51497c29`)
+> received independent Opus5 review
+> `84c648a721f42d8197a9c78648795e9830e5bb75521a3e00a8a9d5a80f495cb6`
+> (body `11bcc272d379622cc0105f50a7351fc728f4609f87e7e711cf8bf7a28d40b06c`),
+> verdict `PASS_WITH_REPAIR`. The sealed record is preserved; correction
+> delta `4dde1c471b04d88db466293bc197c78529bc16743cc7ccde176e594bceb622dc`
+> (body `2ac65012d3ca3a56feef184d42b374525f8a1e5767914ca46674df18ed53d20f`)
+> changes the inner absorbed U2 degree from the illegal eta-not-absorbed
+> value `dq_0=4` to `dq_0=3`.
+>
+> For the labelled route inner U2 -- case II, `l=3` --> neutral P0 --
+> case I, `h=3` --> outer U2, the previously proposed scaling
+> `nu=2K`, `K=6q+1`, is dead uniformly:
+> `gcd(kbar_1,nu)=gcd(4K+2,2K)=2`, violating N1/L6. The repaired route
+> passes the reviewed local arithmetic, strict inequalities, St. 8.4, MP2,
+> arrival law, P0 ODE, both U2 T1 tests, and full-index transport exactly
+> when `t=5 mod 6` and `K=1 mod 6`. At the least scale `t=5`,
+> `(i_0,i_1,i_2)=tau(1,2,10K)`, the second edge index is `18`, and
+> `K=6q+1` gives one exact semilinear family record.
+>
+> For each fixed admissible `t` the family is semilinear; allowing both
+> `t` and `K` to vary introduces `nu=tK` and is not one semilinear family.
+> Full `i`-synchronization proves ratios, not absence of an absolute-index or
+> `prod(nu_seg)` bound at a fixed entry. The result is therefore a concrete
+> obstruction to literal finite-cell enumeration at the listed local tier,
+> not a landing theorem or a proof that a complete configuration book is
+> infinite. No coefficient gluing, source occurrence, realization, degree
+> ceiling, counterexample, `G2-PSC`, `G2-BD`, or JC2 conclusion follows.
+
+> **`td=12` U1 SIBLING — T1-ALIVE, EXACT `4+4` CHARGE, TWIN
+> DEPTH-16 SOURCE GATES (2026-08-29 09:25Z).** Sol producer
+> `52ffafa2e79823e275e084d9d3c3a36329401cc9449a6e572379ce1ee0390b69`
+> (body `306d69f61eb4b9345bcc2bb09dde41411c8762be5203be905eecb108415bba02`)
+> received independent Fable5 review
+> `70cf67b2241b1361e958e673b81d883f34a87be9e5fe3631a3a36c35646c3060`
+> (body `9b53f3ce94859f4854480f3e49decd91da319f782f87a2bf7a5f7116e836c7e3`),
+> verdict `PASS`.
+>
+> The sibling reduced cell is
+> `(nu,dp,dq,E,kbar,X,w,M)=(17,68,52,36,13,17,3/4,4)` with two
+> distinct nonzero northeast directions of reduced multiplicity one. Every
+> full actual flag in either direction costs at least four. The shared
+> ceiling is eight, so saturation forces exactly one `q=1` flag at
+> `tau_0=17` and exact charge four in each direction. A distinct-place split
+> may occur at the shared endpoint level 17; conjugate shedding there is
+> still excluded. The total is exactly `4+4=8`, not an arity kill.
+>
+> The reduced T1 system is nonempty and rigid up to common dilation and root
+> swap. With `t=eta^17`, arrival value `A`, and extra values `B,C`,
+> `B+C=9A/4`, `BC=45A^2/32`, hence
+> `B/A=(9+/-3i)/8`; the coefficient form is rational and the right side is
+> nonzero. Survival therefore requires both direction clusters to remain
+> unchanged-denominator pure `i`-th powers at every normalized level
+> `1,...,16`, for 32 necessary direction-level tests. On displayed direct
+> entries `i=6n`, so each first gcd test has degree target `6n-1`, subject to
+> the inherited direct-entry/count-exactness riders.
+>
+> The next discriminator is the pair of first-child coefficient vectors from
+> the coupled Keller/source recurrence. Passing them gives only a necessary
+> formal source condition. No realization, landing, full `td=12` book kill,
+> degree ceiling, `G2-PSC`, `G2-BD`, counterexample, or JC2 conclusion follows.
+
+> **DIRECT NESTED U2-TO-U2 EDGE — FINITE AT ACTUAL-EDGE SCOPE;
+> STAGE-R CENSUS STILL OPEN (2026-08-29 09:20Z).** Sol producer
+> `99bbe233f8f6f7273b2e5f89705aa5f2189681ce649a8723a66a0f99fa92912b`
+> (body `11e44767526044590b2f3ed8ceaed6b0aa3eaa98b30008e15bc725149d8b90cf`)
+> received Fable5 hostile review
+> `5cf66cd018e938cbc07cdeb9623baf28c667122ca602736154b8a694ec0142d7`
+> (body `0fcd5675bee9a8a10562507ceaa40cd8518e601759956235f63ae91b012ec3d5`),
+> verdict `PASS_WITH_REPAIR`. Sol's source/index audit `59fd3042...` then
+> received Fable delta review `fff0e6a4...`/body `e25e06aa...`, also
+> `PASS_WITH_REPAIR`.
+>
+> For fixed pre-inner data and an **actual adjacent** inner-U2-to-outer-U2
+> edge, the corrected case-I rule and the positive integer edge equation
+> reduce the T1-alive parameter pairs to a finite explicit set. Its unique
+> arithmetic resonance has outer degree divisible by the arrival degree and
+> is killed by the polynomial ODE with a nonzero **constant** right side.
+> The printed full-degree handshake is
+> `i_H*dp_H=i_O*mu_e`; Proposition 9.3 derives the positive edge integer
+> independently of any normalization. State the standing hypothesis
+> `O,H in V_a intersect T_a^searrow`, discharged for actual configurations
+> by MP0.
+>
+> This does not promote a contracted stage-R row: such a row lacks actual
+> adjacency, the down-tree typing, full degrees/indices, the last
+> `(nu,kbar)` frame, and may hide a positive P0 segment. The smallest
+> remaining coverage lemma must refine every row to an actual zero-length
+> edge carrying those fields, while positive-length classes route to their
+> own P0 composition theorem. No nested-chain completeness, landing,
+> coefficient gluing, full-cell finiteness, degree ceiling, counterexample,
+> or JC2 conclusion follows.
+
 > **`td=8` AFFINE EQUAL-JOIN ROUTE — KILLED BY TRUNK EXIT ARITY
 > (2026-08-29 08:04Z).** Sol producer
 > `3c2c9a7ed79cc6d05ec3ba7098c1dc89cabb3547791d777c4bf8971d1ae28e39`
 > (body `688dbf41e3e3b6c777ec7267c8114569c4507261eb6dea9003dc6236c330494c`)
-> received independent Grok46 review
+> received Grok46 review
 > `a5c342e49aaa0ede12b857ed7742c6474737becabab0dcf7a10fbdedb26a8978`
 > (body `fdb2a6e6d17b08e521ce0a27d1703e4890586268f7afb684db95d4164897c0ae`),
 > and independent Opus5 review
 > `d9db244079c521a2e3643c824b715adb4c934d843f9da18e9140c80d6758f012`
 > (body `51f3ed7c6c77a10e21f053875a323b633fc7e6499641d0b61ad3518f521de0c5`),
-> both verdict `PASS_WITH_REPAIR`; maximum safe consequence
-> `ROUTE_KILLED_BY_TRUNK_ARITY`.
+> both verdict `PASS_WITH_REPAIR`. The subsequent carrier-type consumer
+> audit `ae3b561e...` found that the Grok proof repeats the series/place
+> shortcut below and is not a second sound proof of the repair; the Opus
+> reconstruction is the independent load-bearing review. Maximum safe
+> consequence remains `ROUTE_KILLED_BY_TRUNK_ARITY`.
 >
 > At the `(85,35)` trunk, corrected Statement 9.3 gives every cv flag in
 > the multiplicity-`2i` extra-direction component actual weight at least
 > two. Write `q=kappa_H/kappa_F`. The exact area law has
 > `tau_0>=17/2`. If any flag has `q>=2`, that flag alone has weight
 > `q(tau_0-7)>=3`. If `q=1`, no characteristic level and hence no conjugate
-> shedding occurs. Were there only one flag, it would carry all `2i` places,
-> and the area law would give the impossible nonintegral weight `3/2`;
+> shedding occurs. Were the full actual exit set a singleton, full
+> physical-place coverage would exclude place divergence and `q=1` would
+> exclude conjugate-series shedding, so all `2i` series would remain in the
+> common prefix strictly below the cv level. Separation exactly at the cv
+> level remains admissible and is priced by its corresponding branch. The
+> Proposition-3.1(*) strictly-below convention makes the area count exact,
+> and the area law would then give the impossible nonintegral
+> weight `3/2`;
 > therefore this branch has at least two distinct flags and total weight at
 > least four. Thus the whole trunk exit set costs at least three, never two;
 > equality three is possible only at the knife edge `q=2, tau_0=17/2`.
@@ -53,18 +215,21 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > verdict `PASS_WITH_REPAIR`.
 >
 > For the `(2/3,3)@nu_F=25` terminal, every cv flag below the B-direction
-> has actual weight at least eight. A parting into distinct direction-orbits
+> has actual weight at least eight. A parting into distinct physical-place /
+> direction exits
 > creates two distinct flags and costs at least sixteen. A conjugate parting
 > instead gives one orbit-level flag but forces
 > `q=kappa_H/kappa_F>=2`; since the descent integral always gives
 > `tau_0>=D_F/i=25`, that flag also costs at least
 > `q(tau_0-17)>=16`. Either contradicts `td>=1+sum wt(H)` at `td=12`.
-> Hence no sheet parts before the cv level, `N=i`, `tau_0=25`, `q=1`,
+> Hence no sheet parts strictly below the cv level, `N=i` in the
+> Proposition-3.1(*) sense, `tau_0=25`, `q=1`,
 > and the exact first-exit charge is eight; nine is impossible.
 >
 > The necessary source test is therefore a pure `i`-th-power child at each
-> integer normalized level `1,...,24`, with no denominator jump; a split is
-> first allowed at level 25. For direct pole entries `i=6n`, so the first
+> integer normalized level `1,...,24`, with no denominator jump. A distinct-
+> place/direction split may first occur at level 25; conjugate shedding at
+> that endpoint remains excluded by `q=1`. For direct pole entries `i=6n`, so the first
 > test is `deg gcd(C_1,C_1')=6n-1`. The A/B interpolation proves only formal
 > top/arrival/weight compatibility, not the coupled Keller recurrences or
 > realization. The smallest missing datum is the first B-child coefficient
@@ -2217,7 +2382,7 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > codimension-one locus the eight boundary rows are simultaneously
 > compatible, for example
 > `a=b=1`, `v_7=-14rho`, `z_6=168rho^2`, `tt_9=-560rho^3`.
-> Consequently G2 must not be launched on this pair.
+> Consequently neither `G2-PSC` nor `G2-BD` may be launched on this pair.
 >
 > The live 45-line upper manifest verifies, and every mathematical byte used
 > by the coefficient argument matches both reports, but earlier manifest

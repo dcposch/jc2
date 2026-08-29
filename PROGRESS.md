@@ -7,6 +7,58 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
+> **FOUR-MODEL ROUND CORRECTS THE EXIT LAW; ONE-P0 U2 FAMILY SURVIVES
+> WITH A RECORD REPAIR (09:30--09:35Z).** Round `20260829T0820Z` is
+> synthesized in `xmodel/ideation-20260829T0820Z-synthesis.md`. Cross-review
+> rejects both the literal identification of multiplicity with a number of
+> physical places and the proposed universal price
+> `min(num(delta),2ceil(delta))`. The source-backed full-actual-exit floor is
+> `delta` for positive integral defect and `ceil(2delta)` otherwise, always
+> as a lower bound. Fable review `56e95db5...`/body `00284d5f...` independently
+> passes the result with strict-below-cv and exact-contact-`kappa` wording
+> repairs; the reviewed td8 kill and td12 B-charge are unchanged. A legacy
+> nonintegral-floor reprice remains provisional: its Opus review attempt
+> failed closed after a live `BOOK-OFFAXIS` basis mutation, so a fresh
+> stable-basis arithmetic/scope review is queued after this checkpoint.
+>
+> Opus review `84c648a7...`/body `11bcc272...` passes the repaired one-P0
+> nested-U2 family with one required field fix: absorbed inner `dq_0=3`, not
+> `4`; delta `4dde1c47...`/body `2ac65012...` preserves the sealed producer.
+> The old `t=2` ray is N1-dead. For fixed `t=5 mod 6`, `K=1 mod 6` gives a
+> semilinear family of locally legal routes with primitive index ratio
+> `(1,2,2tK)`; varying both parameters is bilinear. This makes source
+> landing, coefficient gluing, and an absolute-index/product-of-`nu` bound
+> the exact coverage debts. It does not contradict finite actual direct U2
+> edges or prove occurrence.
+
+> **INFERENCE FIREWALL INSTALLED (09:30Z).** A 2,013-byte `FALLACY.md`
+> semantic appendix is delivered exactly once to each model lane from a
+> hash-pinned snapshot. The launcher records original/composed prompt hashes,
+> quarantines mutation, cleans private temporary state, and optionally
+> validates declared exact `charge_basis` records while treating absence as
+> unknown. Focused fake-adapter regression passes all four test groups. This
+> is the current software-improvement output of the ideation round; it does
+> not pretend that prose semantics are mechanically inferred.
+
+> **TD12 SIBLING SURVIVES T1 WITH EXACT `4+4` CHARGE; DIRECT U2 EDGE
+> FINITENESS PASSES AT ACTUAL-EDGE SCOPE (09:20--09:25Z).** Fable review
+> `70cf67b2...`/body `9b53f3ce...` returns `PASS` on the sibling charge
+> producer `52ffafa2...`/body `306d69f6...`. The
+> `(nu,dp,dq)=(17,68,52)` cell has two distinct extra directions, one
+> `q=1` flag of exact weight four in each, and a rigid T1 template
+> `B/A=(9+/-3i)/8`. Its budget is exactly saturated, so the live source
+> condition is two pure-power child sequences through levels `1,...,16`
+> (32 necessary tests), not an arity kill.
+>
+> Fable's direct-U2 review `5cf66cd0...` and source/index delta review
+> `fff0e6a4...` separately promote the Sol theorem `99bbe233...` at actual
+> adjacent-edge scope: fixed pre-inner data leave finitely many T1-alive
+> pairs, and the resonance is killed by an ODE with nonzero constant right
+> side. A generic contracted stage-R row cannot consume this result without
+> actual-edge refinement carrying down-tree typing, full degrees/indices,
+> and the last `(nu,kbar)` frame. Positive intervening P0 segments and
+> recursively variable bases remain open.
+
 > **TD12 U1 B-CHARGE IS EXACTLY EIGHT; ITS NEXT GATE IS 24 SOURCE
 > LEVELS (08:15Z).** Fable review `3f214db8...`/body `8ef16e10...`
 > returns `PASS_WITH_REPAIR` on Sol producer `2a151eef...`/body
@@ -21,12 +73,16 @@ day or inserts the completed day directly below this preamble (see
 
 > **REVIEWED TRUNK-ARITY CORRECTION KILLS THE `td=8` AFFINE EQUAL-JOIN
 > FAMILY (08:04Z).** Sol producer `3c2c9a7e...`/body `688dbf41...`
-> receives independent Grok and Opus `PASS_WITH_REPAIR` reviews
+> receives Grok and independent Opus `PASS_WITH_REPAIR` reviews
 > `a5c342e4...`/body `fdb2a6e6...` and
-> `d9db2440...`/body `51f3ed7c...`. The old charge-two trunk profile was a
+> `d9db2440...`/body `51f3ed7c...`. A later carrier-type audit found that
+> Grok's proof repeats the series/place shortcut, so Opus supplies the sound
+> independent repair. The old charge-two trunk profile was a
 > correct per-ray computation but an incorrect exit-set consumer. For a flag,
 > `q=kappa_H/kappa_F>=2` gives weight at least three. If `q=1`, one flag would
-> retain all `2i` places and have impossible weight `3/2`, so there are at
+> make the full actual exit set a singleton; full place coverage and absence
+> of conjugate shedding would then retain all `2i` series in one common
+> prefix and give impossible weight `3/2`, so there are at
 > least two flags and total weight at least four. Thus the route costs at least
 > `2+2+3+1=8>7` for every affine parameter and is excluded. This is one
 > formal-family kill, not a global `td=8`, degree-ceiling, source-realization,
@@ -1591,7 +1647,7 @@ day or inserts the completed day directly below this preamble (see
 > fibre-product zero only on the sharp upper `v_7=0` sublocus crossed with the
 > lower torus.  The full branch-P stratum is not separated: an explicit
 > compatible point exists at `v_7=-14rho`, `z_6=168rho^2`,
-> `tt_9=-560rho^3`; G2 is not launched.  The sealed-round model scorecard
+> `tt_9=-560rho^3`; neither `G2-PSC` nor `G2-BD` is launched.  The sealed-round model scorecard
 > `6c033459...` independently confirms that Opus5 adds material global-
 > geometric/closed-form capability beyond Fable5, while Fable5 supplies an
 > indispensable local-algebra/custody complement; both remain equal-standing
