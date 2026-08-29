@@ -5,6 +5,74 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **K00 NORMALIZED V20R2 VALUATION FOUR — REVIEWED TWO-CELL NARROWING
+> PROMOTED (2026-08-29 20:51Z).** Sol producer `be37360e...` (10,719-byte
+> body `3bb710d3...`) receives Fable different-model review `2ce2e4bf...`
+> (21,336-byte body `220569e1...`), with every attacked mathematical claim
+> `CONFIRMED`. Binding integration is
+> `bb6ebb1273865f92fec12313216bc36e66a36d7238b7eb988d813e84f7906839`
+> (4,847-byte body
+> `75dce8299048dff7b36238a5c2dda9485e59b2e4e14826dfe29f963af8c0755d`).
+>
+> On the exact source `d=Lambda^4x+Lambda^5y+...`, `x!=0`, with the
+> normalized boundary opens and zeros retained, leading ranks one and two
+> die at grade 12. On the old plane, next rank one dies at grade 15 and next
+> rank two is restricted to `u_y=0` or `u_y^2=192v_y^2`, `v_y!=0`. The exact
+> grade-19 residual is the disjoint constructible union `R4-00 disjoint-union
+> R4-02`, with every literal grade-8--19 row imposed. Promotion consumes the
+> review-derived quadratic-field projections, clean `lambda`-forcing rows,
+> full constant cancellations and target calendar, and the sequential—not
+> free-`y`—reading of grades 10/11. No residual nonemptiness, scheme,
+> attainment, arc, map, other support, counterexample, or JC2 claim follows.
+
+> **QCS-IDENTITY PROMOTED; DEPENDENCY AND RESIDUE-A MARGIN OVERCLAIMS
+> REPAIRED (2026-08-29 20:51Z).** Sol producer `41209192...` (15,043-byte
+> body `a2cf302a...`) receives Opus hostile review `a1bfad2b...`
+> (30,893-byte body `7d2ab10a...`). Items 1--7 are `CONFIRMED`; the claimed
+> full dependency barrier and `QCS-MARGIN/v1` successor are `GAP`. Binding
+> integration is
+> `cee4e1f8079b5a20ee6fca3c7fa58dda1d8c90aeb235cd411d5fc485b9eb7936`
+> (7,094-byte body
+> `85c279638f2d13203f5a6e22af23785c4981c4d5f286c81127bfd91c66e37b56`).
+>
+> For the reviewed Section-7 quotient package, with one flag term per
+> quotient line and a connected generic fibre,
+>
+> ```text
+> chi_a-chi_gen=sum_i b_i(d_i-q_i(a))-X(a),       X(a)>=0,
+> E_gen=sum_a X(a)=d-1-sum_i b_i,
+> Xi=E_gen-(s-1)=d-s-sum_i b_i
+>   =sum_i b_i(d_i-1)-(2G+2s+n-2).
+> ```
+>
+> Hence generic PCB is equivalent to `Xi>=0`; atypicality forces a quotient
+> collision but not positive weight excess. Every-fibre transport still
+> needs its own `max_a s(a)<=s` rider. The producer's local germ and Hurwitz
+> passport are not one global model, so no broad independence theorem is
+> promoted. Source audit `d708b307...`/body `3e1a382...` returns residue A
+> `UNDERDETERMINED(first_absent=PairRef)`: an actual pair, generic fibre,
+> complete quotient-line/baseline list, and source-certified `d,s` are the
+> minimal packet; quotient degrees/genus/end counts and exit transport are
+> parallel cross-check/downstream tiers, not prerequisites for the cheapest
+> integer.
+
+> **TYPE-(2,3) ANALYTIC ZERO-EXCESS CONTROL PROMOTED AT SURROGATE SCOPE
+> (2026-08-29 20:51Z).** Sol producer `84afec54...` (8,993-byte body
+> `80b6fd58...`) receives Fable hostile review `28e22f20...` (26,796-byte
+> body `cf1ba18a...`), verdict `PASS_WITH_REPAIRS`. Binding integration is
+> `a7b39d985c9e50688506cb9a176a93e89a309de079e025cb4f28430c4e7ded10`
+> (4,825-byte body
+> `24675cfe3a07aa9cd05a46fc4842b32f0b86ddf1d322ac9731dfe19bed3eb8ad`).
+> The exact holomorphic chart has residual `(P,Q)=(z^2,z^3+z)`, a Morse
+> boundary point, a target node with unmerged parameters `+-i`, constant
+> tube degree two, and analytic comparison profile `w_an=2=b^+`, hence zero
+> profile excess. In the natural ansatz Jacobian one forces
+> `r^2=r(0)^2+3s^2/2`; the residual forces the nonrational
+> `r^2=1+3s^2/2`. Thus one-interface analytic ingredients are insufficient;
+> polynomial/rational origin or a global identity is the live discriminator.
+> This is not an actual Section-7 weight, polynomial map, atypical value,
+> PCB/QCS result, counterexample, or JC2 conclusion.
+
 > **K00 NORMALIZED V20R2 EXACT VALUATION TWO — FULL RANK FAN PROMOTED
 > IMPOSSIBLE (2026-08-29 19:40Z).** Sol producer `2ebd1d7...` (11,680-byte
 > body `c596347c...`) is independently reconstructed from the frozen 569

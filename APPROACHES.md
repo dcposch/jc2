@@ -7,6 +7,44 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-29 20:51Z — promote R4 narrowing; retype QCS)
+
+- **Reduce valuation four to two reviewed residual packets.** The exact
+  normalized V20R2 rank fan now leaves only `R4-00` and `R4-02` through grade
+  19. Leading nonzero ranks die at grade 12, old-plane next rank one dies at
+  grade 15, and next rank two lies on `u_y=0` or `u_y^2=192v_y^2`. Run the
+  two cells independently; neither is known nonempty. Valuation three has a
+  fresh grade-12 full-fan exclusion under hostile review, and valuation five
+  has a repaired full exclusion under hostile review. Keep all three at
+  their actual review tiers; infer no cross-valuation periodicity.
+- **Use the minimal PCB margin before building the full geometry packet.**
+  The exact generic margin is `Xi=d-s-sum_i b_i`. It requires an actual pair
+  and generic fibre, complete quotient-line/baseline inventory, and `d,s`.
+  Build `P_i,d_i,G,n` simultaneously as a collision/Suzuki consistency and
+  mechanism packet, but do not let those harder fields block the minimal
+  integer. Exit-to-line transport is a third downstream gate. Residue A has
+  none of the required common source packet and remains underdetermined.
+- **Target polynomial-origin strictness, not atypicality alone.** The exact
+  collision formula says Euler jump equals collision capacity minus weight
+  excess. A reviewed type-(2,3) analytic Keller surrogate, and the larger
+  `g=t` germ family, attain collisions with zero local profile excess. The
+  shortest positive target is `STRICT-COLLIDE-POLY`: use actual
+  polynomial/rational origin to force strict quotient weight at a collision,
+  or falsify it with one source-compatible polynomial-origin germ. Even a
+  positive result gives only `E_gen>=#atypical`; the separate global bound
+  `#atypical>=s-1` would still be needed for QCS. In parallel, review the
+  provisional boundary-complex formulation: a pole-incidence boundary on
+  the auxiliary quotient events and a suspension of its cycle space onto
+  `H1(F)` would prove QCS by rank-nullity. Bare positive filling data cannot
+  force these maps; the fixed labelled degree-six PALF test is the bounded
+  next topology discriminator.
+- **Keep the outer proof selector and conditional td12 laboratory separate.**
+  These new identities sharpen a possible bypass but supply no actual
+  td/type/entry/U1 selector, no `PairRef`, and no book-budget charge.
+  Conditional sextet, character, scale, and inertia work remains behind its
+  source gates. Run reviews and descendants concurrently; promote only after
+  binding integration. Heavy or uncertain computation remains AWS-only.
+
 ## Superseding strategy overlay (2026-08-29 19:40Z — close K00 valuation two; reject mistyped selector cards)
 
 - **Narrow Avenue 36 on V20R2 to finite valuations 3--5.** Three

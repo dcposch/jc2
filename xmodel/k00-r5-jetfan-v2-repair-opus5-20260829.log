@@ -1,0 +1,24 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Delivered: `xmodel/k00-r5-jetfan-v2-repair-opus5-20260829.md` (60,345 bytes, ends at a single standalone `<!-- BODY-END -->`, no seal block). It is the only repository file written; `jc2-lean` was never entered.
+
+## What the rebuild found
+
+All five frozen inputs hash-matched. Everything was rederived from `tails.json` + the pinned compiler; the audit was read but not consumed as evidence.
+
+**Confirmed against the audit** (independently, not paraphrased): the two leading-cone identities, the rank-two grade-14 kill, the rank-one `λ=0` step, the missing grade-13 row `E2+(εi/2)E1 = (ε3i/1024)·v·τ·f` forcing the `τ·f=0` split, and both grade-14 branches. The cokernel structure explains *why* that row exists: rows 1,3,5,7 of `DQ` are proportional to `(u,−v)` and row 2 to `(64v,u)`, so rank one has exactly one extra cokernel functional.
+
+**Two corrections to the binding audit.** Its rank-zero ranges are off by one — the machine range is `k10[0..6]`, `k6[1..7]`, not `k10[0..5]`, `k6[1..6]`. `k10[6]` and `k6[7]` do occur at grade 19, with coefficients in `(A(d6),B(d6)) = rad(grade-12 ideal)` but *not* in that ideal. The audit's ranges hold only after substituting the reduced grade-12 solution. Its derived orders `ord K10=12, ord K6=7, ord K2=5` do not reproduce (`17, 12, 11`). Also, contracted grades 17–18 are vacuous on the rank-zero cell, not equations.
+
+**The residual is empty.** Expanding `D10` and `D6` — which neither the producer nor the audit did — gives `D6_2 = −(3/512)·A·B` identically and `D10_3|_{V(A,B)} = 0`. So the terminal scalar is an explicit combination of grade-12 equations:
+
+```
+[Λ^19](p10 D10 + p6 D6) = −[(295/48)k10₀s + 32k6₁]([Λ¹²]Φ₃+(1/8)[Λ¹²]Φ₁) − (295/3)k10₀t·[Λ¹²]Φ₄
+```
+
+Hence `5·Jdet[0]` lies in the ideal of the 140 equations, contradicting the source open `Jdet[0]≠0`. This is scheme-theoretic — no reducedness or closure needed. It decides the question the producer left open.
+
+I still built and serialized `K00-R5-R0-RESIDUAL/v2` as charged (minimal coefficient projection, `Z × A^58`, 207,498 bytes, SHA-256 `02b4cb9f90df…`), so a reviewer can re-derive the object without first accepting the closure.
+
+Replay: 9.4 s, 47.6 MB, standard library only; the code extracted verbatim from the report reproduces the reported output byte-identically, with all five mutations detected.
+
+Two caveats worth your attention: the rank-zero closure is conditional on `Jdet[0]≠0` — drop that open and you get only `Jdet[0]=0`, not emptiness. And this is a single-lane first derivation, so it is `UNREVIEWED`. Section 8.2 is the point to attack.

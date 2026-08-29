@@ -3,6 +3,40 @@
 **Status (2026-08-27): hostile dependency audit / consolidation master;
 normalization/fidelity distinction synchronized with `TRANSPORT.md`.**
 
+## Current frontier overlay — 2026-08-29 20:51Z
+
+The unconditional Keller-to-book chain is unchanged. The new proof-side
+result is an exact retyping of the proposed PCB bridge, not a selector arrow.
+For a connected generic fibre and the reviewed Section-7 quotient package,
+
+```text
+Xi=E_gen-(s-1)=d-s-sum_i b_i
+  =sum_i b_i(d_i-1)-(2G+2s+n-2).
+```
+
+Generic PCB is exactly `Xi>=0`. At a fibre value, the Euler jump is quotient-
+collision capacity **minus** weight excess, so atypicality forces a collision
+but does not force strict excess. Residue A cannot evaluate even the minimal
+form: its filed template has no actual `PairRef`, generic source fibre, or
+complete quotient-line/baseline inventory. Formal `d=6,s=2`, reduced floors,
+series counts, and an abstract cover cannot be combined into that missing
+packet. This preserves the distinction between flags, places, series, and
+quotient points.
+
+An exact type-(2,3) analytic control adds a Morse boundary cycle, conserved
+proper tube degree, and a source-value collision while keeping profile excess
+zero. Its unavoidable square root is nonrational, so it isolates
+polynomial/rational origin or a simultaneous global identity as the next
+possible strictness input. It is not an actual map or Section-7 packet. The
+global selector/bypass therefore remains open; `STRICT-COLLIDE-POLY` is a
+sharpened conditional proof target, not a new implication from JC2 failure.
+
+On the independent normalized V20R2 route, valuation four is reviewed down to
+the disjoint grade-19 residual packets `R4-00` and `R4-02`, neither attained.
+Valuation three has a provisional grade-12 full-fan exclusion and valuation
+five a repaired proposed exclusion, both under different-model review. These
+finite-jet results remain independent of the Keller-to-book chain.
+
 ## Current frontier overlay — 2026-08-29 19:40Z
 
 The unconditional proof-side chain remains exactly the 17:58Z chain below;

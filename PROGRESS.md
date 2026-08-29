@@ -7,6 +7,47 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-29
 
+> **VALUATION FOUR NARROWING PROMOTED; VALUATION THREE REACHES A
+> REVIEW-GATED GRADE-12 CLOSURE (20:51Z).** Fable independently rebuilds the
+> valuation-four literal rows and confirms all seven attacked claims.
+> Binding integration `bb6ebb12...`/body `75dce829...` promotes the exact
+> residual `R4-00 disjoint-union R4-02`: leading ranks one/two die at grade
+> 12, old-plane next rank one dies at grade 15, and next rank two is confined
+> to `u_y=0` or `u_y^2=192v_y^2`, with all literal grades 8--19 retained.
+> Neither residual is asserted nonempty; independent R4-00 and R4-02
+> successors are active.
+>
+> A fresh literal valuation-three certificate provisionally kills both
+> effective-rank-one signs and effective rank two at grade 12. Its ordinary
+> and optimized replay pass in about five seconds; grades 13--19 are marked
+> unreachable after the certified empty prefix, never silently empty. A
+> different-model hostile review is active, so valuation three is not yet
+> promoted. The valuation-five v2 repair and its hostile review likewise
+> remain review-gated at this cutoff.
+
+> **GENERIC PCB RETYPED EXACTLY; POINTWISE ANALYTIC STRICTNESS ROUTE
+> BLOCKED (20:51Z).** Opus independently confirms the quotient-collision
+> identities but rejects the producer's full dependency-independence and
+> successor-packet claims. Binding integration `cee4e1f8...`/body
+> `85c27963...` promotes
+> `Xi=E_gen-(s-1)=d-s-sum_i b_i` and the collision formula: an Euler jump is
+> collision capacity minus weight excess, so atypicality forces a quotient
+> collision but no positive excess. Residue A is
+> `UNDERDETERMINED(first_absent=PairRef)`; formal `d=6,s=2` cannot be mixed
+> with partial floors or series counts.
+>
+> Fable separately passes the type-(2,3) analytic surrogate with repairs;
+> integration `a7b39d98...`/body `24675cfe...` adds exact tube conservation
+> and the forced-square-root lemma. A Morse boundary cycle, source-value
+> collision, proper-tube conservation, and type `(2,3)` still permit zero
+> analytic-profile excess at one boundary interface. The missing positive
+> input is now polynomial/rational origin or a global multi-component
+> identity. This is a dependency control, not an actual map or a PCB/JC2
+> result. A separate sealed but unreviewed filling comparison types
+> `sum_i b_i(d_i-1)` as an auxiliary quotient-braid length and isolates
+> missing pole-incidence and suspension maps; an unlabelled `D4` PALF control
+> shows positivity and filling counts alone cannot supply the `s-1` kernel.
+
 > **K00 VALUATION TWO CLOSES; V20R2 FINITE FRONTIER IS NOW 3--5
 > (19:40Z).** Three different models independently reconstruct all six
 > reduced rank cells from the frozen 569 tails. Binding integration

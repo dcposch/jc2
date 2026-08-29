@@ -13791,3 +13791,43 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   `2026-08-31T19:40Z`.
 - Holds/human gates: none. The user-owned formalization workload is
   independent and remains outside campaign inspection, evidence, and control.
+
+## 2026-08-29 20:51Z REVIEW EVENT — R4 PROMOTED; QCS RETYPED; ANALYTIC CONTROL PASSES
+
+- Fable review `2ce2e4bf...` confirms every valuation-four rank-fan claim.
+  Binding integration `bb6ebb12...`/body `75dce829...` promotes the exact
+  grade-19 residual `R4-00 disjoint-union R4-02`, with no nonemptiness or
+  attainment claim. The two residual cells now run independently.
+- Opus review `a1bfad2b...` confirms the generic collision-surplus identities
+  and rejects only the broad dependency and successor-packet claims. Binding
+  integration `cee4e1f8...`/body `85c27963...` records the cheapest exact
+  margin `Xi=d-s-sum_i b_i`, the sign-correct collision formula, connectedness
+  and quotient-line riders, and the residue-A fail-closed source verdict.
+- Fable review `28e22f20...` passes the type-(2,3) local analytic surrogate.
+  Binding integration `a7b39d98...`/body `24675cfe...` folds in exact tube
+  conservation and proves the square-root/nonrational defect is forced in the
+  natural ansatz. The control blocks pointwise analytic strictness arguments;
+  it makes no actual-map or PCB claim.
+
+## 2026-08-29 20:51Z LIVE STATE — REVIEWED CHECKPOINT IN PROGRESS
+
+- Frozen basis remains commit `31777ce90994a106aade85064c0d868e32863f94`
+  plus the sealed reviewed integrations above. A scoped atomic commit and
+  push is due when the currently writing lanes reach stable artifacts.
+- K00 states: valuation two is promoted empty; valuation four is promoted to
+  `R4-00/R4-02`; valuation three has a sealed exact grade-12 closure under
+  Fable review; valuation five has a sealed v2 exclusion under Fable review.
+  Opus is independently reviewing the valuation-three source fan. R4-00 and
+  R4-02 successor producers run without waiting on one another.
+- Proof states: QCS identities are promoted, QCS itself is open, residue A is
+  source-underdetermined, and `STRICT-COLLIDE-POLY` is the cheapest local
+  strictness discriminator. Provisional filling report `88802822...`/body
+  `9c413232...` types `K` as an auxiliary quotient-braid length and isolates
+  unconstructed pole-incidence and suspension maps. A five-stabilization
+  `D4` PALF shows filling plus positivity and counts alone cannot force the
+  pole kernel. Its labelled degree-six PALF discriminator is active; none of
+  this is promoted before hostile review.
+- No web sweep runs before its `2026-08-30T03:40Z` deadline. All current
+  exact replays are seconds-scale and use no campaign AWS. Heavy or uncertain
+  CAS remains AWS-only. The user-owned formalization is independent and
+  outside campaign inspection, evidence, and control.

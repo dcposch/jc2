@@ -1,0 +1,28 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+The deliverable is written. Summary of the review:
+
+## Verdicts
+
+| # | Item | Verdict |
+|---|---|---|
+| 1 | Fixed-fibre Euler–Fubini identity + hypotheses | **CONFIRMED** |
+| 2 | Generic identities `d−χ_gen=Σd_ib_i`, `n=Σd_i`, `E_gen` | **CONFIRMED** |
+| 3 | Collision formula `(FC)`, sign, `ε(a)≥0` | **CONFIRMED** |
+| 4 | `Σ_a(d_i−q_i)=d_i−1`, grouping, Suzuki compatibility | **CONFIRMED** |
+| 5 | Generic PCB ⟺ `(QCS)`, conventions, margin `Ξ` | **CONFIRMED** |
+| 6 | Section 4.1 germ | **CONFIRMED**, strengthened |
+| 7 | Section 4.2 permutations/topology | **CONFIRMED**, recomputed |
+| 8 | Dependency barrier | **GAP** |
+| 9 | `QCS-MARGIN/v1` | **GAP** |
+
+**What I verified independently.** All ten cited hashes resolve on disk; the producer's own seal is exact. I rederived every identity from the promoted inputs rather than reading them off. The Section 4.1 two-form (`dx∧dy = df∧dg = s⁴ds∧dt`), both local degrees, and the non-polynomial scope check out. All Section 4.2 permutation claims check out — and an exhaustive lex search returns the producer's exact triple as its first solution.
+
+**Three findings the producer did not have.**
+
+1. **The germ generalizes completely.** Jacobian-one plus `g=t` in the chart `x=ts^u` *forces* `f = s^(u−1)/(u−1) + φ(t)`, and then `w ≡ b = u−1` identically — for every `φ`, at every collision of every multiplicity (verified `u≤12`, `m≤8`; it reproduces Terra's `u=3` chart with `w=1+1=2` as a special case). The barrier is far sharper than §4.1 claims, and the price is named: every member gives `f` a boundary pole of order exactly `b`.
+
+2. **The `GAP` at item 8 is about modality, not mathematics.** A germ plus a passport is not a model of the input set, so "does not imply" and "no argument confined to … can supply it" are not proved. I also verified two family-consistency properties the producer skipped (`g` unramified on the affine part of *both* configurations; the pointwise deficit identity at every `b`) — the control is better built than its report shows. Separately, "first relevant topological degree" is true but for an uncited reason: I exhibit the identical `d=4, G=0` member, so the stated justification fails while the reviewed `counterexample ⟹ td≥6` rescues the claim.
+
+3. **The successor is knowably vacuous on its only named client.** On residue-A, `Ξ = 4 − Σb_i` regardless of `G`, `n`, `d_i`; the finite-end partition is already filed as unpinned, and across the 111 feasible assignments consistent with `SHEET6-CLASSICAL` §4a's own sample, `Ξ` ranges over −9…+1. Six missing fields listed, `d = td(f,g)` first.
+
+I state the maximum promotable theorem as `QCS-IDENTITY` (six clauses) plus `GERM-ZERO-EXCESS`, eight repairs R1–R8, and propose `GERM-POLARITY-OBSTRUCTION/v1` as the cheapest decisive successor — local, desk-scale, decisive in both directions, and needing no source packet.
