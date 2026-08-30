@@ -1308,3 +1308,24 @@ fibre budgets. If that global enumeration becomes materially heavier than
 the one-second ordinary replay, package it for AWS rather than running it
 locally. The basis-change lane remains independent and active; holds/human
 gates: none.
+
+Allocation refresh (2026-08-30 07:20Z): different-model review promotes the
+one-component Cartan table through binding integration `ecb5d18b...`; no
+script or data repair was needed. Retire local-table optimization. The active
+global lane now owns disconnected `D9` root-subsystem orbits, actual vertical
+conic-fibre blowup configurations, paired infinity vectors, correctly shared
+slice budgets, carrier labels, and effectivity. Target-line cap eight is per
+chosen singular image; never pool it across unrelated points. Any new
+`A.H=3` or `B.H=2` boundary cap remains provisional until its own exact
+total-transform/properness proof is sealed and reviewed.
+
+Binding basis integration `30c8ae05...` promotes the leading image/kernel
+section theorem and constant-only affine-linear changes in the integral
+nonmonogenic proper-block scope. The nonmonogenicity charge is `f9720718...`,
+not merely the block sandwich. Continue entry-degree-at-least-two orbit work
+only when a slot is free; it is secondary to the normal-singular global
+effectivity gate and cannot prove quadratic-basis existence. The normal
+monogenic counterexample permanently retires the broad fixed-full-root,
+content, or nonfiniteness heuristic. AWS remains required for any materially
+heavy global enumeration; web and peer-capacity backstops are unchanged;
+holds/human gates: none.

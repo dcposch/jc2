@@ -5,6 +5,61 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **QUADRATIC TRACE-ZERO FRAME-CHANGE RIGIDITY PROMOTED
+> (2026-08-30 07:20Z).** GPT-5.5 xhigh hostile review full `e1d03876...`
+> returns `CONFIRM_WITH_CORRECTIONS`, independently checking the Miranda
+> representation, top-degree graph divisor, nilpotent-pencil reduction,
+> shear bands, and explicit counterexample. Transactional binding integration
+> `30c8ae05caf94bd2ce0485b1b6657e088435d1deec126ed4a3acc8162a353438`
+> (9,386-byte body `418d6f52...`, manifest `f9c199ea...`) promotes:
+>
+> ```text
+> Phi_(e*g)(x)=det(g)^(-1)Phi_e(gx);
+> coefficient content and trace discriminant are frame-invariant;
+> nonconstant quadratic-to-quadratic g forces image/kernel section
+>   components of bidegree (e,1), e<=2, in both infinity cubics;
+> entry-degree<=1 g is constant-equivalent to one linear shear;
+> in a generic cubic-field, nonmonogenic algebra, that shear is impossible;
+> hence entry-degree<=1 changes between proper-block quadratic frames are constant.
+> ```
+>
+> The last corollary separately charges the promoted nonmonogenicity theorem
+> `f9720718...`; general block structure `ba69b33f...` alone was insufficient.
+> The normal finite monogenic algebra
+> `C[u,v,t]/(t^3-u^2t-v^2)` has two nonconstantly related quadratic frames,
+> unit content, no constant full root, and finite projective incidences. It
+> refutes the broader heuristic while retaining a fixed double section at
+> infinity. Entry-degree-at-least-two changes remain open. These are orbit
+> theorems among existing quadratic frames, not existence of a quadratic
+> frame; discriminant degree gives only a lower bound on `d_min`.
+
+> **CAPPED ONE-COMPONENT ADE CARTIER TABLE PROMOTED
+> (2026-08-30 07:20Z).** GPT-5.5 xhigh hostile review full `f2a35e4e...`
+> independently rebuilds all 72,695 rational systems, local diagram groups,
+> every canonical JSON record, and the physical-germ DP, returning
+> `CONFIRM_WITH_CORRECTIONS`. Transactional binding integration
+> `ecb5d18b4fafe455fbc654ad3e7dac35f69b9712352f9ca08e66dc4c7210517d`
+> (7,075-byte body `70abb6a0...`, manifest `61c8c72d...`) promotes:
+>
+> ```text
+> proper per-point target-line cap 8:
+>   16,360 labelled local Cartier pairs / 12,238 diagram orbits;
+> separately conditional proper B-fibre cap 4:
+>   772 labelled pairs / 646 diagram orbits;
+> unlabelled local forest data alone eliminate none;
+> under one connected outside carrier on one common SNC resolution:
+>   cap 8 leaves 718/563; cap 4 leaves 198/163.
+> ```
+>
+> The DP minimum lower-bounds actual analytic local branch germs only after a
+> strict divisor is given; it does not count carrier components, physical
+> points, or analytic realizations. The target-line cap is per selected
+> singular image, not one budget across unrelated points. Fixed infinity or
+> a fixed `B`-fibre can share a budget only through its own proved proper
+> intersection identity. Disconnected multisets, simultaneous `D9`
+> embeddings, vertical fibre effectivity, paired infinity data, carrier
+> labels, incidence equations, maps, and JC2 remain open.
+
 > **NONNORMAL FIXED-QUADRATIC PRESENTATION STRATUM CLOSED
 > (2026-08-30 06:58Z).** GPT-5.5 xhigh hostile review full
 > `afa01a4e...` returns `CONFIRM_WITH_CORRECTIONS` after independently
