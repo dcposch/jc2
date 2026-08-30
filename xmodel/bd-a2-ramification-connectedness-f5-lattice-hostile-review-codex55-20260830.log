@@ -1,0 +1,3229 @@
+cli=codex-cli 0.150.1 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.150.1
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a0511e-77fb-74c0-87f3-990c9370414c
+--------
+user
+# Hostile review: quadratic ramification connectedness and F5 lattice closure
+
+You are GPT-5.5 xhigh, in a fresh independent Codex context, an independent hostile mathematical reviewer for the plane
+Jacobian-conjecture campaign. Work in `/Users/dc/code/math/jc2` on frozen git
+basis `78da50bd31b3f7fd8d07ed8fc5ddbbf0ad4290d1`.
+
+Review the following sealed global producer in full:
+
+```text
+4978e225d4847a29d4d87876fa347132871ddba958afb9db6ede2b1699c45a39
+  xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md
+  body 13850 / 2fa574c72a81e6b736cd6847fcbb9cc9272b60ed34c46ef40c1996a3020d92b6
+255bd0ba04e1c0a428a18caa70e73bc35895026c5857f629ed855cee79a8f803
+  xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md
+8fcd071fff6e828879b7926ad9398f3d33f81344e58f6fe04c758a19c326641e
+  xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md
+e3dc96f07825ea882edc3d2701e9f0a0357ae863c062ad695d9377a37aa2b761
+  xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md
+7ee2a8e3e5eaae8b681da4a8b17e410199a4409fecb872dcc6b14d54394adefc
+  xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md
+```
+
+Treat the four integration/support packets as charged promoted inputs, but
+check that the new producer invokes them with exactly their proved scopes.
+Independently reconstruct and attack every new global step:
+
+1. Verify `R_pi ~ 2A+B`, ampleness of that class, and the Hodge-index proof
+   that the support of a nonzero effective ample Cartier divisor is connected.
+   Check the no-infinity-component bridge and whether nonreduced Cartier
+   multiplicities or reducible support create a loophole.
+2. Rebuild the graph argument eliminating `F1,F2,F4,F7`: connected total
+   transforms of connected `H` and connected `Supp(R_pi)`, distinct physical
+   attachments, exceptional chains, tangencies, and multiple edges. Decide
+   whether connectedness alone really replaces ramification irreducibility.
+3. Reconstruct the F5 conic-bundle marking from scratch. Check the nine
+   singular fibres, Picard rank/basis, the formulas for `A,L,S,T,K_X,R_pi`,
+   all Gram matrices, and the classification
+   `Z_I=S+2F-E_1-sum_{i in I}E_i`, `|I|=4`, of irreducible A-null curves
+   disjoint from H. Attack the claims about coexistence and multiplicity.
+4. Audit the passage from the reviewed local F5 different factorization to
+   two distinct global carriers `D_3,D_5` with coefficient one and contact
+   vectors `(1,1,1)` and `(1,2,2)`. In particular check normalization points,
+   same-prime versus distinct-prime cases, exhaustion of all A-positive
+   components, positivity of their F-degrees, and `D_3.D_5=1` under the
+   rational-forest hypothesis.
+5. Derive equations (4.4)--(4.7) independently, including nonnegativity and
+   upper bounds on every `a_j,b_j`, adjunction/delta integrality, and all
+   possible Cartier multiplicity partitions. Replay or replace the finite
+   enumeration and test whether it omits any effective numerical class or
+   silently assumes smoothness/general position.
+6. In the claimed unique orbit, recompute every class and intersection. Attack
+   both contradictions independently: (a) whether `D_3+Z=A=L+S+T` truly gives
+   a forbidden nonzero reduced-prime relation under the exact localization
+   and unit hypotheses; (b) whether the boundary path and the interior path
+   through Z necessarily survive every embedded resolution as a graph cycle.
+7. State the maximum exact theorem safe to promote and its precise scope.
+   Keep projective basepoint/nonfinite types `F3,F6`, nonreduced infinity,
+   singular incidence surfaces, affine coefficient common zeros, degree drops,
+   basis minimization, general quadratic closure, and JC2 strictly separate.
+
+Return an itemized verdict (`CONFIRMED`, `CONFIRM_WITH_CORRECTIONS`, `GAP`, or
+`REFUTED`), precise repairs, and the cheapest decisive next check if anything
+fails. No general map-existence/nonexistence, counterexample, or JC2 claim.
+
+Hard output cap: at most 8,000 tokens and at most 28,000 UTF-8 bytes. Do not
+restate long inputs. Do not inspect, list, search, stat, build, modify, or
+control `jc2-lean`; the process sandbox also enforces this. Do not run local
+heavy CAS or Singular. Do not edit any input, canonical file, script, or
+dependency. Write exactly one report:
+
+```text
+xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+```
+
+End with one standalone `<!-- BODY-END -->` line and no seal block.
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll treat this as a sealed hostile review: first I’m checking the exact git basis and reading only the named packets, then I’ll write a single review file without touching the campaign inputs.
+exec
+/bin/zsh -lc 'git rev-parse HEAD' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+78da50bd31b3f7fd8d07ed8fc5ddbbf0ad4290d1
+
+exec
+/bin/zsh -lc 'wc -l xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     414 xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md
+     220 xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md
+     205 xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md
+     169 xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md
+     173 xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md
+    1181 total
+
+codex
+The repository is at the requested commit exactly. I’m now reading the producer and the four promoted packets with line numbers so the report can cite precise failure points rather than paraphrase seals.
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Quadratic ramification: ample connectedness and the finite F5 lattice closure
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Producer: Sol 5.6 Ultra delegated lattice lane `/root/ramification_component_lattice`  
+     5	Frozen basis: `1efd7a76538e3fcdf51b999563262afc40d58947`  
+     6	Lifecycle: **EXACT GLOBAL PRODUCER / CHARGES BINDING LOCAL INTEGRATION / DIFFERENT-MODEL REVIEW REQUIRED**
+     7	
+     8	## 0. Endpoint
+     9	
+    10	Let `X` be the smooth irreducible quadratic incidence surface of class
+    11	`2A+3B` in `P2 times P1`, let `pi:X->P2` be finite near reduced squarefree
+    12	infinity `H`, and impose the promoted dominant-`A2` first-leg hypotheses.
+    13	The Cartier source ramification divisor is
+    14	
+    15	```text
+    16	R_pi ~ 2A+B.
+    17	```
+    18	
+    19	Its class is ample.  Therefore its support is connected.  This removes the
+    20	reducibility loophole in the promoted attachment theorem: the two distinct
+    21	boundary attachment points forced in `F1,F2,F4,F7` create a cycle even when
+    22	the reduced ramification support has several components.  Hence none of
+    23	those four types survives.
+    24	
+    25	For `F5`, charge the binding local integration
+    26	
+    27	```text
+    28	8fcd071fff6e828879b7926ad9398f3d33f81344e58f6fe04c758a19c326641e
+    29	  xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md
+    30	  body 6988 / 2d14c7fa9675d41eaaf208e10c2dc4e72e596fa6fbf9503350dd18295abe0787
+    31	```
+    32	
+    33	Its Opus 5 review has sealed full-file SHA-256
+    34	`7e335e1a1636d1b4342cf0f163fd7051c33b38b3c16766f8c7d94f92e5beea0c`
+    35	and body SHA-256
+    36	`5a77b09861b3e53c480715399d777db58290ce60466cb4485f5c25f1c4f5b035`.
+    37	The integration gives two reduced transverse source-different germs at the
+    38	unique boundary point, of weights `3` and `5`.  A forest forces them onto
+    39	distinct global components `D_3,D_5`, each with Cartier multiplicity one.
+    40	An exhaustive rank-eleven lattice calculation leaves one numerical orbit:
+    41	
+    42	```text
+    43	R_pi = D_3 + D_5 + 2Z,
+    44	D_3 + Z = A,
+    45	D_3.D_5=1,       D_3.Z=3,       D_5.Z=4.             (0.1)
+    46	```
+    47	
+    48	It fails twice.  The equality `D_3+Z=A=sum H_i` is a nonzero relation among
+    49	reduced ramification-component classes in `Cl(X minus H)`, contradicting the
+    50	promoted unit/localization injection.  Independently, `Z` supplies an
+    51	interior path between `D_3,D_5`, while their transverse boundary germs
+    52	supply another path, so the resolved boundary has a cycle.
+    53	
+    54	Thus, conditional only on different-model review of this packet,
+    55	
+    56	> the smooth projectively finite quadratic stratum with reduced squarefree
+    57	> infinity has no dominant `A2` first leg.
+    58	
+    59	This closes that declared stratum, not all quadratic presentations.
+    60	
+    61	## 1. Intersection and Picard conventions
+    62	
+    63	On `X`, ambient intersection gives
+    64	
+    65	```text
+    66	A^2=3,       A.B=2,       B^2=0,
+    67	K_X=-A+B,    R_pi=K_X-pi^*K_P2=2A+B.                 (1.1)
+    68	```
+    69	
+    70	Projection `q:X->P1` is the nine-singular-fibre conic bundle from the
+    71	promoted class-group audit, and `rho(X)=11`.  A curve of infinity bidegree
+    72	`(a,b)` has
+    73	
+    74	```text
+    75	B.C=a,       A.C=b.                                  (1.2)
+    76	```
+    77	
+    78	If `H_i` is an infinity component, then
+    79	
+    80	```text
+    81	H_i^2=b_i-sum_(j!=i) H_i.H_j.                        (1.3)
+    82	```
+    83	
+    84	Using the exact contacts in the promoted seven-type classification, the
+    85	Gram matrices of the in-scope component lattices are
+    86	
+    87	```text
+    88	F1: [3],                                             det= 3
+    89	F2: [-1 2; 2 0],                                    det=-4
+    90	F4: [-2 3; 3 -1],                                   det=-7
+    91	F5: [-1 1 1; 1 -2 2; 1 2 -2],                      det= 8
+    92	F7: [-1 0 2; 0 -1 2; 2 2 -3],                      det= 5.       (1.4)
+    93	```
+    94	
+    95	Every displayed lattice is nondegenerate, so its component classes are
+    96	independent in `Pic(X)`.  Consequently localization gives the exact free
+    97	ranks
+    98	
+    99	```text
+   100	rank Cl(X minus H)=10,9,9,8,8
+   101	```
+   102	
+   103	for `F1,F2,F4,F5,F7`, respectively.  These ranks explain why the old raw
+   104	rank shortcut failed, but the actual component-class injection remains
+   105	decisive in (0.1).
+   106	
+   107	## 2. The ramification support is connected
+   108	
+   109	The line bundle `O_X(2A+B)` is the restriction of the ample ambient bundle
+   110	`O(2,1)`.  The Jacobian determinant of the generically finite characteristic-
+   111	zero morphism `pi` is a nonzero section of it, so `R_pi` is a nonzero
+   112	effective ample Cartier divisor.
+   113	
+   114	An effective ample divisor on a smooth projective surface has connected
+   115	support.  Indeed, if
+   116	
+   117	```text
+   118	D=D_1+D_2,       Supp(D_1) disjoint Supp(D_2),
+   119	```
+   120	
+   121	with both parts nonzero, then ampleness gives
+   122	
+   123	```text
+   124	D_1^2=D.D_1>0,       D_2^2=D.D_2>0,       D_1.D_2=0.
+   125	```
+   126	
+   127	Their span would contain two orthogonal positive-square directions,
+   128	contrary to the Hodge index theorem.  Apply this to `D=R_pi`.  The promoted
+   129	no-`H`-component lemma identifies its support with the closure of the
+   130	reduced affine ramification support, so no extra projective component is
+   131	being added here.
+   132	
+   133	In a forest resolution, the connected total-transform subgraphs belonging
+   134	to connected `H` and connected `Supp(R_pi)`—including the exceptional chains
+   135	needed to connect each strict transform—are trees.  Two distinct physical
+   136	attachment points yield two disjoint local joining paths.  Contracting each
+   137	tree and each path gives two parallel edges, hence a graph cycle.  The
+   138	promoted attachment calculation supplies at least two distinct physical
+   139	points in each of `F1,F2,F4,F7`.  Therefore
+   140	
+   141	```text
+   142	F1,F2,F4,F7: no compatible effective decomposition of R_pi.     (2.1)
+   143	```
+   144	
+   145	This conclusion does not assume irreducibility or reducedness of the
+   146	Cartier divisor.
+   147	
+   148	## 3. The exact F5 conic-bundle lattice
+   149	
+   150	Write the three `F5` components as
+   151	
+   152	```text
+   153	L:(0,1),       S:(1,1),       T:(1,1),
+   154	```
+   155	
+   156	where `L.S=L.T=1`, `S.T=2`; hence `L^2=-1` and `S^2=T^2=-2`.
+   157	Use `S` as a conic-bundle section, put `F=B`, and in each of the nine
+   158	singular fibres choose the line `E_i` disjoint from `S`.  Choose `E_1` in
+   159	the fibre containing `L`.  Then
+   160	
+   161	```text
+   162	S^2=-2,       S.F=1,       E_i^2=-1,
+   163	A=2S+5F-sum_(i=1)^9 E_i,
+   164	L=F-E_1,
+   165	T=S+4F-sum_(i=2)^9 E_i.                              (3.1)
+   166	```
+   167	
+   168	All omitted pairings in this basis vanish.  Equations (3.1) recover
+   169	`A^2=3`, `A.F=2`, and the entire Gram matrix in (1.4).
+   170	
+   171	There is also an exact classification of components disjoint from `H`.
+   172	If an irreducible curve `Z` has `A.Z=0`, then `pi(Z)` is a point and the
+   173	embedding in `P2 times P1` forces
+   174	
+   175	```text
+   176	Z={target point} times P1,       F.Z=1.
+   177	```
+   178	
+   179	It is a smooth section and adjunction gives `Z^2=-3`.  Imposing disjointness
+   180	from `L,S,T` in (3.1) gives precisely
+   181	
+   182	```text
+   183	Z_I=S+2F-E_1-sum_(i in I)E_i,
+   184	I subset {2,...,9},       |I|=4.                     (3.2)
+   185	```
+   186	
+   187	Thus there are only `binomial(8,4)=70` numerical candidates; effectivity is
+   188	not asserted.  For two candidates
+   189	
+   190	```text
+   191	Z_I.Z_J=1-|I intersect J|.                           (3.3)
+   192	```
+   193	
+   194	Distinct effective `A`-null curves are literal sections over different
+   195	target points and hence disjoint.  Therefore they can coexist only when
+   196	`|I intersect J|=1`; inclusion-exclusion also shows that no three such
+   197	four-subsets can be pairwise one-intersecting.
+   198	
+   199	The Cartier coefficient of an `A`-null curve is not assumed to be a field-
+   200	extension ramification index: it is exceptional for `pi` and could exceed
+   201	two.  The total equality `R_pi.F=4` is the coefficient bound used below.
+   202	
+   203	## 4. The forced `3+5` carriers
+   204	
+   205	The binding local calculation gives two reduced transverse different germs.
+   206	If they lie on one global prime, they give two distinct points of that
+   207	prime's normalization over the connected infinity tree, and the attachment-
+   208	cycle lemma already excludes it.  In a survivor they therefore lie on
+   209	distinct primes `D_3` and `D_5`.  Reducedness of the local Cartier equation
+   210	forces their global Cartier coefficients to be one.  Their contact vectors,
+   211	in the order `(L,S,T)`, are
+   212	
+   213	```text
+   214	D_3: (1,1,1),       A.D_3=3,
+   215	D_5: (1,2,2),       A.D_5=5.                         (4.1)
+   216	```
+   217	
+   218	These vectors exhaust `R_pi.(L,S,T)=(2,3,3)`.  Hence every other prime in
+   219	`R_pi` is one of the `A`-null curves (3.2).  Put
+   220	
+   221	```text
+   222	x=F.D_3,       y=F.D_5,
+   223	R_pi=D_3+D_5+sum_k nu_k Z_(I_k),
+   224	N=sum_k nu_k=4-x-y.                                  (4.2)
+   225	```
+   226	
+   227	Both `x,y` are positive: a curve of `F`-degree zero lies in a conic fibre
+   228	and has `A`-degree only one or two, not three or five.  Thus `0<=N<=2`.
+   229	The only possible extra multiplicity patterns are no `Z`, one simple `Z`,
+   230	two distinct simple `Z`'s, or one doubled `Z`.  This explicitly keeps the
+   231	Cartier multiplicities `nu_k` separate from reduced support.
+   232	
+   233	The two local carrier germs are transverse, so their intersection at the
+   234	boundary is one.  Any additional intersection would make a second path
+   235	between them and violate the forest condition.  Therefore
+   236	
+   237	```text
+   238	D_3.D_5=1.                                           (4.3)
+   239	```
+   240	
+   241	Write their classes in (3.1) as
+   242	
+   243	```text
+   244	D_3=xS+(2x+1)F-(x-1)E_1-sum_(j=2)^9 a_j E_j,
+   245	D_5=yS+(2y+2)F-(y-1)E_1-sum_(j=2)^9 b_j E_j.         (4.4)
+   246	```
+   247	
+   248	Here
+   249	
+   250	```text
+   251	a_j=D_3.E_j>=0,       b_j=D_5.E_j>=0,
+   252	```
+   253	
+   254	because the carrier primes are distinct from every `E_j`.  Equivalently
+   255	these are their nonnegative multiplicities on the ruled-surface blowdown.
+   256	Equation (4.1) gives
+   257	
+   258	```text
+   259	sum a_j=4x,       sum b_j=4y.                        (4.5)
+   260	```
+   261	
+   262	For
+   263	
+   264	```text
+   265	c_j=sum_(k:j in I_k) nu_k,
+   266	```
+   267	
+   268	the total class equality is exactly
+   269	
+   270	```text
+   271	a_j+b_j+c_j=2       for every j=2,...,9.             (4.6)
+   272	```
+   273	
+   274	Adjunction, rational normalization, and (4.3) give the finite tests
+   275	
+   276	```text
+   277	D_3^2=x^2+4x-1-sum a_j^2,
+   278	delta_3=(D_3^2+x-1)/2 in Z_(>=0),
+   279	
+   280	D_5^2=y^2+6y-1-sum b_j^2,
+   281	delta_5=(D_5^2+y-3)/2 in Z_(>=0),
+   282	
+   283	sum a_j*b_j=xy+3x+2y-2.                              (4.7)
+   284	```
+   285	
+   286	Since (4.6) forces `0<=a_j,b_j<=2`, this is a literal finite enumeration,
+   287	not an effectivity heuristic.
+   288	
+   289	## 5. Exhaustion and the unique failed orbit
+   290	
+   291	Up to permutation of `E_2,...,E_9`, the exhaustive cases and the number of
+   292	solutions to (4.5)--(4.7) are
+   293	
+   294	```text
+   295	(x,y; Z multiplicities)       lattice orbits
+   296	(1,1; 2)                            1
+   297	(1,1; 1+1)                          0
+   298	(1,2; 1)                            0
+   299	(2,1; 1)                            0
+   300	(1,3; none)                         0
+   301	(2,2; none)                         0
+   302	(3,1; none)                         0.               (5.1)
+   303	```
+   304	
+   305	For the `1+1` row, (3.3) fixes the unique pair-intersection pattern up to
+   306	permutation.  The enumeration requires nonnegative integral
+   307	`delta_3,delta_5`; no smoothness or general-position assumption is inserted.
+   308	
+   309	Here is the complete standard-library replay.  The coordinates `0,...,7`
+   310	stand for `E_2,...,E_9`; `I,J` are the unique relevant subset patterns up to
+   311	permutation.
+   312	
+   313	```python
+   314	from itertools import product
+   315	
+   316	I = {0, 1, 2, 3}
+   317	J = {0, 4, 5, 6}                 # |I intersect J|=1
+   318	cases = [
+   319	    (1, 1, [(2, I)]),
+   320	    (1, 1, [(1, I), (1, J)]),
+   321	    (1, 2, [(1, I)]),
+   322	    (2, 1, [(1, I)]),
+   323	    (1, 3, []), (2, 2, []), (3, 1, []),
+   324	]
+   325	
+   326	for x, y, leaves in cases:
+   327	    c = [sum(nu for nu, K in leaves if j in K) for j in range(8)]
+   328	    count = 0
+   329	    for a in product(range(3), repeat=8):
+   330	        b = tuple(2-c[j]-a[j] for j in range(8))
+   331	        if min(b, default=0) < 0 or sum(a) != 4*x or sum(b) != 4*y:
+   332	            continue
+   333	        sq3 = x*x+4*x-1-sum(z*z for z in a)
+   334	        sq5 = y*y+6*y-1-sum(z*z for z in b)
+   335	        if sq3+x-1 < 0 or (sq3+x-1) % 2:
+   336	            continue
+   337	        if sq5+y-3 < 0 or (sq5+y-3) % 2:
+   338	            continue
+   339	        if sum(u*v for u, v in zip(a, b)) != x*y+3*x+2*y-2:
+   340	            continue
+   341	        count += 1
+   342	    print(x, y, tuple(nu for nu, _ in leaves), count)
+   343	```
+   344	
+   345	Its counts are exactly `1,0,0,0,0,0,0` in the displayed order.
+   346	
+   347	In the sole orbit, choose a four-subset `I` of `{2,...,9}` and let `J` be
+   348	its complement.  Then
+   349	
+   350	```text
+   351	D_3=S+3F-sum_(j in J)E_j,       D_3^2=0,  delta_3=0,
+   352	D_5=S+4F-sum_(j in J)E_j,       D_5^2=2,  delta_5=0,
+   353	Z  =S+2F-E_1-sum_(i in I)E_i,   Z^2=-3,
+   354	R_pi=D_3+D_5+2Z.                                    (5.2)
+   355	```
+   356	
+   357	Direct intersection gives
+   358	
+   359	```text
+   360	D_3.D_5=1,       D_3.Z=3,       D_5.Z=4.             (5.3)
+   361	```
+   362	
+   363	The candidate is impossible for either of two independent reasons.
+   364	
+   365	First, (3.1) and (5.2) give the literal Picard relation
+   366	
+   367	```text
+   368	D_3+Z=A=L+S+T.                                      (5.4)
+   369	```
+   370	
+   371	The dominant block morphism forces `O(U)^*=O(X minus H)^*=C^*`, so
+   372	localization injects the free group on the *reduced* ramification primes
+   373	`D_3,D_5,Z` into `Cl(X minus H)`.  Relation (5.4) maps
+   374	`[D_3]+[Z]` to zero and contradicts that injection.  The coefficient `2` of
+   375	`Z` in the Cartier different is irrelevant to this reduced-support map.
+   376	
+   377	Second, the boundary point gives a path from `D_3` to `D_5`, while (5.3)
+   378	gives a path through the `H`-disjoint component `Z`.  These are distinct
+   379	paths in every embedded resolution, hence a cycle.  Concentrating each
+   380	positive intersection at one physical point cannot remove the alternate
+   381	path.
+   382	
+   383	Therefore the `F5` compatible lattice set is empty as well.
+   384	
+   385	## 6. Scope, review, and compute disposition
+   386	
+   387	Combining (2.1) and Section 5 eliminates every in-scope reduced rational-
+   388	forest type.  Types `F3,F6` remain projective-coefficient-basepoint strata
+   389	outside projective finiteness; `F8,F9` have no rational-tree refinement.
+   390	Nonreduced infinity, singular incidence closure, affine coefficient common
+   391	zeros, fibre/target degree drop, and basis minimization remain separate.
+   392	
+   393	The ample-connectedness and lattice arguments are exact desk mathematics.
+   394	The full `F5` conclusion charges the independently reviewed binding local
+   395	`3+5` integration.  This global packet itself still requires different-model
+   396	hostile review before canonical promotion.  No AWS job is justified: the
+   397	complete replay is at most seven cases with eight coordinates in `{0,1,2}`.
+   398	If reviewed, the next bounded client is not a larger lattice search but the
+   399	adjacent nonreduced-infinity and singular-ambient strata.
+   400	
+   401	No occurrence, compatible jet, formal arc, polynomial map, counterexample,
+   402	general quadratic/cubic block closure, primitivity theorem, or JC2 result is
+   403	asserted.
+   404	
+   405	<!-- BODY-END -->
+   406	
+   407	## Seal
+   408	
+   409	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   410	  including its terminating newline; this seal is outside the body.
+   411	- Body bytes: `13850`.
+   412	- Body SHA-256:
+   413	  `2fa574c72a81e6b736cd6847fcbb9cc9272b60ed34c46ef40c1996a3020d92b6`.
+   414	- Frozen basis: `1efd7a76538e3fcdf51b999563262afc40d58947`.
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: quadratic ramification attachments and lattice gate
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Coordinator: Sol 5.6 Ultra  
+     5	Frozen basis: `f89cbb02305ee6fef32a79ccb8ff53fc4740a2a1`  
+     6	Lifecycle: **BINDING INTEGRATION / SMOOTH PROJECTIVELY FINITE QUADRATIC SCOPE**
+     7	
+     8	## 0. Disposition and custody
+     9	
+    10	Fable 5 independently reconstructed the sealed producer
+    11	
+    12	```text
+    13	f3129c3497e265988617f7da66b7cf2da408b5736c1f91338a78fbbd111caff2
+    14	  xmodel/bd-a2-quadratic-ramification-attachment-dichotomy-sol56-20260830.md
+    15	  body 9399 / c37282a42af45c57e723dddd061ce2681203564df1b76008e8001206b2c69199
+    16	```
+    17	
+    18	and returned `CONFIRM_WITH_CORRECTIONS`. Its sandbox-attested raw review body
+    19	is
+    20	
+    21	```text
+    22	aa4877388dddadfbe2d4b167356c76f35424a440951ef0cc0cab6502c9dcf610
+    23	  xmodel/bd-a2-quadratic-ramification-attachment-hostile-review-fable5-20260830.md
+    24	```
+    25	
+    26	and its sealed full-file SHA-256 is
+    27	`c1ab1258005080cfa58d979820bebff5bb233638e96984aa1b6aae425e37f477`.
+    28	The clean schema-v2 receipt has exit code zero and pins unchanged prompt,
+    29	adapter, launcher, Seatbelt profile, validator, fallacy appendix, and composed
+    30	model-prompt hashes.
+    31	
+    32	The review confirms every attachment and graph calculation. This integration
+    33	adds its two missing lemmas: the reduced affine ramification is nonempty, and
+    34	the boundary critical set is exactly—not merely contained in—the classified
+    35	attachment set. It also deletes the unnecessary and generally false claim
+    36	that `Y` is affine. Finally, the reviewer independently computes Picard rank
+    37	eleven and invalidates the proposed raw class-group-rank shortcut, agreeing
+    38	with the sealed supporting desk packet
+    39	`7ee2a8e3e5eaae8b681da4a8b17e410199a4409fecb872dcc6b14d54394adefc`
+    40	(body `0ad7e812...`).
+    41	
+    42	## 1. Scope and notation
+    43	
+    44	Let
+    45	
+    46	```text
+    47	X subset P2 times P1
+    48	```
+    49	
+    50	be a smooth irreducible quadratic Miranda incidence surface of class
+    51	`2A+3B`. Let `pi:X->P2` be the degree-three incidence projection, assume it
+    52	is finite on a neighborhood of the infinity divisor
+    53	
+    54	```text
+    55	H=X intersect ({infinity line} times P1),
+    56	```
+    57	
+    58	and assume `H` is reduced. Put `Y=X minus H`, let `R_red` be the reduced
+    59	critical support of `pi` in `Y`, let `Rbar` be its closure in `X`, and put
+    60	`U=Y minus R_red`. The block-side application additionally assumes the
+    61	promoted dominant morphism `A2 -> U`.
+    62	
+    63	The promoted first-leg theorem forces the resolved boundary of `U` to have
+    64	only rational components and forest dual multigraph. The promoted reduced
+    65	`(2,3)` classification then restricts `H` to `F1`--`F7`; `F8,F9` have no
+    66	rational-tree refinement.
+    67	
+    68	Finiteness near `H` excludes a vertical `(1,0)` component of `H`: such a
+    69	component is an entire fibre of `pi` over one point of the infinity line.
+    70	Thus projective-coefficient-basepoint types `F3,F6` lie outside the present
+    71	scope rather than being eliminated inside it.
+    72	
+    73	## 2. Exact attachment lemmas
+    74	
+    75	**Cycle lemma.** Let `T` have connected tree resolution graph and let `Q` be
+    76	an irreducible reduced curve not contained in `T`. If the normalization of
+    77	`Q` has two distinct branches over `T`, then every embedded resolution of
+    78	`T union Q` has a cycle in its dual multigraph. Extra blowups either attach a
+    79	pendant vertex or subdivide an edge of the resolved `T` tree. The single
+    80	strict-transform vertex of `Q` then has two edges into that tree; distinct
+    81	endpoints close the unique path, while equal endpoints form a parallel-edge
+    82	cycle. The statement covers two physical points, two analytic branches over
+    83	one point, singular `Q`, tangencies, and attachments deep in exceptional
+    84	trees.
+    85	
+    86	**Exact boundary critical set.** In a local chart
+    87	
+    88	```text
+    89	X: f(u,v,z)=0,                 H: f(0,v,z)=0,
+    90	```
+    91	
+    92	the critical divisor of `pi` is `f_z|X=0`. A point of `H` lies on it exactly
+    93	when it is a singular point of `H_red` or a smooth point where the relevant
+    94	branch is critical for projection `H->L_infinity`; equivalently the vertical
+    95	line has intersection multiplicity at least two there.
+    96	
+    97	This Cartier critical divisor has no component contained in `H`. Indeed, if
+    98	a reduced factor `h` of `f(0,v,z)` also divides `f_z(0,v,z)`, coprimality with
+    99	the residual factor forces `h|h_z`, hence in characteristic zero `h_z=0`.
+   100	Then `h=h(v)` defines the excluded vertical `(1,0)` component. Purity of the
+   101	Cartier divisor therefore puts every boundary critical point in `Rbar` and
+   102	shows that there is no additional, unclassified attachment kind.
+   103	
+   104	**Nonemptiness.** `R_red` is nonempty. A positive-dimensional fibre away
+   105	from `H`, if present, lies in the critical locus. If no such fibre exists,
+   106	properness makes `pi` finite; an everywhere-etale degree-three map from the
+   107	irreducible `X` to the simply connected `P2` is impossible. Since the
+   108	critical divisor has no component in `H`, its affine part is nonempty.
+   109	
+   110	## 3. Attachment dichotomy
+   111	
+   112	For a rational component's normalization of degree `b` over the infinity
+   113	line, Riemann--Hurwitz gives total ramification `2b-2`, with contribution at
+   114	most `b-1` at one point. Thus every degree-three component and every
+   115	degree-two component has at least two distinct normalization critical points.
+   116	The forest budget prevents their images from identifying in the relevant
+   117	`F1,F2,F4` configurations. In `F7`, the two length-two contacts with its two
+   118	disjoint sections are distinct double-root points. Therefore:
+   119	
+   120	```text
+   121	F1, F2, F4, F7 + irreducible R_red
+   122	    => two branches of Rbar over H
+   123	    => cycle in the resolved full boundary
+   124	    => contradiction.                                 (3.1)
+   125	```
+   126	
+   127	In `F5`, every component has projection degree one. The exact boundary
+   128	critical set is only its unique triple/contact point `p_0`, so the attachment
+   129	argument supplies only one branch and does not eliminate the type. The
+   130	ramification Cartier class is
+   131	
+   132	```text
+   133	R_pi=(2A+B)|X,                 H.R_pi=8,
+   134	```
+   135	
+   136	and all eight intersection units are concentrated at `p_0`.
+   137	
+   138	Combining the cases gives the promoted conclusion:
+   139	
+   140	> In the declared smooth, reduced, projectively finite quadratic block
+   141	> scope, every survivor has reducible `R_red` or infinity type `F5`. If
+   142	> `R_red` is irreducible, the only surviving infinity type is `F5`, with its
+   143	> entire boundary ramification intersection concentrated at the unique
+   144	> triple point.
+   145	
+   146	This is a necessary-condition dichotomy. It proves neither that `F5` occurs
+   147	nor that reducible ramification is compatible with a first leg.
+   148	
+   149	## 4. Units, class groups, and the failed rank shortcut
+   150	
+   151	The dominant block morphism `A2->U` forces `O(U)^*=C^*`: the pullback of a
+   152	unit is constant, and density makes the original unit equal to that constant.
+   153	Restriction gives `O(Y)^*=C^*` as well. Since `Y` is smooth and integral and
+   154	`R_red` is pure codimension one, localization yields an injection
+   155	
+   156	```text
+   157	Z^{components(R_red)} -> Cl(Y).                       (4.1)
+   158	```
+   159	
+   160	Affineness of `Y` is neither required nor asserted.
+   161	
+   162	This injection does not make a raw rank bound useful. Projection
+   163	`X->P1` is a smooth-total-space conic bundle with nine simple rank-two
+   164	singular fibres. Equivalently, adjunction and Noether give
+   165	
+   166	```text
+   167	K_X^2=-1,       e(X)=13,       rho(X)=11.
+   168	```
+   169	
+   170	If reduced `H` has `s<=3` components, localization from `X` gives
+   171	
+   172	```text
+   173	rank Cl(Y) >= 11-s >= 8.                              (4.2)
+   174	```
+   175	
+   176	No independence of the component classes is assumed. Since the total class
+   177	of `H` is nonzero, `rank Cl(Y)<=10`; the raw class-group rank can therefore
+   178	never supply the proposed rank-at-most-one gate. It should be treated as a
+   179	diagnostic—an output at most one would reveal an error—not as an elimination
+   180	strategy.
+   181	
+   182	The exact numerical controls are
+   183	
+   184	```text
+   185	R_pi.B=4,       H.R_pi=8,
+   186	p_a(H)=2,       p_a(R_pi)=9,       p_a(H+R_pi)=18.
+   187	```
+   188	
+   189	What remains useful in (4.1) is the actual component-class lattice, not its
+   190	rank alone.
+   191	
+   192	## 5. Next finite gates and nonclaims
+   193	
+   194	The cheapest positive gate is the `F5` local different at `p_0`: determine
+   195	whether a triple-root finite jet can realize one irreducible ramification
+   196	branch carrying all eight boundary intersection units, or whether the
+   197	different forces multiple branches and hence a cycle.
+   198	
+   199	In parallel, express possible components of `R_pi=2A+B` in the conic-bundle
+   200	lattice generated by `A`, `B`, and the nine singular-fibre line classes.
+   201	Impose effectivity, adjunction, total class, linear independence from (4.1),
+   202	and the exact allowed attachment set for each `F1,F2,F4,F5,F7` type. This is
+   203	the honest finite replacement for the dead raw-rank shortcut.
+   204	
+   205	Nonreduced infinity, singular ambient closure, projective coefficient
+   206	basepoints, affine coefficient zeros, and target/fibre degree drops remain
+   207	separate strata. No general quadratic/cubic block closure, primitivity,
+   208	occurrence theorem, first-leg construction, map, counterexample, or JC2
+   209	result is promoted.
+   210	
+   211	<!-- BODY-END -->
+   212	
+   213	## Seal
+   214	
+   215	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   216	  including its terminating newline; this seal is outside the body.
+   217	- Body bytes: `8727`.
+   218	- Body SHA-256:
+   219	  `f334970e50271ce851c55ec55cfc30ba9f00054b4d81179e437b669350dd878b`.
+   220	- Frozen basis: `f89cbb02305ee6fef32a79ccb8ff53fc4740a2a1`.
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: F5 local different splits `8=5+3`
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Coordinator: Sol 5.6 Ultra  
+     5	Frozen basis: `1efd7a76538e3fcdf51b999563262afc40d58947`  
+     6	Lifecycle: **BINDING INTEGRATION / SMOOTH F5 LOCAL SCOPE**
+     7	
+     8	## 0. Disposition and custody
+     9	
+    10	Opus 5 independently reconstructed the sealed producer
+    11	
+    12	```text
+    13	8a1c3c50281a9c55b4dcf21c7c5a33ef574b4bfc59d10eb18456528171bbbb72
+    14	  xmodel/bd-a2-f5-local-different-two-branch-producer-sol56-20260830.md
+    15	  body 9253 / 61931ec73f0b6bd13cfef1d75e9c6c4bdd6d36a2364631b898131f66b19aa897
+    16	```
+    17	
+    18	and returned `CONFIRM_WITH_CORRECTIONS`. Its sandbox-attested raw review body
+    19	is
+    20	
+    21	```text
+    22	5a77b09861b3e53c480715399d777db58290ce60466cb4485f5c25f1c4f5b035
+    23	  xmodel/bd-a2-f5-local-different-two-branch-hostile-review-opus5-20260830.md
+    24	```
+    25	
+    26	and its sealed full-file SHA-256 is
+    27	`7e335e1a1636d1b4342cf0f163fd7051c33b38b3c16766f8c7d94f92e5beea0c`.
+    28	The clean schema-v2 receipt has exit code zero and pins unchanged prompt,
+    29	adapter, launcher, Seatbelt profile, validator, fallacy appendix, and composed
+    30	model-prompt hashes.
+    31	
+    32	Nothing is refuted and no gap remains. The material correction is notational:
+    33	the producer's displayed equations `z=v` and `3z=v` are tangent lines, not the
+    34	actual Hensel branches. This integration reserves `T_tan,T_tr` for those
+    35	lines and `D_tan,D_tr` for the analytic branches. It also makes the initial
+    36	unit division, no-common-branch check, boundary-graph monotonicity, and full
+    37	global hypotheses explicit.
+    38	
+    39	## 1. Exact F5 normal form
+    40	
+    41	Let `H` be a reduced class-`(2,3)` divisor on `P1 x P1` of type
+    42	
+    43	```text
+    44	F5=(0,1)+(1,1)+(1,1).
+    45	```
+    46	
+    47	Its three smooth rational components meet only at one point `p`; the two
+    48	`(1,1)` components have contact two and each meets the `(0,1)` component
+    49	transversely. There is no hidden modulus. After allowable projective changes,
+    50	local coordinates `(v,z)` at `p` put the three branches in the exact form
+    51	
+    52	```text
+    53	H_0: z=0,
+    54	Q_1: z-v=0,
+    55	Q_2: (1+v)z-v=0,
+    56	
+    57	h(v,z)=z(z-v)((1+v)z-v).                            (1.1)
+    58	```
+    59	
+    60	The nonzero common derivative of `Q_1,Q_2` follows from their Mobius graph
+    61	structure and transversality to `H_0`; contact two gives equality of those
+    62	derivatives. Conjugating the first graph to the identity leaves the second as
+    63	`v/(1+gamma v)`, `gamma!=0`, and a common scaling sets `gamma=1`.
+    64	
+    65	Let `X` be smooth near `p`, let `u=0` be the target infinity line, and let
+    66	`pi:X->P2` be the degree-three projection. First divide the local defining
+    67	equation by the unit multiplying its restriction to `u=0`. On `X`, this
+    68	multiplies the relative derivative only by a unit. The equation is then
+    69	
+    70	```text
+    71	f(u,v,z)=h(v,z)+u*g(u,v,z),             g(0,0,0)!=0. (1.2)
+    72	```
+    73	
+    74	Smoothness forces the displayed unit condition because every first derivative
+    75	of `h` vanishes at the triple point.
+    76	
+    77	## 2. Two coefficient-independent different branches
+    78	
+    79	Solving (1.2) gives `Ohat_{X,p}=C[[v,z]]` and `u=U(v,z)` of order exactly
+    80	three. The source Cartier ramification/different is
+    81	
+    82	```text
+    83	R_pi=div(f_z|X),
+    84	r(v,z)=h_z(v,z)+U(v,z)g_z(U(v,z),v,z).
+    85	```
+    86	
+    87	Since the second term has order at least three,
+    88	
+    89	```text
+    90	in_2(r)=3z^2-4vz+v^2=(z-v)(3z-v).                  (2.1)
+    91	```
+    92	
+    93	Write
+    94	
+    95	```text
+    96	T_tan: z=v,                  T_tr: 3z=v
+    97	```
+    98	
+    99	for these distinct tangent lines. Weierstrass preparation and the quadratic
+   100	formula over `C[[v]]` factor `r` uniquely up to units as
+   101	
+   102	```text
+   103	r=unit*(z-xi_tan(v))*(z-xi_tr(v)),
+   104	xi_tan=v+O(v^2),             xi_tr=v/3+O(v^2).
+   105	```
+   106	
+   107	Thus `D_tan,D_tr`, defined by those two factors, are exactly two reduced
+   108	smooth analytic branches, transverse to each other, for every unit `g`.
+   109	The local different is reduced at `p`; neither tangent line itself is being
+   110	substituted for its Hensel branch.
+   111	
+   112	## 3. Exact intersection split
+   113	
+   114	The ideal of `H` in `C[[v,z]]` is `(U)=(h)`, and `r=h_z mod h`. Hence
+   115	
+   116	```text
+   117	I_p(H,R_pi)=length C[[v,z]]/(h,h_z).                (3.1)
+   118	```
+   119	
+   120	As a cubic in `z`, `h` has leading coefficient `1+v` and roots
+   121	`0,v,v/(1+v)`. Therefore
+   122	
+   123	```text
+   124	disc_z(h)=v^8                                      (3.2)
+   125	```
+   126	
+   127	exactly, while the resultant differs by a unit. The monic
+   128	resultant/length identity gives `I_p(H,R_pi)=8`.
+   129	
+   130	There is no common branch: direct restriction gives orders
+   131	
+   132	```text
+   133	ord_v(r|H_0)=2,      ord_v(r|Q_1)=3,
+   134	ord_v(r|Q_2)=3.
+   135	```
+   136	
+   137	Thus intersection additivity is licensed. `D_tr` has tangent distinct from
+   138	all three tangents of `H`, so its three contributions are exactly
+   139	`(1,1,1)`. `D_tan` is transverse to `H_0` and tangent to both `Q_i`, so its
+   140	contributions are at least `(1,2,2)`. The exact total eight forces equality:
+   141	
+   142	```text
+   143	                  H_0   Q_1   Q_2   total
+   144	D_tan              1     2     2      5
+   145	D_tr               1     1     1      3
+   146	                                      ---
+   147	                                       8.           (3.3)
+   148	```
+   149	
+   150	This is an exact floor-plus-complement argument: it is sound because the
+   151	`D_tr` side and total are equalities, not because two lower bounds attain.
+   152	
+   153	The restriction of the target trace discriminant is `v^8` up to a unit by
+   154	the norm formula. That is a consistency restatement of the same different
+   155	calculation, not independent evidence and not an identification of target
+   156	and source branches. Source different, its reduced support, target
+   157	discriminant, reduced branch, normalization index, and conductor remain
+   158	distinct.
+   159	
+   160	## 4. Binding global consequence
+   161	
+   162	Now assume `X` is smooth and irreducible of class `2A+3B`, `pi` is finite on
+   163	a neighborhood of the reduced `H`, and the promoted dominant `A2->U`
+   164	first-leg hypotheses hold. The promoted attachment theorem supplies
+   165	nonempty reduced affine ramification and excludes irreducible ramification
+   166	in `F1,F2,F4,F7`; finiteness excludes `F3,F6`, while `F8,F9` have no forest
+   167	refinement.
+   168	
+   169	In F5, neither local different branch lies in `H`, and (3.1)--(3.3) exhaust
+   170	the global intersection `H.R_pi=8`, so no additional boundary attachment
+   171	exists. If `D_tan,D_tr` belong to one global irreducible `Rbar`, they give
+   172	two normalization points over `p`; the attachment-cycle lemma produces a
+   173	cycle already in `H union Rbar`. Any resolution of the full boundary
+   174	contains a subdivision of that graph, and subsequent subdivision or
+   175	vertex/edge addition cannot lower its first Betti number. If the germs lie
+   176	on distinct global components, both meet the affine part and `R_red` is
+   177	reducible.
+   178	
+   179	Consequently the maximum promoted composition is
+   180	
+   181	```text
+   182	smooth irreducible class-(2A+3B) incidence,
+   183	pi finite near reduced squarefree infinity,
+   184	dominant promoted A2 first leg
+   185	    => R_red is nonempty and has at least two components.       (4.1)
+   186	```
+   187	
+   188	The next finite gate is the actual conic-bundle component lattice with
+   189	boundary degrees five and three. Equation (4.1) does not eliminate reducible
+   190	ramification or F5, realize any coefficient tuple, or assert occurrence.
+   191	
+   192	No nonreduced/singular/basepoint/degree-drop stratum, general quadratic or
+   193	cubic block, primitivity statement, map, counterexample, or JC2 conclusion is
+   194	promoted.
+   195	
+   196	<!-- BODY-END -->
+   197	
+   198	## Seal
+   199	
+   200	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   201	  including its terminating newline; this seal is outside the body.
+   202	- Body bytes: `6988`.
+   203	- Body SHA-256:
+   204	  `2d14c7fa9675d41eaaf208e10c2dc4e72e596fa6fbf9503350dd18295abe0787`.
+   205	- Frozen basis: `1efd7a76538e3fcdf51b999563262afc40d58947`.
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: reduced bidegree-(2,3) rational-forest locus
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Coordinator: Sol 5.6 Ultra  
+     5	Frozen basis: `4c91d6fc398d1b4f2b8ca1a11d69c4bb3fef9c0d`  
+     6	Lifecycle: **BINDING INTEGRATION / REDUCED SQUAREFREE INFINITY SCOPE**
+     7	
+     8	## 0. Disposition and custody
+     9	
+    10	Fable 5 independently reconstructed the sealed producer
+    11	
+    12	```text
+    13	d783cecfcc818f1ec5c056fa04126c21dab0f17c073d11d8e230703b9755feaa
+    14	  xmodel/bd-a2-firstleg-bidegree23-rational-forest-classification-sol56-20260830.md
+    15	  body 13761 / b76971e671237b906d4c772ec4008e7153ca6f47705cc994839fef33c12a604e
+    16	```
+    17	
+    18	and returned `CONFIRM_WITH_CORRECTIONS`.  Its sandbox-attested raw review body
+    19	is
+    20	
+    21	```text
+    22	77d489d7168ce40079c0806bc485c6c444446ec3ea759bdd15ad5c2007ead5aa
+    23	  xmodel/bd-a2-bidegree23-rational-forest-classification-hostile-review-fable5-20260830.md
+    24	```
+    25	
+    26	and its sealed full-file SHA-256 is
+    27	`8db0d0f8ae48434e538b83e8e16f2ca9ba8deecc90b40568570c4fc2b7065ecb`.
+    28	The clean schema-v2 receipt has exit code zero and pins unchanged prompt,
+    29	adapter, launcher, Seatbelt profile, validator, fallacy appendix, and composed
+    30	model-prompt hashes.
+    31	
+    32	The review finds no mathematical error and no false type row.  This
+    33	integration adopts its two scope repairs: `F8,F9` are factorization types but
+    34	have no forest refinement, and common coefficient zeros at an affine target
+    35	point are invisible to the infinity restriction and remain a separate
+    36	normality/finiteness/etaleness client.
+    37	
+    38	## 1. Exact genus-budget theorem
+    39	
+    40	Let `C` be a reduced divisor of class `(2,3)` on
+    41	`S=P1 times P1`.  Let `C_i` be its irreducible components, let `g_i` be their
+    42	normalization genera, and for each singular point `p` let `delta_p` be its
+    43	delta invariant and `r_p` its number of analytic branches.  Put
+    44	
+    45	```text
+    46	G(C)=sum_i g_i,
+    47	K(C)=sum_p(delta_p-r_p+1),
+    48	B(C)=b1(branch-incidence multigraph).
+    49	```
+    50	
+    51	Every such divisor is connected: the ideal sequence and Kunneth give
+    52	`H^1(S,O(-2,-3))=0`.  Adjunction gives `p_a(C)=2`.  Normalization and the
+    53	connected branch-incidence graph give
+    54	
+    55	```text
+    56	2 = G(C)+B(C)+K(C),                                  (1.1)
+    57	```
+    58	
+    59	and each summand is nonnegative.  Replacing a singular-point vertex by its
+    60	embedded-resolution exceptional tree preserves `b1`, including loops and
+    61	parallel edges.  Hence:
+    62	
+    63	> The reduced total transform of `C` on any embedded log resolution has only
+    64	> rational components and forest—necessarily tree—dual multigraph if and
+    65	> only if `K(C)=2`.
+    66	
+    67	The identity covers reducible curves, disconnected normalization, arbitrary
+    68	branch count, and nonordinary singularities.  A two-branch contact of order
+    69	`m` contributes `m-1`; an ordinary triple point contributes one.
+    70	
+    71	## 2. Exhaustive factorization table
+    72	
+    73	There are exactly nine unordered reduced component-degree partitions.  The
+    74	rational-tree locus is nonempty exactly in `F1`--`F7`:
+    75	
+    76	```text
+    77	F1  (2,3)
+    78	    rational normalization; either two A2 cusps or one A4 cusp.
+    79	
+    80	F2  (0,1)+(2,2)
+    81	    the (2,2) component has one A2 cusp; its intersection with the ruling
+    82	    fibre is supported at one point with length two.
+    83	
+    84	F3  (1,0)+(1,3)
+    85	    the two components have one length-three contact.
+    86	
+    87	F4  (1,1)+(1,2)
+    88	    the two components have one length-three contact.
+    89	
+    90	F5  (0,1)+(1,1)+(1,1)
+    91	    all three meet at one point; the two (1,1) components have contact two.
+    92	
+    93	F6  (0,1)+(1,0)+(1,2)
+    94	    all three meet at one point; the (1,0) and (1,2) components have
+    95	    contact two.
+    96	
+    97	F7  (0,1)+(0,1)+(2,1)
+    98	    the (2,1) component has one length-two contact with each of the two
+    99	    disjoint ruling components.
+   100	
+   101	F8  (0,1)+(0,1)+(1,0)+(1,1)       impossible: K<=1.
+   102	
+   103	F9  3(0,1)+2(1,0)                  impossible: K=0, B=2.
+   104	```
+   105	
+   106	These conditions are necessary and sufficient within their factorization
+   107	types.  Every viable row has an exact witness.  In particular irreducible
+   108	survivors genuinely occur: normalization maps of bidegrees `(3,2)` give
+   109	
+   110	```text
+   111	t |-> (t^3,t^2)                         two A2 cusps,
+   112	t |-> (t^2/(1-t^3),t^2)                 one A4 cusp.
+   113	```
+   114	
+   115	The review checks injectivity, all finite poles, infinity charts, and the
+   116	claimed local delta invariants.  Thus reducibility is not forced.
+   117	
+   118	## 3. Exact Miranda typing
+   119	
+   120	For a fixed-basis quadratic Miranda presentation, the leading binary cubic
+   121	
+   122	```text
+   123	F_infinity(s,t;X,Y)
+   124	 = b_2 X^3-3a_2 X^2Y+3d_2 XY^2-c_2 Y^3
+   125	```
+   126	
+   127	ranges over all of `H^0(O(2,3))`.  Therefore the theorem governs precisely
+   128	the presentations for which this leading form is squarefree: all nine
+   129	factorization types are present in the ambient family, and the infinity-curve
+   130	test retains exactly `F1`--`F7`.
+   131	
+   132	The following interfaces remain distinct:
+   133	
+   134	* a simple common factor of the four leading quadratics gives a projective
+   135	  coefficient basepoint and a `(1,0)` factorization type (`F3,F6,F8,F9`);
+   136	* a fixed fibre root gives a `(0,1)` component and is not by itself target-
+   137	  degree drop;
+   138	* a repeated leading factor is nonreduced and must be squarefreed/retyped;
+   139	* simultaneous vanishing of all four leading quadratics is literal target-
+   140	  degree drop and returns to degree at most one;
+   141	* a common zero of the full coefficient sections at an affine target point is
+   142	  invisible to `F_infinity` and remains a separate normality/finiteness/
+   143	  etaleness condition.
+   144	
+   145	## 4. Binding campaign consequence
+   146	
+   147	Combine this classification with the promoted rational-forest first-leg
+   148	theorem.  A fixed-basis quadratic Miranda incidence with squarefree infinity
+   149	can admit a dominant rational `A2` first leg only if its infinity divisor lies
+   150	in one of `F1`--`F7`.  This is necessary only.  The next finite gate is the
+   151	resolved union of infinity with reduced ramification support; any positive-
+   152	genus ramification component or new graph cycle excludes the presentation.
+   153	
+   154	No ramification-support exclusion, general quadratic or cubic block closure,
+   155	basis-minimization theorem, primitivity result, map existence/nonexistence,
+   156	counterexample, or JC2 statement is promoted.  Nonreduced infinity, singular
+   157	ambient closure, affine coefficient zeros, projective basepoints, and both
+   158	fibre/target degree drops retain their separate lifecycle entries.
+   159	
+   160	<!-- BODY-END -->
+   161	
+   162	## Seal
+   163	
+   164	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   165	  including its terminating newline; this seal is outside the body.
+   166	- Body bytes: `6106`.
+   167	- Body SHA-256:
+   168	  `9371f0961222e0db02f1d9e7d2bb5fb20f3d857b1b0cf0a7cb021c1d23faefce`.
+   169	- Frozen basis: `4c91d6fc398d1b4f2b8ca1a11d69c4bb3fef9c0d`.
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Quadratic incidence: class-group rank shortcut fails
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Producer: Sol 5.6 Ultra coordinator  
+     5	Frozen basis: `f89cbb02305ee6fef32a79ccb8ff53fc4740a2a1`  
+     6	Lifecycle: **EXACT DESK PRODUCER / DIFFERENT-MODEL REVIEW REQUIRED**
+     7	
+     8	## 0. Endpoint
+     9	
+    10	The provisional ramification-attachment packet suggests computing `Cl(Y)`:
+    11	if its rank were at most one, the unit/localization injection would force
+    12	reduced ramification support to be irreducible.  On a smooth quadratic
+    13	incidence surface this rank shortcut cannot work.  The ambient surface is a
+    14	conic bundle with nine singular fibres and Picard rank eleven.  Removing a
+    15	reduced bidegree-`(2,3)` infinity divisor with at most three components leaves
+    16	
+    17	```text
+    18	rank Cl(Y) >= 8.                                      (0.1)
+    19	```
+    20	
+    21	In particular, for the projectively finite rational-tree types
+    22	`F1,F2,F4,F5,F7`, raw class-group rank cannot rule out two, three, or four
+    23	ramification components.  Any class-group continuation must compute the
+    24	actual component-class lattice, intersections, and effectivity—not merely
+    25	rank.
+    26	
+    27	This is a negative optimization result, not evidence that reducible
+    28	ramification occurs.
+    29	
+    30	## 1. Smooth conic-bundle structure
+    31	
+    32	Let
+    33	
+    34	```text
+    35	X subset P2 times P1
+    36	```
+    37	
+    38	be a smooth irreducible hypersurface of class `2A+3B`, where `A` and `B` are
+    39	the two hyperplane pullbacks.  Projection
+    40	
+    41	```text
+    42	q:X -> P1
+    43	```
+    44	
+    45	is a flat conic bundle.  Indeed, a whole `P2` fibre would mean that all
+    46	quadratic coefficients share the corresponding linear base factor, making
+    47	the defining equation reducible.  The generic conic is smooth: otherwise its
+    48	generic singular point would make the total space singular.
+    49	
+    50	Write the fibre quadratic as a symmetric `3 by 3` matrix whose entries are
+    51	binary cubics.  Its determinant is a binary form of degree nine.  Smoothness
+    52	of `X` forces every degenerate fibre to have rank two and every discriminant
+    53	zero to be simple.  Locally a rank-two fibre has model
+    54	
+    55	```text
+    56	x^2+y^2+t*z^2=0,
+    57	```
+    58	
+    59	whose total space is smooth and whose determinant has a simple zero.  A
+    60	multiple determinant zero at the fibre node, or a rank-one double line,
+    61	makes the total space singular.  Therefore `q` has exactly nine singular
+    62	fibres, each a reduced union of two lines.
+    63	
+    64	## 2. Rationality and Picard rank
+    65	
+    66	The generic conic over `C(P1)` has a rational point by the `C_1` property of
+    67	`C(P1)`; hence `q` has a rational section after resolving the rational map,
+    68	and `X` is rational.  Alternatively, the standard conic-bundle contraction
+    69	gives a birational ruled surface.
+    70	
+    71	A smooth conic has Euler number two and a reduced pair of lines has Euler
+    72	number three.  Thus
+    73	
+    74	```text
+    75	e(X)=e(P1)*2+9*(3-2)=4+9=13.                         (2.1)
+    76	```
+    77	
+    78	For a smooth rational surface, `b1=b3=0`, `b0=b4=1`, and
+    79	`h^(2,0)=0`.  Equation (2.1) gives
+    80	
+    81	```text
+    82	b2(X)=rho(X)=11.                                     (2.2)
+    83	```
+    84	
+    85	This agrees with the standard conic-bundle basis: fibre, a section, and one
+    86	component from each of the nine reducible fibres.
+    87	
+    88	## 3. Removing infinity
+    89	
+    90	Let `H` be a reduced infinity divisor of class `A|X`, and put `Y=X minus H`.
+    91	If `H` has `s` irreducible components, the localization sequence for the
+    92	smooth surface gives
+    93	
+    94	```text
+    95	Z^s -> Pic(X) -> Cl(Y) -> 0.
+    96	```
+    97	
+    98	Consequently
+    99	
+   100	```text
+   101	rank Cl(Y) >= 11-s.                                  (3.1)
+   102	```
+   103	
+   104	The promoted reduced rational-tree types have
+   105	
+   106	```text
+   107	F1: s=1;       F2,F4: s=2;       F5,F7: s=3,
+   108	```
+   109	
+   110	so their lower bounds are respectively ten, nine, nine, eight, and eight.
+   111	The projective-basepoint types `F3,F6` also have at most three components but
+   112	are outside the projectively finite attachment theorem.
+   113	
+   114	No independence of the `H_i` classes was assumed; any dependence only raises
+   115	the rank of `Cl(Y)`.  Torsion is irrelevant to (3.1).
+   116	
+   117	## 4. Why the component-count shortcut stops
+   118	
+   119	The block morphism still forces `O(U)^*=O(Y)^*=C^*`, so for
+   120	`U=Y minus R_red` the localization map
+   121	
+   122	```text
+   123	Z^{components(R_red)} -> Cl(Y)
+   124	```
+   125	
+   126	is injective.  But (3.1) leaves ample rank.  Moreover the total ramification
+   127	class `R=2A+B` has conic-bundle degree
+   128	
+   129	```text
+   130	R.(B|X)=4,
+   131	```
+   132	
+   133	so in the absence of vertical ramification it has at most four horizontal
+   134	components—well below the lower bounds in (3.1).  Rank alone gives no
+   135	contradiction.
+   136	
+   137	The numerical controls are
+   138	
+   139	```text
+   140	H.R=8,       p_a(H)=2,       p_a(R)=9,
+   141	p_a(H+R)=18.                                           (4.1)
+   142	```
+   143	
+   144	They follow from `K_X=-A+B` and `A^2B=1` in the ambient threefold.  Thus the
+   145	remaining problem is not rank scarcity but concentration of a large
+   146	arithmetic-genus/intersection budget into unibranch cusps, excess contacts,
+   147	and a full resolved boundary tree.
+   148	
+   149	The next exact class-group client must therefore express each possible
+   150	ramification component in the conic-bundle lattice, impose sum class
+   151	`2A+B`, adjunction, effectiveness, at-most-one infinity attachment from the
+   152	provisional attachment theorem, and linear independence from the unit
+   153	argument.  A raw Picard-rank computation should be stopped.
+   154	
+   155	## 5. Scope and nonclaims
+   156	
+   157	This packet assumes a smooth irreducible class-`2A+3B` incidence surface.  It
+   158	does not cover a singular ambient closure, nonflat conic bundle, nonreduced
+   159	infinity, target/fibre degree drop, or projective coefficient basepoint.  It
+   160	does not compute the individual divisor classes of ramification components or
+   161	prove they exist.  No quadratic-block closure, primitivity, map,
+   162	counterexample, or JC2 statement follows.
+   163	
+   164	<!-- BODY-END -->
+   165	
+   166	## Seal
+   167	
+   168	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   169	  including its terminating newline; this seal is outside the body.
+   170	- Body bytes: `5476`.
+   171	- Body SHA-256:
+   172	  `0ad7e8126e2c552177f725fb374f1237e925b61b7cdbe9a17f0bdbf0bf899723`.
+   173	- Frozen basis: `f89cbb02305ee6fef32a79ccb8ff53fc4740a2a1`.
+
+codex
+The initial read already shows one custody issue: the main packet’s own “Frozen basis” line does not match the basis the prompt asked me to work on. I’m also checking the full-file and body hashes before separating custody defects from mathematical defects.
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+4978e225d4847a29d4d87876fa347132871ddba958afb9db6ede2b1699c45a39  xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md
+255bd0ba04e1c0a428a18caa70e73bc35895026c5857f629ed855cee79a8f803  xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md
+8fcd071fff6e828879b7926ad9398f3d33f81344e58f6fe04c758a19c326641e  xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md
+e3dc96f07825ea882edc3d2701e9f0a0357ae863c062ad695d9377a37aa2b761  xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md
+7ee2a8e3e5eaae8b681da4a8b17e410199a4409fecb872dcc6b14d54394adefc  xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md
+
+exec
+/bin/zsh -lc 'for f in xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md; do bytes=$(perl -ne '"'print; last if /"'^<!-- BODY-END -->$/'"' \""'$f" | wc -c | tr -d '"' '); printf '%s %s\\n' \""'$bytes" "$f"; done' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+13850 xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+8727 xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+6988 xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+6106 xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+5476 xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md
+
+exec
+/bin/zsh -lc "for f in xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md; do perl -ne 'print; last if /"'^<!-- BODY-END -->$/'"' \""'$f" | shasum -a 256 | awk -v f="$f" '"'{print "'$1, f}'"'; done" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+2fa574c72a81e6b736cd6847fcbb9cc9272b60ed34c46ef40c1996a3020d92b6 xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Setting locale failed.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+f334970e50271ce851c55ec55cfc30ba9f00054b4d81179e437b669350dd878b xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+2d14c7fa9675d41eaaf208e10c2dc4e72e596fa6fbf9503350dd18295abe0787 xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+perl: warning: Falling back to the standard locale ("C").
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+9371f0961222e0db02f1d9e7d2bb5fb20f3d857b1b0cf0a7cb021c1d23faefce xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+0ad7e8126e2c552177f725fb374f1237e925b61b7cdbe9a17f0bdbf0bf899723 xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md
+
+codex
+The desk checks are aligning through the conic-bundle setup: nine singular fibres and the basis formulas are internally consistent. I’m replaying the finite F5 lattice enumeration independently over all labelled four-subsets, not just the representative subset shown in the producer.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from itertools import combinations, product
+U=range(8)
+subs=[frozenset(c) for c in combinations(U,4)]
+
+def check_case(x,y,leaves):
+    c=[sum(nu for nu,K in leaves if j in K) for j in U]
+    sols=[]
+    for a in product(range(3), repeat=8):
+        b=tuple(2-c[j]-a[j] for j in U)
+        if any(v<0 or v>2 for v in b):
+            continue
+        if sum(a)"'!=4*x or sum(b)!=4*y:
+            continue
+        sq3=x*x+4*x-1-sum(v*v for v in a)
+        sq5=y*y+6*y-1-sum(v*v for v in b)
+        if sq3+x-1<0 or (sq3+x-1)%2:
+            continue
+        if sq5+y-3<0 or (sq5+y-3)%2:
+            continue
+        if sum(ai*bi for ai,bi in zip(a,b)) != x*y+3*x+2*y-2:
+            continue
+        sols.append((a,b,sq3,sq5))
+    return sols
+
+summary=[]
+# doubled Z
+cnt=0; samples=[]
+for I in subs:
+    sols=check_case(1,1,[(2,I)])
+    cnt+=len(sols)
+    if sols and not samples:
+        samples=[(I,sols[:3])]
+summary.append(('"'(1,1;2Z)',cnt,samples[:1]))
+# two distinct simple Zs; only physically coexistent if intersection 1
+cnt=0; pair_count=0; samples=[]
+for I,J in combinations(subs,2):
+    if len(I & J)"'!=1:
+        continue
+    pair_count += 1
+    sols=check_case(1,1,[(1,I),(1,J)])
+    cnt+=len(sols)
+    if sols and not samples:
+        samples=[(I,J,sols[:3])]
+summary.append(('"'(1,1;Z+Z)',cnt,[('pairs',pair_count), *samples[:1]]))
+# single Z rows
+for x,y in [(1,2),(2,1)]:
+    cnt=0; samples=[]
+    for I in subs:
+        sols=check_case(x,y,[(1,I)])
+        cnt+=len(sols)
+        if sols and not samples:
+            samples=[(I,sols[:3])]
+    summary.append((f'({x},{y};Z)',cnt,samples[:1]))
+# no Z rows
+for x,y in [(1,3),(2,2),(3,1)]:
+    sols=check_case(x,y,[])
+    summary.append((f'({x},{y};none)',len(sols),sols[:3]))
+for row in summary:
+    print(row)
+PY" in /Users/dc/code/math/jc2
+ succeeded in 3488ms:
+('(1,1;2Z)', 70, [(frozenset({0, 1, 2, 3}), [((0, 0, 0, 0, 1, 1, 1, 1), (0, 0, 0, 0, 1, 1, 1, 1), 0, 2)])])
+('(1,1;Z+Z)', 0, [('pairs', 560)])
+('(1,2;Z)', 0, [])
+('(2,1;Z)', 0, [])
+('(1,3;none)', 0, [])
+('(2,2;none)', 0, [])
+('(3,1;none)', 0, [])
+
+codex
+The independent enumeration agrees with the packet’s “one orbit” claim: labelled replay gives 70 doubled-Z solutions, all one permutation orbit, and zero solutions in the other six rows. I’m drafting the report as a confirmation with limited corrections, mainly custody/scope wording and explicit hypotheses.
+exec
+/bin/zsh -lc 'test -e xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md; echo $?' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+1
+
+codex
+I’m going to write the single requested report now. It will not add a seal block, and I’ll end the body at the requested standalone marker.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+diff --git a/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..4c982641d5127aa93f05cc4d75f1a64a8764b22d
+--- /dev/null
++++ b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+@@ -0,0 +1,218 @@
++# Hostile review: quadratic ramification connectedness and F5 lattice closure
++
++Verdict: CONFIRM_WITH_CORRECTIONS.
++
++I confirm the mathematical closure of the stated smooth projectively finite
++quadratic, reduced squarefree infinity, dominant-A2-first-leg, rational-forest
++scope, charging the four integration/support packets only inside their stated
++scopes. The corrections are custody/scope and wording repairs, not mathematical
++failures of the connectedness or F5 lattice argument.
++
++## 1. Custody and scope
++
++- CONFIRM_WITH_CORRECTIONS. Current repository HEAD is
++  `78da50bd31b3f7fd8d07ed8fc5ddbbf0ad4290d1`, matching the prompt basis. The
++  five full-file hashes and body hashes checked against the prompt and embedded
++  seals. However, the main packet itself records frozen basis
++  `1efd7a76538e3fcdf51b999563262afc40d58947` at
++  `xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md:5`
++  and in its seal at line 414. Promotion should either correct that metadata or
++  state explicitly that this is a sealed packet produced on `1efd...` and
++  reviewed at `78da...`.
++- The producer invokes the bidegree rational-forest classification within
++  reduced squarefree infinity only, and keeps `F8,F9` out because they have no
++  rational-tree refinement. This matches
++  `xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md:145-158`.
++- It invokes the attachment packet within smooth, reduced, projectively finite
++  quadratic scope only. The no-H-component, exact boundary critical set,
++  nonemptiness, and unit/localization injection are exactly the promoted
++  statements at
++  `xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md:86-108`
++  and `:149-160`.
++- It invokes the F5 local different packet only at the smooth F5 local triple
++  point and only for the source different split `8=5+3`. This matches
++  `xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md:160-190`.
++- It invokes the class-group rank no-go packet only for Picard rank eleven and
++  for rejecting the old raw rank shortcut. This matches
++  `xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md:117-153`.
++
++## 2. Ramification class and connectedness
++
++- CONFIRMED. In `P2 x P1`, with `X ~ 2A+3B`,
++  `A^2=3`, `A.B=2`, `B^2=0` on `X`. Adjunction gives
++  `K_X=(-3A-2B+2A+3B)|X=-A+B`. Since `pi^*K_P2=-3A`,
++  the relative ramification class is
++  `R_pi=K_X-pi^*K_P2=2A+B`, as stated at main lines 63-68.
++- CONFIRMED. `O_X(2A+B)` is the restriction of `O(2,1)`, hence ample. The
++  Jacobian determinant is nonzero because `pi` is generically finite in
++  characteristic zero, so `R_pi` is a nonzero effective ample Cartier divisor.
++- CONFIRMED. The Hodge-index proof of connected support is valid for
++  nonreduced Cartier divisors and reducible support. If
++  `D=D_1+D_2` with nonzero effective pieces and disjoint supports, ampleness
++  gives `D.D_i>0`, hence `D_i^2>0`, and `D_1.D_2=0`; this gives two orthogonal
++  positive directions, impossible on a smooth projective surface.
++- CONFIRMED. The no-infinity-component bridge is supplied by the attachment
++  integration: reduced `H`, characteristic zero, and finiteness near `H`
++  exclude a critical Cartier component contained in `H`. Therefore every
++  component of `R_pi` has affine generic point, and the projective support is
++  the closure of reduced affine ramification plus boundary intersection
++  points. There is no loophole from isolated boundary points.
++
++## 3. Eliminating F1, F2, F4, F7
++
++- CONFIRMED. The promoted attachment packet gives at least two distinct
++  physical boundary critical points in `F1,F2,F4,F7`, and the exact critical
++  set says those points are precisely attachments of the projective
++  ramification support.
++- CONFIRMED. Connectedness of `Supp(R_pi)` is enough to replace the older
++  irreducibility hypothesis. In any resolved full boundary forest, the total
++  transform of connected `H` is a tree and the total transform of connected
++  `Supp(R_pi)` is a tree. Two distinct physical attachment points give two
++  disjoint local joining paths between those trees; contracting the two trees
++  gives two parallel edges, hence first Betti number at least one.
++- Tangencies, embedded exceptional chains, singular ramification components,
++  and multiple edges do not repair this. Blowups subdivide edges or add
++  pendant vertices; they do not remove the two independent connections.
++- Correction: phrase this as "the connected reduced support of the Cartier
++  ramification divisor" rather than "connected total transforms belonging to
++  `Supp(R_pi)`" when using graph language. Multiplicities play no role.
++
++## 4. F5 conic-bundle lattice
++
++- CONFIRMED. The conic-bundle structure has nine simple reducible fibres and
++  `rho(X)=11`, as in the charged rank packet. With `F=B`, a section `S`, and
++  fibre components `E_i` disjoint from `S`, the basis has
++  `S^2=-2`, `S.F=1`, `E_i^2=-1`, and omitted pairings zero.
++- CONFIRMED. In F5,
++  `L=F-E_1`,
++  `A=2S+5F-sum_{1}^{9}E_i`,
++  `T=S+4F-sum_{2}^{9}E_i`,
++  `K_X=-A+F=-2S-4F+sum E_i`, and
++  `R_pi=2A+F=4S+11F-2sum E_i`. These recover
++  `L^2=-1`, `S^2=T^2=-2`, `L.S=L.T=1`, `S.T=2`, and
++  `R_pi.(L,S,T)=(2,3,3)`.
++- CONFIRMED. If an irreducible curve `Z` has `A.Z=0`, then `pi(Z)` is a
++  point and the ambient embedding forces `Z={point} x P1`; hence `F.Z=1`,
++  `Z` is a smooth rational section of `q`, and adjunction gives `Z^2=-3`.
++  Solving `Z.L=Z.S=Z.T=0` and `Z^2=-3` gives exactly
++  `Z_I=S+2F-E_1-sum_{i in I}E_i` with
++  `I subset {2,...,9}`, `|I|=4`.
++- CONFIRMED. `Z_I.Z_J=1-|I cap J|`. Distinct effective A-null curves are
++  different vertical copies `{point} x P1`, hence disjoint, so coexistence
++  requires `|I cap J|=1`. The "no three" claim is true but unused here because
++  the later multiplicity bound gives total A-null multiplicity at most two.
++  It may be deleted for economy.
++
++## 5. Local F5 different to global carriers
++
++- CONFIRMED. The local packet proves two reduced smooth source-different
++  branches at the unique boundary point, transverse to each other, with
++  contact vectors `(1,1,1)` and `(1,2,2)` against `(L,S,T)`. The weight-three
++  branch is the transverse one and the weight-five branch is tangent to the two
++  `(1,1)` components.
++- CONFIRMED. If the two local germs lay on one global prime, they would give
++  two distinct normalization points over the connected infinity tree, producing
++  a cycle. Thus any survivor has distinct global primes `D_3,D_5`. Since the
++  local Cartier equation is reduced along both germs, their global Cartier
++  coefficients are one.
++- CONFIRMED. These two carriers exhaust `R_pi.(L,S,T)=(2,3,3)`. Every other
++  effective component has nonnegative intersection with each `H_i`, hence zero
++  intersection with each `H_i`, hence `A.C=0`, so it is one of the `Z_I`.
++- CONFIRMED. If `x=F.D_3` and `y=F.D_5`, then `x,y>0`: a curve with
++  `F`-degree zero lies in a conic fibre and has `A`-degree one or two, not
++  three or five. Since `R_pi.F=4`, the remaining A-null Cartier multiplicity
++  is `N=4-x-y`, so the only partitions are `2`, `1+1`, `1`, or none, exactly
++  as enumerated.
++- CONFIRMED_WITH_CORRECTION. `D_3.D_5=1` is a necessary survivor condition:
++  the local transverse boundary intersection already contributes one, and any
++  further intersection would independently create a second path and violate
++  the rational-forest hypothesis. The enumeration should explicitly say it is
++  performed after imposing this necessary survivor condition.
++
++## 6. Equations and enumeration
++
++- CONFIRMED. For `j=2,...,9`,
++  `D_3=xS+(2x+1)F-(x-1)E_1-sum a_jE_j` and
++  `D_5=yS+(2y+2)F-(y-1)E_1-sum b_jE_j`. Here
++  `a_j=D_3.E_j>=0`, `b_j=D_5.E_j>=0`, and integrality is Picard-lattice
++  integrality.
++- CONFIRMED. The contact vector with `T` gives
++  `sum a_j=4x` and `sum b_j=4y`. Total class equality gives
++  `a_j+b_j+c_j=2`, so `0<=a_j,b_j<=2` and no unbounded coefficient is hidden.
++- CONFIRMED. With `K_X=-A+F`, rational normalization gives
++  `delta_3=(D_3^2+x-1)/2` and
++  `delta_5=(D_5^2+y-3)/2`, both integral and nonnegative. The square formulas
++  and `D_3.D_5=1` give exactly main equations (4.7).
++- CONFIRMED. I replayed the enumeration over all labelled four-subsets of
++  `{2,...,9}`. Labelled counts are: doubled `Z`, 70 solutions, one permutation
++  orbit; two distinct simple `Z`s with the required one-point subset
++  intersection, zero; single `Z` rows `(1,2)` and `(2,1)`, zero; no-`Z` rows
++  `(1,3),(2,2),(3,1)`, zero. This does not assume smoothness or general
++  position beyond the rational-normalization delta test and the promoted
++  forest condition.
++- CONFIRMED. The unique orbit is
++  `D_3=S+3F-sum_{j in J}E_j`,
++  `D_5=S+4F-sum_{j in J}E_j`,
++  `Z=S+2F-E_1-sum_{i in I}E_i`, with `J` the complement of `I` in
++  `{2,...,9}`. Then
++  `D_3^2=0`, `D_5^2=2`, `Z^2=-3`,
++  `D_3.D_5=1`, `D_3.Z=3`, `D_5.Z=4`, and
++  `R_pi=D_3+D_5+2Z`.
++
++## 7. The two F5 contradictions
++
++- CONFIRMED. The class relation is exact:
++  `D_3+Z=2S+5F-E_1-sum_{2}^{9}E_i=A=L+S+T=H` in `Pic(X)`. Restricting to
++  `Y=X-H` gives `[D_3]+[Z]=0` in `Cl(Y)`. The charged unit theorem gives
++  `O(U)^*=O(Y)^*=C^*`, so the localization boundary map from the free group on
++  reduced ramification primes into `Cl(Y)` is injective. The nonzero relation
++  `[D_3]+[Z]=0` is therefore impossible. The Cartier coefficient `2` of `Z`
++  in `R_pi` is irrelevant because the localization injection is on reduced
++  primes.
++- CONFIRMED. Independently, the graph contradiction survives every embedded
++  resolution. The boundary point gives a path from `D_3` to `D_5` through the
++  resolved infinity/different local configuration. Since `Z.H=0` and
++  `D_3.Z,D_5.Z>0`, there is an affine interior path from `D_3` to `D_5` through
++  `Z`. These paths are distinct. Blowups only subdivide them or add pendant
++  exceptional vertices, so the cycle cannot disappear.
++
++## 8. Maximum safe theorem
++
++CONFIRM_WITH_CORRECTIONS. The safe promoted theorem is:
++
++For a smooth irreducible incidence surface `X subset P2 x P1` of class
++`2A+3B`, with `pi:X->P2` generically finite and finite near reduced squarefree
++infinity `H`, under the promoted dominant `A2 -> U` first-leg hypotheses whose
++resolved boundary is a rational forest and whose unit consequence is
++`O(U)^*=C^*`, the reduced rational-forest infinity types
++`F1,F2,F4,F5,F7` are impossible. Types `F3,F6` are outside this theorem because
++they are projective-basepoint/nonfinite near infinity types, and `F8,F9` have
++no rational-tree refinement.
++
++This is not a general map-existence or nonexistence theorem. It does not cover
++nonreduced infinity, singular incidence surfaces, affine coefficient common
++zeros, target or fibre degree drops, basis minimization, general quadratic
++closure, cubic closure, primitivity, counterexamples, or JC2.
++
++## Repairs before promotion
++
++1. Fix or annotate the frozen-basis metadata mismatch in the main packet.
++2. State `D_3.D_5=1` as a necessary survivor condition; if it fails, the graph
++   contradiction has already occurred.
++3. In the F5 section, keep the labels explicit: `D_3` is the weight-three
++   transverse branch and `D_5` is the weight-five tangent branch. Do not refer
++   to tangent lines as branches.
++4. Either delete the unused "no three pairwise one-intersecting" sentence or
++   add its one-line inclusion-exclusion proof.
++5. In the final theorem, repeat all scope exclusions listed above. In
++   particular, do not state projective basepoint/nonfinite `F3,F6`,
++   nonreduced infinity, singular incidence, affine coefficient common zeros,
++   degree drops, basis minimization, general quadratic closure, or JC2 closure.
++
++Cheapest next check: no CAS or larger lattice run is needed. The decisive next
++action is a metadata/scope patch to the producer followed by a line-level
++review that the promoted theorem text contains exactly the hypotheses in
++Section 8.
++
++No new exit-price assertion is made in this review.
++<!-- BODY-END -->
+
+diff --git a/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..4c982641d5127aa93f05cc4d75f1a64a8764b22d
+--- /dev/null
++++ b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+@@ -0,0 +1,218 @@
++# Hostile review: quadratic ramification connectedness and F5 lattice closure
++
++Verdict: CONFIRM_WITH_CORRECTIONS.
++
++I confirm the mathematical closure of the stated smooth projectively finite
++quadratic, reduced squarefree infinity, dominant-A2-first-leg, rational-forest
++scope, charging the four integration/support packets only inside their stated
++scopes. The corrections are custody/scope and wording repairs, not mathematical
++failures of the connectedness or F5 lattice argument.
++
++## 1. Custody and scope
++
++- CONFIRM_WITH_CORRECTIONS. Current repository HEAD is
++  `78da50bd31b3f7fd8d07ed8fc5ddbbf0ad4290d1`, matching the prompt basis. The
++  five full-file hashes and body hashes checked against the prompt and embedded
++  seals. However, the main packet itself records frozen basis
++  `1efd7a76538e3fcdf51b999563262afc40d58947` at
++  `xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md:5`
++  and in its seal at line 414. Promotion should either correct that metadata or
++  state explicitly that this is a sealed packet produced on `1efd...` and
++  reviewed at `78da...`.
++- The producer invokes the bidegree rational-forest classification within
++  reduced squarefree infinity only, and keeps `F8,F9` out because they have no
++  rational-tree refinement. This matches
++  `xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md:145-158`.
++- It invokes the attachment packet within smooth, reduced, projectively finite
++  quadratic scope only. The no-H-component, exact boundary critical set,
++  nonemptiness, and unit/localization injection are exactly the promoted
++  statements at
++  `xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md:86-108`
++  and `:149-160`.
++- It invokes the F5 local different packet only at the smooth F5 local triple
++  point and only for the source different split `8=5+3`. This matches
++  `xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md:160-190`.
++- It invokes the class-group rank no-go packet only for Picard rank eleven and
++  for rejecting the old raw rank shortcut. This matches
++  `xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md:117-153`.
++
++## 2. Ramification class and connectedness
++
++- CONFIRMED. In `P2 x P1`, with `X ~ 2A+3B`,
++  `A^2=3`, `A.B=2`, `B^2=0` on `X`. Adjunction gives
++  `K_X=(-3A-2B+2A+3B)|X=-A+B`. Since `pi^*K_P2=-3A`,
++  the relative ramification class is
++  `R_pi=K_X-pi^*K_P2=2A+B`, as stated at main lines 63-68.
++- CONFIRMED. `O_X(2A+B)` is the restriction of `O(2,1)`, hence ample. The
++  Jacobian determinant is nonzero because `pi` is generically finite in
++  characteristic zero, so `R_pi` is a nonzero effective ample Cartier divisor.
++- CONFIRMED. The Hodge-index proof of connected support is valid for
++  nonreduced Cartier divisors and reducible support. If
++  `D=D_1+D_2` with nonzero effective pieces and disjoint supports, ampleness
++  gives `D.D_i>0`, hence `D_i^2>0`, and `D_1.D_2=0`; this gives two orthogonal
++  positive directions, impossible on a smooth projective surface.
++- CONFIRMED. The no-infinity-component bridge is supplied by the attachment
++  integration: reduced `H`, characteristic zero, and finiteness near `H`
++  exclude a critical Cartier component contained in `H`. Therefore every
++  component of `R_pi` has affine generic point, and the projective support is
++  the closure of reduced affine ramification plus boundary intersection
++  points. There is no loophole from isolated boundary points.
++
++## 3. Eliminating F1, F2, F4, F7
++
++- CONFIRMED. The promoted attachment packet gives at least two distinct
++  physical boundary critical points in `F1,F2,F4,F7`, and the exact critical
++  set says those points are precisely attachments of the projective
++  ramification support.
++- CONFIRMED. Connectedness of `Supp(R_pi)` is enough to replace the older
++  irreducibility hypothesis. In any resolved full boundary forest, the total
++  transform of connected `H` is a tree and the total transform of connected
++  `Supp(R_pi)` is a tree. Two distinct physical attachment points give two
++  disjoint local joining paths between those trees; contracting the two trees
++  gives two parallel edges, hence first Betti number at least one.
++- Tangencies, embedded exceptional chains, singular ramification components,
++  and multiple edges do not repair this. Blowups subdivide edges or add
++  pendant vertices; they do not remove the two independent connections.
++- Correction: phrase this as "the connected reduced support of the Cartier
++  ramification divisor" rather than "connected total transforms belonging to
++  `Supp(R_pi)`" when using graph language. Multiplicities play no role.
++
++## 4. F5 conic-bundle lattice
++
++- CONFIRMED. The conic-bundle structure has nine simple reducible fibres and
++  `rho(X)=11`, as in the charged rank packet. With `F=B`, a section `S`, and
++  fibre components `E_i` disjoint from `S`, the basis has
++  `S^2=-2`, `S.F=1`, `E_i^2=-1`, and omitted pairings zero.
++- CONFIRMED. In F5,
++  `L=F-E_1`,
++  `A=2S+5F-sum_{1}^{9}E_i`,
++  `T=S+4F-sum_{2}^{9}E_i`,
++  `K_X=-A+F=-2S-4F+sum E_i`, and
++  `R_pi=2A+F=4S+11F-2sum E_i`. These recover
++  `L^2=-1`, `S^2=T^2=-2`, `L.S=L.T=1`, `S.T=2`, and
++  `R_pi.(L,S,T)=(2,3,3)`.
++- CONFIRMED. If an irreducible curve `Z` has `A.Z=0`, then `pi(Z)` is a
++  point and the ambient embedding forces `Z={point} x P1`; hence `F.Z=1`,
++  `Z` is a smooth rational section of `q`, and adjunction gives `Z^2=-3`.
++  Solving `Z.L=Z.S=Z.T=0` and `Z^2=-3` gives exactly
++  `Z_I=S+2F-E_1-sum_{i in I}E_i` with
++  `I subset {2,...,9}`, `|I|=4`.
++- CONFIRMED. `Z_I.Z_J=1-|I cap J|`. Distinct effective A-null curves are
++  different vertical copies `{point} x P1`, hence disjoint, so coexistence
++  requires `|I cap J|=1`. The "no three" claim is true but unused here because
++  the later multiplicity bound gives total A-null multiplicity at most two.
++  It may be deleted for economy.
++
++## 5. Local F5 different to global carriers
++
++- CONFIRMED. The local packet proves two reduced smooth source-different
++  branches at the unique boundary point, transverse to each other, with
++  contact vectors `(1,1,1)` and `(1,2,2)` against `(L,S,T)`. The weight-three
++  branch is the transverse one and the weight-five branch is tangent to the two
++  `(1,1)` components.
++- CONFIRMED. If the two local germs lay on one global prime, they would give
++  two distinct normalization points over the connected infinity tree, producing
++  a cycle. Thus any survivor has distinct global primes `D_3,D_5`. Since the
++  local Cartier equation is reduced along both germs, their global Cartier
++  coefficients are one.
++- CONFIRMED. These two carriers exhaust `R_pi.(L,S,T)=(2,3,3)`. Every other
++  effective component has nonnegative intersection with each `H_i`, hence zero
++  intersection with each `H_i`, hence `A.C=0`, so it is one of the `Z_I`.
++- CONFIRMED. If `x=F.D_3` and `y=F.D_5`, then `x,y>0`: a curve with
++  `F`-degree zero lies in a conic fibre and has `A`-degree one or two, not
++  three or five. Since `R_pi.F=4`, the remaining A-null Cartier multiplicity
++  is `N=4-x-y`, so the only partitions are `2`, `1+1`, `1`, or none, exactly
++  as enumerated.
++- CONFIRMED_WITH_CORRECTION. `D_3.D_5=1` is a necessary survivor condition:
++  the local transverse boundary intersection already contributes one, and any
++  further intersection would independently create a second path and violate
++  the rational-forest hypothesis. The enumeration should explicitly say it is
++  performed after imposing this necessary survivor condition.
++
++## 6. Equations and enumeration
++
++- CONFIRMED. For `j=2,...,9`,
++  `D_3=xS+(2x+1)F-(x-1)E_1-sum a_jE_j` and
++  `D_5=yS+(2y+2)F-(y-1)E_1-sum b_jE_j`. Here
++  `a_j=D_3.E_j>=0`, `b_j=D_5.E_j>=0`, and integrality is Picard-lattice
++  integrality.
++- CONFIRMED. The contact vector with `T` gives
++  `sum a_j=4x` and `sum b_j=4y`. Total class equality gives
++  `a_j+b_j+c_j=2`, so `0<=a_j,b_j<=2` and no unbounded coefficient is hidden.
++- CONFIRMED. With `K_X=-A+F`, rational normalization gives
++  `delta_3=(D_3^2+x-1)/2` and
++  `delta_5=(D_5^2+y-3)/2`, both integral and nonnegative. The square formulas
++  and `D_3.D_5=1` give exactly main equations (4.7).
++- CONFIRMED. I replayed the enumeration over all labelled four-subsets of
++  `{2,...,9}`. Labelled counts are: doubled `Z`, 70 solutions, one permutation
++  orbit; two distinct simple `Z`s with the required one-point subset
++  intersection, zero; single `Z` rows `(1,2)` and `(2,1)`, zero; no-`Z` rows
++  `(1,3),(2,2),(3,1)`, zero. This does not assume smoothness or general
++  position beyond the rational-normalization delta test and the promoted
++  forest condition.
++- CONFIRMED. The unique orbit is
++  `D_3=S+3F-sum_{j in J}E_j`,
++  `D_5=S+4F-sum_{j in J}E_j`,
++  `Z=S+2F-E_1-sum_{i in I}E_i`, with `J` the complement of `I` in
++  `{2,...,9}`. Then
++  `D_3^2=0`, `D_5^2=2`, `Z^2=-3`,
++  `D_3.D_5=1`, `D_3.Z=3`, `D_5.Z=4`, and
++  `R_pi=D_3+D_5+2Z`.
++
++## 7. The two F5 contradictions
++
++- CONFIRMED. The class relation is exact:
++  `D_3+Z=2S+5F-E_1-sum_{2}^{9}E_i=A=L+S+T=H` in `Pic(X)`. Restricting to
++  `Y=X-H` gives `[D_3]+[Z]=0` in `Cl(Y)`. The charged unit theorem gives
++  `O(U)^*=O(Y)^*=C^*`, so the localization boundary map from the free group on
++  reduced ramification primes into `Cl(Y)` is injective. The nonzero relation
++  `[D_3]+[Z]=0` is therefore impossible. The Cartier coefficient `2` of `Z`
++  in `R_pi` is irrelevant because the localization injection is on reduced
++  primes.
++- CONFIRMED. Independently, the graph contradiction survives every embedded
++  resolution. The boundary point gives a path from `D_3` to `D_5` through the
++  resolved infinity/different local configuration. Since `Z.H=0` and
++  `D_3.Z,D_5.Z>0`, there is an affine interior path from `D_3` to `D_5` through
++  `Z`. These paths are distinct. Blowups only subdivide them or add pendant
++  exceptional vertices, so the cycle cannot disappear.
++
++## 8. Maximum safe theorem
++
++CONFIRM_WITH_CORRECTIONS. The safe promoted theorem is:
++
++For a smooth irreducible incidence surface `X subset P2 x P1` of class
++`2A+3B`, with `pi:X->P2` generically finite and finite near reduced squarefree
++infinity `H`, under the promoted dominant `A2 -> U` first-leg hypotheses whose
++resolved boundary is a rational forest and whose unit consequence is
++`O(U)^*=C^*`, the reduced rational-forest infinity types
++`F1,F2,F4,F5,F7` are impossible. Types `F3,F6` are outside this theorem because
++they are projective-basepoint/nonfinite near infinity types, and `F8,F9` have
++no rational-tree refinement.
++
++This is not a general map-existence or nonexistence theorem. It does not cover
++nonreduced infinity, singular incidence surfaces, affine coefficient common
++zeros, target or fibre degree drops, basis minimization, general quadratic
++closure, cubic closure, primitivity, counterexamples, or JC2.
++
++## Repairs before promotion
++
++1. Fix or annotate the frozen-basis metadata mismatch in the main packet.
++2. State `D_3.D_5=1` as a necessary survivor condition; if it fails, the graph
++   contradiction has already occurred.
++3. In the F5 section, keep the labels explicit: `D_3` is the weight-three
++   transverse branch and `D_5` is the weight-five tangent branch. Do not refer
++   to tangent lines as branches.
++4. Either delete the unused "no three pairwise one-intersecting" sentence or
++   add its one-line inclusion-exclusion proof.
++5. In the final theorem, repeat all scope exclusions listed above. In
++   particular, do not state projective basepoint/nonfinite `F3,F6`,
++   nonreduced infinity, singular incidence, affine coefficient common zeros,
++   degree drops, basis minimization, general quadratic closure, or JC2 closure.
++
++Cheapest next check: no CAS or larger lattice run is needed. The decisive next
++action is a metadata/scope patch to the producer followed by a line-level
++review that the promoted theorem text contains exactly the hypotheses in
++Section 8.
++
++No new exit-price assertion is made in this review.
++<!-- BODY-END -->
+
+codex
+The report file has been added. I spotted one verdict label that should use the prompt’s exact vocabulary, so I’m doing a narrow cleanup and then checking the size/end marker.
+exec
+/bin/zsh -lc 'rg -n "CONFIRMED_WITH|CONFIRM_WITH|CONFIRMED|GAP|REFUTED|BODY-END" xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+3:Verdict: CONFIRM_WITH_CORRECTIONS.
+13:- CONFIRM_WITH_CORRECTIONS. Current repository HEAD is
+41:- CONFIRMED. In `P2 x P1`, with `X ~ 2A+3B`,
+46:- CONFIRMED. `O_X(2A+B)` is the restriction of `O(2,1)`, hence ample. The
+49:- CONFIRMED. The Hodge-index proof of connected support is valid for
+54:- CONFIRMED. The no-infinity-component bridge is supplied by the attachment
+63:- CONFIRMED. The promoted attachment packet gives at least two distinct
+67:- CONFIRMED. Connectedness of `Supp(R_pi)` is enough to replace the older
+82:- CONFIRMED. The conic-bundle structure has nine simple reducible fibres and
+86:- CONFIRMED. In F5,
+94:- CONFIRMED. If an irreducible curve `Z` has `A.Z=0`, then `pi(Z)` is a
+100:- CONFIRMED. `Z_I.Z_J=1-|I cap J|`. Distinct effective A-null curves are
+108:- CONFIRMED. The local packet proves two reduced smooth source-different
+113:- CONFIRMED. If the two local germs lay on one global prime, they would give
+118:- CONFIRMED. These two carriers exhaust `R_pi.(L,S,T)=(2,3,3)`. Every other
+121:- CONFIRMED. If `x=F.D_3` and `y=F.D_5`, then `x,y>0`: a curve with
+126:- CONFIRMED_WITH_CORRECTION. `D_3.D_5=1` is a necessary survivor condition:
+134:- CONFIRMED. For `j=2,...,9`,
+139:- CONFIRMED. The contact vector with `T` gives
+142:- CONFIRMED. With `K_X=-A+F`, rational normalization gives
+146:- CONFIRMED. I replayed the enumeration over all labelled four-subsets of
+153:- CONFIRMED. The unique orbit is
+164:- CONFIRMED. The class relation is exact:
+172:- CONFIRMED. Independently, the graph contradiction survives every embedded
+181:CONFIRM_WITH_CORRECTIONS. The safe promoted theorem is:
+218:<!-- BODY-END -->
+
+diff --git a/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..4c982641d5127aa93f05cc4d75f1a64a8764b22d
+--- /dev/null
++++ b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+@@ -0,0 +1,218 @@
++# Hostile review: quadratic ramification connectedness and F5 lattice closure
++
++Verdict: CONFIRM_WITH_CORRECTIONS.
++
++I confirm the mathematical closure of the stated smooth projectively finite
++quadratic, reduced squarefree infinity, dominant-A2-first-leg, rational-forest
++scope, charging the four integration/support packets only inside their stated
++scopes. The corrections are custody/scope and wording repairs, not mathematical
++failures of the connectedness or F5 lattice argument.
++
++## 1. Custody and scope
++
++- CONFIRM_WITH_CORRECTIONS. Current repository HEAD is
++  `78da50bd31b3f7fd8d07ed8fc5ddbbf0ad4290d1`, matching the prompt basis. The
++  five full-file hashes and body hashes checked against the prompt and embedded
++  seals. However, the main packet itself records frozen basis
++  `1efd7a76538e3fcdf51b999563262afc40d58947` at
++  `xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md:5`
++  and in its seal at line 414. Promotion should either correct that metadata or
++  state explicitly that this is a sealed packet produced on `1efd...` and
++  reviewed at `78da...`.
++- The producer invokes the bidegree rational-forest classification within
++  reduced squarefree infinity only, and keeps `F8,F9` out because they have no
++  rational-tree refinement. This matches
++  `xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md:145-158`.
++- It invokes the attachment packet within smooth, reduced, projectively finite
++  quadratic scope only. The no-H-component, exact boundary critical set,
++  nonemptiness, and unit/localization injection are exactly the promoted
++  statements at
++  `xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md:86-108`
++  and `:149-160`.
++- It invokes the F5 local different packet only at the smooth F5 local triple
++  point and only for the source different split `8=5+3`. This matches
++  `xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md:160-190`.
++- It invokes the class-group rank no-go packet only for Picard rank eleven and
++  for rejecting the old raw rank shortcut. This matches
++  `xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md:117-153`.
++
++## 2. Ramification class and connectedness
++
++- CONFIRMED. In `P2 x P1`, with `X ~ 2A+3B`,
++  `A^2=3`, `A.B=2`, `B^2=0` on `X`. Adjunction gives
++  `K_X=(-3A-2B+2A+3B)|X=-A+B`. Since `pi^*K_P2=-3A`,
++  the relative ramification class is
++  `R_pi=K_X-pi^*K_P2=2A+B`, as stated at main lines 63-68.
++- CONFIRMED. `O_X(2A+B)` is the restriction of `O(2,1)`, hence ample. The
++  Jacobian determinant is nonzero because `pi` is generically finite in
++  characteristic zero, so `R_pi` is a nonzero effective ample Cartier divisor.
++- CONFIRMED. The Hodge-index proof of connected support is valid for
++  nonreduced Cartier divisors and reducible support. If
++  `D=D_1+D_2` with nonzero effective pieces and disjoint supports, ampleness
++  gives `D.D_i>0`, hence `D_i^2>0`, and `D_1.D_2=0`; this gives two orthogonal
++  positive directions, impossible on a smooth projective surface.
++- CONFIRMED. The no-infinity-component bridge is supplied by the attachment
++  integration: reduced `H`, characteristic zero, and finiteness near `H`
++  exclude a critical Cartier component contained in `H`. Therefore every
++  component of `R_pi` has affine generic point, and the projective support is
++  the closure of reduced affine ramification plus boundary intersection
++  points. There is no loophole from isolated boundary points.
++
++## 3. Eliminating F1, F2, F4, F7
++
++- CONFIRMED. The promoted attachment packet gives at least two distinct
++  physical boundary critical points in `F1,F2,F4,F7`, and the exact critical
++  set says those points are precisely attachments of the projective
++  ramification support.
++- CONFIRMED. Connectedness of `Supp(R_pi)` is enough to replace the older
++  irreducibility hypothesis. In any resolved full boundary forest, the total
++  transform of connected `H` is a tree and the total transform of connected
++  `Supp(R_pi)` is a tree. Two distinct physical attachment points give two
++  disjoint local joining paths between those trees; contracting the two trees
++  gives two parallel edges, hence first Betti number at least one.
++- Tangencies, embedded exceptional chains, singular ramification components,
++  and multiple edges do not repair this. Blowups subdivide edges or add
++  pendant vertices; they do not remove the two independent connections.
++- Correction: phrase this as "the connected reduced support of the Cartier
++  ramification divisor" rather than "connected total transforms belonging to
++  `Supp(R_pi)`" when using graph language. Multiplicities play no role.
++
++## 4. F5 conic-bundle lattice
++
++- CONFIRMED. The conic-bundle structure has nine simple reducible fibres and
++  `rho(X)=11`, as in the charged rank packet. With `F=B`, a section `S`, and
++  fibre components `E_i` disjoint from `S`, the basis has
++  `S^2=-2`, `S.F=1`, `E_i^2=-1`, and omitted pairings zero.
++- CONFIRMED. In F5,
++  `L=F-E_1`,
++  `A=2S+5F-sum_{1}^{9}E_i`,
++  `T=S+4F-sum_{2}^{9}E_i`,
++  `K_X=-A+F=-2S-4F+sum E_i`, and
++  `R_pi=2A+F=4S+11F-2sum E_i`. These recover
++  `L^2=-1`, `S^2=T^2=-2`, `L.S=L.T=1`, `S.T=2`, and
++  `R_pi.(L,S,T)=(2,3,3)`.
++- CONFIRMED. If an irreducible curve `Z` has `A.Z=0`, then `pi(Z)` is a
++  point and the ambient embedding forces `Z={point} x P1`; hence `F.Z=1`,
++  `Z` is a smooth rational section of `q`, and adjunction gives `Z^2=-3`.
++  Solving `Z.L=Z.S=Z.T=0` and `Z^2=-3` gives exactly
++  `Z_I=S+2F-E_1-sum_{i in I}E_i` with
++  `I subset {2,...,9}`, `|I|=4`.
++- CONFIRMED. `Z_I.Z_J=1-|I cap J|`. Distinct effective A-null curves are
++  different vertical copies `{point} x P1`, hence disjoint, so coexistence
++  requires `|I cap J|=1`. The "no three" claim is true but unused here because
++  the later multiplicity bound gives total A-null multiplicity at most two.
++  It may be deleted for economy.
++
++## 5. Local F5 different to global carriers
++
++- CONFIRMED. The local packet proves two reduced smooth source-different
++  branches at the unique boundary point, transverse to each other, with
++  contact vectors `(1,1,1)` and `(1,2,2)` against `(L,S,T)`. The weight-three
++  branch is the transverse one and the weight-five branch is tangent to the two
++  `(1,1)` components.
++- CONFIRMED. If the two local germs lay on one global prime, they would give
++  two distinct normalization points over the connected infinity tree, producing
++  a cycle. Thus any survivor has distinct global primes `D_3,D_5`. Since the
++  local Cartier equation is reduced along both germs, their global Cartier
++  coefficients are one.
++- CONFIRMED. These two carriers exhaust `R_pi.(L,S,T)=(2,3,3)`. Every other
++  effective component has nonnegative intersection with each `H_i`, hence zero
++  intersection with each `H_i`, hence `A.C=0`, so it is one of the `Z_I`.
++- CONFIRMED. If `x=F.D_3` and `y=F.D_5`, then `x,y>0`: a curve with
++  `F`-degree zero lies in a conic fibre and has `A`-degree one or two, not
++  three or five. Since `R_pi.F=4`, the remaining A-null Cartier multiplicity
++  is `N=4-x-y`, so the only partitions are `2`, `1+1`, `1`, or none, exactly
++  as enumerated.
++- CONFIRMED_WITH_CORRECTION. `D_3.D_5=1` is a necessary survivor condition:
++  the local transverse boundary intersection already contributes one, and any
++  further intersection would independently create a second path and violate
++  the rational-forest hypothesis. The enumeration should explicitly say it is
++  performed after imposing this necessary survivor condition.
++
++## 6. Equations and enumeration
++
++- CONFIRMED. For `j=2,...,9`,
++  `D_3=xS+(2x+1)F-(x-1)E_1-sum a_jE_j` and
++  `D_5=yS+(2y+2)F-(y-1)E_1-sum b_jE_j`. Here
++  `a_j=D_3.E_j>=0`, `b_j=D_5.E_j>=0`, and integrality is Picard-lattice
++  integrality.
++- CONFIRMED. The contact vector with `T` gives
++  `sum a_j=4x` and `sum b_j=4y`. Total class equality gives
++  `a_j+b_j+c_j=2`, so `0<=a_j,b_j<=2` and no unbounded coefficient is hidden.
++- CONFIRMED. With `K_X=-A+F`, rational normalization gives
++  `delta_3=(D_3^2+x-1)/2` and
++  `delta_5=(D_5^2+y-3)/2`, both integral and nonnegative. The square formulas
++  and `D_3.D_5=1` give exactly main equations (4.7).
++- CONFIRMED. I replayed the enumeration over all labelled four-subsets of
++  `{2,...,9}`. Labelled counts are: doubled `Z`, 70 solutions, one permutation
++  orbit; two distinct simple `Z`s with the required one-point subset
++  intersection, zero; single `Z` rows `(1,2)` and `(2,1)`, zero; no-`Z` rows
++  `(1,3),(2,2),(3,1)`, zero. This does not assume smoothness or general
++  position beyond the rational-normalization delta test and the promoted
++  forest condition.
++- CONFIRMED. The unique orbit is
++  `D_3=S+3F-sum_{j in J}E_j`,
++  `D_5=S+4F-sum_{j in J}E_j`,
++  `Z=S+2F-E_1-sum_{i in I}E_i`, with `J` the complement of `I` in
++  `{2,...,9}`. Then
++  `D_3^2=0`, `D_5^2=2`, `Z^2=-3`,
++  `D_3.D_5=1`, `D_3.Z=3`, `D_5.Z=4`, and
++  `R_pi=D_3+D_5+2Z`.
++
++## 7. The two F5 contradictions
++
++- CONFIRMED. The class relation is exact:
++  `D_3+Z=2S+5F-E_1-sum_{2}^{9}E_i=A=L+S+T=H` in `Pic(X)`. Restricting to
++  `Y=X-H` gives `[D_3]+[Z]=0` in `Cl(Y)`. The charged unit theorem gives
++  `O(U)^*=O(Y)^*=C^*`, so the localization boundary map from the free group on
++  reduced ramification primes into `Cl(Y)` is injective. The nonzero relation
++  `[D_3]+[Z]=0` is therefore impossible. The Cartier coefficient `2` of `Z`
++  in `R_pi` is irrelevant because the localization injection is on reduced
++  primes.
++- CONFIRMED. Independently, the graph contradiction survives every embedded
++  resolution. The boundary point gives a path from `D_3` to `D_5` through the
++  resolved infinity/different local configuration. Since `Z.H=0` and
++  `D_3.Z,D_5.Z>0`, there is an affine interior path from `D_3` to `D_5` through
++  `Z`. These paths are distinct. Blowups only subdivide them or add pendant
++  exceptional vertices, so the cycle cannot disappear.
++
++## 8. Maximum safe theorem
++
++CONFIRM_WITH_CORRECTIONS. The safe promoted theorem is:
++
++For a smooth irreducible incidence surface `X subset P2 x P1` of class
++`2A+3B`, with `pi:X->P2` generically finite and finite near reduced squarefree
++infinity `H`, under the promoted dominant `A2 -> U` first-leg hypotheses whose
++resolved boundary is a rational forest and whose unit consequence is
++`O(U)^*=C^*`, the reduced rational-forest infinity types
++`F1,F2,F4,F5,F7` are impossible. Types `F3,F6` are outside this theorem because
++they are projective-basepoint/nonfinite near infinity types, and `F8,F9` have
++no rational-tree refinement.
++
++This is not a general map-existence or nonexistence theorem. It does not cover
++nonreduced infinity, singular incidence surfaces, affine coefficient common
++zeros, target or fibre degree drops, basis minimization, general quadratic
++closure, cubic closure, primitivity, counterexamples, or JC2.
++
++## Repairs before promotion
++
++1. Fix or annotate the frozen-basis metadata mismatch in the main packet.
++2. State `D_3.D_5=1` as a necessary survivor condition; if it fails, the graph
++   contradiction has already occurred.
++3. In the F5 section, keep the labels explicit: `D_3` is the weight-three
++   transverse branch and `D_5` is the weight-five tangent branch. Do not refer
++   to tangent lines as branches.
++4. Either delete the unused "no three pairwise one-intersecting" sentence or
++   add its one-line inclusion-exclusion proof.
++5. In the final theorem, repeat all scope exclusions listed above. In
++   particular, do not state projective basepoint/nonfinite `F3,F6`,
++   nonreduced infinity, singular incidence, affine coefficient common zeros,
++   degree drops, basis minimization, general quadratic closure, or JC2 closure.
++
++Cheapest next check: no CAS or larger lattice run is needed. The decisive next
++action is a metadata/scope patch to the producer followed by a line-level
++review that the promoted theorem text contains exactly the hypotheses in
++Section 8.
++
++No new exit-price assertion is made in this review.
++<!-- BODY-END -->
+
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+diff --git a/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..6aa2c8b9ac5ee9cd7133fddb7ea861c18ec3c8b9
+--- /dev/null
++++ b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+@@ -0,0 +1,218 @@
++# Hostile review: quadratic ramification connectedness and F5 lattice closure
++
++Verdict: CONFIRM_WITH_CORRECTIONS.
++
++I confirm the mathematical closure of the stated smooth projectively finite
++quadratic, reduced squarefree infinity, dominant-A2-first-leg, rational-forest
++scope, charging the four integration/support packets only inside their stated
++scopes. The corrections are custody/scope and wording repairs, not mathematical
++failures of the connectedness or F5 lattice argument.
++
++## 1. Custody and scope
++
++- CONFIRM_WITH_CORRECTIONS. Current repository HEAD is
++  `78da50bd31b3f7fd8d07ed8fc5ddbbf0ad4290d1`, matching the prompt basis. The
++  five full-file hashes and body hashes checked against the prompt and embedded
++  seals. However, the main packet itself records frozen basis
++  `1efd7a76538e3fcdf51b999563262afc40d58947` at
++  `xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md:5`
++  and in its seal at line 414. Promotion should either correct that metadata or
++  state explicitly that this is a sealed packet produced on `1efd...` and
++  reviewed at `78da...`.
++- The producer invokes the bidegree rational-forest classification within
++  reduced squarefree infinity only, and keeps `F8,F9` out because they have no
++  rational-tree refinement. This matches
++  `xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md:145-158`.
++- It invokes the attachment packet within smooth, reduced, projectively finite
++  quadratic scope only. The no-H-component, exact boundary critical set,
++  nonemptiness, and unit/localization injection are exactly the promoted
++  statements at
++  `xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md:86-108`
++  and `:149-160`.
++- It invokes the F5 local different packet only at the smooth F5 local triple
++  point and only for the source different split `8=5+3`. This matches
++  `xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md:160-190`.
++- It invokes the class-group rank no-go packet only for Picard rank eleven and
++  for rejecting the old raw rank shortcut. This matches
++  `xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md:117-153`.
++
++## 2. Ramification class and connectedness
++
++- CONFIRMED. In `P2 x P1`, with `X ~ 2A+3B`,
++  `A^2=3`, `A.B=2`, `B^2=0` on `X`. Adjunction gives
++  `K_X=(-3A-2B+2A+3B)|X=-A+B`. Since `pi^*K_P2=-3A`,
++  the relative ramification class is
++  `R_pi=K_X-pi^*K_P2=2A+B`, as stated at main lines 63-68.
++- CONFIRMED. `O_X(2A+B)` is the restriction of `O(2,1)`, hence ample. The
++  Jacobian determinant is nonzero because `pi` is generically finite in
++  characteristic zero, so `R_pi` is a nonzero effective ample Cartier divisor.
++- CONFIRMED. The Hodge-index proof of connected support is valid for
++  nonreduced Cartier divisors and reducible support. If
++  `D=D_1+D_2` with nonzero effective pieces and disjoint supports, ampleness
++  gives `D.D_i>0`, hence `D_i^2>0`, and `D_1.D_2=0`; this gives two orthogonal
++  positive directions, impossible on a smooth projective surface.
++- CONFIRMED. The no-infinity-component bridge is supplied by the attachment
++  integration: reduced `H`, characteristic zero, and finiteness near `H`
++  exclude a critical Cartier component contained in `H`. Therefore every
++  component of `R_pi` has affine generic point, and the projective support is
++  the closure of reduced affine ramification plus boundary intersection
++  points. There is no loophole from isolated boundary points.
++
++## 3. Eliminating F1, F2, F4, F7
++
++- CONFIRMED. The promoted attachment packet gives at least two distinct
++  physical boundary critical points in `F1,F2,F4,F7`, and the exact critical
++  set says those points are precisely attachments of the projective
++  ramification support.
++- CONFIRMED. Connectedness of `Supp(R_pi)` is enough to replace the older
++  irreducibility hypothesis. In any resolved full boundary forest, the total
++  transform of connected `H` is a tree and the total transform of connected
++  `Supp(R_pi)` is a tree. Two distinct physical attachment points give two
++  disjoint local joining paths between those trees; contracting the two trees
++  gives two parallel edges, hence first Betti number at least one.
++- Tangencies, embedded exceptional chains, singular ramification components,
++  and multiple edges do not repair this. Blowups subdivide edges or add
++  pendant vertices; they do not remove the two independent connections.
++- Correction: phrase this as "the connected reduced support of the Cartier
++  ramification divisor" rather than "connected total transforms belonging to
++  `Supp(R_pi)`" when using graph language. Multiplicities play no role.
++
++## 4. F5 conic-bundle lattice
++
++- CONFIRMED. The conic-bundle structure has nine simple reducible fibres and
++  `rho(X)=11`, as in the charged rank packet. With `F=B`, a section `S`, and
++  fibre components `E_i` disjoint from `S`, the basis has
++  `S^2=-2`, `S.F=1`, `E_i^2=-1`, and omitted pairings zero.
++- CONFIRMED. In F5,
++  `L=F-E_1`,
++  `A=2S+5F-sum_{1}^{9}E_i`,
++  `T=S+4F-sum_{2}^{9}E_i`,
++  `K_X=-A+F=-2S-4F+sum E_i`, and
++  `R_pi=2A+F=4S+11F-2sum E_i`. These recover
++  `L^2=-1`, `S^2=T^2=-2`, `L.S=L.T=1`, `S.T=2`, and
++  `R_pi.(L,S,T)=(2,3,3)`.
++- CONFIRMED. If an irreducible curve `Z` has `A.Z=0`, then `pi(Z)` is a
++  point and the ambient embedding forces `Z={point} x P1`; hence `F.Z=1`,
++  `Z` is a smooth rational section of `q`, and adjunction gives `Z^2=-3`.
++  Solving `Z.L=Z.S=Z.T=0` and `Z^2=-3` gives exactly
++  `Z_I=S+2F-E_1-sum_{i in I}E_i` with
++  `I subset {2,...,9}`, `|I|=4`.
++- CONFIRMED. `Z_I.Z_J=1-|I cap J|`. Distinct effective A-null curves are
++  different vertical copies `{point} x P1`, hence disjoint, so coexistence
++  requires `|I cap J|=1`. The "no three" claim is true but unused here because
++  the later multiplicity bound gives total A-null multiplicity at most two.
++  It may be deleted for economy.
++
++## 5. Local F5 different to global carriers
++
++- CONFIRMED. The local packet proves two reduced smooth source-different
++  branches at the unique boundary point, transverse to each other, with
++  contact vectors `(1,1,1)` and `(1,2,2)` against `(L,S,T)`. The weight-three
++  branch is the transverse one and the weight-five branch is tangent to the two
++  `(1,1)` components.
++- CONFIRMED. If the two local germs lay on one global prime, they would give
++  two distinct normalization points over the connected infinity tree, producing
++  a cycle. Thus any survivor has distinct global primes `D_3,D_5`. Since the
++  local Cartier equation is reduced along both germs, their global Cartier
++  coefficients are one.
++- CONFIRMED. These two carriers exhaust `R_pi.(L,S,T)=(2,3,3)`. Every other
++  effective component has nonnegative intersection with each `H_i`, hence zero
++  intersection with each `H_i`, hence `A.C=0`, so it is one of the `Z_I`.
++- CONFIRMED. If `x=F.D_3` and `y=F.D_5`, then `x,y>0`: a curve with
++  `F`-degree zero lies in a conic fibre and has `A`-degree one or two, not
++  three or five. Since `R_pi.F=4`, the remaining A-null Cartier multiplicity
++  is `N=4-x-y`, so the only partitions are `2`, `1+1`, `1`, or none, exactly
++  as enumerated.
++- CONFIRM_WITH_CORRECTIONS. `D_3.D_5=1` is a necessary survivor condition:
++  the local transverse boundary intersection already contributes one, and any
++  further intersection would independently create a second path and violate
++  the rational-forest hypothesis. The enumeration should explicitly say it is
++  performed after imposing this necessary survivor condition.
++
++## 6. Equations and enumeration
++
++- CONFIRMED. For `j=2,...,9`,
++  `D_3=xS+(2x+1)F-(x-1)E_1-sum a_jE_j` and
++  `D_5=yS+(2y+2)F-(y-1)E_1-sum b_jE_j`. Here
++  `a_j=D_3.E_j>=0`, `b_j=D_5.E_j>=0`, and integrality is Picard-lattice
++  integrality.
++- CONFIRMED. The contact vector with `T` gives
++  `sum a_j=4x` and `sum b_j=4y`. Total class equality gives
++  `a_j+b_j+c_j=2`, so `0<=a_j,b_j<=2` and no unbounded coefficient is hidden.
++- CONFIRMED. With `K_X=-A+F`, rational normalization gives
++  `delta_3=(D_3^2+x-1)/2` and
++  `delta_5=(D_5^2+y-3)/2`, both integral and nonnegative. The square formulas
++  and `D_3.D_5=1` give exactly main equations (4.7).
++- CONFIRMED. I replayed the enumeration over all labelled four-subsets of
++  `{2,...,9}`. Labelled counts are: doubled `Z`, 70 solutions, one permutation
++  orbit; two distinct simple `Z`s with the required one-point subset
++  intersection, zero; single `Z` rows `(1,2)` and `(2,1)`, zero; no-`Z` rows
++  `(1,3),(2,2),(3,1)`, zero. This does not assume smoothness or general
++  position beyond the rational-normalization delta test and the promoted
++  forest condition.
++- CONFIRMED. The unique orbit is
++  `D_3=S+3F-sum_{j in J}E_j`,
++  `D_5=S+4F-sum_{j in J}E_j`,
++  `Z=S+2F-E_1-sum_{i in I}E_i`, with `J` the complement of `I` in
++  `{2,...,9}`. Then
++  `D_3^2=0`, `D_5^2=2`, `Z^2=-3`,
++  `D_3.D_5=1`, `D_3.Z=3`, `D_5.Z=4`, and
++  `R_pi=D_3+D_5+2Z`.
++
++## 7. The two F5 contradictions
++
++- CONFIRMED. The class relation is exact:
++  `D_3+Z=2S+5F-E_1-sum_{2}^{9}E_i=A=L+S+T=H` in `Pic(X)`. Restricting to
++  `Y=X-H` gives `[D_3]+[Z]=0` in `Cl(Y)`. The charged unit theorem gives
++  `O(U)^*=O(Y)^*=C^*`, so the localization boundary map from the free group on
++  reduced ramification primes into `Cl(Y)` is injective. The nonzero relation
++  `[D_3]+[Z]=0` is therefore impossible. The Cartier coefficient `2` of `Z`
++  in `R_pi` is irrelevant because the localization injection is on reduced
++  primes.
++- CONFIRMED. Independently, the graph contradiction survives every embedded
++  resolution. The boundary point gives a path from `D_3` to `D_5` through the
++  resolved infinity/different local configuration. Since `Z.H=0` and
++  `D_3.Z,D_5.Z>0`, there is an affine interior path from `D_3` to `D_5` through
++  `Z`. These paths are distinct. Blowups only subdivide them or add pendant
++  exceptional vertices, so the cycle cannot disappear.
++
++## 8. Maximum safe theorem
++
++CONFIRM_WITH_CORRECTIONS. The safe promoted theorem is:
++
++For a smooth irreducible incidence surface `X subset P2 x P1` of class
++`2A+3B`, with `pi:X->P2` generically finite and finite near reduced squarefree
++infinity `H`, under the promoted dominant `A2 -> U` first-leg hypotheses whose
++resolved boundary is a rational forest and whose unit consequence is
++`O(U)^*=C^*`, the reduced rational-forest infinity types
++`F1,F2,F4,F5,F7` are impossible. Types `F3,F6` are outside this theorem because
++they are projective-basepoint/nonfinite near infinity types, and `F8,F9` have
++no rational-tree refinement.
++
++This is not a general map-existence or nonexistence theorem. It does not cover
++nonreduced infinity, singular incidence surfaces, affine coefficient common
++zeros, target or fibre degree drops, basis minimization, general quadratic
++closure, cubic closure, primitivity, counterexamples, or JC2.
++
++## Repairs before promotion
++
++1. Fix or annotate the frozen-basis metadata mismatch in the main packet.
++2. State `D_3.D_5=1` as a necessary survivor condition; if it fails, the graph
++   contradiction has already occurred.
++3. In the F5 section, keep the labels explicit: `D_3` is the weight-three
++   transverse branch and `D_5` is the weight-five tangent branch. Do not refer
++   to tangent lines as branches.
++4. Either delete the unused "no three pairwise one-intersecting" sentence or
++   add its one-line inclusion-exclusion proof.
++5. In the final theorem, repeat all scope exclusions listed above. In
++   particular, do not state projective basepoint/nonfinite `F3,F6`,
++   nonreduced infinity, singular incidence, affine coefficient common zeros,
++   degree drops, basis minimization, general quadratic closure, or JC2 closure.
++
++Cheapest next check: no CAS or larger lattice run is needed. The decisive next
++action is a metadata/scope patch to the producer followed by a line-level
++review that the promoted theorem text contains exactly the hypotheses in
++Section 8.
++
++No new exit-price assertion is made in this review.
++<!-- BODY-END -->
+
+diff --git a/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..6aa2c8b9ac5ee9cd7133fddb7ea861c18ec3c8b9
+--- /dev/null
++++ b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+@@ -0,0 +1,218 @@
++# Hostile review: quadratic ramification connectedness and F5 lattice closure
++
++Verdict: CONFIRM_WITH_CORRECTIONS.
++
++I confirm the mathematical closure of the stated smooth projectively finite
++quadratic, reduced squarefree infinity, dominant-A2-first-leg, rational-forest
++scope, charging the four integration/support packets only inside their stated
++scopes. The corrections are custody/scope and wording repairs, not mathematical
++failures of the connectedness or F5 lattice argument.
++
++## 1. Custody and scope
++
++- CONFIRM_WITH_CORRECTIONS. Current repository HEAD is
++  `78da50bd31b3f7fd8d07ed8fc5ddbbf0ad4290d1`, matching the prompt basis. The
++  five full-file hashes and body hashes checked against the prompt and embedded
++  seals. However, the main packet itself records frozen basis
++  `1efd7a76538e3fcdf51b999563262afc40d58947` at
++  `xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md:5`
++  and in its seal at line 414. Promotion should either correct that metadata or
++  state explicitly that this is a sealed packet produced on `1efd...` and
++  reviewed at `78da...`.
++- The producer invokes the bidegree rational-forest classification within
++  reduced squarefree infinity only, and keeps `F8,F9` out because they have no
++  rational-tree refinement. This matches
++  `xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md:145-158`.
++- It invokes the attachment packet within smooth, reduced, projectively finite
++  quadratic scope only. The no-H-component, exact boundary critical set,
++  nonemptiness, and unit/localization injection are exactly the promoted
++  statements at
++  `xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md:86-108`
++  and `:149-160`.
++- It invokes the F5 local different packet only at the smooth F5 local triple
++  point and only for the source different split `8=5+3`. This matches
++  `xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md:160-190`.
++- It invokes the class-group rank no-go packet only for Picard rank eleven and
++  for rejecting the old raw rank shortcut. This matches
++  `xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md:117-153`.
++
++## 2. Ramification class and connectedness
++
++- CONFIRMED. In `P2 x P1`, with `X ~ 2A+3B`,
++  `A^2=3`, `A.B=2`, `B^2=0` on `X`. Adjunction gives
++  `K_X=(-3A-2B+2A+3B)|X=-A+B`. Since `pi^*K_P2=-3A`,
++  the relative ramification class is
++  `R_pi=K_X-pi^*K_P2=2A+B`, as stated at main lines 63-68.
++- CONFIRMED. `O_X(2A+B)` is the restriction of `O(2,1)`, hence ample. The
++  Jacobian determinant is nonzero because `pi` is generically finite in
++  characteristic zero, so `R_pi` is a nonzero effective ample Cartier divisor.
++- CONFIRMED. The Hodge-index proof of connected support is valid for
++  nonreduced Cartier divisors and reducible support. If
++  `D=D_1+D_2` with nonzero effective pieces and disjoint supports, ampleness
++  gives `D.D_i>0`, hence `D_i^2>0`, and `D_1.D_2=0`; this gives two orthogonal
++  positive directions, impossible on a smooth projective surface.
++- CONFIRMED. The no-infinity-component bridge is supplied by the attachment
++  integration: reduced `H`, characteristic zero, and finiteness near `H`
++  exclude a critical Cartier component contained in `H`. Therefore every
++  component of `R_pi` has affine generic point, and the projective support is
++  the closure of reduced affine ramification plus boundary intersection
++  points. There is no loophole from isolated boundary points.
++
++## 3. Eliminating F1, F2, F4, F7
++
++- CONFIRMED. The promoted attachment packet gives at least two distinct
++  physical boundary critical points in `F1,F2,F4,F7`, and the exact critical
++  set says those points are precisely attachments of the projective
++  ramification support.
++- CONFIRMED. Connectedness of `Supp(R_pi)` is enough to replace the older
++  irreducibility hypothesis. In any resolved full boundary forest, the total
++  transform of connected `H` is a tree and the total transform of connected
++  `Supp(R_pi)` is a tree. Two distinct physical attachment points give two
++  disjoint local joining paths between those trees; contracting the two trees
++  gives two parallel edges, hence first Betti number at least one.
++- Tangencies, embedded exceptional chains, singular ramification components,
++  and multiple edges do not repair this. Blowups subdivide edges or add
++  pendant vertices; they do not remove the two independent connections.
++- Correction: phrase this as "the connected reduced support of the Cartier
++  ramification divisor" rather than "connected total transforms belonging to
++  `Supp(R_pi)`" when using graph language. Multiplicities play no role.
++
++## 4. F5 conic-bundle lattice
++
++- CONFIRMED. The conic-bundle structure has nine simple reducible fibres and
++  `rho(X)=11`, as in the charged rank packet. With `F=B`, a section `S`, and
++  fibre components `E_i` disjoint from `S`, the basis has
++  `S^2=-2`, `S.F=1`, `E_i^2=-1`, and omitted pairings zero.
++- CONFIRMED. In F5,
++  `L=F-E_1`,
++  `A=2S+5F-sum_{1}^{9}E_i`,
++  `T=S+4F-sum_{2}^{9}E_i`,
++  `K_X=-A+F=-2S-4F+sum E_i`, and
++  `R_pi=2A+F=4S+11F-2sum E_i`. These recover
++  `L^2=-1`, `S^2=T^2=-2`, `L.S=L.T=1`, `S.T=2`, and
++  `R_pi.(L,S,T)=(2,3,3)`.
++- CONFIRMED. If an irreducible curve `Z` has `A.Z=0`, then `pi(Z)` is a
++  point and the ambient embedding forces `Z={point} x P1`; hence `F.Z=1`,
++  `Z` is a smooth rational section of `q`, and adjunction gives `Z^2=-3`.
++  Solving `Z.L=Z.S=Z.T=0` and `Z^2=-3` gives exactly
++  `Z_I=S+2F-E_1-sum_{i in I}E_i` with
++  `I subset {2,...,9}`, `|I|=4`.
++- CONFIRMED. `Z_I.Z_J=1-|I cap J|`. Distinct effective A-null curves are
++  different vertical copies `{point} x P1`, hence disjoint, so coexistence
++  requires `|I cap J|=1`. The "no three" claim is true but unused here because
++  the later multiplicity bound gives total A-null multiplicity at most two.
++  It may be deleted for economy.
++
++## 5. Local F5 different to global carriers
++
++- CONFIRMED. The local packet proves two reduced smooth source-different
++  branches at the unique boundary point, transverse to each other, with
++  contact vectors `(1,1,1)` and `(1,2,2)` against `(L,S,T)`. The weight-three
++  branch is the transverse one and the weight-five branch is tangent to the two
++  `(1,1)` components.
++- CONFIRMED. If the two local germs lay on one global prime, they would give
++  two distinct normalization points over the connected infinity tree, producing
++  a cycle. Thus any survivor has distinct global primes `D_3,D_5`. Since the
++  local Cartier equation is reduced along both germs, their global Cartier
++  coefficients are one.
++- CONFIRMED. These two carriers exhaust `R_pi.(L,S,T)=(2,3,3)`. Every other
++  effective component has nonnegative intersection with each `H_i`, hence zero
++  intersection with each `H_i`, hence `A.C=0`, so it is one of the `Z_I`.
++- CONFIRMED. If `x=F.D_3` and `y=F.D_5`, then `x,y>0`: a curve with
++  `F`-degree zero lies in a conic fibre and has `A`-degree one or two, not
++  three or five. Since `R_pi.F=4`, the remaining A-null Cartier multiplicity
++  is `N=4-x-y`, so the only partitions are `2`, `1+1`, `1`, or none, exactly
++  as enumerated.
++- CONFIRM_WITH_CORRECTIONS. `D_3.D_5=1` is a necessary survivor condition:
++  the local transverse boundary intersection already contributes one, and any
++  further intersection would independently create a second path and violate
++  the rational-forest hypothesis. The enumeration should explicitly say it is
++  performed after imposing this necessary survivor condition.
++
++## 6. Equations and enumeration
++
++- CONFIRMED. For `j=2,...,9`,
++  `D_3=xS+(2x+1)F-(x-1)E_1-sum a_jE_j` and
++  `D_5=yS+(2y+2)F-(y-1)E_1-sum b_jE_j`. Here
++  `a_j=D_3.E_j>=0`, `b_j=D_5.E_j>=0`, and integrality is Picard-lattice
++  integrality.
++- CONFIRMED. The contact vector with `T` gives
++  `sum a_j=4x` and `sum b_j=4y`. Total class equality gives
++  `a_j+b_j+c_j=2`, so `0<=a_j,b_j<=2` and no unbounded coefficient is hidden.
++- CONFIRMED. With `K_X=-A+F`, rational normalization gives
++  `delta_3=(D_3^2+x-1)/2` and
++  `delta_5=(D_5^2+y-3)/2`, both integral and nonnegative. The square formulas
++  and `D_3.D_5=1` give exactly main equations (4.7).
++- CONFIRMED. I replayed the enumeration over all labelled four-subsets of
++  `{2,...,9}`. Labelled counts are: doubled `Z`, 70 solutions, one permutation
++  orbit; two distinct simple `Z`s with the required one-point subset
++  intersection, zero; single `Z` rows `(1,2)` and `(2,1)`, zero; no-`Z` rows
++  `(1,3),(2,2),(3,1)`, zero. This does not assume smoothness or general
++  position beyond the rational-normalization delta test and the promoted
++  forest condition.
++- CONFIRMED. The unique orbit is
++  `D_3=S+3F-sum_{j in J}E_j`,
++  `D_5=S+4F-sum_{j in J}E_j`,
++  `Z=S+2F-E_1-sum_{i in I}E_i`, with `J` the complement of `I` in
++  `{2,...,9}`. Then
++  `D_3^2=0`, `D_5^2=2`, `Z^2=-3`,
++  `D_3.D_5=1`, `D_3.Z=3`, `D_5.Z=4`, and
++  `R_pi=D_3+D_5+2Z`.
++
++## 7. The two F5 contradictions
++
++- CONFIRMED. The class relation is exact:
++  `D_3+Z=2S+5F-E_1-sum_{2}^{9}E_i=A=L+S+T=H` in `Pic(X)`. Restricting to
++  `Y=X-H` gives `[D_3]+[Z]=0` in `Cl(Y)`. The charged unit theorem gives
++  `O(U)^*=O(Y)^*=C^*`, so the localization boundary map from the free group on
++  reduced ramification primes into `Cl(Y)` is injective. The nonzero relation
++  `[D_3]+[Z]=0` is therefore impossible. The Cartier coefficient `2` of `Z`
++  in `R_pi` is irrelevant because the localization injection is on reduced
++  primes.
++- CONFIRMED. Independently, the graph contradiction survives every embedded
++  resolution. The boundary point gives a path from `D_3` to `D_5` through the
++  resolved infinity/different local configuration. Since `Z.H=0` and
++  `D_3.Z,D_5.Z>0`, there is an affine interior path from `D_3` to `D_5` through
++  `Z`. These paths are distinct. Blowups only subdivide them or add pendant
++  exceptional vertices, so the cycle cannot disappear.
++
++## 8. Maximum safe theorem
++
++CONFIRM_WITH_CORRECTIONS. The safe promoted theorem is:
++
++For a smooth irreducible incidence surface `X subset P2 x P1` of class
++`2A+3B`, with `pi:X->P2` generically finite and finite near reduced squarefree
++infinity `H`, under the promoted dominant `A2 -> U` first-leg hypotheses whose
++resolved boundary is a rational forest and whose unit consequence is
++`O(U)^*=C^*`, the reduced rational-forest infinity types
++`F1,F2,F4,F5,F7` are impossible. Types `F3,F6` are outside this theorem because
++they are projective-basepoint/nonfinite near infinity types, and `F8,F9` have
++no rational-tree refinement.
++
++This is not a general map-existence or nonexistence theorem. It does not cover
++nonreduced infinity, singular incidence surfaces, affine coefficient common
++zeros, target or fibre degree drops, basis minimization, general quadratic
++closure, cubic closure, primitivity, counterexamples, or JC2.
++
++## Repairs before promotion
++
++1. Fix or annotate the frozen-basis metadata mismatch in the main packet.
++2. State `D_3.D_5=1` as a necessary survivor condition; if it fails, the graph
++   contradiction has already occurred.
++3. In the F5 section, keep the labels explicit: `D_3` is the weight-three
++   transverse branch and `D_5` is the weight-five tangent branch. Do not refer
++   to tangent lines as branches.
++4. Either delete the unused "no three pairwise one-intersecting" sentence or
++   add its one-line inclusion-exclusion proof.
++5. In the final theorem, repeat all scope exclusions listed above. In
++   particular, do not state projective basepoint/nonfinite `F3,F6`,
++   nonreduced infinity, singular incidence, affine coefficient common zeros,
++   degree drops, basis minimization, general quadratic closure, or JC2 closure.
++
++Cheapest next check: no CAS or larger lattice run is needed. The decisive next
++action is a metadata/scope patch to the producer followed by a line-level
++review that the promoted theorem text contains exactly the hypotheses in
++Section 8.
++
++No new exit-price assertion is made in this review.
++<!-- BODY-END -->
+
+codex
+The exact verdict vocabulary is fixed. I’m running a final lightweight check for byte size, the final marker, and accidental seal text before I close out.
+exec
+/bin/zsh -lc 'wc -c xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'tail -n 5 xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   11936 xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+
+ succeeded in 0ms:
+review that the promoted theorem text contains exactly the hypotheses in
+Section 8.
+
+No new exit-price assertion is made in this review.
+<!-- BODY-END -->
+
+exec
+/bin/zsh -lc 'rg -n "''^## Seal|Seal|BODY-END|CONFIRMED_WITH" xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+218:<!-- BODY-END -->
+
+diff --git a/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..6aa2c8b9ac5ee9cd7133fddb7ea861c18ec3c8b9
+--- /dev/null
++++ b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+@@ -0,0 +1,218 @@
++# Hostile review: quadratic ramification connectedness and F5 lattice closure
++
++Verdict: CONFIRM_WITH_CORRECTIONS.
++
++I confirm the mathematical closure of the stated smooth projectively finite
++quadratic, reduced squarefree infinity, dominant-A2-first-leg, rational-forest
++scope, charging the four integration/support packets only inside their stated
++scopes. The corrections are custody/scope and wording repairs, not mathematical
++failures of the connectedness or F5 lattice argument.
++
++## 1. Custody and scope
++
++- CONFIRM_WITH_CORRECTIONS. Current repository HEAD is
++  `78da50bd31b3f7fd8d07ed8fc5ddbbf0ad4290d1`, matching the prompt basis. The
++  five full-file hashes and body hashes checked against the prompt and embedded
++  seals. However, the main packet itself records frozen basis
++  `1efd7a76538e3fcdf51b999563262afc40d58947` at
++  `xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md:5`
++  and in its seal at line 414. Promotion should either correct that metadata or
++  state explicitly that this is a sealed packet produced on `1efd...` and
++  reviewed at `78da...`.
++- The producer invokes the bidegree rational-forest classification within
++  reduced squarefree infinity only, and keeps `F8,F9` out because they have no
++  rational-tree refinement. This matches
++  `xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md:145-158`.
++- It invokes the attachment packet within smooth, reduced, projectively finite
++  quadratic scope only. The no-H-component, exact boundary critical set,
++  nonemptiness, and unit/localization injection are exactly the promoted
++  statements at
++  `xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md:86-108`
++  and `:149-160`.
++- It invokes the F5 local different packet only at the smooth F5 local triple
++  point and only for the source different split `8=5+3`. This matches
++  `xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md:160-190`.
++- It invokes the class-group rank no-go packet only for Picard rank eleven and
++  for rejecting the old raw rank shortcut. This matches
++  `xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md:117-153`.
++
++## 2. Ramification class and connectedness
++
++- CONFIRMED. In `P2 x P1`, with `X ~ 2A+3B`,
++  `A^2=3`, `A.B=2`, `B^2=0` on `X`. Adjunction gives
++  `K_X=(-3A-2B+2A+3B)|X=-A+B`. Since `pi^*K_P2=-3A`,
++  the relative ramification class is
++  `R_pi=K_X-pi^*K_P2=2A+B`, as stated at main lines 63-68.
++- CONFIRMED. `O_X(2A+B)` is the restriction of `O(2,1)`, hence ample. The
++  Jacobian determinant is nonzero because `pi` is generically finite in
++  characteristic zero, so `R_pi` is a nonzero effective ample Cartier divisor.
++- CONFIRMED. The Hodge-index proof of connected support is valid for
++  nonreduced Cartier divisors and reducible support. If
++  `D=D_1+D_2` with nonzero effective pieces and disjoint supports, ampleness
++  gives `D.D_i>0`, hence `D_i^2>0`, and `D_1.D_2=0`; this gives two orthogonal
++  positive directions, impossible on a smooth projective surface.
++- CONFIRMED. The no-infinity-component bridge is supplied by the attachment
++  integration: reduced `H`, characteristic zero, and finiteness near `H`
++  exclude a critical Cartier component contained in `H`. Therefore every
++  component of `R_pi` has affine generic point, and the projective support is
++  the closure of reduced affine ramification plus boundary intersection
++  points. There is no loophole from isolated boundary points.
++
++## 3. Eliminating F1, F2, F4, F7
++
++- CONFIRMED. The promoted attachment packet gives at least two distinct
++  physical boundary critical points in `F1,F2,F4,F7`, and the exact critical
++  set says those points are precisely attachments of the projective
++  ramification support.
++- CONFIRMED. Connectedness of `Supp(R_pi)` is enough to replace the older
++  irreducibility hypothesis. In any resolved full boundary forest, the total
++  transform of connected `H` is a tree and the total transform of connected
++  `Supp(R_pi)` is a tree. Two distinct physical attachment points give two
++  disjoint local joining paths between those trees; contracting the two trees
++  gives two parallel edges, hence first Betti number at least one.
++- Tangencies, embedded exceptional chains, singular ramification components,
++  and multiple edges do not repair this. Blowups subdivide edges or add
++  pendant vertices; they do not remove the two independent connections.
++- Correction: phrase this as "the connected reduced support of the Cartier
++  ramification divisor" rather than "connected total transforms belonging to
++  `Supp(R_pi)`" when using graph language. Multiplicities play no role.
++
++## 4. F5 conic-bundle lattice
++
++- CONFIRMED. The conic-bundle structure has nine simple reducible fibres and
++  `rho(X)=11`, as in the charged rank packet. With `F=B`, a section `S`, and
++  fibre components `E_i` disjoint from `S`, the basis has
++  `S^2=-2`, `S.F=1`, `E_i^2=-1`, and omitted pairings zero.
++- CONFIRMED. In F5,
++  `L=F-E_1`,
++  `A=2S+5F-sum_{1}^{9}E_i`,
++  `T=S+4F-sum_{2}^{9}E_i`,
++  `K_X=-A+F=-2S-4F+sum E_i`, and
++  `R_pi=2A+F=4S+11F-2sum E_i`. These recover
++  `L^2=-1`, `S^2=T^2=-2`, `L.S=L.T=1`, `S.T=2`, and
++  `R_pi.(L,S,T)=(2,3,3)`.
++- CONFIRMED. If an irreducible curve `Z` has `A.Z=0`, then `pi(Z)` is a
++  point and the ambient embedding forces `Z={point} x P1`; hence `F.Z=1`,
++  `Z` is a smooth rational section of `q`, and adjunction gives `Z^2=-3`.
++  Solving `Z.L=Z.S=Z.T=0` and `Z^2=-3` gives exactly
++  `Z_I=S+2F-E_1-sum_{i in I}E_i` with
++  `I subset {2,...,9}`, `|I|=4`.
++- CONFIRMED. `Z_I.Z_J=1-|I cap J|`. Distinct effective A-null curves are
++  different vertical copies `{point} x P1`, hence disjoint, so coexistence
++  requires `|I cap J|=1`. The "no three" claim is true but unused here because
++  the later multiplicity bound gives total A-null multiplicity at most two.
++  It may be deleted for economy.
++
++## 5. Local F5 different to global carriers
++
++- CONFIRMED. The local packet proves two reduced smooth source-different
++  branches at the unique boundary point, transverse to each other, with
++  contact vectors `(1,1,1)` and `(1,2,2)` against `(L,S,T)`. The weight-three
++  branch is the transverse one and the weight-five branch is tangent to the two
++  `(1,1)` components.
++- CONFIRMED. If the two local germs lay on one global prime, they would give
++  two distinct normalization points over the connected infinity tree, producing
++  a cycle. Thus any survivor has distinct global primes `D_3,D_5`. Since the
++  local Cartier equation is reduced along both germs, their global Cartier
++  coefficients are one.
++- CONFIRMED. These two carriers exhaust `R_pi.(L,S,T)=(2,3,3)`. Every other
++  effective component has nonnegative intersection with each `H_i`, hence zero
++  intersection with each `H_i`, hence `A.C=0`, so it is one of the `Z_I`.
++- CONFIRMED. If `x=F.D_3` and `y=F.D_5`, then `x,y>0`: a curve with
++  `F`-degree zero lies in a conic fibre and has `A`-degree one or two, not
++  three or five. Since `R_pi.F=4`, the remaining A-null Cartier multiplicity
++  is `N=4-x-y`, so the only partitions are `2`, `1+1`, `1`, or none, exactly
++  as enumerated.
++- CONFIRM_WITH_CORRECTIONS. `D_3.D_5=1` is a necessary survivor condition:
++  the local transverse boundary intersection already contributes one, and any
++  further intersection would independently create a second path and violate
++  the rational-forest hypothesis. The enumeration should explicitly say it is
++  performed after imposing this necessary survivor condition.
++
++## 6. Equations and enumeration
++
++- CONFIRMED. For `j=2,...,9`,
++  `D_3=xS+(2x+1)F-(x-1)E_1-sum a_jE_j` and
++  `D_5=yS+(2y+2)F-(y-1)E_1-sum b_jE_j`. Here
++  `a_j=D_3.E_j>=0`, `b_j=D_5.E_j>=0`, and integrality is Picard-lattice
++  integrality.
++- CONFIRMED. The contact vector with `T` gives
++  `sum a_j=4x` and `sum b_j=4y`. Total class equality gives
++  `a_j+b_j+c_j=2`, so `0<=a_j,b_j<=2` and no unbounded coefficient is hidden.
++- CONFIRMED. With `K_X=-A+F`, rational normalization gives
++  `delta_3=(D_3^2+x-1)/2` and
++  `delta_5=(D_5^2+y-3)/2`, both integral and nonnegative. The square formulas
++  and `D_3.D_5=1` give exactly main equations (4.7).
++- CONFIRMED. I replayed the enumeration over all labelled four-subsets of
++  `{2,...,9}`. Labelled counts are: doubled `Z`, 70 solutions, one permutation
++  orbit; two distinct simple `Z`s with the required one-point subset
++  intersection, zero; single `Z` rows `(1,2)` and `(2,1)`, zero; no-`Z` rows
++  `(1,3),(2,2),(3,1)`, zero. This does not assume smoothness or general
++  position beyond the rational-normalization delta test and the promoted
++  forest condition.
++- CONFIRMED. The unique orbit is
++  `D_3=S+3F-sum_{j in J}E_j`,
++  `D_5=S+4F-sum_{j in J}E_j`,
++  `Z=S+2F-E_1-sum_{i in I}E_i`, with `J` the complement of `I` in
++  `{2,...,9}`. Then
++  `D_3^2=0`, `D_5^2=2`, `Z^2=-3`,
++  `D_3.D_5=1`, `D_3.Z=3`, `D_5.Z=4`, and
++  `R_pi=D_3+D_5+2Z`.
++
++## 7. The two F5 contradictions
++
++- CONFIRMED. The class relation is exact:
++  `D_3+Z=2S+5F-E_1-sum_{2}^{9}E_i=A=L+S+T=H` in `Pic(X)`. Restricting to
++  `Y=X-H` gives `[D_3]+[Z]=0` in `Cl(Y)`. The charged unit theorem gives
++  `O(U)^*=O(Y)^*=C^*`, so the localization boundary map from the free group on
++  reduced ramification primes into `Cl(Y)` is injective. The nonzero relation
++  `[D_3]+[Z]=0` is therefore impossible. The Cartier coefficient `2` of `Z`
++  in `R_pi` is irrelevant because the localization injection is on reduced
++  primes.
++- CONFIRMED. Independently, the graph contradiction survives every embedded
++  resolution. The boundary point gives a path from `D_3` to `D_5` through the
++  resolved infinity/different local configuration. Since `Z.H=0` and
++  `D_3.Z,D_5.Z>0`, there is an affine interior path from `D_3` to `D_5` through
++  `Z`. These paths are distinct. Blowups only subdivide them or add pendant
++  exceptional vertices, so the cycle cannot disappear.
++
++## 8. Maximum safe theorem
++
++CONFIRM_WITH_CORRECTIONS. The safe promoted theorem is:
++
++For a smooth irreducible incidence surface `X subset P2 x P1` of class
++`2A+3B`, with `pi:X->P2` generically finite and finite near reduced squarefree
++infinity `H`, under the promoted dominant `A2 -> U` first-leg hypotheses whose
++resolved boundary is a rational forest and whose unit consequence is
++`O(U)^*=C^*`, the reduced rational-forest infinity types
++`F1,F2,F4,F5,F7` are impossible. Types `F3,F6` are outside this theorem because
++they are projective-basepoint/nonfinite near infinity types, and `F8,F9` have
++no rational-tree refinement.
++
++This is not a general map-existence or nonexistence theorem. It does not cover
++nonreduced infinity, singular incidence surfaces, affine coefficient common
++zeros, target or fibre degree drops, basis minimization, general quadratic
++closure, cubic closure, primitivity, counterexamples, or JC2.
++
++## Repairs before promotion
++
++1. Fix or annotate the frozen-basis metadata mismatch in the main packet.
++2. State `D_3.D_5=1` as a necessary survivor condition; if it fails, the graph
++   contradiction has already occurred.
++3. In the F5 section, keep the labels explicit: `D_3` is the weight-three
++   transverse branch and `D_5` is the weight-five tangent branch. Do not refer
++   to tangent lines as branches.
++4. Either delete the unused "no three pairwise one-intersecting" sentence or
++   add its one-line inclusion-exclusion proof.
++5. In the final theorem, repeat all scope exclusions listed above. In
++   particular, do not state projective basepoint/nonfinite `F3,F6`,
++   nonreduced infinity, singular incidence, affine coefficient common zeros,
++   degree drops, basis minimization, general quadratic closure, or JC2 closure.
++
++Cheapest next check: no CAS or larger lattice run is needed. The decisive next
++action is a metadata/scope patch to the producer followed by a line-level
++review that the promoted theorem text contains exactly the hypotheses in
++Section 8.
++
++No new exit-price assertion is made in this review.
++<!-- BODY-END -->
+
+codex
+Wrote the requested report:
+
+[xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md](/Users/dc/code/math/jc2/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md)
+
+Verdict in the report: `CONFIRM_WITH_CORRECTIONS`. The mathematical closure is confirmed in the stated scope; corrections are metadata/scope wording and promotion hygiene, especially the frozen-basis mismatch in the main packet.
+
+Verified:
+- Current repo HEAD matches `78da50bd31b3f7fd8d07ed8fc5ddbbf0ad4290d1`
+- Report size is `11936` bytes, below cap
+- Ends with standalone `<!-- BODY-END -->`
+- No seal block added
+diff --git a/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..6aa2c8b9ac5ee9cd7133fddb7ea861c18ec3c8b9
+--- /dev/null
++++ b/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+@@ -0,0 +1,218 @@
++# Hostile review: quadratic ramification connectedness and F5 lattice closure
++
++Verdict: CONFIRM_WITH_CORRECTIONS.
++
++I confirm the mathematical closure of the stated smooth projectively finite
++quadratic, reduced squarefree infinity, dominant-A2-first-leg, rational-forest
++scope, charging the four integration/support packets only inside their stated
++scopes. The corrections are custody/scope and wording repairs, not mathematical
++failures of the connectedness or F5 lattice argument.
++
++## 1. Custody and scope
++
++- CONFIRM_WITH_CORRECTIONS. Current repository HEAD is
++  `78da50bd31b3f7fd8d07ed8fc5ddbbf0ad4290d1`, matching the prompt basis. The
++  five full-file hashes and body hashes checked against the prompt and embedded
++  seals. However, the main packet itself records frozen basis
++  `1efd7a76538e3fcdf51b999563262afc40d58947` at
++  `xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md:5`
++  and in its seal at line 414. Promotion should either correct that metadata or
++  state explicitly that this is a sealed packet produced on `1efd...` and
++  reviewed at `78da...`.
++- The producer invokes the bidegree rational-forest classification within
++  reduced squarefree infinity only, and keeps `F8,F9` out because they have no
++  rational-tree refinement. This matches
++  `xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md:145-158`.
++- It invokes the attachment packet within smooth, reduced, projectively finite
++  quadratic scope only. The no-H-component, exact boundary critical set,
++  nonemptiness, and unit/localization injection are exactly the promoted
++  statements at
++  `xmodel/bd-a2-quadratic-ramification-attachment-coordinator-integration-sol56-20260830.md:86-108`
++  and `:149-160`.
++- It invokes the F5 local different packet only at the smooth F5 local triple
++  point and only for the source different split `8=5+3`. This matches
++  `xmodel/bd-a2-f5-local-different-two-branch-coordinator-integration-sol56-20260830.md:160-190`.
++- It invokes the class-group rank no-go packet only for Picard rank eleven and
++  for rejecting the old raw rank shortcut. This matches
++  `xmodel/bd-a2-quadratic-classgroup-rank-no-go-sol56-20260830.md:117-153`.
++
++## 2. Ramification class and connectedness
++
++- CONFIRMED. In `P2 x P1`, with `X ~ 2A+3B`,
++  `A^2=3`, `A.B=2`, `B^2=0` on `X`. Adjunction gives
++  `K_X=(-3A-2B+2A+3B)|X=-A+B`. Since `pi^*K_P2=-3A`,
++  the relative ramification class is
++  `R_pi=K_X-pi^*K_P2=2A+B`, as stated at main lines 63-68.
++- CONFIRMED. `O_X(2A+B)` is the restriction of `O(2,1)`, hence ample. The
++  Jacobian determinant is nonzero because `pi` is generically finite in
++  characteristic zero, so `R_pi` is a nonzero effective ample Cartier divisor.
++- CONFIRMED. The Hodge-index proof of connected support is valid for
++  nonreduced Cartier divisors and reducible support. If
++  `D=D_1+D_2` with nonzero effective pieces and disjoint supports, ampleness
++  gives `D.D_i>0`, hence `D_i^2>0`, and `D_1.D_2=0`; this gives two orthogonal
++  positive directions, impossible on a smooth projective surface.
++- CONFIRMED. The no-infinity-component bridge is supplied by the attachment
++  integration: reduced `H`, characteristic zero, and finiteness near `H`
++  exclude a critical Cartier component contained in `H`. Therefore every
++  component of `R_pi` has affine generic point, and the projective support is
++  the closure of reduced affine ramification plus boundary intersection
++  points. There is no loophole from isolated boundary points.
++
++## 3. Eliminating F1, F2, F4, F7
++
++- CONFIRMED. The promoted attachment packet gives at least two distinct
++  physical boundary critical points in `F1,F2,F4,F7`, and the exact critical
++  set says those points are precisely attachments of the projective
++  ramification support.
++- CONFIRMED. Connectedness of `Supp(R_pi)` is enough to replace the older
++  irreducibility hypothesis. In any resolved full boundary forest, the total
++  transform of connected `H` is a tree and the total transform of connected
++  `Supp(R_pi)` is a tree. Two distinct physical attachment points give two
++  disjoint local joining paths between those trees; contracting the two trees
++  gives two parallel edges, hence first Betti number at least one.
++- Tangencies, embedded exceptional chains, singular ramification components,
++  and multiple edges do not repair this. Blowups subdivide edges or add
++  pendant vertices; they do not remove the two independent connections.
++- Correction: phrase this as "the connected reduced support of the Cartier
++  ramification divisor" rather than "connected total transforms belonging to
++  `Supp(R_pi)`" when using graph language. Multiplicities play no role.
++
++## 4. F5 conic-bundle lattice
++
++- CONFIRMED. The conic-bundle structure has nine simple reducible fibres and
++  `rho(X)=11`, as in the charged rank packet. With `F=B`, a section `S`, and
++  fibre components `E_i` disjoint from `S`, the basis has
++  `S^2=-2`, `S.F=1`, `E_i^2=-1`, and omitted pairings zero.
++- CONFIRMED. In F5,
++  `L=F-E_1`,
++  `A=2S+5F-sum_{1}^{9}E_i`,
++  `T=S+4F-sum_{2}^{9}E_i`,
++  `K_X=-A+F=-2S-4F+sum E_i`, and
++  `R_pi=2A+F=4S+11F-2sum E_i`. These recover
++  `L^2=-1`, `S^2=T^2=-2`, `L.S=L.T=1`, `S.T=2`, and
++  `R_pi.(L,S,T)=(2,3,3)`.
++- CONFIRMED. If an irreducible curve `Z` has `A.Z=0`, then `pi(Z)` is a
++  point and the ambient embedding forces `Z={point} x P1`; hence `F.Z=1`,
++  `Z` is a smooth rational section of `q`, and adjunction gives `Z^2=-3`.
++  Solving `Z.L=Z.S=Z.T=0` and `Z^2=-3` gives exactly
++  `Z_I=S+2F-E_1-sum_{i in I}E_i` with
++  `I subset {2,...,9}`, `|I|=4`.
++- CONFIRMED. `Z_I.Z_J=1-|I cap J|`. Distinct effective A-null curves are
++  different vertical copies `{point} x P1`, hence disjoint, so coexistence
++  requires `|I cap J|=1`. The "no three" claim is true but unused here because
++  the later multiplicity bound gives total A-null multiplicity at most two.
++  It may be deleted for economy.
++
++## 5. Local F5 different to global carriers
++
++- CONFIRMED. The local packet proves two reduced smooth source-different
++  branches at the unique boundary point, transverse to each other, with
++  contact vectors `(1,1,1)` and `(1,2,2)` against `(L,S,T)`. The weight-three
++  branch is the transverse one and the weight-five branch is tangent to the two
++  `(1,1)` components.
++- CONFIRMED. If the two local germs lay on one global prime, they would give
++  two distinct normalization points over the connected infinity tree, producing
++  a cycle. Thus any survivor has distinct global primes `D_3,D_5`. Since the
++  local Cartier equation is reduced along both germs, their global Cartier
++  coefficients are one.
++- CONFIRMED. These two carriers exhaust `R_pi.(L,S,T)=(2,3,3)`. Every other
++  effective component has nonnegative intersection with each `H_i`, hence zero
++  intersection with each `H_i`, hence `A.C=0`, so it is one of the `Z_I`.
++- CONFIRMED. If `x=F.D_3` and `y=F.D_5`, then `x,y>0`: a curve with
++  `F`-degree zero lies in a conic fibre and has `A`-degree one or two, not
++  three or five. Since `R_pi.F=4`, the remaining A-null Cartier multiplicity
++  is `N=4-x-y`, so the only partitions are `2`, `1+1`, `1`, or none, exactly
++  as enumerated.
++- CONFIRM_WITH_CORRECTIONS. `D_3.D_5=1` is a necessary survivor condition:
++  the local transverse boundary intersection already contributes one, and any
++  further intersection would independently create a second path and violate
++  the rational-forest hypothesis. The enumeration should explicitly say it is
++  performed after imposing this necessary survivor condition.
++
++## 6. Equations and enumeration
++
++- CONFIRMED. For `j=2,...,9`,
++  `D_3=xS+(2x+1)F-(x-1)E_1-sum a_jE_j` and
++  `D_5=yS+(2y+2)F-(y-1)E_1-sum b_jE_j`. Here
++  `a_j=D_3.E_j>=0`, `b_j=D_5.E_j>=0`, and integrality is Picard-lattice
++  integrality.
++- CONFIRMED. The contact vector with `T` gives
++  `sum a_j=4x` and `sum b_j=4y`. Total class equality gives
++  `a_j+b_j+c_j=2`, so `0<=a_j,b_j<=2` and no unbounded coefficient is hidden.
++- CONFIRMED. With `K_X=-A+F`, rational normalization gives
++  `delta_3=(D_3^2+x-1)/2` and
++  `delta_5=(D_5^2+y-3)/2`, both integral and nonnegative. The square formulas
++  and `D_3.D_5=1` give exactly main equations (4.7).
++- CONFIRMED. I replayed the enumeration over all labelled four-subsets of
++  `{2,...,9}`. Labelled counts are: doubled `Z`, 70 solutions, one permutation
++  orbit; two distinct simple `Z`s with the required one-point subset
++  intersection, zero; single `Z` rows `(1,2)` and `(2,1)`, zero; no-`Z` rows
++  `(1,3),(2,2),(3,1)`, zero. This does not assume smoothness or general
++  position beyond the rational-normalization delta test and the promoted
++  forest condition.
++- CONFIRMED. The unique orbit is
++  `D_3=S+3F-sum_{j in J}E_j`,
++  `D_5=S+4F-sum_{j in J}E_j`,
++  `Z=S+2F-E_1-sum_{i in I}E_i`, with `J` the complement of `I` in
++  `{2,...,9}`. Then
++  `D_3^2=0`, `D_5^2=2`, `Z^2=-3`,
++  `D_3.D_5=1`, `D_3.Z=3`, `D_5.Z=4`, and
++  `R_pi=D_3+D_5+2Z`.
++
++## 7. The two F5 contradictions
++
++- CONFIRMED. The class relation is exact:
++  `D_3+Z=2S+5F-E_1-sum_{2}^{9}E_i=A=L+S+T=H` in `Pic(X)`. Restricting to
++  `Y=X-H` gives `[D_3]+[Z]=0` in `Cl(Y)`. The charged unit theorem gives
++  `O(U)^*=O(Y)^*=C^*`, so the localization boundary map from the free group on
++  reduced ramification primes into `Cl(Y)` is injective. The nonzero relation
++  `[D_3]+[Z]=0` is therefore impossible. The Cartier coefficient `2` of `Z`
++  in `R_pi` is irrelevant because the localization injection is on reduced
++  primes.
++- CONFIRMED. Independently, the graph contradiction survives every embedded
++  resolution. The boundary point gives a path from `D_3` to `D_5` through the
++  resolved infinity/different local configuration. Since `Z.H=0` and
++  `D_3.Z,D_5.Z>0`, there is an affine interior path from `D_3` to `D_5` through
++  `Z`. These paths are distinct. Blowups only subdivide them or add pendant
++  exceptional vertices, so the cycle cannot disappear.
++
++## 8. Maximum safe theorem
++
++CONFIRM_WITH_CORRECTIONS. The safe promoted theorem is:
++
++For a smooth irreducible incidence surface `X subset P2 x P1` of class
++`2A+3B`, with `pi:X->P2` generically finite and finite near reduced squarefree
++infinity `H`, under the promoted dominant `A2 -> U` first-leg hypotheses whose
++resolved boundary is a rational forest and whose unit consequence is
++`O(U)^*=C^*`, the reduced rational-forest infinity types
++`F1,F2,F4,F5,F7` are impossible. Types `F3,F6` are outside this theorem because
++they are projective-basepoint/nonfinite near infinity types, and `F8,F9` have
++no rational-tree refinement.
++
++This is not a general map-existence or nonexistence theorem. It does not cover
++nonreduced infinity, singular incidence surfaces, affine coefficient common
++zeros, target or fibre degree drops, basis minimization, general quadratic
++closure, cubic closure, primitivity, counterexamples, or JC2.
++
++## Repairs before promotion
++
++1. Fix or annotate the frozen-basis metadata mismatch in the main packet.
++2. State `D_3.D_5=1` as a necessary survivor condition; if it fails, the graph
++   contradiction has already occurred.
++3. In the F5 section, keep the labels explicit: `D_3` is the weight-three
++   transverse branch and `D_5` is the weight-five tangent branch. Do not refer
++   to tangent lines as branches.
++4. Either delete the unused "no three pairwise one-intersecting" sentence or
++   add its one-line inclusion-exclusion proof.
++5. In the final theorem, repeat all scope exclusions listed above. In
++   particular, do not state projective basepoint/nonfinite `F3,F6`,
++   nonreduced infinity, singular incidence, affine coefficient common zeros,
++   degree drops, basis minimization, general quadratic closure, or JC2 closure.
++
++Cheapest next check: no CAS or larger lattice run is needed. The decisive next
++action is a metadata/scope patch to the producer followed by a line-level
++review that the promoted theorem text contains exactly the hypotheses in
++Section 8.
++
++No new exit-price assertion is made in this review.
++<!-- BODY-END -->
+
+tokens used
+71,637
+Wrote the requested report:
+
+[xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md](/Users/dc/code/math/jc2/xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md)
+
+Verdict in the report: `CONFIRM_WITH_CORRECTIONS`. The mathematical closure is confirmed in the stated scope; corrections are metadata/scope wording and promotion hygiene, especially the frozen-basis mismatch in the main packet.
+
+Verified:
+- Current repo HEAD matches `78da50bd31b3f7fd8d07ed8fc5ddbbf0ad4290d1`
+- Report size is `11936` bytes, below cap
+- Ends with standalone `<!-- BODY-END -->`
+- No seal block added
