@@ -1458,3 +1458,13 @@ leg, whose image must omit ramification and would see the genus-four closure
 as boundary. Opus hostile review is frozen and will run asynchronously. Do
 not infer that every formal survivor globalizes, that the full promoted row is
 attained abstractly, or that a polynomial map exists.
+
+Promotion refresh (2026-08-30 13:54Z): GPT-5.5's corrected explicit-path
+rereview of the morphic rational-forest repair passed full receipt-first hash
+reproduction and returns `CONFIRM_WITH_CORRECTIONS` (sealed full
+`47afb973...`, raw body `4031939e...`). Binding integration `94a5968a...`
+promotes the maximum-safe theorem and complete downstream inventory. The
+arbitrary-rational-map extension is definitively retracted; all audited actual
+proper-block clients remain closed because they supply the everywhere-defined
+etale first leg. Stop further forest-interface review. Keep only abstract
+rational-domination boundary claims reopened.

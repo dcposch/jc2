@@ -14869,3 +14869,20 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   surface/local positive control and a specific block negative control, not a
   theorem that every local shard globalizes, not a block or map, and not JC2.
   An explicit-path Opus hostile review prompt is frozen.
+
+## 2026-08-30 13:54Z REVIEW/PROMOTION EVENT — MORPHIC FOREST REPAIR CLOSED
+
+- The explicit-path GPT-5.5 rereview passed receipt-first custody and returned
+  `CONFIRM_WITH_CORRECTIONS`: sealed full `47afb973...`, raw body
+  `4031939e...`. It independently verifies the smooth-cubic counterexample,
+  morphic theorem, shrinking/image distinction, actual `V=g1(A2)` client,
+  parallel-edge persistence, and full dependency inventory.
+- Binding integration `94a5968a...`/body `c07e6478...`, manifest
+  `cab2271c...`, promotes the repaired interface. An everywhere-defined
+  dominant morphism `A2->U` forces zero log plurigenera and rational-forest
+  boundary on every strict-SNC completion. An arbitrary rational map does not.
+  Projective `p_g=q=0` deductions survive rational domination; open-boundary
+  deductions require the morphic image.
+- All audited actual proper-block closures remain valid through their
+  everywhere-defined etale `g1`. Stop forest-interface review. The original
+  failed/no-report attempt remains custody history only.

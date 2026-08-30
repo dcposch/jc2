@@ -30,8 +30,9 @@ later correction and live-overlay sections cite post-survey campaign evidence.
   `A2` and has elliptic boundary. Binding correction `d49a44ce...` restores
   the morphic theorem. Existing proper-block clients survive because `g1` is
   an everywhere-defined dominant etale morphism; abstract rationally
-  dominated open surfaces do not inherit a forest. GPT-5.5 is reviewing the
-  correction and downstream scope concurrently.
+  dominated open surfaces do not inherit a forest. GPT-5.5 independently
+  confirms the correction and downstream scope; reviewed binding integration
+  `94a5968a...` closes this interface repair.
 - **Stop the promoted fixed-presentation q=6 cell.** Opus independently
   reconstructs the degree-zero typing trichotomy and complete B3/U3 contact
   census. Binding integration `8df7b874...` adopts every correction and

@@ -38,8 +38,11 @@ day or inserts the completed day directly below this preamble (see
 > `d14702bb...`, restores the exact theorem for an everywhere-defined
 > dominant morphism `A2->U`. All audited proper-block eliminations remain
 > valid because their actual `g1` is morphic and etale; a claim based only on
-> rational domination of an open surface is reopened. GPT-5.5 independently
-> reviews the repair and dependency inventory in the background.
+> rational domination of an open surface is reopened. GPT-5.5 rereview
+> `47afb973...`/raw body `4031939e...` returns
+> `CONFIRM_WITH_CORRECTIONS`; binding integration `94a5968a...`/body
+> `c07e6478...`, manifest `cab2271c...`, now promotes the repaired theorem and
+> dependency inventory.
 >
 > **FIXED-PRESENTATION q=6 CELL PROMOTED EMPTY (13:31Z).** Sealed
 > review `dfbd8c4c...`/raw body `43660b5d...` independently reconstructs the

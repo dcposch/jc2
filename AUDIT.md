@@ -21,8 +21,12 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > not license a shrink that omits part of the morphic image. The reduced
 > `(2,3)` classification is unchanged; its boundary exclusions require the
 > actual morphic first leg. Audited proper-block clients remain sound because
-> their `g1` is everywhere-defined and etale. GPT-5.5 review of this correction
-> is active.
+> their `g1` is everywhere-defined and etale. GPT-5.5 rereview sealed full
+> `47afb973...`/raw body `4031939e...` independently returns
+> `CONFIRM_WITH_CORRECTIONS`. Binding integration
+> `94a5968a7b412e80536b855b753c33db8d5cafff6698fa6abf8b7f0c99734c1d`
+> (body `c07e6478...`, manifest `cab2271c...`) promotes the corrected theorem
+> and complete downstream disposition.
 >
 > **D3 LOCAL HALPHEN GATES PROMOTED; ONE-POINT ROW CLOSURE PROVISIONAL
 > (2026-08-30 13:31Z).** Fable and GPT-5.5 receipt-first reviews confirm the
