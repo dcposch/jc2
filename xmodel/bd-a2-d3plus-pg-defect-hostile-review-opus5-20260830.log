@@ -1,0 +1,19 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written: `xmodel/bd-a2-d3plus-pg-defect-hostile-review-opus5-20260830.md` (28,949 bytes, one standalone `<!-- BODY-END -->`, no seal, no charge-basis line). All six charged hashes matched; no inputs, Git state, or canonical artifacts touched, and `jc2-lean` was not accessed.
+
+## Verdict: `CONFIRM_WITH_CORRECTIONS`
+
+The mathematical core survives. I found no false theorem, but six edits are required.
+
+**Confirmed as stated (items 1, 4, 7, 8, 10).** The factor of two in `h²(O_X)=(d−1)(d−2)` is exactly `h¹(P¹,O(−3))=e−1|_{e=3}`; for class `dA+eB` the count is `(e−1)(d−1)(d−2)/2`, so the "2" comes from the `P¹`-degree, not from doubling the plane-curve genus. No flatness/CM/smoothness is smuggled in — CM and Gorenstein are consequences of being a hypersurface in smooth `W`. The GR inclusion direction is right, with the explicit `J_GR = r_*O_Y(K_Y − r^*K_X) ⊆ O_X`. The `d=3` length argument holds in every sub-step, including the equivalence (not just implication) `q^*s|_{Z}=0 ⟺ s|_T=0`.
+
+**Corrections.**
+
+- **Item 9 — wrong Newton rule, right answer.** "Strictly below the Newton face" is refuted as a general criterion by `x³+y³+z³` (strict count 0, true `p_g=1`). The Merle–Teissier count is weak: `i/a+j/b+k/c ≤ 1`. For `(3,4,5)` the equation `20i+15j+12k=60` has no positive solution, so no boundary point exists and `p_g=2` stands. Confirmed independently via Brieskorn's signature (`μ₊=4`) plus Durfee's `μ₊=2p_g`, and the good resolution is genuinely a star-shaped rational tree (Seifert base `S²(3,4,5)`). The control is valid — keep it, fix the inequality.
+- **Item 6 — a missing step.** The producer never proves `q` is surjective, which injectivity of `q^*` depends on. Supplied: `q^{-1}(t)` is a degree-`d` plane curve, empty only if `P²×{t} ⊆ X`, which forces `X = P²×{t}` of class `B`. This also excludes the vertical case.
+- **Item 5 — duality, not isomorphism.** Grothendieck duality gives `Q_GR ≅ (R¹r_*O_Y)^D`. Lengths and annihilators agree pointwise (stronger than the fallback the prompt allowed), but the modules are not isomorphic for `d ≥ 4`. At `d=3` the distinction is invisible only because every length-2 artinian module is self-dual.
+- **Items 2, 3 — load-path regressions.** Castelnuovo is not needed; `q=p_g=0` follows from injectivity of form pullback, the method already used in the charged rational-forest integration. The `→ H²(Y,O_Y) → 0` right-exactness is not part of the five-term sequence and is not needed.
+
+**Two free results the producer missed:** the general `q`-fibre has genus `N_d/2`, corroborating the factor of two geometrically; and at `d=3`, `Δ² = K_Y² < 0` forces `ρ(Y) ≥ 11` with `Y` a blown-up rational elliptic surface — a sharper handle for the successor than "`Y` is rational".
+
+**Firewall check:** no `d=2` conclusion is imported anywhere, and I verified each would be *false* at `d ≥ 3` since `N_d > 0` kills Du Val/crepancy. The successor's main typing hazard is that its discriminant step lives on `π: X→P²` while (0.3) lives on `q: X→P¹`; its step 4 must refute both branches, not one.
