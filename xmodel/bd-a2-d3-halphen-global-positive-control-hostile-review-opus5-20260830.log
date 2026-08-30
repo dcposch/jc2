@@ -1,0 +1,31 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written. Exactly one file created; no seal block, one standalone `<!-- BODY-END -->` line, no `charge_basis={...}`.
+
+## What I found
+
+**All seven charged hashes match byte-exactly**, and the primary report's seal verifies independently (7859 bytes, `47791910…`), consistent with its artifact manifest.
+
+**Verdicts:**
+
+| # | Item | Verdict |
+|---|---|---|
+| 1 | Binary-cubic coefficients / finite / degree 3 / miracle flatness | `CONFIRMED` |
+| 2 | Singular locus, `D4`, integrality, `S2+R1`, normality | `CONFIRMED` |
+| 3 | Shifted weighted face and its import | `CONFIRM_WITH_CORRECTIONS` |
+| 4 | `c4, c6, Delta`, minimal-valuation checksum | `CONFIRMED` |
+| 5 | Ramification, rationality, Kummer, Riemann–Hurwitz | `CONFIRMED` |
+| 6 | Proper-block consequence via morphic forest | `CONFIRM_WITH_CORRECTIONS` |
+| 7 | Replay reproduction, guards, executability | `CONFIRM_WITH_CORRECTIONS` |
+| 8 | Pricing | `CONFIRM_WITH_CORRECTIONS` |
+
+Nothing `REFUTED`, nothing `GAP`. I hunted counterexamples at the four exposed places — hidden singular curve, reducible/nonreduced `(3,3)` divisor, parametrized sublocus or multiple cover posing as a ramification component, contraction erasing the genus — and each failed against an exact certificate.
+
+**Independent reconstructions that went beyond the replay:**
+- Groebner elimination in all six charts confirms `Sing(X)` is exactly two points (the script only checks the report's substitution identities).
+- `c4 ≡ 0` has a *structural* cause the report doesn't state: after the unimodular `x = w − tz`, every fibre is `t·y³ + A(w,z)`, a μ₃-cover of `P¹`, hence `j = 0`. I re-derived both charts' `c6` via `−216·λ²·disc(binary)`, pinned to the promoted `[t⁴]c6 = −216 Disc(G)` convention, matching (2.1)/(2.2) exactly and cross-checking the two charts against the `λ⁶` scaling.
+- `D4`: supplied the missing determinacy step (weights `(1/2,1/3,1/3)`, all extra terms of weighted degree 3/2, 2, 5/2; local-algebra basis max weight 2/3 < 1 ⟹ right-equivalent to the principal part).
+- The elimination ideal is *exactly* `(B)`; `B` is irreducible; `q = xt/(x+t)` inverts (3.2), so it's birational — not a sublocus or multiple cover. The branch divisor is `{z=0}` ∪ one **irreducible degree-11** curve, which makes the exclusion chart-independent (the report only treats `z=1`).
+
+**Main corrections:** §4's "the replay derives … the Kummer branch ledger" is false — the ledger, `q=∞` valuation, and the degree-12 checksum are hardcoded literals; the mutation fires on a literal-vs-literal guard (though I verified the real derivation guard also catches it). §0's "universal weighted exceptional-curve obstruction … stronger family-wide theorem" cites a **provisional, review-gated** packet. And the substantive one: this exclusion needs a *global* identification `Y ≅ π⁻¹(A²)`, strictly stronger than the local-incidence antecedent the companion route uses.
+
+**Cheapest successor:** review the one premise both live D3 exclusions share — §2 of the morphic forest correction (`P̄₁ = p_g + τ − rank ∂`, and `b₁` of the dual **multi**graph). Desk work, one reviewer, and that packet has already retracted one false strengthening of exactly that theorem.
