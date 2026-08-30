@@ -5,6 +5,54 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **SMOOTH DEGREE-AT-MOST-TWO CUBIC-BLOCK PRESENTATIONS CLOSED; EXACT
+> ONE-ATTACHMENT DISCRIMINANT CERTIFICATE PROMOTED (2026-08-30 06:04Z).**
+> GPT-5.5 xhigh reviews of smooth-degeneracy absorption (body `7d1a36e6...`,
+> sealed full `ce494caf...`) and one-attachment discriminant maximality (body
+> `0ea337dc...`, sealed full `34b7c506...`) both return
+> `CONFIRM_WITH_CORRECTIONS` with no mathematical gap. Transactional binding
+> integration `1b30c798114e7d9d96ac2a882a4ebe6ec670880289be107eba3ddf7053125e9f`
+> (14,511-byte body `d495e008...`, manifest `7d8d37de...`) promotes, under the
+> exact proper cubic-block and dominant-`A2` first-leg package,
+>
+> ```text
+> coefficient maximum <=1: impossible by AL3-CLOSED;
+> coefficient maximum =2 plus smooth incidence:
+>   smooth infinity is reduced;
+>   every coefficient basepoint yields E^2=-3 and R_pi=E+D,
+>   with D ample and E meeting Supp(D) at >=2 physical points;
+>   the projective or affine Stein-lifted boundary therefore has a cycle;
+>   without basepoints pi is finite and the promoted quadratic lattice closes;
+> hence no smooth fixed-presentation proper cubic block of degree <=2 exists.
+> ```
+>
+> The affine bridge identifies `(pi_0)_*O_Xaff` with the normal finite-flat
+> Miranda block algebra by reflexive extension across the finite common-zero
+> set; square-zero special fibres are read from the multiplication table, not
+> from invalid cohomology base change. Multiple affine basepoints are boundary
+> exceptional curves over distinct contracted non-etale points. Exact degree
+> two refers to the same chosen basis; smoothness and degree are not asserted
+> basis-invariant.
+>
+> The same integration separately promotes, for a smooth class-`dA+3B`
+> incidence finite near reduced infinity with rational-forest full boundary,
+>
+> ```text
+> H intersect Supp(R_pi) = one physical source point;
+> H = three smooth sections of degrees (b,a,a), d=2a+b;
+> Disc(H/L_infinity)=c*ell^(4d);
+> deg(Delta_affine)=4d;
+> d is minimal among global trace-zero bases of this fixed cubic algebra;
+> length(boundary normalization order quotient)=2d.
+> ```
+>
+> The graph statement uses connected-subtree intersection in a forest;
+> `H->L_infinity` is finite flat because the Cartier curve is
+> Cohen--Macaulay and target-DVR torsion-free. The length `2d` is neither a
+> conductor nor a surface index. Singular/nonnormal incidences, existence of
+> a quadratic basis, basis coverage across arbitrary algebras, higher degree,
+> maps, counterexamples, and JC2 remain unproved.
+
 > **SMOOTH PROJECTIVELY FINITE REDUCED-SQUAREFREE QUADRATIC STRATUM
 > CLOSED (2026-08-30 05:32Z).** Fresh GPT-5.5 xhigh review body
 > `5e764654...` (sealed full file `444e813d...`) returns

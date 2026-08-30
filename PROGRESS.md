@@ -7,6 +7,29 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **SMOOTH FIXED-PRESENTATION CUBIC BLOCKS OF COEFFICIENT DEGREE AT MOST
+> TWO CLOSED; ONE-ATTACHMENT DISCRIMINANT THEOREM PROMOTED (06:04Z).** Two
+> independent GPT-5.5 xhigh reviews return `CONFIRM_WITH_CORRECTIONS` and no
+> mathematical gap. Binding integration `1b30c798...`/body `d495e008...`,
+> manifest `7d8d37de...`, promotes: affine-linear trace-zero presentations are
+> already impossible by `AL3-CLOSED`; for exact coefficient degree two,
+> smoothness forces reduced infinity, while every projective or affine
+> coefficient basepoint produces a `-3` curve attached to an ample residual
+> different at at least two physical points, hence a forbidden boundary
+> cycle. The affine case uses an exact rank-three Stein/Miranda algebra bridge.
+> With basepoints gone, projective finiteness and the promoted lattice theorem
+> close the remaining smooth quadratic cell.
+>
+> Separately, a smooth class-`dA+3B` rational-forest first leg with reduced,
+> projectively finite infinity has one physical infinity/ramification
+> attachment; infinity is three sections of degrees `(b,a,a)`, `d=2a+b`; its
+> boundary discriminant is `c*ell^(4d)`; the full affine discriminant has exact
+> degree `4d`; the displayed degree is minimal among global trace-zero bases
+> of the same cubic algebra; and the boundary curve-order normalization index
+> has length `2d`. This is structural, not an existence theorem. Singular and
+> nonnormal incidences and intrinsic low-degree basis coverage remain open; no
+> polynomial-map or JC2 conclusion follows.
+
 > **SMOOTH FINITE REDUCED-SQUAREFREE QUADRATIC STRATUM CLOSED
 > (05:32Z).** A fresh GPT-5.5 xhigh hostile review independently reconstructs
 > ample connectedness, every graph step, the rank-eleven F5 conic-bundle

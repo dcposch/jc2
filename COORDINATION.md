@@ -1208,3 +1208,24 @@ different-model gate. Retry the peer adapters after billing capacity changes,
 without blocking reversible research. No heavy local computation is active;
 AWS is idle/unclaimed and remains the only venue for a future reviewed heavy
 packet. Web backstop remains `2026-08-31T03:40Z`; holds/human gates: none.
+
+Allocation refresh (2026-08-30 06:04Z): two GPT-5.5 xhigh reviews close the
+smooth quadratic frontier with corrections and no mathematical gap. Binding
+integration `1b30c798...` absorbs nonreduced infinity and both projective and
+affine coefficient basepoints whenever the exact quadratic incidence is
+smooth; together with `AL3-CLOSED` it excludes every smooth fixed trace-zero
+presentation of coefficient maximum at most two in the promoted proper
+cubic-block first-leg scope. Stop all further work inside that cell.
+
+The independent one-attachment theorem is now an exact structural client:
+one physical attachment forces three infinity sections `(b,a,a)`, pure-power
+boundary discriminant of degree `4d`, exact affine discriminant degree `4d`,
+fixed-algebra trace-zero basis minimality, and boundary order index `2d`.
+Do not treat it as an existence result, surface conductor statement, or a
+singular theorem. Continue the already active normal-singular/ADE lane and
+the orthogonal nonnormal/basis-coverage lane without waiting on one another.
+Their first task is theorem/no-go reduction, not computation. No heavy local
+job is licensed; AWS remains idle but is the required venue for any later
+source-reviewed heavy packet. Peer billing limits are unchanged; GPT-5.5
+xhigh remains available. Web backstop remains `2026-08-31T03:40Z`;
+holds/human gates: none.
