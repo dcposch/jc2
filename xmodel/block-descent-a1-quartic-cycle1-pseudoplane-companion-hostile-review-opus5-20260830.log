@@ -1,0 +1,19 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/block-descent-a1-quartic-cycle1-pseudoplane-companion-hostile-review-opus5-20260830.md` (840 lines, standalone `<!-- BODY-END -->`, no seal). No other repository file touched.
+
+## Custody
+All ten charged hashes reproduce. Seal reproduces: file 18423 bytes, body 18090 bytes ending exactly at line 499, `sha256 = c21f168a…cad2a` matching artifact and in-file seal; frozen basis `4393243b` exists. No `CUSTODY_FAIL`.
+
+## Disposition: CONFIRM_WITH_CORRECTIONS
+
+The mathematics reproduces. I rederived the Euler ledger independently (`e(U)=1`, `e(T)=−3`, `e(W)=4`, `e(Y)=2`, and the whole `(0.1)` trichotomy), reran the replay (stdout `f239c255…`, payload `328df8df…` identical in all three modes; mutation rejected exit 1; 0 `assert`), and recomputed the group theory with my own implementation. I found no contradiction — the horn is genuinely open.
+
+**Decisive new finding.** Miyanishi Lemma 2.5.2 applies verbatim to the survivor `U`, so an étale surjection `A² → U` of degree exactly `μ` always exists. Therefore the first leg is *free*: the row is nonempty iff the pair `(U, π)` exists, and any such pair composes to a Keller map of topological degree `4μ ≥ 8` — the survivor *is* a counterexample. This refutes §7's claim that the polynomial pair (7.3) is "genuinely new first-leg datum," collapses the producer's three successors to one (`PSEUDOPLANE-MAP`), and widens that successor's blast radius to every proper-block row with `C=A¹, Q=0` at any rank.
+
+**Second refutation.** Successor `R4-CYCLE-1-EXTENSION` is dead as a route: `O(U)*=C*` pins the defining function of `T_i` to `c·π*b_i` up to a scalar, whose valuation along `R_i` is always 2, never 0.
+
+**Obligation 6, computed decisively:** sign/determinant, cubic resolvent, and their combination all fail to determine the companion parity in 36/36 ordered pairs — the transporter set is a torsor under `C(a) ≅ Z/2×Z/2` with parity as a surjective character.
+
+**Primary-source work** (narrow checks; Miyanishi fetched to `/tmp`, hash matching the charged cubic funnel's recorded value): Lemma 1.4.16 and 1.4.3 verified verbatim and confirmed degree-free; the `Pic(U)=Z/μ⟨Φ⟩` generator claim needs Lemma 1.4.3(3), not Corollary 1.4.4; Theorem 2.5.10's typed conclusion is `r ≡ 2 (mod d)`, not `r = 2` — a source erratum the charged cubic funnel inherits. In Żołądek: the `td≤5` appeal is over-charged (Domrina–Orevkov degree ≤4 suffices, cited on p. 432), and Lemma 6.2 (p. 457) independently *predicts* the omitted node as a self-intersection of the non-properness curve, killing that line of attack.
+
+Also flagged: an uncharged Kambayashi–Wright step, a vacuous class-lattice block in the replay (it asserts properties of literals it wrote itself), the §6 curve control being sampled rather than proved (I verified it symbolically), and the `S₄` monodromy tracing to a charged file absent from the producer's frozen-input list.
