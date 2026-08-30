@@ -7,6 +7,48 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 03:46Z — affine-linear cubic closure; rational-forest nonlinear gate)
+
+- **Exploit the first genuinely closed cubic subfamily, but keep the basis
+  firewall.** Different-model review now closes every proper cubic block whose
+  Miranda coefficients are affine-linear in some fixed global trace-zero
+  basis. The proof combines the Galois/nonmonogenic block theorem with exact
+  cone/incidence geometry and the log first-leg obstruction. This is a real
+  block-side theorem, not primitivity: coefficient degree is not invariant
+  under basis change, and quadratic or higher coefficients remain.
+- **Push the nonlinear route through its finite exceptional boundary, not a
+  generic coefficient sweep.** The rational-forest theorem is promoted: any
+  resolved target boundary admitting a dominant rational `A^2` first leg has
+  only rational components and forest dual graph. It excludes generic
+  quadratic infinity by genus two. More generally, it excludes a fixed-basis
+  incidence closure that is a smooth irreducible class-`dA+3B` hypersurface
+  of literal fibre degree three, for `d>=3`, by positive `p_g`. The reduced
+  `(2,3)` survivor is provisionally classified by
+  `2=G+B+sum(delta-r+1)`: seven of nine factor partitions remain, including
+  irreducible cuspidal cases. Review that finite classification in the
+  background, then add the ramification support on each surviving stratum.
+  Keep nonreduced infinity, projective coefficient basepoints, singular
+  closure, and both target/fibre degree drops as separate clients.
+- **At pair-square, prove geometry rather than reverse specialization.** A
+  canonical ancestry surjection would give the desired augmentation injection
+  and local excess `w_i-b_i` formally, even for unequal fibres. Ordinary
+  specialization points generic-to-special and can merge points, so it does
+  not supply the required special-to-generic map. Test one actual Section-7
+  strict-henselian conductor stalk for unique ancestry, braid/swap descent,
+  and blowup invariance before attempting a global event graph.
+- **Preserve independent occurrence and K00 fronts.** None of the block or
+  log theorems proves that a hypothetical map enters a registered formal
+  source packet. Keep the global occurrence/coverage arrow first. K00 G13 is
+  the next literal boundary gate on the fresh `n=5` survivors; source
+  completeness and all-depth attainment remain separate even if that finite
+  prefix dies.
+- **Use the quiet external perimeter as intelligence, not a detour.** The
+  scheduled sweep finds no external JC2 resolution. A missed August-25 public
+  F2 note names two infinity charts and missing values `q18` and `B5Q`; add a
+  typed coordinate crosswalk to the next ideation round, but launch no broad
+  CAS from an artifact-free prose frontier. Reviews stay asynchronous;
+  heavy/uncertain computation remains AWS-only.
+
 ## Superseding strategy overlay (2026-08-30 03:00Z — no two-block quotient; log-positive first leg)
 
 - **Keep the global occurrence/coverage arrow first.** The strongest exact

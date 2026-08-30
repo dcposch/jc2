@@ -5,6 +5,78 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **AFFINE-LINEAR MIRANDA CUBIC BLOCKS CLOSED AT FIXED-BASIS SCOPE
+> (2026-08-30 03:46Z).** The bounded Fable rerun has clean schema-v2 custody
+> under the Seatbelt boundary and returns `CONFIRM_WITH_CORRECTIONS`. Its raw
+> report body is `9d131643...`; the sealed report is `04a40158...`. Binding
+> integration
+> `c8dee3199ecfaf73b6debedea625346a11babbe42082cff5bff049f8585763c2`
+> (6,641-byte body `14d47db4...`) promotes the exact theorem:
+>
+> ```text
+> hypothetical proper cubic intermediate block
+> + some global trace-zero basis with deg(a,b,c,d)<=1 in (f,g)
+> => contradiction.
+> ```
+>
+> The review independently repairs every formerly load-bearing gap: a common
+> coefficient-zero line is incompatible with normality at its generic DVR;
+> an isolated zero gives the twisted-cubic cone through the affinization of
+> `Tot O(-3)`; the no-common-zero algebra is the smooth incidence torsor; a
+> reducible ramification support produces a forbidden unit; and an
+> irreducible support is `P1-Crit(rho)`, with at least two missing fibres, so
+> the promoted log theorem contradicts the dominant first leg. Coefficient
+> degree is a property of the chosen basis. No nonlinear cubic conclusion,
+> basis-minimization theorem, block existence, primitivity, or JC2 statement
+> is promoted.
+
+> **RATIONAL-FOREST FIRST-LEG OBSTRUCTION PROMOTED; GENERIC QUADRATIC
+> MIRANDA PRESENTATIONS EXCLUDED (2026-08-30 03:46Z).** Opus review body
+> `40841431...` (sealed full file `24b61d50...`) returns
+> `CONFIRM_WITH_CORRECTIONS`. Binding integration
+> `6a8558e42a67f1ec5c8bcf12321b6e6805b30a570eba17862c6e7e24cd631b08`
+> (6,810-byte body `9c650122...`) promotes, for a smooth SNC completion
+> `(X,D)` of `U`,
+>
+> ```text
+> barP_1(U)=p_g(X)+sum_i g(D_i)+b1(Gamma_D)-rank(partial),
+> rank(partial)<=min(sum_i g(D_i)+b1(Gamma_D),q(X)).
+> ```
+>
+> A dominant rational `A2 --> U` forces `p_g=q=barP_1=0`; hence all resolved
+> boundary components are rational and the dual multigraph is a forest. The
+> result is monotone under shrinking `U`. For a ruled-surface section and
+> irreducible multisection it sharpens to
+>
+> ```text
+> barP_1=g+max(r-1,0)+sum_(off-infinity q)(m_q-1).
+> ```
+>
+> Therefore a smooth irreducible coefficient-degree-two Miranda incidence
+> with smooth irreducible bidegree-`(2,3)` infinity curve is excluded already
+> by `barP_1=2`; fixed-basis presentations whose incidence closure is a
+> smooth irreducible class-`dA+3B` hypersurface of literal `[X:Y]`-degree
+> three, with `d>=3`, are excluded by `p_g=(d-1)(d-2)>0`. The former nominal
+> value `18` remains
+> conditional on deleting a reduced smooth ramification curve and eight
+> distinct transverse contacts and is not promoted. Sealed successor
+> `d783cecf...` gives an unreviewed exact classification of the reduced
+> `(2,3)` rational-forest locus; its seven-type campaign use remains
+> provisional pending a different-model review. Nonreduced, projective-
+> basepoint, singular-closure, and degree-drop strata are not closed.
+
+> **PAIR-SQUARE ANCESTRY PACKET REMAINS PROVISIONAL THROUGH FINITE-SET
+> REVIEW AND SURFACE REALIZATION (2026-08-30 03:46Z).** Provisional sealed
+> packet `73cc05a5...` supplies an exact finite-set lemma, still unpromoted
+> pending different-model review: any surjection of finite sheet sets
+> `p:S_special->S_generic` gives a canonical orthogonal injection of reduced
+> permutation modules with cokernel dimension `|S_special|-|S_generic|`.
+> This is finite-set algebra only. Ordinary specialization points the other
+> way and may merge sheets, so neither the reviewed status of the lemma nor
+> the conductor ancestry map and its braid/swap and blowup invariance is
+> inferred. `ANCESTRY-STALK` remains
+> unproved; no excess sheaf, event graph, QCS, or JC2 claim is promoted.
+
 > **EXTERNAL REVIEW PATH AND PROMPT CUSTODY HARDENED
 > (2026-08-30 03:12Z).** All adapters now run below a macOS Seatbelt profile
 > that denies direct and symlink-resolved reads/writes of the excluded nested

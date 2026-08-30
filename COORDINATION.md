@@ -1003,3 +1003,37 @@ checks pass. Receipt schema stays v2.
 Commit and push this systems atom before launching the compact AL3 review, so
 the review basis itself contains the enforcement. No heavy job is active;
 AWS remains idle/unclaimed and heavy or uncertain CAS stays AWS-only.
+
+Allocation refresh (2026-08-30 03:46Z): both first hardened mathematical
+lanes closed cleanly. Fable's compact hostile review promotes `AL3-CLOSED`:
+no proper cubic intermediate block has affine-linear Miranda coefficients in
+any fixed global trace-zero basis. Opus independently promotes the broader
+rational-forest first-leg theorem and the generic quadratic infinity
+exclusion. A Sol sublane has a sealed finite classification of the reduced
+`(2,3)` forest locus (seven viable factor types, two impossible); it is
+provisional until a fresh different-model review on the next committed basis.
+Keep nonlinear/basis-minimal cubic closure, nonreduced infinity, projective
+basepoints, singular closure, and degree-drop strata open.
+
+Pair-square now has an exact but review-gated finite-set consumer: a genuine
+special-to-generic ancestry surjection would canonically produce the local
+augmentation cone of length `w-b`. Standard specialization has the opposite
+direction, so the scheme-level `ANCESTRY-STALK` construction remains the
+gate. Do not start the event graph or infer QCS from dimensions.
+
+The K00 G13 sublane reports an exact provisional kill of every fresh `n=5`
+G12 survivor via a new row-six quartic and a second cokernel combination. It
+is writing a sealed packet with an old-pass/new-fail control for the following
+checkpoint; do not rush it into this one and do not promote before independent
+carry/source review. Even confirmation closes only the declared
+`e=2,m=2,h10=1` finite child, not occurrence, arcs, or the source atlas.
+
+The scheduled web sweep reset the backstop to `2026-08-31T03:40Z`. It found
+no external plane resolution and only one missed August-25 F2 interface note;
+crosswalk its `q18`/`B5Q` values during ideation without launching broad CAS.
+The combined affine-linear closure, nonlinear finite classification, and G13
+provisional kill are significant news. Immediately after this atomic
+commit/push, launch the classification review and begin a fresh whole-
+portfolio ideation wave; background review must not block independent new
+work. No heavy campaign job is currently licensed, AWS is idle/unclaimed,
+and all heavy or uncertain CAS remains AWS-only. Holds/human gates: none.

@@ -7,6 +7,51 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **AFFINE-LINEAR CUBIC INTERMEDIATE BLOCKS ARE CLOSED AT EXACT
+> BASIS-DEPENDENT SCOPE (03:46Z).** The compact rerun completed under the new
+> OS boundary with clean custody. Fable verdict `CONFIRM_WITH_CORRECTIONS`
+> supplies the missing normal-DVR, twisted-cubic affinization, incidence,
+> critical-direction, and log-theorem bridges. Binding integration
+> `c8dee319...`/body `14d47db4...` proves: no proper cubic intermediate block
+> of a hypothetical Keller map can have all four Miranda coefficients
+> affine-linear in any fixed global trace-zero basis. Coefficient degree is
+> not basis-invariant; nonlinear cubic blocks, block existence, primitivity,
+> and JC2 remain open.
+
+> **RATIONAL-FOREST FIRST-LEG THEOREM PROMOTED; QUADRATIC INFINITY REDUCED
+> TO SEVEN DEGENERATE TYPES (03:46Z).** Opus independently reconstructs the
+> residue/normalization formula and returns `CONFIRM_WITH_CORRECTIONS`.
+> Binding integration `6a8558e4...`/body `9c650122...` promotes that any
+> resolved boundary receiving a dominant rational `A^2` first leg has only
+> rational components and forest dual graph. Generic quadratic Miranda
+> incidence is excluded already by its genus-two infinity curve; the earlier
+> nominal `bar-P_1=18` is conditional and unneeded. A sealed successor
+> `d783cecf...`/body `b76971e6...` provisionally classifies reduced
+> bidegree-`(2,3)` forests by `2=G+B+sum(delta-r+1)`: seven of nine factor
+> partitions occur, including irreducible two-cusp and one-`A4` cases, while
+> two are impossible. That finite classification awaits a different-model
+> review; nonreduced, basepoint, and degree-drop strata stay separate.
+
+> **PAIR-SQUARE STALK NARROWED TO ONE GEOMETRIC ANCESTRY THEOREM
+> (03:46Z).** Sealed provisional packet `73cc05a5...`/body `c92f9778...`
+> proves the exact finite-set layer: an equivariant ancestry surjection from
+> `w` special sheets to `b` generic ancestors canonically splits augmentation
+> modules and has cokernel dimension `w-b`, without equal fibre sizes. It
+> explicitly warns that ordinary specialization runs in the opposite
+> direction and does not construct that surjection. `ANCESTRY-STALK`—the
+> scheme-level construction and blowup/descent proof on an actual Section-7
+> conductor—is the sole remaining local geometric gate. No QCS conclusion is
+> promoted.
+
+> **SCHEDULED WEB SWEEP FINDS NO EXTERNAL JC2 RESOLUTION (03:40Z).** Sealed
+> sweep `bb55f9a5...`/body `78f9a8af...` finds the arXiv frontier unchanged.
+> It records one previously missed August-25 Strinz F2 note that narrows a
+> public `(75,125)` programme to two infinity charts and two missing
+> coefficients, while explicitly making no exclusion, map, or properness
+> claim. Those coefficients enter the next ideation crosswalk; no priority or
+> compute launch changes. Next quiet web backstop is
+> `2026-08-31T03:40Z`.
+
 > **EXTERNAL REVIEW BOUNDARY IS NOW OS-ENFORCED (03:12Z).** `ops/lane.sh`
 > wraps every adapter descendant in macOS Seatbelt, denying direct and
 > symlinked access to the excluded nested workspace and writes to immutable

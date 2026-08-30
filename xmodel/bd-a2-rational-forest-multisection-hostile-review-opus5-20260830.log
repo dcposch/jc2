@@ -1,0 +1,26 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written: `xmodel/bd-a2-rational-forest-multisection-hostile-review-opus5-20260830.md` (23,670 bytes, under cap; one standalone `<!-- BODY-END -->`, no seal block).
+
+**Verdict: CONFIRM_WITH_CORRECTIONS.**
+
+| Item | Verdict |
+|---|---|
+| 1 residue/normalization/duality `barP1=p_g+τ−rank ∂` | CONFIRMED |
+| 2 unirationality → rational forest | CONFIRM_WITH_CORRECTIONS |
+| 3 multisection bound `g+max(r−1,0)` | CONFIRMED, upgraded to equality |
+| 4 `A²` countercontrol, (3.1), `λ_i=i−1` | CONFIRM_WITH_CORRECTIONS |
+| 5 `K=(d−3)A+B`, `p_g=(d−1)(d−2)` | CONFIRMED, one exception missing |
+| 6 `d=2`: 2, 9, 8, 18 | CONFIRM_WITH_CORRECTIONS |
+| 7 safe consequence / nonclaims | CONFIRMED |
+
+Main findings:
+
+- **Item 3 upgraded.** By direct vertex/edge counting over the exceptional trees I derived the exact identity `τ(H_res) = Σg(H̃_i) + Σ_q(m_q−1) − s + c`, which turns the producer's bound into `barP₁ = g + max(r−1,0) + Σ_{q∉D_∞}(m_q−1)`. All audited configurations (several branches at one point, mutually tangent branches, paths sharing exceptional vertices, `r=0`, parallel edges) return `r−1`. The `n=1` two-section recovery `#S−1` matches the coordinator exactly. The producer's equality clause ("smooth away from the contacts") is too strong and contradicts its own next sentence — the right condition is unibranch off `D_∞`.
+- **Item 4 convention bug.** The displayed map is correct only under `z=Z₁/Z₀`. Under `z=Z₀/Z₁` it lands on the deleted curve (`(w,t)=(0,0)`, and `(2,−8/63)` for `k=3`). Notational, but load-bearing for a "sharp countercontrol". Also, `A₂` cusp exponents are `λ=(0,0,1)`, not `(0,1,2)`.
+- **Item 6, the weakest link.** All six numbers reproduce independently (`A²=3`, `A·B=2`; `p_a=2,9`; `H·R=8`; `barP₁=18`), but `18` is conditional on a hypothesis the document never states — that `R_π` is deleted from the target. That comes from the unpromoted `AL3-REDUCE` lane. The unconditional number is `2`, from `H_∞` alone, which already fires the gate. Separately, `p_a` is fed into (1.3) where geometric genus is required.
+- **Item 5 missing exception.** A drop in `[X:Y]`-degree to bidegree `(d,1)` gives `p_g = 0` for every `d`, so "cubic in `[X:Y]`" is load-bearing and absent from the exception list.
+- **Free strengthening:** a dominant *rational* map from `A²` suffices, and `barP_n` is monotone under shrinking `U` — the latter is what silently licenses using `H_∞` alone.
+
+**Cheapest next gate:** the defect identity `p_a(H) − τ(H_res) = Σ_q(δ_q − m_q + 1) ≥ 0` (zero exactly at ordinary nodes) makes step (1) finite: a reduced `(2,3)` boundary has rational-forest resolution iff all components are rational and the total non-nodal delta-excess is exactly `2`. That enumerates by hand (`A₂+A₂`, one `A₄`, tacnode+cusp, reducible analogues) before paying for the ramification retest or (3.1).
+
+No `charge_basis` line: this review asserts no exit price.
