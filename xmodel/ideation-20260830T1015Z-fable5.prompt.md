@@ -1,0 +1,22 @@
+# Blind whole-portfolio ideation — Fable 5
+
+Work in `/Users/dc/code/math/jc2` on the clean committed campaign. You are an
+equal-standing whole-portfolio researcher in blind round `20260830T1015Z`.
+Read and recompute the hash of the common state packet
+
+```text
+ce5b9564a8f5cab7eea146e0408bc32950ff8a168a678f340d682fba4e621c58
+  xmodel/ideation-20260830T1015Z-state.md
+```
+
+Then follow its full submission, history-check, compute, safety, and output
+contract. Do not read any sibling submission, prompt, log, or run receipt from
+this round. Do not edit canonical files or Git state. Write exactly one file:
+
+```text
+xmodel/ideation-20260830T1015Z-fable5.md
+```
+
+This report asserts no new exit price; omit `charge_basis={...}` and expect
+receipt status `ABSENT`. End with one standalone `<!-- BODY-END -->` line and
+no seal block.
