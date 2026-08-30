@@ -1,0 +1,16 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Rereview complete. **All six charged items come back CONFIRMED** — no gaps, no refutations — and the report is banked at `xmodel/bd-a2-d3-sectioned-global-control-ramification-obstruction-hostile-rereview-fable5-20260830.md` (single file, standalone `<!-- BODY-END -->`, no seal, no `charge_basis` line; receipt ABSENT as expected).
+
+**Custody.** All four charged SHA-256 hashes verified byte-exact, plus the artifact's internal body hash (first 15960 bytes → `cc6378…62a73`) recomputed and matched.
+
+**Itemized verdicts.**
+1. **CONFIRMED** — Finite flat degree 3, integral, normal. I machine-checked the singular census in all six affine charts (the source replay only checks the t=0 slice): exactly the level-two point p₀ and the A₂ at infinity, with `w³+s²+x²` an exact identity. One note: "primitive" needed the one-line `gcd(S³,T³)=1` check, supplied.
+2. **CONFIRMED** — I rederived `V²=U³−t⁴` from scratch via the flex section and verified the reduction identity by machine (scale `−t³`, det `−t⁵`). That forces `c6_plane=cS²T¹⁶`, `Δ_plane=c′S⁴T³²` *exactly*, giving CFS level exactly 2 at t=0 and 0 elsewhere, hence row `m=1, T=2t₀, D=−2F₀, ρ≥12`. Independent sharpenings: ρ(Y)=16, K²=−6, and `D=−2F₀` re-proved via `K_S=−F`; the Euler ledger closes (6 vertical (−1)-contractions, all over t=0, 13→7=IV*).
+3. **CONFIRMED** — Quasismooth, rational central curve, four one-branch arms, tree, p_g=2. I completed the census the source leaves qualitative: central (−3) curve, arms **A₅ + 3×A₂**, with the Seifert integrality check `b=3` closing.
+4. **CONFIRMED** — Independent second elimination in the z=1 chart reproduces `a⁴(3−2a)³=−12t⁸` with `a=(x+tz)/x`; both (4.7a) directions verify exactly; genus two established **three** independent ways (a-line RH, Newton polygon, and a new t-line RH with all places: (1,1,1,1,3) over 0, e=7 over ∞, eight simple branch fibres at `7⁷t⁸=−2²3⁹`, numerically corroborated).
+5. **CONFIRMED, conditional exactly as charged** — Under the global second-leg identification, the genus-two strict transform is forced into the strict-SNC boundary of a completion of `g1(A²)`, contradicting the promoted morphic rational-forest theorem. The interface fit with the forest coordinator's (4.1) is verbatim, and the source correctly refuses local-algebra and rational-domination shortcuts.
+6. **CONFIRMED** — Embedded replay rerun verbatim, PASS; the algebra/geometry split is honest; pricing is properly bounded (positive control + control-specific conditional exclusion; no universal row theorem, no Keller map, no JC2).
+
+**Maximum-safe theorem** and **cheapest universal successor** are stated in the report: the successor extends the hodge-coordinator §7 invariant gate to the `m=1, T=2t` row (exact level-two divisibilities plus the principal-open upper disjunction on the literal open), pricing each survivor's residual ramification genus through the forest theorem — with the explicit caveat that this one witness is a floor, not row-wide attainment.
+
+Nothing else was touched: charged inputs, ledgers, Git state, and `jc2-lean` are unmodified, and no sibling prompts/logs/reports were read.
