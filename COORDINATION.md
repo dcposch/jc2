@@ -1247,3 +1247,22 @@ successor continue independently. No heavy computation is licensed; use AWS
 only if a reviewed finite enumeration later exceeds desk scale. The external
 GPT-5.5 reviewer remains available; peer billing limits are unchanged. Web
 backstop remains `2026-08-31T03:40Z`; holds/human gates: none.
+
+Allocation refresh (2026-08-30 06:23Z): GPT-5.5 xhigh confirms the nonnormal
+quadratic content-cone dichotomy with corrections and no mathematical gap.
+Binding integration `45685cce...` proves the affine incidence normal and
+reduces every projective nonnormal quadratic presentation to the sole form
+`Phi^h=Q^2L+TQS+T^2R`, with moving double `(1,1)` infinity and intrinsic
+`deg Delta<=6`. Stop broad nonnormal factor searches. Continue the active
+normalization/conductor lane on the blowup `(T,Q)`, the actual finite
+normalization, conductor preimage, and square/split/connected degenerations of
+the quartic `S_C^2-4L_C R_C`. A genus-one candidate counts only after it is
+proved to be a component of the resolved first-leg boundary.
+
+The normal-singular ADE-decorated lane remains independent and active. The
+quadratic portfolio now has two sharply typed geometric frontiers rather than
+an open smooth/nonnormal census: ADE-decorated normal singularity, and the one
+moving-double-section conductor form. Basis-orbit coverage across quadratic
+presentations remains separate. No heavy computation is licensed; use AWS
+only for a later reviewed finite enumeration that exceeds desk scale. Web
+backstop remains `2026-08-31T03:40Z`; holds/human gates: none.

@@ -5,6 +5,37 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **NONNORMAL QUADRATIC COMPACTIFICATIONS REDUCED TO ONE EXACT NORMAL FORM
+> (2026-08-30 06:23Z).** GPT-5.5 xhigh review body `b541732a...` (sealed full
+> `3b8ba81b...`) returns `CONFIRM_WITH_CORRECTIONS` after independently
+> checking the Miranda content representation, affine/projective `R_1`, the
+> graded genus-two cone, all repeated bidegrees, nonmonogenic/unit arguments,
+> and radial discriminant degree. Transactional binding integration
+> `45685cce7fa934a9adfd45e96a02410a18559314b20a132ba4dec2c1a7e0ac6d`
+> (11,990-byte body `f3f2ecff...`, manifest `0a7c64cc...`) promotes in the
+> exact proper cubic-block, dominant-first-leg, chosen quadratic trace-zero
+> basis scope,
+>
+> ```text
+> I_B=(a,b,c,d) is basis-invariant and V(I_B) is finite;
+> affine nonnormality along E_q iff I_B subset m_q^2;
+> that quadratic content cone has Proj genus 2 and is impossible;
+> hence X_aff is normal;
+> repeated constant sections and vertical fibres at infinity are impossible;
+> Xbar nonnormal => H=2C+L and Phi^h=Q^2L+TQS+T^2R,
+>   with Q irreducible (1,1), L=(0,1), and deg Delta<=6.
+> ```
+>
+> The cone contradiction is a function-field map from a rational surface to a
+> genus-two curve. The vertical case uses the actual inclusion
+> `B subset C[x,y]` to get constant units, then forces `D=C[t]` and forbidden
+> monogenicity. The direction-dependent fibre change in the discriminant
+> proof is independent of radial scale and cannot hide higher degree. Infinity
+> data remain presentation-dependent. The formal blowup equation
+> `W^2L+WS+R=0`, its quartic discriminant, normalization/conductor, and any
+> genus-one forest contradiction remain unproved successors; no map or JC2
+> conclusion follows.
+
 > **NORMAL SINGULAR QUADRATIC INCIDENCE REDUCED TO DU VAL DATA IN AN
 > EXACT `D9(-1)` AMBIENT LATTICE (2026-08-30 06:20Z).** GPT-5.5 xhigh review
 > body `7b7b0cdb...` (sealed full `79db3650...`) returns
