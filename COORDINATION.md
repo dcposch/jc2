@@ -990,3 +990,16 @@ the first `e=3,m=2` review launch returned HTTP 402 before model work because
 the Grok Build balance was exhausted; record both as
 `UNAVAILABLE_NO_MODEL_WORK`. Web and quiet-round clocks remain
 `2026-08-30T03:40Z` and `2026-08-30T12:35Z`. Holds/human gates: none.
+
+Systems refresh (2026-08-30 03:12Z): the queued adapter boundary is complete.
+`ops/lane.sh` now requires macOS Seatbelt and launches every external adapter
+and descendant beneath a profile that denies direct and symlink-resolved
+reads/writes of the excluded nested workspace. It separately denies writes to
+the private prompt-custody directory, whose snapshots and composed prompt are
+mode `0400`, and denies the model any write to its `.run.v2` receipt. Receipts
+pin pre/post launcher and generated-profile hashes. The full operations suite
+passes 50/50 in ordinary, `-O`, and `-OO` modes; all adapter shell syntax
+checks pass. Receipt schema stays v2.
+Commit and push this systems atom before launching the compact AL3 review, so
+the review basis itself contains the enforcement. No heavy job is active;
+AWS remains idle/unclaimed and heavy or uncertain CAS stays AWS-only.

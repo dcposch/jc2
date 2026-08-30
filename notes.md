@@ -14301,3 +14301,25 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Web clock remains `2026-08-30T03:40Z`; quiet whole-portfolio deadline is
   `2026-08-30T12:35Z` unless significant news fires sooner. Holds/human gates:
   none.
+
+## 2026-08-30 03:12Z SYSTEMS EVENT — EXTERNAL LANES RECEIVE AN OS BOUNDARY
+
+- `ops/lane.sh` now runs every adapter and descendant beneath macOS Seatbelt.
+  The profile denies direct and symlink-resolved reads/writes of the excluded
+  nested workspace without resolving or inspecting that workspace during
+  setup. It fails closed when `/usr/bin/sandbox-exec` is absent.
+- Prompt, fallacy appendix, charge validator, composed prompt, and profile are
+  mode `0400`, and the model process cannot write anywhere in their temporary
+  custody directory. It also cannot overwrite its `.run.v2` receipt; pre/post
+  hashes now cover the launcher and generated sandbox profile. Receipt schema
+  stays v2.
+- Focused direct/symlink, prompt-mutation, and receipt-tampering controls pass.
+  The complete operations suite passes 50/50 under ordinary, `-O`, and `-OO`
+  Python; shell syntax passes for the lane launcher and all four adapters.
+  Sealed systems integration records the tested threat model and its limits.
+  No mathematics is promoted by this event.
+- Immediate queue after the systems commit/push: run a compact Fable hostile
+  review of the affine-linear cubic reduction, run Opus on the rational-forest
+  producer in parallel, and let provisional nonlinear classification continue
+  without waiting for those verdicts. Web and quiet-round clocks remain
+  `2026-08-30T03:40Z` and `2026-08-30T12:35Z`.

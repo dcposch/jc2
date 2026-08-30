@@ -5,6 +5,20 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **EXTERNAL REVIEW PATH AND PROMPT CUSTODY HARDENED
+> (2026-08-30 03:12Z).** All adapters now run below a macOS Seatbelt profile
+> that denies direct and symlink-resolved reads/writes of the excluded nested
+> workspace and denies model-side writes to the temporary prompt-custody
+> directory. Prompt, appendix, validator, composed prompt, and profile are
+> mode `0400`; the model also cannot overwrite its `.run.v2` receipt. Absence
+> of `sandbox-exec` fails closed. Receipts now pin pre/post launcher and
+> sandbox-profile hashes. The full operations suite passes 50/50 under
+> ordinary, `-O`, and `-OO` Python, and all adapter shell syntax checks pass.
+> Receipt schema remains v2. Sealed integration
+> `83f52962cf6b0869b305d426c7e43119b3b53a62a0f6e27fb02299cbdaa0e162`
+> (3,549-byte body `101de3a7...`) records the threat model and limitations.
+> This is systems evidence only and promotes no mathematical claim.
+
 > **LOG-KODAIRA FIRST-LEG OBSTRUCTION — EXACT THEOREM PROMOTED;
 > AFFINE-LINEAR CUBIC APPLICATION STILL CONDITIONAL (2026-08-30 02:28Z).**
 > Sol producer `cc836852...` receives Opus hostile reconstruction

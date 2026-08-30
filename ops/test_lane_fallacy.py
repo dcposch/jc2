@@ -61,6 +61,40 @@ printf '%s\n' "$1" > "$FAKE_PROMPT_PATH"
 if [ "${FAKE_MODE:-}" = mutate_appendix ]; then
   printf '\nmutation during adapter run\n' >> FALLACY-v2.md
 fi
+if [ "${FAKE_MODE:-}" = probe_custody ]; then
+  if chmod 600 "$1" 2>/dev/null && printf '\nmodel-side mutation\n' >> "$1" 2>/dev/null; then
+    printf 'ALLOWED\n' > "$FAKE_BOUNDARY_RESULT"
+  else
+    printf 'DENIED\n' > "$FAKE_BOUNDARY_RESULT"
+  fi
+fi
+if [ "${FAKE_MODE:-}" = probe_excluded ]; then
+  direct_read=DENIED
+  alias_read=DENIED
+  direct_write=DENIED
+  alias_write=DENIED
+  if value=$(cat "$FAKE_EXCLUDED_TREE/secret.txt" 2>/dev/null); then
+    direct_read="ALLOWED:$value"
+  fi
+  if value=$(cat "$FAKE_EXCLUDED_ALIAS/secret.txt" 2>/dev/null); then
+    alias_read="ALLOWED:$value"
+  fi
+  if printf 'model write\n' > "$FAKE_EXCLUDED_TREE/direct-write.txt" 2>/dev/null; then
+    direct_write=ALLOWED
+  fi
+  if printf 'model write\n' > "$FAKE_EXCLUDED_ALIAS/alias-write.txt" 2>/dev/null; then
+    alias_write=ALLOWED
+  fi
+  printf '%s\n' "$direct_read" "$alias_read" "$direct_write" "$alias_write" \
+    > "$FAKE_BOUNDARY_RESULT"
+fi
+if [ "${FAKE_MODE:-}" = probe_receipt ]; then
+  if printf 'tampered=yes\n' > "xmodel/$FAKE_TAG.run.v2" 2>/dev/null; then
+    printf 'ALLOWED\n' > "$FAKE_BOUNDARY_RESULT"
+  else
+    printf 'DENIED\n' > "$FAKE_BOUNDARY_RESULT"
+  fi
+fi
 mkdir -p xmodel
 if [ -n "${FAKE_REPORT_SOURCE:-}" ]; then
   cp "$FAKE_REPORT_SOURCE" "xmodel/$FAKE_TAG.md"
@@ -85,6 +119,7 @@ fi
         prompt.write_text("Investigate the bounded lane.\n", encoding="utf-8")
         capture = root / f"{tag}.captured"
         prompt_path = root / f"{tag}.prompt-path"
+        boundary_result = root / f"{tag}.boundary-result"
         env = os.environ.copy()
         env.update(
             {
@@ -92,6 +127,9 @@ fi
                 "FAKE_PROMPT_PATH": str(prompt_path),
                 "FAKE_TAG": tag,
                 "FAKE_MODE": mode,
+                "FAKE_BOUNDARY_RESULT": str(boundary_result),
+                "FAKE_EXCLUDED_TREE": str(root / "jc2-lean"),
+                "FAKE_EXCLUDED_ALIAS": str(root / "excluded-alias"),
             }
         )
         if report is not None:
@@ -134,6 +172,15 @@ fi
         self.assertEqual(run["fallacy_sha256"], sha256(appendix))
         self.assertEqual(run["fallacy_bytes"], str(len(appendix)))
         self.assertEqual(run["model_prompt_sha256"], sha256(model_prompt))
+        self.assertEqual(run["launcher"], "ops/lane.sh")
+        self.assertEqual(
+            run["launcher_sha256"], sha256((root / "ops" / "lane.sh").read_bytes())
+        )
+        self.assertEqual(run["post_launcher_sha256"], run["launcher_sha256"])
+        self.assertEqual(run["sandbox_enforcement"], "MACOS_SEATBELT")
+        self.assertEqual(
+            run["post_sandbox_profile_sha256"], run["sandbox_profile_sha256"]
+        )
         self.assertEqual(run["post_fallacy_sha256"], run["fallacy_sha256"])
         self.assertEqual(run["post_model_prompt_sha256"], run["model_prompt_sha256"])
         self.assertEqual(run["charge_basis_status"], "ABSENT")
@@ -157,6 +204,59 @@ fi
         self.assertIn("hashed lane input changed during execution", log)
         ephemeral_prompt = Path(prompt_path.read_text(encoding="utf-8").strip())
         self.assertFalse(ephemeral_prompt.parent.exists())
+
+    @unittest.skipUnless(Path("/usr/bin/sandbox-exec").is_file(), "macOS sandbox required")
+    def test_prompt_snapshot_is_readable_but_model_side_immutable(self) -> None:
+        root = self.make_repo()
+        result, prompt, capture, prompt_path = self.run_lane(
+            root, "custody", mode="probe_custody"
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual((root / "custody.boundary-result").read_text(), "DENIED\n")
+        self.assertEqual(
+            capture.read_bytes(),
+            prompt.read_bytes() + b"\n\n" + SOURCE_APPENDIX.read_bytes(),
+        )
+        run = parse_run(root / "xmodel" / "custody.run.v2")
+        self.assertEqual(run["post_model_prompt_sha256"], run["model_prompt_sha256"])
+        self.assertEqual(run["final_status"], "DONE")
+        ephemeral_prompt = Path(prompt_path.read_text(encoding="utf-8").strip())
+        self.assertFalse(ephemeral_prompt.parent.exists())
+
+    @unittest.skipUnless(Path("/usr/bin/sandbox-exec").is_file(), "macOS sandbox required")
+    def test_excluded_tree_denies_direct_and_symlinked_reads_and_writes(self) -> None:
+        root = self.make_repo()
+        excluded = root / "jc2-lean"
+        excluded.mkdir()
+        (excluded / "secret.txt").write_text("private fixture\n", encoding="utf-8")
+        (root / "excluded-alias").symlink_to(excluded, target_is_directory=True)
+
+        result, _, _, _ = self.run_lane(root, "excluded", mode="probe_excluded")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(
+            (root / "excluded.boundary-result").read_text().splitlines(),
+            ["DENIED", "DENIED", "DENIED", "DENIED"],
+        )
+        self.assertFalse((excluded / "direct-write.txt").exists())
+        self.assertFalse((excluded / "alias-write.txt").exists())
+        run = parse_run(root / "xmodel" / "excluded.run.v2")
+        self.assertEqual(run["final_status"], "DONE")
+
+    @unittest.skipUnless(Path("/usr/bin/sandbox-exec").is_file(), "macOS sandbox required")
+    def test_model_cannot_overwrite_receipt_but_parent_can_finalize_it(self) -> None:
+        root = self.make_repo()
+        result, _, _, _ = self.run_lane(root, "receipt", mode="probe_receipt")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual((root / "receipt.boundary-result").read_text(), "DENIED\n")
+        run = parse_run(root / "xmodel" / "receipt.run.v2")
+        self.assertEqual(run["run_schema"], "2")
+        self.assertEqual(run["initial_status"], "RUNNING")
+        self.assertEqual(run["exit_code"], "0")
+        self.assertEqual(run["final_status"], "DONE")
+        self.assertEqual(run["post_launcher_sha256"], run["launcher_sha256"])
+        self.assertEqual(
+            run["post_sandbox_profile_sha256"], run["sandbox_profile_sha256"]
+        )
 
     def test_missing_and_oversize_appendix_fail_closed(self) -> None:
         cases = (

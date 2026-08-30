@@ -7,6 +7,15 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **EXTERNAL REVIEW BOUNDARY IS NOW OS-ENFORCED (03:12Z).** `ops/lane.sh`
+> wraps every adapter descendant in macOS Seatbelt, denying direct and
+> symlinked access to the excluded nested workspace and writes to immutable
+> prompt custody. The model cannot overwrite its receipt; launcher and
+> sandbox-profile hashes are pinned before and after execution. It fails
+> closed without the sandbox. The complete operations suite passes 50/50 in
+> ordinary, `-O`, and `-OO` modes; adapter shell syntax also passes. No
+> mathematical claim depends on this systems change.
+
 > **EXACT LOG-KODAIRA THEOREM BLOCKS AN `A^2` FIRST LEG (02:28Z).** Opus
 > independently confirms and sharpens the two-section calculation. Binding
 > integration `ff25ba27...`/body `10fb58eb...` gives

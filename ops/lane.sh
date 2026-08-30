@@ -58,6 +58,11 @@ command -v python3 >/dev/null 2>&1 || {
   echo "python3 is required for charge-basis validation" >&2
   exit 2
 }
+sandbox_exec=/usr/bin/sandbox-exec
+[ -x "$sandbox_exec" ] || {
+  echo "the macOS process sandbox is required for external-model lanes: $sandbox_exec" >&2
+  exit 2
+}
 
 fallacy_bytes=$(wc -c < "$fallacy_file" | tr -d '[:space:]') || exit 2
 case "$fallacy_bytes" in
@@ -146,19 +151,25 @@ prompt_snapshot=$lane_tmp_dir/original-prompt.txt
 fallacy_snapshot=$lane_tmp_dir/FALLACY-v2.md
 charge_validator_snapshot=$lane_tmp_dir/validate_charge_basis.py
 model_prompt_file=$lane_tmp_dir/model-prompt.txt
+sandbox_profile=$lane_tmp_dir/external-model.sb
+# Keep this lexical: boundary setup must neither resolve nor inspect the excluded
+# nested worktree.  Seatbelt resolves aliases when enforcing the path filter.
+excluded_tree=$repo_root/jc2-lean
 
 log_file=xmodel/$tag.log
 run_file=xmodel/$tag.run.v2
+run_path=$repo_root/$run_file
 report_file=xmodel/$tag.md
 start_utc=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
 prompt_sha=$(sha256_file "$prompt_file") || exit 2
 adapter_sha=$(sha256_file "$adapter_script") || exit 2
+launcher_sha=$(sha256_file "$script_dir/lane.sh") || exit 2
 charge_validator_sha=$(sha256_file "$charge_validator") || exit 2
 fallacy_sha=$(sha256_file "$fallacy_file") || exit 2
 cp "$prompt_file" "$prompt_snapshot" || exit 2
 cp "$fallacy_file" "$fallacy_snapshot" || exit 2
 cp "$charge_validator" "$charge_validator_snapshot" || exit 2
-chmod 600 "$prompt_snapshot" "$fallacy_snapshot" "$charge_validator_snapshot" || exit 2
+chmod 400 "$prompt_snapshot" "$fallacy_snapshot" "$charge_validator_snapshot" || exit 2
 prompt_snapshot_sha=$(sha256_file "$prompt_snapshot") || exit 2
 fallacy_snapshot_sha=$(sha256_file "$fallacy_snapshot") || exit 2
 charge_validator_snapshot_sha=$(sha256_file "$charge_validator_snapshot") || exit 2
@@ -182,6 +193,9 @@ if grep -F "$fallacy_marker" "$prompt_snapshot" >/dev/null 2>&1; then
   echo "prompt already contains the FALLACY-v2.md appendix marker; run refused" >&2
   exit 2
 fi
+# The adapter and every process it spawns inherit this Seatbelt profile.  Lane
+# custody stays readable for exact prompt delivery, but even a same-user model
+# shell cannot chmod or rewrite the snapshotted inputs.
 if ! {
   cat "$prompt_snapshot"
   printf '\n\n'
@@ -199,6 +213,21 @@ if [ "$prepared_prompt_sha" != "$prompt_sha" ] || \
   echo "hashed lane input changed while preparing model prompt; run refused" >&2
   exit 2
 fi
+if ! {
+  printf '%s\n' '(version 1)'
+  printf '%s\n' '(allow default)'
+  printf '%s\n' '(deny file-read* (literal (param "EXCLUDED_TREE")))'
+  printf '%s\n' '(deny file-read* (subpath (param "EXCLUDED_TREE")))'
+  printf '%s\n' '(deny file-write* (literal (param "EXCLUDED_TREE")))'
+  printf '%s\n' '(deny file-write* (subpath (param "EXCLUDED_TREE")))'
+  printf '%s\n' '(deny file-write* (subpath (param "CUSTODY_ROOT")))'
+  printf '%s\n' '(deny file-write* (literal (param "RUN_FILE")))'
+} > "$sandbox_profile"; then
+  echo "could not create external-model sandbox profile" >&2
+  exit 2
+fi
+chmod 400 "$model_prompt_file" "$sandbox_profile" || exit 2
+sandbox_profile_sha=$(sha256_file "$sandbox_profile") || exit 2
 basis=$(git rev-parse HEAD 2>/dev/null || echo UNKNOWN)
 
 {
@@ -211,6 +240,10 @@ basis=$(git rev-parse HEAD 2>/dev/null || echo UNKNOWN)
   echo "prompt=$prompt_file"
   echo "prompt_sha256=$prompt_sha"
   echo "adapter_sha256=$adapter_sha"
+  echo "launcher=ops/lane.sh"
+  echo "launcher_sha256=$launcher_sha"
+  echo "sandbox_enforcement=MACOS_SEATBELT"
+  echo "sandbox_profile_sha256=$sandbox_profile_sha"
   echo "charge_basis_validator=ops/validate_charge_basis.py"
   echo "charge_basis_validator_sha256=$charge_validator_sha"
   echo "fallacy=FALLACY-v2.md"
@@ -223,7 +256,12 @@ basis=$(git rev-parse HEAD 2>/dev/null || echo UNKNOWN)
   echo "initial_status=RUNNING"
 } > "$run_file"
 
-sh "$adapter_script" "$model_prompt_file" > "$log_file" 2>&1 &
+"$sandbox_exec" \
+  -D "EXCLUDED_TREE=$excluded_tree" \
+  -D "CUSTODY_ROOT=$lane_tmp_dir" \
+  -D "RUN_FILE=$run_path" \
+  -f "$sandbox_profile" \
+  sh "$adapter_script" "$model_prompt_file" > "$log_file" 2>&1 &
 child_pid=$!
 echo "child_pid=$child_pid" >> "$run_file"
 wait "$child_pid"
@@ -266,12 +304,16 @@ fi
 
 post_prompt_sha=$(sha256_file "$prompt_file") || post_prompt_sha=ERROR
 post_adapter_sha=$(sha256_file "$adapter_script") || post_adapter_sha=ERROR
+post_launcher_sha=$(sha256_file "$script_dir/lane.sh") || post_launcher_sha=ERROR
+post_sandbox_profile_sha=$(sha256_file "$sandbox_profile") || post_sandbox_profile_sha=ERROR
 post_charge_validator_sha=$(sha256_file "$charge_validator") || post_charge_validator_sha=ERROR
 post_charge_validator_snapshot_sha=$(sha256_file "$charge_validator_snapshot") || post_charge_validator_snapshot_sha=ERROR
 post_fallacy_sha=$(sha256_file "$fallacy_file") || post_fallacy_sha=ERROR
 post_model_prompt_sha=$(sha256_file "$model_prompt_file") || post_model_prompt_sha=ERROR
 if [ "$post_prompt_sha" != "$prompt_sha" ] || \
    [ "$post_adapter_sha" != "$adapter_sha" ] || \
+   [ "$post_launcher_sha" != "$launcher_sha" ] || \
+   [ "$post_sandbox_profile_sha" != "$sandbox_profile_sha" ] || \
    [ "$post_charge_validator_sha" != "$charge_validator_sha" ] || \
    [ "$post_charge_validator_snapshot_sha" != "$charge_validator_sha" ] || \
    [ "$post_fallacy_sha" != "$fallacy_sha" ] || \
@@ -286,6 +328,8 @@ end_utc=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
   echo "exit_code=$rc"
   echo "post_prompt_sha256=$post_prompt_sha"
   echo "post_adapter_sha256=$post_adapter_sha"
+  echo "post_launcher_sha256=$post_launcher_sha"
+  echo "post_sandbox_profile_sha256=$post_sandbox_profile_sha"
   echo "post_charge_basis_validator_sha256=$post_charge_validator_sha"
   echo "post_charge_basis_validator_snapshot_sha256=$post_charge_validator_snapshot_sha"
   echo "post_fallacy_sha256=$post_fallacy_sha"

@@ -49,12 +49,14 @@ later correction and live-overlay sections cite post-survey campaign evidence.
 - **Keep review and systems repair asynchronous.** The log theorem, four
   generic K00 cells, and the K10-boundary G11 theorem are promoted; the cubic
   reduction and G12 boundary child remain review-gated, with no review lane
-  currently active. Two prior reviewers observed excluded parent status despite
-  their mandate. Before changing live adapters, bank this checkpoint; then
-  add an OS-level no-read/no-write boundary for the excluded nested repository
-  and regression-test immutable prompt custody. Heavy or uncertain CAS stays
-  AWS-only; no heavy job is currently needed. Grok is presently unavailable:
-  its two newest launches returned HTTP 402 before model work.
+  currently active. The queued systems repair is complete: all adapters now
+  inherit an OS-level no-read/no-write boundary for the excluded nested
+  repository, including symlink aliases, and immutable prompt custody has
+  50/50 regressions in three interpreter modes. The model-side receipt is
+  also write-denied and pins pre/post launcher/profile hashes. Heavy or
+  uncertain CAS stays AWS-only; no heavy job is currently needed. Grok is
+  presently unavailable: its two newest launches returned HTTP 402 before
+  model work.
 
 ## Superseding strategy overlay (2026-08-30 00:47Z — sharp normal window and étale sandwiches)
 
