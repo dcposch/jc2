@@ -5,6 +5,16 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **CUSTODY CORRECTION: `charge_basis=ABSENT` WAS EXPECTED FOR THE
+> SINGULAR-F5 POLAR REVIEW (2026-08-30 10:02Z).** Corrigendum
+> `63264bf1c226dd77de71a910a0e1d1f8c33984bc3dba476363b43fe62a1d6e0c`
+> / body `c95ee81b...`, manifest `ed2b20db...`, supersedes two operational
+> sentences in integration `fdf8f476...`: the polar review asserted no new
+> exit price, so its receipt correctly recorded `charge_basis_status=ABSENT`.
+> `charge_basis` is not a generic input-hash marker; it is required only for a
+> new exit-price assertion. Hash custody remains independently complete, and
+> no review verdict or mathematical conclusion changes.
+
 > **`A1`-RULING AND COMPLETION-INVARIANT EULER CAP PROMOTED
 > (2026-08-30 08:33Z).** GPT-5.5 xhigh hostile review sealed full
 > `dddf3463...`/body `f6de61b9...` returns `CONFIRM_WITH_CORRECTIONS` after

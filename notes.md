@@ -14644,3 +14644,14 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - No local Singular or heavy algebra is running. AWS is idle/unclaimed; use it
   only when a source-reviewed heavy packet exists. Web backstop is
   `2026-08-31T03:40Z`. Holds/human gates: none.
+
+## 2026-08-30 10:02Z SYSTEMS CORRECTION — ABSENT EXIT-PRICE MARKER WAS CORRECT
+
+- Transactional corrigendum `63264bf1...`/body `c95ee81b...`, manifest
+  `ed2b20db...`, corrects one receipt interpretation in the singular-F5
+  balanced integration. The geometric review made no new exit-price claim,
+  so `charge_basis_status=ABSENT` was expected under the literal validator and
+  `FALLACY-v2.md` contract, not a prompt defect.
+- Future prompts declare `charge_basis={...}` only for a newly asserted exit
+  price. They omit it for ordinary hash custody, geometry, and consumption of
+  a promoted price. No code, review verdict, or mathematical result changes.

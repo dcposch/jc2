@@ -517,8 +517,11 @@ campaign from paying twice for the same failed idea.
   instruction, not a lexical proof checker.  Reports may declare an exact machine line
   `charge_basis={...}`; the validator checks its rational delta, branch,
   positive flag count, and citation.  Invalid declarations quarantine the
-  lane, while an absent declaration is recorded as `ABSENT` and never
-  interpreted as a mathematical pass.  Changes to the prompt, appendix,
+  lane. The declaration is only for a newly asserted exit price: a report
+  with no such assertion must omit it, in which case `ABSENT` is the expected
+  receipt status and is never interpreted as a mathematical pass. Never add a
+  placeholder declaration for ordinary input hashes, geometry, or use of an
+  already promoted price. Changes to the prompt, appendix,
   adapter, or validator during a run quarantine the result; focused launcher
   regression is required after any edit to this path. Versioned predecessor
   `FALLACY.md` remains immutable for packet replay.
