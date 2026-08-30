@@ -7,6 +7,28 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **G13 PROVISIONALLY KILLS EVERY FRESH `n=5` SURVIVOR ON THE
+> `e=2,m=2,h10=1` FACE (03:59Z).** Sealed producer `b352e26e...`/body
+> `82c277ca...` reconstructs all seven G13 rows literally from the frozen 569
+> tails. Row six forces
+> `P4=s^4-384*s^2*t^2+4096*t^4=0`, which contradicts both rank-one signs;
+> after removing the two available G13 image coordinates, rank two also
+> forces `s*t*(s^2-64*t^2)=0`, incompatible with `P4` on the leading-surface
+> open. Replay `a508b985...` passes identically in ordinary and optimized
+> modes with old-pass/new-fail fixtures. This remains a review-gated
+> finite-jet field-point result. Whole `h10=1` closure additionally depends on
+> the unreviewed old-`n=4` G12 parent; no arc, occurrence, attainment, source-
+> atlas, map, or JC2 conclusion follows.
+
+> **AUTHOR-HANDOFF FREEZE NOW REQUIRES A COMPLETION HANDSHAKE (03:59Z).** A
+> sublane announced preliminary G13 hashes, then strengthened its replay and
+> began resealing. Root's pre-commit parallel replay caught the drift; no
+> committed file or external review consumed the preliminary bytes. Final
+> artifacts now pass seal verification, simultaneous ordinary/optimized
+> replay, and unchanged pre/post hashes. Henceforth a hash message is
+> advisory until the author is idle/completed and root independently verifies
+> the frozen bytes. No mathematical verdict changed.
+
 > **AFFINE-LINEAR CUBIC INTERMEDIATE BLOCKS ARE CLOSED AT EXACT
 > BASIS-DEPENDENT SCOPE (03:46Z).** The compact rerun completed under the new
 > OS boundary with clean custody. Fable verdict `CONFIRM_WITH_CORRECTIONS`

@@ -105,6 +105,11 @@ A result may enter `PROVISIONAL` only when all of the following are recorded:
    integer numerator, its divisibility on the charged predecessor scheme, and
    the reduced integer quotient are recorded before any reduction modulo `p`;
 6. no known contradiction with the current ledgers.
+7. **Completion handshake.** An author's hash or “ready” message is advisory
+   while that author is still running. The packet is frozen only after the
+   author is idle/completed and the coordinator independently verifies its
+   seal, replay in every declared mode, and unchanged pre/post hashes. No
+   reviewer, commit, or downstream consumer may charge preliminary bytes.
 
 ## Promotion and adversarial review
 
@@ -1037,3 +1042,24 @@ commit/push, launch the classification review and begin a fresh whole-
 portfolio ideation wave; background review must not block independent new
 work. No heavy campaign job is currently licensed, AWS is idle/unclaimed,
 and all heavy or uncertain CAS remains AWS-only. Holds/human gates: none.
+
+Allocation refresh (2026-08-30 03:59Z): checkpoint
+`201b848b4422225f9514145c9c9655b635564404` is pushed and matches remote
+`master`. The reduced `(2,3)` classification is now under a bounded Fable
+hostile review on that frozen basis; a Sol whole-portfolio significant-news
+ideation lane runs independently and does not wait for the verdict.
+
+The K00 G13 packet is now frozen as producer `b352e26e...`/body
+`82c277ca...` with replay `a508b985...`. It provisionally kills both fresh
+`n=5` rank-one signs and every rank-two G12 survivor by two independent G13
+terminals. Commit it as a small second atom, then start different-model
+carry/source review. The full `h10=1` cell remains conditional on the
+provisional old-`n=4` G12 parent, and neither result bears on occurrence,
+arcs, attainment, or source completeness.
+
+One author announced hashes before finishing a strengthening edit. Root's
+pre-commit replay caught the drift; no committed or reviewed artifact was
+affected. The completion handshake above is now binding: messages from a
+running author are not frozen custody, and root must verify final bytes after
+the lane becomes idle/completed. AWS remains idle/unclaimed; no heavy job is
+licensed. Holds/human gates: none.

@@ -39,9 +39,12 @@ later correction and live-overlay sections cite post-survey campaign evidence.
 - **Preserve independent occurrence and K00 fronts.** None of the block or
   log theorems proves that a hypothetical map enters a registered formal
   source packet. Keep the global occurrence/coverage arrow first. K00 G13 is
-  the next literal boundary gate on the fresh `n=5` survivors; source
-  completeness and all-depth attainment remain separate even if that finite
-  prefix dies.
+  now a sealed provisional kill of every fresh `n=5` survivor: a row-six
+  quartic eliminates rank one and a second cokernel terminal eliminates rank
+  two. Review that producer and its still-provisional old-`n=4` G12 parent in
+  the background. Even confirmation closes only the named
+  `e=2,m=2,h10=1` finite prefix; source completeness, arcs, and all-depth
+  attainment remain separate.
 - **Use the quiet external perimeter as intelligence, not a detour.** The
   scheduled sweep finds no external JC2 resolution. A missed August-25 public
   F2 note names two infinity charts and missing values `q18` and `B5Q`; add a

@@ -14402,3 +14402,47 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   provisional G13 kill constitute significant news and trigger a fresh
   whole-portfolio ideation wave; background review does not block new work.
   Holds/human gates: none.
+
+## 2026-08-30 03:56Z CHECKPOINT — REVIEWED BLOCK/FOREST ATOM PUSHED
+
+- Commit `201b848b4422225f9514145c9c9655b635564404`, “Close
+  affine-linear cubic blocks and promote forest gate,” is present identically
+  on local and remote `master`. It contains the two hardened review bundles,
+  binding AL3 and rational-forest integrations, provisional reduced `(2,3)`
+  classification and pair-ancestry packets, web sweep, and consistent
+  canonical summaries. All seven new seals and both receipt hash families
+  passed before commit.
+- A bounded Fable hostile review of the reduced `(2,3)` classification starts
+  on that immutable basis. Independent whole-portfolio ideation also starts;
+  neither lane blocks the other.
+
+## 2026-08-30 03:59Z K00 EVENT — FRESH `n=5` FACE PROVISIONALLY EMPTY AT G13
+
+- Frozen producer
+  `b352e26e7748e6b7eb31b5ae081a6ba6a8ea7843ce58e457c27e3557c5d88e44`
+  / body `82c277ca01460a6a1cfe05e79ec5b3ed2cce95b520ad0d287f3b8c62ab088cfd`
+  and replay
+  `a508b9853490d82f8a9c7c6242331b5c33298104249a216a9bb418c949e5403d`
+  literally reconstruct the seven G13 rows from 569 frozen tails. The new
+  row-six wall is `s^4-384s^2t^2+4096t^4=0`; it kills both rank-one signs.
+  Rank two is killed by the independent N8-annihilating terminal
+  `s*t*(s^2-64t^2)=0`, which has no projective common point with that wall on
+  the declared open.
+- Ordinary and optimized replays pass simultaneously with identical output,
+  certificate `3bb22822...`, two old-pass/new-fail controls, and unchanged
+  pre/post artifact hashes. The result is provisional pending different-model
+  carry/source review. Whole `h10=1` closure also needs review of the old
+  `n=4` G12 parent. It is only a finite-jet field-point exclusion.
+
+## 2026-08-30 03:59Z SYSTEMS EVENT — PREMATURE HASH HANDOFF CAUGHT CLOSED
+
+- The author first messaged hashes, then strengthened row-six coverage and
+  began resealing while still running. Root's independent pre-commit replay
+  detected the changed certificate and invalid in-progress seal. Diagnosis
+  found author post-handoff editing, not replay self-mutation or a parallel
+  race. The already-pushed checkpoint was unaffected and no reviewer consumed
+  the preliminary bytes.
+- A packet is henceforth frozen only after author idle/completed status plus
+  root seal, declared-mode replay, and unchanged pre/post hash verification.
+  A running author's “ready” message or hash list is advisory. This repair is
+  encoded in `COORDINATION.md`; no mathematics is promoted by it.
