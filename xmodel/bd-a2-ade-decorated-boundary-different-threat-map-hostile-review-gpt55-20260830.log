@@ -1,0 +1,4392 @@
+cli=codex-cli 0.150.1 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.150.1
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a05162-12bd-7af3-afd8-cd13456e6eb2
+--------
+user
+# Hostile review: ADE-decorated quadratic boundary/different threat map
+
+You are GPT-5.5 xhigh, an independent hostile algebraic-geometric reviewer
+for the plane Jacobian-conjecture campaign. Work in
+`/Users/dc/code/math/jc2` on frozen git basis
+`986427df23c30375b6edfd659ba8a6c6139434ab`.
+
+Read and review this sealed exact provisional producer in full:
+
+```text
+ab10ea83f443c93bdb87194ad0e42fe2c442984ba821c3ddf8ddf5cc3f796133
+  xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md
+  body 19667 / 5a1985f48f6b61d4f12b288942b3bbb753b45f3e18a6e31b85cbc077ccd8e2ef
+  manifest 9404a4f13e60cf4f40ec45b12a3b5cff81b5c431fdfd96a49e604d5f40e717c8
+```
+
+Its frozen authorship basis is `dca72076aa1615b0b1286fd4428a1acac7b65963`;
+its producer commit is the review basis above. Read every charged input named
+in Section 0 and enforce its exact scope.
+
+Independently reconstruct and attack:
+
+1. Rebuild the signed-coordinate-graph classification of connected root
+   subsystems of `D9`. Check whether only `A1,...,A8` and `D4,...,D9` can
+   occur, and whether `A9,E6,E7,E8` are genuinely excluded for embedded root
+   subsystems rather than only for a chosen simple-root presentation.
+2. Derive the inverse-Cartan and congruence formulas for all `A_r` and `D_r`.
+   Audit signs, node numbering, integrality, positivity, and the equivalence
+   between `m>0`, `n=Cm>=0`, and the stated local Cartier data. Test the
+   scalable rays and every advertised one-germ survivor.
+3. Verify each total-transform identity producing the target-line cap
+   `sum n_i<=8`, the conditional `B`-fibre cap `sum n_i<=4`, and the
+   fixed-infinity/no-common-carrier cap. Identify every properness,
+   transversality, carrier, and nonnegativity hypothesis; reject any cap used
+   outside its proved regime.
+4. Audit the distinction between numerical support or multiplicity of `n`
+   and distinct physical boundary germs. Check the forest-cycle connector
+   criterion when a single tangent/high-contact germ or a branch through an
+   ADE point contributes several numerical units.
+5. Determine whether the claimed finite successor is actually finite after
+   all congruences, caps, physical branch partitions, simultaneous `D9`
+   embeddings, and effectivity conditions are imposed. Give the smallest
+   explicit enumeration schema that is complete up to the relevant Weyl and
+   incidence symmetries.
+6. Search for a cheaper theorem that kills any remaining ADE type using only
+   the charged data. Conversely, exhibit a precise formal survivor whenever
+   the producer claims no exclusion. Keep formal numerical data distinct from
+   effective divisors, analytic germs, finite maps, or polynomial maps.
+7. State the maximum theorem safe to promote and the exact unresolved strata,
+   especially common-carrier and nonfinite cases. Keep this packet separate
+   from the independently active moving-double-section/conductor lane, basis
+   coverage, counterexamples, and JC2 itself.
+
+Return an itemized verdict (`CONFIRMED`, `CONFIRM_WITH_CORRECTIONS`, `GAP`, or
+`REFUTED`), precise repairs, and the cheapest decisive successors. Hard cap:
+8,000 tokens and 28,000 UTF-8 bytes. Do not inspect, list, search, stat, build,
+modify, or control `jc2-lean`; the process sandbox also enforces this. Do not
+run local heavy CAS or Singular. Do not edit inputs, canonical files, scripts,
+or dependencies. Write exactly one report:
+
+```text
+xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md
+```
+
+End with one standalone `<!-- BODY-END -->` line and no seal block.
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll read the sealed producer and only the charged inputs it names, keeping all filesystem actions scoped away from `jc2-lean`. After that I’ll reconstruct the root-subsystem and lattice arithmetic independently before writing the single requested report.
+exec
+/bin/zsh -lc 'git rev-parse HEAD' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+986427df23c30375b6edfd659ba8a6c6139434ab
+
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+ab10ea83f443c93bdb87194ad0e42fe2c442984ba821c3ddf8ddf5cc3f796133  xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md
+
+exec
+/bin/zsh -lc "sed -n '1,220p' xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+# ADE-decorated boundary and different: the exact finite threat map
+
+Date: 2026-08-30 UTC  
+Producer: Sol 5.6 delegated lane `/root/quadratic-degeneracy-frontier`  
+Frozen basis: `dca72076aa1615b0b1286fd4428a1acac7b65963`  
+Lifecycle: **EXACT PROVISIONAL THREAT MAP / DIFFERENT-MODEL REVIEW REQUIRED**
+
+## 0. Endpoint and charged predecessor
+
+This is the finite successor to
+
+```text
+f7d1c8cb42d5afd29474eb0975ffae518b0c82620f598649c2ac3d5d59064f94
+  xmodel/bd-a2-normal-singular-quadratic-incidence-reduction-sol56-20260830.md
+```
+
+and retains its notation.  Thus `X` is an irreducible normal Cartier
+hypersurface of class `2A+3B` in `P2 times P1`, `r:Xtilde->X` is the minimal
+Du Val resolution, and
+
+```text
+A^2=3,       A.B=2,       B^2=0,
+K_Xtilde=-A+B,             R=r^*R_X~2A+B,            (0.1)
+```
+
+where `R_X` is the source different of `pi:X->P2`.  The ruled marking proves
+
+```text
+(ZA+ZB)^perp = D9(-1).                               (0.2)
+```
+
+Assume, whenever the forest conclusions below are invoked, that the promoted
+dominant-`A2` first-leg bridge puts the reduced infinity, reduced different,
+and the exceptional curves over singular points missed by the first leg in
+one resolved SNC boundary.  The exact result is:
+
+> **ADE-DECORATED-THREAT.**
+>
+> 1. A connected exceptional Dynkin type embedded in (0.2) is necessarily
+>    `A_r` with `1<=r<=8` or `D_r` with `4<=r<=9`.  Types `A9,E6,E7,E8`
+>    are impossible already in the `D9` root coordinates.  This is stronger
+>    than a rank count and is proved without assuming a root-subsystem list.
+> 2. For any surviving connected tree with positive exceptional different
+>    multiplicity vector `m`, the strict-transform attachment vector is
+>    `n=Cm>=0`.  All solutions are classified exactly by the congruences in
+>    Sections 3--4.  If a target-line pullback through the point meets the
+>    different properly (as a projectively finite `pi` permits), then
+>    `1<=sum n_i<=8`; if the `B`-fibre through the point also meets the
+>    different properly, the sharper bound is `sum n_i<=4`.  Hence these
+>    explicitly proper-intersection strata are literal finite sets.
+> 3. Forest topology acts on **distinct physical germs**, not on the entries
+>    or support of `n`.  A tangent contact of large numerical multiplicity is
+>    one joining path.  A branch through an ADE node can contribute at both
+>    adjacent graph vertices while still being one physical attachment.
+> 4. No remaining connected type is eliminated by these numerical and local
+>    forest tests.  Every `A_1,...,A_8` and `D_4,...,D_9` has an explicit
+>    Cartier-lattice one-germ pattern with `sum n_i<=2`.  “Survives” here means only
+>    that these necessary tests do not kill it; neither an embedding by
+>    effective exceptional curves nor an incidence equation is constructed.
+
+The actual finite successor is therefore not another unrestricted lattice
+search.  It is the effectivity and physical-attachment test on the explicit
+finite congruence sets, together with a separate treatment of nonfinite or
+common-component strata where the intersection cap is unavailable.
+
+## 1. Local Cartier equations on an ADE tree
+
+Fix a singular point `p` and number the irreducible exceptional curves
+`E_1,...,E_r`.  Let `C` be the positive ADE Cartan matrix, so
+
+```text
+E_i.E_i=-2,        E_i.E_j=1 for adjacent vertices,
+(E_i.E_j)=-C.                                      (1.1)
+```
+
+Write the total different over `p` as
+
+```text
+R=R_str+sum_i m_i E_i,       m_i>=1,                (1.2)
+```
+
+and define
+
+```text
+n_i=R_str.E_i>=0.                                   (1.3)
+```
+
+Every `m_i` is positive because `pi o r` contracts `E_i`, so its Jacobian
+determinant vanishes at the generic point of `E_i`.  Since `R.E_i=0`,
+
+```text
+n=Cm.                                               (1.4)
+```
+
+Conversely, at the level of necessary lattice data, (1.4) gives a bijection
+
+```text
+{m in Z_(>0)^r : Cm>=0}
+  <--> {n in Z_(>=0)^r minus {0} : n in C Z^r},
+m=C^(-1)n.                                          (1.5)
+```
+
+Indeed every entry of the inverse of a connected finite ADE Cartan matrix is
+strictly positive.  Thus a nonzero nonnegative integral `n` has positive
+rational inverse, and it gives an integral `m` exactly when `n in C Z^r`.
+This is a classification of the numerical solutions, not a converse
+existence theorem for a Cartier prime or an incidence singularity.
+In particular, (1.4) by itself kills no ADE type: at any vertex `j`, take
+`n=k e_j` with `k` divisible by `det C` (or merely by the order of the
+corresponding fundamental-weight class).  Then `m=C^(-1)n` is positive and
+integral, and scaling `k` gives an unbounded ray.  Every finite conclusion
+below therefore cites a separate global proper-intersection cap or the
+explicit `D9` embedding.
+
+Infinity has the same local arithmetic.  If `p in H`, write
+
+```text
+r^*H=H_str+sum_i h_iE_i,       h_i>=1,
+a_i=H_str.E_i,                 a=Ch>=0.              (1.6)
+```
+
+Thus the boundary and different decorations are two points of the same
+dominant root-lattice semigroup, with separately recorded physical branches.
+
+## 2. Which connected ADE types can occur in `D9`
+
+The roots of the lattice (0.2) are exactly
+
+```text
+plus-or-minus e_u plus-or-minus e_v,       u!=v.     (2.1)
+```
+
+There is a short coordinate proof that a connected root lattice generated by
+such roots is classical.  Map a simple-root basis into (2.1), and form a
+signed graph whose coordinate positions are vertices and whose simple roots
+are edges.  Connectedness of the Dynkin diagram forces the used coordinate
+graph to be connected.  Switch coordinate signs along a spanning tree so
+that its edge roots are differences `e_u-e_v`.
+
+If `s` coordinate positions occur, those spanning-tree roots generate the
+full `A_(s-1)` lattice.  The image rank is between `s-1` and `s`.  In rank
+`s-1`, every remaining edge is balanced and the generated lattice is exactly
+`A_(s-1)`.  In rank `s`, some edge is unbalanced; adjoining its sum root to
+the tree differences generates exactly `D_s`.  There is no third case.
+
+Since only nine coordinates are available, every connected exceptional type
+is therefore among
+
+```text
+A_1,...,A_8,        D_4,...,D_9.                    (2.2)
+```
+
+This excludes `A9,E6,E7,E8`.  Conversely the standard difference roots on
+`r+1<=9` coordinates embed each `A_r` in (2.2), and the standard signed roots
+on `r<=9` coordinates embed each `D_r`.  These are **lattice-eligibility**
+statements only.  The actual exceptional curves may fail the effective-cone,
+fibre-configuration, or simultaneous-embedding tests.
+
+For a disconnected exceptional lattice, apply the argument to every
+connected Dynkin component.  Orthogonal components can share coordinate
+support in special ways, so their ranks alone do not certify a simultaneous
+embedding.  One further exact gate is useful: if the total exceptional
+lattice has rank nine, then
+
+```text
+det(Lambda_exc)=4*[D9:Lambda_exc]^2.                 (2.3)
+```
+
+Any proposed full-rank direct sum whose determinant is not four times a
+square is impossible.  No primitivity is assumed in (2.3).
+
+## 3. Exact `A_r` multiplicities
+
+Number the `A_r` chain `1-2-...-r`.  The cokernel of its Cartan matrix is
+cyclic of order `r+1`, and (1.5) becomes the explicit congruence
+
+```text
+sum_(i=1)^r i*n_i = 0 mod (r+1).                    (3.1)
+```
+
+This is exact: the displayed weighted sum kills every column of `C`, and it
+is surjective because the first coordinate has weight one.  For every
+nonzero `n>=0` satisfying (3.1), the unique positive multiplicities are
+
+```text
+m_j = ((r+1-j)*sum_(i<=j) i*n_i
+       +j*sum_(i>j) (r+1-i)*n_i)/(r+1).             (3.2)
+```
+
+In particular, a contact supported numerically at a smooth point of vertex
+`i`, so `n=k e_i`, is Cartier exactly when
+
+```text
+k is a multiple of o_i=(r+1)/gcd(i,r+1).            (3.3)
+```
+
+Under the cap `sum n_i<=8`, every vertex of `A_1,...,A_7` permits such a
+one-vertex contact, while `A8` permits it only at vertices `3,6`.  Under the
+sharper cap four, the vertices permitting at least one such contact are
+
+```text
+A1: {1}                 A2: {1,2}
+A3: {1,2,3}             A4: empty
+A5: {2,3,4}             A6: empty
+A7: {2,4,6}             A8: {3,6}.                 (3.4)
+```
+
+An empty entry in (3.4) does **not** kill the singularity: it only kills a
+one-germ contact at a smooth point of the minimal ADE divisor.  At the
+numerical Cartier/curvette level there is a uniform one-physical-germ
+survivor for every `A_r`:
+
+```text
+r=2k-1:  n=2e_k,
+          m=(1,2,...,k-1,k,k-1,...,2,1);
+
+r=2k:    n=e_k+e_(k+1),
+          m=(1,2,...,k-1,k,k,k-1,...,2,1).          (3.5)
+```
+
+
+codex
+The file hash and review basis match the request. I’ve reached the first substantive claims: the producer is explicitly treating the local `Cm=n` arithmetic as necessary numerical data, then adding separate proper-intersection caps for finiteness.
+exec
+/bin/zsh -lc "sed -n '221,520p' xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+The odd-rank pattern is one order-two tangency at the smooth point of the
+central exceptional curve.  The even-rank pattern is one irreducible branch
+through the node between the two central exceptional curves, contributing
+one to each adjacent entry of `n`.  Blowing up that node turns the contact
+into one leaf path.  Both patterns have `sum n_i=2` and satisfy (3.1).
+
+More generally, one irreducible physical branch meeting the node `i--(i+1)`
+has
+
+```text
+n=u e_i+v e_(i+1),       u,v>=1,                    (3.6)
+```
+
+and is numerically Cartier exactly when
+`i*u+(i+1)*v=0 mod (r+1)`.  This makes the distinction between graph support
+and physical-point count explicit.
+
+## 4. Exact `D_r` multiplicities
+
+Use the numbering
+
+```text
+1--2--...--(r-2),
+              |--(r-1)
+              |--r,                                 (4.1)
+```
+
+and put `a=n_(r-1)`, `b=n_r`, and
+`T=sum_(i=1)^(r-2) i*n_i`.  The condition `n in C Z^r` is exactly
+
+```text
+a=b mod 2,
+2T+(r-2)a+r*b=0 mod 4.                              (4.2)
+```
+
+The inverse formulas are
+
+```text
+m_j=sum_(i=1)^(r-2) min(i,j)*n_i+j*(a+b)/2,
+                                      1<=j<=r-2,
+m_(r-1)=T/2+r*a/4+(r-2)*b/4,
+m_r    =T/2+(r-2)*a/4+r*b/4.                        (4.3)
+```
+
+Thus (4.2), nonnegativity, and nonzero `n` classify all positive integral
+solutions of (1.4).  For a smooth-vertex contact `n=k e_i`, the least
+possible `k` is
+
+```text
+i<=r-2:  1 if i is even, 2 if i is odd;
+i=r-1,r: 2 if r is even, 4 if r is odd.             (4.4)
+```
+
+Every value in (4.4) is at most four, so every vertex of every
+`D_4,...,D_9` remains available under the sharper cap.  More strongly, at
+the numerical Cartier/curvette level all these types have the uniform
+transverse one-germ pattern
+
+```text
+n=e_2,
+m=(1,2,2,...,2,1,1),                                (4.5)
+```
+
+where the string of twos runs from vertex `2` through vertex `r-2`.
+This has `sum n_i=1` and gives a locally tree-shaped attachment.
+
+## 5. The global intersection caps
+
+The semigroups in Sections 3--4 are infinite without a global proper-
+intersection input: scaling either (3.5) or (4.5) gives an infinite ray.
+The class calculation supplies an exact finite cap in the finite stratum.
+
+Suppose there is a target line through `pi(p)` whose pullback `L~A` and
+`R_X` have no common curve.  A projectively finite `pi` guarantees such a
+choice: the finitely many images of different components exclude only
+finitely many lines through `pi(p)`.  Over every singular point `q in L`,
+write
+
+```text
+r^*L=L_str+sum_i ell_(q,i)E_(q,i),       ell_(q,i)>=1. (5.1)
+```
+
+The lower bound holds because the divisorial valuation of every exceptional
+curve centred at `q` is positive on the maximal ideal, and the local line
+equation belongs to that ideal.
+The same orthogonality calculation gives a nonnegative attachment vector
+`b_q=C_q ell_q` for `L_str`.  Put `n_q=C_qm_q` for the different.  The three
+exceptional cross-terms cancel to one copy:
+
+```text
+L_str.(m_q E_q)       =ell_q^t n_q,
+(ell_q E_q).R_str     =ell_q^t n_q,
+(ell_q E_q).(m_q E_q)=-ell_q^t n_q.                 (5.2)
+```
+
+Consequently the exact proper-intersection identity is
+
+```text
+8=L.R=L_str.R_str+sum_(q in L intersect Sing X) ell_q^t n_q. (5.3)
+```
+
+The first term and every summand are nonnegative, and every
+`ell_(q,i)>=1`.  Therefore, for the chosen point `p`,
+
+```text
+1<=sum_i n_i<=8.                                    (5.4)
+```
+
+There is a sharper conditional slice.  Let `F_p~B` be the `P1`-base fibre
+through `p`.  If `F_p` and `R_X` have no common irreducible component, write
+`r^*F_p=F_str+sum beta_(q,i)E_(q,i)` at the singular points of that fibre.
+The coefficients over `p` are at least one.  The identical cross-term
+calculation gives
+
+```text
+4=F_p.R=F_str.R_str+sum_(q in F_p intersect Sing X) beta_q^t n_q,
+```
+
+and properness makes all terms nonnegative.  Hence
+
+```text
+sum_i n_i<=4.                                       (5.5)
+```
+
+Neither cap is asserted when the chosen slice shares a different component.
+In particular, projective coefficient basepoints can force every target line
+through their image to contain a contracted different carrier.  Those
+nonfinite cases remain outside (5.4), although (5.5) can still apply when the
+base fibre is proper.
+
+The fixed infinity divisor gives a coupled boundary/different constraint.
+Assume `H` and `R_X` have no common irreducible curve.  At every singular
+point `p in H`, use the vectors `(h,a)` from (1.6) and `(m,n)` from (1.2).
+Expansion on the resolution gives the exact global identity
+
+```text
+8=H.R=H_str.R_str+sum_(p in H intersect Sing X) h_p^t n_p.  (5.6)
+```
+
+All terms are nonnegative under the no-common-curve hypothesis.  Hence
+
+```text
+sum_p h_p^t n_p<=8,
+sum_p sum_i n_(p,i)<=8.                             (5.7)
+```
+
+If `H` and `R_X` share a nonexceptional curve, the proper-intersection
+argument behind (5.6)--(5.7) is unavailable.  That common-carrier stratum is
+an explicit surviving threat, not silently discarded.
+
+## 6. Forest topology uses physical germs, not `n`
+
+Take a full embedded log resolution of the reduced first-leg boundary.  Over
+one singular point, include in `T_p` the ADE tree and every additional
+exceptional vertex introduced to resolve its boundary contacts.  It is a
+connected tree.  Delete the interior of `T_p` from the resolved dual graph.
+Then the exact forest criterion is:
+
+> Every connected component of the remaining graph may meet `T_p` by at
+> most one edge.                                                   (6.1)
+
+Indeed two such edges, together with the unique path inside `T_p` and a path
+inside that outside component, form a cycle.  Conversely, attaching forest
+components once to a tree preserves a forest.
+
+The edges in (6.1) are distinct **physical branch contacts after log
+resolution**.  They are not the integers `n_i`.
+
+Consequently the forest kills:
+
+* two distinct physical branches of one irreducible strict different
+  component attaching to the same exceptional tree;
+* attachments from two vertices or points whose carriers are already joined
+  by a boundary path outside that tree; and
+* two disjoint connector loci between the connected total transforms of
+  infinity and of the different, unless those supports share a component
+  that changes the quotient graph.
+
+It does not kill:
+
+* one tangent branch with `n_i>1` at a single physical point;
+* one branch through an ADE node, with `n` supported on the two adjacent
+  vertices; or
+* several branches on distinct outside components which are connected only
+  through `T_p`, producing a star rather than a cycle.
+
+There is a useful global formulation.  In a forest, two connected subgraphs
+have connected intersection after subdividing physical intersection points
+as vertices.  The support of `H` is connected because it is an effective
+ample `(2,3)` divisor on the infinity surface `P1 times P1`; the support of
+`R_X` is connected because `2A+B` is ample on `X`.  Their total transforms
+are therefore connected.  A survivor with no shared nonexceptional carrier
+has only one graph-theoretic connector between them.  The eight units in
+`H.R=8` may nevertheless concentrate at that connector as tangency or ADE
+Cartier multiplicity.  Numerical weight eight is not eight graph edges.
+
+## 7. Exact killed/surviving threat table
+
+The deductions can now be stated without mixing levels.
+
+```text
+KILLED UNCONDITIONALLY BY THE D9 ROOT MODEL
+  connected A9, E6, E7, E8;
+  any rank-nine direct sum failing det=4*square.
+
+KILLED IN A CAPPED PROPER-INTERSECTION STRATUM
+  every n violating (3.1) or (4.2);
+  every n with sum n_i>8 under (5.4);
+  every n with sum n_i>4 under (5.5).
+
+KILLED BY THE RATIONAL-FOREST GRAPH
+  precisely the repeated physical joining patterns in (6.1),
+  including two contacts from the same outside connected carrier.
+
+NOT KILLED BY THESE TESTS
+  A1,...,A8 via (3.5);
+  D4,...,D9 via (4.5);
+  high contact concentrated at one physical germ;
+  nonfinite/common-carrier cases where no cap has been proved.
+```
+
+The word “survivor” is deliberately negative: it means that the displayed
+necessary tests have not contradicted the decoration.  Standard coordinate
+roots exhibit an abstract lattice embedding, but do not prove simultaneous
+effectivity, realization by vertical curves in the nine-blowup marking, or
+compatibility with a quadratic Miranda incidence.
+
+## 8. Hostile checks, exact remaining gap, and scope firewall
+
+The following tempting shortcuts are false and have been excluded from the
+theorem.
+
+* **Rank at most nine allows `E6` or `E7`.**  The signed-coordinate proof in
+  Section 2 uses the actual roots of `D9`, not rank alone, and removes them.
+* **`n_i=4` means four boundary edges.**  It can be one order-four physical
+  contact.  Forest topology sees the resolved branch path.
+* **Support on two ADE vertices means two physical points.**  A branch
+  through their node gives one point, as in the even `A_r` survivor (3.5).
+* **Every congruence solution occurs.**  Equations (3.1) and (4.2) are only
+  the Cartier-lattice gate.  The effective cone and analytic incidence map
+  remain unproved.
+* **`A.R=8` always bounds `sum n`.**  The proof needs a pullback line meeting
+  the different properly.  It can fail at a nonfinite coefficient basepoint.
+* **Connected infinity and different must meet transversely many times.**
+  In a forest their entire intersection must instead collapse to one
+  connector; all eight intersection units may be concentrated there.
+* **A common infinity/different carrier has nonnegative residual
+  intersection.**  Proper intersection has failed, so (5.6) cannot be used.
+
+The exact remaining finite task in the projectively finite,
+no-common-carrier stratum is to enumerate the pairs
+
+```text
+(a,n) in (C Z^r intersect (Z_(>=0)^r minus {0}))^2,
+sum n_i<=8,       a^t C^(-1)n<=8,                   (8.1)
+```
+
+together with their partitions into physical analytic branches, the single-
+connector forest condition, simultaneous embeddings of all singular trees
+in `D9`, and effectivity of the strict carrier classes in the ruled
+nine-blowup marking.  Formula (8.1) is finite and exact, but this packet does
+not assert that every pair is realized.
+
+Separately unresolved are: a different component contained in infinity; a
+vertical/base fibre contained in the different; projective or affine
+coefficient-basepoint nonfiniteness; the local analytic restriction imposed
+by an actual bidegree-`(2,3)` equation; and simultaneous effective
+realization of the allowed root embeddings.  Nonnormal incidence closures
+remain governed by their normalization and conductor packet and are not
+mixed into this theorem.
+
+Also outside are a proof that an arbitrary cubic block has a quadratic
+presentation, basis minimization, higher coefficient degree, another block
+degree, primitivity, a polynomial map, a counterexample, and JC2.  No CAS,
+finite-field sampling, AWS, or `jc2-lean` operation enters this packet.
+
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `19667`.
+- Body SHA-256:
+  `5a1985f48f6b61d4f12b288942b3bbb753b45f3e18a6e31b85cbc077ccd8e2ef`.
+- Frozen basis: `dca72076aa1615b0b1286fd4428a1acac7b65963`.
+
+exec
+/bin/zsh -lc "sed -n '521,900p' xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+codex
+Section 0 names one charged predecessor. I’m reading that source next because it supplies the notation and the hypotheses under which the current packet is allowed to invoke the forest and intersection statements.
+exec
+/bin/zsh -lc "sed -n '1,240p' xmodel/bd-a2-normal-singular-quadratic-incidence-reduction-sol56-20260830.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+# Normal singular quadratic incidence: Du Val and the exact `D9` ambient lattice
+
+Date: 2026-08-30 UTC  
+Producer: Sol 5.6 delegated lane `/root/quadratic_degeneracy_frontier`  
+Frozen basis: `145f96d65021ef364a5189c4ca385fe09d7b4f46`  
+Lifecycle: **EXACT PROVISIONAL REDUCTION / DIFFERENT-MODEL REVIEW REQUIRED**
+
+## 0. Endpoint, ancestry, and maximum theorem
+
+This is the bounded normal-singular successor to the smooth quadratic packet
+
+```text
+ac7ef8f5321f579d5e193b6ae3a9b0f1aa2a64421050bb71426b94258d984ffb
+  xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md
+```
+
+and to the promoted smooth finite lattice integration
+
+```text
+c9871c92ce8748fd934dc57061f667b49952a1aba39aee43eb3af7b0aadbf392
+  xmodel/bd-a2-ramification-lattice-closure-coordinator-integration-sol56-20260830.md.
+```
+
+The first-leg inputs are the promoted block structure and rational-forest
+integrations
+
+```text
+ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
+  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+
+6a8558e42a67f1ec5c8bcf12321b6e6805b30a570eba17862c6e7e24cd631b08
+  xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md.
+```
+
+Let
+
+```text
+X subset P2 times P1,       [X]=2A+3B,               (0.1)
+```
+
+be an irreducible **normal** quadratic incidence hypersurface over `C`, and
+write `pi:X->P2` and `q:X->P1` for the projections.  Let
+`r:Xtilde->X` be the minimal resolution.  The intended application also has
+the declared dominant `A2` first-leg open.  That first leg supplies one
+rationality check, but the direct conic argument in Section 2 shows that the
+surface-theoretic reduction itself does not require it.  The maximum exact
+reduction proved here is:
+
+> **NORMAL-Q2-REDUCE.**  Every singularity of `X` is Du Val.  The resolution
+> `Xtilde` is rational and crepant, with
+>
+> ```text
+> K_Xtilde=-A+B,       K_Xtilde^2=-1,
+> p_g=q=0,             e_top=13,   rho=11.           (0.2)
+> ```
+>
+> Projection to `P1` makes `Xtilde` a nine-blowup model of a Hirzebruch
+> surface.  In a ruled blowup marking the orthogonal complement
+>
+> ```text
+> L=(ZA+ZB)^perp subset NS(Xtilde)                   (0.3)
+> ```
+>
+> is exactly the negative `D9` lattice
+>
+> ```text
+> L = {c in Z^9 : sum c_i is even},
+> c.c'=-sum c_i*c_i'.                                (0.4)
+> ```
+>
+> The total exceptional ADE lattice is only a root sublattice of `L`; it is
+> not asserted to equal `D9`.  In particular its rank is at most nine.
+
+The alternative abstract even lattice `E8(-1) direct-sum <-4>` has the same
+rank and determinant as (0.4), so determinant and parity do not decide the
+issue.  Section 5 derives (0.4) from the ruled blowup marking and then
+distinguishes the two candidates by their roots.  No `D9` identification is
+assumed.
+
+This packet does not eliminate the normal singular stratum.  Its exact
+remaining gap is the effective, local-to-global classification of the total
+transforms of infinity and the source different inside the `D9`-marked
+lattice, including their multiplicities through the ADE exceptional trees.
+
+## 1. Cohomology of the normal hypersurface
+
+Put `W=P2 times P1`.  Because `X` is a Cartier divisor of class `(2,3)`,
+
+```text
+0 -> O_W(-2,-3) -> O_W -> O_X -> 0.                 (1.1)
+```
+
+Every cohomology group of `O_P2(-2)` vanishes: the top group is dual to
+`H^0(O_P2(-1))`, and the intermediate group vanishes.  Kunneth therefore
+gives
+
+```text
+H^i(W,O_W(-2,-3))=0       for every i.               (1.2)
+```
+
+Since `H^1(W,O_W)=H^2(W,O_W)=0`, the long exact sequence gives the exact
+surface statements
+
+```text
+H^1(X,O_X)=0,             H^2(X,O_X)=0.              (1.3)
+```
+
+Normality implies `r_*O_Xtilde=O_X`, and the singular set is finite.  Hence
+`R^1r_*O_Xtilde` is a finite-support sheaf.  The Leray five-term sequence,
+using (1.3), is
+
+```text
+H^1(Xtilde,O_Xtilde)  isomorphic to
+H^0(X,R^1r_*O_Xtilde),
+H^2(Xtilde,O_Xtilde)=0.                              (1.4)
+```
+
+Equation (1.4) is the required bridge: vanishing of `q(Xtilde)` is exactly
+what turns the hypersurface cohomology into rational singularities.  The
+vanishing (1.3) alone would not suffice.
+
+## 2. Why the resolution is rational and the singularities are rational
+
+There are two independent routes to `q(Xtilde)=0` in the declared scope.
+
+First, the dominant first-leg morphism `A2->U subset X_sm` induces a dominant
+rational map to `Xtilde`.  Compactifying the source and resolving
+indeterminacy makes `Xtilde` unirational.  In characteristic zero a smooth
+projective unirational surface has `p_g=q=0` (indeed it is rational by the
+Castelnuovo criterion).  Thus the first-leg bridge already supplies the left
+side of (1.4) as zero.
+
+Second, the incidence itself gives a direct rationality check.  Projection
+
+```text
+q:X->P1                                                   (2.1)
+```
+
+has generic fibre a plane conic.  That conic is smooth.  To see the
+load-bearing use of normality, represent it by a symmetric matrix `M(t)`.
+If `det M` vanished identically and `M` had generic rank two, a kernel vector
+`v` would satisfy all fibre derivatives.  Jacobi's formula gives
+
+```text
+0=(det M)'=trace(adj(M)M')=lambda*v^t*M'*v,
+```
+
+so the base derivative vanishes at the same generic point.  Its closure is a
+curve in `Sing(X)`, contrary to normality.  Generic rank at most one has a
+positive-dimensional fibre singular locus.  More explicitly, after a finite
+extension of the function field a generic rank-one form is `lambda*l^2`;
+both its fibre derivatives and its base derivative vanish along `l=0`.
+That again produces a singular curve dominating the base, incompatible with
+regularity in codimension one.  Generic rank zero is impossible for the
+irreducible hypersurface.  Thus the generic conic is smooth.  Tsen's theorem
+gives it a `C(P1)`-point, so it is `P1` over the function field and `Xtilde`
+is rational.
+
+Therefore `H^1(Xtilde,O_Xtilde)=0`.  Equation (1.4) gives
+
+```text
+H^0(R^1r_*O_Xtilde)=0.
+```
+
+A nonzero coherent sheaf of finite support has a nonzero global section, so
+
+```text
+R^1r_*O_Xtilde=0.                                    (2.2)
+```
+
+This is precisely rationality of every normal surface singularity of `X`.
+
+## 3. Gorenstein rational implies Du Val and crepant
+
+The hypersurface `X` is Gorenstein.  Dualizing adjunction, valid for the
+normal Cartier hypersurface, gives
+
+```text
+omega_X=O_X(-A+B),       K_X=-A+B.                   (3.1)
+```
+
+Over `C`, a normal rational Gorenstein surface singularity is a rational
+double point, equivalently a Du Val singularity.  Hence the exceptional
+curves of the minimal resolution form a disjoint union of ADE Dynkin trees,
+every irreducible exceptional curve has square `-2`, and
+
+```text
+K_Xtilde=r^*K_X=-A+B.                                (3.2)
+```
+
+Thus the resolution is crepant.  Ambient intersection gives
+
+```text
+A^2=3,       A.B=2,       B^2=0,
+K_Xtilde^2=(-A+B)^2=-1.                              (3.3)
+```
+
+Rationality gives `chi(O_Xtilde)=1`.  Noether's formula and Hodge theory now
+give
+
+```text
+c_2(Xtilde)=e_top(Xtilde)=12*chi-K^2=13,
+b_2(Xtilde)=11,
+rho(Xtilde)=11.                                      (3.4)
+```
+
+Here `rho=11` is the Picard rank of the smooth resolution, not the Weil
+class-group rank of the singular surface.
+
+## 4. The ruled nine-blowup marking
+
+The morphism `q o r:Xtilde->P1` has smooth rational generic fibre and a
+section by Tsen and properness.  Its fibres are connected by Stein
+factorization, and the section excludes multiple fibres.  Contract vertical
+`-1` curves.  The relative minimal-model theorem for a genus-zero fibration
+with a section identifies the endpoint with a `P1`-bundle, hence with a
+Hirzebruch surface `F_e`: a reducible genus-zero fibre on a smooth surface
+contains a vertical `-1` component, while the section has already excluded
+multiple fibres, so the relatively minimal endpoint has only smooth `P1`
+fibres.  Thus this is a geometrically constructed marking, not a postulated
+abstract Picard-lattice orbit.  The reverse map expresses `Xtilde` as
+blowups at points of fibres, possibly infinitely near.
+
+Since `K_(F_e)^2=8` and every blowup lowers `K^2` by one, (3.3) shows that
+there are exactly nine blowups.  Use total-transform classes
+
+```text
+S^2=-e,       S.F=1,       F^2=0,
+E_i^2=-1,     S.E_i=F.E_i=E_i.E_j=0  (i!=j),         (4.1)
+```
+
+where `F=B` and `i=1,...,9`.  The canonical class is
+
+```text
+K_Xtilde=-2S-(e+2)F+sum_(i=1)^9 E_i.                (4.2)
+```
+
+Write
+
+```text
+
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-normal-singular-quadratic-incidence-reduction-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+f7d1c8cb42d5afd29474eb0975ffae518b0c82620f598649c2ac3d5d59064f94  xmodel/bd-a2-normal-singular-quadratic-incidence-reduction-sol56-20260830.md
+
+exec
+/bin/zsh -lc "sed -n '241,520p' xmodel/bd-a2-normal-singular-quadratic-incidence-reduction-sol56-20260830.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+A=2S+bF+sum m_iE_i,
+```
+
+where the coefficient of `S` is forced by `A.F=2`.  Comparing (4.2) with
+the crepant equality `K_Xtilde=-A+F` determines every coefficient, without
+an effectivity assumption:
+
+```text
+A=2S+(e+3)F-sum_(i=1)^9 E_i.                        (4.3)
+```
+
+Equations (4.1)--(4.3) recover `A^2=3` and `A.F=2`.  They remain valid when
+some blowup centres are infinitely near; the `E_i` are total-transform
+lattice classes, not a claim that all nine are simultaneously irreducible
+exceptional curves.  Moreover these eleven classes are an integral basis of
+`NS(Xtilde)`: each vertical contraction is an actual blowdown and each
+reverse step adjoins its total-transform exceptional class.  There is no
+unmentioned finite-index overlattice in this marking.
+
+The marking has the further inexpensive bound
+
+```text
+0<=e<=3.                                             (4.4)
+```
+
+Indeed the total transform of the negative section of `F_e` is effective,
+`A` is nef, and (4.1)--(4.3) give `A.S=3-e`.
+
+## 5. The orthogonal complement is `D9`, not an unproved guess
+
+Let
+
+```text
+L=(ZA+ZF)^perp subset NS(Xtilde).                    (5.1)
+```
+
+Write a general class as
+
+```text
+x=aS+bF+sum c_iE_i.
+```
+
+The equation `x.F=0` gives `a=0`, and (4.3) then gives
+
+```text
+x.A=2b+sum c_i=0.                                    (5.2)
+```
+
+Thus `b` is integral exactly when `sum c_i` is even, and
+
+```text
+x^2=-sum c_i^2.                                      (5.3)
+```
+
+The map `x |-> (c_1,...,c_9)` is therefore an explicit integral isometry
+
+```text
+L isomorphic to D9(-1)
+ = {(c_i) in Z^9 : sum c_i even},
+   pairing -sum c_i c_i'.                            (5.4)
+```
+
+In particular `L` is even, negative definite, rank nine, and determinant
+four.  The pair `ZA+ZF` is primitive in `NS(Xtilde)`: in the basis (4.1),
+the two-by-two minor using the `F` and any `E_i` rows has determinant one.
+Thus (5.4) is the actual orthogonal complement of the geometric primitive
+pair, rather than merely a finite-index candidate.
+No transitivity theorem for ruled markings is being used: one actual
+relative blowdown supplies an integral basis in which the intrinsic lattice
+`L` is computed, and the calculation is independent of `e` and of the
+chosen blowdown order.
+
+The abstract data “even, negative definite, rank nine, determinant four” do
+**not** alone prove (5.4).  For example
+
+```text
+E8(-1) direct-sum <-4>                               (5.5)
+```
+
+has the same four properties.
+
+The discriminant form also does not distinguish these two lattices.  For
+`D9(-1)`, the class of
+
+```text
+g=(1/2,...,1/2)
+```
+
+generates the order-four discriminant group and has
+`q(g)=-9/4=-1/4 mod 2Z`.  The generator of the discriminant group of the
+`<-4>` summand in (5.5) has square `-1/4`.  Hence both discriminant forms are
+the cyclic order-four form with value `-1/4`; primitivity and discriminant
+data alone are still inconclusive.
+
+The explicit marking already decides between them.  As a further invariant
+check, the roots of (5.4) are exactly
+
+```text
+plus-or-minus e_i plus-or-minus e_j,       i!=j,
+```
+
+so there are `4*binomial(9,2)=144` and they span rank nine.  In (5.5), every
+square-`-2` vector lies in the `E8(-1)` summand; there are 240 such roots and
+they span only rank eight inside the rank-nine lattice.  Hence (5.4) and
+(5.5) are not isometric.  The `E8 direct-sum <-4>` alternative is explicitly
+refuted here, not silently discarded.
+
+## 6. What the ADE exceptional lattice actually inherits
+
+Let `Lambda_exc` be the lattice generated by the irreducible curves
+exceptional for `r`.  Pullback divisors have zero intersection with every
+such curve, so
+
+```text
+Lambda_exc subset L=D9(-1).                          (6.1)
+```
+
+By Section 3, `Lambda_exc` is a direct sum of negative ADE root lattices.
+Therefore the exact conclusions are only:
+
+```text
+rank Lambda_exc <= 9,
+Lambda_exc is an integral root sublattice of D9(-1),
+every exceptional curve is vertical for Xtilde->P1. (6.2)
+```
+
+The inclusion need not be primitive and need not have full rank.  No
+determinant quotient may be taken without an index calculation.  In
+particular `Lambda_exc=D9(-1)` is **not** promoted.
+
+One additional exclusion is immediate and self-contained: an `E8(-1)` root
+lattice cannot embed isometrically in `D9(-1)`, because its 240 distinct
+roots would have to map to 240 distinct roots while `D9` has only 144.
+Thus an `E8` singularity cannot occur in this normal incidence/first-leg
+scope (indeed the first leg is not needed for this exclusion).  No analogous
+exclusion of `E6` or `E7`, and no classification of all
+root sublattices of `D9`, is asserted here.
+
+## 7. Crepant ramification data and its exact limit
+
+The map `pi:X->P2` is generically finite of degree `A^2=3`; in characteristic
+zero it is generically separable.  On the smooth locus of `X`, the
+determinant of `d pi` is therefore a nonzero section of
+
+```text
+omega_X tensor pi^*omega_P2^(-1)=O_X(2A+B).          (7.1)
+```
+
+Normality extends this section across the finite singular set.  Its divisor
+`R_X` is a nonzero effective Cartier divisor in the ample class `2A+B`.
+An effective ample Cartier divisor on a normal projective surface has
+connected support.  Crepancy identifies the ramification divisor of
+`pi o r` with the total Cartier pullback:
+
+```text
+R_Xtilde=r^*R_X ~ 2A+B.                              (7.2)
+```
+
+In the ruled marking this class is exactly
+
+```text
+R_Xtilde ~ 4S+(2e+7)F-2sum_(i=1)^9 E_i.
+```
+
+Consequently
+
+```text
+R_Xtilde^2=20,       A.R_Xtilde=8,       B.R_Xtilde=4,
+R_Xtilde.C=0 for every r-exceptional curve C.         (7.3)
+```
+
+Its total support is connected.  On `Xtilde`, however, `2A+B` is only nef
+and big: it has zero intersection with all ADE exceptional curves.  It is
+not ample when `X` is singular.  Crepancy also does not mean that exceptional
+curves are absent from the total different.  In fact every `r`-exceptional
+curve occurs in `R_Xtilde`: the map `pi o r` contracts that curve to a point,
+so its differential has rank at most one at the generic point of the curve
+and its determinant vanishes there.  Consequently `R_X` passes through every
+singular point of `X`.
+
+There is a useful exact local equation, but not yet a classification.  Over
+one singular point, write
+
+```text
+R_Xtilde=R_str+sum_i m_i E_i,       m_i>=1,          (7.4)
+```
+
+where the `E_i` form its ADE tree and `R_str` has no exceptional component.
+Set `n_i=R_str.E_i>=0`.  Intersecting (7.4) with `E_i` and using (7.3) gives
+
+```text
+n_i=2m_i-sum_(j adjacent to i) m_j.                 (7.5)
+```
+
+Thus, in positive Cartan notation, `n=C_ADE*m`.  The attachment vector `n`
+cannot vanish: the ADE Cartan matrix is nonsingular, whereas every `m_i` is
+positive.  Hence the nonexceptional ramification meets every exceptional
+tree at least once, counted with intersection multiplicity.  Equations
+(7.4)--(7.5) do not determine `m`, the number of physical attachment points,
+or which nonexceptional components carry those attachments.
+
+This is exactly where the smooth connectedness/attachment proof stops.  The
+connected total support in (7.2) and the nonzero attachment vector (7.5) are
+useful, but without the local pullback multiplicities and physical attachment
+points through each ADE tree they do not supply two independent boundary
+paths.
+
+## 8. Hostile checks and false shortcuts
+
+The reduction survives the following attacks.
+
+* **`H^1(O_X)=H^2(O_X)=0` alone proves rational singularities.**  False.
+  The missing term is `H^1(O_Xtilde)`.  Section 2 kills it by the first leg
+  and independently by the conic/Tsen rationality argument before using
+  Leray.
+* **Normality is cosmetic.**  False.  It makes the singular set finite,
+  supplies `r_*O=O`, and prevents a generically singular conic whose singular
+  locus would dominate the base.  None of Sections 1--3 is transferred to a
+  nonnormal closure.
+* **Rational automatically means Du Val.**  False without Gorenstein.  The
+  hypersurface Gorenstein property is the additional input.
+* **Crepant means the exceptional curves do not occur in the different.**
+  False.  It identifies the total pullback class and rational section; local
+  Cartier pullback multiplicities remain.
+* **Rank nine and determinant four imply `D9`.**  False, with (5.5) as the
+  explicit control.  The ruled nine-blowup marking proves `D9`; the root
+  counts independently distinguish the candidates.
+* **The exceptional lattice is the orthogonal complement.**  False.  It is
+  only a possibly nonprimitive ADE root sublattice.
+* **The old smooth conic-bundle marking can be copied verbatim.**  The total
+  transform lattice marking survives, but its effective `E_i` curves and
+  fibre components may be altered by infinitely near centres and ADE
+  resolutions.  Effectivity must be rebuilt.
+* **Connected ramification already gives a cycle.**  Not without two typed
+  physical attachments after resolving the ADE trees.
+
+No CAS, finite-field sampling, or AWS computation is used.
+
+## 9. Exact remaining gap and scope firewall
+
+The next finite object is an **ADE-decorated boundary/different lattice**, not
+a search over arbitrary Picard groups.  It must determine, for every allowed
+root sublattice `Lambda_exc subset D9(-1)`:
+
+1. the reduced strict transform and Cartier multiplicities of infinity
+   `H~A`, including nonreduced leading forms and projective coefficient
+   basepoints;
+2. the total pullback of `R_X~2A+B` through each ADE tree, with local
+   intersection and different multiplicities;
+3. which exceptional vertices belong to the completed first-leg boundary;
+4. the physical attachment points between the connected different support
+   and the resolved infinity tree; and
+5. effectivity and irreducibility of all nonexceptional carrier classes in
+   the ruled nine-blowup marking.
+
+Only after those data are typed can the rational-forest cycle test or the
+smooth `F5` lattice enumeration be reused.  The present packet supplies no
+normal-singular exclusion and no occurrence theorem.
+
+The hypotheses are: characteristic zero; an irreducible normal Cartier
+hypersurface of class `2A+3B`; the promoted proper cubic block/first-leg
+scope when the first-leg route is invoked; and the minimal resolution.
+Nonnormal incidence closures are wholly outside: their normalization,
+conductor curve, cohomology sequence, and generic-conic singular locus need
+separate treatment.  Also outside are basis minimization, a proof that an
+arbitrary cubic block has a quadratic presentation, higher coefficient
+degree, another block degree, block primitivity, a polynomial map, a
+counterexample, and JC2.
+
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `19112`.
+- Body SHA-256:
+  `b2a5c3b5e063333abd544be5c6a5d4b4b6dff1cd9a362b3471160a395ef03fea`.
+- Frozen basis: `145f96d65021ef364a5189c4ca385fe09d7b4f46`.
+
+codex
+The predecessor itself names four inputs in its Section 0. I’m going to read those direct paths as scope-control sources, especially the rational-forest and smooth/lattice packets, then stop there rather than broad-searching the repo.
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/ac7ef8f5321f579d5e193b6ae3a9b0f1aa2a64421050bb71426b94258d984ffb.md' in /Users/dc/code/math/jc2
+ exited 1 in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+shasum: xmodel/ac7ef8f5321f579d5e193b6ae3a9b0f1aa2a64421050bb71426b94258d984ffb.md: No such file or directory
+
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+ac7ef8f5321f579d5e193b6ae3a9b0f1aa2a64421050bb71426b94258d984ffb  xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md
+
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-ramification-lattice-closure-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+c9871c92ce8748fd934dc57061f667b49952a1aba39aee43eb3af7b0aadbf392  xmodel/bd-a2-ramification-lattice-closure-coordinator-integration-sol56-20260830.md
+
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+
+codex
+The four predecessor Section 0 hashes present as expected; one failed path was my typo using a hash as a filename, not a repo probe. I’m reading the named documents now, starting with the two that constrain the geometry and forest usage.
+exec
+/bin/zsh -lc "sed -n '1,260p' xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+# Coordinator integration: rational-forest first-leg obstruction
+
+Date: 2026-08-30 UTC  
+Coordinator: Sol 5.6 Ultra  
+Frozen basis: `a619157b73c1dee1ca0599db47321ffd7588d748`  
+Lifecycle: **BINDING INTEGRATION / PRESENTATION-SCOPED QUADRATIC CONSEQUENCE**
+
+## 0. Disposition
+
+Opus 5 returned `CONFIRM_WITH_CORRECTIONS` on the sealed producer
+
+```text
+367d8ffa1a374b25ee27ca2a2079721c6b17bd71980a13687b11aa87e86f2986
+  xmodel/bd-a2-firstleg-rational-forest-multisection-producer-sol56-20260830.md
+```
+
+through a sandbox-attested raw review body
+
+```text
+40841431c554c63cedb13bda8f662e2633d97695ee8f5d91659479169e2d13e5
+  xmodel/bd-a2-rational-forest-multisection-hostile-review-opus5-20260830.md
+```
+
+whose sealed full-file SHA-256 is
+`24b61d503e5849576093139261d5bc748e2dc7d83ddcc657ac9e4d1d9a004b5f`.
+The receipt pins unchanged prompt, adapter, launcher, Seatbelt profile,
+validator, fallacy appendix, and model-prompt hashes, with exit code zero.
+
+The review preserves the producer's main theorem and improves the
+multisection formula.  This integration adopts the review's repairs: strict
+SNC/geometric-genus language, a direct differential-form proof of
+`p_g=q=0`, dominant rational rather than only morphic input, open-subset
+monotonicity, the exact unibranch equality condition, the projective-coordinate
+convention in the sharp control, exact `[X:Y]`-degree three, and the separation
+of reduced ramification support from different and discriminant
+multiplicities.  The conditional value `barP_1=18` is not promoted.
+
+## 1. Binding rational-forest theorem
+
+Let `U` be a smooth quasi-projective complex surface and `(X,D)` a smooth
+projective completion with `D` reduced strict SNC.  Write `Gamma_D` for the
+dual multigraph, retaining parallel edges, and put
+
+```text
+tau(D)=sum_i g(D_i)+b_1(Gamma_D).
+```
+
+Residue, normalization, and Serre duality give
+
+```text
+barP_1(U)=p_g(X)+tau(D)-rank(partial),
+rank(partial)<=min(tau(D),q(X)).                       (1.1)
+```
+
+This includes disconnected boundaries: if `V,E,c` are the numbers of
+vertices, edges, and connected components, then
+`b_1=E-V+c`.
+
+If there is a dominant rational map `A^2 --> U`, resolve it to a generically
+finite morphism.  Pullback injects global one-forms and pluricanonical forms,
+so `p_g(X)=q(X)=0`; logarithmic pullback also forces
+`bar kappa(U)=-infinity` and hence `barP_1(U)=0`.  Equation (1.1) then gives
+
+```text
+g(D_i)=0 for every i,          b_1(Gamma_D)=0.         (1.2)
+```
+
+Thus every resolved boundary component is rational and the dual multigraph
+is a forest.  The obstruction is monotone under shrinking the target: adding
+boundary cannot decrease logarithmic plurigenera.  Consequently any one
+boundary subconfiguration with positive geometric genus or a graph cycle
+already forbids a dominant rational first leg from `A^2`.
+
+## 2. Exact multisection formula
+
+For a reduced curve `H` on a smooth projective surface, let its irreducible
+components have normalization genera `g_i`, let `m_q` be the number of
+analytic branches at a singular point, let `s` be the component count, and
+let `c` be the connected-component count.  Direct edge/vertex cancellation
+in an embedded resolution gives
+
+```text
+tau(H_res)
+ = sum_i g_i + sum_(q in Sing H)(m_q-1)-s+c.           (2.1)
+```
+
+For a `P^1`-bundle over `P^1`, a section `D_infinity`, and an irreducible
+multisection `C` of normalization genus `g`, let `r` be the total number of
+analytic branches of `C` at its contacts with `D_infinity`.  Then
+
+```text
+barP_1(P minus (C union D_infinity))
+ = g + max(r-1,0)
+   + sum_(q in Sing(C), q notin D_infinity)(m_q-1).    (2.2)
+```
+
+Several branches at one point and resolution paths sharing exceptional
+vertices do not reduce the right side.  In particular the gate fires if
+`g>0`, `r>=2`, or an off-infinity singularity is multibranch.  Equality with
+the lower bound `g+max(r-1,0)` requires only that every off-infinity
+singularity be unibranch, not smoothness there.
+
+This is sharp.  With the convention `z=Z_1/Z_0`, the complement
+
+```text
+(P^1_z x P^1_w) minus ({w=infinity} union closure{z=w^k})
+```
+
+is `A^2`, via `(w,t) |-> (w,[t:1+t*w^k])`.  Hence multisection degree alone
+cannot obstruct a first leg.
+
+## 3. Miranda-incidence consequence
+
+Consider a fixed global trace-zero Miranda presentation whose homogenized
+incidence closure is a smooth irreducible hypersurface
+
+```text
+X_d subset P^2 x P^1,          [X_d]=d*A+3*B,          (3.1)
+```
+
+with literal degree three in `[X:Y]`.  Adjunction and restriction cohomology
+give
+
+```text
+K_X=(d-3)A+B,
+p_g(X_d)=(d-1)(d-2).                                  (3.2)
+```
+
+Therefore every such presentation with `d>=3` is incompatible with a
+dominant rational `A^2` first leg.
+
+For `d=2`, `X_2` is rational on the stated smooth irreducible conic-bundle
+stratum.  Its infinity curve is generically a smooth irreducible curve of
+bidegree `(2,3)` on `P^1 x P^1`, hence has genus two.  Already
+
+```text
+barP_1(X_2 minus H_infinity)=2>0,                     (3.3)
+```
+
+so every dense open of this generic stratum is excluded.  No ramification
+divisor is needed for (3.3).
+
+The stronger generic intersection calculation
+
+```text
+R_pi=2A+B,   g(H_infinity)=2,   p_a(R_pi)=9,
+H_infinity.R_pi=8,   nominal barP_1=18
+```
+
+remains only a conditional diagnostic: it additionally requires that the
+reduced ramification support is deleted, smooth and irreducible, has class
+`2A+B`, and meets infinity in eight distinct transverse points.  It is not a
+binding theorem.
+
+## 4. Exact survivor boundary
+
+The theorem is presentation-scoped.  It does not exclude nonreduced
+incidence closure, singular ambient closure, projective basepoints,
+extraneous/reducible projective components, degree drop in `(u,v)`, or degree
+drop in `[X:Y]`; bidegree `(d,1)` has `p_g=0` even for large `d`.  It also
+does not identify arithmetic with geometric genus on a singular component,
+or reduced ramification support with the different or target discriminant.
+
+On the remaining reduced quadratic infinity stratum, if `H` has bidegree
+`(2,3)`, then `p_a(H)=2`, and its ample support is connected.  Combining the
+arithmetic-genus formula with (2.1) gives the finite successor gate
+
+```text
+2 = G + B + K,
+G=sum component normalization genera,
+B=b_1(resolved dual graph),
+K=sum_q(delta_q-m_q+1).                                (4.1)
+```
+
+Thus a rational-forest resolution is possible exactly when `K=2` (and then
+necessarily `G=B=0`).  Classifying the reduced factor-degree partitions and
+their distributions of this two-unit non-nodal defect is the cheapest next
+step.  Nonreduced and projective-degree-drop strata remain separate.
+
+No general cubic-block theorem, intrinsic bound on presentation degree,
+primitivity statement, polynomial-map construction, counterexample, or JC2
+claim follows.
+
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `6810`.
+- Body SHA-256:
+  `9c6501222049980161f209d57e1a575ebe80c4de1b8018aedf303f692e1dae46`.
+- Frozen basis: `a619157b73c1dee1ca0599db47321ffd7588d748`.
+
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+6a8558e42a67f1ec5c8bcf12321b6e6805b30a570eba17862c6e7e24cd631b08  xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md
+
+exec
+/bin/zsh -lc "sed -n '261,620p' xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+codex
+The rational-forest input confirms the usable theorem is a forest statement for a resolved reduced SNC boundary under a dominant rational first leg; it does not itself give multiplicity counts. I’m now checking the smooth/lattice/block inputs only for inherited hypotheses, not importing unrelated lanes.
+exec
+/bin/zsh -lc "sed -n '1,300p' xmodel/bd-a2-ramification-lattice-closure-coordinator-integration-sol56-20260830.md" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "sed -n '1,260p' xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+# Binding integration: quadratic ramification connectedness and F5 lattice closure
+
+Date: 2026-08-30 UTC  
+Coordinator: Sol 5.6 Ultra  
+Frozen integration basis: `3647d740119088e5bc5ee7a16255eb6b7344e6e3`  
+Lifecycle: **PROMOTED, EXACT IN THE DECLARED STRATUM**
+
+## 0. Verdict and custody
+
+This integration binds the exact global producer
+
+```text
+4978e225d4847a29d4d87876fa347132871ddba958afb9db6ede2b1699c45a39
+  xmodel/bd-a2-ramification-connectedness-f5-lattice-closure-sol56-20260830.md
+  body 13850 / 2fa574c72a81e6b736cd6847fcbb9cc9272b60ed34c46ef40c1996a3020d92b6
+```
+
+to the independent GPT-5.5 xhigh hostile review
+
+```text
+444e813d22e4e9c2f9e0b03c8ed025952601f10a30928e36b39ad0b7a36bf1fe
+  xmodel/bd-a2-ramification-connectedness-f5-lattice-hostile-review-codex55-20260830.md
+  body 11936 / 5e76465483713b91c9f65d9792d046f450d98e63fdb2bb123645b2938c2fdc03
+  verdict CONFIRM_WITH_CORRECTIONS
+```
+
+The review independently reconstructed the relative canonical class, ample-
+connectedness argument, resolved-graph eliminations, rank-eleven conic-bundle
+marking, classification of contracted curves, local-to-global carrier step,
+all lattice equations, and the enumeration over every labelled four-subset.
+It found no mathematical gap. Its corrections are binding below.
+
+The producer's internal `Frozen basis` field is `1efd7a76...`: that records
+the authorship/dependency snapshot on which its desk derivation began. The
+producer was transactionally published and first committed at
+`78da50bd31b3f7fd8d07ed8fc5ddbbf0ad4290d1`; the review ran on exactly that
+commit. Its charged F5 local integration is the sealed artifact `8fcd071f...`,
+also authored on basis `1efd7a76...` and committed before the producer. These
+are distinct lifecycle facts, not a claim that the producer file existed at
+the older commit. Neither frozen input is mutated.
+
+Fable 5 and Opus 5 were attempted first but the shared Claude account refused
+both jobs at its monthly spend ceiling before model work. Grok 4.6 likewise
+failed before model work because its Build balance was exhausted. Their
+quarantined receipts make no mathematical contribution. GPT-5.5 is a fresh
+model/context distinct from the Sol 5.6 producer and satisfies the campaign's
+different-model promotion gate.
+
+## 1. Exact promoted theorem
+
+Let `X` be a smooth irreducible hypersurface of class `2A+3B` in
+`P2 times P1`. Let `pi:X->P2` be generically finite and finite near the
+reduced squarefree infinity curve `H=X intersect {line at infinity}~A`.
+Assume the promoted dominant-`A2` first-leg hypotheses: the resolved full
+boundary is a rational forest, the boundary classification and attachment
+theorems apply, and the dominant block morphism supplies
+`O(U)^*=O(X minus H)^*=C^*` for the localization argument.
+
+Then no such first leg exists. More explicitly:
+
+```text
+F1,F2,F4,F7 are impossible by connected ramification plus two attachments;
+F5 is impossible by its exact 3+5 different and the conic-bundle lattice;
+F3,F6 violate the assumed projective finiteness near H;
+F8,F9 admit no reduced rational-tree refinement.
+```
+
+Thus the entire smooth, projectively finite, reduced-squarefree quadratic
+stratum in this fixed-basis incidence model is empty under the declared
+dominant-`A2` first-leg hypotheses.
+
+## 2. Global connectedness removes the reducibility loophole
+
+Adjunction on `X~2A+3B` gives
+
+```text
+A^2=3,  A.B=2,  B^2=0,  K_X=-A+B,
+R_pi=K_X-pi^*K_P2=2A+B.
+```
+
+`O_X(2A+B)` is the restriction of the ample ambient bundle `O(2,1)`.
+Characteristic zero and generic finiteness make the Jacobian section nonzero,
+so `R_pi` is a nonzero effective ample Cartier divisor. If its reduced
+support were disconnected, partitioning the Cartier multiplicities between
+two disjoint nonzero effective divisors `D_1,D_2` would give
+`D_i^2=R_pi.D_i>0` and `D_1.D_2=0`, contradicting the Hodge index theorem.
+Hence the **connected reduced support** of `R_pi` is connected; no reducedness
+or irreducibility of the Cartier divisor is assumed.
+
+The promoted attachment integration excludes a ramification component inside
+reduced `H`, so this projective support is the closure of the reduced affine
+ramification support. In an embedded resolution, the connected total
+transforms of connected `H` and of this connected reduced support are trees
+inside the assumed forest. Two distinct physical attachment points give two
+independent joining paths. Contracting the two trees leaves parallel edges,
+hence a cycle. The promoted exact attachment counts therefore eliminate
+`F1,F2,F4,F7`, including reducible and nonreduced ramification divisors.
+
+## 3. The F5 lattice is finite and empty
+
+For `F5`, use the nine-singular-fibre conic bundle `q:X->P1` with `F=B`, a
+section `S`, and fibre components `E_i` disjoint from `S`. With `E_1` chosen
+in the fibre containing the `(0,1)` infinity component `L`, the exact marking
+is
+
+```text
+S^2=-2,  S.F=1,  E_i^2=-1,
+A=2S+5F-sum_(i=1)^9 E_i,
+L=F-E_1,
+T=S+4F-sum_(i=2)^9 E_i.
+```
+
+An irreducible `A`-null curve disjoint from `H=L+S+T` is literally
+`{target point} times P1`, hence a smooth `q`-section of square `-3`. Its
+class must be
+
+```text
+Z_I=S+2F-E_1-sum_(i in I)E_i,
+I subset {2,...,9},  |I|=4.
+```
+
+Distinct effective such curves are disjoint, so
+`Z_I.Z_J=1-|I intersect J|=0` whenever two coexist. No stronger unused claim
+about triples is needed.
+
+The reviewed local F5 calculation gives two reduced smooth transverse
+source-different germs. `D_3` denotes the **weight-three transverse** branch,
+with contact vector `(1,1,1)` against `(L,S,T)`; `D_5` denotes the
+**weight-five tangent** branch, with vector `(1,2,2)`. The displayed tangent
+lines in the local calculation are not themselves the analytic branches.
+If both germs belonged to one global prime, their distinct normalization
+points over connected `H` would already create a cycle. Thus a possible
+survivor has distinct carrier primes `D_3,D_5`, each with Cartier coefficient
+one. Their vectors exhaust `R_pi.(L,S,T)=(2,3,3)`, so every other prime is an
+`A`-null `Z_I`.
+
+Put `x=F.D_3`, `y=F.D_5`, and let `N` be the total Cartier multiplicity of
+the `A`-null primes. Then `x,y>=1` and
+
+```text
+x+y+N=R_pi.F=4.
+```
+
+The local transverse intersection contributes one to `D_3.D_5`. The equality
+`D_3.D_5=1` is imposed only as a **necessary survivor condition**: if there is
+any further intersection, the boundary path and that extra interior path
+already form a forbidden cycle.
+
+Writing
+
+```text
+D_3=xS+(2x+1)F-(x-1)E_1-sum a_jE_j,
+D_5=yS+(2y+2)F-(y-1)E_1-sum b_jE_j
+```
+
+gives nonnegative integral `a_j=D_3.E_j`, `b_j=D_5.E_j` and
+
+```text
+sum a_j=4x,  sum b_j=4y,
+a_j+b_j+c_j=2,
+delta_3=(D_3^2+x-1)/2 in Z_(>=0),
+delta_5=(D_5^2+y-3)/2 in Z_(>=0),
+sum a_j*b_j=xy+3x+2y-2.
+```
+
+Here `c_j` records the actual Cartier multiplicities of the `Z_I` terms.
+The coordinate equality bounds every `a_j,b_j` by two. The seven possible
+partitions are therefore a literal finite enumeration. The reviewer reran
+all labelled subsets: doubled `Z` has 70 labelled solutions forming one
+permutation orbit, while the other six rows have none. The sole orbit is
+
+```text
+R_pi=D_3+D_5+2Z,
+D_3=S+3F-sum_(j in J)E_j,
+D_5=S+4F-sum_(j in J)E_j,
+Z=S+2F-E_1-sum_(i in I)E_i,
+J={2,...,9} minus I,
+D_3.D_5=1,  D_3.Z=3,  D_5.Z=4.
+```
+
+It is impossible in two independent ways. First,
+
+```text
+D_3+Z=A=L+S+T=H.
+```
+
+Restricting to `Y=X minus H` gives `[D_3]+[Z]=0` in `Cl(Y)`. For
+`U=Y minus Supp(R_pi)`, the charged equality
+`O(U)^*=O(Y)^*=C^*` makes the localization map from the free group on the
+reduced ramification primes inject into `Cl(Y)`, contradicting this nonzero
+relation. The coefficient two of `Z` in the Cartier different is irrelevant
+to the reduced-prime map.
+
+Second, the resolved F5 boundary configuration gives one path from `D_3` to
+`D_5`, while the positive intersections with the `H`-disjoint component `Z`
+give another interior path. Blowups only subdivide these distinct paths, so
+their cycle cannot disappear. Hence `F5` has no survivor.
+
+## 4. Scope firewall and next clients
+
+This theorem does not cover nonreduced infinity, a singular incidence
+surface, affine coefficient common zeros, source/fibre/target degree drops,
+projective coefficient basepoints outside finiteness, or change to a better
+global trace-zero basis. It is not general quadratic or cubic block closure,
+primitivity, existence/nonexistence of a polynomial Keller map, a
+counterexample, or JC2.
+
+The next quadratic clients are the adjacent basepoint/nonfinite, singular,
+degree-drop, and basis-minimization strata. No larger lattice search or heavy
+CAS is licensed by this promotion; all heavy or uncertain computation remains
+AWS-only after a source-reviewed packet.
+
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `8709`.
+- Body SHA-256:
+  `919a024751d6b28b02908f384297a59b791d1a0d52abb931f9fe5840a486df1a`.
+- Frozen basis: `3647d740119088e5bc5ee7a16255eb6b7344e6e3`.
+
+ succeeded in 0ms:
+# Smooth quadratic degeneracy absorption
+
+Date: 2026-08-30 UTC  
+Producer: Sol 5.6 delegated lane `/root/quadratic_degeneracy_frontier`  
+Frozen basis: `5bc4eea1c749045d54b4ee8053be8d85c4f3bc9f`  
+Lifecycle: **EXACT PROVISIONAL PRODUCER / DIFFERENT-MODEL REVIEW REQUIRED**
+
+## 0. Endpoint and charged inputs
+
+This packet absorbs the smooth degeneracies left outside the promoted
+quadratic lattice theorem.  It charges the following binding integrations:
+
+```text
+c9871c92ce8748fd934dc57061f667b49952a1aba39aee43eb3af7b0aadbf392
+  xmodel/bd-a2-ramification-lattice-closure-coordinator-integration-sol56-20260830.md
+
+c8dee3199ecfaf73b6debedea625346a11babbe42082cff5bff049f8585763c2
+  xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md
+
+ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
+  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+
+f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
+  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+```
+
+The new exact conclusions are:
+
+1. a smooth class-`(2A+3B)` incidence has reduced, hence squarefree,
+   infinity whenever the quadratic leading form is nonzero;
+2. every coefficient basepoint on a smooth incidence produces a `-3` curve
+   `E` and a residual ample different `D` meeting `E` at at least two
+   physical points, so the resolved first-leg boundary has a cycle;
+3. the preceding basepoint obstruction applies at infinity and, through a
+   separately proved Stein-factor bridge, at an affine common coefficient
+   zero; and
+4. target coefficient-degree drop returns to the promoted affine-linear
+   theorem, literal fibre-degree drop contradicts the generic cubic field,
+   and source generic-degree one exits the proper-block hypothesis.
+
+Consequently, conditional only on different-model review of this packet,
+the promoted lattice theorem composes to the following maximum statement:
+
+> **SMOOTH-Q2-CLOSED.**  A proper cubic intermediate block of a hypothetical
+> noninvertible plane Keller map cannot admit a global trace-zero Miranda
+> basis whose four coefficients have total degree at most two and whose
+> exact-degree-two projective incidence hypersurface is smooth.
+
+This is a fixed-presentation/existential-basis theorem.  It does not say that
+an arbitrary cubic block has a quadratic basis, and it does not treat a
+singular quadratic incidence.
+
+## 1. Setup and two elementary perimeter reductions
+
+Let
+
+```text
+A0=C[u,v],
+B_K=A0*1 direct-sum A0*z direct-sum A0*w
+```
+
+be the normal finite-flat integral cubic algebra supplied by the promoted
+proper block sandwich.  In a global trace-zero basis its Miranda cubic is
+
+```text
+Phi=bX^3-3aX^2Y+3dXY^2-cY^3.                       (1.1)
+```
+
+Assume first that `a,b,c,d` have degree at most two and at least one has
+degree exactly two.  Homogenizing to target degree two gives
+
+```text
+X={Phi^h=0} subset P2 times P1,       [X]=2A+3B,     (1.2)
+```
+
+where `A,B` are the two hyperplane restrictions and `pi:X->P2` is the
+incidence projection.  The theorem below assumes `X` smooth.  Smoothness and
+the ample connectedness of a divisor of class `(2,3)` also force the
+hypersurface to be connected and hence irreducible; retaining irreducibility
+explicitly causes no harm.
+
+Two possible degeneracies are already unavailable before boundary geometry.
+
+**No divisorial affine coefficient-zero locus.**  If an irreducible
+`h in A0` divided all four coefficients, pass to the generic DVR of `(h)`.
+Modulo its uniformizer the Miranda multiplication table becomes
+
+```text
+kappa direct-sum V,       dim_kappa(V)=2,       V^2=0.              (1.3)
+```
+
+Normality makes the localized cubic order a semilocal Dedekind domain.  The
+fibre (1.3) is local, so there is one prime above `(h)`.  Since the total
+rank is three, the possibilities are residue degree three and ramification
+index one, which gives a field fibre, or residue degree one and ramification
+index three, whose radical has nonzero square.  Neither is (1.3).  Thus the
+common affine zero locus has codimension two.  For quadratics it is finite;
+two generic linear combinations of the coefficients have no common curve,
+so Bezout bounds its scheme length by four.
+
+**Exact fibre degree.**  Over `C(u,v)`, the algebra `B_K` is a separable
+cubic field.  The binary cubic (1.1) is therefore irreducible: a linear
+factor gives a product component in the generic cubic algebra.  In
+particular it is nonzero and has literal projective `[X:Y]`-degree three.
+An affine fibre polynomial of degree at most two would homogenize with a
+constant linear factor at fibre infinity and is the same forbidden
+reducibility, not a new quadratic stratum.
+
+## 2. Smoothness forces reduced infinity
+
+Let `S=L_infinity times P1 subset P2 times P1` and
+
+```text
+H=X intersect S=div_S(Phi_infinity),
+Phi_infinity in H^0(S,O_S(2,3)).                    (2.1)
+```
+
+Suppose an integral factor `C` of bidegree `(alpha,beta)` occurs in (2.1)
+with multiplicity at least two.  Along the generic smooth locus of `C`, all
+derivatives of `Phi^h` tangent to `S` vanish.  The first derivative normal to
+`S` is intrinsically the first normal jet
+
+```text
+j_perp(Phi^h)|C in
+H^0(C, O_(P2 times P1)(2A+3B-S)|C)
+ = H^0(C,O_C(A+3B)).                                (2.2)
+```
+
+With the bidegree convention used in the promoted boundary packets,
+
+```text
+A.C=beta,       B.C=alpha,
+deg O_C(A+3B)=beta+3alpha>0.                         (2.3)
+```
+
+If the normal jet is identically zero, `X` is singular along a dense open
+of `C`.  If it is nonzero, its pullback to the normalization of the complete
+curve `C` has a zero because (2.3) is positive.  At such a zero every ambient
+first derivative of `Phi^h` vanishes, so `X` is singular there.  Both cases
+contradict smoothness.  Hence:
+
+> **Lemma 2.1 (smooth squarefreeness).**  If the exact quadratic incidence
+> `X` is smooth, its infinity divisor `H` is reduced and the leading
+> bidegree-`(2,3)` binary cubic is squarefree.
+
+There is an independent numerical check.  Write
+`H=sum_i m_i C_i`, where `C_i` has bidegree `(alpha_i,beta_i)`.  Distinct
+components have
+
+```text
+C_i.C_j=alpha_i*beta_j+alpha_j*beta_i.
+```
+
+Adjunction on the smooth surface, using `K_X=-A+B` and
+`p_a(C_i)=(alpha_i-1)(beta_i-1)`, gives
+
+```text
+C_i^2=2alpha_i beta_i-3alpha_i-beta_i.               (2.4)
+```
+
+Intersecting `A=H` with `C_i`, and using
+`sum m_i alpha_i=2`, `sum m_i beta_i=3`, reduces exactly to
+
+```text
+(m_i-1)(3alpha_i+beta_i)=0.                          (2.5)
+```
+
+Every nonzero component class has `3alpha_i+beta_i>0`, again forcing
+`m_i=1`.  The normal-jet proof is primary because it also identifies the
+precise failure in the singular stratum.
+
+## 3. Local geometry of a smooth coefficient basepoint
+
+Let `q in P2` be a common zero of the four homogenized coefficient sections.
+Then
+
+```text
+E={q} times P1 subset X.                             (3.1)
+```
+
+Choose regular parameters `(s,t)` at `q`.  Along `E`, write the first base
+jet of the incidence equation as
+
+```text
+Phi^h=s*p(X,Y)+t*r(X,Y)+terms in (s,t)^2,             (3.2)
+p,r in H^0(P1,O(3)).
+```
+
+The fibre derivative of `Phi^h` vanishes identically on `E`.  Therefore
+smoothness of `X` along `E` is equivalent to `p,r` having no common zero.
+They cannot be proportional, since a nonzero cubic section on `P1` has a
+zero.  Hence
+
+```text
+rho=[p:r]:E=P1 -> P1                                (3.3)
+```
+
+is a morphism of degree three.
+
+### 3.1 Scheme-theoretic blowup factorization
+
+The equality `pi^* I_q=I_E` is scheme-theoretic.  On a chart where `p` is a
+unit, equation (3.2) solves
+
+```text
+s=-t*r/p+terms in t^2,
+```
+
+so `(s,t)O_X=(t)` there; on a chart where `r` is a unit it is generated by
+`s`.  These charts cover `E`, proving that the pulled-back ideal is the
+invertible ideal `O_X(-E)`.  The universal property gives a morphism
+
+```text
+X -> Bl_q(P2) -> P2.                                 (3.4)
+```
+
+Consequently `A-E` is the pullback of the basepoint-free pencil of lines
+through `q` and is nef.  Adjunction also gives the useful check
+
+```text
+E^2=-3,
+```
+
+because `A.E=0`, `B.E=1`, and `K_X.E=1`.
+
+### 3.2 Coefficient one and the Wronskian
+
+The source Jacobian/different divisor of the generically finite map is
+
+```text
+R_pi=K_X-pi^*K_P2 ~ 2A+B.                            (3.5)
+```
+
+On the chart `p!=0`, use `t` and a fibre coordinate `z` as parameters on
+`X`.  Substituting the first-order solution for `s` into the fibre derivative
+gives, up to a unit and a harmless sign,
+
+```text
+(Phi^h_z)/t |_E = r_z-(r/p)*p_z
+                  = (p*r_z-r*p_z)/p.                (3.6)
+```
+
+The Wronskian is not identically zero because the characteristic is zero and
+`rho` has degree three.  Thus `E` occurs in `R_pi` with Cartier coefficient
+exactly one.  Write
+
+```text
+R_pi=E+D,       D effective,       D~2A+B-E.          (3.7)
+```
+
+The transition-compatible zero divisor in (3.6) is precisely
+`Ram(rho)`.  Therefore
+
+```text
+D|E=Ram(rho),       D.E=4.                           (3.8)
+```
+
+Riemann--Hurwitz gives total ramification four.  At one point of a degree-
+three characteristic-zero map the contribution is at most `3-1=2`, so the
+support of (3.8) contains at least two distinct physical points.
+
+exec
+/bin/zsh -lc "sed -n '1,320p' xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+# Coordinator integration: intermediate block descent becomes an étale sandwich
+
+Coordinator: Sol 5.6 Ultra  
+Date: 2026-08-30 UTC  
+Frozen basis: `0f7ee003be45ee40d51d4048897cdacf63821172`  
+Lifecycle: **BINDING PROMOTION / CONDITIONAL STRUCTURE THEOREM / FORMER PRIMITIVITY ROUTE STOPPED**
+
+## 0. Custody and disposition
+
+The reviewed proposal is Opus cross-pollination section 5.3:
+
+```text
+6e48015c296c9677237daee2a21a20195d5fc346e163dbcbaa68b74e46bab296
+  xmodel/ideation-20260829T2254Z-crosspoll-opus5.md
+  body 53234 / 647bca6600e31816c1f7ac14f2b061d7be574cf653d7102ac063375627d0346b
+```
+
+Fable 5 independently audited the local algebra, purity/discriminant
+argument, finite-étale endgame, controls, and minimal-degree consequence,
+returning `CONFIRM_WITH_CORRECTIONS`:
+
+```text
+bc88ca78c303553555dee3e94f16cbef6e81ea187cd201b73e6d700ccc821992
+  hostile review, 38440 bytes through BODY-END
+213da698fcc910dbc119573e8d4d6a09ebcd839ba39f1acc9d2b1fa9ba794a66
+  lane log
+ecbf087ea4d9b86b2a3ae11007eebbf2b0928b8a96c3d21cf2ed3443cf428ad2
+  prompt
+fa91382a3103312a70ae48ee6f55daf710a916971400e230c385cbaac5701f85
+  run receipt
+```
+
+The review finds that the proposed codimension-one condition is not a new
+hypothesis to prove: for every nontrivial block it is false. The surviving
+result is the conservative block-structure theorem below. This integration
+repairs the review's special-fibre cardinality argument before promotion and
+withholds only its citation-dependent polynomial-parametrization decoration.
+
+## 1. Promoted theorem
+
+Let `F=(f,g): A^2_C -> A^2_C` be a non-invertible Keller map. Let
+
+```text
+C(f,g) proper-subfield K proper-subfield C(x,y),
+d1=[C(x,y):K] >= 2,       d2=[K:C(f,g)] >= 2,
+```
+
+and let `B_K` be the integral closure of `C[f,g]` in `K`. Put
+`Y=Spec(B_K)`. The inclusions factor `F` as
+
+```text
+A^2 --g1--> Y --g2--> A^2.
+```
+
+Then the following hold, without a minimal-topological-degree assumption.
+
+1. `B_K` is contained in `C[x,y]` and is module-finite over `C[f,g]`.
+   Thus `Y` is an integral normal affine surface with function field `K`.
+2. `g2` is finite, flat, and surjective of generic degree `d2`. Its
+   trace-discriminant ideal is nonzero (and principal on `A^2`).
+3. `g1` is dominant and quasi-finite of generic degree `d1`; in fact it is
+   étale everywhere and hence open. It is not finite, proper, or surjective.
+4. If `R` is the non-étale locus of `g2`, then `R` is nonempty and has pure
+   codimension one. Moreover
+
+   ```text
+   g1(A^2) subset Y_sm minus R,       Sing(Y) subset R.
+   ```
+
+   Hence `g1` misses every point of every branch divisor. In particular its
+   image never contains every codimension-one point of `Y`.
+5. With `A(h)` denoting the nonproperness set of a complex polynomial map,
+
+   ```text
+   Y minus g1(A^2) subset A(g1),
+   A(F)=g2(A(g1)),
+   g2(R)=V(Disc(g2)) subset A(F).
+   ```
+
+6. For every closed point `z` of the discriminant curve,
+
+   ```text
+   #F^{-1}(z) <= (d2-1)*d1 = deg(F)-d1.
+   ```
+
+   For every closed `z` outside `A(F)`, the fibre has exactly `deg(F)`
+   points.
+7. `Y` is not isomorphic to `A^2`.
+
+This is conditional structure on a hypothetical counterexample and a proper
+intermediate field. It proves neither that such a field exists nor that a
+counterexample exists.
+
+## 2. Load-bearing arguments
+
+The containment `B_K subset C[x,y]` follows because an element of `B_K` is
+integral over `C[f,g]`, hence over `C[x,y]`, and lies in `C(x,y)`, while
+`C[x,y]` is integrally closed. Finiteness of the normalization in the finite
+separable field extension gives the finite map `g2`. Normal surfaces are
+Cohen--Macaulay, so miracle flatness over the regular target makes `g2`
+finite flat; integrality makes it surjective.
+
+The non-obvious strengthening is completion rigidity. At a closed point
+`x`, with `y=g1(x)` and `z=F(x)`, étaleness of `F` identifies the completed
+local rings at `z` and `x`. Quasi-finiteness of `g1` makes the completed
+local ring at `x` finite over that at `y`. Excellence and normality make the
+completed local ring at `y` a two-dimensional normal domain. The intervening
+map has height-zero kernel and is surjective because its composite is the
+completion isomorphism; it is therefore itself an isomorphism. Flatness and
+unramifiedness descend, so both `g1` at `x` and `g2` at `y` are étale. Since
+the schemes are Jacobson, this holds everywhere on the image. Thus the image
+of `g1` is open and disjoint from `R` and from `Sing(Y)`.
+
+If `R` were empty, the connected finite cover `g2` would be finite étale over
+`A^2_C`, hence trivial, contradicting `d2>=2`. Purity (equivalently here the
+finite-flat discriminant support together with branch purity) makes the
+nonempty branch locus divisorial. This proves that the codimension-one image
+antecedent fails rather than remaining an open bridge.
+
+Finite `g2` is proper, which gives the composition identity
+`A(F)=g2(A(g1))`. Openness and density of `g1(A^2)`, plus compactness of
+bounded subsets of `A^2(C)`, give `Y minus g1(A^2) subset A(g1)`. Since all
+of `R` is missed, its discriminant image lies in `A(F)`.
+
+The fibre deficit needs one normalization lemma that was implicit in the
+review. Let `Z` be the normalization of `Y` in `C(x,y)`; strong Zariski Main
+embeds `A^2` openly in `Z`. For a closed `y in Y`, localize at `y` and let
+`q_1,...,q_r` be the points of `Z` above it. Their residue fields are `C`.
+Chinese remaindering supplies an integral element `b` with pairwise distinct
+residues at the `q_i`. Its minimal polynomial over `K` has degree at most
+`d1` and coefficients in the normal local ring: integrality makes those
+coefficients integral, and normality brings them back into the ring. Modulo
+the maximal ideal this polynomial has the `r` distinct chosen residues as
+roots, so `r<=d1`. Thus every `g1` fibre has at most `d1` points. A finite-
+flat `g2` fibre has at most `d2` distinct points, and over its discriminant at
+least one lies in `R` and contributes no `g1` preimage. This proves the
+displayed `deg(F)-d1` bound. Outside `A(F)`, properness over a small
+neighborhood makes the étale map `F` a covering of its generic degree,
+giving equality.
+
+Finally, if `Y` were abstractly `A^2`, the factorization could be conjugated
+to polynomial self-maps `F=G2 o G1` of `A^2`. The chain rule makes both
+Jacobian determinants nonzero constants (the image of `G1` is dense), so
+the finite map `G2` would be a connected finite étale cover of degree
+`d2>=2` of `A^2_C`, again impossible.
+
+## 3. Binding corrections and withheld claims
+
+1. The launch condition "`g1(A^2)` contains every codimension-one point" is
+   refuted for every nontrivial block: the whole nonempty branch divisor is
+   missed. It must not remain listed as an attainable proof obligation.
+2. The alternative recognition target `Y isomorphic to A^2` is also
+   impossible for every nontrivial block. It is a reductio, not a descent
+   theorem waiting to be proved.
+3. Consequently this route gives no implication from minimal topological
+   degree to primitive monodromy. Primitivity remains open. The honest
+   successor is to rule out the forced étale sandwiches directly, beginning
+   provisionally with block index `d2=2` (`BD-D2`).
+4. The review's estimate `#F^{-1}(z) <= deg(F)-d1` is promoted only with the
+   CRT/minimal-polynomial normalization lemma supplied in section 2. It does
+   not require flatness of the degree-`d1` normalization and makes no
+   attainment claim beyond the displayed upper bound.
+5. The stronger wording that discriminant components are polynomially
+   parametrized components of `A(F)` is citation-dependent and unnecessary
+   for the structural result. Only the proved inclusion
+   `g2(R)=V(Disc(g2)) subset A(F)` is promoted here.
+
+## 4. Scope and next discriminator
+
+The theorem constrains only a block that already exists. It does not supply
+an intermediate field, prove primitive monodromy, select a bounded
+topological degree, control all components of `A(F)`, decide smoothness of
+`Y`, or prove JC2. The proposed next discriminator `BD-D2` is not promoted:
+it asks whether a degree-two finite-flat branched cover in this sandwich can
+be ruled out using the topology of the complement and the geometry at
+infinity. It requires its own producer and hostile review.
+
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `8285`.
+- Body SHA-256:
+  `85db7afd1e8b9f1039bbf977b78a6ea1f64cef9b6fb9323f2233281cf1be6e9f`.
+- Frozen basis: `0f7ee003be45ee40d51d4048897cdacf63821172`.
+
+codex
+The inherited smooth and promoted lattice packets mainly serve as scope boundaries here: they do not license importing the smooth finite enumeration into the singular ADE setting. I still need the end of the smooth packet to confirm exactly which singular/nonfinite strata were left open.
+exec
+/bin/zsh -lc "sed -n '261,620p' xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+
+### 3.3 Ample residual different and the cycle
+
+Using the blowup factorization,
+
+```text
+D=(A+B)+(A-E).                                       (3.9)
+```
+
+The first summand is the restriction of the ample ambient bundle `O(1,1)`;
+the second is nef.  Hence `D` is ample.  Its reduced support is connected by
+the same Hodge-index argument used in the promoted lattice integration.
+
+In a resolved first-leg boundary, if the connected total transform of
+`Supp(D)` already has positive genus or a graph cycle, the rational-forest
+theorem has fired.  Otherwise it is a tree.  The curve `E` is rational and
+meets it at the at least two distinct physical points from (3.8).  Resolving
+tangencies only subdivides the two joining paths.  Contracting the two trees
+leaves two parallel edges, hence a cycle.  We obtain:
+
+> **Lemma 3.1 (smooth basepoint cycle).**  Whenever a coefficient-basepoint
+> curve `E` belongs to the boundary of the lifted first-leg open on a smooth
+> exact quadratic incidence, the full resolved boundary is not a rational
+> forest.
+
+For a projective coefficient basepoint `q in L_infinity`, `E` is already a
+component of `H`.  Lemma 3.1 therefore eliminates the nonfinite `F3,F6`
+types rather than merely declaring them outside projective finiteness.
+
+## 4. Affine common-zero bridge
+
+An affine common coefficient zero needs one additional typing step because
+the block surface `Y=Spec(B_K)` is finite over `A2`, whereas the incidence
+surface contains the exceptional `P1`.  The bridge is exact in the present
+normal finite-flat scope.
+
+Let `Z subset A2` be the finite common-zero scheme from Section 1 and put
+
+```text
+X_aff={Phi=0} subset A2 times P1,
+pi_0:X_aff->A2.
+```
+
+The divisor sequence on the relative projective line is
+
+```text
+0 -> O(-3) --Phi--> O -> O_(X_aff) -> 0.             (4.1)
+```
+
+Relative cohomology gives an exact sequence of `A0`-modules
+
+```text
+0 -> A0 -> (pi_0)_*O_(X_aff) -> A0^2 -> 0,           (4.2)
+```
+
+so the direct image is locally free of rank three.  Over `A2 minus Z`, the
+incidence is a finite cubic divisor and the standard Miranda multiplication
+identifies its direct-image algebra with `B_K`.  Both algebras are locally
+free, hence reflexive, over the regular surface `A2`; the isomorphism and its
+inverse extend uniquely across the codimension-two set `Z`.  Multiplication
+matrices extend entrywise, and their algebra identities hold globally because
+they hold on the dense open.  Thus this is an algebra isomorphism, not merely
+a module isomorphism, and
+
+```text
+Spec((pi_0)_*O_(X_aff)) = Spec(B_K)=Y.                (4.3)
+```
+
+The associated Stein morphism
+
+```text
+nu:X_aff -> Y                                        (4.4)
+```
+
+is an isomorphism over `A2 minus Z` and contracts the curve
+`E_q={q} times P1` over each `q in Z`.  At such a point the direct Miranda
+multiplication table in `B_K tensor kappa(q)` is the square-zero algebra
+(1.3), so it is non-etale.  This conclusion is not obtained by base-changing
+`H^0(O_(X_aff))`: formation of global functions does not commute with that
+exceptional fibre.
+The promoted block
+structure gives
+
+```text
+g_1(A2) subset Y_sm minus R,
+```
+
+and in particular the first-leg image misses every contracted point.  It
+therefore lifts through the isomorphism locus of (4.4) to a dominant morphism
+whose image avoids `E_q` and the remaining source different.  In a smooth
+projective incidence completion, `E_q union Supp(D)` is consequently a
+boundary subconfiguration: a component of `D` in infinity is already in
+`H`, and every other component is the closure of affine non-etale support.
+Lemma 3.1 applies.
+
+> **Corollary 4.1.**  In the normal finite-flat proper cubic-block scope, a
+> smooth exact quadratic projective incidence cannot have an affine common
+> zero of the four Miranda coefficients.
+
+This is not a claim about an arbitrary four-tuple of quadratic polynomials.
+It uses normality of `B_K`, the Miranda algebra identification in (4.3), the
+promoted fact that the first leg misses the non-etale locus, and smoothness
+of the incidence model along every exceptional curve.
+
+## 5. Exact degree-drop routing
+
+The adjacent degree drops do not create further smooth quadratic cases.
+
+1. **Target coefficient degree.**  If all four degree-two leading forms
+   vanish, the affine coefficients have degree at most one.  Homogenizing
+   artificially to degree two merely adds the target-infinity ambient
+   component; cancel it and apply the promoted affine-linear theorem
+   `AL3-CLOSED` charged in Section 0.
+2. **Fibre degree.**  A literal drop below homogeneous `[X:Y]`-degree three
+   supplies a constant fibre linear factor after degree-three homogenization.
+   This contradicts the generic cubic field, as in Section 1.  Vanishing of
+   only one leading fibre coefficient is not by itself a target-degree drop;
+   the point is the generic factor, not a chart convention.
+3. **Source generic degree.**  If “source-degree drop” means
+   `[C(x,y):K]=1`, then `K` is not a proper upper intermediate field and the
+   promoted sandwich hypothesis has failed.  No polynomial-support theorem
+   is inferred from that tautological routing.
+4. **Quotient generic degree.**  A drop of the cubic quotient to degree two
+   is already excluded by the promoted non-Galois theorem, since every
+   separable quadratic extension is Galois; degree one is not a proper lower
+   intermediate field.
+
+These are four different typings.  None authorizes replacing a singular
+degree-two presentation by a smooth lower-degree one.
+
+## 6. Conditional composition: all smooth exact quadratics
+
+Assume a proper cubic block has coefficients of degree at most two in the
+chosen global trace-zero basis and that its exact-degree-two projective
+incidence `X` is smooth.
+
+If the coefficient degree drops, Section 5 routes to `AL3-CLOSED`.  Otherwise
+the generic fibre has exact degree three.  If the four homogenized
+coefficient sections have a common zero, Lemma 3.1 applies directly at
+projective infinity and Corollary 4.1 applies at an affine point.  Thus a
+survivor has no coefficient basepoint anywhere on `P2`.
+
+Every fibre of the proper morphism `pi:X->P2` is then the nonzero cubic
+divisor in `P1`, hence zero-dimensional of length three.  Proper plus
+quasi-finite makes `pi` finite.  With `Z` empty, (4.3) identifies
+`X minus H` literally with the finite block surface `Y`, so the promoted
+first-leg and unit inputs are on the required model.  Lemma 2.1 makes its
+infinity divisor reduced and squarefree.  All hypotheses of the promoted
+lattice integration `c9871c92...` are now met.  That theorem excludes the full
+`F1,F2,F4,F5,F7` list, projective finiteness has already removed the vertical
+basepoint types, and `F8,F9` have no rational-tree refinement.  This proves
+`SMOOTH-Q2-CLOSED`, conditional on different-model review of the new lemmas
+and bridge in this packet.
+
+Notice that affine common zeros are not silently fed into the old lattice
+theorem: they are eliminated first by Section 4.  Likewise nonreduced
+infinity is not silently squarefreed: Lemma 2.1 proves it cannot occur on a
+smooth `X`.
+
+## 7. Hostile attacks and controls
+
+The following shortcuts were attacked explicitly.
+
+* **A repeated boundary factor might coexist with smooth total space.**
+  Locally this can happen while the normal derivative is a unit, but globally
+  that derivative has degree `3alpha+beta>0` on the complete component and
+  must vanish.  Equation (2.5) is an independent intersection check.
+* **The basepoint fibre might be only set-theoretic.**  Section 3.1 proves
+  `(s,t)O_X=I_E` chartwise before invoking the blowup universal property.
+* **The pencil `[p:r]` might have degree below three.**  Basepoint-freeness
+  gives pullback `O(1)=O_E(3)`; proportional cubics would have common zeros.
+* **`E` might have larger Cartier coefficient in the different.**  The
+  nonzero Wronskian in (3.6) gives generic order exactly one.
+* **Four intersection units might concentrate at one physical point.**  A
+  degree-three map has local ramification contribution at most two, so the
+  degree-four ramification divisor has at least two support points.
+* **The residual different might be merely big.**  Formula (3.9) writes it
+  as ample plus nef, so it is ample and its support is connected.
+* **Resolution might erase the cycle.**  Blowups subdivide joining paths or
+  add pendant vertices; they do not identify the two physical attachments.
+* **The affine incidence is not finite at a common zero.**  Correct; Section
+  4 uses its Stein algebra, proves that algebra is `B_K`, and only lifts the
+  first leg through the isomorphism locus after showing the contracted point
+  is non-etale and missed.  The square-zero fibre is read from the Miranda
+  multiplication table, not from an invalid cohomology base-change step.
+* **No projective basepoint might be weaker than finiteness.**  Every fibre
+  is then a nonzero effective cubic divisor on `P1`; proper quasi-finiteness
+  is finiteness.
+* **A better basis might change the degree.**  The conclusion is existential
+  in the displayed basis.  It neither minimizes coefficient degree nor
+  transfers smoothness between two bases.
+
+No CAS, finite-field sampling, or AWS computation enters any step.
+
+## 8. Scope firewall and successor
+
+`SMOOTH-Q2-CLOSED` is conditional on a proper cubic block, the promoted
+dominant first-leg sandwich, a chosen global trace-zero basis with coefficient
+degree at most two, and smoothness of the exact quadratic projective
+incidence.  It does not prove that a quadratic basis exists, bound the minimum
+degree over all bases, or turn the intrinsic discriminant bound around.  It
+does not cover a singular or nonnormal incidence closure, a higher-degree
+presentation, another block degree, a primitive extension, a polynomial map,
+a counterexample, or JC2.
+
+The next geometric packet should be singular-incidence-only.  A promising
+separate provisional triage is: for a normal class-`(2,3)` hypersurface,
+`H^1(O_X)=H^2(O_X)=0`; after proving that the first-leg open lifts to a
+resolution completion with all singular points in the boundary, Leray would
+turn `q=0` into rationality of every singularity, and the hypersurface
+Gorenstein condition would reduce these to Du Val types.  That bridge and
+the resulting exceptional-root lattice are not consumed here.  Nonnormal
+closures and basis minimization remain still later, separate clients.
+
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `19665`.
+- Body SHA-256:
+  `ecff0c0f3b373e00128b10cad561a0738e8db32e60d4c04f475c5e0fa38c25bd`.
+- Frozen basis: `5bc4eea1c749045d54b4ee8053be8d85c4f3bc9f`.
+
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+c8dee3199ecfaf73b6debedea625346a11babbe42082cff5bff049f8585763c2  xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md
+
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+
+codex
+The algebraic checks are small enough to do directly. I’m using a lightweight finite-root backtracking script and integer Cartan arithmetic, not a CAS, to corroborate the hand classification and the advertised congruence formulas.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from itertools import product
+from fractions import Fraction
+
+N=9
+roots=[]
+for i in range(N):
+  for j in range(i+1,N):
+    for si in (1,-1):
+      for sj in (1,-1):
+        v=[0]*N; v[i]=si; v[j]=sj; roots.append(tuple(v))
+# include both signs already present by sign choices
+assert len(roots)==144
+
+def dot(a,b): return sum(x*y for x,y in zip(a,b))
+
+def rank(vs):
+  A=[[Fraction(x) for x in v] for v in vs]
+  m=len(A); n=N; r=0
+  for c in range(n):
+    piv=None
+    for i in range(r,m):
+      if A[i][c]: piv=i; break
+    if piv is None: continue
+    A[r],A[piv]=A[piv],A[r]
+    pv=A[r][c]
+    A[r]=[x/pv for x in A[r]]
+    for i in range(m):
+      if i"'!=r and A[i][c]:
+        f=A[i][c]
+        A[i]=[A[i][j]-f*A[r][j] for j in range(n)]
+    r+=1
+  return r
+
+def Agraph(r): return [(i,i+1) for i in range(r-1)]
+def Dgraph(r): return [(i,i+1) for i in range(r-3)] + [(r-3,r-2),(r-3,r-1)]
+def E6graph(): return [(0,1),(1,2),(2,3),(3,4),(2,5)]
+def E7graph(): return E6graph()+[(4,6)]
+def E8graph(): return E7graph()+[(6,7)]
+# E graphs exact shape immaterial up to graph isomorphism; these are connected E diagrams.
+
+def exists_embedding(edges, r, limit=1):
+  adj=[[False]*r for _ in range(r)]
+  for a,b in edges: adj[a][b]=adj[b][a]=True
+  # order vertices by descending degree, preserving placed-neighbor expansion
+  deg=[sum(row) for row in adj]
+  order=[]; used=set(); frontier=[max(range(r), key=lambda i: deg[i])]
+  while len(order)<r:
+    if not frontier:
+      frontier=[max([i for i in range(r) if i not in used], key=lambda i: deg[i])]
+    v=frontier.pop(0)
+    if v in used: continue
+    used.add(v); order.append(v)
+    nbrs=sorted([u for u in range(r) if adj[v][u] and u not in used], key=lambda u:-deg[u])
+    frontier=nbrs+frontier
+  placed={}
+  # fix first root by Weyl transitivity
+  placed[order[0]]=tuple([1,-1]+[0]*(N-2))
+  def rec(k):
+    if k==len(order):
+      vs=[placed[i] for i in range(r)]
+      return rank(vs)==r
+    vtx=order[k]
+    cands=roots
+    for rt in cands:
+      ok=True
+      for u,ru in placed.items():
+        want=-1 if adj[vtx][u] else 0
+        if dot(rt,ru)!=want:
+          ok=False; break
+      if not ok: continue
+      placed[vtx]=rt
+      if rank([placed[i] for i in placed])==len(placed):
+        if rec(k+1): return True
+      del placed[vtx]
+    return False
+  return rec(1)
+
+for name,edges,r in [('"'A9',Agraph(9),9),('E6',E6graph(),6),('E7',E7graph(),7),('E8',E8graph(),8)]:
+  print(name, exists_embedding(edges,r))
+
+# Verify A and D formula roundtrips for bounded n.
+def mat_A(r):
+  C=[[0]*r for _ in range(r)]
+  for i in range(r):
+    C[i][i]=2
+    if i: C[i][i-1]=-1
+    if i+1<r: C[i][i+1]=-1
+  return C
+
+def mat_D(r):
+  C=[[0]*r for _ in range(r)]
+  for i in range(r): C[i][i]=2
+  for i in range(r-3): C[i][i+1]=C[i+1][i]=-1
+  C[r-3][r-2]=C[r-2][r-3]=-1
+  C[r-3][r-1]=C[r-1][r-3]=-1
+  return C
+
+def mv(C,m): return [sum(C[i][j]*m[j] for j in range(len(m))) for i in range(len(m))]
+
+def A_m(r,n):
+  out=[]
+  for j in range(1,r+1):
+    s1=sum(i*n[i-1] for i in range(1,j+1))
+    s2=sum((r+1-i)*n[i-1] for i in range(j+1,r+1))
+    out.append(Fraction((r+1-j)*s1 + j*s2, r+1))
+  return out
+
+def D_m(r,n):
+  a=n[r-2]; b=n[r-1]; T=sum((i+1)*n[i] for i in range(r-2))
+  out=[]
+  for j in range(1,r-1):
+    out.append(Fraction(sum(min(i,j)*n[i-1] for i in range(1,r-1)),1)+Fraction(j*(a+b),2))
+  out.append(Fraction(T,2)+Fraction(r*a,4)+Fraction((r-2)*b,4))
+  out.append(Fraction(T,2)+Fraction((r-2)*a,4)+Fraction(r*b,4))
+  return out
+
+for r in range(1,9):
+  C=mat_A(r)
+  for n in product(range(5), repeat=r):
+    if sum(n)==0 or sum(n)>8: continue
+    cong=sum((i+1)*n[i] for i in range(r))%(r+1)==0
+    m=A_m(r,n)
+    integ=all(x.denominator==1 for x in m)
+    if cong"'!=integ or (integ and mv(C,[int(x) for x in m])!=list(n)):
+      print('"'A fail',r,n,cong,m); raise SystemExit
+print('A formulas ok')
+for r in range(4,10):
+  C=mat_D(r)
+  for n in product(range(5), repeat=r):
+    if sum(n)==0 or sum(n)>8: continue
+    a=n[r-2]; b=n[r-1]; T=sum((i+1)*n[i] for i in range(r-2))
+    cong=(a-b)%2==0 and (2*T+(r-2)*a+r*b)%4==0
+    m=D_m(r,n)
+    integ=all(x.denominator==1 for x in m)
+    if cong"'!=integ or (integ and mv(C,[int(x) for x in m])!=list(n)):
+      print('"'D fail',r,n,cong,m); raise SystemExit
+print('D formulas ok')
+PY" in /Users/dc/code/math/jc2
+codex
+The initial backtracking search was more exhaustive than needed and is still running. I’m going to let it return briefly; if it does not finish, I’ll stop it and rely on the signed-graph proof plus bounded arithmetic checks.
+codex
+That root-search branch is not worth spending more runtime on. I’m stopping it and will use a smaller constructive check for the formulas; the root exclusion is already settled by the signed-coordinate graph determinant argument.
+ exited 130 in 68939ms:
+Traceback (most recent call last):
+  File "<stdin>", line 79, in <module>
+  File "<stdin>", line 76, in exists_embedding
+  File "<stdin>", line 73, in rec
+  File "<stdin>", line 73, in rec
+  File "<stdin>", line 73, in rec
+  [Previous line repeated 3 more times]
+  File "<stdin>", line 72, in rec
+  File "<stdin>", line 26, in rank
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/fractions.py", line 699, in forward
+    return monomorphic_operator(a, b)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/fractions.py", line 842, in _div
+    def _div(a, b):
+    
+KeyboardInterrupt
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from fractions import Fraction
+from itertools import combinations
+
+def comps_bounded(r,N):
+  cur=[0]*r
+  def rec(i,rem):
+    if i==r:
+      if sum(cur)>0: yield tuple(cur)
+      return
+    for v in range(rem+1):
+      cur[i]=v
+      yield from rec(i+1,rem-v)
+  yield from rec(0,N)
+
+def mat_A(r):
+  C=[[0]*r for _ in range(r)]
+  for i in range(r):
+    C[i][i]=2
+    if i: C[i][i-1]=-1
+    if i+1<r: C[i][i+1]=-1
+  return C
+
+def mat_D(r):
+  C=[[0]*r for _ in range(r)]
+  for i in range(r): C[i][i]=2
+  for i in range(r-3): C[i][i+1]=C[i+1][i]=-1
+  C[r-3][r-2]=C[r-2][r-3]=-1
+  C[r-3][r-1]=C[r-1][r-3]=-1
+  return C
+
+def mv(C,m): return [sum(C[i][j]*m[j] for j in range(len(m))) for i in range(len(m))]
+
+def A_m(r,n):
+  out=[]
+  for j in range(1,r+1):
+    s1=sum(i*n[i-1] for i in range(1,j+1))
+    s2=sum((r+1-i)*n[i-1] for i in range(j+1,r+1))
+    out.append(Fraction((r+1-j)*s1 + j*s2, r+1))
+  return out
+
+def D_m(r,n):
+  a=n[r-2]; b=n[r-1]; T=sum((i+1)*n[i] for i in range(r-2))
+  out=[]
+  for j in range(1,r-1):
+    out.append(sum(min(i,j)*n[i-1] for i in range(1,r-1))+Fraction(j*(a+b),2))
+  out.append(Fraction(T,2)+Fraction(r*a,4)+Fraction((r-2)*b,4))
+  out.append(Fraction(T,2)+Fraction((r-2)*a,4)+Fraction(r*b,4))
+  return out
+
+print('cap counts for n in C Z"'^r, n>=0 nonzero'"')
+for N in (4,8):
+  row=[]
+  for r in range(1,9):
+    C=mat_A(r); cnt=0
+    for n in comps_bounded(r,N):
+      cong=sum((i+1)*n[i] for i in range(r))%(r+1)==0
+      m=A_m(r,n); integ=all(x.denominator==1 for x in m)
+      assert cong==integ
+      if integ:
+        assert mv(C,[int(x) for x in m])==list(n)
+        cnt+=1
+    row.append(cnt)
+  print('A cap',N,row)
+for N in (4,8):
+  row=[]
+  for r in range(4,10):
+    C=mat_D(r); cnt=0
+    for n in comps_bounded(r,N):
+      a=n[r-2]; b=n[r-1]; T=sum((i+1)*n[i] for i in range(r-2))
+      cong=(a-b)%2==0 and (2*T+(r-2)*a+r*b)%4==0
+      m=D_m(r,n); integ=all(x.denominator==1 for x in m)
+      assert cong==integ
+      if integ:
+        assert mv(C,[int(x) for x in m])==list(n)
+        cnt+=1
+    row.append(cnt)
+  print('D cap',N,row)
+print('one vertex A cap4', {r:[i for i in range(1,r+1) if (r+1)//__import__('math').gcd(i,r+1)<=4] for r in range(1,9)})
+print('D formula verification ok')
+PY" in /Users/dc/code/math/jc2
+ succeeded in 906ms:
+cap counts for n in C Z^r, n>=0 nonzero
+A cap 4 [2, 4, 9, 13, 21, 29, 42, 54]
+A cap 8 [4, 14, 42, 98, 216, 428, 809, 1429]
+D cap 4 [21, 35, 64, 98, 156, 224]
+D cap 8 [134, 336, 811, 1733, 3549, 6757]
+one vertex A cap4 {1: [1], 2: [1, 2], 3: [1, 2, 3], 4: [], 5: [2, 3, 4], 6: [], 7: [2, 4, 6], 8: [3, 6]}
+D formula verification ok
+
+codex
+The bounded Cartan enumeration agrees with the displayed congruence gates and the one-vertex tables. The main correction I’m seeing is not a failed formula, but a promotion boundary: the finite object is numerical/combinatorial unless carrier effectivity and common-carrier/nonfinite strata are kept separate.
+exec
+/bin/zsh -lc 'test -e xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ exited 1 in 0ms:
+codex
+I have enough context to write the report. The edits will be limited to the requested hostile-review markdown file; I won’t touch the producer, inputs, scripts, dependencies, or any `jc2-lean` path.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md
+diff --git a/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..9ebf448c96fe9124305d7d9915d50deb7360b958
+--- /dev/null
++++ b/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,413 @@
++# Hostile review: ADE-decorated quadratic boundary/different threat map
++
++Reviewer: GPT-5.5 xhigh  
++Review basis: `986427df23c30375b6edfd659ba8a6c6139434ab`  
++Target:
++`xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md`
++
++## Overall Verdict
++
++`CONFIRM_WITH_CORRECTIONS`.
++
++The signed-`D9` root classification, the `A_r` and `D_r` inverse-Cartan
++arithmetic, and the proper-intersection transform identities are correct in
++their necessary-data scope.  The advertised connected survivors really do
++survive these tests as formal Cartier-lattice/one-physical-germ patterns.
++
++The promotion must be worded more narrowly: the finite object proved here is a
++finite numerical/combinatorial threat list in the proper-intersection,
++no-common-carrier regimes.  It is not a finite enumeration of effective
++divisors, analytic germs, incidence equations, finite maps, or polynomial
++maps.  Common-carrier and nonfinite cases remain open strata, not capped
++subcases.
++
++## Charged Inputs And Scope
++
++I read the sealed producer in full.  Its full-file SHA-256 matches the prompt:
++
++```text
++ab10ea83f443c93bdb87194ad0e42fe2c442984ba821c3ddf8ddf5cc3f796133
++```
++
++I also read the Section 0 charged predecessor:
++
++```text
++f7d1c8cb42d5afd29474eb0975ffae518b0c82620f598649c2ac3d5d59064f94
++  xmodel/bd-a2-normal-singular-quadratic-incidence-reduction-sol56-20260830.md
++```
++
++For scope control I checked the immediately named promoted inputs from that
++predecessor which constrain the smooth/forest/block hypotheses.  No conclusion
++below imports the independently active moving-double-section/conductor lane,
++basis minimization, nonnormal closures, counterexamples, or JC2.
++
++## 1. `D9` Root Subsystems
++
++Verdict: `CONFIRMED`.
++
++Use coordinates for `D9`:
++
++```text
++R(D9)={+-e_i+-e_j : i != j}.
++```
++
++Given a connected simple-root set, make the signed coordinate graph whose
++vertices are used coordinate positions and whose edges are the simple roots.
++Dynkin connectedness forces this coordinate graph to be connected, because
++nonorthogonal roots must share a coordinate.  After switching coordinate signs
++along a spanning tree, the tree edges are differences `e_i-e_j`.
++
++If `s` coordinates are used, the spanning tree already generates `A_{s-1}`.
++Every remaining balanced edge stays in that lattice.  One unbalanced edge
++adds a sum root and then the generated lattice is exactly
++
++```text
++{x in Z^s : sum x_i even}=D_s.
++```
++
++There is no exceptional third case.  Thus an irreducible connected embedded
++root subsystem of `D9` is `A_{s-1}` or `D_s`, hence only
++
++```text
++A1,...,A8,  D4,...,D9.
++```
++
++This excludes `A9,E6,E7,E8` as embedded root subsystems, not merely as one
++chosen simple-root presentation.  For example, rank-nine `A9` would have to
++use `s=9` and hence generate `D9`, contradicting determinant `det A9=10`
++versus `det D9=4`.  Similarly `E6,E7,E8` would force generated lattices
++`A6/D6`, `A7/D7`, or `A8/D8`, whose determinants do not match `3,2,1`.
++
++The determinant gate for full-rank disconnected systems is also correct:
++for a rank-nine sublattice `Lambda` of `D9`,
++
++```text
++det Lambda = det(D9) [D9:Lambda]^2 = 4 [D9:Lambda]^2.
++```
++
++No primitivity is needed.
++
++## 2. Cartan Arithmetic
++
++Verdict: `CONFIRMED`, with one wording repair.
++
++For `A_r` with chain numbering `1-...-r`,
++
++```text
++(C^{-1})_{ji}=min(i,j)(r+1-max(i,j))/(r+1),
++```
++
++so the displayed formula
++
++```text
++m_j=((r+1-j) sum_{i<=j} i n_i
++     +j sum_{i>j} (r+1-i)n_i)/(r+1)
++```
++
++is correct.  The cokernel is cyclic of order `r+1`; the functional
++`sum i n_i mod r+1` kills the columns and is surjective.  Hence the exact
++integrality gate is
++
++```text
++sum i n_i = 0 mod r+1.
++```
++
++The one-vertex order
++
++```text
++o_i=(r+1)/gcd(i,r+1)
++```
++
++and the cap-four table in the producer are correct.  The advertised
++one-physical-germ patterns are also correct:
++
++```text
++r=2k-1: n=2e_k,       m=(1,2,...,k,...,2,1),
++r=2k:   n=e_k+e_{k+1}, m=(1,2,...,k,k,...,2,1).
++```
++
++For `D_r` with numbering
++
++```text
++1--2--...--(r-2), with (r-1),r attached to r-2,
++```
++
++put `a=n_{r-1}`, `b=n_r`, and `T=sum_{i=1}^{r-2} i n_i`.  The inverse
++formula
++
++```text
++m_j=sum_{i=1}^{r-2} min(i,j)n_i + j(a+b)/2,  1<=j<=r-2,
++m_{r-1}=T/2 + r a/4 + (r-2)b/4,
++m_r    =T/2 + (r-2)a/4 + r b/4
++```
++
++is correct.  Its exact integrality condition is
++
++```text
++a=b mod 2,
++2T+(r-2)a+r b=0 mod 4.
++```
++
++The second spin congruence is equivalent after `a=b mod 2`.  The one-vertex
++orders in (4.4) are correct, and `n=e_2` gives
++
++```text
++m=(1,2,2,...,2,1,1)
++```
++
++for every `D4,...,D9`.
++
++The repair is only wording: the classification should say
++
++```text
++n in Z_{\ge 0}^r, n != 0, n in C Z^r
++```
++
++classifies the positive integral `m`, because strict positivity of `m` then
++follows from positivity of `C^{-1}`.  It is not an independent nonnegativity
++condition on `m`.
++
++I spot-checked the bounded semigroups by direct integer enumeration.  The
++congruence gates and inverse formulas round-trip for all `A1,...,A8` and
++`D4,...,D9` with `sum n_i<=8`.
++
++## 3. Intersection Caps
++
++Verdict: `CONFIRMED_WITH_SCOPE_REPAIRS`.
++
++The total-transform identity is correct.  For a Cartier slice `L` through a
++singular point,
++
++```text
++r^*L=L_str+ell E,       r^*R=R_str+mE,
++n=Cm,                  b=C ell,
++```
++
++and the exceptional terms are
++
++```text
++L_str.(mE)=ell^t n,
++(ell E).R_str=ell^t n,
++(ell E).(mE)=-ell^t n.
++```
++
++Thus exactly one copy remains:
++
++```text
++L.R=L_str.R_str+sum_q ell_q^t n_q.
++```
++
++For a target line, `A.R=(A).(2A+B)=8`; for a `B`-fibre,
++`B.R=4`; for infinity, `H.R=A.R=8`.  Since any local equation vanishing at
++the singular point has positive valuation on every exceptional component,
++`ell_i,beta_i,h_i>=1`, and therefore `ell^t n`, `beta^t n`, or `h^t n`
++bounds `sum n_i`.
++
++The caps are valid only under the following hypotheses:
++
++```text
++target-line cap: the chosen pullback line has no common curve with R_X;
++B-fibre cap: the chosen B-fibre has no common curve with R_X;
++infinity cap: H and R_X have no common nonexceptional curve;
++all caps: strict-transform intersections are proper and nonnegative.
++```
++
++Projective finiteness is enough to choose a target line avoiding different
++components: finite maps do not contract different components to the target
++point, and only finitely many component images can be lines through that
++point.  Without that properness, no cap follows.  In particular a coefficient
++basepoint or common different carrier may force every relevant slice to share
++a component; then the numerical inequality is not licensed.
++
++A cheap strengthening is available but not decisive: the exceptional
++coefficient vector of a local function is at least the Du Val fundamental
++cycle, not merely componentwise at least one.  This can improve individual
++rows, especially for `D_r`, but it does not kill any connected surviving
++type because the displayed `A` and `D` one-germ patterns still have
++intersection weight at most two against the natural minimal cycles.
++
++## 4. Physical Germs And Forests
++
++Verdict: `CONFIRMED_WITH_SCOPE_REPAIRS`.
++
++The producer correctly separates numerical entries of `n` from physical
++boundary contacts.  A tangent branch at a smooth point of one exceptional
++component can contribute `n_i>1` but creates one branch path after embedded
++resolution.  A branch through a node can contribute to both adjacent entries
++of `n` while still being one physical branch; blowing up the node inserts a
++single local resolution chain.
++
++The forest criterion is the following exact graph statement.  After taking
++the full reduced SNC boundary and after including in `T_p` the ADE tree plus
++the extra local vertices introduced to resolve its contacts, each connected
++component of the complement of `T_p` may attach to `T_p` by at most one edge.
++Two such edges give a cycle by joining them through the unique path in
++`T_p` and through the outside component.  Conversely, single attachments to
++a tree do not create a cycle.
++
++The repair is to keep the carrier qualifier explicit.  Two contacts are
++cycle-forcing only when they lie in the same outside connected carrier
++component after the chosen boundary resolution.  If the contacts lie on
++outside components connected only through `T_p`, the graph is a star, not a
++cycle.  If `H` and `R` share a nonexceptional component, the quotient graph
++has changed and the no-common-carrier connector count cannot be applied.
++
++## 5. Finiteness Of The Successor
++
++Verdict: `CONFIRM_WITH_CORRECTIONS`.
++
++The local numerical sets are finite in the capped regimes.  For each
++connected type there are finitely many
++
++```text
++n in C Z^r cap Z_{\ge 0}^r,  0<sum n_i<=8
++```
++
++and finitely many cap-four rows when the `B`-fibre hypothesis is available.
++For a singular point on infinity, the paired data are also finite:
++
++```text
++a=C h >=0,  n=C m>=0,  h,m>0,
++h^t n = a^t C^{-1}n <=8.
++```
++
++Because `n` is nonzero and `C^{-1}` is strictly positive, this bounds `h`
++and hence `a`.
++
++A complete finite numerical enumeration schema is:
++
++1. Enumerate multisets of connected types from
++   `A1,...,A8,D4,...,D9` with total rank at most nine.
++2. Enumerate simultaneous embeddings of their root lattices in `D9`,
++   modulo the Weyl group `W(D9)` and component Dynkin automorphisms; discard
++   full-rank determinant failures `det != 4 square`.
++3. For every connected component, enumerate the bounded `n` semigroup by
++   the exact `A` or `D` congruence, with the applicable cap.
++4. For components lying on infinity, enumerate the paired boundary vector
++   `a` equivalently via positive integral `h=C^{-1}a`, with
++   `sum h^t n<=8` globally in the no-common-carrier infinity regime.
++5. Partition each bounded vector into physical branch contacts: at a smooth
++   point, vectors `k e_i`; at an ADE node, vectors `u e_i+v e_j` with
++   `u,v>=1`; total weight bounded by the cap.  Then quotient by local Dynkin
++   automorphisms and by identical carrier labels.
++6. Build the resolved incidence graph using physical branches, not entries
++   of `n`, and apply the single-connector forest condition.
++7. Only after these finite numerical rows are produced, ask the separate
++   effectivity and analytic-incidence questions for the corresponding strict
++   carrier classes in the ruled nine-blowup marking.
++
++The correction is in step 7.  Effectivity is not itself a finite enumeration
++of actual divisors or analytic germs.  Linear systems and local germs can
++have moduli, and the nine-blowup effective cone need not be finite in any
++unproved global sense.  What is finite is the list of numerical classes and
++bounded contact partitions on which effectivity/incidence predicates must be
++tested.  The packet should not advertise a finite list of effective
++divisors, maps, or polynomial candidates.
++
++## 6. Remaining ADE Types
++
++Verdict: `CONFIRMED`.
++
++I find no cheaper theorem, using the charged data, that kills any connected
++type left after the `D9` root model.  The proper caps, even sharpened by
++fundamental cycles, leave all connected `A1,...,A8` and `D4,...,D9`.
++
++Formal survivors can be written uniformly.  For `A_r`:
++
++```text
++r=2k-1: n=2e_k,
++        m=(1,2,...,k,...,2,1);
++
++r=2k:   n=e_k+e_{k+1},
++        m=(1,2,...,k,k,...,2,1).
++```
++
++If boundary data through infinity are demanded, take
++
++```text
++h=(1,...,1),  a=C h=e_1+e_r
++```
++
++with the evident `A1` specialization `a=2e_1`.  Then `h^t n=2`.
++
++For `D_r`:
++
++```text
++n=e_2,
++m=(1,2,2,...,2,1,1).
++```
++
++For matching boundary data one may take the same positive cycle for `h`,
++so `a=C h=e_2` and `h^t n=2`.
++
++These are formal numerical Cartier data and physical one-germ patterns only.
++They are not effective exceptional configurations, analytic incidence
++singularities, finite maps, or polynomial maps.
++
++## 7. Maximum Safe Theorem
++
++Verdict: `CONFIRM_WITH_CORRECTIONS`.
++
++The maximum theorem safe to promote is:
++
++```text
++In the normal irreducible class-(2A+3B) quadratic incidence scope of the
++charged predecessor, the minimal resolution has ADE exceptional lattice
++embedded in D9(-1).  Every connected embedded component is A1,...,A8 or
++D4,...,D9.  For each connected component, positive exceptional different
++multiplicities and strict-transform attachment vectors are classified
++exactly by the A/D Cartan congruences above.  In any stratum where a target
++line through the singular image meets the different properly, sum n_i<=8;
++where the corresponding B-fibre also meets it properly, sum n_i<=4; and
++where infinity and different have no common nonexceptional carrier, the
++paired boundary/different data satisfy sum h^t n<=8.  Forest topology acts
++on distinct physical branch contacts after embedded resolution.  Under
++these necessary numerical and graph tests no connected A1,...,A8 or
++D4,...,D9 type is eliminated.
++```
++
++The exact unresolved strata are:
++
++```text
++common nonexceptional H/R carrier;
++different component contained in a B-fibre or other slice used for a cap;
++projective coefficient-basepoint or other nonfinite target-line cases;
++nonfinite affine/projective coefficient strata inherited from the singular model;
++simultaneous effective realization of the allowed root embeddings in the
++  ruled nine-blowup marking;
++effectivity, irreducibility, and incidence equations for strict carriers;
++analytic realization of the formal branch partitions by a bidegree-(2,3)
++  normal hypersurface;
++nonnormal closures, conductor effects, basis changes, and all JC2 claims.
++```
++
++## Repairs Required Before Promotion
++
++1. Replace any bare phrase "finite successor" by "finite numerical/combinatorial
++   successor in the stated proper-intersection/no-common-carrier strata".
++2. State every cap with its properness and no-common-component hypotheses at
++   the point of use.  Do not reuse `A.R=8`, `B.R=4`, or `H.R=8` as a bound
++   after a common component appears.
++3. Add the carrier qualifier to the forest rule: numerical multiplicity and
++   support do not count edges; distinct physical contacts count only after
++   assigning outside connected carriers in the resolved boundary graph.
++4. Keep formal survivors explicitly formal.  They certify non-exclusion by
++   necessary lattice tests only.
++5. State that effectivity/incidence remains a predicate on finite numerical
++   rows, not a finite construction of divisors or maps.
++
++## Cheapest Decisive Successors
++
++1. Implement the finite numerical enumerator described in Section 5, producing
++   Weyl-orbit rows with `type`, embedding orbit, `n`, optional `a`, physical
++   branch partition, and resolved carrier graph.
++2. Add the fundamental-cycle slice lower bound as a cheap row-pruner.  It will
++   not kill connected types, but it can shrink capped rows.
++3. Separate common-carrier cases into their own packet: first decide whether
++   an `H` component can be contained in the different or a `B`-fibre component
++   can be contained in the different under the normal class data.
++4. For each remaining numerical row, test effectivity of the strict carrier
++   classes in the actual ruled nine-blowup marking before asking for analytic
++   incidence realization.
++
++<!-- BODY-END -->
+
+diff --git a/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..9ebf448c96fe9124305d7d9915d50deb7360b958
+--- /dev/null
++++ b/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,413 @@
++# Hostile review: ADE-decorated quadratic boundary/different threat map
++
++Reviewer: GPT-5.5 xhigh  
++Review basis: `986427df23c30375b6edfd659ba8a6c6139434ab`  
++Target:
++`xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md`
++
++## Overall Verdict
++
++`CONFIRM_WITH_CORRECTIONS`.
++
++The signed-`D9` root classification, the `A_r` and `D_r` inverse-Cartan
++arithmetic, and the proper-intersection transform identities are correct in
++their necessary-data scope.  The advertised connected survivors really do
++survive these tests as formal Cartier-lattice/one-physical-germ patterns.
++
++The promotion must be worded more narrowly: the finite object proved here is a
++finite numerical/combinatorial threat list in the proper-intersection,
++no-common-carrier regimes.  It is not a finite enumeration of effective
++divisors, analytic germs, incidence equations, finite maps, or polynomial
++maps.  Common-carrier and nonfinite cases remain open strata, not capped
++subcases.
++
++## Charged Inputs And Scope
++
++I read the sealed producer in full.  Its full-file SHA-256 matches the prompt:
++
++```text
++ab10ea83f443c93bdb87194ad0e42fe2c442984ba821c3ddf8ddf5cc3f796133
++```
++
++I also read the Section 0 charged predecessor:
++
++```text
++f7d1c8cb42d5afd29474eb0975ffae518b0c82620f598649c2ac3d5d59064f94
++  xmodel/bd-a2-normal-singular-quadratic-incidence-reduction-sol56-20260830.md
++```
++
++For scope control I checked the immediately named promoted inputs from that
++predecessor which constrain the smooth/forest/block hypotheses.  No conclusion
++below imports the independently active moving-double-section/conductor lane,
++basis minimization, nonnormal closures, counterexamples, or JC2.
++
++## 1. `D9` Root Subsystems
++
++Verdict: `CONFIRMED`.
++
++Use coordinates for `D9`:
++
++```text
++R(D9)={+-e_i+-e_j : i != j}.
++```
++
++Given a connected simple-root set, make the signed coordinate graph whose
++vertices are used coordinate positions and whose edges are the simple roots.
++Dynkin connectedness forces this coordinate graph to be connected, because
++nonorthogonal roots must share a coordinate.  After switching coordinate signs
++along a spanning tree, the tree edges are differences `e_i-e_j`.
++
++If `s` coordinates are used, the spanning tree already generates `A_{s-1}`.
++Every remaining balanced edge stays in that lattice.  One unbalanced edge
++adds a sum root and then the generated lattice is exactly
++
++```text
++{x in Z^s : sum x_i even}=D_s.
++```
++
++There is no exceptional third case.  Thus an irreducible connected embedded
++root subsystem of `D9` is `A_{s-1}` or `D_s`, hence only
++
++```text
++A1,...,A8,  D4,...,D9.
++```
++
++This excludes `A9,E6,E7,E8` as embedded root subsystems, not merely as one
++chosen simple-root presentation.  For example, rank-nine `A9` would have to
++use `s=9` and hence generate `D9`, contradicting determinant `det A9=10`
++versus `det D9=4`.  Similarly `E6,E7,E8` would force generated lattices
++`A6/D6`, `A7/D7`, or `A8/D8`, whose determinants do not match `3,2,1`.
++
++The determinant gate for full-rank disconnected systems is also correct:
++for a rank-nine sublattice `Lambda` of `D9`,
++
++```text
++det Lambda = det(D9) [D9:Lambda]^2 = 4 [D9:Lambda]^2.
++```
++
++No primitivity is needed.
++
++## 2. Cartan Arithmetic
++
++Verdict: `CONFIRMED`, with one wording repair.
++
++For `A_r` with chain numbering `1-...-r`,
++
++```text
++(C^{-1})_{ji}=min(i,j)(r+1-max(i,j))/(r+1),
++```
++
++so the displayed formula
++
++```text
++m_j=((r+1-j) sum_{i<=j} i n_i
++     +j sum_{i>j} (r+1-i)n_i)/(r+1)
++```
++
++is correct.  The cokernel is cyclic of order `r+1`; the functional
++`sum i n_i mod r+1` kills the columns and is surjective.  Hence the exact
++integrality gate is
++
++```text
++sum i n_i = 0 mod r+1.
++```
++
++The one-vertex order
++
++```text
++o_i=(r+1)/gcd(i,r+1)
++```
++
++and the cap-four table in the producer are correct.  The advertised
++one-physical-germ patterns are also correct:
++
++```text
++r=2k-1: n=2e_k,       m=(1,2,...,k,...,2,1),
++r=2k:   n=e_k+e_{k+1}, m=(1,2,...,k,k,...,2,1).
++```
++
++For `D_r` with numbering
++
++```text
++1--2--...--(r-2), with (r-1),r attached to r-2,
++```
++
++put `a=n_{r-1}`, `b=n_r`, and `T=sum_{i=1}^{r-2} i n_i`.  The inverse
++formula
++
++```text
++m_j=sum_{i=1}^{r-2} min(i,j)n_i + j(a+b)/2,  1<=j<=r-2,
++m_{r-1}=T/2 + r a/4 + (r-2)b/4,
++m_r    =T/2 + (r-2)a/4 + r b/4
++```
++
++is correct.  Its exact integrality condition is
++
++```text
++a=b mod 2,
++2T+(r-2)a+r b=0 mod 4.
++```
++
++The second spin congruence is equivalent after `a=b mod 2`.  The one-vertex
++orders in (4.4) are correct, and `n=e_2` gives
++
++```text
++m=(1,2,2,...,2,1,1)
++```
++
++for every `D4,...,D9`.
++
++The repair is only wording: the classification should say
++
++```text
++n in Z_{\ge 0}^r, n != 0, n in C Z^r
++```
++
++classifies the positive integral `m`, because strict positivity of `m` then
++follows from positivity of `C^{-1}`.  It is not an independent nonnegativity
++condition on `m`.
++
++I spot-checked the bounded semigroups by direct integer enumeration.  The
++congruence gates and inverse formulas round-trip for all `A1,...,A8` and
++`D4,...,D9` with `sum n_i<=8`.
++
++## 3. Intersection Caps
++
++Verdict: `CONFIRMED_WITH_SCOPE_REPAIRS`.
++
++The total-transform identity is correct.  For a Cartier slice `L` through a
++singular point,
++
++```text
++r^*L=L_str+ell E,       r^*R=R_str+mE,
++n=Cm,                  b=C ell,
++```
++
++and the exceptional terms are
++
++```text
++L_str.(mE)=ell^t n,
++(ell E).R_str=ell^t n,
++(ell E).(mE)=-ell^t n.
++```
++
++Thus exactly one copy remains:
++
++```text
++L.R=L_str.R_str+sum_q ell_q^t n_q.
++```
++
++For a target line, `A.R=(A).(2A+B)=8`; for a `B`-fibre,
++`B.R=4`; for infinity, `H.R=A.R=8`.  Since any local equation vanishing at
++the singular point has positive valuation on every exceptional component,
++`ell_i,beta_i,h_i>=1`, and therefore `ell^t n`, `beta^t n`, or `h^t n`
++bounds `sum n_i`.
++
++The caps are valid only under the following hypotheses:
++
++```text
++target-line cap: the chosen pullback line has no common curve with R_X;
++B-fibre cap: the chosen B-fibre has no common curve with R_X;
++infinity cap: H and R_X have no common nonexceptional curve;
++all caps: strict-transform intersections are proper and nonnegative.
++```
++
++Projective finiteness is enough to choose a target line avoiding different
++components: finite maps do not contract different components to the target
++point, and only finitely many component images can be lines through that
++point.  Without that properness, no cap follows.  In particular a coefficient
++basepoint or common different carrier may force every relevant slice to share
++a component; then the numerical inequality is not licensed.
++
++A cheap strengthening is available but not decisive: the exceptional
++coefficient vector of a local function is at least the Du Val fundamental
++cycle, not merely componentwise at least one.  This can improve individual
++rows, especially for `D_r`, but it does not kill any connected surviving
++type because the displayed `A` and `D` one-germ patterns still have
++intersection weight at most two against the natural minimal cycles.
++
++## 4. Physical Germs And Forests
++
++Verdict: `CONFIRMED_WITH_SCOPE_REPAIRS`.
++
++The producer correctly separates numerical entries of `n` from physical
++boundary contacts.  A tangent branch at a smooth point of one exceptional
++component can contribute `n_i>1` but creates one branch path after embedded
++resolution.  A branch through a node can contribute to both adjacent entries
++of `n` while still being one physical branch; blowing up the node inserts a
++single local resolution chain.
++
++The forest criterion is the following exact graph statement.  After taking
++the full reduced SNC boundary and after including in `T_p` the ADE tree plus
++the extra local vertices introduced to resolve its contacts, each connected
++component of the complement of `T_p` may attach to `T_p` by at most one edge.
++Two such edges give a cycle by joining them through the unique path in
++`T_p` and through the outside component.  Conversely, single attachments to
++a tree do not create a cycle.
++
++The repair is to keep the carrier qualifier explicit.  Two contacts are
++cycle-forcing only when they lie in the same outside connected carrier
++component after the chosen boundary resolution.  If the contacts lie on
++outside components connected only through `T_p`, the graph is a star, not a
++cycle.  If `H` and `R` share a nonexceptional component, the quotient graph
++has changed and the no-common-carrier connector count cannot be applied.
++
++## 5. Finiteness Of The Successor
++
++Verdict: `CONFIRM_WITH_CORRECTIONS`.
++
++The local numerical sets are finite in the capped regimes.  For each
++connected type there are finitely many
++
++```text
++n in C Z^r cap Z_{\ge 0}^r,  0<sum n_i<=8
++```
++
++and finitely many cap-four rows when the `B`-fibre hypothesis is available.
++For a singular point on infinity, the paired data are also finite:
++
++```text
++a=C h >=0,  n=C m>=0,  h,m>0,
++h^t n = a^t C^{-1}n <=8.
++```
++
++Because `n` is nonzero and `C^{-1}` is strictly positive, this bounds `h`
++and hence `a`.
++
++A complete finite numerical enumeration schema is:
++
++1. Enumerate multisets of connected types from
++   `A1,...,A8,D4,...,D9` with total rank at most nine.
++2. Enumerate simultaneous embeddings of their root lattices in `D9`,
++   modulo the Weyl group `W(D9)` and component Dynkin automorphisms; discard
++   full-rank determinant failures `det != 4 square`.
++3. For every connected component, enumerate the bounded `n` semigroup by
++   the exact `A` or `D` congruence, with the applicable cap.
++4. For components lying on infinity, enumerate the paired boundary vector
++   `a` equivalently via positive integral `h=C^{-1}a`, with
++   `sum h^t n<=8` globally in the no-common-carrier infinity regime.
++5. Partition each bounded vector into physical branch contacts: at a smooth
++   point, vectors `k e_i`; at an ADE node, vectors `u e_i+v e_j` with
++   `u,v>=1`; total weight bounded by the cap.  Then quotient by local Dynkin
++   automorphisms and by identical carrier labels.
++6. Build the resolved incidence graph using physical branches, not entries
++   of `n`, and apply the single-connector forest condition.
++7. Only after these finite numerical rows are produced, ask the separate
++   effectivity and analytic-incidence questions for the corresponding strict
++   carrier classes in the ruled nine-blowup marking.
++
++The correction is in step 7.  Effectivity is not itself a finite enumeration
++of actual divisors or analytic germs.  Linear systems and local germs can
++have moduli, and the nine-blowup effective cone need not be finite in any
++unproved global sense.  What is finite is the list of numerical classes and
++bounded contact partitions on which effectivity/incidence predicates must be
++tested.  The packet should not advertise a finite list of effective
++divisors, maps, or polynomial candidates.
++
++## 6. Remaining ADE Types
++
++Verdict: `CONFIRMED`.
++
++I find no cheaper theorem, using the charged data, that kills any connected
++type left after the `D9` root model.  The proper caps, even sharpened by
++fundamental cycles, leave all connected `A1,...,A8` and `D4,...,D9`.
++
++Formal survivors can be written uniformly.  For `A_r`:
++
++```text
++r=2k-1: n=2e_k,
++        m=(1,2,...,k,...,2,1);
++
++r=2k:   n=e_k+e_{k+1},
++        m=(1,2,...,k,k,...,2,1).
++```
++
++If boundary data through infinity are demanded, take
++
++```text
++h=(1,...,1),  a=C h=e_1+e_r
++```
++
++with the evident `A1` specialization `a=2e_1`.  Then `h^t n=2`.
++
++For `D_r`:
++
++```text
++n=e_2,
++m=(1,2,2,...,2,1,1).
++```
++
++For matching boundary data one may take the same positive cycle for `h`,
++so `a=C h=e_2` and `h^t n=2`.
++
++These are formal numerical Cartier data and physical one-germ patterns only.
++They are not effective exceptional configurations, analytic incidence
++singularities, finite maps, or polynomial maps.
++
++## 7. Maximum Safe Theorem
++
++Verdict: `CONFIRM_WITH_CORRECTIONS`.
++
++The maximum theorem safe to promote is:
++
++```text
++In the normal irreducible class-(2A+3B) quadratic incidence scope of the
++charged predecessor, the minimal resolution has ADE exceptional lattice
++embedded in D9(-1).  Every connected embedded component is A1,...,A8 or
++D4,...,D9.  For each connected component, positive exceptional different
++multiplicities and strict-transform attachment vectors are classified
++exactly by the A/D Cartan congruences above.  In any stratum where a target
++line through the singular image meets the different properly, sum n_i<=8;
++where the corresponding B-fibre also meets it properly, sum n_i<=4; and
++where infinity and different have no common nonexceptional carrier, the
++paired boundary/different data satisfy sum h^t n<=8.  Forest topology acts
++on distinct physical branch contacts after embedded resolution.  Under
++these necessary numerical and graph tests no connected A1,...,A8 or
++D4,...,D9 type is eliminated.
++```
++
++The exact unresolved strata are:
++
++```text
++common nonexceptional H/R carrier;
++different component contained in a B-fibre or other slice used for a cap;
++projective coefficient-basepoint or other nonfinite target-line cases;
++nonfinite affine/projective coefficient strata inherited from the singular model;
++simultaneous effective realization of the allowed root embeddings in the
++  ruled nine-blowup marking;
++effectivity, irreducibility, and incidence equations for strict carriers;
++analytic realization of the formal branch partitions by a bidegree-(2,3)
++  normal hypersurface;
++nonnormal closures, conductor effects, basis changes, and all JC2 claims.
++```
++
++## Repairs Required Before Promotion
++
++1. Replace any bare phrase "finite successor" by "finite numerical/combinatorial
++   successor in the stated proper-intersection/no-common-carrier strata".
++2. State every cap with its properness and no-common-component hypotheses at
++   the point of use.  Do not reuse `A.R=8`, `B.R=4`, or `H.R=8` as a bound
++   after a common component appears.
++3. Add the carrier qualifier to the forest rule: numerical multiplicity and
++   support do not count edges; distinct physical contacts count only after
++   assigning outside connected carriers in the resolved boundary graph.
++4. Keep formal survivors explicitly formal.  They certify non-exclusion by
++   necessary lattice tests only.
++5. State that effectivity/incidence remains a predicate on finite numerical
++   rows, not a finite construction of divisors or maps.
++
++## Cheapest Decisive Successors
++
++1. Implement the finite numerical enumerator described in Section 5, producing
++   Weyl-orbit rows with `type`, embedding orbit, `n`, optional `a`, physical
++   branch partition, and resolved carrier graph.
++2. Add the fundamental-cycle slice lower bound as a cheap row-pruner.  It will
++   not kill connected types, but it can shrink capped rows.
++3. Separate common-carrier cases into their own packet: first decide whether
++   an `H` component can be contained in the different or a `B`-fibre component
++   can be contained in the different under the normal class data.
++4. For each remaining numerical row, test effectivity of the strict carrier
++   classes in the actual ruled nine-blowup marking before asking for analytic
++   incidence realization.
++
++<!-- BODY-END -->
+
+codex
+The report file is written. I’m doing a final mechanical check now: size, tail line, and hash of the created report only.
+exec
+/bin/zsh -lc 'wc -c xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'tail -n 3 xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   14883 xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md
+
+ succeeded in 0ms:
+   incidence realization.
+
+<!-- BODY-END -->
+
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+2c7059e5a302f7b117723fd2a8486a7fd048e9c5230c03530fdcb3b2fdbff277  xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md
+
+diff --git a/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..9ebf448c96fe9124305d7d9915d50deb7360b958
+--- /dev/null
++++ b/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,413 @@
++# Hostile review: ADE-decorated quadratic boundary/different threat map
++
++Reviewer: GPT-5.5 xhigh  
++Review basis: `986427df23c30375b6edfd659ba8a6c6139434ab`  
++Target:
++`xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md`
++
++## Overall Verdict
++
++`CONFIRM_WITH_CORRECTIONS`.
++
++The signed-`D9` root classification, the `A_r` and `D_r` inverse-Cartan
++arithmetic, and the proper-intersection transform identities are correct in
++their necessary-data scope.  The advertised connected survivors really do
++survive these tests as formal Cartier-lattice/one-physical-germ patterns.
++
++The promotion must be worded more narrowly: the finite object proved here is a
++finite numerical/combinatorial threat list in the proper-intersection,
++no-common-carrier regimes.  It is not a finite enumeration of effective
++divisors, analytic germs, incidence equations, finite maps, or polynomial
++maps.  Common-carrier and nonfinite cases remain open strata, not capped
++subcases.
++
++## Charged Inputs And Scope
++
++I read the sealed producer in full.  Its full-file SHA-256 matches the prompt:
++
++```text
++ab10ea83f443c93bdb87194ad0e42fe2c442984ba821c3ddf8ddf5cc3f796133
++```
++
++I also read the Section 0 charged predecessor:
++
++```text
++f7d1c8cb42d5afd29474eb0975ffae518b0c82620f598649c2ac3d5d59064f94
++  xmodel/bd-a2-normal-singular-quadratic-incidence-reduction-sol56-20260830.md
++```
++
++For scope control I checked the immediately named promoted inputs from that
++predecessor which constrain the smooth/forest/block hypotheses.  No conclusion
++below imports the independently active moving-double-section/conductor lane,
++basis minimization, nonnormal closures, counterexamples, or JC2.
++
++## 1. `D9` Root Subsystems
++
++Verdict: `CONFIRMED`.
++
++Use coordinates for `D9`:
++
++```text
++R(D9)={+-e_i+-e_j : i != j}.
++```
++
++Given a connected simple-root set, make the signed coordinate graph whose
++vertices are used coordinate positions and whose edges are the simple roots.
++Dynkin connectedness forces this coordinate graph to be connected, because
++nonorthogonal roots must share a coordinate.  After switching coordinate signs
++along a spanning tree, the tree edges are differences `e_i-e_j`.
++
++If `s` coordinates are used, the spanning tree already generates `A_{s-1}`.
++Every remaining balanced edge stays in that lattice.  One unbalanced edge
++adds a sum root and then the generated lattice is exactly
++
++```text
++{x in Z^s : sum x_i even}=D_s.
++```
++
++There is no exceptional third case.  Thus an irreducible connected embedded
++root subsystem of `D9` is `A_{s-1}` or `D_s`, hence only
++
++```text
++A1,...,A8,  D4,...,D9.
++```
++
++This excludes `A9,E6,E7,E8` as embedded root subsystems, not merely as one
++chosen simple-root presentation.  For example, rank-nine `A9` would have to
++use `s=9` and hence generate `D9`, contradicting determinant `det A9=10`
++versus `det D9=4`.  Similarly `E6,E7,E8` would force generated lattices
++`A6/D6`, `A7/D7`, or `A8/D8`, whose determinants do not match `3,2,1`.
++
++The determinant gate for full-rank disconnected systems is also correct:
++for a rank-nine sublattice `Lambda` of `D9`,
++
++```text
++det Lambda = det(D9) [D9:Lambda]^2 = 4 [D9:Lambda]^2.
++```
++
++No primitivity is needed.
++
++## 2. Cartan Arithmetic
++
++Verdict: `CONFIRMED`, with one wording repair.
++
++For `A_r` with chain numbering `1-...-r`,
++
++```text
++(C^{-1})_{ji}=min(i,j)(r+1-max(i,j))/(r+1),
++```
++
++so the displayed formula
++
++```text
++m_j=((r+1-j) sum_{i<=j} i n_i
++     +j sum_{i>j} (r+1-i)n_i)/(r+1)
++```
++
++is correct.  The cokernel is cyclic of order `r+1`; the functional
++`sum i n_i mod r+1` kills the columns and is surjective.  Hence the exact
++integrality gate is
++
++```text
++sum i n_i = 0 mod r+1.
++```
++
++The one-vertex order
++
++```text
++o_i=(r+1)/gcd(i,r+1)
++```
++
++and the cap-four table in the producer are correct.  The advertised
++one-physical-germ patterns are also correct:
++
++```text
++r=2k-1: n=2e_k,       m=(1,2,...,k,...,2,1),
++r=2k:   n=e_k+e_{k+1}, m=(1,2,...,k,k,...,2,1).
++```
++
++For `D_r` with numbering
++
++```text
++1--2--...--(r-2), with (r-1),r attached to r-2,
++```
++
++put `a=n_{r-1}`, `b=n_r`, and `T=sum_{i=1}^{r-2} i n_i`.  The inverse
++formula
++
++```text
++m_j=sum_{i=1}^{r-2} min(i,j)n_i + j(a+b)/2,  1<=j<=r-2,
++m_{r-1}=T/2 + r a/4 + (r-2)b/4,
++m_r    =T/2 + (r-2)a/4 + r b/4
++```
++
++is correct.  Its exact integrality condition is
++
++```text
++a=b mod 2,
++2T+(r-2)a+r b=0 mod 4.
++```
++
++The second spin congruence is equivalent after `a=b mod 2`.  The one-vertex
++orders in (4.4) are correct, and `n=e_2` gives
++
++```text
++m=(1,2,2,...,2,1,1)
++```
++
++for every `D4,...,D9`.
++
++The repair is only wording: the classification should say
++
++```text
++n in Z_{\ge 0}^r, n != 0, n in C Z^r
++```
++
++classifies the positive integral `m`, because strict positivity of `m` then
++follows from positivity of `C^{-1}`.  It is not an independent nonnegativity
++condition on `m`.
++
++I spot-checked the bounded semigroups by direct integer enumeration.  The
++congruence gates and inverse formulas round-trip for all `A1,...,A8` and
++`D4,...,D9` with `sum n_i<=8`.
++
++## 3. Intersection Caps
++
++Verdict: `CONFIRMED_WITH_SCOPE_REPAIRS`.
++
++The total-transform identity is correct.  For a Cartier slice `L` through a
++singular point,
++
++```text
++r^*L=L_str+ell E,       r^*R=R_str+mE,
++n=Cm,                  b=C ell,
++```
++
++and the exceptional terms are
++
++```text
++L_str.(mE)=ell^t n,
++(ell E).R_str=ell^t n,
++(ell E).(mE)=-ell^t n.
++```
++
++Thus exactly one copy remains:
++
++```text
++L.R=L_str.R_str+sum_q ell_q^t n_q.
++```
++
++For a target line, `A.R=(A).(2A+B)=8`; for a `B`-fibre,
++`B.R=4`; for infinity, `H.R=A.R=8`.  Since any local equation vanishing at
++the singular point has positive valuation on every exceptional component,
++`ell_i,beta_i,h_i>=1`, and therefore `ell^t n`, `beta^t n`, or `h^t n`
++bounds `sum n_i`.
++
++The caps are valid only under the following hypotheses:
++
++```text
++target-line cap: the chosen pullback line has no common curve with R_X;
++B-fibre cap: the chosen B-fibre has no common curve with R_X;
++infinity cap: H and R_X have no common nonexceptional curve;
++all caps: strict-transform intersections are proper and nonnegative.
++```
++
++Projective finiteness is enough to choose a target line avoiding different
++components: finite maps do not contract different components to the target
++point, and only finitely many component images can be lines through that
++point.  Without that properness, no cap follows.  In particular a coefficient
++basepoint or common different carrier may force every relevant slice to share
++a component; then the numerical inequality is not licensed.
++
++A cheap strengthening is available but not decisive: the exceptional
++coefficient vector of a local function is at least the Du Val fundamental
++cycle, not merely componentwise at least one.  This can improve individual
++rows, especially for `D_r`, but it does not kill any connected surviving
++type because the displayed `A` and `D` one-germ patterns still have
++intersection weight at most two against the natural minimal cycles.
++
++## 4. Physical Germs And Forests
++
++Verdict: `CONFIRMED_WITH_SCOPE_REPAIRS`.
++
++The producer correctly separates numerical entries of `n` from physical
++boundary contacts.  A tangent branch at a smooth point of one exceptional
++component can contribute `n_i>1` but creates one branch path after embedded
++resolution.  A branch through a node can contribute to both adjacent entries
++of `n` while still being one physical branch; blowing up the node inserts a
++single local resolution chain.
++
++The forest criterion is the following exact graph statement.  After taking
++the full reduced SNC boundary and after including in `T_p` the ADE tree plus
++the extra local vertices introduced to resolve its contacts, each connected
++component of the complement of `T_p` may attach to `T_p` by at most one edge.
++Two such edges give a cycle by joining them through the unique path in
++`T_p` and through the outside component.  Conversely, single attachments to
++a tree do not create a cycle.
++
++The repair is to keep the carrier qualifier explicit.  Two contacts are
++cycle-forcing only when they lie in the same outside connected carrier
++component after the chosen boundary resolution.  If the contacts lie on
++outside components connected only through `T_p`, the graph is a star, not a
++cycle.  If `H` and `R` share a nonexceptional component, the quotient graph
++has changed and the no-common-carrier connector count cannot be applied.
++
++## 5. Finiteness Of The Successor
++
++Verdict: `CONFIRM_WITH_CORRECTIONS`.
++
++The local numerical sets are finite in the capped regimes.  For each
++connected type there are finitely many
++
++```text
++n in C Z^r cap Z_{\ge 0}^r,  0<sum n_i<=8
++```
++
++and finitely many cap-four rows when the `B`-fibre hypothesis is available.
++For a singular point on infinity, the paired data are also finite:
++
++```text
++a=C h >=0,  n=C m>=0,  h,m>0,
++h^t n = a^t C^{-1}n <=8.
++```
++
++Because `n` is nonzero and `C^{-1}` is strictly positive, this bounds `h`
++and hence `a`.
++
++A complete finite numerical enumeration schema is:
++
++1. Enumerate multisets of connected types from
++   `A1,...,A8,D4,...,D9` with total rank at most nine.
++2. Enumerate simultaneous embeddings of their root lattices in `D9`,
++   modulo the Weyl group `W(D9)` and component Dynkin automorphisms; discard
++   full-rank determinant failures `det != 4 square`.
++3. For every connected component, enumerate the bounded `n` semigroup by
++   the exact `A` or `D` congruence, with the applicable cap.
++4. For components lying on infinity, enumerate the paired boundary vector
++   `a` equivalently via positive integral `h=C^{-1}a`, with
++   `sum h^t n<=8` globally in the no-common-carrier infinity regime.
++5. Partition each bounded vector into physical branch contacts: at a smooth
++   point, vectors `k e_i`; at an ADE node, vectors `u e_i+v e_j` with
++   `u,v>=1`; total weight bounded by the cap.  Then quotient by local Dynkin
++   automorphisms and by identical carrier labels.
++6. Build the resolved incidence graph using physical branches, not entries
++   of `n`, and apply the single-connector forest condition.
++7. Only after these finite numerical rows are produced, ask the separate
++   effectivity and analytic-incidence questions for the corresponding strict
++   carrier classes in the ruled nine-blowup marking.
++
++The correction is in step 7.  Effectivity is not itself a finite enumeration
++of actual divisors or analytic germs.  Linear systems and local germs can
++have moduli, and the nine-blowup effective cone need not be finite in any
++unproved global sense.  What is finite is the list of numerical classes and
++bounded contact partitions on which effectivity/incidence predicates must be
++tested.  The packet should not advertise a finite list of effective
++divisors, maps, or polynomial candidates.
++
++## 6. Remaining ADE Types
++
++Verdict: `CONFIRMED`.
++
++I find no cheaper theorem, using the charged data, that kills any connected
++type left after the `D9` root model.  The proper caps, even sharpened by
++fundamental cycles, leave all connected `A1,...,A8` and `D4,...,D9`.
++
++Formal survivors can be written uniformly.  For `A_r`:
++
++```text
++r=2k-1: n=2e_k,
++        m=(1,2,...,k,...,2,1);
++
++r=2k:   n=e_k+e_{k+1},
++        m=(1,2,...,k,k,...,2,1).
++```
++
++If boundary data through infinity are demanded, take
++
++```text
++h=(1,...,1),  a=C h=e_1+e_r
++```
++
++with the evident `A1` specialization `a=2e_1`.  Then `h^t n=2`.
++
++For `D_r`:
++
++```text
++n=e_2,
++m=(1,2,2,...,2,1,1).
++```
++
++For matching boundary data one may take the same positive cycle for `h`,
++so `a=C h=e_2` and `h^t n=2`.
++
++These are formal numerical Cartier data and physical one-germ patterns only.
++They are not effective exceptional configurations, analytic incidence
++singularities, finite maps, or polynomial maps.
++
++## 7. Maximum Safe Theorem
++
++Verdict: `CONFIRM_WITH_CORRECTIONS`.
++
++The maximum theorem safe to promote is:
++
++```text
++In the normal irreducible class-(2A+3B) quadratic incidence scope of the
++charged predecessor, the minimal resolution has ADE exceptional lattice
++embedded in D9(-1).  Every connected embedded component is A1,...,A8 or
++D4,...,D9.  For each connected component, positive exceptional different
++multiplicities and strict-transform attachment vectors are classified
++exactly by the A/D Cartan congruences above.  In any stratum where a target
++line through the singular image meets the different properly, sum n_i<=8;
++where the corresponding B-fibre also meets it properly, sum n_i<=4; and
++where infinity and different have no common nonexceptional carrier, the
++paired boundary/different data satisfy sum h^t n<=8.  Forest topology acts
++on distinct physical branch contacts after embedded resolution.  Under
++these necessary numerical and graph tests no connected A1,...,A8 or
++D4,...,D9 type is eliminated.
++```
++
++The exact unresolved strata are:
++
++```text
++common nonexceptional H/R carrier;
++different component contained in a B-fibre or other slice used for a cap;
++projective coefficient-basepoint or other nonfinite target-line cases;
++nonfinite affine/projective coefficient strata inherited from the singular model;
++simultaneous effective realization of the allowed root embeddings in the
++  ruled nine-blowup marking;
++effectivity, irreducibility, and incidence equations for strict carriers;
++analytic realization of the formal branch partitions by a bidegree-(2,3)
++  normal hypersurface;
++nonnormal closures, conductor effects, basis changes, and all JC2 claims.
++```
++
++## Repairs Required Before Promotion
++
++1. Replace any bare phrase "finite successor" by "finite numerical/combinatorial
++   successor in the stated proper-intersection/no-common-carrier strata".
++2. State every cap with its properness and no-common-component hypotheses at
++   the point of use.  Do not reuse `A.R=8`, `B.R=4`, or `H.R=8` as a bound
++   after a common component appears.
++3. Add the carrier qualifier to the forest rule: numerical multiplicity and
++   support do not count edges; distinct physical contacts count only after
++   assigning outside connected carriers in the resolved boundary graph.
++4. Keep formal survivors explicitly formal.  They certify non-exclusion by
++   necessary lattice tests only.
++5. State that effectivity/incidence remains a predicate on finite numerical
++   rows, not a finite construction of divisors or maps.
++
++## Cheapest Decisive Successors
++
++1. Implement the finite numerical enumerator described in Section 5, producing
++   Weyl-orbit rows with `type`, embedding orbit, `n`, optional `a`, physical
++   branch partition, and resolved carrier graph.
++2. Add the fundamental-cycle slice lower bound as a cheap row-pruner.  It will
++   not kill connected types, but it can shrink capped rows.
++3. Separate common-carrier cases into their own packet: first decide whether
++   an `H` component can be contained in the different or a `B`-fibre component
++   can be contained in the different under the normal class data.
++4. For each remaining numerical row, test effectivity of the strict carrier
++   classes in the actual ruled nine-blowup marking before asking for analytic
++   incidence realization.
++
++<!-- BODY-END -->
+
+codex
+Wrote the requested report:
+
+[xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md](/Users/dc/code/math/jc2/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md)
+
+Mechanical checks:
+- Size: `14883` bytes, under cap.
+- Ends with standalone `<!-- BODY-END -->`.
+- No seal block added.
+- SHA-256: `2c7059e5a302f7b117723fd2a8486a7fd048e9c5230c03530fdcb3b2fdbff277`
+
+Verdict in the report: `CONFIRM_WITH_CORRECTIONS`.
+diff --git a/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..9ebf448c96fe9124305d7d9915d50deb7360b958
+--- /dev/null
++++ b/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,413 @@
++# Hostile review: ADE-decorated quadratic boundary/different threat map
++
++Reviewer: GPT-5.5 xhigh  
++Review basis: `986427df23c30375b6edfd659ba8a6c6139434ab`  
++Target:
++`xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md`
++
++## Overall Verdict
++
++`CONFIRM_WITH_CORRECTIONS`.
++
++The signed-`D9` root classification, the `A_r` and `D_r` inverse-Cartan
++arithmetic, and the proper-intersection transform identities are correct in
++their necessary-data scope.  The advertised connected survivors really do
++survive these tests as formal Cartier-lattice/one-physical-germ patterns.
++
++The promotion must be worded more narrowly: the finite object proved here is a
++finite numerical/combinatorial threat list in the proper-intersection,
++no-common-carrier regimes.  It is not a finite enumeration of effective
++divisors, analytic germs, incidence equations, finite maps, or polynomial
++maps.  Common-carrier and nonfinite cases remain open strata, not capped
++subcases.
++
++## Charged Inputs And Scope
++
++I read the sealed producer in full.  Its full-file SHA-256 matches the prompt:
++
++```text
++ab10ea83f443c93bdb87194ad0e42fe2c442984ba821c3ddf8ddf5cc3f796133
++```
++
++I also read the Section 0 charged predecessor:
++
++```text
++f7d1c8cb42d5afd29474eb0975ffae518b0c82620f598649c2ac3d5d59064f94
++  xmodel/bd-a2-normal-singular-quadratic-incidence-reduction-sol56-20260830.md
++```
++
++For scope control I checked the immediately named promoted inputs from that
++predecessor which constrain the smooth/forest/block hypotheses.  No conclusion
++below imports the independently active moving-double-section/conductor lane,
++basis minimization, nonnormal closures, counterexamples, or JC2.
++
++## 1. `D9` Root Subsystems
++
++Verdict: `CONFIRMED`.
++
++Use coordinates for `D9`:
++
++```text
++R(D9)={+-e_i+-e_j : i != j}.
++```
++
++Given a connected simple-root set, make the signed coordinate graph whose
++vertices are used coordinate positions and whose edges are the simple roots.
++Dynkin connectedness forces this coordinate graph to be connected, because
++nonorthogonal roots must share a coordinate.  After switching coordinate signs
++along a spanning tree, the tree edges are differences `e_i-e_j`.
++
++If `s` coordinates are used, the spanning tree already generates `A_{s-1}`.
++Every remaining balanced edge stays in that lattice.  One unbalanced edge
++adds a sum root and then the generated lattice is exactly
++
++```text
++{x in Z^s : sum x_i even}=D_s.
++```
++
++There is no exceptional third case.  Thus an irreducible connected embedded
++root subsystem of `D9` is `A_{s-1}` or `D_s`, hence only
++
++```text
++A1,...,A8,  D4,...,D9.
++```
++
++This excludes `A9,E6,E7,E8` as embedded root subsystems, not merely as one
++chosen simple-root presentation.  For example, rank-nine `A9` would have to
++use `s=9` and hence generate `D9`, contradicting determinant `det A9=10`
++versus `det D9=4`.  Similarly `E6,E7,E8` would force generated lattices
++`A6/D6`, `A7/D7`, or `A8/D8`, whose determinants do not match `3,2,1`.
++
++The determinant gate for full-rank disconnected systems is also correct:
++for a rank-nine sublattice `Lambda` of `D9`,
++
++```text
++det Lambda = det(D9) [D9:Lambda]^2 = 4 [D9:Lambda]^2.
++```
++
++No primitivity is needed.
++
++## 2. Cartan Arithmetic
++
++Verdict: `CONFIRMED`, with one wording repair.
++
++For `A_r` with chain numbering `1-...-r`,
++
++```text
++(C^{-1})_{ji}=min(i,j)(r+1-max(i,j))/(r+1),
++```
++
++so the displayed formula
++
++```text
++m_j=((r+1-j) sum_{i<=j} i n_i
++     +j sum_{i>j} (r+1-i)n_i)/(r+1)
++```
++
++is correct.  The cokernel is cyclic of order `r+1`; the functional
++`sum i n_i mod r+1` kills the columns and is surjective.  Hence the exact
++integrality gate is
++
++```text
++sum i n_i = 0 mod r+1.
++```
++
++The one-vertex order
++
++```text
++o_i=(r+1)/gcd(i,r+1)
++```
++
++and the cap-four table in the producer are correct.  The advertised
++one-physical-germ patterns are also correct:
++
++```text
++r=2k-1: n=2e_k,       m=(1,2,...,k,...,2,1),
++r=2k:   n=e_k+e_{k+1}, m=(1,2,...,k,k,...,2,1).
++```
++
++For `D_r` with numbering
++
++```text
++1--2--...--(r-2), with (r-1),r attached to r-2,
++```
++
++put `a=n_{r-1}`, `b=n_r`, and `T=sum_{i=1}^{r-2} i n_i`.  The inverse
++formula
++
++```text
++m_j=sum_{i=1}^{r-2} min(i,j)n_i + j(a+b)/2,  1<=j<=r-2,
++m_{r-1}=T/2 + r a/4 + (r-2)b/4,
++m_r    =T/2 + (r-2)a/4 + r b/4
++```
++
++is correct.  Its exact integrality condition is
++
++```text
++a=b mod 2,
++2T+(r-2)a+r b=0 mod 4.
++```
++
++The second spin congruence is equivalent after `a=b mod 2`.  The one-vertex
++orders in (4.4) are correct, and `n=e_2` gives
++
++```text
++m=(1,2,2,...,2,1,1)
++```
++
++for every `D4,...,D9`.
++
++The repair is only wording: the classification should say
++
++```text
++n in Z_{\ge 0}^r, n != 0, n in C Z^r
++```
++
++classifies the positive integral `m`, because strict positivity of `m` then
++follows from positivity of `C^{-1}`.  It is not an independent nonnegativity
++condition on `m`.
++
++I spot-checked the bounded semigroups by direct integer enumeration.  The
++congruence gates and inverse formulas round-trip for all `A1,...,A8` and
++`D4,...,D9` with `sum n_i<=8`.
++
++## 3. Intersection Caps
++
++Verdict: `CONFIRMED_WITH_SCOPE_REPAIRS`.
++
++The total-transform identity is correct.  For a Cartier slice `L` through a
++singular point,
++
++```text
++r^*L=L_str+ell E,       r^*R=R_str+mE,
++n=Cm,                  b=C ell,
++```
++
++and the exceptional terms are
++
++```text
++L_str.(mE)=ell^t n,
++(ell E).R_str=ell^t n,
++(ell E).(mE)=-ell^t n.
++```
++
++Thus exactly one copy remains:
++
++```text
++L.R=L_str.R_str+sum_q ell_q^t n_q.
++```
++
++For a target line, `A.R=(A).(2A+B)=8`; for a `B`-fibre,
++`B.R=4`; for infinity, `H.R=A.R=8`.  Since any local equation vanishing at
++the singular point has positive valuation on every exceptional component,
++`ell_i,beta_i,h_i>=1`, and therefore `ell^t n`, `beta^t n`, or `h^t n`
++bounds `sum n_i`.
++
++The caps are valid only under the following hypotheses:
++
++```text
++target-line cap: the chosen pullback line has no common curve with R_X;
++B-fibre cap: the chosen B-fibre has no common curve with R_X;
++infinity cap: H and R_X have no common nonexceptional curve;
++all caps: strict-transform intersections are proper and nonnegative.
++```
++
++Projective finiteness is enough to choose a target line avoiding different
++components: finite maps do not contract different components to the target
++point, and only finitely many component images can be lines through that
++point.  Without that properness, no cap follows.  In particular a coefficient
++basepoint or common different carrier may force every relevant slice to share
++a component; then the numerical inequality is not licensed.
++
++A cheap strengthening is available but not decisive: the exceptional
++coefficient vector of a local function is at least the Du Val fundamental
++cycle, not merely componentwise at least one.  This can improve individual
++rows, especially for `D_r`, but it does not kill any connected surviving
++type because the displayed `A` and `D` one-germ patterns still have
++intersection weight at most two against the natural minimal cycles.
++
++## 4. Physical Germs And Forests
++
++Verdict: `CONFIRMED_WITH_SCOPE_REPAIRS`.
++
++The producer correctly separates numerical entries of `n` from physical
++boundary contacts.  A tangent branch at a smooth point of one exceptional
++component can contribute `n_i>1` but creates one branch path after embedded
++resolution.  A branch through a node can contribute to both adjacent entries
++of `n` while still being one physical branch; blowing up the node inserts a
++single local resolution chain.
++
++The forest criterion is the following exact graph statement.  After taking
++the full reduced SNC boundary and after including in `T_p` the ADE tree plus
++the extra local vertices introduced to resolve its contacts, each connected
++component of the complement of `T_p` may attach to `T_p` by at most one edge.
++Two such edges give a cycle by joining them through the unique path in
++`T_p` and through the outside component.  Conversely, single attachments to
++a tree do not create a cycle.
++
++The repair is to keep the carrier qualifier explicit.  Two contacts are
++cycle-forcing only when they lie in the same outside connected carrier
++component after the chosen boundary resolution.  If the contacts lie on
++outside components connected only through `T_p`, the graph is a star, not a
++cycle.  If `H` and `R` share a nonexceptional component, the quotient graph
++has changed and the no-common-carrier connector count cannot be applied.
++
++## 5. Finiteness Of The Successor
++
++Verdict: `CONFIRM_WITH_CORRECTIONS`.
++
++The local numerical sets are finite in the capped regimes.  For each
++connected type there are finitely many
++
++```text
++n in C Z^r cap Z_{\ge 0}^r,  0<sum n_i<=8
++```
++
++and finitely many cap-four rows when the `B`-fibre hypothesis is available.
++For a singular point on infinity, the paired data are also finite:
++
++```text
++a=C h >=0,  n=C m>=0,  h,m>0,
++h^t n = a^t C^{-1}n <=8.
++```
++
++Because `n` is nonzero and `C^{-1}` is strictly positive, this bounds `h`
++and hence `a`.
++
++A complete finite numerical enumeration schema is:
++
++1. Enumerate multisets of connected types from
++   `A1,...,A8,D4,...,D9` with total rank at most nine.
++2. Enumerate simultaneous embeddings of their root lattices in `D9`,
++   modulo the Weyl group `W(D9)` and component Dynkin automorphisms; discard
++   full-rank determinant failures `det != 4 square`.
++3. For every connected component, enumerate the bounded `n` semigroup by
++   the exact `A` or `D` congruence, with the applicable cap.
++4. For components lying on infinity, enumerate the paired boundary vector
++   `a` equivalently via positive integral `h=C^{-1}a`, with
++   `sum h^t n<=8` globally in the no-common-carrier infinity regime.
++5. Partition each bounded vector into physical branch contacts: at a smooth
++   point, vectors `k e_i`; at an ADE node, vectors `u e_i+v e_j` with
++   `u,v>=1`; total weight bounded by the cap.  Then quotient by local Dynkin
++   automorphisms and by identical carrier labels.
++6. Build the resolved incidence graph using physical branches, not entries
++   of `n`, and apply the single-connector forest condition.
++7. Only after these finite numerical rows are produced, ask the separate
++   effectivity and analytic-incidence questions for the corresponding strict
++   carrier classes in the ruled nine-blowup marking.
++
++The correction is in step 7.  Effectivity is not itself a finite enumeration
++of actual divisors or analytic germs.  Linear systems and local germs can
++have moduli, and the nine-blowup effective cone need not be finite in any
++unproved global sense.  What is finite is the list of numerical classes and
++bounded contact partitions on which effectivity/incidence predicates must be
++tested.  The packet should not advertise a finite list of effective
++divisors, maps, or polynomial candidates.
++
++## 6. Remaining ADE Types
++
++Verdict: `CONFIRMED`.
++
++I find no cheaper theorem, using the charged data, that kills any connected
++type left after the `D9` root model.  The proper caps, even sharpened by
++fundamental cycles, leave all connected `A1,...,A8` and `D4,...,D9`.
++
++Formal survivors can be written uniformly.  For `A_r`:
++
++```text
++r=2k-1: n=2e_k,
++        m=(1,2,...,k,...,2,1);
++
++r=2k:   n=e_k+e_{k+1},
++        m=(1,2,...,k,k,...,2,1).
++```
++
++If boundary data through infinity are demanded, take
++
++```text
++h=(1,...,1),  a=C h=e_1+e_r
++```
++
++with the evident `A1` specialization `a=2e_1`.  Then `h^t n=2`.
++
++For `D_r`:
++
++```text
++n=e_2,
++m=(1,2,2,...,2,1,1).
++```
++
++For matching boundary data one may take the same positive cycle for `h`,
++so `a=C h=e_2` and `h^t n=2`.
++
++These are formal numerical Cartier data and physical one-germ patterns only.
++They are not effective exceptional configurations, analytic incidence
++singularities, finite maps, or polynomial maps.
++
++## 7. Maximum Safe Theorem
++
++Verdict: `CONFIRM_WITH_CORRECTIONS`.
++
++The maximum theorem safe to promote is:
++
++```text
++In the normal irreducible class-(2A+3B) quadratic incidence scope of the
++charged predecessor, the minimal resolution has ADE exceptional lattice
++embedded in D9(-1).  Every connected embedded component is A1,...,A8 or
++D4,...,D9.  For each connected component, positive exceptional different
++multiplicities and strict-transform attachment vectors are classified
++exactly by the A/D Cartan congruences above.  In any stratum where a target
++line through the singular image meets the different properly, sum n_i<=8;
++where the corresponding B-fibre also meets it properly, sum n_i<=4; and
++where infinity and different have no common nonexceptional carrier, the
++paired boundary/different data satisfy sum h^t n<=8.  Forest topology acts
++on distinct physical branch contacts after embedded resolution.  Under
++these necessary numerical and graph tests no connected A1,...,A8 or
++D4,...,D9 type is eliminated.
++```
++
++The exact unresolved strata are:
++
++```text
++common nonexceptional H/R carrier;
++different component contained in a B-fibre or other slice used for a cap;
++projective coefficient-basepoint or other nonfinite target-line cases;
++nonfinite affine/projective coefficient strata inherited from the singular model;
++simultaneous effective realization of the allowed root embeddings in the
++  ruled nine-blowup marking;
++effectivity, irreducibility, and incidence equations for strict carriers;
++analytic realization of the formal branch partitions by a bidegree-(2,3)
++  normal hypersurface;
++nonnormal closures, conductor effects, basis changes, and all JC2 claims.
++```
++
++## Repairs Required Before Promotion
++
++1. Replace any bare phrase "finite successor" by "finite numerical/combinatorial
++   successor in the stated proper-intersection/no-common-carrier strata".
++2. State every cap with its properness and no-common-component hypotheses at
++   the point of use.  Do not reuse `A.R=8`, `B.R=4`, or `H.R=8` as a bound
++   after a common component appears.
++3. Add the carrier qualifier to the forest rule: numerical multiplicity and
++   support do not count edges; distinct physical contacts count only after
++   assigning outside connected carriers in the resolved boundary graph.
++4. Keep formal survivors explicitly formal.  They certify non-exclusion by
++   necessary lattice tests only.
++5. State that effectivity/incidence remains a predicate on finite numerical
++   rows, not a finite construction of divisors or maps.
++
++## Cheapest Decisive Successors
++
++1. Implement the finite numerical enumerator described in Section 5, producing
++   Weyl-orbit rows with `type`, embedding orbit, `n`, optional `a`, physical
++   branch partition, and resolved carrier graph.
++2. Add the fundamental-cycle slice lower bound as a cheap row-pruner.  It will
++   not kill connected types, but it can shrink capped rows.
++3. Separate common-carrier cases into their own packet: first decide whether
++   an `H` component can be contained in the different or a `B`-fibre component
++   can be contained in the different under the normal class data.
++4. For each remaining numerical row, test effectivity of the strict carrier
++   classes in the actual ruled nine-blowup marking before asking for analytic
++   incidence realization.
++
++<!-- BODY-END -->
+
+tokens used
+91,318
+Wrote the requested report:
+
+[xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md](/Users/dc/code/math/jc2/xmodel/bd-a2-ade-decorated-boundary-different-threat-map-hostile-review-gpt55-20260830.md)
+
+Mechanical checks:
+- Size: `14883` bytes, under cap.
+- Ends with standalone `<!-- BODY-END -->`.
+- No seal block added.
+- SHA-256: `2c7059e5a302f7b117723fd2a8486a7fd048e9c5230c03530fdcb3b2fdbff277`
+
+Verdict in the report: `CONFIRM_WITH_CORRECTIONS`.
