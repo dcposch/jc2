@@ -56,6 +56,50 @@ class ArtifactFinalizeTest(unittest.TestCase):
         self.root = Path(temporary.name)
         self.final = self.root / "report.md"
 
+    def init_git_repo(self) -> tuple[Path, str, str]:
+        repo = self.root / "repo"
+        repo.mkdir()
+        subprocess.run(["git", "init", "-q"], cwd=repo, check=True, timeout=10)
+        subprocess.run(
+            ["git", "config", "user.name", "Artifact Test"],
+            cwd=repo,
+            check=True,
+            timeout=10,
+        )
+        subprocess.run(
+            ["git", "config", "user.email", "artifact@example.invalid"],
+            cwd=repo,
+            check=True,
+            timeout=10,
+        )
+        (repo / "anchor.txt").write_text("basis anchor\n", encoding="utf-8")
+        subprocess.run(
+            ["git", "add", "--", "anchor.txt"], cwd=repo, check=True, timeout=10
+        )
+        subprocess.run(
+            ["git", "commit", "-q", "-m", "basis anchor"],
+            cwd=repo,
+            check=True,
+            timeout=10,
+        )
+        head = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=repo,
+            check=True,
+            text=True,
+            stdout=subprocess.PIPE,
+            timeout=10,
+        ).stdout.strip()
+        tree = subprocess.run(
+            ["git", "rev-parse", "HEAD^{tree}"],
+            cwd=repo,
+            check=True,
+            text=True,
+            stdout=subprocess.PIPE,
+            timeout=10,
+        ).stdout.strip()
+        return repo, head, tree
+
     def begin(self) -> dict[str, object]:
         return output_json(
             run(
@@ -66,6 +110,7 @@ class ArtifactFinalizeTest(unittest.TestCase):
                 BASIS,
                 "--owner",
                 "test-lane",
+                "--allow-non-git-basis",
             )
         )
 
@@ -96,6 +141,64 @@ class ArtifactFinalizeTest(unittest.TestCase):
         Path(str(opened["partial_path"])).write_text(BODY, encoding="utf-8")
         self.close(opened)
         return opened, self.finalize(opened)
+
+    @unittest.skipUnless(shutil.which("git"), "Git required")
+    def test_begin_requires_exact_git_commit_without_filesystem_residue(self) -> None:
+        outside = run(
+            "begin",
+            "--final",
+            str(self.final),
+            "--basis",
+            BASIS,
+            "--owner",
+            "strict-test",
+        )
+        self.assertNotEqual(outside.returncode, 0)
+        self.assertIn("requires a Git worktree", outside.stderr)
+        self.assertEqual(list(self.root.iterdir()), [])
+
+        repo, head, tree = self.init_git_repo()
+        cases = (
+            ("missing.md", "f" * 40, "not a commit"),
+            ("short.md", head[:12], "40 lowercase hexadecimal"),
+            ("tree.md", tree, "not a commit"),
+        )
+        for name, basis, message in cases:
+            with self.subTest(name=name):
+                result = run(
+                    "begin",
+                    "--final",
+                    str(repo / name),
+                    "--basis",
+                    basis,
+                    "--owner",
+                    "strict-test",
+                )
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIn(message, result.stderr)
+                self.assertFalse((repo / name).exists())
+                self.assertFalse((repo / f".{name}.artifact-lease.json").exists())
+                self.assertEqual(list(repo.glob(f".{name}.partial-*")), [])
+
+        opened = output_json(
+            run(
+                "begin",
+                "--final",
+                str(repo / "valid.md"),
+                "--basis",
+                head,
+                "--owner",
+                "strict-test",
+            )
+        )
+        self.assertEqual(opened["basis"], head)
+        self.assertTrue(Path(str(opened["lease_path"])).is_file())
+        self.assertTrue(Path(str(opened["partial_path"])).is_file())
+
+    def test_non_git_fixture_requires_explicit_opt_out(self) -> None:
+        opened = self.begin()
+        self.assertEqual(opened["basis"], BASIS)
+        self.assertTrue(Path(str(opened["lease_path"])).is_file())
 
     def test_roundtrip_manifest_and_custody_cleanup(self) -> None:
         opened, finished = self.complete()
@@ -133,6 +236,7 @@ class ArtifactFinalizeTest(unittest.TestCase):
             str(self.final),
             "--basis",
             BASIS,
+            "--allow-non-git-basis",
             "--owner",
         ]
         processes = [
@@ -292,6 +396,7 @@ class ArtifactFinalizeTest(unittest.TestCase):
                         BASIS,
                         "--owner",
                         "fault-test",
+                        "--allow-non-git-basis",
                     )
                 )
                 Path(str(opened["partial_path"])).write_text(BODY, encoding="utf-8")
@@ -465,6 +570,7 @@ class ArtifactFinalizeTest(unittest.TestCase):
             BASIS,
             "--owner",
             "test-lane",
+            "--allow-non-git-basis",
         )
         self.assertEqual(collision.returncode, 3, collision.stderr)
         self.assertEqual(other.read_text(encoding="utf-8"), "do not overwrite\n")

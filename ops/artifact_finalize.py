@@ -9,9 +9,12 @@ The workflow is deliberately explicit and never discovers report files::
     artifact_finalize.py finalize --final REPORT --token TOKEN
     artifact_finalize.py verify --final REPORT [--staged]
 
-``begin`` is the only operation which allocates names.  Its capability token
-owns one no-overwrite lease.  ``close`` removes write bits and records a stable
-source snapshot.  ``finalize`` refuses drift, delegates canonical sealing to
+``begin`` is the only operation which allocates names.  By default it first
+requires ``COMMIT`` to be the exact full object ID of a Git commit in the
+worktree containing ``REPORT``; test fixtures outside Git must opt out
+explicitly with ``--allow-non-git-basis``.  Its capability token owns one
+no-overwrite lease.  ``close`` removes write bits and records a stable source
+snapshot.  ``finalize`` refuses drift, delegates canonical sealing to
 ``seal.py``, publishes by a no-overwrite hard link, and writes a read-only JSON
 manifest.  The lease is cooperative custody, not an authentication boundary;
 same-user processes can alter files, but verification detects such alteration.
@@ -309,7 +312,64 @@ def _validate_lease(
     return lease_id, partial_name, basis
 
 
-def begin(final: Path, basis: str, owner: str) -> dict[str, Any]:
+def _require_exact_git_commit(parent: Path, basis: str) -> Path:
+    """Return the containing worktree root after resolving ``basis`` exactly.
+
+    This check deliberately runs before any lease or partial is allocated.
+    ``basis`` has already passed the lowercase full-width hexadecimal check,
+    so it cannot be parsed as an option or a revision expression supplied by
+    the caller.  Appending ``^{commit}`` rejects tree/blob object IDs while
+    still accepting historical commits.
+    """
+
+    root_proc = subprocess.run(
+        ["git", "-C", str(parent), "rev-parse", "--show-toplevel"],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if root_proc.returncode != 0:
+        detail = root_proc.stderr.decode(errors="replace").strip()
+        suffix = f": {detail}" if detail else ""
+        raise ArtifactError(
+            "begin requires a Git worktree for basis validation"
+            f"{suffix}; use --allow-non-git-basis only for isolated fixtures"
+        )
+    try:
+        root = Path(os.fsdecode(root_proc.stdout).strip()).resolve(strict=True)
+        parent.relative_to(root)
+    except (OSError, ValueError) as exc:
+        raise ArtifactError("artifact target is outside its reported Git worktree") from exc
+
+    revision = f"{basis}^{{commit}}"
+    resolve_proc = subprocess.run(
+        ["git", "-C", str(root), "rev-parse", "--verify", revision],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if resolve_proc.returncode != 0:
+        raise ArtifactError(
+            f"basis {basis} is not a commit in the target Git repository"
+        )
+    try:
+        resolved = resolve_proc.stdout.decode("ascii").strip()
+    except UnicodeDecodeError as exc:  # pragma: no cover - defensive Git guard
+        raise ArtifactError("git returned a non-ASCII basis object ID") from exc
+    if resolved != basis:
+        raise ArtifactError(
+            f"basis must be the exact full commit ID: declared {basis}, resolved {resolved}"
+        )
+    return root
+
+
+def begin(
+    final: Path,
+    basis: str,
+    owner: str,
+    *,
+    require_git_commit: bool = True,
+) -> dict[str, Any]:
     _require_platform()
     try:
         seal._validate_basis(basis)
@@ -322,6 +382,8 @@ def begin(final: Path, basis: str, owner: str) -> dict[str, Any]:
     partial_name: str | None = None
     partial_created = False
     try:
+        if require_git_commit:
+            _require_exact_git_commit(parent, basis)
         _sync_parent(parent_fd)
         for occupied in (names.final, names.manifest, names.closed, names.release):
             if _exists_at(parent_fd, occupied):
@@ -1148,6 +1210,11 @@ def build_parser() -> argparse.ArgumentParser:
     begin_parser.add_argument("--final", required=True, type=Path)
     begin_parser.add_argument("--basis", required=True)
     begin_parser.add_argument("--owner", required=True)
+    begin_parser.add_argument(
+        "--allow-non-git-basis",
+        action="store_true",
+        help="skip commit resolution only for isolated non-Git test fixtures",
+    )
     close_parser = sub.add_parser("close", help="freeze the completed partial report")
     close_parser.add_argument("--final", required=True, type=Path)
     close_parser.add_argument("--token", required=True)
@@ -1168,7 +1235,12 @@ def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
         if args.command == "begin":
-            result = begin(args.final, args.basis, args.owner)
+            result = begin(
+                args.final,
+                args.basis,
+                args.owner,
+                require_git_commit=not args.allow_non_git_basis,
+            )
         elif args.command == "close":
             result = close(args.final, args.token)
         elif args.command == "finalize":
