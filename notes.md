@@ -14588,3 +14588,23 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   Hence reducibility of every in-scope survivor is a strong provisional
   consequence. Different-model review is next; the component-lattice lane
   already proceeds provisionally. No block closure or JC2 result follows.
+
+## 2026-08-30 05:06Z REVIEW EVENT — F5 `5+3` SPLIT PROMOTED
+
+- Opus review body
+  `5a77b09861b3e53c480715399d777db58290ce60466cb4485f5c25f1c4f5b035`
+  (sealed full file
+  `7e335e1a1636d1b4342cf0f163fd7051c33b38b3c16766f8c7d94f92e5beea0c`)
+  returns `CONFIRM_WITH_CORRECTIONS`; no gap or refutation remains. It checks
+  orbit rigidity, exact order-three implicit solution, Weierstrass/Hensel
+  splitting, `disc_z(h)=v^8`, finite additivity, and graph monotonicity.
+- Transactional binding integration
+  `8fcd071fff6e828879b7926ad9398f3d33f81344e58f6fe04c758a19c326641e`
+  / body `2d14c7fa...`, manifest `75b76f8a...`, promotes the two source-
+  different branches with weights five and three. It reserves tangent-line
+  symbols separately from the actual analytic branches, repairing the one
+  material producer defect.
+- Combined with the attachment theorem, every survivor in the current
+  smooth reduced projectively finite quadratic scope has nonempty reducible
+  ramification. The active conic-bundle lattice lane is the remaining finite
+  gate. No coefficient realization, block closure, map, or JC2 claim follows.

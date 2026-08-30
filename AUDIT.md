@@ -5,6 +5,30 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **F5 LOCAL DIFFERENT AND REDUCIBLE-RAMIFICATION CONSEQUENCE PROMOTED
+> (2026-08-30 05:06Z).** Opus review body `5a77b098...` (sealed full file
+> `7e335e1a...`) returns `CONFIRM_WITH_CORRECTIONS` after independently
+> deriving the unique F5 orbit, smooth local equation, Weierstrass/Hensel
+> split, resultant length, branchwise contacts, and global attachment
+> inference. Transactional binding integration
+> `8fcd071fff6e828879b7926ad9398f3d33f81344e58f6fe04c758a19c326641e`
+> (6,988-byte body `2d14c7fa...`, manifest `75b76f8a...`) promotes
+>
+> ```text
+> h=z(z-v)((1+v)z-v),
+> in_2(f_z|X)=(z-v)(3z-v),
+> I_p(H,D_tan)=5,  I_p(H,D_tr)=3,
+> smooth finite reduced quadratic survivor => #components(R_red)>=2.
+> ```
+>
+> `D_tan,D_tr` denote the actual Hensel branches; `z=v,3z=v` are only their
+> tangent lines. Direct restrictions of `f_z` to the three infinity branches
+> have orders `2,3,3`, licensing additivity and proving no common component.
+> Source different/reduced support, target discriminant/reduced branch,
+> normalization index, and conductor remain separate. This does not eliminate
+> reducible ramification or close the quadratic stratum; the exact
+> conic-bundle component lattice is next.
+
 > **`ARTIFACT-FINALIZE/v1` ACCEPTED FOR LOCAL REPORTS
 > (2026-08-30 04:48Z).** Accepted executable
 > `ops/artifact_finalize.py` has SHA-256 `c62f35f1...`; its 15-test focused

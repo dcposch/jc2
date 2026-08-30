@@ -7,6 +7,19 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **F5 LOCAL DIFFERENT PROMOTED; EVERY IN-SCOPE SURVIVOR HAS REDUCIBLE
+> RAMIFICATION (05:06Z).** Opus independently reconstructs the F5 orbit,
+> Weierstrass/Hensel factorization, resultant length, and global cycle
+> inference, returning `CONFIRM_WITH_CORRECTIONS`. Binding integration
+> `8fcd071f...`/body `2d14c7fa...` promotes two smooth transverse source-
+> different branches with exact infinity weights five and three. The material
+> correction distinguishes their tangent lines from the actual analytic
+> branches and adds the no-common-branch check. Combined with the promoted
+> attachment theorem, reduced ramification is nonempty and has at least two
+> global components throughout the smooth, reduced, projectively finite
+> quadratic block stratum. The conic-bundle lattice is the remaining gate;
+> reducible ramification and the whole quadratic stratum are not yet closed.
+
 > **F5 LOCAL DIFFERENT PROVISIONALLY SPLITS `8=3+5` (04:52Z).** Sealed
 > producer `8a1c3c50...`/body `61931ec7...` puts the unique F5 triple/contact
 > germ in the exact form

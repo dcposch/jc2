@@ -1176,3 +1176,17 @@ scope. Commit this frozen producer, then send it to a different model for a
 bounded hostile review while the effective component-lattice lane continues
 without blocking. Do not launch coefficient elimination before that finite
 lattice gate. AWS remains idle; holds/human gates: none.
+
+Allocation refresh (2026-08-30 05:06Z): Opus closes the F5 local review with
+`CONFIRM_WITH_CORRECTIONS`. Transactional binding integration `8fcd071f...`
+promotes the exact two analytic different branches and `5+3` boundary split;
+the tangent-line notation and no-common-branch check are repaired. Every
+survivor in the smooth, irreducible, reduced-infinity, projectively finite
+quadratic first-leg scope now has at least two ramification components.
+
+Continue the already active rank-11 component-lattice lane provisionally.
+Its task is now eliminative, not merely classificatory: carry the exact
+`(5,3)` boundary vectors, Cartier multiplicities, contracted `A`-null curves,
+effectivity, and forest graph. If a finite lattice no-go freezes, commit it
+and launch a different-model review immediately; do not wait for coefficient
+elimination. AWS remains idle; holds/human gates: none.

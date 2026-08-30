@@ -7,15 +7,14 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
-## Superseding strategy overlay (2026-08-30 04:52Z — provisional F5 local split)
+## Superseding strategy overlay (2026-08-30 05:06Z — F5 local split promoted)
 
-- **Treat irreducible ramification as provisionally closed in the smooth
-  finite quadratic stratum.** A sealed exact local producer gives the F5
-  different two transverse branches with boundary weights `5` and `3`.
-  Combined with the promoted attachment theorem, this removes the last F5
-  escape for irreducible ramification. Run a different-model review on the
-  normal form, Hensel split, resultant length, and global cycle inference;
-  proceed provisionally on reducible component lattices without waiting.
+- **Irreducible ramification is closed in the smooth finite quadratic
+  stratum.** Different-model review promotes that the F5 different has two
+  transverse analytic branches with exact boundary weights `5` and `3`.
+  Combined with the attachment theorem, this removes the last irreducible-
+  ramification escape: every in-scope survivor has at least two global
+  ramification components.
 - **Make the component lattice the central quadratic gate.** Enumerate
   effective splittings of `R_pi=2A+B` in the nine-singular-fibre conic-bundle
   lattice, imposing adjunction, unit-induced independence, type-specific

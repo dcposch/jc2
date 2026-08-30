@@ -1,0 +1,19 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/bd-a2-f5-local-different-two-branch-hostile-review-opus5-20260830.md` (17,425 bytes, one standalone `<!-- BODY-END -->`, no seal block). All four input seals re-verified on basis `1efd7a76`; producer body hash `61931ec7...` independently reproduced.
+
+**Verdict: `CONFIRM_WITH_CORRECTIONS` on all five items. Nothing refuted, no `GAP`.**
+
+What I established independently rather than accepting:
+
+- **No hidden moduli.** The F5 configuration is a single `PGL2×PGL2` orbit — family dimension 5, group dimension 6, stabilizer exactly the 1-dimensional parabolic `v↦v/(1+tv), z↦z/(1+tz)`. The producer asserted the normal form; I proved rigidity two ways (explicit reduction recipe + orbit count).
+- **`K(C)=2` is saturated at `p`** (δ=4, r=3), so `p` is the only singular point of `H` — the F5 row data is forced, not assumed.
+- `disc_z(h) = v^8` **exactly**; `Res_z(h,h_z) = −v^8(1+v)`; branch restrictions `r|_{z=0}=v²`, `r|_{z=v}=v³`, `r|_{z=v/(1+v)}=−v³/(1+v)` — orders 2,3,3 cross-confirming the (1,2,2)/(1,1,1) table by a route the producer doesn't use.
+- `H·R_π = 8 = I_p`, hence `Rbar ∩ H = {p}` — no other attachment on `H`.
+
+**Material correction C5:** display (3.4) names `D_tan, D_tr` as *tangent lines*, and §4 then computes with them as *Hensel branches*. Read literally, (4.5) is false — `z−v` divides `h`, so `I_p(H,{z=v}) = ∞`. The mathematics is right; the symbol is not. Also **C7**: (4.2) is not an independent check — `π_*R_π = D` and `H = π^*L_∞` make it the same computation restated on the target.
+
+Four other required additions the producer omits: unit division `f↦f/w` before (2.2); the no-common-branch check that licenses additivity; `b₁`-monotonicity so the cycle in `H ∪ Q` persists in the resolved boundary of `U`; and the full hypothesis list in (5.2).
+
+**Cheapest next gate** (sharper than the producer's proposal): `A|_X` is nef with `A·C = 0` iff `π` contracts `C`, so `A·R_π = 8` with germ floors 5 and 3 *forces* multiplicity one, `A·C_tan = 5`, `A·C_tr = 3`, and every other component contracted. That reduces to a bounded integer search in the rank-11 conic-bundle lattice — no CAS, no coefficient elimination.
+
+Execution note: I used the shell for hashing plus one light `sympy` check (expansion, discriminant, resultant, three restrictions, two truncated Hensel series); everything was derived by hand first. No Singular, no heavy CAS, no `jc2-lean` access, no input or canonical file modified.
