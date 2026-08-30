@@ -1,0 +1,497 @@
+# Significant-news whole-portfolio ideation: canonical normalization and branch cycles
+
+Round: `20260830T2130Z`  
+Author: Sol 5.6 Ultra, `sectioned_one_support_family` lane  
+Frozen basis: `0ad5f9a2d684698ea524efeb4576a3884c92ca7d`  
+Lifecycle: **FINAL+VERIFIED IDEATION MEMO / MATHEMATICS PROVISIONAL UNTIL REVIEWED**
+
+## 0. Ranked verdict
+
+The strongest new composition is not another strict-block presentation.  It
+is the canonical endpoint
+
+```text
+A=C[F,G] subset S=Norm_A C(x,y) subset C[x,y],
+A2_source --j--> Y=Spec(S) --pi--> A2_target,
+deg(j)=1,                         deg(pi)=deg(F).
+```
+
+Every algebraic and geometric interface used by the block campaign survives
+at `deg(j)=1`: `pi` is finite flat, `j` is a birational quasi-finite open
+immersion, its image avoids the ramification of `pi`, and the resulting
+maximal etale open is a smooth rational affine ruled surface with positive
+compactly supported Euler characteristic.  This directly enters the
+primitive/no-strict-block horn.
+
+The ranked consequences and experiments are:
+
+1. **Freeze and hostile-review the canonical endpoint, then promote the
+   generic-degree-three exclusion.**  The reviewed cubic Euler, source-forest,
+   and acyclic-monodromy arguments do not use `deg(j)>1`.  At `deg(pi)=3`
+   they force connected contractible branch with a companion at every point,
+   then contradict transitivity.  Thus a complex Keller pair cannot have
+   generic field degree three.  This is a short, exact theorem candidate,
+   not merely a heuristic application of the all-degree proposal.
+2. **Hostile-review the all-degree branch-cycle theorem.**  Generic fixed
+   sheets on every branch component, normality, transitivity, and
+   `e_c(U)>0` appear to force at least one connected component of the reduced
+   branch to have nontrivial fundamental group.  The theorem covers both the
+   connected Arzhantsev--Zaidenberg forms and the disconnected parallel-line
+   form.  It collapses the acyclic part of the rank-at-least-four and
+   canonical-normalization horns without pretending to close their cyclic
+   survivors.
+3. **Attack the smallest rank-four cycle through the cubic resolvent.**  At a
+   `(2,2)` target node the two disjoint quartic transpositions have the same
+   image in the `S4 -> S3` action on pairings.  A based van Kampen/HNN
+   computation may force the stable letter into that transposition's
+   centralizer and make the cubic resolvent intransitive.  This is the
+   highest-information exact rank-four successor.
+4. **Compile low-index resolvents before more coefficient elimination.**  The
+   already-closed quadratic and cubic second legs force a strong subgroup
+   condition inside any `S4` quartic block; this should be made into a small
+   reviewed group-theory packet and then generalized to primitive degrees.
+5. **Keep K00 as the orthogonal disproof lane, but spend computation on
+   source completeness and scheme-theoretic transition images.**  Another
+   isolated grade has less value than showing whether the current atlas
+   actually covers its claimed source and whether one transition image is
+   empty, proper, or dense with nilpotents/localizers retained.
+
+Strict cubic blocks are closed.  The sectioned `D3`, Picard/Kummer, and
+clean-infinity cubic computations are therefore banked controls, not live
+proof gates.  Rank four, the canonical normalization, block existence,
+primitive monodromy, presentation degeneracies, and K00 remain open.
+
+## 1. Canonical `d1=1` normalization audit
+
+Let `F=(F,G):A2_C -> A2_C` be a hypothetical noninvertible Keller map.  Put
+
+```text
+A=C[F,G],              M=Frac(A),
+L=C(x,y),              d=[L:M]>=2,
+S=integral closure of A in L,       Y=Spec(S).
+```
+
+The constant nonzero Jacobian makes `F,G` algebraically independent and
+`L/M` finite separable.  The following audit uses no strict intermediate
+field.
+
+### 1.1 Finite normalization and literal inclusion
+
+The polynomial ring `A` is excellent, so normalization in the finite field
+extension `L/M` is finite.  If `s in S`, then a monic equation for `s` over
+`A subset C[x,y]` is also a monic equation over `C[x,y]`.  Since
+`s in L=Frac(C[x,y])` and `C[x,y]` is integrally closed,
+
+```text
+S subset C[x,y].                                           (1.1)
+```
+
+This is the exact normalization inclusion; no Picard group, Hartogs
+extension, or assertion that a missed divisor cannot exist is involved.
+It defines
+
+```text
+j:A2_source -> Y,             pi:Y -> Spec(A)=A2_target,
+F=pi o j.                                                  (1.2)
+```
+
+The surface `Y` is integral, normal, and affine.  Normal two-dimensional
+local rings are Cohen--Macaulay.  Finite miracle flatness over the regular
+two-dimensional target makes `pi` finite flat of degree `d`.
+
+### 1.2 The first leg is an open immersion
+
+The morphism `j` is birational because its source and target have function
+field `L`.  It is of finite type: `C[x,y]` is generated by `x,y` as an
+`S`-algebra.  A fibre of `j` lies in a fibre of `F=pi o j`; the Keller map is
+etale and hence quasi-finite, so every `j`-fibre is finite.  Thus `j` is a
+separated quasi-finite birational morphism to the normal variety `Y`.
+Zariski Main factors it through a finite birational cover of `Y`, which is
+`Y` by normality.  Therefore
+
+```text
+j:A2 -> Y is an open immersion.                           (1.3)
+```
+
+On this open chart `pi` identifies with the etale map `F`; hence
+`j(A2)` avoids
+
+```text
+R=NonEt_Y(pi)_red.                                        (1.4)
+```
+
+If `j` were onto, `F` would be a connected finite etale cover of `A2`, so it
+would have degree one.  A counterexample therefore has nonempty boundary.
+Likewise `R` is nonempty for `d>=2`, because an everywhere-etale finite
+connected `pi` over simply connected `A2` would be trivial.  Branch purity
+for the finite generically-etale normal cover makes `R` divisorial; in
+height one normality supplies the DVR/inertia model used below.
+
+### 1.3 The ruling package also extends
+
+Put `U=Y-R`.  The maximal-etale-open affineness theorem used in the promoted
+ruling integration makes `U` affine; `pi|U` etale over a smooth target makes
+it smooth.  The actual open immersion `A2 -> U` supplies every remaining
+input:
+
+```text
+C(U)=C(x,y),                    U is rational;
+O(U)^*=C^*,                    by injective pullback to C[x,y];
+bar-kappa(U)=-infinity,        by generically-finite log pullback.
+```
+
+The Miyanishi--Sugie/cylinder package therefore gives an `A1`-fibration
+`rho:U->C`, with `C=A1` or `P1`, reduced fibres disjoint unions of affine
+lines, and
+
+```text
+e_c(U)=e_c(C)+Q,        Q=sum_t(q_t-1)>=0;
+in particular e_c(U)>=1.                                  (1.5)
+```
+
+No step in this paragraph uses `deg(j)>=2`; at degree one rationality is
+stronger, not weaker.  The morphic rational-forest theorem likewise needs
+the everywhere-defined morphism `A2->U`, not a lower bound on its generic
+degree.
+
+### 1.4 Generic companion and the exact locus firewall
+
+Let `D=V(p)` be an irreducible component of the reduced target branch
+
+```text
+B=pi(R)_red=V(Disc(pi))_red.
+```
+
+If every height-one component above `D` had ramification index greater than
+one, the full divisor of `p` on `Y` would be supported in `R` and missed by
+`j(A2)`.  Its pullback `p(F,G)` would be nowhere zero.  But algebraic
+independence makes it a nonconstant nonunit of `C[x,y]`, and every such
+polynomial has a complex zero.  Therefore every branch component has at
+least one generic height-one factor with `e=1`; characteristic zero makes
+the residue extension separable.  Geometric inertia consequently has a
+nonempty fixed set.  It is a proper fixed set because branch normality makes
+generic inertia nonidentity.
+
+Equivalently, one may take a curve component of `F^{-1}(D)`; quasi-finiteness
+makes its image dense in `D`, and every source point lies in the etale chart.
+
+This conclusion is **generic on each component only**.  A companion can
+disappear at a crossing, cusp vertex, or other omitted value.  It must not be
+upgraded to `S0=empty` without an additional argument.
+
+The four relevant loci also remain distinct:
+
+```text
+R                         source non-etale divisor in Y;
+B=pi(R)_red               target branch/discriminant support;
+Y-j(A2)                   first-leg boundary, possibly including etale points;
+A(F)                      target nonproper-value curve of the Keller map.
+```
+
+One has
+
+```text
+R subset Y-j(A2),                 B subset A(F),          (1.6)
+```
+
+but neither equality is licensed.  In particular `U=Y-R` retains
+unramified sheets over `B`; one must not replace it by
+`Y-pi^(-1)(B)`.  Since both sides of `B subset A(F)` are pure curves, every
+irreducible component of `B` is an irreducible component of `A(F)`, but
+`A(F)` may have additional components produced by nonproperness of `j`.
+
+### 1.5 Hidden-assumption audit
+
+The endpoint uses the following assumptions, all explicit:
+
+- separability is from characteristic zero and the Keller Jacobian;
+- flatness uses dimension two, normality/CM, and the regular target;
+- quasi-finiteness of `j` comes from quasi-finiteness of the composition,
+  not from a properness assertion;
+- the open immersion comes from normal-target Zariski Main, not Hartogs;
+- nontrivial generic inertia uses the height-one DVRs of the normal cover and
+  branch purity; the nonnormal conductor control `z^2=x^2y` shows this cannot
+  be discarded;
+- all Euler characteristics are compactly supported and all fibre counts
+  are constructible;
+- reducibility of `B` is retained throughout.
+
+The endpoint audit is therefore positive.  Its consequence is a new theorem
+interface, not yet a promoted theorem because the cited block integrations
+state a strict-intermediate-field scope and should receive a dedicated
+endpoint review.
+
+## 2. Exact cubic corollary at the endpoint
+
+Now assume `d=3`.  The existing rank-three proof can be replayed without
+`d1>1`:
+
+1. A non-etale local factor has length at least two.  Two ramification
+   points over one value would consume length at least four.  Hence
+   `R_red -> B` is finite and point-bijective, and analytically a
+   homeomorphism.
+2. Every `B` component is an `A(F)` component, so its normalization is `A1`
+   by the charged nonproper-value theorem.  The same is true upstairs.
+3. The actual map `A2->U` licenses the source rational-forest theorem.
+   Therefore the affine incidence multigraph of `R_red` is a forest and
+
+   ```text
+   e_c(B)=e_c(R_red)=b0(B)=h>=1.                         (2.1)
+   ```
+
+4. Generic companions make the no-unramified-sheet locus
+   `S0=A2-pi(U)` finite.  The cubic fibre census is
+
+   ```text
+   off B:       (1,1,1),      u=3;
+   on B-S0:     (2,1),        u=1;
+   on S0:       (3),          u=0.
+   ```
+
+   Thus
+
+   ```text
+   e_c(U)=3-2h-|S0|=e_c(C)+Q.                            (2.2)
+   ```
+
+The `C=P1` row gives `2h+|S0|+Q=1`, impossible.  The `C=A1` row gives
+
+```text
+2h+|S0|+Q=2,
+h=1,                  S0=empty,                 Q=0.     (2.3)
+```
+
+Now, and only now, the generic companion upgrades to a companion over every
+branch point.  The connected forest of `A1` normalizations makes `B`
+contractible.  The already independently reviewed cubic acyclic-branch
+monodromy theorem makes the connected degree-three complement cover
+intransitive, a contradiction.  Therefore the endpoint composition predicts
+
+```text
+[C(x,y):C(F,G)] != 3                                    (2.4)
+```
+
+for every complex polynomial Keller pair.  This means generic field degree,
+not total polynomial degree or the degree of an individual coordinate.
+
+The proof uses the existing cubic theorem, not the still-provisional
+all-degree generalization.  The exact promotion task is to freeze Sections
+1--2 as a standalone producer, obtain an independent hostile review of the
+endpoint scope extension, and only then update top ledgers.
+
+## 3. All-degree branch-cycle theorem candidate
+
+The correct standalone strengthening of the Fable proposal is:
+
+> Let `pi:Y->A2_C` be finite flat of degree `d>=2`, with `Y` integral and
+> normal.  Let `R=NonEt_Y(pi)_red`, `B=pi(R)_red`, and `U=Y-R`.  Assume the
+> complement cover has transitive monodromy, every branch component has a
+> generically unramified sheet, and `e_c(U)>0`.  Then not every connected
+> component of `B` is simply connected.  If all component normalizations are
+> `A1`, at least one connected component has an actual incidence cycle.
+
+This is stronger and safer than requiring a rank-one factor at every branch
+point.  The two mechanisms are as follows.
+
+### 3.1 Connected branch
+
+Arzhantsev--Zaidenberg Theorem 1.3(b) puts a reduced connected simply
+connected plane curve into a comb or weighted-cone form.
+
+For a nontrivial comb, generic spine inertia `sigma` is nonidentity and has
+a nonempty proper fixed set.  The spine meridian is central in the
+complement group, so every monodromy element centralizes `sigma` and
+preserves `Fix(sigma)`.  The image is intransitive.  A single-line
+degeneration is the same cyclic argument.  No identification of companion
+labels on different teeth occurs.
+
+For a weighted cone, positive weighted radial scaling identifies the global
+complement group with an arbitrarily small punctured origin neighborhood.
+If `u(0)>0`, a local etale point supplies a fixed sheet for the entire global
+group.  If `u(0)=0`, write `B_i^*=B_i-{0}=C*`.  Fibre cardinality for the
+quasi-finite etale `U->A2` is lower semicontinuous, so every special value on
+`B_i^*` is at most its generic value `u_i`.  Since
+`e_c(A2-B)=e_c(C*)=0`, constructible Euler integration yields
+
+```text
+e_c(U)=sum_i sum_(z special in B_i^*) (u(z)-u_i) <=0,
+```
+
+contradicting `e_c(U)>0`.  The radial statement is a direct deformation of
+the global complement into a sufficiently small weighted sublevel, not an
+inference from cofinality alone.
+
+### 3.2 Disconnected branch
+
+Arzhantsev--Zaidenberg Corollary 1.2 says a disconnected reduced plane curve
+whose connected components are simply connected is equivalent to `r>=2`
+parallel lines.  Let their meridian images be `sigma_i`, put
+
+```text
+s_i=|Supp(sigma_i)|,       c_i=# nontrivial cycles of sigma_i.
+```
+
+Every `sigma_i` is nonidentity and has a fixed point, so
+`2<=s_i<=d-1` and `c_i>=1`.  Use one hyperedge, or a spanning tree, for each
+nontrivial cycle; do **not** treat the possibly disconnected full support as
+one hyperedge.  Transitivity makes this cycle-hypergraph connected, whence
+
+```text
+sum_i(s_i-c_i)>=d-1,
+sum_i s_i>=d-1+sum_i c_i>=d+r-1>=d+1.                  (3.1)
+```
+
+The generic unramified count on line `i` is `d-s_i` and can only drop at
+special points.  Because `e_c(A2-B)=1-r`,
+
+```text
+e_c(U)<=d(1-r)+sum_i(d-s_i)
+       =d-sum_i s_i<=-1,                               (3.2)
+```
+
+again contradicting positivity.
+
+For the full Keller normalization, Section 1 supplies every hypothesis and
+each branch-component normalization is `A1`.  The provisional consequence
+is therefore:
+
+```text
+the canonical normalization branch has an incidence cycle
+in at least one connected component.                              (3.3)
+```
+
+This is a genuine primitive/no-block restriction.  It does not prove that
+the full nonproperness curve `A(F)` has the same cycle, because `B` may be a
+proper subcurve, and it does not yet exclude cyclic branch topology.
+
+The sharp positive-Euler control is `w^d+a w+b=0` in the weighted cases:
+for `d=4` the branch has generic companion sheets and a total origin, while
+`U` is `A1 x Gm` and `e_c(U)=0`.  It shows why the ruling lower bound, not
+generic companion alone, is load-bearing.
+
+## 4. Rank-four and resolvent connections
+
+The committed rank-four producer reduces every actual rank-four block to
+
+```text
+B disconnected, or B connected with b1(B)>=1;
+full quartic monodromy S4.
+```
+
+The theorem candidate in Section 3 further removes the disconnected case
+when all of its connected components are acyclic.  Thus every surviving
+rank-four branch should contain a cycle somewhere; the minimal connected
+cell has one `(2,2)` identification.
+
+Two exact group-theory observations sharpen the next experiment.
+
+First, in the `S4` action on the three pairings of four letters, disjoint
+transpositions have the same transposition image.  At a minimal `(2,2)`
+node the two branch meridians therefore agree in the cubic resolvent.  A
+based van Kampen presentation should test whether the node's stable letter
+must centralize this image.  If the complement is generated by that
+meridian and stable letter, resolvent monodromy lies in an intransitive
+`S2`, contradicting connectedness.  The stop condition is exact: either
+derive the HNN relation with base paths and close the cell, or exhibit the
+additional loop/conjugator that permits `S3`.
+
+Second, let a quartic block have full quotient `S4` and let the subgroup
+coming from the original source lie inside a point stabilizer `S3`.  The
+closed quadratic second leg says its image is not contained in the even
+subgroup.  The closed cubic second leg says its action on the three pairings
+is transitive.  The only subgroup of `S3` satisfying both conditions is
+`S3` itself.  Thus both the sign and cubic resolvent pullbacks are connected,
+and the remaining extension degree is confined to the kernel of the
+quartic permutation action.  This is not a rank-four exclusion, but it is a
+cheap exact lemma that should be frozen before larger enumeration.
+
+For rank at least five, generic inertia with a fixed point invites Jordan
+theory.  A single generic transposition forces `S_d` in a primitive group;
+suitable small prime cycles force `A_d` or `S_d`.  The useful dichotomy is
+therefore not a blind group census: either primitive monodromy is large, or
+every branch component has composite/multiple ramification whose total
+support should be charged in the Euler ledger.  This is a secondary card
+until the all-degree branch-cycle theorem is reviewed.
+
+## 5. Portfolio repricing
+
+The current avenue inventory should be read as follows.
+
+| lane | disposition after this round |
+|---|---|
+| strict `d2=3` block, sectioned `D3`, Picard/Kummer, cubic clean infinity | **STOP/BANK.** Strict cubic blocks are closed; retain packets only as controls. Do not launch the queued one-support AWS shard for proof-side progress. |
+| canonical normalization / primitive horn | **RAISE TO FIRST.** The `d1=1` audit is exact and yields the short generic-degree-three theorem plus an all-degree cycle constraint. |
+| rank-four block | **RAISE, NARROW.** Review the provisional topology theorem; then attack only the minimal cycle/disconnected-cycle cells through based resolvent monodromy. |
+| block existence | **UNCHANGED, CRITICAL.** Strict-block exclusions never imply a block exists. Canonical normalization is the only current route that bypasses this gate. |
+| presentation selector / nonfinite, basepoint, degree-drop strata | **REORIENT.** Stop building cubic coefficient charts; target invariant quartic algebra, canonical resolvents, or a proof that a selector reaches the normalization topology. |
+| K00 | **UNCHANGED GLOBALLY; LOWER GRADE-ONLY WORK.** Prioritize source completeness, one scheme-theoretic transition image, compatible all-order lifting, and algebraization. |
+| global selector/sheet ladder | **UNCHANGED.** Cubic and branch-cycle progress does not supply `G2-PSC`, `G2-BD`, QCS, or full landing/coverage. |
+| generic sparse search/passports | **LOWER UNCONSTRAINED EXECUTION.** Use only as falsifiers of a named atlas, transition, or monodromy cell. |
+
+No proof of JC2 or counterexample follows from this memo.  The currently live
+proof frontier is an actual cycle in the full normalization branch, the
+minimal rank-four cycle, or a theorem converting branch cycles into a
+contradiction with the source forest/nonproperness geometry.
+
+## 6. Software and coordination accelerants
+
+1. **Scope-kill propagation.**  Give every computational packet machine-
+   readable scope tags and dependencies.  When a theorem closes a scope such
+   as strict cubic blocks, queued client jobs should auto-bank before AWS
+   launch.  This would have stopped the sectioned one-support shard without
+   manual intervention.
+2. **Monodromy/resolvent compiler.**  Enumerate transitive groups, point-
+   stabilizer subgroups, low-index resolvents, images of local fibre
+   partitions, and field-containment criteria, emitting exact small
+   certificates.  `S4` is a local desk task; use AWS only once the degree or
+   representation count warrants it.
+3. **Based branch-graph CSP.**  Store normalized branch components,
+   conductor edges, based meridians, path conjugators, local factor
+   subgroups, and resolvent images.  Enumerate representations only after
+   van Kampen relations are certified.  The first client is the rank-four
+   one-node, first-Betti-one cell.
+4. **K00 scheme-image harness on AWS.**  Preserve source variables,
+   localizers, saturation choices, and nilpotents; output explicit
+   empty/proper/dense certificates and mutation controls.  Heavy Groebner or
+   Singular work remains remote.
+5. **Claim-DAG endpoint test.**  The campaign scope checker should distinguish
+   a theorem whose proof only uses a finite-flat sandwich from an integration
+   whose prose says `d1,d2>=2`.  It should propose, but never silently enact,
+   an endpoint replay.  This round's cubic degree-three result is the model
+   case.
+
+## 7. Immediate parallel launch order and stop conditions
+
+Run these in parallel without waiting for all reviews to finish:
+
+1. **Canonical cubic producer and hostile review.**  Stop with either a
+   promoted `generic degree !=3` theorem or one exact line where `d1>1` is
+   essential.  No such line was found in this audit.
+2. **All-degree branch-cycle hostile review.**  Require independent checks of
+   the weighted radial deformation, lower-semicontinuity sign, disconnected
+   cycle-hypergraph inequality, normal-DVR inertia, and `e_c(U)>0` endpoint.
+   Stop if any theorem needs a pointwise rather than generic companion.
+3. **Rank-four nodal resolvent packet.**  Compute the exact based complement
+   presentation before a group search.  Stop at the first missing conjugator
+   rather than assuming meridians share a basepoint.
+4. **Quartic subgroup certificate.**  Freeze the `S3` subgroup lemma with
+   explicit field/subgroup orientation and negative controls.
+5. **K00 transition-image shard on AWS.**  Launch only after the source atlas,
+   ring, localization, and stop certificates are frozen.  Do not mix it with
+   the proof-side normalization theorem.
+
+The campaign should provisionally use the canonical endpoint and
+all-degree cycle theorem to generate downstream work while adversarial
+review runs in the background.  Top-level promotion must wait for that
+review; research branching should not.
+
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `22793`.
+- Body SHA-256:
+  `cf7f2faa6cd9f8eb01a59c27d34a121ce9ef73575de4c1c1e87a3b44455bf23f`.
+- Frozen basis: `0ad5f9a2d684698ea524efeb4576a3884c92ca7d`.
