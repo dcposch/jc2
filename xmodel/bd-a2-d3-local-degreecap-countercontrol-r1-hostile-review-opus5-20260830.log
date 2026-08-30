@@ -1,0 +1,19 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/bd-a2-d3-local-degreecap-countercontrol-r1-hostile-review-opus5-20260830.md` — one file, one standalone `<!-- BODY-END -->` as the final line, no seal block, no `charge_basis` line (receipt `ABSENT`, as expected).
+
+## Verdict: `CONFIRM_WITH_CORRECTIONS`
+
+All six charged hashes reproduce; the R1 internal seal also verifies (7793 body bytes, hash matches the artifact JSON).
+
+**Itemized:** 1 `CWC`, 2 `CWC`, 3 `CWC`, 4 `CONFIRMED`, 5 `CWC`, 6 `CWC`, 7 `CWC`. The headline claim — that the conjectured local raw-degree-three impossibility is false — is **REFUTED as conjectured**, i.e. R1's refutation holds.
+
+**What I reconstructed independently** (CPython 3.9.6 / SymPy 1.14.0, asserts live): the expansion and cap (3, attained twice), primitivity, the point, the det-1 shear; both arrows with zero-remainder integrality and Smith form `diag(1,t,t)`; the `f1,f2,f3` extraction and binary quartic **derived mechanically from `Phi_0`** rather than accepted; `IV*`, minimality, and the `(4,8)→(10,20)→(16,32)` ladder; and the full singular locus by lex Groebner in all three charts, with `t` saturated for the generic fibre.
+
+**Findings that mattered:**
+
+- **The replay does not discriminate the correction.** I ran the superseded report's replay verbatim too — it also passes. Both scripts *hand-enter* the quartic tuple; the one step that was wrong is the one step the replay never covers. I supply a two-line repair that fails loudly on the old model.
+- **A method, not just a value, went unretracted.** The superseded "four distinct roots ⟹ unit discriminant, scale by `t^6`" argument is unsound for the corrected quartic (`X³+tZ³` degenerates mod `t`). R1 silently replaces it without flagging it, so a successor could reuse it.
+- **A cleaner route exists.** `G(M·) = t³F` with `μ·det M = 1` *exactly*, so `Phi_0`'s invariants literally equal those of `V²=U³−t⁴` — no projection, no dependence on CFS Lemma 3.14. Confirmed a second way by tracking the invariant differential.
+- **R1 under-prices its own result.** I computed the class-(3,3) homogenization: irreducible, normal, exactly two singular points (the level-2 one and a Du Val `A₂` at `t=∞`), global section, `c4≡0`, `Δ=−432S⁴T³²`, fibres `IV*+IV` with `e=12`, `rk MW=0`, hence rational, with `p_g(p_0)=2`, `T=2[t=0]`, `D=−2F_0`. That is exactly row two of the coordinator table — so the sectioned one-support row is **inhabited**, not merely un-eliminated. I flagged this as unreviewed and uncharged.
+
+The successor is one packet: resolve the single germ, read the plane-net cluster (whichever partition occurs is realized and can never be excluded), and test the dual graph against the morphic rational-forest theorem — the proper-block first leg being the only lever the campaign still owns on this row.
