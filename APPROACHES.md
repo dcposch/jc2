@@ -18,7 +18,12 @@ later correction and live-overlay sections cite post-survey campaign evidence.
   nodal with a resolved cycle when equality holds. This closes
   `m=3,T=2t0` conditional on actual proper-block occurrence; Fable hostile
   review runs in the background. Corrigendum `290edb38...` narrows five
-  wording points without changing the verdict.
+  wording points without changing the verdict. Exact global control
+  `a9f4c9e9...` shows the sharp local survivor has an integral normal finite-
+  flat class-`(3,3)` closure, while a dense ramification component normalizes
+  to a genus-four curve; hence this specific surface also fails the actual
+  morphic block interface. Opus review of the control is frozen and remains
+  nonblocking.
 - **Use rational forests only through the actual morphic first leg.** The old
   strengthening from an everywhere-defined dominant morphism to an arbitrary
   rational map is false: `P2` minus a smooth cubic is rationally dominated by

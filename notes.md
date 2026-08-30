@@ -14848,3 +14848,24 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   prompt now requires exactly one named report. The mathematical correction
   stays binding from the coordinator proof while independent promotion remains
   review-gated.
+
+## 2026-08-30 13:50Z PROOF EVENT — D3 GLOBAL CONTROL AND GENUS-FOUR RAMIFICATION
+
+- Transactional producer `a9f4c9e9...`/body `47791910...`, manifest
+  `e5920c24...`, with replay `be9551b7...`, audits the bihomogeneous closure
+  of `(x+t*z)^3+t*y^3+t^3*x^2*z`. The four binary-cubic coefficients have no
+  common projective zero, so projection to the target `P2` is finite flat of
+  degree three. The only total-space singularities are the marked critical
+  point and one `D4` point; hence the closure is integral and normal.
+- On `z=1`, eliminating from `F=F_t=0` gives a rational base curve. Its
+  ramification lift is
+  `y^3=-3*q^2*(2*q^2+3)^4/(4*(q^2+1))`, with six fully ramified places and
+  normalization genus four. If this surface were an actual proper block, that
+  complete ramification closure would be missed by the etale first leg and
+  become positive-genus boundary, contradicting the corrected morphic forest
+  theorem.
+- Ordinary/`-O`/`-OO` replay output is byte-identical (1,148 bytes,
+  `ee77940a...`); the Kummer-denominator mutation fails. This is a global
+  surface/local positive control and a specific block negative control, not a
+  theorem that every local shard globalizes, not a block or map, and not JC2.
+  An explicit-path Opus hostile review prompt is frozen.

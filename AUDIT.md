@@ -40,7 +40,14 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > `290edb38183ad3868cb8482ccfcd4c2b66cfc4101c8aaaed512b3c69bfb1ec20`
 > (body `aa655872...`, manifest `fd954ded...`) replaces five overbroad or
 > ambiguous sentences without changing the obstruction. It is not an abstract
-> surface exclusion, block-existence theorem, map, or JC2 conclusion.
+> surface exclusion, block-existence theorem, map, or JC2 conclusion. A
+> separate exact global control `a9f4c9e9...` (body `47791910...`, manifest
+> `e5920c24...`) proves that the sharp local survivor's bihomogeneous closure
+> is integral, normal and finite flat of target degree three. Its dense
+> ramification component is the connected cubic Kummer cover with six branch
+> places and genus four, so that one control independently fails the actual
+> morphic first-leg boundary test. This control is provisional under Opus
+> review and is not a universal row theorem.
 >
 > **FIXED-PRESENTATION q=6 CLOSURE PROMOTED
 > (2026-08-30 13:31Z).** Opus review sealed full `dfbd8c4c...`/raw body

@@ -1447,3 +1447,14 @@ immutable log but failed to create the mandated report, so receipt status is
 prompt with an explicit single-report path is frozen for relaunch. This is an
 output-contract failure, not a mathematical verdict; the correction remains
 binding on Sol's audited proof and independently review-gated.
+
+Allocation refresh (2026-08-30 13:50Z): exact global control `a9f4c9e9...`
+closes the earlier positive-control audit without changing the universal D3
+gate. The bihomogeneous sharp control is integral, normal and finite flat of
+target degree three; its dense ramification component is a connected cyclic
+cubic with six branch places and normalization genus four. Thus that specific
+surface is globally realizable but cannot carry the actual proper-block first
+leg, whose image must omit ramification and would see the genus-four closure
+as boundary. Opus hostile review is frozen and will run asynchronously. Do
+not infer that every formal survivor globalizes, that the full promoted row is
+attained abstractly, or that a polynomial map exists.

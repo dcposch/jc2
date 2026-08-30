@@ -22,7 +22,14 @@ day or inserts the completed day directly below this preamble (see
 > point, this provisionally eliminates the entire `m=3,T=2t0` row. Fable
 > hostile review is active. Corrigendum `290edb38...`/body `aa655872...`
 > narrows five wording points without changing the theorem; no abstract-
-> surface or JC2 conclusion is claimed.
+> surface or JC2 conclusion is claimed. Exact global-control producer
+> `a9f4c9e9...`/body `47791910...`, manifest `e5920c24...`, now proves that
+> the sharp local control has an integral normal class-`(3,3)` closure finite
+> flat of target degree three. A dense ramification component normalizes to a
+> six-branch cyclic cubic of genus four, independently excluding this one
+> surface from the actual morphic block interface. Opus review is frozen;
+> this is not global attainment for every local shard or a second universal
+> row proof.
 >
 > **RATIONAL-FOREST HYPOTHESIS CORRECTED FROM RATIONAL TO MORPHIC
 > (13:31Z).** The prior arbitrary-rational-map strengthening is false:
