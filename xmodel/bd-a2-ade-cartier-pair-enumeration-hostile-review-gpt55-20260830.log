@@ -1,0 +1,3999 @@
+cli=codex-cli 0.150.1 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.150.1
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a0517e-ece6-7a92-a20b-2285d7c3c5bd
+--------
+user
+# Hostile review: capped local ADE Cartier-pair enumeration
+
+You are GPT-5.5 xhigh, an independent hostile algebraic-geometric and exact-
+computation reviewer for the plane Jacobian-conjecture campaign. Work in
+`/Users/dc/code/math/jc2` on frozen git basis
+`02572552f8f894ede08acb4a020a3af722b03e54`.
+
+Read and review in full:
+
+```text
+03263fe7f7d97356f07291bb30ec38d5b4182a1ffc85fcbf57722d59cf3b50a9
+  xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md
+  body 20023 / 002ce81b56f2d703766db0e5a52696a8537be5cee52c2730d3832eaa6d1f85dc
+  manifest 443d4e5236e8e0649878c8e408a1dc92ebb779573a57638c90467fcfda769fb9
+d79fd1c484f229a0d564f537e29a31de6b86c97250db7649a6edf2de34ee8a94
+  ops/ade_cartan_pair_enumerate.py
+bfbd89d61d1181bc0bdb9a243c8d3b85074541194621eb57047af9ecf884e279
+  xmodel/bd-a2-ade-cartier-pairs-cap8-sol56-20260830.json.gz
+  canonical JSON 3762426 / 11ca074c9a4bc6656960222897d8c674f8486970b7a20cb1975cfcdb818d1d19
+```
+
+Its authorship basis is
+`986427df23c30375b6edfd659ba8a6c6139434ab`; the producer and all artifacts
+are published on the review basis above. Read the charged ADE threat-map
+input in Section 0 and enforce its exact properness scope.
+
+Independently reconstruct and attack:
+
+1. Re-derive the `A_r` and `D_r` integrality gates and inverse formulas. Check
+   that enumerating nonzero weak compositions through weight eight is exactly
+   equivalent to all positive integral `m` with `n=Cm>=0`, without a missing
+   positivity or lattice condition.
+2. Audit every line of the 500-line standard-library script: Cartan edges and
+   node numbering, D4 triality, diagram actions, dominance/Weyl claim,
+   canonicalization, raw-orbit recovery, cap nesting, deterministic gzip, and
+   all summary aggregation. Independently reproduce or cross-check the totals
+   `16360/12238`, `772/646`, `718/563`, and `198/163`.
+3. Attack the physical-germ atom model. On an SNC ADE exceptional divisor,
+   prove or refute that one irreducible strict branch contributes exactly
+   `k e_i` or `u e_i+v e_j` at adjacent vertices; decide whether every such
+   numerical atom is locally realizable. Check whether the generating-
+   function DP counts unordered multisets correctly and what its minimum
+   does and does not lower-bound for actual branches after embedded
+   resolution.
+4. Audit the forest conclusions. Without carrier labels, verify that assigning
+   unit atoms to separate leaves proves only non-exclusion, not realization.
+   Under the stated one-connected-outside-carrier hypothesis, check that two
+   separated joining edges force a cycle and hence exactly one germ. Look for
+   shared trunks, coincident physical points, carrier intersections, or node
+   blowups that invalidate the conditional cut.
+5. Enforce scope: these are one-connected-local-component counts, not
+   disconnected ADE multisets, simultaneous `D9` embeddings, effectivity, or
+   maps. Distinguish the per-point target-line cap from genuinely shared
+   infinity or `B`-fibre budgets; flag any phrase suggesting an unjustified
+   global cap allocation.
+6. State the maximum result safe to promote and the smallest global successor.
+   Formal data are not effective curves, analytic incidence equations,
+   polynomial maps, counterexamples, or JC2 evidence.
+
+You may run the committed seconds-scale standard-library enumerator and small
+independent exact checks, but no local heavy CAS or Singular. Return an
+itemized verdict (`CONFIRMED`, `CONFIRM_WITH_CORRECTIONS`, `GAP`, or
+`REFUTED`), precise repairs, and the cheapest decisive successor. Hard cap:
+8,000 tokens and 28,000 UTF-8 bytes. Do not inspect, list, search, stat, build,
+modify, or control `jc2-lean`; the process sandbox also enforces this. Do not
+edit inputs, canonical files, scripts, or dependencies. Write exactly one
+report:
+
+```text
+xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md
+```
+
+End with one standalone `<!-- BODY-END -->` line and no seal block.
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll treat this as a hostile review rather than a proof-polishing pass: first I’ll pin the repo state and read the submitted artifact/script/data, then I’ll run the included enumerator plus small independent exact checks, and finally write only the requested report file.
+exec
+/bin/zsh -lc 'git rev-parse HEAD' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+02572552f8f894ede08acb4a020a3af722b03e54
+
+exec
+/bin/zsh -lc pwd in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+/Users/dc/code/math/jc2
+
+exec
+/bin/zsh -lc 'git status --short' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+jc2-lean: Operation not permitted
+?? xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.log
+?? xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.prompt.md
+?? xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.run.v2
+?? xmodel/bd-a2-quadratic-basis-change-coverage-sol56-20260830.md
+?? xmodel/bd-a2-quadratic-basis-change-coverage-sol56-20260830.md.artifact.json
+
+codex
+The checkout is at the requested frozen basis. `git status` hit the protected `jc2-lean` path, so I’m avoiding repo-wide git/filesystem operations from here and only touching the named review artifacts plus the requested output path.
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md ops/ade_cartan_pair_enumerate.py xmodel/bd-a2-ade-cartier-pairs-cap8-sol56-20260830.json.gz' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+03263fe7f7d97356f07291bb30ec38d5b4182a1ffc85fcbf57722d59cf3b50a9  xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md
+d79fd1c484f229a0d564f537e29a31de6b86c97250db7649a6edf2de34ee8a94  ops/ade_cartan_pair_enumerate.py
+bfbd89d61d1181bc0bdb9a243c8d3b85074541194621eb57047af9ecf884e279  xmodel/bd-a2-ade-cartier-pairs-cap8-sol56-20260830.json.gz
+
+exec
+/bin/zsh -lc 'wc -c xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md ops/ade_cartan_pair_enumerate.py xmodel/bd-a2-ade-cartier-pairs-cap8-sol56-20260830.json.gz' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   20356 xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md
+   19375 ops/ade_cartan_pair_enumerate.py
+  174608 xmodel/bd-a2-ade-cartier-pairs-cap8-sol56-20260830.json.gz
+  214339 total
+
+exec
+/bin/zsh -lc 'gzip -dc xmodel/bd-a2-ade-cartier-pairs-cap8-sol56-20260830.json.gz | wc -c' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+ 3762426
+
+exec
+/bin/zsh -lc 'gzip -dc xmodel/bd-a2-ade-cartier-pairs-cap8-sol56-20260830.json.gz | shasum -a 256' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+11ca074c9a4bc6656960222897d8c674f8486970b7a20cb1975cfcdb818d1d19  -
+
+codex
+The three published hashes and the decompressed canonical JSON hash match the prompt. I’m now reading the proof memo and the producer script in line-numbered chunks so the review can cite exact failure points.
+exec
+/bin/zsh -lc "nl -ba xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md | sed -n '1,180p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Capped `A_r`/`D_r` Cartier pairs and physical-germ partitions
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Producer: Sol 5.6 delegated lane `/root/quadratic-degeneracy-frontier`  
+     5	Frozen basis: `986427df23c30375b6edfd659ba8a6c6139434ab`  
+     6	Lifecycle: **EXACT PROVISIONAL FINITE SUCCESSOR / GLOBAL EFFECTIVITY OPEN**
+     7	
+     8	## 0. Endpoint and charged input
+     9	
+    10	This is the smallest finite successor to
+    11	
+    12	```text
+    13	ab10ea83f443c93bdb87194ad0e42fe2c442984ba821c3ddf8ddf5cc3f796133
+    14	  xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md
+    15	```
+    16	
+    17	and imports its notation and only its proved caps.  At one Du Val point let
+    18	`E_1,...,E_r` be a connected exceptional tree, let `C` be its positive
+    19	Cartan matrix, and write
+    20	
+    21	```text
+    22	R = R_str + sum_i m_i E_i,       m_i in Z_(>0),
+    23	n_i = R_str.E_i,                 n=Cm in Z_(>=0)^r.          (0.1)
+    24	```
+    25	
+    26	The charged predecessor proves that the only connected types eligible in
+    27	the explicit `D9(-1)` marking are
+    28	
+    29	```text
+    30	A_1,...,A_8,             D_4,...,D_9.                       (0.2)
+    31	```
+    32	
+    33	It also proves `sum n_i<=8` after choosing a proper target-line slice
+    34	through the singular image, avoiding ramification components.  The sharper
+    35	`sum n_i<=4` is used here only on the separately conditional stratum where
+    36	the corresponding `B`-fibre meets the different properly.
+    37	
+    38	Every count below concerns **one connected local exceptional component of
+    39	one fixed type at a time**; the totals are the disjoint sum over the fourteen
+    40	types in (0.2).  They do not enumerate disconnected ADE multisets,
+    41	simultaneous embedding orbits in `D9(-1)`, allocation of one global slice
+    42	budget among several singular points, the paired infinity vectors `(h,a)`,
+    43	or labels grouping germs into global carriers.  In this precise sense the
+    44	artifact is a complete local table, not the full global successor.
+    45	
+    46	> **CAPPED-CARTIER-PAIR THEOREM.**  For the types (0.2):
+    47	>
+    48	> 1. There are exactly `16,360` labelled pairs `(m,n)` satisfying (0.1) and
+    49	>    `1<=sum n_i<=8`.  Up to the unlabelled Dynkin-diagram symmetry there
+    50	>    are `12,238` canonical pairs.  Under the conditional cap four the
+    51	>    respective counts are `772` and `646`.
+    52	> 2. The nonnegative vector `n` is the unique dominant member of the Weyl
+    53	>    orbit of the root-lattice element `sum m_i alpha_i`; consequently no
+    54	>    two distinct listed dominant vectors are Weyl-related.  No geometric
+    55	>    Weyl quotient is performed.  For unlabelled local-graph bookkeeping,
+    56	>    the list is canonicalized only by diagram automorphisms:
+    57	>    chain reversal for `A_r`, the spin-node transposition for `D_r`, `r>=5`,
+    58	>    and the full `S_3` triality on the three arms of `D_4`.  Every record
+    59	>    retains its diagram-orbit and stabilizer sizes, so the labelled list is
+    60	>    recoverable.
+    61	> 3. A strict-transform branch germ contributes either `k e_i` at a smooth
+    62	>    point of `E_i`, or `u e_i+v e_j` at the physical node `E_i intersect E_j`,
+    63	>    where `i--j` is one Dynkin edge and all displayed coefficients are
+    64	>    positive.  The data gives the exact generating-function count of
+    65	>    unordered numerical germ-signature partitions of every canonical
+    66	>    `n`, including the minimum and maximum possible numbers of germs and
+    67	>    the exact one-germ descriptor when it exists.  It does not identify an
+    68	>    entry of `n` with a germ, nor a germ with a distinct physical point.
+    69	> 4. Local Cartan arithmetic, diagram bookkeeping, and an unlabelled local
+    70	>    forest test by themselves eliminate no enumerated pair: every `n` has
+    71	>    a unit-atom decomposition whose abstract dual graph can be drawn with
+    72	>    separate outside leaves.  This is not an analytic realizability claim.
+    73	>    If one separately proves, on one common SNC resolution, that the actual
+    74	>    distinct branch germs give distinct attachment paths and their outside
+    75	>    reduced transforms form one connected subgraph, then at most one germ
+    76	>    is possible.  In that conditional stratum the absence of a one-atom
+    77	>    partition is an exact contradiction, and the cap-eight list falls
+    78	>    exactly to `718` labelled pairs or `563` diagram orbits, excluding
+    79	>    `15,642` and `11,675`;
+    80	>    cap four falls to `198` labelled pairs or `163` orbits, excluding `574`
+    81	>    and `483`.
+    82	
+    83	The word “pair” throughout is local numerical Cartier data.  A survivor is
+    84	not an assertion that the ADE curves occur effectively in the global
+    85	`D9(-1)` marking, that several local configurations embed simultaneously,
+    86	or that a bidegree-`(2,3)` incidence equation realizes the divisor.
+    87	
+    88	## 1. Exact finite enumeration
+    89	
+    90	Put `w(n)=sum_i n_i`.  Since the inverse of a connected finite ADE Cartan
+    91	matrix is entrywise strictly positive, every nonzero `n>=0` has
+    92	`C^(-1)n>0` over the rationals.  Thus
+    93	
+    94	```text
+    95	{m in Z_(>0)^r : Cm>=0 and w(Cm)<=c}
+    96	  <--> {n in Z_(>=0)^r - {0} : n in C Z^r and w(n)<=c},       (1.1)
+    97	```
+    98	
+    99	with `m=C^(-1)n`.  There is no hidden positivity test after integrality.
+   100	
+   101	For `A_r`, numbered `1--...--r`, integrality is exactly
+   102	
+   103	```text
+   104	sum_(i=1)^r i n_i = 0 mod (r+1),                            (1.2)
+   105	```
+   106	
+   107	and the inverse used in the enumeration is
+   108	
+   109	```text
+   110	m_j = ((r+1-j) sum_(i<=j) i n_i
+   111	       + j sum_(i>j) (r+1-i)n_i)/(r+1).                     (1.3)
+   112	```
+   113	
+   114	For `D_r`, use the chain `1--...--(r-2)` with fork vertices `r-1,r`
+   115	attached to `r-2`.  Set
+   116	
+   117	```text
+   118	a=n_(r-1),       b=n_r,       T=sum_(i=1)^(r-2) i n_i.
+   119	```
+   120	
+   121	Integrality is exactly
+   122	
+   123	```text
+   124	a=b mod 2,       2T+(r-2)a+r b=0 mod 4,                     (1.4)
+   125	```
+   126	
+   127	and the inverse is
+   128	
+   129	```text
+   130	m_j       = sum_(i=1)^(r-2) min(i,j)n_i + j(a+b)/2,
+   131	                                                   1<=j<=r-2,
+   132	m_(r-1)   = (2T+r a+(r-2)b)/4,
+   133	m_r       = (2T+(r-2)a+r b)/4.                              (1.5)
+   134	```
+   135	
+   136	Equations (1.2)--(1.5) make the enumeration literal: list every weak
+   137	composition `n` of each weight `1,...,8`, retain precisely the vectors
+   138	satisfying (1.2) or (1.4), compute `m`, and verify `Cm=n`.  This considers
+   139	all `72,695` nonzero capped vectors before the congruence filters.  An
+   140	independent `fractions.Fraction` Gaussian solve of all `72,695` candidates
+   141	agreed with the closed formulas and their integrality decisions.
+   142	
+   143	Accordingly, local Cartier integrality itself rules out exactly `56,335` of
+   144	the `72,695` cap-eight candidate vectors and `2,446` of the `3,218` cap-four
+   145	candidates, leaving `16,360` and `772`.  Diagram canonicalization then
+   146	identifies `4,122` and `126` duplicate labelled images, respectively; that
+   147	identification is bookkeeping, not a geometric contradiction.  Section 4
+   148	states the only forest cut justified by the information retained here.
+   149	
+   150	The exact counts are below.  `raw/can` means labelled pairs divided by
+   151	unlabelled diagram orbits.  The histogram `g:k` means that `k` canonical
+   152	orbits have minimum numerical germ count `g`.
+   153	
+   154	| type | cap 8 raw/can | cap 8 canonical minimum-germ histogram | cap 4 raw/can | cap 4 canonical minimum-germ histogram |
+   155	|---|---:|---|---:|---|
+   156	| `A1` | 4 / 4 | `1:4` | 2 / 2 | `1:2` |
+   157	| `A2` | 14 / 9 | `1:9` | 4 / 3 | `1:3` |
+   158	| `A3` | 42 / 28 | `1:12, 2:16` | 9 / 7 | `1:4, 2:3` |
+   159	| `A4` | 98 / 56 | `1:13, 2:43` | 13 / 9 | `1:4, 2:5` |
+   160	| `A5` | 216 / 125 | `1:14, 2:85, 3:26` | 21 / 15 | `1:4, 2:10, 3:1` |
+   161	| `A6` | 428 / 231 | `1:15, 2:124, 3:92` | 29 / 19 | `1:4, 2:13, 3:2` |
+   162	| `A7` | 809 / 439 | `1:16, 2:174, 3:220, 4:29` | 42 / 28 | `1:4, 2:19, 3:4, 4:1` |
+   163	| `A8` | 1,429 / 749 | `1:16, 2:218, 3:407, 4:108` | 54 / 34 | `1:4, 2:22, 3:7, 4:1` |
+   164	| `D4` | 134 / 52 | `1:24, 2:10, 3:18` | 21 / 11 | `1:8, 2:1, 3:2` |
+   165	| `D5` | 336 / 245 | `1:48, 2:116, 3:81` | 35 / 30 | `1:14, 2:12, 3:4` |
+   166	| `D6` | 811 / 605 | `1:76, 2:298, 3:183, 4:48` | 64 / 54 | `1:22, 2:25, 3:7` |
+   167	| `D7` | 1,733 / 1,349 | `1:84, 2:600, 3:473, 4:192` | 98 / 88 | `1:24, 2:50, 3:12, 4:2` |
+   168	| `D8` | 3,549 / 2,821 | `1:112, 2:992, 3:1,223, 4:443, 5:51` | 156 / 139 | `1:32, 2:78, 3:27, 4:2` |
+   169	| `D9` | 6,757 / 5,525 | `1:120, 2:1,504, 3:2,589, 4:1,095, 5:217` | 224 / 207 | `1:34, 2:118, 3:48, 4:7` |
+   170	| **all** | **16,360 / 12,238** | **`1:563, 2:4,180, 3:5,312, 4:1,915, 5:268`** | **772 / 646** | **`1:163, 2:356, 3:114, 4:13`** |
+   171	
+   172	The cap-four set is exactly the `w(n)<=4` subset of the cap-eight data; it
+   173	is not a second enumeration and it is not asserted when the `B`-fibre is a
+   174	component of the different.
+   175	
+   176	## 2. Weyl separation and diagram bookkeeping
+   177	
+   178	Let
+   179	
+   180	```text
+
+exec
+/bin/zsh -lc "nl -ba xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md | sed -n '181,360p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   181	lambda=sum_i m_i alpha_i.
+   182	```
+   183	
+   184	In the simply-laced normalization,
+   185	
+   186	```text
+   187	(lambda,alpha_i)=n_i.                                 (2.1)
+   188	```
+   189	
+   190	Thus `n>=0` says exactly that `lambda` lies in the closed dominant chamber.
+   191	Every finite Weyl orbit meets that chamber in exactly one point, so no two
+   192	distinct enumerated dominant vectors belong to the same Weyl orbit.  This
+   193	is only a separation observation: the program does not apply Weyl
+   194	reflections, and neither positivity of the displayed simple-root
+   195	coefficients `m` nor carrier data is transported through a Weyl action.
+   196	In particular, no reflection is asserted to come from an automorphism or
+   197	an allowed change of marking of the resolved incidence surface.
+   198	
+   199	The remaining unlabelled graph groups are
+   200	
+   201	```text
+   202	A1:             trivial,
+   203	A_r, r>=2:      C2, reversing the chain,
+   204	D4:             S3, permuting arms 1,3,4 and fixing vertex 2,
+   205	D_r, r>=5:      C2, swapping fork vertices r-1,r.       (2.2)
+   206	```
+   207	
+   208	The program applies (2.2) simultaneously to `m` and `n`, selects the
+   209	lexicographically least `n`, and records the orbit size and stabilizer
+   210	order.  Because `C` commutes with every diagram automorphism,
+   211	`C^(-1)(g n)=g m`; hence canonicalizing `n` canonicalizes the pair.
+   212	
+   213	Diagram quotienting is deliberately only an unlabelled-local convention.
+   214	An ambient `D9(-1)` marking, another divisor, or the global fibration may
+   215	distinguish diagram-related vertices.  In that situation the stored orbit
+   216	size and the explicit group permutations recover all labelled images; no
+   217	global orbit-transitivity claim is being made.
+   218	
+   219	## 3. Physical-germ signatures, not coordinate support
+   220	
+   221	On the smooth minimal resolution, the exceptional divisor is SNC.  One
+   222	analytic branch germ of the strict transform, not contained in it, has one
+   223	centre on the exceptional locus.  Its numerical contact vector is therefore
+   224	precisely one of
+   225	
+   226	```text
+   227	k e_i,                         k>=1,                 (3.1)
+   228	u e_i+v e_j,                   u,v>=1, i--j an edge. (3.2)
+   229	```
+   230	
+   231	Formula (3.1) is contact at a smooth point of `E_i`; (3.2) is one branch at
+   232	the node `E_i intersect E_j`.  In local SNC coordinates these are the two
+   233	possible locations.  Conversely, every numerical signature in (3.1) is represented
+   234	by a smooth tangent germ, and every positive pair in (3.2) by an
+   235	irreducible plane branch after adding a sufficiently high primitive term if
+   236	the two leading orders have a common divisor.  This local observation does
+   237	not say that an arbitrarily chosen collection descends to the charged
+   238	Cartier divisor or occurs in an incidence equation.  A globally irreducible
+   239	carrier may have several analytic branches over the singular point and may
+   240	therefore contribute a sum of several atoms.
+   241	
+   242	Let `A_G` be the set of atoms (3.1)--(3.2) of weight at most eight.  The
+   243	finite program computes
+   244	
+   245	```text
+   246	P_G(x_1,...,x_r;t)
+   247	  = product_(a in A_G) (1-t*x^a)^(-1),               (3.3)
+   248	```
+   249	
+   250	truncated to total `x`-weight eight.  The coefficient of `x^n t^g` is the
+   251	number of unordered multisets of numerical germ signatures with total `n`
+   252	and `g` germs.  Each canonical record contains this whole coefficient
+   253	vector, its sum, and its least and greatest nonzero degrees.
+   254	
+   255	Three distinctions are essential.
+   256	
+   257	* The coordinate `n_i` is an intersection multiplicity, not a number of
+   258	  germs.  For example, `u e_i+v e_j` can be one germ at one ADE node.
+   259	* A germ is not automatically a distinct physical point.  Several germs
+   260	  can share a smooth point, and all edge germs for the same edge begin at
+   261	  its unique node.  Separating them can require further blowups.
+   262	* The partitions in (3.3) are numerical germ-signature partitions.  They
+   263	  do not count analytic moduli or locations, do not group germs into global
+   264	  carrier curves, and are not quotiented by the stabilizer of the chosen
+   265	  diagram representative.
+   266	
+   267	Every `n` has the unit-vertex partition consisting of `n_i` copies of
+   268	`e_i`.  Consequently the maximum possible germ number is `w(n)`, with
+   269	coefficient one.  A one-germ partition exists exactly when `n` itself has
+   270	support on one vertex, or on both endpoints of one edge and nowhere else.
+   271	The congruence (1.2) or (1.4) still applies to the total `n`; an individual
+   272	branch need not separately be a Cartier divisor downstairs.
+   273	
+   274	## 4. The exact forest cut, and why it is conditional
+   275	
+   276	Let `T_E` denote the connected exceptional ADE tree in a fully resolved SNC
+   277	boundary.  Any actual strict divisor supplies a collection of analytic
+   278	branches, and their contact vectors give one of the partitions counted by
+   279	(3.3).  Thus the computed minimum is a rigorous lower bound for the number
+   280	of actual branches, although the converse realization of every counted
+   281	partition is not claimed.  After the additional point blowups needed to
+   282	separate tangencies or branches, distinct branches have distinct final
+   283	attachment edges; several branches may have shared a physical crossing and
+   284	an initial infinitely-near path before that separation.
+   285	
+   286	First suppose nothing is known about how the germs group into outside
+   287	carriers.  For any enumerated `n`, its unit-vertex partition can be drawn as
+   288	an abstract graph by assigning every atom a separate outside leaf.  The
+   289	resulting graph is a tree: it is `T_E` with leaf paths attached.  This
+   290	drawing does not construct simultaneous analytic branches or a Cartier
+   291	equation; it proves only that the unlabelled numerical forest test contains
+   292	no contradiction.  Hence neither a large coefficient, support on several
+   293	Dynkin vertices, nor minimum germ
+   294	count greater than one is by itself a forest contradiction.  This proves
+   295	the exact negative result:
+   296	
+   297	```text
+   298	local Cartan pair + cap + forest, without carrier data,
+   299	rules out zero of the 16,360 cap-eight pairs.          (4.1)
+   300	```
+   301	
+   302	Now add the genuinely stronger hypothesis that on one common embedded SNC
+   303	resolution: (i) the inner graph consisting of `T_E` and any shared
+   304	infinitely-near attachment trunks is connected; (ii) the reduced strict
+   305	transforms of all relevant outside carriers form one connected subgraph
+   306	disjoint from that inner graph before final attachments; and (iii) distinct
+   307	analytic branches give distinct final joining edges.  Two such edges
+   308	between these connected subgraphs make a cycle.  There can therefore be at
+   309	most one analytic branch, so `n` must itself be an atom (3.1) or (3.2).
+   310	
+   311	This conditional cut is exact on the finite numerical list:
+   312	
+   313	| cap | raw all | raw one-germ | raw excluded | canonical all | canonical one-germ | canonical excluded |
+   314	|---:|---:|---:|---:|---:|---:|---:|
+   315	| 8 | 16,360 | 718 | 15,642 | 12,238 | 563 | 11,675 |
+   316	| 4, conditional | 772 | 198 | 574 | 646 | 163 | 483 |
+   317	
+   318	The table is not licensed merely because `R_str` is effective, because its
+   319	support is connected downstairs, or because several numerical atoms begin
+   320	at the same physical crossing.  One must establish the stated connected
+   321	resolved outside subgraph and the separated final joining edges.  Nor
+   322	does “one germ” mean “one Dynkin vertex”: an edge atom is one physical germ
+   323	with two positive coordinates.  Conversely, an allowed one-germ signature
+   324	remains only a necessary local pattern until global effectivity is proved.
+   325	
+   326	## 5. Reproducible artifact and internal controls
+   327	
+   328	The complete canonical list in the one-connected-local-component scope is
+   329	the deterministic compressed artifact
+   330	
+   331	```text
+   332	xmodel/bd-a2-ade-cartier-pairs-cap8-sol56-20260830.json.gz
+   333	```
+   334	
+   335	with
+   336	
+   337	```text
+   338	gzip artifact bytes:          174608
+   339	gzip artifact SHA-256:        bfbd89d61d1181bc0bdb9a243c8d3b85074541194621eb57047af9ecf884e279
+   340	canonical JSON bytes:         3762426
+   341	canonical JSON SHA-256:       11ca074c9a4bc6656960222897d8c674f8486970b7a20cb1975cfcdb818d1d19
+   342	compression:                  gzip level 9, mtime 0
+   343	schema:                       jc2.ade_cartan_pairs.v1
+   344	```
+   345	
+   346	It is generated by the seconds-scale, Python-standard-library-only script
+   347	
+   348	```text
+   349	ops/ade_cartan_pair_enumerate.py
+   350	SHA-256: d79fd1c484f229a0d564f537e29a31de6b86c97250db7649a6edf2de34ee8a94
+   351	```
+   352	
+   353	The ordinary generation command is
+   354	
+   355	```text
+   356	python3 ops/ade_cartan_pair_enumerate.py \
+   357	  --output xmodel/bd-a2-ade-cartier-pairs-cap8-sol56-20260830.json.gz
+   358	```
+   359	
+   360	Each type record stores its Cartan matrix, Dynkin edges, diagram group and
+
+exec
+/bin/zsh -lc "nl -ba xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md | sed -n '361,620p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   361	permutations, summary counts, and canonical pairs.  Each pair record stores
+   362	`m`, `n`, weight, cap-four membership, diagram orbit/stabilizer sizes, and
+   363	the physical-germ polynomial data.  Labelled pairs are recovered by applying
+   364	the stored diagram permutations.
+   365	
+   366	The script asserts `Cm=n`, positivity, orbit-size recovery of every raw
+   367	count, cap nesting, and elementary germ-polynomial controls.  Its optional
+   368	`--deep-check` path uses an independent exact Gaussian elimination over
+   369	`fractions.Fraction` on all `72,695` candidate vectors; this audit was run
+   370	successfully.  No floating-point arithmetic, random sampling, CAS, or
+   371	external package enters either generation or checking.
+   372	
+   373	## 6. Attacks and scope firewall
+   374	
+   375	The following tempting strengthenings are not conclusions of this packet.
+   376	
+   377	1. **No formal-to-effective jump.**  A canonical pair does not prove an
+   378	   effective configuration of exceptional curves in the fixed global
+   379	   `D9(-1)` marking.  The standard local `A_r` or `D_r` diagram is not a
+   380	   proof that the corresponding root sublattice occurs effectively.
+   381	2. **No simultaneous-embedding claim.**  Lists for different singular
+   382	   points cannot be combined by rank alone.  Their embeddings, orthogonal
+   383	   complements, divisor classes, and total slice budget must be checked
+   384	   simultaneously.  The displayed all-type totals are a disjoint sum, not
+   385	   a count of exceptional multisets or Weyl(`D9`) embedding orbits.
+   386	3. **No ambient symmetry claim.**  Weyl dominance and unlabelled diagram
+   387	   symmetry are local root-system bookkeeping.  The ambient fibration may
+   388	   distinguish every diagram-related record.
+   389	4. **No coordinate/germ/point conflation.**  `n_i`, analytic branch germs,
+   390	   resolved joining paths, and physical attachment points are four
+   391	   different notions.  Section 3 records exactly which level the data sees.
+   392	5. **No unconditional cap four.**  The `B`-fibre bound is discarded when
+   393	   the fibre is a component of the different or proper intersection is not
+   394	   proved.  Likewise the cap-eight enumeration does not cover a target-line
+   395	   common-carrier stratum where the charged proper-slice hypothesis fails.
+   396	6. **No automatic connected-carrier cut.**  The exclusions in Section 4
+   397	   require the stated outside-carrier connectivity.  Without it, separate
+   398	   leaf carriers defeat the cycle argument.
+   399	7. **No converse incidence realization.**  The numerical germ partitions
+   400	   do not construct a local hypersurface equation, a global divisor in
+   401	   class `2A+B`, or a bidegree-`(2,3)` incidence surface.
+   402	8. **No paired-boundary or carrier labelling.**  The infinity data
+   403	   `a=Ch` and its compatibility with `(m,n)` are not enumerated.  Nor does
+   404	   the artifact say which numerical germs belong to the same strict
+   405	   different or infinity component; that missing labelling is exactly what
+   406	   controls the conditional forest cut.
+   407	
+   408	Disconnected ADE configurations, nonnormal incidence closures, nonproper
+   409	slice/common-component strata, and the already excluded `A9,E6,E7,E8`
+   410	types are outside this enumeration.  The first exact remaining bridge is to
+   411	derive the carrier partition and global divisor classes of the actual
+   412	strict different, then intersect the surviving one-germ records with
+   413	simultaneous effective embeddings in the explicit `D9(-1)` marking.  Until
+   414	that bridge is proved, this packet is a finite threat map, not a singular
+   415	stratum elimination theorem.
+   416	
+   417	No shared ledger was edited.  No staging, commit, AWS job, heavy local CAS,
+   418	Singular operation, or `jc2-lean` access was used.
+   419	
+   420	<!-- BODY-END -->
+   421	
+   422	## Seal
+   423	
+   424	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   425	  including its terminating newline; this seal is outside the body.
+   426	- Body bytes: `20023`.
+   427	- Body SHA-256:
+   428	  `002ce81b56f2d703766db0e5a52696a8537be5cee52c2730d3832eaa6d1f85dc`.
+   429	- Frozen basis: `986427df23c30375b6edfd659ba8a6c6139434ab`.
+
+codex
+The memo is careful about scope in several places, but the review still has to separate “formula/table correct” from “geometric conclusion licensed.” I’m moving through the script now, then I’ll cross-check the enumeration independently instead of trusting its assertions.
+exec
+/bin/zsh -lc "nl -ba ops/ade_cartan_pair_enumerate.py | sed -n '1,160p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	#!/usr/bin/env python3
+     2	"""Enumerate capped dominant ADE Cartier data without external packages.
+     3	
+     4	The output contains one representative of every diagram-automorphism orbit
+     5	of pairs (m,n) with m>0, n=Cm>=0, and sum(n)<=8 for A1..A8 and
+     6	D4..D9.  A dominant Dynkin-label vector n is already the unique dominant
+     7	representative of its Weyl orbit.
+     8	
+     9	Physical-germ statistics use the following deliberately separate formal
+    10	model on the minimal ADE resolution.  One germ meets either a smooth point
+    11	of one exceptional component, contributing k*e_i, or a node of two adjacent
+    12	components, contributing u*e_i+v*e_j.  The program counts unordered
+    13	multisets of such germs with total vector n.  It does not group local germs
+    14	into global carrier curves and does not assert analytic or global
+    15	effectivity.
+    16	"""
+    17	
+    18	from __future__ import annotations
+    19	
+    20	import argparse
+    21	from fractions import Fraction
+    22	import gzip
+    23	import hashlib
+    24	import itertools
+    25	import json
+    26	from pathlib import Path
+    27	from typing import Iterable
+    28	
+    29	
+    30	MAX_CAP = 8
+    31	SMALL_CAP = 4
+    32	SCHEMA = "jc2.ade_cartan_pairs.v1"
+    33	
+    34	
+    35	def exact_compositions(total: int, length: int) -> Iterable[tuple[int, ...]]:
+    36	    """Yield nonnegative length-tuples with the stated sum, lexicographically."""
+    37	    if length == 1:
+    38	        yield (total,)
+    39	        return
+    40	    for first in range(total + 1):
+    41	        for tail in exact_compositions(total - first, length - 1):
+    42	            yield (first,) + tail
+    43	
+    44	
+    45	def edges(kind: str, rank: int) -> tuple[tuple[int, int], ...]:
+    46	    if kind == "A":
+    47	        return tuple((i, i + 1) for i in range(rank - 1))
+    48	    if kind == "D":
+    49	        return tuple((i, i + 1) for i in range(rank - 2)) + (
+    50	            (rank - 3, rank - 1),
+    51	        )
+    52	    raise ValueError(kind)
+    53	
+    54	
+    55	def cartan(kind: str, rank: int) -> tuple[tuple[int, ...], ...]:
+    56	    matrix = [[0] * rank for _ in range(rank)]
+    57	    for i in range(rank):
+    58	        matrix[i][i] = 2
+    59	    for i, j in edges(kind, rank):
+    60	        matrix[i][j] = matrix[j][i] = -1
+    61	    return tuple(tuple(row) for row in matrix)
+    62	
+    63	
+    64	def matvec(matrix: tuple[tuple[int, ...], ...], vector: tuple[int, ...]) -> tuple[int, ...]:
+    65	    return tuple(sum(a * b for a, b in zip(row, vector)) for row in matrix)
+    66	
+    67	
+    68	def solve_a(n: tuple[int, ...]) -> tuple[int, ...] | None:
+    69	    rank = len(n)
+    70	    modulus = rank + 1
+    71	    if sum((i + 1) * value for i, value in enumerate(n)) % modulus:
+    72	        return None
+    73	    answer: list[int] = []
+    74	    for j0 in range(rank):
+    75	        j = j0 + 1
+    76	        numerator = (modulus - j) * sum(
+    77	            (i + 1) * n[i] for i in range(j)
+    78	        )
+    79	        numerator += j * sum(
+    80	            (modulus - (i + 1)) * n[i] for i in range(j, rank)
+    81	        )
+    82	        assert numerator % modulus == 0
+    83	        answer.append(numerator // modulus)
+    84	    return tuple(answer)
+    85	
+    86	
+    87	def solve_d(n: tuple[int, ...]) -> tuple[int, ...] | None:
+    88	    rank = len(n)
+    89	    a = n[rank - 2]
+    90	    b = n[rank - 1]
+    91	    weighted = sum((i + 1) * n[i] for i in range(rank - 2))
+    92	    if (a - b) % 2:
+    93	        return None
+    94	    if (2 * weighted + (rank - 2) * a + rank * b) % 4:
+    95	        return None
+    96	    answer: list[int] = []
+    97	    for j0 in range(rank - 2):
+    98	        j = j0 + 1
+    99	        value2 = 2 * sum(
+   100	            min(i + 1, j) * n[i] for i in range(rank - 2)
+   101	        ) + j * (a + b)
+   102	        assert value2 % 2 == 0
+   103	        answer.append(value2 // 2)
+   104	    spin_left4 = 2 * weighted + rank * a + (rank - 2) * b
+   105	    spin_right4 = 2 * weighted + (rank - 2) * a + rank * b
+   106	    assert spin_left4 % 4 == spin_right4 % 4 == 0
+   107	    answer.extend((spin_left4 // 4, spin_right4 // 4))
+   108	    return tuple(answer)
+   109	
+   110	
+   111	def solve(kind: str, n: tuple[int, ...]) -> tuple[int, ...] | None:
+   112	    return solve_a(n) if kind == "A" else solve_d(n)
+   113	
+   114	
+   115	def solve_fraction(
+   116	    matrix: tuple[tuple[int, ...], ...], vector: tuple[int, ...]
+   117	) -> tuple[Fraction, ...]:
+   118	    """Independent exact Gaussian elimination used by --deep-check."""
+   119	    rank = len(vector)
+   120	    augmented = [
+   121	        [Fraction(value) for value in matrix[i]] + [Fraction(vector[i])]
+   122	        for i in range(rank)
+   123	    ]
+   124	    for column in range(rank):
+   125	        pivot = next(row for row in range(column, rank) if augmented[row][column])
+   126	        augmented[column], augmented[pivot] = augmented[pivot], augmented[column]
+   127	        pivot_value = augmented[column][column]
+   128	        augmented[column] = [value / pivot_value for value in augmented[column]]
+   129	        for row in range(rank):
+   130	            if row == column:
+   131	                continue
+   132	            multiplier = augmented[row][column]
+   133	            if multiplier:
+   134	                augmented[row] = [
+   135	                    left - multiplier * right
+   136	                    for left, right in zip(augmented[row], augmented[column])
+   137	                ]
+   138	    return tuple(augmented[i][-1] for i in range(rank))
+   139	
+   140	
+   141	def deep_check_all() -> int:
+   142	    """Exhaustively compare closed formulas with independent Fraction solves."""
+   143	    checked = 0
+   144	    specifications = [("A", rank) for rank in range(1, 9)]
+   145	    specifications.extend(("D", rank) for rank in range(4, 10))
+   146	    for kind, rank in specifications:
+   147	        matrix = cartan(kind, rank)
+   148	        for weight in range(1, MAX_CAP + 1):
+   149	            for n in exact_compositions(weight, rank):
+   150	                rational = solve_fraction(matrix, n)
+   151	                integral = all(value.denominator == 1 for value in rational)
+   152	                formula = solve(kind, n)
+   153	                assert (formula is not None) == integral
+   154	                if formula is not None:
+   155	                    assert formula == tuple(int(value) for value in rational)
+   156	                checked += 1
+   157	    return checked
+   158	
+   159	
+   160	def diagram_group(kind: str, rank: int) -> tuple[tuple[int, ...], ...]:
+
+exec
+/bin/zsh -lc "nl -ba ops/ade_cartan_pair_enumerate.py | sed -n '321,520p'" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "nl -ba ops/ade_cartan_pair_enumerate.py | sed -n '161,320p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   321	            one_germ = atom_metadata.get(n)
+   322	            if one_germ is not None:
+   323	                one_germ_raw_by_weight[weight] += 1
+   324	
+   325	            n_orbit = orbit(n, group)
+   326	            if n != n_orbit[0]:
+   327	                continue
+   328	            m_orbit = orbit(m, group)
+   329	            assert len(m_orbit) == len(n_orbit)
+   330	            assert all(solve(kind, image) == permute(m, permutation)
+   331	                       for permutation in group
+   332	                       for image in (permute(n, permutation),))
+   333	            orbit_by_weight[weight] += 1
+   334	            if one_germ is not None:
+   335	                one_germ_orbit_by_weight[weight] += 1
+   336	            polynomial = physical_dp[encode(n, base)]
+   337	            records.append(
+   338	                {
+   339	                    "diagram_orbit_size": len(n_orbit),
+   340	                    "diagram_stabilizer_order": len(group) // len(n_orbit),
+   341	                    "m": list(m),
+   342	                    "n": list(n),
+   343	                    "physical_germs": summarize_physical(n, polynomial, one_germ),
+   344	                    "under_cap_4": weight <= SMALL_CAP,
+   345	                    "weight": weight,
+   346	                }
+   347	            )
+   348	
+   349	    assert sum(record["diagram_orbit_size"] for record in records) == sum(raw_by_weight)
+   350	    for record in records:
+   351	        if record["under_cap_4"]:
+   352	            assert record["weight"] <= SMALL_CAP
+   353	
+   354	    def cap_summary(limit: int) -> dict[str, object]:
+   355	        selected = [record for record in records if record["weight"] <= limit]
+   356	        canonical_by_minimum: dict[str, int] = {}
+   357	        raw_by_minimum: dict[str, int] = {}
+   358	        for record in selected:
+   359	            minimum = str(record["physical_germs"]["minimum_number_of_germs"])
+   360	            canonical_by_minimum[minimum] = canonical_by_minimum.get(minimum, 0) + 1
+   361	            raw_by_minimum[minimum] = raw_by_minimum.get(minimum, 0) + record[
+   362	                "diagram_orbit_size"
+   363	            ]
+   364	        return {
+   365	            "canonical_diagram_orbits": len(selected),
+   366	            "canonical_orbits_by_minimum_germs": canonical_by_minimum,
+   367	            "canonical_one_germ_orbits": sum(
+   368	                record["physical_germs"]["one_germ_contact"] is not None
+   369	                for record in selected
+   370	            ),
+   371	            "raw_pairs": sum(raw_by_weight[: limit + 1]),
+   372	            "raw_pairs_by_minimum_germs": raw_by_minimum,
+   373	            "raw_one_germ_pairs": sum(one_germ_raw_by_weight[: limit + 1]),
+   374	        }
+   375	
+   376	    return {
+   377	        "cartan_matrix": [list(row) for row in matrix],
+   378	        "diagram_group_order": len(group),
+   379	        "diagram_group_permutations_zero_based": [list(permutation) for permutation in group],
+   380	        "edges_one_based": [[i + 1, j + 1] for i, j in graph_edges],
+   381	        "label": label,
+   382	        "rank": rank,
+   383	        "records": records,
+   384	        "summary": {
+   385	            "by_weight": {
+   386	                "canonical_diagram_orbits": orbit_by_weight[1:],
+   387	                "canonical_one_germ_orbits": one_germ_orbit_by_weight[1:],
+   388	                "raw_pairs": raw_by_weight[1:],
+   389	                "raw_one_germ_pairs": one_germ_raw_by_weight[1:],
+   390	            },
+   391	            "cap_4": cap_summary(SMALL_CAP),
+   392	            "cap_8": cap_summary(cap),
+   393	        },
+   394	        "type": kind,
+   395	    }
+   396	
+   397	
+   398	def build_payload() -> dict[str, object]:
+   399	    types = [enumerate_type("A", rank, MAX_CAP) for rank in range(1, 9)]
+   400	    types.extend(enumerate_type("D", rank, MAX_CAP) for rank in range(4, 10))
+   401	
+   402	    def total(cap_key: str, field: str) -> int:
+   403	        return sum(entry["summary"][cap_key][field] for entry in types)
+   404	
+   405	    payload: dict[str, object] = {
+   406	        "basis": "986427df23c30375b6edfd659ba8a6c6139434ab",
+   407	        "caps": [SMALL_CAP, MAX_CAP],
+   408	        "conventions": {
+   409	            "D_numbering": "chain 1--...--(r-2), fork vertices r-1,r at r-2",
+   410	            "canonical_representative": "lexicographically least Dynkin-label vector in its diagram orbit",
+   411	            "diagram_symmetry": "A reversal; D_r spin swap for r>=5; D4 full S3 on arms 1,3,4",
+   412	            "enumeration_scope": "one connected local exceptional A/D component at a time; totals are a disjoint sum over types",
+   413	            "not_enumerated": "disconnected or simultaneous D9 embeddings, global cap allocation, paired infinity data, and carrier labels",
+   414	            "physical_germ_atom": "positive contact on one vertex or on both ends of one ADE edge",
+   415	            "physical_partition_count": "unordered multisets of germ atoms; not quotiented by the representative stabilizer",
+   416	            "physical_partition_scope": "necessary numerical signatures only; no simultaneous analytic or global realizability and no carrier grouping",
+   417	            "weyl_scope": "dominance separates Weyl orbits; no Weyl quotient or geometric Weyl equivalence is applied",
+   418	        },
+   419	        "global_summary": {},
+   420	        "max_cap": MAX_CAP,
+   421	        "schema": SCHEMA,
+   422	        "types": types,
+   423	    }
+   424	    payload["global_summary"] = {
+   425	        "cap_4": {
+   426	            "canonical_diagram_orbits": total("cap_4", "canonical_diagram_orbits"),
+   427	            "canonical_one_germ_orbits": total("cap_4", "canonical_one_germ_orbits"),
+   428	            "raw_pairs": total("cap_4", "raw_pairs"),
+   429	            "raw_one_germ_pairs": total("cap_4", "raw_one_germ_pairs"),
+   430	        },
+   431	        "cap_8": {
+   432	            "canonical_diagram_orbits": total("cap_8", "canonical_diagram_orbits"),
+   433	            "canonical_one_germ_orbits": total("cap_8", "canonical_one_germ_orbits"),
+   434	            "raw_pairs": total("cap_8", "raw_pairs"),
+   435	            "raw_one_germ_pairs": total("cap_8", "raw_one_germ_pairs"),
+   436	        },
+   437	    }
+   438	    return payload
+   439	
+   440	
+   441	def canonical_json(payload: dict[str, object]) -> str:
+   442	    return json.dumps(payload, sort_keys=True, separators=(",", ":")) + "\n"
+   443	
+   444	
+   445	def main() -> None:
+   446	    parser = argparse.ArgumentParser()
+   447	    parser.add_argument("--output", type=Path, help="write canonical JSON here; default is stdout")
+   448	    parser.add_argument("--summary", action="store_true", help="print only the global/type summaries")
+   449	    parser.add_argument(
+   450	        "--deep-check",
+   451	        action="store_true",
+   452	        help="exhaustively compare every formula with Fraction Gaussian elimination",
+   453	    )
+   454	    args = parser.parse_args()
+   455	
+   456	    if args.deep_check:
+   457	        print(json.dumps({"deep_check_vectors": deep_check_all()}, sort_keys=True))
+   458	    payload = build_payload()
+   459	    if args.summary:
+   460	        summary = {
+   461	            "global_summary": payload["global_summary"],
+   462	            "types": [
+   463	                {"label": entry["label"], "summary": entry["summary"]}
+   464	                for entry in payload["types"]
+   465	            ],
+   466	        }
+   467	        print(json.dumps(summary, indent=2, sort_keys=True))
+   468	        return
+   469	
+   470	    rendered = canonical_json(payload)
+   471	    if args.output is None:
+   472	        print(rendered, end="")
+   473	    else:
+   474	        logical = rendered.encode("utf-8")
+   475	        logical_digest = hashlib.sha256(logical).hexdigest()
+   476	        if args.output.suffix == ".gz":
+   477	            artifact = gzip.compress(logical, compresslevel=9, mtime=0)
+   478	            args.output.write_bytes(artifact)
+   479	            compression = "gzip-9-mtime-0"
+   480	        else:
+   481	            artifact = logical
+   482	            args.output.write_bytes(artifact)
+   483	            compression = "none"
+   484	        print(
+   485	            json.dumps(
+   486	                {
+   487	                    "artifact_bytes": len(artifact),
+   488	                    "artifact_sha256": hashlib.sha256(artifact).hexdigest(),
+   489	                    "canonical_json_bytes": len(logical),
+   490	                    "canonical_json_sha256": logical_digest,
+   491	                    "compression": compression,
+   492	                    "output": str(args.output),
+   493	                },
+   494	                sort_keys=True,
+   495	            )
+   496	        )
+   497	
+   498	
+   499	if __name__ == "__main__":
+   500	    main()
+
+ succeeded in 0ms:
+   161	    identity = tuple(range(rank))
+   162	    if kind == "A":
+   163	        reversal = tuple(reversed(identity))
+   164	        return tuple(dict.fromkeys((identity, reversal)))
+   165	    if rank == 4:
+   166	        # D4 has S3 on the three arms 1,3,4; vertex 2 is fixed.
+   167	        arms = (0, 2, 3)
+   168	        group = []
+   169	        for image in itertools.permutations(arms):
+   170	            permutation = list(identity)
+   171	            for new_position, old_position in zip(arms, image):
+   172	                permutation[new_position] = old_position
+   173	            group.append(tuple(permutation))
+   174	        return tuple(group)
+   175	    spin_swap = list(identity)
+   176	    spin_swap[-2], spin_swap[-1] = spin_swap[-1], spin_swap[-2]
+   177	    return (identity, tuple(spin_swap))
+   178	
+   179	
+   180	def permute(vector: tuple[int, ...], permutation: tuple[int, ...]) -> tuple[int, ...]:
+   181	    return tuple(vector[old_index] for old_index in permutation)
+   182	
+   183	
+   184	def orbit(vector: tuple[int, ...], group: tuple[tuple[int, ...], ...]) -> tuple[tuple[int, ...], ...]:
+   185	    return tuple(sorted({permute(vector, permutation) for permutation in group}))
+   186	
+   187	
+   188	def encode(vector: tuple[int, ...], base: int) -> int:
+   189	    code = 0
+   190	    place = 1
+   191	    for value in vector:
+   192	        code += value * place
+   193	        place *= base
+   194	    return code
+   195	
+   196	
+   197	def physical_atoms(
+   198	    rank: int, graph_edges: tuple[tuple[int, int], ...], cap: int
+   199	) -> tuple[tuple[tuple[int, ...], dict[str, object]], ...]:
+   200	    atoms: list[tuple[tuple[int, ...], dict[str, object]]] = []
+   201	    for i in range(rank):
+   202	        for order in range(1, cap + 1):
+   203	            vector = [0] * rank
+   204	            vector[i] = order
+   205	            atoms.append(
+   206	                (
+   207	                    tuple(vector),
+   208	                    {"kind": "vertex", "vertex": i + 1, "order": order},
+   209	                )
+   210	            )
+   211	    for i, j in graph_edges:
+   212	        for left in range(1, cap):
+   213	            for right in range(1, cap - left + 1):
+   214	                vector = [0] * rank
+   215	                vector[i] = left
+   216	                vector[j] = right
+   217	                atoms.append(
+   218	                    (
+   219	                        tuple(vector),
+   220	                        {
+   221	                            "kind": "edge",
+   222	                            "vertices": [i + 1, j + 1],
+   223	                            "orders": [left, right],
+   224	                        },
+   225	                    )
+   226	                )
+   227	    atoms.sort(key=lambda item: (sum(item[0]), item[0], json.dumps(item[1], sort_keys=True)))
+   228	    return tuple(atoms)
+   229	
+   230	
+   231	def physical_partition_polynomials(
+   232	    rank: int,
+   233	    graph_edges: tuple[tuple[int, int], ...],
+   234	    vectors_by_weight: tuple[tuple[tuple[int, ...], ...], ...],
+   235	    cap: int,
+   236	) -> tuple[dict[int, list[int]], dict[tuple[int, ...], dict[str, object]]]:
+   237	    """Return multiset-germ count polynomials for every vector of weight <= cap."""
+   238	    base = cap + 1
+   239	    codes_by_weight = tuple(
+   240	        tuple(encode(vector, base) for vector in layer) for layer in vectors_by_weight
+   241	    )
+   242	    dp: dict[int, list[int]] = {0: [1] + [0] * cap}
+   243	    atoms = physical_atoms(rank, graph_edges, cap)
+   244	    atom_metadata: dict[tuple[int, ...], dict[str, object]] = {}
+   245	    for vector, metadata in atoms:
+   246	        atom_metadata[vector] = metadata
+   247	        atom_weight = sum(vector)
+   248	        atom_code = encode(vector, base)
+   249	        # Standard unbounded coin-change update in increasing total weight.
+   250	        # Each atom type is processed once, so identical germs form a multiset.
+   251	        for source_weight in range(cap - atom_weight + 1):
+   252	            for source_code in codes_by_weight[source_weight]:
+   253	                source_poly = dp.get(source_code)
+   254	                if source_poly is None:
+   255	                    continue
+   256	                target_code = source_code + atom_code
+   257	                target_poly = dp.setdefault(target_code, [0] * (cap + 1))
+   258	                for germ_count in range(source_weight + 1):
+   259	                    count = source_poly[germ_count]
+   260	                    if count:
+   261	                        target_poly[germ_count + 1] += count
+   262	    return dp, atom_metadata
+   263	
+   264	
+   265	def summarize_physical(
+   266	    n: tuple[int, ...],
+   267	    polynomial: list[int],
+   268	    one_germ_metadata: dict[str, object] | None,
+   269	) -> dict[str, object]:
+   270	    nonzero = [index for index, count in enumerate(polynomial) if count]
+   271	    assert nonzero
+   272	    weight = sum(n)
+   273	    assert nonzero[-1] == weight
+   274	    assert polynomial[weight] == 1  # split into transverse unit vertex germs
+   275	    assert (one_germ_metadata is not None) == (nonzero[0] == 1)
+   276	    return {
+   277	        "count_by_number_of_germs": polynomial[1 : weight + 1],
+   278	        "maximum_number_of_germs": nonzero[-1],
+   279	        "minimum_number_of_germs": nonzero[0],
+   280	        "one_germ_contact": one_germ_metadata,
+   281	        "total_partition_count": sum(polynomial),
+   282	    }
+   283	
+   284	
+   285	def enumerate_type(kind: str, rank: int, cap: int) -> dict[str, object]:
+   286	    label = f"{kind}{rank}"
+   287	    graph_edges = edges(kind, rank)
+   288	    group = diagram_group(kind, rank)
+   289	    vectors_by_weight = tuple(
+   290	        tuple(exact_compositions(weight, rank)) for weight in range(cap + 1)
+   291	    )
+   292	    physical_dp, atom_metadata = physical_partition_polynomials(
+   293	        rank, graph_edges, vectors_by_weight, cap
+   294	    )
+   295	    base = cap + 1
+   296	    matrix = cartan(kind, rank)
+   297	
+   298	    # Independent small controls for the physical-germ generating function.
+   299	    if label == "A1":
+   300	        assert physical_dp[encode((2,), base)][1:3] == [1, 1]
+   301	    elif label == "A2":
+   302	        assert physical_dp[encode((1, 1), base)][1:3] == [1, 1]
+   303	    elif label == "A4":
+   304	        assert physical_dp[encode((0, 1, 1, 0), base)][1:3] == [1, 1]
+   305	    elif label == "D4":
+   306	        assert physical_dp[encode((0, 1, 0, 0), base)][1:2] == [1]
+   307	    records: list[dict[str, object]] = []
+   308	    raw_by_weight = [0] * (cap + 1)
+   309	    orbit_by_weight = [0] * (cap + 1)
+   310	    one_germ_raw_by_weight = [0] * (cap + 1)
+   311	    one_germ_orbit_by_weight = [0] * (cap + 1)
+   312	
+   313	    for weight in range(1, cap + 1):
+   314	        for n in vectors_by_weight[weight]:
+   315	            m = solve(kind, n)
+   316	            if m is None:
+   317	                continue
+   318	            assert all(value > 0 for value in m)
+   319	            assert matvec(matrix, m) == n
+   320	            raw_by_weight[weight] += 1
+
+exec
+/bin/zsh -lc "nl -ba ops/ade_cartan_pair_enumerate.py | sed -n '521,700p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+codex
+The D-numbering in the code is zero-based internally but matches the memo’s one-based convention: D4 has chain edge `1--2` and arms `1,3,4` around vertex `2`; D_r has the two forks attached at `r-2`. Next I’m running the script’s own seconds-scale controls, then I’ll use a separate short program through stdin for independent counts.
+exec
+/bin/zsh -lc 'python3 ops/ade_cartan_pair_enumerate.py --deep-check --summary' in /Users/dc/code/math/jc2
+ succeeded in 20959ms:
+{"deep_check_vectors": 72695}
+{
+  "global_summary": {
+    "cap_4": {
+      "canonical_diagram_orbits": 646,
+      "canonical_one_germ_orbits": 163,
+      "raw_one_germ_pairs": 198,
+      "raw_pairs": 772
+    },
+    "cap_8": {
+      "canonical_diagram_orbits": 12238,
+      "canonical_one_germ_orbits": 563,
+      "raw_one_germ_pairs": 718,
+      "raw_pairs": 16360
+    }
+  },
+  "types": [
+    {
+      "label": "A1",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "canonical_one_germ_orbits": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "raw_one_germ_pairs": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "raw_pairs": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 2,
+          "canonical_one_germ_orbits": 2,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 2
+          },
+          "raw_one_germ_pairs": 2,
+          "raw_pairs": 2,
+          "raw_pairs_by_minimum_germs": {
+            "1": 2
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 4,
+          "canonical_one_germ_orbits": 4,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 4
+          },
+          "raw_one_germ_pairs": 4,
+          "raw_pairs": 4,
+          "raw_pairs_by_minimum_germs": {
+            "1": 4
+          }
+        }
+      }
+    },
+    {
+      "label": "A2",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2
+          ],
+          "canonical_one_germ_orbits": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2
+          ],
+          "raw_one_germ_pairs": [
+            0,
+            1,
+            2,
+            1,
+            2,
+            3,
+            2,
+            3
+          ],
+          "raw_pairs": [
+            0,
+            1,
+            2,
+            1,
+            2,
+            3,
+            2,
+            3
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 3,
+          "canonical_one_germ_orbits": 3,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 3
+          },
+          "raw_one_germ_pairs": 4,
+          "raw_pairs": 4,
+          "raw_pairs_by_minimum_germs": {
+            "1": 4
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 9,
+          "canonical_one_germ_orbits": 9,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 9
+          },
+          "raw_one_germ_pairs": 14,
+          "raw_pairs": 14,
+          "raw_pairs_by_minimum_germs": {
+            "1": 14
+          }
+        }
+      }
+    },
+    {
+      "label": "A3",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            0,
+            2,
+            1,
+            4,
+            2,
+            6,
+            4,
+            9
+          ],
+          "canonical_one_germ_orbits": [
+            0,
+            1,
+            1,
+            2,
+            1,
+            2,
+            2,
+            3
+          ],
+          "raw_one_germ_pairs": [
+            0,
+            1,
+            2,
+            3,
+            2,
+            3,
+            4,
+            5
+          ],
+          "raw_pairs": [
+            0,
+            2,
+            2,
+            5,
+            4,
+            8,
+            8,
+            13
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 7,
+          "canonical_one_germ_orbits": 4,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 4,
+            "2": 3
+          },
+          "raw_one_germ_pairs": 6,
+          "raw_pairs": 9,
+          "raw_pairs_by_minimum_germs": {
+            "1": 6,
+            "2": 3
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 28,
+          "canonical_one_germ_orbits": 12,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 12,
+            "2": 16
+          },
+          "raw_one_germ_pairs": 20,
+          "raw_pairs": 42,
+          "raw_pairs_by_minimum_germs": {
+            "1": 20,
+            "2": 22
+          }
+        }
+      }
+    },
+    {
+      "label": "A4",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            0,
+            2,
+            2,
+            5,
+            6,
+            10,
+            12,
+            19
+          ],
+          "canonical_one_germ_orbits": [
+            0,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3
+          ],
+          "raw_one_germ_pairs": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            3,
+            4,
+            5
+          ],
+          "raw_pairs": [
+            0,
+            2,
+            4,
+            7,
+            12,
+            16,
+            24,
+            33
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 9,
+          "canonical_one_germ_orbits": 4,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 4,
+            "2": 5
+          },
+          "raw_one_germ_pairs": 6,
+          "raw_pairs": 13,
+          "raw_pairs_by_minimum_germs": {
+            "1": 6,
+            "2": 7
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 56,
+          "canonical_one_germ_orbits": 13,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 13,
+            "2": 43
+          },
+          "raw_one_germ_pairs": 22,
+          "raw_pairs": 98,
+          "raw_pairs_by_minimum_germs": {
+            "1": 22,
+            "2": 76
+          }
+        }
+      }
+    },
+    {
+      "label": "A5",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            0,
+            3,
+            3,
+            9,
+            10,
+            24,
+            26,
+            50
+          ],
+          "canonical_one_germ_orbits": [
+            0,
+            1,
+            1,
+            2,
+            2,
+            3,
+            2,
+            3
+          ],
+          "raw_one_germ_pairs": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            4,
+            5
+          ],
+          "raw_pairs": [
+            0,
+            3,
+            6,
+            12,
+            20,
+            38,
+            52,
+            85
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 15,
+          "canonical_one_germ_orbits": 4,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 4,
+            "2": 10,
+            "3": 1
+          },
+          "raw_one_germ_pairs": 6,
+          "raw_pairs": 21,
+          "raw_pairs_by_minimum_germs": {
+            "1": 6,
+            "2": 14,
+            "3": 1
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 125,
+          "canonical_one_germ_orbits": 14,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 14,
+            "2": 85,
+            "3": 26
+          },
+          "raw_one_germ_pairs": 24,
+          "raw_pairs": 216,
+          "raw_pairs_by_minimum_germs": {
+            "1": 24,
+            "2": 150,
+            "3": 42
+          }
+        }
+      }
+    },
+    {
+      "label": "A6",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            0,
+            3,
+            4,
+            12,
+            18,
+            38,
+            57,
+            99
+          ],
+          "canonical_one_germ_orbits": [
+            0,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            3
+          ],
+          "raw_one_germ_pairs": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            5
+          ],
+          "raw_pairs": [
+            0,
+            3,
+            8,
+            18,
+            36,
+            66,
+            114,
+            183
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 19,
+          "canonical_one_germ_orbits": 4,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 4,
+            "2": 13,
+            "3": 2
+          },
+          "raw_one_germ_pairs": 6,
+          "raw_pairs": 29,
+          "raw_pairs_by_minimum_germs": {
+            "1": 6,
+            "2": 20,
+            "3": 3
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 231,
+          "canonical_one_germ_orbits": 15,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 15,
+            "2": 124,
+            "3": 92
+          },
+          "raw_one_germ_pairs": 26,
+          "raw_pairs": 428,
+          "raw_pairs_by_minimum_germs": {
+            "1": 26,
+            "2": 228,
+            "3": 174
+          }
+        }
+      }
+    },
+    {
+      "label": "A7",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            0,
+            4,
+            5,
+            19,
+            28,
+            69,
+            106,
+            208
+          ],
+          "canonical_one_germ_orbits": [
+            0,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ],
+          "raw_one_germ_pairs": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "raw_pairs": [
+            0,
+            4,
+            10,
+            28,
+            56,
+            118,
+            212,
+            381
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 28,
+          "canonical_one_germ_orbits": 4,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 4,
+            "2": 19,
+            "3": 4,
+            "4": 1
+          },
+          "raw_one_germ_pairs": 6,
+          "raw_pairs": 42,
+          "raw_pairs_by_minimum_germs": {
+            "1": 6,
+            "2": 29,
+            "3": 6,
+            "4": 1
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 439,
+          "canonical_one_germ_orbits": 16,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 16,
+            "2": 174,
+            "3": 220,
+            "4": 29
+          },
+          "raw_one_germ_pairs": 28,
+          "raw_pairs": 809,
+          "raw_pairs_by_minimum_germs": {
+            "1": 28,
+            "2": 318,
+            "3": 420,
+            "4": 43
+          }
+        }
+      }
+    },
+    {
+      "label": "A8",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            0,
+            4,
+            7,
+            23,
+            44,
+            106,
+            190,
+            375
+          ],
+          "canonical_one_germ_orbits": [
+            0,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ],
+          "raw_one_germ_pairs": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "raw_pairs": [
+            0,
+            4,
+            14,
+            36,
+            88,
+            192,
+            380,
+            715
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 34,
+          "canonical_one_germ_orbits": 4,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 4,
+            "2": 22,
+            "3": 7,
+            "4": 1
+          },
+          "raw_one_germ_pairs": 6,
+          "raw_pairs": 54,
+          "raw_pairs_by_minimum_germs": {
+            "1": 6,
+            "2": 35,
+            "3": 12,
+            "4": 1
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 749,
+          "canonical_one_germ_orbits": 16,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 16,
+            "2": 218,
+            "3": 407,
+            "4": 108
+          },
+          "raw_one_germ_pairs": 28,
+          "raw_pairs": 1429,
+          "raw_pairs_by_minimum_germs": {
+            "1": 28,
+            "2": 406,
+            "3": 794,
+            "4": 201
+          }
+        }
+      }
+    },
+    {
+      "label": "D4",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            9,
+            11,
+            15
+          ],
+          "canonical_one_germ_orbits": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            5
+          ],
+          "raw_one_germ_pairs": [
+            1,
+            4,
+            4,
+            7,
+            7,
+            10,
+            10,
+            13
+          ],
+          "raw_pairs": [
+            1,
+            4,
+            5,
+            11,
+            14,
+            24,
+            30,
+            45
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 11,
+          "canonical_one_germ_orbits": 8,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 8,
+            "2": 1,
+            "3": 2
+          },
+          "raw_one_germ_pairs": 16,
+          "raw_pairs": 21,
+          "raw_pairs_by_minimum_germs": {
+            "1": 16,
+            "2": 3,
+            "3": 2
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 52,
+          "canonical_one_germ_orbits": 24,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 24,
+            "2": 10,
+            "3": 18
+          },
+          "raw_one_germ_pairs": 56,
+          "raw_pairs": 134,
+          "raw_pairs_by_minimum_germs": {
+            "1": 56,
+            "2": 42,
+            "3": 36
+          }
+        }
+      }
+    },
+    {
+      "label": "D5",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            1,
+            5,
+            7,
+            17,
+            23,
+            43,
+            57,
+            92
+          ],
+          "canonical_one_germ_orbits": [
+            1,
+            3,
+            4,
+            6,
+            6,
+            8,
+            9,
+            11
+          ],
+          "raw_one_germ_pairs": [
+            1,
+            3,
+            5,
+            7,
+            7,
+            9,
+            11,
+            13
+          ],
+          "raw_pairs": [
+            1,
+            5,
+            9,
+            20,
+            32,
+            56,
+            84,
+            129
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 30,
+          "canonical_one_germ_orbits": 14,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 14,
+            "2": 12,
+            "3": 4
+          },
+          "raw_one_germ_pairs": 16,
+          "raw_pairs": 35,
+          "raw_pairs_by_minimum_germs": {
+            "1": 16,
+            "2": 15,
+            "3": 4
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 245,
+          "canonical_one_germ_orbits": 48,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 48,
+            "2": 116,
+            "3": 81
+          },
+          "raw_one_germ_pairs": 56,
+          "raw_pairs": 336,
+          "raw_pairs_by_minimum_germs": {
+            "1": 56,
+            "2": 178,
+            "3": 102
+          }
+        }
+      }
+    },
+    {
+      "label": "D6",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            2,
+            7,
+            14,
+            31,
+            54,
+            97,
+            154,
+            246
+          ],
+          "canonical_one_germ_orbits": [
+            2,
+            5,
+            6,
+            9,
+            10,
+            13,
+            14,
+            17
+          ],
+          "raw_one_germ_pairs": [
+            2,
+            6,
+            7,
+            11,
+            12,
+            16,
+            17,
+            21
+          ],
+          "raw_pairs": [
+            2,
+            8,
+            16,
+            38,
+            68,
+            128,
+            208,
+            343
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 54,
+          "canonical_one_germ_orbits": 22,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 22,
+            "2": 25,
+            "3": 7
+          },
+          "raw_one_germ_pairs": 26,
+          "raw_pairs": 64,
+          "raw_pairs_by_minimum_germs": {
+            "1": 26,
+            "2": 30,
+            "3": 8
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 605,
+          "canonical_one_germ_orbits": 76,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 76,
+            "2": 298,
+            "3": 183,
+            "4": 48
+          },
+          "raw_one_germ_pairs": 92,
+          "raw_pairs": 811,
+          "raw_pairs_by_minimum_germs": {
+            "1": 92,
+            "2": 396,
+            "3": 268,
+            "4": 55
+          }
+        }
+      }
+    },
+    {
+      "label": "D7",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            2,
+            10,
+            21,
+            55,
+            102,
+            206,
+            347,
+            606
+          ],
+          "canonical_one_germ_orbits": [
+            2,
+            5,
+            7,
+            10,
+            11,
+            14,
+            16,
+            19
+          ],
+          "raw_one_germ_pairs": [
+            2,
+            5,
+            8,
+            11,
+            12,
+            15,
+            18,
+            21
+          ],
+          "raw_pairs": [
+            2,
+            10,
+            24,
+            62,
+            126,
+            254,
+            456,
+            799
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 88,
+          "canonical_one_germ_orbits": 24,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 24,
+            "2": 50,
+            "3": 12,
+            "4": 2
+          },
+          "raw_one_germ_pairs": 26,
+          "raw_pairs": 98,
+          "raw_pairs_by_minimum_germs": {
+            "1": 26,
+            "2": 57,
+            "3": 13,
+            "4": 2
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 1349,
+          "canonical_one_germ_orbits": 84,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 84,
+            "2": 600,
+            "3": 473,
+            "4": 192
+          },
+          "raw_one_germ_pairs": 92,
+          "raw_pairs": 1733,
+          "raw_pairs_by_minimum_germs": {
+            "1": 92,
+            "2": 742,
+            "3": 680,
+            "4": 219
+          }
+        }
+      }
+    },
+    {
+      "label": "D8",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            3,
+            13,
+            34,
+            89,
+            191,
+            397,
+            744,
+            1350
+          ],
+          "canonical_one_germ_orbits": [
+            3,
+            7,
+            9,
+            13,
+            15,
+            19,
+            21,
+            25
+          ],
+          "raw_one_germ_pairs": [
+            3,
+            8,
+            10,
+            15,
+            17,
+            22,
+            24,
+            29
+          ],
+          "raw_pairs": [
+            3,
+            14,
+            37,
+            102,
+            225,
+            486,
+            935,
+            1747
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 139,
+          "canonical_one_germ_orbits": 32,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 32,
+            "2": 78,
+            "3": 27,
+            "4": 2
+          },
+          "raw_one_germ_pairs": 36,
+          "raw_pairs": 156,
+          "raw_pairs_by_minimum_germs": {
+            "1": 36,
+            "2": 87,
+            "3": 31,
+            "4": 2
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 2821,
+          "canonical_one_germ_orbits": 112,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 112,
+            "2": 992,
+            "3": 1223,
+            "4": 443,
+            "5": 51
+          },
+          "raw_one_germ_pairs": 128,
+          "raw_pairs": 3549,
+          "raw_pairs_by_minimum_germs": {
+            "1": 128,
+            "2": 1170,
+            "3": 1654,
+            "4": 542,
+            "5": 55
+          }
+        }
+      }
+    },
+    {
+      "label": "D9",
+      "summary": {
+        "by_weight": {
+          "canonical_diagram_orbits": [
+            3,
+            17,
+            47,
+            140,
+            320,
+            728,
+            1448,
+            2822
+          ],
+          "canonical_one_germ_orbits": [
+            3,
+            7,
+            10,
+            14,
+            16,
+            20,
+            23,
+            27
+          ],
+          "raw_one_germ_pairs": [
+            3,
+            7,
+            11,
+            15,
+            17,
+            21,
+            25,
+            29
+          ],
+          "raw_pairs": [
+            3,
+            17,
+            51,
+            153,
+            371,
+            857,
+            1779,
+            3526
+          ]
+        },
+        "cap_4": {
+          "canonical_diagram_orbits": 207,
+          "canonical_one_germ_orbits": 34,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 34,
+            "2": 118,
+            "3": 48,
+            "4": 7
+          },
+          "raw_one_germ_pairs": 36,
+          "raw_pairs": 224,
+          "raw_pairs_by_minimum_germs": {
+            "1": 36,
+            "2": 129,
+            "3": 52,
+            "4": 7
+          }
+        },
+        "cap_8": {
+          "canonical_diagram_orbits": 5525,
+          "canonical_one_germ_orbits": 120,
+          "canonical_orbits_by_minimum_germs": {
+            "1": 120,
+            "2": 1504,
+            "3": 2589,
+            "4": 1095,
+            "5": 217
+          },
+          "raw_one_germ_pairs": 128,
+          "raw_pairs": 6757,
+          "raw_pairs_by_minimum_germs": {
+            "1": 128,
+            "2": 1726,
+            "3": 3278,
+            "4": 1394,
+            "5": 231
+          }
+        }
+      }
+    }
+  ]
+}
+
+codex
+The script’s own deep check reports all 72,695 capped nonzero vectors were tested by exact `Fraction` elimination, and its summary reproduces the advertised global totals. I’m now doing a separate stdin-only checker that rebuilds Cartan matrices, finds graph automorphisms by edge preservation, recomputes the multiset DP, and compares the compressed JSON records.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from fractions import Fraction
+import gzip, json, itertools, hashlib, importlib.util
+from pathlib import Path
+CAP=8
+SMALL=4
+PATH=Path('xmodel/bd-a2-ade-cartier-pairs-cap8-sol56-20260830.json.gz')
+
+def comps(total, r):
+    if r==1:
+        yield (total,); return
+    for x in range(total+1):
+        for tail in comps(total-x, r-1):
+            yield (x,)+tail
+
+def edges(kind,r):
+    if kind=='A': return tuple((i,i+1) for i in range(r-1))
+    return tuple((i,i+1) for i in range(r-2)) + ((r-3,r-1),)
+
+def cartan(kind,r):
+    E=set(tuple(sorted(e)) for e in edges(kind,r))
+    return tuple(tuple(2 if i==j else (-1 if tuple(sorted((i,j))) in E else 0) for j in range(r)) for i in range(r))
+
+def solve_frac(M,b):
+    r=len(b)
+    A=[[Fraction(M[i][j]) for j in range(r)] + [Fraction(b[i])] for i in range(r)]
+    for c in range(r):
+        p=next(i for i in range(c,r) if A[i][c])
+        A[c],A[p]=A[p],A[c]
+        pv=A[c][c]
+        A[c]=[z/pv for z in A[c]]
+        for i in range(r):
+            if i==c: continue
+            q=A[i][c]
+            if q:
+                A[i]=[x-q*y for x,y in zip(A[i],A[c])]
+    return tuple(row[-1] for row in A)
+
+def graph_autos(kind,r):
+    E=set(tuple(sorted(e)) for e in edges(kind,r))
+    out=[]
+    for p in itertools.permutations(range(r)):
+        image=set(tuple(sorted((p[i],p[j]))) for i,j in E)
+        if image==E:
+            # convert image-of-old p to old-at-new convention used by records: vector'[new]=vector[old]
+            inv=[None]*r
+            for old,new in enumerate(p): inv[new]=old
+            out.append(tuple(inv))
+    return tuple(sorted(out))
+
+def perm(v,p): return tuple(v[i] for i in p)
+def orbit(v,G): return tuple(sorted(set(perm(v,g) for g in G)))
+def encode(v,base):
+    n=0; place=1
+    for x in v:
+        n += x*place; place *= base
+    return n
+
+def atoms(kind,r):
+    out=[]
+    for i in range(r):
+        for k in range(1,CAP+1):
+            v=[0]*r; v[i]=k
+            out.append((tuple(v), {'kind':'vertex','vertex':i+1,'order':k}))
+    for i,j in edges(kind,r):
+        for a in range(1,CAP):
+            for b in range(1,CAP-a+1):
+                v=[0]*r; v[i]=a; v[j]=b
+                out.append((tuple(v), {'kind':'edge','vertices':[i+1,j+1],'orders':[a,b]}))
+    return tuple(out)
+
+def dp_for(kind,r,layers):
+    base=CAP+1
+    codes=[[encode(v,base) for v in layer] for layer in layers]
+    D={0:[1]+[0]*CAP}
+    atom_meta={}
+    for v,meta in atoms(kind,r):
+        atom_meta[v]=meta
+        w=sum(v); c=encode(v,base)
+        for sw in range(CAP-w+1):
+            for sc in codes[sw]:
+                poly=D.get(sc)
+                if poly is None: continue
+                tgt=sc+c
+                arr=D.setdefault(tgt,[0]*(CAP+1))
+                for g,val in enumerate(poly[:sw+1]):
+                    if val: arr[g+1]+=val
+    return D, atom_meta
+
+payload=json.loads(gzip.decompress(PATH.read_bytes()).decode('utf-8'))
+assert payload['schema']=='jc2.ade_cartan_pairs.v1'
+assert payload['caps']==[4,8]
+assert payload['basis']=='986427df23c30375b6edfd659ba8a6c6139434ab'
+
+all_raw8=all_can8=all_raw4=all_can4=0
+all_one_raw8=all_one_can8=all_one_raw4=all_one_can4=0
+all_hist8={}; all_hist4={}
+candidate8=candidate4=0
+report=[]
+for entry in payload['types']:
+    kind=entry['type']; r=entry['rank']; label=entry['label']
+    assert entry['cartan_matrix']==[list(row) for row in cartan(kind,r)]
+    assert entry['edges_one_based']==[[i+1,j+1] for i,j in edges(kind,r)]
+    G=graph_autos(kind,r)
+    assert entry['diagram_group_order']==len(G)
+    assert sorted(tuple(x) for x in entry['diagram_group_permutations_zero_based'])==list(G)
+    layers=[tuple(comps(w,r)) for w in range(CAP+1)]
+    candidate8 += sum(len(layers[w]) for w in range(1,CAP+1))
+    candidate4 += sum(len(layers[w]) for w in range(1,SMALL+1))
+    D, atom_meta=dp_for(kind,r,layers)
+    M=cartan(kind,r)
+    raw_by_w=[0]*(CAP+1); can_by_w=[0]*(CAP+1)
+    one_raw_by_w=[0]*(CAP+1); one_can_by_w=[0]*(CAP+1)
+    by_n={tuple(rec['n']):rec for rec in entry['records']}
+    seen=set()
+    for w in range(1,CAP+1):
+        for n in layers[w]:
+            sol=solve_frac(M,n)
+            integral=all(x.denominator==1 for x in sol)
+            if not integral: continue
+            m=tuple(int(x) for x in sol)
+            assert all(x>0 for x in m), (label,n,m)
+            raw_by_w[w]+=1
+            if n in atom_meta: one_raw_by_w[w]+=1
+            n_orb=orbit(n,G)
+            if n==n_orb[0]:
+                can_by_w[w]+=1
+                rec=by_n[n]
+                seen.add(n)
+                assert tuple(rec['m'])==m
+                assert rec['diagram_orbit_size']==len(n_orb)
+                assert rec['diagram_stabilizer_order']==len(G)//len(n_orb)
+                assert rec['under_cap_4']==(w<=SMALL)
+                if n in atom_meta: one_can_by_w[w]+=1
+                poly=D[encode(n,CAP+1)]
+                pg=rec['physical_germs']
+                assert pg['count_by_number_of_germs']==poly[1:w+1]
+                nz=[i for i,x in enumerate(poly) if x]
+                assert pg['minimum_number_of_germs']==nz[0]
+                assert pg['maximum_number_of_germs']==nz[-1]==w
+                assert pg['total_partition_count']==sum(poly)
+                assert (pg['one_germ_contact'] is not None)==(n in atom_meta)
+                if n in atom_meta:
+                    assert pg['one_germ_contact']==atom_meta[n]
+    assert seen==set(by_n)
+    assert sum(rec['diagram_orbit_size'] for rec in entry['records'])==sum(raw_by_w)
+    assert raw_by_w[1:]==entry['summary']['by_weight']['raw_pairs']
+    assert can_by_w[1:]==entry['summary']['by_weight']['canonical_diagram_orbits']
+    assert one_raw_by_w[1:]==entry['summary']['by_weight']['raw_one_germ_pairs']
+    assert one_can_by_w[1:]==entry['summary']['by_weight']['canonical_one_germ_orbits']
+    raw8=sum(raw_by_w); can8=sum(can_by_w); raw4=sum(raw_by_w[:SMALL+1]); can4=sum(can_by_w[:SMALL+1])
+    one_raw8=sum(one_raw_by_w); one_can8=sum(one_can_by_w); one_raw4=sum(one_raw_by_w[:SMALL+1]); one_can4=sum(one_can_by_w[:SMALL+1])
+    assert entry['summary']['cap_8']['raw_pairs']==raw8
+    assert entry['summary']['cap_8']['canonical_diagram_orbits']==can8
+    assert entry['summary']['cap_8']['raw_one_germ_pairs']==one_raw8
+    assert entry['summary']['cap_8']['canonical_one_germ_orbits']==one_can8
+    assert entry['summary']['cap_4']['raw_pairs']==raw4
+    assert entry['summary']['cap_4']['canonical_diagram_orbits']==can4
+    assert entry['summary']['cap_4']['raw_one_germ_pairs']==one_raw4
+    assert entry['summary']['cap_4']['canonical_one_germ_orbits']==one_can4
+    for rec in entry['records']:
+        g=str(rec['physical_germs']['minimum_number_of_germs'])
+        all_hist8[g]=all_hist8.get(g,0)+1
+        if rec['weight']<=SMALL: all_hist4[g]=all_hist4.get(g,0)+1
+    all_raw8+=raw8; all_can8+=can8; all_raw4+=raw4; all_can4+=can4
+    all_one_raw8+=one_raw8; all_one_can8+=one_can8; all_one_raw4+=one_raw4; all_one_can4+=one_can4
+    report.append((label,raw8,can8,raw4,can4,one_raw8,one_can8,one_raw4,one_can4))
+
+assert candidate8==72695 and candidate4==3218
+assert (all_raw8,all_can8,all_raw4,all_can4)==(16360,12238,772,646)
+assert (all_one_raw8,all_one_can8,all_one_raw4,all_one_can4)==(718,563,198,163)
+assert all_hist8=={'1':563,'2':4180,'3':5312,'4':1915,'5':268}
+assert all_hist4=={'1':163,'2':356,'3':114,'4':13}
+print('independent_check=PASS')
+print('candidate_vectors cap8/cap4 =', candidate8, candidate4)
+print('all_pairs raw/can cap8 =', all_raw8, all_can8)
+print('all_pairs raw/can cap4 =', all_raw4, all_can4)
+print('one_germ raw/can cap8 =', all_one_raw8, all_one_can8)
+print('one_germ raw/can cap4 =', all_one_raw4, all_one_can4)
+print('canonical_min_hist cap8 =', dict(sorted(all_hist8.items(), key=lambda kv:int(kv[0]))))
+print('canonical_min_hist cap4 =', dict(sorted(all_hist4.items(), key=lambda kv:int(kv[0]))))
+print('per_type =', report)
+
+# Check the checked-in script reproduces exact canonical gzip bytes without writing a file.
+spec=importlib.util.spec_from_file_location('ade_enum','ops/ade_cartan_pair_enumerate.py')
+mod=importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+logical=mod.canonical_json(mod.build_payload()).encode('utf-8')
+artifact=gzip.compress(logical, compresslevel=9, mtime=0)
+existing=PATH.read_bytes()
+assert artifact==existing
+print('producer_rebuild_bytes=PASS', len(artifact), hashlib.sha256(artifact).hexdigest(), len(logical), hashlib.sha256(logical).hexdigest())
+print('gzip_header_mtime=', int.from_bytes(existing[4:8],'little'), 'os_byte=', existing[9])
+PY" in /Users/dc/code/math/jc2
+ succeeded in 21880ms:
+independent_check=PASS
+candidate_vectors cap8/cap4 = 72695 3218
+all_pairs raw/can cap8 = 16360 12238
+all_pairs raw/can cap4 = 772 646
+one_germ raw/can cap8 = 718 563
+one_germ raw/can cap4 = 198 163
+canonical_min_hist cap8 = {'1': 563, '2': 4180, '3': 5312, '4': 1915, '5': 268}
+canonical_min_hist cap4 = {'1': 163, '2': 356, '3': 114, '4': 13}
+per_type = [('A1', 4, 4, 2, 2, 4, 4, 2, 2), ('A2', 14, 9, 4, 3, 14, 9, 4, 3), ('A3', 42, 28, 9, 7, 20, 12, 6, 4), ('A4', 98, 56, 13, 9, 22, 13, 6, 4), ('A5', 216, 125, 21, 15, 24, 14, 6, 4), ('A6', 428, 231, 29, 19, 26, 15, 6, 4), ('A7', 809, 439, 42, 28, 28, 16, 6, 4), ('A8', 1429, 749, 54, 34, 28, 16, 6, 4), ('D4', 134, 52, 21, 11, 56, 24, 16, 8), ('D5', 336, 245, 35, 30, 56, 48, 16, 14), ('D6', 811, 605, 64, 54, 92, 76, 26, 22), ('D7', 1733, 1349, 98, 88, 92, 84, 26, 24), ('D8', 3549, 2821, 156, 139, 128, 112, 36, 32), ('D9', 6757, 5525, 224, 207, 128, 120, 36, 34)]
+producer_rebuild_bytes=PASS 174608 bfbd89d61d1181bc0bdb9a243c8d3b85074541194621eb57047af9ecf884e279 3762426 11ca074c9a4bc6656960222897d8c674f8486970b7a20cb1975cfcdb818d1d19
+gzip_header_mtime= 0 os_byte= 255
+
+codex
+The independent checker passed: it matched the JSON record-by-record, recomputed graph automorphisms without using the submitted diagram-group code, and verified the producer rebuilds the exact gzip bytes in memory. I’m checking the predecessor threat-map’s cap/properness language now, because that is where a promotion can accidentally overstate the local table.
+exec
+/bin/zsh -lc "nl -ba xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md | sed -n '1,180p'" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "nl -ba xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md | sed -n '181,360p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# ADE-decorated boundary and different: the exact finite threat map
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Producer: Sol 5.6 delegated lane `/root/quadratic-degeneracy-frontier`  
+     5	Frozen basis: `dca72076aa1615b0b1286fd4428a1acac7b65963`  
+     6	Lifecycle: **EXACT PROVISIONAL THREAT MAP / DIFFERENT-MODEL REVIEW REQUIRED**
+     7	
+     8	## 0. Endpoint and charged predecessor
+     9	
+    10	This is the finite successor to
+    11	
+    12	```text
+    13	f7d1c8cb42d5afd29474eb0975ffae518b0c82620f598649c2ac3d5d59064f94
+    14	  xmodel/bd-a2-normal-singular-quadratic-incidence-reduction-sol56-20260830.md
+    15	```
+    16	
+    17	and retains its notation.  Thus `X` is an irreducible normal Cartier
+    18	hypersurface of class `2A+3B` in `P2 times P1`, `r:Xtilde->X` is the minimal
+    19	Du Val resolution, and
+    20	
+    21	```text
+    22	A^2=3,       A.B=2,       B^2=0,
+    23	K_Xtilde=-A+B,             R=r^*R_X~2A+B,            (0.1)
+    24	```
+    25	
+    26	where `R_X` is the source different of `pi:X->P2`.  The ruled marking proves
+    27	
+    28	```text
+    29	(ZA+ZB)^perp = D9(-1).                               (0.2)
+    30	```
+    31	
+    32	Assume, whenever the forest conclusions below are invoked, that the promoted
+    33	dominant-`A2` first-leg bridge puts the reduced infinity, reduced different,
+    34	and the exceptional curves over singular points missed by the first leg in
+    35	one resolved SNC boundary.  The exact result is:
+    36	
+    37	> **ADE-DECORATED-THREAT.**
+    38	>
+    39	> 1. A connected exceptional Dynkin type embedded in (0.2) is necessarily
+    40	>    `A_r` with `1<=r<=8` or `D_r` with `4<=r<=9`.  Types `A9,E6,E7,E8`
+    41	>    are impossible already in the `D9` root coordinates.  This is stronger
+    42	>    than a rank count and is proved without assuming a root-subsystem list.
+    43	> 2. For any surviving connected tree with positive exceptional different
+    44	>    multiplicity vector `m`, the strict-transform attachment vector is
+    45	>    `n=Cm>=0`.  All solutions are classified exactly by the congruences in
+    46	>    Sections 3--4.  If a target-line pullback through the point meets the
+    47	>    different properly (as a projectively finite `pi` permits), then
+    48	>    `1<=sum n_i<=8`; if the `B`-fibre through the point also meets the
+    49	>    different properly, the sharper bound is `sum n_i<=4`.  Hence these
+    50	>    explicitly proper-intersection strata are literal finite sets.
+    51	> 3. Forest topology acts on **distinct physical germs**, not on the entries
+    52	>    or support of `n`.  A tangent contact of large numerical multiplicity is
+    53	>    one joining path.  A branch through an ADE node can contribute at both
+    54	>    adjacent graph vertices while still being one physical attachment.
+    55	> 4. No remaining connected type is eliminated by these numerical and local
+    56	>    forest tests.  Every `A_1,...,A_8` and `D_4,...,D_9` has an explicit
+    57	>    Cartier-lattice one-germ pattern with `sum n_i<=2`.  “Survives” here means only
+    58	>    that these necessary tests do not kill it; neither an embedding by
+    59	>    effective exceptional curves nor an incidence equation is constructed.
+    60	
+    61	The actual finite successor is therefore not another unrestricted lattice
+    62	search.  It is the effectivity and physical-attachment test on the explicit
+    63	finite congruence sets, together with a separate treatment of nonfinite or
+    64	common-component strata where the intersection cap is unavailable.
+    65	
+    66	## 1. Local Cartier equations on an ADE tree
+    67	
+    68	Fix a singular point `p` and number the irreducible exceptional curves
+    69	`E_1,...,E_r`.  Let `C` be the positive ADE Cartan matrix, so
+    70	
+    71	```text
+    72	E_i.E_i=-2,        E_i.E_j=1 for adjacent vertices,
+    73	(E_i.E_j)=-C.                                      (1.1)
+    74	```
+    75	
+    76	Write the total different over `p` as
+    77	
+    78	```text
+    79	R=R_str+sum_i m_i E_i,       m_i>=1,                (1.2)
+    80	```
+    81	
+    82	and define
+    83	
+    84	```text
+    85	n_i=R_str.E_i>=0.                                   (1.3)
+    86	```
+    87	
+    88	Every `m_i` is positive because `pi o r` contracts `E_i`, so its Jacobian
+    89	determinant vanishes at the generic point of `E_i`.  Since `R.E_i=0`,
+    90	
+    91	```text
+    92	n=Cm.                                               (1.4)
+    93	```
+    94	
+    95	Conversely, at the level of necessary lattice data, (1.4) gives a bijection
+    96	
+    97	```text
+    98	{m in Z_(>0)^r : Cm>=0}
+    99	  <--> {n in Z_(>=0)^r minus {0} : n in C Z^r},
+   100	m=C^(-1)n.                                          (1.5)
+   101	```
+   102	
+   103	Indeed every entry of the inverse of a connected finite ADE Cartan matrix is
+   104	strictly positive.  Thus a nonzero nonnegative integral `n` has positive
+   105	rational inverse, and it gives an integral `m` exactly when `n in C Z^r`.
+   106	This is a classification of the numerical solutions, not a converse
+   107	existence theorem for a Cartier prime or an incidence singularity.
+   108	In particular, (1.4) by itself kills no ADE type: at any vertex `j`, take
+   109	`n=k e_j` with `k` divisible by `det C` (or merely by the order of the
+   110	corresponding fundamental-weight class).  Then `m=C^(-1)n` is positive and
+   111	integral, and scaling `k` gives an unbounded ray.  Every finite conclusion
+   112	below therefore cites a separate global proper-intersection cap or the
+   113	explicit `D9` embedding.
+   114	
+   115	Infinity has the same local arithmetic.  If `p in H`, write
+   116	
+   117	```text
+   118	r^*H=H_str+sum_i h_iE_i,       h_i>=1,
+   119	a_i=H_str.E_i,                 a=Ch>=0.              (1.6)
+   120	```
+   121	
+   122	Thus the boundary and different decorations are two points of the same
+   123	dominant root-lattice semigroup, with separately recorded physical branches.
+   124	
+   125	## 2. Which connected ADE types can occur in `D9`
+   126	
+   127	The roots of the lattice (0.2) are exactly
+   128	
+   129	```text
+   130	plus-or-minus e_u plus-or-minus e_v,       u!=v.     (2.1)
+   131	```
+   132	
+   133	There is a short coordinate proof that a connected root lattice generated by
+   134	such roots is classical.  Map a simple-root basis into (2.1), and form a
+   135	signed graph whose coordinate positions are vertices and whose simple roots
+   136	are edges.  Connectedness of the Dynkin diagram forces the used coordinate
+   137	graph to be connected.  Switch coordinate signs along a spanning tree so
+   138	that its edge roots are differences `e_u-e_v`.
+   139	
+   140	If `s` coordinate positions occur, those spanning-tree roots generate the
+   141	full `A_(s-1)` lattice.  The image rank is between `s-1` and `s`.  In rank
+   142	`s-1`, every remaining edge is balanced and the generated lattice is exactly
+   143	`A_(s-1)`.  In rank `s`, some edge is unbalanced; adjoining its sum root to
+   144	the tree differences generates exactly `D_s`.  There is no third case.
+   145	
+   146	Since only nine coordinates are available, every connected exceptional type
+   147	is therefore among
+   148	
+   149	```text
+   150	A_1,...,A_8,        D_4,...,D_9.                    (2.2)
+   151	```
+   152	
+   153	This excludes `A9,E6,E7,E8`.  Conversely the standard difference roots on
+   154	`r+1<=9` coordinates embed each `A_r` in (2.2), and the standard signed roots
+   155	on `r<=9` coordinates embed each `D_r`.  These are **lattice-eligibility**
+   156	statements only.  The actual exceptional curves may fail the effective-cone,
+   157	fibre-configuration, or simultaneous-embedding tests.
+   158	
+   159	For a disconnected exceptional lattice, apply the argument to every
+   160	connected Dynkin component.  Orthogonal components can share coordinate
+   161	support in special ways, so their ranks alone do not certify a simultaneous
+   162	embedding.  One further exact gate is useful: if the total exceptional
+   163	lattice has rank nine, then
+   164	
+   165	```text
+   166	det(Lambda_exc)=4*[D9:Lambda_exc]^2.                 (2.3)
+   167	```
+   168	
+   169	Any proposed full-rank direct sum whose determinant is not four times a
+   170	square is impossible.  No primitivity is assumed in (2.3).
+   171	
+   172	## 3. Exact `A_r` multiplicities
+   173	
+   174	Number the `A_r` chain `1-2-...-r`.  The cokernel of its Cartan matrix is
+   175	cyclic of order `r+1`, and (1.5) becomes the explicit congruence
+   176	
+   177	```text
+   178	sum_(i=1)^r i*n_i = 0 mod (r+1).                    (3.1)
+   179	```
+   180	
+
+ succeeded in 0ms:
+   181	This is exact: the displayed weighted sum kills every column of `C`, and it
+   182	is surjective because the first coordinate has weight one.  For every
+   183	nonzero `n>=0` satisfying (3.1), the unique positive multiplicities are
+   184	
+   185	```text
+   186	m_j = ((r+1-j)*sum_(i<=j) i*n_i
+   187	       +j*sum_(i>j) (r+1-i)*n_i)/(r+1).             (3.2)
+   188	```
+   189	
+   190	In particular, a contact supported numerically at a smooth point of vertex
+   191	`i`, so `n=k e_i`, is Cartier exactly when
+   192	
+   193	```text
+   194	k is a multiple of o_i=(r+1)/gcd(i,r+1).            (3.3)
+   195	```
+   196	
+   197	Under the cap `sum n_i<=8`, every vertex of `A_1,...,A_7` permits such a
+   198	one-vertex contact, while `A8` permits it only at vertices `3,6`.  Under the
+   199	sharper cap four, the vertices permitting at least one such contact are
+   200	
+   201	```text
+   202	A1: {1}                 A2: {1,2}
+   203	A3: {1,2,3}             A4: empty
+   204	A5: {2,3,4}             A6: empty
+   205	A7: {2,4,6}             A8: {3,6}.                 (3.4)
+   206	```
+   207	
+   208	An empty entry in (3.4) does **not** kill the singularity: it only kills a
+   209	one-germ contact at a smooth point of the minimal ADE divisor.  At the
+   210	numerical Cartier/curvette level there is a uniform one-physical-germ
+   211	survivor for every `A_r`:
+   212	
+   213	```text
+   214	r=2k-1:  n=2e_k,
+   215	          m=(1,2,...,k-1,k,k-1,...,2,1);
+   216	
+   217	r=2k:    n=e_k+e_(k+1),
+   218	          m=(1,2,...,k-1,k,k,k-1,...,2,1).          (3.5)
+   219	```
+   220	
+   221	The odd-rank pattern is one order-two tangency at the smooth point of the
+   222	central exceptional curve.  The even-rank pattern is one irreducible branch
+   223	through the node between the two central exceptional curves, contributing
+   224	one to each adjacent entry of `n`.  Blowing up that node turns the contact
+   225	into one leaf path.  Both patterns have `sum n_i=2` and satisfy (3.1).
+   226	
+   227	More generally, one irreducible physical branch meeting the node `i--(i+1)`
+   228	has
+   229	
+   230	```text
+   231	n=u e_i+v e_(i+1),       u,v>=1,                    (3.6)
+   232	```
+   233	
+   234	and is numerically Cartier exactly when
+   235	`i*u+(i+1)*v=0 mod (r+1)`.  This makes the distinction between graph support
+   236	and physical-point count explicit.
+   237	
+   238	## 4. Exact `D_r` multiplicities
+   239	
+   240	Use the numbering
+   241	
+   242	```text
+   243	1--2--...--(r-2),
+   244	              |--(r-1)
+   245	              |--r,                                 (4.1)
+   246	```
+   247	
+   248	and put `a=n_(r-1)`, `b=n_r`, and
+   249	`T=sum_(i=1)^(r-2) i*n_i`.  The condition `n in C Z^r` is exactly
+   250	
+   251	```text
+   252	a=b mod 2,
+   253	2T+(r-2)a+r*b=0 mod 4.                              (4.2)
+   254	```
+   255	
+   256	The inverse formulas are
+   257	
+   258	```text
+   259	m_j=sum_(i=1)^(r-2) min(i,j)*n_i+j*(a+b)/2,
+   260	                                      1<=j<=r-2,
+   261	m_(r-1)=T/2+r*a/4+(r-2)*b/4,
+   262	m_r    =T/2+(r-2)*a/4+r*b/4.                        (4.3)
+   263	```
+   264	
+   265	Thus (4.2), nonnegativity, and nonzero `n` classify all positive integral
+   266	solutions of (1.4).  For a smooth-vertex contact `n=k e_i`, the least
+   267	possible `k` is
+   268	
+   269	```text
+   270	i<=r-2:  1 if i is even, 2 if i is odd;
+   271	i=r-1,r: 2 if r is even, 4 if r is odd.             (4.4)
+   272	```
+   273	
+   274	Every value in (4.4) is at most four, so every vertex of every
+   275	`D_4,...,D_9` remains available under the sharper cap.  More strongly, at
+   276	the numerical Cartier/curvette level all these types have the uniform
+   277	transverse one-germ pattern
+   278	
+   279	```text
+   280	n=e_2,
+   281	m=(1,2,2,...,2,1,1),                                (4.5)
+   282	```
+   283	
+   284	where the string of twos runs from vertex `2` through vertex `r-2`.
+   285	This has `sum n_i=1` and gives a locally tree-shaped attachment.
+   286	
+   287	## 5. The global intersection caps
+   288	
+   289	The semigroups in Sections 3--4 are infinite without a global proper-
+   290	intersection input: scaling either (3.5) or (4.5) gives an infinite ray.
+   291	The class calculation supplies an exact finite cap in the finite stratum.
+   292	
+   293	Suppose there is a target line through `pi(p)` whose pullback `L~A` and
+   294	`R_X` have no common curve.  A projectively finite `pi` guarantees such a
+   295	choice: the finitely many images of different components exclude only
+   296	finitely many lines through `pi(p)`.  Over every singular point `q in L`,
+   297	write
+   298	
+   299	```text
+   300	r^*L=L_str+sum_i ell_(q,i)E_(q,i),       ell_(q,i)>=1. (5.1)
+   301	```
+   302	
+   303	The lower bound holds because the divisorial valuation of every exceptional
+   304	curve centred at `q` is positive on the maximal ideal, and the local line
+   305	equation belongs to that ideal.
+   306	The same orthogonality calculation gives a nonnegative attachment vector
+   307	`b_q=C_q ell_q` for `L_str`.  Put `n_q=C_qm_q` for the different.  The three
+   308	exceptional cross-terms cancel to one copy:
+   309	
+   310	```text
+   311	L_str.(m_q E_q)       =ell_q^t n_q,
+   312	(ell_q E_q).R_str     =ell_q^t n_q,
+   313	(ell_q E_q).(m_q E_q)=-ell_q^t n_q.                 (5.2)
+   314	```
+   315	
+   316	Consequently the exact proper-intersection identity is
+   317	
+   318	```text
+   319	8=L.R=L_str.R_str+sum_(q in L intersect Sing X) ell_q^t n_q. (5.3)
+   320	```
+   321	
+   322	The first term and every summand are nonnegative, and every
+   323	`ell_(q,i)>=1`.  Therefore, for the chosen point `p`,
+   324	
+   325	```text
+   326	1<=sum_i n_i<=8.                                    (5.4)
+   327	```
+   328	
+   329	There is a sharper conditional slice.  Let `F_p~B` be the `P1`-base fibre
+   330	through `p`.  If `F_p` and `R_X` have no common irreducible component, write
+   331	`r^*F_p=F_str+sum beta_(q,i)E_(q,i)` at the singular points of that fibre.
+   332	The coefficients over `p` are at least one.  The identical cross-term
+   333	calculation gives
+   334	
+   335	```text
+   336	4=F_p.R=F_str.R_str+sum_(q in F_p intersect Sing X) beta_q^t n_q,
+   337	```
+   338	
+   339	and properness makes all terms nonnegative.  Hence
+   340	
+   341	```text
+   342	sum_i n_i<=4.                                       (5.5)
+   343	```
+   344	
+   345	Neither cap is asserted when the chosen slice shares a different component.
+   346	In particular, projective coefficient basepoints can force every target line
+   347	through their image to contain a contracted different carrier.  Those
+   348	nonfinite cases remain outside (5.4), although (5.5) can still apply when the
+   349	base fibre is proper.
+   350	
+   351	The fixed infinity divisor gives a coupled boundary/different constraint.
+   352	Assume `H` and `R_X` have no common irreducible curve.  At every singular
+   353	point `p in H`, use the vectors `(h,a)` from (1.6) and `(m,n)` from (1.2).
+   354	Expansion on the resolution gives the exact global identity
+   355	
+   356	```text
+   357	8=H.R=H_str.R_str+sum_(p in H intersect Sing X) h_p^t n_p.  (5.6)
+   358	```
+   359	
+   360	All terms are nonnegative under the no-common-curve hypothesis.  Hence
+
+exec
+/bin/zsh -lc "nl -ba xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md | sed -n '361,560p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   361	
+   362	```text
+   363	sum_p h_p^t n_p<=8,
+   364	sum_p sum_i n_(p,i)<=8.                             (5.7)
+   365	```
+   366	
+   367	If `H` and `R_X` share a nonexceptional curve, the proper-intersection
+   368	argument behind (5.6)--(5.7) is unavailable.  That common-carrier stratum is
+   369	an explicit surviving threat, not silently discarded.
+   370	
+   371	## 6. Forest topology uses physical germs, not `n`
+   372	
+   373	Take a full embedded log resolution of the reduced first-leg boundary.  Over
+   374	one singular point, include in `T_p` the ADE tree and every additional
+   375	exceptional vertex introduced to resolve its boundary contacts.  It is a
+   376	connected tree.  Delete the interior of `T_p` from the resolved dual graph.
+   377	Then the exact forest criterion is:
+   378	
+   379	> Every connected component of the remaining graph may meet `T_p` by at
+   380	> most one edge.                                                   (6.1)
+   381	
+   382	Indeed two such edges, together with the unique path inside `T_p` and a path
+   383	inside that outside component, form a cycle.  Conversely, attaching forest
+   384	components once to a tree preserves a forest.
+   385	
+   386	The edges in (6.1) are distinct **physical branch contacts after log
+   387	resolution**.  They are not the integers `n_i`.
+   388	
+   389	Consequently the forest kills:
+   390	
+   391	* two distinct physical branches of one irreducible strict different
+   392	  component attaching to the same exceptional tree;
+   393	* attachments from two vertices or points whose carriers are already joined
+   394	  by a boundary path outside that tree; and
+   395	* two disjoint connector loci between the connected total transforms of
+   396	  infinity and of the different, unless those supports share a component
+   397	  that changes the quotient graph.
+   398	
+   399	It does not kill:
+   400	
+   401	* one tangent branch with `n_i>1` at a single physical point;
+   402	* one branch through an ADE node, with `n` supported on the two adjacent
+   403	  vertices; or
+   404	* several branches on distinct outside components which are connected only
+   405	  through `T_p`, producing a star rather than a cycle.
+   406	
+   407	There is a useful global formulation.  In a forest, two connected subgraphs
+   408	have connected intersection after subdividing physical intersection points
+   409	as vertices.  The support of `H` is connected because it is an effective
+   410	ample `(2,3)` divisor on the infinity surface `P1 times P1`; the support of
+   411	`R_X` is connected because `2A+B` is ample on `X`.  Their total transforms
+   412	are therefore connected.  A survivor with no shared nonexceptional carrier
+   413	has only one graph-theoretic connector between them.  The eight units in
+   414	`H.R=8` may nevertheless concentrate at that connector as tangency or ADE
+   415	Cartier multiplicity.  Numerical weight eight is not eight graph edges.
+   416	
+   417	## 7. Exact killed/surviving threat table
+   418	
+   419	The deductions can now be stated without mixing levels.
+   420	
+   421	```text
+   422	KILLED UNCONDITIONALLY BY THE D9 ROOT MODEL
+   423	  connected A9, E6, E7, E8;
+   424	  any rank-nine direct sum failing det=4*square.
+   425	
+   426	KILLED IN A CAPPED PROPER-INTERSECTION STRATUM
+   427	  every n violating (3.1) or (4.2);
+   428	  every n with sum n_i>8 under (5.4);
+   429	  every n with sum n_i>4 under (5.5).
+   430	
+   431	KILLED BY THE RATIONAL-FOREST GRAPH
+   432	  precisely the repeated physical joining patterns in (6.1),
+   433	  including two contacts from the same outside connected carrier.
+   434	
+   435	NOT KILLED BY THESE TESTS
+   436	  A1,...,A8 via (3.5);
+   437	  D4,...,D9 via (4.5);
+   438	  high contact concentrated at one physical germ;
+   439	  nonfinite/common-carrier cases where no cap has been proved.
+   440	```
+   441	
+   442	The word “survivor” is deliberately negative: it means that the displayed
+   443	necessary tests have not contradicted the decoration.  Standard coordinate
+   444	roots exhibit an abstract lattice embedding, but do not prove simultaneous
+   445	effectivity, realization by vertical curves in the nine-blowup marking, or
+   446	compatibility with a quadratic Miranda incidence.
+   447	
+   448	## 8. Hostile checks, exact remaining gap, and scope firewall
+   449	
+   450	The following tempting shortcuts are false and have been excluded from the
+   451	theorem.
+   452	
+   453	* **Rank at most nine allows `E6` or `E7`.**  The signed-coordinate proof in
+   454	  Section 2 uses the actual roots of `D9`, not rank alone, and removes them.
+   455	* **`n_i=4` means four boundary edges.**  It can be one order-four physical
+   456	  contact.  Forest topology sees the resolved branch path.
+   457	* **Support on two ADE vertices means two physical points.**  A branch
+   458	  through their node gives one point, as in the even `A_r` survivor (3.5).
+   459	* **Every congruence solution occurs.**  Equations (3.1) and (4.2) are only
+   460	  the Cartier-lattice gate.  The effective cone and analytic incidence map
+   461	  remain unproved.
+   462	* **`A.R=8` always bounds `sum n`.**  The proof needs a pullback line meeting
+   463	  the different properly.  It can fail at a nonfinite coefficient basepoint.
+   464	* **Connected infinity and different must meet transversely many times.**
+   465	  In a forest their entire intersection must instead collapse to one
+   466	  connector; all eight intersection units may be concentrated there.
+   467	* **A common infinity/different carrier has nonnegative residual
+   468	  intersection.**  Proper intersection has failed, so (5.6) cannot be used.
+   469	
+   470	The exact remaining finite task in the projectively finite,
+   471	no-common-carrier stratum is to enumerate the pairs
+   472	
+   473	```text
+   474	(a,n) in (C Z^r intersect (Z_(>=0)^r minus {0}))^2,
+   475	sum n_i<=8,       a^t C^(-1)n<=8,                   (8.1)
+   476	```
+   477	
+   478	together with their partitions into physical analytic branches, the single-
+   479	connector forest condition, simultaneous embeddings of all singular trees
+   480	in `D9`, and effectivity of the strict carrier classes in the ruled
+   481	nine-blowup marking.  Formula (8.1) is finite and exact, but this packet does
+   482	not assert that every pair is realized.
+   483	
+   484	Separately unresolved are: a different component contained in infinity; a
+   485	vertical/base fibre contained in the different; projective or affine
+   486	coefficient-basepoint nonfiniteness; the local analytic restriction imposed
+   487	by an actual bidegree-`(2,3)` equation; and simultaneous effective
+   488	realization of the allowed root embeddings.  Nonnormal incidence closures
+   489	remain governed by their normalization and conductor packet and are not
+   490	mixed into this theorem.
+   491	
+   492	Also outside are a proof that an arbitrary cubic block has a quadratic
+   493	presentation, basis minimization, higher coefficient degree, another block
+   494	degree, primitivity, a polynomial map, a counterexample, and JC2.  No CAS,
+   495	finite-field sampling, AWS, or `jc2-lean` operation enters this packet.
+   496	
+   497	<!-- BODY-END -->
+   498	
+   499	## Seal
+   500	
+   501	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   502	  including its terminating newline; this seal is outside the body.
+   503	- Body bytes: `19667`.
+   504	- Body SHA-256:
+   505	  `5a1985f48f6b61d4f12b288942b3bbb753b45f3e18a6e31b85cbc077ccd8e2ef`.
+   506	- Frozen basis: `dca72076aa1615b0b1286fd4428a1acac7b65963`.
+
+codex
+I have enough evidence for the report. The arithmetic and machine enumeration check out; the only corrections I’m going to require are promotion/scope repairs, especially around what the physical-germ DP and one-connected forest cut can actually certify.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md
+diff --git a/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..09edb1fb74e0c106d391144e58787a5928b643c0
+--- /dev/null
++++ b/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,230 @@
++# Hostile review: capped local ADE Cartier-pair enumeration
++
++Verdict: **CONFIRM_WITH_CORRECTIONS**.
++
++I confirm the exact local enumeration and the advertised totals on review basis
++`02572552f8f894ede08acb4a020a3af722b03e54`.  I do not confirm any promotion
++from these formal local data to effective exceptional curves, analytic
++incidence equations, polynomial maps, counterexamples, or JC2 evidence.
++
++## 1. Artifact Identity And Scope
++
++**CONFIRMED.**  The submitted artifact identities match the prompt:
++
++```text
++memo SHA-256:        03263fe7f7d97356f07291bb30ec38d5b4182a1ffc85fcbf57722d59cf3b50a9
++script SHA-256:      d79fd1c484f229a0d564f537e29a31de6b86c97250db7649a6edf2de34ee8a94
++gzip SHA-256:        bfbd89d61d1181bc0bdb9a243c8d3b85074541194621eb57047af9ecf884e279
++canonical JSON SHA:  11ca074c9a4bc6656960222897d8c674f8486970b7a20cb1975cfcdb818d1d19
++canonical JSON bytes: 3762426
++```
++
++The scope firewall in `xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md:38`
++is essential and must remain attached to every use of the table: this is one
++connected local exceptional component of one fixed type at a time.  The
++predecessor cap is a proper-intersection cap: target-line cap eight is licensed
++only under the no-common-curve hypothesis in
++`xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md:293`;
++the `B`-fibre cap four is separately conditional at lines 329-349.  Neither cap
++allocates a single global budget among several singular points unless a separate
++global proper-intersection identity and the relevant slice data are being used.
++
++## 2. A/D Integrality Gates
++
++**CONFIRMED.**  For `A_r`, with chain numbering `1--...--r`, the inverse of the
++Cartan matrix has entries
++
++```text
++(C_A^-1)_{j i}=min(i,j)*(r+1-max(i,j))/(r+1).
++```
++
++Therefore
++
++```text
++m_j=((r+1-j) sum_{i<=j} i n_i
++     +j sum_{i>j} (r+1-i)n_i)/(r+1),
++```
++
++matching the memo at lines 101-112 and the script at
++`ops/ade_cartan_pair_enumerate.py:68`.  The cokernel test is exactly
++`sum i n_i = 0 mod r+1`: the weight vector `(1,...,r)` kills the columns of
++`C_A` modulo `r+1` and is surjective because the first coordinate has weight
++one.  No further lattice condition is missing.
++
++For `D_r`, with chain `1--...--(r-2)` and fork vertices `r-1,r`, put
++`a=n_{r-1}`, `b=n_r`, and `T=sum_{i=1}^{r-2} i n_i`.  Solving the Cartan
++equations gives
++
++```text
++m_j=sum_{i=1}^{r-2} min(i,j)n_i + j(a+b)/2,  1<=j<=r-2,
++m_{r-1}=(2T+r a+(r-2)b)/4,
++m_r    =(2T+(r-2)a+r b)/4.
++```
++
++Thus the necessary and sufficient integrality conditions are
++`a=b mod 2` and `2T+(r-2)a+r b=0 mod 4`; the other spin numerator differs by
++`2(a-b)`, so parity makes the two spin congruences equivalent.  This matches
++the memo at lines 114-134 and the script at `ops/ade_cartan_pair_enumerate.py:87`.
++
++Because a connected finite ADE Cartan matrix is a positive definite irreducible
++M-matrix, `C^-1` is entrywise strictly positive.  Hence every nonzero
++`n>=0` with `n in C Z^r` gives `m=C^-1 n` with all `m_i>0`; conversely every
++positive integral `m` with `Cm>=0` gives such an `n`.  Enumerating all nonzero
++weak compositions through weight eight is therefore exactly equivalent to all
++capped positive integral solutions.  There is no hidden positivity gate after
++integrality.
++
++## 3. Script And Data Audit
++
++**CONFIRMED.**  I audited the standard-library producer line by line.
++
++The Cartan graph construction in `ops/ade_cartan_pair_enumerate.py:45` is
++correct.  For `D_r`, the generated edges are the chain through vertex `r-1`
++plus the second fork edge from `r-2` to `r`; as an undirected graph this is
++exactly the memo's convention.  For `D4`, this gives arms `1,3,4` around
++vertex `2`, and the triality group at lines 165-174 is the full `S_3` on those
++arms.  For `D_r`, `r>=5`, line 175 swaps only the two spin vertices.  For
++`A_r`, line 162 correctly gives chain reversal, deduplicating `A1`.
++
++The Weyl sentence is also correct in its limited sense.  If
++`lambda=sum m_i alpha_i`, then `(lambda,alpha_i)=(Cm)_i=n_i`; thus `n>=0` puts
++`lambda` in the closed dominant chamber.  A finite Weyl orbit has exactly one
++closed-dominant representative.  The script does not quotient by Weyl
++reflections; diagram canonicalization begins only at line 325.
++
++Canonicalization, orbit recovery, cap nesting, and summary aggregation check
++out.  I independently rebuilt graph automorphism groups by brute-force edge
++preservation, solved all candidate systems over `fractions.Fraction`, recomputed
++the multiset germ DP, and compared every canonical JSON record.  The check
++matched:
++
++```text
++candidate vectors before congruence filters: cap8 72695, cap4 3218
++all pairs:             cap8 16360 raw / 12238 canonical
++all pairs:             cap4   772 raw /   646 canonical
++one-germ survivors:    cap8   718 raw /   563 canonical
++one-germ survivors:    cap4   198 raw /   163 canonical
++canonical min histogram cap8: 1:563, 2:4180, 3:5312, 4:1915, 5:268
++canonical min histogram cap4: 1:163, 2:356, 3:114, 4:13
++```
++
++The script's own `--deep-check --summary` path also reported
++`deep_check_vectors=72695` and the same totals.  Rebuilding the payload through
++the checked-in script in memory produced the exact compressed bytes; the gzip
++header has `mtime=0`.
++
++## 4. Physical-Germ Atom Model
++
++**CONFIRM_WITH_CORRECTIONS.**  The atom model is locally correct, but it must
++not be promoted beyond numerical local signatures.
++
++On a smooth SNC resolution, one irreducible strict branch not contained in the
++exceptional divisor has one center on the exceptional locus.  At a smooth point
++of `E_i`, local coordinates give intersection vector `k e_i`.  At a node
++`E_i intersect E_j`, local coordinates `xy=0` give vector `u e_i+v e_j` with
++`u,v>0`.  There is no third support possibility on the minimal SNC exceptional
++tree.  Conversely, each single numerical atom is locally realizable as a
++reduced irreducible plane branch: for `gcd(u,v)>1`, adding a higher primitive
++term preserves the two leading intersection orders while making the
++parametrization primitive.
++
++The generating-function DP in `ops/ade_cartan_pair_enumerate.py:231` counts
++unordered multisets of atom types correctly.  The update processes each atom
++type once and permits repeated use only through increasing total weight, which
++is the standard unbounded coin-change recurrence for multisets.  The base-`9`
++encoding has no carries for vectors of total weight at most eight.  The
++metadata map is collision-free for ADE trees because a positive two-coordinate
++atom determines its unique edge.
++
++Repair required for promotion: the DP minimum lower-bounds the number of actual
++analytic local branch germs only after an actual strict divisor is already
++given.  It does not lower-bound the number of global carrier components,
++distinct physical points on the minimal exceptional divisor, separated final
++leaves before embedded resolution, or realized incidence solutions.  A counted
++partition is a necessary numerical decomposition, not a simultaneous analytic
++realization theorem for the charged different.
++
++## 5. Forest Cut
++
++**CONFIRM_WITH_CORRECTIONS.**  The forest conclusions are correct only in the
++conditional form stated in the memo.
++
++Without carrier labels, the unit-vertex decomposition `n=sum n_i e_i` can be
++drawn with separate outside leaves attached to the ADE tree.  This proves only
++non-exclusion by the unlabelled local forest test; it proves neither analytic
++realization nor global connected-carrier compatibility.  The memo says this at
++`xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md:286`, and that
++wording should be preserved.
++
++Under the stated one-connected-outside-carrier hypothesis, two separated final
++joining edges between the connected inner resolved tree and the connected
++outside reduced carrier graph force a cycle: take the unique path inside the
++inner tree and a path inside the outside graph.  Therefore at most one analytic
++branch can occur; since `n` is nonzero for an actual record, this means exactly
++one local germ.  The one-germ numerical filter is then exact, giving the
++confirmed `718/563` and `198/163` survivor counts.
++
++Required guardrail: shared trunks, coincident physical points, branches
++initially passing through the same ADE node, and node blowups do not invalidate
++the cut only if the common trunks are included in the connected inner graph and
++the argument is applied to distinct final joining edges on one common embedded
++SNC resolution.  Carrier intersections or shared nonexceptional components
++destroy the disjoint-connected-subgraph hypothesis and must be handled
++separately.
++
++## 6. Scope Enforcement
++
++**CONFIRM_WITH_CORRECTIONS.**  The maximum safe result is:
++
++```text
++An exact finite table of local numerical Cartier pairs (m,n), for one connected
++ADE exceptional component of type A1..A8 or D4..D9 at one point, under the
++proper target-line cap sum n_i<=8 and the separately conditional proper
++B-fibre cap sum n_i<=4, together with diagram-automorphism orbits and exact
++unordered numerical germ-signature partition polynomials.
++
++If, on one common embedded SNC resolution, the actual outside carriers form one
++connected subgraph disjoint from the inner attachment graph before distinct
++final joining edges, then only the one-germ records can survive.
++```
++
++Everything stronger remains open: disconnected ADE multisets, simultaneous
++`D9(-1)` embeddings, effective exceptional curves, paired infinity vectors
++`(h,a)`, carrier labels, analytic incidence equations, polynomial maps, and
++global slice-budget allocation.  The all-type totals are a disjoint local sum,
++not a count of global configurations.  The cap eight is per chosen proper
++target-line local consequence; the cap four is a separate proper `B`-fibre
++stratum.  Neither is a license to spend one global budget across unrelated
++points without the actual proper-intersection identity.
++
++## 7. Repairs
++
++No script or canonical-data repair is required.
++
++Promotion repairs required:
++
++1. Every citation of `16360/12238`, `772/646`, `718/563`, or `198/163` must say
++   "one connected local ADE component" and must state the relevant properness
++   cap.
++2. Replace any unqualified "survivor" by "not excluded local numerical
++   signature" unless effectivity and incidence realization have been proved.
++3. State that the DP minimum is a lower bound for actual analytic local branch
++   germs only, not for global carriers or physical points.
++4. State the one-germ forest cut only with the connected-outside-carrier,
++   disjointness, common-SNC-resolution, and distinct-final-joining-edge
++   hypotheses.
++5. Keep the predecessor's common-component and nonfinite strata open; do not
++   cap them by analogy.
++
++## 8. Cheapest Decisive Successor
++
++The cheapest global successor is not another local Cartier enumeration.  It is
++a carrier-labelled finite global packet: for each actual singular point, attach
++the strict different/infinity carrier labels and the paired boundary data
++`(h,a)`, verify the proper-intersection identities, enumerate simultaneous
++effective embeddings in the fixed `D9(-1)` marking, and then apply the
++one-connected outside-carrier forest cut only where its hypotheses are
++certified.  This is the smallest step that can turn the confirmed local table
++from a threat map into a genuine global exclusion or realization test.
++
++<!-- BODY-END -->
+
+diff --git a/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..09edb1fb74e0c106d391144e58787a5928b643c0
+--- /dev/null
++++ b/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,230 @@
++# Hostile review: capped local ADE Cartier-pair enumeration
++
++Verdict: **CONFIRM_WITH_CORRECTIONS**.
++
++I confirm the exact local enumeration and the advertised totals on review basis
++`02572552f8f894ede08acb4a020a3af722b03e54`.  I do not confirm any promotion
++from these formal local data to effective exceptional curves, analytic
++incidence equations, polynomial maps, counterexamples, or JC2 evidence.
++
++## 1. Artifact Identity And Scope
++
++**CONFIRMED.**  The submitted artifact identities match the prompt:
++
++```text
++memo SHA-256:        03263fe7f7d97356f07291bb30ec38d5b4182a1ffc85fcbf57722d59cf3b50a9
++script SHA-256:      d79fd1c484f229a0d564f537e29a31de6b86c97250db7649a6edf2de34ee8a94
++gzip SHA-256:        bfbd89d61d1181bc0bdb9a243c8d3b85074541194621eb57047af9ecf884e279
++canonical JSON SHA:  11ca074c9a4bc6656960222897d8c674f8486970b7a20cb1975cfcdb818d1d19
++canonical JSON bytes: 3762426
++```
++
++The scope firewall in `xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md:38`
++is essential and must remain attached to every use of the table: this is one
++connected local exceptional component of one fixed type at a time.  The
++predecessor cap is a proper-intersection cap: target-line cap eight is licensed
++only under the no-common-curve hypothesis in
++`xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md:293`;
++the `B`-fibre cap four is separately conditional at lines 329-349.  Neither cap
++allocates a single global budget among several singular points unless a separate
++global proper-intersection identity and the relevant slice data are being used.
++
++## 2. A/D Integrality Gates
++
++**CONFIRMED.**  For `A_r`, with chain numbering `1--...--r`, the inverse of the
++Cartan matrix has entries
++
++```text
++(C_A^-1)_{j i}=min(i,j)*(r+1-max(i,j))/(r+1).
++```
++
++Therefore
++
++```text
++m_j=((r+1-j) sum_{i<=j} i n_i
++     +j sum_{i>j} (r+1-i)n_i)/(r+1),
++```
++
++matching the memo at lines 101-112 and the script at
++`ops/ade_cartan_pair_enumerate.py:68`.  The cokernel test is exactly
++`sum i n_i = 0 mod r+1`: the weight vector `(1,...,r)` kills the columns of
++`C_A` modulo `r+1` and is surjective because the first coordinate has weight
++one.  No further lattice condition is missing.
++
++For `D_r`, with chain `1--...--(r-2)` and fork vertices `r-1,r`, put
++`a=n_{r-1}`, `b=n_r`, and `T=sum_{i=1}^{r-2} i n_i`.  Solving the Cartan
++equations gives
++
++```text
++m_j=sum_{i=1}^{r-2} min(i,j)n_i + j(a+b)/2,  1<=j<=r-2,
++m_{r-1}=(2T+r a+(r-2)b)/4,
++m_r    =(2T+(r-2)a+r b)/4.
++```
++
++Thus the necessary and sufficient integrality conditions are
++`a=b mod 2` and `2T+(r-2)a+r b=0 mod 4`; the other spin numerator differs by
++`2(a-b)`, so parity makes the two spin congruences equivalent.  This matches
++the memo at lines 114-134 and the script at `ops/ade_cartan_pair_enumerate.py:87`.
++
++Because a connected finite ADE Cartan matrix is a positive definite irreducible
++M-matrix, `C^-1` is entrywise strictly positive.  Hence every nonzero
++`n>=0` with `n in C Z^r` gives `m=C^-1 n` with all `m_i>0`; conversely every
++positive integral `m` with `Cm>=0` gives such an `n`.  Enumerating all nonzero
++weak compositions through weight eight is therefore exactly equivalent to all
++capped positive integral solutions.  There is no hidden positivity gate after
++integrality.
++
++## 3. Script And Data Audit
++
++**CONFIRMED.**  I audited the standard-library producer line by line.
++
++The Cartan graph construction in `ops/ade_cartan_pair_enumerate.py:45` is
++correct.  For `D_r`, the generated edges are the chain through vertex `r-1`
++plus the second fork edge from `r-2` to `r`; as an undirected graph this is
++exactly the memo's convention.  For `D4`, this gives arms `1,3,4` around
++vertex `2`, and the triality group at lines 165-174 is the full `S_3` on those
++arms.  For `D_r`, `r>=5`, line 175 swaps only the two spin vertices.  For
++`A_r`, line 162 correctly gives chain reversal, deduplicating `A1`.
++
++The Weyl sentence is also correct in its limited sense.  If
++`lambda=sum m_i alpha_i`, then `(lambda,alpha_i)=(Cm)_i=n_i`; thus `n>=0` puts
++`lambda` in the closed dominant chamber.  A finite Weyl orbit has exactly one
++closed-dominant representative.  The script does not quotient by Weyl
++reflections; diagram canonicalization begins only at line 325.
++
++Canonicalization, orbit recovery, cap nesting, and summary aggregation check
++out.  I independently rebuilt graph automorphism groups by brute-force edge
++preservation, solved all candidate systems over `fractions.Fraction`, recomputed
++the multiset germ DP, and compared every canonical JSON record.  The check
++matched:
++
++```text
++candidate vectors before congruence filters: cap8 72695, cap4 3218
++all pairs:             cap8 16360 raw / 12238 canonical
++all pairs:             cap4   772 raw /   646 canonical
++one-germ survivors:    cap8   718 raw /   563 canonical
++one-germ survivors:    cap4   198 raw /   163 canonical
++canonical min histogram cap8: 1:563, 2:4180, 3:5312, 4:1915, 5:268
++canonical min histogram cap4: 1:163, 2:356, 3:114, 4:13
++```
++
++The script's own `--deep-check --summary` path also reported
++`deep_check_vectors=72695` and the same totals.  Rebuilding the payload through
++the checked-in script in memory produced the exact compressed bytes; the gzip
++header has `mtime=0`.
++
++## 4. Physical-Germ Atom Model
++
++**CONFIRM_WITH_CORRECTIONS.**  The atom model is locally correct, but it must
++not be promoted beyond numerical local signatures.
++
++On a smooth SNC resolution, one irreducible strict branch not contained in the
++exceptional divisor has one center on the exceptional locus.  At a smooth point
++of `E_i`, local coordinates give intersection vector `k e_i`.  At a node
++`E_i intersect E_j`, local coordinates `xy=0` give vector `u e_i+v e_j` with
++`u,v>0`.  There is no third support possibility on the minimal SNC exceptional
++tree.  Conversely, each single numerical atom is locally realizable as a
++reduced irreducible plane branch: for `gcd(u,v)>1`, adding a higher primitive
++term preserves the two leading intersection orders while making the
++parametrization primitive.
++
++The generating-function DP in `ops/ade_cartan_pair_enumerate.py:231` counts
++unordered multisets of atom types correctly.  The update processes each atom
++type once and permits repeated use only through increasing total weight, which
++is the standard unbounded coin-change recurrence for multisets.  The base-`9`
++encoding has no carries for vectors of total weight at most eight.  The
++metadata map is collision-free for ADE trees because a positive two-coordinate
++atom determines its unique edge.
++
++Repair required for promotion: the DP minimum lower-bounds the number of actual
++analytic local branch germs only after an actual strict divisor is already
++given.  It does not lower-bound the number of global carrier components,
++distinct physical points on the minimal exceptional divisor, separated final
++leaves before embedded resolution, or realized incidence solutions.  A counted
++partition is a necessary numerical decomposition, not a simultaneous analytic
++realization theorem for the charged different.
++
++## 5. Forest Cut
++
++**CONFIRM_WITH_CORRECTIONS.**  The forest conclusions are correct only in the
++conditional form stated in the memo.
++
++Without carrier labels, the unit-vertex decomposition `n=sum n_i e_i` can be
++drawn with separate outside leaves attached to the ADE tree.  This proves only
++non-exclusion by the unlabelled local forest test; it proves neither analytic
++realization nor global connected-carrier compatibility.  The memo says this at
++`xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md:286`, and that
++wording should be preserved.
++
++Under the stated one-connected-outside-carrier hypothesis, two separated final
++joining edges between the connected inner resolved tree and the connected
++outside reduced carrier graph force a cycle: take the unique path inside the
++inner tree and a path inside the outside graph.  Therefore at most one analytic
++branch can occur; since `n` is nonzero for an actual record, this means exactly
++one local germ.  The one-germ numerical filter is then exact, giving the
++confirmed `718/563` and `198/163` survivor counts.
++
++Required guardrail: shared trunks, coincident physical points, branches
++initially passing through the same ADE node, and node blowups do not invalidate
++the cut only if the common trunks are included in the connected inner graph and
++the argument is applied to distinct final joining edges on one common embedded
++SNC resolution.  Carrier intersections or shared nonexceptional components
++destroy the disjoint-connected-subgraph hypothesis and must be handled
++separately.
++
++## 6. Scope Enforcement
++
++**CONFIRM_WITH_CORRECTIONS.**  The maximum safe result is:
++
++```text
++An exact finite table of local numerical Cartier pairs (m,n), for one connected
++ADE exceptional component of type A1..A8 or D4..D9 at one point, under the
++proper target-line cap sum n_i<=8 and the separately conditional proper
++B-fibre cap sum n_i<=4, together with diagram-automorphism orbits and exact
++unordered numerical germ-signature partition polynomials.
++
++If, on one common embedded SNC resolution, the actual outside carriers form one
++connected subgraph disjoint from the inner attachment graph before distinct
++final joining edges, then only the one-germ records can survive.
++```
++
++Everything stronger remains open: disconnected ADE multisets, simultaneous
++`D9(-1)` embeddings, effective exceptional curves, paired infinity vectors
++`(h,a)`, carrier labels, analytic incidence equations, polynomial maps, and
++global slice-budget allocation.  The all-type totals are a disjoint local sum,
++not a count of global configurations.  The cap eight is per chosen proper
++target-line local consequence; the cap four is a separate proper `B`-fibre
++stratum.  Neither is a license to spend one global budget across unrelated
++points without the actual proper-intersection identity.
++
++## 7. Repairs
++
++No script or canonical-data repair is required.
++
++Promotion repairs required:
++
++1. Every citation of `16360/12238`, `772/646`, `718/563`, or `198/163` must say
++   "one connected local ADE component" and must state the relevant properness
++   cap.
++2. Replace any unqualified "survivor" by "not excluded local numerical
++   signature" unless effectivity and incidence realization have been proved.
++3. State that the DP minimum is a lower bound for actual analytic local branch
++   germs only, not for global carriers or physical points.
++4. State the one-germ forest cut only with the connected-outside-carrier,
++   disjointness, common-SNC-resolution, and distinct-final-joining-edge
++   hypotheses.
++5. Keep the predecessor's common-component and nonfinite strata open; do not
++   cap them by analogy.
++
++## 8. Cheapest Decisive Successor
++
++The cheapest global successor is not another local Cartier enumeration.  It is
++a carrier-labelled finite global packet: for each actual singular point, attach
++the strict different/infinity carrier labels and the paired boundary data
++`(h,a)`, verify the proper-intersection identities, enumerate simultaneous
++effective embeddings in the fixed `D9(-1)` marking, and then apply the
++one-connected outside-carrier forest cut only where its hypotheses are
++certified.  This is the smallest step that can turn the confirmed local table
++from a threat map into a genuine global exclusion or realization test.
++
++<!-- BODY-END -->
+
+codex
+The requested report file is written. I’m doing a final path-specific sanity check now: only the report’s ending and size, not a repo-wide status pass.
+exec
+/bin/zsh -lc 'tail -5 xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+one-connected outside-carrier forest cut only where its hypotheses are
+certified.  This is the smallest step that can turn the confirmed local table
+from a threat map into a genuine global exclusion or realization test.
+
+<!-- BODY-END -->
+
+exec
+/bin/zsh -lc 'wc -c xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   11271 xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md
+
+exec
+/bin/zsh -lc "LC_ALL=C grep -n '["'^ -~]'"' xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md" in /Users/dc/code/math/jc2
+ exited 1 in 0ms:
+diff --git a/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..09edb1fb74e0c106d391144e58787a5928b643c0
+--- /dev/null
++++ b/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,230 @@
++# Hostile review: capped local ADE Cartier-pair enumeration
++
++Verdict: **CONFIRM_WITH_CORRECTIONS**.
++
++I confirm the exact local enumeration and the advertised totals on review basis
++`02572552f8f894ede08acb4a020a3af722b03e54`.  I do not confirm any promotion
++from these formal local data to effective exceptional curves, analytic
++incidence equations, polynomial maps, counterexamples, or JC2 evidence.
++
++## 1. Artifact Identity And Scope
++
++**CONFIRMED.**  The submitted artifact identities match the prompt:
++
++```text
++memo SHA-256:        03263fe7f7d97356f07291bb30ec38d5b4182a1ffc85fcbf57722d59cf3b50a9
++script SHA-256:      d79fd1c484f229a0d564f537e29a31de6b86c97250db7649a6edf2de34ee8a94
++gzip SHA-256:        bfbd89d61d1181bc0bdb9a243c8d3b85074541194621eb57047af9ecf884e279
++canonical JSON SHA:  11ca074c9a4bc6656960222897d8c674f8486970b7a20cb1975cfcdb818d1d19
++canonical JSON bytes: 3762426
++```
++
++The scope firewall in `xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md:38`
++is essential and must remain attached to every use of the table: this is one
++connected local exceptional component of one fixed type at a time.  The
++predecessor cap is a proper-intersection cap: target-line cap eight is licensed
++only under the no-common-curve hypothesis in
++`xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md:293`;
++the `B`-fibre cap four is separately conditional at lines 329-349.  Neither cap
++allocates a single global budget among several singular points unless a separate
++global proper-intersection identity and the relevant slice data are being used.
++
++## 2. A/D Integrality Gates
++
++**CONFIRMED.**  For `A_r`, with chain numbering `1--...--r`, the inverse of the
++Cartan matrix has entries
++
++```text
++(C_A^-1)_{j i}=min(i,j)*(r+1-max(i,j))/(r+1).
++```
++
++Therefore
++
++```text
++m_j=((r+1-j) sum_{i<=j} i n_i
++     +j sum_{i>j} (r+1-i)n_i)/(r+1),
++```
++
++matching the memo at lines 101-112 and the script at
++`ops/ade_cartan_pair_enumerate.py:68`.  The cokernel test is exactly
++`sum i n_i = 0 mod r+1`: the weight vector `(1,...,r)` kills the columns of
++`C_A` modulo `r+1` and is surjective because the first coordinate has weight
++one.  No further lattice condition is missing.
++
++For `D_r`, with chain `1--...--(r-2)` and fork vertices `r-1,r`, put
++`a=n_{r-1}`, `b=n_r`, and `T=sum_{i=1}^{r-2} i n_i`.  Solving the Cartan
++equations gives
++
++```text
++m_j=sum_{i=1}^{r-2} min(i,j)n_i + j(a+b)/2,  1<=j<=r-2,
++m_{r-1}=(2T+r a+(r-2)b)/4,
++m_r    =(2T+(r-2)a+r b)/4.
++```
++
++Thus the necessary and sufficient integrality conditions are
++`a=b mod 2` and `2T+(r-2)a+r b=0 mod 4`; the other spin numerator differs by
++`2(a-b)`, so parity makes the two spin congruences equivalent.  This matches
++the memo at lines 114-134 and the script at `ops/ade_cartan_pair_enumerate.py:87`.
++
++Because a connected finite ADE Cartan matrix is a positive definite irreducible
++M-matrix, `C^-1` is entrywise strictly positive.  Hence every nonzero
++`n>=0` with `n in C Z^r` gives `m=C^-1 n` with all `m_i>0`; conversely every
++positive integral `m` with `Cm>=0` gives such an `n`.  Enumerating all nonzero
++weak compositions through weight eight is therefore exactly equivalent to all
++capped positive integral solutions.  There is no hidden positivity gate after
++integrality.
++
++## 3. Script And Data Audit
++
++**CONFIRMED.**  I audited the standard-library producer line by line.
++
++The Cartan graph construction in `ops/ade_cartan_pair_enumerate.py:45` is
++correct.  For `D_r`, the generated edges are the chain through vertex `r-1`
++plus the second fork edge from `r-2` to `r`; as an undirected graph this is
++exactly the memo's convention.  For `D4`, this gives arms `1,3,4` around
++vertex `2`, and the triality group at lines 165-174 is the full `S_3` on those
++arms.  For `D_r`, `r>=5`, line 175 swaps only the two spin vertices.  For
++`A_r`, line 162 correctly gives chain reversal, deduplicating `A1`.
++
++The Weyl sentence is also correct in its limited sense.  If
++`lambda=sum m_i alpha_i`, then `(lambda,alpha_i)=(Cm)_i=n_i`; thus `n>=0` puts
++`lambda` in the closed dominant chamber.  A finite Weyl orbit has exactly one
++closed-dominant representative.  The script does not quotient by Weyl
++reflections; diagram canonicalization begins only at line 325.
++
++Canonicalization, orbit recovery, cap nesting, and summary aggregation check
++out.  I independently rebuilt graph automorphism groups by brute-force edge
++preservation, solved all candidate systems over `fractions.Fraction`, recomputed
++the multiset germ DP, and compared every canonical JSON record.  The check
++matched:
++
++```text
++candidate vectors before congruence filters: cap8 72695, cap4 3218
++all pairs:             cap8 16360 raw / 12238 canonical
++all pairs:             cap4   772 raw /   646 canonical
++one-germ survivors:    cap8   718 raw /   563 canonical
++one-germ survivors:    cap4   198 raw /   163 canonical
++canonical min histogram cap8: 1:563, 2:4180, 3:5312, 4:1915, 5:268
++canonical min histogram cap4: 1:163, 2:356, 3:114, 4:13
++```
++
++The script's own `--deep-check --summary` path also reported
++`deep_check_vectors=72695` and the same totals.  Rebuilding the payload through
++the checked-in script in memory produced the exact compressed bytes; the gzip
++header has `mtime=0`.
++
++## 4. Physical-Germ Atom Model
++
++**CONFIRM_WITH_CORRECTIONS.**  The atom model is locally correct, but it must
++not be promoted beyond numerical local signatures.
++
++On a smooth SNC resolution, one irreducible strict branch not contained in the
++exceptional divisor has one center on the exceptional locus.  At a smooth point
++of `E_i`, local coordinates give intersection vector `k e_i`.  At a node
++`E_i intersect E_j`, local coordinates `xy=0` give vector `u e_i+v e_j` with
++`u,v>0`.  There is no third support possibility on the minimal SNC exceptional
++tree.  Conversely, each single numerical atom is locally realizable as a
++reduced irreducible plane branch: for `gcd(u,v)>1`, adding a higher primitive
++term preserves the two leading intersection orders while making the
++parametrization primitive.
++
++The generating-function DP in `ops/ade_cartan_pair_enumerate.py:231` counts
++unordered multisets of atom types correctly.  The update processes each atom
++type once and permits repeated use only through increasing total weight, which
++is the standard unbounded coin-change recurrence for multisets.  The base-`9`
++encoding has no carries for vectors of total weight at most eight.  The
++metadata map is collision-free for ADE trees because a positive two-coordinate
++atom determines its unique edge.
++
++Repair required for promotion: the DP minimum lower-bounds the number of actual
++analytic local branch germs only after an actual strict divisor is already
++given.  It does not lower-bound the number of global carrier components,
++distinct physical points on the minimal exceptional divisor, separated final
++leaves before embedded resolution, or realized incidence solutions.  A counted
++partition is a necessary numerical decomposition, not a simultaneous analytic
++realization theorem for the charged different.
++
++## 5. Forest Cut
++
++**CONFIRM_WITH_CORRECTIONS.**  The forest conclusions are correct only in the
++conditional form stated in the memo.
++
++Without carrier labels, the unit-vertex decomposition `n=sum n_i e_i` can be
++drawn with separate outside leaves attached to the ADE tree.  This proves only
++non-exclusion by the unlabelled local forest test; it proves neither analytic
++realization nor global connected-carrier compatibility.  The memo says this at
++`xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md:286`, and that
++wording should be preserved.
++
++Under the stated one-connected-outside-carrier hypothesis, two separated final
++joining edges between the connected inner resolved tree and the connected
++outside reduced carrier graph force a cycle: take the unique path inside the
++inner tree and a path inside the outside graph.  Therefore at most one analytic
++branch can occur; since `n` is nonzero for an actual record, this means exactly
++one local germ.  The one-germ numerical filter is then exact, giving the
++confirmed `718/563` and `198/163` survivor counts.
++
++Required guardrail: shared trunks, coincident physical points, branches
++initially passing through the same ADE node, and node blowups do not invalidate
++the cut only if the common trunks are included in the connected inner graph and
++the argument is applied to distinct final joining edges on one common embedded
++SNC resolution.  Carrier intersections or shared nonexceptional components
++destroy the disjoint-connected-subgraph hypothesis and must be handled
++separately.
++
++## 6. Scope Enforcement
++
++**CONFIRM_WITH_CORRECTIONS.**  The maximum safe result is:
++
++```text
++An exact finite table of local numerical Cartier pairs (m,n), for one connected
++ADE exceptional component of type A1..A8 or D4..D9 at one point, under the
++proper target-line cap sum n_i<=8 and the separately conditional proper
++B-fibre cap sum n_i<=4, together with diagram-automorphism orbits and exact
++unordered numerical germ-signature partition polynomials.
++
++If, on one common embedded SNC resolution, the actual outside carriers form one
++connected subgraph disjoint from the inner attachment graph before distinct
++final joining edges, then only the one-germ records can survive.
++```
++
++Everything stronger remains open: disconnected ADE multisets, simultaneous
++`D9(-1)` embeddings, effective exceptional curves, paired infinity vectors
++`(h,a)`, carrier labels, analytic incidence equations, polynomial maps, and
++global slice-budget allocation.  The all-type totals are a disjoint local sum,
++not a count of global configurations.  The cap eight is per chosen proper
++target-line local consequence; the cap four is a separate proper `B`-fibre
++stratum.  Neither is a license to spend one global budget across unrelated
++points without the actual proper-intersection identity.
++
++## 7. Repairs
++
++No script or canonical-data repair is required.
++
++Promotion repairs required:
++
++1. Every citation of `16360/12238`, `772/646`, `718/563`, or `198/163` must say
++   "one connected local ADE component" and must state the relevant properness
++   cap.
++2. Replace any unqualified "survivor" by "not excluded local numerical
++   signature" unless effectivity and incidence realization have been proved.
++3. State that the DP minimum is a lower bound for actual analytic local branch
++   germs only, not for global carriers or physical points.
++4. State the one-germ forest cut only with the connected-outside-carrier,
++   disjointness, common-SNC-resolution, and distinct-final-joining-edge
++   hypotheses.
++5. Keep the predecessor's common-component and nonfinite strata open; do not
++   cap them by analogy.
++
++## 8. Cheapest Decisive Successor
++
++The cheapest global successor is not another local Cartier enumeration.  It is
++a carrier-labelled finite global packet: for each actual singular point, attach
++the strict different/infinity carrier labels and the paired boundary data
++`(h,a)`, verify the proper-intersection identities, enumerate simultaneous
++effective embeddings in the fixed `D9(-1)` marking, and then apply the
++one-connected outside-carrier forest cut only where its hypotheses are
++certified.  This is the smallest step that can turn the confirmed local table
++from a threat map into a genuine global exclusion or realization test.
++
++<!-- BODY-END -->
+
+codex
+Wrote the requested report:
+
+[xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md](/Users/dc/code/math/jc2/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md:1)
+
+Verdict: `CONFIRM_WITH_CORRECTIONS`. The enumeration, script, data hashes, deep check, independent exact checker, totals, orbit recovery, germ DP, and gzip rebuild all check out. The corrections are scope/promotion guardrails: local numerical tables only, conditional forest cut only, no effectivity/incidence/global JC2 promotion.
+
+The report ends with the required standalone `<!-- BODY-END -->` line and has no seal block.
+diff --git a/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..09edb1fb74e0c106d391144e58787a5928b643c0
+--- /dev/null
++++ b/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,230 @@
++# Hostile review: capped local ADE Cartier-pair enumeration
++
++Verdict: **CONFIRM_WITH_CORRECTIONS**.
++
++I confirm the exact local enumeration and the advertised totals on review basis
++`02572552f8f894ede08acb4a020a3af722b03e54`.  I do not confirm any promotion
++from these formal local data to effective exceptional curves, analytic
++incidence equations, polynomial maps, counterexamples, or JC2 evidence.
++
++## 1. Artifact Identity And Scope
++
++**CONFIRMED.**  The submitted artifact identities match the prompt:
++
++```text
++memo SHA-256:        03263fe7f7d97356f07291bb30ec38d5b4182a1ffc85fcbf57722d59cf3b50a9
++script SHA-256:      d79fd1c484f229a0d564f537e29a31de6b86c97250db7649a6edf2de34ee8a94
++gzip SHA-256:        bfbd89d61d1181bc0bdb9a243c8d3b85074541194621eb57047af9ecf884e279
++canonical JSON SHA:  11ca074c9a4bc6656960222897d8c674f8486970b7a20cb1975cfcdb818d1d19
++canonical JSON bytes: 3762426
++```
++
++The scope firewall in `xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md:38`
++is essential and must remain attached to every use of the table: this is one
++connected local exceptional component of one fixed type at a time.  The
++predecessor cap is a proper-intersection cap: target-line cap eight is licensed
++only under the no-common-curve hypothesis in
++`xmodel/bd-a2-ade-decorated-boundary-different-threat-map-sol56-20260830.md:293`;
++the `B`-fibre cap four is separately conditional at lines 329-349.  Neither cap
++allocates a single global budget among several singular points unless a separate
++global proper-intersection identity and the relevant slice data are being used.
++
++## 2. A/D Integrality Gates
++
++**CONFIRMED.**  For `A_r`, with chain numbering `1--...--r`, the inverse of the
++Cartan matrix has entries
++
++```text
++(C_A^-1)_{j i}=min(i,j)*(r+1-max(i,j))/(r+1).
++```
++
++Therefore
++
++```text
++m_j=((r+1-j) sum_{i<=j} i n_i
++     +j sum_{i>j} (r+1-i)n_i)/(r+1),
++```
++
++matching the memo at lines 101-112 and the script at
++`ops/ade_cartan_pair_enumerate.py:68`.  The cokernel test is exactly
++`sum i n_i = 0 mod r+1`: the weight vector `(1,...,r)` kills the columns of
++`C_A` modulo `r+1` and is surjective because the first coordinate has weight
++one.  No further lattice condition is missing.
++
++For `D_r`, with chain `1--...--(r-2)` and fork vertices `r-1,r`, put
++`a=n_{r-1}`, `b=n_r`, and `T=sum_{i=1}^{r-2} i n_i`.  Solving the Cartan
++equations gives
++
++```text
++m_j=sum_{i=1}^{r-2} min(i,j)n_i + j(a+b)/2,  1<=j<=r-2,
++m_{r-1}=(2T+r a+(r-2)b)/4,
++m_r    =(2T+(r-2)a+r b)/4.
++```
++
++Thus the necessary and sufficient integrality conditions are
++`a=b mod 2` and `2T+(r-2)a+r b=0 mod 4`; the other spin numerator differs by
++`2(a-b)`, so parity makes the two spin congruences equivalent.  This matches
++the memo at lines 114-134 and the script at `ops/ade_cartan_pair_enumerate.py:87`.
++
++Because a connected finite ADE Cartan matrix is a positive definite irreducible
++M-matrix, `C^-1` is entrywise strictly positive.  Hence every nonzero
++`n>=0` with `n in C Z^r` gives `m=C^-1 n` with all `m_i>0`; conversely every
++positive integral `m` with `Cm>=0` gives such an `n`.  Enumerating all nonzero
++weak compositions through weight eight is therefore exactly equivalent to all
++capped positive integral solutions.  There is no hidden positivity gate after
++integrality.
++
++## 3. Script And Data Audit
++
++**CONFIRMED.**  I audited the standard-library producer line by line.
++
++The Cartan graph construction in `ops/ade_cartan_pair_enumerate.py:45` is
++correct.  For `D_r`, the generated edges are the chain through vertex `r-1`
++plus the second fork edge from `r-2` to `r`; as an undirected graph this is
++exactly the memo's convention.  For `D4`, this gives arms `1,3,4` around
++vertex `2`, and the triality group at lines 165-174 is the full `S_3` on those
++arms.  For `D_r`, `r>=5`, line 175 swaps only the two spin vertices.  For
++`A_r`, line 162 correctly gives chain reversal, deduplicating `A1`.
++
++The Weyl sentence is also correct in its limited sense.  If
++`lambda=sum m_i alpha_i`, then `(lambda,alpha_i)=(Cm)_i=n_i`; thus `n>=0` puts
++`lambda` in the closed dominant chamber.  A finite Weyl orbit has exactly one
++closed-dominant representative.  The script does not quotient by Weyl
++reflections; diagram canonicalization begins only at line 325.
++
++Canonicalization, orbit recovery, cap nesting, and summary aggregation check
++out.  I independently rebuilt graph automorphism groups by brute-force edge
++preservation, solved all candidate systems over `fractions.Fraction`, recomputed
++the multiset germ DP, and compared every canonical JSON record.  The check
++matched:
++
++```text
++candidate vectors before congruence filters: cap8 72695, cap4 3218
++all pairs:             cap8 16360 raw / 12238 canonical
++all pairs:             cap4   772 raw /   646 canonical
++one-germ survivors:    cap8   718 raw /   563 canonical
++one-germ survivors:    cap4   198 raw /   163 canonical
++canonical min histogram cap8: 1:563, 2:4180, 3:5312, 4:1915, 5:268
++canonical min histogram cap4: 1:163, 2:356, 3:114, 4:13
++```
++
++The script's own `--deep-check --summary` path also reported
++`deep_check_vectors=72695` and the same totals.  Rebuilding the payload through
++the checked-in script in memory produced the exact compressed bytes; the gzip
++header has `mtime=0`.
++
++## 4. Physical-Germ Atom Model
++
++**CONFIRM_WITH_CORRECTIONS.**  The atom model is locally correct, but it must
++not be promoted beyond numerical local signatures.
++
++On a smooth SNC resolution, one irreducible strict branch not contained in the
++exceptional divisor has one center on the exceptional locus.  At a smooth point
++of `E_i`, local coordinates give intersection vector `k e_i`.  At a node
++`E_i intersect E_j`, local coordinates `xy=0` give vector `u e_i+v e_j` with
++`u,v>0`.  There is no third support possibility on the minimal SNC exceptional
++tree.  Conversely, each single numerical atom is locally realizable as a
++reduced irreducible plane branch: for `gcd(u,v)>1`, adding a higher primitive
++term preserves the two leading intersection orders while making the
++parametrization primitive.
++
++The generating-function DP in `ops/ade_cartan_pair_enumerate.py:231` counts
++unordered multisets of atom types correctly.  The update processes each atom
++type once and permits repeated use only through increasing total weight, which
++is the standard unbounded coin-change recurrence for multisets.  The base-`9`
++encoding has no carries for vectors of total weight at most eight.  The
++metadata map is collision-free for ADE trees because a positive two-coordinate
++atom determines its unique edge.
++
++Repair required for promotion: the DP minimum lower-bounds the number of actual
++analytic local branch germs only after an actual strict divisor is already
++given.  It does not lower-bound the number of global carrier components,
++distinct physical points on the minimal exceptional divisor, separated final
++leaves before embedded resolution, or realized incidence solutions.  A counted
++partition is a necessary numerical decomposition, not a simultaneous analytic
++realization theorem for the charged different.
++
++## 5. Forest Cut
++
++**CONFIRM_WITH_CORRECTIONS.**  The forest conclusions are correct only in the
++conditional form stated in the memo.
++
++Without carrier labels, the unit-vertex decomposition `n=sum n_i e_i` can be
++drawn with separate outside leaves attached to the ADE tree.  This proves only
++non-exclusion by the unlabelled local forest test; it proves neither analytic
++realization nor global connected-carrier compatibility.  The memo says this at
++`xmodel/bd-a2-ade-cartier-pair-enumeration-sol56-20260830.md:286`, and that
++wording should be preserved.
++
++Under the stated one-connected-outside-carrier hypothesis, two separated final
++joining edges between the connected inner resolved tree and the connected
++outside reduced carrier graph force a cycle: take the unique path inside the
++inner tree and a path inside the outside graph.  Therefore at most one analytic
++branch can occur; since `n` is nonzero for an actual record, this means exactly
++one local germ.  The one-germ numerical filter is then exact, giving the
++confirmed `718/563` and `198/163` survivor counts.
++
++Required guardrail: shared trunks, coincident physical points, branches
++initially passing through the same ADE node, and node blowups do not invalidate
++the cut only if the common trunks are included in the connected inner graph and
++the argument is applied to distinct final joining edges on one common embedded
++SNC resolution.  Carrier intersections or shared nonexceptional components
++destroy the disjoint-connected-subgraph hypothesis and must be handled
++separately.
++
++## 6. Scope Enforcement
++
++**CONFIRM_WITH_CORRECTIONS.**  The maximum safe result is:
++
++```text
++An exact finite table of local numerical Cartier pairs (m,n), for one connected
++ADE exceptional component of type A1..A8 or D4..D9 at one point, under the
++proper target-line cap sum n_i<=8 and the separately conditional proper
++B-fibre cap sum n_i<=4, together with diagram-automorphism orbits and exact
++unordered numerical germ-signature partition polynomials.
++
++If, on one common embedded SNC resolution, the actual outside carriers form one
++connected subgraph disjoint from the inner attachment graph before distinct
++final joining edges, then only the one-germ records can survive.
++```
++
++Everything stronger remains open: disconnected ADE multisets, simultaneous
++`D9(-1)` embeddings, effective exceptional curves, paired infinity vectors
++`(h,a)`, carrier labels, analytic incidence equations, polynomial maps, and
++global slice-budget allocation.  The all-type totals are a disjoint local sum,
++not a count of global configurations.  The cap eight is per chosen proper
++target-line local consequence; the cap four is a separate proper `B`-fibre
++stratum.  Neither is a license to spend one global budget across unrelated
++points without the actual proper-intersection identity.
++
++## 7. Repairs
++
++No script or canonical-data repair is required.
++
++Promotion repairs required:
++
++1. Every citation of `16360/12238`, `772/646`, `718/563`, or `198/163` must say
++   "one connected local ADE component" and must state the relevant properness
++   cap.
++2. Replace any unqualified "survivor" by "not excluded local numerical
++   signature" unless effectivity and incidence realization have been proved.
++3. State that the DP minimum is a lower bound for actual analytic local branch
++   germs only, not for global carriers or physical points.
++4. State the one-germ forest cut only with the connected-outside-carrier,
++   disjointness, common-SNC-resolution, and distinct-final-joining-edge
++   hypotheses.
++5. Keep the predecessor's common-component and nonfinite strata open; do not
++   cap them by analogy.
++
++## 8. Cheapest Decisive Successor
++
++The cheapest global successor is not another local Cartier enumeration.  It is
++a carrier-labelled finite global packet: for each actual singular point, attach
++the strict different/infinity carrier labels and the paired boundary data
++`(h,a)`, verify the proper-intersection identities, enumerate simultaneous
++effective embeddings in the fixed `D9(-1)` marking, and then apply the
++one-connected outside-carrier forest cut only where its hypotheses are
++certified.  This is the smallest step that can turn the confirmed local table
++from a threat map into a genuine global exclusion or realization test.
++
++<!-- BODY-END -->
+
+tokens used
+76,352
+Wrote the requested report:
+
+[xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md](/Users/dc/code/math/jc2/xmodel/bd-a2-ade-cartier-pair-enumeration-hostile-review-gpt55-20260830.md:1)
+
+Verdict: `CONFIRM_WITH_CORRECTIONS`. The enumeration, script, data hashes, deep check, independent exact checker, totals, orbit recovery, germ DP, and gzip rebuild all check out. The corrections are scope/promotion guardrails: local numerical tables only, conditional forest cut only, no effectivity/incidence/global JC2 promotion.
+
+The report ends with the required standalone `<!-- BODY-END -->` line and has no seal block.
