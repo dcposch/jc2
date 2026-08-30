@@ -15119,3 +15119,40 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   formalization stays outside campaign inspection. Quiet full-round floor is
   `2026-08-31T09:30Z`, broad web backstop `2026-08-31T03:40Z`, and there are
   no human holds.
+
+## 2026-08-30 23:06Z PROOF/REVIEW EVENT — ONE-NODE ALL-DEGREE OBSTRUCTION AND ONE-CUSP SATURATION
+
+- Fable's reviewed all-degree integration `9579d3a1...`/body `05c5c299...`,
+  manifest `13d30a40...`, promotes the canonical nontrivial-branch theorem:
+  every hypothetical noninvertible Keller map has some reduced branch
+  component with nontrivial `pi1`. Chau/Jelonek scopes were independently
+  audited; no general connectedness claim is imported.
+- Quartic zero-cusp packet `e72a78f7...` was lifted to the projection-free,
+  all-degree theorem `c61f0ceb...`/body `bf9dfc37...`, manifest
+  `6e21fa6c...`: an irreducible `A1`-normalized one-place branch with one sole
+  ordinary node supports no connected simple cover of degree at least four.
+  Corrected Neumann--Rudolph goodness and node smoothing make its infinity
+  knot a genus-one graph knot; the resulting trefoil group has transposition
+  image supported on at most three letters. Both deterministic replays pass
+  ordinary/optimized modes and reject their mutations. Opus hostile review is
+  active; a successor classifies genus-two graph knots and S4 quotients.
+- Opus and GPT-5.5 reviews bind the one-cusp function-pair theorem through
+  integration `2531a89d...`: `mu=d1`, the charged branch is irreducible, the
+  infinity budget is saturated, and the companion curve's immersive `A1`
+  normalization self-identifies. Successor `bcc5148...` proves the residual
+  divisor gives the inverse Kummer class and that Formanek makes `t` a
+  primitive quartic element. The forced `u^mu-v^mu` coincidence is a
+  monogenic index locus, not a second bad ruling fibre. GPT-5.5 review and an
+  internal index-at-infinity attack run nonblockingly.
+- Reviewed double-plane integration `f5dbad98...` makes the zero-cusp row a
+  connected etale `C3` torsor problem and excludes the named nodal control.
+  The active successor proves connected branch implies constant units on the
+  double plane, leaving `Pic(D)[3]`; it explicitly quarantines an unfinished
+  monogenic-collapse argument.
+- External live lanes: Fable reviews the earlier braid-escape packet, Opus the
+  all-degree one-node theorem, and GPT-5.5 the inverse-Kummer successor.
+  Internal live lanes: genus-two graph knots, one-cusp index at infinity, and
+  double-plane Picard/Fox localization. Current work is desk-scale; AWS is
+  reserved for any growing exact classification. Web backstop remains
+  `2026-08-31T03:40Z`; quiet ideation floor `2026-08-31T09:30Z`; no human
+  holds.

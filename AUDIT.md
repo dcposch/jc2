@@ -5,6 +5,58 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **ALL-DEGREE NONTRIVIAL-BRANCH THEOREM PROMOTED; ONE-NODE MERIDIONAL
+> OBSTRUCTION PROVISIONAL (2026-08-30 23:06Z).** Fable's independent review,
+> the primary Chau source, and coordinator integration
+> `9579d3a1737041f73a973a2ac852471a21cdad879a6d7cf3b1f76251cd5cd595`
+> (body `05c5c299...`, manifest `13d30a40...`) promote exactly this canonical
+> statement: every hypothetical noninvertible complex plane Keller map has a
+> reduced branch component with nontrivial fundamental group. It does not say
+> that the whole branch is connected or that every component has nontrivial
+> topology. New exact producer
+> `c61f0cebdc06bdca88ad76f3714047a1998ff7aeb885a79e84b060a091c23329`
+> (body `bf9dfc37...`, manifest `6e21fa6c...`) proves provisionally that an
+> irreducible one-place curve normalized by `A1`, with one ordinary node and
+> no other affine singularity, admits no transitive generic-meridian-to-
+> transposition representation in `S_d` for `d>=4`. Its bridge is: corrected
+> Neumann--Rudolph goodness, node smoothing, Neumann's minimal-Seifert theorem,
+> genus-one graph-knot classification, the infinity-group quotient, and the
+> trefoil's two-meridian rank. Opus hostile review is live. Additional affine
+> singularities, tangential or unibranch conductors, reducible branch, extra
+> branch components, nonsimple inertia and disconnected covers are outside
+> scope.
+>
+> **ONE-CUSP FUNCTION-PAIR REDUCTION REVIEWED; INVERSE-KUMMER SUCCESSOR
+> PROVISIONAL (2026-08-30 23:06Z).** Opus and GPT-5.5 independently confirm,
+> with recorded scope corrections, producer `0a627206...`: Miyanishi's cyclic
+> pseudo-cover yields `f_mu:A2->U`, the composite Keller map has degree
+> `4mu`, minimality gives `mu=d1`, the Orevkov--Chau budget is saturated, the
+> charged branch is irreducible, and the companion curve has an immersive
+> `A1` normalization with a same-fibre self-identification away from the cusp
+> and omitted node. Binding integration
+> `2531a89d6c939aee6e0d402408f15d28a228927dc15d82c10d430e67164cb190`
+> (body `69e0e380...`, manifest `baaf9e22...`) promotes only those conditional
+> consequences. Successor `bcc5148aba1a6cb095401ae8871e184ba6bb3e540395a23c40edc16cb0e363a8`
+> proves provisionally that `pi^*C0=Phi+E` gives `[E]=-[Phi]` and
+> `(t-a)r=(c0 o pi)^mu`; hence the residual Kummer class is inverse, not
+> independent. Formanek makes `t` a primitive quartic element, but the forced
+> coincidence divisor `u^mu-v^mu=0` is an index locus of a monogenic order,
+> not branch of the etale normalization or a second bad ruling fibre. GPT-5.5
+> hostile review is live; no one-cusp exclusion is promoted.
+>
+> **REVIEWED QUARTIC DOUBLE-PLANE TORSOR GATE
+> (2026-08-30 23:06Z).** Coordinator integration
+> `f5dbad9858f3b650a63cb41830dcd51d6d6c777665b30fa05b7b20e3c93e9402`
+> (body `21eb906d...`, manifest `c009e873...`) binds GPT-5.5's review. In the
+> zero-cusp row the quartic discriminant construction produces a connected
+> etale `C3` torsor on `D={s^2=q_B}` and therefore a nonzero anti-invariant
+> `H1_et(D,F3)` class; the named nodal double plane has no such class and is
+> excluded. In the one-cusp row that torsor ramifies at the cusp. Topology at
+> infinity alone is not enough. The active exact successor reduces the
+> zero-cusp Kummer source to `Pic(D)[3]` by proving `O(D)^*=C^*` when the
+> branch is connected; its broader Fox-coloring consequences remain review-
+> gated.
+
 > **GENERIC DEGREE THREE EXCLUDED FOR EVERY COMPLEX PLANE KELLER MAP
 > (2026-08-30 21:57Z).** Receipt-first GPT-5.5 review sealed full
 > `b1f75e63c074e264946fcf8c58f1bdbb60088b5f75a748b76c32da8c627d6e82`

@@ -7,6 +7,40 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 23:06Z — all-degree one-node obstruction and saturated quartic horns)
+
+- **Exploit the polynomial knot at infinity, now across degrees.** The reviewed
+  canonical theorem forces at least one branch component with nontrivial
+  `pi1`. Provisional exact theorem `c61f0ceb...` goes much further for the
+  clean irreducible one-node shape: a genus-one graph knot is a trefoil, and
+  no trefoil meridian-transposition image is transitive in degree at least
+  four. Opus audits this bridge in the background. The live successor is the
+  genus-two graph-knot/meridional-rank classification; use it to attack
+  tangential and unibranch cycle-zero horns without returning to individual
+  projection braid words.
+- **Treat the one-cusp branch as a saturated two-curve infinity problem.**
+  Reviewed function-pair integration `2531a89d...` fixes `mu=d1`, saturates
+  the Orevkov--Chau budget and forces the companion `A1` normalization to
+  self-identify. Exact successor `bcc5148...` kills the tempting independent-
+  Kummer argument: the residual class is the inverse class, and its collision
+  divisor is monogenic index rather than cover ramification. Attack whether
+  that index necessarily consumes an infinity-budget unit; in parallel test
+  the companion resultant. Do not call the residual function a second ruling
+  without proving its general fibre is `A1`.
+- **Reduce the zero-cusp double plane to global `Pic[3]`, not boundary color
+  alone.** Reviewed integration `f5dbad98...` requires a connected etale
+  `C3` torsor. The active constant-unit theorem removes the unit-Kummer
+  summand, leaving anti-invariant `Pic(D)[3]`. A trefoil determinant divisible
+  by three is only a boundary signal: the named affine nodal control has that
+  infinity behavior and still has trivial global `H1_et`. Use localization,
+  singularity residues and the involution before inferring a torsor.
+- **Keep research and review asynchronous.** Internal lanes now own genus-two
+  knot classification, one-cusp index at infinity, and double-plane Picard
+  torsion. Fable, Opus and GPT-5.5 independently review adjacent producers.
+  All current work is desk-scale; any expanding classification or CAS job is
+  frozen and moved to AWS. The broader disproof architecture remains
+  orthogonal and no branch-class exclusion is a proof of JC2.
+
 ## Superseding strategy overlay (2026-08-30 21:57Z — canonical branch cycles and minimal rank four)
 
 - **Stop generic-degree-three and cubic-block proof lanes.** Different-model

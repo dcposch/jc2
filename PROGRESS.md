@@ -7,6 +7,46 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **ALL-DEGREE BRANCH TOPOLOGY PROMOTED; THE SOLE-ORDINARY-NODE SIMPLE-
+> COVER CLASS IS NOW PROVISIONALLY EMPTY IN EVERY DEGREE AT LEAST FOUR
+> (23:06Z).** Binding integration `9579d3a1...`/body `05c5c299...`, manifest
+> `13d30a40...`, incorporates Fable's hostile review and Chau's primary paper:
+> every hypothetical noninvertible complex plane Keller map has a reduced
+> branch component with nontrivial `pi1`. Separately, exact producer
+> `c61f0ceb...`/body `bf9dfc37...`, manifest `6e21fa6c...`, proves that an
+> irreducible branch with normalization `A1`, exactly one ordinary affine node
+> and no other affine singularity cannot support a connected simple cover of
+> degree `d>=4`. Corrected Neumann--Rudolph goodness makes the infinity knot a
+> genus-one graph knot, hence a trefoil; its meridional transposition image
+> moves at most three sheets. Ordinary/optimized replay is byte-identical and
+> its degree-three mutation fails as intended. Opus is independently auditing
+> every topology interface; tangential, unibranch, reducible and higher-genus
+> horns remain open.
+>
+> **THE ONE-CUSP QUARTIC HORN IS REDUCED TO A SATURATED FUNCTION PAIR;
+> THE EASIEST SECOND-KUMMER SHORTCUT IS FALSE (23:06Z).** Producer
+> `0a627206...` and binding review integration `2531a89d...` establish the
+> cyclic source `f_mu:A2->U`, the Keller composite of degree `4mu`,
+> minimality equality `mu=d1`, irreducible charged branch, saturated
+> Orevkov--Chau budget, and a second asymptotic curve whose immersive `A1`
+> normalization self-identifies. Exact successor `bcc5148...` shows that the
+> residual divisor supplies the inverse of the original Kummer class, not an
+> independent class; Formanek makes the ruling coordinate primitive in the
+> quartic function field, and the collision becomes a monogenic index locus
+> locally `u^mu-v^mu=0`. This is not ramification or a second bad ruling
+> fibre. GPT-5.5 reviews that successor while an internal lane attacks its
+> index-at-infinity gate.
+>
+> **THE DISCRIMINANT DOUBLE-PLANE ROUTE IS A PICARD-THREE-TORSION PROBLEM
+> (23:06Z).** Reviewed integration `f5dbad98...`/body `21eb906d...`, manifest
+> `c009e873...`, makes the zero-cusp row a connected etale `C3` torsor on the
+> discriminant double plane and excludes the named nodal control by
+> `H1_et=0`; the one-cusp row ramifies at its cusp. The active successor proves
+> that connected branch forces every unit on the double plane to be constant,
+> reducing Kummer cohomology to `Pic(D)[3]`; that lemma is being sealed and
+> reviewed. Boundary Fox-coloring alone is insufficient, as the nodal control
+> has trefoil infinity but trivial global mod-three cohomology.
+
 > **CANONICAL GENERIC DEGREE THREE EXCLUDED; EVERY HIGHER-DEGREE
 > COUNTEREXAMPLE MUST CARRY BRANCH TOPOLOGY (21:57Z).** GPT-5.5's independent
 > canonical-normalization review passed receipt-first custody and returns no
