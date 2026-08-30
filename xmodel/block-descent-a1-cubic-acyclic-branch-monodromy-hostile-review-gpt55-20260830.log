@@ -1,0 +1,3603 @@
+cli=codex-cli 0.151.0 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.151.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a05477-31c9-7322-8a82-4a97a7b71473
+--------
+user
+# Hostile review: acyclic branch obstruction to a cubic block
+
+You are GPT-5.5 acting as an independent mathematical co-researcher and
+hostile reviewer for the plane Jacobian-conjecture campaign. Work in
+`/Users/dc/code/math/jc2`. Reconstruct the theorem rather than trusting its
+summary, seek counterexamples, and report the maximum safe scope. Do not
+modify charged inputs, Git state, canonical ledgers, or unrelated files. Do
+not read sibling external-model prompts, logs, reports, or receipts. Do not
+inspect, list, search, stat, build, modify, or control `jc2-lean`.
+
+Hash-check and audit only these charged repository files:
+
+```text
+5be2e2af32c0f6201637a652d28a0ff5f6992c5ebde696b1198d7b94e4829cf7
+  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md
+5fd8b854452bf4e42a96ccaea89ca8b4be09310dc0cff424ae6dd0261392a455
+  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md.artifact.json
+648022d35191b67d9f1e1eec61cddc95bbee745001410ad1fbbffa1044417389
+  ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py
+41245c20b1b61a0dcf8116340672d037b977e6759d5d99054fc06c292d5c36fc
+  refs/arzhantsev_zaidenberg_acyclic_curves_arxiv1110.3028v2.pdf
+2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce
+  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
+9e32b0fe8835b6ea6002036b95e2261a612754d73d796cb10edda347cf3cf65e
+  xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
+8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d
+  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
+7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29
+  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
+f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
+  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+```
+
+Audit these load-bearing points:
+
+1. Check that the cited Arzhantsev--Zaidenberg Theorem 1.3(b) really covers
+   every reduced connected simply connected plane curve, including reducible
+   curves, and gives exactly the comb and weighted-cone forms stated. Check
+   the hypotheses against the charged proper-cubic survivor rather than
+   inferring contractibility from Euler characteristic alone.
+2. Starting from a finite-flat integral cubic with fibre partition `(2,1)`
+   at every branch value, reconstruct the henselian idempotent splitting at
+   singular as well as smooth branch points. Decide whether the full local
+   complement group fixes a companion and whether global complement
+   monodromy is transitive.
+3. Exhaust all connected degenerations of `y^epsilon p(x)=0`. For a genuine
+   comb, verify the product complement, centrality of the spine meridian,
+   its transposition image, and the `S3` centralizer argument. Pay attention
+   to based meridians and do not smuggle in a common local label.
+4. For the weighted-cone form, check the weights, the radial product, and the
+   claimed isomorphism between global and origin-local complement groups.
+   Repair the wording about open balls if needed. Decide whether the single
+   local rank-one factor really forces the whole global image into `S2`.
+5. Actively test edge cases: one line, one tooth, several teeth, axes,
+   `a=b=1`, irreducible cusps, alternative meanings of one point/place at
+   infinity, and the disconnected algebraic `S3` control from the prior
+   review.
+6. Check the exact proper-block interface. State whether the theorem closes
+   only the promoted proper cubic block, what remains at degree at least
+   four and in the primitive/no-proper-block horn, and whether any statement
+   about JC2 itself follows.
+7. Rerun the replay under ordinary, `-O`, and `-OO`; reproduce its payload
+   and deliberate-mutation failure, and distinguish the finite permutation
+   check from the geometric proof.
+
+Return itemized `CONFIRMED`, `CONFIRM_WITH_CORRECTIONS`, `GAP`, or `REFUTED`,
+then a maximum-safe theorem and the cheapest useful successor. This review
+makes no exit-price assertion: emit no `charge_basis={...}` line; receipt
+status `ABSENT` is expected. Do not run heavy local CAS.
+
+Write exactly one repository file:
+
+```text
+xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md
+```
+
+End it with one standalone `<!-- BODY-END -->` line and no seal block.
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll treat this as a constrained repository audit: first I’ll verify the exact charged file hashes, then read only those named inputs and the PDF needed for the mathematical reconstruction. I’ll avoid repo-wide search/listing and won’t touch `jc2-lean` or any ledger/report/receipt material.
+  → Hash-check charged files
+  • Read charged theorem, prior reviews, and references
+  • Run replay in three Python modes and mutation check
+  • Write hostile review file only
+  • Verify output formatting constraints
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md.artifact.json ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py refs/arzhantsev_zaidenberg_acyclic_curves_arxiv1110.3028v2.pdf xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+5be2e2af32c0f6201637a652d28a0ff5f6992c5ebde696b1198d7b94e4829cf7  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md
+5fd8b854452bf4e42a96ccaea89ca8b4be09310dc0cff424ae6dd0261392a455  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md.artifact.json
+648022d35191b67d9f1e1eec61cddc95bbee745001410ad1fbbffa1044417389  ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py
+41245c20b1b61a0dcf8116340672d037b977e6759d5d99054fc06c292d5c36fc  refs/arzhantsev_zaidenberg_acyclic_curves_arxiv1110.3028v2.pdf
+2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
+9e32b0fe8835b6ea6002036b95e2261a612754d73d796cb10edda347cf3cf65e  xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
+8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
+7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
+f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+
+codex
+The hash pass matched all nine supplied digests. I’m now reading the charged proof files with line numbers so the final review can cite the exact load-bearing claims rather than paraphrasing a summary.
+exec
+/bin/zsh -lc "nl -ba xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md | sed -n '1,260p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Proper-cubic affine survivor: acyclic branch monodromy obstruction
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Author: Sol 5.6 Ultra (`sectioned_two_support_universal` lane)  
+     5	Frozen basis: `f91e751041a0f926b6981c9bfe33aa1665c2c226`  
+     6	Lifecycle: **EXACT PROVISIONAL THEOREM / CUBIC AFFINE BRANCH ROW CLOSED / DIFFERENT-MODEL REVIEW REQUIRED**
+     7	
+     8	## 0. Verdict
+     9	
+    10	Let
+    11	
+    12	```text
+    13	pi:Y -> A2_C
+    14	```
+    15	
+    16	be finite flat of degree three, with `Y` integral and normal.  Let `B` be
+    17	the reduced branch support.  Assume:
+    18	
+    19	```text
+    20	B is connected and topologically contractible;
+    21	every geometric fibre over B has partition (2,1).
+    22	```
+    23	
+    24	Then no such cover exists.  More precisely, after restricting over
+    25	`A2-B`, the connected degree-three cover would have transitive monodromy,
+    26	but the Lin--Zaidenberg classification forces its whole monodromy image
+    27	into one transposition subgroup of `S3`.
+    28	
+    29	This closes the singular **and reducible** acyclic-branch escape left open
+    30	by the previous cubic funnel.  The campaign's extra hypotheses that every
+    31	component is one-place, the affine incidence is a forest, and
+    32	`R_red -> B` is an analytic homeomorphism are stronger than needed for this
+    33	obstruction.  The result remains conditional on the promoted proper-block
+    34	inputs actually supplying the displayed finite-flat cover, contractibility,
+    35	and the `(2,1)` partition at every affine branch value.  It is not a theorem
+    36	about degree at least four, an arbitrary non-acyclic branch, or JC2 without
+    37	the proper cubic block.
+    38	
+    39	## 1. Exact classification source and charged warning control
+    40	
+    41	The source used here is:
+    42	
+    43	```text
+    44	Ivan Arzhantsev and Mikhail Zaidenberg,
+    45	"Acyclic curves and group actions on affine toric surfaces",
+    46	arXiv:1110.3028v2; MPIM Preprint 2011 (61),
+    47	published in Affine Algebraic Geometry (World Scientific, 2013), 1--41,
+    48	DOI 10.1142/9789814436700_0001.
+    49	
+    50	41245c20b1b61a0dcf8116340672d037b977e6759d5d99054fc06c292d5c36fc
+    51	  refs/arzhantsev_zaidenberg_acyclic_curves_arxiv1110.3028v2.pdf
+    52	```
+    53	
+    54	On printed page 3, subsection 1.1 defines an acyclic curve to be connected
+    55	and simply connected.  Theorem 1.3(b), printed pages 3--4 (PDF pages 3--4
+    56	of the pinned arXiv copy), explicitly applies to **any reduced, simply
+    57	connected plane curve**, not only an irreducible one.  Up to an algebraic
+    58	automorphism of `A2`, it gives exactly one of
+    59	
+    60	```text
+    61	(I)   y^epsilon_y p(x)=0;
+    62	
+    63	(II)  x^epsilon_x y^epsilon_y
+    64	      product_(i=1)^r (y^a-kappa_i x^b)=0,
+    65	```
+    66	
+    67	where `epsilon_x,epsilon_y` are zero or one, `p` has simple roots,
+    68	`a,b>=1` are coprime, `r>0`, and the nonzero `kappa_i` are pairwise
+    69	distinct.  Thus the cited theorem genuinely includes the reducible rows.
+    70	The irreducible part is the original Lin--Zaidenberg theorem; the full
+    71	reduced statement above is the exact result charged here.
+    72	
+    73	The following sealed hostile-review control is also charged:
+    74	
+    75	```text
+    76	9e32b0fe8835b6ea6002036b95e2261a612754d73d796cb10edda347cf3cf65e
+    77	  xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
+    78	```
+    79	
+    80	Its explicit cover
+    81	
+    82	```text
+    83	z^3-3z+2+xy=0
+    84	```
+    85	
+    86	has reduced branch `xy(xy+4)=0`, local `(2,1)` companions, and global
+    87	`S3` monodromy.  Its branch is disconnected.  This is the required warning
+    88	that unrelated local companion labels do not globalize in general.  The
+    89	proof below never assumes such propagation: it uses either a central
+    90	global meridian in normal form (I), or a single local group which is already
+    91	the whole global group in normal form (II).
+    92	
+    93	## 2. The exact local and global monodromy statements
+    94	
+    95	Put
+    96	
+    97	```text
+    98	U=A2-B,                 V=Y-pi^(-1)(B).
+    99	```
+   100	
+   101	Then `V->U` is finite etale of degree three.  Since `Y` is integral, `V` is
+   102	a nonempty irreducible open subset, hence the monodromy representation
+   103	
+   104	```text
+   105	rho:pi1(U,u0)->S3
+   106	```
+   107	
+   108	acts transitively on the three sheets.
+   109	
+   110	At a point `b in B`, pass to the henselian local base.  The fibre algebra
+   111	has two distinct local factors of lengths two and one.  Its two fibre
+   112	idempotents lift uniquely, splitting the finite-flat algebra into factors
+   113	of ranks two and one.  A unital finite-flat rank-one algebra over the local
+   114	base is the base itself.  Hence the full local complement group fixes the
+   115	companion sheet:
+   116	
+   117	```text
+   118	rho(pi1(local complement at b)) <= a conjugate of S2.       (2.1)
+   119	```
+   120	
+   121	At a generic smooth point of every branch component its meridian is a
+   122	nonidentity transposition.  This is point-local information only.  No
+   123	choice of a common globally based companion letter has been made.
+   124	
+   125	An automorphism of `A2` transports the cover and preserves all these
+   126	properties, so the two canonical forms may now be treated directly.
+   127	
+   128	## 3. Form (I): lines and arbitrary combs
+   129	
+   130	First list every connected degeneration of
+   131	
+   132	```text
+   133	y^epsilon_y p(x)=0.                                      (3.1)
+   134	```
+   135	
+   136	If `epsilon_y=0`, the curve is a disjoint union of the vertical lines over
+   137	the simple roots of `p`; connectedness forces exactly one root.  If
+   138	`epsilon_y=1` and `p` is constant, the curve is the horizontal line.  Both
+   139	are coordinate lines.  Their complement has fundamental group `Z`, and
+   140	the branch meridian maps to a transposition, so the image has order two and
+   141	is not transitive.
+   142	
+   143	It remains to include, explicitly, every comb with one, two, or arbitrarily
+   144	many teeth.  Write the distinct roots as `alpha_1,...,alpha_s`, `s>=1`.
+   145	Then
+   146	
+   147	```text
+   148	U=(C-{alpha_1,...,alpha_s}) x C*,
+   149	pi1(U)=F_s x <h>,                                        (3.2)
+   150	```
+   151	
+   152	where `h` is the horizontal-line meridian and is central.  The generic
+   153	`(2,1)` hypothesis along `y=0` gives `rho(h)=tau`, a transposition.  For
+   154	every `gamma in pi1(U)`, centrality gives
+   155	
+   156	```text
+   157	rho(gamma) tau = tau rho(gamma).
+   158	```
+   159	
+   160	But the centralizer of a transposition in `S3` is exactly `<tau>`, of order
+   161	two.  Hence
+   162	
+   163	```text
+   164	rho(pi1(U)) <= <tau>,                                    (3.3)
+   165	```
+   166	
+   167	which is intransitive.  This proof covers `s>=2` without identifying any
+   168	tooth companion with a globally transported local label.
+   169	
+   170	There are two common meanings of the campaign's infinity phrase, and
+   171	neither leaves a gap.  Every individual line in a comb is one-place.  If
+   172	instead the **whole** projective closure is required to have one
+   173	set-theoretic point at infinity, a nontrivial comb is already impossible:
+   174	the horizontal line meets infinity at `[1:0:0]`, while every vertical tooth
+   175	meets it at `[0:1:0]`.  Thus that stronger reading leaves only the coordinate
+   176	line row, already handled above.
+   177	
+   178	## 4. Form (II): the weighted-cone rows
+   179	
+   180	Now let
+   181	
+   182	```text
+   183	B={x^epsilon_x y^epsilon_y
+   184	   product_i(y^a-kappa_i x^b)=0}.                         (4.1)
+   185	```
+   186	
+   187	Every component passes through the origin, and (4.1) is invariant under
+   188	positive weighted scaling
+   189	
+   190	```text
+   191	r.(x,y)=(r^a x,r^b y),             r>0.                  (4.2)
+   192	```
+   193	
+   194	Indeed both `y^a` and `x^b` have weight `ab`, and the coordinate axes are
+   195	also invariant.  With
+   196	
+   197	```text
+   198	N(x,y)=|x|^(2/a)+|y|^(2/b),
+   199	```
+   200	
+   201	one has `N(r.(x,y))=r^2 N(x,y)`.  Every positive scaling orbit in
+   202	`A2-{0}` meets the weighted sphere `N=1` exactly once.  Since `B` is a
+   203	weighted cone, the global complement and the complement in an arbitrarily
+   204	small weighted ball both deformation retract onto the same link complement.
+   205	Ordinary and weighted balls are cofinal neighborhoods of the origin, so
+   206	
+   207	```text
+   208	pi1(A2-B) isomorphic to pi1(local complement of B at 0).  (4.3)
+   209	```
+   210	
+   211	Apply (2.1) at the single point `0`.  Equation (4.3) puts the **whole**
+   212	global monodromy image inside one companion-fixing `S2`, hence inside an
+   213	intransitive subgroup of `S3`.  Again no propagation among separately based
+   214	local groups is used.
+   215	
+   216	For completeness, a one-point-at-infinity reading only narrows (4.1):
+   217	
+   218	```text
+   219	a<b: all monomial factors meet [0:1:0]; x=0 may occur, y=0 may not;
+   220	a>b: all monomial factors meet [1:0:0]; y=0 may occur, x=0 may not;
+   221	a=b: coprimality gives a=b=1, and one common infinity point permits
+   222	     only one of the distinct line directions.
+   223	```
+   224	
+   225	The weighted radial proof covers both the unrestricted componentwise
+   226	one-place reading and every one-point subrow above.
+   227	
+   228	## 5. Contradiction and proper-block consequence
+   229	
+   230	The two classified forms exhaust every reduced connected simply connected
+   231	plane curve.  Sections 3 and 4 show in all cases that
+   232	
+   233	```text
+   234	rho(pi1(A2-B)) is contained in a subgroup of order two.
+   235	```
+   236	
+   237	Such a subgroup fixes one of three letters and cannot act transitively.
+   238	This contradicts connectedness of `V->A2-B` from Section 2.  Therefore the
+   239	cover in Section 0 does not exist.
+   240	
+   241	In the promoted proper-cubic affine equality row, the previous inputs give
+   242	exactly: `B` reduced, connected and analytically contractible; the finite
+   243	flat cubic has no triple or `S0` fibres; and the complement cover is
+   244	connected.  Subject to those charged inputs, the entire remaining cubic
+   245	branch row is empty.  In particular, the reducible branch conclusion in the
+   246	earlier provisional infinity-gate producer is superseded by this exact
+   247	classification argument.
+   248	
+   249	## 6. Desk replay
+   250	
+   251	The finite `S3` part is independently replayed by
+   252	
+   253	```text
+   254	648022d35191b67d9f1e1eec61cddc95bbee745001410ad1fbbffa1044417389
+   255	  ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py
+   256	```
+   257	
+   258	Ordinary, `-O`, and `-OO` runs give the identical payload hash
+   259	
+   260	```text
+
+exec
+/bin/zsh -lc "nl -ba xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md | sed -n '1,260p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Proper-cubic affine survivor: pseudo-plane funnel and companion section
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Author: Sol 5.6 Ultra (`cubic_affine_survivor` lane)  
+     5	Frozen basis: `1d35fe69987a4e346c7e97ab2a227ccce49ef60d`  
+     6	Lifecycle: **EXACT PROVISIONAL THEOREM / DIFFERENT-MODEL REVIEW REQUIRED**
+     7	
+     8	## 0. Verdict
+     9	
+    10	Charge the promoted proper-cubic survivor
+    11	
+    12	```text
+    13	A2 --g1, etale quasi-finite dominant of degree d1>=2--> U
+    14	   --pi=g2|U, etale quasi-finite surjective of degree 3--> A2,
+    15	
+    16	rho:U->A1 an A1-fibration,
+    17	b0(B)=1, S0=empty, Q=0.
+    18	```
+    19	
+    20	Here `B=g2(R)_red`, `R=NonEt_Y(g2)_red`, and `U=Y minus R`.  Then:
+    21	
+    22	1. `rho` has at most one multiple fibre.
+    23	2. It cannot have none.  Hence it has a unique fibre `mF`, with `m>=2`,
+    24	   and
+    25	
+    26	   ```text
+    27	   Pic(U)=Z/mZ<[F]>,       U is a Q-homology plane,
+    28	   U minus g1(A2) is finite,       m divides d1,       K_U~0.       (0.1)
+    29	   ```
+    30	
+    31	3. The rank-three companion over the branch globalizes scheme-theoretically:
+    32	
+    33	   ```text
+    34	   T:=U times_(A2) B  --> B
+    35	   ```
+    36	
+    37	   is an isomorphism.  Thus `B` occurs as a principal reduced Cartier curve
+    38	   in the smooth surface `U`, component by component.
+    39	4. Put `W=U minus T`.  Then
+    40	
+    41	   ```text
+    42	   W -> A2 minus B
+    43	   ```
+    44	
+    45	   is a connected finite etale cover of degree three with monodromy `S3`.
+    46	   At every affine point of `B`, including its singular points, the local
+    47	   monodromy fixes the companion sheet and lies in one conjugate of `S2`.
+    48	5. `B` cannot be smooth.  Consequently every actual survivor has a singular
+    49	   or reducible connected contractible one-place branch curve whose complement
+    50	   has an `S3` quotient, while every affine local branch group preserves a
+    51	   companion sheet.  The unresolved monodromy must therefore be supplied by
+    52	   global braid/infinity topology, not by an affine triple-fibre point.
+    53	
+    54	This is a strict reduction, not cubic-block nonexistence and not JC2.  The
+    55	tempting Hartogs shortcut from the finiteness of `U minus g1(A2)` is false:
+    56	boundary divisors of the Zariski-Main finite normalization can map onto target
+    57	divisors already reached by other source sheets.
+    58	
+    59	## 1. Frozen inputs and primary sources
+    60	
+    61	Binding campaign inputs:
+    62	
+    63	```text
+    64	8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d
+    65	  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
+    66	
+    67	7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29
+    68	  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
+    69	
+    70	f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
+    71	  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+    72	```
+    73	
+    74	They supply the sandwich, smooth rational affine `U`, constant units, the
+    75	actual morphic first leg, the `A1`-ruling, the cubic fibre census, the
+    76	one-place component/forest theorem, and the exact survivor equalities.
+    77	
+    78	Primary surface source:
+    79	
+    80	```text
+    81	Masayoshi Miyanishi,
+    82	Lectures on Geometry and Topology of Polynomials --
+    83	Surrounding the Jacobian Conjecture,
+    84	arXiv:1504.07179, especially Lemmas 1.4.3, 1.4.16, 2.5.2 and
+    85	Theorem 2.5.10.
+    86	
+    87	downloaded PDF: 806236 bytes
+    88	SHA-256: ab4eb0cb74e4051e3fb1f702a253d29cb1a658632f11bc6f4b04a8bb9e7daaa4
+    89	```
+    90	
+    91	Primary degree-three source:
+    92	
+    93	```text
+    94	S. Yu. Orevkov, On three-sheeted polynomial mappings of C2,
+    95	Theorem 1.1.
+    96	
+    97	f80d4a7d7e04987ce7dece58f33cff20ea9210183ca3ffd4488f39a2147532db
+    98	  refs/jc86.pdf
+    99	```
+   100	
+   101	The statements below use the general Picard and multiple-fibre lemmas from
+   102	Miyanishi.  They do **not** assume that an arbitrary affine pseudo-plane has
+   103	the special typed boundary graph `(d,n,r)`.
+   104	
+   105	## 2. There is at most one multiple fibre
+   106	
+   107	The composite
+   108	
+   109	```text
+   110	h=rho o g1:A2->A1
+   111	```
+   112	
+   113	is a nonconstant polynomial.  Choose a general affine line `L subset A2` on
+   114	which `h` is nonconstant.  Then `g1|L:A1->U` is a nonconstant curve transverse
+   115	to `rho`.
+   116	
+   117	Miyanishi Lemma 1.4.16 says that an `A1`-fibration over `A1` with at least
+   118	two multiple fibres admits no such transverse morphism from `A1`.  Its proof
+   119	is the exact polynomial-power obstruction: over two multiple values one gets
+   120	
+   121	```text
+   122	p(s)^a-q(s)^b=constant,       a,b>=2,
+   123	```
+   124	
+   125	and factorization/Mason--Stothers (equivalently the positive-genus
+   126	superelliptic curve after removing the common gcd) makes both polynomials
+   127	constant.  Therefore `rho` has at most one multiple fibre.
+   128	
+   129	The use of a general source line is essential.  No assertion that `g1`
+   130	preserves the ruling, is finite, or maps a generic source fibre to a ruling
+   131	fibre is made.
+   132	
+   133	## 3. The no-multiple row is impossible
+   134	
+   135	If there is no multiple fibre, every scheme fibre is a smooth `A1`.  The
+   136	equidimensional morphism from the smooth surface to the smooth curve is flat,
+   137	hence smooth.  It is an `A1`-bundle.  Over `A1`, its line-bundle and additive
+   138	torsor classes vanish (`Pic(A1)=H^1(A1,O)=0`), so
+   139	
+   140	```text
+   141	U isomorphic to A2.                                           (3.1)
+   142	```
+   143	
+   144	Under (3.1), `pi:U->A2` becomes a polynomial Keller self-map of geometric
+   145	degree three.  Orevkov Theorem 1.1 excludes polynomial maps of `C2` with
+   146	nonzero constant Jacobian and geometric degree two or three.  Hence the
+   147	no-multiple row is empty.
+   148	
+   149	This is the only place where Orevkov is consumed.  It is not applied directly
+   150	to a pseudo-plane.
+   151	
+   152	## 4. Exact unique-multiple-fibre package
+   153	
+   154	Write the unique multiple fibre as `mF`, `m>=2`.  Since every reduced ruling
+   155	fibre is one `A1`, Miyanishi Lemma 1.4.3 gives
+   156	
+   157	```text
+   158	Pic(U)=Z/mZ<[F]>,                                      (4.1)
+   159	H_i(U;Q)=0 for every i>0.
+   160	```
+   161	
+   162	### 4.1 Missed divisors and the cofinite image
+   163	
+   164	Let `V=g1(A2)`, an open subset of `U`.  The free group on the prime divisors
+   165	contained in `U minus V` injects into `Pic(U)`.  Indeed, if a rational
+   166	function `b` has divisor supported there, then `b` and `b^-1` are regular on
+   167	the normal open `V`.  Their pullbacks are mutually inverse polynomials on
+   168	`A2`, hence scalars.  Dominance makes `b` the same scalar, so its divisor was
+   169	zero.  This proves linear independence of all missed prime divisors.
+   170	
+   171	The finite group (4.1) contains no nonzero free subgroup.  Thus `U minus V`
+   172	has no curve component.  It is a finite set:
+   173	
+   174	```text
+   175	g1:A2->U is an affine pseudo-covering.                         (4.2)
+   176	```
+   177	
+   178	### 4.2 The multiple-fibre order divides the first-leg degree
+   179	
+   180	Choose the ruling coordinate `t` so that `div_U(t)=mF`, and put
+   181	`L=C(x,y)`, `K=C(U)`.  Etaleness makes `g1^*F` a reduced divisor.  Since
+   182	`C[x,y]` is factorial,
+   183	
+   184	```text
+   185	g1^*t=c P^m,       c in C*, P in C[x,y] nonconstant.          (4.3)
+   186	```
+   187	
+   188	The binomial `X^m-t/c` is irreducible over `K`.  For if `t/c=s^p` in `K`
+   189	for a prime `p|m`, normality first gives `s in O(U)` and then
+   190	
+   191	```text
+   192	div_U(s)=(m/p)F,
+   193	```
+   194	
+   195	contradicting the exact order `m` of `[F]` in (4.1).  Since `C` contains all
+   196	roots of unity, the standard Kummer binomial criterion has no further
+   197	exception.  Equation (4.3) therefore embeds a degree-`m` field
+   198	
+   199	```text
+   200	K(P) subset L.
+   201	```
+   202	
+   203	The tower law gives
+   204	
+   205	```text
+   206	m divides [L:K]=d1.                                        (4.4)
+   207	```
+   208	
+   209	Finally, etaleness of the second leg gives the exact canonical condition
+   210	
+   211	```text
+   212	K_U=pi^*K_A2~0.                                             (4.5)
+   213	```
+   214	
+   215	### 4.3 Typed theorem: useful but not a coverage theorem
+   216	
+   217	For a pseudo-plane already known to have Miyanishi's special boundary type
+   218	`(d,n,r)`, Theorem 2.5.10 computes `K_U~(r-2)F` and excludes an etale map to
+   219	`A2` unless the exceptional `r=2` row occurs.  Nothing charged here proves
+   220	that an arbitrary `U` satisfying (4.1)--(4.5) belongs to that typed class.
+   221	The source explicitly introduces the typed boundary graph as an additional
+   222	condition.  Therefore one may record
+   223	
+   224	```text
+   225	typed client => exceptional r=2,
+   226	arbitrary survivor => type coverage OPEN,
+   227	```
+   228	
+   229	but not replace the second line by the first.
+   230	
+   231	## 5. Why the Zariski-Main/Hartogs shortcut fails
+   232	
+   233	Strong Zariski Main factors `g1` as
+   234	
+   235	```text
+   236	A2 open--> Xbar finite--> U,
+   237	```
+   238	
+   239	with `Xbar` the normalization of `U` in `L`.  Equation (4.2) does **not**
+   240	make `Xbar minus A2` finite.  A boundary divisor can dominate a divisor of
+   241	`U` which is simultaneously attained by another open source sheet.
+   242	
+   243	Miyanishi Lemma 2.5.2 is an exact countercontrol.  For any such unique-
+   244	multiple-fibre Q-homology plane, the cyclic degree-`m` cover `Utilde->U`
+   245	has `m` affine-line components over `F`.  Deleting `m-1` of them leaves an
+   246	open `A2` which still maps surjectively and etale to `U`; the deleted
+   247	divisors all map onto the already attained `F`.  Thus Hartogs cannot identify
+   248	`Xbar` with `A2`, and no finite-etale conclusion follows from (4.2).
+   249	
+   250	This countercontrol is exactly aligned with (4.3)--(4.4), not an unrelated
+   251	pathology.
+   252	
+   253	## 6. The rank-three companion is an actual section over `B`
+   254	
+   255	For every geometric `z in B`, finite flat rank three and `S0=empty` give the
+   256	unique fibre partition
+   257	
+   258	```text
+   259	one non-etale point of local length 2
+   260	+ one etale companion point of local length 1.               (6.1)
+
+exec
+/bin/zsh -lc "nl -ba xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md | sed -n '1,260p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Hostile review: proper-cubic affine-survivor funnel
+     2	
+     3	Date: 2026-08-30
+     4	Reviewer: GPT-5.5 hostile reconstruction
+     5	Scope: charged files only, plus the permitted temporary arXiv fetch of Miyanishi
+     6	`1504.07179`.
+     7	
+     8	## Input custody
+     9	
+    10	All seven charged repository SHA-256 hashes matched the prompt:
+    11	
+    12	```text
+    13	2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
+    14	a38d1ba420fa8388fbf453051bd9d570edbfe99f0a1ff240f1f297d1e6718fcd  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md.artifact.json
+    15	aa198a357ce3c7dd3df6c97019f76553f27c76e5f4b7928ed3e52104de3f3915  ops/block_descent_a1_cubic_affine_survivor_replay.py
+    16	8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
+    17	7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
+    18	f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+    19	f80d4a7d7e04987ce7dece58f33cff20ea9210183ca3ffd4488f39a2147532db  refs/jc86.pdf
+    20	```
+    21	
+    22	Miyanishi arXiv `1504.07179` was fetched only into `/tmp`.  Its SHA-256
+    23	matched the expected
+    24	`ab4eb0cb74e4051e3fb1f702a253d29cb1a658632f11bc6f4b04a8bb9e7daaa4`.
+    25	I did not inspect `jc2-lean`, sibling external-model prompts, logs, reports,
+    26	receipts, canonical ledgers, or unrelated repository files.
+    27	
+    28	Receipt status: `ABSENT`, as expected.  This review makes no exit-price
+    29	assertion.
+    30	
+    31	## Itemized audit
+    32	
+    33	1. `CONFIRM_WITH_CORRECTIONS`: Miyanishi input and transverse source line.
+    34	
+    35	Miyanishi Lemma 1.4.16 is general for a smooth affine surface with an
+    36	`A1`-fibration over `A1`; it is not restricted to the later typed
+    37	`(d,n,r)` pseudo-planes.  Since `h=rho o g1` is a nonconstant polynomial on
+    38	`A2`, a general affine source line has nonconstant `h|L`, hence gives a
+    39	nonconstant morphism `A1 -> U` transverse to `rho`.  This uses dominance of
+    40	`g1`, not any compatibility of `g1` with the ruling.
+    41	
+    42	The Picard and acyclicity package needs the full affine-base and one-component
+    43	fibre hypotheses.  Miyanishi Lemma 1.4.3 gives fibres as disjoint unions of
+    44	affine lines, the Picard product by fibre multiplicities when every fibre is
+    45	irreducible over base `A1`, and `Q`-homology acyclicity under the same
+    46	one-component hypothesis.  Corollary 1.4.4 then gives cyclic order `m` when
+    47	there is exactly one multiple fibre `mF`.  Thus the funnel may use
+    48	`Pic(U)=Z/m<[F]>` only after importing the affine survivor row `Q=0` and after
+    49	the no-multiple row is excluded.
+    50	
+    51	2. `CONFIRM_WITH_CORRECTIONS`: no-multiple-fibre row.
+    52	
+    53	If every reduced fibre is one `A1` and there are no multiple fibres, each
+    54	scheme fibre is a reduced smooth affine line.  For a morphism from a smooth
+    55	surface to a smooth curve this gives flatness by equidimensionality and then
+    56	smoothness by smooth fibres.  One still needs the standard theorem that a
+    57	smooth `A1`-fibration over a smooth curve is an `A1`-bundle.  Over `A1`, the
+    58	line-bundle and additive torsor classes vanish, so `U ~= A2`.
+    59	
+    60	Only at that point does Orevkov apply.  Theorem 1.1 of `refs/jc86.pdf` is about
+    61	two- or three-sheeted polynomial maps `C2 -> C2` with nonzero constant
+    62	Jacobian.  After `U ~= A2`, the etale map `pi:U -> A2` is such a polynomial
+    63	Keller self-map of generic degree three.  Orevkov is not licensed directly on
+    64	an arbitrary pseudo-plane.
+    65	
+    66	3. `CONFIRMED`: localization and the Hartogs/Zariski-Main warning.
+    67	
+    68	Let `V=g1(A2)`.  Since `g1` is etale, `V` is open in `U`.  If a divisor
+    69	supported in `U - V` were principal, say `div(b)`, then `b` and `b^-1` are
+    70	regular on `V`; pulling back to `A2` gives inverse polynomials, hence scalars.
+    71	Dominance makes `b` scalar.  Therefore the free abelian group on missed prime
+    72	divisors injects into `Pic(U)`.  Since `Pic(U)` is finite, no missed divisor
+    73	exists, so `U - g1(A2)` is finite.
+    74	
+    75	This proves only the target statement "no divisorial component is missed in
+    76	`U`."  It does not say that the Zariski-Main finite normalization has finite
+    77	boundary over `A2`.  Miyanishi Lemma 2.5.2 is exactly the countercontrol: the
+    78	cyclic etale cover splits the multiple fibre into `m` affine lines, and deleting
+    79	`m-1` of them leaves an open `A2` still mapping surjectively to the pseudo-plane;
+    80	the deleted divisors map onto an already attained target fibre.
+    81	
+    82	4. `CONFIRMED`: Kummer divisibility and canonical class.
+    83	
+    84	Choose the base coordinate with `div_U(t)=mF`.  Since `g1` is etale, the pullback
+    85	of the reduced smooth Cartier divisor `F` is reduced.  In the UFD `C[x,y]`,
+    86	`div(g1^*t)=m g1^*F` therefore gives `g1^*t=cP^m` with `c in C*`.
+    87	
+    88	For each prime `p|m`, if `t/c=s^p` in `C(U)`, then `s` is integral over
+    89	`O(U)` and hence regular because `U` is normal affine.  Its divisor would be
+    90	`(m/p)F`, contradicting the exact order `m` of `[F]` in `Pic(U)`.  Since `C`
+    91	contains all roots of unity, the usual Kummer binomial criterion has no
+    92	composite-`m` or fourth-root exception here.  Thus `X^m-t/c` is irreducible
+    93	over `C(U)`, `C(U)(P)` has degree `m`, and the tower law gives `m|d1`.
+    94	
+    95	Separately, etaleness of `pi:U -> A2` gives
+    96	`omega_U ~= pi^* omega_A2`, hence `K_U ~ 0`.  The typed Miyanishi theorem
+    97	2.5.10 is not a coverage theorem: it applies only after the additional
+    98	`(d,n,r)` boundary type is proved.
+    99	
+   100	5. `CONFIRM_WITH_CORRECTIONS`: companion section over `B`.
+   101	
+   102	The conclusion `T=U times_(A2) B -> B` is an isomorphism is correct, including
+   103	at singular and reducible points of the reduced curve `B`, but the proof should
+   104	not pass through finiteness of `U -> A2`.  The right argument is local:
+   105	finite-flat rank three plus `S0=empty` gives, over every geometric branch value,
+   106	one non-etale length-two point and one etale length-one companion point.  Base
+   107	change of the etale locus gives an etale morphism `T -> B` with one geometric
+   108	point in every fibre.  Hence it is surjective, radicial, and etale; an etale
+   109	radicial morphism is an open immersion, and surjectivity makes it an
+   110	isomorphism.
+   111	
+   112	For each irreducible component `B_i=(b_i=0)` of the reduced plane curve,
+   113	`U times B_i -> B_i` is the corresponding component `T_i`, and etale pullback
+   114	of the reduced Cartier divisor gives `div_U(pi^*b_i)=T_i` with coefficient one.
+   115	This is componentwise principal Cartier data, not an identification with a
+   116	ruling fibre or an original source sheet.
+   117	
+   118	6. `CONFIRM_WITH_CORRECTIONS`: complement cover and local companion groups.
+   119	
+   120	`W=U-T` is the same open as `Y - g2^{-1}(B)`.  Since `g2:Y -> A2` is finite flat
+   121	of rank three, `W -> A2-B` is finite etale of degree three.  Since `Y` is
+   122	integral, this nonempty open is connected.  The monodromy is transitive; the
+   123	generic inertia along a branch component has type `(2,1)`, so the image contains
+   124	a transposition and is therefore `S3`.
+   125	
+   126	At any affine point of `B`, henselian idempotent lifting splits the completed
+   127	rank-three algebra into a rank-one etale companion factor and a rank-two
+   128	ramified factor.  Thus the local complement group fixes a companion sheet.
+   129	However, that is a local statement after choosing paths from the global
+   130	basepoint.  It does not by itself produce a single globally fixed sheet.
+   131	
+   132	Control against the stronger inference: the cubic surface
+   133	
+   134	```text
+   135	S = Spec C[x,y,z]/(z^3 - 3z + 2 + xy) -> A2_{x,y}
+   136	```
+   137	
+   138	is finite flat of rank three.  Its branch support is
+   139	`xy(xy+4)=0`; fibres over `xy=0` have root pattern `(z-1)^2(z+2)`, and fibres
+   140	over `xy=-4` have pattern `(z+1)^2(z-2)`, so every branch value has a local
+   141	companion.  At the node `(0,0)`, the completed algebra has one companion factor
+   142	and one double ramified factor.  The total surface is integral, and its only
+   143	singularity is the isolated hypersurface point `(0,0,1)`, hence it is normal.
+   144	The line `y=1` sees the one-parameter cubic
+   145	`z^3-3z+2+q` over `q in A1-{0,-4}`, whose two transposition inertias generate
+   146	`S3`; therefore the global monodromy has no fixed sheet.  This is not a
+   147	survivor because its branch is disconnected and not the campaign `U`, but it
+   148	blocks any proof that promotes local companion-fixing to a global label without
+   149	using the connected one-place forest hypotheses.
+   150	
+   151	7. `CONFIRM_WITH_CORRECTIONS`: smooth branch contradiction; singular/reducible
+   152	case remains open.
+   153	
+   154	If `B` is smooth and connected, Chau's theorem gives normalization `A1`, hence
+   155	`B ~= A1`.  Abhyankar-Moh rectifies the embedding to a coordinate line, so
+   156	`A2-B ~= Gm times A1` and `pi_1(A2-B)=Z`.  A connected degree-three cover with
+   157	cyclic monodromy must be generated by a 3-cycle, while the branch meridian from
+   158	the finite-flat cubic has transposition inertia.  This contradiction is solid.
+   159	
+   160	Nothing comparable is proved for singular or reducible contractible one-place
+   161	forests.  Their complement groups need not be cyclic, and the local companion
+   162	subgroups do not yet have a proved common global label.  The remaining escape
+   163	is precisely global braid/infinity monodromy compatible with all affine local
+   164	groups landing in companion-fixing `S2` subgroups.
+   165	
+   166	8. `CONFIRMED`: replay.
+   167	
+   168	Ordinary, `-O`, and `-OO` all produced the same payload:
+   169	
+   170	```json
+   171	{"charged_cyclic_action_transitive": false, "charged_fibre_type": [2, 1], "payload_sha256": "a602c5ca9ca141166143b504b32d835b064ea06b4f5d3618876d1b26faefd834", "s3_order": 6, "status": "PASS-CUBIC-AFFINE-SMOOTH-BRANCH-MONODROMY", "three_cycle_count": 2, "transposition_count": 3}
+   172	```
+   173	
+   174	The deliberate mutation `--mutate-transposition-to-3cycle` was rejected in all
+   175	three modes with `RuntimeError: mutation changed the charged cubic fibre type`.
+   176	The script uses explicit `require` calls, not Python `assert`, so optimization
+   177	does not erase the checks.
+   178	
+   179	The replay verifies only a finite `S3` permutation fact: a cyclic subgroup
+   180	generated by a transposition is not transitive on three letters, while a
+   181	3-cycle is.  It does not verify the Miyanishi hypotheses, no-multiple-to-bundle
+   182	step, Orevkov applicability, Picard/Kummer package, companion-section theorem,
+   183	normality, branch topology, Chau, Abhyankar-Moh, or any singular/reducible
+   184	forest obstruction.
+   185	
+   186	## Maximum-safe theorem
+   187	
+   188	For an actual promoted proper cubic affine survivor, assuming the charged
+   189	proper-block, ruling-transfer, fixed-sheet, and one-place Euler inputs, the
+   190	following is safe:
+   191	
+   192	```text
+   193	rho:U -> A1 has exactly one multiple fibre mF with m>=2.
+   194	Pic(U)=Z/m<[F]>.
+   195	H_i(U;Q)=0 for i>0.
+   196	U - g1(A2) is finite.
+   197	m divides d1.
+   198	K_U ~ 0.
+   199	T=U times_(A2) B -> B is an isomorphism.
+   200	W=U-T -> A2-B is connected finite etale of degree three with S3 monodromy.
+   201	Every affine local complement group fixes its local companion sheet.
+   202	B is not smooth.
+   203	```
+   204	
+   205	With the imported one-place/forest theorem, `B` is therefore singular or
+   206	reducible, connected, contractible, and one-place in the charged sense.  The
+   207	theorem does not exclude that remaining singular/reducible branch, does not
+   208	prove global companion-label propagation, does not place arbitrary `U` in
+   209	Miyanishi's typed `(d,n,r)` class, and does not make any statement about degree
+   210	at least four or the primitive/no-block horn.
+   211	
+   212	## Cheapest useful successor
+   213	
+   214	The cheapest successor is a topology-and-realization check, not another
+   215	Picard/Kummer pass:
+   216	
+   217	1. Build van Kampen or splice presentations for connected contractible
+   218	   one-place forest curves, keeping every affine local subgroup and the infinity
+   219	   group separate.
+   220	2. Search first for explicit `S3` representations in which each affine local
+   221	   group lands in a companion-fixing `S2`; only after that fails should one try
+   222	   to prove common-label propagation.
+   223	3. In parallel, test whether the proper-block boundary forces the ramification
+   224	   resolution arms into the linear situation used by Orevkov's local knot
+   225	   argument.  That added hypothesis would push the branch back to the smooth
+   226	   contradiction.
+   227	
+   228	Typed result for the unresolved gate: `OPEN`.
+   229	<!-- BODY-END -->
+   230	
+   231	## Seal
+   232	
+   233	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   234	  including its terminating newline; this seal is outside the body.
+   235	- Body bytes: `11904`.
+   236	- Body SHA-256:
+   237	  `302f12e6ba08291a14b7c0cd5651c4e2ede664f44cf486244ca04f2c20b0507b`.
+   238	- Frozen basis: `384d3d6b64887989b9f2e50b787b573c9d01b179`.
+
+  ✓ Hash-check charged files
+  → Read charged theorem, prior reviews, and references
+  • Run replay in three Python modes and mutation check
+  • Write hostile review file only
+  • Verify output formatting constraints
+codex
+The central proof is trying to close the prior review’s exact escape: local companion subgroups alone were insufficient, so the new file leans on the full Arzhantsev-Zaidenberg classification to get either a central global meridian or a single origin-local complement. I’m checking those two moves separately, because that is where an illicit common sheet label could otherwise enter.
+exec
+/bin/zsh -lc "nl -ba xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md | sed -n '260,520p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   260	```text
+   261	0e1afb3f3d226393fa143d972620607d46ee3db7daf8b37751fee2d2402db740.
+   262	```
+   263	
+   264	It checks combs with one through six teeth, the cone subgroup, and the
+   265	disconnected two-transposition `S3` warning.  The deliberate mutation
+   266	`--mutate-drop-comb-centrality` is rejected.  The script has zero AST
+   267	`Assert` nodes.  It does not encode or purport to verify the
+   268	Lin--Zaidenberg classification, the product complement (3.2), weighted
+   269	radial equivalence (4.3), or algebraic cover hypotheses.
+   270	
+   271	<!-- BODY-END -->
+   272	
+   273	## Seal
+   274	
+   275	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   276	  including its terminating newline; this seal is outside the body.
+   277	- Body bytes: `9646`.
+   278	- Body SHA-256:
+   279	  `1153c316bedf4df9daf8536e3128bfaf5ff0993f399dffad3a1a43dcb160e8c6`.
+   280	- Frozen basis: `f91e751041a0f926b6981c9bfe33aa1665c2c226`.
+
+exec
+/bin/zsh -lc "nl -ba xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md | sed -n '253,520p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   253	## 6. The rank-three companion is an actual section over `B`
+   254	
+   255	For every geometric `z in B`, finite flat rank three and `S0=empty` give the
+   256	unique fibre partition
+   257	
+   258	```text
+   259	one non-etale point of local length 2
+   260	+ one etale companion point of local length 1.               (6.1)
+   261	```
+   262	
+   263	Define the scheme-theoretic base change
+   264	
+   265	```text
+   266	T=U times_(A2) B.
+   267	```
+   268	
+   269	Because `pi` is etale on `U`, `T->B` is etale.  By (6.1), every geometric
+   270	fibre consists of exactly one reduced point.  Hence the map is surjective
+   271	and radicial; a surjective radicial etale morphism is an isomorphism:
+   272	
+   273	```text
+   274	T isomorphic to B.                                           (6.2)
+   275	```
+   276	
+   277	Equivalently, over the henselian or completed local ring at every point of
+   278	`B`, the rank-three algebra splits canonically as
+   279	
+   280	```text
+   281	rank 1 trivial companion factor  times  rank 2 ramified factor. (6.3)
+   282	```
+   283	
+   284	For each irreducible equation `b_i` of `B`, etale pullback gives
+   285	
+   286	```text
+   287	div_U(pi^*b_i)=T_i
+   288	```
+   289	
+   290	with coefficient one.  Thus every companion component is principal.  This
+   291	does not identify it with a ruling fibre or with an original source sheet.
+   292	
+   293	Now
+   294	
+   295	```text
+   296	W=U minus T=g2^(-1)(A2 minus B)
+   297	```
+   298	
+   299	is a nonempty irreducible open of the integral finite cover `Y`, so
+   300	
+   301	```text
+   302	W->A2 minus B
+   303	```
+   304	
+   305	is connected, finite etale, and degree three.  Its monodromy is transitive.
+   306	It contains a transposition by (6.1), hence its image is `S3`, not the cyclic
+   307	transitive subgroup `A3`.
+   308	
+   309	At any affine point `z in B`, (6.3) says more than generic inertia: the image
+   310	of the entire local complement group in `S3` lies in one order-two subgroup
+   311	fixing the local companion sheet.  Distinct local companion labels may still
+   312	be conjugated by global loops.  That last possibility is the live escape.
+   313	
+   314	## 7. Smooth branch is impossible
+   315	
+   316	If `B` were smooth, connectedness would make it irreducible.  Chau's
+   317	one-place theorem gives `B isomorphic to A1`; the Abhyankar--Moh theorem then
+   318	rectifies its embedding in `A2` to a coordinate line.  Therefore
+   319	
+   320	```text
+   321	A2 minus B isomorphic to Gm times A1,
+   322	pi1(A2 minus B)=Z.
+   323	```
+   324	
+   325	A connected degree-three cover of this complement has cyclic transitive
+   326	monodromy generated by a 3-cycle.  But (6.1) makes a meridian act as a
+   327	transposition, which is not transitive on three letters.  Contradiction.
+   328	
+   329	The desk replay enumerates this last `S3` statement:
+   330	
+   331	```text
+   332	aa198a357ce3c7dd3df6c97019f76553f27c76e5f4b7928ed3e52104de3f3915
+   333	  ops/block_descent_a1_cubic_affine_survivor_replay.py
+   334	
+   335	ordinary / -O / -OO payload SHA-256:
+   336	a602c5ca9ca141166143b504b32d835b064ea06b4f5d3618876d1b26faefd834
+   337	
+   338	AST Assert nodes: 0
+   339	deliberate (2,1)->(3) mutation: rejected in ordinary mode.
+   340	```
+   341	
+   342	Thus
+   343	
+   344	```text
+   345	B is singular or reducible.                                  (7.1)
+   346	```
+   347	
+   348	By (6.2), component normalizations `A1`, and the promoted affine incidence
+   349	forest, the connected analytic curve `B` is contractible: unibranch
+   350	singularities do not change its component topology, and multibranch gluing
+   351	has a tree incidence graph.  Contractibility does not make its complement
+   352	group cyclic; cuspidal curves are the warning control.
+   353	
+   354	## 8. Maximum-safe theorem and cheapest unresolved gate
+   355	
+   356	> **Cubic affine-survivor funnel.**  Every actual proper cubic block in the
+   357	> promoted affine-base equality row has exactly one multiple ruling fibre
+   358	> `mF`, with `m|d1`, `Pic(U)=Z/m`, `K_U~0`, and cofinite first-leg image.
+   359	> Its cubic companion locus is scheme-isomorphic to the connected branch.
+   360	> The branch is a singular or reducible contractible one-place plane curve,
+   361	> and its complement has an `S3` quotient whose restriction to every affine
+   362	> local branch group fixes a companion sheet.
+   363	
+   364	The cheapest remaining gate is now one precise topology problem:
+   365	
+   366	```text
+   367	Can a connected contractible one-place plane curve with forest incidence
+   368	support an S3 quotient of its complement such that every affine local group
+   369	lands in a companion-fixing S2, while the associated normal cubic filling
+   370	has partition (2,1) at every branch point?
+   371	```
+   372	
+   373	A negative answer closes the cubic affine survivor.  A positive topological
+   374	passport is only a control; it must still realize the normal finite-flat
+   375	cubic algebra, the pseudo-plane `K_U=0` package, and the etale `A2` first leg.
+   376	
+   377	The first exact successor should do both sides concurrently:
+   378	
+   379	1. run van Kampen/splice presentations for singular and reducible one-place
+   380	   forest curves, retaining the local companion subgroup at every affine
+   381	   singularity and the sole infinity group;
+   382	2. seek an explicit `S3` counterrepresentation before asserting common-label
+   383	   propagation;
+   384	3. in parallel, determine whether the proper-block boundary forces the
+   385	   ramification resolution arms to be linear.  Under that additional linear
+   386	   condition, Orevkov's local knot argument makes `B` smooth and Section 7
+   387	   closes the row.
+   388	
+   389	No statement here excludes rank at least four, the primitive/no-block horn,
+   390	an arbitrary pseudo-plane, or any singular/reducible `B` before this final
+   391	gate is discharged.
+   392	
+   393	<!-- BODY-END -->
+   394	
+   395	## Seal
+   396	
+   397	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   398	  including its terminating newline; this seal is outside the body.
+   399	- Body bytes: `13589`.
+   400	- Body SHA-256:
+   401	  `f2ca4b74ea0e3478603fbb1ed9012bf8bdd39b2b08106e75b7d1497046de59f9`.
+   402	- Frozen basis: `1d35fe69987a4e346c7e97ab2a227ccce49ef60d`.
+
+exec
+/bin/zsh -lc "nl -ba xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md.artifact.json | sed -n '1,260p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	{"artifact":{"body_bytes":9646,"body_sha256":"1153c316bedf4df9daf8536e3128bfaf5ff0993f399dffad3a1a43dcb160e8c6","file_bytes":9978,"frozen_basis":"f91e751041a0f926b6981c9bfe33aa1665c2c226","full_sha256":"5be2e2af32c0f6201637a652d28a0ff5f6992c5ebde696b1198d7b94e4829cf7","name":"block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md","published_mode":"0444"},"custody":{"closed_utc":"2026-08-30T20:53:19Z","finalized_utc":"2026-08-30T20:53:25Z","lease_id":"458256960046d1e66b103fa2757b9e91","opened_utc":"2026-08-30T20:51:18Z","owner":"sectioned_two_support_universal","source_bytes":9646,"source_sha256":"1153c316bedf4df9daf8536e3128bfaf5ff0993f399dffad3a1a43dcb160e8c6"},"schema":"jc2.artifact-finalize/v1"}
+
+codex
+The affine-survivor precursor itself identifies the live gap as singular/reducible branch topology, and the new obstruction claims to kill exactly that gap by replacing ad hoc label propagation with classification. I’m now checking the charged interfaces that supply connectedness, contractibility, fibre partition, and the cubic/proper-block scope.
+exec
+/bin/zsh -lc "nl -ba xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md | sed -n '1,320p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Binding integration: cubic one-place Euler obstruction
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Integrator: Sol 5.6 Ultra, campaign coordinator  
+     5	Frozen basis: `4607fefa25b31d039404ced367ee77d1d482cc90`  
+     6	Disposition: **PROMOTE WITH EXPLICIT FIXED-SHEET DEPENDENCY**
+     7	
+     8	## 0. Binding verdict
+     9	
+    10	Promote the rank-three one-place Euler theorem after repairing the hostile
+    11	review packet's sole dependency omission.  For an actual proper cubic block
+    12	
+    13	```text
+    14	A2 --g1--> Y --g2--> A2,       deg(g2)=3,
+    15	R=NonEt_Y(g2),                 U=Y minus R,
+    16	B=g2(R)_red,
+    17	```
+    18	
+    19	the reduced ramification map is finite point-bijective and hence a complex
+    20	analytic homeomorphism
+    21	
+    22	```text
+    23	R_red -> B.                                             (0.1)
+    24	```
+    25	
+    26	Every irreducible component on either side has normalization `A1`.  The
+    27	affine incidence multigraph of `R` is a forest, and therefore
+    28	
+    29	```text
+    30	e_c(B)=e_c(R)=b0(B)>=1.                                (0.2)
+    31	```
+    32	
+    33	Combining (0.2) with the promoted `A1`-ruling and cubic sheet census gives
+    34	
+    35	```text
+    36	C=P1:  2*b0(B)+|S0|+Q=1,                    impossible;
+    37	
+    38	C=A1:  2*b0(B)+|S0|+Q=2,
+    39	       hence b0(B)=1, S0=empty, Q=0.                   (0.3)
+    40	```
+    41	
+    42	Thus the complete-base ruling is empty for every actual proper cubic block.
+    43	The affine-base branch survives, but with connected reduced branch and
+    44	ramification support, an unramified block sheet over every target point, and
+    45	one reduced `A1` component in every ruling fibre.
+    46	
+    47	The hostile review returns `CONFIRM_WITH_CORRECTIONS`.  Its only mathematical
+    48	gate was deliberately procedural: the review prompt did not charge the
+    49	already-promoted fixed-sheet integration, so the reviewer correctly stated
+    50	its theorem conditionally.  The coordinator rechecked and explicitly binds
+    51	that different-model-confirmed input below.  No unreviewed replacement is
+    52	being smuggled into the proof.
+    53	
+    54	## 1. Evidence and repaired dependency closure
+    55	
+    56	```text
+    57	8b457a752434ac0c7cb6a2a83dd680b4a66dbe3631ab761c43dc789965ff2d2d
+    58	  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-sol56-20260830.md
+    59	f98149567b865f15a97b1e53c8f1ccd15fde116292e2d0c64a2935d3c45d95ae
+    60	  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-sol56-20260830.md.artifact.json
+    61	
+    62	e544a654d3cead096658502f34b0e6e5560b4a0ea8bf97a53b2a76081aceda4d
+    63	  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-hostile-review-gpt55-20260830.md
+    64	  raw body b16c4bc1ed5756ad39db1f44bc1bdf0fb462de9a0afdc5a5285ae27e712b4fe1
+    65	
+    66	f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
+    67	  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+    68	ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
+    69	  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+    70	94a5968a7b412e80536b855b753c33db8d5cafff6698fa6abf8b7f0c99734c1d
+    71	  xmodel/bd-a2-rational-forest-morphic-correction-coordinator-integration-sol56-20260830.md
+    72	7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29
+    73	  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
+    74	b72e39220f9e8d75e94214d2e5669bda072fcbbd644cfed97f97d9a2b820ad57
+    75	  xmodel/block-descent-a1-euler-ledger-sol56-20260830.md
+    76	```
+    77	
+    78	The fixed-sheet theorem in `f9720718...` was already independently reviewed
+    79	and promoted.  For every irreducible target divisor, at least one component
+    80	of its inverse image is generically unramified.  The proof applies the missed-
+    81	principal-divisor lemma to a defining prime `p`: if every component above
+    82	`V(p)` were ramified, then the principal divisor of the same element `p` in
+    83	the literal intermediate ring would be wholly missed by `g1`, which is
+    84	impossible because its pullback to `A2` would be a nowhere-zero nonunit
+    85	polynomial.  Residue degrees are retained; geometric inertia fixes
+    86	`sum_(e_i=1) f_i>=1` block sheets.  Consequently the no-unramified-sheet set
+    87	`S0` has no divisorial component and is finite.  This closes exactly the
+    88	reviewer's stated gap and nothing more.
+    89	
+    90	Root reproduced the external lane's receipt, composed prompt, Seatbelt
+    91	profile, adapter, launcher, validator, appendix, report, log, and every
+    92	charged hash before reading it.  Receipt status `charge_basis_status=ABSENT`
+    93	is correct because the review asserted no exit price.  The report was sealed
+    94	against basis `f86884a5ab78e5248977942f93547fbf25b5be8e` before custody
+    95	commit `4607fefa`.
+    96	
+    97	## 2. Rank-three topology bridge
+    98	
+    99	At a closed source point over a smooth complex target, finite flatness gives
+   100	
+   101	```text
+   102	g2 etale at y  <=>  the local fibre factor at y has length one. (2.1)
+   103	```
+   104	
+   105	A non-etale point therefore consumes length at least two.  Since the total
+   106	fibre length is three, a branch value has exactly one reduced source point in
+   107	`R`.  This remains true at a singular point of normal `Y`: length one would
+   108	make the finite-flat local algebra etale and hence its source regular.
+   109	
+   110	The restriction `R_red->B` is finite and bijective on closed points.  After
+   111	analytification it is a proper continuous bijection between locally compact
+   112	Hausdorff spaces, hence a homeomorphism.  This proves (0.1), but not a scheme
+   113	isomorphism: cusp normalization and conductor data remain legitimate.  In
+   114	characteristic zero the corresponding components are birational and have
+   115	the same normalizations.
+   116	
+   117	The inequality `2+2>3` is load-bearing.  At rank four, a `(2,2)` fibre can
+   118	contain two reduced ramification points, and target conductor identifications
+   119	can change the topology.  No degree-at-least-four statement is promoted.
+   120	
+   121	## 3. One-place components and the forest Euler identity
+   122	
+   123	Every component of `B` is an entire irreducible component of the Keller
+   124	nonproper-value curve.  Nguyen Van Chau's published theorem gives a
+   125	nonconstant polynomial parametrization of each such component.  Passing to
+   126	the normalization and projective completion shows that its affine
+   127	normalization is `A1`.  This is componentwise: the whole possibly reducible
+   128	nonproper-value curve merely has one set-theoretic point at infinity and may
+   129	have several analytic branches there.
+   130	
+   131	Resolve the closure of `R` together with infinity and the singularities of
+   132	normal `Y`.  The affine incidence multigraph of `R`, retaining self-nodes and
+   133	parallel edges, is obtained from the actual morphic strict-SNC boundary
+   134	forest by minors, subdivisions, and vertex deletions.  It is therefore a
+   135	forest.  If `c` is the number of normalized `A1` components, `Sigma` the
+   136	affine multibranch points, `r_p` the number of normalization branches at
+   137	`p`, and `h=b0(R)`, normalization additivity and the forest identity give
+   138	
+   139	```text
+   140	e_c(R)=c-sum_(p in Sigma)(r_p-1)=h.                   (3.1)
+   141	```
+   142	
+   143	Together with (0.1), this proves (0.2).  Unibranch cusps cause no Euler
+   144	defect; a self-node creates parallel incidence edges and is forbidden by the
+   145	forest.  The rational-forest input is licensed only by the actual everywhere-
+   146	defined morphism `g1:A2->U`, never by abstract rational domination.
+   147	
+   148	## 4. Euler closure and exact meaning of the survivor
+   149	
+   150	With the promoted fixed sheet, the rank-three fibre census is
+   151	
+   152	```text
+   153	(1,1,1) off B:       u(z)=3;
+   154	(2,1) on B-S0:       u(z)=1;
+   155	(3) on finite S0:    u(z)=0.
+   156	```
+   157	
+   158	Hence
+   159	
+   160	```text
+   161	e(U)=3-2*e(B)-|S0|.                                  (4.1)
+   162	```
+   163	
+   164	The ruling identity is
+   165	
+   166	```text
+   167	e(U)=e(C)+Q,       Q=sum_t(q_t-1)>=0.                 (4.2)
+   168	```
+   169	
+   170	Equations (0.2), (4.1), and (4.2) give (0.3).  In the affine-base survivor,
+   171	`S0=empty` means there is at least one unramified **block** sheet at every
+   172	target point; it does not identify an original source sheet or make
+   173	`g2|U` finite flat of degree three over the branch.  `Q=0` says every reduced
+   174	ruling fibre has one `A1` component; it does not prove scheme-reducedness,
+   175	multiplicity one, or absence of special fibre values.  Connectedness is for
+   176	the reduced affine branch/ramification topology.
+   177	
+   178	## 5. Maximum-safe conclusion and successor
+   179	
+   180	For an actual proper cubic block satisfying the promoted sandwich, fixed-
+   181	sheet, morphic-forest, and `A1`-ruling theorems, the ruling base cannot be
+   182	`P1`.  If it is `A1`, then necessarily
+   183	
+   184	```text
+   185	b0(B)=1,       S0=empty,       Q=0.
+   186	```
+   187	
+   188	This is a proper-block discriminator, not an exclusion of the affine-base
+   189	survivor, not a degree-four theorem, not a block-existence theorem, and not a
+   190	proof of JC2.  The cheapest successor is to combine the unique affine ruling
+   191	with the rank-three local splitting over the connected branch, the class
+   192	group of `U`, and multiple-fibre/Kummer constraints.  That successor must
+   193	keep ruling fibres, branch components, unramified companion sheets, and
+   194	original source sheets distinct.
+   195	
+   196	<!-- BODY-END -->
+   197	
+   198	## Seal
+   199	
+   200	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   201	  including its terminating newline; this seal is outside the body.
+   202	- Body bytes: `8528`.
+   203	- Body SHA-256:
+   204	  `0d77db42a859fb280ba02c3b2351a668ed52d6e53bd580e2faef1d185480c1fd`.
+   205	- Frozen basis: `4607fefa25b31d039404ced367ee77d1d482cc90`.
+
+exec
+/bin/zsh -lc "nl -ba xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md | sed -n '1,320p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Binding integration: qualitative `A1` ruling on every proper block open
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Integrator: Sol 5.6 Ultra, campaign coordinator  
+     5	Frozen basis: `81c1db3fb787749562894c83439d327a10d19d70`  
+     6	Disposition: **PROMOTE WITH REVIEW CORRECTIONS / QUALITATIVE BLOCK-GENERAL THEOREM**
+     7	
+     8	## 0. Binding verdict
+     9	
+    10	Promote the repaired proper-block ruling theorem.  For the hypothetical
+    11	proper intermediate factorization supplied by the binding block theorem,
+    12	
+    13	```text
+    14	A2 --g1, etale quasi-finite dominant--> Y
+    15	   --g2, finite flat surjective--> A2,
+    16	```
+    17	
+    18	let `R=NonEt_Y(g2)` be the full **source** non-etale support and put
+    19	`U=Y minus R`.  Then
+    20	
+    21	```text
+    22	U is smooth, rational, and affine;
+    23	O(U)^*=C^*;                         bar-kappa(U)=-infinity;
+    24	g1:A2 -> U is the actual dominant etale quasi-finite first leg;
+    25	rho:U -> C is a surjective A1-fibration, C=A1 or P1;
+    26	every fibre with its reduced structure is a disjoint union of A1s.
+    27	```
+    28	
+    29	This theorem is independent of a quadratic presentation.  It applies only
+    30	inside the proper-intermediate-field horn.  It transfers no quadratic Euler
+    31	constant, `D9` marking, Picard cap, `F5` data, bounded completion, coefficient
+    32	occurrence, or conclusion about the primitive/no-proper-block horn.
+    33	
+    34	The different-model review returns `CONFIRM_WITH_CORRECTIONS`.  Its one
+    35	refutation concerns only an optional fallback proof in the producer: absolute
+    36	affineness does **not** descend from an affine fpqc cover.  The promoted
+    37	argument instead uses Stacks Tag `0ECD` directly, so the false fallback has no
+    38	downstream consumer and is quarantined here.
+    39	
+    40	## 1. Frozen evidence
+    41	
+    42	```text
+    43	acfcd839a4f7af77c54a75bc30c2909f26c6afb8ec35b1862dc685e27b270819
+    44	  xmodel/block-descent-a1-ruling-transfer-audit-sol56-20260830.md
+    45	b52d063d2801885c30fe92212b86d9cda1de7c97a6438a3cc1d243de1c6b30bc
+    46	  xmodel/block-descent-a1-ruling-transfer-audit-sol56-20260830.md.artifact.json
+    47	
+    48	259ad683e97daadeaf82b737dcc467ea7d1d07faa8ce40039f13e100b2da64aa
+    49	  xmodel/block-descent-a1-ruling-transfer-hostile-review-fable5-20260830.md
+    50	  body f2b0d3ae2f800e3a9958bc9c467db219cd16025ddfd42d459b78341eddd86d6f
+    51	0009fa4ddd787144c006eb425221054233a0346f44c1ae91fea940c03cca442d
+    52	  xmodel/block-descent-a1-ruling-transfer-hostile-review-fable5-20260830.run.v2
+    53	
+    54	ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
+    55	  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+    56	f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
+    57	  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+    58	```
+    59	
+    60	Root reproduced the schema-v2 receipt, immutable prompt, Claude adapter,
+    61	launcher, Seatbelt profile, charge-basis validator, `FALLACY-v2.md`, composed
+    62	model prompt, report, log, and all five charged mathematical hashes before
+    63	reading the review.  The body was then stamped against basis
+    64	`5cc7b50274df491cb09dbb91a8b528de77fc5ef4` and independently verified.
+    65	`charge_basis_status=ABSENT` is correct: the review made no new exit-price
+    66	assertion.
+    67	
+    68	## 2. Direct reconstruction
+    69	
+    70	The binding block theorem gives `Y` integral, normal, affine, and finite over
+    71	`A2_C`; hence `Y` is a finite-type excellent complex surface.  It also gives
+    72	that `R` is nonempty and pure of codimension one,
+    73	`g1(A2) subset Y_sm minus R`, and `Sing(Y) subset R`.
+    74	
+    75	### 2.1 Affineness and smoothness
+    76	
+    77	Apply Stacks Project Theorem 58.29.3, Tag `0ECD`, with Stacks-source `Y`,
+    78	Stacks-target `A2_C`, and morphism `g2`.  Its literal conclusion is that the
+    79	inclusion of the maximal etale open into the normal source is an **affine
+    80	morphism**.  The maximal etale open is exactly `U=Y minus R`; since `Y` is
+    81	affine, `U` is affine.  One must not shorten the theorem to the false absolute
+    82	claim that every such maximal etale open is affine without the affine-source
+    83	hypothesis.
+    84	
+    85	This direct route uses normality of `Y`, finite type of `g2`, and the excellent
+    86	regular target over a field.  It does not need dimension two, purity, or
+    87	nonemptiness for this affineness step, although those properties remain
+    88	promoted block data and enter other block arguments.  The Nagata
+    89	normal-excellent-surface divisor-complement theorem supplies an independent
+    90	route using purity.
+    91	
+    92	By definition `g2|U` is etale.  Since its target is smooth, `U` is smooth.
+    93	Because `g1(A2)` avoids `R`, `g1` factors uniquely through `U`; density in
+    94	`Y` implies density in the nonempty open `U`, and etaleness and
+    95	quasi-finiteness are unchanged.
+    96	
+    97	### 2.2 Units, rationality, and logarithmic Kodaira dimension
+    98	
+    99	Dominance makes
+   100	
+   101	```text
+   102	g1^*:O(U) -> C[x,y]
+   103	```
+   104	
+   105	injective.  A unit therefore pulls back to a scalar, and injectivity applied
+   106	to its difference from that scalar gives `O(U)^*=C^*`.  The finite extension
+   107	`C(U) subset C(x,y)` makes `U` unirational; Castelnuovo in characteristic zero
+   108	makes its smooth projective model rational.
+   109	
+   110	For a dominant generically finite morphism of smooth open varieties,
+   111	log-pluricanonical pullback gives
+   112	
+   113	```text
+   114	bar-kappa(A2) >= bar-kappa(U).
+   115	```
+   116	
+   117	Since `bar-kappa(A2)=-infinity`, necessarily
+   118	`bar-kappa(U)=-infinity`.  Etaleness without properness does not upgrade this
+   119	to a general equality theorem; only the displayed direction is consumed.
+   120	
+   121	### 2.3 The ruling, its base, and its fibres
+   122	
+   123	The Miyanishi--Sugie cylinder theorem together with the standard
+   124	cylinder-to-global-fibration extension for smooth affine surfaces yields an
+   125	actual surjective morphism on all of `U`,
+   126	
+   127	```text
+   128	rho:U -> C,
+   129	```
+   130	
+   131	whose general scheme fibre is `A1`; no base or field extension is inserted.
+   132	Rationality of `U` and Luroth make `C` rational.  Pullback along the
+   133	surjective `rho` injects `O(C)^*` into `C^*`, so a smooth rational affine base
+   134	has at most one puncture.  Thus `C=A1` or `P1`.  The projective-base branch is
+   135	real for general smooth affine surfaces and is not excluded here.
+   136	
+   137	The charged Gurjar--Miyanishi fibre lemma says that every fibre, after taking
+   138	its reduced structure, is a disjoint union of affine lines.  This controls
+   139	neither Cartier multiplicities nor the number of bad fibres or components.
+   140	
+   141	If `q_t` is the number of reduced components at a bad value, Euler additivity
+   142	over the complement of the finite bad-value set gives the presentation-free
+   143	identity
+   144	
+   145	```text
+   146	e(U)=e(C)+sum_t(q_t-1).                                (2.1)
+   147	```
+   148	
+   149	Hence `e(U)>=1`, and `e(U)>=2` on the `P1` branch.  Formula (2.1) transfers;
+   150	the quadratic evaluation `e(U)=12-r-c` does not.
+   151	
+   152	## 3. Review corrections and attack controls
+   153	
+   154	1. **False fallback removed.**  If `V=g1(A2)`, the surjective etale
+   155	   quasi-compact map `A2 -> V` is fpqc, but affine total space does not force
+   156	   affine base.  The explicit cover
+   157	   `D(x) disjoint_union D(y) -> A2 minus {0}` is a counterexample.  Whether
+   158	   `V` omits isolated points of the affine `U` remains open and is unused.
+   159	2. **Source and target loci stay distinct.**  `R` is source non-etaleness.
+   160	   The target discriminant, its full inverse image, and `g1(A2)` are different
+   161	   objects.  An unramified sheet over a branch value can lie in `U`, so
+   162	   deleting the full inverse image of the target discriminant would be too
+   163	   strong.
+   164	3. **Weil support is sufficient.**  Neither the direct route nor the Nagata
+   165	   route assumes `R` Cartier, principal, or `Q`-Cartier.  Multiplicities do
+   166	   not define `U`.
+   167	4. **Purity is correctly source-side.**  The promoted divisoriality is also
+   168	   compatible with Stacks Tag `0EA4`; an isolated non-etale residue would
+   169	   violate purity.  Deleting only selected components would retain
+   170	   non-etale or singular points and break the surface-theorem hypotheses.
+   171	5. **The complete-base control survives.**  Complements of ample sections in
+   172	   Hirzebruch surfaces exhibit smooth rational affine `A1`-fibrations over
+   173	   `P1` with constant units.  No qualitative transferred hypothesis chooses
+   174	   the affine base.
+   175	
+   176	## 4. Maximum-safe theorem and firewalls
+   177	
+   178	> **Proper-block ruling theorem.**  Assume a hypothetical noninvertible
+   179	> complex Keller map has a proper intermediate field and charge the promoted
+   180	> block factorization above.  For the full source non-etale support
+   181	> `R=NonEt_Y(g2)`, the open `U=Y minus R` is a smooth rational affine complex
+   182	> surface, the actual first leg factors as a dominant etale quasi-finite
+   183	> `A2 -> U`, `O(U)^*=C^*`, and `bar-kappa(U)=-infinity`.  The surface admits
+   184	> a surjective `A1`-fibration over `A1` or `P1`, directly over `C`, and every
+   185	> fibre with reduced structure is a disjoint union of affine lines.  Its
+   186	> Euler number satisfies (2.1).
+   187	
+   188	This is an exact qualitative theorem conditional on a proper block.  It does
+   189	not prove that a proper block exists.  It does not transfer the quadratic
+   190	constant `12`, a Picard or boundary-rank cap, `F5`, `D9`, a finite
+   191	presentation, a ruling on a particular raw completion, or any result about
+   192	the primitive sector.  A full control satisfying the whole sandwich would
+   193	itself be a noninvertible Keller map and cannot be priced as a routine
+   194	example.
+   195	
+   196	## 5. Theorem-interface composition and successor
+   197	
+   198	The composition pass finds one exact new bridge: the presentation-free
+   199	fibre Euler identity (2.1) can be compared with a sandwich-side computation
+   200	of `e(U)=e(Y)-e(R)` without importing any quadratic marking.  No current
+   201	promoted theorem evaluates that second ledger, so the bridge is `OPEN`, not a
+   202	numeric exclusion.
+   203	
+   204	The cheapest decisive successor is `BD-A1-EULER-LEDGER`: stratify the finite
+   205	flat `g2` over its target discriminant and separately account for
+   206	nonproperness of the etale quasi-finite `g1` to compute or bound `e(U)` in
+   207	terms of `d1,d2` and block-general branch data.  In parallel, test whether
+   208	`d1>=2` rules out the `P1` base.  Neither successor should wait for the other,
+   209	and neither imports a quadratic Euler constant.
+   210	
+   211	<!-- BODY-END -->
+   212	
+   213	## Seal
+   214	
+   215	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   216	  including its terminating newline; this seal is outside the body.
+   217	- Body bytes: `9690`.
+   218	- Body SHA-256:
+   219	  `469f1f68e1dd11c901ed467e5d95046a26fb3d036186c8298044309457196e56`.
+   220	- Frozen basis: `81c1db3fb787749562894c83439d327a10d19d70`.
+
+exec
+/bin/zsh -lc "nl -ba xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md | sed -n '1,320p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: Galois block obstruction and no two-block system
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Coordinator: Sol 5.6 Ultra  
+     5	Frozen basis: `0d7544ebd5cb12def6bac892646010301098be3c`  
+     6	Lifecycle: **BINDING INTEGRATION / DIFFERENT-MODEL-CONFIRMED BLOCK THEOREM**
+     7	
+     8	## 0. Evidence and disposition
+     9	
+    10	This integration binds the conservative intersection of
+    11	
+    12	```text
+    13	766a843a25eaf560840f15afa8971dd39246fc8b15290491d18e7f4a4c6bb7f7
+    14	  xmodel/block-descent-d2-galois-obstruction-producer-sol56-20260830.md
+    15	e324c104d06ad9e987cfe304ee001e52a58d91eaba941b80c78555a058056df9
+    16	  xmodel/block-descent-d2-galois-obstruction-hostile-review-opus5-20260830.md
+    17	ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
+    18	  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+    19	```
+    20	
+    21	The Opus verdict is `CONFIRM_WITH_CORRECTIONS`.  It independently rebuilt
+    22	the missed-principal-divisor lemma, fixed-sheet theorem, Galois-uniformity
+    23	contradiction, rank-two trace-zero proof, and group-theoretic translation.
+    24	No mathematical gap was found in `BD-GAL` or `BD-D2`.  This file incorporates
+    25	the review's shorter proof, residue-degree accounting, and terminology
+    26	repairs rather than preserving the producer's avoidable ambiguities.
+    27	
+    28	## 1. Binding theorem
+    29	
+    30	Let `F=(f,g):A^2_C->A^2_C` be a hypothetical non-invertible Keller map and
+    31	let
+    32	
+    33	```text
+    34	C(f,g) proper-subfield K proper-subfield C(x,y),
+    35	d1=[C(x,y):K]>=2,             d2=[K:C(f,g)]>=2.
+    36	```
+    37	
+    38	For the promoted factorization
+    39	
+    40	```text
+    41	A^2 --g1, etale quasi-finite--> Y=Spec(B_K)
+    42	    --g2, finite flat--> A^2,
+    43	```
+    44	
+    45	write `R` for the non-etale locus of `g2`.  Then:
+    46	
+    47	1. **Missed principal divisors.**  No nonzero nonunit `b in B_K` has
+    48	   `V_Y(b) subset Y minus g1(A^2)`.  Indeed, its pullback would be a
+    49	   nowhere-zero polynomial on `A^2`, hence a scalar unit, and the literal
+    50	   inclusion `B_K subset C[x,y]` makes `b` the same scalar.
+    51	2. **Fixed sheet over every prime divisor.**  For every irreducible
+    52	   `p in C[f,g]`, at least one component of `g2^{-1}(V(p))` dominates
+    53	   `V(p)` and is generically unramified.  The shortest proof applies item 1
+    54	   directly to `b=p`: if all components were inside `R`, the whole principal
+    55	   divisor would be missed.  If the primes above `(p)` have ramification and
+    56	   residue degrees `(e_i,f_i)`, geometric inertia fixes exactly
+    57	   `sum_(e_i=1) f_i` sheets, and this sum is at least one.
+    58	3. **No proper Galois quotient.**  The extension `K/C(f,g)` is not Galois.
+    59	   Otherwise transitivity of the Galois group on primes over a height-one
+    60	   prime makes every `e_i` equal.  A component of the nonempty branch support
+    61	   supplies an `e_i>1`, while item 2 supplies an `e_i=1`, a contradiction.
+    62	   Normality, not smoothness of `Y`, is enough for the height-one DVR
+    63	   argument; characteristic zero supplies separable residue extensions and
+    64	   tame divisorial ramification.
+    65	4. **No two-block system.**  In particular `d2!=2`, because every quadratic
+    66	   extension in characteristic zero is Galois.  In monodromy notation
+    67	   `H subset J subset G`, this says `[G:J]!=2` and `J` is not normal in `G`.
+    68	   It says nothing about the block size `[J:H]`; in particular it does not
+    69	   exclude `d1=2`.
+    70	5. **Structural corollaries.**  `B_K` is nonfactorial and nonmonogenic over
+    71	   `C[f,g]`.  The rank-two direct proof writes a hypothetical degree-two
+    72	   algebra globally as `A[w]/(w^2-h)`; its ramification set is the nonempty
+    73	   principal divisor `V_Y(w)`, contradicting item 1.  This second proof is
+    74	   independent of the Galois-uniformity argument, but shares the same source-
+    75	   unit mechanism and is not advertised as logically independent of item 1.
+    76	
+    77	“Branch” and “discriminant” agree here only at the level of support.  No
+    78	divisor multiplicities are identified.  A fixed sheet of `g2` is a fixed
+    79	block of the full map; it is not necessarily a single source sheet.
+    80	
+    81	## 2. Independently checked strengthenings
+    82	
+    83	The reviewer derived the following two claims.  The coordinator checked
+    84	their proofs directly against the promoted sandwich; they are included with
+    85	their exact global scope.
+    86	
+    87	**Class-lattice injection.**  Let `Z=Y minus g1(A^2)`.  The free abelian
+    88	group on the codimension-one components of `Z` injects into `Cl(Y)`.  If a
+    89	divisor supported in `Z` were `div(b)`, then both `b` and `b^{-1}` would be
+    90	regular on `g1(A^2)`.  Their pullbacks would be mutually inverse polynomials
+    91	on `A^2`, hence scalars; the function-field inclusion then makes `b` scalar.
+    92	Thus every ramification-component class has infinite order and `Cl(Y)` is
+    93	infinite whenever `R` is nonempty.
+    94	
+    95	**Nonprincipal different.**  The relative dual
+    96	
+    97	```text
+    98	omega_(B_K/A)=Hom_A(B_K,A)
+    99	```
+   100	
+   101	is not a free `B_K`-module, equivalently the different is not principal.
+   102	If a generator existed, its effective divisor would be
+   103	`sum_T(e_T-1)T`, supported exactly on the nonempty codimension-one
+   104	ramification locus in characteristic zero.  It would give a nonempty
+   105	principal closed set inside `R`, contradicting item 1.  Consequently there
+   106	is no global complete-intersection presentation of this finite algebra over
+   107	`A`.  This statement does **not** assert that the finite morphism is nowhere
+   108	locally complete intersection: an invertible but nonfree dualizing module is
+   109	not excluded by the argument.
+   110	
+   111	## 3. Prior-art boundary
+   112	
+   113	A targeted source check confirms that the full-extension Galois case is
+   114	classical, beginning with Campbell (1973), with later Razar/Wright results.
+   115	The check found no indexed statement of the exact proper-intermediate theorem,
+   116	but a negative targeted search is not novelty evidence.  The mathematical
+   117	claim here is internal and reviewed; no external novelty claim is made.
+   118	
+   119	The source record is:
+   120	
+   121	```text
+   122	b75c56add2dcd846654e627ab10bde1a0bea62b857db004f64b77da46e41b741
+   123	  xmodel/block-descent-galois-prior-art-targeted-check-sol56-20260830.md
+   124	```
+   125	
+   126	## 4. Exact boundary and successor
+   127	
+   128	Promoted:
+   129	
+   130	```text
+   131	proper Galois block quotient: impossible;
+   132	two-block quotient d2=2:       impossible;
+   133	every divisorial inertia:      at least one fixed block;
+   134	ramification class lattice:    injects into Cl(Y);
+   135	different / relative dual:     nonprincipal / nonfree.
+   136	```
+   137	
+   138	Not proved: `d1!=2`; exclusion of any non-Galois `d2>=3`; primitive
+   139	monodromy; parity of the total degree; smoothness of `Y`; properness or
+   140	surjectivity of `g1`; existence of a block; a counterexample; or JC2.
+   141	
+   142	The next block discriminator is cubic and must use the `A^2` first leg, not
+   143	only cover-side finite algebra.  The affine-linear Miranda subfamily and its
+   144	logarithmic first-leg obstruction are separate review-gated packets at this
+   145	seal; they are not promoted by this integration.
+   146	
+   147	<!-- BODY-END -->
+   148	
+   149	## Seal
+   150	
+   151	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   152	  including its terminating newline; this seal is outside the body.
+   153	- Body bytes: `6637`.
+   154	- Body SHA-256:
+   155	  `f3668b3ec1c7fd5caefe8b0421548327fc990426b6a04f37083ef7b907475ca1`.
+   156	- Frozen basis: `0d7544ebd5cb12def6bac892646010301098be3c`.
+
+exec
+/bin/zsh -lc "pdftotext -f 1 -l 8 refs/arzhantsev_zaidenberg_acyclic_curves_arxiv1110.3028v2.pdf - | nl -ba | sed -n '1,260p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	ACYCLIC CURVES AND GROUP ACTIONS
+     2	ON AFFINE TORIC SURFACES
+     3	IVAN ARZHANTSEV AND MIKHAIL ZAIDENBERG
+     4	
+     5	arXiv:1110.3028v2 [math.AG] 18 Oct 2011
+     6	
+     7	To Masayoshi Miyanishi on occasion of his 70th birthday
+     8	Abstract. We show that every irreducible, simply connected curve on a toric affine surface
+     9	X over C is an orbit closure of a Gm -action on X. It follows that up to the action of the
+    10	automorphism group Aut(X) there are only finitely many non-equivalent embeddings of the
+    11	affine line A1 in X. A similar description is given for simply connected curves in the quotients
+    12	of the affine plane by small finite linear groups. We provide also an analog of the Jung-van
+    13	der Kulk theorem for affine toric surfaces, and apply this to study actions of algebraic groups
+    14	on such surfaces.
+    15	
+    16	Contents
+    17	Introduction
+    18	1. Preliminaries
+    19	1.1. Simply connected plane affine curves
+    20	1.2. The automorphism group of the affine plane
+    21	2. Subgroups of de Jonquères group and stabilizers of plane curves
+    22	2.1. Subgroups of the de Jonquères group
+    23	2.2. Stabilizers of acyclic plane curves
+    24	3. Acyclic curves on affine toric surfaces
+    25	3.1. Acyclic curves in the smooth locus
+    26	3.2. Acyclic curves through the singular point
+    27	3.3. Acyclic curves as orbit closures
+    28	3.4. Reducible acyclic curves on affine toric surfaces
+    29	4. Automorphism groups of affine toric surfaces
+    30	4.1. Free amalgamated product structure
+    31	4.2. Algebraic groups actions on affine toric surfaces
+    32	5. Acyclic curves and automorphism groups of non-toric quotient surfaces
+    33	References
+    34	
+    35	2
+    36	3
+    37	3
+    38	3
+    39	5
+    40	5
+    41	8
+    42	12
+    43	12
+    44	14
+    45	16
+    46	17
+    47	19
+    48	19
+    49	24
+    50	25
+    51	28
+    52	
+    53	2010 Mathematics Subject Classification. Primary 14H45, 14M25; Secondary 14H50, 14R20.
+    54	Key words and phrases. Affine surface, acyclic curve, automorphism group, torus action, quotient.
+    55	This work was done during a stay of the first author at the Institut Fourier, Grenoble and of the second
+    56	author at the Max Planck Institute of Mathematics, Bonn. We thank both institutions for generous support
+    57	and hospitality. The work of the first author was supported by a Simons Award.
+    58	1
+    59	
+    60	2
+    61	
+    62	IVAN ARZHANTSEV AND MIKHAIL ZAIDENBERG
+    63	
+    64	Introduction
+    65	The geometry of affine toric surfaces still attracts the researches1. Every affine toric surface
+    66	over C except for A1∗ × A1∗ and A1 × A1∗ , where A1∗ = A1 \ {0}, is the quotient of A2 by a small
+    67	finite cyclic subgroup G ⊆ GL(2, C).2
+    68	Throughout the paper, by ‘acyclic curve’ we mean a connected and simply connected
+    69	complex affine algebraic curve. A classification of acyclic curves on the affine plane, both
+    70	irreducible and reducible, up to the action of the automorphism group of the plane is well
+    71	known, see e.g. [1], [37], [47], [53], [55]; we recall it in subsection 1.1 below. In section 3 we
+    72	classify acyclic curves on affine toric surfaces. Similarly as in [54], actions of one-parameter
+    73	groups play a crucial role in this classification.
+    74	Let π : A2 → X = A2 / G be the quotient morphism, and let C be an irreducible acyclic
+    75	curve on X. Then π ∗ (C) is an acyclic (reducible and non-reduced, in general) curve on
+    76	A2 . We show (see theorems 3.2 and 3.5) that applying an appropriate automorphism of the
+    77	affine plane we can transform the curve π ∗ (C) and the G-action on A2 to canonical forms
+    78	simultaneously.
+    79	In subsection 2.2, given an acyclic plane curve C, we describe the stabilizer subgroup
+    80	Stab(C) ⊆ Aut(A2 ) of all automorphisms which preserve C. We use this description in
+    81	subsections 3.1 and 3.2 in order to obtain the canonical forms of irreducible acyclic curves
+    82	on an affine toric surface X. We treat separately the cases of the curves passing or do not
+    83	passing through the singular point of X. This leads in subsection 3.3 to the conclusion that
+    84	every irreducible acyclic curve on X is the closure of a non-closed orbit of a Gm -action on X.
+    85	Furthermore, if such a curve is contained in the smooth locus Xreg then it is smooth and is as
+    86	well an orbit of a Ga -action on X, hence is included in a one-parameter family of such curves.
+    87	We show that any affine toric surface X possesses only finitely many equivalence classes of
+    88	embedded affine lines (see theorem 3.9). This is an analog of the celebrated Abhyankar-MohSuzuki Embedding Theorem, which says that there is just one class of embeddings of the
+    89	affine line in the affine plane (see theorem 1.1 below).
+    90	The above description enables us to classify in subsection 3.4 all reduced simply connected
+    91	curves on an affine toric surface, whenever they are irreducible or not.
+    92	Section 4 is devoted to the automorphism groups of affine toric surfaces. In theorem 4.2 we
+    93	obtain an analog of the classical Jung-van der Kulk theorem on a free amalgamated product
+    94	structure on the group Aut(A2 ) (see theorem 1.4). Using this theorem we describe in theorems
+    95	4.15 and 4.17 (reductive) algebraic groups acting effectively on affine toric surfaces.
+    96	In the final section 5 we deal with acyclic curves on a quotient X = A2 /G of the affine plane
+    97	A2 by a nonabelian small finite group G. It turns out that the only irreducible acyclic curves
+    98	on X are the images of the affine lines in A2 passing through the origin (see theorem 5.1).
+    99	In particular, every such curve is the closure of a Gm -orbit and passes through the singular
+   100	point. Since the family of these curves is preserved under automorphisms, the automorphism
+   101	group Aut(X) is rather poor. Namely, it coincides with N(G)/G, where N(G) stands for
+   102	the normalizer of G in GL(2, C) (see theorem 5.3). Consequently, N(G) coincides with
+   103	the normalizer of G in the full automorphism group Aut(A2 ). As an example, we describe
+   104	explicitly the affine lines on the quaternion surface X = A2 /Q8 .
+   105	1
+   106	
+   107	See, for instance, the recent paper [20] on the Hilbert scheme of zero-cycles on such a surface.
+   108	
+   109	2A finite linear group is small if it does not contain pseudoreflections.
+   110	
+   111	ACYCLIC CURVES
+   112	
+   113	3
+   114	
+   115	When the paper was finished, S. Kaliman kindly informed us that he also came, for different
+   116	purposes, to similar conclusions, but never wrote them down. The authors thank S. Kaliman
+   117	for this information and interesting discussions.
+   118	1. Preliminaries
+   119	In this section we gather some well known facts on the geometry of the affine plane A2 over
+   120	C that we need in the sequel.
+   121	1.1. Simply connected plane affine curves. By a curve we mean (for short) a complex
+   122	affine algebraic curve. A curve C is called acyclic if π0 (C) = π1 (C) = 1, i.e. C is connected
+   123	and simply connected. Two plane curves C and C ′ will be called equivalent if C ′ = γ(C)
+   124	for some γ ∈ Aut(A2 ). The following theorems provide canonical forms of acyclic and, more
+   125	generally, of simply connected plane curves.
+   126	Theorem 1.1. (Abhankar-Moh [1], Suzuki [47]) Any reduced, irreducible, smooth, acyclic
+   127	plane curve is equivalent to the affine line Cy = {y = 0}. Furthermore, if C is parameterized
+   128	≃
+   129	via a map ϕ : A1 −→ C, ϕ(t) = (p(t), q(t)), where p, q ∈ C[t], then either deg p | deg q or
+   130	deg q | deg p.
+   131	Using Suzuki’s formula for the Euler characteristics of the fibers in a fibration on a smooth
+   132	affine surface [47] (see also e.g. [19]) it is not difficult to deduce the following corollary.
+   133	Corollary 1.2. Any disconnected, simply connected, reduced plane curve is equivalent to a
+   134	union of r ≥ 2 parallel lines.
+   135	Theorem 1.3. (Lin-Zaidenberg [55])
+   136	(a) Any reduced, irreducible, singular, acyclic plane curve is equivalent to one and only one
+   137	of the curves Ca,b = {y a − xb = 0}, where 1 < a < b and gcd(a, b) = 1.
+   138	(b) Any reduced, simply connected plane curve is equivalent to a curve given by one of the
+   139	equations
+   140	y εy p(x) = 0
+   141	
+   142	(1)
+   143	or
+   144	
+   145	r
+   146	Y
+   147	x y
+   148	(y a − κi xb ) = 0 ,
+   149	εx εy
+   150	
+   151	(2)
+   152	
+   153	i=1
+   154	
+   155	where εx , εy ∈ {0, 1}, p ∈ C[t] is a polynomial with simple roots, a, b ≥ 1 and
+   156	gcd(a, b) = 1, r > 0, and κi ∈ C× , i = 1, . . . , r, are pairwise distinct.
+   157	1.2. The automorphism group of the affine plane. In this subsection the base field k
+   158	can be arbitrary. We let Ank denote the affine n-space over k and Aff(Ank ) the group of all
+   159	affine transformations of this space. By JONQ+ (A2k ) (JONQ− (A2k ), respectively) we denote
+   160	the group of the de Jonqières transformations
+   161	(3)
+   162	
+   163	Φ+ : (x, y) 7−→ (αx + f (y), βy + γ) ,
+   164	
+   165	respectively,
+   166	(4)
+   167	
+   168	Φ− : (x, y) 7−→ (αx + γ, βy + f (x)) ,
+   169	
+   170	4
+   171	
+   172	IVAN ARZHANTSEV AND MIKHAIL ZAIDENBERG
+   173	
+   174	where α, β ∈ k× , γ ∈ k, and f ∈ k[t]. The subgroup
+   175	(5)
+   176	
+   177	Aff ± (A2k ) = Aff(A2k ) ∩ JONQ± (A2k )
+   178	
+   179	consists of all upper (lower, respectively) triangular affine transformations Φ± with deg f ≤ 1.
+   180	The structure of the automorphism group Aut(A2k ) is described by the following classical
+   181	theorem.
+   182	Theorem 1.4. (Jung [25], van der Kulk [49]) The automorphism group Aut(A2k ) is the
+   183	free product of the subgroups JONQ+ (A2k ) and Aff(A2k ) amalgamated over their intersection
+   184	Aff + (A2k ):
+   185	Aut(A2k ) = JONQ+ (A2k ) ∗Aff + (A2k ) Aff(A2k ) .
+   186	Remarks 1.5. 1. In fact Jung [25] just established, over a field k of characteristic 0, the
+   187	equality
+   188	Aut(A2k ) = hU + , Aff(A2k )i ,
+   189	where
+   190	(6)
+   191	
+   192	U + = {Φ ∈ JONQ+ (A2k ) | Φ : (x, y) 7→ (x + f (y), y)} .
+   193	
+   194	However, Aut(A2k ) 6= U + ∗U + ∩Aff(A2k ) Aff(A2k ), see Remark in [27, §2].
+   195	Over an arbitrary ground field, van der Kulk did not formulate the theorem in terms of
+   196	amalgamated free products, but from his results the theorem can be deduced readily, as this
+   197	is done in [39] or [27, Theorem 2]. In characteristic zero, the theorem is a consequence of
+   198	the Abhyankar-Moh-Suzuki theorem 1.1. See also [2], [10], [14], [15], [18], [21], [33], [35], [36],
+   199	[41], [45], [48], and [52] for different approaches.
+   200	2. Actually we have
+   201	Aut(A2k ) = hJONQ+ (A2k ), τ i ,
+   202	where τ ∈ Aff(A2k ), τ : (x, y) 7−→ (y, x) is a twist. Notice that τ ∈ hAff + (A2k ), Aff − (A2k )i and
+   203	JONQ− (A2k ) = τ JONQ+ (A2k )τ,
+   204	
+   205	Aff − (A2k ) = τ Aff + (A2k )τ,
+   206	
+   207	and U − = τ U + τ ,
+   208	
+   209	where the subgroup U − ⊆ JONQ− (A2k ) is defined similarly as U + . In particular
+   210	Aut(A2k ) = hJONQ+ (A2k ), JONQ− (A2k )i .
+   211	The following theorem absorbed several previously known results. In this generality, it
+   212	was first proved by Kambayashi [28] (using a result of Wright [50]) as a consequence of the
+   213	Jung-van der Kulk theorem 1.4.
+   214	Theorem 1.6. (Kambayashi [28, Theorem 4.3], Wright [50], [51]) Any algebraic subgroup
+   215	of the group Aut(A2k ) is conjugate either to a subgroup of Aff(A2k ), or to a subgroup of
+   216	JONQ+ (A2k ).
+   217	The proof exploites the following observation: every algebraic subgroup of Aut(A2k ) has
+   218	bounded degree, hence also a bounded length with respect to the free amalgamated product
+   219	structure. However, by Serre [46] a subgroup of bounded length in an amalgamated free
+   220	product A ∗C B is conjugate to a subgroup of one of the factors A and B.
+   221	In the next corollary we suppose that the base field k is algebraically closed of characteristic
+   222	0 (while certain assertions remain valid in the positive characteristic case).
+   223	
+   224	ACYCLIC CURVES
+   225	
+   226	5
+   227	
+   228	Corollary 1.7.
+   229	1. (Igarashi [24], Furushima [17]) Every finite subgroup of Aut(A2k ) is
+   230	conjugate to a subgroup of GL(2, k).
+   231	2. (Gutwirth [22], Bialynicki-Birula [9]) Every maximal torus in Aut(A2k ) has rank 2 and
+   232	is conjugate to the standard maximal torus T ⊆ GL(2, k).
+   233	3. (Gutwirth [22], Bialynicki-Birula [9]) Every one-torus in Aut(A2k ) is conjugate to a
+   234	subtorus of T.
+   235	4. (Rentschler [45]) Every Ga (k)-action on A2k is conjugate to an action via de Jonqières
+   236	transformations
+   237	t.(x, y) = (x + tf (y), y),
+   238	
+   239	where t ∈ Ga (k) and
+   240	
+   241	f ∈ k[y] .
+   242	
+   243	Remarks 1.8. 1. Assertions (1)-(3) follow from a more general result for reductive groups,
+   244	see 2.5 below.
+   245	2. Analogs of (1) and (4) fail in higher dimensions, while (3) holds in dimension 3 and is
+   246	open in higher dimensions. We do not dwell on this here (see, however, [26], [43] and the
+   247	survey [30]; see also [7] and [38] for the case of a positive characteristic).
+   248	2. Subgroups of de Jonquères group and stabilizers of plane curves
+   249	2.1. Subgroups of the de Jonquères group. In this subsection the base field k will be
+   250	an algebraically closed field of characteristic zero (while some results are still valid over an
+   251	arbitrary field of characteristic zero.) By abuse of language, we still call de Jonquères groups
+   252	the subgroups Jonq± (A2k ) ⊆ JONQ± (A2k ) consisting, respectively, of the transformations
+   253	(7)
+   254	
+   255	ϕ+ : (x, y) 7−→ (αx + f (y), βy) ,
+   256	
+   257	and
+   258	(8)
+   259	
+   260	ϕ− : (x, y) 7−→ (αx, βy + f (x)) ,
+
+exec
+/bin/zsh -lc "nl -ba ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py | sed -n '1,320p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	#!/usr/bin/env python3
+     2	"""Desk replay for the acyclic-branch cubic monodromy obstruction.
+     3	
+     4	The geometric input is external: the Lin--Zaidenberg reduced acyclic-curve
+     5	classification leaves a comb or a weighted-homogeneous cone.  This script
+     6	checks only the finite S3 consequences used after that classification:
+     7	
+     8	* in a comb, the spine meridian is central in the product complement group;
+     9	  its transposition image therefore confines the full image to its order-two
+    10	  centralizer;
+    11	* in a cone, the one local companion-fixing image has order two;
+    12	* two independently labelled companion neighborhoods can instead generate
+    13	  S3, reproducing the charged disconnected-branch warning.
+    14	
+    15	No curve classification, complement presentation, or cover realization is
+    16	encoded here.
+    17	"""
+    18	
+    19	from __future__ import annotations
+    20	
+    21	import argparse
+    22	import hashlib
+    23	import json
+    24	from itertools import product, permutations
+    25	
+    26	
+    27	Permutation = tuple[int, int, int]
+    28	IDENTITY: Permutation = (0, 1, 2)
+    29	
+    30	
+    31	def compose(left: Permutation, right: Permutation) -> Permutation:
+    32	    return tuple(left[right[index]] for index in range(3))  # type: ignore[return-value]
+    33	
+    34	
+    35	def generated(generators: tuple[Permutation, ...]) -> set[Permutation]:
+    36	    closure = {IDENTITY}
+    37	    changed = True
+    38	    while changed:
+    39	        changed = False
+    40	        for left in tuple(closure | set(generators)):
+    41	            for right in tuple(closure | set(generators)):
+    42	                value = compose(left, right)
+    43	                if value not in closure:
+    44	                    closure.add(value)
+    45	                    changed = True
+    46	    return closure
+    47	
+    48	
+    49	def orbit(group: set[Permutation], point: int) -> set[int]:
+    50	    return {element[point] for element in group}
+    51	
+    52	
+    53	def cycle_type(perm: Permutation) -> tuple[int, ...]:
+    54	    unseen = set(range(3))
+    55	    lengths: list[int] = []
+    56	    while unseen:
+    57	        current = min(unseen)
+    58	        length = 0
+    59	        while current in unseen:
+    60	            unseen.remove(current)
+    61	            current = perm[current]
+    62	            length += 1
+    63	        lengths.append(length)
+    64	    return tuple(sorted(lengths, reverse=True))
+    65	
+    66	
+    67	def require(condition: bool, message: str) -> None:
+    68	    if not condition:
+    69	        raise RuntimeError(message)
+    70	
+    71	
+    72	def main() -> int:
+    73	    parser = argparse.ArgumentParser()
+    74	    parser.add_argument(
+    75	        "--mutate-drop-comb-centrality",
+    76	        action="store_true",
+    77	        help="deliberately allow tooth images not commuting with the spine",
+    78	    )
+    79	    args = parser.parse_args()
+    80	
+    81	    s3 = tuple(permutations(range(3)))
+    82	    transpositions = tuple(p for p in s3 if cycle_type(p) == (2, 1))
+    83	    require(len(transpositions) == 3, "S3 must contain exactly three transpositions")
+    84	
+    85	    comb_counts: dict[str, int] = {}
+    86	    for tooth_count in range(1, 7):
+    87	        admissible = []
+    88	        for spine in transpositions:
+    89	            for teeth in product(transpositions, repeat=tooth_count):
+    90	                centrality = all(
+    91	                    compose(spine, tooth) == compose(tooth, spine)
+    92	                    for tooth in teeth
+    93	                )
+    94	                if args.mutate_drop_comb_centrality:
+    95	                    centrality = True
+    96	                if centrality:
+    97	                    admissible.append((spine, teeth))
+    98	
+    99	        require(
+   100	            len(admissible) == 3,
+   101	            f"comb with {tooth_count} teeth must have one common transposition label",
+   102	        )
+   103	        for spine, teeth in admissible:
+   104	            image = generated((spine, *teeth))
+   105	            require(len(image) == 2, "an admissible comb image must have order two")
+   106	            require(
+   107	                len(orbit(image, 0)) < 3,
+   108	                "an admissible comb image cannot act transitively on three sheets",
+   109	            )
+   110	        comb_counts[str(tooth_count)] = len(admissible)
+   111	
+   112	    for transposition in transpositions:
+   113	        cone_image = generated((transposition,))
+   114	        require(len(cone_image) == 2, "a cone-local companion image must have order two")
+   115	        require(
+   116	            len(orbit(cone_image, 0)) < 3,
+   117	            "a cone-local companion image cannot be transitive",
+   118	        )
+   119	
+   120	    disconnected_control = generated((transpositions[0], transpositions[1]))
+   121	    require(
+   122	        len(disconnected_control) == 6,
+   123	        "two distinct independently based transpositions must generate S3",
+   124	    )
+   125	    require(
+   126	        len(orbit(disconnected_control, 0)) == 3,
+   127	        "the disconnected warning control must be transitive",
+   128	    )
+   129	
+   130	    payload = {
+   131	        "status": "PASS-CUBIC-ACYCLIC-BRANCH-MONODROMY",
+   132	        "s3_order": len(s3),
+   133	        "transposition_count": len(transpositions),
+   134	        "comb_admissible_counts_by_teeth": comb_counts,
+   135	        "cone_image_order": 2,
+   136	        "acyclic_images_transitive": False,
+   137	        "disconnected_control_image_order": len(disconnected_control),
+   138	        "disconnected_control_transitive": True,
+   139	    }
+   140	    canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+   141	    payload["payload_sha256"] = hashlib.sha256(canonical.encode()).hexdigest()
+   142	    print(json.dumps(payload, sort_keys=True))
+   143	    return 0
+   144	
+   145	
+   146	if __name__ == "__main__":
+   147	    raise SystemExit(main())
+
+  ✓ Hash-check charged files
+  → Read charged theorem, prior reviews, and references
+  → Run replay in three Python modes and mutation check
+  • Write hostile review file only
+  • Verify output formatting constraints
+codex
+The PDF check confirms Theorem 1.3(b) is stated for “any reduced, simply connected plane curve” and explicitly gives the two displayed forms with simple roots, coprime weights, and pairwise distinct nonzero constants. I’m running the replay now in optimized and non-optimized modes, including the intended failing mutation.
+exec
+/bin/zsh -lc 'python3 -O ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+{"acyclic_images_transitive": false, "comb_admissible_counts_by_teeth": {"1": 3, "2": 3, "3": 3, "4": 3, "5": 3, "6": 3}, "cone_image_order": 2, "disconnected_control_image_order": 6, "disconnected_control_transitive": true, "payload_sha256": "0e1afb3f3d226393fa143d972620607d46ee3db7daf8b37751fee2d2402db740", "s3_order": 6, "status": "PASS-CUBIC-ACYCLIC-BRANCH-MONODROMY", "transposition_count": 3}
+
+exec
+/bin/zsh -lc 'python3 -O ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py --mutate-drop-comb-centrality' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'python3 ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py --mutate-drop-comb-centrality' in /Users/dc/code/math/jc2
+ exited 1 in 0ms:
+Traceback (most recent call last):
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py", line 147, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py", line 99, in main
+    require(
+    ~~~~~~~^
+        len(admissible) == 3,
+        ^^^^^^^^^^^^^^^^^^^^^
+        f"comb with {tooth_count} teeth must have one common transposition label",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py", line 69, in require
+    raise RuntimeError(message)
+RuntimeError: comb with 1 teeth must have one common transposition label
+
+ exited 1 in 0ms:
+Traceback (most recent call last):
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py", line 147, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py", line 99, in main
+    require(
+    ~~~~~~~^
+        len(admissible) == 3,
+        ^^^^^^^^^^^^^^^^^^^^^
+        f"comb with {tooth_count} teeth must have one common transposition label",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py", line 69, in require
+    raise RuntimeError(message)
+RuntimeError: comb with 1 teeth must have one common transposition label
+
+exec
+/bin/zsh -lc 'python3 -OO ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'python3 ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+{"acyclic_images_transitive": false, "comb_admissible_counts_by_teeth": {"1": 3, "2": 3, "3": 3, "4": 3, "5": 3, "6": 3}, "cone_image_order": 2, "disconnected_control_image_order": 6, "disconnected_control_transitive": true, "payload_sha256": "0e1afb3f3d226393fa143d972620607d46ee3db7daf8b37751fee2d2402db740", "s3_order": 6, "status": "PASS-CUBIC-ACYCLIC-BRANCH-MONODROMY", "transposition_count": 3}
+
+ succeeded in 0ms:
+{"acyclic_images_transitive": false, "comb_admissible_counts_by_teeth": {"1": 3, "2": 3, "3": 3, "4": 3, "5": 3, "6": 3}, "cone_image_order": 2, "disconnected_control_image_order": 6, "disconnected_control_transitive": true, "payload_sha256": "0e1afb3f3d226393fa143d972620607d46ee3db7daf8b37751fee2d2402db740", "s3_order": 6, "status": "PASS-CUBIC-ACYCLIC-BRANCH-MONODROMY", "transposition_count": 3}
+
+exec
+/bin/zsh -lc 'python3 -OO ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py --mutate-drop-comb-centrality' in /Users/dc/code/math/jc2
+ exited 1 in 0ms:
+Traceback (most recent call last):
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py", line 147, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py", line 99, in main
+    require(
+    ~~~~~~~^
+        len(admissible) == 3,
+        ^^^^^^^^^^^^^^^^^^^^^
+        f"comb with {tooth_count} teeth must have one common transposition label",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py", line 69, in require
+    raise RuntimeError(message)
+RuntimeError: comb with 1 teeth must have one common transposition label
+
+codex
+The replay is stable: all three normal runs produce payload hash `0e1afb3f3d226393fa143d972620607d46ee3db7daf8b37751fee2d2402db740`, and the deliberate centrality mutation fails in all three modes at the one-tooth comb check. I’m going to write the requested review file now, with corrections focused on scope and on the local/global complement wording.
+  ✓ Hash-check charged files
+  ✓ Read charged theorem, prior reviews, and references
+  ✓ Run replay in three Python modes and mutation check
+  → Write hostile review file only
+  • Verify output formatting constraints
+codex
+I found no counterexample inside the stated cubic hypotheses. The only corrections I’m carrying into the file are wording/scope corrections: contractibility must come from the charged normalization-plus-forest topology, and the weighted-cone local/global statement should be phrased through punctured weighted sublevel neighborhoods rather than a literal open-ball boundary claim.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md
+diff --git a/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md b/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..9c7ae07398426d3681b197db81cf44cb5586e6e0
+--- /dev/null
++++ b/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,258 @@
++# Hostile review: acyclic branch obstruction to a cubic block
++
++Date: 2026-08-30
++Reviewer: GPT-5.5 hostile reconstruction
++Scope: charged repository files named in the prompt, plus the charged
++Arzhantsev--Zaidenberg PDF.  I did not inspect `jc2-lean`, sibling
++external-model prompts, logs, reports, receipts, canonical ledgers, or
++unrelated repository files.
++
++## Input custody
++
++All nine prompt SHA-256 hashes matched:
++
++```text
++5be2e2af32c0f6201637a652d28a0ff5f6992c5ebde696b1198d7b94e4829cf7
++  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md
++5fd8b854452bf4e42a96ccaea89ca8b4be09310dc0cff424ae6dd0261392a455
++  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md.artifact.json
++648022d35191b67d9f1e1eec61cddc95bbee745001410ad1fbbffa1044417389
++  ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py
++41245c20b1b61a0dcf8116340672d037b977e6759d5d99054fc06c292d5c36fc
++  refs/arzhantsev_zaidenberg_acyclic_curves_arxiv1110.3028v2.pdf
++2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce
++  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
++9e32b0fe8835b6ea6002036b95e2261a612754d73d796cb10edda347cf3cf65e
++  xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
++8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d
++  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
++7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29
++  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
++f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
++  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
++```
++
++Receipt status: `ABSENT` is expected.  This review makes no exit-price
++assertion.
++
++## Itemized audit
++
++1. `CONFIRM_WITH_CORRECTIONS`: Arzhantsev--Zaidenberg coverage and the
++proper-cubic hypotheses.
++
++The pinned PDF defines an acyclic curve as connected and simply connected,
++then Theorem 1.3(b) states the broader classification for any reduced simply
++connected plane curve.  That statement is not restricted to irreducible
++curves; it explicitly includes reducible forms
++
++```text
++y^epsilon_y p(x)=0
++x^epsilon_x y^epsilon_y product_i (y^a-kappa_i x^b)=0,
++```
++
++with `epsilon_x,epsilon_y in {0,1}`, `p` squarefree, `a,b>=1` coprime, `r>0`,
++and distinct nonzero `kappa_i`.  Thus every reduced connected simply connected
++plane curve is covered.  Connectedness is an extra specialization imposed on
++the normal forms, not a missing source hypothesis.
++
++The campaign interface must not infer contractibility from Euler
++characteristic alone.  The charged proper-cubic path gives more: `R_red -> B`
++is a finite point-bijective analytic homeomorphism, components have
++normalization `A1`, the affine incidence graph is a forest, and the survivor
++row has `b0(B)=1`.  A connected tree of contractible normalizations glued only
++along the forest incidence pattern is topologically contractible.  That is the
++safe route into the classification.  The new theorem's standalone assumption
++that `B` is topologically contractible is therefore stronger than the Euler
++identity and is safe when this full charged topology package is imported.
++
++2. `CONFIRMED`: local cubic splitting and global transitivity.
++
++Let `pi:Y -> A2_C` be finite flat of degree three with `Y` integral and normal,
++and let `B` be the reduced branch support.  Over `U=A2-B`, the restriction
++`V=Y-pi^{-1}(B) -> U` is finite etale of degree three.  Since `V` is a nonempty
++open subset of integral `Y`, it is connected, so the topological monodromy on
++the three sheets is transitive.
++
++At any point `b in B`, including singular points of the reduced branch curve,
++the henselian local finite algebra has special fibre with two support
++idempotents of lengths two and one.  Henselian idempotent lifting splits the
++rank-three algebra into rank-two and rank-one finite-flat factors.  A unital
++rank-one finite-flat algebra over the local base is the base itself; analytically
++this is the local companion section.  Hence the whole local complement group,
++not just a smooth-branch meridian, fixes the companion sheet after a based
++identification.  At a generic smooth point of a branch component, the rank-two
++ramified factor contributes a nontrivial transposition.
++
++This confirms both halves that must be kept separate: local groups fix local
++companions, while the global complement cover is transitive.  In the promoted
++cubic survivor the transitive image also contains a transposition, hence is
++`S3`.
++
++3. `CONFIRMED`: the comb case and based meridians.
++
++For `y^epsilon_y p(x)=0`, connectedness leaves exactly these cases:
++
++```text
++one vertical line             epsilon_y=0 and p has one root;
++one horizontal line           epsilon_y=1 and p is constant;
++a genuine comb                epsilon_y=1 and p has s>=1 simple roots.
++```
++
++The line cases have complement fundamental group `Z`; the branch meridian maps
++to a transposition, so the image has order two and cannot be transitive on
++three letters.
++
++For a comb with roots `alpha_1,...,alpha_s`,
++
++```text
++A2-B = (C-{alpha_1,...,alpha_s}) x C*
++pi1(A2-B) = F_s x <h>,
++```
++
++where `h` is the based meridian of the horizontal spine and is central.  The
++generic `(2,1)` fibre along the spine gives `rho(h)=tau`, a transposition.
++For every based loop `gamma`, centrality gives `rho(gamma) tau = tau
++rho(gamma)`.  The centralizer of a transposition in `S3` is exactly the
++two-element subgroup generated by it, so the entire image lies in `<tau>` and
++is intransitive.
++
++This argument does not identify tooth companions by hand.  The common label is
++forced only after the globally based central spine meridian has been mapped to
++a transposition.
++
++4. `CONFIRM_WITH_CORRECTIONS`: the weighted-cone case.
++
++The weights in the charged proof are correct.  Under positive real scaling
++
++```text
++r.(x,y)=(r^a x,r^b y),
++```
++
++both `y^a` and `x^b` acquire weight `ab`, and the optional coordinate axes are
++invariant.  With
++
++```text
++N(x,y)=|x|^(2/a)+|y|^(2/b),
++```
++
++one has `N(r.(x,y))=r^2 N(x,y)`, so every positive orbit in `A2-{0}` meets a
++weighted link `N=const` exactly once.
++
++The wording should be through punctured weighted sublevel neighborhoods:
++`A2-B` and `{0<N<delta}-B` both deformation retract by this radial flow to the
++same weighted link complement.  Ordinary Euclidean balls and these weighted
++sublevels are cofinal neighborhoods of the origin, so this computes the usual
++origin-local complement group.  With that wording, the global complement group
++is the origin-local complement group.
++
++Applying the henselian rank-one companion factor at the origin then places the
++whole global monodromy image in a single companion-fixing `S2`.  This is enough:
++an `S2` subgroup of `S3` is intransitive.  The proof covers optional axes,
++`a=b=1` line arrangements through the origin, smooth weighted rows with one
++exponent equal to one, and irreducible cusps.
++
++5. `CONFIRMED`: edge-case controls.
++
++One line gives `pi1=Z` and a transposition image, hence no connected cubic
++cover.  One tooth gives `C* x C*`; its two meridians commute, so the spine
++transposition forces the tooth transposition to be the same one.  Several teeth
++are handled by the same product `F_s x Z`.  The coordinate axes `xy=0` are just
++the one-tooth comb.  The `a=b=1` rows are central line arrangements and are
++covered by the weighted-cone argument.  Irreducible cusps are weighted cones,
++so their global complement is already the origin-local complement for this
++purpose.
++
++The two readings of "one point/place at infinity" do not enlarge the proof.
++Componentwise one-place is not needed after the curve is known contractible and
++classified.  A stronger single set-theoretic infinity point only deletes
++nontrivial combs and most central line arrangements; it does not create a new
++case.
++
++The disconnected algebraic `S3` control from the prior review remains a real
++warning.  The cubic `z^3-3z+2+xy=0` has local `(2,1)` companions and global
++`S3` monodromy, but its branch support has two connected components.  The new
++proof avoids that failure mode precisely by using the classified connected
++contractible forms: a comb has a central global spine meridian, and a weighted
++cone has one local group equal to the global group.
++
++6. `CONFIRMED`: exact proper-block interface.
++
++The standalone geometric theorem is a degree-three finite-flat branch theorem.
++It does not require the whole Jacobian-conjecture machine, but the campaign may
++apply it only after the charged proper-cubic inputs supply all of its
++hypotheses: integral normal finite-flat cubic cover, reduced connected
++topologically contractible branch support, connected complement cover, and
++`(2,1)` fibre partition at every branch value.
++
++With those inputs, the promoted proper cubic block is empty.  The earlier
++affine-survivor funnel had already removed the smooth branch row; this
++classification argument removes the singular and reducible connected acyclic
++branch row.  The conclusion is only about the proper block with cubic second
++leg `deg(g2)=3`.
++
++Nothing here excludes proper blocks of degree at least four.  Nothing here
++touches the primitive/no-proper-block horn.  No statement about JC2 itself
++follows except the conditional corollary that a noninvertible Keller map cannot
++pass through this promoted proper-cubic block configuration.
++
++7. `CONFIRMED`: replay and its limits.
++
++Ordinary, `-O`, and `-OO` executions all produced the same payload:
++
++```json
++{"acyclic_images_transitive": false, "comb_admissible_counts_by_teeth": {"1": 3, "2": 3, "3": 3, "4": 3, "5": 3, "6": 3}, "cone_image_order": 2, "disconnected_control_image_order": 6, "disconnected_control_transitive": true, "payload_sha256": "0e1afb3f3d226393fa143d972620607d46ee3db7daf8b37751fee2d2402db740", "s3_order": 6, "status": "PASS-CUBIC-ACYCLIC-BRANCH-MONODROMY", "transposition_count": 3}
++```
++
++The deliberate mutation `--mutate-drop-comb-centrality` failed in ordinary,
++`-O`, and `-OO` modes with:
++
++```text
++RuntimeError: comb with 1 teeth must have one common transposition label
++```
++
++The script uses explicit `require` checks, not Python `assert`, so optimization
++does not erase the validation.  Its scope is finite and deliberately narrow:
++it checks the `S3` consequences of centrality and one local companion-fixing
++subgroup.  It does not verify the Arzhantsev--Zaidenberg classification,
++product complement, weighted radial deformation, henselian splitting,
++finite-flat cover hypotheses, proper-block interface, or branch
++contractibility.
++
++## Maximum-safe theorem
++
++The following is safe.
++
++Let `pi:Y -> A2_C` be finite flat of degree three, with `Y` integral and
++normal.  Let `B` be the reduced branch support.  Assume:
++
++```text
++B is connected and topologically contractible;
++every geometric fibre over every point of B has partition (2,1).
++```
++
++Then no such cover exists.  Indeed, `Y-pi^{-1}(B) -> A2-B` is a connected
++degree-three etale cover and therefore has transitive monodromy.  The
++Arzhantsev--Zaidenberg normal forms for reduced simply connected plane curves
++force the same monodromy image to be contained in a single order-two subgroup
++of `S3`: by centrality of the spine meridian in the comb case, and by equality
++of global and origin-local complement groups in the weighted-cone case.  This
++contradicts transitivity.
++
++Campaign corollary: subject to the charged proper-block integrations, the
++proper cubic block `deg(g2)=3` is closed.  This is not a theorem about
++`deg(g2)>=4`, not a primitive-horn theorem, and not JC2.
++
++## Cheapest useful successor
++
++First record the coordinator-level corollary only at this scope: promoted
++proper cubic blocks are impossible.  Do not attach any higher-degree or
++primitive consequence.
++
++The cheapest new mathematical work is a degree-`>=4` feasibility screen before
++another geometric proof attempt.  Enumerate transitive subgroups and allowed
++local fibre partitions for classified connected acyclic branch supports, with
++the comb central meridian and weighted-cone local/global identification kept
++explicit.  The rank-four danger is visible already: `(2,2)` fibres can remove
++the cubic rank-one companion mechanism, so the cubic proof should not be
++generalized by analogy.
++<!-- BODY-END -->
+
+diff --git a/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md b/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..9c7ae07398426d3681b197db81cf44cb5586e6e0
+--- /dev/null
++++ b/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,258 @@
++# Hostile review: acyclic branch obstruction to a cubic block
++
++Date: 2026-08-30
++Reviewer: GPT-5.5 hostile reconstruction
++Scope: charged repository files named in the prompt, plus the charged
++Arzhantsev--Zaidenberg PDF.  I did not inspect `jc2-lean`, sibling
++external-model prompts, logs, reports, receipts, canonical ledgers, or
++unrelated repository files.
++
++## Input custody
++
++All nine prompt SHA-256 hashes matched:
++
++```text
++5be2e2af32c0f6201637a652d28a0ff5f6992c5ebde696b1198d7b94e4829cf7
++  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md
++5fd8b854452bf4e42a96ccaea89ca8b4be09310dc0cff424ae6dd0261392a455
++  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md.artifact.json
++648022d35191b67d9f1e1eec61cddc95bbee745001410ad1fbbffa1044417389
++  ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py
++41245c20b1b61a0dcf8116340672d037b977e6759d5d99054fc06c292d5c36fc
++  refs/arzhantsev_zaidenberg_acyclic_curves_arxiv1110.3028v2.pdf
++2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce
++  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
++9e32b0fe8835b6ea6002036b95e2261a612754d73d796cb10edda347cf3cf65e
++  xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
++8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d
++  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
++7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29
++  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
++f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
++  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
++```
++
++Receipt status: `ABSENT` is expected.  This review makes no exit-price
++assertion.
++
++## Itemized audit
++
++1. `CONFIRM_WITH_CORRECTIONS`: Arzhantsev--Zaidenberg coverage and the
++proper-cubic hypotheses.
++
++The pinned PDF defines an acyclic curve as connected and simply connected,
++then Theorem 1.3(b) states the broader classification for any reduced simply
++connected plane curve.  That statement is not restricted to irreducible
++curves; it explicitly includes reducible forms
++
++```text
++y^epsilon_y p(x)=0
++x^epsilon_x y^epsilon_y product_i (y^a-kappa_i x^b)=0,
++```
++
++with `epsilon_x,epsilon_y in {0,1}`, `p` squarefree, `a,b>=1` coprime, `r>0`,
++and distinct nonzero `kappa_i`.  Thus every reduced connected simply connected
++plane curve is covered.  Connectedness is an extra specialization imposed on
++the normal forms, not a missing source hypothesis.
++
++The campaign interface must not infer contractibility from Euler
++characteristic alone.  The charged proper-cubic path gives more: `R_red -> B`
++is a finite point-bijective analytic homeomorphism, components have
++normalization `A1`, the affine incidence graph is a forest, and the survivor
++row has `b0(B)=1`.  A connected tree of contractible normalizations glued only
++along the forest incidence pattern is topologically contractible.  That is the
++safe route into the classification.  The new theorem's standalone assumption
++that `B` is topologically contractible is therefore stronger than the Euler
++identity and is safe when this full charged topology package is imported.
++
++2. `CONFIRMED`: local cubic splitting and global transitivity.
++
++Let `pi:Y -> A2_C` be finite flat of degree three with `Y` integral and normal,
++and let `B` be the reduced branch support.  Over `U=A2-B`, the restriction
++`V=Y-pi^{-1}(B) -> U` is finite etale of degree three.  Since `V` is a nonempty
++open subset of integral `Y`, it is connected, so the topological monodromy on
++the three sheets is transitive.
++
++At any point `b in B`, including singular points of the reduced branch curve,
++the henselian local finite algebra has special fibre with two support
++idempotents of lengths two and one.  Henselian idempotent lifting splits the
++rank-three algebra into rank-two and rank-one finite-flat factors.  A unital
++rank-one finite-flat algebra over the local base is the base itself; analytically
++this is the local companion section.  Hence the whole local complement group,
++not just a smooth-branch meridian, fixes the companion sheet after a based
++identification.  At a generic smooth point of a branch component, the rank-two
++ramified factor contributes a nontrivial transposition.
++
++This confirms both halves that must be kept separate: local groups fix local
++companions, while the global complement cover is transitive.  In the promoted
++cubic survivor the transitive image also contains a transposition, hence is
++`S3`.
++
++3. `CONFIRMED`: the comb case and based meridians.
++
++For `y^epsilon_y p(x)=0`, connectedness leaves exactly these cases:
++
++```text
++one vertical line             epsilon_y=0 and p has one root;
++one horizontal line           epsilon_y=1 and p is constant;
++a genuine comb                epsilon_y=1 and p has s>=1 simple roots.
++```
++
++The line cases have complement fundamental group `Z`; the branch meridian maps
++to a transposition, so the image has order two and cannot be transitive on
++three letters.
++
++For a comb with roots `alpha_1,...,alpha_s`,
++
++```text
++A2-B = (C-{alpha_1,...,alpha_s}) x C*
++pi1(A2-B) = F_s x <h>,
++```
++
++where `h` is the based meridian of the horizontal spine and is central.  The
++generic `(2,1)` fibre along the spine gives `rho(h)=tau`, a transposition.
++For every based loop `gamma`, centrality gives `rho(gamma) tau = tau
++rho(gamma)`.  The centralizer of a transposition in `S3` is exactly the
++two-element subgroup generated by it, so the entire image lies in `<tau>` and
++is intransitive.
++
++This argument does not identify tooth companions by hand.  The common label is
++forced only after the globally based central spine meridian has been mapped to
++a transposition.
++
++4. `CONFIRM_WITH_CORRECTIONS`: the weighted-cone case.
++
++The weights in the charged proof are correct.  Under positive real scaling
++
++```text
++r.(x,y)=(r^a x,r^b y),
++```
++
++both `y^a` and `x^b` acquire weight `ab`, and the optional coordinate axes are
++invariant.  With
++
++```text
++N(x,y)=|x|^(2/a)+|y|^(2/b),
++```
++
++one has `N(r.(x,y))=r^2 N(x,y)`, so every positive orbit in `A2-{0}` meets a
++weighted link `N=const` exactly once.
++
++The wording should be through punctured weighted sublevel neighborhoods:
++`A2-B` and `{0<N<delta}-B` both deformation retract by this radial flow to the
++same weighted link complement.  Ordinary Euclidean balls and these weighted
++sublevels are cofinal neighborhoods of the origin, so this computes the usual
++origin-local complement group.  With that wording, the global complement group
++is the origin-local complement group.
++
++Applying the henselian rank-one companion factor at the origin then places the
++whole global monodromy image in a single companion-fixing `S2`.  This is enough:
++an `S2` subgroup of `S3` is intransitive.  The proof covers optional axes,
++`a=b=1` line arrangements through the origin, smooth weighted rows with one
++exponent equal to one, and irreducible cusps.
++
++5. `CONFIRMED`: edge-case controls.
++
++One line gives `pi1=Z` and a transposition image, hence no connected cubic
++cover.  One tooth gives `C* x C*`; its two meridians commute, so the spine
++transposition forces the tooth transposition to be the same one.  Several teeth
++are handled by the same product `F_s x Z`.  The coordinate axes `xy=0` are just
++the one-tooth comb.  The `a=b=1` rows are central line arrangements and are
++covered by the weighted-cone argument.  Irreducible cusps are weighted cones,
++so their global complement is already the origin-local complement for this
++purpose.
++
++The two readings of "one point/place at infinity" do not enlarge the proof.
++Componentwise one-place is not needed after the curve is known contractible and
++classified.  A stronger single set-theoretic infinity point only deletes
++nontrivial combs and most central line arrangements; it does not create a new
++case.
++
++The disconnected algebraic `S3` control from the prior review remains a real
++warning.  The cubic `z^3-3z+2+xy=0` has local `(2,1)` companions and global
++`S3` monodromy, but its branch support has two connected components.  The new
++proof avoids that failure mode precisely by using the classified connected
++contractible forms: a comb has a central global spine meridian, and a weighted
++cone has one local group equal to the global group.
++
++6. `CONFIRMED`: exact proper-block interface.
++
++The standalone geometric theorem is a degree-three finite-flat branch theorem.
++It does not require the whole Jacobian-conjecture machine, but the campaign may
++apply it only after the charged proper-cubic inputs supply all of its
++hypotheses: integral normal finite-flat cubic cover, reduced connected
++topologically contractible branch support, connected complement cover, and
++`(2,1)` fibre partition at every branch value.
++
++With those inputs, the promoted proper cubic block is empty.  The earlier
++affine-survivor funnel had already removed the smooth branch row; this
++classification argument removes the singular and reducible connected acyclic
++branch row.  The conclusion is only about the proper block with cubic second
++leg `deg(g2)=3`.
++
++Nothing here excludes proper blocks of degree at least four.  Nothing here
++touches the primitive/no-proper-block horn.  No statement about JC2 itself
++follows except the conditional corollary that a noninvertible Keller map cannot
++pass through this promoted proper-cubic block configuration.
++
++7. `CONFIRMED`: replay and its limits.
++
++Ordinary, `-O`, and `-OO` executions all produced the same payload:
++
++```json
++{"acyclic_images_transitive": false, "comb_admissible_counts_by_teeth": {"1": 3, "2": 3, "3": 3, "4": 3, "5": 3, "6": 3}, "cone_image_order": 2, "disconnected_control_image_order": 6, "disconnected_control_transitive": true, "payload_sha256": "0e1afb3f3d226393fa143d972620607d46ee3db7daf8b37751fee2d2402db740", "s3_order": 6, "status": "PASS-CUBIC-ACYCLIC-BRANCH-MONODROMY", "transposition_count": 3}
++```
++
++The deliberate mutation `--mutate-drop-comb-centrality` failed in ordinary,
++`-O`, and `-OO` modes with:
++
++```text
++RuntimeError: comb with 1 teeth must have one common transposition label
++```
++
++The script uses explicit `require` checks, not Python `assert`, so optimization
++does not erase the validation.  Its scope is finite and deliberately narrow:
++it checks the `S3` consequences of centrality and one local companion-fixing
++subgroup.  It does not verify the Arzhantsev--Zaidenberg classification,
++product complement, weighted radial deformation, henselian splitting,
++finite-flat cover hypotheses, proper-block interface, or branch
++contractibility.
++
++## Maximum-safe theorem
++
++The following is safe.
++
++Let `pi:Y -> A2_C` be finite flat of degree three, with `Y` integral and
++normal.  Let `B` be the reduced branch support.  Assume:
++
++```text
++B is connected and topologically contractible;
++every geometric fibre over every point of B has partition (2,1).
++```
++
++Then no such cover exists.  Indeed, `Y-pi^{-1}(B) -> A2-B` is a connected
++degree-three etale cover and therefore has transitive monodromy.  The
++Arzhantsev--Zaidenberg normal forms for reduced simply connected plane curves
++force the same monodromy image to be contained in a single order-two subgroup
++of `S3`: by centrality of the spine meridian in the comb case, and by equality
++of global and origin-local complement groups in the weighted-cone case.  This
++contradicts transitivity.
++
++Campaign corollary: subject to the charged proper-block integrations, the
++proper cubic block `deg(g2)=3` is closed.  This is not a theorem about
++`deg(g2)>=4`, not a primitive-horn theorem, and not JC2.
++
++## Cheapest useful successor
++
++First record the coordinator-level corollary only at this scope: promoted
++proper cubic blocks are impossible.  Do not attach any higher-degree or
++primitive consequence.
++
++The cheapest new mathematical work is a degree-`>=4` feasibility screen before
++another geometric proof attempt.  Enumerate transitive subgroups and allowed
++local fibre partitions for classified connected acyclic branch supports, with
++the comb central meridian and weighted-cone local/global identification kept
++explicit.  The rank-four danger is visible already: `(2,2)` fibres can remove
++the cubic rank-one companion mechanism, so the cubic proof should not be
++generalized by analogy.
++<!-- BODY-END -->
+
+codex
+The requested file has been created. I’m doing a narrow self-check on that file only: final marker placement, absence of a seal block, and absence of the forbidden exit-price line.
+exec
+/bin/zsh -lc 'tail -n 8 xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+The cheapest new mathematical work is a degree-`>=4` feasibility screen before
+another geometric proof attempt.  Enumerate transitive subgroups and allowed
+local fibre partitions for classified connected acyclic branch supports, with
+the comb central meridian and weighted-cone local/global identification kept
+explicit.  The rank-four danger is visible already: `(2,2)` fibres can remove
+the cubic rank-one companion mechanism, so the cubic proof should not be
+generalized by analogy.
+<!-- BODY-END -->
+
+exec
+/bin/zsh -lc "grep -n '<"'!-- BODY-END -->'"' xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+258:<!-- BODY-END -->
+
+exec
+/bin/zsh -lc "grep -n 'Seal' xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md" in /Users/dc/code/math/jc2
+ exited 1 in 0ms:
+exec
+/bin/zsh -lc "grep -n 'charge_basis=' xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md" in /Users/dc/code/math/jc2
+ exited 1 in 0ms:
+diff --git a/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md b/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..9c7ae07398426d3681b197db81cf44cb5586e6e0
+--- /dev/null
++++ b/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,258 @@
++# Hostile review: acyclic branch obstruction to a cubic block
++
++Date: 2026-08-30
++Reviewer: GPT-5.5 hostile reconstruction
++Scope: charged repository files named in the prompt, plus the charged
++Arzhantsev--Zaidenberg PDF.  I did not inspect `jc2-lean`, sibling
++external-model prompts, logs, reports, receipts, canonical ledgers, or
++unrelated repository files.
++
++## Input custody
++
++All nine prompt SHA-256 hashes matched:
++
++```text
++5be2e2af32c0f6201637a652d28a0ff5f6992c5ebde696b1198d7b94e4829cf7
++  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md
++5fd8b854452bf4e42a96ccaea89ca8b4be09310dc0cff424ae6dd0261392a455
++  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md.artifact.json
++648022d35191b67d9f1e1eec61cddc95bbee745001410ad1fbbffa1044417389
++  ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py
++41245c20b1b61a0dcf8116340672d037b977e6759d5d99054fc06c292d5c36fc
++  refs/arzhantsev_zaidenberg_acyclic_curves_arxiv1110.3028v2.pdf
++2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce
++  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
++9e32b0fe8835b6ea6002036b95e2261a612754d73d796cb10edda347cf3cf65e
++  xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
++8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d
++  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
++7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29
++  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
++f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
++  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
++```
++
++Receipt status: `ABSENT` is expected.  This review makes no exit-price
++assertion.
++
++## Itemized audit
++
++1. `CONFIRM_WITH_CORRECTIONS`: Arzhantsev--Zaidenberg coverage and the
++proper-cubic hypotheses.
++
++The pinned PDF defines an acyclic curve as connected and simply connected,
++then Theorem 1.3(b) states the broader classification for any reduced simply
++connected plane curve.  That statement is not restricted to irreducible
++curves; it explicitly includes reducible forms
++
++```text
++y^epsilon_y p(x)=0
++x^epsilon_x y^epsilon_y product_i (y^a-kappa_i x^b)=0,
++```
++
++with `epsilon_x,epsilon_y in {0,1}`, `p` squarefree, `a,b>=1` coprime, `r>0`,
++and distinct nonzero `kappa_i`.  Thus every reduced connected simply connected
++plane curve is covered.  Connectedness is an extra specialization imposed on
++the normal forms, not a missing source hypothesis.
++
++The campaign interface must not infer contractibility from Euler
++characteristic alone.  The charged proper-cubic path gives more: `R_red -> B`
++is a finite point-bijective analytic homeomorphism, components have
++normalization `A1`, the affine incidence graph is a forest, and the survivor
++row has `b0(B)=1`.  A connected tree of contractible normalizations glued only
++along the forest incidence pattern is topologically contractible.  That is the
++safe route into the classification.  The new theorem's standalone assumption
++that `B` is topologically contractible is therefore stronger than the Euler
++identity and is safe when this full charged topology package is imported.
++
++2. `CONFIRMED`: local cubic splitting and global transitivity.
++
++Let `pi:Y -> A2_C` be finite flat of degree three with `Y` integral and normal,
++and let `B` be the reduced branch support.  Over `U=A2-B`, the restriction
++`V=Y-pi^{-1}(B) -> U` is finite etale of degree three.  Since `V` is a nonempty
++open subset of integral `Y`, it is connected, so the topological monodromy on
++the three sheets is transitive.
++
++At any point `b in B`, including singular points of the reduced branch curve,
++the henselian local finite algebra has special fibre with two support
++idempotents of lengths two and one.  Henselian idempotent lifting splits the
++rank-three algebra into rank-two and rank-one finite-flat factors.  A unital
++rank-one finite-flat algebra over the local base is the base itself; analytically
++this is the local companion section.  Hence the whole local complement group,
++not just a smooth-branch meridian, fixes the companion sheet after a based
++identification.  At a generic smooth point of a branch component, the rank-two
++ramified factor contributes a nontrivial transposition.
++
++This confirms both halves that must be kept separate: local groups fix local
++companions, while the global complement cover is transitive.  In the promoted
++cubic survivor the transitive image also contains a transposition, hence is
++`S3`.
++
++3. `CONFIRMED`: the comb case and based meridians.
++
++For `y^epsilon_y p(x)=0`, connectedness leaves exactly these cases:
++
++```text
++one vertical line             epsilon_y=0 and p has one root;
++one horizontal line           epsilon_y=1 and p is constant;
++a genuine comb                epsilon_y=1 and p has s>=1 simple roots.
++```
++
++The line cases have complement fundamental group `Z`; the branch meridian maps
++to a transposition, so the image has order two and cannot be transitive on
++three letters.
++
++For a comb with roots `alpha_1,...,alpha_s`,
++
++```text
++A2-B = (C-{alpha_1,...,alpha_s}) x C*
++pi1(A2-B) = F_s x <h>,
++```
++
++where `h` is the based meridian of the horizontal spine and is central.  The
++generic `(2,1)` fibre along the spine gives `rho(h)=tau`, a transposition.
++For every based loop `gamma`, centrality gives `rho(gamma) tau = tau
++rho(gamma)`.  The centralizer of a transposition in `S3` is exactly the
++two-element subgroup generated by it, so the entire image lies in `<tau>` and
++is intransitive.
++
++This argument does not identify tooth companions by hand.  The common label is
++forced only after the globally based central spine meridian has been mapped to
++a transposition.
++
++4. `CONFIRM_WITH_CORRECTIONS`: the weighted-cone case.
++
++The weights in the charged proof are correct.  Under positive real scaling
++
++```text
++r.(x,y)=(r^a x,r^b y),
++```
++
++both `y^a` and `x^b` acquire weight `ab`, and the optional coordinate axes are
++invariant.  With
++
++```text
++N(x,y)=|x|^(2/a)+|y|^(2/b),
++```
++
++one has `N(r.(x,y))=r^2 N(x,y)`, so every positive orbit in `A2-{0}` meets a
++weighted link `N=const` exactly once.
++
++The wording should be through punctured weighted sublevel neighborhoods:
++`A2-B` and `{0<N<delta}-B` both deformation retract by this radial flow to the
++same weighted link complement.  Ordinary Euclidean balls and these weighted
++sublevels are cofinal neighborhoods of the origin, so this computes the usual
++origin-local complement group.  With that wording, the global complement group
++is the origin-local complement group.
++
++Applying the henselian rank-one companion factor at the origin then places the
++whole global monodromy image in a single companion-fixing `S2`.  This is enough:
++an `S2` subgroup of `S3` is intransitive.  The proof covers optional axes,
++`a=b=1` line arrangements through the origin, smooth weighted rows with one
++exponent equal to one, and irreducible cusps.
++
++5. `CONFIRMED`: edge-case controls.
++
++One line gives `pi1=Z` and a transposition image, hence no connected cubic
++cover.  One tooth gives `C* x C*`; its two meridians commute, so the spine
++transposition forces the tooth transposition to be the same one.  Several teeth
++are handled by the same product `F_s x Z`.  The coordinate axes `xy=0` are just
++the one-tooth comb.  The `a=b=1` rows are central line arrangements and are
++covered by the weighted-cone argument.  Irreducible cusps are weighted cones,
++so their global complement is already the origin-local complement for this
++purpose.
++
++The two readings of "one point/place at infinity" do not enlarge the proof.
++Componentwise one-place is not needed after the curve is known contractible and
++classified.  A stronger single set-theoretic infinity point only deletes
++nontrivial combs and most central line arrangements; it does not create a new
++case.
++
++The disconnected algebraic `S3` control from the prior review remains a real
++warning.  The cubic `z^3-3z+2+xy=0` has local `(2,1)` companions and global
++`S3` monodromy, but its branch support has two connected components.  The new
++proof avoids that failure mode precisely by using the classified connected
++contractible forms: a comb has a central global spine meridian, and a weighted
++cone has one local group equal to the global group.
++
++6. `CONFIRMED`: exact proper-block interface.
++
++The standalone geometric theorem is a degree-three finite-flat branch theorem.
++It does not require the whole Jacobian-conjecture machine, but the campaign may
++apply it only after the charged proper-cubic inputs supply all of its
++hypotheses: integral normal finite-flat cubic cover, reduced connected
++topologically contractible branch support, connected complement cover, and
++`(2,1)` fibre partition at every branch value.
++
++With those inputs, the promoted proper cubic block is empty.  The earlier
++affine-survivor funnel had already removed the smooth branch row; this
++classification argument removes the singular and reducible connected acyclic
++branch row.  The conclusion is only about the proper block with cubic second
++leg `deg(g2)=3`.
++
++Nothing here excludes proper blocks of degree at least four.  Nothing here
++touches the primitive/no-proper-block horn.  No statement about JC2 itself
++follows except the conditional corollary that a noninvertible Keller map cannot
++pass through this promoted proper-cubic block configuration.
++
++7. `CONFIRMED`: replay and its limits.
++
++Ordinary, `-O`, and `-OO` executions all produced the same payload:
++
++```json
++{"acyclic_images_transitive": false, "comb_admissible_counts_by_teeth": {"1": 3, "2": 3, "3": 3, "4": 3, "5": 3, "6": 3}, "cone_image_order": 2, "disconnected_control_image_order": 6, "disconnected_control_transitive": true, "payload_sha256": "0e1afb3f3d226393fa143d972620607d46ee3db7daf8b37751fee2d2402db740", "s3_order": 6, "status": "PASS-CUBIC-ACYCLIC-BRANCH-MONODROMY", "transposition_count": 3}
++```
++
++The deliberate mutation `--mutate-drop-comb-centrality` failed in ordinary,
++`-O`, and `-OO` modes with:
++
++```text
++RuntimeError: comb with 1 teeth must have one common transposition label
++```
++
++The script uses explicit `require` checks, not Python `assert`, so optimization
++does not erase the validation.  Its scope is finite and deliberately narrow:
++it checks the `S3` consequences of centrality and one local companion-fixing
++subgroup.  It does not verify the Arzhantsev--Zaidenberg classification,
++product complement, weighted radial deformation, henselian splitting,
++finite-flat cover hypotheses, proper-block interface, or branch
++contractibility.
++
++## Maximum-safe theorem
++
++The following is safe.
++
++Let `pi:Y -> A2_C` be finite flat of degree three, with `Y` integral and
++normal.  Let `B` be the reduced branch support.  Assume:
++
++```text
++B is connected and topologically contractible;
++every geometric fibre over every point of B has partition (2,1).
++```
++
++Then no such cover exists.  Indeed, `Y-pi^{-1}(B) -> A2-B` is a connected
++degree-three etale cover and therefore has transitive monodromy.  The
++Arzhantsev--Zaidenberg normal forms for reduced simply connected plane curves
++force the same monodromy image to be contained in a single order-two subgroup
++of `S3`: by centrality of the spine meridian in the comb case, and by equality
++of global and origin-local complement groups in the weighted-cone case.  This
++contradicts transitivity.
++
++Campaign corollary: subject to the charged proper-block integrations, the
++proper cubic block `deg(g2)=3` is closed.  This is not a theorem about
++`deg(g2)>=4`, not a primitive-horn theorem, and not JC2.
++
++## Cheapest useful successor
++
++First record the coordinator-level corollary only at this scope: promoted
++proper cubic blocks are impossible.  Do not attach any higher-degree or
++primitive consequence.
++
++The cheapest new mathematical work is a degree-`>=4` feasibility screen before
++another geometric proof attempt.  Enumerate transitive subgroups and allowed
++local fibre partitions for classified connected acyclic branch supports, with
++the comb central meridian and weighted-cone local/global identification kept
++explicit.  The rank-four danger is visible already: `(2,2)` fibres can remove
++the cubic rank-one companion mechanism, so the cubic proof should not be
++generalized by analogy.
++<!-- BODY-END -->
+
+  ✓ Hash-check charged files
+  ✓ Read charged theorem, prior reviews, and references
+  ✓ Run replay in three Python modes and mutation check
+  ✓ Write hostile review file only
+  ✓ Verify output formatting constraints
+diff --git a/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md b/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..9c7ae07398426d3681b197db81cf44cb5586e6e0
+--- /dev/null
++++ b/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,258 @@
++# Hostile review: acyclic branch obstruction to a cubic block
++
++Date: 2026-08-30
++Reviewer: GPT-5.5 hostile reconstruction
++Scope: charged repository files named in the prompt, plus the charged
++Arzhantsev--Zaidenberg PDF.  I did not inspect `jc2-lean`, sibling
++external-model prompts, logs, reports, receipts, canonical ledgers, or
++unrelated repository files.
++
++## Input custody
++
++All nine prompt SHA-256 hashes matched:
++
++```text
++5be2e2af32c0f6201637a652d28a0ff5f6992c5ebde696b1198d7b94e4829cf7
++  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md
++5fd8b854452bf4e42a96ccaea89ca8b4be09310dc0cff424ae6dd0261392a455
++  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md.artifact.json
++648022d35191b67d9f1e1eec61cddc95bbee745001410ad1fbbffa1044417389
++  ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py
++41245c20b1b61a0dcf8116340672d037b977e6759d5d99054fc06c292d5c36fc
++  refs/arzhantsev_zaidenberg_acyclic_curves_arxiv1110.3028v2.pdf
++2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce
++  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
++9e32b0fe8835b6ea6002036b95e2261a612754d73d796cb10edda347cf3cf65e
++  xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
++8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d
++  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
++7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29
++  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
++f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
++  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
++```
++
++Receipt status: `ABSENT` is expected.  This review makes no exit-price
++assertion.
++
++## Itemized audit
++
++1. `CONFIRM_WITH_CORRECTIONS`: Arzhantsev--Zaidenberg coverage and the
++proper-cubic hypotheses.
++
++The pinned PDF defines an acyclic curve as connected and simply connected,
++then Theorem 1.3(b) states the broader classification for any reduced simply
++connected plane curve.  That statement is not restricted to irreducible
++curves; it explicitly includes reducible forms
++
++```text
++y^epsilon_y p(x)=0
++x^epsilon_x y^epsilon_y product_i (y^a-kappa_i x^b)=0,
++```
++
++with `epsilon_x,epsilon_y in {0,1}`, `p` squarefree, `a,b>=1` coprime, `r>0`,
++and distinct nonzero `kappa_i`.  Thus every reduced connected simply connected
++plane curve is covered.  Connectedness is an extra specialization imposed on
++the normal forms, not a missing source hypothesis.
++
++The campaign interface must not infer contractibility from Euler
++characteristic alone.  The charged proper-cubic path gives more: `R_red -> B`
++is a finite point-bijective analytic homeomorphism, components have
++normalization `A1`, the affine incidence graph is a forest, and the survivor
++row has `b0(B)=1`.  A connected tree of contractible normalizations glued only
++along the forest incidence pattern is topologically contractible.  That is the
++safe route into the classification.  The new theorem's standalone assumption
++that `B` is topologically contractible is therefore stronger than the Euler
++identity and is safe when this full charged topology package is imported.
++
++2. `CONFIRMED`: local cubic splitting and global transitivity.
++
++Let `pi:Y -> A2_C` be finite flat of degree three with `Y` integral and normal,
++and let `B` be the reduced branch support.  Over `U=A2-B`, the restriction
++`V=Y-pi^{-1}(B) -> U` is finite etale of degree three.  Since `V` is a nonempty
++open subset of integral `Y`, it is connected, so the topological monodromy on
++the three sheets is transitive.
++
++At any point `b in B`, including singular points of the reduced branch curve,
++the henselian local finite algebra has special fibre with two support
++idempotents of lengths two and one.  Henselian idempotent lifting splits the
++rank-three algebra into rank-two and rank-one finite-flat factors.  A unital
++rank-one finite-flat algebra over the local base is the base itself; analytically
++this is the local companion section.  Hence the whole local complement group,
++not just a smooth-branch meridian, fixes the companion sheet after a based
++identification.  At a generic smooth point of a branch component, the rank-two
++ramified factor contributes a nontrivial transposition.
++
++This confirms both halves that must be kept separate: local groups fix local
++companions, while the global complement cover is transitive.  In the promoted
++cubic survivor the transitive image also contains a transposition, hence is
++`S3`.
++
++3. `CONFIRMED`: the comb case and based meridians.
++
++For `y^epsilon_y p(x)=0`, connectedness leaves exactly these cases:
++
++```text
++one vertical line             epsilon_y=0 and p has one root;
++one horizontal line           epsilon_y=1 and p is constant;
++a genuine comb                epsilon_y=1 and p has s>=1 simple roots.
++```
++
++The line cases have complement fundamental group `Z`; the branch meridian maps
++to a transposition, so the image has order two and cannot be transitive on
++three letters.
++
++For a comb with roots `alpha_1,...,alpha_s`,
++
++```text
++A2-B = (C-{alpha_1,...,alpha_s}) x C*
++pi1(A2-B) = F_s x <h>,
++```
++
++where `h` is the based meridian of the horizontal spine and is central.  The
++generic `(2,1)` fibre along the spine gives `rho(h)=tau`, a transposition.
++For every based loop `gamma`, centrality gives `rho(gamma) tau = tau
++rho(gamma)`.  The centralizer of a transposition in `S3` is exactly the
++two-element subgroup generated by it, so the entire image lies in `<tau>` and
++is intransitive.
++
++This argument does not identify tooth companions by hand.  The common label is
++forced only after the globally based central spine meridian has been mapped to
++a transposition.
++
++4. `CONFIRM_WITH_CORRECTIONS`: the weighted-cone case.
++
++The weights in the charged proof are correct.  Under positive real scaling
++
++```text
++r.(x,y)=(r^a x,r^b y),
++```
++
++both `y^a` and `x^b` acquire weight `ab`, and the optional coordinate axes are
++invariant.  With
++
++```text
++N(x,y)=|x|^(2/a)+|y|^(2/b),
++```
++
++one has `N(r.(x,y))=r^2 N(x,y)`, so every positive orbit in `A2-{0}` meets a
++weighted link `N=const` exactly once.
++
++The wording should be through punctured weighted sublevel neighborhoods:
++`A2-B` and `{0<N<delta}-B` both deformation retract by this radial flow to the
++same weighted link complement.  Ordinary Euclidean balls and these weighted
++sublevels are cofinal neighborhoods of the origin, so this computes the usual
++origin-local complement group.  With that wording, the global complement group
++is the origin-local complement group.
++
++Applying the henselian rank-one companion factor at the origin then places the
++whole global monodromy image in a single companion-fixing `S2`.  This is enough:
++an `S2` subgroup of `S3` is intransitive.  The proof covers optional axes,
++`a=b=1` line arrangements through the origin, smooth weighted rows with one
++exponent equal to one, and irreducible cusps.
++
++5. `CONFIRMED`: edge-case controls.
++
++One line gives `pi1=Z` and a transposition image, hence no connected cubic
++cover.  One tooth gives `C* x C*`; its two meridians commute, so the spine
++transposition forces the tooth transposition to be the same one.  Several teeth
++are handled by the same product `F_s x Z`.  The coordinate axes `xy=0` are just
++the one-tooth comb.  The `a=b=1` rows are central line arrangements and are
++covered by the weighted-cone argument.  Irreducible cusps are weighted cones,
++so their global complement is already the origin-local complement for this
++purpose.
++
++The two readings of "one point/place at infinity" do not enlarge the proof.
++Componentwise one-place is not needed after the curve is known contractible and
++classified.  A stronger single set-theoretic infinity point only deletes
++nontrivial combs and most central line arrangements; it does not create a new
++case.
++
++The disconnected algebraic `S3` control from the prior review remains a real
++warning.  The cubic `z^3-3z+2+xy=0` has local `(2,1)` companions and global
++`S3` monodromy, but its branch support has two connected components.  The new
++proof avoids that failure mode precisely by using the classified connected
++contractible forms: a comb has a central global spine meridian, and a weighted
++cone has one local group equal to the global group.
++
++6. `CONFIRMED`: exact proper-block interface.
++
++The standalone geometric theorem is a degree-three finite-flat branch theorem.
++It does not require the whole Jacobian-conjecture machine, but the campaign may
++apply it only after the charged proper-cubic inputs supply all of its
++hypotheses: integral normal finite-flat cubic cover, reduced connected
++topologically contractible branch support, connected complement cover, and
++`(2,1)` fibre partition at every branch value.
++
++With those inputs, the promoted proper cubic block is empty.  The earlier
++affine-survivor funnel had already removed the smooth branch row; this
++classification argument removes the singular and reducible connected acyclic
++branch row.  The conclusion is only about the proper block with cubic second
++leg `deg(g2)=3`.
++
++Nothing here excludes proper blocks of degree at least four.  Nothing here
++touches the primitive/no-proper-block horn.  No statement about JC2 itself
++follows except the conditional corollary that a noninvertible Keller map cannot
++pass through this promoted proper-cubic block configuration.
++
++7. `CONFIRMED`: replay and its limits.
++
++Ordinary, `-O`, and `-OO` executions all produced the same payload:
++
++```json
++{"acyclic_images_transitive": false, "comb_admissible_counts_by_teeth": {"1": 3, "2": 3, "3": 3, "4": 3, "5": 3, "6": 3}, "cone_image_order": 2, "disconnected_control_image_order": 6, "disconnected_control_transitive": true, "payload_sha256": "0e1afb3f3d226393fa143d972620607d46ee3db7daf8b37751fee2d2402db740", "s3_order": 6, "status": "PASS-CUBIC-ACYCLIC-BRANCH-MONODROMY", "transposition_count": 3}
++```
++
++The deliberate mutation `--mutate-drop-comb-centrality` failed in ordinary,
++`-O`, and `-OO` modes with:
++
++```text
++RuntimeError: comb with 1 teeth must have one common transposition label
++```
++
++The script uses explicit `require` checks, not Python `assert`, so optimization
++does not erase the validation.  Its scope is finite and deliberately narrow:
++it checks the `S3` consequences of centrality and one local companion-fixing
++subgroup.  It does not verify the Arzhantsev--Zaidenberg classification,
++product complement, weighted radial deformation, henselian splitting,
++finite-flat cover hypotheses, proper-block interface, or branch
++contractibility.
++
++## Maximum-safe theorem
++
++The following is safe.
++
++Let `pi:Y -> A2_C` be finite flat of degree three, with `Y` integral and
++normal.  Let `B` be the reduced branch support.  Assume:
++
++```text
++B is connected and topologically contractible;
++every geometric fibre over every point of B has partition (2,1).
++```
++
++Then no such cover exists.  Indeed, `Y-pi^{-1}(B) -> A2-B` is a connected
++degree-three etale cover and therefore has transitive monodromy.  The
++Arzhantsev--Zaidenberg normal forms for reduced simply connected plane curves
++force the same monodromy image to be contained in a single order-two subgroup
++of `S3`: by centrality of the spine meridian in the comb case, and by equality
++of global and origin-local complement groups in the weighted-cone case.  This
++contradicts transitivity.
++
++Campaign corollary: subject to the charged proper-block integrations, the
++proper cubic block `deg(g2)=3` is closed.  This is not a theorem about
++`deg(g2)>=4`, not a primitive-horn theorem, and not JC2.
++
++## Cheapest useful successor
++
++First record the coordinator-level corollary only at this scope: promoted
++proper cubic blocks are impossible.  Do not attach any higher-degree or
++primitive consequence.
++
++The cheapest new mathematical work is a degree-`>=4` feasibility screen before
++another geometric proof attempt.  Enumerate transitive subgroups and allowed
++local fibre partitions for classified connected acyclic branch supports, with
++the comb central meridian and weighted-cone local/global identification kept
++explicit.  The rank-four danger is visible already: `(2,2)` fibres can remove
++the cubic rank-one companion mechanism, so the cubic proof should not be
++generalized by analogy.
++<!-- BODY-END -->
+
+codex
+Wrote the hostile review here:
+
+[xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md](/Users/dc/code/math/jc2/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md)
+
+All nine charged hashes matched. I audited only the named charged inputs plus the charged AZ PDF, did not inspect `jc2-lean`, and did not touch Git state or unrelated files.
+
+Main verdict: `CONFIRM_WITH_CORRECTIONS`. The cubic obstruction is safe at the stated scope: no finite-flat integral normal cubic cover with connected topologically contractible reduced branch and `(2,1)` fibres everywhere over the branch. Campaign corollary: the promoted proper cubic block is closed, but nothing follows for degree `>=4`, the primitive/no-proper-block horn, or JC2 itself.
+
+Replay was rerun under ordinary, `-O`, and `-OO`; all produced payload hash `0e1afb3f3d226393fa143d972620607d46ee3db7daf8b37751fee2d2402db740`. The deliberate `--mutate-drop-comb-centrality` failure reproduced in all three modes.
+
+Final file self-check: one standalone `<!-- BODY-END -->` at the end, no seal block, and no exit-price assertion line.
+diff --git a/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md b/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..9c7ae07398426d3681b197db81cf44cb5586e6e0
+--- /dev/null
++++ b/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,258 @@
++# Hostile review: acyclic branch obstruction to a cubic block
++
++Date: 2026-08-30
++Reviewer: GPT-5.5 hostile reconstruction
++Scope: charged repository files named in the prompt, plus the charged
++Arzhantsev--Zaidenberg PDF.  I did not inspect `jc2-lean`, sibling
++external-model prompts, logs, reports, receipts, canonical ledgers, or
++unrelated repository files.
++
++## Input custody
++
++All nine prompt SHA-256 hashes matched:
++
++```text
++5be2e2af32c0f6201637a652d28a0ff5f6992c5ebde696b1198d7b94e4829cf7
++  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md
++5fd8b854452bf4e42a96ccaea89ca8b4be09310dc0cff424ae6dd0261392a455
++  xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md.artifact.json
++648022d35191b67d9f1e1eec61cddc95bbee745001410ad1fbbffa1044417389
++  ops/block_descent_a1_cubic_acyclic_branch_monodromy_replay.py
++41245c20b1b61a0dcf8116340672d037b977e6759d5d99054fc06c292d5c36fc
++  refs/arzhantsev_zaidenberg_acyclic_curves_arxiv1110.3028v2.pdf
++2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce
++  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
++9e32b0fe8835b6ea6002036b95e2261a612754d73d796cb10edda347cf3cf65e
++  xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
++8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d
++  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
++7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29
++  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
++f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
++  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
++```
++
++Receipt status: `ABSENT` is expected.  This review makes no exit-price
++assertion.
++
++## Itemized audit
++
++1. `CONFIRM_WITH_CORRECTIONS`: Arzhantsev--Zaidenberg coverage and the
++proper-cubic hypotheses.
++
++The pinned PDF defines an acyclic curve as connected and simply connected,
++then Theorem 1.3(b) states the broader classification for any reduced simply
++connected plane curve.  That statement is not restricted to irreducible
++curves; it explicitly includes reducible forms
++
++```text
++y^epsilon_y p(x)=0
++x^epsilon_x y^epsilon_y product_i (y^a-kappa_i x^b)=0,
++```
++
++with `epsilon_x,epsilon_y in {0,1}`, `p` squarefree, `a,b>=1` coprime, `r>0`,
++and distinct nonzero `kappa_i`.  Thus every reduced connected simply connected
++plane curve is covered.  Connectedness is an extra specialization imposed on
++the normal forms, not a missing source hypothesis.
++
++The campaign interface must not infer contractibility from Euler
++characteristic alone.  The charged proper-cubic path gives more: `R_red -> B`
++is a finite point-bijective analytic homeomorphism, components have
++normalization `A1`, the affine incidence graph is a forest, and the survivor
++row has `b0(B)=1`.  A connected tree of contractible normalizations glued only
++along the forest incidence pattern is topologically contractible.  That is the
++safe route into the classification.  The new theorem's standalone assumption
++that `B` is topologically contractible is therefore stronger than the Euler
++identity and is safe when this full charged topology package is imported.
++
++2. `CONFIRMED`: local cubic splitting and global transitivity.
++
++Let `pi:Y -> A2_C` be finite flat of degree three with `Y` integral and normal,
++and let `B` be the reduced branch support.  Over `U=A2-B`, the restriction
++`V=Y-pi^{-1}(B) -> U` is finite etale of degree three.  Since `V` is a nonempty
++open subset of integral `Y`, it is connected, so the topological monodromy on
++the three sheets is transitive.
++
++At any point `b in B`, including singular points of the reduced branch curve,
++the henselian local finite algebra has special fibre with two support
++idempotents of lengths two and one.  Henselian idempotent lifting splits the
++rank-three algebra into rank-two and rank-one finite-flat factors.  A unital
++rank-one finite-flat algebra over the local base is the base itself; analytically
++this is the local companion section.  Hence the whole local complement group,
++not just a smooth-branch meridian, fixes the companion sheet after a based
++identification.  At a generic smooth point of a branch component, the rank-two
++ramified factor contributes a nontrivial transposition.
++
++This confirms both halves that must be kept separate: local groups fix local
++companions, while the global complement cover is transitive.  In the promoted
++cubic survivor the transitive image also contains a transposition, hence is
++`S3`.
++
++3. `CONFIRMED`: the comb case and based meridians.
++
++For `y^epsilon_y p(x)=0`, connectedness leaves exactly these cases:
++
++```text
++one vertical line             epsilon_y=0 and p has one root;
++one horizontal line           epsilon_y=1 and p is constant;
++a genuine comb                epsilon_y=1 and p has s>=1 simple roots.
++```
++
++The line cases have complement fundamental group `Z`; the branch meridian maps
++to a transposition, so the image has order two and cannot be transitive on
++three letters.
++
++For a comb with roots `alpha_1,...,alpha_s`,
++
++```text
++A2-B = (C-{alpha_1,...,alpha_s}) x C*
++pi1(A2-B) = F_s x <h>,
++```
++
++where `h` is the based meridian of the horizontal spine and is central.  The
++generic `(2,1)` fibre along the spine gives `rho(h)=tau`, a transposition.
++For every based loop `gamma`, centrality gives `rho(gamma) tau = tau
++rho(gamma)`.  The centralizer of a transposition in `S3` is exactly the
++two-element subgroup generated by it, so the entire image lies in `<tau>` and
++is intransitive.
++
++This argument does not identify tooth companions by hand.  The common label is
++forced only after the globally based central spine meridian has been mapped to
++a transposition.
++
++4. `CONFIRM_WITH_CORRECTIONS`: the weighted-cone case.
++
++The weights in the charged proof are correct.  Under positive real scaling
++
++```text
++r.(x,y)=(r^a x,r^b y),
++```
++
++both `y^a` and `x^b` acquire weight `ab`, and the optional coordinate axes are
++invariant.  With
++
++```text
++N(x,y)=|x|^(2/a)+|y|^(2/b),
++```
++
++one has `N(r.(x,y))=r^2 N(x,y)`, so every positive orbit in `A2-{0}` meets a
++weighted link `N=const` exactly once.
++
++The wording should be through punctured weighted sublevel neighborhoods:
++`A2-B` and `{0<N<delta}-B` both deformation retract by this radial flow to the
++same weighted link complement.  Ordinary Euclidean balls and these weighted
++sublevels are cofinal neighborhoods of the origin, so this computes the usual
++origin-local complement group.  With that wording, the global complement group
++is the origin-local complement group.
++
++Applying the henselian rank-one companion factor at the origin then places the
++whole global monodromy image in a single companion-fixing `S2`.  This is enough:
++an `S2` subgroup of `S3` is intransitive.  The proof covers optional axes,
++`a=b=1` line arrangements through the origin, smooth weighted rows with one
++exponent equal to one, and irreducible cusps.
++
++5. `CONFIRMED`: edge-case controls.
++
++One line gives `pi1=Z` and a transposition image, hence no connected cubic
++cover.  One tooth gives `C* x C*`; its two meridians commute, so the spine
++transposition forces the tooth transposition to be the same one.  Several teeth
++are handled by the same product `F_s x Z`.  The coordinate axes `xy=0` are just
++the one-tooth comb.  The `a=b=1` rows are central line arrangements and are
++covered by the weighted-cone argument.  Irreducible cusps are weighted cones,
++so their global complement is already the origin-local complement for this
++purpose.
++
++The two readings of "one point/place at infinity" do not enlarge the proof.
++Componentwise one-place is not needed after the curve is known contractible and
++classified.  A stronger single set-theoretic infinity point only deletes
++nontrivial combs and most central line arrangements; it does not create a new
++case.
++
++The disconnected algebraic `S3` control from the prior review remains a real
++warning.  The cubic `z^3-3z+2+xy=0` has local `(2,1)` companions and global
++`S3` monodromy, but its branch support has two connected components.  The new
++proof avoids that failure mode precisely by using the classified connected
++contractible forms: a comb has a central global spine meridian, and a weighted
++cone has one local group equal to the global group.
++
++6. `CONFIRMED`: exact proper-block interface.
++
++The standalone geometric theorem is a degree-three finite-flat branch theorem.
++It does not require the whole Jacobian-conjecture machine, but the campaign may
++apply it only after the charged proper-cubic inputs supply all of its
++hypotheses: integral normal finite-flat cubic cover, reduced connected
++topologically contractible branch support, connected complement cover, and
++`(2,1)` fibre partition at every branch value.
++
++With those inputs, the promoted proper cubic block is empty.  The earlier
++affine-survivor funnel had already removed the smooth branch row; this
++classification argument removes the singular and reducible connected acyclic
++branch row.  The conclusion is only about the proper block with cubic second
++leg `deg(g2)=3`.
++
++Nothing here excludes proper blocks of degree at least four.  Nothing here
++touches the primitive/no-proper-block horn.  No statement about JC2 itself
++follows except the conditional corollary that a noninvertible Keller map cannot
++pass through this promoted proper-cubic block configuration.
++
++7. `CONFIRMED`: replay and its limits.
++
++Ordinary, `-O`, and `-OO` executions all produced the same payload:
++
++```json
++{"acyclic_images_transitive": false, "comb_admissible_counts_by_teeth": {"1": 3, "2": 3, "3": 3, "4": 3, "5": 3, "6": 3}, "cone_image_order": 2, "disconnected_control_image_order": 6, "disconnected_control_transitive": true, "payload_sha256": "0e1afb3f3d226393fa143d972620607d46ee3db7daf8b37751fee2d2402db740", "s3_order": 6, "status": "PASS-CUBIC-ACYCLIC-BRANCH-MONODROMY", "transposition_count": 3}
++```
++
++The deliberate mutation `--mutate-drop-comb-centrality` failed in ordinary,
++`-O`, and `-OO` modes with:
++
++```text
++RuntimeError: comb with 1 teeth must have one common transposition label
++```
++
++The script uses explicit `require` checks, not Python `assert`, so optimization
++does not erase the validation.  Its scope is finite and deliberately narrow:
++it checks the `S3` consequences of centrality and one local companion-fixing
++subgroup.  It does not verify the Arzhantsev--Zaidenberg classification,
++product complement, weighted radial deformation, henselian splitting,
++finite-flat cover hypotheses, proper-block interface, or branch
++contractibility.
++
++## Maximum-safe theorem
++
++The following is safe.
++
++Let `pi:Y -> A2_C` be finite flat of degree three, with `Y` integral and
++normal.  Let `B` be the reduced branch support.  Assume:
++
++```text
++B is connected and topologically contractible;
++every geometric fibre over every point of B has partition (2,1).
++```
++
++Then no such cover exists.  Indeed, `Y-pi^{-1}(B) -> A2-B` is a connected
++degree-three etale cover and therefore has transitive monodromy.  The
++Arzhantsev--Zaidenberg normal forms for reduced simply connected plane curves
++force the same monodromy image to be contained in a single order-two subgroup
++of `S3`: by centrality of the spine meridian in the comb case, and by equality
++of global and origin-local complement groups in the weighted-cone case.  This
++contradicts transitivity.
++
++Campaign corollary: subject to the charged proper-block integrations, the
++proper cubic block `deg(g2)=3` is closed.  This is not a theorem about
++`deg(g2)>=4`, not a primitive-horn theorem, and not JC2.
++
++## Cheapest useful successor
++
++First record the coordinator-level corollary only at this scope: promoted
++proper cubic blocks are impossible.  Do not attach any higher-degree or
++primitive consequence.
++
++The cheapest new mathematical work is a degree-`>=4` feasibility screen before
++another geometric proof attempt.  Enumerate transitive subgroups and allowed
++local fibre partitions for classified connected acyclic branch supports, with
++the comb central meridian and weighted-cone local/global identification kept
++explicit.  The rank-four danger is visible already: `(2,2)` fibres can remove
++the cubic rank-one companion mechanism, so the cubic proof should not be
++generalized by analogy.
++<!-- BODY-END -->
+
+tokens used
+80,977
+Wrote the hostile review here:
+
+[xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md](/Users/dc/code/math/jc2/xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md)
+
+All nine charged hashes matched. I audited only the named charged inputs plus the charged AZ PDF, did not inspect `jc2-lean`, and did not touch Git state or unrelated files.
+
+Main verdict: `CONFIRM_WITH_CORRECTIONS`. The cubic obstruction is safe at the stated scope: no finite-flat integral normal cubic cover with connected topologically contractible reduced branch and `(2,1)` fibres everywhere over the branch. Campaign corollary: the promoted proper cubic block is closed, but nothing follows for degree `>=4`, the primitive/no-proper-block horn, or JC2 itself.
+
+Replay was rerun under ordinary, `-O`, and `-OO`; all produced payload hash `0e1afb3f3d226393fa143d972620607d46ee3db7daf8b37751fee2d2402db740`. The deliberate `--mutate-drop-comb-centrality` failure reproduced in all three modes.
+
+Final file self-check: one standalone `<!-- BODY-END -->` at the end, no seal block, and no exit-price assertion line.
