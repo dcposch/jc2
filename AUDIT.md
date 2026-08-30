@@ -5,6 +5,58 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **CORRECTION: RATIONAL-FOREST REQUIRES AN EVERYWHERE-DEFINED MORPHISM
+> (2026-08-30 13:31Z).** The strengthening in integration `6a8558e42...`
+> from a dominant morphism `A2->U` to an arbitrary dominant rational map is
+> false. For a smooth cubic `E subset P2`, the identity gives
+> `A2 dashrightarrow P2 minus E`, but the completion boundary is elliptic and
+> `barP_m=1`. Binding correction
+> `d49a44ce65f13f0aba35e0a034923a1362594ba8a21fef27c63cc866ec7b667a`
+> (body `6e97a5c2...`, manifest `d14702bb...`) restores the maximum-safe
+> theorem: if a smooth quasi-projective surface `U` receives an
+> everywhere-defined dominant morphism from `A2`, every strict-SNC completion
+> has rational boundary components and forest dual multigraph. Resolution
+> centers then lie over source infinity, so logarithmic forms pull back to a
+> genuine `A2` log completion. Numerical monotonicity under shrinking does
+> not license a shrink that omits part of the morphic image. The reduced
+> `(2,3)` classification is unchanged; its boundary exclusions require the
+> actual morphic first leg. Audited proper-block clients remain sound because
+> their `g1` is everywhere-defined and etale. GPT-5.5 review of this correction
+> is active.
+>
+> **D3 LOCAL HALPHEN GATES PROMOTED; ONE-POINT ROW CLOSURE PROVISIONAL
+> (2026-08-30 13:31Z).** Fable and GPT-5.5 receipt-first reviews confirm the
+> triple-line first-jet theorem and raw CFS state machine with only replay and
+> interface repairs. Binding integration
+> `e5d55d5efd1203bedce54021f8c84d1229fd905cdab31184f22153376d9b87f7`
+> (body `96f1687d...`, manifest `e0999f46...`) promotes the two local gates:
+> the double-root branch is empty, while the triple-root branch has the exact
+> two cube flags and principal open `eta!=0`. Provisional producer
+> `58173d4f18a575ca49164fafef91b7ba8b50e670c9e8a39376d55bb647732e2f`
+> (body `2fc2cd21...`, manifest `ee2a3697...`) shows that every survivor
+> extracts a weighted exceptional boundary of invariant one. Conditional on
+> actual proper-block incidence, this empties `m=3,T=2t0`; Fable hostile
+> review remains the promotion gate. Corrigendum
+> `290edb38183ad3868cb8482ccfcd4c2b66cfc4101c8aaaed512b3c69bfb1ec20`
+> (body `aa655872...`, manifest `fd954ded...`) replaces five overbroad or
+> ambiguous sentences without changing the obstruction. It is not an abstract
+> surface exclusion, block-existence theorem, map, or JC2 conclusion.
+>
+> **FIXED-PRESENTATION q=6 CLOSURE PROMOTED
+> (2026-08-30 13:31Z).** Opus review sealed full `dfbd8c4c...`/raw body
+> `43660b5d...` returns `CONFIRM_WITH_CORRECTIONS` after independently
+> rebuilding the degree-zero root/carrier typing and every B3/U3 physical
+> contact stratum. Transactional integration
+> `8df7b874dedb765e403093c9eaed68aaf6617cc6776dd80222d765cfa4a05eb0`
+> (body `f8728359...`, manifest `8393cde7...`) adopts the free-`a0` local
+> formulas, affine-target carrier step, upstream tag boundaries, and
+> fifth-prime software-capacity disclosure. The exact v2 enumeration has zero
+> pair-condition matches and zero necessary survivors in all 28 rows before
+> post-match filtering. Hence both `B3/A2` and `U3/A3` are empty in the
+> charged reduced normal-singular F5 fixed quadratic presentation. This does
+> not establish a quadratic basis, cover nonreduced/nonfinite/basepoint or
+> degree-drop strata, construct a map, or resolve JC2.
+
 > **DEGREE-THREE HODGE DIVISOR AND FOUR-ROW GENUS-ONE GATE PROMOTED
 > (2026-08-30 12:32Z).** GPT-5.5 xhigh hostile review sealed full
 > `9115b2886303568c7671a375913f5eae28858391ce4cdbf3d1c43232c328fa94`
@@ -624,7 +676,7 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > basis-minimization theorem, block existence, primitivity, or JC2 statement
 > is promoted.
 
-> **RATIONAL-FOREST FIRST-LEG OBSTRUCTION PROMOTED; GENERIC QUADRATIC
+> **MORPHIC RATIONAL-FOREST FIRST-LEG OBSTRUCTION PROMOTED; GENERIC QUADRATIC
 > MIRANDA PRESENTATIONS EXCLUDED (2026-08-30 03:46Z).** Opus review body
 > `40841431...` (sealed full file `24b61d50...`) returns
 > `CONFIRM_WITH_CORRECTIONS`. Binding integration
@@ -637,9 +689,11 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > rank(partial)<=min(sum_i g(D_i)+b1(Gamma_D),q(X)).
 > ```
 >
-> A dominant rational `A2 --> U` forces `p_g=q=barP_1=0`; hence all resolved
-> boundary components are rational and the dual multigraph is a forest. The
-> result is monotone under shrinking `U`. For a ruled-surface section and
+> As corrected by `d49a44ce...`, an everywhere-defined dominant morphism
+> `A2 --> U` forces `p_g=q=barP_1=0`; arbitrary rational domination does not.
+> Hence all resolved boundary components are rational and the dual multigraph
+> is a forest. A shrink may be used only when it still contains the full
+> morphic image. For a ruled-surface section and
 > irreducible multisection it sharpens to
 >
 > ```text

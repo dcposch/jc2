@@ -7,6 +7,44 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **D3 LOCAL GATES PROMOTED; THE ONE-POINT HALPHEN ROW IS PROVISIONALLY
+> EMPTY (13:31Z).** Receipt-first reviews by Fable and GPT-5.5 preserve the
+> triple-line first-jet theorem and the full raw CFS state machine with only
+> replay/interface repairs. Binding integration `e5d55d5...`/body
+> `96f1687d...`, manifest `e0999f46...`, eliminates the double-root jet and
+> promotes the exact critical triple-root locus. New producer
+> `58173d4f...`/body `2fc2cd21...`, manifest `ee2a3697...`, derives the
+> universal weighted face
+> `X^3+tY^3+alpha*t^2XY+eta*t^5`, `eta!=0`. Its exceptional curve has
+> boundary invariant one for every `alpha`: elliptic off
+> `alpha^3+27eta=0`, rational nodal with a resolved graph cycle on it. Since
+> the actual proper-block first leg misses the singular finite-incidence
+> point, this provisionally eliminates the entire `m=3,T=2t0` row. Fable
+> hostile review is active. Corrigendum `290edb38...`/body `aa655872...`
+> narrows five wording points without changing the theorem; no abstract-
+> surface or JC2 conclusion is claimed.
+>
+> **RATIONAL-FOREST HYPOTHESIS CORRECTED FROM RATIONAL TO MORPHIC
+> (13:31Z).** The prior arbitrary-rational-map strengthening is false:
+> `P2` minus a smooth cubic is rationally dominated by `A2` but has elliptic
+> boundary. Binding correction `d49a44ce...`/body `6e97a5c2...`, manifest
+> `d14702bb...`, restores the exact theorem for an everywhere-defined
+> dominant morphism `A2->U`. All audited proper-block eliminations remain
+> valid because their actual `g1` is morphic and etale; a claim based only on
+> rational domination of an open surface is reopened. GPT-5.5 independently
+> reviews the repair and dependency inventory in the background.
+>
+> **FIXED-PRESENTATION q=6 CELL PROMOTED EMPTY (13:31Z).** Sealed
+> review `dfbd8c4c...`/raw body `43660b5d...` independently reconstructs the
+> root/carrier/strict-prime trichotomy and every B3/U3 contact stratum. It
+> finds no omitted configuration and preserves zero pair matches in all 28
+> rows. Binding integration `8df7b874...`/body `f8728359...`, manifest
+> `8393cde7...`, adopts every scope repair and promotes emptiness of both
+> `B3/A2` and `U3/A3` tags in the charged reduced normal-singular F5
+> quadratic presentation. Stop q=6 lattice/contact work. Quadratic-frame
+> existence, nonreduced infinity, nonfinite/basepoint, degree-drop and
+> nonquadratic scopes remain open.
+
 > **DEGREE-THREE HODGE DIVISOR AND FOUR-ROW GATE PROMOTED; EXACT LEVEL
 > SHARPENS THE COMPUTE (12:32Z).** GPT-5.5 xhigh hostile review sealed full
 > `9115b288...`/body `8b46aac7...` returns `CONFIRM_WITH_CORRECTIONS` after
@@ -406,12 +444,13 @@ day or inserts the completed day directly below this preamble (see
 > not basis-invariant; nonlinear cubic blocks, block existence, primitivity,
 > and JC2 remain open.
 
-> **RATIONAL-FOREST FIRST-LEG THEOREM PROMOTED; QUADRATIC INFINITY REDUCED
+> **MORPHIC RATIONAL-FOREST FIRST-LEG THEOREM PROMOTED; QUADRATIC INFINITY REDUCED
 > TO SEVEN DEGENERATE TYPES (03:46Z).** Opus independently reconstructs the
 > residue/normalization formula and returns `CONFIRM_WITH_CORRECTIONS`.
-> Binding integration `6a8558e4...`/body `9c650122...` promotes that any
-> resolved boundary receiving a dominant rational `A^2` first leg has only
-> rational components and forest dual graph. Generic quadratic Miranda
+> Binding integration `6a8558e4...`/body `9c650122...`, as corrected by
+> `d49a44ce...`, applies when the resolved boundary receives an
+> everywhere-defined dominant morphism from `A^2`; the former arbitrary
+> rational-map strengthening is retracted. Generic quadratic Miranda
 > incidence is excluded already by its genus-two infinity curve; the earlier
 > nominal `bar-P_1=18` is conditional and unneeded. A sealed successor
 > `d783cecf...`/body `b76971e6...` provisionally classifies reduced

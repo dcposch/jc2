@@ -14800,3 +14800,39 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   formalization remains outside campaign control and was not inspected,
   built, modified, or listed. Web backstop: `2026-08-31T03:40Z`. Holds/human
   gates: none.
+
+## 2026-08-30 13:31Z CORRECTION/PROOF EVENT — MORPHIC FORESTS AND D3 WEIGHTED OBSTRUCTION
+
+- A clean counterexample invalidates the previous arbitrary-rational-map
+  forest wording: for smooth cubic `E subset P2`, the rational map
+  `A2 dashrightarrow P2 minus E` exists while the completion boundary has
+  genus one. Transactional correction `d49a44ce...`/body `6e97a5c2...`,
+  manifest `d14702bb...`, restores the exact hypothesis: an
+  everywhere-defined dominant morphism `A2->U`. Resolution centers then lie
+  over source infinity and logarithmic pullback is valid. Proper-block clients
+  retain this through their actual etale `g1`; rational domination alone is
+  insufficient. GPT-5.5 hostile review is active.
+- Fable and GPT-5.5 completed receipt-first reviews of the D3 first-jet and
+  raw CFS state-machine packets. Binding integration `e5d55d5...`/body
+  `96f1687d...`, manifest `e0999f46...`, promotes both local gates. The
+  double-root branch is empty; the triple-root branch has exact critical
+  equations and `eta!=0`.
+- Provisional weighted producer `58173d4f...`/body `2fc2cd21...`, manifest
+  `ee2a3697...`, replay `2601681d...`, finds no weight below 15 after shifts
+  `(x+st,y+lambda t)` and extracts
+  `X^3+tY^3+alpha*t^2XY+eta*t^5` in `P(5,4,3)`. Off
+  `alpha^3+27eta=0` the exceptional curve is elliptic; on it the Hesse
+  triangle quotient is irreducible rational nodal and resolves to a cycle.
+  Both have boundary invariant one. The actual morphic block first leg misses
+  the singular locally finite incidence point, so the whole
+  `m=3,T=2t0` row is provisionally empty. Fable review runs independently;
+  the other three D3 rows remain. Corrigendum `290edb38...`/body
+  `aa655872...`, manifest `fd954ded...`, repairs five scope/wording sentences
+  without changing the obstruction.
+- Opus q=6 review `dfbd8c4c...` confirms the type repair and all B3/U3
+  contact strata with wording-only corrections. Binding integration
+  `8df7b874...`/body `f8728359...`, manifest `8393cde7...`, adopts them and
+  promotes zero necessary configurations for both q=6 tags in the charged
+  fixed quadratic presentation. Stop q=6 lattice/contact work. All active
+  mathematics is desk-scale; no heavy local CAS is running, and AWS remains
+  the venue for any growing frozen computation.

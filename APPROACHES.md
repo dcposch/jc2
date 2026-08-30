@@ -7,6 +7,40 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 13:31Z — D3 one-point row provisionally closed; forest scope repaired)
+
+- **Treat the one-point index-three Halphen row as review-gated empty.**
+  Fable and GPT-5.5 independently confirmed the triple-line first-jet gate and
+  the complete CFS state machine; binding integration now eliminates the
+  double-root jet and leaves only the critical triple-root locus. A universal
+  `(5,4,3)` weighted blowup extracts boundary invariant `tau=1` on every
+  survivor: smooth elliptic when `alpha^3+27eta!=0`, or irreducible rational
+  nodal with a resolved cycle when equality holds. This closes
+  `m=3,T=2t0` conditional on actual proper-block occurrence; Fable hostile
+  review runs in the background. Corrigendum `290edb38...` narrows five
+  wording points without changing the verdict.
+- **Use rational forests only through the actual morphic first leg.** The old
+  strengthening from an everywhere-defined dominant morphism to an arbitrary
+  rational map is false: `P2` minus a smooth cubic is rationally dominated by
+  `A2` and has elliptic boundary. Binding correction `d49a44ce...` restores
+  the morphic theorem. Existing proper-block clients survive because `g1` is
+  an everywhere-defined dominant etale morphism; abstract rationally
+  dominated open surfaces do not inherit a forest. GPT-5.5 is reviewing the
+  correction and downstream scope concurrently.
+- **Stop the promoted fixed-presentation q=6 cell.** Opus independently
+  reconstructs the degree-zero typing trichotomy and complete B3/U3 contact
+  census. Binding integration `8df7b874...` adopts every correction and
+  promotes zero necessary boundary configurations in all 28 rows. Do not run
+  more q=6 lattice or local-contact enumeration; move the quadratic front to
+  basis/frame existence, nonreduced infinity, nonfinite/basepoint cases and
+  degree drop.
+- **Keep the portfolio asynchronous and compute-light.** The weighted review,
+  forest-correction review and other lanes do not block work on the other
+  three D3 rows, the presentation-selector/basis problem, K00 occurrence, or
+  the proper-block Euler ledger. No heavy computation is licensed locally;
+  any growing CAS packet moves to AWS. Web backstop remains
+  `2026-08-31T03:40Z` absent significant external news.
+
 ## Superseding strategy overlay (2026-08-30 12:32Z — D3 four rows and proper-block ruling promoted)
 
 - **Run the degree-three front as four exact locally closed problems.** The
@@ -273,10 +307,11 @@ later correction and live-overlay sections cite post-survey campaign evidence.
   block-side theorem, not primitivity: coefficient degree is not invariant
   under basis change, and quadratic or higher coefficients remain.
 - **Push the nonlinear route through its finite exceptional boundary, not a
-  generic coefficient sweep.** The rational-forest theorem is promoted: any
-  resolved target boundary admitting a dominant rational `A^2` first leg has
-  only rational components and forest dual graph. It excludes generic
-  quadratic infinity by genus two. More generally, it excludes a fixed-basis
+  generic coefficient sweep.** The corrected rational-forest theorem applies
+  to an everywhere-defined dominant morphic `A^2` first leg, as supplied by
+  every actual proper block; arbitrary rational domination is insufficient.
+  It excludes generic quadratic infinity by genus two when that morphic leg
+  lands in the affine complement. More generally, it excludes a fixed-basis
   incidence closure that is a smooth irreducible class-`dA+3B` hypersurface
   of literal fibre degree three, for `d>=3`, by positive `p_g`. The reduced
   `(2,3)` survivor is provisionally classified by

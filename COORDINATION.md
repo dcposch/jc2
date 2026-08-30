@@ -1032,9 +1032,11 @@ AWS remains idle/unclaimed and heavy or uncertain CAS stays AWS-only.
 Allocation refresh (2026-08-30 03:46Z): both first hardened mathematical
 lanes closed cleanly. Fable's compact hostile review promotes `AL3-CLOSED`:
 no proper cubic intermediate block has affine-linear Miranda coefficients in
-any fixed global trace-zero basis. Opus independently promotes the broader
+any fixed global trace-zero basis. Opus independently confirms the morphic
 rational-forest first-leg theorem and the generic quadratic infinity
-exclusion. A Sol sublane has a sealed finite classification of the reduced
+exclusion; its later arbitrary-rational-map strengthening is superseded by
+binding correction `d49a44ce...`. A Sol sublane has a sealed finite
+classification of the reduced
 `(2,3)` forest locus (seven viable factor types, two impossible); it is
 provisional until a fresh different-model review on the next committed basis.
 Keep nonlinear/basis-minimal cubic closure, nonreduced infinity, projective
@@ -1409,3 +1411,31 @@ mathematics is desk-scale; AWS is idle and becomes mandatory for any frozen
 root/elimination packet that exceeds the desk cap. No campaign action touches
 the separately owned formalization. Web backstop remains
 `2026-08-31T03:40Z`; holds/human gates: none.
+
+Allocation refresh (2026-08-30 13:31Z): all three completed external reviews
+have passed receipt-first hash reproduction and are pushed in custody commit
+`7240c67d...`. Binding integration `e5d55d5...` promotes the D3 triple-line
+first-jet gate and complete raw CFS state machine. Provisional producer
+`58173d4f...` then gives a uniform weighted-boundary obstruction to every
+survivor of the one-point index-three row; use it only in the actual normal
+proper-block incidence, locally finite at the marked point. Fable hostile
+review of that row closure is active on frozen basis `ae7d44ea...`.
+Corrigendum `290edb38...` fixes five wording points without changing the
+provisional verdict.
+
+The rational-forest interface has one binding correction. Arbitrary dominant
+rational maps from `A2` do not force forest boundary; `P2` minus a smooth
+cubic is the counterexample. Correction `d49a44ce...` restores the theorem
+for an everywhere-defined dominant morphism. Existing proper-block clients
+remain licensed through the actual etale morphism `g1`; abstract open-surface
+uses based only on rational domination are retyped `OPEN`. GPT-5.5 is
+independently reviewing the correction and downstream inventory on the same
+frozen basis. Numerical log-plurigenus monotonicity never licenses shrinking
+away part of the morphic image.
+
+Opus's q=6 review is banked and returns `CONFIRM_WITH_CORRECTIONS`. Binding
+integration `8df7b874...` adopts its repairs and closes the fixed-presentation
+B3/U3 cell; stop q=6 lattice and local-contact work. Reviews do not block
+other research. No heavy computation is
+active; AWS is idle/unclaimed and remains mandatory for any growing CAS job.
+The web backstop remains `2026-08-31T03:40Z`; holds/human gates: none.
