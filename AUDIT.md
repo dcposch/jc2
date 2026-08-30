@@ -39,8 +39,9 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > `58173d4f18a575ca49164fafef91b7ba8b50e670c9e8a39376d55bb647732e2f`
 > (body `2fc2cd21...`, manifest `ee2a3697...`) shows that every survivor
 > extracts a weighted exceptional boundary of invariant one. Conditional on
-> actual proper-block incidence, this empties `m=3,T=2t0`; Fable hostile
-> review remains the promotion gate. Corrigendum
+> actual proper-block incidence, this empties `m=3,T=2t0`; the first Fable
+> hostile-review attempt ended with `report=MISSING` and is custody evidence
+> only, so a compact rerun remains the promotion gate. Corrigendum
 > `290edb38183ad3868cb8482ccfcd4c2b66cfc4101c8aaaed512b3c69bfb1ec20`
 > (body `aa655872...`, manifest `fd954ded...`) replaces five overbroad or
 > ambiguous sentences without changing the obstruction. It is not an abstract
@@ -50,11 +51,13 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > is integral, normal and finite flat of target degree three. Its dense
 > ramification component is the connected cubic Kummer cover with six branch
 > places and genus four, so that one control independently fails the actual
-> morphic first-leg boundary test. This control is provisional under Opus
-> review and is not a universal row theorem.
+> morphic first-leg boundary test. Opus review sealed full `f1a4bbd6...`/raw
+> body `c8d62de1...` returns `CONFIRM_WITH_CORRECTIONS`, preserving the global
+> surface and genus-four component while sharpening its scope to that specific
+> globally identified second leg. It is not a universal row theorem.
 >
-> **D3 TWO-SUPPORT HALPHEN ROW PROVISIONALLY EMPTY
-> (2026-08-30 14:01Z).** Exact producer
+> **D3 TWO-SUPPORT HALPHEN ROW PROMOTED EMPTY IN THE ACTUAL-MORPHIC SCOPE
+> (2026-08-30 14:19Z).** Exact producer
 > `9b232811376194277d4916bc7e42216740c9b9a80430800b1fb6ffba0cf91218`
 > (body `ac96f638...`, manifest `c5936d24...`) uses level-one minimal
 > insolubility to force the complete CFS line cycle and `(2,1,3)` exceptional
@@ -62,9 +65,40 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > elliptic generically, irreducible rational nodal with a resolved graph cycle
 > on `q1^3+27C2=0`. The order-two Weierstrass factor identifies only the local
 > normal incidence; actual-block occurrence and the everywhere-defined etale
-> first leg then give the contradiction. GPT-5.5 hostile review is frozen.
+> first leg then give the contradiction. GPT-5.5 hostile review sealed full
+> `3d761eb5110049069d8a5b5eebbc1f180a2a2fb08ea4090b05223d7b9afe2e0c`
+> / raw body `ee566031...` returns `CONFIRM_WITH_CORRECTIONS`. Binding
+> integration
+> `e6181df9a767bd7a8aab0eb2bcab366c21d341b2e457c9c86542ee035992d554`
+> (body `15a668eb...`, manifest `a1deae8b...`) adopts the explicit floor,
+> normality, local-incidence and `V=g1(A2)` hypotheses and promotes the row
+> verdict. Stop local work on this row.
 > No abstract global two-support surface, other D3 row, block, map, or JC2
 > conclusion is claimed.
+>
+> **D3 SECTIONED ONE-SUPPORT THREAT MAP PROVISIONAL; ROW OPEN
+> (2026-08-30 14:10Z).** Packet
+> `c0ace16d2f8a7e1b86cafb6d2d2a829d3f35ac132a78fa6d636934174379c8ab`
+> (body `f202705a...`, manifest `ee75db0b...`) proves `sum m_j=6`,
+> `M^2=3+sum m_j^2`, and the new fibre-nef bound `m_j<=3`, leaving seven of
+> eleven formal positive basepoint partitions. It conditionally prunes the
+> central Kodaira fibre to additive tree types and rigorously verifies the
+> `(2,3,13)` exact-level-two rational-tree control. That control fails the raw
+> degree-three presentation, not the local Hodge/normality/forest gates. The
+> five-nullcone-orbit CFS successor remains review-gated and no row exclusion
+> is promoted.
+>
+> **PROPER-BLOCK EULER LEDGER PROVISIONAL; COMPLETE-BASE BRANCH OPEN
+> (2026-08-30 14:19Z).** Exact ledger
+> `b72e39220f9e8d75e94214d2e5669bda072fcbbd644cfed97f97d9a2b820ad57`
+> (body `4ca7432c...`, manifest `7d7c9831...`) keeps source ramification,
+> scheme-length defect, and first-leg nonproperness separate. For `d2=3`,
+> `e(U)=3-2e(B)-|S0|`; hence `C=P1` requires
+> `2e(B)+|S0|+Q=1` and forces `e(B)<=0`. Signed Euler integrals admit no
+> degree-only sign bound, and composition gives a non-double-counting identity
+> rather than a new inequality. This does not eliminate `P1`; it identifies
+> actual cubic branch topology or a first-leg sheet-loss bound as the next
+> discriminator.
 >
 > **FIXED-PRESENTATION q=6 CLOSURE PROMOTED
 > (2026-08-30 13:31Z).** Opus review sealed full `dfbd8c4c...`/raw body

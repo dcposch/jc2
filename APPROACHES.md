@@ -7,6 +7,34 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 14:19Z — second Halphen row promoted; sectioned threat map frozen)
+
+- **Stop the reviewed two-support Halphen row.** GPT-5.5 independently
+  confirms the complete CFS cycle, `(2,1,3)` weighted face, elliptic/nodal
+  dichotomy, cycle persistence and actual-block transfer. Binding integration
+  `e6181df9...` promotes `m=3,T=t0+t1` empty inside the actual normal morphic
+  proper-block scope. Do not spend more coefficient or weighted-boundary work
+  there; the diagonal model remains a local regression control, not an
+  occurrence.
+- **Concentrate D3 work on the two sectioned rows, beginning with `T=2t`.**
+  Threat map `c0ace16d...` gives `sum m_j=6`, `m_j<=3`, seven retained
+  positive basepoint partitions, only additive central Kodaira types under
+  the morphic boundary theorem, and a sharp degree-thirteen control. The next
+  decision is whether a normal soluble exact-level-two model can survive the
+  literal raw `t`-degree-three cap. Run the five nullcone orbits through at
+  most two successful CFS level drops, retaining all bounded inner moves,
+  normality opens, proximity data, and zero-multiplicity resolution vertices.
+- **Keep the one-point Halphen closure provisional.** Its first Fable review
+  produced no report and therefore no verdict. Relaunch a compact explicit-
+  path review; continue other work while it runs. Opus independently confirms
+  the separate global control and genus-four ramification obstruction, but
+  that remains a control-specific theorem rather than a family-wide proof.
+- **Run global Euler and sectioned-CFS attacks asynchronously.** The finite-
+  cover Euler ledger gives `e(U)=3-2e(B)-|S0|` and a sharp complete-base
+  arithmetic gate, not a sign contradiction. No heavy local CAS is licensed;
+  freeze any growing orbit elimination and move it to AWS. Web backstop
+  remains `2026-08-31T03:40Z`.
+
 ## Superseding strategy overlay (2026-08-30 13:31Z — D3 one-point row provisionally closed; forest scope repaired)
 
 - **Treat the one-point index-three Halphen row as review-gated empty.**

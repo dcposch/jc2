@@ -7,16 +7,40 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
-> **TWO-SUPPORT HALPHEN ROW PROVISIONALLY EMPTY (14:01Z).** Exact producer
-> `9b232811...`/body `ac96f638...`, manifest `c5936d24...`, shows that level
-> one at the triple fibre equals the insoluble minimal floor and forces
-> `x^3->y^3->C2*z^3->x^3`, `C2!=0`. The universal `(2,1,3)` exceptional
-> curve has discriminant `-16*C2*(q1^3+27*C2)`: it is smooth elliptic off the
-> equality locus and irreducible nodal-rational with a resolved cycle on it.
-> Thus `m=3,T=t0+t1` is empty conditional on actual normal morphic-block
-> occurrence. Replay `204acc29...` is optimization-stable and mutation-safe;
-> GPT-5.5 review is frozen. The local control `x^3+t*y^3+t^2*z^3` survives,
-> so no abstract global occurrence, map, or JC2 result is inferred.
+> **TWO-SUPPORT HALPHEN ROW PROMOTED EMPTY IN THE ACTUAL-MORPHIC SCOPE
+> (14:19Z).** GPT-5.5 hostile review sealed full `3d761eb5...`/raw body
+> `ee566031...` returns `CONFIRM_WITH_CORRECTIONS` after independently
+> checking the insoluble floor, all three CFS moves, the complete `(2,1,3)`
+> face, both curve strata, normal strict transform, `uv+r^n` cycle, local
+> integral-closure transfer, and morphic boundary interface. Binding
+> integration `e6181df9...`/body `15a668eb...`, manifest `a1deae8b...`, adopts
+> its scope repairs and promotes `m=3,T=t0+t1` empty conditional on the actual
+> normal proper-block incidence and everywhere-defined etale first leg. Stop
+> local work on this row. The diagonal local control survives, so no abstract
+> surface, global occurrence, map, or JC2 result is inferred.
+>
+> **SECTIONED ONE-SUPPORT THREAT MAP NARROWS BUT DOES NOT CLOSE THE ROW
+> (14:10Z).** Exact provisional packet `c0ace16d...`/body `f202705a...`,
+> manifest `ee75db0b...`, proves for `m=1,T=2t` that all minimalization
+> blowups lie over the defect fibre, `sum m_j=6`, and
+> `M^2=3+sum m_j^2`. Nefness gives the new bound `m_j<=3`, reducing the eleven
+> formal positive partitions to seven. Every original Kodaira component is
+> exceptional; under the actual morphic first leg only additive types
+> `II,III,IV,I_n* (n<=4),IV*,III*,II*` remain. The normal soluble exact-level-
+> two control `y^2z=x^3+t^13z^3` has `p_g=2` and rational-tree resolution but
+> violates the literal raw degree-three budget. The row remains open; its
+> successor is the five-nullcone-orbit, two-successful-pass CFS computation.
+>
+> **PROPER-BLOCK EULER LEDGER EXACT; `P1` BRANCH REMAINS OPEN (14:19Z).**
+> Provisional packet `b72e3922...`/body `4ca7432c...`, manifest `7d7c9831...`,
+> separates unramified sheets, ramified support and scheme-length defect. For
+> a cubic second leg it proves
+> `e(U)=3-2e(B)-|S0|`; hence a complete-base ruling requires
+> `2e(B)+|S0|+Q=1` and in particular `e(B)<=0`. Finite-flat controls show no
+> degree-only sign bound, while `(P1xP1)\Delta` is a sharp qualitative
+> degree-one control. The next discriminator is the actual cubic branch
+> Euler number, missing-point set, ruling excess, or a first-leg sheet-loss
+> upper bound.
 >
 > **D3 LOCAL GATES PROMOTED; THE ONE-POINT HALPHEN ROW IS PROVISIONALLY
 > EMPTY (13:31Z).** Receipt-first reviews by Fable and GPT-5.5 preserve the
@@ -30,15 +54,19 @@ day or inserts the completed day directly below this preamble (see
 > boundary invariant one for every `alpha`: elliptic off
 > `alpha^3+27eta=0`, rational nodal with a resolved graph cycle on it. Since
 > the actual proper-block first leg misses the singular finite-incidence
-> point, this provisionally eliminates the entire `m=3,T=2t0` row. Fable
-> hostile review is active. Corrigendum `290edb38...`/body `aa655872...`
+> point, this provisionally eliminates the entire `m=3,T=2t0` row. The first
+> Fable hostile-review lane failed operationally with `report=MISSING`, so it
+> supplies no verdict and a compact explicit-path rerun is required.
+> Corrigendum `290edb38...`/body `aa655872...`
 > narrows five wording points without changing the theorem; no abstract-
 > surface or JC2 conclusion is claimed. Exact global-control producer
 > `a9f4c9e9...`/body `47791910...`, manifest `e5920c24...`, now proves that
 > the sharp local control has an integral normal class-`(3,3)` closure finite
 > flat of target degree three. A dense ramification component normalizes to a
 > six-branch cyclic cubic of genus four, independently excluding this one
-> surface from the actual morphic block interface. Opus review is frozen;
+> surface from the actual morphic block interface. Opus hostile review sealed
+> full `f1a4bbd6...`/raw body `c8d62de1...` returns
+> `CONFIRM_WITH_CORRECTIONS` and preserves this control-specific theorem;
 > this is not global attainment for every local shard or a second universal
 > row proof.
 >

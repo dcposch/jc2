@@ -1479,3 +1479,32 @@ boundary interface. A GPT-5.5 hostile review prompt is frozen and will run
 asynchronously. Shift D3 research capacity to the two sectioned rows; retain
 the diagonal local control as a regression fixture and do not infer global
 surface occurrence.
+
+Promotion refresh (2026-08-30 14:19Z): receipt-first custody commit
+`6d26a4b1...` banks the completed Opus global-control review, completed
+GPT-5.5 two-support review, and failed/no-report Fable one-point attempt.
+GPT-5.5 returns `CONFIRM_WITH_CORRECTIONS`; binding integration
+`e6181df9...`/body `15a668eb...`, manifest `a1deae8b...`, promotes the
+`m=3,T=t0+t1` Halphen row empty only in the actual normal morphic proper-block
+scope. Stop local work on that row. Opus independently preserves the exact
+global control and genus-four ramification obstruction but prices it only as a
+specific globally identified negative control. Fable's exit `4` and missing
+report are operational custody, not a verdict; freeze a compact explicit-path
+rerun and keep all research nonblocking.
+
+Sectioned threat map `c0ace16d...`/body `f202705a...`, manifest `ee75db0b...`,
+is pushed in `55805f32...`. For `m=1,T=2t`, use `sum m_j=6`, `m_j<=3`, the
+seven retained positive partitions, additive-only actual-morphic Kodaira
+list, and the degree-thirteen `(2,3,13)` control. The row remains open. The
+primary successor tests whether normal soluble exact level two is compatible
+with the literal raw coefficient-base degree three across all five nullcone
+orbits and two successful CFS drops.
+
+Exact Euler ledger `b72e3922...` supplies
+`e(U)=3-2e(B)-|S0|` for a cubic second leg and the complete-base gate
+`2e(B)+|S0|+Q=1`. This is not a `P1` exclusion: signed Euler integrals admit
+both signs and composition supplies no second independent deficit. Continue
+with actual discriminant topology, `S0`, `Q`, or a first-leg sheet-loss upper
+bound. Reviews remain asynchronous. No heavy local CAS is licensed; AWS is
+idle and mandatory if the frozen orbit computation grows beyond desk scale.
+Web backstop remains `2026-08-31T03:40Z`; holds/human gates: none.

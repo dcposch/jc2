@@ -14906,3 +14906,53 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   under ordinary/`-O`/`-OO` (`d3a35f87...`) and rejects its mutation.
 - This provisionally closes `m=3,T=t0+t1`, not abstract global occurrence.
   A GPT-5.5 hostile review prompt is frozen. Both sectioned D3 rows remain.
+
+## 2026-08-30 14:10Z PROOF EVENT — SECTIONED ONE-SUPPORT THREAT MAP
+
+- Sealed packet `c0ace16d...`/body `f202705a...`, manifest `ee75db0b...`,
+  keeps `m=1,T=2t` open but sharply reduces it. All `h`-blowups lie over the
+  unique defect fibre; for the plane net, `sum m_j=6` and
+  `M^2=3+sum m_j^2`. The new inequality `3=L.F>=nu_j*m_j` gives `m_j<=3`,
+  pruning eleven positive partitions to seven.
+- Every original Kodaira component has negative discrepancy and is
+  `r`-exceptional. Conditional on the actual morphic first leg, the boundary
+  forest excludes smooth and multiplicative fibres; only additive types up to
+  `I_4*` remain, with `26<=v(Disc_plane)<=34`.
+- The control `y^2z=x^3+t^13z^3` is normal, soluble, exact level two, minimal
+  type `II`, has `p_g=2`, and has a rational-tree good resolution. It fails
+  the fixed raw degree-three presentation. The successor is the five-nullcone-
+  orbit, two-successful-pass CFS state machine with polarization/proximity
+  filters.
+
+## 2026-08-30 14:19Z REVIEW/PROMOTION EVENT — TWO-SUPPORT HALPHEN ROW CLOSED
+
+- All three external lanes exited. Receipt-first custody commit `6d26a4b1`
+  banks two successful reviews and one failed/no-report Fable attempt.
+  GPT-5.5 review sealed full `3d761eb5...`/raw body `ee566031...` confirms the
+  two-support obstruction with scope-only corrections. Opus sealed full
+  `f1a4bbd6...`/raw body `c8d62de1...` independently confirms the global
+  control, exact genus-four ramification component, and control-specific
+  morphic exclusion.
+- Binding integration `e6181df9...`/body `15a668eb...`, manifest
+  `a1deae8b...`, promotes `m=3,T=t0+t1` empty inside the actual normal
+  morphic proper-block scope. The theorem explicitly retains generic
+  nonsingularity, strict-Henselian floor one, normal local incidence,
+  integral-closure identification, and `V=g1(A2)`. Stop local work on this
+  row.
+- Fable's one-point weighted review exited `4` with `report=MISSING`; it has
+  no mathematical verdict. Relaunch a shorter explicit-path review while the
+  sectioned degree-cap lane continues.
+
+## 2026-08-30 14:19Z PROOF EVENT — EXACT PROPER-BLOCK EULER LEDGER
+
+- Packet `b72e3922...`/body `4ca7432c...`, manifest `7d7c9831...`, separates
+  unramified sheets, ramified support, scheme-length defect and first-leg
+  nonproperness. The two sheet-loss ledgers compose tautologically, preventing
+  a false double count.
+- For cubic `g2`, `e(U)=3-2e(B)-|S0|`. Thus `C=P1` forces
+  `2e(B)+|S0|+Q=1`, in particular `e(B)<=0`. Degree-three finite-flat controls
+  make the cover-side Euler correction unbounded in both signs, so no
+  degree-only inequality closes the branch.
+- The next targets are the actual cubic branch Euler number, the missing-point
+  set and ruling excess, or an upper bound below `2*d1-1` on first-leg
+  sheet-loss. No heavy local computation is active.
