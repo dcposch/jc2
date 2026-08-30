@@ -7,6 +7,31 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **CANONICAL GENERIC DEGREE THREE EXCLUDED; EVERY HIGHER-DEGREE
+> COUNTEREXAMPLE MUST CARRY BRANCH TOPOLOGY (21:57Z).** GPT-5.5's independent
+> canonical-normalization review passed receipt-first custody and returns no
+> refutation (sealed full `b1f75e63...`, raw body `93a88664...`, run
+> `997abd27...`). Binding integration `95c99e2d...`/body `b8a6e40e...`,
+> manifest `8f914672...`, rechecks the ruling and morphic-forest hypotheses at
+> first-leg degree one and promotes
+> `[C(x,y):C(F,G)]!=3`. The all-degree producer `28f29711...` proves
+> provisionally that the canonical branch of every hypothetical
+> counterexample must have a connected component with nontrivial `pi1`; its
+> dedicated Fable hostile review remains live, so that broader statement is
+> not yet promoted.
+>
+> **RANK FOUR REDUCED TO CYCLIC `S4` HORNS (21:57Z).** Opus's hostile review
+> (sealed full `4b5d046f...`, raw body `998f9f3b...`) confirms the fibre and
+> Euler ledgers and strengthens the acyclic obstruction: every actual
+> rank-four proper block has `b1(B)>=1` and at least one `(2,2)` conductor
+> fibre. Coordinator integration `5d7df7ce...`/body `82ca4333...`, manifest
+> `c7840e6e...`, binds Chau's previously reviewed component-normalization
+> theorem, corrects the source-forest reading, deletes the impossible local
+> `D4` resolvent row, and records `G=S4`, `n22>=h-k+1`, `m>=2h-1`. The first
+> surviving row is `h=k=1,beta=n22=1,n4=0`; two agents attack its zero/one-
+> cusp subrows while a third studies the discriminant double plane. The named
+> nodal spectator was independently checked and fails the proper-block gates.
+
 > **CUBIC COMPLETE-BASE RULING PROMOTED EMPTY (15:10Z).** GPT-5.5 hostile
 > review passed receipt-first custody and returns `CONFIRM_WITH_CORRECTIONS`
 > (sealed full `e544a654...`, raw body `b16c4bc1...`). It independently

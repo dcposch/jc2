@@ -15086,3 +15086,36 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - **Compute:** current work is desk-scale and AWS is idle. Any growing
   elimination, orbit, or family computation moves to AWS before launch.
   Broad web backstop remains `2026-08-31T03:40Z`; holds/human gates: none.
+
+## 2026-08-30 21:57Z LIVE STATE — CANONICAL DEGREE THREE CLOSED; RANK-FOUR CYCLE ACTIVE
+
+- **Promoted:** canonical-normalization integration `95c99e2d...` proves for
+  every complex plane Keller map that the generic field degree is not three.
+  GPT-5.5 independently confirmed every geometric interface after receipt-
+  first custody. Strict cubic proper blocks are also closed by the separately
+  reviewed branch-monodromy theorem; stop D3 proof lanes and retain their
+  models only as controls.
+- **Provisional high-fanout theorem:** all-degree producer `28f29711...`
+  forces a nontrivial branch cycle in the canonical normalization of every
+  hypothetical counterexample. Its dedicated Fable hostile review remains
+  active. Downstream canonical-cycle work may proceed, but promotion waits.
+- **Rank four:** Opus review plus integration `5d7df7ce...` gives the corrected
+  cyclic-`S4` frontier: `b1(B)>=1`, `n22>=h-k+1>=1`, and `m>=2h-1`; the cubic
+  resolvent has `(211),(22)->(21)` and `(31),(4)->(3)`. The Chau citation gap
+  is repaired from the independently checked primary-source packet. A source
+  forest may contain resolved stars; no pairwise-edge overreading survives.
+- **Active lanes:** `rank4_cycle_m0` tests finite-to-infinity transposition
+  propagation; `rank4_cycle_m1` tests the unique-multiple-fibre pseudo-plane
+  through its companion divisor/Picard class; `rank4_double_plane` tests the
+  induced etale degree-three cover and mod-three cohomology. Fable reviews the
+  all-degree theorem in the background. New work does not wait on those
+  reviews.
+- **Controls:** the nodal spectator family has exactly one node, two cusps,
+  full `S4`, one place at infinity and `b1=1`, but
+  `U=A1 x Gm`, `e(U)=0`, and a nonconstant unit; independent audit confirms
+  the geometry and identifies only replay-coverage limitations.
+- **Systems/resources:** all live work is desk-scale; AWS is idle and ready,
+  and remains mandatory for any heavy or uncertain CAS. The separately owned
+  formalization stays outside campaign inspection. Quiet full-round floor is
+  `2026-08-31T09:30Z`, broad web backstop `2026-08-31T03:40Z`, and there are
+  no human holds.

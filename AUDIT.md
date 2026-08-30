@@ -5,6 +5,37 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **GENERIC DEGREE THREE EXCLUDED FOR EVERY COMPLEX PLANE KELLER MAP
+> (2026-08-30 21:57Z).** Receipt-first GPT-5.5 review sealed full
+> `b1f75e63c074e264946fcf8c58f1bdbb60088b5f75a748b76c32da8c627d6e82`
+> (raw body `93a88664...`, run `997abd27...`) independently confirms the
+> canonical normalization, generic companion sheets, rank-three fibre
+> topology, Chau normalization, source incidence forest, Euler row, and final
+> acyclic-branch monodromy contradiction. Its scope correction is binding:
+> the old strict-block ruling label is not imported at `d1=1`; its hypotheses
+> are re-established from the canonical open immersion `A2->U`. Integration
+> `95c99e2d271df25d80b3200e777c268a80c5ce9d6b2671168d6f76c16d8a2611`
+> (body `b8a6e40e...`, manifest `8f914672...`) promotes exactly
+> `[C(x,y):C(F,G)]!=3`. This is generic field degree, not coordinate or total
+> degree, and is not JC2.
+>
+> **REVIEW-INTEGRATED RANK-FOUR BRANCH-CYCLE THEOREM
+> (2026-08-30 21:57Z).** Opus review
+> `4b5d046fc9618f59e1608babd72615cb178dd6bcf7ad0d2c770632ada3a1e317`
+> confirms the quartic census, source-to-target quotient graph, Euler ledger,
+> Cohen--Macaulay specialization inequality, and acyclic obstruction, with
+> corrections. Integration
+> `5d7df7ce0ad3548e88fd23734917212d6b3fbd3ada4cab81514b12bb76ea64de`
+> (body `82ca4333...`, manifest `c7840e6e...`) binds the separately reviewed
+> Chau source dependency. Maximum safe conclusions: every rank-four proper
+> block has `b1(B)>=1` and a `(2,2)` fibre; with the repaired one-place input
+> its monodromy is `S4`, `n22>=h-k+1`, and `m>=2h-1`. Multiple affine
+> components may meet at one point through a resolved star; the forest theorem
+> forbids incidence cycles, not such stars. At a `(4)` fibre the local group
+> is `A4` or `S4`, never `D4`, so the normalized cubic-resolvent rows are
+> `(211),(22)->(21)` and `(31),(4)->(3)`. The resolvent is not itself a cubic
+> block. No rank-four exclusion or JC2 conclusion is promoted.
+
 > **CUBIC `P1` RULING PROMOTED; AFFINE-BASE EQUALITY CASE REMAINS
 > (2026-08-30 15:10Z).** GPT-5.5 hostile review sealed full
 > `e544a654d3cead096658502f34b0e6e5560b4a0ea8bf97a53b2a76081aceda4d`

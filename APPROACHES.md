@@ -7,6 +7,36 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 21:57Z — canonical branch cycles and minimal rank four)
+
+- **Stop generic-degree-three and cubic-block proof lanes.** Different-model
+  integration `95c99e2d...` promotes
+  `[C(x,y):C(F,G)]!=3`; the separately reviewed strict-cubic obstruction also
+  eliminates a degree-three second leg inside a proper block. The former D3
+  Halphen, sectioned-surface and affine-cubic rows remain useful controls and
+  provenance, but are no longer live proof frontiers.
+- **Attack the canonical branch cycle.** All-degree producer `28f29711...`
+  shows that the full normalization of any hypothetical counterexample must
+  have a reduced branch component with nontrivial fundamental group. Treat
+  that as provisional while the dedicated Fable review runs. The highest-
+  leverage global route combines the canonical open immersion `A2->U`,
+  constant units, the `A1` ruling, one-place nonproperness components, and
+  conductor topology to exclude such a cycle in every degree.
+- **Use rank four as the first exact cyclic laboratory.** Review integration
+  `5d7df7ce...` reduces every rank-four proper-block survivor to `S4`
+  monodromy with a `(2,2)` conductor fibre. The minimal row is
+  `h=k=1,beta=n22=1,n4=0`; its only arithmetic subrows are the zero-cusp
+  infinity horn and the unique-cusp affine pseudo-plane horn. Run based
+  monodromy propagation, companion-divisor/Picard constraints, and the
+  discriminant-double-plane `H^1_et(-,Z/3)` test in parallel. Do not relaunch
+  the disconnected acyclic row or infer a general theorem from the named
+  nodal control.
+- **Keep disproof and architecture lanes orthogonal.** `K00`/coefficient
+  realization remains a counterexample-facing route rather than evidence for
+  the branch theorem. Reviews stay asynchronous; provisional descendants may
+  advance within the speculative budget. Any heavy elimination moves to AWS;
+  current branch work is desk-scale.
+
 ## Superseding strategy overlay (2026-08-30 15:10Z — cubic `P1` ruling promoted; both sectioned rows attained by controls)
 
 - **Stop the complete-base branch of every proper cubic block.** GPT-5.5's

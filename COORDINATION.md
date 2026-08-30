@@ -1579,3 +1579,23 @@ ramification, and the surviving presentation/nonquadratic degeneracies.
 Current work is desk-scale; AWS is idle and mandatory for any growing CAS
 job. Reviews remain asynchronous. Web backstop remains
 `2026-08-31T03:40Z`; holds/human gates: none.
+
+Allocation refresh (2026-08-30 21:57Z): canonical generic degree three is now
+promoted empty after GPT-5.5 receipt-first review and binding integration
+`95c99e2d...`; all D3 proof lanes stop, while their explicit surfaces remain
+controls. All-degree producer `28f29711...` provisionally forces a branch
+component with nontrivial `pi1` in every hypothetical canonical normalization;
+Fable's dedicated review remains active and does not block descendants.
+
+Rank-four integration `5d7df7ce...` repairs the Chau dependency and adopts the
+Opus corrections. Every live rank-four proper block is now in the cyclic `S4`
+frontier with at least one `(2,2)` fibre. Allocate the three research slots to
+the zero-cusp infinity horn, the one-cusp pseudo-plane/companion-divisor horn,
+and the cubic-resolvent discriminant double plane. Do not relaunch disconnected
+acyclic branch, local `D4`, or D3 surface-existence lanes.
+
+Current mathematics is desk-scale. AWS is idle/ready and remains mandatory for
+heavy or uncertain CAS; no campaign action inspects or controls the separately
+owned formalization. Reviews remain asynchronous. Quiet full-round floor is
+`2026-08-31T09:30Z`, broad web backstop `2026-08-31T03:40Z`, and holds/human
+gates are none.
