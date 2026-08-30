@@ -14655,3 +14655,20 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Future prompts declare `charge_basis={...}` only for a newly asserted exit
   price. They omit it for ordinary hash custody, geometry, and consumption of
   a promoted price. No code, review verdict, or mathematical result changes.
+
+## 2026-08-30 10:10Z PROOF/SYSTEMS EVENT — UNBALANCED F5 POLARS FROZEN; OPTIMIZED REPLAY REPAIRED
+
+- Completed provisional local packet `6a7dc7be...`/body `590d3ae6...`,
+  manifest `c7d9c654...`, proves the full-family unbalanced table:
+  `U3/A3` has `4+4`, `m=(2,2,1)`, `n=2e1+e2`; `U5/D5` has `2+3+3`,
+  `m=(2,4,5,3,3)`, `n=e2+e4+e5`; and `U6/D6` has `3+5`,
+  `m=(2,4,5,6,3,3)`, `n=e2+e4`. The exact square completion separates
+  `D5` from `D6`, and the corrected `D5` blowup audit uses three physical
+  polar sites. Different-model review remains mandatory.
+- Root found before commit that the original replay used Python `assert`, so
+  its claimed `-O/-OO` checks were stripped. Sealed corrigendum `39d7bd23...`
+  / body `3284a77e...`, manifest `8bf72649...`, installs v2 replay
+  `03441441...`: zero AST `Assert` nodes, positive runs in all three modes,
+  and a deliberate wrong `D5` contact vector fails in all three. The analytic
+  mathematics is unchanged; future optimized-mode evidence must include the
+  same nonvacuity gate.

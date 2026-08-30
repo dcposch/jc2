@@ -458,6 +458,14 @@ campaign from paying twice for the same failed idea.
 - Computational claims ship engines, certificates, exact replay commands,
   versions, input hashes, seeds, host, UTC times, and meaningful negative
   controls. Mod-p work records every prime.
+- A claimed `python -O` or `-OO` verification is admissible only when every
+  load-bearing check remains live in that mode. Freeze an AST scan showing no
+  `Assert` nodes in the verification paths (or prove that any remaining
+  asserts are non-gating diagnostics), and run a deliberate old-pass/new-fail
+  mutation under every claimed interpreter mode. Byte-identical positive
+  output alone is insufficient: stripped checks can print the same answer
+  vacuously. Ordinary-only scripts may use `assert` only when the report labels
+  that limitation and makes no optimized-mode evidence claim.
 - A successor residual at digit `n` is typed only after an exact numerator `N`
   is proved divisible by `p^n` on the charged predecessor scheme and
   `N/p^n mod p` is derived with all lower-order divided carries retained. If
