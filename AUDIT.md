@@ -5,6 +5,61 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **NORMAL-SINGULAR REDUCED FINITE INFINITY COLLAPSES TO `F5`
+> (2026-08-30 08:07Z).** GPT-5.5 xhigh hostile review full `10196c68...`
+> returns `CONFIRM_WITH_CORRECTIONS` after rebuilding the local determinant,
+> common-component exclusion, connected-subtree lemma, `F1`--`F9` critical
+> counts, target-line saturation, delta identity, and local Cartan list.
+> Transactional binding integration `f385387d3f920d4493eb145cc87934aafd3168e1c0f830330426014fd5db7d30`
+> (9,993-byte body `9cef2390...`, manifest `96a62f65...`) promotes:
+>
+> ```text
+> normal irreducible X of class 2A+3B in the proper cubic-block first-leg scope,
+> reduced H~A and pi finite near H
+>   => H and R_X have no common component;
+>   => their connected resolved supports have one physical joining site;
+>   => H is exactly F5=(0,1)+(1,1)+(1,1);
+>   => the full length H.R_X=8 is supported at its unique triple/tangency point.
+> ```
+>
+> If that F5 point is Du Val, `sum a=3`, `h=C^-1a>0`, and `h^t a<=8`.
+> Modulo diagram automorphism the exact connected rows are
+> `A_r (2<=r<=8): 2e1+e_(r-1), q=6`;
+> `A_r (4<=r<=8): e1+e2+e_(r-2), q=8`;
+> `D4: e1+e3+e4, q=6`; `D5: e1+2e4, q=8`; and
+> `D6: e1+e5+e6, q=8`, with reversals/spin symmetries and both global A3
+> tags retained. This is local to the F5 point. Affine `A1` or `D7`--`D9`
+> trees are not excluded, no listed row is asserted to occur, and global
+> carrier/effectivity and analytic incidence remain open.
+
+> **GLOBAL `D9` SIGNED-SUPPORT/FIBRE LEDGER PROMOTED
+> (2026-08-30 08:07Z).** GPT-5.5 xhigh hostile review full `2eea6b7a...`
+> independently rebuilds the signed-support classification, `W(D9)` orbit
+> argument, ruled blowup normal form, deterministic replay and JSON, shared
+> cap identities, and genus filter. Transactional binding integration
+> `8b1404ccf3bd1fcfe7508398cdc726a8f50597f3f55a9ff241a2edc747b1c016`
+> (10,341-byte body `67ada599...`, manifest `960001a8...`) promotes:
+>
+> ```text
+> reflection-closed signed-support convention:
+>   115 unmarked signatures = 1 zero + 15 connected + 99 disconnected;
+> saturated-span diagnostic: 75 total / 59 disconnected;
+> marked-original abstract fibre refinement: 362 species;
+> vertical blocks: balanced B_s=A_(s-1), unbalanced U_s=D_s,
+>   with U2=A1+A1 and U3=A3, and exact primitive beta weights.
+> ```
+>
+> The number `115` is not a saturated-root-subsystem count. The block
+> correspondence is with abstract unmarked weighted blowup forests, not
+> actual configurations or moduli. The exact total-transform identity leaves
+> one Cartan pairing; target budgets are shared per image, `B` budgets per
+> actual beta-weighted fibre, and `H.R=8` globally. Common strict carriers
+> suppress those caps. For reduced H, `h^t a/2` is exactly the exceptional
+> crepant genus contribution; the full local delta additionally includes
+> lifted strict-transform singularities. Effectivity, carrier labels,
+> physical contacts, target partitions, analytic realization, maps, and JC2
+> remain unproved.
+
 > **QUADRATIC TRACE-ZERO FRAME-CHANGE RIGIDITY PROMOTED
 > (2026-08-30 07:20Z).** GPT-5.5 xhigh hostile review full `e1d03876...`
 > returns `CONFIRM_WITH_CORRECTIONS`, independently checking the Miranda

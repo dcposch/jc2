@@ -1329,3 +1329,27 @@ monogenic counterexample permanently retires the broad fixed-full-root,
 content, or nonfiniteness heuristic. AWS remains required for any materially
 heavy global enumeration; web and peer-capacity backstops are unchanged;
 holds/human gates: none.
+
+Allocation refresh (2026-08-30 08:07Z): two GPT-5.5 xhigh reviews close with
+`CONFIRM_WITH_CORRECTIONS` and no mathematical gap. Binding integration
+`8b1404cc...` promotes the 115 unmarked reflection-closed `D9` signed-support
+signatures as abstract weighted `B_s/U_s` fibre forests, with the separate
+75-signature saturated diagnostic and exact shared-cap ownership. Binding
+integration `f385387d...` independently forces every reduced, finite-near-
+infinity normal-singular quadratic survivor to the unique `F5` boundary and
+concentrates all `H.R=8` units at its one triple/tangency point. Affine ADE
+trees remain live, and neither theorem asserts marked effectivity or
+occurrence.
+
+Continue the already active carrier/effectivity lane without waiting on any
+new review. It must decorate the 115 skeletons with target-image partitions,
+actual beta-weighted fibre budgets, paired Cartier vectors, smooth-versus-
+singular F5 carrier data, physical contacts, and common-carrier flags before
+testing ruled classes. Do not optimize or Cartesian-expand the local 12,238-
+orbit table. In parallel, source-audit two new global filters from the whole-
+portfolio ideation round: reduced-support adjunction energies and the exact
+Miyanishi--Sugie/Fujita `A1`-ruling hypotheses for
+`X minus Supp(H+R)`. The latter must retain the possible complete-base branch
+until excluded. No heavy local computation is licensed; AWS remains idle and
+is mandatory only if a reviewed decorated enumeration exceeds desk scale.
+Web backstop remains `2026-08-31T03:40Z`; holds/human gates: none.

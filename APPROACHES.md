@@ -7,6 +7,38 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 08:07Z — normal-singular infinity is F5; global D9 skeleton promoted)
+
+- **Replace the open reduced-infinity census by one F5 carrier problem.** In
+  the normal class-`2A+3B` fixed-quadratic proper-block scope, reduced
+  infinity plus finiteness near infinity now forces `F5`, even with reducible
+  ramification and affine ADE singularities. All eight infinity/different
+  units occur at its unique triple/tangency point. Keep a strict fork: smooth
+  F5 uses the reviewed local `5+3` split; singular F5 uses only the exact
+  `A2`--`A8`, `D4`--`D6` local infinity rows. Neither fork removes affine ADE
+  trees or proves occurrence.
+- **Decorate the promoted global skeleton instead of multiplying local
+  tables.** The 115 unmarked `D9` signatures are now reviewed abstract
+  weighted `B_s/U_s` fibre forests; 75 is the separate saturated diagnostic,
+  and 362 counts marked-original abstract species. Add target-image blocks,
+  actual beta-weighted fibre ownership, `(m,n,h,a)`, F5 carrier IDs, physical
+  contact atoms, and common-carrier flags by streaming constraints. Only then
+  test ruled-class effectivity and analytic realization. Do not materialize a
+  blind Cartesian product of the 12,238 local Cartier orbits.
+- **Add global support and log-surface filters before coefficient
+  elimination.** Source-review the composed reducedness premise and apply the
+  reduced-divisor support energies to the decorated rows; independently audit
+  the Miyanishi--Sugie `A1`-ruling consequence for
+  `U=X minus Supp(H+R)`. These can supply slice-free quadratic caps and a
+  second-fibration lattice test. Keep the fibration base and allowed boundary
+  modifications explicit until that source audit is complete.
+- **Preserve breadth and the compute firewall.** This remains one fixed-basis
+  cubic-block horn. Basis existence, higher coefficient degree, higher or
+  primitive block structure, global occurrence/degree ceilings, K00
+  truncation images, and counterexample work stay independent. The current
+  decoration work is desk-scale; any heavy carrier enumeration must be
+  source-reviewed, sharded on AWS, and independently certificate-checked.
+
 ## Superseding strategy overlay (2026-08-30 05:32Z — smooth finite quadratic stratum closed)
 
 - **Bank the first full nonlinear quadratic stratum closure.** Different-model

@@ -7,6 +7,38 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **REDUCED FINITE NORMAL-SINGULAR QUADRATIC INFINITY IS FORCED TO `F5`
+> (08:07Z).** GPT-5.5 xhigh independently reconstructs the determinant-line
+> equation, connected-subtree graph argument, all `F1`--`F9` critical-site
+> counts, target-line saturation, crepant delta identity, and exact connected
+> Cartier rows, returning `CONFIRM_WITH_CORRECTIONS` with no mathematical
+> gap. Binding integration `f385387d...`/body `9cef2390...`, manifest
+> `96a62f65...`, promotes: in the normal class-`2A+3B` proper cubic-block
+> first-leg scope, if infinity is reduced and the projection is finite near
+> it, then infinity is exactly
+> `F5=(0,1)+(1,1)+(1,1)` and all `H.R=8` units occur at its unique
+> triple/tangency point. Reducible ramification and affine ADE trees do not
+> evade this conclusion. If that point is Du Val, its only connected local
+> infinity rows are the displayed `A2`--`A8`, `D4`--`D6` vectors with
+> `sum a=3` and `h^t a=6` or `8`. This does not close the singular stratum:
+> smooth versus singular F5, every affine ADE ramification tree, global
+> carriers, effectivity, and analytic realization remain live.
+
+> **GLOBAL `D9` FIBRE SIGNATURES AND SHARED CAP LEDGER PROMOTED
+> (08:07Z).** GPT-5.5 xhigh independently replays and reconstructs the
+> signed-support theorem, ruled fibre normal form, orbit stabilizers,
+> generating functions, all JSON records, total-transform identities, and
+> reduced-infinity genus filter. Binding integration `8b1404cc...`/body
+> `67ada599...`, manifest `960001a8...`, promotes exactly `115` unmarked
+> reflection-closed signed-support signatures—one zero, `15` connected, and
+> `99` disconnected—corresponding to abstract weighted `B_s/U_s` vertical
+> blowup-forest block multisets; the stronger saturated-span diagnostic has
+> `75`, and marking the original fibre gives `362` abstract species. Target
+> caps are shared per target image, fibre caps per actual beta-weighted fibre,
+> and `H.R=8` globally at fixed infinity; all require their stated proper
+> no-common-carrier hypotheses. These are finite necessary skeletons, not
+> marked effective configurations, incidence moduli, maps, or JC2.
+
 > **QUADRATIC-FRAME BASIS-CHANGE RIGIDITY PROMOTED (07:20Z).** GPT-5.5
 > xhigh confirms the Miranda transformation law, intrinsic content and
 > discriminant, leading-section theorem, complete affine-linear matrix/shear
