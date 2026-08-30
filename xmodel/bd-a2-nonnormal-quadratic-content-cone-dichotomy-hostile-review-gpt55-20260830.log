@@ -1,0 +1,3458 @@
+cli=codex-cli 0.150.1 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.150.1
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a0514d-770e-7c73-ba79-eafe9d15c4fe
+--------
+user
+# Hostile review: nonnormal quadratic content-cone dichotomy
+
+You are GPT-5.5 xhigh, an independent hostile algebraic reviewer for the
+plane Jacobian-conjecture campaign. Work in `/Users/dc/code/math/jc2` on
+frozen git basis `dca72076aa1615b0b1286fd4428a1acac7b65963`.
+
+Read and review this sealed exact provisional producer in full:
+
+```text
+6b324824e0c075b938bd5b7015d4e8d134bad7cb845ac7597212b61d91dfa7a5
+  xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md
+  body 16427 / 36bb8913697d3ce1bd725beed0e2089b444db425ab038f77530b2020c738d34a
+  manifest 95487ead150d2ffba5aedba64974340aaf7695df806355398e0588356140a2cb
+```
+
+Its frozen authorship basis is `145f96d65021ef364a5189c4ca385fe09d7b4f46`;
+its producer commit is the review basis above. Read every charged promoted
+input and the exact nonmonogenic/proper-block theorem used in Sections 5--6.
+Enforce their written scopes.
+
+Independently reconstruct and attack:
+
+1. Verify the Miranda multiplication table and invariance of the coefficient
+   content ideal under every global trace-zero `GL_2(C[u,v])` basis change.
+   Separate intrinsic content/discriminant/degree minimum from
+   presentation-dependent infinity data.
+2. Prove the affine `R_1` criterion. Check integrality, `S_2`, the Stein
+   isomorphism off the finite content-zero set, and whether divisorial
+   singularity along an exceptional `P1` is exactly `I_B subset m_q^2`.
+   Look for any other affine codimension-one nonnormal locus.
+3. Audit the quadratic content-cone contradiction: the positive grading,
+   normality and integrality of `Proj(B)`, Hilbert polynomial/genus two,
+   `Frac(B)=C(C_0)(s)`, and why the dominant first leg would force an
+   impossible rational-surface map to a positive-genus curve.
+4. Rebuild the projective `R_1` test and prove the repeated-component list is
+   exhaustive. Check primitivity/Gauss, tangent and normal jets, all
+   multiplicities, and every vertical/section bidegree convention.
+5. For repeated constant sections, verify the fixed-root/unit dichotomy and
+   the exact monogenic determinant criterion. For a repeated vertical fibre,
+   verify descent `B=D[r]`, inheritance of normality, rationality of the
+   completed curve, the unit argument forcing one puncture, `D=C[t]`, and
+   monogenicity. Attack hidden multi-point, residue-degree, and affine-unit
+   cases.
+6. Check that the only survivor is exactly
+   `Phi^h=Q^2L+TQS+T^2R` with irreducible `(1,1)` `Q`. Independently compute
+   the affine target discriminant and prove or refute the total-degree bound
+   `deg Delta<=6`; scrutinize the direction-dependent fibre-coordinate change
+   and possible denominators/cancellation.
+7. State the maximum theorem safe to promote. Keep the proposed blowup,
+   normalization/conductor quartic, genus-one heuristic, basis-orbit coverage,
+   polynomial maps, counterexamples, and JC2 separate unless actually proved.
+
+Return an itemized verdict (`CONFIRMED`, `CONFIRM_WITH_CORRECTIONS`, `GAP`, or
+`REFUTED`), exact repairs, and the cheapest decisive successor. Hard cap:
+8,000 tokens and 28,000 UTF-8 bytes. Do not inspect, list, search, stat, build,
+modify, or control `jc2-lean`; the process sandbox also enforces this. Do not
+run local heavy CAS or Singular. Do not edit inputs, canonical files, scripts,
+or dependencies. Write exactly one report:
+
+```text
+xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md
+```
+
+End with one standalone `<!-- BODY-END -->` line and no seal block.
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll treat this as a sealed review task: read the target artifact from the specified commit, then trace only the referenced/promoted inputs it actually depends on. I’ll avoid any repo-wide scans that could touch `jc2-lean`, and I’ll write only the requested review file.
+exec
+/bin/zsh -lc 'git rev-parse HEAD' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+dca72076aa1615b0b1286fd4428a1acac7b65963
+
+exec
+/bin/zsh -lc 'git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md | wc -l' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     492
+
+exec
+/bin/zsh -lc 'git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md | shasum -a 256' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+6b324824e0c075b938bd5b7015d4e8d134bad7cb845ac7597212b61d91dfa7a5  -
+
+codex
+The target file’s SHA-256 matches the seal line at the requested commit, and the repo HEAD is already the stated review basis. I’m reading the artifact with line numbers so the report can cite exact failure points rather than paraphrasing.
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md | nl -ba | sed -n '1,170p'" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md | nl -ba | sed -n '171,340p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   171	scheme of the two binary cubics `p,r`; the generic point of `E_q` is regular.
+   172	As `Y` is normal off these exceptional fibres, Serre's criterion gives
+   173	
+   174	```text
+   175	X_aff is normal iff I_B is not-subset m_q^2 for every q in Z.   (2.2)
+   176	```
+   177	
+   178	This separates two often conflated statements.  The exceptional `P^1` is a
+   179	feature of the incidence model and is contracted by the Stein map.  The
+   180	condition that makes it a divisorial singular locus is nevertheless the
+   181	intrinsic first-order content condition (2.1).
+   182	
+   183	## 3. The quadratic content cone is impossible
+   184	
+   185	Assume (2.1) in a quadratic basis.  Since every coefficient has degree at
+   186	most two, after translating `q` all four are homogeneous quadratics.  Give
+   187	
+   188	```text
+   189	deg(s)=deg(t)=1,             deg(z)=deg(w)=2.
+   190	```
+   191	
+   192	Every equality in (1.1) is homogeneous of degree four.  Thus `B` is a
+   193	connected positively graded normal domain with graded `C[s,t]`-module
+   194	
+   195	```text
+   196	B=C[s,t] direct-sum C[s,t](-2)z direct-sum C[s,t](-2)w.          (3.1)
+   197	```
+   198	
+   199	Put `C0=Proj(B)`.  Because `B` is finite over the standard graded ring
+   200	`C[s,t]`, `C0->P1` is finite of degree three and `O_C0(1)` is the pullback
+   201	of `O_P1(1)`.  Normality of the graded domain makes `C0` a normal integral
+   202	projective curve, hence a smooth curve.  From (3.1), for `n>=2`,
+   203	
+   204	```text
+   205	dim_C B_n=(n+1)+2(n-1)=3n-1.
+   206	```
+   207	
+   208	Its Hilbert polynomial is also
+   209	
+   210	```text
+   211	deg(O_C0(1))*n+1-g(C0)=3n+1-g(C0),
+   212	```
+   213	
+   214	so
+   215	
+   216	```text
+   217	g(C0)=2.                                               (3.2)
+   218	```
+   219	
+   220	Choose a nonzero degree-one element `s`.  The degree-zero homogeneous
+   221	fraction field is `C(C0)`, and every homogeneous `b_n` satisfies
+   222	
+   223	```text
+   224	b_n=(b_n/s^n)*s^n.
+   225	```
+   226	
+   227	It follows that
+   228	
+   229	```text
+   230	Frac(B)=C(C0)(s).                                     (3.3)
+   231	```
+   232	
+   233	The dominant first leg `A2->Y` is generically finite.  After completing and
+   234	resolving indeterminacy, (3.3) would give a dominant map from a rational
+   235	surface to the genus-two curve `C0`.  Such a map is impossible: every
+   236	morphism from a smooth rational surface to a positive-genus curve is
+   237	constant (equivalently use the Albanese/Jacobian).  This contradicts
+   238	dominance.
+   239	
+   240	Hence (2.1) never occurs in the proper-block scope.  Equation (2.2) now
+   241	proves that `X_aff` is normal.  Notice that the contradiction used exact
+   242	algebra and a dominant map.  The Hilbert series alone is formal algebraic
+   243	data; interpreting it as a plane Keller map would have been invalid without
+   244	the first-leg bridge.
+   245	
+   246	As a consistency check only, in this killed stratum the intrinsic target
+   247	discriminant is a nonzero homogeneous octic about `q`, so `DISC8-INDEX`
+   248	also certifies `d_min=2`.  This discriminant statement is not the source
+   249	ramification divisor and is not a normalization-index or conductor claim.
+   250	
+   251	## 4. Projective `R_1` test and the finite repeated-type list
+   252	
+   253	Write
+   254	
+   255	```text
+   256	Phi^h=Phi_2(U,V;X,Y)+T*Phi_1(U,V;X,Y)+T^2*Phi_0(X,Y), (4.1)
+   257	```
+   258	
+   259	where `Phi_i` has base degree `i` and fibre degree three.  Since `X_aff` is
+   260	normal, a divisorial nonnormal locus of `Xbar` lies in `H={Phi_2=0}`.  The
+   261	homogenized cubic is primitive: a projective common coefficient divisor
+   262	other than `T=0` would give a forbidden affine height-one component of
+   263	`V(I_B)`, while divisibility by `T` would contradict exact coefficient
+   264	degree two.  Generic irreducibility and Gauss's lemma therefore make `Xbar`
+   265	an integral hypersurface, hence `S_2`; its nonnormality is exactly an `R_1`
+   266	failure.
+   267	
+   268	At the generic point of a reduced component of `H`, a tangent derivative
+   269	inside `L_infinity times P1` is nonzero, so `Xbar` is regular there.  If an
+   270	integral component `C` occurs with multiplicity at least two, all tangent
+   271	derivatives vanish along it; `Xbar` is singular generically along `C` if
+   272	and only if the first normal jet also vanishes:
+   273	
+   274	```text
+   275	Phi_1|C=0.                                             (4.2)
+   276	```
+   277	
+   278	Because an integral component of bidegree `(alpha,beta)` repeated `m>=2`
+   279	must satisfy `m*alpha<=2` and `m*beta<=3`, the complete list of maximal
+   280	repeated patterns in class `(2,3)` is
+   281	
+   282	```text
+   283	2(0,1)+(2,1),
+   284	3(0,1)+(2,0),
+   285	2(1,0)+(0,3),
+   286	2(1,1)+(0,1).                                         (4.3)
+   287	```
+   288	
+   289	Here the second bidegree is the degree over `L_infinity`; `(1,0)` is a
+   290	vertical fibre and `(a,1)` is a section.  Conditions (4.2)--(4.3) are an
+   291	exact `R_1` threat map, not merely a list of possible nonreduced divisors.
+   292	
+   293	## 5. Constant repeated sections are impossible
+   294	
+   295	Let the repeated component have class `(0,1)`.  It is the constant section
+   296	with fibre value `q0=[r:s]`.  Repetition gives
+   297	
+   298	```text
+   299	Phi_2(r,s)=0,
+   300	```
+   301	
+   302	and the nonnormality condition (4.2) gives `Phi_1(r,s)=0`.  Therefore
+   303	
+   304	```text
+   305	Phi(r,s)=Phi_0(r,s) in C.                             (5.1)
+   306	```
+   307	
+   308	If this scalar is nonzero, the determinant criterion
+   309	
+   310	```text
+   311	det(t,t^2)=Phi(r,s),          t=r*z+s*w,
+   312	```
+   313	
+   314	makes `B/A` monogenic, contradicting the binding proper-block theorem.  If
+   315	the scalar is zero, the generic binary cubic has the fixed root `[r:s]` and
+   316	is reducible over `C(u,v)`, contradicting that `Frac(B)` is a field.  This
+   317	eliminates both constant-section rows in (4.3).
+   318	
+   319	## 6. A repeated vertical fibre is impossible
+   320	
+   321	Let `C` have class `(1,0)`, defined on `L_infinity` by a linear form
+   322	`ell(U,V)`.  Repetition and the total base degree two force
+   323	
+   324	```text
+   325	Phi_2=ell^2*P(X,Y).
+   326	```
+   327	
+   328	Condition (4.2), and the fact that `Phi_1` has base degree one, force
+   329	
+   330	```text
+   331	Phi_1=ell*Q(X,Y).
+   332	```
+   333	
+   334	Choose a complementary affine target coordinate `r` and put
+   335	`p=ell(u,v)`.  Then
+   336	
+   337	```text
+   338	Phi=p^2 P+p Q+R
+   339	```
+   340	
+
+ succeeded in 0ms:
+     1	# Nonnormal quadratic incidences reduce to one moving-double-section normal form
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Producer: Sol 5.6 Ultra delegated lane `/root/whole_portfolio_ideation`  
+     5	Frozen basis: `145f96d65021ef364a5189c4ca385fe09d7b4f46`  
+     6	Lifecycle: **EXACT PROVISIONAL PRODUCER / DIFFERENT-MODEL REVIEW REQUIRED**
+     7	
+     8	## 0. Endpoint and epistemic scope
+     9	
+    10	Let `A=C[u,v]` and let
+    11	
+    12	```text
+    13	B=A*1 direct-sum A*z direct-sum A*w
+    14	```
+    15	
+    16	be the normal finite-flat integral cubic algebra of a hypothetical proper
+    17	cubic block of a noninvertible plane Keller map.  Charge the promoted proper
+    18	block sandwich, the binding nonmonogenicity theorem, and the dominant first
+    19	leg
+    20	
+    21	```text
+    22	g:A2 -> Y=Spec(B).
+    23	```
+    24	
+    25	Suppose that in one global trace-zero basis the Miranda coefficients
+    26	`a,b,c,d` have total degree at most two and at least one has degree two.  Let
+    27	
+    28	```text
+    29	Phi=bX^3-3aX^2Y+3dXY^2-cY^3,
+    30	X_aff=V(Phi) subset A2 times P1,
+    31	Xbar=V(Phi^h) subset P2 times P1,       [Xbar]=2A+3B,
+    32	H=Xbar intersect (L_infinity times P1).
+    33	```
+    34	
+    35	Then the following is the maximum exact conclusion of this packet.
+    36	
+    37	> **NONNORMAL-Q2-DICHOTOMY.**  The affine incidence `X_aff` is normal.  If
+    38	> the projective quadratic incidence `Xbar` is nonnormal, then, after
+    39	> constant linear coordinate changes on `L_infinity` and the fibre, its
+    40	> unique generic nonnormal boundary type is
+    41	>
+    42	> ```text
+    43	> H=2C+L,             [C]=(1,1),        [L]=(0,1),      (0.1)
+    44	> ```
+    45	>
+    46	> and its homogenized binary cubic has the exact form
+    47	>
+    48	> ```text
+    49	> Phi^h=Q^2 L + T Q S + T^2 R,                         (0.2)
+    50	> ```
+    51	>
+    52	> where `T=0` is target infinity, `Q` is an irreducible bilinear form of
+    53	> bidegree `(1,1)`, and `L,S,R` are constant binary forms of fibre degrees
+    54	> `1,2,3`.  The target discriminant of `B/A` consequently has total degree
+    55	> at most six.
+    56	
+    57	Thus all affine exceptional-curve nonnormality, all repeated constant
+    58	sections at infinity, and all repeated vertical infinity fibres are
+    59	excluded.  Only the moving double section (0.1) remains in the nonnormal
+    60	quadratic frontier.
+    61	
+    62	This is a theorem about the normal cubic algebra plus a chosen quadratic
+    63	compactification.  It is not a polynomial-map construction and does not
+    64	close the normal-singular quadratic lane.  It also does not say that every
+    65	degree-minimal basis has the same infinity divisor.
+    66	
+    67	The exact promoted clients used here are
+    68	
+    69	```text
+    70	c8dee3199ecfaf73b6debedea625346a11babbe42082cff5bff049f8585763c2
+    71	  xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md
+    72	410de2f569e2ad5599152fdd9414198f012dbdced7d17c5a51dde0096fe4601e
+    73	  xmodel/bd-fix3-quadratic-discriminant-conductor-coordinator-integration-sol56-20260830.md
+    74	ac7ef8f5321f579d5e193b6ae3a9b0f1aa2a64421050bb71426b94258d984ffb
+    75	  xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md
+    76	```
+    77	
+    78	The smooth absorption packet supplies the finite common-zero and affine
+    79	Stein bridges.  Its smooth exclusion is not charged in the proof below.
+    80	
+    81	## 1. The intrinsic content ideal and what a basis can change
+    82	
+    83	In a trace-zero basis the multiplication table is
+    84	
+    85	```text
+    86	z^2 = 2(a^2-bd) + a*z + b*w,
+    87	z*w = -(ad-bc) - d*z - a*w,
+    88	w^2 = 2(d^2-ac) + c*z + d*w.                         (1.1)
+    89	```
+    90	
+    91	Define the coefficient-content ideal
+    92	
+    93	```text
+    94	I_B=(a,b,c,d) subset A.                               (1.2)
+    95	```
+    96	
+    97	This ideal is intrinsic to `B/A`.  Indeed, a change of global trace-zero
+    98	basis is an element of `GL_2(A)`.  The associated binary cubic transforms
+    99	through the rank-four binary-cubic representation, with only a determinant
+   100	twist.  Both the matrix of that representation and its inverse have entries
+   101	in `A`, because the determinant of the basis change is a unit of `A`, hence
+   102	a nonzero complex constant.  Therefore the old and new coefficient vectors
+   103	generate the same ideal.
+   104	
+   105	Consequently the following data are basis invariant:
+   106	
+   107	```text
+   108	I_B and every local order ord_q(I_B);
+   109	the trace discriminant Delta, up to C^*;
+   110	the branch divisor V(Delta);
+   111	the minimum coefficient degree d_min over trace-zero bases.
+   112	```
+   113	
+   114	By contrast, the leading homogeneous cubic, the factorization and
+   115	multiplicities of `H`, projective coefficient basepoints, the first normal
+   116	jet at infinity, and normality of this particular projective closure can
+   117	change under a polynomial `GL_2(A)` basis change.  Such a change is an
+   118	automorphism of the affine `P^1`-bundle but need not extend regularly over
+   119	target infinity.  These boundary features are presentation data, not
+   120	invariants of the cubic algebra.
+   121	
+   122	The intrinsic ideal gives the elementary lower bound
+   123	
+   124	```text
+   125	d_min >= max_q ord_q(I_B).                            (1.3)
+   126	```
+   127	
+   128	Indeed a nonzero polynomial of degree at most `e` cannot vanish to order
+   129	greater than `e` at an affine point.  In the hypothetical block scope,
+   130	existence of the displayed quadratic basis and the binding theorem
+   131	`AL3-CLOSED` already give the exact value `d_min=2`: a basis of degree at
+   132	most one is impossible.  This basis-minimality statement does **not** give a
+   133	coverage theorem for smooth or normal compactifications.
+   134	
+   135	Normality also forbids a height-one component of `V(I_B)`: at its generic
+   136	DVR the special fibre of (1.1) would be `kappa direct-sum V`, `V^2=0`,
+   137	which is incompatible with a rank-three normal order.  Hence
+   138	
+   139	```text
+   140	Z=V(I_B) subset A2
+   141	```
+   142	
+   143	is finite.
+   144	
+   145	## 2. Exact affine `R_1` test
+   146	
+   147	The generic binary cubic is irreducible because `Frac(B)` is a cubic field.
+   148	Thus `X_aff` is an integral hypersurface and is Cohen--Macaulay, hence
+   149	`S_2`.  The direct-image/Stein bridge identifies `X_aff` with `Y=Spec(B)`
+   150	away from `Z`; over `q in Z`, the incidence has the exceptional fibre
+   151	
+   152	```text
+   153	E_q={q} times P1.
+   154	```
+   155	
+   156	Translate `q` to the origin and write the first Taylor part of `Phi` as
+   157	
+   158	```text
+   159	Phi=s*p(X,Y)+t*r(X,Y)+terms of base order at least two.
+   160	```
+   161	
+   162	Along `E_q`, all fibre derivatives vanish and the two remaining gradient
+   163	entries are `p` and `r`.  Therefore the singular locus contains the whole
+   164	curve `E_q` if and only if `p=r=0`, equivalently
+   165	
+   166	```text
+   167	I_B subset m_q^2.                                    (2.1)
+   168	```
+   169	
+   170	If (2.1) fails, the singular points on `E_q` are only the finite common-zero
+
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md | nl -ba | sed -n '341,520p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   341	is independent of `r`.  Its multiplication table descends to a finite free
+   342	rank-three `C[p]`-algebra `D`, and
+   343	
+   344	```text
+   345	B=D[r].                                                (6.1)
+   346	```
+   347	
+   348	Since `B` is a normal domain, so is `D`.  Let `C1=Spec(D)` and let
+   349	`Cbar1` be its smooth projective completion.  The field identity
+   350	
+   351	```text
+   352	Frac(B)=C(Cbar1)(r)
+   353	```
+   354	
+   355	and the dominant first leg imply `g(Cbar1)=0`, by the same rational-surface
+   356	argument as in Section 3.  Dominance also injects units
+   357	
+   358	```text
+   359	B^* -> C[x,y]^*=C^*,
+   360	```
+   361	
+   362	so `D^*=C^*`.
+   363	
+   364	Because `D` is normal and finite over `C[p]`, it is the integral closure of
+   365	`C[p]` in its fraction field; `C1` is `Cbar1` with precisely the points over
+   366	`p=infinity` removed.  On `Cbar1=P1`, removal of two or more points produces
+   367	a nonconstant unit.  Thus exactly one point is removed, and
+   368	
+   369	```text
+   370	D=C[t],             p=P(t) with deg(P)=3.
+   371	```
+   372	
+   373	Equation (6.1) becomes
+   374	
+   375	```text
+   376	B=C[p,r][t],
+   377	```
+   378	
+   379	so `B/A` is monogenic, again contradicting the binding proper-block theorem.
+   380	This eliminates the vertical row of (4.3).
+   381	
+   382	## 7. The sole survivor and its discriminant drop
+   383	
+   384	Only `2(1,1)+(0,1)` remains.  An integral `(1,1)` component is cut out by
+   385	an irreducible bilinear form `Q`.  Unique factorization on
+   386	`P1 times P1`, (4.1), and (4.2) give
+   387	
+   388	```text
+   389	Phi_2=Q^2 L,          Phi_1=Q S,          Phi_0=R,
+   390	```
+   391	
+   392	with the bidegrees stated in (0.2).  This proves the asserted normal form.
+   393	
+   394	It also forces two top discriminant cancellations.  Scale a generic affine
+   395	target direction by `(u,v)->(lambda*u,lambda*v)`.  Over `C(u:v)`, use `Q`
+   396	and `L` as fibre coordinates `x,y`.  The cubic is
+   397	
+   398	```text
+   399	lambda^2*x^2*y
+   400	 +lambda*x*(s0*y^2+s1*x*y+s2*x^2)
+   401	 +(r0*y^3+r1*x*y^2+r2*x^2*y+r3*x^3).                 (7.1)
+   402	```
+   403	
+   404	On `y=1`, its coefficients from constant through cubic degree have
+   405	`lambda`-degrees at most
+   406	
+   407	```text
+   408	0, 1, 2, 1.
+   409	```
+   410	
+   411	Every term in the cubic discriminant
+   412	
+   413	```text
+   414	c1^2*c2^2 -4*c0*c2^3 -4*c1^3*c3
+   415	 -27*c0^2*c3^2 +18*c0*c1*c2*c3
+   416	```
+   417	
+   418	therefore has `lambda`-degree at most six.  A generic fibre-coordinate
+   419	change multiplies the discriminant only by a nonzero factor independent of
+   420	`lambda`.  Hence the intrinsic full affine target discriminant satisfies
+   421	
+   422	```text
+   423	deg(Delta)<=6.                                         (7.2)
+   424	```
+   425	
+   426	The degree-eight leading discriminant and its degree-seven first variation
+   427	both vanish.  This is a target-discriminant statement only.  It does not
+   428	make the cubic Galois, identify source ramification, or compute a different,
+   429	normalization index, or conductor.
+   430	
+   431	`DISC8-INDEX` remains one-way: (7.2) does not imply that an affine-linear
+   432	basis exists.  In fact `AL3-CLOSED` forbids such a basis in the hypothetical
+   433	proper-block scope, so the given quadratic basis is still degree-minimal.
+   434	
+   435	## 8. Coverage boundary and actionable successor
+   436	
+   437	The exact disposition is
+   438	
+   439	```text
+   440	affine exceptional divisorial nonnormality: killed by genus-two content cone;
+   441	constant repeated infinity section:          killed by unit/fixed-root split;
+   442	repeated vertical infinity fibre:            killed by ruled curve + units;
+   443	moving repeated (1,1) section:                survives in form (0.2);
+   444	normal singular quadratic incidence:         outside this packet;
+   445	change to a good quadratic basis:             no coverage theorem yet.
+   446	```
+   447	
+   448	The clean successor is now local and finite rather than a search over all
+   449	nonnormal hypersurfaces: normalize (0.2) along the double curve
+   450	`C={T=Q=0}` and compute its conductor boundary.  Blowing up the ideal
+   451	`(T,Q)` formally replaces `Q=T*W` by
+   452	
+   453	```text
+   454	W^2 L+W S+R=0.                                        (8.1)
+   455	```
+   456	
+   457	On `C isomorphic to P1`, the prospective conductor cover has quadratic
+   458	discriminant
+   459	
+   460	```text
+   461	(S|_C)^2-4*(L|_C)*(R|_C),
+   462	```
+   463	
+   464	a binary quartic.  Generically its connected double cover has genus one,
+   465	which would conflict with the promoted rational-boundary forest.  The next
+   466	packet should prove the normalization/blowup bridge, separate split,
+   467	two-branch, and square quartics, and feed the resulting attachments into
+   468	the forest theorem.  The genus-one observation is a **rigorous calculation
+   469	of the candidate local model but only a successor heuristic** until that
+   470	bridge and the identification with the resolved map boundary are proved.
+   471	
+   472	A parallel basis-coverage successor should classify degree-two
+   473	`GL_2(C[u,v])` orbit moves that preserve the coefficient cap and ask whether
+   474	one can leave (0.2) for a smooth or normal-singular compactification.  It
+   475	must retain the distinction between intrinsic `I_B,Delta,d_min` and the
+   476	presentation-dependent infinity divisor.  A small symbolic factor-stratum
+   477	calculation can discriminate cases, but finite-prefix or sampled data would
+   478	not prove orbit coverage.
+   479	
+   480	No finite-prefix evidence, formal arc data, heavy CAS output, map-level
+   481	construction, counterexample, or JC2 conclusion is claimed in this report.
+   482	
+   483	<!-- BODY-END -->
+   484	
+   485	## Seal
+   486	
+   487	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   488	  including its terminating newline; this seal is outside the body.
+   489	- Body bytes: `16427`.
+   490	- Body SHA-256:
+   491	  `36bb8913697d3ce1bd725beed0e2089b444db425ab038f77530b2020c738d34a`.
+   492	- Frozen basis: `145f96d65021ef364a5189c4ca385fe09d7b4f46`.
+
+codex
+The producer’s main claims concentrate in Sections 2, 3, 5, 6, and 7. I’m now reading the three promoted inputs it charges, then I’ll locate the nonmonogenic/proper-block statement used for the monogenic contradictions.
+exec
+/bin/zsh -lc 'git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md | wc -l' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     194
+
+exec
+/bin/zsh -lc 'git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-fix3-quadratic-discriminant-conductor-coordinator-integration-sol56-20260830.md | wc -l' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     219
+
+exec
+/bin/zsh -lc 'git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md | shasum -a 256' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+c8dee3199ecfaf73b6debedea625346a11babbe42082cff5bff049f8585763c2  -
+
+exec
+/bin/zsh -lc 'git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md | wc -l' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     484
+
+exec
+/bin/zsh -lc 'git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-fix3-quadratic-discriminant-conductor-coordinator-integration-sol56-20260830.md | shasum -a 256' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+410de2f569e2ad5599152fdd9414198f012dbdced7d17c5a51dde0096fe4601e  -
+
+exec
+/bin/zsh -lc 'git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md | shasum -a 256' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+ac7ef8f5321f579d5e193b6ae3a9b0f1aa2a64421050bb71426b94258d984ffb  -
+
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md | nl -ba | sed -n '1,120p'" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md | nl -ba | sed -n '121,220p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: affine-linear cubic blocks are closed
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Coordinator: Sol 5.6 Ultra  
+     5	Frozen basis: `a619157b73c1dee1ca0599db47321ffd7588d748`  
+     6	Lifecycle: **BINDING INTEGRATION / BASIS-DEPENDENT AFFINE-LINEAR SCOPE**
+     7	
+     8	## 0. Disposition and custody
+     9	
+    10	The bounded different-model rerun by Fable 5 returned
+    11	`CONFIRM_WITH_CORRECTIONS` on the exact load-bearing chain.  Its sandboxed
+    12	receipt has exit code zero and pins unchanged prompt, adapter, launcher,
+    13	Seatbelt profile, validator, fallacy appendix, and composed model-prompt
+    14	hashes.  The raw reviewed body is
+    15	
+    16	```text
+    17	9d131643ed51c13468e2fb2414f33923c481c919de78002da1e991479b244c76
+    18	  xmodel/bd-fix3-affine-linear-log-closure-bounded-hostile-review-fable5-20260830.md
+    19	```
+    20	
+    21	and the sealed full-file SHA-256 is
+    22	`04a401582d4b242efe499c43a59aa0939d29f9c2a65997d84131db701bc76b46`.
+    23	The review consumes the binding structure sandwich
+    24	`ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778`,
+    25	binding Galois/nonmonogenicity integration
+    26	`f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8`,
+    27	and binding log theorem
+    28	`ff25ba27388c02698013483e2e5537f18ed39e918e5cb0cb4c099a75ef42f298`.
+    29	
+    30	The producer's residual-control sections on almost-surjectivity, its explicit
+    31	non-Keller model, and any general nonlinear corollary were deliberately
+    32	outside the bounded review and remain nonbinding.
+    33	
+    34	## 1. Maximum theorem
+    35	
+    36	> **AL3-CLOSED.**  Let `F=(f,g)` be a hypothetical noninvertible plane Keller
+    37	> map and suppose it has a proper cubic intermediate field
+    38	> `C(f,g) < K < C(x,y)`.  Let `B_K` be the integral closure of
+    39	> `A=C[f,g]` in `K`.  If there exists a global `A`-basis of the trace-zero
+    40	> module of `B_K` in which all four Miranda coefficients `a,b,c,d` have
+    41	> total degree at most one in `(f,g)`, then contradiction.
+    42	
+    43	Equivalently, no proper cubic intermediate block of a plane Keller map has
+    44	affine-linear Miranda coefficients in any fixed global trace-zero basis.
+    45	The hypothesis is existential in a basis choice; no invariance of coefficient
+    46	degree under basis change is asserted.
+    47	
+    48	## 2. Exact algebraic reduction
+    49	
+    50	Normality of `B_K`, miracle flatness over `A=C[u,v]`, trace splitting, and
+    51	Quillen--Suslin give
+    52	
+    53	```text
+    54	B_K=A direct-sum E,          E=A*z direct-sum A*w.
+    55	```
+    56	
+    57	In any trace-zero basis the multiplication table is
+    58	
+    59	```text
+    60	z^2 = 2(a^2-bd) + a*z + b*w,
+    61	z*w = -(ad-bc) - d*z - a*w,
+    62	w^2 = 2(d^2-ac) + c*z + d*w,
+    63	```
+    64	
+    65	with binary cubic
+    66	
+    67	```text
+    68	Phi(X,Y)=bX^3-3aX^2Y+3dXY^2-cY^3.
+    69	```
+    70	
+    71	For `t=r*z+s*w`, the determinant of `(t,t^2)` in `E` is `Phi(r,s)`.
+    72	Consequently
+    73	
+    74	```text
+    75	B_K is monogenic over A
+    76	  iff Phi(r,s) is in C^* for some r,s in A.            (2.1)
+    77	```
+    78	
+    79	Binding nonmonogenicity forbids (2.1).
+    80	
+    81	Write the affine-linear cubic as
+    82	
+    83	```text
+    84	Phi=P0+u*P1+v*P2
+    85	```
+    86	
+    87	with fixed binary cubics `Pj`.
+    88	
+    89	## 3. Common coefficient zero
+    90	
+    91	The common zero set of `a,b,c,d` is an affine subspace.  It cannot be all of
+    92	`A^2`, since the generic algebra would not be a field.  It cannot contain a
+    93	line: at the generic DVR of such a line, the Miranda special fibre would be
+    94	
+    95	```text
+    96	kappa[z,w]/(z,w)^2,
+    97	```
+    98	
+    99	whose two-dimensional radical has square zero.  Normality makes the localized
+   100	rank-three algebra a semilocal Dedekind domain.  Locality of that special
+   101	fibre leaves one prime: residue degree three would have zero radical, whereas
+   102	total ramification gives `DVR/(t^3)`, whose radical has nonzero square.  Both
+   103	contradict the displayed fibre.  Thus a nonempty common zero is isolated.
+   104	
+   105	After translation it is the origin and `Phi=uP1+vP2`.  Giving
+   106	`u,v,z,w` degree one makes `B_K` a graded domain with Hilbert function
+   107	`3n+1`.  Its Proj is the twisted cubic; hence
+   108	
+   109	```text
+   110	B_K = direct-sum_(n>=0) H^0(P^1,O(3n)).               (3.1)
+   111	```
+   112	
+   113	The incidence surface is literally `Tot O_P1(-3)` with
+   114	
+   115	```text
+   116	(u,v)=tau*(-P2,P1),                                   (3.2)
+   117	```
+   118	
+   119	and its affinization is `Spec B_K`, contracting exactly the zero section.
+   120	Therefore `O(Y)^*=C^*` and `Cl(Y)=Z/3`.  The nonempty ramification support
+
+ succeeded in 0ms:
+   121	on `Y` gives a nonzero kernel from its free boundary-divisor group to the
+   122	finite class group, hence a nonconstant unit on the etale complement.  The
+   123	dominant first leg pulls that unit to a nowhere-zero polynomial on `A^2`, a
+   124	contradiction.  This closes the common-zero case.
+   125	
+   126	## 4. No common coefficient zero
+   127	
+   128	A common zero of `P0,P1,P2` would give a nonzero trace-zero element of degree
+   129	at most two in the cubic field, impossible.  If `P1,P2` have a common zero,
+   130	then `P0` is nonzero there and `Phi` represents a scalar unit, contradicting
+   131	(2.1).  Thus `(P1,P2)` is basepoint-free, including the cases in which one
+   132	was hypothesized identically zero, and
+   133	
+   134	```text
+   135	rho=[P1:P2]:P^1 -> P^1
+   136	```
+   137	
+   138	has degree three and nonzero Wronskian.
+   139	
+   140	The review supplies the missing scheme bridge: the Miranda presentation is
+   141	isomorphic over `A^2` to
+   142	
+   143	```text
+   144	Y={P0+uP1+vP2=0} subset A^2 times P^1.                (4.1)
+   145	```
+   146	
+   147	Fibrewise determinant checks cover every coefficient degeneration.  The
+   148	projection `q:Y->P^1` is therefore a smooth affine-line torsor under
+   149	`O(-3)`, with
+   150	
+   151	```text
+   152	O(Y)^*=C^*,             Cl(Y)=Pic(Y)=Z.               (4.2)
+   153	```
+   154	
+   155	If the ramification support `R` has at least two irreducible components,
+   156	localization maps a free group of rank at least two to `Z`; its nonzero
+   157	kernel again gives a forbidden unit on `U=Y-R`.
+   158	
+   159	Suppose instead that `R` is irreducible.  The equations
+   160	`Phi=d_(P1)Phi=0` are a two-by-two affine-linear system in `(u,v)`.  Away
+   161	from `Crit(rho)` they give one graph point.  At a critical direction their
+   162	matrix has rank one, so compatibility would give the entire vertical fibre,
+   163	a second ramification component; irreducibility forces inconsistency.
+   164	Purity and the binding simple-transposition input give the reduced support
+   165	
+   166	```text
+   167	R isomorphic to P^1 minus Crit(rho).                  (4.3)
+   168	```
+   169	
+   170	Riemann--Hurwitz for the degree-three map `rho` gives at least two distinct
+   171	critical directions.  In the ruled completion of the torsor, the closure of
+   172	`R` is a section meeting the infinity section exactly over those directions.
+   173	The binding log theorem therefore forbids any dominant `A^2->U`.  The
+   174	binding first-leg sandwich supplies exactly such a dominant map, closing the
+   175	last case.
+   176	
+   177	## 5. Scope firewall
+   178	
+   179	`AL3-CLOSED` says nothing about Miranda coefficients of degree at least two,
+   180	about the minimum achievable coefficient degree across all bases, or about
+   181	proper blocks of degree other than three.  It neither proves primitivity nor
+   182	asserts that any intermediate field exists.  It constructs no polynomial
+   183	map or counterexample and proves no unconditional JC2 statement.
+   184	
+   185	<!-- BODY-END -->
+   186	
+   187	## Seal
+   188	
+   189	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   190	  including its terminating newline; this seal is outside the body.
+   191	- Body bytes: `6641`.
+   192	- Body SHA-256:
+   193	  `14d47db4730ffd3c06168bc0ada4dd7584df397fdc871a72e701fbd576a89275`.
+   194	- Frozen basis: `a619157b73c1dee1ca0599db47321ffd7588d748`.
+
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-fix3-quadratic-discriminant-conductor-coordinator-integration-sol56-20260830.md | nl -ba | sed -n '1,120p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: intrinsic cubic discriminant and normalization index
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Coordinator: Sol 5.6 Ultra  
+     5	Frozen basis: `f89cbb02305ee6fef32a79ccb8ff53fc4740a2a1`  
+     6	Lifecycle: **BINDING INTEGRATION / FINITE-FLAT RANK-THREE ALGEBRA SCOPE**
+     7	
+     8	## 0. Disposition and custody
+     9	
+    10	Opus 5 independently reconstructed the sealed producer
+    11	
+    12	```text
+    13	327b1f42b3ee245d1383d0108feca4c5ae20cbdaf5a00545f1c1d7fd5cee81d7
+    14	  xmodel/bd-fix3-quadratic-discriminant-conductor-invariant-sol56-20260830.md
+    15	  body 6323 / 3362a7913801a180cf0d4ee06e9bf08ee13324ea598d72e0e8f797d59ff28ac5
+    16	```
+    17	
+    18	and returned `CONFIRM_WITH_CORRECTIONS`.  Its sandbox-attested raw review
+    19	body is
+    20	
+    21	```text
+    22	013af71756795a10bdb6435af5a6e790c0ee1ed9a6b99f6047af40f2a872b881
+    23	  xmodel/bd-fix3-quadratic-discriminant-conductor-invariant-hostile-review-opus5-20260830.md
+    24	```
+    25	
+    26	and its sealed full-file SHA-256 is
+    27	`4241bb325de1904ef7cd10b46ff87dca489c23115c735b36137956bfcd4ebc4e`.
+    28	The clean schema-v2 receipt has exit code zero and pins unchanged prompt,
+    29	adapter, launcher, Seatbelt profile, validator, fallacy appendix, and composed
+    30	model-prompt hashes.
+    31	
+    32	Nothing is refuted.  This integration adopts the review's sharpenings and
+    33	firewalls: the binary-cubic convention scalar is exactly one; the index is a
+    34	Fitting/length divisor and is not the conductor; source ramification,
+    35	different, target discriminant, and reduced branch are four distinct objects;
+    36	and a curve-delta interpretation needs an actual base-change theorem plus a
+    37	Gorenstein hypothesis where the classical conductor formula is invoked.
+    38	
+    39	## 1. Intrinsic discriminant theorem
+    40	
+    41	Let `A=C[u,v]` and let `B` be a finite locally free rank-three `A`-algebra
+    42	whose generic fibre is separable.  Since `3` is invertible,
+    43	
+    44	```text
+    45	B=A*1 direct-sum E,             E=ker(Tr_B/A).
+    46	```
+    47	
+    48	The rank-two projective module `E` is free by Quillen--Suslin.  For any
+    49	`A`-basis `e=(e_0,e_1,e_2)` of `B`, put
+    50	
+    51	```text
+    52	Delta_e=det(Tr_B/A(e_i*e_j)).
+    53	```
+    54	
+    55	If `h in GL_3(A)` changes the basis, then
+    56	
+    57	```text
+    58	Delta_(eh)=det(h)^2*Delta_e,
+    59	```
+    60	
+    61	and `det(h)` is a nonzero complex constant.  Therefore the principal ideal,
+    62	effective divisor, and zero scheme defined by `Delta` are basis-independent;
+    63	the polynomial itself is defined up to `C^*`.  This conclusion does not
+    64	depend on choosing a trace-zero basis.
+    65	
+    66	In a trace-zero Miranda basis `(1,z,w)`, with multiplication coefficients
+    67	`a,b,c,d`, direct computation gives
+    68	
+    69	```text
+    70	Tr(z^2)=6(a^2-bd),
+    71	Tr(zw)=-3(ad-bc),
+    72	Tr(w^2)=6(d^2-ac),
+    73	
+    74	Delta = 81a^2d^2-108a^3c-108bd^3-27b^2c^2+162abcd.
+    75	```
+    76	
+    77	This is exactly, with scalar one in the classical convention, the
+    78	discriminant of
+    79	
+    80	```text
+    81	Phi=bX^3-3aX^2Y+3dXY^2-cY^3.
+    82	```
+    83	
+    84	It is homogeneous of coefficient-degree four.  Hence
+    85	
+    86	```text
+    87	max(deg(a),deg(b),deg(c),deg(d)) <= d
+    88	                  implies deg(Delta) <= 4d.          (1.1)
+    89	```
+    90	
+    91	In particular a quadratic presentation has intrinsic full affine
+    92	discriminant degree at most eight.  Conversely, if `d_min` is the minimum of
+    93	the displayed maximum over all global trace-zero bases of this fixed algebra,
+    94	
+    95	```text
+    96	d_min >= ceil(deg(Delta)/4).                          (1.2)
+    97	```
+    98	
+    99	This is a lower bound only.  Neither a reverse inequality nor an upper bound
+   100	on `d_min` has been proved.
+   101	
+   102	The nonzero divisor `V(Delta)` is exactly the non-etale locus on the base,
+   103	hence the branch locus as a set.  Its divisor multiplicities are the norms of
+   104	different exponents.  They are not in general the multiplicity-one reduced
+   105	branch, the reduced source ramification, or the source different itself.
+   106	
+   107	## 2. Global normalization-index theorem over `C[u,v]`
+   108	
+   109	Assume in addition that `B` is reduced and let `Btilde` be its integral
+   110	closure in its total ring of fractions.  Excellence makes `Btilde` finite
+   111	over `A`.  Its normal two-dimensional factors are Cohen--Macaulay; over the
+   112	regular ring `A`, Auslander--Buchsbaum and Quillen--Suslin make `Btilde` free
+   113	of rank three.
+   114	
+   115	Choose global bases and represent `B -> Btilde` by a matrix `M`.  Then
+   116	
+   117	```text
+   118	Fitt_0(Btilde/B)=(det M),
+   119	Delta_B=(det M)^2*Delta_Btilde,                       (2.1)
+   120	div(Delta_B)=div(Delta_Btilde)+2*div(det M).
+
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-fix3-quadratic-discriminant-conductor-coordinator-integration-sol56-20260830.md | nl -ba | sed -n '121,240p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   121	```
+   122	
+   123	The divisor `div(det M)` is effective, and at every height-one prime `p`,
+   124	
+   125	```text
+   126	ord_p(det M)=length_Ap((Btilde/B)_p).                 (2.2)
+   127	```
+   128	
+   129	Thus a quadratic presentation gives the exact numerical bounds
+   130	
+   131	```text
+   132	deg(det M) <= 4,
+   133	deg(Delta_Btilde) <= 8-2deg(det M).                  (2.3)
+   134	```
+   135	
+   136	For a general normal noetherian base and finite torsion-free orders, only the
+   137	height-one version is automatic: the index is the divisorial part of
+   138	`Fitt_0(Btilde/B)`, and codimension-at-least-two Fitting support is discarded.
+   139	
+   140	The index divisor is not the conductor divisor.  For example, over a DVR
+   141	`R`, with `Btilde=R^3` and `B=R+pi*R^3`, the quotient has length two and
+   142	`ord(Fitt_0)=2`, while its annihilator/conductor has order one.  The two may
+   143	be identified only after an additional cyclicity or equivalent local
+   144	hypothesis.
+   145	
+   146	## 3. Slice and curve firewall
+   147	
+   148	Normalization need not commute with slicing.  Even when both surface orders
+   149	are free, tensoring
+   150	
+   151	```text
+   152	0 -> B -> Btilde -> Btilde/B -> 0
+   153	```
+   154	
+   155	with a curve `A/(L)` is exact on the left precisely when
+   156	`Tor_1^A(Btilde/B,A/(L))=0`; in matrix form this is injectivity of `M mod L`.
+   157	For a height-one slice, it is enough here that `L` not be a component of the
+   158	index divisor.  The resulting sliced lattice length is not automatically the
+   159	delta invariant of the normalization of the sliced curve.
+   160	
+   161	Moreover the classical equality between conductor colength and twice delta
+   162	requires the relevant one-dimensional order to be Gorenstein.  Branch data
+   163	alone do not supply that condition.  Consequently no surface index, sliced
+   164	index, curve delta, conductor, or resolved-boundary multiplicity may be
+   165	substituted for another without a named comparison theorem.
+   166	
+   167	Two strict-henselian controls are mandatory before a broad elimination:
+   168	
+   169	```text
+   170	SH-1  B=R[t]/(t^3-u):
+   171	      (disc order, different order, reduced branch order, index)=(2,2,1,0).
+   172	
+   173	SH-2  Btilde=R^3, B=R+uR^3:
+   174	      index order 2, conductor/annihilator order 1, disc order 4;
+   175	      the transverse slice L=(v) has Tor_1=0 and sliced index 2;
+   176	      the contained slice L=(u) has Tor_1 nonzero and must return FAIL.
+   177	```
+   178	
+   179	Any computational pipeline that conflates one of these objects or fails a
+   180	control is rejected before AWS scale-up.
+   181	
+   182	## 4. Binding campaign consequence
+   183	
+   184	`DISC8-INDEX` is now a promoted, basis-safe client for a fixed-algebra
+   185	quadratic cubic-block presentation.  The next finite geometric packet should
+   186	jointly type:
+   187	
+   188	1. the full affine discriminant divisor and its infinity branches;
+   189	2. its multiplicities as a target discriminant, separately from source
+   190	   ramification and the different;
+   191	3. the principal normalization-index divisor of degree at most four;
+   192	4. reduced ramification classes and attachments to the promoted `F1`--`F7`
+   193	   infinity types; and
+   194	5. the resolved dual graph of infinity union ramification.
+   195	
+   196	The tempting shortcuts remain invalid.  A square leading homogeneous
+   197	discriminant does not make the full discriminant square and does not imply a
+   198	Galois cubic.  Degree at most eight does not imply that a quadratic Miranda
+   199	basis exists.  A candidate-first realizability test can certify the latter
+   200	failure only one-sidedly: construct an actual rank-three algebra with a fixed
+   201	degree-eight `Delta_0`, then prove that no quadratic tuple has discriminant
+   202	equal to a nonzero scalar multiple of `Delta_0`.  Such elimination is
+   203	heavy/uncertain, so it is AWS-only and remains gated behind `SH-1` and `SH-2`.
+   204	
+   205	No rational-tree or ramification attachment conclusion follows from the
+   206	discriminant bound alone.  No quadratic/cubic block closure, primitivity,
+   207	block occurrence, first-leg construction, map, counterexample, or JC2 result
+   208	is promoted here.
+   209	
+   210	<!-- BODY-END -->
+   211	
+   212	## Seal
+   213	
+   214	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   215	  including its terminating newline; this seal is outside the body.
+   216	- Body bytes: `7828`.
+   217	- Body SHA-256:
+   218	  `722d21d844f08c7a49b6231263b2a5a2e5d744e369192c39d71ac4c5ab3cb5a1`.
+   219	- Frozen basis: `f89cbb02305ee6fef32a79ccb8ff53fc4740a2a1`.
+
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md | nl -ba | sed -n '131,260p'" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md | nl -ba | sed -n '1,130p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   131	```text
+   132	A.C=beta,       B.C=alpha,
+   133	deg O_C(A+3B)=beta+3alpha>0.                         (2.3)
+   134	```
+   135	
+   136	If the normal jet is identically zero, `X` is singular along a dense open
+   137	of `C`.  If it is nonzero, its pullback to the normalization of the complete
+   138	curve `C` has a zero because (2.3) is positive.  At such a zero every ambient
+   139	first derivative of `Phi^h` vanishes, so `X` is singular there.  Both cases
+   140	contradict smoothness.  Hence:
+   141	
+   142	> **Lemma 2.1 (smooth squarefreeness).**  If the exact quadratic incidence
+   143	> `X` is smooth, its infinity divisor `H` is reduced and the leading
+   144	> bidegree-`(2,3)` binary cubic is squarefree.
+   145	
+   146	There is an independent numerical check.  Write
+   147	`H=sum_i m_i C_i`, where `C_i` has bidegree `(alpha_i,beta_i)`.  Distinct
+   148	components have
+   149	
+   150	```text
+   151	C_i.C_j=alpha_i*beta_j+alpha_j*beta_i.
+   152	```
+   153	
+   154	Adjunction on the smooth surface, using `K_X=-A+B` and
+   155	`p_a(C_i)=(alpha_i-1)(beta_i-1)`, gives
+   156	
+   157	```text
+   158	C_i^2=2alpha_i beta_i-3alpha_i-beta_i.               (2.4)
+   159	```
+   160	
+   161	Intersecting `A=H` with `C_i`, and using
+   162	`sum m_i alpha_i=2`, `sum m_i beta_i=3`, reduces exactly to
+   163	
+   164	```text
+   165	(m_i-1)(3alpha_i+beta_i)=0.                          (2.5)
+   166	```
+   167	
+   168	Every nonzero component class has `3alpha_i+beta_i>0`, again forcing
+   169	`m_i=1`.  The normal-jet proof is primary because it also identifies the
+   170	precise failure in the singular stratum.
+   171	
+   172	## 3. Local geometry of a smooth coefficient basepoint
+   173	
+   174	Let `q in P2` be a common zero of the four homogenized coefficient sections.
+   175	Then
+   176	
+   177	```text
+   178	E={q} times P1 subset X.                             (3.1)
+   179	```
+   180	
+   181	Choose regular parameters `(s,t)` at `q`.  Along `E`, write the first base
+   182	jet of the incidence equation as
+   183	
+   184	```text
+   185	Phi^h=s*p(X,Y)+t*r(X,Y)+terms in (s,t)^2,             (3.2)
+   186	p,r in H^0(P1,O(3)).
+   187	```
+   188	
+   189	The fibre derivative of `Phi^h` vanishes identically on `E`.  Therefore
+   190	smoothness of `X` along `E` is equivalent to `p,r` having no common zero.
+   191	They cannot be proportional, since a nonzero cubic section on `P1` has a
+   192	zero.  Hence
+   193	
+   194	```text
+   195	rho=[p:r]:E=P1 -> P1                                (3.3)
+   196	```
+   197	
+   198	is a morphism of degree three.
+   199	
+   200	### 3.1 Scheme-theoretic blowup factorization
+   201	
+   202	The equality `pi^* I_q=I_E` is scheme-theoretic.  On a chart where `p` is a
+   203	unit, equation (3.2) solves
+   204	
+   205	```text
+   206	s=-t*r/p+terms in t^2,
+   207	```
+   208	
+   209	so `(s,t)O_X=(t)` there; on a chart where `r` is a unit it is generated by
+   210	`s`.  These charts cover `E`, proving that the pulled-back ideal is the
+   211	invertible ideal `O_X(-E)`.  The universal property gives a morphism
+   212	
+   213	```text
+   214	X -> Bl_q(P2) -> P2.                                 (3.4)
+   215	```
+   216	
+   217	Consequently `A-E` is the pullback of the basepoint-free pencil of lines
+   218	through `q` and is nef.  Adjunction also gives the useful check
+   219	
+   220	```text
+   221	E^2=-3,
+   222	```
+   223	
+   224	because `A.E=0`, `B.E=1`, and `K_X.E=1`.
+   225	
+   226	### 3.2 Coefficient one and the Wronskian
+   227	
+   228	The source Jacobian/different divisor of the generically finite map is
+   229	
+   230	```text
+   231	R_pi=K_X-pi^*K_P2 ~ 2A+B.                            (3.5)
+   232	```
+   233	
+   234	On the chart `p!=0`, use `t` and a fibre coordinate `z` as parameters on
+   235	`X`.  Substituting the first-order solution for `s` into the fibre derivative
+   236	gives, up to a unit and a harmless sign,
+   237	
+   238	```text
+   239	(Phi^h_z)/t |_E = r_z-(r/p)*p_z
+   240	                  = (p*r_z-r*p_z)/p.                (3.6)
+   241	```
+   242	
+   243	The Wronskian is not identically zero because the characteristic is zero and
+   244	`rho` has degree three.  Thus `E` occurs in `R_pi` with Cartier coefficient
+   245	exactly one.  Write
+   246	
+   247	```text
+   248	R_pi=E+D,       D effective,       D~2A+B-E.          (3.7)
+   249	```
+   250	
+   251	The transition-compatible zero divisor in (3.6) is precisely
+   252	`Ram(rho)`.  Therefore
+   253	
+   254	```text
+   255	D|E=Ram(rho),       D.E=4.                           (3.8)
+   256	```
+   257	
+   258	Riemann--Hurwitz gives total ramification four.  At one point of a degree-
+   259	three characteristic-zero map the contribution is at most `3-1=2`, so the
+   260	support of (3.8) contains at least two distinct physical points.
+
+ succeeded in 0ms:
+     1	# Smooth quadratic degeneracy absorption
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Producer: Sol 5.6 delegated lane `/root/quadratic_degeneracy_frontier`  
+     5	Frozen basis: `5bc4eea1c749045d54b4ee8053be8d85c4f3bc9f`  
+     6	Lifecycle: **EXACT PROVISIONAL PRODUCER / DIFFERENT-MODEL REVIEW REQUIRED**
+     7	
+     8	## 0. Endpoint and charged inputs
+     9	
+    10	This packet absorbs the smooth degeneracies left outside the promoted
+    11	quadratic lattice theorem.  It charges the following binding integrations:
+    12	
+    13	```text
+    14	c9871c92ce8748fd934dc57061f667b49952a1aba39aee43eb3af7b0aadbf392
+    15	  xmodel/bd-a2-ramification-lattice-closure-coordinator-integration-sol56-20260830.md
+    16	
+    17	c8dee3199ecfaf73b6debedea625346a11babbe42082cff5bff049f8585763c2
+    18	  xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md
+    19	
+    20	ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
+    21	  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+    22	
+    23	f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
+    24	  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+    25	```
+    26	
+    27	The new exact conclusions are:
+    28	
+    29	1. a smooth class-`(2A+3B)` incidence has reduced, hence squarefree,
+    30	   infinity whenever the quadratic leading form is nonzero;
+    31	2. every coefficient basepoint on a smooth incidence produces a `-3` curve
+    32	   `E` and a residual ample different `D` meeting `E` at at least two
+    33	   physical points, so the resolved first-leg boundary has a cycle;
+    34	3. the preceding basepoint obstruction applies at infinity and, through a
+    35	   separately proved Stein-factor bridge, at an affine common coefficient
+    36	   zero; and
+    37	4. target coefficient-degree drop returns to the promoted affine-linear
+    38	   theorem, literal fibre-degree drop contradicts the generic cubic field,
+    39	   and source generic-degree one exits the proper-block hypothesis.
+    40	
+    41	Consequently, conditional only on different-model review of this packet,
+    42	the promoted lattice theorem composes to the following maximum statement:
+    43	
+    44	> **SMOOTH-Q2-CLOSED.**  A proper cubic intermediate block of a hypothetical
+    45	> noninvertible plane Keller map cannot admit a global trace-zero Miranda
+    46	> basis whose four coefficients have total degree at most two and whose
+    47	> exact-degree-two projective incidence hypersurface is smooth.
+    48	
+    49	This is a fixed-presentation/existential-basis theorem.  It does not say that
+    50	an arbitrary cubic block has a quadratic basis, and it does not treat a
+    51	singular quadratic incidence.
+    52	
+    53	## 1. Setup and two elementary perimeter reductions
+    54	
+    55	Let
+    56	
+    57	```text
+    58	A0=C[u,v],
+    59	B_K=A0*1 direct-sum A0*z direct-sum A0*w
+    60	```
+    61	
+    62	be the normal finite-flat integral cubic algebra supplied by the promoted
+    63	proper block sandwich.  In a global trace-zero basis its Miranda cubic is
+    64	
+    65	```text
+    66	Phi=bX^3-3aX^2Y+3dXY^2-cY^3.                       (1.1)
+    67	```
+    68	
+    69	Assume first that `a,b,c,d` have degree at most two and at least one has
+    70	degree exactly two.  Homogenizing to target degree two gives
+    71	
+    72	```text
+    73	X={Phi^h=0} subset P2 times P1,       [X]=2A+3B,     (1.2)
+    74	```
+    75	
+    76	where `A,B` are the two hyperplane restrictions and `pi:X->P2` is the
+    77	incidence projection.  The theorem below assumes `X` smooth.  Smoothness and
+    78	the ample connectedness of a divisor of class `(2,3)` also force the
+    79	hypersurface to be connected and hence irreducible; retaining irreducibility
+    80	explicitly causes no harm.
+    81	
+    82	Two possible degeneracies are already unavailable before boundary geometry.
+    83	
+    84	**No divisorial affine coefficient-zero locus.**  If an irreducible
+    85	`h in A0` divided all four coefficients, pass to the generic DVR of `(h)`.
+    86	Modulo its uniformizer the Miranda multiplication table becomes
+    87	
+    88	```text
+    89	kappa direct-sum V,       dim_kappa(V)=2,       V^2=0.              (1.3)
+    90	```
+    91	
+    92	Normality makes the localized cubic order a semilocal Dedekind domain.  The
+    93	fibre (1.3) is local, so there is one prime above `(h)`.  Since the total
+    94	rank is three, the possibilities are residue degree three and ramification
+    95	index one, which gives a field fibre, or residue degree one and ramification
+    96	index three, whose radical has nonzero square.  Neither is (1.3).  Thus the
+    97	common affine zero locus has codimension two.  For quadratics it is finite;
+    98	two generic linear combinations of the coefficients have no common curve,
+    99	so Bezout bounds its scheme length by four.
+   100	
+   101	**Exact fibre degree.**  Over `C(u,v)`, the algebra `B_K` is a separable
+   102	cubic field.  The binary cubic (1.1) is therefore irreducible: a linear
+   103	factor gives a product component in the generic cubic algebra.  In
+   104	particular it is nonzero and has literal projective `[X:Y]`-degree three.
+   105	An affine fibre polynomial of degree at most two would homogenize with a
+   106	constant linear factor at fibre infinity and is the same forbidden
+   107	reducibility, not a new quadratic stratum.
+   108	
+   109	## 2. Smoothness forces reduced infinity
+   110	
+   111	Let `S=L_infinity times P1 subset P2 times P1` and
+   112	
+   113	```text
+   114	H=X intersect S=div_S(Phi_infinity),
+   115	Phi_infinity in H^0(S,O_S(2,3)).                    (2.1)
+   116	```
+   117	
+   118	Suppose an integral factor `C` of bidegree `(alpha,beta)` occurs in (2.1)
+   119	with multiplicity at least two.  Along the generic smooth locus of `C`, all
+   120	derivatives of `Phi^h` tangent to `S` vanish.  The first derivative normal to
+   121	`S` is intrinsically the first normal jet
+   122	
+   123	```text
+   124	j_perp(Phi^h)|C in
+   125	H^0(C, O_(P2 times P1)(2A+3B-S)|C)
+   126	 = H^0(C,O_C(A+3B)).                                (2.2)
+   127	```
+   128	
+   129	With the bidegree convention used in the promoted boundary packets,
+   130	
+
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md | nl -ba | sed -n '261,390p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   261	
+   262	### 3.3 Ample residual different and the cycle
+   263	
+   264	Using the blowup factorization,
+   265	
+   266	```text
+   267	D=(A+B)+(A-E).                                       (3.9)
+   268	```
+   269	
+   270	The first summand is the restriction of the ample ambient bundle `O(1,1)`;
+   271	the second is nef.  Hence `D` is ample.  Its reduced support is connected by
+   272	the same Hodge-index argument used in the promoted lattice integration.
+   273	
+   274	In a resolved first-leg boundary, if the connected total transform of
+   275	`Supp(D)` already has positive genus or a graph cycle, the rational-forest
+   276	theorem has fired.  Otherwise it is a tree.  The curve `E` is rational and
+   277	meets it at the at least two distinct physical points from (3.8).  Resolving
+   278	tangencies only subdivides the two joining paths.  Contracting the two trees
+   279	leaves two parallel edges, hence a cycle.  We obtain:
+   280	
+   281	> **Lemma 3.1 (smooth basepoint cycle).**  Whenever a coefficient-basepoint
+   282	> curve `E` belongs to the boundary of the lifted first-leg open on a smooth
+   283	> exact quadratic incidence, the full resolved boundary is not a rational
+   284	> forest.
+   285	
+   286	For a projective coefficient basepoint `q in L_infinity`, `E` is already a
+   287	component of `H`.  Lemma 3.1 therefore eliminates the nonfinite `F3,F6`
+   288	types rather than merely declaring them outside projective finiteness.
+   289	
+   290	## 4. Affine common-zero bridge
+   291	
+   292	An affine common coefficient zero needs one additional typing step because
+   293	the block surface `Y=Spec(B_K)` is finite over `A2`, whereas the incidence
+   294	surface contains the exceptional `P1`.  The bridge is exact in the present
+   295	normal finite-flat scope.
+   296	
+   297	Let `Z subset A2` be the finite common-zero scheme from Section 1 and put
+   298	
+   299	```text
+   300	X_aff={Phi=0} subset A2 times P1,
+   301	pi_0:X_aff->A2.
+   302	```
+   303	
+   304	The divisor sequence on the relative projective line is
+   305	
+   306	```text
+   307	0 -> O(-3) --Phi--> O -> O_(X_aff) -> 0.             (4.1)
+   308	```
+   309	
+   310	Relative cohomology gives an exact sequence of `A0`-modules
+   311	
+   312	```text
+   313	0 -> A0 -> (pi_0)_*O_(X_aff) -> A0^2 -> 0,           (4.2)
+   314	```
+   315	
+   316	so the direct image is locally free of rank three.  Over `A2 minus Z`, the
+   317	incidence is a finite cubic divisor and the standard Miranda multiplication
+   318	identifies its direct-image algebra with `B_K`.  Both algebras are locally
+   319	free, hence reflexive, over the regular surface `A2`; the isomorphism and its
+   320	inverse extend uniquely across the codimension-two set `Z`.  Multiplication
+   321	matrices extend entrywise, and their algebra identities hold globally because
+   322	they hold on the dense open.  Thus this is an algebra isomorphism, not merely
+   323	a module isomorphism, and
+   324	
+   325	```text
+   326	Spec((pi_0)_*O_(X_aff)) = Spec(B_K)=Y.                (4.3)
+   327	```
+   328	
+   329	The associated Stein morphism
+   330	
+   331	```text
+   332	nu:X_aff -> Y                                        (4.4)
+   333	```
+   334	
+   335	is an isomorphism over `A2 minus Z` and contracts the curve
+   336	`E_q={q} times P1` over each `q in Z`.  At such a point the direct Miranda
+   337	multiplication table in `B_K tensor kappa(q)` is the square-zero algebra
+   338	(1.3), so it is non-etale.  This conclusion is not obtained by base-changing
+   339	`H^0(O_(X_aff))`: formation of global functions does not commute with that
+   340	exceptional fibre.
+   341	The promoted block
+   342	structure gives
+   343	
+   344	```text
+   345	g_1(A2) subset Y_sm minus R,
+   346	```
+   347	
+   348	and in particular the first-leg image misses every contracted point.  It
+   349	therefore lifts through the isomorphism locus of (4.4) to a dominant morphism
+   350	whose image avoids `E_q` and the remaining source different.  In a smooth
+   351	projective incidence completion, `E_q union Supp(D)` is consequently a
+   352	boundary subconfiguration: a component of `D` in infinity is already in
+   353	`H`, and every other component is the closure of affine non-etale support.
+   354	Lemma 3.1 applies.
+   355	
+   356	> **Corollary 4.1.**  In the normal finite-flat proper cubic-block scope, a
+   357	> smooth exact quadratic projective incidence cannot have an affine common
+   358	> zero of the four Miranda coefficients.
+   359	
+   360	This is not a claim about an arbitrary four-tuple of quadratic polynomials.
+   361	It uses normality of `B_K`, the Miranda algebra identification in (4.3), the
+   362	promoted fact that the first leg misses the non-etale locus, and smoothness
+   363	of the incidence model along every exceptional curve.
+   364	
+   365	## 5. Exact degree-drop routing
+   366	
+   367	The adjacent degree drops do not create further smooth quadratic cases.
+   368	
+   369	1. **Target coefficient degree.**  If all four degree-two leading forms
+   370	   vanish, the affine coefficients have degree at most one.  Homogenizing
+   371	   artificially to degree two merely adds the target-infinity ambient
+   372	   component; cancel it and apply the promoted affine-linear theorem
+   373	   `AL3-CLOSED` charged in Section 0.
+   374	2. **Fibre degree.**  A literal drop below homogeneous `[X:Y]`-degree three
+   375	   supplies a constant fibre linear factor after degree-three homogenization.
+   376	   This contradicts the generic cubic field, as in Section 1.  Vanishing of
+   377	   only one leading fibre coefficient is not by itself a target-degree drop;
+   378	   the point is the generic factor, not a chart convention.
+   379	3. **Source generic degree.**  If “source-degree drop” means
+   380	   `[C(x,y):K]=1`, then `K` is not a proper upper intermediate field and the
+   381	   promoted sandwich hypothesis has failed.  No polynomial-support theorem
+   382	   is inferred from that tautological routing.
+   383	4. **Quotient generic degree.**  A drop of the cubic quotient to degree two
+   384	   is already excluded by the promoted non-Galois theorem, since every
+   385	   separable quadratic extension is Galois; degree one is not a proper lower
+   386	   intermediate field.
+   387	
+   388	These are four different typings.  None authorizes replacing a singular
+   389	degree-two presentation by a smooth lower-degree one.
+   390	
+
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md | nl -ba | sed -n '391,520p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   391	## 6. Conditional composition: all smooth exact quadratics
+   392	
+   393	Assume a proper cubic block has coefficients of degree at most two in the
+   394	chosen global trace-zero basis and that its exact-degree-two projective
+   395	incidence `X` is smooth.
+   396	
+   397	If the coefficient degree drops, Section 5 routes to `AL3-CLOSED`.  Otherwise
+   398	the generic fibre has exact degree three.  If the four homogenized
+   399	coefficient sections have a common zero, Lemma 3.1 applies directly at
+   400	projective infinity and Corollary 4.1 applies at an affine point.  Thus a
+   401	survivor has no coefficient basepoint anywhere on `P2`.
+   402	
+   403	Every fibre of the proper morphism `pi:X->P2` is then the nonzero cubic
+   404	divisor in `P1`, hence zero-dimensional of length three.  Proper plus
+   405	quasi-finite makes `pi` finite.  With `Z` empty, (4.3) identifies
+   406	`X minus H` literally with the finite block surface `Y`, so the promoted
+   407	first-leg and unit inputs are on the required model.  Lemma 2.1 makes its
+   408	infinity divisor reduced and squarefree.  All hypotheses of the promoted
+   409	lattice integration `c9871c92...` are now met.  That theorem excludes the full
+   410	`F1,F2,F4,F5,F7` list, projective finiteness has already removed the vertical
+   411	basepoint types, and `F8,F9` have no rational-tree refinement.  This proves
+   412	`SMOOTH-Q2-CLOSED`, conditional on different-model review of the new lemmas
+   413	and bridge in this packet.
+   414	
+   415	Notice that affine common zeros are not silently fed into the old lattice
+   416	theorem: they are eliminated first by Section 4.  Likewise nonreduced
+   417	infinity is not silently squarefreed: Lemma 2.1 proves it cannot occur on a
+   418	smooth `X`.
+   419	
+   420	## 7. Hostile attacks and controls
+   421	
+   422	The following shortcuts were attacked explicitly.
+   423	
+   424	* **A repeated boundary factor might coexist with smooth total space.**
+   425	  Locally this can happen while the normal derivative is a unit, but globally
+   426	  that derivative has degree `3alpha+beta>0` on the complete component and
+   427	  must vanish.  Equation (2.5) is an independent intersection check.
+   428	* **The basepoint fibre might be only set-theoretic.**  Section 3.1 proves
+   429	  `(s,t)O_X=I_E` chartwise before invoking the blowup universal property.
+   430	* **The pencil `[p:r]` might have degree below three.**  Basepoint-freeness
+   431	  gives pullback `O(1)=O_E(3)`; proportional cubics would have common zeros.
+   432	* **`E` might have larger Cartier coefficient in the different.**  The
+   433	  nonzero Wronskian in (3.6) gives generic order exactly one.
+   434	* **Four intersection units might concentrate at one physical point.**  A
+   435	  degree-three map has local ramification contribution at most two, so the
+   436	  degree-four ramification divisor has at least two support points.
+   437	* **The residual different might be merely big.**  Formula (3.9) writes it
+   438	  as ample plus nef, so it is ample and its support is connected.
+   439	* **Resolution might erase the cycle.**  Blowups subdivide joining paths or
+   440	  add pendant vertices; they do not identify the two physical attachments.
+   441	* **The affine incidence is not finite at a common zero.**  Correct; Section
+   442	  4 uses its Stein algebra, proves that algebra is `B_K`, and only lifts the
+   443	  first leg through the isomorphism locus after showing the contracted point
+   444	  is non-etale and missed.  The square-zero fibre is read from the Miranda
+   445	  multiplication table, not from an invalid cohomology base-change step.
+   446	* **No projective basepoint might be weaker than finiteness.**  Every fibre
+   447	  is then a nonzero effective cubic divisor on `P1`; proper quasi-finiteness
+   448	  is finiteness.
+   449	* **A better basis might change the degree.**  The conclusion is existential
+   450	  in the displayed basis.  It neither minimizes coefficient degree nor
+   451	  transfers smoothness between two bases.
+   452	
+   453	No CAS, finite-field sampling, or AWS computation enters any step.
+   454	
+   455	## 8. Scope firewall and successor
+   456	
+   457	`SMOOTH-Q2-CLOSED` is conditional on a proper cubic block, the promoted
+   458	dominant first-leg sandwich, a chosen global trace-zero basis with coefficient
+   459	degree at most two, and smoothness of the exact quadratic projective
+   460	incidence.  It does not prove that a quadratic basis exists, bound the minimum
+   461	degree over all bases, or turn the intrinsic discriminant bound around.  It
+   462	does not cover a singular or nonnormal incidence closure, a higher-degree
+   463	presentation, another block degree, a primitive extension, a polynomial map,
+   464	a counterexample, or JC2.
+   465	
+   466	The next geometric packet should be singular-incidence-only.  A promising
+   467	separate provisional triage is: for a normal class-`(2,3)` hypersurface,
+   468	`H^1(O_X)=H^2(O_X)=0`; after proving that the first-leg open lifts to a
+   469	resolution completion with all singular points in the boundary, Leray would
+   470	turn `q=0` into rationality of every singularity, and the hypersurface
+   471	Gorenstein condition would reduce these to Du Val types.  That bridge and
+   472	the resulting exceptional-root lattice are not consumed here.  Nonnormal
+   473	closures and basis minimization remain still later, separate clients.
+   474	
+   475	<!-- BODY-END -->
+   476	
+   477	## Seal
+   478	
+   479	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   480	  including its terminating newline; this seal is outside the body.
+   481	- Body bytes: `19665`.
+   482	- Body SHA-256:
+   483	  `ecff0c0f3b373e00128b10cad561a0738e8db32e60d4c04f475c5e0fa38c25bd`.
+   484	- Frozen basis: `5bc4eea1c749045d54b4ee8053be8d85c4f3bc9f`.
+
+codex
+The smooth input is explicitly provisional, not binding; the target uses only its finite common-zero and Stein bridge, so those have to remain conditional unless independently reproved. I’m pulling the underlying block and nonmonogenic integrations now because Sections 5-6 rely on those rather than on the smooth packet.
+exec
+/bin/zsh -lc 'git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md | wc -l' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     187
+
+exec
+/bin/zsh -lc 'git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md | wc -l' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     156
+
+exec
+/bin/zsh -lc 'git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md | shasum -a 256' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778  -
+
+exec
+/bin/zsh -lc 'git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md | shasum -a 256' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8  -
+
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md | nl -ba | sed -n '121,220p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   121	`A(F)=g2(A(g1))`. Openness and density of `g1(A^2)`, plus compactness of
+   122	bounded subsets of `A^2(C)`, give `Y minus g1(A^2) subset A(g1)`. Since all
+   123	of `R` is missed, its discriminant image lies in `A(F)`.
+   124	
+   125	The fibre deficit needs one normalization lemma that was implicit in the
+   126	review. Let `Z` be the normalization of `Y` in `C(x,y)`; strong Zariski Main
+   127	embeds `A^2` openly in `Z`. For a closed `y in Y`, localize at `y` and let
+   128	`q_1,...,q_r` be the points of `Z` above it. Their residue fields are `C`.
+   129	Chinese remaindering supplies an integral element `b` with pairwise distinct
+   130	residues at the `q_i`. Its minimal polynomial over `K` has degree at most
+   131	`d1` and coefficients in the normal local ring: integrality makes those
+   132	coefficients integral, and normality brings them back into the ring. Modulo
+   133	the maximal ideal this polynomial has the `r` distinct chosen residues as
+   134	roots, so `r<=d1`. Thus every `g1` fibre has at most `d1` points. A finite-
+   135	flat `g2` fibre has at most `d2` distinct points, and over its discriminant at
+   136	least one lies in `R` and contributes no `g1` preimage. This proves the
+   137	displayed `deg(F)-d1` bound. Outside `A(F)`, properness over a small
+   138	neighborhood makes the étale map `F` a covering of its generic degree,
+   139	giving equality.
+   140	
+   141	Finally, if `Y` were abstractly `A^2`, the factorization could be conjugated
+   142	to polynomial self-maps `F=G2 o G1` of `A^2`. The chain rule makes both
+   143	Jacobian determinants nonzero constants (the image of `G1` is dense), so
+   144	the finite map `G2` would be a connected finite étale cover of degree
+   145	`d2>=2` of `A^2_C`, again impossible.
+   146	
+   147	## 3. Binding corrections and withheld claims
+   148	
+   149	1. The launch condition "`g1(A^2)` contains every codimension-one point" is
+   150	   refuted for every nontrivial block: the whole nonempty branch divisor is
+   151	   missed. It must not remain listed as an attainable proof obligation.
+   152	2. The alternative recognition target `Y isomorphic to A^2` is also
+   153	   impossible for every nontrivial block. It is a reductio, not a descent
+   154	   theorem waiting to be proved.
+   155	3. Consequently this route gives no implication from minimal topological
+   156	   degree to primitive monodromy. Primitivity remains open. The honest
+   157	   successor is to rule out the forced étale sandwiches directly, beginning
+   158	   provisionally with block index `d2=2` (`BD-D2`).
+   159	4. The review's estimate `#F^{-1}(z) <= deg(F)-d1` is promoted only with the
+   160	   CRT/minimal-polynomial normalization lemma supplied in section 2. It does
+   161	   not require flatness of the degree-`d1` normalization and makes no
+   162	   attainment claim beyond the displayed upper bound.
+   163	5. The stronger wording that discriminant components are polynomially
+   164	   parametrized components of `A(F)` is citation-dependent and unnecessary
+   165	   for the structural result. Only the proved inclusion
+   166	   `g2(R)=V(Disc(g2)) subset A(F)` is promoted here.
+   167	
+   168	## 4. Scope and next discriminator
+   169	
+   170	The theorem constrains only a block that already exists. It does not supply
+   171	an intermediate field, prove primitive monodromy, select a bounded
+   172	topological degree, control all components of `A(F)`, decide smoothness of
+   173	`Y`, or prove JC2. The proposed next discriminator `BD-D2` is not promoted:
+   174	it asks whether a degree-two finite-flat branched cover in this sandwich can
+   175	be ruled out using the topology of the complement and the geometry at
+   176	infinity. It requires its own producer and hostile review.
+   177	
+   178	<!-- BODY-END -->
+   179	
+   180	## Seal
+   181	
+   182	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   183	  including its terminating newline; this seal is outside the body.
+   184	- Body bytes: `8285`.
+   185	- Body SHA-256:
+   186	  `85db7afd1e8b9f1039bbf977b78a6ea1f64cef9b6fb9323f2233281cf1be6e9f`.
+   187	- Frozen basis: `0f7ee003be45ee40d51d4048897cdacf63821172`.
+
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md | nl -ba | sed -n '1,120p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: intermediate block descent becomes an étale sandwich
+     2	
+     3	Coordinator: Sol 5.6 Ultra  
+     4	Date: 2026-08-30 UTC  
+     5	Frozen basis: `0f7ee003be45ee40d51d4048897cdacf63821172`  
+     6	Lifecycle: **BINDING PROMOTION / CONDITIONAL STRUCTURE THEOREM / FORMER PRIMITIVITY ROUTE STOPPED**
+     7	
+     8	## 0. Custody and disposition
+     9	
+    10	The reviewed proposal is Opus cross-pollination section 5.3:
+    11	
+    12	```text
+    13	6e48015c296c9677237daee2a21a20195d5fc346e163dbcbaa68b74e46bab296
+    14	  xmodel/ideation-20260829T2254Z-crosspoll-opus5.md
+    15	  body 53234 / 647bca6600e31816c1f7ac14f2b061d7be574cf653d7102ac063375627d0346b
+    16	```
+    17	
+    18	Fable 5 independently audited the local algebra, purity/discriminant
+    19	argument, finite-étale endgame, controls, and minimal-degree consequence,
+    20	returning `CONFIRM_WITH_CORRECTIONS`:
+    21	
+    22	```text
+    23	bc88ca78c303553555dee3e94f16cbef6e81ea187cd201b73e6d700ccc821992
+    24	  hostile review, 38440 bytes through BODY-END
+    25	213da698fcc910dbc119573e8d4d6a09ebcd839ba39f1acc9d2b1fa9ba794a66
+    26	  lane log
+    27	ecbf087ea4d9b86b2a3ae11007eebbf2b0928b8a96c3d21cf2ed3443cf428ad2
+    28	  prompt
+    29	fa91382a3103312a70ae48ee6f55daf710a916971400e230c385cbaac5701f85
+    30	  run receipt
+    31	```
+    32	
+    33	The review finds that the proposed codimension-one condition is not a new
+    34	hypothesis to prove: for every nontrivial block it is false. The surviving
+    35	result is the conservative block-structure theorem below. This integration
+    36	repairs the review's special-fibre cardinality argument before promotion and
+    37	withholds only its citation-dependent polynomial-parametrization decoration.
+    38	
+    39	## 1. Promoted theorem
+    40	
+    41	Let `F=(f,g): A^2_C -> A^2_C` be a non-invertible Keller map. Let
+    42	
+    43	```text
+    44	C(f,g) proper-subfield K proper-subfield C(x,y),
+    45	d1=[C(x,y):K] >= 2,       d2=[K:C(f,g)] >= 2,
+    46	```
+    47	
+    48	and let `B_K` be the integral closure of `C[f,g]` in `K`. Put
+    49	`Y=Spec(B_K)`. The inclusions factor `F` as
+    50	
+    51	```text
+    52	A^2 --g1--> Y --g2--> A^2.
+    53	```
+    54	
+    55	Then the following hold, without a minimal-topological-degree assumption.
+    56	
+    57	1. `B_K` is contained in `C[x,y]` and is module-finite over `C[f,g]`.
+    58	   Thus `Y` is an integral normal affine surface with function field `K`.
+    59	2. `g2` is finite, flat, and surjective of generic degree `d2`. Its
+    60	   trace-discriminant ideal is nonzero (and principal on `A^2`).
+    61	3. `g1` is dominant and quasi-finite of generic degree `d1`; in fact it is
+    62	   étale everywhere and hence open. It is not finite, proper, or surjective.
+    63	4. If `R` is the non-étale locus of `g2`, then `R` is nonempty and has pure
+    64	   codimension one. Moreover
+    65	
+    66	   ```text
+    67	   g1(A^2) subset Y_sm minus R,       Sing(Y) subset R.
+    68	   ```
+    69	
+    70	   Hence `g1` misses every point of every branch divisor. In particular its
+    71	   image never contains every codimension-one point of `Y`.
+    72	5. With `A(h)` denoting the nonproperness set of a complex polynomial map,
+    73	
+    74	   ```text
+    75	   Y minus g1(A^2) subset A(g1),
+    76	   A(F)=g2(A(g1)),
+    77	   g2(R)=V(Disc(g2)) subset A(F).
+    78	   ```
+    79	
+    80	6. For every closed point `z` of the discriminant curve,
+    81	
+    82	   ```text
+    83	   #F^{-1}(z) <= (d2-1)*d1 = deg(F)-d1.
+    84	   ```
+    85	
+    86	   For every closed `z` outside `A(F)`, the fibre has exactly `deg(F)`
+    87	   points.
+    88	7. `Y` is not isomorphic to `A^2`.
+    89	
+    90	This is conditional structure on a hypothetical counterexample and a proper
+    91	intermediate field. It proves neither that such a field exists nor that a
+    92	counterexample exists.
+    93	
+    94	## 2. Load-bearing arguments
+    95	
+    96	The containment `B_K subset C[x,y]` follows because an element of `B_K` is
+    97	integral over `C[f,g]`, hence over `C[x,y]`, and lies in `C(x,y)`, while
+    98	`C[x,y]` is integrally closed. Finiteness of the normalization in the finite
+    99	separable field extension gives the finite map `g2`. Normal surfaces are
+   100	Cohen--Macaulay, so miracle flatness over the regular target makes `g2`
+   101	finite flat; integrality makes it surjective.
+   102	
+   103	The non-obvious strengthening is completion rigidity. At a closed point
+   104	`x`, with `y=g1(x)` and `z=F(x)`, étaleness of `F` identifies the completed
+   105	local rings at `z` and `x`. Quasi-finiteness of `g1` makes the completed
+   106	local ring at `x` finite over that at `y`. Excellence and normality make the
+   107	completed local ring at `y` a two-dimensional normal domain. The intervening
+   108	map has height-zero kernel and is surjective because its composite is the
+   109	completion isomorphism; it is therefore itself an isomorphism. Flatness and
+   110	unramifiedness descend, so both `g1` at `x` and `g2` at `y` are étale. Since
+   111	the schemes are Jacobson, this holds everywhere on the image. Thus the image
+   112	of `g1` is open and disjoint from `R` and from `Sing(Y)`.
+   113	
+   114	If `R` were empty, the connected finite cover `g2` would be finite étale over
+   115	`A^2_C`, hence trivial, contradicting `d2>=2`. Purity (equivalently here the
+   116	finite-flat discriminant support together with branch purity) makes the
+   117	nonempty branch locus divisorial. This proves that the codimension-one image
+   118	antecedent fails rather than remaining an open bridge.
+   119	
+   120	Finite `g2` is proper, which gives the composition identity
+
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md | nl -ba | sed -n '1,100p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: Galois block obstruction and no two-block system
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Coordinator: Sol 5.6 Ultra  
+     5	Frozen basis: `0d7544ebd5cb12def6bac892646010301098be3c`  
+     6	Lifecycle: **BINDING INTEGRATION / DIFFERENT-MODEL-CONFIRMED BLOCK THEOREM**
+     7	
+     8	## 0. Evidence and disposition
+     9	
+    10	This integration binds the conservative intersection of
+    11	
+    12	```text
+    13	766a843a25eaf560840f15afa8971dd39246fc8b15290491d18e7f4a4c6bb7f7
+    14	  xmodel/block-descent-d2-galois-obstruction-producer-sol56-20260830.md
+    15	e324c104d06ad9e987cfe304ee001e52a58d91eaba941b80c78555a058056df9
+    16	  xmodel/block-descent-d2-galois-obstruction-hostile-review-opus5-20260830.md
+    17	ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
+    18	  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+    19	```
+    20	
+    21	The Opus verdict is `CONFIRM_WITH_CORRECTIONS`.  It independently rebuilt
+    22	the missed-principal-divisor lemma, fixed-sheet theorem, Galois-uniformity
+    23	contradiction, rank-two trace-zero proof, and group-theoretic translation.
+    24	No mathematical gap was found in `BD-GAL` or `BD-D2`.  This file incorporates
+    25	the review's shorter proof, residue-degree accounting, and terminology
+    26	repairs rather than preserving the producer's avoidable ambiguities.
+    27	
+    28	## 1. Binding theorem
+    29	
+    30	Let `F=(f,g):A^2_C->A^2_C` be a hypothetical non-invertible Keller map and
+    31	let
+    32	
+    33	```text
+    34	C(f,g) proper-subfield K proper-subfield C(x,y),
+    35	d1=[C(x,y):K]>=2,             d2=[K:C(f,g)]>=2.
+    36	```
+    37	
+    38	For the promoted factorization
+    39	
+    40	```text
+    41	A^2 --g1, etale quasi-finite--> Y=Spec(B_K)
+    42	    --g2, finite flat--> A^2,
+    43	```
+    44	
+    45	write `R` for the non-etale locus of `g2`.  Then:
+    46	
+    47	1. **Missed principal divisors.**  No nonzero nonunit `b in B_K` has
+    48	   `V_Y(b) subset Y minus g1(A^2)`.  Indeed, its pullback would be a
+    49	   nowhere-zero polynomial on `A^2`, hence a scalar unit, and the literal
+    50	   inclusion `B_K subset C[x,y]` makes `b` the same scalar.
+    51	2. **Fixed sheet over every prime divisor.**  For every irreducible
+    52	   `p in C[f,g]`, at least one component of `g2^{-1}(V(p))` dominates
+    53	   `V(p)` and is generically unramified.  The shortest proof applies item 1
+    54	   directly to `b=p`: if all components were inside `R`, the whole principal
+    55	   divisor would be missed.  If the primes above `(p)` have ramification and
+    56	   residue degrees `(e_i,f_i)`, geometric inertia fixes exactly
+    57	   `sum_(e_i=1) f_i` sheets, and this sum is at least one.
+    58	3. **No proper Galois quotient.**  The extension `K/C(f,g)` is not Galois.
+    59	   Otherwise transitivity of the Galois group on primes over a height-one
+    60	   prime makes every `e_i` equal.  A component of the nonempty branch support
+    61	   supplies an `e_i>1`, while item 2 supplies an `e_i=1`, a contradiction.
+    62	   Normality, not smoothness of `Y`, is enough for the height-one DVR
+    63	   argument; characteristic zero supplies separable residue extensions and
+    64	   tame divisorial ramification.
+    65	4. **No two-block system.**  In particular `d2!=2`, because every quadratic
+    66	   extension in characteristic zero is Galois.  In monodromy notation
+    67	   `H subset J subset G`, this says `[G:J]!=2` and `J` is not normal in `G`.
+    68	   It says nothing about the block size `[J:H]`; in particular it does not
+    69	   exclude `d1=2`.
+    70	5. **Structural corollaries.**  `B_K` is nonfactorial and nonmonogenic over
+    71	   `C[f,g]`.  The rank-two direct proof writes a hypothetical degree-two
+    72	   algebra globally as `A[w]/(w^2-h)`; its ramification set is the nonempty
+    73	   principal divisor `V_Y(w)`, contradicting item 1.  This second proof is
+    74	   independent of the Galois-uniformity argument, but shares the same source-
+    75	   unit mechanism and is not advertised as logically independent of item 1.
+    76	
+    77	“Branch” and “discriminant” agree here only at the level of support.  No
+    78	divisor multiplicities are identified.  A fixed sheet of `g2` is a fixed
+    79	block of the full map; it is not necessarily a single source sheet.
+    80	
+    81	## 2. Independently checked strengthenings
+    82	
+    83	The reviewer derived the following two claims.  The coordinator checked
+    84	their proofs directly against the promoted sandwich; they are included with
+    85	their exact global scope.
+    86	
+    87	**Class-lattice injection.**  Let `Z=Y minus g1(A^2)`.  The free abelian
+    88	group on the codimension-one components of `Z` injects into `Cl(Y)`.  If a
+    89	divisor supported in `Z` were `div(b)`, then both `b` and `b^{-1}` would be
+    90	regular on `g1(A^2)`.  Their pullbacks would be mutually inverse polynomials
+    91	on `A^2`, hence scalars; the function-field inclusion then makes `b` scalar.
+    92	Thus every ramification-component class has infinite order and `Cl(Y)` is
+    93	infinite whenever `R` is nonempty.
+    94	
+    95	**Nonprincipal different.**  The relative dual
+    96	
+    97	```text
+    98	omega_(B_K/A)=Hom_A(B_K,A)
+    99	```
+   100	
+
+exec
+/bin/zsh -lc "git show dca72076aa1615b0b1286fd4428a1acac7b65963:xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md | nl -ba | sed -n '101,180p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   101	is not a free `B_K`-module, equivalently the different is not principal.
+   102	If a generator existed, its effective divisor would be
+   103	`sum_T(e_T-1)T`, supported exactly on the nonempty codimension-one
+   104	ramification locus in characteristic zero.  It would give a nonempty
+   105	principal closed set inside `R`, contradicting item 1.  Consequently there
+   106	is no global complete-intersection presentation of this finite algebra over
+   107	`A`.  This statement does **not** assert that the finite morphism is nowhere
+   108	locally complete intersection: an invertible but nonfree dualizing module is
+   109	not excluded by the argument.
+   110	
+   111	## 3. Prior-art boundary
+   112	
+   113	A targeted source check confirms that the full-extension Galois case is
+   114	classical, beginning with Campbell (1973), with later Razar/Wright results.
+   115	The check found no indexed statement of the exact proper-intermediate theorem,
+   116	but a negative targeted search is not novelty evidence.  The mathematical
+   117	claim here is internal and reviewed; no external novelty claim is made.
+   118	
+   119	The source record is:
+   120	
+   121	```text
+   122	b75c56add2dcd846654e627ab10bde1a0bea62b857db004f64b77da46e41b741
+   123	  xmodel/block-descent-galois-prior-art-targeted-check-sol56-20260830.md
+   124	```
+   125	
+   126	## 4. Exact boundary and successor
+   127	
+   128	Promoted:
+   129	
+   130	```text
+   131	proper Galois block quotient: impossible;
+   132	two-block quotient d2=2:       impossible;
+   133	every divisorial inertia:      at least one fixed block;
+   134	ramification class lattice:    injects into Cl(Y);
+   135	different / relative dual:     nonprincipal / nonfree.
+   136	```
+   137	
+   138	Not proved: `d1!=2`; exclusion of any non-Galois `d2>=3`; primitive
+   139	monodromy; parity of the total degree; smoothness of `Y`; properness or
+   140	surjectivity of `g1`; existence of a block; a counterexample; or JC2.
+   141	
+   142	The next block discriminator is cubic and must use the `A^2` first leg, not
+   143	only cover-side finite algebra.  The affine-linear Miranda subfamily and its
+   144	logarithmic first-leg obstruction are separate review-gated packets at this
+   145	seal; they are not promoted by this integration.
+   146	
+   147	<!-- BODY-END -->
+   148	
+   149	## Seal
+   150	
+   151	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   152	  including its terminating newline; this seal is outside the body.
+   153	- Body bytes: `6637`.
+   154	- Body SHA-256:
+   155	  `f3668b3ec1c7fd5caefe8b0421548327fc990426b6a04f37083ef7b907475ca1`.
+   156	- Frozen basis: `0d7544ebd5cb12def6bac892646010301098be3c`.
+
+codex
+The underlying block integrations give the needed scope: the finite-flat normal block, the dominant etale first leg, `B_K subset C[x,y]`, and the nonmonogenic obstruction. The main mathematical weak spot is not the core dichotomy; it is the producer’s custody wording around a provisional smooth packet and the need to spell out a couple of local/projective checks instead of charging them silently.
+exec
+/bin/zsh -lc "test -e xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md; printf '%s\\n' "'$?' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+1
+
+codex
+I have enough to write the review. I’m going to record a `CONFIRM_WITH_CORRECTIONS`: the dichotomy survives, but the report needs custody and proof-strength repairs around the provisional smooth input, the Stein bridge, the exact form of the repeated-component list, and the discriminant degree argument.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md
+diff --git a/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..cae38a1625f666cf7a465548fd466407643b11b1
+--- /dev/null
++++ b/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,342 @@
++# Hostile review: nonnormal quadratic content-cone dichotomy
++
++Verdict: **CONFIRM_WITH_CORRECTIONS**.
++
++I read the sealed producer
++`xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md`
++at commit `dca72076aa1615b0b1286fd4428a1acac7b65963`; its full-file SHA-256
++matches `6b324824e0c075b938bd5b7015d4e8d134bad7cb845ac7597212b61d91dfa7a5`.
++I also read the three named inputs and the underlying block/nonmonogenic
++integrations used by Sections 5-6. The core algebraic dichotomy is correct,
++but promotion should include the repairs below.
++
++## Input custody
++
++Confirmed hashes read:
++
++```text
++c8dee3199ecfaf73b6debedea625346a11babbe42082cff5bff049f8585763c2
++  xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md
++
++410de2f569e2ad5599152fdd9414198f012dbdced7d17c5a51dde0096fe4601e
++  xmodel/bd-fix3-quadratic-discriminant-conductor-coordinator-integration-sol56-20260830.md
++
++ac7ef8f5321f579d5e193b6ae3a9b0f1aa2a64421050bb71426b94258d984ffb
++  xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md
++
++ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
++  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
++
++f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
++  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
++```
++
++Custody correction: the target calls all three displayed clients "promoted" at
++lines 67-79, but `bd-a2-smooth-quadratic-degeneracy-absorption...` is itself
++marked `EXACT PROVISIONAL PRODUCER / DIFFERENT-MODEL REVIEW REQUIRED` at its
++lines 1-7. The finite common-zero and Stein bridge facts used here are true,
++but they must be promoted by the present proof, not by silently treating that
++provisional packet as binding.
++
++## 1. Miranda table and intrinsic content
++
++Status: **CONFIRMED**.
++
++The multiplication table in target lines 83-89 is the standard Miranda table
++for a trace-zero basis. Directly, for `t=r*z+s*w`,
++
++```text
++t^2_E =
++  (a r^2 - 2 d r s + c s^2) z
++ +(b r^2 - 2 a r s + d s^2) w,
++```
++
++so
++
++```text
++det((r,s), t^2_E)
++= b r^3 - 3 a r^2 s + 3 d r s^2 - c s^3 = Phi(r,s).
++```
++
++A global trace-zero basis change is an element of `GL_2(C[u,v])`, whose
++determinant is in `C^*`. The binary-cubic coefficient vector is carried by the
++rank-four binary-cubic representation with a determinant twist, and both the
++matrix and inverse have entries in `C[u,v]`. Therefore the ideal `(a,b,c,d)`
++is unchanged. The discriminant principal ideal, the branch support, the local
++orders `ord_q(I_B)`, and the minimum coefficient degree over all bases are
++intrinsic to the fixed algebra.
++
++Repair: keep saying that the leading form at infinity, the divisor `H`,
++projective coefficient basepoints, and projective normality are presentation
++data. They are not invariants of the cubic algebra. The target already says
++this at lines 114-120; retain it.
++
++The proof that `V(I_B)` has no height-one component is correct. At the generic
++DVR of such a component, the special fibre would be `kappa direct-sum V` with
++`V^2=0`. A normal finite rank-three order over a DVR has semilocal Dedekind
++localization; a length-three local fibre is either unramified of residue degree
++three or totally ramified of ramification index three, and the latter has
++radical square nonzero. Thus this fibre cannot occur.
++
++## 2. Affine R1 criterion
++
++Status: **CONFIRMED WITH REQUIRED PROOF INSERTION**.
++
++The criterion
++
++```text
++X_aff normal iff I_B is not contained in m_q^2 for every q in V(I_B)
++```
++
++is correct.
++
++The missing insertion is the full Stein bridge. For
++`pi_0:A^2 x P^1 -> A^2`, the sequence
++
++```text
++0 -> O(-3) --Phi--> O -> O_X_aff -> 0
++```
++
++pushes forward to a locally free rank-three algebra. Off the finite set
++`Z=V(I_B)`, the incidence is finite and is the Miranda cubic algebra. Since
++both this pushforward and `B` are reflexive over the regular surface `A^2`,
++the algebra isomorphism extends uniquely across `Z`; multiplication extends
++because it agrees on the dense open. This proves the Stein morphism
++`X_aff -> Spec(B)`, isomorphic off `Z`, and identifies the exceptional fibre
++over `q in Z` with `{q} x P^1`.
++
++At such a `q`, write
++
++```text
++Phi=s*p(X,Y)+t*r(X,Y)+terms in (s,t)^2.
++```
++
++Along `E_q`, fibre derivatives vanish and the two base derivatives are
++`p,r`. The generic point of `E_q` is singular exactly when `p=r=0` as binary
++cubics, equivalently every coefficient has zero first jet, equivalently
++`I_B subset m_q^2`. If not, the singular points on `E_q` are a finite
++zero-scheme in `P^1`, hence codimension two on the surface. Since `X_aff` is
++an integral hypersurface, it is `S_2`; Serre then gives the criterion. No other
++affine codimension-one nonnormal locus remains, because away from the
++exceptional curves the Stein map is an isomorphism to the normal surface
++`Spec(B)`.
++
++## 3. Quadratic content cone
++
++Status: **CONFIRMED WITH WORDING REPAIR**.
++
++If `I_B subset m_q^2`, translate `q` to the origin. Degree at most two then
++makes all four coefficients homogeneous quadratics. With
++
++```text
++deg(s)=deg(t)=1,  deg(z)=deg(w)=2,
++```
++
++the Miranda table is homogeneous and
++
++```text
++B=C[s,t] direct-sum C[s,t](-2)z direct-sum C[s,t](-2)w.
++```
++
++The ring is a connected positively graded normal domain finite over
++`C[s,t]`. Hence `C0=Proj(B)` is a smooth projective integral curve finite of
++degree three over `P^1`, with `O_C0(1)` the pullback of `O_P1(1)`. For large
++`n`, and already for `n>=2`,
++
++```text
++dim_C B_n=(n+1)+2(n-1)=3n-1.
++```
++
++Riemann-Roch for `O_C0(n)` gives `3n+1-g`, so `g(C0)=2`.
++
++The clean contradiction should be stated function-field first. For any
++nonzero degree-one element `s`,
++
++```text
++Frac(B)=C(C0)(s).
++```
++
++The promoted first leg gives an inclusion `Frac(B) -> C(x,y)`. Therefore
++`C(C0)` embeds in `C(x,y)`, producing a dominant rational map from the rational
++surface `P^2` to `C0`; after resolving indeterminacy this is a morphism from a
++smooth rational surface to a genus-two curve, impossible. This kills the
++content cone and proves affine normality through the R1 test.
++
++Repair: phrase this as a rational-map/function-field contradiction, not as if
++the affine morphism to the cone itself automatically extends to a morphism to
++`Proj(B)` everywhere.
++
++## 4. Projective R1 and repeated components
++
++Status: **CONFIRMED WITH PRECISION REPAIR**.
++
++Because `X_aff` is normal, every divisorial nonnormal locus of `Xbar` lies in
++`H`. Primitivity is correctly handled: a common coefficient divisor other than
++`T=0` gives an affine height-one component of `V(I_B)`, and a common `T`
++factor would mean all affine coefficients have degree at most one, contrary to
++exact quadratic degree. Generic irreducibility plus Gauss gives `Xbar`
++integral, hence `S_2`.
++
++At a reduced generic component of `H`, some tangent derivative in
++`L_infinity x P^1` is nonzero. If an integral component `C` occurs with
++multiplicity `m>=2`, all tangent derivatives vanish generically, and the
++normal derivative is exactly the first normal jet `Phi_1|C`. Thus `C` is a
++generic `R_1` failure exactly when `Phi_1|C=0`.
++
++The repeated integral component list is exhaustive. For class `(2,3)` on
++`P^1 x P^1`, an integral repeated component of class `(alpha,beta)` must
++satisfy `m alpha<=2`, `m beta<=3`, `m>=2`; the only possibilities are:
++
++```text
++2(0,1)+(2,1)
++3(0,1)+(2,0)
++2(1,0)+(0,3)
++2(1,1)+(0,1)
++```
++
++Repair: call this the list of possible repeated integral components with their
++residual classes, not the list of all decompositions of `H`. The residual may
++split further; the later eliminations are componentwise and still apply.
++
++The bidegree convention is internally consistent: `(1,0)` is a vertical fibre
++over a point of `L_infinity`; `(a,1)` maps degree one to `L_infinity` and is a
++section when integral.
++
++## 5. Repeated constant sections and vertical fibres
++
++Status: **CONFIRMED WITH SCOPE REPAIRS**.
++
++For a repeated constant section with fibre value `[r:s]`, repetition gives
++`Phi_2(r,s)=0` and generic nonnormality gives `Phi_1(r,s)=0`; hence
++`Phi(r,s)=Phi_0(r,s) in C`. If this scalar is nonzero, the determinant
++criterion makes `1,t,t^2`, `t=r*z+s*w`, a global basis and `B=A[t]`. If it is
++zero, the generic binary cubic has the fixed root `[r:s]`, impossible for a
++cubic field: the corresponding nonzero trace-zero element would have degree at
++most two over the base field, which cannot occur inside a degree-three field.
++
++The monogenic contradiction is licensed by the binding block theorem:
++`block-descent-galois-coordinator-integration...` promotes nonmonogenicity of
++`B_K` over `C[f,g]` and nonprincipality of the different in its lines 70-107.
++The affine-linear packet also records the exact determinant criterion at its
++lines 71-79.
++
++For a repeated vertical fibre, the descent is valid. If `ell(U,V)` cuts the
++fibre, then
++
++```text
++Phi_2=ell^2 P,  Phi_1=ell Q.
++```
++
++With affine coordinates `p=ell(u,v)` and complementary `r`, all coefficients
++belong to `C[p]`, so the Miranda table defines a finite free rank-three
++`C[p]`-algebra `D` and
++
++```text
++B=D[r].
++```
++
++Since `B` is a normal domain, `D` is a normal domain: an element integral over
++`D` in `Frac(D)` is integral over `D[r]`, hence lies in
++`D[r] cap Frac(D)=D`. The field identity
++`Frac(B)=Frac(D)(r)` and the first-leg function-field inclusion force the
++smooth completion of `Spec(D)` to have genus zero. The structure theorem gives
++`B subset C[x,y]`, so `B^*=C^*` and hence `D^*=C^*`.
++
++As `D` is the integral closure of `C[p]` in its fraction field, `Spec(D)` is
++`P^1` minus the points over `p=infinity`. Over `C`, two or more removed points
++give a nonconstant unit, so exactly one point is removed. Therefore
++`D=C[t]`, and because the finite map to `A^1_p` has degree three, `p=P(t)` has
++degree three. Hence `B=C[p,r][t]`, again monogenic. This excludes hidden
++multi-point, residue-degree, and affine-unit escapes.
++
++Repair: say the unit argument uses both the dominant first-leg inclusion
++`B subset C[x,y]` and algebraic closedness of the ground field; dominance
++alone is not the whole reason.
++
++## 6. Survivor and discriminant degree
++
++Status: **CONFIRMED WITH PROOF DETAIL REQUIRED**.
++
++After the constant and vertical cases are removed, a projective nonnormal
++generic component must be a double irreducible `(1,1)` curve. Thus
++
++```text
++H=2C+L,       C=(Q=0),       L=(0,1),
++```
++
++and unique factorization on `P^1 x P^1` gives
++
++```text
++Phi^h=Q^2 L + T Q S + T^2 R,
++```
++
++with `Q` irreducible of bidegree `(1,1)` and `L,S,R` fibre forms of degrees
++`1,2,3` independent of the base.
++
++The discriminant bound `deg Delta<=6` is also correct, but the proof must
++explicitly handle the direction-dependent fibre change. On a generic affine
++line `(u,v)=lambda*(u0,v0)`, work over `C(theta)` for the direction
++`theta=(u0:v0)`. Since `Q` is irreducible, `Q_theta` is not generically
++proportional to the fixed fibre linear form `L`; use
++
++```text
++x=Q_theta(X,Y),  y=L(X,Y)
++```
++
++as fibre coordinates. The change has determinant `delta(theta) != 0` and is
++independent of `lambda`; the binary-cubic discriminant is multiplied by
++`delta(theta)^6`, also independent of `lambda`. In the affine chart `y=1`, the
++coefficient degrees in `lambda` are bounded by
++
++```text
++c0:0,  c1:1,  c2:2,  c3:1.
++```
++
++Each term of the cubic discriminant has `lambda`-degree at most six. Therefore
++`Delta(lambda*u0,lambda*v0)` has degree at most six for generic direction.
++The coefficients of `lambda^k`, `k>6`, are the restrictions of the homogeneous
++degree-`k` parts of `Delta`; vanishing on a generic direction forces them to be
++zero. No denominator depending only on direction can create a higher total
++degree in `lambda`.
++
++## Maximum theorem safe to promote
++
++The following is safe after the corrections above.
++
++Let `B` be the normal finite-flat integral cubic algebra of a proper cubic
++intermediate block of a hypothetical noninvertible plane Keller map, with the
++promoted dominant first leg and the promoted nonmonogenic obstruction. Suppose
++some global trace-zero Miranda basis has coefficient degrees at most two and
++at least one coefficient has degree exactly two. Then:
++
++```text
++1. The affine incidence X_aff is normal.
++2. If the exact projective quadratic incidence Xbar is nonnormal, then every
++   generic divisorial nonnormal component lies at infinity.
++3. The only surviving repeated type is H=2C+L with C irreducible of bidegree
++   (1,1) and L of bidegree (0,1).
++4. In that case Phi^h=Q^2 L + T Q S + T^2 R, with Q irreducible (1,1), and
++   the intrinsic affine target discriminant satisfies deg Delta<=6.
++```
++
++Do not promote more. The blowup `(T,Q)`, normalization/conductor quartic,
++genus-one obstruction, basis-orbit coverage, polynomial-map construction,
++counterexamples, and any JC2 conclusion remain separate and unproved here.
++
++## Cheapest decisive successor
++
++The cheapest next packet is a local normalization/conductor theorem for
++
++```text
++Phi^h=Q^2 L + T Q S + T^2 R
++```
++
++along the generic double curve `C=(T=Q=0)`. Prove, without CAS, that the
++blowup chart giving `W^2 L+W S+R=0` is the normalization in the required
++cases, compute the conductor over `C`, and split the quartic discriminant into
++square, split, and two-branch cases. Only after that bridge is proved should
++the genus-one heuristic be connected to the promoted rational-boundary forest.
++
++No `jc2-lean` material was inspected or used, and no heavy CAS or Singular
++calculation was run.
++<!-- BODY-END -->
+
+diff --git a/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..cae38a1625f666cf7a465548fd466407643b11b1
+--- /dev/null
++++ b/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,342 @@
++# Hostile review: nonnormal quadratic content-cone dichotomy
++
++Verdict: **CONFIRM_WITH_CORRECTIONS**.
++
++I read the sealed producer
++`xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md`
++at commit `dca72076aa1615b0b1286fd4428a1acac7b65963`; its full-file SHA-256
++matches `6b324824e0c075b938bd5b7015d4e8d134bad7cb845ac7597212b61d91dfa7a5`.
++I also read the three named inputs and the underlying block/nonmonogenic
++integrations used by Sections 5-6. The core algebraic dichotomy is correct,
++but promotion should include the repairs below.
++
++## Input custody
++
++Confirmed hashes read:
++
++```text
++c8dee3199ecfaf73b6debedea625346a11babbe42082cff5bff049f8585763c2
++  xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md
++
++410de2f569e2ad5599152fdd9414198f012dbdced7d17c5a51dde0096fe4601e
++  xmodel/bd-fix3-quadratic-discriminant-conductor-coordinator-integration-sol56-20260830.md
++
++ac7ef8f5321f579d5e193b6ae3a9b0f1aa2a64421050bb71426b94258d984ffb
++  xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md
++
++ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
++  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
++
++f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
++  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
++```
++
++Custody correction: the target calls all three displayed clients "promoted" at
++lines 67-79, but `bd-a2-smooth-quadratic-degeneracy-absorption...` is itself
++marked `EXACT PROVISIONAL PRODUCER / DIFFERENT-MODEL REVIEW REQUIRED` at its
++lines 1-7. The finite common-zero and Stein bridge facts used here are true,
++but they must be promoted by the present proof, not by silently treating that
++provisional packet as binding.
++
++## 1. Miranda table and intrinsic content
++
++Status: **CONFIRMED**.
++
++The multiplication table in target lines 83-89 is the standard Miranda table
++for a trace-zero basis. Directly, for `t=r*z+s*w`,
++
++```text
++t^2_E =
++  (a r^2 - 2 d r s + c s^2) z
++ +(b r^2 - 2 a r s + d s^2) w,
++```
++
++so
++
++```text
++det((r,s), t^2_E)
++= b r^3 - 3 a r^2 s + 3 d r s^2 - c s^3 = Phi(r,s).
++```
++
++A global trace-zero basis change is an element of `GL_2(C[u,v])`, whose
++determinant is in `C^*`. The binary-cubic coefficient vector is carried by the
++rank-four binary-cubic representation with a determinant twist, and both the
++matrix and inverse have entries in `C[u,v]`. Therefore the ideal `(a,b,c,d)`
++is unchanged. The discriminant principal ideal, the branch support, the local
++orders `ord_q(I_B)`, and the minimum coefficient degree over all bases are
++intrinsic to the fixed algebra.
++
++Repair: keep saying that the leading form at infinity, the divisor `H`,
++projective coefficient basepoints, and projective normality are presentation
++data. They are not invariants of the cubic algebra. The target already says
++this at lines 114-120; retain it.
++
++The proof that `V(I_B)` has no height-one component is correct. At the generic
++DVR of such a component, the special fibre would be `kappa direct-sum V` with
++`V^2=0`. A normal finite rank-three order over a DVR has semilocal Dedekind
++localization; a length-three local fibre is either unramified of residue degree
++three or totally ramified of ramification index three, and the latter has
++radical square nonzero. Thus this fibre cannot occur.
++
++## 2. Affine R1 criterion
++
++Status: **CONFIRMED WITH REQUIRED PROOF INSERTION**.
++
++The criterion
++
++```text
++X_aff normal iff I_B is not contained in m_q^2 for every q in V(I_B)
++```
++
++is correct.
++
++The missing insertion is the full Stein bridge. For
++`pi_0:A^2 x P^1 -> A^2`, the sequence
++
++```text
++0 -> O(-3) --Phi--> O -> O_X_aff -> 0
++```
++
++pushes forward to a locally free rank-three algebra. Off the finite set
++`Z=V(I_B)`, the incidence is finite and is the Miranda cubic algebra. Since
++both this pushforward and `B` are reflexive over the regular surface `A^2`,
++the algebra isomorphism extends uniquely across `Z`; multiplication extends
++because it agrees on the dense open. This proves the Stein morphism
++`X_aff -> Spec(B)`, isomorphic off `Z`, and identifies the exceptional fibre
++over `q in Z` with `{q} x P^1`.
++
++At such a `q`, write
++
++```text
++Phi=s*p(X,Y)+t*r(X,Y)+terms in (s,t)^2.
++```
++
++Along `E_q`, fibre derivatives vanish and the two base derivatives are
++`p,r`. The generic point of `E_q` is singular exactly when `p=r=0` as binary
++cubics, equivalently every coefficient has zero first jet, equivalently
++`I_B subset m_q^2`. If not, the singular points on `E_q` are a finite
++zero-scheme in `P^1`, hence codimension two on the surface. Since `X_aff` is
++an integral hypersurface, it is `S_2`; Serre then gives the criterion. No other
++affine codimension-one nonnormal locus remains, because away from the
++exceptional curves the Stein map is an isomorphism to the normal surface
++`Spec(B)`.
++
++## 3. Quadratic content cone
++
++Status: **CONFIRMED WITH WORDING REPAIR**.
++
++If `I_B subset m_q^2`, translate `q` to the origin. Degree at most two then
++makes all four coefficients homogeneous quadratics. With
++
++```text
++deg(s)=deg(t)=1,  deg(z)=deg(w)=2,
++```
++
++the Miranda table is homogeneous and
++
++```text
++B=C[s,t] direct-sum C[s,t](-2)z direct-sum C[s,t](-2)w.
++```
++
++The ring is a connected positively graded normal domain finite over
++`C[s,t]`. Hence `C0=Proj(B)` is a smooth projective integral curve finite of
++degree three over `P^1`, with `O_C0(1)` the pullback of `O_P1(1)`. For large
++`n`, and already for `n>=2`,
++
++```text
++dim_C B_n=(n+1)+2(n-1)=3n-1.
++```
++
++Riemann-Roch for `O_C0(n)` gives `3n+1-g`, so `g(C0)=2`.
++
++The clean contradiction should be stated function-field first. For any
++nonzero degree-one element `s`,
++
++```text
++Frac(B)=C(C0)(s).
++```
++
++The promoted first leg gives an inclusion `Frac(B) -> C(x,y)`. Therefore
++`C(C0)` embeds in `C(x,y)`, producing a dominant rational map from the rational
++surface `P^2` to `C0`; after resolving indeterminacy this is a morphism from a
++smooth rational surface to a genus-two curve, impossible. This kills the
++content cone and proves affine normality through the R1 test.
++
++Repair: phrase this as a rational-map/function-field contradiction, not as if
++the affine morphism to the cone itself automatically extends to a morphism to
++`Proj(B)` everywhere.
++
++## 4. Projective R1 and repeated components
++
++Status: **CONFIRMED WITH PRECISION REPAIR**.
++
++Because `X_aff` is normal, every divisorial nonnormal locus of `Xbar` lies in
++`H`. Primitivity is correctly handled: a common coefficient divisor other than
++`T=0` gives an affine height-one component of `V(I_B)`, and a common `T`
++factor would mean all affine coefficients have degree at most one, contrary to
++exact quadratic degree. Generic irreducibility plus Gauss gives `Xbar`
++integral, hence `S_2`.
++
++At a reduced generic component of `H`, some tangent derivative in
++`L_infinity x P^1` is nonzero. If an integral component `C` occurs with
++multiplicity `m>=2`, all tangent derivatives vanish generically, and the
++normal derivative is exactly the first normal jet `Phi_1|C`. Thus `C` is a
++generic `R_1` failure exactly when `Phi_1|C=0`.
++
++The repeated integral component list is exhaustive. For class `(2,3)` on
++`P^1 x P^1`, an integral repeated component of class `(alpha,beta)` must
++satisfy `m alpha<=2`, `m beta<=3`, `m>=2`; the only possibilities are:
++
++```text
++2(0,1)+(2,1)
++3(0,1)+(2,0)
++2(1,0)+(0,3)
++2(1,1)+(0,1)
++```
++
++Repair: call this the list of possible repeated integral components with their
++residual classes, not the list of all decompositions of `H`. The residual may
++split further; the later eliminations are componentwise and still apply.
++
++The bidegree convention is internally consistent: `(1,0)` is a vertical fibre
++over a point of `L_infinity`; `(a,1)` maps degree one to `L_infinity` and is a
++section when integral.
++
++## 5. Repeated constant sections and vertical fibres
++
++Status: **CONFIRMED WITH SCOPE REPAIRS**.
++
++For a repeated constant section with fibre value `[r:s]`, repetition gives
++`Phi_2(r,s)=0` and generic nonnormality gives `Phi_1(r,s)=0`; hence
++`Phi(r,s)=Phi_0(r,s) in C`. If this scalar is nonzero, the determinant
++criterion makes `1,t,t^2`, `t=r*z+s*w`, a global basis and `B=A[t]`. If it is
++zero, the generic binary cubic has the fixed root `[r:s]`, impossible for a
++cubic field: the corresponding nonzero trace-zero element would have degree at
++most two over the base field, which cannot occur inside a degree-three field.
++
++The monogenic contradiction is licensed by the binding block theorem:
++`block-descent-galois-coordinator-integration...` promotes nonmonogenicity of
++`B_K` over `C[f,g]` and nonprincipality of the different in its lines 70-107.
++The affine-linear packet also records the exact determinant criterion at its
++lines 71-79.
++
++For a repeated vertical fibre, the descent is valid. If `ell(U,V)` cuts the
++fibre, then
++
++```text
++Phi_2=ell^2 P,  Phi_1=ell Q.
++```
++
++With affine coordinates `p=ell(u,v)` and complementary `r`, all coefficients
++belong to `C[p]`, so the Miranda table defines a finite free rank-three
++`C[p]`-algebra `D` and
++
++```text
++B=D[r].
++```
++
++Since `B` is a normal domain, `D` is a normal domain: an element integral over
++`D` in `Frac(D)` is integral over `D[r]`, hence lies in
++`D[r] cap Frac(D)=D`. The field identity
++`Frac(B)=Frac(D)(r)` and the first-leg function-field inclusion force the
++smooth completion of `Spec(D)` to have genus zero. The structure theorem gives
++`B subset C[x,y]`, so `B^*=C^*` and hence `D^*=C^*`.
++
++As `D` is the integral closure of `C[p]` in its fraction field, `Spec(D)` is
++`P^1` minus the points over `p=infinity`. Over `C`, two or more removed points
++give a nonconstant unit, so exactly one point is removed. Therefore
++`D=C[t]`, and because the finite map to `A^1_p` has degree three, `p=P(t)` has
++degree three. Hence `B=C[p,r][t]`, again monogenic. This excludes hidden
++multi-point, residue-degree, and affine-unit escapes.
++
++Repair: say the unit argument uses both the dominant first-leg inclusion
++`B subset C[x,y]` and algebraic closedness of the ground field; dominance
++alone is not the whole reason.
++
++## 6. Survivor and discriminant degree
++
++Status: **CONFIRMED WITH PROOF DETAIL REQUIRED**.
++
++After the constant and vertical cases are removed, a projective nonnormal
++generic component must be a double irreducible `(1,1)` curve. Thus
++
++```text
++H=2C+L,       C=(Q=0),       L=(0,1),
++```
++
++and unique factorization on `P^1 x P^1` gives
++
++```text
++Phi^h=Q^2 L + T Q S + T^2 R,
++```
++
++with `Q` irreducible of bidegree `(1,1)` and `L,S,R` fibre forms of degrees
++`1,2,3` independent of the base.
++
++The discriminant bound `deg Delta<=6` is also correct, but the proof must
++explicitly handle the direction-dependent fibre change. On a generic affine
++line `(u,v)=lambda*(u0,v0)`, work over `C(theta)` for the direction
++`theta=(u0:v0)`. Since `Q` is irreducible, `Q_theta` is not generically
++proportional to the fixed fibre linear form `L`; use
++
++```text
++x=Q_theta(X,Y),  y=L(X,Y)
++```
++
++as fibre coordinates. The change has determinant `delta(theta) != 0` and is
++independent of `lambda`; the binary-cubic discriminant is multiplied by
++`delta(theta)^6`, also independent of `lambda`. In the affine chart `y=1`, the
++coefficient degrees in `lambda` are bounded by
++
++```text
++c0:0,  c1:1,  c2:2,  c3:1.
++```
++
++Each term of the cubic discriminant has `lambda`-degree at most six. Therefore
++`Delta(lambda*u0,lambda*v0)` has degree at most six for generic direction.
++The coefficients of `lambda^k`, `k>6`, are the restrictions of the homogeneous
++degree-`k` parts of `Delta`; vanishing on a generic direction forces them to be
++zero. No denominator depending only on direction can create a higher total
++degree in `lambda`.
++
++## Maximum theorem safe to promote
++
++The following is safe after the corrections above.
++
++Let `B` be the normal finite-flat integral cubic algebra of a proper cubic
++intermediate block of a hypothetical noninvertible plane Keller map, with the
++promoted dominant first leg and the promoted nonmonogenic obstruction. Suppose
++some global trace-zero Miranda basis has coefficient degrees at most two and
++at least one coefficient has degree exactly two. Then:
++
++```text
++1. The affine incidence X_aff is normal.
++2. If the exact projective quadratic incidence Xbar is nonnormal, then every
++   generic divisorial nonnormal component lies at infinity.
++3. The only surviving repeated type is H=2C+L with C irreducible of bidegree
++   (1,1) and L of bidegree (0,1).
++4. In that case Phi^h=Q^2 L + T Q S + T^2 R, with Q irreducible (1,1), and
++   the intrinsic affine target discriminant satisfies deg Delta<=6.
++```
++
++Do not promote more. The blowup `(T,Q)`, normalization/conductor quartic,
++genus-one obstruction, basis-orbit coverage, polynomial-map construction,
++counterexamples, and any JC2 conclusion remain separate and unproved here.
++
++## Cheapest decisive successor
++
++The cheapest next packet is a local normalization/conductor theorem for
++
++```text
++Phi^h=Q^2 L + T Q S + T^2 R
++```
++
++along the generic double curve `C=(T=Q=0)`. Prove, without CAS, that the
++blowup chart giving `W^2 L+W S+R=0` is the normalization in the required
++cases, compute the conductor over `C`, and split the quartic discriminant into
++square, split, and two-branch cases. Only after that bridge is proved should
++the genus-one heuristic be connected to the promoted rational-boundary forest.
++
++No `jc2-lean` material was inspected or used, and no heavy CAS or Singular
++calculation was run.
++<!-- BODY-END -->
+
+codex
+The report is written. I’m doing a narrow sanity check now: path, size, and final sentinel only.
+exec
+/bin/zsh -lc 'wc -c xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   13335 xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md
+
+exec
+/bin/zsh -lc 'tail -n 3 xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+No `jc2-lean` material was inspected or used, and no heavy CAS or Singular
+calculation was run.
+<!-- BODY-END -->
+
+diff --git a/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..cae38a1625f666cf7a465548fd466407643b11b1
+--- /dev/null
++++ b/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,342 @@
++# Hostile review: nonnormal quadratic content-cone dichotomy
++
++Verdict: **CONFIRM_WITH_CORRECTIONS**.
++
++I read the sealed producer
++`xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md`
++at commit `dca72076aa1615b0b1286fd4428a1acac7b65963`; its full-file SHA-256
++matches `6b324824e0c075b938bd5b7015d4e8d134bad7cb845ac7597212b61d91dfa7a5`.
++I also read the three named inputs and the underlying block/nonmonogenic
++integrations used by Sections 5-6. The core algebraic dichotomy is correct,
++but promotion should include the repairs below.
++
++## Input custody
++
++Confirmed hashes read:
++
++```text
++c8dee3199ecfaf73b6debedea625346a11babbe42082cff5bff049f8585763c2
++  xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md
++
++410de2f569e2ad5599152fdd9414198f012dbdced7d17c5a51dde0096fe4601e
++  xmodel/bd-fix3-quadratic-discriminant-conductor-coordinator-integration-sol56-20260830.md
++
++ac7ef8f5321f579d5e193b6ae3a9b0f1aa2a64421050bb71426b94258d984ffb
++  xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md
++
++ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
++  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
++
++f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
++  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
++```
++
++Custody correction: the target calls all three displayed clients "promoted" at
++lines 67-79, but `bd-a2-smooth-quadratic-degeneracy-absorption...` is itself
++marked `EXACT PROVISIONAL PRODUCER / DIFFERENT-MODEL REVIEW REQUIRED` at its
++lines 1-7. The finite common-zero and Stein bridge facts used here are true,
++but they must be promoted by the present proof, not by silently treating that
++provisional packet as binding.
++
++## 1. Miranda table and intrinsic content
++
++Status: **CONFIRMED**.
++
++The multiplication table in target lines 83-89 is the standard Miranda table
++for a trace-zero basis. Directly, for `t=r*z+s*w`,
++
++```text
++t^2_E =
++  (a r^2 - 2 d r s + c s^2) z
++ +(b r^2 - 2 a r s + d s^2) w,
++```
++
++so
++
++```text
++det((r,s), t^2_E)
++= b r^3 - 3 a r^2 s + 3 d r s^2 - c s^3 = Phi(r,s).
++```
++
++A global trace-zero basis change is an element of `GL_2(C[u,v])`, whose
++determinant is in `C^*`. The binary-cubic coefficient vector is carried by the
++rank-four binary-cubic representation with a determinant twist, and both the
++matrix and inverse have entries in `C[u,v]`. Therefore the ideal `(a,b,c,d)`
++is unchanged. The discriminant principal ideal, the branch support, the local
++orders `ord_q(I_B)`, and the minimum coefficient degree over all bases are
++intrinsic to the fixed algebra.
++
++Repair: keep saying that the leading form at infinity, the divisor `H`,
++projective coefficient basepoints, and projective normality are presentation
++data. They are not invariants of the cubic algebra. The target already says
++this at lines 114-120; retain it.
++
++The proof that `V(I_B)` has no height-one component is correct. At the generic
++DVR of such a component, the special fibre would be `kappa direct-sum V` with
++`V^2=0`. A normal finite rank-three order over a DVR has semilocal Dedekind
++localization; a length-three local fibre is either unramified of residue degree
++three or totally ramified of ramification index three, and the latter has
++radical square nonzero. Thus this fibre cannot occur.
++
++## 2. Affine R1 criterion
++
++Status: **CONFIRMED WITH REQUIRED PROOF INSERTION**.
++
++The criterion
++
++```text
++X_aff normal iff I_B is not contained in m_q^2 for every q in V(I_B)
++```
++
++is correct.
++
++The missing insertion is the full Stein bridge. For
++`pi_0:A^2 x P^1 -> A^2`, the sequence
++
++```text
++0 -> O(-3) --Phi--> O -> O_X_aff -> 0
++```
++
++pushes forward to a locally free rank-three algebra. Off the finite set
++`Z=V(I_B)`, the incidence is finite and is the Miranda cubic algebra. Since
++both this pushforward and `B` are reflexive over the regular surface `A^2`,
++the algebra isomorphism extends uniquely across `Z`; multiplication extends
++because it agrees on the dense open. This proves the Stein morphism
++`X_aff -> Spec(B)`, isomorphic off `Z`, and identifies the exceptional fibre
++over `q in Z` with `{q} x P^1`.
++
++At such a `q`, write
++
++```text
++Phi=s*p(X,Y)+t*r(X,Y)+terms in (s,t)^2.
++```
++
++Along `E_q`, fibre derivatives vanish and the two base derivatives are
++`p,r`. The generic point of `E_q` is singular exactly when `p=r=0` as binary
++cubics, equivalently every coefficient has zero first jet, equivalently
++`I_B subset m_q^2`. If not, the singular points on `E_q` are a finite
++zero-scheme in `P^1`, hence codimension two on the surface. Since `X_aff` is
++an integral hypersurface, it is `S_2`; Serre then gives the criterion. No other
++affine codimension-one nonnormal locus remains, because away from the
++exceptional curves the Stein map is an isomorphism to the normal surface
++`Spec(B)`.
++
++## 3. Quadratic content cone
++
++Status: **CONFIRMED WITH WORDING REPAIR**.
++
++If `I_B subset m_q^2`, translate `q` to the origin. Degree at most two then
++makes all four coefficients homogeneous quadratics. With
++
++```text
++deg(s)=deg(t)=1,  deg(z)=deg(w)=2,
++```
++
++the Miranda table is homogeneous and
++
++```text
++B=C[s,t] direct-sum C[s,t](-2)z direct-sum C[s,t](-2)w.
++```
++
++The ring is a connected positively graded normal domain finite over
++`C[s,t]`. Hence `C0=Proj(B)` is a smooth projective integral curve finite of
++degree three over `P^1`, with `O_C0(1)` the pullback of `O_P1(1)`. For large
++`n`, and already for `n>=2`,
++
++```text
++dim_C B_n=(n+1)+2(n-1)=3n-1.
++```
++
++Riemann-Roch for `O_C0(n)` gives `3n+1-g`, so `g(C0)=2`.
++
++The clean contradiction should be stated function-field first. For any
++nonzero degree-one element `s`,
++
++```text
++Frac(B)=C(C0)(s).
++```
++
++The promoted first leg gives an inclusion `Frac(B) -> C(x,y)`. Therefore
++`C(C0)` embeds in `C(x,y)`, producing a dominant rational map from the rational
++surface `P^2` to `C0`; after resolving indeterminacy this is a morphism from a
++smooth rational surface to a genus-two curve, impossible. This kills the
++content cone and proves affine normality through the R1 test.
++
++Repair: phrase this as a rational-map/function-field contradiction, not as if
++the affine morphism to the cone itself automatically extends to a morphism to
++`Proj(B)` everywhere.
++
++## 4. Projective R1 and repeated components
++
++Status: **CONFIRMED WITH PRECISION REPAIR**.
++
++Because `X_aff` is normal, every divisorial nonnormal locus of `Xbar` lies in
++`H`. Primitivity is correctly handled: a common coefficient divisor other than
++`T=0` gives an affine height-one component of `V(I_B)`, and a common `T`
++factor would mean all affine coefficients have degree at most one, contrary to
++exact quadratic degree. Generic irreducibility plus Gauss gives `Xbar`
++integral, hence `S_2`.
++
++At a reduced generic component of `H`, some tangent derivative in
++`L_infinity x P^1` is nonzero. If an integral component `C` occurs with
++multiplicity `m>=2`, all tangent derivatives vanish generically, and the
++normal derivative is exactly the first normal jet `Phi_1|C`. Thus `C` is a
++generic `R_1` failure exactly when `Phi_1|C=0`.
++
++The repeated integral component list is exhaustive. For class `(2,3)` on
++`P^1 x P^1`, an integral repeated component of class `(alpha,beta)` must
++satisfy `m alpha<=2`, `m beta<=3`, `m>=2`; the only possibilities are:
++
++```text
++2(0,1)+(2,1)
++3(0,1)+(2,0)
++2(1,0)+(0,3)
++2(1,1)+(0,1)
++```
++
++Repair: call this the list of possible repeated integral components with their
++residual classes, not the list of all decompositions of `H`. The residual may
++split further; the later eliminations are componentwise and still apply.
++
++The bidegree convention is internally consistent: `(1,0)` is a vertical fibre
++over a point of `L_infinity`; `(a,1)` maps degree one to `L_infinity` and is a
++section when integral.
++
++## 5. Repeated constant sections and vertical fibres
++
++Status: **CONFIRMED WITH SCOPE REPAIRS**.
++
++For a repeated constant section with fibre value `[r:s]`, repetition gives
++`Phi_2(r,s)=0` and generic nonnormality gives `Phi_1(r,s)=0`; hence
++`Phi(r,s)=Phi_0(r,s) in C`. If this scalar is nonzero, the determinant
++criterion makes `1,t,t^2`, `t=r*z+s*w`, a global basis and `B=A[t]`. If it is
++zero, the generic binary cubic has the fixed root `[r:s]`, impossible for a
++cubic field: the corresponding nonzero trace-zero element would have degree at
++most two over the base field, which cannot occur inside a degree-three field.
++
++The monogenic contradiction is licensed by the binding block theorem:
++`block-descent-galois-coordinator-integration...` promotes nonmonogenicity of
++`B_K` over `C[f,g]` and nonprincipality of the different in its lines 70-107.
++The affine-linear packet also records the exact determinant criterion at its
++lines 71-79.
++
++For a repeated vertical fibre, the descent is valid. If `ell(U,V)` cuts the
++fibre, then
++
++```text
++Phi_2=ell^2 P,  Phi_1=ell Q.
++```
++
++With affine coordinates `p=ell(u,v)` and complementary `r`, all coefficients
++belong to `C[p]`, so the Miranda table defines a finite free rank-three
++`C[p]`-algebra `D` and
++
++```text
++B=D[r].
++```
++
++Since `B` is a normal domain, `D` is a normal domain: an element integral over
++`D` in `Frac(D)` is integral over `D[r]`, hence lies in
++`D[r] cap Frac(D)=D`. The field identity
++`Frac(B)=Frac(D)(r)` and the first-leg function-field inclusion force the
++smooth completion of `Spec(D)` to have genus zero. The structure theorem gives
++`B subset C[x,y]`, so `B^*=C^*` and hence `D^*=C^*`.
++
++As `D` is the integral closure of `C[p]` in its fraction field, `Spec(D)` is
++`P^1` minus the points over `p=infinity`. Over `C`, two or more removed points
++give a nonconstant unit, so exactly one point is removed. Therefore
++`D=C[t]`, and because the finite map to `A^1_p` has degree three, `p=P(t)` has
++degree three. Hence `B=C[p,r][t]`, again monogenic. This excludes hidden
++multi-point, residue-degree, and affine-unit escapes.
++
++Repair: say the unit argument uses both the dominant first-leg inclusion
++`B subset C[x,y]` and algebraic closedness of the ground field; dominance
++alone is not the whole reason.
++
++## 6. Survivor and discriminant degree
++
++Status: **CONFIRMED WITH PROOF DETAIL REQUIRED**.
++
++After the constant and vertical cases are removed, a projective nonnormal
++generic component must be a double irreducible `(1,1)` curve. Thus
++
++```text
++H=2C+L,       C=(Q=0),       L=(0,1),
++```
++
++and unique factorization on `P^1 x P^1` gives
++
++```text
++Phi^h=Q^2 L + T Q S + T^2 R,
++```
++
++with `Q` irreducible of bidegree `(1,1)` and `L,S,R` fibre forms of degrees
++`1,2,3` independent of the base.
++
++The discriminant bound `deg Delta<=6` is also correct, but the proof must
++explicitly handle the direction-dependent fibre change. On a generic affine
++line `(u,v)=lambda*(u0,v0)`, work over `C(theta)` for the direction
++`theta=(u0:v0)`. Since `Q` is irreducible, `Q_theta` is not generically
++proportional to the fixed fibre linear form `L`; use
++
++```text
++x=Q_theta(X,Y),  y=L(X,Y)
++```
++
++as fibre coordinates. The change has determinant `delta(theta) != 0` and is
++independent of `lambda`; the binary-cubic discriminant is multiplied by
++`delta(theta)^6`, also independent of `lambda`. In the affine chart `y=1`, the
++coefficient degrees in `lambda` are bounded by
++
++```text
++c0:0,  c1:1,  c2:2,  c3:1.
++```
++
++Each term of the cubic discriminant has `lambda`-degree at most six. Therefore
++`Delta(lambda*u0,lambda*v0)` has degree at most six for generic direction.
++The coefficients of `lambda^k`, `k>6`, are the restrictions of the homogeneous
++degree-`k` parts of `Delta`; vanishing on a generic direction forces them to be
++zero. No denominator depending only on direction can create a higher total
++degree in `lambda`.
++
++## Maximum theorem safe to promote
++
++The following is safe after the corrections above.
++
++Let `B` be the normal finite-flat integral cubic algebra of a proper cubic
++intermediate block of a hypothetical noninvertible plane Keller map, with the
++promoted dominant first leg and the promoted nonmonogenic obstruction. Suppose
++some global trace-zero Miranda basis has coefficient degrees at most two and
++at least one coefficient has degree exactly two. Then:
++
++```text
++1. The affine incidence X_aff is normal.
++2. If the exact projective quadratic incidence Xbar is nonnormal, then every
++   generic divisorial nonnormal component lies at infinity.
++3. The only surviving repeated type is H=2C+L with C irreducible of bidegree
++   (1,1) and L of bidegree (0,1).
++4. In that case Phi^h=Q^2 L + T Q S + T^2 R, with Q irreducible (1,1), and
++   the intrinsic affine target discriminant satisfies deg Delta<=6.
++```
++
++Do not promote more. The blowup `(T,Q)`, normalization/conductor quartic,
++genus-one obstruction, basis-orbit coverage, polynomial-map construction,
++counterexamples, and any JC2 conclusion remain separate and unproved here.
++
++## Cheapest decisive successor
++
++The cheapest next packet is a local normalization/conductor theorem for
++
++```text
++Phi^h=Q^2 L + T Q S + T^2 R
++```
++
++along the generic double curve `C=(T=Q=0)`. Prove, without CAS, that the
++blowup chart giving `W^2 L+W S+R=0` is the normalization in the required
++cases, compute the conductor over `C`, and split the quartic discriminant into
++square, split, and two-branch cases. Only after that bridge is proved should
++the genus-one heuristic be connected to the promoted rational-boundary forest.
++
++No `jc2-lean` material was inspected or used, and no heavy CAS or Singular
++calculation was run.
++<!-- BODY-END -->
+
+codex
+Wrote the hostile review report:
+
+[xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md](/Users/dc/code/math/jc2/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md)
+
+Verdict: `CONFIRM_WITH_CORRECTIONS`. The report ends with the required standalone `<!-- BODY-END -->`, is 13,335 bytes, and has no seal block. No `jc2-lean`, heavy CAS, or Singular work was touched.
+diff --git a/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..cae38a1625f666cf7a465548fd466407643b11b1
+--- /dev/null
++++ b/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,342 @@
++# Hostile review: nonnormal quadratic content-cone dichotomy
++
++Verdict: **CONFIRM_WITH_CORRECTIONS**.
++
++I read the sealed producer
++`xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md`
++at commit `dca72076aa1615b0b1286fd4428a1acac7b65963`; its full-file SHA-256
++matches `6b324824e0c075b938bd5b7015d4e8d134bad7cb845ac7597212b61d91dfa7a5`.
++I also read the three named inputs and the underlying block/nonmonogenic
++integrations used by Sections 5-6. The core algebraic dichotomy is correct,
++but promotion should include the repairs below.
++
++## Input custody
++
++Confirmed hashes read:
++
++```text
++c8dee3199ecfaf73b6debedea625346a11babbe42082cff5bff049f8585763c2
++  xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md
++
++410de2f569e2ad5599152fdd9414198f012dbdced7d17c5a51dde0096fe4601e
++  xmodel/bd-fix3-quadratic-discriminant-conductor-coordinator-integration-sol56-20260830.md
++
++ac7ef8f5321f579d5e193b6ae3a9b0f1aa2a64421050bb71426b94258d984ffb
++  xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md
++
++ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
++  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
++
++f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
++  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
++```
++
++Custody correction: the target calls all three displayed clients "promoted" at
++lines 67-79, but `bd-a2-smooth-quadratic-degeneracy-absorption...` is itself
++marked `EXACT PROVISIONAL PRODUCER / DIFFERENT-MODEL REVIEW REQUIRED` at its
++lines 1-7. The finite common-zero and Stein bridge facts used here are true,
++but they must be promoted by the present proof, not by silently treating that
++provisional packet as binding.
++
++## 1. Miranda table and intrinsic content
++
++Status: **CONFIRMED**.
++
++The multiplication table in target lines 83-89 is the standard Miranda table
++for a trace-zero basis. Directly, for `t=r*z+s*w`,
++
++```text
++t^2_E =
++  (a r^2 - 2 d r s + c s^2) z
++ +(b r^2 - 2 a r s + d s^2) w,
++```
++
++so
++
++```text
++det((r,s), t^2_E)
++= b r^3 - 3 a r^2 s + 3 d r s^2 - c s^3 = Phi(r,s).
++```
++
++A global trace-zero basis change is an element of `GL_2(C[u,v])`, whose
++determinant is in `C^*`. The binary-cubic coefficient vector is carried by the
++rank-four binary-cubic representation with a determinant twist, and both the
++matrix and inverse have entries in `C[u,v]`. Therefore the ideal `(a,b,c,d)`
++is unchanged. The discriminant principal ideal, the branch support, the local
++orders `ord_q(I_B)`, and the minimum coefficient degree over all bases are
++intrinsic to the fixed algebra.
++
++Repair: keep saying that the leading form at infinity, the divisor `H`,
++projective coefficient basepoints, and projective normality are presentation
++data. They are not invariants of the cubic algebra. The target already says
++this at lines 114-120; retain it.
++
++The proof that `V(I_B)` has no height-one component is correct. At the generic
++DVR of such a component, the special fibre would be `kappa direct-sum V` with
++`V^2=0`. A normal finite rank-three order over a DVR has semilocal Dedekind
++localization; a length-three local fibre is either unramified of residue degree
++three or totally ramified of ramification index three, and the latter has
++radical square nonzero. Thus this fibre cannot occur.
++
++## 2. Affine R1 criterion
++
++Status: **CONFIRMED WITH REQUIRED PROOF INSERTION**.
++
++The criterion
++
++```text
++X_aff normal iff I_B is not contained in m_q^2 for every q in V(I_B)
++```
++
++is correct.
++
++The missing insertion is the full Stein bridge. For
++`pi_0:A^2 x P^1 -> A^2`, the sequence
++
++```text
++0 -> O(-3) --Phi--> O -> O_X_aff -> 0
++```
++
++pushes forward to a locally free rank-three algebra. Off the finite set
++`Z=V(I_B)`, the incidence is finite and is the Miranda cubic algebra. Since
++both this pushforward and `B` are reflexive over the regular surface `A^2`,
++the algebra isomorphism extends uniquely across `Z`; multiplication extends
++because it agrees on the dense open. This proves the Stein morphism
++`X_aff -> Spec(B)`, isomorphic off `Z`, and identifies the exceptional fibre
++over `q in Z` with `{q} x P^1`.
++
++At such a `q`, write
++
++```text
++Phi=s*p(X,Y)+t*r(X,Y)+terms in (s,t)^2.
++```
++
++Along `E_q`, fibre derivatives vanish and the two base derivatives are
++`p,r`. The generic point of `E_q` is singular exactly when `p=r=0` as binary
++cubics, equivalently every coefficient has zero first jet, equivalently
++`I_B subset m_q^2`. If not, the singular points on `E_q` are a finite
++zero-scheme in `P^1`, hence codimension two on the surface. Since `X_aff` is
++an integral hypersurface, it is `S_2`; Serre then gives the criterion. No other
++affine codimension-one nonnormal locus remains, because away from the
++exceptional curves the Stein map is an isomorphism to the normal surface
++`Spec(B)`.
++
++## 3. Quadratic content cone
++
++Status: **CONFIRMED WITH WORDING REPAIR**.
++
++If `I_B subset m_q^2`, translate `q` to the origin. Degree at most two then
++makes all four coefficients homogeneous quadratics. With
++
++```text
++deg(s)=deg(t)=1,  deg(z)=deg(w)=2,
++```
++
++the Miranda table is homogeneous and
++
++```text
++B=C[s,t] direct-sum C[s,t](-2)z direct-sum C[s,t](-2)w.
++```
++
++The ring is a connected positively graded normal domain finite over
++`C[s,t]`. Hence `C0=Proj(B)` is a smooth projective integral curve finite of
++degree three over `P^1`, with `O_C0(1)` the pullback of `O_P1(1)`. For large
++`n`, and already for `n>=2`,
++
++```text
++dim_C B_n=(n+1)+2(n-1)=3n-1.
++```
++
++Riemann-Roch for `O_C0(n)` gives `3n+1-g`, so `g(C0)=2`.
++
++The clean contradiction should be stated function-field first. For any
++nonzero degree-one element `s`,
++
++```text
++Frac(B)=C(C0)(s).
++```
++
++The promoted first leg gives an inclusion `Frac(B) -> C(x,y)`. Therefore
++`C(C0)` embeds in `C(x,y)`, producing a dominant rational map from the rational
++surface `P^2` to `C0`; after resolving indeterminacy this is a morphism from a
++smooth rational surface to a genus-two curve, impossible. This kills the
++content cone and proves affine normality through the R1 test.
++
++Repair: phrase this as a rational-map/function-field contradiction, not as if
++the affine morphism to the cone itself automatically extends to a morphism to
++`Proj(B)` everywhere.
++
++## 4. Projective R1 and repeated components
++
++Status: **CONFIRMED WITH PRECISION REPAIR**.
++
++Because `X_aff` is normal, every divisorial nonnormal locus of `Xbar` lies in
++`H`. Primitivity is correctly handled: a common coefficient divisor other than
++`T=0` gives an affine height-one component of `V(I_B)`, and a common `T`
++factor would mean all affine coefficients have degree at most one, contrary to
++exact quadratic degree. Generic irreducibility plus Gauss gives `Xbar`
++integral, hence `S_2`.
++
++At a reduced generic component of `H`, some tangent derivative in
++`L_infinity x P^1` is nonzero. If an integral component `C` occurs with
++multiplicity `m>=2`, all tangent derivatives vanish generically, and the
++normal derivative is exactly the first normal jet `Phi_1|C`. Thus `C` is a
++generic `R_1` failure exactly when `Phi_1|C=0`.
++
++The repeated integral component list is exhaustive. For class `(2,3)` on
++`P^1 x P^1`, an integral repeated component of class `(alpha,beta)` must
++satisfy `m alpha<=2`, `m beta<=3`, `m>=2`; the only possibilities are:
++
++```text
++2(0,1)+(2,1)
++3(0,1)+(2,0)
++2(1,0)+(0,3)
++2(1,1)+(0,1)
++```
++
++Repair: call this the list of possible repeated integral components with their
++residual classes, not the list of all decompositions of `H`. The residual may
++split further; the later eliminations are componentwise and still apply.
++
++The bidegree convention is internally consistent: `(1,0)` is a vertical fibre
++over a point of `L_infinity`; `(a,1)` maps degree one to `L_infinity` and is a
++section when integral.
++
++## 5. Repeated constant sections and vertical fibres
++
++Status: **CONFIRMED WITH SCOPE REPAIRS**.
++
++For a repeated constant section with fibre value `[r:s]`, repetition gives
++`Phi_2(r,s)=0` and generic nonnormality gives `Phi_1(r,s)=0`; hence
++`Phi(r,s)=Phi_0(r,s) in C`. If this scalar is nonzero, the determinant
++criterion makes `1,t,t^2`, `t=r*z+s*w`, a global basis and `B=A[t]`. If it is
++zero, the generic binary cubic has the fixed root `[r:s]`, impossible for a
++cubic field: the corresponding nonzero trace-zero element would have degree at
++most two over the base field, which cannot occur inside a degree-three field.
++
++The monogenic contradiction is licensed by the binding block theorem:
++`block-descent-galois-coordinator-integration...` promotes nonmonogenicity of
++`B_K` over `C[f,g]` and nonprincipality of the different in its lines 70-107.
++The affine-linear packet also records the exact determinant criterion at its
++lines 71-79.
++
++For a repeated vertical fibre, the descent is valid. If `ell(U,V)` cuts the
++fibre, then
++
++```text
++Phi_2=ell^2 P,  Phi_1=ell Q.
++```
++
++With affine coordinates `p=ell(u,v)` and complementary `r`, all coefficients
++belong to `C[p]`, so the Miranda table defines a finite free rank-three
++`C[p]`-algebra `D` and
++
++```text
++B=D[r].
++```
++
++Since `B` is a normal domain, `D` is a normal domain: an element integral over
++`D` in `Frac(D)` is integral over `D[r]`, hence lies in
++`D[r] cap Frac(D)=D`. The field identity
++`Frac(B)=Frac(D)(r)` and the first-leg function-field inclusion force the
++smooth completion of `Spec(D)` to have genus zero. The structure theorem gives
++`B subset C[x,y]`, so `B^*=C^*` and hence `D^*=C^*`.
++
++As `D` is the integral closure of `C[p]` in its fraction field, `Spec(D)` is
++`P^1` minus the points over `p=infinity`. Over `C`, two or more removed points
++give a nonconstant unit, so exactly one point is removed. Therefore
++`D=C[t]`, and because the finite map to `A^1_p` has degree three, `p=P(t)` has
++degree three. Hence `B=C[p,r][t]`, again monogenic. This excludes hidden
++multi-point, residue-degree, and affine-unit escapes.
++
++Repair: say the unit argument uses both the dominant first-leg inclusion
++`B subset C[x,y]` and algebraic closedness of the ground field; dominance
++alone is not the whole reason.
++
++## 6. Survivor and discriminant degree
++
++Status: **CONFIRMED WITH PROOF DETAIL REQUIRED**.
++
++After the constant and vertical cases are removed, a projective nonnormal
++generic component must be a double irreducible `(1,1)` curve. Thus
++
++```text
++H=2C+L,       C=(Q=0),       L=(0,1),
++```
++
++and unique factorization on `P^1 x P^1` gives
++
++```text
++Phi^h=Q^2 L + T Q S + T^2 R,
++```
++
++with `Q` irreducible of bidegree `(1,1)` and `L,S,R` fibre forms of degrees
++`1,2,3` independent of the base.
++
++The discriminant bound `deg Delta<=6` is also correct, but the proof must
++explicitly handle the direction-dependent fibre change. On a generic affine
++line `(u,v)=lambda*(u0,v0)`, work over `C(theta)` for the direction
++`theta=(u0:v0)`. Since `Q` is irreducible, `Q_theta` is not generically
++proportional to the fixed fibre linear form `L`; use
++
++```text
++x=Q_theta(X,Y),  y=L(X,Y)
++```
++
++as fibre coordinates. The change has determinant `delta(theta) != 0` and is
++independent of `lambda`; the binary-cubic discriminant is multiplied by
++`delta(theta)^6`, also independent of `lambda`. In the affine chart `y=1`, the
++coefficient degrees in `lambda` are bounded by
++
++```text
++c0:0,  c1:1,  c2:2,  c3:1.
++```
++
++Each term of the cubic discriminant has `lambda`-degree at most six. Therefore
++`Delta(lambda*u0,lambda*v0)` has degree at most six for generic direction.
++The coefficients of `lambda^k`, `k>6`, are the restrictions of the homogeneous
++degree-`k` parts of `Delta`; vanishing on a generic direction forces them to be
++zero. No denominator depending only on direction can create a higher total
++degree in `lambda`.
++
++## Maximum theorem safe to promote
++
++The following is safe after the corrections above.
++
++Let `B` be the normal finite-flat integral cubic algebra of a proper cubic
++intermediate block of a hypothetical noninvertible plane Keller map, with the
++promoted dominant first leg and the promoted nonmonogenic obstruction. Suppose
++some global trace-zero Miranda basis has coefficient degrees at most two and
++at least one coefficient has degree exactly two. Then:
++
++```text
++1. The affine incidence X_aff is normal.
++2. If the exact projective quadratic incidence Xbar is nonnormal, then every
++   generic divisorial nonnormal component lies at infinity.
++3. The only surviving repeated type is H=2C+L with C irreducible of bidegree
++   (1,1) and L of bidegree (0,1).
++4. In that case Phi^h=Q^2 L + T Q S + T^2 R, with Q irreducible (1,1), and
++   the intrinsic affine target discriminant satisfies deg Delta<=6.
++```
++
++Do not promote more. The blowup `(T,Q)`, normalization/conductor quartic,
++genus-one obstruction, basis-orbit coverage, polynomial-map construction,
++counterexamples, and any JC2 conclusion remain separate and unproved here.
++
++## Cheapest decisive successor
++
++The cheapest next packet is a local normalization/conductor theorem for
++
++```text
++Phi^h=Q^2 L + T Q S + T^2 R
++```
++
++along the generic double curve `C=(T=Q=0)`. Prove, without CAS, that the
++blowup chart giving `W^2 L+W S+R=0` is the normalization in the required
++cases, compute the conductor over `C`, and split the quartic discriminant into
++square, split, and two-branch cases. Only after that bridge is proved should
++the genus-one heuristic be connected to the promoted rational-boundary forest.
++
++No `jc2-lean` material was inspected or used, and no heavy CAS or Singular
++calculation was run.
++<!-- BODY-END -->
+
+tokens used
+86,527
+Wrote the hostile review report:
+
+[xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md](/Users/dc/code/math/jc2/xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.md)
+
+Verdict: `CONFIRM_WITH_CORRECTIONS`. The report ends with the required standalone `<!-- BODY-END -->`, is 13,335 bytes, and has no seal block. No `jc2-lean`, heavy CAS, or Singular work was touched.
