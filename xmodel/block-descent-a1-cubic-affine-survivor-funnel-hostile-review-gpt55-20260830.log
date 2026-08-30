@@ -1,0 +1,3149 @@
+cli=codex-cli 0.151.0 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.151.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a05460-57b9-7f82-95b8-a0d1b2410899
+--------
+user
+# Hostile review: proper-cubic affine-survivor funnel
+
+You are GPT-5.5 acting as a fresh hostile reviewer for the plane Jacobian-
+conjecture campaign. Work in `/Users/dc/code/math/jc2`. Reconstruct every
+claim independently and seek explicit counterexamples, especially to the
+companion-section and smooth-branch arguments. Do not modify charged inputs,
+Git state, canonical ledgers, or unrelated files. Do not read any sibling
+external-model prompt, log, report, or receipt. Do not inspect, list, search,
+stat, build, modify, or control `jc2-lean`.
+
+Hash-check and audit only these charged repository files:
+
+```text
+2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce
+  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
+a38d1ba420fa8388fbf453051bd9d570edbfe99f0a1ff240f1f297d1e6718fcd
+  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md.artifact.json
+aa198a357ce3c7dd3df6c97019f76553f27c76e5f4b7928ed3e52104de3f3915
+  ops/block_descent_a1_cubic_affine_survivor_replay.py
+8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d
+  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
+7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29
+  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
+f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
+  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+f80d4a7d7e04987ce7dece58f33cff20ea9210183ca3ffd4488f39a2147532db
+  refs/jc86.pdf
+```
+
+You may independently fetch Miyanishi's primary arXiv source
+`1504.07179` into a temporary directory only; its expected PDF SHA-256 is
+`ab4eb0cb74e4051e3fb1f702a253d29cb1a658632f11bc6f4b04a8bb9e7daaa4`.
+Do not treat later summaries as a substitute for the cited primary lemmas.
+
+Audit these load-bearing points:
+
+1. Verify the general (not specially typed) Miyanishi results used to obtain
+   at most one multiple fibre, `Pic(U)=Z/m<[F]>`, and rational acyclicity.
+   Check that restricting `rho o g1` to a general source line supplies the
+   required transverse `A1`, without assuming that `g1` respects the ruling.
+2. Reconstruct the no-multiple-fibre step. Decide whether irreducible reduced
+   `A1` fibres plus no multiplicities really make `rho` a smooth `A1`-bundle,
+   then whether it is trivial over `A1`. Check the exact scope of Orevkov
+   Theorem 1.1 before using it on the resulting degree-three Keller self-map.
+3. Audit the localization argument showing `U minus g1(A2)` has no divisorial
+   component. Keep that target statement distinct from the false assertion
+   that the Zariski-Main finite completion has no redundant boundary divisor.
+   Check Miyanishi Lemma 2.5.2 as the advertised countercontrol.
+4. Prove or refute the Kummer step `g1^*t=cP^m`, irreducibility of
+   `X^m-t/c` over `C(U)`, and `m|d1`. Check normality, divisor coefficients,
+   the exact order of `[F]`, roots of unity, and possible composite-`m`
+   exceptions. Confirm separately that etaleness of `pi:U->A2` gives
+   `K_U~0`. Do not silently place arbitrary `U` in Miyanishi's additional
+   typed `(d,n,r)` class.
+5. Starting only from finite-flat rank three and `S0=empty`, audit
+   `T=U times_(A2) B -> B`. Is it genuinely surjective, radicial and etale
+   at singular/reducible points of reduced `B`, hence an isomorphism even
+   though `U->A2` is not finite? Check the componentwise Cartier/principal
+   statement and every scheme-versus-set distinction.
+6. Check that `W=U minus T -> A2 minus B` is connected finite etale of degree
+   three with `S3` monodromy, and that each affine local complement group
+   fixes a companion sheet. Actively seek a normal integral cubic control
+   falsifying any overstatement.
+7. Reconstruct the smooth-branch contradiction: Chau normalization,
+   Abhyankar--Moh rectification, `pi1(Gm times A1)=Z`, and incompatibility of
+   connected cubic monodromy with transposition inertia. Decide exactly what
+   remains for singular or reducible contractible one-place forests; do not
+   promote the tempting unproved claim that local companions share one
+   global label.
+8. Rerun the replay under ordinary, `-O`, and `-OO`, reproduce its payload and
+   mutation behavior, and state which geometry and cited theorems it does
+   not verify.
+
+Return itemized `CONFIRMED`, `CONFIRM_WITH_CORRECTIONS`, `GAP`, or `REFUTED`,
+then a maximum-safe theorem and cheapest useful successor. This review makes
+no exit-price assertion: emit no `charge_basis={...}` line; receipt status
+`ABSENT` is expected. Do not run heavy local CAS.
+
+Write exactly one repository file:
+
+```text
+xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
+```
+
+End it with one standalone `<!-- BODY-END -->` line and no seal block.
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll stay inside the named inputs, verify the hashes first, and keep `jc2-lean` and sibling model artifacts out of scope. I’ll fetch only the primary arXiv PDF into `/tmp` if the repository copy is not enough to inspect the cited Miyanishi statements.
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md.artifact.json ops/block_descent_a1_cubic_affine_survivor_replay.py xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md refs/jc86.pdf' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
+a38d1ba420fa8388fbf453051bd9d570edbfe99f0a1ff240f1f297d1e6718fcd  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md.artifact.json
+aa198a357ce3c7dd3df6c97019f76553f27c76e5f4b7928ed3e52104de3f3915  ops/block_descent_a1_cubic_affine_survivor_replay.py
+8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
+7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
+f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+f80d4a7d7e04987ce7dece58f33cff20ea9210183ca3ffd4488f39a2147532db  refs/jc86.pdf
+
+codex
+The charged hashes match the supplied SHA-256 values. I’m now reading the charged argument files with line numbers so the review can distinguish what is actually proved from what is imported by citation.
+exec
+/bin/zsh -lc 'wc -l xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md.artifact.json ops/block_descent_a1_cubic_affine_survivor_replay.py xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     402 xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
+       1 xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md.artifact.json
+     114 ops/block_descent_a1_cubic_affine_survivor_replay.py
+     205 xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
+     220 xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
+     156 xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+    1098 total
+
+exec
+/bin/zsh -lc 'pdfinfo refs/jc86.pdf' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+Title:           jc86.dvi
+Creator:         dvips(k) 5.95a Copyright 2005 Radical Eye Software
+Producer:        GPL Ghostscript 8.64
+CreationDate:    Wed Jan 12 13:39:22 2011 PST
+ModDate:         Wed Jan 12 13:39:22 2011 PST
+Custom Metadata: no
+Metadata Stream: yes
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           10
+Encrypted:       no
+Page size:       595 x 842 pts (A4)
+Page rot:        0
+File size:       163174 bytes
+Optimized:       no
+PDF version:     1.4
+
+codex
+The repository PDF is a 10-page DVI-derived paper, not the arXiv primary PDF named by the prompt. I’ll still inspect it as a charged input, but I’ll fetch arXiv `1504.07179` separately into `/tmp` and hash it before using it.
+exec
+/bin/zsh -lc 'nl -ba ops/block_descent_a1_cubic_affine_survivor_replay.py' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'nl -ba xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	#!/usr/bin/env python3
+     2	"""Desk replay for the cyclic-monodromy edge of the cubic affine survivor.
+     3	
+     4	This is deliberately tiny.  It verifies the permutation statement used when
+     5	the connected branch curve is a coordinate affine line: a connected
+     6	three-sheet cover of its complement has cyclic monodromy generated by a
+     7	3-cycle, whereas the promoted cubic fibre type (2,1) gives a transposition.
+     8	No geometric classification is encoded here.
+     9	"""
+    10	
+    11	from __future__ import annotations
+    12	
+    13	import argparse
+    14	import hashlib
+    15	import json
+    16	from itertools import permutations
+    17	
+    18	
+    19	Permutation = tuple[int, int, int]
+    20	
+    21	
+    22	def compose(left: Permutation, right: Permutation) -> Permutation:
+    23	    return tuple(left[right[i]] for i in range(3))  # type: ignore[return-value]
+    24	
+    25	
+    26	def power(perm: Permutation, exponent: int) -> Permutation:
+    27	    result: Permutation = (0, 1, 2)
+    28	    for _ in range(exponent):
+    29	        result = compose(perm, result)
+    30	    return result
+    31	
+    32	
+    33	def orbit(perm: Permutation, point: int) -> tuple[int, ...]:
+    34	    return tuple(sorted({power(perm, exponent)[point] for exponent in range(6)}))
+    35	
+    36	
+    37	def cycle_type(perm: Permutation) -> tuple[int, ...]:
+    38	    unseen = set(range(3))
+    39	    lengths: list[int] = []
+    40	    while unseen:
+    41	        start = min(unseen)
+    42	        current = start
+    43	        length = 0
+    44	        while current in unseen:
+    45	            unseen.remove(current)
+    46	            current = perm[current]
+    47	            length += 1
+    48	        lengths.append(length)
+    49	    return tuple(sorted(lengths, reverse=True))
+    50	
+    51	
+    52	def require(condition: bool, message: str) -> None:
+    53	    if not condition:
+    54	        raise RuntimeError(message)
+    55	
+    56	
+    57	def main() -> int:
+    58	    parser = argparse.ArgumentParser()
+    59	    parser.add_argument(
+    60	        "--mutate-transposition-to-3cycle",
+    61	        action="store_true",
+    62	        help="deliberately destroy the (2,1) fibre-type premise",
+    63	    )
+    64	    args = parser.parse_args()
+    65	
+    66	    all_permutations = tuple(permutations(range(3)))
+    67	    rows = []
+    68	    for perm in all_permutations:
+    69	        transitive = len(orbit(perm, 0)) == 3
+    70	        rows.append(
+    71	            {
+    72	                "permutation": "".join(str(i) for i in perm),
+    73	                "cycle_type": list(cycle_type(perm)),
+    74	                "cyclic_action_transitive": transitive,
+    75	            }
+    76	        )
+    77	
+    78	    transpositions = [row for row in rows if row["cycle_type"] == [2, 1]]
+    79	    three_cycles = [row for row in rows if row["cycle_type"] == [3]]
+    80	    require(len(transpositions) == 3, "S3 must have three transpositions")
+    81	    require(len(three_cycles) == 2, "S3 must have two 3-cycles")
+    82	    require(
+    83	        all(not row["cyclic_action_transitive"] for row in transpositions),
+    84	        "a cyclic group generated by a transposition cannot act transitively on 3 letters",
+    85	    )
+    86	    require(
+    87	        all(row["cyclic_action_transitive"] for row in three_cycles),
+    88	        "every 3-cycle must act transitively on 3 letters",
+    89	    )
+    90	
+    91	    selected_type = [3] if args.mutate_transposition_to_3cycle else [2, 1]
+    92	    selected = [row for row in rows if row["cycle_type"] == selected_type]
+    93	    require(selected_type == [2, 1], "mutation changed the charged cubic fibre type")
+    94	    require(
+    95	        all(not row["cyclic_action_transitive"] for row in selected),
+    96	        "the coordinate-line complement would admit the charged connected cover",
+    97	    )
+    98	
+    99	    payload = {
+   100	        "status": "PASS-CUBIC-AFFINE-SMOOTH-BRANCH-MONODROMY",
+   101	        "s3_order": len(rows),
+   102	        "transposition_count": len(transpositions),
+   103	        "three_cycle_count": len(three_cycles),
+   104	        "charged_fibre_type": selected_type,
+   105	        "charged_cyclic_action_transitive": False,
+   106	    }
+   107	    canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+   108	    payload["payload_sha256"] = hashlib.sha256(canonical.encode()).hexdigest()
+   109	    print(json.dumps(payload, sort_keys=True))
+   110	    return 0
+   111	
+   112	
+   113	if __name__ == "__main__":
+   114	    raise SystemExit(main())
+
+ succeeded in 0ms:
+     1	# Proper-cubic affine survivor: pseudo-plane funnel and companion section
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Author: Sol 5.6 Ultra (`cubic_affine_survivor` lane)  
+     5	Frozen basis: `1d35fe69987a4e346c7e97ab2a227ccce49ef60d`  
+     6	Lifecycle: **EXACT PROVISIONAL THEOREM / DIFFERENT-MODEL REVIEW REQUIRED**
+     7	
+     8	## 0. Verdict
+     9	
+    10	Charge the promoted proper-cubic survivor
+    11	
+    12	```text
+    13	A2 --g1, etale quasi-finite dominant of degree d1>=2--> U
+    14	   --pi=g2|U, etale quasi-finite surjective of degree 3--> A2,
+    15	
+    16	rho:U->A1 an A1-fibration,
+    17	b0(B)=1, S0=empty, Q=0.
+    18	```
+    19	
+    20	Here `B=g2(R)_red`, `R=NonEt_Y(g2)_red`, and `U=Y minus R`.  Then:
+    21	
+    22	1. `rho` has at most one multiple fibre.
+    23	2. It cannot have none.  Hence it has a unique fibre `mF`, with `m>=2`,
+    24	   and
+    25	
+    26	   ```text
+    27	   Pic(U)=Z/mZ<[F]>,       U is a Q-homology plane,
+    28	   U minus g1(A2) is finite,       m divides d1,       K_U~0.       (0.1)
+    29	   ```
+    30	
+    31	3. The rank-three companion over the branch globalizes scheme-theoretically:
+    32	
+    33	   ```text
+    34	   T:=U times_(A2) B  --> B
+    35	   ```
+    36	
+    37	   is an isomorphism.  Thus `B` occurs as a principal reduced Cartier curve
+    38	   in the smooth surface `U`, component by component.
+    39	4. Put `W=U minus T`.  Then
+    40	
+    41	   ```text
+    42	   W -> A2 minus B
+    43	   ```
+    44	
+    45	   is a connected finite etale cover of degree three with monodromy `S3`.
+    46	   At every affine point of `B`, including its singular points, the local
+    47	   monodromy fixes the companion sheet and lies in one conjugate of `S2`.
+    48	5. `B` cannot be smooth.  Consequently every actual survivor has a singular
+    49	   or reducible connected contractible one-place branch curve whose complement
+    50	   has an `S3` quotient, while every affine local branch group preserves a
+    51	   companion sheet.  The unresolved monodromy must therefore be supplied by
+    52	   global braid/infinity topology, not by an affine triple-fibre point.
+    53	
+    54	This is a strict reduction, not cubic-block nonexistence and not JC2.  The
+    55	tempting Hartogs shortcut from the finiteness of `U minus g1(A2)` is false:
+    56	boundary divisors of the Zariski-Main finite normalization can map onto target
+    57	divisors already reached by other source sheets.
+    58	
+    59	## 1. Frozen inputs and primary sources
+    60	
+    61	Binding campaign inputs:
+    62	
+    63	```text
+    64	8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d
+    65	  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
+    66	
+    67	7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29
+    68	  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
+    69	
+    70	f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
+    71	  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+    72	```
+    73	
+    74	They supply the sandwich, smooth rational affine `U`, constant units, the
+    75	actual morphic first leg, the `A1`-ruling, the cubic fibre census, the
+    76	one-place component/forest theorem, and the exact survivor equalities.
+    77	
+    78	Primary surface source:
+    79	
+    80	```text
+    81	Masayoshi Miyanishi,
+    82	Lectures on Geometry and Topology of Polynomials --
+    83	Surrounding the Jacobian Conjecture,
+    84	arXiv:1504.07179, especially Lemmas 1.4.3, 1.4.16, 2.5.2 and
+    85	Theorem 2.5.10.
+    86	
+    87	downloaded PDF: 806236 bytes
+    88	SHA-256: ab4eb0cb74e4051e3fb1f702a253d29cb1a658632f11bc6f4b04a8bb9e7daaa4
+    89	```
+    90	
+    91	Primary degree-three source:
+    92	
+    93	```text
+    94	S. Yu. Orevkov, On three-sheeted polynomial mappings of C2,
+    95	Theorem 1.1.
+    96	
+    97	f80d4a7d7e04987ce7dece58f33cff20ea9210183ca3ffd4488f39a2147532db
+    98	  refs/jc86.pdf
+    99	```
+   100	
+   101	The statements below use the general Picard and multiple-fibre lemmas from
+   102	Miyanishi.  They do **not** assume that an arbitrary affine pseudo-plane has
+   103	the special typed boundary graph `(d,n,r)`.
+   104	
+   105	## 2. There is at most one multiple fibre
+   106	
+   107	The composite
+   108	
+   109	```text
+   110	h=rho o g1:A2->A1
+   111	```
+   112	
+   113	is a nonconstant polynomial.  Choose a general affine line `L subset A2` on
+   114	which `h` is nonconstant.  Then `g1|L:A1->U` is a nonconstant curve transverse
+   115	to `rho`.
+   116	
+   117	Miyanishi Lemma 1.4.16 says that an `A1`-fibration over `A1` with at least
+   118	two multiple fibres admits no such transverse morphism from `A1`.  Its proof
+   119	is the exact polynomial-power obstruction: over two multiple values one gets
+   120	
+   121	```text
+   122	p(s)^a-q(s)^b=constant,       a,b>=2,
+   123	```
+   124	
+   125	and factorization/Mason--Stothers (equivalently the positive-genus
+   126	superelliptic curve after removing the common gcd) makes both polynomials
+   127	constant.  Therefore `rho` has at most one multiple fibre.
+   128	
+   129	The use of a general source line is essential.  No assertion that `g1`
+   130	preserves the ruling, is finite, or maps a generic source fibre to a ruling
+   131	fibre is made.
+   132	
+   133	## 3. The no-multiple row is impossible
+   134	
+   135	If there is no multiple fibre, every scheme fibre is a smooth `A1`.  The
+   136	equidimensional morphism from the smooth surface to the smooth curve is flat,
+   137	hence smooth.  It is an `A1`-bundle.  Over `A1`, its line-bundle and additive
+   138	torsor classes vanish (`Pic(A1)=H^1(A1,O)=0`), so
+   139	
+   140	```text
+   141	U isomorphic to A2.                                           (3.1)
+   142	```
+   143	
+   144	Under (3.1), `pi:U->A2` becomes a polynomial Keller self-map of geometric
+   145	degree three.  Orevkov Theorem 1.1 excludes polynomial maps of `C2` with
+   146	nonzero constant Jacobian and geometric degree two or three.  Hence the
+   147	no-multiple row is empty.
+   148	
+   149	This is the only place where Orevkov is consumed.  It is not applied directly
+   150	to a pseudo-plane.
+   151	
+   152	## 4. Exact unique-multiple-fibre package
+   153	
+   154	Write the unique multiple fibre as `mF`, `m>=2`.  Since every reduced ruling
+   155	fibre is one `A1`, Miyanishi Lemma 1.4.3 gives
+   156	
+   157	```text
+   158	Pic(U)=Z/mZ<[F]>,                                      (4.1)
+   159	H_i(U;Q)=0 for every i>0.
+   160	```
+   161	
+   162	### 4.1 Missed divisors and the cofinite image
+   163	
+   164	Let `V=g1(A2)`, an open subset of `U`.  The free group on the prime divisors
+   165	contained in `U minus V` injects into `Pic(U)`.  Indeed, if a rational
+   166	function `b` has divisor supported there, then `b` and `b^-1` are regular on
+   167	the normal open `V`.  Their pullbacks are mutually inverse polynomials on
+   168	`A2`, hence scalars.  Dominance makes `b` the same scalar, so its divisor was
+   169	zero.  This proves linear independence of all missed prime divisors.
+   170	
+   171	The finite group (4.1) contains no nonzero free subgroup.  Thus `U minus V`
+   172	has no curve component.  It is a finite set:
+   173	
+   174	```text
+   175	g1:A2->U is an affine pseudo-covering.                         (4.2)
+   176	```
+   177	
+   178	### 4.2 The multiple-fibre order divides the first-leg degree
+   179	
+   180	Choose the ruling coordinate `t` so that `div_U(t)=mF`, and put
+   181	`L=C(x,y)`, `K=C(U)`.  Etaleness makes `g1^*F` a reduced divisor.  Since
+   182	`C[x,y]` is factorial,
+   183	
+   184	```text
+   185	g1^*t=c P^m,       c in C*, P in C[x,y] nonconstant.          (4.3)
+   186	```
+   187	
+   188	The binomial `X^m-t/c` is irreducible over `K`.  For if `t/c=s^p` in `K`
+   189	for a prime `p|m`, normality first gives `s in O(U)` and then
+   190	
+   191	```text
+   192	div_U(s)=(m/p)F,
+   193	```
+   194	
+   195	contradicting the exact order `m` of `[F]` in (4.1).  Since `C` contains all
+   196	roots of unity, the standard Kummer binomial criterion has no further
+   197	exception.  Equation (4.3) therefore embeds a degree-`m` field
+   198	
+   199	```text
+   200	K(P) subset L.
+   201	```
+   202	
+   203	The tower law gives
+   204	
+   205	```text
+   206	m divides [L:K]=d1.                                        (4.4)
+   207	```
+   208	
+   209	Finally, etaleness of the second leg gives the exact canonical condition
+   210	
+   211	```text
+   212	K_U=pi^*K_A2~0.                                             (4.5)
+   213	```
+   214	
+   215	### 4.3 Typed theorem: useful but not a coverage theorem
+   216	
+   217	For a pseudo-plane already known to have Miyanishi's special boundary type
+   218	`(d,n,r)`, Theorem 2.5.10 computes `K_U~(r-2)F` and excludes an etale map to
+   219	`A2` unless the exceptional `r=2` row occurs.  Nothing charged here proves
+   220	that an arbitrary `U` satisfying (4.1)--(4.5) belongs to that typed class.
+   221	The source explicitly introduces the typed boundary graph as an additional
+   222	condition.  Therefore one may record
+   223	
+   224	```text
+   225	typed client => exceptional r=2,
+   226	arbitrary survivor => type coverage OPEN,
+   227	```
+   228	
+   229	but not replace the second line by the first.
+   230	
+   231	## 5. Why the Zariski-Main/Hartogs shortcut fails
+   232	
+   233	Strong Zariski Main factors `g1` as
+   234	
+   235	```text
+   236	A2 open--> Xbar finite--> U,
+   237	```
+   238	
+   239	with `Xbar` the normalization of `U` in `L`.  Equation (4.2) does **not**
+   240	make `Xbar minus A2` finite.  A boundary divisor can dominate a divisor of
+   241	`U` which is simultaneously attained by another open source sheet.
+   242	
+   243	Miyanishi Lemma 2.5.2 is an exact countercontrol.  For any such unique-
+   244	multiple-fibre Q-homology plane, the cyclic degree-`m` cover `Utilde->U`
+   245	has `m` affine-line components over `F`.  Deleting `m-1` of them leaves an
+   246	open `A2` which still maps surjectively and etale to `U`; the deleted
+   247	divisors all map onto the already attained `F`.  Thus Hartogs cannot identify
+   248	`Xbar` with `A2`, and no finite-etale conclusion follows from (4.2).
+   249	
+   250	This countercontrol is exactly aligned with (4.3)--(4.4), not an unrelated
+   251	pathology.
+   252	
+   253	## 6. The rank-three companion is an actual section over `B`
+   254	
+   255	For every geometric `z in B`, finite flat rank three and `S0=empty` give the
+   256	unique fibre partition
+   257	
+   258	```text
+   259	one non-etale point of local length 2
+   260	+ one etale companion point of local length 1.               (6.1)
+   261	```
+   262	
+   263	Define the scheme-theoretic base change
+   264	
+   265	```text
+   266	T=U times_(A2) B.
+   267	```
+   268	
+   269	Because `pi` is etale on `U`, `T->B` is etale.  By (6.1), every geometric
+   270	fibre consists of exactly one reduced point.  Hence the map is surjective
+   271	and radicial; a surjective radicial etale morphism is an isomorphism:
+   272	
+   273	```text
+   274	T isomorphic to B.                                           (6.2)
+   275	```
+   276	
+   277	Equivalently, over the henselian or completed local ring at every point of
+   278	`B`, the rank-three algebra splits canonically as
+   279	
+   280	```text
+   281	rank 1 trivial companion factor  times  rank 2 ramified factor. (6.3)
+   282	```
+   283	
+   284	For each irreducible equation `b_i` of `B`, etale pullback gives
+   285	
+   286	```text
+   287	div_U(pi^*b_i)=T_i
+   288	```
+   289	
+   290	with coefficient one.  Thus every companion component is principal.  This
+   291	does not identify it with a ruling fibre or with an original source sheet.
+   292	
+   293	Now
+   294	
+   295	```text
+   296	W=U minus T=g2^(-1)(A2 minus B)
+   297	```
+   298	
+   299	is a nonempty irreducible open of the integral finite cover `Y`, so
+   300	
+   301	```text
+   302	W->A2 minus B
+   303	```
+   304	
+   305	is connected, finite etale, and degree three.  Its monodromy is transitive.
+   306	It contains a transposition by (6.1), hence its image is `S3`, not the cyclic
+   307	transitive subgroup `A3`.
+   308	
+   309	At any affine point `z in B`, (6.3) says more than generic inertia: the image
+   310	of the entire local complement group in `S3` lies in one order-two subgroup
+   311	fixing the local companion sheet.  Distinct local companion labels may still
+   312	be conjugated by global loops.  That last possibility is the live escape.
+   313	
+   314	## 7. Smooth branch is impossible
+   315	
+   316	If `B` were smooth, connectedness would make it irreducible.  Chau's
+   317	one-place theorem gives `B isomorphic to A1`; the Abhyankar--Moh theorem then
+   318	rectifies its embedding in `A2` to a coordinate line.  Therefore
+   319	
+   320	```text
+   321	A2 minus B isomorphic to Gm times A1,
+   322	pi1(A2 minus B)=Z.
+   323	```
+   324	
+   325	A connected degree-three cover of this complement has cyclic transitive
+   326	monodromy generated by a 3-cycle.  But (6.1) makes a meridian act as a
+   327	transposition, which is not transitive on three letters.  Contradiction.
+   328	
+   329	The desk replay enumerates this last `S3` statement:
+   330	
+   331	```text
+   332	aa198a357ce3c7dd3df6c97019f76553f27c76e5f4b7928ed3e52104de3f3915
+   333	  ops/block_descent_a1_cubic_affine_survivor_replay.py
+   334	
+   335	ordinary / -O / -OO payload SHA-256:
+   336	a602c5ca9ca141166143b504b32d835b064ea06b4f5d3618876d1b26faefd834
+   337	
+   338	AST Assert nodes: 0
+   339	deliberate (2,1)->(3) mutation: rejected in ordinary mode.
+   340	```
+   341	
+   342	Thus
+   343	
+   344	```text
+   345	B is singular or reducible.                                  (7.1)
+   346	```
+   347	
+   348	By (6.2), component normalizations `A1`, and the promoted affine incidence
+   349	forest, the connected analytic curve `B` is contractible: unibranch
+   350	singularities do not change its component topology, and multibranch gluing
+   351	has a tree incidence graph.  Contractibility does not make its complement
+   352	group cyclic; cuspidal curves are the warning control.
+   353	
+   354	## 8. Maximum-safe theorem and cheapest unresolved gate
+   355	
+   356	> **Cubic affine-survivor funnel.**  Every actual proper cubic block in the
+   357	> promoted affine-base equality row has exactly one multiple ruling fibre
+   358	> `mF`, with `m|d1`, `Pic(U)=Z/m`, `K_U~0`, and cofinite first-leg image.
+   359	> Its cubic companion locus is scheme-isomorphic to the connected branch.
+   360	> The branch is a singular or reducible contractible one-place plane curve,
+   361	> and its complement has an `S3` quotient whose restriction to every affine
+   362	> local branch group fixes a companion sheet.
+   363	
+   364	The cheapest remaining gate is now one precise topology problem:
+   365	
+   366	```text
+   367	Can a connected contractible one-place plane curve with forest incidence
+   368	support an S3 quotient of its complement such that every affine local group
+   369	lands in a companion-fixing S2, while the associated normal cubic filling
+   370	has partition (2,1) at every branch point?
+   371	```
+   372	
+   373	A negative answer closes the cubic affine survivor.  A positive topological
+   374	passport is only a control; it must still realize the normal finite-flat
+   375	cubic algebra, the pseudo-plane `K_U=0` package, and the etale `A2` first leg.
+   376	
+   377	The first exact successor should do both sides concurrently:
+   378	
+   379	1. run van Kampen/splice presentations for singular and reducible one-place
+   380	   forest curves, retaining the local companion subgroup at every affine
+   381	   singularity and the sole infinity group;
+   382	2. seek an explicit `S3` counterrepresentation before asserting common-label
+   383	   propagation;
+   384	3. in parallel, determine whether the proper-block boundary forces the
+   385	   ramification resolution arms to be linear.  Under that additional linear
+   386	   condition, Orevkov's local knot argument makes `B` smooth and Section 7
+   387	   closes the row.
+   388	
+   389	No statement here excludes rank at least four, the primitive/no-block horn,
+   390	an arbitrary pseudo-plane, or any singular/reducible `B` before this final
+   391	gate is discharged.
+   392	
+   393	<!-- BODY-END -->
+   394	
+   395	## Seal
+   396	
+   397	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   398	  including its terminating newline; this seal is outside the body.
+   399	- Body bytes: `13589`.
+   400	- Body SHA-256:
+   401	  `f2ca4b74ea0e3478603fbb1ed9012bf8bdd39b2b08106e75b7d1497046de59f9`.
+   402	- Frozen basis: `1d35fe69987a4e346c7e97ab2a227ccce49ef60d`.
+
+exec
+/bin/zsh -lc 'python3 -m json.tool xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md.artifact.json' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+{
+    "artifact": {
+        "body_bytes": 13589,
+        "body_sha256": "f2ca4b74ea0e3478603fbb1ed9012bf8bdd39b2b08106e75b7d1497046de59f9",
+        "file_bytes": 13922,
+        "frozen_basis": "1d35fe69987a4e346c7e97ab2a227ccce49ef60d",
+        "full_sha256": "2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce",
+        "name": "block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md",
+        "published_mode": "0444"
+    },
+    "custody": {
+        "closed_utc": "2026-08-30T20:30:32Z",
+        "finalized_utc": "2026-08-30T20:30:33Z",
+        "lease_id": "38cf71e5598d6072f9e0aa9dcdff3545",
+        "opened_utc": "2026-08-30T20:27:29Z",
+        "owner": "cubic_affine_survivor",
+        "source_bytes": 13589,
+        "source_sha256": "f2ca4b74ea0e3478603fbb1ed9012bf8bdd39b2b08106e75b7d1497046de59f9"
+    },
+    "schema": "jc2.artifact-finalize/v1"
+}
+
+codex
+The central note already marks several claims as provisional and warns against type coverage and Hartogs shortcuts. I’m checking the three imported coordinator notes next, because the dangerous part is whether their hypotheses really support the companion-section and branch-topology conclusions.
+exec
+/bin/zsh -lc 'nl -ba xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Binding integration: qualitative `A1` ruling on every proper block open
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Integrator: Sol 5.6 Ultra, campaign coordinator  
+     5	Frozen basis: `81c1db3fb787749562894c83439d327a10d19d70`  
+     6	Disposition: **PROMOTE WITH REVIEW CORRECTIONS / QUALITATIVE BLOCK-GENERAL THEOREM**
+     7	
+     8	## 0. Binding verdict
+     9	
+    10	Promote the repaired proper-block ruling theorem.  For the hypothetical
+    11	proper intermediate factorization supplied by the binding block theorem,
+    12	
+    13	```text
+    14	A2 --g1, etale quasi-finite dominant--> Y
+    15	   --g2, finite flat surjective--> A2,
+    16	```
+    17	
+    18	let `R=NonEt_Y(g2)` be the full **source** non-etale support and put
+    19	`U=Y minus R`.  Then
+    20	
+    21	```text
+    22	U is smooth, rational, and affine;
+    23	O(U)^*=C^*;                         bar-kappa(U)=-infinity;
+    24	g1:A2 -> U is the actual dominant etale quasi-finite first leg;
+    25	rho:U -> C is a surjective A1-fibration, C=A1 or P1;
+    26	every fibre with its reduced structure is a disjoint union of A1s.
+    27	```
+    28	
+    29	This theorem is independent of a quadratic presentation.  It applies only
+    30	inside the proper-intermediate-field horn.  It transfers no quadratic Euler
+    31	constant, `D9` marking, Picard cap, `F5` data, bounded completion, coefficient
+    32	occurrence, or conclusion about the primitive/no-proper-block horn.
+    33	
+    34	The different-model review returns `CONFIRM_WITH_CORRECTIONS`.  Its one
+    35	refutation concerns only an optional fallback proof in the producer: absolute
+    36	affineness does **not** descend from an affine fpqc cover.  The promoted
+    37	argument instead uses Stacks Tag `0ECD` directly, so the false fallback has no
+    38	downstream consumer and is quarantined here.
+    39	
+    40	## 1. Frozen evidence
+    41	
+    42	```text
+    43	acfcd839a4f7af77c54a75bc30c2909f26c6afb8ec35b1862dc685e27b270819
+    44	  xmodel/block-descent-a1-ruling-transfer-audit-sol56-20260830.md
+    45	b52d063d2801885c30fe92212b86d9cda1de7c97a6438a3cc1d243de1c6b30bc
+    46	  xmodel/block-descent-a1-ruling-transfer-audit-sol56-20260830.md.artifact.json
+    47	
+    48	259ad683e97daadeaf82b737dcc467ea7d1d07faa8ce40039f13e100b2da64aa
+    49	  xmodel/block-descent-a1-ruling-transfer-hostile-review-fable5-20260830.md
+    50	  body f2b0d3ae2f800e3a9958bc9c467db219cd16025ddfd42d459b78341eddd86d6f
+    51	0009fa4ddd787144c006eb425221054233a0346f44c1ae91fea940c03cca442d
+    52	  xmodel/block-descent-a1-ruling-transfer-hostile-review-fable5-20260830.run.v2
+    53	
+    54	ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
+    55	  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+    56	f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
+    57	  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+    58	```
+    59	
+    60	Root reproduced the schema-v2 receipt, immutable prompt, Claude adapter,
+    61	launcher, Seatbelt profile, charge-basis validator, `FALLACY-v2.md`, composed
+    62	model prompt, report, log, and all five charged mathematical hashes before
+    63	reading the review.  The body was then stamped against basis
+    64	`5cc7b50274df491cb09dbb91a8b528de77fc5ef4` and independently verified.
+    65	`charge_basis_status=ABSENT` is correct: the review made no new exit-price
+    66	assertion.
+    67	
+    68	## 2. Direct reconstruction
+    69	
+    70	The binding block theorem gives `Y` integral, normal, affine, and finite over
+    71	`A2_C`; hence `Y` is a finite-type excellent complex surface.  It also gives
+    72	that `R` is nonempty and pure of codimension one,
+    73	`g1(A2) subset Y_sm minus R`, and `Sing(Y) subset R`.
+    74	
+    75	### 2.1 Affineness and smoothness
+    76	
+    77	Apply Stacks Project Theorem 58.29.3, Tag `0ECD`, with Stacks-source `Y`,
+    78	Stacks-target `A2_C`, and morphism `g2`.  Its literal conclusion is that the
+    79	inclusion of the maximal etale open into the normal source is an **affine
+    80	morphism**.  The maximal etale open is exactly `U=Y minus R`; since `Y` is
+    81	affine, `U` is affine.  One must not shorten the theorem to the false absolute
+    82	claim that every such maximal etale open is affine without the affine-source
+    83	hypothesis.
+    84	
+    85	This direct route uses normality of `Y`, finite type of `g2`, and the excellent
+    86	regular target over a field.  It does not need dimension two, purity, or
+    87	nonemptiness for this affineness step, although those properties remain
+    88	promoted block data and enter other block arguments.  The Nagata
+    89	normal-excellent-surface divisor-complement theorem supplies an independent
+    90	route using purity.
+    91	
+    92	By definition `g2|U` is etale.  Since its target is smooth, `U` is smooth.
+    93	Because `g1(A2)` avoids `R`, `g1` factors uniquely through `U`; density in
+    94	`Y` implies density in the nonempty open `U`, and etaleness and
+    95	quasi-finiteness are unchanged.
+    96	
+    97	### 2.2 Units, rationality, and logarithmic Kodaira dimension
+    98	
+    99	Dominance makes
+   100	
+   101	```text
+   102	g1^*:O(U) -> C[x,y]
+   103	```
+   104	
+   105	injective.  A unit therefore pulls back to a scalar, and injectivity applied
+   106	to its difference from that scalar gives `O(U)^*=C^*`.  The finite extension
+   107	`C(U) subset C(x,y)` makes `U` unirational; Castelnuovo in characteristic zero
+   108	makes its smooth projective model rational.
+   109	
+   110	For a dominant generically finite morphism of smooth open varieties,
+   111	log-pluricanonical pullback gives
+   112	
+   113	```text
+   114	bar-kappa(A2) >= bar-kappa(U).
+   115	```
+   116	
+   117	Since `bar-kappa(A2)=-infinity`, necessarily
+   118	`bar-kappa(U)=-infinity`.  Etaleness without properness does not upgrade this
+   119	to a general equality theorem; only the displayed direction is consumed.
+   120	
+   121	### 2.3 The ruling, its base, and its fibres
+   122	
+   123	The Miyanishi--Sugie cylinder theorem together with the standard
+   124	cylinder-to-global-fibration extension for smooth affine surfaces yields an
+   125	actual surjective morphism on all of `U`,
+   126	
+   127	```text
+   128	rho:U -> C,
+   129	```
+   130	
+   131	whose general scheme fibre is `A1`; no base or field extension is inserted.
+   132	Rationality of `U` and Luroth make `C` rational.  Pullback along the
+   133	surjective `rho` injects `O(C)^*` into `C^*`, so a smooth rational affine base
+   134	has at most one puncture.  Thus `C=A1` or `P1`.  The projective-base branch is
+   135	real for general smooth affine surfaces and is not excluded here.
+   136	
+   137	The charged Gurjar--Miyanishi fibre lemma says that every fibre, after taking
+   138	its reduced structure, is a disjoint union of affine lines.  This controls
+   139	neither Cartier multiplicities nor the number of bad fibres or components.
+   140	
+   141	If `q_t` is the number of reduced components at a bad value, Euler additivity
+   142	over the complement of the finite bad-value set gives the presentation-free
+   143	identity
+   144	
+   145	```text
+   146	e(U)=e(C)+sum_t(q_t-1).                                (2.1)
+   147	```
+   148	
+   149	Hence `e(U)>=1`, and `e(U)>=2` on the `P1` branch.  Formula (2.1) transfers;
+   150	the quadratic evaluation `e(U)=12-r-c` does not.
+   151	
+   152	## 3. Review corrections and attack controls
+   153	
+   154	1. **False fallback removed.**  If `V=g1(A2)`, the surjective etale
+   155	   quasi-compact map `A2 -> V` is fpqc, but affine total space does not force
+   156	   affine base.  The explicit cover
+   157	   `D(x) disjoint_union D(y) -> A2 minus {0}` is a counterexample.  Whether
+   158	   `V` omits isolated points of the affine `U` remains open and is unused.
+   159	2. **Source and target loci stay distinct.**  `R` is source non-etaleness.
+   160	   The target discriminant, its full inverse image, and `g1(A2)` are different
+   161	   objects.  An unramified sheet over a branch value can lie in `U`, so
+   162	   deleting the full inverse image of the target discriminant would be too
+   163	   strong.
+   164	3. **Weil support is sufficient.**  Neither the direct route nor the Nagata
+   165	   route assumes `R` Cartier, principal, or `Q`-Cartier.  Multiplicities do
+   166	   not define `U`.
+   167	4. **Purity is correctly source-side.**  The promoted divisoriality is also
+   168	   compatible with Stacks Tag `0EA4`; an isolated non-etale residue would
+   169	   violate purity.  Deleting only selected components would retain
+   170	   non-etale or singular points and break the surface-theorem hypotheses.
+   171	5. **The complete-base control survives.**  Complements of ample sections in
+   172	   Hirzebruch surfaces exhibit smooth rational affine `A1`-fibrations over
+   173	   `P1` with constant units.  No qualitative transferred hypothesis chooses
+   174	   the affine base.
+   175	
+   176	## 4. Maximum-safe theorem and firewalls
+   177	
+   178	> **Proper-block ruling theorem.**  Assume a hypothetical noninvertible
+   179	> complex Keller map has a proper intermediate field and charge the promoted
+   180	> block factorization above.  For the full source non-etale support
+   181	> `R=NonEt_Y(g2)`, the open `U=Y minus R` is a smooth rational affine complex
+   182	> surface, the actual first leg factors as a dominant etale quasi-finite
+   183	> `A2 -> U`, `O(U)^*=C^*`, and `bar-kappa(U)=-infinity`.  The surface admits
+   184	> a surjective `A1`-fibration over `A1` or `P1`, directly over `C`, and every
+   185	> fibre with reduced structure is a disjoint union of affine lines.  Its
+   186	> Euler number satisfies (2.1).
+   187	
+   188	This is an exact qualitative theorem conditional on a proper block.  It does
+   189	not prove that a proper block exists.  It does not transfer the quadratic
+   190	constant `12`, a Picard or boundary-rank cap, `F5`, `D9`, a finite
+   191	presentation, a ruling on a particular raw completion, or any result about
+   192	the primitive sector.  A full control satisfying the whole sandwich would
+   193	itself be a noninvertible Keller map and cannot be priced as a routine
+   194	example.
+   195	
+   196	## 5. Theorem-interface composition and successor
+   197	
+   198	The composition pass finds one exact new bridge: the presentation-free
+   199	fibre Euler identity (2.1) can be compared with a sandwich-side computation
+   200	of `e(U)=e(Y)-e(R)` without importing any quadratic marking.  No current
+   201	promoted theorem evaluates that second ledger, so the bridge is `OPEN`, not a
+   202	numeric exclusion.
+   203	
+   204	The cheapest decisive successor is `BD-A1-EULER-LEDGER`: stratify the finite
+   205	flat `g2` over its target discriminant and separately account for
+   206	nonproperness of the etale quasi-finite `g1` to compute or bound `e(U)` in
+   207	terms of `d1,d2` and block-general branch data.  In parallel, test whether
+   208	`d1>=2` rules out the `P1` base.  Neither successor should wait for the other,
+   209	and neither imports a quadratic Euler constant.
+   210	
+   211	<!-- BODY-END -->
+   212	
+   213	## Seal
+   214	
+   215	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   216	  including its terminating newline; this seal is outside the body.
+   217	- Body bytes: `9690`.
+   218	- Body SHA-256:
+   219	  `469f1f68e1dd11c901ed467e5d95046a26fb3d036186c8298044309457196e56`.
+   220	- Frozen basis: `81c1db3fb787749562894c83439d327a10d19d70`.
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Binding integration: cubic one-place Euler obstruction
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Integrator: Sol 5.6 Ultra, campaign coordinator  
+     5	Frozen basis: `4607fefa25b31d039404ced367ee77d1d482cc90`  
+     6	Disposition: **PROMOTE WITH EXPLICIT FIXED-SHEET DEPENDENCY**
+     7	
+     8	## 0. Binding verdict
+     9	
+    10	Promote the rank-three one-place Euler theorem after repairing the hostile
+    11	review packet's sole dependency omission.  For an actual proper cubic block
+    12	
+    13	```text
+    14	A2 --g1--> Y --g2--> A2,       deg(g2)=3,
+    15	R=NonEt_Y(g2),                 U=Y minus R,
+    16	B=g2(R)_red,
+    17	```
+    18	
+    19	the reduced ramification map is finite point-bijective and hence a complex
+    20	analytic homeomorphism
+    21	
+    22	```text
+    23	R_red -> B.                                             (0.1)
+    24	```
+    25	
+    26	Every irreducible component on either side has normalization `A1`.  The
+    27	affine incidence multigraph of `R` is a forest, and therefore
+    28	
+    29	```text
+    30	e_c(B)=e_c(R)=b0(B)>=1.                                (0.2)
+    31	```
+    32	
+    33	Combining (0.2) with the promoted `A1`-ruling and cubic sheet census gives
+    34	
+    35	```text
+    36	C=P1:  2*b0(B)+|S0|+Q=1,                    impossible;
+    37	
+    38	C=A1:  2*b0(B)+|S0|+Q=2,
+    39	       hence b0(B)=1, S0=empty, Q=0.                   (0.3)
+    40	```
+    41	
+    42	Thus the complete-base ruling is empty for every actual proper cubic block.
+    43	The affine-base branch survives, but with connected reduced branch and
+    44	ramification support, an unramified block sheet over every target point, and
+    45	one reduced `A1` component in every ruling fibre.
+    46	
+    47	The hostile review returns `CONFIRM_WITH_CORRECTIONS`.  Its only mathematical
+    48	gate was deliberately procedural: the review prompt did not charge the
+    49	already-promoted fixed-sheet integration, so the reviewer correctly stated
+    50	its theorem conditionally.  The coordinator rechecked and explicitly binds
+    51	that different-model-confirmed input below.  No unreviewed replacement is
+    52	being smuggled into the proof.
+    53	
+    54	## 1. Evidence and repaired dependency closure
+    55	
+    56	```text
+    57	8b457a752434ac0c7cb6a2a83dd680b4a66dbe3631ab761c43dc789965ff2d2d
+    58	  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-sol56-20260830.md
+    59	f98149567b865f15a97b1e53c8f1ccd15fde116292e2d0c64a2935d3c45d95ae
+    60	  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-sol56-20260830.md.artifact.json
+    61	
+    62	e544a654d3cead096658502f34b0e6e5560b4a0ea8bf97a53b2a76081aceda4d
+    63	  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-hostile-review-gpt55-20260830.md
+    64	  raw body b16c4bc1ed5756ad39db1f44bc1bdf0fb462de9a0afdc5a5285ae27e712b4fe1
+    65	
+    66	f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8
+    67	  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
+    68	ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
+    69	  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+    70	94a5968a7b412e80536b855b753c33db8d5cafff6698fa6abf8b7f0c99734c1d
+    71	  xmodel/bd-a2-rational-forest-morphic-correction-coordinator-integration-sol56-20260830.md
+    72	7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29
+    73	  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
+    74	b72e39220f9e8d75e94214d2e5669bda072fcbbd644cfed97f97d9a2b820ad57
+    75	  xmodel/block-descent-a1-euler-ledger-sol56-20260830.md
+    76	```
+    77	
+    78	The fixed-sheet theorem in `f9720718...` was already independently reviewed
+    79	and promoted.  For every irreducible target divisor, at least one component
+    80	of its inverse image is generically unramified.  The proof applies the missed-
+    81	principal-divisor lemma to a defining prime `p`: if every component above
+    82	`V(p)` were ramified, then the principal divisor of the same element `p` in
+    83	the literal intermediate ring would be wholly missed by `g1`, which is
+    84	impossible because its pullback to `A2` would be a nowhere-zero nonunit
+    85	polynomial.  Residue degrees are retained; geometric inertia fixes
+    86	`sum_(e_i=1) f_i>=1` block sheets.  Consequently the no-unramified-sheet set
+    87	`S0` has no divisorial component and is finite.  This closes exactly the
+    88	reviewer's stated gap and nothing more.
+    89	
+    90	Root reproduced the external lane's receipt, composed prompt, Seatbelt
+    91	profile, adapter, launcher, validator, appendix, report, log, and every
+    92	charged hash before reading it.  Receipt status `charge_basis_status=ABSENT`
+    93	is correct because the review asserted no exit price.  The report was sealed
+    94	against basis `f86884a5ab78e5248977942f93547fbf25b5be8e` before custody
+    95	commit `4607fefa`.
+    96	
+    97	## 2. Rank-three topology bridge
+    98	
+    99	At a closed source point over a smooth complex target, finite flatness gives
+   100	
+   101	```text
+   102	g2 etale at y  <=>  the local fibre factor at y has length one. (2.1)
+   103	```
+   104	
+   105	A non-etale point therefore consumes length at least two.  Since the total
+   106	fibre length is three, a branch value has exactly one reduced source point in
+   107	`R`.  This remains true at a singular point of normal `Y`: length one would
+   108	make the finite-flat local algebra etale and hence its source regular.
+   109	
+   110	The restriction `R_red->B` is finite and bijective on closed points.  After
+   111	analytification it is a proper continuous bijection between locally compact
+   112	Hausdorff spaces, hence a homeomorphism.  This proves (0.1), but not a scheme
+   113	isomorphism: cusp normalization and conductor data remain legitimate.  In
+   114	characteristic zero the corresponding components are birational and have
+   115	the same normalizations.
+   116	
+   117	The inequality `2+2>3` is load-bearing.  At rank four, a `(2,2)` fibre can
+   118	contain two reduced ramification points, and target conductor identifications
+   119	can change the topology.  No degree-at-least-four statement is promoted.
+   120	
+   121	## 3. One-place components and the forest Euler identity
+   122	
+   123	Every component of `B` is an entire irreducible component of the Keller
+   124	nonproper-value curve.  Nguyen Van Chau's published theorem gives a
+   125	nonconstant polynomial parametrization of each such component.  Passing to
+   126	the normalization and projective completion shows that its affine
+   127	normalization is `A1`.  This is componentwise: the whole possibly reducible
+   128	nonproper-value curve merely has one set-theoretic point at infinity and may
+   129	have several analytic branches there.
+   130	
+   131	Resolve the closure of `R` together with infinity and the singularities of
+   132	normal `Y`.  The affine incidence multigraph of `R`, retaining self-nodes and
+   133	parallel edges, is obtained from the actual morphic strict-SNC boundary
+   134	forest by minors, subdivisions, and vertex deletions.  It is therefore a
+   135	forest.  If `c` is the number of normalized `A1` components, `Sigma` the
+   136	affine multibranch points, `r_p` the number of normalization branches at
+   137	`p`, and `h=b0(R)`, normalization additivity and the forest identity give
+   138	
+   139	```text
+   140	e_c(R)=c-sum_(p in Sigma)(r_p-1)=h.                   (3.1)
+   141	```
+   142	
+   143	Together with (0.1), this proves (0.2).  Unibranch cusps cause no Euler
+   144	defect; a self-node creates parallel incidence edges and is forbidden by the
+   145	forest.  The rational-forest input is licensed only by the actual everywhere-
+   146	defined morphism `g1:A2->U`, never by abstract rational domination.
+   147	
+   148	## 4. Euler closure and exact meaning of the survivor
+   149	
+   150	With the promoted fixed sheet, the rank-three fibre census is
+   151	
+   152	```text
+   153	(1,1,1) off B:       u(z)=3;
+   154	(2,1) on B-S0:       u(z)=1;
+   155	(3) on finite S0:    u(z)=0.
+   156	```
+   157	
+   158	Hence
+   159	
+   160	```text
+   161	e(U)=3-2*e(B)-|S0|.                                  (4.1)
+   162	```
+   163	
+   164	The ruling identity is
+   165	
+   166	```text
+   167	e(U)=e(C)+Q,       Q=sum_t(q_t-1)>=0.                 (4.2)
+   168	```
+   169	
+   170	Equations (0.2), (4.1), and (4.2) give (0.3).  In the affine-base survivor,
+   171	`S0=empty` means there is at least one unramified **block** sheet at every
+   172	target point; it does not identify an original source sheet or make
+   173	`g2|U` finite flat of degree three over the branch.  `Q=0` says every reduced
+   174	ruling fibre has one `A1` component; it does not prove scheme-reducedness,
+   175	multiplicity one, or absence of special fibre values.  Connectedness is for
+   176	the reduced affine branch/ramification topology.
+   177	
+   178	## 5. Maximum-safe conclusion and successor
+   179	
+   180	For an actual proper cubic block satisfying the promoted sandwich, fixed-
+   181	sheet, morphic-forest, and `A1`-ruling theorems, the ruling base cannot be
+   182	`P1`.  If it is `A1`, then necessarily
+   183	
+   184	```text
+   185	b0(B)=1,       S0=empty,       Q=0.
+   186	```
+   187	
+   188	This is a proper-block discriminator, not an exclusion of the affine-base
+   189	survivor, not a degree-four theorem, not a block-existence theorem, and not a
+   190	proof of JC2.  The cheapest successor is to combine the unique affine ruling
+   191	with the rank-three local splitting over the connected branch, the class
+   192	group of `U`, and multiple-fibre/Kummer constraints.  That successor must
+   193	keep ruling fibres, branch components, unramified companion sheets, and
+   194	original source sheets distinct.
+   195	
+   196	<!-- BODY-END -->
+   197	
+   198	## Seal
+   199	
+   200	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   201	  including its terminating newline; this seal is outside the body.
+   202	- Body bytes: `8528`.
+   203	- Body SHA-256:
+   204	  `0d77db42a859fb280ba02c3b2351a668ed52d6e53bd580e2faef1d185480c1fd`.
+   205	- Frozen basis: `4607fefa25b31d039404ced367ee77d1d482cc90`.
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: Galois block obstruction and no two-block system
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Coordinator: Sol 5.6 Ultra  
+     5	Frozen basis: `0d7544ebd5cb12def6bac892646010301098be3c`  
+     6	Lifecycle: **BINDING INTEGRATION / DIFFERENT-MODEL-CONFIRMED BLOCK THEOREM**
+     7	
+     8	## 0. Evidence and disposition
+     9	
+    10	This integration binds the conservative intersection of
+    11	
+    12	```text
+    13	766a843a25eaf560840f15afa8971dd39246fc8b15290491d18e7f4a4c6bb7f7
+    14	  xmodel/block-descent-d2-galois-obstruction-producer-sol56-20260830.md
+    15	e324c104d06ad9e987cfe304ee001e52a58d91eaba941b80c78555a058056df9
+    16	  xmodel/block-descent-d2-galois-obstruction-hostile-review-opus5-20260830.md
+    17	ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
+    18	  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+    19	```
+    20	
+    21	The Opus verdict is `CONFIRM_WITH_CORRECTIONS`.  It independently rebuilt
+    22	the missed-principal-divisor lemma, fixed-sheet theorem, Galois-uniformity
+    23	contradiction, rank-two trace-zero proof, and group-theoretic translation.
+    24	No mathematical gap was found in `BD-GAL` or `BD-D2`.  This file incorporates
+    25	the review's shorter proof, residue-degree accounting, and terminology
+    26	repairs rather than preserving the producer's avoidable ambiguities.
+    27	
+    28	## 1. Binding theorem
+    29	
+    30	Let `F=(f,g):A^2_C->A^2_C` be a hypothetical non-invertible Keller map and
+    31	let
+    32	
+    33	```text
+    34	C(f,g) proper-subfield K proper-subfield C(x,y),
+    35	d1=[C(x,y):K]>=2,             d2=[K:C(f,g)]>=2.
+    36	```
+    37	
+    38	For the promoted factorization
+    39	
+    40	```text
+    41	A^2 --g1, etale quasi-finite--> Y=Spec(B_K)
+    42	    --g2, finite flat--> A^2,
+    43	```
+    44	
+    45	write `R` for the non-etale locus of `g2`.  Then:
+    46	
+    47	1. **Missed principal divisors.**  No nonzero nonunit `b in B_K` has
+    48	   `V_Y(b) subset Y minus g1(A^2)`.  Indeed, its pullback would be a
+    49	   nowhere-zero polynomial on `A^2`, hence a scalar unit, and the literal
+    50	   inclusion `B_K subset C[x,y]` makes `b` the same scalar.
+    51	2. **Fixed sheet over every prime divisor.**  For every irreducible
+    52	   `p in C[f,g]`, at least one component of `g2^{-1}(V(p))` dominates
+    53	   `V(p)` and is generically unramified.  The shortest proof applies item 1
+    54	   directly to `b=p`: if all components were inside `R`, the whole principal
+    55	   divisor would be missed.  If the primes above `(p)` have ramification and
+    56	   residue degrees `(e_i,f_i)`, geometric inertia fixes exactly
+    57	   `sum_(e_i=1) f_i` sheets, and this sum is at least one.
+    58	3. **No proper Galois quotient.**  The extension `K/C(f,g)` is not Galois.
+    59	   Otherwise transitivity of the Galois group on primes over a height-one
+    60	   prime makes every `e_i` equal.  A component of the nonempty branch support
+    61	   supplies an `e_i>1`, while item 2 supplies an `e_i=1`, a contradiction.
+    62	   Normality, not smoothness of `Y`, is enough for the height-one DVR
+    63	   argument; characteristic zero supplies separable residue extensions and
+    64	   tame divisorial ramification.
+    65	4. **No two-block system.**  In particular `d2!=2`, because every quadratic
+    66	   extension in characteristic zero is Galois.  In monodromy notation
+    67	   `H subset J subset G`, this says `[G:J]!=2` and `J` is not normal in `G`.
+    68	   It says nothing about the block size `[J:H]`; in particular it does not
+    69	   exclude `d1=2`.
+    70	5. **Structural corollaries.**  `B_K` is nonfactorial and nonmonogenic over
+    71	   `C[f,g]`.  The rank-two direct proof writes a hypothetical degree-two
+    72	   algebra globally as `A[w]/(w^2-h)`; its ramification set is the nonempty
+    73	   principal divisor `V_Y(w)`, contradicting item 1.  This second proof is
+    74	   independent of the Galois-uniformity argument, but shares the same source-
+    75	   unit mechanism and is not advertised as logically independent of item 1.
+    76	
+    77	“Branch” and “discriminant” agree here only at the level of support.  No
+    78	divisor multiplicities are identified.  A fixed sheet of `g2` is a fixed
+    79	block of the full map; it is not necessarily a single source sheet.
+    80	
+    81	## 2. Independently checked strengthenings
+    82	
+    83	The reviewer derived the following two claims.  The coordinator checked
+    84	their proofs directly against the promoted sandwich; they are included with
+    85	their exact global scope.
+    86	
+    87	**Class-lattice injection.**  Let `Z=Y minus g1(A^2)`.  The free abelian
+    88	group on the codimension-one components of `Z` injects into `Cl(Y)`.  If a
+    89	divisor supported in `Z` were `div(b)`, then both `b` and `b^{-1}` would be
+    90	regular on `g1(A^2)`.  Their pullbacks would be mutually inverse polynomials
+    91	on `A^2`, hence scalars; the function-field inclusion then makes `b` scalar.
+    92	Thus every ramification-component class has infinite order and `Cl(Y)` is
+    93	infinite whenever `R` is nonempty.
+    94	
+    95	**Nonprincipal different.**  The relative dual
+    96	
+    97	```text
+    98	omega_(B_K/A)=Hom_A(B_K,A)
+    99	```
+   100	
+   101	is not a free `B_K`-module, equivalently the different is not principal.
+   102	If a generator existed, its effective divisor would be
+   103	`sum_T(e_T-1)T`, supported exactly on the nonempty codimension-one
+   104	ramification locus in characteristic zero.  It would give a nonempty
+   105	principal closed set inside `R`, contradicting item 1.  Consequently there
+   106	is no global complete-intersection presentation of this finite algebra over
+   107	`A`.  This statement does **not** assert that the finite morphism is nowhere
+   108	locally complete intersection: an invertible but nonfree dualizing module is
+   109	not excluded by the argument.
+   110	
+   111	## 3. Prior-art boundary
+   112	
+   113	A targeted source check confirms that the full-extension Galois case is
+   114	classical, beginning with Campbell (1973), with later Razar/Wright results.
+   115	The check found no indexed statement of the exact proper-intermediate theorem,
+   116	but a negative targeted search is not novelty evidence.  The mathematical
+   117	claim here is internal and reviewed; no external novelty claim is made.
+   118	
+   119	The source record is:
+   120	
+   121	```text
+   122	b75c56add2dcd846654e627ab10bde1a0bea62b857db004f64b77da46e41b741
+   123	  xmodel/block-descent-galois-prior-art-targeted-check-sol56-20260830.md
+   124	```
+   125	
+   126	## 4. Exact boundary and successor
+   127	
+   128	Promoted:
+   129	
+   130	```text
+   131	proper Galois block quotient: impossible;
+   132	two-block quotient d2=2:       impossible;
+   133	every divisorial inertia:      at least one fixed block;
+   134	ramification class lattice:    injects into Cl(Y);
+   135	different / relative dual:     nonprincipal / nonfree.
+   136	```
+   137	
+   138	Not proved: `d1!=2`; exclusion of any non-Galois `d2>=3`; primitive
+   139	monodromy; parity of the total degree; smoothness of `Y`; properness or
+   140	surjectivity of `g1`; existence of a block; a counterexample; or JC2.
+   141	
+   142	The next block discriminator is cubic and must use the `A^2` first leg, not
+   143	only cover-side finite algebra.  The affine-linear Miranda subfamily and its
+   144	logarithmic first-leg obstruction are separate review-gated packets at this
+   145	seal; they are not promoted by this integration.
+   146	
+   147	<!-- BODY-END -->
+   148	
+   149	## Seal
+   150	
+   151	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   152	  including its terminating newline; this seal is outside the body.
+   153	- Body bytes: `6637`.
+   154	- Body SHA-256:
+   155	  `f3668b3ec1c7fd5caefe8b0421548327fc990426b6a04f37083ef7b907475ca1`.
+   156	- Frozen basis: `0d7544ebd5cb12def6bac892646010301098be3c`.
+
+codex
+The imported notes give the affine ruling, fixed-sheet input, and Euler survivor row, but they also preserve important limitations: `S0=empty` is a block-sheet statement, and `Q=0` is only about reduced ruling components. I’m now checking the two cited primary sources directly: Miyanishi for pseudo-plane fibre/Picard claims and Orevkov for the cubic Keller exclusion.
+exec
+/bin/zsh -lc 'mkdir -p /tmp/jc2_miyanishi_1504_07179_gpt55' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+exec
+/bin/zsh -lc 'curl -L https://arxiv.org/pdf/1504.07179 -o /tmp/jc2_miyanishi_1504_07179_gpt55/1504.07179.pdf' in /Users/dc/code/math/jc2
+ succeeded in 97ms:
+ 89  787k   89  701k    0     0  3295k      0 --:--:-- --:--:-- --:--:-- 3295k100  787k  100  787k    0     0  3657k      0 --:--:-- --:--:-- --:--:-- 3645k
+
+codex
+The arXiv download completed into `/tmp`; I’m checking its hash against the prompt before treating it as evidence.
+exec
+/bin/zsh -lc 'shasum -a 256 /tmp/jc2_miyanishi_1504_07179_gpt55/1504.07179.pdf' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+ab4eb0cb74e4051e3fb1f702a253d29cb1a658632f11bc6f4b04a8bb9e7daaa4  /tmp/jc2_miyanishi_1504_07179_gpt55/1504.07179.pdf
+
+exec
+/bin/zsh -lc 'pdfinfo /tmp/jc2_miyanishi_1504_07179_gpt55/1504.07179.pdf' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+Title:           
+Subject:         
+Keywords:        
+Author:          
+Creator:         LaTeX with hyperref package
+Producer:        dvips + GPL Ghostscript GIT PRERELEASE 9.08
+CreationDate:    Mon Apr 27 17:33:55 2015 PDT
+ModDate:         Mon Apr 27 17:33:55 2015 PDT
+Custom Metadata: no
+Metadata Stream: yes
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           134
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       806236 bytes
+Optimized:       no
+PDF version:     1.4
+
+exec
+/bin/zsh -lc 'pdftotext -layout refs/jc86.pdf /tmp/jc2_miyanishi_1504_07179_gpt55/jc86_orevkov.txt' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+exec
+/bin/zsh -lc 'pdftotext -layout /tmp/jc2_miyanishi_1504_07179_gpt55/1504.07179.pdf /tmp/jc2_miyanishi_1504_07179_gpt55/1504.07179.txt' in /Users/dc/code/math/jc2
+ succeeded in 196ms:
+codex
+The primary Miyanishi PDF hash matches the expected digest. I converted both PDFs to temporary text for inspection; next I’m pulling only the cited theorem neighborhoods rather than relying on the charged note’s summaries.
+exec
+/bin/zsh -lc "rg -n \"Theorem 1\\.1|Jacobian|degree|three|3\" /tmp/jc2_miyanishi_1504_07179_gpt55/jc86_orevkov.txt" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "rg -n \"Lemma 1\\.4\\.3|1\\.4\\.3|Lemma 1\\.4\\.16|1\\.4\\.16|Lemma 2\\.5\\.2|2\\.5\\.2|Theorem 2\\.5\\.10|2\\.5\\.10|multiple\" /tmp/jc2_miyanishi_1504_07179_gpt55/1504.07179.txt" in /Users/dc/code/math/jc2
+ succeeded in 45ms:
+6:      Abstract. It is proved that the Jacobian of a 3-fold polynomial mapping C2 → C2
+21:   The well-known Jacobian Conjecture states that such a mapping is polynomially
+27:Theorem 1.1. The Jacobian of a two-sheeted or three-sheeted polynomial mapping
+31:three. The fact that N 6= 2 is well-known (see, for example, [2], Theorem 2.1, (a)
+43:   This kind of purely topological arguments does not extend even to the three-fold
+44:case. Vitushkin [3] constructed an example of a three-fold simplicial (not analytic)
+47:   In order to prove Theorem 1.1 for three-fold mappings, first we show that if
+48:N = 3 then K is a nonsingular irreducible curve (we do it by means of Euler
+58:Jacobian Conjecture. Since a lot of wrong proofs of the Jacobian Conjecture have
+59:appeared (see [2], Sect. I.3), we shall try, as far as possible, for all our assertions,
+88:in [3].
+105:               ON THREE-SHEETED POLYNOMIAL MAPPINGS OF C2                              3
+151:where hi is a homogeneous polynomial of degree i, and k is the multiplicity of the
+208:    §3. Structure of a mapping at a branch point in general position
+210:Lemma 3.1. Let u(x, y) and v(x, y) be holomorphic functions defined in a neigh-
+229:         Figure 1                        Figure 2                            Figure 3
+240:area in Figure 3 (k > 0). Let AB be the edge of ∆(u) adjacent to A (we have
+249:lie in ∆(∂(u, v)/∂(x, y)) below E, which is impossible (see Figure 3). Therefore
+262:Lemma 3.2. Let g : C2 → C2 be a mapping given by the formula g(x, y) =
+303:                      χ(A) = χ(B) × µϕ −      (k − 1)χ0 (Ak ).                 (3)
+340:   Using results on triangularizability of analytic sets [4], and Lemma 3.1, we can
+343:mapping f is simplicial. It follows from Lemma 3.1 that for each irreducible curve
+364:Corollary 4.3.
+378:these expressions into (3), we get
+408:                              §5. Proof of Theorem 1.1
+426:x. Then S̃ = ∂ B̃ is a smooth real 3-manifold by Lemma 3.2 which is a branched
+457:    From the proof of this fact ([5], pp. 12–13), it is easy to see that if T is a
+468:                                                               , α3 = α2−aa2 α−1
+471:αk−1 = αk−2 αk−3 , where aj is the self-intersection number of lj . (In this case
+479:Lemma 5.3. Suppose that N > 2, l = LF (see §2) is irreducible, and µl f = N − 1.
+488:   In order to prove Theorem 1.1, we shall show that the multiplicity N of f ∗ (see
+489:§4) cannot equal two or three. The fact that N 6= 2 was proved in §1, but we may
+490:also derive it as an immediate corollary of Lemma 4.3. If N = 2 then, by Corollary
+491:4.3 the multiplicity of f ∗ at every point of π(LF ) except the point ∞ is equal to
+493:   Suppose that N = 3. Then by Lemma 4.2 three cases may occur: 1) LF consists
+495:and µx f ∗ = 1 for all x ∈ π(LF ) − {∞, x0 }, where x0 6= ∞; or 3) LF is irreducible
+499:because otherwise f ∗ would be an unbranched three-fold covering of C2 or of C2 −
+501:    So we assume that the case 3) holds. Then by Lemma 5.3 the curve f (LF )∩C2 is
+506:exists a unique (up to equivalence) three-fold unbranched covering of M . It may
+508:the branching order of this covering along f (LF ) is equal to three. However, we
+517:1. A.G. Vitushkin, On polynomial transformations of Cn , Manifolds-Tokyo 1973, Univ. of Tokyo
+519:2. H. Bass, E.H. Connell, D. Wright, The Jacobian Conjecture: Reduction of degree and formal
+520:   expansion of the inverse, Bull. Amer. Math. Soc. (N. S.) 7 (1982), 287–330.
+521:3. A.G. Vitushkin, Some examples in connection with problems about polynomial transforma-
+522:   tions of C2 , Izv. Akad. Nauk SSSR, Ser. Mat. 35 (1971), 269–279 (in Russian); English
+524:4. S. Lojasiewicz, Triangulation of semi-analytic sets, Ann. Scuola Norm. Sup. Pisa (3) 18
+530:7. O. Zariski, On the topology of algebroid singularities, Amer. J. Math. 54 (1932), 453–465.
+
+ succeeded in 45ms:
+57:with three multiple fibers whose multiplicity sequence is a Platonic triplet.
+81:multiple fiber. We shall discuss in the subsection 1.4 some results on affine
+730:no multiple fibers.
+738:Lemma 1.4.3 Let X be a smooth affine surface with an A1 -fibration ρ :
+819:Corollary 1.4.4 Let X be as in Lemma 1.4.3. Assume that C ∼
+822:group. In particular, if there is only one multiple fiber mF , then Pic (X) is
+838: (2) The A1 -fibration ρ has a unique multiple fiber with multiplicity d ≥ 2.
+1081:       of A with ρ∗ (P ) the multiple fiber dF0 of ρ.
+1106:     corresponds to the point of A over which lies the unique multiple fiber
+1134:A1 -fibration on Y is obtained by removing a unique multiple fiber dℓ1 from
+1137:transformed by α to the fibers of ρ. Since the multiple fiber dℓ1 is unique, α
+1186:X → B. Suppose that ρ has a multiple fiber mA. Then there are no non-
+1197:that the multiple fiber mA is irreducible, i.e., A is isomorphic to A1 . Let F
+1208:        = A1 and mA is a multiple fiber, we must blow up a non-fixed point
+1251:Lemma 1.4.16 Let X be a smooth affine surface with an A1 -fibration ρ :
+1253:multiple fibers of ρ, where the multiplicity m is gcd(µ1 , . . . , µr ) for a fiber
+1316:1.4.16.
+1328:multiple fiber of ρ. Let τ : A
+1408:lie outside of X, where F0 contains the multiple fiber of ρ. We may assume
+1412:multiple fiber of ρ. Then we may assume that W \ X has the dual graph
+2667:curve and that π has no multiple fibers. Then there exists a nontrivial étale
+2744:        multiple fibers of multiplicity two. Furthermore, the multiplication by
+2784:the four multiple fibers of π : X → B with multiplicity 2. The rest of the
+3039:Hence X has an A1 -fibration ρ : X → B with two multiple fibers 2E3 ∩
+3326:works in this case as well because ϕ sends a multiple fiber to a multiple fiber.
+3409:      multiple fibers.
+3413:multiple fibers of multiplicity 2. It is a counterexample to the generalized
+3422:Lemma 2.5]). Then the assertion follows from Lemma 1.4.16.               Q.E.D.
+3439:B. Let m1 A1 , . . . , mn An exhaust all multiple fibers of ρ. Let ϕ : X → X be
+3498:X → B. Let m1 A1 , . . . , mn An exhaust all multiple fibers of ρ. Suppose that
+3788:Lemma 2.5.2 Let X be a Q-homology plane with κ(X) = −∞. Hence
+3791:a unique multiple fiber dF , where F ∼
+3807:a Galois étale covering, and the multiple fiber dF splits into a disjoint union
+3936:      the A1 -fibration ρ : X → C has a single multiple fiber.
+3940:      A1 -fibration ρ : X → C has at most three multiple fibers. If there are
+3941:      three multiple fibers mi Fi with mi > 1 and Fi ∼
+4037:that the A1 -fibration ρ : X → C has a single multiple fiber. If there are no
+4038:multiple fibers, then ρ : X → C is a trivial A1 -bundle over A1 . Hence X
+4078:multiple fibers of ρ. Hence ρ : X → C is an A1 -bundle over C ∼
+4087:has at least one multiple fiber. Let mi Fi (1 ≤ i ≤ s) exhaust all the multiple
+4121:multiple irreducible fiber and r reducible fibers with respective multiplicity
+4185:Example 2.5.2 By the same construction as above, we can assume that
+4221:all irreducible. Let m1 F1 , . . . , mr Fr exhaust all multiple fibers with mi > 1
+4394:Conjecture 2.5.8 Let mF be a multiple fiber of a smooth A1 -fiber space
+4408:Theorem 2.5.10 Let X be an affine pseudo-plane of type (d, n, r). If r 6= 2
+4412:Proof. Let ρ : X → A be the given A1 -fibration with a multiple fiber dF0 ,
+
+codex
+Miyanishi’s text has the exact lemma numbers cited by the charged note. I’m reading the neighborhoods around those statements now, with emphasis on hypotheses: smooth affine surface, `A1`-fibration, one/multiple fibres, and the special typed pseudo-plane restriction.
+exec
+/bin/zsh -lc "nl -ba /tmp/jc2_miyanishi_1504_07179_gpt55/1504.07179.txt | sed -n '720,860p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   720	Hirzebruch surface Σn by applying several blowing-ups. A singular fiber,
+   721	20      CHAPTER 1. CHARACTERIZATION OF POLYNOMIAL RINGS
+   722	
+   723	which is then a reducible fiber of the P1 -fibration, is described in Lemma
+   724	                                             P
+   725	1.4.1. Write such a singular fiber as F = ri=1 ai Fi , where the Fi are ir-
+   726	reducible components and the ai are their coefficients (hence ai > 0). As
+   727	explained above, any P1 -fibration has a cross-section, say S, which comes
+   728	from the (a) minimal section of a Hirzebruch surface and for which we have
+   729	(F · S) = 1. So, one of the ai must be equal to 1. Hence any P1 -fibration has
+   730	no multiple fibers.
+   731	     As a consequence of the above observations, we have the following result
+   732	which describes the singular fibers of an A1 -fibration on a smooth affine
+   733	                 P
+   734	surface. Let F = ri=1 ai Fi denote anew a fiber of such A1 -fibration. Then
+   735	F is singular if either r ≥ 2, or r = 1 and a1 ≥ 2. If F is singular, we call
+   736	m := gcd(a1 , . . . , ar ) the multiplicity of F . We have the following result.
+   737	
+   738	Lemma 1.4.3 Let X be a smooth affine surface with an A1 -fibration ρ :
+   739	X → C, where C ∼
+   740	               = A1 or C ∼
+   741	                         = P1 . Then the following assertions hold.
+   742	
+   743	 (1) Any fiber of ρ is a disjoint union of the affine lines with suitable mul-
+   744	       tiplicities.
+   745	                                    P
+   746	 (2) If C ∼
+   747	          = A1 , then rank Pic (X) = P ∈C (rP − 1), where rP is the num-
+   748	       ber of irreducible components of the fiber ρ−1 (P ). If C ∼
+   749	                                                                 = P1 , then
+   750	                           P
+   751	       rank Pic (X) = 1 + P ∈C (rP − 1).
+   752	
+   753	 (3) Suppose that C ∼
+   754	                    = A1 and rP = 1 for every P ∈ C. Then Pic (X) ∼   =
+   755	     Q                                                         −1
+   756	       P ∈C Z/mP Z, where mP is the multiplicity of the fiber ρ (P ).
+   757	
+   758	
+   759	 (4) With the same assumptions as in the assertion (3), X is a Q-homology
+   760	       plane. Namely, X is a smooth affine surface with Hi (X; Q) = (0) for
+   761	1.4. PLANE-LIKE AFFINE SURFACES                                                21
+   762	
+   763	      every i > 0.
+   764	
+   765	Proof. (1) Embed X into a smooth projective surface V with a P1 -fibration
+   766	p : V → C. Let D := V −X, which we consider as a reduced effective divisor.
+   767	Since X is affine, there is a very ample divisor whose support is equal to D.
+   768	In particular, D is connected (cf. [23]). Since D contains a (unique) cross-
+   769	section, say S, we know that D consists of S and some connected parts of
+   770	the fibers of ρ which meet S. By Lemma 1.4.1, the fibers of ρ are trees of
+   771	rational curves. Since X contains no complete curves, it follows that any
+   772	fiber of ρ with the part in D removed off consists of irreducible components
+   773	which are located at the tips of the tree (the ends of tree branches) and each
+   774	of which is deprived of one point where it meets the part in D. This means
+   775	that any fiber of ρ is a disjoint union of the affine lines.
+   776	(2) Note that rank Pic (Σn ) = 2 and each blowing-up increases the rank of
+   777	                                                    P
+   778	the Picard group by one. Then rank Pic (V ) = 2 + P ∈C (sP − 1), where
+   779	sP is the number of irreducible components of the fiber p−1 (P ). Since D =
+   780	     P
+   781	S + P ∈C (D ∩ p−1 (P )) and D ∩ p−1 (P ) consists of (sP − rP ) components,
+   782	we obtain the asserted result.
+   783	(3) If C ∼
+   784	         = A1 , one point of C, say P∞ , is not included in C. Let F ∞ be
+   785	the fiber of p over P∞ . Then every fiber p−1 (P ) is linearly equivalent to F ∞ .
+   786	Hence if mP FP is the component of p−1 (P ) left in X with multiplicity mP ,
+   787	then we have a relation mP FP ∼ 0. In fact, there are no other relations on
+   788	the FP . Hence we have the asserted result.
+   789	(4) We just indicate the key ingredients of the proof without going too much
+   790	to details. First of all, V is a smooth rational surface, whence H 1 (V, OV ) =
+   791	H 2 (V, OV ) = (0). Then H 1 (V ; Q) = (0) because the first Betti number b1
+   792	22      CHAPTER 1. CHARACTERIZATION OF POLYNOMIAL RINGS
+   793	
+   794	equals to 2h0,1 , where h0,1 = dim H 1 (V, OV ) = 0. From the well-known long
+   795	exact sequence
+   796	
+   797	      · · · → H 1 (V, OV ) → H 1 (V, OV∗ ) → H 2 (V ; Z) → H 2 (V, OV ) → · · · ,
+   798	
+   799	                             = H 2 (V ; Q), where Pic (V ) ∼
+   800	it follows that Pic (V ) ⊗ Q ∼                             = H 1 (V, OV )∗ . Since
+   801	the irreducible components of D are independent in H 2 (V ; Q) and Pic (X) ⊗
+   802	Q = (0), it follows that H 2 (V ; Q) ∼
+   803	                                     = H 2 (D; Q). Now consider the cohomology
+   804	exact sequence of the pair (V, D) with Q-coefficients
+   805	
+   806	               · · · → H 1 (V ) → H 1 (D) → H 2 (V, D)
+   807	
+   808	                    → H 2 (V ) → H 2 (D) → H 3 (V, D) → H 3 (V ),
+   809	
+   810	whence we obtain H 1 (D; Q) ∼
+   811	                            = H 2 (V, D; Q) ∼
+   812	                                            = H2 (X; Q) and H1 (X; Q) ∼
+   813	                                                                      =
+   814	H 3 (V, D; Q) = (0). Since D is a tree of smooth rational curves, we know
+   815	that H 1 (D; Q) = (0). Hence H2 (X; Q) = (0). Since dim X = 2 it is clear
+   816	that Hi (X; Q) = (0) if i > 2.                                                Q.E.D.
+   817	
+   818	
+   819	Corollary 1.4.4 Let X be as in Lemma 1.4.3. Assume that C ∼
+   820	                                                          = A1 and
+   821	that every fiber of ρ is irreducible. Then the Picard group of X is a torsion
+   822	group. In particular, if there is only one multiple fiber mF , then Pic (X) is
+   823	a cyclic group of order m.
+   824	
+   825	     There are many kinds of affine surfaces satisfying the same conditions as
+   826	in the above corollary. We define below just one class of such surfaces which
+   827	include the surfaces P2 − C, where C is a curve X0 X1d−1 = X2d with d ≥ 2 (cf.
+   828	Lemma 1.4.6 below). The remaining part of this subsection will be published
+   829	elsewhere in our forthcoming paper [30].
+   830	1.4. PLANE-LIKE AFFINE SURFACES                                                         23
+   831	
+   832	Definition 1.4.5 A smooth affine surface X is an affine pseudo-plane if X
+   833	satisfies the following conditions:
+   834	
+   835	 (1) X has an A1 -fibration ρ : X → A, where A ∼
+   836	                                               = A1 .
+   837	
+   838	 (2) The A1 -fibration ρ has a unique multiple fiber with multiplicity d ≥ 2.
+   839	
+   840	We say that X has type (d, n, r) if X further satisfies the next condition:
+   841	
+   842	 (3) X has a smooth completion (V, D) such that the dual graph of D is as
+   843	        given in Figure 1 below, where n ≥ 1 and r ≥ 2. Furthermore, F is the
+   844	        closure of F in V and S ′ is the unique cross-section contained in D.
+   845	
+   846	
+   847	                              −d ❞ E1
+   848	  −1 ♣❞ F                                                                      0 ❞ ℓ′∞
+   849	      ♣♣
+   850	       ♣♣
+   851	        ♣♣
+   852	         ♣             −2     −2          −2                  −2        −2
+   853	  −2 ♣❞        ♣♣♣♣♣      ❞        ❞        ❞      ♣♣♣♣♣       ❞         ❞        ❞ −n
+   854	      Ed+r−1           Ed+1        Ed      Ed−1               E2        ℓ′0      S′
+   855	
+   856	                                           Figure 1
+   857	
+   858	If the curves F = Ed+r , Ed+r−1 , . . . , Ed+1 , Ed , Ed−1 , . . . , E2 , E1 are contracted
+   859	in this order, the resulting surface is a Hirzebruch surface Σn with the mini-
+   860	mal cross-section S ′ .
+
+exec
+/bin/zsh -lc "nl -ba /tmp/jc2_miyanishi_1504_07179_gpt55/1504.07179.txt | sed -n '1180,1325p'" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "nl -ba /tmp/jc2_miyanishi_1504_07179_gpt55/1504.07179.txt | sed -n '3778,3825p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+  3778	                                          e := X(d,
+  3779	pseudo-plane. Then the universal covering X    e r) of X has a Galois
+  3780	
+  3781	group H(d) ∼                        e contains an open set Uω which is
+  3782	           = Z/dZ. By Lemma 1.4.20, X
+  3783	isomorphic to A2 and mapped surjectively onto X by the covering mapping,
+  3784	where ω ∈ H(d). Hence A2 is a Galois affine pseudo-covering of X. Slightly
+  3785	generalizing this result, we can prove the following result.
+  3786	
+  3787	
+  3788	Lemma 2.5.2 Let X be a Q-homology plane with κ(X) = −∞. Hence
+  3789	there exists an A1 -fibration ρ : X → C, where C ∼
+  3790	                                                 = A1 . Suppose that ρ has
+  3791	a unique multiple fiber dF , where F ∼
+  3792	                                     = A1 and d ≥ 2. Then A2 is a Galois
+  3793	affine pseudo-covering of X with Galois group H(d).
+  3794	
+  3795	Proof. The proof is just a repetition of the previous argument used in
+  3796	the construction of the universal covering of an affine pseudo-plane. Let
+  3797	                      e → C be a d-ple cyclic covering which ramifies totally
+  3798	P = ρ(F ) and let µ : C
+  3799	over P and the point at infinity P∞ of C. Let Ye be the normalization of the
+  3800	                   e and fe : Ye → X be the composite of the normalization
+  3801	fiber product X ×C C
+  3802	2.5. AFFINE PSEUDO-COVERINGS                                                             107
+  3803	
+  3804	morphism Ye → X ×C C                               e → X. Then fe is
+  3805	                   e and the first projection X ×C C
+  3806	
+  3807	a Galois étale covering, and the multiple fiber dF splits into a disjoint union
+  3808	of d copies of the affine line on Ye . Let Y be an open set of Ye obtained by
+  3809	removing d − 1 copies of A1 from fe−1 (F ). Then Y is isomorphic to A2 and
+  3810	mapped surjectively onto X by fe.                                                    Q.E.D.
+  3811	
+  3812	       We consider if the converse to the above remark holds. Let X be a smooth
+  3813	affine surface and let f : A2 → X be a Galois affine pseudo-covering with
+  3814	Galois group G. Let Y := A2 and let fe : Ye → X be the normalization of
+  3815	X in the function field of A2 . Then fe is a finite étale Galois covering with
+  3816	Galois group G and Ye contains Y as a Zariski open set. Furthermore, Ye − Y
+  3817	                     `
+  3818	is the disjoint union ri=1 Ci of the curves isomorphic to A1 5 .
+  3819	
+  3820	
+  3821	Lemma 2.5.3 Let the notations and assumptions be the same as above. We
+  3822	assume, furthermore, that the following hypothesis (H) holds:
+  3823	
+  3824	
+  3825	 g(Ci ) ∩ h(Cj ) = ∅ whenever g(Ci ) 6= h(Cj ) for 1 ≤ i, j ≤ r and g, h ∈ G.
+
+ succeeded in 0ms:
+  1180	tor, the numerator of α(u) must be regular along the curve ℓ1 ∩ Z. Namely,
+  1181	we have cd = 1 and s + r < 0. Set s = −m. Then we obtain a formula for α
+  1182	as stated in the assertion (4).                                                 Q.E.D.
+  1183	34      CHAPTER 1. CHARACTERIZATION OF POLYNOMIAL RINGS
+  1184	
+  1185	Lemma 1.4.14 Let X be a smooth affine surface with an A1 -fibration ρ :
+  1186	X → B. Suppose that ρ has a multiple fiber mA. Then there are no non-
+  1187	trivial torus actions σ which stabilize the fibers of the A1 -fibration ρ in the
+  1188	sense that ρ · σ = ρ.
+  1189	
+  1190	Proof. Suppose that σ : Gm × X → X be a non-trivial action which
+  1191	stabilizes the fibers of the A1 -fibration ρ. Then there exists an equivariant
+  1192	smooth compactification V of X such that the boundary divisor D := V − X
+  1193	has smooth normal crossings (cf. [49]) and that the fibration ρ extends to
+  1194	a P1 -fibration p : V → B. We denote by σ the extended torus action on
+  1195	V which stabilizes the fibers of the fibration p. Since each fiber and its
+  1196	irreducible components of ρ are stable under σ, we may and shall assume
+  1197	that the multiple fiber mA is irreducible, i.e., A is isomorphic to A1 . Let F
+  1198	be the fiber p−1 (ρ(A)) and let A be the closure of A. Since σ induces a trivial
+  1199	action on B, it follows that each irreducible component of F is σ-stable and
+  1200	the induced torus action on each component is non-trivial. In fact, if σ is
+  1201	trivial along an irreducible component, say G, of F . Then σ is trivial on an
+  1202	open neighborhood of G, hence on V itself. This implies that we can contract
+  1203	the components of F to a smooth fiber by repeating the equivariant blowing-
+  1204	downs. Conversely, in order to obtain the fiber F from a smooth fiber, we
+  1205	always blow up the fixed points which must be either the fixed points of the
+  1206	starting smooth fiber or the intersection points of adjacent components. But,
+  1207	since A ∼
+  1208	        = A1 and mA is a multiple fiber, we must blow up a non-fixed point
+  1209	to obtain the component A. This is a contradiction.                     Q.E.D.
+  1210	
+  1211	     Let p : V → C be a P1 -fibration from a smooth projective surface V
+  1212	onto a smooth projective curve C, and let G be a singular fiber of p. An
+  1213	1.4. PLANE-LIKE AFFINE SURFACES                                                 35
+  1214	
+  1215	irreducible component B of G is called a branching component if B meets
+  1216	three other components of G. For example, in Figure 1 of Definition 1.4.5,
+  1217	the component Ed is a branching component. In connection with Theorem
+  1218	1.4.12, we have the following result.
+  1219	
+  1220	
+  1221	Theorem 1.4.15 Let X be an affine pseudo-plane of type (d, n, r) with n > 0
+  1222	and r ≥ 3, where we may assume n = 1. Let V be a smooth normal compacti-
+  1223	fication as described in Definition 1.4.5. Choose a point R1 on Ed+1 different
+  1224	from Ed ∩Ed+1 and Ed+1 ∩Ed+2 and blow up R1 to obtain the exceptional curve
+  1225	Gd+2 . Choose a point R2 which is different from the point Gd+2 ∩ Ed+1 and
+  1226	blow it up to obtain the exceptional curve Gd+3 . Repeat this kind of blowing-
+  1227	ups (s − 1) times to obtain a linear chain Gd+2 , Gd+3 , . . . , Gd+s−1, G = Gd+s .
+  1228	Call the resulting surface W . Let Y = W −(ℓ′∞ + S ′ + ℓ′0 + E1 + · · ·+ Ed+r−1 +
+  1229	Gd+2 + · · · + Gd+s−1 . Then Aut (Y ) has no torus group as a subgroup.
+  1230	
+  1231	
+  1232	Proof. Crucial in the above construction is that the adjacent two compo-
+  1233	nents Ed and Ed+1 are branching components. By the same arguments in
+  1234	the proof of Theorem 1.4.10, we can show that the A1 -fibration ρY : Y → A
+  1235	inherited from the A1 -fibration ρ : X → A is a unique A1 -fibration on Y .
+  1236	Hence if there is a torus action σ : Gm × Y → Y , we can extend it to a torus
+  1237	action on the surface W which stabilizes each component of the boundary
+  1238	divisor W − Y . It is then clear that every branching component is pointwise
+  1239	fixed. Now consider the point Ed ∩ Ed+1 . Since two curves Ed and Ed+1 with
+  1240	distinct tangential directions are pointwise fixed, the action is trivial in an
+  1241	open neighborhood of the point Ed ∩ Ed+1 . Hence σ is trivial. This implies
+  1242	that, with the notations of Theorem 1.4.12, π : Aut (Y ) → Aut (A − {0}) is
+  1243	36      CHAPTER 1. CHARACTERIZATION OF POLYNOMIAL RINGS
+  1244	
+  1245	trivial, i.e., Aut (Y ) = G. Meanwhile, G does not contain any torus group
+  1246	by Lemma 1.4.14.                                                           Q.E.D.
+  1247	
+  1248	     We can strengthen Theorem 1.4.10 to the following effect.
+  1249	
+  1250	
+  1251	Lemma 1.4.16 Let X be a smooth affine surface with an A1 -fibration ρ :
+  1252	X → A, where A is isomorphic to A1 . Let {m1 F1 , . . . , mn Fn } exhaust all
+  1253	multiple fibers of ρ, where the multiplicity m is gcd(µ1 , . . . , µr ) for a fiber
+  1254	     P
+  1255	F = ri=1 µi Ci which is a disjoint sum of the irreducible components Ci ∼    = A1 .
+  1256	Suppose that n ≥ 2. Then there are no non-constant morphisms from A1 to X
+  1257	whose image is transverse to the given A1 -fibration ρ. In particular, there are
+  1258	no A1 -fibrations whose general fibers are transverse to the given A1 -fibration
+  1259	ρ.
+  1260	
+  1261	Proof. Let ϕ : B → X be a non-constant morphism whose image is trans-
+  1262	verse to the given A1 -fibration ρ, where B ∼
+  1263	                                            = A1 . Let V be a smooth com-
+  1264	pactification of X such that D := V − X is a divisor with simple normal
+  1265	crossings and ρ extends to a P1 -fibration p : V → A, where A ∼
+  1266	                                                              = P1 . Then D
+  1267	contains a cross-section S of p and the other components of D are contained
+  1268	in the fibers of p. We may assume that the fiber F∞ := p−1 (P∞ ) is a smooth
+  1269	fiber, where {P∞ } = A − A. Let B be the closure of the image ϕ(B) in V .
+  1270	Then B meets the fiber F∞ , for otherwise ϕ(B) is contained in a fiber of ρ.
+  1271	Since B ∼
+  1272	        = A1 , the composite of the morphisms ρB := ρ · ϕ : B → A is surjec-
+  1273	tive. Choose coordinates x, y of B, A, respectively. Then y = f (x), where y
+  1274	is identified with (ρB )∗ (y) and f (x) is a polynomial in x. Let ρ(Fi ) be defined
+  1275	by y = ai for i = 1, 2. Then y − ai = (fi (x))mi for some non-constant polyno-
+  1276	mial fi (x). Then we have a polynomial relation f1 (x)m1 − f2 (x)m2 = a2 − a1 .
+  1277	1.4. PLANE-LIKE AFFINE SURFACES                                                          37
+  1278	
+  1279	Let m = gcd(m1 , m2 ). We consider the cases m > 1 and m = 1 separately.
+  1280	    Suppose that m > 1. Set mi = mni for i = 1, 2. Then g1 (x)m − g2 (x)m =
+  1281	a2 − a1 6= 0, where gi (x) = fi (x)ni . Then we have
+  1282	
+  1283	  g1 (x)m − g2 (x)m
+  1284	                                                                         
+  1285	       = (g1 (x) − g2 (x)) (g1 (x) − ζg2 (x)) · · · g1 (x) − ζ m−1 g2 (x) = a2 − a1 ,
+  1286	
+  1287	where ζ is a primitive m-th root of unity. Since this is a polynomial identity,
+  1288	it follows that g1 (x) − ζ i−1 g2 (x) = ci 6= 0 for 1 ≤ i ≤ m − 1. Since m ≥ 2,
+  1289	g1 (x) and g2 (x) are constants. This is a contradiction.
+  1290	    Suppose that m = 1. We may assume that m1 < m2 . Let C be an affine
+  1291	curve in A2 defined by X m1 − Y m2 = 1 and let C be a projective plane curve
+  1292	defined by Z m2 −m1 X m1 − Y m2 = Z m2 . Then the relation f1 (x)m1 − f2 (x)m2 =
+  1293	a2 − a1 implies that there is a non-constant morphism ϕ : A1 → C. We
+  1294	shall show that the curve C is irrational. The affine curve C is smooth,
+  1295	and the curve C has a singular point Q defined by (X, Y, Z) = (1, 0, 0).
+  1296	The singularity type at Q is a cuspidal singularity of type z ℓ1 − y n = 0,
+  1297	where ℓ1 = m2 − m1 and n = m2 . By the Euclidean algorithm, define
+  1298	positive integers ℓ2 , . . . , ℓs and a1 , . . . , as by n = a1 ℓ1 + ℓ2 (0 < ℓ2 < ℓ1 ), ℓ1 =
+  1299	a2 ℓ2 + ℓ3 (0 < ℓ3 < ℓ2 ), . . . , ℓs−2 = as−1 ℓs−1 + ℓs (1 = ℓs < ℓs−1 ), ℓs−1 = as ℓs .
+  1300	                                                             as−1
+  1301	Then the multiplicity sequence at Q is ℓa11 , ℓa22 , . . . , ℓs−1  , where ℓa signifies
+  1302	that the singular points of multiplicity ℓ appear a-times consecutively along
+  1303	the successive blowing-ups. Computing the genus drop by those singularities,
+  1304	we find that the geometric genus g of C is equal to
+  1305	                                 1
+  1306	                                   (n − 1)(n − ℓ1 − 1).
+  1307	                                 2
+  1308	Since n > 1 and since n = ℓ1 + 1 implies m1 = 1, we know that g > 0 and C
+  1309	38        CHAPTER 1. CHARACTERIZATION OF POLYNOMIAL RINGS
+  1310	
+  1311	is irrational. Then the existence of the non-constant morphism ϕ : A1 → C
+  1312	is a contradiction. Hence there are no A1 -fibrations whose general fibers are
+  1313	transverse to ρ.                                                          Q.E.D.
+  1314	
+  1315	     The following result is noteworthy in view of Theorem 1.4.10 and Lemma
+  1316	1.4.16.
+  1317	
+  1318	
+  1319	Lemma 1.4.17 Let X be an affine pseudo-plane with an A1 -fibration ρ :
+  1320	X → A. Then there exists a non-constant morphism ϕ : A1 → X whose
+  1321	image is transversal to the A1 -fibration ρ.
+  1322	
+  1323	Proof. We consider a smooth compactification V as specified in Definition
+  1324	1.4.5. Let p : V → A be the P1 -fibration which extends the A1 -fibration ρ,
+  1325	where A ∼
+
+exec
+/bin/zsh -lc "nl -ba /tmp/jc2_miyanishi_1504_07179_gpt55/1504.07179.txt | sed -n '4398,4455p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+  4398	
+  4399	Remark 2.5.9 Theorem 2.5.6 asserts, in fact, the following result.
+  4400	
+  4401	   Let X be either a Q-homology plane with ML (X) = k or a Platonic
+  4402	A1 -fiber space possibly except for the case where the multiplicity sequence is
+  4403	{2, 2, m} with m > 5. Then there are no étale morphisms from X to an
+  4404	affine surface with trivial canonical divisor.
+  4405	
+  4406	   We shall next consider the case of affine pseudo-planes.
+  4407	
+  4408	Theorem 2.5.10 Let X be an affine pseudo-plane of type (d, n, r). If r 6= 2
+  4409	then there are no étale morphism from X to A2 .
+  4410	122                             CHAPTER 2. JACOBIAN CONJECTURE
+  4411	
+  4412	Proof. Let ρ : X → A be the given A1 -fibration with a multiple fiber dF0 ,
+  4413	where A ∼
+  4414	        = A1 . A simple computation using the smooth compactification
+  4415	(V, D) in Definition 1.4.5 shows that Pic (X) is isomorphic to Z/dZ with a
+  4416	generator F0 and the canonical divisor KX is linearly equivalent to (r − 2)F0 .
+  4417	Hence KX 6∼ 0 unless r = 2. If there is an étale morphism ϕ : X → A2 , then
+  4418	KX is the inverse image of the canonical divisor of A2 . Hence KX ∼ 0. So,
+  4419	we obtain the stated assertion if r 6= 2.                              Q.E.D.
+  4420	
+  4421	   We note that the differential module Ω1X is the direct sum of an invertible
+  4422	sheaf and OX by virtue of a result due to Murthy-Swan [40]. So, Ω1X is trivial
+  4423	if and only if KX ∼ 0.
+  4424	Bibliography
+  4425	
+  4426	[1] S.S. Abhyankar, Lectures on expansion techniques in algebraic geometry,
+  4427	   Tata Institute of Fundamental Research, 1977.
+  4428	
+  4429	[2] S.S. Abhyankar and T.T. Moh, Embeddings of the line in the plane, J.
+  4430	   Reine Angew. Math. 276 (1975), 148–166.
+  4431	
+  4432	[3] H. Aoki, Etale endomorphisms of smooth affine surfaces. J. Algebra 226
+  4433	   (2000), no. 1, 15–52.
+  4434	
+  4435	[4] H. Applegate and H. Onishi, The Jacobian conjectures in two varaibles,
+  4436	   J. Pure and Applied Algebra 37 (1985), 215–227.
+  4437	
+  4438	[5] J. Ax, The elementary theory of finite fields, Ann. of Math. 88 (1968),
+  4439	   239–271.
+  4440	
+  4441	[6] H. Bass, E. Connell and D. Wright, The Jacobian conjecture: Reduction
+  4442	   of degree and formal expansion of the inverse, Bull. Amer. Math. Soc.
+  4443	   7 (1982), 287–330.
+  4444	
+  4445	[7] A. Borel, Injective endomorphisms of algebraic varieties, Arch. Math.
+  4446	   20 (1969), 531–557.
+  4447	
+  4448	                                   123
+  4449	124                                                           BIBLIOGRAPHY
+  4450	
+  4451	 [8] S. Bundagaard and J. Nielsen, On normal subgroups with finite index
+  4452	      in F -groups, Math. Tidsskrift, B (1951), 56–98.
+  4453	
+  4454	 [9] D. Daigle and G. Freudenburg,A counterexample to Hilbert’s fourteenth
+  4455	      problem in dimension 5. J. Algebra 221 (1999), no. 2, 528–535.
+
+codex
+Miyanishi confirms the general results used for Picard torsion and rational acyclicity under the affine-base/irreducible-fibre hypotheses, and separately confirms that `(d,n,r)` is an added type condition. I’m now checking Orevkov’s theorem statement and proof boundary, because the no-multiple-fibre branch depends on exactly that scope.
+exec
+/bin/zsh -lc "nl -ba /tmp/jc2_miyanishi_1504_07179_gpt55/jc86_orevkov.txt | sed -n '1,70p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	     ON THREE-SHEETED POLYNOMIAL MAPPINGS OF C2
+     2	
+     3	
+     4	                                    S.Yu. Orevkov
+     5	
+     6	      Abstract. It is proved that the Jacobian of a 3-fold polynomial mapping C2 → C2
+     7	      cannot be constant
+     8	
+     9	
+    10	
+    11	
+    12	                           §1. Statement of the result
+    13	   Let Ce 2 and C2 be two copies of the complex plane, and let f : C      e 2 → C2 be
+    14	a locally invertible polynomial mapping, i.e. f (x1 , x2 ) = (f1 (x1 , x2 ), f2 (x1 , x2 )),
+    15	where f1 and f2 are polynomials in x1 and x2 with complex coefficients such that
+    16	
+    17	                                  ∂(f1 , f2 )
+    18	                                              = cont 6= 0.                              (1)
+    19	                                  ∂(x1 , x2 )
+    20	
+    21	   The well-known Jacobian Conjecture states that such a mapping is polynomially
+    22	invertible (surveys on this subject may be found in [1] and [2]). Polynomial invert-
+    23	ibility of f satisfying (1) is obviously equivalent to the fact that a generic point of
+    24	C2 has at most one preimage (see, for example [2], Theorem 2.1). We shall call the
+    25	number of preimages of a generic point the multiplicity of the mapping.
+    26	   The main result of this paper is
+    27	Theorem 1.1. The Jacobian of a two-sheeted or three-sheeted polynomial mapping
+    28	e 2 → C2 vanishes.
+    29	C
+    30	   In other words, the multiplicity N of the above mapping cannot equal to two or
+    31	three. The fact that N 6= 2 is well-known (see, for example, [2], Theorem 2.1, (a)
+    32	⇔ (g)), and it follows immediately from the following arguments. If we compactify
+    33	e 2 and C2 , and then, using σ-processes (blowups) resolve all the indeterminacy
+    34	C
+    35	points of the obtained rational mapping, then we get a branched finite covering f˜
+    36	of some projective surface X  e over CP 2 such that the preimage of C2 contains C   e2
+    37	as a Zariski open subset. The image of the branching curve is an algebraic curve.
+    38	Let us denote it by K. This already implies that the mapping cannot be two-fold.
+    39	Indeed, if it were then f˜−1 (K) ∩ C
+    40	                                   e 2 = ∅, hence, the variety f˜−1 (C2 − K) would be
+    41	simply connected (since it contains C  e 2 ) and would be a finite unbranched covering
+    42	of C2 −K. This is impossible because the fundamental group π1 (C2 −K) is infinite.
+    43	   This kind of purely topological arguments does not extend even to the three-fold
+    44	case. Vitushkin [3] constructed an example of a three-fold simplicial (not analytic)
+    45	branched covering of C2 satisfying all the above conditions except the condition
+    46	that K is algebraic.
+    47	   In order to prove Theorem 1.1 for three-fold mappings, first we show that if
+    48	N = 3 then K is a nonsingular irreducible curve (we do it by means of Euler
+    49	
+    50	                                                                      Typeset by AMS-TEX
+    51	                                             1
+    52	2                                    S.YU. OREVKOV
+    53	
+    54	characteristic computation and a more detailed study of the regularisation process).
+    55	Then it follows from Abhyankar-Moh theorem that K is unknotted in C2 , and we
+    56	can argue as in the two-fold case.
+    57	   We hope that some of our results may appear to be of some use in proving the
+    58	Jacobian Conjecture. Since a lot of wrong proofs of the Jacobian Conjecture have
+    59	appeared (see [2], Sect. I.3), we shall try, as far as possible, for all our assertions,
+    60	either to provide proofs in maximal (sometimes, maybe, excessive) detail or to refer
+    61	to such proofs. In particular, we prove some statements which were used by others
+    62	but whose proofs were omitted or sketched because of their evidence.
+    63	
+    64	                        §2. Regularization of the mapping f
+    65	   We shall consider C2 embedded in the product of two complex projective lines
+    66	P × P1 and C
+    67	    1           e 2 in the complex projective plane eP2 . Then the mapping f extends
+    68	to a rational map F : P     e 2 → P1 × P1 , possibly having points of indeterminacy.
+    69	By means of a finite number of σ-processes, F may be made regular. Since F |C         e2
+    70	is regular, the σ-processes can be done only ”at infinity”, i.e. at points lying on
+
+exec
+/bin/zsh -lc "nl -ba /tmp/jc2_miyanishi_1504_07179_gpt55/jc86_orevkov.txt | sed -n '408,520p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   408	                              §5. Proof of Theorem 1.1
+   409	Lemma 5.1. If a group G contains a subgroup G1 isomorphic to a free group of
+   410	rank greater than one, then G cannot contain any subgroup of finite index isomor-
+   411	phic to Z.
+   412	Proof. Let us denote two of free generators of G1 by a and b. If H is a subgroup
+   413	of G of finite index, then some powers of the elements a and b must lie in H.
+   414	Therefore, if H were isomorphic to Z then there would exist integers m and n such
+   415	that am = bn . But this contradicts the fact that a and b are free generators of G1 .
+   416	Lemma 5.2. Let x ∈ X      e ∗ , x 6= ∞ (see §4). Suppose that x lies on the image
+   417	l∗ = π(l) of an irreducible component l of LF . If µx f ∗ = µl f ∗ , then a germ of the
+   418	mapping f ∗ |l∗ at x determines a nonsingular branch of the curve f ∗ (l∗ ) at f ∗ (x);
+   419	that is, there exists a neighbourhood U of x such that f ∗ ◦ π|U∩l is a nonsingular
+   420	embedding.
+   421	Proof. Let B be a sufficiently small ball centered at the point y = f ∗ (x) such that
+   422	its boundary S intersects transversally with f ∗ (l∗ ), f ∗ (l∗ ) ∩ B is homeomorphic to
+   423	a cone over f ∗ (l∗ )∩S, and each connected component of the set f ∗ −1 (B) contains a
+   424	unique point of f ∗ −1 (y). Let B̃ be the connected component of f ∗ −1 (B) containing
+   425	             def
+   426	x. Then S̃ = ∂ B̃ is a smooth real 3-manifold by Lemma 3.2 which is a branched
+   427	                                                             def
+   428	covering of the sphere S with the branching curve K̃ = S̃ ∩ l∗ . Let K = f ∗ (K̃).
+   429	It follows from the assumption µx f ∗ = µl f ∗ that f ∗ −1 (K) = K̃ and that f ∗ |S̃−K̃
+   430	                                                                  def
+   431	is an unbranched covering of S − K and hence, H = π1 (S̃ − K̃) is a subgroup of
+   432	                               def
+   433	finite index of the group G = π1 (S − K).
+   434	   The set X e ∗ is a smooth complex surface everywhere except the finite set {∞} ∪
+   435	π(LC ). Moreover, by Stein factorisation theorem, X      e ∗ is analytic everywhere except
+   436	at the point ∞; i.e. for some m there exists an embedding ι : B̃ → Cm such that
+   437	ι(B̃) is an analytic subset of Cm , and ι ◦ π : π −1 (B̃) → Cm is analytic. Moreover,
+   438	we may assume all points of π(LC ) are singular points of X         e ∗ , since otherwise in
+   439	the construction of X  e we would not need the corresponding σ-processes. Using the
+   440	techniques of [6], it is not difficult to show that B̃ is diffeomerphic to the intersection
+   441	               ON THREE-SHEETED POLYNOMIAL MAPPINGS OF C2                                 9
+   442	
+   443	of ι(B̃) with a sufficiently small ball in Cm . It is clear that if x is nonsingular in
+   444	tX ∗ (i.e. x 6∈ π(LC )) then H ∼= Z. It turns out (and this will be proved now) that
+   445	                              ∼
+   446	if x is singular then also H = Z.
+   447	    In [5], the fundamental group π1 (S̃) is computed in terms of a resolution of
+   448	the singularity at x. If p is an isolatedSsingularity on a surface Y and π : Ỹ →
+   449	Y its resolution such that π −1 (p) =        li where li are rational curves and the
+   450	corresponding graph is a tree, then by [5] the fundamental group π1 (M ) of the
+   451	boundary M of a sufficiently small spherical neighbourhood of p can be described
+   452	as follows. Generators of this group are small positively oriented loops αi around
+   453	the curves li , and the defining relations are
+   454	  (Iij ) αi commutes with αj if li ∩ lj = ∅.
+   455	  (IIi ) If ai is the self-intersection number of li and if lj1 , . . . , ljn are the curves
+   456	         which meet li then αj1 . . . αjn αai i = 1.
+   457	    From the proof of this fact ([5], pp. 12–13), it is easy to see that if T is a
+   458	circle which is cut out on M by a smooth complex curve transversally intersecting
+   459	li0 then the group π1 (M − T ) also is generated by αi but to obtain the defining
+   460	relations for π1 (M − T ), we must exclude (IIi0 ) from the above relations for π1 (M ).
+   461	In our case, the resolution of the singularity at x is the natural projection π :
+   462	Xe → X  e ∗ . By Lemma 2.1 we know that the graph corresponding to the curve
+   463	             Sk−1
+   464	π −1 (x) = i=1 li is linear and K̃ is a circle cut out on S̃ by the curve l = lk ,
+   465	which meets lk−1 transversally. Hence, the group H = π1 (S̃ − K̃) is defined by
+   466	the generators α1 , . . . , αk−1 and the relations α2 = α−a1
+   467	                                                             1
+   468	                                                               , α3 = α2−aa2 α−1
+   469	                                                                               1 , ...,
+   470	            −ak−2 −1
+   471	αk−1 = αk−2 αk−3 , where aj is the self-intersection number of lj . (In this case
+   472	the commutativity relations are consequences of the others.) Thus, α2 , . . . , αk−1
+   473	may be expressed in terms of α1 , and after this, there remains no more relations,
+   474	i.e. H is isomorphic to Z.
+   475	    To complete the proof of the lemma, it remains to note that by [6], Corollary 10.2,
+   476	the commutator subgroup of G is a free group with an even number of generators.
+   477	Thus, by Lemma 5.1, the knot K is trivial, and hence, by a theorem of Zariski [7],
+   478	the corresponding branch of the curve f ∗ (l∗ ) is nonsingular. The lemma is proved.
+   479	Lemma 5.3. Suppose that N > 2, l = LF (see §2) is irreducible, and µl f = N − 1.
+   480	                                 def
+   481	Then the restriction of f to l′ = l − L∞ is a biregular isomorphism, and hence, the
+   482	curve f (l′ ) is nonsingular in C2 .
+   483	Proof. The mapping f |l′ separates points. Indeed, if f (x) = f (y) for distinct points
+   484	x, y ∈ l′ , then µx f ∗ + µy f ∗ = 2N − 2 > N which contradicts the condition (2) of
+   485	constant multiplicity of f . Hence, first, f (l′ ) is nonsingular since it may not have
+   486	irreducible singularities by Lemma 5.2, and second, f |l′ is an isomorphism. The
+   487	lemma is proved.
+   488	   In order to prove Theorem 1.1, we shall show that the multiplicity N of f ∗ (see
+   489	§4) cannot equal two or three. The fact that N 6= 2 was proved in §1, but we may
+   490	also derive it as an immediate corollary of Lemma 4.3. If N = 2 then, by Corollary
+   491	4.3 the multiplicity of f ∗ at every point of π(LF ) except the point ∞ is equal to
+   492	one, hence, f ∗ is a two-fold unbranched covering of C2 , which is a contradiction.
+   493	   Suppose that N = 3. Then by Lemma 4.2 three cases may occur: 1) LF consists
+   494	of two components and µx f ∗ = 1 for all x ∈ π(LF ) − {∞}; 2) LF is irreducible
+   495	and µx f ∗ = 1 for all x ∈ π(LF ) − {∞, x0 }, where x0 6= ∞; or 3) LF is irreducible
+   496	10                                   S.YU. OREVKOV
+   497	
+   498	and µx f ∗ = 2 for all x ∈ π(LF ) − {∞}. However, the first two cases are impossible
+   499	because otherwise f ∗ would be an unbranched three-fold covering of C2 or of C2 −
+   500	f ∗ (x0 ) which contradicts the fact that these varieties are simply connected.
+   501	    So we assume that the case 3) holds. Then by Lemma 5.3 the curve f (LF )∩C2 is
+   502	isomorphic to C1 and we may apply the following theorem of Abhyankar and Moh
+   503	[8]: If l is a curve in C2 which is isomorphic to C1 then there exists a polynomial
+   504	automorphism α : C2 → C2 such that α(l) is a line. Therefore, there space M =
+   505	C2 − f (LF ) is homotopically equivalent to a circle, and this implies that there
+   506	exists a unique (up to equivalence) three-fold unbranched covering of M . It may
+   507	be uniquely extended up to a branched covering of C2 . It is easy to see that
+   508	the branching order of this covering along f (LF ) is equal to three. However, we
+   509	assumed that µl f ∗ = 2. This contradiction completes the proof of the theorem.
+   510	Remark. Repeating the above arguments, one can prove the following assertion. If
+   511	f : C2 → C2 is a polynomial mapping satisfying condition (1), then the curve LF
+   512	(see §2) cannot contain an irreducible component l such that µl f ∗ = N − 1.
+   513	   In conclusion, I express my gratitude to my scientific adviser A.G. Vitushkin for
+   514	numerous helpful discussions.
+   515	
+   516	                                       References
+   517	1. A.G. Vitushkin, On polynomial transformations of Cn , Manifolds-Tokyo 1973, Univ. of Tokyo
+   518	   Press, Tokyo, 1975, pp. 415–417.
+   519	2. H. Bass, E.H. Connell, D. Wright, The Jacobian Conjecture: Reduction of degree and formal
+   520	   expansion of the inverse, Bull. Amer. Math. Soc. (N. S.) 7 (1982), 287–330.
+
+codex
+Orevkov’s theorem applies to polynomial self-maps of `C^2` with nonzero constant Jacobian and generic multiplicity two or three, so it is usable only after the no-multiple case has been reduced to `U ≅ A2`. I’m rerunning the desk replay in all optimization modes now, including the deliberate mutation, to verify it is not relying on Python `assert`.
+exec
+/bin/zsh -lc 'python3 -O ops/block_descent_a1_cubic_affine_survivor_replay.py' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'python3 -OO ops/block_descent_a1_cubic_affine_survivor_replay.py' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+{"charged_cyclic_action_transitive": false, "charged_fibre_type": [2, 1], "payload_sha256": "a602c5ca9ca141166143b504b32d835b064ea06b4f5d3618876d1b26faefd834", "s3_order": 6, "status": "PASS-CUBIC-AFFINE-SMOOTH-BRANCH-MONODROMY", "three_cycle_count": 2, "transposition_count": 3}
+
+exec
+/bin/zsh -lc 'python3 ops/block_descent_a1_cubic_affine_survivor_replay.py' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+{"charged_cyclic_action_transitive": false, "charged_fibre_type": [2, 1], "payload_sha256": "a602c5ca9ca141166143b504b32d835b064ea06b4f5d3618876d1b26faefd834", "s3_order": 6, "status": "PASS-CUBIC-AFFINE-SMOOTH-BRANCH-MONODROMY", "three_cycle_count": 2, "transposition_count": 3}
+
+ succeeded in 0ms:
+{"charged_cyclic_action_transitive": false, "charged_fibre_type": [2, 1], "payload_sha256": "a602c5ca9ca141166143b504b32d835b064ea06b4f5d3618876d1b26faefd834", "s3_order": 6, "status": "PASS-CUBIC-AFFINE-SMOOTH-BRANCH-MONODROMY", "three_cycle_count": 2, "transposition_count": 3}
+
+exec
+/bin/zsh -lc 'python3 -O ops/block_descent_a1_cubic_affine_survivor_replay.py --mutate-transposition-to-3cycle' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'python3 -OO ops/block_descent_a1_cubic_affine_survivor_replay.py --mutate-transposition-to-3cycle' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'python3 ops/block_descent_a1_cubic_affine_survivor_replay.py --mutate-transposition-to-3cycle' in /Users/dc/code/math/jc2
+ exited 1 in 0ms:
+Traceback (most recent call last):
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_affine_survivor_replay.py", line 114, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_affine_survivor_replay.py", line 93, in main
+    require(selected_type == [2, 1], "mutation changed the charged cubic fibre type")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_affine_survivor_replay.py", line 54, in require
+    raise RuntimeError(message)
+RuntimeError: mutation changed the charged cubic fibre type
+
+ exited 1 in 0ms:
+Traceback (most recent call last):
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_affine_survivor_replay.py", line 114, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_affine_survivor_replay.py", line 93, in main
+    require(selected_type == [2, 1], "mutation changed the charged cubic fibre type")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_affine_survivor_replay.py", line 54, in require
+    raise RuntimeError(message)
+RuntimeError: mutation changed the charged cubic fibre type
+
+ exited 1 in 0ms:
+Traceback (most recent call last):
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_affine_survivor_replay.py", line 114, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_affine_survivor_replay.py", line 93, in main
+    require(selected_type == [2, 1], "mutation changed the charged cubic fibre type")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dc/code/math/jc2/ops/block_descent_a1_cubic_affine_survivor_replay.py", line 54, in require
+    raise RuntimeError(message)
+RuntimeError: mutation changed the charged cubic fibre type
+
+codex
+I’ve got enough to write the review. The report will mark the core funnel as usable only with corrections, keep the singular/reducible topology gate open, and include an explicit cubic control showing why local companion sheets must not be silently promoted to a global fixed label.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
+diff --git a/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md b/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..2ade6e57173f6a5c77c489b962e77f6851a5148b
+--- /dev/null
++++ b/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,229 @@
++# Hostile review: proper-cubic affine-survivor funnel
++
++Date: 2026-08-30
++Reviewer: GPT-5.5 hostile reconstruction
++Scope: charged files only, plus the permitted temporary arXiv fetch of Miyanishi
++`1504.07179`.
++
++## Input custody
++
++All seven charged repository SHA-256 hashes matched the prompt:
++
++```text
++2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
++a38d1ba420fa8388fbf453051bd9d570edbfe99f0a1ff240f1f297d1e6718fcd  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md.artifact.json
++aa198a357ce3c7dd3df6c97019f76553f27c76e5f4b7928ed3e52104de3f3915  ops/block_descent_a1_cubic_affine_survivor_replay.py
++8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
++7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
++f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
++f80d4a7d7e04987ce7dece58f33cff20ea9210183ca3ffd4488f39a2147532db  refs/jc86.pdf
++```
++
++Miyanishi arXiv `1504.07179` was fetched only into `/tmp`.  Its SHA-256
++matched the expected
++`ab4eb0cb74e4051e3fb1f702a253d29cb1a658632f11bc6f4b04a8bb9e7daaa4`.
++I did not inspect `jc2-lean`, sibling external-model prompts, logs, reports,
++receipts, canonical ledgers, or unrelated repository files.
++
++Receipt status: `ABSENT`, as expected.  This review makes no exit-price
++assertion.
++
++## Itemized audit
++
++1. `CONFIRM_WITH_CORRECTIONS`: Miyanishi input and transverse source line.
++
++Miyanishi Lemma 1.4.16 is general for a smooth affine surface with an
++`A1`-fibration over `A1`; it is not restricted to the later typed
++`(d,n,r)` pseudo-planes.  Since `h=rho o g1` is a nonconstant polynomial on
++`A2`, a general affine source line has nonconstant `h|L`, hence gives a
++nonconstant morphism `A1 -> U` transverse to `rho`.  This uses dominance of
++`g1`, not any compatibility of `g1` with the ruling.
++
++The Picard and acyclicity package needs the full affine-base and one-component
++fibre hypotheses.  Miyanishi Lemma 1.4.3 gives fibres as disjoint unions of
++affine lines, the Picard product by fibre multiplicities when every fibre is
++irreducible over base `A1`, and `Q`-homology acyclicity under the same
++one-component hypothesis.  Corollary 1.4.4 then gives cyclic order `m` when
++there is exactly one multiple fibre `mF`.  Thus the funnel may use
++`Pic(U)=Z/m<[F]>` only after importing the affine survivor row `Q=0` and after
++the no-multiple row is excluded.
++
++2. `CONFIRM_WITH_CORRECTIONS`: no-multiple-fibre row.
++
++If every reduced fibre is one `A1` and there are no multiple fibres, each
++scheme fibre is a reduced smooth affine line.  For a morphism from a smooth
++surface to a smooth curve this gives flatness by equidimensionality and then
++smoothness by smooth fibres.  One still needs the standard theorem that a
++smooth `A1`-fibration over a smooth curve is an `A1`-bundle.  Over `A1`, the
++line-bundle and additive torsor classes vanish, so `U ~= A2`.
++
++Only at that point does Orevkov apply.  Theorem 1.1 of `refs/jc86.pdf` is about
++two- or three-sheeted polynomial maps `C2 -> C2` with nonzero constant
++Jacobian.  After `U ~= A2`, the etale map `pi:U -> A2` is such a polynomial
++Keller self-map of generic degree three.  Orevkov is not licensed directly on
++an arbitrary pseudo-plane.
++
++3. `CONFIRMED`: localization and the Hartogs/Zariski-Main warning.
++
++Let `V=g1(A2)`.  Since `g1` is etale, `V` is open in `U`.  If a divisor
++supported in `U - V` were principal, say `div(b)`, then `b` and `b^-1` are
++regular on `V`; pulling back to `A2` gives inverse polynomials, hence scalars.
++Dominance makes `b` scalar.  Therefore the free abelian group on missed prime
++divisors injects into `Pic(U)`.  Since `Pic(U)` is finite, no missed divisor
++exists, so `U - g1(A2)` is finite.
++
++This proves only the target statement "no divisorial component is missed in
++`U`."  It does not say that the Zariski-Main finite normalization has finite
++boundary over `A2`.  Miyanishi Lemma 2.5.2 is exactly the countercontrol: the
++cyclic etale cover splits the multiple fibre into `m` affine lines, and deleting
++`m-1` of them leaves an open `A2` still mapping surjectively to the pseudo-plane;
++the deleted divisors map onto an already attained target fibre.
++
++4. `CONFIRMED`: Kummer divisibility and canonical class.
++
++Choose the base coordinate with `div_U(t)=mF`.  Since `g1` is etale, the pullback
++of the reduced smooth Cartier divisor `F` is reduced.  In the UFD `C[x,y]`,
++`div(g1^*t)=m g1^*F` therefore gives `g1^*t=cP^m` with `c in C*`.
++
++For each prime `p|m`, if `t/c=s^p` in `C(U)`, then `s` is integral over
++`O(U)` and hence regular because `U` is normal affine.  Its divisor would be
++`(m/p)F`, contradicting the exact order `m` of `[F]` in `Pic(U)`.  Since `C`
++contains all roots of unity, the usual Kummer binomial criterion has no
++composite-`m` or fourth-root exception here.  Thus `X^m-t/c` is irreducible
++over `C(U)`, `C(U)(P)` has degree `m`, and the tower law gives `m|d1`.
++
++Separately, etaleness of `pi:U -> A2` gives
++`omega_U ~= pi^* omega_A2`, hence `K_U ~ 0`.  The typed Miyanishi theorem
++2.5.10 is not a coverage theorem: it applies only after the additional
++`(d,n,r)` boundary type is proved.
++
++5. `CONFIRM_WITH_CORRECTIONS`: companion section over `B`.
++
++The conclusion `T=U times_(A2) B -> B` is an isomorphism is correct, including
++at singular and reducible points of the reduced curve `B`, but the proof should
++not pass through finiteness of `U -> A2`.  The right argument is local:
++finite-flat rank three plus `S0=empty` gives, over every geometric branch value,
++one non-etale length-two point and one etale length-one companion point.  Base
++change of the etale locus gives an etale morphism `T -> B` with one geometric
++point in every fibre.  Hence it is surjective, radicial, and etale; an etale
++radicial morphism is an open immersion, and surjectivity makes it an
++isomorphism.
++
++For each irreducible component `B_i=(b_i=0)` of the reduced plane curve,
++`U times B_i -> B_i` is the corresponding component `T_i`, and etale pullback
++of the reduced Cartier divisor gives `div_U(pi^*b_i)=T_i` with coefficient one.
++This is componentwise principal Cartier data, not an identification with a
++ruling fibre or an original source sheet.
++
++6. `CONFIRM_WITH_CORRECTIONS`: complement cover and local companion groups.
++
++`W=U-T` is the same open as `Y - g2^{-1}(B)`.  Since `g2:Y -> A2` is finite flat
++of rank three, `W -> A2-B` is finite etale of degree three.  Since `Y` is
++integral, this nonempty open is connected.  The monodromy is transitive; the
++generic inertia along a branch component has type `(2,1)`, so the image contains
++a transposition and is therefore `S3`.
++
++At any affine point of `B`, henselian idempotent lifting splits the completed
++rank-three algebra into a rank-one etale companion factor and a rank-two
++ramified factor.  Thus the local complement group fixes a companion sheet.
++However, that is a local statement after choosing paths from the global
++basepoint.  It does not by itself produce a single globally fixed sheet.
++
++Control against the stronger inference: the cubic surface
++
++```text
++S = Spec C[x,y,z]/(z^3 - 3z + 2 + xy) -> A2_{x,y}
++```
++
++is finite flat of rank three.  Its branch support is
++`xy(xy+4)=0`; fibres over `xy=0` have root pattern `(z-1)^2(z+2)`, and fibres
++over `xy=-4` have pattern `(z+1)^2(z-2)`, so every branch value has a local
++companion.  At the node `(0,0)`, the completed algebra has one companion factor
++and one double ramified factor.  The total surface is integral, and its only
++singularity is the isolated hypersurface point `(0,0,1)`, hence it is normal.
++The line `y=1` sees the one-parameter cubic
++`z^3-3z+2+q` over `q in A1-{0,-4}`, whose two transposition inertias generate
++`S3`; therefore the global monodromy has no fixed sheet.  This is not a
++survivor because its branch is disconnected and not the campaign `U`, but it
++blocks any proof that promotes local companion-fixing to a global label without
++using the connected one-place forest hypotheses.
++
++7. `CONFIRM_WITH_CORRECTIONS`: smooth branch contradiction; singular/reducible
++case remains open.
++
++If `B` is smooth and connected, Chau's theorem gives normalization `A1`, hence
++`B ~= A1`.  Abhyankar-Moh rectifies the embedding to a coordinate line, so
++`A2-B ~= Gm times A1` and `pi_1(A2-B)=Z`.  A connected degree-three cover with
++cyclic monodromy must be generated by a 3-cycle, while the branch meridian from
++the finite-flat cubic has transposition inertia.  This contradiction is solid.
++
++Nothing comparable is proved for singular or reducible contractible one-place
++forests.  Their complement groups need not be cyclic, and the local companion
++subgroups do not yet have a proved common global label.  The remaining escape
++is precisely global braid/infinity monodromy compatible with all affine local
++groups landing in companion-fixing `S2` subgroups.
++
++8. `CONFIRMED`: replay.
++
++Ordinary, `-O`, and `-OO` all produced the same payload:
++
++```json
++{"charged_cyclic_action_transitive": false, "charged_fibre_type": [2, 1], "payload_sha256": "a602c5ca9ca141166143b504b32d835b064ea06b4f5d3618876d1b26faefd834", "s3_order": 6, "status": "PASS-CUBIC-AFFINE-SMOOTH-BRANCH-MONODROMY", "three_cycle_count": 2, "transposition_count": 3}
++```
++
++The deliberate mutation `--mutate-transposition-to-3cycle` was rejected in all
++three modes with `RuntimeError: mutation changed the charged cubic fibre type`.
++The script uses explicit `require` calls, not Python `assert`, so optimization
++does not erase the checks.
++
++The replay verifies only a finite `S3` permutation fact: a cyclic subgroup
++generated by a transposition is not transitive on three letters, while a
++3-cycle is.  It does not verify the Miyanishi hypotheses, no-multiple-to-bundle
++step, Orevkov applicability, Picard/Kummer package, companion-section theorem,
++normality, branch topology, Chau, Abhyankar-Moh, or any singular/reducible
++forest obstruction.
++
++## Maximum-safe theorem
++
++For an actual promoted proper cubic affine survivor, assuming the charged
++proper-block, ruling-transfer, fixed-sheet, and one-place Euler inputs, the
++following is safe:
++
++```text
++rho:U -> A1 has exactly one multiple fibre mF with m>=2.
++Pic(U)=Z/m<[F]>.
++H_i(U;Q)=0 for i>0.
++U - g1(A2) is finite.
++m divides d1.
++K_U ~ 0.
++T=U times_(A2) B -> B is an isomorphism.
++W=U-T -> A2-B is connected finite etale of degree three with S3 monodromy.
++Every affine local complement group fixes its local companion sheet.
++B is not smooth.
++```
++
++With the imported one-place/forest theorem, `B` is therefore singular or
++reducible, connected, contractible, and one-place in the charged sense.  The
++theorem does not exclude that remaining singular/reducible branch, does not
++prove global companion-label propagation, does not place arbitrary `U` in
++Miyanishi's typed `(d,n,r)` class, and does not make any statement about degree
++at least four or the primitive/no-block horn.
++
++## Cheapest useful successor
++
++The cheapest successor is a topology-and-realization check, not another
++Picard/Kummer pass:
++
++1. Build van Kampen or splice presentations for connected contractible
++   one-place forest curves, keeping every affine local subgroup and the infinity
++   group separate.
++2. Search first for explicit `S3` representations in which each affine local
++   group lands in a companion-fixing `S2`; only after that fails should one try
++   to prove common-label propagation.
++3. In parallel, test whether the proper-block boundary forces the ramification
++   resolution arms into the linear situation used by Orevkov's local knot
++   argument.  That added hypothesis would push the branch back to the smooth
++   contradiction.
++
++Typed result for the unresolved gate: `OPEN`.
++<!-- BODY-END -->
+
+diff --git a/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md b/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..2ade6e57173f6a5c77c489b962e77f6851a5148b
+--- /dev/null
++++ b/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,229 @@
++# Hostile review: proper-cubic affine-survivor funnel
++
++Date: 2026-08-30
++Reviewer: GPT-5.5 hostile reconstruction
++Scope: charged files only, plus the permitted temporary arXiv fetch of Miyanishi
++`1504.07179`.
++
++## Input custody
++
++All seven charged repository SHA-256 hashes matched the prompt:
++
++```text
++2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
++a38d1ba420fa8388fbf453051bd9d570edbfe99f0a1ff240f1f297d1e6718fcd  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md.artifact.json
++aa198a357ce3c7dd3df6c97019f76553f27c76e5f4b7928ed3e52104de3f3915  ops/block_descent_a1_cubic_affine_survivor_replay.py
++8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
++7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
++f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
++f80d4a7d7e04987ce7dece58f33cff20ea9210183ca3ffd4488f39a2147532db  refs/jc86.pdf
++```
++
++Miyanishi arXiv `1504.07179` was fetched only into `/tmp`.  Its SHA-256
++matched the expected
++`ab4eb0cb74e4051e3fb1f702a253d29cb1a658632f11bc6f4b04a8bb9e7daaa4`.
++I did not inspect `jc2-lean`, sibling external-model prompts, logs, reports,
++receipts, canonical ledgers, or unrelated repository files.
++
++Receipt status: `ABSENT`, as expected.  This review makes no exit-price
++assertion.
++
++## Itemized audit
++
++1. `CONFIRM_WITH_CORRECTIONS`: Miyanishi input and transverse source line.
++
++Miyanishi Lemma 1.4.16 is general for a smooth affine surface with an
++`A1`-fibration over `A1`; it is not restricted to the later typed
++`(d,n,r)` pseudo-planes.  Since `h=rho o g1` is a nonconstant polynomial on
++`A2`, a general affine source line has nonconstant `h|L`, hence gives a
++nonconstant morphism `A1 -> U` transverse to `rho`.  This uses dominance of
++`g1`, not any compatibility of `g1` with the ruling.
++
++The Picard and acyclicity package needs the full affine-base and one-component
++fibre hypotheses.  Miyanishi Lemma 1.4.3 gives fibres as disjoint unions of
++affine lines, the Picard product by fibre multiplicities when every fibre is
++irreducible over base `A1`, and `Q`-homology acyclicity under the same
++one-component hypothesis.  Corollary 1.4.4 then gives cyclic order `m` when
++there is exactly one multiple fibre `mF`.  Thus the funnel may use
++`Pic(U)=Z/m<[F]>` only after importing the affine survivor row `Q=0` and after
++the no-multiple row is excluded.
++
++2. `CONFIRM_WITH_CORRECTIONS`: no-multiple-fibre row.
++
++If every reduced fibre is one `A1` and there are no multiple fibres, each
++scheme fibre is a reduced smooth affine line.  For a morphism from a smooth
++surface to a smooth curve this gives flatness by equidimensionality and then
++smoothness by smooth fibres.  One still needs the standard theorem that a
++smooth `A1`-fibration over a smooth curve is an `A1`-bundle.  Over `A1`, the
++line-bundle and additive torsor classes vanish, so `U ~= A2`.
++
++Only at that point does Orevkov apply.  Theorem 1.1 of `refs/jc86.pdf` is about
++two- or three-sheeted polynomial maps `C2 -> C2` with nonzero constant
++Jacobian.  After `U ~= A2`, the etale map `pi:U -> A2` is such a polynomial
++Keller self-map of generic degree three.  Orevkov is not licensed directly on
++an arbitrary pseudo-plane.
++
++3. `CONFIRMED`: localization and the Hartogs/Zariski-Main warning.
++
++Let `V=g1(A2)`.  Since `g1` is etale, `V` is open in `U`.  If a divisor
++supported in `U - V` were principal, say `div(b)`, then `b` and `b^-1` are
++regular on `V`; pulling back to `A2` gives inverse polynomials, hence scalars.
++Dominance makes `b` scalar.  Therefore the free abelian group on missed prime
++divisors injects into `Pic(U)`.  Since `Pic(U)` is finite, no missed divisor
++exists, so `U - g1(A2)` is finite.
++
++This proves only the target statement "no divisorial component is missed in
++`U`."  It does not say that the Zariski-Main finite normalization has finite
++boundary over `A2`.  Miyanishi Lemma 2.5.2 is exactly the countercontrol: the
++cyclic etale cover splits the multiple fibre into `m` affine lines, and deleting
++`m-1` of them leaves an open `A2` still mapping surjectively to the pseudo-plane;
++the deleted divisors map onto an already attained target fibre.
++
++4. `CONFIRMED`: Kummer divisibility and canonical class.
++
++Choose the base coordinate with `div_U(t)=mF`.  Since `g1` is etale, the pullback
++of the reduced smooth Cartier divisor `F` is reduced.  In the UFD `C[x,y]`,
++`div(g1^*t)=m g1^*F` therefore gives `g1^*t=cP^m` with `c in C*`.
++
++For each prime `p|m`, if `t/c=s^p` in `C(U)`, then `s` is integral over
++`O(U)` and hence regular because `U` is normal affine.  Its divisor would be
++`(m/p)F`, contradicting the exact order `m` of `[F]` in `Pic(U)`.  Since `C`
++contains all roots of unity, the usual Kummer binomial criterion has no
++composite-`m` or fourth-root exception here.  Thus `X^m-t/c` is irreducible
++over `C(U)`, `C(U)(P)` has degree `m`, and the tower law gives `m|d1`.
++
++Separately, etaleness of `pi:U -> A2` gives
++`omega_U ~= pi^* omega_A2`, hence `K_U ~ 0`.  The typed Miyanishi theorem
++2.5.10 is not a coverage theorem: it applies only after the additional
++`(d,n,r)` boundary type is proved.
++
++5. `CONFIRM_WITH_CORRECTIONS`: companion section over `B`.
++
++The conclusion `T=U times_(A2) B -> B` is an isomorphism is correct, including
++at singular and reducible points of the reduced curve `B`, but the proof should
++not pass through finiteness of `U -> A2`.  The right argument is local:
++finite-flat rank three plus `S0=empty` gives, over every geometric branch value,
++one non-etale length-two point and one etale length-one companion point.  Base
++change of the etale locus gives an etale morphism `T -> B` with one geometric
++point in every fibre.  Hence it is surjective, radicial, and etale; an etale
++radicial morphism is an open immersion, and surjectivity makes it an
++isomorphism.
++
++For each irreducible component `B_i=(b_i=0)` of the reduced plane curve,
++`U times B_i -> B_i` is the corresponding component `T_i`, and etale pullback
++of the reduced Cartier divisor gives `div_U(pi^*b_i)=T_i` with coefficient one.
++This is componentwise principal Cartier data, not an identification with a
++ruling fibre or an original source sheet.
++
++6. `CONFIRM_WITH_CORRECTIONS`: complement cover and local companion groups.
++
++`W=U-T` is the same open as `Y - g2^{-1}(B)`.  Since `g2:Y -> A2` is finite flat
++of rank three, `W -> A2-B` is finite etale of degree three.  Since `Y` is
++integral, this nonempty open is connected.  The monodromy is transitive; the
++generic inertia along a branch component has type `(2,1)`, so the image contains
++a transposition and is therefore `S3`.
++
++At any affine point of `B`, henselian idempotent lifting splits the completed
++rank-three algebra into a rank-one etale companion factor and a rank-two
++ramified factor.  Thus the local complement group fixes a companion sheet.
++However, that is a local statement after choosing paths from the global
++basepoint.  It does not by itself produce a single globally fixed sheet.
++
++Control against the stronger inference: the cubic surface
++
++```text
++S = Spec C[x,y,z]/(z^3 - 3z + 2 + xy) -> A2_{x,y}
++```
++
++is finite flat of rank three.  Its branch support is
++`xy(xy+4)=0`; fibres over `xy=0` have root pattern `(z-1)^2(z+2)`, and fibres
++over `xy=-4` have pattern `(z+1)^2(z-2)`, so every branch value has a local
++companion.  At the node `(0,0)`, the completed algebra has one companion factor
++and one double ramified factor.  The total surface is integral, and its only
++singularity is the isolated hypersurface point `(0,0,1)`, hence it is normal.
++The line `y=1` sees the one-parameter cubic
++`z^3-3z+2+q` over `q in A1-{0,-4}`, whose two transposition inertias generate
++`S3`; therefore the global monodromy has no fixed sheet.  This is not a
++survivor because its branch is disconnected and not the campaign `U`, but it
++blocks any proof that promotes local companion-fixing to a global label without
++using the connected one-place forest hypotheses.
++
++7. `CONFIRM_WITH_CORRECTIONS`: smooth branch contradiction; singular/reducible
++case remains open.
++
++If `B` is smooth and connected, Chau's theorem gives normalization `A1`, hence
++`B ~= A1`.  Abhyankar-Moh rectifies the embedding to a coordinate line, so
++`A2-B ~= Gm times A1` and `pi_1(A2-B)=Z`.  A connected degree-three cover with
++cyclic monodromy must be generated by a 3-cycle, while the branch meridian from
++the finite-flat cubic has transposition inertia.  This contradiction is solid.
++
++Nothing comparable is proved for singular or reducible contractible one-place
++forests.  Their complement groups need not be cyclic, and the local companion
++subgroups do not yet have a proved common global label.  The remaining escape
++is precisely global braid/infinity monodromy compatible with all affine local
++groups landing in companion-fixing `S2` subgroups.
++
++8. `CONFIRMED`: replay.
++
++Ordinary, `-O`, and `-OO` all produced the same payload:
++
++```json
++{"charged_cyclic_action_transitive": false, "charged_fibre_type": [2, 1], "payload_sha256": "a602c5ca9ca141166143b504b32d835b064ea06b4f5d3618876d1b26faefd834", "s3_order": 6, "status": "PASS-CUBIC-AFFINE-SMOOTH-BRANCH-MONODROMY", "three_cycle_count": 2, "transposition_count": 3}
++```
++
++The deliberate mutation `--mutate-transposition-to-3cycle` was rejected in all
++three modes with `RuntimeError: mutation changed the charged cubic fibre type`.
++The script uses explicit `require` calls, not Python `assert`, so optimization
++does not erase the checks.
++
++The replay verifies only a finite `S3` permutation fact: a cyclic subgroup
++generated by a transposition is not transitive on three letters, while a
++3-cycle is.  It does not verify the Miyanishi hypotheses, no-multiple-to-bundle
++step, Orevkov applicability, Picard/Kummer package, companion-section theorem,
++normality, branch topology, Chau, Abhyankar-Moh, or any singular/reducible
++forest obstruction.
++
++## Maximum-safe theorem
++
++For an actual promoted proper cubic affine survivor, assuming the charged
++proper-block, ruling-transfer, fixed-sheet, and one-place Euler inputs, the
++following is safe:
++
++```text
++rho:U -> A1 has exactly one multiple fibre mF with m>=2.
++Pic(U)=Z/m<[F]>.
++H_i(U;Q)=0 for i>0.
++U - g1(A2) is finite.
++m divides d1.
++K_U ~ 0.
++T=U times_(A2) B -> B is an isomorphism.
++W=U-T -> A2-B is connected finite etale of degree three with S3 monodromy.
++Every affine local complement group fixes its local companion sheet.
++B is not smooth.
++```
++
++With the imported one-place/forest theorem, `B` is therefore singular or
++reducible, connected, contractible, and one-place in the charged sense.  The
++theorem does not exclude that remaining singular/reducible branch, does not
++prove global companion-label propagation, does not place arbitrary `U` in
++Miyanishi's typed `(d,n,r)` class, and does not make any statement about degree
++at least four or the primitive/no-block horn.
++
++## Cheapest useful successor
++
++The cheapest successor is a topology-and-realization check, not another
++Picard/Kummer pass:
++
++1. Build van Kampen or splice presentations for connected contractible
++   one-place forest curves, keeping every affine local subgroup and the infinity
++   group separate.
++2. Search first for explicit `S3` representations in which each affine local
++   group lands in a companion-fixing `S2`; only after that fails should one try
++   to prove common-label propagation.
++3. In parallel, test whether the proper-block boundary forces the ramification
++   resolution arms into the linear situation used by Orevkov's local knot
++   argument.  That added hypothesis would push the branch back to the smooth
++   contradiction.
++
++Typed result for the unresolved gate: `OPEN`.
++<!-- BODY-END -->
+
+codex
+The review file has been written. I’m doing a narrow final check on that file only: last line, absence of a seal block, and absence of any `charge_basis` line.
+exec
+/bin/zsh -lc 'tail -n 5 xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   argument.  That added hypothesis would push the branch back to the smooth
+   contradiction.
+
+Typed result for the unresolved gate: `OPEN`.
+<!-- BODY-END -->
+
+exec
+/bin/zsh -lc 'rg -n "charge_basis|## Seal|BODY-END" xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+229:<!-- BODY-END -->
+
+diff --git a/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md b/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..2ade6e57173f6a5c77c489b962e77f6851a5148b
+--- /dev/null
++++ b/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,229 @@
++# Hostile review: proper-cubic affine-survivor funnel
++
++Date: 2026-08-30
++Reviewer: GPT-5.5 hostile reconstruction
++Scope: charged files only, plus the permitted temporary arXiv fetch of Miyanishi
++`1504.07179`.
++
++## Input custody
++
++All seven charged repository SHA-256 hashes matched the prompt:
++
++```text
++2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
++a38d1ba420fa8388fbf453051bd9d570edbfe99f0a1ff240f1f297d1e6718fcd  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md.artifact.json
++aa198a357ce3c7dd3df6c97019f76553f27c76e5f4b7928ed3e52104de3f3915  ops/block_descent_a1_cubic_affine_survivor_replay.py
++8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
++7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
++f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
++f80d4a7d7e04987ce7dece58f33cff20ea9210183ca3ffd4488f39a2147532db  refs/jc86.pdf
++```
++
++Miyanishi arXiv `1504.07179` was fetched only into `/tmp`.  Its SHA-256
++matched the expected
++`ab4eb0cb74e4051e3fb1f702a253d29cb1a658632f11bc6f4b04a8bb9e7daaa4`.
++I did not inspect `jc2-lean`, sibling external-model prompts, logs, reports,
++receipts, canonical ledgers, or unrelated repository files.
++
++Receipt status: `ABSENT`, as expected.  This review makes no exit-price
++assertion.
++
++## Itemized audit
++
++1. `CONFIRM_WITH_CORRECTIONS`: Miyanishi input and transverse source line.
++
++Miyanishi Lemma 1.4.16 is general for a smooth affine surface with an
++`A1`-fibration over `A1`; it is not restricted to the later typed
++`(d,n,r)` pseudo-planes.  Since `h=rho o g1` is a nonconstant polynomial on
++`A2`, a general affine source line has nonconstant `h|L`, hence gives a
++nonconstant morphism `A1 -> U` transverse to `rho`.  This uses dominance of
++`g1`, not any compatibility of `g1` with the ruling.
++
++The Picard and acyclicity package needs the full affine-base and one-component
++fibre hypotheses.  Miyanishi Lemma 1.4.3 gives fibres as disjoint unions of
++affine lines, the Picard product by fibre multiplicities when every fibre is
++irreducible over base `A1`, and `Q`-homology acyclicity under the same
++one-component hypothesis.  Corollary 1.4.4 then gives cyclic order `m` when
++there is exactly one multiple fibre `mF`.  Thus the funnel may use
++`Pic(U)=Z/m<[F]>` only after importing the affine survivor row `Q=0` and after
++the no-multiple row is excluded.
++
++2. `CONFIRM_WITH_CORRECTIONS`: no-multiple-fibre row.
++
++If every reduced fibre is one `A1` and there are no multiple fibres, each
++scheme fibre is a reduced smooth affine line.  For a morphism from a smooth
++surface to a smooth curve this gives flatness by equidimensionality and then
++smoothness by smooth fibres.  One still needs the standard theorem that a
++smooth `A1`-fibration over a smooth curve is an `A1`-bundle.  Over `A1`, the
++line-bundle and additive torsor classes vanish, so `U ~= A2`.
++
++Only at that point does Orevkov apply.  Theorem 1.1 of `refs/jc86.pdf` is about
++two- or three-sheeted polynomial maps `C2 -> C2` with nonzero constant
++Jacobian.  After `U ~= A2`, the etale map `pi:U -> A2` is such a polynomial
++Keller self-map of generic degree three.  Orevkov is not licensed directly on
++an arbitrary pseudo-plane.
++
++3. `CONFIRMED`: localization and the Hartogs/Zariski-Main warning.
++
++Let `V=g1(A2)`.  Since `g1` is etale, `V` is open in `U`.  If a divisor
++supported in `U - V` were principal, say `div(b)`, then `b` and `b^-1` are
++regular on `V`; pulling back to `A2` gives inverse polynomials, hence scalars.
++Dominance makes `b` scalar.  Therefore the free abelian group on missed prime
++divisors injects into `Pic(U)`.  Since `Pic(U)` is finite, no missed divisor
++exists, so `U - g1(A2)` is finite.
++
++This proves only the target statement "no divisorial component is missed in
++`U`."  It does not say that the Zariski-Main finite normalization has finite
++boundary over `A2`.  Miyanishi Lemma 2.5.2 is exactly the countercontrol: the
++cyclic etale cover splits the multiple fibre into `m` affine lines, and deleting
++`m-1` of them leaves an open `A2` still mapping surjectively to the pseudo-plane;
++the deleted divisors map onto an already attained target fibre.
++
++4. `CONFIRMED`: Kummer divisibility and canonical class.
++
++Choose the base coordinate with `div_U(t)=mF`.  Since `g1` is etale, the pullback
++of the reduced smooth Cartier divisor `F` is reduced.  In the UFD `C[x,y]`,
++`div(g1^*t)=m g1^*F` therefore gives `g1^*t=cP^m` with `c in C*`.
++
++For each prime `p|m`, if `t/c=s^p` in `C(U)`, then `s` is integral over
++`O(U)` and hence regular because `U` is normal affine.  Its divisor would be
++`(m/p)F`, contradicting the exact order `m` of `[F]` in `Pic(U)`.  Since `C`
++contains all roots of unity, the usual Kummer binomial criterion has no
++composite-`m` or fourth-root exception here.  Thus `X^m-t/c` is irreducible
++over `C(U)`, `C(U)(P)` has degree `m`, and the tower law gives `m|d1`.
++
++Separately, etaleness of `pi:U -> A2` gives
++`omega_U ~= pi^* omega_A2`, hence `K_U ~ 0`.  The typed Miyanishi theorem
++2.5.10 is not a coverage theorem: it applies only after the additional
++`(d,n,r)` boundary type is proved.
++
++5. `CONFIRM_WITH_CORRECTIONS`: companion section over `B`.
++
++The conclusion `T=U times_(A2) B -> B` is an isomorphism is correct, including
++at singular and reducible points of the reduced curve `B`, but the proof should
++not pass through finiteness of `U -> A2`.  The right argument is local:
++finite-flat rank three plus `S0=empty` gives, over every geometric branch value,
++one non-etale length-two point and one etale length-one companion point.  Base
++change of the etale locus gives an etale morphism `T -> B` with one geometric
++point in every fibre.  Hence it is surjective, radicial, and etale; an etale
++radicial morphism is an open immersion, and surjectivity makes it an
++isomorphism.
++
++For each irreducible component `B_i=(b_i=0)` of the reduced plane curve,
++`U times B_i -> B_i` is the corresponding component `T_i`, and etale pullback
++of the reduced Cartier divisor gives `div_U(pi^*b_i)=T_i` with coefficient one.
++This is componentwise principal Cartier data, not an identification with a
++ruling fibre or an original source sheet.
++
++6. `CONFIRM_WITH_CORRECTIONS`: complement cover and local companion groups.
++
++`W=U-T` is the same open as `Y - g2^{-1}(B)`.  Since `g2:Y -> A2` is finite flat
++of rank three, `W -> A2-B` is finite etale of degree three.  Since `Y` is
++integral, this nonempty open is connected.  The monodromy is transitive; the
++generic inertia along a branch component has type `(2,1)`, so the image contains
++a transposition and is therefore `S3`.
++
++At any affine point of `B`, henselian idempotent lifting splits the completed
++rank-three algebra into a rank-one etale companion factor and a rank-two
++ramified factor.  Thus the local complement group fixes a companion sheet.
++However, that is a local statement after choosing paths from the global
++basepoint.  It does not by itself produce a single globally fixed sheet.
++
++Control against the stronger inference: the cubic surface
++
++```text
++S = Spec C[x,y,z]/(z^3 - 3z + 2 + xy) -> A2_{x,y}
++```
++
++is finite flat of rank three.  Its branch support is
++`xy(xy+4)=0`; fibres over `xy=0` have root pattern `(z-1)^2(z+2)`, and fibres
++over `xy=-4` have pattern `(z+1)^2(z-2)`, so every branch value has a local
++companion.  At the node `(0,0)`, the completed algebra has one companion factor
++and one double ramified factor.  The total surface is integral, and its only
++singularity is the isolated hypersurface point `(0,0,1)`, hence it is normal.
++The line `y=1` sees the one-parameter cubic
++`z^3-3z+2+q` over `q in A1-{0,-4}`, whose two transposition inertias generate
++`S3`; therefore the global monodromy has no fixed sheet.  This is not a
++survivor because its branch is disconnected and not the campaign `U`, but it
++blocks any proof that promotes local companion-fixing to a global label without
++using the connected one-place forest hypotheses.
++
++7. `CONFIRM_WITH_CORRECTIONS`: smooth branch contradiction; singular/reducible
++case remains open.
++
++If `B` is smooth and connected, Chau's theorem gives normalization `A1`, hence
++`B ~= A1`.  Abhyankar-Moh rectifies the embedding to a coordinate line, so
++`A2-B ~= Gm times A1` and `pi_1(A2-B)=Z`.  A connected degree-three cover with
++cyclic monodromy must be generated by a 3-cycle, while the branch meridian from
++the finite-flat cubic has transposition inertia.  This contradiction is solid.
++
++Nothing comparable is proved for singular or reducible contractible one-place
++forests.  Their complement groups need not be cyclic, and the local companion
++subgroups do not yet have a proved common global label.  The remaining escape
++is precisely global braid/infinity monodromy compatible with all affine local
++groups landing in companion-fixing `S2` subgroups.
++
++8. `CONFIRMED`: replay.
++
++Ordinary, `-O`, and `-OO` all produced the same payload:
++
++```json
++{"charged_cyclic_action_transitive": false, "charged_fibre_type": [2, 1], "payload_sha256": "a602c5ca9ca141166143b504b32d835b064ea06b4f5d3618876d1b26faefd834", "s3_order": 6, "status": "PASS-CUBIC-AFFINE-SMOOTH-BRANCH-MONODROMY", "three_cycle_count": 2, "transposition_count": 3}
++```
++
++The deliberate mutation `--mutate-transposition-to-3cycle` was rejected in all
++three modes with `RuntimeError: mutation changed the charged cubic fibre type`.
++The script uses explicit `require` calls, not Python `assert`, so optimization
++does not erase the checks.
++
++The replay verifies only a finite `S3` permutation fact: a cyclic subgroup
++generated by a transposition is not transitive on three letters, while a
++3-cycle is.  It does not verify the Miyanishi hypotheses, no-multiple-to-bundle
++step, Orevkov applicability, Picard/Kummer package, companion-section theorem,
++normality, branch topology, Chau, Abhyankar-Moh, or any singular/reducible
++forest obstruction.
++
++## Maximum-safe theorem
++
++For an actual promoted proper cubic affine survivor, assuming the charged
++proper-block, ruling-transfer, fixed-sheet, and one-place Euler inputs, the
++following is safe:
++
++```text
++rho:U -> A1 has exactly one multiple fibre mF with m>=2.
++Pic(U)=Z/m<[F]>.
++H_i(U;Q)=0 for i>0.
++U - g1(A2) is finite.
++m divides d1.
++K_U ~ 0.
++T=U times_(A2) B -> B is an isomorphism.
++W=U-T -> A2-B is connected finite etale of degree three with S3 monodromy.
++Every affine local complement group fixes its local companion sheet.
++B is not smooth.
++```
++
++With the imported one-place/forest theorem, `B` is therefore singular or
++reducible, connected, contractible, and one-place in the charged sense.  The
++theorem does not exclude that remaining singular/reducible branch, does not
++prove global companion-label propagation, does not place arbitrary `U` in
++Miyanishi's typed `(d,n,r)` class, and does not make any statement about degree
++at least four or the primitive/no-block horn.
++
++## Cheapest useful successor
++
++The cheapest successor is a topology-and-realization check, not another
++Picard/Kummer pass:
++
++1. Build van Kampen or splice presentations for connected contractible
++   one-place forest curves, keeping every affine local subgroup and the infinity
++   group separate.
++2. Search first for explicit `S3` representations in which each affine local
++   group lands in a companion-fixing `S2`; only after that fails should one try
++   to prove common-label propagation.
++3. In parallel, test whether the proper-block boundary forces the ramification
++   resolution arms into the linear situation used by Orevkov's local knot
++   argument.  That added hypothesis would push the branch back to the smooth
++   contradiction.
++
++Typed result for the unresolved gate: `OPEN`.
++<!-- BODY-END -->
+
+codex
+Wrote the hostile review to [xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md](/Users/dc/code/math/jc2/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md).
+
+Key outcomes:
+- All charged repository hashes matched.
+- Miyanishi `1504.07179` was fetched only to `/tmp`; its SHA-256 matched.
+- Replay passed under ordinary, `-O`, and `-OO`; mutation was rejected in all modes.
+- No `charge_basis={...}` line was emitted.
+- The file ends with the standalone `<!-- BODY-END -->` line and has no seal block.
+
+Top-line verdict: the funnel is `CONFIRM_WITH_CORRECTIONS`; the smooth-branch contradiction is solid, but the singular/reducible contractible one-place forest case remains typed `OPEN`, especially the unproved global companion-label propagation step.
+diff --git a/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md b/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..2ade6e57173f6a5c77c489b962e77f6851a5148b
+--- /dev/null
++++ b/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,229 @@
++# Hostile review: proper-cubic affine-survivor funnel
++
++Date: 2026-08-30
++Reviewer: GPT-5.5 hostile reconstruction
++Scope: charged files only, plus the permitted temporary arXiv fetch of Miyanishi
++`1504.07179`.
++
++## Input custody
++
++All seven charged repository SHA-256 hashes matched the prompt:
++
++```text
++2e6d82035df6717d1a39f31dc19b23b7c727bb940d4730d2c7ea9400e5433cce  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md
++a38d1ba420fa8388fbf453051bd9d570edbfe99f0a1ff240f1f297d1e6718fcd  xmodel/block-descent-a1-cubic-affine-survivor-funnel-sol56-20260830.md.artifact.json
++aa198a357ce3c7dd3df6c97019f76553f27c76e5f4b7928ed3e52104de3f3915  ops/block_descent_a1_cubic_affine_survivor_replay.py
++8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d  xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md
++7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29  xmodel/block-descent-a1-ruling-transfer-coordinator-integration-sol56-20260830.md
++f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8  xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md
++f80d4a7d7e04987ce7dece58f33cff20ea9210183ca3ffd4488f39a2147532db  refs/jc86.pdf
++```
++
++Miyanishi arXiv `1504.07179` was fetched only into `/tmp`.  Its SHA-256
++matched the expected
++`ab4eb0cb74e4051e3fb1f702a253d29cb1a658632f11bc6f4b04a8bb9e7daaa4`.
++I did not inspect `jc2-lean`, sibling external-model prompts, logs, reports,
++receipts, canonical ledgers, or unrelated repository files.
++
++Receipt status: `ABSENT`, as expected.  This review makes no exit-price
++assertion.
++
++## Itemized audit
++
++1. `CONFIRM_WITH_CORRECTIONS`: Miyanishi input and transverse source line.
++
++Miyanishi Lemma 1.4.16 is general for a smooth affine surface with an
++`A1`-fibration over `A1`; it is not restricted to the later typed
++`(d,n,r)` pseudo-planes.  Since `h=rho o g1` is a nonconstant polynomial on
++`A2`, a general affine source line has nonconstant `h|L`, hence gives a
++nonconstant morphism `A1 -> U` transverse to `rho`.  This uses dominance of
++`g1`, not any compatibility of `g1` with the ruling.
++
++The Picard and acyclicity package needs the full affine-base and one-component
++fibre hypotheses.  Miyanishi Lemma 1.4.3 gives fibres as disjoint unions of
++affine lines, the Picard product by fibre multiplicities when every fibre is
++irreducible over base `A1`, and `Q`-homology acyclicity under the same
++one-component hypothesis.  Corollary 1.4.4 then gives cyclic order `m` when
++there is exactly one multiple fibre `mF`.  Thus the funnel may use
++`Pic(U)=Z/m<[F]>` only after importing the affine survivor row `Q=0` and after
++the no-multiple row is excluded.
++
++2. `CONFIRM_WITH_CORRECTIONS`: no-multiple-fibre row.
++
++If every reduced fibre is one `A1` and there are no multiple fibres, each
++scheme fibre is a reduced smooth affine line.  For a morphism from a smooth
++surface to a smooth curve this gives flatness by equidimensionality and then
++smoothness by smooth fibres.  One still needs the standard theorem that a
++smooth `A1`-fibration over a smooth curve is an `A1`-bundle.  Over `A1`, the
++line-bundle and additive torsor classes vanish, so `U ~= A2`.
++
++Only at that point does Orevkov apply.  Theorem 1.1 of `refs/jc86.pdf` is about
++two- or three-sheeted polynomial maps `C2 -> C2` with nonzero constant
++Jacobian.  After `U ~= A2`, the etale map `pi:U -> A2` is such a polynomial
++Keller self-map of generic degree three.  Orevkov is not licensed directly on
++an arbitrary pseudo-plane.
++
++3. `CONFIRMED`: localization and the Hartogs/Zariski-Main warning.
++
++Let `V=g1(A2)`.  Since `g1` is etale, `V` is open in `U`.  If a divisor
++supported in `U - V` were principal, say `div(b)`, then `b` and `b^-1` are
++regular on `V`; pulling back to `A2` gives inverse polynomials, hence scalars.
++Dominance makes `b` scalar.  Therefore the free abelian group on missed prime
++divisors injects into `Pic(U)`.  Since `Pic(U)` is finite, no missed divisor
++exists, so `U - g1(A2)` is finite.
++
++This proves only the target statement "no divisorial component is missed in
++`U`."  It does not say that the Zariski-Main finite normalization has finite
++boundary over `A2`.  Miyanishi Lemma 2.5.2 is exactly the countercontrol: the
++cyclic etale cover splits the multiple fibre into `m` affine lines, and deleting
++`m-1` of them leaves an open `A2` still mapping surjectively to the pseudo-plane;
++the deleted divisors map onto an already attained target fibre.
++
++4. `CONFIRMED`: Kummer divisibility and canonical class.
++
++Choose the base coordinate with `div_U(t)=mF`.  Since `g1` is etale, the pullback
++of the reduced smooth Cartier divisor `F` is reduced.  In the UFD `C[x,y]`,
++`div(g1^*t)=m g1^*F` therefore gives `g1^*t=cP^m` with `c in C*`.
++
++For each prime `p|m`, if `t/c=s^p` in `C(U)`, then `s` is integral over
++`O(U)` and hence regular because `U` is normal affine.  Its divisor would be
++`(m/p)F`, contradicting the exact order `m` of `[F]` in `Pic(U)`.  Since `C`
++contains all roots of unity, the usual Kummer binomial criterion has no
++composite-`m` or fourth-root exception here.  Thus `X^m-t/c` is irreducible
++over `C(U)`, `C(U)(P)` has degree `m`, and the tower law gives `m|d1`.
++
++Separately, etaleness of `pi:U -> A2` gives
++`omega_U ~= pi^* omega_A2`, hence `K_U ~ 0`.  The typed Miyanishi theorem
++2.5.10 is not a coverage theorem: it applies only after the additional
++`(d,n,r)` boundary type is proved.
++
++5. `CONFIRM_WITH_CORRECTIONS`: companion section over `B`.
++
++The conclusion `T=U times_(A2) B -> B` is an isomorphism is correct, including
++at singular and reducible points of the reduced curve `B`, but the proof should
++not pass through finiteness of `U -> A2`.  The right argument is local:
++finite-flat rank three plus `S0=empty` gives, over every geometric branch value,
++one non-etale length-two point and one etale length-one companion point.  Base
++change of the etale locus gives an etale morphism `T -> B` with one geometric
++point in every fibre.  Hence it is surjective, radicial, and etale; an etale
++radicial morphism is an open immersion, and surjectivity makes it an
++isomorphism.
++
++For each irreducible component `B_i=(b_i=0)` of the reduced plane curve,
++`U times B_i -> B_i` is the corresponding component `T_i`, and etale pullback
++of the reduced Cartier divisor gives `div_U(pi^*b_i)=T_i` with coefficient one.
++This is componentwise principal Cartier data, not an identification with a
++ruling fibre or an original source sheet.
++
++6. `CONFIRM_WITH_CORRECTIONS`: complement cover and local companion groups.
++
++`W=U-T` is the same open as `Y - g2^{-1}(B)`.  Since `g2:Y -> A2` is finite flat
++of rank three, `W -> A2-B` is finite etale of degree three.  Since `Y` is
++integral, this nonempty open is connected.  The monodromy is transitive; the
++generic inertia along a branch component has type `(2,1)`, so the image contains
++a transposition and is therefore `S3`.
++
++At any affine point of `B`, henselian idempotent lifting splits the completed
++rank-three algebra into a rank-one etale companion factor and a rank-two
++ramified factor.  Thus the local complement group fixes a companion sheet.
++However, that is a local statement after choosing paths from the global
++basepoint.  It does not by itself produce a single globally fixed sheet.
++
++Control against the stronger inference: the cubic surface
++
++```text
++S = Spec C[x,y,z]/(z^3 - 3z + 2 + xy) -> A2_{x,y}
++```
++
++is finite flat of rank three.  Its branch support is
++`xy(xy+4)=0`; fibres over `xy=0` have root pattern `(z-1)^2(z+2)`, and fibres
++over `xy=-4` have pattern `(z+1)^2(z-2)`, so every branch value has a local
++companion.  At the node `(0,0)`, the completed algebra has one companion factor
++and one double ramified factor.  The total surface is integral, and its only
++singularity is the isolated hypersurface point `(0,0,1)`, hence it is normal.
++The line `y=1` sees the one-parameter cubic
++`z^3-3z+2+q` over `q in A1-{0,-4}`, whose two transposition inertias generate
++`S3`; therefore the global monodromy has no fixed sheet.  This is not a
++survivor because its branch is disconnected and not the campaign `U`, but it
++blocks any proof that promotes local companion-fixing to a global label without
++using the connected one-place forest hypotheses.
++
++7. `CONFIRM_WITH_CORRECTIONS`: smooth branch contradiction; singular/reducible
++case remains open.
++
++If `B` is smooth and connected, Chau's theorem gives normalization `A1`, hence
++`B ~= A1`.  Abhyankar-Moh rectifies the embedding to a coordinate line, so
++`A2-B ~= Gm times A1` and `pi_1(A2-B)=Z`.  A connected degree-three cover with
++cyclic monodromy must be generated by a 3-cycle, while the branch meridian from
++the finite-flat cubic has transposition inertia.  This contradiction is solid.
++
++Nothing comparable is proved for singular or reducible contractible one-place
++forests.  Their complement groups need not be cyclic, and the local companion
++subgroups do not yet have a proved common global label.  The remaining escape
++is precisely global braid/infinity monodromy compatible with all affine local
++groups landing in companion-fixing `S2` subgroups.
++
++8. `CONFIRMED`: replay.
++
++Ordinary, `-O`, and `-OO` all produced the same payload:
++
++```json
++{"charged_cyclic_action_transitive": false, "charged_fibre_type": [2, 1], "payload_sha256": "a602c5ca9ca141166143b504b32d835b064ea06b4f5d3618876d1b26faefd834", "s3_order": 6, "status": "PASS-CUBIC-AFFINE-SMOOTH-BRANCH-MONODROMY", "three_cycle_count": 2, "transposition_count": 3}
++```
++
++The deliberate mutation `--mutate-transposition-to-3cycle` was rejected in all
++three modes with `RuntimeError: mutation changed the charged cubic fibre type`.
++The script uses explicit `require` calls, not Python `assert`, so optimization
++does not erase the checks.
++
++The replay verifies only a finite `S3` permutation fact: a cyclic subgroup
++generated by a transposition is not transitive on three letters, while a
++3-cycle is.  It does not verify the Miyanishi hypotheses, no-multiple-to-bundle
++step, Orevkov applicability, Picard/Kummer package, companion-section theorem,
++normality, branch topology, Chau, Abhyankar-Moh, or any singular/reducible
++forest obstruction.
++
++## Maximum-safe theorem
++
++For an actual promoted proper cubic affine survivor, assuming the charged
++proper-block, ruling-transfer, fixed-sheet, and one-place Euler inputs, the
++following is safe:
++
++```text
++rho:U -> A1 has exactly one multiple fibre mF with m>=2.
++Pic(U)=Z/m<[F]>.
++H_i(U;Q)=0 for i>0.
++U - g1(A2) is finite.
++m divides d1.
++K_U ~ 0.
++T=U times_(A2) B -> B is an isomorphism.
++W=U-T -> A2-B is connected finite etale of degree three with S3 monodromy.
++Every affine local complement group fixes its local companion sheet.
++B is not smooth.
++```
++
++With the imported one-place/forest theorem, `B` is therefore singular or
++reducible, connected, contractible, and one-place in the charged sense.  The
++theorem does not exclude that remaining singular/reducible branch, does not
++prove global companion-label propagation, does not place arbitrary `U` in
++Miyanishi's typed `(d,n,r)` class, and does not make any statement about degree
++at least four or the primitive/no-block horn.
++
++## Cheapest useful successor
++
++The cheapest successor is a topology-and-realization check, not another
++Picard/Kummer pass:
++
++1. Build van Kampen or splice presentations for connected contractible
++   one-place forest curves, keeping every affine local subgroup and the infinity
++   group separate.
++2. Search first for explicit `S3` representations in which each affine local
++   group lands in a companion-fixing `S2`; only after that fails should one try
++   to prove common-label propagation.
++3. In parallel, test whether the proper-block boundary forces the ramification
++   resolution arms into the linear situation used by Orevkov's local knot
++   argument.  That added hypothesis would push the branch back to the smooth
++   contradiction.
++
++Typed result for the unresolved gate: `OPEN`.
++<!-- BODY-END -->
+
+tokens used
+104,641
+Wrote the hostile review to [xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md](/Users/dc/code/math/jc2/xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.md).
+
+Key outcomes:
+- All charged repository hashes matched.
+- Miyanishi `1504.07179` was fetched only to `/tmp`; its SHA-256 matched.
+- Replay passed under ordinary, `-O`, and `-OO`; mutation was rejected in all modes.
+- No `charge_basis={...}` line was emitted.
+- The file ends with the standalone `<!-- BODY-END -->` line and has no seal block.
+
+Top-line verdict: the funnel is `CONFIRM_WITH_CORRECTIONS`; the smooth-branch contradiction is solid, but the singular/reducible contractible one-place forest case remains typed `OPEN`, especially the unproved global companion-label propagation step.
