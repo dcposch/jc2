@@ -1,0 +1,88 @@
+// Fresh exact-Q replay in triangular normal coordinates.
+execute(read("prelude_Q.sing"));
+
+poly sourceF0=d0-2*d4-d4^2;
+poly sourceF1=8*d1-(1+d4)*d3;
+poly sourceF2=d2-d4-16*d3^2;
+poly sourceF5=d5-2*d3;
+ideal sourceBundle=sourceF0,sourceF1,sourceF2,sourceF5,
+                   r1,r2,r3,r4,r5,r6,r7;
+
+ring N=0,(e0,e1,e2,e5,S,T),dp;
+map normalMap=R,e0+2*S+S^2,(e1+(1+S)*T)/8,
+                e2+S+16*T^2,T,S,e5+2*T;
+ideal normalBundle=normalMap(sourceBundle);
+if ((normalBundle[1]-e0!=0)||(normalBundle[2]-e1!=0)||
+    (normalBundle[3]-e2!=0)||(normalBundle[4]-e5!=0))
+{
+  print("K00_REES_FAIL=TRIANGULAR_COORDINATE_REPLAY");
+  quit;
+}
+
+map mutatedMap=R,e0+2*S+S^2,(e1+(1+S)*T)/8,
+                 e2+S+15*T^2,T,S,e5+2*T;
+ideal mutatedBundle=mutatedMap(sourceBundle);
+if (mutatedBundle[3]-e2==0)
+{
+  print("K00_REES_FAIL=TRIANGULAR_MAP_MUTATION_CONTROL");
+  quit;
+}
+print("K00_REES_TRIANGULAR_COORDINATES_REPLAYED=4");
+print("K00_REES_TRIANGULAR_MAP_MUTATION_DETECTED=1");
+
+ideal transformedRows=normalBundle[5],normalBundle[6],normalBundle[7],
+                      normalBundle[8],normalBundle[9],normalBundle[10],
+                      normalBundle[11];
+matrix transformation;
+ideal GN=liftstd(transformedRows,transformation);
+matrix basisReplay=matrix(transformedRows)*transformation-matrix(GN);
+int replayBad=0;
+int column;
+for (column=1;column<=ncols(basisReplay);column++)
+{
+  if (basisReplay[1,column]!=0) { replayBad=1; }
+}
+if (replayBad!=0)
+{
+  print("K00_REES_FAIL=TRIANGULAR_BASIS_REPLAY");
+  quit;
+}
+ideal sourceRemainders=simplify(reduce(transformedRows,GN),2);
+if (size(sourceRemainders)!=0)
+{
+  print("K00_REES_FAIL=TRIANGULAR_SOURCE_REDUCTION");
+  quit;
+}
+print("K00_REES_TRIANGULAR_BASIS_SIZE="+string(size(GN)));
+print("K00_REES_TRIANGULAR_BASIS_REPLAY=1");
+
+ideal EN=e0,e1,e2,e5;
+ideal fifthPower=EN^5;
+if (size(fifthPower)!=56)
+{
+  print("K00_REES_FAIL=FIFTH_POWER_GENERATOR_COUNT");
+  quit;
+}
+ideal fifthRemainders=simplify(reduce(fifthPower,GN),2);
+if (size(fifthRemainders)!=0)
+{
+  print("K00_REES_FAIL=J5_NOT_SUBSET_I");
+  quit;
+}
+
+poly witness=e5^4;
+poly witnessNormalForm=reduce(witness,GN);
+if (witnessNormalForm==0)
+{
+  print("K00_REES_FAIL=J4_WITNESS_ZERO");
+  quit;
+}
+write("WITNESS_MONOMIAL.poly",witness);
+write("WITNESS_NORMAL_FORM.poly",witnessNormalForm);
+print("K00_REES_TRIANGULAR_J5_GENERATORS=56");
+print("K00_REES_TRIANGULAR_J5_ALL_IN_I=1");
+print("K00_REES_WITNESS_DEGREE=4");
+print("K00_REES_WITNESS_EXPONENTS=0,0,0,4");
+print("K00_REES_EXACT_SMALLEST_N=5");
+print("PASS_K00_REES_SANDWICH_EXACT_MINIMAL_N");
+quit;

@@ -1,0 +1,59 @@
+// Exact global membership discriminator in the original frozen presentation.
+<"cases/max12_812_order2_u2_62_k00_unloaded_surface_local_v1_20260829/aws_r6b_global_power_v4/prelude_Q.sing";
+
+ideal I=r1,r2,r3,r4,r5,r6,r7;
+poly f0=d0-2*d4-d4^2;
+poly f1=8*d1-(1+d4)*d3;
+poly f2=d2-d4-16*d3^2;
+poly f5=d5-2*d3;
+ideal J=f0,f1,f2,f5;
+ideal G=std(I);
+
+int n=16;
+int first_containment=17;
+int keep_testing=1;
+int i;
+int failure_index=0;
+poly failure_generator;
+poly failure_normal_form;
+ideal P;
+
+print("K00_REES_GLOBAL_GB_SIZE="+string(size(G)));
+while ((n>=1)&&(keep_testing==1))
+{
+  P=J^n;
+  failure_index=0;
+  for (i=1;i<=size(P);i++)
+  {
+    failure_normal_form=reduce(P[i],G);
+    if ((failure_index==0)&&(failure_normal_form!=0))
+    {
+      failure_index=i;
+      failure_generator=P[i];
+    }
+  }
+  print("K00_REES_GLOBAL_JPOWER_N="+string(n)+
+        ";GENERATORS="+string(size(P))+
+        ";FIRST_NONMEMBER="+string(failure_index));
+  if (failure_index==0)
+  {
+    first_containment=n;
+    n=n-1;
+  }
+  else
+  {
+    keep_testing=0;
+  }
+}
+
+print("K00_REES_GLOBAL_SMALLEST_CONTAINMENT_CANDIDATE="+
+      string(first_containment));
+if (failure_index!=0)
+{
+  print("K00_REES_GLOBAL_FAILURE_N="+string(n));
+  print("K00_REES_GLOBAL_FAILURE_INDEX="+string(failure_index));
+  print("K00_REES_GLOBAL_FAILURE_GENERATOR="+string(failure_generator));
+  print("K00_REES_GLOBAL_FAILURE_NORMAL_FORM="+
+        string(failure_normal_form));
+}
+quit;

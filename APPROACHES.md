@@ -7,6 +7,45 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 00:47Z — sharp normal window and étale sandwiches)
+
+- **Advance K00 by source partition, not coefficient-blind induction.** The
+  literal normalized integer atlas and every `e=2,m=1` positive/infinite
+  late-load face are reviewed empty. The complete `e=3,m=1` cell is now also
+  promoted empty at G9, while `e=2,m=2` has a sealed G10 producer with
+  genuinely odd coefficient directions and awaits review. Run that review in
+  the background and attack the missing `e=3,m=2` residue independently.
+  In parallel, enumerate the source-completeness partition—C6=0, K10/Jdet
+  boundary faces, other supports, and ramification pairs—because three closed
+  calendars do not constitute a global atlas or an occurrence theorem.
+- **Use the sharp unloaded filtration at its exact type.** Independent Fable
+  and AWS routes give `J^5 subset I subset J^2` sharply, so the true
+  projectivized normal cone is empty and centered ideal values lie in the
+  window `[2v(J),5v(J)]`. The quartic `Delta` is the discriminant of the seven
+  second-normal-jet quadrics, not a true normal-cone nonemptiness locus. Use
+  its strata and the sharp window to prune/route literal transition packets;
+  do not infer loaded recentering, integral closure, or Rees valuations.
+- **Run two proof-side construction gates concurrently.** For the
+  off-diagonal pair-square route, define the compactification-independent
+  event module and identify exactly where `J(F)=1` enters before attempting
+  the QCS injection. The reviewed block route now gives a forced non-`A^2`
+  étale sandwich whose nonempty branch divisor is missed by the first map;
+  both the codimension-one-image and intermediate-`A^2` bridges to
+  minimal-degree primitivity are closed. Attack the sandwich directly,
+  provisionally at block index two, while keeping primitivity open. Neither
+  proof gate waits on K00 computation. Restrict ACV work to actual Keller
+  pairs: the scalar inequality `#atypical>=s-1` is false without the partner.
+- **Retire empty clients, preserve broad interfaces.** Simultaneous regularity
+  in the literal monomial chart forces contraction of the y-axis, so stop its
+  rational-termination descendants. Translated/Puiseux/pole-retaining charts
+  remain separate clients. Keep the actual-map occurrence/coverage arrow as
+  the highest proof gap; finite formal packets are not maps.
+- **Keep reviews and machinery asynchronous.** The repaired independent-
+  section assembler remains unwired until stable-basis re-review. Heavy or
+  uncertain CAS is AWS-only; r6b is now idle after the sharp-exponent replay.
+  Producer-confidence descendants may proceed while hostile reviews run, but
+  canonical promotion remains review-gated.
+
 ## Superseding strategy overlay (2026-08-29 22:44Z — close the `e=2,m=1` boundary; attack the first resonance)
 
 - **Promote the first ramified exclusion; provisionally generalize only over
@@ -5205,12 +5244,12 @@ Tried? legend: **Tried** = substantive campaign computation/proof/audit; **Parti
 | 23 | Analytic global inverse / metric completeness / holomorphic analog | Properness via pullback-metric completeness; Hadamard | S34 / G36 / F14 (part) | No | Fatou–Bieberbach: the holomorphic analog is FALSE (G); dim-3 CE kills every dimension-free metric slogan (S) | S:4, G:1 — concordant low |
 | 24 | Real JC / Pinchuk deformation | Deform a Pinchuk map to constant J, or use real global-injectivity theory | S35 / G29 / F14 (part) | No | Pinchuk J is nonconstant; complex collisions need no real points; SOS orthogonal to complex emptiness | S:1 proof / 3 disproof-recon, G:3 — concordant low |
 | 25 | Fiber monodromy / dessins / Hurwitz passports | Riemann-existence constraints on the td-sheeted \hat g | S12 / G19 / F12 | Tried on residue-A: all 169 passports admit transitive identity tuples — no kill | Riemann existence is generous; single-cover passports ignore the second coordinate and Jacobian contacts | S:7 for the coupled two-coordinate branch-cycle CSP |
-| 26 | Primitive-monodromy group bound on td + function-field Galois | Group theory forbids primitive G <= S_td for large td, or forces blocks | S15 / G23 / F12 (part) | No (as a global bound; proposed in sol-lateral3.md, unexecuted) | pi_1 of curve complements is a classical monster; A_n/S_n probably allowed (Kistner–Shaska analog) | G:5 (his best cheap untried test), S:5 — consensus untried pick |
+| 26 | Primitive-monodromy group bound on td + function-field Galois | Group theory forbids primitive G <= S_td for large td, or forces blocks | S15 / G23 / F12 (part) | Partial structural theorem: every proper block forces a non-`A^2` étale sandwich with missed branch divisor; codim-1-image and intermediate-`A^2` minimality bridges are closed | Primitivity remains open; neither minimal td nor topology presently rules out the forced sandwich; pi_1 of curve complements is a classical monster | First exact successor: rule out block index `d2=2`, or bank a consistent sandwich model |
 | 27 | Links at infinity / splice diagrams / plumbing | Exclude every splice diagram compatible with a Keller map | S11 / G21 (part) / F4 | Tried on residue-A (one x-side branch died; template survives) | Admissible diagram ≠ algebraically realizable; genus/moduli explosion (F4); Egorov's 5-sheet exotic cover shows topology alone insufficient (G) | — (tried) |
 | 28 | Log surfaces / BMY / log-Kodaira of the resolved pencil | Log-Chern and adjunction inequalities kill the boundary configuration | S14 / G21 / F5 | Partial — BMY marked NEEDS-DATA; Euler/genus ledger "passes identically" (the predicted non-result, G); the dual-pencil raw defect is not the proposed finite effective divisor | B/x-resolution tails unpinned; kappa-bar(C^2) = -infty blocks naive BMY (G); the corrected signed jump cycle has no licensed GRR endpoint; F5: "non-rational-fibration cases" open | S:6 (complete one survivor to all minimal tails and test) |
 | 29 | LND / Hamiltonian-derivation completeness / commuting frames | Prove D_P locally nilpotent or the dual frame integrates to G_a^2 | S18+S19 / G22 (part) / — | Scoped gate complete: `kappa(P)=[div V] mod D_P` is classical Gauss--Manin data and vanishes iff a mate exists; exhaustive recurrence proves no mate for all `P=x+x^n y`, `n>=2` | The quotient is an exact reformulation and has no known universal receiver; LND-ness with a slice is essentially the conjecture again; Rentschler classification loops back to JvdK (G) | S:6 and S:5; G:4 (via the ML-invariant experiment) |
-| 30 | Affine-surface classification / Makar-Limanov invariant / exotic surfaces, cancellation | A CE would violate the package characterizing A^2 | S40 / G22 / F5 (part) | No (as JC2 program; LNDs used only inside TRANSPORT.md proof) | ML invariant does not see the embedding; dimension 2 is "too classified" (G); stabilization destroys the Keller presentation (S) | Mild DISSENT: S:2 vs G:4 (afternoon check on residue-A leading graded ring) |
-| 31 | Integrality / Zariski Main / etale finiteness (Rees valuations) | Prove x,y integral over C[P,Q]; finite etale covers of A^2 are trivial | S16 only / — / — | No direct attempt | Finiteness is exactly the missing global assertion; ZMT adds boundary rather than removing it | S:6 (Rees valuations of one complete boundary book) |
+| 30 | Affine-surface classification / Makar-Limanov invariant / exotic surfaces, cancellation | Exclude the forced intermediate normal surface in a block étale sandwich | S40 / G22 / F5 (part) | Partial: block descent proves every proper block surface is necessarily non-`A^2`, with nonempty branch divisor missed by an étale open image | `Y isomorphic to A^2` is impossible rather than a recognition target; ML alone does not see the embedding or exclude the sandwich | Study the forced non-`A^2` surface, first at finite-flat block degree two, jointly with Avenues 26/31 |
+| 31 | Integrality / Zariski Main / etale finiteness (Rees valuations) | Prove x,y integral over C[P,Q]; finite etale covers of A^2 are trivial | S16 only / — / — | Two concrete scoped clients: sharp K00 filtration `J^5 subset I subset J^2`; block normalization gives a finite-flat second map and étale nonproper first map | Global finiteness remains exactly the missing assertion; ZMT exposes, rather than removes, the forced branch/boundary divisor | Compose the block discriminant with `A(F)` and test the degree-two sandwich; use K00 filtration only at its exact source scope |
 | 32 | Off-diagonal collision ideal / injectivity route (Cynk–Rusek, Ax–Grothendieck) | Show the saturated collision ideal is empty; injective => automorphism | S17 / G25 / F13 | Partial, now with a dual-confirmed exact accelerator: for any Keller secant matrix `A`, `I:Delta=I:Delta^infinity=I+(det A)`, so the off scheme has a three-generator presentation without saturation | Proving the three-generator ideal is `(1)` is still injectivity/JC2. Naive projective-CI connectedness is dual-confirmed `COSTUME`: `Z`-torsion can carry connectivity and honest off closures may attach only at infinity. A useful client needs a named bounded family or source-derived saturated boundary datum | DISSENT remains on promise: exact software simplification, no degree/support bound or new global obstruction |
 | 33 | Global symplectic exactness / action residues / generating functions | f dg − x dy and g df − y dx are exact; promote residue pins to a global lemma | S36 (part) / G27+G40 / — | Ordinary action-residue gate run: `P dQ-x dy=dS` polynomially, so untwisted divisorial residues are automatic `COSTUME`; pins remain bookkeeping | Poincare lemma yields primitives for CEs too; any revival needs a genuinely twisted/client-specific class; generating functions local, mixed-coordinate (G40) | G:6 — his original highest untried; G:3 for the generating-function chart; consonant with Sol's adjacent 7 |
 | 34 | 2D tangent-sweep / pole removal / rational Keller maps (Vitushkin-type) | Adapt the dim-3 sweep mechanism, or clear poles of a rational etale map, inside two variables | S36+S38 / G16 (mechanism inventory) / — | No | Ramification divisor has nowhere to go in 2D; no spare coordinate to absorb a denominator; graded plane maps already automorphic | DISSENT: S:7 (sweep ansatz) and S:6 (pole removal) vs G:2 for the descent framing |

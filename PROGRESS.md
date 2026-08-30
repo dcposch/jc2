@@ -5,6 +5,85 @@ day or inserts the completed day directly below this preamble (see
 `COORDINATION.md`). Detail lives in `notes.md` (tick-level) and `AUDIT.md`
 (promotion ledger); historical entries are not live policy or queue state.
 
+## 2026-08-30
+
+> **BLOCK DESCENT PROMOTES A STRUCTURE THEOREM AND CLOSES ITS ORIGINAL
+> PRIMITIVITY BRIDGES (00:47Z).** Fable's hostile reconstruction confirms
+> with corrections that every proper intermediate field of a hypothetical
+> Keller counterexample yields an étale, quasi-finite open map from `A^2`
+> into a normal affine surface, followed by a finite-flat map to `A^2`. The
+> second map has a nonempty branch divisor missed pointwise by the first; its
+> discriminant image lies in `A(F)`, and the intermediate surface cannot be
+> `A^2`. Consequently both the proposed codimension-one-image condition and
+> the intermediate-`A^2` minimality bridge are impossible, so this route does
+> not prove primitive monodromy. Integration `ba69b33f...`/body
+> `85db7afd...` repairs and promotes the exact discriminant-fibre deficit
+> `#F^{-1}(z)<=deg(F)-d1`; it still withholds the decorative citation-
+> dependent parametrization claim. The next possible client is the
+> still-unproved index-two sandwich obstruction `BD-D2`.
+
+> **FIRST HIGHER-RAMIFICATION CALENDAR PROMOTED EMPTY; NEXT RESIDUE
+> PRODUCED (00:28Z).** Opus independently rebuilds the complete
+> `e=3,m=1`, `ord_tau(d)=1` rank/transition fan and confirms every G4--G9
+> identity. Binding integration `6c719521...`/body `3c08e46b...` promotes
+> `V(G0,...,G9) intersect D(k10[0]) intersect union_i D(d_i[1])=empty`
+> on the normalized C6/K10 cell, uniformly over all later boundary-load
+> faces. The genuine G8 fixture first fails at `G9_6=i/32`; higher normal
+> orders and the exact-surface branch meet the same grade-nine obstruction.
+> Formal arcs in this exact cell are excluded by truncation. Separately, a
+> sealed `e=2,m=2`, `ord_tau(d)=2` producer closes its full point fan at G10
+> and contains genuinely odd coefficient directions, so it is not a pullback
+> of the integer valuation-one theorem. That producer awaits different-model
+> review; `e=3,m=2`, K10=0, C6=0, other supports, reachability, and maps remain.
+
+> **UNLOADED NORMAL FILTRATION SHARPENED; “NORMAL-CONE QUARTIC”
+> CORRECTED (00:14Z).** Fable hostile reconstruction proves sharply
+> `J^5 subset I subset J^2`, with neither `J^4 subset I` nor `I subset J^3`.
+> Therefore `J/I` has exact nilpotence index five and the true relative
+> projectivized normal cone is empty everywhere; the earlier exponent-17
+> bound is superseded. Binding integration `669a3496...`/body `d026eb79...`
+> promotes the quartic only as the discriminant of the seven second-normal-
+> jet quadrics. Their ideal is strictly smaller than the full initial ideal.
+> The reviewed curve/fibre classification and its flat-limit incidence with
+> the transverse fan survive at that corrected type. Loaded rows still do
+> not set the unloaded ideal to zero.
+
+> A fresh independent AWS run confirms that five is the least containment
+> exponent: all 56 generators of `J^5` reduce to zero and `f5^4` has nonzero
+> normal form. Two earlier attempts are quarantined rather than repaired in
+> place; the hardened validator caught both planted and real Singular
+> diagnostics despite exit-zero/fake-PASS output. r6b is released idle with
+> no CAS process or session.
+
+> **ROUND `20260829T2254Z` CLOSES MATHEMATICAL AND SYSTEMS GAPS WITHOUT A
+> JC2 VERDICT.** Four blind contexts were requested; Sol, alternate Sol,
+> Fable, and Opus completed, while Grok returned HTTP 402 before model work.
+> Two adversarial cross-pollinations agree that Avenue 2 remains the principal
+> proof route, Avenues 4/36 gain execution priority, and Avenue 31 now has a
+> concrete K00 client only as a normal-filtration tool. New proof objects are
+> the off-diagonal pair-square QCS gate and a codimension-one block-surface
+> criterion. Both were gated at the round cutoff; the block review closes in
+> the newer entry above. An exact scalar ACV
+> control refutes `#atypical>=s-1` without the Keller partner, and the literal
+> regular monomial chart contains no quasi-finite Keller pair.
+>
+> The round's sole systems trial, independent section assembly, received
+> Opus `REPAIR_REQUIRED`: an error path could leave an unverified output and
+> reserved markers could be smuggled. All findings are repaired; focused
+> tests pass 9/9 in ordinary, `-O`, and `-OO`, and the full operations suite
+> passes 47/47 ordinary/optimized. The repaired tool is unwired and awaits
+> stable-basis re-review. Heavy/uncertain CAS remains AWS-only; one Fable
+> review's local 86-second refinement and abandoned 300-second decomposition
+> are recorded as a policy incident and must not recur.
+
+> **LITERAL INTEGER ATLAS AND FIRST RAMIFIED LOAD BOUNDARY CLOSE UNDER
+> REVIEW.** Opus promotes the R4-00 route-independent grade-19 Jdet
+> contradiction, completing every literal normalized integer-valuation cell
+> on this one V20R2 support. Fable promotes all positive-or-infinite K6/K2/
+> target faces of `e=2,m=1` at G7. These are exact finite-source exclusions,
+> not ramified source completeness, compatible all-order attainment, a map,
+> counterexample, or JC2.
+
 ## 2026-08-29
 
 > **ALL `e=2,m=1` BOUNDARY LOAD-ORDER FACES PROVISIONALLY CLOSE;

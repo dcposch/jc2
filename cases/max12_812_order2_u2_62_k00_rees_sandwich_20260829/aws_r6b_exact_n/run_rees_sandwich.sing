@@ -1,0 +1,214 @@
+// Frozen exact-Q K00-REES-SANDWICH discriminator.
+execute(read("prelude_Q.sing"));
+
+ideal I=r1,r2,r3,r4,r5,r6,r7;
+poly f0=d0-2*d4-d4^2;
+poly f1=8*d1-(1+d4)*d3;
+poly f2=d2-d4-16*d3^2;
+poly f5=d5-2*d3;
+ideal J=f0,f1,f2,f5;
+
+// Replay the separate exact I subset J^2 claim and its strict next step.
+ideal GJ2=std(J^2);
+ideal rowRemainders2=simplify(reduce(I,GJ2),2);
+if (size(rowRemainders2)!=0)
+{
+  print("K00_REES_FAIL=I_NOT_SUBSET_J2");
+  quit;
+}
+ideal GJ3=std(J^3);
+ideal rowRemainders3=simplify(reduce(I,GJ3),2);
+if (size(rowRemainders3)==0)
+{
+  print("K00_REES_FAIL=I_SUBSET_J3_UNEXPECTED");
+  quit;
+}
+poly mutatedRow=r1+f0;
+if (reduce(mutatedRow,GJ2)==0)
+{
+  print("K00_REES_FAIL=SOURCE_MUTATION_CONTROL");
+  quit;
+}
+print("K00_REES_I_SUBSET_J2=1");
+print("K00_REES_I_NOT_SUBSET_J3=1");
+print("K00_REES_SOURCE_MUTATION_DETECTED=1");
+
+// Load and replay the 28 reviewed exact multiplier polynomials.
+execute("poly c0_1=("+read("POWER_F0_LIFT_1.poly")+");");
+execute("poly c0_2=("+read("POWER_F0_LIFT_2.poly")+");");
+execute("poly c0_3=("+read("POWER_F0_LIFT_3.poly")+");");
+execute("poly c0_4=("+read("POWER_F0_LIFT_4.poly")+");");
+execute("poly c0_5=("+read("POWER_F0_LIFT_5.poly")+");");
+execute("poly c0_6=("+read("POWER_F0_LIFT_6.poly")+");");
+execute("poly c0_7=("+read("POWER_F0_LIFT_7.poly")+");");
+
+execute("poly c1_1=("+read("POWER_F1_LIFT_1.poly")+");");
+execute("poly c1_2=("+read("POWER_F1_LIFT_2.poly")+");");
+execute("poly c1_3=("+read("POWER_F1_LIFT_3.poly")+");");
+execute("poly c1_4=("+read("POWER_F1_LIFT_4.poly")+");");
+execute("poly c1_5=("+read("POWER_F1_LIFT_5.poly")+");");
+execute("poly c1_6=("+read("POWER_F1_LIFT_6.poly")+");");
+execute("poly c1_7=("+read("POWER_F1_LIFT_7.poly")+");");
+
+execute("poly c2_1=("+read("POWER_F2_LIFT_1.poly")+");");
+execute("poly c2_2=("+read("POWER_F2_LIFT_2.poly")+");");
+execute("poly c2_3=("+read("POWER_F2_LIFT_3.poly")+");");
+execute("poly c2_4=("+read("POWER_F2_LIFT_4.poly")+");");
+execute("poly c2_5=("+read("POWER_F2_LIFT_5.poly")+");");
+execute("poly c2_6=("+read("POWER_F2_LIFT_6.poly")+");");
+execute("poly c2_7=("+read("POWER_F2_LIFT_7.poly")+");");
+
+execute("poly c5_1=("+read("POWER_F5_LIFT_1.poly")+");");
+execute("poly c5_2=("+read("POWER_F5_LIFT_2.poly")+");");
+execute("poly c5_3=("+read("POWER_F5_LIFT_3.poly")+");");
+execute("poly c5_4=("+read("POWER_F5_LIFT_4.poly")+");");
+execute("poly c5_5=("+read("POWER_F5_LIFT_5.poly")+");");
+execute("poly c5_6=("+read("POWER_F5_LIFT_6.poly")+");");
+execute("poly c5_7=("+read("POWER_F5_LIFT_7.poly")+");");
+
+poly replay0=r1*c0_1+r2*c0_2+r3*c0_3+r4*c0_4+r5*c0_5+r6*c0_6+r7*c0_7-f0^5;
+poly replay1=r1*c1_1+r2*c1_2+r3*c1_3+r4*c1_4+r5*c1_5+r6*c1_6+r7*c1_7-f1^5;
+poly replay2=r1*c2_1+r2*c2_2+r3*c2_3+r4*c2_4+r5*c2_5+r6*c2_6+r7*c2_7-f2^5;
+poly replay5=r1*c5_1+r2*c5_2+r3*c5_3+r4*c5_4+r5*c5_5+r6*c5_6+r7*c5_7-f5^5;
+if (replay0!=0) { print("K00_REES_FAIL=F0_FIFTH_IDENTITY"); quit; }
+if (replay1!=0) { print("K00_REES_FAIL=F1_FIFTH_IDENTITY"); quit; }
+if (replay2!=0) { print("K00_REES_FAIL=F2_FIFTH_IDENTITY"); quit; }
+if (replay5!=0) { print("K00_REES_FAIL=F5_FIFTH_IDENTITY"); quit; }
+poly mutatedCertificate=r1*(c0_1+1)+r2*c0_2+r3*c0_3+r4*c0_4+r5*c0_5+r6*c0_6+r7*c0_7-f0^5;
+if (mutatedCertificate==0)
+{
+  print("K00_REES_FAIL=CERTIFICATE_MUTATION_CONTROL");
+  quit;
+}
+print("K00_REES_FIFTH_IDENTITIES=4");
+print("K00_REES_CERTIFICATE_MUTATION_DETECTED=1");
+print("K00_REES_PIGEONHOLE_UPPER_BOUND=17");
+
+// One exact standard basis, followed by only the bounded-exponent survivors.
+ideal G=std(I);
+print("K00_REES_GLOBAL_BASIS_SIZE="+string(size(G)));
+poly nf40=reduce(f0^4,G);
+poly nf41=reduce(f1^4,G);
+poly nf42=reduce(f2^4,G);
+poly nf45=reduce(f5^4,G);
+if ((nf40==0)||(nf41==0)||(nf42==0)||(nf45==0))
+{
+  print("K00_REES_FAIL=FOURTH_POWER_LOWER_ENDPOINT");
+  quit;
+}
+print("K00_REES_FOURTH_POWER_NONMEMBERS=4");
+
+int n=16;
+int a0;
+int a1;
+int a2;
+int a5;
+int survivors;
+int totalSurvivors=0;
+int contained;
+int endpointFound=0;
+int witnessN=0;
+int witnessA0=0;
+int witnessA1=0;
+int witnessA2=0;
+int witnessA5=0;
+int smallestN=0;
+poly candidate;
+poly normalForm;
+poly witness;
+poly witnessNormalForm;
+
+while ((n>=4)&&(endpointFound==0))
+{
+  survivors=0;
+  contained=1;
+  for (a0=0;a0<=4;a0++)
+  {
+    for (a1=0;a1<=4;a1++)
+    {
+      for (a2=0;a2<=4;a2++)
+      {
+        a5=n-a0-a1-a2;
+        if ((a5>=0)&&(a5<=4))
+        {
+          survivors=survivors+1;
+          totalSurvivors=totalSurvivors+1;
+          if (contained==1)
+          {
+            candidate=f0^a0*f1^a1*f2^a2*f5^a5;
+            normalForm=reduce(candidate,G);
+            if (normalForm!=0)
+            {
+              contained=0;
+              endpointFound=1;
+              witnessN=n;
+              witnessA0=a0;
+              witnessA1=a1;
+              witnessA2=a2;
+              witnessA5=a5;
+              witness=candidate;
+              witnessNormalForm=normalForm;
+            }
+          }
+        }
+      }
+    }
+  }
+  print("K00_REES_DEGREE="+string(n)+
+        ";BOUNDED_SURVIVORS="+string(survivors)+
+        ";ALL_IN_I="+string(contained));
+  if (contained==1) { n=n-1; }
+}
+
+if (endpointFound!=1)
+{
+  print("K00_REES_FAIL=NO_NONMEMBER_BY_DEGREE_FOUR");
+  quit;
+}
+smallestN=witnessN+1;
+if ((smallestN<5)||(smallestN>17))
+{
+  print("K00_REES_FAIL=SMALLEST_N_RANGE");
+  quit;
+}
+if (witnessNormalForm==0)
+{
+  print("K00_REES_FAIL=ZERO_WITNESS_NORMAL_FORM");
+  quit;
+}
+write("WITNESS_MONOMIAL.poly",witness);
+write("WITNESS_NORMAL_FORM.poly",witnessNormalForm);
+print("K00_REES_WITNESS_DEGREE="+string(witnessN));
+print("K00_REES_WITNESS_EXPONENTS="+string(witnessA0)+","+
+      string(witnessA1)+","+string(witnessA2)+","+string(witnessA5));
+print("K00_REES_TOTAL_BOUNDED_SURVIVORS_VISITED="+string(totalSurvivors));
+print("K00_REES_EXACT_SMALLEST_N="+string(smallestN));
+
+// Independent exact strictness check for the seven degree-two row initials.
+// At S=T=0 and e0=4u,e1=v,e2=u,e5=-2v, scale every normal coordinate by l.
+// Divisibility of every row image by l^3 says every degree-two row initial
+// vanishes on that plane.  The full initial ideal also contains e0^5, whose
+// restriction is 4^5*u^5 and is nonzero.
+ring H=0,(u,v,l),dp;
+map scaledPlane=R,4*l*u,l*v/8,l*u,0,0,-2*l*v;
+ideal planeRows=scaledPlane(r1),scaledPlane(r2),scaledPlane(r3),
+                scaledPlane(r4),scaledPlane(r5),scaledPlane(r6),
+                scaledPlane(r7);
+ideal GL3=std(ideal(l^3));
+ideal planeLowParts=simplify(reduce(planeRows,GL3),2);
+if (size(planeLowParts)!=0)
+{
+  print("K00_REES_FAIL=QUADRATIC_PLANE_VANISHING");
+  quit;
+}
+poly fifthPlane=scaledPlane(f0^5);
+if (fifthPlane-1024*l^5*u^5!=0)
+{
+  print("K00_REES_FAIL=FIFTH_INITIAL_PLANE_CONTROL");
+  quit;
+}
+print("K00_REES_SEVEN_QUADRATICS_VANISH_ON_P0=1");
+print("K00_REES_FULL_INITIAL_E0_FIFTH_NONZERO_ON_P0=1");
+print("K00_REES_SEVEN_QUADRATICS_STRICT_IN_FULL_INITIAL=1");
+print("PASS_K00_REES_SANDWICH_EXACT_MINIMAL_N");
+quit;

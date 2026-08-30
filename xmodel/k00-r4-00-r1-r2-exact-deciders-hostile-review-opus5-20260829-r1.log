@@ -1,0 +1,32 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review complete. Report written to `xmodel/k00-r4-00-r1-r2-exact-deciders-hostile-review-opus5-20260829-r1.md`.
+
+## Verdicts
+
+**CELL-R2, CELL-R1+, CELL-R1-: `CONFIRM_WITH_CORRECTIONS`** — the emptiness claims are true; the corrections widen rather than narrow them. Recommendation: promote the corrected statement.
+
+## What I did
+
+**Custody** — all five pinned hashes match; producer body seal recomputes to `6e420952…` at 8478 bytes; `FULL_DECIDER_FREEZE.sha256` verifies 66/66.
+
+**Clean-room rebuild** — stdlib engine expanding all seven rows from the 569 tails under the compiler's own conventions, with `d[14..19]` left *generic* rather than assumed absent (they provably never appear). Grades 0–11 vanish identically. A second, structurally different numeric evaluator reproduces everything.
+
+**The identity, derived not checked** — I posed an ansatz with 36 unknowns against 2579 monomial equations from my own rows; the system has full rank mod `2^61−1`, so the solution is unique over `Q`, and it is exactly the producer's:
+
+```
+Jdet_0 = -(s1/64)G1,14 -(s/64)G1,15 -(5/256)G1,19 -(3/32)G3,19 -(1/2)G5,19 - 4 G7,19
+```
+
+**Packets** — 36/36 generators in each of R2, R1+, R1− equal `stated_normalization × my row`, term counts matching one-for-one; the six omitted rows are *identically* zero; the variable declarations are exactly the occurring set; `ii → −ii` maps R1+ onto R1− with zero mismatches.
+
+**Fresh AWS replay** — reviewer-authored scripts (not the producer's `replay.sing`) on Box02/Box03, full receipts recorded. All three: unit identity PASS, 7/7 cofactor drops detected, generator mutation detected, `Jdet` localizer sign flip detected, plus a cofactor-free `std` confirmation. The twelve protected base PIDs were verified alive before and after and never signalled; no orphans remain.
+
+## The three findings worth your attention
+
+1. **The route substitution and every cell localizer are unnecessary.** The identity holds on the common forced stratum, using only `Jdet_0 ≠ 0` — not `κ≠0`, `D≠0`, `q≠0`, or `(s,t)≠(0,0)`. The producer's own certificates corroborate this: those localizers carry cofactor **zero**. So the result is uniform over all of `R4-00` and kills CELL-R0 too, via eleven of the 140 equations.
+
+2. **A scope dependency you should record explicitly.** I probed whether the stratum shape is forced. `d[4]` and `d[5]` on the cone *are* forced (same two-line certificate at grades 8 and 10). But `d[5] = ell(s1,t1)` — the vanishing of the transverse coordinates `u5, v5` — is **not**: grade 11 is exactly `T(6u5,−6v5)·(Az,Bz)=0`, which goes vacuous once grade 12 forces `Az=Bz=0`. That is the grade-11 fan the `R4-0k` index encodes, and the identity does *not* extend to the wider family. Closing `R4-00` therefore closes valuation four only in combination with the separate `R4-02` packet, which is outside my pinned custody and which I did not verify.
+
+3. **Two controls don't discriminate, and I say so.** The three load shifts and the `mu` target signs are invisible to the certificate — structurally, since those are free columns and a shift is a relabelling. I report that as a positive (the conclusion doesn't depend on those conventions) rather than claiming a clean sweep. The 302/569 per-tail sensitivity census and the coordinate/`Jdet`/stratum mutations all do discriminate.
+
+No error of any kind was found in the source, compiler, packets, cofactors, or conclusion. `charge_basis` is `ABSENT` — this review makes no exit-price assertion.

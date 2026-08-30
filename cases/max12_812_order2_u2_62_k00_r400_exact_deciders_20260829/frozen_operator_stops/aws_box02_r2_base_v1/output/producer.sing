@@ -1,0 +1,41 @@
+ring R=0,(s,t,kappa,uz,vz,A8,B8,zinv,ws,wt),dp;
+ideal J=(12*vz*B8-12*uz*A8+80*kappa*uz*vz-10*t*kappa*B8+768*t^2*vz-320*t^3*kappa-10*s*kappa*A8+24*s*t*uz-12*s^2*vz+15*s^2*t*kappa),
+(768*vz*A8+12*uz*B8-2560*kappa*vz^2+40*kappa*uz^2-640*t*kappa*A8+768*t^2*uz+10*s*kappa*B8-1536*s*t*vz+960*s*t^2*kappa-12*s^2*uz-5*s^3*kappa),
+(3*A8*B8-20*kappa*vz*B8+20*kappa*uz*A8+1536*t*vz^2-24*t*uz^2+192*t^2*A8-1920*t^2*kappa*vz+48*s*uz*vz-6*s*t*B8-60*s*t*kappa*uz-384*s*t^3-3*s^2*A8+30*s^2*kappa*vz+6*s^3*t),
+(3*B8^2-192*A8^2+2560*kappa*vz*A8+40*kappa*uz*B8-6144*t*uz*vz+384*t^2*B8+3840*t^2*kappa*uz+12288*t^4+3072*s*vz^2-48*s*uz^2+768*s*t*A8-7680*s*t*kappa*vz-6*s^2*B8-60*s^2*kappa*uz-1152*s^2*t^2+3*s^4),
+(24576*uz*vz^2-128*uz^3+20*kappa*B8^2-1280*kappa*A8^2-3072*t*vz*B8+3072*t*uz*A8-40960*t*kappa*uz*vz+1280*t^2*kappa*B8-196608*t^3*vz+61440*t^4*kappa-3072*s*vz*A8-48*s*uz*B8+20480*s*kappa*vz^2-320*s*kappa*uz^2+2560*s*t*kappa*A8-9216*s*t^2*uz-20*s^2*kappa*B8+9216*s^2*t*vz-5760*s^2*t^2*kappa+48*s^3*uz+15*s^4*kappa),
+(4096*vz^3-192*uz^2*vz-20*kappa*A8*B8+1536*t*vz*A8+24*t*uz*B8-10240*t*kappa*vz^2+160*t*kappa*uz^2-640*t^2*kappa*A8+1536*t^3*uz-36*s*vz*B8+36*s*uz*A8-400*s*kappa*uz*vz+30*s*t*kappa*B8-5376*s*t^2*vz+2240*s*t^3*kappa+20*s^2*kappa*A8-96*s^2*t*uz+36*s^3*vz-45*s^3*t*kappa),
+(4096*vz^3-192*uz^2*vz-20*kappa*A8*B8+1536*t*vz*A8+24*t*uz*B8-10240*t*kappa*vz^2+160*t*kappa*uz^2-640*t^2*kappa*A8+1536*t^3*uz-12*s*vz*B8+12*s*uz*A8-240*s*kappa*uz*vz+10*s*t*kappa*B8-3840*s*t^2*vz+1600*s*t^3*kappa-48*s^2*t*uz+12*s^3*vz-15*s^3*t*kappa),
+(1-2304*kappa*vz^2*zinv-36*kappa*uz^2*zinv+3840*t*kappa^2*vz*zinv-1600*t^2*kappa^3*zinv-60*s*kappa^2*uz*zinv-25*s^2*kappa^3*zinv),
+(1-t*wt-s*ws);
+ideal CTRLproper=s; ideal GCTRLproper=std(CTRLproper);
+if (reduce(1,GCTRLproper)==0) { print("K00_R400_FAIL=KNOWN_PROPER_CONTROL"); quit; }
+ideal CTRLunit=s,1; ideal GCTRLunit=std(CTRLunit);
+if (reduce(1,GCTRLunit)!=0) { print("K00_R400_FAIL=FORCED_UNIT_CONTROL"); quit; }
+print("K00_R400_CONTROLS=PASS");
+ideal G0=slimgb(J); poly N0=reduce(1,G0); int D0=dim(G0);
+print("K00_R400_PREFLIGHT_DIM="+string(D0));
+if (N0==0)
+{
+  print("K00_R400_PREFLIGHT=UNIT");
+  matrix U; matrix C=lift(J,ideal(1),U,"slimgb");
+  if ((nrows(C)!=9)||(ncols(C)!=1)||(nrows(U)!=1)||(ncols(U)!=1)) { print("K00_R400_FAIL=UNIT_LIFT_SHAPE"); quit; }
+  if (U[1,1]!=1) { print("K00_R400_FAIL=UNIT_LIFT_U"); quit; }
+  matrix UID=matrix(J)*C-matrix(ideal(1)); if (UID!=0) { print("K00_R400_FAIL=UNIT_IDENTITY"); quit; }
+  int pick=0; int rr; for (rr=1;rr<=nrows(C);rr++) { if ((pick==0)&&(J[rr]!=0)&&(C[rr,1]!=0)) { pick=rr; } }
+  if (pick==0) { print("K00_R400_FAIL=UNIT_MUTATION_PICK"); quit; }
+  matrix CDROP=C; CDROP[pick,1]=0; if (matrix(J)*CDROP-matrix(ideal(1))==0) { print("K00_R400_FAIL=UNIT_DROP_MUTATION"); quit; }
+  write("/home/ubuntu/r400_20260829/jobs/r2_base_v1/output/EXACT_UNIT_COEFFICIENTS.matrix",string(C));
+  print("K00_R400_UNIT_PICK="+string(pick)); print("K00_R400_BRANCH=UNIT"); quit;
+}
+if ((N0!=1)||(D0<0)) { print("K00_R400_FAIL=PREFLIGHT_PROPER_MARKERS"); quit; }
+print("K00_R400_PREFLIGHT=PROPER");
+matrix T; ideal G=liftstd(J,T);
+if ((nrows(T)!=9)||(ncols(T)!=size(G))) { print("K00_R400_FAIL=TRACKED_SHAPE"); quit; }
+matrix TREPLAY=matrix(J)*T-matrix(G); if (TREPLAY!=0) { print("K00_R400_FAIL=TRACKED_IDENTITY"); quit; }
+poly N1=reduce(1,G); int D1=dim(G); if ((N1!=1)||(D1!=D0)||(D1<0)) { print("K00_R400_FAIL=TRACKED_PROPER_MARKERS"); quit; }
+int pickr=0; int pickc=0; int cc; int rr; for (cc=1;cc<=ncols(T);cc++) { for (rr=1;rr<=nrows(T);rr++) { if ((pickr==0)&&(J[rr]!=0)&&(T[rr,cc]!=0)) { pickr=rr; pickc=cc; } } }
+if (pickr==0) { print("K00_R400_FAIL=TRACKED_MUTATION_PICK"); quit; }
+matrix TBAD=T; TBAD[pickr,pickc]=0; if (matrix(J)*TBAD-matrix(G)==0) { print("K00_R400_FAIL=TRACKED_DROP_MUTATION"); quit; }
+write("/home/ubuntu/r400_20260829/jobs/r2_base_v1/output/EXACT_STANDARD_BASIS.txt",string(G)); write("/home/ubuntu/r400_20260829/jobs/r2_base_v1/output/EXACT_LIFTSTD_TRANSFORM.matrix",string(T));
+print("K00_R400_PROPER_GSIZE="+string(size(G))); print("K00_R400_PROPER_PICKR="+string(pickr)); print("K00_R400_PROPER_PICKC="+string(pickc)); print("K00_R400_BRANCH=PROPER"); quit;

@@ -535,10 +535,10 @@ provenance may name the producing or reviewing model.
 
 | Model | Adapter | Notes |
 |---|---|---|
-| Fable 5 (Anthropic) | `ops/adapters/claude.sh` | exact-model pinned; permanent equal-standing whole-portfolio researcher; receives every sealed full-round packet independently; clean same-input ideation through `20260829T1517Z`; distinctive reviewed work includes theorem-interface/lifecycle auditing, compiler custody, K00 compression, the exact localized gate intertwiner, the uniform lower two-root endpoint theorem, the E0 exact-`p` linear-vacuity correction, the reviewed algebraic-primitive gate filter, the reviewed single-root endpoint-transport mechanism, the independent repair of the active-`c2` D8--D15 cascade, the normalization/localization repair of the q1/q3 composition, the clean 442-slot hostile review of raw origin coupling, the fixed origin-residue slice audit, the fixed-`Q=X` ideal-membership exclusion, and the literal active-`c2` D16--D22 audit; normal hostile review remains mandatory |
-| Opus 5 (Anthropic) | `ops/adapters/opus.sh` | exact-model pinned; **permanently admitted as an equal-standing whole-portfolio researcher by the `20260827T2137Z` same-input evaluation**; clean same-input ideation through `20260829T1517Z`; distinctive reviewed work includes the etale-`mu4` torsor target-budget theorem, source-level `G2-PSC` same-edge/subsumption correction, all-row Lagrange and homogeneous `NU` laws, mod-8 row death, an exact rank-one nonlinear control, closed-form recurrence fixtures, the clean-room repair of unit-root endpoint transport, the repaired full-system q1/q3 deep-locus compression, the exact q5--q13/even-gate tail classification, the reviewed raw-origin/parity coupling with its exact `Q=X` mutation, the generic quadratic-Q fixed-face rank theorem, the promoted degree-432 `K0` field theorem, and the promoted asymptotic-complement covering mechanism; normal hostile review remains mandatory |
-| GPT / "Sol" (OpenAI) | `ops/adapters/codex.sh` | coordinator and equal-standing whole-portfolio researcher; exact `gpt-5.6-sol` with `ultra` reasoning through the pinned adapter; clean same-input ideation through `20260829T1517Z` |
-| Grok (xAI) | `ops/adapters/grok.sh` | equal-standing whole-portfolio researcher; via `grok --prompt-file`; clean same-input ideation through `20260829T1517Z`; its earlier `FACE-NC`/`FACE-CHAR` promotions failed hostile typing review; its 2259Z constant-bundle insight survived only after gauge repair and its Hessian formula proved visibility rather than an obstruction; it independently confirmed the row-30 nonlinear class slice, the promoted `K0` theorem, the ARITH-SPREAD correction, and the scoped asymptotic-complement theorems |
+| Fable 5 (Anthropic) | `ops/adapters/claude.sh` | exact-model pinned; permanent equal-standing whole-portfolio researcher; receives every sealed full-round packet independently; clean same-input ideation through `20260829T2254Z`; distinctive reviewed work includes theorem-interface/lifecycle auditing, compiler custody, K00 compression, the exact localized gate intertwiner, the uniform lower two-root endpoint theorem, the E0 exact-`p` linear-vacuity correction, the reviewed algebraic-primitive gate filter, the reviewed single-root endpoint-transport mechanism, the independent repair of the active-`c2` D8--D15 cascade, the normalization/localization repair of the q1/q3 composition, the clean 442-slot hostile review of raw origin coupling, the fixed origin-residue slice audit, the fixed-`Q=X` ideal-membership exclusion, and the literal active-`c2` D16--D22 audit; normal hostile review remains mandatory |
+| Opus 5 (Anthropic) | `ops/adapters/opus.sh` | exact-model pinned; **permanently admitted as an equal-standing whole-portfolio researcher by the `20260827T2137Z` same-input evaluation**; clean same-input ideation through `20260829T2254Z`; distinctive reviewed work includes the etale-`mu4` torsor target-budget theorem, source-level `G2-PSC` same-edge/subsumption correction, all-row Lagrange and homogeneous `NU` laws, mod-8 row death, an exact rank-one nonlinear control, closed-form recurrence fixtures, the clean-room repair of unit-root endpoint transport, the repaired full-system q1/q3 deep-locus compression, the exact q5--q13/even-gate tail classification, the reviewed raw-origin/parity coupling with its exact `Q=X` mutation, the generic quadratic-Q fixed-face rank theorem, the promoted degree-432 `K0` field theorem, and the promoted asymptotic-complement covering mechanism; normal hostile review remains mandatory |
+| GPT / "Sol" (OpenAI) | `ops/adapters/codex.sh` | coordinator and equal-standing whole-portfolio researcher; exact `gpt-5.6-sol` with `ultra` reasoning through the pinned adapter; clean same-input ideation through `20260829T2254Z` |
+| Grok (xAI) | `ops/adapters/grok.sh` | equal-standing whole-portfolio researcher; via `grok --prompt-file`; clean same-input ideation through `20260829T1517Z`; the `20260829T2254Z` call returned HTTP 402 before model work and is `UNAVAILABLE_NO_MODEL_WORK`, not a mathematical response; its earlier `FACE-NC`/`FACE-CHAR` promotions failed hostile typing review; its 2259Z constant-bundle insight survived only after gauge repair and its Hessian formula proved visibility rather than an obstruction; it independently confirmed the row-30 nonlinear class slice, the promoted `K0` theorem, the ARITH-SPREAD correction, and the scoped asymptotic-complement theorems |
 
 Temporary availability (2026-08-28 03:45Z): a fresh Fable5 launch returns
 the provider's hard usage-limit response, with access advertised to resume
@@ -862,6 +862,46 @@ The next web, quiet-round, and systems deadlines are respectively
 `2026-08-30T03:40Z`, `2026-08-30T04:35Z`, and
 `2026-08-31T16:35Z`.
 
+Allocation and systems refresh (2026-08-30 00:35Z): significant-news round
+`20260829T2254Z` closed with four completed blind contexts (two Sol, Fable,
+Opus), two independent cross-pollinations, and one Grok 402 receipt typed
+`UNAVAILABLE_NO_MODEL_WORK`. Fable independently found the decisive empty-
+Proj correction and then sharpened the unloaded filtration to
+`J^5 subset I subset J^2`; a clean AWS V2/replay-B route independently
+confirms all 56 fifth-degree generators and an explicit fourth-power
+noncontainment. Opus independently promotes the complete `e=3,m=1` G9 fan.
+The `e=2,m=2` G10 producer is genuinely new scope and remains review-gated.
+Sol coordinates the cross-interface corrections and exact source partition.
+
+Proof-side allocation is asynchronous: pair-square QCS gets one definition/
+invariance gate; the minimal-degree block surface gets a separate codimension-
+one hostile proof review; the actual-map occurrence/coverage arrow and
+primitive-monodromy horn stay live. The scalar ACV inequality without a
+Keller partner and the literal regular monomial chart are stopped clients,
+not stopped broad avenues. K00 next work reviews e2m2 while independently
+opening e3m2 and the source-completeness partition. Reasonably credible
+producer descendants need not wait for reviewers, but canonical promotion
+does.
+
+The round's one systems trial is independent section assembly. Opus found two
+mandatory and seven secondary contract defects; all are repaired, 9/9 focused
+tests pass under ordinary/`-O`/`-OO`, and 47/47 full operations tests pass
+ordinary/optimized. The repaired bytes remain `TRIAL_NOT_ENABLED` until a
+stable-basis hostile re-review. A Fable quartic review nevertheless ran an
+86-second local Singular refinement and an abandoned 300-second decomposition;
+this is a policy incident. Future external prompts must explicitly prohibit
+uncertain local CAS and route it to AWS. Mathematical verdicts are not revised,
+but detailed counts are not machine dependencies until portable replay exists.
+
+AWS r6b is released running/idle/unclaimed with zero CAS process or session;
+the clean sharp-exponent packet is frozen. Box02/Box03 R4 diagnostics were
+previously stopped after their promotion-independent role ended. Heavy or
+uncertain computation remains AWS-only. No campaign action inspected, built,
+modified, or controlled the separately owned formalization. The next broad
+web sweep remains due no earlier than `2026-08-30T03:40Z`; the next quiet full
+round is due within twelve hours of this closure unless significant news fires
+sooner; the 48-hour systems-improvement clock resets at this repair.
+
 Adding a model requires one adapter in `ops/adapters/` and one roster row;
 route documents do not assign permanent jobs by model name.
 Admission requires a sealed same-input evaluation against a standing model.
@@ -870,3 +910,18 @@ ranked launch, stop, merge, correction, or review decision; eloquence,
 agreement, and duplicate ideas do not qualify.  Newly admitted models receive
 the same blind-round standing and remain subject to normal history checksum,
 scope audit, and different-model promotion rules.
+
+Allocation refresh (2026-08-30 00:47Z): Fable's block-descent hostile review
+closes the last live lane from round `20260829T2254Z`. The binding theorem
+retypes every nontrivial intermediate block as an étale sandwich through a
+forced non-`A^2` normal surface whose nonempty branch divisor is missed by
+the first map and maps into `A(F)`. Stop the codimension-one-image and
+intermediate-`A^2` minimality descendants; they are ruled out by theorem,
+not merely review-blocked. Primitive monodromy stays open. Its cheapest new
+block client is the provisional `BD-D2` obstruction, independent of the
+pair-square QCS gate and of K00 source partitioning. A CRT/minimal-polynomial
+repair promotes the discriminant-fibre deficit without a flatness assumption;
+only the polynomial-parametrization decoration remains unpromoted review
+debt. No lane is active at this atomic checkpoint; commit
+and push precede the next research wave. AWS remains idle/unclaimed, and
+heavy or uncertain computation remains AWS-only.

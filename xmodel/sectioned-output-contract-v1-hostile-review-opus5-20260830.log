@@ -1,0 +1,17 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+## `REPAIR_REQUIRED`
+
+Report at `xmodel/sectioned-output-contract-v1-hostile-review-opus5-20260830.md` (293 lines, one standalone terminator, no seal, no `charge_basis`). Charged files re-hashed before and after — unmodified.
+
+**Two blocking defects**, both contradicting a property the tool claims about itself:
+
+- **R1 — genuine fail-open.** `regular_file` catches only `FileNotFoundError` from `lstat`. Any other `OSError` escapes the `except ContractError` handler at `:314` that unlinks the output, so `assemble` leaves an **unverified** `assembled.md` on disk with no receipt and exit 1. Demonstrated by chmod-000 inside the real post-write window. The other 5 of 6 window mutations fail closed correctly with precise diagnoses.
+- **R2 — terminator smuggling.** The guard `any(line == terminator for line in text.splitlines())` catches only prefixes that are Python line-splitting boundaries. A separator-class matrix showed space/tab/NBSP/any non-separator prefix smuggles a second `BODY-END` into the output; a `.strip()`-tolerant consumer then truncates at line 8 instead of line 12. Same root cause lets a body forge the assembler's own `sha256=` provenance line.
+
+Seven further corrections: `write_exclusive` OSError (R3), `path` is the only unvalidated manifest string and a NUL makes a section report "not yet produced" forever (R4), "canonical JSON" claimed but duplicate keys accepted (R5), `prompt_sha256` is decorative — echoed, never verified (R6), `lstat`→`read` TOCTOU won **1 in 1,861,153** attempts (R7), immutability and `lane.sh` integration overclaims — the tool is wired to nothing (R8), doc minors (R9).
+
+**Clean, no findings:** path confinement (13 controls, all refused), output exclusivity including a dangling-symlink output whose target was *not* created, truncation semantics with a genuinely actionable mid-run receipt, and determinism — 1 distinct output digest across 5 runs varying interpreter (3.9/3.12), `-O`, and `PYTHONHASHSEED`. Charged tests 5/5 in ordinary/`-O`/`-OO`/3.9; full `ops` suite 43/43. The "deliberately not a model runner" claim is exactly accurate.
+
+**Max safe lifecycle:** `status` as an advisory reporter only until R1 lands — artifact presence on disk does not currently imply verification. After R1–R4, usable as an assembly gate for a single operator on local disk; after R7, tolerable on networked storage. Never a semantic checker or proof; no mathematical claim may depend on it.
+
+Two disclosures, both in the report: one wiring-check `grep -rn .` would have traversed a `jc2-lean` tree if present — inadvertent and contrary to the brief; it returned only two `xmodel/` matches and nothing from it informed any finding. And the R1 demonstration ran `main()` in-process with a reviewer-owned wrapper around `write_exclusive` that calls the real one unchanged; the file on disk was never touched.

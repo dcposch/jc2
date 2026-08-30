@@ -1,0 +1,19 @@
+lane=K00-R4-00-BASE-DECIDE-AWS-20260829
+job=msolve:shard_r2_chartt_p65521.ms
+host=ip-172-30-0-34
+uname=Linux ip-172-30-0-34 7.0.0-1011-aws #11~24.04.1-Ubuntu SMP PREEMPT Mon Aug 10 15:20:57 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+dmi_sys_vendor=Amazon EC2
+dmi_product_name=r6i.4xlarge
+dmi_board_asset_tag=i-02cb2b4a379ffcc64
+start_utc=2026-08-29T23:13:18Z
+tool=/usr/bin/msolve
+tool_version= msolve library for polynomial system solving implemented by J. Berthomieu, C. Eder, M. Safey El Din 
+script=shard_r2_chartt_p65521.ms
+script_sha256=e6fb62b8e01e144fb51ccb0be959ba6988fe237013c83e49beadeb2ccfe3de03
+manifest_sha256=7f9a9940df73277020eeb42bfe4414fa7ae51b37eb87eca82faf53dff3834b93
+argv=/usr/bin/msolve -g 2 -t 4 -f /home/ubuntu/r4_00_base_decide/packet/shard_r2_chartt_p65521.ms -o /home/ubuntu/r4_00_base_decide/run2/msolve_shard_r2_chartt_p65521.ms.gb 
+end_utc=2026-08-29T23:13:19Z
+rc=0
+stdout_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_sha256=67e77592e9fca6e3f453f96ea9b4dd15e0f0171dbdd7ecbee4035120e4794494
+artifact 77f761112652ea8a4a0840f573a11cc7e1f913b50f921bd76a4c070620ed5005 msolve_shard_r2_chartt_p65521.ms.gb

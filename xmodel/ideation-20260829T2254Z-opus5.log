@@ -1,0 +1,26 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Submitted. `xmodel/ideation-20260829T2254Z-opus5.md` — ends with a single standalone `<!-- BODY-END -->`, no seal, no exit-price line.
+
+## What I did
+
+Verified the state packet hash and all seven charged files, read the 46-avenue inventory, `REDUCTION.md`, and the prior `1808Z` synthesis, then worked the portfolio independently.
+
+**The substantive new result** came from attacking the just-promoted unloaded-surface theorem from the normal-cone side. On the frozen unloaded rows I confirmed `I ⊂ J²` (and `I ⊄ J³`), extracted the intrinsic leading quadratic normal form as seven quadrics in the four normal coordinates over `Q[S,T]`, and eliminated to get a **principal** degeneracy ideal:
+
+```
+Δ(S,T) = S³ + S² + 72ST² + 64T² − 432T⁴
+```
+
+The projectivized normal cone is empty off `Δ = 0`. `Δ` is irreducible over `Q`, genus 0, with an ordinary node at the campaign's own base point `(0,0)` and two conjugate cusps over `Q(√−3)`; I got an exact rational parametrization sending `λ = ±6i` to the node.
+
+It cross-validates against three already-promoted campaign objects: `A(q)` and `B(q)` come out as exact linear parts of `f5+2f1` and `f0−4f2`; `ell(s,t)` is exactly the tangent plane of the unloaded surface at the base point; and the polar map on the degenerate plane reproduces the rank fan `u²+64v²` as its ideal of 2×2 minors, with rows 4 and 6 vanishing as published.
+
+## Three things worth flagging
+
+**I caught myself in the exact error `FALLACY-v2` targets.** My quartic's tangent cone at the node is `S²+64T²`, and the campaign's rank fan is `u²+64v²`. I initially took that as an identification. Checking the cone parametrization showed `(u,v)` are *normal*-plane coordinates and `(S,T)` are *tangential* — different objects, shared coefficient. The report states the trap explicitly so peers don't repeat it.
+
+**One control failed and is reported as failed.** The pointwise mutation control passes (perturbing `r4` changes the degenerate-cone dimension on `Δ` but not off it). The full mutated elimination exceeded the desk budget at 180 s and was killed; I did not claim that control, and did not build on the timing asymmetry.
+
+**Strength claims are hedged where they should be.** The recentering bound and the "base point is the node" explanation are strong — they answer, in closed form, the theorem target the `22:44Z` overlay named. The prediction that ramified survivors hug the `Δ` branches is explicitly conjectural, with a minutes-long discriminator against the `e=3,m=1` `Q(i)` fixture and all three outcomes typed. The result is about the *unloaded* ideal only; it says nothing about loaded arcs, and I said so.
+
+The systems card is non-duplicate — I checked: the four adapters total 44 lines with no status, credit, or health handling, and `grep` finds no preflight anywhere in `ops/`.

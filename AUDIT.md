@@ -5,6 +5,141 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **INTERMEDIATE BLOCK DESCENT — ÉTALE-SANDWICH STRUCTURE PROMOTED;
+> CODIMENSION-ONE PRIMITIVITY ROUTE CLOSED (2026-08-30 00:47Z).** Fable
+> hostile review
+> `bc88ca78c303553555dee3e94f16cbef6e81ea187cd201b73e6d700ccc821992`
+> returns `CONFIRM_WITH_CORRECTIONS` on the Opus block-surface proposal.
+> Binding integration
+> `ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778`
+> (8,285-byte body `85db7afd...`) promotes the conservative core.
+>
+> For any proper intermediate field of a hypothetical non-invertible Keller
+> map, normalization gives
+>
+> ```text
+> A^2 --g1, etale quasi-finite--> Y --g2, finite flat--> A^2,
+> ```
+>
+> where `Y` is a normal affine surface not isomorphic to `A^2`. The branch
+> locus of `g2` is a nonempty divisor, `g1` is open and misses it pointwise,
+> and its discriminant image lies in `A(F)`. Thus the proposed condition that
+> `g1(A^2)` contain every codimension-one point is always false for a
+> nontrivial block; the alternative intermediate-`A^2` bridge is impossible
+> as well. This route yields no minimal-degree primitivity theorem. The
+> successor `BD-D2`—rule out block index two—is proposed but unproved.
+>
+> The quantitative fibre deficit is promoted after a coordinator repair:
+> CRT plus the minimal polynomial over a normal local ring proves that a
+> degree-`d1` normalization fibre has at most `d1` points, without flatness.
+> Hence every closed discriminant point satisfies
+> `#F^{-1}(z)<=deg(F)-d1`; this is an upper bound, not an attainment claim.
+> The citation-dependent claim that discriminant components are polynomially
+> parametrized components of `A(F)` is also withheld. The binding theorem
+> uses only `g2(R)=V(Disc(g2)) subset A(F)` and makes no counterexample,
+> block-existence, missing-value, or JC2 assertion.
+
+> **GENERIC K00 `e=3,m=1` CELL — REVIEWED G9 EXCLUSION PROMOTED
+> (2026-08-30 00:28Z).** Sol producer
+> `22e9752761f3bb4ee94b4dccf18cb72ff49bd0d92453ad4cf39eb401cc45f84a`
+> (13,038-byte body `2e3086f5...`) receives Opus clean-room reconstruction
+> `0f7c18eb06dc2451fd4db668de7682a5d59f1c734509402b2537790b0408db87`,
+> verdict `CONFIRM_WITH_CORRECTIONS`. Binding integration is
+> `6c7195218dcdac680d260d2db3e7bcff197a2ba7ee09055a8e6f67884ce27a38`
+> (5,551-byte body `3c08e46b...`).
+>
+> On the normalized `Lambda=tau^3`, `ord_tau(d)=1`, C6/K10 source,
+>
+> ```text
+> V(G0,...,G9) intersect D(k10[0])
+>                 intersect (union_i D(d_i[1])) = empty.
+> ```
+>
+> The complete reduced fan is exhaustive. First normal orders two and three
+> close by G6/G9; at order four, rank two, rank one, rank zero, every higher
+> normal order, and the exact-surface branch all die at G9. The banked G8
+> fixture is genuine and has first failure `G9_6=i/32`. Only `k10[0]` can
+> occur through G9; K6/K2/targets/Jdet are absent, so every positive-or-
+> infinite late-load face has the same prefix. The point-set theorem excludes
+> formal arcs inside this exact cell by truncation, but says nothing about
+> `k10=0`, `e=3,m=2`, another support, reachability, a polynomial map, or JC2.
+
+> **UNLOADED K00 NORMAL FILTRATION — SHARP NILPOTENCE AND RETYPED
+> QUARTIC PROMOTED (2026-08-30 00:14Z).** Fable hostile review
+> `74813e3307ee0514038f271b9714f5f0fac82ed63b2bdbbc1b7727ff9a740cee`
+> confirms the producer's seven-quadric computation but refutes its true-
+> normal-cone interpretation. Binding integration is
+> `669a3496e9e1fac43e8a6e8ccfee58d4622ecab2d416838c349bfbfa398e690b`
+> (7,992-byte body `d026eb79...`). For the unloaded row ideal `I` and graph
+> ideal `J`,
+>
+> ```text
+> J^5 subset I subset J^2,
+> J^4 not-subset I,       I not-subset J^3.
+> ```
+>
+> Hence `sqrt(I)=J`, `K=J/I` has exact nilpotence index five, and
+> `Proj(gr_K(A/I))` is empty everywhere after arbitrary base change. The
+> earlier exponent-17 pigeonhole bound is correct but superseded; centered
+> valuations satisfy `2*v(J)<=v(I)<=5*v(J)` without an integral-closure
+> conclusion.
+>
+> Fresh AWS producer/replay
+> `208ecb8e15f1d0601ee2c35ab3e56b73f0643fdc470665e8d12bf5460cdd1a44`
+> (12,138-byte body `20f8ed14...`) independently confirms all 56 generators
+> of `J^5` and the nonzero normal form of the explicit `f5^4` witness. Its V1
+> and replay-A attempts are sealed `NO_VERDICT` quarantines: both a planted
+> undefined symbol and an unplanted reserved-name typo made Singular return
+> zero with downstream fake PASS text, but the shared diagnostic validator
+> rejected them with status 41. Only clean V2/replay-B evidence is consumed.
+>
+> The quartic
+> `Delta=S^3+S^2+72*S*T^2+64*T^2-432*T^4` is promoted only as the iff
+> discriminant for nonzero common solutions of the seven second-normal-jet
+> quadrics. It is not the true projectivized normal-cone locus:
+> `(Q_1,...,Q_7)` is strictly smaller than `in_J(I)`. Its reviewed curve and
+> fibre classification, plus the sign-matched flat-limit incidence with the
+> transverse fan, remain valid at that corrected type. Loaded rows do not set
+> `I=0`; no loaded recentering, arc, map, or JC2 claim follows.
+
+> **FIRST RAMIFIED K00 CELL — ALL POSITIVE/INFINITE BOUNDARY FACES
+> REVIEWED EMPTY (2026-08-29 23:24Z).** Fable review
+> `0ee84a0b98d30c4436461a09118961706d1f18fcfe9686684e7b1a27b5597feb`
+> (22,894-byte body `57de629f...`) independently reconstructs the source
+> and returns `CONFIRM_WITH_CORRECTIONS`. Binding integration is
+> `7c73616d99bd0cf3880dfedc790bcbdc055f68f800a94fd65bcae43ae4711bac`
+> (9,174-byte body `624e3abb...`). On the normalized `e=2,m=1` generic
+> ray, every positive order or identically-zero choice of K6, K2, and the
+> targets has the same impossible G0--G7 prefix on the C6/K10 cell; Jdet is
+> a cell label but unused. This promotes all those load-order faces, not the
+> C6=0 tip, K10=0, another `(e,m)`, support, or map.
+
+> **LITERAL NORMALIZED V20R2 INTEGER ATLAS — REVIEWED EMPTY
+> (2026-08-29 23:12Z).** Opus reconstruction
+> `7082bf678825bd0b148b2a9b88ddfb7cdd7f8a9e166712188770ffad0a9ed270`
+> (body `8ff0abb2...`) confirms the R4-00 nonzero-rank packets with binding
+> corrections. Integration
+> `4f89128098b1f4e4a8cec06f3f04ce14012d797e5885d40154e66fba51abd719`
+> (8,708-byte body `26fbcfb5...`) gives a route-independent eleven-equation
+> proof: grade 12 forces `A(z)=B(z)=0`, grade 14 forces the next pair zero,
+> and a literal grade-14/15/19 identity then forces `Jdet_0=0`. Thus R4-00
+> is empty by grade 19; its rank-zero branch retains the sharper grade-18
+> obstruction. Composed with the reviewed parent fan and R4-02 kill, every
+> literal normalized integer-valuation cell on this one V20R2 support is
+> empty. This does not close ramified DVR arcs, other supports, compatible
+> all-order data, maps, counterexamples, or JC2.
+
+> **GENERIC K00 `e=2,m=2` CELL — COMPLETE G10 PRODUCER, REVIEW
+> REQUIRED (2026-08-30).** Sealed producer
+> `fa5a4ef6a1b2c0640c6363b84e6b547a044920b15249f7c72b25ffbcda2c1733`
+> (14,580-byte body `510f81b8...`) and replay `efd2f4f...` report
+> `V(G0,...,G10) intersect D(k10[0]) intersect union_i D(d_i[2])=empty`
+> on the C6/K10/Jdet cell. This is not merely the `tau^2` pullback of the
+> valuation-one theorem: the full coefficient space has a new odd `d[3]`
+> transition at G5 and an explicit non-even G8 component. The result remains
+> `EXACT PRODUCER / DIFFERENT-MODEL REVIEW REQUIRED`; no canonical promotion
+> or further scope is inferred here.
+
 > **FIRST RAMIFIED K00 SOURCE CELL — REVIEWED GRADE-SEVEN EXCLUSION
 > PROMOTED (2026-08-29 22:33Z).** Sol producer `66b4f59e...` (11,123-byte
 > body `c9a96bd9...`) and replay `981b39f9...` receive Opus independent

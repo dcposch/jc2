@@ -1,0 +1,113 @@
+gone_pid=40141
+gone_pid=40180
+gone_pid=40181
+lane=K00-REES-SANDWICH-EXACT-N-V2-R6B-20260829
+instance_id=i-0f089e64c378f5da3
+hostname=ip-172-30-0-106
+boot_id=3dca2ad4-9cbb-48f9-9c62-02d37a90bd19
+vendor=Amazon EC2
+start_utc=2026-08-30T00:09:56Z
+cwd=/home/ubuntu/k00_rees_sandwich_exact_n_v2_20260829
+payload_manifest_sha256=214df908cf7de2466e0f35f35ed8324574e88ea0057b022d6da37b919b5778eb
+load_start=0.00 0.23 0.29
+memavailable_kib_start=128224792
+singular_path=/usr/bin/Singular
+singular_version_begin
+Singular for x86_64-Linux version 4.3.2 (4330, 64 bit) Apr  1 2024 04:44:00
+with
+	GMP(6.3.0),NTL(11.5.1),FLINT(3.0.1),
+	omalloc,static readline(8),Plural,vspace(2),DBM,
+	dynamic modules,OM_NDEBUG,SING_NDEBUG,
+	CC:OPTIMIZE,GenericAdd,TableMult,no invTable,
+	eigenvalues,Gauss-Manin system,random=1788048596
+built-in modules: {}
+AC_CONFIGURE_ARGS =  '--build=x86_64-linux-gnu' '--prefix=/usr' '--includedir=${prefix}/include' '--mandir=${prefix}/share/man' '--infodir=${prefix}/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--disable-option-checking' '--disable-silent-rules' '--libdir=${prefix}/lib/x86_64-linux-gnu' '--runstatedir=/run' '--disable-maintainer-mode' '--disable-dependency-tracking' '--libexecdir=/usr/libexec/x86_64-linux-gnu' '--htmldir=/usr/share/doc/singular/html' '--with-libparse' '--enable-streamio' 'build_alias=x86_64-linux-gnu' 'CFLAGS=-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/singular-HDHwVv/singular-4.3.2-p10+ds=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/singular-HDHwVv/singular-4.3.2-p10+ds=/usr/src/singular-1:4.3.2-p10+ds-1.1build1' 'LDFLAGS=-Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z,relro -Wl,-z,now' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=3' 'CXXFLAGS=-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/singular-HDHwVv/singular-4.3.2-p10+ds=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/singular-HDHwVv/singular-4.3.2-p10+ds=/usr/src/singular-1:4.3.2-p10+ds-1.1build1' 'PYTHON=/usr/bin/python3' --enable-omalloc  OMALLOC_LIBS='/build/singular-HDHwVv/singular-4.3.2-p10+ds/omalloc/libsingular-omalloc.la' OMALLOC_INCLUDES='-I/build/singular-HDHwVv/singular-4.3.2-p10+ds'  --with-Singular RESOURCES_LIBS='/build/singular-HDHwVv/singular-4.3.2-p10+ds/resources/libsingular-resources.la' RESOURCES_INCLUDES='-I/build/singular-HDHwVv/singular-4.3.2-p10+ds ' FACTORY_LIBS='/build/singular-HDHwVv/singular-4.3.2-p10+ds/factory/libsingular-factory.la' FACTORY_INCLUDES='-I/build/singular-HDHwVv/singular-4.3.2-p10+ds -I/build/singular-HDHwVv/singular-4.3.2-p10+ds/factory -I/build/singular-HDHwVv/singular-4.3.2-p10+ds/factory/include',
+CC = gcc,FLAGS :  -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/singular-HDHwVv/singular-4.3.2-p10+ds=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/singular-HDHwVv/singular-4.3.2-p10+ds=/usr/src/singular-1:4.3.2-p10+ds-1.1build1 -pipe -fno-common -O3 -Wno-unused-function -Wno-trigraphs -Wno-unused-parameter -Wunknown-pragmas -Wno-unused-variable -fomit-frame-pointer -fwrapv -fvisibility=default -finline-functions -fno-exceptions -fno-threadsafe-statics -fno-enforce-eh-specs -fconserve-space -funroll-loops -pthread -pthread,
+CXX = g++,FLAGS : -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/singular-HDHwVv/singular-4.3.2-p10+ds=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/singular-HDHwVv/singular-4.3.2-p10+ds=/usr/src/singular-1:4.3.2-p10+ds-1.1build1 -pipe -fno-common -O3 -Wno-unused-function -Wno-trigraphs -Wno-unused-parameter -Wunknown-pragmas -Wno-unused-variable -fomit-frame-pointer -fwrapv -fvisibility=default -finline-functions -fno-exceptions -fno-threadsafe-statics -fno-enforce-eh-specs -fconserve-space -funroll-loops -fno-rtti -fno-delete-null-pointer-checks -pthread,
+DEFS : ,CPPFLAGS : -Wdate-time -D_FORTIFY_SOURCE=3,
+LDFLAGS : -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z,relro -Wl,-z,now -pipe -fno-common -g -O3 -Wno-unused-function -Wno-trigraphs -Wno-unused-parameter -Wunknown-pragmas -Wno-unused-variable -fomit-frame-pointer -fwrapv -fvisibility=default -finline-functions -fno-exceptions -fno-threadsafe-statics -fno-enforce-eh-specs -fconserve-space -funroll-loops  -rdynamic -Wl,-undefined,dynamic_lookup,LIBS : -lreadline -lncurses  -lgmp -lrt  -lpthread (ver: 13.2.0)
+argv[0]   :	Singular
+SearchPath:	/usr/bin/../share/singular/LIB:/usr/bin/../share/singular/factory:/usr/libexec/x86_64-linux-gnu/singular/MOD:/usr/bin
+Singular  :	/usr/bin/Singular
+BinDir    :	/usr/bin
+ProcDir   :	/usr/libexec/x86_64-linux-gnu/singular/MOD
+RootDir   :	/usr/bin/..
+DataDir   :	/usr/bin/../share
+DefaultDir:	/usr
+InfoFile  :	
+IdxFile   :	
+HtmlDir   :	
+ManualUrl :	https://www.singular.uni-kl.de/Manual/
+ExDir     :	
+Path      :	/usr/bin:/usr/libexec/x86_64-linux-gnu/singular/MOD:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+emacs     :	
+xemacs    :	
+SingularEmacs:	/usr/bin/Singular
+EmacsLoad :	
+EmacsDir  :	
+SingularXterm:	/usr/bin/Singular
+xterm     :	
+EmacsDir  :	
+Available HelpBrowsers: dummy, emacs, 
+Current HelpBrowser: dummy 
+                     SINGULAR                                 /  Development
+ A Computer Algebra System for Polynomial Computations       /   version 4.3.2
+                                                           0<
+ by: W. Decker, G.-M. Greuel, G. Pfister, H. Schoenemann     \   Feb 2023
+FB Mathematik der Universitaet, D-67653 Kaiserslautern        \  Debian 1:4.3.2-p10+ds-1.1build1
+Auf Wiedersehen.
+singular_version_end
+python_version=Python 3.12.3
+negative_caps=30_wall_30_cpu_268435456_rss
+search_caps=1800_wall_1800_cpu_34359738368_rss
+initial_caps=120_wall_120_cpu_1073741824_rss
+negative_control_caprun_rc=0
+negative_control_validation_rc=41
+negative_control_rejected=1
+negative_stdout_sha256=96f9382e9447dc6f8a1d1947a8c8fc16ff82b24bc75d507e4117d92cf6e828ce
+negative_stderr_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+negative_telemetry_sha256=8c650e1e4de4d9ec085e3ed776ed55d3c6695eb87ab6f7b042dcec03a39d9b7b
+search_caprun_rc=0
+search_stdout_sha256=d9a688b1c2bc35021d2b7e6b24b0313c09bea78aff30016808febc139ba8d36f
+search_stderr_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+search_telemetry_sha256=4e8aaed19a31675d824c9f1af161e3c4332786735aadf8fb7116b808ecfda634
+witness_sha256=46317343ad8369cf10efdc6ad7acd25f0041e1641d963761c974c6857753c259
+normal_form_sha256=46317343ad8369cf10efdc6ad7acd25f0041e1641d963761c974c6857753c259
+initial_caprun_rc=0
+initial_stdout_sha256=003406453e28fa6dcd580f5c1329d1d38506b5f9bd3362493d77556f24caf4b6
+initial_stderr_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+initial_telemetry_sha256=685077eda37af84f507dba13011455cba4b2ce3f4849bb568f590ba940bd917b
+end_utc=2026-08-30T00:18:33Z
+load_end=1.05 0.94 0.65
+memavailable_kib_end=128186948
+lane_status=PASS
+K00-REES-V2-UNDEFINED-REGRESSION_schema=CAPRUN/v1
+K00-REES-V2-UNDEFINED-REGRESSION_status=NORMAL_EXIT
+K00-REES-V2-UNDEFINED-REGRESSION_runner_exit=0
+K00-REES-V2-UNDEFINED-REGRESSION_child_return=0
+K00-REES-V2-UNDEFINED-REGRESSION_pid=40165
+K00-REES-V2-UNDEFINED-REGRESSION_pgid=40165
+K00-REES-V2-UNDEFINED-REGRESSION_start_identity=boot=3dca2ad4-9cbb-48f9-9c62-02d37a90bd19;start_ticks=12482453
+K00-REES-V2-UNDEFINED-REGRESSION_wall=0.008864026
+K00-REES-V2-UNDEFINED-REGRESSION_max_rss=0
+K00-REES-V2-UNDEFINED-REGRESSION_termination={'cleanup_complete': None, 'group_live_before_reap': [], 'group_zombies_before_reap': [], 'kill_sent': False, 'leader_reaped': False, 'reason': None, 'term_sent': False}
+K00-REES-V2-EXACT-SEARCH_schema=CAPRUN/v1
+K00-REES-V2-EXACT-SEARCH_status=NORMAL_EXIT
+K00-REES-V2-EXACT-SEARCH_runner_exit=0
+K00-REES-V2-EXACT-SEARCH_child_return=0
+K00-REES-V2-EXACT-SEARCH_pid=40181
+K00-REES-V2-EXACT-SEARCH_pgid=40181
+K00-REES-V2-EXACT-SEARCH_start_identity=boot=3dca2ad4-9cbb-48f9-9c62-02d37a90bd19;start_ticks=12482462
+K00-REES-V2-EXACT-SEARCH_wall=517.001612087
+K00-REES-V2-EXACT-SEARCH_max_rss=28372992
+K00-REES-V2-EXACT-SEARCH_termination={'cleanup_complete': None, 'group_live_before_reap': [], 'group_zombies_before_reap': [], 'kill_sent': False, 'leader_reaped': False, 'reason': None, 'term_sent': False}
+K00-REES-V2-INITIAL-STRICTNESS_schema=CAPRUN/v1
+K00-REES-V2-INITIAL-STRICTNESS_status=NORMAL_EXIT
+K00-REES-V2-INITIAL-STRICTNESS_runner_exit=0
+K00-REES-V2-INITIAL-STRICTNESS_child_return=0
+K00-REES-V2-INITIAL-STRICTNESS_pid=45566
+K00-REES-V2-INITIAL-STRICTNESS_pgid=45566
+K00-REES-V2-INITIAL-STRICTNESS_start_identity=boot=3dca2ad4-9cbb-48f9-9c62-02d37a90bd19;start_ticks=12534172
+K00-REES-V2-INITIAL-STRICTNESS_wall=0.114348951
+K00-REES-V2-INITIAL-STRICTNESS_max_rss=10788864
+K00-REES-V2-INITIAL-STRICTNESS_termination={'cleanup_complete': None, 'group_live_before_reap': [], 'group_zombies_before_reap': [], 'kill_sent': False, 'leader_reaped': False, 'reason': None, 'term_sent': False}

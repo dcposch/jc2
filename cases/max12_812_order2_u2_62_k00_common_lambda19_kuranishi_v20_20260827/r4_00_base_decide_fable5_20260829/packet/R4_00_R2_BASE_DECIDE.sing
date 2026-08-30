@@ -1,0 +1,117 @@
+// R4-00-R2-BASE-DECIDE / Singular exact characteristic-zero driver v1
+// ring map: base coordinates (s,t,uz,vz,kappa) of the R4-00 CELL-R2 residual;
+// weights (4,4,6,6,2); generators X1..X5 are the D^2-cleared closed window
+// content (c31@16,row4@16,row6@18,D51@18,D71@18 after the unique rank-2 solve).
+// Constructible cell: V(X1..X5) with D!=0, kappa!=0, (s,t)!=(0,0).
+// EMPTY means: unit saturation chain + explicit lift certificates
+//   (D*kappa)^a*s^N and (D*kappa)^a*t^N in (X1..X5), independently checkable.
+// NONUNIT means: surviving base components; STAGE-2 completion required
+//   before any nonemptiness statement about CELL-R2 itself.
+LIB "primdec.lib";
+ring r=0,(s,t,uz,vz,kappa),wp(4,4,6,6,2);
+// version-independent saturation: stabilized quotient chain.
+// satur(I,J) returns list(I:J^infinity as a std ideal, iteration count e);
+// every g in the saturation satisfies g*J^e subset I.
+proc satur(ideal II, ideal JJ)
+{
+  ideal cur=std(II);
+  ideal nxt;
+  int e;
+  while (1)
+  {
+    nxt=std(quotient(cur,JJ));
+    if (size(reduce(nxt,cur))==0) { return(list(cur,e)); }
+    cur=nxt;
+    e=e+1;
+  }
+}
+// fail-closed machinery controls (satur / lift / reduce semantics)
+poly one=1;
+list c1=satur(ideal(var(1)^2),ideal(var(1)));
+if (reduce(one,std(c1[1]))!=0) { print("R400_FAIL=CONTROL_SAT_UNIT"); quit; }
+if (c1[2]<1) { print("R400_FAIL=CONTROL_SAT_EXPONENT"); quit; }
+list c2=satur(ideal(var(1)*var(2)),ideal(var(2)));
+if (reduce(one,std(c2[1]))==0) { print("R400_FAIL=CONTROL_SAT_NONUNIT"); quit; }
+if (reduce(var(1),std(c2[1]))!=0) { print("R400_FAIL=CONTROL_SAT_VALUE"); quit; }
+ideal cg=var(1),var(2);
+poly ct=3*var(1)+5*var(2);
+matrix cl=lift(cg,ct);
+if (ct-cg[1]*cl[1,1]-cg[2]*cl[2,1]!=0) { print("R400_FAIL=CONTROL_LIFT"); quit; }
+print("R400_MACHINERY_CONTROLS=PASS");
+
+poly pp=6*uz+5*kappa*s; poly qq=-6*vz+5*kappa*t; poly DD=pp^2+64*qq^2;
+ideal I=
+  1875*s^7*t*kappa^4+25000*s^6*vz*kappa^5+120000*s^5*t^3*kappa^4-50000*s^5*t*uz*kappa^5+1600000*s^4*t^2*vz*kappa^5-7680000*s^3*t^5*kappa^4-6400000*s^3*t^3*uz*kappa^5-102400000*s^2*t^4*vz*kappa^5-491520000*s*t^7*kappa^4-204800000*s*t^5*uz*kappa^5-6553600000*t^6*vz*kappa^5+1125*s^7*vz*kappa^3+5625*s^6*t*uz*kappa^3-648000*s^5*t^2*vz*kappa^3+135000*s^5*uz*vz*kappa^4-360000*s^4*t^3*uz*kappa^3-247500*s^4*t*uz^2*kappa^4-7200000*s^4*t*vz^2*kappa^4-23040000*s^3*t^4*vz*kappa^3+17280000*s^3*t^2*uz*vz*kappa^4+300000*s^3*uz^2*vz*kappa^5-6400000*s^3*vz^3*kappa^5-41472000*s^2*t^5*uz*kappa^3-16320000*s^2*t^3*uz^2*kappa^4+61440000*s^2*t^3*vz^2*kappa^4+100000*s^2*t*uz^3*kappa^5-19200000*s^2*t*uz*vz^2*kappa^5+1474560000*s*t^6*vz*kappa^3+552960000*s*t^4*uz*vz*kappa^4+19200000*s*t^2*uz^2*vz*kappa^5-409600000*s*t^2*vz^3*kappa^5+294912000*t^7*uz*kappa^3-30720000*t^5*uz^2*kappa^4+33423360000*t^5*vz^2*kappa^4+6400000*t^3*uz^3*kappa^5-1228800000*t^3*uz*vz^2*kappa^5+1350*s^6*uz*vz*kappa^2+4050*s^5*t*uz^2*kappa^2-259200*s^5*t*vz^2*kappa^2-1296000*s^4*t^2*uz*vz*kappa^2+396000*s^4*uz^2*vz*kappa^3+2304000*s^4*vz^3*kappa^3-864000*s^3*t^3*uz^2*kappa^2+55296000*s^3*t^3*vz^2*kappa^2-468000*s^3*t*uz^3*kappa^3-29952000*s^3*t*uz*vz^2*kappa^3+82944000*s^2*t^4*uz*vz*kappa^2+48384000*s^2*t^2*uz^2*vz*kappa^3+147456000*s^2*t^2*vz^3*kappa^3+840000*s^2*uz^3*vz*kappa^4+7680000*s^2*uz*vz^3*kappa^4+16588800*s*t^5*uz^2*kappa^2-1061683200*s*t^5*vz^2*kappa^2-11520000*s*t^3*uz^3*kappa^3-737280000*s*t^3*uz*vz^2*kappa^3+180000*s*t*uz^4*kappa^4-69120000*s*t*uz^2*vz^2*kappa^4+737280000*s*t*vz^4*kappa^4-353894400*t^6*uz*vz*kappa^2+294912000*t^4*uz^2*vz*kappa^3-75497472000*t^4*vz^3*kappa^3+7680000*t^2*uz^3*vz*kappa^4+3440640000*t^2*uz*vz^3*kappa^4+604800*s^3*uz^3*vz*kappa^2+16588800*s^3*uz*vz^3*kappa^2-464400*s^2*t*uz^4*kappa^2-53913600*s^2*t*uz^2*vz^2*kappa^2-132710400*s^2*t*vz^4*kappa^2+38707200*s*t^2*uz^3*vz*kappa^2+1061683200*s*t^2*uz*vz^3*kappa^2+792000*s*uz^4*vz*kappa^3+46080000*s*uz^2*vz^3*kappa^3-294912000*s*vz^5*kappa^3-4838400*t^3*uz^4*kappa^2-265420800*t^3*uz^2*vz^2*kappa^2+93428121600*t^3*vz^4*kappa^2+72000*t*uz^5*kappa^3-46080000*t*uz^3*vz^2*kappa^3-3244032000*t*uz*vz^4*kappa^3+440640*s^2*uz^4*vz*kappa+29859840*s^2*uz^2*vz^3*kappa+106168320*s^2*vz^5*kappa-259200*s*t*uz^5*kappa-33177600*s*t*uz^3*vz^2*kappa-1061683200*s*t*uz*vz^4*kappa+11612160*t^2*uz^4*vz*kappa-212336640*t^2*uz^2*vz^3*kappa-61152952320*t^2*vz^5*kappa+259200*uz^5*vz*kappa^2+33177600*uz^3*vz^3*kappa^2+1061683200*uz*vz^5*kappa^2+124416*s*uz^5*vz+15925248*s*uz^3*vz^3+509607936*s*uz*vz^5-62208*t*uz^6-3981312*t*uz^4*vz^2+254803968*t*uz^2*vz^4+16307453952*t*vz^6,
+  1875*s^8*kappa^4-480000*s^6*t^2*kappa^4-100000*s^6*uz*kappa^5-12800000*s^5*t*vz*kappa^5-76800000*s^4*t^4*kappa^4-6400000*s^4*t^2*uz*kappa^5-1638400000*s^3*t^3*vz*kappa^5-1966080000*s^2*t^6*kappa^4+409600000*s^2*t^4*uz*kappa^5-52428800000*s*t^5*vz*kappa^5+31457280000*t^8*kappa^4+26214400000*t^6*uz*kappa^5+4500*s^7*uz*kappa^3-1440000*s^6*t*vz*kappa^3-2592000*s^5*t^2*uz*kappa^3-510000*s^5*uz^2*kappa^4+1920000*s^5*vz^2*kappa^4+92160000*s^4*t^3*vz*kappa^3-34560000*s^4*t*uz*vz*kappa^4-92160000*s^3*t^4*uz*kappa^3-3840000*s^3*t^2*uz^2*kappa^4+4177920000*s^3*t^2*vz^2*kappa^4-400000*s^3*uz^3*kappa^5+76800000*s^3*uz*vz^2*kappa^5+10616832000*s^2*t^5*vz*kappa^3-4423680000*s^2*t^3*uz*vz*kappa^4+76800000*s^2*t*uz^2*vz*kappa^5-1638400000*s^2*t*vz^3*kappa^5+5898240000*s*t^6*uz*kappa^3+1843200000*s*t^4*uz^2*kappa^4+259522560000*s*t^4*vz^2*kappa^4-25600000*s*t^2*uz^3*kappa^5+4915200000*s*t^2*uz*vz^2*kappa^5-75497472000*t^7*vz*kappa^3-141557760000*t^5*uz*vz*kappa^4+4915200000*t^3*uz^2*vz*kappa^5-104857600000*t^3*vz^3*kappa^5+2700*s^6*uz^2*kappa^2-172800*s^6*vz^2*kappa^2-2073600*s^5*t*uz*vz*kappa^2-2592000*s^4*t^2*uz^2*kappa^2+165888000*s^4*t^2*vz^2*kappa^2-1152000*s^4*uz^3*kappa^3+18432000*s^4*uz*vz^2*kappa^3+442368000*s^3*t^3*uz*vz*kappa^2-46080000*s^3*t*uz^2*vz*kappa^3-2949120000*s^3*t*vz^3*kappa^3+165888000*s^2*t^4*uz^2*kappa^2-10616832000*s^2*t^4*vz^2*kappa^2+9216000*s^2*t^2*uz^3*kappa^3+12386304000*s^2*t^2*uz*vz^2*kappa^3-1320000*s^2*uz^4*kappa^4+138240000*s^2*uz^2*vz^2*kappa^4+2457600000*s^2*vz^4*kappa^4-8493465600*s*t^5*uz*vz*kappa^2-7667712000*s*t^3*uz^2*vz*kappa^3-490733568000*s*t^3*vz^3*kappa^3+184320000*s*t*uz^3*vz*kappa^4-11796480000*s*t*uz*vz^3*kappa^4-707788800*t^6*uz^2*kappa^2+45298483200*t^6*vz^2*kappa^2+589824000*t^4*uz^3*kappa^3+415236096000*t^4*uz*vz^2*kappa^3-38400000*t^2*uz^4*kappa^4-8847360000*t^2*uz^2*vz^2*kappa^4+346030080000*t^2*vz^4*kappa^4-1425600*s^3*uz^4*kappa^2+16588800*s^3*uz^2*vz^2*kappa^2+1238630400*s^3*vz^4*kappa^2-66355200*s^2*t*uz^3*vz*kappa^2-9909043200*s^2*t*uz*vz^3*kappa^2+8294400*s*t^2*uz^4*kappa^2+13801881600*s*t^2*uz^2*vz^2*kappa^2+486958694400*s*t^2*vz^4*kappa^2-1440000*s*uz^5*kappa^3+36864000*s*uz^3*vz^2*kappa^3+8257536000*s*uz*vz^4*kappa^3-4246732800*t^3*uz^3*vz*kappa^2-634178764800*t^3*uz*vz^3*kappa^2+129024000*t*uz^4*vz*kappa^3+2359296000*t*uz^2*vz^3*kappa^3-377487360000*t*vz^5*kappa^3-933120*s^2*uz^5*kappa-13271040*s^2*uz^3*vz^2*kappa+2972712960*s^2*uz*vz^4*kappa-66355200*s*t*uz^4*vz*kappa-8493465600*s*t*uz^2*vz^3*kappa-271790899200*s*t*vz^5*kappa+6635520*t^2*uz^5*kappa+7644119040*t^2*uz^3*vz^2*kappa+462044528640*t^2*uz*vz^4*kappa-518400*uz^6*kappa^2-33177600*uz^4*vz^2*kappa^2+2123366400*uz^2*vz^4*kappa^2+135895449600*vz^6*kappa^2-248832*s*uz^6-15925248*s*uz^4*vz^2+1019215872*s*uz^2*vz^4+65229815808*s*vz^6-31850496*t*uz^5*vz-4076863488*t*uz^3*vz^3-130459631616*t*uz*vz^5,
+  3125*s^8*kappa^5-800000*s^6*t^2*kappa^5-128000000*s^4*t^4*kappa^5-3276800000*s^2*t^6*kappa^5+52428800000*t^8*kappa^5+22500*s^7*uz*kappa^4+480000*s^6*t*vz*kappa^4-5280000*s^5*t^2*uz*kappa^4-100000*s^5*uz^2*kappa^5+6400000*s^5*vz^2*kappa^5+460800000*s^4*t^3*vz*kappa^4-12800000*s^4*t*uz*vz*kappa^5-460800000*s^3*t^4*uz*kappa^4-12800000*s^3*t^2*uz^2*kappa^5+819200000*s^3*t^2*vz^2*kappa^5+21626880000*s^2*t^5*vz*kappa^4-1638400000*s^2*t^3*uz*vz*kappa^5-1966080000*s*t^6*uz*kappa^4-409600000*s*t^4*uz^2*kappa^5+26214400000*s*t^4*vz^2*kappa^5-377487360000*t^7*vz*kappa^4-52428800000*t^5*uz*vz*kappa^5+56250*s^6*uz^2*kappa^3+1008000*s^6*vz^2*kappa^3+576000*s^5*t*uz*vz*kappa^3-14832000*s^4*t^2*uz^2*kappa^3-525312000*s^4*t^2*vz^2*kappa^3-490000*s^4*uz^3*kappa^4+32640000*s^4*uz*vz^2*kappa^4+1253376000*s^3*t^3*uz*vz*kappa^3-30720000*s^3*t*uz^2*vz*kappa^4-1966080000*s^3*t*vz^3*kappa^4-525312000*s^2*t^4*uz^2*kappa^3-60751872000*s^2*t^4*vz^2*kappa^3-32000000*s^2*t^2*uz^3*kappa^4+6144000000*s^2*t^2*uz*vz^2*kappa^4+100000*s^2*uz^4*kappa^5-38400000*s^2*uz^2*vz^2*kappa^5+409600000*s^2*vz^4*kappa^5+2359296000*s*t^5*uz*vz*kappa^3-1966080000*s*t^3*uz^2*vz*kappa^4-125829120000*s*t^3*vz^3*kappa^4-51200000*s*t*uz^3*vz*kappa^5+3276800000*s*t*uz*vz^3*kappa^5+4128768000*t^6*uz^2*kappa^3+943718400000*t^6*vz^2*kappa^3-40960000*t^4*uz^3*kappa^4+259522560000*t^4*uz*vz^2*kappa^4-6400000*t^2*uz^4*kappa^5+2457600000*t^2*uz^2*vz^2*kappa^5-26214400000*t^2*vz^4*kappa^5+59400*s^5*uz^3*kappa^2+3801600*s^5*uz*vz^2*kappa^2+345600*s^4*t*uz^2*vz*kappa^2+22118400*s^4*t*vz^3*kappa^2-18662400*s^3*t^2*uz^3*kappa^2-1194393600*s^3*t^2*uz*vz^2*kappa^2-912000*s^3*uz^4*kappa^3+46080000*s^3*uz^2*vz^2*kappa^3+1179648000*s^3*vz^4*kappa^3+1194393600*s^2*t^3*uz^2*vz*kappa^2+76441190400*s^2*t^3*vz^3*kappa^2-33792000*s^2*t*uz^3*vz*kappa^3-7667712000*s^2*t*uz*vz^3*kappa^3-22118400*s*t^4*uz^3*kappa^2-1415577600*s*t^4*uz*vz^2*kappa^2-21504000*s*t^2*uz^4*kappa^3+7667712000*s*t^2*uz^2*vz^2*kappa^3+226492416000*s*t^2*vz^4*kappa^3+240000*s*uz^5*kappa^4-30720000*s*uz^3*vz^2*kappa^4-2949120000*s*uz*vz^4*kappa^4-15571353600*t^5*uz^2*vz*kappa^2-996566630400*t^5*vz^3*kappa^2-2162688000*t^3*uz^3*vz*kappa^3-490733568000*t^3*uz*vz^3*kappa^3-46080000*t*uz^4*vz*kappa^4-1966080000*t*uz^2*vz^3*kappa^4+62914560000*t*vz^5*kappa^4+22680*s^4*uz^4*kappa+2903040*s^4*uz^2*vz^2*kappa+92897280*s^4*vz^4*kappa-8709120*s^2*t^2*uz^4*kappa-1114767360*s^2*t^2*uz^2*vz^2*kappa-35672555520*s^2*t^2*vz^4*kappa-820800*s^2*uz^5*kappa^2+42393600*s^2*uz^3*vz^2*kappa^2+2300313600*s^2*uz*vz^4*kappa^2-9216000*s*t*uz^4*vz*kappa^2-10616832000*s*t*uz^2*vz^3*kappa^2-158544691200*s*t*vz^5*kappa^2+92897280*t^4*uz^4*kappa+11890851840*t^4*uz^2*vz^2*kappa+380507258880*t^4*vz^4*kappa+921600*t^2*uz^5*kappa^2+3892838400*t^2*uz^3*vz^2*kappa^2+486958694400*t^2*uz*vz^4*kappa^2+144000*uz^6*kappa^3+9216000*uz^4*vz^2*kappa^3-589824000*uz^2*vz^4*kappa^3-37748736000*vz^6*kappa^3-380160*s*uz^6*kappa+28753920*s*uz^4*vz^2*kappa+3822059520*s*uz^2*vz^4*kappa+27179089920*s*vz^6*kappa+4423680*t*uz^5*vz*kappa-3963617280*t*uz^3*vz^3*kappa-271790899200*t*uz*vz^5*kappa-82944*uz^7+5308416*uz^5*vz^2+1698693120*uz^3*vz^4+65229815808*uz*vz^6,
+  3125*s^7*t*kappa^5+200000*s^5*t^3*kappa^5-12800000*s^3*t^5*kappa^5-819200000*s*t^7*kappa^5-1875*s^7*vz*kappa^4+20625*s^6*t*uz*kappa^4-840000*s^5*t^2*vz*kappa^4+50000*s^5*uz*vz*kappa^5+600000*s^4*t^3*uz*kappa^4-25000*s^4*t*uz^2*kappa^5+1600000*s^4*t*vz^2*kappa^5+38400000*s^3*t^4*vz*kappa^4+6400000*s^3*t^2*uz*vz*kappa^5-53760000*s^2*t^5*uz*kappa^4-3200000*s^2*t^3*uz^2*kappa^5+204800000*s^2*t^3*vz^2*kappa^5+5406720000*s*t^6*vz*kappa^4+204800000*s*t^4*uz*vz*kappa^5-491520000*t^7*uz*kappa^4-102400000*t^5*uz^2*kappa^5+6553600000*t^5*vz^2*kappa^5-5625*s^6*uz*vz*kappa^3+50625*s^5*t*uz^2*kappa^3+1368000*s^5*t*vz^2*kappa^3-2664000*s^4*t^2*uz*vz*kappa^3+247500*s^4*uz^2*vz*kappa^4-160000*s^4*vz^3*kappa^4-432000*s^3*t^3*uz^2*kappa^3+27648000*s^3*t^3*vz^2*kappa^3-120000*s^3*t*uz^3*kappa^4-7680000*s^3*t*uz*vz^2*kappa^4+170496000*s^2*t^4*uz*vz*kappa^3+24000000*s^2*t^2*uz^2*vz*kappa^4-512000000*s^2*t^2*vz^3*kappa^4-100000*s^2*uz^3*vz*kappa^5+6400000*s^2*uz*vz^3*kappa^5-87552000*s*t^5*uz^2*kappa^3-13271040000*s*t^5*vz^2*kappa^3-7680000*s*t^3*uz^3*kappa^4-491520000*s*t^3*uz*vz^2*kappa^4-50000*s*t*uz^4*kappa^5+19200000*s*t*uz^2*vz^2*kappa^5-204800000*s*t*vz^4*kappa^5+1474560000*t^6*uz*vz*kappa^3+522240000*t^4*uz^2*vz*kappa^4-32112640000*t^4*vz^3*kappa^4+6400000*t^2*uz^3*vz*kappa^5-409600000*t^2*uz*vz^3*kappa^5-4050*s^5*uz^2*vz*kappa^2-259200*s^5*vz^3*kappa^2+55350*s^4*t*uz^3*kappa^2+3542400*s^4*t*uz*vz^2*kappa^2-2246400*s^3*t^2*uz^2*vz*kappa^2-143769600*s^3*t^2*vz^3*kappa^2+468000*s^3*uz^3*vz*kappa^3+8448000*s^3*uz*vz^3*kappa^3-2246400*s^2*t^3*uz^3*kappa^2-143769600*s^2*t^3*uz*vz^2*kappa^2-216000*s^2*t*uz^4*kappa^3-29952000*s^2*t*uz^2*vz^2*kappa^3+344064000*s^2*t*vz^4*kappa^3+226713600*s*t^4*uz^2*vz*kappa^2+14509670400*s*t^4*vz^3*kappa^2+29952000*s*t^2*uz^3*vz*kappa^3+540672000*s*t^2*uz*vz^3*kappa^3-180000*s*uz^4*vz*kappa^4-7680000*s*uz^2*vz^3*kappa^4+245760000*s*vz^5*kappa^4-16588800*t^5*uz^3*kappa^2-1061683200*t^5*uz*vz^2*kappa^2-4608000*t^3*uz^4*kappa^3-737280000*t^3*uz^2*vz^2*kappa^3+59768832000*t^3*vz^4*kappa^3-60000*t*uz^5*kappa^4+7680000*t*uz^3*vz^2*kappa^4+737280000*t*uz*vz^4*kappa^4+22680*s^3*t*uz^4*kappa+2903040*s^3*t*uz^2*vz^2*kappa+92897280*s^3*t*vz^4*kappa+464400*s^2*uz^4*vz*kappa^2+15206400*s^2*uz^2*vz^3*kappa^2+14745600*s^2*vz^5*kappa^2-1451520*s*t^3*uz^4*kappa-185794560*s*t^3*uz^2*vz^2*kappa-5945425920*s*t^3*vz^4*kappa-151200*s*t*uz^5*kappa^2-41472000*s*t*uz^3*vz^2*kappa^2-147456000*s*t*uz*vz^4*kappa^2+8985600*t^2*uz^4*vz*kappa^2+678297600*t^2*uz^2*vz^3*kappa^2-53791948800*t^2*vz^5*kappa^2-72000*uz^5*vz*kappa^3-9216000*uz^3*vz^3*kappa^3-294912000*uz*vz^5*kappa^3+259200*s*uz^5*vz*kappa+15482880*s*uz^3*vz^3*kappa-70778880*s*uz*vz^5*kappa-25920*t*uz^6*kappa-14929920*t*uz^4*vz^2*kappa-460062720*t*uz^2*vz^4*kappa+24914165760*t*vz^6*kappa+62208*uz^6*vz+6635520*uz^4*vz^3+84934656*uz^2*vz^5-5435817984*vz^7,
+  3125*s^7*t*kappa^5+200000*s^5*t^3*kappa^5-12800000*s^3*t^5*kappa^5-819200000*s*t^7*kappa^5-1875*s^7*vz*kappa^4+20625*s^6*t*uz*kappa^4-840000*s^5*t^2*vz*kappa^4+50000*s^5*uz*vz*kappa^5+600000*s^4*t^3*uz*kappa^4-25000*s^4*t*uz^2*kappa^5+1600000*s^4*t*vz^2*kappa^5+38400000*s^3*t^4*vz*kappa^4+6400000*s^3*t^2*uz*vz*kappa^5-53760000*s^2*t^5*uz*kappa^4-3200000*s^2*t^3*uz^2*kappa^5+204800000*s^2*t^3*vz^2*kappa^5+5406720000*s*t^6*vz*kappa^4+204800000*s*t^4*uz*vz*kappa^5-491520000*t^7*uz*kappa^4-102400000*t^5*uz^2*kappa^5+6553600000*t^5*vz^2*kappa^5-5625*s^6*uz*vz*kappa^3+50625*s^5*t*uz^2*kappa^3+1368000*s^5*t*vz^2*kappa^3-2664000*s^4*t^2*uz*vz*kappa^3+247500*s^4*uz^2*vz*kappa^4-160000*s^4*vz^3*kappa^4-432000*s^3*t^3*uz^2*kappa^3+27648000*s^3*t^3*vz^2*kappa^3-120000*s^3*t*uz^3*kappa^4-7680000*s^3*t*uz*vz^2*kappa^4+170496000*s^2*t^4*uz*vz*kappa^3+24000000*s^2*t^2*uz^2*vz*kappa^4-512000000*s^2*t^2*vz^3*kappa^4-100000*s^2*uz^3*vz*kappa^5+6400000*s^2*uz*vz^3*kappa^5-87552000*s*t^5*uz^2*kappa^3-13271040000*s*t^5*vz^2*kappa^3-7680000*s*t^3*uz^3*kappa^4-491520000*s*t^3*uz*vz^2*kappa^4-50000*s*t*uz^4*kappa^5+19200000*s*t*uz^2*vz^2*kappa^5-204800000*s*t*vz^4*kappa^5+1474560000*t^6*uz*vz*kappa^3+522240000*t^4*uz^2*vz*kappa^4-32112640000*t^4*vz^3*kappa^4+6400000*t^2*uz^3*vz*kappa^5-409600000*t^2*uz*vz^3*kappa^5-4050*s^5*uz^2*vz*kappa^2-259200*s^5*vz^3*kappa^2+55350*s^4*t*uz^3*kappa^2+3542400*s^4*t*uz*vz^2*kappa^2-2246400*s^3*t^2*uz^2*vz*kappa^2-143769600*s^3*t^2*vz^3*kappa^2+468000*s^3*uz^3*vz*kappa^3+8448000*s^3*uz*vz^3*kappa^3-2246400*s^2*t^3*uz^3*kappa^2-143769600*s^2*t^3*uz*vz^2*kappa^2-216000*s^2*t*uz^4*kappa^3-29952000*s^2*t*uz^2*vz^2*kappa^3+344064000*s^2*t*vz^4*kappa^3+226713600*s*t^4*uz^2*vz*kappa^2+14509670400*s*t^4*vz^3*kappa^2+29952000*s*t^2*uz^3*vz*kappa^3+540672000*s*t^2*uz*vz^3*kappa^3-180000*s*uz^4*vz*kappa^4-7680000*s*uz^2*vz^3*kappa^4+245760000*s*vz^5*kappa^4-16588800*t^5*uz^3*kappa^2-1061683200*t^5*uz*vz^2*kappa^2-4608000*t^3*uz^4*kappa^3-737280000*t^3*uz^2*vz^2*kappa^3+59768832000*t^3*vz^4*kappa^3-60000*t*uz^5*kappa^4+7680000*t*uz^3*vz^2*kappa^4+737280000*t*uz*vz^4*kappa^4+22680*s^3*t*uz^4*kappa+2903040*s^3*t*uz^2*vz^2*kappa+92897280*s^3*t*vz^4*kappa+464400*s^2*uz^4*vz*kappa^2+15206400*s^2*uz^2*vz^3*kappa^2+14745600*s^2*vz^5*kappa^2-1451520*s*t^3*uz^4*kappa-185794560*s*t^3*uz^2*vz^2*kappa-5945425920*s*t^3*vz^4*kappa-151200*s*t*uz^5*kappa^2-41472000*s*t*uz^3*vz^2*kappa^2-147456000*s*t*uz*vz^4*kappa^2+8985600*t^2*uz^4*vz*kappa^2+678297600*t^2*uz^2*vz^3*kappa^2-53791948800*t^2*vz^5*kappa^2-72000*uz^5*vz*kappa^3-9216000*uz^3*vz^3*kappa^3-294912000*uz*vz^5*kappa^3+259200*s*uz^5*vz*kappa+15482880*s*uz^3*vz^3*kappa-70778880*s*uz*vz^5*kappa-25920*t*uz^6*kappa-14929920*t*uz^4*vz^2*kappa-460062720*t*uz^2*vz^4*kappa+24914165760*t*vz^6*kappa+62208*uz^6*vz+6635520*uz^4*vz^3+84934656*uz^2*vz^5-5435817984*vz^7;
+if (size(I)!=5) { print("R400_FAIL=GEN_COUNT"); quit; }
+int hg=1; int k;
+for (k=1;k<=5;k++) { if (homog(I[k])==0) { hg=0; } }
+if (hg==0) { print("R400_FAIL=INPUT_NOT_WEIGHTED_HOMOGENEOUS"); quit; }
+int t0=rtimer;
+list SL=satur(I,ideal(DD*kappa));
+ideal J1=SL[1];
+print("R400R2_SAT1_ITER="+string(SL[2]));
+list SL2=satur(J1,ideal(s,t));
+ideal J2=SL2[1];
+print("R400R2_SAT2_ITER="+string(SL2[2]));
+ideal SJ2=std(J2);
+poly one2=1;
+if (reduce(one2,SJ2)==0)
+{
+  print("R400R2_BASE=UNIT_AFTER_SATURATION");
+  ideal SJ1=std(J1);
+  int N=1;
+  while ((reduce(s^N,SJ1)!=0)||(reduce(t^N,SJ1)!=0))
+  { N=N+1; if (N>80) { print("R400_FAIL=NO_ST_POWER"); quit; } }
+  ideal SI=std(I);
+  int a=0;
+  while ((reduce((DD*kappa)^a*s^N,SI)!=0)||(reduce((DD*kappa)^a*t^N,SI)!=0))
+  { a=a+1; if (a>80) { print("R400_FAIL=NO_SAT_EXPONENT"); quit; } }
+  print("R400R2_CERT_A="+string(a));
+  print("R400R2_CERT_N="+string(N));
+  poly gs=(DD*kappa)^a*s^N; poly gt=(DD*kappa)^a*t^N;
+  matrix Cs=lift(I,gs); matrix Ct=lift(I,gt);
+  poly chks=gs; poly chkt=gt;
+  for (k=1;k<=5;k++) { chks=chks-Cs[k,1]*I[k]; chkt=chkt-Ct[k,1]*I[k]; }
+  if ((chks!=0)||(chkt!=0)) { print("R400_FAIL=LIFT_VERIFY"); quit; }
+  link ls=":w R2_CERT_S.txt";
+  write(ls,"R4-00-R2 certificate: (DD*kappa)^a*s^N = sum_k C[k]*X[k]");
+  write(ls,"a="+string(a)); write(ls,"N="+string(N));
+  for (k=1;k<=5;k++) { write(ls,"C"+string(k)+"="+string(Cs[k,1])); }
+  close(ls);
+  link lt=":w R2_CERT_T.txt";
+  write(lt,"R4-00-R2 certificate: (DD*kappa)^a*t^N = sum_k C[k]*X[k]");
+  write(lt,"a="+string(a)); write(lt,"N="+string(N));
+  for (k=1;k<=5;k++) { write(lt,"C"+string(k)+"="+string(Ct[k,1])); }
+  close(lt);
+  print("R400R2_RESULT=EMPTY_WITH_LIFT_CERTIFICATE");
+}
+else
+{
+  print("R400R2_BASE=NONUNIT_SURVIVOR");
+  print("R400R2_DIM="+string(dim(SJ2)));
+  list PD=primdecGTZ(J2);
+  print("R400R2_COMPONENTS="+string(size(PD)));
+  link lc=":w R2_COMPONENTS.txt";
+  int j;
+  for (j=1;j<=size(PD);j++)
+  {
+    write(lc,"COMPONENT "+string(j));
+    write(lc,"PRIMARY="+string(PD[j][1]));
+    write(lc,"PRIME="+string(PD[j][2]));
+    ideal SP=std(PD[j][2]);
+    write(lc,"dim="+string(dim(SP)));
+    write(lc,"D_in_prime="+string(reduce(DD,SP)==0));
+    write(lc,"kappa_in_prime="+string(reduce(kappa,SP)==0));
+    write(lc,"s_in_prime="+string(reduce(s,SP)==0));
+    write(lc,"t_in_prime="+string(reduce(t,SP)==0));
+  }
+  close(lc);
+  print("R400R2_RESULT=SURVIVING_BASE_COMPONENTS_STAGE2_REQUIRED");
+}
+print("R400R2_RTIMER_MS="+string(rtimer-t0));
+print("R400R2_DONE=1");
+quit;

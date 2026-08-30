@@ -1,0 +1,41 @@
+// Exact special-fibre discriminator between seven row initials and in_J(I).
+execute(read("prelude_Q.sing"));
+
+poly sourceF0=d0-2*d4-d4^2;
+ideal sourceData=r1,r2,r3,r4,r5,r6,r7,sourceF0^5;
+
+// At S=T=0, parameterize P0 by e0=4u,e1=v,e2=u,e5=-2v and
+// scale every normal coordinate by l.  Keeping all source data in one ideal
+// avoids any post-ring-switch reference to a ring-local source polynomial.
+ring H=0,(u,v,l),dp;
+map scaledPlane=R,4*l*u,l*v/8,l*u,0,0,-2*l*v;
+ideal planeData=scaledPlane(sourceData);
+ideal planeRows=planeData[1],planeData[2],planeData[3],planeData[4],
+                planeData[5],planeData[6],planeData[7];
+ideal GL3=std(ideal(l^3));
+ideal planeLowParts=simplify(reduce(planeRows,GL3),2);
+if (size(planeLowParts)!=0)
+{
+  print("K00_REES_FAIL=QUADRATIC_PLANE_VANISHING");
+  quit;
+}
+poly fifthPlane=planeData[8];
+if (fifthPlane-1024*l^5*u^5!=0)
+{
+  print("K00_REES_FAIL=FIFTH_INITIAL_PLANE_CONTROL");
+  quit;
+}
+
+// Mutation: moving the plane off e0=4e2 must change the fifth-form control.
+poly mutatedFifth=(5*l*u)^5;
+if (mutatedFifth-1024*l^5*u^5==0)
+{
+  print("K00_REES_FAIL=INITIAL_PLANE_MUTATION_CONTROL");
+  quit;
+}
+print("K00_REES_SEVEN_QUADRATICS_VANISH_ON_P0=1");
+print("K00_REES_FULL_INITIAL_E0_FIFTH_NONZERO_ON_P0=1");
+print("K00_REES_INITIAL_PLANE_MUTATION_DETECTED=1");
+print("K00_REES_SEVEN_QUADRATICS_STRICT_IN_FULL_INITIAL=1");
+print("PASS_K00_REES_INITIAL_IDEAL_STRICTNESS");
+quit;

@@ -1,0 +1,62 @@
+{
+    "Volumes": [
+        {
+            "AvailabilityZoneId": "use1-az6",
+            "Iops": 3000,
+            "VolumeType": "gp3",
+            "MultiAttachEnabled": false,
+            "Throughput": 125,
+            "Operator": {
+                "Managed": false,
+                "HiddenByDefault": false
+            },
+            "VolumeId": "vol-0cebacf798eef9350",
+            "Size": 150,
+            "SnapshotId": "snap-0b0be23c49c254dd6",
+            "AvailabilityZone": "us-east-1a",
+            "State": "in-use",
+            "CreateTime": "2026-08-13T07:08:04.252000+00:00",
+            "Attachments": [
+                {
+                    "DeleteOnTermination": true,
+                    "EbsCardIndex": 0,
+                    "VolumeId": "vol-0cebacf798eef9350",
+                    "InstanceId": "i-010201a5da47795c4",
+                    "Device": "/dev/sda1",
+                    "State": "attached",
+                    "AttachTime": "2026-08-13T07:08:04+00:00"
+                }
+            ],
+            "Encrypted": false
+        },
+        {
+            "AvailabilityZoneId": "use1-az6",
+            "Iops": 3000,
+            "VolumeType": "gp3",
+            "MultiAttachEnabled": false,
+            "Throughput": 125,
+            "Operator": {
+                "Managed": false,
+                "HiddenByDefault": false
+            },
+            "VolumeId": "vol-0423e17152062425a",
+            "Size": 200,
+            "SnapshotId": "snap-0b0be23c49c254dd6",
+            "AvailabilityZone": "us-east-1a",
+            "State": "in-use",
+            "CreateTime": "2026-08-15T01:28:59.971000+00:00",
+            "Attachments": [
+                {
+                    "DeleteOnTermination": true,
+                    "EbsCardIndex": 0,
+                    "VolumeId": "vol-0423e17152062425a",
+                    "InstanceId": "i-0ece0b9a3b4a7512f",
+                    "Device": "/dev/sda1",
+                    "State": "attached",
+                    "AttachTime": "2026-08-15T01:28:59+00:00"
+                }
+            ],
+            "Encrypted": false
+        }
+    ]
+}

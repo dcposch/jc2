@@ -1,0 +1,119 @@
+// R4-00-R1-BASE-DECIDE (epsM) / Singular exact Q(i) driver v1
+// ring map: (s,t,kappa,q,A8,B8), weights (4,4,2,6,8,8), over Q(ii), ii^2=-1;
+// branch uz=(8*eps*ii*q-5*kappa*s)/6, vz=(5*kappa*t-q)/6 substituted.
+// Generators: c21'@14, row1@14 line, c31@16, row4@16, row6@18, D51@18,
+// D71@18 (raw grade-18 forms; L18,L51,L71 are unimodular combinations of
+// these with the grade-16 conics -- same ideal).
+// Constructible cell: V(gens) with q!=0, kappa!=0, (s,t)!=(0,0).
+// EMPTY: unit saturation + lift certificates (q*kappa)^a*s^N, (q*kappa)^a*t^N.
+// NONUNIT: surviving components; STAGE-2 completion required.
+LIB "primdec.lib";
+ring r=(0,ii),(s,t,kappa,q,A8,B8),wp(4,4,2,6,8,8);
+minpoly=ii^2+1;
+// version-independent saturation: stabilized quotient chain.
+// satur(I,J) returns list(I:J^infinity as a std ideal, iteration count e);
+// every g in the saturation satisfies g*J^e subset I.
+proc satur(ideal II, ideal JJ)
+{
+  ideal cur=std(II);
+  ideal nxt;
+  int e;
+  while (1)
+  {
+    nxt=std(quotient(cur,JJ));
+    if (size(reduce(nxt,cur))==0) { return(list(cur,e)); }
+    cur=nxt;
+    e=e+1;
+  }
+}
+// fail-closed machinery controls (satur / lift / reduce semantics)
+poly one=1;
+list c1=satur(ideal(var(1)^2),ideal(var(1)));
+if (reduce(one,std(c1[1]))!=0) { print("R400_FAIL=CONTROL_SAT_UNIT"); quit; }
+if (c1[2]<1) { print("R400_FAIL=CONTROL_SAT_EXPONENT"); quit; }
+list c2=satur(ideal(var(1)*var(2)),ideal(var(2)));
+if (reduce(one,std(c2[1]))==0) { print("R400_FAIL=CONTROL_SAT_NONUNIT"); quit; }
+if (reduce(var(1),std(c2[1]))!=0) { print("R400_FAIL=CONTROL_SAT_VALUE"); quit; }
+ideal cg=var(1),var(2);
+poly ct=3*var(1)+5*var(2);
+matrix cl=lift(cg,ct);
+if (ct-cg[1]*cl[1,1]-cg[2]*cl[2,1]!=0) { print("R400_FAIL=CONTROL_LIFT"); quit; }
+print("R400_MACHINERY_CONTROLS=PASS");
+
+ideal I=
+  (50)*s^2*kappa^3+(800*ii)*s*t*kappa^3+(-3200)*t^2*kappa^3+(9)*s^3*kappa+(216*ii)*s^2*t*kappa+(-1728)*s*t^2*kappa+(-4608*ii)*t^3*kappa,
+  (500)*s*t*kappa^3+(135)*s^2*t*kappa+(-100)*s*kappa^2*q+(-2880)*t^3*kappa+(800*ii)*t*kappa^2*q+(-18)*s^2*q+(288*ii)*s*t*q+(1152)*t^2*q+(-160*ii)*kappa*q^2+(-144*ii)*q*A8+(18)*q*B8,
+  (75)*s^2*t*kappa^2+(-1600)*t^3*kappa^2+(18)*s^3*t+(5)*s^2*kappa*q+(-1152)*s*t^3+(-80*ii)*s*t*kappa*q+(-50)*s*kappa^2*A8+(-320)*t^2*kappa*q+(-50)*t*kappa^2*B8+(-9)*s^2*A8+(-18)*s*t*B8+(32*ii)*s*q^2+(576)*t^2*A8+(256)*t*q^2+(-80*ii)*kappa*q*A8+(10)*kappa*q*B8+(9)*A8*B8,
+  (50)*s^3*kappa^2+(-9600)*s*t^2*kappa^2+(9)*s^4+(-3456)*s^2*t^2+(-80*ii)*s^2*kappa*q+(-1280)*s*t*kappa*q+(-100)*s*kappa^2*B8+(36864)*t^4+(5120*ii)*t^2*kappa*q+(6400)*t*kappa^2*A8+(-18)*s^2*B8+(2304)*s*t*A8+(512)*s*q^2+(1152)*t^2*B8+(-4096*ii)*t*q^2+(-1280)*kappa*q*A8+(-160*ii)*kappa*q*B8+(-576)*A8^2+(9)*B8^2,
+  (4000)*s^3*kappa^3+(-768000)*s*t^2*kappa^3+(675)*s^4*kappa+(-259200)*s^2*t^2*kappa+(9600*ii)*s^2*kappa^2*q+(153600)*s*t*kappa^2*q+(2764800)*t^4*kappa+(-614400*ii)*t^2*kappa^2*q+(1728*ii)*s^3*q+(41472)*s^2*t*q+(-540)*s^2*kappa*B8+(-331776*ii)*s*t^2*q+(69120)*s*t*kappa*A8+(-884736)*t^3*q+(34560)*t^2*kappa*B8+(-13824)*s*q*A8+(-1728*ii)*s*q*B8+(110592*ii)*t*q*A8+(-13824)*t*q*B8+(34560)*kappa*A8^2+(-540)*kappa*B8^2+(32768*ii)*q^3,
+  (7500)*s^2*t*kappa^3+(-128000)*t^3*kappa^3+(1755)*s^3*t*kappa+(-900)*s^2*kappa^2*q+(-95040)*s*t^3*kappa+(12000*ii)*s*t*kappa^2*q+(38400)*t^2*kappa^2*q+(-162)*s^3*q+(3456*ii)*s^2*t*q+(-270)*s^2*kappa*A8+(24192)*s*t^2*q+(-540)*s*t*kappa*B8+(-480*ii)*s*kappa*q^2+(-55296*ii)*t^3*q+(17280)*t^2*kappa*A8+(-1296*ii)*s*q*A8+(162)*s*q*B8+(-6912)*t*q*A8+(-864*ii)*t*q*B8+(-540)*kappa*A8*B8+(-2048)*q^3,
+  (4500)*s^2*t*kappa^3+(-128000)*t^3*kappa^3+(945)*s^3*t*kappa+(-300)*s^2*kappa^2*q+(-77760)*s*t^3*kappa+(7200*ii)*s*t*kappa^2*q+(38400)*t^2*kappa^2*q+(-54)*s^3*q+(1728*ii)*s^2*t*q+(-270)*s^2*kappa*A8+(17280)*s*t^2*q+(-540)*s*t*kappa*B8+(480*ii)*s*kappa*q^2+(-55296*ii)*t^3*q+(17280)*t^2*kappa*A8+(-432*ii)*s*q*A8+(54)*s*q*B8+(-6912)*t*q*A8+(-864*ii)*t*q*B8+(-540)*kappa*A8*B8+(-2048)*q^3;
+if (size(I)!=7) { print("R400_FAIL=GEN_COUNT"); quit; }
+int hg=1; int k;
+for (k=1;k<=7;k++) { if (homog(I[k])==0) { hg=0; } }
+if (hg==0) { print("R400_FAIL=INPUT_NOT_WEIGHTED_HOMOGENEOUS"); quit; }
+int t0=rtimer;
+list SL=satur(I,ideal(q*kappa));
+ideal J1=SL[1];
+print("R400R1_SAT1_ITER="+string(SL[2]));
+list SL2=satur(J1,ideal(s,t));
+ideal J2=SL2[1];
+print("R400R1_SAT2_ITER="+string(SL2[2]));
+ideal SJ2=std(J2);
+poly one2=1;
+if (reduce(one2,SJ2)==0)
+{
+  print("R400R1_BASE=UNIT_AFTER_SATURATION");
+  ideal SJ1=std(J1);
+  int N=1;
+  while ((reduce(s^N,SJ1)!=0)||(reduce(t^N,SJ1)!=0))
+  { N=N+1; if (N>80) { print("R400_FAIL=NO_ST_POWER"); quit; } }
+  ideal SI=std(I);
+  int a=0;
+  while ((reduce((q*kappa)^a*s^N,SI)!=0)||(reduce((q*kappa)^a*t^N,SI)!=0))
+  { a=a+1; if (a>80) { print("R400_FAIL=NO_SAT_EXPONENT"); quit; } }
+  print("R400R1_CERT_A="+string(a));
+  print("R400R1_CERT_N="+string(N));
+  poly gs=(q*kappa)^a*s^N; poly gt=(q*kappa)^a*t^N;
+  matrix Cs=lift(I,gs); matrix Ct=lift(I,gt);
+  poly chks=gs; poly chkt=gt;
+  for (k=1;k<=7;k++) { chks=chks-Cs[k,1]*I[k]; chkt=chkt-Ct[k,1]*I[k]; }
+  if ((chks!=0)||(chkt!=0)) { print("R400_FAIL=LIFT_VERIFY"); quit; }
+  link ls=":w R1_epsM_CERT_S.txt";
+  write(ls,"R4-00-R1 epsM certificate: (q*kappa)^a*s^N = sum C[k]*gen[k]");
+  write(ls,"a="+string(a)); write(ls,"N="+string(N));
+  for (k=1;k<=7;k++) { write(ls,"C"+string(k)+"="+string(Cs[k,1])); }
+  close(ls);
+  link lt=":w R1_epsM_CERT_T.txt";
+  write(lt,"R4-00-R1 epsM certificate: (q*kappa)^a*t^N = sum C[k]*gen[k]");
+  write(lt,"a="+string(a)); write(lt,"N="+string(N));
+  for (k=1;k<=7;k++) { write(lt,"C"+string(k)+"="+string(Ct[k,1])); }
+  close(lt);
+  print("R400R1_RESULT=EMPTY_WITH_LIFT_CERTIFICATE");
+}
+else
+{
+  print("R400R1_BASE=NONUNIT_SURVIVOR");
+  print("R400R1_DIM="+string(dim(SJ2)));
+  list PD=primdecGTZ(J2);
+  print("R400R1_COMPONENTS="+string(size(PD)));
+  link lc=":w R1_epsM_COMPONENTS.txt";
+  int j;
+  for (j=1;j<=size(PD);j++)
+  {
+    write(lc,"COMPONENT "+string(j));
+    write(lc,"PRIMARY="+string(PD[j][1]));
+    write(lc,"PRIME="+string(PD[j][2]));
+    ideal SP=std(PD[j][2]);
+    write(lc,"dim="+string(dim(SP)));
+    write(lc,"q_in_prime="+string(reduce(q,SP)==0));
+    write(lc,"kappa_in_prime="+string(reduce(kappa,SP)==0));
+    write(lc,"s_in_prime="+string(reduce(s,SP)==0));
+    write(lc,"t_in_prime="+string(reduce(t,SP)==0));
+  }
+  close(lc);
+  print("R400R1_RESULT=SURVIVING_BASE_COMPONENTS_STAGE2_REQUIRED");
+}
+print("R400R1_RTIMER_MS="+string(rtimer-t0));
+print("R400R1_DONE=1");
+quit;

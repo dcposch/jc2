@@ -1,0 +1,63 @@
+{
+  "argv_count": 3,
+  "argv_sha256": "b864b61cc0aa53791242fed42e64bac23f54326a2c9112da1449c2ffb7d05150",
+  "caps": {
+    "cpu_seconds": 1800,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 34359738368,
+    "rss_sample_seconds": 0.1,
+    "term_grace_seconds": 5.0,
+    "wall_seconds": 1800.0
+  },
+  "child_exit_code": 0,
+  "child_returncode": 0,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/k00_rees_sandwich_triangular_replay_20260829",
+  "enforcement": {
+    "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/Singular",
+  "identity_checks": [],
+  "invocation_cwd": "/home/ubuntu/k00_rees_sandwich_triangular_replay_20260829",
+  "max_observed_group_rss_bytes": 10006528,
+  "pgid": 46808,
+  "pid": 46808,
+  "resource": null,
+  "runner_exit_code": 0,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=3dca2ad4-9cbb-48f9-9c62-02d37a90bd19;start_ticks=12559328",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "NORMAL_EXIT",
+  "stderr": {
+    "bytes": 0,
+    "path": "/home/ubuntu/k00_rees_sandwich_triangular_replay_20260829/K00-REES-TRIANGULAR-EXACT-REPLAY.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 2444,
+    "path": "/home/ubuntu/k00_rees_sandwich_triangular_replay_20260829/K00-REES-TRIANGULAR-EXACT-REPLAY.stdout",
+    "sha256": "8780928fdb11349725923a4234781603c74ad7b0898eef19a5d07dd4207386aa"
+  },
+  "telemetry_path": "/home/ubuntu/k00_rees_sandwich_triangular_replay_20260829/K00-REES-TRIANGULAR-EXACT-REPLAY.caprun.json",
+  "termination": {
+    "cleanup_complete": null,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [],
+    "kill_sent": false,
+    "leader_reaped": false,
+    "reason": null,
+    "term_sent": false
+  },
+  "utc_end": "2026-08-30T00:22:45.258229Z",
+  "utc_start": "2026-08-30T00:22:45.143570Z",
+  "wall_elapsed_seconds": 0.114663619
+}

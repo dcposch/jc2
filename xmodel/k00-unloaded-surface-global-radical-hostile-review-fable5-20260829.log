@@ -1,0 +1,15 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review complete. Deliverable written to `xmodel/k00-unloaded-surface-global-radical-hostile-review-fable5-20260829.md`.
+
+**Verdict: `CONFIRM_WITH_CORRECTIONS`, promotion recommended.** The theorem `sqrt(I) = J` in `Q[d0..d5]` survives every required attack, and I re-proved it end-to-end from the frozen bytes in pure Python-stdlib exact arithmetic (<10 s total) — no Singular, no `liftstd` path, no `minAssGTZ`.
+
+What each attack found:
+
+1. **Custody** — all pins verified: report body seal (5661 bytes, `41d6460a...`), all 36 custody entries including the 28 multiplier files, every LAUNCH pin, and the provenance chain (the packet prelude is byte-identical to the V14R1 source). No zero-byte files; markers come from the quiet Singular processes themselves behind fail-closed branches; V1/V2 are typed non-verdicts used nowhere.
+2. **Two-containment proof** — independently re-proved, CAS-free. A constructive lemma shows `ker(ψ) = J` for the graph substitution ψ, which gives `I ⊆ J` (all seven `ψ(r_i) = 0` exactly) and `J` prime of dimension 2 (`R/J ≅ Q[d3,d4]`) in one stroke, with no decomposition routine. All four quintic identities expand to exactly zero against the original seven-row presentation from the pinned multiplier bytes.
+3. **V1–V4 ledger** — V3's defect verified byte-exactly (each `.matrix` file equals the V4 first entry minus its newline), and the V3→V4 diff is serialization-only, so V4 plus the fresh replay is a genuine repair. My own stronger mutations (interior-coefficient, row, wrong-exponent, cross-wired certificate, input `16→15`) were all detected.
+4. **Exponent five** — the certificate proves sufficiency; and I upgraded the minimality claim from producer-screen to **proved**: an exact depth-4 graded truncation system is infeasible for all four generators, so `f_a^4 ∉ I + m^5 ⊇ I`, and with monotonicity, first power is exactly 5.
+5. **Functor-of-points** — fields/reduced-algebras/formal-series scope all correct, and the reduced hypothesis is provably necessary (over `Q[d]/m²` all rows vanish but no `f_a` does), so the loaded-source firewall is sharp, not just cautious.
+6. **minAssGTZ** — used only as corroboration; I identified its prime with `J` via eight explicit two-way combination identities.
+
+Corrections are wording-only: the sealed body's claim that the replay "uses no standard-basis or lifting computation" is not literal (it calls `std(J)`/`std(BAD)` in preflight; only the identity checks are GB-free), and the shipped certificate-mutation control is weak (equivalent to `r1 ≠ 0`) though honestly described. Neither affects the mathematics; no rerun needed.

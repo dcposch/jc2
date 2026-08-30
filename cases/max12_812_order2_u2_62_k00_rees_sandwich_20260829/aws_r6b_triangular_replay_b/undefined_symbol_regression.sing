@@ -1,0 +1,6 @@
+// Planted regression: Singular normally returns status zero despite this
+// undefined-symbol diagnostic and can continue to a fake PASS marker.
+ring REGRESSION=0,(x),dp;
+poly planted=definitely_undefined_k00_symbol^2;
+print("PASS_K00_REES_PLANTED_UNDEFINED_SYMBOL");
+quit;

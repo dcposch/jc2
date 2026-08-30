@@ -1,0 +1,25 @@
+// Desk-scale discriminator only: specialize the exact unloaded rows to the
+// tangential base point S=T=0 in polynomial normal coordinates.
+<"cases/max12_812_order2_u2_62_k00_unloaded_surface_local_v1_20260829/aws_r6b_global_power_v4/prelude_Q.sing";
+
+ring E=0,(e0,e1,e2,e5),dp;
+map normal_base=R,e0,e1/8,e2,0,0,e5;
+ideal I0=normal_base(r1),normal_base(r2),normal_base(r3),normal_base(r4),
+         normal_base(r5),normal_base(r6),normal_base(r7);
+ideal G=std(I0);
+poly socle_candidate=e0^4*e1^4*e2^4*e5^4;
+poly nf16=reduce(socle_candidate,G);
+
+print("K00_REES_FIBRE_GB_SIZE="+string(size(G)));
+print("K00_REES_FIBRE_DIM="+string(dim(G)));
+print("K00_REES_FIBRE_VDIM="+string(vdim(G)));
+print("K00_REES_FIBRE_NF16="+string(nf16));
+if (nf16==0)
+{
+  print("K00_REES_FIBRE_DEG16_SURVIVOR=NO");
+}
+else
+{
+  print("K00_REES_FIBRE_DEG16_SURVIVOR=YES");
+}
+quit;

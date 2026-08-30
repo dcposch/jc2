@@ -1,0 +1,41 @@
+K00_REES_TRIANGULAR_COORDINATES_REPLAYED=4
+K00_REES_TRIANGULAR_MAP_MUTATION_DETECTED=1
+   ? error occurred in or before search_rees_sandwich.sing line 37: `ideal IN=normalBundle[5],normalBundle[6],normalBundle[7],normalBundle[8],`
+   ? wrong type declaration. type 'help ideal;'
+   ? last reserved name was `IN`
+   skipping text from `normalBundle` error at token `]`
+   ? error occurred in or before search_rees_sandwich.sing line 40: `ideal GN=liftstd(IN,transformation);`
+   ? expected ideal-expression. type 'help ideal;'
+   ? last reserved name was `IN`
+   skipping text from `transformation` error at token `)`
+   ? error occurred in or before search_rees_sandwich.sing line 41: `matrix basisReplay=matrix(IN)*transformation-matrix(GN);`
+   ? expected matrix-expression. type 'help matrix;'
+   ? last reserved name was `IN`
+   skipping text from `*` error at token `)`
+   ? `basisReplay` is not defined
+   ? error occurred in or before search_rees_sandwich.sing line 44: `forif (!(column<=ncols(basisReplay))) break;`
+   ? error occurred in or before search_rees_sandwich.sing line 56: `ideal sourceRemainders=simplify(reduce(IN,GN),2);`
+   ? expected ideal-expression. type 'help ideal;'
+   ? last reserved name was `IN`
+   skipping text from `GN` error at token `)`
+   ? `sourceRemainders` is not defined
+   ? error occurred in or before search_rees_sandwich.sing line 64: `print("K00_REES_TRIANGULAR_BASIS_SIZE="+string(size(GN)));`
+   ? wrong type declaration. type 'help string;'
+K00_REES_TRIANGULAR_BASIS_REPLAY=1
+   ? `GN` is not defined
+   ? error occurred in or before search_rees_sandwich.sing line 76: `ideal fifthRemainders=simplify(reduce(fifthPower,GN),2);`
+   ? expected ideal-expression. type 'help ideal;'
+   ? `fifthRemainders` is not defined
+   ? error occurred in or before search_rees_sandwich.sing line 85: `poly witness=e5^4;`
+   ? wrong type declaration. type 'help poly;'
+   ? `witness` is not defined
+   ? error occurred in or before search_rees_sandwich.sing line 86: `poly witnessNormalForm=reduce(witness,GN);`
+   ? expected poly-expression. type 'help poly;'
+   ? `witnessNormalForm` is not defined
+   ? error occurred in or before search_rees_sandwich.sing line 94: `write("WITNESS_MONOMIAL.poly",witness);`
+K00_REES_TRIANGULAR_J5_GENERATORS=56
+K00_REES_TRIANGULAR_J5_ALL_IN_I=1
+K00_REES_WITNESS_DEGREE=4
+K00_REES_WITNESS_EXPONENTS=0,0,0,4
+K00_REES_EXACT_SMALLEST_N=5
+PASS_K00_REES_SANDWICH_EXACT_MINIMAL_N

@@ -1,0 +1,80 @@
+{
+  "argv_count": 6,
+  "argv_sha256": "34524b5f165a98f3f97aee39616f80bcd5654263b6e42e636665079e74a6f1fe",
+  "caps": {
+    "cpu_seconds": null,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 137438953472,
+    "rss_sample_seconds": 0.1,
+    "term_grace_seconds": 15.0,
+    "wall_seconds": 43200.0
+  },
+  "child_exit_code": null,
+  "child_returncode": -15,
+  "child_signal": 15,
+  "cwd": "/home/ubuntu/r400_20260829/jc2",
+  "enforcement": {
+    "cpu": "disabled",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "python3",
+  "identity_checks": [
+    {
+      "observed_pgid": 379500,
+      "observed_pid": 379500,
+      "observed_start_identity": "boot=71bf27c9-5339-4e5e-b911-bca25340d281;start_ticks=43377533",
+      "result": "MATCH",
+      "stage": "before-term",
+      "utc": "2026-08-29T23:21:13.683766Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 15,
+      "stage": "before-term-send",
+      "utc": "2026-08-29T23:21:13.683800Z"
+    }
+  ],
+  "invocation_cwd": "/home/ubuntu/r400_20260829/jc2",
+  "max_observed_group_rss_bytes": 21939331072,
+  "pgid": 379500,
+  "pid": 379500,
+  "resource": null,
+  "runner_exit_code": 143,
+  "runner_signal": 15,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=71bf27c9-5339-4e5e-b911-bca25340d281;start_ticks=43377533",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "SIGNAL",
+  "stderr": {
+    "bytes": 0,
+    "path": "/home/ubuntu/r400_20260829/jobs/r1_minus_base_v1/WORKER.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 0,
+    "path": "/home/ubuntu/r400_20260829/jobs/r1_minus_base_v1/WORKER.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "telemetry_path": "/home/ubuntu/r400_20260829/jobs/r1_minus_base_v1/WORKER.caprun.json",
+  "termination": {
+    "cleanup_complete": true,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [
+      379500
+    ],
+    "kill_sent": false,
+    "leader_reaped": true,
+    "reason": "forwarded_signal",
+    "term_sent": true
+  },
+  "utc_end": "2026-08-29T23:21:14.606828Z",
+  "utc_start": "2026-08-29T22:27:30.423654Z",
+  "wall_elapsed_seconds": 3224.183177563
+}
