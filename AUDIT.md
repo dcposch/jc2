@@ -5,6 +5,35 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **SMOOTH PROJECTIVELY FINITE REDUCED-SQUAREFREE QUADRATIC STRATUM
+> CLOSED (2026-08-30 05:32Z).** Fresh GPT-5.5 xhigh review body
+> `5e764654...` (sealed full file `444e813d...`) returns
+> `CONFIRM_WITH_CORRECTIONS` after independently reconstructing the relative
+> ramification class, ample connectedness, resolution graphs, F5 Picard
+> marking, contracted-curve classes, carrier equations, every labelled finite
+> case, and both contradictions. Transactional binding integration
+> `c9871c92ce8748fd934dc57061f667b49952a1aba39aee43eb3af7b0aadbf392`
+> (8,709-byte body `919a0247...`, manifest `04a74d14...`) promotes, under the
+> exact smooth irreducible class-`2A+3B`, generically finite, finite-near-
+> reduced-squarefree-`H`, dominant-`A2` rational-forest/unit hypotheses,
+>
+> ```text
+> Supp(R_pi)_red is connected because R_pi~2A+B is ample;
+> F1,F2,F4,F7: two physical attachments force a cycle;
+> F5: the only lattice orbit is R_pi=D_3+D_5+2Z,
+>     with D_3+Z=H, and violates both localization injection and the forest;
+> hence the declared smooth finite reduced-squarefree quadratic stratum is empty.
+> ```
+>
+> Binding corrections distinguish the producer's authorship basis `1efd7a76...`
+> from its publication/review basis `78da50bd...`, phrase the graph input as
+> connected reduced support, impose `D_3.D_5=1` only as a necessary survivor
+> condition, and reserve `D_3,D_5` for the weight-three transverse and
+> weight-five tangent branches. `F3,F6` are outside finiteness and `F8,F9`
+> have no rational-tree refinement. Nonreduced infinity, singular incidence,
+> affine coefficient common zeros, degree drops, basis minimization, general
+> quadratic closure, maps, counterexamples, and JC2 remain unproved.
+
 > **F5 LOCAL DIFFERENT AND REDUCIBLE-RAMIFICATION CONSEQUENCE PROMOTED
 > (2026-08-30 05:06Z).** Opus review body `5a77b098...` (sealed full file
 > `7e335e1a...`) returns `CONFIRM_WITH_CORRECTIONS` after independently

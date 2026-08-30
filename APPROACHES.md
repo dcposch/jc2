@@ -7,6 +7,27 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 05:32Z — smooth finite quadratic stratum closed)
+
+- **Bank the first full nonlinear quadratic stratum closure.** Different-model
+  review now eliminates every reduced rational-forest infinity type for a
+  smooth irreducible class-`2A+3B` incidence that is finite near infinity:
+  ample connected ramification kills `F1,F2,F4,F7`, and the exact F5 `3+5`
+  split plus rank-eleven component lattice kills `F5`. `F3,F6` are outside
+  finiteness; `F8,F9` have no rational-tree refinement. Do not keep running
+  coefficient realization or larger lattice searches inside this closed cell.
+- **Move the quadratic front to the excluded boundary of the theorem.** Rank
+  projective/affine coefficient basepoints and nonfiniteness first, then
+  singular incidence surfaces, source/fibre/target degree drops, and finally
+  basis minimization. Seek exact geometric reductions before any elimination;
+  heavy or uncertain CAS remains AWS-only after a reviewed packet.
+- **Preserve the fixed-basis firewall and independent fronts.** This theorem
+  does not show that every quadratic presentation can be placed in its scope.
+  Nonreduced infinity and affine common-zero cases remain separately typed.
+  K00 occurrence/truncation images, pair-square ancestry, intrinsic
+  `DISC8-INDEX`, source-theorem audits, and counterexample searches continue
+  independently; no map or JC2 conclusion follows.
+
 ## Superseding strategy overlay (2026-08-30 05:06Z — F5 local split promoted)
 
 - **Irreducible ramification is closed in the smooth finite quadratic
