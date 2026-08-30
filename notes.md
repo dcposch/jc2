@@ -14886,3 +14886,23 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - All audited actual proper-block closures remain valid through their
   everywhere-defined etale `g1`. Stop forest-interface review. The original
   failed/no-report attempt remains custody history only.
+
+## 2026-08-30 14:01Z PROOF EVENT — SECOND HALPHEN ROW PROVISIONALLY CLOSED
+
+- Producer `9b232811...`/body `ac96f638...`, manifest `c5936d24...`, proves
+  that exact level one at the triple fibre is already the insoluble minimal
+  floor. CFS Lemma 5.8 then forces `H=y^3`, `q2=0`, `C2!=0`, and the exact
+  `x->y->z->x` line-move cycle.
+- Weights `(2,1,3)` extract
+  `x^3+t(y^3+q1*x*y)+C2*t^2` in `P(2,1,3)`. Its curve avoids both quotient
+  points. The Weierstrass cubic has discriminant
+  `-16*C2*(q1^3+27*C2)`; the open stratum is elliptic, while equality gives an
+  irreducible ordinary node whose explicit `uv+r^n` resolution creates a
+  boundary cycle.
+- At an affine target point, `F(t;0,0,1)=t^2(C2+C3*t)` supplies only a local
+  degree-two Weierstrass factor. Under actual proper-block occurrence this is
+  the normal `Y` germ, missed by etale `g1`; the reviewed morphic forest gate
+  gives the contradiction. Replay `204acc29...` returns the same 547 bytes
+  under ordinary/`-O`/`-OO` (`d3a35f87...`) and rejects its mutation.
+- This provisionally closes `m=3,T=t0+t1`, not abstract global occurrence.
+  A GPT-5.5 hostile review prompt is frozen. Both sectioned D3 rows remain.

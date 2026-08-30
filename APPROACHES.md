@@ -24,6 +24,14 @@ later correction and live-overlay sections cite post-survey campaign evidence.
   to a genus-four curve; hence this specific surface also fails the actual
   morphic block interface. Opus review of the control is frozen and remains
   nonblocking.
+- **Treat the two-support index-three Halphen row as independently review-
+  gated empty.** Exact level one at the triple fibre is already the insoluble
+  minimal floor, forcing the CFS cycle `x^3->y^3->C2*z^3->x^3`. Producer
+  `9b232811...` extracts the universal `(2,1,3)` face
+  `x^3+t(y^3+q1*x*y)+C2*t^2`, `C2!=0`. Its exceptional curve is elliptic off
+  `q1^3+27C2=0` and irreducible nodal with a resolved cycle on equality. This
+  provisionally closes `m=3,T=t0+t1` only at actual morphic-block occurrence;
+  GPT-5.5 hostile review is frozen.
 - **Use rational forests only through the actual morphic first leg.** The old
   strengthening from an everywhere-defined dominant morphism to an arbitrary
   rational map is false: `P2` minus a smooth cubic is rationally dominated by
@@ -41,8 +49,8 @@ later correction and live-overlay sections cite post-survey campaign evidence.
   basis/frame existence, nonreduced infinity, nonfinite/basepoint cases and
   degree drop.
 - **Keep the portfolio asynchronous and compute-light.** The weighted review,
-  forest-correction review and other lanes do not block work on the other
-  three D3 rows, the presentation-selector/basis problem, K00 occurrence, or
+  forest-correction review and other lanes do not block work on the two
+  sectioned D3 rows, the presentation-selector/basis problem, K00 occurrence, or
   the proper-block Euler ledger. No heavy computation is licensed locally;
   any growing CAS packet moves to AWS. Web backstop remains
   `2026-08-31T03:40Z` absent significant external news.

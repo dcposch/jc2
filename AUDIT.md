@@ -53,6 +53,19 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > morphic first-leg boundary test. This control is provisional under Opus
 > review and is not a universal row theorem.
 >
+> **D3 TWO-SUPPORT HALPHEN ROW PROVISIONALLY EMPTY
+> (2026-08-30 14:01Z).** Exact producer
+> `9b232811376194277d4916bc7e42216740c9b9a80430800b1fb6ffba0cf91218`
+> (body `ac96f638...`, manifest `c5936d24...`) uses level-one minimal
+> insolubility to force the complete CFS line cycle and `(2,1,3)` exceptional
+> face. For every parameter it supplies boundary invariant one: smooth
+> elliptic generically, irreducible rational nodal with a resolved graph cycle
+> on `q1^3+27C2=0`. The order-two Weierstrass factor identifies only the local
+> normal incidence; actual-block occurrence and the everywhere-defined etale
+> first leg then give the contradiction. GPT-5.5 hostile review is frozen.
+> No abstract global two-support surface, other D3 row, block, map, or JC2
+> conclusion is claimed.
+>
 > **FIXED-PRESENTATION q=6 CLOSURE PROMOTED
 > (2026-08-30 13:31Z).** Opus review sealed full `dfbd8c4c...`/raw body
 > `43660b5d...` returns `CONFIRM_WITH_CORRECTIONS` after independently

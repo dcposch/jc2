@@ -7,6 +7,17 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **TWO-SUPPORT HALPHEN ROW PROVISIONALLY EMPTY (14:01Z).** Exact producer
+> `9b232811...`/body `ac96f638...`, manifest `c5936d24...`, shows that level
+> one at the triple fibre equals the insoluble minimal floor and forces
+> `x^3->y^3->C2*z^3->x^3`, `C2!=0`. The universal `(2,1,3)` exceptional
+> curve has discriminant `-16*C2*(q1^3+27*C2)`: it is smooth elliptic off the
+> equality locus and irreducible nodal-rational with a resolved cycle on it.
+> Thus `m=3,T=t0+t1` is empty conditional on actual normal morphic-block
+> occurrence. Replay `204acc29...` is optimization-stable and mutation-safe;
+> GPT-5.5 review is frozen. The local control `x^3+t*y^3+t^2*z^3` survives,
+> so no abstract global occurrence, map, or JC2 result is inferred.
+>
 > **D3 LOCAL GATES PROMOTED; THE ONE-POINT HALPHEN ROW IS PROVISIONALLY
 > EMPTY (13:31Z).** Receipt-first reviews by Fable and GPT-5.5 preserve the
 > triple-line first-jet theorem and the full raw CFS state machine with only

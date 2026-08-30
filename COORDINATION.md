@@ -1468,3 +1468,14 @@ arbitrary-rational-map extension is definitively retracted; all audited actual
 proper-block clients remain closed because they supply the everywhere-defined
 etale first leg. Stop further forest-interface review. Keep only abstract
 rational-domination boundary claims reopened.
+
+Allocation refresh (2026-08-30 14:01Z): provisional producer `9b232811...`
+independently eliminates the second index-three row `m=3,T=t0+t1` at its
+triple-fibre point. Minimal insoluble level one forces the exact CFS
+three-cycle; the resulting `(2,1,3)` exceptional curve is elliptic or nodal
+with a resolution cycle for every coefficient value. Use the theorem only
+after actual local normal block identification and the morphic first-leg
+boundary interface. A GPT-5.5 hostile review prompt is frozen and will run
+asynchronously. Shift D3 research capacity to the two sectioned rows; retain
+the diagonal local control as a regression fixture and do not infer global
+surface occurrence.
