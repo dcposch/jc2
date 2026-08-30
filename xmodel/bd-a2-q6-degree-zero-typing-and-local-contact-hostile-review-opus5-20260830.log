@@ -1,0 +1,25 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/bd-a2-q6-degree-zero-typing-and-local-contact-hostile-review-opus5-20260830.md` (589 lines, one standalone `<!-- BODY-END -->`, no seal, no `charge_basis={...}`, receipt `ABSENT`). All ten charged hashes verified; no charged file, artifact, or Git state touched.
+
+**Overall: `CONFIRM_WITH_CORRECTIONS`** — the adjudication's central claim survived every angle I attacked it from.
+
+| item | verdict |
+|---|---|
+| 1 `A`,`B`,`r`; `A+B` ample; projection formula; Du Val typing | `CONFIRMED` |
+| 2 root list `±(P_i−P_j)`, `±(F−P_i−P_j)`; `S0.(F−P_i−P_j)=1` | `CONFIRMED` |
+| 3 chronologies; `R1`,`E1` in `M_R`; double-count refused | `CONFIRMED` |
+| 4 `A`-null carrier `Z_J`, `J=O∪K`, `|K|=3` | `CONFIRM_WITH_CORRECTIONS` |
+| 5 positive-degree exhaustiveness | `CONFIRMED` |
+| 6 full local contact census | `CONFIRM_WITH_CORRECTIONS` |
+| 7 replays, mutations, no code extension | `CONFIRMED` |
+| 8 root/block load-bearing; energy inert; `a=0` robust | `CONFIRMED` |
+
+Reconstructions that went beyond confirming the text:
+
+- **The frame is literally a bidegree-(2,3) surface in `P²×P¹`.** Chow arithmetic reproduces `A²=3, A.B=2, B²=0, K=−A+B, K²=−1` independently — so `π` is the cubic cover, `ρ` the conic bundle, `π` is *not* finite, and `A+B` really is the ample pullback. The repair of the prior review's gap is sound.
+- **`A − H = M_R` exactly**, i.e. `π*(line at infinity) = H + M_R`. With `len C[[v,z]]/(h,h_z) = ord_v(−v⁸(v+1)) = 8` (family-invariant, since `p|_{u=0}=h_z`), this localizes the global eight at `p_0` and *proves* item 5 rather than arguing by budget.
+- **`|J|=5` is not automatic** — the lattice permits `|J|=5,7,9`; disjointness from `H` pins it. That step is missing from the adjudication (§4 correction).
+- Every equation of the local audit reproduced symbolically, including `2λ²=−a0/c1²` (my first hand pass got the sign wrong; the audit is right).
+- **The 11 relaxed positive-`a` matches reproduce cell-for-cell** (4/2/1/4) from a from-scratch enumerator, and the constraints that kill them are proved identities — but the single-owner forest rule consumes item 5, so items 5 and 8 are coupled.
+
+The one finding worth acting on: appending a hypothetical `A`-degree-zero prime gives zero matches in 12 of 14 cells, but the two `τ=0` four-prime cells hit `require(2 <= count <= 4)` and abort. Those cells rest on the typing lemma, not on the software — correct, but it should be said out loud. Raising that guard to 5 is a three-line, four-second change that would close it.

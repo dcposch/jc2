@@ -1,0 +1,4146 @@
+cli=codex-cli 0.150.1 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.150.1
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a052bb-89cb-7b60-960c-ae5adc801d27
+--------
+user
+# Hostile review: D3 Halphen CFS state machine
+
+You are GPT-5.5, the genuinely different-model hostile reviewer for the plane
+Jacobian-conjecture campaign. Work in `/Users/dc/code/math/jc2` on the exact
+charged files below. The producer is provisional: reconstruct the mathematics
+from the hypotheses and actively seek counterexamples before agreeing. Do not
+infer correctness from seals, manifests, prior agreement, or campaign status.
+
+Charge these exact bytes:
+
+```text
+be42d2cf894d92928978935381028dbf5ae7ba1d3598a3474d7c1460a7b6dee9
+  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md
+148ddb5e532b28a23361866f671984bd22a1b395a836484043f6f82c6001c1bf
+  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md.artifact.json
+2570d44ec3c31b4b559299099be196dd52b13b7ba1cfe4539043f96fc823ee9c
+  ops/d3_halphen_cfs_state_machine_replay.py
+7e73b7a6ebd1c4f6529c8c4502e150de1a8b4e4664d03323bfc8631b03ab08c5
+  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md
+a389b0a700a96f1ac68f3123f19fc7fa502e31b305e0973f164e50c5d6c585bd
+  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md.artifact.json
+95f2f9fc72d6560749aef090ce91dbd0ef3398ed705bcede69258425ad4ca9de
+  xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md
+```
+
+Audit the proposed state-machine theorem item by item.
+
+1. Check the theorem interface: exact plane CFS level two, Halphen minimal
+   floor one, and strict-Henselian insolubility. Verify precisely which
+   promoted input supplies each fact and whether CFS applies over the complex
+   DVR without a hidden solubility or completeness assumption.
+2. Start from the raw base-degree-three form, not a truncated formal gauge.
+   Check that the provisional first-jet gate really permits the two raw
+   branches `H=y^2z,q2=0` and `H=y^3` while retaining `a,ell,m` and all
+   determined higher coefficients correctly.
+3. Recompute `L_x`, `L_y`, the central form
+   `z^2(q2*x+C2*z)`, and the exact `L_z` three-cycle. Decide whether CFS
+   Theorem 4.3 truly rules out this cycle because level `2>1`, including the
+   four-iteration statement and the possibility of another singular locus or
+   integral move.
+4. Check the level drop on the fixed path and the use of CFS Lemma 5.8.
+   Reprove the full double-root elimination and look for a missed scalar cube,
+   residue-field issue, or nonminimal level-one loophole.
+5. Recompute the triple-root cube equations
+   `q1=U=0,R=3s^2,C3=s^3`. Verify the conclusion that only `Q=0` and the
+   `Q=y^2` type survive among the stabilizer orbits.
+6. Independently expand both critical flags. Check `b,c,d`, both first cube
+   equations, the cancellation of the intermediate `theta*Y*z^2` term, and
+   the exact `kappa,eta` formulas. Confirm that the final model is critical
+   exactly on `kappa=0,eta!=0` and that these conditions force `s!=0`.
+7. Audit the constant normalizations. Distinguish a plane stabilizer from a
+   local base-parameter rescaling; say exactly when `m=3,ell=0,q0 in {0,1}`
+   is legitimate and when a globally frozen coordinate requires retaining
+   the open `q0!=0` shard.
+8. Attack the positive control
+   `F=(x+t*z)^3+t*y^3+t^3*x^2*z`. Verify exact level two, the critical
+   lowered form, generic smoothness, and local normality. Then, as a separate
+   successor analysis, homogenize it to
+   `(S*x+T*z)^3+T*S^2*y^3+T^3*x^2*z` and report any cheap exact facts about
+   global normality, singularities, invariants, fibre types, rationality, and
+   compatibility with the promoted four-row surface theorem. Do not conflate
+   a global surface with a polynomial map.
+9. Read and rerun the replay in ordinary, `-O`, and `-OO` modes. Check the
+   AST-assert guard, mutation, hashes, and whether every software-backed claim
+   is derived rather than circularly hard-coded.
+10. Price the result correctly: this is a necessary local constructible gate,
+    not global attainment, an arc, a dominant `A2` map, a counterexample, or
+    JC2. Identify the cheapest decisive global obstruction if the theorem
+    survives.
+
+Use primary or authoritative sources for any theorem you do not derive.
+Return itemized `CONFIRMED`, `CONFIRM_WITH_CORRECTIONS`, `GAP`, or `REFUTED`,
+then a maximum-safe theorem, exact dependencies, and the cheapest decisive
+successor. This review makes no exit-price assertion: emit no
+`charge_basis={...}` line; receipt status `ABSENT` is expected. Do not run
+heavy local CAS. Do not inspect, list, search, stat, build, modify, or control
+`jc2-lean`. Do not read any q6 report or any sibling external-model prompt,
+log, report, or receipt. Do not edit inputs, Git state, or canonical
+artifacts.
+
+Write exactly one report:
+
+```text
+xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md
+```
+
+End with one standalone `<!-- BODY-END -->` line and no seal block.
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll treat this as a bounded artifact audit: first verify the charged hashes, then read only the named files and the replay script, run the replay in the three Python modes, and write the single requested review file. I’ll avoid repo-wide searches so I don’t touch excluded sibling reports or `jc2-lean`.
+  → Verify charged file hashes
+  • Read charged mathematical artifacts and replay script
+  • Run replay in normal, -O, and -OO modes
+  • Reconstruct and audit each theorem item
+  • Write the single hostile-review report
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md.artifact.json ops/d3_halphen_cfs_state_machine_replay.py xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md.artifact.json xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+be42d2cf894d92928978935381028dbf5ae7ba1d3598a3474d7c1460a7b6dee9  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md
+148ddb5e532b28a23361866f671984bd22a1b395a836484043f6f82c6001c1bf  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md.artifact.json
+2570d44ec3c31b4b559299099be196dd52b13b7ba1cfe4539043f96fc823ee9c  ops/d3_halphen_cfs_state_machine_replay.py
+7e73b7a6ebd1c4f6529c8c4502e150de1a8b4e4664d03323bfc8631b03ab08c5  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md
+a389b0a700a96f1ac68f3123f19fc7fa502e31b305e0973f164e50c5d6c585bd  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md.artifact.json
+95f2f9fc72d6560749aef090ce91dbd0ef3398ed705bcede69258425ad4ca9de  xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md
+
+codex
+The charged hashes match exactly. I’m reading the charged theorem, its input theorem, the coordinator integration note, and the replay source now, with line numbers so the report can cite the actual artifacts rather than campaign status.
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md.artifact.json' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	{"artifact":{"body_bytes":12211,"body_sha256":"6389a15fff6ec1ddbb8945676e8c8cce2c71f0a07ef27ff0fb81c217238d4ff8","file_bytes":12544,"frozen_basis":"7ce5611ffcb382e43976f552f8287c1e1bf4fb89","full_sha256":"be42d2cf894d92928978935381028dbf5ae7ba1d3598a3474d7c1460a7b6dee9","name":"bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md","published_mode":"0444"},"custody":{"closed_utc":"2026-08-30T12:51:52Z","finalized_utc":"2026-08-30T12:51:52Z","lease_id":"47ccb735560178ab5c42f5a325edd3fb","opened_utc":"2026-08-30T12:46:10Z","owner":"sol56-root","source_bytes":12211,"source_sha256":"6389a15fff6ec1ddbb8945676e8c8cce2c71f0a07ef27ff0fb81c217238d4ff8"},"schema":"jc2.artifact-finalize/v1"}
+
+ succeeded in 0ms:
+     1	# D3 Halphen CFS state machine: one constructible survivor
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Author: Sol 5.6 Ultra, campaign coordinator  
+     5	Frozen basis: `7ce5611ffcb382e43976f552f8287c1e1bf4fb89`  
+     6	Lifecycle: **EXACT PROVISIONAL PRODUCER / DIFFERENT-MODEL REVIEW REQUIRED**
+     7	
+     8	## 0. Verdict
+     9	
+    10	Assume the promoted degree-three Hodge/four-row theorem and the still-
+    11	provisional triple-line first-jet gate.  In the index-three Halphen row with
+    12	one length-two defect at the triple fibre, the plane ternary cubic has exact
+    13	CFS level two while its minimal strictly-henselian-insoluble floor has level
+    14	one.  Keep the raw coefficient-base degree-three form
+    15	
+    16	```text
+    17	F=x^3+tF1+t^2F2+t^3F3,                                  (0.1)
+    18	F1=a x^3+ell x^2y+m x^2z+x(q0 y^2+q1 yz+q2 z^2)+H(y,z).
+    19	```
+    20	
+    21	The CFS line-move state machine gives two conclusions.
+    22	
+    23	1. The double-root first-jet branch
+    24	
+    25	```text
+    26	H=y^2z,             q2=0
+    27	```
+    28	
+    29	is empty.
+    30	
+    31	2. The triple-root branch `H=y^3` is nonempty locally, but collapses to one
+    32	explicit constructible family.  Before constant normalization its first jet
+    33	satisfies
+    34	
+    35	```text
+    36	q2=q1=0,            Q=q0 y^2,
+    37	m=3s with s!=0.                                             (0.2)
+    38	```
+    39	
+    40	After constant coordinate and coefficient-base rescaling, followed by a
+    41	constant shear, one may take
+    42	
+    43	```text
+    44	m=3,                ell=0,
+    45	q0=0 or 1.                                                   (0.3)
+    46	```
+    47	
+    48	The higher raw coefficients then obey two cube equations, one equality and
+    49	one principal-open condition displayed in Section 4.  Thus the previous five
+    50	Borel first-jet orbits reduce to two shards, but neither shard is eliminated.
+    51	
+    52	There is an exact positive control:
+    53	
+    54	```text
+    55	F=(x+t z)^3+t y^3+t^3x^2z.                                 (0.4)
+    56	```
+    57	
+    58	It is a normal, generically smooth, raw base-degree-three local ternary cubic
+    59	of exact level two whose level-one drop is CFS-critical.  It is not a
+    60	dominant-`A2` map, a proof that the global four-row configuration is attained,
+    61	or a counterexample to JC2.
+    62	
+    63	## 1. Loaded inputs and scope
+    64	
+    65	The argument uses the following promoted or explicitly provisional inputs.
+    66	
+    67	- The one-point index-three row has plane level exactly two and minimal
+    68	  Halphen floor exactly one.
+    69	- Its generic torsor is strictly-henselian insoluble.  In residue
+    70	  characteristic zero, a minimal insoluble ternary cubic has level one and
+    71	  reduction equal to a nonzero cube of a linear form.
+    72	- The central plane cubic is `3L`, normalized to `x^3`.
+    73	- The first-jet invariant gate leaves only `H=y^2z,q2=0` or `H=y^3`.
+    74	- The coefficient-base degree is literally at most three in the raw global
+    75	  trivialization.
+    76	
+    77	The CFS facts are Theorem 4.3, Definition 5.1, Lemmas 5.2--5.4 and 5.8, and
+    78	Proposition 5.6 of Cremona--Fisher--Stoll, *Minimisation and reduction of
+    79	2-, 3- and 4-coverings of elliptic curves* (arXiv:0908.1741).  In particular,
+    80	their line move preserves level; for a nonminimal ternary cubic it exposes a
+    81	common factor within four iterations; and a critical ternary cubic in residue
+    82	characteristic different from three is minimal, insoluble, and level one.
+    83	
+    84	This packet proves a necessary local constructible classification.  It does
+    85	not infer a global surface, arc, polynomial map, or JC2 conclusion from a
+    86	finite coefficient list.
+    87	
+    88	## 2. The forced three-line cycle
+    89	
+    90	The central reduction is `x^3`, whose singular locus is the line `x=0`.
+    91	The CFS line move is forced:
+    92	
+    93	```text
+    94	E1=L_x(F)=t^-1 F(tx,y,z).
+    95	```
+    96	
+    97	Its reduction is `H`.  Both `y^2z` and `y^3` have singular line `y=0`, so the
+    98	second move is again forced:
+    99	
+   100	```text
+   101	E2=L_y(E1)=t^-2 F(tx,ty,z).
+   102	```
+   103	
+   104	Put
+   105	
+   106	```text
+   107	C2=[z^3]F2.
+   108	```
+   109	
+   110	Direct coefficient extraction gives
+   111	
+   112	```text
+   113	(E2)_0=z^2(q2 x+C2 z).                                    (2.1)
+   114	```
+   115	
+   116	If (2.1) is nonzero, its singular locus is exactly `z=0`.  The next forced
+   117	line move is
+   118	
+   119	```text
+   120	L_z(E2)=t^-3 F(tx,ty,tz)=F,                               (2.2)
+   121	```
+   122	
+   123	where the last equality is spatial homogeneity of degree three.  This exact
+   124	three-cycle cannot occur here.  The plane model is nonminimal because its
+   125	level is two and its minimal floor is one; CFS Theorem 4.3 therefore forces a
+   126	common coefficient factor, hence a level drop, within four moves.  Repeating
+   127	(2.2) forever would contradict that theorem.
+   128	
+   129	Consequently
+   130	
+   131	```text
+   132	q2=0,                 C2=0,                               (2.3)
+   133	```
+   134	
+   135	and `E2` is divisible by `t`.  Along this fixed forced path, the resulting
+   136	drop is
+   137	
+   138	```text
+   139	M=t^-1E2=t^-3F(tx,ty,z).                                  (2.4)
+   140	```
+   141	
+   142	It has level one, is minimal and strictly-henselian insoluble, and therefore
+   143	`M_0` must be a nonzero cube by CFS Lemma 5.8.
+   144	
+   145	## 3. Double-root death and first triple-root cube
+   146	
+   147	### 3.1 Double-root branch
+   148	
+   149	For `H=y^2z`, the first-jet gate already supplies `q2=0`; (2.3) adds `C2=0`.
+   150	Write
+   151	
+   152	```text
+   153	R=[xz^2]F2,       U=[yz^2]F2,       C3=[z^3]F3.
+   154	```
+   155	
+   156	Then
+   157	
+   158	```text
+   159	M_0=x^3+m x^2z+q1 xyz+y^2z+R xz^2+U yz^2+C3 z^3.          (3.1)
+   160	```
+   161	
+   162	This is not a cube.  Since its `x^3` coefficient is one, a cube can be
+   163	normalized to `(x+alpha y+beta z)^3`.  Its zero `x^2y` coefficient forces
+   164	`alpha=0`, after which its `y^2z` coefficient is zero, contradicting the unit
+   165	coefficient in (3.1).  This eliminates the entire double-root branch.
+   166	
+   167	### 3.2 Triple-root branch
+   168	
+   169	Take `H=y^3`.  Again (2.3) is forced.  With the same coefficient notation,
+   170	
+   171	```text
+   172	M_0=x^3+m x^2z+q1 xyz+R xz^2+U yz^2+C3 z^3.               (3.2)
+   173	```
+   174	
+   175	Put `m=3s`.  Comparing (3.2) with `(x+s z)^3` shows that it is a cube exactly
+   176	when
+   177	
+   178	```text
+   179	q1=U=0,             R=3s^2=m^2/3,
+   180	C3=s^3=m^3/27.                                             (3.3)
+   181	```
+   182	
+   183	Thus `Q=q0y^2`; the state machine has already reduced the five first-jet
+   184	Borel orbits to the zero and nonzero `q0` cases.
+   185	
+   186	## 4. Exact critical flags
+   187	
+   188	After (3.3), `M_0=(x+s z)^3`.  Use `X=x+s z`, so old `x=X-sz`, and perform
+   189	the next forced line move along `X=0`.  For the coefficients of `F2`, write
+   190	
+   191	```text
+   192	A=[x^3],  B=[y^3],  P=[x^2y],  T=[xy^2],
+   193	V=[x^2z], M111=[xyz], Q021=[y^2z].
+   194	```
+   195	
+   196	For `F3`, put
+   197	
+   198	```text
+   199	V3=[x^2z], M3=[xyz], Q3=[y^2z], R3=[xz^2], U3=[yz^2].
+   200	```
+   201	
+   202	The first transverse reduction is
+   203	
+   204	```text
+   205	y^3+b y^2z+c yz^2+d z^3,                                  (4.1)
+   206	
+   207	b=Q021-s q0,
+   208	c=U3+s^2 ell-s M111,
+   209	d=-s^3 a+s^2 V-s R3.
+   210	```
+   211	
+   212	It is a cube exactly when
+   213	
+   214	```text
+   215	3c=b^2,                    27d=b^3.                       (4.2)
+   216	```
+   217	
+   218	Indeed, with `lambda=b/3`, the change `Y=y+lambda z` turns (4.1) into
+   219	
+   220	```text
+   221	Y^3+(3c-b^2)/3 Yz^2
+   222	   +((27d-b^3)/27-b(3c-b^2)/9)z^3.
+   223	```
+   224	
+   225	Assume (4.2) and perform the line move along `Y=0`.  Before cancellation the
+   226	final reduction is
+   227	
+   228	```text
+   229	z^2(kappa X+theta Y+eta z),
+   230	theta=c-2lambda b+3lambda^2.
+   231	```
+   232	
+   233	Since `lambda=b/3`, the first equation in (4.2) makes `theta=0`
+   234	automatically.  The reduction is therefore
+   235	
+   236	```text
+   237	(kappa X+eta z)z^2,                                       (4.3)
+   238	```
+   239	
+   240	where
+   241	
+   242	```text
+   243	kappa = 3a s^2+2ell s lambda+q0 lambda^2
+   244	        -2V s-M111 lambda+R3,
+   245	
+   246	eta = -A s^3-P s^2lambda-T s lambda^2-B lambda^3
+   247	      +V3 s^2+M3 s lambda+Q3 lambda^2.                    (4.4)
+   248	```
+   249	
+   250	The minimal insoluble model must again have nonzero cube reduction.  Hence
+   251	the exact last critical condition is
+   252	
+   253	```text
+   254	kappa=0,                    eta!=0.                       (4.5)
+   255	```
+   256	
+   257	The nonzero chart is load-bearing.  Equations alone only compute the closure
+   258	and include a false boundary.
+   259	
+   260	Conditions (4.2)--(4.5) force `s!=0`.  If `s=0`, then `d=0`; (4.2) gives
+   261	`b=lambda=0`; (4.5) first gives `R3=0`, while every term in `eta` vanishes,
+   262	contradicting `eta!=0`.
+   263	
+   264	Since `s!=0`, a constant `z`-scaling normalizes `m=3`.  A constant shear
+   265	`z -> z-(ell/3)y` then kills `ell` while preserving `H=y^3` and
+   266	`Q=q0y^2`.  If `q0!=0`, the local changes
+   267	
+   268	```text
+   269	t_old=q0^-3 t,       y_old=q0 y,       z_old=q0^3 z
+   270	```
+   271	
+   272	normalize it to one while preserving the three displayed unit coefficients.
+   273	This proves (0.3) when a local/base-coordinate rescaling is allowed.  If
+   274	other globally marked base data freeze that coordinate, the honest shard is
+   275	`q0!=0`, not the literal equation `q0=1`.
+   276	
+   277	## 5. Nonempty local positive control
+   278	
+   279	For (0.4), the forced drop is
+   280	
+   281	```text
+   282	M=(x+z)^3+t y^3+t^2x^2z.
+   283	```
+   284	
+   285	In the coordinate `X=x+z`, this is
+   286	
+   287	```text
+   288	M=X^3+t y^3+t^2(X-z)^2z.                                 (5.1)
+   289	```
+   290	
+   291	The coefficient valuations in the CFS monomial order are
+   292	
+   293	```text
+   294	X^3:0,  y^3:1,  X^2z:2,  Xz^2:2,  z^3:2,
+   295	all other coefficients: infinity.
+   296	```
+   297	
+   298	They satisfy Definition 5.1 exactly, including the three exact coefficients
+   299	`X^3`, `y^3`, `z^3`; hence `M` is critical and has level one in
+   300	characteristic zero.  Reversing the single drop makes (0.4) exact level two.
+   301	
+   302	The local total surface is normal.  Along the generic point of its central
+   303	line,
+   304	
+   305	```text
+   306	F_t|_(t=x=0)=y^3!=0.
+   307	```
+   308	
+   309	The generic cubic is smooth.  The `y` derivative forces `y=0`; a singular
+   310	projective point cannot have `z=0`.  Set `z=1`, `x=t(r-1)`.  After removing
+   311	units, the `x` and `z` derivatives are
+   312	
+   313	```text
+   314	3r^2+2t^2(r-1),          3r^2+t^2(r-1)^2.
+   315	```
+   316	
+   317	Their difference is `t^2(r-1)(r-3)`, and neither `r=1` nor `r=3` zeros the
+   318	first expression in `C((t))`.  Generic smoothness and regularity at the
+   319	generic central-line point leave only a finite singular locus; the Cartier
+   320	surface is `S2`, hence normal.
+   321	
+   322	This positive control proves that CFS minimisation plus raw base degree three
+   323	cannot by itself kill the Halphen row.  Its bihomogeneous global closure is a
+   324	new object to audit, not an already validated four-row surface.
+   325	
+   326	## 6. Executable replay
+   327	
+   328	The exact symbolic replay is
+   329	
+   330	```text
+   331	ops/d3_halphen_cfs_state_machine_replay.py
+   332	SHA-256 2570d44ec3c31b4b559299099be196dd52b13b7ba1cfe4539043f96fc823ee9c
+   333	```
+   334	
+   335	It checks the two forced central forms, the exact three-cycle, the double-root
+   336	cube obstruction, both triple-root cube flags, the `s=0` obstruction, and the
+   337	normal/generic-smooth critical positive control.  It contains zero Python AST
+   338	`assert` nodes.
+   339	
+   340	Run:
+   341	
+   342	```bash
+   343	d3cfs_tmp=$(mktemp -d)
+   344	python3 ops/d3_halphen_cfs_state_machine_replay.py > "$d3cfs_tmp/ordinary.json"
+   345	python3 -O ops/d3_halphen_cfs_state_machine_replay.py > "$d3cfs_tmp/O.json"
+   346	python3 -OO ops/d3_halphen_cfs_state_machine_replay.py > "$d3cfs_tmp/OO.json"
+   347	cmp "$d3cfs_tmp/ordinary.json" "$d3cfs_tmp/O.json"
+   348	cmp "$d3cfs_tmp/ordinary.json" "$d3cfs_tmp/OO.json"
+   349	wc -c "$d3cfs_tmp/ordinary.json"
+   350	shasum -a 256 "$d3cfs_tmp/ordinary.json"
+   351	```
+   352	
+   353	All outputs are byte-identical, 1130 bytes, with SHA-256
+   354	
+   355	```text
+   356	52c7b6445a61ae5f518b46aa93d971603b1a0d4d7c1445767c047904c2df701a.
+   357	```
+   358	
+   359	The mutation
+   360	
+   361	```text
+   362	python3 ops/d3_halphen_cfs_state_machine_replay.py --mutate-cycle-scale
+   363	```
+   364	
+   365	exits nonzero with `FAIL:three-line CFS cycle identity failed`.
+   366	
+   367	## 7. Disposition and successor
+   368	
+   369	This packet is provisional until a different-model hostile review checks the
+   370	CFS theorem interface, raw-versus-gauged coefficient bookkeeping, constant
+   371	normalizations, and positive control.
+   372	
+   373	The cheapest decisive successor is no longer a large invariant ideal.  It is
+   374	the intersection of the explicit constructible locus (3.3), (4.2), (4.5)
+   375	with genuinely global conditions:
+   376	
+   377	1. homogenize over the full coefficient base and audit every other fibre;
+   378	2. impose the promoted length-two Hodge/GR divisor concentrated at `t=0`;
+   379	3. test total-space normality and rationality, not just local normality;
+   380	4. impose the binding polarization and dominant-rational-`A2` interface;
+   381	5. only then use AWS elimination if the two normalized shards survive.
+   382	
+   383	The positive control should be homogenized and audited first.  It may expose
+   384	the cheapest missing global obstruction or provide a sharp negative control
+   385	for that obstruction.
+   386	
+   387	Firewalls:
+   388	
+   389	- The cycle contradiction uses both exact plane level two and Halphen floor
+   390	  one; it is not a conclusion from three formal substitutions alone.
+   391	- Minimal strictly-henselian insolubility is what turns each lowered
+   392	  reduction into a cube.
+   393	- Raw base degree three must be retained; parameter-dependent first-jet
+   394	  gauges create determined higher powers and cannot be truncated as free
+   395	  coefficients.
+   396	- `eta!=0` is an open condition, not an ideal generator.
+   397	- The positive control is a local ternary-cubic survivor, not a global
+   398	  surface theorem, an arc, a polynomial map, or a proof/disproof of JC2.
+   399	
+   400	<!-- BODY-END -->
+   401	
+   402	## Seal
+   403	
+   404	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   405	  including its terminating newline; this seal is outside the body.
+   406	- Body bytes: `12211`.
+   407	- Body SHA-256:
+   408	  `6389a15fff6ec1ddbb8945676e8c8cce2c71f0a07ef27ff0fb81c217238d4ff8`.
+   409	- Frozen basis: `7ce5611ffcb382e43976f552f8287c1e1bf4fb89`.
+
+exec
+/bin/zsh -lc 'nl -ba ops/d3_halphen_cfs_state_machine_replay.py' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	#!/usr/bin/env python3
+     2	"""Exact CFS state-machine replay for the D3 Halphen level-two row.
+     3	
+     4	The replay keeps the raw coefficient-base degree-three model.  It certifies
+     5	necessary local conditions and a local positive control; it does not construct
+     6	a global (3,3) surface or a polynomial map.
+     7	"""
+     8	
+     9	from __future__ import annotations
+    10	
+    11	import ast
+    12	import json
+    13	import sys
+    14	
+    15	import sympy as sp
+    16	
+    17	
+    18	def require(condition: bool, message: str) -> None:
+    19	    if not condition:
+    20	        raise RuntimeError(message)
+    21	
+    22	
+    23	def t_coefficient(form, t, degree: int):
+    24	    return sp.expand(form).coeff(t, degree)
+    25	
+    26	
+    27	def line_move(form, t, variable):
+    28	    """CFS line move for the singular line variable=0."""
+    29	    return sp.expand(form.subs(variable, t * variable) / t)
+    30	
+    31	
+    32	def valuation(poly, t) -> int | None:
+    33	    expanded = sp.Poly(sp.expand(poly), t)
+    34	    if expanded.is_zero:
+    35	        return None
+    36	    return min(monomial[0] for monomial, _ in expanded.terms())
+    37	
+    38	
+    39	def derive(mutate_cycle_scale: bool = False):
+    40	    x, y, z, t = sp.symbols("x y z t")
+    41	    X, Y = sp.symbols("X Y")
+    42	    a, ell, m = sp.symbols("a ell m")
+    43	    q0, q1, q2 = sp.symbols("q0 q1 q2")
+    44	    A, B, C2, P, T = sp.symbols("A B C2 P T")
+    45	    V, M111, R, Q021, U = sp.symbols("V M111 R Q021 U")
+    46	    A3, B3, C3, P3, T3 = sp.symbols("A3 B3 C3 P3 T3")
+    47	    V3, M3, R3, Q3, U3 = sp.symbols("V3 M3 R3 Q3 U3")
+    48	    s, lam = sp.symbols("s lam")
+    49	
+    50	    f2 = (
+    51	        A * x**3
+    52	        + B * y**3
+    53	        + C2 * z**3
+    54	        + P * x**2 * y
+    55	        + T * x * y**2
+    56	        + V * x**2 * z
+    57	        + M111 * x * y * z
+    58	        + R * x * z**2
+    59	        + Q021 * y**2 * z
+    60	        + U * y * z**2
+    61	    )
+    62	    f3 = (
+    63	        A3 * x**3
+    64	        + B3 * y**3
+    65	        + C3 * z**3
+    66	        + P3 * x**2 * y
+    67	        + T3 * x * y**2
+    68	        + V3 * x**2 * z
+    69	        + M3 * x * y * z
+    70	        + R3 * x * z**2
+    71	        + Q3 * y**2 * z
+    72	        + U3 * y * z**2
+    73	    )
+    74	
+    75	    def raw_model(transverse_cubic):
+    76	        f1 = (
+    77	            a * x**3
+    78	            + ell * x**2 * y
+    79	            + m * x**2 * z
+    80	            + x * (q0 * y**2 + q1 * y * z + q2 * z**2)
+    81	            + transverse_cubic
+    82	        )
+    83	        return sp.expand(x**3 + t * f1 + t**2 * f2 + t**3 * f3)
+    84	
+    85	    triple = raw_model(y**3)
+    86	    double = raw_model(y**2 * z)
+    87	
+    88	    # The first two singular lines are x=0 and y=0.  Their composite is the
+    89	    # raw diagonal transform t^-2 F(tx,ty,z).
+    90	    e1_triple = line_move(triple, t, x)
+    91	    e1_double = line_move(double, t, x)
+    92	    require(t_coefficient(e1_triple, t, 0) == y**3, "first triple-root line move drifted")
+    93	    require(t_coefficient(e1_double, t, 0) == y**2 * z, "first double-root line move drifted")
+    94	    e2_triple = line_move(e1_triple, t, y)
+    95	    e2_double = line_move(e1_double, t, y)
+    96	    expected_e2_central = z**2 * (q2 * x + C2 * z)
+    97	    require(
+    98	        sp.expand(t_coefficient(e2_triple, t, 0) - expected_e2_central) == 0,
+    99	        "triple-root second central form drifted",
+   100	    )
+   101	    require(
+   102	        sp.expand(t_coefficient(e2_double, t, 0) - expected_e2_central) == 0,
+   103	        "double-root second central form drifted",
+   104	    )
+   105	
+   106	    # If this central form is nonzero, its singular line is z=0 and the third
+   107	    # line move returns the original homogeneous cubic exactly.
+   108	    cycle_scale = t**2 if mutate_cycle_scale else t
+   109	    cycled = sp.expand(e2_triple.subs(z, t * z) / cycle_scale)
+   110	    require(sp.expand(cycled - triple) == 0, "three-line CFS cycle identity failed")
+   111	
+   112	    # On the double-root first-jet branch q2=0.  Avoiding the cycle forces
+   113	    # C2=0, after which division by t is the drop on this fixed forced path.
+   114	    md = sp.expand((e2_double / t).subs({q2: 0, C2: 0}))
+   115	    md0 = t_coefficient(md, t, 0)
+   116	    expected_md0 = (
+   117	        x**3
+   118	        + m * x**2 * z
+   119	        + q1 * x * y * z
+   120	        + y**2 * z
+   121	        + R * x * z**2
+   122	        + U * y * z**2
+   123	        + C3 * z**3
+   124	    )
+   125	    require(sp.expand(md0 - expected_md0) == 0, "double-root lowered reduction drifted")
+   126	    alpha, beta = sp.symbols("alpha beta")
+   127	    normalized_cube = sp.expand((x + alpha * y + beta * z) ** 3)
+   128	    cube_x2y = sp.Poly(normalized_cube, x, y, z).coeff_monomial(x**2 * y)
+   129	    cube_y2z_after_x2y_zero = sp.Poly(
+   130	        normalized_cube.subs(alpha, 0), x, y, z
+   131	    ).coeff_monomial(y**2 * z)
+   132	    require(cube_x2y == 3 * alpha, "normalized cube x2y coefficient drifted")
+   133	    require(
+   134	        cube_y2z_after_x2y_zero == 0,
+   135	        "double-root cube obstruction disappeared",
+   136	    )
+   137	
+   138	    # On the triple-root branch, avoiding the cycle forces q2=C2=0.  A
+   139	    # minimal strictly-henselian-insoluble lowered model must reduce to a cube.
+   140	    mt = sp.expand((e2_triple / t).subs({q2: 0, C2: 0, m: 3 * s}))
+   141	    mt0 = t_coefficient(mt, t, 0)
+   142	    expected_mt0 = x**3 + 3 * s * x**2 * z + q1 * x * y * z + R * x * z**2 + U * y * z**2 + C3 * z**3
+   143	    require(sp.expand(mt0 - expected_mt0) == 0, "triple-root lowered reduction drifted")
+   144	    cube_conditions = {q1: 0, U: 0, R: 3 * s**2, C3: s**3}
+   145	    require(
+   146	        sp.expand(mt0.subs(cube_conditions) - (x + s * z) ** 3) == 0,
+   147	        "first lowered cube equations failed",
+   148	    )
+   149	
+   150	    # Follow the two critical flags from M0=(x+s z)^3.  Work in raw degree
+   151	    # three coefficients; parameter-dependent first-jet gauges would otherwise
+   152	    # manufacture misleading higher t-coefficients.
+   153	    mt = sp.expand(mt.subs(cube_conditions))
+   154	    n1 = line_move(sp.expand(mt.subs(x, X - s * z)), t, X)
+   155	    n10 = t_coefficient(n1, t, 0)
+   156	    b = Q021 - s * q0
+   157	    c = U3 + s**2 * ell - s * M111
+   158	    d = -s**3 * a + s**2 * V - s * R3
+   159	    expected_n10 = y**3 + b * y**2 * z + c * y * z**2 + d * z**3
+   160	    require(sp.expand(n10 - expected_n10) == 0, "first transverse cubic drifted")
+   161	
+   162	    e_cube_1 = sp.expand(3 * c - b**2)
+   163	    e_cube_2 = sp.expand(27 * d - b**3)
+   164	    lam_value = b / 3
+   165	    shifted_n10 = sp.expand(n10.subs(y, Y - lam_value * z))
+   166	    expected_shifted = sp.expand(
+   167	        Y**3
+   168	        + (e_cube_1 / 3) * Y * z**2
+   169	        + (e_cube_2 / 27 - b * e_cube_1 / 9) * z**3
+   170	    )
+   171	    require(
+   172	        sp.expand(shifted_n10 - expected_shifted) == 0,
+   173	        "first transverse cube equations failed",
+   174	    )
+   175	
+   176	    # Impose the first transverse cube equations without dividing by s.
+   177	    u3_solution = sp.expand(b**2 / 3 - s**2 * ell + s * M111)
+   178	    # e_cube_2 is linear in a.  Solving for a is valid on the s!=0 chart;
+   179	    # s=0 is separately ruled out below by the final nonzero condition.
+   180	    a_solution = sp.expand((s**2 * V - s * R3 - b**3 / 27) / s**3)
+   181	    critical_subs = {lam: lam_value, U3: u3_solution, a: a_solution}
+   182	    n1_shifted = sp.expand(n1.subs(y, Y - lam * z).subs(critical_subs))
+   183	    n2 = line_move(n1_shifted, t, Y)
+   184	    n20 = t_coefficient(n2, t, 0)
+   185	    kappa = sp.expand(
+   186	        3 * a * s**2
+   187	        + 2 * ell * s * lam_value
+   188	        + q0 * lam_value**2
+   189	        - 2 * V * s
+   190	        - M111 * lam_value
+   191	        + R3
+   192	    )
+   193	    eta = sp.expand(
+   194	        -A * s**3
+   195	        - P * s**2 * lam_value
+   196	        - T * s * lam_value**2
+   197	        - B * lam_value**3
+   198	        + V3 * s**2
+   199	        + M3 * s * lam_value
+   200	        + Q3 * lam_value**2
+   201	    )
+   202	    expected_n20 = sp.expand(
+   203	        (kappa * X + eta * z).subs({a: a_solution}) * z**2
+   204	    )
+   205	    require(sp.expand(n20 - expected_n20) == 0, "second critical-flag form drifted")
+   206	
+   207	    # If s=0, the first cube equations give b=lam=0, and the final cube
+   208	    # conditions kappa=0, eta!=0 are inconsistent: eta specializes to zero.
+   209	    require(
+   210	        sp.expand(eta.subs({s: 0, Q021: 0})) == 0,
+   211	        "s=0 obstruction drifted",
+   212	    )
+   213	
+   214	    # Exact positive control.  It is local only.
+   215	    positive = sp.expand((x + t * z) ** 3 + t * y**3 + t**3 * x**2 * z)
+   216	    positive_m = sp.expand(positive.subs({x: t * x, y: t * y}) / t**3)
+   217	    expected_positive_m = (x + z) ** 3 + t * y**3 + t**2 * x**2 * z
+   218	    require(sp.expand(positive_m - expected_positive_m) == 0, "positive-control drop drifted")
+   219	    positive_critical = sp.expand(positive_m.subs(x, X - z))
+   220	    expected_positive_critical = X**3 + t * y**3 + t**2 * (X - z) ** 2 * z
+   221	    require(
+   222	        sp.expand(positive_critical - expected_positive_critical) == 0,
+   223	        "positive-control critical coordinates drifted",
+   224	    )
+   225	    monomials = {
+   226	        "X3": X**3,
+   227	        "X2Y": X**2 * y,
+   228	        "XY2": X * y**2,
+   229	        "Y3": y**3,
+   230	        "X2Z": X**2 * z,
+   231	        "XYZ": X * y * z,
+   232	        "Y2Z": y**2 * z,
+   233	        "XZ2": X * z**2,
+   234	        "YZ2": y * z**2,
+   235	        "Z3": z**3,
+   236	    }
+   237	    critical_poly = sp.Poly(positive_critical, X, y, z)
+   238	    critical_vals = {
+   239	        name: valuation(critical_poly.coeff_monomial(monomial), t)
+   240	        for name, monomial in monomials.items()
+   241	    }
+   242	    expected_vals = {
+   243	        "X3": 0,
+   244	        "X2Y": None,
+   245	        "XY2": None,
+   246	        "Y3": 1,
+   247	        "X2Z": 2,
+   248	        "XYZ": None,
+   249	        "Y2Z": None,
+   250	        "XZ2": 2,
+   251	        "YZ2": None,
+   252	        "Z3": 2,
+   253	    }
+   254	    require(critical_vals == expected_vals, "positive control is not CFS-critical")
+   255	    ft_central_line = sp.diff(positive, t).subs({t: 0, x: 0})
+   256	    require(ft_central_line == y**3, "positive-control generic central regularity failed")
+   257	
+   258	    # Generic smoothness: Fy forces y=0.  At z=0, Fx is nonzero at every
+   259	    # projective point.  At z=1 put x=t(r-1); the two remaining derivatives
+   260	    # can vanish only for r=1 or r=3, and neither candidate works.
+   261	    r = sp.symbols("r")
+   262	    fx = sp.diff(positive, x).subs({x: t * (r - 1), y: 0, z: 1}) / t**2
+   263	    fz = sp.diff(positive, z).subs({x: t * (r - 1), y: 0, z: 1}) / t**3
+   264	    require(sp.expand(fx - (3 * r**2 + 2 * t**2 * (r - 1))) == 0, "positive Fx certificate drifted")
+   265	    require(sp.expand(fz - (3 * r**2 + t**2 * (r - 1) ** 2)) == 0, "positive Fz certificate drifted")
+   266	    require(
+   267	        sp.factor(fz - fx) == t**2 * (r - 3) * (r - 1),
+   268	        "positive derivative candidate factorization drifted",
+   269	    )
+   270	    require(fx.subs(r, 1) != 0 and fx.subs(r, 3) != 0, "positive control became singular")
+   271	
+   272	    source_tree = ast.parse(open(__file__, encoding="utf-8").read())
+   273	    assert_count = sum(isinstance(node, ast.Assert) for node in ast.walk(source_tree))
+   274	    require(assert_count == 0, "replay contains optimization-sensitive asserts")
+   275	
+   276	    return {
+   277	        "schema": "D3-HALPHEN-CFS-STATE/v1",
+   278	        "sympy_version": sp.__version__,
+   279	        "raw_base_degree": 3,
+   280	        "forced_moves": ["L_x", "L_y"],
+   281	        "second_central_form": str(expected_e2_central),
+   282	        "nonzero_second_form_transition": "L_z exact three-cycle",
+   283	        "double_root": {
+   284	            "conditions_before_drop": ["q2=0", "C2=0"],
+   285	            "lowered_reduction": str(expected_md0),
+   286	            "status": "ELIMINATED_NOT_A_CUBE",
+   287	        },
+   288	        "triple_root": {
+   289	            "conditions_before_drop": ["q2=0", "C2=0"],
+   290	            "first_cube": ["q1=0", "U=0", "R=3*s^2", "C3=s^3"],
+   291	            "first_transverse": str(expected_n10),
+   292	            "first_transverse_cube": ["3*c=b^2", "27*d=b^3"],
+   293	            "final_reduction": "(kappa*X+eta*z)*z^2",
+   294	            "critical_open": ["kappa=0", "eta!=0"],
+   295	            "s_nonzero": True,
+   296	            "normalized_first_jet_shards": ["Q=0", "Q=y^2"],
+   297	        },
+   298	        "positive_control": {
+   299	            "raw": "(x+t*z)^3+t*y^3+t^3*x^2*z",
+   300	            "lowered": "(x+z)^3+t*y^3+t^2*x^2*z",
+   301	            "critical_valuations": critical_vals,
+   302	            "normal_at_generic_central_line": True,
+   303	            "generic_cubic_smooth": True,
+   304	            "scope": "local_only",
+   305	        },
+   306	        "ast_assert_nodes": assert_count,
+   307	        "status": "PASS",
+   308	    }
+   309	
+   310	
+   311	def main() -> None:
+   312	    mutate = sys.argv[1:] == ["--mutate-cycle-scale"]
+   313	    require(mutate or not sys.argv[1:], "unknown command-line argument")
+   314	    result = derive(mutate_cycle_scale=mutate)
+   315	    print(json.dumps(result, sort_keys=True, separators=(",", ":")))
+   316	
+   317	
+   318	if __name__ == "__main__":
+   319	    try:
+   320	        main()
+   321	    except RuntimeError as error:
+   322	        print("FAIL:" + str(error), file=sys.stderr)
+   323	        raise SystemExit(1)
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md.artifact.json' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	{"artifact":{"body_bytes":8949,"body_sha256":"69b1cbe29074593f628b8ba2c3a8ff330dcc31ba351570af0f7b28017602e89f","file_bytes":9281,"frozen_basis":"7dd85a6598c56fa043dd397382de1c93d846fa39","full_sha256":"7e73b7a6ebd1c4f6529c8c4502e150de1a8b4e4664d03323bfc8631b03ab08c5","name":"bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md","published_mode":"0444"},"custody":{"closed_utc":"2026-08-30T12:20:12Z","finalized_utc":"2026-08-30T12:20:12Z","lease_id":"74dbf3beab473aae12cff55b1ccf412e","opened_utc":"2026-08-30T12:07:57Z","owner":"root","source_bytes":8949,"source_sha256":"69b1cbe29074593f628b8ba2c3a8ff330dcc31ba351570af0f7b28017602e89f"},"schema":"jc2.artifact-finalize/v1"}
+
+ succeeded in 0ms:
+     1	# Degree-three triple-line first-jet invariant gate
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Author: Sol 5.6 Ultra  
+     5	Frozen basis: `7dd85a6598c56fa043dd397382de1c93d846fa39`  
+     6	Lifecycle: **EXACT PROVISIONAL PRODUCER / DIFFERENT-MODEL REVIEW REQUIRED**
+     7	
+     8	## 0. Verdict
+     9	
+    10	Assume the provisional degree-three four-row theorem in
+    11	`bd-a2-d3-hodge-level-divisor-sol56-20260830.md`.  At the possible
+    12	index-three Halphen fibre the plane cubic is a triple line.  After an
+    13	admissible formal change of coordinates and multiplication by a unit, its
+    14	degree-three coefficient-base jet has the form
+    15	
+    16	```text
+    17	F=x^3+t(xQ(y,z)+G(y,z))+O(t^2),                          (0.1)
+    18	```
+    19	
+    20	where `Q` is binary quadratic and `G` is binary cubic.  Normality of the
+    21	total surface forces `G!=0`.
+    22	
+    23	For Fisher's ternary-cubic invariant normalization, write
+    24	
+    25	```text
+    26	Q=q0 y^2+q1 yz+q2 z^2,
+    27	G=b0 y^3+b1 y^2z+b2 yz^2+b3 z^3.
+    28	```
+    29	
+    30	Then the first nonzero universal Taylor terms at the rank-one cubic `x^3`
+    31	are
+    32	
+    33	```text
+    34	[t^3]c4 = 24(6b0b2q2-9b0b3q1-2b1^2q2+b1b2q1
+    35	              +6b1b3q0-2b2^2q0),                       (0.2)
+    36	
+    37	[t^4]c6 = -216 Disc_binary(G).                           (0.3)
+    38	```
+    39	
+    40	Neither term depends on `F2` or `F3`.  Every positive Hodge-level triple-line
+    41	fibre must therefore have a repeated root in `G` and must satisfy (0.2)=0.
+    42	Up to `PGL2` on the central line, the surviving first jets are only
+    43	
+    44	```text
+    45	G=y^2z,     q2=0;                  or
+    46	G=y^3,      with no new first-jet condition on Q.         (0.4)
+    47	```
+    48	
+    49	In particular the squarefree transverse first-jet stratum is eliminated
+    50	from both Halphen rows before any elimination or AWS computation.  This is a
+    51	necessary local invariant theorem.  It does not prove that either stratum in
+    52	(0.4) occurs, classify the higher jet, construct a class-`(3,3)` surface or
+    53	map, or prove JC2.
+    54	
+    55	## 1. Normal form and normality
+    56	
+    57	Choose the central triple line as `x=0`.  A general first coefficient is
+    58	
+    59	```text
+    60	F1=a x^3+x^2L(y,z)+xQ(y,z)+G(y,z).
+    61	```
+    62	
+    63	Multiplication by a unit congruent to `1-a t` removes the `x^3` term to first
+    64	order.  The determinant-one substitution
+    65	
+    66	```text
+    67	x -> x-(t/3)L(y,z)
+    68	```
+    69	
+    70	removes the `x^2L` term.  These transformations preserve invariant
+    71	valuations and give (0.1).  Before this parameter-dependent change the
+    72	global coefficient-base polynomial has degree at most three.  Substitution
+    73	can create determined higher powers of `t`, but creates no new parameters;
+    74	the leading gate below is insensitive to all `O(t^2)` terms.
+    75	
+    76	Along the generic point of the central line, the total-space Jacobian has
+    77	
+    78	```text
+    79	F_t|_(t=x=0)=G(y,z).                                     (1.1)
+    80	```
+    81	
+    82	If `G=0`, the whole central line lies in the singular locus, so the
+    83	hypersurface fails `R1` and is not normal.  If `G!=0`, only the finite
+    84	zero scheme of `G` can be singular on the central line.  Together with a
+    85	smooth generic fibre, the hypersurface is regular in codimension one; being
+    86	Cartier, it is Cohen--Macaulay and hence `S2`.  Thus the local total surface
+    87	is normal.  The gate below uses only the necessary direction `normal =>
+    88	G!=0`, but the converse identifies the exact local normality test under
+    89	generic smoothness.
+    90	
+    91	## 2. Hessian derivation
+    92	
+    93	For a ternary cubic `U`, put
+    94	
+    95	```text
+    96	H(U)=-1/2 det(d^2 U).                                    (2.1)
+    97	```
+    98	
+    99	Fisher's Hessian-pencil identity implies
+   100	
+   101	```text
+   102	[mu] H(U+mu H(U))   = 3 c4(U) U,
+   103	[mu^2]H(U+mu H(U)) = 6 c6(U) U-3 c4(U)H(U).             (2.2)
+   104	```
+   105	
+   106	Because the `x^3` coefficient of (0.1) is a unit, equations (2.2) recover
+   107	`c4,c6` from the single `x^3` coefficient of the pencil Hessian.  Applying
+   108	this to the universal truncated form
+   109	
+   110	```text
+   111	U=x^3+t(xQ+G)
+   112	```
+   113	
+   114	gives
+   115	
+   116	```text
+   117	c4=t^3(0.2)+O(t^4),
+   118	c6=-216t^4 Disc_binary(G)+O(t^5).                        (2.3)
+   119	```
+   120	
+   121	The binary discriminant convention is
+   122	
+   123	```text
+   124	Disc_binary(G)=b1^2b2^2-4b0b2^3-4b1^3b3-27b0^2b3^2
+   125	               +18b0b1b2b3.                            (2.4)
+   126	```
+   127	
+   128	The higher-jet independence is a polarization argument, not an experimental
+   129	truncation.  Apply the formal unit and `x`-translation gauge order by order:
+   130	the `x^3` coefficient stays a unit and the `x^2L` direction is removed at
+   131	every order.  The resulting coefficients lie in the seven-dimensional
+   132	normal slice `xQ+G`; the unit and determinant factors do not change the
+   133	leading valuations.  On this slice the universal expansion
+   134	`c4(x^3+epsilon V)` vanishes through order two, and
+   135	`c6(x^3+epsilon V)` through order three, for arbitrary `V` in the slice.
+   136	Polarization therefore kills all lower Taylor tensors there.  In a gauged
+   137	arc `x^3+tF1+t^2F2+...`, total `t`-weight three for `c4` can only use three
+   138	copies of `F1`; total weight four for `c6` can only use four copies of `F1`.
+   139	This proves that (0.2)--(0.3) are unchanged by `F2,F3`.
+   140	
+   141	## 3. Exact first-jet classification
+   142	
+   143	At a point of Hodge colength `k>=1`, the Hodge/invariant theorem gives
+   144	
+   145	```text
+   146	v(c4)>=4,             v(c6)>=6.                          (3.1)
+   147	```
+   148	
+   149	Thus both displayed leading terms in (2.3) must vanish.  Equation (0.3)
+   150	forces `Disc_binary(G)=0`.  Since normality excludes `G=0`, the binary cubic
+   151	has either a double and a simple root or one triple root.
+   152	
+   153	In the double-root orbit take `G=y^2z`.  Substitution in (0.2) gives
+   154	
+   155	```text
+   156	[t^3]c4=-48q2,                                         (3.2)
+   157	```
+   158	
+   159	so `q2=0`.  Geometrically, `Q` vanishes at the double-root point on the
+   160	central line.  In the triple-root orbit take `G=y^3`; both (0.2) and (0.3)
+   161	vanish identically.  This proves (0.4).
+   162	
+   163	For the one-point Halphen row, `k=2`.  Since the residue characteristic is
+   164	zero, Cremona--Fisher--Stoll Lemma 3.2 and the Hodge-lattice identification
+   165	show that level two forces the necessary bounds
+   166	
+   167	```text
+   168	v(c4)>=8,             v(c6)>=12.                         (3.3)
+   169	```
+   170	
+   171	The converse is false in general because the minimal invariants may
+   172	themselves vanish.  No equivalence is used here.  The usually displayed
+   173	discriminant condition `v(Disc)>=24` is then
+   174	automatic from `c4^3-c6^2=1728 Disc`; it need not be imposed as a third
+   175	generator in the elimination ideal.  The next computation should therefore
+   176	solve only the remaining coefficients of `c4 mod t^8` and `c6 mod t^12` on
+   177	the two normal forms (0.4), retaining the finitely many original degree-three
+   178	base coefficients and every higher term induced by the normalization,
+   179	followed by actual minimisation of every survivor.
+   180	
+   181	## 4. Executable replay
+   182	
+   183	The replay is
+   184	
+   185	```text
+   186	ops/d3_triple_line_first_jet_invariant_replay.py
+   187	SHA-256 08c523e2b2dade813d5c12652bfc501ec02de80470f44e3763571387940e852c
+   188	```
+   189	
+   190	It uses SymPy `1.14.0` only to perform exact polynomial differentiation,
+   191	determinants, coefficient extraction, and factorization.  It derives
+   192	(0.2)--(0.3) from (2.1)--(2.2), verifies the binary discriminant identity,
+   193	fixes the normalization with `H(xyz)=-xyz`, `c4(xyz)=1`, `c6(xyz)=-1`, and
+   194	checks squarefree, double-root, and triple-root controls.  It contains zero
+   195	Python AST `assert` nodes.
+   196	
+   197	Run:
+   198	
+   199	```bash
+   200	d3jet_tmp=$(mktemp -d)
+   201	python3 ops/d3_triple_line_first_jet_invariant_replay.py > "$d3jet_tmp/ordinary.json"
+   202	python3 -O ops/d3_triple_line_first_jet_invariant_replay.py > "$d3jet_tmp/O.json"
+   203	python3 -OO ops/d3_triple_line_first_jet_invariant_replay.py > "$d3jet_tmp/OO.json"
+   204	cmp "$d3jet_tmp/ordinary.json" "$d3jet_tmp/O.json"
+   205	cmp "$d3jet_tmp/ordinary.json" "$d3jet_tmp/OO.json"
+   206	shasum -a 256 "$d3jet_tmp/ordinary.json"
+   207	```
+   208	
+   209	All three outputs are byte-identical, 919 bytes, with SHA-256
+   210	
+   211	```text
+   212	d2da55b85ef0da6eaefd8a1ed38a0c33546a4a82522d6d1c1ebac3ad3c69eede.
+   213	```
+   214	
+   215	The mutation
+   216	
+   217	```text
+   218	python3 ops/d3_triple_line_first_jet_invariant_replay.py --mutate-disc-sign
+   219	```
+   220	
+   221	exits nonzero with `FAIL:binary discriminant sign/control failed`.
+   222	
+   223	## 5. Disposition and firewalls
+   224	
+   225	1. Hostile-review the normal-form transformation, Hessian normalization,
+   226	   Taylor-weight argument, and the inference from positive level.
+   227	2. On `G=y^2z,q2=0`, use the remaining stabilizer and admissible Smith slopes
+   228	   before forming any large ideal.
+   229	3. On `G=y^3`, compare directly with the critical insoluble ternary cubics of
+   230	   Cremona--Fisher--Stoll; a level-one critical normal form may reduce the
+   231	   level-two search to one further admissible transformation.
+   232	4. Keep the soluble no-multiple-fibre one-point row separate: its local model
+   233	   is level two but its minimal-level floor is zero, whereas the Halphen
+   234	   torsor has minimal level one.
+   235	
+   236	Firewalls:
+   237	
+   238	- `G` is the transverse binary first jet, not a plane component or a branch
+   239	  count.
+   240	- A repeated root of `G` is necessary, not an attained singularity type.
+   241	- Formal invariant divisibility does not prove total-space normality unless
+   242	  the explicit `G!=0` and generic-smoothness tests are retained.
+   243	- Level, Hodge colength, local geometric genus, fibre multiplicity, and
+   244	  discriminant order remain distinct quantities even where exact theorems
+   245	  relate them.
+   246	- No finite jet is an arc-existence theorem, effective global surface, map,
+   247	  counterexample, or proof of JC2.
+   248	
+   249	<!-- BODY-END -->
+   250	
+   251	## Seal
+   252	
+   253	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   254	  including its terminating newline; this seal is outside the body.
+   255	- Body bytes: `8949`.
+   256	- Body SHA-256:
+   257	  `69b1cbe29074593f628b8ba2c3a8ff330dcc31ba351570af0f7b28017602e89f`.
+   258	- Frozen basis: `7dd85a6598c56fa043dd397382de1c93d846fa39`.
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Binding integration: degree-three Hodge divisor and four-row gate
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Integrator: Sol 5.6 Ultra, campaign coordinator  
+     5	Frozen basis: `32e7338e066753da7bd3e0da93cc750174b293ac`  
+     6	Disposition: **PROMOTE WITH REVIEW REPAIRS AND EXACT-LEVEL SHARPENING**
+     7	
+     8	## 0. Binding verdict
+     9	
+    10	Promote the degree-three Hodge-divisor theorem and its exhaustive four-row
+    11	classification.  Let `X subset P2 x P1` be an integral normal class-`(3,3)`
+    12	hypersurface over `C`, assume the binding dominant-rational-`A2` and adjoint
+    13	theorem, and let `r:Y->X` be the minimal projective resolution.  Then the GR
+    14	trace induces
+    15	
+    16	```text
+    17	O_P1(1) --s--> O_P1(3),
+    18	div(s)=T=q(Z_GR),                    length(T)=2.       (0.1)
+    19	```
+    20	
+    21	After relative minimalization `h:Y->S`, the rational genus-one fibration
+    22	`g:S->P1` has exactly one of two forms:
+    23	
+    24	```text
+    25	m=1: no multiple fibre and a section;
+    26	m=3: one triple fibre and no section.                  (0.2)
+    27	```
+    28	
+    29	Writing `D=h_*(K_Y-r^*K_X)<=0`, exactly four rows occur:
+    30	
+    31	| type | base defect `T` | pushed discrepancy `D` | exact local CFS levels | minimum blowups | `rho(Y)` |
+    32	|---|---|---|---|---:|---:|
+    33	| section | `t1+t2`, `t1!=t2` | `-F_t1-F_t2` | `(1,1)` | 2 | `>=12` |
+    34	| section | `2t` | `-2F_t` | `2` | 2 | `>=12` |
+    35	| triple fibre `F_0=3P_0` | `t0+t1`, `t1!=t0` | `-P_0-F_t1` | `(1,1)` | 2 | `>=12` |
+    36	| triple fibre `F_0=3P_0` | `2t0` | `-4P_0` | `2` | 4 | `>=14` |
+    37	
+    38	There is no fifth row.  In the triple-fibre rows the central plane cubic is a
+    39	triple line.  The local CFS level equals the local Hodge/GR length exactly;
+    40	it is not the coefficient `b_t` in `D_t=-b_tP_t`.
+    41	
+    42	The different-model hostile review returns `CONFIRM_WITH_CORRECTIONS`.  It
+    43	finds no counterexample and preserves every row and Picard bound.  Its main
+    44	new leverage is exactness of the CFS level, which adds a finite principal-open
+    45	upper disjunction to the invariant computation.
+    46	
+    47	## 1. Frozen evidence and custody
+    48	
+    49	```text
+    50	087953ec71175d8e470cd2aa89dd7928ef0ab88223009c619e2d95dc39287637
+    51	  xmodel/bd-a2-d3-hodge-level-divisor-sol56-20260830.md
+    52	e571684152a54d9921cc38bdcb9f8833a6f875bda659cf6ebeb8877871246a87
+    53	  xmodel/bd-a2-d3-hodge-level-divisor-sol56-20260830.md.artifact.json
+    54	
+    55	9115b2886303568c7671a375913f5eae28858391ce4cdbf3d1c43232c328fa94
+    56	  xmodel/bd-a2-d3-hodge-level-divisor-hostile-review-gpt55-20260830.md
+    57	  body 8b46aac7130d093fee885255d2d1dd35e10d54028600f43dea0a18f2ee0ffb82
+    58	9ab5cd2633b46614cd086f1f4c1b657082903e437b36814b377128f31dfdb9a0
+    59	  xmodel/bd-a2-d3-hodge-level-divisor-hostile-review-gpt55-20260830.run.v2
+    60	
+    61	ef7b8f5ea7c9f44af7b01f69e3a0f7d15852c804074d41cf1a6aa9f1f204ef1a
+    62	  xmodel/bd-a2-d3plus-pg-defect-coordinator-integration-sol56-20260830.md
+    63	```
+    64	
+    65	Root reproduced the schema-v2 receipt, prompt, Codex adapter, launcher,
+    66	Seatbelt profile, validator, appendix, composed model prompt, report, log,
+    67	and all five charged mathematical hashes before reading the review.  The
+    68	report body was stamped against basis
+    69	`7dd85a6598c56fa043dd397382de1c93d846fa39` and verified.
+    70	`charge_basis_status=ABSENT` is correct because the reviewer asserted no new
+    71	exit price.
+    72	
+    73	## 2. Hodge divisor on the coefficient base
+    74	
+    75	Every coefficient-base fibre of `q:X->P1` is a nonzero plane cubic Cartier
+    76	divisor, including a possible triple line.  The hypersurface is
+    77	Cohen--Macaulay and the base is a regular curve, so `q` is flat.  The fibre
+    78	sequence gives `h0(O_C)=h1(O_C)=1` even for nonreduced cubics; globally,
+    79	
+    80	```text
+    81	q_*O_X=O,                 R^1q_*O_X=O(-3),
+    82	q_*omega_(X/P1)=O(3).                                      (2.1)
+    83	```
+    84	
+    85	The resolution fibration `f=q r` is also flat and connected.  Characteristic
+    86	zero is load-bearing here: multiple fibres are tame, so the usual wild-fibre
+    87	torsion in `R^1f_*O_Y` is absent.  Rationality gives `chi(O_Y)=1`, hence
+    88	
+    89	```text
+    90	R^1f_*O_Y=O(-1),          f_*omega_(Y/P1)=O(1).            (2.2)
+    91	```
+    92	
+    93	Start from
+    94	
+    95	```text
+    96	0 -> r_*omega_Y -> omega_X -> Q_GR -> 0
+    97	```
+    98	
+    99	and tensor by `q^*O(2)`.  With
+   100	`Q_rel=Q_GR tensor q^*O(2)`, projection formula and (2.1)--(2.2) give the
+   101	nonzero map (0.1).  Its cokernel and `q_*Q_rel` both have length two, so they
+   102	are equal without assuming the next higher direct image vanishes.  Since
+   103	`Q_rel` is faithful over the GR scheme, annihilators identify
+   104	
+   105	```text
+   106	div(s)=q(Z_GR)=T
+   107	```
+   108	
+   109	scheme-theoretically for the given projection.  Thus `T` is either two
+   110	distinct reduced points or one colength-two DVR subscheme; two physical
+   111	defect points over one base value are not a third alternative.
+   112	
+   113	## 3. Discrepancy, minimalization, and the four rows
+   114	
+   115	For `Delta=K_Y-r^*K_X`, adjunction with arithmetic genus gives
+   116	
+   117	```text
+   118	Delta.E_i=2p_a(E_i)-2-E_i^2 >=0
+   119	```
+   120	
+   121	on every minimal exceptional component.  The connected negative-definite
+   122	intersection matrix has entrywise negative inverse, so `Delta<=0`; a
+   123	connected Gorenstein block has zero discrepancy exactly when it is Du Val.
+   124	
+   125	Contract vertical `(-1)`-curves to the relatively minimal rational
+   126	genus-one surface `S`.  With compatible divisor representatives,
+   127	
+   128	```text
+   129	D=h_*Delta<=0,             K_S=F+D.                       (3.1)
+   130	```
+   131	
+   132	The tame canonical bundle formula is
+   133	
+   134	```text
+   135	K_S ~ -F + sum_i(m_i-1)P_i,
+   136	F_i=m_iP_i,                deg fundamental line=1.        (3.2)
+   137	```
+   138	
+   139	Since `rho(S)=10`, a horizontal `(-1)`-curve exists.  Intersecting (3.2)
+   140	with it shows that two multiple fibres are impossible.  With none, its degree
+   141	is one and it is a section.  With one fibre of multiplicity `m`, every
+   142	multisection degree is divisible by `m`; a general plane-line horizontal
+   143	divisor has degree three.  Hence `m|3`, giving exactly (0.2).
+   144	
+   145	For every fibre component `Theta`, `D.Theta=0`.  The connected fibre
+   146	intersection matrix has integral kernel generated by the primitive fibre
+   147	cycle, so a nonzero local part is
+   148	
+   149	```text
+   150	D_t=-b_tP_t,             b_t>0.                           (3.3)
+   151	```
+   152	
+   153	Support equality is on the **base**:
+   154	
+   155	```text
+   156	Supp_P1(D)=Supp(T).                                        (3.4)
+   157	```
+   158	
+   159	Contraction can discard internal discrepancy components inside a supported
+   160	fibre; (3.4) says it cannot erase the whole defect fibre.  The two global
+   161	intersection equations are
+   162	
+   163	```text
+   164	m=1: sum_t b_t=2;
+   165	m=3: b_0+3 sum_(t!=t0)b_t=4.                             (3.5)
+   166	```
+   167	
+   168	Combining (3.4)--(3.5) with the exact length-two base scheme yields precisely
+   169	the table in Section 0.  In particular a defect entirely away from the triple
+   170	fibre cannot sum to four, and no `b_t` is identified with local geometric
+   171	genus or GR length.
+   172	
+   173	## 4. Picard bounds
+   174	
+   175	For each blowup in the inverse of `h`,
+   176	
+   177	```text
+   178	D_new=pi^*D_old+E,
+   179	coeff_E(D_new)=1+ord_p(D_old).                            (4.1)
+   180	```
+   181	
+   182	Proper surjectivity ensures that every `Y_t->X_t` has a component mapping
+   183	onto the one-dimensional plane fibre; that component is not
+   184	`r`-exceptional and has discrepancy coefficient zero.  Starting from
+   185	`D_t=-bP_t`, every inherited component has coefficient at most `-b`, so a
+   186	zero carrier must be born in the blowup chain.
+   187	
+   188	The satellite-safe induction is: before the first zero, if `M_j` is the
+   189	largest fibre coefficient after `j` blowups, then
+   190	
+   191	```text
+   192	M_j<=-b+j.
+   193	```
+   194	
+   195	At a centre on one or several negative components the new coefficient is at
+   196	most `1+M_(j-1)`; intersection and infinitely-near centres cannot accelerate
+   197	the birth of zero.  Thus at least `b` blowups are required over that fibre,
+   198	and counts over distinct fibres add.  Since `rho(S)=10`, the four Picard
+   199	bounds are exactly those displayed in Section 0 for the minimal resolution.
+   200	
+   201	## 5. Exact local Hodge level and invariant gate
+   202	
+   203	At every complex DVR, Liu--Lorenzini--Raynaud Theorem 3.1 identifies the
+   204	resolved-torsor Hodge lattice with the minimal Jacobian/Neron differential
+   205	lattice, including the locally insoluble triple fibre.  The 2018 corrigendum
+   206	does not alter that theorem.  With compatible generators, if the local order
+   207	of `s` is `k`, Fisher's differential weights give
+   208	
+   209	```text
+   210	c4_plane=s^4 c4_min,
+   211	c6_plane=s^6 c6_min,
+   212	Disc_plane=s^12 Disc_min.                                (5.1)
+   213	```
+   214	
+   215	Cremona--Fisher--Stoll Lemma 3.2 applies without a solubility hypothesis and
+   216	shows that the CFS level of the given ternary cubic is **exactly** `k`.
+   217	Therefore
+   218	
+   219	```text
+   220	k=1: v(c4)>=4, v(c6)>=6, v(Disc)>=12,
+   221	     and [v(c4)<8 or v(c6)<12];
+   222	
+   223	k=2: v(c4)>=8, v(c6)>=12, v(Disc)>=24,
+   224	     and [v(c4)<12 or v(c6)<18].                         (5.2)
+   225	```
+   226	
+   227	The discriminant lower bound follows from
+   228	`c4^3-c6^2=1728 Disc` once the `c4,c6` bounds are imposed; it is a control,
+   229	not a third generator.  The upper disjunction in (5.2) must be implemented as
+   230	a finite principal-open cover, not as another equality.
+   231	
+   232	For `m=3`, all fibre multiplicities remain divisible by three under pullback.
+   233	The plane fibre has total degree three, so it is necessarily `3L`.  After
+   234	constant normalization and `t0=0`, the exact global coefficient family is
+   235	
+   236	```text
+   237	F=x^3+tG1+t^2G2+t^3G3.                                  (5.3)
+   238	```
+   239	
+   240	This is finite-dimensional, not a finite set of orbits.  Normality and
+   241	generic smoothness are open conditions and must remain literal localizations.
+   242	Saturation computes a closure and may reintroduce bad boundary points; every
+   243	survivor must be checked on the declared open and actually minimized.
+   244	
+   245	## 6. Controls, scope, and interface composition
+   246	
+   247	The reviewed diagonal cubics separate discriminant order from total-space
+   248	normality and fibre multiplicity.  The generalized-Hesse control has
+   249	
+   250	```text
+   251	(v(c4),v(c6),v(Disc))=(4,6,24)
+   252	```
+   253	
+   254	but exact level one, not two; its minimal Jacobian has discriminant order 12.
+   255	Thus discriminant order 24 alone is never a level-two certificate.
+   256	
+   257	The theorem-interface composition finds one immediate exact client: the
+   258	separately frozen first-jet packet
+   259	`bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md` reduces the
+   260	triple-line normal chart to two repeated-root first-jet forms.  That packet is
+   261	still provisional under a live Fable review, so none of its eliminations is
+   262	promoted here.  The new upper disjunction (5.2) should be added to its
+   263	successor computation as soon as review closes.
+   264	
+   265	This integration promotes a conditional degree-three surface theorem, not a
+   266	surface-existence theorem.  It does not classify all exceptional
+   267	discrepancies or Kodaira fibres, prove normal/global compatibility of an
+   268	invariant solution, supply the dominant `A2` map, produce a polynomial map,
+   269	or prove or disprove JC2.
+   270	
+   271	## 7. Cheapest decisive successor
+   272	
+   273	Start with the strongest row `m=3,T=2t0`.  In the exact coefficient ring of
+   274	(5.3), impose
+   275	
+   276	```text
+   277	t^8 divides c4,          t^12 divides c6,
+   278	and [t^12 does not divide c4 or t^18 does not divide c6],
+   279	```
+   280	
+   281	on the normal and generic-smooth open.  Use `Disc/t^24` as a control.  Apply
+   282	the CFS minimisation state machine to every survivor; finite-jet
+   283	nonemptiness is not a level or existence certificate.  Then run the other
+   284	three globally normalized rows, keeping the two support points distinct when
+   285	required.  Review remains nonblocking, and any Gröbner or saturation shard
+   286	that ceases to be desk-scale runs on AWS.
+   287	
+   288	<!-- BODY-END -->
+   289	
+   290	## Seal
+   291	
+   292	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   293	  including its terminating newline; this seal is outside the body.
+   294	- Body bytes: `11008`.
+   295	- Body SHA-256:
+   296	  `032a0a7eeeafc42cc53da1216a038740a9f3c797806adc68cc82d94a23f20ed6`.
+   297	- Frozen basis: `32e7338e066753da7bd3e0da93cc750174b293ac`.
+
+web search: 
+web search: arXiv 0908.1741 Cremona Fisher Stoll Minimisation and reduction of 2-, 3- and 4-coverings of elliptic curves PDF
+web search: 
+web search: https://arxiv.org/pdf/0908.1741
+web search: 
+web search: 'Theorem 4.3' in https://arxiv.org/pdf/0908.1741
+web search: 
+web search: https://arxiv.org/pdf/0908.1741
+web search: 
+web search: https://arxiv.org/pdf/0908.1741
+web search: 
+web search: https://arxiv.org/pdf/0908.1741
+web search: 
+web search: 'Lemma 5.4' in https://arxiv.org/pdf/0908.1741
+codex
+The CFS interface is the real load-bearing part. I pulled the primary arXiv source for the cited definitions and theorems because the local packet relies on CFS Theorem 4.3 and Lemma 5.8 rather than deriving them from scratch.
+  ✓ Verify charged file hashes
+  → Read charged mathematical artifacts and replay script
+  • Run replay in normal, -O, and -OO modes
+  • Reconstruct and audit each theorem item
+  • Write the single hostile-review report
+web search: 
+web search: '4.2. Minimisation of 3-coverings'
+web search: 
+web search: https://arxiv.org/pdf/0908.1741
+web search: 
+web search: https://arxiv.org/pdf/0908.1741
+web search: 
+web search: https://arxiv.org/pdf/0908.1741
+  ✓ Verify charged file hashes
+  ✓ Read charged mathematical artifacts and replay script
+  → Run replay in normal, -O, and -OO modes
+  • Reconstruct and audit each theorem item
+  • Write the single hostile-review report
+exec
+/bin/zsh -lc 'tmpdir=$(mktemp -d); python3 ops/d3_halphen_cfs_state_machine_replay.py > "$tmpdir/ordinary.json"; python3 -O ops/d3_halphen_cfs_state_machine_replay.py > "$tmpdir/O.json"; python3 -OO ops/d3_halphen_cfs_state_machine_replay.py > "$tmpdir/OO.json"; cmp "$tmpdir/ordinary.json" "$tmpdir/O.json"; cmp "$tmpdir/ordinary.json" "$tmpdir/OO.json"; wc -c "$tmpdir/ordinary.json"; shasum -a 256 "$tmpdir/ordinary.json"; python3 ops/d3_halphen_cfs_state_machine_replay.py --mutate-cycle-scale > "$tmpdir/mutate.out" 2> "$tmpdir/mutate.err"; printf '"'mutate_status=%s\\n' \""'$?"; sed -n '"'1,20p' \""'$tmpdir/mutate.err"; sed -n '"'1,1p' \""'$tmpdir/ordinary.json"' in /Users/dc/code/math/jc2
+ succeeded in 41ms:
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/tmp.8hMqyWYgYp/ordinary.json
+mutate_status=1
+Traceback (most recent call last):
+  File "/Users/dc/code/math/jc2/ops/d3_halphen_cfs_state_machine_replay.py", line 15, in <module>
+    import sympy as sp
+ModuleNotFoundError: No module named 'sympy'
+
+codex
+The default `python3` cannot import SymPy, so the replay cannot complete in that interpreter. I’m checking for a project-local interpreter before deciding whether the executable evidence is unavailable or only environment-specific.
+exec
+/bin/zsh -lc 'for p in .venv/bin/python venv/bin/python env/bin/python; do if [ -x "$p" ]; then "$p" -c '"'import sys, sympy; print(sys.executable); print(sympy.__version__)'; fi; done" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+codex
+No obvious project virtualenv responded. I’m checking the available Python launchers next; if none have SymPy, I’ll record that the published replay claim is not reproducible in the current environment while still auditing the source algebra by direct reconstruction.
+exec
+/bin/zsh -lc "python -c 'import sys; print(sys.executable); import sympy; print(sympy.__version__)'" in /Users/dc/code/math/jc2
+ exited 127 in 0ms:
+zsh:1: command not found: python
+
+exec
+/bin/zsh -lc "python3.11 -c 'import sys; print(sys.executable); import sympy; print(sympy.__version__)'" in /Users/dc/code/math/jc2
+ exited 127 in 0ms:
+zsh:1: command not found: python3.11
+
+exec
+/bin/zsh -lc "python3.12 -c 'import sys; print(sys.executable); import sympy; print(sympy.__version__)'" in /Users/dc/code/math/jc2
+ exited 1 in 0ms:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'sympy'
+/opt/homebrew/opt/python@3.12/bin/python3.12
+
+exec
+/bin/zsh -lc "uv run python -c 'import sys; print(sys.executable); import sympy; print(sympy.__version__)'" in /Users/dc/code/math/jc2
+ exited 1 in 0ms:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'sympy'
+/Users/dc/.local/share/uv/python/cpython-3.11.11-macos-aarch64-none/bin/python3.11
+
+codex
+The system Python path is missing SymPy, so the exact `python3 ...` command in the artifact is not self-contained here. I’m using `uv run --with sympy==1.14.0` as an isolated interpreter to test the replay logic and the `-O`/`-OO` guard behavior.
+exec
+/bin/zsh -lc 'tmpdir=$(mktemp -d); uv run --with sympy==1.14.0 python ops/d3_halphen_cfs_state_machine_replay.py > "$tmpdir/ordinary.json"; uv run --with sympy==1.14.0 python -O ops/d3_halphen_cfs_state_machine_replay.py > "$tmpdir/O.json"; uv run --with sympy==1.14.0 python -OO ops/d3_halphen_cfs_state_machine_replay.py > "$tmpdir/OO.json"; cmp "$tmpdir/ordinary.json" "$tmpdir/O.json"; cmp "$tmpdir/ordinary.json" "$tmpdir/OO.json"; wc -c "$tmpdir/ordinary.json"; shasum -a 256 "$tmpdir/ordinary.json"; uv run --with sympy==1.14.0 python ops/d3_halphen_cfs_state_machine_replay.py --mutate-cycle-scale > "$tmpdir/mutate.out" 2> "$tmpdir/mutate.err"; printf '"'mutate_status=%s\\n' \""'$?"; sed -n '"'1,20p' \""'$tmpdir/mutate.err"; sed -n '"'1,1p' \""'$tmpdir/ordinary.json"' in /Users/dc/code/math/jc2
+ succeeded in 3441ms:
+    1130 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/tmp.hGqpHa5W2j/ordinary.json
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+52c7b6445a61ae5f518b46aa93d971603b1a0d4d7c1445767c047904c2df701a  /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/tmp.hGqpHa5W2j/ordinary.json
+mutate_status=1
+FAIL:three-line CFS cycle identity failed
+{"ast_assert_nodes":0,"double_root":{"conditions_before_drop":["q2=0","C2=0"],"lowered_reduction":"C3*z**3 + R*x*z**2 + U*y*z**2 + m*x**2*z + q1*x*y*z + x**3 + y**2*z","status":"ELIMINATED_NOT_A_CUBE"},"forced_moves":["L_x","L_y"],"nonzero_second_form_transition":"L_z exact three-cycle","positive_control":{"critical_valuations":{"X2Y":null,"X2Z":2,"X3":0,"XY2":null,"XYZ":null,"XZ2":2,"Y2Z":null,"Y3":1,"YZ2":null,"Z3":2},"generic_cubic_smooth":true,"lowered":"(x+z)^3+t*y^3+t^2*x^2*z","normal_at_generic_central_line":true,"raw":"(x+t*z)^3+t*y^3+t^3*x^2*z","scope":"local_only"},"raw_base_degree":3,"schema":"D3-HALPHEN-CFS-STATE/v1","second_central_form":"z**2*(C2*z + q2*x)","status":"PASS","sympy_version":"1.14.0","triple_root":{"conditions_before_drop":["q2=0","C2=0"],"critical_open":["kappa=0","eta!=0"],"final_reduction":"(kappa*X+eta*z)*z^2","first_cube":["q1=0","U=0","R=3*s^2","C3=s^3"],"first_transverse":"y**3 + y**2*z*(Q021 - q0*s) + y*z**2*(-M111*s + U3 + ell*s**2) + z**3*(-R3*s + V*s**2 - a*s**3)","first_transverse_cube":["3*c=b^2","27*d=b^3"],"normalized_first_jet_shards":["Q=0","Q=y^2"],"s_nonzero":true}}
+
+codex
+The replay logic passes under a SymPy 1.14.0 interpreter, and the three optimization modes are byte-identical with the reported 1130-byte output and SHA-256. The literal default `python3` command fails here because SymPy is not installed, which is an environment reproducibility correction rather than a mathematical contradiction.
+  ✓ Verify charged file hashes
+  ✓ Read charged mathematical artifacts and replay script
+  ✓ Run replay in normal, -O, and -OO modes
+  → Reconstruct and audit each theorem item
+  • Write the single hostile-review report
+codex
+The local algebra in the replay is small enough to recompute directly. I’m now checking the homogenized positive control separately, because its finite-parameter fibres can have singular members that are invisible over the formal field `C((t))`.
+exec
+/bin/zsh -lc "uv run --with sympy==1.14.0 python - <<'PY'
+import sympy as sp
+x,y,z,t,mu=sp.symbols('x y z t mu')
+U=(x+t*z)**3+t*y**3+t**3*x**2*z
+vars=(x,y,z)
+def Hess(P):
+    M=sp.Matrix([[sp.diff(P,a,b) for b in vars] for a in vars])
+    return sp.expand(-sp.Rational(1,2)*M.det())
+HU=Hess(U)
+P=Hess(U+mu*HU)
+coef1=sp.expand(P.coeff(mu,1))
+coef2=sp.expand(P.coeff(mu,2))
+# c4 from x"'^3 coefficient if U x''^3 coeff is 1
+c4=sp.expand(sp.Poly(coef1,x,y,z).coeff_monomial(x**3)/3)
+# c6 from x''^3 coeff of coef2 = 6*c6*U -3*c4*HU; U x3 coeff 1
+h_x3=sp.Poly(HU,x,y,z).coeff_monomial(x**3)
+c6=sp.expand((sp.Poly(coef2,x,y,z).coeff_monomial(x**3)+3*c4*h_x3)/6)
+Delta=sp.factor((c4**3-c6**2)/sp.Integer(1728))
+print('"'HU=', sp.factor(HU))
+print('c4=', sp.factor(c4))
+print('c6=', sp.factor(c6))
+print('Delta=', Delta)
+print('factor c4=', sp.factor(c4))
+print('factor c6=', sp.factor(c6))
+print('degree c4', sp.degree(c4,t), 'ord_t c4', sp.Poly(c4,t).terms()[-1] if c4 else None)
+print('degree Delta', sp.degree(Delta,t), 'factor Delta', sp.factor(Delta))
+PY" in /Users/dc/code/math/jc2
+ succeeded in 117ms:
+HU= 12*t**5*y*(t**2*x**2 - 3*t**2*z**2 + 3*t*x*z + 6*x**2)
+c4= 0
+c6= 216*t**12*(4*t**2 + 27)
+Delta= -27*t**24*(4*t**2 + 27)**2
+factor c4= 0
+factor c6= 216*t**12*(4*t**2 + 27)
+degree c4 -oo ord_t c4 None
+degree Delta 28 factor Delta -27*t**24*(4*t**2 + 27)**2
+
+codex
+The core state-machine algebra is holding up. The corrections I’m carrying into the report are about scope: the first-jet gate remains an input, the `q0=1` normalization needs base-parameter freedom, the replay needs SymPy in the interpreter, and the homogenized control has extra global fibres/singularities that must not be mistaken for the local theorem.
+exec
+/bin/zsh -lc "if [ -e xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md ]; then printf 'exists\\n'; else printf 'absent\\n'; fi" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+absent
+
+codex
+I’m doing one small independent invariant check for the homogenized control rather than relying on fibre-shape guesses. This gives exact base factors for `c6` and the discriminant, so the global successor notes can stay concrete.
+exec
+/bin/zsh -lc "uv run --with sympy==1.14.0 python - <<'PY'
+import sympy as sp
+x,y,z,S,T=sp.symbols('x y z S T')
+G=(S*x+T*z)**3+T*S**2*y**3+T**3*x**2*z
+partials=[sp.diff(G,v) for v in (x,y,z,S,T)]
+print('Gx=',sp.factor(partials[0]))
+print('Gy=',sp.factor(partials[1]))
+print('Gz=',sp.factor(partials[2]))
+print('GS=',sp.factor(partials[3]))
+print('GT=',sp.factor(partials[4]))
+# finite chart S=1,z=1 singular total equations reduced by hand certificates
+xv,t,r=sp.symbols('xv t r')
+F=(xv+t)**3+t*y**3+t**3*xv**2
+Fx=sp.diff(F,xv); Fy=sp.diff(F,y); Ft=sp.diff(F,t)
+print('finite Fx at x=t(r-1),y=0:', sp.factor(Fx.subs({xv:t*(r-1), y:0})/t**2))
+print('finite Fz-fx proxy used for fibre singular:', 'see report')
+print('finite Ft at x=t(r-1),y=0:', sp.factor(Ft.subs({xv:t*(r-1), y:0})/t**2))
+# infinity local equation y=1,T=1,u=S
+u=sp.symbols('u')
+finf=sp.expand(G.subs({S:u,T:1,y:1}))
+print('infinity local:', sp.factor(finf))
+print('infinity principal terms:', sp.Poly(finf, u,x,z).terms())
+PY" in /Users/dc/code/math/jc2
+ succeeded in 93ms:
+Gx= 3*S**3*x**2 + 6*S**2*T*x*z + 3*S*T**2*z**2 + 2*T**3*x*z
+Gy= 3*S**2*T*y**2
+Gz= T*(3*S**2*x**2 + 6*S*T*x*z + T**2*x**2 + 3*T**2*z**2)
+GS= 3*S**2*x**3 + 6*S*T*x**2*z + 2*S*T*y**3 + 3*T**2*x*z**2
+GT= 3*S**2*x**2*z + S**2*y**3 + 6*S*T*x*z**2 + 3*T**2*x**2*z + 3*T**2*z**3
+finite Fx at x=t(r-1),y=0: 3*r**2 + 2*r*t**2 - 2*t**2
+finite Fz-fx proxy used for fibre singular: see report
+finite Ft at x=t(r-1),y=0: 3*(r**2*t**2 + r**2 - 2*r*t**2 + t**2)
+infinity local: u**3*x**3 + 3*u**2*x**2*z + u**2 + 3*u*x*z**2 + x**2*z + z**3
+infinity principal terms: [((3, 3, 0), 1), ((2, 2, 1), 3), ((2, 0, 0), 1), ((1, 1, 2), 3), ((0, 2, 1), 1), ((0, 0, 3), 1)]
+
+web search: 
+web search: Liu Lorenzini Raynaud Theorem 3.1 Hodge lattice torsors Neron differential lattice 2018 corrigendum
+web search: 
+web search: https://www.cambridge.org/core/journals/journal-of-the-institute-of-mathematics-of-jussieu/article/values-of-zeta-functions-of-arithmetic-surfaces-at-s1/9BAF5F5B623566BF815941227D0D4A65
+web search: 
+web search: https://arxiv.org/pdf/0908.1741
+codex
+I have enough to write the report. I’m going to create only the requested markdown file, with itemized statuses, a maximum-safe theorem, dependencies, and the global successor notes; no seal block and no exit-price line.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md
+diff --git a/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..e63e20d4d2afbcc0daf0d7c130a39dc34e5fe898
+--- /dev/null
++++ b/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,480 @@
++# Hostile review: D3 Halphen CFS state machine
++
++Date: 2026-08-30  
++Reviewer: GPT-5.5 hostile review pass  
++Scope: only the six charged files and the CFS primary source were used; no
++`jc2-lean`, q6 report, sibling prompt, sibling log, sibling report, sibling
++receipt, Git state, or canonical artifact was inspected or modified.
++
++## Custody
++
++The six charged SHA-256 hashes match exactly:
++
++```text
++be42d2cf894d92928978935381028dbf5ae7ba1d3598a3474d7c1460a7b6dee9
++  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md
++148ddb5e532b28a23361866f671984bd22a1b395a836484043f6f82c6001c1bf
++  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md.artifact.json
++2570d44ec3c31b4b559299099be196dd52b13b7ba1cfe4539043f96fc823ee9c
++  ops/d3_halphen_cfs_state_machine_replay.py
++7e73b7a6ebd1c4f6529c8c4502e150de1a8b4e4664d03323bfc8631b03ab08c5
++  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md
++a389b0a700a96f1ac68f3123f19fc7fa502e31b305e0973f164e50c5d6c585bd
++  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md.artifact.json
++95f2f9fc72d6560749aef090ce91dbd0ef3398ed705bcede69258425ad4ca9de
++  xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md
++```
++
++Primary source used for CFS assertions: J. E. Cremona, T. A. Fisher,
++M. Stoll, *Minimisation and reduction of 2-, 3- and 4-coverings of elliptic
++curves*, arXiv:0908.1741, especially Lemma 3.2, Theorem 3.5,
++Theorem 4.3, Definition 5.1, Lemmas 5.2--5.4, Proposition 5.6, and
++Lemma 5.8.  Authoritative restatement used for the LLR Lie-lattice theorem:
++Cambridge Core, *Values of zeta functions of arithmetic surfaces at s=1*,
++Theorem 33 citing Liu--Lorenzini--Raynaud Theorem 3.1.
++
++No exit-price assertion is made; receipt status `ABSENT` is expected.
++
++## Itemized audit
++
++1. **CONFIRM_WITH_CORRECTIONS: theorem interface.**
++
++The exact plane level-two input is not proved by the state-machine packet.  It
++is supplied by the promoted coordinator integration: the four-row table gives
++the one-point triple-fibre row exact local CFS level `2`
++(`xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md:29`),
++and Section 5 asserts the LLR/Fisher/CFS identification making the local CFS
++level exactly the Hodge/GR length
++(`...coordinator-integration-sol56-20260830.md:203`).
++
++The minimal Halphen floor-one input is CFS, not the Hodge table alone.  CFS
++Theorem 3.5 says a `K^sh`-insoluble non-singular degree-three model has minimal
++level at least one and exactly one when residue characteristic does not divide
++three; CFS Proposition 5.6 and Lemma 5.4 give the critical-model route to that
++statement.  The strict-Henselian insolubility itself is a promoted Halphen-row
++input, recorded in the coordinator theorem as the locally insoluble triple
++fibre (`...coordinator-integration-sol56-20260830.md:203`) and restated in the
++state-machine inputs
++(`xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md:67`).
++
++CFS Theorem 4.3 applies over the complex DVR once the generic plane cubic is
++non-singular and `v(F)=0`: it does not assume solubility, and completeness is
++not an extra hypothesis in the theorem statement.  Lemma 5.8 does use
++`K^sh`-insolubility and Hensel lifting; over `C((t))`, residue characteristic is
++zero and the residue field is algebraically closed.  Correction: the safe local
++theorem must explicitly include generic non-singularity and strict-Henselian
++insolubility as dependencies.  They are not consequences of the coefficient
++display alone.
++
++2. **CONFIRMED: raw first-jet branches.**
++
++The first-jet gate is used only as a first-order gate.  It formally removes
++`a x^3` and `x^2L` to first order
++(`xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md:63`),
++but it warns that this parameter-dependent gauge creates determined higher
++`t`-powers and no new parameters (`...first-jet-invariant-gate...md:70`).  The
++state-machine packet correctly returns to the raw degree-three coefficient
++model
++
++```text
++F=x^3+tF1+t^2F2+t^3F3,
++F1=a x^3+ell x^2y+m x^2z+x(q0 y^2+q1 yz+q2 z^2)+H(y,z).
++```
++
++It keeps `a,ell,m` and raw `F2,F3` coefficients.  The provisional gate leaves
++exactly `H=y^2z,q2=0` and `H=y^3`
++(`...first-jet-invariant-gate...md:153`, `...first-jet-invariant-gate...md:160`).
++No later argument treats the gauged `O(t^2)` terms as free or discards raw
++higher coefficients.
++
++3. **CONFIRMED: forced line cycle.**
++
++For the raw model,
++
++```text
++L_x(F)=t^-1 F(tx,y,z),
++L_y L_x(F)=t^-2 F(tx,ty,z).
++```
++
++The first reduction is `H`; for both `y^2z` and `y^3` its singular locus is the
++line `y=0`.  The second reduction is exactly
++
++```text
++z^2(q2*x+C2*z),       C2=[z^3]F2.
++```
++
++If this form is nonzero, its singular locus is exactly `z=0`.  The next CFS
++line move gives
++
++```text
++L_z L_y L_x(F)=t^-3 F(tx,ty,tz)=F,
++```
++
++using only spatial homogeneity of every `Fi`.
++
++The contradiction with CFS Theorem 4.3 is legitimate.  The plane model has
++level two while its minimal floor is one, so it is nonminimal.  Theorem 4.3
++says the ternary-cubic minimisation procedure reaches `v(F)>=1` within at most
++four iterations for a nonminimal positive-level model.  The nonzero central
++form would put the algorithm in a three-cycle with `v(F)=0` forever.  There is
++no alternate singular locus in these reductions, and coordinate choices moving
++the unique singular line differ only by integral equivalence.  Therefore
++
++```text
++q2=0,      C2=0
++```
++
++is forced.
++
++4. **CONFIRMED: level drop and double-root death.**
++
++Once `q2=C2=0`, the second moved model is divisible by `t`, and
++
++```text
++M=t^-1 L_y L_x(F)=t^-3 F(tx,ty,z)
++```
++
++is integral.  Since line moves preserve level and division by the common
++coefficient factor drops level by one, `M` has level one.  The promoted minimal
++floor is also one, so `M` is minimal; `K^sh`-insolubility is preserved by
++`K`-equivalence.  CFS Lemma 5.8 then forces the reduction of `M` to be a
++nonzero scalar times a cube.
++
++In the double-root branch,
++
++```text
++M0=x^3+m x^2z+q1 xyz+y^2z+R xz^2+U yz^2+C3 z^3.
++```
++
++Over the residue field `C`, a scalar cube with `x^3` coefficient one can be
++written `(x+alpha y+beta z)^3`.  The zero `x^2y` coefficient gives
++`alpha=0`; then the `y^2z` coefficient is zero, contradicting the displayed
++coefficient one.  There is no missed scalar cube or residue-field loophole,
++and no nonminimal level-one loophole because level one is the minimal floor.
++
++5. **CONFIRMED: triple-root first cube.**
++
++For `H=y^3`,
++
++```text
++M0=x^3+m x^2z+q1 xyz+R xz^2+U yz^2+C3 z^3.
++```
++
++Comparing with `(x+alpha y+beta z)^3`, the zero `x^2y` coefficient again gives
++`alpha=0`.  Hence `q1=U=0`, while `m=3 beta`, `R=3 beta^2`, and `C3=beta^3`.
++Writing `beta=s`,
++
++```text
++q1=0,      U=0,      R=3s^2,      C3=s^3,      m=3s.
++```
++
++Together with `q2=0`, this leaves `Q=q0 y^2`.  Under the stabilizer of
++`G=y^3`, this has only the zero orbit and the nonzero `y^2` type, subject to
++the normalization caveat in item 7.
++
++6. **CONFIRMED: critical flags.**
++
++After imposing the first cube equations and setting `X=x+s z`, the first line
++move along `X=0` has transverse reduction
++
++```text
++y^3+b y^2z+c yz^2+d z^3
++```
++
++with
++
++```text
++b=Q021-s q0,
++c=U3+s^2 ell-s M111,
++d=-s^3 a+s^2 V-s R3.
++```
++
++It is a cube exactly when
++
++```text
++3c=b^2,      27d=b^3.
++```
++
++Putting `lambda=b/3` and shifting `Y=y+lambda z`, the intermediate coefficient
++of `Y z^2` in the next central form is
++
++```text
++theta=c-2 lambda b+3 lambda^2,
++```
++
++which vanishes from `3c=b^2`.  The final central reduction is exactly
++
++```text
++z^2(kappa X+eta z)
++```
++
++where
++
++```text
++kappa = 3a s^2+2ell s lambda+q0 lambda^2
++        -2V s-M111 lambda+R3,
++
++eta = -A s^3-P s^2lambda-T s lambda^2-B lambda^3
++      +V3 s^2+M3 s lambda+Q3 lambda^2.
++```
++
++Since the next model is still minimal, level one, and `K^sh`-insoluble, CFS
++Lemma 5.8 forces this reduction to be a nonzero cube.  For `z^2(kappa X+eta z)`
++that is precisely
++
++```text
++kappa=0,      eta!=0.
++```
++
++These conditions force `s!=0`: if `s=0`, then `d=0`, so `b=0` and
++`lambda=0`; then `kappa=R3`, so `kappa=0` gives `R3=0`, and every term of
++`eta` vanishes, contradicting `eta!=0`.
++
++7. **CONFIRM_WITH_CORRECTIONS: constant normalizations.**
++
++The normalization `m=3, ell=0` is a plane-coordinate normalization on the
++`s!=0` chart.  Scaling `z` makes `m=3`, and then the constant shear
++`z -> z-(ell/3)y` kills `ell` while preserving `H=y^3` and `Q=q0y^2`.
++
++The further normalization of a nonzero `q0` to `1` is not a pure plane
++stabilizer normalization if the already normalized coefficients of `t y^3` and
++`t 3x^2z` are to remain fixed.  It uses local base-parameter freedom:
++
++```text
++t_old=q0^-3 t,      y_old=q0 y,      z_old=q0^3 z.
++```
++
++Therefore the literal shard `q0=1` is legitimate only in a local chart where
++the base parameter may be rescaled by a nonzero constant.  If a global
++coordinate or marked base datum is frozen, the honest nonzero shard is the
++principal open `q0!=0`, not the equation `q0=1`.  The producer says this in
++Section 4, but the theorem headline must be read with that qualification.
++
++8. **CONFIRM_WITH_CORRECTIONS: positive control and global closure.**
++
++For
++
++```text
++F=(x+t z)^3+t y^3+t^3x^2z,
++```
++
++the forced lowered model is
++
++```text
++M=(x+z)^3+t y^3+t^2x^2z.
++```
++
++In `X=x+z`,
++
++```text
++M=X^3+t y^3+t^2(X-z)^2z.
++```
++
++The CFS critical valuations are exactly
++
++```text
++X^3:0, y^3:1, X^2z:2, Xz^2:2, z^3:2,
++all other ternary-cubic coefficients: infinity.
++```
++
++This is CFS critical in residue characteristic zero, so `M` has level one and
++the original `F` has exact level two.  The generic cubic over `C((t))` is
++smooth: `F_y` forces `y=0`; at `z=0`, `F_x` is nonzero; with `z=1` and
++`x=t(r-1)`, the two remaining fibre derivatives are
++
++```text
++3r^2+2t^2(r-1),      3r^2+t^2(r-1)^2,
++```
++
++whose difference is `t^2(r-1)(r-3)`, and neither `r=1` nor `r=3` solves the
++first expression in `C((t))`.  Local normality follows from the hypersurface
++being `S2` and regular at the generic point of the central line, where
++`F_t|_(t=x=0)=y^3` is nonzero generically.
++
++For the separate global homogenization
++
++```text
++G=(S*x+T*z)^3+T*S^2*y^3+T^3*x^2z
++```
++
++in `P2 x P1`, the following cheap exact facts hold.
++
++- `G` is bidegree `(3,3)`.
++- The total hypersurface is normal: the singular locus is finite.
++- The total singular points are
++  `([0:0:1],[1:0])` and `([0:1:0],[0:1])`.
++- At `([0:0:1],[1:0])`, with `S=z=1`, the local equation is
++  `(x+t)^3+t y^3+t^3x^2`; it is isolated and not Du Val by multiplicity.
++- At `([0:1:0],[0:1])`, with `T=y=1` and `u=S`, the local equation is
++  `u^2+x^2z+z^3+3uxz^2+3u^2x^2z+u^3x^3`; the quadratic variable splits and
++  the principal ADE type is `D4`, so this point is Du Val.
++- On the affine chart `S=1`, direct Hessian-pencilling gives
++  `c4=0`, `c6=216 t^12(4t^2+27)`, and
++  `Delta=-27 t^24(4t^2+27)^2`.
++- Homogenized:
++
++```text
++c4=0,
++c6=216 S^4 T^12(4T^2+27S^2),
++Delta=-27 S^8 T^24(4T^2+27S^2)^2.
++```
++
++- Removing the exact level-two factor at `T=0` gives the Jacobian discriminant
++  proportional to `S^8(4T^2+27S^2)^2`: smooth Jacobian at `T=0`, two `j=0`
++  finite additive fibres with discriminant order `2`, and a `j=0` fibre at
++  `S=0` with orders compatible with type `IV*`.
++- The plane fibre at `T=0` is the triple line `x^3`; the fibre at `S=0` is
++  `z(z^2+x^2)`, three concurrent lines; the two finite singular plane fibres
++  occur at `4T^2+27S^2=0` and are cuspidal.  The total surface is smooth at
++  those two cuspidal fibre points because the base derivative is nonzero there.
++
++These facts are compatible with the promoted four-row surface theorem: the
++extra finite cuspidal fibres are not total-space singularities, and the
++infinity singularity is Du Val, so neither is an immediate extra GR-defect
++point.  This is not a proof of the binding dominant-`A2` interface and not a
++polynomial map.  Cheap rationality was not certified by the local state
++machine; the closure is a plausible index-three Halphen candidate, but a
++resolution or explicit birational parametrization is still required for a
++standalone rationality certificate.
++
++9. **CONFIRM_WITH_CORRECTIONS: replay.**
++
++The literal default command
++
++```text
++python3 ops/d3_halphen_cfs_state_machine_replay.py
++```
++
++fails in this environment because `python3` cannot import `sympy`.  Under an
++isolated SymPy 1.14.0 interpreter,
++
++```text
++uv run --with sympy==1.14.0 python ...
++uv run --with sympy==1.14.0 python -O ...
++uv run --with sympy==1.14.0 python -OO ...
++```
++
++the three outputs are byte-identical, 1130 bytes, with SHA-256
++
++```text
++52c7b6445a61ae5f518b46aa93d971603b1a0d4d7c1445767c047904c2df701a.
++```
++
++The mutation
++
++```text
++uv run --with sympy==1.14.0 python ops/d3_halphen_cfs_state_machine_replay.py --mutate-cycle-scale
++```
++
++exits nonzero with
++
++```text
++FAIL:three-line CFS cycle identity failed
++```
++
++The AST guard is real: the script parses its own source and counts zero
++`ast.Assert` nodes, so `-O` and `-OO` do not remove checks.  The replay derives
++the coefficient identities by symbolic expansion against expected formulas; it
++does not derive the CFS theorems, the Hodge theorem, strict-Henselian
++insolubility, or the first-jet gate.  It also checks only a concise derivative
++certificate for local normality, not a full global singular-locus calculation.
++Those are acceptable boundaries, but the artifact should not be read as
++self-contained executable proof of the theorem interface.
++
++10. **CONFIRMED: correct price.**
++
++The surviving result is a necessary local constructible gate.  It is not global
++attainment, not an arc theorem, not a dominant `A2` map, not a counterexample,
++and not JC2.  The positive control proves nonemptiness of the local state
++machine and shows that CFS minimisation plus raw base degree three alone does
++not kill the Halphen row.
++
++The cheapest decisive global obstruction, if this local theorem is promoted,
++is no longer another local CFS move.  Start with the homogenized positive
++control and then with the two normalized shards.  Compute the global
++resolution/GR trace and binding polarization over the declared open, verify
++that the base GR divisor is exactly the promoted length-two subscheme and that
++all other singularities are Du Val or total-smooth, and only then test the
++dominant-rational-`A2` interface.  If the positive control already fails that
++global interface, it is the cheapest obstruction; if it passes, it becomes the
++sharpest negative control for eliminating the remaining constructible family.
++
++## Maximum-safe theorem
++
++Let `K=C((t))` or the corresponding complex DVR fraction field, and let
++
++```text
++F=x^3+tF1+t^2F2+t^3F3
++```
++
++be a raw spatially homogeneous ternary cubic with non-singular generic fibre,
++central reduction `x^3`, exact CFS level two, and `K^sh`-insoluble minimal
++floor of level one.  Assume the provisional first-jet gate leaves only the two
++branches
++
++```text
++H=y^2z, q2=0;      or      H=y^3.
++```
++
++Then the double-root branch is empty.  In the triple-root branch the following
++conditions are necessary:
++
++```text
++q2=0, C2=0,
++q1=0, U=0, R=3s^2, C3=s^3, m=3s,
++s!=0,
++```
++
++and, after `X=x+s z`,
++
++```text
++b=Q021-s q0,
++c=U3+s^2 ell-s M111,
++d=-s^3 a+s^2 V-s R3,
++3c=b^2,
++27d=b^3,
++lambda=b/3,
++kappa=0,
++eta!=0,
++```
++
++with
++
++```text
++kappa = 3a s^2+2ell s lambda+q0 lambda^2
++        -2V s-M111 lambda+R3,
++
++eta = -A s^3-P s^2lambda-T s lambda^2-B lambda^3
++      +V3 s^2+M3 s lambda+Q3 lambda^2.
++```
++
++On the local coordinate/base-rescaling chart, this reduces to normalized first
++jet shards `m=3, ell=0, q0=0` and `m=3, ell=0, q0=1`.  With a globally frozen
++base coordinate, the second shard is instead the principal open `q0!=0`.
++
++The family
++
++```text
++F=(x+t z)^3+t y^3+t^3x^2z
++```
++
++is an exact local survivor of this necessary gate.  No global surface,
++dominant affine-plane parametrization, polynomial map, counterexample, or JC2
++conclusion follows from the local theorem.
++
++## Exact dependencies
++
++- Charged state-machine producer:
++  `xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md`.
++- Charged first-jet gate, still provisional:
++  `xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md`.
++- Charged promoted coordinator integration:
++  `xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md`.
++- CFS level definition and minimisation source:
++  `https://arxiv.org/pdf/0908.1741`.
++- LLR Lie-lattice theorem as used by the promoted integration:
++  `https://www.cambridge.org/core/journals/journal-of-the-institute-of-mathematics-of-jussieu/article/values-of-zeta-functions-of-arithmetic-surfaces-at-s1/9BAF5F5B623566BF815941227D0D4A65`.
++- Interpreter dependency for replay reproduction in this environment:
++  SymPy 1.14.0 is required; default `python3` here does not provide it.
++
++<!-- BODY-END -->
+
+diff --git a/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..e63e20d4d2afbcc0daf0d7c130a39dc34e5fe898
+--- /dev/null
++++ b/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,480 @@
++# Hostile review: D3 Halphen CFS state machine
++
++Date: 2026-08-30  
++Reviewer: GPT-5.5 hostile review pass  
++Scope: only the six charged files and the CFS primary source were used; no
++`jc2-lean`, q6 report, sibling prompt, sibling log, sibling report, sibling
++receipt, Git state, or canonical artifact was inspected or modified.
++
++## Custody
++
++The six charged SHA-256 hashes match exactly:
++
++```text
++be42d2cf894d92928978935381028dbf5ae7ba1d3598a3474d7c1460a7b6dee9
++  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md
++148ddb5e532b28a23361866f671984bd22a1b395a836484043f6f82c6001c1bf
++  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md.artifact.json
++2570d44ec3c31b4b559299099be196dd52b13b7ba1cfe4539043f96fc823ee9c
++  ops/d3_halphen_cfs_state_machine_replay.py
++7e73b7a6ebd1c4f6529c8c4502e150de1a8b4e4664d03323bfc8631b03ab08c5
++  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md
++a389b0a700a96f1ac68f3123f19fc7fa502e31b305e0973f164e50c5d6c585bd
++  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md.artifact.json
++95f2f9fc72d6560749aef090ce91dbd0ef3398ed705bcede69258425ad4ca9de
++  xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md
++```
++
++Primary source used for CFS assertions: J. E. Cremona, T. A. Fisher,
++M. Stoll, *Minimisation and reduction of 2-, 3- and 4-coverings of elliptic
++curves*, arXiv:0908.1741, especially Lemma 3.2, Theorem 3.5,
++Theorem 4.3, Definition 5.1, Lemmas 5.2--5.4, Proposition 5.6, and
++Lemma 5.8.  Authoritative restatement used for the LLR Lie-lattice theorem:
++Cambridge Core, *Values of zeta functions of arithmetic surfaces at s=1*,
++Theorem 33 citing Liu--Lorenzini--Raynaud Theorem 3.1.
++
++No exit-price assertion is made; receipt status `ABSENT` is expected.
++
++## Itemized audit
++
++1. **CONFIRM_WITH_CORRECTIONS: theorem interface.**
++
++The exact plane level-two input is not proved by the state-machine packet.  It
++is supplied by the promoted coordinator integration: the four-row table gives
++the one-point triple-fibre row exact local CFS level `2`
++(`xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md:29`),
++and Section 5 asserts the LLR/Fisher/CFS identification making the local CFS
++level exactly the Hodge/GR length
++(`...coordinator-integration-sol56-20260830.md:203`).
++
++The minimal Halphen floor-one input is CFS, not the Hodge table alone.  CFS
++Theorem 3.5 says a `K^sh`-insoluble non-singular degree-three model has minimal
++level at least one and exactly one when residue characteristic does not divide
++three; CFS Proposition 5.6 and Lemma 5.4 give the critical-model route to that
++statement.  The strict-Henselian insolubility itself is a promoted Halphen-row
++input, recorded in the coordinator theorem as the locally insoluble triple
++fibre (`...coordinator-integration-sol56-20260830.md:203`) and restated in the
++state-machine inputs
++(`xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md:67`).
++
++CFS Theorem 4.3 applies over the complex DVR once the generic plane cubic is
++non-singular and `v(F)=0`: it does not assume solubility, and completeness is
++not an extra hypothesis in the theorem statement.  Lemma 5.8 does use
++`K^sh`-insolubility and Hensel lifting; over `C((t))`, residue characteristic is
++zero and the residue field is algebraically closed.  Correction: the safe local
++theorem must explicitly include generic non-singularity and strict-Henselian
++insolubility as dependencies.  They are not consequences of the coefficient
++display alone.
++
++2. **CONFIRMED: raw first-jet branches.**
++
++The first-jet gate is used only as a first-order gate.  It formally removes
++`a x^3` and `x^2L` to first order
++(`xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md:63`),
++but it warns that this parameter-dependent gauge creates determined higher
++`t`-powers and no new parameters (`...first-jet-invariant-gate...md:70`).  The
++state-machine packet correctly returns to the raw degree-three coefficient
++model
++
++```text
++F=x^3+tF1+t^2F2+t^3F3,
++F1=a x^3+ell x^2y+m x^2z+x(q0 y^2+q1 yz+q2 z^2)+H(y,z).
++```
++
++It keeps `a,ell,m` and raw `F2,F3` coefficients.  The provisional gate leaves
++exactly `H=y^2z,q2=0` and `H=y^3`
++(`...first-jet-invariant-gate...md:153`, `...first-jet-invariant-gate...md:160`).
++No later argument treats the gauged `O(t^2)` terms as free or discards raw
++higher coefficients.
++
++3. **CONFIRMED: forced line cycle.**
++
++For the raw model,
++
++```text
++L_x(F)=t^-1 F(tx,y,z),
++L_y L_x(F)=t^-2 F(tx,ty,z).
++```
++
++The first reduction is `H`; for both `y^2z` and `y^3` its singular locus is the
++line `y=0`.  The second reduction is exactly
++
++```text
++z^2(q2*x+C2*z),       C2=[z^3]F2.
++```
++
++If this form is nonzero, its singular locus is exactly `z=0`.  The next CFS
++line move gives
++
++```text
++L_z L_y L_x(F)=t^-3 F(tx,ty,tz)=F,
++```
++
++using only spatial homogeneity of every `Fi`.
++
++The contradiction with CFS Theorem 4.3 is legitimate.  The plane model has
++level two while its minimal floor is one, so it is nonminimal.  Theorem 4.3
++says the ternary-cubic minimisation procedure reaches `v(F)>=1` within at most
++four iterations for a nonminimal positive-level model.  The nonzero central
++form would put the algorithm in a three-cycle with `v(F)=0` forever.  There is
++no alternate singular locus in these reductions, and coordinate choices moving
++the unique singular line differ only by integral equivalence.  Therefore
++
++```text
++q2=0,      C2=0
++```
++
++is forced.
++
++4. **CONFIRMED: level drop and double-root death.**
++
++Once `q2=C2=0`, the second moved model is divisible by `t`, and
++
++```text
++M=t^-1 L_y L_x(F)=t^-3 F(tx,ty,z)
++```
++
++is integral.  Since line moves preserve level and division by the common
++coefficient factor drops level by one, `M` has level one.  The promoted minimal
++floor is also one, so `M` is minimal; `K^sh`-insolubility is preserved by
++`K`-equivalence.  CFS Lemma 5.8 then forces the reduction of `M` to be a
++nonzero scalar times a cube.
++
++In the double-root branch,
++
++```text
++M0=x^3+m x^2z+q1 xyz+y^2z+R xz^2+U yz^2+C3 z^3.
++```
++
++Over the residue field `C`, a scalar cube with `x^3` coefficient one can be
++written `(x+alpha y+beta z)^3`.  The zero `x^2y` coefficient gives
++`alpha=0`; then the `y^2z` coefficient is zero, contradicting the displayed
++coefficient one.  There is no missed scalar cube or residue-field loophole,
++and no nonminimal level-one loophole because level one is the minimal floor.
++
++5. **CONFIRMED: triple-root first cube.**
++
++For `H=y^3`,
++
++```text
++M0=x^3+m x^2z+q1 xyz+R xz^2+U yz^2+C3 z^3.
++```
++
++Comparing with `(x+alpha y+beta z)^3`, the zero `x^2y` coefficient again gives
++`alpha=0`.  Hence `q1=U=0`, while `m=3 beta`, `R=3 beta^2`, and `C3=beta^3`.
++Writing `beta=s`,
++
++```text
++q1=0,      U=0,      R=3s^2,      C3=s^3,      m=3s.
++```
++
++Together with `q2=0`, this leaves `Q=q0 y^2`.  Under the stabilizer of
++`G=y^3`, this has only the zero orbit and the nonzero `y^2` type, subject to
++the normalization caveat in item 7.
++
++6. **CONFIRMED: critical flags.**
++
++After imposing the first cube equations and setting `X=x+s z`, the first line
++move along `X=0` has transverse reduction
++
++```text
++y^3+b y^2z+c yz^2+d z^3
++```
++
++with
++
++```text
++b=Q021-s q0,
++c=U3+s^2 ell-s M111,
++d=-s^3 a+s^2 V-s R3.
++```
++
++It is a cube exactly when
++
++```text
++3c=b^2,      27d=b^3.
++```
++
++Putting `lambda=b/3` and shifting `Y=y+lambda z`, the intermediate coefficient
++of `Y z^2` in the next central form is
++
++```text
++theta=c-2 lambda b+3 lambda^2,
++```
++
++which vanishes from `3c=b^2`.  The final central reduction is exactly
++
++```text
++z^2(kappa X+eta z)
++```
++
++where
++
++```text
++kappa = 3a s^2+2ell s lambda+q0 lambda^2
++        -2V s-M111 lambda+R3,
++
++eta = -A s^3-P s^2lambda-T s lambda^2-B lambda^3
++      +V3 s^2+M3 s lambda+Q3 lambda^2.
++```
++
++Since the next model is still minimal, level one, and `K^sh`-insoluble, CFS
++Lemma 5.8 forces this reduction to be a nonzero cube.  For `z^2(kappa X+eta z)`
++that is precisely
++
++```text
++kappa=0,      eta!=0.
++```
++
++These conditions force `s!=0`: if `s=0`, then `d=0`, so `b=0` and
++`lambda=0`; then `kappa=R3`, so `kappa=0` gives `R3=0`, and every term of
++`eta` vanishes, contradicting `eta!=0`.
++
++7. **CONFIRM_WITH_CORRECTIONS: constant normalizations.**
++
++The normalization `m=3, ell=0` is a plane-coordinate normalization on the
++`s!=0` chart.  Scaling `z` makes `m=3`, and then the constant shear
++`z -> z-(ell/3)y` kills `ell` while preserving `H=y^3` and `Q=q0y^2`.
++
++The further normalization of a nonzero `q0` to `1` is not a pure plane
++stabilizer normalization if the already normalized coefficients of `t y^3` and
++`t 3x^2z` are to remain fixed.  It uses local base-parameter freedom:
++
++```text
++t_old=q0^-3 t,      y_old=q0 y,      z_old=q0^3 z.
++```
++
++Therefore the literal shard `q0=1` is legitimate only in a local chart where
++the base parameter may be rescaled by a nonzero constant.  If a global
++coordinate or marked base datum is frozen, the honest nonzero shard is the
++principal open `q0!=0`, not the equation `q0=1`.  The producer says this in
++Section 4, but the theorem headline must be read with that qualification.
++
++8. **CONFIRM_WITH_CORRECTIONS: positive control and global closure.**
++
++For
++
++```text
++F=(x+t z)^3+t y^3+t^3x^2z,
++```
++
++the forced lowered model is
++
++```text
++M=(x+z)^3+t y^3+t^2x^2z.
++```
++
++In `X=x+z`,
++
++```text
++M=X^3+t y^3+t^2(X-z)^2z.
++```
++
++The CFS critical valuations are exactly
++
++```text
++X^3:0, y^3:1, X^2z:2, Xz^2:2, z^3:2,
++all other ternary-cubic coefficients: infinity.
++```
++
++This is CFS critical in residue characteristic zero, so `M` has level one and
++the original `F` has exact level two.  The generic cubic over `C((t))` is
++smooth: `F_y` forces `y=0`; at `z=0`, `F_x` is nonzero; with `z=1` and
++`x=t(r-1)`, the two remaining fibre derivatives are
++
++```text
++3r^2+2t^2(r-1),      3r^2+t^2(r-1)^2,
++```
++
++whose difference is `t^2(r-1)(r-3)`, and neither `r=1` nor `r=3` solves the
++first expression in `C((t))`.  Local normality follows from the hypersurface
++being `S2` and regular at the generic point of the central line, where
++`F_t|_(t=x=0)=y^3` is nonzero generically.
++
++For the separate global homogenization
++
++```text
++G=(S*x+T*z)^3+T*S^2*y^3+T^3*x^2z
++```
++
++in `P2 x P1`, the following cheap exact facts hold.
++
++- `G` is bidegree `(3,3)`.
++- The total hypersurface is normal: the singular locus is finite.
++- The total singular points are
++  `([0:0:1],[1:0])` and `([0:1:0],[0:1])`.
++- At `([0:0:1],[1:0])`, with `S=z=1`, the local equation is
++  `(x+t)^3+t y^3+t^3x^2`; it is isolated and not Du Val by multiplicity.
++- At `([0:1:0],[0:1])`, with `T=y=1` and `u=S`, the local equation is
++  `u^2+x^2z+z^3+3uxz^2+3u^2x^2z+u^3x^3`; the quadratic variable splits and
++  the principal ADE type is `D4`, so this point is Du Val.
++- On the affine chart `S=1`, direct Hessian-pencilling gives
++  `c4=0`, `c6=216 t^12(4t^2+27)`, and
++  `Delta=-27 t^24(4t^2+27)^2`.
++- Homogenized:
++
++```text
++c4=0,
++c6=216 S^4 T^12(4T^2+27S^2),
++Delta=-27 S^8 T^24(4T^2+27S^2)^2.
++```
++
++- Removing the exact level-two factor at `T=0` gives the Jacobian discriminant
++  proportional to `S^8(4T^2+27S^2)^2`: smooth Jacobian at `T=0`, two `j=0`
++  finite additive fibres with discriminant order `2`, and a `j=0` fibre at
++  `S=0` with orders compatible with type `IV*`.
++- The plane fibre at `T=0` is the triple line `x^3`; the fibre at `S=0` is
++  `z(z^2+x^2)`, three concurrent lines; the two finite singular plane fibres
++  occur at `4T^2+27S^2=0` and are cuspidal.  The total surface is smooth at
++  those two cuspidal fibre points because the base derivative is nonzero there.
++
++These facts are compatible with the promoted four-row surface theorem: the
++extra finite cuspidal fibres are not total-space singularities, and the
++infinity singularity is Du Val, so neither is an immediate extra GR-defect
++point.  This is not a proof of the binding dominant-`A2` interface and not a
++polynomial map.  Cheap rationality was not certified by the local state
++machine; the closure is a plausible index-three Halphen candidate, but a
++resolution or explicit birational parametrization is still required for a
++standalone rationality certificate.
++
++9. **CONFIRM_WITH_CORRECTIONS: replay.**
++
++The literal default command
++
++```text
++python3 ops/d3_halphen_cfs_state_machine_replay.py
++```
++
++fails in this environment because `python3` cannot import `sympy`.  Under an
++isolated SymPy 1.14.0 interpreter,
++
++```text
++uv run --with sympy==1.14.0 python ...
++uv run --with sympy==1.14.0 python -O ...
++uv run --with sympy==1.14.0 python -OO ...
++```
++
++the three outputs are byte-identical, 1130 bytes, with SHA-256
++
++```text
++52c7b6445a61ae5f518b46aa93d971603b1a0d4d7c1445767c047904c2df701a.
++```
++
++The mutation
++
++```text
++uv run --with sympy==1.14.0 python ops/d3_halphen_cfs_state_machine_replay.py --mutate-cycle-scale
++```
++
++exits nonzero with
++
++```text
++FAIL:three-line CFS cycle identity failed
++```
++
++The AST guard is real: the script parses its own source and counts zero
++`ast.Assert` nodes, so `-O` and `-OO` do not remove checks.  The replay derives
++the coefficient identities by symbolic expansion against expected formulas; it
++does not derive the CFS theorems, the Hodge theorem, strict-Henselian
++insolubility, or the first-jet gate.  It also checks only a concise derivative
++certificate for local normality, not a full global singular-locus calculation.
++Those are acceptable boundaries, but the artifact should not be read as
++self-contained executable proof of the theorem interface.
++
++10. **CONFIRMED: correct price.**
++
++The surviving result is a necessary local constructible gate.  It is not global
++attainment, not an arc theorem, not a dominant `A2` map, not a counterexample,
++and not JC2.  The positive control proves nonemptiness of the local state
++machine and shows that CFS minimisation plus raw base degree three alone does
++not kill the Halphen row.
++
++The cheapest decisive global obstruction, if this local theorem is promoted,
++is no longer another local CFS move.  Start with the homogenized positive
++control and then with the two normalized shards.  Compute the global
++resolution/GR trace and binding polarization over the declared open, verify
++that the base GR divisor is exactly the promoted length-two subscheme and that
++all other singularities are Du Val or total-smooth, and only then test the
++dominant-rational-`A2` interface.  If the positive control already fails that
++global interface, it is the cheapest obstruction; if it passes, it becomes the
++sharpest negative control for eliminating the remaining constructible family.
++
++## Maximum-safe theorem
++
++Let `K=C((t))` or the corresponding complex DVR fraction field, and let
++
++```text
++F=x^3+tF1+t^2F2+t^3F3
++```
++
++be a raw spatially homogeneous ternary cubic with non-singular generic fibre,
++central reduction `x^3`, exact CFS level two, and `K^sh`-insoluble minimal
++floor of level one.  Assume the provisional first-jet gate leaves only the two
++branches
++
++```text
++H=y^2z, q2=0;      or      H=y^3.
++```
++
++Then the double-root branch is empty.  In the triple-root branch the following
++conditions are necessary:
++
++```text
++q2=0, C2=0,
++q1=0, U=0, R=3s^2, C3=s^3, m=3s,
++s!=0,
++```
++
++and, after `X=x+s z`,
++
++```text
++b=Q021-s q0,
++c=U3+s^2 ell-s M111,
++d=-s^3 a+s^2 V-s R3,
++3c=b^2,
++27d=b^3,
++lambda=b/3,
++kappa=0,
++eta!=0,
++```
++
++with
++
++```text
++kappa = 3a s^2+2ell s lambda+q0 lambda^2
++        -2V s-M111 lambda+R3,
++
++eta = -A s^3-P s^2lambda-T s lambda^2-B lambda^3
++      +V3 s^2+M3 s lambda+Q3 lambda^2.
++```
++
++On the local coordinate/base-rescaling chart, this reduces to normalized first
++jet shards `m=3, ell=0, q0=0` and `m=3, ell=0, q0=1`.  With a globally frozen
++base coordinate, the second shard is instead the principal open `q0!=0`.
++
++The family
++
++```text
++F=(x+t z)^3+t y^3+t^3x^2z
++```
++
++is an exact local survivor of this necessary gate.  No global surface,
++dominant affine-plane parametrization, polynomial map, counterexample, or JC2
++conclusion follows from the local theorem.
++
++## Exact dependencies
++
++- Charged state-machine producer:
++  `xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md`.
++- Charged first-jet gate, still provisional:
++  `xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md`.
++- Charged promoted coordinator integration:
++  `xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md`.
++- CFS level definition and minimisation source:
++  `https://arxiv.org/pdf/0908.1741`.
++- LLR Lie-lattice theorem as used by the promoted integration:
++  `https://www.cambridge.org/core/journals/journal-of-the-institute-of-mathematics-of-jussieu/article/values-of-zeta-functions-of-arithmetic-surfaces-at-s1/9BAF5F5B623566BF815941227D0D4A65`.
++- Interpreter dependency for replay reproduction in this environment:
++  SymPy 1.14.0 is required; default `python3` here does not provide it.
++
++<!-- BODY-END -->
+
+codex
+The report file is written. I’m doing a narrow sanity check on just that file: confirming the ending marker is the last substantive line and that no seal or exit-price line slipped in.
+exec
+/bin/zsh -lc 'tail -n 8 xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+- CFS level definition and minimisation source:
+  `https://arxiv.org/pdf/0908.1741`.
+- LLR Lie-lattice theorem as used by the promoted integration:
+  `https://www.cambridge.org/core/journals/journal-of-the-institute-of-mathematics-of-jussieu/article/values-of-zeta-functions-of-arithmetic-surfaces-at-s1/9BAF5F5B623566BF815941227D0D4A65`.
+- Interpreter dependency for replay reproduction in this environment:
+  SymPy 1.14.0 is required; default `python3` here does not provide it.
+
+<!-- BODY-END -->
+
+exec
+/bin/zsh -lc "grep -n 'Seal\\|charge_basis' xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md" in /Users/dc/code/math/jc2
+ exited 1 in 0ms:
+diff --git a/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..e63e20d4d2afbcc0daf0d7c130a39dc34e5fe898
+--- /dev/null
++++ b/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,480 @@
++# Hostile review: D3 Halphen CFS state machine
++
++Date: 2026-08-30  
++Reviewer: GPT-5.5 hostile review pass  
++Scope: only the six charged files and the CFS primary source were used; no
++`jc2-lean`, q6 report, sibling prompt, sibling log, sibling report, sibling
++receipt, Git state, or canonical artifact was inspected or modified.
++
++## Custody
++
++The six charged SHA-256 hashes match exactly:
++
++```text
++be42d2cf894d92928978935381028dbf5ae7ba1d3598a3474d7c1460a7b6dee9
++  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md
++148ddb5e532b28a23361866f671984bd22a1b395a836484043f6f82c6001c1bf
++  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md.artifact.json
++2570d44ec3c31b4b559299099be196dd52b13b7ba1cfe4539043f96fc823ee9c
++  ops/d3_halphen_cfs_state_machine_replay.py
++7e73b7a6ebd1c4f6529c8c4502e150de1a8b4e4664d03323bfc8631b03ab08c5
++  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md
++a389b0a700a96f1ac68f3123f19fc7fa502e31b305e0973f164e50c5d6c585bd
++  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md.artifact.json
++95f2f9fc72d6560749aef090ce91dbd0ef3398ed705bcede69258425ad4ca9de
++  xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md
++```
++
++Primary source used for CFS assertions: J. E. Cremona, T. A. Fisher,
++M. Stoll, *Minimisation and reduction of 2-, 3- and 4-coverings of elliptic
++curves*, arXiv:0908.1741, especially Lemma 3.2, Theorem 3.5,
++Theorem 4.3, Definition 5.1, Lemmas 5.2--5.4, Proposition 5.6, and
++Lemma 5.8.  Authoritative restatement used for the LLR Lie-lattice theorem:
++Cambridge Core, *Values of zeta functions of arithmetic surfaces at s=1*,
++Theorem 33 citing Liu--Lorenzini--Raynaud Theorem 3.1.
++
++No exit-price assertion is made; receipt status `ABSENT` is expected.
++
++## Itemized audit
++
++1. **CONFIRM_WITH_CORRECTIONS: theorem interface.**
++
++The exact plane level-two input is not proved by the state-machine packet.  It
++is supplied by the promoted coordinator integration: the four-row table gives
++the one-point triple-fibre row exact local CFS level `2`
++(`xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md:29`),
++and Section 5 asserts the LLR/Fisher/CFS identification making the local CFS
++level exactly the Hodge/GR length
++(`...coordinator-integration-sol56-20260830.md:203`).
++
++The minimal Halphen floor-one input is CFS, not the Hodge table alone.  CFS
++Theorem 3.5 says a `K^sh`-insoluble non-singular degree-three model has minimal
++level at least one and exactly one when residue characteristic does not divide
++three; CFS Proposition 5.6 and Lemma 5.4 give the critical-model route to that
++statement.  The strict-Henselian insolubility itself is a promoted Halphen-row
++input, recorded in the coordinator theorem as the locally insoluble triple
++fibre (`...coordinator-integration-sol56-20260830.md:203`) and restated in the
++state-machine inputs
++(`xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md:67`).
++
++CFS Theorem 4.3 applies over the complex DVR once the generic plane cubic is
++non-singular and `v(F)=0`: it does not assume solubility, and completeness is
++not an extra hypothesis in the theorem statement.  Lemma 5.8 does use
++`K^sh`-insolubility and Hensel lifting; over `C((t))`, residue characteristic is
++zero and the residue field is algebraically closed.  Correction: the safe local
++theorem must explicitly include generic non-singularity and strict-Henselian
++insolubility as dependencies.  They are not consequences of the coefficient
++display alone.
++
++2. **CONFIRMED: raw first-jet branches.**
++
++The first-jet gate is used only as a first-order gate.  It formally removes
++`a x^3` and `x^2L` to first order
++(`xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md:63`),
++but it warns that this parameter-dependent gauge creates determined higher
++`t`-powers and no new parameters (`...first-jet-invariant-gate...md:70`).  The
++state-machine packet correctly returns to the raw degree-three coefficient
++model
++
++```text
++F=x^3+tF1+t^2F2+t^3F3,
++F1=a x^3+ell x^2y+m x^2z+x(q0 y^2+q1 yz+q2 z^2)+H(y,z).
++```
++
++It keeps `a,ell,m` and raw `F2,F3` coefficients.  The provisional gate leaves
++exactly `H=y^2z,q2=0` and `H=y^3`
++(`...first-jet-invariant-gate...md:153`, `...first-jet-invariant-gate...md:160`).
++No later argument treats the gauged `O(t^2)` terms as free or discards raw
++higher coefficients.
++
++3. **CONFIRMED: forced line cycle.**
++
++For the raw model,
++
++```text
++L_x(F)=t^-1 F(tx,y,z),
++L_y L_x(F)=t^-2 F(tx,ty,z).
++```
++
++The first reduction is `H`; for both `y^2z` and `y^3` its singular locus is the
++line `y=0`.  The second reduction is exactly
++
++```text
++z^2(q2*x+C2*z),       C2=[z^3]F2.
++```
++
++If this form is nonzero, its singular locus is exactly `z=0`.  The next CFS
++line move gives
++
++```text
++L_z L_y L_x(F)=t^-3 F(tx,ty,tz)=F,
++```
++
++using only spatial homogeneity of every `Fi`.
++
++The contradiction with CFS Theorem 4.3 is legitimate.  The plane model has
++level two while its minimal floor is one, so it is nonminimal.  Theorem 4.3
++says the ternary-cubic minimisation procedure reaches `v(F)>=1` within at most
++four iterations for a nonminimal positive-level model.  The nonzero central
++form would put the algorithm in a three-cycle with `v(F)=0` forever.  There is
++no alternate singular locus in these reductions, and coordinate choices moving
++the unique singular line differ only by integral equivalence.  Therefore
++
++```text
++q2=0,      C2=0
++```
++
++is forced.
++
++4. **CONFIRMED: level drop and double-root death.**
++
++Once `q2=C2=0`, the second moved model is divisible by `t`, and
++
++```text
++M=t^-1 L_y L_x(F)=t^-3 F(tx,ty,z)
++```
++
++is integral.  Since line moves preserve level and division by the common
++coefficient factor drops level by one, `M` has level one.  The promoted minimal
++floor is also one, so `M` is minimal; `K^sh`-insolubility is preserved by
++`K`-equivalence.  CFS Lemma 5.8 then forces the reduction of `M` to be a
++nonzero scalar times a cube.
++
++In the double-root branch,
++
++```text
++M0=x^3+m x^2z+q1 xyz+y^2z+R xz^2+U yz^2+C3 z^3.
++```
++
++Over the residue field `C`, a scalar cube with `x^3` coefficient one can be
++written `(x+alpha y+beta z)^3`.  The zero `x^2y` coefficient gives
++`alpha=0`; then the `y^2z` coefficient is zero, contradicting the displayed
++coefficient one.  There is no missed scalar cube or residue-field loophole,
++and no nonminimal level-one loophole because level one is the minimal floor.
++
++5. **CONFIRMED: triple-root first cube.**
++
++For `H=y^3`,
++
++```text
++M0=x^3+m x^2z+q1 xyz+R xz^2+U yz^2+C3 z^3.
++```
++
++Comparing with `(x+alpha y+beta z)^3`, the zero `x^2y` coefficient again gives
++`alpha=0`.  Hence `q1=U=0`, while `m=3 beta`, `R=3 beta^2`, and `C3=beta^3`.
++Writing `beta=s`,
++
++```text
++q1=0,      U=0,      R=3s^2,      C3=s^3,      m=3s.
++```
++
++Together with `q2=0`, this leaves `Q=q0 y^2`.  Under the stabilizer of
++`G=y^3`, this has only the zero orbit and the nonzero `y^2` type, subject to
++the normalization caveat in item 7.
++
++6. **CONFIRMED: critical flags.**
++
++After imposing the first cube equations and setting `X=x+s z`, the first line
++move along `X=0` has transverse reduction
++
++```text
++y^3+b y^2z+c yz^2+d z^3
++```
++
++with
++
++```text
++b=Q021-s q0,
++c=U3+s^2 ell-s M111,
++d=-s^3 a+s^2 V-s R3.
++```
++
++It is a cube exactly when
++
++```text
++3c=b^2,      27d=b^3.
++```
++
++Putting `lambda=b/3` and shifting `Y=y+lambda z`, the intermediate coefficient
++of `Y z^2` in the next central form is
++
++```text
++theta=c-2 lambda b+3 lambda^2,
++```
++
++which vanishes from `3c=b^2`.  The final central reduction is exactly
++
++```text
++z^2(kappa X+eta z)
++```
++
++where
++
++```text
++kappa = 3a s^2+2ell s lambda+q0 lambda^2
++        -2V s-M111 lambda+R3,
++
++eta = -A s^3-P s^2lambda-T s lambda^2-B lambda^3
++      +V3 s^2+M3 s lambda+Q3 lambda^2.
++```
++
++Since the next model is still minimal, level one, and `K^sh`-insoluble, CFS
++Lemma 5.8 forces this reduction to be a nonzero cube.  For `z^2(kappa X+eta z)`
++that is precisely
++
++```text
++kappa=0,      eta!=0.
++```
++
++These conditions force `s!=0`: if `s=0`, then `d=0`, so `b=0` and
++`lambda=0`; then `kappa=R3`, so `kappa=0` gives `R3=0`, and every term of
++`eta` vanishes, contradicting `eta!=0`.
++
++7. **CONFIRM_WITH_CORRECTIONS: constant normalizations.**
++
++The normalization `m=3, ell=0` is a plane-coordinate normalization on the
++`s!=0` chart.  Scaling `z` makes `m=3`, and then the constant shear
++`z -> z-(ell/3)y` kills `ell` while preserving `H=y^3` and `Q=q0y^2`.
++
++The further normalization of a nonzero `q0` to `1` is not a pure plane
++stabilizer normalization if the already normalized coefficients of `t y^3` and
++`t 3x^2z` are to remain fixed.  It uses local base-parameter freedom:
++
++```text
++t_old=q0^-3 t,      y_old=q0 y,      z_old=q0^3 z.
++```
++
++Therefore the literal shard `q0=1` is legitimate only in a local chart where
++the base parameter may be rescaled by a nonzero constant.  If a global
++coordinate or marked base datum is frozen, the honest nonzero shard is the
++principal open `q0!=0`, not the equation `q0=1`.  The producer says this in
++Section 4, but the theorem headline must be read with that qualification.
++
++8. **CONFIRM_WITH_CORRECTIONS: positive control and global closure.**
++
++For
++
++```text
++F=(x+t z)^3+t y^3+t^3x^2z,
++```
++
++the forced lowered model is
++
++```text
++M=(x+z)^3+t y^3+t^2x^2z.
++```
++
++In `X=x+z`,
++
++```text
++M=X^3+t y^3+t^2(X-z)^2z.
++```
++
++The CFS critical valuations are exactly
++
++```text
++X^3:0, y^3:1, X^2z:2, Xz^2:2, z^3:2,
++all other ternary-cubic coefficients: infinity.
++```
++
++This is CFS critical in residue characteristic zero, so `M` has level one and
++the original `F` has exact level two.  The generic cubic over `C((t))` is
++smooth: `F_y` forces `y=0`; at `z=0`, `F_x` is nonzero; with `z=1` and
++`x=t(r-1)`, the two remaining fibre derivatives are
++
++```text
++3r^2+2t^2(r-1),      3r^2+t^2(r-1)^2,
++```
++
++whose difference is `t^2(r-1)(r-3)`, and neither `r=1` nor `r=3` solves the
++first expression in `C((t))`.  Local normality follows from the hypersurface
++being `S2` and regular at the generic point of the central line, where
++`F_t|_(t=x=0)=y^3` is nonzero generically.
++
++For the separate global homogenization
++
++```text
++G=(S*x+T*z)^3+T*S^2*y^3+T^3*x^2z
++```
++
++in `P2 x P1`, the following cheap exact facts hold.
++
++- `G` is bidegree `(3,3)`.
++- The total hypersurface is normal: the singular locus is finite.
++- The total singular points are
++  `([0:0:1],[1:0])` and `([0:1:0],[0:1])`.
++- At `([0:0:1],[1:0])`, with `S=z=1`, the local equation is
++  `(x+t)^3+t y^3+t^3x^2`; it is isolated and not Du Val by multiplicity.
++- At `([0:1:0],[0:1])`, with `T=y=1` and `u=S`, the local equation is
++  `u^2+x^2z+z^3+3uxz^2+3u^2x^2z+u^3x^3`; the quadratic variable splits and
++  the principal ADE type is `D4`, so this point is Du Val.
++- On the affine chart `S=1`, direct Hessian-pencilling gives
++  `c4=0`, `c6=216 t^12(4t^2+27)`, and
++  `Delta=-27 t^24(4t^2+27)^2`.
++- Homogenized:
++
++```text
++c4=0,
++c6=216 S^4 T^12(4T^2+27S^2),
++Delta=-27 S^8 T^24(4T^2+27S^2)^2.
++```
++
++- Removing the exact level-two factor at `T=0` gives the Jacobian discriminant
++  proportional to `S^8(4T^2+27S^2)^2`: smooth Jacobian at `T=0`, two `j=0`
++  finite additive fibres with discriminant order `2`, and a `j=0` fibre at
++  `S=0` with orders compatible with type `IV*`.
++- The plane fibre at `T=0` is the triple line `x^3`; the fibre at `S=0` is
++  `z(z^2+x^2)`, three concurrent lines; the two finite singular plane fibres
++  occur at `4T^2+27S^2=0` and are cuspidal.  The total surface is smooth at
++  those two cuspidal fibre points because the base derivative is nonzero there.
++
++These facts are compatible with the promoted four-row surface theorem: the
++extra finite cuspidal fibres are not total-space singularities, and the
++infinity singularity is Du Val, so neither is an immediate extra GR-defect
++point.  This is not a proof of the binding dominant-`A2` interface and not a
++polynomial map.  Cheap rationality was not certified by the local state
++machine; the closure is a plausible index-three Halphen candidate, but a
++resolution or explicit birational parametrization is still required for a
++standalone rationality certificate.
++
++9. **CONFIRM_WITH_CORRECTIONS: replay.**
++
++The literal default command
++
++```text
++python3 ops/d3_halphen_cfs_state_machine_replay.py
++```
++
++fails in this environment because `python3` cannot import `sympy`.  Under an
++isolated SymPy 1.14.0 interpreter,
++
++```text
++uv run --with sympy==1.14.0 python ...
++uv run --with sympy==1.14.0 python -O ...
++uv run --with sympy==1.14.0 python -OO ...
++```
++
++the three outputs are byte-identical, 1130 bytes, with SHA-256
++
++```text
++52c7b6445a61ae5f518b46aa93d971603b1a0d4d7c1445767c047904c2df701a.
++```
++
++The mutation
++
++```text
++uv run --with sympy==1.14.0 python ops/d3_halphen_cfs_state_machine_replay.py --mutate-cycle-scale
++```
++
++exits nonzero with
++
++```text
++FAIL:three-line CFS cycle identity failed
++```
++
++The AST guard is real: the script parses its own source and counts zero
++`ast.Assert` nodes, so `-O` and `-OO` do not remove checks.  The replay derives
++the coefficient identities by symbolic expansion against expected formulas; it
++does not derive the CFS theorems, the Hodge theorem, strict-Henselian
++insolubility, or the first-jet gate.  It also checks only a concise derivative
++certificate for local normality, not a full global singular-locus calculation.
++Those are acceptable boundaries, but the artifact should not be read as
++self-contained executable proof of the theorem interface.
++
++10. **CONFIRMED: correct price.**
++
++The surviving result is a necessary local constructible gate.  It is not global
++attainment, not an arc theorem, not a dominant `A2` map, not a counterexample,
++and not JC2.  The positive control proves nonemptiness of the local state
++machine and shows that CFS minimisation plus raw base degree three alone does
++not kill the Halphen row.
++
++The cheapest decisive global obstruction, if this local theorem is promoted,
++is no longer another local CFS move.  Start with the homogenized positive
++control and then with the two normalized shards.  Compute the global
++resolution/GR trace and binding polarization over the declared open, verify
++that the base GR divisor is exactly the promoted length-two subscheme and that
++all other singularities are Du Val or total-smooth, and only then test the
++dominant-rational-`A2` interface.  If the positive control already fails that
++global interface, it is the cheapest obstruction; if it passes, it becomes the
++sharpest negative control for eliminating the remaining constructible family.
++
++## Maximum-safe theorem
++
++Let `K=C((t))` or the corresponding complex DVR fraction field, and let
++
++```text
++F=x^3+tF1+t^2F2+t^3F3
++```
++
++be a raw spatially homogeneous ternary cubic with non-singular generic fibre,
++central reduction `x^3`, exact CFS level two, and `K^sh`-insoluble minimal
++floor of level one.  Assume the provisional first-jet gate leaves only the two
++branches
++
++```text
++H=y^2z, q2=0;      or      H=y^3.
++```
++
++Then the double-root branch is empty.  In the triple-root branch the following
++conditions are necessary:
++
++```text
++q2=0, C2=0,
++q1=0, U=0, R=3s^2, C3=s^3, m=3s,
++s!=0,
++```
++
++and, after `X=x+s z`,
++
++```text
++b=Q021-s q0,
++c=U3+s^2 ell-s M111,
++d=-s^3 a+s^2 V-s R3,
++3c=b^2,
++27d=b^3,
++lambda=b/3,
++kappa=0,
++eta!=0,
++```
++
++with
++
++```text
++kappa = 3a s^2+2ell s lambda+q0 lambda^2
++        -2V s-M111 lambda+R3,
++
++eta = -A s^3-P s^2lambda-T s lambda^2-B lambda^3
++      +V3 s^2+M3 s lambda+Q3 lambda^2.
++```
++
++On the local coordinate/base-rescaling chart, this reduces to normalized first
++jet shards `m=3, ell=0, q0=0` and `m=3, ell=0, q0=1`.  With a globally frozen
++base coordinate, the second shard is instead the principal open `q0!=0`.
++
++The family
++
++```text
++F=(x+t z)^3+t y^3+t^3x^2z
++```
++
++is an exact local survivor of this necessary gate.  No global surface,
++dominant affine-plane parametrization, polynomial map, counterexample, or JC2
++conclusion follows from the local theorem.
++
++## Exact dependencies
++
++- Charged state-machine producer:
++  `xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md`.
++- Charged first-jet gate, still provisional:
++  `xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md`.
++- Charged promoted coordinator integration:
++  `xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md`.
++- CFS level definition and minimisation source:
++  `https://arxiv.org/pdf/0908.1741`.
++- LLR Lie-lattice theorem as used by the promoted integration:
++  `https://www.cambridge.org/core/journals/journal-of-the-institute-of-mathematics-of-jussieu/article/values-of-zeta-functions-of-arithmetic-surfaces-at-s1/9BAF5F5B623566BF815941227D0D4A65`.
++- Interpreter dependency for replay reproduction in this environment:
++  SymPy 1.14.0 is required; default `python3` here does not provide it.
++
++<!-- BODY-END -->
+
+  ✓ Verify charged file hashes
+  ✓ Read charged mathematical artifacts and replay script
+  ✓ Run replay in normal, -O, and -OO modes
+  ✓ Reconstruct and audit each theorem item
+  ✓ Write the single hostile-review report
+diff --git a/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..e63e20d4d2afbcc0daf0d7c130a39dc34e5fe898
+--- /dev/null
++++ b/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,480 @@
++# Hostile review: D3 Halphen CFS state machine
++
++Date: 2026-08-30  
++Reviewer: GPT-5.5 hostile review pass  
++Scope: only the six charged files and the CFS primary source were used; no
++`jc2-lean`, q6 report, sibling prompt, sibling log, sibling report, sibling
++receipt, Git state, or canonical artifact was inspected or modified.
++
++## Custody
++
++The six charged SHA-256 hashes match exactly:
++
++```text
++be42d2cf894d92928978935381028dbf5ae7ba1d3598a3474d7c1460a7b6dee9
++  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md
++148ddb5e532b28a23361866f671984bd22a1b395a836484043f6f82c6001c1bf
++  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md.artifact.json
++2570d44ec3c31b4b559299099be196dd52b13b7ba1cfe4539043f96fc823ee9c
++  ops/d3_halphen_cfs_state_machine_replay.py
++7e73b7a6ebd1c4f6529c8c4502e150de1a8b4e4664d03323bfc8631b03ab08c5
++  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md
++a389b0a700a96f1ac68f3123f19fc7fa502e31b305e0973f164e50c5d6c585bd
++  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md.artifact.json
++95f2f9fc72d6560749aef090ce91dbd0ef3398ed705bcede69258425ad4ca9de
++  xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md
++```
++
++Primary source used for CFS assertions: J. E. Cremona, T. A. Fisher,
++M. Stoll, *Minimisation and reduction of 2-, 3- and 4-coverings of elliptic
++curves*, arXiv:0908.1741, especially Lemma 3.2, Theorem 3.5,
++Theorem 4.3, Definition 5.1, Lemmas 5.2--5.4, Proposition 5.6, and
++Lemma 5.8.  Authoritative restatement used for the LLR Lie-lattice theorem:
++Cambridge Core, *Values of zeta functions of arithmetic surfaces at s=1*,
++Theorem 33 citing Liu--Lorenzini--Raynaud Theorem 3.1.
++
++No exit-price assertion is made; receipt status `ABSENT` is expected.
++
++## Itemized audit
++
++1. **CONFIRM_WITH_CORRECTIONS: theorem interface.**
++
++The exact plane level-two input is not proved by the state-machine packet.  It
++is supplied by the promoted coordinator integration: the four-row table gives
++the one-point triple-fibre row exact local CFS level `2`
++(`xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md:29`),
++and Section 5 asserts the LLR/Fisher/CFS identification making the local CFS
++level exactly the Hodge/GR length
++(`...coordinator-integration-sol56-20260830.md:203`).
++
++The minimal Halphen floor-one input is CFS, not the Hodge table alone.  CFS
++Theorem 3.5 says a `K^sh`-insoluble non-singular degree-three model has minimal
++level at least one and exactly one when residue characteristic does not divide
++three; CFS Proposition 5.6 and Lemma 5.4 give the critical-model route to that
++statement.  The strict-Henselian insolubility itself is a promoted Halphen-row
++input, recorded in the coordinator theorem as the locally insoluble triple
++fibre (`...coordinator-integration-sol56-20260830.md:203`) and restated in the
++state-machine inputs
++(`xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md:67`).
++
++CFS Theorem 4.3 applies over the complex DVR once the generic plane cubic is
++non-singular and `v(F)=0`: it does not assume solubility, and completeness is
++not an extra hypothesis in the theorem statement.  Lemma 5.8 does use
++`K^sh`-insolubility and Hensel lifting; over `C((t))`, residue characteristic is
++zero and the residue field is algebraically closed.  Correction: the safe local
++theorem must explicitly include generic non-singularity and strict-Henselian
++insolubility as dependencies.  They are not consequences of the coefficient
++display alone.
++
++2. **CONFIRMED: raw first-jet branches.**
++
++The first-jet gate is used only as a first-order gate.  It formally removes
++`a x^3` and `x^2L` to first order
++(`xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md:63`),
++but it warns that this parameter-dependent gauge creates determined higher
++`t`-powers and no new parameters (`...first-jet-invariant-gate...md:70`).  The
++state-machine packet correctly returns to the raw degree-three coefficient
++model
++
++```text
++F=x^3+tF1+t^2F2+t^3F3,
++F1=a x^3+ell x^2y+m x^2z+x(q0 y^2+q1 yz+q2 z^2)+H(y,z).
++```
++
++It keeps `a,ell,m` and raw `F2,F3` coefficients.  The provisional gate leaves
++exactly `H=y^2z,q2=0` and `H=y^3`
++(`...first-jet-invariant-gate...md:153`, `...first-jet-invariant-gate...md:160`).
++No later argument treats the gauged `O(t^2)` terms as free or discards raw
++higher coefficients.
++
++3. **CONFIRMED: forced line cycle.**
++
++For the raw model,
++
++```text
++L_x(F)=t^-1 F(tx,y,z),
++L_y L_x(F)=t^-2 F(tx,ty,z).
++```
++
++The first reduction is `H`; for both `y^2z` and `y^3` its singular locus is the
++line `y=0`.  The second reduction is exactly
++
++```text
++z^2(q2*x+C2*z),       C2=[z^3]F2.
++```
++
++If this form is nonzero, its singular locus is exactly `z=0`.  The next CFS
++line move gives
++
++```text
++L_z L_y L_x(F)=t^-3 F(tx,ty,tz)=F,
++```
++
++using only spatial homogeneity of every `Fi`.
++
++The contradiction with CFS Theorem 4.3 is legitimate.  The plane model has
++level two while its minimal floor is one, so it is nonminimal.  Theorem 4.3
++says the ternary-cubic minimisation procedure reaches `v(F)>=1` within at most
++four iterations for a nonminimal positive-level model.  The nonzero central
++form would put the algorithm in a three-cycle with `v(F)=0` forever.  There is
++no alternate singular locus in these reductions, and coordinate choices moving
++the unique singular line differ only by integral equivalence.  Therefore
++
++```text
++q2=0,      C2=0
++```
++
++is forced.
++
++4. **CONFIRMED: level drop and double-root death.**
++
++Once `q2=C2=0`, the second moved model is divisible by `t`, and
++
++```text
++M=t^-1 L_y L_x(F)=t^-3 F(tx,ty,z)
++```
++
++is integral.  Since line moves preserve level and division by the common
++coefficient factor drops level by one, `M` has level one.  The promoted minimal
++floor is also one, so `M` is minimal; `K^sh`-insolubility is preserved by
++`K`-equivalence.  CFS Lemma 5.8 then forces the reduction of `M` to be a
++nonzero scalar times a cube.
++
++In the double-root branch,
++
++```text
++M0=x^3+m x^2z+q1 xyz+y^2z+R xz^2+U yz^2+C3 z^3.
++```
++
++Over the residue field `C`, a scalar cube with `x^3` coefficient one can be
++written `(x+alpha y+beta z)^3`.  The zero `x^2y` coefficient gives
++`alpha=0`; then the `y^2z` coefficient is zero, contradicting the displayed
++coefficient one.  There is no missed scalar cube or residue-field loophole,
++and no nonminimal level-one loophole because level one is the minimal floor.
++
++5. **CONFIRMED: triple-root first cube.**
++
++For `H=y^3`,
++
++```text
++M0=x^3+m x^2z+q1 xyz+R xz^2+U yz^2+C3 z^3.
++```
++
++Comparing with `(x+alpha y+beta z)^3`, the zero `x^2y` coefficient again gives
++`alpha=0`.  Hence `q1=U=0`, while `m=3 beta`, `R=3 beta^2`, and `C3=beta^3`.
++Writing `beta=s`,
++
++```text
++q1=0,      U=0,      R=3s^2,      C3=s^3,      m=3s.
++```
++
++Together with `q2=0`, this leaves `Q=q0 y^2`.  Under the stabilizer of
++`G=y^3`, this has only the zero orbit and the nonzero `y^2` type, subject to
++the normalization caveat in item 7.
++
++6. **CONFIRMED: critical flags.**
++
++After imposing the first cube equations and setting `X=x+s z`, the first line
++move along `X=0` has transverse reduction
++
++```text
++y^3+b y^2z+c yz^2+d z^3
++```
++
++with
++
++```text
++b=Q021-s q0,
++c=U3+s^2 ell-s M111,
++d=-s^3 a+s^2 V-s R3.
++```
++
++It is a cube exactly when
++
++```text
++3c=b^2,      27d=b^3.
++```
++
++Putting `lambda=b/3` and shifting `Y=y+lambda z`, the intermediate coefficient
++of `Y z^2` in the next central form is
++
++```text
++theta=c-2 lambda b+3 lambda^2,
++```
++
++which vanishes from `3c=b^2`.  The final central reduction is exactly
++
++```text
++z^2(kappa X+eta z)
++```
++
++where
++
++```text
++kappa = 3a s^2+2ell s lambda+q0 lambda^2
++        -2V s-M111 lambda+R3,
++
++eta = -A s^3-P s^2lambda-T s lambda^2-B lambda^3
++      +V3 s^2+M3 s lambda+Q3 lambda^2.
++```
++
++Since the next model is still minimal, level one, and `K^sh`-insoluble, CFS
++Lemma 5.8 forces this reduction to be a nonzero cube.  For `z^2(kappa X+eta z)`
++that is precisely
++
++```text
++kappa=0,      eta!=0.
++```
++
++These conditions force `s!=0`: if `s=0`, then `d=0`, so `b=0` and
++`lambda=0`; then `kappa=R3`, so `kappa=0` gives `R3=0`, and every term of
++`eta` vanishes, contradicting `eta!=0`.
++
++7. **CONFIRM_WITH_CORRECTIONS: constant normalizations.**
++
++The normalization `m=3, ell=0` is a plane-coordinate normalization on the
++`s!=0` chart.  Scaling `z` makes `m=3`, and then the constant shear
++`z -> z-(ell/3)y` kills `ell` while preserving `H=y^3` and `Q=q0y^2`.
++
++The further normalization of a nonzero `q0` to `1` is not a pure plane
++stabilizer normalization if the already normalized coefficients of `t y^3` and
++`t 3x^2z` are to remain fixed.  It uses local base-parameter freedom:
++
++```text
++t_old=q0^-3 t,      y_old=q0 y,      z_old=q0^3 z.
++```
++
++Therefore the literal shard `q0=1` is legitimate only in a local chart where
++the base parameter may be rescaled by a nonzero constant.  If a global
++coordinate or marked base datum is frozen, the honest nonzero shard is the
++principal open `q0!=0`, not the equation `q0=1`.  The producer says this in
++Section 4, but the theorem headline must be read with that qualification.
++
++8. **CONFIRM_WITH_CORRECTIONS: positive control and global closure.**
++
++For
++
++```text
++F=(x+t z)^3+t y^3+t^3x^2z,
++```
++
++the forced lowered model is
++
++```text
++M=(x+z)^3+t y^3+t^2x^2z.
++```
++
++In `X=x+z`,
++
++```text
++M=X^3+t y^3+t^2(X-z)^2z.
++```
++
++The CFS critical valuations are exactly
++
++```text
++X^3:0, y^3:1, X^2z:2, Xz^2:2, z^3:2,
++all other ternary-cubic coefficients: infinity.
++```
++
++This is CFS critical in residue characteristic zero, so `M` has level one and
++the original `F` has exact level two.  The generic cubic over `C((t))` is
++smooth: `F_y` forces `y=0`; at `z=0`, `F_x` is nonzero; with `z=1` and
++`x=t(r-1)`, the two remaining fibre derivatives are
++
++```text
++3r^2+2t^2(r-1),      3r^2+t^2(r-1)^2,
++```
++
++whose difference is `t^2(r-1)(r-3)`, and neither `r=1` nor `r=3` solves the
++first expression in `C((t))`.  Local normality follows from the hypersurface
++being `S2` and regular at the generic point of the central line, where
++`F_t|_(t=x=0)=y^3` is nonzero generically.
++
++For the separate global homogenization
++
++```text
++G=(S*x+T*z)^3+T*S^2*y^3+T^3*x^2z
++```
++
++in `P2 x P1`, the following cheap exact facts hold.
++
++- `G` is bidegree `(3,3)`.
++- The total hypersurface is normal: the singular locus is finite.
++- The total singular points are
++  `([0:0:1],[1:0])` and `([0:1:0],[0:1])`.
++- At `([0:0:1],[1:0])`, with `S=z=1`, the local equation is
++  `(x+t)^3+t y^3+t^3x^2`; it is isolated and not Du Val by multiplicity.
++- At `([0:1:0],[0:1])`, with `T=y=1` and `u=S`, the local equation is
++  `u^2+x^2z+z^3+3uxz^2+3u^2x^2z+u^3x^3`; the quadratic variable splits and
++  the principal ADE type is `D4`, so this point is Du Val.
++- On the affine chart `S=1`, direct Hessian-pencilling gives
++  `c4=0`, `c6=216 t^12(4t^2+27)`, and
++  `Delta=-27 t^24(4t^2+27)^2`.
++- Homogenized:
++
++```text
++c4=0,
++c6=216 S^4 T^12(4T^2+27S^2),
++Delta=-27 S^8 T^24(4T^2+27S^2)^2.
++```
++
++- Removing the exact level-two factor at `T=0` gives the Jacobian discriminant
++  proportional to `S^8(4T^2+27S^2)^2`: smooth Jacobian at `T=0`, two `j=0`
++  finite additive fibres with discriminant order `2`, and a `j=0` fibre at
++  `S=0` with orders compatible with type `IV*`.
++- The plane fibre at `T=0` is the triple line `x^3`; the fibre at `S=0` is
++  `z(z^2+x^2)`, three concurrent lines; the two finite singular plane fibres
++  occur at `4T^2+27S^2=0` and are cuspidal.  The total surface is smooth at
++  those two cuspidal fibre points because the base derivative is nonzero there.
++
++These facts are compatible with the promoted four-row surface theorem: the
++extra finite cuspidal fibres are not total-space singularities, and the
++infinity singularity is Du Val, so neither is an immediate extra GR-defect
++point.  This is not a proof of the binding dominant-`A2` interface and not a
++polynomial map.  Cheap rationality was not certified by the local state
++machine; the closure is a plausible index-three Halphen candidate, but a
++resolution or explicit birational parametrization is still required for a
++standalone rationality certificate.
++
++9. **CONFIRM_WITH_CORRECTIONS: replay.**
++
++The literal default command
++
++```text
++python3 ops/d3_halphen_cfs_state_machine_replay.py
++```
++
++fails in this environment because `python3` cannot import `sympy`.  Under an
++isolated SymPy 1.14.0 interpreter,
++
++```text
++uv run --with sympy==1.14.0 python ...
++uv run --with sympy==1.14.0 python -O ...
++uv run --with sympy==1.14.0 python -OO ...
++```
++
++the three outputs are byte-identical, 1130 bytes, with SHA-256
++
++```text
++52c7b6445a61ae5f518b46aa93d971603b1a0d4d7c1445767c047904c2df701a.
++```
++
++The mutation
++
++```text
++uv run --with sympy==1.14.0 python ops/d3_halphen_cfs_state_machine_replay.py --mutate-cycle-scale
++```
++
++exits nonzero with
++
++```text
++FAIL:three-line CFS cycle identity failed
++```
++
++The AST guard is real: the script parses its own source and counts zero
++`ast.Assert` nodes, so `-O` and `-OO` do not remove checks.  The replay derives
++the coefficient identities by symbolic expansion against expected formulas; it
++does not derive the CFS theorems, the Hodge theorem, strict-Henselian
++insolubility, or the first-jet gate.  It also checks only a concise derivative
++certificate for local normality, not a full global singular-locus calculation.
++Those are acceptable boundaries, but the artifact should not be read as
++self-contained executable proof of the theorem interface.
++
++10. **CONFIRMED: correct price.**
++
++The surviving result is a necessary local constructible gate.  It is not global
++attainment, not an arc theorem, not a dominant `A2` map, not a counterexample,
++and not JC2.  The positive control proves nonemptiness of the local state
++machine and shows that CFS minimisation plus raw base degree three alone does
++not kill the Halphen row.
++
++The cheapest decisive global obstruction, if this local theorem is promoted,
++is no longer another local CFS move.  Start with the homogenized positive
++control and then with the two normalized shards.  Compute the global
++resolution/GR trace and binding polarization over the declared open, verify
++that the base GR divisor is exactly the promoted length-two subscheme and that
++all other singularities are Du Val or total-smooth, and only then test the
++dominant-rational-`A2` interface.  If the positive control already fails that
++global interface, it is the cheapest obstruction; if it passes, it becomes the
++sharpest negative control for eliminating the remaining constructible family.
++
++## Maximum-safe theorem
++
++Let `K=C((t))` or the corresponding complex DVR fraction field, and let
++
++```text
++F=x^3+tF1+t^2F2+t^3F3
++```
++
++be a raw spatially homogeneous ternary cubic with non-singular generic fibre,
++central reduction `x^3`, exact CFS level two, and `K^sh`-insoluble minimal
++floor of level one.  Assume the provisional first-jet gate leaves only the two
++branches
++
++```text
++H=y^2z, q2=0;      or      H=y^3.
++```
++
++Then the double-root branch is empty.  In the triple-root branch the following
++conditions are necessary:
++
++```text
++q2=0, C2=0,
++q1=0, U=0, R=3s^2, C3=s^3, m=3s,
++s!=0,
++```
++
++and, after `X=x+s z`,
++
++```text
++b=Q021-s q0,
++c=U3+s^2 ell-s M111,
++d=-s^3 a+s^2 V-s R3,
++3c=b^2,
++27d=b^3,
++lambda=b/3,
++kappa=0,
++eta!=0,
++```
++
++with
++
++```text
++kappa = 3a s^2+2ell s lambda+q0 lambda^2
++        -2V s-M111 lambda+R3,
++
++eta = -A s^3-P s^2lambda-T s lambda^2-B lambda^3
++      +V3 s^2+M3 s lambda+Q3 lambda^2.
++```
++
++On the local coordinate/base-rescaling chart, this reduces to normalized first
++jet shards `m=3, ell=0, q0=0` and `m=3, ell=0, q0=1`.  With a globally frozen
++base coordinate, the second shard is instead the principal open `q0!=0`.
++
++The family
++
++```text
++F=(x+t z)^3+t y^3+t^3x^2z
++```
++
++is an exact local survivor of this necessary gate.  No global surface,
++dominant affine-plane parametrization, polynomial map, counterexample, or JC2
++conclusion follows from the local theorem.
++
++## Exact dependencies
++
++- Charged state-machine producer:
++  `xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md`.
++- Charged first-jet gate, still provisional:
++  `xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md`.
++- Charged promoted coordinator integration:
++  `xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md`.
++- CFS level definition and minimisation source:
++  `https://arxiv.org/pdf/0908.1741`.
++- LLR Lie-lattice theorem as used by the promoted integration:
++  `https://www.cambridge.org/core/journals/journal-of-the-institute-of-mathematics-of-jussieu/article/values-of-zeta-functions-of-arithmetic-surfaces-at-s1/9BAF5F5B623566BF815941227D0D4A65`.
++- Interpreter dependency for replay reproduction in this environment:
++  SymPy 1.14.0 is required; default `python3` here does not provide it.
++
++<!-- BODY-END -->
+
+codex
+Done: [hostile review report](/Users/dc/code/math/jc2/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md).
+
+Key outcome: no refutation found; several scope/reproducibility corrections were recorded, especially the provisional first-jet dependency, local-only `q0=1` normalization, default `python3` missing SymPy, and the separate global facts for the homogenized control.
+
+Sources used in the report include CFS arXiv: https://arxiv.org/pdf/0908.1741 and the LLR theorem restatement on Cambridge Core: https://www.cambridge.org/core/journals/journal-of-the-institute-of-mathematics-of-jussieu/article/values-of-zeta-functions-of-arithmetic-surfaces-at-s1/9BAF5F5B623566BF815941227D0D4A65.
+diff --git a/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..e63e20d4d2afbcc0daf0d7c130a39dc34e5fe898
+--- /dev/null
++++ b/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,480 @@
++# Hostile review: D3 Halphen CFS state machine
++
++Date: 2026-08-30  
++Reviewer: GPT-5.5 hostile review pass  
++Scope: only the six charged files and the CFS primary source were used; no
++`jc2-lean`, q6 report, sibling prompt, sibling log, sibling report, sibling
++receipt, Git state, or canonical artifact was inspected or modified.
++
++## Custody
++
++The six charged SHA-256 hashes match exactly:
++
++```text
++be42d2cf894d92928978935381028dbf5ae7ba1d3598a3474d7c1460a7b6dee9
++  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md
++148ddb5e532b28a23361866f671984bd22a1b395a836484043f6f82c6001c1bf
++  xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md.artifact.json
++2570d44ec3c31b4b559299099be196dd52b13b7ba1cfe4539043f96fc823ee9c
++  ops/d3_halphen_cfs_state_machine_replay.py
++7e73b7a6ebd1c4f6529c8c4502e150de1a8b4e4664d03323bfc8631b03ab08c5
++  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md
++a389b0a700a96f1ac68f3123f19fc7fa502e31b305e0973f164e50c5d6c585bd
++  xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md.artifact.json
++95f2f9fc72d6560749aef090ce91dbd0ef3398ed705bcede69258425ad4ca9de
++  xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md
++```
++
++Primary source used for CFS assertions: J. E. Cremona, T. A. Fisher,
++M. Stoll, *Minimisation and reduction of 2-, 3- and 4-coverings of elliptic
++curves*, arXiv:0908.1741, especially Lemma 3.2, Theorem 3.5,
++Theorem 4.3, Definition 5.1, Lemmas 5.2--5.4, Proposition 5.6, and
++Lemma 5.8.  Authoritative restatement used for the LLR Lie-lattice theorem:
++Cambridge Core, *Values of zeta functions of arithmetic surfaces at s=1*,
++Theorem 33 citing Liu--Lorenzini--Raynaud Theorem 3.1.
++
++No exit-price assertion is made; receipt status `ABSENT` is expected.
++
++## Itemized audit
++
++1. **CONFIRM_WITH_CORRECTIONS: theorem interface.**
++
++The exact plane level-two input is not proved by the state-machine packet.  It
++is supplied by the promoted coordinator integration: the four-row table gives
++the one-point triple-fibre row exact local CFS level `2`
++(`xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md:29`),
++and Section 5 asserts the LLR/Fisher/CFS identification making the local CFS
++level exactly the Hodge/GR length
++(`...coordinator-integration-sol56-20260830.md:203`).
++
++The minimal Halphen floor-one input is CFS, not the Hodge table alone.  CFS
++Theorem 3.5 says a `K^sh`-insoluble non-singular degree-three model has minimal
++level at least one and exactly one when residue characteristic does not divide
++three; CFS Proposition 5.6 and Lemma 5.4 give the critical-model route to that
++statement.  The strict-Henselian insolubility itself is a promoted Halphen-row
++input, recorded in the coordinator theorem as the locally insoluble triple
++fibre (`...coordinator-integration-sol56-20260830.md:203`) and restated in the
++state-machine inputs
++(`xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md:67`).
++
++CFS Theorem 4.3 applies over the complex DVR once the generic plane cubic is
++non-singular and `v(F)=0`: it does not assume solubility, and completeness is
++not an extra hypothesis in the theorem statement.  Lemma 5.8 does use
++`K^sh`-insolubility and Hensel lifting; over `C((t))`, residue characteristic is
++zero and the residue field is algebraically closed.  Correction: the safe local
++theorem must explicitly include generic non-singularity and strict-Henselian
++insolubility as dependencies.  They are not consequences of the coefficient
++display alone.
++
++2. **CONFIRMED: raw first-jet branches.**
++
++The first-jet gate is used only as a first-order gate.  It formally removes
++`a x^3` and `x^2L` to first order
++(`xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md:63`),
++but it warns that this parameter-dependent gauge creates determined higher
++`t`-powers and no new parameters (`...first-jet-invariant-gate...md:70`).  The
++state-machine packet correctly returns to the raw degree-three coefficient
++model
++
++```text
++F=x^3+tF1+t^2F2+t^3F3,
++F1=a x^3+ell x^2y+m x^2z+x(q0 y^2+q1 yz+q2 z^2)+H(y,z).
++```
++
++It keeps `a,ell,m` and raw `F2,F3` coefficients.  The provisional gate leaves
++exactly `H=y^2z,q2=0` and `H=y^3`
++(`...first-jet-invariant-gate...md:153`, `...first-jet-invariant-gate...md:160`).
++No later argument treats the gauged `O(t^2)` terms as free or discards raw
++higher coefficients.
++
++3. **CONFIRMED: forced line cycle.**
++
++For the raw model,
++
++```text
++L_x(F)=t^-1 F(tx,y,z),
++L_y L_x(F)=t^-2 F(tx,ty,z).
++```
++
++The first reduction is `H`; for both `y^2z` and `y^3` its singular locus is the
++line `y=0`.  The second reduction is exactly
++
++```text
++z^2(q2*x+C2*z),       C2=[z^3]F2.
++```
++
++If this form is nonzero, its singular locus is exactly `z=0`.  The next CFS
++line move gives
++
++```text
++L_z L_y L_x(F)=t^-3 F(tx,ty,tz)=F,
++```
++
++using only spatial homogeneity of every `Fi`.
++
++The contradiction with CFS Theorem 4.3 is legitimate.  The plane model has
++level two while its minimal floor is one, so it is nonminimal.  Theorem 4.3
++says the ternary-cubic minimisation procedure reaches `v(F)>=1` within at most
++four iterations for a nonminimal positive-level model.  The nonzero central
++form would put the algorithm in a three-cycle with `v(F)=0` forever.  There is
++no alternate singular locus in these reductions, and coordinate choices moving
++the unique singular line differ only by integral equivalence.  Therefore
++
++```text
++q2=0,      C2=0
++```
++
++is forced.
++
++4. **CONFIRMED: level drop and double-root death.**
++
++Once `q2=C2=0`, the second moved model is divisible by `t`, and
++
++```text
++M=t^-1 L_y L_x(F)=t^-3 F(tx,ty,z)
++```
++
++is integral.  Since line moves preserve level and division by the common
++coefficient factor drops level by one, `M` has level one.  The promoted minimal
++floor is also one, so `M` is minimal; `K^sh`-insolubility is preserved by
++`K`-equivalence.  CFS Lemma 5.8 then forces the reduction of `M` to be a
++nonzero scalar times a cube.
++
++In the double-root branch,
++
++```text
++M0=x^3+m x^2z+q1 xyz+y^2z+R xz^2+U yz^2+C3 z^3.
++```
++
++Over the residue field `C`, a scalar cube with `x^3` coefficient one can be
++written `(x+alpha y+beta z)^3`.  The zero `x^2y` coefficient gives
++`alpha=0`; then the `y^2z` coefficient is zero, contradicting the displayed
++coefficient one.  There is no missed scalar cube or residue-field loophole,
++and no nonminimal level-one loophole because level one is the minimal floor.
++
++5. **CONFIRMED: triple-root first cube.**
++
++For `H=y^3`,
++
++```text
++M0=x^3+m x^2z+q1 xyz+R xz^2+U yz^2+C3 z^3.
++```
++
++Comparing with `(x+alpha y+beta z)^3`, the zero `x^2y` coefficient again gives
++`alpha=0`.  Hence `q1=U=0`, while `m=3 beta`, `R=3 beta^2`, and `C3=beta^3`.
++Writing `beta=s`,
++
++```text
++q1=0,      U=0,      R=3s^2,      C3=s^3,      m=3s.
++```
++
++Together with `q2=0`, this leaves `Q=q0 y^2`.  Under the stabilizer of
++`G=y^3`, this has only the zero orbit and the nonzero `y^2` type, subject to
++the normalization caveat in item 7.
++
++6. **CONFIRMED: critical flags.**
++
++After imposing the first cube equations and setting `X=x+s z`, the first line
++move along `X=0` has transverse reduction
++
++```text
++y^3+b y^2z+c yz^2+d z^3
++```
++
++with
++
++```text
++b=Q021-s q0,
++c=U3+s^2 ell-s M111,
++d=-s^3 a+s^2 V-s R3.
++```
++
++It is a cube exactly when
++
++```text
++3c=b^2,      27d=b^3.
++```
++
++Putting `lambda=b/3` and shifting `Y=y+lambda z`, the intermediate coefficient
++of `Y z^2` in the next central form is
++
++```text
++theta=c-2 lambda b+3 lambda^2,
++```
++
++which vanishes from `3c=b^2`.  The final central reduction is exactly
++
++```text
++z^2(kappa X+eta z)
++```
++
++where
++
++```text
++kappa = 3a s^2+2ell s lambda+q0 lambda^2
++        -2V s-M111 lambda+R3,
++
++eta = -A s^3-P s^2lambda-T s lambda^2-B lambda^3
++      +V3 s^2+M3 s lambda+Q3 lambda^2.
++```
++
++Since the next model is still minimal, level one, and `K^sh`-insoluble, CFS
++Lemma 5.8 forces this reduction to be a nonzero cube.  For `z^2(kappa X+eta z)`
++that is precisely
++
++```text
++kappa=0,      eta!=0.
++```
++
++These conditions force `s!=0`: if `s=0`, then `d=0`, so `b=0` and
++`lambda=0`; then `kappa=R3`, so `kappa=0` gives `R3=0`, and every term of
++`eta` vanishes, contradicting `eta!=0`.
++
++7. **CONFIRM_WITH_CORRECTIONS: constant normalizations.**
++
++The normalization `m=3, ell=0` is a plane-coordinate normalization on the
++`s!=0` chart.  Scaling `z` makes `m=3`, and then the constant shear
++`z -> z-(ell/3)y` kills `ell` while preserving `H=y^3` and `Q=q0y^2`.
++
++The further normalization of a nonzero `q0` to `1` is not a pure plane
++stabilizer normalization if the already normalized coefficients of `t y^3` and
++`t 3x^2z` are to remain fixed.  It uses local base-parameter freedom:
++
++```text
++t_old=q0^-3 t,      y_old=q0 y,      z_old=q0^3 z.
++```
++
++Therefore the literal shard `q0=1` is legitimate only in a local chart where
++the base parameter may be rescaled by a nonzero constant.  If a global
++coordinate or marked base datum is frozen, the honest nonzero shard is the
++principal open `q0!=0`, not the equation `q0=1`.  The producer says this in
++Section 4, but the theorem headline must be read with that qualification.
++
++8. **CONFIRM_WITH_CORRECTIONS: positive control and global closure.**
++
++For
++
++```text
++F=(x+t z)^3+t y^3+t^3x^2z,
++```
++
++the forced lowered model is
++
++```text
++M=(x+z)^3+t y^3+t^2x^2z.
++```
++
++In `X=x+z`,
++
++```text
++M=X^3+t y^3+t^2(X-z)^2z.
++```
++
++The CFS critical valuations are exactly
++
++```text
++X^3:0, y^3:1, X^2z:2, Xz^2:2, z^3:2,
++all other ternary-cubic coefficients: infinity.
++```
++
++This is CFS critical in residue characteristic zero, so `M` has level one and
++the original `F` has exact level two.  The generic cubic over `C((t))` is
++smooth: `F_y` forces `y=0`; at `z=0`, `F_x` is nonzero; with `z=1` and
++`x=t(r-1)`, the two remaining fibre derivatives are
++
++```text
++3r^2+2t^2(r-1),      3r^2+t^2(r-1)^2,
++```
++
++whose difference is `t^2(r-1)(r-3)`, and neither `r=1` nor `r=3` solves the
++first expression in `C((t))`.  Local normality follows from the hypersurface
++being `S2` and regular at the generic point of the central line, where
++`F_t|_(t=x=0)=y^3` is nonzero generically.
++
++For the separate global homogenization
++
++```text
++G=(S*x+T*z)^3+T*S^2*y^3+T^3*x^2z
++```
++
++in `P2 x P1`, the following cheap exact facts hold.
++
++- `G` is bidegree `(3,3)`.
++- The total hypersurface is normal: the singular locus is finite.
++- The total singular points are
++  `([0:0:1],[1:0])` and `([0:1:0],[0:1])`.
++- At `([0:0:1],[1:0])`, with `S=z=1`, the local equation is
++  `(x+t)^3+t y^3+t^3x^2`; it is isolated and not Du Val by multiplicity.
++- At `([0:1:0],[0:1])`, with `T=y=1` and `u=S`, the local equation is
++  `u^2+x^2z+z^3+3uxz^2+3u^2x^2z+u^3x^3`; the quadratic variable splits and
++  the principal ADE type is `D4`, so this point is Du Val.
++- On the affine chart `S=1`, direct Hessian-pencilling gives
++  `c4=0`, `c6=216 t^12(4t^2+27)`, and
++  `Delta=-27 t^24(4t^2+27)^2`.
++- Homogenized:
++
++```text
++c4=0,
++c6=216 S^4 T^12(4T^2+27S^2),
++Delta=-27 S^8 T^24(4T^2+27S^2)^2.
++```
++
++- Removing the exact level-two factor at `T=0` gives the Jacobian discriminant
++  proportional to `S^8(4T^2+27S^2)^2`: smooth Jacobian at `T=0`, two `j=0`
++  finite additive fibres with discriminant order `2`, and a `j=0` fibre at
++  `S=0` with orders compatible with type `IV*`.
++- The plane fibre at `T=0` is the triple line `x^3`; the fibre at `S=0` is
++  `z(z^2+x^2)`, three concurrent lines; the two finite singular plane fibres
++  occur at `4T^2+27S^2=0` and are cuspidal.  The total surface is smooth at
++  those two cuspidal fibre points because the base derivative is nonzero there.
++
++These facts are compatible with the promoted four-row surface theorem: the
++extra finite cuspidal fibres are not total-space singularities, and the
++infinity singularity is Du Val, so neither is an immediate extra GR-defect
++point.  This is not a proof of the binding dominant-`A2` interface and not a
++polynomial map.  Cheap rationality was not certified by the local state
++machine; the closure is a plausible index-three Halphen candidate, but a
++resolution or explicit birational parametrization is still required for a
++standalone rationality certificate.
++
++9. **CONFIRM_WITH_CORRECTIONS: replay.**
++
++The literal default command
++
++```text
++python3 ops/d3_halphen_cfs_state_machine_replay.py
++```
++
++fails in this environment because `python3` cannot import `sympy`.  Under an
++isolated SymPy 1.14.0 interpreter,
++
++```text
++uv run --with sympy==1.14.0 python ...
++uv run --with sympy==1.14.0 python -O ...
++uv run --with sympy==1.14.0 python -OO ...
++```
++
++the three outputs are byte-identical, 1130 bytes, with SHA-256
++
++```text
++52c7b6445a61ae5f518b46aa93d971603b1a0d4d7c1445767c047904c2df701a.
++```
++
++The mutation
++
++```text
++uv run --with sympy==1.14.0 python ops/d3_halphen_cfs_state_machine_replay.py --mutate-cycle-scale
++```
++
++exits nonzero with
++
++```text
++FAIL:three-line CFS cycle identity failed
++```
++
++The AST guard is real: the script parses its own source and counts zero
++`ast.Assert` nodes, so `-O` and `-OO` do not remove checks.  The replay derives
++the coefficient identities by symbolic expansion against expected formulas; it
++does not derive the CFS theorems, the Hodge theorem, strict-Henselian
++insolubility, or the first-jet gate.  It also checks only a concise derivative
++certificate for local normality, not a full global singular-locus calculation.
++Those are acceptable boundaries, but the artifact should not be read as
++self-contained executable proof of the theorem interface.
++
++10. **CONFIRMED: correct price.**
++
++The surviving result is a necessary local constructible gate.  It is not global
++attainment, not an arc theorem, not a dominant `A2` map, not a counterexample,
++and not JC2.  The positive control proves nonemptiness of the local state
++machine and shows that CFS minimisation plus raw base degree three alone does
++not kill the Halphen row.
++
++The cheapest decisive global obstruction, if this local theorem is promoted,
++is no longer another local CFS move.  Start with the homogenized positive
++control and then with the two normalized shards.  Compute the global
++resolution/GR trace and binding polarization over the declared open, verify
++that the base GR divisor is exactly the promoted length-two subscheme and that
++all other singularities are Du Val or total-smooth, and only then test the
++dominant-rational-`A2` interface.  If the positive control already fails that
++global interface, it is the cheapest obstruction; if it passes, it becomes the
++sharpest negative control for eliminating the remaining constructible family.
++
++## Maximum-safe theorem
++
++Let `K=C((t))` or the corresponding complex DVR fraction field, and let
++
++```text
++F=x^3+tF1+t^2F2+t^3F3
++```
++
++be a raw spatially homogeneous ternary cubic with non-singular generic fibre,
++central reduction `x^3`, exact CFS level two, and `K^sh`-insoluble minimal
++floor of level one.  Assume the provisional first-jet gate leaves only the two
++branches
++
++```text
++H=y^2z, q2=0;      or      H=y^3.
++```
++
++Then the double-root branch is empty.  In the triple-root branch the following
++conditions are necessary:
++
++```text
++q2=0, C2=0,
++q1=0, U=0, R=3s^2, C3=s^3, m=3s,
++s!=0,
++```
++
++and, after `X=x+s z`,
++
++```text
++b=Q021-s q0,
++c=U3+s^2 ell-s M111,
++d=-s^3 a+s^2 V-s R3,
++3c=b^2,
++27d=b^3,
++lambda=b/3,
++kappa=0,
++eta!=0,
++```
++
++with
++
++```text
++kappa = 3a s^2+2ell s lambda+q0 lambda^2
++        -2V s-M111 lambda+R3,
++
++eta = -A s^3-P s^2lambda-T s lambda^2-B lambda^3
++      +V3 s^2+M3 s lambda+Q3 lambda^2.
++```
++
++On the local coordinate/base-rescaling chart, this reduces to normalized first
++jet shards `m=3, ell=0, q0=0` and `m=3, ell=0, q0=1`.  With a globally frozen
++base coordinate, the second shard is instead the principal open `q0!=0`.
++
++The family
++
++```text
++F=(x+t z)^3+t y^3+t^3x^2z
++```
++
++is an exact local survivor of this necessary gate.  No global surface,
++dominant affine-plane parametrization, polynomial map, counterexample, or JC2
++conclusion follows from the local theorem.
++
++## Exact dependencies
++
++- Charged state-machine producer:
++  `xmodel/bd-a2-d3-halphen-cfs-state-machine-sol56-20260830.md`.
++- Charged first-jet gate, still provisional:
++  `xmodel/bd-a2-d3-triple-line-first-jet-invariant-gate-sol56-20260830.md`.
++- Charged promoted coordinator integration:
++  `xmodel/bd-a2-d3-hodge-level-divisor-coordinator-integration-sol56-20260830.md`.
++- CFS level definition and minimisation source:
++  `https://arxiv.org/pdf/0908.1741`.
++- LLR Lie-lattice theorem as used by the promoted integration:
++  `https://www.cambridge.org/core/journals/journal-of-the-institute-of-mathematics-of-jussieu/article/values-of-zeta-functions-of-arithmetic-surfaces-at-s1/9BAF5F5B623566BF815941227D0D4A65`.
++- Interpreter dependency for replay reproduction in this environment:
++  SymPy 1.14.0 is required; default `python3` here does not provide it.
++
++<!-- BODY-END -->
+
+tokens used
+277,114
+Done: [hostile review report](/Users/dc/code/math/jc2/xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.md).
+
+Key outcome: no refutation found; several scope/reproducibility corrections were recorded, especially the provisional first-jet dependency, local-only `q0=1` normalization, default `python3` missing SymPy, and the separate global facts for the homogenized control.
+
+Sources used in the report include CFS arXiv: https://arxiv.org/pdf/0908.1741 and the LLR theorem restatement on Cambridge Core: https://www.cambridge.org/core/journals/journal-of-the-institute-of-mathematics-of-jussieu/article/values-of-zeta-functions-of-arithmetic-surfaces-at-s1/9BAF5F5B623566BF815941227D0D4A65.
