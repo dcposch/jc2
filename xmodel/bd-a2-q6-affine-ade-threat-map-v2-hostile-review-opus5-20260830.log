@@ -1,0 +1,18 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written: `xmodel/bd-a2-q6-affine-ade-threat-map-v2-hostile-review-opus5-20260830.md` (23,422 bytes, well under the cap). All ten charged hashes matched; no input, artifact, replay program, or Git state was modified. No `charge_basis={...}` line; no seal block.
+
+## Findings
+
+**All ten hashes charged and matched.** v2 body (14,628 B / `03590225…`) matches its manifest; the local-audit body hash matches v2 §2's citation.
+
+**Item 1 — CONFIRMED.** I re-derived the formulas on `Bl₉F₂`. `A = 2S₀+5F−ΣPᵢ` gives `d = 5a+2ε−Σxᵢ`; `T = S₀+3F−Σ_I Pᵢ` gives `t = 3a+ε−Σ_I xᵢ`; the code's adjunction numerator is identically `p_a`. `Σw_jε_j = 1` follows from `2·4 + Σw_jε_j = 9` — the factors of two are right. Crucially, `a_j = F.C_j` with `F` nef and `F²=0`, so **`a_j ≥ 0` is rigorous and v1's `a_j > 0` was genuinely unjustified**.
+
+**Item 2 — CONFIRMED as stated, plus one real GAP.** The proof of (1.3) and the completeness of the list `F`, `F−P_o`, `F−P_i` both hold; coefficient-two owners, `L`-labels and branch-vs-prime reducibility are all correctly handled (the last via the charged audit's forest §6). But `d_j > 0` is an unjustified *hypothesis*: `A` is nef, not ample, and `A.(F−Pᵢ−P_j) = 0`. An `A`-degree-zero vertical component would redistribute the `a/ε/c` budget and is outside the enumeration. v1's blanket `a>0` excluded it trivially; v2, having opened `a=0`, now owes it.
+
+**Items 7–8 — the software holds, and the correction is provable in a stronger form.** `lru_cache` is a pure memo; I ran corrected-then-positive, the reverse order, and two fresh module objects — identical SHAs in all three. Zero AST `assert` nodes; `-O`/`-OO` byte-identical; both mutations fail with the exact stated diagnostics. Every one of the 28 deltas (142/142/3317) reproduces under an independent driver, and a from-scratch enumerator using a naive Cartesian product reproduces all 14 rank-zero rows exactly.
+
+The sharpest result: a relaxed superset that discards *all* root/block/owner/carrier structure gives **zero pair matches on the entire `a=0` slice** — so v2's new domain dies on class identities and adjunction alone. The same relaxation does surface 11 matches elsewhere, all with `min(a) ≥ 1`, i.e. entirely inside v1's old domain. That means the block machinery is load-bearing for the *overall* zero (contrary to how §4's independence sentence reads) but is irrelevant to v2's own delta.
+
+**Item 9 — CONFIRMED, nothing load-bearing.** `energy_pruning_applied = false` in all 28 rows; the honest zero in the τ=0 doubled row is correctly not repaired, and the direct-`F` replacement kill is sound.
+
+Verdicts: local census CONFIRMED (conditional on its own open review gate), global vertical classification CONFIRMED with a GAP on `d_j>0`, software CONFIRMED, maximum theorem CONFIRM_WITH_CORRECTIONS. The cheapest decisive successor is a small chart computation: decide whether two of the nine marked centres are fibre-collinear, i.e. whether the polar can carry a class `F−Pᵢ−P_j`.
