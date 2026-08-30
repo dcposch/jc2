@@ -7,6 +7,23 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **NORMAL SINGULAR QUADRATIC INCIDENCES REDUCED TO A FINITE
+> `D9`-DECORATED ADE PROBLEM (06:20Z).** GPT-5.5 xhigh independently checks
+> the hypersurface cohomology/Leray bridge, normal generic-conic argument,
+> Tsen rationality, Du Val/crepant reduction, relative MMP, integral lattice,
+> and ramification equations, returning `CONFIRM_WITH_CORRECTIONS` with no
+> mathematical gap. Binding integration `17f41e70...`/body `4dec2430...`,
+> manifest `1dfb193c...`, promotes: the minimal resolution of every normal
+> class-`2A+3B` incidence is rational and crepant with `K^2=-1`, `e=13`,
+> `rho=11`; it is nine blowups of `F_e`, `0<=e<=3`; and
+> `(ZA+ZB)^perp=D9(-1)` by an actual integral ruled marking. The exceptional
+> lattice is only a possibly nonprimitive ADE sublattice; `E8` is impossible.
+> Resolved ramification is the exact connected Cartier pullback of `2A+B`,
+> contains every exceptional curve, and satisfies `n=C_ADE*m`, `m_i>=1`,
+> `n!=0`. This does not close the singular stratum: effectivity, Cartier
+> multiplicities, boundary vertices, carriers, and physical attachments form
+> the next finite classification.
+
 > **SMOOTH FIXED-PRESENTATION CUBIC BLOCKS OF COEFFICIENT DEGREE AT MOST
 > TWO CLOSED; ONE-ATTACHMENT DISCRIMINANT THEOREM PROMOTED (06:04Z).** Two
 > independent GPT-5.5 xhigh reviews return `CONFIRM_WITH_CORRECTIONS` and no

@@ -5,6 +5,37 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **NORMAL SINGULAR QUADRATIC INCIDENCE REDUCED TO DU VAL DATA IN AN
+> EXACT `D9(-1)` AMBIENT LATTICE (2026-08-30 06:20Z).** GPT-5.5 xhigh review
+> body `7b7b0cdb...` (sealed full `79db3650...`) returns
+> `CONFIRM_WITH_CORRECTIONS` after independently reconstructing both
+> rationality routes, Leray, Gorenstein-to-Du-Val, the relative ruled MMP,
+> the integral orthogonal complement, and resolved ramification. Transactional
+> binding integration
+> `17f41e706bcae7556cd99e019263e7fad254201fe51f9a24ed158b2be68560c6`
+> (10,793-byte body `4dec2430...`, manifest `1dfb193c...`) promotes for every
+> irreducible normal class-`2A+3B` Cartier hypersurface over `C`,
+>
+> ```text
+> Xtilde rational; singularities Du Val; resolution crepant;
+> K=-A+B, K^2=-1, p_g=q=0, e_top=13, rho=11;
+> Xtilde is nine vertical blowups of F_e, 0<=e<=3;
+> (ZA+ZB)^perp = D9(-1) integrally;
+> Lambda_exc is a possibly nonprimitive ADE root sublattice of rank <=9;
+> E8 singularities do not occur;
+> R_(pi o r)=r^*R_X~2A+B has connected support and contains every E_i;
+> locally n=C_ADE*m with all m_i>=1 and n!=0.
+> ```
+>
+> The `D9` conclusion comes from an actual total-transform basis after the
+> relative MMP, not rank/determinant alone; `E8(-1) direct-sum <-4>` has the
+> same discriminant form and is excluded only by the explicit marking/root
+> structure. Exact divisor pullback uses equality of determinant sections,
+> not crepancy alone. A nonzero Cartan attachment vector is not two physical
+> boundary attachments. The normal singular stratum remains open pending an
+> effective ADE-decorated classification of infinity and different classes;
+> nonnormality, basis coverage, maps, counterexamples, and JC2 are separate.
+
 > **SMOOTH DEGREE-AT-MOST-TWO CUBIC-BLOCK PRESENTATIONS CLOSED; EXACT
 > ONE-ATTACHMENT DISCRIMINANT CERTIFICATE PROMOTED (2026-08-30 06:04Z).**
 > GPT-5.5 xhigh reviews of smooth-degeneracy absorption (body `7d1a36e6...`,

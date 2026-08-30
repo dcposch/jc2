@@ -1229,3 +1229,21 @@ job is licensed; AWS remains idle but is the required venue for any later
 source-reviewed heavy packet. Peer billing limits are unchanged; GPT-5.5
 xhigh remains available. Web backstop remains `2026-08-31T03:40Z`;
 holds/human gates: none.
+
+Allocation refresh (2026-08-30 06:20Z): GPT-5.5 xhigh confirms the normal-
+singular quadratic reduction with corrections and no mathematical gap.
+Binding integration `17f41e70...` turns the lane into a finite effective
+problem: Du Val exceptional trees embed as possibly nonprimitive root
+sublattices of the exact geometric `D9(-1)` complement; `E8` is gone; and
+ramification through each tree obeys `n=C_ADE*m` with positive exceptional
+multiplicities and nonzero strict attachment vector. Continue the active
+ADE-decorated lane on effectivity, total infinity/different multiplicities,
+typed boundary vertices, carriers, and physical attachment points. Do not
+infer a cycle from `n!=0` alone and do not enumerate abstract root embeddings
+as if they occurred geometrically.
+
+The nonnormal moving-double-section review and its normalization/conductor
+successor continue independently. No heavy computation is licensed; use AWS
+only if a reviewed finite enumeration later exceeds desk scale. The external
+GPT-5.5 reviewer remains available; peer billing limits are unchanged. Web
+backstop remains `2026-08-31T03:40Z`; holds/human gates: none.
