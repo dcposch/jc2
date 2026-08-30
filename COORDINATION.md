@@ -1266,3 +1266,45 @@ moving-double-section conductor form. Basis-orbit coverage across quadratic
 presentations remains separate. No heavy computation is licensed; use AWS
 only for a later reviewed finite enumeration that exceeds desk scale. Web
 backstop remains `2026-08-31T03:40Z`; holds/human gates: none.
+
+Allocation refresh (2026-08-30 06:58Z): GPT-5.5 xhigh confirms the
+moving-double-section normalization/conductor theorem with corrections and no
+mathematical gap. Binding integration `01e77dba...` closes the entire
+nonnormal fixed-quadratic-presentation stratum: affine normality forces a
+smooth elliptic conductor, its normalization quotient `O_C(-2)` gives
+`h1=1`, and both irregularity and rational-forest arguments contradict the
+dominant `A2` first leg. Stop all work inside the nonnormal quadratic cell.
+
+Binding ADE integration `3846f7e2...` simultaneously promotes the exact
+connected `A/D` Cartan semigroups and conditional caps, while recording that
+no connected type is killed. Continue the active desk-scale local enumerator,
+but label it as one-component local data only. Its successor must add
+disconnected simultaneous `D9` embedding orbits, global cap allocation,
+paired infinity data, physical carrier graphs, and ruled-marking effectivity;
+split common-carrier/nonfinite cases before using any cap. Review remains a
+background gate, never a research barrier.
+
+The independent basis lane should retain the newly found distinction between
+quadratic-to-quadratic basis changes and existence of a quadratic basis. A
+nonconstant shear can preserve degree two without fixed-root/content
+degeneracy; extract only the stronger theorem licensed by proper-block
+nonmonogenicity. No heavy local computation is licensed; AWS is idle and is
+the required venue if the reviewed global embedding enumeration outgrows
+desk scale. Peer billing limits are unchanged; GPT-5.5 xhigh remains
+available. Web backstop remains `2026-08-31T03:40Z`; holds/human gates: none.
+
+Allocation refresh (2026-08-30 07:05Z): the exact one-connected-component
+Cartan enumerator is sealed and independently replayed locally. Commit its
+script, deterministic data, report, and manifest, then run a bounded GPT-5.5
+xhigh hostile review in the background. Treat `16,360/12,238` (cap eight)
+and `772/646` (conditional cap four) only as local labelled/diagram-orbit
+counts. The conditional one-carrier cut leaves `718/563` and `198/163`, but
+is unavailable until actual resolved carrier connectivity is proved.
+
+Do not spend another lane optimizing the local table. Advance immediately to
+disconnected simultaneous `D9` embeddings and paired infinity/carrier data;
+distinguish per-point target-line caps from genuinely shared infinity or
+fibre budgets. If that global enumeration becomes materially heavier than
+the one-second ordinary replay, package it for AWS rather than running it
+locally. The basis-change lane remains independent and active; holds/human
+gates: none.

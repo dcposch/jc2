@@ -5,6 +5,65 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **NONNORMAL FIXED-QUADRATIC PRESENTATION STRATUM CLOSED
+> (2026-08-30 06:58Z).** GPT-5.5 xhigh hostile review full
+> `afa01a4e...` returns `CONFIRM_WITH_CORRECTIONS` after independently
+> checking the predecessor scope, exact transverse homogeneity, discriminant
+> derivative, both blowup charts, local conductor annihilator, canonical
+> formula, cohomology, and resolved first-leg boundary. Transactional binding
+> integration
+> `01e77dba01cf9656775bf8b8cd858d3c9dc62f3fd13a5cb9852bb98981e06d22`
+> (10,330-byte body `022bc15d...`, manifest `88554c41...`) promotes for the
+> sole surviving form `F=Q^2L+TQS+T^2R`, `C=(T,Q)`:
+>
+> ```text
+> delta_C=S_C^2-4L_C R_C is nonzero, nonsquare, and squarefree;
+> Bl_C(X)=Xnu is the finite normalization;
+> conductor_X=(T,Q), conductor_Xnu=O_Xnu(-E);
+> E->C is a smooth connected genus-one double cover;
+> pi_*O_E=O_C direct-sum O_C(-2);
+> nu_*O_Xnu/O_X=O_C(-2), K_Xnu+E=nu^*K_X;
+> h1(O_Xnu)=1 and h2(O_Xnu)=0;
+> dominant rational A2 first leg forces q(resolution)=0: contradiction.
+> ```
+>
+> The independent rational-forest proof also excludes the elliptic conductor
+> as an actual infinity boundary component. At `C intersect D_0`, the residual
+> section selects one conductor sheet even in the unramified case, so it has
+> one physical attachment, not two. Nodal/cuspidal quartic rows make the first
+> blowup nonnormal along an affine radial line and are not promoted as surface
+> normalizations. This supersedes the open conductor successor in the earlier
+> nonnormal-reduction entry. Normal-singular ADE cases, existence of a
+> quadratic basis, higher degree, maps, counterexamples, and JC2 remain open.
+
+> **ADE-DECORATED NORMAL QUADRATIC NECESSARY DATA PROMOTED
+> (2026-08-30 06:58Z).** GPT-5.5 xhigh hostile review full `2c7059e5...`
+> returns `CONFIRM_WITH_CORRECTIONS`, verifying the signed-coordinate root
+> classification, inverse-Cartan arithmetic, proper-intersection identities,
+> and connector rule. Transactional binding integration
+> `3846f7e2c861ebf5f399dbc9a729c3f1d35dc28c561891c8883a8a3328a7240f`
+> (8,023-byte body `106b4808...`, manifest `0428bde5...`) promotes:
+>
+> ```text
+> connected root types in D9: A1,...,A8 and D4,...,D9 only;
+> A9,E6,E7,E8 do not embed;
+> local Cartier data: n in C Z^r intersect Z_>=0^r minus {0}, m=C^-1 n>0;
+> exact A_r gate sum(i*n_i)=0 mod r+1;
+> exact D_r spin/parity gates and inverse formulas;
+> proper target-line cap sum n<=8;
+> conditional proper B-fibre cap sum n<=4;
+> no-common-carrier infinity cap sum h^t n<=8.
+> ```
+>
+> Forest topology counts resolved physical contacts assigned to connected
+> outside carriers, not entries or support of `n`. Every connected surviving
+> type has a formal one-germ row of weight at most two, so these necessary
+> tests kill none. The capped successor is finite only at the numerical and
+> combinatorial level. Disconnected simultaneous `D9` embedding orbits,
+> global cap allocation, paired infinity data, carrier labels, effectivity,
+> analytic incidence realization, and common-carrier/nonfinite strata remain
+> unproved; formal rows are not divisors, germs, maps, or counterexamples.
+
 > **NONNORMAL QUADRATIC COMPACTIFICATIONS REDUCED TO ONE EXACT NORMAL FORM
 > (2026-08-30 06:23Z).** GPT-5.5 xhigh review body `b541732a...` (sealed full
 > `3b8ba81b...`) returns `CONFIRM_WITH_CORRECTIONS` after independently

@@ -7,6 +7,54 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **ONE-COMPONENT ADE CARTIER ENUMERATION SEALED (07:05Z).** Exact
+> standard-library producer `03263fe7...`/body `002ce81b...`, manifest
+> `443d4e52...`, enumerates every capped local `(m,n)` pair separately for
+> `A1,...,A8,D4,...,D9`. Cap eight has `16,360` labelled pairs and `12,238`
+> diagram orbits; conditional cap four has `772/646`. Without carrier data,
+> the correctly typed local forest test eliminates none. Under the separately
+> stronger one-connected-outside-carrier hypothesis, one physical germ is
+> forced, leaving `718/563` and `198/163`. Root read all 500 script lines,
+> regenerated the 3,762,426-byte canonical JSON and deterministic gzip hashes,
+> and independently replayed all `72,695` exact rational solves. This remains
+> review-gated and local: it does not enumerate disconnected configurations,
+> simultaneous `D9` embeddings, paired infinity data, shared-slice budgets,
+> carrier labels, effectivity, or analytic realization.
+
+> **NONNORMAL FIXED-QUADRATIC PRESENTATIONS CLOSED (06:58Z).** GPT-5.5
+> xhigh independently reconstructs the exact transverse quadratic, both
+> blowup charts, squarefree quartic argument, finite normalization, conductor
+> algebra, cohomology, and first-leg obstruction, returning
+> `CONFIRM_WITH_CORRECTIONS` with no mathematical gap. Binding integration
+> `01e77dba01cf9656775bf8b8cd858d3c9dc62f3fd13a5cb9852bb98981e06d22`
+> /body `022bc15d...`, manifest `88554c41...`, promotes: affine normality
+> forces the moving-double conductor quartic to have four simple roots; the
+> blowup of `(T,Q)` is the finite normalization; its conductor cover is a
+> smooth genus-one double cover of `C=P1`; and
+> `nu_*O_Xnu/O_X=O_C(-2)`, hence `h1(O_Xnu)=1`. Every resolution has
+> positive irregularity, contradicting the dominant rational `A2` first leg;
+> independently, the elliptic conductor is a forbidden boundary component.
+> Degenerate quartics are only a curve threat map, not claimed surface
+> normalizations. This closes the nonnormal quadratic presentation stratum,
+> not normal singular incidences, quadratic-basis existence, maps, or JC2.
+
+> **ADE-DECORATED NORMAL QUADRATIC THREAT MAP PROMOTED (06:58Z).** GPT-5.5
+> xhigh confirms the signed-`D9` root proof, exact `A_r/D_r` Cartan
+> congruences, total-transform caps, and physical-germ graph typing, with
+> scope corrections. Binding integration
+> `3846f7e2c861ebf5f399dbc9a729c3f1d35dc28c561891c8883a8a3328a7240f`
+> /body `106b4808...`, manifest `0428bde5...`, promotes that connected
+> exceptional types are exactly among `A1,...,A8,D4,...,D9`; `A9,E6,E7,E8`
+> cannot embed. Local positive Cartier data are classified by `n=Cm` and the
+> exact root-lattice congruences. Proper target-line, conditional `B`-fibre,
+> and no-common-carrier infinity slices give caps `8`, `4`, and
+> `sum h^t n<=8`, respectively. No connected type is eliminated: every one
+> has a formal one-physical-germ survivor of weight at most two. “Finite” here
+> means only finite numerical/combinatorial rows under the stated properness
+> hypotheses; global simultaneous `D9` embeddings, cap allocation,
+> effectivity, analytic realization, and common-carrier/nonfinite strata are
+> still open.
+
 > **NONNORMAL QUADRATIC INCIDENCES REDUCED TO ONE MOVING-DOUBLE-SECTION
 > FORM (06:23Z).** GPT-5.5 xhigh independently verifies the intrinsic content
 > ideal, affine `R_1` test, genus-two cone obstruction, full repeated-component
