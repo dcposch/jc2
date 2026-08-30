@@ -7,6 +7,18 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **LOCAL REPORT PUBLICATION IS NOW TRANSACTIONAL (04:48Z).** The accepted
+> `ARTIFACT-FINALIZE/v1` tool replaces mutable canonical-path handoffs with
+> `begin -> close -> finalize -> verify`: an exclusive lease owns a private
+> partial, close records stable bytes, finalization canonically seals and
+> publishes without overwrite, and an immutable manifest/release record makes
+> crash states recoverable. Root read all implementation/test code and the
+> full operations suite passes 65/65 in ordinary, `-O`, and `-OO` modes.
+> Self-hosted acceptance is `1c474b02...`/body `f6aae71f...`, manifest
+> `dc96281b...`. This is cooperative custody, not mathematical evidence;
+> external review adapters retain their current receipt protocol pending a
+> separate migration.
+
 > **RAMIFICATION ATTACHMENT DICHOTOMY PROMOTED; RAW CLASS-GROUP RANK ROUTE
 > RETIRED (04:42Z).** Fable's hostile review confirms the cycle lemma,
 > boundary-critical bridge, all Riemann--Hurwitz/contact counts, and the `F7`

@@ -110,6 +110,15 @@ A result may enter `PROVISIONAL` only when all of the following are recorded:
    author is idle/completed and the coordinator independently verifies its
    seal, replay in every declared mode, and unchanged pre/post hashes. No
    reviewer, commit, or downstream consumer may charge preliminary bytes.
+8. **Transactional local publication.** New reports authored by local agents
+   or the coordinator use `ops/artifact_finalize.py` by default:
+   `begin -> close -> finalize -> verify`. Authors write only the leased
+   private partial; the tracked read-only manifest accompanies the final
+   report. Root verifies after author completion and runs `verify --staged`
+   on the explicitly staged report/manifest before commit. This supplements,
+   rather than replaces, replay and hostile mathematical review. Existing
+   external `ops/lane.sh` custody remains unchanged until a separate adapter
+   migration is reviewed; do not retrofit the transaction into a live lane.
 
 ## Promotion and adversarial review
 
@@ -1144,3 +1153,15 @@ decompositions of `2A+B` with attachment and `DISC8-INDEX` constraints. The
 systems finalizer has reported completion but remains outside this math atom
 until root independently inspects and reruns it. AWS stays idle until a
 source-reviewed heavy packet exists; holds/human gates: none.
+
+Systems refresh (2026-08-30 04:48Z): `ARTIFACT-FINALIZE/v1` is accepted for
+new locally authored reports. Root read the complete 1,691-line
+implementation/test pair, matched hashes `c62f35f1...`/`5256a36d...`, and
+reran the full operations suite 65/65 in ordinary, `-O`, and `-OO` modes.
+Self-hosted acceptance report `1c474b02...`/body `f6aae71f...` and manifest
+`dc96281b...` exercise lease, close, canonical seal, no-overwrite hard-link
+publication, immutable crash-recovery record, residue checks, and optional
+stage-zero Git binding. The tool is cooperative integrity/custody machinery,
+not hostile same-user security or mathematical evidence. External adapter
+migration remains deferred and requires its own regression packet. No heavy
+job is licensed; AWS remains idle; holds/human gates: none.

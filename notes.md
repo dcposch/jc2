@@ -14552,3 +14552,21 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   `7ee2a8e3...`. Next are the `F5` local different and the actual effective
   ramification-component lattice, not raw rank. No quadratic block or JC2
   conclusion follows.
+
+## 2026-08-30 04:48Z SYSTEMS EVENT — TRANSACTIONAL REPORT FINALIZATION ACCEPTED
+
+- Root independently read `ops/artifact_finalize.py` and its focused tests,
+  matched implementation hashes `c62f35f1...`/`5256a36d...`, byte-compiled
+  both, and reran all 65 operations tests in ordinary, optimized, and doubly
+  optimized modes; every mode passed 65/65.
+- Self-hosted acceptance report
+  `1c474b0285087b2095aa273d9167a78db0f66684e364d746e2baf864ae80e793`
+  / body `f6aae71f...` was itself acquired, closed, sealed, hard-link published,
+  released, and verified by the new tool. Its read-only manifest is
+  `dc96281b5ddaf90513b7833e202e537de7c706b71951c0af0252ac2abb3d290d`.
+- New local-agent/coordinator reports now use the transaction by default and
+  carry their manifests into Git with staged-blob verification. The
+  completion handshake and mathematical review remain mandatory. External
+  model lanes retain their existing immutable-prompt/run-receipt/root-seal
+  path until a separately tested adapter migration. This is systems custody,
+  not a proof result.

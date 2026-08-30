@@ -5,6 +5,24 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **`ARTIFACT-FINALIZE/v1` ACCEPTED FOR LOCAL REPORTS
+> (2026-08-30 04:48Z).** Accepted executable
+> `ops/artifact_finalize.py` has SHA-256 `c62f35f1...`; its 15-test focused
+> suite is `5256a36d...`. Root read all 1,691 implementation/test lines,
+> byte-compiled both files, and reran the complete operations suite 65/65 in
+> ordinary, `-O`, and `-OO` modes. Self-hosted systems integration
+> `1c474b0285087b2095aa273d9167a78db0f66684e364d746e2baf864ae80e793`
+> (5,932-byte body `f6aae71f...`) has tracked manifest
+> `dc96281b5ddaf90513b7833e202e537de7c706b71951c0af0252ac2abb3d290d`.
+> The explicit lease/close/finalize/verify transaction detects moving author
+> bytes, publishes report and manifest without overwrite, recovers interrupted
+> cleanup through a release record, rejects lifecycle residue, and can bind
+> both files to unique stage-zero Git blobs. Modes are cooperative, tokens may
+> appear in process listings, and Git checkout does not preserve `0444`;
+> hashes are custody evidence rather than authorship. Existing external lane
+> receipts remain unchanged pending separate migration. No mathematical claim
+> is promoted.
+
 > **QUADRATIC RAMIFICATION-ATTACHMENT DICHOTOMY PROMOTED; CLASS-RANK
 > SHORTCUT INVALIDATED (2026-08-30 04:42Z).** Fable review body
 > `aa487738...` (sealed full file `c1ab1258...`) returns
