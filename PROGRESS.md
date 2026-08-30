@@ -7,6 +7,38 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **DEGREE-THREE HODGE DIVISOR AND FOUR-ROW GATE PROMOTED; EXACT LEVEL
+> SHARPENS THE COMPUTE (12:32Z).** GPT-5.5 xhigh hostile review sealed full
+> `9115b288...`/body `8b46aac7...` returns `CONFIRM_WITH_CORRECTIONS` after
+> reconstructing flatness through multiple fibres, the pushed GR sequence,
+> anti-effectivity, genus-one minimalization, support transfer, the no-section
+> Hodge lattice, blowup carriers, and all invariant controls. Transactional
+> integration `95f2f9fc...`/body `032a0a7e...`, manifest `3fe57581...`,
+> promotes exactly four rows: sectioned defects `t1+t2` and `2t`, and
+> index-three Halphen defects `t0+t1` and `2t0`, with pushed discrepancies
+> `-F1-F2`, `-2F`, `-P0-F1`, and `-4P0`, and Picard floors
+> `12,12,12,14`. Local GR length is the ternary-cubic level exactly, so
+> level two also requires `v(c4)<12 or v(c6)<18`. The triple fibre is a
+> triple line. A sealed first-jet producer already eliminates squarefree
+> transverse jets and is under Fable review; Halphen CFS minimisation proceeds
+> nonblockingly.
+>
+> **QUALITATIVE `A1` RULING PROMOTED FOR EVERY PROPER-BLOCK OPEN; q=6
+> DEGREE-ZERO OBJECTION PROVISIONALLY DISCHARGED (12:32Z).** Fable review
+> sealed full `259ad683...`/body `f2b0d3ae...` confirms that for the proper
+> block factorization, deleting the full source non-etale support gives a
+> smooth rational affine surface `U` with constant units,
+> `bar-kappa(U)=-infinity`, and a surjective `A1`-fibration over `A1` or
+> `P1`; integration `7df557cc...`/body `469f1f68...`, manifest
+> `ff626fc2...`, promotes the theorem and its presentation-free Euler
+> identity. The review correctly deletes an unused false fpqc-affineness
+> fallback; Stacks `0ECD` supplies the main affineness proof. Separately,
+> provisional q=6 adjudication `d2122d82...`/body `650be07d...` shows that
+> `F-P_i-P_j` is an already-accounted exceptional root, while every other
+> `A`-null nonexceptional curve is an existing `Z_J` carrier. A narrow Opus
+> review now checks that repair and closes the local-contact gate; no q=6
+> promotion is claimed yet.
+
 > **EVERY SINGULAR-`F5` q=8 ROW PROMOTED EMPTY; q=6 IS THE LAST REDUCED
 > FINITE SINGULAR-`F5` CLIENT (10:48Z).** GPT-5.5 xhigh independently
 > reconstructs the unbalanced normal forms, all marked local resolutions,

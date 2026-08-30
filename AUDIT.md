@@ -5,6 +5,61 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **DEGREE-THREE HODGE DIVISOR AND FOUR-ROW GENUS-ONE GATE PROMOTED
+> (2026-08-30 12:32Z).** GPT-5.5 xhigh hostile review sealed full
+> `9115b2886303568c7671a375913f5eae28858391ce4cdbf3d1c43232c328fa94`
+> / body `8b46aac7...` returns `CONFIRM_WITH_CORRECTIONS`; no fifth row or
+> counterexample survives. Transactional binding integration
+> `95f2f9fc72d6560749aef090ce91dbd0ef3398ed705bcede69258425ad4ca9de`
+> (body `032a0a7e...`, manifest `3fe57581...`) promotes, conditional on the
+> binding normal class-`(3,3)` adjoint theorem,
+>
+> ```text
+> O_P1(1) --s--> O_P1(3),  div(s)=q(Z_GR)=T, length(T)=2;
+> no multiple fibre + section, or one triple fibre + no section;
+> T=t1+t2: D=-F1-F2,       rho(Y)>=12, levels (1,1);
+> T=2t:    D=-2F,           rho(Y)>=12, level 2;
+> T=t0+t1 in the triple case: D=-P0-F1, rho(Y)>=12, levels (1,1);
+> T=2t0 in the triple case:   D=-4P0,   rho(Y)>=14, level 2.
+> ```
+>
+> Characteristic-zero tameness removes multiple-fibre torsion; support
+> equality is on the base and does not preserve internal discrepancy data;
+> the Picard argument uses a satellite-safe zero-carrier induction. At local
+> GR length `k`, the plane ternary cubic has CFS level exactly `k`, so besides
+> the lower `4k/6k/12k` bounds it satisfies
+> `v(c4)<4(k+1) or v(c6)<6(k+1)`. In the triple-fibre case the plane fibre is
+> `3L`. Normality and generic smoothness remain open conditions, finite-jet
+> nonemptiness is not global existence, and no dominant map, polynomial map,
+> counterexample, or JC2 conclusion follows.
+
+> **QUALITATIVE PROPER-BLOCK RULING THEOREM PROMOTED
+> (2026-08-30 12:32Z).** Fable 5 hostile review sealed full
+> `259ad683e97daadeaf82b737dcc467ea7d1d07faa8ce40039f13e100b2da64aa`
+> / body `f2b0d3ae...` returns `CONFIRM_WITH_CORRECTIONS`. Transactional
+> integration
+> `7df557cc5e9e16d7f7b9b3a0fd1d476a26d41dfbc046736fa7a35c7f87197e29`
+> (body `469f1f68...`, manifest `ff626fc2...`) promotes: for every promoted
+> proper intermediate factorization, with `R=NonEt_Y(g2)` the full source
+> support and `U=Y minus R`,
+>
+> ```text
+> U smooth rational affine; O(U)^*=C^*; bar-kappa(U)=-infinity;
+> the actual g1:A2->U is dominant, etale, and quasi-finite;
+> U->C is a surjective A1-fibration, C=A1 or P1;
+> every fibre with reduced structure is a disjoint union of A1s;
+> e(U)=e(C)+sum_t(q_t-1).
+> ```
+>
+> Stacks Tag `0ECD` gives an affine inclusion of the maximal etale locus;
+> because `Y` is affine, `U` is affine. The producer's optional claim that
+> absolute affineness descends from an affine fpqc cover is refuted and
+> quarantined; it is not used. Source ramification, target discriminant, its
+> inverse image, and the first-leg image remain distinct. The theorem is
+> qualitative and proper-block-general: it transfers no quadratic `12`,
+> Picard/boundary cap, `D9`, `F5`, bounded completion, finite presentation,
+> primitive-sector result, map, or JC2 conclusion.
+
 > **ALL SINGULAR-`F5` q=8 ROWS PROMOTED EMPTY IN THE FIXED QUADRATIC
 > SCOPE (2026-08-30 10:48Z).** GPT-5.5 xhigh hostile review sealed full
 > `90ccff51e1c0a9591b8421e730fc997afdd68396657f9b8979d3f1eb30e94dd3`

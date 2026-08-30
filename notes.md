@@ -14735,3 +14735,68 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   is required. The exact successor tests whether cubic different/discriminant
   constraints force the adjoint scheme vertical, which would contradict the
   new horizontal-image theorem; no degree-three exclusion is claimed yet.
+
+## 2026-08-30 12:32Z REVIEW/PROMOTION EVENT — PROPER-BLOCK `A1` RULING
+
+- Fable review body `f2b0d3ae...`, sealed full file `259ad683...`, returns
+  `CONFIRM_WITH_CORRECTIONS` for the qualitative `RULE-ON-Y` chain. Stacks
+  `0ECD` applies literally as an affine **inclusion** of the maximal etale
+  locus into the normal source; since the block surface `Y` is affine,
+  `U=Y minus NonEt_Y(g2)` is affine. Smoothness, rationality, constant units,
+  negative log Kodaira dimension, the global `A1`-fibration, base dichotomy,
+  and reduced-fibre structure all survive.
+- The review refutes only an optional fallback sentence: an affine fpqc cover
+  does not force the base absolutely affine. Transactional integration
+  `7df557cc...`/body `469f1f68...`, manifest `ff626fc2...`, deletes that
+  fallback and promotes the main theorem plus the presentation-free Euler
+  identity `e(U)=e(C)+sum(q_t-1)`. No quadratic numeric cap transfers.
+
+## 2026-08-30 12:32Z Q6 REVIEW DELTA — DEGREE-ZERO TYPE GAP DISCHARGED PROVISIONALLY
+
+- Opus's exhaustive v2 review confirms the corrected `a>=0` engine, all 28
+  deltas, mutations, and zero pair matches, but initially requests a scope
+  hypothesis excluding `A`-degree-zero components such as `F-P_i-P_j`.
+- Exact adjudication `d2122d82...`/body `650be07d...`, manifest
+  `a338fb5c...`, proves the objection conflates types. If `A.C=B.C=0`, then
+  `(A+B).C=0` for an ample downstairs pullback, so `C` is an exceptional Du
+  Val root. The apparent F-root occurs already as B3 `R1` or U3 `E1` inside
+  `M_R`. If `A.C=0,B.C>0` and `C` is nonexceptional, it is exactly a
+  classified `Z_J`; the existing `+Z`/no-`Z` rows exhaust its multiplicity.
+  Positive-degree local germs already total eight. No replay extension is
+  indicated.
+- This repair is provisional. A narrow Opus lane independently rechecks the
+  trichotomy and closes the full B3/U3 local-contact gate before any q=6
+  promotion. The review's separate corrections remain: positive-`a` zero
+  depends on root/block machinery, and energy inequalities prune no row.
+
+## 2026-08-30 12:32Z D3 REVIEW/PROOF EVENT — FOUR ROWS PROMOTED; FIRST-JET GATE FROZEN
+
+- GPT-5.5 review body `8b46aac7...`, sealed full file `9115b288...`, returns
+  `CONFIRM_WITH_CORRECTIONS` for the degree-three Hodge/four-row theorem. It
+  independently closes tame multiple-fibre cohomology, the twisted GR
+  quotient, anti-effectivity, index `1/3`, base-support transfer, all four
+  integer rows, satellite-safe Picard bounds, the LLR no-section Hodge bridge,
+  and Fisher/CFS orientation. Binding integration `95f2f9fc...`/body
+  `032a0a7e...`, manifest `3fe57581...`, promotes the rows and exact local
+  levels.
+- Exact level adds the open upper gate: level two has
+  `v(c4)>=8,v(c6)>=12` and `v(c4)<12 or v(c6)<18`. The triple-fibre plane
+  cubic is a triple line. Separate exact producer `7e73b7a6...`/body
+  `69b1cbe2...`, manifest `a389b0a7...`, replay `08c523e2...`, derives the
+  first-jet formulas and provisionally kills squarefree transverse binary
+  cubics, leaving only `G=y^2z,q2=0` and `G=y^3`. Ordinary/`-O`/`-OO` output
+  is byte-identical (919 bytes, `d2da55b8...`) and the sign mutation fails.
+  Fable hostile review remains active.
+
+## 2026-08-30 12:32Z LIVE STATE — REVIEWS AND SUCCESSORS ASYNCHRONOUS
+
+- Promoted and pushed: qualitative proper-block ruling and the D3 Hodge
+  four-row theorem. Provisional and frozen: q=6 degree-zero typing repair and
+  D3 first-jet gate. External lanes: Fable reviews the first jet; Opus reviews
+  q=6 typing plus the complete local contact census. Internal lanes design
+  the one-drop Halphen CFS state machine and the block-general Euler ledger.
+- No heavy local CAS is running. AWS is idle/unclaimed and remains mandatory
+  for any growing Groebner or saturation chart. The separately owned
+  formalization remains outside campaign control and was not inspected,
+  built, modified, or listed. Web backstop: `2026-08-31T03:40Z`. Holds/human
+  gates: none.

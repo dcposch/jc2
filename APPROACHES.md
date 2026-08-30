@@ -7,6 +7,37 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 12:32Z — D3 four rows and proper-block ruling promoted)
+
+- **Run the degree-three front as four exact locally closed problems.** The
+  reviewed Hodge divisor has length two and the genus-one minimal model has
+  only the sectioned or index-three Halphen alternatives, giving exactly four
+  rows and Picard floors `12,12,12,14`. Local Hodge length is exact CFS level,
+  so level two is the `8/12` closed floor intersected with the open
+  `v(c4)<12 or v(c6)<18`. Start with the one-point Halphen row; its central
+  cubic is `3L`. The provisional first-jet gate leaves only
+  `G=y^2z,q2=0` or `G=y^3`; keep its Fable review in the background while
+  building the one-drop CFS state machine.
+- **Exploit the proper-block ruling without importing quadratic numbers.**
+  For every proper block, the canonical source-etale open is now reviewed
+  smooth rational affine, has constant units and negative log Kodaira
+  dimension, and carries an `A1`-fibration over `A1` or `P1`. Compare the
+  presentation-free identity `e(U)=e(C)+sum(q_t-1)` with a new
+  sandwich-side discriminant/nonproperness ledger; independently test whether
+  first-leg degree at least two excludes the complete-base branch.
+- **Treat q=6 as one review delta, not a new enumeration.** The provisional
+  typing lemma places every `A,B`-null `F-P_i-P_j` in the already-accounted
+  Du Val divisor and every other nonexceptional `A`-null curve in the existing
+  `+Z` carrier rows. A narrow Opus lane is rechecking that lemma and the full
+  B3/U3 contact census. If it passes, promote the q=6 zero and stop the entire
+  reduced finite normal-singular F5 cell; if it fails, extend only the exact
+  disputed type.
+- **Keep reviews and compute nonblocking.** Fable reviews the D3 first jet and
+  Opus reviews q=6 while two research lanes design Halphen minimisation and a
+  block-general Euler ledger. These are desk-scale. Any Groebner/saturation
+  chart that grows beyond that is packaged and moved to AWS; the broad web
+  backstop remains `2026-08-31T03:40Z` absent significant external news.
+
 ## Superseding strategy overlay (2026-08-30 10:48Z — singular-F5 q=8 closed; q=6 and selector split)
 
 - **Stop the reviewed q=8 branch.** Different-model review and binding
