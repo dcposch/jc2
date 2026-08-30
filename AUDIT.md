@@ -5,6 +5,68 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **QUADRATIC RAMIFICATION-ATTACHMENT DICHOTOMY PROMOTED; CLASS-RANK
+> SHORTCUT INVALIDATED (2026-08-30 04:42Z).** Fable review body
+> `aa487738...` (sealed full file `c1ab1258...`) returns
+> `CONFIRM_WITH_CORRECTIONS` after independently checking the resolution
+> multigraph, critical-divisor closure, degree conventions, every
+> Riemann--Hurwitz/contact count, and the `F7` collision geometry. Binding
+> integration
+> `255bd0ba04e1c0a428a18caa70e73bc35895026c5857f629ed855cee79a8f803`
+> (8,727-byte body `f334970e...`) promotes, in the smooth irreducible,
+> reduced-infinity, projectively finite quadratic block scope,
+>
+> ```text
+> R_red is nonempty;
+> crit(pi) intersect H = singular/projection-critical points of H;
+> R_red irreducible  =>  H has type F5;
+> every survivor has reducible R_red or type F5.
+> ```
+>
+> For `F5`, the attachment set is its unique triple point and all
+> `H.R_pi=8` intersection units concentrate there; this does not prove that
+> `F5` occurs. The dominant block morphism gives
+> `Z^{components(R_red)} -> Cl(Y)` injective without requiring `Y` affine.
+> However the reviewer independently finds `rho(X)=11` and
+> `rank Cl(Y)>=11-s>=8`, confirming supporting packet `7ee2a8e3...` and
+> retiring the unreachable raw rank-at-most-one shortcut. The next exact
+> clients are the `F5` local different and effective decompositions of
+> `(2A+B)|X` in the conic-bundle component lattice. Nonreduced, singular,
+> basepoint, and degree-drop strata remain separate; no block closure or JC2
+> claim follows.
+
+> **INTRINSIC CUBIC DISCRIMINANT AND NORMALIZATION-INDEX THEOREM PROMOTED
+> (2026-08-30 04:36Z).** Opus review body `013af717...` (sealed full file
+> `4241bb32...`) returns `CONFIRM_WITH_CORRECTIONS` and independently checks
+> every trace, sign, scalar, degree, change-of-basis weight, and height-one
+> lattice identity. Binding integration
+> `410de2f569e2ad5599152fdd9414198f012dbdced7d17c5a51dde0096fe4601e`
+> (7,828-byte body `722d21d8...`) promotes, for a generically separable
+> finite locally free rank-three `C[u,v]`-algebra,
+>
+> ```text
+> (Delta) and div(Delta) are basis-independent,
+> Delta=81a^2d^2-108a^3c-108bd^3-27b^2c^2+162abcd,
+> deg(Delta)<=4d,  hence  d_min>=ceil(deg(Delta)/4).
+> ```
+>
+> If `B` is reduced and `Btilde` is its normalization, then `Btilde` is
+> globally free and, in fixed bases,
+>
+> ```text
+> Delta_B=(det M)^2 Delta_Btilde,
+> Fitt_0(Btilde/B)=(det M),
+> ord_p(det M)=length((Btilde/B)_p).
+> ```
+>
+> Consequently a quadratic presentation has `deg Delta<=8` and normalization
+> index degree at most four. Corrections are binding: this index is not the
+> conductor; source ramification, different, discriminant, and reduced branch
+> are separate; normalization need not commute with a curve slice; and the
+> classical conductor/`2delta` dictionary needs the relevant Gorenstein
+> hypothesis. No reverse degree inequality, low-degree basis, Galoisness,
+> block closure, map, or JC2 consequence is inferred.
+
 > **NORMALIZED K00 `e=2,m=2,h10=1` CELL CLOSED AT G13 FIELD-POINT SCOPE
 > (2026-08-30 04:16Z).** Opus review body `917ec18c...` (sealed full file
 > `04b76536...`) uses an independent sparse `Q[I]/(I^2+1)` engine and returns

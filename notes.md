@@ -9042,6 +9042,7 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   `F2` with no induced `F1` cut, and the sequential kernel schedule.  No
   rational point, full source, affine endpoint solution, family exclusion,
   counterexample, or JC2 conclusion follows.
+
 - Provisional GGV descendants: upper-cascade producer `6e3d9104...` gives a
   candidate field-point parametrization through `D6` and the homogeneous
   separator `F=U^2,G=U^3`, showing that all homogeneous rows can coexist with
@@ -14505,3 +14506,49 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   reviewed dependency. No scheme-valued emptiness, other support or K10
   order, compatible jet, occurrence, arc, attainment, source atlas,
   algebraization, polynomial map, counterexample, or JC2 claim follows.
+
+## 2026-08-30 04:36Z REVIEW EVENT — `DISC8-INDEX` PROMOTED
+
+- Opus review body
+  `013af71756795a10bdb6435af5a6e790c0ee1ed9a6b99f6047af40f2a872b881`
+  (sealed full file
+  `4241bb325de1904ef7cd10b46ff87dca489c23115c735b36137956bfcd4ebc4e`)
+  returns `CONFIRM_WITH_CORRECTIONS`. It independently reconstructs the
+  trace table, exact classical binary-cubic discriminant, basis-change
+  weight, degree-four homogeneity, and order/normalization determinant
+  identity. Receipt custody closes cleanly with exit zero.
+- Binding integration
+  `410de2f569e2ad5599152fdd9414198f012dbdced7d17c5a51dde0096fe4601e`
+  / body `722d21d8...` promotes a basis-invariant full affine discriminant
+  divisor with degree at most eight for quadratic coefficients. For reduced
+  orders over `C[u,v]`, the normalization is globally free and contributes
+  the square of a principal index factor; its degree is at most four.
+- The review blocks three tempting conflations: index is not conductor;
+  ramification/different/discriminant/reduced branch are different objects;
+  and surface normalization/index does not automatically become curve delta
+  after slicing. The strict-henselian separation and index/base-change
+  controls are mandatory before any AWS elimination. No block closure, map,
+  counterexample, or JC2 conclusion follows.
+
+## 2026-08-30 04:42Z REVIEW EVENT — ATTACHMENT DICHOTOMY PROMOTED
+
+- Fable review body
+  `aa4877388dddadfbe2d4b167356c76f35424a440951ef0cc0cab6502c9dcf610`
+  (sealed full file
+  `c1ab1258005080cfa58d979820bebff5bb233638e96984aa1b6aae425e37f477`)
+  returns `CONFIRM_WITH_CORRECTIONS`. It rebuilds the attachment-cycle lemma,
+  proves the critical Cartier divisor has no boundary component, checks all
+  degree/contact cases, and supplies exact-set and nonemptiness lemmas.
+- Binding integration
+  `255bd0ba04e1c0a428a18caa70e73bc35895026c5857f629ed855cee79a8f803`
+  / body `f334970e...` promotes: within the smooth reduced projectively finite
+  quadratic block stratum, every survivor has reducible ramification or
+  `F5`; irreducible ramification forces `F5`, with the full boundary
+  intersection concentrated at its unique triple point.
+- The unit/localization injection survives after deleting the false and
+  unnecessary “affine `Y`” label. Its proposed rank shortcut does not:
+  Fable independently computes the conic bundle's nine singular fibres,
+  `rho(X)=11`, and `rank Cl(Y)>=8`, corroborating sealed desk packet
+  `7ee2a8e3...`. Next are the `F5` local different and the actual effective
+  ramification-component lattice, not raw rank. No quadratic block or JC2
+  conclusion follows.

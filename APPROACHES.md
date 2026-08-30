@@ -7,6 +7,60 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 04:42Z — attachment dichotomy promoted)
+
+- **Reduce the finite smooth quadratic branch to two geometric clients.** A
+  different-model-confirmed theorem now says that every in-scope survivor
+  has reducible reduced ramification or infinity type `F5`; irreducible
+  ramification forces `F5`, where all eight boundary intersection units sit
+  at one triple point. Run the one-chart `F5` local-different test first, in
+  parallel with an effective decomposition of `R_pi=2A+B` in the conic-
+  bundle component lattice.
+- **Retire raw class-group rank as an elimination gate.** The unit argument
+  does inject ramification components into `Cl(Y)`, but the smooth quadratic
+  incidence has Picard rank eleven and deleting at most three infinity
+  components leaves rank at least eight. Use actual divisor classes,
+  effectivity, adjunction, and allowed attachment sets; a claimed rank at
+  most one is now an error diagnostic, not a possible theorem.
+- **Intersect the attachment and `DISC8-INDEX` data.** The local-different
+  packet must keep source ramification/different separate from target
+  discriminant and normalization index. The component-lattice packet should
+  carry the degree-eight discriminant and degree-four index constraints as
+  extra finite filters. Review can remain in the background once a packet is
+  provisionally sound; heavy elimination remains AWS-only after controls.
+- **Preserve the quarantined branches and independent fronts.** `F3,F6` are
+  projective-basepoint/nonfinite types, while nonreduced infinity, singular
+  closure, and degree drops remain separate. K00 occurrence/truncation images
+  and the pair-square ancestry stalk continue independently.
+
+## Superseding strategy overlay (2026-08-30 04:36Z — intrinsic discriminant/index client)
+
+- **Replace the provisional conductor slogan by the exact
+  `DISC8-INDEX` theorem.** Different-model review confirms that the full
+  trace-discriminant ideal/divisor of a rank-three finite-flat algebra over
+  `C[u,v]` is basis-independent. Quadratic Miranda coefficients force degree
+  at most eight, and normalization contributes an even square factor whose
+  index divisor has degree at most four. The useful inequality is one-way:
+  `d_min>=ceil(deg Delta/4)`; low discriminant degree does not produce a
+  low-degree basis.
+- **Type four geometric objects before using the bound.** Reduced source
+  ramification, the source different, the target discriminant divisor, and
+  the reduced branch locus are not interchangeable. Likewise the
+  normalization index is a Fitting/length divisor, not the conductor.
+  Require the two strict-henselian controls in the binding integration before
+  any elimination, and require Tor-free slicing plus the appropriate
+  Gorenstein hypothesis before translating to curve delta.
+- **Intersect invariants, not just coefficient strata.** On each reviewed
+  `F1`--`F7` infinity type, jointly record the full discriminant at infinity,
+  the degree-at-most-four index divisor, ramification classes/attachments,
+  and the resolved full-boundary graph. Continue the ramification-attachment
+  review in the background. Any universal realization/elimination is
+  AWS-only after the controls; no broad compute is licensed yet.
+- **Keep independent fronts moving.** K00's next high-information target is a
+  truncation-image/occurrence theorem rather than another isolated jet, and
+  pair-square still needs one actual nearby/vanishing-cycle stalk. Neither
+  waits for the discriminant geometry. Reviews remain asynchronous.
+
 ## Superseding strategy overlay (2026-08-30 04:16Z — promoted quadratic locus and K00 cell; discriminant/attachment gate)
 
 - **Move from infinity-only classification to the full boundary.** The

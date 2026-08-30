@@ -1,0 +1,17 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Done — index is at 17,235 bytes (under the 17.1KiB target). The review task is complete.
+
+## TLDR
+
+**Verdict: CONFIRM_WITH_CORRECTIONS.** Report written to `xmodel/bd-a2-quadratic-ramification-attachment-hostile-review-fable5-20260830.md` (15,648 bytes, single standalone `BODY-END`, no seal block). All four input hashes and the producer's body seal (9399 / `c37282a…`) verified against basis `f89cbb02`.
+
+**Itemized outcomes:**
+
+1. **Attachment-cycle lemma — CONFIRMED.** I rebuilt the proof durably: the total transform of the connected infinity tree stays a connected tree under all extra blowups, every point over it lies on a tree vertex, and the smooth strict transform of an irreducible ramification component contributes exactly one transverse edge per normalization branch. Two branches give either a path-closing cycle or a parallel pair (retained by the promoted forest theorem). Tangency, singular ramification, exceptional trees, and the two-branches-over-one-point case all check out; connected rational-tree infinity suffices.
+2. **Local bridge — CONFIRMED**, and strengthened: I proved `crit(π) ∩ H` is *exactly* the classified set (singular points plus projection-criticals), via "multiple fibre root ⟺ vertical tangency or singularity." That closes the one architectural hole I could construct (an unclassified third attachment kind). Cartier + Krull gives pure dimension one; the no-component-in-`H` argument genuinely needs both reduced `H` and finiteness, and its failure mode is precisely the `(1,0)`/basepoint case.
+3. **Degree convention and RH counts — CONFIRMED** (micro-repair: "smooth rational component" → "rational component's normalization"). Distinctness survives the A2/A4 cases and even the degenerate F2 variant where the section passes through the cusp.
+4. **F7/F5 — CONFIRMED.** F7's two tangency points sit on disjoint sections, hence are physically distinct with double fibre roots; no multiplicity or closure phenomenon can merge them. F5 survives: all components have degree one over infinity, so `crit ∩ H` is exactly the triple point, with all 8 units of `H·R_π` concentrated there.
+5. **Scope partition — CONFIRM_WITH_CORRECTIONS.** One required addition: dichotomy (0.2) presupposes `R_red ≠ ∅`, which the producer never states; it's provable (positive-dimensional fibres lie in the critical locus, else an everywhere-étale finite map would trivialize over simply connected `P²`). F8's `K ≤ 1` and F9's `b₁ = 2` recounted independently.
+6. **Successor — CONFIRM_WITH_CORRECTIONS with one material refutation.** The injectivity `Z^{components(R_red)} → Cl(Y)` is correct (hypotheses: `Y` integral normal, `R_red` pure codim 1, `O(U)^* = C^*` from the dominant block *morphism*; the word "affine" is a slip since finiteness holds only near `H`). But the proposed "rank ≤ 1" gate is **unreachable**: every smooth member has `K² = −1`, `e = 13`, hence `ρ(X) = 11`, so `rank Cl(Y) = 11 − rank⟨[H_i]⟩ ∈ {8, 9, 10}`. A rank-≤-1 outcome would certify an arithmetic error, so that computation eliminates nothing.
+
+**Recommended replacements** (in the report): the F5 local different at the triple point, and a finite lattice gate enumerating effective decompositions of `[R_π] = (2A+B)|_X` in `Pic(X) = Z¹¹` constrained by the exact attachment set. Memory updated with the outcome and the index compacted per the hook.

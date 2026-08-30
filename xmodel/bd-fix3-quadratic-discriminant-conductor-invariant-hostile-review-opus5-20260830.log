@@ -1,0 +1,16 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/bd-fix3-quadratic-discriminant-conductor-invariant-hostile-review-opus5-20260830.md` (19,766 bytes, one standalone `<!-- BODY-END -->`, no seal block). All three input seals verified byte-exact; no input, canonical file, or script touched; no CAS/Singular; `jc2-lean` untouched.
+
+**Verdict: CONFIRM_WITH_CORRECTIONS. Nothing refuted.**
+
+Items 1–2 CONFIRMED outright. I reconstructed the Gram determinant from the AL3 table and got `81a²d² − 108a³c − 108bd³ − 27b²c² + 162abcd` — exactly (2.1), and exactly `Disc(Φ)` in the classical convention, so the residual "convention scalar" is **1**, not merely nonzero. Verified on two instances (`(0,1,−1,0)` gives `z³=−1`, disc `−27`; `(0,1,0,1)` gives `−108`), which pins the `−3` in `Tr(zw)`. Degree-four homogeneity and `deg ≤ 8` confirmed. The packet's unnamed "net exponent" is `6−4=2`, agreeing with (1.2).
+
+Three findings worth the campaign's attention:
+
+**The packet under-claims in §5.** Its own two ingredients (basis-invariance of `div Δ`, degree-four homogeneity) immediately give `d_min ≥ ⌈deg Δ/4⌉` — a genuine basis-free lower bound on Miranda coefficient degree, which is the one new lever here. The intended nonclaim is that no *upper* bound follows.
+
+**(0.1) upgrades from height-one to a global polynomial identity over `C[u,v]`.** `Õ` is normal of dimension 2, hence CM, hence `pd_A = 0` by Auslander–Buchsbaum, hence free by Quillen–Suslin. So a global `M ∈ M₃(A)` exists, `Fitt₀(Õ/B) = (det M)` is principal, and `Δ_B = (det M)²·Δ_Õ` exactly. The "only finite torsion-free" worry is vacuous in the campaign's actual base.
+
+**Index is not conductor.** `O = R + π·(R×R×R)` has `Fitt₀` of order 2 but annihilator of order 1; sliced it is the spatial triple point (δ=2, **not Gorenstein**), while the plane ordinary triple point has the same branches and normalization but δ=3. So the title's "conductor index" and §0's phrasing need retyping, and any δ-dictionary carries a Gorenstein hypothesis the packet omits. The `Tor` condition has an exact form: the slice must avoid components of `div(det M)`; sliced index is a floor for δ, never attainment.
+
+Both shortcuts rejected: `u⁸+v` (square leading form, irreducible) kills "square leading discriminant ⟹ Galois"; the degree-8 shortcut is a non-sequitur, and the 24-dim quadratic-tuple image cannot fill the 45-dim degree-≤8 space. Whether an actual algebra realizes `deg Δ ≤ 8` with `d_min ≥ 3` I left typed **OPEN** rather than filling by analogy — it is the bounded next test (T-1), AWS-only, gated behind the two hand-checkable strict-henselian controls SH-1 (`t³=u`: discriminant 2 / different 2 / reduced branch 1 / index 0) and SH-2 (index 2 vs annihilator 1, with a positive and a negative slice).

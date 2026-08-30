@@ -1108,3 +1108,39 @@ Both external review lanes are now closed; the next different-model review
 slot goes to the provisional ramification-attachment dichotomy. The
 `ARTIFACT-FINALIZE/v1` systems lane may finish independently. AWS remains
 idle pending a source-reviewed heavy packet; holds/human gates: none.
+
+Allocation refresh (2026-08-30 04:36Z): Opus's discriminant/index review
+closed cleanly with `CONFIRM_WITH_CORRECTIONS`. Binding integration
+`410de2f5...` promotes `DISC8-INDEX`: the full trace-discriminant divisor is
+basis-independent, quadratic coefficients force degree at most eight, and a
+reduced order has a global normalization inclusion over `C[u,v]` with
+`Delta_B=(det M)^2 Delta_Btilde` and index degree at most four. Replace every
+informal “conductor index” label by “normalization index (Fitting/length)
+divisor.” Keep source ramification, different, target discriminant, and
+reduced branch separate. No curve-delta translation is licensed without a
+Tor-free slice/normalization comparison and the applicable Gorenstein input.
+
+The two strict-henselian controls in the integration are now mandatory before
+any heavy `DISC8` computation. After they pass, the high-information client is
+the joint divisor/component lattice on the promoted `F1`--`F7` types, not a
+blind discriminant image sweep. The Fable attachment review and
+`ARTIFACT-FINALIZE/v1` systems lane continue asynchronously. K00 occurrence/
+truncation images and one actual ancestry stalk remain independent. AWS is
+idle pending a source-reviewed heavy packet; holds/human gates: none.
+
+Allocation refresh (2026-08-30 04:42Z): Fable's attachment review closes
+cleanly with `CONFIRM_WITH_CORRECTIONS`. Binding integration `255bd0ba...`
+promotes the exact boundary-critical set and nonempty reduced ramification,
+then narrows the smooth reduced projectively finite quadratic block stratum
+to the fork “reducible ramification or `F5`.” Irreducible ramification forces
+`F5` and concentrates all eight `H.R_pi` units at the unique triple point.
+
+Retire the proposed raw `Cl(Y)` rank-at-most-one gate. The same review
+independently derives `rho(X)=11` and `rank Cl(Y)>=8`, agreeing with supporting
+packet `7ee2a8e3...`; the component injection remains exact, but only the
+actual effective component lattice can now help. Allocate the next quadratic
+work first to the one-chart `F5` local different, and second to effective
+decompositions of `2A+B` with attachment and `DISC8-INDEX` constraints. The
+systems finalizer has reported completion but remains outside this math atom
+until root independently inspects and reruns it. AWS stays idle until a
+source-reviewed heavy packet exists; holds/human gates: none.

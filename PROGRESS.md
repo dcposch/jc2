@@ -7,6 +7,43 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **RAMIFICATION ATTACHMENT DICHOTOMY PROMOTED; RAW CLASS-GROUP RANK ROUTE
+> RETIRED (04:42Z).** Fable's hostile review confirms the cycle lemma,
+> boundary-critical bridge, all Riemann--Hurwitz/contact counts, and the `F7`
+> kill. Binding integration `255bd0ba...`/body `f334970e...` strengthens the
+> result: reduced affine ramification is nonempty, and its closure meets
+> infinity exactly at projection-critical or singular points. In the smooth,
+> reduced, projectively finite quadratic block stratum, every survivor has
+> reducible ramification or type `F5`; irreducible ramification forces `F5`,
+> with all eight boundary-intersection units at its unique triple point.
+>
+> The block morphism also injects the free group on ramification components
+> into `Cl(Y)`, but this does not force irreducibility: the smooth conic-bundle
+> surface has nine singular fibres and Picard rank eleven, hence
+> `rank Cl(Y)>=8` after deleting at most three infinity components. The raw
+> rank-at-most-one successor is impossible and is retired. The honest next
+> gates are the `F5` local different and effective component decompositions
+> of `2A+B` in the conic-bundle lattice. No quadratic block closure follows.
+
+> **INTRINSIC CUBIC DISCRIMINANT AND GLOBAL NORMALIZATION INDEX PROMOTED
+> (04:36Z).** Opus independently reconstructs the trace Gram determinant and
+> returns `CONFIRM_WITH_CORRECTIONS`. Binding integration
+> `410de2f5...`/body `722d21d8...` promotes that a rank-three finite-flat
+> algebra over `C[u,v]` has a basis-independent discriminant ideal/divisor,
+> and in a Miranda basis
+> `Delta=81a^2d^2-108a^3c-108bd^3-27b^2c^2+162abcd` exactly. Thus a
+> quadratic presentation has `deg Delta<=8`, while every presentation obeys
+> the one-way lower bound `d_min>=ceil(deg Delta/4)`.
+>
+> For reduced `B`, its normalization is again free over `C[u,v]`, so globally
+> `Delta_B=(det M)^2 Delta_Btilde`, with
+> `ord_p(det M)=length((Btilde/B)_p)` and `deg(det M)<=4` in the quadratic
+> case. The index/Fitting divisor is not the conductor; source ramification,
+> different, target discriminant, and reduced branch remain distinct, and a
+> curve-delta reading requires controlled base change plus the relevant
+> Gorenstein hypothesis. `DISC8-INDEX` is now an exact client, not a block
+> closure or JC2 conclusion.
+
 > **NORMALIZED K00 `e=2,m=2,h10=1` CELL IS EMPTY BY G13 AT FIELD-POINT
 > SCOPE (04:16Z).** Opus independently rebuilds G12/G13 from all 569 frozen
 > tails with a fresh `Q[I]/(I^2+1)` engine and returns
