@@ -1,0 +1,19 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/ideation-20260830T1015Z-opus5.md` (622 lines, standalone `<!-- BODY-END -->`, no seal, no `charge_basis` line). No canonical file, Git state, or `jc2-lean` path was touched, and I read no sibling submission from this round.
+
+**What I actually computed (item 5, the q=6 attack):**
+
+I built an independent exact ruled-lattice replay and validated it first — it reproduces **all twelve** rows of the charged q=8 packet's replay table exactly, including intermediate linear/adjunction counts, and fails closed under a planted Gram mutation in all three optimized modes.
+
+The q=8 mechanism fails at q=6 for one precise reason: at `h_S = 2` the strict polar total has `C.S₀ = C.T = 1`, not `0`, so `b_j = 2a_j` breaks for one prime. I derived the corrected identity (`MARK-EPS`) and the equivalent exact forced-overlap system, which makes the search tractable.
+
+Results, over *every* local partition, *every* affine-root decoration of any multiplicity, and at most one carrier (proved maximal):
+
+- **Relaxed lattice envelope: 156 survivors.** The transferred q=8 argument does *not* close q=6 — that is the honest headline.
+- Charged local rows + sharp marking: **6 survivors, one class**, only in `B_3/A_2`.
+- **`U_3/A_3` is empty using promoted instruments alone** — no new lemma, verified at both sharp and relaxed marking.
+- `B_3/A_2` dies under a new affine-root forest lemma (`AFF-FOREST`) that I derive and flag as review-critical; old-pass/new-fail controls show both it and the Euler cap are load-bearing, so the zero is not vacuous.
+
+**Two caveats I want to be explicit about.** First, three steps are mine and unreviewed: `M = Z_H` at q=6, the sharp marking, and `AFF-FOREST`. Second — and I flagged this in §0 — the working tree advanced from the declared basis mid-session, and one of my later reads (`AUDIT.md`) returned post-basis content revealing that the q=8 review had already completed and promoted. Every input my computation depends on is byte-pinned and unchanged, but my custody discipline was verify-once rather than verify-per-read. I turned that live failure into the campaign-systems `UPGRADE` card rather than leaving it unstated.
+
+The report also carries the 46-avenue disposition (three raises, one execution-priority lower), reranked gaps, `RULE-ON-Y` (transplanting the promoted `A1`-ruling instrument onto the block-descent surface — the one item that leaves the quadratic horn), a K00 ranking that puts source-completeness and a new jet-codimension stopping law above more truncation rows, and three cards with a ranked launch portfolio.
