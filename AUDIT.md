@@ -5,6 +5,36 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **`A1`-RULING AND COMPLETION-INVARIANT EULER CAP PROMOTED
+> (2026-08-30 08:33Z).** GPT-5.5 xhigh hostile review sealed full
+> `dddf3463...`/body `f6de61b9...` returns `CONFIRM_WITH_CORRECTIONS` after
+> independently checking every surface-theoretic input and the primary
+> theorem formulations. Transactional binding integration
+> `f092a7152dea8bdee387825fa8181dffeb8145fc99cf65973d74f528491f57a0`
+> (10,866-byte body `a8aa57dc...`, manifest `46d41d01...`) promotes, for the
+> charged actual dominant morphism into
+> `U=X minus Supp(H+R_X)` in the normal quadratic proper-block scope,
+>
+> ```text
+> U smooth rational affine, O(U)^*=C^*, bar-kappa(U)=-infinity;
+> U -> C an A1-fibration directly on U, with C=A1 or P1;
+> e(U)=12-r-c and r+c<=11;
+> C=P1 => r+c<=10;
+> r+c=11 => C=A1 and every fibre has irreducible reduced support.
+> ```
+>
+> Here `r` is total ADE rank and `c` counts distinct nonexceptional reduced
+> support components, with a common component counted once and all Cartier
+> multiplicities ignored. In reviewed finite F5 scope, no H/R component is
+> common and `c=3+k`, so `r+k<=8`. Thus `A8` at the F5 point is eliminated;
+> `A7` forces `r_aff=0`, `k=1`, affine base, and the equality fibre
+> classification. The exact residual budgets for lower rows are recorded in
+> the integration. The ruling class is primitive, nef, effective,
+> basepoint-free and satisfies `(L^2,K.L,D.L)=(0,-2,1)` only after resolving
+> boundary base points. Their number is not bounded, so no such equations are
+> promoted on the raw `D9` marking. The complete-base branch has a valid
+> degree-one control; whether proper-block `d1>=2` excludes it remains open.
+
 > **NORMAL-SINGULAR REDUCED FINITE INFINITY COLLAPSES TO `F5`
 > (2026-08-30 08:07Z).** GPT-5.5 xhigh hostile review full `10196c68...`
 > returns `CONFIRM_WITH_CORRECTIONS` after rebuilding the local determinant,

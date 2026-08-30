@@ -7,6 +7,35 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 08:33Z — `A1` ruling promoted; Euler cap prunes singular F5)
+
+- **Charge the completion-invariant support budget before any effectivity
+  expansion.** For the maximal safe open
+  `U=X minus Supp(H+R_X)`, different-model review promotes a direct
+  `A1`-fibration over `A1` or `P1` and `e(U)=12-r-c`. In finite F5 scope,
+  use the exact reduced-support inequality `r+k<=8`, counting affine
+  Stein-contracted ramification carriers but never their multiplicities.
+  This kills every `A8` local row and makes `A7` an extremal one-carrier,
+  no-affine-ADE, affine-base cell with reduced-irreducible second-ruling
+  fibres.
+- **Intersect asynchronously with the live carrier theorem.** Attach the
+  residual budget `r_aff+k<=8-r_0` to each frozen carrier row as soon as its
+  producer passes root verification; do not wait for its hostile review to
+  pursue successor geometry. Separate the original conic fibres from fibres
+  of the new `A1` ruling, and do not infer a contradiction merely because
+  one is reducible.
+- **Attack the two structural escape hatches in parallel.** One lane should
+  test whether the charged etale first-leg degree `d1>=2` rules out a
+  complete `P1` base or construct a degree-at-least-two control. Another may
+  seek a bounded boundary-adaptation theorem. Until the latter exists,
+  `L^2=0`, `K.L=-2`, and `D.L=1` are valid only on an adapted completion and
+  cannot be imposed on the raw `D9` marking.
+- **Keep scope and compute discipline exact.** The weak rank cap duplicates
+  the unit/Picard injection; the new leverage is the fibration structure,
+  complete-base sharpening, and equality classification. No heavy job is
+  licensed yet. Any later decorated enumeration that exceeds desk scale must
+  be packaged, reviewed, and sharded on AWS.
+
 ## Superseding strategy overlay (2026-08-30 08:07Z — normal-singular infinity is F5; global D9 skeleton promoted)
 
 - **Replace the open reduced-infinity census by one F5 carrier problem.** In

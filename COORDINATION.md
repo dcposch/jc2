@@ -1353,3 +1353,22 @@ Miyanishi--Sugie/Fujita `A1`-ruling hypotheses for
 until excluded. No heavy local computation is licensed; AWS remains idle and
 is mandatory only if a reviewed decorated enumeration exceeds desk scale.
 Web backstop remains `2026-08-31T03:40Z`; holds/human gates: none.
+
+Allocation refresh (2026-08-30 08:33Z): GPT-5.5 xhigh closes the
+Miyanishi--Sugie/Euler audit with `CONFIRM_WITH_CORRECTIONS` and no
+mathematical gap. Binding integration `f092a715...` promotes a direct
+`A1`-fibration on `U=X minus Supp(H+R_X)`, base `A1` or `P1`, the exact
+completion-invariant identity `e(U)=12-r-c`, and the F5 support budget
+`r+k<=8`. Remove every singular-F5 `A8` row now. Retain `A7` only as the
+extremal `r_aff=0,k=1`, affine-base cell with all second-ruling fibres
+irreducible in reduced support.
+
+Charge `r_aff+k<=8-r_0` to the active carrier/effectivity producer as soon as
+it freezes, but do not make its hostile review a research barrier. Keep
+original conic fibres and the new `A1`-ruling fibres typed separately. The
+parallel successor tests whether the actual etale first-leg degree `d1>=2`
+excludes the complete-base branch or admits a degree-at-least-two control.
+Do not enumerate ruling classes on the raw `D9` marking without a boundary-
+adaptation theorem. No heavy computation is licensed; AWS remains idle and
+mandatory for any later reviewed enumeration that exceeds desk scale. Web
+backstop remains `2026-08-31T03:40Z`; holds/human gates: none.

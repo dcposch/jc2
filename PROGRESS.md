@@ -7,6 +7,23 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **`A1`-RULING/EULER FILTER PROMOTED; SINGULAR `F5-A8` ROWS DIE
+> (08:33Z).** GPT-5.5 xhigh independently checks the charged actual
+> `A2 -> U` first leg, smooth affine open, Miyanishi--Sugie surface theorem,
+> adapted completion, Noether/Euler calculation, fibre topology, and sharp
+> controls, returning `CONFIRM_WITH_CORRECTIONS` with no mathematical gap.
+> Binding integration `f092a715...`/body `a8aa57dc...`, manifest
+> `46d41d01...`, promotes for
+> `U=X minus Supp(H+R_X)`: a direct `A1`-fibration over exactly `A1` or
+> `P1`, `e(U)=12-r-c`, `r+c<=11`, and the stronger `r+c<=10` for complete
+> base. In the reviewed finite `F5` scope this is `r+k<=8`; hence all local
+> `A8` rows are impossible. `A7` survives only with no affine ADE tree,
+> exactly one reduced ramification carrier, base `A1`, and every fibre of the
+> second ruling irreducible in reduced support. The ruling class exists only
+> after potentially unbounded boundary adaptation, not on the raw `D9`
+> marking. Carrier effectivity and a possible block-specific `d1>=2`
+> obstruction to the `P1` branch remain active.
+
 > **REDUCED FINITE NORMAL-SINGULAR QUADRATIC INFINITY IS FORCED TO `F5`
 > (08:07Z).** GPT-5.5 xhigh independently reconstructs the determinant-line
 > equation, connected-subtree graph argument, all `F1`--`F9` critical-site
