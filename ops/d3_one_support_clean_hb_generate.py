@@ -6,8 +6,10 @@ open chart where the second localized Hilbert--Burch coordinate has a
 nonzero z-derivative, and asks whether the inverse image of the twisted cubic
 has local length at least ``--jet-order`` at the prescribed infinity point.
 
-Heavy invocations belong on AWS.  ``--self-test`` deliberately avoids the
-interior jet expansion and is suitable for a small deterministic replay.
+Heavy invocations are refused unless Linux, Amazon EC2 DMI, and a
+coordinator-set route token are all present.  ``--self-test`` deliberately
+avoids the interior jet expansion, bypasses that route guard, and is suitable
+for a small deterministic local replay.
 """
 
 from __future__ import annotations
@@ -15,10 +17,19 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
+import re
 import sys
 from dataclasses import dataclass
+from pathlib import Path
 
 import sympy as sp
+
+
+AWS_ROUTE_TOKEN_ENV = "D3_ONE_SUPPORT_CLEAN_HB_ROUTE_TOKEN"
+AWS_ROUTE_TOKEN_PATTERN = re.compile(
+    r"^d3_clean_hb_[A-Za-z0-9][A-Za-z0-9_-]{0,95}$"
+)
 
 
 def require(condition: bool, message: str) -> None:
@@ -49,6 +60,25 @@ def integer_is_prime(value: int) -> bool:
             return False
         divisor += 2
     return True
+
+
+def require_aws_route() -> str:
+    """Refuse every non-self-test expansion outside the registered AWS route."""
+
+    require(sys.platform.startswith("linux"), "heavy generation requires Linux on AWS")
+    try:
+        vendor = Path("/sys/class/dmi/id/sys_vendor").read_text(
+            encoding="utf-8"
+        ).strip()
+    except OSError:
+        vendor = ""
+    require(vendor == "Amazon EC2", "heavy generation requires Amazon EC2 DMI")
+    route_token = os.environ.get(AWS_ROUTE_TOKEN_ENV, "")
+    require(
+        AWS_ROUTE_TOKEN_PATTERN.fullmatch(route_token) is not None,
+        f"heavy generation requires a coordinator-set {AWS_ROUTE_TOKEN_ENV}",
+    )
+    return route_token
 
 
 @dataclass(frozen=True)
@@ -414,13 +444,18 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     require(2 <= args.jet_order <= 27, "jet order must lie in [2,27]")
+    if args.self_test:
+        require(
+            args.prime == 0 or (args.prime > 3 and integer_is_prime(args.prime)),
+            "characteristic must be zero or a prime greater than three",
+        )
+        self_test(mutate_boundary_lift=args.mutate_boundary_lift)
+        return 0
+    require_aws_route()
     require(
         args.prime == 0 or (args.prime > 3 and integer_is_prime(args.prime)),
         "characteristic must be zero or a prime greater than three",
     )
-    if args.self_test:
-        self_test(mutate_boundary_lift=args.mutate_boundary_lift)
-        return 0
     require(not args.mutate_boundary_lift, "mutation is available only with --self-test")
     generate_singular(jet_order=args.jet_order, prime=args.prime, engine=args.engine)
     return 0
