@@ -7,6 +7,26 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 04:52Z — provisional F5 local split)
+
+- **Treat irreducible ramification as provisionally closed in the smooth
+  finite quadratic stratum.** A sealed exact local producer gives the F5
+  different two transverse branches with boundary weights `5` and `3`.
+  Combined with the promoted attachment theorem, this removes the last F5
+  escape for irreducible ramification. Run a different-model review on the
+  normal form, Hensel split, resultant length, and global cycle inference;
+  proceed provisionally on reducible component lattices without waiting.
+- **Make the component lattice the central quadratic gate.** Enumerate
+  effective splittings of `R_pi=2A+B` in the nine-singular-fibre conic-bundle
+  lattice, imposing adjunction, unit-induced independence, type-specific
+  attachment sets, and the F5 `3+5` allocation. Only after this finite
+  integer gate should coefficient realization or elimination run on AWS.
+- **Keep object typing and other fronts intact.** The local source different
+  is not the target discriminant, normalization index, conductor, or a map.
+  `DISC8-INDEX`, K00 occurrence/truncation images, the ancestry stalk, and
+  basepoint/nonreduced/singular/degree-drop quadratic strata remain
+  independent clients.
+
 ## Superseding strategy overlay (2026-08-30 04:42Z — attachment dichotomy promoted)
 
 - **Reduce the finite smooth quadratic branch to two geometric clients.** A

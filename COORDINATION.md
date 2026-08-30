@@ -1165,3 +1165,14 @@ stage-zero Git binding. The tool is cooperative integrity/custody machinery,
 not hostile same-user security or mathematical evidence. External adapter
 migration remains deferred and requires its own regression packet. No heavy
 job is licensed; AWS remains idle; holds/human gates: none.
+
+Allocation refresh (2026-08-30 04:52Z): completed sealed producer
+`8a1c3c50...` gives the exact F5 local different. Its tangent cone
+`(z-v)(3z-v)` has two smooth branches and the eight boundary-intersection
+units split rigidly as `5+3`. Provisional composition with the promoted
+attachment-cycle theorem forces reduced ramification to be reducible on
+every survivor in the current smooth, reduced, projectively finite quadratic
+scope. Commit this frozen producer, then send it to a different model for a
+bounded hostile review while the effective component-lattice lane continues
+without blocking. Do not launch coefficient elimination before that finite
+lattice gate. AWS remains idle; holds/human gates: none.

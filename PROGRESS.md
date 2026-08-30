@@ -7,6 +7,19 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **F5 LOCAL DIFFERENT PROVISIONALLY SPLITS `8=3+5` (04:52Z).** Sealed
+> producer `8a1c3c50...`/body `61931ec7...` puts the unique F5 triple/contact
+> germ in the exact form
+> `h=z(z-v)((1+v)z-v)`, `f=h+u*g`, `g(0)!=0`. On the smooth surface,
+> `u` has order three, so the source different has tangent cone
+> `(z-v)(3z-v)`: two smooth transverse branches. Their infinity
+> intersections are forced to be five and three, with
+> `disc_z(h)=v^8`. Thus F5 cannot carry irreducible ramification through one
+> local branch; combined provisionally with the attachment theorem, every
+> in-scope smooth quadratic survivor must have reducible ramification. This
+> awaits different-model review; coefficient realization and reducible
+> splittings remain open.
+
 > **LOCAL REPORT PUBLICATION IS NOW TRANSACTIONAL (04:48Z).** The accepted
 > `ARTIFACT-FINALIZE/v1` tool replaces mutable canonical-path handoffs with
 > `begin -> close -> finalize -> verify`: an exclusive lease owns a private

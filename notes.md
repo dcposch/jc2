@@ -14570,3 +14570,21 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   model lanes retain their existing immutable-prompt/run-receipt/root-seal
   path until a separately tested adapter migration. This is systems custody,
   not a proof result.
+
+## 2026-08-30 04:52Z PROOF EVENT — F5 DIFFERENT HAS TWO LOCAL BRANCHES
+
+- Completed sealed producer
+  `8a1c3c50281a9c55b4dcf21c7c5a33ef574b4bfc59d10eb18456528171bbbb72`
+  / body `61931ec7...` normalizes the F5 infinity germ to
+  `h=z(z-v)((1+v)z-v)` and the smooth incidence equation to `f=h+u*g` with
+  `g(0)!=0`.
+- On `X`, `u` begins in order three, so the source different `f_z` has
+  squarefree tangent cone `(z-v)(3z-v)`. Hensel factorization gives two
+  smooth transverse branches. The exact discriminant `disc_z(h)=v^8`
+  and additivity force their boundary intersections to be `5` and `3`.
+- If those germs lie on one global irreducible ramification curve, its
+  normalization has two branches over the F5 point and the promoted cycle
+  lemma fires; if they lie on different curves, ramification is reducible.
+  Hence reducibility of every in-scope survivor is a strong provisional
+  consequence. Different-model review is next; the component-lattice lane
+  already proceeds provisionally. No block closure or JC2 result follows.
