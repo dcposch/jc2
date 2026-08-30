@@ -1439,3 +1439,11 @@ B3/U3 cell; stop q=6 lattice and local-contact work. Reviews do not block
 other research. No heavy computation is
 active; AWS is idle/unclaimed and remains mandatory for any growing CAS job.
 The web backstop remains `2026-08-31T03:40Z`; holds/human gates: none.
+
+External-review custody note (2026-08-30 13:43Z): the first GPT-5.5 review of
+the morphic rational-forest correction completed a confirming analysis in its
+immutable log but failed to create the mandated report, so receipt status is
+`FAILED/report=MISSING` and the analysis is non-promotable. A fresh rereview
+prompt with an explicit single-report path is frozen for relaunch. This is an
+output-contract failure, not a mathematical verdict; the correction remains
+binding on Sol's audited proof and independently review-gated.

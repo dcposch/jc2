@@ -1,0 +1,1745 @@
+cli=codex-cli 0.150.1 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.150.1
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a052dd-6bef-7052-9afe-93397b2cb27c
+--------
+user
+# Hostile review mandate: rational-forest morphic correction
+
+You are GPT-5.5 acting as a fresh hostile reviewer.  Do not modify the
+repository.  Do not inspect any sibling external-model prompt, log, report or
+receipt.  Do not inspect `jc2-lean`.
+
+Hash-check and audit only these charged files:
+
+```text
+d49a44ce65f13f0aba35e0a034923a1362594ba8a21fef27c63cc866ec7b667a
+  xmodel/bd-a2-rational-forest-morphic-correction-sol56-20260830.md
+d14702bb98d3fd347a9b96ffaa531fefd55aad28df58d37601f6336bfb29029f
+  xmodel/bd-a2-rational-forest-morphic-correction-sol56-20260830.md.artifact.json
+367d8ffa1a374b25ee27ca2a2079721c6b17bd71980a13687b11aa87e86f2986
+  xmodel/bd-a2-firstleg-rational-forest-multisection-producer-sol56-20260830.md
+24b61d503e5849576093139261d5bc748e2dc7d83ddcc657ac9e4d1d9a004b5f
+  xmodel/bd-a2-rational-forest-multisection-hostile-review-opus5-20260830.md
+6a8558e42a67f1ec5c8bcf12321b6e6805b30a570eba17862c6e7e24cd631b08
+  xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md
+e3dc96f07825ea882edc3d2701e9f0a0357ae863c062ad695d9377a37aa2b761
+  xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md
+ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
+  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+```
+
+The correction retracts only the prior strengthening from an
+everywhere-defined dominant morphism `A^2 -> U` to an arbitrary dominant
+rational map.  Reconstruct every point independently:
+
+1. Verify or refute the smooth-cubic counterexample
+   `U=P^2 minus E`, including the existence/status of `A^2 dashrightarrow U`,
+   log plurigenera and boundary genus.  Identify the exact false step in the
+   old resolution argument.
+2. Prove the strongest valid theorem for an everywhere-defined dominant
+   morphism `A^2 -> U`: resolution with centers over infinity, logarithmic
+   pullback, ordinary `p_g=q=0`, the residue/normalization formula for
+   disconnected strict-SNC boundary, and the rational-forest conclusion.
+   Audit whether surjectivity, quasi-finiteness or etaleness is needed.
+3. Audit shrinking: distinguish numerical monotonicity of log plurigenera
+   from the requirement that the full morphic image land in the chosen open.
+4. Audit the actual proper-block use.  With `V=g1(A^2)` open and smooth,
+   decide whether `g1:A^2 -> V` licenses the theorem and whether a complete
+   exceptional fibre over a missed singular point is boundary on every
+   common resolution.  Test parallel edges and graph-cycle persistence.
+5. Classify downstream damage.  Separate projective `p_g=q=0` deductions,
+   purely combinatorial multisection/classification results, actual morphic
+   proper-block exclusions, and any result that truly relied only on rational
+   domination.  State precisely what must be reworded, reopened or retracted.
+
+Return itemized verdicts and a maximum-safe replacement theorem.  Be willing
+to refute both the old integration and the correction.  Keep the body under
+8,000 words and end it with a standalone `<!-- BODY-END -->` line; do not add
+a seal.  Make no exit-price assertion and emit no `charge_basis` line.
+
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll first verify the listed SHA-256 hashes and then read only those seven charged files. I’ll avoid `jc2-lean` and any sibling prompt/log/report/receipt material as requested.
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-rational-forest-morphic-correction-sol56-20260830.md xmodel/bd-a2-rational-forest-morphic-correction-sol56-20260830.md.artifact.json xmodel/bd-a2-firstleg-rational-forest-multisection-producer-sol56-20260830.md xmodel/bd-a2-rational-forest-multisection-hostile-review-opus5-20260830.md xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+d49a44ce65f13f0aba35e0a034923a1362594ba8a21fef27c63cc866ec7b667a  xmodel/bd-a2-rational-forest-morphic-correction-sol56-20260830.md
+d14702bb98d3fd347a9b96ffaa531fefd55aad28df58d37601f6336bfb29029f  xmodel/bd-a2-rational-forest-morphic-correction-sol56-20260830.md.artifact.json
+367d8ffa1a374b25ee27ca2a2079721c6b17bd71980a13687b11aa87e86f2986  xmodel/bd-a2-firstleg-rational-forest-multisection-producer-sol56-20260830.md
+24b61d503e5849576093139261d5bc748e2dc7d83ddcc657ac9e4d1d9a004b5f  xmodel/bd-a2-rational-forest-multisection-hostile-review-opus5-20260830.md
+6a8558e42a67f1ec5c8bcf12321b6e6805b30a570eba17862c6e7e24cd631b08  xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md
+e3dc96f07825ea882edc3d2701e9f0a0357ae863c062ad695d9377a37aa2b761  xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md
+ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+
+codex
+The hashes match the user-supplied values exactly. I’m going to collect line counts and then read the charged files in bounded chunks so references are concrete.
+exec
+/bin/zsh -lc 'wc -l xmodel/bd-a2-rational-forest-morphic-correction-sol56-20260830.md xmodel/bd-a2-rational-forest-morphic-correction-sol56-20260830.md.artifact.json xmodel/bd-a2-firstleg-rational-forest-multisection-producer-sol56-20260830.md xmodel/bd-a2-rational-forest-multisection-hostile-review-opus5-20260830.md xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     179 xmodel/bd-a2-rational-forest-morphic-correction-sol56-20260830.md
+       1 xmodel/bd-a2-rational-forest-morphic-correction-sol56-20260830.md.artifact.json
+     277 xmodel/bd-a2-firstleg-rational-forest-multisection-producer-sol56-20260830.md
+     433 xmodel/bd-a2-rational-forest-multisection-hostile-review-opus5-20260830.md
+     193 xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md
+     169 xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md
+     187 xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+    1439 total
+
+codex
+I have the file sizes now. Next I’m reading the charged material with line numbers, because the final verdict needs to point to exact claims rather than lean on the previous reports.
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-rational-forest-morphic-correction-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Binding correction: the rational-forest gate is morphic, not rational
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Coordinator: Sol 5.6 Ultra  
+     5	Frozen basis: `7ef0f3d9799b196dea26a82315c8ac79a0fbb00d`  
+     6	Lifecycle: **BINDING CORRECTION / FALSE STRENGTHENING RETRACTED**
+     7	
+     8	## 0. Disposition
+     9	
+    10	The original producer proved the rational-forest theorem under an
+    11	everywhere-defined dominant morphism `A^2 -> U`.  The hostile review and the
+    12	coordinator integration strengthened this to an arbitrary dominant rational
+    13	map.  That strengthening is false.  This packet retracts it and restores the
+    14	producer's morphic hypothesis.
+    15	
+    16	The correction does not invalidate actual proper-block clients: their first
+    17	leg `g1:A^2 -> Y` is an everywhere-defined dominant étale morphism.  It does
+    18	invalidate any use based only on abstract rational domination of an open
+    19	surface.
+    20	
+    21	The affected promoted packet is
+    22	
+    23	```text
+    24	6a8558e42a67f1ec5c8bcf12321b6e6805b30a570eba17862c6e7e24cd631b08
+    25	  xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md
+    26	```
+    27	
+    28	Section 1 of that packet is superseded by the theorem below wherever it says
+    29	"rational map".  Its residue formula, multisection formula and graph/genus
+    30	calculations are unchanged.
+    31	
+    32	## 1. Counterexample to the rational-map extension
+    33	
+    34	Let `E` be a smooth plane cubic and put
+    35	
+    36	```text
+    37	U=P^2 minus E.
+    38	```
+    39	
+    40	The identity on `P^2` gives a dominant rational map from the standard affine
+    41	chart `A^2` to `U`: it is defined on the dense open
+    42	`A^2 minus (E intersect A^2)`.  Yet `(P^2,E)` is already a smooth SNC
+    43	completion and its boundary contains the genus-one curve `E`.  Thus
+    44	
+    45	```text
+    46	tau(E)=sum genus(E_i)+b1(Gamma_E)=1.
+    47	```
+    48	
+    49	An arbitrary dominant rational map from `A^2` therefore imposes no
+    50	rational-forest boundary condition.
+    51	
+    52	The failed proof step was the assertion that resolving
+    53	`A^2 dashrightarrow U` gives a proper birational `W -> A^2` with the same
+    54	logarithmic Kodaira dimension as `A^2` and a morphism `W -> U`.  A rational
+    55	map to the nonproper `U` may have poles into the omitted boundary at points
+    56	inside `A^2`; resolving the map to a proper completion does not produce a
+    57	morphism to `U` on all of a proper-birational model with open part `A^2`.
+    58	The cubic example exhibits exactly this failure.
+    59	
+    60	## 2. Correct morphic rational-forest theorem
+    61	
+    62	Let `U` be a smooth quasi-projective complex surface and let
+    63	
+    64	```text
+    65	f:A^2 -> U
+    66	```
+    67	
+    68	be an everywhere-defined dominant morphism.  For every smooth projective
+    69	strict-SNC completion `U=X minus D`, every component of `D` is rational and
+    70	the dual multigraph of `D` is a forest.
+    71	
+    72	Indeed, embed `A^2` in `P^2` with boundary line `L`.  The morphism to `U`
+    73	followed by `U subset X` extends to a rational map `P^2 dashrightarrow X`
+    74	whose indeterminacy lies entirely on `L`.  Resolve its graph without changing
+    75	`A^2`:
+    76	
+    77	```text
+    78	W --F--> X,
+    79	W minus B = A^2,
+    80	F^{-1}(D) subset B.
+    81	```
+    82	
+    83	Here `W` is rational, `B` is a strict-SNC boundary after further boundary
+    84	blowups, and `F` is dominant and generically finite.  Logarithmic pullback
+    85	injects
+    86	
+    87	```text
+    88	H0(X,m(K_X+D)) -> H0(W,m(K_W+B))
+    89	```
+    90	
+    91	for every `m>=1`.  The right side is zero because
+    92	`bar-kappa(A^2)=-infinity`; hence `bar-P_m(U)=0`.  Ordinary pullback of
+    93	one-forms and pluricanonical forms along the generically finite `F` also gives
+    94	
+    95	```text
+    96	p_g(X)=q(X)=0.
+    97	```
+    98	
+    99	For reduced strict-SNC `D`, residue, normalization and Serre duality give
+   100	
+   101	```text
+   102	bar-P_1(U)=p_g(X)+tau(D)-rank(partial),
+   103	rank(partial)<=q(X),
+   104	
+   105	tau(D)=sum_i g(D_i)+b1(Gamma_D).
+   106	```
+   107	
+   108	Therefore `0=bar-P_1(U)=tau(D)`.  Both summands are nonnegative, proving the
+   109	claim.
+   110	
+   111	Equivalently, any complete boundary subconfiguration containing a
+   112	positive-genus component or a graph cycle forbids an everywhere-defined
+   113	dominant morphism from `A^2`.  Passing to a larger resolved boundary cannot
+   114	erase positive component genus or the first Betti number of an existing
+   115	subgraph.
+   116	
+   117	## 3. Correct actual-first-leg interface
+   118	
+   119	For a hypothetical proper block,
+   120	
+   121	```text
+   122	A^2 --g1--> Y --g2--> A^2
+   123	```
+   124	
+   125	the promoted block-structure theorem supplies that `Y` is normal affine and
+   126	that `g1` is everywhere-defined, dominant, quasi-finite and étale.  Its image
+   127	
+   128	```text
+   129	V=g1(A^2)
+   130	```
+   131	
+   132	is an open smooth subscheme of `Y`, and `g1:A^2 -> V` is a surjective
+   133	morphism.  Apply Section 2 directly to `V`; no equality `V=Y minus R`, no
+   134	properness of `g1`, and no rational-map strengthening is needed.
+   135	
+   136	Consequently, if a projective or local model of the actual block surface has
+   137	a point `p` outside `V`, then every complete exceptional curve over `p` is a
+   138	boundary curve in a smooth completion of `V`.  A positive-genus exceptional
+   139	component or a resolved exceptional cycle is an immediate contradiction.
+   140	
+   141	This remains true when `p` is singular: the étale first leg from the smooth
+   142	source misses `Sing(Y)`.  It also remains true if `V` is a proper open subset
+   143	of the usual non-branch open `Y minus R`, because the theorem is applied to
+   144	`V` itself.
+   145	
+   146	## 4. Scope repair for existing clients
+   147	
+   148	The following rules supersede the old wording.
+   149	
+   150	1. A boundary-genus or boundary-cycle exclusion is binding when its client
+   151	   supplies an everywhere-defined dominant morphism `A^2 -> U`.  Every actual
+   152	   proper-block first-leg client supplies this.
+   153	2. A claim about an abstract open surface with only a dominant rational map
+   154	   from `A^2` is not covered and must be retyped `OPEN` unless it has another
+   155	   proof.
+   156	3. For a proper projective target, a dominant rational map from `P^2` still
+   157	   forces `p_g=q=0` by ordinary pluriform pullback on a resolution.  This
+   158	   projective statement does not imply a rational-forest theorem for a chosen
+   159	   open complement.
+   160	4. Open-subset monotonicity of logarithmic plurigenera remains true, but it
+   161	   cannot convert a rational map into an everywhere-defined morphism.
+   162	
+   163	The exact multisection identity and all purely combinatorial evaluations of
+   164	`tau` in the corrected packet remain available.  Each application must now
+   165	charge the morphic interface explicitly.
+   166	
+   167	No block occurrence, polynomial map, counterexample, or JC2 conclusion is
+   168	proved here.
+   169	
+   170	<!-- BODY-END -->
+   171	
+   172	## Seal
+   173	
+   174	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   175	  including its terminating newline; this seal is outside the body.
+   176	- Body bytes: `6040`.
+   177	- Body SHA-256:
+   178	  `6e97a5c2bdb8aa679e53338d507bd684161eb53af96cd09fa4f2662fcbba08f0`.
+   179	- Frozen basis: `7ef0f3d9799b196dea26a82315c8ac79a0fbb00d`.
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-rational-forest-morphic-correction-sol56-20260830.md.artifact.json' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	{"artifact":{"body_bytes":6040,"body_sha256":"6e97a5c2bdb8aa679e53338d507bd684161eb53af96cd09fa4f2662fcbba08f0","file_bytes":6372,"frozen_basis":"7ef0f3d9799b196dea26a82315c8ac79a0fbb00d","full_sha256":"d49a44ce65f13f0aba35e0a034923a1362594ba8a21fef27c63cc866ec7b667a","name":"bd-a2-rational-forest-morphic-correction-sol56-20260830.md","published_mode":"0444"},"custody":{"closed_utc":"2026-08-30T13:26:07Z","finalized_utc":"2026-08-30T13:26:07Z","lease_id":"5c96f0852200832e2081d12e9477f713","opened_utc":"2026-08-30T13:24:02Z","owner":"root-rational-forest-correction","source_bytes":6040,"source_sha256":"6e97a5c2bdb8aa679e53338d507bd684161eb53af96cd09fa4f2662fcbba08f0"},"schema":"jc2.artifact-finalize/v1"}
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: rational-forest first-leg obstruction
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Coordinator: Sol 5.6 Ultra  
+     5	Frozen basis: `a619157b73c1dee1ca0599db47321ffd7588d748`  
+     6	Lifecycle: **BINDING INTEGRATION / PRESENTATION-SCOPED QUADRATIC CONSEQUENCE**
+     7	
+     8	## 0. Disposition
+     9	
+    10	Opus 5 returned `CONFIRM_WITH_CORRECTIONS` on the sealed producer
+    11	
+    12	```text
+    13	367d8ffa1a374b25ee27ca2a2079721c6b17bd71980a13687b11aa87e86f2986
+    14	  xmodel/bd-a2-firstleg-rational-forest-multisection-producer-sol56-20260830.md
+    15	```
+    16	
+    17	through a sandbox-attested raw review body
+    18	
+    19	```text
+    20	40841431c554c63cedb13bda8f662e2633d97695ee8f5d91659479169e2d13e5
+    21	  xmodel/bd-a2-rational-forest-multisection-hostile-review-opus5-20260830.md
+    22	```
+    23	
+    24	whose sealed full-file SHA-256 is
+    25	`24b61d503e5849576093139261d5bc748e2dc7d83ddcc657ac9e4d1d9a004b5f`.
+    26	The receipt pins unchanged prompt, adapter, launcher, Seatbelt profile,
+    27	validator, fallacy appendix, and model-prompt hashes, with exit code zero.
+    28	
+    29	The review preserves the producer's main theorem and improves the
+    30	multisection formula.  This integration adopts the review's repairs: strict
+    31	SNC/geometric-genus language, a direct differential-form proof of
+    32	`p_g=q=0`, dominant rational rather than only morphic input, open-subset
+    33	monotonicity, the exact unibranch equality condition, the projective-coordinate
+    34	convention in the sharp control, exact `[X:Y]`-degree three, and the separation
+    35	of reduced ramification support from different and discriminant
+    36	multiplicities.  The conditional value `barP_1=18` is not promoted.
+    37	
+    38	## 1. Binding rational-forest theorem
+    39	
+    40	Let `U` be a smooth quasi-projective complex surface and `(X,D)` a smooth
+    41	projective completion with `D` reduced strict SNC.  Write `Gamma_D` for the
+    42	dual multigraph, retaining parallel edges, and put
+    43	
+    44	```text
+    45	tau(D)=sum_i g(D_i)+b_1(Gamma_D).
+    46	```
+    47	
+    48	Residue, normalization, and Serre duality give
+    49	
+    50	```text
+    51	barP_1(U)=p_g(X)+tau(D)-rank(partial),
+    52	rank(partial)<=min(tau(D),q(X)).                       (1.1)
+    53	```
+    54	
+    55	This includes disconnected boundaries: if `V,E,c` are the numbers of
+    56	vertices, edges, and connected components, then
+    57	`b_1=E-V+c`.
+    58	
+    59	If there is a dominant rational map `A^2 --> U`, resolve it to a generically
+    60	finite morphism.  Pullback injects global one-forms and pluricanonical forms,
+    61	so `p_g(X)=q(X)=0`; logarithmic pullback also forces
+    62	`bar kappa(U)=-infinity` and hence `barP_1(U)=0`.  Equation (1.1) then gives
+    63	
+    64	```text
+    65	g(D_i)=0 for every i,          b_1(Gamma_D)=0.         (1.2)
+    66	```
+    67	
+    68	Thus every resolved boundary component is rational and the dual multigraph
+    69	is a forest.  The obstruction is monotone under shrinking the target: adding
+    70	boundary cannot decrease logarithmic plurigenera.  Consequently any one
+    71	boundary subconfiguration with positive geometric genus or a graph cycle
+    72	already forbids a dominant rational first leg from `A^2`.
+    73	
+    74	## 2. Exact multisection formula
+    75	
+    76	For a reduced curve `H` on a smooth projective surface, let its irreducible
+    77	components have normalization genera `g_i`, let `m_q` be the number of
+    78	analytic branches at a singular point, let `s` be the component count, and
+    79	let `c` be the connected-component count.  Direct edge/vertex cancellation
+    80	in an embedded resolution gives
+    81	
+    82	```text
+    83	tau(H_res)
+    84	 = sum_i g_i + sum_(q in Sing H)(m_q-1)-s+c.           (2.1)
+    85	```
+    86	
+    87	For a `P^1`-bundle over `P^1`, a section `D_infinity`, and an irreducible
+    88	multisection `C` of normalization genus `g`, let `r` be the total number of
+    89	analytic branches of `C` at its contacts with `D_infinity`.  Then
+    90	
+    91	```text
+    92	barP_1(P minus (C union D_infinity))
+    93	 = g + max(r-1,0)
+    94	   + sum_(q in Sing(C), q notin D_infinity)(m_q-1).    (2.2)
+    95	```
+    96	
+    97	Several branches at one point and resolution paths sharing exceptional
+    98	vertices do not reduce the right side.  In particular the gate fires if
+    99	`g>0`, `r>=2`, or an off-infinity singularity is multibranch.  Equality with
+   100	the lower bound `g+max(r-1,0)` requires only that every off-infinity
+   101	singularity be unibranch, not smoothness there.
+   102	
+   103	This is sharp.  With the convention `z=Z_1/Z_0`, the complement
+   104	
+   105	```text
+   106	(P^1_z x P^1_w) minus ({w=infinity} union closure{z=w^k})
+   107	```
+   108	
+   109	is `A^2`, via `(w,t) |-> (w,[t:1+t*w^k])`.  Hence multisection degree alone
+   110	cannot obstruct a first leg.
+   111	
+   112	## 3. Miranda-incidence consequence
+   113	
+   114	Consider a fixed global trace-zero Miranda presentation whose homogenized
+   115	incidence closure is a smooth irreducible hypersurface
+   116	
+   117	```text
+   118	X_d subset P^2 x P^1,          [X_d]=d*A+3*B,          (3.1)
+   119	```
+   120	
+   121	with literal degree three in `[X:Y]`.  Adjunction and restriction cohomology
+   122	give
+   123	
+   124	```text
+   125	K_X=(d-3)A+B,
+   126	p_g(X_d)=(d-1)(d-2).                                  (3.2)
+   127	```
+   128	
+   129	Therefore every such presentation with `d>=3` is incompatible with a
+   130	dominant rational `A^2` first leg.
+   131	
+   132	For `d=2`, `X_2` is rational on the stated smooth irreducible conic-bundle
+   133	stratum.  Its infinity curve is generically a smooth irreducible curve of
+   134	bidegree `(2,3)` on `P^1 x P^1`, hence has genus two.  Already
+   135	
+   136	```text
+   137	barP_1(X_2 minus H_infinity)=2>0,                     (3.3)
+   138	```
+   139	
+   140	so every dense open of this generic stratum is excluded.  No ramification
+   141	divisor is needed for (3.3).
+   142	
+   143	The stronger generic intersection calculation
+   144	
+   145	```text
+   146	R_pi=2A+B,   g(H_infinity)=2,   p_a(R_pi)=9,
+   147	H_infinity.R_pi=8,   nominal barP_1=18
+   148	```
+   149	
+   150	remains only a conditional diagnostic: it additionally requires that the
+   151	reduced ramification support is deleted, smooth and irreducible, has class
+   152	`2A+B`, and meets infinity in eight distinct transverse points.  It is not a
+   153	binding theorem.
+   154	
+   155	## 4. Exact survivor boundary
+   156	
+   157	The theorem is presentation-scoped.  It does not exclude nonreduced
+   158	incidence closure, singular ambient closure, projective basepoints,
+   159	extraneous/reducible projective components, degree drop in `(u,v)`, or degree
+   160	drop in `[X:Y]`; bidegree `(d,1)` has `p_g=0` even for large `d`.  It also
+   161	does not identify arithmetic with geometric genus on a singular component,
+   162	or reduced ramification support with the different or target discriminant.
+   163	
+   164	On the remaining reduced quadratic infinity stratum, if `H` has bidegree
+   165	`(2,3)`, then `p_a(H)=2`, and its ample support is connected.  Combining the
+   166	arithmetic-genus formula with (2.1) gives the finite successor gate
+   167	
+   168	```text
+   169	2 = G + B + K,
+   170	G=sum component normalization genera,
+   171	B=b_1(resolved dual graph),
+   172	K=sum_q(delta_q-m_q+1).                                (4.1)
+   173	```
+   174	
+   175	Thus a rational-forest resolution is possible exactly when `K=2` (and then
+   176	necessarily `G=B=0`).  Classifying the reduced factor-degree partitions and
+   177	their distributions of this two-unit non-nodal defect is the cheapest next
+   178	step.  Nonreduced and projective-degree-drop strata remain separate.
+   179	
+   180	No general cubic-block theorem, intrinsic bound on presentation degree,
+   181	primitivity statement, polynomial-map construction, counterexample, or JC2
+   182	claim follows.
+   183	
+   184	<!-- BODY-END -->
+   185	
+   186	## Seal
+   187	
+   188	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   189	  including its terminating newline; this seal is outside the body.
+   190	- Body bytes: `6810`.
+   191	- Body SHA-256:
+   192	  `9c6501222049980161f209d57e1a575ebe80c4de1b8018aedf303f692e1dae46`.
+   193	- Frozen basis: `a619157b73c1dee1ca0599db47321ffd7588d748`.
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-bidegree23-rational-forest-classification-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: reduced bidegree-(2,3) rational-forest locus
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Coordinator: Sol 5.6 Ultra  
+     5	Frozen basis: `4c91d6fc398d1b4f2b8ca1a11d69c4bb3fef9c0d`  
+     6	Lifecycle: **BINDING INTEGRATION / REDUCED SQUAREFREE INFINITY SCOPE**
+     7	
+     8	## 0. Disposition and custody
+     9	
+    10	Fable 5 independently reconstructed the sealed producer
+    11	
+    12	```text
+    13	d783cecfcc818f1ec5c056fa04126c21dab0f17c073d11d8e230703b9755feaa
+    14	  xmodel/bd-a2-firstleg-bidegree23-rational-forest-classification-sol56-20260830.md
+    15	  body 13761 / b76971e671237b906d4c772ec4008e7153ca6f47705cc994839fef33c12a604e
+    16	```
+    17	
+    18	and returned `CONFIRM_WITH_CORRECTIONS`.  Its sandbox-attested raw review body
+    19	is
+    20	
+    21	```text
+    22	77d489d7168ce40079c0806bc485c6c444446ec3ea759bdd15ad5c2007ead5aa
+    23	  xmodel/bd-a2-bidegree23-rational-forest-classification-hostile-review-fable5-20260830.md
+    24	```
+    25	
+    26	and its sealed full-file SHA-256 is
+    27	`8db0d0f8ae48434e538b83e8e16f2ca9ba8deecc90b40568570c4fc2b7065ecb`.
+    28	The clean schema-v2 receipt has exit code zero and pins unchanged prompt,
+    29	adapter, launcher, Seatbelt profile, validator, fallacy appendix, and composed
+    30	model-prompt hashes.
+    31	
+    32	The review finds no mathematical error and no false type row.  This
+    33	integration adopts its two scope repairs: `F8,F9` are factorization types but
+    34	have no forest refinement, and common coefficient zeros at an affine target
+    35	point are invisible to the infinity restriction and remain a separate
+    36	normality/finiteness/etaleness client.
+    37	
+    38	## 1. Exact genus-budget theorem
+    39	
+    40	Let `C` be a reduced divisor of class `(2,3)` on
+    41	`S=P1 times P1`.  Let `C_i` be its irreducible components, let `g_i` be their
+    42	normalization genera, and for each singular point `p` let `delta_p` be its
+    43	delta invariant and `r_p` its number of analytic branches.  Put
+    44	
+    45	```text
+    46	G(C)=sum_i g_i,
+    47	K(C)=sum_p(delta_p-r_p+1),
+    48	B(C)=b1(branch-incidence multigraph).
+    49	```
+    50	
+    51	Every such divisor is connected: the ideal sequence and Kunneth give
+    52	`H^1(S,O(-2,-3))=0`.  Adjunction gives `p_a(C)=2`.  Normalization and the
+    53	connected branch-incidence graph give
+    54	
+    55	```text
+    56	2 = G(C)+B(C)+K(C),                                  (1.1)
+    57	```
+    58	
+    59	and each summand is nonnegative.  Replacing a singular-point vertex by its
+    60	embedded-resolution exceptional tree preserves `b1`, including loops and
+    61	parallel edges.  Hence:
+    62	
+    63	> The reduced total transform of `C` on any embedded log resolution has only
+    64	> rational components and forest—necessarily tree—dual multigraph if and
+    65	> only if `K(C)=2`.
+    66	
+    67	The identity covers reducible curves, disconnected normalization, arbitrary
+    68	branch count, and nonordinary singularities.  A two-branch contact of order
+    69	`m` contributes `m-1`; an ordinary triple point contributes one.
+    70	
+    71	## 2. Exhaustive factorization table
+    72	
+    73	There are exactly nine unordered reduced component-degree partitions.  The
+    74	rational-tree locus is nonempty exactly in `F1`--`F7`:
+    75	
+    76	```text
+    77	F1  (2,3)
+    78	    rational normalization; either two A2 cusps or one A4 cusp.
+    79	
+    80	F2  (0,1)+(2,2)
+    81	    the (2,2) component has one A2 cusp; its intersection with the ruling
+    82	    fibre is supported at one point with length two.
+    83	
+    84	F3  (1,0)+(1,3)
+    85	    the two components have one length-three contact.
+    86	
+    87	F4  (1,1)+(1,2)
+    88	    the two components have one length-three contact.
+    89	
+    90	F5  (0,1)+(1,1)+(1,1)
+    91	    all three meet at one point; the two (1,1) components have contact two.
+    92	
+    93	F6  (0,1)+(1,0)+(1,2)
+    94	    all three meet at one point; the (1,0) and (1,2) components have
+    95	    contact two.
+    96	
+    97	F7  (0,1)+(0,1)+(2,1)
+    98	    the (2,1) component has one length-two contact with each of the two
+    99	    disjoint ruling components.
+   100	
+   101	F8  (0,1)+(0,1)+(1,0)+(1,1)       impossible: K<=1.
+   102	
+   103	F9  3(0,1)+2(1,0)                  impossible: K=0, B=2.
+   104	```
+   105	
+   106	These conditions are necessary and sufficient within their factorization
+   107	types.  Every viable row has an exact witness.  In particular irreducible
+   108	survivors genuinely occur: normalization maps of bidegrees `(3,2)` give
+   109	
+   110	```text
+   111	t |-> (t^3,t^2)                         two A2 cusps,
+   112	t |-> (t^2/(1-t^3),t^2)                 one A4 cusp.
+   113	```
+   114	
+   115	The review checks injectivity, all finite poles, infinity charts, and the
+   116	claimed local delta invariants.  Thus reducibility is not forced.
+   117	
+   118	## 3. Exact Miranda typing
+   119	
+   120	For a fixed-basis quadratic Miranda presentation, the leading binary cubic
+   121	
+   122	```text
+   123	F_infinity(s,t;X,Y)
+   124	 = b_2 X^3-3a_2 X^2Y+3d_2 XY^2-c_2 Y^3
+   125	```
+   126	
+   127	ranges over all of `H^0(O(2,3))`.  Therefore the theorem governs precisely
+   128	the presentations for which this leading form is squarefree: all nine
+   129	factorization types are present in the ambient family, and the infinity-curve
+   130	test retains exactly `F1`--`F7`.
+   131	
+   132	The following interfaces remain distinct:
+   133	
+   134	* a simple common factor of the four leading quadratics gives a projective
+   135	  coefficient basepoint and a `(1,0)` factorization type (`F3,F6,F8,F9`);
+   136	* a fixed fibre root gives a `(0,1)` component and is not by itself target-
+   137	  degree drop;
+   138	* a repeated leading factor is nonreduced and must be squarefreed/retyped;
+   139	* simultaneous vanishing of all four leading quadratics is literal target-
+   140	  degree drop and returns to degree at most one;
+   141	* a common zero of the full coefficient sections at an affine target point is
+   142	  invisible to `F_infinity` and remains a separate normality/finiteness/
+   143	  etaleness condition.
+   144	
+   145	## 4. Binding campaign consequence
+   146	
+   147	Combine this classification with the promoted rational-forest first-leg
+   148	theorem.  A fixed-basis quadratic Miranda incidence with squarefree infinity
+   149	can admit a dominant rational `A2` first leg only if its infinity divisor lies
+   150	in one of `F1`--`F7`.  This is necessary only.  The next finite gate is the
+   151	resolved union of infinity with reduced ramification support; any positive-
+   152	genus ramification component or new graph cycle excludes the presentation.
+   153	
+   154	No ramification-support exclusion, general quadratic or cubic block closure,
+   155	basis-minimization theorem, primitivity result, map existence/nonexistence,
+   156	counterexample, or JC2 statement is promoted.  Nonreduced infinity, singular
+   157	ambient closure, affine coefficient zeros, projective basepoints, and both
+   158	fibre/target degree drops retain their separate lifecycle entries.
+   159	
+   160	<!-- BODY-END -->
+   161	
+   162	## Seal
+   163	
+   164	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   165	  including its terminating newline; this seal is outside the body.
+   166	- Body bytes: `6106`.
+   167	- Body SHA-256:
+   168	  `9371f0961222e0db02f1d9e7d2bb5fb20f3d857b1b0cf0a7cb021c1d23faefce`.
+   169	- Frozen basis: `4c91d6fc398d1b4f2b8ca1a11d69c4bb3fef9c0d`.
+
+codex
+The main correction explicitly retracts the rational-map strengthening and preserves only the morphic theorem. I’m now checking the producer, hostile review, and block integration to see exactly where that old strengthening propagated and where the later correction still overclaims.
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-firstleg-rational-forest-multisection-producer-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Producer: rational-forest first-leg gate and the first nonlinear Miranda family
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Producer: Sol 5.6 Ultra with independent Sol multisection lane  
+     5	Frozen basis: `0d7544ebd5cb12def6bac892646010301098be3c`  
+     6	Lifecycle: **EXACT DESK PRODUCER / DIFFERENT-MODEL HOSTILE REVIEW REQUIRED**
+     7	
+     8	## 0. Verdict
+     9	
+    10	The reviewed two-section log theorem has a simpler multisection successor.
+    11	For a smooth compactification with reduced SNC boundary, the first log
+    12	plurigenus is controlled by the genera of the boundary components and the
+    13	cycle rank of their dual graph.  Therefore any dominant `A^2` first leg
+    14	forces the resolved boundary to be a rational forest.
+    15	
+    16	Applied to polynomial Miranda coefficients of target degree `d`, this gives:
+    17	
+    18	```text
+    19	d>=3, smooth projective incidence closure: impossible, because p_g>0;
+    20	d=2, generic smooth incidence closure:      impossible, because the
+    21	                                             infinity curve has genus 2;
+    22	d=2, generic SNC full boundary:              bar-P_1=18.
+    23	```
+    24	
+    25	This does not close all nonlinear cubic blocks.  It reduces the quadratic-
+    26	coefficient family to the explicit degeneration locus where the resolved
+    27	infinity boundary is a rational forest, plus nonreduced, singular-ambient,
+    28	projective-basepoint, and degree-drop strata.
+    29	
+    30	## 1. Exact rational-forest theorem
+    31	
+    32	Let `X` be a smooth projective complex surface and
+    33	
+    34	```text
+    35	D=union_i D_i
+    36	```
+    37	
+    38	a reduced SNC divisor.  Let `Gamma_D` be the dual multigraph, with one edge
+    39	for each intersection point, including parallel edges, and put
+    40	
+    41	```text
+    42	tau(D)=sum_i genus(D_i)+b1(Gamma_D),
+    43	b1(Gamma_D)=#edges-#vertices+#connected_components.
+    44	```
+    45	
+    46	The Poincare residue sequence is
+    47	
+    48	```text
+    49	0 -> omega_X -> omega_X(D) -> omega_D -> 0.
+    50	```
+    51	
+    52	The normalization sequence and duality for the possibly disconnected nodal
+    53	curve `D` give
+    54	
+    55	```text
+    56	h^0(D,omega_D)=h^1(D,O_D)=tau(D).
+    57	```
+    58	
+    59	Taking cohomology in the residue sequence yields the exact formula
+    60	
+    61	```text
+    62	bar-P_1(X minus D)
+    63	 = p_g(X)+tau(D)-rank(partial),                       (1.1)
+    64	```
+    65	
+    66	where
+    67	
+    68	```text
+    69	partial:H^0(D,omega_D)->H^1(X,omega_X).
+    70	```
+    71	
+    72	By Serre duality `h^1(X,omega_X)=q(X)`, so
+    73	
+    74	```text
+    75	p_g(X)+max(tau(D)-q(X),0)
+    76	 <= bar-P_1(X minus D)
+    77	 <= p_g(X)+tau(D).                                   (1.2)
+    78	```
+    79	
+    80	In particular, if `q(X)=0`, then
+    81	
+    82	```text
+    83	bar-P_1(X minus D)=p_g(X)+sum_i genus(D_i)+b1(Gamma_D). (1.3)
+    84	```
+    85	
+    86	Now suppose there is a dominant morphism
+    87	
+    88	```text
+    89	A^2 -> U=X minus D.
+    90	```
+    91	
+    92	It extends to a dominant rational map `P^2 --> X`, so `X` is unirational.
+    93	Over `C`, this forces `q(X)=p_g(X)=0`.  Since logarithmic Kodaira dimension
+    94	cannot increase under a dominant generically finite map from `A^2`, a
+    95	positive right side in (1.3) is impossible.  Thus:
+    96	
+    97	> **Rational-forest gate.** Every component of the reduced resolved boundary
+    98	> of a target admitting a dominant `A^2` first leg is rational, and its dual
+    99	> graph is a forest.
+   100	
+   101	This is a necessary condition, not a sufficient construction of a first leg.
+   102	
+   103	## 2. Multisections and recovery of the two-section theorem
+   104	
+   105	Let `P->P^1` be a ruled surface, `D_infinity` a section, and `C` an
+   106	irreducible `k`-multisection.  Let `Cbar` be its normalization, of genus `g`,
+   107	and let `r` be the number of analytic branches of `C` meeting
+   108	`D_infinity`; intersection multiplicity is not used in `r`.
+   109	
+   110	After resolving the reduced boundary,
+   111	
+   112	```text
+   113	bar-P_1(P minus (C union D_infinity))
+   114	 >= g+max(r-1,0).                                    (2.1)
+   115	```
+   116	
+   117	Indeed, `Cbar` contributes `g`.  Each of the `r` distinct branch paths joins
+   118	the vertices corresponding to `Cbar` and `D_infinity`; the first makes them
+   119	connected and each further path adds a graph cycle.  Other multibranch
+   120	singularities can only add cycles or positive-genus components.  Equality
+   121	holds if `C` is smooth away from the displayed contacts and no additional
+   122	boundary singularity adds a cycle.
+   123	
+   124	Consequently a dominant `A^2` first leg is impossible whenever
+   125	
+   126	```text
+   127	genus(Cbar)>0       or       r>=2.                   (2.2)
+   128	```
+   129	
+   130	Contact orders merely subdivide one path and do not change (2.1).  Nodes and
+   131	other multibranch self-singularities create cycles; unibranch cusps attach
+   132	trees and can remain invisible.  For two rational sections, the `#S` contact
+   133	fibres give `#S` paths and (1.3) gives `bar-P_1=#S-1`, recovering the reviewed
+   134	two-section result at its first plurigenus.
+   135	
+   136	## 3. Sharp countercontrols and the discrepancy gate
+   137	
+   138	Positive multisection degree alone is insufficient.  Take
+   139	
+   140	```text
+   141	P=P^1_z times P^1_w,
+   142	D_infinity={w=infinity},
+   143	C=closure({z=w^k}),       k>=2.
+   144	```
+   145	
+   146	Relative to projection to `P^1_z`, `C` is a smooth rational `k`-multisection
+   147	meeting the infinity section in one branch, and the boundary graph is a tree.
+   148	In fact the complement is exactly `A^2`.  An explicit map is
+   149	
+   150	```text
+   151	(w,t) |-> (w, z=[t:t*w^k+1]),
+   152	t=Z0/(Z1-w^k*Z0).
+   153	```
+   154	
+   155	Thus the rational-forest gate is sharp at this type.
+   156	
+   157	For any embedded log resolution `rho:Xtilde->X`, let
+   158	
+   159	```text
+   160	N_E=v_E(D),
+   161	a_E=v_E(K_Xtilde-rho^*K_X),
+   162	lambda_E=N_E-a_E-1.
+   163	```
+   164	
+   165	Then, exactly,
+   166	
+   167	```text
+   168	K_Xtilde+Dtilde = rho^*(K_X+D)-sum_E lambda_E E,
+   169	
+   170	bar-P_n(U)=dim {s in H^0(X,n(K_X+D)):
+   171	                v_E(s)>=n*lambda_E for every E}.     (3.1)
+   172	```
+   173	
+   174	For two smooth branches tangent to order `mu`, the successive losses are
+   175	`lambda_(E_i)=i-1`.  A unibranch cusp can consume an effective `K+D` without
+   176	creating a graph cycle, so (3.1), rather than raw fibre degree or raw
+   177	effectivity, is the exact residual gate after the rational-forest test.
+   178	
+   179	## 4. Homogeneous Miranda incidence geometry
+   180	
+   181	Suppose a global trace-zero Miranda basis has polynomial coefficients of
+   182	common homogenized target degree `d`.  Homogenize in `[u:v:z]` and let
+   183	
+   184	```text
+   185	X_d={Phi^h=0} subset P^2_[u:v:z] times P^1_[X:Y].
+   186	```
+   187	
+   188	Write `A` and `B` for the two hyperplane classes.  The incidence hypersurface
+   189	has class `dA+3B`; if it is smooth and irreducible, adjunction gives
+   190	
+   191	```text
+   192	K_(X_d)=(d-3)A+B.                                    (4.1)
+   193	```
+   194	
+   195	For `d>=3`, restriction of ambient sections gives
+   196	
+   197	```text
+   198	p_g(X_d)=h^0(X_d,K_Xd)=(d-1)(d-2)>0.                 (4.2)
+   199	```
+   200	
+   201	Hence no dense open of such a smooth closure admits a dominant `A^2` first
+   202	leg.  A surviving presentation of degree at least three must have a singular
+   203	or degenerate infinity closure, a reducible/extraneous projective component,
+   204	or an actual degree drop after cancellation.  Polynomial changes of Miranda
+   205	basis can change presentation degree, so (4.2) is presentationwise, not yet
+   206	an intrinsic invariant of the cubic algebra.
+   207	
+   208	## 5. The first nonlinear family: `d=2`
+   209	
+   210	A smooth `X_2->P^1` is a conic bundle.  Tsen's theorem gives a rational point
+   211	on its generic conic over `C(P^1)`, so `X_2` is rational.  Its infinity curve
+   212	
+   213	```text
+   214	H_infinity=X_2 intersect ({z=0} times P^1)
+   215	```
+   216	
+   217	has bidegree `(2,3)` on `P^1 times P^1`, and is generically smooth of genus
+   218	
+   219	```text
+   220	(2-1)(3-1)=2.
+   221	```
+   222	
+   223	The rational-forest gate therefore excludes the generic quadratic-
+   224	coefficient Miranda block from the infinity component alone.
+   225	
+   226	On the additional projectively finite smooth locus, for
+   227	`pi:X_2->P^2`, Hurwitz gives
+   228	
+   229	```text
+   230	R_pi=2A+B,          H_infinity=A,
+   231	K_X2+H_infinity+R_pi=2A+2B.                          (5.1)
+   232	```
+   233	
+   234	If `R_pi` is reduced, shares no component with `H_infinity`, and the pair is
+   235	generic SNC, adjunction/intersection give
+   236	
+   237	```text
+   238	p_a(H_infinity)=2,
+   239	p_a(R_pi)=9,
+   240	H_infinity.R_pi=8,
+   241	bar-P_1=2+9+(8-1)=18.                                (5.2)
+   242	```
+   243	
+   244	If the reduced pair is log canonical, (5.1) is ample and the complement is
+   245	log general type.  If it is not log canonical, (3.1) is the correct test.
+   246	Affine fixed-sheet information does not automatically control reducedness,
+   247	common components, or singularities at infinity.
+   248	
+   249	## 6. Exact successor and nonclaims
+   250	
+   251	The cheapest nonlinear successor is finite:
+   252	
+   253	1. classify reduced bidegree-`(2,3)` infinity curves whose embedded
+   254	   resolution is a rational forest;
+   255	2. quarantine nonreduced infinity separately;
+   256	3. on each surviving stratum, add the ramification curve and retest the full
+   257	   resolved boundary forest; and
+   258	4. only then compute higher log plurigenera by the valuation conditions
+   259	   (3.1).
+   260	
+   261	This producer does not exclude every quadratic or higher-degree presentation,
+   262	does not make presentation degree intrinsic, and proves no general cubic
+   263	block theorem, primitivity statement, map, counterexample, or JC2 result.
+   264	Promotion requires a different-model hostile review of (1.1)--(1.3), the
+   265	unirational implication, both countercontrols, the adjunction and genus
+   266	computations, and every projective-closure hypothesis.
+   267	
+   268	<!-- BODY-END -->
+   269	
+   270	## Seal
+   271	
+   272	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   273	  including its terminating newline; this seal is outside the body.
+   274	- Body bytes: `8578`.
+   275	- Body SHA-256:
+   276	  `42aedb00e89804034c3a16f3205c12e18e14133cd9d0dc0189b7e286428ecf64`.
+   277	- Frozen basis: `0d7544ebd5cb12def6bac892646010301098be3c`.
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-rational-forest-multisection-hostile-review-opus5-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Hostile review: rational-forest first-leg gate and the first nonlinear Miranda family
+     2	
+     3	Date: 2026-08-30 UTC
+     4	Reviewer: Opus 5 (independent, different-model)
+     5	Frozen basis: `a619157b73c1dee1ca0599db47321ffd7588d748`
+     6	Scope: bounded, exact-desk only. No shell CAS beyond exact rational arithmetic.
+     7	
+     8	## 0. Custody
+     9	
+    10	Both sealed inputs verify byte-exactly at the stated hashes; the producer body
+    11	is 8578 bytes with SHA-256 `42aedb00…428ecf64` as declared. The producer's own
+    12	basis is `0d7544eb…`, an ancestor of the review basis; no input was edited.
+    13	
+    14	FALLACY-v2: this review asserts no exit price, so no `charge_basis` line is
+    15	emitted. Nothing here consumes cv-flag, place, or series machinery.
+    16	
+    17	## 1. Overall verdict
+    18	
+    19	**CONFIRM_WITH_CORRECTIONS.** Every displayed formula reconstructs. Two
+    20	statements need repair (a §2 equality clause that is strictly too strong, and
+    21	an unstated projective convention in §3 without which the displayed
+    22	countercontrol map is wrong), and one number (`barP1=18`) rests on a
+    23	hypothesis the producer never establishes in-document. The core gate and the
+    24	`d>=3` and generic-`d=2` exclusions survive intact.
+    25	
+    26	Itemized:
+    27	
+    28	```text
+    29	1  residue/normalization/duality formula (1.1)-(1.3)   CONFIRMED
+    30	2  unirationality + rational-forest gate                CONFIRM_WITH_CORRECTIONS
+    31	3  multisection bound (2.1), (2.2), n=1 recovery        CONFIRMED (upgraded to equality)
+    32	4  A^2 countercontrol; (3.1); lambda_i = i-1            CONFIRM_WITH_CORRECTIONS
+    33	5  K=(d-3)A+B, p_g=(d-1)(d-2)                           CONFIRMED (one exception missing)
+    34	6  d=2 rationality, genus 2, R=2A+B, 2/9/8/18           CONFIRM_WITH_CORRECTIONS
+    35	7  safe nonlinear consequence and nonclaims             CONFIRMED
+    36	```
+    37	
+    38	## 2. Item 1 — the exact formula: CONFIRMED
+    39	
+    40	Reconstructed independently. `omega_X(D)=Omega^2_X(log D)` for reduced SNC `D`
+    41	on a smooth surface, and `omega_X(D)|_D=omega_D` holds for *any* effective
+    42	divisor on a smooth surface (`D` is a local complete intersection, hence
+    43	Gorenstein); SNC is not needed for the residue sequence itself, only for the
+    44	log identification. The long exact sequence gives
+    45	
+    46	```text
+    47	h^0(K_X+D) = p_g + h^0(D,omega_D) - rank(partial).
+    48	```
+    49	
+    50	Duality on the projective Gorenstein curve `D` gives `h^0(omega_D)=h^1(O_D)`;
+    51	this is valid for **disconnected** `D`. The normalization sequence
+    52	`0 -> O_D -> nu_* O_{Dtilde} -> ⊕_nodes C_p -> 0` yields
+    53	
+    54	```text
+    55	h^1(O_D) = sum_i g(D_i) + (E - V + c),   c = #connected components,
+    56	```
+    57	
+    58	so `tau(D)` is exactly the producer's. **Parallel edges** are handled
+    59	correctly: two components meeting at two points give `E=2, V=2, c=1, b1=1`.
+    60	**Disconnected** `D` is handled by the `+c` term, e.g. two disjoint smooth
+    61	curves give `b1=0`. `h^1(X,omega_X)=q` by Serre duality, so
+    62	`rank(partial)<=min(tau,q)` and (1.2) follows; `q=0` forces `rank(partial)=0`
+    63	and (1.3) is an equality.
+    64	
+    65	Controls: `P^2` minus one line gives `0` (`A^2`, correct); minus two lines
+    66	gives `0` (`A^1 x C^*`, `kappabar=-infinity`, correct); minus three general
+    67	lines gives `1` (`(C^*)^2`, `K+D=0`, correct); minus three *concurrent* lines
+    68	resolves to `b1=0` and gives `0` (an `A^1`-bundle, correct).
+    69	
+    70	**Correction (scope, not error).** The derivation uses smoothness of each
+    71	`D_i`. Under mere normal crossings (a component with a self-node) the formula
+    72	survives only with `g` read as geometric genus of the normalized component and
+    73	the self-node read as a graph loop. State "SNC in the strict sense: each `D_i`
+    74	smooth, pairwise transverse, no triple points," or say "geometric genus"
+    75	throughout. The producer's later uses are all in the strict SNC setting, so
+    76	nothing downstream breaks.
+    77	
+    78	## 3. Item 2 — unirationality and the gate: CONFIRM_WITH_CORRECTIONS
+    79	
+    80	The chain is sound. A dominant morphism `A^2 -> U` with `dim U = 2` is
+    81	generically finite; `A^2 ⊂ P^2` gives a dominant rational `P^2 --> X`.
+    82	
+    83	**Cleaner route than Castelnuovo.** The producer invokes unirationality plus
+    84	"over `C` this forces `q=p_g=0`", i.e. Castelnuovo's rationality theorem. That
+    85	is true but heavier than needed: resolving `P^2 --> X` as `S -> P^2` birational
+    86	and `S -> X` generically finite dominant gives injections
+    87	`H^0(X,omega_X^{⊗n}) ↪ H^0(S,omega_S^{⊗n}) = 0` and
+    88	`H^0(X,Omega^1_X) ↪ H^0(S,Omega^1_S) = 0`, and in char 0 on a smooth
+    89	projective surface `q = h^0(Omega^1_X)`. So `p_g=q=0` with no rationality
+    90	theorem. Recommend substituting this; it removes a heavy citation from a
+    91	load-bearing step.
+    92	
+    93	Injectivity of log-pluricanonical pullback along a dominant generically finite
+    94	morphism of smooth quasi-projective complex varieties (Iitaka) is correctly
+    95	invoked, including in the nonproper case. Direction check: `kappabar(A^2) >=
+    96	kappabar(U)`, so `kappabar(U) = -infinity`, so `barP_n(U)=0` for all `n>=1`;
+    97	with `p_g=q=0`, (1.3) forces `sum g(D_i) = b1(Gamma_D) = 0`, both summands
+    98	being nonnegative. The gate is **correct**.
+    99	
+   100	**Missing hypotheses (all repairable, none fatal).**
+   101	
+   102	1. `U` must be smooth (or the conclusion must be read on a smooth model).
+   103	   `kappabar` is only defined via a smooth SNC completion. If the intended
+   104	   target is singular, replace it by a resolution `Utilde`; the dominant
+   105	   morphism restricts over the smooth locus and induces a dominant *rational*
+   106	   `A^2 --> Utilde`, which suffices (see 2 below). State this.
+   107	2. A dominant **rational** map from `A^2` is already enough. Resolve
+   108	   indeterminacy: `W -> A^2` proper birational with `W -> U` a morphism;
+   109	   `kappabar` is a proper-birational invariant of smooth varieties, so
+   110	   `kappabar(W) = kappabar(A^2) = -infinity`. This strengthening is free and
+   111	   makes the gate robust to first legs defined only rationally.
+   112	3. "Rational" must mean geometric genus zero of the component. On the
+   113	   *resolved* boundary the strict transform of a boundary curve is smooth, so
+   114	   its genus is the geometric genus of the original; a rational curve with
+   115	   nodes is allowed upstairs but its nodes create graph cycles downstairs.
+   116	4. **Monotonicity is the right robustness statement and is absent.** If
+   117	   `U' ⊆ U` is open dense with boundaries `D ⊆ D'`, then
+   118	   `n(K+D') = n(K+D) + n(D'-D)` with `D'-D` effective, so
+   119	   `barP_n(U') >= barP_n(U)`. Equivalently, `tau` is monotone under adding
+   120	   boundary components: a new component meeting the old boundary in `e` points
+   121	   spread over `j` old connected components changes `b1` by `e-j >= 0`. This
+   122	   is what licenses using **one** boundary component (e.g. `H_infinity` in §5)
+   123	   to fire the gate without knowing the rest of the boundary. Promote it.
+   124	
+   125	## 4. Item 3 — multisection bound: CONFIRMED, and it is an equality
+   126	
+   127	I reconstructed `b1` of the resolved dual graph by direct vertex/edge counting
+   128	and obtained more than (2.1). Let `H` be any reduced curve on a smooth
+   129	projective surface with components `H_1..H_s`, `c` connected components, and
+   130	`m_q` analytic branches at each `q in Sing(H)`. Embedded-resolving,
+   131	
+   132	```text
+   133	tau(H_res) = sum_i g(Htilde_i) + sum_{q in Sing H} (m_q - 1) - s + c.   (R1)
+   134	```
+   135	
+   136	Proof of the graph term: the exceptional divisor over each blown-up point is a
+   137	connected **tree** with `t_q` vertices and `t_q - 1` internal edges; after
+   138	embedded resolution each of the `m_q` branches meets that tree in exactly one
+   139	point, at `m_q` distinct points. Then `E - V + c` telescopes: the `t_q` cancel
+   140	and only `sum_q (m_q-1) - s + c` survives. (R1) is resolution-independent, as
+   141	it must be: blowing up a free point changes `V,c` by `+1` each; a smooth point
+   142	of the boundary changes `V,E` by `+1` each; a node changes `V` by `+1` and `E`
+   143	by `+1`. All leave `b1` fixed.
+   144	
+   145	Specialize to `H = C ∪ D_infinity` on a ruled surface over `P^1` (so
+   146	`p_g = q = 0`), `s = 2`, `D_infinity` smooth. Points of `C ∩ D_infinity` have
+   147	`m_q = r_q + 1`, so `sum_q (m_q-1) = r + sum'_q (m_q - 1)` where `sum'` runs
+   148	over singular points of `C` off `D_infinity`. With `c=1` when `r>=1` and `c=2`
+   149	when `r=0`:
+   150	
+   151	```text
+   152	barP_1(P \ (C ∪ D_infinity))
+   153	  = g + max(r-1,0) + sum_{q in Sing(C) \ D_infinity} (m_q - 1).   (R2)
+   154	```
+   155	
+   156	So **(2.1) is confirmed and sharpened to an exact equality**, with the excess
+   157	term named. Every audited item behaves:
+   158	
+   159	- *Several branches at one boundary point.* Two branches at `p`, distinct
+   160	  tangents, transverse to `D_infinity`: one blowup, `V=3`, `E=3` (two of them
+   161	  parallel `C'–E_1` edges), `b1=1=r-1`. Three branches: `V=3`, `E=4`,
+   162	  `b1=2=r-1`.
+   163	- *Paths sharing exceptional vertices.* Two branches mutually tangent to order
+   164	  2 at `p`: two blowups, `V=4`, `E=4`, `b1=1=r-1`. One branch transverse and
+   165	  one tangent to `D_infinity`: two blowups, `V=4`, `E=4`, `b1=1=r-1`. Sharing
+   166	  exceptional vertices never destroys the count, because each extra shared
+   167	  vertex brings its own extra edges.
+   168	- *Two distinct transverse contacts.* `V=2`, `E=2` parallel edges, `b1=1`.
+   169	  This is exactly where the parallel-edge convention of §1 is load-bearing.
+   170	- *`r=0`.* `c=2` and (R2) returns `g + sum'`, matching `max(r-1,0)=0`.
+   171	- *Recovery of the reviewed `n=1` two-section formula.* `C=D_0` a section, so
+   172	  `g=0`, unibranch at each of the `#S` collisions, `sum'=0`, giving
+   173	  `barP_1 = #S - 1`. The coordinator's `barP_n = n(#S-2)+1` at `n=1` gives
+   174	  `#S-1`. **Agreement.** `#S<=1` gives `0` on both sides.
+   175	
+   176	**Repair (small, real).** §2's equality clause reads "Equality holds if `C` is
+   177	smooth away from the displayed contacts…", which is strictly stronger than
+   178	needed and contradicts the producer's own next sentence. The correct condition
+   179	from (R2) is: **`C` is unibranch at every singular point off `D_infinity`.**
+   180	Cusps, ramphoid cusps and all unibranch singularities are permitted.
+   181	
+   182	**Unstated hypothesis.** §2 never says `p_g(P)=q(P)=0`; it is true for a
+   183	`P^1`-bundle over `P^1` but is what licenses (1.3). Over a base of genus
+   184	`h>0`, `q=h` and only the weaker (1.2) applies. State the base is `P^1`.
+   185	
+   186	`k` (the multisection degree) never enters (R2). That is correct and is the
+   187	content of §3's countercontrol.
+   188	
+   189	## 5. Item 4 — countercontrol, discrepancies, tangency losses
+   190	
+   191	**The `A^2` identification: CONFIRMED.** `C = closure{z=w^k}` has class
+   192	`A + kB`, `D_infinity = {w=infinity} ~ B`, so `C.D_infinity = 1`: they meet
+   193	transversally at one point and the boundary is already SNC, `V=2, E=1, b1=0`,
+   194	`g=0`, hence `barP_1 = 0` by (1.3) — consistent with the complement being
+   195	`A^2`. Structurally: deleting `{w=infinity}` leaves `A^1_w x P^1_z`, and
+   196	`{z=w^k}` is a section of that `P^1`-bundle, so the complement is a
+   197	`P^1`-bundle minus a section over an affine line, `≅ A^2`. Sharpness of the
+   198	gate at this type is established: arbitrarily large multisection degree, no
+   199	obstruction.
+   200	
+   201	**CORRECTION (convention, load-bearing).** The displayed map
+   202	`(w,t) |-> (w, z=[t : t*w^k+1])` with `t = Z0/(Z1 - w^k Z0)` is correct **only**
+   203	under the convention `z = Z1/Z0`, i.e. `z = w^k + 1/t`. Under the opposite
+   204	reading `z = Z0/Z1` the map is `z = t/(1+t w^k)` and it **lands on the deleted
+   205	curve**: `z = w^k` whenever `t(1-w^{2k}) = w^k`, e.g. `(w,t)=(0,0)` and, for
+   206	`k=3`, `(w,t)=(2,-8/63)`. Both displayed formulas are mutually consistent
+   207	(`Z1 - w^k Z0 = 1` identically), so this is a notational omission, not a
+   208	mathematical error, but the convention must be printed. Recommended
+   209	replacement, convention-free: `(w,t) |-> (w, [t : 1 + t w^k])` with `z` the
+   210	ratio *second-over-first*, equivalently `z = w^k + 1/t`, `t=0 |-> z=infinity`.
+   211	
+   212	**The discrepancy identity (3.1): CONFIRMED.** With `Dtilde` the reduced total
+   213	transform, `K+Dtilde = rho^*K + sum a_E E + rho^*D - sum N_E E + sum E`, giving
+   214	`lambda_E = N_E - a_E - 1` exactly. The section characterization is valid even
+   215	where `lambda_E < 0` (blowup at a smooth point of `D` gives `lambda=-1`, off
+   216	`D` gives `-2`), because `rho_* O(sum m_E E) = O` for effective exceptional
+   217	`sum m_E E`; such `E` simply impose no condition. Note `lambda_E <= 0` for all
+   218	`E` is precisely log canonicity of `(X,D)`, which is the hypothesis §5 uses.
+   219	
+   220	**Tangency losses `lambda_i = i-1`: CONFIRMED.** For two smooth branches of
+   221	contact order `mu` (`y=0`, `y=x^mu`), the chain of `mu` blowups has each
+   222	`p_{i+1}` on `E_i` only, so `a_i = i`, and `N_i = 2i` by direct multiplicity
+   223	bookkeeping (`N_1=2, N_2=1+1+2=4, N_3=1+1+4=6, …`). Hence
+   224	`lambda_i = 2i - i - 1 = i-1` for `i=1..mu`, matching the coordinator's
+   225	`sum_{i=1}^{m_s} (i-1) E_{s,i}`.
+   226	
+   227	**Unibranch cusps stay distinct: CONFIRMED, with a numerical correction to the
+   228	narrative.** For `y^2=x^3` the resolution has `N=(2,3,6)`, `a=(1,2,4)`, hence
+   229	`lambda = (0,0,1)`. So a cusp contributes `0` to `b1` (invisible to the
+   230	rational-forest test) but imposes one genuine vanishing condition in (3.1).
+   231	The producer's claim that a unibranch cusp "can consume an effective `K+D`
+   232	without creating a graph cycle" is therefore correct; if any exponents are
+   233	ever printed, they are `(0,0,1)` for `A_2`, not `(0,1,2)`.
+   234	
+   235	## 6. Item 5 — `(d,3)` incidence surface: CONFIRMED
+   236	
+   237	`X_d` a smooth divisor of class `dA+3B` in `P^2 x P^1`, `K_{P^2 x P^1} =
+   238	-3A-2B`, so adjunction gives `K_{X_d} = (d-3)A + B`. (4.1) confirmed; only
+   239	smoothness of the divisor is needed for the class.
+   240	
+   241	For `p_g`, restrict:
+   242	`0 -> O(-3A-2B) -> O((d-3)A+B) -> K_{X_d} -> 0`. By Künneth,
+   243	`H^*(P^2,O(-3))` is `C` in degree 2 and `H^*(P^1,O(-2))` is `C` in degree 1,
+   244	so `O(-3A-2B)` has cohomology only in total degree 3; in particular
+   245	`h^0 = h^1 = 0`. Hence
+   246	
+   247	```text
+   248	p_g(X_d) = h^0(P^2,O(d-3)) * h^0(P^1,O(1)) = 2*C(d-1,2) = (d-1)(d-2),
+   249	```
+   250	
+   251	verified for `d=3..8` (`2,6,12,20,30,42`). (4.2) **CONFIRMED**, and `>0` for
+   252	`d>=3`. The exclusion is then immediate and does not even use the boundary:
+   253	`p_g>0` is a birational invariant, so no smooth projective model is
+   254	unirational, so no dominant (even rational) map from `A^2` to any dense open.
+   255	
+   256	**Presentation/basis dependence.** The producer's own caveat is correct and
+   257	should be kept verbatim: `d` is a property of the chosen global trace-zero
+   258	Miranda basis, not of the cubic algebra. Nothing here makes it intrinsic.
+   259	
+   260	**Projective-closure exceptions.** The producer lists singular or degenerate
+   261	infinity closure, reducible/extraneous projective component, and degree drop
+   262	after cancellation. One further exception is **missing and is real**: a drop
+   263	in the `[X:Y]` degree. For bidegree `(d,e)` the same computation gives
+   264	`K = (d-3)A + (e-2)B` and `p_g = h^0(O_{P^2}(d-3)) * h^0(O_{P^1}(e-2))`. For
+   265	`e=2` this is `C(d-1,2) > 0` for `d>=3`, so the gate survives; but for `e=1`
+   266	it is **`0`** (`X_d -> P^2` is then birational and `X_d` is rational). So
+   267	"cubic in `[X:Y]`", i.e. nonvanishing of the leading `[X:Y]` coefficient after
+   268	homogenization, is a load-bearing hypothesis and must be listed alongside the
+   269	`(u,v)`-degree drop. Also worth stating explicitly: the projective closure of
+   270	the affine incidence variety is a *component* of `{Phi^h=0}`; equality needs
+   271	`Phi^h` irreducible, which is the stated hypothesis but is a separate check
+   272	from smoothness.
+   273	
+   274	## 7. Item 6 — `d=2`: CONFIRM_WITH_CORRECTIONS
+   275	
+   276	**Rationality: CONFIRMED.** `X_2 -> P^1` has plane-conic fibres; if `X_2` is
+   277	smooth irreducible and dominates `P^1`, the generic fibre is a smooth conic
+   278	over `C(t)`, which is `C_1` by Tsen, hence has a rational point, hence is
+   279	`P^1_{C(t)}`; `X_2` is rational and `p_g=q=0`. Cross-check by the §5 method:
+   280	`h^0(P^2 x P^1, -A+B) = 0` and `h^1(-3A-2B)=0`, so `p_g(X_2)=0` directly.
+   281	
+   282	**Infinity curve: CONFIRMED.** `{z=0} x P^1 ≅ P^1 x P^1` and `(2A+3B)` restricts
+   283	to bidegree `(2,3)`; `(2,3)` is very ample on `P^1 x P^1`, so Bertini gives a
+   284	smooth irreducible general member, of genus `(2-1)(3-1) = 2`. Combined with §3
+   285	monotonicity, `barP_1(X_2 \ H_infinity) = 0 + 2 + 0 = 2 > 0`, and any dense
+   286	open of it inherits `barP_1 >= 2`. **The generic quadratic block is excluded
+   287	from `H_infinity` alone.** This is the strongest safe statement in the
+   288	document and it does not depend on anything in the rest of §5.
+   289	
+   290	**Projectively finite locus: all six numbers CONFIRMED.** Intersection numbers
+   291	on `X_2 = 2A+3B` recomputed independently: `A^2 = 3`, `A.B = 2`, `B^2 = 0`.
+   292	With `pi` finite of degree 3, `R_pi = K_{X_2} - pi^*K_{P^2} = (-A+B) + 3A =
+   293	2A+B`; `H_infinity = pi^*{z=0} ~ A`; `K + H_infinity + R_pi = 2A+2B`. Then
+   294	`p_a(H_infinity) = 1 + (A.(A+K))/2 = 1 + (A.B)/2 = 2`;
+   295	`p_a(R_pi) = 1 + ((2A+B).(A+2B))/2 = 1 + 16/2 = 9`;
+   296	`H_infinity . R_pi = 2A^2 + A.B = 8`; and with `V=2, E=8, c=1`,
+   297	`b1 = 7`, giving `barP_1 = 0 + 2 + 9 + 7 = 18`. Consistency check: `pi_*R_pi`
+   298	has degree `R.A = 8`, matching the degree-8 discriminant of a cubic with
+   299	quadratic coefficients, and a degree-8 plane curve of geometric genus 9 has
+   300	`delta = 12`, which is unremarkable for a generic triple cover.
+   301	
+   302	The ampleness claim also checks: `A = pi^*H` with `pi` finite is ample, `B` is
+   303	nef, so `2A+2B` is ample. And `lambda_E <= 0` for all `E` is exactly log
+   304	canonicity, so "log canonical `=>` log general type" is correct:
+   305	`rho^*(ample) + effective` is big.
+   306	
+   307	**Corrections required before any promotion of `18`.**
+   308	
+   309	1. **The number `18` is conditional on a hypothesis this document never
+   310	   states, let alone proves: that `R_pi` is part of the deleted boundary.**
+   311	   §5 introduces `R_pi` with no argument that the first-leg target is
+   312	   `X_2 \ (H_infinity ∪ R_pi)` rather than `X_2 \ H_infinity`. The coordinator
+   313	   alludes to a "deleted ramification graph" from the separate `AL3-REDUCE`
+   314	   lane, which is explicitly not promoted. Label `18` as conditional on that
+   315	   reduction; the unconditional number is `2`.
+   316	2. **`p_a` is not `g`.** (1.3) needs geometric genus of each *irreducible*
+   317	   component of the *resolved* boundary. The document computes `p_a(H_infinity)`
+   318	   and `p_a(R_pi)` by adjunction and then feeds them into (1.3). This is legal
+   319	   only when each is smooth and irreducible. The producer's blanket "generic
+   320	   SNC" is doing that work silently; smoothness and irreducibility of `R_pi`
+   321	   are asserted, not proved, anywhere in the document. Under (R1) the correct
+   322	   general statement replaces `2 + 9 + 7` by
+   323	   `sum g(tilde) + sum_q (m_q-1) - s + c`, and `p_a - tau_res =
+   324	   sum_q (delta_q - m_q + 1) >= 0`, with equality contribution `0` exactly at
+   325	   ordinary nodes. So `18` is an **upper** bound over the reduced-pair stratum
+   326	   and drops on every non-nodal degeneration.
+   327	3. **Reduced support vs. ramification vs. discriminant multiplicity.** The
+   328	   producer flags this and is right to; the numbers `9`, `8`, `18` all use
+   329	   `R = R_red = 2A+B`. If the cover is totally ramified along a curve, the
+   330	   different has multiplicity `2` there and `R_red` has smaller class, changing
+   331	   `p_a`, the intersection number, and hence `18`. Likewise the reduced branch
+   332	   curve in `P^2` can have degree below `8`. Keep the three objects named
+   333	   separately in any promoted statement.
+   334	4. `H_infinity . R_pi = 8` counts intersections **with multiplicity**; the
+   335	   `b1 = 8-1 = 7` step needs 8 *distinct transverse* points. Non-transverse
+   336	   contact reduces `b1` and is exactly a rational-forest degeneration
+   337	   direction, so this is not a harmless genericity assumption — it is the
+   338	   stratum the successor must classify.
+   339	
+   340	## 8. Item 7 — maximum exact theorem safe to promote
+   341	
+   342	Promote exactly this, and nothing wider.
+   343	
+   344	> **Theorem (rational-forest gate).** Let `U` be a smooth quasi-projective
+   345	> complex surface and `(X,D)` any smooth projective completion with `D` reduced
+   346	> SNC. Then `barP_1(U) = p_g(X) + sum_i g(D_i) + b1(Gamma_D) - rank(partial)`,
+   347	> with `rank(partial) <= min(tau(D), q(X))`. If there exists a dominant
+   348	> rational map `A^2 --> U`, then `p_g(X) = q(X) = 0`, every `D_i` is rational,
+   349	> and `Gamma_D` is a forest. The conclusion is inherited by every dense open
+   350	> subset of `U`.
+   351	
+   352	> **Corollary (multisection).** For a `P^1`-bundle `P -> P^1`, a section
+   353	> `D_infinity`, and an irreducible multisection `C` of any degree with
+   354	> normalization of genus `g` and `r` analytic branches meeting `D_infinity`,
+   355	> `barP_1(P \ (C ∪ D_infinity)) = g + max(r-1,0) +
+   356	> sum_{q in Sing(C)\D_infinity}(m_q - 1)`. No dominant `A^2` first leg exists
+   357	> if `g>0`, `r>=2`, or `C` has a multibranch singularity off `D_infinity`. At
+   358	> `g=0, r<=1` and `C` unibranch off `D_infinity` the gate is silent, and
+   359	> `(P^1 x P^1) \ ({w=infinity} ∪ closure{z=w^k}) ≅ A^2` shows it must be.
+   360	
+   361	> **Corollary (Miranda presentations).** For a presentation whose homogenized
+   362	> incidence hypersurface `X_d ⊂ P^2 x P^1` is a smooth irreducible divisor of
+   363	> bidegree `(d,3)` with `d>=3`, `p_g(X_d)=(d-1)(d-2)>0`, so no dense open of
+   364	> `X_d` receives a dominant map from `A^2`. For `d=2` with `X_2` smooth
+   365	> irreducible and `H_infinity` smooth irreducible of bidegree `(2,3)`,
+   366	> `barP_1(X_2 \ H_infinity) = 2`, so the same conclusion holds.
+   367	
+   368	Everything else is **conditional**: `barP_1 = 18` (conditional on deletion of
+   369	`R_pi`, on `R_pi` reduced/smooth/irreducible, and on 8 distinct transverse
+   370	contacts); the intrinsic meaning of `d`; and every claim about the surviving
+   371	strata. The producer's own §6 nonclaims are accurate and should be carried
+   372	forward verbatim. Explicitly **not** established: any general cubic block
+   373	theorem, primitivity, existence or nonexistence of a first leg on a surviving
+   374	stratum, any counterexample, any JC2 statement.
+   375	
+   376	## 9. Repairs (precise)
+   377	
+   378	- §1: say "each `D_i` smooth" (strict SNC), or read `g` as geometric genus.
+   379	- §1: replace "unirational, so over `C` `p_g=q=0`" by the direct pullback
+   380	  injection `H^0(omega_X^{⊗n}) ↪ H^0(omega_S^{⊗n}) = 0` on a resolution `S`;
+   381	  Castelnuovo becomes unnecessary.
+   382	- §1: add "dominant *rational* map suffices" and add the open-subset
+   383	  monotonicity `barP_n(U') >= barP_n(U)` for `U' ⊆ U`; §5 silently uses it.
+   384	- §2: state `p_g(P)=q(P)=0` as the hypothesis licensing (1.3).
+   385	- §2: replace the equality clause by "equality iff `C` is unibranch at every
+   386	  singular point off `D_infinity`", and upgrade (2.1) to the equality (R2).
+   387	- §3: print the projective convention `z = Z1/Z0` (equivalently
+   388	  `z = w^k + 1/t`); under `z = Z0/Z1` the displayed map meets the deleted
+   389	  curve, e.g. at `(w,t)=(0,0)`.
+   390	- §3: if cusp exponents are ever displayed, `A_2` gives `lambda=(0,0,1)`.
+   391	- §4: add "`[X:Y]`-degree exactly 3" to the exception list; bidegree `(d,1)`
+   392	  gives `p_g=0` for every `d`.
+   393	- §5: mark `barP_1=18` conditional on the `R_pi`-deletion reduction; state
+   394	  `2` as the unconditional number; replace `p_a` by geometric genus in the
+   395	  (1.3) inputs, or carry (R1) with the `sum_q(delta_q - m_q + 1)` defect term.
+   396	
+   397	## 10. Cheapest next classification gate
+   398	
+   399	Not the producer's four-step list as ordered. The cheapest single gate is step
+   400	(1) alone, made finite by the defect identity. Combining (R1) with
+   401	`p_a(H) = sum_i g(tilde H_i) + sum_q delta_q - s + c`:
+   402	
+   403	```text
+   404	p_a(H) - tau(H_res) = sum_{q in Sing H} (delta_q - m_q + 1) >= 0,
+   405	```
+   406	
+   407	each term `>= 0` and `= 0` exactly at an ordinary node. For a reduced boundary
+   408	`H` of bidegree `(2,3)` on `P^1 x P^1`, `p_a(H) = 2` is fixed by the class, so
+   409	
+   410	> **Gate.** `H` has rational-forest resolution **iff** every component of `H`
+   411	> is rational **and** `sum_{q in Sing H} (delta_q - m_q + 1) = 2`.
+   412	
+   413	This is a two-parameter, entirely finite classification: the total non-nodal
+   414	delta-excess must be exactly `2`, distributed over the singularities of a
+   415	`(2,3)` curve. The whole surviving stratum is therefore enumerable by hand
+   416	(`A_2 + A_2`; a single `A_4`; a tacnode plus a cusp; and the reducible
+   417	analogues), with the forest condition then checked componentwise. Only after
+   418	that enumeration is it worth paying for the ramification-curve retest or the
+   419	higher-plurigenera valuation conditions (3.1); those are strictly more
+   420	expensive and are only meaningful on the (small) surviving list. Nonreduced
+   421	infinity stays quarantined, as the producer says, since `p_a` is not fixed
+   422	there.
+   423	
+   424	<!-- BODY-END -->
+   425	
+   426	## Seal
+   427	
+   428	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   429	  including its terminating newline; this seal is outside the body.
+   430	- Body bytes: `23670`.
+   431	- Body SHA-256:
+   432	  `40841431c554c63cedb13bda8f662e2633d97695ee8f5d91659479169e2d13e5`.
+   433	- Frozen basis: `a619157b73c1dee1ca0599db47321ffd7588d748`.
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: intermediate block descent becomes an étale sandwich
+     2	
+     3	Coordinator: Sol 5.6 Ultra  
+     4	Date: 2026-08-30 UTC  
+     5	Frozen basis: `0f7ee003be45ee40d51d4048897cdacf63821172`  
+     6	Lifecycle: **BINDING PROMOTION / CONDITIONAL STRUCTURE THEOREM / FORMER PRIMITIVITY ROUTE STOPPED**
+     7	
+     8	## 0. Custody and disposition
+     9	
+    10	The reviewed proposal is Opus cross-pollination section 5.3:
+    11	
+    12	```text
+    13	6e48015c296c9677237daee2a21a20195d5fc346e163dbcbaa68b74e46bab296
+    14	  xmodel/ideation-20260829T2254Z-crosspoll-opus5.md
+    15	  body 53234 / 647bca6600e31816c1f7ac14f2b061d7be574cf653d7102ac063375627d0346b
+    16	```
+    17	
+    18	Fable 5 independently audited the local algebra, purity/discriminant
+    19	argument, finite-étale endgame, controls, and minimal-degree consequence,
+    20	returning `CONFIRM_WITH_CORRECTIONS`:
+    21	
+    22	```text
+    23	bc88ca78c303553555dee3e94f16cbef6e81ea187cd201b73e6d700ccc821992
+    24	  hostile review, 38440 bytes through BODY-END
+    25	213da698fcc910dbc119573e8d4d6a09ebcd839ba39f1acc9d2b1fa9ba794a66
+    26	  lane log
+    27	ecbf087ea4d9b86b2a3ae11007eebbf2b0928b8a96c3d21cf2ed3443cf428ad2
+    28	  prompt
+    29	fa91382a3103312a70ae48ee6f55daf710a916971400e230c385cbaac5701f85
+    30	  run receipt
+    31	```
+    32	
+    33	The review finds that the proposed codimension-one condition is not a new
+    34	hypothesis to prove: for every nontrivial block it is false. The surviving
+    35	result is the conservative block-structure theorem below. This integration
+    36	repairs the review's special-fibre cardinality argument before promotion and
+    37	withholds only its citation-dependent polynomial-parametrization decoration.
+    38	
+    39	## 1. Promoted theorem
+    40	
+    41	Let `F=(f,g): A^2_C -> A^2_C` be a non-invertible Keller map. Let
+    42	
+    43	```text
+    44	C(f,g) proper-subfield K proper-subfield C(x,y),
+    45	d1=[C(x,y):K] >= 2,       d2=[K:C(f,g)] >= 2,
+    46	```
+    47	
+    48	and let `B_K` be the integral closure of `C[f,g]` in `K`. Put
+    49	`Y=Spec(B_K)`. The inclusions factor `F` as
+    50	
+    51	```text
+    52	A^2 --g1--> Y --g2--> A^2.
+    53	```
+    54	
+    55	Then the following hold, without a minimal-topological-degree assumption.
+    56	
+    57	1. `B_K` is contained in `C[x,y]` and is module-finite over `C[f,g]`.
+    58	   Thus `Y` is an integral normal affine surface with function field `K`.
+    59	2. `g2` is finite, flat, and surjective of generic degree `d2`. Its
+    60	   trace-discriminant ideal is nonzero (and principal on `A^2`).
+    61	3. `g1` is dominant and quasi-finite of generic degree `d1`; in fact it is
+    62	   étale everywhere and hence open. It is not finite, proper, or surjective.
+    63	4. If `R` is the non-étale locus of `g2`, then `R` is nonempty and has pure
+    64	   codimension one. Moreover
+    65	
+    66	   ```text
+    67	   g1(A^2) subset Y_sm minus R,       Sing(Y) subset R.
+    68	   ```
+    69	
+    70	   Hence `g1` misses every point of every branch divisor. In particular its
+    71	   image never contains every codimension-one point of `Y`.
+    72	5. With `A(h)` denoting the nonproperness set of a complex polynomial map,
+    73	
+    74	   ```text
+    75	   Y minus g1(A^2) subset A(g1),
+    76	   A(F)=g2(A(g1)),
+    77	   g2(R)=V(Disc(g2)) subset A(F).
+    78	   ```
+    79	
+    80	6. For every closed point `z` of the discriminant curve,
+    81	
+    82	   ```text
+    83	   #F^{-1}(z) <= (d2-1)*d1 = deg(F)-d1.
+    84	   ```
+    85	
+    86	   For every closed `z` outside `A(F)`, the fibre has exactly `deg(F)`
+    87	   points.
+    88	7. `Y` is not isomorphic to `A^2`.
+    89	
+    90	This is conditional structure on a hypothetical counterexample and a proper
+    91	intermediate field. It proves neither that such a field exists nor that a
+    92	counterexample exists.
+    93	
+    94	## 2. Load-bearing arguments
+    95	
+    96	The containment `B_K subset C[x,y]` follows because an element of `B_K` is
+    97	integral over `C[f,g]`, hence over `C[x,y]`, and lies in `C(x,y)`, while
+    98	`C[x,y]` is integrally closed. Finiteness of the normalization in the finite
+    99	separable field extension gives the finite map `g2`. Normal surfaces are
+   100	Cohen--Macaulay, so miracle flatness over the regular target makes `g2`
+   101	finite flat; integrality makes it surjective.
+   102	
+   103	The non-obvious strengthening is completion rigidity. At a closed point
+   104	`x`, with `y=g1(x)` and `z=F(x)`, étaleness of `F` identifies the completed
+   105	local rings at `z` and `x`. Quasi-finiteness of `g1` makes the completed
+   106	local ring at `x` finite over that at `y`. Excellence and normality make the
+   107	completed local ring at `y` a two-dimensional normal domain. The intervening
+   108	map has height-zero kernel and is surjective because its composite is the
+   109	completion isomorphism; it is therefore itself an isomorphism. Flatness and
+   110	unramifiedness descend, so both `g1` at `x` and `g2` at `y` are étale. Since
+   111	the schemes are Jacobson, this holds everywhere on the image. Thus the image
+   112	of `g1` is open and disjoint from `R` and from `Sing(Y)`.
+   113	
+   114	If `R` were empty, the connected finite cover `g2` would be finite étale over
+   115	`A^2_C`, hence trivial, contradicting `d2>=2`. Purity (equivalently here the
+   116	finite-flat discriminant support together with branch purity) makes the
+   117	nonempty branch locus divisorial. This proves that the codimension-one image
+   118	antecedent fails rather than remaining an open bridge.
+   119	
+   120	Finite `g2` is proper, which gives the composition identity
+   121	`A(F)=g2(A(g1))`. Openness and density of `g1(A^2)`, plus compactness of
+   122	bounded subsets of `A^2(C)`, give `Y minus g1(A^2) subset A(g1)`. Since all
+   123	of `R` is missed, its discriminant image lies in `A(F)`.
+   124	
+   125	The fibre deficit needs one normalization lemma that was implicit in the
+   126	review. Let `Z` be the normalization of `Y` in `C(x,y)`; strong Zariski Main
+   127	embeds `A^2` openly in `Z`. For a closed `y in Y`, localize at `y` and let
+   128	`q_1,...,q_r` be the points of `Z` above it. Their residue fields are `C`.
+   129	Chinese remaindering supplies an integral element `b` with pairwise distinct
+   130	residues at the `q_i`. Its minimal polynomial over `K` has degree at most
+   131	`d1` and coefficients in the normal local ring: integrality makes those
+   132	coefficients integral, and normality brings them back into the ring. Modulo
+   133	the maximal ideal this polynomial has the `r` distinct chosen residues as
+   134	roots, so `r<=d1`. Thus every `g1` fibre has at most `d1` points. A finite-
+   135	flat `g2` fibre has at most `d2` distinct points, and over its discriminant at
+   136	least one lies in `R` and contributes no `g1` preimage. This proves the
+   137	displayed `deg(F)-d1` bound. Outside `A(F)`, properness over a small
+   138	neighborhood makes the étale map `F` a covering of its generic degree,
+   139	giving equality.
+   140	
+   141	Finally, if `Y` were abstractly `A^2`, the factorization could be conjugated
+   142	to polynomial self-maps `F=G2 o G1` of `A^2`. The chain rule makes both
+   143	Jacobian determinants nonzero constants (the image of `G1` is dense), so
+   144	the finite map `G2` would be a connected finite étale cover of degree
+   145	`d2>=2` of `A^2_C`, again impossible.
+   146	
+   147	## 3. Binding corrections and withheld claims
+   148	
+   149	1. The launch condition "`g1(A^2)` contains every codimension-one point" is
+   150	   refuted for every nontrivial block: the whole nonempty branch divisor is
+   151	   missed. It must not remain listed as an attainable proof obligation.
+   152	2. The alternative recognition target `Y isomorphic to A^2` is also
+   153	   impossible for every nontrivial block. It is a reductio, not a descent
+   154	   theorem waiting to be proved.
+   155	3. Consequently this route gives no implication from minimal topological
+   156	   degree to primitive monodromy. Primitivity remains open. The honest
+   157	   successor is to rule out the forced étale sandwiches directly, beginning
+   158	   provisionally with block index `d2=2` (`BD-D2`).
+   159	4. The review's estimate `#F^{-1}(z) <= deg(F)-d1` is promoted only with the
+   160	   CRT/minimal-polynomial normalization lemma supplied in section 2. It does
+   161	   not require flatness of the degree-`d1` normalization and makes no
+   162	   attainment claim beyond the displayed upper bound.
+   163	5. The stronger wording that discriminant components are polynomially
+   164	   parametrized components of `A(F)` is citation-dependent and unnecessary
+   165	   for the structural result. Only the proved inclusion
+   166	   `g2(R)=V(Disc(g2)) subset A(F)` is promoted here.
+   167	
+   168	## 4. Scope and next discriminator
+   169	
+   170	The theorem constrains only a block that already exists. It does not supply
+   171	an intermediate field, prove primitive monodromy, select a bounded
+   172	topological degree, control all components of `A(F)`, decide smoothness of
+   173	`Y`, or prove JC2. The proposed next discriminator `BD-D2` is not promoted:
+   174	it asks whether a degree-two finite-flat branched cover in this sandwich can
+   175	be ruled out using the topology of the complement and the geometry at
+   176	infinity. It requires its own producer and hostile review.
+   177	
+   178	<!-- BODY-END -->
+   179	
+   180	## Seal
+   181	
+   182	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   183	  including its terminating newline; this seal is outside the body.
+   184	- Body bytes: `8285`.
+   185	- Body SHA-256:
+   186	  `85db7afd1e8b9f1039bbf977b78a6ea1f64cef9b6fb9323f2233281cf1be6e9f`.
+   187	- Frozen basis: `0f7ee003be45ee40d51d4048897cdacf63821172`.
+
+codex
+**Hash And Scope**
+
+All seven supplied full-file SHA-256 hashes match. I audited only the charged `xmodel/...` files and made no repository changes.
+
+**1. Smooth-Cubic Counterexample**
+
+Verified. For a smooth plane cubic `E`, `U = P^2 \ E` has a dominant rational map `A^2 dashrightarrow U`: take a standard affine chart `A^2 = P^2 \ L` and restrict the identity to `A^2 \ (E cap A^2)`. This is dense in `U`, so the rational map is dominant. It is not an everywhere-defined morphism.
+
+The log invariants refute the old rational-map theorem. Since `K_{P^2}+E = 0`, `barP_m(U)=1` for all `m>=1` and `bar kappa(U)=0`. The boundary has one smooth genus-one component, so `tau(E)=1`. Thus rational domination imposes no rational-forest boundary condition.
+
+The exact false step is the one in the old hostile review asserting that a rational map `A^2 dashrightarrow U` resolves to `W -> A^2` with `W -> U` and unchanged `bar kappa(A^2)`; see [hostile review](/Users/dc/code/math/jc2/xmodel/bd-a2-rational-forest-multisection-hostile-review-opus5-20260830.md:107). For nonproper `U`, the rational map may have an interior pole divisor mapping to the omitted boundary. In the cubic example that divisor is `E cap A^2`. To get a morphism to `U`, one must delete it, changing the log surface from `A^2` to `A^2 \ (E cap A^2)`.
+
+**2. Maximum-Safe Morphic Theorem**
+
+The corrected morphic theorem is valid.
+
+Let `U` be a smooth quasi-projective complex surface and let `f:A^2 -> U` be an everywhere-defined dominant morphism. For any smooth projective strict-SNC completion `U=X\D`, embed `A^2` in `P^2` with boundary line `L`. The composite `A^2 -> U -> X` extends to a rational map `P^2 dashrightarrow X` whose indeterminacy is only over `L`. Resolving by blowups centered over `L` gives `W -> P^2`, unchanged over `A^2`, with boundary `B=W\A^2`, and a dominant generically finite morphism `F:W->X` satisfying `F^{-1}(D) subset B`.
+
+Log pullback injects
+`H^0(X,m(K_X+D)) -> H^0(W,m(K_W+B))`.
+The right side is zero because `(W,B)` is log-birational to `(P^2,L)` and `K_{P^2}+L=-2H`. Hence all log plurigenera of `U` vanish.
+
+Ordinary pullback along `F` also injects holomorphic one-forms and pluricanonical forms into those of rational `W`, so `p_g(X)=q(X)=0`.
+
+For reduced strict-SNC `D`, including disconnected boundary,
+`barP_1(U)=p_g(X)+tau(D)-rank(partial)`,
+`rank(partial)<=q(X)`, and
+`tau(D)=sum_i g(D_i)+b_1(Gamma_D)`.
+Thus `0=barP_1(U)=tau(D)`, so every `D_i` is rational and the dual multigraph is a forest.
+
+No surjectivity is needed. Global quasi-finiteness is not needed; dominance between irreducible surfaces gives generic finiteness. Etaleness is not needed for the theorem. Etaleness matters only in the block application because it proves the image is open and smooth.
+
+**3. Shrinking**
+
+Numerical monotonicity is true: if `U' subset U` is a dense open, then adding boundary cannot decrease log plurigenera, so `barP_m(U') >= barP_m(U)`.
+
+But this does not repair rational maps. A morphic obstruction applies only to an open target into which the full morphism `A^2 -> target` actually lands. Given `f:A^2 -> U`, one may shrink to `U'` only if `f(A^2) subset U'`. For a rational map, restricting its domain to avoid the new boundary changes the source from `A^2` to a smaller open surface, so the `A^2` log calculation is lost.
+
+**4. Proper-Block Use**
+
+The proper-block interface survives. The block-structure theorem says `g1` is everywhere-defined, dominant, quasi-finite, etale and open, with image inside `Y_sm \ R`; see [block integration](/Users/dc/code/math/jc2/xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md:61). Therefore `V=g1(A^2)` is an open smooth subscheme of `Y`, and `g1:A^2 -> V` is a surjective, hence dominant, morphism. This licenses the morphic theorem directly.
+
+If a point `p` of a projective or local model is missed by `V`, then on any common smooth resolution/completion restricting to `V`, the complete exceptional fibre over `p` is contained in the boundary. If `p` is singular, this applies because the etale map from smooth `A^2` misses `Sing(Y)`.
+
+Parallel edges count. Two boundary components meeting in two points already give `b1=1`. Blowing up SNC points only subdivides edges or attaches trees, so graph cycles and positive-genus components persist on further common resolutions. A cycle may be hidden by contracting to a singular model, but the obstruction is applied on the resolved boundary.
+
+**5. Downstream Damage**
+
+Retract/reword: the old coordinator theorem’s “dominant rational map” rational-forest claim is false; see [old integration](/Users/dc/code/math/jc2/xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md:59). Every use of boundary genus, boundary cycles, `barP_1>0`, or rational-forest obstruction must say “everywhere-defined dominant morphism `A^2 -> U`” or use the actual block image `V`.
+
+Still valid under rational domination: projective `p_g=q=0` deductions. In particular, smooth projective incidence closures with `p_g>0` are still excluded from dominant rational `A^2` parametrization of any dense open, because composing to the projective closure and resolving gives ordinary pluriform pullback.
+
+Purely combinatorial results survive: the residue formula, disconnected strict-SNC accounting, multisection formula, parallel-edge accounting, and the bidegree `(2,3)` rational-forest classification. They are mathematical descriptions of boundaries, not by themselves exclusions for rational maps.
+
+Actual morphic proper-block exclusions survive when the client supplies `g1:A^2 -> V` or another smooth open containing the full image densely. Exceptional fibres over missed branch or singular points are legitimate boundary subconfigurations.
+
+Reopen/retract: any statement saying a rationally dominated open surface is forbidden merely because its chosen boundary has positive genus or graph cycle. This includes rational-map readings of the generic quadratic infinity exclusion and the bidegree `(2,3)` campaign consequence; those must be retyped as morphic first-leg obstructions.
+
+**Maximum-Safe Replacement**
+
+The safe theorem is exactly:
+
+For a smooth quasi-projective complex surface `U`, an everywhere-defined dominant morphism `A^2 -> U` forces every smooth projective strict-SNC completion `U=X\D` to have `p_g(X)=q(X)=0`, `barP_m(U)=0` for all `m>=1`, and `tau(D)=0`; equivalently, every boundary component is rational and the strict-SNC dual multigraph, with parallel edges retained, is a forest. Dominant rational maps only force the ordinary projective conclusion `p_g=q=0` for a smooth projective compactification; they do not force any log or boundary forest conclusion.
+
+<!-- BODY-END -->
+tokens used
+48,792
+**Hash And Scope**
+
+All seven supplied full-file SHA-256 hashes match. I audited only the charged `xmodel/...` files and made no repository changes.
+
+**1. Smooth-Cubic Counterexample**
+
+Verified. For a smooth plane cubic `E`, `U = P^2 \ E` has a dominant rational map `A^2 dashrightarrow U`: take a standard affine chart `A^2 = P^2 \ L` and restrict the identity to `A^2 \ (E cap A^2)`. This is dense in `U`, so the rational map is dominant. It is not an everywhere-defined morphism.
+
+The log invariants refute the old rational-map theorem. Since `K_{P^2}+E = 0`, `barP_m(U)=1` for all `m>=1` and `bar kappa(U)=0`. The boundary has one smooth genus-one component, so `tau(E)=1`. Thus rational domination imposes no rational-forest boundary condition.
+
+The exact false step is the one in the old hostile review asserting that a rational map `A^2 dashrightarrow U` resolves to `W -> A^2` with `W -> U` and unchanged `bar kappa(A^2)`; see [hostile review](/Users/dc/code/math/jc2/xmodel/bd-a2-rational-forest-multisection-hostile-review-opus5-20260830.md:107). For nonproper `U`, the rational map may have an interior pole divisor mapping to the omitted boundary. In the cubic example that divisor is `E cap A^2`. To get a morphism to `U`, one must delete it, changing the log surface from `A^2` to `A^2 \ (E cap A^2)`.
+
+**2. Maximum-Safe Morphic Theorem**
+
+The corrected morphic theorem is valid.
+
+Let `U` be a smooth quasi-projective complex surface and let `f:A^2 -> U` be an everywhere-defined dominant morphism. For any smooth projective strict-SNC completion `U=X\D`, embed `A^2` in `P^2` with boundary line `L`. The composite `A^2 -> U -> X` extends to a rational map `P^2 dashrightarrow X` whose indeterminacy is only over `L`. Resolving by blowups centered over `L` gives `W -> P^2`, unchanged over `A^2`, with boundary `B=W\A^2`, and a dominant generically finite morphism `F:W->X` satisfying `F^{-1}(D) subset B`.
+
+Log pullback injects
+`H^0(X,m(K_X+D)) -> H^0(W,m(K_W+B))`.
+The right side is zero because `(W,B)` is log-birational to `(P^2,L)` and `K_{P^2}+L=-2H`. Hence all log plurigenera of `U` vanish.
+
+Ordinary pullback along `F` also injects holomorphic one-forms and pluricanonical forms into those of rational `W`, so `p_g(X)=q(X)=0`.
+
+For reduced strict-SNC `D`, including disconnected boundary,
+`barP_1(U)=p_g(X)+tau(D)-rank(partial)`,
+`rank(partial)<=q(X)`, and
+`tau(D)=sum_i g(D_i)+b_1(Gamma_D)`.
+Thus `0=barP_1(U)=tau(D)`, so every `D_i` is rational and the dual multigraph is a forest.
+
+No surjectivity is needed. Global quasi-finiteness is not needed; dominance between irreducible surfaces gives generic finiteness. Etaleness is not needed for the theorem. Etaleness matters only in the block application because it proves the image is open and smooth.
+
+**3. Shrinking**
+
+Numerical monotonicity is true: if `U' subset U` is a dense open, then adding boundary cannot decrease log plurigenera, so `barP_m(U') >= barP_m(U)`.
+
+But this does not repair rational maps. A morphic obstruction applies only to an open target into which the full morphism `A^2 -> target` actually lands. Given `f:A^2 -> U`, one may shrink to `U'` only if `f(A^2) subset U'`. For a rational map, restricting its domain to avoid the new boundary changes the source from `A^2` to a smaller open surface, so the `A^2` log calculation is lost.
+
+**4. Proper-Block Use**
+
+The proper-block interface survives. The block-structure theorem says `g1` is everywhere-defined, dominant, quasi-finite, etale and open, with image inside `Y_sm \ R`; see [block integration](/Users/dc/code/math/jc2/xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md:61). Therefore `V=g1(A^2)` is an open smooth subscheme of `Y`, and `g1:A^2 -> V` is a surjective, hence dominant, morphism. This licenses the morphic theorem directly.
+
+If a point `p` of a projective or local model is missed by `V`, then on any common smooth resolution/completion restricting to `V`, the complete exceptional fibre over `p` is contained in the boundary. If `p` is singular, this applies because the etale map from smooth `A^2` misses `Sing(Y)`.
+
+Parallel edges count. Two boundary components meeting in two points already give `b1=1`. Blowing up SNC points only subdivides edges or attaches trees, so graph cycles and positive-genus components persist on further common resolutions. A cycle may be hidden by contracting to a singular model, but the obstruction is applied on the resolved boundary.
+
+**5. Downstream Damage**
+
+Retract/reword: the old coordinator theorem’s “dominant rational map” rational-forest claim is false; see [old integration](/Users/dc/code/math/jc2/xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md:59). Every use of boundary genus, boundary cycles, `barP_1>0`, or rational-forest obstruction must say “everywhere-defined dominant morphism `A^2 -> U`” or use the actual block image `V`.
+
+Still valid under rational domination: projective `p_g=q=0` deductions. In particular, smooth projective incidence closures with `p_g>0` are still excluded from dominant rational `A^2` parametrization of any dense open, because composing to the projective closure and resolving gives ordinary pluriform pullback.
+
+Purely combinatorial results survive: the residue formula, disconnected strict-SNC accounting, multisection formula, parallel-edge accounting, and the bidegree `(2,3)` rational-forest classification. They are mathematical descriptions of boundaries, not by themselves exclusions for rational maps.
+
+Actual morphic proper-block exclusions survive when the client supplies `g1:A^2 -> V` or another smooth open containing the full image densely. Exceptional fibres over missed branch or singular points are legitimate boundary subconfigurations.
+
+Reopen/retract: any statement saying a rationally dominated open surface is forbidden merely because its chosen boundary has positive genus or graph cycle. This includes rational-map readings of the generic quadratic infinity exclusion and the bidegree `(2,3)` campaign consequence; those must be retyped as morphic first-leg obstructions.
+
+**Maximum-Safe Replacement**
+
+The safe theorem is exactly:
+
+For a smooth quasi-projective complex surface `U`, an everywhere-defined dominant morphism `A^2 -> U` forces every smooth projective strict-SNC completion `U=X\D` to have `p_g(X)=q(X)=0`, `barP_m(U)=0` for all `m>=1`, and `tau(D)=0`; equivalently, every boundary component is rational and the strict-SNC dual multigraph, with parallel edges retained, is a forest. Dominant rational maps only force the ordinary projective conclusion `p_g=q=0` for a smooth projective compactification; they do not force any log or boundary forest conclusion.
+
+<!-- BODY-END -->
+adapter exited 0 but required report is absent: xmodel/bd-a2-rational-forest-morphic-correction-hostile-review-gpt55-20260830.md

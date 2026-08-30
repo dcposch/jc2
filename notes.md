@@ -14836,3 +14836,15 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   fixed quadratic presentation. Stop q=6 lattice/contact work. All active
   mathematics is desk-scale; no heavy local CAS is running, and AWS remains
   the venue for any growing frozen computation.
+
+## 2026-08-30 13:43Z CUSTODY EVENT — FOREST REREVIEW RETRY FROZEN
+
+- GPT-5.5's first morphic-forest correction lane exited `4` with
+  `report=MISSING`. All immutable receipt hashes reproduce. Its log contains
+  a confirming analysis, but log text is not a review artifact and is not
+  promotable.
+- The failure was a prompt/output-contract defect: the prompt requested a
+  returned body but omitted an explicit report pathname. A fresh rereview
+  prompt now requires exactly one named report. The mathematical correction
+  stays binding from the coordinator proof while independent promotion remains
+  review-gated.
