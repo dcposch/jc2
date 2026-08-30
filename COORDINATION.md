@@ -1383,3 +1383,29 @@ Do not enumerate ruling classes on the raw `D9` marking without a boundary-
 adaptation theorem. No heavy computation is licensed; AWS remains idle and
 mandatory for any later reviewed enumeration that exceeds desk scale. Web
 backstop remains `2026-08-31T03:40Z`; holds/human gates: none.
+
+Allocation refresh (2026-08-30 10:48Z): GPT-5.5 xhigh hostile review and
+binding integration `39c956f1...` now close every singular-F5 q=8 row in the
+charged normal reduced finite fixed-quadratic presentation. Stop all q=8
+enumeration, realization, and effectivity descendants in that cell. Promote
+the corrected unbalanced local vectors; retain the review's D6
+`O(z^(5/2))` remainder, explicit `F-P_i-P_j` root exclusion, and numerical
+horizontality proof in every downstream citation.
+
+The active finite quadratic work is split between a clean-room q=6 local/
+physical-contact audit and an independent affine-ADE/root-allocation threat
+map. Neither may copy q=8 pairwise disjointness: residual `S0/T` contacts must
+be placed in the common resolved tree first. In parallel, provisional
+degree-three producer `4eb8fc8b...` supplies a review-gated horizontal
+length-two adjoint-defect scheme; it attacks the presentation selector and
+does not wait on q=6. Prefer K00 transition images/source coverage and the
+QCS stalk test over another isolated truncation row.
+
+The full significant-news ideation round is still collecting blind Fable and
+Opus submissions; Grok's HTTP 402 receipt is banked as
+`UNAVAILABLE_NO_MODEL_WORK`. Reviews remain asynchronous and provisional
+children may proceed, but canonical promotion stays review-gated. Current
+mathematics is desk-scale; AWS is idle and becomes mandatory for any frozen
+root/elimination packet that exceeds the desk cap. No campaign action touches
+the separately owned formalization. Web backstop remains
+`2026-08-31T03:40Z`; holds/human gates: none.

@@ -14693,3 +14693,45 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   of the full-family local theorem, physical site markings, Euler exhaustion,
   global class reconstruction, and intersection gate is the immediate review
   client. q=6 work proceeds in parallel.
+
+## 2026-08-30 10:48Z REVIEW/PROOF EVENT — SINGULAR-F5 q=8 CLOSURE PROMOTED
+
+- GPT-5.5 xhigh review body `f0917ffb...`, sealed full file `90ccff51...`,
+  returns `CONFIRM_WITH_CORRECTIONS`. Root first reproduced the immutable
+  receipt, prompt, adapter, launcher, sandbox profile, composed prompt,
+  validator, appendix, report, log, and all ten charged mathematical hashes.
+  Receipt status `charge_basis=ABSENT` is correct because there is no new
+  exit-price assertion.
+- The review independently confirms the U3/A3, U5/D5, and U6/D6 normal forms,
+  polar partitions, Cartier coefficient one, marked resolution vectors, and
+  physical sites. It corrects only the generic D6 remainder from `O(z^3)` to
+  `O(z^(5/2))`, with no change to the `3+5` branch or vector.
+- On the global side it supplies the omitted numerical root family
+  `F-P_i-P_j` and excludes it by `S0`-disjointness; replaces a false balanced-
+  fibre sentence by `A.C_j>0 => a_j>=1`; and confirms the closed-form positive
+  pair-intersection bound in every Euler cell. Tangencies, exceptional-node
+  contacts, same-prime multiple sites, and embedded blowups do not evade the
+  second-path forest argument.
+- Binding integration `39c956f1...`/body `044717cc...`, manifest
+  `6ce28862...`, promotes emptiness of all q=8 rows
+  `B5,B6,B7,B8,B9,U5,U6` in the charged fixed presentation. Commits
+  `293a70c6...` and `39c9f8d6...` bank and push the review and integration.
+  Stop q=8 work; q=6 `B3/A2` and `U3/A3` remain.
+
+## 2026-08-30 10:48Z IDEATION/PROOF EVENT — DEGREE-THREE ADJOINT DEFECT GATE
+
+- Main-thread desk audit verifies that a normal class-`dA+3B` incidence with
+  a dominant rational `A2` first leg has rational resolution and exact total
+  local geometric-genus defect `(d-1)(d-2)`. The
+  Grauert--Riemenschneider ideal defines a length-`(d-1)(d-2)` adjoint scheme
+  on which the full canonical system evaluates isomorphically.
+- In degree three, `omega_X=q^*O_P1(1)` forces that length-two adjoint scheme
+  to map isomorphically onto a length-two divisor of the coefficient base.
+  Hence two length-one defects must lie over distinct base values, while one
+  length-two defect must have nontrivial base-parameter action. Reduced
+  rational-forest topology alone does not see this nilpotent defect.
+- Transactional provisional producer `4eb8fc8b...`/body `01daaf7e...`,
+  manifest `f11ef634...`, is pushed at `e0e3c53d...`. Different-model review
+  is required. The exact successor tests whether cubic different/discriminant
+  constraints force the adjoint scheme vertical, which would contradict the
+  new horizontal-image theorem; no degree-three exclusion is claimed yet.

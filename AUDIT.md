@@ -5,6 +5,44 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **ALL SINGULAR-`F5` q=8 ROWS PROMOTED EMPTY IN THE FIXED QUADRATIC
+> SCOPE (2026-08-30 10:48Z).** GPT-5.5 xhigh hostile review sealed full
+> `90ccff51e1c0a9591b8421e730fc997afdd68396657f9b8979d3f1eb30e94dd3`
+> / body `f0917ffb...` returns `CONFIRM_WITH_CORRECTIONS` after independently
+> reconstructing every local normal form, marked resolution, physical polar
+> site, Euler cell, ruled class, root orbit, and forest/intersection bound.
+> Transactional binding integration
+> `39c956f1cc173c57f08a755d26116e0835bd2a746eccbedae79a4ad8f10876fe`
+> (10,338-byte body `044717cc...`, manifest `6ce28862...`) promotes
+>
+> ```text
+> U3/A3: 4+4,   m=(2,2,1),       n=2e1+e2;
+> U5/D5: 2+3+3, m=(2,4,5,3,3),   n=e2+e4+e5;
+> U6/D6: 3+5,   m=(2,4,5,6,3,3), n=e2+e4;
+> singular-F5 q=8 rows B5,B6,B7,B8,B9,U5,U6: empty.
+> ```
+>
+> The exact global identity is
+>
+> ```text
+> sum_(j<k) C_j.C_k
+>   =2sum_(j<k)a_j a_k-(sum_l c_l^2-Q)/2,
+> Q>=sum_l c_l,
+> ```
+>
+> and every Euler-allowed baseline, one-carrier, or affine-A1 cell has a
+> strict positive lower bound, contradicting the pairwise-zero requirement
+> from the physical-site rational forest. Binding repairs are: replace the
+> generic D6 `O(z^3)` remainder by `O(z^(5/2))`; include the numerical roots
+> `F-P_i-P_j` and exclude them because they meet `S0`; prove horizontality by
+> `A.C_j>0` and nonnegative multiplicities; and phrase multiple-point
+> resolution through the second-path argument. The optimized-safe replays
+> have zero AST assertions and live negative controls. Only q=6 `B3/A2` and
+> `U3/A3` remain in this reduced finite normal-singular F5 cell. Smooth,
+> nonnormal, nonreduced, nonfinite/basepoint, degree-drop, other quadratic,
+> higher-degree, basis-existence, occurrence, map, counterexample, and JC2
+> claims remain outside scope.
+
 > **CUSTODY CORRECTION: `charge_basis=ABSENT` WAS EXPECTED FOR THE
 > SINGULAR-F5 POLAR REVIEW (2026-08-30 10:02Z).** Corrigendum
 > `63264bf1c226dd77de71a910a0e1d1f8c33984bc3dba476363b43fe62a1d6e0c`

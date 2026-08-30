@@ -7,6 +7,34 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **EVERY SINGULAR-`F5` q=8 ROW PROMOTED EMPTY; q=6 IS THE LAST REDUCED
+> FINITE SINGULAR-`F5` CLIENT (10:48Z).** GPT-5.5 xhigh independently
+> reconstructs the unbalanced normal forms, all marked local resolutions,
+> the nine-blowup lattice, Euler allocation, physical-site forest gate, and
+> closed-form intersection bounds, returning `CONFIRM_WITH_CORRECTIONS`.
+> Sealed review `90ccff51...`/body `f0917ffb...` and transactional binding
+> integration `39c956f1...`/body `044717cc...`, manifest `6ce28862...`,
+> promote exact U3/A3, U5/D5, and U6/D6 polar vectors and eliminate
+> `B5/A4`, `B6/A5`, `U5/D5`, and `U6/D6`; the earlier Euler/local theorem
+> already eliminates `B7/A6`, `B8/A7`, and `B9/A8`. Repairs weaken one D6
+> remainder to `O(z^(5/2))`, explicitly exclude roots `F-P_i-P_j` by
+> `S0`-disjointness, and replace a false fibre sentence by
+> `A.C_j>0 => a_j>=1`; none changes a row. Stop q=8 work. The two q=6 rows
+> `B3/A2` and `U3/A3` remain, and their residual `S0/T` contacts forbid a
+> verbatim q=8 pairwise-disjointness argument.
+>
+> In parallel, provisional producer `4eb8fc8b...`/body `01daaf7e...`,
+> manifest `f11ef634...`, proves for a normal class-`dA+3B` incidence with a
+> dominant `A2` first leg that total local geometric-genus defect is
+> `(d-1)(d-2)` and is represented by a Grauert--Riemenschneider adjoint
+> scheme on which the full canonical system evaluates isomorphically. For
+> `d=3` this forces a length-two adjoint scheme mapping isomorphically to a
+> length-two divisor on the coefficient `P1`. This is a new selector client,
+> not yet promoted and not an exclusion. Q=6 local/contact and affine-ADE
+> audits run asynchronously; Fable and Opus blind ideation remain live,
+> Grok returned pre-model HTTP 402, AWS is idle, and no heavy local CAS is
+> licensed.
+
 > **`A1`-RULING/EULER FILTER PROMOTED; SINGULAR `F5-A8` ROWS DIE
 > (08:33Z).** GPT-5.5 xhigh independently checks the charged actual
 > `A2 -> U` first leg, smooth affine open, Miyanishi--Sugie surface theorem,

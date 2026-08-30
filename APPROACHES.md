@@ -7,6 +7,38 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 10:48Z — singular-F5 q=8 closed; q=6 and selector split)
+
+- **Stop the reviewed q=8 branch.** Different-model review and binding
+  integration now eliminate all seven singular-F5 q=8 rows in the charged
+  normal, reduced, finite-near-infinity fixed quadratic presentation. The
+  local U3/U5/U6 vectors are promoted with the corrected D6 Puiseux
+  remainder; the global proof explicitly includes the omitted numerical
+  root family before excluding it by `S0`-disjointness. Do not spend further
+  lanes on q=8 enumeration, effectivity, or coefficient realization inside
+  this closed cell.
+- **Concentrate the finite quadratic attack on q=6, with topology typed
+  first.** Only `B3/A2` and `U3/A3` remain in the reduced finite normal-
+  singular F5 table. Run the local/contact reconstruction and the affine-ADE
+  root allocation independently. Q=6 has residual `S0/T` contacts, so
+  positive intersection energy is only a screen until the common-SNC
+  contact-labelled forest proves that an intersection supplies a second
+  path. Keep the unresolved B3 modulus cells local-first.
+- **Keep the selector front orthogonal.** Fixed-presentation closure still
+  does not put an arbitrary proper cubic block into a quadratic frame. A new
+  provisional degree-`d` theorem packages the entire
+  `(d-1)(d-2)` singularity defect as a canonical adjoint scheme; at `d=3`
+  that length-two scheme must be horizontal over the coefficient `P1`.
+  Review this exact adjoint-image gate and test verticality under cubic
+  different/discriminant constraints. In parallel, prefer one K00
+  scheme-theoretic transition image/source-coverage theorem and the QCS
+  stalk discriminator over additional isolated rows.
+- **Preserve asynchronous review and compute discipline.** Provisional q=6
+  descendants proceed while review runs, but promotion remains adversarial.
+  Current work is desk-scale. Freeze and shard any materially growing root or
+  elimination packet on AWS; run no uncertain heavy CAS locally. The broad
+  web backstop remains `2026-08-31T03:40Z` absent significant external news.
+
 ## Superseding strategy overlay (2026-08-30 08:33Z — `A1` ruling promoted; Euler cap prunes singular F5)
 
 - **Charge the completion-invariant support budget before any effectivity
