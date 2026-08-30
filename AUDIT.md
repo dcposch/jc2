@@ -54,7 +54,10 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > morphic first-leg boundary test. Opus review sealed full `f1a4bbd6...`/raw
 > body `c8d62de1...` returns `CONFIRM_WITH_CORRECTIONS`, preserving the global
 > surface and genus-four component while sharpening its scope to that specific
-> globally identified second leg. It is not a universal row theorem.
+> globally identified second leg. Binding integration `197f0aa2...`/body
+> `7aafee27...`, manifest `47e8e985...`, promotes it only as a reviewed
+> global/local positive control and that conditional specific-block negative
+> control. It is not a universal row theorem.
 >
 > **D3 TWO-SUPPORT HALPHEN ROW PROMOTED EMPTY IN THE ACTUAL-MORPHIC SCOPE
 > (2026-08-30 14:19Z).** Exact producer

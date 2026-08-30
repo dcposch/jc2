@@ -27,8 +27,9 @@ later correction and live-overlay sections cite post-survey campaign evidence.
 - **Keep the one-point Halphen closure provisional.** Its first Fable review
   produced no report and therefore no verdict. Relaunch a compact explicit-
   path review; continue other work while it runs. Opus independently confirms
-  the separate global control and genus-four ramification obstruction, but
-  that remains a control-specific theorem rather than a family-wide proof.
+  the separate global control and genus-four ramification obstruction;
+  integration `197f0aa2...` promotes that only as a control-specific theorem,
+  not a family-wide proof.
 - **Run global Euler and sectioned-CFS attacks asynchronously.** The finite-
   cover Euler ledger gives `e(U)=3-2e(B)-|S0|` and a sharp complete-base
   arithmetic gate, not a sign contradiction. No heavy local CAS is licensed;

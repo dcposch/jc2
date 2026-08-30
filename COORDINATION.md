@@ -1488,7 +1488,10 @@ GPT-5.5 returns `CONFIRM_WITH_CORRECTIONS`; binding integration
 `m=3,T=t0+t1` Halphen row empty only in the actual normal morphic proper-block
 scope. Stop local work on that row. Opus independently preserves the exact
 global control and genus-four ramification obstruction but prices it only as a
-specific globally identified negative control. Fable's exit `4` and missing
+specific globally identified negative control. Binding integration
+`197f0aa2...`/body `7aafee27...`, manifest `47e8e985...`, adopts those repairs
+and promotes that control theorem without changing row status. Fable's exit
+`4` and missing
 report are operational custody, not a verdict; freeze a compact explicit-path
 rerun and keep all research nonblocking.
 

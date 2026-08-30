@@ -66,7 +66,9 @@ day or inserts the completed day directly below this preamble (see
 > six-branch cyclic cubic of genus four, independently excluding this one
 > surface from the actual morphic block interface. Opus hostile review sealed
 > full `f1a4bbd6...`/raw body `c8d62de1...` returns
-> `CONFIRM_WITH_CORRECTIONS` and preserves this control-specific theorem;
+> `CONFIRM_WITH_CORRECTIONS`. Binding integration `197f0aa2...`/body
+> `7aafee27...`, manifest `47e8e985...`, promotes exactly this reviewed
+> control-specific theorem;
 > this is not global attainment for every local shard or a second universal
 > row proof.
 >

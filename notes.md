@@ -14942,6 +14942,10 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Fable's one-point weighted review exited `4` with `report=MISSING`; it has
   no mathematical verdict. Relaunch a shorter explicit-path review while the
   sectioned degree-cap lane continues.
+- Binding integration `197f0aa2...`/body `7aafee27...`, manifest
+  `47e8e985...`, adopts Opus's purity, `D4` determinacy, exact ramification,
+  replay-disclosure and global-antecedent repairs. The control is now reviewed
+  but remains non-load-bearing for the family-wide one-point row.
 
 ## 2026-08-30 14:19Z PROOF EVENT — EXACT PROPER-BLOCK EULER LEDGER
 
