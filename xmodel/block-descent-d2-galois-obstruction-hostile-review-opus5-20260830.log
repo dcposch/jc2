@@ -1,0 +1,24 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/block-descent-d2-galois-obstruction-hostile-review-opus5-20260830.md` (40811 bytes, one standalone body-end marker, no seal block).
+
+## Verdict: `CONFIRM_WITH_CORRECTIONS`
+
+**Nothing refuted. No gap found in `BD-GAL` or `BD-D2`.**
+
+Custody first: full-file `766a843a…`, body 13338 / `f03368f6…`, basis `0d7544eb` — all match. Marker uniqueness checked **byte-exactly**, not by `splitlines` — the string occurs twice (offsets 13320, 13409) but only the first is standalone; the second is mid-line inside backticks in the seal's own body definition. Dependency byte-identical to its committed blob, own seal verifies.
+
+**What survived.** I re-derived Lemma 1, Theorem 2, the Galois-uniformity contradiction, and the rank-two normal form independently. Every step holds. `Pic(A²)=0`, char 0, domain/normality, `disc = 4h`, `Ω = B/(2w)`, `g2^{-1}(D)_red = R`, and the final unit contradiction all check out without smoothness of `Y` or properness of `g1`.
+
+**Corrections (four, none fatal).**
+- **C-A:** Theorem 2 is a *one-line* corollary of Lemma 1 applied to `b=p` — the curve `E`, quasi-finiteness of `F`, and the closure `T` are all avoidable. The long route is valid but is where a reader would hunt for a hole.
+- **C-B:** the proof never uses that `D` is a branch component; it holds for **every** irreducible `p`.
+- **C-C:** "inertia orbit of length one" suppresses `f_T`; the fixed-sheet count is `Σ_{e_i=1} f_i`.
+- **C-D:** "two independent proofs", "branch/discriminant divisor", "every quotient of prime degree" each need one repair clause.
+
+**Where char 0 actually does work** — three places, and the producer names only two. The unnamed one is load-bearing: at a height-one point, non-étale ⟺ `e>1` *only because* residue extensions are automatically separable.
+
+**Three reviewer-derived strengthenings**, typed as needing independent confirmation: the different `𝔡_{B_K/A}` is never principal (subsumes nonmonogenicity *and* `Cl(Y)≠0`); `Cl(Y)` is **infinite** (free group on codim-1 components of `Y∖g₁(A²)` injects); and the unifying reformulation — the obstruction is exactly *"`R` supports no nonzero principal effective divisor"*, with degree two dying because rank two forces a complete intersection.
+
+**Successor.** `BD-FIX3` justified only in sharpened form. `B_K` is `A`-free, so `d2=3` lands in the Delone–Faddeev binary-cubic-form correspondence — verified in place (trace-Gram det = `disc(f)` exactly), with monogenicity ⟺ `f` represents a unit and different-principal ⟺ `Δ` represents a unit. Positive and negative controls both run (`k[t³,t⁴,t⁵]` correctly flagged non-Gorenstein).
+
+**One open item, flagged not as a defect:** the `d1=1` specialization would say `C(x,y)/C(f,g)` is never Galois, which I believe is the classical Campbell/Razar/Wright theorem. Web search was outside this lane's envelope, so I recorded it as a recollection and a custody action — someone with search access should confirm the *proper intermediate field* case is genuinely new before external promotion.

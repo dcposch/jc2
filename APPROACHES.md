@@ -7,6 +7,55 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 03:00Z — no two-block quotient; log-positive first leg)
+
+- **Keep the global occurrence/coverage arrow first.** The strongest exact
+  local and block theorems still do not show that every hypothetical map
+  enters a registered formal source cell or proof interface. Finite prefixes
+  are not maps, and closed selected cells are not a source atlas.
+- **Exploit the new block theorem at the first-leg interface.** Every proper
+  intermediate quotient is non-Galois, so a two-block system is impossible;
+  fixed divisorial inertia, an infinite missed-boundary class lattice, and a
+  nonprincipal different are now reviewed constraints. Separately, the exact
+  two-section theorem gives nonnegative log Kodaira dimension as soon as two
+  collision fibres occur and forbids any dominant `A^2` first leg. The first
+  Fable `AL3-REDUCE` review attempt produced no report after hitting its output
+  cap, so the affine-linear Miranda conclusion remains review-gated; rerun a
+  shorter bounded packet, and promote the closure only if that review passes.
+  A new review-gated rational-forest producer gives the first
+  nonlinear filter: any resolved target boundary for an `A^2` first leg must
+  have rational components and forest dual graph; the generic quadratic-
+  coefficient infinity curve has genus two, while smooth presentations of
+  coefficient degree at least three already have positive geometric genus.
+  Classify only the degenerate quadratic infinity strata next. Do not infer
+  primitive monodromy, `d1!=2`, or general cubic closure.
+- **Partition K00 boundaries while testing richer transition state.** Four
+  generic unit-ray cells `(2,1),(3,1),(2,2),(3,2)` are reviewed empty at
+  G7,G9,G10,G12. On `(2,2),h10=1`, G11 nonemptiness is reviewed; its
+  provisional G12 continuation leaves fresh `n=5` rank-one and rank-two
+  survivors, so G13 is the next literal gate after review. Cheaper cleanup
+  faces `(2,1),h10>=1` and
+  `(3,1),h10>=1` remain, while `(4,1)` at G11 is the cheapest untouched
+  unit-ray test. The general possible-arrival calendar is reviewed, but it
+  proves no finite recurrence or all-ramification theorem.
+- **Build pair-square at one actual surface stalk before any global graph.**
+  Curve-only augmentation/monodromy cannot prove QCS. On one real quotient
+  line, define the scheme-theoretic diagonal marking on the canonical
+  normalization/conductor square, construct the braid/swap-equivariant
+  generic-to-special cone, and prove its special length `w_i(z)-b_i` plus
+  blowup invariance. Use Kummer only as a persistent-event zero control,
+  keeping affine ramification and the physical pole distinct. Global marked
+  connectivity waits on this stalk gate.
+- **Keep review and systems repair asynchronous.** The log theorem, four
+  generic K00 cells, and the K10-boundary G11 theorem are promoted; the cubic
+  reduction and G12 boundary child remain review-gated, with no review lane
+  currently active. Two prior reviewers observed excluded parent status despite
+  their mandate. Before changing live adapters, bank this checkpoint; then
+  add an OS-level no-read/no-write boundary for the excluded nested repository
+  and regression-test immutable prompt custody. Heavy or uncertain CAS stays
+  AWS-only; no heavy job is currently needed. Grok is presently unavailable:
+  its two newest launches returned HTTP 402 before model work.
+
 ## Superseding strategy overlay (2026-08-30 00:47Z — sharp normal window and étale sandwiches)
 
 - **Advance K00 by source partition, not coefficient-blind induction.** The

@@ -1,0 +1,36 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Wrote `xmodel/pair-square-qcs-gate-hostile-review-opus5-20260830.md` (32194 bytes, one standalone `<!-- BODY-END -->`, no seal block). No canonical file, script, or reviewed input was touched; `jc2-lean` was not accessed.
+
+## Verdicts
+
+| # | Item | Verdict |
+|---|---|---|
+| 1 | Custody, hashes, seal, residual-Cartier formulation | **CONFIRMED** (labelling nit) |
+| 2 | Contact `e-1`, RH length, tame coords, hidden multiplicity | **CONFIRM_WITH_CORRECTIONS** |
+| 3 | Keller specialization, pole length, `b_i` identification | **CONFIRM_WITH_CORRECTIONS** |
+| 4 | Separation of the four ranks | **CONFIRMED** (one overstatement) |
+| 5 | Augmentation representation and the `B` equivalence | **CONFIRMED** |
+| 6 | Too pessimistic? Can `B` be built? | **CONFIRMED** — strengthened to two theorems |
+| 7 | Degree-six passport, block-overlap controls | **CONFIRMED** |
+| 8 | Sharpness of the `OPEN` | **CONFIRM_WITH_CORRECTIONS** |
+
+## What I verified independently
+
+Seal reproduces byte-exactly (14967 / `06669e22…`); all four dependency hashes are full-file SHA-256, tracked at the frozen basis, byte-identical to worktree. The degree-six passport recomputes exactly — including that the product is the identity **only** under the stated right-to-left convention (all six orderings tested) — and its `E_gen=0, Xi=−1` matches the promoted package. Every augmentation dimension checks over ℚ. I re-proved (2.2) by a second route, `Δ·R = Δ·Y − Δ·Δ = 2d−(2−2G)`.
+
+## Two new obstructions
+
+- **N2.** `[1_S] ∈ W_∞` iff `|S ∩ C_j| = |S|·e_j/d` for every pole cycle. Two-line proof, 28408 random comparisons, 0 mismatches. In the degree-six control *no* proper nonempty support qualifies. This upgrades the report's defect (4) from "can lie in `V^σ`" to a criterion that provably fails.
+- **N3.** The canonical inertia map `⊕_c im(τ_c−1) → W_∞` is **surjective**, kernel dim `2G−2+2s`; injective only when `s=1`, exactly where QCS is already free. Verified 400/400 on random tuples.
+
+So the report is not too pessimistic — the curve/monodromy layer provably cannot supply `B`.
+
+## Main corrections
+
+The card's object is the **surface** square `(X ×_U X)∖Δ` with a blowup-functorial complex; the report substituted a curve square and left the card's object untested, while headlining a verdict on the card. It also silently swapped the card's arrow `ι_F : reduced H₀(poles) → C_coll` for `α_F : A_base → W_∞`. The swap is sound — I supply the dictionary (`V^σ ≅ reduced H₀(pole places)`, `C_coll = coker(α_F)` of dim `E_gen`) — but the card's arrow is **cheaper**: `E_gen ≥ 0` is already promoted from `X(a) ≥ 0`, so the entire residual content is the increment `E_gen ≥ s−1`, whose natural `s−1`-dimensional home is `V^σ`. Hence "BEFORE INJECTIVITY" mis-emphasizes; the gap is target typing and canonicity.
+
+Recommendation: do not stop, do not advance; re-type as `OPEN(POLE-TO-EXCESS INCIDENCE MAP; CURVE LAYER PROVED INSUFFICIENT)`.
+
+One attribution point: the headline largely re-derives the braid audit's own safe item ("pole incidence remains a global missing map"), which the report cites as a control but does not credit for this conclusion. The N2/N3 obstructions are new.
+
+No exit price is asserted, so no `charge_basis` line is emitted.

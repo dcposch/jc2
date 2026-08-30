@@ -925,3 +925,68 @@ only the polynomial-parametrization decoration remains unpromoted review
 debt. No lane is active at this atomic checkpoint; commit
 and push precede the next research wave. AWS remains idle/unclaimed, and
 heavy or uncertain computation remains AWS-only.
+
+Allocation and systems refresh (2026-08-30 02:28Z): the proof-side block
+lane has advanced twice. Different-model review promotes `BD-GAL`, excluding
+every proper Galois intermediate quotient and hence every two-block system.
+Separate Opus review promotes the exact log-plurigenus of a two-section
+complement and rules out a dominant `A^2` first leg whenever at least two
+collision fibres occur. At that timestamp Fable's `AL3-REDUCE` review was
+live; confirmation would close the affine-linear Miranda cubic subfamily
+without waiting on any K00 lane. A sealed review-gated rational-forest
+producer now makes the nonlinear successor finite: generic quadratic-
+coefficient infinity already has genus two, while smooth coefficient degree
+at least three has positive geometric genus. Review the residue formula, then
+classify only degenerate quadratic infinity forests; no nonlinear family is
+yet promoted closed.
+
+K00 now has four different-model-confirmed generic cells
+`(e,m)=(2,1),(3,1),(2,2),(3,2)`. The positive-order K10 boundary is not
+closed: on `(2,2),h10=1`, G11 nonemptiness is different-model confirmed;
+the provisional G12 extraction kills the old rank-one branch but retains
+fresh rank-one and rank-two points through G12, making G13 the next literal
+gate after review. The general 569-tail calendar was
+independently reconstructed by Opus and is promoted at exact possible-arrival
+scope, with tangentiality and non-attainment qualifications. It refutes
+cone/rank-only and ratio-only recurrence but does not establish that no finite
+transition quotient exists.
+
+The pair-square curve layer is reviewed and shows why abstract augmentation
+or local inertia cannot prove QCS. The surface successor is narrowed to one
+scheme-theoretically marked conductor stalk and its equivariant generic-to-
+special cone. Its graph, dimension match, and marked-connectivity claims are
+unconstructed; a same-model correction also distinguishes affine Kummer
+ramification from the physical pole and withholds promotion.
+
+One workflow defect is banked for the next systems micro-round: two completed
+external reports observed an excluded nested-worktree status despite the
+no-inspection instruction; those observations are quarantined and carry no
+mathematics. The calendar receipt is clean—the human prompt and composed model
+prompt are different artifacts, and each original/post-run pair matches.
+After that external lane closes and this checkpoint is pushed, harden
+the Fable/Opus adapters with an OS-level deny rule for the excluded path and a
+read-only frozen prompt snapshot, then regression-test both positive review
+delivery and forbidden-path failure. Do not edit adapters under live lanes.
+
+All current mathematics is desk-scale. AWS is idle/unclaimed and no heavy
+campaign job is licensed; heavy or uncertain CAS remains AWS-only. The next
+broad web sweep is no earlier than `2026-08-30T03:40Z`; the quiet full-round
+deadline remains `2026-08-30T12:35Z` unless significant news triggers one
+sooner. At this timestamp the next coherent commit/push awaited closure of the
+remaining mutating Fable cubic-review log. Holds/human gates: none.
+
+Allocation refresh (2026-08-30 03:00Z): the remaining Fable cubic-review lane
+has closed with exit code one and no report because its generated response
+exceeded the 64,000-token output cap. Its immutable prompt and adapter hashes
+match their post-run values, so this is an operational failure and no
+mathematical verdict. Keep `AL3-REDUCE` and every affine-linear Miranda cubic
+consequence provisional; after this atomic checkpoint, issue a shorter,
+explicitly bounded different-model review. No mutating external lane or heavy
+campaign job is active. The checkpoint is therefore unblocked. Adapter
+path-deny hardening remains the first systems task after the push, before the
+next external lane. AWS is idle/unclaimed; heavy or uncertain CAS remains
+AWS-only. Grok remains unavailable: both the affine-linear cubic review and
+the first `e=3,m=2` review launch returned HTTP 402 before model work because
+the Grok Build balance was exhausted; record both as
+`UNAVAILABLE_NO_MODEL_WORK`. Web and quiet-round clocks remain
+`2026-08-30T03:40Z` and `2026-08-30T12:35Z`. Holds/human gates: none.

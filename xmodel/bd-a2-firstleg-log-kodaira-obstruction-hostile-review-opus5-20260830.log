@@ -1,0 +1,24 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/bd-a2-firstleg-log-kodaira-obstruction-hostile-review-opus5-20260830.md` (29337 bytes, one standalone `<!-- BODY-END -->`, no seal block).
+
+## Verdict: `CONFIRM_WITH_CORRECTIONS`
+
+**Custody:** all three charged full-file digests reproduce byte-exactly; the producer's body seal verifies (11262 bytes, `0238ee71…`, unique standalone BODY-END at line 373). Basis pinned at `0d7544eb`.
+
+**The hunted off-by-one is not there.** I reconstructed the tangency audit twice — the producer's blowup charts, and an invariant discrepancy computation that never opens a chart. Both give `ord_{E_i}(ω) = m−1−i` on every exceptional. Machine-checked for all `1 ≤ k ≤ m ≤ 5`.
+
+**The theorem is stronger than claimed.** For *any* two sections of *any* ruled surface over `P¹`:
+
+```
+bar-P_m(U) = m(#S−2)+1,   bar-kappa(U) = −∞ / 0 / 1  for #S ≤ 1 / = 2 / ≥ 3
+```
+
+independently of every contact multiplicity `m_s`. That cancellation is the structural reason no off-by-one could have existed. Since this is an equality covering the whole hypothesis class, **no counterexample exists and no hypothesis is missing**.
+
+**`#S ≥ 2` is sharp, not convenient.** `P¹×P¹`, `D_∞={w=0}`, `D_0={w=z²}` satisfies everything except `#S ≥ 2` (`#S=1`, `Σm_s=2`) and has `K+D̃ = −Ẽ₂`, so `bar-kappa(U) = −∞`. This refutes any weakening to `Σm_s ≥ 2`.
+
+**Five corrections, none fatal.** The one that matters is **C1**: the local normal form `φ = w/(w−a)` "up to a base rational function" is *used* but only its converse (invariance) is proved. Without the missing half, a local unit factor reintroduces an interior pole along `F_s` and every "no hidden interior pole" claim fails. The step is true; I supply the one-line proof (a function with trivial divisor on `q̄⁻¹(V)` is fibrewise constant, hence a pullback). **C2**: the packet never displays `ord_{F_s}(ω) = m_s−1+ord_s(h) ≥ 0`, which is what actually discharges that obligation. C3/C4/C5 are attribution, a sign, and scope.
+
+Also worth recording: the blowup audit is **load-bearing**, not decorative — `(P, D_0+D_∞)` is not log canonical for `m ≥ 2`, and `h⁰` drops from `Σm_s−1` to `#S−1`. A reviewer replacing it with the naive count on `P` would wrongly conclude the theorem for `#S=1, m=2`.
+
+**Dependency typing:** the abstract theorem consumes neither input producer — only dominance. Only the *application* needs `AL3-REDUCE`, which is unreviewed at charge time, so I typed the affine-linear subfamily closure `CONDITIONAL`, not `EXCLUDED`. The single upstream risk is BD-FIX3 §3.4: if its inconsistency claim fails, `R` gains a vertical component and this theorem does not apply at all.

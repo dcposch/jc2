@@ -7,6 +7,71 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **EXACT LOG-KODAIRA THEOREM BLOCKS AN `A^2` FIRST LEG (02:28Z).** Opus
+> independently confirms and sharpens the two-section calculation. Binding
+> integration `ff25ba27...`/body `10fb58eb...` gives
+> `bar-P_n(U)=n*(#S-2)+1` for `#S>=2` and zero for `#S<=1`, hence log Kodaira
+> dimension `-infinity,0,1` as `#S<=1,#S=2,#S>=3`. Thus no dominant
+> `A^2->U` exists when two or more collision fibres occur. The affine-linear
+> Miranda cubic application awaits an independent `AL3-REDUCE` review. The
+> first Fable attempt ended at 02:58Z without a report because its response
+> exceeded the 64,000-token output cap; this is no mathematical verdict, so a
+> shorter bounded rerun remains queued. Nonlinear cubic blocks and JC2 remain
+> open.
+
+> Grok was unavailable for both an earlier affine-linear cubic review and the
+> first `e=3,m=2` review attempt: each lane returned HTTP 402 before model
+> work because its Build balance was exhausted. Those receipts are
+> `UNAVAILABLE_NO_MODEL_WORK`; the successful Fable `e=3,m=2` replacement is
+> the review supporting that cell's promotion.
+
+> A new sealed, review-gated successor `367d8ffa...`/body `42aedb00...`
+> derives the rational-forest necessary condition from the residue sequence:
+> a resolved boundary admitting an `A^2` first leg can have neither a
+> positive-genus component nor a cycle in its dual graph. It provisionally
+> excludes generic quadratic-coefficient Miranda presentations because their
+> infinity curve has genus two, and smooth coefficient-degree-at-least-three
+> closures because `p_g=(d-1)(d-2)>0`. Special degenerate infinity strata
+> remain and no nonlinear family is yet promoted closed.
+
+> **NO PROPER GALOIS BLOCK QUOTIENT; NO TWO-BLOCK SYSTEM (02:28Z).** Opus
+> hostile review confirms `BD-GAL`; integration `f9720718...`/body
+> `f3668b3e...` promotes a fixed unramified block above every prime divisor,
+> contradicting Galois uniformity above a branch component. Hence every
+> proper intermediate quotient is non-Galois and its number of blocks
+> `d2` is not two. The missed-boundary divisor lattice injects into `Cl(Y)`
+> and the different is nonprincipal. Block size `d1=2`, non-Galois cubic and
+> higher quotients, primitivity, and JC2 are not decided.
+
+> **FOUR GENERIC K00 RAMIFICATION CELLS REVIEWED EMPTY; BOUNDARY SURVIVORS
+> ADVANCE (02:28Z).** Fable confirms the `e=2,m=2` G10 and `e=3,m=2` G12
+> complete fans; integration `73e0b203...`/body `fd511b4e...` joins them to
+> the prior `(2,1)` G7 and `(3,1)` G9 exclusions. This is four exact cells,
+> not a recurrence or source atlas. On the separate `e=2,m=2,h10=1` face,
+> Fable-confirmed integration `8ba031e8...` proves G11 point-set nonemptiness
+> with old and fresh rank-one/rank-two branches. Its provisional G12
+> continuation kills the old `n=4` rank-one branch but leaves fresh `n=5`
+> rank-one and rank-two fixtures, so G13 is next. Neither prefix is an arc.
+
+> **PAIR-SQUARE ROUTE RETYPED FROM CURVE MONODROMY TO A SURFACE STALK
+> (02:28Z).** Integration `2dbb4e96...` promotes the curve ramification and
+> augmentation no-go lemmas: the abstract transverse-space gate is
+> tautological and natural finite inertia maps in the wrong direction with a
+> forced kernel. The live target is a marked normalization/conductor stalk on
+> the actual two-dimensional fibre square. Same-model correction
+> `f0a13d1...` narrows the Kummer example to a zero-vanishing control and
+> leaves the conductor sheaf, graph, dimension match, and connectivity open.
+
+> **GENERAL RAMIFICATION CALENDAR REVIEWED AT EXACT “CALENDAR ONLY” SCOPE
+> (02:28Z).** Opus independently reconstructs all 569 tails, graph-normal
+> antichains, possible-arrival formulas, and ratio walls. Integration
+> `edfbc7d9...`/body `12d91699...` promotes those calendars with their
+> tangentiality and non-attainment qualifications. It refutes cone/rank-only
+> and ratio-only recurrence, but does not establish that no richer finite
+> transition quotient exists. Receipt custody is clean; the human prompt and
+> composed prompt were initially compared across types and are correctly
+> distinct.
+
 > **BLOCK DESCENT PROMOTES A STRUCTURE THEOREM AND CLOSES ITS ORIGINAL
 > PRIMITIVITY BRIDGES (00:47Z).** Fable's hostile reconstruction confirms
 > with corrections that every proper intermediate field of a hypothetical

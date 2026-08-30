@@ -1,0 +1,13 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+The review is complete. **Verdict: CONFIRM_WITH_CORRECTIONS** — the report is at `xmodel/k00-ram-e2m2-h10eq1-g11-survivor-hostile-review-fable5-20260830.md`.
+
+**Headline finding:** the producer's claim holds exactly. The `e=2,m=2,h10=1` boundary child (`k10[0]=0, k10[1]≠0`) is **point-set nonempty through G11** — the proposed one-grade closure does not occur, and G12 is the next literal gate. I rebuilt everything from the frozen 569 tails with my own parser, series engine, and formula implementations (no producer helpers): formula (2.3) reproduced row-by-row with the exact term counts 36, 39, 41, 33, 39, 12, 34; all three fixtures pass G0–G11 in my pipeline; and both mutations fail *exactly* at G11 while still passing G0–G10 (sharper than the replay's own check).
+
+Notable strengthenings from the audit:
+
+- **Census upgraded to machine proof.** I retained `S4,T4,N8,k10[2]` as live symbols and proved they touch no grade through G11 and all first arrive at G12 — the producer had machine-checked only `k10[2]`.
+- **New reusable cone certificates.** I proved the load-bearing reduced-support fact `V(Q1..Q7)_red = V(A,B)` outright by pure linear algebra: each `Q_r = A·L_r + B·M_r`, the relation `A·B = (2048/3)Q₁ + (16384/3)Q₃`, and `B ∈ span(A, M_r)`, `A ∈ span(B, L_r)`. No Gröbner machinery needed.
+- **Tree audit clean.** The `n=4` rank-one G10 survival was re-derived symbolically for both signs: G10 is entirely `k10`-free on this face, the wall combo forces `s=ε8it`, row 4 forces `A(N5)=B(N5)=0`, and one solvable `(U,V)` equation remains — no unit-face terminal was imported.
+- **Fan verified as a complete symbolic classification**, including the full-row rank-one wall identity `G11₂+(εi/2)G11₁ = κ(5/65536)(s+ε8it)³` (opposite wall to n=4, sign pinned by the mutation control) and the char-0 rank-zero kill.
+
+The corrections are ledger-level only: the certificate's `CUSTODY` mutation entry has no executed control behind it, the V20R2 compiler hash is unchecked at runtime, two symbolic chart functions omit low-grade zero assertions (automatic, and I verified them), and row 6's G11 contains no `alpha,beta` terms. The maximum safe promotion is exactly the producer's (6.1) — `POINT_SET_NONEMPTY_THROUGH_G11; FORMAL_ARC_STATUS_OPEN; NEXT_LITERAL_GATE=G12` — with a rational witness making nonemptiness valid over every characteristic-zero field, and with the G12 retention lists (verified by truncation-13 census on both survivor mechanisms) attached.

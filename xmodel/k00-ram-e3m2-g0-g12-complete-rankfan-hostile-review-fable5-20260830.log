@@ -1,0 +1,14 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+**Verdict: CONFIRMED.** The Sol 5.6 `e=3,m=2` G0–G12 complete rank fan survives hostile review with no material defects, and the report is written at `xmodel/k00-ram-e3m2-g0-g12-complete-rankfan-hostile-review-fable5-20260830.md` (ending with the single standalone `BODY-END` line, no seal block, per mandate). Nothing from the failed Grok run was consumed, and no canonical file, producer file, or `jc2-lean` was touched.
+
+What I did and found:
+
+**Custody and replay.** Git basis, all nine charged hashes (each also verified *tracked at the frozen basis*), the 14,872-byte body seal, and the replay hash all check out. Both `python3 -B` and `-B -O` runs pass identically in ~10.5 s with the pinned 5,968-byte certificate; neither replay nor engine uses bare `assert`, so `-O` strips nothing.
+
+**Independent reconstruction.** I rebuilt the seven rows from the frozen 569 tails with my own parser and arithmetic (no producer code), pinned the coordinate map and Λ-table to the frozen compiler, and re-proved every load-bearing identity: the exact-surface identity with all 42 gradients, the quadric/cone structure (`Q_r ∈ (A,B)`, the α/β table, `Q4=(3/524288)(B²−64A²)`), the K10 G10/G11 cancellation with exact W1/W2, all rank-2 kills via the `(27/2³⁵)ΔC` / `(3/2¹⁵)E` / `−Δ²` chain, both Gaussian rank-1 charts, all terminals (`ε·i·q³/32` at n2/n3/n4; `−(5εi/16)k10[0]t³` at n5 rank-1; the `k10[0]·W` rank-0 kill), both fixtures, and the recentering identities. I retained **more** than the producer at several stages — fully general `d3,d4` at n=2, `S5,T5` on the n=4 reduced branch, `γ,η` on the n=5 branch — and every G12 form is provably independent of them. 18/18 randomized exact numeric trials passed through a separate scalar path.
+
+**Mutations.** All producer-declared mutations genuinely fire (custody, Δ-64, W2-192, terminal sign, certificate fail-closed, calendar minima), plus two independent hash-updated mutations that prove the *math layer* fires: a tails coefficient bump caught at `surface row 6` with exactly the injected residual, and an engine `vector_with_ab` coefficient caught at `n2 rank2 p=0 row4`.
+
+**Observations (none material):** the engine's `cone_vector` plane coefficients are math-invisible to this replay (all calls use `a=b=0`); the `F(64,3)==F(192)` guard is a never-firing constant encoding (the real 192-control is the `n5 final W2` assert); and `D(Jdet[0])` is declared but unconsumed through G12, so the emptiness actually holds on the larger open without it.
+
+**Maximum safe statement** is exactly the producer's (0.2) field-valued finite-jet emptiness, and the **cheapest successor** I name (typed OPEN) is the complementary `k10[0]=0` face of the same support, where the verified fixture shows genuine G12 survivors, with the window opening at the `k10[1]` arrival G13 and bounded by the K6 gate at G21/G23.

@@ -1,0 +1,16 @@
+cli=2.1.228 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai
+**Verdict: CONFIRMED.** The producer's `e=2,m=2` G0–G10 complete rank-fan theorem survived every attack. The report is written to `xmodel/k00-ram-e2m2-g0-g10-complete-rankfan-hostile-review-fable5-20260830.md` (unique standalone `<!-- BODY-END -->`, no seal footer).
+
+What I did, per the required attacks:
+
+1. **Custody** — all 11 charged/target hashes, the body seal (14580 bytes / `510f81b8…`), plus three pins beyond the charge: the Singular prelude, the canonical tails digest, and the V21 load manifest. All match.
+2. **Independent reconstruction** — I wrote a from-scratch exact engine (pure stdlib, no producer code) that rebuilds the seven rows and three loads from `tails.json` and matches the Singular prelude and V21 serializations byte-exactly, closing the shared-`reconstruct_rows` exposure. The calendar reproduced exactly; in fact K6/K2/target shifts alone (τ¹²⁺) exceed G10, so face uniformity holds with margin.
+3. **Gradient/recentering** — all 42 gradient identities verified; I additionally proved the tangent plane lies in the radical of every leading quadric, which makes the recentering exactly G-invariant and mathematically forces the absence of every later coefficient the producer omitted.
+4. **The fan** — every chart, constant, and terminal reproduced with strictly larger retained slot sets (S4,T4,S5,T5, kernel coords, full N7/N8, k10[0..6]). Two sufficiency-only steps upgraded to necessity: row 4 on the r²=192 branch is exactly `(−3/256)(s+r(t+2))`, and (4.6) is forced (every G8 row is an exact `const·q·w` multiple of the deviation).
+5. **K10 cancellation** — M4(ell)=0 plus the polar identity delete the G8/G9 arrivals on every surviving branch; only k10[0] reaches G10, cancelling from the rank-2/compat rows (W₄=0, W₃+⅛W₁=0) and supplying the two terminals.
+6. **m=2 strictness** — strengthened: the odd G8 survivor forces N3≠0 *and* N5≠0 on the whole component, so it is disjoint from the τ²-pullback locus; the fixture verifies exactly and dies at G9 as claimed.
+7. **Engine + controls** — mutation controls bind on my side; producer replay passes identically under `-B` and `-B -O` with the pinned certificate SHA.
+8. **Arc deduction** — sound; one scope note (the k10(τ) superset convention) recorded.
+9. **Defects found** — all minor: a stale "5,958-byte" prose figure (actual 6036), the never-firing W2 192→191 control (same pattern as e3m1), and the undemonstrated-but-sound k10 drop in the n3 G8 charts.
+
+Promotion-safe theorem and the cheapest next residue (the `k10[0]=0` face, where the same fan reaches G11 with terminals `k10[1]·W_r`; then the genuinely open `ord_τ(d)=3` cell) are stated in the report's sections 11–12.

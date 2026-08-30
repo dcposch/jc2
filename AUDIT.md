@@ -5,6 +5,142 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **LOG-KODAIRA FIRST-LEG OBSTRUCTION — EXACT THEOREM PROMOTED;
+> AFFINE-LINEAR CUBIC APPLICATION STILL CONDITIONAL (2026-08-30 02:28Z).**
+> Sol producer `cc836852...` receives Opus hostile reconstruction
+> `662dd4f4...`, verdict `CONFIRM_WITH_CORRECTIONS`. Binding integration
+> `ff25ba27388c02698013483e2e5537f18ed39e918e5cb0cb4c099a75ef42f298`
+> (5,251-byte body `10fb58eb...`) promotes the corrected exact theorem.
+> If `Y` is an affine-line torsor over `P^1`, `R` is a closed section over
+> `P^1 minus S`, and `U=Y minus R`, then for every `n>=1`
+>
+> ```text
+> bar-P_n(U)=n*(#S-2)+1  if #S>=2,     and 0 if #S<=1.
+> ```
+>
+> Hence `bar-kappa(U)` is respectively `-infinity`, `0`, or `1` as
+> `#S<=1`, `#S=2`, or `#S>=3`, independently of contact multiplicities.
+> For `#S>=2`, logarithmic Kodaira monotonicity rules out every dominant
+> morphism `A^2->U`, with no properness, étaleness, or almost-surjectivity
+> assumption. The review supplies the missing local normalization of `phi`,
+> verifies the exceptional exponent `m_s-k-1`, and independently derives the
+> exact dimension by discrepancies. Application to affine-linear Miranda
+> cubics remains conditional on the separate `AL3-REDUCE` hostile review; no
+> nonlinear cubic, primitivity, block-existence, counterexample, or JC2 claim
+> follows. The first Fable review attempt is an evidentiary no-op: its frozen
+> prompt remained unchanged, but the process exited without a report at
+> 02:58Z after its response exceeded the 64,000-token output cap. Thus it
+> supplied neither confirmation nor refutation, and the application remains
+> review-gated pending a shorter bounded rerun. An earlier Grok launch also
+> supplied no model work: it returned HTTP 402 because the Grok Build balance
+> was exhausted, so its receipt is `UNAVAILABLE_NO_MODEL_WORK` rather than a
+> review.
+>
+> A sealed successor `367d8ffa...` (8,578-byte body `42aedb00...`) proposes
+> the exact residue-sequence formula
+> `bar-P_1=p_g+sum genus(D_i)+b1(Gamma_D)` when `q=0`, hence a
+> rational-forest boundary gate, and applies it to generic nonlinear Miranda
+> compactifications. It is `DIFFERENT-MODEL REVIEW REQUIRED`: the generic
+> quadratic infinity-genus-two and `d>=3` positive-`p_g` exclusions are not
+> promoted here.
+
+> **PROPER GALOIS BLOCK QUOTIENTS AND TWO-BLOCK SYSTEMS EXCLUDED
+> (2026-08-30 02:28Z).** Opus review
+> `e324c104d06ad9e987cfe304ee001e52a58d91eaba941b80c78555a058056df9`
+> confirms Sol producer `766a843a...` with corrections. Binding integration
+> `f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8`
+> (6,637-byte body `f3668b3e...`) promotes `BD-GAL`.
+>
+> For every proper intermediate field `K`, each prime divisor downstairs has
+> some generically unramified component upstairs, so divisorial inertia on
+> the `d2=[K:C(f,g)]` blocks fixes at least
+> `sum_(e_i=1) f_i>=1` blocks. Galois transitivity would make all
+> ramification indices above a prime equal, contradicting a nonempty branch
+> component. Thus `K/C(f,g)` is not Galois and `d2!=2`: there is no two-block
+> system. The free group on codimension-one components missed by the first
+> leg injects into `Cl(Y)`, and the relative dual/different is nonfree/
+> nonprincipal; the latter forbids a global complete-intersection
+> presentation but does not assert failure of local complete intersection.
+> This says nothing about block size `d1=2`, non-Galois `d2>=3`, primitive
+> monodromy, parity, a map, or JC2. A targeted source check `b75c56ad...`
+> confirms the full-extension Galois case is classical but makes no novelty
+> claim for the proper-intermediate theorem.
+
+> **K00 `e=2,m=2,h10=1` BOUNDARY — REVIEWED NONEMPTY THROUGH G11
+> (2026-08-30 02:37Z).** Fable independently reconstructs the enlarged
+> source, literal G11 rows, inherited tree, complete fresh-`n=5` fan, and
+> fixtures, returning `CONFIRM_WITH_CORRECTIONS`. Binding integration
+> `8ba031e87032a007beade2eda7f97f94802eac0bfa561addf90d8f5fb3df8307`
+> (3,793-byte body `74d1b341...`) promotes exact point-set nonemptiness of
+> `V(G0,...,G11)` on `k10[0]=0,k10[1]!=0,d[2]!=0`. Survivors are old
+> `n=4` rank one on both signs, fresh `n=5` rank two, and fresh `n=5` rank
+> one on the opposite wall; fresh rank zero and all deeper normal orders die.
+> This refutes a G11 closure of the face. The sealed G12 continuation remains
+> provisional: it kills the old branch but retains fresh rank-one/rank-two
+> fixtures. Finite-jet nonemptiness is not an arc, source point, attainment,
+> map, counterexample, or JC2 claim.
+
+> **GENERIC K00 `m=2` CELLS AT `e=2,3` — DIFFERENT-MODEL REVIEWED EMPTY
+> (2026-08-30 02:28Z).** Two Fable reconstructions
+> `4710349b...` and `347bf276...` confirm the Sol producers and replays.
+> Binding integration
+> `73e0b2031a2ecf846735c5dedcc7958e16277a8cdeab71740aa7f78cb95e3ca4`
+> (7,067-byte body `fd511b4e...`) promotes exactly
+>
+> ```text
+> V(G0,...,G10) intersect D(k10[0]) intersect D(d[2]) = empty  at e=2,
+> V(G0,...,G12) intersect D(k10[0]) intersect D(d[2]) = empty  at e=3,
+> ```
+>
+> where `D(d[2])` abbreviates the union of opens on the six leading source
+> coordinates and all registered C6/K10/source conventions remain in force.
+> Together with the prior `m=1` results, four cells `(2,1),(3,1),(2,2),(3,2)`
+> are reviewed empty at G7,G9,G10,G12. Their terminal grades happen to be
+> `2e+3m`, but transition maps differ and no recurrence is inferred. The
+> `k10[0]=0` faces survive separately; no source completeness, compatible
+> arc, actual map, or JC2 result follows.
+> The first attempted `e=3,m=2` Grok review returned HTTP 402 before model
+> work and is an evidentiary no-op; the successful Fable reconstruction is
+> the independent review used for promotion.
+
+> **PAIR-SQUARE CURVE LEMMAS PROMOTED; SURFACE CONDUCTOR OBJECT RETYPED BUT
+> UNPROMOTED (2026-08-30 02:28Z).** Opus review `f6a8d6e...` and binding
+> integration
+> `2dbb4e9652939a7954c82fd45c2afbdad03a784731b13de4afb77e157c26a5a6`
+> promote the diagonal-residual ramification identity, the pole length
+> `d-s`, support proportionality N2, and the canonical finite-inertia
+> surjection N3 with kernel dimension `2G-2+2s`. They also prove that the
+> curve-only transverse-subspace formulation is QCS itself and therefore
+> tautological, not a proof.
+>
+> The live successor is a surface pole-to-excess map. Sealed surface report
+> `c4adef36...` and same-model correction `f0a13d1...` keep it provisional:
+> the canonical normalization/conductor construction and abstract
+> augmentation/graph long exact sequences are sound candidates, but the
+> diagonal marking needs a scheme-theoretic definition and no conductor
+> stalk, event graph, dimension match, or marked-connectivity theorem exists.
+> Its Kummer example is only an isotrivial zero-vanishing control; affine
+> ramification at zero is not the physical pole at infinity. No QCS, PCB,
+> selector, map, counterexample, or JC2 conclusion is promoted.
+
+> **GENERAL K00 CALENDAR PROMOTED AT “CALENDAR ONLY” SCOPE
+> (2026-08-30 02:28Z).** Opus independently reconstructed the producer's
+> 569-tail source, sparse rows, graph substitution, Pareto antichains, exact-
+> graph degrees, ratio walls, and 3,812-byte certificate. Binding integration
+> `edfbc7d9e652dd6e0451e796f3b371b367cd30dc699917147578c92e084b5b6b`
+> (6,073-byte body `12d91699...`) promotes exact first-possible-arrival
+> calendars, with tangentiality stated wherever graph-normal branch formulas
+> require it. Custody is clean: every original/post-run hash matches its own
+> artifact; the human prompt and composed model prompt are distinct files.
+>
+> The theorem refutes only recurrence keyed on cone/rank alone and calendars
+> keyed on `m/e` alone. It does not prove that no richer finite transition
+> quotient exists. The corrected schedule puts `(4,1)` at G11 as the cheapest
+> untouched unit-ray cell, while K10 boundary cleanup begins earlier at
+> `(2,1),h10=1` G8 and `(3,1),h10=1` G10. Every grade is a possible-arrival
+> floor, not attainment; no cell, arc, map, or source-completeness result is
+> supplied by the meta theorem.
+
 > **INTERMEDIATE BLOCK DESCENT — ÉTALE-SANDWICH STRUCTURE PROMOTED;
 > CODIMENSION-ONE PRIMITIVITY ROUTE CLOSED (2026-08-30 00:47Z).** Fable
 > hostile review

@@ -14192,3 +14192,112 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Web clock remains `2026-08-30T03:40Z`; no broad sweep is due before then
   absent external news. Quiet ideation deadline remains
   `2026-08-30T12:35Z`. Holds/human gates: none.
+
+## 2026-08-30 02:28Z PROOF EVENT — NO TWO-BLOCK QUOTIENT; EXACT LOG FIRST-LEG THEOREM
+
+- Opus hostile review `e324c104...` confirms `BD-GAL` with corrections.
+  Binding integration `f9720718...`/body `f3668b3e...` promotes: every prime
+  divisor has an unramified block; no proper intermediate quotient is Galois;
+  hence `d2!=2`. The missed-boundary divisor lattice injects into `Cl(Y)` and
+  the different is nonprincipal. Block size `d1=2`, non-Galois higher
+  quotients, primitivity, and JC2 remain open.
+- Opus review `662dd4f4...` confirms and sharpens the log-Kodaira producer.
+  Integration `ff25ba27...`/body `10fb58eb...` promotes
+  `bar-P_n(U)=n*(#S-2)+1` for `#S>=2`, zero for `#S<=1`, and therefore no
+  dominant `A^2->U` when at least two section-collision fibres occur. The
+  affine-linear cubic conclusion still waits on Fable's independent
+  `AL3-REDUCE` review.
+- New sealed producer `367d8ffa...`/body `42aedb00...` derives the
+  rational-forest gate from residues and Serre duality. Provisional nonlinear
+  consequence: the generic quadratic-coefficient Miranda infinity curve has
+  genus two, generic SNC boundary has `bar-P_1=18`, and smooth coefficient
+  degree `d>=3` has `p_g=(d-1)(d-2)>0`. Different-model review is required;
+  degenerate quadratic infinity strata remain.
+
+## 2026-08-30 02:28Z K00 EVENT — FOUR UNIT CELLS REVIEWED; K10 BOUNDARY REACHES G13
+
+- Binding integration `73e0b203...`/body `fd511b4e...` promotes the Fable-
+  confirmed `e=2,m=2` G10 and `e=3,m=2` G12 exclusions, joining the prior
+  `(2,1)` G7 and `(3,1)` G9 cells. The shared terminal formula `2e+3m` is a
+  four-cell observation only.
+- On `e=2,m=2,h10=1`, Fable review `2fb86c41...` and binding integration
+  `8ba031e8...`/body `74d1b341...` promote G11 point-set nonemptiness.
+  Continuation `eda4f40b...`/replay `cc8d84f8...` provisionally kills the old
+  `n=4` rank-one branches by `G12_6=epsilon*i*q^3/32` but preserves fresh
+  `n=5` rank-two and both rank-one signs through G12. It establishes neither
+  an arc nor attainment. G13 is next after G12 review.
+- Opus independently reconstructs the general 569-tail possible-arrival
+  calendar. Integration `edfbc7d9...`/body `12d91699...` promotes the exact
+  calendar only, with tangentiality and non-attainment qualifiers; it does
+  not prove that no richer finite transition quotient exists. Receipt custody
+  is clean: each original/post-run hash pair matches its own artifact.
+
+## 2026-08-30 02:28Z PAIR-SQUARE AND SYSTEMS EVENT — SURFACE STALK RETYPED
+
+- Curve integration `2dbb4e96...` promotes N2/N3 and retires the abstract
+  transverse-subspace proof attempt as tautological. Surface report
+  `c4adef36...` plus same-model correction `f0a13d1...` identify the next
+  object as a scheme-theoretically marked normalization/conductor stalk and
+  generic-to-special cone. No conductor sheaf, event graph, dimension match,
+  connectivity, or QCS proof is yet constructed. The Kummer model is only a
+  persistent-event zero control; its affine ramification point and physical
+  pole are distinct.
+- Two external reviews made out-of-mandate observations about the excluded
+  nested worktree. Mathematical claims do not consume those observations.
+  An initial cross-type comparison of the calendar's human-prompt hash with
+  its composed-model-prompt hash was corrected; no mutation occurred. Once
+  current lanes close and the checkpoint is pushed, the adapter hardening
+  target remains an OS-level deny rule for the excluded path plus an immutable
+  prompt snapshot and focused regressions. No adapter is edited while a lane
+  is live.
+- Grok launches for the affine-linear cubic gate and the first `e=3,m=2`
+  review both returned HTTP 402 before model work because the Grok Build
+  balance was exhausted. Their prompt/log/receipt bundles are retained as
+  `UNAVAILABLE_NO_MODEL_WORK`; neither is evidence. Fable subsequently
+  supplied the successful `e=3,m=2` different-model review.
+
+## 2026-08-30 02:37Z LIVE STATE — ONE FABLE REVIEW BEFORE ATOMIC PUSH
+
+- Committed basis is `0d7544ebd5cb12def6bac892646010301098be3c` plus the
+  sealed current artifacts. The sole active mutating lane is Fable review of
+  `AL3-REDUCE`; an internal independent audit already confirms it with one
+  normality wording repair. The K10-boundary G11 theorem is promoted and its
+  G12 child is sealed provisional. No heavy job or AWS computation is active.
+- Promoted new claims: `BD-GAL`/no two-block quotient; exact two-section log
+  plurigenus/no dominant first leg; the two `m=2` generic K00 exclusions; and
+  the pair-square curve no-go lemmas; the exact general possible-arrival
+  calendar; and K10-boundary G11 nonemptiness. Conditional/provisional:
+  affine-linear cubic closure, K10-boundary G12, and the surface conductor
+  stalk.
+- Immediate queue: harvest the Fable cubic review; bind the cubic chain if and
+  only if `AL3-REDUCE` passes; retain G12 as provisional; verify all
+  seals and short replays; commit and push one scoped clean checkpoint. Then
+  harden adapters before later external lanes.
+- Web clock remains `2026-08-30T03:40Z`; quiet whole-portfolio deadline is
+  `2026-08-30T12:35Z` unless significant news fires sooner. Holds/human gates:
+  none.
+
+## 2026-08-30 03:00Z LIVE STATE — REVIEW LANE CLOSED; ATOMIC PUSH UNBLOCKED
+
+- The Fable `AL3-REDUCE` review ended at 02:58Z with exit code one and no
+  report because its response exceeded the 64,000-token output cap. The
+  prompt, adapter, validator, fallacy sheet, and composed-prompt hashes are
+  unchanged across the run. This is an operational failure, not a
+  confirmation, refutation, or gap verdict.
+- `AL3-REDUCE` and the affine-linear Miranda cubic application therefore stay
+  provisional. The reviewed log-plurigenus theorem remains promoted and
+  unchanged. A shorter, tightly bounded different-model rerun follows the
+  checkpoint; the internal normality correction is not itself sufficient for
+  promotion.
+- No external lane or heavy computation is active. Immediate queue: finish
+  scoped seal/replay/diff checks, commit and push the complete atomic batch,
+  then harden the adapters' excluded-path boundary before launching the
+  bounded rerun. AWS is idle/unclaimed; all heavy or uncertain CAS remains
+  AWS-only. The separately owned formalization is outside campaign control
+  and was not inspected, built, modified, or listed.
+- Grok remains unavailable through its current lane credentials; its two
+  newest launches returned HTTP 402 before model work. Do not count either as
+  an ideation or review contribution.
+- Web clock remains `2026-08-30T03:40Z`; quiet whole-portfolio deadline is
+  `2026-08-30T12:35Z` unless significant news fires sooner. Holds/human gates:
+  none.

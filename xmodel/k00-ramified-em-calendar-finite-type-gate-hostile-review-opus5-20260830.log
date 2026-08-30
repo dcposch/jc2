@@ -1,0 +1,21 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review written to `xmodel/k00-ramified-em-calendar-finite-type-gate-hostile-review-opus5-20260830.md` (36,440 bytes, one standalone `<!-- BODY-END -->`, no seal block).
+
+## Verdict: `CONFIRM_WITH_CORRECTIONS`
+
+**What holds.** I rebuilt the source independently — my own JSON parser, my own sparse `Q[d0..d5]` arithmetic, my own graph substitution, my own Pareto routine — and reproduced the 3812-byte certificate **byte-exactly** (`afb3979a…`). The 569 census, degree stencil (1.1)/(1.2), the whole §3 antichain table, the exact-graph surface degrees, (3.1)/(3.2), all six (4.1) tie equations, all five (4.2) congruences, the band thresholds with strict zero-endpoint exclusion, and the `(2,9)`/`(4,18)` countercontrol all check. §1's row structure is faithful to the frozen compiler line-by-line, and the raw calendar is corroborated by four artifacts outside the replay's code path. All four cell replays PASS.
+
+**Ten corrections, two material:**
+
+- **C1** — `NO_FINITE_TRANSITION_QUOTIENT_PROVED` in the charged certificate parses either as "not proved" (true, what the prose says) or "proved impossible" (unsupported). What is refuted is narrower: cone/rank-only and ratio-only recurrences.
+- **C8** — §8's priority ranking is wrong by its own metric. The `k10[0]=0` children reopen at `2e+h10+3m`: `e2m1` at **G8**, `e3m1` at **G10**, `e2m2` at G11. The report names only the most expensive. Also `(5,1)` ties `(2,3)` at G13, and `2≤h10<∞` is an omitted infinite face family.
+
+Three findings I think matter most for downstream producers:
+
+- **The tangentiality hypothesis is real and measurable.** The grade-`2m` locus is a **dimension-4** cone; the tangent plane is dimension 2. I give exact non-tangential witnesses (`d3=d4=0`, `{d0=4d2, d5=-16d1}`). §4 flags the conditional; §3 and §0 do not.
+- **The G11 retention list is incomplete.** At `n=2m` the bidegrees `(1,1)` and `(3,0)` tie, so the `A10` block is `DM4_r(ell)[w] + W_r(s,t)`, not the cubic alone — visible already in `e2m1`'s promoted erratum. `k10[2]` also reaches G11. Both the meta report and the Fable §12 sketch say "the same `W_r` cubics".
+- **`RATIO_SCALE` is a literal tautology** (`2*2+3*9 != 31`) that cannot fail. Of four advertised mutations only `SURFACE_16_TO_15` is live; I ran a 15-point graph-constant battery to fill the gap.
+
+Cheapest decisive successor: `(4,1)` through G11, with `e2m1,h10≥1` at G8 as cheaper non-decisive cleanup.
+
+Execution gaps I disclosed in the report: I did not re-derive the four cells' interior rank-fan charts (relied on the producers and the two Fable reviews). I ran no Singular or heavy CAS — one ~1s sympy Gröbner on six quadrics. I did not touch `jc2-lean` or run an unscoped `git status`; both targets still hash to their mandate values.
