@@ -5,6 +5,49 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **CUBIC `P1` RULING PROMOTED; AFFINE-BASE EQUALITY CASE REMAINS
+> (2026-08-30 15:10Z).** GPT-5.5 hostile review sealed full
+> `e544a654d3cead096658502f34b0e6e5560b4a0ea8bf97a53b2a76081aceda4d`
+> (raw body `b16c4bc1...`) and returns `CONFIRM_WITH_CORRECTIONS`. It confirms
+> the rank-three local-fibre argument, finite point-bijective map
+> `R_red->B_red`, analytic homeomorphism, Chau component normalization,
+> affine incidence forest, and `e_c(B)=b0(B)>=1`. The review prompt omitted
+> the promoted fixed-sheet packet and therefore correctly stated the Euler
+> closure conditionally. Binding integration
+> `8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d`
+> (body `0d77db42...`, manifest `28aa5eee...`) explicitly binds that already-
+> reviewed theorem and promotes `C=P1` impossible. The exact surviving cubic
+> conditions are `C=A1,b0(B)=1,S0=empty,Q=0`. No scheme isomorphism,
+> degree-at-least-four theorem, cubic-block exclusion, map, or JC2 result is
+> inferred.
+>
+> **D3 SECTIONED TWO-SUPPORT ROW HAS A RATIONAL GLOBAL CONTROL
+> (2026-08-30 15:10Z).** Exact provisional producer
+> `dcdfaabcdaf3d8c71111a207ea75ddcb8784cf8f164051df7b2cd54b8e51d4e7`
+> (body `6975f482...`, manifest `77b9188d...`) exhibits the integral normal
+> rational finite-flat class-`(3,3)` surface
+> `(x+t*z)^3+t*y^3+t*(t*x+z)^2*y=0`. It has exact level one at `t=1,-1` and
+> realizes `m=1,T=[1]+[-1],D=-F_1-F_(-1),rho>=12`. Each defect point is an
+> ordinary cone over a smooth cubic, so its blowup has an elliptic exceptional
+> curve. A separate residual ramification component is irreducible with
+> normalization genus three. Either gives a conditional rational-forest
+> contradiction when this projection is globally identified with the actual
+> proper-block second leg. This proves surface-level occurrence and a
+> control-specific exclusion, not family-wide row emptiness; different-model
+> review is pending.
+>
+> **CORRECTED LOCAL DEGREE-CAP CONTROL REVIEWED
+> (2026-08-30 15:10Z).** Opus hostile review sealed full
+> `d8fbc450c0a51164865f228ebd584667dc34c1e79d22f5a2998080637adfa505`
+> (raw body `0df3ee27...`) returns `CONFIRM_WITH_CORRECTIONS` and preserves
+> the exact raw-degree-three, normal, soluble level-two witness. It restores
+> the warning that the determinant-one shear raises the displayed raw degree,
+> restores the CFS citation and congruence, and retracts the superseded
+> root-counting/scaling method. It also finds that the embedded R1 replay
+> hand-entered its binary quartic; future regression code must derive that
+> input mechanically. These are provenance and replay repairs, not a revival
+> of the local no-go.
+
 > **D3 SECTIONED ONE-SUPPORT ROW HAS A RATIONAL GLOBAL SURVIVOR
 > (2026-08-30 14:52Z).** Exact provisional producer
 > `0178cb0c23c2bb50bc436b5ee6f41b8935a09cf0ca5f68fc3c5fde1d7da6b9d4`
@@ -53,8 +96,8 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > degree-three cap, the complete admissible-pair menu, and the exact-level
 > upper gate do not imply local emptiness. The earlier sealed draft
 > `82f930ff...` lost the coefficient `t` on `Z^3`; its `I_0*` label and all
-> conflicting valuations are retracted, and only R1 may be consumed. Global
-> The global occurrence and its specific proper-block interface are resolved
+> conflicting valuations are retracted, and only R1 may be consumed. The
+> global occurrence and its specific proper-block interface are resolved
 > only by the later `0178cb0c...` control above; no map or JC2 conclusion
 > follows.
 

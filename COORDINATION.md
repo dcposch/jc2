@@ -1551,3 +1551,31 @@ with actual discriminant topology, `S0`, `Q`, or a first-leg sheet-loss upper
 bound. Reviews remain asynchronous. No heavy local CAS is licensed; AWS is
 idle and mandatory if the frozen orbit computation grows beyond desk scale.
 Web backstop remains `2026-08-31T03:40Z`; holds/human gates: none.
+
+Allocation refresh (2026-08-30 15:10Z): GPT-5.5's cubic one-place hostile
+review passed receipt-first custody and returns `CONFIRM_WITH_CORRECTIONS`.
+Binding integration `8ccb92fd...`/body `0d77db42...`, manifest
+`28aa5eee...`, supplies the omitted but already-promoted fixed-sheet
+dependency and promotes the proper-cubic `C=P1` ruling empty. Continue only
+the affine equality case `C=A1,b0(B)=1,S0=empty,Q=0`; keep target conductor,
+unramified block sheets, and original source sheets distinct. Rank-four
+`(2,2)` remains outside the theorem.
+
+Exact two-support split control `dcdfabcd...`/body `6975f482...`, manifest
+`77b9188d...`, realizes the remaining sectioned Hodge row on a normal
+rational finite-flat class-`(3,3)` surface. This control is conditionally
+excluded from the actual morphic interface twice: elliptic exceptional curves
+at both defect points and a genus-three residual ramification normalization.
+Launch different-model review without blocking family-wide work. Both
+sectioned rows now have abstract surface controls, so stop surface-
+nonexistence and raw-degree local-cap strategies; seek a universal complete-
+boundary obstruction instead.
+
+Opus confirms the corrected one-support local counter-control. Adopt its
+documentation repairs and require future replay to derive the binary quartic
+from the ternary cubic rather than hand-enter it. The active research split is
+now affine-cubic Picard/multiple-fibre/Kummer structure, sectioned family-wide
+ramification, and the surviving presentation/nonquadratic degeneracies.
+Current work is desk-scale; AWS is idle and mandatory for any growing CAS
+job. Reviews remain asynchronous. Web backstop remains
+`2026-08-31T03:40Z`; holds/human gates: none.

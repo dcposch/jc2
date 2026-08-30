@@ -15029,3 +15029,60 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   actual proper-block second leg, whose etale first leg would miss the
   complete positive-genus curve. The surface row nevertheless exists; the
   global-identification premise is essential and review is pending.
+
+## 2026-08-30 15:10Z REVIEW/PROMOTION EVENT — CUBIC `P1` RULING CLOSED
+
+- GPT-5.5's hostile review passed receipt-first custody and is sealed full
+  `e544a654...`/raw body `b16c4bc1...`. It independently confirms the
+  rank-three fibre criterion, point-bijective ramification-to-branch map,
+  analytic homeomorphism, Chau normalization transfer, source incidence
+  forest, and Euler arithmetic.
+- The review correctly flags that its prompt omitted the fixed-sheet theorem.
+  That theorem was already promoted after separate Opus review: every target
+  prime divisor has a generically unramified component, so `S0` is finite.
+  Binding integration `8ccb92fd...`/body `0d77db42...`, manifest
+  `28aa5eee...`, closes the dependency and promotes `C=P1` impossible.
+- The sole proper-cubic ruling survivor is now
+  `C=A1,b0(B)=1,S0=empty,Q=0`. This is not cubic-block nonexistence. The next
+  attack uses the unique affine ruling, its multiple fibres and Picard group,
+  and the rank-three unramified companion over the connected branch.
+
+## 2026-08-30 15:10Z PROOF EVENT — SECTIONED TWO-SUPPORT SPLIT CONTROL
+
+- Exact packet `dcdfabcd...`/body `6975f482...`, manifest `77b9188d...`,
+  splits the two reverse `(1,1)` moves at `t=1,-1` and gives the raw-degree-
+  three surface
+  `F=(x+t*z)^3+t*y^3+t*(t*x+z)^2*y`. Root reproduced the reverse identity,
+  coefficient expansion, finite-flat gate, full singularity classification,
+  tangent-cone smoothness, residual resultant, Newton polygon, boundary node,
+  and absolute irreducibility.
+- The surface is integral normal and rational, with exact Hodge row
+  `m=1,T=[1]+[-1],D=-F_1-F_(-1)`. Its two defect singularities each expose a
+  smooth elliptic curve after one blowup. Independently, its residual complete
+  ramification normalization has genus three.
+- This is a sharp positive control for abstract sectioned-row occurrence and
+  a negative control for the actual morphic block interface. A different-
+  model hostile review is the promotion gate; family-wide sectioned
+  ramification/topology remains open.
+
+## 2026-08-30 15:10Z LIVE STATE — AFFINE CUBIC AND SECTIONED FAMILY ARE THE D3 FRONTS
+
+- **Promoted:** both Halphen rows are empty in the actual normal morphic
+  proper-block scope; the proper cubic `P1` ruling is empty; fixed quadratic
+  q=6 and every singular-F5 q=8 cell are empty in their charged scopes.
+- **Provisional:** the one-support sectioned control realizes `T=2t` and
+  fails its specific block interface at genus-two ramification; the new two-
+  support control realizes `T=t1+t2` and fails through elliptic exceptional
+  curves and genus-three ramification. Fable reviews the former; a different
+  model will review the latter.
+- **Active mathematical successors:** derive a family-wide forbidden-boundary
+  theorem for sectioned occurrences; exploit the affine cubic equalities via
+  Picard/multiple-fibre/Kummer constraints and local rank-three splitting;
+  preserve the presentation-selector and nonquadratic/nonfinite degeneracy
+  fronts outside the fixed quadratic closures.
+- **Review discipline:** the Opus local-countercontrol and GPT-5.5 cubic
+  reviews are banked in pushed custody commit `4607fefa`; downstream work did
+  not wait for them. Reviews remain background gates, not research barriers.
+- **Compute:** current work is desk-scale and AWS is idle. Any growing
+  elimination, orbit, or family computation moves to AWS before launch.
+  Broad web backstop remains `2026-08-31T03:40Z`; holds/human gates: none.

@@ -7,6 +7,44 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 15:10Z — cubic `P1` ruling promoted; both sectioned rows attained by controls)
+
+- **Stop the complete-base branch of every proper cubic block.** GPT-5.5's
+  receipt-first hostile review sealed full `e544a654...`/raw body
+  `b16c4bc1...` confirms the rank-three topology bridge, Chau normalization,
+  source-incidence forest, and Euler arithmetic. Binding integration
+  `8ccb92fd...`/body `0d77db42...`, manifest `28aa5eee...`, explicitly adds
+  the already-promoted fixed-sheet theorem omitted from the review charge and
+  promotes `C=P1` empty. The only cubic ruling survivor has `C=A1`,
+  `b0(B)=1`, `S0=empty`, and `Q=0`. Concentrate cubic-block work on that
+  affine pseudo-plane shape; do not generalize through the rank-four `(2,2)`
+  conductor escape.
+- **Treat the sectioned two-support row as a provisional surface control and
+  actual-block negative control.** Exact split packet `dcdfabcd...`/body
+  `6975f482...`, manifest `77b9188d...`, gives the normal rational finite-
+  flat surface
+  `(x+t*z)^3+t*y^3+t*(t*x+z)^2*y=0`. It realizes
+  `m=1,T=[1]+[-1],D=-F_1-F_(-1)`. Each level-one singularity exposes a smooth
+  elliptic exceptional curve, and an independent residual ramification
+  component has normalization genus three. Thus this surface cannot be an
+  actual morphic proper-block second leg. Different-model review remains
+  mandatory before family-level promotion.
+- **Do not try to eliminate either sectioned Hodge row by abstract surface
+  nonexistence.** Both numerical rows now have exact rational class-`(3,3)`
+  controls. The one-support control survives every local topology gate and
+  fails at genus-two ramification; the two-support control already fails
+  locally through elliptic exceptional curves and globally through genus-
+  three ramification. The live universal question is whether every actual
+  sectioned proper-block occurrence must acquire forbidden complete boundary
+  topology. Run that family-wide attack beside the affine-base cubic
+  discriminator, with reviews nonblocking.
+- **Bank the local counter-control review and stop local-cap repair work.**
+  Opus returns `CONFIRM_WITH_CORRECTIONS` (sealed full `d8fbc450...`/raw body
+  `0df3ee27...`). It preserves the exact level-two witness and identifies
+  only documentation/replay weaknesses plus global facts already proved in
+  the later one-support packet. Future replay must derive the quartic from
+  the ternary model rather than hand-entering it.
+
 ## Superseding strategy overlay (2026-08-30 14:52Z — one-point Halphen promoted; sectioned global survivor found)
 
 - **Stop the reviewed one-point Halphen row.** Fable's receipt-first rereview
