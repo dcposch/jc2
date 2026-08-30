@@ -1379,6 +1379,34 @@ target finite-flatness, total singularities, ramification and actual morphic
 boundary interface. Keep independent review nonblocking. The proper-block
 Euler discriminator continues in parallel; no heavy local CAS is licensed.
 
+Promotion refresh (2026-08-30 14:50Z): Fable's compact one-point Halphen
+rereview passed receipt-first custody and returns `CONFIRM_WITH_CORRECTIONS`.
+Binding integration `30bd357a...`/body `c3104d39...`, manifest
+`2c71b946...`, promotes `m=3,T=2t0` empty only in the actual normal morphic
+proper-block scope. Stop that row; its controls remain regression fixtures.
+
+Exact provisional cubic Euler producer `8b457a75...`/body `02cd6f89...`,
+manifest `f9814956...`, proves the rank-three-only bridge
+`e_c(B)=e_c(R)=b0(B)>=1` by finite point-bijectivity, one-place component
+normalizations and the morphic source-boundary forest. This excludes the
+complete-base `P1` ruling and forces the affine-base equalities
+`b0(B)=1,S0=empty,Q=0`, pending different-model hostile review. Do not
+generalize to `d2>=4`, where a `(2,2)` fibre permits target conductor
+identifications. Continue the sectioned global control and affine-base cubic
+discriminator asynchronously.
+
+Allocation refresh (2026-08-30 14:52Z): the one-support local survivor
+globalizes. Exact provisional control `0178cb0c...`/body `cc637873...`,
+manifest `f7cba663...`, is an integral normal rational finite-flat
+class-`(3,3)` surface in the exact `m=1,T=2t,D=-2F` row. Its level-two
+exceptional boundary is a rational tree, so stop all local degree/additive/
+forest-shape impossibility work on this row. Its residual ramification has
+normalization genus two and conditionally excludes only this globally
+identified projection from being the actual second leg. Launch different-
+model review nonblockingly. The next universal discriminator is complete
+ramification topology across the sectioned family, in parallel with the
+other sectioned row and the reviewed affine-base cubic Euler equalities.
+
 Allocation refresh (2026-08-30 08:33Z): GPT-5.5 xhigh closes the
 Miyanishi--Sugie/Euler audit with `CONFIRM_WITH_CORRECTIONS` and no
 mathematical gap. Binding integration `f092a715...` promotes a direct

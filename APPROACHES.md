@@ -7,6 +7,40 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 14:52Z — one-point Halphen promoted; sectioned global survivor found)
+
+- **Stop the reviewed one-point Halphen row.** Fable's receipt-first rereview
+  returns `CONFIRM_WITH_CORRECTIONS`; binding integration
+  `30bd357a...`/body `c3104d39...`, manifest `2c71b946...`, promotes
+  `m=3,T=2t0` empty only in the actual normal morphic proper-block scope.
+  The complete `(5,4,3)` face always extracts a genus-one curve or a nodal
+  rational curve with a resolved cycle. The review adds the missing Hesse
+  `w=0` smoothness line and narrows the replay's role without changing the
+  theorem. Do not spend more CFS, weighted-face, or global-control work merely
+  to close this row.
+- **Treat the complete-base cubic ruling as provisionally closed.** Exact
+  producer `8b457a75...`/body `02cd6f89...`, manifest `f9814956...`, uses
+  rank-three fibre length to make `R_red->B_red` finite point-bijective, then
+  Chau's polynomial parametrization and the morphic boundary forest to prove
+  `e_c(B)=b0(B)>=1`. This contradicts the `C=P1` Euler equation. On `C=A1`
+  it forces `b0(B)=1`, `S0=empty`, and `Q=0`. Keep this result provisional
+  until different-model hostile review; the degree-four `(2,2)` escape is
+  explicitly outside scope.
+- **Promote the one-support model to a provisional global positive control.**
+  Exact packet `0178cb0c...`/body `cc637873...`, manifest `f7cba663...`,
+  proves that its natural class-`(3,3)` closure is integral normal, rational,
+  and finite flat of target degree three. It genuinely realizes
+  `m=1,T=2t,D=-2F`, and its level-two point has a rational-tree resolution;
+  local raw-degree, additive-type, normality, and forest-shape closures are
+  therefore false. A residual ramification component has normalization genus
+  two, so this specific projection cannot be an actual proper-block second
+  leg. Different-model review remains required.
+- **Attack the two sectioned rows at the global interface.** For the
+  one-support family, seek a universal positive-genus/cycle theorem for the
+  complete ramification support, not another local no-go. Keep the other
+  sectioned row and presentation-selector work live. Reviews stay
+  asynchronous; growing computation moves to AWS.
+
 ## Superseding strategy overlay (2026-08-30 14:37Z — local degree-cap no-go refuted)
 
 - **Stop trying to close `m=1,T=2t` from the local raw degree cap.** Corrected

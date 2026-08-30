@@ -7,6 +7,46 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **ONE-POINT HALPHEN ROW PROMOTED EMPTY IN THE ACTUAL-MORPHIC SCOPE
+> (14:50Z).** Fable's compact rereview passed full receipt-first custody and
+> returns `CONFIRM_WITH_CORRECTIONS` (sealed full `5ac604b9...`, raw body
+> `ae5c2545...`, run `8f4e419c...`). Binding integration
+> `30bd357a...`/body `c3104d39...`, manifest `2c71b946...`, adopts the five
+> prior corrigendum repairs, adds the Hesse `w=0` smoothness check, and
+> promotes `m=3,T=2t0` empty conditional on actual normal locally finite
+> proper-block incidence and the everywhere-defined etale first leg. Every
+> survivor extracts either a genus-one boundary curve or an irreducible nodal
+> rational curve with a persistent resolution cycle. Stop this row. No
+> abstract surface, global occurrence, block, map, or JC2 conclusion follows.
+>
+> **CUBIC COMPLETE-BASE RULING PROVISIONALLY EXCLUDED (14:50Z).** Exact
+> producer `8b457a75...`/body `02cd6f89...`, manifest `f9814956...`, closes
+> the missing sign in the Euler ledger. Rank three forces the reduced source
+> ramification to map finite point-bijectively, hence homeomorphically, onto
+> the reduced target branch. Chau's component parametrization gives affine-
+> line normalizations, and the actual morphic SNC boundary forest gives
+> `e_c(B)=e_c(R)=b0(B)>=1`. Thus `C=P1` is impossible. The surviving `C=A1`
+> equation uniquely forces `b0(B)=1`, `S0=empty`, `Q=0`, so the branch is
+> connected, every target has an unramified block sheet, and every reduced
+> ruling fibre is one `A1`. This is exact but review-gated; no claim is made
+> for degree at least four, where `(2,2)` defeats point-bijectivity.
+>
+> **SECTIONED ONE-SUPPORT GLOBAL SURFACE EXISTS; THIS CONTROL FAILS ONLY AT
+> RAMIFICATION (14:52Z).** Exact packet `0178cb0c...`/body `cc637873...`,
+> manifest `f7cba663...`, proves that
+> `(Sx+Tz)^3+S^2*T*y^3+T^3*x^2*y=0` is an integral normal rational
+> class-`(3,3)` surface finite flat of degree three over `P2`. Its only
+> singularities are the exact-level-two point and one `A2`; the minimal
+> sectioned fibration has fibres `IV*+IV`, and the Hodge theorem places it
+> exactly in `m=1,T=2t,D=-2F`. The level-two weighted exceptional divisor is
+> a rational central curve with four rational-chain arms, so the local
+> rational-tree gate also survives. However, the residual ramification curve
+> is birational to `9q^7+9tq^4+4t^5=0` and has normalization genus two.
+> Hence this specific global projection is conditionally excluded as an
+> actual proper-block second leg, but the sectioned surface row is genuinely
+> attained. Universal work must now control ramification across the family;
+> review remains pending.
+
 > **THE RAW-DEGREE-THREE LOCAL NO-GO IS FALSE (14:37Z).** Corrected exact
 > counter-control `13677719...`/body `4e0c58a...`, manifest `71e17cac...`,
 > exhibits

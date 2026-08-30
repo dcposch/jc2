@@ -14979,3 +14979,53 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   impossibility search. Audit the natural global class-`(3,3)` homogenization
   and actual block/boundary interface next; no global occurrence, map, or JC2
   conclusion is imported.
+
+## 2026-08-30 14:50Z REVIEW/PROMOTION EVENT — ONE-POINT HALPHEN ROW CLOSED
+
+- Fable's compact rereview exited zero and passed full receipt-first hash
+  reproduction. Sealed full `5ac604b9...`, raw body `ae5c2545...`, run
+  `8f4e419c...`, verdict `CONFIRM_WITH_CORRECTIONS`.
+- Binding integration `30bd357a...`/body `c3104d39...`, manifest
+  `2c71b946...`, adopts all corrigendum firewalls, adds the missing Hesse
+  `w=0` smoothness check, and promotes `m=3,T=2t0` empty exactly when the
+  normal locally finite germ is an actual proper-block incidence under the
+  everywhere-defined etale first leg. Stop this row; no abstract surface or
+  JC2 conclusion is imported.
+
+## 2026-08-30 14:50Z PROOF EVENT — CUBIC PROJECTIVE RULING PROVISIONALLY CLOSED
+
+- Exact packet `8b457a75...`/body `02cd6f89...`, manifest `f9814956...`,
+  observes that a length-three finite-flat fibre cannot contain two non-etale
+  points. Therefore `R_red->B_red` is finite point-bijective and a complex
+  analytic homeomorphism, not necessarily a scheme isomorphism.
+- Every `B` component is an entire component of the Keller nonproper-value
+  curve and has normalization `A1` by Chau's theorem. The affine incidence
+  multigraph of `R` is a minor/subdivision of the actual morphic SNC boundary
+  forest. Normalization additivity gives
+  `e_c(B)=e_c(R)=b0(B)>=1`.
+- The cubic Euler equation now excludes `C=P1`. On `C=A1` it uniquely forces
+  `b0(B)=1,S0=empty,Q=0`: connected branch/ramification support, an
+  unramified block sheet over every target point, and one reduced `A1` in
+  every ruling fibre. This remains review-gated and is false as a generic
+  transfer in degree at least four because `(2,2)` permits two ramification
+  points over one value.
+
+## 2026-08-30 14:52Z PROOF EVENT — SECTIONED GLOBAL SURVIVOR AND GENUS-TWO RAMIFICATION
+
+- Packet `0178cb0c...`/body `cc637873...`, manifest `f7cba663...`, proves
+  that the homogenized local survivor is an integral normal rational
+  class-`(3,3)` surface finite flat of target degree three. Its only total
+  singularities are the exact-level-two point and one `A2`; the sectioned
+  minimal fibration has fibres `IV*` and `IV`, so the binding Hodge theorem
+  identifies the exact `m=1,T=2t,D=-2F` row.
+- Weights `(7,6,3)` extract
+  `X^3+t*y^3+t^5*y` at the level-two point. Its central normalization is
+  `P1`; quotient resolution attaches four rational bamboos. Thus the local
+  exceptional graph is a tree even though the singularity has `p_g=2`.
+- The residual source ramification is birational to
+  `9q^7+9tq^4+4t^5=0`, equivalently
+  `a^4(3-2a)^3=-12t^8`. Riemann--Hurwitz and the Newton polygon independently
+  give genus two. Therefore this specific global projection cannot be the
+  actual proper-block second leg, whose etale first leg would miss the
+  complete positive-genus curve. The surface row nevertheless exists; the
+  global-identification premise is essential and review is pending.

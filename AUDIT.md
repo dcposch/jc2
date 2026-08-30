@@ -5,6 +5,40 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **D3 SECTIONED ONE-SUPPORT ROW HAS A RATIONAL GLOBAL SURVIVOR
+> (2026-08-30 14:52Z).** Exact provisional producer
+> `0178cb0c23c2bb50bc436b5ee6f41b8935a09cf0ca5f68fc3c5fde1d7da6b9d4`
+> (body `cc637873...`, manifest `f7cba663...`) globalizes the corrected local
+> model to the integral normal rational class-`(3,3)` surface
+> `(Sx+Tz)^3+S^2*T*y^3+T^3*x^2*y=0`, finite flat of target degree three.
+> Its sectioned minimal model has `IV*+IV`; the binding Hodge theorem puts it
+> exactly in `m=1,T=2t,D=-2F`. The level-two singularity has a rational-tree
+> weighted resolution despite local geometric genus two. Thus the prior
+> local degree/additive/forest attack is not merely incomplete but false.
+> The residual source ramification is an irreducible genus-two curve, giving
+> a conditional exclusion of this specific projection only after global
+> identification with the proper-block second leg. This is a positive
+> surface-level occurrence and a block-interface negative control, not a map
+> or JC2 counterexample; independent review is pending.
+
+> **D3 ONE-POINT HALPHEN ROW PROMOTED; CUBIC `P1` RULING PROVISIONALLY
+> CLOSED (2026-08-30 14:50Z).** Fable rereview sealed full `5ac604b9...`/raw
+> body `ae5c2545...` returns `CONFIRM_WITH_CORRECTIONS`. Binding integration
+> `30bd357a7a2dfb8ecbc507ae1159f2b71faa76d6d878312fff1b2ed87ac11dbc`
+> (body `c3104d39...`, manifest `2c71b946...`) promotes the complete
+> `(5,4,3)` weighted obstruction and empties `m=3,T=2t0` only at actual
+> normal morphic proper-block occurrence. It adopts every prior corrigendum,
+> adds the Hesse infinity check, and does not infer abstract surface
+> nonexistence or global attainment. Separately, exact provisional producer
+> `8b457a752434ac0c7cb6a2a83dd680b4a66dbe3631ab761c43dc789965ff2d2d`
+> (body `02cd6f89...`, manifest `f9814956...`) proves for a proper cubic block
+> that `R_red->B_red` is finite point-bijective. Combined with Chau's
+> polynomial parametrization of nonproper-value components and the source
+> morphic boundary forest, this gives `e_c(B)=b0(B)>=1`. Hence the `C=P1`
+> Euler branch is provisionally empty, while `C=A1` forces exactly
+> `b0(B)=1,S0=empty,Q=0`. Different-model review is still mandatory; the
+> theorem does not cover degree four or higher.
+
 > **CORRECTION: THE D3 SECTIONED RAW-DEGREE-THREE LOCAL NO-GO IS FALSE
 > (2026-08-30 14:37Z).** Corrected sealed producer
 > `13677719b809be352f59b41ca3f2eb54e50a61a1225431f2fa3151aafdc38879d`
@@ -20,8 +54,9 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 > upper gate do not imply local emptiness. The earlier sealed draft
 > `82f930ff...` lost the coefficient `t` on `Z^3`; its `I_0*` label and all
 > conflicting valuations are retracted, and only R1 may be consumed. Global
-> class-`(3,3)` occurrence and the actual proper-block interface remain open;
-> no map or JC2 conclusion follows.
+> The global occurrence and its specific proper-block interface are resolved
+> only by the later `0178cb0c...` control above; no map or JC2 conclusion
+> follows.
 
 > **CORRECTION: RATIONAL-FOREST REQUIRES AN EVERYWHERE-DEFINED MORPHISM
 > (2026-08-30 13:31Z).** The strengthening in integration `6a8558e42...`
