@@ -14672,3 +14672,24 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   and a deliberate wrong `D5` contact vector fails in all three. The analytic
   mathematics is unchanged; future optimized-mode evidence must include the
   same nonvacuity gate.
+
+## 2026-08-30 10:19Z PROOF EVENT — ALL SINGULAR-F5 q=8 ROWS PROVISIONALLY EMPTY
+
+- Transactional global packet `5a31a2ab...`/body `cf89570a...`, manifest
+  `4f7e3341...`, combines the binding balanced polar theorem with the newly
+  frozen unbalanced vectors. It eliminates `B5/A4`, `B6/A5`, `U5/D5`, and
+  `U6/D6` in a relaxed `F2` nine-blowup lattice. Together with the binding
+  Euler deaths of `B7/A6`, `B8/A7`, and `B9/A8`, this provisionally empties
+  the entire q=8 singular-F5 table. Only q=6 `B3/A2` and `U3/A3` remain in
+  the reduced finite normal-singular F5 cell.
+- The proof is closed-form: exact total multiplicity vectors force
+  `sum_(i<j) C_i.C_j>0` in the baseline, sole-contracted-carrier, and sole
+  affine-`A1` cells, while the rational forest requires every pair to be
+  disjoint. The relaxed enumeration only corroborates it. Root independently
+  checked all formulas, all 24 `Z` classes, both affine-root orbits and the
+  coefficient-two edge case; replay `ef689257...` has zero AST asserts and
+  identical ordinary/`-O`/`-OO` digest `dcfbe164...`.
+- Lifecycle remains provisional. A combined different-model hostile review
+  of the full-family local theorem, physical site markings, Euler exhaustion,
+  global class reconstruction, and intersection gate is the immediate review
+  client. q=6 work proceeds in parallel.
