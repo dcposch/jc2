@@ -1367,6 +1367,18 @@ until excluded. No heavy local computation is licensed; AWS remains idle and
 is mandatory only if a reviewed decorated enumeration exceeds desk scale.
 Web backstop remains `2026-08-31T03:40Z`; holds/human gates: none.
 
+Allocation refresh (2026-08-30 14:37Z): abandon the proposed local
+raw-degree-three impossibility for the sectioned one-support row. Corrected
+counter-control `13677719...`/body `4e0c58a...`, manifest `71e17cac...`, has
+normal soluble exact level two within the literal cap; two `(1,1)` drops lead
+to minimal type `IV*`, with original `(v(c6),v(Disc))=(16,32)`. R1
+mandatorily supersedes the initial `82f930ff...` draft, whose missing factor
+of `t` caused the retracted `I_0*` label but did not invalidate the witness.
+Shift this lane immediately to the global class-`(3,3)` homogenization,
+target finite-flatness, total singularities, ramification and actual morphic
+boundary interface. Keep independent review nonblocking. The proper-block
+Euler discriminator continues in parallel; no heavy local CAS is licensed.
+
 Allocation refresh (2026-08-30 08:33Z): GPT-5.5 xhigh closes the
 Miyanishi--Sugie/Euler audit with `CONFIRM_WITH_CORRECTIONS` and no
 mathematical gap. Binding integration `f092a715...` promotes a direct

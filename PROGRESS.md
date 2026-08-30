@@ -7,6 +7,21 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **THE RAW-DEGREE-THREE LOCAL NO-GO IS FALSE (14:37Z).** Corrected exact
+> counter-control `13677719...`/body `4e0c58a...`, manifest `71e17cac...`,
+> exhibits
+> `Phi=(x+t*z)^3+t*y^3+t^3*x^2*y`. It has literal raw `t`-degree at most
+> three, point `[-t:0:1]`, smooth generic cubic, and an integral normal total
+> surface. After the integral shear `X=x+t*z`, two legal `(1,1)` CFS drops
+> reach `V^2=U^3-t^4`, a minimal `IV*` model. Hence `Phi` has exact level two,
+> `v(c6)=16<18`, and `v(Disc)=32`. The first sealed draft `82f930ff...`
+> accidentally omitted one factor of `t`; R1 retracts its `I_0*` label and
+> `(3,6)` terminal valuations. The proposed local coefficient-degree closure
+> is therefore abandoned. This is a local counter-control, not a global
+> class-`(3,3)` occurrence, proper block, polynomial map, or JC2
+> counterexample. The next gate is its global homogenization and actual
+> ramification/boundary interface; different-model review runs nonblockingly.
+
 > **TWO-SUPPORT HALPHEN ROW PROMOTED EMPTY IN THE ACTUAL-MORPHIC SCOPE
 > (14:19Z).** GPT-5.5 hostile review sealed full `3d761eb5...`/raw body
 > `ee566031...` returns `CONFIRM_WITH_CORRECTIONS` after independently

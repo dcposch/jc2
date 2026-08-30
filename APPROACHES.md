@@ -7,6 +7,29 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 14:37Z — local degree-cap no-go refuted)
+
+- **Stop trying to close `m=1,T=2t` from the local raw degree cap.** Corrected
+  counter-control `13677719...`/body `4e0c58a...`, manifest `71e17cac...`,
+  gives
+  `Phi=(x+t*z)^3+t*y^3+t^3*x^2*y`: its raw coefficients have `t`-degree at
+  most three, its total surface over `C[[t]]` is integral normal, its generic
+  cubic is smooth and soluble, and two admissible `(1,1)` CFS drops lead to a
+  minimal `IV*` model. Thus its exact level is two, with
+  `v(c6)=16<18` and `v(Disc)=32`. The initially sealed draft
+  `82f930ff...` dropped one factor of `t`; its `I_0*` label and valuations are
+  retracted in full by R1, while the counterexample itself survives.
+- **Move the sectioned one-support front from local existence to global
+  incidence.** Audit the natural class-`(3,3)` homogenization for finite
+  target projection, global integrality and normality, rationality, complete
+  ramification, resolved boundary topology, and compatibility with an actual
+  proper block. A global surface control is not a block, and a local model is
+  not a map. Keep the other sectioned row and presentation-selector work live.
+- **Review asynchronously.** The R1 counter-control is exact but provisional
+  pending different-model review. Continue the Euler discriminator and the
+  compact Fable Halphen rereview in parallel; neither blocks global work.
+  Growing symbolic elimination remains AWS-only.
+
 ## Superseding strategy overlay (2026-08-30 14:19Z — second Halphen row promoted; sectioned threat map frozen)
 
 - **Stop the reviewed two-support Halphen row.** GPT-5.5 independently

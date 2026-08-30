@@ -14960,3 +14960,22 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - The next targets are the actual cubic branch Euler number, the missing-point
   set and ruling excess, or an upper bound below `2*d1-1` on first-leg
   sheet-loss. No heavy local computation is active.
+
+## 2026-08-30 14:37Z CORRECTION/PROOF EVENT — LOCAL DEGREE-CAP NO-GO REFUTED
+
+- Corrected packet `13677719...`/body `4e0c58a...`, manifest `71e17cac...`,
+  exhibits the raw-degree-three model
+  `Phi=(x+t*z)^3+t*y^3+t^3*x^2*y`. It is primitive, generically smooth and
+  soluble, and its total surface over `C[[t]]` is integral normal with one
+  isolated closed-fibre singularity.
+- After `X=x+t*z`, two exact admissible `(1,1)` transformations end at
+  `W^2=-tZ(X^3+tZ^3)`, or `V^2=U^3-t^4`. The terminal fibre is minimal
+  `IV*`, with `(v(c6),v(Disc))=(4,8)`; the intermediate and original pairs
+  are `(10,20)` and `(16,32)`. Thus the original model has exact CFS level
+  two and passes `v(c6)<18` inside the literal coefficient cap.
+- Root verification caught a dropped factor of `t` in the first sealed draft
+  `82f930ff...` before promotion. R1 retracts its `I_0*` label and valuations
+  while preserving the counterexample. Stop the five-orbit local
+  impossibility search. Audit the natural global class-`(3,3)` homogenization
+  and actual block/boundary interface next; no global occurrence, map, or JC2
+  conclusion is imported.

@@ -5,6 +5,24 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **CORRECTION: THE D3 SECTIONED RAW-DEGREE-THREE LOCAL NO-GO IS FALSE
+> (2026-08-30 14:37Z).** Corrected sealed producer
+> `13677719b809be352f59b41ca3f2eb54e50a61a1225431f2fa3151aafdc38879d`
+> (body `4e0c58a3...`, manifest `71e17cac...`) proves that
+> `Phi=(x+t*z)^3+t*y^3+t^3*x^2*y` is primitive of raw `t`-degree at most
+> three, soluble, generically smooth, and integral normal over `C[[t]]`.
+> After the determinant-one shear `X=x+t*z`, two admissible `(1,1)` moves
+> give a minimal binary-quartic/Jacobian model
+> `W^2=-tZ(X^3+tZ^3)`, equivalently `V^2=U^3-t^4`. Its terminal fibre is
+> `IV*`, with `(v(c6),v(Disc))=(4,8)`; reversing the moves gives
+> `(16,32)` and exact CFS level two. Thus normality, solubility, the raw
+> degree-three cap, the complete admissible-pair menu, and the exact-level
+> upper gate do not imply local emptiness. The earlier sealed draft
+> `82f930ff...` lost the coefficient `t` on `Z^3`; its `I_0*` label and all
+> conflicting valuations are retracted, and only R1 may be consumed. Global
+> class-`(3,3)` occurrence and the actual proper-block interface remain open;
+> no map or JC2 conclusion follows.
+
 > **CORRECTION: RATIONAL-FOREST REQUIRES AN EVERYWHERE-DEFINED MORPHISM
 > (2026-08-30 13:31Z).** The strengthening in integration `6a8558e42...`
 > from a dominant morphism `A2->U` to an arbitrary dominant rational map is
