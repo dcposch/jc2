@@ -1,0 +1,18 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Review complete. Report written to `xmodel/bd-a2-d3-sectioned-two-support-split-control-hostile-review-opus5-20260830.md` (580 lines, one standalone `<!-- BODY-END -->`, no seal, no `charge_basis`).
+
+## Verdict: `CONFIRM_WITH_CORRECTIONS`
+
+All five charged hashes reproduced; body bytes `12539` / body SHA match the artifact. No counterexample found — every load-bearing geometric claim reproduced, several by routes independent of the report's.
+
+**Itemized:** 1 `CONFIRMED` · 2 `CONFIRMED` · 3 `CONFIRMED` · 4 `CONFIRM_WITH_CORRECTIONS` · 5 `CONFIRMED` · 6 `CONFIRMED but surface-specific` · 7 `CONFIRM_WITH_CORRECTIONS` · 8 priced narrowly.
+
+**Two software-layer corrections:**
+- The §6 in-report desk replay uses 11 bare `assert`s. I falsified both `H₀` and the elimination polynomial and it *still* printed its PASS banner under `python3 -O`. The charged `ops/` script is clean — 0 assert nodes, 17 `require()`, and all six of my fault injections fail with correct labels under `-O`.
+- The Singular `absFactorize` check is vacuous: `absFactorize` returns a *ring*, so `size(L)` is `1` for every input — I verified this on a reducible, an absolutely-reducible, and an irreducible polynomial. The claim is nonetheless true; I certified it CAS-free (Q-irreducible + the smooth Q-point `[1:0:0]`).
+
+**Two exposition gaps I closed rather than accepted:** the report never justifies discarding the resultant's `t²(t∓1)²` factors (they are extraneous — `y=0` is the removed section, `t=0` is a chart indeterminacy since `A₀=x³≠0`); and (3.1) is the tangent cone only up to the unit reverse move's linear part, not literally.
+
+**Independent leverage found:** `R_u` has total GL₃ factor `μ=u`, so it maps `(c4,c6,Δ)→(u⁴c4,u⁶c6,u¹²Δ)` — the "reverse (1,1) move" is a *theorem*, not a naming convention. That plus the normal form `X³+c·pq(p+q)` gives (1.4) with no Aronhold-convention risk. Genus 3 confirmed twice (toric `4−1`; P² adjunction `21−15−2−1`), and "no lost component" settled by `R=O(3,1)|_X`, `R·h = 12 = 2·1+10`.
+
+**Price:** abstract row-1 surface attainment is achieved; the proper-block exclusion is real but surface-specific and conditional on two promoted coordinator theorems I could not re-derive. The cheapest universal successor is that rows 1 and 3 have `b_t=1`, so the defect germs are Gorenstein log-canonical non-canonical — but two risks must be discharged, not capped: `h_*` may hide a discrepancy `<−1` component, and Laufer's cuspidal-rational-curve case resolves to a *tree* and is not forbidden.
