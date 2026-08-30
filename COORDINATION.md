@@ -1063,3 +1063,48 @@ affected. The completion handshake above is now binding: messages from a
 running author are not frozen custody, and root must verify final bytes after
 the lane becomes idle/completed. AWS remains idle/unclaimed; no heavy job is
 licensed. Holds/human gates: none.
+
+Allocation refresh (2026-08-30 04:12Z): Fable's bounded classification review
+closed cleanly with `CONFIRM_WITH_CORRECTIONS` and no mathematical error.
+Binding integration `e3dc96f0...` promotes the exact nine-type reduced
+`(2,3)` rational-tree classification. The correction firewall distinguishes
+empty factorization types `F8,F9` from refinements and records that affine
+coefficient common zeros are invisible to infinity. The classification lane
+is closed; Opus remains live on the independent G12--G13 carry/source review.
+
+Proceed provisionally on two nonblocking nonlinear clients. First, sealed
+attachment packet `f3129c34...` reduces the smooth projectively finite,
+irreducible-ramification branch to `F5`; reducible ramification remains within
+that stratum, while basepoint types are outside its finiteness hypothesis.
+Queue a different-model review after the current reviews free a slot. Second,
+whole-portfolio ideation `b5119d76...` proposes
+`DISC8-CONDUCTOR`: the full cubic discriminant divisor is basis-invariant and
+has degree at most eight for a quadratic presentation. Keep its
+order/normalization conductor typing provisional until checked on actual
+local controls.
+
+Allocation for the next tranche is 25% full discriminant/conductor/full-
+boundary work; 20% reviews; 20% K00 lift-image plus occurrence; 15% one-stalk
+nearby/vanishing-cycle ancestry; and 20% `A(F)` source audit, bounded Strinz
+crosswalk, and uniform-complexity characteristic-`p` falsification. A systems
+sublane is implementing the bounded `ARTIFACT-FINALIZE/v1` transaction and
+tests without touching live adapters. AWS remains idle until a source-reviewed
+heavy packet exists; local heavy CAS remains prohibited. Holds/human gates:
+none.
+
+Allocation refresh (2026-08-30 04:16Z): Opus independently reconstructed the
+G12--G13 chain and closed with exit zero. Binding integration `5d66761f...`
+promotes the exact field-point emptiness of the normalized
+`e=2,m=2,h10=1` cell by G13. The G13 rank-two terminal is independent of the
+G12 survival equations, reducing rollback exposure. Corrections to raw term-
+count labels, one fixture description, and rank-one kernel dimension do not
+alter the theorem.
+
+Do not continue to another grade on `h10=1`. The cheapest literal cell is
+`h10=2`, but run it only as a bounded secondary lane after a source/occurrence
+or truncation-image client is specified. The promoted cell remains neither a
+scheme-level emptiness result nor a source atlas, arc theorem, or map claim.
+Both external review lanes are now closed; the next different-model review
+slot goes to the provisional ramification-attachment dichotomy. The
+`ARTIFACT-FINALIZE/v1` systems lane may finish independently. AWS remains
+idle pending a source-reviewed heavy packet; holds/human gates: none.

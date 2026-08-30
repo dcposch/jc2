@@ -1,0 +1,38 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Report written to `xmodel/k00-ram-e2m2-h10eq1-g12-g13-closure-hostile-review-opus5-20260830.md` (12,546 bytes, ends with a standalone `<!-- BODY-END -->`, no seal block).
+
+## Verdict
+
+| Item | Verdict |
+|---|---|
+| G12 branch split | `CONFIRM_WITH_CORRECTIONS` |
+| G13 fresh-`n=5` closure | `CONFIRM_WITH_CORRECTIONS` |
+| Conditional whole-cell (0.3) | `CONFIRMED` (field-point scope) |
+
+## What I did
+
+All 7 custody hashes and all 3 body seals recompute exactly. Both replays run in `-B` and `-B -O`, print identical banners matching the producers and the stated certificate digests.
+
+I wrote a from-scratch engine importing no campaign replay — own sparse `Q[d0..d5]`, own `Q(i)` as `Q[I]/(I²+1)` (different representation from the engine's `(re,im)` pairs), own series — and rebuilt G12/G13 from the 569 tails.
+
+## Load-bearing findings
+
+**The whole-cell emptiness needs only §3 of the G12 report.** The G13 kill uses G11 + G13 only, so every G12 *survival* claim is dispensable for (0.3). I rebuilt §3 in full generality: with `A(N5)=B(N5)=0` and everything else free, `G11_6=0` and `G12_6=ε·i·q³/32` exactly, zero residual. `G12_6` carries no `κ`, `κ₂`, `κ₃`, `N6`, `N7`, or `N8`.
+
+**The second terminal is an exact identity, not merely mod `P4`.** `T13 = (35κ/2¹⁷)·s·t·(s²−64t²)` holds outright on `{G11₁=G11₂=0}`. `T13` has zero `N7` dependence, so the producer's (4.3)/`H1,H2,C,D` substitution is superfluous, and the mod-`P4` reduction — the one denominator-clearing step I intended to attack — turns out not to be needed. The sole denominator is one power of `Δ`: the 2×2 image determinant is exactly `−(9/2²⁰)Δ`.
+
+**Two exposures the producers never tested, now closed.** Row six of `R` has min `d`-degree 3 (all others 2) — that's the actual origin of "the quadratic sixth row is zero", asserted without derivation. And `S5,T5,S6,T6` also cannot arrive, because the old plane is in the radical of every `Q_r`.
+
+Mutation controls are decisive: scaling row 1, 2, or 6 breaks the row-six identity; scaling row 1, 3, or 5 breaks the `N8` annihilation.
+
+## Corrections
+
+The quoted raw term counts are post-cone, not "before branch specialization" (general `N5` gives `85,97,107,83,115,58,110`); the §3 fixture fails all seven rows, not row six only; and §3's "four kernel coordinates" is wrong on the `Δ=0` wall, where the kernel is five-dimensional.
+
+## Scope and next gate
+
+Emptiness is set-theoretic at field-point scope over an algebraically closed characteristic-zero field. Nonreduced/scheme-valued emptiness, formal arcs, reachability, algebraization, polynomial maps, and JC2 are untouched.
+
+Cheapest next nonduplicate gate: the `k10[1]=0` face (`h10=2`) on the same `e=2,m=2` support — the load prefactor shifts one grade, so `A10` arrives two grades later and the tree recomputes below the cost of a new `(e,m)`.
+
+One unavoidable shared exposure, stated in the report: the coordinate images, graph map, and `τ⁴` load prefactor come from the frozen compiler, which I transcribed rather than re-derived (running it is heavy CAS, excluded). Mutating that layer breaks every identity, so it is load-bearing and depends on that compiler's separate review.

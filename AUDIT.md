@@ -5,6 +5,55 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **NORMALIZED K00 `e=2,m=2,h10=1` CELL CLOSED AT G13 FIELD-POINT SCOPE
+> (2026-08-30 04:16Z).** Opus review body `917ec18c...` (sealed full file
+> `04b76536...`) uses an independent sparse `Q[I]/(I^2+1)` engine and returns
+> `CONFIRM_WITH_CORRECTIONS` on G12/G13 and `CONFIRMED` on their composition.
+> Binding integration
+> `5d66761f9fbe8715601607c2a66321670eafd43f636970f93d20e8e82b6d1521`
+> (5,324-byte body `635cd9f4...`) promotes
+>
+> ```text
+> V(G0,...,G13) intersect V(k10[0]) intersect D(k10[1])
+>                 intersect D(d[2]) = empty
+> ```
+>
+> over an algebraically closed characteristic-zero field on the reviewed
+> normalized generic K00 support with `Lambda=tau^2,C6=1,Jdet[0]!=0`. Old
+> `n=4` rank one dies by the literal G12 identity
+> `epsilon*i*q^3/32`. Fresh rank one dies on
+> `P4=s^4-384s^2t^2+4096t^4`; rank two dies by the exact G11-level terminal
+> `(35*kappa/2^17)st(s^2-64t^2)`, which requires neither G12 survival
+> equations nor reduction modulo `P4`. Producer term-count/kernel/fixture
+> labels are corrected in the integration. No ideal-theoretic or
+> scheme-valued emptiness, other K10-order face, occurrence, compatible jet,
+> formal arc, attainment, source completeness, map, counterexample, or JC2
+> conclusion is promoted.
+
+> **REDUCED BIDEGREE-`(2,3)` RATIONAL-FOREST CLASSIFICATION PROMOTED
+> (2026-08-30 04:12Z).** Fable review body `77d489d7...` (sealed full file
+> `8db0d0f8...`) returns `CONFIRM_WITH_CORRECTIONS` and finds no mathematical
+> error. Binding integration
+> `e3dc96f07825ea882edc3d2701e9f0a0357ae863c062ad695d9377a37aa2b761`
+> (6,106-byte body `9371f096...`) promotes, for every reduced class-`(2,3)`
+> divisor `C` on `P1xP1`,
+>
+> ```text
+> 2=G(C)+B(C)+sum_p(delta_p-r_p+1),
+> rational components + forest resolution graph
+>   iff sum_p(delta_p-r_p+1)=2.
+> ```
+>
+> The nine reduced factorization types are exhaustive. The exact rational-
+> tree locus is nonempty in `F1`--`F7` with the stated cusp/contact patterns
+> and empty in `F8,F9`; both irreducible `F1` patterns (two `A2` cusps or one
+> `A4`) occur. For a fixed-basis quadratic Miranda presentation this governs
+> exactly squarefree infinity restrictions. A finite affine coefficient
+> common zero is invisible to the restriction; nonreduced infinity, singular
+> ambient closure, projective basepoints, ramification support, and degree
+> drops are separate. Provisional successor `f3129c34...` narrows the full-
+> boundary problem via ramification attachments but is not promoted here.
+
 > **AFFINE-LINEAR MIRANDA CUBIC BLOCKS CLOSED AT FIXED-BASIS SCOPE
 > (2026-08-30 03:46Z).** The bounded Fable rerun has clean schema-v2 custody
 > under the Seatbelt boundary and returns `CONFIRM_WITH_CORRECTIONS`. Its raw

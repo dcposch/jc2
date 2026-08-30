@@ -7,6 +7,44 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-30 04:16Z — promoted quadratic locus and K00 cell; discriminant/attachment gate)
+
+- **Move from infinity-only classification to the full boundary.** The
+  different-model-confirmed identity `2=G+B+K` gives exactly seven viable
+  reduced bidegree-`(2,3)` rational-tree types and two impossible types.
+  Passing this is only necessary. On the smooth projectively finite stratum,
+  a new sealed provisional attachment lemma says irreducible ramification
+  creates a forbidden cycle in `F1,F2,F4,F7`; within that stratum the
+  surviving fork is reducible ramification or the one-point `F5` collision.
+  The projective-basepoint types `F3,F6` are outside the finiteness hypothesis
+  and remain a separate branch. Review that deduction while computing divisor
+  classes and the `F5` local different provisionally.
+- **Use a basis-invariant client for nonlinear cubic data.** A sealed
+  ideation packet records the provisional exact observation that the full
+  binary-cubic discriminant divisor is unchanged by a global trace-zero basis
+  change over `C[u,v]`, although coefficient degree is not. A quadratic
+  presentation therefore supplies an intrinsic degree-at-most-eight
+  discriminant, pending independent review of the typing. Build
+  `DISC8-CONDUCTOR` from the full coefficients, order-to-normalization index,
+  and resolved union of infinity plus ramification; do not infer Galoisness
+  from a square leading discriminant.
+- **Ask K00 for compatible lift images, not more isolated points.** Independent
+  review now closes the entire normalized `e=2,m=2,h10=1` field-point cell at
+  G13. The cheapest new literal face is `h10=2`, but global information gain
+  is higher from the scheme-theoretic image of one truncation map on a
+  reviewed predecessor and from source occurrence. This targets compatible
+  formal branches without confusing a finite cell with an arc or atlas.
+- **Retype pair-square through one derived stalk test.** Ordinary
+  specialization runs opposite the proposed ancestry set map. On one actual
+  strict-henselian conductor stalk, compare nearby/vanishing-cycle ranks,
+  marking, and swap/braid equivariance against `w-b`; stop immediately on a
+  rank or canonicity mismatch.
+- **Keep global and disproof fronts alive.** Audit the precise `A(F)` one-place
+  theorem before coupling it to the intrinsic discriminant, spend only a
+  bounded lane on the Strinz `q18/B5Q` coordinate crosswalk, and require
+  uniform all-order complexity from characteristic-`p`/Witt work. Reviews
+  remain asynchronous and all heavy/uncertain computation remains AWS-only.
+
 ## Superseding strategy overlay (2026-08-30 03:46Z — affine-linear cubic closure; rational-forest nonlinear gate)
 
 - **Exploit the first genuinely closed cubic subfamily, but keep the basis

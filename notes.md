@@ -14446,3 +14446,62 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   root seal, declared-mode replay, and unchanged pre/post hash verification.
   A running author's “ready” message or hash list is advisory. This repair is
   encoded in `COORDINATION.md`; no mathematics is promoted by it.
+
+## 2026-08-30 04:06Z REVIEW EVENT — ALL NINE REDUCED `(2,3)` TYPES CONFIRMED
+
+- Fable review body `77d489d7...`, sealed full file `8db0d0f8...`, returns
+  `CONFIRM_WITH_CORRECTIONS`. It independently reconstructs connectedness,
+  `2=G+B+K`, resolution-graph invariance, the exhaustive nine partitions,
+  every F1--F7 condition/example, and exact F8/F9 impossibility. No
+  mathematical row fails. Receipt custody is clean with exit zero and all
+  prompt/adapter/launcher/profile/validator hashes unchanged.
+- Binding integration
+  `e3dc96f07825ea882edc3d2701e9f0a0357ae863c062ad695d9377a37aa2b761`
+  / body `9371f096...` promotes the table. Corrections are scope-only: F8/F9
+  are factorization types rather than viable refinements, and affine
+  coefficient common zeros are invisible to the leading infinity curve.
+  Squarefree quadratic infinity now has a finite exact necessary locus;
+  ramification and exceptional closures remain.
+
+## 2026-08-30 04:12Z IDEATION/PROOF EVENT — DISC8 AND ATTACHMENT DICHOTOMY
+
+- Significant-news whole-portfolio round
+  `b5119d766ced6ad16c0061ca39bef30d7a911e12a5bdb8c92d33d54e2b953c6e`
+  / body `dff2f6e7...` scans all 46 avenues without G13 input. Its principal new
+  exact desk observation is that the full binary-cubic discriminant divisor
+  is invariant under global trace-zero basis change; quadratic coefficients
+  give intrinsic degree at most eight. It proposes a finite
+  discriminant/conductor/full-boundary sieve, K00 lift images, nearby-cycle
+  ancestry, and bounded external/source crosswalks. These remain ideas until
+  separately reviewed or executed.
+- Sealed producer
+  `f3129c3497e265988617f7da66b7cf2da408b5736c1f91338a78fbbd111caff2`
+  / body `c37282a4...` proves provisionally that, on a smooth projectively finite
+  quadratic incidence with irreducible reduced ramification support, types
+  F1,F2,F4,F7 acquire two distinct ramification attachments and hence a cycle
+  in the connected infinity tree. Within that stratum the survivor fork is
+  therefore reducible ramification or F5. Projective-basepoint types F3/F6
+  lie outside the finiteness hypothesis. Different-model review and class-
+  group/local-different successors are required; no quadratic block is yet
+  closed.
+
+## 2026-08-30 04:16Z REVIEW EVENT — WHOLE `h10=1` K00 CELL CLOSES AT G13
+
+- Opus review body `917ec18c...`, sealed full file `04b76536...`, returns
+  `CONFIRM_WITH_CORRECTIONS` for G12 and G13 and `CONFIRMED` for the whole
+  normalized-cell composition. A reviewer-owned sparse engine imports no
+  campaign replay, reconstructs both grades from 569 tails, verifies all
+  seals/replays, and breaks the claimed identities under decisive row/image
+  mutations. Receipt custody is clean with exit zero.
+- Binding integration
+  `5d66761f9fbe8715601607c2a66321670eafd43f636970f93d20e8e82b6d1521`
+  / body `635cd9f4...` promotes field-point emptiness through G13 on
+  `e=2,m=2,h10=1`. Old `n=4` rank one dies by
+  `G12_6=epsilon*i*q^3/32`; fresh rank one dies on `P4`; the rank-two
+  terminal is exact already modulo the G11 image equations and does not
+  consume G12 survival equations. Raw-count timing, a non-sharp fixture, and
+  rank-one kernel dimension are corrected without changing the result.
+- The shared compiler coordinate images/graph/load layer remains its explicit
+  reviewed dependency. No scheme-valued emptiness, other support or K10
+  order, compatible jet, occurrence, arc, attainment, source atlas,
+  algebraization, polynomial map, counterexample, or JC2 claim follows.

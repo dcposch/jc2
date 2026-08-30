@@ -7,6 +7,48 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-30
 
+> **NORMALIZED K00 `e=2,m=2,h10=1` CELL IS EMPTY BY G13 AT FIELD-POINT
+> SCOPE (04:16Z).** Opus independently rebuilds G12/G13 from all 569 frozen
+> tails with a fresh `Q[I]/(I^2+1)` engine and returns
+> `CONFIRM_WITH_CORRECTIONS`; binding integration
+> `5d66761f...`/body `635cd9f4...` promotes the whole-cell statement
+> `V(G0,...,G13)∩V(k10[0])∩D(k10[1])∩D(d[2])=empty`. The old `n=4`
+> branch dies by `G12_6=epsilon*i*q^3/32`. Fresh rank one dies on the G13
+> quartic, while the rank-two terminal is stronger than produced: it is exact
+> already on the G11 image equations, with no G12 equation or reduction
+> modulo the quartic. This is one normalized finite cell only—not
+> scheme-valued emptiness, occurrence, an arc, attainment, a map, or JC2.
+
+> **REDUCED BIDEGREE-`(2,3)` RATIONAL-TREE LOCUS PROMOTED; FULL BOUNDARY
+> BECOMES THE NEXT FINITE GATE (04:12Z).** Fable independently reconstructs
+> the genus budget, all nine partitions, every viable example, and both
+> impossibility rows, returning `CONFIRM_WITH_CORRECTIONS` with no
+> mathematical error. Binding integration `e3dc96f0...`/body `9371f096...`
+> promotes `2=G+B+K` and the exact seven viable (`F1`--`F7`), two impossible
+> (`F8,F9`) table. Its scope is squarefree fixed-basis quadratic infinity;
+> affine coefficient zeros are invisible there, and nonreduced, ambient-
+> singular, basepoint, and degree-drop strata remain separate.
+
+> Sealed provisional successor `f3129c34...`/body `c37282a4...` adds the
+> ramification closure. On a smooth projectively finite incidence surface,
+> irreducible ramification attached at two points creates a cycle in the
+> connected infinity tree. Riemann--Hurwitz/collision counting forces two
+> attachments in `F1,F2,F4,F7`; hence within that stratum any survivor must
+> have reducible ramification or the one-point `F5` collision. Projective
+> coefficient-basepoint types `F3,F6` lie outside the finiteness hypothesis
+> and remain a separate branch. This dichotomy awaits different-model review;
+> it does not yet close quadratic blocks.
+
+> **SIGNIFICANT-NEWS IDEATION RERANKS THE NEXT TRANCHE (04:12Z).** Sealed
+> whole-portfolio round `b5119d76...`/body `dff2f6e7...` identifies the full
+> binary-cubic discriminant divisor as a basis-invariant degree-at-most-eight
+> client and pairs it with conductor lengths and the full resolved boundary.
+> It independently prioritizes K00 truncation-image compatibility over more
+> isolated jets, a nearby/vanishing-cycle replacement test for reverse
+> ancestry, an `A(F)` source audit/Strinz coordinate crosswalk, and uniform-
+> complexity characteristic-`p` falsification. These are allocations and
+> provisional desk observations, not new promoted theorems.
+
 > **G13 PROVISIONALLY KILLS EVERY FRESH `n=5` SURVIVOR ON THE
 > `e=2,m=2,h10=1` FACE (03:59Z).** Sealed producer `b352e26e...`/body
 > `82c277ca...` reconstructs all seven G13 rows literally from the frozen 569
