@@ -1,0 +1,3968 @@
+cli=codex-cli 0.150.1 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.150.1
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a0516d-9149-7e83-bbd3-19707e1810be
+--------
+user
+# Hostile review: moving-double-section normalization and conductor
+
+You are GPT-5.5 xhigh, an independent hostile algebraic-geometric reviewer
+for the plane Jacobian-conjecture campaign. Work in
+`/Users/dc/code/math/jc2` on frozen git basis
+`f43ee99da2bc9f831d94e403dcd90622e87e8756`.
+
+Read and review this sealed exact provisional producer in full:
+
+```text
+9557f2c1396daba190927e6a220774362a02068b4197103357d30e8cfc78b75e
+  xmodel/bd-a2-moving-double-section-normalization-conductor-sol56-20260830.md
+  body 18927 / dfd050e37b97b119f6170259f7417ac69e8109723abec4abe8260e3c7a33be57
+  manifest 6675be2beab682f5da3230db4631c5859ce76018ce1e73b21dea62eedcbc408a
+```
+
+Its frozen authorship basis is `dca72076aa1615b0b1286fd4428a1acac7b65963`;
+its producer commit is the review basis above. Read every charged input named
+in Section 0 and enforce its exact scope.
+
+Independently reconstruct and attack:
+
+1. Verify that the predecessor really leaves exactly the integral form
+   `F=Q^2L+TQS+T^2R`, with `C=(T,Q)` of type `(1,1)`, and that bidegrees make
+   the transverse equation exactly homogeneous rather than merely its normal
+   cone. Audit the assertion that `ell,s,r` never vanish simultaneously.
+2. Check that integrality forces `delta_C=s^2-4ell*r` nonzero and nonsquare
+   in `C(C)`. Then scrutinize the stronger squarefree step: the blowup chart
+   must be genuinely independent of the radial parameter, a multiple root
+   must give a codimension-one singular locus, and its nonexceptional points
+   must land inside the already-proved-normal affine incidence. Cover the
+   `ell=0` chart and all quartic multiplicity types.
+3. Rebuild the blowup calculation in both charts. Verify every fibre is
+   zero-dimensional, so the strict transform is finite birational over `X`,
+   and prove `S_2` and `R_1` everywhere before identifying it with the
+   normalization. Look for unhandled singularities along the residual section
+   or at branch fibres.
+4. Compute the conductor algebra from the local ring, not just generically.
+   Verify that the conductor downstairs is exactly `(T,Q)`, upstairs is
+   `O(-E)`, and `nu_*O_Xnu/O_X=O_C(-2)`. Audit the double-cover trace line,
+   branch degree, pushout square, and canonical formula
+   `K_Xnu+E=nu^*K_X` including signs and multiplicity.
+5. Recompute the hypersurface cohomology and the long exact normalization
+   sequence. Check the exact conclusions `h1(O_Xnu)=1`, `h2=0`, injection into
+   every resolution, factorization/lifting of the dominant `A2` first leg,
+   and the claim that the resulting dominant map from a rational surface
+   forces `q=0`.
+6. Independently audit the rational-forest contradiction: prove that the
+   smooth genus-one conductor is an actual boundary component in the charged
+   first-leg compactification. Check the claim that the residual section
+   attaches at exactly one physical point, including the unramified fibre.
+7. Separate the degenerate-quartic curve threat map from the charged surface
+   normalization. Reject any implicit claim that a nodal/cuspidal first
+   blowup is already normal, or that curve arithmetic genus alone closes it.
+8. State the maximum theorem safe to promote. Keep fixed quadratic
+   presentation, arbitrary basis coverage, normal-singular ADE incidences,
+   polynomial maps, counterexamples, and JC2 distinct.
+
+Return an itemized verdict (`CONFIRMED`, `CONFIRM_WITH_CORRECTIONS`, `GAP`, or
+`REFUTED`), precise repairs, and the cheapest decisive successor. Hard cap:
+8,000 tokens and 28,000 UTF-8 bytes. Do not inspect, list, search, stat, build,
+modify, or control `jc2-lean`; the process sandbox also enforces this. Do not
+run local heavy CAS or Singular. Do not edit inputs, canonical files, scripts,
+or dependencies. Write exactly one report:
+
+```text
+xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+```
+
+End with one standalone `<!-- BODY-END -->` line and no seal block.
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll treat this as a sealed mathematical review, not a code change. I’m first going to read the producer and its Section 0 dependencies directly from `xmodel`, keeping all filesystem access away from `jc2-lean`.
+exec
+/bin/zsh -lc 'git rev-parse HEAD' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'wc -c xmodel/bd-a2-moving-double-section-normalization-conductor-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+f43ee99da2bc9f831d94e403dcd90622e87e8756
+
+ succeeded in 0ms:
+   19260 xmodel/bd-a2-moving-double-section-normalization-conductor-sol56-20260830.md
+
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-moving-double-section-normalization-conductor-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+9557f2c1396daba190927e6a220774362a02068b4197103357d30e8cfc78b75e  xmodel/bd-a2-moving-double-section-normalization-conductor-sol56-20260830.md
+
+codex
+The working commit matches the requested review basis, and the producer file hash matches the sealed digest. The byte count differs from the stated “body” count because `wc` is whole-file bytes, so I’m using the digest as the integrity check and reading the full report next.
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-moving-double-section-normalization-conductor-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# The moving double section has irregular normalization
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Producer: Sol 5.6 Ultra delegated lane `/root/whole_portfolio_ideation`  
+     5	Frozen basis: `dca72076aa1615b0b1286fd4428a1acac7b65963`  
+     6	Lifecycle: **EXACT PROVISIONAL PRODUCER / DIFFERENT-MODEL REVIEW REQUIRED**
+     7	
+     8	## 0. Endpoint
+     9	
+    10	Charge the promoted proper cubic-block first leg and the exact provisional
+    11	nonnormal reduction
+    12	
+    13	```text
+    14	ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778
+    15	  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+    16	6b324824e0c075b938bd5b7015d4e8d134bad7cb845ac7597212b61d91dfa7a5
+    17	  xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md.
+    18	```
+    19	
+    20	The latter leaves exactly the following possible nonnormal quadratic
+    21	incidence.  In `W=P2 times P1`, with target infinity `T=0`, let
+    22	
+    23	```text
+    24	X=V(F),                  [X]=2A+3B,
+    25	F=Q^2 L+T Q S+T^2 R,                                  (0.1)
+    26	H=X intersect {T=0}=2C+D_0,
+    27	C={T=Q=0},              [C]=(1,1),
+    28	D_0={T=L=0},             [D_0]=(0,1).                 (0.2)
+    29	```
+    30	
+    31	Here `Q` is an irreducible bilinear form and `L,S,R` are constant binary
+    32	forms in the fibre coordinates of degrees `1,2,3`.  The generic binary
+    33	cubic is irreducible, so `X` is integral.  The proper-block first leg gives
+    34	a dominant rational map `A2 --> X`, equivalently into its normalization,
+    35	through the promoted function-field/Stein identification.
+    36	
+    37	The maximum exact conclusion is:
+    38	
+    39	> **MOVING-DOUBLE-Q2-CLOSED.**  The strict transform of `X` in the blowup
+    40	> `Bl_C(W)` is its finite normalization `nu:Xnu->X`.  Its conductor is the
+    41	> ideal of `C`; the reduced conductor divisor upstairs is a smooth connected
+    42	> genus-one degree-two cover `pi_E:E->C`.  Equivalently, `delta_C` has four
+    43	> distinct simple zeros, and
+    44	>
+    45	> ```text
+    46	> pi_(E*) O_E = O_C direct-sum O_C(-2),
+    47	> K_Xnu+E=nu^*K_X,
+    48	> nu_*O_Xnu/O_X = O_C(-2).                            (0.3)
+    49	> ```
+    50	>
+    51	> Consequently
+    52	>
+    53	> ```text
+    54	> h^1(Xnu,O_Xnu)=1,             h^2(Xnu,O_Xnu)=0.     (0.4)
+    55	> ```
+    56	>
+    57	> Every resolution of `Xnu` has irregularity at least one.  This contradicts
+    58	> the dominant rational `A2` first leg.  Therefore the surviving nonnormal
+    59	> form (0.1) cannot occur in a proper cubic block of a noninvertible plane
+    60	> Keller map.
+    61	
+    62	This closes the **nonnormal quadratic presentation stratum**.  It does not
+    63	close the separately reduced normal-singular quadratic stratum, prove that
+    64	an arbitrary cubic block admits a quadratic basis, construct a map, or
+    65	settle JC2.
+    66	
+    67	The conductor-cover quartic is classified completely below.  The charged
+    68	case is already squarefree, so the genus-one conductor and the cohomological
+    69	irregularity give independent contradictions.  The degenerate quartic rows
+    70	explain exactly where the blowup would cease to be normal if the previously
+    71	proved affine-normality input were removed.
+    72	
+    73	## 1. Why (0.1) is exactly quadratic transverse to `C`
+    74	
+    75	Both projections `C->L_infinity` and `C->P1_fibre` have degree one, so they
+    76	are isomorphisms.  On a fibre-coordinate chart use the fibre coordinate
+    77	`z` as a coordinate along `C`.  Holding `z` fixed, the bilinear form `Q` is
+    78	a linear coordinate transverse to `C` inside `T=0`; `T` is the other normal
+    79	coordinate.  Since `L,S,R` depend only on the fibre coordinate, the completed
+    80	local equation along `C` is literally
+    81	
+    82	```text
+    83	ell(z) Q^2+s(z) TQ+r(z) T^2=0,                       (1.1)
+    84	```
+    85	
+    86	with no terms of normal degree at least three.  Here
+    87	
+    88	```text
+    89	ell=L|C in H^0(C,O_C(1)),
+    90	s=S|C   in H^0(C,O_C(2)),
+    91	r=R|C   in H^0(C,O_C(3)).                            (1.2)
+    92	```
+    93	
+    94	This exact homogeneity is load-bearing.  Treating (1.1) as only the tangent
+    95	cone would not justify the conductor calculation.
+    96	
+    97	No point of `C` has `ell=s=r=0`.  Indeed `ell=0` fixes the unique fibre root
+    98	of `L`; if `s` and `r` also vanished there, the constant binary forms `S`
+    99	and `R` would both be divisible by `L`, and (0.1) would factor by `L`,
+   100	contrary to generic irreducibility.
+   101	
+   102	Define the normal quadratic discriminant
+   103	
+   104	```text
+   105	delta_C=s^2-4*ell*r in H^0(C,O_C(4)).                 (1.3)
+   106	```
+   107	
+   108	This is not the full affine target cubic discriminant.  It is the
+   109	discriminant of the rank-two normal cone along the nonnormal boundary.
+   110	
+   111	At the generic point of `C`, (1.1) is a binary quadratic over `C(C)`.  If
+   112	`delta_C=0`, that local equation is a square and is nonreduced.  If
+   113	`delta_C` is a nonzero square in `C(C)`, it factors into two linear forms
+   114	over `C(C)`.  Either conclusion contradicts that the localization of the
+   115	integral surface `X` is a domain.  Therefore
+   116	
+   117	```text
+   118	delta_C is nonzero and nonsquare in C(C).             (1.4)
+   119	```
+   120	
+   121	In particular all split conductor cases are already unavailable in the
+   122	charged integral scope.
+   123	
+   124	The previously proved affine normality strengthens (1.4) to
+   125	
+   126	```text
+   127	delta_C is squarefree.                                (1.5)
+   128	```
+   129	
+   130	First note that a multiple zero cannot occur where `ell=0`.  That zero of
+   131	`ell` is simple.  If `s` is nonzero there, then `delta_C=s^2` is nonzero;
+   132	if `s=0`, Section 1 gives `r!=0` and `delta_C=s^2-4ell*r` has a simple zero.
+   133	Thus at every hypothetical multiple zero one has `ell!=0`, so both roots of
+   134	the normal quadratic lie in the original `T`-chart.
+   135	
+   136	Indeed, on each fibre-coordinate chart the exact bidegrees make `L,S,R`
+   137	functions of `z` alone.  Thus in the blowup chart `Q=T*w` the strict
+   138	equation is
+   139	
+   140	```text
+   141	G(z,w)=ell(z)w^2+s(z)w+r(z)=0,                       (1.6)
+   142	```
+   143	
+   144	independent of the radial coordinate `T`.  After making one quadratic
+   145	coefficient a unit and completing the square, a multiple zero of `delta_C`
+   146	is exactly a singular point `(z_0,w_0)` of the curve `G=0`.  The strict
+   147	transform then has the codimension-one singular locus
+   148	
+   149	```text
+   150	{(z_0,w_0)} times A1_T.
+   151	```
+   152	
+   153	Every point of this line with `T!=0` is nonexceptional, and the blowup maps
+   154	it isomorphically into the affine incidence `X_aff`.  Thus `X_aff` would
+   155	fail `R_1`, contradicting the affine-normality theorem charged in Section
+   156	0.  This local argument covers `C` because the projection `C->P1_fibre` is
+   157	an isomorphism and the fibre-coordinate charts cover it.  Hence all four
+   158	zeros of `delta_C` are simple.
+   159	
+   160	## 2. The blowup is finite and is the normalization
+   161	
+   162	Let `rho:What->W` be the blowup of the smooth complete-intersection curve
+   163	`C=(T,Q)` and let `X'` be the strict transform.  The equation has order
+   164	exactly two along `C`, so
+   165	
+   166	```text
+   167	X' ~ rho^*X-2*E_W,                                   (2.1)
+   168	```
+   169	
+   170	where `E_W` is the exceptional divisor.  In the two blowup charts the
+   171	strict-transform equations are
+   172	
+   173	```text
+   174	Q=T*w:       w^2 L+w S+R=0,
+   175	T=Q*tau:     L+tau S+tau^2 R=0.                      (2.2)
+   176	```
+   177	
+   178	Over `p in C`, the exceptional fibre is the length-two zero scheme
+   179	
+   180	```text
+   181	ell(p) q^2+s(p) qt+r(p)t^2=0
+   182	        in P1_[q:t].                                 (2.3)
+   183	```
+   184	
+   185	The three coefficients never vanish together by Section 1.  Hence every
+   186	fibre of `X'->X` is finite; the map is proper, quasi-finite, birational, and
+   187	therefore finite.
+   188	
+   189	The blowup ambient `What` is smooth and `X'` is a hypersurface, hence `S_2`.
+   190	The predecessor's exact `R_1` classification says that `C` is the sole
+   191	possible divisorial nonnormal support: affine codimension-one points are
+   192	normal, and the residual infinity component is generically regular.  Since
+   193	the integral hypersurface `X` is `S_2`, it follows that `X minus C` is
+   194	normal, so `X'` is normal off the exceptional curve.  Equations
+   195	(1.4)--(1.5) make the relative quadratic curve (2.3) smooth; in both charts
+   196	of (2.2) the surface is locally its product with the radial parameter.  Thus
+   197	`X'` is regular along the exceptional curve and is `R_1`, hence normal.  The
+   198	finite birational map is therefore the normalization:
+   199	
+   200	```text
+   201	X'=Xnu.                                               (2.4)
+   202	```
+   203	
+   204	Its exceptional curve
+   205	
+   206	```text
+   207	E=Xnu intersect E_W
+   208	```
+   209	
+   210	is smooth and integral by (1.4)--(1.5), and `pi_E:E->C` is finite flat of
+   211	degree two.  Flatness follows either from the nonzero relative quadratic
+   212	(2.3) or from `E` being a relative degree-two Cartier divisor with no
+   213	vertical component.
+   214	
+   215	## 3. Exact conductor, conductor square, and canonical divisor
+   216	
+   217	The full conductor ideal downstairs is exactly
+   218	
+   219	```text
+   220	I_C=(T,Q)O_X.                                         (3.1)
+   221	```
+   222	
+   223	This can be checked without a seminormality shortcut.  Locally on `C`, make
+   224	an invertible linear change of the two normal parameters so that the
+   225	coefficient of `q^2` in (1.1) is a unit.  The normalization is then generated
+   226	by `w=q/t`, with
+   227	
+   228	```text
+   229	q=t*w,                a*w^2+b*w+c=0,       a in O_C^*.
+   230	```
+   231	
+   232	Modulo the original ring it is generated by the class of `w`, and
+   233	
+   234	```text
+   235	t*w=q,
+   236	q*w=t*w^2=-(b/a)q-(c/a)t
+   237	```
+   238	
+   239	belong to the original ring.  Thus `I_C` annihilates the normalization
+   240	quotient.  More explicitly, reduction modulo the extended ideal gives the
+   241	free quadratic algebra
+   242	
+   243	```text
+   244	O_C[w]/(a*w^2+b*w+c),
+   245	```
+   246	
+   247	whereas the image of the original ring is its `O_C` summand.  Hence the
+   248	quotient is freely and faithfully generated over `O_C` by the class of
+   249	`w`.  Its annihilator is exactly `I_C`, proving (3.1) uniformly along the
+   250	four simple branch fibres; no generic-fibre conductor assertion is being
+   251	used in place of this calculation.
+   252	
+   253	Upstairs the conductor ideal is `O_Xnu(-E)`.  The standard conductor pushout
+   254	is the exact sequence
+   255	
+   256	```text
+   257	0 -> O_X
+   258	  -> nu_*O_Xnu direct-sum O_C
+   259	  -> pi_(E*)O_E
+   260	  -> 0.                                                (3.2)
+   261	```
+   262	
+   263	Trace splitting for the finite flat double cover gives
+   264	
+   265	```text
+   266	pi_(E*)O_E=O_C direct-sum M.                          (3.3)
+   267	```
+   268	
+   269	The discriminant of this algebra is (1.3).  Since it is a section of
+   270	`O_C(4)=M^(-2)` and `Pic(P1)` has no two-torsion,
+   271	
+   272	```text
+   273	M=O_C(-2).                                            (3.4)
+   274	```
+   275	
+   276	Taking the quotient in (3.2) proves the last identity in (0.3).
+   277	
+   278	The same conductor multiplicity follows by adjunction.  A codimension-two
+   279	blowup has
+   280	
+   281	```text
+   282	K_What=rho^*K_W+E_W.
+   283	```
+   284	
+   285	Combining this with (2.1) gives
+   286	
+   287	```text
+   288	K_Xnu=nu^*K_X-E,
+   289	K_Xnu+E=nu^*K_X.                                     (3.5)
+   290	```
+   291	
+   292	Thus `E` is the reduced conductor divisor with coefficient one.  It is not
+   293	being called the source different of the map to `P2`.
+   294	
+   295	## 4. The irregularity obstruction
+   296	
+   297	The original nonnormal hypersurface still has its Cartier restriction
+   298	sequence
+   299	
+   300	```text
+   301	0 -> O_(P2 times P1)(-2,-3)
+   302	  -> O_(P2 times P1)
+   303	  -> O_X -> 0.                                       (4.1)
+   304	```
+   305	
+   306	All cohomology of `O_P2(-2)` vanishes, so Kunneth and (4.1) give
+   307	
+   308	```text
+   309	H^1(X,O_X)=H^2(X,O_X)=0.                             (4.2)
+   310	```
+   311	
+   312	The normalization sequence obtained from (3.2) is
+   313	
+   314	```text
+   315	0 -> O_X -> nu_*O_Xnu -> O_C(-2) -> 0.              (4.3)
+   316	```
+   317	
+   318	Because `H^0(P1,O(-2))=0` and `h^1(P1,O(-2))=1`, its long exact sequence
+   319	gives exactly
+   320	
+   321	```text
+   322	h^1(Xnu,O_Xnu)=1,             h^2(Xnu,O_Xnu)=0.       (4.4)
+   323	```
+   324	
+   325	For any resolution `r:Xtilde->Xnu`, normality gives `r_*O_Xtilde=O_Xnu`.
+   326	The Leray edge sequence injects
+   327	
+   328	```text
+   329	H^1(Xnu,O_Xnu) -> H^1(Xtilde,O_Xtilde),
+   330	```
+   331	
+   332	so `q(Xtilde)>=1`.
+   333	
+   334	On the other hand the promoted proper-block first leg gives a dominant
+   335	rational map `A2 --> Xnu`.  Compactify and resolve its source and target.
+   336	The resulting generically finite dominant map from a rational surface
+   337	injects holomorphic one-forms from `Xtilde`, forcing `q(Xtilde)=0`.  This is
+   338	the contradiction proving `MOVING-DOUBLE-Q2-CLOSED`.
+   339	
+   340	The objects used here are fully typed: (1.3) is a conductor-cover
+   341	discriminant, (3.1) is a surface-normalization conductor ideal, (3.5) is the
+   342	canonical conductor divisor, and (4.4) is coherent cohomology.  None is the
+   343	full affine target discriminant, source ramification, source different, a
+   344	normalization-index divisor over `A2`, formal arc data, or finite-prefix
+   345	evidence.
+   346	
+   347	## 5. Complete quartic and genus classification
+   348	
+   349	Although Sections 1 and 4 already constrain and exclude the form, the
+   350	quartic classification records the exact failure mode of every discarded
+   351	degeneration.
+   352	
+   353	For a connected nonsquare finite flat double cover, the normalization of
+   354	`E` is branched over the points where `ord_p(delta_C)` is odd.  If there are
+   355	`b` such points,
+   356	
+   357	```text
+   358	g(Enorm)=(b-2)/2.                                    (5.1)
+   359	```
+   360	
+   361	The nonzero quartic has one of the following divisor partitions.
+   362	
+   363	```text
+   364	div(delta_C) generic algebra    exceptional quadratic / effect on blowup
+   365	----------------------------------------------------------------------------
+   366	1+1+1+1      nonsquare/connected smooth integral genus-one E; X'=Xnu
+   367	2+1+1        nonsquare/connected nodal E, normalization P1; X' nonnormal
+   368	3+1          nonsquare/connected cuspidal E, normalization P1; X' nonnormal
+   369	2+2          square/split       two P1s meeting twice; X generically reducible
+   370	4            square/split       two tangent P1s; X generically reducible
+   371	delta_C=0    repeated           generic double component; X nonreduced locally
+   372	```
+   373	
+   374	Over `C`, an effective quartic divisor is even exactly when its section is
+   375	a square up to a scalar.  Hence (1.4) removes the last three rows in the
+   376	charged integral scope.  Equation (1.5) removes the middle two connected
+   377	rows: in the exact product chart (1.6), normalizing the surface would require
+   378	normalizing the nodal or cuspidal curve and would expose a nonnormal curve
+   379	meeting the affine locus.  The first row is the only charged case.
+   380	
+   381	The relative exceptional quadratic has trace-zero line `O_C(-2)` in every
+   382	nonzero row, even though it is the actual normalization conductor only in
+   383	the first row.  Hence its arithmetic genus is always one:
+   384	
+   385	```text
+   386	chi(O_E)=chi(O_C)+chi(O_C(-2))=0,
+   387	p_a(E)=1.                                             (5.2)
+   388	```
+   389	
+   390	The three connected rows distribute this one unit respectively into
+   391	geometric genus, a two-branch node, or a one-branch cusp.  Only the first is
+   392	compatible with affine normality.
+   393	
+   394	## 6. The actual normalized infinity boundary
+   395	
+   396	Let `D` be the strict transform of the residual section `D_0`.  Pulling back
+   397	the Cartier divisor `H={T=0}` gives
+   398	
+   399	```text
+   400	nu^*H=E+D,                 D isomorphic to P1.        (6.1)
+   401	```
+   402	
+   403	There is exactly one physical attachment between `D` and `E`.  Indeed
+   404	`C` and `D_0` meet at the unique fibre root `p_0` of `L`.  In exceptional
+   405	direction coordinates `[Q:T]`, `ell(p_0)=0`, so (2.3) becomes
+   406	
+   407	```text
+   408	T*(s(p_0)Q+r(p_0)T)=0.                               (6.2)
+   409	```
+   410	
+   411	If `s(p_0)!=0`, the conductor cover is unramified over `p_0`, but `D`
+   412	approaches only the direction `[Q:T]=[1:0]`; it does **not** attach to both
+   413	points of the conductor fibre.  If `s(p_0)=0`, irreducibility forces
+   414	`r(p_0)!=0`; then `p_0` is a simple zero of `delta_C`, and `D` meets the
+   415	single ramification branch.  Thus both cases give one physical attachment
+   416	and one analytic branch of `E` there.
+   417	
+   418	This distinction is important: the two points of an unramified conductor
+   419	fibre are not automatically two attachments of a single strict-transform
+   420	curve.
+   421	
+   422	## 7. Exact rational-forest test
+   423	
+   424	The binding rational-forest theorem is
+   425	
+   426	```text
+   427	6a8558e42a67f1ec5c8bcf12321b6e6805b30a570eba17862c6e7e24cd631b08
+   428	  xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md.
+   429	```
+   430	
+   431	It forbids either a positive-genus resolved boundary component or a cycle
+   432	in the resolved dual multigraph.  The first-leg image lies over the affine
+   433	target, whereas `E` lies over `T=0`; hence `E` is contained in the complement
+   434	of the lifted first-leg open and its strict transform is an actual boundary
+   435	component in every resolution used by the theorem.  Shrinking the target
+   436	open only adds boundary and cannot remove this obstruction.  In the only
+   437	charged type
+   438	`1+1+1+1`, the strict transform of the smooth conductor `E` has genus one.
+   439	This directly contradicts the forest theorem, independently of Section 4.
+   440	
+   441	For the exact threat map obtained by temporarily dropping affine normality:
+   442	
+   443	* In type `2+1+1`, the integral curve `E` has two analytic branches at its
+   444	  node.  Any embedded resolution connects those two branches through a
+   445	  connected exceptional fibre; because both branches belong to the same
+   446	  strict-transform vertex, the dual multigraph contains a cycle.
+   447	* In type `3+1`, the cusp is unibranch and `D` has only the single attachment
+   448	  proved in Section 6.  Resolving this conductor subboundary produces only
+   449	  rational components and a tree.  The forest theorem alone would not
+   450	  exclude this row, but affine normality already does.
+   451	
+   452	For completeness, if integrality were dropped, split type `2+2` has two
+   453	rational conductor components meeting at two distinct physical points and
+   454	hence two independent graph paths, a cycle.  Split type `4` has the same two
+   455	components tangent at one physical point; its embedded resolution is a tree,
+   456	so the conductor subboundary alone would not exclude it.
+   457	
+   458	Equivalently, using the promoted branch-count formula on `E union D`, the
+   459	intrinsic boundary contribution is
+   460	
+   461	```text
+   462	tau(E union D)=1 for 1+1+1+1, 2+1+1, and split 2+2;
+   463	tau(E union D)=0 for 3+1 and split 4.                 (7.1)
+   464	```
+   465	
+   466	In the discarded degenerate rows the blowup is not the surface
+   467	normalization; (7.1) is only the curve-theoretic contribution before that
+   468	further normalization.  Additional exceptional, boundary, and
+   469	source-critical components can add obstructions.  No claim that either zero
+   470	row is globally realizable is made.
+   471	
+   472	In the charged squarefree row, the roots of `delta_C` are
+   473	projection-critical for the conductor cover.
+   474	They are not automatically physical attachments of the reduced source
+   475	different of `Xnu->P2`.  Formula (3.5) changes the canonical class by the
+   476	conductor, so importing the smooth ramification class or asserting a second
+   477	cycle from these branch points would be invalid.  No such assertion is used:
+   478	Section 1 excludes the degenerate rows before any source-different argument,
+   479	and Sections 4 and 7 independently exclude the charged squarefree row.
+   480	
+   481	## 8. Maximum safe conclusion and successor
+   482	
+   483	The exact theorem is Sections 0--7.  In the charged squarefree case the
+   484	blowup is not merely a candidate partial desingularization: finiteness,
+   485	`S_2`, `R_1`, and the conductor square identify it with the normalization
+   486	and compute its irregularity.  The quartic classification is algebraic, not
+   487	sampled evidence.  The earlier genus-one heuristic is now a theorem because
+   488	affine normality forces the quartic to be squarefree; independently, the
+   489	normalization exact sequence gives the irregularity certificate (4.4).
+   490	
+   491	The actionable successor is now the **normal-singular** packet's
+   492	ADE-decorated `D9` boundary/different classification.  There is no remaining
+   493	nonnormal quadratic conductor case to enumerate.  Basis coverage remains
+   494	presentation-scoped: this theorem says that any quadratic basis producing a
+   495	nonnormal projective incidence is impossible for a proper block; it does not
+   496	prove that a quadratic basis exists or control higher-degree bases.
+   497	
+   498	No heavy computation, AWS result, formal arc, finite prefix, source map,
+   499	counterexample, or JC2 conclusion is claimed.
+   500	
+   501	<!-- BODY-END -->
+   502	
+   503	## Seal
+   504	
+   505	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   506	  including its terminating newline; this seal is outside the body.
+   507	- Body bytes: `18927`.
+   508	- Body SHA-256:
+   509	  `dfd050e37b97b119f6170259f7417ac69e8109723abec4abe8260e3c7a33be57`.
+   510	- Frozen basis: `dca72076aa1615b0b1286fd4428a1acac7b65963`.
+
+codex
+Section 0 names two charged inputs: the block-descent coordinator and the nonnormal quadratic-content dichotomy. I’m reading those in full now, then I’ll pull the rational-forest theorem cited later because the producer relies on it for a second contradiction.
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+6b324824e0c075b938bd5b7015d4e8d134bad7cb845ac7597212b61d91dfa7a5  xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md
+
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778  xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+6a8558e42a67f1ec5c8bcf12321b6e6805b30a570eba17862c6e7e24cd631b08  xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md
+
+exec
+/bin/zsh -lc 'wc -l xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'wc -l xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     492 xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md
+
+ succeeded in 0ms:
+     187 xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md
+
+exec
+/bin/zsh -lc 'wc -l xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     193 xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: intermediate block descent becomes an étale sandwich
+     2	
+     3	Coordinator: Sol 5.6 Ultra  
+     4	Date: 2026-08-30 UTC  
+     5	Frozen basis: `0f7ee003be45ee40d51d4048897cdacf63821172`  
+     6	Lifecycle: **BINDING PROMOTION / CONDITIONAL STRUCTURE THEOREM / FORMER PRIMITIVITY ROUTE STOPPED**
+     7	
+     8	## 0. Custody and disposition
+     9	
+    10	The reviewed proposal is Opus cross-pollination section 5.3:
+    11	
+    12	```text
+    13	6e48015c296c9677237daee2a21a20195d5fc346e163dbcbaa68b74e46bab296
+    14	  xmodel/ideation-20260829T2254Z-crosspoll-opus5.md
+    15	  body 53234 / 647bca6600e31816c1f7ac14f2b061d7be574cf653d7102ac063375627d0346b
+    16	```
+    17	
+    18	Fable 5 independently audited the local algebra, purity/discriminant
+    19	argument, finite-étale endgame, controls, and minimal-degree consequence,
+    20	returning `CONFIRM_WITH_CORRECTIONS`:
+    21	
+    22	```text
+    23	bc88ca78c303553555dee3e94f16cbef6e81ea187cd201b73e6d700ccc821992
+    24	  hostile review, 38440 bytes through BODY-END
+    25	213da698fcc910dbc119573e8d4d6a09ebcd839ba39f1acc9d2b1fa9ba794a66
+    26	  lane log
+    27	ecbf087ea4d9b86b2a3ae11007eebbf2b0928b8a96c3d21cf2ed3443cf428ad2
+    28	  prompt
+    29	fa91382a3103312a70ae48ee6f55daf710a916971400e230c385cbaac5701f85
+    30	  run receipt
+    31	```
+    32	
+    33	The review finds that the proposed codimension-one condition is not a new
+    34	hypothesis to prove: for every nontrivial block it is false. The surviving
+    35	result is the conservative block-structure theorem below. This integration
+    36	repairs the review's special-fibre cardinality argument before promotion and
+    37	withholds only its citation-dependent polynomial-parametrization decoration.
+    38	
+    39	## 1. Promoted theorem
+    40	
+    41	Let `F=(f,g): A^2_C -> A^2_C` be a non-invertible Keller map. Let
+    42	
+    43	```text
+    44	C(f,g) proper-subfield K proper-subfield C(x,y),
+    45	d1=[C(x,y):K] >= 2,       d2=[K:C(f,g)] >= 2,
+    46	```
+    47	
+    48	and let `B_K` be the integral closure of `C[f,g]` in `K`. Put
+    49	`Y=Spec(B_K)`. The inclusions factor `F` as
+    50	
+    51	```text
+    52	A^2 --g1--> Y --g2--> A^2.
+    53	```
+    54	
+    55	Then the following hold, without a minimal-topological-degree assumption.
+    56	
+    57	1. `B_K` is contained in `C[x,y]` and is module-finite over `C[f,g]`.
+    58	   Thus `Y` is an integral normal affine surface with function field `K`.
+    59	2. `g2` is finite, flat, and surjective of generic degree `d2`. Its
+    60	   trace-discriminant ideal is nonzero (and principal on `A^2`).
+    61	3. `g1` is dominant and quasi-finite of generic degree `d1`; in fact it is
+    62	   étale everywhere and hence open. It is not finite, proper, or surjective.
+    63	4. If `R` is the non-étale locus of `g2`, then `R` is nonempty and has pure
+    64	   codimension one. Moreover
+    65	
+    66	   ```text
+    67	   g1(A^2) subset Y_sm minus R,       Sing(Y) subset R.
+    68	   ```
+    69	
+    70	   Hence `g1` misses every point of every branch divisor. In particular its
+    71	   image never contains every codimension-one point of `Y`.
+    72	5. With `A(h)` denoting the nonproperness set of a complex polynomial map,
+    73	
+    74	   ```text
+    75	   Y minus g1(A^2) subset A(g1),
+    76	   A(F)=g2(A(g1)),
+    77	   g2(R)=V(Disc(g2)) subset A(F).
+    78	   ```
+    79	
+    80	6. For every closed point `z` of the discriminant curve,
+    81	
+    82	   ```text
+    83	   #F^{-1}(z) <= (d2-1)*d1 = deg(F)-d1.
+    84	   ```
+    85	
+    86	   For every closed `z` outside `A(F)`, the fibre has exactly `deg(F)`
+    87	   points.
+    88	7. `Y` is not isomorphic to `A^2`.
+    89	
+    90	This is conditional structure on a hypothetical counterexample and a proper
+    91	intermediate field. It proves neither that such a field exists nor that a
+    92	counterexample exists.
+    93	
+    94	## 2. Load-bearing arguments
+    95	
+    96	The containment `B_K subset C[x,y]` follows because an element of `B_K` is
+    97	integral over `C[f,g]`, hence over `C[x,y]`, and lies in `C(x,y)`, while
+    98	`C[x,y]` is integrally closed. Finiteness of the normalization in the finite
+    99	separable field extension gives the finite map `g2`. Normal surfaces are
+   100	Cohen--Macaulay, so miracle flatness over the regular target makes `g2`
+   101	finite flat; integrality makes it surjective.
+   102	
+   103	The non-obvious strengthening is completion rigidity. At a closed point
+   104	`x`, with `y=g1(x)` and `z=F(x)`, étaleness of `F` identifies the completed
+   105	local rings at `z` and `x`. Quasi-finiteness of `g1` makes the completed
+   106	local ring at `x` finite over that at `y`. Excellence and normality make the
+   107	completed local ring at `y` a two-dimensional normal domain. The intervening
+   108	map has height-zero kernel and is surjective because its composite is the
+   109	completion isomorphism; it is therefore itself an isomorphism. Flatness and
+   110	unramifiedness descend, so both `g1` at `x` and `g2` at `y` are étale. Since
+   111	the schemes are Jacobson, this holds everywhere on the image. Thus the image
+   112	of `g1` is open and disjoint from `R` and from `Sing(Y)`.
+   113	
+   114	If `R` were empty, the connected finite cover `g2` would be finite étale over
+   115	`A^2_C`, hence trivial, contradicting `d2>=2`. Purity (equivalently here the
+   116	finite-flat discriminant support together with branch purity) makes the
+   117	nonempty branch locus divisorial. This proves that the codimension-one image
+   118	antecedent fails rather than remaining an open bridge.
+   119	
+   120	Finite `g2` is proper, which gives the composition identity
+   121	`A(F)=g2(A(g1))`. Openness and density of `g1(A^2)`, plus compactness of
+   122	bounded subsets of `A^2(C)`, give `Y minus g1(A^2) subset A(g1)`. Since all
+   123	of `R` is missed, its discriminant image lies in `A(F)`.
+   124	
+   125	The fibre deficit needs one normalization lemma that was implicit in the
+   126	review. Let `Z` be the normalization of `Y` in `C(x,y)`; strong Zariski Main
+   127	embeds `A^2` openly in `Z`. For a closed `y in Y`, localize at `y` and let
+   128	`q_1,...,q_r` be the points of `Z` above it. Their residue fields are `C`.
+   129	Chinese remaindering supplies an integral element `b` with pairwise distinct
+   130	residues at the `q_i`. Its minimal polynomial over `K` has degree at most
+   131	`d1` and coefficients in the normal local ring: integrality makes those
+   132	coefficients integral, and normality brings them back into the ring. Modulo
+   133	the maximal ideal this polynomial has the `r` distinct chosen residues as
+   134	roots, so `r<=d1`. Thus every `g1` fibre has at most `d1` points. A finite-
+   135	flat `g2` fibre has at most `d2` distinct points, and over its discriminant at
+   136	least one lies in `R` and contributes no `g1` preimage. This proves the
+   137	displayed `deg(F)-d1` bound. Outside `A(F)`, properness over a small
+   138	neighborhood makes the étale map `F` a covering of its generic degree,
+   139	giving equality.
+   140	
+   141	Finally, if `Y` were abstractly `A^2`, the factorization could be conjugated
+   142	to polynomial self-maps `F=G2 o G1` of `A^2`. The chain rule makes both
+   143	Jacobian determinants nonzero constants (the image of `G1` is dense), so
+   144	the finite map `G2` would be a connected finite étale cover of degree
+   145	`d2>=2` of `A^2_C`, again impossible.
+   146	
+   147	## 3. Binding corrections and withheld claims
+   148	
+   149	1. The launch condition "`g1(A^2)` contains every codimension-one point" is
+   150	   refuted for every nontrivial block: the whole nonempty branch divisor is
+   151	   missed. It must not remain listed as an attainable proof obligation.
+   152	2. The alternative recognition target `Y isomorphic to A^2` is also
+   153	   impossible for every nontrivial block. It is a reductio, not a descent
+   154	   theorem waiting to be proved.
+   155	3. Consequently this route gives no implication from minimal topological
+   156	   degree to primitive monodromy. Primitivity remains open. The honest
+   157	   successor is to rule out the forced étale sandwiches directly, beginning
+   158	   provisionally with block index `d2=2` (`BD-D2`).
+   159	4. The review's estimate `#F^{-1}(z) <= deg(F)-d1` is promoted only with the
+   160	   CRT/minimal-polynomial normalization lemma supplied in section 2. It does
+   161	   not require flatness of the degree-`d1` normalization and makes no
+   162	   attainment claim beyond the displayed upper bound.
+   163	5. The stronger wording that discriminant components are polynomially
+   164	   parametrized components of `A(F)` is citation-dependent and unnecessary
+   165	   for the structural result. Only the proved inclusion
+   166	   `g2(R)=V(Disc(g2)) subset A(F)` is promoted here.
+   167	
+   168	## 4. Scope and next discriminator
+   169	
+   170	The theorem constrains only a block that already exists. It does not supply
+   171	an intermediate field, prove primitive monodromy, select a bounded
+   172	topological degree, control all components of `A(F)`, decide smoothness of
+   173	`Y`, or prove JC2. The proposed next discriminator `BD-D2` is not promoted:
+   174	it asks whether a degree-two finite-flat branched cover in this sandwich can
+   175	be ruled out using the topology of the complement and the geometry at
+   176	infinity. It requires its own producer and hostile review.
+   177	
+   178	<!-- BODY-END -->
+   179	
+   180	## Seal
+   181	
+   182	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   183	  including its terminating newline; this seal is outside the body.
+   184	- Body bytes: `8285`.
+   185	- Body SHA-256:
+   186	  `85db7afd1e8b9f1039bbf977b78a6ea1f64cef9b6fb9323f2233281cf1be6e9f`.
+   187	- Frozen basis: `0f7ee003be45ee40d51d4048897cdacf63821172`.
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Coordinator integration: rational-forest first-leg obstruction
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Coordinator: Sol 5.6 Ultra  
+     5	Frozen basis: `a619157b73c1dee1ca0599db47321ffd7588d748`  
+     6	Lifecycle: **BINDING INTEGRATION / PRESENTATION-SCOPED QUADRATIC CONSEQUENCE**
+     7	
+     8	## 0. Disposition
+     9	
+    10	Opus 5 returned `CONFIRM_WITH_CORRECTIONS` on the sealed producer
+    11	
+    12	```text
+    13	367d8ffa1a374b25ee27ca2a2079721c6b17bd71980a13687b11aa87e86f2986
+    14	  xmodel/bd-a2-firstleg-rational-forest-multisection-producer-sol56-20260830.md
+    15	```
+    16	
+    17	through a sandbox-attested raw review body
+    18	
+    19	```text
+    20	40841431c554c63cedb13bda8f662e2633d97695ee8f5d91659479169e2d13e5
+    21	  xmodel/bd-a2-rational-forest-multisection-hostile-review-opus5-20260830.md
+    22	```
+    23	
+    24	whose sealed full-file SHA-256 is
+    25	`24b61d503e5849576093139261d5bc748e2dc7d83ddcc657ac9e4d1d9a004b5f`.
+    26	The receipt pins unchanged prompt, adapter, launcher, Seatbelt profile,
+    27	validator, fallacy appendix, and model-prompt hashes, with exit code zero.
+    28	
+    29	The review preserves the producer's main theorem and improves the
+    30	multisection formula.  This integration adopts the review's repairs: strict
+    31	SNC/geometric-genus language, a direct differential-form proof of
+    32	`p_g=q=0`, dominant rational rather than only morphic input, open-subset
+    33	monotonicity, the exact unibranch equality condition, the projective-coordinate
+    34	convention in the sharp control, exact `[X:Y]`-degree three, and the separation
+    35	of reduced ramification support from different and discriminant
+    36	multiplicities.  The conditional value `barP_1=18` is not promoted.
+    37	
+    38	## 1. Binding rational-forest theorem
+    39	
+    40	Let `U` be a smooth quasi-projective complex surface and `(X,D)` a smooth
+    41	projective completion with `D` reduced strict SNC.  Write `Gamma_D` for the
+    42	dual multigraph, retaining parallel edges, and put
+    43	
+    44	```text
+    45	tau(D)=sum_i g(D_i)+b_1(Gamma_D).
+    46	```
+    47	
+    48	Residue, normalization, and Serre duality give
+    49	
+    50	```text
+    51	barP_1(U)=p_g(X)+tau(D)-rank(partial),
+    52	rank(partial)<=min(tau(D),q(X)).                       (1.1)
+    53	```
+    54	
+    55	This includes disconnected boundaries: if `V,E,c` are the numbers of
+    56	vertices, edges, and connected components, then
+    57	`b_1=E-V+c`.
+    58	
+    59	If there is a dominant rational map `A^2 --> U`, resolve it to a generically
+    60	finite morphism.  Pullback injects global one-forms and pluricanonical forms,
+    61	so `p_g(X)=q(X)=0`; logarithmic pullback also forces
+    62	`bar kappa(U)=-infinity` and hence `barP_1(U)=0`.  Equation (1.1) then gives
+    63	
+    64	```text
+    65	g(D_i)=0 for every i,          b_1(Gamma_D)=0.         (1.2)
+    66	```
+    67	
+    68	Thus every resolved boundary component is rational and the dual multigraph
+    69	is a forest.  The obstruction is monotone under shrinking the target: adding
+    70	boundary cannot decrease logarithmic plurigenera.  Consequently any one
+    71	boundary subconfiguration with positive geometric genus or a graph cycle
+    72	already forbids a dominant rational first leg from `A^2`.
+    73	
+    74	## 2. Exact multisection formula
+    75	
+    76	For a reduced curve `H` on a smooth projective surface, let its irreducible
+    77	components have normalization genera `g_i`, let `m_q` be the number of
+    78	analytic branches at a singular point, let `s` be the component count, and
+    79	let `c` be the connected-component count.  Direct edge/vertex cancellation
+    80	in an embedded resolution gives
+    81	
+    82	```text
+    83	tau(H_res)
+    84	 = sum_i g_i + sum_(q in Sing H)(m_q-1)-s+c.           (2.1)
+    85	```
+    86	
+    87	For a `P^1`-bundle over `P^1`, a section `D_infinity`, and an irreducible
+    88	multisection `C` of normalization genus `g`, let `r` be the total number of
+    89	analytic branches of `C` at its contacts with `D_infinity`.  Then
+    90	
+    91	```text
+    92	barP_1(P minus (C union D_infinity))
+    93	 = g + max(r-1,0)
+    94	   + sum_(q in Sing(C), q notin D_infinity)(m_q-1).    (2.2)
+    95	```
+    96	
+    97	Several branches at one point and resolution paths sharing exceptional
+    98	vertices do not reduce the right side.  In particular the gate fires if
+    99	`g>0`, `r>=2`, or an off-infinity singularity is multibranch.  Equality with
+   100	the lower bound `g+max(r-1,0)` requires only that every off-infinity
+   101	singularity be unibranch, not smoothness there.
+   102	
+   103	This is sharp.  With the convention `z=Z_1/Z_0`, the complement
+   104	
+   105	```text
+   106	(P^1_z x P^1_w) minus ({w=infinity} union closure{z=w^k})
+   107	```
+   108	
+   109	is `A^2`, via `(w,t) |-> (w,[t:1+t*w^k])`.  Hence multisection degree alone
+   110	cannot obstruct a first leg.
+   111	
+   112	## 3. Miranda-incidence consequence
+   113	
+   114	Consider a fixed global trace-zero Miranda presentation whose homogenized
+   115	incidence closure is a smooth irreducible hypersurface
+   116	
+   117	```text
+   118	X_d subset P^2 x P^1,          [X_d]=d*A+3*B,          (3.1)
+   119	```
+   120	
+   121	with literal degree three in `[X:Y]`.  Adjunction and restriction cohomology
+   122	give
+   123	
+   124	```text
+   125	K_X=(d-3)A+B,
+   126	p_g(X_d)=(d-1)(d-2).                                  (3.2)
+   127	```
+   128	
+   129	Therefore every such presentation with `d>=3` is incompatible with a
+   130	dominant rational `A^2` first leg.
+   131	
+   132	For `d=2`, `X_2` is rational on the stated smooth irreducible conic-bundle
+   133	stratum.  Its infinity curve is generically a smooth irreducible curve of
+   134	bidegree `(2,3)` on `P^1 x P^1`, hence has genus two.  Already
+   135	
+   136	```text
+   137	barP_1(X_2 minus H_infinity)=2>0,                     (3.3)
+   138	```
+   139	
+   140	so every dense open of this generic stratum is excluded.  No ramification
+   141	divisor is needed for (3.3).
+   142	
+   143	The stronger generic intersection calculation
+   144	
+   145	```text
+   146	R_pi=2A+B,   g(H_infinity)=2,   p_a(R_pi)=9,
+   147	H_infinity.R_pi=8,   nominal barP_1=18
+   148	```
+   149	
+   150	remains only a conditional diagnostic: it additionally requires that the
+   151	reduced ramification support is deleted, smooth and irreducible, has class
+   152	`2A+B`, and meets infinity in eight distinct transverse points.  It is not a
+   153	binding theorem.
+   154	
+   155	## 4. Exact survivor boundary
+   156	
+   157	The theorem is presentation-scoped.  It does not exclude nonreduced
+   158	incidence closure, singular ambient closure, projective basepoints,
+   159	extraneous/reducible projective components, degree drop in `(u,v)`, or degree
+   160	drop in `[X:Y]`; bidegree `(d,1)` has `p_g=0` even for large `d`.  It also
+   161	does not identify arithmetic with geometric genus on a singular component,
+   162	or reduced ramification support with the different or target discriminant.
+   163	
+   164	On the remaining reduced quadratic infinity stratum, if `H` has bidegree
+   165	`(2,3)`, then `p_a(H)=2`, and its ample support is connected.  Combining the
+   166	arithmetic-genus formula with (2.1) gives the finite successor gate
+   167	
+   168	```text
+   169	2 = G + B + K,
+   170	G=sum component normalization genera,
+   171	B=b_1(resolved dual graph),
+   172	K=sum_q(delta_q-m_q+1).                                (4.1)
+   173	```
+   174	
+   175	Thus a rational-forest resolution is possible exactly when `K=2` (and then
+   176	necessarily `G=B=0`).  Classifying the reduced factor-degree partitions and
+   177	their distributions of this two-unit non-nodal defect is the cheapest next
+   178	step.  Nonreduced and projective-degree-drop strata remain separate.
+   179	
+   180	No general cubic-block theorem, intrinsic bound on presentation degree,
+   181	primitivity statement, polynomial-map construction, counterexample, or JC2
+   182	claim follows.
+   183	
+   184	<!-- BODY-END -->
+   185	
+   186	## Seal
+   187	
+   188	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   189	  including its terminating newline; this seal is outside the body.
+   190	- Body bytes: `6810`.
+   191	- Body SHA-256:
+   192	  `9c6501222049980161f209d57e1a575ebe80c4de1b8018aedf303f692e1dae46`.
+   193	- Frozen basis: `a619157b73c1dee1ca0599db47321ffd7588d748`.
+
+exec
+/bin/zsh -lc 'nl -ba xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# Nonnormal quadratic incidences reduce to one moving-double-section normal form
+     2	
+     3	Date: 2026-08-30 UTC  
+     4	Producer: Sol 5.6 Ultra delegated lane `/root/whole_portfolio_ideation`  
+     5	Frozen basis: `145f96d65021ef364a5189c4ca385fe09d7b4f46`  
+     6	Lifecycle: **EXACT PROVISIONAL PRODUCER / DIFFERENT-MODEL REVIEW REQUIRED**
+     7	
+     8	## 0. Endpoint and epistemic scope
+     9	
+    10	Let `A=C[u,v]` and let
+    11	
+    12	```text
+    13	B=A*1 direct-sum A*z direct-sum A*w
+    14	```
+    15	
+    16	be the normal finite-flat integral cubic algebra of a hypothetical proper
+    17	cubic block of a noninvertible plane Keller map.  Charge the promoted proper
+    18	block sandwich, the binding nonmonogenicity theorem, and the dominant first
+    19	leg
+    20	
+    21	```text
+    22	g:A2 -> Y=Spec(B).
+    23	```
+    24	
+    25	Suppose that in one global trace-zero basis the Miranda coefficients
+    26	`a,b,c,d` have total degree at most two and at least one has degree two.  Let
+    27	
+    28	```text
+    29	Phi=bX^3-3aX^2Y+3dXY^2-cY^3,
+    30	X_aff=V(Phi) subset A2 times P1,
+    31	Xbar=V(Phi^h) subset P2 times P1,       [Xbar]=2A+3B,
+    32	H=Xbar intersect (L_infinity times P1).
+    33	```
+    34	
+    35	Then the following is the maximum exact conclusion of this packet.
+    36	
+    37	> **NONNORMAL-Q2-DICHOTOMY.**  The affine incidence `X_aff` is normal.  If
+    38	> the projective quadratic incidence `Xbar` is nonnormal, then, after
+    39	> constant linear coordinate changes on `L_infinity` and the fibre, its
+    40	> unique generic nonnormal boundary type is
+    41	>
+    42	> ```text
+    43	> H=2C+L,             [C]=(1,1),        [L]=(0,1),      (0.1)
+    44	> ```
+    45	>
+    46	> and its homogenized binary cubic has the exact form
+    47	>
+    48	> ```text
+    49	> Phi^h=Q^2 L + T Q S + T^2 R,                         (0.2)
+    50	> ```
+    51	>
+    52	> where `T=0` is target infinity, `Q` is an irreducible bilinear form of
+    53	> bidegree `(1,1)`, and `L,S,R` are constant binary forms of fibre degrees
+    54	> `1,2,3`.  The target discriminant of `B/A` consequently has total degree
+    55	> at most six.
+    56	
+    57	Thus all affine exceptional-curve nonnormality, all repeated constant
+    58	sections at infinity, and all repeated vertical infinity fibres are
+    59	excluded.  Only the moving double section (0.1) remains in the nonnormal
+    60	quadratic frontier.
+    61	
+    62	This is a theorem about the normal cubic algebra plus a chosen quadratic
+    63	compactification.  It is not a polynomial-map construction and does not
+    64	close the normal-singular quadratic lane.  It also does not say that every
+    65	degree-minimal basis has the same infinity divisor.
+    66	
+    67	The exact promoted clients used here are
+    68	
+    69	```text
+    70	c8dee3199ecfaf73b6debedea625346a11babbe42082cff5bff049f8585763c2
+    71	  xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md
+    72	410de2f569e2ad5599152fdd9414198f012dbdced7d17c5a51dde0096fe4601e
+    73	  xmodel/bd-fix3-quadratic-discriminant-conductor-coordinator-integration-sol56-20260830.md
+    74	ac7ef8f5321f579d5e193b6ae3a9b0f1aa2a64421050bb71426b94258d984ffb
+    75	  xmodel/bd-a2-smooth-quadratic-degeneracy-absorption-sol56-20260830.md
+    76	```
+    77	
+    78	The smooth absorption packet supplies the finite common-zero and affine
+    79	Stein bridges.  Its smooth exclusion is not charged in the proof below.
+    80	
+    81	## 1. The intrinsic content ideal and what a basis can change
+    82	
+    83	In a trace-zero basis the multiplication table is
+    84	
+    85	```text
+    86	z^2 = 2(a^2-bd) + a*z + b*w,
+    87	z*w = -(ad-bc) - d*z - a*w,
+    88	w^2 = 2(d^2-ac) + c*z + d*w.                         (1.1)
+    89	```
+    90	
+    91	Define the coefficient-content ideal
+    92	
+    93	```text
+    94	I_B=(a,b,c,d) subset A.                               (1.2)
+    95	```
+    96	
+    97	This ideal is intrinsic to `B/A`.  Indeed, a change of global trace-zero
+    98	basis is an element of `GL_2(A)`.  The associated binary cubic transforms
+    99	through the rank-four binary-cubic representation, with only a determinant
+   100	twist.  Both the matrix of that representation and its inverse have entries
+   101	in `A`, because the determinant of the basis change is a unit of `A`, hence
+   102	a nonzero complex constant.  Therefore the old and new coefficient vectors
+   103	generate the same ideal.
+   104	
+   105	Consequently the following data are basis invariant:
+   106	
+   107	```text
+   108	I_B and every local order ord_q(I_B);
+   109	the trace discriminant Delta, up to C^*;
+   110	the branch divisor V(Delta);
+   111	the minimum coefficient degree d_min over trace-zero bases.
+   112	```
+   113	
+   114	By contrast, the leading homogeneous cubic, the factorization and
+   115	multiplicities of `H`, projective coefficient basepoints, the first normal
+   116	jet at infinity, and normality of this particular projective closure can
+   117	change under a polynomial `GL_2(A)` basis change.  Such a change is an
+   118	automorphism of the affine `P^1`-bundle but need not extend regularly over
+   119	target infinity.  These boundary features are presentation data, not
+   120	invariants of the cubic algebra.
+   121	
+   122	The intrinsic ideal gives the elementary lower bound
+   123	
+   124	```text
+   125	d_min >= max_q ord_q(I_B).                            (1.3)
+   126	```
+   127	
+   128	Indeed a nonzero polynomial of degree at most `e` cannot vanish to order
+   129	greater than `e` at an affine point.  In the hypothetical block scope,
+   130	existence of the displayed quadratic basis and the binding theorem
+   131	`AL3-CLOSED` already give the exact value `d_min=2`: a basis of degree at
+   132	most one is impossible.  This basis-minimality statement does **not** give a
+   133	coverage theorem for smooth or normal compactifications.
+   134	
+   135	Normality also forbids a height-one component of `V(I_B)`: at its generic
+   136	DVR the special fibre of (1.1) would be `kappa direct-sum V`, `V^2=0`,
+   137	which is incompatible with a rank-three normal order.  Hence
+   138	
+   139	```text
+   140	Z=V(I_B) subset A2
+   141	```
+   142	
+   143	is finite.
+   144	
+   145	## 2. Exact affine `R_1` test
+   146	
+   147	The generic binary cubic is irreducible because `Frac(B)` is a cubic field.
+   148	Thus `X_aff` is an integral hypersurface and is Cohen--Macaulay, hence
+   149	`S_2`.  The direct-image/Stein bridge identifies `X_aff` with `Y=Spec(B)`
+   150	away from `Z`; over `q in Z`, the incidence has the exceptional fibre
+   151	
+   152	```text
+   153	E_q={q} times P1.
+   154	```
+   155	
+   156	Translate `q` to the origin and write the first Taylor part of `Phi` as
+   157	
+   158	```text
+   159	Phi=s*p(X,Y)+t*r(X,Y)+terms of base order at least two.
+   160	```
+   161	
+   162	Along `E_q`, all fibre derivatives vanish and the two remaining gradient
+   163	entries are `p` and `r`.  Therefore the singular locus contains the whole
+   164	curve `E_q` if and only if `p=r=0`, equivalently
+   165	
+   166	```text
+   167	I_B subset m_q^2.                                    (2.1)
+   168	```
+   169	
+   170	If (2.1) fails, the singular points on `E_q` are only the finite common-zero
+   171	scheme of the two binary cubics `p,r`; the generic point of `E_q` is regular.
+   172	As `Y` is normal off these exceptional fibres, Serre's criterion gives
+   173	
+   174	```text
+   175	X_aff is normal iff I_B is not-subset m_q^2 for every q in Z.   (2.2)
+   176	```
+   177	
+   178	This separates two often conflated statements.  The exceptional `P^1` is a
+   179	feature of the incidence model and is contracted by the Stein map.  The
+   180	condition that makes it a divisorial singular locus is nevertheless the
+   181	intrinsic first-order content condition (2.1).
+   182	
+   183	## 3. The quadratic content cone is impossible
+   184	
+   185	Assume (2.1) in a quadratic basis.  Since every coefficient has degree at
+   186	most two, after translating `q` all four are homogeneous quadratics.  Give
+   187	
+   188	```text
+   189	deg(s)=deg(t)=1,             deg(z)=deg(w)=2.
+   190	```
+   191	
+   192	Every equality in (1.1) is homogeneous of degree four.  Thus `B` is a
+   193	connected positively graded normal domain with graded `C[s,t]`-module
+   194	
+   195	```text
+   196	B=C[s,t] direct-sum C[s,t](-2)z direct-sum C[s,t](-2)w.          (3.1)
+   197	```
+   198	
+   199	Put `C0=Proj(B)`.  Because `B` is finite over the standard graded ring
+   200	`C[s,t]`, `C0->P1` is finite of degree three and `O_C0(1)` is the pullback
+   201	of `O_P1(1)`.  Normality of the graded domain makes `C0` a normal integral
+   202	projective curve, hence a smooth curve.  From (3.1), for `n>=2`,
+   203	
+   204	```text
+   205	dim_C B_n=(n+1)+2(n-1)=3n-1.
+   206	```
+   207	
+   208	Its Hilbert polynomial is also
+   209	
+   210	```text
+   211	deg(O_C0(1))*n+1-g(C0)=3n+1-g(C0),
+   212	```
+   213	
+   214	so
+   215	
+   216	```text
+   217	g(C0)=2.                                               (3.2)
+   218	```
+   219	
+   220	Choose a nonzero degree-one element `s`.  The degree-zero homogeneous
+   221	fraction field is `C(C0)`, and every homogeneous `b_n` satisfies
+   222	
+   223	```text
+   224	b_n=(b_n/s^n)*s^n.
+   225	```
+   226	
+   227	It follows that
+   228	
+   229	```text
+   230	Frac(B)=C(C0)(s).                                     (3.3)
+   231	```
+   232	
+   233	The dominant first leg `A2->Y` is generically finite.  After completing and
+   234	resolving indeterminacy, (3.3) would give a dominant map from a rational
+   235	surface to the genus-two curve `C0`.  Such a map is impossible: every
+   236	morphism from a smooth rational surface to a positive-genus curve is
+   237	constant (equivalently use the Albanese/Jacobian).  This contradicts
+   238	dominance.
+   239	
+   240	Hence (2.1) never occurs in the proper-block scope.  Equation (2.2) now
+   241	proves that `X_aff` is normal.  Notice that the contradiction used exact
+   242	algebra and a dominant map.  The Hilbert series alone is formal algebraic
+   243	data; interpreting it as a plane Keller map would have been invalid without
+   244	the first-leg bridge.
+   245	
+   246	As a consistency check only, in this killed stratum the intrinsic target
+   247	discriminant is a nonzero homogeneous octic about `q`, so `DISC8-INDEX`
+   248	also certifies `d_min=2`.  This discriminant statement is not the source
+   249	ramification divisor and is not a normalization-index or conductor claim.
+   250	
+   251	## 4. Projective `R_1` test and the finite repeated-type list
+   252	
+   253	Write
+   254	
+   255	```text
+   256	Phi^h=Phi_2(U,V;X,Y)+T*Phi_1(U,V;X,Y)+T^2*Phi_0(X,Y), (4.1)
+   257	```
+   258	
+   259	where `Phi_i` has base degree `i` and fibre degree three.  Since `X_aff` is
+   260	normal, a divisorial nonnormal locus of `Xbar` lies in `H={Phi_2=0}`.  The
+   261	homogenized cubic is primitive: a projective common coefficient divisor
+   262	other than `T=0` would give a forbidden affine height-one component of
+   263	`V(I_B)`, while divisibility by `T` would contradict exact coefficient
+   264	degree two.  Generic irreducibility and Gauss's lemma therefore make `Xbar`
+   265	an integral hypersurface, hence `S_2`; its nonnormality is exactly an `R_1`
+   266	failure.
+   267	
+   268	At the generic point of a reduced component of `H`, a tangent derivative
+   269	inside `L_infinity times P1` is nonzero, so `Xbar` is regular there.  If an
+   270	integral component `C` occurs with multiplicity at least two, all tangent
+   271	derivatives vanish along it; `Xbar` is singular generically along `C` if
+   272	and only if the first normal jet also vanishes:
+   273	
+   274	```text
+   275	Phi_1|C=0.                                             (4.2)
+   276	```
+   277	
+   278	Because an integral component of bidegree `(alpha,beta)` repeated `m>=2`
+   279	must satisfy `m*alpha<=2` and `m*beta<=3`, the complete list of maximal
+   280	repeated patterns in class `(2,3)` is
+   281	
+   282	```text
+   283	2(0,1)+(2,1),
+   284	3(0,1)+(2,0),
+   285	2(1,0)+(0,3),
+   286	2(1,1)+(0,1).                                         (4.3)
+   287	```
+   288	
+   289	Here the second bidegree is the degree over `L_infinity`; `(1,0)` is a
+   290	vertical fibre and `(a,1)` is a section.  Conditions (4.2)--(4.3) are an
+   291	exact `R_1` threat map, not merely a list of possible nonreduced divisors.
+   292	
+   293	## 5. Constant repeated sections are impossible
+   294	
+   295	Let the repeated component have class `(0,1)`.  It is the constant section
+   296	with fibre value `q0=[r:s]`.  Repetition gives
+   297	
+   298	```text
+   299	Phi_2(r,s)=0,
+   300	```
+   301	
+   302	and the nonnormality condition (4.2) gives `Phi_1(r,s)=0`.  Therefore
+   303	
+   304	```text
+   305	Phi(r,s)=Phi_0(r,s) in C.                             (5.1)
+   306	```
+   307	
+   308	If this scalar is nonzero, the determinant criterion
+   309	
+   310	```text
+   311	det(t,t^2)=Phi(r,s),          t=r*z+s*w,
+   312	```
+   313	
+   314	makes `B/A` monogenic, contradicting the binding proper-block theorem.  If
+   315	the scalar is zero, the generic binary cubic has the fixed root `[r:s]` and
+   316	is reducible over `C(u,v)`, contradicting that `Frac(B)` is a field.  This
+   317	eliminates both constant-section rows in (4.3).
+   318	
+   319	## 6. A repeated vertical fibre is impossible
+   320	
+   321	Let `C` have class `(1,0)`, defined on `L_infinity` by a linear form
+   322	`ell(U,V)`.  Repetition and the total base degree two force
+   323	
+   324	```text
+   325	Phi_2=ell^2*P(X,Y).
+   326	```
+   327	
+   328	Condition (4.2), and the fact that `Phi_1` has base degree one, force
+   329	
+   330	```text
+   331	Phi_1=ell*Q(X,Y).
+   332	```
+   333	
+   334	Choose a complementary affine target coordinate `r` and put
+   335	`p=ell(u,v)`.  Then
+   336	
+   337	```text
+   338	Phi=p^2 P+p Q+R
+   339	```
+   340	
+   341	is independent of `r`.  Its multiplication table descends to a finite free
+   342	rank-three `C[p]`-algebra `D`, and
+   343	
+   344	```text
+   345	B=D[r].                                                (6.1)
+   346	```
+   347	
+   348	Since `B` is a normal domain, so is `D`.  Let `C1=Spec(D)` and let
+   349	`Cbar1` be its smooth projective completion.  The field identity
+   350	
+   351	```text
+   352	Frac(B)=C(Cbar1)(r)
+   353	```
+   354	
+   355	and the dominant first leg imply `g(Cbar1)=0`, by the same rational-surface
+   356	argument as in Section 3.  Dominance also injects units
+   357	
+   358	```text
+   359	B^* -> C[x,y]^*=C^*,
+   360	```
+   361	
+   362	so `D^*=C^*`.
+   363	
+   364	Because `D` is normal and finite over `C[p]`, it is the integral closure of
+   365	`C[p]` in its fraction field; `C1` is `Cbar1` with precisely the points over
+   366	`p=infinity` removed.  On `Cbar1=P1`, removal of two or more points produces
+   367	a nonconstant unit.  Thus exactly one point is removed, and
+   368	
+   369	```text
+   370	D=C[t],             p=P(t) with deg(P)=3.
+   371	```
+   372	
+   373	Equation (6.1) becomes
+   374	
+   375	```text
+   376	B=C[p,r][t],
+   377	```
+   378	
+   379	so `B/A` is monogenic, again contradicting the binding proper-block theorem.
+   380	This eliminates the vertical row of (4.3).
+   381	
+   382	## 7. The sole survivor and its discriminant drop
+   383	
+   384	Only `2(1,1)+(0,1)` remains.  An integral `(1,1)` component is cut out by
+   385	an irreducible bilinear form `Q`.  Unique factorization on
+   386	`P1 times P1`, (4.1), and (4.2) give
+   387	
+   388	```text
+   389	Phi_2=Q^2 L,          Phi_1=Q S,          Phi_0=R,
+   390	```
+   391	
+   392	with the bidegrees stated in (0.2).  This proves the asserted normal form.
+   393	
+   394	It also forces two top discriminant cancellations.  Scale a generic affine
+   395	target direction by `(u,v)->(lambda*u,lambda*v)`.  Over `C(u:v)`, use `Q`
+   396	and `L` as fibre coordinates `x,y`.  The cubic is
+   397	
+   398	```text
+   399	lambda^2*x^2*y
+   400	 +lambda*x*(s0*y^2+s1*x*y+s2*x^2)
+   401	 +(r0*y^3+r1*x*y^2+r2*x^2*y+r3*x^3).                 (7.1)
+   402	```
+   403	
+   404	On `y=1`, its coefficients from constant through cubic degree have
+   405	`lambda`-degrees at most
+   406	
+   407	```text
+   408	0, 1, 2, 1.
+   409	```
+   410	
+   411	Every term in the cubic discriminant
+   412	
+   413	```text
+   414	c1^2*c2^2 -4*c0*c2^3 -4*c1^3*c3
+   415	 -27*c0^2*c3^2 +18*c0*c1*c2*c3
+   416	```
+   417	
+   418	therefore has `lambda`-degree at most six.  A generic fibre-coordinate
+   419	change multiplies the discriminant only by a nonzero factor independent of
+   420	`lambda`.  Hence the intrinsic full affine target discriminant satisfies
+   421	
+   422	```text
+   423	deg(Delta)<=6.                                         (7.2)
+   424	```
+   425	
+   426	The degree-eight leading discriminant and its degree-seven first variation
+   427	both vanish.  This is a target-discriminant statement only.  It does not
+   428	make the cubic Galois, identify source ramification, or compute a different,
+   429	normalization index, or conductor.
+   430	
+   431	`DISC8-INDEX` remains one-way: (7.2) does not imply that an affine-linear
+   432	basis exists.  In fact `AL3-CLOSED` forbids such a basis in the hypothetical
+   433	proper-block scope, so the given quadratic basis is still degree-minimal.
+   434	
+   435	## 8. Coverage boundary and actionable successor
+   436	
+   437	The exact disposition is
+   438	
+   439	```text
+   440	affine exceptional divisorial nonnormality: killed by genus-two content cone;
+   441	constant repeated infinity section:          killed by unit/fixed-root split;
+   442	repeated vertical infinity fibre:            killed by ruled curve + units;
+   443	moving repeated (1,1) section:                survives in form (0.2);
+   444	normal singular quadratic incidence:         outside this packet;
+   445	change to a good quadratic basis:             no coverage theorem yet.
+   446	```
+   447	
+   448	The clean successor is now local and finite rather than a search over all
+   449	nonnormal hypersurfaces: normalize (0.2) along the double curve
+   450	`C={T=Q=0}` and compute its conductor boundary.  Blowing up the ideal
+   451	`(T,Q)` formally replaces `Q=T*W` by
+   452	
+   453	```text
+   454	W^2 L+W S+R=0.                                        (8.1)
+   455	```
+   456	
+   457	On `C isomorphic to P1`, the prospective conductor cover has quadratic
+   458	discriminant
+   459	
+   460	```text
+   461	(S|_C)^2-4*(L|_C)*(R|_C),
+   462	```
+   463	
+   464	a binary quartic.  Generically its connected double cover has genus one,
+   465	which would conflict with the promoted rational-boundary forest.  The next
+   466	packet should prove the normalization/blowup bridge, separate split,
+   467	two-branch, and square quartics, and feed the resulting attachments into
+   468	the forest theorem.  The genus-one observation is a **rigorous calculation
+   469	of the candidate local model but only a successor heuristic** until that
+   470	bridge and the identification with the resolved map boundary are proved.
+   471	
+   472	A parallel basis-coverage successor should classify degree-two
+   473	`GL_2(C[u,v])` orbit moves that preserve the coefficient cap and ask whether
+   474	one can leave (0.2) for a smooth or normal-singular compactification.  It
+   475	must retain the distinction between intrinsic `I_B,Delta,d_min` and the
+   476	presentation-dependent infinity divisor.  A small symbolic factor-stratum
+   477	calculation can discriminate cases, but finite-prefix or sampled data would
+   478	not prove orbit coverage.
+   479	
+   480	No finite-prefix evidence, formal arc data, heavy CAS output, map-level
+   481	construction, counterexample, or JC2 conclusion is claimed in this report.
+   482	
+   483	<!-- BODY-END -->
+   484	
+   485	## Seal
+   486	
+   487	- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+   488	  including its terminating newline; this seal is outside the body.
+   489	- Body bytes: `16427`.
+   490	- Body SHA-256:
+   491	  `36bb8913697d3ce1bd725beed0e2089b444db425ab038f77530b2020c738d34a`.
+   492	- Frozen basis: `145f96d65021ef364a5189c4ca385fe09d7b4f46`.
+
+codex
+The predecessor does leave the moving `(1,1)` double section as the only nonnormal quadratic frontier, and the affine-normality input is exactly what the squarefree step uses. I’m now consolidating the local algebra checks: the two blowup charts, conductor quotient, and the boundary attachment at `ell=0`.
+codex
+I have enough to write the review. The strongest result is promotable, but I’m going to mark it `CONFIRM_WITH_CORRECTIONS` because several statements need to be pinned to explicit local lemmas rather than left as prose shortcuts.
+exec
+/bin/zsh -lc "test -e xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md; printf '%s\\n' "'$?' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+1
+
+codex
+I’m creating only the requested review file under `xmodel`. I’m not touching producer inputs, scripts, dependencies, or any Lean-related path.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+diff --git a/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..d9035ccf3b11de65f83b01079718fc128815d6c5
+--- /dev/null
++++ b/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,453 @@
++# Hostile review: moving-double-section normalization and conductor
++
++Date: 2026-08-30 UTC
++Reviewer: GPT-5.5 xhigh hostile lane
++Review basis: `f43ee99da2bc9f831d94e403dcd90622e87e8756`
++
++## 0. Verdict
++
++`CONFIRM_WITH_CORRECTIONS`.
++
++The producer's main mathematical conclusion is safe to promote in the charged
++presentation scope: the remaining moving double `(1,1)` section has blowup
++normalization with conductor quotient `O_C(-2)`, hence irregular normalization,
++and it is incompatible with the dominant `A2` first leg.  I find no decisive
++counterexample and no open mathematical gap in the squarefree charged case.
++
++The corrections are real but local: several prose steps must be replaced by
++explicit two-chart lemmas so that promotion does not rely on generic conductor
++or tangent-cone language.  In particular the integration should spell out the
++`ell=0` chart, the derivative test for multiple quartic roots, the local
++conductor annihilator, and the exact open surface used for the forest
++obstruction.
++
++Inputs read and hash-checked:
++
++* Producer:
++  `9557f2c1396daba190927e6a220774362a02068b4197103357d30e8cfc78b75e`
++  `xmodel/bd-a2-moving-double-section-normalization-conductor-sol56-20260830.md`.
++* Section 0 charged block input:
++  `ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778`
++  `xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md`.
++* Section 0 charged nonnormal input:
++  `6b324824e0c075b938bd5b7015d4e8d134bad7cb845ac7597212b61d91dfa7a5`
++  `xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md`.
++* Later forest input needed for Section 7 audit:
++  `6a8558e42a67f1ec5c8bcf12321b6e6805b30a570eba17862c6e7e24cd631b08`
++  `xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md`.
++
++No new exit-price assertion is made here, so no `charge_basis` line is
++declared.
++
++## 1. Predecessor Scope and Exact Form
++
++Verdict: `CONFIRMED`.
++
++The predecessor really leaves only the moving repeated section:
++
++```text
++Phi^h = Q^2 L + T Q S + T^2 R,
++C = {T=Q=0},              [C]=(1,1),
++D_0 = {T=L=0},            [D_0]=(0,1).
++```
++
++This is exactly the survivor in the nonnormal quadratic-content packet, not a
++new classification made by the producer.  The same packet also charges affine
++normality of `X_aff`, integrality of the projective incidence, and the fact
++that all other repeated infinity patterns are already excluded.
++
++The transverse equation along `C` is literally homogeneous of normal degree
++two.  Locally choose a fibre coordinate `z` along `C` and use `(T,Q)` as normal
++coordinates.  Since `L,S,R` are constant binary forms in the fibre variables,
++they become functions of `z` alone.  Therefore
++
++```text
++F = ell(z) Q^2 + s(z) TQ + r(z) T^2
++```
++
++has no higher normal-degree terms.  This is stronger than saying the normal
++cone has that equation, and it is exactly what later conductor computations
++need.
++
++The assertion `ell,s,r` never vanish simultaneously is correct, but the final
++writeup should cite integrality/primitivity rather than the looser phrase
++"generic irreducibility."  If `ell(p)=0`, the corresponding fibre point is the
++unique zero of the binary linear form `L`.  If also `s(p)=r(p)=0`, then the
++binary forms `S` and `R` are divisible by `L`, so the whole cubic
++`Q^2L+TQS+T^2R` is divisible by `L`.  That contradicts the charged integral
++projective incidence.
++
++## 2. Discriminant and Squarefreeness
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++At the generic point of `C`, `ell` is a unit and the completed local equation
++is a binary quadratic over `C(C)`.  If
++
++```text
++delta_C = s^2 - 4 ell r
++```
++
++is zero, the equation is a square and the local hypersurface is generically
++nonreduced along `C`.  If `delta_C` is a nonzero square in `C(C)`, the equation
++splits into two linear factors and the local ring has zero divisors.  Both
++contradict integrality.  Thus `delta_C` is nonzero and nonsquare.
++
++The stronger squarefree step is also valid, but it needs the following explicit
++local proof in the promoted version.
++
++First, no multiple zero can occur over `ell=0`.  The section `ell` has one
++simple zero on `C ~= P1`.  If `s(p) != 0`, then `delta_C(p)=s(p)^2 != 0`.  If
++`s(p)=0`, the already-proved no-common-zero statement gives `r(p) != 0`, and
++with a local parameter `z=ell` one has
++
++```text
++delta_C = s^2 - 4 z r,
++```
++
++so the zero is simple.
++
++Every hypothetical multiple zero therefore lies where `ell` is a unit.  In the
++blowup chart `Q=T w`,
++
++```text
++G(z,w)=ell(z)w^2+s(z)w+r(z)
++```
++
++is independent of the radial parameter `T`.  At a double root
++`w_0=-s(z_0)/(2ell(z_0))`, the identities `G=G_w=0` hold.  Moreover
++
++```text
++delta_C'(z_0) = -4 ell(z_0) G_z(z_0,w_0).
++```
++
++Hence a multiple zero of `delta_C` is exactly a singular point of the plane
++curve `G=0`.  Since the surface equation is `G=0` times the free radial
++parameter, the strict transform has singular locus
++
++```text
++{(z_0,w_0)} x A1_T.
++```
++
++The part with `T != 0` is outside the exceptional divisor and maps
++isomorphically into `X_aff`.  That would put a codimension-one singular locus
++inside the charged normal affine incidence, impossible.  This proves
++squarefreeness.
++
++This argument also covers all quartic multiplicity rows.  Rows `2+2`, `4`, and
++`delta=0` are eliminated already by nonsquare/nonzero integrality.  Rows
++`2+1+1` and `3+1` have a multiple zero with `ell != 0`, so the exact product
++chart above makes the blowup nonnormal along a nonexceptional affine line.
++Only the `1+1+1+1` row survives.
++
++## 3. Blowup and Normalization
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The two blowup charts are correct:
++
++```text
++Q=T w:       w^2 L+wS+R=0,
++T=Q tau:     L+tau S+tau^2 R=0.
++```
++
++Over a point of `C`, the exceptional fibre is the length-two zero scheme of
++
++```text
++ell q^2+sqt+rt^2=0 in P1_[q:t].
++```
++
++Because `ell,s,r` never vanish together, no whole exceptional `P1` is contained
++in the strict transform.  Fibres over `X-C` are singletons and fibres over `C`
++are finite.  The map is proper, quasi-finite, and birational, hence finite.
++
++The normality proof is sound after making the codimension-one checks explicit.
++The strict transform is a Cartier hypersurface in the smooth blowup, so it is
++`S_2`.  Off the exceptional curve it is isomorphic to `X-C`; by the charged
++predecessor, the affine codimension-one points are normal and the residual
++infinity component is generically regular.  Along the exceptional curve, the
++squarefree discriminant makes the total conductor cover smooth.  In the
++`ell`-unit chart this is just `G(z,w)=0` times the radial parameter.  In the
++`ell=0` chart, take `z=ell`; the equation is
++
++```text
++z + tau s(z) + tau^2 r(z)=0,
++```
++
++after a unit rescaling, and its `z`-derivative is a unit at the exceptional
++point.  Thus branch fibres and the `ell=0` fibre are regular on the strict
++transform.
++
++There is no unhandled codimension-one singularity along the residual section
++`D`.  Away from `E`, the blowup is an isomorphism.  At `D cap E`, the same
++`ell=0` chart gives a smooth surface, with `D` given by `z=tau=0` and `E` by
++the radial coordinate zero together with the displayed equation.  Therefore
++the strict transform is `S_2` and `R_1`, hence normal, and the finite birational
++map is the normalization.
++
++Repair required: replace the sentence "Equations (1.4)--(1.5) make the
++relative quadratic curve smooth" by the two-chart argument above.  The fibres
++over branch points are not reduced as fibres of `E -> C`; what is smooth is
++the total curve `E` and the product surface along it.
++
++## 4. Conductor and Canonical Formula
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The conductor computation is correct and can be made fully local.  At a point
++of `C`, after an invertible linear change of the two normal parameters, write
++
++```text
++R = A[[t,q]]/(a q^2+b tq+c t^2),     a in A^*,
++S = A[[t]][w]/(a w^2+bw+c),          q=t w,
++```
++
++where `A=O_{C,p}`.  Then
++
++```text
++R = A[[t]] direct-sum A[[t]] q
++  = A[[t]] direct-sum A[[t]] t w
++subset
++S = A[[t]] direct-sum A[[t]] w.
++```
++
++Thus
++
++```text
++S/R ~= A w.
++```
++
++Multiplication by `t` kills this quotient because `tw=q in R`, and
++multiplication by `q` kills it because `qw=t w^2 in R`.  Conversely an element
++`f(t)+g(t)q` kills the class of `w` only if `f(0)=0`.  Hence the annihilator is
++exactly `(t,q)R`, i.e. downstairs the conductor is exactly `I_C=(T,Q)O_X`.
++After the same parameter change this also covers the `ell=0` and branch cases.
++
++Upstairs the extended conductor is `(t,q)S=tS` in the `Q=Tw` chart, and
++similarly the radial parameter ideal in the other chart.  Globally this is
++`O_Xnu(-E)`.
++
++The conductor square then gives
++
++```text
++0 -> O_X -> nu_*O_Xnu direct-sum O_C -> pi_*O_E -> 0.
++```
++
++For the finite flat double cover, trace splitting gives
++`pi_*O_E = O_C direct-sum M`.  Its discriminant is the quartic
++`delta_C in H^0(C,O_C(4))`, so `M^{-2}=O_C(4)`.  Since `C ~= P1`,
++`M=O_C(-2)`, and therefore
++
++```text
++nu_*O_Xnu/O_X = O_C(-2).
++```
++
++The canonical formula has the right sign and coefficient.  Since the center is
++a codimension-two smooth complete intersection in the smooth threefold,
++
++```text
++K_Bl = rho^*K_W + E_W,
++Xnu = rho^*X - 2E_W,
++```
++
++and adjunction gives
++
++```text
++K_Xnu = nu^*K_X - E,
++K_Xnu + E = nu^*K_X.
++```
++
++Repair required: state explicitly that the local normal-parameter change is
++allowed at every point because the quadratic form is never identically zero on
++an exceptional fibre.  Do not present the conductor as a generic calculation
++followed by extension.
++
++## 5. Cohomology and the First Leg
++
++Verdict: `CONFIRMED`.
++
++For `W=P2 x P1` and `X` of class `(2,3)`,
++
++```text
++0 -> O_W(-2,-3) -> O_W -> O_X -> 0
++```
++
++has `H^i(W,O_W(-2,-3))=0` in the degrees needed, because all cohomology of
++`O_P2(-2)` vanishes.  Hence
++
++```text
++H^1(X,O_X)=0,       H^2(X,O_X)=0.
++```
++
++Using the normalization quotient,
++
++```text
++0 -> O_X -> nu_*O_Xnu -> O_C(-2) -> 0
++```
++
++and `C ~= P1`, one obtains exactly
++
++```text
++h^1(Xnu,O_Xnu)=1,       h^2(Xnu,O_Xnu)=0.
++```
++
++For any resolution `r:Xtilde -> Xnu`, normality gives
++`r_*O_Xtilde=O_Xnu`, and the Leray edge map injects
++
++```text
++H^1(Xnu,O_Xnu) -> H^1(Xtilde,O_Xtilde).
++```
++
++Thus every resolution has `q >= 1`.
++
++The dominant first leg is properly typed after charging the block coordinator
++and the Stein/function-field identification: it gives a dominant rational map
++`A2 --> Xnu` with finite function-field degree.  Resolve indeterminacy from a
++projective rational surface and resolve the target.  The resulting morphism is
++generically finite and dominant.  Pullback of holomorphic one-forms is
++injective in characteristic zero, while the source is rational and has
++`q=0`.  Hence the target resolution must have `q=0`, contradicting the
++previous paragraph.
++
++Repair required: the promoted text should say "resolve indeterminacy of the
++rational first-leg map from a projective rational source" rather than only
++"compactify and resolve"; this prevents confusion with a morphism defined on
++all of `A2`.
++
++## 6. Forest Boundary and Attachments
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The forest obstruction is legitimately independent of the cohomology
++obstruction.  Take the smooth open target used by the first leg inside the
++resolved normalization over the affine target.  The conductor curve `E` lies
++over `T=0`, hence outside that open.  Since the normalization is smooth along
++`E`, every SNC completion/resolution contains the strict transform of `E` as a
++boundary component, possibly after blowing up points on it.  Its geometric
++genus remains one in the charged squarefree row.  The binding forest theorem
++forbids a positive-genus boundary component under a dominant rational
++`A2` first leg.
++
++The residual section attachment count is also correct.  Let `p0` be the unique
++point where `C` meets `D0`, equivalently the unique zero of `ell=L|_C`.  In
++exceptional coordinates `[Q:T]`, the fibre equation is
++
++```text
++T(s(p0)Q+r(p0)T)=0.
++```
++
++The strict transform of `D0` approaches the direction `[Q:T]=[1:0]`, because
++on `D0` one has `T=0` and, away from `p0`, `Q != 0`.  If `s(p0) != 0`, the
++conductor cover is unramified over `p0` and has two points, but `D` meets only
++the `[1:0]` point.  If `s(p0)=0`, then `r(p0) != 0`, the fibre is ramified,
++and `D` meets the unique branch point.  Thus there is exactly one physical
++attachment in both cases.
++
++Repair required: define the open `U` used for the forest theorem before
++claiming monotonicity under shrinking.  The argument is valid because the
++generic first-leg image lies over `T != 0` and the charged block input already
++keeps it in the smooth affine target away from the missed branch/singular
++locus.
++
++## 7. Degenerate Quartic Threat Map
++
++Verdict: `CONFIRMED`.
++
++The degenerate rows are correctly separated from the charged surface
++normalization.  A nonsquare quartic of type `2+1+1` gives an integral nodal
++conductor curve with normalization `P1`; type `3+1` gives a cuspidal conductor
++curve with normalization `P1`.  In both cases the exact product chart makes
++the blowup fail `R_1` along a radial line meeting the affine incidence, so
++affine normality eliminates them before any boundary-forest argument is used.
++
++The split rows `2+2` and `4` are excluded by generic reducibility of the
++normal quadratic, not by curve genus.  The row `delta=0` is excluded by
++generic nonreducedness.  The producer does not rely on the false shortcut that
++a nodal or cuspidal first blowup is already normal, and it does not use
++arithmetic genus alone to close the surface normalization problem.
++
++One small wording repair: in the threat map, keep saying "curve-theoretic
++pre-normalization contribution" for `tau(E union D)` in degenerate rows.  The
++actual surface normalization would introduce further conductor and exceptional
++data, so those rows must not be recycled as completed surface cases.
++
++## 8. Maximum Theorem Safe to Promote
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The safe theorem is the following presentation-scoped statement.
++
++Assume the charged proper-block first leg and the charged nonnormal quadratic
++presentation packet.  In the surviving fixed quadratic trace-zero
++presentation
++
++```text
++X = V(Q^2L+TQS+T^2R) subset P2 x P1,
++C=(T,Q),        [C]=(1,1),
++```
++
++with `X_aff` normal and `X` integral, the discriminant
++`delta_C=(S|_C)^2-4(L|_C)(R|_C)` is nonzero, nonsquare, and squarefree.  The
++strict transform of `X` in `Bl_C(P2 x P1)` is the finite normalization.  The
++downstairs conductor is `(T,Q)O_X`, the upstairs conductor is `O_Xnu(-E)`, the
++conductor cover is a smooth connected genus-one double cover of `C`, and
++
++```text
++pi_*O_E = O_C direct-sum O_C(-2),
++nu_*O_Xnu/O_X = O_C(-2),
++K_Xnu + E = nu^*K_X,
++h^1(Xnu,O_Xnu)=1,
++h^2(Xnu,O_Xnu)=0.
++```
++
++Consequently every resolution of `Xnu` has positive irregularity, while the
++dominant rational `A2` first leg would force irregularity zero.  Equivalently,
++the genus-one conductor is also a forbidden boundary component under the
++charged rational-forest theorem.  Therefore this moving-double-section
++nonnormal quadratic presentation cannot occur in a proper cubic block.
++
++This does not promote any of the following:
++
++* arbitrary quadratic-basis coverage;
++* invariance of the infinity divisor under all basis changes;
++* the normal-singular/ADE quadratic incidence lane;
++* existence of a polynomial map or a counterexample;
++* any source different, full affine target discriminant, finite-prefix, formal
++  arc, or JC2 conclusion.
++
++## 9. Precise Repairs
++
++Before promotion, make these textual repairs in the integration:
++
++1. Replace "contrary to generic irreducibility" in the no-common-zero argument
++   by "contrary to the charged integrality of the primitive projective
++   incidence."
++2. Insert the identity
++   `delta_C'(z0)=-4 ell(z0) G_z(z0,w0)` in the squarefree proof and explicitly
++   state that the product with the radial parameter gives a codimension-one
++   singular locus.
++3. Add the `ell=0` chart:
++   `z + tau s(z) + tau^2 r(z)=0`, with unit `z`-derivative, covering both the
++   unramified and ramified fibre over `D cap C`.
++4. State that branch fibres of `E -> C` are nonreduced as fibres but the total
++   curve `E` and the strict transform surface are smooth there.
++5. Replace the conductor prose by the local module calculation
++   `R=A[[t]]+A[[t]]tw subset S=A[[t]]+A[[t]]w`, whose quotient is `A w` and
++   whose annihilator is exactly `(t,q)`.
++6. Define the open surface used in the forest theorem as the smooth resolved
++   first-leg target over `T != 0`, with any missed affine branch/singular locus
++   removed.
++
++## 10. Cheapest Decisive Successor
++
++The cheapest immediate successor is a correction-only coordinator integration,
++not a new computation: insert the six repairs above and promote
++`MOVING-DOUBLE-Q2-CLOSED` exactly in the fixed-presentation scope.  No CAS,
++Singular, finite-prefix search, or Lean work is needed.
++
++After that, the next mathematical successor is the separate normal-singular
++quadratic packet: classify the ADE-decorated `D9` boundary/different cases.
++Keep the basis-orbit coverage problem separate, because this review confirms
++only that any basis already producing the nonnormal moving-double-section form
++is impossible.
++<!-- BODY-END -->
+
+diff --git a/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..d9035ccf3b11de65f83b01079718fc128815d6c5
+--- /dev/null
++++ b/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,453 @@
++# Hostile review: moving-double-section normalization and conductor
++
++Date: 2026-08-30 UTC
++Reviewer: GPT-5.5 xhigh hostile lane
++Review basis: `f43ee99da2bc9f831d94e403dcd90622e87e8756`
++
++## 0. Verdict
++
++`CONFIRM_WITH_CORRECTIONS`.
++
++The producer's main mathematical conclusion is safe to promote in the charged
++presentation scope: the remaining moving double `(1,1)` section has blowup
++normalization with conductor quotient `O_C(-2)`, hence irregular normalization,
++and it is incompatible with the dominant `A2` first leg.  I find no decisive
++counterexample and no open mathematical gap in the squarefree charged case.
++
++The corrections are real but local: several prose steps must be replaced by
++explicit two-chart lemmas so that promotion does not rely on generic conductor
++or tangent-cone language.  In particular the integration should spell out the
++`ell=0` chart, the derivative test for multiple quartic roots, the local
++conductor annihilator, and the exact open surface used for the forest
++obstruction.
++
++Inputs read and hash-checked:
++
++* Producer:
++  `9557f2c1396daba190927e6a220774362a02068b4197103357d30e8cfc78b75e`
++  `xmodel/bd-a2-moving-double-section-normalization-conductor-sol56-20260830.md`.
++* Section 0 charged block input:
++  `ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778`
++  `xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md`.
++* Section 0 charged nonnormal input:
++  `6b324824e0c075b938bd5b7015d4e8d134bad7cb845ac7597212b61d91dfa7a5`
++  `xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md`.
++* Later forest input needed for Section 7 audit:
++  `6a8558e42a67f1ec5c8bcf12321b6e6805b30a570eba17862c6e7e24cd631b08`
++  `xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md`.
++
++No new exit-price assertion is made here, so no `charge_basis` line is
++declared.
++
++## 1. Predecessor Scope and Exact Form
++
++Verdict: `CONFIRMED`.
++
++The predecessor really leaves only the moving repeated section:
++
++```text
++Phi^h = Q^2 L + T Q S + T^2 R,
++C = {T=Q=0},              [C]=(1,1),
++D_0 = {T=L=0},            [D_0]=(0,1).
++```
++
++This is exactly the survivor in the nonnormal quadratic-content packet, not a
++new classification made by the producer.  The same packet also charges affine
++normality of `X_aff`, integrality of the projective incidence, and the fact
++that all other repeated infinity patterns are already excluded.
++
++The transverse equation along `C` is literally homogeneous of normal degree
++two.  Locally choose a fibre coordinate `z` along `C` and use `(T,Q)` as normal
++coordinates.  Since `L,S,R` are constant binary forms in the fibre variables,
++they become functions of `z` alone.  Therefore
++
++```text
++F = ell(z) Q^2 + s(z) TQ + r(z) T^2
++```
++
++has no higher normal-degree terms.  This is stronger than saying the normal
++cone has that equation, and it is exactly what later conductor computations
++need.
++
++The assertion `ell,s,r` never vanish simultaneously is correct, but the final
++writeup should cite integrality/primitivity rather than the looser phrase
++"generic irreducibility."  If `ell(p)=0`, the corresponding fibre point is the
++unique zero of the binary linear form `L`.  If also `s(p)=r(p)=0`, then the
++binary forms `S` and `R` are divisible by `L`, so the whole cubic
++`Q^2L+TQS+T^2R` is divisible by `L`.  That contradicts the charged integral
++projective incidence.
++
++## 2. Discriminant and Squarefreeness
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++At the generic point of `C`, `ell` is a unit and the completed local equation
++is a binary quadratic over `C(C)`.  If
++
++```text
++delta_C = s^2 - 4 ell r
++```
++
++is zero, the equation is a square and the local hypersurface is generically
++nonreduced along `C`.  If `delta_C` is a nonzero square in `C(C)`, the equation
++splits into two linear factors and the local ring has zero divisors.  Both
++contradict integrality.  Thus `delta_C` is nonzero and nonsquare.
++
++The stronger squarefree step is also valid, but it needs the following explicit
++local proof in the promoted version.
++
++First, no multiple zero can occur over `ell=0`.  The section `ell` has one
++simple zero on `C ~= P1`.  If `s(p) != 0`, then `delta_C(p)=s(p)^2 != 0`.  If
++`s(p)=0`, the already-proved no-common-zero statement gives `r(p) != 0`, and
++with a local parameter `z=ell` one has
++
++```text
++delta_C = s^2 - 4 z r,
++```
++
++so the zero is simple.
++
++Every hypothetical multiple zero therefore lies where `ell` is a unit.  In the
++blowup chart `Q=T w`,
++
++```text
++G(z,w)=ell(z)w^2+s(z)w+r(z)
++```
++
++is independent of the radial parameter `T`.  At a double root
++`w_0=-s(z_0)/(2ell(z_0))`, the identities `G=G_w=0` hold.  Moreover
++
++```text
++delta_C'(z_0) = -4 ell(z_0) G_z(z_0,w_0).
++```
++
++Hence a multiple zero of `delta_C` is exactly a singular point of the plane
++curve `G=0`.  Since the surface equation is `G=0` times the free radial
++parameter, the strict transform has singular locus
++
++```text
++{(z_0,w_0)} x A1_T.
++```
++
++The part with `T != 0` is outside the exceptional divisor and maps
++isomorphically into `X_aff`.  That would put a codimension-one singular locus
++inside the charged normal affine incidence, impossible.  This proves
++squarefreeness.
++
++This argument also covers all quartic multiplicity rows.  Rows `2+2`, `4`, and
++`delta=0` are eliminated already by nonsquare/nonzero integrality.  Rows
++`2+1+1` and `3+1` have a multiple zero with `ell != 0`, so the exact product
++chart above makes the blowup nonnormal along a nonexceptional affine line.
++Only the `1+1+1+1` row survives.
++
++## 3. Blowup and Normalization
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The two blowup charts are correct:
++
++```text
++Q=T w:       w^2 L+wS+R=0,
++T=Q tau:     L+tau S+tau^2 R=0.
++```
++
++Over a point of `C`, the exceptional fibre is the length-two zero scheme of
++
++```text
++ell q^2+sqt+rt^2=0 in P1_[q:t].
++```
++
++Because `ell,s,r` never vanish together, no whole exceptional `P1` is contained
++in the strict transform.  Fibres over `X-C` are singletons and fibres over `C`
++are finite.  The map is proper, quasi-finite, and birational, hence finite.
++
++The normality proof is sound after making the codimension-one checks explicit.
++The strict transform is a Cartier hypersurface in the smooth blowup, so it is
++`S_2`.  Off the exceptional curve it is isomorphic to `X-C`; by the charged
++predecessor, the affine codimension-one points are normal and the residual
++infinity component is generically regular.  Along the exceptional curve, the
++squarefree discriminant makes the total conductor cover smooth.  In the
++`ell`-unit chart this is just `G(z,w)=0` times the radial parameter.  In the
++`ell=0` chart, take `z=ell`; the equation is
++
++```text
++z + tau s(z) + tau^2 r(z)=0,
++```
++
++after a unit rescaling, and its `z`-derivative is a unit at the exceptional
++point.  Thus branch fibres and the `ell=0` fibre are regular on the strict
++transform.
++
++There is no unhandled codimension-one singularity along the residual section
++`D`.  Away from `E`, the blowup is an isomorphism.  At `D cap E`, the same
++`ell=0` chart gives a smooth surface, with `D` given by `z=tau=0` and `E` by
++the radial coordinate zero together with the displayed equation.  Therefore
++the strict transform is `S_2` and `R_1`, hence normal, and the finite birational
++map is the normalization.
++
++Repair required: replace the sentence "Equations (1.4)--(1.5) make the
++relative quadratic curve smooth" by the two-chart argument above.  The fibres
++over branch points are not reduced as fibres of `E -> C`; what is smooth is
++the total curve `E` and the product surface along it.
++
++## 4. Conductor and Canonical Formula
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The conductor computation is correct and can be made fully local.  At a point
++of `C`, after an invertible linear change of the two normal parameters, write
++
++```text
++R = A[[t,q]]/(a q^2+b tq+c t^2),     a in A^*,
++S = A[[t]][w]/(a w^2+bw+c),          q=t w,
++```
++
++where `A=O_{C,p}`.  Then
++
++```text
++R = A[[t]] direct-sum A[[t]] q
++  = A[[t]] direct-sum A[[t]] t w
++subset
++S = A[[t]] direct-sum A[[t]] w.
++```
++
++Thus
++
++```text
++S/R ~= A w.
++```
++
++Multiplication by `t` kills this quotient because `tw=q in R`, and
++multiplication by `q` kills it because `qw=t w^2 in R`.  Conversely an element
++`f(t)+g(t)q` kills the class of `w` only if `f(0)=0`.  Hence the annihilator is
++exactly `(t,q)R`, i.e. downstairs the conductor is exactly `I_C=(T,Q)O_X`.
++After the same parameter change this also covers the `ell=0` and branch cases.
++
++Upstairs the extended conductor is `(t,q)S=tS` in the `Q=Tw` chart, and
++similarly the radial parameter ideal in the other chart.  Globally this is
++`O_Xnu(-E)`.
++
++The conductor square then gives
++
++```text
++0 -> O_X -> nu_*O_Xnu direct-sum O_C -> pi_*O_E -> 0.
++```
++
++For the finite flat double cover, trace splitting gives
++`pi_*O_E = O_C direct-sum M`.  Its discriminant is the quartic
++`delta_C in H^0(C,O_C(4))`, so `M^{-2}=O_C(4)`.  Since `C ~= P1`,
++`M=O_C(-2)`, and therefore
++
++```text
++nu_*O_Xnu/O_X = O_C(-2).
++```
++
++The canonical formula has the right sign and coefficient.  Since the center is
++a codimension-two smooth complete intersection in the smooth threefold,
++
++```text
++K_Bl = rho^*K_W + E_W,
++Xnu = rho^*X - 2E_W,
++```
++
++and adjunction gives
++
++```text
++K_Xnu = nu^*K_X - E,
++K_Xnu + E = nu^*K_X.
++```
++
++Repair required: state explicitly that the local normal-parameter change is
++allowed at every point because the quadratic form is never identically zero on
++an exceptional fibre.  Do not present the conductor as a generic calculation
++followed by extension.
++
++## 5. Cohomology and the First Leg
++
++Verdict: `CONFIRMED`.
++
++For `W=P2 x P1` and `X` of class `(2,3)`,
++
++```text
++0 -> O_W(-2,-3) -> O_W -> O_X -> 0
++```
++
++has `H^i(W,O_W(-2,-3))=0` in the degrees needed, because all cohomology of
++`O_P2(-2)` vanishes.  Hence
++
++```text
++H^1(X,O_X)=0,       H^2(X,O_X)=0.
++```
++
++Using the normalization quotient,
++
++```text
++0 -> O_X -> nu_*O_Xnu -> O_C(-2) -> 0
++```
++
++and `C ~= P1`, one obtains exactly
++
++```text
++h^1(Xnu,O_Xnu)=1,       h^2(Xnu,O_Xnu)=0.
++```
++
++For any resolution `r:Xtilde -> Xnu`, normality gives
++`r_*O_Xtilde=O_Xnu`, and the Leray edge map injects
++
++```text
++H^1(Xnu,O_Xnu) -> H^1(Xtilde,O_Xtilde).
++```
++
++Thus every resolution has `q >= 1`.
++
++The dominant first leg is properly typed after charging the block coordinator
++and the Stein/function-field identification: it gives a dominant rational map
++`A2 --> Xnu` with finite function-field degree.  Resolve indeterminacy from a
++projective rational surface and resolve the target.  The resulting morphism is
++generically finite and dominant.  Pullback of holomorphic one-forms is
++injective in characteristic zero, while the source is rational and has
++`q=0`.  Hence the target resolution must have `q=0`, contradicting the
++previous paragraph.
++
++Repair required: the promoted text should say "resolve indeterminacy of the
++rational first-leg map from a projective rational source" rather than only
++"compactify and resolve"; this prevents confusion with a morphism defined on
++all of `A2`.
++
++## 6. Forest Boundary and Attachments
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The forest obstruction is legitimately independent of the cohomology
++obstruction.  Take the smooth open target used by the first leg inside the
++resolved normalization over the affine target.  The conductor curve `E` lies
++over `T=0`, hence outside that open.  Since the normalization is smooth along
++`E`, every SNC completion/resolution contains the strict transform of `E` as a
++boundary component, possibly after blowing up points on it.  Its geometric
++genus remains one in the charged squarefree row.  The binding forest theorem
++forbids a positive-genus boundary component under a dominant rational
++`A2` first leg.
++
++The residual section attachment count is also correct.  Let `p0` be the unique
++point where `C` meets `D0`, equivalently the unique zero of `ell=L|_C`.  In
++exceptional coordinates `[Q:T]`, the fibre equation is
++
++```text
++T(s(p0)Q+r(p0)T)=0.
++```
++
++The strict transform of `D0` approaches the direction `[Q:T]=[1:0]`, because
++on `D0` one has `T=0` and, away from `p0`, `Q != 0`.  If `s(p0) != 0`, the
++conductor cover is unramified over `p0` and has two points, but `D` meets only
++the `[1:0]` point.  If `s(p0)=0`, then `r(p0) != 0`, the fibre is ramified,
++and `D` meets the unique branch point.  Thus there is exactly one physical
++attachment in both cases.
++
++Repair required: define the open `U` used for the forest theorem before
++claiming monotonicity under shrinking.  The argument is valid because the
++generic first-leg image lies over `T != 0` and the charged block input already
++keeps it in the smooth affine target away from the missed branch/singular
++locus.
++
++## 7. Degenerate Quartic Threat Map
++
++Verdict: `CONFIRMED`.
++
++The degenerate rows are correctly separated from the charged surface
++normalization.  A nonsquare quartic of type `2+1+1` gives an integral nodal
++conductor curve with normalization `P1`; type `3+1` gives a cuspidal conductor
++curve with normalization `P1`.  In both cases the exact product chart makes
++the blowup fail `R_1` along a radial line meeting the affine incidence, so
++affine normality eliminates them before any boundary-forest argument is used.
++
++The split rows `2+2` and `4` are excluded by generic reducibility of the
++normal quadratic, not by curve genus.  The row `delta=0` is excluded by
++generic nonreducedness.  The producer does not rely on the false shortcut that
++a nodal or cuspidal first blowup is already normal, and it does not use
++arithmetic genus alone to close the surface normalization problem.
++
++One small wording repair: in the threat map, keep saying "curve-theoretic
++pre-normalization contribution" for `tau(E union D)` in degenerate rows.  The
++actual surface normalization would introduce further conductor and exceptional
++data, so those rows must not be recycled as completed surface cases.
++
++## 8. Maximum Theorem Safe to Promote
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The safe theorem is the following presentation-scoped statement.
++
++Assume the charged proper-block first leg and the charged nonnormal quadratic
++presentation packet.  In the surviving fixed quadratic trace-zero
++presentation
++
++```text
++X = V(Q^2L+TQS+T^2R) subset P2 x P1,
++C=(T,Q),        [C]=(1,1),
++```
++
++with `X_aff` normal and `X` integral, the discriminant
++`delta_C=(S|_C)^2-4(L|_C)(R|_C)` is nonzero, nonsquare, and squarefree.  The
++strict transform of `X` in `Bl_C(P2 x P1)` is the finite normalization.  The
++downstairs conductor is `(T,Q)O_X`, the upstairs conductor is `O_Xnu(-E)`, the
++conductor cover is a smooth connected genus-one double cover of `C`, and
++
++```text
++pi_*O_E = O_C direct-sum O_C(-2),
++nu_*O_Xnu/O_X = O_C(-2),
++K_Xnu + E = nu^*K_X,
++h^1(Xnu,O_Xnu)=1,
++h^2(Xnu,O_Xnu)=0.
++```
++
++Consequently every resolution of `Xnu` has positive irregularity, while the
++dominant rational `A2` first leg would force irregularity zero.  Equivalently,
++the genus-one conductor is also a forbidden boundary component under the
++charged rational-forest theorem.  Therefore this moving-double-section
++nonnormal quadratic presentation cannot occur in a proper cubic block.
++
++This does not promote any of the following:
++
++* arbitrary quadratic-basis coverage;
++* invariance of the infinity divisor under all basis changes;
++* the normal-singular/ADE quadratic incidence lane;
++* existence of a polynomial map or a counterexample;
++* any source different, full affine target discriminant, finite-prefix, formal
++  arc, or JC2 conclusion.
++
++## 9. Precise Repairs
++
++Before promotion, make these textual repairs in the integration:
++
++1. Replace "contrary to generic irreducibility" in the no-common-zero argument
++   by "contrary to the charged integrality of the primitive projective
++   incidence."
++2. Insert the identity
++   `delta_C'(z0)=-4 ell(z0) G_z(z0,w0)` in the squarefree proof and explicitly
++   state that the product with the radial parameter gives a codimension-one
++   singular locus.
++3. Add the `ell=0` chart:
++   `z + tau s(z) + tau^2 r(z)=0`, with unit `z`-derivative, covering both the
++   unramified and ramified fibre over `D cap C`.
++4. State that branch fibres of `E -> C` are nonreduced as fibres but the total
++   curve `E` and the strict transform surface are smooth there.
++5. Replace the conductor prose by the local module calculation
++   `R=A[[t]]+A[[t]]tw subset S=A[[t]]+A[[t]]w`, whose quotient is `A w` and
++   whose annihilator is exactly `(t,q)`.
++6. Define the open surface used in the forest theorem as the smooth resolved
++   first-leg target over `T != 0`, with any missed affine branch/singular locus
++   removed.
++
++## 10. Cheapest Decisive Successor
++
++The cheapest immediate successor is a correction-only coordinator integration,
++not a new computation: insert the six repairs above and promote
++`MOVING-DOUBLE-Q2-CLOSED` exactly in the fixed-presentation scope.  No CAS,
++Singular, finite-prefix search, or Lean work is needed.
++
++After that, the next mathematical successor is the separate normal-singular
++quadratic packet: classify the ADE-decorated `D9` boundary/different cases.
++Keep the basis-orbit coverage problem separate, because this review confirms
++only that any basis already producing the nonnormal moving-double-section form
++is impossible.
++<!-- BODY-END -->
+
+codex
+The report is written. I’m doing a narrow verification of the generated file only: size cap, final marker, and absence of a seal block.
+exec
+/bin/zsh -lc 'wc -c xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   17071 xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+
+exec
+/bin/zsh -lc 'tail -n 5 xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+quadratic packet: classify the ADE-decorated `D9` boundary/different cases.
+Keep the basis-orbit coverage problem separate, because this review confirms
+only that any basis already producing the nonnormal moving-double-section form
+is impossible.
+<!-- BODY-END -->
+
+exec
+/bin/zsh -lc 'rg -n "''^## Seal|BODY-END|charge_basis" xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+39:No new exit-price assertion is made here, so no `charge_basis` line is
+453:<!-- BODY-END -->
+
+diff --git a/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..d9035ccf3b11de65f83b01079718fc128815d6c5
+--- /dev/null
++++ b/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,453 @@
++# Hostile review: moving-double-section normalization and conductor
++
++Date: 2026-08-30 UTC
++Reviewer: GPT-5.5 xhigh hostile lane
++Review basis: `f43ee99da2bc9f831d94e403dcd90622e87e8756`
++
++## 0. Verdict
++
++`CONFIRM_WITH_CORRECTIONS`.
++
++The producer's main mathematical conclusion is safe to promote in the charged
++presentation scope: the remaining moving double `(1,1)` section has blowup
++normalization with conductor quotient `O_C(-2)`, hence irregular normalization,
++and it is incompatible with the dominant `A2` first leg.  I find no decisive
++counterexample and no open mathematical gap in the squarefree charged case.
++
++The corrections are real but local: several prose steps must be replaced by
++explicit two-chart lemmas so that promotion does not rely on generic conductor
++or tangent-cone language.  In particular the integration should spell out the
++`ell=0` chart, the derivative test for multiple quartic roots, the local
++conductor annihilator, and the exact open surface used for the forest
++obstruction.
++
++Inputs read and hash-checked:
++
++* Producer:
++  `9557f2c1396daba190927e6a220774362a02068b4197103357d30e8cfc78b75e`
++  `xmodel/bd-a2-moving-double-section-normalization-conductor-sol56-20260830.md`.
++* Section 0 charged block input:
++  `ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778`
++  `xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md`.
++* Section 0 charged nonnormal input:
++  `6b324824e0c075b938bd5b7015d4e8d134bad7cb845ac7597212b61d91dfa7a5`
++  `xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md`.
++* Later forest input needed for Section 7 audit:
++  `6a8558e42a67f1ec5c8bcf12321b6e6805b30a570eba17862c6e7e24cd631b08`
++  `xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md`.
++
++No new exit-price assertion is made here, so no `charge_basis` line is
++declared.
++
++## 1. Predecessor Scope and Exact Form
++
++Verdict: `CONFIRMED`.
++
++The predecessor really leaves only the moving repeated section:
++
++```text
++Phi^h = Q^2 L + T Q S + T^2 R,
++C = {T=Q=0},              [C]=(1,1),
++D_0 = {T=L=0},            [D_0]=(0,1).
++```
++
++This is exactly the survivor in the nonnormal quadratic-content packet, not a
++new classification made by the producer.  The same packet also charges affine
++normality of `X_aff`, integrality of the projective incidence, and the fact
++that all other repeated infinity patterns are already excluded.
++
++The transverse equation along `C` is literally homogeneous of normal degree
++two.  Locally choose a fibre coordinate `z` along `C` and use `(T,Q)` as normal
++coordinates.  Since `L,S,R` are constant binary forms in the fibre variables,
++they become functions of `z` alone.  Therefore
++
++```text
++F = ell(z) Q^2 + s(z) TQ + r(z) T^2
++```
++
++has no higher normal-degree terms.  This is stronger than saying the normal
++cone has that equation, and it is exactly what later conductor computations
++need.
++
++The assertion `ell,s,r` never vanish simultaneously is correct, but the final
++writeup should cite integrality/primitivity rather than the looser phrase
++"generic irreducibility."  If `ell(p)=0`, the corresponding fibre point is the
++unique zero of the binary linear form `L`.  If also `s(p)=r(p)=0`, then the
++binary forms `S` and `R` are divisible by `L`, so the whole cubic
++`Q^2L+TQS+T^2R` is divisible by `L`.  That contradicts the charged integral
++projective incidence.
++
++## 2. Discriminant and Squarefreeness
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++At the generic point of `C`, `ell` is a unit and the completed local equation
++is a binary quadratic over `C(C)`.  If
++
++```text
++delta_C = s^2 - 4 ell r
++```
++
++is zero, the equation is a square and the local hypersurface is generically
++nonreduced along `C`.  If `delta_C` is a nonzero square in `C(C)`, the equation
++splits into two linear factors and the local ring has zero divisors.  Both
++contradict integrality.  Thus `delta_C` is nonzero and nonsquare.
++
++The stronger squarefree step is also valid, but it needs the following explicit
++local proof in the promoted version.
++
++First, no multiple zero can occur over `ell=0`.  The section `ell` has one
++simple zero on `C ~= P1`.  If `s(p) != 0`, then `delta_C(p)=s(p)^2 != 0`.  If
++`s(p)=0`, the already-proved no-common-zero statement gives `r(p) != 0`, and
++with a local parameter `z=ell` one has
++
++```text
++delta_C = s^2 - 4 z r,
++```
++
++so the zero is simple.
++
++Every hypothetical multiple zero therefore lies where `ell` is a unit.  In the
++blowup chart `Q=T w`,
++
++```text
++G(z,w)=ell(z)w^2+s(z)w+r(z)
++```
++
++is independent of the radial parameter `T`.  At a double root
++`w_0=-s(z_0)/(2ell(z_0))`, the identities `G=G_w=0` hold.  Moreover
++
++```text
++delta_C'(z_0) = -4 ell(z_0) G_z(z_0,w_0).
++```
++
++Hence a multiple zero of `delta_C` is exactly a singular point of the plane
++curve `G=0`.  Since the surface equation is `G=0` times the free radial
++parameter, the strict transform has singular locus
++
++```text
++{(z_0,w_0)} x A1_T.
++```
++
++The part with `T != 0` is outside the exceptional divisor and maps
++isomorphically into `X_aff`.  That would put a codimension-one singular locus
++inside the charged normal affine incidence, impossible.  This proves
++squarefreeness.
++
++This argument also covers all quartic multiplicity rows.  Rows `2+2`, `4`, and
++`delta=0` are eliminated already by nonsquare/nonzero integrality.  Rows
++`2+1+1` and `3+1` have a multiple zero with `ell != 0`, so the exact product
++chart above makes the blowup nonnormal along a nonexceptional affine line.
++Only the `1+1+1+1` row survives.
++
++## 3. Blowup and Normalization
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The two blowup charts are correct:
++
++```text
++Q=T w:       w^2 L+wS+R=0,
++T=Q tau:     L+tau S+tau^2 R=0.
++```
++
++Over a point of `C`, the exceptional fibre is the length-two zero scheme of
++
++```text
++ell q^2+sqt+rt^2=0 in P1_[q:t].
++```
++
++Because `ell,s,r` never vanish together, no whole exceptional `P1` is contained
++in the strict transform.  Fibres over `X-C` are singletons and fibres over `C`
++are finite.  The map is proper, quasi-finite, and birational, hence finite.
++
++The normality proof is sound after making the codimension-one checks explicit.
++The strict transform is a Cartier hypersurface in the smooth blowup, so it is
++`S_2`.  Off the exceptional curve it is isomorphic to `X-C`; by the charged
++predecessor, the affine codimension-one points are normal and the residual
++infinity component is generically regular.  Along the exceptional curve, the
++squarefree discriminant makes the total conductor cover smooth.  In the
++`ell`-unit chart this is just `G(z,w)=0` times the radial parameter.  In the
++`ell=0` chart, take `z=ell`; the equation is
++
++```text
++z + tau s(z) + tau^2 r(z)=0,
++```
++
++after a unit rescaling, and its `z`-derivative is a unit at the exceptional
++point.  Thus branch fibres and the `ell=0` fibre are regular on the strict
++transform.
++
++There is no unhandled codimension-one singularity along the residual section
++`D`.  Away from `E`, the blowup is an isomorphism.  At `D cap E`, the same
++`ell=0` chart gives a smooth surface, with `D` given by `z=tau=0` and `E` by
++the radial coordinate zero together with the displayed equation.  Therefore
++the strict transform is `S_2` and `R_1`, hence normal, and the finite birational
++map is the normalization.
++
++Repair required: replace the sentence "Equations (1.4)--(1.5) make the
++relative quadratic curve smooth" by the two-chart argument above.  The fibres
++over branch points are not reduced as fibres of `E -> C`; what is smooth is
++the total curve `E` and the product surface along it.
++
++## 4. Conductor and Canonical Formula
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The conductor computation is correct and can be made fully local.  At a point
++of `C`, after an invertible linear change of the two normal parameters, write
++
++```text
++R = A[[t,q]]/(a q^2+b tq+c t^2),     a in A^*,
++S = A[[t]][w]/(a w^2+bw+c),          q=t w,
++```
++
++where `A=O_{C,p}`.  Then
++
++```text
++R = A[[t]] direct-sum A[[t]] q
++  = A[[t]] direct-sum A[[t]] t w
++subset
++S = A[[t]] direct-sum A[[t]] w.
++```
++
++Thus
++
++```text
++S/R ~= A w.
++```
++
++Multiplication by `t` kills this quotient because `tw=q in R`, and
++multiplication by `q` kills it because `qw=t w^2 in R`.  Conversely an element
++`f(t)+g(t)q` kills the class of `w` only if `f(0)=0`.  Hence the annihilator is
++exactly `(t,q)R`, i.e. downstairs the conductor is exactly `I_C=(T,Q)O_X`.
++After the same parameter change this also covers the `ell=0` and branch cases.
++
++Upstairs the extended conductor is `(t,q)S=tS` in the `Q=Tw` chart, and
++similarly the radial parameter ideal in the other chart.  Globally this is
++`O_Xnu(-E)`.
++
++The conductor square then gives
++
++```text
++0 -> O_X -> nu_*O_Xnu direct-sum O_C -> pi_*O_E -> 0.
++```
++
++For the finite flat double cover, trace splitting gives
++`pi_*O_E = O_C direct-sum M`.  Its discriminant is the quartic
++`delta_C in H^0(C,O_C(4))`, so `M^{-2}=O_C(4)`.  Since `C ~= P1`,
++`M=O_C(-2)`, and therefore
++
++```text
++nu_*O_Xnu/O_X = O_C(-2).
++```
++
++The canonical formula has the right sign and coefficient.  Since the center is
++a codimension-two smooth complete intersection in the smooth threefold,
++
++```text
++K_Bl = rho^*K_W + E_W,
++Xnu = rho^*X - 2E_W,
++```
++
++and adjunction gives
++
++```text
++K_Xnu = nu^*K_X - E,
++K_Xnu + E = nu^*K_X.
++```
++
++Repair required: state explicitly that the local normal-parameter change is
++allowed at every point because the quadratic form is never identically zero on
++an exceptional fibre.  Do not present the conductor as a generic calculation
++followed by extension.
++
++## 5. Cohomology and the First Leg
++
++Verdict: `CONFIRMED`.
++
++For `W=P2 x P1` and `X` of class `(2,3)`,
++
++```text
++0 -> O_W(-2,-3) -> O_W -> O_X -> 0
++```
++
++has `H^i(W,O_W(-2,-3))=0` in the degrees needed, because all cohomology of
++`O_P2(-2)` vanishes.  Hence
++
++```text
++H^1(X,O_X)=0,       H^2(X,O_X)=0.
++```
++
++Using the normalization quotient,
++
++```text
++0 -> O_X -> nu_*O_Xnu -> O_C(-2) -> 0
++```
++
++and `C ~= P1`, one obtains exactly
++
++```text
++h^1(Xnu,O_Xnu)=1,       h^2(Xnu,O_Xnu)=0.
++```
++
++For any resolution `r:Xtilde -> Xnu`, normality gives
++`r_*O_Xtilde=O_Xnu`, and the Leray edge map injects
++
++```text
++H^1(Xnu,O_Xnu) -> H^1(Xtilde,O_Xtilde).
++```
++
++Thus every resolution has `q >= 1`.
++
++The dominant first leg is properly typed after charging the block coordinator
++and the Stein/function-field identification: it gives a dominant rational map
++`A2 --> Xnu` with finite function-field degree.  Resolve indeterminacy from a
++projective rational surface and resolve the target.  The resulting morphism is
++generically finite and dominant.  Pullback of holomorphic one-forms is
++injective in characteristic zero, while the source is rational and has
++`q=0`.  Hence the target resolution must have `q=0`, contradicting the
++previous paragraph.
++
++Repair required: the promoted text should say "resolve indeterminacy of the
++rational first-leg map from a projective rational source" rather than only
++"compactify and resolve"; this prevents confusion with a morphism defined on
++all of `A2`.
++
++## 6. Forest Boundary and Attachments
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The forest obstruction is legitimately independent of the cohomology
++obstruction.  Take the smooth open target used by the first leg inside the
++resolved normalization over the affine target.  The conductor curve `E` lies
++over `T=0`, hence outside that open.  Since the normalization is smooth along
++`E`, every SNC completion/resolution contains the strict transform of `E` as a
++boundary component, possibly after blowing up points on it.  Its geometric
++genus remains one in the charged squarefree row.  The binding forest theorem
++forbids a positive-genus boundary component under a dominant rational
++`A2` first leg.
++
++The residual section attachment count is also correct.  Let `p0` be the unique
++point where `C` meets `D0`, equivalently the unique zero of `ell=L|_C`.  In
++exceptional coordinates `[Q:T]`, the fibre equation is
++
++```text
++T(s(p0)Q+r(p0)T)=0.
++```
++
++The strict transform of `D0` approaches the direction `[Q:T]=[1:0]`, because
++on `D0` one has `T=0` and, away from `p0`, `Q != 0`.  If `s(p0) != 0`, the
++conductor cover is unramified over `p0` and has two points, but `D` meets only
++the `[1:0]` point.  If `s(p0)=0`, then `r(p0) != 0`, the fibre is ramified,
++and `D` meets the unique branch point.  Thus there is exactly one physical
++attachment in both cases.
++
++Repair required: define the open `U` used for the forest theorem before
++claiming monotonicity under shrinking.  The argument is valid because the
++generic first-leg image lies over `T != 0` and the charged block input already
++keeps it in the smooth affine target away from the missed branch/singular
++locus.
++
++## 7. Degenerate Quartic Threat Map
++
++Verdict: `CONFIRMED`.
++
++The degenerate rows are correctly separated from the charged surface
++normalization.  A nonsquare quartic of type `2+1+1` gives an integral nodal
++conductor curve with normalization `P1`; type `3+1` gives a cuspidal conductor
++curve with normalization `P1`.  In both cases the exact product chart makes
++the blowup fail `R_1` along a radial line meeting the affine incidence, so
++affine normality eliminates them before any boundary-forest argument is used.
++
++The split rows `2+2` and `4` are excluded by generic reducibility of the
++normal quadratic, not by curve genus.  The row `delta=0` is excluded by
++generic nonreducedness.  The producer does not rely on the false shortcut that
++a nodal or cuspidal first blowup is already normal, and it does not use
++arithmetic genus alone to close the surface normalization problem.
++
++One small wording repair: in the threat map, keep saying "curve-theoretic
++pre-normalization contribution" for `tau(E union D)` in degenerate rows.  The
++actual surface normalization would introduce further conductor and exceptional
++data, so those rows must not be recycled as completed surface cases.
++
++## 8. Maximum Theorem Safe to Promote
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The safe theorem is the following presentation-scoped statement.
++
++Assume the charged proper-block first leg and the charged nonnormal quadratic
++presentation packet.  In the surviving fixed quadratic trace-zero
++presentation
++
++```text
++X = V(Q^2L+TQS+T^2R) subset P2 x P1,
++C=(T,Q),        [C]=(1,1),
++```
++
++with `X_aff` normal and `X` integral, the discriminant
++`delta_C=(S|_C)^2-4(L|_C)(R|_C)` is nonzero, nonsquare, and squarefree.  The
++strict transform of `X` in `Bl_C(P2 x P1)` is the finite normalization.  The
++downstairs conductor is `(T,Q)O_X`, the upstairs conductor is `O_Xnu(-E)`, the
++conductor cover is a smooth connected genus-one double cover of `C`, and
++
++```text
++pi_*O_E = O_C direct-sum O_C(-2),
++nu_*O_Xnu/O_X = O_C(-2),
++K_Xnu + E = nu^*K_X,
++h^1(Xnu,O_Xnu)=1,
++h^2(Xnu,O_Xnu)=0.
++```
++
++Consequently every resolution of `Xnu` has positive irregularity, while the
++dominant rational `A2` first leg would force irregularity zero.  Equivalently,
++the genus-one conductor is also a forbidden boundary component under the
++charged rational-forest theorem.  Therefore this moving-double-section
++nonnormal quadratic presentation cannot occur in a proper cubic block.
++
++This does not promote any of the following:
++
++* arbitrary quadratic-basis coverage;
++* invariance of the infinity divisor under all basis changes;
++* the normal-singular/ADE quadratic incidence lane;
++* existence of a polynomial map or a counterexample;
++* any source different, full affine target discriminant, finite-prefix, formal
++  arc, or JC2 conclusion.
++
++## 9. Precise Repairs
++
++Before promotion, make these textual repairs in the integration:
++
++1. Replace "contrary to generic irreducibility" in the no-common-zero argument
++   by "contrary to the charged integrality of the primitive projective
++   incidence."
++2. Insert the identity
++   `delta_C'(z0)=-4 ell(z0) G_z(z0,w0)` in the squarefree proof and explicitly
++   state that the product with the radial parameter gives a codimension-one
++   singular locus.
++3. Add the `ell=0` chart:
++   `z + tau s(z) + tau^2 r(z)=0`, with unit `z`-derivative, covering both the
++   unramified and ramified fibre over `D cap C`.
++4. State that branch fibres of `E -> C` are nonreduced as fibres but the total
++   curve `E` and the strict transform surface are smooth there.
++5. Replace the conductor prose by the local module calculation
++   `R=A[[t]]+A[[t]]tw subset S=A[[t]]+A[[t]]w`, whose quotient is `A w` and
++   whose annihilator is exactly `(t,q)`.
++6. Define the open surface used in the forest theorem as the smooth resolved
++   first-leg target over `T != 0`, with any missed affine branch/singular locus
++   removed.
++
++## 10. Cheapest Decisive Successor
++
++The cheapest immediate successor is a correction-only coordinator integration,
++not a new computation: insert the six repairs above and promote
++`MOVING-DOUBLE-Q2-CLOSED` exactly in the fixed-presentation scope.  No CAS,
++Singular, finite-prefix search, or Lean work is needed.
++
++After that, the next mathematical successor is the separate normal-singular
++quadratic packet: classify the ADE-decorated `D9` boundary/different cases.
++Keep the basis-orbit coverage problem separate, because this review confirms
++only that any basis already producing the nonnormal moving-double-section form
++is impossible.
++<!-- BODY-END -->
+
+exec
+/bin/zsh -lc 'shasum -a 256 xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+afa01a4e9c635db3762bab2e62f05ff7d3880c2ae53b766114dfed94d158c715  xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+
+diff --git a/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..d9035ccf3b11de65f83b01079718fc128815d6c5
+--- /dev/null
++++ b/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,453 @@
++# Hostile review: moving-double-section normalization and conductor
++
++Date: 2026-08-30 UTC
++Reviewer: GPT-5.5 xhigh hostile lane
++Review basis: `f43ee99da2bc9f831d94e403dcd90622e87e8756`
++
++## 0. Verdict
++
++`CONFIRM_WITH_CORRECTIONS`.
++
++The producer's main mathematical conclusion is safe to promote in the charged
++presentation scope: the remaining moving double `(1,1)` section has blowup
++normalization with conductor quotient `O_C(-2)`, hence irregular normalization,
++and it is incompatible with the dominant `A2` first leg.  I find no decisive
++counterexample and no open mathematical gap in the squarefree charged case.
++
++The corrections are real but local: several prose steps must be replaced by
++explicit two-chart lemmas so that promotion does not rely on generic conductor
++or tangent-cone language.  In particular the integration should spell out the
++`ell=0` chart, the derivative test for multiple quartic roots, the local
++conductor annihilator, and the exact open surface used for the forest
++obstruction.
++
++Inputs read and hash-checked:
++
++* Producer:
++  `9557f2c1396daba190927e6a220774362a02068b4197103357d30e8cfc78b75e`
++  `xmodel/bd-a2-moving-double-section-normalization-conductor-sol56-20260830.md`.
++* Section 0 charged block input:
++  `ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778`
++  `xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md`.
++* Section 0 charged nonnormal input:
++  `6b324824e0c075b938bd5b7015d4e8d134bad7cb845ac7597212b61d91dfa7a5`
++  `xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md`.
++* Later forest input needed for Section 7 audit:
++  `6a8558e42a67f1ec5c8bcf12321b6e6805b30a570eba17862c6e7e24cd631b08`
++  `xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md`.
++
++No new exit-price assertion is made here, so no `charge_basis` line is
++declared.
++
++## 1. Predecessor Scope and Exact Form
++
++Verdict: `CONFIRMED`.
++
++The predecessor really leaves only the moving repeated section:
++
++```text
++Phi^h = Q^2 L + T Q S + T^2 R,
++C = {T=Q=0},              [C]=(1,1),
++D_0 = {T=L=0},            [D_0]=(0,1).
++```
++
++This is exactly the survivor in the nonnormal quadratic-content packet, not a
++new classification made by the producer.  The same packet also charges affine
++normality of `X_aff`, integrality of the projective incidence, and the fact
++that all other repeated infinity patterns are already excluded.
++
++The transverse equation along `C` is literally homogeneous of normal degree
++two.  Locally choose a fibre coordinate `z` along `C` and use `(T,Q)` as normal
++coordinates.  Since `L,S,R` are constant binary forms in the fibre variables,
++they become functions of `z` alone.  Therefore
++
++```text
++F = ell(z) Q^2 + s(z) TQ + r(z) T^2
++```
++
++has no higher normal-degree terms.  This is stronger than saying the normal
++cone has that equation, and it is exactly what later conductor computations
++need.
++
++The assertion `ell,s,r` never vanish simultaneously is correct, but the final
++writeup should cite integrality/primitivity rather than the looser phrase
++"generic irreducibility."  If `ell(p)=0`, the corresponding fibre point is the
++unique zero of the binary linear form `L`.  If also `s(p)=r(p)=0`, then the
++binary forms `S` and `R` are divisible by `L`, so the whole cubic
++`Q^2L+TQS+T^2R` is divisible by `L`.  That contradicts the charged integral
++projective incidence.
++
++## 2. Discriminant and Squarefreeness
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++At the generic point of `C`, `ell` is a unit and the completed local equation
++is a binary quadratic over `C(C)`.  If
++
++```text
++delta_C = s^2 - 4 ell r
++```
++
++is zero, the equation is a square and the local hypersurface is generically
++nonreduced along `C`.  If `delta_C` is a nonzero square in `C(C)`, the equation
++splits into two linear factors and the local ring has zero divisors.  Both
++contradict integrality.  Thus `delta_C` is nonzero and nonsquare.
++
++The stronger squarefree step is also valid, but it needs the following explicit
++local proof in the promoted version.
++
++First, no multiple zero can occur over `ell=0`.  The section `ell` has one
++simple zero on `C ~= P1`.  If `s(p) != 0`, then `delta_C(p)=s(p)^2 != 0`.  If
++`s(p)=0`, the already-proved no-common-zero statement gives `r(p) != 0`, and
++with a local parameter `z=ell` one has
++
++```text
++delta_C = s^2 - 4 z r,
++```
++
++so the zero is simple.
++
++Every hypothetical multiple zero therefore lies where `ell` is a unit.  In the
++blowup chart `Q=T w`,
++
++```text
++G(z,w)=ell(z)w^2+s(z)w+r(z)
++```
++
++is independent of the radial parameter `T`.  At a double root
++`w_0=-s(z_0)/(2ell(z_0))`, the identities `G=G_w=0` hold.  Moreover
++
++```text
++delta_C'(z_0) = -4 ell(z_0) G_z(z_0,w_0).
++```
++
++Hence a multiple zero of `delta_C` is exactly a singular point of the plane
++curve `G=0`.  Since the surface equation is `G=0` times the free radial
++parameter, the strict transform has singular locus
++
++```text
++{(z_0,w_0)} x A1_T.
++```
++
++The part with `T != 0` is outside the exceptional divisor and maps
++isomorphically into `X_aff`.  That would put a codimension-one singular locus
++inside the charged normal affine incidence, impossible.  This proves
++squarefreeness.
++
++This argument also covers all quartic multiplicity rows.  Rows `2+2`, `4`, and
++`delta=0` are eliminated already by nonsquare/nonzero integrality.  Rows
++`2+1+1` and `3+1` have a multiple zero with `ell != 0`, so the exact product
++chart above makes the blowup nonnormal along a nonexceptional affine line.
++Only the `1+1+1+1` row survives.
++
++## 3. Blowup and Normalization
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The two blowup charts are correct:
++
++```text
++Q=T w:       w^2 L+wS+R=0,
++T=Q tau:     L+tau S+tau^2 R=0.
++```
++
++Over a point of `C`, the exceptional fibre is the length-two zero scheme of
++
++```text
++ell q^2+sqt+rt^2=0 in P1_[q:t].
++```
++
++Because `ell,s,r` never vanish together, no whole exceptional `P1` is contained
++in the strict transform.  Fibres over `X-C` are singletons and fibres over `C`
++are finite.  The map is proper, quasi-finite, and birational, hence finite.
++
++The normality proof is sound after making the codimension-one checks explicit.
++The strict transform is a Cartier hypersurface in the smooth blowup, so it is
++`S_2`.  Off the exceptional curve it is isomorphic to `X-C`; by the charged
++predecessor, the affine codimension-one points are normal and the residual
++infinity component is generically regular.  Along the exceptional curve, the
++squarefree discriminant makes the total conductor cover smooth.  In the
++`ell`-unit chart this is just `G(z,w)=0` times the radial parameter.  In the
++`ell=0` chart, take `z=ell`; the equation is
++
++```text
++z + tau s(z) + tau^2 r(z)=0,
++```
++
++after a unit rescaling, and its `z`-derivative is a unit at the exceptional
++point.  Thus branch fibres and the `ell=0` fibre are regular on the strict
++transform.
++
++There is no unhandled codimension-one singularity along the residual section
++`D`.  Away from `E`, the blowup is an isomorphism.  At `D cap E`, the same
++`ell=0` chart gives a smooth surface, with `D` given by `z=tau=0` and `E` by
++the radial coordinate zero together with the displayed equation.  Therefore
++the strict transform is `S_2` and `R_1`, hence normal, and the finite birational
++map is the normalization.
++
++Repair required: replace the sentence "Equations (1.4)--(1.5) make the
++relative quadratic curve smooth" by the two-chart argument above.  The fibres
++over branch points are not reduced as fibres of `E -> C`; what is smooth is
++the total curve `E` and the product surface along it.
++
++## 4. Conductor and Canonical Formula
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The conductor computation is correct and can be made fully local.  At a point
++of `C`, after an invertible linear change of the two normal parameters, write
++
++```text
++R = A[[t,q]]/(a q^2+b tq+c t^2),     a in A^*,
++S = A[[t]][w]/(a w^2+bw+c),          q=t w,
++```
++
++where `A=O_{C,p}`.  Then
++
++```text
++R = A[[t]] direct-sum A[[t]] q
++  = A[[t]] direct-sum A[[t]] t w
++subset
++S = A[[t]] direct-sum A[[t]] w.
++```
++
++Thus
++
++```text
++S/R ~= A w.
++```
++
++Multiplication by `t` kills this quotient because `tw=q in R`, and
++multiplication by `q` kills it because `qw=t w^2 in R`.  Conversely an element
++`f(t)+g(t)q` kills the class of `w` only if `f(0)=0`.  Hence the annihilator is
++exactly `(t,q)R`, i.e. downstairs the conductor is exactly `I_C=(T,Q)O_X`.
++After the same parameter change this also covers the `ell=0` and branch cases.
++
++Upstairs the extended conductor is `(t,q)S=tS` in the `Q=Tw` chart, and
++similarly the radial parameter ideal in the other chart.  Globally this is
++`O_Xnu(-E)`.
++
++The conductor square then gives
++
++```text
++0 -> O_X -> nu_*O_Xnu direct-sum O_C -> pi_*O_E -> 0.
++```
++
++For the finite flat double cover, trace splitting gives
++`pi_*O_E = O_C direct-sum M`.  Its discriminant is the quartic
++`delta_C in H^0(C,O_C(4))`, so `M^{-2}=O_C(4)`.  Since `C ~= P1`,
++`M=O_C(-2)`, and therefore
++
++```text
++nu_*O_Xnu/O_X = O_C(-2).
++```
++
++The canonical formula has the right sign and coefficient.  Since the center is
++a codimension-two smooth complete intersection in the smooth threefold,
++
++```text
++K_Bl = rho^*K_W + E_W,
++Xnu = rho^*X - 2E_W,
++```
++
++and adjunction gives
++
++```text
++K_Xnu = nu^*K_X - E,
++K_Xnu + E = nu^*K_X.
++```
++
++Repair required: state explicitly that the local normal-parameter change is
++allowed at every point because the quadratic form is never identically zero on
++an exceptional fibre.  Do not present the conductor as a generic calculation
++followed by extension.
++
++## 5. Cohomology and the First Leg
++
++Verdict: `CONFIRMED`.
++
++For `W=P2 x P1` and `X` of class `(2,3)`,
++
++```text
++0 -> O_W(-2,-3) -> O_W -> O_X -> 0
++```
++
++has `H^i(W,O_W(-2,-3))=0` in the degrees needed, because all cohomology of
++`O_P2(-2)` vanishes.  Hence
++
++```text
++H^1(X,O_X)=0,       H^2(X,O_X)=0.
++```
++
++Using the normalization quotient,
++
++```text
++0 -> O_X -> nu_*O_Xnu -> O_C(-2) -> 0
++```
++
++and `C ~= P1`, one obtains exactly
++
++```text
++h^1(Xnu,O_Xnu)=1,       h^2(Xnu,O_Xnu)=0.
++```
++
++For any resolution `r:Xtilde -> Xnu`, normality gives
++`r_*O_Xtilde=O_Xnu`, and the Leray edge map injects
++
++```text
++H^1(Xnu,O_Xnu) -> H^1(Xtilde,O_Xtilde).
++```
++
++Thus every resolution has `q >= 1`.
++
++The dominant first leg is properly typed after charging the block coordinator
++and the Stein/function-field identification: it gives a dominant rational map
++`A2 --> Xnu` with finite function-field degree.  Resolve indeterminacy from a
++projective rational surface and resolve the target.  The resulting morphism is
++generically finite and dominant.  Pullback of holomorphic one-forms is
++injective in characteristic zero, while the source is rational and has
++`q=0`.  Hence the target resolution must have `q=0`, contradicting the
++previous paragraph.
++
++Repair required: the promoted text should say "resolve indeterminacy of the
++rational first-leg map from a projective rational source" rather than only
++"compactify and resolve"; this prevents confusion with a morphism defined on
++all of `A2`.
++
++## 6. Forest Boundary and Attachments
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The forest obstruction is legitimately independent of the cohomology
++obstruction.  Take the smooth open target used by the first leg inside the
++resolved normalization over the affine target.  The conductor curve `E` lies
++over `T=0`, hence outside that open.  Since the normalization is smooth along
++`E`, every SNC completion/resolution contains the strict transform of `E` as a
++boundary component, possibly after blowing up points on it.  Its geometric
++genus remains one in the charged squarefree row.  The binding forest theorem
++forbids a positive-genus boundary component under a dominant rational
++`A2` first leg.
++
++The residual section attachment count is also correct.  Let `p0` be the unique
++point where `C` meets `D0`, equivalently the unique zero of `ell=L|_C`.  In
++exceptional coordinates `[Q:T]`, the fibre equation is
++
++```text
++T(s(p0)Q+r(p0)T)=0.
++```
++
++The strict transform of `D0` approaches the direction `[Q:T]=[1:0]`, because
++on `D0` one has `T=0` and, away from `p0`, `Q != 0`.  If `s(p0) != 0`, the
++conductor cover is unramified over `p0` and has two points, but `D` meets only
++the `[1:0]` point.  If `s(p0)=0`, then `r(p0) != 0`, the fibre is ramified,
++and `D` meets the unique branch point.  Thus there is exactly one physical
++attachment in both cases.
++
++Repair required: define the open `U` used for the forest theorem before
++claiming monotonicity under shrinking.  The argument is valid because the
++generic first-leg image lies over `T != 0` and the charged block input already
++keeps it in the smooth affine target away from the missed branch/singular
++locus.
++
++## 7. Degenerate Quartic Threat Map
++
++Verdict: `CONFIRMED`.
++
++The degenerate rows are correctly separated from the charged surface
++normalization.  A nonsquare quartic of type `2+1+1` gives an integral nodal
++conductor curve with normalization `P1`; type `3+1` gives a cuspidal conductor
++curve with normalization `P1`.  In both cases the exact product chart makes
++the blowup fail `R_1` along a radial line meeting the affine incidence, so
++affine normality eliminates them before any boundary-forest argument is used.
++
++The split rows `2+2` and `4` are excluded by generic reducibility of the
++normal quadratic, not by curve genus.  The row `delta=0` is excluded by
++generic nonreducedness.  The producer does not rely on the false shortcut that
++a nodal or cuspidal first blowup is already normal, and it does not use
++arithmetic genus alone to close the surface normalization problem.
++
++One small wording repair: in the threat map, keep saying "curve-theoretic
++pre-normalization contribution" for `tau(E union D)` in degenerate rows.  The
++actual surface normalization would introduce further conductor and exceptional
++data, so those rows must not be recycled as completed surface cases.
++
++## 8. Maximum Theorem Safe to Promote
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The safe theorem is the following presentation-scoped statement.
++
++Assume the charged proper-block first leg and the charged nonnormal quadratic
++presentation packet.  In the surviving fixed quadratic trace-zero
++presentation
++
++```text
++X = V(Q^2L+TQS+T^2R) subset P2 x P1,
++C=(T,Q),        [C]=(1,1),
++```
++
++with `X_aff` normal and `X` integral, the discriminant
++`delta_C=(S|_C)^2-4(L|_C)(R|_C)` is nonzero, nonsquare, and squarefree.  The
++strict transform of `X` in `Bl_C(P2 x P1)` is the finite normalization.  The
++downstairs conductor is `(T,Q)O_X`, the upstairs conductor is `O_Xnu(-E)`, the
++conductor cover is a smooth connected genus-one double cover of `C`, and
++
++```text
++pi_*O_E = O_C direct-sum O_C(-2),
++nu_*O_Xnu/O_X = O_C(-2),
++K_Xnu + E = nu^*K_X,
++h^1(Xnu,O_Xnu)=1,
++h^2(Xnu,O_Xnu)=0.
++```
++
++Consequently every resolution of `Xnu` has positive irregularity, while the
++dominant rational `A2` first leg would force irregularity zero.  Equivalently,
++the genus-one conductor is also a forbidden boundary component under the
++charged rational-forest theorem.  Therefore this moving-double-section
++nonnormal quadratic presentation cannot occur in a proper cubic block.
++
++This does not promote any of the following:
++
++* arbitrary quadratic-basis coverage;
++* invariance of the infinity divisor under all basis changes;
++* the normal-singular/ADE quadratic incidence lane;
++* existence of a polynomial map or a counterexample;
++* any source different, full affine target discriminant, finite-prefix, formal
++  arc, or JC2 conclusion.
++
++## 9. Precise Repairs
++
++Before promotion, make these textual repairs in the integration:
++
++1. Replace "contrary to generic irreducibility" in the no-common-zero argument
++   by "contrary to the charged integrality of the primitive projective
++   incidence."
++2. Insert the identity
++   `delta_C'(z0)=-4 ell(z0) G_z(z0,w0)` in the squarefree proof and explicitly
++   state that the product with the radial parameter gives a codimension-one
++   singular locus.
++3. Add the `ell=0` chart:
++   `z + tau s(z) + tau^2 r(z)=0`, with unit `z`-derivative, covering both the
++   unramified and ramified fibre over `D cap C`.
++4. State that branch fibres of `E -> C` are nonreduced as fibres but the total
++   curve `E` and the strict transform surface are smooth there.
++5. Replace the conductor prose by the local module calculation
++   `R=A[[t]]+A[[t]]tw subset S=A[[t]]+A[[t]]w`, whose quotient is `A w` and
++   whose annihilator is exactly `(t,q)`.
++6. Define the open surface used in the forest theorem as the smooth resolved
++   first-leg target over `T != 0`, with any missed affine branch/singular locus
++   removed.
++
++## 10. Cheapest Decisive Successor
++
++The cheapest immediate successor is a correction-only coordinator integration,
++not a new computation: insert the six repairs above and promote
++`MOVING-DOUBLE-Q2-CLOSED` exactly in the fixed-presentation scope.  No CAS,
++Singular, finite-prefix search, or Lean work is needed.
++
++After that, the next mathematical successor is the separate normal-singular
++quadratic packet: classify the ADE-decorated `D9` boundary/different cases.
++Keep the basis-orbit coverage problem separate, because this review confirms
++only that any basis already producing the nonnormal moving-double-section form
++is impossible.
++<!-- BODY-END -->
+
+codex
+Written: [hostile review](/Users/dc/code/math/jc2/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md)
+
+Verdict: `CONFIRM_WITH_CORRECTIONS`.
+
+Verification:
+`17071` bytes, final line is standalone `<!-- BODY-END -->`, no seal block.  
+SHA-256: `afa01a4e9c635db3762bab2e62f05ff7d3880c2ae53b766114dfed94d158c715`
+
+I did not inspect or touch `jc2-lean`, and did not run CAS/Singular or edit any inputs.
+diff --git a/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md b/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..d9035ccf3b11de65f83b01079718fc128815d6c5
+--- /dev/null
++++ b/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md
+@@ -0,0 +1,453 @@
++# Hostile review: moving-double-section normalization and conductor
++
++Date: 2026-08-30 UTC
++Reviewer: GPT-5.5 xhigh hostile lane
++Review basis: `f43ee99da2bc9f831d94e403dcd90622e87e8756`
++
++## 0. Verdict
++
++`CONFIRM_WITH_CORRECTIONS`.
++
++The producer's main mathematical conclusion is safe to promote in the charged
++presentation scope: the remaining moving double `(1,1)` section has blowup
++normalization with conductor quotient `O_C(-2)`, hence irregular normalization,
++and it is incompatible with the dominant `A2` first leg.  I find no decisive
++counterexample and no open mathematical gap in the squarefree charged case.
++
++The corrections are real but local: several prose steps must be replaced by
++explicit two-chart lemmas so that promotion does not rely on generic conductor
++or tangent-cone language.  In particular the integration should spell out the
++`ell=0` chart, the derivative test for multiple quartic roots, the local
++conductor annihilator, and the exact open surface used for the forest
++obstruction.
++
++Inputs read and hash-checked:
++
++* Producer:
++  `9557f2c1396daba190927e6a220774362a02068b4197103357d30e8cfc78b75e`
++  `xmodel/bd-a2-moving-double-section-normalization-conductor-sol56-20260830.md`.
++* Section 0 charged block input:
++  `ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778`
++  `xmodel/block-descent-structure-coordinator-integration-sol56-20260830.md`.
++* Section 0 charged nonnormal input:
++  `6b324824e0c075b938bd5b7015d4e8d134bad7cb845ac7597212b61d91dfa7a5`
++  `xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-sol56-20260830.md`.
++* Later forest input needed for Section 7 audit:
++  `6a8558e42a67f1ec5c8bcf12321b6e6805b30a570eba17862c6e7e24cd631b08`
++  `xmodel/bd-a2-rational-forest-coordinator-integration-sol56-20260830.md`.
++
++No new exit-price assertion is made here, so no `charge_basis` line is
++declared.
++
++## 1. Predecessor Scope and Exact Form
++
++Verdict: `CONFIRMED`.
++
++The predecessor really leaves only the moving repeated section:
++
++```text
++Phi^h = Q^2 L + T Q S + T^2 R,
++C = {T=Q=0},              [C]=(1,1),
++D_0 = {T=L=0},            [D_0]=(0,1).
++```
++
++This is exactly the survivor in the nonnormal quadratic-content packet, not a
++new classification made by the producer.  The same packet also charges affine
++normality of `X_aff`, integrality of the projective incidence, and the fact
++that all other repeated infinity patterns are already excluded.
++
++The transverse equation along `C` is literally homogeneous of normal degree
++two.  Locally choose a fibre coordinate `z` along `C` and use `(T,Q)` as normal
++coordinates.  Since `L,S,R` are constant binary forms in the fibre variables,
++they become functions of `z` alone.  Therefore
++
++```text
++F = ell(z) Q^2 + s(z) TQ + r(z) T^2
++```
++
++has no higher normal-degree terms.  This is stronger than saying the normal
++cone has that equation, and it is exactly what later conductor computations
++need.
++
++The assertion `ell,s,r` never vanish simultaneously is correct, but the final
++writeup should cite integrality/primitivity rather than the looser phrase
++"generic irreducibility."  If `ell(p)=0`, the corresponding fibre point is the
++unique zero of the binary linear form `L`.  If also `s(p)=r(p)=0`, then the
++binary forms `S` and `R` are divisible by `L`, so the whole cubic
++`Q^2L+TQS+T^2R` is divisible by `L`.  That contradicts the charged integral
++projective incidence.
++
++## 2. Discriminant and Squarefreeness
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++At the generic point of `C`, `ell` is a unit and the completed local equation
++is a binary quadratic over `C(C)`.  If
++
++```text
++delta_C = s^2 - 4 ell r
++```
++
++is zero, the equation is a square and the local hypersurface is generically
++nonreduced along `C`.  If `delta_C` is a nonzero square in `C(C)`, the equation
++splits into two linear factors and the local ring has zero divisors.  Both
++contradict integrality.  Thus `delta_C` is nonzero and nonsquare.
++
++The stronger squarefree step is also valid, but it needs the following explicit
++local proof in the promoted version.
++
++First, no multiple zero can occur over `ell=0`.  The section `ell` has one
++simple zero on `C ~= P1`.  If `s(p) != 0`, then `delta_C(p)=s(p)^2 != 0`.  If
++`s(p)=0`, the already-proved no-common-zero statement gives `r(p) != 0`, and
++with a local parameter `z=ell` one has
++
++```text
++delta_C = s^2 - 4 z r,
++```
++
++so the zero is simple.
++
++Every hypothetical multiple zero therefore lies where `ell` is a unit.  In the
++blowup chart `Q=T w`,
++
++```text
++G(z,w)=ell(z)w^2+s(z)w+r(z)
++```
++
++is independent of the radial parameter `T`.  At a double root
++`w_0=-s(z_0)/(2ell(z_0))`, the identities `G=G_w=0` hold.  Moreover
++
++```text
++delta_C'(z_0) = -4 ell(z_0) G_z(z_0,w_0).
++```
++
++Hence a multiple zero of `delta_C` is exactly a singular point of the plane
++curve `G=0`.  Since the surface equation is `G=0` times the free radial
++parameter, the strict transform has singular locus
++
++```text
++{(z_0,w_0)} x A1_T.
++```
++
++The part with `T != 0` is outside the exceptional divisor and maps
++isomorphically into `X_aff`.  That would put a codimension-one singular locus
++inside the charged normal affine incidence, impossible.  This proves
++squarefreeness.
++
++This argument also covers all quartic multiplicity rows.  Rows `2+2`, `4`, and
++`delta=0` are eliminated already by nonsquare/nonzero integrality.  Rows
++`2+1+1` and `3+1` have a multiple zero with `ell != 0`, so the exact product
++chart above makes the blowup nonnormal along a nonexceptional affine line.
++Only the `1+1+1+1` row survives.
++
++## 3. Blowup and Normalization
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The two blowup charts are correct:
++
++```text
++Q=T w:       w^2 L+wS+R=0,
++T=Q tau:     L+tau S+tau^2 R=0.
++```
++
++Over a point of `C`, the exceptional fibre is the length-two zero scheme of
++
++```text
++ell q^2+sqt+rt^2=0 in P1_[q:t].
++```
++
++Because `ell,s,r` never vanish together, no whole exceptional `P1` is contained
++in the strict transform.  Fibres over `X-C` are singletons and fibres over `C`
++are finite.  The map is proper, quasi-finite, and birational, hence finite.
++
++The normality proof is sound after making the codimension-one checks explicit.
++The strict transform is a Cartier hypersurface in the smooth blowup, so it is
++`S_2`.  Off the exceptional curve it is isomorphic to `X-C`; by the charged
++predecessor, the affine codimension-one points are normal and the residual
++infinity component is generically regular.  Along the exceptional curve, the
++squarefree discriminant makes the total conductor cover smooth.  In the
++`ell`-unit chart this is just `G(z,w)=0` times the radial parameter.  In the
++`ell=0` chart, take `z=ell`; the equation is
++
++```text
++z + tau s(z) + tau^2 r(z)=0,
++```
++
++after a unit rescaling, and its `z`-derivative is a unit at the exceptional
++point.  Thus branch fibres and the `ell=0` fibre are regular on the strict
++transform.
++
++There is no unhandled codimension-one singularity along the residual section
++`D`.  Away from `E`, the blowup is an isomorphism.  At `D cap E`, the same
++`ell=0` chart gives a smooth surface, with `D` given by `z=tau=0` and `E` by
++the radial coordinate zero together with the displayed equation.  Therefore
++the strict transform is `S_2` and `R_1`, hence normal, and the finite birational
++map is the normalization.
++
++Repair required: replace the sentence "Equations (1.4)--(1.5) make the
++relative quadratic curve smooth" by the two-chart argument above.  The fibres
++over branch points are not reduced as fibres of `E -> C`; what is smooth is
++the total curve `E` and the product surface along it.
++
++## 4. Conductor and Canonical Formula
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The conductor computation is correct and can be made fully local.  At a point
++of `C`, after an invertible linear change of the two normal parameters, write
++
++```text
++R = A[[t,q]]/(a q^2+b tq+c t^2),     a in A^*,
++S = A[[t]][w]/(a w^2+bw+c),          q=t w,
++```
++
++where `A=O_{C,p}`.  Then
++
++```text
++R = A[[t]] direct-sum A[[t]] q
++  = A[[t]] direct-sum A[[t]] t w
++subset
++S = A[[t]] direct-sum A[[t]] w.
++```
++
++Thus
++
++```text
++S/R ~= A w.
++```
++
++Multiplication by `t` kills this quotient because `tw=q in R`, and
++multiplication by `q` kills it because `qw=t w^2 in R`.  Conversely an element
++`f(t)+g(t)q` kills the class of `w` only if `f(0)=0`.  Hence the annihilator is
++exactly `(t,q)R`, i.e. downstairs the conductor is exactly `I_C=(T,Q)O_X`.
++After the same parameter change this also covers the `ell=0` and branch cases.
++
++Upstairs the extended conductor is `(t,q)S=tS` in the `Q=Tw` chart, and
++similarly the radial parameter ideal in the other chart.  Globally this is
++`O_Xnu(-E)`.
++
++The conductor square then gives
++
++```text
++0 -> O_X -> nu_*O_Xnu direct-sum O_C -> pi_*O_E -> 0.
++```
++
++For the finite flat double cover, trace splitting gives
++`pi_*O_E = O_C direct-sum M`.  Its discriminant is the quartic
++`delta_C in H^0(C,O_C(4))`, so `M^{-2}=O_C(4)`.  Since `C ~= P1`,
++`M=O_C(-2)`, and therefore
++
++```text
++nu_*O_Xnu/O_X = O_C(-2).
++```
++
++The canonical formula has the right sign and coefficient.  Since the center is
++a codimension-two smooth complete intersection in the smooth threefold,
++
++```text
++K_Bl = rho^*K_W + E_W,
++Xnu = rho^*X - 2E_W,
++```
++
++and adjunction gives
++
++```text
++K_Xnu = nu^*K_X - E,
++K_Xnu + E = nu^*K_X.
++```
++
++Repair required: state explicitly that the local normal-parameter change is
++allowed at every point because the quadratic form is never identically zero on
++an exceptional fibre.  Do not present the conductor as a generic calculation
++followed by extension.
++
++## 5. Cohomology and the First Leg
++
++Verdict: `CONFIRMED`.
++
++For `W=P2 x P1` and `X` of class `(2,3)`,
++
++```text
++0 -> O_W(-2,-3) -> O_W -> O_X -> 0
++```
++
++has `H^i(W,O_W(-2,-3))=0` in the degrees needed, because all cohomology of
++`O_P2(-2)` vanishes.  Hence
++
++```text
++H^1(X,O_X)=0,       H^2(X,O_X)=0.
++```
++
++Using the normalization quotient,
++
++```text
++0 -> O_X -> nu_*O_Xnu -> O_C(-2) -> 0
++```
++
++and `C ~= P1`, one obtains exactly
++
++```text
++h^1(Xnu,O_Xnu)=1,       h^2(Xnu,O_Xnu)=0.
++```
++
++For any resolution `r:Xtilde -> Xnu`, normality gives
++`r_*O_Xtilde=O_Xnu`, and the Leray edge map injects
++
++```text
++H^1(Xnu,O_Xnu) -> H^1(Xtilde,O_Xtilde).
++```
++
++Thus every resolution has `q >= 1`.
++
++The dominant first leg is properly typed after charging the block coordinator
++and the Stein/function-field identification: it gives a dominant rational map
++`A2 --> Xnu` with finite function-field degree.  Resolve indeterminacy from a
++projective rational surface and resolve the target.  The resulting morphism is
++generically finite and dominant.  Pullback of holomorphic one-forms is
++injective in characteristic zero, while the source is rational and has
++`q=0`.  Hence the target resolution must have `q=0`, contradicting the
++previous paragraph.
++
++Repair required: the promoted text should say "resolve indeterminacy of the
++rational first-leg map from a projective rational source" rather than only
++"compactify and resolve"; this prevents confusion with a morphism defined on
++all of `A2`.
++
++## 6. Forest Boundary and Attachments
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The forest obstruction is legitimately independent of the cohomology
++obstruction.  Take the smooth open target used by the first leg inside the
++resolved normalization over the affine target.  The conductor curve `E` lies
++over `T=0`, hence outside that open.  Since the normalization is smooth along
++`E`, every SNC completion/resolution contains the strict transform of `E` as a
++boundary component, possibly after blowing up points on it.  Its geometric
++genus remains one in the charged squarefree row.  The binding forest theorem
++forbids a positive-genus boundary component under a dominant rational
++`A2` first leg.
++
++The residual section attachment count is also correct.  Let `p0` be the unique
++point where `C` meets `D0`, equivalently the unique zero of `ell=L|_C`.  In
++exceptional coordinates `[Q:T]`, the fibre equation is
++
++```text
++T(s(p0)Q+r(p0)T)=0.
++```
++
++The strict transform of `D0` approaches the direction `[Q:T]=[1:0]`, because
++on `D0` one has `T=0` and, away from `p0`, `Q != 0`.  If `s(p0) != 0`, the
++conductor cover is unramified over `p0` and has two points, but `D` meets only
++the `[1:0]` point.  If `s(p0)=0`, then `r(p0) != 0`, the fibre is ramified,
++and `D` meets the unique branch point.  Thus there is exactly one physical
++attachment in both cases.
++
++Repair required: define the open `U` used for the forest theorem before
++claiming monotonicity under shrinking.  The argument is valid because the
++generic first-leg image lies over `T != 0` and the charged block input already
++keeps it in the smooth affine target away from the missed branch/singular
++locus.
++
++## 7. Degenerate Quartic Threat Map
++
++Verdict: `CONFIRMED`.
++
++The degenerate rows are correctly separated from the charged surface
++normalization.  A nonsquare quartic of type `2+1+1` gives an integral nodal
++conductor curve with normalization `P1`; type `3+1` gives a cuspidal conductor
++curve with normalization `P1`.  In both cases the exact product chart makes
++the blowup fail `R_1` along a radial line meeting the affine incidence, so
++affine normality eliminates them before any boundary-forest argument is used.
++
++The split rows `2+2` and `4` are excluded by generic reducibility of the
++normal quadratic, not by curve genus.  The row `delta=0` is excluded by
++generic nonreducedness.  The producer does not rely on the false shortcut that
++a nodal or cuspidal first blowup is already normal, and it does not use
++arithmetic genus alone to close the surface normalization problem.
++
++One small wording repair: in the threat map, keep saying "curve-theoretic
++pre-normalization contribution" for `tau(E union D)` in degenerate rows.  The
++actual surface normalization would introduce further conductor and exceptional
++data, so those rows must not be recycled as completed surface cases.
++
++## 8. Maximum Theorem Safe to Promote
++
++Verdict: `CONFIRMED_WITH_CORRECTIONS`.
++
++The safe theorem is the following presentation-scoped statement.
++
++Assume the charged proper-block first leg and the charged nonnormal quadratic
++presentation packet.  In the surviving fixed quadratic trace-zero
++presentation
++
++```text
++X = V(Q^2L+TQS+T^2R) subset P2 x P1,
++C=(T,Q),        [C]=(1,1),
++```
++
++with `X_aff` normal and `X` integral, the discriminant
++`delta_C=(S|_C)^2-4(L|_C)(R|_C)` is nonzero, nonsquare, and squarefree.  The
++strict transform of `X` in `Bl_C(P2 x P1)` is the finite normalization.  The
++downstairs conductor is `(T,Q)O_X`, the upstairs conductor is `O_Xnu(-E)`, the
++conductor cover is a smooth connected genus-one double cover of `C`, and
++
++```text
++pi_*O_E = O_C direct-sum O_C(-2),
++nu_*O_Xnu/O_X = O_C(-2),
++K_Xnu + E = nu^*K_X,
++h^1(Xnu,O_Xnu)=1,
++h^2(Xnu,O_Xnu)=0.
++```
++
++Consequently every resolution of `Xnu` has positive irregularity, while the
++dominant rational `A2` first leg would force irregularity zero.  Equivalently,
++the genus-one conductor is also a forbidden boundary component under the
++charged rational-forest theorem.  Therefore this moving-double-section
++nonnormal quadratic presentation cannot occur in a proper cubic block.
++
++This does not promote any of the following:
++
++* arbitrary quadratic-basis coverage;
++* invariance of the infinity divisor under all basis changes;
++* the normal-singular/ADE quadratic incidence lane;
++* existence of a polynomial map or a counterexample;
++* any source different, full affine target discriminant, finite-prefix, formal
++  arc, or JC2 conclusion.
++
++## 9. Precise Repairs
++
++Before promotion, make these textual repairs in the integration:
++
++1. Replace "contrary to generic irreducibility" in the no-common-zero argument
++   by "contrary to the charged integrality of the primitive projective
++   incidence."
++2. Insert the identity
++   `delta_C'(z0)=-4 ell(z0) G_z(z0,w0)` in the squarefree proof and explicitly
++   state that the product with the radial parameter gives a codimension-one
++   singular locus.
++3. Add the `ell=0` chart:
++   `z + tau s(z) + tau^2 r(z)=0`, with unit `z`-derivative, covering both the
++   unramified and ramified fibre over `D cap C`.
++4. State that branch fibres of `E -> C` are nonreduced as fibres but the total
++   curve `E` and the strict transform surface are smooth there.
++5. Replace the conductor prose by the local module calculation
++   `R=A[[t]]+A[[t]]tw subset S=A[[t]]+A[[t]]w`, whose quotient is `A w` and
++   whose annihilator is exactly `(t,q)`.
++6. Define the open surface used in the forest theorem as the smooth resolved
++   first-leg target over `T != 0`, with any missed affine branch/singular locus
++   removed.
++
++## 10. Cheapest Decisive Successor
++
++The cheapest immediate successor is a correction-only coordinator integration,
++not a new computation: insert the six repairs above and promote
++`MOVING-DOUBLE-Q2-CLOSED` exactly in the fixed-presentation scope.  No CAS,
++Singular, finite-prefix search, or Lean work is needed.
++
++After that, the next mathematical successor is the separate normal-singular
++quadratic packet: classify the ADE-decorated `D9` boundary/different cases.
++Keep the basis-orbit coverage problem separate, because this review confirms
++only that any basis already producing the nonnormal moving-double-section form
++is impossible.
++<!-- BODY-END -->
+
+tokens used
+75,411
+Written: [hostile review](/Users/dc/code/math/jc2/xmodel/bd-a2-moving-double-section-normalization-conductor-hostile-review-gpt55-20260830.md)
+
+Verdict: `CONFIRM_WITH_CORRECTIONS`.
+
+Verification:
+`17071` bytes, final line is standalone `<!-- BODY-END -->`, no seal block.  
+SHA-256: `afa01a4e9c635db3762bab2e62f05ff7d3880c2ae53b766114dfed94d158c715`
+
+I did not inspect or touch `jc2-lean`, and did not run CAS/Singular or edit any inputs.
