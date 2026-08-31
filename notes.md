@@ -15735,3 +15735,34 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Queued: CORR-BUDGET-N5, T3.5-SHARPEN, DOMRINA-2000 acquisition,
   HF twin row. Next quiet round ~23:26Z (may be superseded by B0
   promotion flow).
+
+## 2026-08-31 14:17Z LIVE STATE — B0 PROMOTED AT N=4 UNDER H2; PI1-S4 AND N5 LANES FIRED
+
+- Second binding integration `bbd48de1` (basis 830b9f09). Paired
+  review data point 4: both arms confirmed the core B0 theorem and
+  independently caught the same ε-sign defect in Thm 4.3(5); the
+  repair (Orevkov 2.1: ε≡0) makes the residual STRONGER (s_0=1,
+  c_0=1, both components polynomial curves, Sing D_1 ∩ D_0 = ∅) and
+  dissolves the verification arm's c_0=2 configuration. N=5 census
+  repaired to the single profile (2,1)+(1,0) via Żołądek 6.5(b).
+  Gate custody notes honoured: (M) at N=4 needs H3; Prop 2.3 not
+  promoted; C3.6 relabelled an independent reproof.
+- Residual re-typed as PI1-S4 (integration §2): can an irreducible
+  POLYNOMIAL curve with all singularities double-points-of-smooth-
+  branches carry an S_4 surjection, meridians ↦ transpositions,
+  disjoint at each double point? NO completes rank four. Acquisition:
+  OPEN, no countermodel in class, obstruction must be global (local
+  tacnode relations admit disjoint transpositions — inference to
+  re-derive). Sourced subclass YES: nodes+Nori 3.27; flex infinity
+  (Zariski-Oka); nodes+Orevkov-1990 negativity.
+- Launched 14:15Z: PI1-S4 decision lane (OPUS, 6h; route 1 = global
+  braid relation at infinity for one-place curves — disjoint
+  transpositions force trivial local braid images vs the full-twist
+  image; routes 2-4 Nori inequality, Orevkov negativity, direct ZvK).
+  CORR-BUDGET-N5 (Sol, 6h; classify the unique correction germ
+  mu_x=3, rerun the pinning machinery at N=5). Watcher live.
+- Still running: SEMANTIC-REPLAY (Sol, since 13:20Z). Queued: THETA
+  all-degrees induction (first break at A-degree 2), HF twin row,
+  DOMRINA-2000 cross-check, T3.5-SHARPEN. Next quiet round ~23:26Z —
+  ASSESS at that clock whether the PI1-S4/N5 flow supersedes it (a
+  significant-news round fired <13h ago; the flow is converging).

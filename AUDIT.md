@@ -5,6 +5,33 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **B0 IS CLOSED AT N=4 UNDER H2 — THE TRANSPOSITION HORN FALLS
+> CONDITIONALLY; THE RESIDUAL IS ONE S₄-REPRESENTATION QUESTION ON
+> POLYNOMIAL CURVES (2026-08-31 ~14:15Z).** Binding integration
+> `bbd48de1b028f6c7...` (basis `830b9f09`). Paired review (Sol gate
+> `8ffc0a06` + Grok verification `4887fb9b`) PROMOTES: Theorem 4.2 —
+> at `N=4` with `A_F` irreducible there is NO trivial dicritical;
+> `b=0`, `a=2`, unique profile `(2,1)`, meridian a transposition,
+> monodromy `S_4`; (M) verbatim there WITH H3. Also promoted,
+> unconditional: Thm 3.5/Cor 3.6 (irreducible `A_F` is never smooth),
+> Cor 3.7 (H2 ⟹ `Σμ_l ≤ N-2`, Orevkov Cor 4.3 strict), Cor 3.8
+> (Orevkov's unproved Remark proved, all noninvertible Keller),
+> Prop 4.1, Props 2.1-2.2, Cor 5.1 (H2, N=5: `m ≤ 2`). Thm 4.3(5)
+> REFUTED as printed (ε-sign; both arms caught it independently);
+> repaired residual promoted: `ε≡0` (Orevkov 2.1), `s_0=1`, `c_0=1`,
+> BOTH `D_1`, `D_0` polynomial curves, `Sing D_1 ∩ D_0 = ∅`. N=5
+> residual census repaired to the single profile `(2,1)+(1,0)`
+> (Żołądek 6.5(b): `μ=1 ⟹ corr=0`). π₁ acquisition `cd503e48`: OPEN
+> — no source decides PI1-S4, no countermodel in the class; sourced
+> subclass YES (nodes+Nori 3.27, flex/Zariski-Oka, nodes+Orevkov-1990
+> negativity); tacnode-local relations admit disjoint transpositions
+> (inference, to re-derive), so the obstruction must be global. THETA
+> obstructions promoted as bounded exclusions; degree-8 reframe
+> adopted (review `26079008` all-CONFIRMED): the one-cusp horn is
+> settled by inconsistency, never construction. B0 lane rc=5
+> adjudicated (coordinator-caused tool drift; inputs UNCHANGED, seal
+> CLEAN; charged with disclosure).
+
 > **THE (M′) FAMILY IS PROMOTED AND THE RANK-FOUR A₄ HORN IS CLOSED;
 > ONE BIT (B0) REMAINS (2026-08-31 ~12:29Z).** Binding integration
 > `69970f4d2c4a2c57...` (body `35a7f8ad...`, basis `02490efa`).
