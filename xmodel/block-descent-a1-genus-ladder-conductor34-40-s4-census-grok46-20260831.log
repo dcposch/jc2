@@ -1,0 +1,20 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start by verifying the parent-input hashes, then reconstruct the census from those packets' own parametrization before targeting the next conductors.Hashes match. Next I’ll read the frozen parent packets and replay scripts to recover the parametrization and the next conductors.Hashes match. I’ll inspect the workspace and estimate census sizes so the next conductors follow the packets’ parametrization, not an assumed 34/40.Workspace copies match the frozen hashes. I’ll open the report and probe census sizes at the packet-derived conductors before any coloring run.Census is small (152 sequences, max 26 strands). I’ll time the coloring test on the largest rows before writing the full replay.Coloring is cheap; Burau-at-minus-one is the bottleneck. I’ll count high-strand rows and time a full coloring pass before freezing the replay.Coloring finished in 4s; Alexander in ~110s. C=34 and C=40 both have survivors, so the 10+6k exclusion does not continue. Next I’ll freeze that census in the replay script.The replay passed in 127s. Next I’ll check byte-stable stdout under `-O`/`-OO` and confirm the mutation gates fail as intended.Mutations failed at the intended gates and `-O`/`-OO` stdout matched. I’ll write the full report now.All four parent hashes matched. From the packets’ own even-ladder parametrization the next targets are **30, 32, 34, 36, 38, 40**, not just 34 and 40. Those two are only the next `C = 10+6k` exclusion *candidates*; the second parent classified every intervening even conductor and forbade monotone extrapolation.
+
+**Neither 34 nor 40 is a complete exclusion.** The parent list `Delta_aff = 5, 8, 11, 14` is not extended. Every parent dependence is **PROVISIONAL**.
+
+| conductor | `Delta_aff` | reduced rows | full-`S4` survivors |
+|---:|---:|---:|---|
+| 30 | 15 | 28 | 15 |
+| 32 | 16 | 29 | 8 |
+| 34 | 17 | 13 | **1** |
+| 36 | 18 | 26 | 10 |
+| 38 | 19 | 41 | 16 |
+| 40 | 20 | 15 | **3** |
+
+The conductor-34 survivor is `(12,8,14,15) = C_(2,15)(C_(2,7)(T(2,3)))`, labelled count 72, independently group-validated. The conductor-40 survivors are `(12,8,14,21)*72`, `(20,8,9)*24`, `(20,8,18,9)*72`. All `2^h` sign versions were coloured; counts are sign-invariant. Zero-count rows at these conductors cannot carry the charged quartic boundary representation; positive counts are compatibility of the compiled knot, not existence of a plane curve.
+
+The sieve is not monotone under cabling: `C_(2,9)(T(2,5))` dies at conductor 16, while `C_(2,9)` of that companion survives at 40.
+
+Replay: `ops/block_descent_a1_genus_ladder_c34_c40_s4_replay.py` (pure stdlib, ~2 min, identical stdout under `python3`/`-O`/`-OO`). The old-pass/new-fail mutation `--mutate-promote-exclusion` asserts that 34 and 40 have no survivors — that assertion would have passed on parent rungs 22 and 28, and it fails here. Report: `xmodel/block-descent-a1-genus-ladder-conductor34-40-s4-census-grok46-20260831.md`. No `charge_basis` line. What remains open is recorded there: parent rollback, odd conductors, every `C>40`, and whether any surviving row is realised by an actual one-place plane curve.
+DIVERT path=xmodel/block-descent-a1-genus-ladder-conductor34-40-s4-census-grok46-20260831.md status=CLEAN body_bytes=20215 body_sha256=76fb397395bf841fe3b2d91478a18467ecf9ceba0245ea39bfbd3657c48bb70f
