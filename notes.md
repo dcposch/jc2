@@ -15522,3 +15522,37 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Clocks: web backstop `2026-09-01T04:54Z`; systems checkpoint
   `2026-09-02T08:00Z`; round replaces the 18:54Z floor. Fleet: box01
   protected job only. Holds/human gates: none.
+
+## 2026-08-31 11:30Z LIVE STATE — ROUND 1033Z CLOSED CLEAN; (M) PARKED AT SHEET-GATE; FOUR SEATS FIRED
+
+- Round `20260831T1033Z` closed. Synthesis finalized + sealed:
+  `xmodel/ideation-20260831T1033Z-synthesis.md`
+  (`2793104bcf746eab690ca75a2aaf2ef105b64e7be0c1826eb1fa9ed51ba992ef`,
+  artifact_finalize verify PASS). Quality: CLEAN — 4/4 blind
+  submissions delivered sealed, 2/2 cross-pollinations delivered
+  sealed, zero custody incidents.
+- Headline disposition: Euler-inertia identity (M) PARKED at OPEN.
+  Both cross-polls independently broke the conversion step
+  `#F⁻¹(p)=#Fix(H_p)` (sheet-location gap; missing covering + χ_c
+  lemmas). (E) retained as checksum. Correlated mechanisms
+  (residual-sheet, strong BUDGET-N export) parked behind the same
+  gate. Row-29 reopen DENIED pending gate.
+- Four seats launched 11:29Z per synthesis §3, all RUNNING with
+  hardened receipts pending:
+  1. `round1033-sheet-gate-opus5-20260831` (Opus) — four-box audit,
+     covering/sheet-location/χ_c lemmas; rescue (M) or emit weighted
+     form. Gates (M) + correlated queue.
+  2. `round1033-theta-staged-sol56-20260831` (Sol) — Θ_h staged:
+     typing gate → prefilter → single SNC model on
+     R=C[A,U,Z]/(U²−A−A²Z); kill/select one partition row.
+  3. `round1033-hf-dossier-delta6-grok46-20260831` (Grok) — first
+     complete projective dossier at Δ_aff=6 (conductor-12 survivor),
+     BL/FLMN inequality, candidate-kill only.
+  4. `round1033-budget-n-gpt55-20260831` (GPT-5.5) — hash-pinned
+     typing matrix for 2m≤N−1 at general N, trivial-inertia fork,
+     N=5 replay. Independent-usefulness datapoint for 5.5 per DC.
+- Held: AS109-D12 seed-provenance reconciliation precedes any matrix;
+  SEMANTIC-REPLAY/v1 after hardening software review (still owed).
+- Clocks: next quiet full round `~2026-08-31T23:26Z`; web backstop
+  `2026-09-01T04:54Z`; systems checkpoint `2026-09-02T08:00Z`.
+  Fleet: box01 protected job only; nothing else running.

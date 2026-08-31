@@ -7,6 +7,36 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-31
 
+> **A FULL IDEATION ROUND RAN CLEAN, PARKED ITS OWN STRONGEST NEW
+> IDENTITY, AND FIRED FOUR SEATS (10:33--11:30Z).** Significant-news
+> round `20260831T1033Z`: four blind submissions plus two
+> cross-pollinations, all sealed, zero custody incidents. The round's
+> strongest proposal — an Euler-inertia counting identity (M) that
+> would have finished rank four outright — was independently broken by
+> both cross-pollination reviews at the same conversion step
+> (`#F⁻¹(p)=#Fix(H_p)`: sheet-location gap, missing covering and
+> `chi_c` lemmas) and is PARKED at OPEN behind a dedicated SHEET-GATE
+> lane rather than promoted; the paired-adversarial design caught what
+> the coordinator's own desk check missed. Genuinely new mechanism
+> banked: Heegaard-Floer/FLMN attainment obstructions
+> (Borodzik--Livingston line) — the campaign's first tool that can
+> kill colouring-ladder survivors rather than add rows. Synthesis
+> `2793104b...`; launches: SHEET-GATE (Opus), THETA-STAGED `Theta_h`
+> horn discriminator (Sol), first `Delta_aff=6` HF dossier (Grok),
+> BUDGET-N typing matrix at general degree (GPT-5.5).
+>
+> **RANK FOUR IS IRREDUCIBLE: THE `m=1` THEOREM IS PROMOTED
+> (~10:32Z).** Binding integration `221c2df9...` composes the corrected
+> identity (2.3'), the (D1)--(D4) dicritical typing, and the
+> per-component dicritical ownership lemma against the Orevkov budget
+> `N-1=3`: under `H_inertia` (promoted citation `5d7df7ce:84-104`),
+> every reducible partition — generic `(2,1,1)` and `(3,1)` — costs at
+> least four dicriticals and dies. The charged rank-four branch at
+> infinity is a single component; all reducible-row work is STOPPED.
+> Rank four now runs through exactly one object, and the one-cusp horn
+> programme (Poisson + wild-valuation + connectedness, all promoted)
+> is the live attack on it.
+>
 > **THE COLOURING LADDER SATURATES: CONDUCTORS 30--40 ALL RETAIN
 > SURVIVORS, PROMOTED ON FULL REVIEW (~09:32Z).** The `C=10+6k` pattern
 > ends at 28; `Delta_aff = 17, 20` are not excluded; conductor-exclusion
