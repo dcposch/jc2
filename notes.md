@@ -15351,3 +15351,20 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   ledger; Grok R1 splice-colouring discriminator at `n22=1`.
 - Clocks: ideation floor `18:54:51Z`; web backstop `2026-09-01T04:54Z`;
   systems checkpoint `2026-09-02T08:00Z`. Holds/human gates: none.
+
+## 2026-08-31 09:25Z SYSTEMS EVENT — CANONICAL LEDGER COMPACTION ATOM
+
+- DC-approved compaction executed while no live lane charges the compacted
+  files. `COORDINATION.md` 1699 -> 678 lines: protocol, roster, admission
+  rule, the 06:55Z handoff refresh, and the two 2026-08-31 policy blocks
+  retained; 52 dated 2026-08-28..30 availability/allocation/systems
+  refreshes moved verbatim to
+  `history/COORDINATION-refreshes-20260828-30.md`. `APPROACHES.md`
+  6004 -> 265 lines: header, three newest overlays (0831 09:00Z, 0831
+  06:55Z, 0830 23:06Z), archived-stack pointer, and the canonical survey/
+  46-row inventory sections retained; 135 superseded overlays moved
+  verbatim to `history/APPROACHES-overlays-20260824-30.md`. Git history
+  preserves every byte at every packet basis; sealed-packet replay is
+  unaffected. Integrity greps verified roster, policy blocks, and overlay
+  counts. This discharges the approved compaction task; ideation packets
+  tonight are ~7,000 lines lighter per reader.
