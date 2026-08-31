@@ -1,0 +1,16 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start as a hostile referee: verify the frozen SHA-256 hashes first, then open the report and work through the packet independently.Hashes match. Creating the report and reading the charged packet next.Charged packet is in hand. Next I’ll read the parent sources and the Assi–Garcia-Sanchez paper, then run the replay.Section 5 of Assi–Garcia-Sanchez and the conductor-14 list are next, then I’ll run the frozen replay in all modes.Example 18 matches the claimed conductor-14 list. Next I’ll extract the Section 5 recursion and run the replay in all modes.Section 5 of Assi–Garcia-Sanchez matches the claimed recursion. Running the replay in all modes and appending the axiom findings.Replay, mutations, and the arXiv PDF hash all match. Writing the full hostile report.Fresh hostile review is in `xmodel/block-descent-a1-genus-ladder-conductor10-16-hostile-review-grok46-r2-20260831.md`.
+
+All six frozen SHA-256 hashes matched. The independently fetched Assi–Garcia-Sanchez arXiv `1407.0490v1` PDF also matched the packet hash.
+
+**Verdict: CONFIRMED** at the packet’s exact charged scope. Under the already charged one-place interfaces and quartic transposition monodromy, no reduced irreducible `A1`-normalized affine plane curve can have affine delta 5 or 8.
+
+Attacks that were run and did not land:
+
+- Desk recursion of the exact Assi axioms reproduces conductors 6, 8, 10, 14, and 16, including the published ten-row conductor-14 control. No missing sequence at 10 or 16; the only length-four candidate at 16, `(12,8,6,5)`, fails freeness.
+- Cable dictionary, Schubert genus, block-switch word `X=σ2σ3σ1σ2`, and blackboard correction `q-2n` are consistent; Alexander matches the cable formula and would have caught a parameter swap.
+- The load-bearing zero is `C_(2,9)(T(2,5))` (determinant 9, so determinant alone cannot kill it). The winding-two residue theorem (`X` order 12, `σ1` order 6) gives a full `S4` colouring iff `3|n` and `3|q`, with labelled count 72; both new cables miss that test.
+- Normal/`-O`/`-OO` stdout is byte-identical (`b2a44181…437c`). All three mutations exit 1 at the named gates.
+
+The theorem stays conditional on the charged meridian-preserving surjection. It does not assert that delta-5/8 curves fail to exist, and it is not an exit-price claim. Best next falsification: independently colour the single braid `X^5 σ1^{-1}`.
+DIVERT path=xmodel/block-descent-a1-genus-ladder-conductor10-16-hostile-review-grok46-r2-20260831.md status=CLEAN body_bytes=22571 body_sha256=13c8b37582ac5bb6dd205b6cc7429b8ac00beb8ada34e40784ed3e79f810e67c
