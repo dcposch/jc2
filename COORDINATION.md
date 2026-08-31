@@ -1647,3 +1647,39 @@ vCPUs including the separately owned formalization instance, leaving 352
 immediate vCPUs. Never inspect, stop, or repurpose that instance. There are no
 human holds. Intermittent Sol capacity is the reason for this clean Fable
 coordinator handoff, not a mathematical blocker.
+
+## Roster capacity policy and write-ownership change (2026-08-31 07:56Z)
+
+Human directive (DC, in-session, standing): provider budget is ample for
+Grok (effectively unconstrained), and ample for OpenAI models, whose
+occasional "model at capacity" responses are provider-wide load shedding,
+not campaign quota — retry with backoff instead of rerouting permanently or
+recording unavailability. Fable 5 and Opus 5 budgets are constrained:
+reserve them for the highest-value work.
+
+Default routing under this policy:
+
+- **Grok 4.6** is the first-choice workhorse: parallel primary mathematical
+  exploration, adversarial-review volume, web sweeps, and bounded desk
+  enumeration, within its demonstrated competence. Fan out liberally and in
+  parallel; near-infinite quota.
+- **Sol (`gpt-5.6-sol`)** is an equal collaborator and the primary heavy
+  delegation target for primary research, cross-lane integration support,
+  and reviews. Delegate as much as it is capable of.
+- **GPT-5.5 xhigh** (`codex55.sh`) remains the pinned dedicated
+  different-model review adapter.
+- **Fable 5 and Opus 5** keep full equal-standing blind-round participation
+  (every sealed full-round packet, unchanged), plus the hardest integrative
+  gaps and decisive hostile reviews where their distinctive reviewed
+  strengths apply. Do not spend them on routine replay, documentation, or
+  overflow work another roster model can carry.
+
+Different-model promotion, history checksum, and scope-audit rules are
+unchanged; identity is still not a vote.
+
+Write-ownership change, binding henceforth: allocation and availability
+refreshes are recorded exclusively in `notes.md` (`LIVE STATE` and event
+blocks). `COORDINATION.md` changes only for genuine protocol, gate, or
+roster changes such as this one. The refresh blocks accumulated above remain
+historical provenance and may be moved to an archive file in a dedicated
+compaction atom without changing any hash-pinned packet's git history.
