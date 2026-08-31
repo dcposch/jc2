@@ -1,0 +1,21 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start from the frozen input: the committed vanishing-A jet, the induction report that declined this count, and the campaign guardrail, then enumerate constraints against free coefficients.The induction report is in hand. Next I’ll pull `origin/master` of `jc2-lean` and the committed vanishing-A jet so the count uses only landed identities.The vanishing-A residual is confirmed. I’ll now read the landed discriminant window, the I4/J identities, and the packet so the coefficient count is only over constraints that actually exist.I’ll check the leading-term leftover in `J` after substituting `Δ` and `(*)`, including the first `r_c²` orders, so the triangular claim is computed rather than assumed.The count is unfavorable: expected dimension \(19m+4\). I’ll write that up with the triangular leftover, the I3 dependence, and the family that would flip the chamber.The vanishing-A residual is **genuinely open** at the landed constraint level. Report: `xmodel/max11-68-vanishing-a-elimination-count-grok46-20260831.md`. Verdict: **PARTIAL**.
+
+**Count.** After matching through \(k=3\), the residual coefficient space has \(50m-3\) unknowns. The unused landed families that are not automatic from matching are:
+
+- \(\Delta_{U-k}=0\) for \(k=4..4m\): \(4m-3\)
+- \((\ast)\) on degrees \(0..18m-4\): \(18m-3\) (the four I4 jets at \(18m..18m-3\) are matching, not residual)
+- \(J_j=0\) for \(j=14m+1..23m-1\): \(9m-1\) (\(J_{23m}\) cancels by the resultant)
+
+That is \(31m-7\) equations, so
+\[
+(50m-3)-(31m-7)=19m+4,
+\]
+strictly positive and linear in \(m\) (for \(m=1\): \(47-24=23\)).
+
+**Triangulation.** For \(k=4..4m\) the three high remainder coefficients \((s_{p-k},(r_c)_{Cc-k},(r_e)_{E-k})\) are pinned in terms of \((B,d)\), with diagonals \(B_D^2\), \(B_D\), and leftover \(\frac43\lambda B_D^2\neq 0\) on \(r_c\). This is a normal form, not an endgame: it does not force \(r_c=r_e=0\) and does not collide with \(Fce_0\neq 0\).
+
+**What does not flip it.** Compensated \(I3\) is dependent: its first unused coefficient vanishes identically after \(\Delta_{U-4}\) and \((\ast)_{18m-4}\), matching the rank-audit comment on the second I3 jet and the universal syzygy relating \(\Delta\), \(Rce\), and \(Fce\).
+
+**What would flip it.** An identity forcing \(r_c=r_e=0\) would empty the chamber by the degree comparison already in the induction report. Identically vanishing \(\Delta\) is only \(16m\) extra equations, still short by \(\sim 3m+4\). The producing companions \(k\ge 4\) (with remainder-cancel and load) would *change* the chamber by further vanishing of \(A\), not add independent equations on this residual; they are not landed past \(k=3\).
+DIVERT path=xmodel/max11-68-vanishing-a-elimination-count-grok46-20260831.md status=NO_MARKER bytes=25834

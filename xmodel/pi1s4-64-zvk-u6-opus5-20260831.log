@@ -1,0 +1,19 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report written and sealed: `xmodel/pi1s4-64-zvk-u6-opus5-20260831.md` (6,195 words, `<!-- BODY-END -->` on line 720). Hashes 3/3 verified before reading. No CAS, no computation of any kind was run — every number is hand-derived and displayed.
+
+**Verdict: OPEN at a named computation, and the lane retires into `OPEN[PI1S4-(6,4)-FACTORIZATION]`.**
+
+The re-derivation from the §2 geometry produced more than the charge asked for:
+
+**Theorem ROW-NF.** Every member of the row is `x = r(t)²`, `y = q(t)` with `r = t³+bt+c`, `q = t⁴ + (2b/3)t² + (4c/3)t`, `c ≠ 0` — an irreducible one-parameter family, modulus `j = b³/c²`. `b=c=1` reproduces the ROW-SWEEP witness exactly, and it independently reproduces the charged `q ≡ (t−t²)/3` and `q' ≡ −(8/3)(t+1)`. `δ_aff(D)=3` falls out directly (the minus-branch system collapses to `e₁³ = 0`, forcing `c=0`). `Y_{−5} = −8c³/81` gives `β₁ = 15` in closed form, unconditionally.
+
+**Theorem ZVK-PULLBACK, the decisive structural result.** `bm_{U_6} = bm_D ∘ π_*` for `π(u) = u²`. The 11 upstairs discriminant values are the 11 free generators of `ker(π₁(C_x−Σ_x) → Z/2)`. So the union ZvK **is** the downstairs `x`-projection ZvK with the single factor `β₀` weakened to `β₀²`: the fold buys exactly three commutations in place of three identifications, and nothing else. `{G-admissible} = {Γ-admissible with the three pairs equal}`.
+
+Exhaustive enumeration of the part the fold does supply: **1440** tuples satisfy `β₀²`+generation, exactly **96** satisfy `β₀`+generation. The remaining ten equations are vacuous until the conjugating words of `β₁,…,β₅` are known — which is `OPEN[PI1S4-(6,4)-FACTORIZATION]`. §3.4 explains why the promoted `π₁(C²−D')=Z` collapse doesn't supply them, and §3.5 refutes the one guess that would have.
+
+**Theorem ZVK-RESOLVENT (unconditional, no braid data):** `Γ ↠ S₄` with transposition meridians ⟹ `G ↠ S₃` with transposition meridians. So a NO on `OPEN[PI1S4-(6,4)-TRIPLE-COVER]` kills both the row and the union question.
+
+Three corrections carried: `(μ)=(3)` is empty for the row; `D`'s `x`-projection has 6 distinct discriminant values, not 8 (three tangencies stack at `x=0` — `χ_c(Y)=3` still holds, by a different route than FIXED-TUPLE §6.3(b)); and the integration report's "ONE target-isomorphism class" is one *topological* class, not one curve.
+
+I did not exhibit a tuple and did not exclude one — the enumeration in §5.2 is a floor on the residual, not attainment.
+DIVERT path=xmodel/pi1s4-64-zvk-u6-opus5-20260831.md status=CLEAN body_bytes=39415 body_sha256=d0dc4f7971b39f516dae2337cb172f8357bb1618b1143b800c524dbf95b5f31a
