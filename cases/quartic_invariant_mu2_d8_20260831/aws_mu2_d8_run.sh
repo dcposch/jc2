@@ -167,4 +167,3 @@ set -e
 printf '%s lane=%s rc=%s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$LANE_TAG" "$RC" > "$LANES"
 (cd "$JOB_ROOT" && find payload run -type f -print0 | sort -z | xargs -0 sha256sum) > "$EVIDENCE"
 exit "$RC"
-
