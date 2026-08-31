@@ -44,13 +44,14 @@ def run(*args: str, optimized: bool = False) -> subprocess.CompletedProcess[str]
 def sealed(body: str, *, size_delta: int = 0, digest: str | None = None) -> str:
     data = body.encode("utf-8")
     actual = hashlib.sha256(data).hexdigest()
-    return body + (
-        "\n## Seal\n\n"
-        "- Body definition: test fixture.\n"
-        f"- Body bytes: `{len(data) + size_delta}`.\n"
-        f"- Body SHA-256: `{digest or actual}`.\n"
-        f"- Frozen basis: `{BASIS}`.\n"
-    )
+    return (
+        data
+        + SEAL_MODULE._canonical_seal(
+            len(data) + size_delta,
+            digest or actual,
+            BASIS,
+        )
+    ).decode("utf-8")
 
 
 class SealTest(unittest.TestCase):
@@ -131,20 +132,19 @@ class SealTest(unittest.TestCase):
         self.assertIn("declared", wrong.stderr)
         self.assertIn("expected", wrong.stderr)
 
-    def test_crlf_body_and_post_body_metadata(self) -> None:
+    def test_crlf_body_uses_canonical_lf_seal(self) -> None:
         body = b"# CRLF\r\n\r\n<!-- BODY-END -->\r\n"
         digest = hashlib.sha256(body).hexdigest()
-        post = (
-            "\r\n## Seal\r\n\r\n"
-            "- Body definition: test fixture.\r\n"
-            f"- Body bytes: `{len(body)}`.\r\n"
-            f"- Body SHA-256: `{digest}`.\r\n"
-            f"- Frozen basis: `{BASIS}`.\r\n"
-        ).encode("utf-8")
+        post = SEAL_MODULE._canonical_seal(len(body), digest, BASIS)
         path = self.make_file("placeholder")
         path.write_bytes(body + post)
         result = run("verify", "--expected-basis", BASIS, str(path))
         self.assertEqual(result.returncode, 0, result.stderr)
+
+        path.write_bytes(body + post.replace(b"\n", b"\r\n"))
+        noncanonical = run("verify", "--expected-basis", BASIS, str(path))
+        self.assertNotEqual(noncanonical.returncode, 0)
+        self.assertIn("canonical LF serialization", noncanonical.stderr)
 
     def test_missing_and_duplicate_metadata_fail(self) -> None:
         body = "# Metadata\n\n" + MARKER
@@ -288,6 +288,30 @@ class DivertTest(unittest.TestCase):
         self.assertFalse(overflow.exists())
         self.assertFalse(raw.exists())
 
+    def test_canonical_seal_with_suffix_is_diverted(self) -> None:
+        body = "# report\n\nVERDICT: CONFIRMED\n\n" + MARKER
+        body_bytes = body.encode("utf-8")
+        suffix = b"503 upstream timeout\n"
+        original = sealed(body).encode("utf-8") + suffix
+        tail = original[len(body_bytes):]
+        path = self.make_file("placeholder")
+        path.write_bytes(original)
+
+        verified = run("verify", str(path))
+        self.assertNotEqual(verified.returncode, 0)
+        result, overflow, raw = self.divert(path)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("status=DIVERTED", result.stdout)
+        self.assertEqual(path.read_bytes(), body_bytes)
+        self.assertEqual(overflow.read_bytes(), tail)
+        self.assertEqual(raw.read_bytes(), original)
+        self.assertIn(
+            f"overflow_sha256={hashlib.sha256(tail).hexdigest()}", result.stdout
+        )
+        self.assertIn(
+            f"raw_sha256={hashlib.sha256(original).hexdigest()}", result.stdout
+        )
+
     def test_overflow_is_diverted_with_exact_hashes(self) -> None:
         body = "# report\n\nVERDICT: CONFIRMED\n\n" + MARKER
         tail = "stray bytes after the marker\n"
@@ -305,6 +329,32 @@ class DivertTest(unittest.TestCase):
         self.assertIn(f"body_sha256={body_sha}", result.stdout)
         self.assertIn(f"overflow_sha256={tail_sha}", result.stdout)
         self.assertIn(f"raw_sha256={raw_sha}", result.stdout)
+
+    def test_unterminated_marker_is_typed_and_untouched(self) -> None:
+        original = "# report\n\n<!-- BODY-END -->"
+        path = self.make_file(original)
+        result, overflow, raw = self.divert(path)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("status=UNTERMINATED_MARKER", result.stdout)
+        self.assertEqual(path.read_text(encoding="utf-8"), original)
+        self.assertFalse(overflow.exists())
+        self.assertFalse(raw.exists())
+
+    def test_crlf_marker_divert_preserves_exact_boundary(self) -> None:
+        body = b"# report\r\n\r\n<!-- BODY-END -->\r\n"
+        tail = b"provider timeout\r\n"
+        original = body + tail
+        path = self.make_file("placeholder")
+        path.write_bytes(original)
+        result, overflow, raw = self.divert(path)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("status=DIVERTED", result.stdout)
+        self.assertEqual(path.read_bytes(), body)
+        self.assertEqual(overflow.read_bytes(), tail)
+        self.assertEqual(raw.read_bytes(), original)
+        self.assertIn(
+            f"body_sha256={hashlib.sha256(body).hexdigest()}", result.stdout
+        )
 
     def test_zero_and_multiple_markers_are_reported_not_repaired(self) -> None:
         no_marker = self.make_file("# partial draft without a marker\n")
@@ -337,6 +387,43 @@ class DivertTest(unittest.TestCase):
         self.assertIn("cannot create", result.stderr)
         self.assertEqual(path.read_text(encoding="utf-8"), body + "tail\n")
         self.assertEqual(overflow.read_text(encoding="utf-8"), "occupied\n")
+        self.assertFalse(raw.exists())
+
+    def test_change_before_replace_is_reclassified(self) -> None:
+        body = ("# report\n\n" + MARKER).encode("utf-8")
+        first_tail = b"first provider error\n"
+        late_tail = b"late provider error\n"
+        path = self.make_file("placeholder")
+        path.write_bytes(body + first_tail)
+        overflow = path.parent / "report.overflow"
+        raw = path.parent / "report.raw.md"
+        original_read = SEAL_MODULE._read_regular_at
+        calls = 0
+
+        def raced_read(parent_fd: int, name: str):
+            nonlocal calls
+            calls += 1
+            if calls == 2:
+                fd = os.open(name, os.O_WRONLY | os.O_APPEND, dir_fd=parent_fd)
+                with os.fdopen(fd, "ab") as handle:
+                    handle.write(late_tail)
+            return original_read(parent_fd, name)
+
+        with mock.patch.object(
+            SEAL_MODULE, "_read_regular_at", side_effect=raced_read
+        ):
+            result = SEAL_MODULE.divert_path(path, overflow, raw)
+        original = body + first_tail + late_tail
+        self.assertEqual(result["status"], "DIVERTED")
+        self.assertEqual(path.read_bytes(), body)
+        self.assertEqual(overflow.read_bytes(), first_tail + late_tail)
+        self.assertEqual(raw.read_bytes(), original)
+        self.assertEqual(result["raw_sha256"], hashlib.sha256(original).hexdigest())
+        self.assertEqual(
+            result["overflow_sha256"],
+            hashlib.sha256(first_tail + late_tail).hexdigest(),
+        )
+        self.assertEqual(list(path.parent.glob(f".{path.name}.seal-*")), [])
 
     def test_optimized_mode_matches(self) -> None:
         body = "# report\n\n" + MARKER

@@ -2,8 +2,13 @@
 """Stamp or verify the campaign's BODY-END report integrity seal.
 
 Only a standalone ``<!-- BODY-END -->`` line is a marker.  Inline or quoted
-mentions are ordinary body text.  The tool never discovers files: every path
-must be supplied explicitly.  A body hash detects accidental or concurrent
+mentions are ordinary body text.  The sole canonical post-body seal is the
+exact UTF-8 serialization returned by the module's canonical-seal serializer:
+its text, order, wrapping, punctuation, and LF line endings are fixed.  CRLF is
+accepted in the body and marker line, where both bytes are hashed, but never in
+the post-body seal.  Any other post-body prefix, suffix, CRLF, or lone carriage
+return makes the seal invalid.  The tool never discovers files: every path must
+be supplied explicitly.  A body hash detects accidental or concurrent
 mutation; it is not an authenticity signature.  Full-file hashes and external
 run receipts remain separate custody evidence.
 """
@@ -252,6 +257,9 @@ def verify_bytes(
         raise SealError(
             f"frozen basis mismatch: declared {basis}, expected {expected_basis}"
         )
+    canonical = _canonical_seal(len(body), actual_sha, basis)
+    if data[boundary:] != canonical:
+        raise SealError("post-body seal is not the canonical LF serialization")
     return len(body), actual_sha, basis
 
 
@@ -384,92 +392,120 @@ def divert_path(
     """Split non-whitespace overflow after a sole BODY-END out of a report.
 
     The charged report keeps every byte through the marker line; the exact
-    overflow bytes land in ``overflow_path`` and, when ``raw_path`` is given,
-    the untouched original is preserved there first.  A report whose
-    post-marker content is whitespace or a valid canonical seal is left
-    unmodified.  Zero or multiple markers are reported, never repaired.
+    overflow bytes land in overflow_path and, when raw_path is given, the
+    untouched original is preserved there first.  A report whose post-marker
+    content is whitespace or exactly one canonical seal is left unmodified.
+    Zero, multiple, and unterminated markers are reported, never repaired.
     """
     parent_fd, name, parent, parent_info = _open_parent(path)
     temp_name: str | None = None
+    created_paths: list[Path] = []
+    reclassified = False
+
+    def cleanup_created() -> None:
+        for artifact in reversed(created_paths):
+            try:
+                artifact.unlink()
+            except FileNotFoundError:
+                pass
+        created_paths.clear()
+
     try:
-        data, original = _read_regular_at(parent_fd, name)
-        markers = _marker_boundaries(data, require_newline=False)
-        if not markers:
-            return {"status": "NO_MARKER", "bytes": len(data)}
-        if len(markers) > 1:
-            return {"status": "MULTI_MARKER", "markers": len(markers)}
-        boundary = markers[0]
-        body = data[:boundary]
-        tail = data[boundary:]
-        body_sha = hashlib.sha256(body).hexdigest()
-        if not tail.strip():
-            return {
-                "status": "CLEAN",
+        while True:
+            data, original = _read_regular_at(parent_fd, name)
+            try:
+                markers = _marker_boundaries(data, require_newline=True)
+            except SealError:
+                return {"status": "UNTERMINATED_MARKER", "bytes": len(data)}
+            if not markers:
+                return {"status": "NO_MARKER", "bytes": len(data)}
+            if len(markers) > 1:
+                return {"status": "MULTI_MARKER", "markers": len(markers)}
+            boundary = markers[0]
+            body = data[:boundary]
+            tail = data[boundary:]
+            body_sha = hashlib.sha256(body).hexdigest()
+            if not tail.strip():
+                return {
+                    "status": "CLEAN",
+                    "body_bytes": len(body),
+                    "body_sha256": body_sha,
+                }
+            try:
+                verify_bytes(data)
+                return {
+                    "status": "CLEAN_SEALED",
+                    "body_bytes": len(body),
+                    "body_sha256": body_sha,
+                }
+            except SealError:
+                pass
+
+            result: dict[str, object] = {
+                "status": "DIVERTED",
                 "body_bytes": len(body),
                 "body_sha256": body_sha,
+                "overflow": str(overflow_path),
+                "overflow_bytes": len(tail),
             }
-        try:
-            verify_bytes(data)
-            return {
-                "status": "CLEAN_SEALED",
-                "body_bytes": len(body),
-                "body_sha256": body_sha,
-            }
-        except SealError:
-            pass
+            try:
+                if raw_path is not None:
+                    result["raw"] = str(raw_path)
+                    result["raw_sha256"] = _write_exclusive(raw_path, data)
+                    created_paths.append(raw_path)
+                result["overflow_sha256"] = _write_exclusive(overflow_path, tail)
+                created_paths.append(overflow_path)
 
-        result: dict[str, object] = {
-            "status": "DIVERTED",
-            "body_bytes": len(body),
-            "body_sha256": body_sha,
-            "overflow": str(overflow_path),
-            "overflow_bytes": len(tail),
-        }
-        if raw_path is not None:
-            result["raw"] = str(raw_path)
-            result["raw_sha256"] = _write_exclusive(raw_path, data)
-        result["overflow_sha256"] = _write_exclusive(overflow_path, tail)
+                temp_fd, temp_name = _create_temp_at(
+                    parent_fd, name, stat.S_IMODE(original.st_mode)
+                )
+                with os.fdopen(temp_fd, "wb") as handle:
+                    handle.write(body)
+                    handle.flush()
+                    os.fsync(handle.fileno())
 
-        try:
-            current = os.stat(name, dir_fd=parent_fd, follow_symlinks=False)
-        except OSError as exc:
-            raise SealError(
-                f"cannot recheck target before truncation: {exc}"
-            ) from exc
-        if stat.S_ISLNK(current.st_mode) or not stat.S_ISREG(current.st_mode):
-            raise SealError("target changed to a symlink or non-regular file")
-        if _identity(current) != _identity(original):
-            raise SealError("target identity changed while preparing divert")
+                # Re-read immediately before replacement.  A cooperative late
+                # writer gets one fresh classification rather than stale
+                # truncation; repeated mutation fails closed.
+                latest_data, latest = _read_regular_at(parent_fd, name)
+                if _snapshot(latest) != _snapshot(original) or latest_data != data:
+                    os.unlink(temp_name, dir_fd=parent_fd)
+                    temp_name = None
+                    cleanup_created()
+                    if reclassified:
+                        raise SealError(
+                            "target changed repeatedly before atomic truncation"
+                        )
+                    reclassified = True
+                    continue
+                _check_parent_path(parent, parent_info)
+                os.replace(
+                    temp_name,
+                    name,
+                    src_dir_fd=parent_fd,
+                    dst_dir_fd=parent_fd,
+                )
+                temp_name = None
+                created_paths.clear()
 
-        temp_fd, temp_name = _create_temp_at(
-            parent_fd, name, stat.S_IMODE(original.st_mode)
-        )
-        with os.fdopen(temp_fd, "wb") as handle:
-            handle.write(body)
-            handle.flush()
-            os.fsync(handle.fileno())
-
-        latest_data, latest = _read_regular_at(parent_fd, name)
-        if _snapshot(latest) != _snapshot(original) or latest_data != data:
-            raise SealError("target changed before atomic truncation")
-        _check_parent_path(parent, parent_info)
-        os.replace(temp_name, name, src_dir_fd=parent_fd, dst_dir_fd=parent_fd)
-        temp_name = None
-
-        installed, _ = _read_regular_at(parent_fd, name)
-        if installed != body:
-            raise SealError("installed body differs from staged bytes")
-        try:
-            os.fsync(parent_fd)
-        except OSError:
-            pass
-        return result
+                installed, _ = _read_regular_at(parent_fd, name)
+                if installed != body:
+                    raise SealError("installed body differs from staged bytes")
+                try:
+                    os.fsync(parent_fd)
+                except OSError:
+                    pass
+                return result
+            except Exception:
+                cleanup_created()
+                raise
     finally:
         if temp_name is not None:
             try:
                 os.unlink(temp_name, dir_fd=parent_fd)
             except FileNotFoundError:
                 pass
+        cleanup_created()
         os.close(parent_fd)
 
 

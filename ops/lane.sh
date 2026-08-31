@@ -42,6 +42,24 @@ charge_validator=$script_dir/validate_charge_basis.py
   echo "unknown adapter: $adapter" >&2
   exit 2
 }
+command -v python3 >/dev/null 2>&1 || {
+  echo "python3 is required for lane validation" >&2
+  exit 2
+}
+receipt_path_is_safe() {
+  python3 - "$1" <<'PY'
+import sys
+import unicodedata
+
+for character in sys.argv[1]:
+    if unicodedata.category(character) in {"Cc", "Cf", "Cs", "Zl", "Zp"}:
+        raise SystemExit(1)
+PY
+}
+if ! receipt_path_is_safe "$prompt_file"; then
+  echo "prompt path contains a control or line-separator character; run refused" >&2
+  exit 7
+fi
 [ -f "$prompt_file" ] || {
   echo "prompt file not found: $prompt_file" >&2
   exit 2
@@ -57,10 +75,6 @@ charge_validator=$script_dir/validate_charge_basis.py
 seal_tool=$script_dir/seal.py
 [ -f "$seal_tool" ] && [ ! -L "$seal_tool" ] || {
   echo "required seal tool missing: $seal_tool" >&2
-  exit 2
-}
-command -v python3 >/dev/null 2>&1 || {
-  echo "python3 is required for charge-basis validation" >&2
   exit 2
 }
 sandbox_exec=/usr/bin/sandbox-exec
@@ -162,6 +176,7 @@ sandbox_profile=$lane_tmp_dir/external-model.sb
 inputs_dir=$lane_tmp_dir/inputs
 inputs_manifest=$lane_tmp_dir/charged-inputs.list
 inputs_post_manifest=$lane_tmp_dir/charged-inputs-post.list
+input_basename_keys=$lane_tmp_dir/charged-input-basename-keys.list
 # Keep this lexical: boundary setup must neither resolve nor inspect the excluded
 # nested worktree.  Seatbelt resolves aliases when enforcing the path filter.
 excluded_tree=$repo_root/jc2-lean
@@ -215,7 +230,7 @@ fi
 # response cannot be lost to a misdirected or unwritten report.
 if ! grep -F "xmodel/$tag.md" "$prompt_snapshot" >/dev/null 2>&1; then
   echo "prompt does not name its mandated report path xmodel/$tag.md; run refused" >&2
-  exit 2
+  exit 7
 fi
 
 # A prompt that instructs the BODY-END convention declares the marker
@@ -235,49 +250,98 @@ prompt_has_placeholder=0
 if grep -F "$input_placeholder" "$prompt_snapshot" >/dev/null 2>&1; then
   prompt_has_placeholder=1
 fi
+charged_path_is_lexically_valid() {
+  (
+    LC_ALL=C
+    export LC_ALL
+    case "$1" in
+      /*|*..*|*[!A-Za-z0-9/._-]*) exit 1 ;;
+    esac
+    case "/$1/" in
+      */./*) exit 1 ;;
+    esac
+    exit 0
+  )
+}
+charged_path_is_regular_without_symlinks() {
+  python3 - "$repo_root" "$1" <<'PY'
+import os
+import stat
+import sys
+
+root, relative = sys.argv[1:]
+parts = relative.split("/")
+current = root
+for index, component in enumerate(parts):
+    current = os.path.join(current, component)
+    try:
+        info = os.lstat(current)
+    except OSError:
+        raise SystemExit(1)
+    if stat.S_ISLNK(info.st_mode):
+        raise SystemExit(1)
+    if index < len(parts) - 1 and not stat.S_ISDIR(info.st_mode):
+        raise SystemExit(1)
+    if index == len(parts) - 1 and not stat.S_ISREG(info.st_mode):
+        raise SystemExit(1)
+PY
+}
 input_count=0
 if [ -n "$charged_inputs" ] || [ "$prompt_has_placeholder" -eq 1 ]; then
   if [ -z "$charged_inputs" ] || [ "$prompt_has_placeholder" -eq 0 ]; then
     echo "charged_input declarations and the $input_placeholder placeholder must appear together; run refused" >&2
-    exit 2
+    exit 7
   fi
   case "$inputs_dir" in
     *[!A-Za-z0-9/._-]*)
       echo "lane inputs directory has unsupported characters: $inputs_dir" >&2
-      exit 2
+      exit 7
       ;;
   esac
   mkdir "$inputs_dir" || exit 2
   while IFS= read -r charged_rel; do
     [ -n "$charged_rel" ] || continue
-    case "$charged_rel" in
-      /*|*..*|*[!A-Za-z0-9/._-]*)
-        echo "invalid charged input path: $charged_rel" >&2
-        exit 2
-        ;;
+    if ! receipt_path_is_safe "$charged_rel"; then
+      echo "charged input path contains a control or line-separator character; run refused" >&2
+      exit 7
+    fi
+    if ! charged_path_is_lexically_valid "$charged_rel"; then
+      echo "invalid charged input path: $charged_rel" >&2
+      exit 7
+    fi
+    charged_rel_fold=$(printf '%s' "$charged_rel" | LC_ALL=C tr 'A-Z' 'a-z') || exit 2
+    case "$charged_rel_fold" in
       jc2-lean|jc2-lean/*)
         echo "charged input inside the excluded tree refused: $charged_rel" >&2
-        exit 2
+        exit 7
         ;;
     esac
+    if ! charged_path_is_regular_without_symlinks "$charged_rel"; then
+      echo "charged input missing or not a regular file, or has a symlink component: $charged_rel" >&2
+      exit 7
+    fi
     charged_src=$repo_root/$charged_rel
-    if [ ! -f "$charged_src" ] || [ -L "$charged_src" ]; then
-      echo "charged input missing or not a regular file: $charged_rel" >&2
-      exit 2
-    fi
     charged_base=$(basename "$charged_rel")
+    charged_base_key=$(printf '%s' "$charged_base" | LC_ALL=C tr 'A-Z' 'a-z') || exit 2
     charged_dest=$inputs_dir/$charged_base
-    if [ -e "$charged_dest" ]; then
-      echo "duplicate charged input basename: $charged_base" >&2
-      exit 2
+    duplicate_base=0
+    if [ -f "$input_basename_keys" ]; then
+      if grep -Fqx -e "$charged_base_key" "$input_basename_keys"; then
+        duplicate_base=1
+      fi
     fi
+    if [ "$duplicate_base" -eq 1 ] || [ -e "$charged_dest" ]; then
+      echo "duplicate charged input basename: $charged_base" >&2
+      exit 7
+    fi
+    printf '%s\n' "$charged_base_key" >> "$input_basename_keys" || exit 2
     charged_src_sha=$(sha256_file "$charged_src") || exit 2
     cp "$charged_src" "$charged_dest" || exit 2
     chmod 400 "$charged_dest" || exit 2
     charged_snap_sha=$(sha256_file "$charged_dest") || exit 2
     if [ "$charged_snap_sha" != "$charged_src_sha" ]; then
       echo "charged input changed while being snapshotted: $charged_rel" >&2
-      exit 2
+      exit 7
     fi
     input_count=$((input_count + 1))
     printf '%s %s %s\n' "$charged_rel" "$charged_base" "$charged_src_sha" \
@@ -339,7 +403,7 @@ basis=$(git rev-parse HEAD 2>/dev/null || echo UNKNOWN)
   echo "pid=$$"
   echo "host=$(hostname)"
   echo "basis=$basis"
-  echo "prompt=$prompt_file"
+  printf '%s\n' "prompt=$prompt_file"
   echo "prompt_sha256=$prompt_sha"
   echo "adapter_sha256=$adapter_sha"
   echo "launcher=ops/lane.sh"
@@ -381,7 +445,8 @@ basis=$(git rev-parse HEAD 2>/dev/null || echo UNKNOWN)
 child_pid=$!
 echo "child_pid=$child_pid" >> "$run_file"
 wait "$child_pid"
-rc=$?
+adapter_exit_code=$?
+rc=$adapter_exit_code
 
 if [ -n "$caught_signal" ]; then
   while kill -0 "$child_pid" 2>/dev/null; do
@@ -432,19 +497,24 @@ if [ -s "$report_file" ]; then
         ;;
       NO_MARKER)
         report_state=PARTIAL_NO_MARKER
-        if [ "$body_end_contract" = DECLARED ] && [ "$rc" -eq 0 ]; then
+        if [ "$body_end_contract" = DECLARED ]; then
           echo "report has no BODY-END under a declared contract; banked as partial" >> "$log_file"
           rc=7
         fi
         ;;
+      UNTERMINATED_MARKER)
+        report_state=PARTIAL_NO_MARKER
+        echo "report has an unterminated BODY-END marker; banked as partial" >> "$log_file"
+        rc=7
+        ;;
       MULTI_MARKER)
         report_state=AMBIGUOUS_MULTI_MARKER
         echo "report has multiple BODY-END markers; not repaired" >> "$log_file"
-        [ "$rc" -ne 0 ] || rc=7
+        rc=7
         ;;
       *)
         report_state=UNVERIFIED
-        [ "$rc" -ne 0 ] || rc=7
+        rc=7
         ;;
     esac
   else
@@ -452,7 +522,7 @@ if [ -s "$report_file" ]; then
     seal_boundary=ERROR
     report_state=UNVERIFIED
     echo "seal boundary check failed; result is quarantined" >> "$log_file"
-    [ "$rc" -ne 0 ] || rc=7
+    rc=7
   fi
 fi
 
@@ -521,6 +591,7 @@ fi
 end_utc=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
 {
   echo "end_utc=$end_utc"
+  echo "adapter_exit_code=$adapter_exit_code"
   echo "exit_code=$rc"
   echo "post_prompt_sha256=$post_prompt_sha"
   echo "post_adapter_sha256=$post_adapter_sha"

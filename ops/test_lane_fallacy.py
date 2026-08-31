@@ -112,6 +112,7 @@ if [ -n "${FAKE_REPORT_SOURCE:-}" ]; then
 else
   printf '# fake report\n' > "xmodel/$FAKE_TAG.md"
 fi
+exit "$FAKE_EXIT_CODE"
 """,
             encoding="utf-8",
         )
@@ -126,8 +127,11 @@ fi
         mode: str = "",
         report: str | None = None,
         prompt_text: str | None = None,
+        adapter_exit_code: int = 0,
+        prompt_name: str = "request.txt",
+        env_overrides: dict[str, str] | None = None,
     ) -> tuple[subprocess.CompletedProcess[str], Path, Path, Path]:
-        prompt = root / "request.txt"
+        prompt = root / prompt_name
         if prompt_text is None:
             prompt_text = (
                 f"Investigate the bounded lane. Write the single report to "
@@ -144,6 +148,7 @@ fi
                 "FAKE_PROMPT_PATH": str(prompt_path),
                 "FAKE_TAG": tag,
                 "FAKE_MODE": mode,
+                "FAKE_EXIT_CODE": str(adapter_exit_code),
                 "FAKE_BOUNDARY_RESULT": str(boundary_result),
                 "FAKE_EXCLUDED_TREE": str(root / "jc2-lean"),
                 "FAKE_EXCLUDED_ALIAS": str(root / "excluded-alias"),
@@ -154,6 +159,8 @@ fi
             report_source = root / f"{tag}.report-source"
             report_source.write_text(report, encoding="utf-8")
             env["FAKE_REPORT_SOURCE"] = str(report_source)
+        if env_overrides is not None:
+            env.update(env_overrides)
         result = subprocess.run(
             ["/bin/sh", str(root / "ops" / "lane.sh"), "fake", tag, str(prompt)],
             cwd=root,
@@ -203,6 +210,7 @@ class LaneFallacyTest(LaneHarness):
         self.assertEqual(run["post_fallacy_sha256"], run["fallacy_sha256"])
         self.assertEqual(run["post_model_prompt_sha256"], run["model_prompt_sha256"])
         self.assertEqual(run["charge_basis_status"], "ABSENT")
+        self.assertEqual(run["adapter_exit_code"], "0")
         self.assertEqual(run["final_status"], "DONE")
 
         ephemeral_prompt = Path(prompt_path.read_text(encoding="utf-8").strip())
@@ -359,7 +367,7 @@ class LaneCustodyHardeningTest(LaneHarness):
         result, _, capture, _ = self.run_lane(
             root, "nopath", prompt_text="Investigate the bounded lane.\n"
         )
-        self.assertEqual(result.returncode, 2)
+        self.assertEqual(result.returncode, 7)
         self.assertIn("does not name its mandated report path", result.stderr)
         self.assertFalse(capture.exists())
         self.assertFalse((root / "xmodel" / "nopath.run.v2").exists())
@@ -426,6 +434,36 @@ class LaneCustodyHardeningTest(LaneHarness):
                 "Read {{LANE_INPUTS}}/secret.md then write xmodel/%s.md.\n",
                 "invalid charged input path",
             ),
+            (
+                "dot-exclusion-alias",
+                "charged_input=./jc2-lean/secret.md\n"
+                "Read {{LANE_INPUTS}}/secret.md then write xmodel/%s.md.\n",
+                "invalid charged input path",
+            ),
+            (
+                "uppercase-excluded-tree",
+                "charged_input=JC2-LEAN/secret.md\n"
+                "Read {{LANE_INPUTS}}/secret.md then write xmodel/%s.md.\n",
+                "excluded tree",
+            ),
+            (
+                "dot-component",
+                "charged_input=refs/./packet.md\n"
+                "Read {{LANE_INPUTS}}/packet.md then write xmodel/%s.md.\n",
+                "invalid charged input path",
+            ),
+            (
+                "absolute-path",
+                "charged_input=/tmp/packet.md\n"
+                "Read {{LANE_INPUTS}}/packet.md then write xmodel/%s.md.\n",
+                "invalid charged input path",
+            ),
+            (
+                "control-character",
+                "charged_input=refs/bad\tname.md\n"
+                "Read {{LANE_INPUTS}}/packet.md then write xmodel/%s.md.\n",
+                "control",
+            ),
         )
         for tag, template, error in cases:
             with self.subTest(tag=tag):
@@ -435,9 +473,99 @@ class LaneCustodyHardeningTest(LaneHarness):
                 result, _, capture, _ = self.run_lane(
                     root, tag, prompt_text=template % tag
                 )
-                self.assertEqual(result.returncode, 2, result.stderr)
+                self.assertEqual(result.returncode, 7, result.stderr)
                 self.assertIn(error, result.stderr)
                 self.assertFalse(capture.exists())
+
+    def test_non_ascii_charged_input_is_refused_under_utf8_locale(self) -> None:
+        root = self.make_repo()
+        packet = root / "refs" / "café.md"
+        packet.parent.mkdir()
+        packet.write_text("x\n", encoding="utf-8")
+        tag = "non-ascii"
+        prompt_text = (
+            "charged_input=refs/café.md\n"
+            "Read {{LANE_INPUTS}}/café.md then write "
+            f"xmodel/{tag}.md.\n"
+        )
+        result, _, capture, _ = self.run_lane(
+            root,
+            tag,
+            prompt_text=prompt_text,
+            env_overrides={"LC_ALL": "en_US.UTF-8", "LANG": "en_US.UTF-8"},
+        )
+        self.assertEqual(result.returncode, 7, result.stderr)
+        self.assertIn("invalid charged input path", result.stderr)
+        self.assertFalse(capture.exists())
+        self.assertFalse((root / "xmodel" / f"{tag}.run.v2").exists())
+
+    @unittest.skipUnless(hasattr(os, "symlink"), "symlinks unavailable")
+    def test_charged_input_ancestor_symlink_is_refused(self) -> None:
+        root = self.make_repo()
+        target = root / "actual"
+        target.mkdir()
+        (target / "secret.md").write_text("x\n", encoding="utf-8")
+        refs = root / "refs"
+        refs.mkdir()
+        (refs / "alias").symlink_to(target, target_is_directory=True)
+        tag = "ancestor-symlink"
+        prompt_text = (
+            "charged_input=refs/alias/secret.md\n"
+            "Read {{LANE_INPUTS}}/secret.md then write "
+            f"xmodel/{tag}.md.\n"
+        )
+        result, _, capture, _ = self.run_lane(root, tag, prompt_text=prompt_text)
+        self.assertEqual(result.returncode, 7, result.stderr)
+        self.assertIn("symlink component", result.stderr)
+        self.assertFalse(capture.exists())
+        self.assertFalse((root / "xmodel" / f"{tag}.run.v2").exists())
+
+    def test_casefolded_charged_input_basenames_are_refused(self) -> None:
+        root = self.make_repo()
+        first = root / "refs" / "Packet.md"
+        second = root / "other" / "packet.md"
+        first.parent.mkdir()
+        second.parent.mkdir()
+        first.write_text("one\n", encoding="utf-8")
+        second.write_text("two\n", encoding="utf-8")
+        tag = "casefold-basename"
+        prompt_text = (
+            "charged_input=refs/Packet.md\n"
+            "charged_input=other/packet.md\n"
+            "Read both files under {{LANE_INPUTS}} and write "
+            f"xmodel/{tag}.md.\n"
+        )
+        result, _, capture, _ = self.run_lane(root, tag, prompt_text=prompt_text)
+        self.assertEqual(result.returncode, 7, result.stderr)
+        self.assertIn("duplicate charged input basename", result.stderr)
+        self.assertFalse(capture.exists())
+        self.assertFalse((root / "xmodel" / f"{tag}.run.v2").exists())
+
+    def test_prompt_path_control_characters_are_refused(self) -> None:
+        controls = (
+            ("LF", "\n"),
+            ("CR", "\r"),
+            ("TAB", "\t"),
+            ("DEL", "\x7f"),
+            ("NEL", "\u0085"),
+            ("LS", "\u2028"),
+            ("PS", "\u2029"),
+            ("BIDI", "\u200e"),
+        )
+        for label, character in controls:
+            with self.subTest(label=label):
+                root = self.make_repo()
+                tag = f"control-{label.lower()}"
+                result, _, capture, _ = self.run_lane(
+                    root,
+                    tag,
+                    prompt_name=f"request{character}injected=1.txt",
+                )
+                self.assertEqual(result.returncode, 7, result.stderr)
+                self.assertIn("control", result.stderr)
+                self.assertNotIn("injected=1", result.stderr)
+                self.assertFalse(capture.exists())
+                self.assertFalse((root / "xmodel" / f"{tag}.run.v2").exists())
 
     def test_overflow_after_body_end_is_diverted_not_lost(self) -> None:
         root = self.make_repo()
@@ -514,6 +642,51 @@ class LaneCustodyHardeningTest(LaneHarness):
         self.assertEqual(run["final_status"], "FAILED")
         log = (root / "xmodel" / f"{tag}.log").read_text(encoding="utf-8")
         self.assertIn("banked as partial", log)
+
+    def test_unterminated_marker_is_partial_contract_failure(self) -> None:
+        root = self.make_repo()
+        tag = "unterminated"
+        report = "# review\n\n<!-- BODY-END -->"
+        prompt_text = (
+            f"Review the claim and write the single report to xmodel/{tag}.md, "
+            "ending its body with a standalone <!-- BODY-END --> line.\n"
+        )
+        result, _, _, _ = self.run_lane(
+            root, tag, report=report, prompt_text=prompt_text
+        )
+        self.assertEqual(result.returncode, 7, result.stderr)
+        run = parse_run(root / "xmodel" / f"{tag}.run.v2")
+        self.assertEqual(run["seal_boundary"], "UNTERMINATED_MARKER")
+        self.assertEqual(run["report_state"], "PARTIAL_NO_MARKER")
+        self.assertEqual(run["adapter_exit_code"], "0")
+        self.assertEqual(run["exit_code"], "7")
+        self.assertEqual(run["report_sha256"], sha256(report.encode("utf-8")))
+        self.assertEqual(run["final_status"], "FAILED")
+        self.assertFalse((root / "xmodel" / f"{tag}.raw.md").exists())
+        self.assertFalse((root / "xmodel" / f"{tag}.overflow").exists())
+
+    def test_boundary_failure_overrides_nonzero_adapter_exit(self) -> None:
+        root = self.make_repo()
+        tag = "adapter-failed-boundary"
+        report = "# markerless provider failure\n"
+        prompt_text = (
+            f"Review the claim and write the single report to xmodel/{tag}.md, "
+            "ending its body with a standalone <!-- BODY-END --> line.\n"
+        )
+        result, _, _, _ = self.run_lane(
+            root,
+            tag,
+            report=report,
+            prompt_text=prompt_text,
+            adapter_exit_code=23,
+        )
+        self.assertEqual(result.returncode, 7, result.stderr)
+        run = parse_run(root / "xmodel" / f"{tag}.run.v2")
+        self.assertEqual(run["adapter_exit_code"], "23")
+        self.assertEqual(run["exit_code"], "7")
+        self.assertEqual(run["seal_boundary"], "NO_MARKER")
+        self.assertEqual(run["report_state"], "PARTIAL_NO_MARKER")
+        self.assertEqual(run["final_status"], "FAILED")
 
     def test_missing_marker_without_contract_is_informational(self) -> None:
         root = self.make_repo()

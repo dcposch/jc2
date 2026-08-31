@@ -546,7 +546,13 @@ class ArtifactFinalizeTest(unittest.TestCase):
             str(opened["token"]),
         )
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn("not byte-for-byte canonical", result.stderr)
+        # Post-seal tampering must be refused; either the canonical-seal
+        # check or the stale-hash check may fire first, both fail closed.
+        self.assertTrue(
+            "not byte-for-byte canonical" in result.stderr
+            or "refusing stale hash" in result.stderr,
+            result.stderr,
+        )
         self.assertFalse(self.final.exists())
 
     def test_wrong_token_and_preexisting_final_do_not_overwrite(self) -> None:
