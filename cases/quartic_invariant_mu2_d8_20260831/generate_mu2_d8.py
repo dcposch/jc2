@@ -38,9 +38,10 @@ def require_aws_route() -> str:
 def canonical_sha(expressions: list[sp.Expr], labels: list[str] | None = None) -> str:
     if labels is None:
         labels = [str(index) for index in range(len(expressions))]
+    require(len(labels) == len(expressions), "canonical-hash label count drifted")
     payload = "\n".join(
         f"{label}={sp.srepr(sp.expand(expression))}"
-        for label, expression in zip(labels, expressions, strict=True)
+        for label, expression in zip(labels, expressions)
     ).encode("utf-8")
     return hashlib.sha256(payload).hexdigest()
 
@@ -85,19 +86,25 @@ def singular_text(characteristic: int, profile: str, engine: str) -> str:
 
     free_basis = [A, A**2, A**3, A**4, A * Z, A**2 * Z, Z**2, A * U, A**2 * U, U * Z]
     require(len(free_basis) == 10, "normalized free basis drifted")
-    H1 = U + sum(coefficient * monomial for coefficient, monomial in zip(left_params, free_basis, strict=True))
-    H2 = Z + sum(coefficient * monomial for coefficient, monomial in zip(right_params, free_basis, strict=True))
+    require(
+        len(left_params) == len(right_params) == len(free_basis),
+        "normalized parameter count drifted",
+    )
+    H1 = U + sum(coefficient * monomial for coefficient, monomial in zip(left_params, free_basis))
+    H2 = Z + sum(coefficient * monomial for coefficient, monomial in zip(right_params, free_basis))
     jacobian = sp.expand(sp.diff(H1, x) * sp.diff(H2, y) - sp.diff(H1, y) * sp.diff(H2, x))
     require(sp.Poly(jacobian, x, y).coeff_monomial(1) == 2, "normalized constant Jacobian drifted")
 
     target = 3 if profile == "target3" else 2
     polynomial = sp.Poly(sp.expand(jacobian - target), x, y)
+    raw_equations: list[sp.Expr] = []
     equations: list[sp.Expr] = []
     seen: set[str] = set()
     for _monomial, coefficient in polynomial.terms():
         normalized = sp.expand(coefficient)
         if normalized == 0:
             continue
+        raw_equations.append(normalized)
         key = sp.srepr(normalized)
         if key in seen:
             continue
@@ -106,14 +113,18 @@ def singular_text(characteristic: int, profile: str, engine: str) -> str:
 
     if profile == "target3":
         require(
-            len(equations) == 58,
-            f"target-3 equation count drifted: observed {len(equations)}, expected 58",
+            len(raw_equations) == 58 and len(equations) == 54,
+            "target-3 equation count drifted: "
+            f"observed raw/unique {len(raw_equations)}/{len(equations)}, "
+            "expected 58/54",
         )
         require(any(equation in (1, -1) for equation in equations), "target-3 unit mutation lost")
     else:
         require(
-            len(equations) == 57,
-            f"actual equation count drifted: observed {len(equations)}, expected 57",
+            len(raw_equations) == 57 and len(equations) == 53,
+            "actual equation count drifted: "
+            f"observed raw/unique {len(raw_equations)}/{len(equations)}, "
+            "expected 57/53",
         )
         require(all(equation not in (1, -1) for equation in equations), "actual cell became trivially empty")
         require(
@@ -121,10 +132,11 @@ def singular_text(characteristic: int, profile: str, engine: str) -> str:
             "unexpected parameter-independent coefficient; inspect before Groebner",
         )
 
-    full_equation_sha = canonical_sha(equations)
+    raw_equation_sha = canonical_sha(raw_equations)
+    unique_equation_sha = canonical_sha(equations)
     if profile == "drop_last":
         equations = equations[:-1]
-        require(len(equations) == 56, "drop-last mutation failed")
+        require(len(equations) == 52, "drop-last mutation failed")
 
     def singular(expression: sp.Expr) -> str:
         return sp.sstr(expression, order="lex").replace("**", "^")
@@ -141,8 +153,10 @@ def singular_text(characteristic: int, profile: str, engine: str) -> str:
             f"// profile={profile}",
             f"// engine={engine}",
             f"// basis_sha256={basis_sha}",
-            f"// full_equation_sha256={full_equation_sha}",
-            f"// equation_count={len(equations)}",
+            f"// raw_equation_sha256={raw_equation_sha}",
+            f"// unique_equation_sha256={unique_equation_sha}",
+            f"// raw_equation_count={len(raw_equations)}",
+            f"// ideal_generator_count={len(equations)}",
             f"ring r={characteristic},({variables}),dp;",
             "option(redSB);",
             "ideal I =",
@@ -150,7 +164,8 @@ def singular_text(characteristic: int, profile: str, engine: str) -> str:
             'print("SCHEMA=JC2_QUARTIC_INVARIANT_MU2_D8_V1");',
             f'print("PROFILE={profile}");',
             f'print("BASIS_SHA256={basis_sha}");',
-            f'print("FULL_EQUATION_SHA256={full_equation_sha}");',
+            f'print("RAW_EQUATION_SHA256={raw_equation_sha}");',
+            f'print("UNIQUE_EQUATION_SHA256={unique_equation_sha}");',
             'print("INPUT_SIZE");',
             "size(I);",
             f"ideal G={groebner_call};",

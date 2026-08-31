@@ -34,9 +34,10 @@ H2=Z+sum_(i=1)^10 b_i*B_i,
 ```
 
 The constant term of `J(H1,H2)` is exactly `2`. The generator expands the
-full Jacobian on AWS, requires the advertised 57 nonzero coefficient
-equations for target `2`, and emits their exact parameter ideal to Singular.
-It also records canonical basis and equation hashes.
+full Jacobian on AWS and requires the advertised 57 nonconstant monomial
+coefficient equations for target `2`. Four coefficient polynomials repeat,
+so it emits the equivalent deduplicated 53-generator ideal to Singular. It
+records canonical basis, raw-equation, and unique-generator hashes.
 
 ## Registered reconnaissance
 
@@ -66,4 +67,3 @@ Only these outputs can change the research ledger:
 - `POSITIVE_CANDIDATE`, quarantined until independent exact field-degree and
   boundary verification;
 - `NO_PATTERN_WITHIN_D8`, with basis/ideal/transcript hashes retained.
-
