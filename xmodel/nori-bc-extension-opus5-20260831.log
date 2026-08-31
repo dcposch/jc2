@@ -1,0 +1,31 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at `xmodel/nori-bc-extension-opus5-20260831.md` (`64bcabd1…`). All three input hashes verified; Nori re-fetched from Numdam and hashed to the boxed `1b848c19…`.
+
+## What came out
+
+**(ii-b) as literally stated is false — refuted twice, unconditionally.**
+
+1. *General singularities.* `B(C)` is blind to unibranch singularities (Def. 3.25 sums over `i<j`, empty when `r=1`). Zariski's 6-cuspidal sextic has `B(C)=36>0` yet `π₁(P²−C) = Z/2 * Z/3` — and Nori records exactly this himself at journal p. 336, Example 6.7.
+2. *Even for double points of smooth branches.* Two bitangent conics: `B(C_i)=4>0` for both components, but `π₁(P²−D) = ⟨t₁,t_λ | (t₁t_λ)²=1⟩ ≅ Z * Z/2`. Hand van Kampen, cross-checked against `H₁ = Z ⊕ Z/2`. `B(C)` never sees contact between *distinct* components.
+
+**Route (a) is proved, and it is sharp.** Blowing up `k_p` times at each `A_{2k_p−1}` (cost `4k_p` on `C²`, `k_p` for cross-tangencies) restores nodality and normal crossings, leaves `N` unchanged, and lets 3.27 apply verbatim:
+
+> `C² > 2r₁(C) + 4T(C) + T_×(C)` ⟺ `B(C) > 2T(C) + T_×(C)` ⟹ `N` abelian.
+
+The two bitangent conics sit at `4 > 4` — failing by exactly one unit, with the conclusion false. So the `T_×` coefficient cannot be lowered. This is strictly stronger than Nori's own Prop. 6.5 (which needs `C² > 4r₁ + 4T`, resolving nodes too).
+
+**Residual gate.** Via charged Lemma 4.3 the hypothesis collapses to a single scalar: `M_infty + 2T ≤ 3d−3`, reducing to `(M-INF)` exactly when `T=0`. At `(6,3)` it closes every tangential configuration except `(β₁,T) ∈ {(7,4),(8,3)}`.
+
+**Routes (b) and (c) are dead, not open.** Fact 1.4 B is *false* at a tangency — the local group is the `(2,2k)`-torus link group and no power of the meridian is central. And I found a **second** transversality consumption the decision report doesn't name: Lemma 5.1(a) (via 5.2) hypothesises `B` nodal and reruns the same bookkeeping. 3.26 cannot substitute: `C ∩ R = ∅` is structural, and `C' ⊂ R` always.
+
+**(ii-a) π₁-transport is refuted, δ-constantly.** Deform `C₂` generically off tangency: `D_s` is nodal with 4 nodes, `δ=4=δ(D_0)`, and Nori gives `π₁` abelian — while `π₁(P²−D_0)` is non-abelian. Only a *cover*-level transport can survive; its local half I proved (Lemma 6.6), its global half is `OPEN[PI1S4-COVER-DEFORMATION]`.
+
+## Two errata found by reading the raster, not the OCR
+- The prompt's `B(C) = C² − 2Σ A(C;P)` double-counts: Nori puts the 2 **inside** `A`.
+- Nori's Remark 6.6 misprints `s(node)=2`; his own identity `(C')² = C² − F(C)` forces `4`, and the `C² > 4r(C)` printed alongside is correct.
+
+## Caveats
+- Over budget on length: **7,441 words** against "roughly 6,000." The verbatim Nori quotations were mandated and I chose not to cut proofs to fit.
+- `OPEN[NORI-BC-SELF-TANGENT-COEFF]` is real: for *irreducible* `D`, whether `4T` can drop to `2T` is undecided. First gap is degree 6; extremal candidate is a rational sextic with 5 tacnodes. I did not settle it — no CAS was run.
+- Teissier's δ-constant fact (§6.2) is cited as classical and unhashed; it appears only inside the (ii-a) OPEN discussion, never in Theorem N-A or its corollary.
+DIVERT path=xmodel/nori-bc-extension-opus5-20260831.md status=CLEAN body_bytes=43550 body_sha256=64bcabd1e14d69026cc86e101ff266a92009c7f15e9dfc00dce88fb607e7560f
