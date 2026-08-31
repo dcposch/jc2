@@ -15556,3 +15556,45 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Clocks: next quiet full round `~2026-08-31T23:26Z`; web backstop
   `2026-09-01T04:54Z`; systems checkpoint `2026-09-02T08:00Z`.
   Fleet: box01 protected job only; nothing else running.
+
+## 2026-08-31 12:01Z LIVE STATE — FOUR SEATS BACK EARLY AND SEALED; (M) CLAIMED REPAIRED; ONE CONVERGENT OPEN BIT
+
+- All four round-1033 seats returned BODY_SEALED with clean custody
+  (11:33-11:52Z; budgets were ceilings, lanes finished early).
+  Reports banked, commit pushed.
+- Headlines, all PROVISIONAL pending different-model review:
+  - SHEET-GATE (Opus, `6d8f6667`): claims (M) is REPAIRED, not
+    parked — (M') in affine counts `a`,`a_p` is a theorem under
+    (H2)+(H3); ceiling `1<=a<=d-2` proved; one-node exclusion,
+    node-count bound, smooth-A_F law, quota law (a-form) all survive;
+    `chi_c` lemma written, (E) a theorem; Grok-xpoll §3.1 ("wrong
+    category") REFUTED; gap reduced to one bit `b=0`, proved for
+    `d<=3` and the `d=4` A_4 class, OPEN only in the `d=4`
+    transposition class; weighted budget (B-w) proved Orevkov-free.
+  - THETA-STAGED (Sol, `1cf8f9d7`): fail-closed
+    OPEN[THETA-STAGE0-MARKED-SNC] — charged pullback (f,g) nowhere
+    explicit; reopen list delivered; transformation law (0.4) protects
+    Theta_h.
+  - HF-DOSSIER (Grok, `9ba704d6`): first (6,4,9) candidate OPEN — AG-S
+    associated curve built explicitly; affine germ is 3-branch
+    coincident-tangent, outside BL2014/BHL2017/BLZ2024 license classes;
+    two missing dictionaries named; controls pass/fail correctly.
+  - BUDGET-N (GPT-5.5, `583562cb`): weighted bound
+    `2m_nt+m_triv<=N-1` typed all-degree from pinned Orevkov/Chau;
+    strong form OPEN at `mu>=2` for trivial-inertia owners; N=5 table.
+    CONVERGENT with SHEET-GATE's independently derived (B-w).
+- Coordinator desk audit (Cor 4.5 census typing): `f(z):=#F^{-1}(z)`
+  is the affine count (right type), but NO promoted artifact pins the
+  VALUE `f(z)=2`; the (2.3') rank-four instance leaves `f(z) in {1,2}`
+  mirroring the `b`-bit. Cor 4.5's closing branch is vacuous as
+  charged. Net: THREE lanes converge on one open bit — can a Keller
+  map have a trivial dicritical (`mu=1`, `v(dx∧dy)=0`) with affine
+  image? This is now the campaign's top question.
+- Launched 11:58Z: Sol hostile review of SHEET-GATE (4h) + Grok
+  countermodel verification (paired-arm, 3h); Grok review of THETA
+  (3h); GPT-5.5 review of HF-DOSSIER (3h); Grok review of BUDGET-N
+  (3h); Grok literature registry on the trivial-dicritical question
+  (3h). Watcher live. Clearing lanes (hardening review, AS109-D12)
+  still running from 11:35Z.
+- Review-routing note: SHEET-GATE gets the paired two-arm treatment
+  (line-by-line gate + countermodel arm) — experiment data point 3.
