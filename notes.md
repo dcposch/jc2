@@ -15217,3 +15217,27 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   regressions pass in three interpreter modes. External charged-input
   snapshot hardening is the next software upgrade. Human holds: none. Sol
   capacity is intermittent; Fable can resume from this exact checkpoint.
+
+## 2026-08-31 07:15Z COORDINATOR HANDOFF ACKNOWLEDGED — FABLE 5 ACTIVE
+
+- The incoming coordinator (Fable 5, interactive session with DC) acknowledges
+  the `2026-08-31 06:55Z` LIVE STATE on basis commit `ec0227b3`
+  (= `origin/master`), per the handoff rule in `COORDINATION.md`. The handoff
+  is effective as of this event.
+- Bootstrap sweep `07:08--07:14Z` confirms the handoff basis: scoped tree
+  clean and synced; `ops/status.sh` reports 0 active lanes with all eight
+  detached supervisors `UNLOADED`; box01 runs only the protected one-core
+  `build_tails43.py` (99.9% CPU, 132.1 GiB RSS); `r6a`--`r6d` are running with
+  zero jobs; Box02/Box03 are stopped; local Singular/msolve counts are zero.
+  No discrepancy with the frozen LIVE STATE.
+- Inherited clocks: quiet full ideation floor `2026-08-31T18:54:51Z`; web
+  sweep backstop `2026-09-01T04:54Z`. Inherited review debt: different-model
+  genus-ladder reviews (conductors 10/16 relaunch after the quarantined Grok
+  output, and 22/28) and the one-cusp Poisson narrowing `cd27b7f6...`.
+- Immediate posture: DC is present. Before launching the next research wave,
+  the coordinator is surfacing onboarding questions (provider budget posture,
+  disposition of the idle running `r6a`--`r6d`, standing-authority
+  confirmation) and process-edit proposals. Planned sequencing, pending DC
+  input: implement the queued immutable charged-input snapshot upgrade in the
+  current no-external-lane window, then launch the owed different-model
+  reviews under the hardened path. No lane launched in this event.
