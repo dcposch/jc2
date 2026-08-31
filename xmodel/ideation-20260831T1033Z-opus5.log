@@ -1,0 +1,15 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report submitted: `xmodel/ideation-20260831T1033Z-opus5.md` (6,309 words, all nine sections, single standalone `<!-- BODY-END -->` with zero bytes after it). Packet hash and all five frozen input hashes verified against the manifest; no CAS, no network, no other file written.
+
+**What the round turned up.**
+
+The headline is a mechanism the 46-row inventory does not contain: an **exact Euler-characteristic budget identity**. Since a Keller `F` is proper étale over `A²\A_F`, it is a `d`-sheeted covering there, so `1 = d·(1−e(A_F)) + e(F^{-1}(A_F))` — the quantitative form of "proper étale self-map of `A²` is an automorphism". Adding local-inertia bookkeeping (`#F^{-1}(p) = #Fix(H_p)`, because étale maps have no nontrivial trivial-orbit fillings) gives, under today's promoted `m=1` and `normalization(A_F)=A¹`:
+
+`σ·(ν + s − 1) − Σ_p #Fix(H_p) = d·ν − 1`, with `1 ≤ σ ≤ d−2`.
+
+Three things fall out. It **reproves the promoted all-degree one-node theorem in three lines** (`s=1, ν=1` gives `σ − s_p = d−1` against `σ ≤ d−2`) without knot theory, without the one-place or transposition hypotheses, and at every `d ≥ 2` — which is the strongest available control that the machinery is sound. It **re-derives the Orevkov `N−1` budget** from Euler additivity, discharging the custody risk I flagged on the un-byte-hashed Orevkov PDF. And at `ν=0` it yields `Σ_p #Fix(H_p) = σ(s−1)+1` — an *equality* over the cusp local groups, which is exactly the attainment instrument the saturated ladder lacks, and which costs one extra column on already-banked colouring enumerations.
+
+Independently, Zariski's Main Theorem supplies the finite-flat factorization with **no block hypothesis**, giving `Cl(Y) ≅ Z^{m_Y}` free, `π₁(Y)=1`, `κ̄(Y) = −∞`, and `K_Y ~ Σ(e_j−1)[B_{Y,j}] ≠ 0`. That kills every `Y` with trivial canonical class — the whole Danielewski family `{xⁿz = P(y)}` — by adjunction, and hands the disproof side a classified family to sweep instead of an unbounded coefficient search.
+
+**Three caveats I want visible rather than buried.** The `m ≥ 2` generalization of the identity is typed OPEN, not derived. I explicitly recorded a step I tried and discarded (that every component of `F^{-1}(A_F)` is finite over `A_F` — false in general) so no successor re-imports it. And Card 1's discriminator is designed to kill the card same-day if the one-node control fails to reproduce.
+DIVERT path=xmodel/ideation-20260831T1033Z-opus5.md status=CLEAN body_bytes=39852 body_sha256=240adb4b4720cbc27caf879f95b9cdb1ac9dc62b7807183028f6b63a5d8b80ea
