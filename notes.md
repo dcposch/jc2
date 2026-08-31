@@ -15251,3 +15251,69 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   `jc2-lean` gitlink pointer and were not inspected. No campaign file differs
   between `ec0227b3` and `c4848ca2`, so the acknowledged LIVE STATE basis is
   unchanged.
+
+## 2026-08-31 08:25Z LIVE STATE — HARDENED WAVE LAUNCHED UNDER NEW BUDGET POLICY
+
+- Basis: `1d97e7b7` plus this notes commit. All pushes current with
+  `origin/master`.
+- Coordinator: Fable 5 (interactive session, DC present). Full-round roster
+  unchanged: Fable 5, Opus 5, Sol (`gpt-5.6-sol`), Grok 4.6; GPT-5.5 xhigh
+  pinned review adapter. New binding budget policy in `COORDINATION.md`
+  (2026-08-31 07:56Z): Grok near-unconstrained workhorse; Sol heavy
+  delegation with retry-on-load-shed; Fable/Opus reserved for
+  highest-value work; allocation refreshes now live only in `notes.md`.
+- DC directives banked this tick: standing authority confirmed for
+  checkpoint commits/pushes, paid adapter launches, AWS start/stop within
+  `ops/FLEET.md`; truncated-not-lost output is a hard requirement (now
+  implemented); mission framing: maximize rate of progress toward resolving
+  JC2.
+- Systems: `LANE-CUSTODY-HARDENING/v1` implemented and pushed (`d43cb085`,
+  packet `xmodel/lane-custody-hardening-v1-20260831.md`): immutable
+  charged-input snapshots + `{{LANE_INPUTS}}`, launch-enforced report-path
+  contract, BODY-END overflow divert (raw + overflow banked, body charged),
+  partial-report banking with `report_state`, seal tool hash-pinned. Ops
+  suite 92/92 in normal, `-O`, `-OO` (79 baseline reproduced after
+  restoring `sympy` lost to a Homebrew Python bump; one unreproduced
+  intermittent suite failure observed twice early, suspected launchd-timing
+  flake in `test_lane_detach`, watch for recurrence). This satisfies the
+  queued charged-input snapshot upgrade and the 48-hour systems window.
+  Different-model software review of the hardening packet is OWED
+  (nonblocking; queue to GPT-5.5 or Grok after the current wave).
+- Fleet: `r6a`--`r6d` audited idle (jobs=0) and stopped ~07:15Z (~$5/h
+  saved; EBS retained; IPs re-resolve on restart). box01 untouched, running
+  only the protected one-core `build_tails43.py` (99.9% CPU, ~132 GiB RSS).
+  Box02/Box03 remain stopped. Restart any worker only for a
+  source-reviewed heavy packet.
+- Active lanes (all launchd-detached under the hardened launcher, frozen
+  charged inputs where declared; stop = adapter completion, six-hour
+  producer budget):
+  1. `...conductor10-16-hostile-review-grok46-r2-...` — fresh Grok review
+     of ladder packet `e802ab6b` (Sol producer).
+  2. `...conductor22-28-hostile-review-gpt55-...` — GPT-5.5 review of
+     census extension `1500eeb2` (Sol producer), flags 10/16 dependence.
+  3. `...one-cusp-poisson-hostile-review-grok46-...` — Grok review of
+     `cd27b7f6` (Sol producer).
+  4. `...conductor34-40-s4-census-grok46-...` — Grok primary extending the
+     ladder (PROVISIONAL parents labeled; AWS-freeze stop condition).
+  5. `...rank4-reducible-component-tree-ledger-grok46-...` — Grok primary
+     building the exact reducible component-tree ledger.
+  6. `...one-cusp-wild-valuation-structure-sol56-...` — Sol primary on
+     completion/valuation structure of the two wild Hamiltonian flows.
+- Provisional claims: ladder exclusions `Delta_aff notin {5,8,11,14}`
+  (`e802ab6b`,`1500eeb2`; reviews 1--2 running; descendant lane 4);
+  one-cusp Poisson narrowing (`cd27b7f6`; review 3 running; descendant
+  lane 6). Speculative budget: within limits (two provisional roots, one
+  descendant each).
+- Review queue/debt: lanes 1--3 in flight cover the entire inherited
+  mathematical review debt; hardening software review owed (nonblocking).
+- Clocks: quiet full ideation floor `2026-08-31T18:54:51Z` (a decisive
+  review outcome earlier is significant news and may trigger sooner); web
+  sweep backstop `2026-09-01T04:54Z`; next 48-hour systems checkpoint
+  `2026-09-02T08:00Z`.
+- Holds/human gates: none.
+- Immediate queue: harvest the six lanes (background watcher live);
+  receipt-first custody on each report; integrate/propagate; then the
+  ledger-compaction atom (approved by DC) in the quiet window BEFORE the
+  next ideation round, never under live lanes that charge the compacted
+  files; queue the hardening review; update the `PROGRESS.md` day entry at
+  day end.
