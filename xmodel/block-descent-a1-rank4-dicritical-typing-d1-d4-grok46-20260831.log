@@ -1,0 +1,18 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start by verifying the charged input hash, creating the report skeleton, and reading the review plus the campaign reasoning guardrail.Hash matches. Next I’ll write the report skeleton and read the charged review, the guardrail, and the workspace layout.Skeleton is in place. I’ll pull the local PDFs and campaign citations for Orevkov, Chau, and the companion-sheet floor.Local Chau PDFs and campaign quotes of Orevkov Lemma 4.2 are on disk; I’ll read those next and fetch the 1987 paper.PDFs are hashed. I’ll extract the lemmas from the local scans and fetch Orevkov’s 1987 English text.I’ll pull the verbatim lemma text from the three PDFs and hunt the campaign for the companion-sheet floor.I have the primary quotations. Next I’ll fill the report section by section, keeping series and lines distinct and stating the companion-sheet floor as a consumed hypothesis.The charged input hash matched. The report is `xmodel/block-descent-a1-rank4-dicritical-typing-d1-d4-grok46-20260831.md`.
+
+The ledger’s written proof does concatenate a series with a line and `deg f_φ` with `μ_ℓ`. The conclusion `m ≤ 3` at geometric degree four is still a theorem of the typed subset of (D1)--(D4).
+
+| Hypothesis | Verdict |
+|---|---|
+| (D1) one irreducible nonconstant image | **SOURCED** (Orevkov `L_F` + Lemma 2.1; Chau 2011 dicritical *components*) |
+| (D2) surjectivity onto `Irr(A_F)` | **SOURCED** at line level (Chau 2011); series covering is Chau 2004 Lemma 1; series-to-line is **DERIVED** via the `Φ`-chart, not a numbered 1987/1999/2004 bijection |
+| (D3) `μ_ℓ ≥ 1` | **DERIVED** from Orevkov’s domain multiplicity, **not** from `deg f_φ > 0` |
+| (D4) `N−1 = ∑(μ_ℓ + corr_ℓ)`, `corr_ℓ ≥ 0` | **SOURCED** (Orevkov Lemma 4.2 + semicontinuity) |
+
+A realizing line with `μ_ℓ = 0` is excluded by Orevkov’s definition of multiplicity. The ledger’s deduction of positivity from `deg f_φ > 0` remains a false identification of two degrees.
+
+Under the typed subset: `#Irr(A_F) ≤ N−1`, hence `m ≤ 3` at `N = 4`. Identity (2.3) stays OPEN.
+
+No joint “Le Van Thanh--Chau 2004” paper was found; Lemma 1 and Corollary 2 sit in Chau’s 2004 note (arXiv `math/0305088` = Ann. Polon. Math. 84). The companion-sheet floor `f(B_i) ≥ 1` is the unlisted fibre-census fact from `768cf08f...` (0.1) / `5d7df7ce...` §6, written as consumed hypothesis (H_comp).
+DIVERT path=xmodel/block-descent-a1-rank4-dicritical-typing-d1-d4-grok46-20260831.md status=CLEAN body_bytes=29150 body_sha256=eeb4670511f35b7c52f03fa03d334eadff9eb3b7f3b6e18011beb7de4e73c54b
