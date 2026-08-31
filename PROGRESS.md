@@ -7,6 +7,36 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-31
 
+> **THE GENUS LADDER IS PROMOTED THROUGH CONDUCTOR 28, AND THE ONE-CUSP
+> POISSON AND ONE-NODE OBSTRUCTIONS ARE PROMOTED (~09:00Z).** Binding
+> integration `c0a8f193...` charges four different-model reviews from the
+> first wave run under the new hardened launcher: `Delta_aff notin
+> {5,8,11,14}` in the charged irreducible one-place quartic-transposition
+> class (Grok full `CONFIRMED` on 10/16; GPT-5.5 `CONFIRMED` on the 22/28
+> census); the locally-finite/LND/`H in C[A]` equivalence with hyperbolic
+> generic fibres on `R=C[A,U,Z]/(U^2-A-A^2Z)` (Grok, all confirmed); and
+> the one-node meridional obstruction with Opus corrections C1--C4 after a
+> coordinator completion-handshake adjudication of its sealed but
+> TERM-cancelled review lane. Inherited review debt is zero.
+>
+> **REDUCIBLE RANK FOUR BECOMES A FINITE TREE LEDGER, PROVISIONALLY, AND
+> ONE IDENTITY WOULD EMPTY IT (~09:00Z).** Grok's first primary under the
+> new budget policy proves `m<=3` components and four incidence forests at
+> canonical degree four, enumerates sixteen (Euler, tree, inertia) rows,
+> kills four unconditionally, and shows the remaining twelve all die if the
+> missing-multiplicity fibre identity (2.3) holds. The identity is now the
+> highest-value rank-four target (dedicated Opus lane); the R1
+> splice-colouring discriminator at `n22=1` is the cheapest computation.
+>
+> **OPERATIONS: HARDENED CUSTODY SHIPPED AND FLEET TRIMMED (07--09Z).**
+> `LANE-CUSTODY-HARDENING/v1` (frozen charged inputs via `{{LANE_INPUTS}}`,
+> launch-enforced report paths, BODY-END overflow divert, partial-report
+> banking) passed 92/92 ops tests in three interpreter modes and went
+> five-for-five on live receipts. Idle `r6a`--`r6d` stopped (~$120/day).
+> New budget policy bound: Grok workhorse, Sol heavy delegation, GPT-5.5
+> conditional, Fable/Opus reserved for decisive work. Fable 5 took over
+> as coordinator on basis `ec0227b3`.
+>
 > **THE COMPLETE IRREDUCIBLE GENUS-THREE AND GENUS-FOUR `b1=1`
 > RANK-FOUR ROWS ARE PROMOTED EMPTY (06:55Z).** Binding integrations
 > `2f28d30f...` and `0ffb6f82...`, backed by independent Fable/Opus and Grok

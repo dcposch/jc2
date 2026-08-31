@@ -5,6 +5,34 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **GENUS LADDER PROMOTED THROUGH CONDUCTOR 28; ONE-CUSP POISSON AND
+> ONE-NODE OBSTRUCTIONS PROMOTED; REDUCIBLE RANK-FOUR LEDGER PROVISIONAL
+> (2026-08-31 ~09:00Z).** Coordinator integration
+> `c0a8f19353244b44a946a2b73a48513f95ad4a3deeb40f017df34bd80c711d67`
+> (body `4789da5d...`, manifest `62c6d819...`, basis `5cae1082`) binds four
+> different-model reviews. Grok's fresh 10/16 review (`13c8b375...`,
+> full `CONFIRMED`, no correction) and GPT-5.5's 22/28 census review
+> (`4217ad37...`, `CONFIRMED`, predecessor dependency discharged) promote
+> `Delta_aff notin {5,8,11,14}` in the charged irreducible one-place
+> quartic-transposition class, with survivors at conductors 12/14/18/20/24/26
+> blocking monotone extrapolation. Grok's one-cusp review (`d154a303...`,
+> all `CONFIRMED`; adopt the additive-ruling-uniqueness citation, blast
+> radius zero) promotes the locally-finite/LND/`H in C[A]` equivalence and
+> hyperbolic-fibre forcing on the exact ring `R=C[A,U,Z]/(U^2-A-A^2Z)`; the
+> wild mixed/mixed horn stays open. The Opus one-node review
+> (`CONFIRM_W_CORR`, sealed body `377ef6c7...`) is charged after coordinator
+> seal/hash verification: its lane was TERM-cancelled at handoff unload
+> post-completion; corrections C1 (meridian-conjugacy sentence), C2/C3
+> (hypothesis nits), C4 (robustness) bind on every citation of `c61f0ceb...`,
+> now promoted at exact one-ordinary-node scope. Grok's provisional
+> component-tree ledger (`513fe4c0...`, replay `54df64d2...` verified in
+> three modes with 3/3 mutations) bounds reducible rank-four branches to
+> `m<=3` and four forests; twelve rows live with unbounded `n22`-families;
+> conditional Lemma 2.3 (sole gap: the missing-multiplicity identity (2.3))
+> would empty every reducible row. Sol review and a dedicated Opus (2.3)
+> lane are queued. The quarantined Grok output `49d7f9d3...` remains
+> quarantined and uncharged.
+>
 > **RANK-FOUR GENUS-THREE/FOUR PROMOTIONS; HIGHER GENUS LADDER
 > PROVISIONAL (2026-08-31 06:55Z).** Integration
 > `2f28d30fb0cf568d007ed1f77f29e5917c8c2933e002c78e26620bc49d92dd6b`

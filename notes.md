@@ -15317,3 +15317,37 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   next ideation round, never under live lanes that charge the compacted
   files; queue the hardening review; update the `PROGRESS.md` day entry at
   day end.
+
+## 2026-08-31 09:05Z LIVE STATE — FIRST HARDENED WAVE HARVESTED; FOUR PROMOTIONS
+
+- Basis: `5cae1082` plus the integration/ledger commits following it.
+- Coordinator: Fable 5. Micro-round under the coalescing rule: all promoted
+  content was stated at identical scope in the sealed `0512Z` round packet;
+  reviews confirmed content and scope, so no full round fires and the quiet
+  ideation floor stays `2026-08-31T18:54:51Z`.
+- **Promoted this tick** (binding integration `c0a8f193...`/body
+  `4789da5d...`, manifest `62c6d819...`): the genus-ladder pair
+  (`e802ab6b`, `1500eeb2`) giving `Delta_aff notin {5,8,11,14}` in the
+  charged irreducible one-place quartic-transposition class (Grok r2 full
+  `CONFIRMED`; GPT-5.5 `CONFIRMED` with the 10/16 dependency discharged);
+  the one-cusp Poisson obstruction `cd27b7f6` on its exact ring (Grok all
+  `CONFIRMED`; adopt the additive-ruling-uniqueness citation); and the
+  one-node all-degree meridional obstruction `c61f0ceb` with Opus
+  corrections C1--C4 binding (completion handshake satisfied today after
+  seal/hash verification of the TERM-cancelled-at-unload but complete
+  sealed report). Inherited mathematical review debt is now ZERO.
+- **Provisional:** Grok's rank-four reducible component-tree ledger
+  (`513fe4c0...`): `m<=3`, four forests, sixteen rows, twelve live with
+  unbounded `n22`-families; conditional Lemma 2.3 (gap = the
+  missing-multiplicity identity (2.3)) would empty all reducible rows.
+  Replay verified by coordinator: three modes byte-identical
+  (`54df64d2...`), 3/3 mutations fail. Sol hostile review queued.
+- **Custody systems observation:** first five hardened receipts all came
+  back DONE/BODY_SEALED with every frozen charged input `UNCHANGED`; zero
+  delivery failures. Hardening software review still owed (nonblocking).
+- Active lanes: Grok conductor-34/40 ladder census (running); Sol one-cusp
+  wild valuation/completion (running); next launches this tick — Opus
+  primary on identity (2.3); Sol hostile review of the component-tree
+  ledger; Grok R1 splice-colouring discriminator at `n22=1`.
+- Clocks: ideation floor `18:54:51Z`; web backstop `2026-09-01T04:54Z`;
+  systems checkpoint `2026-09-02T08:00Z`. Holds/human gates: none.

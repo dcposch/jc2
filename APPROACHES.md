@@ -7,6 +7,37 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-31 09:00Z — ladder promoted; reducible rank four is a finite tree ledger)
+
+- **The irreducible one-place rank-four screen is now promoted, not
+  provisional.** `Delta_aff notin {3}`, `{4 with b1=1}`, and `{5,8,11,14}`
+  are all promoted in their charged scopes, and the one-node meridional
+  obstruction is promoted with the C1 conjugacy sentence mandatory in
+  citations. Extend the ladder (conductor-34/40 lane live) and hunt a
+  degree-monotone invariant; survivors at 12/14/18/20/24/26 mean the ladder
+  alone cannot close the horn.
+- **Reducible rank four is now a finite combinatorial frontier.** At
+  canonical degree four: at most three `A1` components, four possible
+  incidence forests, sixteen (Euler, tree, inertia) rows, twelve live —
+  each with an unbounded `n22` conductor-pairing family (provisional,
+  Sol review queued). Two attacks in value order: prove the
+  missing-multiplicity fibre identity (2.3), which alone empties every
+  reducible row and collapses rank four onto the irreducible ladder
+  (dedicated Opus lane); and the R1 two-component splice-colouring
+  discriminator at `n22=1` (desk-scale first).
+- **One-cusp horn: promoted Poisson narrowing, open wild core.** Both
+  hypothetical flows are non-locally-finite with hyperbolic generic
+  coordinate fibres, on the promoted exact ring. The live successors are
+  the valuation/completion lane (running) and realizing/excluding the
+  degree-four completion ledger (6.9) coupled to the boundary census.
+  Picard, ML/Derksen, ruling-functoriality, and covering-space Euler
+  shortcuts are all proved dead; do not resurrect them.
+- **Custody/allocation.** The hardened launcher (frozen charged inputs,
+  BODY-END divert, partial banking) went five-for-five on first live
+  contact; keep the prompt contract mandatory. Budget policy: Grok
+  workhorse, Sol heavy delegation, GPT-5.5 conditional, Fable/Opus for
+  decisive gates and the (2.3)-class integrative problems only.
+
 ## Superseding strategy overlay (2026-08-31 06:55Z — genus ladder and wild one-cusp horn)
 
 - **Stop the promoted genus-three and genus-four `b1=1` rows.** Their binding
