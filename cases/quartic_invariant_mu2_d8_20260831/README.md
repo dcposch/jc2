@@ -1,5 +1,9 @@
 # Quartic invariant-ring reconnaissance: `(mu,r,D)=(2,2,8)`
 
+Final disposition: see `RESULT.md`. The full Gröbner search is retired under
+Moh's degree-at-most-100 theorem; the packet and failed-closed evidence are
+retained for reproducibility.
+
 This is a bounded pattern-mining cell for the surviving mixed/mixed one-cusp
 quartic horn. It is not a rank-four exclusion and it is not a search outside
 the charged primitive single-pole invariant ring.
