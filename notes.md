@@ -15917,3 +15917,41 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   to B(C)>0 through the tacnode obstruction, or build the
   equisingular-at-infinity nodalization stratum — either closes
   tangential-noncoprime wherever (M-INF) is verified). Watcher live.
+
+## 2026-08-31 19:18Z LIVE STATE — THEOREM N-A LANDS; (M-INF) PIECE 2 REFUTED IN GENERAL; ROW-SWEEP FIRED
+
+- NORI-BC (Opus, `64bcabd1`, PROVISIONAL, 43k): THEOREM N-A — Nori
+  3.27 extended to double points of smooth branches: hypothesis
+  `C^2 > 2r_1 + 4T + T_x`, kernel abelian; SHARP in T_x (two
+  bitangent conics fail by one unit and 3.27's conclusion is FALSE
+  there). Naive `B(C)>0` extension REFUTED twice (Zariski sextic;
+  bitangent conics); local-transversality replacement and 3.26
+  substitution REFUTED; (ii-a) pi1-transport after delta-constant
+  nodalization REFUTED (explicit witness), stratum construction
+  reduced to delta_aff-constancy (open). COROLLARY N-A-RES: residual
+  gate = (M-INF-T) `M_infty + 2T <= 3d-3` ⟹ pi_1(C^2-D_1)=Z; (6,3)
+  closed except (beta_1,T) ∈ {(7,4),(8,3)}. Two Nori errata found
+  (raster-verified): factor 2 inside A(C;P); Remark 6.6 s(node)=4.
+  Extremal open object typed: rational sextic with 5 tacnodes.
+- M-INF review (Sol, `8b9fe37f`): Piece 1 PROMOTE-AS-CORRECTED (two
+  local repairs); Piece 2 REFUTED AS STATED — explicit polynomial
+  curve of type (6,4) with S_aff=<3,4>, beta_h=15 > 14, M_emb=16 >
+  15: a desk counterexample to the general bound. BUT it has an
+  ordinary TRIPLE point — out of the residual class; it destroys the
+  general theorem and the (6,4)-nodal proof claim, not the class.
+  Row status: (4,2),(6,2),(6,3) closed nodal; (6,4) nodal returns
+  OPEN; the <8,2,31> threat retyped to (8,6,3)/(8,2,29) unrealized.
+- D1-DEGREE review (GPT-5.5, `028b1c03`): PROMOTE-AS-CORRECTED at
+  typed scope — unboundedness with the nonempty-class caveat;
+  invariant target d_min = min over Aut(A^2); the cage constraints
+  and Chau lists promoted; CLOSE payoff only in d_min<=4 form.
+- Wave 11 launched 19:16Z: NORI-BC paired review (Sol gate 4h + Grok
+  verification 3h — includes the 5-tacnode sextic survey and the
+  (6,2)/(6,4) N-A-RES gate numbers); ROW-SWEEP (Sol, 6h): per-row
+  constraint battery over (6,4),(6,3)-leftovers,(8,*),(9,*) — the
+  key question: can the (6,4) beta_h=15 infinity type coexist with
+  double-points-only? Watcher live.
+- Integration #4 deferred until the NORI-BC paired review lands (one
+  integration for the whole wave; coalescing rule).
+- Clocks: quiet round 23:26Z — decision pending; day-end PROGRESS
+  rewrite due ~00:00Z.
