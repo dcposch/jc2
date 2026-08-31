@@ -1,0 +1,17 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report written: `xmodel/pi1-s4-decision-opus5-20260831.md` (5,988 words, single `<!-- BODY-END -->`, nothing after).
+
+## Decision: **NO**, proved unconditionally on the coprime stratum
+
+All four charged inputs hashed 4/4 before reading. Nori 1983 was re-fetched from Numdam and re-hashed — byte-identical to the acquisition's ledger copy — and Prop. 3.27, Def. 3.25, and the p. 307 acknowledgement paragraph were read off that PDF.
+
+**Route 1 (Theorem A, literature-free).** Re-derived the local braids myself: `σ^{2k}` at `A_{2k-1}`, `σ` at a vertical tangency. The acquisition's flagged inference is **CONFIRMED** and sharpened — disjoint transpositions satisfy not just `(N_k)` but the stronger nodal commutation, which is the hinge of the whole proof. The ZvK relations say the transposition tuple is Hurwitz-fixed by the braid monodromy group; the braid at infinity is `δⁿ` up to conjugacy when `gcd(deg p, deg q)=1`, and `δ^{nd}` conjugates by `Π = τ₁⋯τ_d`. Since `S₄` is centreless, `Πⁿ = 1`; with `sgn(Π) = (−1)^d` this forces `n ≥ 3`, `dn` even, and `ord(Π) ∈ {3,4}` with `3|n` or `4|n`.
+
+**Route 2 (Theorem B).** On the resolution at infinity, `C′² = nd` and `2·δ_aff = (n−1)(d−1)`, so Nori's inequality `C′² > 2r(C)` holds **identically**, with slack `n+d−1` — not merely satisfiable.
+
+**The tacnode gap, closed (Theorem C).** Nori 3.27 genuinely needs nodes. Rather than assume a Nori-for-`A_{2k−1}`, I nodalize inside the parameter space: `δ_∞` is constant on the coprime stratum, the generic member is nodal (using exactly the `n ≥ 3` Theorem A supplies), and the local braid comparison shows `π₁(C²−D_t)` is `π₁(C²−D)` modulo the very commutators `φ` already kills.
+
+**Typed OPEN off `(C1)`:** `gcd(deg p, deg q) ≥ 2`. Two narrow inputs named — `M_∞ ≤ 3d−3` (purely local and numerical, proved for one Puiseux pair, verified for the smallest non-coprime case) and an equisingular-at-infinity nodalization, or Nori's own `B(C)>0` in place of "nodal", which would delete §5 entirely.
+
+Two things I deliberately did not smooth over: the Main Theorem asserts the representation-level conclusion, and abelianness of `π₁` is claimed only where actually proved (nodal, plus the `2K_tac ≤ n+d−2` range). And the campaign consequence is scoped: this closes B0 at `N=4` **provided** `D₁` satisfies `(C1)`, which nothing in the charged inputs pins — I have not discharged that. Orevkov 1990 was not obtained from an official source and is consumed nowhere.
+DIVERT path=xmodel/pi1-s4-decision-opus5-20260831.md status=CLEAN body_bytes=36267 body_sha256=010330d208c5899ce41832f1187b73d9a63268725d809b0370f2b4d9cd66eadd
