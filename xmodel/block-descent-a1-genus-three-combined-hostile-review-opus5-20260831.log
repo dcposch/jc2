@@ -1,0 +1,21 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai
+Done. Exactly one file written: `xmodel/block-descent-a1-genus-three-combined-hostile-review-opus5-20260831.md` (the `.log`/`.run.v2` siblings are harness-generated and predate my work; `pilot-local.log` and the `cases/` directories are other lanes, untouched by me).
+
+## Summary
+
+**Custody passed.** All 20 charged hashes match byte-for-byte, so no `CUSTODY_FAIL`. I also verified all 8 body seals, all 7 charged artifact JSONs, all 4 published replay stdout digests (byte-identical under `-O`/`-OO`), and all 8 declared mutations.
+
+**Verdicts:** Claims 1, 2, 3 → `CONFIRM_WITH_CORRECTIONS`; Claims 4, 5 → `CONFIRMED`. The genus-three closure holds.
+
+**What I reproduced from scratch** (not read off the artifacts): every symbolic identity in the `(6,4,3)` normal form and self-pair cubic (`Res_p = −s⁴·H(s)`, `Res_t(U′,V′) = −1728c⁵`); all ten `S4` coloring counts via independent Artin-action enumeration; the cable Alexander polynomials via reduced Burau; all eight Artin steps of the `T(3,4)` coloring by hand; the full conductor-six delta-sequence arithmetic; and the four-stratum `b1=1` classification, which I proved complete (the artifact asserts it in one line).
+
+**Most useful findings:**
+
+- **The primeness interface is redundant.** `#gaps(Γ∞) = Δ_aff` is purely algebraic, so the delta-sequence census survives even if the Neumann/Rudolph/Schubert chain were withdrawn — this removes the largest uncharged-source exposure from the critical path. Similarly, `(7,2)` has a knot-free exclusion (degree-2 projection ⟹ two transpositions ⟹ never transitive).
+- **The load-bearing hinge is unwritten.** Both `m=0` artifacts *assert* that `(4,3)` supplies a degree-three *linear* projection; the whole Zariski–van Kampen layer rests on it. I supplied the proof (δ_∞ = 0 ⟹ P∞ smooth ⟹ `ℓ/ℓ∞` has pole order exactly 3).
+- **The duplicate needs a shared trunk.** `ρ(m₁) = ρ(m₂)` holds on the nose only because both spokes run through a common path into an abelian `C2`. Route them differently and you get conjugate, not equal, images. Neither artifact states this; it's the one place the proof could have been fudged, and it isn't.
+- **A cross-artifact check nobody made:** normalizing the threat map's §6 spectator puts it at exactly stratum III of the T34-m0 classification (`a=−1`, node at `t=±1`, cusps at `t²=1/3`) — two independent lanes agreeing to the last coefficient.
+- **Replay force is overstated.** `multiplicity_checks()` verifies only `2+2>3` and `3+1>3` on hardcoded integers, and three output banners are string literals rather than computed values (gated, so not false, but carrying no independent force).
+- **Live notation collision:** the coordinator's `m` (irreducible components) versus the threat map's `m` (`|T31|`) — both are consumed by the combined row.
+
+I also caught a **vacuous pass in my own harness**: a zsh word-splitting error made my first mutation sweep a set of file-not-found `exit 2`s that read as "nonzero, as expected". The reported results are from the corrected run, and I recorded that in the report.
