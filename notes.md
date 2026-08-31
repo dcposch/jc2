@@ -16101,3 +16101,32 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   21:44Z. Projected-timestamp error, recurrence 5. Content
   unaffected. Adopted stronger rule: the header timestamp is copied
   from the immediately-preceding observed output, never typed fresh.
+
+## 2026-08-31 22:50Z LIVE STATE — WAVE 15 FIRED; SUITE r5 RUNNING; DAY CAPSTONE WRITTEN
+
+- Wave-14 banked: TRIPLE-COVER-CLOSE (`14021542`) — monogenic-
+  resolvent no-go PROVED conditional on row data, cancellation lemma
+  proved across all bands (no residual); sole gaps = emptiness of
+  the nonmonogenic class (7.1) and the four-coefficient bypass.
+  ZVK-U6 (`d0dc4f79`) — Theorem ROW-NF: the row is an explicit
+  one-parameter family (x=r², y=q, modulus j=b³/c²), β₁=15 closed
+  form, fold buys exactly three commutations; lane retired into
+  FACTORIZATION. FOLD review (`7c23976b`) — CONFIRMED route-closure;
+  χ(Y) display slip flagged (not load-bearing, not promoted).
+- Wave 15 launched 22:47Z: Sol NONMONOGENIC (6h — four-coefficient
+  bypass valuation bookkeeping + unit-representation emptiness);
+  GPT-5.5 review of TRIPLE-COVER-CLOSE (3h); Grok review of ZVK-U6
+  (3h); Grok BRAID-PREP (4h — SageMath/SIROCCO certified braid-
+  monodromy job bundle for two explicit row members; decides
+  FACTORIZATION on AWS). Watcher live.
+- Box03 suite r5 running (controls PASS/PASS/WARN — idp_postcheck
+  self-test downgraded to WARN after four M2-dialect bugs in the
+  generated bundle were fixed by the coordinator: pi reserved name,
+  BSD-vs-GNU sed, degree-returns-list, diff argument order,
+  underscore-subscript identifiers, cross-ring toST; driver
+  --no-preload removed for radical. ALL deviations from the hashed
+  bundle are these mechanical fixes; verdict rules unchanged;
+  NONEMPTY verdicts will be PROVISIONAL until a repaired postcheck
+  runs. Systems lesson queued for the next prep-lane template:
+  generated CAS code must ship with a syntax-check pass.)
+- Day capstone written into PROGRESS.md (22:50Z block).

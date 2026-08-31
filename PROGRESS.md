@@ -7,6 +7,37 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-31
 
+> **DAY CAPSTONE (22:50Z): FROM A PARKED IDENTITY TO A ONE-PARAMETER
+> RESIDUAL FAMILY.** In one day and fifteen review-gated waves, the
+> campaign promoted, in order: the (M′) identity family under explicit
+> hypotheses; closure of the rank-four A₄ horn; B0 (no trivial
+> dicritical) at N=4 under H2, then N=5, then ALL N≤19 under H2 — with
+> `b=0`, `2m≤N−2`, and H3-as-conclusion on that whole range; the
+> PI1-S4 Main Theorem on the coprime stratum (a new literature-free
+> braid-at-infinity theorem + Nori's inequality holding identically);
+> Theorem N-A (Nori 3.27 genuinely extended to tangential double
+> points, sharp coefficient, two countermodels); and a row-sweep that
+> killed four of eight residual rows. What remains of the entire N=4
+> programme is: ONE explicit one-parameter family of three-node (6,4)
+> curves (closed form `x=r(t)²`, `y=q(t)`, modulus `j=b³/c²` —
+> Theorem ROW-NF), pinched between four independent kill routes (the
+> 72-tuple infinity-braid census done; fold and N-A-union routes
+> closed negative with quantified deficits; the monogenic triple-cover
+> no-go proved with two named algebra gaps; the certified braid-
+> monodromy computation spec'd for AWS), plus six (8,6)/(9,6)
+> numerical types under exact msolve decision on Box03. Beyond N=4:
+> the N≥20 ramified-cover escape and reducible A_F at N≥5 are the
+> typed all-degree gaps; the one-cusp horn is reframed (construction
+> = counterexample-level; inconsistency induction open at A-degree 2).
+> Ops: hardened custody shipped and live-tested; seal-at-completion
+> contract adopted after two skeleton failures; replay gate shipped;
+> five binding integrations (`69970f4d`, `bbd48de1`, `bafe5e89`,
+> `126c2d29`, + wave-14/15 pending); AS109 disproof seed registry
+> (DISTINCT SEEDS, matrix gated); paired-review experiment: six data
+> points, kept for flagship gates. Quiet round deferred under the
+> coalescing rule (flow converging; trigger = N=4 closure or 6h
+> stall).
+>
 > **THE PARKED IDENTITY IS REPAIRED AND PROMOTED, THE RANK-FOUR A₄ HORN
 > IS CLOSED, AND THE WHOLE PROGRAMME CONVERGES ON ONE BIT (11:30--12:30Z).**
 > The four seats returned within 25 minutes, sealed. Opus's SHEET-GATE
