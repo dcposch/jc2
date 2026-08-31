@@ -15694,3 +15694,44 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   13:17Z; the header timestamp was projected, not observed. Content
   unaffected. (Recurring error class; rule remains: run `date -u`
   and transcribe BEFORE composing the header.)
+
+## 2026-08-31 13:30Z LIVE STATE — B0: b=0 PROVED AT N=4 UNDER H2; RESIDUAL IS ONE PI1 ACQUISITION
+
+- B0 flagship lane (Opus, `b37ec3bf`) returned BODY_SEALED with lane
+  rc=5 = post-run tool-hash drift caused by MY P0 patch applied
+  mid-flight (13:15Z). Adjudicated per completion handshake: charged
+  inputs UNCHANGED, seal CLEAN, report hash matches divert line;
+  charged with disclosure. Ops lesson recorded: do not apply ops
+  patches while lanes are in flight (or expect adjudication).
+- B0 content (PROVISIONAL pending paired review): Thm 4.2 — at N=4
+  with A_F irreducible there is NO mu=1 affine-image dicritical; b=0,
+  a=2, (M) verbatim in the transposition class; census route obsolete.
+  Unconditional new theorems: T3.5/C3.6 (irreducible A_F is never
+  smooth — Jung-free strengthening of Chau), C3.7 (Orevkov Cor 4.3
+  STRICT under H2: sum mu <= N-2), C3.8 (Orevkov's unproved closing
+  Remark proved), P4.1 (all-trivial profiles impossible; R12
+  author-inference discharged). Without H2: Thm 4.3 pins the ONLY
+  residual N=4 configuration (A_F = D_1 ∪ D_0, (2,0)+(1,0), Br=D_1,
+  pi_1(C^2-D_1) ->> S_4 non-abelian, D~_0 = A^1); Cor 4.4 forces D_1
+  singular. Residual gap typed OPEN[B0-N4-REDUCIBLE-PI1]: is
+  pi_1(C^2-D) abelian for D irreducible, normalization A^1/C^*, all
+  affine branches smooth? — an ACQUISITION item (Deligne-Fulton/Nori,
+  with two typed caveats: affine-vs-projective, tangency). Also
+  OPEN[B0-GENERAL-N] at N>=5 (exactly two surviving profiles). Under
+  H2 at N=5: m<=2 (Cor 5.1).
+- THETA-reopen (Sol, `4009c3ab`, BODY_SEALED rc=0): typed OPEN with
+  two PROVED obstructions (A-degree-zero (3.2); A-linear minimal jet
+  (3.11)) and the exact constraint system (1.3)-(1.4). Strategic
+  reframe §3.3: a landed pullback composes with the cyclic chart to a
+  noninvertible Keller map of geometric degree EIGHT — constructing
+  the horn is counterexample-level; the programme flips to proving
+  all-degrees inconsistency of the system (obstructions are the base
+  cases). Theta_h uncomputed; no partition row selected.
+- Launched 13:28Z: paired B0 review (Sol gate 4h + Grok verification
+  3h); Grok pi1 acquisition lane (Deligne/Fulton/Nori + tangency
+  caveat + the weaker disjoint-transposition ZvK form, 3h); GPT-5.5
+  review of THETA-reopen obstructions + degree-8 claim (3h). Watcher
+  live. SEMANTIC-REPLAY (Sol) still running.
+- Queued: CORR-BUDGET-N5, T3.5-SHARPEN, DOMRINA-2000 acquisition,
+  HF twin row. Next quiet round ~23:26Z (may be superseded by B0
+  promotion flow).
