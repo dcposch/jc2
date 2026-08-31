@@ -16065,3 +16065,33 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   suite drains.
 - In flight: triple-cover r2 (Sol), Box03 suite. Day-end PROGRESS
   rewrite upcoming.
+
+## 2026-08-31 21:47Z LIVE STATE — SUITE RESTARTED AFTER M2 RESERVED-NAME FIX; WAVE 14 FIRED
+
+- Box03 suite r1 aborted correctly at the positive control: the
+  generated .m2 files used `pi` as a ring variable — RESERVED in
+  Macaulay2 (the constant π); monoid constructor error. Coordinator
+  fix: token-rename `pi`→`pp` in `control_pos_643_idp.m2` and
+  `idp_postcheck.m2` only (msolve files unaffected — msolve has no
+  such reserved name). DEVIATION from the hashed bundle recorded:
+  two files differ from the manifest by exactly this rename; all
+  other 16 files byte-identical. Positive control now PASSES
+  (I_DP length 3 reduced); suite relaunched 21:45Z; watcher live.
+  (First BSD-sed attempt with \b silently no-opped and unfixed files
+  were briefly shipped — caught by re-grep before rerun; fixed via
+  python re. Lesson: no \b in BSD sed.)
+- Wave 14 launched 21:44Z: Sol TRIPLE-COVER-CLOSE (6h — prove
+  global monogenicity + Davenport/Mason-Stothers cancellation
+  exclusion, or bypass monogenicity by running the contradictions on
+  Miranda's four-coefficient form directly); Opus ZVK-U6 (6h — the
+  direct finite computation on the fold union; re-derive all entry
+  data); Grok hostile review of FOLD-REDUCTION (3h — gates Theorem
+  FOLD and the unconditional beta_1=15 upgrade). Watcher live.
+- Triple-cover r2 (Sol, `c99ffc7f`, BODY_SEALED): independently
+  converged with the review on Miranda's framework; completed the
+  leading-form classification, infinity-germ exhaustion, and the
+  CONDITIONAL kill (bounded-degree depressed cubics cannot carry the
+  row data); two named lemmas from a uniform KILL:
+  TRIPLE-COVER-GLOBAL-MONOGENICITY and
+  TRIPLE-COVER-HIGH-DEGREE-CANCELLATION. r1's fail-closed abort
+  adjudicated (model mislisted inputs dir; receipts clean).
