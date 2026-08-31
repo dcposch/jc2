@@ -1,0 +1,19 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll act as an independent hostile referee: first reproduce the charged hashes, then independently test the S4 obstruction without editing charged files or inspecting `jc2-lean`.Hashes match. Next I’ll read the obstruction note, replay script, FALLACY-v2, and prior S4 reviews.The charged note and replay are loaded. I’ll read the prior S4 interfaces, the Assi–Garcia-Sanchez source, and a prior hostile-review template next.I’ll pull the primary paper, a prior hostile-review template, and the charged braid-convention scripts next.The HTML dump mixed the introduction with later sections. I’ll pull Example 18 and the recursive census from the paper next, then brute-force the sequences independently.Section 5 and Example 18 match the claimed control list. Next I’ll brute-force the censuses, recompute S4 colorings, and run the replay mutations independently.PDF hash matches. I’ll brute-force the delta-sequence census and recompute S4 colorings in an independent script, without importing the charged replay.Independent census, colorings, Alexander polynomials, and replay hashes all match. I’ll write the hostile review now.The body mentioned the end-marker string, so it was no longer unique. I’ll rephrase that custody sentence and recompute the seal.**CONFIRM.** The conductor-10/16 one-place `S4` obstruction holds at its exact charged scope. The report is
+
+`xmodel/block-descent-a1-genus-ladder-conductor10-16-hostile-review-grok46-20260831.md`
+
+All six charged hashes were reproduced before reading. No charged file, ledger, or `jc2-lean` tree was edited or inspected, and no `charge_basis` line was added.
+
+Independent checks that survived:
+
+- Assi–Garcia-Sanchez reduced axioms (freeness, Newton product ordering, `r0>r1>d2>...>1`) and the Section 5 recursion, including the published conductor-14 list of ten sequences
+- Brute-force censuses at conductors 6, 8, 10, 14, 16 matching the recursive lists; no missing sequence at 10 or 16
+- Conversion `(11,2)`, `(6,4,7)`, `(17,2)`, `(10,4,9)` to `T(2,11)`, `C_(2,7)(T(2,3))`, `T(2,17)`, `C_(2,9)(T(2,5))`
+- Zero-framed braid `X^n sigma1^(q-2n)`, knot closure, and cable Alexander polynomials on all eight sign/mirror rows
+- Zero labelled full-`S4` counts on those rows, and the residue theorem `C_(2,q)(T(2,n))` has a full-`S4` colouring iff `3|n` and `3|q` (count 72 when nonempty)
+- Replay stdout identical under `python3`, `-O`, and `-OO` (`b2a44181…437c`); all three mutations fail at their intended gates
+
+Weakest safe statement: there is no reduced irreducible complex affine plane curve with normalisation `A1`, affine delta 5 or 8, and a transitive meridians-to-transpositions representation to `S4`. That does not need `b1=1`. Colouring is load-bearing on `C_(2,9)(T(2,5))` because its determinant is 9.
+
+Best next falsification: conductor 12, where `(6,4,9)=C_(2,9)(T(2,3))` is predicted to have 72 colourings, so the pure boundary sieve stops at the next even conductor.
