@@ -15492,3 +15492,33 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Clocks: ideation floor `18:54:51Z`; web backstop `2026-09-01T04:54Z`;
   systems checkpoint `2026-09-02T08:00Z`. Fleet: box01 protected job
   only. Holds/human gates: none.
+
+## 2026-08-31 10:33Z LIVE STATE — RANK-FOUR IRREDUCIBILITY PROMOTED; FULL ROUND FIRES
+
+- Basis: `cd875997` + integration/ledger commits. Binding integration
+  `221c2df9...`/body `8997c68d...`.
+- **PROMOTED: `m=1` — the branch of every actual rank-four proper block
+  is irreducible.** Chain fully reviewed link-by-link (Theorem 10.1 /
+  Sol; `H_inertia` at `5d7df7ce:84-104`; Orevkov typing / GPT-5.5).
+  All reducible rank-four work stops permanently; splice census retired
+  to fixtures. Rank four = irreducible one-place frontier only.
+- **PROMOTED:** (2.3') at plane scope (K3 demoted: ledger (2.3) is GAP
+  at Keller scope, not refuted); coordinate-fibre connectedness (gate +
+  pre-review), un-gapping the one-cusp partition table with the
+  `gamma_h=(d_h-r_h-2)/2` clause. GAP: arbitrary-surface (2.3');
+  Prop 4.3/Cor 5.5 (C3).
+- **SIGNIFICANT NEWS => full whole-portfolio ideation round launching
+  now** (floor was 18:54Z; reviewed route-kill triggers earlier). Round
+  tag `20260831T1033Z`; blind packets to Fable, Opus, Sol, Grok under
+  the hardened contract with frozen packet file; synthesis by
+  coordinator afterward.
+- Experiment: two data points banked (see integration §5); pairing
+  policy stands.
+- Next concrete mathematical lanes after the round: SNC boundary model
+  for `Theta_h` (one-cusp); attainment/realizability of surviving
+  delta-sequences; all-degree generalization question of the `m=1`
+  mechanism. Review debt: hardening software review (nonblocking);
+  Orevkov PDF byte-custody (low priority).
+- Clocks: web backstop `2026-09-01T04:54Z`; systems checkpoint
+  `2026-09-02T08:00Z`; round replaces the 18:54Z floor. Fleet: box01
+  protected job only. Holds/human gates: none.

@@ -5,6 +5,29 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **THE RANK-FOUR BRANCH IS IRREDUCIBLE — REDUCIBLE RANK FOUR IS CLOSED
+> BY THEOREM (2026-08-31 ~10:32Z).** Binding integration
+> `221c2df9ebb4832d...` (body `8997c68d...`, basis `cd875997`) promotes
+> `m=1`: the charged branch of every actual rank-four proper block is
+> irreducible. Chain, each link different-model reviewed: Theorem 10.1
+> (Opus `634940bb...`; Sol review `ac114fb0...` CONFIRMED under
+> `H_inertia`, using none of the gapped pieces); `H_inertia` promoted at
+> `5d7df7ce...:84-104` (generic branch partition `(2,1,1)` or `(3,1)`
+> per component); Orevkov/Chau sourcing typed by `eeb46705...` and
+> content-confirmed by GPT-5.5 review `bc4ff404...`. All reducible rows,
+> the quarantined ledger bookkeeping, and the R1 splice family are dead
+> or retired; rank four is an irreducible one-place frontier with
+> `Delta_aff notin {3} cup {4,b1=1} cup {5,8,11,14}` and the ladder
+> saturated at 28. Also promoted: (2.3') at plane scope with the K3
+> demotion (ledger (2.3) is GAP at Keller scope, not refuted; the
+> non-etale control refutes only the smooth-affine reading);
+> coordinate-fibre connectedness (Grok gate `e87d0af3...` + Sol
+> pre-review `f9f754cb...`), un-gapping the one-cusp partition table
+> ((2.5)/(3.2)/(3.6) with `gamma_h=(d_h-r_h-2)/2` mandatory). GAP items:
+> arbitrary-surface (2.3') (graph-resolution repair path recorded);
+> Prop. 4.3/Cor. 5.5 pending C3. Typing-packet quotes are normalized
+> transcriptions, not byte-exact; Orevkov PDF byte-hash custody queued.
+>
 > **LADDER SATURATION AT 28 PROMOTED; REDUCIBLE LEDGER REFUTED IN PART;
 > VALUATION PACKET SPLIT-PROMOTED (2026-08-31 ~09:32Z).** Coordinator
 > integration

@@ -7,6 +7,35 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-31 10:32Z — rank-four branch irreducibility promoted)
+
+- **Reducible rank four is closed by theorem.** `m=1` is promoted: the
+  branch of every actual rank-four proper block is irreducible. Stop all
+  reducible-row work permanently — trees, splices, pairings, `n22`
+  families; retain their group lemmas as regression fixtures. Rank four
+  is now exactly the irreducible one-place frontier: promoted exclusions
+  `Delta_aff notin {3} cup {4,b1=1} cup {5,8,11,14}`, ladder saturated,
+  survivors at `Delta_aff in {6,7,9,10,12,13,15,...}` with explicit
+  colourable delta-sequences. The live irreducible attacks: attainment/
+  realizability of surviving delta-sequences by actual charged curves;
+  a degree-monotone invariant; unibranch/tangential conductor structure
+  beyond the one-node theorem.
+- **One-cusp horn: the table is promoted; compute `Theta_h`.** With
+  connectedness proved and the partition table un-gapped, the single
+  cheapest decisive datum is `(d_h, r_h)` from one SNC boundary model of
+  a charged coordinate; `Theta_h=d_h-r_h-2` negative or odd kills the
+  configuration, nonnegative even pins its partition row. Build that
+  model next.
+- **All-degree architecture unchanged and newly fed:** the canonical
+  nontrivial-`pi1` branch component theorem plus rank-four
+  irreducibility sharpen the general-degree program — ask in the round
+  whether the `m=1` mechanism (per-component dicriticals vs the Orevkov
+  budget `N-1`) generalizes to a component bound at every degree.
+- **Disproof continuity intact:** K00/AS routes unaffected by today's
+  proof-side closures; keep them orthogonal.
+- **Full whole-portfolio ideation round fires now** (significant news);
+  this overlay is part of its frozen packet.
+
 ## Superseding strategy overlay (2026-08-31 09:33Z — saturation promoted; reducible frontier re-derived from conditionals)
 
 - **The colouring ladder is complete and closed as a conductor-exclusion
