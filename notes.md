@@ -16095,3 +16095,9 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   TRIPLE-COVER-GLOBAL-MONOGENICITY and
   TRIPLE-COVER-HIGH-DEGREE-CANCELLATION. r1's fail-closed abort
   adjudicated (model mislisted inputs dir; receipts clean).
+
+- CORRECTION (observed 2026-08-31T21:48Z): the previous LIVE STATE
+  header reads "21:47Z" but the observed `date -u` at stamping was
+  21:44Z. Projected-timestamp error, recurrence 5. Content
+  unaffected. Adopted stronger rule: the header timestamp is copied
+  from the immediately-preceding observed output, never typed fresh.
