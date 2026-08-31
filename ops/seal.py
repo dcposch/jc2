@@ -197,16 +197,21 @@ def _create_temp_at(parent_fd: int, target_name: str, mode: int) -> tuple[int, s
     raise SealError("cannot allocate a unique anchored seal temp")
 
 
-def _body_boundary(data: bytes) -> int:
+def _marker_boundaries(data: bytes, *, require_newline: bool) -> list[int]:
     markers: list[int] = []
     offset = 0
     for line in data.splitlines(keepends=True):
         content = line[:-2] if line.endswith(b"\r\n") else line[:-1] if line.endswith(b"\n") else line
         if content == MARKER:
-            if not line.endswith((b"\n", b"\r\n")):
+            if not line.endswith((b"\n", b"\r\n")) and require_newline:
                 raise SealError("standalone BODY-END marker lacks terminating newline")
             markers.append(offset + len(line))
         offset += len(line)
+    return markers
+
+
+def _body_boundary(data: bytes) -> int:
+    markers = _marker_boundaries(data, require_newline=True)
     if len(markers) != 1:
         raise SealError(f"expected exactly one standalone BODY-END marker, found {len(markers)}")
     return markers[0]
@@ -349,6 +354,125 @@ def stamp_path(path: Path, basis: str) -> tuple[int, str, str]:
     return len(body), digest, basis
 
 
+def _write_exclusive(path: Path, data: bytes, mode: int = 0o444) -> str:
+    """Create ``path`` exclusively with ``data``; return its SHA-256."""
+    parent_fd, name, _parent, _parent_info = _open_parent(path)
+    try:
+        flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
+        if hasattr(os, "O_NOFOLLOW"):
+            flags |= os.O_NOFOLLOW
+        try:
+            fd = os.open(name, flags, mode, dir_fd=parent_fd)
+        except OSError as exc:
+            raise SealError(f"cannot create {path} exclusively: {exc}") from exc
+        with os.fdopen(fd, "wb") as handle:
+            handle.write(data)
+            handle.flush()
+            os.fsync(handle.fileno())
+        try:
+            os.fsync(parent_fd)
+        except OSError:
+            pass
+        return hashlib.sha256(data).hexdigest()
+    finally:
+        os.close(parent_fd)
+
+
+def divert_path(
+    path: Path, overflow_path: Path, raw_path: Path | None = None
+) -> dict[str, object]:
+    """Split non-whitespace overflow after a sole BODY-END out of a report.
+
+    The charged report keeps every byte through the marker line; the exact
+    overflow bytes land in ``overflow_path`` and, when ``raw_path`` is given,
+    the untouched original is preserved there first.  A report whose
+    post-marker content is whitespace or a valid canonical seal is left
+    unmodified.  Zero or multiple markers are reported, never repaired.
+    """
+    parent_fd, name, parent, parent_info = _open_parent(path)
+    temp_name: str | None = None
+    try:
+        data, original = _read_regular_at(parent_fd, name)
+        markers = _marker_boundaries(data, require_newline=False)
+        if not markers:
+            return {"status": "NO_MARKER", "bytes": len(data)}
+        if len(markers) > 1:
+            return {"status": "MULTI_MARKER", "markers": len(markers)}
+        boundary = markers[0]
+        body = data[:boundary]
+        tail = data[boundary:]
+        body_sha = hashlib.sha256(body).hexdigest()
+        if not tail.strip():
+            return {
+                "status": "CLEAN",
+                "body_bytes": len(body),
+                "body_sha256": body_sha,
+            }
+        try:
+            verify_bytes(data)
+            return {
+                "status": "CLEAN_SEALED",
+                "body_bytes": len(body),
+                "body_sha256": body_sha,
+            }
+        except SealError:
+            pass
+
+        result: dict[str, object] = {
+            "status": "DIVERTED",
+            "body_bytes": len(body),
+            "body_sha256": body_sha,
+            "overflow": str(overflow_path),
+            "overflow_bytes": len(tail),
+        }
+        if raw_path is not None:
+            result["raw"] = str(raw_path)
+            result["raw_sha256"] = _write_exclusive(raw_path, data)
+        result["overflow_sha256"] = _write_exclusive(overflow_path, tail)
+
+        try:
+            current = os.stat(name, dir_fd=parent_fd, follow_symlinks=False)
+        except OSError as exc:
+            raise SealError(
+                f"cannot recheck target before truncation: {exc}"
+            ) from exc
+        if stat.S_ISLNK(current.st_mode) or not stat.S_ISREG(current.st_mode):
+            raise SealError("target changed to a symlink or non-regular file")
+        if _identity(current) != _identity(original):
+            raise SealError("target identity changed while preparing divert")
+
+        temp_fd, temp_name = _create_temp_at(
+            parent_fd, name, stat.S_IMODE(original.st_mode)
+        )
+        with os.fdopen(temp_fd, "wb") as handle:
+            handle.write(body)
+            handle.flush()
+            os.fsync(handle.fileno())
+
+        latest_data, latest = _read_regular_at(parent_fd, name)
+        if _snapshot(latest) != _snapshot(original) or latest_data != data:
+            raise SealError("target changed before atomic truncation")
+        _check_parent_path(parent, parent_info)
+        os.replace(temp_name, name, src_dir_fd=parent_fd, dst_dir_fd=parent_fd)
+        temp_name = None
+
+        installed, _ = _read_regular_at(parent_fd, name)
+        if installed != body:
+            raise SealError("installed body differs from staged bytes")
+        try:
+            os.fsync(parent_fd)
+        except OSError:
+            pass
+        return result
+    finally:
+        if temp_name is not None:
+            try:
+                os.unlink(temp_name, dir_fd=parent_fd)
+            except FileNotFoundError:
+                pass
+        os.close(parent_fd)
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
@@ -363,6 +487,14 @@ def build_parser() -> argparse.ArgumentParser:
     stamp = sub.add_parser("stamp", help="append a canonical seal atomically")
     stamp.add_argument("file", type=Path)
     stamp.add_argument("--basis", required=True)
+    divert = sub.add_parser(
+        "divert",
+        help="bank non-whitespace overflow after a sole BODY-END, truncating "
+        "the charged report to its body; never repairs zero/multiple markers",
+    )
+    divert.add_argument("file", type=Path)
+    divert.add_argument("--overflow", required=True, type=Path)
+    divert.add_argument("--raw", type=Path)
     return parser
 
 
@@ -389,6 +521,19 @@ def main(argv: list[str] | None = None) -> int:
                 failures += 1
                 print(f"seal: INVALID path={path}: {exc}", file=sys.stderr)
         return 1 if failures else 0
+
+    if args.command == "divert":
+        try:
+            result = divert_path(args.file, args.overflow, args.raw)
+        except (SealError, OSError) as exc:
+            print(f"seal: INVALID path={args.file}: {exc}", file=sys.stderr)
+            return 1
+        detail = " ".join(
+            f"{key}={value}" for key, value in result.items() if key != "status"
+        )
+        line = f"DIVERT path={args.file} status={result['status']}"
+        print(f"{line} {detail}" if detail else line)
+        return 0
 
     try:
         size, digest, basis = stamp_path(args.file, args.basis)

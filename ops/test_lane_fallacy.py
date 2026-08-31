@@ -19,6 +19,7 @@ SOURCE_APPENDIX = ROOT / "FALLACY-v2.md"
 LEGACY_APPENDIX = ROOT / "FALLACY.md"
 SOURCE_LANE = OPS / "lane.sh"
 SOURCE_VALIDATOR = OPS / "validate_charge_basis.py"
+SOURCE_SEAL = OPS / "seal.py"
 COPY_SOURCE = object()
 
 
@@ -34,7 +35,7 @@ def parse_run(path: Path) -> dict[str, str]:
     return result
 
 
-class LaneFallacyTest(unittest.TestCase):
+class LaneHarness(unittest.TestCase):
     def make_repo(self, appendix: object = COPY_SOURCE) -> Path:
         root = Path(tempfile.mkdtemp(prefix="lane-fallacy-test-"))
         self.addCleanup(shutil.rmtree, root, ignore_errors=True)
@@ -42,6 +43,7 @@ class LaneFallacyTest(unittest.TestCase):
         adapters.mkdir(parents=True)
         shutil.copy2(SOURCE_LANE, root / "ops" / "lane.sh")
         shutil.copy2(SOURCE_VALIDATOR, root / "ops" / "validate_charge_basis.py")
+        shutil.copy2(SOURCE_SEAL, root / "ops" / "seal.py")
         (root / "ops" / "lane.sh").chmod(0o755)
         if appendix is COPY_SOURCE:
             shutil.copy2(SOURCE_APPENDIX, root / "FALLACY-v2.md")
@@ -88,6 +90,15 @@ if [ "${FAKE_MODE:-}" = probe_excluded ]; then
   printf '%s\n' "$direct_read" "$alias_read" "$direct_write" "$alias_write" \
     > "$FAKE_BOUNDARY_RESULT"
 fi
+if [ "${FAKE_MODE:-}" = mutate_then_read_input ]; then
+  printf '\nrepo drift after launch\n' >> "$FAKE_CHARGED_INPUT"
+  snap=$(grep -o '/[^ ]*/inputs/packet.md' "$1" | head -1)
+  if [ -n "$snap" ] && cat "$snap" > "$FAKE_BOUNDARY_RESULT" 2>/dev/null; then
+    :
+  else
+    printf 'READ-FAILED\n' > "$FAKE_BOUNDARY_RESULT"
+  fi
+fi
 if [ "${FAKE_MODE:-}" = probe_receipt ]; then
   if printf 'tampered=yes\n' > "xmodel/$FAKE_TAG.run.v2" 2>/dev/null; then
     printf 'ALLOWED\n' > "$FAKE_BOUNDARY_RESULT"
@@ -114,9 +125,15 @@ fi
         *,
         mode: str = "",
         report: str | None = None,
+        prompt_text: str | None = None,
     ) -> tuple[subprocess.CompletedProcess[str], Path, Path, Path]:
         prompt = root / "request.txt"
-        prompt.write_text("Investigate the bounded lane.\n", encoding="utf-8")
+        if prompt_text is None:
+            prompt_text = (
+                f"Investigate the bounded lane. Write the single report to "
+                f"xmodel/{tag}.md.\n"
+            )
+        prompt.write_text(prompt_text, encoding="utf-8")
         capture = root / f"{tag}.captured"
         prompt_path = root / f"{tag}.prompt-path"
         boundary_result = root / f"{tag}.boundary-result"
@@ -130,6 +147,7 @@ fi
                 "FAKE_BOUNDARY_RESULT": str(boundary_result),
                 "FAKE_EXCLUDED_TREE": str(root / "jc2-lean"),
                 "FAKE_EXCLUDED_ALIAS": str(root / "excluded-alias"),
+                "FAKE_CHARGED_INPUT": str(root / "refs" / "packet.md"),
             }
         )
         if report is not None:
@@ -148,6 +166,7 @@ fi
         )
         return result, prompt, capture, prompt_path
 
+class LaneFallacyTest(LaneHarness):
     def test_exact_appendix_delivery_hashes_and_cleanup(self) -> None:
         appendix = SOURCE_APPENDIX.read_bytes()
         self.assertGreater(len(appendix), 0)
@@ -330,6 +349,181 @@ fi
         self.assertEqual(run["final_status"], "FAILED")
         log = (root / "xmodel" / "bad-charge.log").read_text(encoding="utf-8")
         self.assertIn("charge-basis validation failed", log)
+
+
+class LaneCustodyHardeningTest(LaneHarness):
+    """Charged-input snapshots, report-path contract, and BODY-END divert."""
+
+    def test_prompt_without_report_path_is_refused(self) -> None:
+        root = self.make_repo()
+        result, _, capture, _ = self.run_lane(
+            root, "nopath", prompt_text="Investigate the bounded lane.\n"
+        )
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("does not name its mandated report path", result.stderr)
+        self.assertFalse(capture.exists())
+        self.assertFalse((root / "xmodel" / "nopath.run.v2").exists())
+
+    def test_charged_input_snapshot_survives_repo_drift(self) -> None:
+        root = self.make_repo()
+        packet = root / "refs" / "packet.md"
+        packet.parent.mkdir()
+        original = "frozen packet bytes\n"
+        packet.write_text(original, encoding="utf-8")
+        tag = "frozen-input"
+        prompt_text = (
+            "charged_input=refs/packet.md\n"
+            "Read the frozen packet at {{LANE_INPUTS}}/packet.md and write the "
+            f"single report to xmodel/{tag}.md.\n"
+        )
+        result, _, capture, _ = self.run_lane(
+            root, tag, mode="mutate_then_read_input", prompt_text=prompt_text
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        composed = capture.read_text(encoding="utf-8")
+        self.assertNotIn("{{LANE_INPUTS}}", composed)
+        self.assertIn("/inputs/packet.md", composed)
+        self.assertEqual(
+            (root / f"{tag}.boundary-result").read_text(encoding="utf-8"),
+            original,
+        )
+        run = parse_run(root / "xmodel" / f"{tag}.run.v2")
+        self.assertEqual(run["charged_inputs"], "1")
+        self.assertEqual(run["charged_input_1"], "refs/packet.md")
+        self.assertEqual(
+            run["charged_input_1_sha256"], sha256(original.encode("utf-8"))
+        )
+        self.assertEqual(run["charged_input_1_post"], "REPO_DRIFT")
+        self.assertEqual(run["final_status"], "DONE")
+
+    def test_charged_input_contract_fails_closed(self) -> None:
+        cases = (
+            (
+                "decl-no-placeholder",
+                "charged_input=refs/packet.md\nWrite xmodel/%s.md.\n",
+                "must appear together",
+            ),
+            (
+                "placeholder-no-decl",
+                "Read {{LANE_INPUTS}}/packet.md then write xmodel/%s.md.\n",
+                "must appear together",
+            ),
+            (
+                "missing-file",
+                "charged_input=refs/absent.md\n"
+                "Read {{LANE_INPUTS}}/absent.md then write xmodel/%s.md.\n",
+                "missing or not a regular file",
+            ),
+            (
+                "excluded-tree",
+                "charged_input=jc2-lean/secret.md\n"
+                "Read {{LANE_INPUTS}}/secret.md then write xmodel/%s.md.\n",
+                "excluded tree",
+            ),
+            (
+                "traversal",
+                "charged_input=refs/../secret.md\n"
+                "Read {{LANE_INPUTS}}/secret.md then write xmodel/%s.md.\n",
+                "invalid charged input path",
+            ),
+        )
+        for tag, template, error in cases:
+            with self.subTest(tag=tag):
+                root = self.make_repo()
+                (root / "refs").mkdir()
+                (root / "refs" / "packet.md").write_text("x\n", encoding="utf-8")
+                result, _, capture, _ = self.run_lane(
+                    root, tag, prompt_text=template % tag
+                )
+                self.assertEqual(result.returncode, 2, result.stderr)
+                self.assertIn(error, result.stderr)
+                self.assertFalse(capture.exists())
+
+    def test_overflow_after_body_end_is_diverted_not_lost(self) -> None:
+        root = self.make_repo()
+        tag = "overflow"
+        body = "# review\n\nVERDICT: CONFIRMED\n\n<!-- BODY-END -->\n"
+        overflow = "stray postscript the model should not have written\n"
+        prompt_text = (
+            f"Review the claim and write the single report to xmodel/{tag}.md, "
+            "ending its body with a standalone `<!-- BODY-END -->` line.\n"
+        )
+        result, _, _, _ = self.run_lane(
+            root, tag, report=body + overflow, prompt_text=prompt_text
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(
+            (root / "xmodel" / f"{tag}.md").read_text(encoding="utf-8"), body
+        )
+        self.assertEqual(
+            (root / "xmodel" / f"{tag}.overflow").read_text(encoding="utf-8"),
+            overflow,
+        )
+        self.assertEqual(
+            (root / "xmodel" / f"{tag}.raw.md").read_text(encoding="utf-8"),
+            body + overflow,
+        )
+        run = parse_run(root / "xmodel" / f"{tag}.run.v2")
+        self.assertEqual(run["seal_boundary"], "DIVERTED")
+        self.assertEqual(run["report_state"], "BODY_SEALED_AFTER_DIVERT")
+        self.assertEqual(run["report_sha256"], sha256(body.encode("utf-8")))
+        self.assertEqual(
+            run["raw_report_sha256"],
+            sha256((body + overflow).encode("utf-8")),
+        )
+        self.assertEqual(
+            run["overflow_sha256"], sha256(overflow.encode("utf-8"))
+        )
+        self.assertEqual(run["final_status"], "DONE")
+
+    def test_clean_marker_report_passes(self) -> None:
+        root = self.make_repo()
+        tag = "cleanbody"
+        body = "# review\n\nVERDICT: CONFIRMED\n\n<!-- BODY-END -->\n"
+        prompt_text = (
+            f"Review the claim and write the single report to xmodel/{tag}.md, "
+            "ending its body with a standalone `<!-- BODY-END -->` line.\n"
+        )
+        result, _, _, _ = self.run_lane(
+            root, tag, report=body, prompt_text=prompt_text
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        run = parse_run(root / "xmodel" / f"{tag}.run.v2")
+        self.assertEqual(run["seal_boundary"], "CLEAN")
+        self.assertEqual(run["report_state"], "BODY_SEALED")
+        self.assertEqual(run["body_end_contract"], "DECLARED")
+        self.assertFalse((root / "xmodel" / f"{tag}.overflow").exists())
+        self.assertFalse((root / "xmodel" / f"{tag}.raw.md").exists())
+
+    def test_missing_marker_under_declared_contract_banks_partial(self) -> None:
+        root = self.make_repo()
+        tag = "truncated"
+        partial = "# review draft\n\nSection one is complete but the run died"
+        prompt_text = (
+            f"Review the claim and write the single report to xmodel/{tag}.md, "
+            "ending its body with a standalone `<!-- BODY-END -->` line.\n"
+        )
+        result, _, _, _ = self.run_lane(
+            root, tag, report=partial, prompt_text=prompt_text
+        )
+        self.assertEqual(result.returncode, 7)
+        run = parse_run(root / "xmodel" / f"{tag}.run.v2")
+        self.assertEqual(run["seal_boundary"], "NO_MARKER")
+        self.assertEqual(run["report_state"], "PARTIAL_NO_MARKER")
+        self.assertEqual(run["report_sha256"], sha256(partial.encode("utf-8")))
+        self.assertEqual(run["final_status"], "FAILED")
+        log = (root / "xmodel" / f"{tag}.log").read_text(encoding="utf-8")
+        self.assertIn("banked as partial", log)
+
+    def test_missing_marker_without_contract_is_informational(self) -> None:
+        root = self.make_repo()
+        result, _, _, _ = self.run_lane(root, "nocontract")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        run = parse_run(root / "xmodel" / "nocontract.run.v2")
+        self.assertEqual(run["body_end_contract"], "NONE")
+        self.assertEqual(run["seal_boundary"], "NO_MARKER")
+        self.assertEqual(run["report_state"], "PARTIAL_NO_MARKER")
+        self.assertEqual(run["final_status"], "DONE")
 
 
 if __name__ == "__main__":

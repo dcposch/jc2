@@ -252,5 +252,105 @@ class SealTest(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
 
 
+class DivertTest(unittest.TestCase):
+    def make_file(self, text: str) -> Path:
+        directory = Path(tempfile.mkdtemp(prefix="seal-divert-test-"))
+        self.addCleanup(lambda: __import__("shutil").rmtree(directory, ignore_errors=True))
+        path = directory / "report.md"
+        path.write_text(text, encoding="utf-8")
+        return path
+
+    def divert(self, path: Path) -> tuple[subprocess.CompletedProcess[str], Path, Path]:
+        overflow = path.parent / "report.overflow"
+        raw = path.parent / "report.raw.md"
+        result = run(
+            "divert", str(path), "--overflow", str(overflow), "--raw", str(raw)
+        )
+        return result, overflow, raw
+
+    def test_clean_report_is_untouched(self) -> None:
+        body = "# report\n\nVERDICT: CONFIRMED\n\n" + MARKER
+        path = self.make_file(body + "\n  \n")
+        result, overflow, raw = self.divert(path)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("status=CLEAN", result.stdout)
+        self.assertEqual(path.read_text(encoding="utf-8"), body + "\n  \n")
+        self.assertFalse(overflow.exists())
+        self.assertFalse(raw.exists())
+
+    def test_canonically_sealed_report_is_untouched(self) -> None:
+        body = "# report\n\nVERDICT: CONFIRMED\n\n" + MARKER
+        path = self.make_file(sealed(body))
+        result, overflow, raw = self.divert(path)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("status=CLEAN_SEALED", result.stdout)
+        self.assertEqual(path.read_text(encoding="utf-8"), sealed(body))
+        self.assertFalse(overflow.exists())
+        self.assertFalse(raw.exists())
+
+    def test_overflow_is_diverted_with_exact_hashes(self) -> None:
+        body = "# report\n\nVERDICT: CONFIRMED\n\n" + MARKER
+        tail = "stray bytes after the marker\n"
+        original = body + tail
+        path = self.make_file(original)
+        result, overflow, raw = self.divert(path)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("status=DIVERTED", result.stdout)
+        self.assertEqual(path.read_text(encoding="utf-8"), body)
+        self.assertEqual(overflow.read_text(encoding="utf-8"), tail)
+        self.assertEqual(raw.read_text(encoding="utf-8"), original)
+        body_sha = hashlib.sha256(body.encode("utf-8")).hexdigest()
+        tail_sha = hashlib.sha256(tail.encode("utf-8")).hexdigest()
+        raw_sha = hashlib.sha256(original.encode("utf-8")).hexdigest()
+        self.assertIn(f"body_sha256={body_sha}", result.stdout)
+        self.assertIn(f"overflow_sha256={tail_sha}", result.stdout)
+        self.assertIn(f"raw_sha256={raw_sha}", result.stdout)
+
+    def test_zero_and_multiple_markers_are_reported_not_repaired(self) -> None:
+        no_marker = self.make_file("# partial draft without a marker\n")
+        result, overflow, raw = self.divert(no_marker)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("status=NO_MARKER", result.stdout)
+        self.assertEqual(
+            no_marker.read_text(encoding="utf-8"),
+            "# partial draft without a marker\n",
+        )
+        self.assertFalse(overflow.exists())
+        self.assertFalse(raw.exists())
+
+        double = self.make_file("a\n" + MARKER + "b\n" + MARKER)
+        result, overflow, raw = self.divert(double)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("status=MULTI_MARKER", result.stdout)
+        self.assertEqual(
+            double.read_text(encoding="utf-8"), "a\n" + MARKER + "b\n" + MARKER
+        )
+        self.assertFalse(overflow.exists())
+        self.assertFalse(raw.exists())
+
+    def test_existing_overflow_target_fails_exclusively(self) -> None:
+        body = "# report\n\n" + MARKER
+        path = self.make_file(body + "tail\n")
+        (path.parent / "report.overflow").write_text("occupied\n", encoding="utf-8")
+        result, overflow, raw = self.divert(path)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("cannot create", result.stderr)
+        self.assertEqual(path.read_text(encoding="utf-8"), body + "tail\n")
+        self.assertEqual(overflow.read_text(encoding="utf-8"), "occupied\n")
+
+    def test_optimized_mode_matches(self) -> None:
+        body = "# report\n\n" + MARKER
+        path = self.make_file(body + "tail\n")
+        overflow = path.parent / "report.overflow"
+        raw = path.parent / "report.raw.md"
+        result = run(
+            "divert", str(path), "--overflow", str(overflow), "--raw", str(raw),
+            optimized=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("status=DIVERTED", result.stdout)
+        self.assertEqual(path.read_text(encoding="utf-8"), body)
+
+
 if __name__ == "__main__":
     unittest.main()
