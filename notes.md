@@ -16193,3 +16193,43 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Wave 15 banked. Reviews all positive; integration #5 will bind
   wave-14+15 verdicts when the acceleration wave and the two AWS
   jobs land.
+
+## 2026-08-31 23:51Z LIVE STATE — ACCELERATION WAVE IN: N5 CAGE BUILT, HF CANDIDATE FOUND, MATRIX ROUTE CLOSED, TORUS LEAD FIRED
+
+- B0-REDUCIBLE-N5 (Opus, `48d417d6`, PROVISIONAL): every N=5
+  reducible trivial-dicritical profile KILLED except survivor S1 =
+  (2,1)+(1,0), m=2 — pinned to a PI1-S4-shaped question about one
+  irreducible polynomial curve; the ramified-cover escape "cannot
+  occur at N=5". STRUCTURAL CONVERGENCE: the reducible ladder at
+  N=4 and N=5 funnels into the same problem class — one general
+  noncoprime-polynomial-curve representation theorem would close
+  multiple degrees at once. Review launched (Sol).
+- HF-TWIN (Grok, `7cef355b`, PROVISIONAL): (9,6,4) representative =
+  PASS_NECESSARY_ONLY — inside BLZ's licensed class, all seven
+  inequality slots HOLD, saturation at k=6,7. First honest
+  counterexample-side construction target of the campaign. Review
+  launched (GPT-5.5).
+- R5-CHARGE (Grok, `b10e91a1`): typed STOP[R5-CHARGE/
+  NO-FROZEN-GRAMMAR] at preflight step 4, dual-confirmed against the
+  historical support-gate artifacts — the disproof-matrix route is
+  formally CLOSED until a gauge normal-form theorem exists. The
+  registry's step-4 requirement did its job.
+- LIT-TARGETED (Grok, `a130acb5`): Q1 (unit representation) ABSENT —
+  new lemma stands. Q2 DECISIVE LEAD: the row sextic is type
+  3A_1+A_14; projective generic triple planes at degree 6 exist iff
+  torus type (sourced); the tame torus list EXCLUDES [A_14,3A_1];
+  the sole non-tame loophole is exactly the cancellation identity
+  already killed. Q3: SIROCCO degree-6 within published range;
+  practical notes banked for the running braid job. 15 PDFs hashed
+  (Tokunaga corpus, Oka, Cogolludo, Miranda-adjacent).
+- Wave 16 launched 23:49Z: OPUS TORUS-CHECK flagship (6h — run the
+  torus-type criterion on the explicit ROW-NF family; conclude
+  projectively via R10; then the AFFINE BRIDGE: the L_infty meridian
+  image under the (O4) tuples decides whether the projective
+  classification applies — a pure-algebra kill of the (6,4) row
+  needing NO braid computation is now plausible); Sol review of
+  REDUCIBLE-N5 (3h); 5.5 review of HF-TWIN (3h). Watcher live.
+- Still running: Box03 msolve suite r5; Sage install + braid job
+  (chained). 2026-08-31 ends with 12 lanes landed sealed today-
+  evening, 3 running, 2 AWS jobs, zero custody incidents since the
+  hardened launcher.
