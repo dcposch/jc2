@@ -1,0 +1,17 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/pi1s4-64-fold-reduction-opus5-20260831.md` (~5,270 words, one `<!-- BODY-END -->` at line 573). Hashes: 3/3 matched before reading.
+
+## Verdict: the row **SURVIVES** the fold route — closed as a route, negative
+
+**Step 1 (fold structure) — better than the charge assumed.** `p = r²` is *not* witness-specific. `Δ=(6,4,3)` ⟺ `δ_aff=3` ⟺ degree semigroup `⟨3,4⟩`, which forces a degree-3 generator `ρ ∈ C[p,q]`; a degree count (unique `3i+4j=6` with `i≤3`) gives `p = c ρ² + c₁₀ρ + c₀₁q + c₀₀`, and completing the square plus a triangular shear yields `{(r²,q)}`. **Theorem FOLD covers the whole row.** As a bonus, `(8,4,6,3)` shears to either coprime `(7,4)` (killed by the promoted coprime theorem) or `(6,4)` — so that row no longer needs ROW-SWEEP §6's PROVISIONAL `P=p+q²`.
+
+`D' ∩ D'^-` lies exactly over `{u=0}`, one point per distinct root of `r` with contact = root multiplicity, total always 3 (transverse nodes for the witness; tacnodal patterns are allowed row-level and carried). Bézout gives `I(Q')=13`, and a new lemma `β₁ = I(Q')+2` makes **`β₁=15` unconditional** — it was PROVISIONAL. An exact Puiseux expansion confirms it independently (odd coefficients vanish through `U¹¹`, `c₁₃ = −8/27`).
+
+**Step 2 (N-A) — fails, quantified.** Each component separately is fine: N-A fires after 4 blow-ups (`12 > 6`), giving `π₁(C²−D') = Z` from promoted machinery alone. On the union, separating the contact-13 tangency costs 13 blow-ups, forcing `C_i² = 3` against a threshold `2r₁ = 6`. **Deficit exactly 3**, robust to both readings of `r₁`/`T_x`, to all root patterns, and to the choice of surface (the `P²` and toric models agree: `16−13 = 12−9 = 3`).
+
+**The sharpest finding is that the fold runs the wrong way.** The identity `C̃² = d² − 2δ_∞ − M_∞` reproduces the promoted (M-INF) gate `M_∞ ≤ 3d−3` exactly, and shows the *direct* route misses by **one** unit (`36−30 = 6` vs `6`) while the fold misses by **three**. Also, Prop 3 is a surjection `Γ ↠ G`, so the fold route asks for a strictly stronger statement than the row needs.
+
+**Highest-leverage successor is therefore downstairs:** `OPEN[NA-R1-SHARPNESS-IRREDUCIBLE]`. The promoted N-A sharpness datum concerns the `T_x` coefficient (bitangent conics — reducible, `T_x ≠ 0`); it says nothing about relaxing `C² > 2r₁` to `≥` for an irreducible curve with `T = T_x = 0`. A YES there kills `(6,4)` and `(8,4)` on the spot. I flagged it as a countermodel-hunting task, not a relaxation to help oneself to.
+
+No CAS was run. Three bounded exact-rational Python checks (the ROW-SWEEP identity, the `q`/`q'` reductions mod `r`, the order-39 Puiseux expansion) are disclosed in §0 and none is load-bearing.
+DIVERT path=xmodel/pi1s4-64-fold-reduction-opus5-20260831.md status=CLEAN body_bytes=32726 body_sha256=8529de8ec1b11450a95481ffdf19f6e5116129aeef2ea2c27579b4e4fcc93a74

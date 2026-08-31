@@ -1,0 +1,19 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start by writing the report skeleton, then verify the charged-input hashes before expanding any systems.Hashes match. Next I’ll read the charged nodal-realization report and the coordinator integration notes.Hashes match. I’ll pull msolve input conventions and the (6,4,3) control curve, then expand the coefficient polynomials.I have the (6,4,3) witness. Next I’ll expand the coefficient polynomials with finite monomial arithmetic (no Gröbner/msolve) and fill §0–§1.(8,6) coefficients check out (weighted degrees and the hand formulas for `h_23`–`h_17`). Expanding the (9,6) system next and filling §0.(9,6) expansions are clean (`k_16=2A-3a`, all weights match). I’ll generate the job files, then fill §1–§2 and correct the type headers.I’ll fix M2 ring construction and the driver, re-hash, then write the remaining report sections.I’ll fill §1–§2 next (shared rings, expansions, degree checks), then drop in the per-type job files.The job bundle is in `xmodel/msolve-prep-realization-grok46-20260831.md`. Charged-input SHA-256 values matched; nothing was run in msolve/M2.
+
+**What to extract (18 fenced files).** Info-string = filename. Re-hash against §13 after extraction.
+
+| Kind | Files |
+|---|---|
+| Six types | `type86_A`–`D` and `type96_A`–`B`, each `.ms` + `.m2` |
+| Controls | `control_pos_643_idp` (ROW-SWEEP §2 `I_DP` length 3) and `control_neg_t8t6` (gcd-2) |
+| Driver / post-check | `run_realization_suite.sh`, `idp_postcheck.m2` |
+
+**Expansion checks (desk, not Groebner).** In the (8,6) chart `h_23≡0`, `h_21=3B−4γ`, weights `24−k`. In the (9,6) chart `k_17≡0`, `k_16=2A−3a`, weights `18−i`. Odd `h_k` / all `k_i` are written out in §2 and copied into the job files.
+
+**Launch.** On the AWS box, extract, `chmod +x run_realization_suite.sh`, then `REALIZATION_AWS=1 ./run_realization_suite.sh`. Controls run first and abort on FAIL. Caps: 2h / 2h / 3h / 2h / 4h / 4h.
+
+**Verdicts.** EMPTY of the open characteristic ideal ⇒ not a polynomial curve of that type. NONEMPTY is not REALIZED until `idp_postcheck` with `N=δ_aff` passes (reduced, immersive, distinct tangents, no reused parameter).
+
+**Not guessed (typed OPEN in §14).** Cover exclusion is M2 colon + `Res(p',q')`, not extra msolve slacks; resultant not expanded; `(6,4,3)` is the `I_DP` witness, not a Tschirnhausen system; no random slice for positive-dimensional components; FSY `g_2` / Moh PDF not duplicated.
+DIVERT path=xmodel/msolve-prep-realization-grok46-20260831.md status=CLEAN body_bytes=53686 body_sha256=c54d53f0a55586eb0fdd84d3aa311c6d64125a2cded8bec77aad1c3a8f40ec7f
