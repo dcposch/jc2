@@ -15449,3 +15449,46 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Clocks: ideation floor `18:54:51Z`; web backstop `2026-09-01T04:54Z`;
   systems checkpoint `2026-09-02T08:00Z`. Fleet: box01 protected job
   only. Holds/human gates: none.
+
+## 2026-08-31 10:07Z LIVE STATE — WAVE 4 IN: REDUCIBLE RANK FOUR CLOSES PENDING REVIEW
+
+- Basis: wave-4 artifacts banked and pushed; four wave-5 review lanes
+  live (watcher running). All wave-4 receipts DONE/BODY_SEALED.
+- **Provisional decisive chain (NOT promoted; wave-5 reviews live):**
+  (a) Opus r2 packet `634940bb...` REFUTES identity (2.3) as stated
+  (hand control `F=(x, x^2 y^4)`; missing sheet-degree factor `s_l`),
+  PROVES corrected `(2.3')  N=f(z)+sum s_l mu_l` unconditionally for
+  dominant etale morphisms, shows promoted inertia forces `s_l=1` on
+  the charged rows, and — Theorem 10.1 — derives `m=1` WITHOUT (2.3):
+  each branch component owns a distinct dicritical with bracket >= 2,
+  so `2m <= N-1 = 3`. (b) Grok typing packet `eeb46705...` sources
+  (D1)/(D2)/(D4) and derives (D3) from Orevkov 1987 / Chau 1999/2004/
+  2011 primary texts, closes the `mu_l=0` attack, types
+  `#Irr(A_F) <= N-1`, and sources the companion floor. Together, if
+  both survive review: EVERY reducible rank-four row is dead and rank
+  four collapses onto the irreducible one-place frontier. This will be
+  significant news at review resolution; the 18:54Z round packet will
+  carry it either way.
+- **Connectedness PROVED (provisional):** Sol packet `7a60ff24...`
+  proves triviality of the relative algebraic closures of `C(f)`,
+  `C(g)` via rationality/units/`{f,g}=kappa` — an independent complete
+  route; the pre-review's boundary route stays honestly OPEN at a
+  census-exhaustivity interface. Repairs (2.5)/(3.2)/(3.6) with the
+  consistency clause. Gate (Grok) + second-Sol pre-review launched:
+  experiment data point 2.
+- **Splice census review (GPT-5.5 `139fc10f...`):** dependency audit
+  clean for R1's finite-stratum data; group/knot lemmas CONFIRMED
+  (trefoil exclusion by hand); GAPs typed at the licensed-slice premise
+  (partly discharged by the D-typing packet), splice-form
+  exhaustiveness, pairing transport, and immersion pinning. Census
+  stays provisional as a sharpened-target statement.
+- Wave-5 lanes: Sol gate on the Opus (2.3') packet (with the etale-
+  domain check on the V2 control flagged as the key attack); GPT-5.5
+  source-audit gate on the D-typing packet (re-fetch primary texts,
+  byte-check quotes); Grok gate + Sol pre-review on connectedness.
+- Speculative budget check: two provisional roots carry the chain
+  (Opus packet, typing packet), one descendant each in review — within
+  limits. Review debt: hardening software review (nonblocking).
+- Clocks: ideation floor `18:54:51Z`; web backstop `2026-09-01T04:54Z`;
+  systems checkpoint `2026-09-02T08:00Z`. Fleet: box01 protected job
+  only. Holds/human gates: none.
