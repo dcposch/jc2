@@ -15858,3 +15858,31 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   reports with empty sections (queued, nonblocking).
 - In flight: PI1-S4 verification r2 (Grok), residual-closure r2
   (Opus), B0-ALL-N review (Grok). Watcher live.
+
+## 2026-08-31 18:07Z LIVE STATE — INTEGRATION #3 SEALED (N<=19); WAVE 9 FIRED ON THE LAST GAPS
+
+- Third binding integration `bafe5e89` (basis 46dd51af) PROMOTES:
+  PI1-S4 Main Theorem as corrected (paired review complete: gate +
+  verification-r2 all-HOLDS; survivor table at d<=9:
+  (4,3),(5,4),(7,4),(8,3),(9,4),(9,8)); the N=5 kill; B0-ALL-N
+  Theorem 4.1 (review CONFIRMED): under H2 NO trivial dicritical for
+  ALL N<=19 — b=0 and 2m<=N-2 on that range, H3 a conclusion; the
+  transfer correction (correction support = ramification support of
+  the cover; carriers have s,mu>=2). Wave-7 r1 skeletons banked as
+  failure evidence only.
+- CLOSE-RESIDUAL r2 (Opus, `b9a83b07`, PROVISIONAL): deg D_1 <= 4
+  closed outright; (4,2) killed twice independently; (M-INF) reduced
+  to `beta_h <= 2d+n-2` via semigroup gap counts; block-collapse
+  settled NEGATIVELY for n|d. Highest-leverage gap named:
+  OPEN[PI1S4-D1-DEGREE] — nothing bounds deg D_1 yet.
+- Wave 9 launched 18:05Z: Sol hostile review of CLOSE-RESIDUAL r2
+  (4h); Sol D1-DEGREE lane (6h: Orevkov tree shape, Jelonek/Chau
+  degree bounds — typed carefully, geometric degree does NOT bound
+  deg F —, aggregate fibre identities, S_4-cover chi_c); Grok M-INF
+  semigroup lane (4h: prove the embedded-resolution identity and
+  beta_h <= 2d+n-2 via Abhyankar-Moh). Watcher live.
+- Full-closure condition now explicit: (reviewed residual closure) +
+  (deg D_1 <= 4, or any bound + per-(d,n) checks) => B0 closes at
+  N=4 unconditionally => rank-four (M) complete in both classes.
+- Clocks: 23:26Z quiet-round decision upcoming; day-end PROGRESS
+  update due near 00:00Z.
