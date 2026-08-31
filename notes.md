@@ -15823,3 +15823,38 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   degrees under H2. The remaining frontier would be reducible A_F at
   N>=5 and the all-degree Keller programme on the promoted (M')/(B-w)
   machinery.
+
+## 2026-08-31 17:32Z LIVE STATE — WAVE 7 IN: PI1-S4 PROMOTE-AS-CORRECTED, N5 KILL CONFIRMED, H2 CLOSED THROUGH N=19
+
+- PI1-S4 gate (Sol, `a48b15e4`): Main Theorem SOUND on strict (C1),
+  PROMOTE AS CORRECTED — repairs: generic-shear setup before braid
+  factorizations; Lemma 5.5 → local intersection-number conservation;
+  "one Puiseux pair" equivalence gloss REFUTED (delete); Theorem A is
+  coprime-stratum (not (C1)-independent); (C1) for the campaign's
+  D_1 still undischarged. Promotion table: Thm A/B/C + Main Theorem
+  at exact safe scopes; (B') sufficient-only.
+- N5 kill review (Grok, `ba35a89b`): CONFIRMED — promote the N=5
+  trivial-dicritical impossibility under H2; five hostile targets all
+  failed. B0 extends to N=5 under H2.
+- B0-ALL-N (Sol, `621f1356`, PROVISIONAL): Theorem 4.1 — the
+  eta/cover mechanism closes H2 through N=19 (!) and whenever every
+  correction carrier has s_l=1; it CORRECTS the N5 transfer step
+  ([Z-6.5b] criticality lands on dh_l, not d eta — conclusion
+  preserved via s_2=1) and shows a trivial dicritical forces s_0=1
+  AND H3 free (l_0' ≅ A^1). Exact escape typed:
+  OPEN[B0-H2-N>=20/RAMIFIED-NONPRIMITIVE-COVER], necessarily 2a>N.
+  Under H2, N<=19: b=0 and 2m<=N-2. Review launched on Grok 17:30Z.
+- LANE FAILURES + FIX (systems): two wave-7 lanes returned sealed
+  SKELETONS — Grok verification (announced section-by-section fill,
+  then ended turn; rc=0) and Opus residual (hit the 128K output cap
+  emitting one giant response; rc=1). Root cause: my prompt template
+  had lanes write the BODY-END seal INTO the skeleton, so crashed
+  lanes look sealed (report_state=BODY_SEALED lies about substance).
+  TEMPLATE AMENDED (binding for all future prompts): skeleton WITHOUT
+  the seal; bounded per-section writes (<1,500 words each); seal only
+  after the final section; budget-short → type remaining sections
+  OPEN then seal. Both lanes relaunched as r2 under the new contract
+  (17:30Z). Ops debt: consider a divert heuristic flagging sealed
+  reports with empty sections (queued, nonblocking).
+- In flight: PI1-S4 verification r2 (Grok), residual-closure r2
+  (Opus), B0-ALL-N review (Grok). Watcher live.
