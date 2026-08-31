@@ -15783,3 +15783,43 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   refresh. CI-runner integration deliberately out of scope.
 - In flight: PI1-S4 (Opus), CORR-BUDGET-N5 (Sol). All other lanes
   harvested. Sol/Grok/5.5 seats idle until those land.
+
+## 2026-08-31 15:51Z LIVE STATE — PI1-S4: NO ON THE COPRIME STRATUM; N=5 PROFILE SELF-DESTRUCTS; FIVE LANES FIRED
+
+- PI1-S4 decision lane (Opus, `010330d2`, BODY_SEALED, PROVISIONAL):
+  MAIN THEOREM — NO to PI1-S4 whenever gcd(deg p, deg q)=1 (one
+  Puiseux pair at infinity). Machinery: Theorem A (LITERATURE-FREE:
+  braid at infinity = delta^n, Hurwitz fixedness forces Pi^n=1 +
+  sign/orbit constraints; kills n<=2 and both-odd (d,n)); Theorem B
+  (Nori 3.27 on the infinity blow-up; inequality C'^2=nd >
+  (n-1)(d-1) holds IDENTICALLY, slack n+d-1); Theorem C
+  (nodalization in P_{d,n} transports the representation to a nodal
+  neighbour). Scope discipline exemplary: (C1) NOT discharged for the
+  campaign's D_1 — flagged, not assumed. Residual typed
+  OPEN[PI1S4-NONCOPRIME] with exactly two missing inputs: (M-INF)
+  M_infty <= 3d-3 for noncoprime infinity places, and equisingular
+  nodalization or Nori B(C)>0 extension. Acquisition's tacnode
+  inference CONFIRMED and sharpened (disjoint transpositions satisfy
+  the full nodal relation).
+- CORR-BUDGET-N5 (Sol, `67a9482e`, BODY_SEALED, PROVISIONAL): the
+  sole N=5 trivial-dicritical profile (2,1)+(1,0) SELF-DESTRUCTS
+  under H2 — the correction point forces d eta(z)=0 through one
+  birational parametrization while the mu=1 copy forces eta immersive
+  at the same normalization place. No PI1 question remains at N=5
+  under H2. Mechanism (eta-criticality clash) looks degree-general.
+- Launched 15:49Z: paired PI1-S4 review (Sol gate 4h + Grok
+  verification 3h; verification includes small-case kill-list and a
+  d=4,n=3 direct ZvK probe); Grok hostile review of the N5
+  self-destruct (3h; includes generalization typing); B0-ALL-N lane
+  (Sol, 6h: formalize eta-criticality at every degree under H2 —
+  target: no trivial dicritical at ANY N under H2, with the s>=2 and
+  multibranch-image cases typed); PI1S4-CLOSE-RESIDUAL (Opus, 6h:
+  pin (C1) for D_1 from cover data, settle the cable block-collapse
+  successor hypothesis, prove (M-INF) in general). Watcher live.
+- If the five land clean: B0 closes at N=4 unconditionally (both
+  A_F-reducibility branches), rank-four (M) completes in both
+  classes, and the all-N trivial-dicritical question under H2
+  potentially closes — the strong budget 2m<=N-1 would follow at all
+  degrees under H2. The remaining frontier would be reducible A_F at
+  N>=5 and the all-degree Keller programme on the promoted (M')/(B-w)
+  machinery.
