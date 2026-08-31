@@ -15415,3 +15415,37 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   review-resolved well before it and folds into that round's packet; web
   backstop `2026-09-01T04:54Z`; systems checkpoint `2026-09-02T08:00Z`.
   Fleet: box01 protected job only. Holds/human gates: none.
+
+## 2026-08-31 09:36Z LIVE STATE — WAVES 2/3 INTEGRATED; TWO CONDITIONALS CARRY RANK FOUR
+
+- Basis: `30a868f1` plus the integration/ledger commits following it.
+  Binding integration `1a1d6c32...`/body `c48ddd1d...` (waves 2--3).
+- **Promoted:** conductor-30--40 census — the ladder SATURATES at 28
+  (`Delta_aff=17,20` not excluded; GPT-5.5 full CONFIRMED; conductor
+  computation closed as a route). Valuation-packet core (completion,
+  bracket, graded identities, narrowed cusp-companion claim, boundary
+  valuation (1.15), local flow-divisor laws) — promoted on gate PLUS
+  pre-review, with corrections adopted.
+- **Refuted in part:** the reducible component-tree ledger (Sol review):
+  16-row bookkeeping quarantined; four-forest list survives conditional
+  on the UNSOURCED dicritical hypotheses (D1)--(D4); the clean surviving
+  arc is `(2.3)+(D1)-(D4)+companion floor => m<=1`, which would kill all
+  reducible rank four.
+- **Held at GAP:** valuation packet's global fibre table ((2.5)/(3.2)/
+  (3.6)) pending fibre connectedness.
+- **Experiment (data point 1):** same-family Sol pre-review caught 2
+  REFUTED + 1 GAP that the decorrelated Grok gate (all-CONFIRMED) missed
+  on Sol's own packet; conversely Sol-on-Grok cross review produced the
+  day's sharpest refutation. Interim rule: deep analytic packets get gate
+  + pre-review in parallel; promotion still gated on the different-model
+  review; continue collecting.
+- Active lanes (wave 4, watcher live): Opus (2.3) identity r2 (adapters
+  now at 128k output cap after r1 died at 64k; smoke-tested); Grok
+  (D1)--(D4) source-typing; Sol fibre-connectedness (with the
+  pre-review's sketch); GPT-5.5 splice-census review (with mandatory
+  dependency audit against the refuted ledger).
+- Review debt: custody-hardening software review (nonblocking). All
+  hardened receipts to date clean.
+- Clocks: ideation floor `18:54:51Z`; web backstop `2026-09-01T04:54Z`;
+  systems checkpoint `2026-09-02T08:00Z`. Fleet: box01 protected job
+  only. Holds/human gates: none.

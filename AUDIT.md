@@ -5,6 +5,33 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **LADDER SATURATION AT 28 PROMOTED; REDUCIBLE LEDGER REFUTED IN PART;
+> VALUATION PACKET SPLIT-PROMOTED (2026-08-31 ~09:32Z).** Coordinator
+> integration
+> `1a1d6c3248812e8c...` (body `c48ddd1d...`, basis `30a868f1`) binds four
+> dispositions. (1) GPT-5.5 full-`CONFIRMED` review `e8265b54...` promotes
+> Grok's conductor 30--40 census `76fb3973...`: `Delta_aff=17,20` are NOT
+> excluded, the complete-exclusion progression ends at 28, zero-count rows
+> remain row-level exclusions, and the winding-two residue theorem must
+> never be applied to satellite companions. (2) Sol hostile review
+> `ed0d288b...` REFUTES the component-tree ledger `513fe4c0...` in part:
+> quarantine its 16/4/12 row bookkeeping, split rows, and replay-PASS;
+> retained at reviewed scope are the four-forest list conditional on typed
+> `m<=3`, finite-`T31` Euler exhaustiveness, the `S22`-not-on-`T31` rule,
+> and the conditional `(2.3)+(D1)-(D4)+f(B_i)>=1 => m<=1` with the
+> repaired `E`-term display. The dicritical hypotheses (D1)--(D4) are
+> UNSOURCED pending the live typing lane. (3) Sol's valuation packet
+> `2710e90f...` is split: completion/bracket/graded/(1.9)/(1.11-narrowed)/
+> boundary (1.12)--(1.15) and local flow-divisor formulas are promoted on
+> the union of the Grok gate `d5fa676a...` and the second-Sol pre-review
+> `8abde87c...`; the global RH totals (2.5), tuple identity (3.2), the
+> partition table, and closures (3.6) are HELD at GAP pending a fibre-
+> connectedness lemma (lane live), with the `gamma_h=(d_h-r_h-2)/2`
+> clause mandatory. (4) The R1 splice census `5d5b3d1f...` (two chargings
+> empty; trefoil-union-unknot family colourable, count 8) stays
+> provisional under live GPT-5.5 review with a mandatory dependency audit
+> against the refuted ledger portions.
+>
 > **GENUS LADDER PROMOTED THROUGH CONDUCTOR 28; ONE-CUSP POISSON AND
 > ONE-NODE OBSTRUCTIONS PROMOTED; REDUCIBLE RANK-FOUR LEDGER PROVISIONAL
 > (2026-08-31 ~08:25Z).** Coordinator integration

@@ -7,6 +7,37 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-31 09:33Z — saturation promoted; reducible frontier re-derived from conditionals)
+
+- **The colouring ladder is complete and closed as a conductor-exclusion
+  route.** Promoted: `Delta_aff notin {5,8,11,14}` and saturation at 28 —
+  conductors 30--40 all retain colourable rows, reviewed in full. The
+  boundary-colouring screen keeps killing individual rows but cannot close
+  another genus. The irreducible one-place horn now needs one of:
+  attainment/realizability obstructions for the surviving delta-sequences,
+  a degree-monotone invariant, or collapse via the reducible conditionals
+  below. Do not compute more conductors without a new mechanism.
+- **Reducible rank four runs through two live conditionals, not a row
+  census.** The 16-row ledger is refuted in part and quarantined. What
+  stands: IF the dicritical hypotheses (D1)--(D4) type out (source lane
+  live) THEN `m<=3` and the four-forest shapes; IF additionally the
+  missing-multiplicity identity (2.3) holds (Opus r2 lane live) with the
+  companion floor, THEN `m<=1` and every reducible row dies. Attack those
+  two conditionals; a corrected row census is deferred and probably moot.
+  The sharpest concrete survivor meanwhile is the trefoil-union-line
+  splice family (eight colourings, census under review).
+- **One-cusp horn: promoted local structure, one named gap.** The
+  completion/bracket/boundary-valuation layer is promoted (two-read
+  discipline: gate plus producer-side pre-review); the global fibre
+  table hangs on geometric irreducibility of general coordinate fibres
+  (lane live with a proof sketch). After connectedness, the cheapest
+  discriminator is `Theta_h=d_h-r_h-2` from one SNC boundary model.
+- **Review routing: pair, don't pick.** First experiment data point shows
+  a same-family pre-review catching real gaps a decorrelated gate missed,
+  while cross-family review produced the day's sharpest refutation
+  elsewhere. For deep analytic packets, run both; promotion still
+  requires the different-model gate.
+
 ## Superseding strategy overlay (2026-08-31 09:00Z — ladder promoted; reducible rank four is a finite tree ledger)
 
 - **The irreducible one-place rank-four screen is now promoted, not

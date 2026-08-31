@@ -7,6 +7,21 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-31
 
+> **THE COLOURING LADDER SATURATES: CONDUCTORS 30--40 ALL RETAIN
+> SURVIVORS, PROMOTED ON FULL REVIEW (~09:32Z).** The `C=10+6k` pattern
+> ends at 28; `Delta_aff = 17, 20` are not excluded; conductor-exclusion
+> by colouring is closed as a route. Meanwhile the reducible rank-four
+> row ledger was REFUTED in part by Sol's hostile review — split rows
+> dead, mixed-inertia rows missing, `m<=3` resting on unsourced
+> dicritical hypotheses — and rank four now runs through two live
+> conditionals: type (D1)--(D4) from primary sources, and prove the
+> missing-multiplicity identity (2.3); together with the companion floor
+> they force `m<=1`, killing every reducible row. The wild-valuation
+> packet was split-promoted on a two-read discipline (different-model
+> gate plus producer-side pre-review) after the pre-review caught a real
+> connectedness gap the gate missed; the repair lane is live. Binding
+> integration `1a1d6c32...`.
+>
 > **THE GENUS LADDER IS PROMOTED THROUGH CONDUCTOR 28, AND THE ONE-CUSP
 > POISSON AND ONE-NODE OBSTRUCTIONS ARE PROMOTED (~08:25Z).** Binding
 > integration `c0a8f193...` charges four different-model reviews from the
