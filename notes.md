@@ -15241,3 +15241,13 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   input: implement the queued immutable charged-input snapshot upgrade in the
   current no-external-lane window, then launch the owed different-model
   reviews under the hardened path. No lane launched in this event.
+
+## 2026-08-31 07:20Z CORRECTION — HANDOFF BASIS WORDING
+
+- The acknowledgment above says basis `ec0227b3` "= `origin/master`". Precisely:
+  `ec0227b3` is the campaign-content basis (newest commit touching campaign
+  files). At acknowledgment time `origin/master` was `c4848ca2`, two commits
+  ahead of `ec0227b3`; both intervening commits change only the excluded
+  `jc2-lean` gitlink pointer and were not inspected. No campaign file differs
+  between `ec0227b3` and `c4848ca2`, so the acknowledged LIVE STATE basis is
+  unchanged.
