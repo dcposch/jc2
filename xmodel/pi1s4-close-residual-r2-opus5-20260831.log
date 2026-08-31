@@ -1,1 +1,21 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed: `xmodel/pi1s4-close-residual-r2-opus5-20260831.md` (6 393 words, single `<!-- BODY-END -->`, nothing after it, no `charge_basis`).
+
+## What the lane found
+
+**Inputs.** 3/3 charged hashes matched before reading. Nori re-fetched from Numdam in-lane: `1b848c19…`, 4 546 575 bytes — matches. No CAS run.
+
+**Route 1 (pin (C1)) — NO.** Two mechanisms that look decisive both return identities:
+- `χ_c(Y) = 3` computed from the cover side *and* from the Keller side (`1 + χ_c(B_Y)`, with `χ_c(B_Y) = 2` identically in `s, τ, s_0', ν_0`). A consistency check that always passes; no information about `(d,n)`.
+- The boundary-at-infinity leverage needs Orevkov 1990, which I did not obtain from an official source, so it is unavailable under lane rules.
+
+I also correct the charged Main Theorem's parenthetical: `(C1)` is **not** equivalent to "one Puiseux pair at `Q`" — `p = t^{2m}, q = t^m + t` is a counterexample. It *is* equivalent to one characteristic pair for `y(x)` at infinity.
+
+**Route 1b (block collapse) — settled, and settled against the hope.** The tubular decomposition `ρ_∞ = C_g(δ_{d'}^{n'})·ι` with `ι` inner is derived (not assumed), with `e(ι) = (d-1)^2 - 2δ_∞ - n(d-g)` — which correctly degenerates to `ι = 1` on the coprime stratum. Block collapse (Lemma 3.3) then holds unconditionally, so Theorem A′ runs at the outer level. But the group-theoretic input becomes `Z(⟨Π_1, Π⟩) = 1`, and A′(4) shows that **fails in every `n | d` row** — including the smallest non-coprime case. The successor's hypothesis is half true; I say so plainly.
+
+Combining A′ with the inner braid closes `(d,n) = (4,2)` unconditionally and literature-free: every `ρ_∞`-fixed tuple has `(ab)^3 = 1` and image `≤ S_3`.
+
+**Route 2 ((M-INF)) — reduced, not proved.** `M_∞ = max(M_emb(C), d)`, and (M-INF) `⟺ β_h ≤ 2d + n - 2`. Proved for every `d ≤ 7`; first failure of the method is `d = 8` (marginal misses at `(8,4)`, `(8,6)`). The closed form `M_emb = mult + β_h - 1` is typed CHECKED (7 germs), not proved, and only `(6,2)` leans on it.
+
+**Closure.** `NO` when `deg D_1 ≤ 4` outright; `NO` when `deg D_1 ≤ 7` and `D_1` is nodal. `(4,2)` is closed twice by disjoint routes that agree. Everything off that rides `OPEN[PI1S4-D1-DEGREE]` — a degree bound `deg D_1 ≤ 7` would finish the residual, and I did not find one in the promoted set.
+DIVERT path=xmodel/pi1s4-close-residual-r2-opus5-20260831.md status=CLEAN body_bytes=37950 body_sha256=b9a83b0783f4b9b844bc881739e0b3c7c63efeb8683f862e007e6584af238696
