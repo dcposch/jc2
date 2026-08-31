@@ -15632,3 +15632,37 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   BLOCKED until a charge sheet passes the preflight.
 - In flight: 6 review/scout lanes (SHEET-GATE paired review, THETA,
   HF, BUDGET-N, trivial-dicritical registry) + P0 patch lane.
+
+## 2026-08-31 12:33Z LIVE STATE — (M′) PROMOTED, A₄ HORN CLOSED, B0 LANE FIRED
+
+- All six review/scout lanes returned sealed by 12:27Z. Binding
+  integration `69970f4d` (basis 02490efa) promotes the (M′) family:
+  (E), covering lemma, conversion law `a_p=s_p-b_p`, Lemma 4.2
+  `e=1+v(dx∧dy)`, ceiling, degree floor `d>=3`, (M′)/(M′-def) under
+  explicit (H2)+(H3), one-node exclusion, smooth law, node bound
+  (s>=1), a-quota; rank-four A₄ horn CLOSED (`A_F=B`, `b=0`, cusps
+  `H_p=Z/3`); weighted bound `2m_nt+m_triv<=N-1` promoted at ALL N,
+  double-tracked. Transposition horn PROVISIONAL on exactly one bit.
+- Question B0 (can a Keller map have an affine-image dicritical with
+  `mu=1`?): literature registry ABSENT with three typed routes;
+  nearest misses Orevkov N<=3, Domrina–Orevkov unique-dicritical N=4,
+  Żołądek+Chau (excluded onto smooth-embedded images; nodal image is
+  the surviving configuration). Flagship proof lane launched on OPUS
+  12:31Z (`b0-trivial-dicritical-proof-opus5-20260831`, 6h): routes
+  chart-Jacobian, image-singularity split, corr=0 rigidity at N=4.
+- THETA: OPEN confirmed both directions; reopen gate slimmed to
+  items (1)-(2). Construction lane launched on Sol 12:31Z
+  (`theta-reopen-explicit-pullback-sol56-20260831`, 6h): explicit
+  `(P_f,Q_f,P_g,Q_g)` + equation of B, else typed obstruction (an
+  inconsistency would kill the one-cusp horn — major either way).
+- HF: REFUTED-IN-PART constructively — the associated `(6,4,9)` curve
+  record is now COMPLETE (review's delta-budget argument closes
+  singularity completeness); row-level Newton-face claim QUARANTINED;
+  OPEN stands narrowed to lemma_multibranch_HF. Successor (twin row /
+  multibranch acquisition sweep) QUEUED behind B0.
+- Review-routing experiment data point 3: paired arms agreed on all
+  load-bearing items; gate arm found the custody gap, countermodel arm
+  found the non-Keller v=0 realization. Keep pairing for flagship
+  gates.
+- In flight: B0 (Opus), THETA-reopen (Sol), P0 custody patch (Sol,
+  from 12:03Z). Next quiet full round ~23:26Z. Fleet: box01 only.
