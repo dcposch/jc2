@@ -1,0 +1,26 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start by writing the report skeleton, then verify the frozen input hashes before reading anything else.Hashes match. Next I’ll record that, then read the three charged inputs and hunt every AS109 / degree-12 seed definition.Charged inputs check out. I’ll search the historical AS109 files and later ideation for every seed definition: ring, equations, support, gauge.The collision is between an `F_109` seed, an `F_3` Witt tower, and a `Z_109` Hensel lane. I’ll pull the defining passages for each.I have the objects and citations. Next I’ll fill the remaining report sections in place.Hashes of the three frozen charged inputs matched. The report is `xmodel/as109-d12-seed-provenance-reconciliation-grok46-20260831.md`.
+
+**Verdict: DISTINCT SEEDS.** “AS”, “109”, and “degree 12” do not name one object.
+
+The distinct objects are:
+
+| id | Object | Ring |
+|---|---|---|
+| R1 | Special fibre `(x-x^3,y)` | `F_3` |
+| R2 | First-Witt witness `(x+8x^3, y+3x^2 y)` | `Z/9` |
+| R3 | Growing-support cotangent tower `F_n=(x-x^p, y S_n)` | `Z/p^n` → `Z_p⟨x,y⟩` |
+| R4 | Special fibre `(x-x^{109},y)` | `F_109` |
+| R5 | Hypothetical exact lift `P=x-x^{109}+109A`, `Q=y+109B` | `Z_109` |
+| R6 | 109-sheet Hensel splitting | theorem about R5, not a seed |
+| R7 | Sol’s degree-12 matrix cell | underspecified |
+| R8 | Char-0 max-eleven / `(8,12)` residual | not an Artin–Schreier seed |
+
+R2 is not a widening of R1 into R3. There is no claimed map `F_3 → F_109` or `W(F_3) → Z_109`. Uncarried equations over `F_109` are not the packed `Z_109` identity.
+
+**Matrix target, if anything is charged:** a declared finite-support cell of **R5** at the correction floor `max(deg_y A, deg_y B) ≥ 12`. Not R1–R3 (already known to lift, with growing support), not R6 as a search seed, not R7 as currently written.
+
+The deciding criterion is that “degree 12” as a live bounded polynomiality frontier is a theorem about exact `Z_109` lifts of `(x-x^{109},y)`, not about the `F_3` tower.
+
+Section 6 is the fail-closed preflight: name R5, separate lift ring from matrix ring, freeze explicit `x` and `y` supports, and declare Witt level, generator order, gauge slice, and collision. Missing any of those, or assuming a map that artifacts never write down, means do not charge.
+DIVERT path=xmodel/as109-d12-seed-provenance-reconciliation-grok46-20260831.md status=CLEAN body_bytes=27022 body_sha256=00e93c934aaee8b33cb472d2e03d1ceb33e1e61bbd0d7250c3eef1674008ed77
