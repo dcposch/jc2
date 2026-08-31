@@ -105,10 +105,16 @@ def singular_text(characteristic: int, profile: str, engine: str) -> str:
         equations.append(normalized)
 
     if profile == "target3":
-        require(len(equations) == 58, "target-3 equation count drifted")
+        require(
+            len(equations) == 58,
+            f"target-3 equation count drifted: observed {len(equations)}, expected 58",
+        )
         require(any(equation in (1, -1) for equation in equations), "target-3 unit mutation lost")
     else:
-        require(len(equations) == 57, "actual equation count drifted")
+        require(
+            len(equations) == 57,
+            f"actual equation count drifted: observed {len(equations)}, expected 57",
+        )
         require(all(equation not in (1, -1) for equation in equations), "actual cell became trivially empty")
         require(
             all(set(equation.free_symbols) & set(params) for equation in equations),
