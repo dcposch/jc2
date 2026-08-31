@@ -16130,3 +16130,29 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   runs. Systems lesson queued for the next prep-lane template:
   generated CAS code must ship with a syntax-check pass.)
 - Day capstone written into PROGRESS.md (22:50Z block).
+
+## LIVE STATE (observed 2026-08-31T22:58Z) — ACCELERATION WAVE: FOUR IDLE-CAPACITY LANES FIRED
+
+- Per DC's prompt on parallelization: coordinator audit found Opus
+  idle and Grok under-loaded while the N=4 endgame lanes run. Fired
+  22:56Z, all on fronts that do NOT collide with wave 15 or the
+  Box03 suite:
+  1. B0-REDUCIBLE-N5 (Opus, 6h) — the all-degree reducible-A_F gap:
+     enumerate + kill/pin N=5 trivial-dicritical profiles with the
+     promoted machinery; build the N=5 residual cage.
+  2. HF-TWIN (Grok, 4h) — the (9,6,4) census twin row under the
+     reviewed protocol; two rows blocked on the same multibranch
+     lemma would sharpen that acquisition.
+  3. R5-CHARGE (Grok, 4h) — first attempt at a preflight-compliant
+     disproof-matrix charge sheet; a typed STOP at an undischargeable
+     step is a legitimate outcome that closes the matrix route.
+  4. LIT-TARGETED (Grok, 4h) — three narrow sweeps that could
+     short-circuit running routes: unit representation of binary
+     cubics (nonmonogenic gap); Tokunaga dihedral/triple-cover
+     criteria for sextics = two quartics with contact (could decide
+     the (6,4) row outright); SIROCCO practical limits (de-risks the
+     braid job).
+- Now running: 9 lanes total (wave 15 x4, acceleration x4 — 1 Opus,
+  2 Sol, 1 GPT-5.5, 5 Grok... recount: wave15 = Sol nonmonogenic,
+  5.5 review, Grok zvk review, Grok braid-prep; accel = Opus, Grok
+  x3) + Box03 suite. All seats saturated except Fable (coordinating).
