@@ -1,0 +1,9 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Wrote `xmodel/adapter-smoke-opus5-cap128k-20260831.md`.
+
+- `CLAUDE_CODE_MAX_OUTPUT_TOKENS` observed via shell: **128000**
+- Shell access confirmed working (the value was read from the live environment, not assumed).
+- File body ends with the standalone `<!-- BODY-END -->` line, nothing after it.
+
+No other files were read and no other commands were run.
+DIVERT path=xmodel/adapter-smoke-opus5-cap128k-20260831.md status=CLEAN body_bytes=151 body_sha256=3756e27239835134520a8b860ec4d2af52acc9f9913c8d425de023eef07d590f
