@@ -1,0 +1,27 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start by verifying the charged input hash, then read the provisional R1 ledger and existing Zariski–van Kampen colouring interface so the census stays aligned with promoted packets.Hash matches. Next I’ll read the provisional R1 ledger and the existing splice/colouring interface so the census stays on the same Zariski–van Kampen contract.The ledger is in. I’ll pull the promoted colouring interface, splice-diagram language, and replay conventions next so the census matches existing packets.I’ll pull the one-node / splice / van Kampen interface next, then write the report header so later sections can append cleanly.Hash matches; I’ll create the report now and start the diagram-finiteness section before running any colouring.I’ll prototype the colouring engine next and run the small braid families, so the finiteness lemma is backed by exact counts rather than a guessed bound.F1 is the only colourable family. I’ll write the replay next, then fill the remaining report sections from those exact counts.The mixed-twist action doesn’t preserve the cusp-fixed set, so I’ll recast finiteness as an action order on all transposition triples and slim the payload.Replay is byte-stable. I’ll now write the full report: finiteness lemmas, presentations, colouring counts, and the per-diagram verdict.Row R1 at `n22=1` is **not closed**. The mixed `(1,0)` charging survives; the other two licensed chargings are empty.
+
+**Charged input.** SHA-256 matched `513fe4c0…166ad4d`. The ledger is `PROVISIONAL` throughout.
+
+**What the census did.** Each component’s knot at infinity is an iterated cable of genus `Δ_aff(B_i) ∈ {0,1,2}`. That gives three chargings of the `A2` cusp and the ordinary conductor node. Linking number `n` of the shared `T(2,2n)` core is unbounded (Bézout at infinity). Transposition colouring is not: `σ2` has order 6 on the `6^3` colour triples, so only six residues.
+
+**Verdicts.**
+
+| Charging | Diagrams | Result |
+|---|---|---|
+| `(1,1)` cusp on one trefoil, self-node on the other | `T(4,±6)` and all Hopf-cabled two-trefoil links | Empty. A trefoil transposition pair is never disjoint, so that component cannot carry `(12)\|(34)`. |
+| `(2,0)` cusp and node on one component | `T(2,±5) ∪ unknot`, `C(2,±1)(trefoil) ∪ unknot` | Empty at the closed-braid stage. |
+| `(1,0)` mixed: trefoil ∪ unknot, node between components | `F1`: `σ1^{±3} σ2^{±2n}`, `n≥1` | **Colourable.** Eight labelled full-`S4` colourings after the cusp factor, ordinary mixed twist, and charged pairing, independent of `n` and of both signs. Witness: `(13)`, `(12)`, `(34)`. |
+
+That witness is a sharpened surviving target, not an existence proof of a curve or map. Higher cusps `A_{2p}` (`p>1`) are typed `OPEN`.
+
+**Replay.** `ops/block_descent_a1_rank4_r1_splice_coloring_replay.py` is byte-identical in normal, `-O`, and `-OO`. Mutation `--mutate-kill-trefoil-unknot` fails.
+
+```text
+stdout SHA-256: 36d2d33f677590807b9e6c301e5ae5312abf5fb08bbd3746e02cb7a8bfda4d1a
+payload_sha256=27c8b12a4000a8b83100a4da65bc3d1bc02ec55dbda5ff6061806cad82d80762
+status=PASS-RANK4-R1-SPLICE-COLORING
+```
+
+Report: `xmodel/block-descent-a1-rank4-r1-splice-coloring-census-grok46-20260831.md`. No `charge_basis` line.
+DIVERT path=xmodel/block-descent-a1-rank4-r1-splice-coloring-census-grok46-20260831.md status=CLEAN body_bytes=19678 body_sha256=5d5b3d1fc1b2f7f57a59ea62c9409bec24e81e80e1e529b47612e5302aae4c11
