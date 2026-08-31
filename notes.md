@@ -15766,3 +15766,20 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   DOMRINA-2000 cross-check, T3.5-SHARPEN. Next quiet round ~23:26Z —
   ASSESS at that clock whether the PI1-S4/N5 flow supersedes it (a
   significant-news round fired <13h ago; the flow is converging).
+
+## 2026-08-31 14:19Z LIVE STATE — SEMANTIC-REPLAY/v1 SHIPPED
+
+- SEMANTIC-REPLAY build lane (Sol, BODY_SEALED; FIRST receipt under
+  the patched launcher — `adapter_exit_code` field present, smoke
+  test PASS). Applied: `ops/replay_gate.py` + `ops/test_replay_gate.py`
+  (6 tests; full suite 108/108). Acceptance: quarantined 16-row
+  ledger FAILS as-is (required); reviewed conductor census returns
+  MALFORMED-for-the-right-reason — the artifact lacks the generator
+  protocol and mutation commitments, so a compliant certificate
+  cannot be written without inventing data (the specified
+  insufficient-artifact finding). Systems debt (nonblocking): future
+  census-class producers must emit the generator protocol so their
+  replays can certify; folded into the next producer template
+  refresh. CI-runner integration deliberately out of scope.
+- In flight: PI1-S4 (Opus), CORR-BUDGET-N5 (Sol). All other lanes
+  harvested. Sol/Grok/5.5 seats idle until those land.
