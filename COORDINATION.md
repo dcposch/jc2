@@ -1677,6 +1677,20 @@ Default routing under this policy:
 Different-model promotion, history checksum, and scope-audit rules are
 unchanged; identity is still not a vote.
 
+Amendment (2026-08-31 08:30Z, DC directive plus coordinator analysis):
+volume roles — replay verification, transcription checks, secondary
+reviews — default to Grok, which is at least as capable there and cheaper.
+GPT-5.5 (`codex55.sh`) is retained only where independently useful: as a
+decorrelated extra channel in multi-vote verification, or as a non-producer
+reviewer when Grok produced the work and Fable/Opus spend is not justified.
+It was a quota-era stopgap and is no longer a default route. For
+load-bearing Sol-produced claims the charged different-model gate prefers
+Grok, or Fable/Opus when decisive; additionally, Sol-produced packets get
+an uncharged second-Sol-instance pre-review pass before the gate (high
+absolute power, zero promotion weight). For the next several Sol-produced
+packets, record which pass catches which defects; this measured comparison,
+not priors, sets the eventual default.
+
 Write-ownership change, binding henceforth: allocation and availability
 refreshes are recorded exclusively in `notes.md` (`LIVE STATE` and event
 blocks). `COORDINATION.md` changes only for genuine protocol, gate, or
