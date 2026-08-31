@@ -519,6 +519,17 @@ campaign from paying twice for the same failed idea.
   and is smoke-checked for that destination before launch.  Referee text left
   only in adapter stdout is a failed-delivery draft, not promotion evidence;
   preserve it and rerun through a fresh output-explicit prompt.
+- For a long external lane on macOS, prefer
+  `python3 ops/lane_detach.py launch ADAPTER TAG PROMPT`. It runs the unchanged
+  `ops/lane.sh` as a one-shot launchd job, so an accidental coordinator or
+  terminal-process death does not cancel model work. Monitor only with
+  `lane_detach.py status/wait` while live; those commands read a separate
+  ignored sidecar and launchd state, never the mutable report, model log, or
+  `.run.v2`. A terminal supervisor state merely licenses the existing
+  receipt-first procedure: reproduce the receipt and all charged hashes before
+  reading or binding the report. `unload` refuses live jobs and retains the
+  recovery sidecar. Direct foreground `ops/lane.sh` remains suitable for
+  short smoke tests whose exec session will be held to completion.
 - `ops/lane.sh` appends the compact current `FALLACY-v2.md` reasoning
   guardrail exactly once from a hash-pinned private snapshot and records both
   the original and composed prompt hashes.  The appendix is semantic
