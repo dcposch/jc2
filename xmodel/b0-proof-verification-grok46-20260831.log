@@ -1,0 +1,16 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start by hashing the frozen inputs, then write the report skeleton and work through each target from the charged files.Hashes match. Next I’ll write the report skeleton, then read both charged inputs.Hashes match. I’ll load the hashed literature PDFs and the chart formulas next so the Jacobian checks are against the primary sources.Literature hashes match the report. Next I’ll pull Żołądek 6.7 and Orevkov 4.2/5.2 so the chart and budget identities are checked against the PDFs.I have the chart identities, the N=4/N=5 enumerations, and a sign error in 4.3(5). Next I’ll fill the report section by section.Hashes matched. The verification report is at `xmodel/b0-proof-verification-grok46-20260831.md`.
+
+**Verdicts**
+
+| Target | Result |
+|---|---|
+| 1. Lemma 3.4 / (3.2) | **HOLDS** — five integer controls; dropping `corr_l=0` or `2a≤N` admits the named survivors |
+| 2. N=4 table / N=5 profiles | **HOLDS** — table complete; exactly `(2,0)+(1,1)` and `(2,1)+(1,0)` survive |
+| 3. Theorem 4.3(5) | **BROKEN** — `Σ ε_p` has the wrong sign; `c_0=1` is not forced |
+| 4. Group theory | **HOLDS** — `S_4`, disjoint `(2,2)`, N-cycle; weaker OPEN form is correctly sufficient |
+| 5. Prop 2.1–2.3 charts | **HOLDS** — both Jacobians are `-2` on the `(k,l)=(2,3)` series |
+| 6. Cor 3.6 vs Keller | **HOLDS** as Keller-specific; witness `F=(x, y+x y^3)` has smooth irreducible `A_F` |
+
+The load-bearing break is Target 3: the printed identity puts contracted-fibre multiplicity on the wrong side of the Euler budget. The configuration `(s_0,r_1,c_0,NN,ε)=(1,1,2,0,1)` satisfies (E) and the fibre relations with `D̃_0 ≅ C^*`.
+DIVERT path=xmodel/b0-proof-verification-grok46-20260831.md status=CLEAN body_bytes=17186 body_sha256=4887fb9b8254d989209981cc7f04288bd394f998a0e85eb453b94699a4760324

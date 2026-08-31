@@ -1,0 +1,4451 @@
+cli=codex-cli 0.151.0 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.151.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a05803-ba3e-7b80-8c93-29b8716f0a85
+--------
+user
+# Hostile review: THETA-reopen report (Sol) — obstructions and the degree-8 reframe
+
+Different-model review of a construction lane that returned typed
+OPEN with two proved obstructions and a strategic reframe. Stakes:
+if the obstructions are wrong the horn programme mis-prioritizes; if
+the degree-8 composition claim is wrong the reframe is unsound.
+
+charged_input=xmodel/theta-reopen-explicit-pullback-sol56-20260831.md
+charged_input=xmodel/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md
+charged_input=xmodel/block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md
+charged_input=xmodel/block-descent-a1-mprime-coordinator-integration-fable5-20260831.md
+
+Your inputs are frozen read-only copies in `/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`;
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md
+2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md
+7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md
+69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-mprime-coordinator-integration-fable5-20260831.md
+```
+
+Directed checks, all by hand:
+
+1. The constraint system (1.1)-(1.4): re-derive it from the promoted
+   packet interfaces — is the bracket condition {f,g}=kappa the
+   correct charged normalization, and are (1.3E)/(1.3O) the right
+   even/odd components in the displayed normal form on
+   R=C[A,U,Z]/(U^2-A-A^2Z)?
+2. OBSTRUCTION[A-DEGREE-ZERO] (3.1)-(3.2): re-derive the A^0 and A^1
+   coefficients and confirm the contradiction.
+3. OBSTRUCTION[A-LINEAR-MINIMAL-JET] (3.3)-(3.11): re-derive
+   (3.4)-(3.8) from scratch, then check the degree bookkeeping in
+   (3.9)-(3.10) and the D=0 branch exhaustively — every claimed
+   leading-term non-cancellation, every case. This is elementary
+   polynomial algebra; verify it IS exhaustive for A-degree <=1 with
+   T_0=0, and confirm the report's own scope disclaimers (does not
+   cover other family points, nonzero T_0, A-degree >=2).
+4. The degree-8 composition claim (3.12)-(3.14): verify the three
+   displayed Jacobians term by term, the multiplicativity step, and
+   [C(x,y):K]=2 as cited; confirm the conclusion 'a landed admissible
+   pair composes to a noninvertible Keller map of geometric degree 8'
+   and its typing as strength-evidence, not obstruction.
+5. The terminology fork in §6 (locally finite vs locally quasi-finite)
+   against the structure packet's lines as cited.
+6. Strategic soundness: the report says a finite exhaustion cannot be
+   promoted because no ruling-degree cap exists. Assess whether the
+   uncancellable-leading-term mechanism of (3.10) plausibly extends
+   to an all-degrees induction (do NOT attempt the proof; type what
+   the inductive statement would have to be and what breaks at
+   A-degree 2), so the coordinator can scope the successor lane.
+
+Verdict: CONFIRMED / REFUTED-IN-PART per item, then: are the two
+obstructions promotable as bounded exclusions, and is the degree-8
+reframe safe to adopt as routing input?
+
+Desk-scale exact reasoning only; you may fetch and hash primary
+literature (record exact sources); never run any CAS or computation of
+uncertain duration on this machine. Do not edit canonical ledgers, any
+charged file, or inspect `jc2-lean`. 3 hours hard budget.
+
+Write one report and no other file:
+
+```text
+xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+```
+
+Create the report file with a skeleton of section headers as your very
+first action and append each completed section as you finish it. Keep
+it under roughly 4,500 words. End its body with a single standalone
+`<!-- BODY-END -->` line and write absolutely nothing after that line.
+Do not include a `charge_basis` declaration.
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..525cfd98cc98123c60c122aec04af3a3f4d7b40b
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,18 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++## 1. Constraint System (1.1)-(1.4)
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
++
+
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..525cfd98cc98123c60c122aec04af3a3f4d7b40b
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,18 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++## 1. Constraint System (1.1)-(1.4)
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
++
+
+codex
+I’ve created the requested report skeleton first. I’m going through the hash gate now, and I’ll stop immediately if any frozen input differs from the supplied digest.
+exec
+/bin/zsh -lc 'shasum -a 256 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-mprime-coordinator-integration-fable5-20260831.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md
+2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md
+7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md
+69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-mprime-coordinator-integration-fable5-20260831.md
+
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..525cfd98cc98123c60c122aec04af3a3f4d7b40b
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,18 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++## 1. Constraint System (1.1)-(1.4)
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
++
+
+codex
+The hashes match exactly. I’m now reading the frozen packet copies and extracting only the interfaces and cited algebra needed for the six directed checks.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0b47727d3779100c2750cdba57881aca99ef0fdf
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,31 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++## 1. Constraint System (1.1)-(1.4)
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0b47727d3779100c2750cdba57881aca99ef0fdf
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,31 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++## 1. Constraint System (1.1)-(1.4)
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+exec
+/bin/zsh -lc 'wc -l /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     585 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md
+
+exec
+/bin/zsh -lc 'rg -n "''^(#|##)|'"\\(1\\.[1-4]\\)|\\(3\\.(1|2|3|4|5|6|7|8|9|10|11|12|13|14)\\)|OBSTRUCTION|degree-8|locally\" /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+1:# THETA reopen data: the explicit one-cusp pullback
+3:## 0. Frozen inputs, scope, and notation
+39:## 1. Constraint system imposed by the promoted packets
+41:### 1.1 Exact polynomial equations
+46:f=P(A,Z)+U Q(A,Z),       g=R_0(A,Z)+U S_0(A,Z),             (1.1)
+51:The Poisson bracket underlying `structure:(1.3)` is determined globally by
+54:{A,U}=2A^2,       {A,Z}=4U,       {U,Z}=2+4AZ.              (1.2)
+65:Put `H=A(1+AZ)` and `c=2(1+2AZ)`.  Expanding (1.2), replacing every
+85:E=kappa,                     O=0                            (1.4)
+92:### 1.2 Intrinsic completion and first-jet constraints
+111:then the constant term of (1.4), checked directly in (1.3E), is
+130:### 1.3 Global and boundary interfaces
+132:An admissible solution of (1.4) must also realize the charged global data:
+138:   property called “`pi` locally finite.”  The restrictions in (1.6) already
+180:## 2. Lowest-complexity admissible shape and free parameters
+194:### 2.1 Minimal residue curve
+252:### 2.2 Simplest point and mandatory ruling corrections
+278:coefficients, subject only to the two full equations (1.4) and the global
+323:## 3. Construction or typed obstruction
+325:### 3.1 First inconsistency: ruling degree zero
+327:Suppose all four coefficients in (1.1) are independent of `A`.  Then (1.3E)
+331:E=2(1+2AZ)(Q(R_0)'-P'S_0).                               (3.1)
+338:OBSTRUCTION[A-DEGREE-ZERO]: no constant-bracket pair in the charged
+339:normal form has all four coefficient polynomials in C[Z].              (3.2)
+346:### 3.2 The full `A`-linear test at the simplest minimal jet
+353:R_0=Z^3-Z+AE,             S_0=-3kappa Z/4+AL,             (3.3)
+357:coefficients of (1.4), obtained directly from (1.3E)--(1.3O), are
+360:[A^0]O:  2ZE-(3Z^2-1)C=c_*,                              (3.4)
+363:          +6D(3Z^2-1)-12ZL+2kappa Z-(9/2)kappa c_*=0,     (3.5)
+366:                   +(3kappa Z/8)D'+(3kappa^2/8)Z,         (3.6)
+368:[A^3]O:  DL'-D'L=0,                                      (3.7)
+371:where all solutions of (3.4) have been written
+375:sigma in C[Z].                                           (3.8)
+378:Here is the complete degree contradiction.  If `D!=0`, (3.7) gives
+380:term of (3.5) forces
+383:deg sigma=m+1,       lc(sigma)=2 lc(D)/kappa.             (3.9)
+386:Using (3.8), the left side of (3.6) then has uncancellable leading term
+389:-6 lc(sigma)^2 Z^(2m+4),                                 (3.10)
+394:If `D=0` and `sigma` is zero or constant, every term of (3.5) except
+396:cancel.  If instead `n=deg sigma>=1`, (3.5) forces `deg L=n`.  The left side
+397:of (3.6) has leading term `-6lc(sigma)^2Z^(2n+2)`, while the right side has
+401:OBSTRUCTION[A-LINEAR-MINIMAL-JET]: for p=Z^2, r=Z^3-Z and T_0=0,
+402:no choice C,D,E,L makes {f,g}=kappa when all four A-degrees are <=1.     (3.11)
+412:### 3.3 Why the remaining construction is counterexample-level
+418:A=x^2,       U=x+x^3y,       Z=2y+x^2y^2                 (3.12)
+428: =2+8x^2y+4x^4y^2=2+4AZ.                                (3.13)
+431:Thus (1.4) would imply `J(F,G)=kappa`.  The packet records
+435:[C(x,y):C(F,G)]=[C(x,y):K][K:C(f,g)]=2*4=8.              (3.14)
+447:OPEN[THETA-EXPLICIT-PULLBACK]: equations (1.4), the minimal family
+448:(2.2)-(2.5), and obstructions (3.2)/(3.11) are exact, but arbitrary finite
+452:## 4. Target curve and normalized parametrization
+507:## 5. Independent computations of the numerical data
+547:## 6. Verdict and exact scope
+552:pole-growth witness.  By contrast, `pi|_S` is etale and hence locally
+554:launch phrase “locally finite” literally requires locally finite Hamiltonian
+556:only packet-compatible reading: locally quasi-finite for `pi`,
+557:non-locally-finite for the Hamiltonians.
+561:constraint system (1.3)--(1.4), the exhaustive residue and first-jet parameter
+580:exactly the scopes (3.2) and (3.11); extending either by analogy would be a
+
+exec
+/bin/zsh -lc 'rg -n "''^(#|##)|locally|finite|quasi|valuation|cusp|A'"\\"'^1|A1|A-line|connected" /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-mprime-coordinator-integration-fable5-20260831.md' in /Users/dc/code/math/jc2
+ succeeded in 68ms:
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0b47727d3779100c2750cdba57881aca99ef0fdf
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,31 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++## 1. Constraint System (1.1)-(1.4)
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+codex
+The main THETA packet exposes the bracket, normal form, two obstruction arguments, and the composition route in one place. I’m cross-checking those against the structure/coordinator packets where the packet claims imported hypotheses rather than recomputing them locally.
+exec
+/bin/zsh -lc "sed -n '39,145p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+## 1. Constraint system imposed by the promoted packets
+
+### 1.1 Exact polynomial equations
+
+Every element of `R` has a unique normal form (`structure:145-149`).  Write
+
+```text
+f=P(A,Z)+U Q(A,Z),       g=R_0(A,Z)+U S_0(A,Z),             (1.1)
+```
+
+where all four displayed coefficients are polynomials over `C`.  To avoid a
+name collision, `R_0` is a polynomial and `R` without a subscript is the ring.
+The Poisson bracket underlying `structure:(1.3)` is determined globally by
+
+```text
+{A,U}=2A^2,       {A,Z}=4U,       {U,Z}=2+4AZ.              (1.2)
+```
+
+It descends to the quotient: using antisymmetry, the three checks are
+
+```text
+{q,A}=2U(-2A^2)-A^2(-4U)=0,
+{q,U}=-2A^2-A^2(-2-4AZ)-(4A^3)Z=0,
+{q,Z}=2U(2+4AZ)-4U-(8AU)Z=0.
+```
+
+Put `H=A(1+AZ)` and `c=2(1+2AZ)`.  Expanding (1.2), replacing every
+`U^2` by `H`, and collecting the unique even and odd normal-form parts gives
+
+```text
+{f,g}=E+U O,
+
+E=2A^2(P_A S_0-Q(R_0)_A)
+  +4H(P_A(S_0)_Z+Q_A(R_0)_Z-P_Z(S_0)_A-Q_Z(R_0)_A)
+  +c(Q(R_0)_Z-P_ZS_0),                                    (1.3E)
+
+O=2A^2(Q_A S_0-Q(S_0)_A)
+  +4(P_A(R_0)_Z-P_Z(R_0)_A
+       +H(Q_A(S_0)_Z-Q_Z(S_0)_A))
+  +c(Q(S_0)_Z-Q_ZS_0).                                    (1.3O)
+```
+
+Thus the complete coefficient-level constant-Jacobian constraint is the
+polynomial identity system
+
+```text
+E=kappa,                     O=0                            (1.4)
+```
+
+in `C[A,Z]`.  This is stronger and more useful than matching variable names:
+every candidate can be checked coefficient by coefficient in the declared
+quotient.
+
+### 1.2 Intrinsic completion and first-jet constraints
+
+Complete along the whole *interior* line `Phi` and set `u=U`.  The exact
+whole-line completion and its generic-point complete DVR are
+(`structure:55-115`)
+
+```text
+A=a(u,Z)=u^2-Zu^4+2Z^2u^6-5Z^3u^8+...,
+completion_along_Phi=C[Z][[u]],
+completion_of_R_(A,U)=C(Z)[[u]],
+{u,Z}=2+4Za(u,Z).                                           (1.5)
+```
+
+Consequently, if
+
+```text
+p=P(0,Z), q_1=Q(0,Z), r=R_0(0,Z), s_1=S_0(0,Z),
+```
+
+then the constant term of (1.4), checked directly in (1.3E), is
+
+```text
+2(q_1 r'-p's_1)=kappa.                                    (1.6)
+```
+
+The promoted companion-curve interface additionally says that
+`Z |-> (p(Z),r(Z))` is an immersive normalization with two distinct points
+having the same image.  Neither coordinate is affine or constant, so
+`deg p,deg r>=2` (`structure:164-189`; `review:58-81`).  This image is the
+interior companion curve customarily called `C_0`; it is **not** the target
+boundary curve `B`.
+
+There is no charged upper bound on `deg_A P,deg_A Q,deg_A R_0,deg_A S_0`, nor
+on their `Z`-degrees away from `A=0`.  In particular, the provisional identity
+`mu=d1=2` and the normalization `t=A` belong to the inverse-Kummer/ruling
+ledger (`structure:472-503`); they are not degrees of `f` or `g`.  The symbols
+`c_0,E,r_E,kappa_B` there are not supplied as polynomials (`review:83-92`).
+
+### 1.3 Global and boundary interfaces
+
+An admissible solution of (1.4) must also realize the charged global data:
+
+1. `[K:C(f,g)]=4`; `pi|_S` is etale, has cofinite image, and the mate on a
+   general coordinate fibre has degree four (`review:120-125`;
+   `connectedness:73-83,229-244,289-296`).  The packet's dynamical condition
+   is **non**-local-finiteness of both Hamiltonian derivations, not a separate
+   property called “`pi` locally finite.”  The restrictions in (1.6) already
+   put both coordinates outside `C[A]`; see `structure:151-162` for the
+   provisional LF formulation and `structure:281-295` for the independent
+   boundary-valuation witness.
+2. `C(f)` and `C(g)` are algebraically closed in `K`; hence both general
+   coordinate fibres are smooth, geometrically irreducible and connected
+   (`connectedness:169-225,249-279,432-443`).
+3. At the interior companion over the cusp, with
+
+exec
+/bin/zsh -lc "sed -n '323,445p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "sed -n '180,280p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+## 3. Construction or typed obstruction
+
+### 3.1 First inconsistency: ruling degree zero
+
+Suppose all four coefficients in (1.1) are independent of `A`.  Then (1.3E)
+reduces exactly to
+
+```text
+E=2(1+2AZ)(Q(R_0)'-P'S_0).                               (3.1)
+```
+
+Its `A^0` coefficient forces `Q(R_0)'-P'S_0=kappa/2`; its `A^1`
+coefficient is then `2kappa Z`, which cannot vanish.  Thus
+
+```text
+OBSTRUCTION[A-DEGREE-ZERO]: no constant-bracket pair in the charged
+normal form has all four coefficient polynomials in C[Z].              (3.2)
+```
+
+This is independent of the choice of residue degrees.  It contradicts the
+constant-bracket interface only in the stated complexity class; at least one
+positive ruling correction is mandatory.
+
+### 3.2 The full `A`-linear test at the simplest minimal jet
+
+There is a stronger finite obstruction for (2.6)--(2.7) with `T_0=0`.  Assume
+all four coefficients have `A`-degree at most one and write
+
+```text
+P=Z^2+AC,                 Q=-kappa/2+AD,
+R_0=Z^3-Z+AE,             S_0=-3kappa Z/4+AL,             (3.3)
+```
+
+with `C,D,E,L in C[Z]`, and put `c_*=3kappa^2/16`.  Four necessary
+coefficients of (1.4), obtained directly from (1.3E)--(1.3O), are
+
+```text
+[A^0]O:  2ZE-(3Z^2-1)C=c_*,                              (3.4)
+
+[A^1]E:  kappa sigma'-9kappa Z sigma
+          +6D(3Z^2-1)-12ZL+2kappa Z-(9/2)kappa c_*=0,     (3.5)
+
+[A^1]O:  C'E-CE'=-(kappa/4)L'-(9kappa/8)D
+                   +(3kappa Z/8)D'+(3kappa^2/8)Z,         (3.6)
+
+[A^3]O:  DL'-D'L=0,                                      (3.7)
+```
+
+where all solutions of (3.4) have been written
+
+```text
+C=c_*+2Z sigma,       E=(3c_*/2)Z+(3Z^2-1)sigma,
+sigma in C[Z].                                           (3.8)
+```
+
+Here is the complete degree contradiction.  If `D!=0`, (3.7) gives
+`L=lambda D` for a constant `lambda`.  With `m=deg D`, the degree `m+2`
+term of (3.5) forces
+
+```text
+deg sigma=m+1,       lc(sigma)=2 lc(D)/kappa.             (3.9)
+```
+
+Using (3.8), the left side of (3.6) then has uncancellable leading term
+
+```text
+-6 lc(sigma)^2 Z^(2m+4),                                 (3.10)
+```
+
+whereas its right side has degree at most `max(m,1)`.  This is impossible.
+
+If `D=0` and `sigma` is zero or constant, every term of (3.5) except
+`-(9/2)kappa c_*` is divisible by `Z`, so its nonzero constant term cannot
+cancel.  If instead `n=deg sigma>=1`, (3.5) forces `deg L=n`.  The left side
+of (3.6) has leading term `-6lc(sigma)^2Z^(2n+2)`, while the right side has
+degree at most `max(n-1,1)`, again impossible.  All cases are exhausted:
+
+```text
+OBSTRUCTION[A-LINEAR-MINIMAL-JET]: for p=Z^2, r=Z^3-Z and T_0=0,
+no choice C,D,E,L makes {f,g}=kappa when all four A-degrees are <=1.     (3.11)
+```
+
+This obstruction is deliberately narrower than the horn.  It does not cover
+another point of the seven-parameter family (2.2), a nonzero polynomial
+`T_0` in (2.5), or any maximum `A`-degree at least two.  The frozen packets
+supply no finite cap with which to exhaust those cases.  The compatible
+finite layer (2.9) also shows that there is no earlier universal jet
+inconsistency to promote.
+
+### 3.3 Why the remaining construction is counterexample-level
+
+The source chart may be used as a consequence check, although never as the
+pullback (0.1).  Substitute
+
+```text
+A=x^2,       U=x+x^3y,       Z=2y+x^2y^2                 (3.12)
+```
+
+and call the resulting polynomials `F=iota(f),G=iota(g)`.  Direct standard
+Jacobian calculations give, term by term,
+
+```text
+J(x^2,x+x^3y)=2x^4=2A^2,
+J(x^2,2y+x^2y^2)=4x(1+x^2y)=4U,
+J(x+x^3y,2y+x^2y^2)
+ =2+8x^2y+4x^4y^2=2+4AZ.                                (3.13)
+```
+
+Thus (1.4) would imply `J(F,G)=kappa`.  The packet records
+`[C(x,y):K]=2` (`review:299-304`); the charged rank-four condition would give
+
+```text
+[C(x,y):C(F,G)]=[C(x,y):K][K:C(f,g)]=2*4=8.              (3.14)
+```
+
+So a landed admissible pair would, by explicit composition, be a
+noninvertible plane Keller map of geometric degree eight.  This is not an
+obstruction theorem and is not a reuse of `iota` in the wrong direction.  It
+types the mathematical strength of the missing higher-`A` solution.
+
+No such solution, and no all-complexities inconsistency, follows from the five
+promoted inputs.  The construction disposition is therefore
+
+
+ succeeded in 0ms:
+## 2. Lowest-complexity admissible shape and free parameters
+
+Use lexicographic complexity
+
+```text
+(max(deg p,deg r), deg p+deg r,
+ max(deg q_1,deg s_1),
+ max(deg_A P,deg_A Q,deg_A R_0,deg_A S_0)).                (2.1)
+```
+
+This is a search convention, not a packet invariant.  The first two entries
+minimize the residue curve, the third selects its least first jet, and the
+packet gives no ceiling for the fourth.
+
+### 2.1 Minimal residue curve
+
+Degrees `(2,2)` cannot satisfy the companion interface.  Indeed, for
+
+```text
+p=a_2Z^2+a_1Z+a_0,       r=b_2Z^2+b_1Z+b_0,
+```
+
+equality at distinct `z,w` forces both
+`a_2(z+w)+a_1=0` and `b_2(z+w)+b_1=0`.  If
+`a_2b_1-a_1b_2` is nonzero there is no such pair; if it is zero, `r` is an
+affine function of `p` and `p',r'` vanish together.  The image is then a line
+and the parametrization is not immersive.  Hence the first possible unordered
+degree pair is `(2,3)`.
+
+All coefficient freedom at that degree, before (1.6), may be written
+
+```text
+p=a_2Z^2+a_1Z+a_0,             a_2!=0,
+r=b_3Z^3+b_2Z^2+b_1Z+b_0,      b_3!=0.                    (2.2)
+```
+
+Put
+
+```text
+sigma=-a_1/a_2,
+tau_0=sigma^2+(b_2 sigma+b_1)/b_3,
+Delta=sigma^2-4tau_0
+     =-3sigma^2-4(b_2 sigma+b_1)/b_3.                     (2.3)
+```
+
+The two roots of `X^2-sigma X+tau_0` are precisely the possible double
+preimages.  They are distinct exactly when `Delta!=0`.  Moreover
+`r'(sigma/2)=-b_3Delta/4`; thus the same inequality makes (2.2) immersive,
+and the two tangent directions at the double image have nonzero determinant
+`a_2b_3(z-w)Delta`.  It is an ordinary node.  Its function-field degree
+divides both `deg p=2` and `deg r=3`, hence is one, so the parametrization is
+the normalization.  The free scalar parameters in
+the minimal residue family are therefore
+
+```text
+kappa in C*,
+a_2,a_1,a_0,b_3,b_2,b_1,b_0 in C,
+a_2 b_3 Delta !=0.                                       (2.4)
+```
+
+Since `gcd(p',r')=1`, choose any one Bezout pair `alpha,beta` with
+`alpha r'-p'beta=kappa/2`.  Every first normal jet satisfying (1.6), and no
+other one, is
+
+```text
+q_1=alpha+p' T_0,       s_1=beta+r'T_0,
+T_0 in C[Z] arbitrary.                                  (2.5)
+```
+
+The swapped `(3,2)` family is obtained by interchanging the coordinate roles.
+Equations (2.4)--(2.5) list all freedom at the lowest residue complexity.
+
+### 2.2 Simplest point and mandatory ruling corrections
+
+For an explicit bounded test--not as a “without loss of generality”
+normalization of the fixed ring--select
+
+```text
+p=Z^2,       r=Z^3-Z.                                    (2.6)
+```
+
+The preimages `1,-1` meet at `(1,0)`; the derivatives `(2,2)` and `(-2,2)`
+have determinant `8`.  All solutions of (1.6) are
+
+```text
+q_1=-kappa/2+2Z T_0(Z),
+s_1=-3kappa Z/4+(3Z^2-1)T_0(Z).                          (2.7)
+```
+
+The lowest-degree jet takes `T_0=0`.  Every polynomial lift of that chosen
+jet has exactly the shape
+
+```text
+f=Z^2-(kappa/2)U+A(P_1(A,Z)+UQ_1(A,Z)),
+g=Z^3-Z-(3kappa/4)ZU+A(R_1(A,Z)+US_1(A,Z)),              (2.8)
+```
+
+where `P_1,Q_1,R_1,S_1 in C[A,Z]` are the remaining free polynomial
+coefficients, subject only to the two full equations (1.4) and the global
+interfaces of §1.3.  There are no further packet-supplied polynomial degree
+caps.  Separate, mostly provisional global coordinates--cusp incidence,
+
+exec
+/bin/zsh -lc "sed -n '547,583p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+## 6. Verdict and exact scope
+
+There is one terminology fork to close explicitly.  Non-local-finiteness of
+`X_f,X_g` is a charged/provisional dynamical input; it also follows
+conditionally once the reviewed true-boundary realization supplies the exact
+pole-growth witness.  By contrast, `pi|_S` is etale and hence locally
+quasi-finite, while the separate normalization `Y->A2` is finite.  If the
+launch phrase “locally finite” literally requires locally finite Hamiltonian
+derivations, it contradicts `structure:151-162,281-295`.  This report uses the
+only packet-compatible reading: locally quasi-finite for `pi`,
+non-locally-finite for the Hamiltonians.
+
+The requested supply does not land.  This is the slim numerical gate of
+`integration:119-130`.  What is closed is the full unbounded polynomial
+constraint system (1.3)--(1.4), the exhaustive residue and first-jet parameter
+family at lowest residue complexity,
+the universal ruling-degree-zero obstruction, and the complete `A`-linear
+obstruction for the simplest minimal first jet.  What remains open is every
+other point of (2.2), every nonzero `T_0` stratum, and arbitrary finite ruling
+degree at least two, followed by the rank-four field-degree, boundary,
+cusp/node, and general-fibre checks.
+Because the packets impose no ruling-degree cap, a finite exhaustion cannot be
+promoted.
+
+Final disposition:
+
+```text
+OPEN[THETA-EXPLICIT-PULLBACK]
+OPEN[THETA-TARGET-B]
+Theta_f,Theta_g UNCOMPUTED; no partition row selected.
+```
+
+This is not a contradiction of the one-cusp horn.  The two obstructions have
+exactly the scopes (3.2) and (3.11); extending either by analogy would be a
+raw-degree/floor error.  Identities (1.7) were kept at their generic boundary
+valuation, and no target place, source fibre place, interior divisor, or cover
+series was identified with another.  No exit price is asserted.
+
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0b47727d3779100c2750cdba57881aca99ef0fdf
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,31 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++## 1. Constraint System (1.1)-(1.4)
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+codex
+The section 1 formulas look internally coherent so far: the quotient relation is compatible with the displayed bracket generators, and the even/odd split is exactly the point where sign or U²-reduction errors would show up. I’m doing the re-derivations explicitly before writing the verdict sections.
+exec
+/bin/zsh -lc "sed -n '145,180p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+3. At the interior companion over the cusp, with
+   `p_c=f-f(u_c),q_c=g-g(u_c)`, etaleness gives
+   `O^_(S,u_c)=C[[p_c,q_c]]`,
+   `X_f=kappa partial_(q_c)`, `X_g=-kappa partial_(p_c)`
+   (`structure:198-220`).
+4. At the generic point of `B`--not at its infinity--there must be one
+   ramified factor and two unramified factors, with
+
+   ```text
+   K_B[[b]] -> K_B[[s]], b |-> s^2,
+   X_f(b)=kappa b_g,     X_g(b)=-kappa b_f,
+   X_f~(kappa overline(b_g)/2)s^-1 partial_s,
+   X_g~-(kappa overline(b_f)/2)s^-1 partial_s,
+   v(D^j s)=1-2j.                                         (1.7)
+   ```
+
+   These are exactly `structure:(1.12)-(1.14)` (`structure:243-279`).  They
+   do not determine the special cusp completion or identify `B`, `Phi`, or a
+   deleted cyclic line (`structure:297-298`; `review:184-224`).
+5. For `h` equal to either coordinate and `k` its mate, the general affine
+   fibre is hyperbolic.  If its smooth completion has genus `gamma_h`, if
+   `r_h` is the number of poles of `k`, and if their positive pole orders form
+   the partition `lambda_h` of four, then (`connectedness:289-344`)
+
+   | `r_h` | `lambda_h` | necessary `d_h` |
+   |---:|---|---:|
+   | 1 | `(4)` | `2gamma_h+3` |
+   | 2 | `(3,1)` or `(2,2)` | `2gamma_h+4` |
+   | 3 | `(2,1,1)` | `2gamma_h+5` |
+   | 4 | `(1,1,1,1)` | `2gamma_h+6` |
+
+   Equivalently `d_h=2gamma_h+2+r_h`, and the affine Euler characteristic is
+   `-4gamma_h-2r_h<0` (`structure:415-444`).  This table is necessary only;
+   the two coordinates have separate genera and partitions.
+
+## 2. Lowest-complexity admissible shape and free parameters
+
+exec
+/bin/zsh -lc "sed -n '445,546p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+
+```text
+OPEN[THETA-EXPLICIT-PULLBACK]: equations (1.4), the minimal family
+(2.2)-(2.5), and obstructions (3.2)/(3.11) are exact, but arbitrary finite
+A-complexity and the charged degree-four boundary realization remain open.
+```
+
+## 4. Target curve and normalized parametrization
+
+The curve required by the numerical gate is relational data, not an arbitrary
+rational curve.  For a landed pair, let `Y` be the normalization of the target
+`A2` in `K`.  One must identify the relevant component of `Y-S`, prove its
+image is an irreducible curve `B`, and display
+
+```text
+b(xi,eta) in C[xi,eta] irreducible,
+beta_B:A1_t -> B,       t |-> (F_B(t),G_B(t)),             (4.1)
+ker(C[xi,eta] -> C[t])=(b),
+C(F_B,G_B)=C(t).                                           (4.2)
+```
+
+Here `F_B,G_B` are polynomials, `C[t]` is the normalization of
+`C[xi,eta]/(b)`, and the completion has its single omitted point
+`q_infty` at `t=infinity` (`review:131-153`).  The curve is singular,
+irreducible, neither vertical nor horizontal, and the charged surface-sheet
+census is
+
+```text
+generic B: (2,1,1),       cusp c: (3,1),
+omitted node n: (2,2),    e(T)=-3.                         (4.3)
+```
+
+See `structure:243-279,383-413`.  Equation (4.3) is data of the degree-four
+normalization over the curve; an equation `b` by itself does not verify it.
+Nor may one silently strengthen the interface to say that `B` is the entire
+codimension-one branch image: that remains
+`OPEN[CENSUS-EXHAUSTIVITY]` (`connectedness:445-453`).  What a construction
+must verify is the promoted general-slice interface used in §1.3.
+
+The residue curve from (2.6) illustrates the forbidden shortcut.  Its equation
+is
+
+```text
+C_0: eta^2-xi(xi-1)^2=0,       Z |-> (Z^2,Z^3-Z).          (4.4)
+```
+
+This is `pi(Phi)`, not `B`.  Indeed `T=pi^(-1)(B) intersect S` is charged to
+meet `Phi` in a finite number `N` (`structure:559-579`).  Setting `B=C_0`
+would instead put all of `Phi` in `T`.  In particular `deg p=2` in §2 says
+nothing about `d_f`: the former is measured on `Phi`, the latter at the
+different target place `q_infty`.
+
+No full pair was constructed or derived, so the normalization
+`Y`, its deleted component, and hence `b,F_B,G_B` cannot be calculated.  The
+frozen inputs only say “let `b(f,g)` be” and never supply (4.1)
+(`review:83-96`).  Therefore item (2) of the slim gate remains
+
+```text
+OPEN[THETA-TARGET-B]: no equation or parametrization can be verified as the
+boundary image belonging to the still-missing pullback.                  (4.5)
+```
+
+## 5. Independent computations of the numerical data
+
+This section is not numerically entered because no construction landed.  It
+is nevertheless possible to state exactly what the two independent checks
+would be.
+
+For `h=f`, (4.1) would give
+
+```text
+d_f=deg F_B=-ord_(q_infty)(F_B).                           (5.1)
+```
+
+The independent geometric check is the number, with multiplicity, of
+intersections of `B` with a general vertical line; transversality in the
+charged generic slice makes it the number of finite deleted index-two places.
+For `h=g`, replace `F_B` and vertical by `G_B` and horizontal.  Thus the two
+methods are polynomial pole order and general-line intersection/deleted-place
+count (`structure:398-418`; `connectedness:318-330`).  Neither can be run
+without (4.1) and its verified boundary realization.
+
+For `r_h`, one algebraic method is to take the function field of
+`R tensor_(C[h]) C(h)`, pass to its unique smooth projective curve, and count
+the distinct valuations at which the mate `k` has negative order.  A separate
+surface method is to complete and resolve a general fibre `R/(h-a)` and count
+its distinct branches meeting the divisor `k=infinity`.
+Their multiplicities must form a positive partition of four; `r_h` counts its
+support, not its total degree.  Without `f,g`, both the generic curve and its
+polar divisor are absent.
+
+The promoted data consequently give only
+
+```text
+1<=r_h<=4,       d_h=2gamma_h+2+r_h,
+Theta_h=d_h-r_h-2=2gamma_h in 2Z_(>=0).                   (5.2)
+```
+
+Equation (5.2) is a necessary interface, not a computed value and not
+attainment of any row.  No partition row is selected.  In particular, the
+minimal interior degree `2` in (2.6) is not inserted into (5.2).
+
+
+exec
+/bin/zsh -lc "sed -n '280,322p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+caps.  Separate, mostly provisional global coordinates--cusp incidence,
+collision location and tangency, `kappa_B`, `N`, and the two table tuples--are
+quarantined from this coefficient ansatz (`structure:581-609`); none supplies
+the slim gate's missing pullback.
+
+The first two coefficient conditions beyond (1.6) are jointly consistent.
+For example, put
+
+```text
+P_1(0,Z)= 3kappa^2/16,       Q_1(0,Z)=-9kappa^3/64,
+R_1(0,Z)= 9kappa^2 Z/32,     S_1(0,Z)=kappa/6-27kappa^3Z/128.  (2.9)
+```
+
+For clarity, the `A^0` coefficient of (1.3O) is
+
+```text
+4[(3kappa^2/16)(3Z^2-1)-(2Z)(9kappa^2Z/32)]
+ +2[(-kappa/2)(-3kappa/4)]=0.
+```
+
+For the `A^1` coefficient of (1.3E), its three summands are
+
+```text
+4M_0+2N_1+2kappa Z,
+M_0=-kappa Z/3,       N_1=-kappa Z/3,
+```
+
+because, term by term,
+
+```text
+M_0=(-9kappa^3/64)
+    +(-9kappa^3/64)(3Z^2-1)
+    -2Z(kappa/6-27kappa^3Z/128)=-kappa Z/3,
+N_1=(-9kappa^3/64)(3Z^2-1)
+    +(-kappa/2)(9kappa^2/32)
+    -2Z(kappa/6-27kappa^3Z/128)=-kappa Z/3.
+```
+
+Thus it is `(-4/3-2/3+2)kappa Z=0`.  This is only a checked finite jet, not a
+polynomial construction: the remaining coefficients of both (1.3E) and
+(1.3O) still have to vanish, and (2.9) supplies none of the global degree-four
+or boundary data.
+
+
+exec
+/bin/zsh -lc "sed -n '119,145p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-mprime-coordinator-integration-fable5-20260831.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+## 3. THETA and HF dispositions
+
+- **THETA**: `OPEN[THETA-STAGE0-MARKED-SNC]` CONFIRMED in both directions
+  by the Grok review — nothing in the promoted packets pins the charged
+  pullback `(f,g)` or a marked model; the transformation law (0.4) and
+  model-freeness of `d_h`,`r_h` are verified. Reopen gate SLIMMED per the
+  review: items (1)–(2) (explicit checked `P_f,Q_f,P_g,Q_g` or an
+  equivalent complete pole ledger, plus an equation/normalized
+  parametrization of `B`) are the numerical gate; the marked-SNC model is
+  needed only for a surface table; minimality and unique-lift conditions
+  are NOT required for the number `Theta_h`. Successor: a construction
+  lane for the explicit pullback on `R=C[A,U,Z]/(U^2-A-A^2Z)`.
+- **HF-DOSSIER**: REFUTED-IN-PART, constructively. The GPT-5.5 review
+  CLOSES the report's singularity-completeness gap (the delta budget:
+  three smooth pairwise-tangent branches force `delta>=6` at the origin;
+  `Delta_aff=6` exactly; hence no other affine singularity — the
+  associated curve's dossier is now complete as a CURVE record) and
+  QUARANTINES the report's row-level claim that every reduced `(6,4,9)`
+  equation shares the Newton face (weight-7/8 prefix terms possible; the
+  claim holds for the associated curve only). `degree_cap` is not needed
+  for candidate-kill. OPEN stands, narrowed to: no licensed HF/counting
+  theorem covers the 3-branch coincident-tangent germ
+  (`lemma_multibranch_HF` absent; BLZ 2024 licenses only `T(2,2n)`).
+  Successor (queued, not launched): the twin row `(9,6,4)` and/or a
+  multibranch-HF acquisition sweep.
+
+## 4. Stops and corrections binding on future work
+
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0b47727d3779100c2750cdba57881aca99ef0fdf
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,31 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++## 1. Constraint System (1.1)-(1.4)
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+exec
+/bin/zsh -lc "sed -n '55,162p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "sed -n '198,240p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+### 1.2 The charged cusp point
+
+The target cusp `c in B` is not a point of `S`.  The packet supplies one
+interior companion point `u_c in T=pi^(-1)(B) intersect S`, and leaves the
+two cases `u_c in Phi` and `u_c notin Phi` open
+(`...function-pair-cyclic-normalization...md:427-439`).  Put
+
+```text
+p=f-f(u_c),             q=g-g(u_c).
+```
+
+Since `pi=(f,g)` is etale on `S`, the complete local structure and the two
+flows are exactly
+
+```text
+O^_(S,u_c)=C[[p,q]],
+X_f=kappa partial_q,             X_g=-kappa partial_p.   (1.11)
+```
+
+Thus both **PROVISIONAL** globally wild fields are formally rectified to
+translations at the only charged cusp companion point lying in `S`.  After
+translating the target equation, the cusp appears there only as the pulled-back
+divisor germ `b(f(u_c)+p,g(u_c)+q)=0` of `T`.  In particular, no local
+eigenvalue or Newton polygon at `u_c` can detect global non-local-finiteness.
+
+There is an exact infinite-jet restatement.  **PROVISIONAL** global
+non-local-finiteness implies that, for `X_f`, at least one of the algebra
+generators `A,U,Z`, expressed in `C[[p,q]]`, is killed by no nonzero
+constant-coefficient operator `P(X_f)=P(kappa partial_q)`; otherwise all three generator
+orbits would be finite and `X_f` would be locally finite.  Equivalently that
+generator is not a finite double sum
+`sum_lambda sum_(0<=j<m_lambda) a_(lambda,j)(p)q^j
+exp(lambda q/kappa)`.
+The analogous statement holds for `X_g` with `p` and `q` interchanged.  This
+is a condition on the whole formal series, not on its first term.  By
+contrast, the translated polynomial cusp germ itself has a finite translation
+orbit and cannot be the witness.
+
+The packet does not identify the actual `(3,1)` boundary germ with the
+standard ordinary-cusp equation.  The cubic algebra with discriminant
+`s^3-w^2` in `...kummer-inverse-collision-control...md:546-575` is explicitly
+a compatibility control, not an equation for the charged completion.  A
+more specific cusp-boundary expansion would therefore be an untyped
+
+ succeeded in 0ms:
+### 1.1 Exact completion along the intrinsic divisor `Phi`
+
+Let `P=(A,U)` and `q=U^2-A-A^2Z`.  Complete the ambient polynomial ring at
+`(A,U)`.  Since `R/P=C[Z]` and `q_A=-1-2AZ` is a unit in that completion, the
+formal implicit-function theorem gives a unique zero-constant-term solution
+`A=a(u,Z)` of
+
+```text
+A+ZA^2=U^2
+```
+
+With `u=U`, it is
+
+```text
+a(u,Z)=U^2-ZU^4+2Z^2U^6-5Z^3U^8+...
+      =(sqrt(1+4ZU^2)-1)/(2Z),
+```
+
+where the quotient denotes its power series and is valid also at `Z=0`.
+This gives an isomorphism directly; only after it is obtained does the
+extended ideal become `(a(u,Z),u)=(u)`, since `a(u,Z) in (u^2)`.  Therefore
+
+```text
+R^_P  = C[Z][[u]],             R^_(R_P)=C(Z)[[u]],       (1.1)
+A |-> a(u,Z),                  U |-> u.
+```
+
+Here the first expression is the formal completion along the whole affine
+line and the second is the complete DVR at its generic point.  At the closed
+point `p_z0=(A,U,Z-z0)`, one similarly has
+
+```text
+O^_(S,p_z0)=C[[u,w]],          w=Z-z0.                  (1.2)
+```
+
+In particular
+
+```text
+ord_P(U)=1,        ord_P(A)=2,        ord_P(Z)=0.
+```
+
+This also follows from the retained cyclic chart
+`A=x^2, U=x+x^3y, Z=2y+x^2y^2`; the direct ring calculation above does not
+depend on that chart.
+
+The Poisson bracket becomes especially simple.  Put
+
+```text
+B(u,Z)=2+4Za(u,Z)=2sqrt(1+4Zu^2).
+```
+
+Then
+
+```text
+{u,Z}=B,
+{F,G}=B(F_u G_Z-F_Z G_u),
+X_H=B(H_u partial_Z-H_Z partial_u).                     (1.3)
+```
+
+Thus both charged fields extend continuously to `C[Z][[u]]` as derivations
+which may lower the `u`-adic filtration by one.
+
+Make the filtration exact by setting `nu(F)=ord_u(F)` and `nu(0)=+infinity`.
+If
+
+```text
+F=h(Z)u^m+O(u^(m+1)),       G=k(Z)u^n+O(u^(n+1)),
+```
+
+then
+
+```text
+nu({F,G}) >= m+n-1,                                      (1.4)
+in_(m+n-1){F,G}
+ =2(m h k'-n h' k)u^(m+n-1).                            (1.5)
+```
+
+Here and in (1.9), a prime means differentiation with respect to the residue
+coordinate `Z`; it is not a branch or prime-divisor label.
+
+Equation (1.4) is only a floor: (1.5) can vanish.  For fixed `H` it gives
+
+```text
+nu(X_H^j F) >= nu(F)+j(nu(H)-1),                         (1.6)
+```
+
+again with equality only while the successive initial expressions do not
+cancel.  This is the exact associated-graded Hamiltonian structure, rather
+than a scalar-weight proxy for membership in `R`.
+
+Every element has a unique form
+
+```text
+H=P_H(A,Z)+U Q_H(A,Z).                                  (1.7)
+```
+
+The **PROVISIONAL** parent theorem says that a nonconstant `X_H` is
+non-locally-finite exactly when `H notin C[A]`.  In the coordinates (1.7),
+this says only
+
+```text
+Q_H != 0  or  partial_Z P_H != 0.                        (1.8)
+```
+
+It imposes no universal initial order or eigenweight: `H=Z` has order zero,
+whereas `H=U^N` has arbitrary order `N`, and each lies outside `C[A]`.
+Consequently non-local-finiteness alone cannot turn the floor (1.4) into an
+attained growth formula.
+
+exec
+/bin/zsh -lc "sed -n '243,298p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+### 1.3 What is determined along the actual ramification boundary
+
+Literally, the `R_bd`-adic completion of `R=O(S)` is undefined because
+`R_bd` is disjoint from `S`.  The full two-dimensional formal neighborhood
+requires a chosen `Y` and pole expansions not present in the packet.  There
+is nevertheless one exact generic valuation statement.
+
+Let `b(f,g)` be a reduced irreducible equation of `B`.  At its generic point,
+the surface fibre partition is `(2,1,1)`.  After completed strict
+henselization, the target and the unique ramified factor have the tame form
+(`...pseudoplane-companion-threat-map...md:263-303`):
+
+```text
+K[[b]] -> K[[s]],             b |-> s^2,                (1.12)
+```
+
+with two further unramified companion factors; here `K` is a separable
+closure of the function field of `B`.  Since the singular irreducible curve
+`B` is neither a vertical nor a horizontal line, both `b_f` and `b_g` are
+nonzero at its generic point.  The identities
+
+```text
+X_f(b)=kappa b_g,              X_g(b)=-kappa b_f
+```
+
+therefore have valuation zero.  If `v(s)=1`, the normal principal parts are
+
+```text
+X_f ~ (kappa overline(b_g)/2)s^(-1)partial_s,
+X_g ~-(kappa overline(b_f)/2)s^(-1)partial_s.            (1.13)
+```
+
+Consequently, for either charged field `D` and a ramified uniformizer,
+
+```text
+v(D^j s)=1-2j             for every j>=1.               (1.14)
+```
+
+This is exact generic quadratic-ramification pole growth.  It also gives a
+global witness.  Some `h in O(S)` has `v(h)=k<0`: if the boundary valuation
+ring contained all of `O(S)`, it would have a center on affine `S`, and
+separatedness in the common model `Y` would identify that center with the
+supposedly deleted generic point.  For either `D=X_f,X_g`, (1.13) then gives
+
+```text
+v(D^j h)=k-2j,                                           (1.15)
+```
+
+because the leading coefficient is a nonzero residue times
+`product_(i=0)^(j-1)(k-2i)`.  The iterates are linearly independent.  Thus,
+conditional on the reviewed charged boundary packet, (1.15) is an independent
+boundary-valuation proof that both flows are non-locally-finite; it does not
+use the **PROVISIONAL** automorphism/LND theorem.
+
+The generic statement does not determine the special two-dimensional cusp
+completion, and it does not identify `R_bd`, `Phi`, or a deleted `L_j`.
+
+exec
+/bin/zsh -lc "sed -n '611,640p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+## 4. Maximum-safe conclusion
+
+The valuation lane does not close a named wild mixed/mixed horn row.  It
+proves the following exact conditional statements.
+
+1. Under the **PROVISIONAL exact-model identification**, the retained multiple
+   fibre has completion `C[Z][[U]]`, bracket (1.3), and associated-graded
+   formula (1.5).  Charged first jets obey the
+   unimodular identity (1.9), but their degree `-1` symbols are locally
+   nilpotent and do not detect wildness.
+2. The only point of `S` lying over the charged target cusp is the etale
+   companion, where both fields are constant translations.  The completion
+   at the length-three ramified
+   boundary point is typed **OPEN** because the packet supplies no actual
+   cusp Puiseux germ or pole expansion.
+3. At the generic true boundary, both flows have degree `-2` normal symbol.
+   Formula (1.15) supplies an actual element of `O(S)` with exact pole growth
+   `k-2j`, proving non-local-finiteness from the reviewed boundary packet
+   without the **PROVISIONAL** LF/LND classification.
+4. Under the **PROVISIONAL** degree-four generic-fibre input, the divisor
+   (2.1) and iterate formula (2.4) are exact.  They close only the projection
+   sub-strata (3.6); all tuples in the four-row table remain unexcluded.
+5. The **PROVISIONAL** locus `u^2-v^2=0` survives this test in every allowed
+   location and tangency stratum because it is monogenic index, not normalized
+   ramification.  No Orevkov--Chau term, second ruling, or independent Kummer
+   class follows.
+
+The cheapest next exact datum is `(d_h,r_h)` for either charged coordinate,
+obtained from one genuine SNC boundary model and tested by `Theta_h`.  Until
+such a model is supplied, the cusp Newton polygon, the special boundary
+
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0b47727d3779100c2750cdba57881aca99ef0fdf
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,31 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++## 1. Constraint System (1.1)-(1.4)
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+codex
+The structure packet backs the terminology split: “locally finite” belongs to Hamiltonian derivations, while `pi|_S` is etale/locally quasi-finite and the normalization map is finite. I’m keeping those separated in the report to avoid the exact FALLACY-v2 risk the prompt flags.
+exec
+/bin/zsh -lc "rg -n \"\\[C\\(x,y\\):K\\]|degree-two|rank-four|K=C|A=x\\"'^2|review:299|geometric degree|iota|C'"\\(x,y\\)\" /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/*.md" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md | sed -n '39,90p'" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md | sed -n '323,440p'" in /Users/dc/code/math/jc2
+ succeeded in 6ms:
+   323	## 3. Construction or typed obstruction
+   324	
+   325	### 3.1 First inconsistency: ruling degree zero
+   326	
+   327	Suppose all four coefficients in (1.1) are independent of `A`.  Then (1.3E)
+   328	reduces exactly to
+   329	
+   330	```text
+   331	E=2(1+2AZ)(Q(R_0)'-P'S_0).                               (3.1)
+   332	```
+   333	
+   334	Its `A^0` coefficient forces `Q(R_0)'-P'S_0=kappa/2`; its `A^1`
+   335	coefficient is then `2kappa Z`, which cannot vanish.  Thus
+   336	
+   337	```text
+   338	OBSTRUCTION[A-DEGREE-ZERO]: no constant-bracket pair in the charged
+   339	normal form has all four coefficient polynomials in C[Z].              (3.2)
+   340	```
+   341	
+   342	This is independent of the choice of residue degrees.  It contradicts the
+   343	constant-bracket interface only in the stated complexity class; at least one
+   344	positive ruling correction is mandatory.
+   345	
+   346	### 3.2 The full `A`-linear test at the simplest minimal jet
+   347	
+   348	There is a stronger finite obstruction for (2.6)--(2.7) with `T_0=0`.  Assume
+   349	all four coefficients have `A`-degree at most one and write
+   350	
+   351	```text
+   352	P=Z^2+AC,                 Q=-kappa/2+AD,
+   353	R_0=Z^3-Z+AE,             S_0=-3kappa Z/4+AL,             (3.3)
+   354	```
+   355	
+   356	with `C,D,E,L in C[Z]`, and put `c_*=3kappa^2/16`.  Four necessary
+   357	coefficients of (1.4), obtained directly from (1.3E)--(1.3O), are
+   358	
+   359	```text
+   360	[A^0]O:  2ZE-(3Z^2-1)C=c_*,                              (3.4)
+   361	
+   362	[A^1]E:  kappa sigma'-9kappa Z sigma
+   363	          +6D(3Z^2-1)-12ZL+2kappa Z-(9/2)kappa c_*=0,     (3.5)
+   364	
+   365	[A^1]O:  C'E-CE'=-(kappa/4)L'-(9kappa/8)D
+   366	                   +(3kappa Z/8)D'+(3kappa^2/8)Z,         (3.6)
+   367	
+   368	[A^3]O:  DL'-D'L=0,                                      (3.7)
+   369	```
+   370	
+   371	where all solutions of (3.4) have been written
+   372	
+   373	```text
+   374	C=c_*+2Z sigma,       E=(3c_*/2)Z+(3Z^2-1)sigma,
+   375	sigma in C[Z].                                           (3.8)
+   376	```
+   377	
+   378	Here is the complete degree contradiction.  If `D!=0`, (3.7) gives
+   379	`L=lambda D` for a constant `lambda`.  With `m=deg D`, the degree `m+2`
+   380	term of (3.5) forces
+   381	
+   382	```text
+   383	deg sigma=m+1,       lc(sigma)=2 lc(D)/kappa.             (3.9)
+   384	```
+   385	
+   386	Using (3.8), the left side of (3.6) then has uncancellable leading term
+   387	
+   388	```text
+   389	-6 lc(sigma)^2 Z^(2m+4),                                 (3.10)
+   390	```
+   391	
+   392	whereas its right side has degree at most `max(m,1)`.  This is impossible.
+   393	
+   394	If `D=0` and `sigma` is zero or constant, every term of (3.5) except
+   395	`-(9/2)kappa c_*` is divisible by `Z`, so its nonzero constant term cannot
+   396	cancel.  If instead `n=deg sigma>=1`, (3.5) forces `deg L=n`.  The left side
+   397	of (3.6) has leading term `-6lc(sigma)^2Z^(2n+2)`, while the right side has
+   398	degree at most `max(n-1,1)`, again impossible.  All cases are exhausted:
+   399	
+   400	```text
+   401	OBSTRUCTION[A-LINEAR-MINIMAL-JET]: for p=Z^2, r=Z^3-Z and T_0=0,
+   402	no choice C,D,E,L makes {f,g}=kappa when all four A-degrees are <=1.     (3.11)
+   403	```
+   404	
+   405	This obstruction is deliberately narrower than the horn.  It does not cover
+   406	another point of the seven-parameter family (2.2), a nonzero polynomial
+   407	`T_0` in (2.5), or any maximum `A`-degree at least two.  The frozen packets
+   408	supply no finite cap with which to exhaust those cases.  The compatible
+   409	finite layer (2.9) also shows that there is no earlier universal jet
+   410	inconsistency to promote.
+   411	
+   412	### 3.3 Why the remaining construction is counterexample-level
+   413	
+   414	The source chart may be used as a consequence check, although never as the
+   415	pullback (0.1).  Substitute
+   416	
+   417	```text
+   418	A=x^2,       U=x+x^3y,       Z=2y+x^2y^2                 (3.12)
+   419	```
+   420	
+   421	and call the resulting polynomials `F=iota(f),G=iota(g)`.  Direct standard
+   422	Jacobian calculations give, term by term,
+   423	
+   424	```text
+   425	J(x^2,x+x^3y)=2x^4=2A^2,
+   426	J(x^2,2y+x^2y^2)=4x(1+x^2y)=4U,
+   427	J(x+x^3y,2y+x^2y^2)
+   428	 =2+8x^2y+4x^4y^2=2+4AZ.                                (3.13)
+   429	```
+   430	
+   431	Thus (1.4) would imply `J(F,G)=kappa`.  The packet records
+   432	`[C(x,y):K]=2` (`review:299-304`); the charged rank-four condition would give
+   433	
+   434	```text
+   435	[C(x,y):C(F,G)]=[C(x,y):K][K:C(f,g)]=2*4=8.              (3.14)
+   436	```
+   437	
+   438	So a landed admissible pair would, by explicit composition, be a
+   439	noninvertible plane Keller map of geometric degree eight.  This is not an
+   440	obstruction theorem and is not a reuse of `iota` in the wrong direction.  It
+
+ succeeded in 42ms:
+    39	## 1. Constraint system imposed by the promoted packets
+    40	
+    41	### 1.1 Exact polynomial equations
+    42	
+    43	Every element of `R` has a unique normal form (`structure:145-149`).  Write
+    44	
+    45	```text
+    46	f=P(A,Z)+U Q(A,Z),       g=R_0(A,Z)+U S_0(A,Z),             (1.1)
+    47	```
+    48	
+    49	where all four displayed coefficients are polynomials over `C`.  To avoid a
+    50	name collision, `R_0` is a polynomial and `R` without a subscript is the ring.
+    51	The Poisson bracket underlying `structure:(1.3)` is determined globally by
+    52	
+    53	```text
+    54	{A,U}=2A^2,       {A,Z}=4U,       {U,Z}=2+4AZ.              (1.2)
+    55	```
+    56	
+    57	It descends to the quotient: using antisymmetry, the three checks are
+    58	
+    59	```text
+    60	{q,A}=2U(-2A^2)-A^2(-4U)=0,
+    61	{q,U}=-2A^2-A^2(-2-4AZ)-(4A^3)Z=0,
+    62	{q,Z}=2U(2+4AZ)-4U-(8AU)Z=0.
+    63	```
+    64	
+    65	Put `H=A(1+AZ)` and `c=2(1+2AZ)`.  Expanding (1.2), replacing every
+    66	`U^2` by `H`, and collecting the unique even and odd normal-form parts gives
+    67	
+    68	```text
+    69	{f,g}=E+U O,
+    70	
+    71	E=2A^2(P_A S_0-Q(R_0)_A)
+    72	  +4H(P_A(S_0)_Z+Q_A(R_0)_Z-P_Z(S_0)_A-Q_Z(R_0)_A)
+    73	  +c(Q(R_0)_Z-P_ZS_0),                                    (1.3E)
+    74	
+    75	O=2A^2(Q_A S_0-Q(S_0)_A)
+    76	  +4(P_A(R_0)_Z-P_Z(R_0)_A
+    77	       +H(Q_A(S_0)_Z-Q_Z(S_0)_A))
+    78	  +c(Q(S_0)_Z-Q_ZS_0).                                    (1.3O)
+    79	```
+    80	
+    81	Thus the complete coefficient-level constant-Jacobian constraint is the
+    82	polynomial identity system
+    83	
+    84	```text
+    85	E=kappa,                     O=0                            (1.4)
+    86	```
+    87	
+    88	in `C[A,Z]`.  This is stronger and more useful than matching variable names:
+    89	every candidate can be checked coefficient by coefficient in the declared
+    90	quotient.
+
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md | sed -n '145,162p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   145	Every element has a unique form
+   146	
+   147	```text
+   148	H=P_H(A,Z)+U Q_H(A,Z).                                  (1.7)
+   149	```
+   150	
+   151	The **PROVISIONAL** parent theorem says that a nonconstant `X_H` is
+   152	non-locally-finite exactly when `H notin C[A]`.  In the coordinates (1.7),
+   153	this says only
+   154	
+   155	```text
+   156	Q_H != 0  or  partial_Z P_H != 0.                        (1.8)
+   157	```
+   158	
+   159	It imposes no universal initial order or eigenweight: `H=Z` has order zero,
+   160	whereas `H=U^N` has arbitrary order `N`, and each lies outside `C[A]`.
+   161	Consequently non-local-finiteness alone cannot turn the floor (1.4) into an
+   162	attained growth formula.
+
+ succeeded in 144ms:
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md:34:This is not the source-side chart `iota:R->C[x,y]` displayed in the packets
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md:418:A=x^2,       U=x+x^3y,       Z=2y+x^2y^2                 (3.12)
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md:421:and call the resulting polynomials `F=iota(f),G=iota(g)`.  Direct standard
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md:432:`[C(x,y):K]=2` (`review:299-304`); the charged rank-four condition would give
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md:435:[C(x,y):C(F,G)]=[C(x,y):K][K:C(f,g)]=2*4=8.              (3.14)
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md:439:noninvertible plane Keller map of geometric degree eight.  This is not an
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md:440:obstruction theorem and is not a reuse of `iota` in the wrong direction.  It
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md:566:degree at least two, followed by the rank-four field-degree, boundary,
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md:174:K=C(A,U),                  Z=(U^2-A)/A^2,
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md:437:C(h)^alg intersect K=C(h),
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md:97:`A=x^2, U=x+x^3y, Z=2y+x^2y^2`; the direct ring calculation above does not
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md:387:The reviewed rank-four surface census is
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-mprime-coordinator-integration-fable5-20260831.md:1:# Coordinator integration: (M′) family promoted; rank-four A₄ horn closed; one bit remains
+
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0b47727d3779100c2750cdba57881aca99ef0fdf
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,31 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++## 1. Constraint System (1.1)-(1.4)
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md | sed -n '92,145p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+    92	### 1.2 Intrinsic completion and first-jet constraints
+    93	
+    94	Complete along the whole *interior* line `Phi` and set `u=U`.  The exact
+    95	whole-line completion and its generic-point complete DVR are
+    96	(`structure:55-115`)
+    97	
+    98	```text
+    99	A=a(u,Z)=u^2-Zu^4+2Z^2u^6-5Z^3u^8+...,
+   100	completion_along_Phi=C[Z][[u]],
+   101	completion_of_R_(A,U)=C(Z)[[u]],
+   102	{u,Z}=2+4Za(u,Z).                                           (1.5)
+   103	```
+   104	
+   105	Consequently, if
+   106	
+   107	```text
+   108	p=P(0,Z), q_1=Q(0,Z), r=R_0(0,Z), s_1=S_0(0,Z),
+   109	```
+   110	
+   111	then the constant term of (1.4), checked directly in (1.3E), is
+   112	
+   113	```text
+   114	2(q_1 r'-p's_1)=kappa.                                    (1.6)
+   115	```
+   116	
+   117	The promoted companion-curve interface additionally says that
+   118	`Z |-> (p(Z),r(Z))` is an immersive normalization with two distinct points
+   119	having the same image.  Neither coordinate is affine or constant, so
+   120	`deg p,deg r>=2` (`structure:164-189`; `review:58-81`).  This image is the
+   121	interior companion curve customarily called `C_0`; it is **not** the target
+   122	boundary curve `B`.
+   123	
+   124	There is no charged upper bound on `deg_A P,deg_A Q,deg_A R_0,deg_A S_0`, nor
+   125	on their `Z`-degrees away from `A=0`.  In particular, the provisional identity
+   126	`mu=d1=2` and the normalization `t=A` belong to the inverse-Kummer/ruling
+   127	ledger (`structure:472-503`); they are not degrees of `f` or `g`.  The symbols
+   128	`c_0,E,r_E,kappa_B` there are not supplied as polynomials (`review:83-92`).
+   129	
+   130	### 1.3 Global and boundary interfaces
+   131	
+   132	An admissible solution of (1.4) must also realize the charged global data:
+   133	
+   134	1. `[K:C(f,g)]=4`; `pi|_S` is etale, has cofinite image, and the mate on a
+   135	   general coordinate fibre has degree four (`review:120-125`;
+   136	   `connectedness:73-83,229-244,289-296`).  The packet's dynamical condition
+   137	   is **non**-local-finiteness of both Hamiltonian derivations, not a separate
+   138	   property called “`pi` locally finite.”  The restrictions in (1.6) already
+   139	   put both coordinates outside `C[A]`; see `structure:151-162` for the
+   140	   provisional LF formulation and `structure:281-295` for the independent
+   141	   boundary-valuation witness.
+   142	2. `C(f)` and `C(g)` are algebraically closed in `K`; hence both general
+   143	   coordinate fibres are smooth, geometrically irreducible and connected
+   144	   (`connectedness:169-225,249-279,432-443`).
+   145	3. At the interior companion over the cusp, with
+
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/theta-reopen-explicit-pullback-sol56-20260831.md | sed -n '547,583p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   547	## 6. Verdict and exact scope
+   548	
+   549	There is one terminology fork to close explicitly.  Non-local-finiteness of
+   550	`X_f,X_g` is a charged/provisional dynamical input; it also follows
+   551	conditionally once the reviewed true-boundary realization supplies the exact
+   552	pole-growth witness.  By contrast, `pi|_S` is etale and hence locally
+   553	quasi-finite, while the separate normalization `Y->A2` is finite.  If the
+   554	launch phrase “locally finite” literally requires locally finite Hamiltonian
+   555	derivations, it contradicts `structure:151-162,281-295`.  This report uses the
+   556	only packet-compatible reading: locally quasi-finite for `pi`,
+   557	non-locally-finite for the Hamiltonians.
+   558	
+   559	The requested supply does not land.  This is the slim numerical gate of
+   560	`integration:119-130`.  What is closed is the full unbounded polynomial
+   561	constraint system (1.3)--(1.4), the exhaustive residue and first-jet parameter
+   562	family at lowest residue complexity,
+   563	the universal ruling-degree-zero obstruction, and the complete `A`-linear
+   564	obstruction for the simplest minimal first jet.  What remains open is every
+   565	other point of (2.2), every nonzero `T_0` stratum, and arbitrary finite ruling
+   566	degree at least two, followed by the rank-four field-degree, boundary,
+   567	cusp/node, and general-fibre checks.
+   568	Because the packets impose no ruling-degree cap, a finite exhaustion cannot be
+   569	promoted.
+   570	
+   571	Final disposition:
+   572	
+   573	```text
+   574	OPEN[THETA-EXPLICIT-PULLBACK]
+   575	OPEN[THETA-TARGET-B]
+   576	Theta_f,Theta_g UNCOMPUTED; no partition row selected.
+   577	```
+   578	
+   579	This is not a contradiction of the one-cusp horn.  The two obstructions have
+   580	exactly the scopes (3.2) and (3.11); extending either by analogy would be a
+   581	raw-degree/floor error.  Identities (1.7) were kept at their generic boundary
+   582	valuation, and no target place, source fibre place, interior divisor, or cover
+   583	series was identified with another.  No exit price is asserted.
+
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md | sed -n '55,162p'" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs/block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md | sed -n '73,83p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+    73	Since `pi|_S` is etale, `S` is smooth and both `f:S->A1` and `g:S->A1` are
+    74	smooth.  In particular, every scheme fibre of either coordinate is a smooth,
+    75	hence reduced, curve.  For such a fibre, connectedness and irreducibility are
+    76	equivalent: distinct irreducible components of a smooth curve are disjoint.
+    77	
+    78	We use the following standard field form of generic geometric integrality.
+    79	For a dominant map from an integral variety to a smooth curve in
+    80	characteristic zero, its generic fibre is geometrically integral exactly when
+    81	the base function field is algebraically closed in the total function field.
+    82	Once this holds, geometric integrality spreads over a nonempty open subset of
+    83	the base.  Since the base here is `A1`, the exceptional set is finite.
+
+ succeeded in 0ms:
+    55	### 1.1 Exact completion along the intrinsic divisor `Phi`
+    56	
+    57	Let `P=(A,U)` and `q=U^2-A-A^2Z`.  Complete the ambient polynomial ring at
+    58	`(A,U)`.  Since `R/P=C[Z]` and `q_A=-1-2AZ` is a unit in that completion, the
+    59	formal implicit-function theorem gives a unique zero-constant-term solution
+    60	`A=a(u,Z)` of
+    61	
+    62	```text
+    63	A+ZA^2=U^2
+    64	```
+    65	
+    66	With `u=U`, it is
+    67	
+    68	```text
+    69	a(u,Z)=U^2-ZU^4+2Z^2U^6-5Z^3U^8+...
+    70	      =(sqrt(1+4ZU^2)-1)/(2Z),
+    71	```
+    72	
+    73	where the quotient denotes its power series and is valid also at `Z=0`.
+    74	This gives an isomorphism directly; only after it is obtained does the
+    75	extended ideal become `(a(u,Z),u)=(u)`, since `a(u,Z) in (u^2)`.  Therefore
+    76	
+    77	```text
+    78	R^_P  = C[Z][[u]],             R^_(R_P)=C(Z)[[u]],       (1.1)
+    79	A |-> a(u,Z),                  U |-> u.
+    80	```
+    81	
+    82	Here the first expression is the formal completion along the whole affine
+    83	line and the second is the complete DVR at its generic point.  At the closed
+    84	point `p_z0=(A,U,Z-z0)`, one similarly has
+    85	
+    86	```text
+    87	O^_(S,p_z0)=C[[u,w]],          w=Z-z0.                  (1.2)
+    88	```
+    89	
+    90	In particular
+    91	
+    92	```text
+    93	ord_P(U)=1,        ord_P(A)=2,        ord_P(Z)=0.
+    94	```
+    95	
+    96	This also follows from the retained cyclic chart
+    97	`A=x^2, U=x+x^3y, Z=2y+x^2y^2`; the direct ring calculation above does not
+    98	depend on that chart.
+    99	
+   100	The Poisson bracket becomes especially simple.  Put
+   101	
+   102	```text
+   103	B(u,Z)=2+4Za(u,Z)=2sqrt(1+4Zu^2).
+   104	```
+   105	
+   106	Then
+   107	
+   108	```text
+   109	{u,Z}=B,
+   110	{F,G}=B(F_u G_Z-F_Z G_u),
+   111	X_H=B(H_u partial_Z-H_Z partial_u).                     (1.3)
+   112	```
+   113	
+   114	Thus both charged fields extend continuously to `C[Z][[u]]` as derivations
+   115	which may lower the `u`-adic filtration by one.
+   116	
+   117	Make the filtration exact by setting `nu(F)=ord_u(F)` and `nu(0)=+infinity`.
+   118	If
+   119	
+   120	```text
+   121	F=h(Z)u^m+O(u^(m+1)),       G=k(Z)u^n+O(u^(n+1)),
+   122	```
+   123	
+   124	then
+   125	
+   126	```text
+   127	nu({F,G}) >= m+n-1,                                      (1.4)
+   128	in_(m+n-1){F,G}
+   129	 =2(m h k'-n h' k)u^(m+n-1).                            (1.5)
+   130	```
+   131	
+   132	Here and in (1.9), a prime means differentiation with respect to the residue
+   133	coordinate `Z`; it is not a branch or prime-divisor label.
+   134	
+   135	Equation (1.4) is only a floor: (1.5) can vanish.  For fixed `H` it gives
+   136	
+   137	```text
+   138	nu(X_H^j F) >= nu(F)+j(nu(H)-1),                         (1.6)
+   139	```
+   140	
+   141	again with equality only while the successive initial expressions do not
+   142	cancel.  This is the exact associated-graded Hamiltonian structure, rather
+   143	than a scalar-weight proxy for membership in `R`.
+   144	
+   145	Every element has a unique form
+   146	
+   147	```text
+   148	H=P_H(A,Z)+U Q_H(A,Z).                                  (1.7)
+   149	```
+   150	
+   151	The **PROVISIONAL** parent theorem says that a nonconstant `X_H` is
+   152	non-locally-finite exactly when `H notin C[A]`.  In the coordinates (1.7),
+   153	this says only
+   154	
+   155	```text
+   156	Q_H != 0  or  partial_Z P_H != 0.                        (1.8)
+   157	```
+   158	
+   159	It imposes no universal initial order or eigenweight: `H=Z` has order zero,
+   160	whereas `H=U^N` has arbitrary order `N`, and each lies outside `C[A]`.
+   161	Consequently non-local-finiteness alone cannot turn the floor (1.4) into an
+   162	attained growth formula.
+
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0b47727d3779100c2750cdba57881aca99ef0fdf
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,31 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++## 1. Constraint System (1.1)-(1.4)
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+codex
+I’ve finished the constraint-system and degree-zero checks. The degree-zero obstruction survives because the A¹ coefficient is forced by the same scalar that normalizes the A⁰ coefficient, so there is no branch hidden in `O=0`.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..7db0952feb4a7544d90db8a9c6502a022ff14d49
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,94 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++Method note: this review used the frozen packet copies only, plus direct
++polynomial differentiation. I did not fetch external literature, run a CAS, edit
++charged inputs, edit canonical ledgers, or inspect `jc2-lean`. Citations below
++use the frozen basenames and line numbers.
++
++## 1. Constraint System (1.1)-(1.4)
++
++CONFIRMED. The normal form is forced by the quotient
++`U^2=A+A^2Z`: every class is uniquely `P(A,Z)+UQ(A,Z)`, matching the
++structure packet's normal-form line (`structure:145-149`) and the THETA
++packet's setup (`theta:43-50`).
++
++The charged normalization is `{f,g}=kappa`, with the standard orientation
++`J(h,k)=h_x k_y-h_y k_x`. Under the source chart
++`A=x^2`, `U=x+x^3y`, `Z=2y+x^2y^2`, the three generator brackets are exactly
++`2A^2`, `4U`, and `2+4AZ`; these are also the brackets recorded in
++`theta:51-55`. The sign is consistent with the local Hamiltonian convention
++`X_f=kappa partial_q`, `X_g=-kappa partial_p` at an etale companion point
++(`structure:198-220`).
++
++For arbitrary `F,G` in the ambient variables,
++
++```text
++{F,G}=2A^2(F_A G_U-F_U G_A)
++     +4U(F_A G_Z-F_Z G_A)
++     +c(F_U G_Z-F_Z G_U),        c=2(1+2AZ).
++```
++
++Putting `f=P+UQ`, `g=R_0+US_0`, and reducing `U^2` to
++`H=A(1+AZ)`, the even part is exactly
++
++```text
++2A^2(P_A S_0-Q(R_0)_A)
+++4H(P_A(S_0)_Z+Q_A(R_0)_Z-P_Z(S_0)_A-Q_Z(R_0)_A)
+++c(Q(R_0)_Z-P_ZS_0),
++```
++
++and the odd coefficient is exactly
++
++```text
++2A^2(Q_A S_0-Q(S_0)_A)
+++4(P_A(R_0)_Z-P_Z(R_0)_A+H(Q_A(S_0)_Z-Q_Z(S_0)_A))
+++c(Q(S_0)_Z-Q_ZS_0).
++```
++
++So (1.3E)/(1.3O) and the coefficient system `E=kappa`, `O=0`
++(`theta:65-86`) are the correct polynomial identities in
++`C[A,Z]`. The first-jet equation
++`2(q_1 r'-p's_1)=kappa` follows by taking the constant `A` coefficient of
++`E` (`theta:105-115`). I see no normalization or even/odd split error.
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++CONFIRMED. If `P,Q,R_0,S_0` are all in `C[Z]`, every `A`-derivative term in
++`E` vanishes and
++
++```text
++E=2(1+2AZ)(Q(R_0)'-P'S_0).
++```
++
++Let `B(Z)=Q(R_0)'-P'S_0`. The `A^0` coefficient of `E=kappa` gives
++`2B=kappa`, hence `B=kappa/2`. The `A^1` coefficient is then
++`4ZB=2kappa Z`, which is not the zero polynomial because `kappa != 0`.
++This reproduces (3.1)-(3.2) (`theta:327-344`). The obstruction is independent
++of the residue degrees, but only excludes the displayed ruling-degree-zero
++class.
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..7db0952feb4a7544d90db8a9c6502a022ff14d49
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,94 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++Method note: this review used the frozen packet copies only, plus direct
++polynomial differentiation. I did not fetch external literature, run a CAS, edit
++charged inputs, edit canonical ledgers, or inspect `jc2-lean`. Citations below
++use the frozen basenames and line numbers.
++
++## 1. Constraint System (1.1)-(1.4)
++
++CONFIRMED. The normal form is forced by the quotient
++`U^2=A+A^2Z`: every class is uniquely `P(A,Z)+UQ(A,Z)`, matching the
++structure packet's normal-form line (`structure:145-149`) and the THETA
++packet's setup (`theta:43-50`).
++
++The charged normalization is `{f,g}=kappa`, with the standard orientation
++`J(h,k)=h_x k_y-h_y k_x`. Under the source chart
++`A=x^2`, `U=x+x^3y`, `Z=2y+x^2y^2`, the three generator brackets are exactly
++`2A^2`, `4U`, and `2+4AZ`; these are also the brackets recorded in
++`theta:51-55`. The sign is consistent with the local Hamiltonian convention
++`X_f=kappa partial_q`, `X_g=-kappa partial_p` at an etale companion point
++(`structure:198-220`).
++
++For arbitrary `F,G` in the ambient variables,
++
++```text
++{F,G}=2A^2(F_A G_U-F_U G_A)
++     +4U(F_A G_Z-F_Z G_A)
++     +c(F_U G_Z-F_Z G_U),        c=2(1+2AZ).
++```
++
++Putting `f=P+UQ`, `g=R_0+US_0`, and reducing `U^2` to
++`H=A(1+AZ)`, the even part is exactly
++
++```text
++2A^2(P_A S_0-Q(R_0)_A)
+++4H(P_A(S_0)_Z+Q_A(R_0)_Z-P_Z(S_0)_A-Q_Z(R_0)_A)
+++c(Q(R_0)_Z-P_ZS_0),
++```
++
++and the odd coefficient is exactly
++
++```text
++2A^2(Q_A S_0-Q(S_0)_A)
+++4(P_A(R_0)_Z-P_Z(R_0)_A+H(Q_A(S_0)_Z-Q_Z(S_0)_A))
+++c(Q(S_0)_Z-Q_ZS_0).
++```
++
++So (1.3E)/(1.3O) and the coefficient system `E=kappa`, `O=0`
++(`theta:65-86`) are the correct polynomial identities in
++`C[A,Z]`. The first-jet equation
++`2(q_1 r'-p's_1)=kappa` follows by taking the constant `A` coefficient of
++`E` (`theta:105-115`). I see no normalization or even/odd split error.
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++CONFIRMED. If `P,Q,R_0,S_0` are all in `C[Z]`, every `A`-derivative term in
++`E` vanishes and
++
++```text
++E=2(1+2AZ)(Q(R_0)'-P'S_0).
++```
++
++Let `B(Z)=Q(R_0)'-P'S_0`. The `A^0` coefficient of `E=kappa` gives
++`2B=kappa`, hence `B=kappa/2`. The `A^1` coefficient is then
++`4ZB=2kappa Z`, which is not the zero polynomial because `kappa != 0`.
++This reproduces (3.1)-(3.2) (`theta:327-344`). The obstruction is independent
++of the residue degrees, but only excludes the displayed ruling-degree-zero
++class.
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+codex
+I’ve finished the A-linear algebra. The report’s displayed coefficient equations match a direct expansion, and the D=0 branch is exhaustive once `sigma` is split into zero/constant/nonconstant.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..33193cdae76a68f86c3ce039efb6351b7d83424b
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,164 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++Method note: this review used the frozen packet copies only, plus direct
++polynomial differentiation. I did not fetch external literature, run a CAS, edit
++charged inputs, edit canonical ledgers, or inspect `jc2-lean`. Citations below
++use the frozen basenames and line numbers.
++
++## 1. Constraint System (1.1)-(1.4)
++
++CONFIRMED. The normal form is forced by the quotient
++`U^2=A+A^2Z`: every class is uniquely `P(A,Z)+UQ(A,Z)`, matching the
++structure packet's normal-form line (`structure:145-149`) and the THETA
++packet's setup (`theta:43-50`).
++
++The charged normalization is `{f,g}=kappa`, with the standard orientation
++`J(h,k)=h_x k_y-h_y k_x`. Under the source chart
++`A=x^2`, `U=x+x^3y`, `Z=2y+x^2y^2`, the three generator brackets are exactly
++`2A^2`, `4U`, and `2+4AZ`; these are also the brackets recorded in
++`theta:51-55`. The sign is consistent with the local Hamiltonian convention
++`X_f=kappa partial_q`, `X_g=-kappa partial_p` at an etale companion point
++(`structure:198-220`).
++
++For arbitrary `F,G` in the ambient variables,
++
++```text
++{F,G}=2A^2(F_A G_U-F_U G_A)
++     +4U(F_A G_Z-F_Z G_A)
++     +c(F_U G_Z-F_Z G_U),        c=2(1+2AZ).
++```
++
++Putting `f=P+UQ`, `g=R_0+US_0`, and reducing `U^2` to
++`H=A(1+AZ)`, the even part is exactly
++
++```text
++2A^2(P_A S_0-Q(R_0)_A)
+++4H(P_A(S_0)_Z+Q_A(R_0)_Z-P_Z(S_0)_A-Q_Z(R_0)_A)
+++c(Q(R_0)_Z-P_ZS_0),
++```
++
++and the odd coefficient is exactly
++
++```text
++2A^2(Q_A S_0-Q(S_0)_A)
+++4(P_A(R_0)_Z-P_Z(R_0)_A+H(Q_A(S_0)_Z-Q_Z(S_0)_A))
+++c(Q(S_0)_Z-Q_ZS_0).
++```
++
++So (1.3E)/(1.3O) and the coefficient system `E=kappa`, `O=0`
++(`theta:65-86`) are the correct polynomial identities in
++`C[A,Z]`. The first-jet equation
++`2(q_1 r'-p's_1)=kappa` follows by taking the constant `A` coefficient of
++`E` (`theta:105-115`). I see no normalization or even/odd split error.
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++CONFIRMED. If `P,Q,R_0,S_0` are all in `C[Z]`, every `A`-derivative term in
++`E` vanishes and
++
++```text
++E=2(1+2AZ)(Q(R_0)'-P'S_0).
++```
++
++Let `B(Z)=Q(R_0)'-P'S_0`. The `A^0` coefficient of `E=kappa` gives
++`2B=kappa`, hence `B=kappa/2`. The `A^1` coefficient is then
++`4ZB=2kappa Z`, which is not the zero polynomial because `kappa != 0`.
++This reproduces (3.1)-(3.2) (`theta:327-344`). The obstruction is independent
++of the residue degrees, but only excludes the displayed ruling-degree-zero
++class.
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++CONFIRMED within its stated scope. Write `K=kappa` and use the ansatz
++
++```text
++P=Z^2+AC,  Q=-K/2+AD,  R_0=Z^3-Z+AE,  S_0=-3KZ/4+AL.
++```
++
++For `[A^0]O`, the first large summand has no contribution, the second gives
++`4(C(3Z^2-1)-2ZE)`, and the last gives
++`2(-K/2)(-3K/4)=3K^2/4`. With `c_*=3K^2/16`, `O=0` is therefore
++
++```text
++2ZE-(3Z^2-1)C=c_*,
++```
++
++which is (3.4). Since `gcd(2Z,3Z^2-1)=1`, all solutions are exactly
++
++```text
++C=c_*+2Z sigma,
++E=(3c_*/2)Z+(3Z^2-1)sigma.
++```
++
++For `[A^1]E`, direct collection before substitution gives
++
++```text
++-3KC +(3KZ/2)C' -KE' +6D(3Z^2-1)-12ZL+2KZ=0.
++```
++
++Substituting the preceding parametrization reduces the first three terms to
++`K sigma'-9KZ sigma-(9/2)Kc_*`, giving exactly (3.5). For `[A^1]O`, direct
++collection gives
++
++```text
++4(CE'-C'E) -(9/2)KD -KL' +(3/2)KZD' +(3/2)K^2Z=0,
++```
++
++equivalently (3.6). For the highest odd coefficient, the actual coefficient is
++`8Z(DL'-D'L)`, so in the domain `C[Z]` it is equivalent to (3.7). These checks
++verify (3.4)-(3.8) term by term (`theta:348-376`).
++
++The degree contradiction also checks. If `D != 0`, then (3.7) gives
++`L=lambda D` in `C(Z)`, hence in `C[Z]`, with constant `lambda`. Let
++`m=deg D` and leading coefficient `d`. In (3.5), the `D` term has leading
++degree `m+2` with coefficient `18d`; no term except `-9KZ sigma` can cancel it.
++Thus `deg sigma=m+1` and `lc(sigma)=2d/K`, which is (3.9). Then in (3.6),
++using `C=c_*+2Zsigma` and `E=(3c_*/2)Z+(3Z^2-1)sigma`, the leading term of
++`C'E-CE'` is
++
++```text
++6s^2(n+1)Z^(2n+2)-6s^2(n+2)Z^(2n+2)
++=-6s^2 Z^(2n+2),
++```
++
++where `s=lc(sigma)` and `n=m+1`. This is the claimed
++`-6lc(sigma)^2 Z^(2m+4)`. The right side of (3.6) has degree at most
++`max(m,1)`, so cancellation is impossible.
++
++If `D=0`, equation (3.5) becomes
++`Ksigma'-9KZsigma-12ZL+2KZ-(9/2)Kc_*=0`. When `sigma` is zero or constant,
++every term except the nonzero constant `-(9/2)Kc_*` is divisible by `Z`. When
++`n=deg sigma>=1`, the same equation forces `deg L=n`; otherwise either
++`-9KZsigma` or `-12ZL` has an uncancelled top degree. Equation (3.6) then has
++left leading term `-6lc(sigma)^2Z^(2n+2)`, while its right side has degree at
++most `max(n-1,1)`. This is again impossible.
++
++The cases `D != 0` and `D=0`, with `sigma` zero/constant/nonconstant in the
++second branch, exhaust all polynomial choices under `A`-degree `<=1` and the
++fixed minimal jet `p=Z^2`, `r=Z^3-Z`, `T_0=0`. The packet's disclaimers are
++correct: this does not cover another point of the minimal residue family,
++nonzero `T_0`, or any `A`-degree `>=2` (`theta:405-410`).
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..33193cdae76a68f86c3ce039efb6351b7d83424b
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,164 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++Method note: this review used the frozen packet copies only, plus direct
++polynomial differentiation. I did not fetch external literature, run a CAS, edit
++charged inputs, edit canonical ledgers, or inspect `jc2-lean`. Citations below
++use the frozen basenames and line numbers.
++
++## 1. Constraint System (1.1)-(1.4)
++
++CONFIRMED. The normal form is forced by the quotient
++`U^2=A+A^2Z`: every class is uniquely `P(A,Z)+UQ(A,Z)`, matching the
++structure packet's normal-form line (`structure:145-149`) and the THETA
++packet's setup (`theta:43-50`).
++
++The charged normalization is `{f,g}=kappa`, with the standard orientation
++`J(h,k)=h_x k_y-h_y k_x`. Under the source chart
++`A=x^2`, `U=x+x^3y`, `Z=2y+x^2y^2`, the three generator brackets are exactly
++`2A^2`, `4U`, and `2+4AZ`; these are also the brackets recorded in
++`theta:51-55`. The sign is consistent with the local Hamiltonian convention
++`X_f=kappa partial_q`, `X_g=-kappa partial_p` at an etale companion point
++(`structure:198-220`).
++
++For arbitrary `F,G` in the ambient variables,
++
++```text
++{F,G}=2A^2(F_A G_U-F_U G_A)
++     +4U(F_A G_Z-F_Z G_A)
++     +c(F_U G_Z-F_Z G_U),        c=2(1+2AZ).
++```
++
++Putting `f=P+UQ`, `g=R_0+US_0`, and reducing `U^2` to
++`H=A(1+AZ)`, the even part is exactly
++
++```text
++2A^2(P_A S_0-Q(R_0)_A)
+++4H(P_A(S_0)_Z+Q_A(R_0)_Z-P_Z(S_0)_A-Q_Z(R_0)_A)
+++c(Q(R_0)_Z-P_ZS_0),
++```
++
++and the odd coefficient is exactly
++
++```text
++2A^2(Q_A S_0-Q(S_0)_A)
+++4(P_A(R_0)_Z-P_Z(R_0)_A+H(Q_A(S_0)_Z-Q_Z(S_0)_A))
+++c(Q(S_0)_Z-Q_ZS_0).
++```
++
++So (1.3E)/(1.3O) and the coefficient system `E=kappa`, `O=0`
++(`theta:65-86`) are the correct polynomial identities in
++`C[A,Z]`. The first-jet equation
++`2(q_1 r'-p's_1)=kappa` follows by taking the constant `A` coefficient of
++`E` (`theta:105-115`). I see no normalization or even/odd split error.
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++CONFIRMED. If `P,Q,R_0,S_0` are all in `C[Z]`, every `A`-derivative term in
++`E` vanishes and
++
++```text
++E=2(1+2AZ)(Q(R_0)'-P'S_0).
++```
++
++Let `B(Z)=Q(R_0)'-P'S_0`. The `A^0` coefficient of `E=kappa` gives
++`2B=kappa`, hence `B=kappa/2`. The `A^1` coefficient is then
++`4ZB=2kappa Z`, which is not the zero polynomial because `kappa != 0`.
++This reproduces (3.1)-(3.2) (`theta:327-344`). The obstruction is independent
++of the residue degrees, but only excludes the displayed ruling-degree-zero
++class.
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++CONFIRMED within its stated scope. Write `K=kappa` and use the ansatz
++
++```text
++P=Z^2+AC,  Q=-K/2+AD,  R_0=Z^3-Z+AE,  S_0=-3KZ/4+AL.
++```
++
++For `[A^0]O`, the first large summand has no contribution, the second gives
++`4(C(3Z^2-1)-2ZE)`, and the last gives
++`2(-K/2)(-3K/4)=3K^2/4`. With `c_*=3K^2/16`, `O=0` is therefore
++
++```text
++2ZE-(3Z^2-1)C=c_*,
++```
++
++which is (3.4). Since `gcd(2Z,3Z^2-1)=1`, all solutions are exactly
++
++```text
++C=c_*+2Z sigma,
++E=(3c_*/2)Z+(3Z^2-1)sigma.
++```
++
++For `[A^1]E`, direct collection before substitution gives
++
++```text
++-3KC +(3KZ/2)C' -KE' +6D(3Z^2-1)-12ZL+2KZ=0.
++```
++
++Substituting the preceding parametrization reduces the first three terms to
++`K sigma'-9KZ sigma-(9/2)Kc_*`, giving exactly (3.5). For `[A^1]O`, direct
++collection gives
++
++```text
++4(CE'-C'E) -(9/2)KD -KL' +(3/2)KZD' +(3/2)K^2Z=0,
++```
++
++equivalently (3.6). For the highest odd coefficient, the actual coefficient is
++`8Z(DL'-D'L)`, so in the domain `C[Z]` it is equivalent to (3.7). These checks
++verify (3.4)-(3.8) term by term (`theta:348-376`).
++
++The degree contradiction also checks. If `D != 0`, then (3.7) gives
++`L=lambda D` in `C(Z)`, hence in `C[Z]`, with constant `lambda`. Let
++`m=deg D` and leading coefficient `d`. In (3.5), the `D` term has leading
++degree `m+2` with coefficient `18d`; no term except `-9KZ sigma` can cancel it.
++Thus `deg sigma=m+1` and `lc(sigma)=2d/K`, which is (3.9). Then in (3.6),
++using `C=c_*+2Zsigma` and `E=(3c_*/2)Z+(3Z^2-1)sigma`, the leading term of
++`C'E-CE'` is
++
++```text
++6s^2(n+1)Z^(2n+2)-6s^2(n+2)Z^(2n+2)
++=-6s^2 Z^(2n+2),
++```
++
++where `s=lc(sigma)` and `n=m+1`. This is the claimed
++`-6lc(sigma)^2 Z^(2m+4)`. The right side of (3.6) has degree at most
++`max(m,1)`, so cancellation is impossible.
++
++If `D=0`, equation (3.5) becomes
++`Ksigma'-9KZsigma-12ZL+2KZ-(9/2)Kc_*=0`. When `sigma` is zero or constant,
++every term except the nonzero constant `-(9/2)Kc_*` is divisible by `Z`. When
++`n=deg sigma>=1`, the same equation forces `deg L=n`; otherwise either
++`-9KZsigma` or `-12ZL` has an uncancelled top degree. Equation (3.6) then has
++left leading term `-6lc(sigma)^2Z^(2n+2)`, while its right side has degree at
++most `max(n-1,1)`. This is again impossible.
++
++The cases `D != 0` and `D=0`, with `sigma` zero/constant/nonconstant in the
++second branch, exhaust all polynomial choices under `A`-degree `<=1` and the
++fixed minimal jet `p=Z^2`, `r=Z^3-Z`, `T_0=0`. The packet's disclaimers are
++correct: this does not cover another point of the minimal residue family,
++nonzero `T_0`, or any `A`-degree `>=2` (`theta:405-410`).
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+codex
+The degree-8 claim is also holding up. The only subtlety is the field-degree step, so I’m recording a direct degree-two proof from the displayed source chart rather than relying on the earlier review citation alone.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..1a021d898ada330c3c7ef8c4b89d37f6b50964cd
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,211 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++Method note: this review used the frozen packet copies only, plus direct
++polynomial differentiation. I did not fetch external literature, run a CAS, edit
++charged inputs, edit canonical ledgers, or inspect `jc2-lean`. Citations below
++use the frozen basenames and line numbers.
++
++## 1. Constraint System (1.1)-(1.4)
++
++CONFIRMED. The normal form is forced by the quotient
++`U^2=A+A^2Z`: every class is uniquely `P(A,Z)+UQ(A,Z)`, matching the
++structure packet's normal-form line (`structure:145-149`) and the THETA
++packet's setup (`theta:43-50`).
++
++The charged normalization is `{f,g}=kappa`, with the standard orientation
++`J(h,k)=h_x k_y-h_y k_x`. Under the source chart
++`A=x^2`, `U=x+x^3y`, `Z=2y+x^2y^2`, the three generator brackets are exactly
++`2A^2`, `4U`, and `2+4AZ`; these are also the brackets recorded in
++`theta:51-55`. The sign is consistent with the local Hamiltonian convention
++`X_f=kappa partial_q`, `X_g=-kappa partial_p` at an etale companion point
++(`structure:198-220`).
++
++For arbitrary `F,G` in the ambient variables,
++
++```text
++{F,G}=2A^2(F_A G_U-F_U G_A)
++     +4U(F_A G_Z-F_Z G_A)
++     +c(F_U G_Z-F_Z G_U),        c=2(1+2AZ).
++```
++
++Putting `f=P+UQ`, `g=R_0+US_0`, and reducing `U^2` to
++`H=A(1+AZ)`, the even part is exactly
++
++```text
++2A^2(P_A S_0-Q(R_0)_A)
+++4H(P_A(S_0)_Z+Q_A(R_0)_Z-P_Z(S_0)_A-Q_Z(R_0)_A)
+++c(Q(R_0)_Z-P_ZS_0),
++```
++
++and the odd coefficient is exactly
++
++```text
++2A^2(Q_A S_0-Q(S_0)_A)
+++4(P_A(R_0)_Z-P_Z(R_0)_A+H(Q_A(S_0)_Z-Q_Z(S_0)_A))
+++c(Q(S_0)_Z-Q_ZS_0).
++```
++
++So (1.3E)/(1.3O) and the coefficient system `E=kappa`, `O=0`
++(`theta:65-86`) are the correct polynomial identities in
++`C[A,Z]`. The first-jet equation
++`2(q_1 r'-p's_1)=kappa` follows by taking the constant `A` coefficient of
++`E` (`theta:105-115`). I see no normalization or even/odd split error.
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++CONFIRMED. If `P,Q,R_0,S_0` are all in `C[Z]`, every `A`-derivative term in
++`E` vanishes and
++
++```text
++E=2(1+2AZ)(Q(R_0)'-P'S_0).
++```
++
++Let `B(Z)=Q(R_0)'-P'S_0`. The `A^0` coefficient of `E=kappa` gives
++`2B=kappa`, hence `B=kappa/2`. The `A^1` coefficient is then
++`4ZB=2kappa Z`, which is not the zero polynomial because `kappa != 0`.
++This reproduces (3.1)-(3.2) (`theta:327-344`). The obstruction is independent
++of the residue degrees, but only excludes the displayed ruling-degree-zero
++class.
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++CONFIRMED within its stated scope. Write `K=kappa` and use the ansatz
++
++```text
++P=Z^2+AC,  Q=-K/2+AD,  R_0=Z^3-Z+AE,  S_0=-3KZ/4+AL.
++```
++
++For `[A^0]O`, the first large summand has no contribution, the second gives
++`4(C(3Z^2-1)-2ZE)`, and the last gives
++`2(-K/2)(-3K/4)=3K^2/4`. With `c_*=3K^2/16`, `O=0` is therefore
++
++```text
++2ZE-(3Z^2-1)C=c_*,
++```
++
++which is (3.4). Since `gcd(2Z,3Z^2-1)=1`, all solutions are exactly
++
++```text
++C=c_*+2Z sigma,
++E=(3c_*/2)Z+(3Z^2-1)sigma.
++```
++
++For `[A^1]E`, direct collection before substitution gives
++
++```text
++-3KC +(3KZ/2)C' -KE' +6D(3Z^2-1)-12ZL+2KZ=0.
++```
++
++Substituting the preceding parametrization reduces the first three terms to
++`K sigma'-9KZ sigma-(9/2)Kc_*`, giving exactly (3.5). For `[A^1]O`, direct
++collection gives
++
++```text
++4(CE'-C'E) -(9/2)KD -KL' +(3/2)KZD' +(3/2)K^2Z=0,
++```
++
++equivalently (3.6). For the highest odd coefficient, the actual coefficient is
++`8Z(DL'-D'L)`, so in the domain `C[Z]` it is equivalent to (3.7). These checks
++verify (3.4)-(3.8) term by term (`theta:348-376`).
++
++The degree contradiction also checks. If `D != 0`, then (3.7) gives
++`L=lambda D` in `C(Z)`, hence in `C[Z]`, with constant `lambda`. Let
++`m=deg D` and leading coefficient `d`. In (3.5), the `D` term has leading
++degree `m+2` with coefficient `18d`; no term except `-9KZ sigma` can cancel it.
++Thus `deg sigma=m+1` and `lc(sigma)=2d/K`, which is (3.9). Then in (3.6),
++using `C=c_*+2Zsigma` and `E=(3c_*/2)Z+(3Z^2-1)sigma`, the leading term of
++`C'E-CE'` is
++
++```text
++6s^2(n+1)Z^(2n+2)-6s^2(n+2)Z^(2n+2)
++=-6s^2 Z^(2n+2),
++```
++
++where `s=lc(sigma)` and `n=m+1`. This is the claimed
++`-6lc(sigma)^2 Z^(2m+4)`. The right side of (3.6) has degree at most
++`max(m,1)`, so cancellation is impossible.
++
++If `D=0`, equation (3.5) becomes
++`Ksigma'-9KZsigma-12ZL+2KZ-(9/2)Kc_*=0`. When `sigma` is zero or constant,
++every term except the nonzero constant `-(9/2)Kc_*` is divisible by `Z`. When
++`n=deg sigma>=1`, the same equation forces `deg L=n`; otherwise either
++`-9KZsigma` or `-12ZL` has an uncancelled top degree. Equation (3.6) then has
++left leading term `-6lc(sigma)^2Z^(2n+2)`, while its right side has degree at
++most `max(n-1,1)`. This is again impossible.
++
++The cases `D != 0` and `D=0`, with `sigma` zero/constant/nonconstant in the
++second branch, exhaust all polynomial choices under `A`-degree `<=1` and the
++fixed minimal jet `p=Z^2`, `r=Z^3-Z`, `T_0=0`. The packet's disclaimers are
++correct: this does not cover another point of the minimal residue family,
++nonzero `T_0`, or any `A`-degree `>=2` (`theta:405-410`).
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++CONFIRMED as strength evidence, not as an obstruction. With
++`J(h,k)=h_x k_y-h_y k_x`, the displayed substitution (`theta:414-428`;
++`structure:96-98`) gives
++
++```text
++J(x^2,x+x^3y)=(2x)(x^3)-0=2x^4=2A^2,
++```
++
++```text
++J(x^2,2y+x^2y^2)=(2x)(2+2x^2y)=4x(1+x^2y)=4U,
++```
++
++and
++
++```text
++J(x+x^3y,2y+x^2y^2)
++=(1+3x^2y)(2+2x^2y)-x^3(2xy^2)
++=2+8x^2y+4x^4y^2=2+4AZ.
++```
++
++So the source chart pulls the bracket on `R` to the standard plane Jacobian.
++If a landed admissible pair satisfies `{f,g}=kappa`, then its composed pair
++`F=iota(f)`, `G=iota(g)` satisfies `J(F,G)=kappa`.
++
++The cited `[C(x,y):K]=2` is also directly visible. Let
++`K=C(A,U,Z)` inside `C(x,y)`. Since `A=x^2`, `C(x,y)=K(x)` because
++`y=(U/x-1)/A`. Thus the degree is at most two. It is not one: the field
++automorphism
++
++```text
++x |-> -x,        y |-> -y-2/x^2
++```
++
++fixes `A`, `U`, and `Z` but moves `x`, so `x notin K`. Hence
++`[C(x,y):K]=2`. If the charged rank-four condition
++`[K:C(f,g)]=4` is part of admissibility (`theta:132-140`), finite-extension
++multiplicativity gives
++
++```text
++[C(x,y):C(F,G)]=[C(x,y):K][K:C(f,g)]=2*4=8.
++```
++
++A polynomial automorphism would have function-field degree one, so such a
++landed pair would compose to a noninvertible Keller map of geometric degree
++eight. This is safe routing input: it explains the strength of a successful
++higher-`A` construction, but it does not disprove that construction.
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..1a021d898ada330c3c7ef8c4b89d37f6b50964cd
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,211 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++Method note: this review used the frozen packet copies only, plus direct
++polynomial differentiation. I did not fetch external literature, run a CAS, edit
++charged inputs, edit canonical ledgers, or inspect `jc2-lean`. Citations below
++use the frozen basenames and line numbers.
++
++## 1. Constraint System (1.1)-(1.4)
++
++CONFIRMED. The normal form is forced by the quotient
++`U^2=A+A^2Z`: every class is uniquely `P(A,Z)+UQ(A,Z)`, matching the
++structure packet's normal-form line (`structure:145-149`) and the THETA
++packet's setup (`theta:43-50`).
++
++The charged normalization is `{f,g}=kappa`, with the standard orientation
++`J(h,k)=h_x k_y-h_y k_x`. Under the source chart
++`A=x^2`, `U=x+x^3y`, `Z=2y+x^2y^2`, the three generator brackets are exactly
++`2A^2`, `4U`, and `2+4AZ`; these are also the brackets recorded in
++`theta:51-55`. The sign is consistent with the local Hamiltonian convention
++`X_f=kappa partial_q`, `X_g=-kappa partial_p` at an etale companion point
++(`structure:198-220`).
++
++For arbitrary `F,G` in the ambient variables,
++
++```text
++{F,G}=2A^2(F_A G_U-F_U G_A)
++     +4U(F_A G_Z-F_Z G_A)
++     +c(F_U G_Z-F_Z G_U),        c=2(1+2AZ).
++```
++
++Putting `f=P+UQ`, `g=R_0+US_0`, and reducing `U^2` to
++`H=A(1+AZ)`, the even part is exactly
++
++```text
++2A^2(P_A S_0-Q(R_0)_A)
+++4H(P_A(S_0)_Z+Q_A(R_0)_Z-P_Z(S_0)_A-Q_Z(R_0)_A)
+++c(Q(R_0)_Z-P_ZS_0),
++```
++
++and the odd coefficient is exactly
++
++```text
++2A^2(Q_A S_0-Q(S_0)_A)
+++4(P_A(R_0)_Z-P_Z(R_0)_A+H(Q_A(S_0)_Z-Q_Z(S_0)_A))
+++c(Q(S_0)_Z-Q_ZS_0).
++```
++
++So (1.3E)/(1.3O) and the coefficient system `E=kappa`, `O=0`
++(`theta:65-86`) are the correct polynomial identities in
++`C[A,Z]`. The first-jet equation
++`2(q_1 r'-p's_1)=kappa` follows by taking the constant `A` coefficient of
++`E` (`theta:105-115`). I see no normalization or even/odd split error.
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++CONFIRMED. If `P,Q,R_0,S_0` are all in `C[Z]`, every `A`-derivative term in
++`E` vanishes and
++
++```text
++E=2(1+2AZ)(Q(R_0)'-P'S_0).
++```
++
++Let `B(Z)=Q(R_0)'-P'S_0`. The `A^0` coefficient of `E=kappa` gives
++`2B=kappa`, hence `B=kappa/2`. The `A^1` coefficient is then
++`4ZB=2kappa Z`, which is not the zero polynomial because `kappa != 0`.
++This reproduces (3.1)-(3.2) (`theta:327-344`). The obstruction is independent
++of the residue degrees, but only excludes the displayed ruling-degree-zero
++class.
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++CONFIRMED within its stated scope. Write `K=kappa` and use the ansatz
++
++```text
++P=Z^2+AC,  Q=-K/2+AD,  R_0=Z^3-Z+AE,  S_0=-3KZ/4+AL.
++```
++
++For `[A^0]O`, the first large summand has no contribution, the second gives
++`4(C(3Z^2-1)-2ZE)`, and the last gives
++`2(-K/2)(-3K/4)=3K^2/4`. With `c_*=3K^2/16`, `O=0` is therefore
++
++```text
++2ZE-(3Z^2-1)C=c_*,
++```
++
++which is (3.4). Since `gcd(2Z,3Z^2-1)=1`, all solutions are exactly
++
++```text
++C=c_*+2Z sigma,
++E=(3c_*/2)Z+(3Z^2-1)sigma.
++```
++
++For `[A^1]E`, direct collection before substitution gives
++
++```text
++-3KC +(3KZ/2)C' -KE' +6D(3Z^2-1)-12ZL+2KZ=0.
++```
++
++Substituting the preceding parametrization reduces the first three terms to
++`K sigma'-9KZ sigma-(9/2)Kc_*`, giving exactly (3.5). For `[A^1]O`, direct
++collection gives
++
++```text
++4(CE'-C'E) -(9/2)KD -KL' +(3/2)KZD' +(3/2)K^2Z=0,
++```
++
++equivalently (3.6). For the highest odd coefficient, the actual coefficient is
++`8Z(DL'-D'L)`, so in the domain `C[Z]` it is equivalent to (3.7). These checks
++verify (3.4)-(3.8) term by term (`theta:348-376`).
++
++The degree contradiction also checks. If `D != 0`, then (3.7) gives
++`L=lambda D` in `C(Z)`, hence in `C[Z]`, with constant `lambda`. Let
++`m=deg D` and leading coefficient `d`. In (3.5), the `D` term has leading
++degree `m+2` with coefficient `18d`; no term except `-9KZ sigma` can cancel it.
++Thus `deg sigma=m+1` and `lc(sigma)=2d/K`, which is (3.9). Then in (3.6),
++using `C=c_*+2Zsigma` and `E=(3c_*/2)Z+(3Z^2-1)sigma`, the leading term of
++`C'E-CE'` is
++
++```text
++6s^2(n+1)Z^(2n+2)-6s^2(n+2)Z^(2n+2)
++=-6s^2 Z^(2n+2),
++```
++
++where `s=lc(sigma)` and `n=m+1`. This is the claimed
++`-6lc(sigma)^2 Z^(2m+4)`. The right side of (3.6) has degree at most
++`max(m,1)`, so cancellation is impossible.
++
++If `D=0`, equation (3.5) becomes
++`Ksigma'-9KZsigma-12ZL+2KZ-(9/2)Kc_*=0`. When `sigma` is zero or constant,
++every term except the nonzero constant `-(9/2)Kc_*` is divisible by `Z`. When
++`n=deg sigma>=1`, the same equation forces `deg L=n`; otherwise either
++`-9KZsigma` or `-12ZL` has an uncancelled top degree. Equation (3.6) then has
++left leading term `-6lc(sigma)^2Z^(2n+2)`, while its right side has degree at
++most `max(n-1,1)`. This is again impossible.
++
++The cases `D != 0` and `D=0`, with `sigma` zero/constant/nonconstant in the
++second branch, exhaust all polynomial choices under `A`-degree `<=1` and the
++fixed minimal jet `p=Z^2`, `r=Z^3-Z`, `T_0=0`. The packet's disclaimers are
++correct: this does not cover another point of the minimal residue family,
++nonzero `T_0`, or any `A`-degree `>=2` (`theta:405-410`).
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++CONFIRMED as strength evidence, not as an obstruction. With
++`J(h,k)=h_x k_y-h_y k_x`, the displayed substitution (`theta:414-428`;
++`structure:96-98`) gives
++
++```text
++J(x^2,x+x^3y)=(2x)(x^3)-0=2x^4=2A^2,
++```
++
++```text
++J(x^2,2y+x^2y^2)=(2x)(2+2x^2y)=4x(1+x^2y)=4U,
++```
++
++and
++
++```text
++J(x+x^3y,2y+x^2y^2)
++=(1+3x^2y)(2+2x^2y)-x^3(2xy^2)
++=2+8x^2y+4x^4y^2=2+4AZ.
++```
++
++So the source chart pulls the bracket on `R` to the standard plane Jacobian.
++If a landed admissible pair satisfies `{f,g}=kappa`, then its composed pair
++`F=iota(f)`, `G=iota(g)` satisfies `J(F,G)=kappa`.
++
++The cited `[C(x,y):K]=2` is also directly visible. Let
++`K=C(A,U,Z)` inside `C(x,y)`. Since `A=x^2`, `C(x,y)=K(x)` because
++`y=(U/x-1)/A`. Thus the degree is at most two. It is not one: the field
++automorphism
++
++```text
++x |-> -x,        y |-> -y-2/x^2
++```
++
++fixes `A`, `U`, and `Z` but moves `x`, so `x notin K`. Hence
++`[C(x,y):K]=2`. If the charged rank-four condition
++`[K:C(f,g)]=4` is part of admissibility (`theta:132-140`), finite-extension
++multiplicativity gives
++
++```text
++[C(x,y):C(F,G)]=[C(x,y):K][K:C(f,g)]=2*4=8.
++```
++
++A polynomial automorphism would have function-field degree one, so such a
++landed pair would compose to a noninvertible Keller map of geometric degree
++eight. This is safe routing input: it explains the strength of a successful
++higher-`A` construction, but it does not disprove that construction.
++
++## 5. Terminology Fork in Section 6
++
++## 6. Strategic Soundness and Successor Lane
++
++## 7. Verdict
+
+codex
+The strategic reframe is the part that needs the narrowest wording. The existing leading-term argument does not automatically survive second-order A corrections, because those corrections enter the same coefficient equation that produced the uncancellable Wronskian.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..687db0e4b80fc0d3b11fa49afa23c782151238f0
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,293 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++Method note: this review used the frozen packet copies only, plus direct
++polynomial differentiation. I did not fetch external literature, run a CAS, edit
++charged inputs, edit canonical ledgers, or inspect `jc2-lean`. Citations below
++use the frozen basenames and line numbers.
++
++## 1. Constraint System (1.1)-(1.4)
++
++CONFIRMED. The normal form is forced by the quotient
++`U^2=A+A^2Z`: every class is uniquely `P(A,Z)+UQ(A,Z)`, matching the
++structure packet's normal-form line (`structure:145-149`) and the THETA
++packet's setup (`theta:43-50`).
++
++The charged normalization is `{f,g}=kappa`, with the standard orientation
++`J(h,k)=h_x k_y-h_y k_x`. Under the source chart
++`A=x^2`, `U=x+x^3y`, `Z=2y+x^2y^2`, the three generator brackets are exactly
++`2A^2`, `4U`, and `2+4AZ`; these are also the brackets recorded in
++`theta:51-55`. The sign is consistent with the local Hamiltonian convention
++`X_f=kappa partial_q`, `X_g=-kappa partial_p` at an etale companion point
++(`structure:198-220`).
++
++For arbitrary `F,G` in the ambient variables,
++
++```text
++{F,G}=2A^2(F_A G_U-F_U G_A)
++     +4U(F_A G_Z-F_Z G_A)
++     +c(F_U G_Z-F_Z G_U),        c=2(1+2AZ).
++```
++
++Putting `f=P+UQ`, `g=R_0+US_0`, and reducing `U^2` to
++`H=A(1+AZ)`, the even part is exactly
++
++```text
++2A^2(P_A S_0-Q(R_0)_A)
+++4H(P_A(S_0)_Z+Q_A(R_0)_Z-P_Z(S_0)_A-Q_Z(R_0)_A)
+++c(Q(R_0)_Z-P_ZS_0),
++```
++
++and the odd coefficient is exactly
++
++```text
++2A^2(Q_A S_0-Q(S_0)_A)
+++4(P_A(R_0)_Z-P_Z(R_0)_A+H(Q_A(S_0)_Z-Q_Z(S_0)_A))
+++c(Q(S_0)_Z-Q_ZS_0).
++```
++
++So (1.3E)/(1.3O) and the coefficient system `E=kappa`, `O=0`
++(`theta:65-86`) are the correct polynomial identities in
++`C[A,Z]`. The first-jet equation
++`2(q_1 r'-p's_1)=kappa` follows by taking the constant `A` coefficient of
++`E` (`theta:105-115`). I see no normalization or even/odd split error.
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++CONFIRMED. If `P,Q,R_0,S_0` are all in `C[Z]`, every `A`-derivative term in
++`E` vanishes and
++
++```text
++E=2(1+2AZ)(Q(R_0)'-P'S_0).
++```
++
++Let `B(Z)=Q(R_0)'-P'S_0`. The `A^0` coefficient of `E=kappa` gives
++`2B=kappa`, hence `B=kappa/2`. The `A^1` coefficient is then
++`4ZB=2kappa Z`, which is not the zero polynomial because `kappa != 0`.
++This reproduces (3.1)-(3.2) (`theta:327-344`). The obstruction is independent
++of the residue degrees, but only excludes the displayed ruling-degree-zero
++class.
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++CONFIRMED within its stated scope. Write `K=kappa` and use the ansatz
++
++```text
++P=Z^2+AC,  Q=-K/2+AD,  R_0=Z^3-Z+AE,  S_0=-3KZ/4+AL.
++```
++
++For `[A^0]O`, the first large summand has no contribution, the second gives
++`4(C(3Z^2-1)-2ZE)`, and the last gives
++`2(-K/2)(-3K/4)=3K^2/4`. With `c_*=3K^2/16`, `O=0` is therefore
++
++```text
++2ZE-(3Z^2-1)C=c_*,
++```
++
++which is (3.4). Since `gcd(2Z,3Z^2-1)=1`, all solutions are exactly
++
++```text
++C=c_*+2Z sigma,
++E=(3c_*/2)Z+(3Z^2-1)sigma.
++```
++
++For `[A^1]E`, direct collection before substitution gives
++
++```text
++-3KC +(3KZ/2)C' -KE' +6D(3Z^2-1)-12ZL+2KZ=0.
++```
++
++Substituting the preceding parametrization reduces the first three terms to
++`K sigma'-9KZ sigma-(9/2)Kc_*`, giving exactly (3.5). For `[A^1]O`, direct
++collection gives
++
++```text
++4(CE'-C'E) -(9/2)KD -KL' +(3/2)KZD' +(3/2)K^2Z=0,
++```
++
++equivalently (3.6). For the highest odd coefficient, the actual coefficient is
++`8Z(DL'-D'L)`, so in the domain `C[Z]` it is equivalent to (3.7). These checks
++verify (3.4)-(3.8) term by term (`theta:348-376`).
++
++The degree contradiction also checks. If `D != 0`, then (3.7) gives
++`L=lambda D` in `C(Z)`, hence in `C[Z]`, with constant `lambda`. Let
++`m=deg D` and leading coefficient `d`. In (3.5), the `D` term has leading
++degree `m+2` with coefficient `18d`; no term except `-9KZ sigma` can cancel it.
++Thus `deg sigma=m+1` and `lc(sigma)=2d/K`, which is (3.9). Then in (3.6),
++using `C=c_*+2Zsigma` and `E=(3c_*/2)Z+(3Z^2-1)sigma`, the leading term of
++`C'E-CE'` is
++
++```text
++6s^2(n+1)Z^(2n+2)-6s^2(n+2)Z^(2n+2)
++=-6s^2 Z^(2n+2),
++```
++
++where `s=lc(sigma)` and `n=m+1`. This is the claimed
++`-6lc(sigma)^2 Z^(2m+4)`. The right side of (3.6) has degree at most
++`max(m,1)`, so cancellation is impossible.
++
++If `D=0`, equation (3.5) becomes
++`Ksigma'-9KZsigma-12ZL+2KZ-(9/2)Kc_*=0`. When `sigma` is zero or constant,
++every term except the nonzero constant `-(9/2)Kc_*` is divisible by `Z`. When
++`n=deg sigma>=1`, the same equation forces `deg L=n`; otherwise either
++`-9KZsigma` or `-12ZL` has an uncancelled top degree. Equation (3.6) then has
++left leading term `-6lc(sigma)^2Z^(2n+2)`, while its right side has degree at
++most `max(n-1,1)`. This is again impossible.
++
++The cases `D != 0` and `D=0`, with `sigma` zero/constant/nonconstant in the
++second branch, exhaust all polynomial choices under `A`-degree `<=1` and the
++fixed minimal jet `p=Z^2`, `r=Z^3-Z`, `T_0=0`. The packet's disclaimers are
++correct: this does not cover another point of the minimal residue family,
++nonzero `T_0`, or any `A`-degree `>=2` (`theta:405-410`).
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++CONFIRMED as strength evidence, not as an obstruction. With
++`J(h,k)=h_x k_y-h_y k_x`, the displayed substitution (`theta:414-428`;
++`structure:96-98`) gives
++
++```text
++J(x^2,x+x^3y)=(2x)(x^3)-0=2x^4=2A^2,
++```
++
++```text
++J(x^2,2y+x^2y^2)=(2x)(2+2x^2y)=4x(1+x^2y)=4U,
++```
++
++and
++
++```text
++J(x+x^3y,2y+x^2y^2)
++=(1+3x^2y)(2+2x^2y)-x^3(2xy^2)
++=2+8x^2y+4x^4y^2=2+4AZ.
++```
++
++So the source chart pulls the bracket on `R` to the standard plane Jacobian.
++If a landed admissible pair satisfies `{f,g}=kappa`, then its composed pair
++`F=iota(f)`, `G=iota(g)` satisfies `J(F,G)=kappa`.
++
++The cited `[C(x,y):K]=2` is also directly visible. Let
++`K=C(A,U,Z)` inside `C(x,y)`. Since `A=x^2`, `C(x,y)=K(x)` because
++`y=(U/x-1)/A`. Thus the degree is at most two. It is not one: the field
++automorphism
++
++```text
++x |-> -x,        y |-> -y-2/x^2
++```
++
++fixes `A`, `U`, and `Z` but moves `x`, so `x notin K`. Hence
++`[C(x,y):K]=2`. If the charged rank-four condition
++`[K:C(f,g)]=4` is part of admissibility (`theta:132-140`), finite-extension
++multiplicativity gives
++
++```text
++[C(x,y):C(F,G)]=[C(x,y):K][K:C(f,g)]=2*4=8.
++```
++
++A polynomial automorphism would have function-field degree one, so such a
++landed pair would compose to a noninvertible Keller map of geometric degree
++eight. This is safe routing input: it explains the strength of a successful
++higher-`A` construction, but it does not disprove that construction.
++
++## 5. Terminology Fork in Section 6
++
++CONFIRMED. The structure packet says the provisional dynamical theorem is
++about Hamiltonian derivations: nonconstant `X_H` is non-locally-finite exactly
++when `H notin C[A]`, equivalently `Q_H != 0` or `partial_Z P_H != 0`
++(`structure:151-162`). It also gives an independent boundary-valuation route
++to non-local-finiteness (`structure:281-295`).
++
++That is different from the morphism property of `pi|_S`. The connectedness
++packet uses `pi|_S` as etale (`connectedness:73-83`), hence locally
++quasi-finite; the finite map is the separate normalization map
++`Y -> A2`. The THETA packet's section 6 distinction is therefore correct:
++read "locally finite" literally only for the derivations, and "locally
++quasi-finite" for `pi` (`theta:547-557`).
++
++## 6. Strategic Soundness and Successor Lane
++
++CONFIRMED, with the all-degrees induction left OPEN. The report is right that
++finite exhaustion cannot be promoted from the frozen packets: there is no cap
++on `deg_A P,Q,R_0,S_0` or on the off-`A=0` `Z` degrees (`theta:124-128`), and
++the final scope statement keeps all `A`-degree `>=2` strata open
++(`theta:559-569`).
++
++The leading-term mechanism in (3.10) is a plausible pattern, but not yet an
++induction. A promotable induction would have to say something like:
++
++```text
++For the fixed minimal residue point p=Z^2, r=Z^3-Z and T_0=0,
++no finite A-degree polynomial lift solves E=kappa, O=0. More precisely,
++after expanding P,Q,R_0,S_0 in A and eliminating all lower-order coefficient
++conditions, some surviving Wronskian/Bezout leading term in Z has degree
++strictly above every term available on the opposite side.
++```
++
++For the full horn it would have to be stronger still, covering every point of
++the seven-parameter minimal residue family and every nonzero `T_0`.
++
++The naive induction already breaks at `A`-degree two. Write
++`P=Z^2+AC_1+A^2C_2+...` and similarly for `Q,R_0,S_0`. The equation (3.4)
++still constrains `C_1,E_1`, and the displayed (3.5) for `[A^1]E` remains the
++same. But `[A^1]O` no longer gives (3.6); it gains the free second-order term
++
++```text
++2(C_2(3Z^2-1)-2ZE_2)
++```
++
++on the right after division by four and rearrangement. This term can have
++arbitrary `Z` degree and has exactly the kind of Bezout shape that can absorb
++the Wronskian leading term used in (3.10). Also, `[A^3]O` is no longer just
++`DL'-D'L=0`; second-order coefficients contribute. Thus the first-order proof
++does not bootstrap without a new elimination invariant or normal-form
++complement controlling those higher compensators.
++
++Successor lane scope: start with the full `A`-adic coefficient hierarchy for
++the fixed minimal jet, analyze the `A^2` compensator operator explicitly, and
++only then attempt an induction on maximal `A` degree. Treat any all-family or
++nonzero-`T_0` claim as a separate strengthening.
++
++## 7. Verdict
++
++1. CONFIRMED: the constraint system (1.1)-(1.4) has the correct bracket
++   normalization and even/odd normal form.
++2. CONFIRMED: `OBSTRUCTION[A-DEGREE-ZERO]` follows from the forced `A^0` and
++   `A^1` coefficients.
++3. CONFIRMED: `OBSTRUCTION[A-LINEAR-MINIMAL-JET]` is exhaustive for
++   `A`-degree `<=1`, `p=Z^2`, `r=Z^3-Z`, `T_0=0`; all leading-term and
++   `D=0` branches check. Its stated exclusions do not extend beyond that
++   scope.
++4. CONFIRMED: the degree-8 composition claim is algebraically sound for a
++   landed admissible pair with `[K:C(f,g)]=4`, and is correctly typed as
++   strength evidence rather than an obstruction.
++5. CONFIRMED: the locally finite / locally quasi-finite terminology fork is
++   necessary and matches the structure packet.
++6. CONFIRMED: the no-cap strategic warning is sound. A possible all-degree
++   induction requires new work; the first obstruction to the naive induction
++   appears already at `A`-degree two.
++
++The two obstructions are promotable only as bounded exclusions:
++`A`-degree zero universally, and `A`-degree `<=1` at the simplest minimal jet
++with `T_0=0`. The degree-8 reframe is safe to adopt as routing input: a
++successful admissible pullback would be counterexample-level data, but the
++current report still leaves the higher-`A`, other-family, and nonzero-`T_0`
++construction problem OPEN.
++
++No exit price is asserted.
++
++<!-- BODY-END -->
+
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..687db0e4b80fc0d3b11fa49afa23c782151238f0
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,293 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++Method note: this review used the frozen packet copies only, plus direct
++polynomial differentiation. I did not fetch external literature, run a CAS, edit
++charged inputs, edit canonical ledgers, or inspect `jc2-lean`. Citations below
++use the frozen basenames and line numbers.
++
++## 1. Constraint System (1.1)-(1.4)
++
++CONFIRMED. The normal form is forced by the quotient
++`U^2=A+A^2Z`: every class is uniquely `P(A,Z)+UQ(A,Z)`, matching the
++structure packet's normal-form line (`structure:145-149`) and the THETA
++packet's setup (`theta:43-50`).
++
++The charged normalization is `{f,g}=kappa`, with the standard orientation
++`J(h,k)=h_x k_y-h_y k_x`. Under the source chart
++`A=x^2`, `U=x+x^3y`, `Z=2y+x^2y^2`, the three generator brackets are exactly
++`2A^2`, `4U`, and `2+4AZ`; these are also the brackets recorded in
++`theta:51-55`. The sign is consistent with the local Hamiltonian convention
++`X_f=kappa partial_q`, `X_g=-kappa partial_p` at an etale companion point
++(`structure:198-220`).
++
++For arbitrary `F,G` in the ambient variables,
++
++```text
++{F,G}=2A^2(F_A G_U-F_U G_A)
++     +4U(F_A G_Z-F_Z G_A)
++     +c(F_U G_Z-F_Z G_U),        c=2(1+2AZ).
++```
++
++Putting `f=P+UQ`, `g=R_0+US_0`, and reducing `U^2` to
++`H=A(1+AZ)`, the even part is exactly
++
++```text
++2A^2(P_A S_0-Q(R_0)_A)
+++4H(P_A(S_0)_Z+Q_A(R_0)_Z-P_Z(S_0)_A-Q_Z(R_0)_A)
+++c(Q(R_0)_Z-P_ZS_0),
++```
++
++and the odd coefficient is exactly
++
++```text
++2A^2(Q_A S_0-Q(S_0)_A)
+++4(P_A(R_0)_Z-P_Z(R_0)_A+H(Q_A(S_0)_Z-Q_Z(S_0)_A))
+++c(Q(S_0)_Z-Q_ZS_0).
++```
++
++So (1.3E)/(1.3O) and the coefficient system `E=kappa`, `O=0`
++(`theta:65-86`) are the correct polynomial identities in
++`C[A,Z]`. The first-jet equation
++`2(q_1 r'-p's_1)=kappa` follows by taking the constant `A` coefficient of
++`E` (`theta:105-115`). I see no normalization or even/odd split error.
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++CONFIRMED. If `P,Q,R_0,S_0` are all in `C[Z]`, every `A`-derivative term in
++`E` vanishes and
++
++```text
++E=2(1+2AZ)(Q(R_0)'-P'S_0).
++```
++
++Let `B(Z)=Q(R_0)'-P'S_0`. The `A^0` coefficient of `E=kappa` gives
++`2B=kappa`, hence `B=kappa/2`. The `A^1` coefficient is then
++`4ZB=2kappa Z`, which is not the zero polynomial because `kappa != 0`.
++This reproduces (3.1)-(3.2) (`theta:327-344`). The obstruction is independent
++of the residue degrees, but only excludes the displayed ruling-degree-zero
++class.
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++CONFIRMED within its stated scope. Write `K=kappa` and use the ansatz
++
++```text
++P=Z^2+AC,  Q=-K/2+AD,  R_0=Z^3-Z+AE,  S_0=-3KZ/4+AL.
++```
++
++For `[A^0]O`, the first large summand has no contribution, the second gives
++`4(C(3Z^2-1)-2ZE)`, and the last gives
++`2(-K/2)(-3K/4)=3K^2/4`. With `c_*=3K^2/16`, `O=0` is therefore
++
++```text
++2ZE-(3Z^2-1)C=c_*,
++```
++
++which is (3.4). Since `gcd(2Z,3Z^2-1)=1`, all solutions are exactly
++
++```text
++C=c_*+2Z sigma,
++E=(3c_*/2)Z+(3Z^2-1)sigma.
++```
++
++For `[A^1]E`, direct collection before substitution gives
++
++```text
++-3KC +(3KZ/2)C' -KE' +6D(3Z^2-1)-12ZL+2KZ=0.
++```
++
++Substituting the preceding parametrization reduces the first three terms to
++`K sigma'-9KZ sigma-(9/2)Kc_*`, giving exactly (3.5). For `[A^1]O`, direct
++collection gives
++
++```text
++4(CE'-C'E) -(9/2)KD -KL' +(3/2)KZD' +(3/2)K^2Z=0,
++```
++
++equivalently (3.6). For the highest odd coefficient, the actual coefficient is
++`8Z(DL'-D'L)`, so in the domain `C[Z]` it is equivalent to (3.7). These checks
++verify (3.4)-(3.8) term by term (`theta:348-376`).
++
++The degree contradiction also checks. If `D != 0`, then (3.7) gives
++`L=lambda D` in `C(Z)`, hence in `C[Z]`, with constant `lambda`. Let
++`m=deg D` and leading coefficient `d`. In (3.5), the `D` term has leading
++degree `m+2` with coefficient `18d`; no term except `-9KZ sigma` can cancel it.
++Thus `deg sigma=m+1` and `lc(sigma)=2d/K`, which is (3.9). Then in (3.6),
++using `C=c_*+2Zsigma` and `E=(3c_*/2)Z+(3Z^2-1)sigma`, the leading term of
++`C'E-CE'` is
++
++```text
++6s^2(n+1)Z^(2n+2)-6s^2(n+2)Z^(2n+2)
++=-6s^2 Z^(2n+2),
++```
++
++where `s=lc(sigma)` and `n=m+1`. This is the claimed
++`-6lc(sigma)^2 Z^(2m+4)`. The right side of (3.6) has degree at most
++`max(m,1)`, so cancellation is impossible.
++
++If `D=0`, equation (3.5) becomes
++`Ksigma'-9KZsigma-12ZL+2KZ-(9/2)Kc_*=0`. When `sigma` is zero or constant,
++every term except the nonzero constant `-(9/2)Kc_*` is divisible by `Z`. When
++`n=deg sigma>=1`, the same equation forces `deg L=n`; otherwise either
++`-9KZsigma` or `-12ZL` has an uncancelled top degree. Equation (3.6) then has
++left leading term `-6lc(sigma)^2Z^(2n+2)`, while its right side has degree at
++most `max(n-1,1)`. This is again impossible.
++
++The cases `D != 0` and `D=0`, with `sigma` zero/constant/nonconstant in the
++second branch, exhaust all polynomial choices under `A`-degree `<=1` and the
++fixed minimal jet `p=Z^2`, `r=Z^3-Z`, `T_0=0`. The packet's disclaimers are
++correct: this does not cover another point of the minimal residue family,
++nonzero `T_0`, or any `A`-degree `>=2` (`theta:405-410`).
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++CONFIRMED as strength evidence, not as an obstruction. With
++`J(h,k)=h_x k_y-h_y k_x`, the displayed substitution (`theta:414-428`;
++`structure:96-98`) gives
++
++```text
++J(x^2,x+x^3y)=(2x)(x^3)-0=2x^4=2A^2,
++```
++
++```text
++J(x^2,2y+x^2y^2)=(2x)(2+2x^2y)=4x(1+x^2y)=4U,
++```
++
++and
++
++```text
++J(x+x^3y,2y+x^2y^2)
++=(1+3x^2y)(2+2x^2y)-x^3(2xy^2)
++=2+8x^2y+4x^4y^2=2+4AZ.
++```
++
++So the source chart pulls the bracket on `R` to the standard plane Jacobian.
++If a landed admissible pair satisfies `{f,g}=kappa`, then its composed pair
++`F=iota(f)`, `G=iota(g)` satisfies `J(F,G)=kappa`.
++
++The cited `[C(x,y):K]=2` is also directly visible. Let
++`K=C(A,U,Z)` inside `C(x,y)`. Since `A=x^2`, `C(x,y)=K(x)` because
++`y=(U/x-1)/A`. Thus the degree is at most two. It is not one: the field
++automorphism
++
++```text
++x |-> -x,        y |-> -y-2/x^2
++```
++
++fixes `A`, `U`, and `Z` but moves `x`, so `x notin K`. Hence
++`[C(x,y):K]=2`. If the charged rank-four condition
++`[K:C(f,g)]=4` is part of admissibility (`theta:132-140`), finite-extension
++multiplicativity gives
++
++```text
++[C(x,y):C(F,G)]=[C(x,y):K][K:C(f,g)]=2*4=8.
++```
++
++A polynomial automorphism would have function-field degree one, so such a
++landed pair would compose to a noninvertible Keller map of geometric degree
++eight. This is safe routing input: it explains the strength of a successful
++higher-`A` construction, but it does not disprove that construction.
++
++## 5. Terminology Fork in Section 6
++
++CONFIRMED. The structure packet says the provisional dynamical theorem is
++about Hamiltonian derivations: nonconstant `X_H` is non-locally-finite exactly
++when `H notin C[A]`, equivalently `Q_H != 0` or `partial_Z P_H != 0`
++(`structure:151-162`). It also gives an independent boundary-valuation route
++to non-local-finiteness (`structure:281-295`).
++
++That is different from the morphism property of `pi|_S`. The connectedness
++packet uses `pi|_S` as etale (`connectedness:73-83`), hence locally
++quasi-finite; the finite map is the separate normalization map
++`Y -> A2`. The THETA packet's section 6 distinction is therefore correct:
++read "locally finite" literally only for the derivations, and "locally
++quasi-finite" for `pi` (`theta:547-557`).
++
++## 6. Strategic Soundness and Successor Lane
++
++CONFIRMED, with the all-degrees induction left OPEN. The report is right that
++finite exhaustion cannot be promoted from the frozen packets: there is no cap
++on `deg_A P,Q,R_0,S_0` or on the off-`A=0` `Z` degrees (`theta:124-128`), and
++the final scope statement keeps all `A`-degree `>=2` strata open
++(`theta:559-569`).
++
++The leading-term mechanism in (3.10) is a plausible pattern, but not yet an
++induction. A promotable induction would have to say something like:
++
++```text
++For the fixed minimal residue point p=Z^2, r=Z^3-Z and T_0=0,
++no finite A-degree polynomial lift solves E=kappa, O=0. More precisely,
++after expanding P,Q,R_0,S_0 in A and eliminating all lower-order coefficient
++conditions, some surviving Wronskian/Bezout leading term in Z has degree
++strictly above every term available on the opposite side.
++```
++
++For the full horn it would have to be stronger still, covering every point of
++the seven-parameter minimal residue family and every nonzero `T_0`.
++
++The naive induction already breaks at `A`-degree two. Write
++`P=Z^2+AC_1+A^2C_2+...` and similarly for `Q,R_0,S_0`. The equation (3.4)
++still constrains `C_1,E_1`, and the displayed (3.5) for `[A^1]E` remains the
++same. But `[A^1]O` no longer gives (3.6); it gains the free second-order term
++
++```text
++2(C_2(3Z^2-1)-2ZE_2)
++```
++
++on the right after division by four and rearrangement. This term can have
++arbitrary `Z` degree and has exactly the kind of Bezout shape that can absorb
++the Wronskian leading term used in (3.10). Also, `[A^3]O` is no longer just
++`DL'-D'L=0`; second-order coefficients contribute. Thus the first-order proof
++does not bootstrap without a new elimination invariant or normal-form
++complement controlling those higher compensators.
++
++Successor lane scope: start with the full `A`-adic coefficient hierarchy for
++the fixed minimal jet, analyze the `A^2` compensator operator explicitly, and
++only then attempt an induction on maximal `A` degree. Treat any all-family or
++nonzero-`T_0` claim as a separate strengthening.
++
++## 7. Verdict
++
++1. CONFIRMED: the constraint system (1.1)-(1.4) has the correct bracket
++   normalization and even/odd normal form.
++2. CONFIRMED: `OBSTRUCTION[A-DEGREE-ZERO]` follows from the forced `A^0` and
++   `A^1` coefficients.
++3. CONFIRMED: `OBSTRUCTION[A-LINEAR-MINIMAL-JET]` is exhaustive for
++   `A`-degree `<=1`, `p=Z^2`, `r=Z^3-Z`, `T_0=0`; all leading-term and
++   `D=0` branches check. Its stated exclusions do not extend beyond that
++   scope.
++4. CONFIRMED: the degree-8 composition claim is algebraically sound for a
++   landed admissible pair with `[K:C(f,g)]=4`, and is correctly typed as
++   strength evidence rather than an obstruction.
++5. CONFIRMED: the locally finite / locally quasi-finite terminology fork is
++   necessary and matches the structure packet.
++6. CONFIRMED: the no-cap strategic warning is sound. A possible all-degree
++   induction requires new work; the first obstruction to the naive induction
++   appears already at `A`-degree two.
++
++The two obstructions are promotable only as bounded exclusions:
++`A`-degree zero universally, and `A`-degree `<=1` at the simplest minimal jet
++with `T_0=0`. The degree-8 reframe is safe to adopt as routing input: a
++successful admissible pullback would be counterexample-level data, but the
++current report still leaves the higher-`A`, other-family, and nonzero-`T_0`
++construction problem OPEN.
++
++No exit price is asserted.
++
++<!-- BODY-END -->
+
+codex
+The report body is now drafted through the final verdict and terminator. I’m doing a final mechanical check on word count, terminator placement, and absence of the forbidden declaration string.
+exec
+/bin/zsh -lc 'wc -w xmodel/theta-reopen-hostile-review-gpt55-20260831.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+    1459 xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+
+exec
+/bin/zsh -lc 'tail -n 8 xmodel/theta-reopen-hostile-review-gpt55-20260831.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+with `T_0=0`. The degree-8 reframe is safe to adopt as routing input: a
+successful admissible pullback would be counterexample-level data, but the
+current report still leaves the higher-`A`, other-family, and nonzero-`T_0`
+construction problem OPEN.
+
+No exit price is asserted.
+
+<!-- BODY-END -->
+
+exec
+/bin/zsh -lc 'rg -n "charge_basis" xmodel/theta-reopen-hostile-review-gpt55-20260831.md' in /Users/dc/code/math/jc2
+ exited 1 in 0ms:
+exec
+/bin/zsh -lc 'git diff -- xmodel/theta-reopen-hostile-review-gpt55-20260831.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..687db0e4b80fc0d3b11fa49afa23c782151238f0
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,293 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++Method note: this review used the frozen packet copies only, plus direct
++polynomial differentiation. I did not fetch external literature, run a CAS, edit
++charged inputs, edit canonical ledgers, or inspect `jc2-lean`. Citations below
++use the frozen basenames and line numbers.
++
++## 1. Constraint System (1.1)-(1.4)
++
++CONFIRMED. The normal form is forced by the quotient
++`U^2=A+A^2Z`: every class is uniquely `P(A,Z)+UQ(A,Z)`, matching the
++structure packet's normal-form line (`structure:145-149`) and the THETA
++packet's setup (`theta:43-50`).
++
++The charged normalization is `{f,g}=kappa`, with the standard orientation
++`J(h,k)=h_x k_y-h_y k_x`. Under the source chart
++`A=x^2`, `U=x+x^3y`, `Z=2y+x^2y^2`, the three generator brackets are exactly
++`2A^2`, `4U`, and `2+4AZ`; these are also the brackets recorded in
++`theta:51-55`. The sign is consistent with the local Hamiltonian convention
++`X_f=kappa partial_q`, `X_g=-kappa partial_p` at an etale companion point
++(`structure:198-220`).
++
++For arbitrary `F,G` in the ambient variables,
++
++```text
++{F,G}=2A^2(F_A G_U-F_U G_A)
++     +4U(F_A G_Z-F_Z G_A)
++     +c(F_U G_Z-F_Z G_U),        c=2(1+2AZ).
++```
++
++Putting `f=P+UQ`, `g=R_0+US_0`, and reducing `U^2` to
++`H=A(1+AZ)`, the even part is exactly
++
++```text
++2A^2(P_A S_0-Q(R_0)_A)
+++4H(P_A(S_0)_Z+Q_A(R_0)_Z-P_Z(S_0)_A-Q_Z(R_0)_A)
+++c(Q(R_0)_Z-P_ZS_0),
++```
++
++and the odd coefficient is exactly
++
++```text
++2A^2(Q_A S_0-Q(S_0)_A)
+++4(P_A(R_0)_Z-P_Z(R_0)_A+H(Q_A(S_0)_Z-Q_Z(S_0)_A))
+++c(Q(S_0)_Z-Q_ZS_0).
++```
++
++So (1.3E)/(1.3O) and the coefficient system `E=kappa`, `O=0`
++(`theta:65-86`) are the correct polynomial identities in
++`C[A,Z]`. The first-jet equation
++`2(q_1 r'-p's_1)=kappa` follows by taking the constant `A` coefficient of
++`E` (`theta:105-115`). I see no normalization or even/odd split error.
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++CONFIRMED. If `P,Q,R_0,S_0` are all in `C[Z]`, every `A`-derivative term in
++`E` vanishes and
++
++```text
++E=2(1+2AZ)(Q(R_0)'-P'S_0).
++```
++
++Let `B(Z)=Q(R_0)'-P'S_0`. The `A^0` coefficient of `E=kappa` gives
++`2B=kappa`, hence `B=kappa/2`. The `A^1` coefficient is then
++`4ZB=2kappa Z`, which is not the zero polynomial because `kappa != 0`.
++This reproduces (3.1)-(3.2) (`theta:327-344`). The obstruction is independent
++of the residue degrees, but only excludes the displayed ruling-degree-zero
++class.
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++CONFIRMED within its stated scope. Write `K=kappa` and use the ansatz
++
++```text
++P=Z^2+AC,  Q=-K/2+AD,  R_0=Z^3-Z+AE,  S_0=-3KZ/4+AL.
++```
++
++For `[A^0]O`, the first large summand has no contribution, the second gives
++`4(C(3Z^2-1)-2ZE)`, and the last gives
++`2(-K/2)(-3K/4)=3K^2/4`. With `c_*=3K^2/16`, `O=0` is therefore
++
++```text
++2ZE-(3Z^2-1)C=c_*,
++```
++
++which is (3.4). Since `gcd(2Z,3Z^2-1)=1`, all solutions are exactly
++
++```text
++C=c_*+2Z sigma,
++E=(3c_*/2)Z+(3Z^2-1)sigma.
++```
++
++For `[A^1]E`, direct collection before substitution gives
++
++```text
++-3KC +(3KZ/2)C' -KE' +6D(3Z^2-1)-12ZL+2KZ=0.
++```
++
++Substituting the preceding parametrization reduces the first three terms to
++`K sigma'-9KZ sigma-(9/2)Kc_*`, giving exactly (3.5). For `[A^1]O`, direct
++collection gives
++
++```text
++4(CE'-C'E) -(9/2)KD -KL' +(3/2)KZD' +(3/2)K^2Z=0,
++```
++
++equivalently (3.6). For the highest odd coefficient, the actual coefficient is
++`8Z(DL'-D'L)`, so in the domain `C[Z]` it is equivalent to (3.7). These checks
++verify (3.4)-(3.8) term by term (`theta:348-376`).
++
++The degree contradiction also checks. If `D != 0`, then (3.7) gives
++`L=lambda D` in `C(Z)`, hence in `C[Z]`, with constant `lambda`. Let
++`m=deg D` and leading coefficient `d`. In (3.5), the `D` term has leading
++degree `m+2` with coefficient `18d`; no term except `-9KZ sigma` can cancel it.
++Thus `deg sigma=m+1` and `lc(sigma)=2d/K`, which is (3.9). Then in (3.6),
++using `C=c_*+2Zsigma` and `E=(3c_*/2)Z+(3Z^2-1)sigma`, the leading term of
++`C'E-CE'` is
++
++```text
++6s^2(n+1)Z^(2n+2)-6s^2(n+2)Z^(2n+2)
++=-6s^2 Z^(2n+2),
++```
++
++where `s=lc(sigma)` and `n=m+1`. This is the claimed
++`-6lc(sigma)^2 Z^(2m+4)`. The right side of (3.6) has degree at most
++`max(m,1)`, so cancellation is impossible.
++
++If `D=0`, equation (3.5) becomes
++`Ksigma'-9KZsigma-12ZL+2KZ-(9/2)Kc_*=0`. When `sigma` is zero or constant,
++every term except the nonzero constant `-(9/2)Kc_*` is divisible by `Z`. When
++`n=deg sigma>=1`, the same equation forces `deg L=n`; otherwise either
++`-9KZsigma` or `-12ZL` has an uncancelled top degree. Equation (3.6) then has
++left leading term `-6lc(sigma)^2Z^(2n+2)`, while its right side has degree at
++most `max(n-1,1)`. This is again impossible.
++
++The cases `D != 0` and `D=0`, with `sigma` zero/constant/nonconstant in the
++second branch, exhaust all polynomial choices under `A`-degree `<=1` and the
++fixed minimal jet `p=Z^2`, `r=Z^3-Z`, `T_0=0`. The packet's disclaimers are
++correct: this does not cover another point of the minimal residue family,
++nonzero `T_0`, or any `A`-degree `>=2` (`theta:405-410`).
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++CONFIRMED as strength evidence, not as an obstruction. With
++`J(h,k)=h_x k_y-h_y k_x`, the displayed substitution (`theta:414-428`;
++`structure:96-98`) gives
++
++```text
++J(x^2,x+x^3y)=(2x)(x^3)-0=2x^4=2A^2,
++```
++
++```text
++J(x^2,2y+x^2y^2)=(2x)(2+2x^2y)=4x(1+x^2y)=4U,
++```
++
++and
++
++```text
++J(x+x^3y,2y+x^2y^2)
++=(1+3x^2y)(2+2x^2y)-x^3(2xy^2)
++=2+8x^2y+4x^4y^2=2+4AZ.
++```
++
++So the source chart pulls the bracket on `R` to the standard plane Jacobian.
++If a landed admissible pair satisfies `{f,g}=kappa`, then its composed pair
++`F=iota(f)`, `G=iota(g)` satisfies `J(F,G)=kappa`.
++
++The cited `[C(x,y):K]=2` is also directly visible. Let
++`K=C(A,U,Z)` inside `C(x,y)`. Since `A=x^2`, `C(x,y)=K(x)` because
++`y=(U/x-1)/A`. Thus the degree is at most two. It is not one: the field
++automorphism
++
++```text
++x |-> -x,        y |-> -y-2/x^2
++```
++
++fixes `A`, `U`, and `Z` but moves `x`, so `x notin K`. Hence
++`[C(x,y):K]=2`. If the charged rank-four condition
++`[K:C(f,g)]=4` is part of admissibility (`theta:132-140`), finite-extension
++multiplicativity gives
++
++```text
++[C(x,y):C(F,G)]=[C(x,y):K][K:C(f,g)]=2*4=8.
++```
++
++A polynomial automorphism would have function-field degree one, so such a
++landed pair would compose to a noninvertible Keller map of geometric degree
++eight. This is safe routing input: it explains the strength of a successful
++higher-`A` construction, but it does not disprove that construction.
++
++## 5. Terminology Fork in Section 6
++
++CONFIRMED. The structure packet says the provisional dynamical theorem is
++about Hamiltonian derivations: nonconstant `X_H` is non-locally-finite exactly
++when `H notin C[A]`, equivalently `Q_H != 0` or `partial_Z P_H != 0`
++(`structure:151-162`). It also gives an independent boundary-valuation route
++to non-local-finiteness (`structure:281-295`).
++
++That is different from the morphism property of `pi|_S`. The connectedness
++packet uses `pi|_S` as etale (`connectedness:73-83`), hence locally
++quasi-finite; the finite map is the separate normalization map
++`Y -> A2`. The THETA packet's section 6 distinction is therefore correct:
++read "locally finite" literally only for the derivations, and "locally
++quasi-finite" for `pi` (`theta:547-557`).
++
++## 6. Strategic Soundness and Successor Lane
++
++CONFIRMED, with the all-degrees induction left OPEN. The report is right that
++finite exhaustion cannot be promoted from the frozen packets: there is no cap
++on `deg_A P,Q,R_0,S_0` or on the off-`A=0` `Z` degrees (`theta:124-128`), and
++the final scope statement keeps all `A`-degree `>=2` strata open
++(`theta:559-569`).
++
++The leading-term mechanism in (3.10) is a plausible pattern, but not yet an
++induction. A promotable induction would have to say something like:
++
++```text
++For the fixed minimal residue point p=Z^2, r=Z^3-Z and T_0=0,
++no finite A-degree polynomial lift solves E=kappa, O=0. More precisely,
++after expanding P,Q,R_0,S_0 in A and eliminating all lower-order coefficient
++conditions, some surviving Wronskian/Bezout leading term in Z has degree
++strictly above every term available on the opposite side.
++```
++
++For the full horn it would have to be stronger still, covering every point of
++the seven-parameter minimal residue family and every nonzero `T_0`.
++
++The naive induction already breaks at `A`-degree two. Write
++`P=Z^2+AC_1+A^2C_2+...` and similarly for `Q,R_0,S_0`. The equation (3.4)
++still constrains `C_1,E_1`, and the displayed (3.5) for `[A^1]E` remains the
++same. But `[A^1]O` no longer gives (3.6); it gains the free second-order term
++
++```text
++2(C_2(3Z^2-1)-2ZE_2)
++```
++
++on the right after division by four and rearrangement. This term can have
++arbitrary `Z` degree and has exactly the kind of Bezout shape that can absorb
++the Wronskian leading term used in (3.10). Also, `[A^3]O` is no longer just
++`DL'-D'L=0`; second-order coefficients contribute. Thus the first-order proof
++does not bootstrap without a new elimination invariant or normal-form
++complement controlling those higher compensators.
++
++Successor lane scope: start with the full `A`-adic coefficient hierarchy for
++the fixed minimal jet, analyze the `A^2` compensator operator explicitly, and
++only then attempt an induction on maximal `A` degree. Treat any all-family or
++nonzero-`T_0` claim as a separate strengthening.
++
++## 7. Verdict
++
++1. CONFIRMED: the constraint system (1.1)-(1.4) has the correct bracket
++   normalization and even/odd normal form.
++2. CONFIRMED: `OBSTRUCTION[A-DEGREE-ZERO]` follows from the forced `A^0` and
++   `A^1` coefficients.
++3. CONFIRMED: `OBSTRUCTION[A-LINEAR-MINIMAL-JET]` is exhaustive for
++   `A`-degree `<=1`, `p=Z^2`, `r=Z^3-Z`, `T_0=0`; all leading-term and
++   `D=0` branches check. Its stated exclusions do not extend beyond that
++   scope.
++4. CONFIRMED: the degree-8 composition claim is algebraically sound for a
++   landed admissible pair with `[K:C(f,g)]=4`, and is correctly typed as
++   strength evidence rather than an obstruction.
++5. CONFIRMED: the locally finite / locally quasi-finite terminology fork is
++   necessary and matches the structure packet.
++6. CONFIRMED: the no-cap strategic warning is sound. A possible all-degree
++   induction requires new work; the first obstruction to the naive induction
++   appears already at `A`-degree two.
++
++The two obstructions are promotable only as bounded exclusions:
++`A`-degree zero universally, and `A`-degree `<=1` at the simplest minimal jet
++with `T_0=0`. The degree-8 reframe is safe to adopt as routing input: a
++successful admissible pullback would be counterexample-level data, but the
++current report still leaves the higher-`A`, other-family, and nonzero-`T_0`
++construction problem OPEN.
++
++No exit price is asserted.
++
++<!-- BODY-END -->
+
+codex
+The checks passed: the report is 1,459 words, contains no forbidden declaration string, and the final line is exactly `<!-- BODY-END -->` with nothing after it.
+exec
+/bin/zsh -lc 'git status --short -- xmodel/theta-reopen-hostile-review-gpt55-20260831.md' in /Users/dc/code/math/jc2
+ succeeded in 67ms:
+?? xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..687db0e4b80fc0d3b11fa49afa23c782151238f0
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,293 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++Method note: this review used the frozen packet copies only, plus direct
++polynomial differentiation. I did not fetch external literature, run a CAS, edit
++charged inputs, edit canonical ledgers, or inspect `jc2-lean`. Citations below
++use the frozen basenames and line numbers.
++
++## 1. Constraint System (1.1)-(1.4)
++
++CONFIRMED. The normal form is forced by the quotient
++`U^2=A+A^2Z`: every class is uniquely `P(A,Z)+UQ(A,Z)`, matching the
++structure packet's normal-form line (`structure:145-149`) and the THETA
++packet's setup (`theta:43-50`).
++
++The charged normalization is `{f,g}=kappa`, with the standard orientation
++`J(h,k)=h_x k_y-h_y k_x`. Under the source chart
++`A=x^2`, `U=x+x^3y`, `Z=2y+x^2y^2`, the three generator brackets are exactly
++`2A^2`, `4U`, and `2+4AZ`; these are also the brackets recorded in
++`theta:51-55`. The sign is consistent with the local Hamiltonian convention
++`X_f=kappa partial_q`, `X_g=-kappa partial_p` at an etale companion point
++(`structure:198-220`).
++
++For arbitrary `F,G` in the ambient variables,
++
++```text
++{F,G}=2A^2(F_A G_U-F_U G_A)
++     +4U(F_A G_Z-F_Z G_A)
++     +c(F_U G_Z-F_Z G_U),        c=2(1+2AZ).
++```
++
++Putting `f=P+UQ`, `g=R_0+US_0`, and reducing `U^2` to
++`H=A(1+AZ)`, the even part is exactly
++
++```text
++2A^2(P_A S_0-Q(R_0)_A)
+++4H(P_A(S_0)_Z+Q_A(R_0)_Z-P_Z(S_0)_A-Q_Z(R_0)_A)
+++c(Q(R_0)_Z-P_ZS_0),
++```
++
++and the odd coefficient is exactly
++
++```text
++2A^2(Q_A S_0-Q(S_0)_A)
+++4(P_A(R_0)_Z-P_Z(R_0)_A+H(Q_A(S_0)_Z-Q_Z(S_0)_A))
+++c(Q(S_0)_Z-Q_ZS_0).
++```
++
++So (1.3E)/(1.3O) and the coefficient system `E=kappa`, `O=0`
++(`theta:65-86`) are the correct polynomial identities in
++`C[A,Z]`. The first-jet equation
++`2(q_1 r'-p's_1)=kappa` follows by taking the constant `A` coefficient of
++`E` (`theta:105-115`). I see no normalization or even/odd split error.
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++CONFIRMED. If `P,Q,R_0,S_0` are all in `C[Z]`, every `A`-derivative term in
++`E` vanishes and
++
++```text
++E=2(1+2AZ)(Q(R_0)'-P'S_0).
++```
++
++Let `B(Z)=Q(R_0)'-P'S_0`. The `A^0` coefficient of `E=kappa` gives
++`2B=kappa`, hence `B=kappa/2`. The `A^1` coefficient is then
++`4ZB=2kappa Z`, which is not the zero polynomial because `kappa != 0`.
++This reproduces (3.1)-(3.2) (`theta:327-344`). The obstruction is independent
++of the residue degrees, but only excludes the displayed ruling-degree-zero
++class.
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++CONFIRMED within its stated scope. Write `K=kappa` and use the ansatz
++
++```text
++P=Z^2+AC,  Q=-K/2+AD,  R_0=Z^3-Z+AE,  S_0=-3KZ/4+AL.
++```
++
++For `[A^0]O`, the first large summand has no contribution, the second gives
++`4(C(3Z^2-1)-2ZE)`, and the last gives
++`2(-K/2)(-3K/4)=3K^2/4`. With `c_*=3K^2/16`, `O=0` is therefore
++
++```text
++2ZE-(3Z^2-1)C=c_*,
++```
++
++which is (3.4). Since `gcd(2Z,3Z^2-1)=1`, all solutions are exactly
++
++```text
++C=c_*+2Z sigma,
++E=(3c_*/2)Z+(3Z^2-1)sigma.
++```
++
++For `[A^1]E`, direct collection before substitution gives
++
++```text
++-3KC +(3KZ/2)C' -KE' +6D(3Z^2-1)-12ZL+2KZ=0.
++```
++
++Substituting the preceding parametrization reduces the first three terms to
++`K sigma'-9KZ sigma-(9/2)Kc_*`, giving exactly (3.5). For `[A^1]O`, direct
++collection gives
++
++```text
++4(CE'-C'E) -(9/2)KD -KL' +(3/2)KZD' +(3/2)K^2Z=0,
++```
++
++equivalently (3.6). For the highest odd coefficient, the actual coefficient is
++`8Z(DL'-D'L)`, so in the domain `C[Z]` it is equivalent to (3.7). These checks
++verify (3.4)-(3.8) term by term (`theta:348-376`).
++
++The degree contradiction also checks. If `D != 0`, then (3.7) gives
++`L=lambda D` in `C(Z)`, hence in `C[Z]`, with constant `lambda`. Let
++`m=deg D` and leading coefficient `d`. In (3.5), the `D` term has leading
++degree `m+2` with coefficient `18d`; no term except `-9KZ sigma` can cancel it.
++Thus `deg sigma=m+1` and `lc(sigma)=2d/K`, which is (3.9). Then in (3.6),
++using `C=c_*+2Zsigma` and `E=(3c_*/2)Z+(3Z^2-1)sigma`, the leading term of
++`C'E-CE'` is
++
++```text
++6s^2(n+1)Z^(2n+2)-6s^2(n+2)Z^(2n+2)
++=-6s^2 Z^(2n+2),
++```
++
++where `s=lc(sigma)` and `n=m+1`. This is the claimed
++`-6lc(sigma)^2 Z^(2m+4)`. The right side of (3.6) has degree at most
++`max(m,1)`, so cancellation is impossible.
++
++If `D=0`, equation (3.5) becomes
++`Ksigma'-9KZsigma-12ZL+2KZ-(9/2)Kc_*=0`. When `sigma` is zero or constant,
++every term except the nonzero constant `-(9/2)Kc_*` is divisible by `Z`. When
++`n=deg sigma>=1`, the same equation forces `deg L=n`; otherwise either
++`-9KZsigma` or `-12ZL` has an uncancelled top degree. Equation (3.6) then has
++left leading term `-6lc(sigma)^2Z^(2n+2)`, while its right side has degree at
++most `max(n-1,1)`. This is again impossible.
++
++The cases `D != 0` and `D=0`, with `sigma` zero/constant/nonconstant in the
++second branch, exhaust all polynomial choices under `A`-degree `<=1` and the
++fixed minimal jet `p=Z^2`, `r=Z^3-Z`, `T_0=0`. The packet's disclaimers are
++correct: this does not cover another point of the minimal residue family,
++nonzero `T_0`, or any `A`-degree `>=2` (`theta:405-410`).
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++CONFIRMED as strength evidence, not as an obstruction. With
++`J(h,k)=h_x k_y-h_y k_x`, the displayed substitution (`theta:414-428`;
++`structure:96-98`) gives
++
++```text
++J(x^2,x+x^3y)=(2x)(x^3)-0=2x^4=2A^2,
++```
++
++```text
++J(x^2,2y+x^2y^2)=(2x)(2+2x^2y)=4x(1+x^2y)=4U,
++```
++
++and
++
++```text
++J(x+x^3y,2y+x^2y^2)
++=(1+3x^2y)(2+2x^2y)-x^3(2xy^2)
++=2+8x^2y+4x^4y^2=2+4AZ.
++```
++
++So the source chart pulls the bracket on `R` to the standard plane Jacobian.
++If a landed admissible pair satisfies `{f,g}=kappa`, then its composed pair
++`F=iota(f)`, `G=iota(g)` satisfies `J(F,G)=kappa`.
++
++The cited `[C(x,y):K]=2` is also directly visible. Let
++`K=C(A,U,Z)` inside `C(x,y)`. Since `A=x^2`, `C(x,y)=K(x)` because
++`y=(U/x-1)/A`. Thus the degree is at most two. It is not one: the field
++automorphism
++
++```text
++x |-> -x,        y |-> -y-2/x^2
++```
++
++fixes `A`, `U`, and `Z` but moves `x`, so `x notin K`. Hence
++`[C(x,y):K]=2`. If the charged rank-four condition
++`[K:C(f,g)]=4` is part of admissibility (`theta:132-140`), finite-extension
++multiplicativity gives
++
++```text
++[C(x,y):C(F,G)]=[C(x,y):K][K:C(f,g)]=2*4=8.
++```
++
++A polynomial automorphism would have function-field degree one, so such a
++landed pair would compose to a noninvertible Keller map of geometric degree
++eight. This is safe routing input: it explains the strength of a successful
++higher-`A` construction, but it does not disprove that construction.
++
++## 5. Terminology Fork in Section 6
++
++CONFIRMED. The structure packet says the provisional dynamical theorem is
++about Hamiltonian derivations: nonconstant `X_H` is non-locally-finite exactly
++when `H notin C[A]`, equivalently `Q_H != 0` or `partial_Z P_H != 0`
++(`structure:151-162`). It also gives an independent boundary-valuation route
++to non-local-finiteness (`structure:281-295`).
++
++That is different from the morphism property of `pi|_S`. The connectedness
++packet uses `pi|_S` as etale (`connectedness:73-83`), hence locally
++quasi-finite; the finite map is the separate normalization map
++`Y -> A2`. The THETA packet's section 6 distinction is therefore correct:
++read "locally finite" literally only for the derivations, and "locally
++quasi-finite" for `pi` (`theta:547-557`).
++
++## 6. Strategic Soundness and Successor Lane
++
++CONFIRMED, with the all-degrees induction left OPEN. The report is right that
++finite exhaustion cannot be promoted from the frozen packets: there is no cap
++on `deg_A P,Q,R_0,S_0` or on the off-`A=0` `Z` degrees (`theta:124-128`), and
++the final scope statement keeps all `A`-degree `>=2` strata open
++(`theta:559-569`).
++
++The leading-term mechanism in (3.10) is a plausible pattern, but not yet an
++induction. A promotable induction would have to say something like:
++
++```text
++For the fixed minimal residue point p=Z^2, r=Z^3-Z and T_0=0,
++no finite A-degree polynomial lift solves E=kappa, O=0. More precisely,
++after expanding P,Q,R_0,S_0 in A and eliminating all lower-order coefficient
++conditions, some surviving Wronskian/Bezout leading term in Z has degree
++strictly above every term available on the opposite side.
++```
++
++For the full horn it would have to be stronger still, covering every point of
++the seven-parameter minimal residue family and every nonzero `T_0`.
++
++The naive induction already breaks at `A`-degree two. Write
++`P=Z^2+AC_1+A^2C_2+...` and similarly for `Q,R_0,S_0`. The equation (3.4)
++still constrains `C_1,E_1`, and the displayed (3.5) for `[A^1]E` remains the
++same. But `[A^1]O` no longer gives (3.6); it gains the free second-order term
++
++```text
++2(C_2(3Z^2-1)-2ZE_2)
++```
++
++on the right after division by four and rearrangement. This term can have
++arbitrary `Z` degree and has exactly the kind of Bezout shape that can absorb
++the Wronskian leading term used in (3.10). Also, `[A^3]O` is no longer just
++`DL'-D'L=0`; second-order coefficients contribute. Thus the first-order proof
++does not bootstrap without a new elimination invariant or normal-form
++complement controlling those higher compensators.
++
++Successor lane scope: start with the full `A`-adic coefficient hierarchy for
++the fixed minimal jet, analyze the `A^2` compensator operator explicitly, and
++only then attempt an induction on maximal `A` degree. Treat any all-family or
++nonzero-`T_0` claim as a separate strengthening.
++
++## 7. Verdict
++
++1. CONFIRMED: the constraint system (1.1)-(1.4) has the correct bracket
++   normalization and even/odd normal form.
++2. CONFIRMED: `OBSTRUCTION[A-DEGREE-ZERO]` follows from the forced `A^0` and
++   `A^1` coefficients.
++3. CONFIRMED: `OBSTRUCTION[A-LINEAR-MINIMAL-JET]` is exhaustive for
++   `A`-degree `<=1`, `p=Z^2`, `r=Z^3-Z`, `T_0=0`; all leading-term and
++   `D=0` branches check. Its stated exclusions do not extend beyond that
++   scope.
++4. CONFIRMED: the degree-8 composition claim is algebraically sound for a
++   landed admissible pair with `[K:C(f,g)]=4`, and is correctly typed as
++   strength evidence rather than an obstruction.
++5. CONFIRMED: the locally finite / locally quasi-finite terminology fork is
++   necessary and matches the structure packet.
++6. CONFIRMED: the no-cap strategic warning is sound. A possible all-degree
++   induction requires new work; the first obstruction to the naive induction
++   appears already at `A`-degree two.
++
++The two obstructions are promotable only as bounded exclusions:
++`A`-degree zero universally, and `A`-degree `<=1` at the simplest minimal jet
++with `T_0=0`. The degree-8 reframe is safe to adopt as routing input: a
++successful admissible pullback would be counterexample-level data, but the
++current report still leaves the higher-`A`, other-family, and nonzero-`T_0`
++construction problem OPEN.
++
++No exit price is asserted.
++
++<!-- BODY-END -->
+
+codex
+Wrote the review report here: [theta-reopen-hostile-review-gpt55-20260831.md](/Users/dc/code/math/jc2/xmodel/theta-reopen-hostile-review-gpt55-20260831.md).
+
+Hash gate passed for all four frozen inputs. Final verdict in the report: all six directed checks are `CONFIRMED`; the two obstructions are promotable only as bounded exclusions, and the degree-8 composition reframe is safe as routing input, not as an obstruction. The file is 1,459 words, has no `charge_basis` declaration, and ends exactly with `<!-- BODY-END -->`.
+diff --git a/xmodel/theta-reopen-hostile-review-gpt55-20260831.md b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..687db0e4b80fc0d3b11fa49afa23c782151238f0
+--- /dev/null
++++ b/xmodel/theta-reopen-hostile-review-gpt55-20260831.md
+@@ -0,0 +1,293 @@
++# THETA-reopen Hostile Review (GPT-5.5)
++
++## 0. Hash Gate
++
++CONFIRMED. I created this report skeleton before the hash gate, as
++requested. I then verified all four frozen read-only inputs under
++`/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.sbAHnD/inputs`.
++The computed SHA-256 digests match the supplied values exactly:
++
++- `4009c3abdc16e972aec121206664a21adc81ff8467dfe8d5a0f561e90f3a86d5`
++  `theta-reopen-explicit-pullback-sol56-20260831.md`
++- `2710e90fdcbf1c2c9f61d6a606cf1e6553de5de65e4899367005433bc4f4e5f5`
++  `block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md`
++- `7a60ff245fc351a99a23815908909327dc6a9644f849a4d3b289079c98488474`
++  `block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.md`
++- `69970f4d2c4a2c5760e116400b1b27426edc41fdf6a8d15936df14cc567855c9`
++  `block-descent-a1-mprime-coordinator-integration-fable5-20260831.md`
++
++Method note: this review used the frozen packet copies only, plus direct
++polynomial differentiation. I did not fetch external literature, run a CAS, edit
++charged inputs, edit canonical ledgers, or inspect `jc2-lean`. Citations below
++use the frozen basenames and line numbers.
++
++## 1. Constraint System (1.1)-(1.4)
++
++CONFIRMED. The normal form is forced by the quotient
++`U^2=A+A^2Z`: every class is uniquely `P(A,Z)+UQ(A,Z)`, matching the
++structure packet's normal-form line (`structure:145-149`) and the THETA
++packet's setup (`theta:43-50`).
++
++The charged normalization is `{f,g}=kappa`, with the standard orientation
++`J(h,k)=h_x k_y-h_y k_x`. Under the source chart
++`A=x^2`, `U=x+x^3y`, `Z=2y+x^2y^2`, the three generator brackets are exactly
++`2A^2`, `4U`, and `2+4AZ`; these are also the brackets recorded in
++`theta:51-55`. The sign is consistent with the local Hamiltonian convention
++`X_f=kappa partial_q`, `X_g=-kappa partial_p` at an etale companion point
++(`structure:198-220`).
++
++For arbitrary `F,G` in the ambient variables,
++
++```text
++{F,G}=2A^2(F_A G_U-F_U G_A)
++     +4U(F_A G_Z-F_Z G_A)
++     +c(F_U G_Z-F_Z G_U),        c=2(1+2AZ).
++```
++
++Putting `f=P+UQ`, `g=R_0+US_0`, and reducing `U^2` to
++`H=A(1+AZ)`, the even part is exactly
++
++```text
++2A^2(P_A S_0-Q(R_0)_A)
+++4H(P_A(S_0)_Z+Q_A(R_0)_Z-P_Z(S_0)_A-Q_Z(R_0)_A)
+++c(Q(R_0)_Z-P_ZS_0),
++```
++
++and the odd coefficient is exactly
++
++```text
++2A^2(Q_A S_0-Q(S_0)_A)
+++4(P_A(R_0)_Z-P_Z(R_0)_A+H(Q_A(S_0)_Z-Q_Z(S_0)_A))
+++c(Q(S_0)_Z-Q_ZS_0).
++```
++
++So (1.3E)/(1.3O) and the coefficient system `E=kappa`, `O=0`
++(`theta:65-86`) are the correct polynomial identities in
++`C[A,Z]`. The first-jet equation
++`2(q_1 r'-p's_1)=kappa` follows by taking the constant `A` coefficient of
++`E` (`theta:105-115`). I see no normalization or even/odd split error.
++
++## 2. Obstruction A-Degree-Zero (3.1)-(3.2)
++
++CONFIRMED. If `P,Q,R_0,S_0` are all in `C[Z]`, every `A`-derivative term in
++`E` vanishes and
++
++```text
++E=2(1+2AZ)(Q(R_0)'-P'S_0).
++```
++
++Let `B(Z)=Q(R_0)'-P'S_0`. The `A^0` coefficient of `E=kappa` gives
++`2B=kappa`, hence `B=kappa/2`. The `A^1` coefficient is then
++`4ZB=2kappa Z`, which is not the zero polynomial because `kappa != 0`.
++This reproduces (3.1)-(3.2) (`theta:327-344`). The obstruction is independent
++of the residue degrees, but only excludes the displayed ruling-degree-zero
++class.
++
++## 3. Obstruction A-Linear Minimal Jet (3.3)-(3.11)
++
++CONFIRMED within its stated scope. Write `K=kappa` and use the ansatz
++
++```text
++P=Z^2+AC,  Q=-K/2+AD,  R_0=Z^3-Z+AE,  S_0=-3KZ/4+AL.
++```
++
++For `[A^0]O`, the first large summand has no contribution, the second gives
++`4(C(3Z^2-1)-2ZE)`, and the last gives
++`2(-K/2)(-3K/4)=3K^2/4`. With `c_*=3K^2/16`, `O=0` is therefore
++
++```text
++2ZE-(3Z^2-1)C=c_*,
++```
++
++which is (3.4). Since `gcd(2Z,3Z^2-1)=1`, all solutions are exactly
++
++```text
++C=c_*+2Z sigma,
++E=(3c_*/2)Z+(3Z^2-1)sigma.
++```
++
++For `[A^1]E`, direct collection before substitution gives
++
++```text
++-3KC +(3KZ/2)C' -KE' +6D(3Z^2-1)-12ZL+2KZ=0.
++```
++
++Substituting the preceding parametrization reduces the first three terms to
++`K sigma'-9KZ sigma-(9/2)Kc_*`, giving exactly (3.5). For `[A^1]O`, direct
++collection gives
++
++```text
++4(CE'-C'E) -(9/2)KD -KL' +(3/2)KZD' +(3/2)K^2Z=0,
++```
++
++equivalently (3.6). For the highest odd coefficient, the actual coefficient is
++`8Z(DL'-D'L)`, so in the domain `C[Z]` it is equivalent to (3.7). These checks
++verify (3.4)-(3.8) term by term (`theta:348-376`).
++
++The degree contradiction also checks. If `D != 0`, then (3.7) gives
++`L=lambda D` in `C(Z)`, hence in `C[Z]`, with constant `lambda`. Let
++`m=deg D` and leading coefficient `d`. In (3.5), the `D` term has leading
++degree `m+2` with coefficient `18d`; no term except `-9KZ sigma` can cancel it.
++Thus `deg sigma=m+1` and `lc(sigma)=2d/K`, which is (3.9). Then in (3.6),
++using `C=c_*+2Zsigma` and `E=(3c_*/2)Z+(3Z^2-1)sigma`, the leading term of
++`C'E-CE'` is
++
++```text
++6s^2(n+1)Z^(2n+2)-6s^2(n+2)Z^(2n+2)
++=-6s^2 Z^(2n+2),
++```
++
++where `s=lc(sigma)` and `n=m+1`. This is the claimed
++`-6lc(sigma)^2 Z^(2m+4)`. The right side of (3.6) has degree at most
++`max(m,1)`, so cancellation is impossible.
++
++If `D=0`, equation (3.5) becomes
++`Ksigma'-9KZsigma-12ZL+2KZ-(9/2)Kc_*=0`. When `sigma` is zero or constant,
++every term except the nonzero constant `-(9/2)Kc_*` is divisible by `Z`. When
++`n=deg sigma>=1`, the same equation forces `deg L=n`; otherwise either
++`-9KZsigma` or `-12ZL` has an uncancelled top degree. Equation (3.6) then has
++left leading term `-6lc(sigma)^2Z^(2n+2)`, while its right side has degree at
++most `max(n-1,1)`. This is again impossible.
++
++The cases `D != 0` and `D=0`, with `sigma` zero/constant/nonconstant in the
++second branch, exhaust all polynomial choices under `A`-degree `<=1` and the
++fixed minimal jet `p=Z^2`, `r=Z^3-Z`, `T_0=0`. The packet's disclaimers are
++correct: this does not cover another point of the minimal residue family,
++nonzero `T_0`, or any `A`-degree `>=2` (`theta:405-410`).
++
++## 4. Degree-8 Composition Claim (3.12)-(3.14)
++
++CONFIRMED as strength evidence, not as an obstruction. With
++`J(h,k)=h_x k_y-h_y k_x`, the displayed substitution (`theta:414-428`;
++`structure:96-98`) gives
++
++```text
++J(x^2,x+x^3y)=(2x)(x^3)-0=2x^4=2A^2,
++```
++
++```text
++J(x^2,2y+x^2y^2)=(2x)(2+2x^2y)=4x(1+x^2y)=4U,
++```
++
++and
++
++```text
++J(x+x^3y,2y+x^2y^2)
++=(1+3x^2y)(2+2x^2y)-x^3(2xy^2)
++=2+8x^2y+4x^4y^2=2+4AZ.
++```
++
++So the source chart pulls the bracket on `R` to the standard plane Jacobian.
++If a landed admissible pair satisfies `{f,g}=kappa`, then its composed pair
++`F=iota(f)`, `G=iota(g)` satisfies `J(F,G)=kappa`.
++
++The cited `[C(x,y):K]=2` is also directly visible. Let
++`K=C(A,U,Z)` inside `C(x,y)`. Since `A=x^2`, `C(x,y)=K(x)` because
++`y=(U/x-1)/A`. Thus the degree is at most two. It is not one: the field
++automorphism
++
++```text
++x |-> -x,        y |-> -y-2/x^2
++```
++
++fixes `A`, `U`, and `Z` but moves `x`, so `x notin K`. Hence
++`[C(x,y):K]=2`. If the charged rank-four condition
++`[K:C(f,g)]=4` is part of admissibility (`theta:132-140`), finite-extension
++multiplicativity gives
++
++```text
++[C(x,y):C(F,G)]=[C(x,y):K][K:C(f,g)]=2*4=8.
++```
++
++A polynomial automorphism would have function-field degree one, so such a
++landed pair would compose to a noninvertible Keller map of geometric degree
++eight. This is safe routing input: it explains the strength of a successful
++higher-`A` construction, but it does not disprove that construction.
++
++## 5. Terminology Fork in Section 6
++
++CONFIRMED. The structure packet says the provisional dynamical theorem is
++about Hamiltonian derivations: nonconstant `X_H` is non-locally-finite exactly
++when `H notin C[A]`, equivalently `Q_H != 0` or `partial_Z P_H != 0`
++(`structure:151-162`). It also gives an independent boundary-valuation route
++to non-local-finiteness (`structure:281-295`).
++
++That is different from the morphism property of `pi|_S`. The connectedness
++packet uses `pi|_S` as etale (`connectedness:73-83`), hence locally
++quasi-finite; the finite map is the separate normalization map
++`Y -> A2`. The THETA packet's section 6 distinction is therefore correct:
++read "locally finite" literally only for the derivations, and "locally
++quasi-finite" for `pi` (`theta:547-557`).
++
++## 6. Strategic Soundness and Successor Lane
++
++CONFIRMED, with the all-degrees induction left OPEN. The report is right that
++finite exhaustion cannot be promoted from the frozen packets: there is no cap
++on `deg_A P,Q,R_0,S_0` or on the off-`A=0` `Z` degrees (`theta:124-128`), and
++the final scope statement keeps all `A`-degree `>=2` strata open
++(`theta:559-569`).
++
++The leading-term mechanism in (3.10) is a plausible pattern, but not yet an
++induction. A promotable induction would have to say something like:
++
++```text
++For the fixed minimal residue point p=Z^2, r=Z^3-Z and T_0=0,
++no finite A-degree polynomial lift solves E=kappa, O=0. More precisely,
++after expanding P,Q,R_0,S_0 in A and eliminating all lower-order coefficient
++conditions, some surviving Wronskian/Bezout leading term in Z has degree
++strictly above every term available on the opposite side.
++```
++
++For the full horn it would have to be stronger still, covering every point of
++the seven-parameter minimal residue family and every nonzero `T_0`.
++
++The naive induction already breaks at `A`-degree two. Write
++`P=Z^2+AC_1+A^2C_2+...` and similarly for `Q,R_0,S_0`. The equation (3.4)
++still constrains `C_1,E_1`, and the displayed (3.5) for `[A^1]E` remains the
++same. But `[A^1]O` no longer gives (3.6); it gains the free second-order term
++
++```text
++2(C_2(3Z^2-1)-2ZE_2)
++```
++
++on the right after division by four and rearrangement. This term can have
++arbitrary `Z` degree and has exactly the kind of Bezout shape that can absorb
++the Wronskian leading term used in (3.10). Also, `[A^3]O` is no longer just
++`DL'-D'L=0`; second-order coefficients contribute. Thus the first-order proof
++does not bootstrap without a new elimination invariant or normal-form
++complement controlling those higher compensators.
++
++Successor lane scope: start with the full `A`-adic coefficient hierarchy for
++the fixed minimal jet, analyze the `A^2` compensator operator explicitly, and
++only then attempt an induction on maximal `A` degree. Treat any all-family or
++nonzero-`T_0` claim as a separate strengthening.
++
++## 7. Verdict
++
++1. CONFIRMED: the constraint system (1.1)-(1.4) has the correct bracket
++   normalization and even/odd normal form.
++2. CONFIRMED: `OBSTRUCTION[A-DEGREE-ZERO]` follows from the forced `A^0` and
++   `A^1` coefficients.
++3. CONFIRMED: `OBSTRUCTION[A-LINEAR-MINIMAL-JET]` is exhaustive for
++   `A`-degree `<=1`, `p=Z^2`, `r=Z^3-Z`, `T_0=0`; all leading-term and
++   `D=0` branches check. Its stated exclusions do not extend beyond that
++   scope.
++4. CONFIRMED: the degree-8 composition claim is algebraically sound for a
++   landed admissible pair with `[K:C(f,g)]=4`, and is correctly typed as
++   strength evidence rather than an obstruction.
++5. CONFIRMED: the locally finite / locally quasi-finite terminology fork is
++   necessary and matches the structure packet.
++6. CONFIRMED: the no-cap strategic warning is sound. A possible all-degree
++   induction requires new work; the first obstruction to the naive induction
++   appears already at `A`-degree two.
++
++The two obstructions are promotable only as bounded exclusions:
++`A`-degree zero universally, and `A`-degree `<=1` at the simplest minimal jet
++with `T_0=0`. The degree-8 reframe is safe to adopt as routing input: a
++successful admissible pullback would be counterexample-level data, but the
++current report still leaves the higher-`A`, other-family, and nonzero-`T_0`
++construction problem OPEN.
++
++No exit price is asserted.
++
++<!-- BODY-END -->
+
+tokens used
+88,944
+Wrote the review report here: [theta-reopen-hostile-review-gpt55-20260831.md](/Users/dc/code/math/jc2/xmodel/theta-reopen-hostile-review-gpt55-20260831.md).
+
+Hash gate passed for all four frozen inputs. Final verdict in the report: all six directed checks are `CONFIRMED`; the two obstructions are promotable only as bounded exclusions, and the degree-8 composition reframe is safe as routing input, not as an obstruction. The file is 1,459 words, has no `charge_basis` declaration, and ends exactly with `<!-- BODY-END -->`.
+DIVERT path=xmodel/theta-reopen-hostile-review-gpt55-20260831.md status=CLEAN body_bytes=11449 body_sha256=26079008ffeba9b94ecfcc79c63690cc232f7f50f655d477835dc26b80f59cd3

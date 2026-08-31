@@ -1,0 +1,15 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start by writing the report skeleton, then verify the charged-input hashes and begin the literature acquisition.Hashes match. Next I’ll locate the three primary papers and write the hash-verification section.I'll fetch the three primary papers and scan the workspace for any already-hashed copies.Deligne’s nodal statement is in hand. Next I’ll extract Nori’s theorems and hunt down Fulton’s three-page note.Nori’s statements are in hand. I’ll pull Fulton and the later surveys on affine complements and tangential double points.I have the sourced statements and the remaining gap. Next I’ll write the full report, filling each section in order.The lemma is **OPEN**. The report is `xmodel/b0-pi1-acquisition-grok46-20260831.md`.
+
+Charged-input hashes matched. Deligne (Bourbaki 543) and Nori (ENS 1983) were acquired and hashed; Fulton’s three-page note was not obtained as a PDF, so only Deligne’s quotation of it is used.
+
+Deligne–Fulton give abelianness for **projective** curves with **ordinary nodes**. That does not apply here: `D̄ ∪ L_∞` is not nodal at infinity (one or two places, intersection multiplicity `d ≥ 2`), and affine double points may be tangential (`A_{2k−1}`). Nori’s `C² > 2r(C)` theorem, including the affine recast after blowing up infinity, still requires ordinary nodes and a transverse meeting with the divisor at infinity.
+
+A sourced partial yes covers a proper subclass: Zariski–Oka’s flex theorem makes `π₁(C² − D)` cyclic when the unique infinite place is a **smooth** point of contact order `d`. That is consecutive-degree polynomial curves, not the whole boxed class.
+
+Standard nonabelian examples (Zariski sextics, tricuspidal quartics, affine cuspidal cubic `B₃`, torus-type sextics, Cogolludo–Elduque) all use unibranch singularities or reducibility, so they are not countermodels.
+
+On the weaker `S₄` form: at an ordinary node the local relation is commutation, which disjoint transpositions satisfy. At an `A_{2k−1}` the local group is `G(2,2k)` (flagged as an inference from Oka’s `y^p − x^q` model); disjoint transpositions satisfy those relations too. Local braid relations therefore do not kill the representation.
+
+**Missing local input:** a Nori-type or van Kampen statement for irreducible affine curves whose singularities are double points of **smooth** branches, tangency allowed, after resolving only the place(s) at infinity — or one irreducible `A¹`/`C^*` curve of that type with nonabelian complement group.
+DIVERT path=xmodel/b0-pi1-acquisition-grok46-20260831.md status=CLEAN body_bytes=21206 body_sha256=cd503e487e3b5277519e4d0668de2d6ca69b0f4002405bfb406cce17df6e3b82
