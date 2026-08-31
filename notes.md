@@ -15598,3 +15598,37 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   still running from 11:35Z.
 - Review-routing note: SHEET-GATE gets the paired two-arm treatment
   (line-by-line gate + countermodel arm) — experiment data point 3.
+
+## 2026-08-31 12:04Z LIVE STATE — HARDENING REVIEW: UNSOUND (P0 TRIAGED); AS109: DISTINCT SEEDS
+
+- Custody-hardening software review (Sol, `3e4b7ee6`, BODY_SEALED):
+  verdict UNSOUND for receipts as custody evidence under a HOSTILE-
+  provider threat model — 8 BLOCKERs (D1 divert accepts post-seal
+  garbage as CLEAN_SEALED; S1 exclusion bypasses; S2 originals
+  readable; S3 adapter/toolchain provenance; R1-R4 evidence-plane
+  writes/forgeability) + 7 MAJORs + a coverage table of untested
+  edges. Coordinator triage: campaign threat model is honest-but-
+  erring providers, so P0 = D1, D2, D3-partial, S1-lexical, S5,
+  R4-partial (these bite on transient provider errors and accidental
+  misuse — D1 directly violates DC's truncation-not-loss
+  requirement). Remaining findings recorded as typed debt; full
+  hostile-provider redesign NOT scheduled (cost/benefit; providers
+  are first-party CLIs). P0 patch lane launched on Sol 12:03Z
+  (unified-diff report; coordinator applies + runs suite).
+  SEMANTIC-REPLAY/v1 trial stays HELD until P0 lands green.
+  Receipts from today's lanes remain valid as good-faith records
+  under the operating threat model; noted, not re-litigated.
+- AS109-D12 seed-provenance reconciliation (Grok, BODY_SEALED):
+  verdict DISTINCT SEEDS — registry of 8 objects (R1 AS3-FIBRE,
+  R2 AS3-W2, R3 TATE-p tower, R4 AS109-FIBRE over F_109, R5
+  AS109-LIFT over Z_109, R6 Hensel consequence of R5, R7
+  underspecified matrix cell = R5 with missing data, R8 char-0
+  residual). Both blind submissions committed silent identifications
+  (Sol fused R4/R5/R7; Grok fused R1/R2 with R3). Only chargeable
+  matrix target: a declared finite-support cell of R5, behind the
+  report's 11-step fail-closed preflight. Status PROVISIONAL
+  (registry/preflight, not a math promotion); different-model check
+  rides with the next matrix charge. Disproof-side matrix remains
+  BLOCKED until a charge sheet passes the preflight.
+- In flight: 6 review/scout lanes (SHEET-GATE paired review, THETA,
+  HF, BUDGET-N, trivial-dicritical registry) + P0 patch lane.
