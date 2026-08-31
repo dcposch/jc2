@@ -1,0 +1,29 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at `xmodel/pi1s4-64-fixed-tuple-opus5-20260831.md` (5,767 words, one `<!-- BODY-END -->`, no exit-price line, no other file written).
+
+## The decision: **NO is unavailable. The braid at infinity does not close row (6,4).**
+
+**What I built.** The cable braid, explicitly. From the Puiseux expansion at infinity I derived the second characteristic exponent `(d+n−β₁)/d = −5/6`, giving 3 tubes of 2, tube braid `δ₃²`, and
+
+```
+ρ_∞ = C₂(δ₃²)·ι,   e(ι) = k₁+k₂+k₃ = −5,   closure = (2,3)-cable of the trefoil.
+```
+
+`e(ρ_∞) = 11` checks four independent ways (factorization count `5+6`; `(d−1)²−2δ_∞`; winding-number sum `16−5`; quasipositive Bennequin genus 3, matching the cable genus and the node-smoothing count). Derivations 1 and 3 use disjoint inputs (`V,δ_aff` vs. `β₁`), so this also independently corroborates the ROW-SWEEP row datum `Δ=(6,4,3)`.
+
+**The solve.** The outer level is coprime `(3,2)`, so Theorem A reruns there: fixedness ⟺ `Π₃ = Π₁` plus the braid relation `Π₁Π₂Π₁ = Π₂Π₁Π₂`. Four cases; three die (all-equal collapse, Klein contradiction, `S₃`-trap). The fourth — `Π₁=Π₃=ρ`, `Π₂=ρv`, `H = A₄` — **survives**, and every member of it generates `S₄`:
+
+```
+T = ( (12), (23), (13), (34), (12), (23) ),  Π = (13)(24),  ⟨T⟩ = S₄.
+```
+
+Exactly 72 such tuples, fully classified. Two global consistency checks pass: the promoted slice identity `d = 2g_L + c(Π) + 2` gives `(c,g_L) = (2,1)`, matching an independent genus computation of the cover's fibre; and `χ_c(Y) = 3` from two stratifications.
+
+**One correction that flips the verdict.** The charged r2 block formalism, read as "`C_g(δ_{d'})` conjugates by the total product `Π`", is wrong — the conjugator is `ΠΠ_{d'}^{-1}`. The `Π` version yields `G = Π²`, kills case (O4), and returns a false NO. This does not disturb r2's `(4,2)` solve (done at strand level). I verified the corrected formula on 400 random tuples and the whole classification by exhaustive enumeration of all 46656 tuples (counts 6/24/72 reproduce the hand cases exactly).
+
+**Sharp new gate.** Solving for general inner exponent: S₄-tuples exist ⟺ `e(ι) ≡ 1 (mod 3)` ⟺ `3 | β₁`. The gate is nonvacuous — it kills `β₁ ∈ {7,11,13}` — but `β₁ = 15` passes it. The `(4,2)` collapse has no analogue: there `n'=1` forced cyclic `H`; here `n'=2` and `H = A₄` is centreless, so A'(3)/(5) are *satisfied*, not violated.
+
+**Scope.** Uses only `(d,n)`, `β₁` (through `e(ι)`), and `e(ρ_∞)` — not the witness curve, node positions, or the braid monodromy factorization. So it covers every three-node `(6,4)` curve with `Δ=(6,4,3)` uniformly, and transfers to the target-equivalent `(8,4)` survivor. Clause (ii) is shown *realizable* (both a tangency band and a disjoint node band sit in `Stab(T)`) but the full factorization question is not settled — that is now the residual, `OPEN[PI1S4-(6,4)-FACTORIZATION]`.
+
+Two successors are named, the second new here: a bounded `B₆` factorization search, and a **fold reduction** — the witness has `p = r²`, so `D` is the image of a *coprime* 3-nodal quartic under `(u,y)↦(u²,y)`, and any `S₄` quotient pulls back to `π₁(C²−(D'∪D'⁻))`, where the promoted coprime theorem applies componentwise. Numerics remain conditional on the unreviewed ROW-SWEEP data; the structural results (the enumeration, the block formula, the mod-3 gate) do not.
+DIVERT path=xmodel/pi1s4-64-fixed-tuple-opus5-20260831.md status=CLEAN body_bytes=34669 body_sha256=a60887501137251f50f1ce7bf8ddc8921b1f22e20a4aebced47ce35699a0fad8

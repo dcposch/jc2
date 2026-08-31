@@ -1,0 +1,13 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll verify the charged-input hashes first, then write the report skeleton and start the six-type analysis from the frozen copies.Hashes match. Writing the report skeleton next, then reading the frozen charged inputs.Skeleton is on disk. Next I’ll read the charged inputs and pull the AM/nodal conventions those types sit on.The six types and the (6,4) template are in the charged files. I’ll now pull the AM conversion, the M-INF review, and the double-point-scheme construction.The even/odd split in `p³−q⁴` changes the condition count; I’ll fetch the AM/Plücker sources and keep expanding the normal form.Admissibility and the even/odd expansion are in hand. Writing section 0, then filling types in order.The six types remain **OPEN**. None is killed and none is attained, so the residual of `OPEN[ROW-(8,6)/(9,6)-NODAL-REALIZATION]` is unchanged.
+
+Report: `xmodel/nodal-realization-86-96-grok46-20260831.md` (charged-input hashes matched). Desk results that stand:
+
+- Admissibility (δ-sequences, semigroups, gap counts, Galindo conversion, clusters, `M_∞`) re-derived and matching the row-sweep.
+- Plücker class is 13 on all four `(8,6)` types and 14 on both `(9,6)` types — consistent, not obstructive.
+- Orevkov/Matsuoka–Sakai cuspidal bounds do not apply (nodes are two-branch).
+- Even/cover loci are out of class: `(8,6)` even functions factor through `t^2`; the `(9,6)` even-odd family is a degree-3 cover of a `(3,2)` cusp. Those are saturations, not kills.
+- Fujimoto–Suzuki–Yokoyama’s one-line Moh citation for `{6,8,3}` is a lead for type `(8,6,3)`, not a kill (Moh JRAM 340 was not obtained).
+
+Each type has an exact msolve-scale job (ring, odd-coefficient ideal of `p^3−q^4` or `p^2−q^3`, open leading remainder, then reduced double-point scheme of length `δ_aff`), with the row-sweep `(6,4,3)` three-node curve as positive control.
+DIVERT path=xmodel/nodal-realization-86-96-grok46-20260831.md status=CLEAN body_bytes=29666 body_sha256=bb26261f16fc62a10c4a3a7d51d98b9c44719d4d978befa391c0f810ba5f4c66
