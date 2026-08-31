@@ -1,0 +1,21 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by writing the report skeleton, verifying the charged-input hashes, and gathering Sage/SIROCCO API docs plus the frozen inputs.Hashes match. Next I’ll write the report skeleton and start reading the charged inputs plus Sage/SIROCCO docs.The hashes match. I’ll keep reading the charged reports for the factorization spec, the 72-tuple count, and the Sage `braid_monodromy` API.I have the Sage 10.8 `braid_monodromy` signature. Next I’ll confirm the affine-curve method, SIROCCO install path, and existing job-driver conventions.I have the API confirmation. Next I’ll write the three job-body files, verify the 72-tuple control with permutation arithmetic, then append the report sections.The 72-control passed (102 fixed, 72 generating). I’ll append the report sections, starting with verification, constraints, and the mathematical target.The shell-script fence hash drifted; I’ll extract the fenced bodies and restore a clean `BODY-END` seal.The shell-script fence was corrupted by a placeholder line. I’ll remove that and re-check the hashes.The job bundle is in `xmodel/braid-prep-row64-grok46-20260831.md`. Charged-input hashes matched (3/3). No Sage/SIROCCO was run here.
+
+**What the bundle is.** A certified-homotopy job for `OPEN[PI1S4-(6,4)-FACTORIZATION]` on the ROW-NF family \(x=r(t)^2\), \(y=q(t)\), targeting **D** (not \(U_6\)). Sage 10.8 `braid_monodromy` (SIROCCO) is the API; docs dated 2025-12-27.
+
+**11 vs 6.** The prompt’s 11 values are \(|\Sigma_u|\) upstairs. Downstairs \(|\Sigma_x|=6\) (ZVK-U6 §2.2). Sage therefore returns 6 geometric-basis braids: one stacked \(x=0\) factor (three disjoint half-twists) plus 2 tangencies plus 3 nodes, i.e. \(5\times\sigma+3\times\sigma^2\) after splitting. Members: \((b,c)=(0,1)\) (\(j=0\)) and \((1,1)\) (\(j=1\)). \(j=-27/4\) is excluded, not run.
+
+**File bodies (SHA-256 of the fenced blocks):**
+
+```text
+d45cd9e3c1458918850fe05563ed18fb2b1af525e1cde495c271399f823bfa2b  braid_monodromy_row64.sage
+b191403ba378f201003dc295d6b4633629d56fe17f93358584083505624b290c  check_s4_tuples.py
+f4c56caf398b0ec5d25b27541222c651def7f7d5a266ee36ade0ce967d75c070  run_braid_job.sh
+```
+
+**Checker control (permutation arithmetic only, not CAS):** \(\rho_\infty\)-only positive control returned **102 fixed / 72 generating**, matching FIXED-TUPLE §5.4. Negative control \(\sigma_1\): 6720, distinct set.
+
+**AWS.** `run_braid_job.sh` refuses SIROCCO unless the host is Amazon EC2. Ubuntu install is conda-forge `sage` + `sagemath-sirocco` (or `sage -i sirocco`); not apt sagemath. Caps: 12 h wall, 32 GiB.
+
+This does not decide the OPEN. A later 0-survivor count with product \(|e|=11\) and a 6-cycle is a combinatorial NO; a positive count is a floor, not \(\pi_1(\mathbb{C}^2-D)\twoheadrightarrow S_4\).
+DIVERT path=xmodel/braid-prep-row64-grok46-20260831.md status=CLEAN body_bytes=87230 body_sha256=64e451b44a421ca8efbd9d5fd553fd43cc2fb7afe6415ab760aab9ac47c27ef4

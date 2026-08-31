@@ -16163,3 +16163,33 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   again not followed (the date printed AFTER the heredoc was
   composed). New mechanical rule: run `date -u` as a SEPARATE
   command and only then compose the block.
+
+## 2026-08-31 23:17Z LIVE STATE — WAVE 15 IN; BRAID JOB DEPLOYING ON BOX03
+
+- NONMONOGENIC (Sol): honest split — the purely-local four-
+  coefficient invariant CANNOT forbid discriminant order 5 (REFUTED
+  by explicit construction (3.5)); freeness does not force a unit
+  value (genuine obstruction (4.1)-(4.4), not row-shaped); the
+  monogenic-resolvent KILL stands conditional; emptiness of the
+  cage (5.1) OPEN. Net: the triple-cover route stays conditional —
+  the braid-monodromy computation is now the primary decider.
+- TRIPLE-COVER-CLOSE review (GPT-5.5): all CONFIRMED at scope —
+  cancellation lemma verified (no residual), (7.1) is the right
+  cage, monogenic no-go promotable conditional.
+- ZVK-U6 review (Grok): ROW-NF CONFIRMED (gap filled: the three
+  pairs are ordinary nodes since D' has p_a=3 and no cusp);
+  beta_1=15 confirmed; the "exactly three commutations" slogan
+  REFUSED as stated with a legitimate GAP[BETA0-TUBE-POSITION]
+  typed (the 72 cable-fixed and 96 downstairs tuple sets are
+  incommensurable without it); the STRONG braid-monodromy
+  computation decides both open tuple problems.
+- BRAID-PREP (Grok, 87k): 3-file bundle, API-pinned to fetched Sage
+  10.8 docs, typed flag lists, acceptance criteria (selftest must
+  reproduce the promoted 72; precheck degree/irreducibility/nodes;
+  |e|=11 six-cycle product). Extracted, 3/3 manifest hashes verified
+  locally AND on Box03. Sage+sirocco conda install running on Box03;
+  chained watcher will fire the job (selftest+precheck+two members)
+  when the install lands. msolve suite r5 continues concurrently.
+- Wave 15 banked. Reviews all positive; integration #5 will bind
+  wave-14+15 verdicts when the acceleration wave and the two AWS
+  jobs land.
