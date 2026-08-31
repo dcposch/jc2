@@ -676,3 +676,29 @@ blocks). `COORDINATION.md` changes only for genuine protocol, gate, or
 roster changes such as this one. The refresh blocks accumulated above remain
 historical provenance and may be moved to an archive file in a dedicated
 compaction atom without changing any hash-pinned packet's git history.
+
+## Lane report contract amendment: seal-at-completion (2026-08-31 17:35Z)
+
+Two lanes returned sealed skeletons on 2026-08-31 (a provider ended its
+turn after writing the skeleton; a 128K-output-cap kill mid-response),
+because the previous template had lanes write the `<!-- BODY-END -->`
+seal into the initial skeleton — making `report_state=BODY_SEALED`
+unable to distinguish a finished report from a crashed one.
+
+Binding contract for every future lane prompt:
+
+1. The skeleton written as the lane's first action MUST NOT contain the
+   `<!-- BODY-END -->` marker.
+2. Sections are appended as separate bounded writes (target under
+   ~1,500 words per write; never the whole report in one response).
+3. The standalone `<!-- BODY-END -->` line is appended only after the
+   final section is on disk, with nothing after it.
+4. If the budget runs short: finish the current section, type every
+   remaining section OPEN in one short paragraph each, then seal.
+
+Under this contract, `PARTIAL_NO_MARKER` correctly identifies crashed
+or under-delivered lanes, and the divert machinery banks their partial
+content. Coordinator-side: a `BODY_SEALED` receipt no longer implies
+substance; harvest still requires reading the report. Queued ops debt
+(nonblocking): a divert heuristic flagging sealed reports whose
+sections are empty.
