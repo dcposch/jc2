@@ -15688,3 +15688,9 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   the live smoke test (expect `adapter_exit_code` field present).
 - In flight: B0 (Opus, from 12:31Z), THETA-reopen (Sol, 12:31Z),
   SEMANTIC-REPLAY (Sol, 13:20Z). Next quiet round ~23:26Z.
+
+- CORRECTION (observed 2026-08-31T13:17Z): the previous LIVE STATE
+  header reads "13:22Z" but the observed `date -u` at stamping was
+  13:17Z; the header timestamp was projected, not observed. Content
+  unaffected. (Recurring error class; rule remains: run `date -u`
+  and transcribe BEFORE composing the header.)
