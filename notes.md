@@ -15983,3 +15983,36 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   jobs to be spec'd for AWS if needed). Watcher live.
 - If FIXED-TUPLE returns NO and the six types die: B0 closes at N=4
   unconditionally and rank-four (M) completes in both classes.
+
+## 2026-08-31 20:35Z LIVE STATE — INFINITY BRAID CANNOT CLOSE (6,4); TWO BRAID-FREE KILL ROUTES FIRED; AWS SPECS READY
+
+- ROW-SWEEP review (Grok, `64878fe8`): ALL CONFIRMED — the four
+  kills promote ((6,3) tangentials by triangular reduction to the
+  coprime theorem; (8,2),(9,3) by (M-INF)); the four OPENs stand.
+- FIXED-TUPLE (Opus, `a6088750`, PROVISIONAL): Theorem (6,4)-ρ∞ —
+  ρ_∞-fixed generating transposition 6-tuples exist iff 3|β₁; at
+  β₁=15 exactly 72, fully explicit; hand-verified witness +
+  independent enumeration of all 46656. The (4,2) collapse is
+  STRUCTURALLY ABSENT at (6,4) (outer level coprime (3,2), tube
+  group A_4 centreless). So the infinity braid alone cannot kill
+  the row — but the lane produced two braid-free reductions:
+  FOLD-REDUCTION (witness has p=r²: D is the fold image of a
+  COPRIME 3-nodal (4,3) quartic with abelian complement; every S_4
+  rep on D restricts to the two-component union D' ∪ D'⁻) and
+  TRIPLE-COVER (S_4→S_3 resolvent ⟹ global cubic z³+az+b with
+  −(4a³+27b²)=c·f, deg a<=2, deg b<=3 — leading forms must satisfy
+  4a₂³+27b₃²=c·L⁶).
+- NODAL-REALIZATION (Grok, `3985fbed`): all six (8,6)/(9,6) types
+  OPEN with COMPLETE finite-computation specs (msolve-scale ideals,
+  9-11 vars, saturations, positive control (6,4,3), negative
+  control gcd-2) — exactly the shape for AWS jobs per policy.
+- Wave 13 launched 20:33Z: Opus FOLD-REDUCTION (6h — named most
+  likely to decide the row; N-A on the two-component union); Sol
+  TRIPLE-COVER (5h — the binary-form discriminant identity); Sol
+  hostile review of FIXED-TUPLE (4h — gates the 72-tuple theorem +
+  both reduction proofs); Grok MSOLVE-PREP (4h — full job bundle
+  for the six ideals + controls; coordinator will launch on AWS
+  after extraction). Watcher live.
+- Note: if EITHER braid-free route kills the row, (8,4) dies with
+  it (target-equivalence), leaving only the six AWS-decidable types
+  between the campaign and unconditional B0 at N=4.
