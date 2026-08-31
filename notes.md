@@ -15886,3 +15886,34 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   N=4 unconditionally => rank-four (M) complete in both classes.
 - Clocks: 23:26Z quiet-round decision upcoming; day-end PROGRESS
   update due near 00:00Z.
+
+## 2026-08-31 18:44Z LIVE STATE — WAVE 9 IN: RESIDUAL SHARPENED TO d>=6 gcd>=2; (M-INF) HALF-PROVED; WAVE 10 FIRED
+
+- Residual-r2 review (Sol, `aa41551f`): PROMOTE-AS-CORRECTED with
+  SHARPENING — closure extends to deg D_1 <= 5; a surviving residual
+  needs gcd(d,n)>=2 AND d>=6. (4,2) double-kill confirmed; scalar/gap
+  mechanism split (identities promoted; general bound HELD; the (6,4)
+  proof REFUTED — later repaired by the M-INF lane); block theorem
+  A'(1)-(4) promoted, A'(5) GAP with a stated repair.
+- D1-DEGREE (Sol, `0549dfaf`, PROVISIONAL): no finite raw-degree
+  bound exists — deg D_1 is unbounded under target automorphisms with
+  N=4 fixed; invariant phrasing is min over Aut(A^2). Unconditional
+  constraints on an escape: g=gcd(d,n)>=2; shapes (u,1)/(odd
+  u,2)/(4,3); d=2g_L+c(Pi)+2; g <= gcd(deg P,deg Q)-2 (a constraint
+  on the Keller map!); Chau-filter list through d<=9; coprime
+  intermediate kill-list reduces to (4,3).
+- M-INF (Grok, `084346b5`, PROVISIONAL): Piece 1 PROVED — the
+  embedded-resolution identity M_emb = mult + beta_h - 1 holds for
+  every plane branch, so the (M-INF) reduction is an EQUIVALENCE; the
+  (6,2) nodal row upgraded to proof. Piece 2 (beta_h <= 2d+n-2) OPEN
+  at d>=8 with the exact conversion break typed; a possible (8,6)
+  threat via <8,2,31> flagged as UNREALIZED (no genus-0 realization
+  shown). Nodal noncoprime closure fires through d<=7.
+- NET RESIDUAL CAGE at N=4 (all PROVISIONAL pending wave-10 reviews):
+  tangential noncoprime at d>=6, or nodal noncoprime at d>=8, under
+  all structural constraints. Everything else is closed.
+- Wave 10 launched 18:42Z: GPT-5.5 review of D1-DEGREE (3h); Sol
+  review of M-INF (3h); OPUS flagship NORI-BC (6h: extend Nori 3.27
+  to B(C)>0 through the tacnode obstruction, or build the
+  equisingular-at-infinity nodalization stratum — either closes
+  tangential-noncoprime wherever (M-INF) is verified). Watcher live.
