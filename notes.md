@@ -15666,3 +15666,25 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   gates.
 - In flight: B0 (Opus), THETA-reopen (Sol), P0 custody patch (Sol,
   from 12:03Z). Next quiet full round ~23:26Z. Fleet: box01 only.
+
+## 2026-08-31 13:22Z LIVE STATE — P0 CUSTODY PATCH APPLIED GREEN; SEMANTIC-REPLAY BUILD FIRED
+
+- P0 patch lane (Sol, BODY_SEALED, 41k report) delivered a clean
+  unified diff for D1 (canonical-seal-only CLEAN_SEALED; suffix bytes
+  divert), D2 (UNTERMINATED_MARKER typed, rc 7), D3-partial (no raw
+  stranding; reread-reclassify before replace), S1-lexical (LC_ALL=C
+  bytewise, `.`/absolute rejected, case-folded exclusion+uniqueness,
+  symlink-component walker), S5 (uniform rc 7 + additive
+  `adapter_exit_code` receipt field), R4-partial (control-char path
+  rejection) + 16 new/changed tests. Applied at 13:15Z; full ops suite
+  102/102 in three interpreter modes (one artifact_finalize message
+  assertion relaxed: post-seal tamper now refused by the stale-hash
+  path first — equally fail-closed). Commit pushed. Remaining review
+  findings stay typed debt (hostile-provider scope).
+- SEMANTIC-REPLAY/v1 build lane launched on Sol 13:20Z (3h): replay-
+  certificate schema + ops/replay_gate.py + tests; acceptance =
+  quarantined 16-row ledger FAILS, reviewed conductor census PASSES.
+  This is the first launch under the PATCHED lane.sh — its receipt is
+  the live smoke test (expect `adapter_exit_code` field present).
+- In flight: B0 (Opus, from 12:31Z), THETA-reopen (Sol, 12:31Z),
+  SEMANTIC-REPLAY (Sol, 13:20Z). Next quiet round ~23:26Z.
