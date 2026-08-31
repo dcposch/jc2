@@ -46,6 +46,8 @@ ideal over either `Q` or a named prime field (composite characteristics are
 rejected).  `aws_mu2_d6_run.sh` is an AWS-only, source-hash- and git-basis-
 pinned, memory-capped runner.  A target-Jacobian-`3` mutation must return the
 unit ideal because the normalized first jet fixes the constant term at `2`.
+`launch_mu2_d6_lane.sh` supplies a Linux `setsid`/`nohup` boundary so an
+orchestrator exit does not cancel the remote computation.
 
 The first result to inspect is the exact parameter ideal and its reduced
 Groebner basis.  A positive-dimensional solution set is expected to contain
