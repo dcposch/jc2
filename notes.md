@@ -16156,3 +16156,10 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   2 Sol, 1 GPT-5.5, 5 Grok... recount: wave15 = Sol nonmonogenic,
   5.5 review, Grok zvk review, Grok braid-prep; accel = Opus, Grok
   x3) + Box03 suite. All seats saturated except Fable (coordinating).
+
+- CORRECTION (observed 2026-08-31T23:12Z): the previous block's
+  header timestamp "22:58Z" was projected; observed stamping time
+  was 23:11Z. Recurrence 6 — the copy-from-observed-output rule was
+  again not followed (the date printed AFTER the heredoc was
+  composed). New mechanical rule: run `date -u` as a SEPARATE
+  command and only then compose the block.
