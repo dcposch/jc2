@@ -5,6 +5,46 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **RANK-FOUR GENUS-THREE/FOUR PROMOTIONS; HIGHER GENUS LADDER
+> PROVISIONAL (2026-08-31 06:55Z).** Integration
+> `2f28d30fb0cf568d007ed1f77f29e5917c8c2933e002c78e26620bc49d92dd6b`
+> (body `f43de5c8...`, manifest `dd07c482...`) promotes the complete
+> irreducible genus-three charged row after independent Fable and Opus
+> reviews. Integration
+> `0ffb6f82df1fd0907384896833d0a04d89f1082f8069f72ec7d968172331fd66`
+> (body `01a429d2...`, manifest `a0f2a489...`) promotes the genus-four
+> `b1=1` obstruction after Grok review. Both require reduced coordinate
+> presentations obtained by triangular target shears; raw redundant delta
+> sequences are not separate embeddings. Exact producers `e802ab6b...` and
+> `1500eeb24e1a9f4b2d27daeca85f6ed735a962ae2f7d26e8f923f38ea7d1de7a`
+> provisionally exclude conductors `10,16,22,28`, equivalently
+> `Delta_aff notin {5,8,11,14}`, only in the charged irreducible one-place
+> quartic-transposition class. Their different-model review is owed: the
+> completed Grok output for conductors 10/16 is preserved byte-identically
+> but quarantined for placing 274 non-whitespace bytes after `BODY-END`.
+>
+> **ONE-CUSP POISSON NARROWING PROVISIONAL; NO HORN EXCLUSION
+> (2026-08-31 06:55Z).** Sealed producer
+> `cd27b7f6687103fae0fc4e5fe19772e0f8e62939d73a655ebf04e57905ddba05`
+> (body `d25cf003...`, manifest `a255cf39...`) proves
+> `X_H` locally finite iff LND iff `H in C[A]`, forces two non-locally-finite
+> Hamiltonian flows in a hypothetical Keller pair, and excludes `A1` and
+> `C*` generic coordinate fibres. It does not prove arbitrary Hamiltonian
+> slices locally finite, preserve the ruling under every etale selfmap, or
+> close the wild mixed/mixed hyperbolic horn. Its exact negative controls
+> invalidate Picard, ML/Derksen, and ruling-functorial shortcuts.
+>
+> **D8 SEARCH RETIRED WITHOUT A CAS VERDICT; QUADRATIC DELTA FLOOR
+> CORRECTED (2026-08-31 06:55Z).** `RESULT.md` full `531087fb...` records no
+> Singular result: the corrected generator counts are `57/53` and `58/54`,
+> and every AWS lane failed closed before elimination. Moh's degree-100
+> theorem independently removes the bounded degree-eight counterexample cell.
+> Fable's proposed general quadratic floor is refuted by the promoted
+> `(9,6,2)` control, whose infinity knot has bridge six and genus four. The
+> safe general salvage is only `Delta_aff>=ceil((d-1)/2)`; the stronger
+> quadratic statement remains valid for the pure torus, not arbitrary
+> iterated-cable, case.
+
 > **ALL-DEGREE NONTRIVIAL-BRANCH THEOREM PROMOTED; ONE-NODE MERIDIONAL
 > OBSTRUCTION PROVISIONAL (2026-08-30 23:06Z).** Fable's independent review,
 > the primary Chau source, and coordinator integration

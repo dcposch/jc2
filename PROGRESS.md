@@ -5,6 +5,46 @@ day or inserts the completed day directly below this preamble (see
 `COORDINATION.md`). Detail lives in `notes.md` (tick-level) and `AUDIT.md`
 (promotion ledger); historical entries are not live policy or queue state.
 
+## 2026-08-31
+
+> **THE COMPLETE IRREDUCIBLE GENUS-THREE AND GENUS-FOUR `b1=1`
+> RANK-FOUR ROWS ARE PROMOTED EMPTY (06:55Z).** Binding integrations
+> `2f28d30f...` and `0ffb6f82...`, backed by independent Fable/Opus and Grok
+> reviews, respectively, make triangular target reduction and the actual
+> degree-three projection interface explicit. In the charged irreducible,
+> one-place, transposition-monodromy `S4` class, the genus-three row forces
+> `Delta_aff>=4`; at `Delta_aff=4`, the sole coloring survivor `(9,6,2)` has
+> four normalization pairs, not `b1=1`. Stop these two rows.
+>
+> **THE EXACT GENUS LADDER NOW REACHES CONDUCTOR 28, WITH FOUR
+> PROVISIONAL GAPS (06:55Z).** Producer `e802ab6b...` excludes conductors 10
+> and 16, while sealed extension `1500eeb2...` uses the split
+> `V4->S4->S3` and exact `F3`/`F2` linear algebra to exclude conductors 22
+> and 28. Thus `Delta_aff notin {5,8,11,14}` provisionally in the same
+> charged class. Explicit survivors at adjacent conductors prevent monotone
+> extrapolation. The Grok review of the first pair was quarantined because
+> its raw output violated the seal boundary; different-model review remains
+> owed for the ladder.
+>
+> **THE ONE-CUSP HORN IS NARROWED TO TWO WILD HYPERBOLIC FLOWS
+> (06:55Z).** Sealed packet `cd27b7f6...` proves on
+> `R=C[A,U,Z]/(U^2-A-A^2Z)` that `X_H` is locally finite iff LND iff
+> `H in C[A]`. A hypothetical quartic Keller pair therefore has two
+> non-locally-finite Hamiltonian flows; cofinite image and the exact
+> degree-four fibre ledger force both generic coordinate fibres to be neither
+> `A1` nor `C*`. This is provisional and does not exclude the remaining wild
+> mixed/mixed horn.
+>
+> **THE DEGREE-EIGHT D8 COEFFICIENT SEARCH IS RETIRED, AND THE 05:12Z
+> IDEATION ROUND IS CLOSED DEGRADED (06:55Z).** The D8 packet now records the
+> corrected raw/unique equation counts `57/53` and `58/54`; all AWS attempts
+> failed closed before Singular, and Moh's degree-at-most-100 theorem makes a
+> bounded degree-eight counterexample search redundant. All 79 system tests
+> pass under normal Python, `-O`, and `-OO`. Synthesis `031a0c39...` closes
+> the round but explicitly records that no separate blind Sol-5.6 scan was
+> frozen. The next quiet full-round floor is `2026-08-31T18:54:51Z`; the web
+> backstop remains `2026-09-01T04:54Z`.
+
 ## 2026-08-30
 
 > **ALL-DEGREE BRANCH TOPOLOGY PROMOTED; THE SOLE-ORDINARY-NODE SIMPLE-

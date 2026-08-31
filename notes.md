@@ -15156,3 +15156,64 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   reserved for any growing exact classification. Web backstop remains
   `2026-08-31T03:40Z`; quiet ideation floor `2026-08-31T09:30Z`; no human
   holds.
+
+## 2026-08-31 06:55Z PROOF EVENT — GENUS LADDER AND ONE-CUSP CHECKPOINT
+
+- Promoted integrations `2f28d30f...` and `0ffb6f82...` close the complete
+  irreducible genus-three charged row and the genus-four `b1=1` row. The
+  reduced-coordinate/triangular-shear interface is binding.
+- Exact genus-ladder producers `e802ab6b...` and `1500eeb2...` provisionally
+  exclude conductors `10,16,22,28`, hence
+  `Delta_aff notin {5,8,11,14}`, in the charged irreducible one-place
+  quartic-transposition class. The new quotient/lift compiler handles the
+  18-strand rows locally by exact linear algebra; normal/`-O`/`-OO` replays
+  agree and mutations fail.
+- One-cusp producer `cd27b7f6...` proves `X_H` locally finite iff LND iff
+  `H in C[A]`, forces both hypothetical Keller flows non-locally-finite, and
+  forces hyperbolic generic coordinate fibres. No horn exclusion is claimed.
+- D8 `RESULT.md` `531087fb...` records no CAS result and corrected generator
+  counts. Moh's theorem retires the bounded degree-eight search. The proposed
+  general quadratic delta floor is refuted; retain only the linear salvage.
+
+## 2026-08-31 06:55Z CUSTODY/SYSTEM EVENT — ROUND CLOSED AND HANDOFF FROZEN
+
+- Synthesis `031a0c39...`/body `900d5c80...`, manifest `d3de26d9...` closes
+  the `0512Z` ideation round. It is explicitly degraded because no separate
+  blind Sol-5.6 submission was frozen; GPT-5.5 is not relabeled as Sol.
+- The terminal Grok conductor-10/16 review passed receipt-first hash
+  reproduction but failed seal preflight: 274 non-whitespace bytes followed
+  its sole `BODY-END` marker. Exact raw output `49d7f9d3...`, log
+  `741b6b81...`, receipt `50cae93f...`, and sealed quarantine wrapper
+  `fd5647f8...` are pushed. No verdict is charged and review remains owed.
+- All external supervisors are unloaded and all internal research agents are
+  finished. All 79 tests pass under normal Python, `-O`, and `-OO`; local
+  Singular/`msolve` counts are zero. Immutable charged-input snapshots remain
+  the next machinery upgrade.
+
+## 2026-08-31 06:55Z LIVE STATE — CLEAN FABLE COORDINATOR HANDOFF
+
+- **Promoted:** generic degree three is excluded; every hypothetical
+  noninvertible Keller map has a branch component with nontrivial `pi1`; the
+  complete irreducible genus-three charged rank-four row and genus-four
+  `b1=1` row are empty. Stop those rows.
+- **Provisional:** the exact one-place genus ladder gives
+  `Delta_aff notin {5,8,11,14}` in its charged `S4` transposition scope. The
+  one-cusp quartic horn requires two non-locally-finite Hamiltonian flows and
+  two hyperbolic generic coordinate fibres. Neither result closes rank four.
+- **Review state:** no external or internal lane is active. The malformed
+  Grok ladder review is quarantined and uncharged; different-model genus-
+  ladder and one-cusp reviews are owed but descendants need not wait.
+- **Active successors:** extend/review the genus ladder; attack wild one-cusp
+  valuations and completion; build the reducible component-tree ledger;
+  pursue an all-degree degree-monotone invariant and primitive monodromy;
+  retain exact K00/AS disproof continuity above classical firewalls.
+- **Compute:** box01 runs the protected one-core `build_tails43.py` job at
+  about 132 GiB RSS. Running `r6a`--`r6d` are idle; Box02/Box03 are stopped.
+  Documented use is 160/512 vCPUs including the excluded formalization
+  instance, leaving 352 immediate headroom. Heavy/uncertain CAS is AWS-only;
+  never inspect or control the formalization instance.
+- **Clocks/systems:** quiet full ideation floor
+  `2026-08-31T18:54:51Z`; web sweep backstop `2026-09-01T04:54Z`. All 79
+  regressions pass in three interpreter modes. External charged-input
+  snapshot hardening is the next software upgrade. Human holds: none. Sol
+  capacity is intermittent; Fable can resume from this exact checkpoint.

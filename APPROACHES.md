@@ -7,6 +7,33 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-08-31 06:55Z — genus ladder and wild one-cusp horn)
+
+- **Stop the promoted genus-three and genus-four `b1=1` rows.** Their binding
+  integrations are complete. Carry forward the reduced-presentation rule:
+  triangular target shears precede every delta-sequence census.
+- **Make the exact genus ladder the primary rank-four irreducible screen.**
+  The `S4->S3` quotient and affine `V4` lift turn exponential coloring into
+  exact `F3`/`F2` linear algebra. Conductors `10,16,22,28` are provisional
+  exclusions; adjacent survivors show there is no monotone genus shortcut.
+  Extend the compiler while different-model review runs asynchronously.
+- **Attack the one-cusp residue as a wild hyperbolic Hamiltonian problem.**
+  Locally finite/LND flows and `A1` or `C*` generic fibres are now excluded.
+  The live targets are valuation structure of two non-locally-finite flows,
+  the exact degree-four completion ledger, and the inverse-Kummer/index route.
+  Picard, ML/Derksen, and ruling preservation alone are disproved shortcuts.
+- **Retain reducible, multiple-place, and primitive/no-proper-block fronts.**
+  The irreducible one-place census does not transfer through the
+  normalization-fibre formula and does not yield a cofinal degree bound.
+- **Retire blind D8 Gröbner work and the general quadratic delta-floor idea.**
+  Moh already removes bounded degree eight, and the `(9,6,2)` curve refutes
+  the iterated-cable quadratic step. Keep only the linear meridional-rank
+  floor unless a new degree-monotone invariant is proved.
+- **Keep disproof continuity exact and source-derived.** K00/formal-germ
+  algebraization, fixed-support AS/Witt lifting, and sparse searches above
+  classical degree firewalls remain orthogonal live avenues. Heavy or
+  uncertain computation remains AWS-only.
+
 ## Superseding strategy overlay (2026-08-30 23:06Z — all-degree one-node obstruction and saturated quartic horns)
 
 - **Exploit the polynomial knot at infinity, now across degrees.** The reviewed
