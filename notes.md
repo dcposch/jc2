@@ -15378,3 +15378,40 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   is now `08:05Z`, harvest LIVE STATE `08:30Z`, compaction event `08:36Z`,
   and the AUDIT/PROGRESS harvest stamps read `~08:25Z`. Future blocks use
   observed `date -u` output only.
+
+## 2026-08-31 08:55Z LIVE STATE — WAVE-1 FULLY HARVESTED; LADDER SATURATES AT 28
+
+- Basis: `5cef3595` plus this notes commit. All six wave-1 lanes terminal
+  DONE/BODY_SEALED; the hardened launcher is now seven-for-seven on
+  receipts with zero delivery failures.
+- **New provisional result (Grok census `76fb3973...`, replay
+  `bfb746d5...` coordinator-verified in three modes with 4/4 mutations):
+  the genus-ladder exclusion pattern STOPS at conductor 28.** Conductor 34
+  keeps the unique survivor `(12,8,14,15)` (count 72) and conductor 40
+  keeps three survivors, so `Delta_aff = 17, 20` are NOT excluded and
+  `C=10+6k` is a four-rung coincidence, not a theorem. Zero-count rows at
+  30--40 remain row-level exclusions. Strategy consequence, coalesced as a
+  micro-round: ladder extension past 40 drops to low priority; the
+  degree-monotone-invariant hunt and the (2.3) identity rise. GPT-5.5
+  hostile review launched (Grok produced; carve-out applies).
+- **Sol valuation packet `2710e90f...` banked:** exact completion
+  `C[Z][[u]]` with bracket normal form; both flows formally rectified at
+  the cusp companion (no local invariant sees wildness); an independent
+  boundary-valuation proof (1.15) of non-local-finiteness not using the
+  Aut/LND route; exact flow divisor (2.1) and iterate laws on completed
+  generic fibres; necessary tuple table `d_h=2*gamma_h+2+r_h` with
+  cheapest discriminator `Theta_h=d_h-r_h-2`, needing one SNC boundary
+  model as the next datum. Grok charged gate launched, and — first data
+  point of the review experiment — an uncharged second-Sol pre-review
+  launched blind in parallel.
+- Active lanes (six): Opus (2.3) identity primary; Sol component-tree
+  ledger review; Grok R1 splice census (wave 2, watcher live); GPT-5.5
+  c30--40 census review; Grok valuation gate; Sol valuation pre-review
+  (wave 3, watcher live).
+- Provisional claims: component-tree ledger (Sol review running);
+  c30--40 census (GPT-5.5 review running); valuation packet (Grok gate
+  running). Review debt: hardening software packet only (nonblocking).
+- Clocks: ideation floor `18:54:51Z` — the saturation result will be
+  review-resolved well before it and folds into that round's packet; web
+  backstop `2026-09-01T04:54Z`; systems checkpoint `2026-09-02T08:00Z`.
+  Fleet: box01 protected job only. Holds/human gates: none.
