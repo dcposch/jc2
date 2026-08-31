@@ -5,6 +5,33 @@ This file began as the soundness audit of GGV Proposition 4.3 subcase (2), the
 is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 `APPROACHES.md` for those roles.
 
+> **THE (M′) FAMILY IS PROMOTED AND THE RANK-FOUR A₄ HORN IS CLOSED;
+> ONE BIT (B0) REMAINS (2026-08-31 ~12:29Z).** Binding integration
+> `69970f4d2c4a2c57...` (body `35a7f8ad...`, basis `02490efa`).
+> Under a paired two-arm review (Sol gate `21bbc70c` + Grok
+> countermodel arm `d091c814`), the SHEET-GATE repair of the parked
+> Euler-inertia identity is promoted: (E), the covering lemma
+> (degree `a`), the conversion law `a_p=s_p-b_p`, Lemma 4.2
+> `e=1+v(dx∧dy)`, the ceiling `1<=a<=d-2` per branch component, the
+> degree floor `d>=3`, and (M′)/(M′-def) as conditional theorems
+> under explicit (H2)+(H3), with one-node exclusion, smooth law,
+> node bound (`s>=1` required — unqualified form REFUTED), and
+> `a`-quota. The rank-four 3-cycle (A₄) horn is CLOSED outright:
+> budget exhaustion forces `A_F=B` and `b=0`, so (M) holds verbatim
+> there and every cusp has `H_p=Z/3`. The weighted component bound
+> `2m_nt+m_triv<=N-1` is promoted at ALL degrees, double-tracked
+> (SHEET-GATE geometry + BUDGET-N Orevkov/Chau source-typing, Grok
+> review `493d8f7e` with eight binding scope labels; strong `2m<=N-1`
+> NOT promoted). The transposition horn is PROVISIONAL on exactly one
+> bit, question B0: no Keller map has an affine-image dicritical with
+> `mu=1` (`v(dx∧dy)=0`). Literature registry `264ddba8`: ABSENT from
+> primary sources; three typed attack routes. THETA Stage-0 OPEN
+> confirmed both directions (review `cad4a29d`, reopen gate slimmed);
+> HF `(6,4,9)` candidate OPEN narrowed (review `b2ae06bd` closes the
+> singularity-completeness gap by delta budget and quarantines the
+> row-level Newton-face claim). Corrections binding: see integration
+> §4.
+
 > **THE RANK-FOUR BRANCH IS IRREDUCIBLE — REDUCIBLE RANK FOUR IS CLOSED
 > BY THEOREM (2026-08-31 ~10:32Z).** Binding integration
 > `221c2df9ebb4832d...` (body `8997c68d...`, basis `cd875997`) promotes

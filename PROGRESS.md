@@ -7,6 +7,39 @@ day or inserts the completed day directly below this preamble (see
 
 ## 2026-08-31
 
+> **THE PARKED IDENTITY IS REPAIRED AND PROMOTED, THE RANK-FOUR A₄ HORN
+> IS CLOSED, AND THE WHOLE PROGRAMME CONVERGES ON ONE BIT (11:30--12:30Z).**
+> The four seats returned within 25 minutes, sealed. Opus's SHEET-GATE
+> proved the round's broken identity in corrected form: (M′) — affine
+> fibre counts replacing monodromy counts — is a theorem under explicit
+> (H2)+(H3), the ceiling `1<=a<=d-2` survives, and with it the one-node
+> exclusion, smooth law, node bound, and quota. A paired two-arm review
+> (Sol line-by-line gate + Grok countermodel hunt) confirmed every
+> load-bearing lemma, caught a custody gap (H2 is promoted for the
+> charged branch, not all of `A_F`), refuted two advertised equivalences
+> and an unqualified node bound, and ratified the promotion. The
+> rank-four 3-cycle (A₄) class is CLOSED: budget exhaustion forces
+> `A_F=B` and `b=0`, so the identity holds verbatim and every cusp has
+> local group `Z/3`. The weighted budget `2m_nt+m_triv<=N-1` is promoted
+> at ALL degrees by two independent derivations (geometric and
+> Orevkov/Chau source-typed). Everything left in the transposition class
+> — and the strong all-degree bound — now rides ONE question, B0: can a
+> Keller map have a trivial dicritical (`mu=1`, `v(dx∧dy)=0`) with
+> affine image? A Grok literature registry says no primary source closes
+> it (nearest: Orevkov `N<=3`; Domrina–Orevkov unique-dicritical `N=4`;
+> Żołądek+Chau forbid it onto smooth-embedded images) and types three
+> attack routes. THETA-STAGED failed closed correctly (pullback `(f,g)`
+> nowhere explicit; reopen gate slimmed on review); the first
+> `Delta_aff=6` HF dossier is OPEN with its candidate curve now complete
+> as a record (review closed the singularity-completeness gap) but no
+> licensed HF theorem covers its 3-branch germ. Binding integration
+> `69970f4d...`. Ops: custody-hardening software review returned UNSOUND
+> under a hostile-provider model; P0 subset (divert accepts post-seal
+> garbage; contradictory EOF-marker states; lexical path bypasses; rc
+> uniformity) triaged for immediate patch, remainder typed as debt.
+> AS109-D12: DISTINCT SEEDS — eight registry objects; only a declared
+> `Z_109` R5 cell is chargeable, behind an 11-step fail-closed preflight.
+>
 > **A FULL IDEATION ROUND RAN CLEAN, PARKED ITS OWN STRONGEST NEW
 > IDENTITY, AND FIRED FOUR SEATS (10:33--11:30Z).** Significant-news
 > round `20260831T1033Z`: four blind submissions plus two

@@ -1,0 +1,23 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start from the frozen `max11-partial-y` sources and the committed 610 modules, then reconstruct the live vanishing tower from those statements.The nested `jc2-lean` tree is here; I'll inspect its 610 modules and clone `origin/master` if the worktree is blocked.Clone is at `d4e9bfe`. Next I’ll inventory the 610 modules, the degree-zero primitive, and the jet-quotient definitions.The depressed Jacobian is `j/h`, so the pole engine is assembled from committed pieces. Next I’ll compute heads, the `h`-degree bound, and the total-vanishing contradiction from those identities.Bar valuations match the peel. Next I’ll truncate Laurent series and extract the order-70/71 heads on each chamber.**Verdict: PARTIAL.** Written to `xmodel/max11-610-degree-zero-endgame-grok46-20260831.md`.
+
+The linear-root chamber is not closed. Two-sided total vanishing would contradict \(j\neq 0\), but the tower does not force that limit, and the cofactor arms are real subvarieties.
+
+**What the tower converges to.** After Backwire, \(p(a,Y)=p_1(a)Y+p_0(a)\). The condition \(p_{32}=p_{21}=p_1=p_0=0\) at \(a\) means \(h_0\) divides \(p\), not that the depressed sextic has a root of multiplicity \(\ge 5\). If the \(q\)-side also vanishes, \(h_0\) divides both source polynomials, hence the Jacobian, contradicting `IsPlaneKellerPair`. That is the committed contradiction for the two-sided limit. One-sided vanishing is not forbidden by any landed `LowScale610*` theorem.
+
+**Order 69 (derived, matches the live split).** From the committed epsilon group and the \(Abar\)/\(Tbar\) substitution,
+\[
+(Q/h_0^{69})\big|_{h_0=0}=\tfrac{2}{27}p_{32}^3 q_{41}.
+\]
+The live integer \(7583143431241728\) is this times the compact clearing constant. So \(p_{32}(a)=0\) or \(q_{41}(a)=0\).
+
+**Cofactors do not die uniformly.** Frozen heads at orders 70–71 are explicit polynomials (e.g. on \(p_{32}=0\), a factor \(p_{21}\) times a linear form in \(p_1,q_{41},q_3,w_1\)). They vanish on hypersurfaces, unlike the 68 terminal degree comparison. Live nine-/eight-/five-term lists are marked UNVERIFIED where they differ from this polar calculus. The \(q_{41}'\) unblock is the first Taylor of the order-69 monomial:
+\[
+\tfrac{2}{27}p_{32}(a)^3\frac{q_{41}'(a)}{c}\,h_0^{70}
+\]
+plus the frozen \(h^{70}\) remainder.
+
+**Finite bound.** \(Q\) is the primitive cleared by \(h^{75}\) (`COMPUTE_SOURCE`). After the peel every coordinate has \(h\)-degree \(\le 0\), so \(T=\deg_h Q\le 75\) and there are at most seven frozen heads (orders 69 through 75). At the ceiling a holomorphic primitive cannot have derivative \(j/h_0\). That bounds the tower; it does not evaluate the cofactor arms to a unit.
+
+The untracked wrapper `degreeZeroPrimitive610_ratFuncDeriv_eq_simplePole` is assembled on paper from `degreeZeroPrimitive610_deriv_eq_row` and `differentialJacobian_affineDepress_sourceToRatFunc68` (\(J=j/h\)), but is not a landed theorem.
+DIVERT path=xmodel/max11-610-degree-zero-endgame-grok46-20260831.md status=NO_MARKER bytes=22877

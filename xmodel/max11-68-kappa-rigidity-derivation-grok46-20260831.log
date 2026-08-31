@@ -1,0 +1,20 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start by locating the lane workspace, the Lean sources, and any prior coordinator notes so the derivation stays inside the frozen setup.I’ll scan the Lean terminal-branch modules, prior xmodel notes, and FALLACY-v2 so the derivation uses only kernel-checked facts.The Lean tree is permission-blocked in this sandbox; I’ll request access and keep gathering the related max11 notes in parallel.The Lean submodule is sandbox-blocked, so I’ll clone a read-only copy of `jc2-lean` and pull the latest coordinator notes for this branch.GitHub is only at the handoff commit; I’ll try the local submodule git dir next, since the κ=0 and W′ facts may live only there.The closing identity is algebraic: I’ll sanity-check it in polynomials, then write the derivation.The coefficient check on \(T\) versus \(4H\) gives a cleaner identity; I’ll rewrite the closing argument around that.**Verdict: DERIVED.** The frozen system is inconsistent for every \(m\ge 1\). The writeup is `xmodel/max11-68-kappa-rigidity-derivation-grok46-20260831.md`.
+
+The closing step is an exact identity in \(k[X]\), not a root-count and not the invalid constant-divisor inference. With \(U=3Wd+8B^2v\), \(F=9d^2+2B^3v\), and \(Z=BW-12d\),
+
+\[
+BU-4F=3dZ
+\]
+holds identically. H-descent (`4H-C(C_0)=2B(U-21\gamma B)`) together with \(H=2B^3v-6\gamma B^2+9d^2\) rewrites the same difference as \(-BU+18\gamma B^2-C(C_0)\), so
+
+\[
+3dZ+BU-18\gamma B^2+C(C_0)=0.
+\]
+
+Both cases fail on degree: if \(Z\neq 0\) then \(\deg(dZ)\ge 8m>7m=\deg(BU)\); if \(Z=0\) then \(BU=18\gamma B^2-C(C_0)\) has left degree \(7m\) and right degree at most \(6m\). Coprimeness of \(B\) and \(d\) is not required (it would already kill \(Z=0\) by itself).
+
+Riccati/Theorem A does not close: the W′ relation is only a congruence modulo \(B\), not a constant Wronskian. Row two recovers \(v_0=4\kappa/C_0\) and does not pin \(\kappa=0\). The coordinator’s degree-\(13m-1\) reduction is algebraically correct and unused.
+
+Lean kernel-checking of this closing identity is not claimed; the input degree and H-descent theorems are in the cloned `max11-partial-y` sources at `e84e32b`.
+DIVERT path=xmodel/max11-68-kappa-rigidity-derivation-grok46-20260831.md status=NO_MARKER bytes=15959

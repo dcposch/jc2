@@ -1,0 +1,24 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start by reading the kernel-checked modules and the campaign guardrail so the induction claim is checked against the actual Lean identities, not analogy.The frozen modules and sibling closures are next; I'll also scan `xmodel/` for prior vanishing-A reports so the lane doesn't re-derive a claimed identity.`jc2-lean` is blocked from ordinary listing; I'll try git/submodule paths and existing max11-68 reports that already quote those modules.I'll clone `jc2-lean` and pull the `max11-partial-y` sources from GitHub so the identities come from the actual modules, not the prompt.The vanishing-A scratch files sit in the blocked worktree; I'll reconstruct the k=1,2,3 matching from the committed companion/discriminant/I4 chain and keep hunting for a readable copy of the Grok modules.I have the matching recurrence, the disc/I4 bounds, and the Fce-zero endgame split. Next I’ll write the report with a PARTIAL verdict and the exact side conditions, without claiming a contradiction.**PARTIAL.** Matching extends uniformly, but it does not close the chamber.
+
+Report: `xmodel/max11-68-vanishing-a-uniform-induction-grok46-20260831.md`
+
+The nested `jc2-lean` worktree is sandbox-blocked and the Grok scratch files are untracked, so the identities were read from a clone of `origin/master` at `d4e9bfe` and re-derived from the committed disc/I4/companion modules. The prompt SHA for `Grok68QZeroVanishingAJetScratch.lean` was not in git objects.
+
+**Matching is uniform in \(k\).** From \(A_{p-j}=0\) for \(1\le j\le k\), the order-\(k\) jet of \(\Delta=AB^2+3c^2\) and the order-\(k\) jet of \(Be+cd\) (Fce is the nonzero constant \(C(Fce_0)\)) give
+\[
+c_{Cc}B_{D-k}=B_D c_{Cc-k},\qquad B_D e_{E-k}+c_{Cc}d_{V-k}=0,
+\]
+with \(B_{D-k}:=0\) for \(k>D\). The only inputs are those two jets, the cusp/I4 tops, and previous matching rows. No \((p-k)\) factor and no I4 compensation. First break: \(k=4m+1\), where the reflected-discriminant window \(\min(S,7N-2G-S)=4m\) ends. I4 compensation degenerates only at \(k=S=9m\), later.
+
+**All-orders form, conditional.** If vanishing of \(A\) is granted through order \(K\le 4m\),
+\[
+\deg(c_{Cc}X^{N}B-B_D c)\le Cc-K-1,\qquad
+\deg(B_D e+c_{Cc}X^{N}d)\le E-K-1.
+\]
+That is not \(B\mid c\). Landed input is only \(K=3\) (degree drops \(\le Cc-4\), \(\le E-4\)). Through \(k=D=3m\) this is landed only for \(m=1\), where \(D=3\).
+
+**No contradiction.** The terminal quotient \(2c+C(3\gamma)=Bv\) requires \(Fce_0=0\), the other side of `third_companion_split68`. The identity that would close in the sibling style is \(Be+cd=\frac19 B^3+\cdots\) with zero remainders; the remainders are not zero. Residual: the \(k=1,2,3\) matching, plus the unused disc jet \(k=4\), which is the single linear relation \(A_{p-4}B_D+6\lambda(r_c)_{Cc-4}=0\).
+
+New input needed to push vanishing \(A\) past \(k=3\): a fourth companion, remainder-cancel, and load certificate. The disc/I4 jets for that step already exist.
+DIVERT path=xmodel/max11-68-vanishing-a-uniform-induction-grok46-20260831.md status=NO_MARKER bytes=21959
