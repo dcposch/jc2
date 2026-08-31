@@ -16016,3 +16016,15 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Note: if EITHER braid-free route kills the row, (8,4) dies with
   it (target-equivalence), leaving only the six AWS-decidable types
   between the campaign and unconditional B0 at N=4.
+
+- COORDINATOR DECISION (recorded 20:36Z, effective at the 23:26Z
+  quiet-round clock): the scheduled quiet full ideation round is
+  DEFERRED under the coalescing rule. Justification: the active
+  promotion flow (12 waves since round-1033Z, four binding
+  integrations, all seats productive) is converging on unconditional
+  B0 at N=4; a 12-hour blind ideation round now would idle the flow
+  at its narrowest point. New trigger for the next full round:
+  the N=4-closure integration lands, OR the flow hard-stalls (no
+  promotable result for 6 consecutive hours), whichever first. The
+  web-sweep backstop (2026-09-01T04:54Z) and systems checkpoint
+  (2026-09-02T08:00Z) stand unchanged.
