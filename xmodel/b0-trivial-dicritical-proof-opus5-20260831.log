@@ -1,0 +1,32 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report written to `xmodel/b0-trivial-dicritical-proof-opus5-20260831.md` (5,787 words, single `<!-- BODY-END -->`, no other file touched).
+
+## Answer to B0
+
+**NO at `N=4` whenever `A_F` is irreducible** — proved. `OPEN` at `N=4` without irreducibility, at one named lemma; `OPEN` for `N ≥ 5`.
+
+## What closed it
+
+Not the routes as the registry framed them. The working argument is insensitive to `s_l` and to the image singularity type:
+
+1. **Branch-locus lemma.** The branch locus of `q: Y → C²` is *exactly* `Br = ⋃_{μ_l≥2} D_l`, by purity (Zariski–Nagata). If every dicritical is trivial, `Br = ∅` and `q` is finite étale over `C²`, so `N=1`. This kills three of the four `N=4` profiles carrying a `μ=1` dicritical in one line.
+2. **Euler `A¹`-forcing.** With `corr_l = 0` (forced by Orevkov's budget in the mixed profile), Orevkov's Lemma 5.2 makes every branch of `A_F` smooth, so `ν ≥ s`; feeding that into the promoted identity (E) forces `a=1` and `A_F ≅ A¹`. Then AMS rectifies `A_F`, `π₁(C²−A_F) ≅ Z`, so the meridian must be an `N`-cycle — but its cycle type has `a` fixed points. Contradiction with the promoted `a ≥ 1`.
+
+## Spin-off theorems (general `N`, unconditional)
+
+- An irreducible `A_F` is **singular** — a Jung-normalisation-free strengthening of Chau 1999 Thm 4.4.
+- **Orevkov's Cor. 4.3 is strict under H2:** `Σ_l μ_l ≤ N−2`. This upgrades the promoted weighted bound by one unit and gives `m ≤ 2` at `N=5` under H2.
+- Orevkov's closing Remark (`μ_l ≠ N−1`), stated by him without proof and cited by Domrina–Orevkov, is now proved. That is the sanity gate on the machine.
+- The Domrina–Orevkov `μ=1` dismissal (registry R12's flagged author-inference) is discharged with two independent proofs.
+
+## Route 1 is a proved negative
+
+Chau's `det DF_φ = −m_φ J t^{n_φ−2m_φ−1}` and Żołądek's `Jac θ̃ = v^{l−k−1}` are the *same chart* under `(k,l) = (m_φ, n_φ−m_φ)`; the transformation law the brief asked for is an identity. It consumes the Keller hypothesis completely: `μ_l=1` becomes the single unobstructed condition `l = k+1`. No one-valuation argument can close B0 — consistent with the gate review's withdrawal of the blanket impossibility claim, since Theorem 3.5 *is* Keller-specific but non-local.
+
+## Residual
+
+`OPEN[B0-N4-REDUCIBLE-PI1]`. The one surviving `N=4` configuration is fully pinned (Thm 4.3): `A_F = D_1 ∪ D_0` reducible, `(μ,corr) = (2,0)` on `D_1` and `(1,0)` on `D_0`, `a_1 = 2`, normalization of `D_0` is `A¹`, `D_1` singular with double points where no affine preimage survives, and `π₁(C²−D_1) ↠ S_4`. The missing lemma is an acquisition item, not research: *is `π₁(C²−D)` abelian for `D` irreducible with normalization `A¹` or `C*` and all affine branches smooth?* Deligne–Fulton and Nori are the candidates; I did not acquire those PDFs and nothing in the report leans on them.
+
+I verified the aggregate Euler identity of Thm 4.3(5) numerically against the raw form on five independent configurations — they agree case for case, including on the inadmissible ones.
+DIVERT path=xmodel/b0-trivial-dicritical-proof-opus5-20260831.md status=CLEAN body_bytes=34785 body_sha256=b37ec3bfd41eb22c14e29b06284100a61c50fd849150fefe2eab89e1d1a78c55
+hashed lane input changed during execution; result is quarantined
