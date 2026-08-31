@@ -15955,3 +15955,31 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   integration for the whole wave; coalescing rule).
 - Clocks: quiet round 23:26Z — decision pending; day-end PROGRESS
   rewrite due ~00:00Z.
+
+## 2026-08-31 19:58Z LIVE STATE — INTEGRATION #4 SEALED: N-A PROMOTED, CAGE SWEPT TO ONE CURVE + SIX TYPES
+
+- Fourth binding integration `126c2d29` (basis 8196c87a) PROMOTES:
+  Theorem N-A (paired review; T_x coefficient sharp; both naive
+  extensions refuted; Nori s(node) misprint confirmed, the factor-2
+  "erratum" REVERSED by the gate — Nori's text is right); Corollary
+  N-A-RES as a package with the terminal-center Lemma 4.3
+  (independently proved in the gate review): gate `M_∞+2T<=3d-3` ⟹
+  `pi_1(C^2-D_1)=Z`; M-INF split (Piece 1 corrected-promoted; Piece
+  2 refuted in general by the banked out-of-class (6,4)
+  counterexample); D1-DEGREE cage at typed scope (d_min phrasing).
+- ROW-SWEEP (PROVISIONAL, review launched): 4/8 rows KILLED —
+  (6,3)-(7,4) and (6,3)-(8,3) by triangular target reduction to the
+  promoted coprime theorem (unconditional!); (8,2) and (9,3) by
+  (M-INF) over every admissible infinity type. Survivors: the
+  explicit three-node (6,4) curve class Δ=(6,4,3) (with (8,4)
+  target-equivalent to it) — missing lemma
+  OPEN[PI1S4-(6,4)-FIXED-TUPLE]; and six (8,6)/(9,6) numerical
+  types with nodal attainment unresolved.
+- Wave 12 launched 19:56Z: Grok review of ROW-SWEEP (3h); OPUS
+  flagship FIXED-TUPLE (6h — the (6,4) cable braid decision: outer
+  level is COPRIME (3,2), so the full Theorem A machinery reruns on
+  the tube products; exponent cross-check e(rho_inf)=11); Grok
+  NODAL-REALIZATION (5h — kill or attain the six types; CAS-scale
+  jobs to be spec'd for AWS if needed). Watcher live.
+- If FIXED-TUPLE returns NO and the six types die: B0 closes at N=4
+  unconditionally and rank-four (M) completes in both classes.
