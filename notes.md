@@ -16028,3 +16028,40 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   promotable result for 6 consecutive hours), whichever first. The
   web-sweep backstop (2026-09-01T04:54Z) and systems checkpoint
   (2026-09-02T08:00Z) stand unchanged.
+
+## 2026-08-31 21:08Z LIVE STATE — FOLD ROUTE FAILS QUANTIFIED; REALIZATION SUITE RUNNING ON BOX03
+
+- FOLD-REDUCTION (Opus, PROVISIONAL): the (6,4) row SURVIVES the fold
+  route, with the failure fully quantified — N-A on the union misses
+  by deficit exactly 3 (robust to all readings), and the fold's
+  exchange rate runs the wrong way (deficit 1 downstairs). Major
+  banked gains: Theorem FOLD (every row member is a fold image after
+  a triangular automorphism — row-level, not witness-level); β₁=15
+  UNCONDITIONALLY re-derived (upgrades the provisional row datum);
+  D'∪D'⁻ geometry fully determined; π₁(C²−D')=Z proved from promoted
+  machinery. Residual: OPEN[PI1S4-(6,4)-FOLD-ZVK-U6] (fully-typed
+  6-strand ZvK computation) + OPEN[NA-R1-SHARPNESS-IRREDUCIBLE].
+- FIXED-TUPLE review (Sol): core theorem CONFIRMED with repairs
+  (state the cable up to conjugacy; invariant sum only), coverage
+  CONFIRMED-AS-CORRECTED — but (8,4) braid-level transfer REFUTED
+  (covered instead by Theorem FOLD's shear argument, provisional)
+  and the TRIPLE-COVER reduction as displayed REFUTED (Quillen-
+  Suslin misuse; correct object is Miranda's four-coefficient binary
+  cubic with discriminant D=b²c²−3a²d²+4a³c+4bd³−6abcd; page-cited,
+  streamed-hash recorded). The running triple-cover r2 lane was
+  charged to re-derive fail-closed and should land on the Miranda
+  framework or type OPEN.
+- Triple-cover r1 FAILED correctly closed (model mislisted its
+  inputs dir; receipts show all three frozen copies present and
+  UNCHANGED); r2 launched 21:05Z with a directed note.
+- MSOLVE-PREP (Grok, 53k): complete 18-file bundle, 8 typed
+  ambiguities (notably: msolve jobs do NOT exclude covers — M2
+  postcheck required; h_23/k_17 identically zero and omitted).
+  Coordinator extracted all 18 files, verified 18/18 manifest
+  hashes locally AND on the box. BOX03 STARTED (i-0ece0b9a,
+  54.210.201.219, ~$4/h r6i.16xlarge); Macaulay2 1.22 installed;
+  suite launched 21:06Z under nohup (controls first, then six
+  types); SSH watcher live (6h cap). Box03 to be STOPPED when the
+  suite drains.
+- In flight: triple-cover r2 (Sol), Box03 suite. Day-end PROGRESS
+  rewrite upcoming.
