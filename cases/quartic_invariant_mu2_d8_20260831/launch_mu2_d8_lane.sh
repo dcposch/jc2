@@ -22,8 +22,8 @@ readonly LANE_TAG=quartic_inv_mu2_d8_$SUFFIX
 readonly JOB_ROOT=/home/ubuntu/jobs/$LANE_TAG
 readonly SUPERVISOR=/home/ubuntu/jobs/.$LANE_TAG.supervisor.log
 readonly RUNNER_SHA=2d26b0f1a2ca2e27d3bc055b07c7d38030fa16cb23ee1a67733dfb3d2a420545
-readonly GENERATOR_SHA=44f2d1a47fdd9ee7cfbf8916ab1bf224879f99f3f2f3d9b85efcb773c986be79
-readonly GIT_BASIS=d19c494ec2b8d0eb994089eafac8655e19e03195
+readonly GENERATOR_SHA=3c9a4495bbd757373340da9f614fae43cee5265d0473294c14f534f40a772841
+readonly GIT_BASIS=f4f5fb2f77f9cb9048572c49d162a131b121245a
 
 mkdir -p /home/ubuntu/jobs
 if [[ -e "$JOB_ROOT" || -e "$SUPERVISOR" ]]; then

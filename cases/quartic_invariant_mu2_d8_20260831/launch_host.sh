@@ -25,7 +25,7 @@ readonly INSTANCE_ID
 
 readonly SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
 readonly REPO_ROOT=$(CDPATH= cd -- "$SCRIPT_DIR/../.." && pwd -P)
-readonly SOURCE_ROOT=/home/ubuntu/jobs/.quartic_inv_mu2_d8_source_d19c494e
+readonly SOURCE_ROOT=/home/ubuntu/jobs/.quartic_inv_mu2_d8_source_f4f5fb2f
 readonly IP=$(aws ec2 describe-instances --profile personal --instance-ids "$INSTANCE_ID" \
   --query 'Reservations[0].Instances[0].PublicIpAddress' --output text)
 [[ -n "$IP" && "$IP" != None ]] || { echo "no running public IP for $HOST" >&2; exit 125; }
@@ -44,4 +44,4 @@ scp "${SSH_OPTIONS[@]}" \
   "$TARGET:$SOURCE_ROOT/"
 
 ssh "${SSH_OPTIONS[@]}" "$TARGET" \
-  "cd '$SOURCE_ROOT' && test \"\$(sha256sum aws_mu2_d8_run.sh | cut -d ' ' -f 1)\" = '2d26b0f1a2ca2e27d3bc055b07c7d38030fa16cb23ee1a67733dfb3d2a420545' && test \"\$(sha256sum generate_mu2_d8.py | cut -d ' ' -f 1)\" = '44f2d1a47fdd9ee7cfbf8916ab1bf224879f99f3f2f3d9b85efcb773c986be79' && bash launch_mu2_d8_lane.sh '$SUFFIX' '$INSTANCE_ID' '$CHARACTERISTIC' '$PROFILE' '$ENGINE' '$MEMORY_KIB' '$TIMEOUT_SECONDS'"
+  "cd '$SOURCE_ROOT' && test \"\$(sha256sum aws_mu2_d8_run.sh | cut -d ' ' -f 1)\" = '2d26b0f1a2ca2e27d3bc055b07c7d38030fa16cb23ee1a67733dfb3d2a420545' && test \"\$(sha256sum generate_mu2_d8.py | cut -d ' ' -f 1)\" = '3c9a4495bbd757373340da9f614fae43cee5265d0473294c14f534f40a772841' && bash launch_mu2_d8_lane.sh '$SUFFIX' '$INSTANCE_ID' '$CHARACTERISTIC' '$PROFILE' '$ENGINE' '$MEMORY_KIB' '$TIMEOUT_SECONDS'"
