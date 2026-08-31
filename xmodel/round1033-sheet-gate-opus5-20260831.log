@@ -1,0 +1,23 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report complete: `xmodel/round1033-sheet-gate-opus5-20260831.md` (one file, 570 lines, single `<!-- BODY-END -->` as the last line, no `charge_basis` since no new exit price is asserted). Inputs verified 4/4. No CAS, no solver, no network.
+
+**Outcome: (M) is repaired, not parked.**
+
+**The four-box audit** (at a generic point of the branch, boxes = sheet center in `U` vs `Y−U` × `e=1` vs `e>1`):
+
+- `(U, e>1)` — **EMPTY**, by étale-ness. This is the only box the Keller hypothesis empties.
+- `(U, e=1)` — **NONEMPTY**, count `a ≥ 1` (dominance + quasi-finiteness; no hypotheses).
+- `(Y−U, e>1)` — **NONEMPTY**, by purity of the branch locus + `π₁(A²)=1`.
+- `(Y−U, e=1)` — count `b`. **The entire gate.** Proved `b=0` for `d ≤ 3` and at `d=4` in the 3-cycle (`A₄`) class; **OPEN** at `d=4` in the transposition class only, where it is the single bit `a ∈ {1,2}`.
+
+**What I proved beyond the charter:**
+
+- **Attack (ii) is answered by a proof, not a park.** `F⁻¹(D−Sing D) → D−Sing D` *is* a finite covering — of degree `a`, not `σ`. No sheet escapes over a smooth point.
+- **Grok-xpoll §3.1 is refuted.** The integral closure does sit inside `C[x,y]` (normality, one line), so Step 0 / ZMT / `A_F = q(B_Y)` all stand, and the `Y`-side clients it declared dead don't inherit a defect.
+- **The corrected identity (M′) `a(ν+s−1) − Σaₚ = dν−1` is a theorem**, and crucially `1 ≤ a ≤ d−2` is provable *directly for `a`*. Sol-xpoll assumed the ceiling was lost with `σ`; it isn't. So the one-node exclusion, node-count bound `(d−2)(s−1) ≥ 2ν−1`, smooth-`A_F` law (`a=1`), and the quota law in `a`-form **all survive**.
+- **The weighted budget `2·m_nt + m_triv ≤ N−1` is proved outright**, Orevkov-free — the fallback the synthesis authorised.
+- **`chi_c` lemma written** by never leaving `chi_c` (no Laumon comparison needed).
+- Attacks (iii) and (iv) confirmed; the colouring-column experiment is withdrawn as mistyped.
+
+**Cheapest successor** (§4.2): a *definition audit*, not a computation — if the promoted census's `f(z)=2` counts affine source points, then `a=2` saturates the ceiling at `d=4`, forcing `b=0` and licensing (M) verbatim at rank four. If it records `#Fix(g)`, it decides nothing.
+DIVERT path=xmodel/round1033-sheet-gate-opus5-20260831.md status=CLEAN body_bytes=33797 body_sha256=6d8f6667fc7d52d1e46fc4ac55f2aa2049603f06c1764ae4ac51b078435d90eb
