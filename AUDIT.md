@@ -7,7 +7,7 @@ is not a live queue or avenue-ranking document; see `COORDINATION.md` and
 
 > **GENUS LADDER PROMOTED THROUGH CONDUCTOR 28; ONE-CUSP POISSON AND
 > ONE-NODE OBSTRUCTIONS PROMOTED; REDUCIBLE RANK-FOUR LEDGER PROVISIONAL
-> (2026-08-31 ~09:00Z).** Coordinator integration
+> (2026-08-31 ~08:25Z).** Coordinator integration
 > `c0a8f19353244b44a946a2b73a48513f95ad4a3deeb40f017df34bd80c711d67`
 > (body `4789da5d...`, manifest `62c6d819...`, basis `5cae1082`) binds four
 > different-model reviews. Grok's fresh 10/16 review (`13c8b375...`,

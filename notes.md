@@ -15252,7 +15252,7 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   between `ec0227b3` and `c4848ca2`, so the acknowledged LIVE STATE basis is
   unchanged.
 
-## 2026-08-31 08:25Z LIVE STATE — HARDENED WAVE LAUNCHED UNDER NEW BUDGET POLICY
+## 2026-08-31 08:05Z LIVE STATE — HARDENED WAVE LAUNCHED UNDER NEW BUDGET POLICY
 
 - Basis: `1d97e7b7` plus this notes commit. All pushes current with
   `origin/master`.
@@ -15318,7 +15318,7 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   files; queue the hardening review; update the `PROGRESS.md` day entry at
   day end.
 
-## 2026-08-31 09:05Z LIVE STATE — FIRST HARDENED WAVE HARVESTED; FOUR PROMOTIONS
+## 2026-08-31 08:30Z LIVE STATE — FIRST HARDENED WAVE HARVESTED; FOUR PROMOTIONS
 
 - Basis: `5cae1082` plus the integration/ledger commits following it.
 - Coordinator: Fable 5. Micro-round under the coalescing rule: all promoted
@@ -15352,7 +15352,7 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Clocks: ideation floor `18:54:51Z`; web backstop `2026-09-01T04:54Z`;
   systems checkpoint `2026-09-02T08:00Z`. Holds/human gates: none.
 
-## 2026-08-31 09:25Z SYSTEMS EVENT — CANONICAL LEDGER COMPACTION ATOM
+## 2026-08-31 08:36Z SYSTEMS EVENT — CANONICAL LEDGER COMPACTION ATOM
 
 - DC-approved compaction executed while no live lane charges the compacted
   files. `COORDINATION.md` 1699 -> 678 lines: protocol, roster, admission
@@ -15368,3 +15368,13 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   unaffected. Integrity greps verified roster, policy blocks, and overlay
   counts. This discharges the approved compaction task; ideation packets
   tonight are ~7,000 lines lighter per reader.
+
+## 2026-08-31 08:42Z CORRECTION — TICK TIMESTAMPS
+
+- The coordinator stamped several blocks this tick with projected rather
+  than observed UTC times (up to ~40 minutes ahead). Corrected in place
+  because all blocks are from the current tick and file order was never
+  wrong: launch LIVE STATE `09:05->08:05`... precisely, launch LIVE STATE
+  is now `08:05Z`, harvest LIVE STATE `08:30Z`, compaction event `08:36Z`,
+  and the AUDIT/PROGRESS harvest stamps read `~08:25Z`. Future blocks use
+  observed `date -u` output only.

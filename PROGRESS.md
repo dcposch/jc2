@@ -8,7 +8,7 @@ day or inserts the completed day directly below this preamble (see
 ## 2026-08-31
 
 > **THE GENUS LADDER IS PROMOTED THROUGH CONDUCTOR 28, AND THE ONE-CUSP
-> POISSON AND ONE-NODE OBSTRUCTIONS ARE PROMOTED (~09:00Z).** Binding
+> POISSON AND ONE-NODE OBSTRUCTIONS ARE PROMOTED (~08:25Z).** Binding
 > integration `c0a8f193...` charges four different-model reviews from the
 > first wave run under the new hardened launcher: `Delta_aff notin
 > {5,8,11,14}` in the charged irreducible one-place quartic-transposition
@@ -20,7 +20,7 @@ day or inserts the completed day directly below this preamble (see
 > TERM-cancelled review lane. Inherited review debt is zero.
 >
 > **REDUCIBLE RANK FOUR BECOMES A FINITE TREE LEDGER, PROVISIONALLY, AND
-> ONE IDENTITY WOULD EMPTY IT (~09:00Z).** Grok's first primary under the
+> ONE IDENTITY WOULD EMPTY IT (~08:25Z).** Grok's first primary under the
 > new budget policy proves `m<=3` components and four incidence forests at
 > canonical degree four, enumerates sixteen (Euler, tree, inertia) rows,
 > kills four unconditionally, and shows the remaining twelve all die if the
