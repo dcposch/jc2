@@ -115,7 +115,7 @@ So an `F_{109}`-linear matrix of first-order unknowns is the coefficient matrix 
 
 **Declaration.** There is no finite `n` such that the charged object is “the system modulo `109^n`”. The charged system is the packed exact identity (1.1) in `Z_{109}[x,y]`: all 109-adic digits of the coefficients of `A` and `B` at once. Digit unknowns: every coefficient of the pair `(A,B)`, not a finite Witt tower `(A_0,…,A_{n-1})`.
 
-**Why floor-twelve constrains this choice.** The promoted floor (producer `17–20`; review CONFIRMED `25–36`) is:
+**Why floor-twelve constrains this choice.** The promoted floor (producer `17–20`; review verdict CONFIRMED at line 7; no-cap firewall `20–22`) is:
 
 ```text
 P = x - x^{109} + 109 A,   Q = y + 109 B  in Z_{109}[x,y],
@@ -125,7 +125,7 @@ det J(P,Q) = 1
 
 The hypothesis is exact `det J = 1` in characteristic zero over `Q_{109}`, using the char-0 maximum-eleven automorphism theorem plus residue-ball Hensel. It is not a statement about a pair over `W_n(F_{109}) = Z/109^n`.
 
-At every *finite* Witt level the Tate control R3 at `p=109` is the pair `F_n = (x-x^{109}, y S_n)` over `Z/109^n`, with `S_n = ∑_{j=0}^{n-1} 109^j x^{j·108}` and `det J = 1 - 109^n x^{n·108}`. That pair has `y`-degree 1 at every finite `n` (tate `42–83`; polar `10–21`; wild review `376–379`). A finite-`n` truncation with correction `y`-degree 1 is therefore compatible with known objects and is *not* a degree-12 cell of R5. Charging “the first unsolved Witt step” (R7 card) would be exactly that truncation, and would silently identify R3 with R5.
+At every *finite* Witt level the Tate control R3 at `p=109` is the pair `F_n = (x-x^{109}, y S_n)` over `Z/109^n`, with `S_n = ∑_{j=0}^{n-1} 109^j x^{j·108}` and `det J = 1 - 109^n x^{n·108}`. That pair has `y`-degree 1 at every finite `n` (tate `42–83`; polar `10–21`; wild review `376–379`, sampled at `p=3,5` with the same closed form). A finite-`n` truncation with correction `y`-degree 1 is therefore compatible with known objects and is *not* a degree-12 cell of R5. Charging “the first unsolved Witt step” (R7 card) would be exactly that truncation, and would silently identify R3 with R5.
 
 The σ_τ action on the moduli of lifts depends on `τ` modulo `109^2` and does not descend to `F_{109}` (opus5 `491–495`). That is a gauge signature, not a licence to truncate the lift at `n=2`.
 
@@ -216,7 +216,7 @@ Not sufficient: a larger slot cap; sampling exponents; a motif compiler written 
 
 **Status.** Not reached. STOP at step 4.
 
-No coefficient vector exists until exponent sets exist. Historical matrix orders in nearby AS109 files (`Q1`-first / `y`-major on the wild independent engine; `s`-first / `y`-major on the polar hostile review) are orders for R3 digit matrices at sampled `p=3,5`, not a map to R5 (reconciliation R3 generator order; polar review `53–54,84`). Matching those names would not declare an R5 order (FALLACY-v2 variable/ring map). Discharge of step 4 still requires an explicit order of the resulting coefficient vector.
+No coefficient vector exists until exponent sets exist. Historical matrix orders in nearby AS109 files (`Q1`-first / `y`-major on the wild independent engine, wild review `127`; `s`-first / `y`-major on the polar hostile review, polar review `121`) are orders for R3 digit matrices at sampled odd primes, not a map to R5. Matching those names would not declare an R5 order (FALLACY-v2 variable/ring map). Discharge of step 4 still requires an explicit order of the resulting coefficient vector.
 
 ## 6. Preflight step 6 — gauge slice and \(\sigma_\tau\) restriction
 
@@ -228,7 +228,7 @@ A later charge, after a grammar exists, would have to pick one section of: trans
 
 **Status.** Not reached. STOP at step 4. Not filled by mixing the two available conditions.
 
-Available typed conditions on R5, distinct (support review `42,203–206`; reconciliation R4/R5 collision):
+Available typed conditions on R5, distinct (support review `42,266`; reconciliation R4/R5 collision):
 
 - Frozen marked sections: `A_i(1,0)-A_i(0,0)=0`, `B_i(1,0)-B_i(0,0)=0` for `i=0,1`. Stricter freeze; carry-aware form is erratum (2.3). Unnecessary for Hensel.
 - Hensel residue-ball collision: each target ball `(0,b)+109 Z_{109}^2` has one preimage in every source ball `(a,b)+109 Z_{109}^2` (support gate `85–100`). A *consequence* of any exact lift, not a search grammar.
@@ -293,7 +293,7 @@ No `charge_basis` line is included: this is not an exit-price assertion.
 
 ## 13. Sources fetched
 
-No web fetch was required for the STOP. Primary literature used by cited producers is recorded from those producers, not re-downloaded here. Workspace producers below were hashed with `shasum -a 256` in this lane; they are not the frozen charged inputs of §0.
+No web fetch was required for the STOP. Primary literature used by cited producers is recorded from those producers and was not re-downloaded in this lane. Workspace producers below were hashed with `shasum -a 256` here; they are not the frozen charged inputs of §0.
 
 **Charged frozen inputs (authority for this lane).**
 
@@ -311,12 +311,44 @@ No web fetch was required for the STOP. Primary literature used by cited produce
 | `ca8a549c8b75873179fef536361c992c346ce5ac203b7e376c65ab4a116b9bbb` | `as109-support-gate-20260824-erratum.md` |
 | `1448985c259d2adb9b7e982fee233e802100fa8a0fd2eb32822b617e0a4632e8` | `as109-support-review-grok-20260824.md` |
 | `c76f26a6407a0e321da7d7001455819bd9ca92be6cc467afe5045aacc310c9be` | `as109-max11-floor12-composition-opus5-20260826.md` |
-| `430ffa3cc25a3141a03062072db4fecab0a0a3b6250daab3323c7b74194bfb9e84` | wait |
+| `430ffa3cc25a3141a03062072db4fecab0a3b6250daab3323c7b74194bfb9e84` | `as109-max11-floor12-composition-review-sol-20260826.md` |
+| `696152da19bf48091242064c8c506a06591ebba4e2b16b2314283bc6aeb54e2f` | `as109-one-sided-target-degree-tri-promotion-sol-20260827.md` |
+| `3d6d09fd1c9d1548dc6af78221f74c83276eb89378ee06cecac5fd19b46fcb36` | `as109-one-sided-prime4-composition-sol-20260827.md` |
+| `bc13662108e6521ed2ea63a4840b13fd14e0e0b3a6e939caffefea6097958bea` | `as109-one-sided-prime4-composition-hostile-review-grok-20260827.md` |
+| `7640715607c640beae845855feb261a0d207ea9409a1ccf8a915899f4461ec10` | `as109-n6-top-two-y-bands-face-isolation-grok-20260827.md` |
+| `571c5e2bda00cf9221debcd43b26f635016a68622714bbf8bbb0e2a68f33525f` | `as109-n6-top-two-y-bands-face-isolation-hostile-review-sol-20260827.md` |
+| `10ee0b91d4be7ced8d6c053ba66e6d677d7c4cc83af89fc481d215f145e38ea1` | `as109-quadratic-coupling-gate-20260824.md` |
+| `198f0b2ff39f91a7815b9be15f7fc3c3afdd00c00b1c4c0ada6b9f6438d62820` | `as109-cubic-coupling-gate-20260824.md` |
+| `8c8e3151ce63e4e43d8c91c56a3b801e2bb0e0fcbb9b16dc459dc8eccf7b0276` | `as109-quartic-discriminator-gate-20260824.md` |
+| `bbe95d911077baa1c32fedc062807ce754c68ddd58c26a4b209d56333678f9a4` | `as109-sextic-frontier-preflight-20260824.md` |
+| `60e198036854cce58a74e30a11db4df20d62e10e31b61f2a698c93a1594736b0` | `ideation-20260827T0145Z-opus5.md` |
+| `2baa7a7a17454e4b30a974841071104283917c424d208f03e3d5e12b8a12dc0b` | `as109-bounded-polar-conductor-gate-20260824.md` |
+| `bda4dda7d24d36bf75b6c55b566f708ee300c80aeb3344c4bb724bfc7e7787fa` | `as109-bounded-polar-conductor-review-grok-20260824.md` |
+| `c7ad3660c136bbee7105e786cc8b717d025534b67ac63cababb33c4b6de29e7c` | `as109-wild-symplectic-conductor-gate-20260824.md` |
+| `a59c7ccbf39971ad7ab47f8e865926c93e4ac9d46305be076f4bd0193b2b1a9a` | `as109-wild-symplectic-conductor-review-grok-20260824.md` |
+| `c38d0209b8bc4b4d2ad4fd3d371966fac5441e8e10c029d837647b6797fb8eb2` | `witt-tate-control-20260824.md` |
+| `e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5` | `FALLACY-v2.md` |
 
-I need to fix that - I accidentally started writing a broken row. Let me write the full sources table cleanly.
+Support-gate SHA `b73aefd1…` and erratum SHA `ca8a549c…` match the hashes already recorded in the one-sided floor-six composition (`137–148`). Prime/4 composition SHA `3d6d09fd…` and its hostile-review SHA `bc136621…` match the n=6 face history table.
 
-Looking at my hash of floor-twelve review: `430ffa3cc25a3141a03062072db4fecab0a3b6250daab3323c7b74194bfb9e84`
-
-I was about to typo it. Let me write the complete section properly.
+**Primary literature (cited by producers; not re-fetched this lane).** Vered Moskowicz, *A variation on Magnus' theorem and its generalizations*, arXiv:1810.08202v2 (2018), Theorem 2.7. Producer-recorded SHA-256 of `https://export.arxiv.org/e-print/1810.08202v2`: `ca974bd7a3603262952c9a5751bc7466c71b2ed47693489e5991096846674419` (prime/4 composition `92–96`). Consumed only as the already-composed one-sided floor; this lane does not re-prove Theorem 2.7.
 
 ## 14. FALLACY-v2 compliance notes
+
+- **Flag/place/series.** Not used. No exit-set, cv flag, or cover series is identified.
+- **Per-ray/exit-set.** No exit claim.
+- **Carrier/attainment.** `REPRESENTATIVE` is not treated as `FULL_ACTUAL_EXIT`. Floor-twelve is a floor.
+- **Pole/interior.** Polar divisor `E_p=V(D)` is cited only as the polar-gate statement that `Φ_F` is unbounded analytic, not as an R5 polynomial identity.
+- **Floor/attainment.** Applied at step 4: `≥12` and `deg_y Q ≥6` are lower bounds. Equality is not assumed. Residual `n=6` is a stratum, not attainment of a unique bidegree.
+- **`sat()` wrapping.** No ideal. Step 9 not reached.
+- **Raw remainder degree.** No normal-form remainder computed.
+- **Variable/ring map.** Lift ring, matrix ring, and `ρ` are declared at step 2. Nearby `Q1`-first / `s`-first orders are refused as maps at step 5.
+- **Prime label/derivative.** `p=109` is the prime. `A_x`, `B_y` are derivatives as defined in closed-support (1.1). Registry ids R1–R8 are labels of distinct objects, not derivatives.
+- **Merge-free/M-descent.** Not used. The Nori/ROW-SWEEP residual class is not identified with R5.
+- **Target/arrival index.** R5 is the target. Incoming N-A residual indices and R8 `(8,12)`/`(9,12)` are not arrival data for this cell.
+
+No gap was filled by cap or analogy. The missing grammar is typed `NO-FROZEN-GRAMMAR`, not an invented rectangle. No `charge_basis` line: this report asserts no new exit price.
+
+This is a preparation-lane STOP for coordinator review and different-model audit. It is not a promotion, not a nonexistence theorem for R5, and not a JC2 result.
+
+<!-- BODY-END -->

@@ -1,2 +1,18 @@
 cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
-I'll start by writing the report skeleton, then verify the charged-input hashes before any analysis.Hashes match. Next I’ll read the three charged inputs and extract the twin protocol, review corrections, and coordinator constraints.Hashes match. I’ll pull Assi–García-Sánchez for the associated-curve construction and scan the workspace for any prior `(9,6,4)` notes, without touching ledgers or `jc2-lean`.
+I'll start by writing the report skeleton, then verify the charged-input hashes before any analysis.Hashes match. Next I’ll read the three charged inputs and extract the twin protocol, review corrections, and coordinator constraints.Hashes match. I’ll pull Assi–García-Sánchez for the associated-curve construction and scan the workspace for any prior `(9,6,4)` notes, without touching ledgers or `jc2-lean`.The associated curve of `(9,6,4)` is not the twin’s rational model. I’ll hash AG-S, pull BLZ 6.4, and close the singularity budget before writing Section 0.Hashes of the literature PDFs match the twin pins. I’ll write the report in bounded sections, starting with intake and protocol.Report written to `xmodel/hf-twin-964-grok46-20260831.md` and sealed. Charged-input hashes matched; no CAS, ledgers, or `jc2-lean`.
+
+**Verdict: `PASS_NECESSARY_ONLY`** on the conductor-12 row `(9,6,4)`.
+
+The AG-S associated curve `(y^3-x^2)^3-y^2` is **not** charged: function field `u^2=s^7-1`, geometric genus 3, affine `A_5`, infinity `⟨3,23⟩`.
+
+A polynomial (normalisation `A^1`) member is explicit:
+
+```text
+x(t) = t^9 + 3t^7 + (21/4)t^5 + (35/8)t^3 + (63/32)t
+y(t) = t^6 + 2t^4 + (5/2)t^2 + 3/4
+```
+
+with `deg(y^3-x^2)=4`, so δ-sequence `(9,6,4)`. Immersive parametrisation; four ordinary nodes from `t↔-t`; remaining affine delta 2 of type `T(2,2n)`; infinity `⟨3,23⟩`, `δ_∞=22`. BLZ 2024 Theorem 6.4 applies and holds for every slot `k=1,…,7` (saturates at `k=6,7`).
+
+The twin-row contingency does **not** fire. `(6,4,9)` and `(9,6,4)` are the two reduced sequences of the same semigroup `⟨4,6,9⟩`, but the charged affine germs differ: three coincident-tangent branches (unlicensed) versus two-branch `T(2,2n)` (licensed).
+DIVERT path=xmodel/hf-twin-964-grok46-20260831.md status=CLEAN body_bytes=21093 body_sha256=7cef355be1af63e71bc24361955ad19755598c3925fa1cb2612e62e186f4a35b
