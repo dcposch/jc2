@@ -16233,3 +16233,27 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   (chained). 2026-08-31 ends with 12 lanes landed sealed today-
   evening, 3 running, 2 AWS jobs, zero custody incidents since the
   hardened launcher.
+
+## LIVE STATE (observed 2026-09-01T00:01Z) — DAY ROLLOVER; WATCHER RESTART; HF CANDIDATE CONFIRMED
+
+- External kill of four watcher processes detected (monitors only);
+  all underlying work verified intact by direct check: torus-check
+  (Opus) and reducible-N5 review (Sol) RUNNING; Box03 suite past
+  controls into type jobs; Sage+sirocco installed and the BRAID JOB
+  RUNNING. Watchers restarted (wave-16; combined Box03 watcher for
+  both jobs).
+- Suite note: the msolve-side negative control FAILed (NONEMPTY_0DIM
+  where positive-dim expected) while the authoritative M2 negative
+  control PASSes — an .ms-encoding discrepancy. Harvest rule
+  adopted: a type verdict is accepted only where the .ms and .m2
+  mirrors AGREE; any disagreement is typed OPEN pending diagnosis.
+- HF-TWIN review (GPT-5.5, `735990ea`): PASS_NECESSARY_ONLY
+  CONFIRMED with pins (explicit representative only; degree 9,
+  genus 0, Delta_aff=6, S_infty=<3,23>, all-T(2,2n) affine germs;
+  BLZ k=1..7 hold, saturation k=6,7). The campaign's first
+  confirmed counterexample-side construction target is now
+  review-gated. Disproof-side successor (attainment analysis of the
+  saturated slots) queued behind the N=4 flow.
+- 2026-08-31 closed. Day totals: 4 binding integrations, ~35 sealed
+  lanes, 2 AWS jobs, the residual reduced from "all of rank four"
+  to one explicit curve family + six msolve-decidable types.
