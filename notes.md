@@ -16577,3 +16577,21 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Schenk refutation banked earlier (both audits FATALLY-FLAWED,
   convergent). Wave queue: shape-finish reviews + N5-S2/S1
   successors + significant-news round, pending suite completion.
+
+## LIVE STATE (observed 2026-09-01T08:25Z) — WAVE 26 FIRED; BOX03 MIRRORS RUNNING
+
+- Wave 26 launched 08:21Z, saturating seats while Box03 drains:
+  Grok review of SHAPE-3-FINISH (gates Theorem TB and adjudicates
+  the Tschirnhaus-split reversal); 5.5 review of SHAPE-2-FINISH;
+  OPUS ONE-CUSP-A2 (6h — the A-degree-2 layer of the horn
+  induction; a consistent stratum would be a live degree-8
+  counterexample-search cell and gets flagged immediately); Sol
+  N5-S2-ROW-PIN (5h — the S2 delta-sequence census with the
+  promoted gates, the N=5 analogue of ROW-SWEEP).
+- Box03: type86_C msolve TIMEOUT at the 3h cap (not a verdict;
+  requeue decision after the rest); repaired A,B mirrors running
+  under nohup; suite continuing to D and the (9,6) types. Combined
+  watcher live.
+- Note: the systems checkpoint clock (2026-09-02T08:00Z) and the
+  next web-sweep cadence are the standing clocks; the deferred
+  significant-news round fires at Box03 drain + wave-26 harvest.
