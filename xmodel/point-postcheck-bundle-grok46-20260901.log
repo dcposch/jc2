@@ -1,0 +1,16 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll verify the frozen input hashes first, then read the charged sources and existing bundle conventions before writing the report skeleton.The second frozen input hash does not match. I’ll compare workspace copies and file stats before stopping.The listed msolve-prep digest belongs to `braid-prep-row64`, not the frozen file. I’ll record that, then read the named frozen inputs and prior dialect notes.The msolve-prep file already shows dialect bugs (`diff` order, tower rings). Next I’ll pull the rest of that bundle plus suite-run lessons.Suite results are in `notes.md`. I’ll read that section and fetch the msolve solve-mode docs next.I have the dialect lessons, solve-mode `-P` layout, and the two NONEMPTY types. Next I’ll write the skeleton, then fill sections.I’ll draft the job-file bodies off-workspace, hash them, then append the report sections.Appending prose sections 0–4, then the fenced job files.Aligning per-point verdicts with REALIZED / NON-REALIZABLE / UNDECIDED, then re-hashing the driver.Wrote `xmodel/point-postcheck-bundle-grok46-20260901.md` (sealed, ~5,800 words). No CAS was run.
+
+**Input check.** Two frozen hashes matched. The boxed msolve-prep digest `64e451b4…` is the body hash of `braid-prep-row64`, not the file at the charged path. That path hashes to `c54d53f0…`, matching workspace and `run.v2`. The lane used those frozen bytes.
+
+**What the bundle is.** Extraction + repaired nodal postcheck for the two NONEMPTY types `(8,6,11)` and `(8,6,9)`:
+
+- **Solve-mode extraction** (`msolve -P 2`, no `-g`), with RUR parsed from the fetched tutorial (SHA-256 `de8ae1ad…`).
+- **POSDIM fallback:** flattened M2 rational sections; Sage Groebner fallback. A point of `I+(lin)` is a point of `I`.
+- **Rewritten `idp_postcheck.m2`** against all seven dialect lessons (reserved names, no tower `numgens`, source-ring coefficients, `diff(var,poly)`, `first degree`, no underscore-subscripts, GROEBNER vs SOLVE). Self-test: `(6,4,3)` witness PASS, `(t^8,t^6)` FAIL.
+- **Driver** with caps and `logs/summary.tsv`.
+
+**Verdicts.** Per point and per type: `REALIZED` / `NON-REALIZABLE` / `UNDECIDED`. Type `REALIZED` needs one nodal closed point. Type `NON-REALIZABLE` needs a complete 0-dim census with every point failing. TIMEOUT, incomplete slices, or solve-EMPTY that contradicts a proper Groebner basis stay `UNDECIDED`.
+
+**Launch.** Extract the ten fences, re-hash against §11, then `POINTPOSTCHECK_AWS=1 ./run_point_postcheck.sh`.
+DIVERT path=xmodel/point-postcheck-bundle-grok46-20260901.md status=CLEAN body_bytes=43842 body_sha256=8bc8499b508afb0a1d04b3006c8fc9c759110b3c430685cd48bb6e0a3a9b18f3
