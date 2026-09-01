@@ -16257,3 +16257,37 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - 2026-08-31 closed. Day totals: 4 binding integrations, ~35 sealed
   lanes, 2 AWS jobs, the residual reduced from "all of rank four"
   to one explicit curve family + six msolve-decidable types.
+
+## LIVE STATE (observed 2026-09-01T00:21Z) — THEOREM ROW-KILL LANDS; PAIRED REVIEW + (8,4) LANE FIRED
+
+- TORUS-CHECK (Opus, `a352be2a`, PROVISIONAL): **THEOREM ROW-KILL**
+  — no S_4 surjection with transposition meridians on any generic-
+  stratum (6,4) row member. Chain: sextic geometry (3 nodes + A_14);
+  Theorem NO-TORUS (four independent proofs); S_3 resolvent; Theorem
+  INF-TRIVIAL (gamma_inf = g5²g3²g1², psi-image trivial — no
+  branching at infinity); descent to P² + Shimada Cor 0.6 forces
+  torus type — contradiction. Resolves FIXED-TUPLE (NO),
+  TRIPLE-COVER (NO), FACTORIZATION (unneeded), fold items (dead),
+  the (7.1) cage (vacuous). The AWS braid job is retained as an
+  independent CROSS-CHECK (a surviving tuple under the computed full
+  monodromy would contradict ROW-KILL and flag an error). Residuals:
+  R1 (rides ROW-NF/ROW-SWEEP, both already review-confirmed), R2
+  (two excluded moduli), R3 (the c(Pi)=(2,1)-vs-(4,0) slice
+  conflict — coordinator disposition: UNRESOLVED pending the paired
+  review; ROW-KILL does not consume the disputed value; the (2,1)
+  transcription's justification is located as an upstairs-pencil
+  description).
+- N5 review (Sol, `bd6443b3`): REFUTED AS CHARGED — my 23:51Z LIVE
+  STATE mis-summarized: the N5 report itself retains TWO survivors
+  (S1 AND S2=P3a/P3b); **S2** is the PI1-S4-shaped one; S1 has a
+  singular branch outside that class. CORRECTION recorded: the
+  "all but S1" phrasing in the 23:51Z block is wrong; the kills of
+  P2/P3c and the no-ramified-carrier claim at N=5 are CONFIRMED.
+  Integration will bind the corrected two-survivor cage.
+- Wave 17 launched 00:19Z: ROW-KILL paired review (Sol gate 4h +
+  Grok verification 3h — includes the c(Pi) adjudication and a
+  known-good (4,2) sanity replay); GPT-5.5 EDGE-MODULI (3h — the two
+  excluded j values); OPUS ROW-84 (6h — own-geometry kill chain for
+  the (8,4) survivor: normal form, INF-TRIVIAL analogue, and the
+  degree-8 classification input via Tokunaga T91/Miranda). Watcher
+  live. Box03: suite + braid job still running (cross-check).
