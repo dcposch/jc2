@@ -1,2 +1,32 @@
 cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
-I'll start from the frozen sources: the vanishing-A jet, the two count/induction reports, and the terminal-branch identities those were derived from. Then I'll hunt the q=0 analogue in the listed order.The workspace is a large campaign tree. Next I’ll pull the vanishing-A reports, the Lean jet, and the terminal-branch derivation that produced `4H − C(C0) = BT`.The count and induction reports are in. Next I’ll clone `dcposch/jc2-lean` at `origin/master` and reconstruct how `4H − C(C0) = BT` was derived.The local clone is stale. I’ll fetch current `origin/master` and inventory the vanishing-A jet plus the terminal-branch identity modules.H-descent is a linear combination of I3, the quotient form of `e`, and `2c+C(3γ)=Bv`. I’ll now pull the wall-wide syzygies and see which of those ingredients survive when `Fce_0 ≠ 0`.Row two is the derivative of a first integral once `Fce` is constant. I’ll read the expansion and load-factor identities and check whether `P + 3 Fce_0 A` is constant on this chamber.S1 looks like it forces `deg Δ = 11m` on this chamber, which would also drop `deg H` to `N`. I’ll check that with exact algebra, then hunt the charged first integral and an `m=1` model.The Δ-top at degree `19m` does not see `Fce_0`. Next I’ll verify the charged descents in exact arithmetic and try to build an `m=1` model.S1 leftover and Case I check out; `deg Δ = 11m` showed up on the I4-ok hits. I’ll fix the Δ-top comparison, then search under the landed `J`/`Rce` bounds.`J_22,J_21,J_20` are explicit in `(B,d)` and vanish on `B=X^3` with `d_5=d_6=d_7=0`. Next I’ll solve I4 on that slice and kill the remaining `J` coefficients.I4+J is solvable (`s6 = s10²/324 + 972`). I’ll build that model and Groebner-solve the Rce and first-integral leftovers.
+I'll start from the frozen sources: the vanishing-A jet, the two count/induction reports, and the terminal-branch identities those were derived from. Then I'll hunt the q=0 analogue in the listed order.The workspace is a large campaign tree. Next I’ll pull the vanishing-A reports, the Lean jet, and the terminal-branch derivation that produced `4H − C(C0) = BT`.The count and induction reports are in. Next I’ll clone `dcposch/jc2-lean` at `origin/master` and reconstruct how `4H − C(C0) = BT` was derived.The local clone is stale. I’ll fetch current `origin/master` and inventory the vanishing-A jet plus the terminal-branch identity modules.H-descent is a linear combination of I3, the quotient form of `e`, and `2c+C(3γ)=Bv`. I’ll now pull the wall-wide syzygies and see which of those ingredients survive when `Fce_0 ≠ 0`.Row two is the derivative of a first integral once `Fce` is constant. I’ll read the expansion and load-factor identities and check whether `P + 3 Fce_0 A` is constant on this chamber.S1 looks like it forces `deg Δ = 11m` on this chamber, which would also drop `deg H` to `N`. I’ll check that with exact algebra, then hunt the charged first integral and an `m=1` model.The Δ-top at degree `19m` does not see `Fce_0`. Next I’ll verify the charged descents in exact arithmetic and try to build an `m=1` model.S1 leftover and Case I check out; `deg Δ = 11m` showed up on the I4-ok hits. I’ll fix the Δ-top comparison, then search under the landed `J`/`Rce` bounds.`J_22,J_21,J_20` are explicit in `(B,d)` and vanish on `B=X^3` with `d_5=d_6=d_7=0`. Next I’ll solve I4 on that slice and kill the remaining `J` coefficients.I4+J is solvable (`s6 = s10²/324 + 972`). I’ll build that model and Groebner-solve the Rce and first-integral leftovers.The I4+J model checks out; FI remains computationally empty on every sampled point. I’ll write the report with those identities, the explicit `m=1` polynomials, and no emptiness overclaim.**Verdict: PARTIAL.** Report: `xmodel/max11-68-vanishing-a-identity-hunt-grok46-20260901.md`. No exit-price.
+
+The sibling identity \(4H-C(C_0)=BT\) is a three-term combination of exact \(I3\), the quotient form of \(e\), and \(2c+C(3\gamma)=Bv\). The last two need \(Fce_0=0\) and are off-chamber. There is no H-quotient or square fibre here.
+
+Three exact identities do land, all invisible to the \(19m+4\) count:
+
+1. **Charged I4 fibre.** Matching plus \(Fce=C(Fce_0)\) gives
+   \(B\mid(2r_c+3\gamma)\bigl(d(2r_c+3\gamma)-2Fce_0\bigr)\).
+   The factor \(B\mid(2c+C(3\gamma))\) is impossible (it would force \(Fce=B\cdot(\cdots)\), hence \(Fce_0=0\)). This is a linear fibre, not \(d^2\equiv\mathrm{const}\). Both remainder cases are degree-compatible; no two-case kill.
+2. **Charged row-two integral.** On the \(q=0\) wall \(Fce\) is constant, so \(Fce'=0\). `FullRowTwo`\(=0\) plus the load-factor rewrite is the derivative of \(P+3\,Fce_0 A\), hence \(P+3\,Fce_0 A=C(\kappa)\). This is the \(Fce_0\neq 0\) form of the terminal \(P=C(\kappa)\). Load-factor is UNVERIFIED as a Lean declaration (defining file absent from `origin/master`); it is the rewrite committed consumers apply.
+3. **Conditional \(\Delta\)/\(H\) profiles.** If \(\deg Rce\le 6m\) is granted, the degree-\(19m\) coefficient of syzygy (S1) never sees \(Fce_0\) and forces \(\deg\Delta=11m\) with top \(3B_D d_V\); then (S2) forces \(\deg H\le N=7m\). Still no \(4H-C=BT\).
+
+Wronskians of the matching pairs have no degree drop.
+
+An exact rational \(m=1\) model of a **proper subsystem** (matching + I4 + \(\deg J\le 14\) + vanishing \(A\) + resultant + \(Fce_0=1\)) exists:
+
+\[
+\begin{align*}
+A&=-243X^{14}+972X^6,\\
+B&=X^3,\\
+c&=-9X^{10}-1,\\
+d&=2X^8-1,\\
+e&=18X^{15}-9X^7+\tfrac19 X^6+2X^5,\\
+Fce&=1.
+\end{align*}
+\]
+
+Independently checked: cusp, resultant, I4, matching, \(\deg J=14\). On this model identities 2 and 3 fail (\(\deg Rce=17\), \(P+3A\) has degree 14). Groebner bases of identity 2 plus I4 plus \(\deg J\le 14\) are \(\{1\}\) on every sampled point of the necessary \(J_{20}=J_{21}=J_{22}=0\) locus, including squarefree \(B=X^3+X+1\). That is evidence, not `False`.
+
+Next honest job, if the charged integral is granted: a uniform degree comparison of \(P+3\,Fce_0 A=C(\kappa)\) against I4, not further constraint counting.
+DIVERT path=xmodel/max11-68-vanishing-a-identity-hunt-grok46-20260901.md status=NO_MARKER bytes=23386

@@ -1,0 +1,21 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Audit complete and sealed: `xmodel/schenk-audit-a-opus5-20260901.md` (6,329 words, single `<!-- BODY-END -->`).
+
+## Verdict: FATALLY-FLAWED
+
+All three input hashes matched. Four independent kills, each desk-verified:
+
+**1. §10.4's closing contradiction is a non sequitur.** "D dominates a curve in A², hence meets the affine chart U" conflates the *target* affine chart (which every `D ⊂ X₀ = π₂⁻¹(A²)` maps into by construction) with the *source* graph `U ⊂ X₀`. The divisors that matter are exactly those with `D ∩ U = ∅`. The implication needed is Theorem 5.3 (U-HIT) — which grep confirms is cited **nowhere** in Chapters 6–12.
+
+**2. U-HIT selects a point from a provably empty set.** The proof chooses `s ∈ C ∩ S° ∩ S°°` "since all three sets are dense open"; `C = f(D)` is a closed curve. Worse, I prove `f(X₀∖U) ∩ S°° = ∅` *always*, straight from the defining finiteness property of `S°°` (`U∩V → S°°` proper ⟹ `U∩V` clopen in the irreducible `V`). Separately, U-HIT ⟹ JC2 using only the paper's own Chapters 11–12 — it is the theorem, not a lemma.
+
+**3. Lemma 10.2 is false.** Its conclusion (`a+b>0`) says the branch curve is a *target coordinate axis*, while every hypothesis is invariant under target translation `(P,Q) ↦ (P−α, Q−β)`. Pick `α, β` avoiding the at-most-one bad value each: `a = b = 0`.
+
+**4. Lemma 9.1 is vacuous where it is applied.** Case 1 (`a,b>0`) is impossible for dicriticals (`V(P)∩V(Q)` = origin). Cases 2–3 require `v₀ⁿ = c ∈ k×` with `v₀ = Q|_D` nonconstant — contradicting the paper's own Lemma 8.7.
+
+Chapter 7 is also broken and removable: `k[s] ⊄ R[ts]` (ordinary vs. extended Rees algebra), Lemma 7.5's special fibre is a surjection not an iso, Lemma 7.7 asserts `trdeg k(P,Q)=1` when it is 2, and Corollary 7.8 has the countermodel `F = id`, `D = {x=5}`.
+
+**Cross-check that decides it.** `dP∧dQ = c·dx∧dy` in `Ω²_{k(X₀)}`, so `ord_D(dP∧dQ) = ord_D(dx∧dy)` for every `D`; by the promoted `e = 1 + v(dx∧dy)` that equals `μ_D − 1`. So §10.4's `ord = 0` *is* the hypothesis `μ_D = 1`, and Chapter 9's `ord > 0` *is* `μ_D ≥ 2`. The two sides don't contradict — they are the two branches of a dichotomy the paper never resolves. Not repairable from our machinery: substituting Lemma 4.2 removes the contradiction rather than supplying one.
+
+No CAS run, no literature fetched (Prop. 4.4 deliberately uses only the paper's own toolkit so nothing imported is load-bearing). Report is the only file written in the repo; I also added a memory entry with the two reusable audit probes.
+DIVERT path=xmodel/schenk-audit-a-opus5-20260901.md status=CLEAN body_bytes=37852 body_sha256=3d0f040d0780759b8636a6122938dfe8b9740d3d6633d132bc635af958a6c1fa
