@@ -1,0 +1,21 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report written and sealed: `xmodel/shape-kill-uniform-opus5-20260901.md` (6,910 words, `<!-- BODY-END -->` appended last).
+
+## Outcome
+
+**Charge item 4 answers NO to the "all three killed" alternative.** One family dies uniformly; the other two are narrowed, and the surviving pairs are typed.
+
+**Family `(u,1)` — KILLED at every degree, but not by the proposed mechanism.**
+- The proposed mechanism is *refuted structurally*: **Lemma SK-0** — the constant block-product tuple `(c,…,c)` is a `δ_{d'}`-fixed point at *every* noncoprime shape and every `g`. So `A'(1)–(4)` is always satisfiable and **no outer-level argument can ever kill anything**. The promoted `(6,2)` counterexample is just an instance; `(4,2)` closed only via a `(d',g)=(2,2)` realisability accident.
+- The working kill is **Theorem SK-1**: `d_min` is attained, and at an attaining gauge `n ∤ d` (the triangular move `x ↦ x − λy^u` would otherwise drop the degree). Chau's trichotomy holds in every target gauge, so the `(u,1)` row is empty there. Typed carefully: this does *not* deny `(u,1)` presentations — `T_k` gives infinitely many — it says the row need never be swept.
+
+**Family `(odd u, 2)` — two thirds of the `g=2` slice killed.** Outer fixedness is exactly the deformed braid relation `X W^m X = W^{m+1}` (at `m=1`: `XYX=YXY`). At `g=2` it is solved completely: survivors require **`u ≡ 3 (mod 6)`**, killing `(10,4), (14,4), (22,4), (26,4), …`. In every survivor `Π` is a double transposition, so `Π ∈ V₄` and the `S₃`-resolvent descends automatically.
+
+**Family `(4,3)` — not killed, but permanently redirected.** **Theorem SK-5** (all `g`): outside the constant stratum `Π` is a 3-cycle, so `Π ∉ V₄` and the `S₃`-resolvent *never* descends — the NO-TORUS/Shirane route is structurally unavailable. At `g=2` the constant stratum dies; `(8,6)` survives as one explicit orbit.
+
+**On Shirane/Tokunaga:** the consumed input is literally a degree-6 theorem (its title). The degree-free replacement candidate is the Cardano divisibility `6 | deg B`, valid only under a **split Tschirnhaus bundle** — typed `OPEN[TRIPLE-COVER-TSCHIRNHAUS-SPLIT]`. Sharpened by a new degree-free fact: at an affine node the two meridians are disjoint transpositions, hence equal in `S₃`, so every node gives an `A₁` with no `Z/3` — the whole obstruction concentrates at the single place at infinity.
+
+**Net effect:** the campaign pin does not close. But of the twenty next-degree pairs campaign-pin listed for `d ∈ {10,…,16}`, thirteen are deleted by SK-1 and two by SK-4, leaving `(12,8), (12,9), (15,6), (15,10), (16,12)`, plus `(18,4), (18,12)`.
+
+Two disclosures: the finite `S₄` case analyses in §3.2/§4.3 were done by hand and then re-run as bounded brute-force enumerations over the 24-element group (sub-second, nothing written to disk); both confirmed the hand results exactly. No CAS was run, no charged file or ledger edited, `jc2-lean` not inspected.
+DIVERT path=xmodel/shape-kill-uniform-opus5-20260901.md status=CLEAN body_bytes=41312 body_sha256=189bc45d83c97df3614c65450a8c6e926938e50f7ccc0b2bacd78a7fd8d11c4d

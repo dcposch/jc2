@@ -1,0 +1,11 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+Creating the report skeleton first, then verifying the charged-input hashes.Hashes match. Reading the charged inputs next.Hashes match. Next I’ll re-derive the bookkeeping from the primary sources and locate ALL-N’s (4.6).Primary PDF hashes match. Reading Orevkov for Lemma 2.1 and the fibre identities, then ALL-N’s `ν` convention.Identities check out with ALL-N’s `ν = Σ(r_p−1)`. Writing section 0, then the computation sections.Report written to `xmodel/n20-escape-verification-grok46-20260901.md`. Frozen SHA-256 values matched; all four targets **HOLDS**.
+
+**Target (1).** Finite ramification of a degree-3 `A^1 → A^1` cover has degree 2 (the projective total 4 includes `e_∞−1=2`). Packet (4.9) is `corr = 4+12`. The naive “16 on ramification degree 2” count does not close. Inequality (5.1) was checked on three synthetic packets: SYN-1 never holds (`q'=1`); SYN-2 is equality at `(W,d,N)=(9,8,26)`; SYN-3 fails / equals / holds strictly at `d=11,12,13`. Equality is double saturation `|P|=q'` and `K_p=d`.
+
+**Target (2).** Under the promoted budget without (5.1), the only escape packets at N=20, 21, 24 are five `q'=1` shapes: `(2,3,16)`, `(2,3,17)`, `(2,3,20)`, two trivials plus `(2,3,19)`, and `(2,4,20)`. Each dies under (5.1). No large-`s`, large-`μ`, or multi-carrier survivor at these degrees.
+
+**Target (3).** All W/R/fibre/Euler identities close at `(W,d,a,R)=(7,6,13,2)` with ALL-N’s `ν=Σ(r_p−1)`.
+
+**Target (4).** On a `k=3` chain, `l' ≅ A^1` is Orevkov Lemma 2.1 plus rationality of components of `L`; H3 is not used.
+DIVERT path=xmodel/n20-escape-verification-grok46-20260901.md status=CLEAN body_bytes=26872 body_sha256=a2a35190fa4ab7e340b0add87c6948053690f7e5f5dd95fb4a49ae82814baa0f
