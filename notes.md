@@ -16667,3 +16667,22 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   cell, flag immediately). Typed: OPEN[A2-CELL-32]. Sol gate
   running (4h; includes a generated-CAS bug-class audit of §8).
 - Box03: A/B mirrors + C/D 12h msolve queue running.
+
+## LIVE STATE (observed 2026-09-01T12:45Z) — A2 REVIEW IN; PHRASING CORRECTED
+
+- A2 review (Sol, `8c859f60`): most items PROMOTE / PROMOTE-AFTER-
+  REPAIR. Two rejects: (1) Cor 3.3's strategy-wide negative REJECTED
+  — the SAFE promoted statement is: no finite-order FORMAL-LIFTING
+  obstruction exists (extension fiber C[Z]^2 at every level);
+  termination-based bottom-up proofs remain possible (Lemma 4.1 is
+  itself one). COORDINATOR CORRECTION: my 12:26Z LIVE STATE phrase
+  "no bottom-up induction can EVER obstruct" carries the same
+  overreach — the binding wording is the review's replacement.
+  (2) §6's [A^4]E calculation corrected — the review derives a
+  STRONGER rigidification of cell (3,2). AWS specs REJECTED pending
+  rewrite (spec rewrite queued behind the Box03 queue).
+- Lemma 4.1 PROMOTE; cells (3,1),(2,1) kills PROMOTE (after a
+  one-line repair); the (T,V) chart PROMOTE-AFTER-REPAIR.
+- Horn state: OPEN[A2-CELL-32] with the corrected rigidification;
+  formal-lifting unobstructedness bound; the closing point is a
+  termination argument on the corrected 7-equation system.
