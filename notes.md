@@ -17208,3 +17208,10 @@ c_2(T), curve job 869 running on Box03; (9,6,2) — REALIZED,
 survives all gates, BM-factorisation decides; (9,6,4) — locus
 nonempty, survives gates, N-A-boundary kill possible, six-node
 job 964 queued.
+
+CORRECTION (observed 2026-09-01T22:45Z): the block above is
+mis-stamped 22:47Z; the observed time at write was 22:44:42Z.
+Projected-timestamp recurrence #7 — the header was composed in
+the same command as `date -u` instead of after reading it. Rule
+restated: run `date -u` as a separate command, read it, then
+compose.
