@@ -1,0 +1,25 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report written and sealed: `xmodel/pi1s4-84-row-kill-opus5-20260901.md` (6,250 words, one standalone `<!-- BODY-END -->`). All four input hashes matched before reading; Sh12 was re-fetched and its hash reproduces the existing custody value.
+
+## Verdict: row (8,4) is KILLED
+
+The kill does not go through the octic's own projective geometry — it goes through the fact that the row *is* the (6,4) row.
+
+**Theorem A (§1.2, unconditional).** For monic `(P,Q)` of degrees `(8,4)`, the identity `ord_s(w − v²) = 16 − deg(P−Q²)` makes the row label `δ₂ = 6` *equivalent* to `deg(P−Q²) = 6`. So the shear `Φ(x,y) = (x−y², y)` carries **every** member of the (8,4) row onto a (6,4) row member (degrees (6,4), `A₁₄` at infinity, same three nodes), and back. This upgrades the coordinator's provisional witness-level equivalence to a row-level theorem.
+
+**Theorem B (§4).** `Φ ∈ Aut(A²)` is an isomorphism of *pairs*, so `Φ_*` is a meridian-preserving isomorphism of `π₁(C²−D)`. Theorem ROW-KILL therefore transports verbatim. Steps 1–3 use no literature; step 4 inherits ROW-KILL's charged-provisional scope, and Theorem B inherits exactly that.
+
+**On the binding non-transfer note.** It is correct — for everything it was actually about. The projective closure, the germ, `M∞`, the `B₆`/`B₈` tuples, `γ∞` (`6g` vs `8g`), the fold, and the branch degree all fail to transport, and §4 tabulates each. What transports is the pair `(A², D)` up to `Aut(A²)`, hence the group with its meridian class. TRIPLE-COVER-CLOSE §6 had already stated that principle; the two things blocking its use — a monogenicity-conditional (6,4) theorem, and witness-only equivalence — are both now gone.
+
+## The direct octic route, carried as far as it goes
+
+- **§2, Lemma NO-FOLD (unconditional):** `P` is never a perfect square on the row, so `x = s(t)²` and `x = u(t)⁴` are both excluded. There are 7 simple vertical tangencies with no identity-forced simultaneity; the (6,4) collision at `x = 0` is an artefact of `p = r²`. INF-TRIVIAL has no analogue, and I did not manufacture one — `ψ(γ∞) = 1` is typed `OPEN` (and is vacuous on this row).
+- **§3, Theorem OCT-TRIPLE + Corollary OCT-SYZYGY (derived from Sh12 §1.1, quoted):** at `deg Δ_π = 8`, `T_π|_ℓ = O(−2)^⊕2` is forced, the data is a binary cubic with **conic** coefficients, and `X` is never a triple section in a line bundle — `6 ∤ 8`, so there is no Cardano form and no `G³+H²` torus statement. The right analogue is the syzygy `K₀² = 4H₀³ + κ⁻¹F̄′f₀²`, which specialises at degree 6 to the torus identity exactly. Nodes are not inner, and `m_∞ ∈ {6,8,10,…,15}`, but the conic `f₀` (a unit at degree 6) opens a 16-unit reservoir the desk argument can't close. Sh12's solved list confirms `(8,0)` is genuinely `SOURCE-OPEN`.
+
+## Two corrections worth carrying
+
+- The infinity place has semigroup `⟨4,10,29⟩`, not `⟨4,10,19⟩` — `β̄₂ − β₂ = (n₁−1)β̄₁ = 10`.
+- The charge's "gcd tower 8,4 gives g=4": `4` is `d₁`; the tower is `8,4,2,1` with three quotients 2.
+
+Budget used: ~1h40m of 6h. No CAS, no canonical ledger or charged file touched, no `charge_basis` declared.
+DIVERT path=xmodel/pi1s4-84-row-kill-opus5-20260901.md status=CLEAN body_bytes=42465 body_sha256=6bdd164ca89bfd8b8947dbb23222929bfd575c48e65b261f3c085397de42bd64
