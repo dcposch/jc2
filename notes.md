@@ -16595,3 +16595,30 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Note: the systems checkpoint clock (2026-09-02T08:00Z) and the
   next web-sweep cadence are the standing clocks; the deferred
   significant-news round fires at Box03 drain + wave-26 harvest.
+
+## LIVE STATE (observed 2026-09-01T09:58Z) — WAVE 26 IN: TB HOLDS (CORRECTED), S2F PROMOTES, ROW-PIN EXPLICIT
+
+- SHAPE-3-FINISH review (Grok, `abba0452`): THEOREM TB HOLDS with
+  corrections — weighted branch degree is 4g+2 (the charged 4g+1
+  parity horn REFUTED); congruence m ≡ g+2 (mod 3), 0<=m<=2g;
+  Prop TB-2 (m=4 at g=2). The mixed cover EXISTS (Riemann existence
+  chain verified via Shirane Rem 0.2 + purity), so the earlier
+  review's "no triple cover to apply it to" sentence is corrected;
+  the "reversal" adjudicated as a SCOPE SPLIT. Family 3 NOT killed
+  uniformly — TB constrains it. COORDINATOR CORRECTION: my
+  integration parenthetical (Coord:49-50, the Tschirnhaus-split
+  sentence) is "too strong on every reading" — retracted; the
+  binding scope is the review's table.
+- SHAPE-2-FINISH review (5.5, `f69fb8b5`): no refutation at stated
+  scope — PROMOTE with a six-item list (degree correction for the
+  surviving g=2 row; resolvent descent there; the conditional
+  NO-TORUS proposition; the g=4 product-one sub-stratum kill; ...).
+- N5-S2-ROW-PIN (Sol, `d146223b`): the first S2 residual numerical
+  pin is explicit; complementary subrows KILLED by N-A-RES; a
+  finite all-degree ledger does NOT follow (d>=10 rows remain —
+  same honest shape as the N=4 d_min situation).
+- ONE-CUSP-A2 r1 died on the 128K cap mid-expansion (correctly
+  PARTIAL_NO_MARKER under the new contract — the fix works); r2
+  running with structural pacing + AWS-spec instructions.
+- Box03: suite + mirrors still draining. Integration #7 + round +
+  DC report at drain.
