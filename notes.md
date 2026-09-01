@@ -16747,3 +16747,26 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   asked what else would accelerate — answered in-channel (Opus
   headroom; three paywalled PDFs: Orevkov Sb.65(1990), Domrina
   Izv.64(2000), Moh JRAM 340; keystone-formalization suggestion).
+
+## LIVE STATE (observed 2026-09-01T20:44Z) — DC GRANTS: 3 OPUS SEATS; PDFS INCOMING; FORMALIZATION KICKOFF
+
+- DC (human, in-channel): (1) up to THREE Opus seats authorized +
+  continued Grok delegation; (2) will download the three paywalled
+  papers (DOIs/citations handed over); (3) formalization effort
+  kicking off — the two keystone theorem statements (Keystone 1:
+  normalized-graph/four-box/valuation-formula package; Keystone 2:
+  Theorem 7.B) pbcopy'd to DC's clipboard with pointers into
+  xmodel/ for the argument details; the formalization machinery has
+  read access to this directory. jc2kit software effort running in
+  DC's background.
+- Opus seats 2/3 filled 20:42Z: ROW-86-PREBUILD (the S_4 kill
+  chains for the two live candidates — KEY observation encoded in
+  the charge: (8,6) IS the g=2 member of shape family 3, so the
+  reviewed TB/SK-5 machinery applies directly; M-INF misses by
+  1 resp 3, so N-A cannot fire) and CELL-32-TERMINATION (the
+  degree-spiral termination argument on the review-corrected
+  system; would complete OBSTRUCTION[A-DEGREE-TWO]). Seat 1
+  reserved for the CAGE-N per-class successor after its paired
+  review lands. Watchers live.
+- Running now: 2 Opus flagships, CAGE-N paired review (Sol+Grok),
+  Box03 (char-0 C/D + char-p prefilter + realization postcheck).
