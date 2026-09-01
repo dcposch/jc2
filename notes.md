@@ -17329,3 +17329,49 @@ of the two scripts + coordinator patches + the ZvK convention
 stack (charged: the scripts, the JSON, REP-96, its review).
 Running: domrina-ii-replay2 (16746), domrina-gap-repair (17203),
 Box03 msolve 869 + M2 queue + native enum.
+
+## LIVE STATE (observed 2026-09-01T23:26Z) — DOMRINA II: BOTH ROOT GAPS REPAIRED; §§5-7 CLEAN; CHAIN NEARLY SOUND
+
+**DOMRINA-II-REPLAY-2 landed** (`domrina-ii-replay2-sol56-20260901.md`,
+89d794a7, BODY_SEALED_AFTER_DIVERT): §§5-7 fully replayed —
+Fig. 11 classes 1a-1d (§5), 3a-3b (§6), 4a-4b + Lemma 7.10 case
+enumeration + the omitted §7 arithmetic (§7 of the paper) — ALL
+locally REPAIRED, **no new intrinsic gap**. Eight named local
+repairs must ride any corrected edition. Complete soundness
+graph: every terminal family except §4's independent elimination
+depends on BOTH root gaps; minimal repair set (M) = exactly
+{ROOT-U-LAST-CHAIN, ROOT-DELTA-G2-APPLICATION}, both typed
+lane-repairable, relative to the D--O I unique-mu=2 trust
+boundary.
+
+**DOMRINA-GAP-REPAIR landed** (`domrina-gap-repair-opus5-20260901.md`,
+99fc1e58, BODY_SEALED): **both gaps REPAIRED** — Theorem R1/R1'
+(endpoint/last-linear-segment determinant argument) closes
+ROOT-U-LAST-CHAIN in full; Theorem R2/R2' closes the charged
+first conclusion of ROOT-DELTA-G2-APPLICATION, with the companion
+inessentiality clause repaired at every non-fork vertex and
+typed OPEN[LEMMA-3.15-INESSENTIAL-AT-FORK] at the single fork
+vertex h-tilde. NO-COUNTERMODEL proved (not searched) over the
+full state space. Bonus: NEW-LEMMA[DET-LINF-NONPOS] (det of the
+infinity tree <= 0) proved UNCONDITIONALLY from properness +
+Hodge index + Grauert — stronger than the paper's own tooling.
+Ledger discipline: DOMRINA-II §§1-4 = SOUND-AFTER-REPAIRS;
+DOMRINA-II-SOUNDNESS still unpromoted pending (i) fork-vertex
+consumption question vs replay-2's dependency tags, (ii) D--O I
+unique-mu=2 inheritance (never re-audited, part I NOT in
+custody), (iii) structure packages (F1)/(F2)/(S1)/(S2)/(S4)
+consumed-not-rederived, (iv) hostile review of R1/R2/DET-LINF.
+
+**NEW LANES** (23:26Z): `domrina-repair-review-gpt55` (child
+21712) — gate R1/R1'/R2/R2'/DET-LINF + decide FORK-CONSUMED-
+NOWHERE vs FORK-CONSUMED-AT[...] by intersecting the replay-2
+dependency graph with the official PDF. `do1-hunt-grok46` (child
+21272) — obtain D--O part I custody (announcement bibliography ->
+mathnet mzm route). COORDINATOR DEVIATION (logged): first draft
+of the do1-hunt prompt carried a from-memory extension of the
+charged input's 8-char hash prefix — caught at pre-launch
+verification, fixed before launch (hash-transcription lesson
+applied).
+
+Running: repair-review (21712), do1-hunt (21272), Box03 msolve
+869 + M2 queue + SAGE-NATIVE 6^9 enum.

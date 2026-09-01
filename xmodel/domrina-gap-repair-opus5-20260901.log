@@ -1,1 +1,30 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report delivered and sealed: `xmodel/domrina-gap-repair-opus5-20260901.md` (32,825 body bytes, SHA-256 `29a2bf6a…`, basis `21cf7ed1`).
+
+## Verdicts
+
+**GAP-CANDIDATE[ROOT-U-LAST-CHAIN] (Cor. 3.8 b) — REPAIRED.**
+**GAP-CANDIDATE[ROOT-DELTA-G2-APPLICATION] (Lemma 3.15) — REPAIRED** for the charged conclusion `ṽ ∉ δ(ãg̃₂)`.
+
+Neither implication is false. No countermodel exists in the state space, and that is a theorem here rather than a failed search.
+
+## What actually closed them
+
+The printed route (Lemmas 2.3/2.4, resp. 2.5/2.6) is genuinely under-determined — the replay was right about that, and the naive patch stalls exactly where it flagged. Both gaps instead die to Domrina's **own Lemma 2.12** applied at the vertex where the root hangs: that vertex always lies on ⟨g̃₁g̃₂⟩, and inequality (2.13) holds for free once the relevant path determinant is 1 and every factor of Q₃ is a positive integer.
+
+Lemma 2.12 carries one hypothesis Domrina never proves, `det L̃∞ ⩽ 0`. I prove it unconditionally: `X̃ − L̃∞ = F⁻¹(C²)` is affine (F proper with finite fibres ⟹ finite); if the determinant were positive, Hodge index forces negative definiteness, and Grauert-contracting L̃∞ kills all nonconstant regular functions. That is a reusable asset — the paper re-discharges the same hypothesis case-by-case in §§5–7.
+
+The awkward configuration in Lemma 3.15 (root inside a lifted U-component at Δ's fork) is not killed by any determinant inequality but by Riemann–Hurwitz + (3.1) forcing h⁰ to be a singleton, which then contradicts the "Δ misses g̃₁" hypothesis — the case is empty.
+
+## What I did not prove
+
+- `OPEN[LEMMA-3.15-INESSENTIAL-AT-FORK]`: the *second* clause of 3.15 at the fork h̃, where `det(h̃g̃₂) = 1` not 2. I checked that the Lemma-2.3-style computation there yields `p₁ ≡ −1 mod d` and raises no contradiction, so this cannot be filled by analogy.
+- `SCOPE[COR-3.8b-ON-PATH-ROOT]`: `det δ(g̃₁h̃) = 1` follows only when ṽ ∉ ⟨g̃₁h̃⟩.
+- Structure packages (F1)/(F2) from Lemma 3.7 and (S1)/(S2)/(S4) from 3.15's own proof are consumed as licensed, not re-derived (I did re-derive (S3)).
+
+## Ledger effect
+
+`DOMRINA-II §§1–4 = SOUND-AFTER-REPAIRS`. `DOMRINA-II-SOUNDNESS` **stays unpromoted** — the blocker changed rather than vanished: §§5–7 unaudited, and the "more than one dicritical" entry still rides part I's un-re-audited μ=2 analysis. `N=4-LITERATURE-CLOSED` **stays NOT ASSERTED**. The campaign's independent N=4 chain remains load-bearing and is untouched; a repaired Domrina lemma should not be allowed to relax the ROW-NF exhaustiveness obligation on the campaign side.
+
+Side catches: part I's printed `det Γ_L = 1` is an OCR-lost minus sign (confirmed by re-deriving both displays of the 2.12 proof); Cor. 3.8 b)'s `δ(g̃₁ṽ) ∩ Ũ` is ill-typed against Definition 2.2 and must read `⟨g̃₁ṽ⟩ ∩ Ũ`; the English translation drops "h̃ ∈ h⁰" that the Russian original carries in 3.8 a). Banked to memory. Routes (b) and (c) were available but not used, so I claim no support from the pinned literature or the rowkill arsenal.
+DIVERT path=xmodel/domrina-gap-repair-opus5-20260901.md status=CLEAN_SEALED body_bytes=32825 body_sha256=29a2bf6aa10402cb9fa2fa9c28b58729fa8dcb052ba13d03cf3d26f2994fe032

@@ -805,3 +805,12 @@ replacement for §§5–7 would be required.
 This is a clean completion boundary for REPLAY-2.
 
 <!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->`
+  line, including its terminating newline; this seal is outside the body.
+- Body bytes: `39642`.
+- Body SHA-256: `89d794a7b79d4e43092e2dac1215272fced8a1aa0d3436adffc4ab07b87d3a71`.
+- Frozen basis: the official PDF and two charged-input digests listed in §0,
+  all reverified at completion.
