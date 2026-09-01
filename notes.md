@@ -16447,3 +16447,37 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   sharpness witness; R5 closed; degree-8 horn search space.
 - Clocks: web-sweep backstop 04:54Z — will run as a Grok lane at the
   clock. Box03: suite + braid still running.
+
+## LIVE STATE (observed 2026-09-01T04:06Z) — SHAPE THEOREMS PROMOTED; SUITE INTO THE TYPES; FIRST NONEMPTY
+
+- SHAPE-KILL review (Grok, `0213fcae`): SK-1, SK-4, SK-5 ALL
+  CONFIRMED at corrected scopes — SK-1 as gauge-elimination
+  (a d_min-attaining gauge never has n|d); SK-4's kill is
+  `u ≢ 3 (mod 6)` with Π pinned to V_4 on survivors; SK-5 is the
+  NON-constant stratum (Π a 3-cycle — resolvent does not descend);
+  bonus Lemma SK-2/2' kills the entire (2u,2) column at g=2. My
+  parenthetical that Tschirnhaus-splitting would close family 3 was
+  REFUTED — corrected. Follow-up lanes launched 04:02Z: Sol
+  SHAPE-2-FINISH (the u≡3(6) V_4 residual via the generalized
+  torus/valuation route + the g>=3 inner invariant); Opus
+  SHAPE-3-FINISH (the mixed-branching triple-cover classification —
+  branch degree 4g+1 with a Z/3 component at L_inf).
+- Box03 SUITE: r5 had silently ABORTED at the msolve neg-control
+  gate (I had patched the M2 selftest gate but missed this one; the
+  "running" signal was a stale shell — watcher pattern hardened).
+  Root cause of the neg_ms FAIL understood: the control ideal IS
+  positive-dimensional (the line s=-t); msolve's 0-dim report is a
+  parse/mode artifact — M2 side authoritative, msolve advisory.
+  Gates patched to WARN; r6 relaunched 04:01Z and is INTO THE TYPES:
+  type86_A msolve = **NONEMPTY_0DIM (78s)** — candidate
+  parametrizations EXIST for (8,6,11) at the ideal level; its M2
+  mirror FAILs on an internal assertion (queued for repair);
+  realization still needs the postcheck. NONEMPTY types, if they
+  pass postcheck, become NEW candidate rows (and counterexample-side
+  targets) — the degree-6 Shirane trick does not apply at degree 8.
+- Braid cross-check: the sage monodromy stage exited in 1s with no
+  output (argument-dispatch bug in the generated script); selftest
+  JSON present. Typed as OPEN[BRAID-JOB-DISPATCH]; cross-check only,
+  deprioritized.
+- Running: shape-finish x2, web sweep, suite r6. Integration #6
+  sealed earlier (all-degree H2).
