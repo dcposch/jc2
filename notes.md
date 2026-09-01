@@ -17254,3 +17254,27 @@ own setup / promoted campaign machinery / pinned literature);
 if IMPLICATION-FALSE: countermodel and sober consequence line.
 Still running: rep-96-hostile-review (14390), bm-fact-codegen
 (14231); Box03 msolve 869 + M2 queue.
+
+## LIVE STATE (observed 2026-09-01T23:06Z) — REP-96 CONFIRMED: PROMOTE-WITH-REPAIRS
+
+**REP-96 hostile review landed** (`rep-96-hostile-review-grok46-20260901.md`,
+1ce6b664, BODY_SEALED): **PROMOTE-WITH-REPAIRS**. Independent
+recomputation confirmed: Galindo census; family-2 block algebra
+at d'=3 (beta = iota_2 iota_3 iota_1, h = Y X^2 Y); the exhaustive
+S_4 enumeration (60 outer, 1080 pairs) reproducing the class lists
+EXACTLY (6/144 and 3/72); the GATE-3 table entry-for-entry; both
+controls incl. the negative (delta_aff=4 killed at E=-3); §6
+no-missed-kill sweep vs the promoted arsenal; block-free (M') and
+the Pi-tau pin. Sharpening found: the gate table is 12-periodic
+(period 6 only on transposition strata); GATE-3 is non-binding on
+this even-c row but binding in general (gcd(k_*,6)=1 fatal).
+Three repairs, none moving any verdict: R1 noncst-4c W-column is
+a 3-cycle (not double transposition); R2 caption periodicity
+corrected to k mod 3*ord(X); R3 parenthetical h-word product is
+X (not Y). Apply at integration #7 with TB-GERM's four.
+
+**Both (9,6) survives-verdicts are now paired-review CONFIRMED.**
+The BM-factorisation is the sole decisive instrument left for
+(9,6,2). Running: bm-fact-codegen (14231), domrina-ii-replay2
+(16746), domrina-gap-repair (17203); Box03 869 msolve + M2 queue,
+964 queued.

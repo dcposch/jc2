@@ -1,2 +1,30 @@
 cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
-I'll start by verifying the frozen input hashes, then independently re-derive CABLE-3 and the survives-verdict rather than trusting the charged report.Hashes match. Next I’ll load the charged reports, FALLACY-v2, and prior hostile-review format so the audit is independent.Hashes are good. I’ll read the charged report and the integration/encoding audits next, plus a prior hostile-review for format.Charged report is loaded. I’ll independently recompute the Puiseux census and S₄ class lists, and pull the source theorems those claims rest on.I’ll brute-force the S₄ class lists and independently recompute the Puiseux census while reading the source theorems those claims depend on.S₄ class lists match. Next I’ll independently recompute Puiseux `k_*`, the `(6,4)` controls, and the `W`/`h` cycle types the winding argument depends on.The Puiseux series job is still running; I’ll switch to truncated inversion and pull the `(M')` source while it finishes.Puiseux `k_*` matches. I’ll finish the `(6,4)` controls, the `(M')` algebra, and the remaining gate audit.
+I'll start by verifying the frozen input hashes, then independently re-derive CABLE-3 and the survives-verdict rather than trusting the charged report.Hashes match. Next I’ll load the charged reports, FALLACY-v2, and prior hostile-review format so the audit is independent.Hashes are good. I’ll read the charged report and the integration/encoding audits next, plus a prior hostile-review for format.Charged report is loaded. I’ll independently recompute the Puiseux census and S₄ class lists, and pull the source theorems those claims rest on.I’ll brute-force the S₄ class lists and independently recompute the Puiseux census while reading the source theorems those claims depend on.S₄ class lists match. Next I’ll independently recompute Puiseux `k_*`, the `(6,4)` controls, and the `W`/`h` cycle types the winding argument depends on.The Puiseux series job is still running; I’ll switch to truncated inversion and pull the `(M')` source while it finishes.Puiseux `k_*` matches. I’ll finish the `(6,4)` controls, the `(M')` algebra, and the remaining gate audit.Control 2, exponent vacuity, and the Pi-tau pin all check out. I’ll confirm the curve identity, then write the review.Independent checks are in. I’ll write the hostile review to the charged path, then seal the body hash.The draft is over the 20–30KB target, mostly in the CABLE-3 attack section. I’ll compress that without dropping counts or verdicts.**Verdict: `PROMOTE-WITH-REPAIRS`.** Report: `xmodel/rep-96-hostile-review-grok46-20260901.md` (sealed; body SHA-256 `ab8ee8fd…`). Frozen input hashes matched before any reading.
+
+Load-bearing claims survive independent re-derivation and brute enumeration. Three supporting-text errors need repair; none of them moves a survives-verdict, a class, or THEOREM CABLE-3.
+
+| Claim | Result |
+|---|---|
+| THEOREM CABLE-3 / GATE-3 | **CONFIRMED** at written scope `(d,n)=(3g,2g)`, one pair at infinity |
+| Both live `(9,6)` types SURVIVE GATE-3 and every other promoted gate | **CONFIRMED**; no missed kill |
+| §5 class lists | **EXACT**: 6 classes / 144 tuples for `(9,6,2)`, 3 classes / 72 for `(9,6,4)` |
+| §7 fork (`M'`, `a_p`, Pi-tau, two-`b`) | **CONFIRMED** |
+
+Independent checks that carried the verdict:
+
+- **Census / `k_*`.** Galindo conversion and truncated Puiseux over `Q` both give `beta_1=25/23`, `k_*=-10/-8`, `e(iota)=-20/-16`. The `(9,6,2)` identity, four nodes on `x=0`, and eight simple tangencies re-checked exactly. ROW-NF at `b=c=1` gives `k_*=-5`.
+- **Ordered product.** Two-fold cabling at `d'=3` yields `T_1=beta·c_h(T_1)` with `beta=iota_2 iota_3 iota_1` and `h=Y X^2 Y`. Only the ordered product is visible; conjugacy in `B_3` absorbs strand identification.
+- **Winding.** `k_*=2d-a-beta_1` re-derived in the `(v,u)` chart; sign pinned by `e(delta_3^{k_*})=2k_*=e(iota)`; extra full twists excluded by the exponent. Individual `iota_i` are not pinned (and cannot each have exponent `2k_*/3`).
+- **Controls.** `(6,4)` specialises to `3|(E+2)`: `E=-5` passes (`72/72`); hypothetical `delta_aff=4` at `E=-3` is killed (`0/0`).
+- **Enumeration (verbatim).** `60` outer solutions, `1080` pairs. GATE-3 table matches the charged `k=0..-6` entry for entry. Exponent-sum gate is vacuous at `g=3`: all `1080` pairs admit `e≡-20` and `e≡-16` (mod 24), `744` with full image. Displayed class representatives all check: braid, product, fixed, `im=S_4`, `Pi∉V_4`.
+- **N-A.** `(9,6,2)`: `6>8` (miss by 2). `(9,6,4)`: `12>12` (on the boundary). Not relaxed to `≥`.
+- **`(M')`.** H2 form is fatal for nodal `N=4` and is a control, not a kill of this row. Block-free form collapses to `chi_2+sigma_2=1` with `s_1` cancelling. `a_p∈{0,1,2}` matches sheet-gate `#F^{-1}(p)`. Pi-tau pin: two of six transpositions.
+
+**Repairs (must fix before treating the whole document as a clean successor source):**
+
+1. **R1.** `noncst-4c` row, `W=XY` is a **3-cycle**, not a double transposition (`X=(1234)`, `Y=(1243)` gives `XY=(132)`; `h` is the double transposition and is already labelled correctly).
+2. **R2.** The caption “`k=-7..-12` repeat `k=-1..-6`” asserts global 6-periodicity, which **fails on the 4-cycle strata**. Using it would swap the 4-cycle content of the two types. Take GATE-3’s `k mod 4` sentence and the §5 lists, not the caption.
+3. **R3.** `(234)(124)^2(234)=(124)=X`, not `(234)`. The claim `h=X` on all 24 SK-4 pairs is correct.
+
+`OPEN[SHAPE-2-INNER-g≥3]` is narrowed, not closed. The cheapest next step remains `OPEN[REP-96-BM-FACTORISATION]`.
+DIVERT path=xmodel/rep-96-hostile-review-grok46-20260901.md status=CLEAN_SEALED body_bytes=39245 body_sha256=ab8ee8fd0d769aca7be30872134b8c7cc7ee4621673314f570a3c85320db5ac7
