@@ -16790,3 +16790,25 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Also running: Box03 (char-0 C/D, char-p prefilter, realization
   postcheck). DC delivering three paywalled PDFs; formalization
   kickoff with the pbcopy'd keystones; jc2kit in DC's background.
+
+## LIVE STATE (observed 2026-09-01T20:57Z) — TYPE A IS POSITIVE-DIMENSIONAL; PIPELINE ONE HANDOFF FROM VERDICTS
+
+- Realization pipeline r4 (after three coordinator repairs: the
+  recurring --no-preload class in the new driver; a pkill-self-match
+  ssh footgun diagnosed — the remote pattern matched its own
+  command line, killing the session before sed ran, twice; the
+  bracket-trick + isolated-call pattern now standard): selftest
+  PASS; **type86_A extraction reveals the variety is
+  POSITIVE-DIMENSIONAL** (msolve solve-mode [1,nvars,-1,[]]) — a
+  FAMILY of candidate (8,6,11) parametrizations, not isolated
+  points; the sage rational-slice fallback then produced a
+  zero-dimensional RUR successfully. Remaining gap: the
+  RUR->idp_apply_point handoff ran 0 points (npass=0 nrun=0) —
+  plumbing, not math. r4 continuing through type B; handoff repair
+  next.
+- charp: type86_D NONEMPTY mod p in BOTH strata (bases 4201/1654);
+  type86_C closed stratum NONEMPTY mod p (251), open stratum
+  TIMEOUT even mod p. Evidence: likely ALL FOUR (8,6) types are
+  nonempty at the ideal level; realization postchecks decide
+  everything.
+- Opus x3 running (CAGE-N-R2, ROW-86-PREBUILD, CELL-32-TERMINATION).
