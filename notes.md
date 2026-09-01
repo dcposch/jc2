@@ -17278,3 +17278,54 @@ The BM-factorisation is the sole decisive instrument left for
 (9,6,2). Running: bm-fact-codegen (14231), domrina-ii-replay2
 (16746), domrina-gap-repair (17203); Box03 869 msolve + M2 queue,
 964 queued.
+
+## LIVE STATE (observed 2026-09-01T23:17Z) — BM-FACTORISATION RAN: ZERO SURVIVORS IN THE BLOCK READING
+
+**BM-FACT pipeline executed on Box03** (coordinator-run; codegen
+lane died at the report step — scripts banked, report deviation
+logged below). Chain of custody:
+- Lane emitted box/bmfact_962.sage, box/bmfact_enum.py,
+  box/bmfact_selfcheck.py, then hit the output cap before writing
+  its report (log narration ends at "write the sealed report");
+  run.v2 has no report_state. Scripts are the deliverable;
+  a review lane must audit them (queued below).
+- Coordinator ran selfcheck locally: SELFCHECK-OK (discriminant
+  census = 8 simple tangency roots of 3^9x^8+2^24*5*43x^4+2^47,
+  x=0 at multiplicity 8, total 16, x=infinity excluded).
+- TWO new footguns found and fixed by coordinator (deviations):
+  (#10) Sage `squarefree_part()` divides by the maximal square
+  factor (X^8*oct -> oct); `radical()` is the distinct-support
+  operator — patched line 366. (#11) `sage script.sage` on the
+  conda-forge Sage 10.9 build does NOT set __name__=="__main__"
+  (script produced zero output, rc=0); fix: preparse via
+  sage.repl.preparse.preparse_file, prepend sage.all_cmdline
+  import, run `python bmfact_962_pp.py <mode>`.
+- PRECHECK-OK: F irreducible, bidegree (6,9), Jacobian ideal
+  0-dimensional with vector_space_dimension 4 (four reduced
+  affine nodes, all on x=0), census identities verified.
+- MONODROMY-OK (SIROCCO, 4.1s + 1.9s): 9 braids on 9 strands.
+  **CENSUS-OK: 8 tangency braids + 1 node-fibre braid (four
+  commuting squares), exponent ledger 16 — REP-96 §1 census
+  CONFIRMED by certified computation.** Caveat: Sage 10.9
+  returned the 4-tuple (no base point) -> OPEN[BMFACT-BASEPOINT];
+  strand order not certified. mono log: ~/bmfact/bmfact_962.mono.log;
+  JSON: ~/bmfact/bmfact-962-out/bmfact_962.json.
+- ENUMERATION (bmfact_enum.py): internal controls ALL PASS
+  (expanded orbits 144/144; POSITIVE CONTROL product-only
+  generating=144; NEGATIVE CONTROL projective-product count=0;
+  Pi-tau pin holds as assertion). RESULT, variant BLOCK
+  (adjacent-block strand identification, both orientations):
+  **per_class all ZERO, total_survivors=0 — KILL of (9,6,2) at
+  the representation level in this reading.**
+  OPEN[BMFACT-STRAND-VS-BLOCK]: the identification of Sage's
+  strand order with REP-96's tubular order is an assumption;
+  the SAGE-NATIVE full 6^9 brute force (no identification
+  assumed, both orientations) is RUNNING on Box03
+  (enum_native.log; ~10M tuples). If it also returns zero, the
+  kill is convention-independent up to OPEN[BMFACT-BASEPOINT].
+
+NOT YET A KILL: pending (a) SAGE-NATIVE zero, (b) hostile review
+of the two scripts + coordinator patches + the ZvK convention
+stack (charged: the scripts, the JSON, REP-96, its review).
+Running: domrina-ii-replay2 (16746), domrina-gap-repair (17203),
+Box03 msolve 869 + M2 queue + native enum.

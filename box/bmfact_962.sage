@@ -363,7 +363,7 @@ def precheck():
             % disc_univariate.degree()
         )
     # FLAG: squarefree_part / valuation classical univariate.
-    disc_squarefree = disc_univariate.squarefree_part()
+    disc_squarefree = disc_univariate.radical()  # radical()=distinct support; squarefree_part() divides by max square (footgun #10)
     n_disc_support = disc_squarefree.degree()
     if n_disc_support != N_DISC_SUPPORT_EXPECTED:
         fail(

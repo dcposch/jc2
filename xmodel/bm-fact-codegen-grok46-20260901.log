@@ -1,2 +1,50 @@
 cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
-I'll start by verifying the charged-input hashes, then read the reports and the workspace layout before writing the Sage/Python scripts and the derivation.Hashes match. Next I’ll read the charged reports and the existing `box/` scripts so the Sage/Python work follows the same conventions.Hashes checked out. I’ll pull SIROCCO/ZvK conventions and the REP-96 class list next so the scripts encode both readings if anything is ambiguous.The row-64 braid job is the right template. I’ll pull its Sage/Python bodies and the Sage ZvK docs so this (9,6,2) job matches those conventions.Sage’s current `braid_monodromy` returns a 5-tuple with the base point; I’ll handle both that and the 10.8 4-tuple. Next I’ll compute F and the discriminant with sympy, then draft the scripts.Class list, F, and the discriminant census check out. I’ll write the Sage/Python scripts and the self-check next, then run the Sage-free tests.Writing the Sage job, the enumerator, and the sympy self-check as three `box/` scripts.Selftest and sympy checks passed. Next I’ll write the sealed report with the derivation, transcripts, and script hashes.
+I'll start by verifying the charged-input hashes, then read the reports and the workspace layout before writing the Sage/Python scripts and the derivation.Hashes match. Next I’ll read the charged reports and the existing `box/` scripts so the Sage/Python work follows the same conventions.Hashes checked out. I’ll pull SIROCCO/ZvK conventions and the REP-96 class list next so the scripts encode both readings if anything is ambiguous.The row-64 braid job is the right template. I’ll pull its Sage/Python bodies and the Sage ZvK docs so this (9,6,2) job matches those conventions.Sage’s current `braid_monodromy` returns a 5-tuple with the base point; I’ll handle both that and the 10.8 4-tuple. Next I’ll compute F and the discriminant with sympy, then draft the scripts.Class list, F, and the discriminant census check out. I’ll write the Sage/Python scripts and the self-check next, then run the Sage-free tests.Writing the Sage job, the enumerator, and the sympy self-check as three `box/` scripts.Selftest and sympy checks passed. Next I’ll write the sealed report with the derivation, transcripts, and script hashes.Charged-input hashes matched. SIROCCO was not run; the coordinator runs that on AWS. This lane is codegen plus desk math.
+
+## Deliverables
+
+| File | Role |
+|---|---|
+| `box/bmfact_962.sage` | Sage+SIROCCO job: build `F`, census-abort, emit braid JSONL + Artin autos of `F_9` |
+| `box/bmfact_enum.py` | Pure Python: hard-coded REP-96 §5 classes, ZvK intersection, pos/neg controls |
+| `box/bmfact_selfcheck.py` | Sympy: resultant `F` and every root of `disc_y F` |
+| `xmodel/bm-fact-codegen-grok46-20260901.md` | Derivation, conventions, transcripts, seals |
+
+Script SHA-256:
+
+```text
+884cadc767b759a0af197a2a577511e74b4759e8e834b0100d03c15bee7d350c  box/bmfact_962.sage
+b51813adcf7a407f97c486995f7f99ba73f616d0f04594506a069757bdbf832b  box/bmfact_enum.py
+e268585f4c4d945dba0ad42880763b2bee646bddd6dd19c532593c43a90e45fa  box/bmfact_selfcheck.py
+```
+
+## Desk results (no Sage)
+
+**`F` is unique of bidegree `(6,9)`:**
+
+```text
+F = (x^2 - y^3 - 64 y)^3 + 32768 (x^2 - y^3 - 64 y) - 262144 y
+```
+
+Irreducible over `QQ`, `lc_y(F) = -1` (no vertical asymptotes). Identity substitution matches the resultant exactly.
+
+**Discriminant table** (`deg = 16 = 8·1 + 4·2`):
+
+| root | multiplicity | type |
+|---|---:|---|
+| `x = 0` | 8 | four nodes, one fibre |
+| eight roots of `3^9 x^8 + 2^{24}·5·43 x^4 + 2^{47}` | 1 each | simple tangencies |
+| `x = ∞` | not a root | `lc_y = -1`; lives in `rho_inf` |
+
+**Enumerator `--selftest`:** GATE-3 holds on all six charged classes at `k_* = -10`; conjugacy expansion is 144; Pi-tau pin asserts (does not filter); **positive control 144**; **negative control (projective relation) 0**. An independent `6^9` scan in the adjacent-block embedding found 246 product-fixed tuples, **144 generating**.
+
+## Conventions and OPENs
+
+Sage entry point is `zariski_vankampen.braid_monodromy` (10.8 4-tuple **or** develop 5-tuple with base point). Strand order is `QQbar.sort` of `y`-roots at the Voronoi base point; product of listed braids is the counterclockwise large loop. Affine ZvK is the right group: no `ξ_9…ξ_1 = 1`.
+
+Ambiguities are typed `OPEN` and encoded as variants, not chosen silently: Sage strands vs tubular blocks, adjacent vs mod-3 tubes, `iota` split, product vs inverse. REP-96’s remark that `k=-10` repeats the `k=-4` table row is **not** used; the printed class list is verified at `k_*=-10`.
+
+Census disagreement on AWS prints `CENSUS-DISAGREES-REP96` and aborts.
+
+AWS: `sage box/bmfact_962.sage precheck`, then `BRAID_JOB_RUN_MONODROMY=1 sage box/bmfact_962.sage monodromy`, then `python3 box/bmfact_enum.py "$OUT/bmfact_962.json"`. A survivor is a representation of `π_1(C^2-D)`, not a Keller map.
+DIVERT path=xmodel/bm-fact-codegen-grok46-20260901.md status=CLEAN_SEALED body_bytes=27300 body_sha256=f961eacd1c5957176c79c16688854a270ce3bc9219c48a29e704d4d8f047e5fa
