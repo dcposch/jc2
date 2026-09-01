@@ -16291,3 +16291,38 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   the (8,4) survivor: normal form, INF-TRIVIAL analogue, and the
   degree-8 classification input via Tokunaga T91/Miranda). Watcher
   live. Box03: suite + braid job still running (cross-check).
+
+## LIVE STATE (observed 2026-09-01T00:59Z) — N=4 TOPOLOGICAL CORE DEAD; CLOSURE REVIEW + N5-S2 FIRED
+
+- Wave 17 all in. ROW-KILL gate (Sol, `0fb4778e`): PROMOTE the
+  corrected explicit-family theorem — no meridian-transposition S_4
+  surjection on any ROW-NF member with j outside {-27/4,-81/16},
+  with the j=0 fibre split as D_4+A_14; (c(Pi),g_L) adjudicated to
+  (4,0) (geometric pencil identification; the (2,1) value is correct
+  arithmetic for a DIFFERENT pencil, not a competitor); citation
+  corrected to SHIRANE Cor 0.6; the sweeping "half-frontier closure"
+  claims trimmed. Verification arm (Grok, `9b03dad6`): caught the
+  missed j=0 modulus (D_4 triple point at (0,1)) — NO-TORUS still
+  holds there by exact elimination + Oka rho-count; INF-TRIVIAL
+  feeds intact at both test points; (4,2) sanity replay clean.
+- EDGE-MODULI (5.5, `d853764d`): BOTH excluded moduli KILLED — the
+  x=0 relation at j=-27/4 becomes 4+2 but stays even-power, so
+  every transposition-valued rep kills gamma_inf; Shirane fires as
+  before. ROW-KILL now covers the WHOLE ROW-NF row (c != 0).
+- ROW-84 (Opus, `6bdd164c`): row (8,4) KILLED by transport —
+  Delta=(8,4,6,3) iff deg(P-Q^2)=6; Phi=(x-y^2,y) in Aut(A^2)
+  carries the whole (8,4) row bijectively onto the whole (6,4) row;
+  automorphisms preserve pi_1 with meridian classes; ROW-KILL
+  inherits. Steps 1-3 unconditional, literature-free. The
+  "non-transfer" tension with TORUS-CHECK adjudicated: braid/fold/
+  compactification data do not transport, but the PAIR (A^2, D) up
+  to Aut does — exactly the gate's "ambient automorphism" branch.
+- NET: the N=4 reducible-residual TOPOLOGICAL core — both curve
+  rows, all moduli — is dead pending one combined closure review
+  (launched, Grok 3h). Remaining N=4: the six (8,6)/(9,6)
+  realization types (Box03 suite still running) — if all EMPTY,
+  B0 closes at N=4 unconditionally.
+- Also launched: N5-S2 kill chain (Sol, 6h — adapt the method to
+  the N=5 PI1-S4-shaped survivor; note S_5 has no S_4->S_3-style
+  resolvent, so the lane must find the right replacement tool).
+- Integration #5 drafts after the closure review lands.
