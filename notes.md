@@ -16398,3 +16398,31 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   families); Grok HF-ATTAIN (4h — what the k=6,7 saturations force
   on the (9,6,4) candidate; BLZ equality-case literature).
 - Box03: suite on type ideals, braid cross-check running.
+
+## LIVE STATE (observed 2026-09-01T03:07Z) — N20 PACKET DEAD (THM 7.B: ALL-DEGREE H2 CLAIM); WAVE 22 FIRED
+
+- N20-ESCAPE (Opus, `46c5f62f`, PROVISIONAL): the N=20 packet is
+  DEAD and **Theorem 7.B claims closure of the entire
+  OPEN[B0-H2-N>=20] — under H2, no trivial dicritical at ANY
+  degree**. If the paired review confirms: b=0 and the strict
+  budget at every degree with irreducible A_F; the H2 side of the
+  all-degree programme completes. Untouched: reducible N>=5,
+  PI1-S4-class without H2. Paired review launched 03:05Z (Sol gate
+  + Grok verification with synthetic-packet stress tests and an
+  independent RH recount).
+- CAMPAIGN-PIN (5.5, `cff4116c`): honest typed gap —
+  OPEN[CAMPAIGN-PIN-D1-DMIN-BOUND]; no promoted input bounds d_min.
+  Counter-attack launched: OPUS SHAPE-KILL (6h) — kill each
+  surviving shape family (u,1)/(odd u,2)/(4,3) UNIFORMLY in degree
+  (the (u,1) family may fall to the promoted n'=1 block-product
+  collapse; (odd u,2) to outer-coprime Theorem A + a degree-general
+  triple-cover input; (4,3)-scalings to outer Theorem A). If all
+  three die uniformly, the d_min bound is unnecessary and the N=4
+  residual closes to exactly the six candidate types.
+- N5-S1 (Sol, `42c1e998`): OPEN with two typed successors; review
+  launched (5.5). HF-ATTAIN (Grok, `a5a1b2de`): SHARPENED — the
+  k=6,7 saturations are tautological for the pin class; the
+  candidate is an explicit sharpness witness BLZ does not list;
+  next necessary layer = the noncoprime PI1-S4 residual + (M') on a
+  proposed F. Disproof-side ledger updated.
+- Box03: suite + braid cross-check still running.
