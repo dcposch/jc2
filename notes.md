@@ -16913,3 +16913,28 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   process note); Grok DOMRINA-FULLTEXT hunt (3h — mathnet.ru
   Russian original is free; page-verify everything against the
   Ni3Al decoy).
+
+## LIVE STATE (observed 2026-09-01T21:50Z) — (8,6,11) AND (8,6,7) KILLED AT REP LEVEL; TWO TYPES LEFT
+
+- ROW-86-PREBUILD (Opus, `7247cef3`, PROVISIONAL,
+  BODY_SEALED_AFTER_DIVERT): **type (8,6,11) KILLED at the S_4-
+  representation level, with a BONUS kill of (8,6,7)** — chain:
+  (8,6) is family 3 at g=2 (promoted); constant stratum dead
+  (SK-2); non-constant forces all-3-cycles (SK-5); rho_inf-
+  fixedness collapses to a sigma^{e(iota)} tube condition (Thm
+  TUBE-2, PROVED-HERE); the B_2 stabilizer is 3Z; and 3 | e(iota)
+  fails at delta_aff ≡ 11, 9 (e = -7, -11). Types (8,6,9) and
+  (8,6,3) PASS the gate (e = -9, -15 divisible). Scope exact: kills
+  the types as PI1-S4 residual candidates — INDEPENDENT of the
+  encoding audit, the realization outcome, and nodality. Sharpened
+  successor input: OPEN[S3-TB-G2] reduces to beta_1 in {23,29}.
+- CAGE-N-R2 (Opus, `bdd857c9`): accepts the gate refutation in
+  full; four rows added; THEOREM CAGE-N-R2 restated at promotion-
+  safe scope. Confirmation review launched (5.5).
+- Launched 21:48Z: Grok MOH-CHECK (the pinned JRAM 340 {6,8,3}
+  argument — would kill (8,6,3) at the CURVE level); OPUS
+  TB-G2-FINISH (type B via the sharpened TB constraints + (8,6,3)
+  rep-level backstop). N=4 candidate ledger now: TWO live types,
+  each under a dedicated kill lane, plus the gated suite verdicts.
+- Seven lanes running (3 Opus, 2 Sol, 1 Grok +1 Grok, 1 5.5);
+  consolidated watcher.
