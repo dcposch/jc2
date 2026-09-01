@@ -1,0 +1,12 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start by verifying the frozen input hashes, then read the charged reports and match the verification-report skeleton before any computation.Hashes match. Next I’ll read the charged reports and a recent verification skeleton so the output file matches the campaign format.The charged report is in. I’ll read the verification prompt, the coordinator file, and the N=4/N=5 cages next.I’ll pull the promoted N=4/N=5 cages and the N=5 survivor tables next, then re-enumerate N=6/N=7 from the stated constraints.Header totals look internally inconsistent with the per-class `#` column. I’ll write the report skeleton, then enumerate N=6/N=7 from the stated constraints.Skeleton is on disk. Next I’ll fill the body section by section from the independent census and the three N=6 gate checks.Word count is 3,278, under the cap. I’ll append `BODY-END`, hash the body, and write the seal.The computation arm is sealed at `xmodel/reducible-all-n-verification-grok46-20260901.md`. Frozen input hashes matched; no CAS, no `jc2-lean`, no charged-file edits.
+
+| Target | Verdict | What was checked |
+|---|---|---|
+| (1) N=6 / N=7 census | **BROKEN** | Independent ownership listing is 14 and 31 profiles, matching the headers and the 6 / 10 classes. The per-class `#` column is one short in four classes (sums 13 and 28). Missing rows: N=6 `[2]` with `W=(2,3)`; N=7 `[2]` `W=(3,3)`, `[2^(1)]` `W=(2,3)`, `[2+2^(1)]` with the trivial on the `k=1` side. All four pass the charged filters. |
+| (2) N=4 / N=5 recovery | **HOLDS** | N=4 is the single row core `(2,1,0)`, `W=(2,1)`. N=5 recovers S1 and the two S2 rows; P2 and P3c die by SELF/LZ. |
+| (3) NO-DEG-CAP family | **HOLDS** | `T_k(x,y)=(x,y+x^k)`: Jac identity, fibre translation, `A_{T_k∘F}=T_k(A_F)`, unbounded degree once `deg_y f≥1`. |
+| (4) Three N=6 gates | **HOLDS** | `(1,0)^5` dies by transitivity. SELF kills `W=4`, keeps `W=3` at equality. (LOC) is integer-exact on three profiles. N-A-RES kills the nodal quintic `y^2=x(x^2-1)^2` (`M_∞=7≤12`) and every T=0 one-place polynomial quintic; class `[2]` stays open at `d≥6` or `T≥1`. |
+
+No `charge_basis` line. Body 20,589 bytes, SHA-256 `89e157560cbc360f277ee8b050ed605273490086931615d6da781e81e5eda0b4`.
+DIVERT path=xmodel/reducible-all-n-verification-grok46-20260901.md status=CLEAN_SEALED body_bytes=20589 body_sha256=89e157560cbc360f277ee8b050ed605273490086931615d6da781e81e5eda0b4
