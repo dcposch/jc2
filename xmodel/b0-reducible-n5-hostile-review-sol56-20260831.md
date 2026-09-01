@@ -2,6 +2,14 @@
 
 ## 0. Executive verdict
 
+**REFUTED AS CHARGED.** The cost and ownership enumeration is complete after pointwise (G4), and the Zariski--Nagata, transitivity, and two `W=3` AMS kills are sound after the provenance/custody repairs below. They kill P2 and P3c, but they do **not** kill P3a/P3b. The frozen report itself retains P1 as Survivor S1 and P3a/P3b as Survivor S2 (B0:462-472), with separate OPEN decision questions (B0:615-632). Thus “all but S1” and the associated promotion are false. S2, not S1, is the exact smooth-double-branch PI1-S4-shaped analogue; S1 has a singular branch and lies outside that promoted class.
+
+S1's numerical cage, `A^1` normalizations, common point at infinity, and necessary `S_5` quotient are substantially correct. Its claimed pinning is not: component incidence was omitted at ordinary double points; S1b has fixed local orbits `3+2`, not an optional five-orbit; and generic-line generation does not force a second affine singularity. Its degree floor remains custody-conditional.
+
+The ramified-cover escape truly cannot occur at `N=5`, but the report's claimed first possible degree `N=7` is wrong: `(2,2,s=2)+(1,0,s=1)` is already budget-consistent at `N=6`.
+
+The NORI coefficient dependency does not invalidate N-A-RES: theorem-level `4T` becomes scalar `M_infinity+2T`. New primary-literature checking closes the coordinator's five-tacnode test positively (an irreducible rational `5A3` sextic exists and has projective complement group `Z/6`), while the general coefficient improvement remains OPEN.
+
 ## 1. Frozen inputs and review standard
 
 The two frozen files matched the required SHA-256 values before any report write:
@@ -133,4 +141,36 @@ Hence the extremal test has a **positive, abelian** answer. That does not prove 
 
 ## 7. Promotion recommendation
 
+**Overall: REFUTE-AS-CHARGED; PROMOTE-AS-CORRECTED fragments only.** The following are safe to promote together:
+
+- the complete post-(G4) cost list P1--P3 and ownership list P1, P2, P3a--P3c;
+- Lemmas A and B at their stated finite-normalization/floor scopes;
+- the pointwise (G4) exclusions and the all-trivial Zariski--Nagata exclusion;
+- `(M-2)` transitivity, now reviewed, and the `W=3` AMS kills of P2 and P3c with the Palka custody above;
+- absence of ramified covers at `N=5` only;
+- the corrected P1 numerical cage, common-infinity structure, necessary `S_5` one-curve quotient, incidence-branched disjoint-transposition condition, and the exact delta budget;
+- N-A-RES with theorem-level `4T` and scalar-level `M_infinity+2T`, plus closure of the five-tacnode sextic test as positive/abelian.
+
+Do **not** promote: uniqueness of S1; any reuse of the `S_4` row theorem at `S_5`; application of N-A-RES to S1; the uncorrected S1b five-letter local orbit; the claim that another affine double point is forced; Gate TG's degree floor before generic-line custody; or absence of ramification at `N=6`.
+
+The correct residual is
+
+```text
+S1: OPEN[PI1-S5-CUSP], split into corrected S1a and S1b local types;
+S2: OPEN[PI1-S5-NODAL], with ownership variants P3a and P3b;
+N=6: OPEN[B0-REDUCIBLE-N=6/RAMIFIED-COVERS].
+```
+
+This is not a cosmetic downgrade. The frozen report explicitly says “Two configurations survive” at B0:466-472 and leaves both decision questions open at B0:615-632. Promoting a one-survivor result would contradict its own charged basis.
+
 ## References checked
+
+1. S. Yu. Orevkov, “On Three-Sheeted Polynomial Mappings of `C^2`,” *Math. USSR-Izv.* 29 (1987): Lemma 2.1 (printed p. 2), Lemma 3.1 (pp. 4--5), multiplicity definition and Lemma 4.2 (pp. 6--8). Local hash recorded in §1.
+2. H. Żołądek, *The Jacobian Conjecture* (2008), Proposition 6.5(b), printed pp. 457--458. Local hash recorded in §1.
+3. Nguyen Van Chau, “Non-proper value set and the Jacobian condition,” arXiv:math/0305088v1, Theorem 1 and Corollary 2, printed pp. 1--2. Local hash recorded in §1.
+4. K. Palka, “A New Proof of the Theorems of Lin--Zaidenberg and Abhyankar--Moh--Suzuki,” arXiv:1405.5391v2, printed p. 1, Theorem B. URL and streamed hash recorded in §1.
+5. A. Akyol and A. Degtyarev, “Geography of Irreducible Plane Sextics,” arXiv:1406.1491v2, printed pp. 5, 7--9. URL and streamed hash recorded in §6.
+
+No primary custody was obtained for the generic-line Zariski `pi_1` surjection or the Fox determinant criterion; conclusions depending on them are held exactly as stated above.
+
+<!-- BODY-END -->

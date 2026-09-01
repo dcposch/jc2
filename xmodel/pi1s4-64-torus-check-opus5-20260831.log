@@ -1,1 +1,21 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report written and sealed: `xmodel/pi1s4-64-torus-check-opus5-20260831.md` (6,521 words — slightly over the ~6,000 target). One file only; no ledgers, charged files, or `jc2-lean` touched. All four input hashes verified before reading.
+
+## Verdict: the (6,4) row is KILLED
+
+**Task 1 — torus type: NO, for every `j`.** Four independent proofs, two using no external source:
+
+- **Key lemma:** an ordinary node is *never* an inner singularity. Locally `f = a³+b²`, so the quadratic part is `b₁²` — rank ≤ 1, never two distinct lines. Inner simple types are exactly `A_{3ι−1}` and `E₆`.
+- **Explicit Oka route:** on the `A_14` branch (semigroup `⟨2,15⟩`) the six conic monomials have the *distinct* orders `0,2,4,6,8,12` — 10 is absent — so `I(C,C₂;Q_∞) ≥ 12` is **5** conditions, not 6, and cuts out exactly `C·Z²`: the double line at infinity, which makes the sextic split.
+- Also: `Σρ(P,5) = 5 ≠ 6`; Bézout `18 > 15 =` max smooth contact; and a parametrisation argument forcing `A` constant.
+
+**Correction to the charge's framing:** the budgeted "3 nodes = 3 conditions" is inverted — the conic must *miss* the nodes.
+
+**Scope finding the charge asked for:** the charged cancellation kill does **not** cover this identity. It runs the wrong direction — it *concludes* `deg A ≤ 2, deg B ≤ 3`, which is the torus band, not its exclusion. Its low-band kill is outsourced to the uncharged `triple-cover-r2`, which I did not consume. §3.2 supplies that band in four lines from ROW-NF alone.
+
+**Task 3 — the affine bridge closes.** Over `x=0` the six points collide in three disjoint pairs, giving `g₁=g₂, g₃=g₄, g₅=g₆`, hence `γ_∞ = g₅²g₃²g₁²` in `π₁(C²−D)`. So **any** involution-valued homomorphism kills the `L_∞` meridian — tuple-independent, needing no braid factorization, no `(O4)` shape, no count 72. Escape (b) is void: Shirane Cor 0.6 (fetched, hash-matching the registry, quoted verbatim) has no genericity or simple-singularity hypothesis at all, unlike IT09.
+
+**One conflict I could not resolve and did not paper over:** this gives `Π = e`, `(c(Π),g_L) = (4,0)`, contradicting the promoted `FIXED-TUPLE` value `(2,1)`. That report is not a charged input, so I flagged it for the coordinator — noting that the `zvk-u6` justification for `(2,1)` describes the *upstairs* pencil (downstairs the `x=c` lines pass through `[0:1:0]`, while `D̄` meets `L_∞` only at `[1:0:0]`). **Theorem NO-TORUS stands either way**; if the identifications were wrong, §5 falls and the degree-8 branched-at-infinity object typed in §7 becomes live.
+
+The kill inherits `PROVISIONAL` scope from ROW-NF/Theorem FOLD, and excludes the two degenerate moduli. The queued AWS braid job is no longer needed; row `(8,4)` does not transfer.
+DIVERT path=xmodel/pi1s4-64-torus-check-opus5-20260831.md status=CLEAN body_bytes=41110 body_sha256=a352be2af1aebb5e158cb541a6eacdd0feb90f2ea3aa6750fb4bf1969c6bfefe
