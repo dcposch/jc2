@@ -1,0 +1,21 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. One file written: `xmodel/n20-escape-kill-opus5-20260901.md` (655 lines, ~5,900 words, sealed).
+
+## What happened
+
+**Hashes.** All three charged inputs matched. Both primary PDFs (`refs/jc86.pdf`, `refs/zoladek2008_official.pdf`) were present locally and rehashed to the values the charged reports record; I read Orevkov pp. 2–11 directly rather than consuming his lemmas second-hand.
+
+**The charge's proposed kill does not work.** "16 units can't sit on a ramification divisor of degree 2" fails because `corr_l = μ_l(s_l−1) + Σ k_t`, and the `k_t` are local *surface* multiplicity excesses that Riemann–Hurwitz does not bound. That route is genuinely blocked.
+
+**The packet dies anyway, one level up.** Orevkov Lemma 2.1(b,c) makes the `L_FC` chain linear with the dicritical as the endpoint carrying the unique `L_∞` point — so `l′ ≅ A¹` has exactly *one* point where the boundary divisor is not smooth. At every other point, Orevkov Lemma 3.1 applies (its Jacobian hypothesis is precisely the Keller condition there) and forbids any jump. So `corr_l` is a **single** jump, and `h_l` is either degree 1 or totally ramified. Packet (4.9) needs two correction sites carrying 8 each; only one exists, all 12 excess units land on one fibre, and `K_p = 12 > d = 6`. Dead. Re-running the budget with sites instead of ramification multiplicity moves the frontier from `N ≥ 20` to `N ≥ 26`.
+
+**Then the lane's prize fell out.** Running Orevkov's own §5 link machinery *without* his no-jump hypothesis: the link of the contracted chain is a rational homology sphere, `f*` restricts to a covering of an unknot complement, so `π₁ ↪ Z`; Mayer–Vietoris gives `rank H₁(Σ−K′;Q) = #components of K′`, forcing one component. Hence no affine branch escapes, `k_l = 0`, `corr_l = μ_l(s_l−1)`, the budget collapses to `a = 1`, and promoted `2a > N` gives `N < 2`. **B0 holds under H2 at every degree** — `OPEN[B0-H2-N>=20/RAMIFIED-NONPRIMITIVE-COVER]` closes negative.
+
+## Caveats I want on the record
+
+- The final theorem is typed **PROVED_PENDING_REVIEW**, not promoted. §8 ranks five places to attack; the sharpest is whether Orevkov's ball/link construction (p. 8) covertly used his no-jump hypothesis, and whether an affine branch through a *node* of the chain still contributes exactly one circle.
+- Results 1–5 (concentration, rigidity, packet kill, `N ≥ 26`) are independent of the link argument. If §7 breaks on review, the frontier is still 26, not 20.
+- The link step **needs** `η` immersive so that `K` is an unknot. It is a B0 statement, not a general no-excess law — it must not be quoted for reducible `A_F`. The reducible OPEN and `OPEN[PI1-S4]` are untouched, and unconditional `2m ≤ N−1` still waits on them.
+
+Given the size of the claim, this warrants a paired hostile review before anything downstream consumes it.
+DIVERT path=xmodel/n20-escape-kill-opus5-20260901.md status=CLEAN body_bytes=34199 body_sha256=46c5f62fe92fd5ecbd12b1f74d83d272624253f1f06e9324c9fa1b1c21eac619
