@@ -16481,3 +16481,42 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   deprioritized.
 - Running: shape-finish x2, web sweep, suite r6. Integration #6
   sealed earlier (all-degree H2).
+
+## LIVE STATE (observed 2026-09-01T04:50Z) — SCHENK SCOOP-CLAIM UNDER PAIRED INDEPENDENT AUDIT
+
+- Web sweep (Grok, `23fab486`): THREAT board EMPTY (nothing
+  contradicts promoted items). ONE SCOOP-CLAIM registered: Schenk,
+  "A valuation-theoretic proof of the Jacobian conjecture in
+  dimension two", Zenodo 18622130, posted 2026-02-12, PDF hash
+  `6ba40883...` (coordinator re-fetched; hash MATCHES the sweep's
+  record; pinned in refs/, hash-custody per policy since refs/ is
+  untracked). Claimed strategy overlaps the campaign's own promoted
+  territory (dicritical ramification via Rees degeneration, Keller
+  two-form positivity, etale triviality + ZMT). Six months old;
+  missed by all earlier campaign greps.
+- AUDIT WAVE launched 04:47Z, highest priority: TWO INDEPENDENT
+  full hostile audits — Opus (audit A) and Sol (audit B), 6h each,
+  instructed to work alone with no consensus-hedging, using
+  integration #6 as a reference frame (any Schenk step proving
+  impossible a configuration our promoted numerics exhibit as
+  consistent gets maximal scrutiny — especially the two-form
+  positivity step vs our v(dx∧dy) = mu-1 >= 1 zeros and the -3
+  polar part at L_inf) — plus Grok provenance lane (3h: author
+  record, any professional engagement in 6.5 months, version
+  history; Bayesian evidence typed as such, not as a verdict).
+- Wave-24 banked: SHAPE-2-FINISH (`ca016cda`): (2u,4) u≢3(6) and
+  the (2u,2) column KILLED uniformly; residuals OPEN[AFFINE-ALL-
+  A_ODD], OPEN[SHAPE-2-CARDANO-INDEX-ONE], OPEN[INNER-NIELSEN-WORD-
+  ACTION]. SHAPE-3-FINISH (`963be6af`): THEOREM TB (total-branch
+  congruence) proved — TSCHIRNHAUS-SPLIT is now a SUFFICIENT lever
+  for family 3's non-constant stratum (correcting the earlier
+  refuted parenthetical in the right direction). Reviews queued
+  behind the Schenk audits.
+- Box03: suite r6 running the six types (type86_A msolve NONEMPTY
+  already banked). Braid dispatch bug typed, deprioritized.
+- PRIORITY NOTE: if either audit returns SOUND and the other
+  concurs after cross-examination, JC2 is resolved (externally) and
+  the campaign pivots to verification/integration. If both find the
+  same flaw, we bank the refutation and continue. If they disagree,
+  a third adjudication round fires. DC will be notified at the
+  audit verdicts regardless.
