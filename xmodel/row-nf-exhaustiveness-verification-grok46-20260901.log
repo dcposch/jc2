@@ -1,0 +1,15 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start by writing the report skeleton and verifying the charged-input hashes before any computational checks.Hashes match. Next I’ll read both charged reports and extract the claims that need computation.Hashes match. I’ll pull the GM paper, the cluster-identity sources, and enough explicit (6,4)/(8,4) data to run the desk-scale checks.GM hash matches. Next I’ll extract the cluster-identity formula and the explicit family polynomials so the desk-scale expansions are fully determined.I’ll run bounded exact polynomial arithmetic (no CAS) to check the identities, the two (6,4) examples, and the (8,4) landing.The D_{1,1} identity checks out. Next I’ll build a synthetic (6,4) whose cubic sits in `C[P,Q]` and run the full §4 reduction, plus the (8,4) landing.I have a clean GM statement and the desk-scale identities. Filling the report section by section, starting with hash verification and the semigroup arithmetic.Computation arm is on disk at `xmodel/row-nf-exhaustiveness-verification-grok46-20260901.md`. Charged-input hashes matched; GM PDF re-fetched at `637acfd1…` (241372 bytes).
+
+All five targets **HOLDS**:
+
+| Target | Result |
+|---|---|
+| (1) Semigroup arithmetic | ⟨6,4,3⟩ = ⟨8,4,6,3⟩ = ⟨3,4⟩, gaps `{1,2,5}`; δ_aff=3 both rows; δ_∞=7 and 18 via GM Prop. 2.1 + Euclidean formula |
+| (2) §4 filtration | ROW-NF `D_{1,1}` and a shifted/sheared synthetic (6,4) both force (4.2); synthetic lands on `D_{3,3}` after `T_1` |
+| (3) (8,4) landing | `D'_{3,3}` and a hidden octic both have `c_{11}=0`; `T_1` lands on `D_{3,3}` |
+| (4) GM Thm 2.1 | Hash and statement (generation + axioms (1)–(3), Def. 2.2, Rem. 2.1) match |
+| (5) Transport | Explicit `T(x,y)=(x−y²+3y+1, 2y−5)`, Jac=2; meridians push |
+
+One formula slip, not a break: charged Step 6 writes the Tschirnhausen shift with the wrong sign. Existence of the affine source change is unaffected. No `charge_basis` line.
+DIVERT path=xmodel/row-nf-exhaustiveness-verification-grok46-20260901.md status=CLEAN body_bytes=27394 body_sha256=aa2d04d1b8f04cd2dc04cb139cbb48ae26e6688289361e3192cb373d5b482673
