@@ -16881,3 +16881,35 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
      to re-obtain.
 - Both accepted PDFs are hash-custody only (refs/ untracked per
   policy); hashes recorded here and in the acquisition ledger.
+
+## LIVE STATE (observed 2026-09-01T21:35Z) — DOMRINA 1999: A PUBLISHED N=4 CLAIM SURFACES
+
+- DC's redownload attempt produced: (a) the libgen Izvestiya-II copy
+  = SAME corrupt Ni3Al bytes (upstream corruption for DOI
+  IM2000v064n01ABEH000273 across shadow libraries; REJECTED); (b) a
+  DIFFERENT paper — **Domrina, "On Four-Sheeted Polynomial Mappings
+  of C². The General Case", Math. Notes 65:3 (1999) 386-389**
+  (transl. of Mat. Zametki 65:3 464-467) — PAGE-VERIFIED GENUINE
+  and pinned: refs/domrina1999_mathnotes65_four_sheeted_general_case.pdf
+  (`fd73196e`). It ANNOUNCES the full N=4 theorem ("topological
+  degree 4 => Jacobian not a nonzero constant") with an outline
+  continuing Domrina-Orevkov I, and its Prop 1 (exactly two
+  dicriticals, ram orders 1 and 2, each meeting L_infty once)
+  MATCHES the campaign's independently-derived reviewed residual
+  structure.
+- IMPLICATIONS (typed, pending audit): if the 33-page Izvestiya-II
+  proof is sound, N=4 is closed in the 1999/2000 literature and the
+  campaign's N=4 chain is independent verification (with the
+  six-type suite retaining meaning only as counterexample-side
+  curve geometry); if it inherits the D-O I flagged author-
+  inference class of gap, our reviewed chain may be the first
+  rigorous treatment. Either way: a LITERATURE-SURVEY MISS — three
+  sweeps registered Domrina II only as "cross-check acquisition"
+  without surfacing its THEOREM statement; process lesson to be
+  extracted by the audit lane.
+- Launched 21:33Z: Sol DOMRINA-1999 audit (4h — outline extraction,
+  step-vs-our-machinery comparison, acceptance-status check incl.
+  our hashed Zoladek's bibliography, impact typing per scenario,
+  process note); Grok DOMRINA-FULLTEXT hunt (3h — mathnet.ru
+  Russian original is free; page-verify everything against the
+  Ni3Al decoy).
