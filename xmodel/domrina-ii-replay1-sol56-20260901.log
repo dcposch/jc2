@@ -1,0 +1,1149 @@
+cli=codex-cli 0.151.0 model=gpt-5.6-sol effort=ultra config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.151.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: ultra
+reasoning summaries: none
+session id: 01a05f08-d057-7593-aeee-ac3c79361a08
+--------
+user
+# Research lane: DOMRINA-II-REPLAY-1 — hostile replay of the §3 core of Domrina II
+
+The official 33-page English Domrina II is in custody:
+`refs/domrina2000_izv64_four_sheeted_general_case.pdf`, SHA-256
+`0be24c5c6a9cc9423c3049c3402f2c98e44bac5f1c6018b3999989e0f32e5018`
+(coordinator first-page-verified: Izv. Math. 64:1 1-33, DOI
+10.1070/IM2000v064n01ABEH000273, theorem = no four-sheeted
+polynomial self-maps of C^2 with nonzero constant Jacobian).
+Verify the hash before reading; stop on mismatch.
+
+The charged audit's §8 fixes the replay order for deciding
+DOMRINA-II-SOUNDNESS. Your scope is the FIRST HALF:
+(1) Lemma 3.12's local census: replay it completely — enumerate
+    the local cases yourself from her stated hypotheses and check
+    her census is exhaustive and each case's conclusion correct.
+(2) Lemma 3.14's global census: same standard.
+(3) Every implicit root-location branch in §§1-4: wherever the
+    text asserts a root/branch location without displayed
+    computation, reconstruct the computation or type it as a
+    named GAP-CANDIDATE with the exact quote and page.
+(4) The D--O I dependency: where Domrina II inherits from part I
+    (the unique-dicritical mu=1 case), do NOT inherit the author
+    inference — the audit typed the D--O I inference SOURCE-GAP;
+    CAMPAIGN-REPAIRED. Bind each such use either to a repaired
+    standalone argument you supply or explicitly to the
+    campaign's Proposition 4.1 as stated in the charged audit
+    (§3.1), and record which binding each use needs.
+NOT in scope: §§5-7 (including Lemma 7.10 and the omitted §7
+calculations) — a sibling lane will take those; do not spend
+budget there beyond noting forward dependencies.
+
+Standard: campaign hostile-review. Her arguments are presumed
+neither sound nor gapped; the literature's acceptance
+(N=4-LITERATURE=CLOSED at reception, per the audit §5) carries
+zero weight here. Every check you replay gets a typed verdict:
+REPLAYED-SOUND / REPAIRED (with your repair) / GAP (with the
+irreducible missing step). Cite by page and displayed-formula
+number in the official PDF.
+
+Report: `xmodel/domrina-ii-replay1-sol56-20260901.md`.
+Seal-at-completion contract: skeleton WITHOUT the marker, bounded
+per-section writes, seal only at completion. Target 30-40KB body;
+if the census replay outgrows this, close the report at a clean
+sub-boundary with the remainder typed OPEN[REPLAY1-CONT] rather
+than overrunning.
+charged_input=xmodel/domrina-1999-audit-sol56-20260901.md
+
+Your inputs are frozen read-only copies in `/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.ALmxog/inputs`;
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+5739b317366d0a3c8905fcdc642f823c7bb71d44b79c7101b2cac256512f4d01  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.ALmxog/inputs/domrina-1999-audit-sol56-20260901.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll begin with the two required SHA-256 checks and will stop immediately if either differs. If they match, I’ll inspect the report/sealing conventions, extract §§1–4 with stable page references, and split the two census replays from the root-location/dependency audit so they can be checked independently.
+exec
+/bin/zsh -lc 'shasum -a 256 refs/domrina2000_izv64_four_sheeted_general_case.pdf /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.ALmxog/inputs/domrina-1999-audit-sol56-20260901.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+0be24c5c6a9cc9423c3049c3402f2c98e44bac5f1c6018b3999989e0f32e5018  refs/domrina2000_izv64_four_sheeted_general_case.pdf
+5739b317366d0a3c8905fcdc642f823c7bb71d44b79c7101b2cac256512f4d01  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.ALmxog/inputs/domrina-1999-audit-sol56-20260901.md
+
+codex
+Both hashes match exactly, so the custody gate is satisfied. I’m now locating the campaign’s report/seal conventions and the charged audit’s §§3.1 and 8 before reading Domrina’s proof; those determine the allowed dependency bindings and replay order.
+  → Verify frozen inputs and identify report/seal conventions
+  • Extract and index official PDF §§1–4 with page/formula references
+  • Replay Lemma 3.12 local census and Lemma 3.14 global census
+  • Audit implicit root locations and D–O I dependency bindings
+  • Draft bounded report sections, cross-check verdicts, and seal only at completion
+exec
+/bin/zsh -lc "pwd && rg --files -g 'AGENTS.md' -g '*FALLACY*' -g 'xmodel/*.md' -g '*.sh' | sed -n '1,240p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+/Users/dc/code/math/jc2
+FALLACY.md
+ops/aws_as_next_top_carry_run.sh
+ops/run_td6_coordinate12_h19.sh
+ops/aws_td6_v5_exceptional_launch.sh
+ops/aws_doubleb_run.sh
+ops/aws_exact_lane.sh
+ops/launch_triple02_proper_open_r5_r6d_20260828.sh
+ops/adapters/claude.sh
+ops/adapters/grok.sh
+ops/adapters/codex.sh
+ops/adapters/codex55.sh
+ops/adapters/opus.sh
+ops/aws_doubleb_lift_std_run.sh
+ops/aws_as_d7_optional_run.sh
+ops/aws_td6_v5_h_sparse_launch.sh
+ops/aws_doubleb_user_data.sh
+ops/stuck7_post.sh
+ops/status.sh
+ops/aws_q8_component_grouping_run.sh
+ops/aws_d3_one_support_clean_hb_run.sh
+ops/aws_q8_global_quotient_evidence_launch.sh
+ops/lane.sh
+ops/aws_lean_verify.sh
+ops/sol_lane.sh
+ops/aws_td6_v4_launch.sh
+ops/stuck7_verdicts.sh
+ops/aws_td6_v4_lane.sh
+ops/aws_doubleb_lift_run.sh
+ops/aws_q8_invariant_support_run.sh
+ops/sg_autoupdate.sh
+ops/aws_doubleb_corrected_r6c_launch.sh
+FALLACY-v2.md
+jc72108/setup_remote.sh
+jc72108/run_probes.sh
+cases/td6_c1_c2_c3_q_current_divisor_tree_v82qst_aws_20260826/source/launch_v82qsd_fleet_host.sh
+cases/td6_c1_c2_c3_q_current_divisor_tree_v82qst_aws_20260826/source/run_v82qsd_current.sh
+cases/ggv_8_28_upper_endpoint_lambda0_quotient_nf_rank_r4_20260828/aws_worker.sh
+cases/ggv_8_28_upper_endpoint_lambda0_quotient_nf_rank_r4_20260828/aws_run_remote.sh
+cases/ggv_8_28_upper_endpoint_lambda0_quotient_nf_rank_r5_20260828/aws_worker.sh
+cases/ggv_8_28_upper_endpoint_lambda0_quotient_nf_rank_r5_20260828/aws_run_remote.sh
+cases/max12_812_order2_p0_total_rees_t_rs0_rowshard_v7_20260826/run_aws.sh
+cases/max12_812_order2_p0_total_rees_t_rs0_rowshard_v7_20260826/launch_host.sh
+cases/max12_812_order2_p0_total_rees_t_rs0_coeffexport_v9_20260826/run_aws.sh
+cases/max12_812_order2_p0_total_rees_t_rs0_coeffexport_v9_20260826/launch_host.sh
+cases/d43_k0_field_certificate_r4_20260829/aws_worker_r4.sh
+cases/d43_k0_field_certificate_r4_20260829/mint_claim_r4.sh
+cases/d43_k0_field_certificate_r4_20260829/retire_claim_r4.sh
+cases/max12_912_order3_nu_q8_fibre_msolve_aws_20260825/run_remote.sh
+cases/as_fonly_d7_vertical_d7_source_license_20260824/replay_all.sh
+cases/as_fonly_d7_q3_full_output_cone_z81_20260825/launch_remote_one.sh
+cases/max12_812_order4_mu4_nonzero_curve_20260825/run_compile_aws.sh
+cases/max12_812_order4_mu4_nonzero_curve_20260825/launch_remote.sh
+cases/max12_812_order4_mu4_nonzero_curve_20260825/run_geometry_aws.sh
+cases/max12_812_order2_square_owner_cge3_universal_20260826/run_aws.sh
+cases/max12_812_order2_square_owner_cge3_universal_20260826/launch_host.sh
+cases/max12_812_order2_u2_62_k00_rank_compressed_atlas_v27_20260827/run_v27_base2_r3_aws.sh
+cases/max12_812_order2_u2_62_k00_rank_compressed_atlas_v27_20260827/aws_r6a_alt_full_p6_rank2_chart_r5r7_c6c7/max12_812_order2_u2_62_k00_v27_alt_full_p6_rank2_20260827T201000Z_r6a.launch.sh
+cases/ggv_8_28_upper_endpoint_lambda0_endpoint_kernel_strata_replay_fix_r3_20260828/aws_worker.sh
+cases/ggv_8_28_upper_endpoint_lambda0_endpoint_kernel_strata_replay_fix_r3_20260828/aws_run_remote.sh
+cases/max12_812_order4_mu4_nonzero_curve_20260825/launch_remote_v2.sh
+cases/max12_812_order2_p0_total_rees_t_rs0_rowshard_v6_20260826/run_aws.sh
+cases/max12_812_order2_square_owner_r1_v13_standard_basis_repair_20260826/run_aws.sh
+cases/max12_812_order2_p0_total_rees_t_rs0_rowshard_v6_20260826/launch_host.sh
+cases/max12_812_order2_affine_faber_a_uniform_h3_h5_grade45_v2_coeffwise_20260826/run_aws.sh
+cases/max12_812_order2_affine_faber_a_uniform_h3_h5_grade45_v2_coeffwise_20260826/launch_host.sh
+cases/max12_812_order2_square_owner_r1_v13_standard_basis_repair_20260826/launch_host.sh
+cases/max12_812_order2_u2_62_k00_rank_compressed_atlas_v27_20260827/run_v27_full_p6_rank2_chart_alt_aws.sh
+cases/max12_812_order2_u2_62_k00_closure_targetfirst_v5_20260827/run_targetfirst_aws.sh
+cases/max12_812_order2_u2_62_k00_colon_local_v14r1_20260827/run_colon_local_v14r1_aws.sh
+cases/as_fonly_d7_q3_two_level_q2_q1_v2_20260825/run_remote.sh
+cases/max12_812_order2_u2_62_k00_rank_compressed_atlas_v27_20260827/run_v27_constant_kernel_aws.sh
+cases/max12_812_order2_u2_62_k00_rank_compressed_atlas_v27_20260827/run_v27_rank2_chart_r4_aws.sh
+cases/max12_812_order2_u2_62_k00_rank_compressed_atlas_v27_20260827/run_v27_origin_aws.sh
+cases/max12_812_order2_u2_62_k00_rank_compressed_atlas_v27_20260827/run_v27_base4_aws.sh
+cases/max12_812_order2_u2_62_k00_rank_compressed_atlas_v27_20260827/run_v27_base3_r2_aws.sh
+cases/as_fonly_d7_global_chart_qfbv_controls_20260825/run_cadical_drat.sh
+cases/max12_812_order2_p0_total_rees_j2_a1_total_converter_v43c5_20260827/run_aws.sh
+cases/max12_812_order2_p0_cusp_g10_g11_20260826/run_aws.sh
+cases/max12_812_order2_p0_cusp_g10_g11_20260826/launch_host.sh
+cases/max12_812_order2_u2_62_k00_closure_targetfirst_v5_20260827/launch_remote_targetfirst.sh
+cases/max12_812_order4_mu4_nonzero_curve_20260825/run_compile_v2_aws.sh
+cases/max12_812_order2_affine_faber_a_full_k_relative_cone_v2_20260826/run_aws.sh
+cases/max12_812_order2_affine_faber_a_full_k_relative_cone_v2_20260826/launch_host.sh
+cases/max12_912_order3_nu_q8_w0_localized_fibre_classification_repaired_v2_aws_20260825/run_factor7_remote.sh
+cases/max12_912_order3_nu_q8_w0_localized_fibre_classification_repaired_v2_aws_20260825/run_factor7_v2_remote.sh
+cases/max12_812_order2_square_owner_cge3_universal_v4_rootremainders_20260826/run_aws.sh
+cases/max12_812_order2_square_owner_cge3_universal_v4_rootremainders_20260826/launch_host.sh
+cases/max12_912_order3_nu_q8_w0_localized_fibre_classification_repaired_v2_aws_20260825/run_v2_remote.sh
+cases/max12_912_order3_nu_q8_w0_localized_fibre_classification_repaired_v2_aws_20260825/run_replay_v2_remote.sh
+cases/max12_912_order3_nu_q8_w0_localized_fibre_classification_repaired_v2_aws_20260825/run_replay_remote.sh
+cases/as_fonly_d7_q9_rankclass_q8_samples_20260825/verify_result.sh
+cases/as_fonly_d7_q9_rankclass_q8_samples_20260825/run_remote.sh
+cases/td6_c1_c2_c3_qdead_previous_pole_reverse_cotangent_v84s2_aws_20260826/source/launch_v84s2_host.sh
+cases/td6_c1_c2_c3_qdead_previous_pole_reverse_cotangent_v84s2_aws_20260826/source/run_v84s2.sh
+cases/max12_912_order1_binary_cubic_squarefree_degree12_poisson_aws_20260825/run_aws.sh
+cases/as_fonly_d7_q3_q2q1_gaussian_exclusion_v2_20260825/replay_all.sh
+cases/as_fonly_d7_q3_q2q1_gaussian_exclusion_v2_20260825/run_remote.sh
+cases/max12_812_order2_p0_total_rees_t_rs_chart_discovery_v10_20260826/run_aws.sh
+cases/max12_812_order2_p0_total_rees_t_rs_chart_discovery_v10_20260826/launch_host.sh
+cases/as_b9_9_12_exact_core_cokernel_20260825/run_aws.sh
+cases/max12_912_order3_nu_q8_w0_rankdrop_b1_original_j_lift_aws_20260825/run_remote.sh
+cases/ggv_8_28_upper_endpoint_triple02_closed_successor_resume_r1_20260829/aws_job_worker.sh
+cases/ggv_8_28_upper_endpoint_triple02_closed_successor_resume_r1_20260829/aws_launch_preflight.sh
+cases/ggv_8_28_upper_endpoint_triple02_closed_successor_resume_r1_20260829/aws_supervisor.sh
+cases/max12_812_order2_disc_halfweight_support_v2_20260826/run_aws.sh
+cases/max12_812_order2_p0_odd_face_g11_g12_20260826/run_aws.sh
+cases/max12_812_order2_p0_odd_face_g11_g12_20260826/launch_host.sh
+cases/d43_exact_sparse_rows_v2_20260828/run_conditional_pipeline_aws_v2.sh
+cases/max12_912_order3_d1_double_root_control2_q2_cone_v3_20260826/aws_r6d_reverse/remote_worker.sh
+cases/max12_912_order3_d1_double_root_control2_q2_cone_v3_20260826/remote_worker.sh
+cases/d43_exact_sparse_rows_v3_20260828/run_conditional_pipeline_aws_v3.sh
+cases/d43_exact_sparse_rows_v3_20260828/aws_launch_v3.sh
+cases/max12_912_order3_d1_double_root_control2_q2_cone_v3_20260826/aws_box03_forward/remote_worker.sh
+cases/td6_c1_c2_c3_q15_total_shear_pullback_v88q15_aws_20260826/run_v88q15_total_shear.sh
+cases/td6_c1_c2_c3_q15_total_shear_pullback_v88q15_aws_20260826/launch_host.sh
+cases/max12_812_order2_square_owner_d1_a8d3_j38_bridge_diagnostic_20260826/run_aws.sh
+cases/max12_812_order2_square_owner_d1_a8d3_j38_bridge_diagnostic_20260826/launch_host.sh
+cases/as_b9_max12_full_fibre_mod2187_20260825/run_aws.sh
+cases/max12_812_order2_p0_total_rees_j2_a1_constructive_circuit_v43c2_20260827/run_aws.sh
+cases/max12_812_order2_p0_total_rees_j2_a1_constructive_circuit_v43c2_20260827/run_node619_probe_aws.sh
+cases/as_fonly_d7_sat_survivor_direct_lift_20260825/run_one.sh
+cases/max12_812_order2_p0_total_rees_t_rs_chart_discovery_v11_20260826/run_aws.sh
+cases/max12_812_order2_p0_total_rees_t_rs_chart_discovery_v11_20260826/launch_host.sh
+cases/as_fonly_d7_q9_kuranishi_q8_witness_v2_20260825/run_remote.sh
+cases/td6_c1_c2_c3_q_current_pivot_cover_v82qst1s_aws_20260826/source/launch_v82qst1s_fleet_host.sh
+cases/as_fonly_d7_q9_kuranishi_q8_witness_v3_20260825/run_remote.sh
+cases/max12_812_order2_square_owner_lowcontact_c1_c2_v3_namespaced_20260826/run_aws.sh
+cases/max12_812_order2_square_owner_lowcontact_c1_c2_v3_namespaced_20260826/launch_host.sh
+cases/td6_c1_c2_c3_q_current_pivot_cover_v82qst1s_aws_20260826/source/run_v82qst1s_current.sh
+cases/max12_812_order2_exact_square_pell_20260826/run_aws.sh
+cases/max12_812_order2_p0_total_rees_j2_a1_generic_certificate_circuit_shards_v43g5s_20260827/run_aws.sh
+cases/max12_812_order2_u2_62_k00_grade7_fitting_atlas_v26_20260827/run_v26r1_prepass_aws.sh
+cases/max12_812_order2_u2_62_k00_grade7_fitting_atlas_v26_20260827/run_v26r1_compile_aws.sh
+cases/max12_812_order2_square_owner_d1_a9_source_support_census_20260826/run_aws.sh
+cases/max12_812_order2_square_owner_d1_a9_source_support_census_20260826/launch_host.sh
+cases/max12_812_order2_u2_62_k00_grade7_fitting_atlas_v26_20260827/run_v26_worker_aws.sh
+cases/max12_812_order2_u2_62_k00_grade7_fitting_atlas_v26_20260827/run_v26_compile_aws.sh
+cases/max12_812_order2_p0_total_rees_t_rs_rho_unit_v14_20260826/run_aws.sh
+cases/max12_812_order2_p0_total_rees_t_rs_rho_unit_v14_20260826/launch_host.sh
+cases/max12_812_order2_p0_total_rees_t_rs_rho_unit_v15_20260826/run_aws.sh
+cases/max12_812_order2_p0_total_rees_t_rs_rho_unit_v15_20260826/launch_host.sh
+cases/max12_812_order2_p0_total_rees_j2_a1_graded_ladder_v38_20260827/run_aws_control_census.sh
+cases/ggv_8_28_upper_endpoint_lambda0_quotient_nf_rank_descent_r6_20260828/aws_worker.sh
+cases/ggv_8_28_upper_endpoint_lambda0_quotient_nf_rank_descent_r6_20260828/aws_run_remote.sh
+cases/max12_812_order2_affine_faber_a_h17_q7_a3_numeric_prolong_v7_20260826/run_aws.sh
+cases/max12_812_order2_affine_faber_a_h17_q7_a3_numeric_prolong_v7_20260826/launch_host.sh
+xmodel/as-max12-tame-right-composed-residue-seeds-review-grok-20260825-prompt.md
+xmodel/exact-coframe-background-review-grok-20260824.md
+xmodel/max12-812-order2-square-d1-load-transition-a6-a7-v2-hostile-review-grok-20260826-prompt.md
+xmodel/bd-fix3-targeted-source-lead-sol56-20260830.md
+xmodel/total-rees-localized-rho-unit-staged-calculus-promotion-sol-20260827.md
+xmodel/k00-ram-e2m2-h10eq1-g11-survivor-producer-sol56-20260830.md
+xmodel/block-descent-a1-genus-ladder-conductor10-16-hostile-review-grok46-20260831.prompt.md
+xmodel/max12-812-order2-gate-t-strict-uac-presburger-chamber-compiler-v48-hostile-review-grok-20260827.md
+xmodel/ideation-20260825T1440Z-as.md
+xmodel/max12-812-order2-affine-faber-a-delayed-load-source-cubic-exclusion-independent-audit-20260826.md
+xmodel/promotion-crossaudit-d5g-r6-k00r6r1-opus5-20260827.md
+xmodel/as-fonly-d7-degree10-pointwise-review-grok-20260824-prompt.md
+xmodel/max12-812-order2-p0-total-rees-gate-t-obligation-table-20260826.md
+xmodel/max12-812-order2-affine-faber-a-h16-q6-a4-grade48-direct-unit-theorem-20260826.md
+xmodel/k00-g3-r2-chartfree-hostile-review-grok46-92e-20260829.md
+xmodel/grok-td7-law-review-prompt.md
+xmodel/ideation-20260824T0453Z-packet.md
+xmodel/bd-a2-a1-ruling-euler-boundary-cap-sol56-20260830.md
+xmodel/pi1-s4-verification-grok46-20260831.md
+xmodel/d43-k0-field-certificate-r2-hostile-review-fable5-prompt-20260829.md
+xmodel/ggv-upper-endpoint-uniform-d18-d22-fullmodes-sol-ultra-20260828.md
+xmodel/sol-pcc-orbits.md
+xmodel/ideation-20260827T1308Z-interface-microround-sol.md
+xmodel/landing-ledger-ll1-r3-hostile-review-grok46-prompt-20260829.md
+xmodel/collision-monomial-chart-jacobian-divisibility-sol56-20260829.md
+xmodel/max12-812-order2-affine-faber-integer-slope-source-descent-congruence-hostile-review-grok-20260826.md
+xmodel/pi1-s4-hostile-review-sol56-20260831.prompt.md
+xmodel/max12-812-order2-square-d1-unique-ac-d23-small-a-support-miner-hostile-review-grok-20260826.md
+xmodel/max12-912-order3-nu-q8-sparse-bidegree-residual-bound-20260825.md
+xmodel/d43-k0-field-certificate-r2-hostile-review-fable5-20260829.md
+xmodel/hamiltonian-kappa-review-grok-20260824.md
+xmodel/m2-two-pole-full-exit-attachment-primary-opus5-76c-20260829.md
+xmodel/max12-812-order2-p0-total-rees-j2-a1-constructive-cascade-invalidation-v43c2-sol-20260827.md
+xmodel/td6-two-chart-first-band-20260824.md
+xmodel/d43-k0-field-certificate-r3-lease-repair-opus5-20260829.md
+xmodel/n20-escape-kill-opus5-20260901.prompt.md
+xmodel/max12-812-order2-p0-odd-face-g11-g12-design-20260826.md
+xmodel/m2-td12-u1-sibling-exact-charge-r1-sol56-20260829.md
+xmodel/ggv-second-newton-face-nu17-opus5-hostile-review-grok-prompt-20260827.md
+xmodel/k00-r4-00-rankzero-closure-sol56-20260829.md
+xmodel/max12-812-order2-gate-t-strict-uac-three-row-linker-v47r1-hostile-review-grok-prompt-20260827.md
+xmodel/max12-912-order3-nu-q8-w0-localized-fibre-classification-review-grok-20260825.md
+xmodel/max12-812-order2-affine-faber-a-relative-cone-predecessor-reduction-20260826.md
+xmodel/ideation-20260824T2024Z-as-owner.md
+xmodel/ideation-20260829T0250Z-sol56-prompt.md
+xmodel/max12-812-order2-affine-faber-a-h17-open-relative-cone-direct-unit-theorem-20260826.md
+xmodel/sigray-section7-resolved-direction-lemma-producer-gpt5-20260828.md
+xmodel/landing-ledger-ll1-r2-repair-fable5-20260829.md
+xmodel/max12-812-order2-p0-total-rees-t-c1-cubic-certificate-hostile-review-grok-prompt-20260827.md
+xmodel/k00-r4-jetfan-coordinator-integration-sol56-20260829.md
+xmodel/shape-3-finish-hostile-review-grok46-20260901.prompt.md
+xmodel/grok-vanrijn.md
+xmodel/sol-lateral-prompt.md
+xmodel/m2-budget-quotient-falsifier-grok46-prompt-20260829.md
+xmodel/grok-msolve-erratum.md
+xmodel/bd-a2-a1-p1-cyclic-canonical-exclusion-hostile-review-sol56-20260830.md
+xmodel/as-fonly-p3-d7-depth6-triangular-terminal-review-grok-20260824-prompt.md
+xmodel/as-fonly-d7-postd10-d98-f3-corrected-review-claude-20260824-prompt.md
+xmodel/max12-912-order1-binary-cubic-first-two-bands-review-grok-v3-20260825-prompt.md
+xmodel/td6-c1-c2-c3-q2-generic-source-dag-v57-review-repair-20260825.md
+xmodel/d43-common-integral-emitter-preflight-gpt56-20260828.md
+xmodel/ideation-20260828T1707Z-sol-ultra-prompt.md
+xmodel/ggv-8_28-bi-face-provenance-r0-crossreview-opus5-prompt.md
+xmodel/bd-a2-normal-singular-reduced-finite-f5-bridge-sol56-20260830.md
+xmodel/max12-812-order4-lemniscatic-target-corollary-20260826.md
+xmodel/ggv-keller-face-general-squarefree-rational-mode-theorem-r4-hostile-review-grok-20260827.md
+xmodel/as-max12-tame-right-composed-residue-seeds-review-grok-20260825.md
+xmodel/ideation-20260829T0250Z-fable5-prompt.md
+xmodel/max12-812-order2-p0-total-rees-j2-a1-v43-compiler-postreview-delta-review-prompt-20260827.md
+xmodel/ideation-20260827T1808Z-sol-hostile-review-grok46.md
+xmodel/ideation-20260825T0427Z-packet.md
+xmodel/weighted-d-source-review-grok-20260824.md
+xmodel/ideation-20260827T0935Z-fable5-prompt.md
+xmodel/sol-toric-prompt.md
+xmodel/ideation-20260828T1707Z-grok-prompt.md
+xmodel/td6-c1-c2-c3-q2-reverse-unit-negative-aws-20260825.md
+xmodel/max12-912-order3-nu-q8-w0-rankdrop-b1-frozen-d4-finite-c-unit-repaired-v2-review-grok-20260825.md
+xmodel/ideation-20260824T0035Z-synthesis.md
+xmodel/max12-812-order2-affine-faber-a-mixed-graph-deviation-finite-split-design-20260826.md
+xmodel/as-fonly-d7-active4-q7-compatibility-20260825.md
+xmodel/max12-812-order2-p0-total-rees-allrows-g13-g14-v20-hostile-review-opus5-20260827.md
+xmodel/ideation-20260825T2015Z-synthesis.md
+xmodel/td6-c1-c2-c3-q2-b3-boundary-factor-routes-v68-review-claude-20260825-prompt.md
+xmodel/max12-812-order2-square-d1-unitload-d1-contact-ladder-composition-audit-20260826.md
+xmodel/td6-two-chart-first-band-review-grok-20260824.md
+xmodel/pi1s4-64-fixed-tuple-hostile-review-sol56-20260831.md
+xmodel/as109-cubic-review-grok-20260824-prompt.md
+xmodel/ideation-20260827T0145Z-crosspollination-hostile-review-fable5.md
+xmodel/nori-bc-verification-grok46-20260831.md
+xmodel/max12-812-order2-square-d1-e-a1d3-opposite-root-pole3-hostile-review-grok-20260826.md
+xmodel/k00-ram-e2m2-g0-g10-complete-rankfan-sol56-20260829.md
+xmodel/max12-812-order2-square-d1-a9-full-composition-hostile-review-grok-20260826-prompt.md
+xmodel/as-gauge-growth-p3-depth5-d8-survivor-review-grok-20260824.md
+xmodel/ideation-20260824T1633Z-grok.md
+
+exec
+/bin/zsh -lc "rg -n \"seal|SEALED|completion marker|OPEN\\[.*CONT|Seal-at-completion|SKELETON\" ops xmodel | head -n 240" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+ops/artifact_finalize.py:2:"""Atomically publish one sealed report with a cooperative ownership lease.
+ops/artifact_finalize.py:17:snapshot.  ``finalize`` refuses drift, delegates canonical sealing to
+ops/artifact_finalize.py:18:``seal.py``, publishes by a no-overwrite hard link, and writes a read-only JSON
+ops/artifact_finalize.py:51:_SEAL_PATH = Path(__file__).with_name("seal.py")
+ops/artifact_finalize.py:52:_SEAL_SPEC = importlib.util.spec_from_file_location("jc2_campaign_seal", _SEAL_PATH)
+ops/artifact_finalize.py:55:seal = importlib.util.module_from_spec(_SEAL_SPEC)
+ops/artifact_finalize.py:56:_SEAL_SPEC.loader.exec_module(seal)
+ops/artifact_finalize.py:176:        data, info = seal._read_regular_at(parent_fd, name)
+ops/artifact_finalize.py:177:    except (seal.SealError, OSError) as exc:
+ops/artifact_finalize.py:224:        if seal._identity(source) != seal._identity(linked):
+ops/artifact_finalize.py:237:        body_bytes, body_sha, basis = seal.verify_bytes(
+ops/artifact_finalize.py:240:        boundary = seal._body_boundary(data)
+ops/artifact_finalize.py:241:    except seal.SealError as exc:
+ops/artifact_finalize.py:242:        raise ArtifactError(f"canonical seal verification failed: {exc}") from exc
+ops/artifact_finalize.py:243:    expected = data[:boundary] + seal._canonical_seal(body_bytes, body_sha, basis)
+ops/artifact_finalize.py:245:        raise ArtifactError("sealed report is not byte-for-byte canonical")
+ops/artifact_finalize.py:262:    if seal._identity(current) != seal._identity(expected):
+ops/artifact_finalize.py:309:        seal._validate_basis(basis)
+ops/artifact_finalize.py:310:    except seal.SealError as exc:
+ops/artifact_finalize.py:375:        seal._validate_basis(basis)
+ops/artifact_finalize.py:376:    except seal.SealError as exc:
+ops/artifact_finalize.py:379:    parent_fd, final_name, parent, parent_info = seal._open_parent(final)
+ops/artifact_finalize.py:418:        seal._check_parent_path(parent, parent_info)
+ops/artifact_finalize.py:447:    parent_fd, final_name, parent, parent_info = seal._open_parent(final)
+ops/artifact_finalize.py:460:                current, info = seal._read_regular_at(parent_fd, partial_name)
+ops/artifact_finalize.py:480:                            "sealed partial body differs from the recorded close"
+ops/artifact_finalize.py:483:                current, _ = seal._read_regular_at(parent_fd, names.final)
+ops/artifact_finalize.py:509:            before, _ = seal._read_regular_at(parent_fd, partial_name)
+ops/artifact_finalize.py:510:            boundary = seal._body_boundary(before)
+ops/artifact_finalize.py:511:        except (seal.SealError, OSError) as exc:
+ops/artifact_finalize.py:518:        fd, _ = seal._open_regular_at(parent_fd, partial_name)
+ops/artifact_finalize.py:524:        after, info = seal._read_regular_at(parent_fd, partial_name)
+ops/artifact_finalize.py:540:        seal._check_parent_path(parent, parent_info)
+ops/artifact_finalize.py:599:    sealed_data: bytes,
+ops/artifact_finalize.py:608:            "file_bytes": len(sealed_data),
+ops/artifact_finalize.py:609:            "full_sha256": _sha256(sealed_data),
+ops/artifact_finalize.py:649:        fd, info = seal._open_regular_at(parent_fd, manifest_name)
+ops/artifact_finalize.py:651:            if temp_info is None or seal._identity(info) != seal._identity(temp_info):
+ops/artifact_finalize.py:667:    parent_fd, final_name, parent, parent_info = seal._open_parent(final)
+ops/artifact_finalize.py:683:            seal._check_parent_path(parent, parent_info)
+ops/artifact_finalize.py:687:            seal._check_parent_path(parent, parent_info)
+ops/artifact_finalize.py:706:            final_data, final_info = seal._read_regular_at(parent_fd, names.final)
+ops/artifact_finalize.py:707:            partial_data, partial_info = seal._read_regular_at(parent_fd, partial_name)
+ops/artifact_finalize.py:709:                seal._identity(final_info) != seal._identity(partial_info)
+ops/artifact_finalize.py:721:            source, source_info = seal._read_regular_at(parent_fd, partial_name)
+ops/artifact_finalize.py:728:                    body_bytes, body_sha, stamped_basis = seal.stamp_path(
+ops/artifact_finalize.py:731:                except (seal.SealError, seal.SealDurabilityWarning, OSError) as exc:
+ops/artifact_finalize.py:732:                    raise ArtifactError(f"canonical sealing failed: {exc}") from exc
+ops/artifact_finalize.py:744:            fd, _ = seal._open_regular_at(parent_fd, partial_name)
+ops/artifact_finalize.py:750:            sealed_data, sealed_info = seal._read_regular_at(parent_fd, partial_name)
+ops/artifact_finalize.py:751:            verified = _verify_canonical_report(sealed_data, expected_basis=basis)
+ops/artifact_finalize.py:753:                raise ArtifactError("sealed partial changed before publication")
+ops/artifact_finalize.py:767:            if seal._identity(final_info) != seal._identity(sealed_info):
+ops/artifact_finalize.py:768:                raise ArtifactError("published final differs from sealed partial")
+ops/artifact_finalize.py:776:            raise ArtifactError("sealed body does not match the closed source snapshot")
+ops/artifact_finalize.py:779:            installed, _ = seal._read_regular_at(parent_fd, names.final)
+ops/artifact_finalize.py:783:                sealed_data=installed,
+ops/artifact_finalize.py:811:        seal._check_parent_path(parent, parent_info)
+ops/artifact_finalize.py:859:    final_data, final_info = seal._read_regular_at(parent_fd, names.final)
+ops/artifact_finalize.py:880:        raise ArtifactError("manifest fields do not match the sealed artifact")
+ops/artifact_finalize.py:891:    final_again, final_again_info = seal._read_regular_at(parent_fd, names.final)
+ops/artifact_finalize.py:895:        or seal._snapshot(final_again_info) != seal._snapshot(final_info)
+ops/artifact_finalize.py:897:        or seal._snapshot(manifest_again_info) != seal._snapshot(manifest_info)
+ops/artifact_finalize.py:983:        seal._validate_basis(basis)
+ops/artifact_finalize.py:984:    except (seal.SealError, TypeError) as exc:
+ops/artifact_finalize.py:1043:        partial_data, partial_info = seal._read_regular_at(parent_fd, partial_name)
+ops/artifact_finalize.py:1045:            seal._identity(partial_info) != seal._identity(published.final_info)
+ops/artifact_finalize.py:1145:            seal._validate_basis(expected_basis, label="expected basis")
+ops/artifact_finalize.py:1146:        except seal.SealError as exc:
+ops/artifact_finalize.py:1148:    parent_fd, final_name, parent, parent_info = seal._open_parent(final)
+ops/artifact_finalize.py:1168:        seal._check_parent_path(parent, parent_info)
+ops/artifact_finalize.py:1182:                seal._snapshot(after_git.final_info)
+ops/artifact_finalize.py:1183:                != seal._snapshot(published.final_info)
+ops/artifact_finalize.py:1184:                or seal._snapshot(after_git.manifest_info)
+ops/artifact_finalize.py:1185:                != seal._snapshot(published.manifest_info)
+ops/artifact_finalize.py:1221:    finalize_parser = sub.add_parser("finalize", help="seal and atomically publish")
+ops/artifact_finalize.py:1260:    except (ArtifactError, seal.SealError, OSError) as exc:
+ops/lane.sh:75:seal_tool=$script_dir/seal.py
+ops/lane.sh:76:[ -f "$seal_tool" ] && [ ! -L "$seal_tool" ] || {
+ops/lane.sh:77:  echo "required seal tool missing: $seal_tool" >&2
+ops/lane.sh:173:seal_tool_snapshot=$lane_tmp_dir/seal.py
+ops/lane.sh:193:seal_tool_sha=$(sha256_file "$seal_tool") || exit 2
+ops/lane.sh:198:cp "$seal_tool" "$seal_tool_snapshot" || exit 2
+ops/lane.sh:200:  "$seal_tool_snapshot" || exit 2
+ops/lane.sh:204:seal_tool_snapshot_sha=$(sha256_file "$seal_tool_snapshot") || exit 2
+ops/lane.sh:209:prepared_seal_tool_sha=$(sha256_file "$seal_tool") || prepared_seal_tool_sha=ERROR
+ops/lane.sh:216:   [ "$seal_tool_snapshot_sha" != "$seal_tool_sha" ] || \
+ops/lane.sh:217:   [ "$prepared_seal_tool_sha" != "$seal_tool_sha" ] || \
+ops/lane.sh:415:  echo "seal_tool=ops/seal.py"
+ops/lane.sh:416:  echo "seal_tool_sha256=$seal_tool_sha"
+ops/lane.sh:473:seal_boundary=NOT_CHECKED
+ops/lane.sh:478:  ready_seal_tool_sha=$(sha256_file "$seal_tool_snapshot") || ready_seal_tool_sha=ERROR
+ops/lane.sh:479:  if [ "$ready_seal_tool_sha" != "$seal_tool_sha" ]; then
+ops/lane.sh:480:    seal_boundary=TOOL_MUTATED
+ops/lane.sh:482:    echo "seal tool snapshot changed; result is quarantined" >> "$log_file"
+ops/lane.sh:484:  elif divert_out=$(python3 "$seal_tool_snapshot" divert "$report_file" \
+ops/lane.sh:487:    seal_boundary=$(printf '%s\n' "$divert_out" | \
+ops/lane.sh:489:    [ -n "$seal_boundary" ] || seal_boundary=UNPARSED
+ops/lane.sh:490:    case "$seal_boundary" in
+ops/lane.sh:491:      CLEAN|CLEAN_SEALED)
+ops/lane.sh:492:        report_state=BODY_SEALED
+ops/lane.sh:495:        report_state=BODY_SEALED_AFTER_DIVERT
+ops/lane.sh:522:    seal_boundary=ERROR
+ops/lane.sh:524:    echo "seal boundary check failed; result is quarantined" >> "$log_file"
+ops/lane.sh:552:post_seal_tool_sha=$(sha256_file "$seal_tool") || post_seal_tool_sha=ERROR
+ops/lane.sh:553:post_seal_tool_snapshot_sha=$(sha256_file "$seal_tool_snapshot") || post_seal_tool_snapshot_sha=ERROR
+ops/lane.sh:562:   [ "$post_seal_tool_sha" != "$seal_tool_sha" ] || \
+ops/lane.sh:563:   [ "$post_seal_tool_snapshot_sha" != "$seal_tool_sha" ] || \
+ops/lane.sh:602:  echo "post_seal_tool_sha256=$post_seal_tool_sha"
+ops/lane.sh:603:  echo "post_seal_tool_snapshot_sha256=$post_seal_tool_snapshot_sha"
+ops/lane.sh:607:  echo "seal_boundary=$seal_boundary"
+ops/d3_triple_line_first_jet_invariant_replay_v2.py:4:Version 2 preserves the sealed v1 calculation and adds the two checks requested
+ops/block_descent_a1_genus_ladder_next_s4_replay.py:4:This replay pins and reuses the already sealed arithmetic/permutation core in
+ops/block_descent_a1_genus_ladder_next_s4_replay.py:574:    # Together with the already sealed conductors 10 and 16, this is the
+ops/block_descent_a1_genus_ladder_next_s4_replay.py:580:    # the previously sealed compiler; every signed compiled closure is a knot;
+ops/test_seal.py:2:"""Focused regression tests for ops/seal.py."""
+ops/test_seal.py:19:SEAL = OPS / "seal.py"
+ops/test_seal.py:23:SPEC = importlib.util.spec_from_file_location("campaign_seal", SEAL)
+ops/test_seal.py:44:def sealed(body: str, *, size_delta: int = 0, digest: str | None = None) -> str:
+ops/test_seal.py:49:        + SEAL_MODULE._canonical_seal(
+ops/test_seal.py:59:        directory = Path(tempfile.mkdtemp(prefix="seal-test-"))
+ops/test_seal.py:67:        path = self.make_file(sealed(body))
+ops/test_seal.py:77:            sealed(body).replace("# Report", "# report"),
+ops/test_seal.py:78:            sealed(body, size_delta=1),
+ops/test_seal.py:79:            sealed(body, digest="0" * 64),
+ops/test_seal.py:109:        self.assertEqual(list(path.parent.glob(f".{path.name}.seal-*")), [])
+ops/test_seal.py:115:        good_a = self.make_file(sealed(body))
+ops/test_seal.py:116:        bad = self.make_file("# Missing seal\n" + MARKER)
+ops/test_seal.py:117:        good_b = self.make_file(sealed(body))
+ops/test_seal.py:135:    def test_crlf_body_uses_canonical_lf_seal(self) -> None:
+ops/test_seal.py:138:        post = SEAL_MODULE._canonical_seal(len(body), digest, BASIS)
+ops/test_seal.py:151:        correct = sealed(body)
+ops/test_seal.py:191:        self.assertEqual(list(path.parent.glob(f".{path.name}.seal-*")), [])
+ops/test_seal.py:240:        target = self.make_file(sealed("# Target\n\n" + MARKER))
+ops/test_seal.py:257:        directory = Path(tempfile.mkdtemp(prefix="seal-divert-test-"))
+ops/test_seal.py:281:    def test_canonically_sealed_report_is_untouched(self) -> None:
+ops/test_seal.py:283:        path = self.make_file(sealed(body))
+ops/test_seal.py:286:        self.assertIn("status=CLEAN_SEALED", result.stdout)
+ops/test_seal.py:287:        self.assertEqual(path.read_text(encoding="utf-8"), sealed(body))
+ops/test_seal.py:291:    def test_canonical_seal_with_suffix_is_diverted(self) -> None:
+ops/test_seal.py:295:        original = sealed(body).encode("utf-8") + suffix
+ops/test_seal.py:426:        self.assertEqual(list(path.parent.glob(f".{path.name}.seal-*")), [])
+ops/q6_f5_affine_ade_threat_replay.py:947:    # sealed local analytic classification; no carrier is numerically
+ops/seal.py:2:"""Stamp or verify the campaign's BODY-END report integrity seal.
+ops/seal.py:5:mentions are ordinary body text.  The sole canonical post-body seal is the
+ops/seal.py:6:exact UTF-8 serialization returned by the module's canonical-seal serializer:
+ops/seal.py:9:the post-body seal.  Any other post-body prefix, suffix, CRLF, or lone carriage
+ops/seal.py:10:return makes the seal invalid.  The tool never discovers files: every path must
+ops/seal.py:43:    """A report is unsafe to read or has an invalid seal."""
+ops/seal.py:47:    """The installed seal verified, but its directory sync failed."""
+ops/seal.py:185:        name = f".{target_name}.seal-{os.getpid()}-{secrets.token_hex(8)}"
+ops/seal.py:191:            raise SealError(f"cannot create anchored seal temp: {exc}") from exc
+ops/seal.py:202:    raise SealError("cannot allocate a unique anchored seal temp")
+ops/seal.py:240:        raise SealError(f"post-body seal is not UTF-8: {exc}") from exc
+ops/seal.py:243:        raise SealError("post-body seal contains a lone carriage return")
+ops/seal.py:260:    canonical = _canonical_seal(len(body), actual_sha, basis)
+ops/seal.py:262:        raise SealError("post-body seal is not the canonical LF serialization")
+ops/seal.py:273:def _canonical_seal(body_bytes: int, body_sha: str, basis: str) -> bytes:
+ops/seal.py:278:        "  including its terminating newline; this seal is outside the body.\n"
+ops/seal.py:300:        sealed = body + _canonical_seal(len(body), digest, basis)
+ops/seal.py:309:            raise SealError("target identity changed while preparing seal")
+ops/seal.py:315:            handle.write(sealed)
+ops/seal.py:338:        if installed != sealed:
+ops/seal.py:339:            raise SealError("installed seal differs from staged bytes")
+ops/seal.py:359:            "seal was installed and verified, but directory fsync failed: "
+ops/seal.py:397:    content is whitespace or exactly one canonical seal is left unmodified.
+ops/seal.py:437:                    "status": "CLEAN_SEALED",
+ops/seal.py:515:    verify = sub.add_parser("verify", help="verify one or more sealed reports")
+ops/seal.py:523:    stamp = sub.add_parser("stamp", help="append a canonical seal atomically")
+ops/seal.py:544:                print(f"seal: INVALID: {exc}", file=sys.stderr)
+ops/seal.py:558:                print(f"seal: INVALID path={path}: {exc}", file=sys.stderr)
+ops/seal.py:565:            print(f"seal: INVALID path={args.file}: {exc}", file=sys.stderr)
+ops/seal.py:582:        print(f"seal: DURABILITY_WARNING path={args.file}: {exc}", file=sys.stderr)
+ops/seal.py:585:        print(f"seal: INVALID path={args.file}: {exc}", file=sys.stderr)
+ops/seal.py:588:        print(f"seal: INVALID path={args.file}: operating-system error: {exc}", file=sys.stderr)
+ops/test_lane_fallacy.py:22:SOURCE_SEAL = OPS / "seal.py"
+ops/test_lane_fallacy.py:46:        shutil.copy2(SOURCE_SEAL, root / "ops" / "seal.py")
+ops/test_lane_fallacy.py:595:        self.assertEqual(run["seal_boundary"], "DIVERTED")
+ops/test_lane_fallacy.py:596:        self.assertEqual(run["report_state"], "BODY_SEALED_AFTER_DIVERT")
+ops/test_lane_fallacy.py:620:        self.assertEqual(run["seal_boundary"], "CLEAN")
+ops/test_lane_fallacy.py:621:        self.assertEqual(run["report_state"], "BODY_SEALED")
+ops/test_lane_fallacy.py:639:        self.assertEqual(run["seal_boundary"], "NO_MARKER")
+ops/test_lane_fallacy.py:659:        self.assertEqual(run["seal_boundary"], "UNTERMINATED_MARKER")
+ops/test_lane_fallacy.py:687:        self.assertEqual(run["seal_boundary"], "NO_MARKER")
+ops/test_lane_fallacy.py:697:        self.assertEqual(run["seal_boundary"], "NO_MARKER")
+ops/test_artifact_finalize.py:308:                str(TOOL.with_name("seal.py")),
+ops/test_artifact_finalize.py:488:    def test_matching_sealed_partial_can_resume_after_interruption(self) -> None:
+ops/test_artifact_finalize.py:496:                str(TOOL.with_name("seal.py")),
+ops/test_artifact_finalize.py:516:    def test_resume_rejects_noncanonical_post_seal_content(self) -> None:
+ops/test_artifact_finalize.py:524:                str(TOOL.with_name("seal.py")),
+ops/test_artifact_finalize.py:549:        # Post-seal tampering must be refused; either the canonical-seal
+xmodel/m2-equal-join-semilinear-primary-research-opus5-20260829.md:761:*Report body ends. The seal below covers everything above this line.*
+xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md:21:and the sealed full-file SHA-256 is
+xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md:190:  including its terminating newline; this seal is outside the body.
+xmodel/block-descent-a1-total-delta-fox-localization-hostile-review-gpt55-20260830.md:315:  including its terminating newline; this seal is outside the body.
+xmodel/ideation-20260825T1120Z-root.md:6:submission before sealing this report.  Results received after the packet
+xmodel/bd-a2-d3-sectioned-two-support-split-control-hostile-review-opus5-20260830.log:2:Review complete. Report written to `xmodel/bd-a2-d3-sectioned-two-support-split-control-hostile-review-opus5-20260830.md` (580 lines, one standalone `<!-- BODY-END -->`, no seal, no `charge_basis`).
+xmodel/k00-ram-e2m1-g5-prefix-hostile-review-opus5-20260829.log:2:Report written to `xmodel/k00-ram-e2m1-g5-prefix-hostile-review-opus5-20260829.md` (31,151 bytes, unique standalone end marker, no seal, no exit price, no `charge_basis`). It is my only repository write.
+xmodel/k1-mathlib-survey-and-plan-opus5-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/k1-mathlib-survey-and-plan-opus5-20260901.run.v2:17:seal_tool_sha256=222e6de4076e1a3169ff27bd0f6b9deff8c2389aa2ff9dd44b8b4ec90c2ea776
+xmodel/k1-mathlib-survey-and-plan-opus5-20260901.run.v2:38:post_seal_tool_sha256=222e6de4076e1a3169ff27bd0f6b9deff8c2389aa2ff9dd44b8b4ec90c2ea776
+xmodel/k1-mathlib-survey-and-plan-opus5-20260901.run.v2:39:post_seal_tool_snapshot_sha256=222e6de4076e1a3169ff27bd0f6b9deff8c2389aa2ff9dd44b8b4ec90c2ea776
+xmodel/k1-mathlib-survey-and-plan-opus5-20260901.run.v2:43:seal_boundary=NO_MARKER
+xmodel/ideation-20260829T1517Z-crosspoll-fable5.md:5:`git rev-parse HEAD` at start and before sealing). This is adversarial
+xmodel/ideation-20260829T1517Z-crosspoll-fable5.md:14:All six named sealed inputs recomputed and matching (full / body):
+xmodel/ideation-20260829T1517Z-crosspoll-fable5.md:159:> two-input lane when it seals), the complete normalized valuation-one,
+xmodel/ideation-20260829T1517Z-crosspoll-fable5.md:286:the S landing/deviation bridge, whose custody (failed producer seal) and
+xmodel/ideation-20260829T1517Z-crosspoll-fable5.md:358:owned `k00-grade5-rank0-plane-twoinput-primary-fable5` lane when it seals)
+xmodel/ideation-20260829T1517Z-crosspoll-fable5.md:363:the G4 review context, produced no G5 result). Dependencies: the sealed
+xmodel/ideation-20260829T1517Z-crosspoll-fable5.md:387:debt (custody reseal + different-model mathematical reconstruction of
+xmodel/ideation-20260829T1517Z-crosspoll-fable5.md:395:worth having on its own. Stop: reseal fails again, or the recurrence
+xmodel/ideation-20260829T1517Z-crosspoll-fable5.md:484:  including its terminating newline; this seal is outside the body.
+xmodel/block-descent-a1-quartic-cycle1-pseudoplane-companion-threat-map-sol56-20260830.md:504:  including its terminating newline; this seal is outside the body.
+xmodel/b0-proof-hostile-review-sol56-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/b0-proof-hostile-review-sol56-20260831.run.v2:17:seal_tool_sha256=222e6de4076e1a3169ff27bd0f6b9deff8c2389aa2ff9dd44b8b4ec90c2ea776
+xmodel/b0-proof-hostile-review-sol56-20260831.run.v2:48:post_seal_tool_sha256=222e6de4076e1a3169ff27bd0f6b9deff8c2389aa2ff9dd44b8b4ec90c2ea776
+xmodel/b0-proof-hostile-review-sol56-20260831.run.v2:49:post_seal_tool_snapshot_sha256=222e6de4076e1a3169ff27bd0f6b9deff8c2389aa2ff9dd44b8b4ec90c2ea776
+xmodel/b0-proof-hostile-review-sol56-20260831.run.v2:53:seal_boundary=CLEAN
+xmodel/b0-proof-hostile-review-sol56-20260831.run.v2:54:report_state=BODY_SEALED
+xmodel/ideation-20260826T2350Z-fable5-prompt.md:1:Follow `xmodel/ideation-20260826T2350Z-common-prompt.md` and the sealed freeze
+xmodel/ideation-20260825T0948Z-synthesis.md:8:  research agent read the sealed packet and all 46 canonical avenues before
+xmodel/ideation-20260825T0948Z-synthesis.md:205:These events arrived after the sealed packet and receive no blind-vote
+xmodel/ideation-20260826T2350Z-freeze.md:5:This packet is sealed.  Later events are queued for the next micro-round or
+xmodel/encoding-faithfulness-audit-r2-sol56-20260901.md:3:**Status:** SEALED — encoding audit closed; five nodal types OPEN and `(9,6,2)` REALIZED.
+xmodel/k00-unloaded-normal-cone-quartic-coordinator-integration-sol56-20260829.md:8:## 0. Custody and immutable review seal
+xmodel/k00-unloaded-normal-cone-quartic-coordinator-integration-sol56-20260829.md:27:the coordinator's immutable seal of that unmodified lane report.
+xmodel/k00-unloaded-normal-cone-quartic-coordinator-integration-sol56-20260829.md:196:  including its terminating newline; this seal is outside the body.
+xmodel/ideation-20260827T0145Z-opus5.log:25:**One disclosure I flagged in the report:** a repo-wide `grep` for `Tg10_2` incidentally returned two lines from a co-lane blind submission. I did not open the file; both lines were already verbatim in the sealed freeze. All later searches excluded this round's ideation files, and nothing in the report derives from it.
+xmodel/row-86-prebuild-opus5-20260901.log:2:Report written and sealed: `xmodel/row-86-prebuild-opus5-20260901.md` (5,928 words; body SHA-256 `7247cef3…`). Hashes on all three charged inputs matched. No charged file, canonical ledger, or `jc2-lean` was touched.
+xmodel/pi1s4-64-fold-reduction-hostile-review-grok46-20260831.prompt.md:58:OPEN in one short paragraph each, then seal. Keep it under roughly
+xmodel/block-descent-a1-genus-ladder-conductor22-28-hostile-review-gpt55-20260831.md:74:| Combined `Delta_aff notin {5,8,11,14}` | GAP as a standalone result of this review | The `5,8` part is inherited from the provisional 10/16 packet. If that packet is corrected, only the `5,8` portion and the phrase "already sealed" are affected; the new C=22/28 computation does not depend on those exclusions. |
+xmodel/ideation-20260825T1550Z-td6.md:287:## Appendix — own-news formed during the sealed scan
+xmodel/ideation-20260825T1550Z-td6.md:289:These results were derived after the packet was sealed, without sibling
+xmodel/ideation-20260829T0820Z-synthesis.md:53:Blind body seals are Fable
+xmodel/ideation-20260829T0820Z-synthesis.md:61:Cross-pollination body seals are Fable
+xmodel/ideation-20260829T0820Z-synthesis.md:241:returns `PASS_WITH_REPAIR`: the sealed producer displayed the inner absorbed
+xmodel/ideation-20260829T0820Z-synthesis.md:250:- The legacy repricing sweep is sealed at `aaa7496b...`/body
+xmodel/ideation-20260829T0820Z-synthesis.md:326:*End of sealed synthesis body.*
+xmodel/ideation-20260829T0820Z-synthesis.md:330:## Seal (outside the sealed body)
+xmodel/ideation-20260829T0820Z-synthesis.md:332:The sealed body is exactly the first `17220` bytes of this file, ending with
+
+exec
+/bin/zsh -lc "rg -n '"'^#{1,6} |Proposition 4'"\\.1|DOMRINA|Domrina|SOURCE-GAP|CAMPAIGN-REPAIRED|§3\\.1|§8|BODY-END|charge_basis' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.ALmxog/inputs/domrina-1999-audit-sol56-20260901.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+1:# DOMRINA-1999 urgent audit: the published \(N=4\) claim versus the campaign
+3:## 0. Audit controls and executive disposition
+26:Domrina--Orevkov I's exclusion of the one-dicritical case, so it does not repair
+30:Thus `DOMRINA-II-HOSTILE-SOUNDNESS=AUDIT-OPEN`, not `GAPPED`.
+37:Żołądek both treats Domrina--Orevkov as proved and gives a different proof of
+43:not a substitute for a line audit of Domrina II.
+52:## 1. Bibliographic identity and claim scope
+54:The charged item is A. V. Domrina, *On Four-Sheeted Polynomial Mappings of
+65:degree. The introduction says Domrina--Orevkov I handled maps having one
+71:The full publication is A. V. Domrina, *On four-sheeted polynomial mappings of
+78:## 2. Complete four-page announcement outline
+80:### 2.1 Set-up and Proposition 1
+87:it, and impose the minimality convention from [4], Domrina--Orevkov I.
+105:### 2.2 Proposition 2: target splice diagram
+128:### 2.3 Definition 1 and Proposition 3: the enlarged blocks
+178:### 2.4 Proposition 4: local fork census
+211:### 2.5 Proposition 5 and the omitted contradiction
+255:## 3. Step-by-step comparison with the promoted campaign machinery
+261:| Domrina outline step | closest promoted campaign content | relation |
+263:| imported one-dicritical exclusion | B0 Proposition 4.1; B0 Corollary 3.8 | repairs two suspect low-degree inferences, described below |
+264:| Proposition 1: two dicriticals, restriction degrees 1, transverse orders 1 and 2, one point at infinity | repaired B0 Theorem 4.3 residual: two source dicriticals with \((\mu,\mathrm{corr})=(2,0)+(1,0)\), \(s_1=s_0=1\), both target normalizations \(\mathbb A^1\) | conditional structural match after entering the campaign's mixed \(\mu=1\) residual; not a derivation from an arbitrary \(N=4\) candidate and not Domrina's compactification identity |
+284:### 3.1 The known Domrina--Orevkov I defect and its repair
+296:- B0 Proposition 4.1 proves that an all-μ=1 profile is impossible. Its proof
+313:Domrina's residual starting profile inside the mixed lane. It does not
+315:unique-μ=2 case by B0 alone, and it does not prove Domrina's Propositions
+318:### 3.2 ROW-KILL/EXHAUST is a different proof engine
+341:This is neither a transcription nor a hidden instance of Domrina's
+353:## 4. Soundness requirements for the full Izvestiya II proof
+381:For the *full theorem* to stand through Domrina's own chain, however, all of
+386:   than 1”; it does not reprove it. The campaign's Proposition 4.1 is a valid
+418:## 5. Literature reception and acceptance status
+420:The answer to “is Domrina cited as proved?” is **yes**, with unusually explicit
+423:- The official [MathNet record for Domrina
+432:  On printed p. 432 it says Orevkov and Domrina proved the conjecture for
+433:  geometrical degree at most four and cites Domrina II as reference [7]. On
+437:  proof; [7] on p. 469 is precisely Domrina II. This is independent of
+438:  Domrina II's splice-diagram elimination, though it still uses Orevkov
+444:  says the Domrina--Orevkov degree-four case was known, then advertises a new
+454:  Domrina--Orevkov (1998) and Domrina (2000) through degree four, and by
+462:  not directly cite Domrina II for that sentence.
+464:  is known to be at least six and cites Domrina's announcement, Domrina II,
+466:  Domrina publications as part of the proved low-sheet record; see its
+472:described Domrina's result as conjectural or merely announced.
+486:- `RECEPTION`: Domrina's \(N=4\) theorem is treated as proved, not conjectural
+491:- `DOMRINA-II-SOUNDNESS`: still `OPEN` under this campaign's hostile-review
+496:## 6. Campaign impact by soundness scenario
+498:### Scenario (a): Domrina's full chain is sound
+520:### Scenario (b): Domrina's chain contains a gap
+532:2. **A Domrina II splice step fails.** If the defect is in target-diagram
+550:## 7. Process reconstruction: why three sweeps missed the theorem statement
+553:Domrina II as a cross-check in three literature sweeps. The theorem statement
+561:1. `xmodel/ideation-20260831T1033Z-grok46.md:129-135,245-249` used Domrina
+566:   It analyzed the D--O I inference but put Domrina II only in acquisition item
+570:3. The B0 proof inherited that registry and deliberately labelled Domrina II a
+585:repository: rg -ni 'Domrina|im273|four[- ]sheet|topological degree.*(4|5)'
+586:web:        "four-sheeted polynomial mappings" Domrina
+587:            "topological degree 4" Jacobian Domrina
+588:            site:mathnet.ru Domrina four-sheeted
+589:PDF:        pdftotext FILE - | rg -ni 'Domrina|geometrical degree|Theorem 6.12'
+601:## 8. Typed conclusions and open acquisition obligations
+609:| D--O I unique-dicritical μ=1 inference | `SOURCE-GAP; CAMPAIGN-REPAIRED` |
+610:| official Domrina II acquisition | `CLOSED`: clean 33-page copy, SHA-256 `0be24c5c6a9cc9423c3049c3402f2c98e44bac5f1c6018b3999989e0f32e5018` |
+611:| Domrina II mathematical replay | `OPEN`: compressed analogies and terminal finite checks remain |
+617:No further acquisition is required to begin the Domrina II replay; the two
+623:campaign's Proposition 4.1, rather than inherit the author inference.
+630:<!-- BODY-END -->
+
+exec
+/bin/zsh -lc "sed -n '1,220p' FALLACY-v2.md; sed -n '250,420p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.ALmxog/inputs/domrina-1999-audit-sol56-20260901.md; sed -n '600,640p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.ALmxog/inputs/domrina-1999-audit-sol56-20260901.md; sed -n '1,130p' ops/seal.py; sed -n '500,590p' ops/seal.py" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+formulas (3)] at the two dicriticals, obtains an equation, and checks that the
+diagram data cannot satisfy it. No root proof, equation, complete placement
+table, or numerical check appears. This is the actual terminal exclusion, so
+the four-page item is properly an announcement of a splice-diagram proof.
+
+## 3. Step-by-step comparison with the promoted campaign machinery
+
+The overlap is real but sharply localized. The following table uses “match”
+only for a proved numerical/component conclusion, not for an identification of
+a dicritical flag, a physical place, and a covering series.
+
+| Domrina outline step | closest promoted campaign content | relation |
+|---|---|---|
+| imported one-dicritical exclusion | B0 Proposition 4.1; B0 Corollary 3.8 | repairs two suspect low-degree inferences, described below |
+| Proposition 1: two dicriticals, restriction degrees 1, transverse orders 1 and 2, one point at infinity | repaired B0 Theorem 4.3 residual: two source dicriticals with \((\mu,\mathrm{corr})=(2,0)+(1,0)\), \(s_1=s_0=1\), both target normalizations \(\mathbb A^1\) | conditional structural match after entering the campaign's mixed \(\mu=1\) residual; not a derivation from an arbitrary \(N=4\) candidate and not Domrina's compactification identity |
+| Proposition 2: three target splice diagrams, transversal boundary intersections and determinant inequalities | one-place/normalization conclusions; branch-curve local monodromies are disjoint transpositions | partial geometric agreement only; no campaign proof of her target diagrams or determinants |
+| Proposition 3: edge-block incidence and determinant/degree formulas | no promoted equivalent | unproved by the campaign |
+| Proposition 4: exhaustive local fork diagrams under one exceptional coprimality pair | no promoted equivalent | unproved by the campaign |
+| Proposition 5: exhaustive global diagrams and \(\widetilde g_1\) placements | no promoted equivalent | unproved by the campaign |
+| root location plus canonical-divisor contradictions | no promoted equivalent | the campaign uses a different obstruction |
+
+Once the campaign analysis has entered its mixed \(\mu=1\) residual, B0 is
+slightly sharper in the affine direction: write
+\(A_F=D_1\cup D_0\), with \(D_1\) the ramified image and \(D_0\) the
+unramified-\(\mu=1\) image. Their normalizations are \(\mathbb A^1\); \(D_1\)'s
+singularities are double points with smooth branches, \(D_0\) misses those
+incidences, and the local monodromies are disjoint transpositions. This agrees
+with the component/order core of Proposition 1. It does **not** by itself prove
+\(\widetilde L=\widetilde L_\infty+\widetilde g_1+\widetilde g_2\), the exact
+target compactification, or transversal meeting with its \(L\). Also, the
+campaign's rank-four irreducibility theorem concerns the reduced charged
+branch \(B\), not irreducibility of \(A_F\); the unramified component \(D_0\)
+is not part of that branch locus.
+
+### 3.1 The known Domrina--Orevkov I defect and its repair
+
+The reviewed registry records the exact problem at
+`xmodel/trivial-dicritical-literature-registry-grok46-20260831.md:100-130`.
+In the unique-dicritical degree-four case, D--O I says transverse order 3 is
+impossible, says order 1 would make \(F\) an unbranched covering of
+\(\mathbb C^2\), and retains order 2. The \(\mu=1\) sentence is an author inference,
+not the cited Orevkov theorem: Orevkov's version has vanishing corrections,
+whereas the unique μ=1 degree-four budget forces correction total 2.
+
+The campaign supplies safe replacements:
+
+- B0 Proposition 4.1 proves that an all-μ=1 profile is impossible. Its proof
+  keeps the finite correction set visible and uses purity, equivalently simple
+  connectivity after removing finitely many points, rather than pretending the
+  map is already unbranched over all of \(\mathbb C^2\).
+- B0 Corollary 3.8 proves the separate closing assertion that
+  \(\mu=N-1\) is impossible, rather than importing Orevkov's unproved remark.
+- Within the mixed \(\mu=1\) lane, repaired B0 Theorem 4.3 derives the
+  \((2,0)+(1,0)\) residual. It is not an entry theorem from an arbitrary
+  \(N=4\) candidate. Under H2 (\(A_F\) irreducible), Theorem 4.2 excludes
+  \(\mu=1\) at \(N=4\).
+- The all-degree Theorem 7.B, at frozen
+  `block-descent-a1-alldegree-h2-coordinator-integration-fable5-20260901.md:22-35`,
+  proves under H2 and
+  \(N\ge3\) that no affine-image dicritical has \(\mu=1\). It does not apply to
+  reducible \(A_F\).
+
+This repairs the flagged D--O I μ=1 inference and conditionally corroborates
+Domrina's residual starting profile inside the mixed lane. It does not
+eliminate D--O I's surviving
+unique-μ=2 case by B0 alone, and it does not prove Domrina's Propositions
+2--5.
+
+### 3.2 ROW-KILL/EXHAUST is a different proof engine
+
+Nothing in the announcement contains the content of ROW-KILL/EXHAUST. Its
+explicit keywords and every displayed construction point instead to
+resolution trees, Eisenbud--Neumann splice diagrams, determinants,
+coprimality, finite graph enumeration, and canonical-class coefficients.
+
+The campaign route is affine and algebraic/topological. EXHAUST says that a
+one-place curve **already certified in the reviewed gauge** lies, after a target
+automorphism, in one of the explicit normal-form families (charged all-degree
+snapshot, lines 36--41). ROW-KILL then proves for the explicit sextics
+
+\[
+x=(t^3+bt+c)^2,\qquad
+y=t^4+\tfrac{2b}{3}t^2+\tfrac{4c}{3}t,\qquad c\ne0,
+\]
+
+and their specified \((8,4)\) automorphic images that no meridional
+\(S_4\)-quotient exists. Its chain is exact singularity stratification,
+NO-TORUS, the \(S_3\) resolvent, infinity-word triviality, projective-cover
+descent (generalized Riemann existence, normality, miracle flatness), and
+Shirane's torus-type obstruction; see charged
+`block-descent-a1-rowkill-coordinator-integration-fable5-20260901.md:32-53`.
+This is neither a transcription nor a hidden instance of Domrina's
+canonical-divisor case check. Where applicable it bypasses her Propositions
+2--5.
+
+The bypass is not yet exhaustive campaign-wide. The frozen all-degree ledger
+retains `OPEN[CAMPAIGN-PIN-D1-DMIN-BOUND]`, three higher shape tails,
+`OPEN[TRIPLE-COVER-TSCHIRNHAUS-SPLIT]`, and six AM-numerical candidates
+(`block-descent-a1-alldegree-h2-coordinator-integration-fable5-20260901.md:42-51,65-86`).
+Its SHAPE-KILL narrowing is itself explicitly `PROVISIONAL` in the charged
+snapshot pending review. Therefore the licensed phrase is “six candidates
+plus the typed shape residuals,” never “exactly six.”
+
+## 4. Soundness requirements for the full Izvestiya II proof
+
+The official sequel is not merely a reprint of the announcement. Its actual
+architecture is:
+
+| announcement item | expansion in II |
+|---|---|
+| set-up and minimality | Proposition 1.1 |
+| Proposition 1 | Proposition 1.2 and Proposition 1.3(1) |
+| Proposition 2 | Proposition 1.3(2) and Corollary 1.4; Lemma 1.5 gives the incident-chain degree statement |
+| root/canonical preparation | Lemmas 2.1--2.12, including explicit canonical-coefficient and determinant equations |
+| Definition 1 / Proposition 3 | Definition 3.2, Proposition 3.4, Assertions 3.5--3.6, Lemma 3.7, Corollary 3.8, and Assertion 3.9 |
+| Proposition 4 | Assertion 3.11 and Lemmas 3.12--3.13 |
+| Proposition 5 | Lemma 3.14 gives the global Fig. 11 list; Lemmas 3.15--3.16 add auxiliary constraints for the terminal eliminations |
+| final prohibition | §§4--7 eliminate respectively Fig. 11 classes 2a--b, 1a--d, 3a--b, and 4a--b; Lemma 7.11 concludes none is realizable |
+
+For example, II's Proposition 1.2 explicitly gives
+\(m(\widetilde g_1)=n(\widetilde g_1)=1\) and
+\(m(\widetilde g_2)=1,n(\widetilde g_2)=2\). It proves the “remaining case”
+profile using Orevkov's Lemmas 4.2 and 5.2 and simple connectivity of
+\(\mathbb C^2\) minus finitely many points. Proposition 1.3 derives the target
+diagram by resolving \(g_2\), then \(g_1\), and cites [4] for the determinant
+properties. Section 3 formally defines “edge type,” proves substantial block
+lemmas, derives a local Fig. 8 census and a global Fig. 11 census. Printed
+pp. 16--32 contain the diagram-by-diagram determinant and canonical-class
+contradictions. Thus the principal omission in the announcement is genuinely
+filled in the journal sequel.
+
+For the *full theorem* to stand through Domrina's own chain, however, all of
+the following load-bearing obligations must survive review:
+
+1. **Imported base case.** [4]'s assertion that one dicritical is impossible
+   must be valid. II says this was proved and uses “the number ... is greater
+   than 1”; it does not reprove it. The campaign's Proposition 4.1 is a valid
+   replacement for the flagged μ=1 subcase, but that replacement is external
+   to the printed proof.
+2. **Residual profile.** Proposition 1.2 must exclude every alternative
+   number/order profile and every contracted affine component; Proposition
+   1.3 must give exactly the target diagrams and determinant inequalities.
+3. **Block identities.** Definition 3.2's determinant formulas and equal-degree
+   chain condition must apply to every claimed block, including the enlarged
+   \(U^0\) and \(\widetilde\Delta_h\) blocks.
+4. **Local exhaustiveness.** The change from full pairwise coprimality to
+   allowing at most one exceptional determinant must yield exactly the local
+   Fig. 8 types, with no lost fork or \(\widetilde g_1\) placement.
+5. **Global exhaustiveness.** Lemmas 3.13--3.14 must glue those blocks into
+   exactly Fig. 11, without identifying distinct source vertices merely
+   because their image or degree labels coincide.
+6. **Root and terminal arithmetic.** The root-location lemmas, signs and
+   positivity hypotheses for each determinant formula, canonical coefficients
+   at both dicriticals, and every finite numerical elimination in §§4--7 must
+   cover every case once and actually contradict integral graph data.
+
+The full paper still has audit-sensitive compression. Lemmas 2.5--2.6 and
+2.10--2.11 are said to be analogous to earlier lemmas; Lemma 3.12 begins “we
+omit the details” because they are analogous to [4, Lemma 8]; Assertion 6.3 is
+transferred from Assertions 5.1--5.2; Lemma 6.10 is transferred from two prior
+eliminations; §7 omits intermediate calculations as similar to [4, Lemma 10];
+and the last essential branch of Lemma 7.10 says only that successive
+consideration of all cases makes equation (7.12) impossible. These are
+specific replay targets, not findings of falsity. Until the figures,
+determinant maps, and those analogies are independently reconstructed, the
+soundness type is `OPEN-AUDIT`, while the publication's claim type remains
+`PUBLISHED-AS-PROVED-IN-REFEREED-SOURCE`.
+
+## 5. Literature reception and acceptance status
+
+The answer to “is Domrina cited as proved?” is **yes**, with unusually explicit
+
+## 8. Typed conclusions and open acquisition obligations
+
+| item | final type |
+|---|---|
+| 1999 announcement theorem statement | `EXACT/UNCONDITIONAL` |
+| proof supplied in the four pages | `OUTLINE/NOT-STANDALONE` |
+| Proposition 1 versus campaign residual | `CONDITIONAL-CORE-MATCH` after entry to the mixed \(\mu=1\) residual, with source/target/place distinctions retained |
+| announcement Propositions 2--5 and final check versus ROW-KILL/EXHAUST | `DIFFERENT-METHOD/NO-STEPWISE-EQUIVALENCE` |
+| D--O I unique-dicritical μ=1 inference | `SOURCE-GAP; CAMPAIGN-REPAIRED` |
+| official Domrina II acquisition | `CLOSED`: clean 33-page copy, SHA-256 `0be24c5c6a9cc9423c3049c3402f2c98e44bac5f1c6018b3999989e0f32e5018` |
+| Domrina II mathematical replay | `OPEN`: compressed analogies and terminal finite checks remain |
+| literature's treatment of \(N=4\) | `PROVED/ACCEPTED`, with independent Żołądek redundancy |
+| checked 2020--2021 lower-bound posture | degree 6 is the first not excluded by those sources |
+| campaign's complete independent \(N=4\) proof | `OPEN`: pin + shape tails + six AM candidates |
+| “campaign is first rigorous \(N=4\) treatment” | `NOT-LICENSED` |
+
+No further acquisition is required to begin the Domrina II replay; the two
+corrupt shadows are superseded by the verified official file. The next
+desk-scale audit should freeze that hash and replay, in order: Lemma 3.12's
+local census, Lemma 3.14's global census, every implicit root-location branch,
+the omitted §7 calculations, and Lemma 7.10's undisplayed case check. It
+should bind D--O I either to a separately repaired proof or explicitly to the
+campaign's Proposition 4.1, rather than inherit the author inference.
+
+For campaign planning, accept \(N=4\) as prior art, retain the six-type work as
+curve-existence/complement geometry, and redirect theorem-closing resources to
+the reducible higher-sheet, horn, and reducible/all-degree fronts outside the
+closed H2/B0 lane.
+
+<!-- BODY-END -->
+#!/usr/bin/env python3
+"""Stamp or verify the campaign's BODY-END report integrity seal.
+
+Only a standalone ``<!-- BODY-END -->`` line is a marker.  Inline or quoted
+mentions are ordinary body text.  The sole canonical post-body seal is the
+exact UTF-8 serialization returned by the module's canonical-seal serializer:
+its text, order, wrapping, punctuation, and LF line endings are fixed.  CRLF is
+accepted in the body and marker line, where both bytes are hashed, but never in
+the post-body seal.  Any other post-body prefix, suffix, CRLF, or lone carriage
+return makes the seal invalid.  The tool never discovers files: every path must
+be supplied explicitly.  A body hash detects accidental or concurrent
+mutation; it is not an authenticity signature.  Full-file hashes and external
+run receipts remain separate custody evidence.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import os
+from pathlib import Path
+import re
+import secrets
+import stat
+import sys
+
+
+MARKER = b"<!-- BODY-END -->"
+HEX40 = re.compile(r"[0-9a-f]{40}\Z")
+BODY_BYTES_RE = re.compile(
+    r"^- Body bytes:[ \t]*`([0-9]+)`\.?[ \t]*$", re.MULTILINE
+)
+BODY_SHA_RE = re.compile(
+    r"^- Body SHA-256:[ \t]*(?:\n[ \t]*)?`([0-9a-f]{64})`\.?[ \t]*$",
+    re.MULTILINE,
+)
+FROZEN_BASIS_RE = re.compile(
+    r"^- Frozen basis:[ \t]*`([0-9a-f]{40})`\.?[ \t]*$", re.MULTILINE
+)
+
+
+class SealError(ValueError):
+    """A report is unsafe to read or has an invalid seal."""
+
+
+class SealDurabilityWarning(SealError):
+    """The installed seal verified, but its directory sync failed."""
+
+
+def _validate_basis(basis: str, *, label: str = "basis") -> None:
+    if HEX40.fullmatch(basis) is None:
+        raise SealError(
+            f"{label} must be exactly 40 lowercase hexadecimal characters"
+        )
+
+
+def _open_parent(path: Path) -> tuple[int, str, Path, os.stat_result]:
+    """Open an anchored parent directory; leave the final name unfollowed."""
+    if not path.name or path.name in {".", ".."}:
+        raise SealError("target must name a file")
+    try:
+        parent = path.parent.resolve(strict=True)
+    except OSError as exc:
+        raise SealError(f"cannot resolve target parent: {exc}") from exc
+    try:
+        before = parent.lstat()
+    except OSError as exc:
+        raise SealError(f"cannot inspect target parent: {exc}") from exc
+    if stat.S_ISLNK(before.st_mode) or not stat.S_ISDIR(before.st_mode):
+        raise SealError("target parent is a symlink or is not a directory")
+    flags = os.O_RDONLY | getattr(os, "O_DIRECTORY", 0)
+    if hasattr(os, "O_NOFOLLOW"):
+        flags |= os.O_NOFOLLOW
+    try:
+        parent_fd = os.open(parent, flags)
+    except OSError as exc:
+        raise SealError(f"cannot open target parent: {exc}") from exc
+    try:
+        info = os.fstat(parent_fd)
+        if not stat.S_ISDIR(info.st_mode) or _identity(info) != _identity(before):
+            raise SealError("target parent identity changed during open")
+        _check_parent_path(parent, info)
+        return parent_fd, path.name, parent, info
+    except Exception:
+        os.close(parent_fd)
+        raise
+
+
+def _check_parent_path(parent: Path, expected: os.stat_result) -> None:
+    try:
+        current = parent.lstat()
+    except OSError as exc:
+        raise SealError(f"cannot recheck target parent: {exc}") from exc
+    if stat.S_ISLNK(current.st_mode) or not stat.S_ISDIR(current.st_mode):
+        raise SealError("target parent changed to a symlink or non-directory")
+    if _identity(current) != _identity(expected):
+        raise SealError("target parent identity changed")
+
+
+def _identity(info: os.stat_result) -> tuple[int, int]:
+    return info.st_dev, info.st_ino
+
+
+def _snapshot(info: os.stat_result) -> tuple[int, int, int, int, int, int]:
+    return (
+        info.st_dev,
+        info.st_ino,
+        stat.S_IMODE(info.st_mode),
+        info.st_size,
+        info.st_mtime_ns,
+        info.st_ctime_ns,
+    )
+
+
+def _open_regular_at(
+    parent_fd: int, name: str
+) -> tuple[int, os.stat_result]:
+    try:
+        before = os.stat(name, dir_fd=parent_fd, follow_symlinks=False)
+    except OSError as exc:
+        raise SealError(f"cannot inspect target before open: {exc}") from exc
+    if stat.S_ISLNK(before.st_mode) or not stat.S_ISREG(before.st_mode):
+        raise SealError("path is a symlink or is not a regular file")
+
+    flags = os.O_RDONLY | getattr(os, "O_NONBLOCK", 0)
+    if hasattr(os, "O_NOFOLLOW"):
+        flags |= os.O_NOFOLLOW
+    try:
+        fd = os.open(name, flags, dir_fd=parent_fd)
+    except OSError as exc:
+                cleanup_created()
+                raise
+    finally:
+        if temp_name is not None:
+            try:
+                os.unlink(temp_name, dir_fd=parent_fd)
+            except FileNotFoundError:
+                pass
+        cleanup_created()
+        os.close(parent_fd)
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
+    sub = parser.add_subparsers(dest="command", required=True)
+    verify = sub.add_parser("verify", help="verify one or more sealed reports")
+    verify.add_argument(
+        "--expected-basis",
+        "--expect-basis",
+        dest="expected_basis",
+        help="require this exact 40-character frozen basis (never inferred)",
+    )
+    verify.add_argument("files", nargs="+", type=Path)
+    stamp = sub.add_parser("stamp", help="append a canonical seal atomically")
+    stamp.add_argument("file", type=Path)
+    stamp.add_argument("--basis", required=True)
+    divert = sub.add_parser(
+        "divert",
+        help="bank non-whitespace overflow after a sole BODY-END, truncating "
+        "the charged report to its body; never repairs zero/multiple markers",
+    )
+    divert.add_argument("file", type=Path)
+    divert.add_argument("--overflow", required=True, type=Path)
+    divert.add_argument("--raw", type=Path)
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    if args.command == "verify":
+        if args.expected_basis is not None:
+            try:
+                _validate_basis(args.expected_basis, label="expected basis")
+            except SealError as exc:
+                print(f"seal: INVALID: {exc}", file=sys.stderr)
+                return 1
+        failures = 0
+        for path in args.files:
+            try:
+                size, digest, basis = verify_path(
+                    path, expected_basis=args.expected_basis
+                )
+                print(
+                    f"PASS path={path} body_bytes={size} "
+                    f"body_sha256={digest} basis={basis}"
+                )
+            except (SealError, OSError) as exc:
+                failures += 1
+                print(f"seal: INVALID path={path}: {exc}", file=sys.stderr)
+        return 1 if failures else 0
+
+    if args.command == "divert":
+        try:
+            result = divert_path(args.file, args.overflow, args.raw)
+        except (SealError, OSError) as exc:
+            print(f"seal: INVALID path={args.file}: {exc}", file=sys.stderr)
+            return 1
+        detail = " ".join(
+            f"{key}={value}" for key, value in result.items() if key != "status"
+        )
+        line = f"DIVERT path={args.file} status={result['status']}"
+        print(f"{line} {detail}" if detail else line)
+        return 0
+
+    try:
+        size, digest, basis = stamp_path(args.file, args.basis)
+        print(
+            f"STAMPED path={args.file} body_bytes={size} "
+            f"body_sha256={digest} basis={basis}"
+        )
+        return 0
+    except SealDurabilityWarning as exc:
+        print(f"seal: DURABILITY_WARNING path={args.file}: {exc}", file=sys.stderr)
+        return 2
+    except SealError as exc:
+        print(f"seal: INVALID path={args.file}: {exc}", file=sys.stderr)
+        return 1
+    except OSError as exc:
+        print(f"seal: INVALID path={args.file}: operating-system error: {exc}", file=sys.stderr)
+        return 1
+
+

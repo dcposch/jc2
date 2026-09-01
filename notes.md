@@ -17028,3 +17028,53 @@ soundness-open, the campaign's N=4 work is now explicitly labeled
 "independent verification chain"; theorem-closing weight shifts toward
 (a) the (9,6) representation question (could yield either the last N=4
 kill or a counterexample substrate), (b) all-degree fronts, (c) N>=5.
+
+## LIVE STATE (observed 2026-09-01T22:13Z) — DOMRINA II FULL TEXT IN CUSTODY; AUDIT SEALED; REPLAY-1 LAUNCHED
+
+**DOMRINA-1999-AUDIT sealed and banked**
+(`domrina-1999-audit-sol56-20260901.md`, 5739b317,
+BODY_SEALED_AFTER_DIVERT, 36052 bytes). Typed conclusions (§8):
+1999 announcement theorem EXACT/UNCONDITIONAL; four-page proof
+OUTLINE/NOT-STANDALONE; Prop 1 vs campaign residual
+CONDITIONAL-CORE-MATCH; Props 2-5 vs ROW-KILL/EXHAUST
+DIFFERENT-METHOD/NO-STEPWISE-EQUIVALENCE; D--O I unique-dicritical
+mu=1 inference SOURCE-GAP;CAMPAIGN-REPAIRED; literature's N=4
+treatment PROVED/ACCEPTED (with independent Zoladek redundancy);
+campaign complete independent N=4 proof OPEN (pin + shape tails +
+six AM candidates); "campaign is first rigorous N=4 treatment"
+NOT-LICENSED. Planning directive adopted: accept N=4 as prior art;
+six-type work retained as curve-existence/complement geometry;
+theorem-closing weight to reducible higher-sheet, horn, all-degree.
+
+**LITERATURE POSTURE (audit §5): received lower bound for the
+topological degree of a Keller counterexample is SIX** — Zoladek
+2008 through five (has a documented gap in an adjacent part, not
+transferable without proof), Borisov 2020 states best bound six,
+Makar-Limanov 2021 (refereed, DOI 10.1070/IM9067) states >=6 citing
+the full low-sheet chain. Soundness of that chain above N=3 is
+exactly what the campaign standard treats as open.
+
+**CUSTODY CLOSED — the audit's headline surprise: the official
+33-page English Domrina II is on disk.**
+`refs/domrina2000_izv64_four_sheeted_general_case.pdf` (0be24c5c,
+408814 bytes = the mathnet assembled-range object from the hunt).
+COORDINATOR-VERIFIED: hash match + first page read (Izv. Math.
+64:1 1-33, DOI 10.1070/IM2000v064n01ABEH000273, the exact theorem).
+The IOP pull request to DC in the 22:08Z block is MOOT — withdrawn.
+Also in refs custody: domrina1999_mzm1070_russian.pdf (98b94142),
+domrina2000_im273_russian.pdf (a78e61de, Russian original
+2871464 B); zoladek2008_official.pdf (88d5a354) and sigray_full.pdf
+(9bf9f032) were already pinned since Aug 4.
+
+**NEW LANE**: `domrina-ii-replay1-sol56-20260901` (codex/Sol,
+22:13:28Z, child 8698) — hostile replay of the §3 core per the
+audit's §8 order: Lemma 3.12 local census, Lemma 3.14 global
+census, implicit root-location branches in §§1-4, and explicit
+binding of every D--O I inheritance to campaign Prop 4.1 or a
+standalone repair. §§5-7 (incl. Lemma 7.10) reserved for REPLAY-2.
+(First launch attempt used adapter name `sol` — unknown; adapter
+is `codex`. Deviation logged, no side effects.)
+
+Running: tb-g2-finish (2755), rep-96-inner (6672),
+corrected-suite-codegen (7464), domrina-ii-replay1 (8698).
+Box03 idle awaiting corrected P1-P3.
