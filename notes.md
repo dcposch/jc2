@@ -16770,3 +16770,23 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   review lands. Watchers live.
 - Running now: 2 Opus flagships, CAGE-N paired review (Sol+Grok),
   Box03 (char-0 C/D + char-p prefilter + realization postcheck).
+
+## LIVE STATE (observed 2026-09-01T20:46Z) — ALL THREE OPUS SEATS RUNNING; CAGE-N IN REPAIR
+
+- CAGE-N paired review banked: gate (`79b2788b`) REFUTED-AS-CHARGED
+  (census undercounts four classes by one row each; CUSP-2 scope
+  objection sourced at Orevkov Lemma 5.2's quotient-singularity
+  treatment); verification (`07d2a2b6`) locates all four missing
+  rows exactly, confirms the mechanism, the exact N=4/N=5 recovery,
+  and NO-DEG-CAP (with the explicit shear family). A repairable
+  refutation with repair data in hand — paired review working
+  exactly as designed on data point 13.
+- Opus seat 1 filled with the repair: CAGE-N-R2 (add the four rows,
+  apply every gate trim, restate at promotion-safe scope, ledger
+  through N=8). All three authorized Opus seats now running:
+  CAGE-N-R2, ROW-86-PREBUILD, CELL-32-TERMINATION. Consolidated
+  watcher live (superseded two-seat watcher pkilled — the exit-144
+  notification is that, not a failure).
+- Also running: Box03 (char-0 C/D, char-p prefilter, realization
+  postcheck). DC delivering three paywalled PDFs; formalization
+  kickoff with the pbcopy'd keystones; jc2kit in DC's background.
