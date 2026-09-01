@@ -16686,3 +16686,22 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Horn state: OPEN[A2-CELL-32] with the corrected rigidification;
   formal-lifting unobstructedness bound; the closing point is a
   termination argument on the corrected 7-equation system.
+
+## LIVE STATE (observed 2026-09-01T14:28Z) — (8,6) NONEMPTY VERDICTS VALIDATED BY SYMBOLIC CROSS-CHECK
+
+- A/B M2 mirror colons hit their 2h caps (rc=124). Coordinator
+  validation replaces them for the NONEMPTY direction: the .ms and
+  .m2 generator systems were compared SYMBOLICALLY (sympy, local,
+  exact) — type86_A 6/6 matched, type86_B 7/7 matched. With
+  msolve's PROPER Groebner bases (138 and 345 elements) and the
+  Nullstellensatz, the verdicts stand: **(8,6,11) and (8,6,9) are
+  NONEMPTY at the characteristic-ideal level, validated** (the
+  mirrors' residual value — the colon/cover exclusion — belongs to
+  the realization postcheck, which operates on points anyway).
+- Candidate ledger: (9,6,4), (9,6,2) KILLED (both engines);
+  (8,6,11), (8,6,9) NONEMPTY-validated, realization pending point
+  extraction + postcheck; (8,6,7), (8,6,3) computing (12h caps).
+- Next computation spec'd for a Grok lane: closed-point extraction
+  (msolve solve-mode / M2 slice) + the REPAIRED idp postcheck
+  (incorporating every M2-dialect lesson: no reserved names, no
+  tower asserts, source-ring variable capture, diff order).
