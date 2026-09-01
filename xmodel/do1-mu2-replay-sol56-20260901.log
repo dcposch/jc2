@@ -1,0 +1,402 @@
+cli=codex-cli 0.151.0 model=gpt-5.6-sol effort=ultra config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.151.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: ultra
+reasoning summaries: none
+session id: 01a05f55-ddfc-7293-a4b0-4006b999ca82
+--------
+user
+# Research lane: DO1-MU2-REPLAY — audit the part-I unique-mu=2 analysis (last trust boundary)
+
+Domrina II's soundness is now reduced (charged reports) to:
+the two repaired root gaps (under review), structure packages,
+and ONE unaudited inheritance: Domrina--Orevkov part I. The
+campaign's Proposition 4.1 replaces part I's defective
+unique-dicritical all-mu=1 inference AND NOTHING ELSE; the
+"number of dicritical components greater than one" entry to
+part II's Proposition 1.2 still rides part I's separate
+unique-mu=2 analysis, which no lane has ever read.
+
+Custody (hash-verify both before reading; stop on mismatch):
+- AUTHORITATIVE: refs/domrina_orevkov1999_mzm_four_sheeted_I_russian.pdf
+  SHA-256 6883978d6c24165de932c548acb1dfabde0492c0d8614ea4eb8734f14023bf1b
+  (Mat. Zametki 64:6, Dec 1998, pp. 847-, coordinator
+  first-page-verified). Russian; read it directly.
+- AID ONLY: refs/domrina_orevkov1999_mzm_four_sheeted_I_orevkov_preprint.pdf
+  SHA-256 6ca30d797810400ddfcddb5b92b046796b3fdda5c1fb8f0ba378511506bbfed3
+  (Orevkov's English AMS-TeX preprint, 16pp; may differ from the
+  published text — note any divergence you rely on).
+
+Tasks, hostile standard, typed verdicts REPLAYED-SOUND /
+REPAIRED / GAP per check:
+(1) Locate the unique-dicritical mu=2 analysis in part I (the
+    case: one dicritical component, generic local degree 2).
+    Map its lemma structure and identify what exactly part II
+    consumes (cross-check the charged replay-1 §5 binding
+    ledger's DO-I-1/DO-I-2 statements).
+(2) Replay it completely: every census, every determinant/root
+    argument, every "it is easy to see". The known part-I defect
+    (the all-mu=1 inference that campaign Prop 4.1 replaced) is
+    adjacent — check whether the mu=2 track uses the defective
+    step or its conclusion ANYWHERE. If it does, state whether
+    Prop 4.1's slice covers that use.
+(3) Also audit the part-I main-theorem assembly: does the mu=2
+    track plus the (repaired) mu=1 slice plus part I's other
+    cases actually exhaust part I's claimed statement (the
+    one-dicritical impossibility)? Part II consumes the
+    STATEMENT; an assembly hole is a hole in the inheritance.
+(4) Final: the trust-boundary ledger line. Either
+    DO-I-MU2 = REPLAYED-SOUND (+ any repairs), making the
+    boundary a theorem modulo your named repairs, or typed
+    GAP-CANDIDATE[...] with page and quote.
+
+Report: `xmodel/do1-mu2-replay-sol56-20260901.md`.
+Seal-at-completion contract; target 25-35KB; close at a clean
+sub-boundary with OPEN[DO1-MU2-CONT] rather than overrun.
+charged_input=xmodel/domrina-ii-replay1-sol56-20260901.md
+charged_input=xmodel/domrina-gap-repair-opus5-20260901.md
+
+Your inputs are frozen read-only copies in `/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.U4tCBd/inputs`;
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+b838a2860c88d64d2a2162fd1a157e345db027bf4c7e95d2abae899dba9dc5de  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.U4tCBd/inputs/domrina-ii-replay1-sol56-20260901.md
+99fc1e5870fb74d48e3d14a156115ef625fa9ecbc5843f0d8dd4a138a920e9bf  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.U4tCBd/inputs/domrina-gap-repair-opus5-20260901.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll begin at the custody boundary: hash all four artifacts before opening any of them. If they match, I’ll split the replay into source extraction, proof verification, and inheritance/assembly checks, then reconcile everything into the sealed report.
+exec
+/bin/zsh -lc 'shasum -a 256 refs/domrina_orevkov1999_mzm_four_sheeted_I_russian.pdf refs/domrina_orevkov1999_mzm_four_sheeted_I_orevkov_preprint.pdf /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.U4tCBd/inputs/domrina-ii-replay1-sol56-20260901.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.U4tCBd/inputs/domrina-gap-repair-opus5-20260901.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+6883978d6c24165de932c548acb1dfabde0492c0d8614ea4eb8734f14023bf1b  refs/domrina_orevkov1999_mzm_four_sheeted_I_russian.pdf
+6ca30d797810400ddfcddb5b92b046796b3fdda5c1fb8f0ba378511506bbfed3  refs/domrina_orevkov1999_mzm_four_sheeted_I_orevkov_preprint.pdf
+b838a2860c88d64d2a2162fd1a157e345db027bf4c7e95d2abae899dba9dc5de  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.U4tCBd/inputs/domrina-ii-replay1-sol56-20260901.md
+99fc1e5870fb74d48e3d14a156115ef625fa9ecbc5843f0d8dd4a138a920e9bf  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.U4tCBd/inputs/domrina-gap-repair-opus5-20260901.md
+
+codex
+All four hashes match exactly. I’m now running three independent passes: a Russian-source map with preprint divergence checks, a hostile proof replay of the \(\mu=2\) case, and an inheritance/assembly audit against the two charged ledgers. I’ll personally re-read the decisive source pages before accepting any sub-result.
+Custody hashes verified. Proceeding with independent source, proof, and inheritance audits before drafting and sealing the report.
+  → Extract and map the authoritative Russian part-I source and compare the English aid
+  • Replay the unique-dicritical mu=2 census, determinant, root, and omitted arguments
+  • Trace DO-I-1/DO-I-2 consumption and audit main-theorem case exhaustion
+  • Draft, verify, and seal the 25–35KB trust-boundary report
+exec
+/bin/zsh -lc "pdfinfo refs/domrina_orevkov1999_mzm_four_sheeted_I_russian.pdf | sed -n '1,25p'; pdfinfo refs/domrina_orevkov1999_mzm_four_sheeted_I_orevkov_preprint.pdf | sed -n '1,25p'; command -v pdftotext; command -v pdftoppm; command -v ocrmypdf; command -v tesseract" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+Producer:        GNU Ghostscript 5.10
+CreationDate:    Wed Jan 18 11:15:45 2006 PST
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           16
+Encrypted:       no
+Page size:       467 x 666 pts
+Page rot:        0
+File size:       2207514 bytes
+Optimized:       no
+PDF version:     1.2
+Title:           domrina7.dvi
+Creator:         dvipsk 5.58f Copyright 1986, 1994 Radical Eye Software
+Producer:        GPL Ghostscript 8.64
+CreationDate:    Wed Jan 12 12:55:04 2011 PST
+ModDate:         Wed Jan 12 12:55:04 2011 PST
+Custom Metadata: no
+Metadata Stream: yes
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           16
+Encrypted:       no
+Page size:       595 x 842 pts (A4)
+Page rot:        0
+File size:       231265 bytes
+Optimized:       no
+PDF version:     1.4
+/opt/homebrew/bin/pdftotext
+/opt/homebrew/bin/pdftoppm
+/opt/homebrew/bin/tesseract
+
+exec
+/bin/zsh -lc 'mktemp -d -t do1-mu2-root' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC
+
+exec
+/bin/zsh -lc 'pdftotext -layout refs/domrina_orevkov1999_mzm_four_sheeted_I_russian.pdf /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/russian.txt
+pdftotext -layout refs/domrina_orevkov1999_mzm_four_sheeted_I_orevkov_preprint.pdf /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/english.txt
+wc -l -c /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/russian.txt /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/english.txt' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+    2215  361075 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/russian.txt
+     706   45578 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/english.txt
+    2921  406653 total
+
+exec
+/bin/zsh -lc "sed -n '1,120p' /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/english.txt
+sed -n '1,80p' /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/russian.txt" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+    ON FOUR-SHEETED POLYNOMIAL MAPPINGS OF C 2 . I.
+   THE CASE OF AN IRREDUCIBLE RAMIFICATION CURVE
+
+                        A.V. Domrina, S.Yu. Orevkov
+
+                                 0. Introduction
+  Let f : Ce2 ! C 2 | be a polynomial mapping such that
+(0.1)                        Jacobian(f ) = const 6= 0:
+Here Ce2 and C 2 are two copies of the complex plane. The well-known Jacobian
+Conjecture states that such f is polynomially invertible (see surveys in [1], [2].)
+   The mapping f satisfying (0.1) is polynomially invertible if and only if a generic
+point in C 2 has one preimage. The topological degree of a mapping is said to
+be the number of preimages of a generic point. It is known that there are no
+polynomial mappings of degree two or three satisfying (0.1). The case of degree
+two is elementary and the case of degree three was considered in [3].
+Theorem. If the topological degree of a polynomial mapping f : Ce2 ! C 2 is four
+then the jacobian of f can not be a nonzero constant.
+   In this paper we prove a particular case of this theorem, namely when f has
+one dicritical component. (The de nition of a dicritical component is given below.)
+The complete proof of the theorem will appear in the next paper. Here we apply
+the approach of [4], [5], [6].
+   By a nite number of blow-ups at in nity we can extend f to a regular rational
+mapping F : Xe ! X , where Xe , X are nonsingular compact complex varieties
+containing Ce2 and C 2 respectively as open subsets. The curves Le := Xe nCe2 and L :=
+X n C 2 consist of nitely many nonsingular rational components with transversal
+and at most pairwise intersections.
+   An irreducible component ge of Le is called dicritical if F (ge) 6 L and F is non-
+constant on ge.
+   The main result of the paper is as follows
+Theorem 0.2. There is no four-sheeted locally invertible polynomial mapping f :
+Ce2 ! C 2 with one dicritical component.
+   The scheme of the proof is as follows. Blowing up Xe and X we can achieve that
+the image of the dicritical component meets L transversally. The dual weighted
+graphs of Le and L are unimodal1 trees. A weighted unimodal tree is determined by
+  Partially supported by Grants RFFI-96-01-01218 and DGICYT SAB95-0502
+  1the determinant of the intersection matrix is 1.
+                                                                  Typeset by AMS-TEX
+                                          1
+2                         A.V. DOMRINA, S.YU. OREVKOV
+the topological type of the graph and the determinants of the intersection matrices
+of the branches at nodal (of valence  3) vertices (see [7, 8, 9] where these data are
+called splice diagram). Since the degree of F is bounded, there are only nitely many
+possibilities for the combinatorial structure of the mapping of the splice diagrams.
+We consider each case separately.
+    It follows from [5] that weights of the splice diagram of Le (i.e. the determinants
+of the branches) are determined by the weights of the splice diagram of L and
+by the branching orders at points of the components corresponding to the nodal
+vertices. The fact that Le was obtained by blow-ups from the in nite line, imposes
+rather strong restrictions for the splice diagram of Le. Combining these restrictions
+with the condition F  (dxe ^ dye) = dx ^ dy written in terms of canonical divisors of
+X and Xe (Lemma 5.1)    P  we obtain a contradiction in each case (the coecients in
+the expansion KLe = ~lLe kl~~l also can be expressed in terms of splice diagrams |
+Lemma 1.8)
+    The example [4] (see also [6]) shows that without involving additional arguments
+this approach fails for a big topological degree. The topological degree of the
+mapping constructed in [4] is 36. Modifying the numerical data one can reduce the
+degree up to 9 and this is the minimal possible degree for examples of this kind. So,
+it seems to be very probable that using the methods of the present paper one could
+prove that the topological degree of a potential counter-example to the Jacobian
+Conjecture must be  9.
+    Note that the degrees of polynomials de ning the mapping of topological degree
+9 should be (48,64). These are exactly the numbers appearing in [10, 11], as the rst
+dicult case. Moreover, all the numerical data of other examples similar to [4] also
+well correspond to those in [11] (this observation was communicated to the second
+author by Pierrette Cassou-Nogues). Thus, moving from di erent directions, we
+meet the same diculty.
+    We are grateful to A.G. Vitushkin and P. Cassou-Nogues for useful discussions.
+                                 1. Preliminaries
+Dual graphs. Let Y be a nonsingular analytic surface, L  Y a reduced curve
+(i.e. without multiple components) and all its irreducible components are closed
+non-singular complex curves with transversal and at most pairwise intersections.
+We associate with L a graph L (called the dual graph of L) whose vertices are
+irreducible components of L and the edges are the intersection points. Non-compact
+curves will be depicted as arrowhead vertices.
+    The pair (Y; L) is called regular if Y is a compact algebaic surface and all irre-
+ducible components of L are algebraic curves. In this case graph L is weighted,
+the weights are the self-intersection numbers. Let AL be the intersection matrix of
+the curve L. The determinant of L is de ned as det L = det( AL ). It will be
+convenient for us to suppose that the pair (Y; L) is also regular when L = ? or L
+is a single point. In these cases L = ? and det L = 1.
+    If (Y; L) is a regular pair and the curve C meets L transversally then the dual
+graph L;C of C near L is de ned as the dual graph of the pair (U; (L [ C ) \ U )
+where U is a suciently small neighbourhood of L. So the arrowhead vertices
+correspond to the germs of C at L. Other vertices are weighted. In particular, if
+C = ? then L;C = L . If L is an ordinary double point of C then the dual graph
+of C near L is of the form !.
+              ON FOUR-SHEETED POLYNOMIAL MAPPINGS OF C 2 . I                       3
+   All the graphs considered below are the dual graphs of some curves. Therefore,
+by a subgraph of a graph we shall mean a graph 0 such that
+     a) vertices of 0 are some vertices of ,
+     b) if two vertices of 0 are connected by an edge of then they must be
+         connected by an edge of 0 .
+   So, a subgraph is determined by its vertices. Further on we shall denote irre-
+ducible components and the corresponding vertices by the same small letters, we
+shall also denote curves (in general, reducible) and the corresponding subgraphs
+by the same capital letters. The valence  (s) of a vertex s in a graph is the
+number of incident edges. The vertex s is said to be an end, linear or nodal ver-
+tex of if its valence is 1, 2 or > 2 respectively. The connected subgraph C of
+graph is said to be linear, or a linear chain if for any its non-end vertex a we
+have  (a) = C (a) = 2. Let v be a vertex of . The branches of at v are, by
+de nition, the connected components of         v. The vertex v is said to be incident
+at vertex g if they are connected by an edge. The subgraph Q is said to be incident
+at vertex v if v 62 Q and v is incident at some vertex of Q.
+Notation (1.1). Let be a tree. (Recall that a tree is a connected graph without
+cycles). Let a and b be di erent vertices in . Let us denote:
+   by bra(b; ) the branch of at a that contains b;
+   (ab) = bra(b; ) \ brb(a; );
+   [ab) = (ab) [ fag;
+   [ab] = [ab) [ fbg;
+   habi is the minimal connected subgraph of that contains a and b;
+   (ab) = [ab] habi .
+Remark. All the graphs considered below are trees.
+   We shall omit the index in the above notation whenever the ambient graph
+is clear from the context. For example bra(b), (ab), and so on.
+   Combining the Cramer rule for the inverse matrix of A and the Jacobi formula
+for a minor of the inverse matrix, it is easy to prove (see [12, (1.4)])
+Lemma (1.2). Let be a weighted graph, a, b be vertices of . Then
+(1.3)     det(ab) det = det bra(b) det brb(a) det(        [ab])(det (ab))2
+  We shall refer to (1.3) as to the "edge" determinant formula. If (ab) is a linear
+chain and det( ) = 1 then (1.3) is the edge determinant formula due to Eisenbud-
+                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                         "!$#&%(')*,+-'/.10 2436587979:
+;=<>@?BADCBE ?F?
+    G HJILK8MONPI,QSRUTWVXK8YUMOQ
+ Z GRUTJY[G]\^TJ_XRU`aYUMOQbGaKXGcaNP_edfILYUThgSQbikj/l
+  m lnVoRSpeHJ_eqbYUI Z NPTJroGns@TJ\tG]qvuUNPTJrGqbraILK8roR@I,YUThg
+   wxzyx|{o}~(/  8xxL/}
+            ¡·ª¤«¯¤1k¾B4Fzµª¡FF-¡FD¸4¡ª´¹F£Á«¢z¨¤³|©¡F¤«kFD¥¡¦¾|§F¯´¹FD¨ª©ª¾|®º¤«³ª¡Á«F¬­¤¸4¡ªµ­´§ÃÂ¤¯¤«®¯­¤«­¬Dª° ª¡j¡1ª± |¢©FÄµ$° Fj³­²¤¤´»¡ ª­E¯´§¤¤«¼ ¡ª­¡´§ªª¤«¡ªª¡­¢ªÅ½º¡Fµ$§D¥F¿©F¾Fµ­F©FµFª¶ ¶
+           ¡ª©F¤BDz¯¨/F¡zÁFD¡FD¡F·¤1¡F¸/À ´,­F¨¨-©ª¾Ç¤«F ¡ª¡´º½Ä¨¨«ª­|¢¡¹FÁ«¡½(¨|Fµ«¤B­|F4µ$½Ä|¥¿©Fµ$µ$ÆF-¥/¡­|ª¤B¯¤«&Á«¡z¨/¡³¡³D©ªDµ$¨ªÀ ¡D­Á|¡¡FF¡DFD¤ ¤ÅE · ¡
+                      È ¤©­¤«ª¢µ$É¤B$¬ AzÊ ¡F¥ÃÀ Fª¡F¤B½ E                                                                                                                                                                                             ·
+
+     ä»á|ê«râªß1Ë£ÌßÍ¯âªßÌ$ÑÎ Ý=Ï³âªÌ ê«l³ÜBëPÐnè|Ñ$ÜBÒFßÓBÒFÔ9Ó Õá|ß Ö§Ó i× â jÙÖ Ø i joì§Úoíªî ÛÜÝÞ§ßÜàÞ îºá$Ý õ Ô ßÜ«ânÜ Ó Üã$ä»á«åLâªß«Þ»â$æ§ç$è|ÜãÞ áBßaè|Ü Ó Ü$ä=ÜBéFÜ
+                                                                                                                                                                       Õ4ï4ð)ñªò$ó»ô ð)ö=÷                                                                                                                                                                         øzùú
+        û4Ò Ü ü§Òªâ Ó ÒÜBÔ,Þ i×kÓ j ê Þ Ó Üikà(j æ ÚüÓ Üê$á(Ó áBýBè|è§Ü«þªâkâFàÜ Û§Ó ÝÜã$çä»ä á«á¯åºè|Üâàß«Þ»Û§âÝ=âFÕ è ÛÒ ßÜ$Ý§ÜBëÞ§ßÛÜ«Ý»àÜ Þ Ò è|á«Ü Ý ÒFÔ Ó ßÞ Ü(ÿ Üþã$ä»ê«á â Ó ÒFÞ=Ó à&ß§Ü á|ç(ø Ò éFàÄÞ§ÿªÛÜÜ ã«Ó þFâFÜ«þFäáÇeÜÄç$ê è|Üù ãæ Þ á|ßú â ÿ
+                                                                                                                                                                                                                                                                           
+
+
+      ÓÓ Ü$Ü =Ý èÔ ÓèÞÜÜ ß§ã$Ó áä»Üþ áéFÇåºü=ê$á=âªáæ|ß«â è|Þ»ÓÜBâ Ò éFç Õ ü=æánÑ Üü§ã ÜLê$Ý=á|çâ Ó Ó ê«Ü Ü«=ä§è=ç áÞ»,þ âi-â j øù|Þ=ú à&æFâFç«â ê$Ó Ý§çÜüâÜ ÓÞ§Ó Ò Üß,çnã«ÛäÛä=Ü$áÜ«åºÝÜÞ§âã$ßß$ä»ÜÞ§áà ç£þÞ ÿÿ á«º8þÝ ÞÔ ê«ÒßâÝ=ÜÅÒªÜÅÜÓ Ûßã$ä=Ü»ä»Ü«æá ÜÓ ã$Þ=Ó ä»Ü,à áÄÛþªÜ$à ÜÝê1Ó Þ§ÜÜBßéFã Üü=,à á(âÞ Þë
+                                                                                                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                                                                                                                                                           
+
+
+êá«Ò ÝÑÝ âÑÔ Ó ß ÿ áB(ë ÄÝ ÒªÜ ÑÓ Ó âÜÛá|ã«âë ä ß$áÒFÞ åºÓ ââÛÿ ß$âªÞ§ß«ë Þ Ó ÅýÜB$ÛÝ=ÜÝ=âªàkÜéFâÞß »Ó áâ ä=Ò èâªÜß£ë æFá ÒªÓ Ò âÝ ÛÑ âß$á|Þ ë -ÞÒªÓ Ý§âªÛÞ âª=ß«æ Þ Ñ ü§ÅÜBä»ê$á«Ý»þªâ ÜÓ ã$ê«ä»Ü$áBäß(ç ê 1Þ ÿ nøzá ùÒ ú æzÞ§ßß â Ó ÒFâFÑ ä=,â Òªâ Ñ ÒFâ Ó Ó
+                                                                            "!# $%&'#(!(!()*+                                                                                                                                                                         ,                                   -                                                                            /.
+                             021                                                                                                                                                                                                             43                                                                             5 "1                                                                                     .
+                              "6                                                  7                                                                                                                                                                           83                                                              8 3  9
+
+
+  äè=Ü«âàé hÑ Û§ÝÝ=ÛçâªÜ«ä§è à&ßÒ Ü ßÜBéF(Ü,Ô â-)èä»àá ß|$ÜBÜBÞ»éFßÜBÜ«â ß§Ü§á«ã$ßÝ ä»ÜBÔ éFáßÜþÜBÞ§§éFç/ÞÜÅæ Ò ÜÒ Ý»ÜFÓ á ü§Üâã$ä$ä»åaÛáä=åºá Ü 1âªß«Þ»â Þ§Òâ ç Ò i×-ÜBê,j Ö ßÞ áº× i-ã$jØ â ÒÒ è|Ü$ÜBÜ ßÓæFâ ê«éF§ü§â ßÓâ ÜÒªÓÒª× Óê«Þ8âß$à&ßÚnÜ|ÜnåPßê,âFßè=Ü Ü1áÒ Û»Üä=ãâ ÄÒªÜFÓü§â-ê«Üè|â(Ý=Üå8Ü à Ó ÞÛè§ÓBáä ÔPè Ó Õ Ó ß (ü§Ü â
+                                                                  5:
+                     6                                                                                            ;                            4<=                        >                                                                                   
+                                                                    ->                                                                                                                              ?                     @                           @                                 @BAC@                                                                                                       0
+
+Ûä»Üá ü$àÞ»ßÜBß§Ü|åºá«Ý â Ô ÒFß Ó ê»æFáÄè|è§Üäà Þ§Ûê ÜB(ßââ ß × Ó æDÖ Ûð âä=× â Ò âªè=i×ká j Þ 1Þ Ö ð Ò ç Ó ä á|i-ß Ò jLê«ÒâFÜä ÒFÒ Ó á«ÜBÝ ç Ô Ó ßÜÞ»þ&Þºè|ßÜBâßâã$§Ü$ßÝ=ÜBâéFâ Ü »§âªÞàÒ ÛÝ»ÜBáÄÛ§ßáâFäÜ ßÒ õ Ü»Üÿ ã
+                                            0
+                                                                                                                D                        @FE
+                                                                                                                                                                             -
+                                                                                                                                                                                      D                        @FE                                                                                                     
+                                                                                                                                                                                                                                                                                                                                            -
+                                                                                                                                                                                                                                                                                                                                              G
+                                                                                                                                                                                                                                                                                                                                                                                                     21
+                                                                                                                                                                                                                                                                                                                                                                                                       H1
+
+
+           Wß1ââÛÛÜ äÒFÞ§Ó ÜBê«ç«ÜFß$üßÞ=Ü(à-ß§á|çPá ×è|Üÿ àÛÒ ÜBßßÜBâêBß ß Ó Çá à× ä=èâä§þ Þ§Ñ ê«Ý ÜBÔ«ë Ó á × Ó Ü«ßàá«þ ß³á ê$Òªá«Ó âÜÓç Ò ,ç âªë ÒFÓ á ÓÔ ÞPç«ê$Ýçâ §ÓæBÒ çâ Ò ÝÞ ø × ú Þ
+      ->                                                21                                                                                                         5 "1                                                                                                                                                                   I
+             9                                                                                                                                  J                        D                                                                               K$LM"!# $%&                                                                                N?                    J               O       D
+?                                                                                     J "                                                                                                                                                      
+
+
+  ¡ª¤B½=¹$¢z©µ$FF¡& ¸4F­¡ª¡¤B¡ A zk¹¢zA FµBµ«ªA ¤(¡ÉE ¤¡F©¡FD? F1ªF½Ä? ªBµEÀ|ªÀ ¢zzµ,· F¨ªµÅFD¸4¤B½«z­¨¡ª¡¢z¯LÉ§FFµ«¡ À¤kÉÉ§¤¾¡¡ FÀ ¡ªD´»F¡½X­ ªÀ¡ªÀ ¸µÂ&¤«· ¨ÄÉ­| §À Fª¡ FÀ ª ¶
+                 P
+                2QSRUTVXW VXW Y CZ 8P
+    [2\2]_^`2acbed       f         ,ghGijR VXW W Y
+                                                                                                                                                                                                                    P
+
+
+                                                                                                                                                                                            FÊC           Z                                                        l knmoqprotsvuw/xyz { |C}~ocovx CuC
+ªÊ
+Z Z                                                                                                                                        /0t/I-//%8C--
+
+         "j//¢¡"£¥¤ !#(¦§8!# ¨%¦! S"!(M©rL!Cª~"#(M)~$%«Uv*)v8¬L«M0­7 ~)vU­8®
+    «U*C)v ¯NU¬Lv«°±!()²               j0­M!(+³§8!  ´0K)¦¯K$ LM"!U#($¦+µ$%U­8)~!()7¦¶         Õ,Ö i×-j Ø i-j æ
+êÄß«Þ§Ü ë Ó ü§Õ@âÖ Ý iÞ×-Ô ÒjßÛÜBØÜ$ë Ý ÒªÔ i-Ó þ ájnÑ ÓBâFÓ Ô àÜâkÛÛü§ÜÜÜÝ=ü è=ÜBªáéÜFþÞü4á »æªÓ Ûâ âÒä=Ý èâÔ$Üü=Òªë Ý=Ó Ü|Òªê«åºÓ Ü ââÓ Ûß$ÜBâß éFß$³Ü»Þ æ ëPêÓ Ó ÜÇáBèßÞ âÚ »ÒªæÑ ,ÿ Ó @â ÜÇÒFÛçÓ èÜê ÜàkÑ ãâ Ü ÓÞ á|ÛÔ ß Ü$)ýÝ§Õ Þ§â ßÓ ÒFÜ«ÜBÓBàéFÔ Ü1Þ ßá«ÛâªÝ ÜFß üÔ Ñ ßFÝ=ÜFâªü=ê$³á(á|Ü çÅà Ó èhÜÜã«ßü=ä ÒFááÓ üåºá|Þ=ßâ à
+            ·                                                                                   1                                                                         0
+                                                                                                                                                                                    C
+                                                                                                                                                                                                 7 :   ¸  r6
+                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                         1
+                                                                                                                                                                                                                                                                                                                                            0H1
+                                                                                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                                                                          .
+
+           /¹        ÓÓ á=ä=ÿâ|ã Ñ Ó â Ü1Ó ü§ä»Üá è=Òá«Ò þFà&á Ü Ó Ó âä=Ý âªÔ$ß«ÒªÞ§Ó çLê«ÜÄã$Ü$ÛÝäÔÞ§ß «âÞ§éFÜnÛ«Þ èá$ÜÝ ÝÔ Þ ß»Ü(â ÒªßÓ â³ê$Ü áÇÓ ê$Ýá«Þ äÞ áá|â ß ÓÓ Ò ÜBç,ê»Ü ÿ Ó ü§Üè=áþá Ó âÝ Ô$ÒªÓ ê$á Ó âÜ«ä=âFà ù æßÜ
+                                                                                                               
+                                                                                                                                0>
+                                                                                                                                                                                   4:                   "1 
+                                                                                                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                                                                                                         0.
+
+exec
+/bin/zsh -lc 'tesseract --list-langs' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+List of available languages in "/opt/homebrew/share/tessdata/" (3):
+eng
+osd
+snum
+

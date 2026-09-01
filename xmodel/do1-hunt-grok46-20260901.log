@@ -1,2 +1,29 @@
 cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
-I'll start by hash-verifying the charged inputs, then pin the exact Part I citation from the 1999 announcement before hunting.Hash matches. Next I’ll pin the citation from the 1999 announcement and read the hunt playbook.The 1999 announcement is on disk; I’ll hash-verify it, pin `[4]`, and inspect the existing `do.pdf` plus any prior hunt logs.
+I'll start by hash-verifying the charged inputs, then pin the exact Part I citation from the 1999 announcement before hunting.Hash matches. Next I’ll pin the citation from the 1999 announcement and read the hunt playbook.The 1999 announcement is on disk; I’ll hash-verify it, pin `[4]`, and inspect the existing `do.pdf` plus any prior hunt logs.Citation pinned: *Mat. Zametki* **64**:6 (1998), 847–862. Next I’ll pull mathnet `mzm1464` and assemble the PDFs with Range requests.Mathnet hosts the Russian original (`mzm1464`, 2155 kB). I’ll assemble it with Range requests and check whether an English PDF is also hosted.Russian PDF is at a session token URL; English `fullteng` is a 404. Assembling the original in 16 KiB Range chunks.Size is 2,207,514 bytes (`21af1a`). Assembling the full PDF in 16 KiB Range chunks.Range assembly is running. I’ll pin DOIs and author-page copies in parallel, then verify the assembled PDF.Russian PDF assembled (16 pages, 2,207,514 bytes). Next I’ll page-verify it, deposit it in `refs/`, and grab the Orevkov English preprint.The scan’s text layer is unusable, so I’ll render pages and OCR them for identity checks.First page matches the journal identity. I’ll check the last page, then deposit the files.Identity is confirmed: journal masthead, part-I subtitle, pages 847–862. I’ll write the sealed report and stamp it.Part I is in hand. The 1999 announcement’s **[4]** is *Mat. Zametki* **64**:6 (1998), 847–862, not a 1999 *Math. Notes* article. That Russian original is page-verified from mathnet.ru.
+
+**Pinned identity**
+
+| Edition | Venue | Vol:issue | Pages | DOI |
+|---|---|---|---|---|
+| Russian original | *Mat. Zametki* | 64:6 (Dec 1998) | 847–862 | `10.4213/mzm1464` |
+| English translation | *Math. Notes* | 64:6 (Dec 1998) | 732–744 | `10.1007/BF02313031` |
+
+Official title: “On four-sheeted polynomial mappings of \(\mathbb{C}^2\). I. The case of an irreducible ramification curve” (no “at infinity” in the title). MR 1691265, zbMATH 0955.14044.
+
+**Custody**
+
+```text
+6883978d6c24165de932c548acb1dfabde0492c0d8614ea4eb8734f14023bf1b  refs/domrina_orevkov1999_mzm_four_sheeted_I_russian.pdf
+     2 207 514 bytes, 16 pp (847–862), mathnet mzm1464 scan. ACCEPT.
+
+6ca30d797810400ddfcddb5b92b046796b3fdda5c1fb8f0ba378511506bbfed3  refs/domrina_orevkov1999_mzm_four_sheeted_I_orevkov_preprint.pdf
+     231 265 bytes, Orevkov AMS-TeX preprint (byte-identical to refs/do.pdf).
+     ACCEPT as preprint, not as Math. Notes 732–744.
+```
+
+First page of the Russian file: masthead «Математические заметки / ТОМ 64 ВЫПУСК 6 ДЕКАБРЬ 1998», УДК 517.55, Domrina–Orevkov, part-I subtitle, page **847**. Last page **862** closes Theorem 1 and has bibliography [1]–[14], received 06.11.97 / revised 05.06.98. Zero Ni3Al/JPCM.
+
+Springer English PDF was not obtained (3 KiB HTML interstitial; mathnet `fullteng` 404; OpenAlex/S2 closed). If the official 732–744 typesetting is needed: *Mathematical Notes* **64**:6 (Dec 1998), ISSN `0001-4346`, DOI `10.1007/BF02313031`, from any Springer-subscribed library.
+
+Report: `xmodel/do1-hunt-grok46-20260901.md` (body 11 778 bytes, sealed). No `charge_basis`: this lane is custody, not an exit price.
+DIVERT path=xmodel/do1-hunt-grok46-20260901.md status=CLEAN_SEALED body_bytes=11778 body_sha256=8e9f876dff8c681dda1aca8dcfe8e314c3f9d3a7e6d45404290508425bb98fd6

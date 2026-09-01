@@ -17375,3 +17375,31 @@ applied).
 
 Running: repair-review (21712), do1-hunt (21272), Box03 msolve
 869 + M2 queue + SAGE-NATIVE 6^9 enum.
+
+## LIVE STATE (observed 2026-09-01T23:38Z) — D--O PART I IN CUSTODY; MU2 REPLAY LAUNCHED
+
+**DO1-HUNT landed** (`do1-hunt-grok46-20260901.md`, aeea3ebf,
+BODY_SEALED): part I obtained. PRIMARY:
+refs/domrina_orevkov1999_mzm_four_sheeted_I_russian.pdf
+(6883978d, 2207514 B, mathnet chunked-Range assembly, single
+%PDF head, %%EOF verified) — COORDINATOR FIRST-PAGE-VERIFIED:
+Mat. Zametki 64:6 (Dec 1998) p.847, "O chetyrekhlistnykh
+polinomial'nykh otobrazheniyakh C^2. I. Sluchai neprivodimoi
+krivoi vetvleniya", Domrina+Orevkov, RFBR grant 96-01-01218.
+(Bibliographic correction: vol 64:6 1998, not 65/1999.) AID:
+refs/domrina_orevkov1999_mzm_four_sheeted_I_orevkov_preprint.pdf
+(6ca30d79, byte-identical to pre-existing refs/do.pdf, Orevkov's
+16pp English AMS-TeX preprint; may differ from published text).
+
+**NEW LANE**: `do1-mu2-replay-sol56-20260901` (codex, 23:37:37Z,
+child 23977) — replay part I's unique-mu=2 analysis (the last
+unaudited trust boundary of the N=4 literature chain), check
+whether the mu=2 track touches the defective all-mu=1 step,
+audit the part-I main-theorem assembly, deliver the
+trust-boundary ledger line.
+
+Repair-review (21272) still writing (narration telegraphs:
+promote both root exclusions, narrow R2' sans fork, explicit
+fork-consumer ledger — NOT banked until sealed). Also running:
+SAGE-NATIVE 6^9 enum, Box03 msolve 869 + M2 queue (863 M2 rc=0
+confirmed in new status file).
