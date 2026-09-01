@@ -16372,3 +16372,29 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - If the EXHAUST review confirms AND the suite returns EMPTY x6:
   B0 closes at N=4 unconditionally -> integration #6, round trigger,
   DC report.
+
+## LIVE STATE (observed 2026-09-01T02:35Z) — EXHAUST PROMOTED-AS-CORRECTED; WAVE 21 ON THE NEXT FRONTIER
+
+- EXHAUST paired review in: verification arm (Grok, `62d4eda7`) ALL
+  FIVE TARGETS HOLD — including the synthetic non-fold-form curve
+  landing on D_{3,3} through the proof's own algorithm (the
+  strongest test); one non-load-bearing sign slip. Gate (Sol,
+  `723a3cc1`): PROMOTE-AS-CORRECTED — "no algebraic obligation in
+  EXHAUST itself remains OPEN"; scope discipline: the campaign-pin
+  phrasing stays conditional until the D1-cage/ROW-SWEEP campaign
+  identification is separately promoted; the residual is "six
+  unresolved AM-numerical CANDIDATE types" (existence unresolved).
+  A false uniqueness sentence (C1) caught and confirmed unused.
+- NET: the algebra of N=4 is DONE. Remaining: the campaign-pin
+  composition (launched, 5.5) + the six candidate types (Box03
+  suite, running) + suite/braid harvest.
+- Wave 21 launched 02:33Z, saturating seats on the next frontier:
+  OPUS N20-ESCAPE (5h — the corr=16-on-degree-3-cover arithmetic
+  looks killable by Riemann-Hurwitz counting; prize = B0 under H2
+  at EVERY degree); Sol N5-S1 (5h — the singular-branch survivor
+  via per-component eta-criticality + cusp delta bookkeeping); 5.5
+  CAMPAIGN-PIN (4h — the composition the gate asked for, including
+  the d_min-bound question and general-d gate coverage of the shape
+  families); Grok HF-ATTAIN (4h — what the k=6,7 saturations force
+  on the (9,6,4) candidate; BLZ equality-case literature).
+- Box03: suite on type ideals, braid cross-check running.
