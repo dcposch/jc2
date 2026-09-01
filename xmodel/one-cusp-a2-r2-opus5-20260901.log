@@ -1,1 +1,19 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report written and sealed: `xmodel/one-cusp-a2-r2-opus5-20260901.md` (5,047 words, one `<!-- BODY-END -->` line, no `charge_basis`). Input hashes verified before reading; no CAS run, no charged/canonical file touched, `jc2-lean` not inspected.
+
+## Verdict
+
+`OBSTRUCTION[A-DEGREE-TWO]`: **not proved** — reduced to exactly one cell. No consistent stratum found, so there is no counterexample cell to flag.
+
+## What landed
+
+**A new chart.** `RR[A⁻¹] ≅ C[T^±, V]` via `T=1/A`, `V=U/A`, `Z=V²−T`, with `{V,T}=2T`. Verified against two promoted generator brackets. The `A`-degree filtration is a pole-order filtration at one divisorial place, and `deg_A ≤ 2` on all four coefficients is exactly `v(f) ≥ −3` plus "`f₋₃` is odd" under `U ↦ −U`.
+
+**Why the naive induction breaks — worse than the review said.** `[Aⁿ]O` sees level `n+1` *only* through the Bezout combination `C_{n+1}r′ − p′E_{n+1}`, and `[Aⁿ]E` sees level `n` odd data *only* through `D_n r′ − p′L_n`. Both are surjective when `gcd(p′,r′)=1` (promoted immersivity). Hence **Theorem 3.2**: a formal solution along `Φ` exists at every level, for every residue point and every `T₀`. So no bottom-up induction can ever obstruct; any `A`-degree obstruction is a *termination* statement read from the top. My general coefficient laws reproduce `theta:(3.4)` and the review's pre-substitution `[A¹]E` collection verbatim — that's the control.
+
+**Three-cell census and two kills.** `Aff₂` on the target normalizes any solution to `α>β≥1`, so `(α,β) ∈ {(3,2),(3,1),(2,1)}`. Cells `(3,1)` and `(2,1)` are **empty**, unconditionally — no residue normalization, no `T₀` choice. The descent uses the leading-form equation, then subtracts `g^{α/β}` (which stays in the class), then lands on a new **Lemma 4.1**: no `f ∈ C[Z]` has a mate at *any* `A`-degree of `g` (an `L_n` recursion that never terminates).
+
+**The survivor, rigidified.** Cell `(3,2)`: `S₀` has `A`-degree 0; `E₂ = c₂Zη²`, `D₂ = c₁Zη³` (so `Z·D₂² = μE₂³`); `2c₂C₂ = Zη(3c₁s + c₅η)`; and a parity-of-degree rigidity forcing either `E₁=E₂′, D₁=D₂′` or `deg(D₁−D₂′) = deg η + deg(E₁−E₂′)`. Seven equations, eight polynomials remain — not a dimension-count kill. Typed `OPEN[A2-CELL-32]` and SPEC'd for AWS with mandatory positive and negative controls; `EMPTY` over any finite degree box is evidence only, since nothing promoted bounds those degrees.
+
+One note: I did not save a memory entry, since the lane prompt says to write one report and no other file. Say the word if you want the chart + Theorem 3.2 banked to memory.
+DIVERT path=xmodel/one-cusp-a2-r2-opus5-20260901.md status=CLEAN body_bytes=32528 body_sha256=5f28c56396aa809ff040f294a03cede7898ee6396160add14fceff93fce32fa4
