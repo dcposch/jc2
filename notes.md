@@ -16622,3 +16622,29 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   running with structural pacing + AWS-spec instructions.
 - Box03: suite + mirrors still draining. Integration #7 + round +
   DC report at drain.
+
+## LIVE STATE (observed 2026-09-01T10:10Z) — TWO TYPES KILLED; MSOLVE PARSE CONVENTION CORRECTED
+
+- SUITE INTERPRETATION CORRECTED (coordinator diagnosis): the
+  driver's interpret_msolve expected SOLVER-mode conventions but
+  msolve ran in GROEBNER mode — "basis = [1]" (the unit ideal,
+  EMPTY variety) was misread as NONEMPTY_0DIM. Corrected six-type
+  ledger:
+  * (9,6,4) [96_A]: msolve basis={1} = EMPTY; M2 (repaired mirror)
+    EMPTY, 188s → **BOTH ENGINES AGREE: NON-REALIZABLE. KILLED.**
+  * (9,6,2) [96_B]: same → **KILLED.**
+  * (8,6,11) [A]: proper basis, 138 elements → genuinely NONEMPTY
+    (Nullstellensatz); M2 mirror rerunning (repaired).
+  * (8,6,9) [B]: proper basis, 345 elements → genuinely NONEMPTY;
+    mirror rerunning.
+  * (8,6,7) [C], (8,6,3) [D]: msolve TIMEOUT at caps — rerunning
+    with 12h caps.
+  The (9,6) row of the N=4 residual is CLOSED — both its numerical
+  types are non-realizable as polynomial curves. The N=4 candidate
+  ledger shrinks to the four (8,6) types, two of them NONEMPTY at
+  the ideal level (realization = the postcheck, still to run on
+  solution points).
+- Earlier mirror-rerun race (logs_mirror dir created after the
+  nohup) diagnosed; queue relaunched correctly: A/B repaired M2
+  mirrors + C/D 12h msolve. Watcher live.
+- Running: one-cusp-a2 r2 (Opus), Box03 queue.
