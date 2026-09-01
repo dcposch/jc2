@@ -16558,3 +16558,22 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   honest typing.
 - Running: Box03 suite r6 (types). Next: suite harvest → the
   deferred significant-news round + full DC report.
+
+## LIVE STATE (observed 2026-09-01T06:23Z) — TYPES A,B NONEMPTY (msolve); M2 MIRRORS UNDER REPAIR
+
+- Suite r6 progress: type86_A NONEMPTY_0DIM (78s), type86_B
+  NONEMPTY_0DIM (733s), type C msolve running. NONEMPTY at the
+  characteristic-ideal level for (8,6,11) and (8,6,9): candidate
+  parametrizations EXIST; realization (nodal, reduced I_DP) rides
+  the M2 mirrors + postcheck.
+- M2 mirror repair (recorded deviations from the hashed bundle):
+  the mirrors' `R = R0[u]` tower has numgens 1, not 12 — the
+  generated assertion was wrong. A first flattening attempt broke
+  downstream symbol binding (M2 rebinds globals on ring creation)
+  and was REVERTED; final minimal fix = keep the tower, correct the
+  assertion only. type86_A mirror now runs past all assertions into
+  the colon computation (backgrounded). All type files carry: the
+  diff-argument-order swap + the tower-assert fix; nothing else.
+- Schenk refutation banked earlier (both audits FATALLY-FLAWED,
+  convergent). Wave queue: shape-finish reviews + N5-S2/S1
+  successors + significant-news round, pending suite completion.
