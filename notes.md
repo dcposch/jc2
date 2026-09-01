@@ -16812,3 +16812,31 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   nonempty at the ideal level; realization postchecks decide
   everything.
 - Opus x3 running (CAGE-N-R2, ROW-86-PREBUILD, CELL-32-TERMINATION).
+
+## LIVE STATE (observed 2026-09-01T21:11Z) — 15-NODE ANOMALY: ALL SIX SUITE VERDICTS GATED ON AN ENCODING AUDIT
+
+- The Sage-native postcheck (coordinator-written, replacing the
+  M2 leg that lacks number-field gcd) ran on the sliced points of
+  BOTH live types. STRUCTURED ANOMALY: every point (2 of A, 3 of B)
+  is an honestly NODAL curve with REDUCED ordered double-point
+  scheme of degree exactly 30 — delta_aff = 15, delta_inf = 6 —
+  the WRONG split for both types (targets 11 resp 10) and
+  consistent instead with a TWO-place infinity (gcd(8,6)=2; the
+  one-place condition is precisely what the h-conditions were to
+  enforce). Two convention fixes recorded along the way (ordered-
+  pair factor 2; chart-var order dropping u).
+- CONSEQUENCE: the fidelity of ALL SIX generated characteristic
+  ideals is in question — including the two (9,6) EMPTY kills. All
+  six suite verdicts are DEMOTED to GATED-ON-AUDIT.
+  ENCODING-FAITHFULNESS audit launched on Sol (5h, urgent):
+  re-derive the h-coefficient <-> delta-sequence dictionary from
+  first principles; desk-check the banked witness point
+  (`475ca486`, explicit quadratic-field coefficients); verdict per
+  ideal + retyping of all six verdicts + corrected-ideal specs for
+  reruns.
+- Silver lining: the sliced witnesses are genuine 15-node (8,6)
+  curves — whatever type they are, the machinery (slice, common-
+  field extraction, Sage postcheck) is now END-TO-END FUNCTIONAL;
+  once faithful ideals exist, verdicts are hours away.
+- Running: encoding audit (Sol), Opus x3 (CAGE-N-R2, ROW-86-PREBUILD,
+  CELL-32-TERMINATION), Box03 C/D char-0 msolve.
