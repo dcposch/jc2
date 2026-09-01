@@ -17078,3 +17078,63 @@ is `codex`. Deviation logged, no side effects.)
 Running: tb-g2-finish (2755), rep-96-inner (6672),
 corrected-suite-codegen (7464), domrina-ii-replay1 (8698).
 Box03 idle awaiting corrected P1-P3.
+
+## LIVE STATE (observed 2026-09-01T22:36Z) — (8,6,3) EMPTY TWO-ENGINE; TB-GERM PROMOTE-WITH-REPAIRS
+
+**TB-G2-FINISH landed** (`tb-g2-finish-opus5-20260901.md`, 4f464f9c,
+BODY_SEALED_AFTER_DIVERT, 30959 B). THEOREM TB-GERM: on the (8,6)
+row's non-constant mixed-cover stratum at g=2, the cubic-family
+discriminant is a perfect cube (h = alpha_2^2 - 3 alpha_1 alpha_3);
+Weierstrass count gives beta_1 = 8 + 3 kappa, kappa odd, so
+beta_1 == 2 (mod 3) is necessary — reproducing the prebuild's
+TUBE-2 gate E = 3(2-kappa) by a second derivation. Verdicts:
+(8,6,11) and (8,6,7) killed (gate, twice-derived); (8,6,9) and
+(8,6,3) NOT locally killable — explicit Phi witnesses realize the
+A_22/A_28 germs with m=4; OPEN[S3-TB-G2] retyped to the GLOBAL
+triple-plane existence question, missing input named c_2(T).
+(8,6,3) has no further local TB obstruction. Lane note: its
+intermediate draft was swept into commit 45e4c7bc mid-write;
+sealed version supersedes (harmless, logged).
+
+**TB-GERM hostile review landed** (`tb-germ-hostile-review-gpt55-20260901.md`,
+cc24ef24, BODY_SEALED): **PROMOTE-WITH-REPAIRS** — §3.1 algebra
+sympy-verified; four coordinator-applicable repairs: (1) downgrade
+"two independent chains" to same-gate/independently-re-derived
+(shared: SK-5, row census, one-place infinity model, beta_1
+conversion, constant-stratum disposal); (2) exact sign
+27 a3^2 qt = 4 sigma^2 h^3 - P^2 (unit absorbs -1, keep the
+qualifier); (3) scope kills to the non-constant stratum + cite the
+promoted constant-stratum kill; (4) backstop wording = "no further
+LOCAL obstruction; remaining obstructions global." Apply all four
+verbatim at integration.
+
+**CORRECTED-SUITE-CODEGEN landed** (`corrected-suite-codegen-grok46-20260901.md`,
+d80c6918, BODY_SEALED): P1-P4 emitted; self-checks (i)-(iii) PASS
+(false-positive point fails corrected 8611; (9,6,2) exhibit and
+HF-twin pass their corrected loci). DEVIATION (coordinator, logged):
+the .m2 mirrors were unexecuted by the lane and carried footgun #5
+(tower-ring numgens asserts) plus coefficient(poly, t^j) argument
+order; coordinator probe-verified idioms on Box03
+(coefficient(t^j, ·) returns base-ring elements) and patched all
+three mirrors (patched hashes: 863 411b2e86, 869 460a4501,
+964 6919892d; .ms untouched: 863 cd13e1c2, 869 d0d5e5d4,
+964 f2c46839).
+
+**BOX03 RESULT — corrected (8,6,3) EMPTY, TWO-ENGINE, CHAR 0.**
+msolve Groebner: basis=[1] (unit ideal). M2 (patched mirror,
+authoritative): dim Iopen = -1, gb = |1|, rc=0, clean err. This
+was the last curve-level path for (8,6,3) (Moh died, TB local
+died). KILL PENDING one gate: hostile review of the encoding
+chain + coordinator patches — LAUNCHED:
+`corrected-863-kill-review-gpt55-20260901` (22:36:24Z, child
+13396; charged: codegen d80c6918 + audit r2 a3c7137c; §3 audits
+the coordinator's gj patch as the top silent-zero hazard; §5
+re-runs positive control). msolve 869 running, 964 queued; M2
+queue on 869 next.
+
+**BOARD**: (8,6,11)/(8,6,7) DEAD (gate, twice-derived, repairs
+pending at integration). (8,6,3) DEAD-PENDING-REVIEW (curve level,
+two-engine). (8,6,9) OPEN: rep residual = global c_2(T); curve =
+869 jobs running. (9,6,2) REALIZED; rep = REP-96 running. (9,6,4)
+locus nonempty; six-node = 964 queued. Lanes: rep-96-inner (6672),
+domrina-ii-replay1 (8698), 863-kill-review (13396).

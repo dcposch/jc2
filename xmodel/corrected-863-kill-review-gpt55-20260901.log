@@ -1,0 +1,292 @@
+cli=codex-cli 0.151.0 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.151.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a05f1d-d2ae-7c72-b38f-9e7726e82933
+--------
+user
+# Review lane: CORRECTED-863-KILL-REVIEW — gate the (8,6,3) curve-level kill
+
+Two-engine computational result to be gated: the corrected
+Delta=(8,6,3) incidence system is EMPTY over QQ — msolve
+Groebner mode returned basis=[1] (unit ideal) and the M2 mirror
+returned dim=-1, gb=|1|, rc=0, char 0. If the ENCODING is right,
+type (8,6,3) is killed at the curve level (this was the last
+curve-level path for it: the Moh route died, and TB-G2 found no
+local rep-level obstruction). Your job: hostile review of the
+encoding chain, NOT of the computation.
+
+Review tasks:
+(1) The charged codegen report's derivation section for P1
+    (8,6,3): verify coefficient-by-coefficient that the encoded
+    system IS the charged audit's corrected specification
+    (audit §7.1): closed conditions g_j=[t^j]G86=0 for j=4..22
+    with G86 = p^3-q^4+a22 p^2 q+a20 p q^2+a18 q^3+a16 p^2+
+    a14 p q+a12 q^2+a8 p+a6 q, open g_3 != 0 (Rabinowitsch),
+    gcd-cover colon (B,D,F,gam,e). Re-derive independently from
+    the audit's spec; do not trust the codegen's own transcript.
+(2) The job files as-run. Verify hashes, then read from the repo:
+    `box/corrected_863.ms` SHA-256
+    cd13e1c25bcfcc43d30c238420ab8383580b8c078b16c0b0ff967ff43761d75b
+    `box/corrected_863.m2` SHA-256
+    411b2e865602aefc8c3bc9993318e3980a62cf21ae5ad3ac30c3b4ec446fd74f
+    Check BOTH files encode the same ideal (same generators, same
+    ring, same opens), and that the .ms variable order/count
+    matches its polynomial list (msolve parses line 1 as the
+    variable list — in-band-comment hazard is documented handled).
+(3) COORDINATOR PATCH AUDIT: the .m2 file was patched by the
+    coordinator after the codegen lane sealed (tower-ring
+    numgens asserts corrected to ==1; the killt map rewritten as
+    map(R0, St, {0_R0}); gj rewritten from
+    killt(coefficient(G86poly, t^j)) to coefficient(t^j, G86poly)
+    per an on-box probe showing coefficient(monomial, poly)
+    returns base-ring elements). Verify the patched gj extracts
+    the SAME coefficients the audit spec means: in the tower ring
+    R0[t], is coefficient(t^j, G86poly) the coefficient of t^j
+    with all a-variables and chart variables in the base? Any
+    silent-zero hazard (wrong-ring monomial, degree-0 edge at
+    j=4..22)? A silent-zero here would fake EMPTY — treat this as
+    the single most dangerous failure mode of the whole kill.
+    Cross-check at least three g_j against a sympy expansion of
+    G86 with the audit's p,q normal forms.
+(4) The EMPTY semantics: unit ideal BEFORE the colon/saturation
+    steps — confirm from the .m2 flow that Iopen==(1) suffices
+    for the kill claim (the Rabinowitsch open is part of Iopen;
+    emptiness of the open locus is what the type needs — check
+    against the audit's statement of what the corrected locus
+    parametrizes, including whether any LEGITIMATE (8,6,3) curve
+    could sit inside the gcd-cover locus that the Rabinowitsch
+    var does not already exclude).
+(5) Self-check (i)-(iii) transcripts in the codegen report:
+    re-run at least (ii) ((9,6,2) exhibit passes its corrected
+    membership) yourself in sympy as a positive control of the
+    corrected-encoding METHOD (a method that kills everything
+    would also kill the realized curve's system).
+
+Verdict: KILL-BINDING / KILL-BLOCKED (name the defect) /
+REPAIRS (list). Report:
+`xmodel/corrected-863-kill-review-gpt55-20260901.md`.
+Seal-at-completion contract; target 15-25KB.
+charged_input=xmodel/corrected-suite-codegen-grok46-20260901.md
+charged_input=xmodel/encoding-faithfulness-audit-r2-sol56-20260901.md
+
+Your inputs are frozen read-only copies in `/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs`;
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+d80c691861d362f1569b38c80a222c2df4992e62f13297adc2e5a996d99a0f18  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md
+a3c7137cdb2cf46c7d9026cfbcba54b0b6e5b47a6ef36ad7ee2976a905c8b196  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll first verify the frozen inputs and as-run job-file hashes, then read the audit/report/job files from disk before doing any derivation checks. If any required hash mismatches, I’ll stop rather than building a review on the wrong artifacts.
+exec
+/bin/zsh -lc 'sha256sum /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md box/corrected_863.ms box/corrected_863.m2' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+d80c691861d362f1569b38c80a222c2df4992e62f13297adc2e5a996d99a0f18  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md
+a3c7137cdb2cf46c7d9026cfbcba54b0b6e5b47a6ef36ad7ee2976a905c8b196  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md
+cd13e1c25bcfcc43d30c238420ab8383580b8c078b16c0b0ff967ff43761d75b  box/corrected_863.ms
+411b2e865602aefc8c3bc9993318e3980a62cf21ae5ad3ac30c3b4ec446fd74f  box/corrected_863.m2
+
+codex
+The frozen inputs and both job files match the requested SHA-256 hashes. I’m going to pull the relevant sections and the two solver inputs next, then compare the algebra at the generator level.
+  ✓ Verify artifact hashes
+  → Extract audit/codegen/job-file specifications
+  • Independently rederive and compare P1 (8,6,3) generators
+  • Audit M2 coefficient extraction and open/colon semantics
+  • Run sympy positive-control membership check
+  • Write sealed review report
+codex
+I’m locating the exact P1 (8,6,3), corrected-locus, and self-check sections rather than trusting nearby prose. The main comparison will be against the audit’s stated equations, with the codegen transcript used only as an artifact to verify or challenge.
+exec
+/bin/zsh -lc 'wc -l /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md box/corrected_863.ms box/corrected_863.m2' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     247 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md
+     569 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md
+      22 box/corrected_863.ms
+      87 box/corrected_863.m2
+     925 total
+
+exec
+/bin/zsh -lc "rg -n \"8,6,3|863|P1|7\\.1|G86|g_3|Rabinowitsch|gcd|colon|self-check|9,6,2|9, 6, 2|exhibit|coefficient|Iopen|killt|sat|satur|tower|numgens\" /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md box/corrected_863.m2 box/corrected_863.ms" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+box/corrected_863.m2:1:-- corrected_863.m2
+box/corrected_863.m2:2:-- corrected Delta=(8,6,3) incidence
+box/corrected_863.m2:8:-- No saturate(). Opens are Rabinowitsch. Rings asserted.
+box/corrected_863.m2:9:-- Corrected (8,6,3) incidence ideal, audit r2 §7.1.
+box/corrected_863.m2:10:-- G86 = p^3-q^4 + a22 p^2 q + a20 p q^2 + a18 q^3 + a16 p^2 + a14 p q + a12 q^2 + a8 p + a6 q.
+box/corrected_863.m2:11:-- Closed: g_j = [t^j] G86 = 0 for j=4..22 (all degrees, not raw odds).
+box/corrected_863.m2:12:-- Open: u*g_3-1. Chart identities: g_23=0 automatically.
+box/corrected_863.m2:14:-- Moh-check I_29 in the CORRECTED (reduced) form: g_22..g_4 and open g_3.
+box/corrected_863.m2:18:assert(numgens R0 == 19);
+box/corrected_863.m2:19:assert(coefficientRing R0 === QQ);
+box/corrected_863.m2:22:assert(numgens St == 1);
+box/corrected_863.m2:26:G86poly = p^3 - q^4 + a22*p^2*q + a20*p*q^2 + a18*q^3 + a16*p^2 + a14*p*q + a12*q^2 + a8*p + a6*q;
+box/corrected_863.m2:29:killt = map(R0, St, {0_R0});
+box/corrected_863.m2:30:assert(killt(t) == 0_R0);
+box/corrected_863.m2:32:gj = (j) -> coefficient(t^j, G86poly);
+box/corrected_863.m2:41:assert(numgens R == 1);
+box/corrected_863.m2:42:Iopen = sub(I0, R) + ideal(sub(gopen, R)*u - 1);
+box/corrected_863.m2:43:assert(ring Iopen === R);
+box/corrected_863.m2:50:colonInf = (I, J) -> (
+box/corrected_863.m2:56:    if npass > 50 then error "colonInf: exceeded 50 passes";
+box/corrected_863.m2:65:Icolon = colonInf(Iopen, Cover);
+box/corrected_863.m2:66:assert(ring Icolon === R);
+box/corrected_863.m2:72:res0 = killt(resSt);
+box/corrected_863.m2:77:IimmColon = colonInf(Iimm, sub(Cover0, Rv));
+box/corrected_863.m2:80:<< "=== corrected_863 dim Iopen " << dim Iopen << endl;
+box/corrected_863.m2:81:<< "=== corrected_863 dim Icolon " << dim Icolon << endl;
+box/corrected_863.m2:82:<< "=== corrected_863 dim IimmColon " << dim IimmColon << endl;
+box/corrected_863.m2:83:Gb = gens gb Iopen;
+box/corrected_863.m2:84:<< "=== corrected_863 gb Iopen " << Gb << endl;
+box/corrected_863.m2:85:if Iopen == ideal(1_R) then << "=== corrected_863 EMPTY" << endl else << "=== corrected_863 NONEMPTY" << endl;
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:5:Status: SEALED — jobs emitted; three self-checks PASS; no Groebner run.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:15:  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.g8GxQ4/inputs/moh-check-863-grok46-20260901.md
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:18:Workspace copies of the same bytes (identically hashed) are used below for readable paths. This lane transcribes the audit's Section 7.1 incidence systems into msolve GROBNER-mode inputs and Macaulay2 mirrors. It does not run msolve or M2 Groebner bases. Coefficient polynomials and the three required self-checks are exact sympy expansions / substitutions (desk-scale). Canonical ledgers and `jc2-lean` were not inspected. No exit-price claim is made.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:26:Five types, ten job files, under `box/`. M2 is authoritative (constructs `G86`/`G96` in the polynomial ring and extracts `[t^j]`). Each `.ms` file is the expanded unique-monomial list of those same coefficients plus the Rabinowitsch open. GROBNER-mode: `basis=[1]` means unit ideal means EMPTY.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:30:| P1 | `corrected_863` | `(8,6,3)` | D / corrected `I_29` | `g_22..g_4` | `u g_3-1` | 20 | no |
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:36:`(9,6,2)` is REALIZED (audit §6) and is not a job; it is self-check (ii) only. P4 files carry an `ARCHIVAL / LOWEST PRIORITY` header: rep-level dead, do not consume P1–P3 AWS time.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:38:msolve variable order (grevlex, first listed largest): auxiliaries, then the eleven chart coefficients, then `u`. Cover colon and `Res(p',q')` are M2-side only, as in MSOLVE-PREP: extra slack variables would turn a 0-dimensional coefficient point positive-dimensional.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:49:| `Delta` | `beta_1` | `delta_inf` | `delta_aff` | audit 7.1 `N` |
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:54:| `(8,6,3)` | 29 | 14 | 7 | 7 |
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:56:| `(9,6,2)` | 25 | 24 | 4 | 4 |
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:60:Moh-check coefficient count (raw `I_29`): after the NR chart, nine coefficients remain and ten odd vanishings `h_23..h_5` are imposed, `h_23` already spent. That is the unfaithful raw job. The corrected D job below is the same FSY/Moh finite system after even pole-order reduction, including gap residuals at degrees 10 and 4.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:62:## 3. Encoding dictionary (audit 7.1, not raw `h_k`/`k_j`)
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:69:G86 = p^3-q^4 + a22 p^2 q + a20 p q^2 + a18 q^3 + a16 p^2 + a14 p q + a12 q^2 [+ a8 p] [+ a6 q]
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:76:Subscripts on `a_w` are leading pole degrees. Retain only terms of weight strictly greater than the target `c`. Closed equations are **every** `[t^j]G = 0` in the stated range, not the raw odd list. The even/semigroup slots are triangular of leading coefficient 1 in their own `a_w` (sympy: `g_22,g_20,g_18,g_16,g_14,g_12,g_8,g_6` and `g_15,g_12,g_9,g_6`). After eliminating those auxiliaries one recovers the audit §3 `bar_h`/`bar_k` list. Independent equation counts in the eleven chart variables: `5,7,8,11,8,10` for A,B,C,D,96A,96B, matching audit 7.1.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:80:## 4. Coefficient-by-coefficient: `(8,6)` reduced remainders
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:82:Exact sympy expansion of `H=p^3-q^4` and of `G86` in the full auxiliary ring. Support of both is `0..22`; `h_23=g_23=0` (chart identity, `h_23=-4 a_5` already spent). Leading coefficients, fully expanded:
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:95:These are the encoded generators: `corrected_863.ms` / `8611.ms` / `869.ms` / `867.ms` all begin `a22-4*b` then `3*B-4*gam` then `a22*b+a20+3*C-6*b^2-4*d` then `2*a22*B+a22*gam+3*D-12*b*gam-4*e`. That is `g_22,g_21,g_20,g_19`, not raw `h_21,h_19,...`.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:104:This is the audit §3 identity `bar_h_19 = h_19 + 4*b*(2*B+gamma)` on the nose. So `h_19=0` is not an off-by-one of the right equation: it is the unreduced coefficient. The encoded `g_19=0` *is* the reduced remainder.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:113:| `corrected_863.ms` | `g_22..g_4` (19 closed; `a8,a6` retained; gap `g_4`, no `a4`) | `u*g_3-1` |
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:115:Auxiliaries retained, matching the 7.1 table: A/B keep `a22..a12`; C adds `a8`; D adds `a6`. Degrees 10 and 4 are gaps of `⟨8,6⟩` and appear as closed residuals without an auxiliary, which is why B's closed range reaches `g_10` with the same auxiliaries as A, and D's range reaches `g_4`.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:119:Relation to Moh/FSY `I_29`: the raw odd list `h_23,h_21,...,h_5` is the unfaithful encoding. The corrected job is `g_22=...=g_4=0` with `g_3≠0` in the same NR chart. EMPTY of that open ideal is the curve-level kill the Moh-check lane could not source.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:121:## 5. Coefficient-by-coefficient: `(9,6)` reduced remainders
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:123:Exact expansion of `K=p^2-q^3` and `G96`. Support of `K` is `2..16` (`k_17=0`, chart identity). Support of `G96` is `1..16` (`a9 p` contributes degree 9 and below, including odd 1). Leading coefficients:
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:141:`g_16=k_16`: degree 16 is a gap of `⟨9,6⟩` (16 not divisible by 3), so it is a genuine residual with no auxiliary. `g_15` is the `a15`-slot. The old raw jobs zeroed `k_15,k_12,k_9,k_6`, i.e. forced `a15=a12=a9=a6=0`. The encoded equations solve for those four coefficients instead.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:143:`corrected_964.ms` generators, in order: `g_16,...,g_5` then `u*g_4-1` (13 polynomials, 15 file lines). Constants omitted (audit 7.1: every target degree is positive).
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:149:**I_DP vs Groebner generators (P3).** Audit 7.1: on each corrected locus, invert `Res_t(p',q')`, then run the reduced unordered double-point check with `N=6`. That is a post-check on a closed point, not a unit-ideal test of `Iopen` (the corrected `(9,6,4)` locus is already known nonempty). Adjoining one off-diagonal pair `(s,t)` to the Groebner system would encode “at least one node,” which the HF-twin already has four of, and would not encode length 6. Six explicit pairs would change the ring and the meaning. Encoded: characteristic incidence in both engines; `idpPostcheck(p0,q0,6)` (immersive, 0-dimensional, degree 6, radical; variable `Pi` not `pi`) in the M2 file. Distinct-tangents / no-reused-parameter remain the existing `idp_postcheck.m2` clauses on an extracted point.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:153:**Cover colon / immersive resultant.** M2 only, rings asserted, named `colonInf`, `diff(t,p)` not `diff(p,t)`. Not in msolve (no slack variables).
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:177:`h_11 = (355746-27671*zeta)/110592` after `59291/18432=355746/110592`, matching the audit. Residual `g_19=11` matches the audit's `[t^19]R=11`. The point satisfies every old A generator/open and fails the encoded corrected A system. FAIL of membership is the required outcome; the self-check harness labels that outcome PASS.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:179:### (ii) `(9,6,2)` curve vs corrected `(9,6,2)` membership — required PASS
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:184:check(ii) closed g_16..g_3: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:187:SELF-CHECK (ii) (9,6,2) curve q=t^6+8t^2, p=t^9+12t^5+24t vs corrected (9,6,2): PASS — aux (a15,a12,a9,a6)=(0,0,0,-64) gives g_j=0 for 3<=j<=16 and g_2=64 != 0
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:190:No `(9,6,2)` job file was emitted (type REALIZED). The membership check uses the same `G96` as `corrected_964`.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:200:SELF-CHECK (iii) HF-twin (9,6,4) vs corrected (9,6,4) locus: PASS — aux (a15,a12,a9,a6)=(0,-9/4,0,-27/16) gives g_j=0 for 5<=j<=16 and g_4=-27/128 != 0 (constant term 0 omitted as in audit 7.1)
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:210:cd13e1c25bcfcc43d30c238420ab8383580b8c078b16c0b0ff967ff43761d75b  box/corrected_863.ms
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:211:a6c7e647316f6546145a855b4f8ee972a188f5a2db1171304f5f032c7beff937  box/corrected_863.m2
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:222:Suggested AWS invocation (not run here): `msolve -v 2 -g 2 -f box/corrected_863.ms`. Output `[1]:` (length-of-basis 1, the constant 1) is EMPTY.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:226:- **Flag/place/series:** not in play. The charged A point remains one place with conjugate series; this lane only tests coefficient-ideal membership.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:227:- **Raw remainder degree:** encoded generators are `[t^j]G86` / `[t^j]G96` after the 7.1 auxiliaries, not raw `h_j`/`k_j`. Zero, vanished leaders, and gap degrees 10/4 and 16 are explicit.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:228:- **Variable/ring map:** charts and auxiliary names are declared; M2 names `killt` before applying it; matching names are not used as a map proof.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:229:- **`sat()` wrapping:** no `saturate()`. Opens are Rabinowitsch. Cover colon is a named loop with a ring assert each pass.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:230:- **Floor/attainment:** HF-twin NONEMPTY of the corrected `(9,6,4)` locus is not a six-node witness. `(9,6,2)` is not re-promoted; the membership check is a regression control.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:234:**Final status: jobs emitted, self-checks PASS, types still OPEN at their stated scopes.** P1 `(8,6,3)` is the live curve-level kill path (Moh-check died). P3 is the six-node question on a known-nonempty locus. P2 is corrected type B. P4 is archival.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:3:**Status:** SEALED — encoding audit closed; five nodal types OPEN and `(9,6,2)` REALIZED.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:7:This is a fail-closed semantic audit of the six coefficient systems in
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:25:jobs use odd coefficients of the raw binomial `p^3-q^4` before reducing its
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:28:approximate-root coefficients to zero and searching only a strict slice.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:30:The charged A point is decisive: it satisfies the old A equations, but it is
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:34:two coefficient embeddings, and the `+/-` Puiseux expansions are conjugate
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:45:has exactly four affine nodes and realizes `(9,6,2)`.  The four `(8,6)`
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:47:five nodal types OPEN, `(9,6,2)` REALIZED.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:108:the precise step omitted when raw coefficients of `H` or `K` are read as
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:109:characteristic coefficients.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:111:Define the **normalized** coefficients
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:123:gcd is locally removable.  The relevant same-gcd obstructions here are
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:139:coefficients after the triangular global semigroup reduction specified in
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:140:7.1.  The exact global dictionary is:
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:147:| `(8,6,3)` | 29 | preceding set plus `j={7,5,4}` | `bar_h_3 != 0` |
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:149:| `(9,6,2)` | 25 | preceding set plus `j={4,3}` | `bar_k_2 != 0` |
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:156:solving for their reduction coefficients.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:169:The open coefficient has a second job.  Since
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:170:`gcd(d,n,c)=1` in all six rows, it excludes every nontrivial common right
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:174:there is no missing independent "one-place open."  The old gcd-2/gcd-3
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:187:version of the right equation; it is the wrong, unreduced coefficient.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:202:For the four `(8,6)` jobs, the raw odd coefficients are taken before the
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:208:missing Rabinowitsch inverse.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:211:normalizations.  Once the coefficient of every available semigroup monomial
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:214:coefficient.  The later raw equations `h_7,h_5,h_3` inspect different
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:215:coefficients before that reduction and cannot replace these gap equations.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:226:`h_20=3C`; after the compulsory cancellation `G86=H-3C*p*q^2+...`, its
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:227:degree-17 coefficient is `-3C(B+2gamma)=-10C*gamma != 0`.  Thus even C's
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:263:raw coefficient above `c` to zero forces the *pure binomial slice*
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:270:> no point of that pure-binomial slice survives the stated immersion/colon
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:275:MSOLVE-PREP 2.3 (lines 131--138).  The resultant inverse and cover colon are
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:291:The two roots of the quadratic give coefficient-conjugate curves, not two
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:303:Now reduce rather than merely inspect `H=p^3-q^4`.  Its leading coefficients
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:323:This single calculation exhibits the exact semantic bug.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:346:satisfies
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:355:`Delta=(8,6,32-13)=(8,6,19)`.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:359:missing `t^7` coefficient of `p=P(phi)` forces `a=0`, after which `P(phi)`
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:360:is even, contradicting the nonzero `t^5` coefficient of `p`.  Hence the map
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:371:The frozen witness file itself is only a coefficient payload: line 6 says
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:381:their computations finish.  The exact replacements are specified in 7.1.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:403:The identity recorded and coefficient-checkable at
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:428:degree 4 together with `gcd(9,6,4)=1` also rules out a common right
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:434:For `(9,6,2)`, put
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:443:`Delta=(9,6,2)`, `beta_1=25`, `delta_inf=24`, so `delta_aff=28-24=4`.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:464:### 7.1 Correct characteristic incidence ideals
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:467:the coefficients of the reduced second approximate root explicitly.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:472:G86 = p^3-q^4
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:479:strictly greater than the target `c`, let `g_j=[t^j]G86`, and use:
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:481:| job | auxiliary terms retained | closed equations | Rabinowitsch open |
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:486:| D, `c=3` | preceding plus `a6` | `g_22,...,g_4` | `u*g_3-1` |
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:495:`[t^4]G96`; for B (`c=2`) impose the coefficients for `3<=j<=16`
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:505:degree-2/3 covers, although the old cover colon is harmless if its ring and
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:509:2. the displayed `(9,6,4)` point must satisfy corrected 96A;
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:510:3. the displayed four-node `(9,6,2)` point must satisfy corrected 96B;
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:520:| `(8,6,3)` | pending | **OPEN / RECOMPUTE** | stop old job; corrected D, then length 7 |
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:522:| `(9,6,2)` | **KILLED** by raw EMPTY | **REALIZED** by the exact four-node curve in Section 6 | corrected job only as a regression control |
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:528:the positive `(9,6,2)` witness; the other five advertised nodal types remain
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:534:  embeddings, or `gcd(d,n)` into physical places.  The witness has one place.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:539:  corrected jobs are incidence ideals in the frozen coefficient rings with
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:540:  named auxiliary coefficients.  Matching variable names are not used as a
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:542:- **Open and `sat()` discipline:** opens are Rabinowitsch equations on the
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:543:  corrected leading coefficient.  Colon/resultant operations are not allowed
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:546:  nodal witness.  `(9,6,2)` is promoted only because four explicit transverse
+

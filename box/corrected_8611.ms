@@ -1,0 +1,14 @@
+a22,a20,a18,a16,a14,a12,B,C,D,E,F,G,b,gam,d,e,f,u
+0
+a22-4*b,
+3*B-4*gam,
+a22*b+a20+3*C-6*b^2-4*d,
+2*a22*B+a22*gam+3*D-12*b*gam-4*e,
+2*a22*C+a22*d+2*a20*b+a18+3*B^2+3*E-4*b^3-12*b*d-6*gam^2-4*f,
+2*a22*B*b+2*a22*D+a22*e+a20*B+2*a20*gam+6*B*C+3*F-12*b^2*gam-12*b*e-12*gam*d,
+a22*B^2+2*a22*B*gam+2*a22*C*b+2*a22*E+a22*f+a20*C+a20*b^2+2*a20*d+3*a18*b+a16+6*B*D+3*C^2+3*G-b^4-12*b^2*d-12*b*gam^2-12*b*f-12*gam*e-6*d^2,
+2*a22*B*C+2*a22*B*d+2*a22*C*gam+2*a22*D*b+2*a22*F+2*a20*B*b+a20*D+2*a20*b*gam+2*a20*e+3*a18*gam+B^3+6*B*E+6*C*D-4*b^3*gam-12*b^2*e-24*b*gam*d-4*gam^3-12*gam*f-12*d*e,
+a22*B^2*b+2*a22*B*D+2*a22*B*e+a22*C^2+2*a22*C*d+2*a22*D*gam+2*a22*E*b+2*a22*G+2*a20*B*gam+2*a20*C*b+a20*E+2*a20*b*d+a20*gam^2+2*a20*f+3*a18*b^2+3*a18*d+a14+3*B^2*C+6*B*F+6*C*E+3*D^2-4*b^3*d-6*b^2*gam^2-12*b^2*f-24*b*gam*e-12*b*d^2-12*gam^2*d-12*d*f-6*e^2,
+a22*B^2*gam+2*a22*B*C*b+2*a22*B*E+2*a22*B*f+2*a22*C*D+2*a22*C*e+2*a22*D*d+2*a22*E*gam+2*a22*F*b+a20*B*b^2+2*a20*B*d+2*a20*C*gam+2*a20*D*b+a20*F+2*a20*b*e+2*a20*gam*d+6*a18*b*gam+3*a18*e+2*a16*B+3*B^2*D+3*B*C^2+6*B*G+6*C*F+6*D*E-4*b^3*e-12*b^2*gam*d-4*b*gam^3-24*b*gam*f-24*b*d*e-12*gam^2*e-12*gam*d^2-12*e*f,
+a22*B^2*d+2*a22*B*C*gam+2*a22*B*D*b+2*a22*B*F+a22*C^2*b+2*a22*C*E+2*a22*C*f+a22*D^2+2*a22*D*e+2*a22*E*d+2*a22*F*gam+2*a22*G*b+2*a20*B*b*gam+2*a20*B*e+a20*C*b^2+2*a20*C*d+2*a20*D*gam+2*a20*E*b+a20*G+2*a20*b*f+2*a20*gam*e+a20*d^2+a18*b^3+6*a18*b*d+3*a18*gam^2+3*a18*f+2*a16*C+a14*b+a12+3*B^2*E+6*B*C*D+C^3+6*C*G+6*D*F+3*E^2-4*b^3*f-12*b^2*gam*e-6*b^2*d^2-12*b*gam^2*d-24*b*d*f-12*b*e^2-gam^4-12*gam^2*f-24*gam*d*e-4*d^3-6*f^2,
+a22*B^2*e*u+2*a22*B*C*d*u+2*a22*B*D*gam*u+2*a22*B*E*b*u+2*a22*B*G*u+a22*C^2*gam*u+2*a22*C*D*b*u+2*a22*C*F*u+2*a22*D*E*u+2*a22*D*f*u+2*a22*E*e*u+2*a22*F*d*u+2*a22*G*gam*u+2*a20*B*b*d*u+a20*B*gam^2*u+2*a20*B*f*u+2*a20*C*b*gam*u+2*a20*C*e*u+a20*D*b^2*u+2*a20*D*d*u+2*a20*E*gam*u+2*a20*F*b*u+2*a20*gam*f*u+2*a20*d*e*u+3*a18*b^2*gam*u+6*a18*b*e*u+6*a18*gam*d*u+2*a16*D*u+a14*B*u+a14*gam*u+3*B^2*F*u+6*B*C*E*u+3*B*D^2*u+3*C^2*D*u+6*D*G*u+6*E*F*u-12*b^2*gam*f*u-12*b^2*d*e*u-12*b*gam^2*e*u-12*b*gam*d^2*u-24*b*e*f*u-4*gam^3*d*u-24*gam*d*f*u-12*gam*e^2*u-12*d^2*e*u-1

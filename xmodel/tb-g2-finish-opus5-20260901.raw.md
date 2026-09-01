@@ -574,3 +574,11 @@ charged file or `jc2-lean` path was touched.
 No `charge_basis` line: this report asserts no new exit price.
 
 <!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `30959`.
+- Body SHA-256:
+  `4f464f9c7321501cf0adaacc6ad573212911d41e4589ccf47e834be709b59d6c`.

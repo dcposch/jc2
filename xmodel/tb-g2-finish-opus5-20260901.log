@@ -1,1 +1,32 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report written and sealed: `xmodel/tb-g2-finish-opus5-20260901.md` (body 5,495 words, 30,959 bytes, SHA-256 `4f464f9c…`). Hashes of all three charged inputs verified before reading.
+
+## What the lane found
+
+**(1) TB state at g=2, re-derived.** Reading (a) is exactly the contact number: `2m+2γ = (D̄·L∞)_{P∞} = 8`, so `m+γ = 4` and TB's `m ≡ 1 (mod 3)` ⟺ `γ ≡ 0 (mod 3)`, giving `(m,γ) ∈ {(4,0),(1,3)}`. The charge's parenthetical is right on both counts — `m ∈ {1,4}`, and TB-2 is what removes `m=1`; I re-derived that exclusion.
+
+**(2) A new theorem, and it is the deciding one.** The `m=4` requirement *does* separate the types, one layer below the jets. Two identities carry it:
+
+- `t² + 108α₃²·disc(η′) = 16h³` with `h = α₂² − 3α₁α₃` (the Hessian of `η′` at the triple-root direction) — the discriminant of the cubic family is a perfect **cube**;
+- hence `27α₃²U·f = P² − 4σ²h³` with `P = 27ρα₃² − σt/2`.
+
+Then `h(0,0)=0` (else `f` reducible), `{P=0}` is smooth and tangent to `L∞`, and a Weierstrass count gives **β₁ = 8 + 3κ**, `κ = ord_{P∞}(h|_{P=0})` odd. So **β₁ ≡ 2 (mod 3)** is necessary.
+
+**(3) That is the TUBE-2 gate, from disjoint machinery.** `E = e(ι) = 14 − β₁ = 3(2 − κ)`. Type B `κ=5 → E=−9`; `(8,6,3)` `κ=7 → E=−15` — matching the prebuild's table with no adjustment. Only SK-5 is shared. So the prebuild's flagship kill now has independent corroboration (not a review).
+
+**(4) Verdicts.**
+
+| type | β₁ | κ | verdict |
+|---|---:|:--:|---|
+| (8,6,11) | 21 | 13/3 | **KILLED**, two independent chains |
+| **(8,6,9)** | 23 | 5 | **not killed; OPEN at named input**, residual fully pinned |
+| (8,6,7) | 25 | 17/3 | **KILLED**, two independent chains |
+| (8,6,3) | 29 | 7 | **not killed; OPEN**, pinned |
+
+For B and `(8,6,3)` I give explicit local witnesses `Φ = ((y⁴+σ)/27)X³ − (σy^κ/3)X²Y + σY³` realizing the `A₂₂` and `A₂₈` germs with `m=4`, so the answer to "does the m=4 requirement contradict this germ?" is **no**, and no finer local reading at `P∞` can kill them.
+
+Consequently `OPEN[S3-TB-G2]` should be retyped: not "kill m=4 at g=2" (locally unachievable) but the global triple-plane existence question, for which the report supplies the complete local data and names `c₂(T)` as the missing input. `(8,6,3)` therefore gets **no** TB backstop — the Moh route stands alone there, which is the one place the charge's hope does not come through.
+
+Two notes: I did not run the geography/Tokunaga routes — both are curve-dependent, hence realization-lane rather than rep-level, and S3FR §8 marks the latter a settled dead end. Separately, an intermediate draft of this file got swept into another lane's commit `45e4c7bc` mid-write; the committed content was my own partial skeleton, nothing was overwritten, and the sealed version supersedes it.
+DIVERT path=xmodel/tb-g2-finish-opus5-20260901.md status=DIVERTED body_bytes=30959 body_sha256=4f464f9c7321501cf0adaacc6ad573212911d41e4589ccf47e834be709b59d6c overflow=xmodel/tb-g2-finish-opus5-20260901.overflow overflow_bytes=273 raw=xmodel/tb-g2-finish-opus5-20260901.raw.md raw_sha256=c18d5d3c458728aa43a4fa956e763f74bad34a2f3ca487528cc47808622d408a overflow_sha256=8a00dba0475af165c23a2c9b566fb0e29a26addddc0055896e3bc1b1fb4b70a6
+post-BODY-END overflow diverted; charged body preserved

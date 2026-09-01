@@ -1,2 +1,22 @@
 cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
-I'll start by verifying the frozen input hashes and reading the audit, Moh check, and existing job conventions so the corrected equations can be transcribed faithfully.Hashes match. Next I’ll read the audit, Moh check, and existing msolve/M2 job conventions so the encodings stay faithful.The audit’s §7.1 incidence systems are the encoding target. I’ll pull existing msolve/M2 conventions, the I_DP nodal census, and the seal contract next.
+I'll start by verifying the frozen input hashes and reading the audit, Moh check, and existing job conventions so the corrected equations can be transcribed faithfully.Hashes match. Next I’ll read the audit, Moh check, and existing msolve/M2 job conventions so the encodings stay faithful.The audit’s §7.1 incidence systems are the encoding target. I’ll pull existing msolve/M2 conventions, the I_DP nodal census, and the seal contract next.I’ll write the report skeleton, then generate the incidence polynomials and run the three self-checks before emitting the job files.Skeleton is on disk. Next I’ll expand the incidence polynomials, check the triangular identities, and run the three self-checks.Leading identities match the audit (`g_22 = a22-4b`, `g_19` reduces to `h_19+4b(2B+gam)`). I’ll finish the emitter, self-checks, and job files next.Self-checks all passed and the job files are on disk. I’ll inspect the M2/msolve outputs for footguns, then write the remaining report sections.M2 still has `use St` when the cover ideal is built, so those generators would live in the wrong ring. I’ll switch back to `R0` before `Cover0`.Job files check out. I’ll append the remaining report sections in bounded writes, then seal.Corrected incidence jobs are on disk. The audit’s §7.1 systems (reduced `G86`/`G96`, not raw `h_k`/`k_j`) are the encodings; all three self-checks passed; the report is sealed.
+
+**Jobs** (msolve GROBNER-mode + M2 mirror). `basis=[1]` means unit ideal means EMPTY.
+
+| Priority | Files | Type | Closed equations | Open |
+|---|---|---|---|---|
+| P1 | `box/corrected_863.ms/.m2` | `(8,6,3)` / corrected I_29 | `g_22..g_4` | `u g_3-1` |
+| P2 | `box/corrected_869.ms/.m2` | `(8,6,9)` | `g_22..g_10` | `u g_9-1` |
+| P3 | `box/corrected_964.ms/.m2` | `(9,6,4)` six-node | `g_16..g_5` | `u g_4-1` |
+| P4 archival | `box/corrected_8611.ms/.m2` | `(8,6,11)` | `g_22..g_12` | `u g_11-1` |
+| P4 archival | `box/corrected_867.ms/.m2` | `(8,6,7)` | `g_22..g_8` | `u g_7-1` |
+
+Census for P3: `delta_aff=6` (`β_1=23`, `δ_∞=22`, `p_a(9)=28`). M2 carries `idpPostcheck(p0,q0,6)`; emptiness of the locus is not the six-node test (HF-twin already shows nonempty). No `_a`/`_b` variants: 7.1 is unambiguous.
+
+**Self-checks (sympy, verbatim):**
+- **(i) PASS** — charged A false-positive has `g_21=h_19=0`, raw `h_11≠0`, but reduced `g_19|(a22=4b)=11≠0`. Off the corrected `(8,6,11)` locus.
+- **(ii) PASS** — `q=t^6+8t^2`, `p=t^9+12t^5+24t` with `(a15,a12,a9,a6)=(0,0,0,-64)` gives `g_j=0` for `3≤j≤16` and `g_2=64`.
+- **(iii) PASS** — HF-twin with `(0,-9/4,0,-27/16)` gives `g_j=0` for `5≤j≤16` and `g_4=-27/128`.
+
+The encoded `g_19` is the audit identity `h_19+4b(2B+γ)`, not raw `h_19`. Report: `xmodel/corrected-suite-codegen-grok46-20260901.md` (sealed, body SHA-256 `3a5b451c…`). No Groebner run, no exit-price claim.
+DIVERT path=xmodel/corrected-suite-codegen-grok46-20260901.md status=CLEAN_SEALED body_bytes=16110 body_sha256=3a5b451c004d400a0e1f9f2f9a44fca97751b3a00d3457f93c64c18676cf9a2c
