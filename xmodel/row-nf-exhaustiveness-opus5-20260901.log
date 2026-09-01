@@ -1,0 +1,25 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed: `xmodel/row-nf-exhaustiveness-opus5-20260901.md` (one file, no other written; no ledger, charged file, or `jc2-lean` touched).
+
+## Verdict: THEOREM EXHAUST is PROVED, not a typed gap
+
+**The gap was Theorem FOLD, and it falls to a semigroup count.** `ZVK` §1.1 imported "every `Δ=(6,4,3)` member is, after a triangular automorphism, a fold `(r²,q)`" from FOLD as a *provisional hypothesis* — `ZVKREV` §0 confirms it was never re-proved. That single implication is the whole exhaustiveness gap, and it is four lines:
+
+1. `δ₂ = 3` is an entry of `Δ`, and by Galindo–Monserrat Theorem 2.1 (re-fetched, hash `637acfd1…` matches custody) `Δ` generates the semigroup at infinity — so `3 ∈ S_D`. **Only this containment direction is used.**
+2. `δ_aff = 3` (genus split) plus `δ_aff = #gaps(S_D)` forces `S_D = ⟨3,4⟩`.
+3. Hence `C[R,Q] = C[P,Q]` with basis `{R^iQ^j : j ≤ 2}` of pairwise distinct degrees.
+4. `deg P = 6` and only `R²` has degree 6 in that basis ⟹ `P = αR² + βQ + γR + ε`. Complete the square; the triangular `T₁(x,y) = (α⁻¹(x−βy−ε′), y)` lands on `(R̃², Q)`.
+
+Nodality is **not** consumed anywhere — fortunate, since the target family contains the `D₄` fibre at `j=0`.
+
+**(8,4) needs no separate machinery.** The same basis, at degree 8, gives `P = c₀₂Q² + c₁₁RQ + c₂₀R² + …`, and `δ₂ = 6 ⟺ c₁₁ = 0` — a third proof of the reviewed ROW-84 equivalence, in the form exhaustiveness actually needs: `Δ` is exactly what kills the degree-7 term that would obstruct the fold. The composite lands on `D_{b,c}` directly, without consuming the `Φ`-transport of the kill.
+
+**Three repairs recorded:**
+- **(C1)** `SWREV` §7's classical fact "`⟨3,4⟩` is the *unique* genus-3 oversemigroup of `⟨4,6⟩`" is false — there are three (`⟨3,4⟩`, `⟨4,5,6,7⟩`, `⟨2,7⟩`). Not load-bearing, but must not be reused.
+- **(C2)** Both `ZVK` and `ZVKREV` derive the coefficient conditions from "the minus branch is empty", which is *not* the row hypothesis. I supply the forward bridge `δ_aff=3 ⟹ N ≡ −e₁⁴`, with two degenerate cases the phrase "minus pair" doesn't name (both already roots of the same quartic; `(1.2)` unchanged).
+- **(C3)** `c ≠ 0` follows from birationality, not from Lemma 1.2's resultant count.
+
+**Typed honestly:** this is single-model and unreviewed. The correct label is PROVED-HERE / REVIEW-PENDING, not PROMOTED; recommended hostile charge is §4 Steps 1–4, §4 Step 8, §5 Step 4′.
+
+**Residual after EXHAUST:** exactly the six `(8,6)`/`(9,6)` numerical types, with their realisation/tuple obligations verbatim. One successor handle: the same method applies whenever `S_D` has a generator below `n`, which holds for exactly two of the six — `Δ=(8,6,3)` (`S_D=⟨3,8⟩`, a *y*-fold of a coprime `(8,3)` pair) and `Δ=(9,6,2)` (`S_D=⟨2,9⟩`).
+DIVERT path=xmodel/row-nf-exhaustiveness-opus5-20260901.md status=CLEAN body_bytes=35847 body_sha256=30eb230dca026da6d59cbc7dd733cdb4ca63af443d5069ee83f7713b83a357f3
