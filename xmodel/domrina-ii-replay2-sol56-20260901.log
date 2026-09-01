@@ -1,0 +1,121 @@
+cli=codex-cli 0.151.0 model=gpt-5.6-sol effort=ultra config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.151.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: ultra
+reasoning summaries: none
+session id: 01a05f2d-c127-7610-8a21-83b42b0df312
+--------
+user
+# Research lane: DOMRINA-II-REPLAY-2 — hostile replay of §§5-7 of Domrina II
+
+Sibling of the charged REPLAY-1 (which repaired both censuses —
+Lemma 3.12 exhausts all 35 raw signatures, Lemma 3.14 the ten
+Fig. 11 quotient graphs — but left two named first-half gaps:
+GAP-CANDIDATE[ROOT-U-LAST-CHAIN] (Cor. 3.8(b), p.10) and
+GAP-CANDIDATE[ROOT-DELTA-G2-APPLICATION] (Lemma 3.15, pp.14-15)).
+A parallel Opus lane attempts repairs of those two; your scope is
+the SECOND HALF, §§5-7 of the official PDF:
+`refs/domrina2000_izv64_four_sheeted_general_case.pdf`, SHA-256
+`0be24c5c6a9cc9423c3049c3402f2c98e44bac5f1c6018b3999989e0f32e5018`
+(verify before reading; stop on mismatch).
+
+Tasks, campaign hostile standard, typed verdicts
+REPLAYED-SOUND / REPAIRED / GAP per check:
+(1) Every claim in §§5-6, including the forward uses of Lemma
+    3.15 — IMPORTANT: where a §§5-7 argument consumes Lemma 3.15
+    or Cor. 3.8(b), track the dependency explicitly (tag
+    DEPENDS[ROOT-DELTA-G2-APPLICATION] / DEPENDS[ROOT-U-LAST-CHAIN])
+    so the final soundness graph shows exactly what the two
+    first-half gaps infect.
+(2) The omitted §7 calculations (the charged audit §4 lists
+    them): reconstruct each one or type it GAP with the quote and
+    page.
+(3) Lemma 7.10's undisplayed case check: enumerate the cases
+    yourself.
+(4) Final soundness graph: with REPLAY-1's results charged, give
+    the complete dependency map of Domrina's Theorem on: the two
+    first-half gaps, any new §§5-7 gaps, and the D--O I bindings.
+    State the minimal set of repairs that would make the whole
+    chain sound, and whether each looks desk-repairable,
+    lane-repairable, or structural.
+
+Report: `xmodel/domrina-ii-replay2-sol56-20260901.md`.
+Seal-at-completion contract; target 30-40KB; close at a clean
+sub-boundary with OPEN[REPLAY2-CONT] rather than overrun.
+charged_input=xmodel/domrina-ii-replay1-sol56-20260901.md
+charged_input=xmodel/domrina-1999-audit-sol56-20260901.md
+
+Your inputs are frozen read-only copies in `/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.pt5fZC/inputs`;
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+b838a2860c88d64d2a2162fd1a157e345db027bf4c7e95d2abae899dba9dc5de  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.pt5fZC/inputs/domrina-ii-replay1-sol56-20260901.md
+5739b317366d0a3c8905fcdc642f823c7bb71d44b79c7101b2cac256512f4d01  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.pt5fZC/inputs/domrina-1999-audit-sol56-20260901.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll first verify all three frozen artifacts byte-for-byte. If they match, I’ll split the replay by §§5, 6, and 7 while I build the cross-section dependency graph and integrate the hostile checks into the sealed report.
+exec
+/bin/zsh -lc 'shasum -a 256 refs/domrina2000_izv64_four_sheeted_general_case.pdf /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.pt5fZC/inputs/domrina-ii-replay1-sol56-20260901.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.pt5fZC/inputs/domrina-1999-audit-sol56-20260901.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+0be24c5c6a9cc9423c3049c3402f2c98e44bac5f1c6018b3999989e0f32e5018  refs/domrina2000_izv64_four_sheeted_general_case.pdf
+b838a2860c88d64d2a2162fd1a157e345db027bf4c7e95d2abae899dba9dc5de  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.pt5fZC/inputs/domrina-ii-replay1-sol56-20260901.md
+5739b317366d0a3c8905fcdc642f823c7bb71d44b79c7101b2cac256512f4d01  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.pt5fZC/inputs/domrina-1999-audit-sol56-20260901.md
+
+codex
+All hashes match the charged values, so the lane is live. I’m now fixing the PDF’s printed-page/physical-page map and extracting the exact audit obligations before assigning independent hostile replays.
+  ✓ Verify frozen inputs and map PDF §§5–7 to exact pages
+  → Replay every claim in §§5–6 and trace first-half dependencies
+  • Reconstruct all charged omitted §7 calculations and enumerate Lemma 7.10 cases
+  • Build final theorem dependency graph and minimal repair set
+  • Write, audit, size-check, and seal the report

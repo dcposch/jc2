@@ -17215,3 +17215,42 @@ Projected-timestamp recurrence #7 — the header was composed in
 the same command as `date -u` instead of after reading it. Rule
 restated: run `date -u` as a separate command, read it, then
 compose.
+
+## LIVE STATE (observed 2026-09-01T22:53Z) — DOMRINA II FIRST HALF: CENSUSES REPAIRED, TWO NAMED GAPS
+
+**DOMRINA-II-REPLAY-1 landed** (`domrina-ii-replay1-sol56-20260901.md`,
+b838a286, BODY_SEALED, 39878 B). Custody gate run against the
+official PDF before reading. Results: Lemma 3.12 local census —
+the omitted 35-to-20 filter reconstructed, all 35 raw signatures
+exhausted, REPAIRED; Lemma 3.13 four local exclusions REPAIRED;
+Lemma 3.14 global census — full state space + predecessor/cycle
+check, ten Fig. 11 quotient graphs exhausted, REPAIRED. Root
+ledger does NOT close: **GAP-CANDIDATE[ROOT-U-LAST-CHAIN]**
+(Cor. 3.8(b), p.10) and **GAP-CANDIDATE[ROOT-DELTA-G2-APPLICATION]**
+(Lemma 3.15, pp.14-15 — linearity does not make an open-chain
+determinant one). 53 typed verdicts total; §4.3 found an
+orientation typo (repair: swap left/right) and an omitted
+companion case. D--O I bindings: DO-I-1/DO-I-2 bound to campaign
+Prop 4.1 for the unique-dicritical all-mu=1 slice only; the
+"number greater than one" entry still rests on part I's separate
+unique-mu=2 analysis (no campaign halo claimed). Boxed
+disposition: CENSUSES REPAIRED AND EXHAUSTIVE; FIRST-HALF
+SOUNDNESS HAS TWO NAMED GAPS. DOMRINA-II-SOUNDNESS remains
+unpromotable pending the gaps and §§5-7.
+
+**Consequence**: the paper the literature accepts as closing N=4
+does not currently close it under the campaign standard. The
+reception line (N=4-LITERATURE=CLOSED) stands as a fact about
+reception; the soundness line is now sharper: two named,
+page-cited gaps.
+
+**NEW LANES** (22:53Z): `domrina-ii-replay2-sol56` (codex, child
+16746) — §§5-7 with dependency tags DEPENDS[gap] so the final
+soundness graph shows what the first-half gaps infect; Lemma 7.10
+case enumeration; omitted §7 calculations; minimal-repair-set
+statement. `domrina-gap-repair-opus5` (opus flagship, child
+17203) — repair or refute the two named gaps (routes: Domrina's
+own setup / promoted campaign machinery / pinned literature);
+if IMPLICATION-FALSE: countermodel and sober consequence line.
+Still running: rep-96-hostile-review (14390), bm-fact-codegen
+(14231); Box03 msolve 869 + M2 queue.

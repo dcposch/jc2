@@ -52,8 +52,9 @@ The scope boundary is strict.  Section 4 is checked because it consumes the
 censuses and makes an implicit root placement.  Sections 5–7, including
 Lemma 7.10 and the omitted §7 arithmetic, are recorded only as downstream
 consumers for the sibling lane.  The frozen seal basis for this run is
-`7a35f2d99c72179080a504484cfc1cf790abb642`; the completion marker and canonical
-seal are deliberately absent while the remaining sections are under review.
+`7a35f2d99c72179080a504484cfc1cf790abb642`.  The completion marker and
+canonical seal were withheld throughout drafting and are installed only after
+all bounded section writes and checks described below.
 
 ## 1. Reconstructed data model and replay invariants
 
@@ -358,20 +359,33 @@ Fig. 10:
 
 There is no fifth row: at t a nonterminal degree-two left arm has endpoint
 degree at most two by (3.1)–(3.2), and the return label then permits only a
-or c.  Write \(S=\det\widetilde L_{\widetilde a}\).  Repeated use of [4],
-formula (6), and Definition 3.2(b) in each of the four rows gives
+or c.  Write \(S=\det\widetilde L_{\widetilde a}\).  Applying [4], formula
+(6), i.e. the determinant-ratio formula, gives these four separate checks.
 
-\[
- \det L_a={2S\over O_X},\qquad X\in\{\mathrm{10a,10b,10c,10d}\},       \tag{G1}
-\]
+- In 10a (type r), if \(d_3\) is either equal lower determinant at the
+  \((2,2)\) fork, then
+  \(\det L_a=2S/d_3\), exactly as printed.  Here
+  \(\det L_b=2d_1\), and Corollary 1.4 gives
+  \(\gcd(\det L_b,d_3)=1\), so \(d_3\) is odd.
+- In 10b (type t), put \(\ell=\det L_b\), \(d=\det D_b\).
+  The source-minus and target-minus products in formula (6) are
+  \(\ell^2(d/2)\) and \(\ell d\), respectively, whence
+  \(\det L_a=2S/\ell\).  Integrality of the degree-four lower block makes
+  \(d\) even; \(\gcd(\ell,d)=1\) makes \(\ell\) odd.
+- In 10c the extra degree-two fork is a.  At that fork the products are
+  \((L/2)D^2\) and \(LD\), with ratio factor \(n/m=1/2\).
+  Thus its inserted source determinant is \(\ell D\) and
+  \(\det L_a=2S/(\ell D)\).  The degree-two left block makes \(L\) even,
+  so coprimality makes \(D\) odd.
+- In 10d the extra fork is c.  Its products are \(L^2(D/2)\) and \(LD\);
+  the inserted determinant is \(\ell L\), and
+  \(\det L_a=2S/(\ell L)\).  Here \(D\) is even and \(L\) odd.
 
-where \(O_X\) is the product of the lower-branch determinants at the
-intervening \((2,2)\) and, in 10c–d, degree-two fork.  Corollary 1.4 makes
-every factor of \(O_X\) odd.  For 10a this is the printed computation
-\(O_X=d_3\); in 10b the same computation is made on either terminal
-degree-two arm, and in 10c–d the second fork merely appends its odd lower
-factor.  Since (G1) is an integer and \(O_X\) is odd, \(\det L_a\) is even
-in all four rows.
+In 10c–d the first fork is the same type-t fork as in 10b: its lower
+degree-four block makes \(\det D_b\) even, so
+\(\ell=\det L_b\) is odd by coprimality.
+Each displayed denominator is odd and divides the numerator.  Consequently
+\(\det L_a\) is even in all four rows.
 
 The next two sentences of the English text contain two independent slips.
 It calls \(d_7\) the determinant of the “left branch” of \(U_{\widetilde
@@ -391,6 +405,18 @@ additional visible forks in Fig. 11.  Subdivision by one of them therefore
 does not create a new global case.  It is important not to turn the
 \(\widetilde g_1\)-branch in such a suppressed block into an additional
 covering sheet.
+
+Nor may uniqueness of the physical \(g_1\)-place alone be used to forbid
+reuse.  The needed distinct-block check is as follows.  Every a maps to h
+and its marked lower port is degree one; two a's cannot be serial, while
+parallel a-ports reconverge on the same C-state carrier and their two
+\(g_1\)-routes make a cycle.  After Lemma 3.13, c has two full left ports,
+one meeting \(\widetilde g_1\).  A second serial c would require the
+eliminated b splitter, and two parallel full c-ports cannot merge at
+\(\widetilde g_1\) without a cycle.  Finally an a-lower block and a c-left
+block have different target directions and cannot be one edge-type block.
+Thus no repeated a/c word survives; this is the standalone repair that
+makes the quotient convention exhaustive.
 
 Across a target interval, record the partition of all four sheets:
 
@@ -419,6 +445,15 @@ This table is a direct rewrite of Fig. 8, not a new assumption.  For
 example f has local \(21\) on each horizontal side and a complementary
 degree-one sheet, hence state D; g has local degree 3 on the left plus that
 sheet, hence B.
+
+There must be a visible fork.  Indeed, delete the leaf
+\(\widetilde g_1\) at its unique intersection (Proposition 1.3(1));
+\(\widetilde L_\infty+\widetilde g_2\) remains connected.  The degree-two
+carrier through \(\widetilde g_2\) leaves a complementary degree-two lift
+by (3.1).  A lone suppressed a/c block preserves that split after its
+\(g_1\)-port is deleted.  The first vertex joining the two carriers has
+total degree three or four and is one of the visible f–t types.  Hence the
+zero-visible-fork alternative is impossible.
 
 Lemma 1.5 says that the chain incident to \(\widetilde g_2\) has degree
 two (p. 3).  Its last visible fork must consequently have right state D,
@@ -469,11 +504,11 @@ For a predecessor of j, t has left state C and no visible predecessor; l
 has left state B, where n/o would make the degree-four B-to-B cycle; and k
 has left state D, where either a degree-four or degree-three predecessor
 supplies two routes through its degree-two and degree-one lifts.  Finally,
-r lies over h and has its lower route to \(\widetilde g_1\) by Lemma
-3.12(3).  A further k, l, or r predecessor has a second
-\(\widetilde g_1\)-route, which together with the trunk through r is a
-cycle.  A t predecessor would lie left of h, contradicting Lemma 3.12(6).
-Thus none of the five j rows extends.
+r lies over h by Lemma 3.12(3).  A further r or l predecessor would also
+lie over h and cannot be strictly left of it.  Type t is right of h by
+Lemma 3.12(6); type k has its \(g_1\)-port in a left branch and is
+therefore right of h.  Neither can precede r.  Thus none of the five j
+rows extends.
 
 Conversely every row in the table satisfies the state match and contains
 no repeated source path.  Reading off the local types gives, without
@@ -526,11 +561,18 @@ line at infinity.  At its generic point the homogenized target coordinate is
 zero; resolving indeterminacies does not change that generic image.  It
 therefore lies in (F^{-1}(L)=\widetilde L_\infty).
 
+**R-2a, terminal linear chains (Lemma 1.5, p. 3) —
+REPLAYED-SOUND.**  On a linear constant-degree chain ending at a dicritical,
+[4], Proposition 1 identifies the chain degree with the transverse order at
+that terminal flag. Proposition 1.2 gives
+\(n(\widetilde g_1)=1\) and \(n(\widetilde g_2)=2\); these, rather than the
+physical target places, are the two asserted chain degrees.
+
 **R-3, Lemmas 2.3–2.4 (p. 4, (2.1)–(2.2)) — REPLAYED-SOUND.**  Substitution
 in the displayed equations gives
 
 \[
--1=p_1-dp_2,quad
+-1=p_1-dp_2,\quad
 0=-2-p_1+(d-1)(p_2-1)+d\Sigma
 \quad\Longrightarrow\quad p_2=d(\Sigma-1),
 \]
@@ -650,27 +692,26 @@ descent suppressed in part (6), are reconstructed in §2.3.  The p. 12 case-d
 cycle is reconstructed in §2.2.  They are **REPLAYED-SOUND** or **REPAIRED**
 as typed there.
 
-For Lemma 3.13, the p/q assertion that right-going branches “lie entirely to
-the right” follows from equality in the (3.1)–(3.2) degree bound: the labelled
-right exits already total four, so no exit can cross back or spawn another
-positive-degree fork.  The right branch not reaching (\widetilde g_2) then
-has
+The earlier incidence assertions are also closed.  In Lemma 3.7(a) (pp. 9–10)
+the induction follows the unique source-tree path over the ordered target
+vertices \(c_1,\ldots,h\); its displayed determinant calculation gives the
+one incident nonconstant vertex.  Part (b)'s branch containing \(h^0\) is
+that unique path, while the other branch is linear and positive by
+Proposition 1.3 and [4], Lemma 5.  Assertion 3.9 then uses (3.1) and the
+local degree formula [4], (4): the \(m(\widetilde h)\) incident
+\(U^0\)-components each have determinant and local multiplicity one.
+These incidence conclusions are **REPLAYED-SOUND**.  They still do not imply
+Corollary 3.8(b)'s root exclusion, treated separately below.
 
-\[
-\det\widetilde R={\det R_a\over2}={1\over2},
-\]
-
-whether directly or after one collapsed type-a block.  This is impossible;
-**verdict: REPAIRED**.  In the case-c Fig. 9 chase, saturation at both visible
-forks similarly makes each indicated right branch stay on one side.  One is
-not the (\widetilde g_2)-branch and again has determinant (1/2).  Hence
-both c-left branches are full and their unique bad pair contains
-(\widetilde g_1); **verdict: REPAIRED**.
+The two implicit Lemma 3.13 branch routings are replayed in §3.1; both are
+**REPAIRED** there by (3.1)–(3.2) saturation and the determinant-\(1/2\)
+contradiction.
 
 Two actual root-location gaps remain.
 
 **GAP-CANDIDATE[ROOT-U-LAST-CHAIN] (Corollary 3.8(b), p. 10).**  The exact
-claim is (\widetilde v\notin\delta(\widetilde g_1\widetilde h)), followed
+quote is: “If \(\widetilde U\) is incident to \(\widetilde g_1\), then
+\(\widetilde v\notin\delta(\widetilde g_1\widetilde h)\).”  It is followed
 only by a citation to Lemmas 2.3, 2.4, and 3.7(b).  Lemmas 2.3–2.4 require
 both
 
@@ -688,8 +729,8 @@ fact contradicts it.  No last vertex or endpoint equation handles this
 case.  **Verdict: GAP.**
 
 **GAP-CANDIDATE[ROOT-DELTA-G2-APPLICATION] (Lemma 3.15, pp. 14–15).**  The
-printed conclusion is (\widetilde v\notin
-\delta(\widetilde a\widetilde g_2)).  The proof establishes positivity of
+exact first conclusion is: “Then \(\widetilde v\notin
+\delta(\widetilde a\widetilde g_2)\).”  The proof establishes positivity of
 the whole delta graph, linearity of certain components, and
 (\det(\widetilde s\widetilde g_2)=2), then invokes Lemmas 2.5–2.6.  It
 never establishes their hypothesis
@@ -800,4 +841,36 @@ Proposition 4.1 cannot fill a missing Fig. 8 or Fig. 11 enumeration step.
 
 ## 6. First-half disposition and forward boundary
 
-_Pending bounded section write._
+After the recorded repairs, Lemma 3.12 exhausts all 35 raw signatures and
+Lemma 3.14 exhausts the ten Fig. 11 quotient graphs.  No census row is open.
+
+The root ledger does not close.  Corollary 3.8(b) leaves
+**GAP-CANDIDATE[ROOT-U-LAST-CHAIN]**, and Lemma 3.15 leaves
+**GAP-CANDIDATE[ROOT-DELTA-G2-APPLICATION]**.  Neither missing implication is
+supplied by a determinant floor, linearity, or analogy.  Thus this lane
+cannot promote **DOMRINA-II-SOUNDNESS**, although it does promote the two
+census subclaims in their repaired form.
+
+The only charged D–O I inheritance is bound as follows: DO-I-1 and DO-I-2
+use campaign Proposition 4.1 solely for the unique-dicritical
+all-\(\mu=1\) slice.  The broader “number greater than one” entry still
+depends on part I's separate unique-\(\mu=2\) analysis; no campaign halo is
+claimed for it.
+
+Sections 5–7 remain for the sibling lane, including the forward uses of
+Lemma 3.15, Lemma 7.10, and the omitted §7 calculations.  Thus
+
+\[
+\boxed{\text{CENSUSES REPAIRED AND EXHAUSTIVE;\quad
+FIRST-HALF SOUNDNESS HAS TWO NAMED GAPS.}}
+\]
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `39878`.
+- Body SHA-256:
+  `6eb2c7afb4647a419b6ada145de96e92ff7dd09cb67910b83c5dcc220c3dc486`.
+- Frozen basis: `7a35f2d99c72179080a504484cfc1cf790abb642`.
