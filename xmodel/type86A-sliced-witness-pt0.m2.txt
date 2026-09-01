@@ -1,0 +1,8 @@
+load "idp_postcheck.m2";
+load "idp_apply_point.m2";
+Kf = toField(QQ[zz] / ((18474)*zz^0 + (-1)*zz^1 + (1)*zz^2));
+use Kf;
+vals = {(1)*zz^0, 0, (49/24)*zz^0 + (-1/144)*zz^1, 0, (25/8)*zz^0 + (-1/48)*zz^1, 0, (1)*zz^0, (3/4)*zz^0, (1)*zz^0, (-23/32)*zz^0 + (-1/192)*zz^1, (-71/144)*zz^0 + (1/72)*zz^1};
+Nexpected = 3;
+ok = idpApply86(vals, Nexpected);
+if ok then << "POINT PASS idx=0" << endl else << "POINT FAIL idx=0" << endl;
