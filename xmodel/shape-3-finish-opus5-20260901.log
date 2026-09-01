@@ -1,0 +1,25 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/shape-3-finish-opus5-20260901.md` (516 lines, 5,569 words).
+
+## What the lane found
+
+**Input hashes:** all three matched before any mathematical use.
+
+**The charged Route 1 was right about the target and wrong about the instrument.**
+
+SK §4.2 and REV §3.2/§7 both assert "there is no triple cover of `P^2` to apply it to." That conflates *no cover branched only in `D̄`* with *no cover*. Because `ψ(Π)` is a 3-cycle, the `S₃`-resolvent exists as a normal triple cover of `P²` branched at `D̄ ∪ L_∞`, with `S_π = D̄` (inertia `Z/2`) and `T_π = L_∞` (inertia `Z/3`).
+
+**The parity horn as charged is refuted.** The reduced branch `D̄ ∪ L_∞` does have odd degree `4g+1`, but the divisor carrying the Miranda class is the *weighted* one, `D̄ + 2L_∞`, of even degree `4g+2`. No contradiction arises there.
+
+**The working instrument, Theorem TB (new):** for a normal triple cover with a smooth rational curve `T₀ ⊆ T_π` meeting the rest of `Δ_π` at one point, `3 | k₀ + m`, where `k₀ = −deg(det T_π|_{T₀})` and `m = ord_P(Φ|_{T₀})`. It reproduces `3 | deg` for cyclic triple covers and is consistent with the nonempty `(deg S, deg T) = (4,1)` case in the literature.
+
+Applied to family 3: `m ≡ g+2 (mod 3)`, `0 ≤ m ≤ 2g`. **If `m = 0` then `g ≡ 1 (mod 3)`** — deleting `(8,6)`, `(12,9)`, `(20,15)`, `(24,18)`, …  At `g = 2` I prove `m ≤ 3` impossible, so `(8,6)` is pinned to `m = 4` exactly.
+
+**Verdict:** not a uniform kill. Typed OPEN at a named *local* input — `OPEN[S3-RESOLVENT-GORENSTEIN-AT-P-INF]`, one integer at one point — rather than at a classification input.
+
+**Route 2 is vacuous:** at `(4,3)` every clause of Theorem A(3)'s first fork holds identically, so the fork is entered, never exited. The traffic runs the other way: TB sharpens A(3) fork 1 from "`d` even" to "`d ≡ 4 (mod 6)`".
+
+Two corrections worth flagging to the coordinator: REV's rejection of Coord:49–50 is itself wrong (splitting *does* bear on this stratum), and SK's `6 | d` phrasing of TRIPLE-COVER-TSCHIRNHAUS-SPLIT must read `6 | d+2` on total-branch strata.
+
+The two steps I'd most want a reviewer to attack are named at the end of §7: the trace-kernel identification `n = T_π|_{T₀}`, and the no-cancellation claim in (2.8) that Prop. TB-2 rests on. I did not find a kill at `g ≥ 3`, and §2.4 states exactly why the `g = 2` argument does not generalize rather than leaving it implicit.
+DIVERT path=xmodel/shape-3-finish-opus5-20260901.md status=CLEAN body_bytes=32189 body_sha256=963be6af1b87115508e0db5dda3f8212fb3116c9c1c1cc20701267b0be2829ec
