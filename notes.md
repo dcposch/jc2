@@ -16859,3 +16859,25 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   in plain sight and I missed them.
 - Audit r2 relaunched with the corrected hash (Sol, 5h). Six suite
   verdicts remain GATED-ON-AUDIT.
+
+## LIVE STATE (observed 2026-09-01T21:22Z) — TWO OF THREE PAYWALLED PAPERS VERIFIED AND PINNED
+
+- DC delivered three files; coordinator page-level verification:
+  1. `refs/orevkov1990_sb65_fundamental_group_complement.pdf`
+     (`7c3ba931...`) — VERIFIED: "The fundamental group of the
+     complement of a plane algebraic curve", Math. USSR Sb. 65
+     (1990) 267, IOP scan. CLOSES OPEN[OREVKOV-1990-CUSTODY]: the
+     negativity theorem is now hash-pinned; successor lanes may
+     consume it after quoting the exact statement.
+  2. `refs/moh1983_jram340_configurations_of_roots.pdf`
+     (`6c8847a8...`) — VERIFIED: T.T. Moh, "On the Jacobian
+     conjecture and the configurations of roots", JRAM 340 (1983),
+     de Gruyter scan. Unblocks the {6,8,3} non-realization lead for
+     type (8,6,3) (p. 602-cited claim in FSY) — a lane can now
+     desk-check Moh's argument directly.
+  3. Domrina II file: REJECTED — the PDF bytes are a mislabeled
+     condensed-matter paper (Ni3Al(111), JPCM 20 (2008)); wrong
+     content behind correct-looking metadata. NOT moved; DC asked
+     to re-obtain.
+- Both accepted PDFs are hash-custody only (refs/ untracked per
+  policy); hashes recorded here and in the acquisition ledger.
