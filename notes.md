@@ -16720,3 +16720,30 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   distinct tangents, no gcd-cover; NON-REALIZABLE iff every
   component fails; else UNDECIDED. Runs alongside the C/D 12h
   msolve jobs. Watcher live.
+
+## LIVE STATE (observed 2026-09-01T20:21Z) — CAGE-N LANDS; CHARP VALIDATED; CELL-32 PARTIAL KILL
+
+- REDUCIBLE-ALL-N (Opus, `7c63614e`, PROVISIONAL): THEOREM CAGE-N —
+  the general-degree reducible cage at its true scope; NO-DEG-CAP
+  (no numeric gate yields a uniform finite survivor list; refutes
+  N5's DQ-3 hope); per-class OPEN[PI1-S_N-CAGE(class)] questions;
+  N=4/N=5 cages recovered as instances. Paired review launched
+  20:19Z (Sol gate + Grok verification).
+- CELL-32-SPEC (Sol, `86caf003`, BODY_SEALED_AFTER_DIVERT — the
+  truncation-not-loss machinery banked a 390-byte tail; content
+  intact): desk partial kill EMPTY[F=G=0] (the full F=G=0 section
+  of cell (3,2) is empty) + a termination-by-degree argument for
+  the auxiliary system + the decision spec on the review-corrected
+  7-equation system.
+- CHARP-PREFILTER (Grok, `47202f4a`): bundle extracted 9/9 verified
+  (coordinator note: first extraction pass missed 7 files on a
+  too-narrow fence regex and the driver was briefly launched
+  incomplete — stopped, re-extracted, relaunched); controls PASS
+  (unit ideal EMPTY, linear NONEMPTY); type86_A mod-p reproduces
+  the proper 138-element basis — pipeline validated; C/D mod-p
+  computing alongside the char-0 12h runs and the realization
+  postcheck.
+- DC notified of the software effort (jc2kit) going to background;
+  asked what else would accelerate — answered in-channel (Opus
+  headroom; three paywalled PDFs: Orevkov Sb.65(1990), Domrina
+  Izv.64(2000), Moh JRAM 340; keystone-formalization suggestion).
