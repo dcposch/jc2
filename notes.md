@@ -16705,3 +16705,18 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   (msolve solve-mode / M2 slice) + the REPAIRED idp postcheck
   (incorporating every M2-dialect lesson: no reserved names, no
   tower asserts, source-ring variable capture, diff order).
+
+## LIVE STATE (observed 2026-09-01T14:52Z) — REALIZATION PIPELINE LIVE ON THE TWO NONEMPTY TYPES
+
+- Point-postcheck bundle (Grok, banked): 10/10 manifest hashes
+  verified locally AND on Box03; the rewritten idp postcheck passes
+  its FULL self-test (witness: length-3 reduced, distinct tangents,
+  PASS; (t^8,t^6): dim=1, not immersive, FAIL as designed) after
+  one coordinator repair (named-map-before-application idiom —
+  dialect lesson #8 for the catalogue). Driver launched 14:52Z on
+  Box03: closed-point extraction (RUR/rational-slice) + postcheck
+  on (8,6,11) and (8,6,9). Verdict semantics: REALIZED iff some
+  point yields reduced I_DP of length delta_aff, immersive,
+  distinct tangents, no gcd-cover; NON-REALIZABLE iff every
+  component fails; else UNDECIDED. Runs alongside the C/D 12h
+  msolve jobs. Watcher live.
