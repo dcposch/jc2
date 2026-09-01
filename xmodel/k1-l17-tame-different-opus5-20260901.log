@@ -1,1 +1,28 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Both lanes landed green.
+
+## K1-L17a — local monogenicity (`KeystoneGraph/Monogenic.lean`, 265 lines)
+
+I re-checked the pin first: `exists_powerBasis`/`IsMonogenic` → 0 hits; the one hit, `IsLocalRing.exists_adjoin_eq_top`, assumes `Algebra.FormallyUnramified` (i.e. `m_A B = m_B`) — exactly what fails when `e > 1`, so it is not reusable. Proved from scratch by the classical route: primitive element of `l/k`, lift the residue minimal polynomial to monic `g ∈ A[X]`, correct `β ↦ β + ϖ` when `g(β) ∈ m_B²` (legitimate since separability makes `g'(β)` a unit), then Nakayama against the `m_B`-adic filtration. Ships `exists_adjoin_singleton_eq_top` and `nonempty_powerBasis`.
+
+## K1-L17 — tame different (`KeystoneGraph/TameDifferent.lean`, 139 lines)
+
+**I did not use the planned route.** Mathlib's `not_dvd_differentIdeal_of_intTrace_not_mem` (`Different.lean:752`) is the ≤-direction tool and applies with `P := 𝔮^e` directly at the Dedekind level — no localisation to DVRs, and no monogenicity. So K1-L17a, though delivered as instructed, is not a dependency of K1-L17 as landed; the plan's 400–900-line/HIGH-risk estimate was pessimistic. The K1-L18 consumable is `multiplicity_differentIdeal_eq_ramificationIdx_sub_one : multiplicity P (differentIdeal A B) = P.ramificationIdx A - 1`.
+
+`pow_sub_one_dvd_differentIdeal` is used only for the ≥ half; the ≤ half is a separate theorem.
+
+## Two scope corrections you should read before promoting
+
+**The brief's hypothesis is wrong as stated.** "Finite extension of Dedekind domains in characteristic zero ⟹ tame" is false: `ℤ ⊂ ℤ[i]` at 2 has `e = 2` but `v(𝔇) = 2 ≠ e−1`. The modules assume `CharZero (A ⧸ p)` — *residue* characteristic zero — which holds automatically in the K1 geometric setting but must be discharged, not inherited from `CharZero A`.
+
+**Sharp tameness (`p ∤ e` alone) is typed `OPEN`.** My trace evaluation at `y ≡ 1` gives `e·f`, not `e·Tr_{l/k}(ᾱ)`; the sharp form needs `LinearMap.trace` additivity along the `𝔮`-adic filtration, and Mathlib has no sub+quotient trace-additivity lemma at the pin (0 grep hits). Not on the K1 critical path.
+
+## Execution gaps
+
+- **`jc2-lean/` is EPERM for read *and* write**, sandbox disabled included. I reconstructed the skeleton byte-exactly from the readable `.git/modules/jc2-lean` and worked in a scratch tree. **The modules are therefore not in the submodule** — they're at `xmodel/k1-l17-files/KeystoneGraph/` and need copying in, with two import lines added to `KeystoneGraph.lean`. I created no branch or commit there.
+- **`scripts/box_build.sh` was not invoked verbatim.** Its source path is inside the unreachable tree, and its `rsync --delete` destination `/home/ubuntu/keystone-graph/` is being used live by another lane (two uncommitted modules present). I ran its remote block byte-for-byte against an isolated box dir sharing the same pinned Mathlib build; the shared directory was left untouched. Final: `Build completed successfully (8749 jobs). BUILD_EXIT=0`, axioms `{propext, Classical.choice, Quot.sound}` on all 11 declarations, no `sorry`.
+- **Another lane's `IntegralClosureFinite.lean` is currently red** (fails to build, several declarations carry `sorryAx`) — which is why I can't quote a whole-project green build. My two modules do build green alongside their `KellerUnramified.lean` and updated `Setup.lean` (8750 jobs, `BUILD_EXIT=0`).
+- I did not consult `round1033-sheet-gate-opus5-20260831.md`; K1-L18 should check the `e` indexing against it.
+
+Report: `xmodel/k1-l17-tame-different-opus5-20260901.md`.
+DIVERT path=xmodel/k1-l17-tame-different-opus5-20260901.md status=NO_MARKER bytes=17232

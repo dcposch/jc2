@@ -1,1 +1,22 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at `xmodel/cell-32-termination-opus5-20260901.md` (5,460 words, one file, no charged input or ledger touched, no CAS).
+
+**Hashes verified** — all three charged inputs match.
+
+## Outcome
+
+The spiral does not close globally, but three of the live cell's four sections do. Typed verdict: `OPEN[A2-CELL-32]`, so `OBSTRUCTION[A-DEGREE-TWO]` is **not** completed and the horn's programme does not advance a layer on this report.
+
+**Structural results (whole live section, `G ≠ 0`):**
+
+- **T1** — `O2` has a *unique* solution, not a degree table: `C1 = (3a/2b)[(Zη)'s + sG/(2bη)]`, which forces the new divisibility `η | sG`. This strengthens the spec's `G=0` display (`spec:205-209`) and supersedes its four-family `O2` count (`spec:166-186`); the live model has five free polynomials plus `G` against six equations.
+- **T2** — `E3` collapses to `Z²·Ξ = (3a/b)(Zη²G²)'/η` with `Ξ` explicit. This yields three independent laws: a degree law with a *pinned* leader, an order law (`ε+2ν ≥ 2`) via a degree/order duality, and a divisor law at every nonzero root of `ηG`.
+
+**Closures (all unconditional degree termination):**
+
+- **T3** — `s = 0` is empty. Chambers `g ≷ 2e` die on `E1eq`; `g = 2e` survives only on one wall, killed for `e ≥ 2` by `72e³+48e²+6e+1 = 0` and for `e = 1` by an explicit four-step expansion ending in `q₀ = 0`.
+- **T4** — `deg η = 0` is empty. This is the template result: three top-degree relations (from `E3`, `E1eq`, and `E2eq − 6Z·E1eq`) pin the *same* three leaders, and the homogeneous 3×3 system has determinant `2(g+Mx) ≠ 0`.
+- **T5** — `r' = 0` is empty except one wall window, via a Wronskian form `qq'' − 2q'²` whose degree `2m−2` dwarfs the rest of `E1eq`.
+
+**Residual, spec'd finitely:** `e ≥ 1`, `s ≠ 0`, `r' ≠ 0`, `η | sG`, with one explicit leader balance per chamber (two in Chamber III), plus the `r'=0` wall window. Section 6 hands the successor the verified general-`e` split of `E2eq` and states the exact next computation: build the general-`e` analogue of the 3×3 determinant that killed `e = 0`.
+DIVERT path=xmodel/cell-32-termination-opus5-20260901.md status=CLEAN body_bytes=29924 body_sha256=d1b5dc55f850c7b4215ba16a7143a52b96185574ed3c721c44da47b5e427b94b

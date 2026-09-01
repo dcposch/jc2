@@ -1,0 +1,11 @@
+cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
+I'll start by hashing the frozen inputs, then read the charged reports and Moh's PDF to pin the {6,8,3} statement.Hashes match. Next I’ll read the charged reports and search Moh’s PDF for the {6,8,3} statement.Hashes check out. I’ll pull the charged-report convention and extract Moh’s PDF text next.I’ll extract Moh’s PDF and locate FSY’s convention pages so the {6,8,3} statement can be pinned.I’ll extract Moh’s text and fetch FSY so the coordinate convention can be checked against the source.FSY’s Moh citation is a one-liner; I’ll read that page and hunt Moh’s tables for the actual {6,8,3} statement.The FSY line is thin; I’ll scan Moh page-by-page and check the literature for the {6,8,3} claim.Moh’s paper has no {6,8,3} statement. I’ll write the report skeleton next, then fill and seal it.Word count is under the limit. I’ll add the body-end marker and stamp the seal.Type `(8,6,3)` stays **OPEN** as a polynomial curve. Moh JRAM 340 does not kill it.
+
+The pinned PDF is a paper on Jacobian pairs and root configurations (JC through degree 100 in Appendix II). It has no theorem, example, or displayed calculation about a polynomial curve with `δ`-sequence `{6,8,3}`. Fujimoto–Suzuki–Yokoyama’s one-line citation traces to Sathaye–Stenerson, who say Moh did the calculation by hand, **did not display it**, and that their own recheck is still unpublished and messy.
+
+The coordinate translation **does** hold: FSY `{6,8,3}` (`δ_0=6<δ_1=8`, `deg_t x=6`, `deg_t y=8`, extra generator 3) is our `(8,6,3)` after the swap `(x,y)=(q,p)`. Abhyankar–Moh reduces this to a finite system (`I_29` / FSY Lemma 1: `deg_t g_2=3`). Emptiness of that system is the missing step; it is not in the PDF and is not desk-scale. A Davenport bound `deg(p^3-q^4)≥11` does not kill the first *odd* remainder `c=3`.
+
+At representation level the type still **passes** the divisibility gate (`E=-15`, `3 | E`). The live curve-level job remains the charged `I_29` / FSY `g_2` computation.
+
+Report: `xmodel/moh-check-863-grok46-20260901.md` (sealed; no `charge_basis`).
+DIVERT path=xmodel/moh-check-863-grok46-20260901.md status=CLEAN_SEALED body_bytes=20144 body_sha256=1919fc0f81a085ed28627ce17930f199f0c2443748ea3a92d9cbd0d137e8e85f

@@ -1,6 +1,6 @@
 # Encoding-faithfulness audit: six characteristic ideals
 
-**Status:** OPEN — audit in progress; no realization verdict is promoted by this draft.
+**Status:** SEALED — encoding audit closed; five nodal types OPEN and `(9,6,2)` REALIZED.
 
 ## 0. Scope, frozen inputs, and hash gate
 
@@ -20,7 +20,8 @@ All four match the charge.  Line references below are to those frozen bytes
 
 ## 1. Executive verdict
 
-**All six generated characteristic ideals are UNFAITHFUL.**  The `(8,6)`
+**All six generated characteristic ideals are UNFAITHFUL as advertised
+exact/exhaustive encodings.**  The `(8,6)`
 jobs use odd coefficients of the raw binomial `p^3-q^4` before reducing its
 even pole-order terms.  The `(9,6)` jobs instead force the raw binomial
 `p^2-q^3` to have the target degree, thereby setting four legitimate
@@ -116,13 +117,27 @@ hat_k_j = [r^(18-j)] P(z(r))^2/Q(z(r))^3.
 
 Then a nonzero `hat_h_j` contributes exponent `32-j` to `y`, and a
 nonzero `hat_k_j` contributes exponent `27-j`.  Vanishing the earlier
-non-`a`-divisible terms pins the local `beta_1`.  Under properness this and
-the reduced-approximate-root condition are equivalent descriptions of the
-same datum, via `beta_1=32-c` or `27-c`.  For a polynomial incidence/rerun,
-the coordinate-free way to impose it is therefore to reduce the second
-approximate root to degree `c`.  Write `bar_h_j,bar_k_j` for its coefficients
-after the triangular semigroup reduction specified in 7.1.  The exact
-dictionary is:
+non-`a`-divisible terms pins the local `beta_1`.  Exact reduced-root degree
+`c` implies that local condition, via `beta_1=32-c` or `27-c`, but the
+converse can fail even under properness: a higher global gap with unchanged
+gcd is locally removable.  The relevant same-gcd obstructions here are
+degree 10 for 86B/C/D, additionally degree 4 for 86D, and degree 3 for 96B.
+Thus an exact three-entry global `Delta` must be imposed by reducing the
+polynomial second approximate root to degree `c`, not by the local exponent
+alone.  For reference, the **local** normalized-series dictionary is
+
+```text
+86A: hat_h_{21,19,17,15,13}=0,             hat_h_11 != 0;
+86B: preceding plus hat_h_11=0,             hat_h_9  != 0;
+86C: preceding plus hat_h_9=0,              hat_h_7  != 0;
+86D: preceding plus hat_h_{7,5}=0,          hat_h_3  != 0;
+96A: hat_k_{16,14,13,11,10,8,7,5}=0,       hat_k_4  != 0;
+96B: preceding plus hat_k_4=0,              hat_k_2  != 0.
+```
+
+These hats are not the raw `h_j,k_j`.  Write `bar_h_j,bar_k_j` for the
+coefficients after the triangular global semigroup reduction specified in
+7.1.  The exact global dictionary is:
 
 | target `Delta` | `beta_1` | corrected reduced-root vanishings | exact open |
 |---|---:|---|---|
@@ -134,10 +149,11 @@ dictionary is:
 | `(9,6,2)` | 25 | preceding set plus `j={4,3}` | `bar_k_2 != 0` |
 
 The chart identities at levels 23 and 17 remain automatic.  Degrees 10
-and 4 in the `(8,6)` table are genuine gaps of `<8,6>`, not removable
-even levels.  Conversely, the raw `(9,6)` jobs unnecessarily zero the
-semigroup levels 15, 12, 9 and 6 instead of solving for their reduction
-coefficients.
+and 4 in the `(8,6)` table and degree 3 in the 96B row are genuine global
+gaps, even though the corresponding local exponents 22, 28 and 24 are
+divisible by `a` and analytically removable.  Conversely, the raw `(9,6)`
+jobs unnecessarily zero the semigroup levels 15, 12, 9 and 6 instead of
+solving for their reduction coefficients.
 
 The AG--S/Abhyankar--Moh interpretation is the same statement globally:
 `c` is the parameter degree of the **reduced second approximate root**,
@@ -209,10 +225,39 @@ Then direct substitution gives `h_21=...=h_9=0` and
 `h_7=15*B^3*C^2 != 0`, so this is an old-C characteristic point.  But
 `h_20=3C`; after the compulsory cancellation `G86=H-3C*p*q^2+...`, its
 degree-17 coefficient is `-3C(B+2gamma)=-10C*gamma != 0`.  Thus even C's
-later raw vanishings do not repair the high-level reduction error.  For D,
-the independently necessary gap residuals at 10 and 4 are absent by
-construction; its advertised exact encoding is rejected before any search
-result is interpreted.
+later raw vanishings do not repair the high-level reduction error.
+
+There is an equally explicit D counterpoint.  Over `K=QQ(s)`, `s^2=201`, set
+
+```text
+gamma=1, B=4/3, E=(s-5)/27, f=(2s-21)/81,
+C=D=F=G=b=d=e=0.
+```
+
+With `u=t^3`, one has `p=t^2*(u^2+B*u+E)` and `q=u^2+u+f`, so `H` has only
+degrees divisible by 3.  The only closed D equations not automatic by
+support are
+
+```text
+h_21=3B-4=0,
+h_15=B^3-4+6BE-12f=0,
+h_9=4E^2-12f^2-4f=0;
+```
+
+the last two follow from `2E-3f=11/27` and
+`E^2-3f^2-f=0`.  Meanwhile `h_3=-4f^3 != 0`, so the old D open holds.
+But `h_22=h_20=0` while
+`h_18=3(E+B^2)-(6+4f)=(s-15)/81 != 0`.  Correct reduction therefore sets
+`a18=-h_18`; since `[t^15]q^3=3` and no other remaining auxiliary term has
+degree 15, `g_15=-3h_18 != 0`.  Thus D too has a witnessed false positive,
+independently of its omitted necessary gap residuals at 10 and 4.
+
+The C/D counterpoints certify non-equivalence of the **characteristic base
+ideals**.  They are not asserted to survive the separate affine-immersion
+open (the displayed D point does not).  A downstream open may discard a
+particular false positive, but it cannot turn the wrong base equations into
+an exhaustive characteristic encoding or make an EMPTY result kill the
+corrected target.
 
 For the two `(9,6)` jobs the defect has the opposite polarity.  Setting every
 raw coefficient above `c` to zero forces the *pure binomial slice*
@@ -339,8 +384,8 @@ their computations finish.  The exact replacements are specified in 7.1.
 |---|---|
 | `type86_A` | **UNFAITHFUL, witnessed false positive.** The charged point passes every raw generator/open but has `Delta=(8,6,19)`. |
 | `type86_B` | **UNFAITHFUL.** Its raw equations make the same unreduced substitution; the charged sliced points' `delta_inf=6` are consistent with the same actual `c=19`, not target `c=9`. |
-| `type86_C` | **UNFAITHFUL before computation.** The exact counterpoint in Section 4 passes old C but has a nonzero corrected degree-17 residual; replace the raw equations and add degree 10. |
-| `type86_D` | **UNFAITHFUL as an exact encoding.** Its raw list omits the independent reduced gap residuals at degrees 10 and 4; replace it before interpreting any output. |
+| `type86_C` | **UNFAITHFUL before computation.** The exact characteristic-base counterpoint in Section 4 passes old C but has a nonzero corrected degree-17 residual; replace the raw equations and add degree 10. |
+| `type86_D` | **UNFAITHFUL before computation.** The Section 4 characteristic-base point passes old D but has corrected `g_15!=0`; the raw list also omits gap residuals at 10 and 4. |
 | `type96_A` | **UNFAITHFUL strict slice.** EMPTY kills only the slice `a15=a12=a9=a6=0`, not the full type. |
 | `type96_B` | **UNFAITHFUL strict slice.** The same; in fact an exact four-node realization exists below. |
 
@@ -511,11 +556,14 @@ published descriptions are the approximate-root/semigroup criterion in
 [Assi--García-Sánchez](https://arxiv.org/abs/1407.0490) and the statement that
 the second approximate-root value is the third delta entry in
 [Fujimoto--Suzuki--Yokoyama](https://staff.fukuoka-edu.ac.jp/fujimoto/abh2/files/abh2.pdf).
-The frozen NODAL-REALIZATION report itself records this exact job at line 195
-and the beta/cluster/genus conversions at lines 19--59.
+The frozen NODAL-REALIZATION report records the FSY approximate-root degree
+criterion at line 195 (but not its erroneous raw-ideal equivalence) and the
+beta/cluster/genus conversions at lines 19--59.
 
 **Final status: CLOSED AS AN ENCODING AUDIT.**  All six advertised
 exact/exhaustive encodings are rejected and replaced by the incidence
 specifications in Section 7; the forward implications from the two strict
 `(9,6)` slices remain sound.  Realization status is five OPEN and one
 REALIZED, as typed in 7.2.
+
+<!-- BODY-END -->

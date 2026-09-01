@@ -16938,3 +16938,93 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   each under a dedicated kill lane, plus the gated suite verdicts.
 - Seven lanes running (3 Opus, 2 Sol, 1 Grok +1 Grok, 1 5.5);
   consolidated watcher.
+
+## LIVE STATE (observed 2026-09-01T22:08Z) — SUITE VACATED; (9,6,2) REALIZED; N=4 LITERATURE-CLOSED AT RECEPTION
+
+Five of seven wave lanes landed and banked; two still running (tb-g2-finish
+Opus, domrina-1999-audit Sol — the audit .md is being written per the
+seal-at-completion contract; its verdict sections were read but it is NOT
+banked until sealed).
+
+**ENCODING-FAITHFULNESS AUDIT r2** (`encoding-faithfulness-audit-r2-sol56-20260901.md`,
+a3c7137c, BODY_SEALED): ALL SIX suite characteristic ideals UNFAITHFUL.
+Root cause: (8,6) jobs used odd coefficients of the RAW binomial p^3-q^4
+without reducing even pole-order terms; (9,6) jobs forced raw p^2-q^3 to
+target degree, zeroing legitimate approximate-root coefficients (strict
+slice). ALL SIX SUITE VERDICTS VACATED, including both (9,6) EMPTY kills.
+The 15-node anomaly is resolved: the charged type-A witness is a genuine
+ONE-place curve of Delta=(8,6,19) (Puiseux pair (2,13), 15+6=21) — a false
+positive of the unfaithful ideal, NOT two places (coordinator's two-place
+hypothesis was wrong). The audit EXHIBITS: (a) Delta=(9,6,2) REALIZED by
+q=t^6+8t^2, p=t^9+12t^5+24t with p^2-q^3-64q=64t^2; COORDINATOR
+DESK-VERIFIED (sympy): identity exact, gcd(p',q')=1, exactly 4 affine
+nodes at 4 distinct image points (8 ordered parameter pairs), and the
+identity itself exhibits the pole-order-2 generator, so one place at
+infinity with delta-sequence (9,6,2) — REALIZED, census delta_aff=4
+matched. (b) corrected (9,6,4) locus NONEMPTY — its point IS the HF-twin
+curve (hf-twin-964-grok46-20260831.md:109-133); the six-node question for
+(9,6,4) remains OPEN. Corrected per-type equations specified in the audit.
+
+**MOH-CHECK** (`moh-check-863-grok46-20260901.md`, c4ee11ca, BODY_SEALED):
+NO curve-level kill of (8,6,3). The {6,8,3} case is NOT in the pinned Moh
+1983 PDF; the FSY p.602 sentence was a lead, not a theorem. Positive
+content: FSY {6,8,3} <-> our (8,6,3) translation locked (same curve,
+opposite affine coordinates; beta_1=29, delta_inf=14, delta_aff=7);
+Davenport-type bound does NOT kill (raw-remainder trap flagged and
+avoided); the remaining curve-level path is exactly FSY's I_29 Groebner
+job with CORRECTED encoding (nine coefficients, ten odd vanishings,
+h_23 spent).
+
+**CAGE-N-R2 CONFIRMATION** (`reducible-all-n-r2-confirmation-gpt55-20260901.md`,
+06ca9b85, BODY_SEALED_AFTER_DIVERT): CONFIRMED — no promotion-blocking
+defect at confirmation scope; overclaim withdrawals verified (ORBIT-DEG
+restated, cap-sign/genus/numeric-exhausted withdrawn). CAGE-N-R2
+paired review COMPLETE -> promotable at next integration.
+
+**CELL-32-TERMINATION** (`cell-32-termination-opus5-20260901.md`, d1b5dc55,
+BODY_SEALED): two sections of the live cell closed by unconditional
+degree-termination on the review-corrected 7/7 system; NO global
+termination; OPEN[A2-CELL-32] remains (typed verdict), plus
+OPEN[ETA-S-DEGREE-TERMINATION,G!=0] narrowed.
+
+**DOMRINA-FULLTEXT-HUNT** (`domrina-fulltext-hunt-grok46-20260901.md`,
+9c5d0b51, BODY_SEALED): official mathnet English custody obtained
+(Crossref primary resource URL = mathnet.ru/eng/im273; Steklov is
+publisher of record). IOP direct PDF blocked by Radware bot manager;
+Turpion dead. ASK DC: if institutional access exists, pull
+DOI 10.1070/IM2000v064n01ABEH000273 (Izv. Math. 64:1 pp.1-33) from
+IOPscience directly.
+
+**DOMRINA-1999-AUDIT** (partial read, NOT banked, lane still writing):
+calibrated verdict so far: N=4-LITERATURE=CLOSED at the RECEPTION level
+(Domrina's N=4 theorem treated as proved, cited without doubt);
+DOMRINA-II-SOUNDNESS=OPEN under campaign hostile standard (audit found
+no gap; adjacent Zoladek gap explicitly NOT transferable). Campaign chain
+is NOT yet a complete independent N=4 proof.
+
+**CANDIDATE BOARD AFTER WAVE** (N=4, S_4, irreducible A_F):
+- (8,6,11), (8,6,7): DEAD (rep-level, ideal-independent; 7247cef3).
+- (8,6,9): live; TB-G2-FINISH running; corrected P2 job queued.
+- (8,6,3): live; only curve-level path = corrected I_29 job (P1);
+  TB-G2 backstop at rep level.
+- (9,6,2): REALIZED AS A CURVE (cannot die at curve level). Rep-level
+  question = family 2 (odd u=3, nbar=2) at g=3 = OPEN[SHAPE-2-INNER-g>=3].
+- (9,6,4): corrected locus nonempty; six-node question open (P3 job).
+
+**NEW LANES**: `rep-96-inner-opus5-20260901` (Opus flagship, 22:05:51Z,
+child 6672) — derive the family-2 g=3 gate honestly, apply to both (9,6)
+types, and if (9,6,2) survives: exhaustive check against every promoted
+kill + precise statement of the residual gap to a Keller map. This is the
+new keystone. `corrected-suite-codegen-grok46-20260901` (Grok, 22:08Z,
+child 7464) — transcribe audit r2 corrected equations to msolve/M2 job
+files P1-P4 with mandatory self-checks (false-positive point must FAIL
+corrected (8,6,11); (9,6,2) exhibit and HF-twin point must PASS their
+corrected loci). NOTE: a queued duplicate grok launch sits behind the
+opus lane in task b9817lqub's shell; the duplicate-tag guard will refuse
+it with exit 3 — expected, not an error.
+
+**STRATEGY NOTE**: with N=4 literature-closed at reception but
+soundness-open, the campaign's N=4 work is now explicitly labeled
+"independent verification chain"; theorem-closing weight shifts toward
+(a) the (9,6) representation question (could yield either the last N=4
+kill or a counterexample substrate), (b) all-degree fronts, (c) N>=5.
