@@ -16520,3 +16520,41 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   same flaw, we bank the refutation and continue. If they disagree,
   a third adjudication round fires. DC will be notified at the
   audit verdicts regardless.
+
+## LIVE STATE (observed 2026-09-01T05:07Z) — SCHENK CLAIM REFUTED BY BOTH INDEPENDENT AUDITS
+
+- COORDINATOR ADJUDICATION of the Schenk scoop-claim (Zenodo
+  18622130): **FATALLY-FLAWED, dual-independently.** Audit A (Opus,
+  `3d0f040d`) and Audit B (Sol, `3b0a1c63`), run with no
+  cross-visibility, CONVERGE on the same fatal core: Theorem 5.3
+  ("U-HIT") selects a point from a provably empty set (a closed
+  curve need not meet dense opens; audit A proves C ∩ S°° = ∅
+  ALWAYS, and greps show Thm 5.3 is cited nowhere in chapters 6-12
+  where it is needed); the §10.4 closing contradiction rests on the
+  source/target chart non-sequitur ("D dominates a curve hence
+  meets U"). Audit B adds independent kills: the Rees family is not
+  well-defined (R[ts] does not contain s; no asserted k[s]-algebra
+  structure); the dicritical parameter is erased (the special
+  algebra collapses to dimension zero over kappa(D)); and — matching
+  the campaign's own promoted Lemma 4.2 — a ZERO of the Keller
+  two-form at a tame boundary ramification divisor is the expected
+  different exponent, not a contradiction. Both audits agree the
+  unproved U-HIT is where the unresolved heart of JC2 hides; no
+  repair from promoted machinery exists (it would BE a JC2 proof).
+  No third-round adjudication needed: full convergence with
+  mutually consistent extra findings.
+- Provenance (Grok, `122e846a`): no ORCID, no affiliation, no arXiv
+  record, freemail contact; citationCount 0 everywhere (DataCite/
+  OpenAlex/Semantic Scholar); v1 only, no professional engagement
+  in 6.5 months. Consistent with (not proof of) the audit outcome.
+- DISPOSITION: the scoop-claim is REFUTED and banked. JC2 remains
+  open; the campaign continues. The audits' reconstruction of the
+  Schenk skeleton is itself useful: his §2-4 normalized-graph/
+  Stein-factorization setup parallels our promoted Y-construction,
+  and the FALSE U-HIT step is a sharpened restatement of exactly
+  our OPEN frontier (control of horizontal boundary divisors — the
+  reducible-A_F / PI1-class questions). Nothing to import; the
+  campaign's framework independently reached the same wall with
+  honest typing.
+- Running: Box03 suite r6 (types). Next: suite harvest → the
+  deferred significant-news round + full DC report.
