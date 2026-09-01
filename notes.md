@@ -16840,3 +16840,22 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   once faithful ideals exist, verdicts are hours away.
 - Running: encoding audit (Sol), Opus x3 (CAGE-N-R2, ROW-86-PREBUILD,
   CELL-32-TERMINATION), Box03 C/D char-0 msolve.
+
+## LIVE STATE (observed 2026-09-01T21:15Z) — COORDINATOR HASH-TRANSCRIPTION ERROR FOUND AND FIXED
+
+- The encoding-audit r1 failed CLOSED on a hash mismatch — and the
+  mismatch was MINE: in the wave-15 banking I paired msolve-prep's
+  path with braid-prep's hash (64e451b4 instead of c54d53f0) and
+  propagated it into three prompts. Sol's audit lane refused
+  correctly. The two earlier lanes charged with the bad hash both
+  handled it with model-side discipline BETTER than my harvest:
+  charp §0 reported the actual hash; the ppb lane §0 explicitly
+  DIAGNOSED the transcription error (identifying the boxed digest
+  as braid-prep's body hash) and proceeded on path identity +
+  launcher digest — the frozen bytes were the intended file
+  throughout, so no content contamination. COORDINATOR HARVEST
+  LESSON (recurrence class now named): always read the report's §0
+  custody section at harvest, not just manifests — both flags were
+  in plain sight and I missed them.
+- Audit r2 relaunched with the corrected hash (Sol, 5h). Six suite
+  verdicts remain GATED-ON-AUDIT.
