@@ -16326,3 +16326,26 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   the N=5 PI1-S4-shaped survivor; note S_5 has no S_4->S_3-style
   resolvent, so the lane must find the right replacement tool).
 - Integration #5 drafts after the closure review lands.
+
+## LIVE STATE (observed 2026-09-01T01:46Z) — INTEGRATION #5 SEALED: THE S4 ROW-KILL THEOREM
+
+- Fifth binding integration `46e08515` (basis 6779309a) PROMOTES the
+  centerpiece: **no meridian-transposition S_4 surjection on ANY
+  member of the explicit (6,4) sextic family or the explicit (8,4)
+  octic family, all moduli c != 0, no stratum gap** — with the
+  corrected stratum table (j=0 is D_4+A_14; j=-27/4 is 3A_1;
+  j=-81/16 is A_3+A_1), Shirane Cor 0.6 (hashed), the (4,0)
+  adjudication, and the (8,4) Aut-transport. Dependencies retained:
+  Shirane as published; ROW-NF-family = campaign-row identification
+  (PROVISIONAL — exhaustiveness lemma not yet separately promoted).
+- Consequences bound: all (6,4)/(8,4) tuple/cover/fold OPENs
+  resolved or retired; braid job = cross-check only; **the N=4
+  reducible residual is exactly the six (8,6)/(9,6) msolve types**;
+  N=5 corrected cage with S5-COPRIME-KILL (provisional); HF-TWIN
+  pins; R5 STOP; M-INF/D1-DEGREE verdicts.
+- Paired-review ledger notes three consecutive waves where review
+  strictly improved the theorem (stratum error caught twice
+  independently; citation fixed; missing existence step inserted).
+- Remaining before unconditional B0 at N=4: (a) the six suite types
+  (Box03 running); (b) the ROW-NF exhaustiveness lemma. Next lanes
+  queue on those. N5-S2 review owed (routed next wave).
