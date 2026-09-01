@@ -313,7 +313,196 @@ UNRESOLVED-LOCAL-SIGNATURES=NONE`.
 
 ## 3. Lemmas 3.13–3.14: global census
 
-_Pending bounded section write._
+### 3.1 Lemma 3.13: the four additional local exclusions
+
+The p/q calculation on p. 13 is not justified merely by saying that a branch
+lies “entirely to the right.”  In either type the right labels exhaust the
+four sheets in (3.1).  Equality in (3.2) therefore rules out both a return
+across the target vertex and an extra positive-degree fork.  The right block
+not containing \(\widetilde g_2\) is either already a full edge-type block or
+passes once through a suppressed type-a block.  In the first case Definition
+3.2(b) gives
+
+\[
+ \det\widetilde R={1\over2}\det R_a={1\over2};
+\]
+
+in the second, the identical ratio applies to the terminal right block.
+Both contradict integrality.  Thus p and q are excluded.  **Verdict:
+REPAIRED.**
+
+For c, suppose a left arm first meets a fork \(\widetilde b\).  The unused
+degree-one arm and (3.1)–(3.2) give
+\(\operatorname {Deg}\widetilde b\le3\).  Degree two forces b, producing
+two routes between the same source vertices.  Degree three forces f or g,
+the two diagrams in Fig. 9 (p. 13).  At each visible fork the labelled
+degrees, together with the complementary sheet, total four.  Hence the two
+indicated right branches stay on their respective sides.  One does not
+contain \(\widetilde g_2\), and its terminal determinant is again
+\(\det R/2=1/2\).  Therefore neither c-left arm meets another fork: both
+are full branches of \(\widetilde L_\infty\), and their equal determinants
+\(\det L_a>1\) force one to be the exceptional
+\(\widetilde g_1\)-branch.  **Verdict: REPAIRED.**
+
+It remains to check s rather than accept “the other cases are treated in
+the same way” (p. 14).  Its degree-four left block ends at a
+\((m,n)=(2,2)\) fork.  Lemma 3.12 gives exactly the four continuations in
+Fig. 10:
+
+| Fig. 10 | first \((2,2)\) fork | possible next degree-two fork |
+|---|---|---|
+| a | r | none |
+| b | t, with both left arms terminal | none |
+| c | t | a |
+| d | t | c |
+
+There is no fifth row: at t a nonterminal degree-two left arm has endpoint
+degree at most two by (3.1)–(3.2), and the return label then permits only a
+or c.  Write \(S=\det\widetilde L_{\widetilde a}\).  Repeated use of [4],
+formula (6), and Definition 3.2(b) in each of the four rows gives
+
+\[
+ \det L_a={2S\over O_X},\qquad X\in\{\mathrm{10a,10b,10c,10d}\},       \tag{G1}
+\]
+
+where \(O_X\) is the product of the lower-branch determinants at the
+intervening \((2,2)\) and, in 10c–d, degree-two fork.  Corollary 1.4 makes
+every factor of \(O_X\) odd.  For 10a this is the printed computation
+\(O_X=d_3\); in 10b the same computation is made on either terminal
+degree-two arm, and in 10c–d the second fork merely appends its odd lower
+factor.  Since (G1) is an integer and \(O_X\) is odd, \(\det L_a\) is even
+in all four rows.
+
+The next two sentences of the English text contain two independent slips.
+It calls \(d_7\) the determinant of the “left branch” of \(U_{\widetilde
+a}\), although the relation \(\det D_a=2d_7\) uses the **lower** degree-four
+branch.  It then says “the fact that \(\det L_a\) is odd,” immediately after
+proving it even.  With those corrections, both \(\det L_a\) and
+\(\det D_a\) are even, contradicting their coprimality in Proposition
+1.3(2), equivalently Assertion 3.11(a).  Thus s is impossible.  Type b
+has a left \((2,2)\) endpoint whose return edge forces type s, so b is
+impossible as well.  **Lemma 3.13 verdict: REPAIRED.**
+
+### 3.2 State space for Lemma 3.14
+
+The paper replaces every a- or c-block by a degree-two edge before stating
+Lemma 3.14 (p. 14).  This is a quotient convention: such blocks are not
+additional visible forks in Fig. 11.  Subdivision by one of them therefore
+does not create a new global case.  It is important not to turn the
+\(\widetilde g_1\)-branch in such a suppressed block into an additional
+covering sheet.
+
+Across a target interval, record the partition of all four sheets:
+
+\[
+ A=(4),\qquad B=(3,1),\qquad C=(2,2),\qquad D=(2,1,1).                 \tag{G2}
+\]
+
+For a degree-three source fork the missing degree-one source point is
+included in this four-sheet state.  After Lemma 3.13, every visible fork
+has exactly the following transition:
+
+| type | left state | right state | lower state |
+|---|---|---|---|
+| f | D | D | B |
+| g | B | D | D |
+| j | A | D | B |
+| k | D | A | B |
+| l | B | A | D |
+| m | B | D | A |
+| n | B | B | C |
+| o | C | B | B |
+| r | A | A | C |
+| t | C | A | A |
+
+This table is a direct rewrite of Fig. 8, not a new assumption.  For
+example f has local \(21\) on each horizontal side and a complementary
+degree-one sheet, hence state D; g has local degree 3 on the left plus that
+sheet, hence B.
+
+Lemma 1.5 says that the chain incident to \(\widetilde g_2\) has degree
+two (p. 3).  Its last visible fork must consequently have right state D,
+and the local degree-two arm must be the one reaching
+\(\widetilde g_2\).  The only candidates are
+
+\[
+                 \mathrm{j,\ m,\ g,\ f}.                              \tag{G3}
+\]
+
+This also reconstructs the branch-location step hidden in the one-line
+proof of Lemma 3.14.
+
+### 3.3 Complete predecessor and cycle check
+
+Matching the right state of a left fork to the left state of its successor
+gives the following complete first-predecessor table.
+
+| last fork | possible immediate visible predecessor | result |
+|---|---|---|
+| j | none, r, t, l, k | Fig. 11: 1a, 1b, 1c, 2a, 2b |
+| m | none | Fig. 11: 1d |
+| g | o or n | Fig. 11: 3a, 3b |
+| f | g or f | Fig. 11: 4a, 4b |
+
+Here is the exclusion check behind the table.  A degree-four B-to-B
+matching joins both its degree-three and degree-one arms to the same two
+fork regions and creates two source paths; hence n or o may precede the
+degree-three g, but cannot precede the degree-four m.  The same argument
+excludes a degree-four D-state fork j or m immediately before f.  A
+degree-three-to-degree-three D matching is possible only in the crossed
+form: the degree-two arms join the visible forks, while each local
+degree-one arm joins the complementary sheet on the other side.  This gives
+exactly g–f and f–f.
+
+The same check prevents a hidden third visible fork.  For n–g and o–g, a
+further B-state degree-four predecessor would give two paths; o has no
+visible C-state predecessor.  For g–f, a preceding n or o closes the
+cycle through the complementary degree-one sheet.  For f–f, a third
+degree-three fork gives, with visible forks \(F_1,F_2,F_3\) and the middle
+complement \(C_2\), the explicit cycle
+
+\[
+                 F_1-F_2-F_3-C_2-F_1.
+\]
+
+For a predecessor of j, t has left state C and no visible predecessor; l
+has left state B, where n/o would make the degree-four B-to-B cycle; and k
+has left state D, where either a degree-four or degree-three predecessor
+supplies two routes through its degree-two and degree-one lifts.  Finally,
+r lies over h and has its lower route to \(\widetilde g_1\) by Lemma
+3.12(3).  A further k, l, or r predecessor has a second
+\(\widetilde g_1\)-route, which together with the trunk through r is a
+cycle.  A t predecessor would lie left of h, contradicting Lemma 3.12(6).
+Thus none of the five j rows extends.
+
+Conversely every row in the table satisfies the state match and contains
+no repeated source path.  Reading off the local types gives, without
+identifying flags with target places,
+
+| Fig. 11 | visible type word | joining degree |
+|---|---|---:|
+| 1a | j | — |
+| 1b | r–j | 4 |
+| 1c | t–j | 4 |
+| 1d | m | — |
+| 2a | l–j | 4 |
+| 2b | k–j | 4 |
+| 3a | o–g | 3 |
+| 3b | n–g | 3 |
+| 4a | g–f | 2 |
+| 4b | f–f | 2 |
+
+These are precisely the ten drawings on p. 15.  The drawings do not encode
+a complete placement of \(\widetilde g_1\): Lemma 3.12 fixes it for the
+suppressed a/c blocks and for l, k, r, while the Fig. 11 quotient leaves it
+undrawn in the other rows.  Lemma 3.14 is exhaustive as a census of the
+quotient graph, not as an extra theorem of exact \(g_1\)-attainment.
+
+**Global-census disposition:**
+\(\mathrm{LEMMA\ 3.13=REPAIRED}\);
+\(\mathrm{LEMMA\ 3.14=REPAIRED}\);
+\(\mathrm{FIG.\ 11\ TEN\ ROWS=REPLAYED\!-\!SOUND}\);
+\(\mathrm{UNRESOLVED\ GLOBAL\ CASES=NONE}\).
 
 ## 4. Root/branch-location ledger for §§1–4
 

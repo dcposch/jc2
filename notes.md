@@ -17178,3 +17178,33 @@ intersection over the six classes, positive/negative controls);
 coordinator will run on Box03. Still running: domrina-ii-replay1
 (8698), corrected-863-kill-review (13396); Box03 msolve 869 +
 M2 queue.
+
+## LIVE STATE (observed 2026-09-01T22:47Z) — (8,6,3) KILL BINDING; N=4 RESIDUAL = (8,6,9) + THE TWO (9,6) SURVIVORS
+
+**CORRECTED-863-KILL-REVIEW landed** (`corrected-863-kill-review-gpt55-20260901.md`,
+e9ddeaea, report_state=PARTIAL_NO_MARKER — coordinator assessment:
+UNSEALED-COMPLETE; all ten sections present incl. §10 Final
+Binding Statement; only the BODY-END marker is missing; banked by
+hash with this note rather than relaunched). Verdict:
+**KILL-BINDING**. The reviewer independently: re-derived the
+corrected spec from audit §7.1; matched every .ms generator
+against sympy-expanded G86; audited the coordinator's gj patch
+(coefficient(t^j, ·) extraction confirmed against official M2
+docs — M2 unavailable in its sandbox; coordinator's on-box probe
+covers execution); confirmed Iopen-before-colon semantics (unit
+ideal already without cover-colon/immersion restrictions); reran
+positive control (ii). §9: NO repairs; one custody note — the
+codegen report's per-file table carries the PRE-patch .m2 hash;
+as-run hashes are 411b2e86/460a4501/6919892d (this ledger and the
+review are authoritative, not the stale codegen line).
+
+**Delta=(8,6,3) is DEAD at the curve level (two-engine, corrected
+encoding, hostile-reviewed).** With Moh (no source kill) and
+TB-G2 (no local rep obstruction) this closes every (8,6,3) route.
+
+**N=4 BOARD**: dead: (8,6,11), (8,6,7) (rep gate, twice-derived),
+(8,6,3) (curve, binding). Open: (8,6,9) — rep residual global
+c_2(T), curve job 869 running on Box03; (9,6,2) — REALIZED,
+survives all gates, BM-factorisation decides; (9,6,4) — locus
+nonempty, survives gates, N-A-boundary kill possible, six-node
+job 964 queued.
