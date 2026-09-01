@@ -1,0 +1,18 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. `xmodel/reducible-all-n-opus5-20260901.md` — 5,972 words, sealed (body 34,939 bytes, SHA-256 `4fef439f…`), basis `2c562c11`. Input hashes verified before any write; no charged file, ledger, or `jc2-lean` touched; no CAS (one integer-bookkeeping script, disclosed in §0 as a cross-check only).
+
+**What the lane produced.**
+
+*New uniform tools (all `[D]`, unreviewed):*
+- **Lemma CUSP-2** — the sharpest item. From `J = y^{μ−1}·unit` near a dicritical, at `μ_l = 2` the two coordinate orders of `φ_l` differ by exactly 1, so every correction germ is an ordinary `(ν,ν+1)` cusp with `k = ν−1`. Corollary **NO-RAM-2**: `μ_l = 2 ⟹ s_l = 1`.
+- **Lemma D + Gate TRANS-LOC** — letters over `p` split into `a_p` singletons plus clusters; each cluster is `G_p`-invariant *and* `G_p` is transitive on it; hence no local group is ever globally transitive. Branch-meridian disjointness becomes automatic instead of case-by-case.
+- **Gate LZ-KILL** — `b=1`, `2W_br > N` ⟹ unibranch ⟹ Palka Thm A ⟹ `x^n=y^m` ⟹ local group surjects globally ⟹ contradiction. Supersedes Gate AMS (drops the `corr=0` hypothesis).
+- **Lemma NL** — no component of `A_F` is a line, proved without Magnus (Euler forces `P_K = cQ_K`, then Chau Thm 1).
+- **Theorem NO-DEG-CAP** — target automorphisms preserve `N`, Keller, and the entire profile, so `deg A_F` is unbounded in `N`.
+
+*Three corrections to consumed items.* N5's "(2,9) admissible" is refuted (Fox `3|det` is necessary only); the first ramified degree is **N = 10**, not 7 (N5) or 6 (the sol56 review); N5's DQ-3 degree cap — flagged there as highest-leverage — is refuted at every degree.
+
+*Deliverable.* THEOREM CAGE-N (seven clauses) plus the residual as a **class family** indexed by the core: 1 / 2 / 6 / 10 / 26 classes at `N = 4…8`, reproducing the promoted `N=4` and `N=5` residuals exactly as a control. The branch locus first becomes reducible at `N=6`, so all `b ≥ 2` classes are genuinely new and unreached by promoted machinery.
+
+*Failed closed where it should.* The `S_4` `V_4`-resolvent has provably no analogue at any `N ≥ 5` (only `sgn` survives, and that reduces to Gate TG-N mod 2); the `(ν,ν+1)` cusp always admits its `S_{ν+1}` local representation, so cusp sites impose no local obstruction; and by NO-DEG-CAP no numeric gate can close the cage at all — the residual is irreducibly a `π₁` problem, and the class count grows, so there is no uniform finite survivor list. Six items typed OPEN, including the uncustodied Zariski generic-line surjection on which §6 alone depends.
+DIVERT path=xmodel/reducible-all-n-opus5-20260901.md status=CLEAN_SEALED body_bytes=34939 body_sha256=4fef439f6e20a3d3f1335c39f8d039cd0492a7ee6711bf5ba8f3eee0eb05f5d9
