@@ -16648,3 +16648,22 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   nohup) diagnosed; queue relaunched correctly: A/B repaired M2
   mirrors + C/D 12h msolve. Watcher live.
 - Running: one-cusp-a2 r2 (Opus), Box03 queue.
+
+## LIVE STATE (observed 2026-09-01T12:26Z) — HORN INDUCTION REFRAMED: OBSTRUCTION IS TERMINATION, NOT INDUCTION
+
+- ONE-CUSP-A2 r2 (Opus, `5f28c563`, PROVISIONAL, review launched):
+  OBSTRUCTION[A-DEGREE-TWO] NOT PROVED — but the report reframes the
+  entire horn programme: THEOREM 3.2 (formal unobstructedness along
+  Phi: the constraint system solves level-by-level with a free C[Z]
+  compensator at every level, under promoted immersivity) and
+  Cor 3.3 (NO bottom-up induction can EVER obstruct — the promoted
+  A-degree-0/1 obstructions were termination statements, not
+  induction base cases). Established: the (T,V) chart (A-filtration
+  = pole-order filtration); Lemma 4.1 (no f in C[Z] has a mate, any
+  A-degree); Aff_2 reduction to three cells with (3,1),(2,1) EMPTY
+  unconditionally; cell (3,2) rigidified to 8 polynomials / 7
+  equations; a disciplined §8 AWS spec (EMPTY = evidence only — no
+  promoted degree bound; NONEMPTY = live degree-8 counterexample
+  cell, flag immediately). Typed: OPEN[A2-CELL-32]. Sol gate
+  running (4h; includes a generated-CAS bug-class audit of §8).
+- Box03: A/B mirrors + C/D 12h msolve queue running.
