@@ -17138,3 +17138,43 @@ two-engine). (8,6,9) OPEN: rep residual = global c_2(T); curve =
 869 jobs running. (9,6,2) REALIZED; rep = REP-96 running. (9,6,4)
 locus nonempty; six-node = 964 queued. Lanes: rep-96-inner (6672),
 domrina-ii-replay1 (8698), 863-kill-review (13396).
+
+## LIVE STATE (observed 2026-09-01T22:39Z) — REP-96: BOTH (9,6) TYPES SURVIVE ALL GATES; BM-FACTORISATION IS THE DECISIVE STEP
+
+**REP-96-INNER landed** (`rep-96-inner-opus5-20260901.md`, a47945ab,
+BODY_SEALED). THEOREM CABLE-3 (family-2 inner gate at g=3, new;
+§2 winding argument, only the ordered product beta survives).
+Census re-derived from the curves (§1): (9,6,2) delta_aff=4,
+beta_1=25, delta_inf=24, k_*=-10, e(iota)=-20; (9,6,4)
+delta_aff=6, beta_1=23, delta_inf=22, k_*=-8, e(iota)=-16.
+**BOTH TYPES PASS GATE-3** (k_* mod 4 = 2 / 0) and §6 runs EVERY
+other promoted gate — none kills. Surviving S_4 data explicit and
+small: (9,6,2) six classes / 144 tuples; (9,6,4) three classes /
+72 tuples; Pi never in V_4. (9,6,4) additionally sits ON the N-A
+boundary: a YES on OPEN[NA-R1-SHARPNESS-IRREDUCIBLE] kills it
+alone. §7 fork for (9,6,2) (realized + surviving rep):
+- OPEN[REP-96-BM-FACTORISATION] — finite decidable: 8 tangency
+  transports + x=0 node fibre; intersect fixed sets; either the
+  campaign's first explicit phi on pi_1(C^2-D) or the kill.
+  Extra pin derived: tau = Pi or disjoint (2 of 6 transpositions).
+- OPEN[REP-96-SOURCE-IS-C2] — Riemann existence gives normal Y
+  only; Y ~ C^2 is the hard geometric gap (largest single gap).
+- OPEN[REP-96-MPRIME-COMPANION] — at the reducible N=4 profile
+  (M') collapses to chi_2+sigma_2=1 (companion D_2 rational),
+  s_1 cancels identically: (M') is BLIND to the branched
+  component's node count; budget demands a companion D_2 of
+  degree >=2 (Lemma NL). Control reproduced: under (H2) the
+  nodal N=4 residual dies by (M') — matches promoted B0/H2.
+**No promoted theorem kills (9,6,2); the row is alive on the
+merits, not by a gap in the search.**
+
+**NEW LANES** (both Grok, 22:39Z): `rep-96-hostile-review`
+(child 14390) — gate CABLE-3, brute-verify the class lists
+(finite S_4 enumeration), audit the §6 sweep and §7 (M')
+instantiation. `bm-fact-codegen` (child 14231) — emit
+box/bmfact_962.sage (SIROCCO braid monodromy of F(x,y), census
+validation, ZvK action JSON) + box/bmfact_enum.py (fixed-set
+intersection over the six classes, positive/negative controls);
+coordinator will run on Box03. Still running: domrina-ii-replay1
+(8698), corrected-863-kill-review (13396); Box03 msolve 869 +
+M2 queue.

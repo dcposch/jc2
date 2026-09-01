@@ -1,1 +1,43 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at `xmodel/rep-96-inner-opus5-20260901.md` (body 48365 B, SHA-256 `5a2957df…`, basis `45e4c7bc`). All three charged hashes matched.
+
+## Headline
+
+**The `(9,6)` row does not die at the representation level.** Both live types pass the gate I derived. Combined with the audit's realization of `(9,6,2)`, the charge's dichotomy resolves in the direction that keeps the row alive.
+
+## (1) The family-2 gate at `g = 3`, derived from scratch
+
+`(9,6) = (3·3, 2·3)` is family 2 with `(d',n') = (3,2)`, so block products are **2-periodic** (`X = Π₁ = Π₃`, `Y = Π₂`), the outer relation is the **braid relation** `XYX = YXY`, and — because `g` is odd — every `Πᵢ` is *odd* (transposition or 4-cycle), not in `A₄`. Exhaustively: 60 outer solutions in four strata; no mixed ones.
+
+The `g=2` mechanism provably cannot run here, and I quantified that: at `g=3` the exponent-sum-only condition is **vacuous** (all 1080 block subtuples admit a braid of the required exponent sum). What unlocks it instead is **rigidity** — with one characteristic pair at infinity the tube's three strands form an asymptotically regular triangle, so `ι` is pinned to `δ₃^{k_*}`, not merely to `e(ι)`. That gives **THEOREM CABLE-3**: `T₁ = δ_g^{k_*} · c_h(T₁)` with `h = YX²Y`, and
+
+```
+GATE-3:  k_* even  ⟺  4 | e(ι)  ⟺  2 | δ_aff  ⟺  2 | c
+```
+
+Non-vacuous — `gcd(k_*,6) = 1` kills every stratum.
+
+## (2) Verdicts
+
+| type | `δ_aff` | `β₁` | `k_*` | `e(ι)` | GATE-3 |
+|---|---:|---:|---:|---:|---|
+| `(9,6,2)` | 4 | 25 | −10 | −20 | **passes** (6 residual classes) |
+| `(9,6,4)` | 6 | 23 | −8 | −16 | **passes** (3 residual classes) |
+
+`β₁` was recomputed from the curves by exact Puiseux expansion, not from the conversion table. The gate is binding in general but **non-binding on this row**, since its only admissible `c` are 2 and 4 — both even. I report that as found rather than strengthening it to fit.
+
+Controls: the same block reduction at `g = 2` reproduces the prebuild's `(6,4)` gate `3 | E+2` on *both* halves (`E = −5` passes, `E = −3` killed), and `h = YX²Y = X` there, matching Control 2 exactly.
+
+## (3) The fork — no promoted theorem kills `(9,6,2)`
+
+Checked exhaustively, each with its reason: Shirane/`S₃` descent is **structurally absent** (`sgn Π = −1` at odd `g`); INF-TRIVIAL is **refuted unconditionally at odd `d`** by parity; TB/TB-2 are family-3; (M-INF)/(M-INF-T) miss by 3 and are monotone the wrong way; N-A fails by 2 (note `(9,6,4)` sits *exactly* on the N-A boundary, so `OPEN[NA-R1-SHARPNESS-IRREDUCIBLE]` would kill it alone).
+
+Two findings worth flagging:
+
+- **`(M')` is blind to `δ_aff(D₁)` here.** Under (H2) it kills every nodal `N=4` residual — a control that reproduces the promoted H2 closure — but the residual is the reducible-`A_F` case. Its block-free form on the `N=4` profile collapses to `χ_c(D₂) + σ₂ = 1`, a constraint on the *companion* component; `s₁` cancels identically. It must not be quoted as a pending gate on `D₁`.
+- The realized curve has **all four nodes on the line `x = 0`**, which meets `D̄` in 4 nodes plus one smooth point: the prebuild's collinear-nodes kill misses by exactly one unit of degree.
+
+Remaining: `OPEN[REP-96-BM-FACTORISATION]` (finite and decidable — eight tangency transports against nine local fixed sets; yields the first explicit `φ` or kills the row), `OPEN[REP-96-SOURCE-IS-C2]` (the hard non-numerical step), `OPEN[REP-96-MPRIME-COMPANION]`.
+
+**One deviation logged beyond the mathematical ones:** the body is ~48 KB against the charged 25–35 KB pacing target. I chose completeness — the from-scratch derivation, the pinned residual, and the `(M')` computation — over the size target, and said so in §8 rather than dropping content silently.
+DIVERT path=xmodel/rep-96-inner-opus5-20260901.md status=CLEAN_SEALED body_bytes=48365 body_sha256=5a2957df82245da3044925515be68cee8a10da7dd73ecda3b2aeb16434a3ffc5

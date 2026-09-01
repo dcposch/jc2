@@ -290,3 +290,1143 @@ box/corrected_863.m2:85:if Iopen == ideal(1_R) then << "=== corrected_863 EMPTY"
 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:543:  corrected leading coefficient.  Colon/resultant operations are not allowed
 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:546:  nodal witness.  `(9,6,2)` is promoted only because four explicit transverse
 
+codex
+I found the audit’s corrected §7.1 table and the patched M2 coefficient extractor. Next I’m reading the exact surrounding text and full job files so the report can cite line-level evidence, including the known codegen M2 hash drift after coordinator patching.
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md | sed -n '90,180p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+    90	At `[1:0:0]` use `x=q/p` and `y=1/p`.  Then
+    91	
+    92	```text
+    93	x=z^a Q/P,               y=z^d/P.
+    94	```
+    95	
+    96	There is a unique formal parameter `r=z+O(z^2)` with
+    97	`r^a=z^a Q/P`, hence `x=r^a`.  Writing `z=z(r)` gives
+    98	
+    99	```text
+   100	y = r^d A(r),
+   101	A(r)=P(z(r))^(d/a-1)/Q(z(r))^(d/a).
+   102	```
+   103	
+   104	Thus `A=P^3/Q^4` for `(8,6)` and `A=P^2/Q^3` for `(9,6)`.
+   105	Terms of `y(r)` whose exponents are multiples of `a` are series in `x`
+   106	and are removed by the Tschirnhausen change `y -> y-Phi(x)`.  The first
+   107	remaining exponent is the first transverse numerator `beta_1`.  This is
+   108	the precise step omitted when raw coefficients of `H` or `K` are read as
+   109	characteristic coefficients.
+   110	
+   111	Define the **normalized** coefficients
+   112	
+   113	```text
+   114	hat_h_j = [r^(24-j)] P(z(r))^3/Q(z(r))^4,
+   115	hat_k_j = [r^(18-j)] P(z(r))^2/Q(z(r))^3.
+   116	```
+   117	
+   118	Then a nonzero `hat_h_j` contributes exponent `32-j` to `y`, and a
+   119	nonzero `hat_k_j` contributes exponent `27-j`.  Vanishing the earlier
+   120	non-`a`-divisible terms pins the local `beta_1`.  Exact reduced-root degree
+   121	`c` implies that local condition, via `beta_1=32-c` or `27-c`, but the
+   122	converse can fail even under properness: a higher global gap with unchanged
+   123	gcd is locally removable.  The relevant same-gcd obstructions here are
+   124	degree 10 for 86B/C/D, additionally degree 4 for 86D, and degree 3 for 96B.
+   125	Thus an exact three-entry global `Delta` must be imposed by reducing the
+   126	polynomial second approximate root to degree `c`, not by the local exponent
+   127	alone.  For reference, the **local** normalized-series dictionary is
+   128	
+   129	```text
+   130	86A: hat_h_{21,19,17,15,13}=0,             hat_h_11 != 0;
+   131	86B: preceding plus hat_h_11=0,             hat_h_9  != 0;
+   132	86C: preceding plus hat_h_9=0,              hat_h_7  != 0;
+   133	86D: preceding plus hat_h_{7,5}=0,          hat_h_3  != 0;
+   134	96A: hat_k_{16,14,13,11,10,8,7,5}=0,       hat_k_4  != 0;
+   135	96B: preceding plus hat_k_4=0,              hat_k_2  != 0.
+   136	```
+   137	
+   138	These hats are not the raw `h_j,k_j`.  Write `bar_h_j,bar_k_j` for the
+   139	coefficients after the triangular global semigroup reduction specified in
+   140	7.1.  The exact global dictionary is:
+   141	
+   142	| target `Delta` | `beta_1` | corrected reduced-root vanishings | exact open |
+   143	|---|---:|---|---|
+   144	| `(8,6,11)` | 21 | `bar_h_j=0`, `j={21,19,17,15,13}` | `bar_h_11 != 0` |
+   145	| `(8,6,9)` | 23 | preceding set plus `j={11,10}` | `bar_h_9 != 0` |
+   146	| `(8,6,7)` | 25 | preceding set plus `j=9` | `bar_h_7 != 0` |
+   147	| `(8,6,3)` | 29 | preceding set plus `j={7,5,4}` | `bar_h_3 != 0` |
+   148	| `(9,6,4)` | 23 | `bar_k_j=0`, `j={16,14,13,11,10,8,7,5}` | `bar_k_4 != 0` |
+   149	| `(9,6,2)` | 25 | preceding set plus `j={4,3}` | `bar_k_2 != 0` |
+   150	
+   151	The chart identities at levels 23 and 17 remain automatic.  Degrees 10
+   152	and 4 in the `(8,6)` table and degree 3 in the 96B row are genuine global
+   153	gaps, even though the corresponding local exponents 22, 28 and 24 are
+   154	divisible by `a` and analytically removable.  Conversely, the raw `(9,6)`
+   155	jobs unnecessarily zero the semigroup levels 15, 12, 9 and 6 instead of
+   156	solving for their reduction coefficients.
+   157	
+   158	The AG--S/Abhyankar--Moh interpretation is the same statement globally:
+   159	`c` is the parameter degree of the **reduced second approximate root**,
+   160	not of the unreduced binomial.  Here the campaign's conversion and cluster
+   161	identities (NODAL-REALIZATION lines 19--25, 33--59) give
+   162	
+   163	```text
+   164	(8,6): beta_1=32-c,  delta_inf=(beta_1-1)/2;
+   165	(9,6): beta_1=27-c,  delta_inf=beta_1-1;
+   166	delta_aff=(d-1)(d-2)/2-delta_inf.
+   167	```
+   168	
+   169	The open coefficient has a second job.  Since
+   170	`gcd(d,n,c)=1` in all six rows, it excludes every nontrivial common right
+   171	component of `p,q`; the displayed parameter is then the normalization
+   172	parameter.  A polynomial parametrized image has one physical place at
+   173	infinity (only `t=infinity` lies over the infinity line).  Consequently
+   174	there is no missing independent "one-place open."  The old gcd-2/gcd-3
+   175	concern is about a multiple cover, not about two physical places, and the
+   176	corrected `c`-open already excludes it.  Affine immersivity and reduced
+   177	double points remain separate nodality tests.
+   178	
+   179	Already at the second level the raw and reduced equations differ.  On
+   180	`h_21=0`, reduction of the degree-22 term gives
+
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md | sed -n '460,515p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   460	nodal type is **REALIZED**.
+   461	
+   462	## 7. Re-typed realization suite and rerun specification
+   463	
+   464	### 7.1 Correct characteristic incidence ideals
+   465	
+   466	Do not patch the old files by shifting an `h` or `k` subscript.  Introduce
+   467	the coefficients of the reduced second approximate root explicitly.
+   468	
+   469	For `(8,6)` use
+   470	
+   471	```text
+   472	G86 = p^3-q^4
+   473	    + a22*p^2*q + a20*p*q^2 + a18*q^3
+   474	    + a16*p^2   + a14*p*q   + a12*q^2
+   475	    + a8*p + a6*q.
+   476	```
+   477	
+   478	The subscript is the leading pole degree.  Retain only terms of weight
+   479	strictly greater than the target `c`, let `g_j=[t^j]G86`, and use:
+   480	
+   481	| job | auxiliary terms retained | closed equations | Rabinowitsch open |
+   482	|---|---|---|---|
+   483	| A, `c=11` | `a22,...,a12` | `g_22,...,g_12` | `u*g_11-1` |
+   484	| B, `c=9` | `a22,...,a12` | `g_22,...,g_10` | `u*g_9-1` |
+   485	| C, `c=7` | preceding plus `a8` | `g_22,...,g_8` | `u*g_7-1` |
+   486	| D, `c=3` | preceding plus `a6` | `g_22,...,g_4` | `u*g_3-1` |
+   487	
+   488	For `(9,6)` use
+   489	
+   490	```text
+   491	G96 = p^2-q^3 + a15*p*q + a12*q^2 + a9*p + a6*q.
+   492	```
+   493	
+   494	For A (`c=4`) impose `[t^j]G96=0` for `5<=j<=16` and invert
+   495	`[t^4]G96`; for B (`c=2`) impose the coefficients for `3<=j<=16`
+   496	and invert `[t^2]G96`.  Constants may be omitted because every target
+   497	degree is positive.  These incidence systems are triangular in the `a_w`;
+   498	they may be eliminated to obtain the `bar_h/bar_k` equations in Section 3.
+   499	Their independent corrected equation counts in the eleven chart variables
+   500	are `5,7,8,11,8,10`, respectively.
+   501	
+   502	On each corrected locus, retain the affine tests in their proper roles:
+   503	invert `Res_t(p',q')`; then run the reduced unordered double-point check
+   504	with `N=11,10,9,7,6,4`.  The corrected `c`-open already excludes common
+   505	degree-2/3 covers, although the old cover colon is harmless if its ring and
+   506	map are asserted.  Required semantic controls for the rerun are:
+   507	
+   508	1. the charged witness must fail corrected A and be classified at `c=19`;
+   509	2. the displayed `(9,6,4)` point must satisfy corrected 96A;
+   510	3. the displayed four-node `(9,6,2)` point must satisfy corrected 96B;
+   511	4. the existing `(6,4,3)` nodal and monomial-cover controls remain.
+   512	
+   513	### 7.2 Binding retyping
+   514	
+   515	| advertised type | old suite label | sound label now | next action |
+
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md | sed -n '250,285p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   250	`h_18=3(E+B^2)-(6+4f)=(s-15)/81 != 0`.  Correct reduction therefore sets
+   251	`a18=-h_18`; since `[t^15]q^3=3` and no other remaining auxiliary term has
+   252	degree 15, `g_15=-3h_18 != 0`.  Thus D too has a witnessed false positive,
+   253	independently of its omitted necessary gap residuals at 10 and 4.
+   254	
+   255	The C/D counterpoints certify non-equivalence of the **characteristic base
+   256	ideals**.  They are not asserted to survive the separate affine-immersion
+   257	open (the displayed D point does not).  A downstream open may discard a
+   258	particular false positive, but it cannot turn the wrong base equations into
+   259	an exhaustive characteristic encoding or make an EMPTY result kill the
+   260	corrected target.
+   261	
+   262	For the two `(9,6)` jobs the defect has the opposite polarity.  Setting every
+   263	raw coefficient above `c` to zero forces the *pure binomial slice*
+   264	`p^2-q^3` itself to have degree `c`.  The general reduced approximate root
+   265	also contains `p*q,q^2,p,q`.  The old locus is therefore sufficient when it
+   266	has a point: its forward type implication remains sound.  It is not
+   267	necessary and hence is not a faithful exact/exhaustive encoding.  An EMPTY
+   268	result proves only
+   269	
+   270	> no point of that pure-binomial slice survives the stated immersion/colon
+   271	> opens.
+   272	
+   273	It does **not** prove that the corrected characteristic locus is empty, and
+   274	therefore proves no `(9,6,c)` type kill.  This corrects the overclaim in
+   275	MSOLVE-PREP 2.3 (lines 131--138).  The resultant inverse and cover colon are
+   276	downstream restrictions on the wrong base ideal and cannot repair its
+   277	meaning.  The coordinator's warning that NONEMPTY remained provisional
+   278	(the frozen integration, lines 89--90) was therefore necessary but not
+   279	sufficient: EMPTY also had to remain provisional on encoding faithfulness.
+   280	
+   281	## 5. Exact desk check of the charged type86_A witness
+   282	
+   283	Let `zeta^2-zeta+18474=0`.  Reading the eleven values in the chart order
+   284	`(B,C,D,E,F,G,b,gamma,d,e,f)` gives
+   285	
+
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md | sed -n '62,120p'" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md | sed -n '169,191p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+    62	## 3. Encoding dictionary (audit 7.1, not raw `h_k`/`k_j`)
+    63	
+    64	Shared charts, identical to the audit §2 and MSOLVE-PREP 2.1–2.2 (`gam` for `γ`):
+    65	
+    66	```text
+    67	p = t^8 + B t^5 + C t^4 + D t^3 + E t^2 + F t + G
+    68	q = t^6 + b t^4 + gam t^3 + d t^2 + e t + f
+    69	G86 = p^3-q^4 + a22 p^2 q + a20 p q^2 + a18 q^3 + a16 p^2 + a14 p q + a12 q^2 [+ a8 p] [+ a6 q]
+    70	
+    71	p = t^9 + A t^7 + P6 t^6 + B t^5 + P4 t^4 + C t^3 + P2 t^2 + D t
+    72	q = t^6 + a t^4 + Q3 t^3 + b t^2 + Q1 t
+    73	G96 = p^2-q^3 + a15 p q + a12 q^2 + a9 p + a6 q
+    74	```
+    75	
+    76	Subscripts on `a_w` are leading pole degrees. Retain only terms of weight strictly greater than the target `c`. Closed equations are **every** `[t^j]G = 0` in the stated range, not the raw odd list. The even/semigroup slots are triangular of leading coefficient 1 in their own `a_w` (sympy: `g_22,g_20,g_18,g_16,g_14,g_12,g_8,g_6` and `g_15,g_12,g_9,g_6`). After eliminating those auxiliaries one recovers the audit §3 `bar_h`/`bar_k` list. Independent equation counts in the eleven chart variables: `5,7,8,11,8,10` for A,B,C,D,96A,96B, matching audit 7.1.
+    77	
+    78	No `_a`/`_b` variants: the audit's incidence specification is unambiguous. The one encoding *choice* that is not an equation ambiguity is recorded in §6 (I_DP is a post-check, not extra Groebner generators).
+    79	
+    80	## 4. Coefficient-by-coefficient: `(8,6)` reduced remainders
+    81	
+    82	Exact sympy expansion of `H=p^3-q^4` and of `G86` in the full auxiliary ring. Support of both is `0..22`; `h_23=g_23=0` (chart identity, `h_23=-4 a_5` already spent). Leading coefficients, fully expanded:
+    83	
+    84	```text
+    85	h_22 = -4*b
+    86	g_22 = a22 - 4*b
+    87	h_21 = 3*B - 4*gam
+    88	g_21 = 3*B - 4*gam
+    89	h_20 = 3*C - 6*b^2 - 4*d
+    90	g_20 = a20 + a22*b + 3*C - 6*b^2 - 4*d
+    91	h_19 = 3*D - 12*b*gam - 4*e
+    92	g_19 = 2*B*a22 + a22*gam + 3*D - 12*b*gam - 4*e
+    93	```
+    94	
+    95	These are the encoded generators: `corrected_863.ms` / `8611.ms` / `869.ms` / `867.ms` all begin `a22-4*b` then `3*B-4*gam` then `a22*b+a20+3*C-6*b^2-4*d` then `2*a22*B+a22*gam+3*D-12*b*gam-4*e`. That is `g_22,g_21,g_20,g_19`, not raw `h_21,h_19,...`.
+    96	
+    97	Triangular reduction on `g_22=0` forces `a22=4b`. Substituting:
+    98	
+    99	```text
+   100	g_19 | (a22=4b) = 8*B*b + 3*D - 8*b*gam - 4*e
+   101	                = h_19 + 4*b*(2*B+gam)
+   102	```
+   103	
+   104	This is the audit §3 identity `bar_h_19 = h_19 + 4*b*(2*B+gamma)` on the nose. So `h_19=0` is not an off-by-one of the right equation: it is the unreduced coefficient. The encoded `g_19=0` *is* the reduced remainder.
+   105	
+   106	Generator layout in each `(8,6)` `.ms` file (line 1 = variables, line 2 = `0`):
+   107	
+   108	| file | lines 3.. last-but-one | last line |
+   109	|---|---|---|
+   110	| `corrected_8611.ms` | `g_22..g_12` (11 closed) | `u*g_11-1` |
+   111	| `corrected_869.ms` | `g_22..g_10` (13 closed; includes gap `g_10`, no `a10`) | `u*g_9-1` |
+   112	| `corrected_867.ms` | `g_22..g_8` (15 closed; `a8` retained) | `u*g_7-1` |
+   113	| `corrected_863.ms` | `g_22..g_4` (19 closed; `a8,a6` retained; gap `g_4`, no `a4`) | `u*g_3-1` |
+   114	
+   115	Auxiliaries retained, matching the 7.1 table: A/B keep `a22..a12`; C adds `a8`; D adds `a6`. Degrees 10 and 4 are gaps of `⟨8,6⟩` and appear as closed residuals without an auxiliary, which is why B's closed range reaches `g_10` with the same auxiliaries as A, and D's range reaches `g_4`.
+   116	
+   117	Lower `g_j` are the fully expanded unique-monomial polynomials in the `.ms` files (hashed in §8). They are not raw `h_j`: each contains the `a_w` monomials of pole degree `w` that reduce that slot. Independent counts after eliminating the eight (resp. six, seven) auxiliaries: 11, 7, 8, 5 for D,B,C,A.
+   118	
+   119	Relation to Moh/FSY `I_29`: the raw odd list `h_23,h_21,...,h_5` is the unfaithful encoding. The corrected job is `g_22=...=g_4=0` with `g_3≠0` in the same NR chart. EMPTY of that open ideal is the curve-level kill the Moh-check lane could not source.
+   120	
+
+ succeeded in 0ms:
+   169	check(i) g22 at point (in a22): a22 - 4
+   170	check(i) g21 at point: 0
+   171	check(i) h19 at point: 0
+   172	check(i) g19 residual (a22=4): 11
+   173	check(i) raw h11 at point: 59291/18432 - 27671*zeta/110592
+   174	SELF-CHECK (i) charged A false-positive vs corrected (8,6,11): PASS — old A holds (g21=0, h19=0, h11=59291/18432 - 27671*zeta/110592 != 0) but corrected residual g19|a22=4b equals 11 != 0, so the point is not on V(g_22,...,g_12)
+   175	```
+   176	
+   177	`h_11 = (355746-27671*zeta)/110592` after `59291/18432=355746/110592`, matching the audit. Residual `g_19=11` matches the audit's `[t^19]R=11`. The point satisfies every old A generator/open and fails the encoded corrected A system. FAIL of membership is the required outcome; the self-check harness labels that outcome PASS.
+   178	
+   179	### (ii) `(9,6,2)` curve vs corrected `(9,6,2)` membership — required PASS
+   180	
+   181	`q=t^6+8t^2`, `p=t^9+12t^5+24t`. Auxiliaries `(a15,a12,a9,a6)=(0,0,0,-64)` recover the identity `p^2-q^3-64q=64t^2`.
+   182	
+   183	```text
+   184	check(ii) closed g_16..g_3: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+   185	check(ii) g2: 64
+   186	check(ii) g0,g1: 0 0
+   187	SELF-CHECK (ii) (9,6,2) curve q=t^6+8t^2, p=t^9+12t^5+24t vs corrected (9,6,2): PASS — aux (a15,a12,a9,a6)=(0,0,0,-64) gives g_j=0 for 3<=j<=16 and g_2=64 != 0
+   188	```
+   189	
+   190	No `(9,6,2)` job file was emitted (type REALIZED). The membership check uses the same `G96` as `corrected_964`.
+   191	
+
+exec
+/bin/zsh -lc 'nl -ba box/corrected_863.ms && nl -ba box/corrected_863.m2' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	a22,a20,a18,a16,a14,a12,a8,a6,B,C,D,E,F,G,b,gam,d,e,f,u
+     2	0
+     3	a22-4*b,
+     4	3*B-4*gam,
+     5	a22*b+a20+3*C-6*b^2-4*d,
+     6	2*a22*B+a22*gam+3*D-12*b*gam-4*e,
+     7	2*a22*C+a22*d+2*a20*b+a18+3*B^2+3*E-4*b^3-12*b*d-6*gam^2-4*f,
+     8	2*a22*B*b+2*a22*D+a22*e+a20*B+2*a20*gam+6*B*C+3*F-12*b^2*gam-12*b*e-12*gam*d,
+     9	a22*B^2+2*a22*B*gam+2*a22*C*b+2*a22*E+a22*f+a20*C+a20*b^2+2*a20*d+3*a18*b+a16+6*B*D+3*C^2+3*G-b^4-12*b^2*d-12*b*gam^2-12*b*f-12*gam*e-6*d^2,
+    10	2*a22*B*C+2*a22*B*d+2*a22*C*gam+2*a22*D*b+2*a22*F+2*a20*B*b+a20*D+2*a20*b*gam+2*a20*e+3*a18*gam+B^3+6*B*E+6*C*D-4*b^3*gam-12*b^2*e-24*b*gam*d-4*gam^3-12*gam*f-12*d*e,
+    11	a22*B^2*b+2*a22*B*D+2*a22*B*e+a22*C^2+2*a22*C*d+2*a22*D*gam+2*a22*E*b+2*a22*G+2*a20*B*gam+2*a20*C*b+a20*E+2*a20*b*d+a20*gam^2+2*a20*f+3*a18*b^2+3*a18*d+a14+3*B^2*C+6*B*F+6*C*E+3*D^2-4*b^3*d-6*b^2*gam^2-12*b^2*f-24*b*gam*e-12*b*d^2-12*gam^2*d-12*d*f-6*e^2,
+    12	a22*B^2*gam+2*a22*B*C*b+2*a22*B*E+2*a22*B*f+2*a22*C*D+2*a22*C*e+2*a22*D*d+2*a22*E*gam+2*a22*F*b+a20*B*b^2+2*a20*B*d+2*a20*C*gam+2*a20*D*b+a20*F+2*a20*b*e+2*a20*gam*d+6*a18*b*gam+3*a18*e+2*a16*B+3*B^2*D+3*B*C^2+6*B*G+6*C*F+6*D*E-4*b^3*e-12*b^2*gam*d-4*b*gam^3-24*b*gam*f-24*b*d*e-12*gam^2*e-12*gam*d^2-12*e*f,
+    13	a22*B^2*d+2*a22*B*C*gam+2*a22*B*D*b+2*a22*B*F+a22*C^2*b+2*a22*C*E+2*a22*C*f+a22*D^2+2*a22*D*e+2*a22*E*d+2*a22*F*gam+2*a22*G*b+2*a20*B*b*gam+2*a20*B*e+a20*C*b^2+2*a20*C*d+2*a20*D*gam+2*a20*E*b+a20*G+2*a20*b*f+2*a20*gam*e+a20*d^2+a18*b^3+6*a18*b*d+3*a18*gam^2+3*a18*f+2*a16*C+a14*b+a12+3*B^2*E+6*B*C*D+C^3+6*C*G+6*D*F+3*E^2-4*b^3*f-12*b^2*gam*e-6*b^2*d^2-12*b*gam^2*d-24*b*d*f-12*b*e^2-gam^4-12*gam^2*f-24*gam*d*e-4*d^3-6*f^2,
+    14	a22*B^2*e+2*a22*B*C*d+2*a22*B*D*gam+2*a22*B*E*b+2*a22*B*G+a22*C^2*gam+2*a22*C*D*b+2*a22*C*F+2*a22*D*E+2*a22*D*f+2*a22*E*e+2*a22*F*d+2*a22*G*gam+2*a20*B*b*d+a20*B*gam^2+2*a20*B*f+2*a20*C*b*gam+2*a20*C*e+a20*D*b^2+2*a20*D*d+2*a20*E*gam+2*a20*F*b+2*a20*gam*f+2*a20*d*e+3*a18*b^2*gam+6*a18*b*e+6*a18*gam*d+2*a16*D+a14*B+a14*gam+3*B^2*F+6*B*C*E+3*B*D^2+3*C^2*D+6*D*G+6*E*F-12*b^2*gam*f-12*b^2*d*e-12*b*gam^2*e-12*b*gam*d^2-24*b*e*f-4*gam^3*d-24*gam*d*f-12*gam*e^2-12*d^2*e,
+    15	a22*B^2*f+2*a22*B*C*e+2*a22*B*D*d+2*a22*B*E*gam+2*a22*B*F*b+a22*C^2*d+2*a22*C*D*gam+2*a22*C*E*b+2*a22*C*G+a22*D^2*b+2*a22*D*F+a22*E^2+2*a22*E*f+2*a22*F*e+2*a22*G*d+2*a20*B*b*e+2*a20*B*gam*d+2*a20*C*b*d+a20*C*gam^2+2*a20*C*f+2*a20*D*b*gam+2*a20*D*e+a20*E*b^2+2*a20*E*d+2*a20*F*gam+2*a20*G*b+2*a20*d*f+a20*e^2+3*a18*b^2*d+3*a18*b*gam^2+6*a18*b*f+6*a18*gam*e+3*a18*d^2+a16*B^2+2*a16*E+a14*C+a14*d+2*a12*b+3*B^2*G+6*B*C*F+6*B*D*E+3*C^2*E+3*C*D^2+6*E*G+3*F^2-12*b^2*d*f-6*b^2*e^2-12*b*gam^2*f-24*b*gam*d*e-4*b*d^3-12*b*f^2-4*gam^3*e-6*gam^2*d^2-24*gam*e*f-12*d^2*f-12*d*e^2,
+    16	2*a22*B*C*f+2*a22*B*D*e+2*a22*B*E*d+2*a22*B*F*gam+2*a22*B*G*b+a22*C^2*e+2*a22*C*D*d+2*a22*C*E*gam+2*a22*C*F*b+a22*D^2*gam+2*a22*D*E*b+2*a22*D*G+2*a22*E*F+2*a22*F*f+2*a22*G*e+2*a20*B*b*f+2*a20*B*gam*e+a20*B*d^2+2*a20*C*b*e+2*a20*C*gam*d+2*a20*D*b*d+a20*D*gam^2+2*a20*D*f+2*a20*E*b*gam+2*a20*E*e+a20*F*b^2+2*a20*F*d+2*a20*G*gam+2*a20*e*f+3*a18*b^2*e+6*a18*b*gam*d+a18*gam^3+6*a18*gam*f+6*a18*d*e+2*a16*B*C+2*a16*F+a14*B*b+a14*D+a14*e+2*a12*gam+6*B*C*G+6*B*D*F+3*B*E^2+3*C^2*F+6*C*D*E+D^3+6*F*G-12*b^2*e*f-24*b*gam*d*f-12*b*gam*e^2-12*b*d^2*e-4*gam^3*f-12*gam^2*d*e-4*gam*d^3-12*gam*f^2-24*d*e*f-4*e^3,
+    17	2*a22*B*D*f+2*a22*B*E*e+2*a22*B*F*d+2*a22*B*G*gam+a22*C^2*f+2*a22*C*D*e+2*a22*C*E*d+2*a22*C*F*gam+2*a22*C*G*b+a22*D^2*d+2*a22*D*E*gam+2*a22*D*F*b+a22*E^2*b+2*a22*E*G+a22*F^2+2*a22*G*f+2*a20*B*gam*f+2*a20*B*d*e+2*a20*C*b*f+2*a20*C*gam*e+a20*C*d^2+2*a20*D*b*e+2*a20*D*gam*d+2*a20*E*b*d+a20*E*gam^2+2*a20*E*f+2*a20*F*b*gam+2*a20*F*e+a20*G*b^2+2*a20*G*d+a20*f^2+3*a18*b^2*f+6*a18*b*gam*e+3*a18*b*d^2+3*a18*gam^2*d+6*a18*d*f+3*a18*e^2+2*a16*B*D+a16*C^2+2*a16*G+a14*B*gam+a14*C*b+a14*E+a14*f+a12*b^2+2*a12*d+a8+6*B*D*G+6*B*E*F+3*C^2*G+6*C*D*F+3*C*E^2+3*D^2*E+3*G^2-6*b^2*f^2-24*b*gam*e*f-12*b*d^2*f-12*b*d*e^2-12*gam^2*d*f-6*gam^2*e^2-12*gam*d^2*e-d^4-12*d*f^2-12*e^2*f,
+    18	2*a22*B*E*f+2*a22*B*F*e+2*a22*B*G*d+2*a22*C*D*f+2*a22*C*E*e+2*a22*C*F*d+2*a22*C*G*gam+a22*D^2*e+2*a22*D*E*d+2*a22*D*F*gam+2*a22*D*G*b+a22*E^2*gam+2*a22*E*F*b+2*a22*F*G+2*a20*B*d*f+a20*B*e^2+2*a20*C*gam*f+2*a20*C*d*e+2*a20*D*b*f+2*a20*D*gam*e+a20*D*d^2+2*a20*E*b*e+2*a20*E*gam*d+2*a20*F*b*d+a20*F*gam^2+2*a20*F*f+2*a20*G*b*gam+2*a20*G*e+6*a18*b*gam*f+6*a18*b*d*e+3*a18*gam^2*e+3*a18*gam*d^2+6*a18*e*f+2*a16*B*E+2*a16*C*D+a14*B*d+a14*C*gam+a14*D*b+a14*F+2*a12*b*gam+2*a12*e+6*B*E*G+3*B*F^2+6*C*D*G+6*C*E*F+3*D^2*F+3*D*E^2-12*b*gam*f^2-24*b*d*e*f-4*b*e^3-12*gam^2*e*f-12*gam*d^2*f-12*gam*d*e^2-4*d^3*e-12*e*f^2,
+    19	2*a22*B*F*f+2*a22*B*G*e+2*a22*C*E*f+2*a22*C*F*e+2*a22*C*G*d+a22*D^2*f+2*a22*D*E*e+2*a22*D*F*d+2*a22*D*G*gam+a22*E^2*d+2*a22*E*F*gam+2*a22*E*G*b+a22*F^2*b+a22*G^2+2*a20*B*e*f+2*a20*C*d*f+a20*C*e^2+2*a20*D*gam*f+2*a20*D*d*e+2*a20*E*b*f+2*a20*E*gam*e+a20*E*d^2+2*a20*F*b*e+2*a20*F*gam*d+2*a20*G*b*d+a20*G*gam^2+2*a20*G*f+6*a18*b*d*f+3*a18*b*e^2+3*a18*gam^2*f+6*a18*gam*d*e+a18*d^3+3*a18*f^2+2*a16*B*F+2*a16*C*E+a16*D^2+a14*B*e+a14*C*d+a14*D*gam+a14*E*b+a14*G+2*a12*b*d+a12*gam^2+2*a12*f+a6+6*B*F*G+6*C*E*G+3*C*F^2+3*D^2*G+6*D*E*F+E^3-12*b*d*f^2-12*b*e^2*f-6*gam^2*f^2-24*gam*d*e*f-4*gam*e^3-4*d^3*f-6*d^2*e^2-4*f^3,
+    20	2*a22*B*G*f+2*a22*C*F*f+2*a22*C*G*e+2*a22*D*E*f+2*a22*D*F*e+2*a22*D*G*d+a22*E^2*e+2*a22*E*F*d+2*a22*E*G*gam+a22*F^2*gam+2*a22*F*G*b+a20*B*f^2+2*a20*C*e*f+2*a20*D*d*f+a20*D*e^2+2*a20*E*gam*f+2*a20*E*d*e+2*a20*F*b*f+2*a20*F*gam*e+a20*F*d^2+2*a20*G*b*e+2*a20*G*gam*d+6*a18*b*e*f+6*a18*gam*d*f+3*a18*gam*e^2+3*a18*d^2*e+2*a16*B*G+2*a16*C*F+2*a16*D*E+a14*B*f+a14*C*e+a14*D*d+a14*E*gam+a14*F*b+2*a12*b*e+2*a12*gam*d+a8*B+3*B*G^2+6*C*F*G+6*D*E*G+3*D*F^2+3*E^2*F-12*b*e*f^2-12*gam*d*f^2-12*gam*e^2*f-12*d^2*e*f-4*d*e^3,
+    21	2*a22*C*G*f+2*a22*D*F*f+2*a22*D*G*e+a22*E^2*f+2*a22*E*F*e+2*a22*E*G*d+a22*F^2*d+2*a22*F*G*gam+a22*G^2*b+a20*C*f^2+2*a20*D*e*f+2*a20*E*d*f+a20*E*e^2+2*a20*F*gam*f+2*a20*F*d*e+2*a20*G*b*f+2*a20*G*gam*e+a20*G*d^2+3*a18*b*f^2+6*a18*gam*e*f+3*a18*d^2*f+3*a18*d*e^2+2*a16*C*G+2*a16*D*F+a16*E^2+a14*C*f+a14*D*e+a14*E*d+a14*F*gam+a14*G*b+2*a12*b*f+2*a12*gam*e+a12*d^2+a8*C+a6*b+3*C*G^2+6*D*F*G+3*E^2*G+3*E*F^2-4*b*f^3-12*gam*e*f^2-6*d^2*f^2-12*d*e^2*f-e^4,
+    22	2*a22*D*G*f*u+2*a22*E*F*f*u+2*a22*E*G*e*u+a22*F^2*e*u+2*a22*F*G*d*u+a22*G^2*gam*u+a20*D*f^2*u+2*a20*E*e*f*u+2*a20*F*d*f*u+a20*F*e^2*u+2*a20*G*gam*f*u+2*a20*G*d*e*u+3*a18*gam*f^2*u+6*a18*d*e*f*u+a18*e^3*u+2*a16*D*G*u+2*a16*E*F*u+a14*D*f*u+a14*E*e*u+a14*F*d*u+a14*G*gam*u+2*a12*gam*f*u+2*a12*d*e*u+a8*D*u+a6*gam*u+3*D*G^2*u+6*E*F*G*u+F^3*u-4*gam*f^3*u-12*d*e*f^2*u-4*e^3*f*u-1
+     1	-- corrected_863.m2
+     2	-- corrected Delta=(8,6,3) incidence
+     3	-- CONVENTION: GROBNER-mode output basis=[1] means UNIT IDEAL means EMPTY.
+     4	-- Companion .ms file is comment-free: msolve parses the first line as the
+     5	-- variable list (campaign 2026-08-24 in-band-comment hazard).
+     6	-- M2 is authoritative. Footguns observed: diff(var,poly); first degree;
+     7	-- no pi as a variable; name maps before applying; close stdin (exit 0).
+     8	-- No saturate(). Opens are Rabinowitsch. Rings asserted.
+     9	-- Corrected (8,6,3) incidence ideal, audit r2 §7.1.
+    10	-- G86 = p^3-q^4 + a22 p^2 q + a20 p q^2 + a18 q^3 + a16 p^2 + a14 p q + a12 q^2 + a8 p + a6 q.
+    11	-- Closed: g_j = [t^j] G86 = 0 for j=4..22 (all degrees, not raw odds).
+    12	-- Open: u*g_3-1. Chart identities: g_23=0 automatically.
+    13	-- I_DP post-check length N=delta_aff=7 is not in this Groebner job.
+    14	-- Moh-check I_29 in the CORRECTED (reduced) form: g_22..g_4 and open g_3.
+    15	
+    16	R0 = QQ[a22, a20, a18, a16, a14, a12, a8, a6, B, C, D, E, F, G, b, gam, d, e, f, MonomialOrder => GRevLex];
+    17	assert(isPolynomialRing R0);
+    18	assert(numgens R0 == 19);
+    19	assert(coefficientRing R0 === QQ);
+    20	
+    21	St = R0[symbol t];
+    22	assert(numgens St == 1);
+    23	use St;
+    24	p = t^8 + B*t^5 + C*t^4 + D*t^3 + E*t^2 + F*t + G;
+    25	q = t^6 + b*t^4 + gam*t^3 + d*t^2 + e*t + f;
+    26	G86poly = p^3 - q^4 + a22*p^2*q + a20*p*q^2 + a18*q^3 + a16*p^2 + a14*p*q + a12*q^2 + a8*p + a6*q;
+    27	
+    28	-- Name the ring map before applying (footgun: unnamed maps).
+    29	killt = map(R0, St, {0_R0});
+    30	assert(killt(t) == 0_R0);
+    31	
+    32	gj = (j) -> coefficient(t^j, G86poly);
+    33	closedIdx = {22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4};
+    34	closedGens = apply(closedIdx, j -> gj(j));
+    35	I0 = ideal closedGens;
+    36	assert(ring I0 === R0);
+    37	gopen = gj(3);
+    38	use R0;
+    39	assert(ring gopen === R0);
+    40	R = R0[u];
+    41	assert(numgens R == 1);
+    42	Iopen = sub(I0, R) + ideal(sub(gopen, R)*u - 1);
+    43	assert(ring Iopen === R);
+    44	
+    45	Cover0 = ideal(B, D, F, gam, e);
+    46	assert(ring Cover0 === R0);
+    47	Cover = sub(Cover0, R);
+    48	assert(ring Cover === R);
+    49	
+    50	colonInf = (I, J) -> (
+    51	  assert(ring I === ring J);
+    52	  K := I;
+    53	  npass := 0;
+    54	  while true do (
+    55	    npass = npass + 1;
+    56	    if npass > 50 then error "colonInf: exceeded 50 passes";
+    57	    Knext := K : J;
+    58	    assert(ring Knext === ring I);
+    59	    if Knext == K then break;
+    60	    K = Knext;
+    61	  );
+    62	  K
+    63	);
+    64	
+    65	Icolon = colonInf(Iopen, Cover);
+    66	assert(ring Icolon === R);
+    67	
+    68	-- immersive open: Res_t(p', q') != 0. diff(var, poly) argument order.
+    69	dp = diff(t, p);
+    70	dq = diff(t, q);
+    71	resSt = resultant(dp, dq, t);
+    72	res0 = killt(resSt);
+    73	assert(ring res0 === R0);
+    74	Rv = R0[u, v];
+    75	Iimm = sub(I0, Rv) + ideal(sub(gopen, Rv)*u - 1, sub(res0, Rv)*v - 1);
+    76	assert(ring Iimm === Rv);
+    77	IimmColon = colonInf(Iimm, sub(Cover0, Rv));
+    78	assert(ring IimmColon === Rv);
+    79	
+    80	<< "=== corrected_863 dim Iopen " << dim Iopen << endl;
+    81	<< "=== corrected_863 dim Icolon " << dim Icolon << endl;
+    82	<< "=== corrected_863 dim IimmColon " << dim IimmColon << endl;
+    83	Gb = gens gb Iopen;
+    84	<< "=== corrected_863 gb Iopen " << Gb << endl;
+    85	if Iopen == ideal(1_R) then << "=== corrected_863 EMPTY" << endl else << "=== corrected_863 NONEMPTY" << endl;
+    86	-- GROBNER-mode companion: basis=[1] means UNIT IDEAL means EMPTY.
+    87	exit 0
+
+codex
+The M2 file is visibly patched relative to the codegen report: the codegen’s recorded M2 hash is not the as-run hash, while the user-supplied as-run hash matches. I’m now checking the mathematical content of that patched file, not treating the stale codegen hash as a defect by itself.
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md | sed -n '180,253p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   180	`h_21=0`, reduction of the degree-22 term gives
+   181	
+   182	```text
+   183	bar_h_19 = h_19 + 4*b*(2*B+gamma),
+   184	```
+   185	
+   186	in the normalization used here.  Thus `h_19=0` is not an off-by-one
+   187	version of the right equation; it is the wrong, unreduced coefficient.
+   188	
+   189	## 4. Extraction and audit of the six generated ideals
+   190	
+   191	The frozen generators are unambiguous (MSOLVE-PREP lines 140--655):
+   192	
+   193	| job | frozen closed equations and open | reported suite state | encoding verdict |
+   194	|---|---|---|---|
+   195	| `type86_A` | raw `h_21,...,h_13=0`; raw `h_11!=0` | NONEMPTY | **UNFAITHFUL** |
+   196	| `type86_B` | raw `h_21,...,h_11=0`; raw `h_9!=0` | NONEMPTY | **UNFAITHFUL** |
+   197	| `type86_C` | raw `h_21,...,h_9=0`; raw `h_7!=0` | pending/timeout | **UNFAITHFUL** |
+   198	| `type86_D` | raw `h_21,...,h_5=0`; raw `h_3!=0` | pending/timeout | **UNFAITHFUL** |
+   199	| `type96_A` | raw `k_16,...,k_5=0`; raw `k_4!=0` | EMPTY in both engines | **UNFAITHFUL** |
+   200	| `type96_B` | raw `k_16,...,k_3=0`; raw `k_2!=0` | EMPTY in both engines | **UNFAITHFUL** |
+   201	
+   202	For the four `(8,6)` jobs, the raw odd coefficients are taken before the
+   203	even pole-order terms have been reduced.  The charged witness below is an
+   204	actual false positive for A.  The same algebra affects every later level;
+   205	B's charged sliced points have the same `delta_inf=6` symptom.  In addition,
+   206	the B/C/D specs omit the reduced gap-degree-10 equation and D omits the
+   207	reduced gap-degree-4 equation.  This is neither a harmless index shift nor a
+   208	missing Rabinowitsch inverse.
+   209	
+   210	The omitted equations are independent triangular obstructions, not optional
+   211	normalizations.  Once the coefficient of every available semigroup monomial
+   212	has been solved at its leading weight, degrees 10 and 4 remain because
+   213	`10,4` are gaps of `<8,6>`; no later auxiliary monomial can absorb either
+   214	coefficient.  The later raw equations `h_7,h_5,h_3` inspect different
+   215	coefficients before that reduction and cannot replace these gap equations.
+   216	There is also a small exact counterpoint for C.  Choose `gamma != 0`, put
+   217	
+   218	```text
+   219	b=d=e=D=0,       B=4*gamma/3,       E=-B^2,
+   220	f=-107*gamma^2/81,  F=-2*B*C,       G=3*C^2/2,
+   221	C^3=-1648*gamma^4/10935.
+   222	```
+   223	
+   224	Then direct substitution gives `h_21=...=h_9=0` and
+   225	`h_7=15*B^3*C^2 != 0`, so this is an old-C characteristic point.  But
+   226	`h_20=3C`; after the compulsory cancellation `G86=H-3C*p*q^2+...`, its
+   227	degree-17 coefficient is `-3C(B+2gamma)=-10C*gamma != 0`.  Thus even C's
+   228	later raw vanishings do not repair the high-level reduction error.
+   229	
+   230	There is an equally explicit D counterpoint.  Over `K=QQ(s)`, `s^2=201`, set
+   231	
+   232	```text
+   233	gamma=1, B=4/3, E=(s-5)/27, f=(2s-21)/81,
+   234	C=D=F=G=b=d=e=0.
+   235	```
+   236	
+   237	With `u=t^3`, one has `p=t^2*(u^2+B*u+E)` and `q=u^2+u+f`, so `H` has only
+   238	degrees divisible by 3.  The only closed D equations not automatic by
+   239	support are
+   240	
+   241	```text
+   242	h_21=3B-4=0,
+   243	h_15=B^3-4+6BE-12f=0,
+   244	h_9=4E^2-12f^2-4f=0;
+   245	```
+   246	
+   247	the last two follow from `2E-3f=11/27` and
+   248	`E^2-3f^2-f=0`.  Meanwhile `h_3=-4f^3 != 0`, so the old D open holds.
+   249	But `h_22=h_20=0` while
+   250	`h_18=3(E+B^2)-(6+4f)=(s-15)/81 != 0`.  Correct reduction therefore sets
+   251	`a18=-h_18`; since `[t^15]q^3=3` and no other remaining auxiliary term has
+   252	degree 15, `g_15=-3h_18 != 0`.  Thus D too has a witnessed false positive,
+   253	independently of its omitted necessary gap residuals at 10 and 4.
+
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md | sed -n '281,456p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   281	## 5. Exact desk check of the charged type86_A witness
+   282	
+   283	Let `zeta^2-zeta+18474=0`.  Reading the eleven values in the chart order
+   284	`(B,C,D,E,F,G,b,gamma,d,e,f)` gives
+   285	
+   286	```text
+   287	p=t^8+t^5+(294-zeta)/144*t^3+(150-zeta)/48*t,
+   288	q=t^6+t^4+3/4*t^3+t^2-(138+zeta)/192*t+(2*zeta-71)/144.
+   289	```
+   290	
+   291	The two roots of the quadratic give coefficient-conjugate curves, not two
+   292	places.  Direct substitution, using `zeta^2=zeta-18474`, gives
+   293	
+   294	```text
+   295	h_21=h_19=h_17=h_15=h_13=0,
+   296	h_11=(355746-27671*zeta)/110592 != 0.
+   297	```
+   298	
+   299	For instance `h_19=-9+3D-4e=0`; the irrationality of `zeta` proves the
+   300	displayed `h_11` is nonzero.  Thus this is genuinely a point of the old A
+   301	locus, not a variable-order accident.
+   302	
+   303	Now reduce rather than merely inspect `H=p^3-q^4`.  Its leading coefficients
+   304	at this point are
+   305	
+   306	```text
+   307	h_22=-4, h_21=0, h_20=-10, h_19=0.
+   308	```
+   309	
+   310	The first two standard monomials have pole degrees 22 and 20, so put
+   311	
+   312	```text
+   313	R=H+4*p^2*q+6*p*q^2.
+   314	```
+   315	
+   316	Degrees 22, 21 and 20 cancel, whereas
+   317	
+   318	```text
+   319	[t^19]R=h_19+4*(2B+gamma)=0+4*(2+3/4)=11.
+   320	```
+   321	
+   322	Therefore the reduced second approximate root has degree `c=19`, not 11.
+   323	This single calculation exhibits the exact semantic bug.
+   324	
+   325	For an independent local check let `s=t^-1`,
+   326	
+   327	```text
+   328	P=s^8 p(s^-1)=1+s^3+D*s^5+F*s^7,
+   329	Q=s^6 q(s^-1)=1+s^2+3/4*s^3+s^4+e*s^5+f*s^6,
+   330	x=q/p=s^2 Q/P,                 y=1/p=s^8/P.
+   331	```
+   332	
+   333	Expansion only through the deciding order gives
+   334	
+   335	```text
+   336	x=s^2+s^4-1/4*s^5+s^6+(e-1-D)*s^7+O(s^8),
+   337	y=s^8-s^11-D*s^13+O(s^14).
+   338	```
+   339	
+   340	The analytic Tschirnhausen coordinate
+   341	
+   342	```text
+   343	y_star=y-x^4+4*x^5-10*x^6
+   344	```
+   345	
+   346	satisfies
+   347	
+   348	```text
+   349	y_star=(2+3D-4e)*s^13+O(s^14)=11*s^13+O(s^14).
+   350	```
+   351	
+   352	After replacing `s` by the unique uniformizer with `x=r^2`, the branch is
+   353	`(x,y_star)=(r^2,11r^13+...)`.  It is irreducible with one Puiseux pair
+   354	`(2,13)`: `beta_1=13`, `delta_inf=(2-1)(13-1)/2=6`, and
+   355	`Delta=(8,6,32-13)=(8,6,19)`.
+   356	
+   357	Properness is also desk-visible.  A nontrivial common right component would
+   358	have degree two.  Write a normalized quadratic as `phi=t^2+a*t+c`.  The
+   359	missing `t^7` coefficient of `p=P(phi)` forces `a=0`, after which `P(phi)`
+   360	is even, contradicting the nonzero `t^5` coefficient of `p`.  Hence the map
+   361	is birational.  Only `t=infinity` maps to the infinity line, so there is one
+   362	physical place.  The `+/-r` series are conjugates of that branch.
+   363	
+   364	Conditioning on the charged machine statement of fifteen ordinary affine
+   365	nodes, the genus check is exact:
+   366	
+   367	```text
+   368	p_a(degree 8)=21=delta_aff 15+delta_inf 6.
+   369	```
+   370	
+   371	The frozen witness file itself is only a coefficient payload: line 6 says
+   372	`Nexpected=3` (neither 11 nor 15) and it contains no postcheck output.
+   373	Accordingly this audit verifies the infinity/genus split, but does not claim
+   374	that those eight lines alone replay the reduced degree-30 ordered scheme.
+   375	
+   376	## 6. Per-ideal faithfulness verdicts and exact corrections
+   377	
+   378	All six ideals are **UNFAITHFUL** to their advertised exhaustive meaning.
+   379	For A/B the error admits false positives; for 96A/96B it cuts to a strict
+   380	slice and admits false negatives; C/D inherit the A/B construction before
+   381	their computations finish.  The exact replacements are specified in 7.1.
+   382	
+   383	| job | typed audit finding |
+   384	|---|---|
+   385	| `type86_A` | **UNFAITHFUL, witnessed false positive.** The charged point passes every raw generator/open but has `Delta=(8,6,19)`. |
+   386	| `type86_B` | **UNFAITHFUL.** Its raw equations make the same unreduced substitution; the charged sliced points' `delta_inf=6` are consistent with the same actual `c=19`, not target `c=9`. |
+   387	| `type86_C` | **UNFAITHFUL before computation.** The exact characteristic-base counterpoint in Section 4 passes old C but has a nonzero corrected degree-17 residual; replace the raw equations and add degree 10. |
+   388	| `type86_D` | **UNFAITHFUL before computation.** The Section 4 characteristic-base point passes old D but has corrected `g_15!=0`; the raw list also omits gap residuals at 10 and 4. |
+   389	| `type96_A` | **UNFAITHFUL strict slice.** EMPTY kills only the slice `a15=a12=a9=a6=0`, not the full type. |
+   390	| `type96_B` | **UNFAITHFUL strict slice.** The same; in fact an exact four-node realization exists below. |
+   391	
+   392	Two supplementary formulas already on disk give useful exact negative
+   393	controls for the old `(9,6)` EMPTY interpretation.  They are reproduced here
+   394	so the conclusion does not depend on a label in those reports.
+   395	
+   396	For `(9,6,4)`, put
+   397	
+   398	```text
+   399	p=t^9+3t^7+21/4*t^5+35/8*t^3+63/32*t,
+   400	q0=t^6+2t^4+5/2*t^2,                  y=q0+3/4.
+   401	```
+   402	
+   403	The identity recorded and coefficient-checkable at
+   404	`xmodel/hf-twin-964-grok46-20260831.md:109-133` is
+   405	
+   406	```text
+   407	y^3-p^2=27/1024*(8t^4+13t^2+16).
+   408	```
+   409	
+   410	Hence, in the **shared constant-zero chart**,
+   411	
+   412	```text
+   413	p^2-q0^3-(9/4)q0^2-(27/16)q0-27/64
+   414	  =-27/1024*(8t^4+13t^2+16).
+   415	```
+   416	
+   417	This is a proper corrected-locus point of exact degree 4, while raw
+   418	`p^2-q0^3` has degree 12.  It also passes the affine-immersion open.  With
+   419	`z=t^2`,
+   420	
+   421	```text
+   422	q0'=t*(6z^2+8z+5),
+   423	p' mod (6z^2+8z+5)=-27z/8-117/32.
+   424	```
+   425	
+   426	The latter can vanish only at `z=-13/12`, where the quadratic has value
+   427	`27/8`, and `p'(0)=63/32`; hence `p',q0'` have no common root.  Exact
+   428	degree 4 together with `gcd(9,6,4)=1` also rules out a common right
+   429	component.  Thus the full corrected open is already NONEMPTY.
+   430	The cited desk analysis proves four nodes and leaves affine delta two as
+   431	either two more nodes or one `A_3` (`ibid.:135-157`), so it does not by
+   432	itself settle the six-node realization question.
+   433	
+   434	For `(9,6,2)`, put
+   435	
+   436	```text
+   437	q=t^6+8t^2,                 p=t^9+12t^5+24t,
+   438	p^2-q^3-64q=64t^2.
+   439	```
+   440	
+   441	This lies in the shared chart and is proper: the identity recovers `t^2`,
+   442	then `t=p/(t^8+12t^4+24)`.  Its infinity type is therefore
+   443	`Delta=(9,6,2)`, `beta_1=25`, `delta_inf=24`, so `delta_aff=28-24=4`.
+   444	Let `w=t^4`.  Each of the two nonzero simple roots of
+   445	`w^2+12w+24` yields two pairs `{t,-t}`, one for each sign of `t^2`.
+   446	Within a fixed `w` those two pair-images have opposite nonzero
+   447	`q=t^2(w+8)`, while
+   448	`q^2=w*(w+8)^2=-8*(w+12)` distinguishes the two `w`-families.  Thus all
+   449	four images are distinct.  At them
+   450	
+   451	```text
+   452	p'=8w(w+6) != 0,             q'=2t(3w+8) != 0,
+   453	```
+   454	
+   455	and the velocities at `t,-t` have nonzero determinant.  They are four
+   456	ordinary nodes.  Since they exhaust `delta_aff=4`, there are no omitted
+
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md | sed -n '520,550p'" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "rg -n \"p = t\\"'^8|q = t'"\\"'^6|eleven|chart order|B,C,D,E,F,G,b|monic|NR chart|normal" /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   520	| `(8,6,3)` | pending | **OPEN / RECOMPUTE** | stop old job; corrected D, then length 7 |
+   521	| `(9,6,4)` | **KILLED** by raw EMPTY | corrected locus **NONEMPTY**, nodal status **OPEN** | apply length-6 postcheck/search on corrected locus |
+   522	| `(9,6,2)` | **KILLED** by raw EMPTY | **REALIZED** by the exact four-node curve in Section 6 | corrected job only as a regression control |
+   523	
+   524	Accordingly neither `(9,6)` KILL survives.  Neither raw `(8,6)` NONEMPTY
+   525	result says that its named corrected locus is nonempty.  The pending C/D
+   526	computations target the wrong ideals and cannot acquire a typed verdict by
+   527	finishing.  The only final realization verdict available after this audit is
+   528	the positive `(9,6,2)` witness; the other five advertised nodal types remain
+   529	OPEN at their stated scopes.
+   530	
+   531	## 8. Guardrail checks, limitations, and final status
+   532	
+   533	- **Flag/place/series:** the report never turns Puiseux conjugates, field
+   534	  embeddings, or `gcd(d,n)` into physical places.  The witness has one place.
+   535	- **Raw remainder degree:** every promoted type statement uses the reduced
+   536	  second approximate root; zero, vanished leaders, semigroup reductions and
+   537	  gap degrees 10/4 are explicit.
+   538	- **Variable/ring map:** the eleven-value witness order is declared, and the
+   539	  corrected jobs are incidence ideals in the frozen coefficient rings with
+   540	  named auxiliary coefficients.  Matching variable names are not used as a
+   541	  map proof.
+   542	- **Open and `sat()` discipline:** opens are Rabinowitsch equations on the
+   543	  corrected leading coefficient.  Colon/resultant operations are not allowed
+   544	  to change the semantic meaning of the base ideal.
+   545	- **Floor/attainment:** corrected NONEMPTY for `(9,6,4)` is not promoted to a
+   546	  nodal witness.  `(9,6,2)` is promoted only because four explicit transverse
+   547	  pairs exhaust the independently computed affine delta.
+   548	- **Evidence custody:** the charged A payload contains no 15-node transcript
+   549	  and has `Nexpected=3`; its nodality is consumed only as the charge states it.
+   550	  The infinity calculation is independently exact.
+
+ succeeded in 0ms:
+78:- a *place* is a normalization point over the line at infinity;
+111:Define the **normalized** coefficients
+127:alone.  For reference, the **local** normalized-series dictionary is
+171:component of `p,q`; the displayed parameter is then the normalization
+186:in the normalization used here.  Thus `h_19=0` is not an off-by-one
+211:normalizations.  Once the coefficient of every available semigroup monomial
+283:Let `zeta^2-zeta+18474=0`.  Reading the eleven values in the chart order
+284:`(B,C,D,E,F,G,b,gamma,d,e,f)` gives
+358:have degree two.  Write a normalized quadratic as `phi=t^2+a*t+c`.  The
+499:Their independent corrected equation counts in the eleven chart variables
+538:- **Variable/ring map:** the eleven-value witness order is declared, and the
+
+exec
+/bin/zsh -lc "rg -n \"corrected_863.m2|411b|a6c7|patched|coordinator|tower|killt|coefficient\\(\" /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:211:a6c7e647316f6546145a855b4f8ee972a188f5a2db1171304f5f032c7beff937  box/corrected_863.m2
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md:228:- **Variable/ring map:** charts and auxiliary names are declared; M2 names `killt` before applying it; matching names are not used as a map proof.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:15:763eec05eb6bc00f1c13e6ff25c2b275ef3c97f20a22e6ba34621244981c56c9  block-descent-a1-alldegree-h2-coordinator-integration-fable5-20260901.md
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md:277:meaning.  The coordinator's warning that NONEMPTY remained provisional
+
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md | sed -n '1,89p'" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md | sed -n '1,61p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     1	# CORRECTED-SUITE-CODEGEN — faithful characteristic ideals as runnable jobs
+     2	
+     3	Lane: `CORRECTED-SUITE-CODEGEN`. Date: 2026-09-01. Agent: grok-4.6.
+     4	
+     5	Status: SEALED — jobs emitted; three self-checks PASS; no Groebner run.
+     6	
+     7	## 0. Custody, hashes, method
+     8	
+     9	Charged frozen copies were hashed with `shasum -a 256` before they were read. Both match the charge exactly:
+    10	
+    11	```text
+    12	a3c7137cdb2cf46c7d9026cfbcba54b0b6e5b47a6ef36ad7ee2976a905c8b196
+    13	  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.g8GxQ4/inputs/encoding-faithfulness-audit-r2-sol56-20260901.md
+    14	c4ee11caa6e5b37e1c7b3a3089709b98d3e07612eee2913418c183195d756c7f
+    15	  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.g8GxQ4/inputs/moh-check-863-grok46-20260901.md
+    16	```
+    17	
+    18	Workspace copies of the same bytes (identically hashed) are used below for readable paths. This lane transcribes the audit's Section 7.1 incidence systems into msolve GROBNER-mode inputs and Macaulay2 mirrors. It does not run msolve or M2 Groebner bases. Coefficient polynomials and the three required self-checks are exact sympy expansions / substitutions (desk-scale). Canonical ledgers and `jc2-lean` were not inspected. No exit-price claim is made.
+    19	
+    20	msolve input discipline, locked to campaign hazards: first line is the variable list (no in-band comment before it: that parses as one variable); characteristic `0`; expanded monomial sums; no parentheses; one occurrence of each monomial; last generator has no trailing comma; POSIX text with one trailing newline. GROBNER-mode convention, written in every M2 header and restated here because it cannot appear as an in-band `.ms` comment without breaking the parser: **output `basis=[1]` means the unit ideal means EMPTY**.
+    21	
+    22	M2 footguns observed: `diff(var, poly)` argument order; `first degree`; no `pi` as a variable (`Pi` if the double-point scheme is built); name a ring map before applying it; close stdin with `exit 0`.
+    23	
+    24	## 1. File inventory and priority
+    25	
+    26	Five types, ten job files, under `box/`. M2 is authoritative (constructs `G86`/`G96` in the polynomial ring and extracts `[t^j]`). Each `.ms` file is the expanded unique-monomial list of those same coefficients plus the Rabinowitsch open. GROBNER-mode: `basis=[1]` means unit ideal means EMPTY.
+    27	
+    28	| priority | file stem | `Delta` | audit job | closed `g_j` | open | `.ms` gens | archival |
+    29	|---|---|---|---|---|---|---:|---|
+    30	| P1 | `corrected_863` | `(8,6,3)` | D / corrected `I_29` | `g_22..g_4` | `u g_3-1` | 20 | no |
+    31	| P2 | `corrected_869` | `(8,6,9)` | B | `g_22..g_10` | `u g_9-1` | 14 | no |
+    32	| P3 | `corrected_964` | `(9,6,4)` | 96A + six-node | `g_16..g_5` | `u g_4-1` | 13 | no |
+    33	| P4 | `corrected_8611` | `(8,6,11)` | A | `g_22..g_12` | `u g_11-1` | 12 | **yes** |
+    34	| P4 | `corrected_867` | `(8,6,7)` | C | `g_22..g_8` | `u g_7-1` | 16 | **yes** |
+    35	
+    36	`(9,6,2)` is REALIZED (audit §6) and is not a job; it is self-check (ii) only. P4 files carry an `ARCHIVAL / LOWEST PRIORITY` header: rep-level dead, do not consume P1–P3 AWS time.
+    37	
+    38	msolve variable order (grevlex, first listed largest): auxiliaries, then the eleven chart coefficients, then `u`. Cover colon and `Res(p',q')` are M2-side only, as in MSOLVE-PREP: extra slack variables would turn a 0-dimensional coefficient point positive-dimensional.
+    39	
+    40	## 2. Census: `delta_aff=6` for `(9,6,4)`
+    41	
+    42	Audit §3 conversions, recomputed here from the displayed formulae (not from a prior validator):
+    43	
+    44	```text
+    45	(8,6): beta_1 = 32-c,  delta_inf = (beta_1-1)/2,  p_a(8)=21,  delta_aff = 21 - delta_inf
+    46	(9,6): beta_1 = 27-c,  delta_inf = beta_1-1,      p_a(9)=28,  delta_aff = 28 - delta_inf
+    47	```
+    48	
+    49	| `Delta` | `beta_1` | `delta_inf` | `delta_aff` | audit 7.1 `N` |
+    50	|---|---:|---:|---:|---:|
+    51	| `(8,6,11)` | 21 | 10 | 11 | 11 |
+    52	| `(8,6,9)` | 23 | 11 | 10 | 10 |
+    53	| `(8,6,7)` | 25 | 12 | 9 | 9 |
+    54	| `(8,6,3)` | 29 | 14 | 7 | 7 |
+    55	| `(9,6,4)` | 23 | 22 | **6** | **6** |
+    56	| `(9,6,2)` | 25 | 24 | 4 | 4 |
+    57	
+    58	For `(9,6,4)`: `beta_1=27-4=23`, `delta_inf=22`, `delta_aff=28-22=6`. This matches the audit table `N=11,10,9,7,6,4`, the NR gap count of `⟨4,6,9⟩` (six gaps), and the HF-twin `Δ_aff=6`. Encoded as `idpPostcheck(p0,q0,6)` in `corrected_964.m2`.
+    59	
+    60	Moh-check coefficient count (raw `I_29`): after the NR chart, nine coefficients remain and ten odd vanishings `h_23..h_5` are imposed, `h_23` already spent. That is the unfaithful raw job. The corrected D job below is the same FSY/Moh finite system after even pole-order reduction, including gap residuals at degrees 10 and 4.
+    61	
+
+ succeeded in 0ms:
+     1	# Encoding-faithfulness audit: six characteristic ideals
+     2	
+     3	**Status:** SEALED — encoding audit closed; five nodal types OPEN and `(9,6,2)` REALIZED.
+     4	
+     5	## 0. Scope, frozen inputs, and hash gate
+     6	
+     7	This is a fail-closed semantic audit of the six coefficient systems in
+     8	`msolve-prep-realization-grok46-20260831.md`.  It does not rerun a CAS and it
+     9	does not edit a ledger.  Before reading the inputs I recomputed:
+    10	
+    11	```text
+    12	475ca486f3e2eed4a71e842dbe4f16ad9db43efd46c19a9318c22490e0d1010e  type86A-sliced-witness-pt0.m2.txt
+    13	c54d53f0a55586eb0fdd84d3aa311c6d64125a2cded8bec77aad1c3a8f40ec7f  msolve-prep-realization-grok46-20260831.md
+    14	3985fbedea72315c0ff3ffd4185de465ba16922bca872623fe2f02fe34cffc08  nodal-realization-86-96-grok46-20260831.md
+    15	763eec05eb6bc00f1c13e6ff25c2b275ef3c97f20a22e6ba34621244981c56c9  block-descent-a1-alldegree-h2-coordinator-integration-fable5-20260901.md
+    16	```
+    17	
+    18	All four match the charge.  Line references below are to those frozen bytes
+    19	(the identically hashed workspace copies are used for readable paths).
+    20	
+    21	## 1. Executive verdict
+    22	
+    23	**All six generated characteristic ideals are UNFAITHFUL as advertised
+    24	exact/exhaustive encodings.**  The `(8,6)`
+    25	jobs use odd coefficients of the raw binomial `p^3-q^4` before reducing its
+    26	even pole-order terms.  The `(9,6)` jobs instead force the raw binomial
+    27	`p^2-q^3` to have the target degree, thereby setting four legitimate
+    28	approximate-root coefficients to zero and searching only a strict slice.
+    29	
+    30	The charged A point is decisive: it satisfies the old A equations, but it is
+    31	proper and has one infinity branch with Puiseux pair `(2,13)`.  Its true data
+    32	are `Delta=(8,6,19)`, `beta_1=13`, `delta_inf=6`; fifteen affine nodes give
+    33	`15+6=21`.  The anomaly is **not** two places.  The quadratic conjugates are
+    34	two coefficient embeddings, and the `+/-` Puiseux expansions are conjugate
+    35	series of one branch.
+    36	
+    37	Neither old `(9,6)` EMPTY kill survives.  A corrected `(9,6,4)` locus is
+    38	explicitly NONEMPTY but its six-node question remains OPEN.  The exact curve
+    39	
+    40	```text
+    41	q=t^6+8t^2,  p=t^9+12t^5+24t,
+    42	p^2-q^3-64q=64t^2
+    43	```
+    44	
+    45	has exactly four affine nodes and realizes `(9,6,2)`.  The four `(8,6)`
+    46	targets require the corrected approximate-root jobs below.  Final suite:
+    47	five nodal types OPEN, `(9,6,2)` REALIZED.
+    48	
+    49	## 2. Shared Tschirnhausen chart and conventions
+    50	
+    51	For `(8,6)` the frozen chart is
+    52	
+    53	```text
+    54	p=t^8+B t^5+C t^4+D t^3+E t^2+F t+G,
+    55	q=t^6+b t^4+gamma t^3+d t^2+e t+f,
+    56	H=p^3-q^4=sum h_j t^j.
+    57	```
+    58	
+    59	For `(9,6)` it is
+    60	
+    61	```text
+    62	p=t^9+A t^7+P6 t^6+B t^5+P4 t^4+C t^3+P2 t^2+D t,
+    63	q=t^6+a t^4+Q3 t^3+b t^2+Q1 t,
+    64	K=p^2-q^3=sum k_j t^j.
+    65	```
+    66	
+    67	These are exactly the charts and raw expansions at MSOLVE-PREP 2.1--2.2
+    68	(lines 50--129).  The source/target gauges explain the displayed chart.
+    69	In particular the absent `p:t^7,q:t^5` terms make `h_23=0`, and the absent
+    70	`p:t^8,q:t^5` terms make `k_17=0`: these are the automatic first gap
+    71	conditions, not extra generators.  None of these gauges turns a raw
+    72	binomial remainder into the reduced second approximate root.
+    73	
+    74	Notation is kept disjoint throughout:
+    75	
+    76	- `c` is the third delta-sequence entry in `Delta=(d,n,c)`;
+    77	- `beta_1` is the first transverse Puiseux numerator;
+    78	- a *place* is a normalization point over the line at infinity;
+    79	- the `a` Puiseux conjugate series (`a=2` or `3`) describe one physical
+    80	  branch when the local equation is irreducible.  They are not `a` places.
+    81	
+    82	## 3. First-principles dictionary: places, characteristic exponent, and delta split
+    83	
+    84	Put `z=t^-1`,
+    85	
+    86	```text
+    87	P(z)=z^d p(z^-1),        Q(z)=z^n q(z^-1),        a=d-n.
+    88	```
+    89	
+
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.p4m8n5/inputs/corrected-suite-codegen-grok46-20260901.md | sed -n '202,218p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   202	
+   203	Leading `g_4=-27/128` is `(-27/1024)*8`, matching the displayed identity. The point lies on `V(g_16,...,g_5)` with `g_4≠0`, hence on the encoded corrected 96A locus, before any nodal test. `g_2≠0` is allowed: the type is `c=4`, not `c=2`.
+   204	
+   205	## 8. Per-file SHA-256 (emitted jobs)
+   206	
+   207	Independent `shasum -a 256` of the bytes on disk after the last write. POSIX text, LF only, one trailing newline. `.ms` files contain no parentheses.
+   208	
+   209	```text
+   210	cd13e1c25bcfcc43d30c238420ab8383580b8c078b16c0b0ff967ff43761d75b  box/corrected_863.ms
+   211	a6c7e647316f6546145a855b4f8ee972a188f5a2db1171304f5f032c7beff937  box/corrected_863.m2
+   212	d0d5e5d40ce74adda6f84df2e01959fe7f628625cd76537df24febd74471adb8  box/corrected_869.ms
+   213	a86a9782f516431723ede80555d5b41f7630a970d79e3afcc939cd3d5ed562ce  box/corrected_869.m2
+   214	f2c46839b56a766230eebd7e279a88f449fe0df0ecf8f1dc09cbaf0f39cc6434  box/corrected_964.ms
+   215	71065d4986dbadf08bf91b29e34f7c8f828ed1dfdd42272419439e799461fd74  box/corrected_964.m2
+   216	9feb22915f92f92eb80aedff29829c0e2846dcc8d3147aed895c503f343b5766  box/corrected_8611.ms
+   217	67314c378279c7016b582cbc876d3593a820fdb48afba28312fddbe777ededc0  box/corrected_8611.m2
+   218	2f6cb64e1a44cd9176c8b424a3bc4323090fa9fe2570a9593d365308d9d61ea5  box/corrected_867.ms
+
+codex
+I’m going to make the coefficient comparison mechanically: expand `G86` independently in SymPy, parse the `.ms` generators, and compare exact symbolic equality for every closed degree plus the Rabinowitsch open. That gives a cleaner hostile check than eyeballing long expanded lines.
+exec
+/bin/zsh -lc 'command -v M2 || true' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import sympy as sp
+from pathlib import Path
+from hashlib import sha256
+ms_path=Path('box/corrected_863.ms')
+text=ms_path.read_text()
+lines=text.splitlines()
+vars_line=lines[0]
+vars=[v.strip() for v in vars_line.split(',')]
+print('variables', len(vars), vars)
+print('char_line', lines[1])
+print('total_lines', len(lines))
+print('poly_lines', len(lines)-2)
+print('trailing_newline', text.endswith('\\n'))
+print('first_line_has_hash_comment', lines[0].lstrip().startswith('#'))
+print('contains_parens', '(' in text or ')' in text)
+print('last_line_trailing_comma', lines[-1].rstrip().endswith(','))
+
+syms={name:sp.Symbol(name) for name in vars + ['t']}
+t=syms['t']
+B,C,D,E,F,G,b,gam,d,e,f=[syms[x] for x in ['B','C','D','E','F','G','b','gam','d','e','f']]
+a22,a20,a18,a16,a14,a12,a8,a6,u=[syms[x] for x in ['a22','a20','a18','a16','a14','a12','a8','a6','u']]
+p=t**8+B*t**5+C*t**4+D*t**3+E*t**2+F*t+G
+q=t**6+b*t**4+gam*t**3+d*t**2+e*t+f
+G86=p**3-q**4+a22*p**2*q+a20*p*q**2+a18*q**3+a16*p**2+a14*p*q+a12*q**2+a8*p+a6*q
+# parse msolve lines: remove trailing comma; "'^ -> **
+locals_map={name:syms[name] for name in vars}
+ms_polys=[]
+for i,line in enumerate(lines[2:], start=3):
+    s=line.strip()
+    if s.endswith('"','):
+        s=s[:-1]
+    expr=sp.sympify(s.replace('"'^'"','**'), locals=locals_map)
+    ms_polys.append(expr)
+
+expected=[]
+for j in range(22,3,-1):
+    expected.append(sp.Poly(G86,t).coeff_monomial(t**j))
+expected.append(sp.Poly(G86,t).coeff_monomial(t**3)*u-1)
+
+print('expected_polys', len(expected))
+all_ok=True
+for idx,(got,exp) in enumerate(zip(ms_polys,expected), start=1):
+    diff=sp.expand(got-exp)
+    ok=(diff==0)
+    all_ok &= ok
+    if idx<=19:
+        j=23-idx
+        label=f'g{j}'
+    else:
+        label='u*g3-1'
+    canon=str(sp.Poly(exp, *[syms[v] for v in vars]).as_dict())
+    print(label, 'line', idx+2, 'ok', ok, 'terms', len(sp.Poly(exp, *[syms[v] for v in vars]).terms()), 'sha256', sha256(canon.encode()).hexdigest()[:16])
+    if not ok:
+        print('DIFF', diff)
+print('ALL_OK', all_ok)
+print('g23', sp.Poly(G86,t).coeff_monomial(t**23))
+print('support_minmax', min(sp.Poly(G86,t).as_dict().keys())[0], max(sp.Poly(G86,t).as_dict().keys())[0])
+print('g3_terms', len(sp.Poly(sp.Poly(G86,t).coeff_monomial(t**3), *[syms[v] for v in vars if v"'!='"'u']).terms()))
+print('g3_sha256', sha256(str(sp.Poly(sp.Poly(G86,t).coeff_monomial(t**3), *[syms[v] for v in vars if v"'!='"'u']).as_dict()).encode()).hexdigest())
+for j in [22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3]:
+    coeff=sp.Poly(G86,t).coeff_monomial(t**j)
+    if j in [22,20,18,16,14,12,8,6]:
+        # show coefficient of triangular aux in its slot
+        aux={22:a22,20:a20,18:a18,16:a16,14:a14,12:a12,8:a8,6:a6}[j]
+        print('triangular', j, sp.Poly(coeff, aux).coeff_monomial(aux))
+PY" in /Users/dc/code/math/jc2
+ succeeded in 4879ms:
+variables 20 ['a22', 'a20', 'a18', 'a16', 'a14', 'a12', 'a8', 'a6', 'B', 'C', 'D', 'E', 'F', 'G', 'b', 'gam', 'd', 'e', 'f', 'u']
+char_line 0
+total_lines 22
+poly_lines 20
+trailing_newline True
+first_line_has_hash_comment False
+contains_parens False
+last_line_trailing_comma False
+expected_polys 20
+g22 line 3 ok True terms 2 sha256 cfd9297985c3f31e
+g21 line 4 ok True terms 2 sha256 4d9f140c9fc3f373
+g20 line 5 ok True terms 5 sha256 90fc41917e75cf6e
+g19 line 6 ok True terms 5 sha256 39c13d67a79a3771
+g18 line 7 ok True terms 10 sha256 0ea16437f9d35586
+g17 line 8 ok True terms 10 sha256 12acb113caaa871b
+g16 line 9 ok True terms 19 sha256 2fc62fa1af3fde5c
+g15 line 10 ok True terms 19 sha256 94efd90def74eeea
+g14 line 11 ok True terms 29 sha256 f16651051b9750e3
+g13 line 12 ok True terms 32 sha256 487e3f5f0ad7508b
+g12 line 13 ok True terms 46 sha256 7286427502a88cc2
+g11 line 14 ok True terms 45 sha256 a26ca2d7f73739aa
+g10 line 15 ok True terms 56 sha256 3529ebd3b44abf97
+g9 line 16 ok True terms 57 sha256 7f1bcfc3ab705e91
+g8 line 17 ok True terms 64 sha256 fbae163b844d5b68
+g7 line 18 ok True terms 55 sha256 0fa16942a886ce70
+g6 line 19 ok True terms 59 sha256 7d701481fe3e9e54
+g5 line 20 ok True terms 47 sha256 e42438a1dd37fed3
+g4 line 21 ok True terms 44 sha256 b98b1e9f4282ea0e
+u*g3-1 line 22 ok True terms 32 sha256 8424208cf5bc358e
+ALL_OK True
+g23 0
+support_minmax 0 22
+g3_terms 31
+g3_sha256 1c2de556af8f71f2fa47c9bb32fdcbf5febec4a8c07719250fc64dca3112687d
+triangular 22 1
+triangular 20 1
+triangular 18 1
+triangular 16 1
+triangular 14 1
+triangular 12 1
+triangular 8 1
+triangular 6 1
+
+codex
+The independent SymPy expansion matches every `.ms` generator exactly: 19 closed coefficients `g22..g4` and the final `u*g3-1` open. Macaulay2 does not appear on PATH, so the M2 coefficient-extraction audit will be static plus cross-checks against SymPy rather than an on-box M2 probe.
+exec
+/bin/zsh -lc "ls -1 /Applications 2>/dev/null | rg -i 'Macaulay|M2' || true" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+web search: 
+web search: Macaulay2 coefficient monomial polynomial coefficient(t^j, poly) documentation
+web search: 
+web search: https://macaulay2.com/
+web search: 
+web search: site:macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_coefficient.html coefficient Macaulay2
+codex
+The official Macaulay2 documentation says `coefficient(m,f)` takes a monomial and a polynomial in the same ring and returns an element of the coefficient ring; for `St=R0[t]`, that is exactly the base ring `R0`. I’m using that to audit the patched `coefficient(t^j, G86poly)` form, then I’ll rerun the `(9,6,2)` positive control.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import sympy as sp
+# Positive control: corrected (9,6,2) membership
+A,P6,B,P4,C,P2,D,a,Q3,b,Q1,a15,a12,a9,a6,t=sp.symbols('A P6 B P4 C P2 D a Q3 b Q1 a15 a12 a9 a6 t')
+p=t**9+12*t**5+24*t
+q=t**6+8*t**2
+G96=p**2-q**3+a15*p*q+a12*q**2+a9*p+a6*q
+subs={a15:0,a12:0,a9:0,a6:-64}
+poly=sp.Poly(sp.expand(G96.subs(subs)), t)
+closed={j:poly.coeff_monomial(t**j) for j in range(16,2,-1)}
+print('closed_g16_to_g3', [closed[j] for j in range(16,2,-1)])
+print('all_closed_zero', all(v==0 for v in closed.values()))
+print('g2', poly.coeff_monomial(t**2))
+print('g1', poly.coeff_monomial(t))
+print('g0', poly.coeff_monomial(1))
+print('expanded_identity', sp.expand(G96.subs(subs)))
+
+# Same G86 expansion spot checks requested for patched M2 coefficient extractor.
+a22,a20,a18,a16,a14,a12,a8,a6,B,C,D,E,F,G,b,gam,d,e,f=sp.symbols('a22 a20 a18 a16 a14 a12 a8 a6 B C D E F G b gam d e f')
+p86=t**8+B*t**5+C*t**4+D*t**3+E*t**2+F*t+G
+q86=t**6+b*t**4+gam*t**3+d*t**2+e*t+f
+G86=sp.expand(p86**3-q86**4+a22*p86**2*q86+a20*p86*q86**2+a18*q86**3+a16*p86**2+a14*p86*q86+a12*q86**2+a8*p86+a6*q86)
+P86=sp.Poly(G86,t)
+for j in [22,19,10,4,3]:
+    coeff=sp.expand(P86.coeff_monomial(t**j))
+    print(f'G86_g{j}_terms', len(sp.Poly(coeff, a22,a20,a18,a16,a14,a12,a8,a6,B,C,D,E,F,G,b,gam,d,e,f).terms()))
+    print(f'G86_g{j}', coeff)
+PY" in /Users/dc/code/math/jc2
+ succeeded in 412ms:
+closed_g16_to_g3 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+all_closed_zero True
+g2 64
+g1 0
+g0 0
+expanded_identity 64*t**2
+G86_g22_terms 2
+G86_g22 a22 - 4*b
+G86_g19_terms 5
+G86_g19 2*B*a22 + 3*D + a22*gam - 12*b*gam - 4*e
+G86_g10_terms 56
+G86_g10 3*B**2*G + B**2*a16 + B**2*a22*f + 6*B*C*F + 2*B*C*a22*e + 6*B*D*E + 2*B*D*a22*d + 2*B*E*a22*gam + 2*B*F*a22*b + 2*B*a20*b*e + 2*B*a20*d*gam + 3*C**2*E + C**2*a22*d + 3*C*D**2 + 2*C*D*a22*gam + 2*C*E*a22*b + 2*C*G*a22 + C*a14 + 2*C*a20*b*d + 2*C*a20*f + C*a20*gam**2 + D**2*a22*b + 2*D*F*a22 + 2*D*a20*b*gam + 2*D*a20*e + E**2*a22 + 6*E*G + 2*E*a16 + E*a20*b**2 + 2*E*a20*d + 2*E*a22*f + 3*F**2 + 2*F*a20*gam + 2*F*a22*e + 2*G*a20*b + 2*G*a22*d + 2*a12*b + a14*d + 3*a18*b**2*d + 6*a18*b*f + 3*a18*b*gam**2 + 3*a18*d**2 + 6*a18*e*gam + 2*a20*d*f + a20*e**2 - 12*b**2*d*f - 6*b**2*e**2 - 4*b*d**3 - 24*b*d*e*gam - 12*b*f**2 - 12*b*f*gam**2 - 12*d**2*f - 6*d**2*gam**2 - 12*d*e**2 - 24*e*f*gam - 4*e*gam**3
+G86_g4_terms 44
+G86_g4 3*C*G**2 + 2*C*G*a16 + 2*C*G*a22*f + C*a14*f + C*a20*f**2 + C*a8 + 6*D*F*G + 2*D*F*a16 + 2*D*F*a22*f + 2*D*G*a22*e + D*a14*e + 2*D*a20*e*f + 3*E**2*G + E**2*a16 + E**2*a22*f + 3*E*F**2 + 2*E*F*a22*e + 2*E*G*a22*d + E*a14*d + 2*E*a20*d*f + E*a20*e**2 + F**2*a22*d + 2*F*G*a22*gam + F*a14*gam + 2*F*a20*d*e + 2*F*a20*f*gam + G**2*a22*b + G*a14*b + 2*G*a20*b*f + G*a20*d**2 + 2*G*a20*e*gam + 2*a12*b*f + a12*d**2 + 2*a12*e*gam + 3*a18*b*f**2 + 3*a18*d**2*f + 3*a18*d*e**2 + 6*a18*e*f*gam + a6*b - 4*b*f**3 - 6*d**2*f**2 - 12*d*e**2*f - e**4 - 12*e*f**2*gam
+G86_g3_terms 31
+G86_g3 3*D*G**2 + 2*D*G*a16 + 2*D*G*a22*f + D*a14*f + D*a20*f**2 + D*a8 + 6*E*F*G + 2*E*F*a16 + 2*E*F*a22*f + 2*E*G*a22*e + E*a14*e + 2*E*a20*e*f + F**3 + F**2*a22*e + 2*F*G*a22*d + F*a14*d + 2*F*a20*d*f + F*a20*e**2 + G**2*a22*gam + G*a14*gam + 2*G*a20*d*e + 2*G*a20*f*gam + 2*a12*d*e + 2*a12*f*gam + 6*a18*d*e*f + a18*e**3 + 3*a18*f**2*gam + a6*gam - 12*d*e*f**2 - 4*e**3*f - 4*f**3*gam
+
+codex
+The open/cover issue is favorable to the kill if `Iopen` is already unit: the M2 file tests `Iopen` itself, before any cover colon or immersion resultant. I’m still checking the cover locus explicitly, because if `g3` vanished automatically there, then the Rabinowitsch open already removes the old degree-2 cover concern.
+exec
+/bin/zsh -lc "python3 - <<'PY'
+import sympy as sp
+t=sp.symbols('t')
+a22,a20,a18,a16,a14,a12,a8,a6,B,C,D,E,F,G,b,gam,d,e,f=sp.symbols('a22 a20 a18 a16 a14 a12 a8 a6 B C D E F G b gam d e f')
+p=t**8+B*t**5+C*t**4+D*t**3+E*t**2+F*t+G
+q=t**6+b*t**4+gam*t**3+d*t**2+e*t+f
+G86=sp.expand(p**3-q**4+a22*p**2*q+a20*p*q**2+a18*q**3+a16*p**2+a14*p*q+a12*q**2+a8*p+a6*q)
+P=sp.Poly(G86,t)
+cover={B:0,D:0,F:0,gam:0,e:0}
+for j in [5,4,3,2,1,0]:
+    print(f'g{j}_cover =', sp.factor(P.coeff_monomial(t**j).subs(cover)))
+print('odd_coeffs_cover_zero_1_21', all(sp.expand(P.coeff_monomial(t**j).subs(cover))==0 for j in range(1,22,2)))
+PY" in /Users/dc/code/math/jc2
+ succeeded in 538ms:
+g5_cover = 0
+g4_cover = 3*C*G**2 + 2*C*G*a16 + 2*C*G*a22*f + C*a14*f + C*a20*f**2 + C*a8 + 3*E**2*G + E**2*a16 + E**2*a22*f + 2*E*G*a22*d + E*a14*d + 2*E*a20*d*f + G**2*a22*b + G*a14*b + 2*G*a20*b*f + G*a20*d**2 + 2*a12*b*f + a12*d**2 + 3*a18*b*f**2 + 3*a18*d**2*f + a6*b - 4*b*f**3 - 6*d**2*f**2
+g3_cover = 0
+g2_cover = 3*E*G**2 + 2*E*G*a16 + 2*E*G*a22*f + E*a14*f + E*a20*f**2 + E*a8 + G**2*a22*d + G*a14*d + 2*G*a20*d*f + 2*a12*d*f + 3*a18*d*f**2 + a6*d - 4*d*f**3
+g1_cover = 0
+g0_cover = G**3 + G**2*a16 + G**2*a22*f + G*a14*f + G*a20*f**2 + G*a8 + a12*f**2 + a18*f**3 + a6*f - f**4
+odd_coeffs_cover_zero_1_21 True
+
+web search: 
+web search: https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_coefficient.html
+codex
+The `(9,6,2)` positive control passes independently: after substituting `a6=-64`, SymPy reduces `G96` to `64*t^2`, so all `g16..g3` vanish and the required open `g2` is nonzero. I’m ready to write the report, with the verdict depending only on encoding review: no encoding defect found.
+exec
+/bin/zsh -lc 'ls -ld xmodel && test -e xmodel/corrected-863-kill-review-gpt55-20260901.md; echo $?' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+drwxr-xr-x@ 5256 dc  staff  168192 Sep  1 15:39 xmodel
+1
+
+exec
+/bin/zsh -lc 'git status --short' in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'rg -n "corrected-863-kill-review" xmodel . 2>/dev/null' in /Users/dc/code/math/jc2
+ succeeded in 555ms:
+ M pilot-local.log
+ M xmodel/corrected-863-kill-review-gpt55-20260901.log
+ M xmodel/domrina-ii-replay1-sol56-20260901.log
+ M xmodel/rep-96-inner-opus5-20260901.log
+ M xmodel/rep-96-inner-opus5-20260901.run.v2
+?? xmodel/bm-fact-codegen-grok46-20260901.log
+?? xmodel/bm-fact-codegen-grok46-20260901.prompt.md
+?? xmodel/bm-fact-codegen-grok46-20260901.run.v2
+?? xmodel/rep-96-hostile-review-grok46-20260901.log
+?? xmodel/rep-96-hostile-review-grok46-20260901.prompt.md
+?? xmodel/rep-96-hostile-review-grok46-20260901.run.v2
+
+ succeeded in 522ms:
+xmodel/corrected-863-kill-review-gpt55-20260901.log:74:`xmodel/corrected-863-kill-review-gpt55-20260901.md`.
+xmodel/corrected-863-kill-review-gpt55-20260901.log:1397:/bin/zsh -lc 'ls -ld xmodel && test -e xmodel/corrected-863-kill-review-gpt55-20260901.md; echo $?' in /Users/dc/code/math/jc2
+xmodel/corrected-863-kill-review-gpt55-20260901.log:1405:/bin/zsh -lc 'rg -n "corrected-863-kill-review" xmodel . 2>/dev/null' in /Users/dc/code/math/jc2
+xmodel/corrected-863-kill-review-gpt55-20260901.run.v2:2:tag=corrected-863-kill-review-gpt55-20260901
+xmodel/corrected-863-kill-review-gpt55-20260901.run.v2:7:prompt=/Users/dc/code/math/jc2/xmodel/corrected-863-kill-review-gpt55-20260901.prompt.md
+./xmodel/corrected-863-kill-review-gpt55-20260901.prompt.md:61:`xmodel/corrected-863-kill-review-gpt55-20260901.md`.
+xmodel/corrected-863-kill-review-gpt55-20260901.prompt.md:61:`xmodel/corrected-863-kill-review-gpt55-20260901.md`.
+./xmodel/corrected-863-kill-review-gpt55-20260901.log:74:`xmodel/corrected-863-kill-review-gpt55-20260901.md`.
+./xmodel/corrected-863-kill-review-gpt55-20260901.log:1397:/bin/zsh -lc 'ls -ld xmodel && test -e xmodel/corrected-863-kill-review-gpt55-20260901.md; echo $?' in /Users/dc/code/math/jc2
+./xmodel/corrected-863-kill-review-gpt55-20260901.log:1405:/bin/zsh -lc 'rg -n "corrected-863-kill-review" xmodel . 2>/dev/null' in /Users/dc/code/math/jc2
+./xmodel/corrected-863-kill-review-gpt55-20260901.run.v2:2:tag=corrected-863-kill-review-gpt55-20260901
+./xmodel/corrected-863-kill-review-gpt55-20260901.run.v2:7:prompt=/Users/dc/code/math/jc2/xmodel/corrected-863-kill-review-gpt55-20260901.prompt.md
+
