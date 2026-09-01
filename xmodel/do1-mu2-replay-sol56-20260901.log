@@ -400,3 +400,1245 @@ eng
 osd
 snum
 
+exec
+/bin/zsh -lc 'rg -n "mu|degree two|degree 2|dicritical|Lemma|Proposition|Theorem 0.2|case" /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/english.txt' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+14:polynomial mappings of degree two or three satisfying (0.1). The case of degree
+15:two is elementary and the case of degree three was considered in [3].
+18:   In this paper we prove a particular case of this theorem, namely when f has
+19:one dicritical component. (The de nition of a dicritical component is given below.)
+27:   An irreducible component ge of Le is called dicritical if F (ge) 6 L and F is non-
+30:Theorem 0.2. There is no four-sheeted locally invertible polynomial mapping f :
+31:Ce2 ! C 2 with one dicritical component.
+33:the image of the dicritical component meets L transversally. The dual weighted
+44:We consider each case separately.
+51:X and Xe (Lemma 5.1)    P  we obtain a contradiction in each case (the coecients in
+53:Lemma 1.8)
+60:Conjecture must be  9.
+63:dicult case. Moreover, all the numerical data of other examples similar to [4] also
+64:well correspond to those in [11] (this observation was communicated to the second
+70:(i.e. without multiple components) and all its irreducible components are closed
+76:ducible components of L are algebraic curves. In this case graph L is weighted,
+80:is a single point. In these cases L = ? and det L = 1.
+91:     b) if two vertices of 0 are connected by an edge of then they must be
+115:   Combining the Cramer rule for the inverse matrix of A and the Jacobi formula
+117:Lemma (1.2). Let be a weighted graph, a, b be vertices of . Then
+119:  We shall refer to (1.3) as to the "edge" determinant formula. If (ab) is a linear
+120:chain and det( ) = 1 then (1.3) is the edge determinant formula due to Eisenbud-
+122:Lemma (1.4). [9, Corollary 2.2]. Let be a weighted graph and det = 1.
+124:one of them equals 0 then any other must be equal to 1 or to 1.
+129:proper transform of l is called the root of L . (Note that in this case L is a tree,
+135:Lemma (1.6). Let v be a root of and s 2 any vertex. If s 6= v then the
+138:Lemma (1.7). Let be a graph contractible to +1 and v be its root; let Q be a
+144:adjunction formula for each lj we obtain a linear system of simultaneous equations
+148:formulas only for k0 and k1 . We see from (1.6) that the splice diagram of L near
+170:Remark. The formula (1.9) is related to the formulas for the Milnor number and the
+172:formula, they can be easily derived one from another.
+197:Riemann { Hurwitz Formula. Let f be non-constant on a non-singular rational
+211:Proposition (1.15). Suppose that the splice diagram of C near L is of the form
+222:Proposition (1.17). [5] Suppose
+232:Lemma (1.19). [5] Suppose the conditions (1), (2) of (1.17) to be satis ed and
+243:                     2. The properties of the dicritical
+246:four-sheeted mapping f with one dicritical component. Let Xe , X , F , Le, L be as in
+250:   It follows from [3, lemma 4.2] that the rami cation order of F along the dicritical
+254:   Let us denote the dicritical component of f by ge and put g = F (ge) and Le1 =
+274:Proposition (2.1). The Eisenbud { Neumann splice diagram of g near L is as on
+298:Lemma (2.2). mpe(ge) = 1 (recall that pe := ge \ Le1). If the subgraph (aege) is linear
+313:Proposition (3.2). Let se 2 Le1 be a nodal vertex. Then the following conditions
+335:Lemma (3.4). Let ae and eb be forks of Le1 such that (aeeb) is a subgraph of constant
+349:Lemma (3.6). Let ae be a fork.
+385:(for example eb1) is a fork. The case 3(c) will be prohibited below, after discussion
+386:of the case of degree three.
+411:    The case 4(b) is impossible analogously to 3(a).
+412:    In the case 4(c) we see analogously to 3(b) that eb1 is a fork and n(eb1 ) is divisible
+415:    In the case 4(d), like in 3(b), we see that eb is a fork and n(eb) is divisible by 3.
+417:    Let us show that the case 4(a) is impossible. Analogously to Fig. 3(c) we obtain
+421:of Le1 at ae which are to the left of ae must contain the left end vertex of Ueb. But
+454:Lemma (3.8). Suppose Deg(ae) = 4.
+461:   Consider the proposition b). Two cases are possible.
+462:   Case 1) m(ae) = n(ae) = 2 is analogous to the cases of degree 2. The only possible
+482:Uae and Uae must be of the form Fig. 6(g), which is impossible. So, the case 1 is
+485:determinants of the branches beneath ae must be coprime. Combining this with
+488:for these cases and these branches are the subgraphs of constant degree. The
+489:determinants of the left and the lower branches at ae must be coprime. So, like in
+490:the cases Deg = 2; 3, using (1.12), (1.13), (1.20), and (2.1) we obtain that Uae is one
+503:Corollary (3.10). The graph Le must have one of the types depicted on Fig. 7.
+531:   First, we shall prohibit the graphs of Fig. 7(e), (f). We work out the case of
+532:Fig. 7(e) in detail. The case of Fig. 7(f) can be considered analogously.
+533:Lemma (4.1). The case of Fig. 7(e) is impossible.
+562:det (ae2eb2) = det (ae1eb2 ) = . Applying (1.20) and the formula (1.3) for (ab)
+576:Applying (1.6) to eb2 we get d3 = det brbe2 (ge) = 1. Using formula (1.3) for the
+581:Lemma (4.6). The graphs of Fig. 7(c), (d) are impossible.
+612:this point must be a singular point of g).
+613:   Using formula (1.3) for the determinant of the subgraph (aege)  Le, we get
+617:Lemma (5.1). Let Ke = P asese be the representation of the canonical class of Xe
+626:Lemma (5.2). Suppose   Le1 is a maximal subgraph of constant degree incident
+637:     Consider the case d > 1. It follows from (1.7) that det brve1 (ge) = 1. Using formula
+643: hence, dve must be divisible by d 6= 1. This contradicts (1.4).
+644:     Consider the case d = 1. As it was shown above, the determinant of the lower
+646: formula (1.3) for the determinant of the subgraph (ve1 ge) in the graph Le, we obtain
+651: Lemma (5.5). Suppose that either det Le1 = 1 or det Le1 = 2. Let  satisfy
+654: decomposition formula (1.9) with respect to ge implies kge =              det Le1 1, but
+656: Lemma (5.6). Graphs Le of the form Fig. 7(a,b) are impossible.
+674:   Denote, as in (4.6) and (5.2), = det(Le Le1 ge). Using formula (1.3) for the
+
+exec
+/bin/zsh -lc "nl -ba /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/english.txt | sed -n '235,706p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   235	                                det Le1 = 1 = n(ce)
+   236	(1.20)                          det L mxe(ce) Deg Le1
+   237	    b) If Ce \ Le1 = fxe1 ; xe2 g, xei 2 cei  Ce then
+   238	                            det Le1 = n(ce1) = n(ce1)n(ce2 ) :
+   239	                                                Deg Le1
+   240	(1.21)
+   241	                            det L mxe2 (ce2)
+   242	
+   243	                     2. The properties of the dicritical
+   244	                   component and its resolution at infinity
+   245	   Now we begin the proof of theorem (0.2). Suppose the contrary: there exists a
+   246	four-sheeted mapping f with one dicritical component. Let Xe , X , F , Le, L be as in
+   247	Introduction. Since Xe and X are obtained from Ce2 and C 2 by blow-ups, the pairs
+   248	(e
+   249	 X; Le) and (X; L) are contractible to +1.
+   250	   It follows from [3, lemma 4.2] that the rami cation order of F along the dicritical
+   251	component is 1, 2, or 3. The rami cation of order 3 is impossible, see [3, remark
+   252	after 5.3 ]. If the rami cation order is 1 then F is an unbranched covering over C 2 .
+   253	This is also impossible. So, the only possible order of rami cation is 2.
+   254	   Let us denote the dicritical component of f by ge and put g = F (ge) and Le1 =
+   255	F 1(L). It follows from [3, lemma 4.2] that m(ge) = 1, n(ge) = 2. Resolving, if
+   256	necessary, the singularities of g at in nity, we can achieve that:
+   257	   (2a) ge has only one point of intersection with Le1 (see [3]). We denote this point
+   258	         by pe. Thus, Le1 is a branch of Le at ge.
+   259	  (2b) g \ L = p := F (pe), the intersection is transversal, and g is smooth at p.
+   260	We may assume that Xe and X are minimal possible under these conditions. So,
+   261	   (2c) F satis es the minimality condition.
+   262	   Applying if necessary a polynomial automorphism of C 2 we may assume also
+   263	that
+   264	  (2d) In some ane coordinates (x; y) in C 2 neither degx g divides degy g nor
+   265	         degy g divides degx g.
+   266	              ON FOUR-SHEETED POLYNOMIAL MAPPINGS OF C 2 . I                          7
+   267	This condition is equivalent to the minimality of L in the sense that L contains no
+   268	( 1)-curve c such that c  (L c)  2.
+   269	   Recall that we use the same notation for the curves Le, Le1, L and their dual
+   270	graphs and we also use the same notation for the irreducible components and the
+   271	corresponding vertices. All graphs to be considered below are subgraphs either of
+   272	Le or of L. Hence, in the notation for the graphs from de nition (1.1) we shall omit
+   273	the index of ambient graph.
+   274	Proposition (2.1). The Eisenbud { Neumann splice diagram of g near L is as on
+   275	Fig. 2 For a nodal vertex a let us denote by Ra, La, Da the branches of L at a in
+   276	the directions respectively Right, Left, Down.
+   277	                       1       1         1
+   278	                                                 ....
+   279	                    root
+   280	
+   281	
+   282	
+   283	                                        Fig. 2
+   284	  Then for any nodal a we have:
+   285	   a) det Ra = 1, det Da > 1.
+   286	   b) det La > 1.
+   287	   c) det L = 1.
+   288	   The only non-trivial assertion of this lemma is 2.1b. In terms of Puiseux charac-
+   289	teristic pairs this inequality was proven in [13, 14] (see [7, 8] for the interpretation
+   290	of characteristic pairs in terms of subgraph determinants). In the notation of [13,
+   291	14] det La = ri =di+1 if a is the i-th (from the left) nodal vertex. Hence, 2.1b is
+   292	an immediate consequence from the fact that the additive semigroup generated
+   293	by r1 ; : : : ; rn is strictly generated by these numbers (here one needs the condition
+   294	(2d)). A topological proof of a weaker inequality det La > 0 can be found in [8].
+   295	Corollary. a) det(ab) and det Da are coprime; b) det La and det Da are coprime.
+   296	(Here a and b are nodal vertices of L; b is to the left of a)
+   297	Proof. a) Apply (1.4) to Rb. b) Follows from (1.4). 
+   298	Lemma (2.2). mpe(ge) = 1 (recall that pe := ge \ Le1). If the subgraph (aege) is linear
+   299	for some ae then Deg(aege) = 2.
+   300	Proof. We have n(ge) = 2, m(ge) = 1. Combine this with (2a), (2b), (1.15). 
+   301	                            3. The structure of L1      e
+   302	eL1Till the end of section 3 we always use tilde in the notation of the vertices of
+   303	   . To denote the image of a vertex, we remove the tilde. For example, a := F (ae).
+   304	De nition (3.1).
+   305	   a) A vertex le 2 Le1 is said to be a fork if m(le) > 1.
+   306	    b) A subgraph of constant degree is said to be maximal if it is not contained
+   307	       in another subgraph of constant degree.
+   308	8                          A.V. DOMRINA, S.YU. OREVKOV
+   309	    The next proposition shows that forks are obstructions for the extension of max-
+   310	imal subgraphs of constant degree. This means that any end vertex of a maximal
+   311	subgraph of constant degree is either an end vertex of Le1, or it is incident at some
+   312	fork.
+   313	Proposition (3.2). Let se 2 Le1 be a nodal vertex. Then the following conditions
+   314	are equivalent.
+   315	      a)  (se) =  (s) (here  (s) is the valence of s in L;g ).
+   316	      b) m(s) = 1:
+   317	      c) For any linear chain Ce incident at se one has Deg(Ce) = Deg(se) = n(se).
+   318	    It follows from (3.2) that after replacing each linear chain with a single edge a
+   319	subgraph Qe of constant degree becomes isomorphic to F (Qe). So, we see from Fig. 2
+   320	that at most two end vertices of Qe are not end vertices of Le. Therefore, on the
+   321	pictures below we shall depict such graphs by edges unless the contrary is speci ed
+   322	We write over such an "edge" the degree.
+   323	    The pair of numbers written near a fork el on all the pictures below denotes
+   324	(m(el); n(el)); to the left of el (respectively to the right of el or beneath el) we indicate
+   325	the maximal subgraphs of constant degree whose image under F lies to the left of
+   326	l (respectively to the right of l or beneath l). We mark the subgraphs whose image
+   327	under F lies beneath l by a little cross. (It follows from (2c) that these subgraphs
+   328	are linear.)
+   329	    For a 2 L denote by a0 the set of all ae 2 F 1(a) such that F jae is non-constant.
+   330	Since the topological degree of F is four, we have
+   331	(3.3)
+   332	                                       X Deg(ae) = 4
+   333	                                       ea2a0
+   334	
+   335	Lemma (3.4). Let ae and eb be forks of Le1 such that (aeeb) is a subgraph of constant
+   336	degree, and let c be a vertex of L such that b 2 (ac). Then
+   337	(3.5)
+   338	                                  X            Deg(ce)  Deg(aebe):
+   339	                              ce2c \brae(eb)
+   340	                                  0
+   341	
+   342	
+   343	
+   344	
+   345	   Suppose ae is a fork of Le1. Let Uae  Le be a connected subgraph that consists of
+   346	all maximal subgraphsof constant degree incident at ae and all vertices of L incident
+   347	at these subgraphs. (we see that any end vertex of Uae is either an end vertex of L,
+   348	or a fork, or ge).
+   349	Lemma (3.6). Let ae be a fork.
+   350	     a) If Deg(ae) = 2, then Uae is of the form Fig. 3 (b). Let eb be the left end vertex
+   351	         of Uae. Then n(eb) = 2, m(eb) = 2, Deg(eb) = 4.
+   352	     b) If Deg(ae) = 3 then Uae is one of Fig. 4 (e), (f).
+   353	Proof. If Deg(ae) = 2 then m(ae)n(ae) = 2. The vertex ae is a fork, hence, m(ae) = 2,
+   354	n(ae) = 1. Combining (1.12), (1.13) we see that Uae has one of the types depicted in
+   355	Fig. 3.
+   356	   Suppose Uae is of the form 3(a). It follows from (1.20) that det(aeeb] = det(aece] =
+   357	det(ab] 6= 1. (Here eb and ce are the end vertices depicted on (2a).) But det(aeeb] and
+   358	                    ON FOUR-SHEETED POLYNOMIAL MAPPINGS OF C 2 . I                                                  9
+   359	
+   360	                                               2 (2,1)        1       ~         1       (2,1)
+   361	             2 (2,1)            2                                     b2                                    2
+   362	                  ~
+   363	                  a                        ~     ~                                              ~
+   364	                                           b     a                    ~                         a
+   365	                                                              1       b1 1
+   366	                1      1                         2                                              2
+   367	                     ~
+   368	       (a)           b c~                            ~
+   369	                                                     c
+   370	                                            (b)                       (c)
+   371	
+   372	                                                     Fig. 3
+   373	det(aece] are coprime by (1.4), hence, 3(a) is impossible. Suppose Uae is of the form
+   374	3(b). Then (1.20) and (1.21) imply
+   375	                                             det(ac] = 2 det(aece];
+   376	                             det(ab] = 2 det(aebe] if be is an end vertex of Le;
+   377	                         n(eb) det(ab) = 2 det(aeeb) if eb is a fork:
+   378	 We see from (1.4) and the corollary of (2.1) that det(ab) and det(ac] are coprime.
+   379	 Hence, eb is a fork and n(eb) is divisible by 2. But Deg(eb)  4 and m(eb)  2 because
+   380	eb is a fork. Thus, n(eb) = m(eb) = 2.
+   381	    Suppose that the both left end vertices of 3(c) (denote them by eb1, eb2 ) are end
+   382	 vertices of Le1. Combining (1.20) and (2.1b) we obtain
+   383	                                    det[be1 ae) = det[be2 ae) = det[b1a) > 1:
+   384	We see from (1.4) that this is impossible. So, one of the left end vertices of 3(c)
+   385	(for example eb1) is a fork. The case 3(c) will be prohibited below, after discussion
+   386	of the case of degree three.
+   387	   If Deg(ae) = 3 then m(ae) = 3, n(ae) = 1. Using (1.12) and (1.13), we obtain the
+   388	types depicted on Fig. 4.
+   389	            1
+   390	                    (3,1) 3                    3    (3,1)     3        ~            1       (3,1)
+   391	       1                                                               b2                                       3
+   392	                         ~                          ~                                               ~
+   393	       1                 a                          a                  ~                            a
+   394	                                                                       b1 2
+   395	                3                                  1 1 1                                 2     1
+   396	                                                                                        ~ ~
+   397	      (a)                                   (b)                           (c)           c1 c 2
+   398	
+   399	                               1               2     (3,1)        2                                             2
+   400	           3 (3,1)                                                              3        (3,1)
+   401	                                   1
+   402	                ~                                                                           ~
+   403	       ~
+   404	       b        a                   1                a~                                     a
+   405	                                              1                   1                                             1
+   406	                         3                                3                             2               1
+   407	       (d)                                  (e)                           (f)
+   408	
+   409	                                                     Fig. 4
+   410	10                         A.V. DOMRINA, S.YU. OREVKOV
+   411	    The case 4(b) is impossible analogously to 3(a).
+   412	    In the case 4(c) we see analogously to 3(b) that eb1 is a fork and n(eb1 ) is divisible
+   413	by 2. Hence, Deg(eb1 )  4, which contradicts (3.3) and (3.5) for brea(eb2 ). Thus, 4(c)
+   414	is impossible.
+   415	    In the case 4(d), like in 3(b), we see that eb is a fork and n(eb) is divisible by 3.
+   416	Hence, m(eb) > 1 and Deg(eb)  6, which contradicts (3.3). Thus, 4(d) is impossible.
+   417	    Let us show that the case 4(a) is impossible. Analogously to Fig. 3(c) we obtain
+   418	that one of the left end vertices of this subgraph is a fork eb 2 Le1. Then (3.3), (3.4)
+   419	imply m(eb) = 2, n(eb) = 1, Deg(eb) = 2. Hence Ueb is of the form Fig. 3(b). The left
+   420	end vertex of Ueb is a fork of degree 4, so, it follows from (3.3) that all the branches
+   421	of Le1 at ae which are to the left of ae must contain the left end vertex of Ueb. But
+   422	this is impossible since Le1 is a tree.
+   423	    Now, consider Fig. 3(c). Recall that eb1 is a fork. Then (3.3) and (3.5) imply
+   424	Deg(eb1 ) < 4. In the same way as for Fig. 4(a) we have Deg(eb1 ) 6= 2. So, Deg(eb1 ) = 3
+   425	and Ueb1 has either the type Fig. 4(e) or Fig. 4(f). Pasting the subgraph Ueb1 to Uae
+   426	along (eb1 ae), we obtain Fig. 5. Denote by Rae the right branch of Le1 at ae and by
+   427	Reb1 the right branch of Le1 at eb1 such that ae 62 Reb1 .
+   428	                                ~
+   429	                                b2
+   430	                                       1
+   431	                                                  (2,1) 2     a~1
+   432	                                      1               ~
+   433	                            (3,1)                     a
+   434	                                                   2
+   435	                                ~
+   436	                                b1    2     ~
+   437	                                             b3
+   438	
+   439	                                           Fig. 5
+   440	   Let us show that these branches are subgraphs of constant degree. Suppose that
+   441	Reb1 is not . Denote by be3 the fork of Reb1 nearest to be1 . If b3 2 (b1 a) then (3.3)
+   442	implies Deg eb3 = 2. If b3 is to the right of a then combining (3.3) and (3.5) we also
+   443	have Deg eb3 = 2. Since Deg eb3 = 2 it follows that Ueb3 has the type Fig. 3(b), but
+   444	this contradicts Deg eb1 6= 4. So, Reb1 is a subgraph of constant degree.
+   445	   Suppose Rae is not a subgraph of constant degree. Let ae1 be the nearest to ae
+   446	fork of Rae. Since Reb1 is a subgraph of constant degree it follows from (3.3) that
+   447	Deg(ae1 ) = 2. So, Uae1 has the type Fig. 3(b), which contradicts Deg ae 6= 4. Hence,
+   448	Rae is a subgraph of constant degree.
+   449	   Since Le is a tree, it follows that one of Rae and Reb1 ( for example, Rae) does not
+   450	contain ge . It follows from (2.1) that det Ra = 1. Using (1.20) we get det Rae = 21 ,
+   451	which is impossible. 
+   452	Corollary (3.7). If Deg ae < 4 then there are two branches of Uae at ae lying to the
+   453	right of ae.
+   454	Lemma (3.8). Suppose Deg(ae) = 4.
+   455	     a) Let eb be a left end vertex of Uae. Then eb is an end vertex for Le1.
+   456	     b) The subgraph Uae has one of the types Fig. 6(a)-(d), m(ae) = 4, n(ae) = 1.
+   457	                     ON FOUR-SHEETED POLYNOMIAL MAPPINGS OF C 2 . I                                                         11
+   458	Proof. Since Deg(ae) = 4, it follows that any connected subgraph of Le1 ae lies
+   459	either entirely to the left, or to the right, or beneath of ae. If Deg(eb) < 4 then
+   460	proposition a) follows from (3.7).
+   461	   Consider the proposition b). Two cases are possible.
+   462	   Case 1) m(ae) = n(ae) = 2 is analogous to the cases of degree 2. The only possible
+   463	subgraph is Fig. 6(g).
+   464	                      1                            1
+   465	        (4,1)                       3 (4,1)                     3       (4,1)       3           2           (4,1)       3
+   466	  4                    1                               1
+   467	                        1           1                  2        1                                                       1
+   468	                                                                                    1           2
+   469	       3        1                         4                         2           2                       3           1
+   470	(a)                             (b)                           (c)                             (d)
+   471	
+   472	            2       (4,1)       2              3       (4,1)        2           (2,2)         (2,2)          2
+   473	
+   474	                                                                                          4
+   475	            2                   2              1                    2                                        2
+   476	                3           1                          2       2                                    4
+   477	      (e)                                (f)                                        (g)
+   478	
+   479	                                                           Fig. 6
+   480	
+   481	   Let be be the left end vertex of Uae. Then it is a fork, hence, the both subgraphs
+   482	Uae and Uae must be of the form Fig. 6(g), which is impossible. So, the case 1 is
+   483	prohibited.
+   484	   Case 2) m(ae) = 4, n(ae) = 1. Suppose that ae has only one left branch. The
+   485	determinants of the branches beneath ae must be coprime. Combining this with
+   486	(1.12), (1.13), (1.20), (2.1), we see that the only possible subgraph is Fig. 6(a).
+   487	   Now suppose that ae has at least two left branches. Then (3.8a) is already proved
+   488	for these cases and these branches are the subgraphs of constant degree. The
+   489	determinants of the left and the lower branches at ae must be coprime. So, like in
+   490	the cases Deg = 2; 3, using (1.12), (1.13), (1.20), and (2.1) we obtain that Uae is one
+   491	of the graphs Fig. 6. (b)-(f).
+   492	   Let us show that the graphs on Fig. 6 (e), (f) are impossible. As in the prohibition
+   493	of (2c) in (3.6), we see that the subgraphs lying to the right of ae are of constant
+   494	degree and one of their determinants equals 1=2, which is impossible.
+   495	   The proposition b) is proved.
+   496	   Consider again the proposition a). If Deg(eb) = 4 then Uae is of the form Fig. 6(a).
+   497	It follows from Fig. 6 that eb is an end vertex of Le. This completes the proof of
+   498	(3.8). 
+   499	Corollary (3.9). If ae is a fork then Deg ae > 2.
+   500	Proof. Using (3.8b) we obtain that Fig. 3(b) is impossible. 
+   501	  Thus, we have listed all the possible Uae for any fork ae.
+   502	12                              A.V. DOMRINA, S.YU. OREVKOV
+   503	Corollary (3.10). The graph Le must have one of the types depicted on Fig. 7.
+   504	(The black vertex represents ge.)
+   505	Proof. Consider the maximal subgraph of constant degree incident at ge. It follows
+   506	from (2.2) that the degree is two. Combining this with (3.6), (3.8), and (3.9) we
+   507	get the proof. 
+   508	
+   509	                         1               3 (4,1)                      1                           1    (3,1) 1
+   510	     4       (4,1)        2
+   511	                                                              3               1               (3,1)
+   512	                          1                                                                           2 3 2
+   513	                                         1                                                     3
+   514	             3       1                           2       2 2                  2                              1
+   515	                                                                          1                      2 1
+   516	     (a)                                 (c)                                               (e)
+   517	                         1                                        1                               (3,1)   1
+   518	         3 (4,1)                             2 (4,1)                                          2
+   519	                          2                                               1                             (3,1) 1
+   520	                                                              3                                1 3 2
+   521	                          1                  2
+   522	         1
+   523	                 4                                       1 2                  2                               2
+   524	                                                 3                                                1       3
+   525	                                                                      1
+   526	     (b)                                 (d)                                           (f)
+   527	
+   528	                                                         Fig. 7
+   529	
+   530	                     4. The prohibition of graphs Fig. 7(c)-(f)
+   531	   First, we shall prohibit the graphs of Fig. 7(e), (f). We work out the case of
+   532	Fig. 7(e) in detail. The case of Fig. 7(f) can be considered analogously.
+   533	Lemma (4.1). The case of Fig. 7(e) is impossible.
+   534	Proof. Assume the contrary.
+   535	                              3d 1           a~2
+   536	                                                          2d 2                    ~          1
+   537	                                                                                  b2
+   538	                                         2
+   539	                                                         d2                                  1
+   540	                              d1
+   541	                                             ~
+   542	                                             a1                                       d3         g~
+   543	                                                              2d 2                ~
+   544	                                                                                  b1         1
+   545	                                     1               2
+   546	                                                                                      3d 3
+   547	                                                              F
+   548	                              3d 1           a                                    b          1
+   549	                                                          2d 2
+   550	                                     2                                                3d 3
+   551	
+   552	                                                         Fig. 8
+   553	                  ON FOUR-SHEETED POLYNOMIAL MAPPINGS OF C 2 . I                                           13
+   554	   The graph Le is depicted in the upper part of Fig. 8 and L is below it. As above,
+   555	the horizontal edges mean subgraphs of constant degree. It follows from (1.20),
+   556	(1.21) that their determinants are equal to the numbers written nearby.
+   557	   Denote the root of Le by ve. We see on Fig. 8 that the determinants of two
+   558	branches at ae2 are already greater than 1, hence, by (1.6) we have
+   559	(4.2)                      det brae2 (eb2 ) = 1            and   ve 62 brae2 (eb2 ):
+   560	Therefore, d1 = 1 by (1.6) applied to ae1 .
+   561	   Denote  = det (ab) (see (1.1)). It follows from (3.1), (1.20) that det (ae1eb1 ) =
+   562	det (ae2eb2) = det (ae1eb2 ) = . Applying (1.20) and the formula (1.3) for (ab)
+   563	considered as a subgraph of L we obtain
+   564	(4.3)        det breb2 (ae2 ) (1=
+   565	                                :20)
+   566	                                     det brb(a) (1=:3) 18d1d32 2d2 = 18d32 2d2
+   567	Let Le0 be the component of F 1(bra(b)) containing eb2 . Since det bra (b) = 1,
+   568	(4.4)                  det Le0 (1=:18) 13  3dd3  2d22d d2 = d2
+   569	                                                3        2
+   570	
+   571	Denote  = brea2 (eb2 ) \ Le1. By (4.2), ve 62 , hence, det  > 0 by (1.7). Using (1.3)
+   572	for (ae1eb2 ) with  as the ambient graph we obtain
+   573	
+   574	                 d2 det  (1:3)=;(4:4) d2 det breb2 (ae1 ) 4d2d3 2;                hence,
+   575	(4.5)            det breb2 (ae1 ) = det  + 4d32 > 4
+   576	Applying (1.6) to eb2 we get d3 = det brbe2 (ge) = 1. Using formula (1.3) for the
+   577	determinant of (ae2eb2 )  Le, we get
+   578	        2d2 = det breb2 (ae2 )  det brea2 (eb2 ) 6 det breb2 (ae1 )2
+   579	            = 182 2d2 6 det breb2 (ae1 )2                                             by (4.2), (4.3).
+   580	Hence, det breb2 (ae1 ) = 3 that contradicts (4.5). 
+   581	Lemma (4.6). The graphs of Fig. 7(c), (d) are impossible.
+   582	Proof. Suppose Le1 is one of Fig. 7(c), (d). Suppose that ae and eb are forks of Le
+   583	and ee, qe, pe are the end vertices, see Fig .9(left) where the numbers written near the
+   584	edges are their degrees.
+   585	                                                      ~
+   586	                             1                        e                         ~       1
+   587	                   (4,1)             (3,1)        1                    1        b
+   588	                      ~      3       ~
+   589	                      b              a
+   590	                                                  2                    3
+   591	                                 2       1            g~                    1       1
+   592	                                 ~
+   593	                                 p           q~
+   594	
+   595	                                                       Fig. 9
+   596	14                        A.V. DOMRINA, S.YU. OREVKOV
+   597	   Let us show that det Le1 = 2. Consider, for instance, Fig. 7(c) (the arguments
+   598	for Fig. 7(d) are the same). It follows from (1.20) and (1.4) that det Lb = 3,
+   599	det Db = 2, and the determinants of the branches at eb are as shown on Fig. 9(right).
+   600	Applying (1.18) to eb we get
+   601	
+   602	(4.7)                   det Le1 = 4  1  3  1  1  1  det(ebge)
+   603	                         det L 1 3              2       det Rb
+   604	Recall (see (2.1)) that det L = 1, det Rb = 1. So, (4.7) implies
+   605	(4.8)                           det Le1 = 2 det(ebge):
+   606	   Combining (1.4), (1.20), (1.21), and (2.1) we get det Da = 2, det(aepe] = 1,
+   607	det(aeqe] = 2, det(aeee] = 1, det(aege) = 1, 3 det(beae) = det(ab). Applying (1.18)
+   608	to the vertex ae in the ambient graph (ebge) we get det(ebge) = 1, so, (4.8) implies
+   609	det Le1 = 2.
+   610	   Denote by the determinant of the graph A := Le ge Le1. The curve A is the
+   611	subset of Le which is contracted by F to a single point lying on g \ C 2 (if A 6= ?,
+   612	this point must be a singular point of g).
+   613	   Using formula (1.3) for the determinant of the subgraph (aege)  Le, we get
+   614	                    1 = 2 det brae(ge) 2 det brae(eb)(det (aege))2 :
+   615	But this is impossible since the right hand side is divisible by 2. 
+   616	                     5. The prohibition of Fig. 7(a), (b)
+   617	Lemma (5.1). Let Ke = P asese be the representation of the canonical class of Xe
+   618	as a linear combination of irreducible components se of the curve Le. Then age = 1.
+   619	P e bLet
+   620	Proof.       K be the canonical divisor of X with the support on X n C 2 and B =
+   621	  se2L sese the rami cation divisor of Fe (the divisor of the jacobian of Fe). One has
+   622	                                     Ke = F  (K ) + B:
+   623	Since g 6 X n C 2 , we have g 6 K . Comparing the coecients of ge in the left hand
+   624	side and the right hand side, we obtain age = bge = n(ge) 1 = 1. 
+   625	   Let ve be the root of Le. Clearly, ve 2 Le1.
+   626	Lemma (5.2). Suppose   Le1 is a maximal subgraph of constant degree incident
+   627	at ge. (We see that Deg  = 2.) Then the subgraph  \ (vege) is linear.
+   628	Proof. Suppose that  \ (vege) is not linear. Let ve1 be the nearest to ge nodal vertex
+   629	of  and v1 = F (ve1 ). It follows from (3.2) that m(ve1) = 1, n(ve1 ) = 2. Denote, as
+   630	in (4.6), = det(Le Le1ge). Since ve 2 Lg     e1, we have  1, det brve1 (ge)  1.
+   631	    Denote dve = det brve1 (ve) and let d be the determinant of the branch at ve1 not
+   632	containing ge, ve. The determinant of the lower branch at ve1 equals Dv1 by (1.20).
+   633	We see from (2.1) that Dv1 > 1. Hence, max(d; dve) > 1. Combining (1.21) and
+   634	(2.1a) we get
+   635	                                det(ve1 ge) = 2 det(v1 g) = 2
+   636	               ON FOUR-SHEETED POLYNOMIAL MAPPINGS OF C 2 . I                          15
+   637	     Consider the case d > 1. It follows from (1.7) that det brve1 (ge) = 1. Using formula
+   638	 (1.3) for the determinant of the subgraph (ve1 ge)  Le, we obtain
+   639	 (5.3)                               2 = det Le1 ddve
+   640	 It follows from (5.1) and (1.9) that
+   641	 (5.4)          1 = kge = 1           det Le1 + (d 1)(dve 1) + d1;
+   642	 where  is the rest of (1.9). Combining (5.3) and (5.4) we get 0 = d dve + d,
+   643	 hence, dve must be divisible by d 6= 1. This contradicts (1.4).
+   644	     Consider the case d = 1. As it was shown above, the determinant of the lower
+   645	 branch at ve1 is greater than 1. Hence, ve lies below ve1 and dve = det Dv1 > 1. Using
+   646	 formula (1.3) for the determinant of the subgraph (ve1 ge) in the graph Le, we obtain
+   647	                               2 = det Le1 det brve1 (ge) dve;
+   648	 so det Le1  0. It follows from (5.1) and (1.9) that
+   649	                               1 = kge = 1            det Le1
+   650	 hence, det Le1 = 2         < 0. Contradiction. 
+   651	 Lemma (5.5). Suppose that either det Le1 = 1 or det Le1 = 2. Let  satisfy
+   652	 the hypothesis of (5.2). Then ve 62 .
+   653	 Proof. Suppose ve 2 . By (5.2) we obtain that the graph (vege) is linear. The
+   654	 decomposition formula (1.9) with respect to ge implies kge =              det Le1 1, but
+   655	 kge = 1, hence, det Le1 =         2 < 2. Contradiction. 
+   656	 Lemma (5.6). Graphs Le of the form Fig. 7(a,b) are impossible.
+   657	 Proof. Let ae be the fork of Le1. Then (aege) is a maximal subgraph of constant
+   658	 degree, Deg(aege) = 2, (1.21), and (2.1) imply det(aege) = 1. Combining (1.20) and
+   659	 (2.1a) we see that the determinants of the rest two branches of Le1 to the right of
+   660	ae equal one.
+   661	     Consider Fig. 7(a). Let La, Da; : : : be as in (2.1) and denote by Lae (resp. Dae(d))
+   662	 the determinant of the left branch at ae (resp. the lower branch of degree d). Then
+   663	 det Lae= det La = 1=4 (by (1.20)) and det Dae(3) = 1, det Da = Dae(1) = 3 (by (1.20),
+   664	 (1.4)). Thus, we have
+   665	 (5.7)               det(Le1 [aege)) = det Lae det Dae(3) det Dae(1)  3;
+   666	               e
+   667	             det L1 (1=:18) 4 1  3 1
+   668	                                                 hence, det Le1 = det L = 1
+   669	(5.8)         det L         1  3  4 = 1;
+   670	.
+   671	   Analogously, one obtains (5.7), (5.8) for Fig. 7(b). Let  = (aege). It follows from
+   672	(5.5) and (5.2) that  is linear and ve 62 . Since ve 2 Le1 we get ve 62 brea(ge), hence,
+   673	det brea(ge)  1 by (1.7).
+   674	   Denote, as in (4.6) and (5.2), = det(Le Le1 ge). Using formula (1.3) for the
+   675	determinant of the subgraph  in the ambient graph Le, we get
+   676	                      1 = det Le1  det brae(ge)   det(Le1 [aege)):
+   677	Since  1 and det brea(ge)  1, this contradicts (5.7), (5.8). 
+   678	   Thus, all the graphs depicted on Fig. 7 are impossible. This completes the proof
+   679	of theorem (0.2).
+   680	16                           A.V. DOMRINA, S.YU. OREVKOV
+   681	                                          References
+   682	[1] A.G. Vitushkin, On polynomial transformation of C n , In: Manifolds, Tokio, 1973. Tokio Univ.
+   683	     Press (1975), 415{417.
+   684	[2] H. Bass, E.H. Connell, D. Wright, The Jacobian Conjecture: reduction of degree and formal
+   685	     expansion of the inverse, Bull. Amer. Math. Soc., Ser. 2 7 (1982), no. 2, 287{330.
+   686	[3] S.Yu. Orevkov, On three-sheeted polynomial mappings of C2 , Math. USSR-Izvestiya 29 (1987),
+   687	     587{596.
+   688	[4] S.Yu. Orevkov, An example in connection with the Jacobian Conjecture, Mathematical Notes
+   689	     47 (1990), 127{136.
+   690	[5] S.Yu. Orevkov, Coverings of Eisenbud-Neumann splice diagrams, Preprint.
+   691	[6] S.Yu. Orevkov, On the Jacobian Conjecture at in nity, Preprint.
+   692	[7] D. Eisenbud, W.D. Neumann, Three dimensional link theory and invariants of plane curve
+   693	     singularities., Ann. Math. Studies, vol. 110, Princeton Univ. Press, Princeton, 1985.
+   694	[8] W.D. Neumann, Complex algebraic plane curves via their links at in nity, Inv.Math. 89 (1989),
+   695	     445{489.
+   696	[9] W.D. Neumann, On bilinear forms represented by trees, Bull. Austral. Math. Soc. 40 (1989),
+   697	     303{321.
+   698	[10] T.-T. Moh, On the Jacobian Conjecture and the con gurations of roots, J. Reine und Angew.
+   699	     Math. 340 (1983), 140-212.
+   700	[11] R.C. Heitmann, On the Jacobian Conjecture, J. Pure and Appl. Algebra 64 (1990), 35{72.
+   701	[12] S.Yu. Orevkov, Acyclic algebraic surfaces bounded by Seifert spheres, Osaka J. Math. (to
+   702	     appear).
+   703	[13] S.S. Abhyankar, T.-T. Moh, Generalised Tschirnhausen transformation and approximation
+   704	     roots. I, J. Reine und Angew. Math. 260 (1973), 47{83.
+   705	[14] S.S. Abhyankar, On expansion techniques in algebraic geometry., Tata Inst. of Fund. Research.
+   706	     Lect. Math. Phys., vol. 57, 1977.
+
+exec
+/bin/zsh -lc "find /opt/homebrew /usr/local/share /Library -type f \\( -name 'rus.traineddata' -o -name 'osd.traineddata' \\) 2>/dev/null | head -20" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc 'curl -L --fail --silent --show-error https://github.com/tesseract-ocr/tessdata_fast/raw/main/rus.traineddata -o /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus.traineddata' in /Users/dc/code/math/jc2
+ succeeded in 1546ms:
+exec
+/bin/zsh -lc 'pdftoppm -r 300 -png refs/domrina_orevkov1999_mzm_four_sheeted_I_russian.pdf /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page' in /Users/dc/code/math/jc2
+ succeeded in 10057ms:
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+Syntax Warning: Bad bounding box in Type 3 glyph
+
+exec
+/bin/zsh -lc 'for img in /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-*.png; do out=${img%.png}; tesseract "$img" "$out" --tessdata-dir /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC -l rus --psm 3 2>/dev/null; done' in /Users/dc/code/math/jc2
+ succeeded in 40847ms:
+/opt/homebrew/Cellar/tesseract/5.5.3/share/tessdata/osd.traineddata
+
+ succeeded in 21956ms:
+exec
+/bin/zsh -lc 'for txtfile in /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-*.txt; do wc -l "$txtfile"; done' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+      49 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-01.txt
+      54 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-02.txt
+      60 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-03.txt
+      52 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-04.txt
+      56 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-05.txt
+      55 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-06.txt
+      51 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-07.txt
+      52 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-08.txt
+      49 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-09.txt
+      47 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-10.txt
+      45 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-11.txt
+      29 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-12.txt
+      33 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-13.txt
+      51 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-14.txt
+      55 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-15.txt
+      68 /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-16.txt
+
+exec
+/bin/zsh -lc "sed -n '1,120p' /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-01.txt
+sed -n '1,120p' /var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/do1-mu2-root.SxfhKHdTJC/rus-page-07.txt" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+Математические заметки
+
+ТОМ 64 ВЫПУСК 6 ЛЕКАБРЬ 1998
+
+УДК 517.55
+
+О ЧЕТЫРЕХЛИСТНЫХ
+ПОЛИНОМИАЛЬНЫХ ОТОБРАЖЕНИЯХ ©.
+Т. СЛУЧАЙ НЕПРИВОДИМОЙ КРИВОЙ ВЕТВЛЕНИЯ
+
+А.В. Домрина, С.Ю. Оревков
+
+Статья посвящена гипотезе о якобиане: если }: С? - С? — полиномиальное отобра-
+жение с постоянным якобианом, то } полиномиально обратимо. Основной результат
+статьи утверждает, что не существует четырехлистного полиномиального отображе-
+ния с постоянным якобианом такого, что после разрешения точек неопределенности на,
+бесконечности только у одной вклеенной кривой образ лежит не на бесконечности.
+
+Библиография: 14 названий.
+
+Введение. Пусть {: С? -» С? — полиномиальное отображение, якобиан которого
+равен ненулевой константе:
+
+её {" = сопз% 22 0. (1)
+
+Здесь С? и С? — два, экземпляра комплексной плоскости. Известная гипотеза о якобиане
+состоит в том, что такое отображение } полиномиально обратимо (см. обзоры в [1], [2].
+
+Отображение }, удовлетворяющее (1), является полиномиально обратимым тогда, и
+только тогда, когда общая точка из С? имеет один прообраз. Число прообразов общей
+точки называется топологической степенью отображения. Известно, что полиноми-
+альных отображений топологической степени 2 или 3, удовлетворяющих (1), не сущест-
+вует. Случай степени 2 элементарен, а случай степени 3 разобранв [3]. Нас интересует
+случай степени 4.
+
+С помощью конечного числа о-процессов на бесконечности можно продолжить } до
+регулярного рационального отображения РЁ: хх ‚ где Хх ‚ Х — неособые компактные
+комплексные многообразия, содержащие С? и С? соответственно в качестве открытых
+подмножеств, акривые Г := Х \ СиГ:=Х \ С? состоят из конечного числа неособых
+рациональных компонент, пересекающихся трансверсально и не более чем попарно.
+
+Неприводимая компонента, 9 кривой Г, называется дикрипиической, если Е(9) Ги
+Е непостоянно на 9. Основным результатом настоящей статьи является
+
+Работа выполнена при финансовой поддержке Российского фонда фундаментальных исследовал
+ний, грант № 96-01-01218. Работа второго автора выполнена при финансовой поддержке фонда,
+РСТСУТ (Испания), грант ЗАВ95-0502.
+
+847 © А.В. ДомРринА, С.Ю. ОРЕвков 1998
+О ЧЕТЫРЕХЛИСТНЫХ ПОЛИНОМИАЛЬНЫХ ОТОБРАЖЕНИЯхХ С? 853
+
+Полиномиальным автоморфизмом С? можно добиться того, что
+
+) в некоторых аффинных координатах (т, у) на С? ни одно из чисел ев. 9, Че, 9
+не делит другое;
+
+Е) (минимальность Г) кривая Г, не содержит (—1)-кривых стаких, что с-([—с) < 2,
+кроме быть может корневой вершины.
+
+Напомним, что мы используем одни и те же обозначения для кривых т , Тао, Ги их
+двойственных графов, атакже для неприводимых компонент и соответствующих им вер-
+шин. Все рассматриваемые ниже графы из определения 1 являются подграфами гра-
+фов Ги Г. Поэтому в обозначениях определения 1 для этих графов мы будем опускать
+индекс объемлющего графа.
+
+1 1 1
+корень
+
+Рис. 2
+
+Сплайс-диаграмма Эйзенбуда_Неймана кривой 4 возле Г, устроена, как показано на
+рис. 2. Обозначим через Ва, Г, Оа ветви Г, выходящие из нодальной вершины а в на-
+правлениях соответственно направо, налево и вниз.
+
+ПРЕДЛОЖЕНИЕ 3. Для любой нодальной вершины а имеет место
+
+а) Че В. =1, 4 О. > Г
+Ь) Че > Е
+с) ев Г = -1.
+
+Все утверждения предложения 3, кроме утверждения Ъ), очевидны. В терминах ха-
+рактеристических пар Пюизо это неравенство было доказано в [13], [14] (интерпрета-
+цию характеристических пар в терминах определителей подграфов см. в ["|, [8]). В
+обозначениях [13], [14] Че Г» = т; /4з-+л, где а есть 4-я (слева) нодальная вершина.
+Поэтому утверждение Ъ) вытекает из того, что аддитивная полугруппа, порожденная
+т1,... Тв, строго порождена этими числами (здесь важно условие О)). Топологическое
+доказательство более слабого неравенства 4е% Ги, > 0 приведено в [8, следствие 6.4].
+
+СЛЕДСТВИЕ 2. Страведливы следующие утверждения:
+
+а) Че (аб) и 4 Ра взаимно просты:
+Ь) аеГь ч а Да взаимно просты.
+
+Здесь а и В - нодальные вершины Г; 6 левее а.
+
+Доказательство. а) Достаточно применить лемму 2 к Вь. Утверждение Ъ) также
+следует из леммы 2.
+
+ЛЕММА 6. Выполнено тф(9) = 1 (напомним, что р:=9П Гоо). Если для неко-
+торой а подграф (49) линеен, то ОеБ(а9) = 2.
+

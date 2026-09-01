@@ -17403,3 +17403,32 @@ promote both root exclusions, narrow R2' sans fork, explicit
 fork-consumer ledger — NOT banked until sealed). Also running:
 SAGE-NATIVE 6^9 enum, Box03 msolve 869 + M2 queue (863 M2 rc=0
 confirmed in new status file).
+
+## LIVE STATE (observed 2026-09-01T23:39Z) — REPAIRS CONFIRMED; FORK-CONSUMED-NOWHERE; DOMRINA II = SOUND-AFTER-REPAIRS (MODULO MU2 + PACKAGES)
+
+**DOMRINA-REPAIR-REVIEW landed** (`domrina-repair-review-gpt55-20260901.md`,
+36635c98, BODY_SEALED_AFTER_DIVERT): R1/R1' CONFIRMED; R2
+CONFIRMED; R2' REPAIRED-DIFFERENTLY (honest scope: non-fork
+inessentiality proved exactly for what is consumed — g2-side
+pre-fork vertices and fork-as-endpoint paths; the broad
+every-non-fork-vertex sentence must NOT be banked without a
+crossing-fork argument); DET-LINF-NONPOS CONFIRMED (banked
+unconditional); no-countermodel CONFIRMED relative to stated
+packages; **FORK-CONSUMED-NOWHERE** — no §§5-7 consumer requires
+the open fork clause (OPEN[LEMMA-3.15-INESSENTIAL-AT-FORK] stays
+open but infects nothing). ADOPTED LEDGER LINE (paired-review
+complete on the repairs):
+
+  DOMRINA-II = SOUND-AFTER-REPAIRS
+  modulo { D-O-I-mu2-trust-boundary,
+           structure packages (F1)/(F2)/(S1)/(S2)/(S4) }
+
+The mu2 boundary is under live audit (do1-mu2-replay, 23977).
+The reception line stays NOT-ASSERTED as a *checked* closure until
+that returns; but the residual risk is now confined to part I's
+mu=2 track and the standard structure packages.
+
+Pending integration #7 (bind when mu2 + native enum + 869/964
+land): TB-GERM (4 repairs), CABLE-3/REP-96 (3 repairs), CAGE-N-R2
+promotion, (8,6,3) curve kill, (8,6,11)/(8,6,7) twice-derived
+kills, DOMRINA-II ledger line + R1/R2/DET-LINF, footguns #10/#11.

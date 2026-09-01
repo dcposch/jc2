@@ -463,3 +463,11 @@ variables.  This matters most in Lemma 7.9, where the printed `d2=2` is not
 the later canonical `D2=4`.
 
 <!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->`
+  line, including its terminating newline; this seal is outside the body.
+- Body bytes: `21058`
+- Body SHA-256: `36635c98876fb866c1f31f2b919c342865ca7cb971b9b9de4e2c988382781e5d`
+- Frozen basis: `e7130d487508479fc67cd95ff7ca6dc0d9265b91e097f19cca871e25dcd8751d`
