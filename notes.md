@@ -17432,3 +17432,36 @@ Pending integration #7 (bind when mu2 + native enum + 869/964
 land): TB-GERM (4 repairs), CABLE-3/REP-96 (3 repairs), CAGE-N-R2
 promotion, (8,6,3) curve kill, (8,6,11)/(8,6,7) twice-derived
 kills, DOMRINA-II ledger line + R1/R2/DET-LINF, footguns #10/#11.
+
+## LIVE STATE (observed 2026-09-01T23:47Z) — NEW CAS STACK LANDED (msolveio+qqideal); ORACLE WINDOW OPENING
+
+DC's software effort delivered: msolveio 0.1.0 + qqideal 0.1.0
+(pip, MIT; github.com/dcposch/{msolveio,qqideal}). msolveio =
+strict msolve 0.10.x I/O (canonical .ms emission; mode-required
+Groebner parse; solver-shaped bytes RAISE — the EMPTY<->NONEMPTY
+inversion class closed at the library; RunResult carries
+msolve_version + input/output SHA-256). qqideal = exact QQ ideals
+on python-flint (emptiness/dim/0-dim degree, colon/saturate,
+radical membership, resultants, double_point_ideal); verdicts
+carry Certainty (MODULAR vs Q-exact), no boolean truth value.
+Policy (DC): M2 retired as generation target after a
+parallel-oracle window; msolve stays GB engine; Sage/SIROCCO
+stays for braids; solver-mode/-P parsing deferred to PARAM.
+
+Coordinator actions (all done):
+- Box03: system msolve is 0.6.5 (too old) — msolve 0.10.1 BUILT
+  from source (~/msolve-0.10.1/bin/msolve, BUILD-OK), venv
+  ~/qqoracle-venv with both packages. Smoke test PASSED: version
+  gate reports 0.10.1; unit-ideal detection correct both
+  directions.
+- Launched `qqideal-oracle-codegen-grok46-20260901` (bvp650nuf):
+  P1-P4b corrected systems as qqideal jobs + oracle runner
+  diffing against recorded old-stack verdicts (P1 disagreement =
+  ORACLE-P0, exit 2); self-checks (i)-(iii) re-implemented as
+  pure-QQ substitutions.
+- Memory: msolveio-qqideal-stack.md saved.
+NOTE for the oracle record: today's suite verdicts (863 EMPTY
+etc.) were produced by msolve 0.6.5 -g 2 + M2 mirror; the [1]
+unit-basis convention is stable across versions and M2 confirmed
+independently — the kill stands; the oracle window reruns them
+on 0.10.1 regardless.
