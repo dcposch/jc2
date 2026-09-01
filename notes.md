@@ -16349,3 +16349,26 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
 - Remaining before unconditional B0 at N=4: (a) the six suite types
   (Box03 running); (b) the ROW-NF exhaustiveness lemma. Next lanes
   queue on those. N5-S2 review owed (routed next wave).
+
+## LIVE STATE (observed 2026-09-01T02:13Z) — THEOREM EXHAUST PROVED; PAIRED REVIEW FIRED; S5-COPRIME-KILL CONFIRMED
+
+- EXHAUSTIVENESS lane (Opus, `30eb230d`, PROVISIONAL): **THEOREM
+  EXHAUST PROVED** — the retained provisional link (Theorem FOLD's
+  statement) becomes a four-line consequence of `3 ∈ S_D`, δ_aff=3,
+  and a degree-filtration dimension count; ROW-NF re-derived from
+  the row hypothesis; the (8,4) proof lands directly on D_{b,c}.
+  COROLLARY: no campaign residual curve in rows (6,4)/(8,4) admits
+  the S_4 representation. Rides only: GM Thm 2.1 (published,
+  re-fetched, `637acfd1`), doubly-sourced delta values,
+  birationality, the Aut licence, promoted ROW-KILL. Paired review
+  launched 02:12Z (Sol gate 4h + Grok verification 3h — the
+  verification arm includes the strongest test: a SYNTHETIC
+  non-fold-form (6,4) parametrization pushed through the §4
+  algorithm).
+- N5-S2 review (Grok, `804e06fc`): ALL CONFIRMED —
+  THEOREM[S5-COPRIME-KILL] promotes; the cage and row-pin OPENs
+  correctly scoped. The kill machinery now runs at S_5.
+- Box03: suite still on the type ideals; braid cross-check running.
+- If the EXHAUST review confirms AND the suite returns EMPTY x6:
+  B0 closes at N=4 unconditionally -> integration #6, round trigger,
+  DC report.
