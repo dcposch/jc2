@@ -16426,3 +16426,24 @@ feeds a promoted claim, then it enters the review gauntlet like any math.
   next necessary layer = the noncoprime PI1-S4 residual + (M') on a
   proposed F. Disproof-side ledger updated.
 - Box03: suite + braid cross-check still running.
+
+## LIVE STATE (observed 2026-09-01T03:42Z) — INTEGRATION #6 SEALED: B0 UNDER H2 AT EVERY DEGREE
+
+- Sixth binding integration `763eec05` (basis 121a964d) PROMOTES:
+  **THEOREM 7.B — for every noninvertible plane Keller map of
+  geometric degree N>=3 with A_F irreducible, there is NO trivial
+  dicritical** (paired review complete: gate CONFIRMED-AFTER-REPAIR
+  with two proof repairs bound; verification all-HOLDS with a
+  complete escape-packet census at N=20/21/24). Under H2, at every
+  degree: b=0, strict budget, 2m<=N-2, H3 free.
+  OPEN[B0-H2-N>=20] CLOSED. Also promoted: EXHAUST-as-corrected;
+  S5-COPRIME-KILL; N5-S1 OPEN as typed; HF-ATTAIN sharpening.
+  SHAPE-KILL SK-1/SK-4/SK-5 PROVISIONAL (review launched 03:40Z).
+- Frontier after #6 — proof side: H2 complete at every degree; N=4
+  reducible = six candidate types (suite) + narrowed shape residuals
+  (SHAPE-2-INNER-g>=3, SHAPE-2-INFINITY-Z3, SHAPE-3-ALL-g,
+  TRIPLE-COVER-TSCHIRNHAUS-SPLIT); N=5 S1/S2 typed; N>=6 reducible
+  untouched; one-cusp induction independent. Disproof side: (9,6,4)
+  sharpness witness; R5 closed; degree-8 horn search space.
+- Clocks: web-sweep backstop 04:54Z — will run as a Grok lane at the
+  clock. Box03: suite + braid still running.
