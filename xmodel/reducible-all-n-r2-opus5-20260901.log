@@ -1,0 +1,17 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. `xmodel/reducible-all-n-r2-opus5-20260901.md` is written and sealed (body 5,997 words / 35,432 bytes, SHA-256 `96504369…c816a868`, basis `371bfc94`). All four input hashes matched before any file was read; no other file was created, no ledger or charged input touched, no CAS.
+
+## What the lane found
+
+**Census (charge item 1).** The four rows the verification arm named are admitted and re-gated: `N=6 [2] W=(2,3)`, `N=7 [2] W=(3,3)`, `N=7 [2^(1)] W=(2,3)` pass every gate; the fourth (`N=7 [2+2^(1)]`, trivial on the `k=1` side) **fails** the newly-stated Gate ETA. Recounted totals, verified by hand and by an independent integer enumerator: **13 / 27 / 90** profiles, **6 / 10 / 26** labels, **6 / 10 / 29** carrier-level cores at `N=6,7,8`. r1's headers `14/31/104` turn out to be exactly right *for r1's own gate set* — the enumerator reproduces them in that column — so the discrepancy is fully explained rather than patched.
+
+**Scope trims (item 2).** Reading Orevkov Lemma 5.2 and its proof sharpened the review's objection in both directions. NO-RAM-2 never needed the converse of 5.2 (`e_t ≥ 2` gives `ord φ_l ≥ 2` outright), and the residual defect is not a singular source germ — `X̃` is smooth — but a *second boundary divisor* through `t`, which Orevkov's Lemma 2.1 shows exists. So CUSP-2 survives verbatim off the contracted locus and the whole residual is one bounded computation, stated explicitly. DEG-PER, the `S_N` pin, NO-DEG-CAP's quantifier, and three meta-claims are trimmed or withdrawn item by item.
+
+**Two places I go against a review arm**, both reported rather than averaged away:
+- The hostile arm's `N=8` total of 91 is **90**: the extra placement `W=(5,2)` fails that arm's *own* strengthened Gate SELF, which it applied everywhere else.
+- Its fixed-letter objection misreads r1 §1 (correct as printed); it lands only on r1 §9's transcription.
+
+**Sign flip worth flagging:** r1 closed `OPEN[N5-DEGREE-CAP]` as refuted. That is a quantifier error — a cap implies the counterexample class is empty, so proving one would *close* the lane. It is high-leverage, not dead.
+
+Everything is typed `[D]`/UNREVIEWED and needs a different-model gate; the highest-leverage successor is `OPEN[CUSP-2-AT-CONTRACTED-ATTACHMENT]`, which alone decides 8 of the 90 `N=8` rows and the `N=5` S1 cusp pin.
+DIVERT path=xmodel/reducible-all-n-r2-opus5-20260901.md status=CLEAN_SEALED body_bytes=35432 body_sha256=96504369e041230006243f3a6046d7de1d353fbdf781000a21fa7632c816a868

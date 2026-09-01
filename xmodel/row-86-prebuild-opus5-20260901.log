@@ -1,1 +1,24 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report written and sealed: `xmodel/row-86-prebuild-opus5-20260901.md` (5,928 words; body SHA-256 `7247cef3…`). Hashes on all three charged inputs matched. No charged file, canonical ledger, or `jc2-lean` was touched.
+
+## Headline
+
+**Type A `(8,6,11)` is KILLED. Type B `(8,6,9)` survives every gate, with its residual pinned exactly.** The separation comes from a new theorem, not from the machinery the charge anticipated.
+
+**THEOREM TUBE-2 (PROVED-HERE, UNREVIEWED).** At `g = gcd(d,n) = 2` the tube braid group `B_2 ≅ ℤ` is *abelian*, so the exponent sum `e(ι)` — pinned by the promoted (1.1) to `(d−1)+2δ_aff−n(d−g)` — is the complete invariant of the inner braid. This is precisely the ingredient SHAPE-KILL §3.3 typed as missing ("*not otherwise constrained without a δ_aff census*"), and this lane has the census. Then `ρ_∞·T = T` collapses to `T_1 = σ^{e(ι)}·T_1`, and since SK-5 makes every block product a 3-cycle, each block subtuple is one of three factorisations that `σ` cycles — stabiliser exactly `3ℤ`. Gate: **`3 | e(ι)`**.
+
+At `(8,6)`: `e(ι) = 2δ_aff − 29 = 14 − β₁ = c − 18`, so the gate is **`3 | c`**. Type A has `e(ι) = −7` → contradiction; type B has `−9` → passes. Bonus: `(8,6,7)` dies too, `(8,6,3)` survives; the `(8,6)` row drops from four types to two.
+
+## Answers to the charged battery
+
+1. **Gates.** `(M-INF)` misses by 1 (type A, `M_∞=22=3d−2`) and 3 (type B). `(M-INF-T)` is monotone the wrong way — slack `= −1−2T` and `−3−2T` — so the N-A/Nori route fails at *every* singularity configuration. Type A sits exactly on the N-A boundary `C'² = 2r₁`, so a YES on `OPEN[NA-R1-SHARPNESS-IRREDUCIBLE]` would kill it a second way; I recorded that and did not relax the inequality.
+
+2. **TB/TB-2: NO contradiction.** Every input to TB is a function of `(d,n)` and the `(g,4g)` chart; none sees `β₁`, `δ_aff` or `c`. `m = 4` is forced identically for all four `(8,6)` types, so TB cannot separate or kill them. The order/parity fork at outer `(4,3)` is entered on the first horn only and is vacuous — `ord(Π)=3` comes from SK-5.
+
+3. **INF-TRIVIAL analogue: refuted, not merely absent.** Conditionally on `φ`, SK-5 makes `Π` a 3-cycle, which is no product of squares — so every even-word mechanism becomes a *kill criterion*. FOLD does not run: `4` is a gap of both semigroups. The odd Puiseux part of the `A_20`/`A_22` germs *is* `e(ι) = 14−β₁`, so the germ-level even-word question is Theorem TUBE-2 read at infinity.
+
+Verification: `e(ι)` computed twice by disjoint routes (discriminant bookkeeping; Puiseux winding) plus three controls — the strongest being the promoted, realizable `(6,4)` row, which passes non-trivially (`E = −5` alone is not divisible by 3; the shift `E+2 = −3` lands it).
+
+Two caveats stated plainly: the kill is at the **`S_4`-representation level** — it removes the type from the `PI1-S4` residual and does *not* claim non-realizability — and TUBE-2 is UNREVIEWED flagship-shaped work that should be paired-reviewed before promotion. `(9,6)` is untouched (`g=3`, `B_3` non-abelian).
+DIVERT path=xmodel/row-86-prebuild-opus5-20260901.md status=DIVERTED body_bytes=34766 body_sha256=7247cef3961576b9919a2ca6e67c484f9f84e6e0af5bca4ceaa353d900bbd4ed overflow=xmodel/row-86-prebuild-opus5-20260901.overflow overflow_bytes=273 raw=xmodel/row-86-prebuild-opus5-20260901.raw.md raw_sha256=a507d209e6efa6157609e3519b13bc1c4b3b7beebe8b429705a47a6fa06122dc overflow_sha256=57e0c5e6bd028a2241f6ba0d1c598f470594df2acf8b36e9c38021647a010fd8
+post-BODY-END overflow diverted; charged body preserved

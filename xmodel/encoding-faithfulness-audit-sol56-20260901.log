@@ -1,0 +1,147 @@
+cli=codex-cli 0.151.0 model=gpt-5.6-sol effort=ultra config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.151.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: ultra
+reasoning summaries: none
+session id: 01a05ecf-eb80-77d2-a375-6590d2460e08
+--------
+user
+# URGENT audit lane: ENCODING-FAITHFULNESS — are the six characteristic ideals faithful?
+
+You are a high-priority audit lane. ALL SIX realization verdicts
+(the two (9,6) KILLED, the two (8,6) NONEMPTY, the two pending) hang
+on whether the generated characteristic ideals faithfully encode
+their delta-sequence types. New COMPUTED EVIDENCE of a possible
+unfaithfulness: generic sliced points of BOTH type86_A (target:
+one-place Delta=(8,6,11), delta_inf=10, delta_aff=11) and type86_B
+(target: (8,6,9), delta_inf=11, delta_aff=10) yield honestly NODAL
+curves with REDUCED ordered double-point schemes of degree exactly
+30 — i.e. delta_aff = 15, hence delta_inf = 6 — the WRONG split for
+both types, and 15 = delta consistent instead with a TWO-place
+infinity (gcd(8,6)=2: the one-place condition is exactly what the
+h-conditions were meant to force). A concrete witness point (11
+number-field coefficients, quadratic field) is charged.
+
+charged_input=xmodel/type86A-sliced-witness-pt0.m2.txt
+charged_input=xmodel/msolve-prep-realization-grok46-20260831.md
+charged_input=xmodel/nodal-realization-86-96-grok46-20260831.md
+charged_input=xmodel/block-descent-a1-alldegree-h2-coordinator-integration-fable5-20260901.md
+
+Your inputs are frozen read-only copies in `/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.CQnK3y/inputs`;
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+475ca486f3e2eed4a71e842dbe4f16ad9db43efd46c19a9318c22490e0d1010e  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.CQnK3y/inputs/type86A-sliced-witness-pt0.m2.txt
+64e451b44a421ca8efbd9d5fd553fd43cc2fb7afe6415ab760aab9ac47c27ef4  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.CQnK3y/inputs/msolve-prep-realization-grok46-20260831.md
+3985fbedea72315c0ff3ffd4185de465ba16922bca872623fe2f02fe34cffc08  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.CQnK3y/inputs/nodal-realization-86-96-grok46-20260831.md
+763eec05eb6bc00f1c13e6ff25c2b275ef3c97f20a22e6ba34621244981c56c9  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.CQnK3y/inputs/block-descent-a1-alldegree-h2-coordinator-integration-fable5-20260901.md
+```
+
+Tasks, fail closed: (1) re-derive from first principles (AG-S /
+Abhyankar-Moh, the campaign's promoted cluster identities) the exact
+dictionary between the h-coefficients of the Tschirnhausen chart
+(as defined in the msolve-prep §2 shared chart) and the
+delta-sequence / one-place / beta_1 data: WHICH h-vanishings +
+which open condition force one place with Delta=(8,6,beta_1)?
+Verify or refute the six generated ideals' encodings against the
+dictionary — indexing errors (h_k off by one level), missing
+one-place conditions, and wrong open conditions are the suspects;
+(2) DESK-CHECK THE WITNESS: from the charged point's 11 explicit
+coefficients build p(t), q(t) and compute the infinity structure by
+hand/Puiseux (mult-2 leading behavior: is it one place or two? what
+beta_1?); its delta_aff = 15 is machine-computed (reduced, 15
+nodes) — verify the genus split for whatever infinity structure you
+find; (3) verdict per ideal: FAITHFUL / UNFAITHFUL (with the exact
+correction) — and re-type all six suite verdicts accordingly: which
+of KILLED/(9,6), NONEMPTY/(8,6) survive, which must be recomputed
+with corrected ideals (spec the corrections precisely for a rerun).
+Note: the (9,6) kills were EMPTY verdicts — an unfaithful ideal that
+is EMPTY kills only its (possibly wrong) encoding; type carefully
+what EMPTY proves under each faithfulness outcome.
+<function hdr at 0x1029e3320>
+Desk-scale exact reasoning; no CAS. No ledger edits; no jc2-lean.
+Five hours hard budget.
+
+Write one report and no other file:
+
+```text
+xmodel/encoding-faithfulness-audit-sol56-20260901.md
+```
+
+Skeleton first WITHOUT the BODY-END marker; bounded per-section
+writes; seal only at completion; budget-short => OPEN then seal.
+Under 6,000 words. No charge_basis.
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll verify the four frozen inputs before doing any substantive work. If every hash matches, I’ll split the audit into independent dictionary, witness, and six-ideal checks, while keeping the sole report file under my control.
+exec
+/bin/zsh -lc 'sha256sum type86A-sliced-witness-pt0.m2.txt msolve-prep-realization-grok46-20260831.md nodal-realization-86-96-grok46-20260831.md block-descent-a1-alldegree-h2-coordinator-integration-fable5-20260901.md' in /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.CQnK3y/inputs
+ succeeded in 0ms:
+475ca486f3e2eed4a71e842dbe4f16ad9db43efd46c19a9318c22490e0d1010e  type86A-sliced-witness-pt0.m2.txt
+c54d53f0a55586eb0fdd84d3aa311c6d64125a2cded8bec77aad1c3a8f40ec7f  msolve-prep-realization-grok46-20260831.md
+3985fbedea72315c0ff3ffd4185de465ba16922bca872623fe2f02fe34cffc08  nodal-realization-86-96-grok46-20260831.md
+763eec05eb6bc00f1c13e6ff25c2b275ef3c97f20a22e6ba34621244981c56c9  block-descent-a1-alldegree-h2-coordinator-integration-fable5-20260901.md
+
+codex
+Stopped fail-closed: one frozen input failed SHA-256 verification.
+
+`msolve-prep-realization-grok46-20260831.md`
+
+- Expected: `64e451b44a421ca8efbd9d5fd553fd43cc2fb7afe6415ab760aab9ac47c27ef4`
+- Actual: `c54d53f0a55586eb0fdd84d3aa311c6d64125a2cded8bec77aad1c3a8f40ec7f`
+
+The other three hashes matched. No audit was performed and no files were written.
+tokens used
+6,866
+Stopped fail-closed: one frozen input failed SHA-256 verification.
+
+`msolve-prep-realization-grok46-20260831.md`
+
+- Expected: `64e451b44a421ca8efbd9d5fd553fd43cc2fb7afe6415ab760aab9ac47c27ef4`
+- Actual: `c54d53f0a55586eb0fdd84d3aa311c6d64125a2cded8bec77aad1c3a8f40ec7f`
+
+The other three hashes matched. No audit was performed and no files were written.
+adapter exited 0 but required report is absent: xmodel/encoding-faithfulness-audit-sol56-20260901.md

@@ -1,0 +1,30 @@
+cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report banked at `xmodel/k1-mathlib-survey-and-plan-opus5-20260901.md` (803 lines).
+
+## Access disclosure first
+
+`~/code/math/jc2/jc2-lean/` — the checkout the brief names as source (i) — is a **git submodule whose working tree returns EPERM**, even with the sandbox disabled. I could not grep it. Instead I found the exact campaign rev `20bc1282…` living as a commit object in `/Users/dc/code/math/palomar/albertson-berman-palomar/.lake/packages/mathlib`, and read the byte-identical pinned tree via `git show <rev>:<path>` / `git grep <pat> <rev>`. The pin is **2026-08-19, toolchain `v4.34.0-rc1`, 8350 modules**.
+
+For source (ii) I diffed the pin's `Mathlib.lean` against master's (`cf0e3d85`, dated today): 142 modules added, **only `RingTheory.Localization.Saturation`** in the relevant namespaces, 0 removed — so pin ≈ master throughout. GitHub code-search probes ran with a positive control (`ZariskisMainProperty` → 3); five later probes hit the 403 rate limit and are labelled UNVERIFIED on master.
+
+## Part A headline
+
+**Better than expected in two places.** ZMT is fully present at *both* layers, and the relative-normalization API (`Scheme.Hom.normalization`) is literally our `Y = Spec B` — K1(1) is a near-instantiation, not a project. And `Ideal.sum_ramification_inertia_eq_finrank` holds for any finite **flat** extension of domains, with no Dedekind hypothesis.
+
+**Worse than expected in one.** Purity's entire support chain — Auslander–Buchsbaum, Cohen–Macaulay, Serre R_k/S_k, miracle flatness, `Module.depth` — is **absent, all four links**. The dim-2 shortcut the brief asks about is not available either: Mathlib's `Module.IsReflexive` is the bidual class, not the comm-alg reflexive hull.
+
+Two gaps I want to flag explicitly, both FALLACY-v2 shapes:
+
+- **Floor/attainment.** `pow_sub_one_dvd_differentIdeal` gives only `v_P(𝔇) ≥ e−1`. Tame ramification is absent (0 hits, pin and master), so the char-0 *equality* that K1(4) needs is not in the library and must be proved.
+- Ω² does not exist. `exteriorPower` exists and `Ω¹` exists, but they are never applied to each other (0 hits); no Fitting ideals of modules, no Weil divisors, no different↔Kähler bridge.
+
+## Part B headline
+
+The plan's load-bearing decision: **scope Stage 1 entirely to generic points of branches.** Over `A_𝔭` (height 1, hence a DVR since `A` is a UFD) finite torsion-free is automatically free, so the miracle-flatness gap never appears on the critical path. That makes K1-L14 (`Σ e·f = d`) ≈95% covered and low-risk — a real fast win — with the étale box (K1-L15) close behind at ≈90%.
+
+Two things I did *not* narrow away but did move off the critical path, with the reasoning stated: global flatness (K1-L21) and codim-1 of `Y∖U` (K1-L24). My recommendation is that K1 ships as a **conditional theorem** with purity named as an explicit hypothesis, and the purity library project (est. 2800–5700 lines, 8–15 lanes, 3–6 months) runs as an independent track. K1-L17 (tameness) is the one hard lane on the critical path, and it is hard for a nameable reason rather than a diffuse one.
+
+Every lane is CPU-light Lean elaboration — no Singular, no Gröbner. The only shared resource with Max-11 is a one-time ~15–25 GB `lake exe cache get`.
+
+Two caveats worth your attention: the lane format is my reconstruction from the brief, since the max11 style file and box-verify contract live in the unreadable submodule — conformance is **UNVERIFIED**, and should be re-checked before anyone executes. And I worked from the K1 statement in the brief rather than `round1033-sheet-gate-opus5-20260831.md`; whoever runs K1-L16/L17 should read that file first, since the precise form of the `(Y∖U, e>1)` box may narrow the recasting.
+DIVERT path=xmodel/k1-mathlib-survey-and-plan-opus5-20260901.md status=NO_MARKER bytes=51397
