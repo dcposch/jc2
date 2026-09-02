@@ -1,0 +1,74 @@
+qqideal-oracle-codegen  self-checks (Fraction, no msolve)
+=== leading G86 identities (kill-review §2) ===
+g_22 == a22-4*b: match
+g_21 == 3*B-4*gam: match
+g_20 == a22*b+a20+3*C-6*b^2-4*d: match
+g_19 == 2*a22*B+a22*gam+3*D-12*b*gam-4*e: match
+g_23 identically 0: match
+LEADING-IDENTITIES: PASS
+
+=== encoding comparison vs reviewed .ms (polynomial equality) ===
+corrected_863: match (19 closed + open g_3; vars 19+u)
+corrected_869: match (13 closed + open g_9; vars 17+u)
+corrected_964: match (12 closed + open g_4; vars 15+u)
+corrected_8611: match (11 closed + open g_11; vars 17+u)
+corrected_867: match (15 closed + open g_7; vars 18+u)
+MS-ENCODING: PASS
+
+=== (i) charged A false-positive vs corrected (8,6,11) ===
+check(i) g22 at point (in a22): a22-4
+check(i) g21 at point: 0
+check(i) h19 at point: 0
+check(i) g19 residual (a22=4): 11
+check(i) raw h11 at point: 59291/18432 - 27671*zeta/110592
+SELF-CHECK (i) charged A false-positive vs corrected (8,6,11): PASS — old A holds (g21=0, h19=0, h11=59291/18432 - 27671*zeta/110592 != 0) but corrected residual g19|a22=4b equals 11 != 0, so the point is not on V(g_22,...,g_12)
+CHECK(i): PASS
+
+=== (ii) (9,6,2) exhibit vs corrected membership ===
+check(ii) closed g_16..g_3: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+check(ii) g2: 64
+check(ii) g0,g1: 0 0
+SELF-CHECK (ii) (9,6,2) curve q=t^6+8t^2, p=t^9+12t^5+24t vs corrected (9,6,2): PASS — aux (a15,a12,a9,a6)=(0,0,0,-64) gives g_j=0 for 3<=j<=16 and g_2=64 != 0
+CHECK(ii): PASS
+
+=== (iii) HF-twin (9,6,4) vs corrected locus (pre-nodal) ===
+check(iii) closed g_16..g_5: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+check(iii) g4: -27/128
+check(iii) g3,g2,g1,g0: 0 -351/1024 0 0
+SELF-CHECK (iii) HF-twin (9,6,4) vs corrected (9,6,4) locus: PASS — aux (a15,a12,a9,a6)=(0,-9/4,0,-27/16) gives g_j=0 for 5<=j<=16 and g_4=-27/128 != 0 (constant term 0 omitted as in audit 7.1)
+CHECK(iii): PASS
+
+SELF-CHECKS OVERALL: PASS
+--- running p1_863 Delta=(8, 6, 3) timeout=3600.0s ---
+p1_863: EMPTY certainty=modular version=0.10.1
+p1_863: old-stack=EMPTY  AGREE-EMPTY
+p1_863: two-engine, binding: corrected_863.ms basis=[1] and patched corrected_863.m2 Iopen==(1) over char 0, before cover colon (kill-review KILL-BINDING)
+--- running p2_869 Delta=(8, 6, 9) timeout=3600.0s ---
+p2_869: non-answer kind=timeout detail='msolve exceeded the 3600.0s timeout and was killed'
+p2_869: old-stack=PENDING  FRESH kind=timeout
+p2_869: corrected B not an as-run charged Groebner; record fresh
+--- running p3_964 Delta=(9, 6, 4) timeout=3600.0s ---
+p3_964: NONEMPTY certainty=proven dim=3 degree=None version=0.10.1
+p3_964: old-stack=PENDING  FRESH kind=nonempty
+p3_964: corrected 96A incidence known NONEMPTY by HF-twin (desk, self-check iii); nodal six-node OPEN; raw EMPTY vacated. Record the qqideal Iopen verdict fresh; do not promote
+p3_964: I_DP schema ring=['s', 't', 'u']
+p3_964: P3 six-node: extract a closed point of Iopen, then p3_idp_verdict_for_closed_point(p0,q0). Ordered degree 12 would correspond to 6 ordinary unordered nodes; degree==6 against double_point_ideal is the wrong number. Reduced / immersive / distinct tangents / no-reused-parameter are NOT checked by double_point_ideal.
+--- running p4a_8611 Delta=(8, 6, 11) timeout=3600.0s ---
+p4a_8611: non-answer kind=timeout detail='msolve exceeded the 3600.0s timeout and was killed'
+p4a_8611: old-stack=VACATED  FRESH-AFTER-VACATE kind=timeout
+p4a_8611: raw A was NONEMPTY, vacated as unfaithful (audit 7.2). Corrected system decides fresh; do not assume EMPTY or NONEMPTY
+--- running p4b_867 Delta=(8, 6, 7) timeout=3600.0s ---
+p4b_867: non-answer kind=timeout detail='msolve exceeded the 3600.0s timeout and was killed'
+p4b_867: old-stack=VACATED  FRESH-AFTER-VACATE kind=timeout
+p4b_867: raw C was pending, vacated (audit 7.2). Prompt's raw-NONEMPTY->vacated applies to P4a; P4b was not nonempty. Corrected system decides fresh; do not assume
+
+=== qqideal oracle verdict table ===
+job       Delta       kind      certainty  dim   degree  old-stack  diff                             msolve  sha256[:16]       wall_s  
+--------  ----------  --------  ---------  ----  ------  ---------  -------------------------------  ------  ----------------  --------
+p1_863    (8, 6, 3)   empty     modular    None  None    EMPTY      AGREE-EMPTY                      0.10.1  e8d372a924b1904b  0.111   
+p2_869    (8, 6, 9)   timeout   modular    None  None    PENDING    FRESH kind=timeout               None    31d016272981a230  3601.682
+p3_964    (9, 6, 4)   nonempty  proven     3     None    PENDING    FRESH kind=nonempty              0.10.1  d5b018c760d53605  0.150   
+p4a_8611  (8, 6, 11)  timeout   modular    None  None    VACATED    FRESH-AFTER-VACATE kind=timeout  None    27adb9d6537b10ba  3601.134
+p4b_867   (8, 6, 7)   timeout   modular    None  None    VACATED    FRESH-AFTER-VACATE kind=timeout  None    7483df8fe65be8ae  3600.425
+
+Certainty: unit ideal over Q is MODULAR (msolve 0.10.1 returns after the first modular prime). NONEMPTY over Q is PROVEN (lifted -g 2). TIMEOUT/ERROR are not answers.

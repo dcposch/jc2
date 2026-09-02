@@ -18147,3 +18147,36 @@ node relators; run the cage on the (B3) profile; compute the A2
 case-(A) survivors with the reviewed machinery; N<=7 emptiness
 as control). Opus seats 1/5. Remaining tail: 869 msolve, oracle
 window (watcher b4o7mn88l), M2 964 control.
+
+## LIVE STATE (observed 2026-09-02T03:09Z) — ORACLE WINDOW COMPLETE, ZERO DISAGREEMENTS; CUTOVER EXECUTED
+
+**Oracle window complete** (oracle_rc=0; full log banked
+box/qq_oracle_window_run.log 394eaf8a). Verdict table:
+- p1_863 (8,6,3): **empty (MODULAR certainty) — AGREE-EMPTY
+  with the old stack. NO ORACLE-P0.** (The binding kill's char-0
+  weight remains the M2 mirror from the kill review; the oracle
+  adds the 0.10.1 modular confirmation.)
+- p2_869 (8,6,9): timeout at 1h — non-answer, fresh.
+- p3_964 (9,6,4): **nonempty, PROVEN (lifted), dim 3** — and the
+  M2 queue control ALSO returned NONEMPTY dim 3 (Iopen/Icolon/
+  IimmColon all dim 3, full GB printed). THREE-ENGINE AGREEMENT
+  (M2 char-0 + qqideal/0.10.1 proven + the desk realization).
+  Runner's typed note on double_point_ideal semantics (ordered
+  degree 12 = 6 unordered nodes; reduced/immersive/tangents NOT
+  checked by it) banked for future six-node work.
+- p4a/p4b (archival): timeout at 1h — non-answers,
+  FRESH-AFTER-VACATE discipline held (no assumption recorded).
+
+**CUTOVER EXECUTED (per DC's condition: parallel window run,
+disagreements zero):** qqideal + msolveio (msolve 0.10.1 pinned)
+is now the DEFAULT generation target for new Groebner jobs.
+M2 is demoted to optional secondary oracle (no new .m2 emission
+required from lanes). Sage/SIROCCO unchanged (braids only).
+The tracked PREFLIGHT upgrade attaches at the qqideal layer.
+Certainty discipline binding: MODULAR verdicts are not Q
+theorems; PROVEN/lifted or a second engine required for
+promotion-grade emptiness.
+
+Tail: 869 msolve 0.6.5 still grinding (12h cap ~10:30Z); on
+timeout, box01 char-p prefilter + elimination-split job.
+Running lanes: horn-flagship (opus), case-a-sweep (grok).

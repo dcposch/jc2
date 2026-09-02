@@ -1,2 +1,26 @@
 cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
-I'll start by verifying the frozen input hashes, then read the charged transfer report, review, and MPRIME source so the enumerator matches the reviewed machinery.Hashes match. Next I’ll read the charged reports, FALLACY-v2, and nearby xmodel context so the enumerator follows the reviewed constraints.
+I'll start by verifying the frozen input hashes, then read the charged transfer report, review, and MPRIME source so the enumerator matches the reviewed machinery.Hashes match. Next I’ll read the charged reports, FALLACY-v2, and nearby xmodel context so the enumerator follows the reviewed constraints.Hashes match. I’ll read the three charged reports and the existing prompt so the enumerator uses the reviewed formulas, not nearby analogies.Charged theorems are in hand. I’ll reconstruct the reviewed enumerator from the transfer report, the reviewer’s gates, and any leftover drivers so N≤7 emptiness matches exactly.I’ll implement the numerical cage enumerator next and calibrate it against the reviewed N=4..8 pair counts before any promotion analysis.The cage logic matches N=4–7 by hand. I’ll code the enumerator, lock it to those pair counts, then run 8…16.Pair counts match the review. Next I’ll dump the N=8/9 tuples and run the representation gate on the N=8 base cells.Numerical cage matches. I’ll add a cycle-type representation gate for N=6 and the N=8 base cells, then apply the (K) ledger to those survivors.The gate failed on a parameter-name mismatch. I’ll align the function signature and rerun N=6 and the N=8 fixed-alpha check.I have the census, controls, and N=8 representation match. Next I’ll write the sealed report to the leased partial.Sealed report: `xmodel/case-a-sweep-grok46-20260902.md` (body 21,236 bytes, SHA-256 `225bd867…`, basis `aedb8c88`). Input hashes matched before reading.
+
+**N ≤ 7 control matches the reviewed emptiness.** Pair counts are 0, 0, 4, 22. The N=6 and N=7 cells all die at the meridian cheap-gate (homology never runs). Dropping CUSP-PARITY as a negative control brings `(2,3)` and `(3,2)` back at N=4, so the enumerator is not over-constrained.
+
+**Numerical cage, 8 ≤ N ≤ 16** (truncated pair counts at the HT listing bounds):
+
+| N | pairs | finite pairs | families |
+|---|------:|-------------:|---------:|
+| 8 | 40 | 6 | 2 |
+| 9 | 102 | 10 | 4 |
+| 10 | 64 | 20 | 2 |
+| 11 | 42 | 10 | 2 |
+| 12 | 82 | 28 | 2 |
+| 13 | 128 | 8 | 6 |
+| 14 | 70 | 20 | 2 |
+| 15 | 386 | 48 | 8 |
+| 16 | 382 | 50 | 10 |
+
+Counts do not stabilize or empty. Unbounded `s=1` families dominate; finite pairs dip at several primes.
+
+**N=8 representation** reproduces HT: `(2,3)` 16, `(3,4)` 6, `(4,3)` 4, and the `(3,4D)` family collapses (same 6, mer type `(4)` at D=1,5,7,11). Extra numerical pairs `(2,7)` and `(2,15)` die at the meridian gate.
+
+**7.B, Lemma A, and (K) do not empty N=8.** `(K)` plus Lemma 4.3 kill only the two-birational reading of mer `(3,3)`. Residual: trefoil `(2,3)/(3,2)` with dicritical `(2,3)`, and family `(3,4D)/(4D,3)` with dicritical `(1,4)`. `OPEN[HOMCOVER-CUSP-A-N8]` stays open.
+
+**Conjecture (CUSP-A-KAPPA).** `kappa=1` cells die at the meridian gate; representation survivors live at `kappa ≥ 2`. Evidence: all N=6,7 cells are `kappa=1` and empty; N=8 extras with `kappa=1` die while `kappa=2` cells live; N=9 finite `kappa=1` `(2,3)` and `(3,4)` are cheap-empty, while the `kappa=3` trefoil family has 6 homology survivors. Typed as conjecture, not a theorem.
