@@ -58,6 +58,32 @@ day or inserts the completed day directly below this preamble (see
 > bridges substituted after the BI-ATTACH gap is settled, (B2) as a
 > statement about delta_aff alone, and a profile-driven counterexample
 > census behind the new PREFLIGHT hard gate.
+>
+> **EARLY AFTERNOON (through 13:00Z; integrations #11–#13).** The
+> boundary instrument and the exact meridian floor were reviewed and
+> bound (#11): the DO determinant package is degree-free at every N,
+> the census is the obstruction, MF-EXACT makes the floor an identity
+> (Riemann–Hurwitz on the generic pencil member). The ceiling flagship
+> (#12) proved no lattice-ledger instrument can bound the map degree,
+> derived the Noether equations for degree-N Keller maps, reduced the
+> ceiling to ONE integer (the anticanonical defect), and found the
+> cheapest crossing: Moh's D ≥ 101 means any proved D_min ≤ 100 at
+> geometric degree N kills N outright. The two halves then landed and
+> were reviewed (#13 and the #12 delta): the defect IS the genus of the
+> generic pencil member and equals the FORK MASS of the polar tree
+> (theta_inf = kappa; a chain-shaped polar tree with E_0 a leaf would
+> kill every N = 2W cell including the live N = 4 (B3) cell), and the
+> satellite mass is a boundary weight blind to every ledger with a
+> half-cap D ≤ 2(T + kappa) for one-dicritical maps, so T_ext ≤ 50 − N on
+> a degree-minimal pair kills the cell via Moh. The all-degree program
+> below N = 17 is now exactly: the SHAPE of the base cluster at infinity
+> of a degree-minimal Keller pair, where the Jacobian condition must
+> enter through the Newton-polygon theory of Jacobian pairs (flagship
+> running), with OPEN[POLAR-CHAIN] at N = 4 and OPEN[SING-WITNESS] as the
+> two immediate discriminators. Also today: the (B3) boundary census at
+> N = 5, 6 (exact, no legal pruning before a general-N assembly
+> theorem; demoted), MF-DEFECT closed positive, MULT-VS-BETA answered
+> NO, Box03 stopped idle, a Keller-cluster census instrument in build.
 
 ## 2026-08-31
 
