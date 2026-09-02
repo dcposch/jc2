@@ -19480,3 +19480,71 @@ per the AUDIT pointer, basis 15f87192): the (B3) boundary instrument
 and the exact meridian floor, both reviewed, at their scopes. Runners:
 n-vs-mapdeg (opus), b3-census-deg5-deg6 (sol), mf-defect-mult-vs-beta
 (grok). Next full-round floor 20:57Z; web-sweep deadline 09-03 ~08:00Z.
+
+## LIVE STATE (observed ~11:25Z per lane print) — THE CEILING FLAGSHIP LANDS: NO BOUNDARY INSTRUMENT CAN BOUND THE DEGREE; THE KELLER CONDITION REDUCES IT TO ONE INTEGER; MOH IS THE CHEAPEST CROSSING
+
+**N-VS-MAPDEG landed** (`n-vs-mapdeg-opus5-20260902.md`, ca915761,
+BODY_SEALED, 53KB; all PROVED-HERE/UNREVIEWED; hostile review launched
+`n-vs-mapdeg-review-gpt55-20260902`):
+- The invariant is D_min(F) = min over BOTH Aut factors (psi∘F∘chi) of
+  max(deg G_1, deg G_2); right composition fixes A_F, N, a, W, (s_l,mu_l),
+  delta_aff, Gamma, (d,e), R_0 (Chau) and moves only K = gcd(deg P,
+  deg Q): D_min = min_psi [max(d,e)·K_min]. THEOREM NEG-GEN: for general
+  dominant maps the bound is FALSE with a witness ((x, x^c y^N): N,
+  n_min = 1, D_min >= (c+N+1)/2; the datum spent is deg Jac). For Keller
+  maps: neither proved nor refuted, absent from refs/.
+- The POLAR LEDGER on the resolution (Z = Phi^*(L_infty) = sum m_C C):
+  m_{E_0} = D and s_l n = m_{C_l} (D and n are two values of one
+  function); DEG-SPLIT D = sum_l s_l n + kappa + T (T the satellite
+  mass); CAP-STRICT deg A_F-bar <= D − 1 (Chau's cap never attained; so
+  the (9,6) row admits no degree-9 component at all — CLAIM [D]
+  strengthened); **NOETHER-K: sum a_i = 3D − 2N − kappa + n(W − S) and
+  sum a_i^2 = D^2 − N** (the Noether equations for degree-N maps;
+  machine-verified on 41 maps; at N = 1 they are Noether's
+  sum a_i = 3D − 3, sum a_i^2 = D^2 − 1); det(boundary matrix) = ±1 for
+  every compactification of A^2 (blind to forks and chain length);
+  "sum Deg a~ = N" bounds only the non-contracted boundary.
+- **THEOREM NO-CEILING:** no intersection-theoretic boundary instrument
+  can bound D at fixed N (Hodge index gives only D >= sqrt N; the nef
+  hyperboloid Z^2 = N is unbounded in Z·H); two machine-verified
+  families realise it (D → ∞ with all growth in T; deg A_F → ∞). The
+  free datum is the SATELLITE MASS T — the boundary avatar of
+  Jung–van der Kulk word length (OPEN[SAT-MASS]).
+- **THE ONE INTEGER:** NOETHER-K is the Keller condition's boundary
+  shadow; it reduces the ceiling to the anticanonical defect
+  Z·K_X = sum a_i − 3D = −2N − kappa + n(W − S): any bound Z·K_X <= f(N)
+  closes OPEN[DELTA-AFF-VS-N] (n = (2N + kappa + Z·K_X)/(W − S);
+  Z·K_X <= 0 would give n <= 3N and a finite (B3) list at every N).
+  OPEN[ANTICANON-DEFECT]. Honest scope: FALSE in the ambient dominant
+  class (psi_k∘(x, x y^3) reaches +7 at N = 3); the log form
+  Z·(K_X + L~_red) <= 0 is FALSE too; the only Keller data are
+  automorphisms where −3 is forced by Noether — so a proof must use
+  Jac F ∈ C^* essentially. The log ramification formula on
+  (X, L~ + E-bar) reduces identically to [P3] (control).
+- MERIDIAN-FLOOR+: p(W − S) >= N − 1 with p = min deg_t l(a,b) <= n − 1,
+  hence n >= ceil((N−1)/(W−S)) + 1 — one unit sharper at every cell;
+  at W = 2, n >= N and D_min >= N + 1; re-derives n >= 4 at N = 4.
+- **THE CHEAPEST CROSSING: MOH-CROSS.** Moh 1983 (verified in refs/)
+  gives D_min >= 101 for any noninvertible Keller map. Hence ANY proved
+  bound D_min <= C(N) with C(N) <= 100 kills geometric degree N
+  outright — every case, every W, no profile analysis. A crude ceiling
+  of shape 3N carried from n to D (OPEN[SAT-MASS]: T <= 100 − Sn −
+  kappa) would close ALL of 4 <= N <= 33, the whole (B2) 5..16 and (B3)
+  4..8 ranges at once. Without SAT-MASS, ANTICANON alone makes the (B3)
+  enumeration finite per (N, W) but reaches no (B2) threshold.
+COORDINATOR DESK NOTE (UNREVIEWED, adjunction): on the resolution X the
+general pencil member's proper transform is the smooth curve Z itself
+(base-point-free |Z|), so p_a(Z) = 1 + (Z^2 + Z·K_X)/2 gives
+**Z·K_X = 2 g_L − 2 − N** — the "one integer" IS the genus of the
+generic member of the Keller pencil; with MF-EXACT (n(W − S) = N − 2 +
+2 g_L + theta_inf) this forces theta_inf = kappa and reproduces the
+lane's formula exactly (independent control). OPEN[ANTICANON-DEFECT] is
+therefore: is the genus of the generic curve {alpha P + beta Q = gamma}
+bounded in the geometric degree N of a Keller map? (Equivalently n.)
+The symplectic structure (dP∧dQ = dx∧dy: Q restricted to a fibre of P
+is an étale degree-N map to A^1 with exactly the n non-proper points
+of L ∩ A_F) is the datum not yet consumed by any lane.
+NEXT: the review; then the ANTICANON flagship (Opus) charged with the
+genus form, the symplectic datum, and the Moh crossing as its price.
+Opus seats 0/5 until then. Runners: b3-census (sol), mf-defect (grok),
+n-vs-mapdeg-review (gpt55).

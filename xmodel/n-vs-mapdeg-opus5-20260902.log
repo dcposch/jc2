@@ -1,0 +1,20 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at `xmodel/n-vs-mapdeg-opus5-20260902.md` (body 52,339 B, sha256 `c86d144f…`, basis `c463a7cf`). All six charged input hashes verified before reading.
+
+## What the lane found
+
+**(1) The invariant.** `D_min(F)` must be the *double-coset* degree: right composition fixes `A_F, N, a, W, s_l, mu_l, delta_aff, Gamma` and — per Chau 2004 p.2, read from `refs/` — fixes `(d,e)` and `R_0` while moving only `K = gcd(deg P, deg Q)`. So `D_min = min_psi[max(d,e)·K_min]`, and the source half of the problem is exactly "minimise `K`". Is `D_min ≤ C(N)` known? **No** — and it is **false for general dominant maps**: `(x, x^c y^N)` has geometric degree `N`, `n_min = 1`, `D_min ≥ (c+N+1)/2`. Those families spend `deg Jac`, which Keller pins to 0.
+
+**(2) The boundary.** With `Z = Phi^*(L_infty) = Σ m_C C` on the resolution, `m_{E_0} = D` and `s_l·n = m_{C_l}` — `D` and `n` are two values of one polar multiplicity. New exact identities, machine-verified on 41 resolved maps (0 failures):
+- `D = Σ_l s_l·deg Phi(l) + kappa + T` — so **Chau's cap is never attained**: `deg A_F-bar ≤ D − 1`, i.e. `K ≥ Sm + 1`. This removes the degree-9 component at the `(9,6)` row entirely (strengthens CD's CLAIM [D]).
+- `Σa_i = 3D − 2N − kappa + n(W−S)`, `Σa_i² = D² − N` — Noether's Cremona equation, generalised; it is the boundary shadow of `Jac F ∈ C^*`.
+- `det` of the boundary matrix is `±1` for *every* compactification of `A²` — an identity, blind to forks and chain length.
+
+**(3)/(4)** MERIDIAN-FLOOR+ sharpens DEG-AF-VS-N by one unit (`p`, not `n`, is what generates `pi_1`), and at `N=4` re-derives CD §5's `n ≥ 4` from group theory alone. THEOREM NO-CEILING proves no intersection-theoretic boundary instrument can *ever* bound `D`; the free datum is the satellite mass `T`.
+
+**(5)** Moh 1983 (verified in `refs/`) gives `D_min ≥ 101`, so any proved `C(N) ≤ 100` closes that `N` outright — the whole (B2) range 5..16 and (B3) range 4..8 at once. That is much cheaper than the `delta_aff` crossing.
+
+Two things to flag. First, a mid-lane correction that is in the report: I initially had evidence for `Σa_i ≤ 3D`; the consolidated run found it **false** for general dominant maps (`psi_k ∘ (x, xy³)` reaches `+7` at `N = 3`), so `OPEN[ANTICANON-DEFECT]` is typed as Keller-specific with its only confirming data (automorphisms) noted as degenerate. Second, the report is ~52 KB against the 25–40 KB target; the overrun is the §3 identity package with proofs and the §3.6 machine table, both required by charge items (2) and (4), and it is declared in DEVIATIONS.
+
+A parallel lane (`MERIDIAN-FLOOR-SHARPEN`) reached `n ≥ 4` at `N = 4` by a different route (LOC-MULT); its memory line says "no group instrument sharpens" the floor, which refers to the cycle-type route, not to changing the generator count — the two results agree numerically, but a coordinator should reconcile the wording.
+DIVERT path=xmodel/n-vs-mapdeg-opus5-20260902.md status=CLEAN_SEALED body_bytes=52339 body_sha256=c86d144fbe7a8af88ab263e060723d28d2213154576880158dbb548f7557870f
