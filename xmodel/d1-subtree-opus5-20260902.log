@@ -1,0 +1,31 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Lane complete. Report sealed at `xmodel/d1-subtree-opus5-20260902.md` (45.3 KB), drivers at `box/d1sub-drivers-20260902/`.
+
+## What the lane found
+
+All four input hashes verified before reading. **`OPEN[D1-SUBTREE]` is closed — and in the direction opposite to the charge's default.**
+
+**(1) The Jacobian condition below `D_1` is an equality.** From `G' = 0` on a branch `τ` of a generic fibre `{g = c_2}`:
+
+```
+F'(t) · g_y(t⁻¹, τ(t)) = − t⁻² J(t⁻¹, τ(t))      (star)
+```
+
+so `ord_t(f(τ)−a_0) + ord_t g_y(τ) = −1 + ord_t J(τ)`, which is `−1` exactly on the Keller locus. Since `g_y(τ_i) = ∏_{j≠i}(τ_i−τ_j)`, this constrains the root tree at **every** depth — including below `δ_1`, where Moh's recursion stops. Consequence: `N = Σ_ρ (1 − δ⁰_ρ)⁺`.
+
+**(2) `N` is pinned, not bounded.** The floor this gives at the bottom disc and the ceiling N-ON-THE-TREE already had are equal — `floor(r) − ceiling(r) = (1−δ_r)(−M_r−m)/(n−M_r)`, zero iff `M_r = −m`, i.e. at `r = 1` and nowhere else. So `N = Σ_B V_2(B)·q(B)`; N-CEILING is *attained*. Equality is then forced in every step: **the sub-tree of `D_1` is a star** (`λ_g` slope 1, `λ_f` constant below `δ_1`). Moh's recursion halts because the tree halts.
+
+**(3) Honestly, it does not give the ceiling.** The pinned value doesn't grow with `D` — measured `min L = 3/64` at `D ≤ 120`, `3/112` at `D ≤ 200`. `OPEN[UPPER-TO-FLOOR]` is answered *split*: floor yes (first in the record, and an equality), ceiling no. The new filter is **integrality**, not size: it kills 98.98% of V-assignments and 60.0% of groups at `D ≤ 120` under a named branch-uniformity hypothesis, 24.7% of groups without it by exact knapsack. **No degree is emptied; no (B2)/(B3) cell dies; MOH-SHARP-2 unchanged.**
+
+## Evidence
+
+252 Puiseux-level controls on 9 genuine Keller pairs (automorphisms to `D = 8`) plus 24 non-Keller negative rows, and 232 384 skeleton controls — 0 failures. The census reproduces N-ON-THE-TREE's 3 975 groups at `D ≤ 100` to the unit from an independent enumerator.
+
+Two things were caught by controls rather than by me: a sign convention in the Newton-polygon code (every predicted `−1` came out `+1`), and my own first claim that the *inequality* `λ_f + λ_g ≤ δ−1` characterises the Keller locus — it does not, since `ord_t J ≤ 0` makes the general bound stronger. Both are recorded in the report (§7 C6, §9).
+
+## Corrections filed
+
+N-ON-THE-TREE's RADIUS-ORDER is **not new** — it is Moh's own Lemma 5.2 (p.178), invisible in the OCR; its "`N|_{D_1}` can reach 0" is refuted; half of FILTER-INVERSION's mechanism is refuted (extra contact among `g`-roots *raises* `N`). DEPTH-CEILING's page-image recovery of Def 5.1 and Prop 5.3 is confirmed verbatim.
+
+I did not edit any canonical ledger and did not inspect `jc2-lean`. Two memories were written: the lane result and a Moh 1983 page map (three lanes running have each re-derived the same OCR-destroyed displays).
+DIVERT path=xmodel/d1-subtree-opus5-20260902.md status=CLEAN body_bytes=46349 body_sha256=26479b06b0f1ef526fe37bd34bccb61f50f207a509fcb0b0c1ae6fc5751858c0
