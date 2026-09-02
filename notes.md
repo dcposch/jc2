@@ -17742,3 +17742,7 @@ factorisation, R0-realisation/degree-cap, lattice signs
 (DET-LINF). Review debt: LOW (closure result, stops spending,
 licenses no positive claim; rank formula gates before any
 promoted use).
+
+CORRECTION (observed 2026-09-02T01:05Z): the BURNSIDE-CHI block
+above omitted the hash: `burnside-chi-gpt55-20260902.md` =
+a407057ce3c4bb74... (full 64-hex in git object; prefix a407057c).
