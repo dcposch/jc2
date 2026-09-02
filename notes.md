@@ -18297,3 +18297,10 @@ until DC restores balance: Grok volume roles fall back to
 GPT-5.5 (reviews) and Sol (research); Fable/Opus unchanged.
 FLAGGED TO DC (acceleration blocker: Grok is the review/volume
 workhorse under the standing policy).
+
+CORRECTION (per the 05:26:44Z date print above): the EVENT block
+is mis-stamped 05:31Z; observed time was 05:26:44Z. Recurrence
+#9. Coordinator rule tightened once more: event/state headers
+now carry NO minute-level stamp unless copied verbatim from an
+already-printed date; otherwise write "(observed: see prior
+date print)".
