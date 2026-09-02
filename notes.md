@@ -20322,3 +20322,28 @@ as the period condition [dx∧dy] = 0 in the Brieskorn module H''_f
 (JC2 ⟺ a Keller f with vanishing volume class has rank H''_f = 0);
 CARD 1 residue-at-the-bottom; CARD 3 char-p; the ceiling is not the
 right target.
+
+## EVENT ~16:58Z — EXACT-N PROPOSAL: THE BOTTOM OF MOH'S TREE IS RIGID (flagship `exact-n-rigidity-opus5-20260902` launched, hostile)
+
+From Grok's round submission (§4, the "Wronskian dictionary"): along a
+root τ_i of g − c₂, d/dx f(x,τ_i) = ±1/g_y(τ_i) and g_y(τ_i) =
+∏_{j≠i}(τ_i − τ_j) (monic), so with the shifted-tree structure of
+FRONTIER-N, ord_t g_y(τ_i) = −δ⁰_i and the pole of f along τ_i is
+EXACTLY 1 − δ⁰_i (δ⁰_i = g-frontier level of ρ_i; δ⁰_i = 1 impossible):
+N = Σ_i (1 − δ⁰_i)⁺, a function of the unshifted g-tree alone (DICT-N).
+Coordinator's squeeze: (frontier definition) δ⁰_i ≤ δ₁ − λ_g(δ₁), so
+pole_i ≥ 1 − δ₁ + λ_g(δ₁) = d(1−δ₁)/(d+e) by RADIUS-ORDER at r = 1;
+(FRONTIER-N + monotonicity + major-tower proportionality) pole_i ≤
+−λ_f(δ₁) = d(1−δ₁)/(d+e). EQUALITY ⇒ the sub-tree of every bottom-major
+disc is a STAR (all a₁ + b₁ roots separate exactly at δ₁), every
+bottom-major root has pole d(1−δ₁)/(d+e), and
+   N = A_bot · d(1−δ₁)/(d+e)   (EXACT-N; A_bot = # g-roots in
+   bottom-major discs ≤ ue; N = U iff the cover is exact).
+Consequences if it survives review: OPEN[D1-SUBTREE] closed by rigidity;
+the filter is exact and two-sided (N ∈ Z ∩ [6,16]); Moh's survivor with
+U = 10.5 dies; degrees may EMPTY. The r = 1 identity that makes the
+squeeze tight, (1−δ₁) + λ_g(δ₁) = −λ_f(δ₁), was found by Grok (§4.3,
+"a coincidence that is not a floor") — the lane is charged to decide
+whether it is Moh's definition of δ₁ in disguise. Deeper g–g contact
+RAISES N (the f-tree is slaved), inverting the N-ON-THE-TREE lane's
+"free sub-tree can only lower N". Status: PROPOSAL; hostile lane out.
