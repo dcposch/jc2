@@ -59,7 +59,25 @@ day or inserts the completed day directly below this preamble (see
 > statement about delta_aff alone, and a profile-driven counterexample
 > census behind the new PREFLIGHT hard gate.
 >
-> **EARLY AFTERNOON (through 13:00Z; integrations #11–#13).** The
+> **AFTERNOON (through 15:00Z; integrations #14–#15).** The shape of
+> the boundary tree of a degree-minimal Jacobian pair was decided at
+> its first fork (FIRST-FORK; the subrectangular gauge, and then the
+> orbit bridge closed YES: nu = 2, E_0 a free vertex), so both
+> conditional ceilings proposed in the morning are retired as kills;
+> the satellite mass is a boundary weight that Newton-polygon theory
+> leaves free. Then the depth flagship reversed half of that: the
+> Puiseux depth COUNT is log-bounded (3 <= s <= log_2 K — the theorem
+> behind Moh's unexplained "s <= 5"), only the SIZE of each pair is
+> free; and the geometric degree N was located inside Moh's own tree
+> as a contact-deficiency pairing sum across the two root towers that
+> no published constraint of Moh or GGV ever forms. Both reviewed.
+> Unconditional: D_min >= 105 for every noninvertible Keller map
+> (Moh's survivor list corrected: (64,48)). The binding reading: the
+> ceiling below N = 17 is now a FINITE, NAMED computation — express N on
+> a Moh skeleton and run the N <= 16 filter over the skeleton census
+> (flagship running); its outcome can prove a window rather than price
+> it. Two numerical censuses are live: boundary clusters satisfying the
+> full Keller ledger (box01, 975 cells, no failures) and Moh skeletons. The
 > boundary instrument and the exact meridian floor were reviewed and
 > bound (#11): the DO determinant package is degree-free at every N,
 > the census is the obstruction, MF-EXACT makes the floor an identity
