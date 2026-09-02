@@ -19017,3 +19017,40 @@ artifact/attainment typing; source-fidelity canary = the missing −2qE1)
 round's collision check; both to a Sol systems lane next window.
 Round quality stays DEGRADED on timing; content-wise five submissions
 with high novelty and near-zero duplication.
+
+## LIVE STATE (observed ~09:28Z per lane print) — E2 P0 GATED: CONFIRMED, PLUS A SECOND P0 (C32 T2 SIGN); A2 LEDGER RETRACTIONS BOUND
+
+**A2-E2-P0-GATE landed** (`a2-e2-p0-gate-gpt55-20260902.md`, 68c4802f,
+BODY_SEALED): P0_E2 CONFIRMED ([A^2]Even = SPEC_E2 − 2qE1; every other
+O/E display matches Even/Odd exactly); C32 §6 INHERITS it exactly.
+**ADDITIONAL P0:** C32's THEOREM T2 derivative display has a G' sign
+error: E3 − [Z^2 Xi − (3a/b)(Z eta^2 G^2)'/eta] = 12 Z a eta G G'/b; the
+corrected bracket is eta G^2 + 2Z eta' G^2 − 2Z eta G G'. Blast radius
+(gate's typing, binding now): HORN-A2's WALL RETRACTED (corrected 3x3
+determinant identically zero in Chambers I/II/III; g = 2e and
+c = −(2e+1) are not derived; the ray survives only as the universal
+corrected top kernel); RAY-1's N2 corrected with no epshat column;
+RAY-2 REFUTED; RAY-DEP survives; RAY-EDGE (e >= 2) survives with
+rho := −b^2 eta_e^4/(2 s_sigma^2); C32 T1 unaffected; T2 RETRACTED
+(reissue needed); T3 repaired and survives; **T4 ("deg eta = 0
+impossible") proof INVALID under corrected E2 — typed OPEN**; T5
+survives narrowed to e >= 1 pending T4. Positive results of [AU] on
+the corrected system: DEV-FREE CONFIRMED; A2-DEV-BOUND CONFIRMED in
+its chamber/proviso scope (Ch. III; Ch. II c != −2e), uniform in U;
+the (A)/(B) dichotomy and finite-U list CONFIRMED per fixed (e,c) on
+branch (A); an unconditional U-bound remains OPEN because c is not
+pinned. BOX CELLS: the (1,3),(1,5),(1,7) EMPTYs certify only the
+systems they ran on (old row, imposed wall) — not the corrected,
+wall-free system.
+**LEDGER (AUDIT delta #9b appended):** RETRACTED — old E2 display, C32
+§6 EQ2 displays, C32 T2 display, HORN-A2's wall clause, RAY-2, all old
+A2 cell certificates. NARROWED — T4 → OPEN, T5 → e >= 1 conditional,
+A2-DEV-BOUND to its scope. SURVIVING — C32 T1, T3 (repaired), RAY-DEP,
+RAY-EDGE (e >= 2, corrected rho), the ray as top kernel, DEV-FREE.
+Successor launched: `a2-dev-projection-sol56-20260902` (reissue the
+corrected seven-equation system as the canonical display; then Sol's
+DEV-PROJECTION / WALL-PIN J_e = I_e ∩ Q[c] per e, with [AU]'s DEVBOX
+and the DET-EO checksum; no imposed wall; both engines). Reminder of
+typing: the A2 object is PROFILE-UNTYPED (integration #9 §C); this lane
+serves ledger correctness and the one positive-side arrow Sol named,
+not the (B3) horn.

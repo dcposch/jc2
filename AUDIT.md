@@ -14932,3 +14932,23 @@ reproduced the transcription error rather than the source: recorded
 as a review-process finding (transcription controls against the
 DEFINING displays, not the derived ones, are mandatory for
 coefficient-level work).
+
+## INTEGRATION #9 DELTA (b) (2026-09-02, GATED): E2 P0 CONFIRMED; C32 T2 SIGN P0; A2 RETRACTIONS
+
+`a2-e2-p0-gate-gpt55-20260902.md` (68c4802f) CONFIRMS the E2 P0 of
+delta (a) ([A^2]Even = SPEC_E2 − 2qE1; all other displays exact; C32 §6
+inherits) and raises a second P0: C32 THEOREM T2's derivative display
+has a G' sign error (corrected bracket eta G^2 + 2Z eta' G^2 − 2Z eta G G').
+Binding ledger actions: RETRACTED — the SPEC's E2 display (rename: the
+equation is EQ2_even; E2 is the coefficient polynomial b Z eta^2), C32 §6's
+E2eq|_{G=0} + Delta_2 displays, C32 T2's display, HORN-A2's E1-wall
+clause (g = 2e, G_{2e} = −b(1+2e) eta_e^2) and everything resting on it
+(the N2 epshat column, RAY-2), and every A2 cell EMPTY certificate
+((1,3),(1,5),(1,7), the sympy (1,5)/(2,6) runs). NARROWED — C32 T4 is
+OPEN (its proof used the old E2 essentially); C32 T5 conditional on T4,
+e >= 1; A2-DEV-BOUND to Ch. III and Ch. II with c != −2e. SURVIVING —
+C32 T1 and T3 (repaired); RAY-DEP; RAY-EDGE for e >= 2 with
+rho = −b^2 eta_e^4/(2 s_sigma^2); the ray as the universal corrected top
+kernel; THEOREM DEV-FREE; the finite-U dichotomy per fixed (e,c) on
+branch (A). Under integration #9 §C the whole object remains
+PROFILE-UNTYPED; nothing here touches the (B3) horn or case (A).
