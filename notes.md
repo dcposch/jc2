@@ -18420,3 +18420,49 @@ zero-disagreement oracle window, M2 secondary; PARAM coming
 resolution-first (COORDINATION.md 2026-09-02 §), 5 Opus seats
 frontier-aimed, AWS quotas 1920/548 vCPU, formalization
 non-blocking, proactive surfacing to DC.
+
+## LIVE STATE (observed 2026-09-02T07:25Z per the 07:25:08Z date print) — COORDINATOR ACKNOWLEDGEMENT: FABLE 5.1 SEATED ON BASIS 9f0437ef
+
+Incoming coordinator (Fable 5.1, per DC's upgrade directive)
+acknowledges the atomic LIVE STATE of 07:22Z (commit 9f0437ef)
+as its basis per COORDINATION.md §Roles. DC goal restated in
+session: resolve the plane Jacobian conjecture; optimize for
+creativity and directness; resolution-first directive stands.
+
+**REMOTE JOBS OBSERVED ALIVE (date prints 07:25:17Z box01,
+07:25:19Z Box03, 07:26:43Z box-lean):**
+- box01 A2-E1WALL-CELLS window: (1,3),(1,5),(1,7) char-0 EMPTY
+  (MODULAR); (1,9) char-0 msolve running (~37 min process time,
+  ~134 GiB RSS); items 2-4 queued; 12h timeout from ~06:24Z.
+  build_tails43.py checkpoint builder alive (11d 9h, ~77 GiB
+  RSS) — untouched. Disk 36%.
+- Box03 corrected_869 msolve -g 2: 8h57m process time, 12h cap
+  -> ~10:28Z. Observation only: logs_corrected/status currently
+  holds three m2 lines (863 m2_rc=0, 869 m2_rc=124, 964
+  m2_rc=0) and NO "corrected_863 msolve_rc" line although
+  corrected_863.msolve.out exists (255 B, 22:27Z) — the m2 queue
+  may have clobbered the msolve loop's line at 02:40Z; verify
+  against status.attempt1 before reading any rc from that file.
+- box-lean: outside inspection boundary; five formalization
+  lanes from the prior session are still alive locally (noted
+  for process hygiene only; formalization non-blocking).
+
+**WATCHERS RE-ARMED (session-local):** box01 A2 window
+(persistent monitor, 120s ssh poll from log line 41, emits
+per-cell results / a2_status / process death); Box03 869
+(background watcher, 180s poll, 4h window past the cap); round
+floor 2026-09-02T12:22Z (one-shot scheduler). First arming of
+the two ssh watchers silently failed on a zsh word-splitting
+bug (unquoted `$SSH` command variable); re-armed with shell
+functions — successors: do not store ssh command lines in a
+variable under zsh.
+
+**CLOCKS:** round floor 12:22Z armed (packet headliners as
+listed at 07:22Z). Web-sweep 24h backstop: stamp check pending
+this tick.
+
+**NEXT (this tick):** launch the deferred OPEN[A2-U-BOUND]
+attempt lane (Opus, frontier seat) that the 05:26Z state
+queued and the Grok outage + handoff displaced; coordinator
+takes a direct desk pass at the same object. Grok balance
+restored ~06:40Z — volume routing returns to the 08-31 policy.
