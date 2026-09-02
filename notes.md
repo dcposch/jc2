@@ -18659,3 +18659,26 @@ consumer: `witness_points` on NONEMPTY verdicts (queued for the (B3)
 N=4 parametrisation search and any NONEMPTY cell). Note for the
 runner text: its certainty-scope banner still says "qqideal 0.1.0's
 contract" — cosmetic, unchanged semantics.
+
+EVENT (observed 2026-09-02T08:28Z per date print) — ROUND SYNTHESIS
+UNDERWAY; B3-E-GEOMETRY FLAGSHIP LAUNCHED; COLLISION-CHECK UPGRADE TEST
+PASSED. Three of four blind submissions read (grok46 25KB, opus5 41KB,
+fable51 26KB; sol56 still writing, deadline 08:56Z). Four-way
+convergence on attacking the (B3) horn through the explicit source
+curve E (B3-N4: rational, five places, one A2 cusp at k=1) — Grok's
+embedding/splice gates, the Fable lane's log-BMY-on-E, Opus's
+ANTI-MONOTONE genus-cap table, the coordinator's Galois-closure
+orbifold BMY — merged into ONE Opus flagship
+`b3-e-geometry-opus5-20260902` (launched; first attempt refused by
+the charge validator on a coordinator shell bug, relaunched clean).
+Opus seats: a2-ubound + b3-e-geometry = 2/5. Systems: Opus's
+OPEN/BANKED collision-check card had its smallest useful test run by
+the coordinator NOW — grep for OPEN[DEG-AF-VS-N]'s bounded quantity
+surfaces companion-curve-alln:685/785/836 (the cap
+sum deg D_i <= max(deg P, deg Q), flagged there as gauge-dependent on
+x,y) — PASS; adopted as the round's one tracked upgrade (seal-time
+hook to be implemented by a Sol systems lane next window; PREFLIGHT
+continues). Coordinator error ADOPTED for correction in the synthesis:
+the 07:22Z/07:41Z framing conflated the A2 residual's "one cusp" (a
+pole structure at infinity of a map-germ) with MPRIME's (B3) affine
+cusp; three submitters independently rejected gaps (k)/(l) as posed.
