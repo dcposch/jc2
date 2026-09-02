@@ -15219,3 +15219,23 @@ above or D below (OPEN[UPPER-TO-FLOOR]). Pending the review:
 FRONTIER-N, RADIUS-ORDER, DETECTOR-NULL, N-CEILING, HARMONIC-BOUND
 (1/N > 1/deg P + 1/deg Q, so N < D/2 and N <= 44 at the admissible
 degrees), RAMIFICATION-FLOOR.
+
+## INTEGRATION #16 (2026-09-02 ~17:15Z, Fable 5.1) — N ON MOH'S TREE: THE SKELETON BOUNDS N ABOVE ONLY
+
+Pointer: `xmodel/integration16-coordinator-fable51-20260902.md` (body
+b2123a74…, full 6b8a7123…, manifest 5876518a…, basis 709ccb5b).
+Binds `n-on-the-tree-opus5-20260902.md` (44223b32) with its Grok
+review (481d71bf; every item CONFIRMED). PROMOTED: FRONTIER-N (N on the
+tree of f·g, monic gauge); RADIUS-ORDER (M_s = n−2); DETECTOR-NULL
+(minor discs contribute zero; the free datum is the sub-tree of the
+last major disc D_1); N-CEILING (N <= u d e (1 − delta_1)/(d + e), upper
+bound only); FILTER-INVERSION ("N <= 16" rejects nothing);
+HARMONIC-BOUND (1/N > 1/deg P + 1/deg Q, N < D/2; degree-minimal,
+Moh's gauge, NU-TWO); N <= 44 at the MOH-SHARP-2 degrees (measured);
+the D <= 400 counts (no degree emptied); 418 skeletons at D in [101,200]
+pinned to N = 4. WITHDRAWN: #15 §D "can prove a window" (delta 15(a)
+confirmed); "provably U > 2" (measured to D <= 400 only); C6 as a Moh
+error (OCR restoration); "n = 75 illegible" (OPEN[DELTA75-BRACKET]
+stays open). READING: the boundary route is one-directional as built;
+OPEN[UPPER-TO-FLOOR] is the campaign question; OPEN[D1-SUBTREE] is the
+one untried boundary datum.
