@@ -18043,3 +18043,19 @@ its real value is the proven end-to-end instrument for N>=6.
 Interlock: HOM-COVER razor (a) on 962 survivors is MOOT (zero
 survivors; Card A stop condition). The (9,6,4) enum is now the
 live novelty (still running).
+
+## LIVE STATE (observed 2026-09-02T02:16Z) — TRANSFER SET FULLY CONFIRMED; CUSP-CAGE DELTA RECORDED
+
+**HOMCOVER-TRANSFER-REVIEW landed** (fadc17c8, BODY_SEALED):
+every claim CONFIRMED — NO-PUSHFORWARD (with scope note),
+the measured witness, CENTRAL-RANK (r=j impossible),
+CUSP-PARITY, ORBIFOLD-CAGE, CUSP-A-EMPTY at its stated typing,
+the CUSP-CAGE gap (REAL) + repair impact (M>=2 and CUSP-KILL
+survive), ACS-FIX-VS-DEFICIT exactly under H2+7.B. AUDIT delta
+entry appended (integration #7 CUSP-CAGE read with repair).
+Pending integration #8 accumulator: transfer set, SG-lane items
+(SRC-0/SG-1/instrument repairs), SAGE-NATIVE (9,6,2) curve kill
+(review running), 964 decision (enum running), oracle window,
+COLLAPSE-N/COMPANION-EXISTS (reviewed, in #7 scope note — wait,
+these WERE promoted in #7 §D). Remaining runners: 964 enum,
+962-kill review, 869 msolve, oracle, box01 provisioning.

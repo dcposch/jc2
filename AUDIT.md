@@ -14854,3 +14854,20 @@ SOUND-BY-DEPENDENCY-AUDIT with the Heitmann-vs-Zoladek typing;
 Card C dead at step 0; the SOURCE-OPEN-U retype; the standing
 fronts. See the artifact for exact statements — this entry is a
 pointer, not a restatement.
+
+## INTEGRATION #7 DELTA (2026-09-02, REVIEWED): CUSP-CAGE REPAIRED-AND-STRENGTHENED
+
+`homcover-transfer-opus5-20260902.md` (fa52e816) found
+GAP[CUSP-CAGE-KUROSH-DIVISOR] in the CUSP-CAGE component of the
+integration-#7 Path-1 promotion (Kurosh factors overstated as
+full Z/p, Z/q; the worked N=4 escape used the impossible r=j
+branch). The repair — THEOREM CENTRAL-RANK (r = j-1 exactly) +
+corrected divisor bookkeeping — is CONFIRMED by
+`homcover-transfer-review-gpt55-20260902.md` (fadc17c8), which
+also confirms M >= 2 and CUSP-KILL survive unchanged. The
+promoted CUSP-CAGE is henceforth read WITH this repair. Same
+review confirms THEOREM NO-PUSHFORWARD (+witness), CUSP-PARITY,
+ORBIFOLD-CAGE, CUSP-A-EMPTY (case (A) EMPTY for 4<=N<=7 at its
+stated typing: proved <=6, measured-exhaustive 7), and the
+ACS-FIX-VS-DEFICIT resolution (a = #Fix exactly, under H2+7.B
+only). These enter the next integration.
