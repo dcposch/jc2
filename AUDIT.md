@@ -15131,3 +15131,14 @@ the day (its §C): every instrument built today yields floors; the
 remaining ceiling is the Puiseux depth at infinity of a degree-minimal
 Jacobian pair — the GGV "next pair" core. See the artifact for exact
 statements — this entry is a pointer.
+
+## INTEGRATION #14 DELTA (a) (2026-09-02, PRODUCER-LEVEL, CHECK PENDING): OPEN[SUBRECT-ORBIT-BRIDGE] CLOSED YES
+
+`subrect-orbit-bridge-gpt55-20260902.md` (75ee84f8): every Aut × Aut
+degree-minimal counterexample admits GGV's standard subrectangular
+gauge with both degrees preserved (the subrectangularising source
+automorphism of van den Essen Cor. 10.2.21 is forced affine linear by
+degree-minimality), so nu(F_min) = 2 and integration #14's E_0-free
+conclusion and the vacuity of CH2 hold unconditionally at every N in
+degree-minimal scope. Binding after the different-model check
+`subrect-orbit-bridge-check-grok46-20260902`.

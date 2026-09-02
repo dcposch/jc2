@@ -20054,3 +20054,22 @@ Keller ledger (NOETHER-K both equations, proximity, DEG-SPLIT,
 dicritical structure, Hodge/nef) has solutions at each (N, D) up to 200
 — the numerical habitat of a counterexample above and below Moh's 102;
 every row is NUMERICAL_PROFILE / NECESSARY, never a map.
+
+EVENT (~13:50Z per lane print) — **SUBRECT-ORBIT-BRIDGE landed**
+(`subrect-orbit-bridge-gpt55-20260902.md`, 75ee84f8, BODY_SEALED;
+GPT-5.5 desk, PROVED-HERE/UNREVIEWED): OPEN[SUBRECT-ORBIT-BRIDGE] closed
+**YES** — every counterexample that is degree-minimal for
+D = max(deg P, deg Q) inside its full Aut(C^2) × Aut(C^2) orbit admits
+GGV's standard subrectangular gauge preserving both coordinate
+degrees: the source automorphism supplied by van den Essen Cor. 10.2.21
+(Makar-Limanov's subrectangularisation) must be affine linear, else its
+inverse would contradict degree-minimality; GGV's global-B minimality
+step is replaced by orbit degree-minimality. Hence nu(F_min) = 2 at
+every degree-minimal counterexample representative: E_0 is a free
+vertex and CH2's hypothesis is refuted UNCONDITIONALLY at every N (in
+degree-minimal scope). Important separation recorded: "linear change +
+(LF)" alone is NOT valid for H with >= 3 distinct roots; the bridge
+needs the subrectangularisation theorem. Different-model check
+launched (`subrect-orbit-bridge-check-grok46-20260902`, Grok) before
+promotion: the exact statement of van den Essen Cor. 10.2.21 / GGV
+Prop 4.7's input, and the affine-linearity argument.
