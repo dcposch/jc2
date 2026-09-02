@@ -5,6 +5,37 @@ day or inserts the completed day directly below this preamble (see
 `COORDINATION.md`). Detail lives in `notes.md` (tick-level) and `AUDIT.md`
 (promotion ledger); historical entries are not live policy or queue state.
 
+## 2026-09-02
+
+> **DAY SO FAR (through 09:00Z; coordinator Fable 5.1 from 07:25Z, after
+> the Fable 5 → 5.1 handoff).** Overnight (00:22Z round and its eight
+> lanes, Fable 5): N=4 CHECKED-CLOSED and N=5 sound by dependency audit;
+> every explicit N=4 object dead; Path-1 (THEOREM PROFILE) promoted and
+> Path-2 (COMPANION) closed negative; the cusp/homology theorem set
+> promoted (integration #8); the horn flagship and ray-kill reduced the
+> A2 residual to cells; the qqideal/msolveio stack cut over. Morning
+> (DC-triggered full round 20260902T0741Z, DEGRADED 3/4 + coordinator):
+> **THEOREM CUSP-A-VOID — MPRIME case (A) is EMPTY at every degree**,
+> found twice independently (a cusp of a cone-type A_F has no preimage;
+> an Euler count then forces an A^1 component mapping into C^*),
+> different-model gate and countermodel arm both passed, bound in
+> integration #9 with the corollary that a noninvertible Keller map's
+> non-properness set is never homeomorphic to C. Under H2 the residual
+> for N ≤ 16 is now exactly (B2) ∪ (B3). The same round showed the A2
+> "one-cusp horn" computation was the WRONG OBJECT (PHI-IMMERSION,
+> adjudicated: the A2 model's A_F is immersed, so it is profile (0)/(B1)
+> and cannot carry the (B3) cusp) and then the WRONG EQUATION (P0: the
+> CELL-32 spec's E2 omits −2qE1, coordinator-recomputed; HORN-A2's wall
+> and RAY-2 suspended; box01 cells void; gate running). Also: the Chau
+> degree cap kills any (9,6) companion (CLAIM [D] confirmed); the
+> collision-check systems upgrade adopted after its smallest test
+> passed; msolveio 0.2.1 + qqideal 0.2.0 cut over after a
+> zero-disagreement mini-oracle; Max-11 formalization handed to a
+> separate session. Frontier now: the (B3) horn through the source
+> curve E (flagship running), (B2) via Aut-minimal degree of A_F, the
+> reducible R0/degree-cap front, and the all-degree ceiling
+> (ANTI-MONOTONE).
+
 ## 2026-08-31
 
 > **DAY CAPSTONE (22:50Z): FROM A PARKED IDENTITY TO A ONE-PARAMETER

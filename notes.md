@@ -18905,3 +18905,36 @@ F1, CUSP-A-VOID-II, CUSP-A-KAPPA, chi(E) = nu − Sigma*, the
 SMOOTH-KILL composition, (9,6)-NO-COMPANION, PHI-IMMERSION and the
 A2 re-filing; records the rest. Its §C record of the (1,5)/(1,3) cell
 EMPTYs is superseded by this P0 (see the AUDIT delta).
+
+## LIVE STATE (observed 2026-09-02T08:56:40Z per date print) — ROUND 20260902T0741Z CLOSED (DEGRADED 3/4 + COORDINATOR); INTEGRATION #9 BOUND; THE A2 LINE CORRECTED TWICE
+
+Synthesis: `xmodel/ideation-20260902T0741Z-synthesis.md` (51a6bb02).
+Sol missed the 08:56Z close (skeleton on disk, lane still composing) —
+round DEGRADED per protocol; its submission is charged to the next
+micro-round on seal with full standing. Headlines, all banked above:
+(1) THEOREM CUSP-A-VOID, case (A) EMPTY at every N, twice found, gate +
+countermodel PASSED, INTEGRATION #9 BOUND (00e55ac2); (2) the A2
+residual is not the (B3) horn (PHI-IMMERSION CONFIRMED) and the record's
+E2 is wrong by −2qE1 (P0, coordinator-recomputed; gate running) — the
+"one theorem away" framing withdrawn; (3) the (B3) horn attacked through
+E (`b3-e-geometry` flagship, running); (4) Chau cap: (9,6)-NO-COMPANION
+confirmed, DEG-AF-VS-N retyped; (5) systems: collision-check upgrade
+adopted (test passed). PROGRESS.md 2026-09-02 entry written.
+
+**CLOCKS:** next full-round floor 2026-09-02T20:57Z (sooner on a
+significant event). Micro-round triggers: the P0 gate
+(`a2-e2-p0-gate-gpt55`, ~75 min), `b3-e-geometry` (Opus), Sol's late
+ideation, Box03 869 (cap ~10:28Z; then STOP the box's 869 queue).
+Web-sweep deadline 2026-09-03 ~08:00Z. QUEUED LANES (in order):
+a2-ubound successor = the bridge questions on the corrected system
+(after the gate); a2-cells codegen correction (−2qE1) if any A2
+computation is ever reopened; B3-PARAM-SEARCH on the n <= 8 list (after
+b3-e-geometry); profile-driven CE census design (Sol, after the same);
+collision-check seal-time hook (Sol systems lane, next window).
+Seats: Opus 1/5 (b3-e-geometry); GPT-5.5 1 (P0 gate); Sol 1 (late
+ideation); Grok 0. Boxes: box01 idle except the protected checkpoint
+builder — available for a (B3) instrument; Box03 869 to cap.
+Review debt (LOW): SG-1/SRC-0/SG-2/HC-1/HC-2; BURNSIDE-CHI rank
+formula; a2-ubound's positive theorems (in the gate's charge);
+LOCAL-ISO TRANSPORT as a general rule (promoted only in its confirmed
+forms).
