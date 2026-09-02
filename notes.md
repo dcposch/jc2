@@ -19091,3 +19091,24 @@ formula, RH on F|_{a~}) at general N with the affine data (cage G1–G4,
 E-CHARGE's K_p-at-infinity) as INPUT; reproduce the N = 4 (2,1) kill as
 a control; pass Sol's Γ regression (y^2 = x^3(x−1)^2); then N = 5, 6.
 Opus seats 2/5.
+
+EVENT (observed ~09:55Z per lane print) — **SYSTEMS LANE landed**
+(`systems-collision-preflight-sol56-20260902.md`, 54ece042,
+BODY_SEALED): delivered `ops/open_collision.py` (+ `ops/test_open_
+collision.py`) — lexical OPEN-vs-banked collision scan with a mandatory
+COLLISIONS section (fail-closed, ERROR block on contract failure; hits
+are review candidates, never closures) — and `box/preflight.py`
+(+ `ops/test_preflight.py`) — the encoding-faithfulness HARD GATE:
+exact-root emission, per-coefficient exact diff, ring/map/open/order
+fail-closed checks, the (8,6,19) false-positive canary, the (9,6,2)
+four-node positive control, the two-field artifact/attainment typing
+with a checked transition table, and the EQ2_even-omission source-
+fidelity canary; manifest SHA-256 custody; launch only on exit 0.
+COORDINATOR VERIFICATION: 27/27 unit tests OK (2.6 s, no msolve/qqideal
+needed); `preflight.py --self-test` 3/3 exact canaries PASS incl.
+"EQ2_even-omission-rejected". No running launcher was modified (the
+seal-time hook is described, not wired; wiring waits for a quiet
+window per COORDINATION §8 "do not retrofit the transaction into a live
+lane"). Both round-adopted upgrades are now implemented and tested.
+Today's finished lane artifacts (reports, logs, run records) are
+committed with this event per the tracking convention.
