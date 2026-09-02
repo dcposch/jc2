@@ -18180,3 +18180,21 @@ promotion-grade emptiness.
 Tail: 869 msolve 0.6.5 still grinding (12h cap ~10:30Z); on
 timeout, box01 char-p prefilter + elimination-split job.
 Running lanes: horn-flagship (opus), case-a-sweep (grok).
+
+## LIVE STATE (observed 2026-09-02T03:15Z per date print pattern) — CASE-A CHARTED: N=8 SURVIVORS ARE REAL
+
+**CASE-A-SWEEP landed** (prefix from shell log, BODY_SEALED):
+- CUSP-A-EMPTY N<=7 REPLAYED EXACTLY (independent enumerator;
+  pair counts 0,0,4,22; cheap-gate 0 on every N=6/7 cell) —
+  the reviewed theorem gains a second independent replay.
+- **N=8: the full promoted arsenal DOES NOT EMPTY the
+  residual.** Surviving cells: mer (2,3) 16 tuples, (3,4) 6,
+  (4,3) 4 — all pass homology + COR 7.2; extra finite pairs die
+  at the meridian gate; the q=4D family collapses to a stable 6.
+  7.B + Lemma A + (K) kill only the two-birational (3,3)
+  reading. Typed **OPEN[HOMCOVER-CUSP-A-N8]**.
+- 8..16: numerical cage nonempty at every N; finite-pair counts
+  grow irregularly (prime dips); unbounded s=1 families
+  dominate. CONCLUSION: case (A) at N>=8 needs a NEW GATE, not
+  enumeration — prime input for the 12:22Z round.
+Runners: horn-flagship (opus), 869 msolve (0.6.5, ~8h in).
