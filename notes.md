@@ -18346,3 +18346,77 @@ progress; watcher b8cnhkvtb armed). All EMPTYs beyond the gate
 are MODULAR-certainty evidence pending exact-Q or second-engine
 per cell — typed, not promoted. box01's idle cores finally
 carrying frontier compute.
+
+## LIVE STATE (observed 2026-09-02T07:22Z) — COORDINATOR HANDOFF: FABLE 5 -> FABLE 5.1 UPGRADE
+
+DC directive: exit cleanly; remote jobs may keep running. This
+block is the atomic handoff state; the incoming coordinator
+acknowledges this basis per COORDINATION.md.
+
+**NO local lanes running.** All session watchers die with this
+session — the successor must re-arm from the list below.
+
+**REMOTE JOBS RUNNING (find them here):**
+1. box01 (54.175.21.169, ubuntu@, key ~/.ssh/claude-cli.pem):
+   A2-E1WALL-CELLS window — ~/qqoracle/a2_window.log (live),
+   ~/qqoracle/a2_status (appears when done, "a2_rc=N").
+   State at handoff: (1,3),(1,5),(1,7) char-0 EMPTY (MODULAR),
+   (1,9) in progress; items 2-4 queued; 12h timeout from
+   ~06:20Z. All EMPTYs beyond the (1,3) gate are
+   MODULAR-certainty — promotion needs exact-Q or second engine
+   per cell. Also on box01: the protected build_tails43.py
+   checkpoint builder (DO NOT DISTURB; 25+ days, ~132GiB RSS).
+2. Box03 (54.210.201.219): corrected_869 msolve 0.6.5 -g 2 —
+   ~/realization_suite/logs_corrected/status gets
+   "corrected_869 msolve_rc=N" when done; 12h cap expires
+   ~10:30Z. On timeout (rc=124): the agreed fallback is a
+   char-p prefilter + elimination-split job on box01's new
+   stack (spec: notes 02:35Z event block). Purely confirmatory
+   under N=4-CHECKED-CLOSED; nothing waits on it.
+3. box-lean: formalization instance — outside inspection
+   boundary, untouched.
+
+**CLOCKS:** next full ideation round floor 2026-09-02T12:22Z.
+Round-packet headliners queued: OPEN[A2-U-BOUND] (the horn's
+one missing theorem), OPEN[HOMCOVER-CUSP-A-N8] (the 26 N=8
+survivors need a NEW GATE), the (B3) rigid-not-empty cage at
+N=4, N>=6 census design (S_6 scale + faithfulness preflight +
+prime-N primitivity screens), Grok restored (credits refilled
+~06:40Z — resume volume routing per the 08-31 policy).
+Web-sweep 24h backstop: check the last sweep stamp in notes
+(pre-handoff sweeps were current as of 09-01).
+
+**REVIEW DEBT (LOW, none blocking):** SG-1/SRC-0/SG-2/HC-1/HC-2
+(source-gate lane, negative findings, unreviewed); BURNSIDE-CHI
+rank formula (gates before promoted use); a2-cells codegen's
+CELL-32 errata typings; the A2 window's post-gate EMPTYs
+(certainty upgrades per cell if promoted use is wanted).
+
+**INTEGRATION #9 ACCUMULATOR (bind when convenient):** RAY-1
+(now derived in full via n2-derive 4116a4e2), RAY-DEP, RAY-EDGE
+(+ two-engine (1,3) gate from box01, promotion-grade), RAY-2
+(unconditional), HORN-A2 + the horn flagship set (B3-DEGREE,
+B3-CAGE, B3-PUSHOFF/COMPONENT under SCOPE[B3-QH], N=4 (B3)
+rigidity) — all reviewed; the case-A sweep chart; the A2/B3
+front separation correction; the A2 window results when
+complete.
+
+**STATE OF THE CAMPAIGN (one paragraph for the successor):**
+N<=5 soundly closed (N=4 fully checked, campaign repairs
+load-bearing; N=5 by dependency audit). Every explicit N=4
+object dead by binding routes; the realization->SIROCCO->ZvK
+pipeline is validated end-to-end and is the N>=6 instrument.
+H2 branch: nodal/smooth-branch profiles empty through N=16
+(reviewed); case (A) empty through N=7 with 26 real survivors
+at N=8; the residual = the one-cusp horn, now reduced to
+2-dimensional cells being emptied by computation, with
+OPEN[A2-U-BOUND] the single missing uniform theorem. Reducible
+branch: Euler species retired with proofs; residual =
+OPEN[COMPANION-R0-REALISATION]/degree-cap + the razor stack
+(blocked only on declared-completion data). Instruments:
+qqideal/msolveio (0.10.1 pinned) DEFAULT after a
+zero-disagreement oracle window, M2 secondary; PARAM coming
+(int tuples; char-p raises v0.1). Standing directives:
+resolution-first (COORDINATION.md 2026-09-02 §), 5 Opus seats
+frontier-aimed, AWS quotas 1920/548 vCPU, formalization
+non-blocking, proactive surfacing to DC.
