@@ -20588,3 +20588,18 @@ Reading: the endgame is not "does the star exist" (it always does) but
 and possibly "is Def 5.1(3) missing a denominator condition"
 (DELTA-DENOM). Lanes launched: review (Sol), disc-coupling (Opus),
 delta-denom (GPT-5.5). Drivers box/tfe-drivers-20260902/.
+
+## EVENT 18:43Z — CALIBRATION D = 48 LANDED (db8a10c9): THE CENSUS OMITS MOH (8)–(11); WITH THEM D = 105 HAS 3 GROUPS AND D = 48/66/78 EMPTY; #17 DELTA (d)
+
+See AUDIT delta 17(d). The time-function leading order is Moh's r = 1
+clause, a Belyi condition that never kills (TF-DESSIN); the killing
+filter at the same order is the Galois congruence (10)₁ (proved) plus
+Moh's (10) at j ≥ 2 (reconstructed). The realisation targets change:
+D = 105 survivors are three (2,3)-groups with M = (28,103) or (40,103);
+the skeleton the endgame and DISC-COUPLING lanes analyse is not among
+them (dead under the reconstruction; its status under (10)₁ alone is
+unstated). DISC-COUPLING continues as method development; CENSUS-
+REBASE (Opus, 5/5) recovers (8)–(11) verbatim from the p.201 image,
+implements them, and reruns the #17 programme on Moh's true space.
+Review of the calibration report queued for the first free non-Opus
+seat (Grok/branch-orbits expected first).

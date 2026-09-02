@@ -15346,3 +15346,36 @@ A.5 ⇒ squarefree bottom, part(P₁) = (1^{eV₂}), forced-repeat kills
 N = 6). REFUTED: "max L = 3.32 to D ≤ 190" (max L = 63/19 through 140;
 165/31 at D = 176; no floor kill follows either way). Promotion of the
 STAR closure excludes any realisability claim.
+
+## INTEGRATION #17 DELTA (d) (2026-09-02 18:43Z, PROVED-HERE/UNREVIEWED + MEASURED): THE CAMPAIGN CENSUS OMITS MOH'S SEARCH CONDITIONS (8)–(11); ALL #17 FILTER NUMBERS ARE ON A SUPERSET
+
+`time-function-calibration-d48-opus5-20260902.md` (db8a10c9; drivers
+box/tfcal-drivers-20260902/): box/moh_skeleton_N.py, d1floor.py and
+general.py implement Moh (1)–(7) and the Def 5.1(2) windows only, NOT
+his search conditions (8)–(11). Every #17 filter number (98.98% /
+60.04%; 264/209, 824/419, 1163/795, 60/47, 4104/2390; "NO degree is
+emptied") is correct about that superset and is not a statement about
+Moh's admissible space. PROVED-HERE (both branches): (10)₁ — the
+order-Δ₁ Galois automorphism of the bottom star permutes the a₁ = eV₂
+SIMPLE roots of p_g, so eV₂ ≡ 0 or 1 (mod Δ₁), Δ₁ = den(L₁δ₁),
+L₁ = lcm{den δ_s, …, den δ₂}; = Moh's (8)–(11) at r = 1 sharpened by
+D1-STAR; all six Moh rows pass. RECONSTRUCTED/UNREVIEWED (kill
+ceiling; the α = 0 branch (11) not recovered — OCR damage on p.201):
+(10) at j ≥ 2: Δ_j V_j ≤ V_{j+1} d_j/d_{j+1}. MEASURED with both, D ≤ 120:
+902,893 V-assignments → 329; 10,637 groups → 287 → 233 knapsack-alive
+(N ∈ [6,16]); degrees EMPTIED: 48, 66, 78 (consistent with Moh's
+D ≤ 100); D = 105: 264 groups → 3 (all (d,e) = (2,3), s = 3, a₁ = 3:
+m = 70, M = (28,103), V_s = 5, N ∈ {6,…,12}; M = (28,103), V_s = 6, N = 9;
+M = (40,103), V_s = 4, N = 9). With (10)₁ alone (fully proved), D ∈
+[48,90]: 86.7% of V-assignments die, 14% of groups; D = 48 not emptied
+by (10)₁ alone. Also PROVED-HERE: TF-0 (both p_f and p_g have simple
+roots — REFUTES the D1-SUBTREE review's "intra-f clustering is free";
+"invisible to N" stands), TF-DESSIN (Moh's r = 1 clause is a Belyi
+condition, always satisfiable: OPEN[STAR-REALISABILITY] NEGATIVE at
+the ODE level), TF-NOTAME, TF-EXH (ceiling N = U attainable only with a
+single bottom disc). The D = 48 skeleton selected by the charge dies at
+order 0 by (10)₁ (Δ₁ = 4, a₁ = 3). Consequences: the DISC-COUPLING and
+endgame target (105, 70, (−70,−63,103), V = (1,4,1)) is NOT among the
+three (10)-survivors; OPEN[CENSUS-REBASE] is the next move (lane
+launched); OPEN[MOH-11] (recover (11) from a clean scan of p.201).
+Review: pending a free non-Opus seat.
