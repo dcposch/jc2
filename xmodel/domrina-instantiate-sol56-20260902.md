@@ -11,7 +11,8 @@ The campaign residual does not supply the source-resolution tree in which
 
 This is not a counterexample to the checked Domrina chain. The live object is a
 curve/profile substrate satisfying necessary campaign constraints, not a
-degree-four Keller map. Domrina starts after such a map has supplied a morphism
+four-sheeted (topological/geometric degree `N=4`) Keller map. Domrina starts
+after such a map has supplied a morphism
 of compactifications and its source lattice. Conditional on a Keller extension
 of the residual, her repaired universal chain excludes the extension (modulo the
 declared structure packages); it does not thereby eliminate the realized curve
@@ -76,7 +77,9 @@ compactification.
 The carrier definition is `c=mu*s+K`, with owner weight the sum of `mu*s`
 over its carriers (`xmodel/reducible-all-n-r2-opus5-20260901.md:291-305`).
 At `N=4` the unique row is the `(2,1,0)` core plus one trivial on a second
-owner, `W=(1,2)`, but that report expressly says it recovers only the
+owner. Thus `W(D_1)=2` for the branched component and `W(D_2)=1` for the
+unbranched companion; `W=(1,2)` is the unordered/sorted profile display, not
+component order. That report expressly says it recovers only the
 **budget/ownership projection**, not the cage itself
 (`xmodel/reducible-all-n-r2-opus5-20260901.md:424-432`). Consequently the word
 "core" does not encode an intersection lattice, a path, a root, or a
@@ -98,10 +101,11 @@ produce a representation of the full complement group
 factorization remains the first missing object
 (`xmodel/rep-96-inner-opus5-20260901.md:607-641`).
 
-The reducible profile does require a second owner/component. In the frozen
-calculation its block-free Euler identity reduces to
-`chi_2+sigma_2=1`; the four nodes of `D_1` cancel and the equation constrains
-only the companion's normalization in that parametrization
+The reducible profile does require a second owner/component. Under the frozen
+report's nodal/transverse profile for `D_2`—`sigma_2` self-nodes, `j` transverse
+intersections with `D_1`, and its displayed local `a_p` census—the block-free
+Euler identity reduces to `chi_2+sigma_2=1`; the four nodes of `D_1` and `j`
+cancel, leaving only the companion's normalization condition
 (`xmodel/rep-96-inner-opus5-20260901.md:688-708`). This equality does not locate
 the companion's infinity series relative to `D_1`, give the joint embedded
 resolution, or construct a map having `D_1 union D_2` as its nonproperness set.
@@ -109,10 +113,18 @@ The frozen verdict still lists construction of `D_2` and the companion gate as
 open (`xmodel/rep-96-inner-opus5-20260901.md:710-716`). Even granting a target
 curve witness would not supply the source tree below.
 
+At the actual-map scope, CAGE-N-R2 also requires every component to have
+normalization `A^1`, one place at a common infinity point, and a common leading
+Newton-Puiseux type (`xmodel/reducible-all-n-r2-opus5-20260901.md:441-447`).
+Those are necessary common-type constraints, not relative-contact data: they
+still do not identify the series' parting level, construct the joint resolution,
+or supply a lift to the source lattice.
+
 ### 1.2 What Domrina's symbols mean
 
-Domrina assumes a degree-four constant-Jacobian map and then resolves it to a
-regular morphism `F:X~ -> X` between compact smooth surfaces. Its source
+Domrina assumes a four-sheeted (topological degree `N=4`) constant-Jacobian map
+and then resolves it to a regular morphism `F:X~ -> X` between compact smooth
+surfaces. Its source
 boundary is `L~`, `L~_infinity=F^{-1}(L)`, and the two source dicriticals are
 `g1~`,`g2~`, with restriction degree one and transverse orders one and two.
 The distinguished root `v~` is a vertex of `L~_infinity`. This map-level entry
@@ -172,7 +184,7 @@ instantiate its antecedent. The hypothesis audit is exact:
 
 | Lemma 2.12 obligation | supplied by the residual? | supplied by `DET-LINF`? | desk verdict |
 |---|---:|---:|---|
-| a morphism `F:X~ -> X` extending a degree-four Keller map | no | no | `OPEN[SOURCE-OPEN-U]` upstream |
+| a morphism `F:X~ -> X` extending a four-sheeted (`N=4`) Keller map | no | no | `OPEN[SOURCE-OPEN-U]` upstream |
 | source tree `L~`, root `v~`, dicritical vertices `g1~`,`g2~` | no | presupposed | not constructed |
 | selected `a~ in <g1~ g2~>` | no | no | no route-to-state |
 | definitions of `Q1,Q2,Q3` at that `a~` | no | no | undefined on the substrate |
@@ -204,7 +216,7 @@ type; "conditional" means it follows only after assuming a Keller extension;
 | 6 | Domrina Proposition 1.2 state and one of the ten Fig. 11 source diagrams | **conditional only**; no row selected by the residual |
 | 7 | a Lemma-2.12 vertex `a~`, `Q1,Q2,Q3`, positivity and (2.13) | **not reached** |
 | 8 | repaired R1/R2 root placement, followed by the relevant section 5, 6, or 7 terminal arithmetic | **not reached** |
-| 9 | Lemma 7.11 / no four-sheeted Keller map | **valid as the checked universal conditional theorem**, not a curve-level discriminator |
+| 9 | Lemma 7.11 / no four-sheeted Keller map | **`SOUND-AFTER-REPAIRS` relative to `(F1)/(F2)/(S1)/(S2)/(S4)`**, not a curve-level discriminator |
 
 There are two nested gaps, and keeping them separate matters. Step 2 is the
 frozen REP report's finite braid-factorization problem. Even a success there
@@ -216,16 +228,18 @@ corrected target `OPEN[SOURCE-OPEN-U]`: the finite normalization is not itself
 `A^2`; one must find an open `U isomorphic to A^2` with typed boundary, then
 compactify it (`xmodel/ideation-20260902T0022Z-synthesis.md:22-58`).
 
-The exact parting point with Domrina is step 5. The campaign can formulate the
-cover/source-open obligations through step 4 but has not supplied their objects;
-her `Q`-walk starts in the source compactification produced at step 5. There is
-no legal shortcut from the one Puiseux place to that source tree.
+The earliest map-attainment breaks are already steps 2-4. The first interface
+specific to Domrina's state is step 5: the campaign can formulate the
+cover/source-open obligations but has not supplied their objects, while her
+`Q`-walk starts in the source compactification produced there. There is no legal
+shortcut from the one Puiseux place to that source tree.
 
 ## 4. What the repaired theorem would do after the missing bridge
 
 Assume, only for this paragraph, that the residual extends to a genuine
-degree-four Keller map and that its compactification satisfies Domrina's entry.
-Then the walk is universal rather than special to `(9,6,2)`:
+four-sheeted (`N=4`) Keller map, that its compactification satisfies Domrina's
+entry, and that the five declared structure-package inputs hold. Then the walk
+is universal rather than special to `(9,6,2)`:
 
 ```text
 confirmed D-O-I mu2 inheritance
@@ -304,7 +318,9 @@ Open the following typed item:
 OPEN[RESIDUAL-TO-DOMRINA-STATE]
 
 Input:
-  a full braid-factorization survivor for D_1 union D_2;
+  a realized joint target pair D_1 union D_2;
+  a full local-braid-fixed representation for the branched D_1,
+  with the meridian of unbranched D_2 checked trivial;
   a finite cover with the campaign sheet/owner data;
   a declared Zariski-open U isomorphic to A^2 giving the Keller source.
 
@@ -312,7 +328,7 @@ Required certificate:
   (1) compactifications X~, X and a regular extension F:X~->X;
   (2) the joint target resolution of D_1 union D_2 at infinity;
   (3) the source boundary L~, L~_infinity, root v~, and dicriticals g1~,g2~;
-  (4) checked assignment D_2<->g1 and D_1<->g2, including transverse orders;
+  (4) checked assignment F(g1~)=D_2 and F(g2~)=D_1, including transverse orders;
   (5) a selected Fig. 11 row and route to a concrete a~;
   (6) Q1,Q2,Q3 with det Q3>0 and the exact (2.13) inequality.
 
@@ -321,7 +337,9 @@ Success:
   terminal chain, and record the first F*/S* package actually consumed.
 
 Failure:
-  kill that cover/source-open realization; do not infer nonexistence of D_1.
+  inability to derive the certificate returns OPEN;
+  only a proved obstruction kills the named cover/source-open realization,
+  and it does not infer nonexistence of D_1.
 ```
 
 This item is the operational version of the already-adopted boundary-lattice
@@ -354,14 +372,14 @@ SUBSTRATE
 DOMRINA THEOREM
   = SOUND-AFTER-REPAIRS under the declared (F1)/(F2)/(S1)/(S2)/(S4)
     structure-package boundary; post-packet mu2 is review-CONFIRMED.
-    Any genuine degree-four Keller extension of the substrate is excluded
-    by that universal chain.
+    Any genuine four-sheeted Keller extension of the substrate is excluded
+    by that universal chain conditional on those package inputs.
 
 PACKAGE LOCALIZED
   = NONE. No Fig. 11 row or R1/R2 application is selected.
 
-THIRD INDEPENDENT CLOSURE OF (9,6,2)
-  = NOT OBTAINED. The map-level theorem is not a curve-level kill.
+THIRD CONCRETE RESIDUAL-LEVEL / CURVE-LEVEL INSTANTIATION CLOSURE
+  = NOT OBTAINED. The package-relative map theorem is not a curve-level kill.
 
 ESCALATION
   = construct or refute the source-open boundary-lattice bridge above.

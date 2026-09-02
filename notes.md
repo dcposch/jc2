@@ -17716,3 +17716,29 @@ landings compose: reducible branch -> R0/degree-cap + razors;
 H2 branch -> the horn. Frontier is now three named necks:
 (i) the horn, (ii) OPEN[SOURCE-OPEN-U] razors on the complete
 (9,6,2) pair, (iii) OPEN[COMPANION-R0-REALISATION]/degree-cap.
+
+## LIVE STATE (observed 2026-09-02T01:05Z) — BURNSIDE-CHI: EULER SPECIES FULLY RETIRED WITH PROOF
+
+**BURNSIDE-CHI landed** (`burnside-chi-gpt55-20260902.md`,
+hash-prefix noted in AUDIT at integration; BODY_SEALED):
+**COLLAPSE CONFIRMED at the pinned N=4 profile** — the 11-row
+S_4 subgroup-lattice chi_c system yields NO relation on
+(s_1, sigma_2, j) beyond chi_2+sigma_2=1. Three structural
+reasons: (i) the companion's generic inertia is the identity
+(trivial dicritical), so it feeds only the identity row;
+(ii) the assembled identity entry is insensitive to companion
+variables; (iii) rank_Q = 3 on the supported columns (1,T,V).
+DELIVERED: the general-N promotion-safe rank formula —
+the Burnside-Euler system on a decorated profile has rational
+rank exactly rank_Q(A_G B_profile), a property of decorated
+local-inertia columns (carrier multiset + owner partition +
+physical places, per r2's typing), NOT of coarse labels.
+**Direction closure: with COLLAPSE-N (natural action) + this
+(full subgroup lattice), the Euler/chi_c identity species is
+PERMANENTLY RETIRED on the reducible branch — with a degeneracy
+proof and a rank predictor to stop any future resurfacing.**
+Live species for RED-N: HOM-COVER torsion (non-Euler), braid
+factorisation, R0-realisation/degree-cap, lattice signs
+(DET-LINF). Review debt: LOW (closure result, stops spending,
+licenses no positive claim; rank formula gates before any
+promoted use).
