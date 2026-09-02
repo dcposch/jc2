@@ -1,1 +1,17 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report at `xmodel/horn-flagship-opus5-20260902.md` (38,766 body bytes, sealed).
+
+## What the four tasks returned
+
+**(1) The (B3) group.** The charge's presentation claim — "torus-knot group with `k` added commuting-square relators" — is false, and I replaced it rather than deriving it. `G = pi_1(C^2\A_F)` has `n = deg_y bar A_F` ZvK generators, unbounded in `(p,q,k)`; only the inclusion `iota: Loc_{p_0} = G_{p,q} -> G` is canonical, and HT's NO-PUSHFORWARD forbids transporting across it. The commuting-square reading of the double points is correct exactly when they are genuine nodes (contact `t=1`); contact `t` gives `(x_i x_j)^t = (x_j x_i)^t`.
+
+Of the three theorems: **CUSP-PARITY survives strictly stronger** (`sgn rho(h) = eps^{deg h}` for every `h`, since `G^ab = Z`); **ORBIFOLD-CAGE survives orbit-summed** (`c_A + c_B = M_tot + T - R_tot`, with `r_O = 0` at affine orbits because `F` étale forces `(E,y) ≅ (A_F,p_0)`); **CENTRAL-RANK is refuted globally** — `G` has no centre in (B3) — and survives only per-orbit. Two new laws (B3-PUSHOFF, B3-COMPONENT) were needed and proved.
+
+**(2) The cage on (B3): rigid, not empty.** At `N=4` it pins `rho(G) = S_4`, forces the cusp Puiseux pair to satisfy `(2|p, 3|q)` or `(3|p, 2|q)`, and determines `E` completely (`j=1`, genus `k_odd−1`, one cusp, `3+4k−2k_odd` ends; or `j=2` with both components rational when all contacts are even). `j=1` is *not* a kill here — Lin–Zaidenberg fails since `E ≇ A_F` — so I found no EMPTY window in `N` and did not manufacture one.
+
+**(3) The A2 determinant — this exceeded its charge.** The charge anticipated an infinite wall and permitted stopping. Instead Chambers III (`det = 72en(2e+1)`) and I (`det = 36(U+g−3e)`) terminate outright, and Chamber II's `det = 36n(c+2e)(c+2e+1)` closes on every branch except `c = −(2e+1)`, which is exactly CELL-32's own Wall B. Since C32's T5 sends `r'=0` to the same wall, the whole live section at `e ≥ 1` satisfies `g = 2e` and `deg E1 ≤ 2e−1`, with the three top coefficients pinned to a ray. The `U < 3e−1` sub-branch closes on a proved lemma (`2e(2e−1)` is never a perfect square), not a measurement.
+
+Controls: the general-`e` apparatus reproduces CELL-32 §5.1 at `e=0` as four exact zero-difference identities, established before any extension was used.
+
+**(4) Composition — honestly, none.** Tasks (1)–(2) and (3) are different instruments on different objects and do not compose into a kill. The H2 branch is not closed; `(B3)` survives at every `N ≥ 4`. §5 names the three things that would compose, with `OPEN[DEG-AF-VS-N]` the highest-value one. Nothing was promoted beyond "necessary numerical gate" typing.
+DIVERT path=xmodel/horn-flagship-opus5-20260902.md status=CLEAN_SEALED body_bytes=38766 body_sha256=52ede8771f325249ca05491db374d88a52ea8a59ecd4935b4790e9307134bf73

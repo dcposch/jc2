@@ -18198,3 +18198,34 @@ Running lanes: horn-flagship (opus), case-a-sweep (grok).
   dominate. CONCLUSION: case (A) at N>=8 needs a NEW GATE, not
   enumeration — prime input for the 12:22Z round.
 Runners: horn-flagship (opus), 869 msolve (0.6.5, ~8h in).
+
+## LIVE STATE (observed 2026-09-02T03:19Z) — THE HORN COLLAPSES TO ONE WALL
+
+**HORN-FLAGSHIP landed** (`horn-flagship-opus5-20260902.md`,
+30589f6c, BODY_SEALED; review launched
+`horn-flagship-review-grok46-20260902`):
+(1) The (B3) group's ZvK presentation DERIVED (the charge's
+"torus-knot + k commuting squares" was WRONG — corrected;
+review adjudicates). Cusp-theorem transfer: **B3-DEGREE**
+(parity strengthened to sgn rho(h) = eps^{deg h} for EVERY h);
+**B3-CAGE** (local orbit-summed cage, new geometric reading of
+r_c); CENTRAL-RANK REFUTED globally ((B3) has no centre),
+survives locally; two new laws (B3-PUSHOFF + one).
+(2) N=4 (B3) cage: RIGID NOT EMPTY — rho(G)=S_4 pinned; cusp
+Puiseux pair forced (2|p,3|q) or (3|p,2|q); E=F^{-1}(A_F)
+determined (j=1 genus k_odd-1 on odd contact; j=2 both rational
+on even). No EMPTY window in N — reported as found.
+(3) **THEOREM HORN-A2**: A2 3x3 determinant COMPUTED. Chambers
+I (g>2e), III (g<2e): TERMINATE OUTRIGHT. Chamber II (g=2e):
+det = 36n(c+2e)(c+2e+1); every branch closes EXCEPT the single
+wall c = -(2e+1) = CELL-32's Wall B; combined with C32's T5,
+every survivor has g=2e, G_{2e} = -b(1+2e)eta_e^2,
+deg E1 <= 2e-1, top coefficients pinned to a ONE-DIMENSIONAL
+RAY. **The horn = one explicit wall.**
+(4) Composition honest: nothing closes (B3) at any N yet.
+NEXT (after review): the RAY-KILL lane — decide the pinned
+one-parameter family (this is now the sharpest object on the
+proof side, the analogue of what the realized curves were on
+the CE side).
+
+Runners: horn review (grok), 869 msolve (~9h in).
