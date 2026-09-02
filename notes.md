@@ -17848,3 +17848,23 @@ Running: source-gate-962, card-c-step0 (opus); homcover-
 discriminator, companion-alln-review, bmfact-964-codegen (grok);
 SAGE-NATIVE 6^9, Box03 msolve 869 + M2 queue, oracle window,
 box01 provisioning.
+
+## LIVE STATE (observed 2026-09-02T01:17Z) — CARD C DIES AT STEP 0, BY ITS OWN DISCIPLINE
+
+**CARD-C-STEP0 landed** (`card-c-step0-opus5-20260902.md`, prefix
+from shell log, PARTIAL_NO_MARKER — coordinator assessment
+UNSEALED-COMPLETE: all sections through the verdict + FALLACY
+audit present, only the marker line missing; banked by hash).
+Verdict: **step (1) NEGATIVE with proof** — the contact order of
+F with L_inf is PINNED to a finite list of 11 profiles, but
+(deg f, deg g) is NOT pinned: the admissible set is
+empty-or-infinite, no finite degree list exists. By the card's
+own stop condition, **Card C is DEAD AT STEP 0**
+(SCOPE-CONFLICT with the banked-tried GGV degree farm, exactly
+as feared), revivable ONLY by OPEN[CARD-C-SOURCE-NORMAL-FORM]
+(a normal form on the source side that would re-pin degrees).
+Steps (2)+(3) still delivered: the ideal specification for the
+residual stratum and the GGV firewall (consuming only the SOUND
+gcd>=16 per the 01:11Z correction). The direct-solve fantasy is
+retired cleanly; the decision weight for (9,6,2)/(9,6,4) stays
+with the braid pipelines + razors.

@@ -1,1 +1,21 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at `xmodel/card-c-step0-opus5-20260902.md` (28.8 KB; overrun logged as deviation 5).
+
+## Verdict
+
+**Step 0 fails. The degrees are not pinned, and the admissible set is not finite — it is unbounded. Card C dies as charged: SCOPE-CONFLICT, typed.**
+
+**(1) Degrees.** Two of the three things asked for are pinned; the degrees are not.
+
+- *Contact order with `L_inf` — PINNED.* Pairing `M = Φ̃*(L)` with its own divisor gives `Σ_{l at ∞} c_l·δ_l = M² = N = 4`, a complete finite list of **11** profiles (machine-enumerated).
+- *Floor — derived.* `π*L_inf = L̃_inf + Σν_j E_j` paired with `M`, plus `L̃_inf` contracted, gives `max(deg f, deg g) = Σ_l ν_l(M·l) ≥ 9·1 + 3 + 1 = 13`. The `3` is new: CAGE clause 1 plus the `(9,6)` place's ratio `9/3 = 3` forces `3 | deg D_2`, so `deg D_2 ≥ 3`, and the trivial carrier's `corr = 0` makes `D_2` immersed and singular — a nodal, not cuspidal, companion.
+- *No ceiling.* Source pre-composition `F ↦ F∘S` preserves `A_F` **exactly**, the covering, `ρ`, every cycle type, every `W_i`, and the whole carrier profile — while `deg(f∘S_k) = k·deg_y f + deg_x f_a → ∞`. So the admissible degree set is **empty or infinite**. Hence `EMPTY` at any bounded degree is not a kill of `(9,6,2)`; that withdraws the card's headline interpretation, though its `NONEMPTY` half survives.
+
+The single missing object is `OPEN[CARD-C-SOURCE-NORMAL-FORM]`: a bound on `min_S max(deg(f∘S), deg(g∘S))`. The campaign owns the *target*-side `d_min` discipline and nothing on the source side — and source automorphisms are invisible to every gate in CAGE §4 and every invariant in REP §7.
+
+**(2) Ideal spec.** Delivered as a family indexed by the discrete data, with the `(9,6,2)` parametrization embedded and the `mu ≥ 2` condition derived at coefficient level as `p'(T)·Φ^f_1 − q'(T)·Φ^g_1 = 0` (the unknown curve equation eliminates). Two corrections to the charge: the `l_2` germ condition is **unwritable** (`D_2` unknown), and `td = 4` plus `mu = 2`-exactness should be **dropped** — a lemma shows dropping them strengthens `EMPTY` and preserves `NONEMPTY`.
+
+**(3) GGV firewall.** No violation, and no desk-level kill: `gcd ≥ 16` is compatible with the geometric floor but raises it to 16. Typing held — `gcd(9,6) = 3` was not fed to GGV. One flag: since every `F∘S` is also a counterexample, GGV applies along the whole orbit, and in one branch Dirichlet would then close JC2 in two lines. I did **not** promote that; I raised `OPEN[GGV-SCOPE-ALL-PAIRS]` instead, since the more likely reading is that a scope hypothesis is being dropped in the campaign's transcription of GGV — which every consumer of that bound inherits.
+
+The card also dies a second, independent time: at the GGV floor `(16,16)` the system has ~310 unknowns against several thousand equations, two orders of magnitude outside msolve, and no legal degree pair is smaller.
+DIVERT path=xmodel/card-c-step0-opus5-20260902.md status=NO_MARKER bytes=28860
