@@ -18682,3 +18682,56 @@ continues). Coordinator error ADOPTED for correction in the synthesis:
 the 07:22Z/07:41Z framing conflated the A2 residual's "one cusp" (a
 pole structure at infinity of a map-germ) with MPRIME's (B3) affine
 cusp; three submitters independently rejected gaps (k)/(l) as posed.
+
+## LIVE STATE (observed: see the date print at composition) — CASE (A) IS EMPTY AT EVERY DEGREE: REVIEW CONFIRMED
+
+**CUSP-A-VOID-REVIEW-GPT55 landed** (`cusp-a-void-review-gpt55-20260902.md`,
+0ab02c19, body 9462f300, BODY_SEALED, basis 695820fe): EVERY charged
+theorem CONFIRMED —
+- NO-CUSP-PREIMAGE (properness over C^2\A_F is Jelonek's definition;
+  surjectivity from dominance + local properness; the restricted-cover
+  section argument valid with basepoints/orbits/ball-shrinking explicit);
+- the cone corollary (in LZ coordinates c is the vertex; weighted
+  positive-real scaling gives (S_w \ T(p,q)) x interval globally and
+  locally, so local-to-global pi_1 is an ISOMORPHISM);
+- THEOREM CUSP-A-VOID (chi_c(E)=1, a smooth affine component has
+  chi<=1, one A^1 forced, étaleness prevents contraction, no nonconstant
+  A^1 -> C^*);
+- (G-C) with a bookkeeping repair (Riemann–Hurwitz puncture split; cusp
+  and infinity terms cancel; chi(E) = nu - Sigma*);
+- MPRIME Prop 6.1 CONFIRMED as an AFFINE-FIBRE statement giving a_p = 1
+  in case (A) while NO-CUSP-PREIMAGE gives a_p = 0: the contradiction
+  is itself a direct case-(A) kill (this is the Fable-lane ideation's
+  CUSP-A-ALL-N route — both routes now stand);
+- Chain II: PERIPHERAL-RANK, MERIDIAN-SPAN (kappa*j <= a), kappa|a,
+  CUSP-A-VOID-II (under H2/7.B/W>=2 typing), CUSP-A-KAPPA upgraded to
+  a theorem; measured replay confirmed (32/32 fail MERIDIAN-SPAN);
+- SMOOTH-KILL composition CONFIRMED at banked typings: **the
+  non-properness set of a noninvertible Keller map is never
+  homeomorphic to C**;
+- SUCC-1 CONFIRMED only as "transitive local monodromy => F^{-1}(c)
+  empty"; (B3) with a_{p_0}=1 is consistent exactly because its cusp
+  local monodromy is not transitive.
+REVIEWER'S PROMOTE LIST: case (A) empty for every N>=2; the NO-CUSP
+local-transitivity lemma; PERIPHERAL-RANK; MERIDIAN-SPAN; kappa|a;
+chi(E) = nu - Sigma* with the puncture split. DO NOT PROMOTE: any (B3)
+deletion; "Prop 6.1 is dicritical-only"; any realization; any exit price.
+
+**Coordinator reading.** The promotion gate (one different-model hostile
+review) is PASSED. The paired countermodel arm
+(`cusp-a-void-countermodel-grok46`) is still running and is consumed at
+integration as additional coverage, not as a gate. INTEGRATION #9
+ACCUMULATOR now heads with: THEOREM CUSP-A-VOID (all N, H2-free),
+NO-CUSP-PREIMAGE / LOCAL-TRANSITIVITY lemma, LOCAL-ISO TRANSPORT as a
+rule (fable51 ideation §1, same mechanism), PERIPHERAL-RANK,
+MERIDIAN-SPAN, kappa|a, CUSP-A-KAPPA, the (G-C) identity, the
+SMOOTH-KILL composition. Consequences on binding: THEOREM PROFILE loses
+row (A) at EVERY N; under H2 the residual below N=17 is exactly
+(B2) ∪ (B3); OPEN[HOMCOVER-CUSP-A-N8] and OPEN[MPRIME-CUSP-J2] CLOSED
+NEGATIVE at all N; CASE-A-SWEEP's survivor lists become historical.
+This is the first all-degree emptiness theorem for a whole PROFILE row
+since SMOOTH-KILL, and the first found by the campaign's own
+covering-space mechanism rather than by a budget inequality.
+FLAGGED TO DC (proactive surfacing): major promoted-grade result; the
+Max-11/formalization queue may want it as a target once integration #9
+binds.
