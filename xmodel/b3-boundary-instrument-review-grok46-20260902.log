@@ -1,0 +1,20 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll verify the charged-input hashes first, then settle BI-ATTACH against the N=4 replay before scoring the rest of the lane.Hashes match. Next I’ll read the producer report and the N=4 replay so BI-ATTACH can be settled first.Hashes match. I’ll finish the producer report and pull the replay’s §6 assembly plus Lemmas 10–15 for BI-ATTACH.I’ll read the replay’s assembly and Lemmas 10–15 next, then the supporting geometry reports.I’ll recompute the local attach model and pull Prop 1 / Lemma 6 from the supporting reports.I’ll pull Prop 1 / Lemma 6 from the original paper and start independent CAS on the census, Γ, and the attach model.I’ll extract Prop 1 and Lemma 6 from the preprint and the geometry reports next.I have Prop 1.15 and Lemma 6. Next I’ll rasterize the Russian lemma, then run independent CAS on the census, Γ, the attach model, and the N=5,6 profiles.I have the Lemma 6 / Prop 1 / Cor 4 picture. Next I’ll run independent CAS on the census, Γ, the attach model, and the N=5,6 profiles.CAS matches the census and Γ; N=6 is missing one charged type. I’ll write the sealed review with BI-ATTACH first.The draft is ~37KB against a 20–30KB target. I’ll compress it without dropping the BI-ATTACH argument or the CAS results.Hostile review is sealed at `xmodel/b3-boundary-instrument-review-grok46-20260902.md`. Charged-input hashes matched before any reading. No canonical ledger was edited; `jc2-lean` was not opened.
+
+**BI-ATTACH: GAP-REPAIRED.** The split *is* load-bearing for Corollary 5 (constant block versus fork). The lane’s transpose `(μ_l,s_l)` is the Corollary 4-excluded Deg-2 fork, not the object the assembly uses (Lemma 6’s constant Deg-2 block). The `N=4` kill remains the SET §§2–7. Independent blowup of `F=(x,xy^2)` confirms the physical neighbour is contracted (`det=2`). The affine `L_C` tail is not a contracted `L̃_∞` component over `p`. Displayed identities (7.3), (7.6), (7.10) are unchanged. **`N=4-CHECKED-CLOSED` is not reopened.**
+
+Promotion, in short:
+
+| Item | Verdict |
+|---|---|
+| BI-1, BI-2, BI-4, BI-6, BI-7, BI-8, BI-MERIDIAN, EXTRACTION-1 | **CONFIRMED** — promote at the stated hypotheses |
+| BI-3 | Equality **CONFIRMED** under `(H-∞)`; **GAP** on `(H-∞)` at `N=4` (wrong tail) |
+| BI-5 | Deg identity **CONFIRMED**; saturation stays under `(H-∞)` |
+| Census | **CONFIRMED**: `Census(4)=35`, `(4,1)` sub-count 23, `Census(5)=86`, `Census(6)=287` |
+| CONTROL 1 | **CONFIRMED** for `(μ,corr)=(2,1)` and SET §§2–7; two unit lifts conditional |
+| CONTROL 2 (`Γ`) | **CONFIRMED** as `REPRESENTATIVE` |
+| `N=5,6` | No empty window; three-cusps cell `j>=2`. **GAP**: `N=6` has 9 charged types, not 8 (missed cell, cap 3) |
+| Successor | Well-posed as a Deg-≤5,6 census; not as the printed `v_0` list. Settle BI-ATTACH first |
+
+`OPEN[BI-TAIL-AT-INFINITY]` extends to `N=4` (one yes/no). No new exit price.
+DIVERT path=xmodel/b3-boundary-instrument-review-grok46-20260902.md status=CLEAN_SEALED body_bytes=30718 body_sha256=62a94bb553d010b87a976c2f72ae030e224ab340cc9cff0b2b12fcfe3d31e15b

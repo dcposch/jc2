@@ -19335,3 +19335,40 @@ SPEC's §1; T2 REISSUED; T4 RESTORED; the e <= 3 capped decisions
 recorded at scope. The A2 object remains PROFILE-UNTYPED (integration
 #9 §C); no frontier seat returns to it — its remaining OPENs
 (c = −2e, Chamber I, A2-K2E, e >= 4) are queued at the lowest tier.
+
+## LIVE STATE (observed ~10:45Z per lane print) — BOUNDARY INSTRUMENT REVIEWED: ALL BRIDGES CONFIRMED; BI-ATTACH GAP-REPAIRED, N=4 CHAIN NOT REOPENED; CENSUS SUCCESSOR LAUNCHED
+
+**B3-BOUNDARY-INSTRUMENT-REVIEW landed** (`b3-boundary-instrument-review-grok46-20260902.md`,
+04866779, body 62a94bb5, BODY_SEALED): **BI-ATTACH GAP-REPAIRED** — the
+(m,n) split IS load-bearing (for DO's Corollary 5, constant block vs
+fork), but the lane's transpose is the Cor-4-excluded degree-2 fork,
+not the assembly object (DO's Lemma 6 constant Deg-2 block); the
+neighbour is CONTRACTED (measured det = 2); the affine L_C is not
+L~_∞ over p; nothing in DO's (7.3)/(7.6)/(7.10) changes; the N = 4 kill
+remains the SET §§2–7. **N=4-CHECKED-CLOSED NOT REOPENED.** PROMOTE:
+BI-1 (H2, Keller, 7.B'), BI-2 (all N), BI-3 as an equality under
+(H-∞) — with a new GAP: (H-∞) is NOT to be promoted at N = 4 (typed
+OPEN[BI-H-INFTY-N4]: one yes/no, extends OPEN[BI-TAIL-AT-INFINITY]),
+BI-4 (contracted model, H2), BI-5 (Deg = a; saturation under (H-∞)),
+BI-6 (as the DF-4/DF-7 mechanism), BI-7 (route closed negative), BI-8
+(cap, tight at N = 4), BI-MERIDIAN, EXTRACTION-1 (H2, Lemma A), the
+CENSUS closed form (Census(4) = 35, Rows(4) = 23 brute-forced). Controls:
+CONTROL 1 PASS (two unit lifts conditional on (H-∞) and B3-N4);
+CONTROL 2 (Γ) REPRESENTATIVE PASS on every item. N = 5, 6: NO EMPTY
+WINDOW; the three-cusps cell j >= 2; one GAP — the N = 6 (B3) charged
+type list has 9 entries, not 8 (a missed cell with cap 3). NOT
+promoted: the printed N = 5 v_0 profile list {(1,1,1),(1,2),(3)}.
+SUCCESSOR well-posed as a Deg <= 5 (86 rows) and Deg <= 6 (287 rows)
+census with BI-1/BI-8 SPINE data substituted — NOT as a v_0-profile
+substitution; settle nothing further on BI-ATTACH first (repaired).
+INTEGRATION #11 ACCUMULATOR: the boundary-instrument set with these
+scopes; binds with the next landings (n-vs-mapdeg, meridian-floor).
+**Launched** `b3-census-deg5-deg6-sol56-20260902` (Sol): run the DO
+census at Deg <= 5 and Deg <= 6 with the spine data BI-1 (W + a = N
+split), BI-8 (#forks <= a) and the determinant package substituted from
+the start, over all (B3) profiles at N = 5 (3 types) and N = 6 (9 types,
+the missed cell included); prune by DO's Lemmas 10–15 analogues where
+they are degree-free; report either the first EMPTY window in N for
+(B3) with the lemma that fires, or the exact surviving rows and the
+boundary datum they still lack. Seats: Opus 2/5 (n-vs-mapdeg,
+meridian-floor-sharpen); Sol 1; Grok 0; GPT-5.5 0.
