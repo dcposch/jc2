@@ -18809,3 +18809,15 @@ DEPTH-PROFILE/PARAM-U stay as algebra tools for whichever branch is
 selected. Heavy A2 computation reopens only for a proved
 even-N >= 18 (B1) target or a declared reducible companion target.
 box01 goes to a genuine (B3) instrument as soon as one is specified.
+
+EVENT (observed ~08:48Z per lane prints) — COORDINATOR OPERATIONAL
+ERROR, contained: while terminating box01's redundant single-thread A2
+run (done; a2_status now reads rc=143 + KILLED-BY-COORDINATOR-0845Z),
+an orphan-msolve sweep matched the wrong parent pid and sent SIGTERM to
+the 24-thread run's OWN (1,9) mod-65521 screen (11 min in). The runner
+handled it per contract — `mod-65521: ERROR` row for (1,9) (MsolveDied,
+signal 15; never a verdict) — and proceeded to the (1,9) char-0 call,
+now running with 24 threads under the 4h Q-timeout. Loss: one modular
+EVIDENCE screen on a window already demoted to finite-box evidence.
+Lesson (memory updated): match the runner's actual python pid, not the
+wrapper's; never sweep by command-line substring on a shared box.
