@@ -19826,3 +19826,34 @@ Net: the D-half of the crossing is now an exact, reviewed statement —
 **a bound T_ext <= 50 − N on a degree-minimal Keller pair in an H2 cell
 with W <= 3 kills the cell** — and the boundary-tree translation of
 minimality is the named gap (owned by `minimal-keller-shape`).
+
+EVENT (~12:50Z per lane print) — **KELLER-PENCIL-GENUS REVIEWED**
+(`keller-pencil-genus-review-grok46-20260902.md`, d57d17f8, body
+b69033c3, BODY_SEALED): CONFIRMED — UNIT-SPEED (divisor/RH/wash; repair:
+"deg(pole part) = N" → sum e_P = N; the algebraicity CONVERSE not proved),
+GENUS-DEFECT (Z·K_X = 2 g_L − 2 − N), FORK-GENUS with Lambda as defined
+at KPG:257-259 (checks: automorphisms Psi − Lambda = −2; (x, x y^m);
+N = 4 (B3) Lambda − Psi = 4), ESCAPE-KAPPA (theta_inf = kappa) on its
+base-point Proof 1 (Proofs 2–3 are Keller+H2 corollaries, not
+independent general-dominant proofs), SHARP-CHAU D >= nS + kappa,
+POLAR-DEGREE (Keller+H2), the CH1/CH2 translations and the N = 2W kill
+as a CONDITIONAL (n >= 4 vs n <= 3), ATYPICAL-LEDGER, NEG-GENUS (CAS at
+(2,2), (2,5), (3,4) and a 15-grid), PROFILE-WITNESS (N = 4, cycle type
+1^2·2, Jac = 2y(2xy^2 − 1) non-Keller, g = 0, 3, 4 at k = 1, 2, 3 — with
+the gap that its A_F is SMOOTH), and the correction of NVM's ANTICANON
+scope note (Z·R_aff = N − 1 constant while 2g − 2 diverges: NOETHER-K
+alone cannot bound Psi). REFUTED: nothing. Measured: 0 mismatches in
+Singular/sympy across two pencils, 15/15 NVM kappa / Z·K_X. OPENS,
+bounded: **OPEN[FORK-MASS]** (the integer Psi − Lambda = Z·K_X + kappa
+= 2 g_L − 2 − N + kappa; a bound gives n(W − S) <= 2N + f(N); FALSE for
+general dominant maps), **OPEN[POLAR-CHAIN]** (the number of valency
+>= 3 vertices of T_+, in [0, #L~ − 2]; YES ⇒ CH1; at N = 4 (B3)
+Lambda − Psi = 4 and Psi >= 3 if E_0 is a leaf), **OPEN[SING-WITNESS]**
+(is there a fixed-N family with g_L → ∞ and A_F SINGULAR? "a second
+door, not hygiene"). PROMOTE the list above as conditionals where
+stated; do NOT promote an unconditional ceiling, any cell EMPTY, the
+UNIT-SPEED converse, or "the polar tree is the only remaining Keller
+input". Successor (reviewer): run OPEN[POLAR-CHAIN] at N = 4 and
+OPEN[SING-WITNESS] in parallel — launched now as `polar-chain-n4-grok46-
+20260902` (Grok) and `sing-witness-gpt55-20260902` (GPT-5.5).
+INTEGRATION #13 binds both halves now.
