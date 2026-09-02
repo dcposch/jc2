@@ -20363,3 +20363,28 @@ N = A_bot·d(1−δ₁)/(d+e) ∈ Z with A_bot a multiple of a₁ = eV₂ — th
 refined proxy is being run next. If EXACT-N survives and the refined
 filter also empties D <= 400, Moh's D <= 100 extends to D <= 400 at
 once and the arithmetic of the condition is the all-degree program.
+
+## EVENT 16:55Z (clock corrected; earlier "~17:xxZ" stamps in this file today ran ~20 min ahead of UTC) — ROUND 20260902T1608Z CLOSED COMPLETE: THREE BLIND ROUTES CONVERGE ON AN EXACT FORMULA FOR N
+
+All five submissions sealed inside the window (no DEGRADED flag).
+Synthesis: `ideation-20260902T1608Z-synthesis.md`. Headline: the
+packet's one-directionality reading is WRONG for the boundary and
+RIGHT only for the contact functional on a free joint tree. Grok (§4,
+"Wronskian dictionary") and Sol (§2, "D₁ self-different") both derived
+d/dx f(τ_i) = ±1/g_y(τ_i) ⇒ pole of f along each root of g − c₂ is
+exactly 1 − δ⁰_i ⇒ N = Σ_i (1 − δ⁰_i)⁺ on the g-tree alone. Sol (SD3–SD6)
+and the coordinator (EXACT-N, launched before Sol was opened) both
+squeezed it against FRONTIER-N + RADIUS-ORDER: the bottom of every
+major branch is a STAR and N = Σ_B eV₂(B)·d(1−δ₁(B))/(d+e), Σ eV₂(B) ≤ ue.
+Opus (ORTHO-DEFECT) and the coordinator (LATTICE) both found
+2deN = Σ(e·m_ν − d·m'_ν)² and the resulting floor from any sub-cluster.
+Corrections: N_min = 6 (delta 16(a)); char-p was run on 08-23 (Sol);
+NO-CEILING → [SINGLE-CLASS], #16 §C "UPPER-ONLY" → [CONTACT] (Opus; to
+be bound as delta 16(b) after the EXACT-N review). Proxies (MEASURED,
+not theorems): single-branch integrality empties every degree ≤ 400 at
+N ∈ [6,16]; the loose form keeps 190k; the exact filter is the packet
+knapsack over branch types (Sol's permissive prototype: D = 105 not
+emptied, 59 → 21). Lanes: exact-n-rigidity (hostile, Opus) and
+d1-subtree (independent check) running; next: the packet knapsack over
+the census, the no-log residue gate, and realisation of surviving
+D = 105 packets under N ≥ 6. Next full round floor: 04:55Z 09-03.

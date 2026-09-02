@@ -1,0 +1,29 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report delivered and sealed: `xmodel/ideation-20260902T1608Z-opus5.md`.
+
+## Headline
+
+**The coordinator's reading is wrong, and I can name where.** "One-directional" is true of every instrument the campaign built — but all of them are *contact* instruments, and contact enters `N` with a minus sign. The **multiplicity** functional on the same cluster enters with a plus sign:
+
+```
+THEOREM ORTHO-DEFECT   Σ_ν (e·m_ν − d·m'_ν)² = (ep − dq)² + 2deN
+                       = 2deN   under the GGV/Moh normalisation ep = dq
+```
+
+(`m_ν, m'_ν` = multiplicities of the generic members of the two pencils at the common infinitely-near base points at infinity.) Every term is ≥ 0, so **any subset of the cluster gives a floor `N ≥ L/2de`** — including the part a Moh skeleton already determines. That is the mechanism `OPEN[UPPER-TO-FLOOR]` asks for. It is just `C_u² = C_v² = 0`, `C_u·C_v = N` read in the total-transform basis; no Keller, no H2, no gauge.
+
+Consequences: `ORTHO-KILL` (unconditional two-sided test `L/2de > U`); `ORTHO-DIV` (`#{ν : d ∤ m_ν} ≤ 2deN`); `ORTHO-TOWER` via the exact `N(P, β^dP^e − α^eQ^d) = d·N`, giving `s ∈ [3, log₂K]` floors whose last stage sits below `D_1`, where the flagship lane already is.
+
+**Scope repair:** `NO-CEILING` was being cited campaign-wide as the license for the general claim. Its proof is about a *single* class and says "none is a negativity" — the two-class `Δ = eC_u − dC_v` (zero `H`-component, `Δ² = −2deN`) is exactly that negativity. It should be restated `NO-CEILING[SINGLE-CLASS]`.
+
+## What I did and did not establish
+
+Controls: three clusters resolved **by hand** (sums 2, 5, 36 — the third an 8-point cluster at `d=2, e=3`) against machine-computed `N` (1, 2, 3) by resultant, with a negative control on the `(ep−dq)²` term. Verified: `Σm² = p²`, `Σm'² = q²`, `Σmm' = pq − N` all reproduce inside the worked example.
+
+Not claimed: any lower bound on `L` from the tree, any kill, any ceiling on `D`. §3 exhibits an explicitly **satisfiable** arithmetic solution at `(64,48), N=4` — `ORTHO` alone empties nothing; the content has to come from the proximity structure of a real cluster. That is why the decisive move is Card A (six integers on Moh's four survivors), not more theory.
+
+Contract items all present: 46-row and (a)–(f) disposition vectors, reranked bottlenecks, new avenue, five cross-connections, proof and counterexample attacks, the `ortho_defect()` acceleration with fail-closed controls, an UPGRADE systems card (`RULE MONOTONE-TYPING`), three idea cards, per-lane verdicts, five new OPENs with bounded quantities.
+
+Two disclosures worth flagging directly: the body is 47.5 KB against the charged 25–40 KB band (the overrun is the identity's full hand control plus the two required disposition vectors), and one `grep` over `xmodel/*.md` surfaced a single citation line from a sibling submission for this round — no mathematical content, not followed up, recorded in the report header.
+DIVERT path=xmodel/ideation-20260902T1608Z-opus5.md status=DIVERTED body_bytes=48645 body_sha256=0916a85a7a8090d04461fa356518fb2ffd877374d1b8452a2b808d6f77156934 overflow=xmodel/ideation-20260902T1608Z-opus5.overflow overflow_bytes=472 raw=xmodel/ideation-20260902T1608Z-opus5.raw.md raw_sha256=e9dfd7b0dc780c4f8e869c1bf2aaf7082ed9b914d48b451257ea11b771917b41 overflow_sha256=808e5c16a973cf3864e44a74466ef4f0ca56f0c7e4af5ce446a7e28d9886e6fe
+post-BODY-END overflow diverted; charged body preserved
