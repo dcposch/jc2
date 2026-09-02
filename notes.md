@@ -19122,3 +19122,59 @@ loosened; legacy reports are exempt, new reports comply. The first
 commit of today's finished lane artifacts silently missed most files
 (zsh non-splitting of a shell list — same class of bug as this
 morning's watchers); re-added by a python loop in this commit.
+
+## LIVE STATE (observed ~10:00Z per lane print) — DEG-AF-VS-N LANDS: THE INVARIANT IS delta_aff; THE FIRST N-MONOTONE FLOOR; THE UPPER BOUND IS NEITHER DERIVABLE NOR FALSE
+
+**DEG-AF-VS-N landed** (`deg-af-vs-n-opus5-20260902.md`, d7cff053,
+BODY_SEALED, 43KB; all PROVED-HERE/UNREVIEWED; hostile review launched
+`deg-af-vs-n-review-gpt55-20260902`; drivers preserved in
+`box/degaf-drivers-20260902/`):
+- THEOREM SG-INV: the semigroup at infinity Gamma = {deg_t f(a,b)} of
+  the one-place parametrisation is Aut(C^2)-invariant and its gap count
+  is EXACTLY delta_aff = sum_p delta_p — the quantity the (B2)
+  beta-bound and the (B3) budget actually consume. n = deg A_F-bar and
+  delta_infty are GAUGE quantities; the delta-budget is the IDENTITY
+  computing delta_infty, not a constraint (BUDGET=IDENT).
+- DEG-DELTA(a) FLOOR: delta_aff <= (n−1)(n−2)/2 in every gauge, so any
+  n_min <= C(N) gives delta_aff <= (C−1)(C−2)/2. DEG-DELTA(b) CEILING
+  (from banked (AM-SG)): n <= 2 delta_aff + b_1 − 1 <= 3 delta_aff,
+  sharp at (t^2, t^{2d+1}). So OPEN[DEG-AF-VS-N] is RETYPED →
+  OPEN[DELTA-AFF-VS-N] (invariant form); its raw form stays FALSE
+  (NO-DEG-CAP [D], already banked — Grok's item (d) confirmed, not new).
+  Residual OPEN[MIN-EMBED-DEGREE] (is n_min <= 2 delta_aff + 1
+  unconditional?).
+- **MERIDIAN-FLOOR (NEW — the first N-monotone statement in the
+  record):** n_min >= ceil((N−1)/(W − sum_l s_l)) >= ceil((N−1)/(W−1));
+  at W = 2, n_min >= N − 1. Proof uses only the meridian cycle type and
+  transitivity. Half of OPEN[N-VS-MAPDEG] answered:
+  max(deg P, deg Q) >= ceil((N−1)/(W−1)).
+- UPPER BOUND: NOT DERIVABLE from the banked ledger (a satisfying
+  assignment of every banked constraint at fixed N with k → ∞) and NOT
+  FALSE (the charge's "fixed profile, unbounded Aut-minimal degree"
+  family cannot exist by the ceiling); the blocking object is an
+  explicit family of rational one-place curves with one (2,3) cusp and
+  exactly k nodes (verified k <= 11). The dicritical-side attack returns
+  exactly Chau (n = lambda_l/s_l): it IS OPEN[N-VS-MAPDEG], not a second
+  route. Literature: Jelonek's degree bound is in (deg f, deg g), not N,
+  and ABSENT from refs/; no theorem bounds a curve's degree by the
+  degree of a finite étale map onto its complement.
+- CONSEQUENCES: (B2) at 5 <= N <= 16: beta <= floor(delta_aff/2), so
+  (B2) dies iff delta_aff <= 3 (N <= 10) / <= 1 (11..16) — delta_infty
+  never enters (CD's OPEN[DELTA-INFTY-NOT-NUMERICAL] is off the
+  critical path). (B3) N = 4..8: CD's list re-indexed by delta_aff and
+  sharpened (row n = 4, (2,3), k = 1 is EMPTY: delta_aff = 2 forces
+  n_min = 5; the minimal (B3) profile is realised at n = 5 — consistent
+  with the B3-E-GEOMETRY witness quintic). CROSSING PRICE: a cell (N,W)
+  is EMPTY as soon as n_min <= C with C < ceil((N−1)/(W−1)); at W = 2,
+  any C < N − 1.
+- Also exact: 2 g(E) = 1 + N nu − n_infty(E) (the exact form of B3E's
+  cap).
+**Coordinator reading.** The all-degree ceiling question now has a
+precise, invariant statement with a price: bound delta_aff (the number
+of nodes of A_F, essentially) in N, equivalently the Aut-minimal degree
+of the Keller pair — OPEN[N-VS-MAPDEG] upper half. Every banked
+constraint is satisfiable with k → ∞, so a NEW mechanism is required;
+the lane's successors are (1) exactly that (staffed now as an Opus
+flagship, `n-vs-mapdeg-opus5-20260902`) and (2) sharpening
+MERIDIAN-FLOOR with the CUSP-CAGE relations (after review). Opus seats
+2/5 (b3-boundary-instrument, n-vs-mapdeg).
