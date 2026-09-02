@@ -20452,3 +20452,27 @@ opus5` (polynomiality of the Lagrange interpolant of ∫dx/g_y on the
 smallest surviving D = 105 skeleton), `exact-n-rigidity-opus5` and
 `exact-packet-filter-gpt55` still running. Census running. Next round
 floor 04:55Z 09-03 with #17 §C as headline.
+
+## EVENT 19:05Z — EXACT-PACKET FILTER (GPT-5.5) LANDED: mixed-branch knapsack complete at D = 105, 117; capped at 108/112/120; nothing empties
+
+`exact-packet-filter-gpt55-20260902.md` (15KB; the lane sealed with a
+nonstandard marker "<!-- CONDITIONAL on EXACT-N SEALED ... -->" after
+over-applying the conditional-typing instruction — content complete;
+sidecar `-groups.tsv` tracked). Its "CONDITIONAL on EXACT-N" typing is
+now "under D1-PIN (reviewed, integration #17)" with the mixed-branch
+(no-(UNI)) semantics. Exact Fraction DP, N integer ≥ 6 / in [6,16]:
+D = 105: 264 groups, 125 hit / 139 no (105 / 159 in [6,16]), complete;
+D = 117: 60 groups, 43 / 17 (34 / 26), complete; D = 108, 112, 120:
+195, 185, 412 hits with 474, 706, 3259 groups OPEN at the state cap
+(a single dense D = 108 group reached 41M states). No degree emptied.
+Compare (UNI): 105: 209/264 killed (55 survive) vs mixed-branch 139
+killed (125 survive) — the orbit structure (BRANCH-ORBITS lane) decides
+which is the true count. Moh's six survivor rows under mixed branches:
+achievable N ≥ 6 = {9}, {7,15}, {10,14}, {6,7,8,9,15}, {6,7,8,9,15},
+{8,9,12,16}. Smallest D = 105 surviving packet (lexicographic):
+(D, m, M, V_s) = (105, 42, (−14, 103), 5), K = 21, (d,e) = (2,5), u = 15,
+v = 6: twelve copies of the branch type V = (1, 5, 1), δ₁ = 5/12,
+weight 5/6, root use 60 ≤ 75, N = 10. This is a packet hit only; it is
+the realisation target for the time-function lane if it survives
+STAR-REALISABILITY. Extension to D ≤ 200 did not close (OPEN[EXACT-
+PACKET-DENSE-DP], bounded by 118,506 groups).
