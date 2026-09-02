@@ -1,0 +1,25 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. `xmodel/sat-mass-opus5-20260902.md` (45 KB, sealed, body SHA-256 `dd691a97…`, basis `c513bcef`). Inputs verified against all five charged hashes before reading.
+
+## What the lane found
+
+**The central identity (task 1–2).** The proximity excess of the base cluster *is* the intersection number: `ρ_i = a_i − Σ_{j→i}a_j = Z·E_i^strict = c_C`. That makes DEG-SPLIT a one-line consequence and shows at most `κ + ℓ` of the `r+1` cluster points have positive excess — everywhere else the proximity **equality** holds. From it:
+
+```
+D = Σ ν_C c_C,   N = Σ m_C c_C,   D − T = Σ c_C,   T = Σ (ν_C − 1) c_C
+```
+
+with `ν_C = ord_C(σ*L_∞)` (source polar multiplicity) and `m_C = ord_C(Φ*L_∞)` (target). `D` and `N` are the same pairing against dual polar multiplicities. So `OPEN[SAT-MASS]` is exactly `OPEN[NU-BOUND]`. Verified on 74 maps, 0 failures; every overlapping row reproduces N-VS-MAPDEG §3.6/§5.1 from an independently written engine.
+
+**A definition repair.** DEG-SPLIT's `T` counts points proximate to two members of the *extended* cluster (with `L_∞` as a member), not classical satellites: `T − T_class = D − Σ_{level-1} a_i`, nonzero exactly at branches tangent to `L_∞`. Witness `(x, y+x⁴)`: `T=3`, `T_class=2`.
+
+**Task 3 answered NO, and more.** `HALF-CAP`: with exactly one dicritical (forced by 7.B′ whenever `W ≤ 3`), `D ≤ 2(T + κ)`, so `Sn ≤ D/2` and `T ≥ D/2 − κ`. Sharp at `(x,xy)` and `(x,x²y²)`; **refuted for `ℓ ≥ 2`** with three witnesses, so the hypothesis is load-bearing. Hence `T = 0` is impossible on the charged N=4 (B3) profile — in fact `T ≥ 47` there — and Chau's cap halves to `n ≤ D/(2S)`.
+
+**Task 4.** `T` is invisible to the ledger: source composition fixes `N, n, S, κ, W, Λ`, the dicritical excesses, the `(m,k)` data, `Z·K_X` and `g_net` while `D, T → ∞` (measured on 4 bases × 5 automorphisms; the Keller family `(x, y+x^k)` realises it too). I did **not** build a synthetic noninvertible-Keller cluster and don't claim one exists — flagged as a deviation.
+
+**Task 5 — cheaper than charged.** Since `D_min ≤ 2(T + κ)`, a bound `T ≤ τ` with `τ ≤ 50 − N` closes a `W ≤ 3` cell **outright** via MOH-CROSS, with no n-ceiling, no DEG-AF, no ANTICANON-DEFECT. That covers all of (B3) `N = 4..8` and every `W ∈ {2,3}` cell to `N = 16`.
+
+Bridge for the sister flagship: `Z·K_X = 2 g_net − N − 2` identically, so `OPEN[ANTICANON-DEFECT]` *is* the pencil-genus question.
+
+Two caveats worth your eye: the report runs 45 KB against the 25–40 KB target (flagged in DEVIATIONS — the overrun is the §2 proof package and the §3 machine table), and Abhyankar–Moh, Nagata, Appelgate–Onishi and Heitmann/GGV are all absent from `refs/`, so they are carried at the campaign's banked typing and nothing load-bearing rests on them. Nothing is committed.
+DIVERT path=xmodel/sat-mass-opus5-20260902.md status=CLEAN_SEALED body_bytes=44943 body_sha256=dd691a97696ea35fe46b535bfcd75a00dd1892cb4ef092d5e2b0c25b52a34c95

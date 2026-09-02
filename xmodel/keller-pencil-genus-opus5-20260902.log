@@ -1,0 +1,24 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at `xmodel/keller-pencil-genus-opus5-20260902.md` (body 43178 B, sha256 `5d2723e3…`, basis `c513bcef`). All five charged hashes verified before reading.
+
+## What came out
+
+**The charge's symplectic route is a wash, and I can say exactly why.** THEOREM UNIT-SPEED: on a fibre, "unit speed" is *equivalent* to "`v|_{C_t}` is étale of degree `N`". The charge's paradox breaks because `div(dv)` has **zeros** of order `μ_l−1` at the `nS` escaping places, not only poles; the degree identity is then Riemann–Hurwitz = MF-EXACT. Existence of the mate ⟺ `ω_u` exact on every fibre = the Keller hypothesis restated, so the symplectic language supplies no independent inequality.
+
+**The mechanism is on the boundary, and it is branching.** THEOREM FORK-GENUS (no Keller, no H2): with `T₊ = supp Z` a subtree of the boundary tree, leaf mass `Λ` and fork mass `Ψ`,
+
+```
+2 g_L − 2 = N − κ − Λ + Ψ ,   Z·K_X = Ψ − Λ − κ ,   and (Keller+H2)  n(W−S) = 2N − Λ + Ψ.
+```
+
+So OPEN[ANTICANON-DEFECT] *is* "bound the fork mass" — and it is disjoint from NVM's satellite mass (satellite blow-ups never change a valency; free ones do). New identity `θ_inf = κ` (three proofs) upgrades SHARP-CHAU to `D_F ≥ nS + κ` and shows SHARP-CHAU **is** DEG-SPLIT plus `T ≥ 0`. The coordinator's `Z·K_X = 2g_L−2−N` is confirmed; the charge's displayed `Z·(K_X+2Z)` is off by `N`.
+
+**Conditional ceiling, priced.** `Ψ=0` ⟹ `g_L ≤ (N−1)/2` and `n(W−S) ≤ 2N−2` — the finiteness the (B3) enumeration wants, killing 0 of 81 cells; adding "`E_0` a leaf" gives `nW ≤ 2N−2`, which would empty the 9 cells with `N=2W` including the live N=4 (B3). Neither hypothesis is proved; both are now single checkable statements about one tree.
+
+**The negative route, executed.** It cannot be run with Keller maps (a witness would refute JC(2)), so I ran a relaxation ladder with closed forms: `ψ_k∘(x,xy^m)` has fixed `N=m` with `2g−2 = (m−1)(k+1)−m−gcd(k−1,m) → ∞`, and at N=4 `ψ_k∘(x,xy⁴−y²)` matches [P3], (C1), 7.B′, (K), cycle type `1²·2` and the H2 shape of `A_F` with `g → ∞`. **No profile datum can bound `g_L`.**
+
+**One typed correction to the charged flagship** (a PROPOSAL): its ANTICANON-DEFECT scope note blames `Z·R_aff`; in NVM's own witness family `Z·R_aff = N−1` is *constant* while `2g−2` diverges — deleting a bounded term cannot bound a divergent one, so Keller entered through NOETHER-K alone cannot yield a ceiling.
+
+Controls: 61 Singular genus computations, 0 mismatches, and NVM's entire family-(A)/(B) engine output (`κ`, `Λ`, `T`, `Σa_i`, `Z·K_X`) reproduced in closed form without resolving any base locus. Drivers in `/tmp/kpg`, not installed in `box/`; no canonical ledger edited; `jc2-lean` not inspected. The body is ~43 KB against the charged 25–40 KB band — declared in DEVIATIONS.
+DIVERT path=xmodel/keller-pencil-genus-opus5-20260902.md status=DIVERTED body_bytes=43178 body_sha256=5d2723e36476903392fd79b3791d1bd9830a0dea6f4693070ae8f89ccc06d6e1 overflow=xmodel/keller-pencil-genus-opus5-20260902.overflow overflow_bytes=566 raw=xmodel/keller-pencil-genus-opus5-20260902.raw.md raw_sha256=f9c2c3ab98f3a28234e506b4b4c558db0e1751bfb6ea6d30170c32a71dbc9123 overflow_sha256=af4b2cb0440d646d70edd9ecfd07304144f612e1f582f29026f0c9164a3f0635
+post-BODY-END overflow diverted; charged body preserved

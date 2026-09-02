@@ -19694,3 +19694,89 @@ theta_L >= 5 against an étale degree-N partner) — DEFERRED: one unit of
 floor is not the frontier; the ceiling is. Record MEASURED/UNREVIEWED.
 Seats: Opus 2/5 (pencil genus, sat-mass); Sol 1 (cluster census
 codegen); Grok 0; GPT-5.5 0.
+
+## LIVE STATE (observed ~12:15Z per lane prints) — THE TWO HALVES LAND TOGETHER: THE CEILING IS THE SHAPE OF THE POLAR TREE OF A DEGREE-MINIMAL KELLER PAIR
+
+**KELLER-PENCIL-GENUS landed** (`keller-pencil-genus-opus5-20260902.md`,
+5d2723e3, BODY_SEALED (post-BODY-END overflow diverted, body
+preserved), 43KB; PROVED-HERE/UNREVIEWED; review launched
+`keller-pencil-genus-review-grok46-20260902`):
+- The symplectic route is a WASH, exactly: THEOREM UNIT-SPEED — on a
+  fibre, "unit speed" ⇔ "v|_{C_t} is étale of degree N"; omega_u
+  restricted to C_t IS dv, with ZEROS of order mu − 1 at the nS
+  non-proper places and POLES of order e + 1 over infinity; its degree
+  identity is Riemann–Hurwitz = MF-EXACT; existence of the mate v ⇔
+  exactness of omega_u on every fibre = the Keller hypothesis restated.
+- **THE MECHANISM IS ON THE BOUNDARY — FORK-GENUS:** with T_+ = supp Z
+  the polar subtree, leaf mass Lambda = sum_{deg 1} m_C and fork mass
+  Psi = sum_{deg >= 3} m_C (deg − 2): for EVERY dominant polynomial F,
+  2 g_L − 2 = N − kappa − Lambda + Psi and Z·K_X = Psi − Lambda − kappa
+  (Lambda >= 2). The coordinator's adjunction note Z·K_X = 2 g_L − 2 − N
+  is CONFIRMED (the charge's Z·(K_X + 2Z) was off by N).
+  **OPEN[ANTICANON-DEFECT] ⇔ bound the FORK MASS Psi.**
+- **NEW IDENTITY theta_inf = kappa** (three proofs; 15/15 against NVM's
+  engine): the escaping-place count of the pencil member is the number
+  of boundary components over L_infty counted with degree. SHARP-CHAU
+  sharpens to D >= nS + kappa (= DEG-SPLIT + T >= 0).
+- CONDITIONAL CEILING, priced: Psi = 0 (polar tree a CHAIN) ⇒
+  g_L <= (N−1)/2 and n(W − S) <= 2N − 2 ⇒ delta_aff finite at every N.
+  Adding "E_0 is a leaf of T_+" ⇒ nW <= 2N − 2, which KILLS the nine
+  cells with N = 2W (including the live N = 4 (B3) cell) and refutes
+  beta = 1 at W = 2. Neither hypothesis proved; both are single
+  checkable statements about the SHAPE of the boundary tree.
+- NEGATIVE ROUTE in closed form: THEOREM NEG-GENUS — at every fixed
+  N >= 2 the genus is unbounded in the dominant class (psi_k∘(x, x y^m):
+  2g − 2 = (m−1)(k+1) − m − gcd(k−1, m) → ∞); worse, at N = 4 the family
+  psi_k∘(x, x y^4 − y^2) matches [P3], (C1), 7.B', (K), the cycle type
+  1^2·2 and an irreducible one-place A_F with g → ∞ (THEOREM
+  PROFILE-WITNESS): NO profile datum can bound g_L.
+- TYPED CORRECTION to NVM's ANTICANON scope note (proposal): in the
+  witnessing family the affine ramification term Z·R_aff = N − 1
+  EXACTLY (constant in k) while 2g − 2 grows linearly — deleting a
+  bounded term cannot bound a divergent one: **the Keller condition
+  entered through NOETHER-K alone is quantitatively incapable of
+  producing a ceiling.** Controls: 61 Singular genus computations,
+  0 mismatches; the Suzuki ledger closes on MI's N = 4 (B3) data.
+**SAT-MASS landed** (`sat-mass-opus5-20260902.md`, 3fee2e6a, body
+dd691a97, BODY_SEALED, 45KB; PROVED-HERE/UNREVIEWED; review launched
+`sat-mass-review-gpt55-20260902`):
+- **THEOREM SAT-WEIGHT** (74 maps, 0 fails): with nu_C = ord_C
+  sigma^*L_infty (SOURCE polar multiplicity), m_C = ord_C Phi^*L_infty
+  (TARGET), c_C = Z·C (the proximity EXCESS of the base cluster):
+  D = sum nu_C c_C, N = sum m_C c_C, D − T = sum c_C,
+  T = sum (nu_C − 1) c_C = sum_{C→L_inf}(nu_C − 1)k_C + n sum_l (nu_l − 1)s_l.
+  D and N are the SAME pairing of the excess vector against source resp.
+  target polar multiplicity. OPEN[SAT-MASS] ⇔ OPEN[NU-BOUND]: bound the
+  source polar multiplicity on the non-contracted components.
+  Definition repair: DEG-SPLIT's T is the mass of points proximate to
+  two members of the EXTENDED cluster {L_infty, p_1..p_r}.
+- **THEOREM LEDGER-BLIND:** every boundary-ledger entry (N, kappa,
+  Lambda, dicritical excesses, the (m,k) data, Z·K_X, g_net) is invariant
+  under SOURCE composition F ↦ F∘chi while D and T grow without bound
+  ((x, y + x^k): same ledger, T = k − 1). So OPEN[SAT-MASS] has zero
+  content outside DEGREE-MINIMALITY.
+- **THEOREM HALF-CAP:** if D > N and F has exactly ONE dicritical
+  (forced by 7.B' whenever W <= 3): D <= 2(T + kappa), equivalently
+  S n = Lambda <= D/2, T >= D/2 − kappa; sharp ((x, xy), (x, x^2 y^2));
+  REFUTED for two or more dicriticals (three witnesses). Consequences:
+  Chau's cap halved at W <= 3 (deg A_F-bar <= D/2); T > 0 is FORCED
+  there; and **ANY bound T <= tau on a degree-minimal representative
+  gives D_min <= 2(tau + N).**
+- **THE PRICE, CHEAPER THAN CHARGED:** MOH-CROSS needs only
+  D_min <= 100; with HALF-CAP that is **tau <= 50 − N — and it closes the
+  cell OUTRIGHT, with no n-ceiling, no DELTA-AFF, no ANTICANON.**
+  tau <= 46 closes N = 4 (B3); tau <= 34 closes N = 16. For W >= 4 the
+  direct route needs one dicritical; otherwise the carry route
+  n <= (100 − kappa − tau)/S.
+**COORDINATOR READING.** Both halves now say the same thing: the
+all-degree question is a statement about the SHAPE of the boundary
+tree of a DEGREE-MINIMAL Keller pair — (i) is its polar tree a chain
+with E_0 a leaf (fork mass Psi = 0), and (ii) is its satellite mass T
+at most 50 − N? Both are Jung–van der Kulk / Abhyankar–Moh territory
+(approximate roots, characteristic pairs of the place at infinity,
+the reduction of a minimal pair), where the Keller condition enters
+through the structure of the leading forms, not through Noether's
+equations — exactly the door NOETHER-K cannot open. The successor
+flagship (after both reviews): MINIMAL-KELLER-SHAPE. Integration #13
+accumulates both sets. Seats: Opus 0/5; Sol 1 (cluster census);
+Grok 1 + GPT-5.5 1 (reviews).
