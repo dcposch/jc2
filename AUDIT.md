@@ -15203,3 +15203,19 @@ degree as the contact-deficiency pairing over the two root towers of a
 Moh skeleton; the N <= 16 filter over the skeleton census is the first
 instrument whose outcome can prove a window. See the artifact for exact
 statements — this entry is a pointer.
+
+## INTEGRATION #15 DELTA (a) (2026-09-02, PRODUCER-LEVEL, REVIEW PENDING): THE SKELETON FILTER INVERTS
+
+`n-on-the-tree-opus5-20260902.md` (44223b32; review
+`n-on-the-tree-review-grok46-20260902` running): the Moh skeleton
+determines an UPPER bound N <= U(skeleton) = u d e (1 − delta_1)/(d + e)
+(THEOREM N-CEILING) and no lower bound (the free sub-tree of the last
+major disc can only lower N; LEMMA DETECTOR-NULL: minor discs contribute
+zero). Hence the filter "N <= 16" rejects no skeleton and integration
+#15 §D's sentence "its outcome can prove a window" is WITHDRAWN: the
+instrument cannot empty any degree. OPEN[N-ON-THE-TREE] is CLOSED with
+residue OPEN[D1-SUBTREE]; the record's boundary instruments all bound N
+above or D below (OPEN[UPPER-TO-FLOOR]). Pending the review:
+FRONTIER-N, RADIUS-ORDER, DETECTOR-NULL, N-CEILING, HARMONIC-BOUND
+(1/N > 1/deg P + 1/deg Q, so N < D/2 and N <= 44 at the admissible
+degrees), RAMIFICATION-FLOOR.

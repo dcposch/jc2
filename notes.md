@@ -20226,3 +20226,64 @@ skeleton-side census with the N filter (`n-on-the-tree`, running),
 which carries the Jacobian recursion and not merely the numerical
 ledger. The two censuses agree on the qualitative point: the ledger
 alone never runs dry; only N attached to the tree can.
+
+## LIVE STATE (observed ~15:30Z per lane print) — THE FINITE FILTER INVERTS: MOH'S TREE BOUNDS N ABOVE, NEVER BELOW; THE CAMPAIGN-LEVEL QUESTION IS OPEN[UPPER-TO-FLOOR]
+
+**N-ON-THE-TREE landed** (`n-on-the-tree-opus5-20260902.md`, 44223b32,
+BODY_SEALED, 45KB; PROVED-HERE/UNREVIEWED; review launched
+`n-on-the-tree-review-grok46-20260902`; instrument `box/moh_skeleton_N.py`
+with 100 controls; drivers `box/nott-drivers-20260902/`):
+- CONTACT-DEFICIENCY re-derived with monicity load-bearing and a scope
+  correction (same-slope orders >= 0 only under Moh Lemma 6.1 / Prop
+  6.1); seven closed-form two-tower controls plus a negative control.
+- THEOREM FRONTIER-N: N written on the tree of the roots of f·g alone
+  (exact on 7 rows). THEOREM RADIUS-ORDER: Moh's logarithmic radius and
+  the order of g are one datum (242,099 V-skeletons, 0 failures).
+- **LEMMA DETECTOR-NULL (inverts the depth lane's premise):** by Moh
+  Prop 6.1(2) / Theorem (5) minor discs contribute EXACTLY ZERO to N;
+  the missing datum is the SUB-TREE OF THE LAST MAJOR DISC D_1, where
+  Moh's minor criterion degenerates and his recursion ends. Below D_1
+  the Jacobian condition is unused (OPEN[D1-SUBTREE]).
+- **THEOREM N-CEILING:** N <= U(skeleton) = u d e (1 − delta_1)/(d + e),
+  with NO lower bound — the free sub-tree can only ADD contact, i.e.
+  LOWER N. Hence **FILTER-INVERSION: the "N <= 16" filter rejects
+  nothing**; the operative test is U >= N_min. MEASURED at D <= 400
+  (161 s): 3,874,261 branch-robust groups; U < 2 never (min U = 2.407,
+  asymptotic floor 2de/(d+e) >= 12/5); U < 4 on 1,147 (0.030%); NO
+  degree D emptied. **THE CEILING IS NOT PROVED ON ANY RANGE BY THIS
+  INSTRUMENT, and the obstruction is structural, not cost.**
+  OPEN[N-ON-THE-TREE] is CLOSED (residue OPEN[D1-SUBTREE]).
+- Unconditional gains: HARMONIC-BOUND 1/N > 1/deg P + 1/deg Q, hence
+  N < D/2 and N <= 44 at the MOH-SHARP-2 degrees (a FLOOR on D in N —
+  the same direction as everything else); RAMIFICATION-FLOOR (retypes
+  OPEN[NU-BOUND-AT-A-PLACE] as a floor); a per-skeleton N-window (19,455
+  of 116,385 groups at D in [101,200]; 418 pinned to N = 4); Moh's four
+  survivors sit inside N <= 16 (U = 9, 6, 10.5, 12, 8, 16); (64,48)
+  re-confirmed; two OCR displays in Moh 1983 corrected.
+- OPENS (bounded): OPEN[D1-SUBTREE] (a Jacobian-forced minimum of the
+  deficiency at the bottom of the tower would be the first floor on N
+  from boundary data); OPEN[MOH-14] (cheap); **OPEN[UPPER-TO-FLOOR]** —
+  "every boundary-tree instrument in this campaign that touches N
+  yields N <= (something). Name one instrument that bounds N BELOW by a
+  function of D. Absent that, the ceiling D <= C(N) cannot be reached
+  from the boundary at all, and the record should say so."
+**COORDINATOR READING (direct, the day's conclusion).** Integration
+#15 §D's line "its outcome can prove a window" is RETRACTED (AUDIT
+delta 15(a); producer-level, review pending): the instrument exists,
+runs to D <= 400 in minutes, and cannot empty anything, because the
+whole day's apparatus — cage, source curve, boundary package, meridian
+floor, polar ledger, pencil genus, satellite mass, depth, and now the
+contact deficiency — produces bounds in ONE direction: floors on D (or
+n, T, Psi) in N, and ceilings on N in D. A crossing needs the other
+direction and the record contains no instrument that supplies it. The
+question to put to the whole roster with fresh eyes is exactly
+OPEN[UPPER-TO-FLOOR]: is there ANY mechanism — necessarily using
+Jac F ∈ C^* below the last major disc, where nothing published has
+looked — that bounds the geometric degree N from BELOW in the degree D
+of a minimal Jacobian pair; or is the boundary route provably
+one-directional, in which case the all-degree program must leave the
+boundary (the cofinal-invariant question the 07:41Z round already
+flagged). A full ideation round is warranted on this event; it freezes
+when the N-ON-THE-TREE review lands (~17:00Z) so that the packet's
+headline is reviewed, ahead of the 20:57Z floor. Seats: Grok 1 (review);
+Opus 0/5; Sol 0; GPT-5.5 0. Census running.
