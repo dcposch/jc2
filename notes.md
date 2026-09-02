@@ -17684,3 +17684,35 @@ natural action only; the subgroup rows may or may not collapse;
 that lane decides). DOMRINA-INSTANTIATE (running) gets the
 concrete witness pair at harvest. Review launched:
 `companion-alln-review-grok46-20260902`.
+
+## LIVE STATE (observed 2026-09-02T01:02Z) — PATH-1 LANDS: NODAL CASE EMPTY THROUGH N=16; THE HORN IS THE ALL-DEGREE RESIDUAL
+
+**MPRIME-ALLN-H2 landed** (`mprime-alln-h2-opus5-20260902.md`,
+722d4137, BODY_SEALED). All PROVED-HERE/UNREVIEWED, review
+launched (`mprime-alln-review-gpt55-20260902`):
+- LEMMA A: H3 is a THEOREM under H2 (repairs a vacuity in the
+  promoted [P5] route).
+- SMOOTH-KILL: A_F is singular at every N (closes the s=0
+  boundary REP-96 R4 left open).
+- THEOREM NODAL-ALL-N: every branch of A_F smooth (contains all
+  nodal profiles) => N >= 17. Consumes 7.B only for 8<=N<=16;
+  N<=7 is 7.B-free.
+- THEOREM PROFILE (all N>=3 under H2): (0) smooth EMPTY; (A)
+  unibranch cusp (quasi-homogeneous; irreducible-E case KILLED
+  via Lin-Zaidenberg+Campbell = CUSP-KILL; j>=2 caged by
+  CUSP-CAGE); (B1) smooth branches EMPTY N<=16; (B2) singular
+  branch no cusp: EMPTY N<=4, beta>=2 forced 5-10, beta>=1
+  11-16; (B3) cusp + multibranch = THE GENUINE RESIDUAL = the
+  one-cusp horn.
+- PROP 6.1 (s=1 => unibranch, a_p=1 — exact all-degree one-node
+  exclusion), PROP 6.2, COR 7.2 (rho transitive never regular,
+  profile-free), N4-PIN (reproduces the promoted rank-four
+  census (2,1,1)/(3,1)/(2,2)/e(T)=-3).
+**Consequence: under H2 the all-degree program = kill the cusp
+cases. The one-cusp A2 horn (OPEN[A2-CELL-32] + the (A)-case
+cages) is promoted from side-front to THE proof-side bottleneck
+for N<=16; (B1)-data (5.4) opens only at N>=17.** Both flagship
+landings compose: reducible branch -> R0/degree-cap + razors;
+H2 branch -> the horn. Frontier is now three named necks:
+(i) the horn, (ii) OPEN[SOURCE-OPEN-U] razors on the complete
+(9,6,2) pair, (iii) OPEN[COMPANION-R0-REALISATION]/degree-cap.

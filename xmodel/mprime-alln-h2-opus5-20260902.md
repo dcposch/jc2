@@ -37,10 +37,11 @@ multiplicity) `= e_j` (sheet-gate boundary multiplicity) and `s_l` (dicritical
 cover degree) `= delta_j`; the dictionary is proved, not assumed, in §1.
 
 **Verdict headline.** The `H2` branch is *not* closed at all degrees. What is
-closed, at every `N >= 3`: `H3` (§2), smooth `A_F` (§3), and every profile with
-a multibranch point at `N <= 4` (§5); and, when every branch of `A_F` is smooth
-— which contains the whole nodal case — every `N <= 16` (§5). The typed verdict
-block is §10.
+closed: `H3` (§2) and smooth `A_F` (§3) at every `N`; the whole of `N <= 3`;
+every profile whose singular points are all multibranch at `N = 4`; and, when
+every branch of `A_F` is smooth — which contains the whole nodal case — every
+`N <= 16`. The `N = 4` residual is pinned to one profile (§8). Typed verdict
+block: §10.
 
 ## 1. Notation, the promoted dictionary, and the exact hypotheses of `(M')`
 
@@ -320,17 +321,19 @@ Exact case analysis, `1 <= a <= N-2`, `N >= 3`, and `s >= 1` by SMOOTH-KILL:
   numerically. But `a <= N-2` and `2a > N` require `N/2 < a <= N-2`, hence
   `N > 4`.
 
-> **PROPOSITION 5.1.** For `N = 3` and `N = 4` there is no nodal `A_F` under
-> `H2` — in fact, by `(C1)`, no `A_F` with **any** multibranch point, nodal or
-> not, because `2a >= N` and `a <= N-2` already force `N >= 4`, and `N = 4`
-> forces `a = 2`, `D_gap = 0`, so `K_p = 0` at every multibranch `p`, and then
-> `(K)` puts all of `a - 1 = 1` on unibranch points.
+> **PROPOSITION 5.1.** Under `H2`, with at least one multibranch point:
+> (i) at `N = 3` this is impossible (`(C1)` gives `2a >= 3` while
+> `a <= N-2 = 1`); (ii) at `N = 4` it forces `a = 2`, `W = 2`, `D_gap = 0`, so
+> `K_p = 0` at every multibranch `p`, and `(K)` puts the whole excess
+> `a - 1 = 1` on **unibranch** points: `A_F` must have a **cusp**. In
+> particular there is no nodal `A_F` at `N ∈ {3,4}`, and more generally no
+> `A_F` all of whose singular points are multibranch.
 
 Proposition 5.1 subsumes REP-96 §7 (R4) at `N = 4`: R4 kills nodal `A_F` there
 for `s >= 1`; SMOOTH-KILL closes `s = 0`; `(C1)` upgrades "nodal" to
-"multibranch". The `a = d-2` boundary is not hand-waved: at `N = 4` it is
-`a = 2` and dies because `s(2a-N) = 0 < a-1 = 1`; at general `N` it dies inside
-the `2a > N` branch below. But `LHS <= s·a` is **not** enough for `N >= 5` — the
+"every singular point multibranch". The `a = d-2` boundary is not hand-waved: at
+`N = 4` it is `a = 2` and dies because `s(2a-N) = 0 < a-1 = 1`; at general `N`
+it dies inside the `2a > N` branch below. But `LHS <= s·a` is **not** enough for `N >= 5` — the
 `2a > N` branch is genuinely non-empty for `(5.2)` — and the sharpening comes
 from `(L)`, `(K)`, `(C3)` and 7.B.
 
@@ -384,9 +387,10 @@ The first admissible `(N, a, W, D_gap, R_max)` tuples, by exhaustive integer
 enumeration of `(5.4)`:
 
 ```text
-N=17: (11, 6, 5,2)                      N=20: (12, 8,4,3) (14,6, 8,2)
-N=18: (12, 6, 6,2)                      N=21: (13, 8,5,3) (15,6, 9,2)
-N=19: (13, 6, 7,2)                      N=23: (13,10,3,4) (15,8,7,3) (17,6,11,2)
+N=17: (11, 6, 5,2)          N=20: (12, 8,4,3) (14,6, 8,2)
+N=18: (12, 6, 6,2)          N=21: (13, 8,5,3) (15,6, 9,2)
+N=19: (13, 6, 7,2)          N=22: (14, 8,6,3) (16,6,10,2)
+                            N=23: (13,10,3,4) (15,8,7,3) (17,6,11,2)
 ```
 
 **Robustness.** If THEOREM 7.B were withdrawn (allowing `mu_l = 1`, i.e.
@@ -454,12 +458,15 @@ Two sharpenings that cost nothing and are used in §8.
 `N` forces the singularity profile of `A_F` into the explicit family
 
 ```text
-    N <= 3 :  EMPTY.
-    N  = 4 :  exactly one cusp (a_cusp = 1, K = 1) plus k >= 0 double points
-              with smooth branches (r = 2, a_p = 0, K_p = 0); a = 2, W = 2,
-              one dicritical (s,mu) = (1,2);  or the k = 0 sub-case of (A).
- 5..10  :  (A), or (B2) with beta >= 2, or (B3).
- 11..16 :  (A), or (B2) with beta >= 1, or (B3).
+ N <= 3  :  EMPTY.   (a <= N-2 forces a = 1 at N = 3; case (B) is impossible
+            by Prop 5.1(i); case (A) with a = 1 has j = 1, killed by CUSP-KILL;
+            case (0) by SMOOTH-KILL.  N = 2 is excluded by a >= 1.)
+ N  = 4  :  a = 2, W = 2, one dicritical (s,mu) = (1,2);  A_F has EXACTLY ONE
+            unibranch singular point (a cusp), with a_cusp = 1 and K = 1, plus
+            k >= 0 double points of smooth branches (r = 2, a_p = 0, K_p = 0).
+            k = 0 is case (A): Lin-Zaidenberg pins A_F ≅ {x^p = y^q}.
+ 5..10   :  (A), or (B2) with beta >= 2, or (B3).
+ 11..16  :  (A), or (B2) with beta >= 1, or (B3).
  N >= 17 :  the above, plus (B1) with data solving (5.4).
 ```
 
@@ -534,12 +541,26 @@ has `r ∈ {j-1, j}` and cyclic torsion, forcing `u <= 1`, `v <= 1`; and
 > **THEOREM CUSP-CAGE.** In case (A) with `j >= 2`, writing `t := pq - p - q`:
 > `(u,v) = (1,1) ⟹ r = (M-1)t/(pq)`, and `gcd(pq, t) = 1`, so `pq | M - 1` and
 > **`N >= M >= pq + 1`**; `(u,v) = (1,0) ⟹ p | M-1` and `q | M`;
-> `(0,1) ⟹ q | M-1`, `p | M`; `(0,0) ⟹ pq | M`. In every case `M >= 2`, so the
-> covering (7.1) is **not** Galois-cyclic and `N` has a divisor `M >= 2` of the
-> listed congruence type. Equivalently, in the global Milnor fibration
+> `(0,1) ⟹ q | M-1`, `p | M`; `(0,0) ⟹ pq | M`. In every case `M >= 2`, so
+> `HZ ≠ G` and `N` has a divisor `M >= 2` of the listed congruence type.
+> Equivalently, in the global Milnor fibration
 > `h ∘ F : C^2 \ E -> C^*` (pullback of the quasi-homogeneous fibration of
 > `x^p - y^q`), the monodromy on `H_1` of the generic fibre has eigenvalue `1`
 > with multiplicity `j - 1 >= 1`.
+
+One consequence of the last step of CUSP-KILL is free of case (A) and worth
+recording separately, because the representation lanes can use it directly:
+
+> **COROLLARY 7.2 (non-normality, every profile).** For any noninvertible plane
+> Keller map, `H := pi_1(C^2 \ F^{-1}(A_F))` is a **non-normal** subgroup of
+> index `N` in `pi_1(C^2 \ A_F)`. *Proof.* `H ◁ G` makes the finite étale
+> covering `C^2 \ F^{-1}(A_F) -> C^2 \ A_F` Galois, hence
+> `C(x,y)/C(F_1,F_2)` Galois, hence `F` invertible by Campbell. ∎
+>
+> Equivalently: the monodromy `rho : pi_1(C^2 \ A_F) -> S_N` of a Keller
+> counterexample is transitive but **not** regular — its image has order `> N`.
+> This is a gate on every meridian-cycle-type search the campaign runs, and it
+> is cheap to check.
 
 **Honest limits.** The cage does not empty case (A). Worked check at `N = 4`
 (§10 control 6): `a = 1` dies by CUSP-KILL (`j = 1`); `a = 2` needs the meridian
@@ -557,7 +578,9 @@ kill compose with the one-cusp horn work, and does the horn sit inside a profile
 ### 8.1 The `N = 4` `H2` residual, pinned
 
 > **THEOREM N4-PIN.** Let `F` be a noninvertible plane Keller map of geometric
-> degree `4` with `A_F` irreducible. Then, in case (B) (some multibranch point):
+> degree `4` with `A_F` irreducible, and suppose `A_F` has a multibranch point
+> (case (B); the complementary case (A) gives the same numbers with `k = 0`, by
+> Prop. 6.1 and CUSP-KILL). Then:
 >
 > ```text
 >   a = 2 ,  W = 2 ,  m = 1 ,  (s_1, mu_1) = (1, 2) ,  R = 0 ,  D_gap = 0 ;
@@ -671,10 +694,11 @@ representation gate the campaign already runs. Enumerate transitive
 `rho : G_{p,q} -> S_N` with `rho(α)^p = rho(β)^q`, meridian cycle type
 `1^a · prod_l mu_l^{s_l}` (`mu_l >= 2` by 7.B, `a = #Fix >= 2`), and
 `[G/Z : rho`-point-stabilizer image`] = M` satisfying the CUSP-CAGE
-congruences. This is `TB-GERM`/`CABLE-3`-shaped work on a group presented by two
-generators and one relation — cheaper than any of the `(9,6)` gates already run.
-A worked `N = 4` instance is in §7; it shows the gate is non-vacuous and that it
-does not, by itself, close `N = 4`.
+congruences, and discard every `rho` whose point stabilizer is normal
+(Cor. 7.2). This is `TB-GERM`/`CABLE-3`-shaped work on a group with two
+generators and one relation — cheaper than any `(9,6)` gate already run. A
+worked `N = 4` instance is in §7; the gate is non-vacuous and does not, by
+itself, close `N = 4`.
 
 ```text
 OPEN[MPRIME-B3-CUSP-PLUS-NODE]
@@ -718,17 +742,20 @@ THEOREM PROFILE   the four-case classification (0)/(A)/(B1)/(B2)/(B3).
 CUSP-KILL         case (A) with E irreducible  =>  F invertible.  PROVED-HERE,
                   UNREVIEWED.  Consumes Lin-Zaidenberg and Campbell.
 CUSP-CAGE         case (A), j >= 2: explicit Kurosh/congruence cage.
+COR 7.2           pi_1(C^2 - F^{-1}(A_F)) is NON-NORMAL of index N in
+                  pi_1(C^2 - A_F); equivalently the monodromy rho is transitive
+                  but not regular.  Profile-free.  PROVED-HERE (via Campbell).
 N4-PIN            the N = 4 H2 residual, pinned to one profile; reproduces the
                   promoted rank-four census (2,1,1)/(3,1)/(2,2)/e(T) = -3.
 
-VERDICT ON THE CHARGE.  The H2 branch is NOT closed at all degrees.  It is
-closed at N = 3 and N = 4 for every profile with a multibranch point, closed
-for every N when A_F is smooth, and closed for N <= 16 when every branch of
-A_F is smooth.  What survives is exactly: a singular BRANCH of A_F.  The
-surviving family is the four typed OPENs of section 9.  The nodal kill does
-NOT generalise for free: the crude bound LHS <= s*a is decisive only at
-N <= 4, and everything from N = 5 to N = 16 is bought by the local law (L),
-the excess budget (K), the localization (C3) and THEOREM 7.B.
+VERDICT ON THE CHARGE.  The H2 branch is NOT closed at all degrees.  Closed:
+all of N <= 3; smooth A_F at every N; at N = 4 every profile whose singular
+points are all multibranch; and, when every branch of A_F is smooth, every
+N <= 16.  What survives is exactly: a singular BRANCH of A_F.  The surviving
+family is the four typed OPENs of section 9.  The nodal kill does NOT
+generalise for free: the crude bound LHS <= s*a is decisive only at N <= 4,
+and everything from N = 5 to N = 16 is bought by the local law (L), the
+excess budget (K), the localization (C3) and THEOREM 7.B.
 ```
 
 **Controls run (all passed).**
@@ -775,7 +802,7 @@ the excess budget (K), the localization (C3) and THEOREM 7.B.
    205 (1973) 243–248; already cited inside the promoted sheet gate) and
    **AMS**. None is a campaign artifact. If any is challenged, §3 and §7 fall
    and §§4–6, 8 stand.
-6. **Size.** Target 25–35 KB; the body is ~44 KB after one trim pass. The
+6. **Size.** Target 25–35 KB; the sealed body is 47.2 KB after one trim pass. The
    overrun is concentrated in §4 (the `[P5]`-free re-derivation of `(L)`, which
    the whole `N >= 17` result rides on), §7 (the `pi_1` cage, which converts an
    unbounded case into a finite representation search) and §8 (the `N = 4` pin
@@ -821,3 +848,14 @@ the excess budget (K), the localization (C3) and THEOREM 7.B.
   (R3) flags the same collision and I follow its ruling.
 * **No gap filled by cap or analogy.** Where the argument stops it returns a
   typed `OPEN` (§9), each with exact data and instrument.
+
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `47182`.
+- Body SHA-256:
+  `5a643a3cf488b0adebe3181c02ee72c457d5ce7f235f30586a2e805f5dfadcaf`.
+- Frozen basis: `b3c11d89cc3b3cc3b3aedeeea9b8e32b68bebde5`.

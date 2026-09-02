@@ -7258,3 +7258,3450 @@ provenance_scope=DECLARED_LANE_INPUTS
 initial_status=RUNNING
 child_pid=55344
 
+codex
+The lane receipt names `ops/seal.py` as the seal tool and says `body_end_contract=NONE`; that is the path I’ll use after writing. I’m going to draft the report now with the explicit table, the two autonomous control rows, and the degeneracy statement.
+exec
+/bin/zsh -lc "sed -n '1,180p' ops/validate_charge_basis.py" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "sed -n '1,220p' ops/seal.py" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+#!/usr/bin/env python3
+"""Validate declared charge_basis lines; never infer charge semantics from prose."""
+
+from __future__ import annotations
+
+from fractions import Fraction
+import json
+from pathlib import Path
+import re
+import sys
+
+
+PREFIX = "charge_basis="
+BRANCHES = {"q=1-exact", "q>=2", "multi-flag"}
+FRACTION = re.compile(r"[+-]?[0-9]+(?:/[+-]?[0-9]+)?\Z")
+REQUIRED = {"delta", "branch", "flag_count", "citation"}
+
+
+class InvalidBasis(ValueError):
+    pass
+
+
+def unique_object(pairs: list[tuple[str, object]]) -> dict[str, object]:
+    result: dict[str, object] = {}
+    for key, value in pairs:
+        if key in result:
+            raise InvalidBasis(f"duplicate JSON key {key!r}")
+        result[key] = value
+    return result
+
+
+def validate(payload: str, line_number: int) -> Fraction:
+    try:
+        record = json.loads(payload, object_pairs_hook=unique_object)
+    except (json.JSONDecodeError, InvalidBasis) as exc:
+        raise InvalidBasis(f"line {line_number}: invalid JSON: {exc}") from exc
+    if not isinstance(record, dict):
+        raise InvalidBasis(f"line {line_number}: charge_basis must be a JSON object")
+
+    missing = sorted(REQUIRED - record.keys())
+    if missing:
+        raise InvalidBasis(
+            f"line {line_number}: missing required field(s): {', '.join(missing)}"
+        )
+
+    delta_text = record["delta"]
+    if not isinstance(delta_text, str) or FRACTION.fullmatch(delta_text) is None:
+        raise InvalidBasis(f"line {line_number}: delta must be an exact integer/fraction string")
+    try:
+        delta = Fraction(delta_text)
+    except (ValueError, ZeroDivisionError) as exc:
+        raise InvalidBasis(f"line {line_number}: invalid exact delta: {exc}") from exc
+
+    branch = record["branch"]
+    if not isinstance(branch, str) or branch not in BRANCHES:
+        raise InvalidBasis(f"line {line_number}: branch must be one of {sorted(BRANCHES)}")
+    flag_count = record["flag_count"]
+    if isinstance(flag_count, bool) or not isinstance(flag_count, int) or flag_count < 1:
+        raise InvalidBasis(f"line {line_number}: flag_count must be a positive integer")
+    citation = record["citation"]
+    if not isinstance(citation, str) or not citation.strip():
+        raise InvalidBasis(f"line {line_number}: citation must be nonempty")
+    if branch == "q=1-exact" and delta.denominator != 1:
+        raise InvalidBasis(
+            f"line {line_number}: q=1-exact requires integral delta, got {delta}"
+        )
+    return delta
+
+
+def main() -> int:
+    if len(sys.argv) != 2:
+        print(f"usage: {Path(sys.argv[0]).name} REPORT", file=sys.stderr)
+        return 2
+    try:
+        text = Path(sys.argv[1]).read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as exc:
+        print(f"charge_basis: cannot read report: {exc}", file=sys.stderr)
+        return 2
+
+    records: list[tuple[int, str]] = []
+    for line_number, line in enumerate(text.splitlines(), 1):
+        stripped = line.strip()
+        if stripped.startswith(PREFIX):
+            records.append((line_number, stripped[len(PREFIX) :]))
+    if not records:
+        print("charge_basis=ABSENT")
+        return 0
+
+    try:
+        deltas = [validate(payload, line_number) for line_number, payload in records]
+    except InvalidBasis as exc:
+        print(f"charge_basis: INVALID: {exc}", file=sys.stderr)
+        return 1
+    normalized = ",".join(str(delta) for delta in deltas)
+    print(f"charge_basis=VALID:{len(records)}:{normalized}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+
+ succeeded in 0ms:
+#!/usr/bin/env python3
+"""Stamp or verify the campaign's BODY-END report integrity seal.
+
+Only a standalone ``<!-- BODY-END -->`` line is a marker.  Inline or quoted
+mentions are ordinary body text.  The sole canonical post-body seal is the
+exact UTF-8 serialization returned by the module's canonical-seal serializer:
+its text, order, wrapping, punctuation, and LF line endings are fixed.  CRLF is
+accepted in the body and marker line, where both bytes are hashed, but never in
+the post-body seal.  Any other post-body prefix, suffix, CRLF, or lone carriage
+return makes the seal invalid.  The tool never discovers files: every path must
+be supplied explicitly.  A body hash detects accidental or concurrent
+mutation; it is not an authenticity signature.  Full-file hashes and external
+run receipts remain separate custody evidence.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import os
+from pathlib import Path
+import re
+import secrets
+import stat
+import sys
+
+
+MARKER = b"<!-- BODY-END -->"
+HEX40 = re.compile(r"[0-9a-f]{40}\Z")
+BODY_BYTES_RE = re.compile(
+    r"^- Body bytes:[ \t]*`([0-9]+)`\.?[ \t]*$", re.MULTILINE
+)
+BODY_SHA_RE = re.compile(
+    r"^- Body SHA-256:[ \t]*(?:\n[ \t]*)?`([0-9a-f]{64})`\.?[ \t]*$",
+    re.MULTILINE,
+)
+FROZEN_BASIS_RE = re.compile(
+    r"^- Frozen basis:[ \t]*`([0-9a-f]{40})`\.?[ \t]*$", re.MULTILINE
+)
+
+
+class SealError(ValueError):
+    """A report is unsafe to read or has an invalid seal."""
+
+
+class SealDurabilityWarning(SealError):
+    """The installed seal verified, but its directory sync failed."""
+
+
+def _validate_basis(basis: str, *, label: str = "basis") -> None:
+    if HEX40.fullmatch(basis) is None:
+        raise SealError(
+            f"{label} must be exactly 40 lowercase hexadecimal characters"
+        )
+
+
+def _open_parent(path: Path) -> tuple[int, str, Path, os.stat_result]:
+    """Open an anchored parent directory; leave the final name unfollowed."""
+    if not path.name or path.name in {".", ".."}:
+        raise SealError("target must name a file")
+    try:
+        parent = path.parent.resolve(strict=True)
+    except OSError as exc:
+        raise SealError(f"cannot resolve target parent: {exc}") from exc
+    try:
+        before = parent.lstat()
+    except OSError as exc:
+        raise SealError(f"cannot inspect target parent: {exc}") from exc
+    if stat.S_ISLNK(before.st_mode) or not stat.S_ISDIR(before.st_mode):
+        raise SealError("target parent is a symlink or is not a directory")
+    flags = os.O_RDONLY | getattr(os, "O_DIRECTORY", 0)
+    if hasattr(os, "O_NOFOLLOW"):
+        flags |= os.O_NOFOLLOW
+    try:
+        parent_fd = os.open(parent, flags)
+    except OSError as exc:
+        raise SealError(f"cannot open target parent: {exc}") from exc
+    try:
+        info = os.fstat(parent_fd)
+        if not stat.S_ISDIR(info.st_mode) or _identity(info) != _identity(before):
+            raise SealError("target parent identity changed during open")
+        _check_parent_path(parent, info)
+        return parent_fd, path.name, parent, info
+    except Exception:
+        os.close(parent_fd)
+        raise
+
+
+def _check_parent_path(parent: Path, expected: os.stat_result) -> None:
+    try:
+        current = parent.lstat()
+    except OSError as exc:
+        raise SealError(f"cannot recheck target parent: {exc}") from exc
+    if stat.S_ISLNK(current.st_mode) or not stat.S_ISDIR(current.st_mode):
+        raise SealError("target parent changed to a symlink or non-directory")
+    if _identity(current) != _identity(expected):
+        raise SealError("target parent identity changed")
+
+
+def _identity(info: os.stat_result) -> tuple[int, int]:
+    return info.st_dev, info.st_ino
+
+
+def _snapshot(info: os.stat_result) -> tuple[int, int, int, int, int, int]:
+    return (
+        info.st_dev,
+        info.st_ino,
+        stat.S_IMODE(info.st_mode),
+        info.st_size,
+        info.st_mtime_ns,
+        info.st_ctime_ns,
+    )
+
+
+def _open_regular_at(
+    parent_fd: int, name: str
+) -> tuple[int, os.stat_result]:
+    try:
+        before = os.stat(name, dir_fd=parent_fd, follow_symlinks=False)
+    except OSError as exc:
+        raise SealError(f"cannot inspect target before open: {exc}") from exc
+    if stat.S_ISLNK(before.st_mode) or not stat.S_ISREG(before.st_mode):
+        raise SealError("path is a symlink or is not a regular file")
+
+    flags = os.O_RDONLY | getattr(os, "O_NONBLOCK", 0)
+    if hasattr(os, "O_NOFOLLOW"):
+        flags |= os.O_NOFOLLOW
+    try:
+        fd = os.open(name, flags, dir_fd=parent_fd)
+    except OSError as exc:
+        raise SealError(f"cannot open regular file: {exc}") from exc
+    try:
+        info = os.fstat(fd)
+        if not stat.S_ISREG(info.st_mode):
+            raise SealError("path is not a regular file")
+        if _identity(before) != _identity(info):
+            raise SealError("target identity changed during open")
+        try:
+            after = os.stat(name, dir_fd=parent_fd, follow_symlinks=False)
+        except OSError as exc:
+            raise SealError(f"cannot recheck target after open: {exc}") from exc
+        if _identity(after) != _identity(info) or not stat.S_ISREG(after.st_mode):
+            raise SealError("target identity changed during open")
+        return fd, info
+    except Exception:
+        os.close(fd)
+        raise
+
+
+def _read_regular_at(
+    parent_fd: int, name: str
+) -> tuple[bytes, os.stat_result]:
+    fd, info = _open_regular_at(parent_fd, name)
+    try:
+        chunks: list[bytes] = []
+        while True:
+            chunk = os.read(fd, 1024 * 1024)
+            if not chunk:
+                break
+            chunks.append(chunk)
+        data = b"".join(chunks)
+        after = os.fstat(fd)
+        if _snapshot(after) != _snapshot(info) or len(data) != after.st_size:
+            raise SealError("target changed while being read")
+        return data, after
+    finally:
+        os.close(fd)
+
+
+def _read_regular(path: Path) -> tuple[bytes, os.stat_result, Path]:
+    parent_fd, name, parent, parent_info = _open_parent(path)
+    try:
+        data, info = _read_regular_at(parent_fd, name)
+        _check_parent_path(parent, parent_info)
+        return data, info, parent / name
+    finally:
+        os.close(parent_fd)
+
+
+def _create_temp_at(parent_fd: int, target_name: str, mode: int) -> tuple[int, str]:
+    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
+    if hasattr(os, "O_NOFOLLOW"):
+        flags |= os.O_NOFOLLOW
+    for _ in range(100):
+        name = f".{target_name}.seal-{os.getpid()}-{secrets.token_hex(8)}"
+        try:
+            fd = os.open(name, flags, 0o600, dir_fd=parent_fd)
+        except FileExistsError:
+            continue
+        except OSError as exc:
+            raise SealError(f"cannot create anchored seal temp: {exc}") from exc
+        try:
+            os.fchmod(fd, mode)
+        except Exception:
+            os.close(fd)
+            try:
+                os.unlink(name, dir_fd=parent_fd)
+            except FileNotFoundError:
+                pass
+            raise
+        return fd, name
+    raise SealError("cannot allocate a unique anchored seal temp")
+
+
+def _marker_boundaries(data: bytes, *, require_newline: bool) -> list[int]:
+    markers: list[int] = []
+    offset = 0
+    for line in data.splitlines(keepends=True):
+        content = line[:-2] if line.endswith(b"\r\n") else line[:-1] if line.endswith(b"\n") else line
+        if content == MARKER:
+            if not line.endswith((b"\n", b"\r\n")) and require_newline:
+                raise SealError("standalone BODY-END marker lacks terminating newline")
+            markers.append(offset + len(line))
+        offset += len(line)
+    return markers
+
+
+def _body_boundary(data: bytes) -> int:
+    markers = _marker_boundaries(data, require_newline=True)
+    if len(markers) != 1:
+
+exec
+/bin/zsh -lc 'rg -n "ops/seal.py|seal.py" xmodel/*.run.v2 xmodel/*.md | head -n 80' in /Users/dc/code/math/jc2
+ succeeded in 3ms:
+xmodel/b0-proof-hostile-review-sol56-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/b0-proof-verification-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/964-nodality-review-grok46-20260902.run.v2:16:seal_tool=ops/seal.py
+xmodel/b0-reducible-n5-hostile-review-sol56-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/as109-d12-seed-provenance-reconciliation-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/b0-reducible-n5-opus5-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/b0-all-n-eta-criticality-sol56-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/b0-pi1-acquisition-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/b0-trivial-dicritical-proof-opus5-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/adapter-smoke-opus5-cap128k-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/b0-all-n-hostile-review-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-one-cusp-poisson-hostile-review-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-genus-ladder-conductor34-40-s4-census-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-one-cusp-fibre-connectedness-sol56-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-genus-ladder-conductor22-28-hostile-review-gpt55-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-rank4-dicritical-typing-d1-d4-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-genus-ladder-conductor10-16-hostile-review-grok46-r2-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-rank4-dicritical-typing-hostile-review-gpt55-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-fibre-connectedness-prereview-sol56-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-rank4-reducible-component-tree-ledger-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-fibre-connectedness-hostile-review-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-rank4-r1-splice-census-hostile-review-gpt55-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-rank4-mm-identity-hostile-review-sol56-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-genus-ladder-conductor34-40-hostile-review-gpt55-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/companion-curve-alln-opus5-20260902.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-one-cusp-wild-valuation-hostile-review-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/braid-prep-row64-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/companion-alln-review-grok46-20260902.run.v2:16:seal_tool=ops/seal.py
+xmodel/burnside-chi-gpt55-20260902.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-one-cusp-wild-valuation-prereview-sol56-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/charp-prefilter-grok46-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/d1-degree-bound-sol56-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/domrina-ii-replay1-sol56-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-rank4-r1-splice-coloring-census-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/corrected-suite-codegen-grok46-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-rank4-missing-multiplicity-identity-opus5-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/card-c-step0-opus5-20260902.run.v2:16:seal_tool=ops/seal.py
+xmodel/domrina-gap-repair-opus5-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/cell-32-termination-opus5-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/corr-budget-n5-hostile-review-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-rank4-missing-multiplicity-identity-opus5-r2-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/campaign-pin-gpt55-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/block-descent-a1-rank4-reducible-component-tree-ledger-hostile-review-sol56-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/domrina-fulltext-hunt-grok46-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/domrina-1999-audit-sol56-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/encoding-faithfulness-audit-sol56-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/encoding-faithfulness-audit-r2-sol56-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/cell-32-spec-sol56-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/d1-degree-hostile-review-gpt55-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/homcover-discriminator-grok46-20260902.run.v2:16:seal_tool=ops/seal.py
+xmodel/hf-twin-hostile-review-gpt55-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/bm-fact-codegen-grok46-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/domrina-ii-replay2-sol56-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/do1-hunt-grok46-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/hf-attain-964-grok46-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/do1-mu2-replay-sol56-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/corrected-863-kill-review-gpt55-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/ideation-20260902T0022Z-sol56.run.v2:16:seal_tool=ops/seal.py
+xmodel/ideation-20260902T0022Z-opus5.run.v2:16:seal_tool=ops/seal.py
+xmodel/ideation-20260831T1033Z-grok46.run.v2:16:seal_tool=ops/seal.py
+xmodel/hf-twin-964-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/ideation-20260831T1033Z-opus5.run.v2:16:seal_tool=ops/seal.py
+xmodel/corr-budget-n5-sol56-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/ideation-20260831T1033Z-sol56.run.v2:16:seal_tool=ops/seal.py
+xmodel/domrina-repair-review-gpt55-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/k1-l17-tame-different-opus5-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/k1-mathlib-survey-and-plan-opus5-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/ideation-20260831T1033Z-crosspoll-grok46.run.v2:16:seal_tool=ops/seal.py
+xmodel/domrina-instantiate-sol56-20260902.run.v2:16:seal_tool=ops/seal.py
+xmodel/ideation-20260902T0022Z-fable5.run.v2:16:seal_tool=ops/seal.py
+xmodel/max11-610-degree-zero-endgame-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/m-inf-semigroup-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/ideation-20260902T0022Z-grok46.run.v2:16:seal_tool=ops/seal.py
+xmodel/max11-68-kappa-rigidity-derivation-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+xmodel/n20-escape-verification-grok46-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/ideation-20260831T1033Z-fable5.run.v2:16:seal_tool=ops/seal.py
+xmodel/n20-escape-hostile-review-sol56-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/n5-s1-hostile-review-gpt55-20260901.run.v2:16:seal_tool=ops/seal.py
+xmodel/max11-810-chamber-map-grok46-20260831.run.v2:16:seal_tool=ops/seal.py
+
+codex
+The finalizer note is for a different transaction wrapper; this lane uses the receipt’s direct seal tool. I’ll include a standalone `<!-- BODY-END -->` marker so `ops/seal.py` can stamp and verify the report.
+exec
+/bin/zsh -lc "sed -n '220,520p' ops/seal.py" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+    if len(markers) != 1:
+        raise SealError(f"expected exactly one standalone BODY-END marker, found {len(markers)}")
+    return markers[0]
+
+
+def _unique(pattern: re.Pattern[str], text: str, label: str) -> str:
+    values = pattern.findall(text)
+    if len(values) != 1:
+        raise SealError(f"expected exactly one {label} declaration, found {len(values)}")
+    return values[0]
+
+
+def verify_bytes(
+    data: bytes, *, expected_basis: str | None = None
+) -> tuple[int, str, str]:
+    boundary = _body_boundary(data)
+    body = data[:boundary]
+    try:
+        post = data[boundary:].decode("utf-8")
+    except UnicodeDecodeError as exc:
+        raise SealError(f"post-body seal is not UTF-8: {exc}") from exc
+    post = post.replace("\r\n", "\n")
+    if "\r" in post:
+        raise SealError("post-body seal contains a lone carriage return")
+    declared_bytes = int(_unique(BODY_BYTES_RE, post, "Body bytes"))
+    declared_sha = _unique(BODY_SHA_RE, post, "Body SHA-256")
+    basis = _unique(FROZEN_BASIS_RE, post, "Frozen basis")
+    actual_sha = hashlib.sha256(body).hexdigest()
+    if declared_bytes != len(body):
+        raise SealError(
+            f"body byte mismatch: declared {declared_bytes}, actual {len(body)}"
+        )
+    if declared_sha != actual_sha:
+        raise SealError(
+            f"body SHA-256 mismatch: declared {declared_sha}, actual {actual_sha}"
+        )
+    if expected_basis is not None and basis != expected_basis:
+        raise SealError(
+            f"frozen basis mismatch: declared {basis}, expected {expected_basis}"
+        )
+    canonical = _canonical_seal(len(body), actual_sha, basis)
+    if data[boundary:] != canonical:
+        raise SealError("post-body seal is not the canonical LF serialization")
+    return len(body), actual_sha, basis
+
+
+def verify_path(
+    path: Path, *, expected_basis: str | None = None
+) -> tuple[int, str, str]:
+    data, _, _ = _read_regular(path)
+    return verify_bytes(data, expected_basis=expected_basis)
+
+
+def _canonical_seal(body_bytes: int, body_sha: str, basis: str) -> bytes:
+    return (
+        "\n## Seal\n\n"
+        "- Body definition: every byte through the unique standalone "
+        "`<!-- BODY-END -->` line,\n"
+        "  including its terminating newline; this seal is outside the body.\n"
+        f"- Body bytes: `{body_bytes}`.\n"
+        "- Body SHA-256:\n"
+        f"  `{body_sha}`.\n"
+        f"- Frozen basis: `{basis}`.\n"
+    ).encode("utf-8")
+
+
+def stamp_path(path: Path, basis: str) -> tuple[int, str, str]:
+    _validate_basis(basis)
+    parent_fd, name, parent, parent_info = _open_parent(path)
+    temp_name: str | None = None
+    durability_error: OSError | None = None
+    try:
+        data, original = _read_regular_at(parent_fd, name)
+        boundary = _body_boundary(data)
+        if data[boundary:].strip():
+            raise SealError(
+                "refusing to stamp: non-whitespace content already follows BODY-END"
+            )
+        body = data[:boundary]
+        digest = hashlib.sha256(body).hexdigest()
+        sealed = body + _canonical_seal(len(body), digest, basis)
+
+        try:
+            current = os.stat(name, dir_fd=parent_fd, follow_symlinks=False)
+        except OSError as exc:
+            raise SealError(f"cannot recheck target before replacement: {exc}") from exc
+        if stat.S_ISLNK(current.st_mode) or not stat.S_ISREG(current.st_mode):
+            raise SealError("target changed to a symlink or non-regular file")
+        if _identity(current) != _identity(original):
+            raise SealError("target identity changed while preparing seal")
+
+        temp_fd, temp_name = _create_temp_at(
+            parent_fd, name, stat.S_IMODE(original.st_mode)
+        )
+        with os.fdopen(temp_fd, "wb") as handle:
+            handle.write(sealed)
+            handle.flush()
+            os.fsync(handle.fileno())
+
+        # Detect both replacement and same-inode rewrites immediately before
+        # the atomic install.  This is not a substitute for cooperative locks,
+        # but it closes the ordinary concurrent-lane lost-update window.
+        latest_data, latest = _read_regular_at(parent_fd, name)
+        if _snapshot(latest) != _snapshot(original):
+            raise SealError("target metadata changed before atomic replacement")
+        if latest_data != data:
+            raise SealError("target content changed before atomic replacement")
+        _check_parent_path(parent, parent_info)
+
+        os.replace(
+            temp_name,
+            name,
+            src_dir_fd=parent_fd,
+            dst_dir_fd=parent_fd,
+        )
+        temp_name = None
+
+        installed, _ = _read_regular_at(parent_fd, name)
+        if installed != sealed:
+            raise SealError("installed seal differs from staged bytes")
+        verify_bytes(installed, expected_basis=basis)
+
+        try:
+            _check_parent_path(parent, parent_info)
+        except SealError as exc:
+            durability_error = OSError(str(exc))
+        try:
+            os.fsync(parent_fd)
+        except OSError as exc:
+            durability_error = durability_error or exc
+    finally:
+        if temp_name is not None:
+            try:
+                os.unlink(temp_name, dir_fd=parent_fd)
+            except FileNotFoundError:
+                pass
+        os.close(parent_fd)
+    if durability_error is not None:
+        raise SealDurabilityWarning(
+            "seal was installed and verified, but directory fsync failed: "
+            f"{durability_error}"
+        )
+    return len(body), digest, basis
+
+
+def _write_exclusive(path: Path, data: bytes, mode: int = 0o444) -> str:
+    """Create ``path`` exclusively with ``data``; return its SHA-256."""
+    parent_fd, name, _parent, _parent_info = _open_parent(path)
+    try:
+        flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
+        if hasattr(os, "O_NOFOLLOW"):
+            flags |= os.O_NOFOLLOW
+        try:
+            fd = os.open(name, flags, mode, dir_fd=parent_fd)
+        except OSError as exc:
+            raise SealError(f"cannot create {path} exclusively: {exc}") from exc
+        with os.fdopen(fd, "wb") as handle:
+            handle.write(data)
+            handle.flush()
+            os.fsync(handle.fileno())
+        try:
+            os.fsync(parent_fd)
+        except OSError:
+            pass
+        return hashlib.sha256(data).hexdigest()
+    finally:
+        os.close(parent_fd)
+
+
+def divert_path(
+    path: Path, overflow_path: Path, raw_path: Path | None = None
+) -> dict[str, object]:
+    """Split non-whitespace overflow after a sole BODY-END out of a report.
+
+    The charged report keeps every byte through the marker line; the exact
+    overflow bytes land in overflow_path and, when raw_path is given, the
+    untouched original is preserved there first.  A report whose post-marker
+    content is whitespace or exactly one canonical seal is left unmodified.
+    Zero, multiple, and unterminated markers are reported, never repaired.
+    """
+    parent_fd, name, parent, parent_info = _open_parent(path)
+    temp_name: str | None = None
+    created_paths: list[Path] = []
+    reclassified = False
+
+    def cleanup_created() -> None:
+        for artifact in reversed(created_paths):
+            try:
+                artifact.unlink()
+            except FileNotFoundError:
+                pass
+        created_paths.clear()
+
+    try:
+        while True:
+            data, original = _read_regular_at(parent_fd, name)
+            try:
+                markers = _marker_boundaries(data, require_newline=True)
+            except SealError:
+                return {"status": "UNTERMINATED_MARKER", "bytes": len(data)}
+            if not markers:
+                return {"status": "NO_MARKER", "bytes": len(data)}
+            if len(markers) > 1:
+                return {"status": "MULTI_MARKER", "markers": len(markers)}
+            boundary = markers[0]
+            body = data[:boundary]
+            tail = data[boundary:]
+            body_sha = hashlib.sha256(body).hexdigest()
+            if not tail.strip():
+                return {
+                    "status": "CLEAN",
+                    "body_bytes": len(body),
+                    "body_sha256": body_sha,
+                }
+            try:
+                verify_bytes(data)
+                return {
+                    "status": "CLEAN_SEALED",
+                    "body_bytes": len(body),
+                    "body_sha256": body_sha,
+                }
+            except SealError:
+                pass
+
+            result: dict[str, object] = {
+                "status": "DIVERTED",
+                "body_bytes": len(body),
+                "body_sha256": body_sha,
+                "overflow": str(overflow_path),
+                "overflow_bytes": len(tail),
+            }
+            try:
+                if raw_path is not None:
+                    result["raw"] = str(raw_path)
+                    result["raw_sha256"] = _write_exclusive(raw_path, data)
+                    created_paths.append(raw_path)
+                result["overflow_sha256"] = _write_exclusive(overflow_path, tail)
+                created_paths.append(overflow_path)
+
+                temp_fd, temp_name = _create_temp_at(
+                    parent_fd, name, stat.S_IMODE(original.st_mode)
+                )
+                with os.fdopen(temp_fd, "wb") as handle:
+                    handle.write(body)
+                    handle.flush()
+                    os.fsync(handle.fileno())
+
+                # Re-read immediately before replacement.  A cooperative late
+                # writer gets one fresh classification rather than stale
+                # truncation; repeated mutation fails closed.
+                latest_data, latest = _read_regular_at(parent_fd, name)
+                if _snapshot(latest) != _snapshot(original) or latest_data != data:
+                    os.unlink(temp_name, dir_fd=parent_fd)
+                    temp_name = None
+                    cleanup_created()
+                    if reclassified:
+                        raise SealError(
+                            "target changed repeatedly before atomic truncation"
+                        )
+                    reclassified = True
+                    continue
+                _check_parent_path(parent, parent_info)
+                os.replace(
+                    temp_name,
+                    name,
+                    src_dir_fd=parent_fd,
+                    dst_dir_fd=parent_fd,
+                )
+                temp_name = None
+                created_paths.clear()
+
+                installed, _ = _read_regular_at(parent_fd, name)
+                if installed != body:
+                    raise SealError("installed body differs from staged bytes")
+                try:
+                    os.fsync(parent_fd)
+                except OSError:
+                    pass
+                return result
+            except Exception:
+                cleanup_created()
+                raise
+    finally:
+        if temp_name is not None:
+            try:
+                os.unlink(temp_name, dir_fd=parent_fd)
+            except FileNotFoundError:
+                pass
+        cleanup_created()
+        os.close(parent_fd)
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
+    sub = parser.add_subparsers(dest="command", required=True)
+    verify = sub.add_parser("verify", help="verify one or more sealed reports")
+    verify.add_argument(
+        "--expected-basis",
+        "--expect-basis",
+        dest="expected_basis",
+        help="require this exact 40-character frozen basis (never inferred)",
+
+exec
+/bin/zsh -lc "sed -n '520,760p' ops/seal.py" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+        help="require this exact 40-character frozen basis (never inferred)",
+    )
+    verify.add_argument("files", nargs="+", type=Path)
+    stamp = sub.add_parser("stamp", help="append a canonical seal atomically")
+    stamp.add_argument("file", type=Path)
+    stamp.add_argument("--basis", required=True)
+    divert = sub.add_parser(
+        "divert",
+        help="bank non-whitespace overflow after a sole BODY-END, truncating "
+        "the charged report to its body; never repairs zero/multiple markers",
+    )
+    divert.add_argument("file", type=Path)
+    divert.add_argument("--overflow", required=True, type=Path)
+    divert.add_argument("--raw", type=Path)
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    if args.command == "verify":
+        if args.expected_basis is not None:
+            try:
+                _validate_basis(args.expected_basis, label="expected basis")
+            except SealError as exc:
+                print(f"seal: INVALID: {exc}", file=sys.stderr)
+                return 1
+        failures = 0
+        for path in args.files:
+            try:
+                size, digest, basis = verify_path(
+                    path, expected_basis=args.expected_basis
+                )
+                print(
+                    f"PASS path={path} body_bytes={size} "
+                    f"body_sha256={digest} basis={basis}"
+                )
+            except (SealError, OSError) as exc:
+                failures += 1
+                print(f"seal: INVALID path={path}: {exc}", file=sys.stderr)
+        return 1 if failures else 0
+
+    if args.command == "divert":
+        try:
+            result = divert_path(args.file, args.overflow, args.raw)
+        except (SealError, OSError) as exc:
+            print(f"seal: INVALID path={args.file}: {exc}", file=sys.stderr)
+            return 1
+        detail = " ".join(
+            f"{key}={value}" for key, value in result.items() if key != "status"
+        )
+        line = f"DIVERT path={args.file} status={result['status']}"
+        print(f"{line} {detail}" if detail else line)
+        return 0
+
+    try:
+        size, digest, basis = stamp_path(args.file, args.basis)
+        print(
+            f"STAMPED path={args.file} body_bytes={size} "
+            f"body_sha256={digest} basis={basis}"
+        )
+        return 0
+    except SealDurabilityWarning as exc:
+        print(f"seal: DURABILITY_WARNING path={args.file}: {exc}", file=sys.stderr)
+        return 2
+    except SealError as exc:
+        print(f"seal: INVALID path={args.file}: {exc}", file=sys.stderr)
+        return 1
+    except OSError as exc:
+        print(f"seal: INVALID path={args.file}: operating-system error: {exc}", file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+
+codex
+The source-hull comparison is being kept separate from the deck fixed-coset computation: the former uses the typed `a_i=N-W_i`/cluster deficit data, while the latter uses inertia stabilizers in the Galois closure. That separation is the main guardrail against the `#Fix` fallacy here.
+exec
+/bin/zsh -lc 'rg -n "ACS-FIX|FIX-VS-DEFICIT|#Fix|Fix" /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs xmodel | head -n 80' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md:90:`a_p` census; never `#Fix`).
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md:123:`a`-vs-`#Fix` bookkeeping appears once, explicitly.
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/reducible-all-n-r2-opus5-20260901.md:504:> **`OPEN[PI1-S_N-CAGE(carriers, owners, places)]`.** Fix a profile from the
+/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/rep-96-inner-opus5-20260901.md:668:and independently `a^{(1)} = #Fix(transposition) = 2`. The budget therefore does
+xmodel/as-b9-max12-leading-shear-q8-interface-audit-v2-20260825.md:91:## 3. Fixed total D12 forces Kummer order one
+xmodel/as-b9-max12-leading-shear-q8-interface-audit-v2-20260825.md:137:partial-`y` coefficient `h(x)` is constant.  Fixed-cap Kummer order one does
+xmodel/ideation-20260825T1120Z-root.md:90:1. **Fixed-support all-depth AS tower.**  Decide the full unpinned Q5/Q4
+xmodel/ideation-20260831T1033Z-crosspoll-grok46.log:8:**Hardest attack.** On Opus’s Euler–inertia identity `(M)`: Step 0 is the wrong category (affine ZMT does not reproduce block descent); the primitive branch is not reached; the one-node “control” is one-sided; the Euler assembly needs a written covering lemma; the colouring-column experiment computes the wrong `#Fix` (flag/place/series).
+xmodel/max12-912-order1-binary-cubic-first-two-bands-review-grok-v3-20260825.md:27:The frozen AWS compilation of the three displayed representatives is internally complete for the first two denominator-free homogeneous bands, and the printed Singular dimensions 7/6/6 are the dimensions of those obstruction schemes, not of any Keller branch. The literal mod-`3^11` cubic `(1,119880,40581,0)` has `v_3(Disc)=15` for every integral continuation of that 4-tuple, so any exact continuation is squarefree; that does not produce a continuation. Fixed total degree 12 separately collapses the partial-`y` Kummer class to order one and is a SCOPE-CONFLICT with selected order-three Q8; it does not identify the total-homogeneous cubic `K` with the partial-`y` coefficient `h(x)`.
+xmodel/k00-ram-e2m1-g5-prefix-hostile-review-opus5-20260829.log:14:1. **`K10/G7 = 5/32768` is wrong; the true value is `5/65536`.** The replay computes the grade‑7 K10 coefficient as `DM4(ell)[u]` and drops `A10^[3](ell) = −5/65536`. Verified two independent ways. The K6 branch of the same replay *does* include its quadratic piece, so this is an isolated omission. Fixing it leaves `RESIDUAL_SHA256` unchanged, since the residual doesn't serialize witness values.
+xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.log:1608:    51	2. **Fixed sheet over every prime divisor.**  For every irreducible
+xmodel/ideation-20260829T1517Z-crosspoll-fable5.md:415:Fixture matrix (deterministic, run twice, byte-identical modulo declared
+xmodel/sol-unify.md:375:Fix \((\alpha,\beta)=(2,3)\). For each odd positive integer `b`, take two
+xmodel/reducible-all-n-opus5-20260901.md:190:Fix `p in A_F` and let `G_p = rho(pi_1(B_p - A_F))` be the local monodromy group.
+xmodel/reducible-all-n-opus5-20260901.md:243:Fix `t in l'` with `phi_l(t) = p`. Choose coordinates `(x,y)` at `t` with
+xmodel/ideation-20260824T0453Z-adversary.md:59:| 2 | `LOCAL-K3/COMPACTNESS` | atlas C + zero-base C | **Merge and keep.**  Fixed-degree local generic-fibre detection is the honest bridge that another Witt level lacks. |
+xmodel/sol-wtc1.md:212:Fix an eligible \((\rho,\sigma)\), abbreviate its leading-form operator by
+xmodel/sol-wtc1.md:742:Fix \(A\ge2\) and \(D\ge A\).  Let \(u=r+1\).  Choose a polynomial
+xmodel/m2-equal-join-semilinear-primary-research-opus5-20260829.md:125:> **Theorem A (unbounded classification).** Fix the discrete merge data
+xmodel/block-descent-a1-rank4-missing-multiplicity-identity-opus5-r2-20260831.md:156:Fix any smooth projective compactification `S subset X` on which `F`
+xmodel/sol-thmB.md:369:Fix a value-tier specialization for which the promoted free-monomial
+xmodel/sol-msolve-fix.log:332:  rc=1). Fix: model line removed (account default), backup at
+xmodel/ideation-20260827T2259Z-grok46.md:31:| 4 | unchanged | Fixed-`H` saturated germ remains a finite client; global algebraization remains open. |
+xmodel/ideation-20260827T2259Z-synthesis-sol.md:87:### 2.1 Fixed-receiver recurrence theorem
+xmodel/bd-a2-q6-fixed-presentation-closure-coordinator-integration-sol56-20260830.md:389:Fix a reduced normal-singular bidegree-`(2,3)` quadratic incidence
+xmodel/max12-912-order3-nu-q8-formal-branch-20260824.md:13:Fix the seven-row constant-invariant fibre
+xmodel/max12-912-order3-nu-q8-formal-branch-20260824.md:65:Fix a loaded parity coefficient point above a root of `Q8`.  It exists because
+xmodel/as-b9-9-12-common-cubic-3p11-review-grok-20260825.md:40:Fix the displayed B9 point `(p5,q5)` of source SHA-256 `f1b50bb2c3e21369da205ebcf1ba028eede20c89d5ad863253fdfec4d6d28c5d`, determinant one modulo 243. Inside the complete normalized total-degree box `deg P ≤ 9`, `deg Q ≤ 12`, impose the integral common-cubic incidence
+xmodel/moskowicz-prime-degree-source-audit-20260824.md:51:The missing field-theoretic implication is in fact false.  Fix any integer
+xmodel/ideation-20260902T0022Z-sol56.log:2075:   159	| Fixed-support AS/Witt lifting | **continue** | Run the degree-12 cell; do not spend on another unrestricted growing-support Witt level [A:208]. |
+xmodel/ideation-20260902T0022Z-sol56.log:2168:    31	- the conversion `#F^{-1}(p) = #Fix(H_p)` is unproved: a monodromy-fixed
+xmodel/ideation-20260902T0022Z-sol56.log:4088:504:> **`OPEN[PI1-S_N-CAGE(carriers, owners, places)]`.** Fix a profile from the
+xmodel/ideation-20260902T0022Z-sol56.log:4456:   504	> **`OPEN[PI1-S_N-CAGE(carriers, owners, places)]`.** Fix a profile from the
+xmodel/ideation-20260902T0022Z-sol56.log:4628:   668	and independently `a^{(1)} = #Fix(transposition) = 2`. The budget therefore does
+xmodel/ideation-20260902T0022Z-sol56.log:4758:   335	Sheet-gate without (H2): `sum_i a^{(i)} chi_c(D_i\Sing D)+sum_p a_p=1-d chi_c(V)`, and (E) gives `chi_c(V)=1-chi_c(D)`, `d=N=4`. Profile (`reducible-all-n`:459): core `(2,1,0)`, `W=(1,2)` — one branched component `D_1` of weight `2` and one trivial-dicritical component `D_2` of weight `1`. Thus `a^{(1)}=N-W_1=2`, `a^{(2)}=N-W_2=3`. Independently `a^{(1)}=#Fix(transposition)=2`. `D_1` has `s_1` nodes and normalization `A^1`; `D_2` has `sigma_2` nodes and `chi_c(D_2)=chi_2`; they meet transversally in `j` points.
+xmodel/ideation-20260902T0022Z-sol56.log:4762:   339	- Node of `D_1`: two size-2 clusters (two disjoint transpositions) exhaust the four letters of the geometric fibre of `F` ⇒ `a_p=0`. Independently, `H_p≅Z/2×Z/2` generated by those transpositions has `s_p=#Fix(H_p)=0`, so `a_p=s_p-b_p=0`.
+xmodel/ideation-20260902T0022Z-sol56.log:6402:    27	`g in S_d` the generic meridian monodromy; `sigma := #Fix(g)`; `H_p` the image
+xmodel/ideation-20260902T0022Z-sol56.log:6403:    28	of the local group `pi_1(Delta_p \ D)`; `s_p := #Fix(H_p)`;
+xmodel/ideation-20260902T0022Z-sol56.log:6416:    41	Step 2 is the **conversion**: `#F^{-1}(p) = #Fix(H_p) = s_p`. Step 3 assembles
+xmodel/ideation-20260902T0022Z-sol56.log:6505:   504	| Colouring-column quota experiment | — | — | **WITHDRAWN** (§6): computes the wrong `#Fix` |
+xmodel/ideation-20260902T0022Z-sol56.log:6814:    85	allowed case `#Fix(G_p)=1`, so the two branch meridians remain disjoint
+xmodel/ideation-20260902T0022Z-sol56.log:6862:   133	Fixedness by `δ̂_d^n` is equivalent to fixedness by `δ_d^n`. Then
+xmodel/ideation-20260902T0022Z-sol56.log:6868:   139	Extend `τ_{j-d}:=Π τ_j Π^{-1}`. Fixedness is `τ_j=τ_{j-n}`: the
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:3832:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:4240:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:5301:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:5712:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:6162:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:6617:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:7067:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:7514:Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:7964:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:8415:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:8866:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:9318:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:9769:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:10219:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:10670:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:11132:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:11592:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:12069:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:12534:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:12996:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:13464:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log:13936:+Fix a sextic `F` with the provisional geometry in section 2, and let
+xmodel/k00-ram-e2m1-g5-prefix-hostile-review-opus5-20260829.md:568:P3  Fix the replay's grade-seven K10 coefficient to
+xmodel/grok-t10-review.md:50:  This is a checker-hygiene gap on the *new* two-gap parameterization, not a hole in the filed kill: both identities are true independently (`ν = −7/2` and `ν = −5`, see Finding 6) and both rows are present in the certificate that was actually checked. Fix: one set-equality check in the menu-style branch. The UNIVERSAL Case-B block still only carries the inherited `2/5` identity `5(ν+1)−4ν = ν+5 ≥ 7`; the `5/14` identity `14(ν+1)−10ν = 4ν+14 ≥ 22` lives only in the per-cert loop. Harmless given Finding 6, but the new gap should sit in the UNIVERSAL block the same way.
+xmodel/as-b9-9-12-common-cubic-witness-jacobian-snf-review-grok-20260825.md:46:Fix the displayed witness of SHA-256 `a39bc918…`, with
+xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.log:1233:    51	2. **Fixed sheet over every prime divisor.**  For every irreducible
+xmodel/pcb-generic-collision-surplus-sol56-20260829.md:154:## 2. Fixed-fibre collision identity
+xmodel/td12-occurrence-coverage-attack-opus5-93d-20260829.md:480:Fix an odd `r >= 3`.
+xmodel/bd-a2-a1-ruling-euler-boundary-cap-hostile-review-gpt55-20260830.md:102:`L^2=0`, `K.L=-2`, `D.L=1`. Fixed-completion lattice finiteness is safe only
+xmodel/bd-a2-nonnormal-quadratic-content-cone-dichotomy-hostile-review-gpt55-20260830.log:1913:    51	2. **Fixed sheet over every prime divisor.**  For every irreducible
+xmodel/ideation-20260827T1808Z-sol.md:169:Fix `H` (or work relatively over its squarefree parameter locus), introduce
+xmodel/max12-812-order2-p0-total-rees-j2-a1-rho0-to-total-dvr-design-hostile-review-fable5-20260827.md:25:| 5. Fixed-weight `Q[t]_(t)` module/colon/syzygy criterion and pruning | **CONFIRMED** |
+xmodel/max12-812-order2-p0-total-rees-j2-a1-rho0-to-total-dvr-design-hostile-review-fable5-20260827.md:216:## 5. Fixed-weight DVR module/colon formulation — CONFIRMED
+xmodel/ideation-20260825T1550Z-sol.md:138:### 2. Fixed-support all-depth survival is already the counterexample gate
+xmodel/td12-global-source-bridge-b-coordinator-integration-sol56-20260829.md:45:Fix a characteristic-zero polynomial pair `(f,g)` with `J(f,g)=1` that is
+xmodel/block-descent-a1-quartic-cycle0-projection-propagation-obstruction-sol56-20260830.md:161:Fix (0.1).  If `g tau g^(-1)=upsilon`, then `g` carries the support
+xmodel/sol-rooftop.md:505:Fix coprime integers `2 <= alpha < beta` and let
+
+codex
+I have the computation and the verdict. I’m writing the report now, with the subgroup table generated from the exact class intersections and the proof of why the D2 variables can only enter through the source-hull comparison.
+apply patch
+patch: completed
+/Users/dc/code/math/jc2/xmodel/burnside-chi-gpt55-20260902.md
+diff --git a/xmodel/burnside-chi-gpt55-20260902.md b/xmodel/burnside-chi-gpt55-20260902.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..386f81b80bcbfd8514168f5251026ec6b675eb93
+--- /dev/null
++++ b/xmodel/burnside-chi-gpt55-20260902.md
+@@ -0,0 +1,494 @@
++# BURNSIDE-CHI: S4 subgroup-lattice chi_c table at the N=4 profile
++
++Lane: BURNSIDE-CHI  
++Date: 2026-09-02 UTC  
++Agent: GPT-5.5 / Codex  
++Disposition: **COLLAPSE CONFIRMED AT THE PINNED N=4 PROFILE**  
++
++## 0. Custody and answer
++
++The frozen inputs were hashed before reading. The stop condition did not fire.
++
++```text
++2ad20b4c37128533ef23e956c2921aeb70d830bd6166a11b95a6ef6637cc5eff  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md
++a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/rep-96-inner-opus5-20260901.md
++bdd857c9d8c55fa000fcffee05f9f3084c5d073fb4d06285edf2af0d3c369339  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/reducible-all-n-r2-opus5-20260901.md
++```
++
++Question: does the full eleven-row `S_4` subgroup-lattice `chi_c` system at
++the pinned profile produce an integer relation on `(s_1, sigma_2, j)` beyond
++the already collapsed `chi_2 + sigma_2 = 1`?
++
++Answer: **no**.  After the local fixed-locus census is assembled in the Galois
++closure, every subgroup row is a function only of the already pinned `D_1`
++node count `s_1`.  The companion variables `(chi_2, sigma_2, j)` cancel from
++`chi_c(X^e)` and never appear in `chi_c(X^g)` for `g != e`, because `D_2` is
++the trivial-dicritical component and has identity generic inertia.  The
++point-stabilizer/source-hull row, computed with the typed
++`a_i = N - W_i` deficit bookkeeping, gives exactly
++
++```text
++chi_2 + sigma_2 = 1.
++```
++
++No integrality row adds a congruence or equality.  With the realized
++`(9,6,2)` curve, `s_1 = 4`, and the eleven row values are
++
++```text
++36, 15, 22, 12, 11, 15, 8, 3, 6, 5, 1
++```
++
++in the subgroup order listed in SS3 below.
++
++Typed outcome: **retire BURNSIDE-CHI as a "more Euler identities" gate for
++this N=4 residual profile.**  The sign row and the `S_3` resolvent row remain
++valid controls, not new gates.
++
++No exit-price assertion is made here, so no `charge_basis=` line is declared.
++
++## 1. Inputs consumed
++
++Card A defines the mechanism: for `G <= S_N`, the Galois closure `Xhat`
++has intermediate quotients `Y_H = Xhat/H`, the target row `Y_G` has
++`chi_c = 1`, the point-stabilizer row is the finite hull of the source, and
++the source row must consume the typed `a_i = N - W_i` and `a_p` census rather
++than a `#Fix` substitution
++(`ideation-20260902T0022Z-fable5.md:80-90`).  The fixed-locus vector
++`chi_c(Xhat^g)` is then assembled over branch strata, and
++
++```text
++chi_c(Xhat/H) = (1/|H|) sum_{h in H} chi_c(Xhat^h)
++```
++
++is the row formula (`ideation...:92-108`).  Card A asks for the eleven-row
++`S_4` table at the profile `core (2,1,0), W=(1,2), D_1=(9,6,2), D_2` unknown
++(`ideation...:255-276`).
++
++The realized `D_1` census is exact.  The `(9,6,2)` curve has normalization
++`A^1`, affine semigroup `<2,9>`, `delta_aff = 4`, and four affine nodes
++(`rep-96-inner-opus5-20260901.md:72-84`).  The node verification is direct:
++the four node images come from the four `{t,-t}` pairs with `p(t)=0`, and
++there are no other affine singularities (`rep-96...:109-125`).  The same
++report records the complete vertical factorization census, but the Euler
++calculation below needs only the ordinary-node count and the local cluster
++types (`rep-96...:127-141`, `600-616`).
++
++The reducible profile data are the binding source-row data.  The N=4 residual
++profile is a single row: core `(2,1,0)`, `W=(1,2)`, one branched component
++`D_1` of weight `2`, and one trivial-dicritical component of weight `1`
++(`rep-96...:661-670`; `reducible-all-n-r2-opus5-20260901.md:424-429`).
++The profile gives `a^(1)=2`, `a^(2)=3`, and the local point census
++
++```text
++D_1 node:          clusters 2 + 2,     a_p = 0
++D_1 cap D_2 point: clusters 2 + 1,     a_p = 1
++D_2 node:          clusters 1 + 1,     a_p = 2
++```
++
++with `D_1` having `s_1` nodes and normalization `A^1`, `D_2` having
++`sigma_2` nodes and `chi_c(D_2)=chi_2`, and `j` transverse intersection
++points (`rep-96...:688-708`).  The older natural-action identity collapses
++there to `chi_2 + sigma_2 = 1`, with `s_1` cancelling identically
++(`rep-96...:700-705`).
++
++I used the r2 label hygiene: the cycle-type law includes trivial carriers
++as `1`-cycles, while `a_i=N-W_i` is not the same object as the fixed-letter
++count in a coarse label (`reducible-all-n-r2...:270-280`).  This is the
++separation used below: source/hull Euler uses typed deficits; Galois
++fixed-locus multiplicities use inertia stabilizers.
++
++## 2. Local strata and inertia
++
++Let the element classes of `S_4` be ordered as
++
++```text
++1, T=(2,1,1), V=(2,2), C3=(3,1), C4=(4).
++```
++
++Their class sizes are
++
++```text
++|1|=1, |T|=6, |V|=3, |C3|=8, |C4|=6.
++```
++
++Write `s=s_1`.  Before pinning the realized curve, keep `s` symbolic; the
++realized curve later sets `s=4`.
++
++The target stratification is:
++
++| target stratum | `chi_c` | local inertia in `S_4` |
++|---|---:|---|
++| `U = C^2 - (D_1 cup D_2)` | `s - chi_2 + j` | `1` |
++| smooth open part of `D_1` | `1 - 2s - j` | `<(12)>` |
++| smooth open part of `D_2` | `chi_2 - sigma_2 - j` | `1` |
++| node of `D_1` | `s` points | `<(12),(34)>` |
++| transverse `D_1 cap D_2` point | `j` points | `<(12)>` |
++| node of `D_2` | `sigma_2` points | `1` |
++
++The entries need a short check:
++
++* `chi_c(D_1)=1-s`, because the normalization is `A^1` and each node
++  identifies two preimages to one point.
++* Therefore `chi_c(D_1^sm open)=chi_c(D_1)-s-j=1-2s-j`.
++* `chi_c(C^2-(D_1 cup D_2))=1-chi_c(D_1 cup D_2)
++  =1-((1-s)+chi_2-j)=s-chi_2+j`.
++* `D_2` is the trivial-dicritical component at the generic point, hence
++  identity inertia.  Its typed deficit is still `a^(2)=3`; that is source
++  bookkeeping and is not substituted into the Galois fixed-locus count.
++
++For a stratum with inertia subgroup `I`, the number of points in the fibre of
++`Xhat^g` over that stratum is the number of fixed cosets of `g` on `S_4/I`:
++
++```text
++m_I(g) = #{aI : g aI = aI}
++       = |C_{S_4}(g)| * |I cap Cl(g)| / |I|.
++```
++
++For the three inertia groups occurring above:
++
++| inertia `I` | `m_I(T)` | `m_I(V)` | `m_I(C3)` | `m_I(C4)` |
++|---|---:|---:|---:|---:|
++| `1` | 0 | 0 | 0 | 0 |
++| `<(12)>` | 2 | 0 | 0 | 0 |
++| `<(12),(34)>` | 2 | 2 | 0 | 0 |
++
++Thus the nonidentity fixed-locus vector is
++
++```text
++f_T = chi_c(Xhat^T) = 2(1 - 2s - j) + 2j + 2s = 2(1-s),
++f_V = chi_c(Xhat^V) = 2s,
++f_C3 = 0,
++f_C4 = 0.
++```
++
++The identity entry can either be read from the same stratum table or from the
++target row.  The direct stratum assembly is:
++
++```text
++f_1 =
++  24(s - chi_2 + j)
+++ 12(1 - 2s - j)
+++ 24(chi_2 - sigma_2 - j)
+++  6s
+++ 12j
+++ 24 sigma_2
++= 12 + 6s.
++```
++
++This is the first visible degeneracy: `chi_2`, `sigma_2`, and `j` cancel before
++any subgroup row is formed.  The fixed-locus class function is therefore
++
++```text
++(f_1, f_T, f_V, f_C3, f_C4)
++  = (12+6s, 2(1-s), 2s, 0, 0).
++```
++
++At the realized `D_1`, `s=4`, so
++
++```text
++(f_1, f_T, f_V, f_C3, f_C4) = (36, -6, 8, 0, 0).
++```
++
++Negative compactly supported Euler characteristic for `Xhat^T` is not an
++error: the fixed curve over the open part of `D_1` has
++`chi_c=2(1-s)` after the node identifications are included.
++
++## 3. Eleven subgroup rows
++
++For a subgroup `H <= S_4`, put
++
++```text
++chi_H = chi_c(Xhat/H)
++      = (1/|H|) (f_1 + n_T(H) f_T + n_V(H) f_V),
++```
++
++since the `C3` and `C4` fixed-locus entries vanish.  Here `n_T(H)` and
++`n_V(H)` are the numbers of transpositions and double transpositions inside
++`H`.
++
++A short exact enumeration of `S_4` as tuples produced all 30 subgroups and
++the 11 conjugacy classes.  It also computed the subgroup-class row matrix
++over `QQ`.  The full subgroup-average matrix has rank `5` on all element
++classes and rank `3` on the actually supported columns `(1,T,V)`.  Those
++rank figures are audit data only; the row formulas below are the load-bearing
++calculation.
++
++| row | subgroup class `H` | `|H|` | `n_T` | `n_V` | `chi_c(Xhat/H)` | at `s=4` |
++|---:|---|---:|---:|---:|---:|---:|
++| 1 | `1` | 1 | 0 | 0 | `12 + 6s` | 36 |
++| 2 | `C2_T = <(12)>` | 2 | 1 | 0 | `7 + 2s` | 15 |
++| 3 | `C2_V = <(12)(34)>` | 2 | 0 | 1 | `6 + 4s` | 22 |
++| 4 | `C3` | 3 | 0 | 0 | `4 + 2s` | 12 |
++| 5 | `C4` | 4 | 0 | 1 | `3 + 2s` | 11 |
++| 6 | `V4_norm = {1,V,V,V}` | 4 | 0 | 3 | `3 + 3s` | 15 |
++| 7 | `V4_split = <(12),(34)>` | 4 | 2 | 1 | `4 + s` | 8 |
++| 8 | `S3` point stabilizer | 6 | 3 | 0 | `3` | 3 |
++| 9 | `D8` Sylow 2 / pair-partition stabilizer | 8 | 2 | 3 | `2 + s` | 6 |
++| 10 | `A4` | 12 | 0 | 3 | `1 + s` | 5 |
++| 11 | `S4` | 24 | 6 | 3 | `1` | 1 |
++
++Every row is integral for every integer `s`.  In particular, after pinning
++`s=4`, integrality imposes no congruence at all.
++
++The two pinned rows are visible in the table:
++
++* `H=S4` gives `chi_c(Y_G)=1`, the target `C^2`.
++* `H=S3` gives `chi_c(Y_{H_1})=3`, the point-stabilizer finite hull row.
++
++The target row also checks the class-function arithmetic:
++
++```text
++(1/24) ((12+6s) + 6*2(1-s) + 3*2s) = 1.
++```
++
++## 4. Point-stabilizer/source-hull comparison
++
++The point-stabilizer row must be compared to the source hull, not to a
++generic fixed-letter count.  The finite hull is the source `C^2` plus the
++boundary curve over the escaping sheets.  The boundary count is obtained from
++the typed deficits and cluster decomposition.
++
++At a generic point of `D_1`, two sheets escape as one size-2 boundary cluster;
++at a generic point of `D_2`, one sheet escapes as one size-1 boundary cluster.
++At special points the boundary cluster counts are:
++
++```text
++D_1 node:          2 boundary points   (two size-2 clusters, a_p=0)
++D_1 cap D_2 point: 2 boundary points   (one size-2 and one size-1 cluster, a_p=1)
++D_2 node:          2 boundary points   (two size-1 clusters, a_p=2)
++```
++
++Therefore
++
++```text
++chi_c(C_boundary)
++  = (1 - 2s - j)
++  + (chi_2 - sigma_2 - j)
++  + 2s
++  + 2j
++  + 2 sigma_2
++  = 1 + chi_2 + sigma_2.
++```
++
++The source-hull value is
++
++```text
++chi_c(Y_{H_1}) = chi_c(C^2_source) + chi_c(C_boundary)
++               = 1 + (1 + chi_2 + sigma_2)
++               = 2 + chi_2 + sigma_2.
++```
++
++The quotient table gives the same row as `3`.  Equating the two gives
++
++```text
++2 + chi_2 + sigma_2 = 3
++chi_2 + sigma_2 = 1.
++```
++
++This is exactly the collapsed relation already recorded in the source note.
++It contains no `s` and no `j`.  The cancellation is structural:
++
++* the two `D_1` node effects cancel between the open part of `D_1` and the
++  two boundary points at each `D_1` node;
++* the two intersections with `D_1` and `D_2` cancel the removals of those
++  points from the two open curves;
++* the two `D_2` node boundary points convert
++  `chi_2 - sigma_2` into `chi_2 + sigma_2`.
++
++No row other than the point-stabilizer row even contains the companion
++topology after the fixed-locus vector has been assembled.
++
++## 5. Independent controls
++
++### 5.1 Sign row
++
++The sign row is `H=A4`, the kernel of `sgn:S_4 -> C_2`.  The table gives
++
++```text
++chi_c(Xhat/A4) = 1 + s.
++```
++
++Independently, this quotient is the double cover of the target branched over
++the odd-meridian part.  Here the odd generic meridian is the `D_1`
++transposition; the trivial-dicritical component `D_2` is even/identity at the
++generic point.  Thus the branch curve for the sign cover is just `D_1`.
++
++For a degree-2 cover branched over `D_1`,
++
++```text
++chi_c(Y_sgn)
++  = 2 chi_c(C^2 - D_1) + chi_c(D_1)
++  = 2(1 - (1-s)) + (1-s)
++  = 1 + s.
++```
++
++At the realized `D_1`, this is `5`, matching the `A4` row.
++
++The node behavior is also consistent.  At a `D_1` node the two local
++transposition meridians are disjoint in `S_4`, but both are odd, so the sign
++cover has branch around both local branches.  The stratum formula above
++already counts the node as one branch-set point, not two unrelated smooth
++points.
++
++### 5.2 S3 resolvent / TB-GERM row
++
++The `S_3` resolvent triple cover is the action of `S_4` on the three pair
++partitions of `{1,2,3,4}`.  Its point stabilizer is a Sylow-2 `D8`, so the
++Burnside row is `H=D8`, not the normal `V4` quotient row.  The table gives
++
++```text
++chi_c(Xhat/D8) = 2 + s.
++```
++
++Independently, a transposition in `S_4` acts on the three pair partitions as a
++transposition in `S_3`: it fixes the pairing containing that transposed pair
++and swaps the other two pairings.  At a `D_1` node the two disjoint local
++transpositions have the same image in this `S_3` action, because their product
++is in the normal `V4`.  Thus the triple cover is simply ramified over `D_1`
++and unbranched over the trivial `D_2` component.
++
++Therefore
++
++```text
++chi_c(Y_res)
++  = 3 chi_c(C^2 - D_1) + 2 chi_c(D_1)
++  = 3s + 2(1-s)
++  = 2 + s.
++```
++
++At `s=4`, this is `6`, matching the `D8` row.  This is the TB-GERM row as a
++control, not an additional identity.
++
++## 6. Degeneracy proof
++
++The full calculation collapses for three independent reasons.
++
++First, the only nontrivial generic inertia is the transposition inertia along
++`D_1`.  The generic `D_2` inertia is identity because `D_2` is the
++trivial-dicritical component.  Identity-inertia strata contribute to
++`Xhat^e` only; they do not contribute to `Xhat^g` for `g != e`.
++
++Second, the identity entry `chi_c(Xhat)` is insensitive to the companion
++variables after the strata are assembled:
++
++```text
++24(s - chi_2 + j)
+++ 12(1 - 2s - j)
+++ 24(chi_2 - sigma_2 - j)
+++ 6s
+++ 12j
+++ 24 sigma_2
++= 12 + 6s.
++```
++
++This is not an integrality accident.  It is the statement that the Galois
++closure has the expected finite fibres over the target strata: `24` over
++identity-inertia strata, `12` over transposition-inertia strata, and `6` over
++the `V4_split` node strata.  The companion variables appear only in
++identity-inertia strata, and their Euler contributions cancel against the
++target-complement term.
++
++Third, every subgroup average uses only `(f_1,f_T,f_V)`.  Once the vector is
++
++```text
++(12+6s, 2(1-s), 2s),
++```
++
++there is no remaining slot in the subgroup table where `chi_2`, `sigma_2`, or
++`j` could enter.  The subgroup lattice can reweight `f_T` against `f_V`; it
++can see the already known `D_1` node count.  It cannot see the companion curve
++except through the one source-hull comparison, and that comparison is exactly
++`chi_2 + sigma_2 = 1`.
++
++Consequently, after imposing the known realized value `s=4`, the quotient
++rows become fixed integers.  Before imposing `s=4`, they are integral
++polynomials in the integer `s`; no row imposes even a parity condition.
++
++## 7. General-N rank statement
++
++Here is the promotion-safe rank statement extracted from the computation.
++
++Let `G` be the pinned monodromy group of a decorated RED-N cage profile, and
++let `A_G` be the subgroup-average matrix
++
++```text
++(A_G)_{H,C} = |H cap C| / |H|,
++```
++
++with rows indexed by conjugacy classes of subgroups `H <= G` and columns by
++element conjugacy classes `C` of `G`.  Let `B_profile` be the matrix whose
++columns are the local-inertia class functions contributed by the decorated
++strata of the profile.  Then the rational row rank available from the
++Burnside-Euler system on that decorated profile is exactly
++
++```text
++rank_Q(A_G B_profile).
++```
++
++This rank is a property of the **decorated local inertia columns**, not of the
++coarse moved-cycle label.  That distinction is forced by r2: the survivor unit
++is the carrier multiset with owner partition and physical places, not just a
++label `[lambda^(k)]` (`reducible-all-n-r2...:493-504`), and the label loses
++fixed-letter and placement data (`reducible-all-n-r2...:270-289`).
++
++For the pinned N=4 profile computed here,
++
++```text
++rank_Q(A_{S4} B_profile) = 3
++```
++
++on the supported columns `1,T,V`, while the projection to the residual
++companion variables has rank `1`, generated by `chi_2 + sigma_2`.  The extra
++subgroup rows increase the rank on the **already known D_1 inertia columns**,
++not on the live companion residual.
++
++The all-N consequence is therefore negative in the sense Card A needs:
++for every decorated RED-N profile whose companion components are trivial
++dicriticals with identity generic inertia and whose only nontrivial local
++inertia lies on already pinned branched components, the subgroup-lattice
++Burnside rows have zero projection to companion variables except for the
++typed source-hull row.  On that class, the residual-variable rank is the same
++as the natural-action pair: one source/hull Euler relation.
++
++This covers the transposition/trivial spine represented by the N=4 row and
++the analogous restored `[2]` residuals in the r2 ledger.  It does **not**
++assert a rank theorem for off-spine imprimitive profiles such as the live
++`[22...]`, `[3...]`, `[4...]`, or mixed rows through `N=8`.  R2 explicitly
++keeps block-system descent open off the pinned all-transposition classes
++(`reducible-all-n-r2...:206-232`, `483-523`).  For those rows, a Burnside rank
++claim requires the missing decorated local-inertia matrix `B_profile`; the
++coarse cage label alone is insufficient.
++
++Thus the general-N rank statement is:
++
++```text
++RANK-N-LOCAL-COLUMN:
++  Burnside rank on RED-N residual classes is rank_Q(A_G B_profile).
++  At label level there is no promotion-safe rank excess claim.
++  On the transposition/trivial companion spine, the companion-variable rank is
++  1, not larger than the natural-action source/hull relation.
++```
++
++## 8. Final verdict
++
++No subgroup-class row yields an integer relation on `(s_1, sigma_2, j)` beyond
++`chi_2 + sigma_2 = 1`.
++
++The full eleven-row `S_4` table at the pinned `N=4` profile is internally
++consistent, integral, and matched by the sign and `S_3` resolvent controls.
++Its only new-looking information is dependence on `s_1`, but `s_1=4` is
++already fixed by the realized `(9,6,2)` curve's exact census.  The live
++companion data remain untouched:
++
++```text
++sigma_2: unconstrained by Burnside rows after chi_2 + sigma_2 = 1
++j:       unconstrained by Burnside rows
++s_1:     pinned externally to 4 by the D_1 census, not by a new row
++```
++
++Permanent retirement recommended for this direction as charged:
++**do not spend further on "more Euler identities" from the subgroup lattice
++at the N=4 residual profile.**  Future off-spine use would need new local
++inertia data, not another replay of this table.
++
++<!-- BODY-END -->
+
+diff --git a/xmodel/burnside-chi-gpt55-20260902.md b/xmodel/burnside-chi-gpt55-20260902.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..386f81b80bcbfd8514168f5251026ec6b675eb93
+--- /dev/null
++++ b/xmodel/burnside-chi-gpt55-20260902.md
+@@ -0,0 +1,494 @@
++# BURNSIDE-CHI: S4 subgroup-lattice chi_c table at the N=4 profile
++
++Lane: BURNSIDE-CHI  
++Date: 2026-09-02 UTC  
++Agent: GPT-5.5 / Codex  
++Disposition: **COLLAPSE CONFIRMED AT THE PINNED N=4 PROFILE**  
++
++## 0. Custody and answer
++
++The frozen inputs were hashed before reading. The stop condition did not fire.
++
++```text
++2ad20b4c37128533ef23e956c2921aeb70d830bd6166a11b95a6ef6637cc5eff  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md
++a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/rep-96-inner-opus5-20260901.md
++bdd857c9d8c55fa000fcffee05f9f3084c5d073fb4d06285edf2af0d3c369339  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/reducible-all-n-r2-opus5-20260901.md
++```
++
++Question: does the full eleven-row `S_4` subgroup-lattice `chi_c` system at
++the pinned profile produce an integer relation on `(s_1, sigma_2, j)` beyond
++the already collapsed `chi_2 + sigma_2 = 1`?
++
++Answer: **no**.  After the local fixed-locus census is assembled in the Galois
++closure, every subgroup row is a function only of the already pinned `D_1`
++node count `s_1`.  The companion variables `(chi_2, sigma_2, j)` cancel from
++`chi_c(X^e)` and never appear in `chi_c(X^g)` for `g != e`, because `D_2` is
++the trivial-dicritical component and has identity generic inertia.  The
++point-stabilizer/source-hull row, computed with the typed
++`a_i = N - W_i` deficit bookkeeping, gives exactly
++
++```text
++chi_2 + sigma_2 = 1.
++```
++
++No integrality row adds a congruence or equality.  With the realized
++`(9,6,2)` curve, `s_1 = 4`, and the eleven row values are
++
++```text
++36, 15, 22, 12, 11, 15, 8, 3, 6, 5, 1
++```
++
++in the subgroup order listed in SS3 below.
++
++Typed outcome: **retire BURNSIDE-CHI as a "more Euler identities" gate for
++this N=4 residual profile.**  The sign row and the `S_3` resolvent row remain
++valid controls, not new gates.
++
++No exit-price assertion is made here, so no `charge_basis=` line is declared.
++
++## 1. Inputs consumed
++
++Card A defines the mechanism: for `G <= S_N`, the Galois closure `Xhat`
++has intermediate quotients `Y_H = Xhat/H`, the target row `Y_G` has
++`chi_c = 1`, the point-stabilizer row is the finite hull of the source, and
++the source row must consume the typed `a_i = N - W_i` and `a_p` census rather
++than a `#Fix` substitution
++(`ideation-20260902T0022Z-fable5.md:80-90`).  The fixed-locus vector
++`chi_c(Xhat^g)` is then assembled over branch strata, and
++
++```text
++chi_c(Xhat/H) = (1/|H|) sum_{h in H} chi_c(Xhat^h)
++```
++
++is the row formula (`ideation...:92-108`).  Card A asks for the eleven-row
++`S_4` table at the profile `core (2,1,0), W=(1,2), D_1=(9,6,2), D_2` unknown
++(`ideation...:255-276`).
++
++The realized `D_1` census is exact.  The `(9,6,2)` curve has normalization
++`A^1`, affine semigroup `<2,9>`, `delta_aff = 4`, and four affine nodes
++(`rep-96-inner-opus5-20260901.md:72-84`).  The node verification is direct:
++the four node images come from the four `{t,-t}` pairs with `p(t)=0`, and
++there are no other affine singularities (`rep-96...:109-125`).  The same
++report records the complete vertical factorization census, but the Euler
++calculation below needs only the ordinary-node count and the local cluster
++types (`rep-96...:127-141`, `600-616`).
++
++The reducible profile data are the binding source-row data.  The N=4 residual
++profile is a single row: core `(2,1,0)`, `W=(1,2)`, one branched component
++`D_1` of weight `2`, and one trivial-dicritical component of weight `1`
++(`rep-96...:661-670`; `reducible-all-n-r2-opus5-20260901.md:424-429`).
++The profile gives `a^(1)=2`, `a^(2)=3`, and the local point census
++
++```text
++D_1 node:          clusters 2 + 2,     a_p = 0
++D_1 cap D_2 point: clusters 2 + 1,     a_p = 1
++D_2 node:          clusters 1 + 1,     a_p = 2
++```
++
++with `D_1` having `s_1` nodes and normalization `A^1`, `D_2` having
++`sigma_2` nodes and `chi_c(D_2)=chi_2`, and `j` transverse intersection
++points (`rep-96...:688-708`).  The older natural-action identity collapses
++there to `chi_2 + sigma_2 = 1`, with `s_1` cancelling identically
++(`rep-96...:700-705`).
++
++I used the r2 label hygiene: the cycle-type law includes trivial carriers
++as `1`-cycles, while `a_i=N-W_i` is not the same object as the fixed-letter
++count in a coarse label (`reducible-all-n-r2...:270-280`).  This is the
++separation used below: source/hull Euler uses typed deficits; Galois
++fixed-locus multiplicities use inertia stabilizers.
++
++## 2. Local strata and inertia
++
++Let the element classes of `S_4` be ordered as
++
++```text
++1, T=(2,1,1), V=(2,2), C3=(3,1), C4=(4).
++```
++
++Their class sizes are
++
++```text
++|1|=1, |T|=6, |V|=3, |C3|=8, |C4|=6.
++```
++
++Write `s=s_1`.  Before pinning the realized curve, keep `s` symbolic; the
++realized curve later sets `s=4`.
++
++The target stratification is:
++
++| target stratum | `chi_c` | local inertia in `S_4` |
++|---|---:|---|
++| `U = C^2 - (D_1 cup D_2)` | `s - chi_2 + j` | `1` |
++| smooth open part of `D_1` | `1 - 2s - j` | `<(12)>` |
++| smooth open part of `D_2` | `chi_2 - sigma_2 - j` | `1` |
++| node of `D_1` | `s` points | `<(12),(34)>` |
++| transverse `D_1 cap D_2` point | `j` points | `<(12)>` |
++| node of `D_2` | `sigma_2` points | `1` |
++
++The entries need a short check:
++
++* `chi_c(D_1)=1-s`, because the normalization is `A^1` and each node
++  identifies two preimages to one point.
++* Therefore `chi_c(D_1^sm open)=chi_c(D_1)-s-j=1-2s-j`.
++* `chi_c(C^2-(D_1 cup D_2))=1-chi_c(D_1 cup D_2)
++  =1-((1-s)+chi_2-j)=s-chi_2+j`.
++* `D_2` is the trivial-dicritical component at the generic point, hence
++  identity inertia.  Its typed deficit is still `a^(2)=3`; that is source
++  bookkeeping and is not substituted into the Galois fixed-locus count.
++
++For a stratum with inertia subgroup `I`, the number of points in the fibre of
++`Xhat^g` over that stratum is the number of fixed cosets of `g` on `S_4/I`:
++
++```text
++m_I(g) = #{aI : g aI = aI}
++       = |C_{S_4}(g)| * |I cap Cl(g)| / |I|.
++```
++
++For the three inertia groups occurring above:
++
++| inertia `I` | `m_I(T)` | `m_I(V)` | `m_I(C3)` | `m_I(C4)` |
++|---|---:|---:|---:|---:|
++| `1` | 0 | 0 | 0 | 0 |
++| `<(12)>` | 2 | 0 | 0 | 0 |
++| `<(12),(34)>` | 2 | 2 | 0 | 0 |
++
++Thus the nonidentity fixed-locus vector is
++
++```text
++f_T = chi_c(Xhat^T) = 2(1 - 2s - j) + 2j + 2s = 2(1-s),
++f_V = chi_c(Xhat^V) = 2s,
++f_C3 = 0,
++f_C4 = 0.
++```
++
++The identity entry can either be read from the same stratum table or from the
++target row.  The direct stratum assembly is:
++
++```text
++f_1 =
++  24(s - chi_2 + j)
+++ 12(1 - 2s - j)
+++ 24(chi_2 - sigma_2 - j)
+++  6s
+++ 12j
+++ 24 sigma_2
++= 12 + 6s.
++```
++
++This is the first visible degeneracy: `chi_2`, `sigma_2`, and `j` cancel before
++any subgroup row is formed.  The fixed-locus class function is therefore
++
++```text
++(f_1, f_T, f_V, f_C3, f_C4)
++  = (12+6s, 2(1-s), 2s, 0, 0).
++```
++
++At the realized `D_1`, `s=4`, so
++
++```text
++(f_1, f_T, f_V, f_C3, f_C4) = (36, -6, 8, 0, 0).
++```
++
++Negative compactly supported Euler characteristic for `Xhat^T` is not an
++error: the fixed curve over the open part of `D_1` has
++`chi_c=2(1-s)` after the node identifications are included.
++
++## 3. Eleven subgroup rows
++
++For a subgroup `H <= S_4`, put
++
++```text
++chi_H = chi_c(Xhat/H)
++      = (1/|H|) (f_1 + n_T(H) f_T + n_V(H) f_V),
++```
++
++since the `C3` and `C4` fixed-locus entries vanish.  Here `n_T(H)` and
++`n_V(H)` are the numbers of transpositions and double transpositions inside
++`H`.
++
++A short exact enumeration of `S_4` as tuples produced all 30 subgroups and
++the 11 conjugacy classes.  It also computed the subgroup-class row matrix
++over `QQ`.  The full subgroup-average matrix has rank `5` on all element
++classes and rank `3` on the actually supported columns `(1,T,V)`.  Those
++rank figures are audit data only; the row formulas below are the load-bearing
++calculation.
++
++| row | subgroup class `H` | `|H|` | `n_T` | `n_V` | `chi_c(Xhat/H)` | at `s=4` |
++|---:|---|---:|---:|---:|---:|---:|
++| 1 | `1` | 1 | 0 | 0 | `12 + 6s` | 36 |
++| 2 | `C2_T = <(12)>` | 2 | 1 | 0 | `7 + 2s` | 15 |
++| 3 | `C2_V = <(12)(34)>` | 2 | 0 | 1 | `6 + 4s` | 22 |
++| 4 | `C3` | 3 | 0 | 0 | `4 + 2s` | 12 |
++| 5 | `C4` | 4 | 0 | 1 | `3 + 2s` | 11 |
++| 6 | `V4_norm = {1,V,V,V}` | 4 | 0 | 3 | `3 + 3s` | 15 |
++| 7 | `V4_split = <(12),(34)>` | 4 | 2 | 1 | `4 + s` | 8 |
++| 8 | `S3` point stabilizer | 6 | 3 | 0 | `3` | 3 |
++| 9 | `D8` Sylow 2 / pair-partition stabilizer | 8 | 2 | 3 | `2 + s` | 6 |
++| 10 | `A4` | 12 | 0 | 3 | `1 + s` | 5 |
++| 11 | `S4` | 24 | 6 | 3 | `1` | 1 |
++
++Every row is integral for every integer `s`.  In particular, after pinning
++`s=4`, integrality imposes no congruence at all.
++
++The two pinned rows are visible in the table:
++
++* `H=S4` gives `chi_c(Y_G)=1`, the target `C^2`.
++* `H=S3` gives `chi_c(Y_{H_1})=3`, the point-stabilizer finite hull row.
++
++The target row also checks the class-function arithmetic:
++
++```text
++(1/24) ((12+6s) + 6*2(1-s) + 3*2s) = 1.
++```
++
++## 4. Point-stabilizer/source-hull comparison
++
++The point-stabilizer row must be compared to the source hull, not to a
++generic fixed-letter count.  The finite hull is the source `C^2` plus the
++boundary curve over the escaping sheets.  The boundary count is obtained from
++the typed deficits and cluster decomposition.
++
++At a generic point of `D_1`, two sheets escape as one size-2 boundary cluster;
++at a generic point of `D_2`, one sheet escapes as one size-1 boundary cluster.
++At special points the boundary cluster counts are:
++
++```text
++D_1 node:          2 boundary points   (two size-2 clusters, a_p=0)
++D_1 cap D_2 point: 2 boundary points   (one size-2 and one size-1 cluster, a_p=1)
++D_2 node:          2 boundary points   (two size-1 clusters, a_p=2)
++```
++
++Therefore
++
++```text
++chi_c(C_boundary)
++  = (1 - 2s - j)
++  + (chi_2 - sigma_2 - j)
++  + 2s
++  + 2j
++  + 2 sigma_2
++  = 1 + chi_2 + sigma_2.
++```
++
++The source-hull value is
++
++```text
++chi_c(Y_{H_1}) = chi_c(C^2_source) + chi_c(C_boundary)
++               = 1 + (1 + chi_2 + sigma_2)
++               = 2 + chi_2 + sigma_2.
++```
++
++The quotient table gives the same row as `3`.  Equating the two gives
++
++```text
++2 + chi_2 + sigma_2 = 3
++chi_2 + sigma_2 = 1.
++```
++
++This is exactly the collapsed relation already recorded in the source note.
++It contains no `s` and no `j`.  The cancellation is structural:
++
++* the two `D_1` node effects cancel between the open part of `D_1` and the
++  two boundary points at each `D_1` node;
++* the two intersections with `D_1` and `D_2` cancel the removals of those
++  points from the two open curves;
++* the two `D_2` node boundary points convert
++  `chi_2 - sigma_2` into `chi_2 + sigma_2`.
++
++No row other than the point-stabilizer row even contains the companion
++topology after the fixed-locus vector has been assembled.
++
++## 5. Independent controls
++
++### 5.1 Sign row
++
++The sign row is `H=A4`, the kernel of `sgn:S_4 -> C_2`.  The table gives
++
++```text
++chi_c(Xhat/A4) = 1 + s.
++```
++
++Independently, this quotient is the double cover of the target branched over
++the odd-meridian part.  Here the odd generic meridian is the `D_1`
++transposition; the trivial-dicritical component `D_2` is even/identity at the
++generic point.  Thus the branch curve for the sign cover is just `D_1`.
++
++For a degree-2 cover branched over `D_1`,
++
++```text
++chi_c(Y_sgn)
++  = 2 chi_c(C^2 - D_1) + chi_c(D_1)
++  = 2(1 - (1-s)) + (1-s)
++  = 1 + s.
++```
++
++At the realized `D_1`, this is `5`, matching the `A4` row.
++
++The node behavior is also consistent.  At a `D_1` node the two local
++transposition meridians are disjoint in `S_4`, but both are odd, so the sign
++cover has branch around both local branches.  The stratum formula above
++already counts the node as one branch-set point, not two unrelated smooth
++points.
++
++### 5.2 S3 resolvent / TB-GERM row
++
++The `S_3` resolvent triple cover is the action of `S_4` on the three pair
++partitions of `{1,2,3,4}`.  Its point stabilizer is a Sylow-2 `D8`, so the
++Burnside row is `H=D8`, not the normal `V4` quotient row.  The table gives
++
++```text
++chi_c(Xhat/D8) = 2 + s.
++```
++
++Independently, a transposition in `S_4` acts on the three pair partitions as a
++transposition in `S_3`: it fixes the pairing containing that transposed pair
++and swaps the other two pairings.  At a `D_1` node the two disjoint local
++transpositions have the same image in this `S_3` action, because their product
++is in the normal `V4`.  Thus the triple cover is simply ramified over `D_1`
++and unbranched over the trivial `D_2` component.
++
++Therefore
++
++```text
++chi_c(Y_res)
++  = 3 chi_c(C^2 - D_1) + 2 chi_c(D_1)
++  = 3s + 2(1-s)
++  = 2 + s.
++```
++
++At `s=4`, this is `6`, matching the `D8` row.  This is the TB-GERM row as a
++control, not an additional identity.
++
++## 6. Degeneracy proof
++
++The full calculation collapses for three independent reasons.
++
++First, the only nontrivial generic inertia is the transposition inertia along
++`D_1`.  The generic `D_2` inertia is identity because `D_2` is the
++trivial-dicritical component.  Identity-inertia strata contribute to
++`Xhat^e` only; they do not contribute to `Xhat^g` for `g != e`.
++
++Second, the identity entry `chi_c(Xhat)` is insensitive to the companion
++variables after the strata are assembled:
++
++```text
++24(s - chi_2 + j)
+++ 12(1 - 2s - j)
+++ 24(chi_2 - sigma_2 - j)
+++ 6s
+++ 12j
+++ 24 sigma_2
++= 12 + 6s.
++```
++
++This is not an integrality accident.  It is the statement that the Galois
++closure has the expected finite fibres over the target strata: `24` over
++identity-inertia strata, `12` over transposition-inertia strata, and `6` over
++the `V4_split` node strata.  The companion variables appear only in
++identity-inertia strata, and their Euler contributions cancel against the
++target-complement term.
++
++Third, every subgroup average uses only `(f_1,f_T,f_V)`.  Once the vector is
++
++```text
++(12+6s, 2(1-s), 2s),
++```
++
++there is no remaining slot in the subgroup table where `chi_2`, `sigma_2`, or
++`j` could enter.  The subgroup lattice can reweight `f_T` against `f_V`; it
++can see the already known `D_1` node count.  It cannot see the companion curve
++except through the one source-hull comparison, and that comparison is exactly
++`chi_2 + sigma_2 = 1`.
++
++Consequently, after imposing the known realized value `s=4`, the quotient
++rows become fixed integers.  Before imposing `s=4`, they are integral
++polynomials in the integer `s`; no row imposes even a parity condition.
++
++## 7. General-N rank statement
++
++Here is the promotion-safe rank statement extracted from the computation.
++
++Let `G` be the pinned monodromy group of a decorated RED-N cage profile, and
++let `A_G` be the subgroup-average matrix
++
++```text
++(A_G)_{H,C} = |H cap C| / |H|,
++```
++
++with rows indexed by conjugacy classes of subgroups `H <= G` and columns by
++element conjugacy classes `C` of `G`.  Let `B_profile` be the matrix whose
++columns are the local-inertia class functions contributed by the decorated
++strata of the profile.  Then the rational row rank available from the
++Burnside-Euler system on that decorated profile is exactly
++
++```text
++rank_Q(A_G B_profile).
++```
++
++This rank is a property of the **decorated local inertia columns**, not of the
++coarse moved-cycle label.  That distinction is forced by r2: the survivor unit
++is the carrier multiset with owner partition and physical places, not just a
++label `[lambda^(k)]` (`reducible-all-n-r2...:493-504`), and the label loses
++fixed-letter and placement data (`reducible-all-n-r2...:270-289`).
++
++For the pinned N=4 profile computed here,
++
++```text
++rank_Q(A_{S4} B_profile) = 3
++```
++
++on the supported columns `1,T,V`, while the projection to the residual
++companion variables has rank `1`, generated by `chi_2 + sigma_2`.  The extra
++subgroup rows increase the rank on the **already known D_1 inertia columns**,
++not on the live companion residual.
++
++The all-N consequence is therefore negative in the sense Card A needs:
++for every decorated RED-N profile whose companion components are trivial
++dicriticals with identity generic inertia and whose only nontrivial local
++inertia lies on already pinned branched components, the subgroup-lattice
++Burnside rows have zero projection to companion variables except for the
++typed source-hull row.  On that class, the residual-variable rank is the same
++as the natural-action pair: one source/hull Euler relation.
++
++This covers the transposition/trivial spine represented by the N=4 row and
++the analogous restored `[2]` residuals in the r2 ledger.  It does **not**
++assert a rank theorem for off-spine imprimitive profiles such as the live
++`[22...]`, `[3...]`, `[4...]`, or mixed rows through `N=8`.  R2 explicitly
++keeps block-system descent open off the pinned all-transposition classes
++(`reducible-all-n-r2...:206-232`, `483-523`).  For those rows, a Burnside rank
++claim requires the missing decorated local-inertia matrix `B_profile`; the
++coarse cage label alone is insufficient.
++
++Thus the general-N rank statement is:
++
++```text
++RANK-N-LOCAL-COLUMN:
++  Burnside rank on RED-N residual classes is rank_Q(A_G B_profile).
++  At label level there is no promotion-safe rank excess claim.
++  On the transposition/trivial companion spine, the companion-variable rank is
++  1, not larger than the natural-action source/hull relation.
++```
++
++## 8. Final verdict
++
++No subgroup-class row yields an integer relation on `(s_1, sigma_2, j)` beyond
++`chi_2 + sigma_2 = 1`.
++
++The full eleven-row `S_4` table at the pinned `N=4` profile is internally
++consistent, integral, and matched by the sign and `S_3` resolvent controls.
++Its only new-looking information is dependence on `s_1`, but `s_1=4` is
++already fixed by the realized `(9,6,2)` curve's exact census.  The live
++companion data remain untouched:
++
++```text
++sigma_2: unconstrained by Burnside rows after chi_2 + sigma_2 = 1
++j:       unconstrained by Burnside rows
++s_1:     pinned externally to 4 by the D_1 census, not by a new row
++```
++
++Permanent retirement recommended for this direction as charged:
++**do not spend further on "more Euler identities" from the subgroup lattice
++at the N=4 residual profile.**  Future off-spine use would need new local
++inertia data, not another replay of this table.
++
++<!-- BODY-END -->
+
+codex
+The report body is in place. I’m checking its size and seal marker, then I’ll stamp it with the lane basis from the run receipt and run the local validators.
+exec
+/bin/zsh -lc 'wc -c -l xmodel/burnside-chi-gpt55-20260902.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     494   17945 xmodel/burnside-chi-gpt55-20260902.md
+
+exec
+/bin/zsh -lc "rg -n \"BODY-END|charge_basis=|OPEN\\[ACS-FIX-VS-DEFICIT\\]|#Fix\" xmodel/burnside-chi-gpt55-20260902.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+47:No exit-price assertion is made here, so no `charge_basis=` line is declared.
+55:than a `#Fix` substitution
+494:<!-- BODY-END -->
+
+exec
+/bin/zsh -lc "LC_ALL=C grep -n '["'^ -~]'"' xmodel/burnside-chi-gpt55-20260902.md || true" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+diff --git a/xmodel/burnside-chi-gpt55-20260902.md b/xmodel/burnside-chi-gpt55-20260902.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..386f81b80bcbfd8514168f5251026ec6b675eb93
+--- /dev/null
++++ b/xmodel/burnside-chi-gpt55-20260902.md
+@@ -0,0 +1,494 @@
++# BURNSIDE-CHI: S4 subgroup-lattice chi_c table at the N=4 profile
++
++Lane: BURNSIDE-CHI  
++Date: 2026-09-02 UTC  
++Agent: GPT-5.5 / Codex  
++Disposition: **COLLAPSE CONFIRMED AT THE PINNED N=4 PROFILE**  
++
++## 0. Custody and answer
++
++The frozen inputs were hashed before reading. The stop condition did not fire.
++
++```text
++2ad20b4c37128533ef23e956c2921aeb70d830bd6166a11b95a6ef6637cc5eff  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md
++a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/rep-96-inner-opus5-20260901.md
++bdd857c9d8c55fa000fcffee05f9f3084c5d073fb4d06285edf2af0d3c369339  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/reducible-all-n-r2-opus5-20260901.md
++```
++
++Question: does the full eleven-row `S_4` subgroup-lattice `chi_c` system at
++the pinned profile produce an integer relation on `(s_1, sigma_2, j)` beyond
++the already collapsed `chi_2 + sigma_2 = 1`?
++
++Answer: **no**.  After the local fixed-locus census is assembled in the Galois
++closure, every subgroup row is a function only of the already pinned `D_1`
++node count `s_1`.  The companion variables `(chi_2, sigma_2, j)` cancel from
++`chi_c(X^e)` and never appear in `chi_c(X^g)` for `g != e`, because `D_2` is
++the trivial-dicritical component and has identity generic inertia.  The
++point-stabilizer/source-hull row, computed with the typed
++`a_i = N - W_i` deficit bookkeeping, gives exactly
++
++```text
++chi_2 + sigma_2 = 1.
++```
++
++No integrality row adds a congruence or equality.  With the realized
++`(9,6,2)` curve, `s_1 = 4`, and the eleven row values are
++
++```text
++36, 15, 22, 12, 11, 15, 8, 3, 6, 5, 1
++```
++
++in the subgroup order listed in SS3 below.
++
++Typed outcome: **retire BURNSIDE-CHI as a "more Euler identities" gate for
++this N=4 residual profile.**  The sign row and the `S_3` resolvent row remain
++valid controls, not new gates.
++
++No exit-price assertion is made here, so no `charge_basis=` line is declared.
++
++## 1. Inputs consumed
++
++Card A defines the mechanism: for `G <= S_N`, the Galois closure `Xhat`
++has intermediate quotients `Y_H = Xhat/H`, the target row `Y_G` has
++`chi_c = 1`, the point-stabilizer row is the finite hull of the source, and
++the source row must consume the typed `a_i = N - W_i` and `a_p` census rather
++than a `#Fix` substitution
++(`ideation-20260902T0022Z-fable5.md:80-90`).  The fixed-locus vector
++`chi_c(Xhat^g)` is then assembled over branch strata, and
++
++```text
++chi_c(Xhat/H) = (1/|H|) sum_{h in H} chi_c(Xhat^h)
++```
++
++is the row formula (`ideation...:92-108`).  Card A asks for the eleven-row
++`S_4` table at the profile `core (2,1,0), W=(1,2), D_1=(9,6,2), D_2` unknown
++(`ideation...:255-276`).
++
++The realized `D_1` census is exact.  The `(9,6,2)` curve has normalization
++`A^1`, affine semigroup `<2,9>`, `delta_aff = 4`, and four affine nodes
++(`rep-96-inner-opus5-20260901.md:72-84`).  The node verification is direct:
++the four node images come from the four `{t,-t}` pairs with `p(t)=0`, and
++there are no other affine singularities (`rep-96...:109-125`).  The same
++report records the complete vertical factorization census, but the Euler
++calculation below needs only the ordinary-node count and the local cluster
++types (`rep-96...:127-141`, `600-616`).
++
++The reducible profile data are the binding source-row data.  The N=4 residual
++profile is a single row: core `(2,1,0)`, `W=(1,2)`, one branched component
++`D_1` of weight `2`, and one trivial-dicritical component of weight `1`
++(`rep-96...:661-670`; `reducible-all-n-r2-opus5-20260901.md:424-429`).
++The profile gives `a^(1)=2`, `a^(2)=3`, and the local point census
++
++```text
++D_1 node:          clusters 2 + 2,     a_p = 0
++D_1 cap D_2 point: clusters 2 + 1,     a_p = 1
++D_2 node:          clusters 1 + 1,     a_p = 2
++```
++
++with `D_1` having `s_1` nodes and normalization `A^1`, `D_2` having
++`sigma_2` nodes and `chi_c(D_2)=chi_2`, and `j` transverse intersection
++points (`rep-96...:688-708`).  The older natural-action identity collapses
++there to `chi_2 + sigma_2 = 1`, with `s_1` cancelling identically
++(`rep-96...:700-705`).
++
++I used the r2 label hygiene: the cycle-type law includes trivial carriers
++as `1`-cycles, while `a_i=N-W_i` is not the same object as the fixed-letter
++count in a coarse label (`reducible-all-n-r2...:270-280`).  This is the
++separation used below: source/hull Euler uses typed deficits; Galois
++fixed-locus multiplicities use inertia stabilizers.
++
++## 2. Local strata and inertia
++
++Let the element classes of `S_4` be ordered as
++
++```text
++1, T=(2,1,1), V=(2,2), C3=(3,1), C4=(4).
++```
++
++Their class sizes are
++
++```text
++|1|=1, |T|=6, |V|=3, |C3|=8, |C4|=6.
++```
++
++Write `s=s_1`.  Before pinning the realized curve, keep `s` symbolic; the
++realized curve later sets `s=4`.
++
++The target stratification is:
++
++| target stratum | `chi_c` | local inertia in `S_4` |
++|---|---:|---|
++| `U = C^2 - (D_1 cup D_2)` | `s - chi_2 + j` | `1` |
++| smooth open part of `D_1` | `1 - 2s - j` | `<(12)>` |
++| smooth open part of `D_2` | `chi_2 - sigma_2 - j` | `1` |
++| node of `D_1` | `s` points | `<(12),(34)>` |
++| transverse `D_1 cap D_2` point | `j` points | `<(12)>` |
++| node of `D_2` | `sigma_2` points | `1` |
++
++The entries need a short check:
++
++* `chi_c(D_1)=1-s`, because the normalization is `A^1` and each node
++  identifies two preimages to one point.
++* Therefore `chi_c(D_1^sm open)=chi_c(D_1)-s-j=1-2s-j`.
++* `chi_c(C^2-(D_1 cup D_2))=1-chi_c(D_1 cup D_2)
++  =1-((1-s)+chi_2-j)=s-chi_2+j`.
++* `D_2` is the trivial-dicritical component at the generic point, hence
++  identity inertia.  Its typed deficit is still `a^(2)=3`; that is source
++  bookkeeping and is not substituted into the Galois fixed-locus count.
++
++For a stratum with inertia subgroup `I`, the number of points in the fibre of
++`Xhat^g` over that stratum is the number of fixed cosets of `g` on `S_4/I`:
++
++```text
++m_I(g) = #{aI : g aI = aI}
++       = |C_{S_4}(g)| * |I cap Cl(g)| / |I|.
++```
++
++For the three inertia groups occurring above:
++
++| inertia `I` | `m_I(T)` | `m_I(V)` | `m_I(C3)` | `m_I(C4)` |
++|---|---:|---:|---:|---:|
++| `1` | 0 | 0 | 0 | 0 |
++| `<(12)>` | 2 | 0 | 0 | 0 |
++| `<(12),(34)>` | 2 | 2 | 0 | 0 |
++
++Thus the nonidentity fixed-locus vector is
++
++```text
++f_T = chi_c(Xhat^T) = 2(1 - 2s - j) + 2j + 2s = 2(1-s),
++f_V = chi_c(Xhat^V) = 2s,
++f_C3 = 0,
++f_C4 = 0.
++```
++
++The identity entry can either be read from the same stratum table or from the
++target row.  The direct stratum assembly is:
++
++```text
++f_1 =
++  24(s - chi_2 + j)
+++ 12(1 - 2s - j)
+++ 24(chi_2 - sigma_2 - j)
+++  6s
+++ 12j
+++ 24 sigma_2
++= 12 + 6s.
++```
++
++This is the first visible degeneracy: `chi_2`, `sigma_2`, and `j` cancel before
++any subgroup row is formed.  The fixed-locus class function is therefore
++
++```text
++(f_1, f_T, f_V, f_C3, f_C4)
++  = (12+6s, 2(1-s), 2s, 0, 0).
++```
++
++At the realized `D_1`, `s=4`, so
++
++```text
++(f_1, f_T, f_V, f_C3, f_C4) = (36, -6, 8, 0, 0).
++```
++
++Negative compactly supported Euler characteristic for `Xhat^T` is not an
++error: the fixed curve over the open part of `D_1` has
++`chi_c=2(1-s)` after the node identifications are included.
++
++## 3. Eleven subgroup rows
++
++For a subgroup `H <= S_4`, put
++
++```text
++chi_H = chi_c(Xhat/H)
++      = (1/|H|) (f_1 + n_T(H) f_T + n_V(H) f_V),
++```
++
++since the `C3` and `C4` fixed-locus entries vanish.  Here `n_T(H)` and
++`n_V(H)` are the numbers of transpositions and double transpositions inside
++`H`.
++
++A short exact enumeration of `S_4` as tuples produced all 30 subgroups and
++the 11 conjugacy classes.  It also computed the subgroup-class row matrix
++over `QQ`.  The full subgroup-average matrix has rank `5` on all element
++classes and rank `3` on the actually supported columns `(1,T,V)`.  Those
++rank figures are audit data only; the row formulas below are the load-bearing
++calculation.
++
++| row | subgroup class `H` | `|H|` | `n_T` | `n_V` | `chi_c(Xhat/H)` | at `s=4` |
++|---:|---|---:|---:|---:|---:|---:|
++| 1 | `1` | 1 | 0 | 0 | `12 + 6s` | 36 |
++| 2 | `C2_T = <(12)>` | 2 | 1 | 0 | `7 + 2s` | 15 |
++| 3 | `C2_V = <(12)(34)>` | 2 | 0 | 1 | `6 + 4s` | 22 |
++| 4 | `C3` | 3 | 0 | 0 | `4 + 2s` | 12 |
++| 5 | `C4` | 4 | 0 | 1 | `3 + 2s` | 11 |
++| 6 | `V4_norm = {1,V,V,V}` | 4 | 0 | 3 | `3 + 3s` | 15 |
++| 7 | `V4_split = <(12),(34)>` | 4 | 2 | 1 | `4 + s` | 8 |
++| 8 | `S3` point stabilizer | 6 | 3 | 0 | `3` | 3 |
++| 9 | `D8` Sylow 2 / pair-partition stabilizer | 8 | 2 | 3 | `2 + s` | 6 |
++| 10 | `A4` | 12 | 0 | 3 | `1 + s` | 5 |
++| 11 | `S4` | 24 | 6 | 3 | `1` | 1 |
++
++Every row is integral for every integer `s`.  In particular, after pinning
++`s=4`, integrality imposes no congruence at all.
++
++The two pinned rows are visible in the table:
++
++* `H=S4` gives `chi_c(Y_G)=1`, the target `C^2`.
++* `H=S3` gives `chi_c(Y_{H_1})=3`, the point-stabilizer finite hull row.
++
++The target row also checks the class-function arithmetic:
++
++```text
++(1/24) ((12+6s) + 6*2(1-s) + 3*2s) = 1.
++```
++
++## 4. Point-stabilizer/source-hull comparison
++
++The point-stabilizer row must be compared to the source hull, not to a
++generic fixed-letter count.  The finite hull is the source `C^2` plus the
++boundary curve over the escaping sheets.  The boundary count is obtained from
++the typed deficits and cluster decomposition.
++
++At a generic point of `D_1`, two sheets escape as one size-2 boundary cluster;
++at a generic point of `D_2`, one sheet escapes as one size-1 boundary cluster.
++At special points the boundary cluster counts are:
++
++```text
++D_1 node:          2 boundary points   (two size-2 clusters, a_p=0)
++D_1 cap D_2 point: 2 boundary points   (one size-2 and one size-1 cluster, a_p=1)
++D_2 node:          2 boundary points   (two size-1 clusters, a_p=2)
++```
++
++Therefore
++
++```text
++chi_c(C_boundary)
++  = (1 - 2s - j)
++  + (chi_2 - sigma_2 - j)
++  + 2s
++  + 2j
++  + 2 sigma_2
++  = 1 + chi_2 + sigma_2.
++```
++
++The source-hull value is
++
++```text
++chi_c(Y_{H_1}) = chi_c(C^2_source) + chi_c(C_boundary)
++               = 1 + (1 + chi_2 + sigma_2)
++               = 2 + chi_2 + sigma_2.
++```
++
++The quotient table gives the same row as `3`.  Equating the two gives
++
++```text
++2 + chi_2 + sigma_2 = 3
++chi_2 + sigma_2 = 1.
++```
++
++This is exactly the collapsed relation already recorded in the source note.
++It contains no `s` and no `j`.  The cancellation is structural:
++
++* the two `D_1` node effects cancel between the open part of `D_1` and the
++  two boundary points at each `D_1` node;
++* the two intersections with `D_1` and `D_2` cancel the removals of those
++  points from the two open curves;
++* the two `D_2` node boundary points convert
++  `chi_2 - sigma_2` into `chi_2 + sigma_2`.
++
++No row other than the point-stabilizer row even contains the companion
++topology after the fixed-locus vector has been assembled.
++
++## 5. Independent controls
++
++### 5.1 Sign row
++
++The sign row is `H=A4`, the kernel of `sgn:S_4 -> C_2`.  The table gives
++
++```text
++chi_c(Xhat/A4) = 1 + s.
++```
++
++Independently, this quotient is the double cover of the target branched over
++the odd-meridian part.  Here the odd generic meridian is the `D_1`
++transposition; the trivial-dicritical component `D_2` is even/identity at the
++generic point.  Thus the branch curve for the sign cover is just `D_1`.
++
++For a degree-2 cover branched over `D_1`,
++
++```text
++chi_c(Y_sgn)
++  = 2 chi_c(C^2 - D_1) + chi_c(D_1)
++  = 2(1 - (1-s)) + (1-s)
++  = 1 + s.
++```
++
++At the realized `D_1`, this is `5`, matching the `A4` row.
++
++The node behavior is also consistent.  At a `D_1` node the two local
++transposition meridians are disjoint in `S_4`, but both are odd, so the sign
++cover has branch around both local branches.  The stratum formula above
++already counts the node as one branch-set point, not two unrelated smooth
++points.
++
++### 5.2 S3 resolvent / TB-GERM row
++
++The `S_3` resolvent triple cover is the action of `S_4` on the three pair
++partitions of `{1,2,3,4}`.  Its point stabilizer is a Sylow-2 `D8`, so the
++Burnside row is `H=D8`, not the normal `V4` quotient row.  The table gives
++
++```text
++chi_c(Xhat/D8) = 2 + s.
++```
++
++Independently, a transposition in `S_4` acts on the three pair partitions as a
++transposition in `S_3`: it fixes the pairing containing that transposed pair
++and swaps the other two pairings.  At a `D_1` node the two disjoint local
++transpositions have the same image in this `S_3` action, because their product
++is in the normal `V4`.  Thus the triple cover is simply ramified over `D_1`
++and unbranched over the trivial `D_2` component.
++
++Therefore
++
++```text
++chi_c(Y_res)
++  = 3 chi_c(C^2 - D_1) + 2 chi_c(D_1)
++  = 3s + 2(1-s)
++  = 2 + s.
++```
++
++At `s=4`, this is `6`, matching the `D8` row.  This is the TB-GERM row as a
++control, not an additional identity.
++
++## 6. Degeneracy proof
++
++The full calculation collapses for three independent reasons.
++
++First, the only nontrivial generic inertia is the transposition inertia along
++`D_1`.  The generic `D_2` inertia is identity because `D_2` is the
++trivial-dicritical component.  Identity-inertia strata contribute to
++`Xhat^e` only; they do not contribute to `Xhat^g` for `g != e`.
++
++Second, the identity entry `chi_c(Xhat)` is insensitive to the companion
++variables after the strata are assembled:
++
++```text
++24(s - chi_2 + j)
+++ 12(1 - 2s - j)
+++ 24(chi_2 - sigma_2 - j)
+++ 6s
+++ 12j
+++ 24 sigma_2
++= 12 + 6s.
++```
++
++This is not an integrality accident.  It is the statement that the Galois
++closure has the expected finite fibres over the target strata: `24` over
++identity-inertia strata, `12` over transposition-inertia strata, and `6` over
++the `V4_split` node strata.  The companion variables appear only in
++identity-inertia strata, and their Euler contributions cancel against the
++target-complement term.
++
++Third, every subgroup average uses only `(f_1,f_T,f_V)`.  Once the vector is
++
++```text
++(12+6s, 2(1-s), 2s),
++```
++
++there is no remaining slot in the subgroup table where `chi_2`, `sigma_2`, or
++`j` could enter.  The subgroup lattice can reweight `f_T` against `f_V`; it
++can see the already known `D_1` node count.  It cannot see the companion curve
++except through the one source-hull comparison, and that comparison is exactly
++`chi_2 + sigma_2 = 1`.
++
++Consequently, after imposing the known realized value `s=4`, the quotient
++rows become fixed integers.  Before imposing `s=4`, they are integral
++polynomials in the integer `s`; no row imposes even a parity condition.
++
++## 7. General-N rank statement
++
++Here is the promotion-safe rank statement extracted from the computation.
++
++Let `G` be the pinned monodromy group of a decorated RED-N cage profile, and
++let `A_G` be the subgroup-average matrix
++
++```text
++(A_G)_{H,C} = |H cap C| / |H|,
++```
++
++with rows indexed by conjugacy classes of subgroups `H <= G` and columns by
++element conjugacy classes `C` of `G`.  Let `B_profile` be the matrix whose
++columns are the local-inertia class functions contributed by the decorated
++strata of the profile.  Then the rational row rank available from the
++Burnside-Euler system on that decorated profile is exactly
++
++```text
++rank_Q(A_G B_profile).
++```
++
++This rank is a property of the **decorated local inertia columns**, not of the
++coarse moved-cycle label.  That distinction is forced by r2: the survivor unit
++is the carrier multiset with owner partition and physical places, not just a
++label `[lambda^(k)]` (`reducible-all-n-r2...:493-504`), and the label loses
++fixed-letter and placement data (`reducible-all-n-r2...:270-289`).
++
++For the pinned N=4 profile computed here,
++
++```text
++rank_Q(A_{S4} B_profile) = 3
++```
++
++on the supported columns `1,T,V`, while the projection to the residual
++companion variables has rank `1`, generated by `chi_2 + sigma_2`.  The extra
++subgroup rows increase the rank on the **already known D_1 inertia columns**,
++not on the live companion residual.
++
++The all-N consequence is therefore negative in the sense Card A needs:
++for every decorated RED-N profile whose companion components are trivial
++dicriticals with identity generic inertia and whose only nontrivial local
++inertia lies on already pinned branched components, the subgroup-lattice
++Burnside rows have zero projection to companion variables except for the
++typed source-hull row.  On that class, the residual-variable rank is the same
++as the natural-action pair: one source/hull Euler relation.
++
++This covers the transposition/trivial spine represented by the N=4 row and
++the analogous restored `[2]` residuals in the r2 ledger.  It does **not**
++assert a rank theorem for off-spine imprimitive profiles such as the live
++`[22...]`, `[3...]`, `[4...]`, or mixed rows through `N=8`.  R2 explicitly
++keeps block-system descent open off the pinned all-transposition classes
++(`reducible-all-n-r2...:206-232`, `483-523`).  For those rows, a Burnside rank
++claim requires the missing decorated local-inertia matrix `B_profile`; the
++coarse cage label alone is insufficient.
++
++Thus the general-N rank statement is:
++
++```text
++RANK-N-LOCAL-COLUMN:
++  Burnside rank on RED-N residual classes is rank_Q(A_G B_profile).
++  At label level there is no promotion-safe rank excess claim.
++  On the transposition/trivial companion spine, the companion-variable rank is
++  1, not larger than the natural-action source/hull relation.
++```
++
++## 8. Final verdict
++
++No subgroup-class row yields an integer relation on `(s_1, sigma_2, j)` beyond
++`chi_2 + sigma_2 = 1`.
++
++The full eleven-row `S_4` table at the pinned `N=4` profile is internally
++consistent, integral, and matched by the sign and `S_3` resolvent controls.
++Its only new-looking information is dependence on `s_1`, but `s_1=4` is
++already fixed by the realized `(9,6,2)` curve's exact census.  The live
++companion data remain untouched:
++
++```text
++sigma_2: unconstrained by Burnside rows after chi_2 + sigma_2 = 1
++j:       unconstrained by Burnside rows
++s_1:     pinned externally to 4 by the D_1 census, not by a new row
++```
++
++Permanent retirement recommended for this direction as charged:
++**do not spend further on "more Euler identities" from the subgroup lattice
++at the N=4 residual profile.**  Future off-spine use would need new local
++inertia data, not another replay of this table.
++
++<!-- BODY-END -->
+
+codex
+The body is 17.9 KB before the seal, inside the requested 15-25 KB target, and the ASCII check is clean. I’m stamping with the recorded basis `f35adc89bec33c1e1a2df50ac3d8bcd99f762218` now.
+exec
+/bin/zsh -lc 'python3 ops/seal.py stamp xmodel/burnside-chi-gpt55-20260902.md --basis f35adc89bec33c1e1a2df50ac3d8bcd99f762218' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+STAMPED path=xmodel/burnside-chi-gpt55-20260902.md body_bytes=17945 body_sha256=8f6ba20101ba309392bb0b29c929d1f5b89ea605238769a3c1344ad820dd3bbf basis=f35adc89bec33c1e1a2df50ac3d8bcd99f762218
+
+diff --git a/xmodel/burnside-chi-gpt55-20260902.md b/xmodel/burnside-chi-gpt55-20260902.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..386f81b80bcbfd8514168f5251026ec6b675eb93
+--- /dev/null
++++ b/xmodel/burnside-chi-gpt55-20260902.md
+@@ -0,0 +1,494 @@
++# BURNSIDE-CHI: S4 subgroup-lattice chi_c table at the N=4 profile
++
++Lane: BURNSIDE-CHI  
++Date: 2026-09-02 UTC  
++Agent: GPT-5.5 / Codex  
++Disposition: **COLLAPSE CONFIRMED AT THE PINNED N=4 PROFILE**  
++
++## 0. Custody and answer
++
++The frozen inputs were hashed before reading. The stop condition did not fire.
++
++```text
++2ad20b4c37128533ef23e956c2921aeb70d830bd6166a11b95a6ef6637cc5eff  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md
++a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/rep-96-inner-opus5-20260901.md
++bdd857c9d8c55fa000fcffee05f9f3084c5d073fb4d06285edf2af0d3c369339  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/reducible-all-n-r2-opus5-20260901.md
++```
++
++Question: does the full eleven-row `S_4` subgroup-lattice `chi_c` system at
++the pinned profile produce an integer relation on `(s_1, sigma_2, j)` beyond
++the already collapsed `chi_2 + sigma_2 = 1`?
++
++Answer: **no**.  After the local fixed-locus census is assembled in the Galois
++closure, every subgroup row is a function only of the already pinned `D_1`
++node count `s_1`.  The companion variables `(chi_2, sigma_2, j)` cancel from
++`chi_c(X^e)` and never appear in `chi_c(X^g)` for `g != e`, because `D_2` is
++the trivial-dicritical component and has identity generic inertia.  The
++point-stabilizer/source-hull row, computed with the typed
++`a_i = N - W_i` deficit bookkeeping, gives exactly
++
++```text
++chi_2 + sigma_2 = 1.
++```
++
++No integrality row adds a congruence or equality.  With the realized
++`(9,6,2)` curve, `s_1 = 4`, and the eleven row values are
++
++```text
++36, 15, 22, 12, 11, 15, 8, 3, 6, 5, 1
++```
++
++in the subgroup order listed in SS3 below.
++
++Typed outcome: **retire BURNSIDE-CHI as a "more Euler identities" gate for
++this N=4 residual profile.**  The sign row and the `S_3` resolvent row remain
++valid controls, not new gates.
++
++No exit-price assertion is made here, so no `charge_basis=` line is declared.
++
++## 1. Inputs consumed
++
++Card A defines the mechanism: for `G <= S_N`, the Galois closure `Xhat`
++has intermediate quotients `Y_H = Xhat/H`, the target row `Y_G` has
++`chi_c = 1`, the point-stabilizer row is the finite hull of the source, and
++the source row must consume the typed `a_i = N - W_i` and `a_p` census rather
++than a `#Fix` substitution
++(`ideation-20260902T0022Z-fable5.md:80-90`).  The fixed-locus vector
++`chi_c(Xhat^g)` is then assembled over branch strata, and
++
++```text
++chi_c(Xhat/H) = (1/|H|) sum_{h in H} chi_c(Xhat^h)
++```
++
++is the row formula (`ideation...:92-108`).  Card A asks for the eleven-row
++`S_4` table at the profile `core (2,1,0), W=(1,2), D_1=(9,6,2), D_2` unknown
++(`ideation...:255-276`).
++
++The realized `D_1` census is exact.  The `(9,6,2)` curve has normalization
++`A^1`, affine semigroup `<2,9>`, `delta_aff = 4`, and four affine nodes
++(`rep-96-inner-opus5-20260901.md:72-84`).  The node verification is direct:
++the four node images come from the four `{t,-t}` pairs with `p(t)=0`, and
++there are no other affine singularities (`rep-96...:109-125`).  The same
++report records the complete vertical factorization census, but the Euler
++calculation below needs only the ordinary-node count and the local cluster
++types (`rep-96...:127-141`, `600-616`).
++
++The reducible profile data are the binding source-row data.  The N=4 residual
++profile is a single row: core `(2,1,0)`, `W=(1,2)`, one branched component
++`D_1` of weight `2`, and one trivial-dicritical component of weight `1`
++(`rep-96...:661-670`; `reducible-all-n-r2-opus5-20260901.md:424-429`).
++The profile gives `a^(1)=2`, `a^(2)=3`, and the local point census
++
++```text
++D_1 node:          clusters 2 + 2,     a_p = 0
++D_1 cap D_2 point: clusters 2 + 1,     a_p = 1
++D_2 node:          clusters 1 + 1,     a_p = 2
++```
++
++with `D_1` having `s_1` nodes and normalization `A^1`, `D_2` having
++`sigma_2` nodes and `chi_c(D_2)=chi_2`, and `j` transverse intersection
++points (`rep-96...:688-708`).  The older natural-action identity collapses
++there to `chi_2 + sigma_2 = 1`, with `s_1` cancelling identically
++(`rep-96...:700-705`).
++
++I used the r2 label hygiene: the cycle-type law includes trivial carriers
++as `1`-cycles, while `a_i=N-W_i` is not the same object as the fixed-letter
++count in a coarse label (`reducible-all-n-r2...:270-280`).  This is the
++separation used below: source/hull Euler uses typed deficits; Galois
++fixed-locus multiplicities use inertia stabilizers.
++
++## 2. Local strata and inertia
++
++Let the element classes of `S_4` be ordered as
++
++```text
++1, T=(2,1,1), V=(2,2), C3=(3,1), C4=(4).
++```
++
++Their class sizes are
++
++```text
++|1|=1, |T|=6, |V|=3, |C3|=8, |C4|=6.
++```
++
++Write `s=s_1`.  Before pinning the realized curve, keep `s` symbolic; the
++realized curve later sets `s=4`.
++
++The target stratification is:
++
++| target stratum | `chi_c` | local inertia in `S_4` |
++|---|---:|---|
++| `U = C^2 - (D_1 cup D_2)` | `s - chi_2 + j` | `1` |
++| smooth open part of `D_1` | `1 - 2s - j` | `<(12)>` |
++| smooth open part of `D_2` | `chi_2 - sigma_2 - j` | `1` |
++| node of `D_1` | `s` points | `<(12),(34)>` |
++| transverse `D_1 cap D_2` point | `j` points | `<(12)>` |
++| node of `D_2` | `sigma_2` points | `1` |
++
++The entries need a short check:
++
++* `chi_c(D_1)=1-s`, because the normalization is `A^1` and each node
++  identifies two preimages to one point.
++* Therefore `chi_c(D_1^sm open)=chi_c(D_1)-s-j=1-2s-j`.
++* `chi_c(C^2-(D_1 cup D_2))=1-chi_c(D_1 cup D_2)
++  =1-((1-s)+chi_2-j)=s-chi_2+j`.
++* `D_2` is the trivial-dicritical component at the generic point, hence
++  identity inertia.  Its typed deficit is still `a^(2)=3`; that is source
++  bookkeeping and is not substituted into the Galois fixed-locus count.
++
++For a stratum with inertia subgroup `I`, the number of points in the fibre of
++`Xhat^g` over that stratum is the number of fixed cosets of `g` on `S_4/I`:
++
++```text
++m_I(g) = #{aI : g aI = aI}
++       = |C_{S_4}(g)| * |I cap Cl(g)| / |I|.
++```
++
++For the three inertia groups occurring above:
++
++| inertia `I` | `m_I(T)` | `m_I(V)` | `m_I(C3)` | `m_I(C4)` |
++|---|---:|---:|---:|---:|
++| `1` | 0 | 0 | 0 | 0 |
++| `<(12)>` | 2 | 0 | 0 | 0 |
++| `<(12),(34)>` | 2 | 2 | 0 | 0 |
++
++Thus the nonidentity fixed-locus vector is
++
++```text
++f_T = chi_c(Xhat^T) = 2(1 - 2s - j) + 2j + 2s = 2(1-s),
++f_V = chi_c(Xhat^V) = 2s,
++f_C3 = 0,
++f_C4 = 0.
++```
++
++The identity entry can either be read from the same stratum table or from the
++target row.  The direct stratum assembly is:
++
++```text
++f_1 =
++  24(s - chi_2 + j)
+++ 12(1 - 2s - j)
+++ 24(chi_2 - sigma_2 - j)
+++  6s
+++ 12j
+++ 24 sigma_2
++= 12 + 6s.
++```
++
++This is the first visible degeneracy: `chi_2`, `sigma_2`, and `j` cancel before
++any subgroup row is formed.  The fixed-locus class function is therefore
++
++```text
++(f_1, f_T, f_V, f_C3, f_C4)
++  = (12+6s, 2(1-s), 2s, 0, 0).
++```
++
++At the realized `D_1`, `s=4`, so
++
++```text
++(f_1, f_T, f_V, f_C3, f_C4) = (36, -6, 8, 0, 0).
++```
++
++Negative compactly supported Euler characteristic for `Xhat^T` is not an
++error: the fixed curve over the open part of `D_1` has
++`chi_c=2(1-s)` after the node identifications are included.
++
++## 3. Eleven subgroup rows
++
++For a subgroup `H <= S_4`, put
++
++```text
++chi_H = chi_c(Xhat/H)
++      = (1/|H|) (f_1 + n_T(H) f_T + n_V(H) f_V),
++```
++
++since the `C3` and `C4` fixed-locus entries vanish.  Here `n_T(H)` and
++`n_V(H)` are the numbers of transpositions and double transpositions inside
++`H`.
++
++A short exact enumeration of `S_4` as tuples produced all 30 subgroups and
++the 11 conjugacy classes.  It also computed the subgroup-class row matrix
++over `QQ`.  The full subgroup-average matrix has rank `5` on all element
++classes and rank `3` on the actually supported columns `(1,T,V)`.  Those
++rank figures are audit data only; the row formulas below are the load-bearing
++calculation.
++
++| row | subgroup class `H` | `|H|` | `n_T` | `n_V` | `chi_c(Xhat/H)` | at `s=4` |
++|---:|---|---:|---:|---:|---:|---:|
++| 1 | `1` | 1 | 0 | 0 | `12 + 6s` | 36 |
++| 2 | `C2_T = <(12)>` | 2 | 1 | 0 | `7 + 2s` | 15 |
++| 3 | `C2_V = <(12)(34)>` | 2 | 0 | 1 | `6 + 4s` | 22 |
++| 4 | `C3` | 3 | 0 | 0 | `4 + 2s` | 12 |
++| 5 | `C4` | 4 | 0 | 1 | `3 + 2s` | 11 |
++| 6 | `V4_norm = {1,V,V,V}` | 4 | 0 | 3 | `3 + 3s` | 15 |
++| 7 | `V4_split = <(12),(34)>` | 4 | 2 | 1 | `4 + s` | 8 |
++| 8 | `S3` point stabilizer | 6 | 3 | 0 | `3` | 3 |
++| 9 | `D8` Sylow 2 / pair-partition stabilizer | 8 | 2 | 3 | `2 + s` | 6 |
++| 10 | `A4` | 12 | 0 | 3 | `1 + s` | 5 |
++| 11 | `S4` | 24 | 6 | 3 | `1` | 1 |
++
++Every row is integral for every integer `s`.  In particular, after pinning
++`s=4`, integrality imposes no congruence at all.
++
++The two pinned rows are visible in the table:
++
++* `H=S4` gives `chi_c(Y_G)=1`, the target `C^2`.
++* `H=S3` gives `chi_c(Y_{H_1})=3`, the point-stabilizer finite hull row.
++
++The target row also checks the class-function arithmetic:
++
++```text
++(1/24) ((12+6s) + 6*2(1-s) + 3*2s) = 1.
++```
++
++## 4. Point-stabilizer/source-hull comparison
++
++The point-stabilizer row must be compared to the source hull, not to a
++generic fixed-letter count.  The finite hull is the source `C^2` plus the
++boundary curve over the escaping sheets.  The boundary count is obtained from
++the typed deficits and cluster decomposition.
++
++At a generic point of `D_1`, two sheets escape as one size-2 boundary cluster;
++at a generic point of `D_2`, one sheet escapes as one size-1 boundary cluster.
++At special points the boundary cluster counts are:
++
++```text
++D_1 node:          2 boundary points   (two size-2 clusters, a_p=0)
++D_1 cap D_2 point: 2 boundary points   (one size-2 and one size-1 cluster, a_p=1)
++D_2 node:          2 boundary points   (two size-1 clusters, a_p=2)
++```
++
++Therefore
++
++```text
++chi_c(C_boundary)
++  = (1 - 2s - j)
++  + (chi_2 - sigma_2 - j)
++  + 2s
++  + 2j
++  + 2 sigma_2
++  = 1 + chi_2 + sigma_2.
++```
++
++The source-hull value is
++
++```text
++chi_c(Y_{H_1}) = chi_c(C^2_source) + chi_c(C_boundary)
++               = 1 + (1 + chi_2 + sigma_2)
++               = 2 + chi_2 + sigma_2.
++```
++
++The quotient table gives the same row as `3`.  Equating the two gives
++
++```text
++2 + chi_2 + sigma_2 = 3
++chi_2 + sigma_2 = 1.
++```
++
++This is exactly the collapsed relation already recorded in the source note.
++It contains no `s` and no `j`.  The cancellation is structural:
++
++* the two `D_1` node effects cancel between the open part of `D_1` and the
++  two boundary points at each `D_1` node;
++* the two intersections with `D_1` and `D_2` cancel the removals of those
++  points from the two open curves;
++* the two `D_2` node boundary points convert
++  `chi_2 - sigma_2` into `chi_2 + sigma_2`.
++
++No row other than the point-stabilizer row even contains the companion
++topology after the fixed-locus vector has been assembled.
++
++## 5. Independent controls
++
++### 5.1 Sign row
++
++The sign row is `H=A4`, the kernel of `sgn:S_4 -> C_2`.  The table gives
++
++```text
++chi_c(Xhat/A4) = 1 + s.
++```
++
++Independently, this quotient is the double cover of the target branched over
++the odd-meridian part.  Here the odd generic meridian is the `D_1`
++transposition; the trivial-dicritical component `D_2` is even/identity at the
++generic point.  Thus the branch curve for the sign cover is just `D_1`.
++
++For a degree-2 cover branched over `D_1`,
++
++```text
++chi_c(Y_sgn)
++  = 2 chi_c(C^2 - D_1) + chi_c(D_1)
++  = 2(1 - (1-s)) + (1-s)
++  = 1 + s.
++```
++
++At the realized `D_1`, this is `5`, matching the `A4` row.
++
++The node behavior is also consistent.  At a `D_1` node the two local
++transposition meridians are disjoint in `S_4`, but both are odd, so the sign
++cover has branch around both local branches.  The stratum formula above
++already counts the node as one branch-set point, not two unrelated smooth
++points.
++
++### 5.2 S3 resolvent / TB-GERM row
++
++The `S_3` resolvent triple cover is the action of `S_4` on the three pair
++partitions of `{1,2,3,4}`.  Its point stabilizer is a Sylow-2 `D8`, so the
++Burnside row is `H=D8`, not the normal `V4` quotient row.  The table gives
++
++```text
++chi_c(Xhat/D8) = 2 + s.
++```
++
++Independently, a transposition in `S_4` acts on the three pair partitions as a
++transposition in `S_3`: it fixes the pairing containing that transposed pair
++and swaps the other two pairings.  At a `D_1` node the two disjoint local
++transpositions have the same image in this `S_3` action, because their product
++is in the normal `V4`.  Thus the triple cover is simply ramified over `D_1`
++and unbranched over the trivial `D_2` component.
++
++Therefore
++
++```text
++chi_c(Y_res)
++  = 3 chi_c(C^2 - D_1) + 2 chi_c(D_1)
++  = 3s + 2(1-s)
++  = 2 + s.
++```
++
++At `s=4`, this is `6`, matching the `D8` row.  This is the TB-GERM row as a
++control, not an additional identity.
++
++## 6. Degeneracy proof
++
++The full calculation collapses for three independent reasons.
++
++First, the only nontrivial generic inertia is the transposition inertia along
++`D_1`.  The generic `D_2` inertia is identity because `D_2` is the
++trivial-dicritical component.  Identity-inertia strata contribute to
++`Xhat^e` only; they do not contribute to `Xhat^g` for `g != e`.
++
++Second, the identity entry `chi_c(Xhat)` is insensitive to the companion
++variables after the strata are assembled:
++
++```text
++24(s - chi_2 + j)
+++ 12(1 - 2s - j)
+++ 24(chi_2 - sigma_2 - j)
+++ 6s
+++ 12j
+++ 24 sigma_2
++= 12 + 6s.
++```
++
++This is not an integrality accident.  It is the statement that the Galois
++closure has the expected finite fibres over the target strata: `24` over
++identity-inertia strata, `12` over transposition-inertia strata, and `6` over
++the `V4_split` node strata.  The companion variables appear only in
++identity-inertia strata, and their Euler contributions cancel against the
++target-complement term.
++
++Third, every subgroup average uses only `(f_1,f_T,f_V)`.  Once the vector is
++
++```text
++(12+6s, 2(1-s), 2s),
++```
++
++there is no remaining slot in the subgroup table where `chi_2`, `sigma_2`, or
++`j` could enter.  The subgroup lattice can reweight `f_T` against `f_V`; it
++can see the already known `D_1` node count.  It cannot see the companion curve
++except through the one source-hull comparison, and that comparison is exactly
++`chi_2 + sigma_2 = 1`.
++
++Consequently, after imposing the known realized value `s=4`, the quotient
++rows become fixed integers.  Before imposing `s=4`, they are integral
++polynomials in the integer `s`; no row imposes even a parity condition.
++
++## 7. General-N rank statement
++
++Here is the promotion-safe rank statement extracted from the computation.
++
++Let `G` be the pinned monodromy group of a decorated RED-N cage profile, and
++let `A_G` be the subgroup-average matrix
++
++```text
++(A_G)_{H,C} = |H cap C| / |H|,
++```
++
++with rows indexed by conjugacy classes of subgroups `H <= G` and columns by
++element conjugacy classes `C` of `G`.  Let `B_profile` be the matrix whose
++columns are the local-inertia class functions contributed by the decorated
++strata of the profile.  Then the rational row rank available from the
++Burnside-Euler system on that decorated profile is exactly
++
++```text
++rank_Q(A_G B_profile).
++```
++
++This rank is a property of the **decorated local inertia columns**, not of the
++coarse moved-cycle label.  That distinction is forced by r2: the survivor unit
++is the carrier multiset with owner partition and physical places, not just a
++label `[lambda^(k)]` (`reducible-all-n-r2...:493-504`), and the label loses
++fixed-letter and placement data (`reducible-all-n-r2...:270-289`).
++
++For the pinned N=4 profile computed here,
++
++```text
++rank_Q(A_{S4} B_profile) = 3
++```
++
++on the supported columns `1,T,V`, while the projection to the residual
++companion variables has rank `1`, generated by `chi_2 + sigma_2`.  The extra
++subgroup rows increase the rank on the **already known D_1 inertia columns**,
++not on the live companion residual.
++
++The all-N consequence is therefore negative in the sense Card A needs:
++for every decorated RED-N profile whose companion components are trivial
++dicriticals with identity generic inertia and whose only nontrivial local
++inertia lies on already pinned branched components, the subgroup-lattice
++Burnside rows have zero projection to companion variables except for the
++typed source-hull row.  On that class, the residual-variable rank is the same
++as the natural-action pair: one source/hull Euler relation.
++
++This covers the transposition/trivial spine represented by the N=4 row and
++the analogous restored `[2]` residuals in the r2 ledger.  It does **not**
++assert a rank theorem for off-spine imprimitive profiles such as the live
++`[22...]`, `[3...]`, `[4...]`, or mixed rows through `N=8`.  R2 explicitly
++keeps block-system descent open off the pinned all-transposition classes
++(`reducible-all-n-r2...:206-232`, `483-523`).  For those rows, a Burnside rank
++claim requires the missing decorated local-inertia matrix `B_profile`; the
++coarse cage label alone is insufficient.
++
++Thus the general-N rank statement is:
++
++```text
++RANK-N-LOCAL-COLUMN:
++  Burnside rank on RED-N residual classes is rank_Q(A_G B_profile).
++  At label level there is no promotion-safe rank excess claim.
++  On the transposition/trivial companion spine, the companion-variable rank is
++  1, not larger than the natural-action source/hull relation.
++```
++
++## 8. Final verdict
++
++No subgroup-class row yields an integer relation on `(s_1, sigma_2, j)` beyond
++`chi_2 + sigma_2 = 1`.
++
++The full eleven-row `S_4` table at the pinned `N=4` profile is internally
++consistent, integral, and matched by the sign and `S_3` resolvent controls.
++Its only new-looking information is dependence on `s_1`, but `s_1=4` is
++already fixed by the realized `(9,6,2)` curve's exact census.  The live
++companion data remain untouched:
++
++```text
++sigma_2: unconstrained by Burnside rows after chi_2 + sigma_2 = 1
++j:       unconstrained by Burnside rows
++s_1:     pinned externally to 4 by the D_1 census, not by a new row
++```
++
++Permanent retirement recommended for this direction as charged:
++**do not spend further on "more Euler identities" from the subgroup lattice
++at the N=4 residual profile.**  Future off-spine use would need new local
++inertia data, not another replay of this table.
++
++<!-- BODY-END -->
+
+codex
+The seal stamped cleanly. I’m doing the final verification pass: seal verify, charge-basis scan, whitespace check, and a full-file hash for handoff.
+exec
+/bin/zsh -lc 'git diff --check -- xmodel/burnside-chi-gpt55-20260902.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+exec
+/bin/zsh -lc 'python3 ops/validate_charge_basis.py xmodel/burnside-chi-gpt55-20260902.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+charge_basis=ABSENT
+
+exec
+/bin/zsh -lc 'python3 ops/seal.py verify --expected-basis f35adc89bec33c1e1a2df50ac3d8bcd99f762218 xmodel/burnside-chi-gpt55-20260902.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+PASS path=xmodel/burnside-chi-gpt55-20260902.md body_bytes=17945 body_sha256=8f6ba20101ba309392bb0b29c929d1f5b89ea605238769a3c1344ad820dd3bbf basis=f35adc89bec33c1e1a2df50ac3d8bcd99f762218
+
+exec
+/bin/zsh -lc 'wc -c -l xmodel/burnside-chi-gpt55-20260902.md && shasum -a 256 xmodel/burnside-chi-gpt55-20260902.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     503   18278 xmodel/burnside-chi-gpt55-20260902.md
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+a407057ce3c4bb7494ac692e1a6630f0cfcf4d21402c958b2b8b6b8d75b0da7a  xmodel/burnside-chi-gpt55-20260902.md
+
+diff --git a/xmodel/burnside-chi-gpt55-20260902.md b/xmodel/burnside-chi-gpt55-20260902.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..386f81b80bcbfd8514168f5251026ec6b675eb93
+--- /dev/null
++++ b/xmodel/burnside-chi-gpt55-20260902.md
+@@ -0,0 +1,494 @@
++# BURNSIDE-CHI: S4 subgroup-lattice chi_c table at the N=4 profile
++
++Lane: BURNSIDE-CHI  
++Date: 2026-09-02 UTC  
++Agent: GPT-5.5 / Codex  
++Disposition: **COLLAPSE CONFIRMED AT THE PINNED N=4 PROFILE**  
++
++## 0. Custody and answer
++
++The frozen inputs were hashed before reading. The stop condition did not fire.
++
++```text
++2ad20b4c37128533ef23e956c2921aeb70d830bd6166a11b95a6ef6637cc5eff  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md
++a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/rep-96-inner-opus5-20260901.md
++bdd857c9d8c55fa000fcffee05f9f3084c5d073fb4d06285edf2af0d3c369339  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/reducible-all-n-r2-opus5-20260901.md
++```
++
++Question: does the full eleven-row `S_4` subgroup-lattice `chi_c` system at
++the pinned profile produce an integer relation on `(s_1, sigma_2, j)` beyond
++the already collapsed `chi_2 + sigma_2 = 1`?
++
++Answer: **no**.  After the local fixed-locus census is assembled in the Galois
++closure, every subgroup row is a function only of the already pinned `D_1`
++node count `s_1`.  The companion variables `(chi_2, sigma_2, j)` cancel from
++`chi_c(X^e)` and never appear in `chi_c(X^g)` for `g != e`, because `D_2` is
++the trivial-dicritical component and has identity generic inertia.  The
++point-stabilizer/source-hull row, computed with the typed
++`a_i = N - W_i` deficit bookkeeping, gives exactly
++
++```text
++chi_2 + sigma_2 = 1.
++```
++
++No integrality row adds a congruence or equality.  With the realized
++`(9,6,2)` curve, `s_1 = 4`, and the eleven row values are
++
++```text
++36, 15, 22, 12, 11, 15, 8, 3, 6, 5, 1
++```
++
++in the subgroup order listed in SS3 below.
++
++Typed outcome: **retire BURNSIDE-CHI as a "more Euler identities" gate for
++this N=4 residual profile.**  The sign row and the `S_3` resolvent row remain
++valid controls, not new gates.
++
++No exit-price assertion is made here, so no `charge_basis=` line is declared.
++
++## 1. Inputs consumed
++
++Card A defines the mechanism: for `G <= S_N`, the Galois closure `Xhat`
++has intermediate quotients `Y_H = Xhat/H`, the target row `Y_G` has
++`chi_c = 1`, the point-stabilizer row is the finite hull of the source, and
++the source row must consume the typed `a_i = N - W_i` and `a_p` census rather
++than a `#Fix` substitution
++(`ideation-20260902T0022Z-fable5.md:80-90`).  The fixed-locus vector
++`chi_c(Xhat^g)` is then assembled over branch strata, and
++
++```text
++chi_c(Xhat/H) = (1/|H|) sum_{h in H} chi_c(Xhat^h)
++```
++
++is the row formula (`ideation...:92-108`).  Card A asks for the eleven-row
++`S_4` table at the profile `core (2,1,0), W=(1,2), D_1=(9,6,2), D_2` unknown
++(`ideation...:255-276`).
++
++The realized `D_1` census is exact.  The `(9,6,2)` curve has normalization
++`A^1`, affine semigroup `<2,9>`, `delta_aff = 4`, and four affine nodes
++(`rep-96-inner-opus5-20260901.md:72-84`).  The node verification is direct:
++the four node images come from the four `{t,-t}` pairs with `p(t)=0`, and
++there are no other affine singularities (`rep-96...:109-125`).  The same
++report records the complete vertical factorization census, but the Euler
++calculation below needs only the ordinary-node count and the local cluster
++types (`rep-96...:127-141`, `600-616`).
++
++The reducible profile data are the binding source-row data.  The N=4 residual
++profile is a single row: core `(2,1,0)`, `W=(1,2)`, one branched component
++`D_1` of weight `2`, and one trivial-dicritical component of weight `1`
++(`rep-96...:661-670`; `reducible-all-n-r2-opus5-20260901.md:424-429`).
++The profile gives `a^(1)=2`, `a^(2)=3`, and the local point census
++
++```text
++D_1 node:          clusters 2 + 2,     a_p = 0
++D_1 cap D_2 point: clusters 2 + 1,     a_p = 1
++D_2 node:          clusters 1 + 1,     a_p = 2
++```
++
++with `D_1` having `s_1` nodes and normalization `A^1`, `D_2` having
++`sigma_2` nodes and `chi_c(D_2)=chi_2`, and `j` transverse intersection
++points (`rep-96...:688-708`).  The older natural-action identity collapses
++there to `chi_2 + sigma_2 = 1`, with `s_1` cancelling identically
++(`rep-96...:700-705`).
++
++I used the r2 label hygiene: the cycle-type law includes trivial carriers
++as `1`-cycles, while `a_i=N-W_i` is not the same object as the fixed-letter
++count in a coarse label (`reducible-all-n-r2...:270-280`).  This is the
++separation used below: source/hull Euler uses typed deficits; Galois
++fixed-locus multiplicities use inertia stabilizers.
++
++## 2. Local strata and inertia
++
++Let the element classes of `S_4` be ordered as
++
++```text
++1, T=(2,1,1), V=(2,2), C3=(3,1), C4=(4).
++```
++
++Their class sizes are
++
++```text
++|1|=1, |T|=6, |V|=3, |C3|=8, |C4|=6.
++```
++
++Write `s=s_1`.  Before pinning the realized curve, keep `s` symbolic; the
++realized curve later sets `s=4`.
++
++The target stratification is:
++
++| target stratum | `chi_c` | local inertia in `S_4` |
++|---|---:|---|
++| `U = C^2 - (D_1 cup D_2)` | `s - chi_2 + j` | `1` |
++| smooth open part of `D_1` | `1 - 2s - j` | `<(12)>` |
++| smooth open part of `D_2` | `chi_2 - sigma_2 - j` | `1` |
++| node of `D_1` | `s` points | `<(12),(34)>` |
++| transverse `D_1 cap D_2` point | `j` points | `<(12)>` |
++| node of `D_2` | `sigma_2` points | `1` |
++
++The entries need a short check:
++
++* `chi_c(D_1)=1-s`, because the normalization is `A^1` and each node
++  identifies two preimages to one point.
++* Therefore `chi_c(D_1^sm open)=chi_c(D_1)-s-j=1-2s-j`.
++* `chi_c(C^2-(D_1 cup D_2))=1-chi_c(D_1 cup D_2)
++  =1-((1-s)+chi_2-j)=s-chi_2+j`.
++* `D_2` is the trivial-dicritical component at the generic point, hence
++  identity inertia.  Its typed deficit is still `a^(2)=3`; that is source
++  bookkeeping and is not substituted into the Galois fixed-locus count.
++
++For a stratum with inertia subgroup `I`, the number of points in the fibre of
++`Xhat^g` over that stratum is the number of fixed cosets of `g` on `S_4/I`:
++
++```text
++m_I(g) = #{aI : g aI = aI}
++       = |C_{S_4}(g)| * |I cap Cl(g)| / |I|.
++```
++
++For the three inertia groups occurring above:
++
++| inertia `I` | `m_I(T)` | `m_I(V)` | `m_I(C3)` | `m_I(C4)` |
++|---|---:|---:|---:|---:|
++| `1` | 0 | 0 | 0 | 0 |
++| `<(12)>` | 2 | 0 | 0 | 0 |
++| `<(12),(34)>` | 2 | 2 | 0 | 0 |
++
++Thus the nonidentity fixed-locus vector is
++
++```text
++f_T = chi_c(Xhat^T) = 2(1 - 2s - j) + 2j + 2s = 2(1-s),
++f_V = chi_c(Xhat^V) = 2s,
++f_C3 = 0,
++f_C4 = 0.
++```
++
++The identity entry can either be read from the same stratum table or from the
++target row.  The direct stratum assembly is:
++
++```text
++f_1 =
++  24(s - chi_2 + j)
+++ 12(1 - 2s - j)
+++ 24(chi_2 - sigma_2 - j)
+++  6s
+++ 12j
+++ 24 sigma_2
++= 12 + 6s.
++```
++
++This is the first visible degeneracy: `chi_2`, `sigma_2`, and `j` cancel before
++any subgroup row is formed.  The fixed-locus class function is therefore
++
++```text
++(f_1, f_T, f_V, f_C3, f_C4)
++  = (12+6s, 2(1-s), 2s, 0, 0).
++```
++
++At the realized `D_1`, `s=4`, so
++
++```text
++(f_1, f_T, f_V, f_C3, f_C4) = (36, -6, 8, 0, 0).
++```
++
++Negative compactly supported Euler characteristic for `Xhat^T` is not an
++error: the fixed curve over the open part of `D_1` has
++`chi_c=2(1-s)` after the node identifications are included.
++
++## 3. Eleven subgroup rows
++
++For a subgroup `H <= S_4`, put
++
++```text
++chi_H = chi_c(Xhat/H)
++      = (1/|H|) (f_1 + n_T(H) f_T + n_V(H) f_V),
++```
++
++since the `C3` and `C4` fixed-locus entries vanish.  Here `n_T(H)` and
++`n_V(H)` are the numbers of transpositions and double transpositions inside
++`H`.
++
++A short exact enumeration of `S_4` as tuples produced all 30 subgroups and
++the 11 conjugacy classes.  It also computed the subgroup-class row matrix
++over `QQ`.  The full subgroup-average matrix has rank `5` on all element
++classes and rank `3` on the actually supported columns `(1,T,V)`.  Those
++rank figures are audit data only; the row formulas below are the load-bearing
++calculation.
++
++| row | subgroup class `H` | `|H|` | `n_T` | `n_V` | `chi_c(Xhat/H)` | at `s=4` |
++|---:|---|---:|---:|---:|---:|---:|
++| 1 | `1` | 1 | 0 | 0 | `12 + 6s` | 36 |
++| 2 | `C2_T = <(12)>` | 2 | 1 | 0 | `7 + 2s` | 15 |
++| 3 | `C2_V = <(12)(34)>` | 2 | 0 | 1 | `6 + 4s` | 22 |
++| 4 | `C3` | 3 | 0 | 0 | `4 + 2s` | 12 |
++| 5 | `C4` | 4 | 0 | 1 | `3 + 2s` | 11 |
++| 6 | `V4_norm = {1,V,V,V}` | 4 | 0 | 3 | `3 + 3s` | 15 |
++| 7 | `V4_split = <(12),(34)>` | 4 | 2 | 1 | `4 + s` | 8 |
++| 8 | `S3` point stabilizer | 6 | 3 | 0 | `3` | 3 |
++| 9 | `D8` Sylow 2 / pair-partition stabilizer | 8 | 2 | 3 | `2 + s` | 6 |
++| 10 | `A4` | 12 | 0 | 3 | `1 + s` | 5 |
++| 11 | `S4` | 24 | 6 | 3 | `1` | 1 |
++
++Every row is integral for every integer `s`.  In particular, after pinning
++`s=4`, integrality imposes no congruence at all.
++
++The two pinned rows are visible in the table:
++
++* `H=S4` gives `chi_c(Y_G)=1`, the target `C^2`.
++* `H=S3` gives `chi_c(Y_{H_1})=3`, the point-stabilizer finite hull row.
++
++The target row also checks the class-function arithmetic:
++
++```text
++(1/24) ((12+6s) + 6*2(1-s) + 3*2s) = 1.
++```
++
++## 4. Point-stabilizer/source-hull comparison
++
++The point-stabilizer row must be compared to the source hull, not to a
++generic fixed-letter count.  The finite hull is the source `C^2` plus the
++boundary curve over the escaping sheets.  The boundary count is obtained from
++the typed deficits and cluster decomposition.
++
++At a generic point of `D_1`, two sheets escape as one size-2 boundary cluster;
++at a generic point of `D_2`, one sheet escapes as one size-1 boundary cluster.
++At special points the boundary cluster counts are:
++
++```text
++D_1 node:          2 boundary points   (two size-2 clusters, a_p=0)
++D_1 cap D_2 point: 2 boundary points   (one size-2 and one size-1 cluster, a_p=1)
++D_2 node:          2 boundary points   (two size-1 clusters, a_p=2)
++```
++
++Therefore
++
++```text
++chi_c(C_boundary)
++  = (1 - 2s - j)
++  + (chi_2 - sigma_2 - j)
++  + 2s
++  + 2j
++  + 2 sigma_2
++  = 1 + chi_2 + sigma_2.
++```
++
++The source-hull value is
++
++```text
++chi_c(Y_{H_1}) = chi_c(C^2_source) + chi_c(C_boundary)
++               = 1 + (1 + chi_2 + sigma_2)
++               = 2 + chi_2 + sigma_2.
++```
++
++The quotient table gives the same row as `3`.  Equating the two gives
++
++```text
++2 + chi_2 + sigma_2 = 3
++chi_2 + sigma_2 = 1.
++```
++
++This is exactly the collapsed relation already recorded in the source note.
++It contains no `s` and no `j`.  The cancellation is structural:
++
++* the two `D_1` node effects cancel between the open part of `D_1` and the
++  two boundary points at each `D_1` node;
++* the two intersections with `D_1` and `D_2` cancel the removals of those
++  points from the two open curves;
++* the two `D_2` node boundary points convert
++  `chi_2 - sigma_2` into `chi_2 + sigma_2`.
++
++No row other than the point-stabilizer row even contains the companion
++topology after the fixed-locus vector has been assembled.
++
++## 5. Independent controls
++
++### 5.1 Sign row
++
++The sign row is `H=A4`, the kernel of `sgn:S_4 -> C_2`.  The table gives
++
++```text
++chi_c(Xhat/A4) = 1 + s.
++```
++
++Independently, this quotient is the double cover of the target branched over
++the odd-meridian part.  Here the odd generic meridian is the `D_1`
++transposition; the trivial-dicritical component `D_2` is even/identity at the
++generic point.  Thus the branch curve for the sign cover is just `D_1`.
++
++For a degree-2 cover branched over `D_1`,
++
++```text
++chi_c(Y_sgn)
++  = 2 chi_c(C^2 - D_1) + chi_c(D_1)
++  = 2(1 - (1-s)) + (1-s)
++  = 1 + s.
++```
++
++At the realized `D_1`, this is `5`, matching the `A4` row.
++
++The node behavior is also consistent.  At a `D_1` node the two local
++transposition meridians are disjoint in `S_4`, but both are odd, so the sign
++cover has branch around both local branches.  The stratum formula above
++already counts the node as one branch-set point, not two unrelated smooth
++points.
++
++### 5.2 S3 resolvent / TB-GERM row
++
++The `S_3` resolvent triple cover is the action of `S_4` on the three pair
++partitions of `{1,2,3,4}`.  Its point stabilizer is a Sylow-2 `D8`, so the
++Burnside row is `H=D8`, not the normal `V4` quotient row.  The table gives
++
++```text
++chi_c(Xhat/D8) = 2 + s.
++```
++
++Independently, a transposition in `S_4` acts on the three pair partitions as a
++transposition in `S_3`: it fixes the pairing containing that transposed pair
++and swaps the other two pairings.  At a `D_1` node the two disjoint local
++transpositions have the same image in this `S_3` action, because their product
++is in the normal `V4`.  Thus the triple cover is simply ramified over `D_1`
++and unbranched over the trivial `D_2` component.
++
++Therefore
++
++```text
++chi_c(Y_res)
++  = 3 chi_c(C^2 - D_1) + 2 chi_c(D_1)
++  = 3s + 2(1-s)
++  = 2 + s.
++```
++
++At `s=4`, this is `6`, matching the `D8` row.  This is the TB-GERM row as a
++control, not an additional identity.
++
++## 6. Degeneracy proof
++
++The full calculation collapses for three independent reasons.
++
++First, the only nontrivial generic inertia is the transposition inertia along
++`D_1`.  The generic `D_2` inertia is identity because `D_2` is the
++trivial-dicritical component.  Identity-inertia strata contribute to
++`Xhat^e` only; they do not contribute to `Xhat^g` for `g != e`.
++
++Second, the identity entry `chi_c(Xhat)` is insensitive to the companion
++variables after the strata are assembled:
++
++```text
++24(s - chi_2 + j)
+++ 12(1 - 2s - j)
+++ 24(chi_2 - sigma_2 - j)
+++ 6s
+++ 12j
+++ 24 sigma_2
++= 12 + 6s.
++```
++
++This is not an integrality accident.  It is the statement that the Galois
++closure has the expected finite fibres over the target strata: `24` over
++identity-inertia strata, `12` over transposition-inertia strata, and `6` over
++the `V4_split` node strata.  The companion variables appear only in
++identity-inertia strata, and their Euler contributions cancel against the
++target-complement term.
++
++Third, every subgroup average uses only `(f_1,f_T,f_V)`.  Once the vector is
++
++```text
++(12+6s, 2(1-s), 2s),
++```
++
++there is no remaining slot in the subgroup table where `chi_2`, `sigma_2`, or
++`j` could enter.  The subgroup lattice can reweight `f_T` against `f_V`; it
++can see the already known `D_1` node count.  It cannot see the companion curve
++except through the one source-hull comparison, and that comparison is exactly
++`chi_2 + sigma_2 = 1`.
++
++Consequently, after imposing the known realized value `s=4`, the quotient
++rows become fixed integers.  Before imposing `s=4`, they are integral
++polynomials in the integer `s`; no row imposes even a parity condition.
++
++## 7. General-N rank statement
++
++Here is the promotion-safe rank statement extracted from the computation.
++
++Let `G` be the pinned monodromy group of a decorated RED-N cage profile, and
++let `A_G` be the subgroup-average matrix
++
++```text
++(A_G)_{H,C} = |H cap C| / |H|,
++```
++
++with rows indexed by conjugacy classes of subgroups `H <= G` and columns by
++element conjugacy classes `C` of `G`.  Let `B_profile` be the matrix whose
++columns are the local-inertia class functions contributed by the decorated
++strata of the profile.  Then the rational row rank available from the
++Burnside-Euler system on that decorated profile is exactly
++
++```text
++rank_Q(A_G B_profile).
++```
++
++This rank is a property of the **decorated local inertia columns**, not of the
++coarse moved-cycle label.  That distinction is forced by r2: the survivor unit
++is the carrier multiset with owner partition and physical places, not just a
++label `[lambda^(k)]` (`reducible-all-n-r2...:493-504`), and the label loses
++fixed-letter and placement data (`reducible-all-n-r2...:270-289`).
++
++For the pinned N=4 profile computed here,
++
++```text
++rank_Q(A_{S4} B_profile) = 3
++```
++
++on the supported columns `1,T,V`, while the projection to the residual
++companion variables has rank `1`, generated by `chi_2 + sigma_2`.  The extra
++subgroup rows increase the rank on the **already known D_1 inertia columns**,
++not on the live companion residual.
++
++The all-N consequence is therefore negative in the sense Card A needs:
++for every decorated RED-N profile whose companion components are trivial
++dicriticals with identity generic inertia and whose only nontrivial local
++inertia lies on already pinned branched components, the subgroup-lattice
++Burnside rows have zero projection to companion variables except for the
++typed source-hull row.  On that class, the residual-variable rank is the same
++as the natural-action pair: one source/hull Euler relation.
++
++This covers the transposition/trivial spine represented by the N=4 row and
++the analogous restored `[2]` residuals in the r2 ledger.  It does **not**
++assert a rank theorem for off-spine imprimitive profiles such as the live
++`[22...]`, `[3...]`, `[4...]`, or mixed rows through `N=8`.  R2 explicitly
++keeps block-system descent open off the pinned all-transposition classes
++(`reducible-all-n-r2...:206-232`, `483-523`).  For those rows, a Burnside rank
++claim requires the missing decorated local-inertia matrix `B_profile`; the
++coarse cage label alone is insufficient.
++
++Thus the general-N rank statement is:
++
++```text
++RANK-N-LOCAL-COLUMN:
++  Burnside rank on RED-N residual classes is rank_Q(A_G B_profile).
++  At label level there is no promotion-safe rank excess claim.
++  On the transposition/trivial companion spine, the companion-variable rank is
++  1, not larger than the natural-action source/hull relation.
++```
++
++## 8. Final verdict
++
++No subgroup-class row yields an integer relation on `(s_1, sigma_2, j)` beyond
++`chi_2 + sigma_2 = 1`.
++
++The full eleven-row `S_4` table at the pinned `N=4` profile is internally
++consistent, integral, and matched by the sign and `S_3` resolvent controls.
++Its only new-looking information is dependence on `s_1`, but `s_1=4` is
++already fixed by the realized `(9,6,2)` curve's exact census.  The live
++companion data remain untouched:
++
++```text
++sigma_2: unconstrained by Burnside rows after chi_2 + sigma_2 = 1
++j:       unconstrained by Burnside rows
++s_1:     pinned externally to 4 by the D_1 census, not by a new row
++```
++
++Permanent retirement recommended for this direction as charged:
++**do not spend further on "more Euler identities" from the subgroup lattice
++at the N=4 residual profile.**  Future off-spine use would need new local
++inertia data, not another replay of this table.
++
++<!-- BODY-END -->
+

@@ -1,0 +1,110 @@
+cli=codex-cli 0.152.0 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.152.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a05fa3-7bfe-7812-a48a-26e6696091bf
+--------
+user
+# Review lane: MPRIME-ALLN-REVIEW — gate the Path-1 all-degree classification
+
+The charged Path-1 flagship claims (all PROVED-HERE/UNREVIEWED):
+LEMMA A (H3 is a theorem under H2 — repairs a vacuous promotion);
+SMOOTH-KILL (A_F singular at every N); NODAL-ALL-N (every branch
+smooth => N >= 17; consumes 7.B only for 8<=N<=16); THEOREM
+PROFILE (the (0)/(A)/(B1)/(B2)/(B3) classification); CUSP-KILL
+(case (A) irreducible E => F invertible, via Lin-Zaidenberg +
+Campbell); PROP 6.1 (s=1 forces unibranch, a_p=1); COR 7.2
+(rho transitive, never regular); N4-PIN. A false NODAL-ALL-N or
+PROFILE misroutes the whole all-degree program onto the cusp
+horn. Hostile review:
+(1) LEMMA A: replay in full — does the proof consume anything
+    unpromoted? Is the claimed vacuity of the old [P5] route
+    real (check the promoted text it cites)?
+(2) SMOOTH-KILL: replay; the chi_c(E) = a*chi_c(D) step and
+    Theorem (E) application — hunt hypothesis mismatches.
+(3) NODAL-ALL-N: replay the enumeration in §5 (the bound
+    a-1 <= (R_max(W)+beta)(2a-N) and the (5.4) data). Verify the
+    N<=7 part is genuinely 7.B-free. Spot-check R_max(W) at
+    three W values against the definition.
+(4) THEOREM PROFILE: is the case split exhaustive AND disjoint?
+    The (B3) collapse claim (one cusp absorbs the whole excess —
+    "no contradiction arises and none is claimed") — confirm
+    nothing stronger is smuggled downstream.
+(5) CUSP-KILL: the Lin-Zaidenberg and Campbell consumptions —
+    exact statements vs exact needs (scope mismatches here are
+    the likeliest defect class). COR 7.2 same.
+(6) Controls: verify the three-route agreement on (K) and the
+    N4-PIN reproduction of the promoted rank-four census.
+Verdict per claim: CONFIRMED / REFUTED / GAP.
+Report: xmodel/mprime-alln-review-gpt55-20260902.md
+Seal-at-completion; target 18-28KB.
+charged_input=xmodel/mprime-alln-h2-opus5-20260902.md
+charged_input=xmodel/block-descent-a1-alldegree-h2-coordinator-integration-fable5-20260901.md
+
+Your inputs are frozen read-only copies in `/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.6u044N/inputs`;
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+722d413717fb998fb76783b311807522878cc138025b47c5f1e2214cb8685c80  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.6u044N/inputs/mprime-alln-h2-opus5-20260902.md
+763eec05eb6bc00f1c13e6ff25c2b275ef3c97f20a22e6ba34621244981c56c9  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.6u044N/inputs/block-descent-a1-alldegree-h2-coordinator-integration-fable5-20260901.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll verify the frozen input hashes before reading anything else. If either digest differs from the values you supplied, I’ll stop and report the mismatch.
+exec
+/bin/zsh -lc 'shasum -a 256 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.6u044N/inputs/mprime-alln-h2-opus5-20260902.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.6u044N/inputs/block-descent-a1-alldegree-h2-coordinator-integration-fable5-20260901.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+722d413717fb998fb76783b311807522878cc138025b47c5f1e2214cb8685c80  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.6u044N/inputs/mprime-alln-h2-opus5-20260902.md
+763eec05eb6bc00f1c13e6ff25c2b275ef3c97f20a22e6ba34621244981c56c9  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.6u044N/inputs/block-descent-a1-alldegree-h2-coordinator-integration-fable5-20260901.md
+
