@@ -15112,3 +15112,22 @@ GGV-minimal counterexamples and, unconditionally at N = 4, by
 for non-GGV-minimal representatives at other N
 (OPEN[SUBRECT-ORBIT-BRIDGE]). Neither CH1 nor CH2 may be consumed as a
 kill.
+
+## INTEGRATION #14 (2026-09-02, FABLE 5.1 COORDINATOR, VERIFIED)
+
+Binding artifact: `xmodel/integration14-coordinator-fable51-20260902.md`
+(body b2e5844f, basis 6557a4ad, VERIFIED via artifact_finalize, staged-verify
+VERIFIED at commit). Promotes, at the scopes and with the binding
+repairs stated therein, the shape set (producer opus 7b0ffec7, reviewer
+gpt55 b1e09351): THEOREM FIRST-FORK; (LF) and (MIN); the subrectangular
+normal form in GGV's scope (a GGV-minimal counterexample has E_0 a free
+vertex of its polar tree); THEOREM E0-LEAF-CAP and the vacuity of CH2
+(refuted for GGV-minimal counterexamples, and unconditionally at N = 4
+by polar-chain-n4 64a4ebd6); CH1's refutation; the sharpened Moh floor
+D_min >= 102 with a divisor K in [16, D_min/3]; the one-way satellite
+price T_ext <= tau ⇒ D_min <= 2(tau + N) with the one-unit gap. Records
+SING-WITNESS, MF-RATIONAL, the (B3) census, and the binding reading of
+the day (its §C): every instrument built today yields floors; the
+remaining ceiling is the Puiseux depth at infinity of a degree-minimal
+Jacobian pair — the GGV "next pair" core. See the artifact for exact
+statements — this entry is a pointer.

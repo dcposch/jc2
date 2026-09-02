@@ -20006,3 +20006,10 @@ unconditionally at N = 4, by the POLAR-CHAIN arithmetic
 it is merely unproved. The frontier reading stands: the ceiling is the
 depth (T), free in Newton-polygon theory; the depth flagship runs.
 INTEGRATION #14 binds the shape set now.
+
+EVENT (~14:05Z) — **INTEGRATION #14 BOUND AND VERIFIED** (body per the
+AUDIT pointer, basis 6557a4ad): the shape set; CH1/CH2 retired as
+kills; D_min >= 102 with the divisor structure; the day's binding
+reading in its §C. Runners: depth-ceiling (opus), keller-cluster-
+census-codegen (sol). Seats: Opus 1/5; Sol 1; Grok 0; GPT-5.5 0. Next
+full-round floor 20:57Z; the round's headline is the §C reading.
