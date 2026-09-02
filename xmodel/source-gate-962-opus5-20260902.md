@@ -54,9 +54,8 @@ opened beyond the three charged submissions.
 
 ### 1.2 Lemma SRC-0 — the three `Y`s are one scheme
 
-The three submissions each name a surface and none of them proves the surfaces
-agree. They do. This is the reconciliation, and it is what makes a single typed
-object possible.
+The three submissions each name a surface; none proves the surfaces agree. They
+do, and that is what makes a single typed object possible.
 
 > **Lemma SRC-0.** Let `F : A^2 → A^2` be Keller with non-properness set
 > `A = A_F`, `td = N`, and let `rho : pi_1(A^2 ∖ A) → S_N` be the monodromy of
@@ -73,12 +72,10 @@ object possible.
 > cover over `V`, is the normalisation of `A^2` in that cover's function field,
 > which is `Y_rho` (Grauert–Remmert / GAGA supply its algebraicity). ∎
 
-So `[G]`'s "the SHEET-GATE `Y` is the correct `Y`, not a bare Riemann-existence
-surface" and `[O]`'s "the branched cover is the wrong object" are **not in
-conflict**: they are the same surface, and the disagreement is only about which
-*property* of it is being asserted. `[G]` and `[S]` are right that it is never
-`A^2`; `[O]` is right that `Ȳ ≅ C^2` is not a necessary condition. Both follow
-from `[SG]` Lemma 2.2 alone.
+So `[G]`'s "SHEET-GATE `Y` is the correct `Y`" and `[O]`'s "the branched cover
+is the wrong object" are **not in conflict**: same surface, different property
+asserted. `[G]`/`[S]` are right that it is never `A^2`; `[O]` is right that
+`Ȳ ≅ C^2` is not necessary. Both follow from `[SG]` Lemma 2.2 alone.
 
 ### 1.3 The typed object
 
@@ -108,13 +105,11 @@ hypothetical `rho`; clause 5 is `[G]`'s four-box match; `[S]`'s
 
 `OPEN[REP-96-SOURCE-IS-C2]` (`[R96]:652`) is **retired as mis-typed**: it asks
 for `Y ≅ C^2`, which `[SG]` Lemma 2.2 refutes for every Keller `F`, so the token
-as written is unsatisfiable and its "openness" was an artifact. Successor:
+is unsatisfiable and its "openness" was an artifact. Successor
 **`OPEN[SOURCE-OPEN-U]`** = does a `U` satisfying `(SRC-OPEN)` exist for a given
-`rho`. `[S]`'s `OPEN[REP-96-A2-OPEN-IMMERSION-BOUNDARY]` is the same token under
-a different name; I use `OPEN[SOURCE-OPEN-U]` per the charge and record the
-alias. Retiring the old token is a *typing* correction, not a closure: the
-geometric gap `[R96] §7 R2` names is undiminished and now lives in
-`OPEN[SOURCE-OPEN-U]`.
+`rho`; `[S]`'s `OPEN[REP-96-A2-OPEN-IMMERSION-BOUNDARY]` is an alias. This is a
+*typing* correction, not a closure: the geometric gap `[R96] §7 R2` names is
+undiminished and now lives in the successor token.
 
 ---
 
@@ -137,12 +132,10 @@ The three razors as necessary conditions on `INPUT-rho-D`:
 | (b) FOUR-BOX EULER | `[G] §3` | `chi_c(Y)_RH = 1 + chi_c(B_Y)` | nothing |
 | (c) BOUNDARY LATTICE | `[S] §4` | `det L̃_infty <= 0` on a declared `U`-completion | a resolved completion and its dicritical/non-dicritical split |
 
-Only razor (b) runs on `INPUT-rho-D` alone. That is the reason the Mode-1 verdict
-below is razor (b)'s, and the reason razors (a) and (c) return typed status
-rather than numbers. The dependency is one-directional and is stated once, in
-§3.8: razor (a)'s *rank* output, when it exists, decides the free parameter of
-razor (b) (the sheet-location bit `b`), so the stack is not three independent
-tests but a chain with one live coupling.
+Only razor (b) runs on `INPUT-rho-D` alone — hence the Mode-1 verdict is razor
+(b)'s, and razors (a) and (c) return typed status rather than numbers. The stack
+is a chain, not three independent tests: §3.8 shows razor (a)'s *rank* output
+decides razor (b)'s free parameter (the sheet-location bit `b`).
 
 ---
 
@@ -185,12 +178,11 @@ defects below are not in the controls' answers but in what they fail to test.
 
 `d2_matrix` walks a relator left-to-right applying `rho[g]` **on the left**, so
 the transport of `w = g_1 … g_m` is `rho(g_m) ∘ … ∘ rho(g_1)` — the right-action
-/ monodromy convention, i.e. `rho` is used as an *anti*-homomorphism. A caller
-holding an ordinary left-action homomorphism `L` (`L(uv) = L(u)∘L(v)`) is
-therefore passing the wrong datum, and the relator lifts **do not close**, so
-`d_2` is not a boundary map and the Smith normal form is meaningless.
-
-The code never checked. MEASURED witness, found by search this lane:
+/ monodromy convention, i.e. `rho` used as an *anti*-homomorphism. A caller
+holding an ordinary left-action homomorphism `L` is passing the wrong datum, the
+relator lifts **do not close**, `d_2` is not a boundary map, and the Smith normal
+form is meaningless. The code never checked. MEASURED witness, found by search
+this lane:
 
 ```text
    G = < x, y |  x y x y^-1 x^-1 y^-2 >          k = 5
@@ -201,34 +193,30 @@ The code never checked. MEASURED witness, found by search this lane:
    cover_h1 RETURNED       Z^1             <- no exception, no warning
 ```
 
-This is not academic for this campaign. The ZvK presentation of
-`pi_1(A^2 ∖ D)` for `(9,6,2)` consists of **conjugation relators**
-`xi_a = w xi_b w^{-1}` (`[R96] §7 R1`), and those are exactly the relator shape
-that distinguishes the two conventions. Feeding SIROCCO/ZvK output to the
-unrepaired instrument would have produced a number with no meaning, and — worse
-— a *torsion-free* number is the "survives" verdict, so the failure mode points
-toward false survival, not false kill.
+This is not academic here. The ZvK presentation of `pi_1(A^2 ∖ D)` for
+`(9,6,2)` consists of **conjugation relators** `xi_a = w xi_b w^{-1}`
+(`[R96] §7 R1`) — exactly the shape that distinguishes the two conventions.
+Feeding SIROCCO/ZvK output to the unrepaired instrument would have produced a
+meaningless number, and a *torsion-free* number is the "survives" verdict: the
+failure mode points toward false survival, not false kill.
 
 ### 3.4 DEFECT 2 — the control suite cannot see DEFECT 1
 
-Both relators used by the four controls are invariant under letter-reversal
-(the commutator, and the braid relation `xyx = yxy`), and in the trefoil
-controls `rho(x), rho(y)` are involutions, for which the two conventions
-coincide outright. So the delivered suite is **convention-blind by
-construction**: it would have passed identically with the transport walk
-reversed. A control suite that cannot fail on the instrument's live failure mode
-is not a calibration of that failure mode.
+Both relators used by the four controls are invariant under letter-reversal (the
+commutator, and the braid relation `xyx = yxy`), and in the trefoil controls
+`rho(x), rho(y)` are involutions, for which the conventions coincide outright.
+The delivered suite is therefore **convention-blind by construction** — it would
+pass identically with the transport walk reversed. A control suite that cannot
+fail on the instrument's live failure mode does not calibrate it.
 
 ### 3.5 Repair delivered
 
-`box/cover_h1.py` patched in place, additively:
-
-* the convention is now stated in the module docstring, with the witness;
-* `lift_closes(...)` — an explicit `d_1 ∘ d_2 = 0` test;
-* `cover_h1` **raises** unless every relator lifts closed, and when the
-  elementwise inverse *does* close it says so, naming `to_transport_convention`;
-* `to_transport_convention(rho)` — the left-action → transport converter;
-* **CONTROL 4**, convention discrimination, which the old suite lacked.
+`box/cover_h1.py` patched additively: the convention is stated in the docstring
+with the witness; `lift_closes(...)` is an explicit `d_1 ∘ d_2 = 0` test;
+`cover_h1` **raises** unless every relator lifts closed, naming
+`to_transport_convention(rho)` (the left-action → transport converter) when the
+elementwise inverse does close; and **CONTROL 4** adds the convention
+discrimination the old suite lacked.
 
 MEASURED after repair — CONTROLS 1–3 are byte-identical to §3.2, so the repair
 is non-breaking, and the new one fires:
@@ -253,31 +241,28 @@ Independently recomputed this lane (MEASURED), with `lift_closes` enforced:
    B_3 -> S_4 : 54 transitive reps, 30 with torsion (56%)   Z^2 x24 , Z + Z/2 x24 , Z + Z/3 x6
 ```
 
-`[O] §7`'s figures are confirmed exactly. The razor has real kill power on data
+`[O] §7`'s figures are confirmed exactly: the razor has real kill power on data
 of this shape, and every torsion-free survivor has `rank ∈ {1,2}` — which §3.8
 shows is exactly the binding window.
 
 ### 3.7 Status at `(9,6,2)`: PENDING-INPUT, not OPEN-for-lack-of-theory
 
-Running HOM-COVER needs a presentation of `pi_1(A^2 ∖ D)`, i.e. the eight
-tangency transports and the node-fibre word. Those are the content of
-`OPEN[REP-96-BM-FACTORISATION]`; the SIROCCO run banked the nine *braids*
-(`notes.md:17305-17310`, CENSUS-OK, exponent ledger 16) but no braid words or
-transports are on disk in this repository, and Sage 10.9 returned the 4-tuple
-with **no base point** — `OPEN[BMFACT-BASEPOINT]`, which infects every labelled
-transport. Therefore:
+Running HOM-COVER needs a presentation of `pi_1(A^2 ∖ D)`: the eight tangency
+transports and the node-fibre word. Those are the content of
+`OPEN[REP-96-BM-FACTORISATION]`. The SIROCCO run banked the nine *braids*
+(`notes.md:17305-17310`, CENSUS-OK, exponent ledger 16), but no braid words or
+transports are on disk here, and Sage 10.9 returned the 4-tuple with **no base
+point** — `OPEN[BMFACT-BASEPOINT]`, which infects every labelled transport.
 
 > **Razor (a) at `(9,6,2)`: NOT RUN — PENDING-INPUT.** Typed
 > `OPEN[REP-96-BM-FACTORISATION]` + `OPEN[BMFACT-BASEPOINT]`. The instrument is
-> now verified and fail-closed, so the razor is *armed*: it becomes a
-> one-second computation the moment the SAGE-NATIVE job emits a surviving
-> labelled tuple. It must not be run on a reconstructed or assumed
-> presentation; that would fill a gap by analogy.
+> now verified and fail-closed, so the razor is *armed*: a one-second
+> computation the moment SAGE-NATIVE emits a surviving labelled tuple. It must
+> not be run on a reconstructed presentation; that would fill a gap by analogy.
 
 ### 3.8 What razor (a) *does* give without transports — and the coupling to (b)
 
-Two facts are available from `INPUT-rho-D` alone, and they are the reason the
-three razors are a chain rather than a list.
+Two facts follow from `INPUT-rho-D` alone, and they are why the razors chain.
 
 > **Lemma HC-1.** In Mode 1, `r(E) <= a`, where `E = F^{-1}(D)`.
 > *Proof.* `E = V(h∘F)` is a hypersurface, so it has no isolated points and
@@ -290,9 +275,9 @@ three razors are a chain rather than a list.
 > (a)'s rank output decides `OPEN[SHEET-LOCATION]` (`[SG] §9.1`) at this
 > profile, which is razor (b)'s only free parameter.
 
-That is a genuine new link between `[O]`'s mechanism and `[SG]`'s open bit, and
-it costs nothing extra: the same Smith normal form supplies it. It does not fire
-today, because the presentation is missing.
+A genuine new link between `[O]`'s mechanism and `[SG]`'s open bit, supplied by
+the same Smith normal form at no extra cost. It does not fire today: the
+presentation is missing.
 
 ---
 
@@ -311,16 +296,15 @@ Mode 1 = irreducible `A_F`, i.e. `A_F = D_1` is the whole non-properness set.
 | local group at a node | two **disjoint** transpositions, `H_p ≅ Z/2 × Z/2` | promoted (`pi1-s4-decision §2`), quoted `[R96] §6` |
 
 All five are conjugacy invariants, so `OPEN[BMFACT-STRAND-VS-BLOCK]` does not
-infect the arithmetic — `[G] §3`'s firewall, confirmed. Nothing labelled is
-used.
+infect the arithmetic (`[G] §3`'s firewall, confirmed). Nothing labelled is used.
 
 ### 4.2 The four-box, enumerated rather than assumed
 
-`sigma = #Fix(g) = 2`; `[SG]` Prop 2.4 gives `1 <= a <= sigma <= N − 2 = 2`;
-`N = a + b + sum_j delta_j e_j` with `a + b = sigma = 2` forces
+`sigma = #Fix(g) = 2`; `[SG]` Prop 2.4 gives `1 <= a <= sigma <= N − 2 = 2`; and
+`a + b = sigma = 2` in `N = a + b + sum_j delta_j e_j` forces
 `sum_{e_j>=2} delta_j e_j = 2`, i.e. **exactly one ramified boundary component
-with `(delta,e) = (1,2)`** — `ram = 2` is forced. The only freedom is
-`b ∈ {0,1}`, which is precisely `OPEN[SHEET-LOCATION]`, open at `d = 4` in the
+with `(delta,e) = (1,2)`**, so `ram = 2` is forced. The only freedom is
+`b ∈ {0,1}` — precisely `OPEN[SHEET-LOCATION]`, open at `d = 4` in the
 transposition class (`[SG] §9.1`). Both branches are carried:
 
 ```text
@@ -356,16 +340,15 @@ Cross-check (MEASURED): the weighted count
 >    chi_c(B_Y)  =  m_Y · chi_c(D̃)  −  sum_{p ∈ Sing D} [ m_Y · r_p − c_p + a_p ] ,
 > ```
 > with `c_p = #q^{-1}(p)` and `a_p = #F^{-1}(p)`.
-> *Proof.* Over `D_0`, `B_Y → D_0` is a covering (`[SG]` Lemma 3.3) and `D_0` is
-> smooth, so `B_Y` is smooth there; all singularities of `B_Y` lie over
-> `Sing D`. Each `B_j` is birational onto `D`, so its normalisation is `D̃` and
-> it has `r_p` branches over `p`; the total branch count of `B_Y` over `p` is
-> `m_Y r_p`, while the number of *points* of `B_Y` over `p` is
-> `c_p − a_p` (all fibre points not in `U`). Apply `[SG]` 5.1(c) to the
-> normalisation `⊔_j D̃ → B_Y`. ∎
+> *Proof.* Over `D_0`, `B_Y → D_0` is a covering (`[SG]` Lemma 3.3) of the
+> smooth `D_0`, so `B_Y` is smooth there and all its singularities lie over
+> `Sing D`. Each `B_j` is birational onto `D`, so its normalisation is `D̃` with
+> `r_p` branches over `p`; the total branch count of `B_Y` over `p` is `m_Y r_p`
+> while its *point* count there is `c_p − a_p` (the fibre points not in `U`).
+> Apply `[SG]` 5.1(c) to `⊔_j D̃ → B_Y`. ∎
 
-Lemma SG-2 handles components meeting each other automatically (the branch count
-is what enters), so no disjointness hypothesis is needed. Instantiating at
+Because the branch count is what enters, SG-2 handles components meeting each
+other automatically; no disjointness hypothesis is needed. Instantiating at
 `a_p = 0` — forced, since `a_p <= s_p = #Fix(Z/2 × Z/2) = 0` by `[SG]` Cor 3.2:
 
 ```text
@@ -375,10 +358,9 @@ is what enters), so no disjointness hypothesis is needed. Instantiating at
                           each B_j is a 4-nodal rational curve
 ```
 
-The branch-B0 statement is worth isolating: **if `b = 0`, the boundary divisor
-of a `(9,6,2)` Keller source is forced to be the normalisation `A^1` of `A_F`,
-with no freedom at all.** That is a structural fact about `B_Y` and it is not in
-`(M′)`.
+Worth isolating: **if `b = 0`, the boundary divisor of a `(9,6,2)` Keller source
+is forced to be the normalisation `A^1` of `A_F`, with no freedom at all** — a
+structural fact about `B_Y`, and not in `(M′)`.
 
 ### 4.5 Verdict
 
@@ -396,8 +378,7 @@ with no freedom at all.** That is a structural fact about `B_Y` and it is not in
 
 ### 4.6 THEOREM SG-1 — razor (b) in Mode 1 *is* `(M′)`
 
-This is the load-bearing negative finding of the lane, and it is what a hostile
-reviewer should have demanded.
+The load-bearing negative finding of the lane.
 
 > **Theorem SG-1.** Under Keller + (H2) + (H3), the test
 > `chi_c(Y) = 1 + chi_c(B_Y)` is **logically identical** to `(M′)`.
@@ -412,21 +393,19 @@ reviewer should have demanded.
 Consequences, all of them constraints on how this avenue may be sold:
 
 1. **Razor (b) adds no kill power over `(M′)` in Mode 1.** `[G] §3` typed the
-   Mode-1 mismatch as "confirmatory"; SG-1 upgrades that from an expectation to
-   a theorem. The `(9,6,2)` mismatch of §4.5 is `(M′)`'s `a = 2 ⟹ 2s >= 1 + 2s`
-   contradiction (`[R96] §7 R4`) re-expressed, and the branch-B0 gap is exactly
-   the same one unit.
-2. **The same reduction runs component-wise**, so `[G]`'s Mode 2 is likewise not
-   independent of the block-free `(M′)` — which `[R96] §7 R4` has already
-   collapsed to `chi_2 + sigma_2 = 1` (7.1). **Path 2 must not count a Mode-2
-   Euler match as evidence additional to (7.1); it is the same equation.** This
-   is the one place where the charged avenue, taken at face value, would have
-   double-counted.
-3. **What is genuinely new is Lemma SG-2**, i.e. the independent computation of
-   `chi_c(B_Y)` and, with it, the forced isomorphism type of the boundary
-   divisor. `(M′)` is a numerical identity in `a, a_p, nu, s`; SG-2 names the
-   object. That is the piece a construction lane can consume, and it is the
-   piece `[S] §4`'s boundary-lattice mechanism needs as its input.
+   Mode-1 mismatch as "confirmatory"; SG-1 upgrades that from expectation to
+   theorem. §4.5's mismatch is `(M′)`'s `a = 2 ⟹ 2s >= 1 + 2s` contradiction
+   (`[R96] §7 R4`) re-expressed, and the branch-B0 gap is the same one unit.
+2. **The reduction runs component-wise**, so Mode 2 is likewise not independent
+   of the block-free `(M′)`, already collapsed to `chi_2 + sigma_2 = 1` (`[R96]`
+   (7.1)). **Path 2 must not count a Mode-2 Euler match as evidence additional
+   to (7.1); it is the same equation.** This is the one place where the charged
+   avenue, at face value, would have double-counted.
+3. **What is genuinely new is Lemma SG-2**: the independent computation of
+   `chi_c(B_Y)`, hence the forced isomorphism type of the boundary divisor.
+   `(M′)` is a numerical identity in `a, a_p, nu, s`; SG-2 names the object.
+   That is what a construction lane can consume and what `[S] §4`'s
+   boundary-lattice mechanism needs as input.
 
 Recorded invariant (MEASURED across all rows run): for the transposition class
 with `chi_c(D̃) = 1` and `b = 0`, the gap is **exactly 1 for every node count** —
@@ -436,10 +415,10 @@ with `chi_c(D̃) = 1` and `b = 0`, the gap is **exactly 1 for every node count**
 
 `[R96] §5`'s surviving classes all have transposition meridians, but the
 four-box admits one other cycle type at `N = 4` (`[SG] §6.4`), so it is run
-rather than assumed away. `g` a 3-cycle: `sigma = 1`, `c = 2`, `a = 1`, `b = 0`
-(`b = 0` is *proved* here, `[SG]` Thm 4.3), `ram = 3`; at a node the two
-commuting branch meridians lie in the centraliser of a 3-cycle in `S_4`, which is
-`⟨(abc)⟩`, so `H_p = Z/3`, `c_p = 2`, `s_p = 1` and `a_p ∈ {0,1}` is **not**
+rather than assumed away. For `g` a 3-cycle: `sigma = 1`, `c = 2`, `a = 1`,
+`ram = 3`, and `b = 0` is *proved* (`[SG]` Thm 4.3). At a node the two commuting
+branch meridians lie in the centraliser of a 3-cycle in `S_4`, namely
+`⟨(abc)⟩`, so `H_p = Z/3`, `c_p = 2`, `s_p = 1`, and `a_p ∈ {0,1}` is **not**
 forced. MEASURED:
 
 ```text
@@ -448,21 +427,20 @@ forced. MEASURED:
 
 The gap is affine and strictly increasing in `sum a_p`, so the whole
 `ACS-FIX-VS-DEFICIT` interval is decided by its endpoints and the branch closes
-without declaring `a_p`. Mode 1 therefore dies at `(9,6,2)` for **every**
-admissible cycle type, not only the census one.
+without declaring `a_p`. Mode 1 dies at `(9,6,2)` for **every** admissible cycle
+type, not only the census one.
 
 ### 4.8 DEVIATION — the charged `(a,sigma,ram) = (2,2,2)`
 
-`[G]` Card I types the expected four-box as `(2,2,2)`. Confirmed for `sigma` and
-`ram`, both forced. **`a = 2` is not forced**: it is `a = sigma`, i.e. `b = 0`,
+`[G]` Card I types the expected four-box as `(2,2,2)`. `sigma` and `ram` are
+confirmed and forced. **`a = 2` is not forced**: it is `a = sigma`, i.e. `b = 0`,
 i.e. `OPEN[SHEET-LOCATION]` at exactly the profile where `[SG] §9.1` leaves it
-open, and the same hypothesis `[O] §4` types as `OPEN[ACS-FIX-VS-DEFICIT]`. The
-charged expectation therefore silently consumes an open bit. The lane's verdict
-does not depend on it — both branches mismatch — but the box as charged should be
-re-typed `(a ∈ {1,2}, sigma = 2, ram = 2)`, and `[R96] §7 R3`'s consistency
-remark "`a^{(1)} = N − W_1 = 2` and independently `a^{(1)} = #Fix = 2`" should be
-read as **one** derivation, not two: the second is the equality case of the
-first, not an independent confirmation of it.
+open — the same hypothesis `[O] §4` types as `OPEN[ACS-FIX-VS-DEFICIT]`. The
+charged expectation silently consumes an open bit. The verdict does not depend
+on it (both branches mismatch), but the box should be re-typed
+`(a ∈ {1,2}, sigma = 2, ram = 2)`, and `[R96] §7 R3`'s remark
+"`a^{(1)} = N − W_1 = 2` and independently `a^{(1)} = #Fix = 2`" read as **one**
+derivation: the second is the equality case of the first, not a confirmation.
 
 ### 4.9 DEVIATION — no compactification is used, so `OPEN[RH-LINE-AT-INFINITY]` does not arise
 
@@ -471,13 +449,13 @@ first, not an independent confirmation of it.
 Every step is `chi_c` on affine varieties via `[SG]` Lemma 5.1, which needs
 neither smoothness nor properness nor `chi_c = chi`. Infinity enters at exactly
 one place — `chi_c(D̃) = 1`, i.e. `D` rational with **one** place at infinity —
-and that is an affine statement about the normalisation of the affine curve
-(`(H3)`, `[SG]:23`), verified for this row in `[R96] §1`. Naming `P^2`, `L`,
-`D̄`, `delta_inf = 24` or `beta_1 = 25` would import a *projective* place into an
-affine computation, which is the flag/place fallacy the requirement was designed
-to prevent. The requirement is therefore honoured by not needing it; the token is
-**not** returned, and the deviation is in the safe direction. `beta_1`,
-`delta_inf` and `e(iota)` appear nowhere in §4's arithmetic.
+an affine statement about the normalisation of the affine curve (`(H3)`,
+`[SG]:23`), verified for this row in `[R96] §1`. Naming `P^2`, `L`, `D̄`,
+`delta_inf = 24` or `beta_1 = 25` would import a *projective* place into an
+affine computation: the flag/place fallacy the requirement exists to prevent.
+The requirement is honoured by not needing it, the token is **not** returned,
+and the deviation is in the safe direction. `beta_1`, `delta_inf` and `e(iota)`
+appear nowhere in §4's arithmetic.
 
 ---
 
@@ -486,21 +464,20 @@ to prevent. The requirement is therefore honoured by not needing it; the token i
 ### 5.1 The banked lemma, as stated
 
 `Lemma DET-LINF` (`domrina-gap-repair-opus5-20260901.md:141-176`):
-`det L̃∞ <= 0` unconditionally, where `X̃` is a completion of the **source**
-`C̃^2` on which `F` extends to a morphism of projective varieties, `L̃ = X̃ − C̃^2`
-is the boundary tree, and `L̃∞ = L̃ − (dicritical components)`. Its proof needs
-(i) `X̃ − L̃∞` affine and (ii) `Pic(X̃)` freely generated by the components of
-`L̃`, plus `L̃∞` connected and made of smooth rational curves.
+`det L̃∞ <= 0` unconditionally, where `X̃` completes the **source** `C̃^2` and `F`
+extends to a morphism of projective varieties, `L̃ = X̃ − C̃^2` is the boundary
+tree, and `L̃∞ = L̃ − (dicriticals)`. Its proof needs (i) `X̃ − L̃∞` affine,
+(ii) `Pic(X̃)` freely generated by the components of `L̃`, plus `L̃∞` connected
+and made of smooth rational curves.
 
 ### 5.2 Status at `(9,6,2)` Mode 1
 
 Razor (b) has already refuted `(SRC-OPEN)` in Mode 1, so there is no admissible
-`U` to complete. **Razor (c): NOT REACHED.** Had it been reached, its input — the
-dual graph of `L̃` on a declared completion, with the dicritical/non-dicritical
-split — is not derivable from `INPUT-rho-D`: cycle types determine `delta_j` and
-`e_j`, not a resolution tree. Typed `OPEN[SOURCE-OPEN-COMPLETION-UNDECLARED]`,
-carried forward to Mode 2, where `[S] §4` correctly makes it wait on a full
-`phi`.
+`U` to complete. **Razor (c): NOT REACHED.** Its input — the dual graph of `L̃`
+on a declared completion with its dicritical/non-dicritical split — is not
+derivable from `INPUT-rho-D`, since cycle types determine `delta_j` and `e_j`,
+not a resolution tree. Typed `OPEN[SOURCE-OPEN-COMPLETION-UNDECLARED]`, carried
+to Mode 2, where `[S] §4` correctly makes it wait on a full `phi`.
 
 ### 5.3 The empty-`L̃∞` determinant trap — named and refused
 
@@ -513,14 +490,13 @@ pole/interior violation at once. Recorded so no successor re-imports it.
 
 ### 5.4 The one free consequence, stated honestly
 
-Step (i) of DET-LINF's proof does give something: `X̃ − L̃∞ = F^{-1}(C^2)` is
-affine, and an affine surface is not projective, so `L̃∞ ≠ ∅` — **not every
-boundary component of an admissible completion is dicritical.** For `X̃ = P^2`
-with `L̃ = {L}` this forces `L̃∞ = {L}`, `det = L·L = 1 > 0`, contradiction:
-so any admissible completion has `rho(X̃) >= 2`. That merely reproves that a
-Keller counterexample does not extend to a morphism `P^2 → P^2` (true for the
-elementary reason that such a morphism is finite). **Consistency check, not new
-information**, and recorded as such.
+Step (i) does give something: `X̃ − L̃∞ = F^{-1}(C^2)` is affine, an affine
+surface is not projective, so `L̃∞ ≠ ∅` — **not every boundary component of an
+admissible completion is dicritical.** For `X̃ = P^2` with `L̃ = {L}` this forces
+`L̃∞ = {L}`, `det = L·L = 1 > 0`, contradiction, so any admissible completion has
+`rho(X̃) >= 2`. That merely reproves that a Keller counterexample does not extend
+to a morphism `P^2 → P^2` (elementary: such a morphism is finite).
+**Consistency check, not new information.**
 
 ---
 

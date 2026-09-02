@@ -17868,3 +17868,30 @@ residual stratum and the GGV firewall (consuming only the SOUND
 gcd>=16 per the 01:11Z correction). The direct-solve fantasy is
 retired cleanly; the decision weight for (9,6,2)/(9,6,4) stays
 with the braid pipelines + razors.
+
+## LIVE STATE (observed 2026-09-02T01:20Z) — ALL-TORSION AT THE CABLED PLACE; TRANSFER FLAGSHIP LAUNCHED
+
+**HOMCOVER-DISCRIMINATOR landed** (`homcover-discriminator-grok46-20260902.md`,
+b462b261, BODY_SEALED): **ALL-TORSION** — every
+campaign-constrained representation at the (9,6,2) cabled place
+carries Z/2 in H^ab, and the CABLE supplies it: unconstrained
+transitive B_3->S_4 has 24/54 torsion-free, so bare B_3 would
+have yielded countermodels (noncst-T); after cabling, Z/2
+appears uniformly on the constrained cut. The stop condition
+(a torsion-free constrained rep) did NOT fire. Card B's YES
+branch: **fund the transfer lemma.**
+
+**HOMCOVER-TRANSFER launched** (opus seat 4,
+`homcover-transfer-opus5-20260902`): target = for every
+noninvertible plane Keller map, H^ab of the induced cover has
+torsion, contradicting H_1(C^2\E)=Z^r — JC2 at every degree at
+once if it lands in full. Staged: foundations custody
+(characteristic varieties for AFFINE complements — not banked;
+primary-source or derive), the constraint interface at general N
+(incl. OPEN[CABLE-UNIVERSALITY] honesty check on the
+never-transverse statement), global N=4 transfer on a realized
+substrate ((9,6,4) if (9,6,2) is vacuous under BLOCK-zero), then
+the general-N statement — with the explicit note that if the
+horn's cusp profiles force cabled places, the TWO REMAINING
+PROOF NECKS MERGE. Opus seats: 4/5 in use (source-gate-962,
+homcover-transfer + 2 idle-completed).

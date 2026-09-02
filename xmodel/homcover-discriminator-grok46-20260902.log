@@ -1,2 +1,20 @@
 cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
-I'll start by verifying the frozen input hashes, then load the charged cards, the cover instrument, and the campaign constraints before enumerating local reps.Hashes match. Next I’ll read the charged cards, the instrument, and the campaign constraints.Charged cards and the instrument are in. Next I’ll locate the SIROCCO/ZvK bank, TB-GERM, and any prior (9,6,2) local-group work.I’ll pull the SIROCCO/ZvK bank, the six REP-96 classes, the seal tool, and the local-group sources next.I’ll locate the banked SIROCCO JSON and a sealed-report template, then pin the local-group presentation.I have the cabling word and the closed-braid presentation. Next I’ll verify the instrument controls and run the local-model razor.The cabling word matches the 144-tuple action, but Artin relators are not evaluating to the identity — I’ll debug that mismatch before trusting any G_∞ homology.Hurwitz matches Artin applied leftmost-first. I’ll switch the relator convention to that and re-run G_∞.Instrument and G_∞ results are clean. I’ll write the sealed report with ALL-TORSION as the typed local outcome, scoped so it does not silently become a global kill.
+I'll start by verifying the frozen input hashes, then load the charged cards, the cover instrument, and the campaign constraints before enumerating local reps.Hashes match. Next I’ll read the charged cards, the instrument, and the campaign constraints.Charged cards and the instrument are in. Next I’ll locate the SIROCCO/ZvK bank, TB-GERM, and any prior (9,6,2) local-group work.I’ll pull the SIROCCO/ZvK bank, the six REP-96 classes, the seal tool, and the local-group sources next.I’ll locate the banked SIROCCO JSON and a sealed-report template, then pin the local-group presentation.I have the cabling word and the closed-braid presentation. Next I’ll verify the instrument controls and run the local-model razor.The cabling word matches the 144-tuple action, but Artin relators are not evaluating to the identity — I’ll debug that mismatch before trusting any G_∞ homology.Hurwitz matches Artin applied leftmost-first. I’ll switch the relator convention to that and re-run G_∞.Instrument and G_∞ results are clean. I’ll write the sealed report with ALL-TORSION as the typed local outcome, scoped so it does not silently become a global kill.**ALL-TORSION** at the local cabled-place group. Frozen hashes matched. Report: `xmodel/homcover-discriminator-grok46-20260902.md` (18.9KB, sealed).
+
+Every campaign-constrained representation of the **closed-braid group of `rho_inf`** — `C_3(delta_3^2)·iota` in the BLOCK reading, the six REP-96 classes / 144 tuples — has
+
+```text
+H_1  =  Z^3 (+) Z/2
+```
+
+That is Card B’s discriminator: **fund the transfer lemma** as a candidate all-degree obstruction. The stop condition (a torsion-free constrained local rep) did not fire.
+
+What this is not: it is not a kill of `(9,6,2)`, not a representation of `pi_1(C^2 \ D)`, and not JC2 at every degree. Transfer of this `Z/2` into the ACS-1 covering remains `OPEN[HOM-COVER-TRANSFER]`.
+
+Supporting facts, all measured against `box/cover_h1.py` (4/4 controls plus closed-braid trefoil `Z ⊕ Z/3`; unconstrained `B_3 → S_4` census 54/30 matches the ideation):
+
+- Cabling takes the **torsion-free** `noncst-T` outer `B_3`-cover (`H_1 = Z^2` on its 3-set) and produces `Z/2` after cabling. That is the cable’s contribution.
+- TB-GERM does not apply (family-3 / `(8,6)`; here `beta_1 = 25`).
+- The germ group `T(3,25)` is a **different** object (no transitive mer-to-transposition `S_4`-rep; its `C_2` covers are torsion-free). Not identified with `G_infty`.
+- Full global ZvK was **not** run: SIROCCO JSON is not on this host. The product relation *is* `G_infty`. `OPEN[BMFACT-STRAND-VS-BLOCK]` is untouched.
+DIVERT path=xmodel/homcover-discriminator-grok46-20260902.md status=CLEAN_SEALED body_bytes=18959 body_sha256=5558f3eea731c6edf11845a7f16ba67867d2c68ea90920153d0f6c5ef1d9256e
