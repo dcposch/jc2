@@ -19979,3 +19979,30 @@ MINIMAL-KELLER-SHAPE's independent refutation of CH1/CH2 (two
 different models, two different routes: the affine/boundary join here,
 the Newton-polygon gauge there). Recorded MEASURED; the two reviews in
 flight (shape) cover the load-bearing content.
+
+EVENT (~13:55Z per lane print) — **MINIMAL-KELLER-SHAPE REVIEWED**
+(`minimal-keller-shape-review-gpt55-20260902.md`, b1e09351,
+BODY_SEALED): FIRST-FORK CONFIRMED with a wording repair (it counts
+REDUCED points at infinity; tangency to L_infty lengthens the chain
+above one reduced point, it does not split the neighbour; six-map
+replay reproduces val(E_0) = nu); SUBRECTANGULAR CONFIRMED ONLY IN GGV
+SCOPE — a GGV-minimal pair (minimal B = gcd(deg P, deg Q) over ALL
+counterexamples) can be moved to a standard subrectangular (m,n)-pair
+preserving both degrees, with nu = 2 and E_0 free; the producer's
+"every counterexample / every Aut × Aut degree-minimal representative"
+is NOT what GGV says — the bridge from orbit-minimality to GGV
+minimality is **OPEN[SUBRECT-ORBIT-BRIDGE]** (bounded: whether a
+degree-minimal representative of a given counterexample admits a
+degree-preserving subrectangular gauge); LF, MIN, E0-LEAF-CAP, the
+conditional "CH2 + Moh ⇒ N >= 100", CH1's control-class refutation and
+the sharpened Moh divisor floor CONFIRMED with typing repairs; the
+T <= tau ⇔ D_min <= 2(tau + N) BICONDITIONAL REFUTED — only the one-way
+T <= tau ⇒ D_min <= 2(tau + N) is proved; the one-unit gap
+(T >= 51 − N vs tau <= 50 − N) CONFIRMED; T = T_class in the gauge
+confirmed with the rho_0 accounting. NET: CH2's hypothesis is refuted
+for GGV-minimal counterexamples and, independently and
+unconditionally at N = 4, by the POLAR-CHAIN arithmetic
+(7 >= 2n + kappa >= 9); at other N for non-GGV-minimal representatives
+it is merely unproved. The frontier reading stands: the ceiling is the
+depth (T), free in Newton-polygon theory; the depth flagship runs.
+INTEGRATION #14 binds the shape set now.

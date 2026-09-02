@@ -15085,3 +15085,30 @@ hypothesis is FALSE at every degree-minimal counterexample; CH1
 kill. Pending the review: MOH-FLOOR sharpened to D_min >= 102 with a
 divisor K in [16, D_min/3]; T = T_class in the subrectangular gauge;
 OPEN[SAT-MASS] is the ceiling itself at W <= 3.
+
+## INTEGRATION #13 DELTA (b) (2026-09-02, REVIEWED): FIRST-FORK; THE SUBRECTANGULAR SCOPE; THE MOH FLOOR SHARPENED
+
+`minimal-keller-shape-review-gpt55-20260902.md` (b1e09351) on
+`minimal-keller-shape-opus5-20260902.md` (7b0ffec7). PROMOTED at scope:
+THEOREM FIRST-FORK (val_{L~}(E_0) = deg_{T_+}(E_0) = nu = the number of
+REDUCED points at infinity of the generic pencil member, for nu >= 2);
+(LF) and (MIN) (a degree-minimal counterexample has d, e >= 2, d ≠ e,
+D = K max(d,e) >= 3K); the SUBRECTANGULAR normal form in GGV's scope
+only (a GGV-minimal counterexample — minimal gcd over all
+counterexamples — has a degree-preserving subrectangular gauge with
+nu = 2: E_0 is a free vertex of the polar tree, never a leaf); THEOREM
+E0-LEAF-CAP (no Keller: Psi = 0 and E_0 a leaf ⇒ D <= N + 1 − 2 g_L) and
+its conditional pricing (CH2 in any gauge + Moh would kill every
+N <= 99 — so CH2's hypothesis is the theorem, not a lemma); CH1 refuted
+in the control class ((x, y + x^k): Psi = k); the sharpened Moh floor —
+D_min = K·max(d,e) with K >= 16 (GGV Cor 6.6 verified) and max(d,e) >= 3,
+so D_min >= 102 with a divisor K in [16, D_min/3] (excluding 101, 103,
+106, 107, 109, 113, 118 in [101, 120]); T = T_class in the subrectangular
+gauge. RETYPED: T <= tau ⇒ D_min <= 2(tau + N) is ONE-WAY (the
+biconditional is refuted); the one-unit gap T >= 51 − N vs tau <= 50 − N
+stands. Binding consequence for #13: CH2's hypothesis is FALSE for
+GGV-minimal counterexamples and, unconditionally at N = 4, by
+`polar-chain-n4-grok46-20260902` (7 >= 2n + kappa >= 9); it is unproved
+for non-GGV-minimal representatives at other N
+(OPEN[SUBRECT-ORBIT-BRIDGE]). Neither CH1 nor CH2 may be consumed as a
+kill.
