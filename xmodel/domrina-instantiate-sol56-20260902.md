@@ -77,9 +77,10 @@ compactification.
 The carrier definition is `c=mu*s+K`, with owner weight the sum of `mu*s`
 over its carriers (`xmodel/reducible-all-n-r2-opus5-20260901.md:291-305`).
 At `N=4` the unique row is the `(2,1,0)` core plus one trivial on a second
-owner. Thus `W(D_1)=2` for the branched component and `W(D_2)=1` for the
-unbranched companion; `W=(1,2)` is the unordered/sorted profile display, not
-component order. That report expressly says it recovers only the
+owner. Frozen REP assigns `W(D_1)=2` to the branched component and `W(D_2)=1`
+to the unbranched companion (`xmodel/rep-96-inner-opus5-20260901.md:661-670`);
+`W=(1,2)` is the unordered/sorted profile display, not component order. The
+census report expressly says it recovers only the
 **budget/ownership projection**, not the cage itself
 (`xmodel/reducible-all-n-r2-opus5-20260901.md:424-432`). Consequently the word
 "core" does not encode an intersection lattice, a path, a root, or a
@@ -215,7 +216,7 @@ type; "conditional" means it follows only after assuming a Keller extension;
 | 5 | compactifications and regular `F:X~->X`, minimal source boundary `L~` and root `v~` | **not constructed** |
 | 6 | Domrina Proposition 1.2 state and one of the ten Fig. 11 source diagrams | **conditional only**; no row selected by the residual |
 | 7 | a Lemma-2.12 vertex `a~`, `Q1,Q2,Q3`, positivity and (2.13) | **not reached** |
-| 8 | repaired R1/R2 root placement, followed by the relevant section 5, 6, or 7 terminal arithmetic | **not reached** |
+| 8 | the relevant section 4-7 elimination; R1/R2 and an `(F*)/(S*)` package only for rows routed through sections 5-7 | **not reached** |
 | 9 | Lemma 7.11 / no four-sheeted Keller map | **`SOUND-AFTER-REPAIRS` relative to `(F1)/(F2)/(S1)/(S2)/(S4)`**, not a curve-level discriminator |
 
 There are two nested gaps, and keeping them separate matters. Step 2 is the
@@ -245,7 +246,7 @@ is universal rather than special to `(9,6,2)`:
 confirmed D-O-I mu2 inheritance
   -> Proposition 1.2: two dicriticals of transverse orders 1 and 2
   -> sections 1-3 degree/block machinery
-  -> Lemma 3.12: 35 local signatures
+  -> Lemma 3.12: exhaustive local fork census (35 raw -> 16 surviving types)
   -> Lemma 3.14: ten Fig. 11 quotient graphs
   -> cases 2a-2b: section 4 elimination
      cases 1a-1d: section 5 elimination
@@ -329,12 +330,15 @@ Required certificate:
   (2) the joint target resolution of D_1 union D_2 at infinity;
   (3) the source boundary L~, L~_infinity, root v~, and dicriticals g1~,g2~;
   (4) checked assignment F(g1~)=D_2 and F(g2~)=D_1, including transverse orders;
-  (5) a selected Fig. 11 row and route to a concrete a~;
-  (6) Q1,Q2,Q3 with det Q3>0 and the exact (2.13) inequality.
+  (5) a selected Fig. 11 row and the vertices/determinants its route needs;
+  (6) for a section 5-7 row, a concrete a~, Q1,Q2,Q3 with det Q3>0,
+      and the exact (2.13) inequality.
 
 Success:
-  invoke Lemma 2.12, the reviewed R1/R2 repairs, the selected section 5-7
-  terminal chain, and record the first F*/S* package actually consumed.
+  run the selected section 4-7 elimination;
+  for a section 5-7 row, invoke Lemma 2.12 and the reviewed R1/R2 repairs,
+  then record the first F*/S* package actually consumed;
+  for a section 4 row, record the package-free route rather than inventing one.
 
 Failure:
   inability to derive the certificate returns OPEN;
@@ -422,7 +426,7 @@ repaired case analysis.
 
 - Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
   including its terminating newline; this seal is outside the body.
-- Body bytes: `BODY_BYTES_PLACEHOLDER`.
+- Body bytes: `22509`.
 - Body SHA-256:
-  `BODY_SHA256_PLACEHOLDER`.
-- Frozen basis: `FROZEN_BASIS_PLACEHOLDER`.
+  `eae0901d13aaac6e8dc90b42c745139ce10f5e9d02c72e0748ef5ab700efa157`.
+- Frozen basis: `f35adc89bec33c1e1a2df50ac3d8bcd99f762218`.

@@ -17746,3 +17746,27 @@ promoted use).
 CORRECTION (observed 2026-09-02T01:05Z): the BURNSIDE-CHI block
 above omitted the hash: `burnside-chi-gpt55-20260902.md` =
 a407057ce3c4bb74... (full 64-hex in git object; prefix a407057c).
+
+## LIVE STATE (observed 2026-09-02T01:08Z) — DOMRINA-INSTANTIATE: NOT-INSTANTIABLE (BENIGN); CE FRONTIER FORMALLY MOVES TO N>=5
+
+**DOMRINA-INSTANTIATE landed** (`domrina-instantiate-sol56-20260902.md`,
+prefix per shell log, BODY_SEALED): outcome (c) in the benign
+form **NO-KILL / NOT-INSTANTIABLE** — the proposed fork is
+ill-typed: Lemma 2.12 forces the SOURCE-BOUNDARY root into
+Q1 u Q2 within a source-resolution tree that only an actual
+Keller map supplies; the campaign residual (curve + profile
+data) does not carry that state. No package localized (no
+Fig. 11 row selected). NOT a counterexample to the checked
+chain; conditionally, the repaired chain excludes any Keller
+EXTENSION of the residual (modulo packages) — consistent with
+and implied by N=4-CHECKED-CLOSED. New typed bridge:
+**OPEN[RESIDUAL-TO-DOMRINA-STATE]** — from (curve, rep,
+profile) to (compactification morphism, source lattice). This
+CONVERGES with the source-question neck (SOURCE-OPEN-U/Card-C):
+one bridge, three formulations.
+
+**Strategic line made explicit**: with N=4 checked-closed, all
+(9,6,2)/N=4 substrate work is INSTRUMENT VALIDATION + razor
+testbed. Genuine counterexample frontier = N>=5 (gated on
+n5-soundness lane). The three necks stand: horn / source
+bridge / R0-degree-cap.

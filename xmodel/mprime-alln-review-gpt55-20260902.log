@@ -12006,3 +12006,176 @@ exec
     33	   `OPEN[B0-H2-N>=20/RAMIFIED-NONPRIMITIVE-COVER]` is CLOSED. The
     34	   equality cases of the new inequality (5.1) are typed
 
+codex
+So far I have no refutation of the integer skeleton or the low-degree pin. The main remaining failure mode is classical-theorem scope in the cusp horn, so I’m checking the exact needs there against the way the report invokes Lin-Zaidenberg and Campbell.
+exec
+/bin/zsh -lc "nl -ba xmodel/round1033-sheet-gate-opus5-20260831.md | sed -n '360,446p'" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "nl -ba xmodel/round1033-sheet-gate-hostile-review-sol56-20260831.md | sed -n '185,220p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   185	open simplex, so every term is multiplied by `k`, including the noncompact
+   186	cells.  Thus the argument at `R:372-378` is valid for `chi_c`; it must not
+   187	silently assign ordinary Euler value `1` to every open simplex.
+   188	
+   189	**Theorem 5.2 — CONFIRMED.**  Over `V=A2-D`, the Keller map is proper etale of
+   190	degree `d`.  Additivity and covering multiplicativity give
+   191	
+   192	`1=d chi_c(V)+chi_c(F^{-1}(D))`
+   193	` =d(1-chi_c(D))+chi_c(F^{-1}(D))`.
+   194	
+   195	Connectedness is true but not needed for the Euler multiplication.  Under H3,
+   196	`chi_c(D)=1-nu`; hence `chi_c(F^{-1}(D))=1-d nu` exactly as stated
+   197	(`R:385-399`).
+   198	
+   199	## 6. Assembly of (M'), defect form, and weighted budget
+   200	
+   201	**(M') — CONFIRMED.**  Under H2, Lemma 3.3 gives
+   202	
+   203	`chi_c(F^{-1}(D))=a chi_c(D_0)+sum_p a_p`.
+   204	
+   205	Under H3, `chi_c(D_0)=1-nu-s` and Theorem 5.2 makes the left side
+   206	`1-d nu`.  Rearrangement yields
+   207	
+   208	`a(nu+s-1)-sum_p a_p=d nu-1`,
+   209	
+   210	and subtracting from `sa` yields
+   211	
+   212	`sum_p(a-a_p)=(a-1)+nu(d-a)`.
+   213	
+   214	Every substitution at `R:437-455` checks.  H2 is used to have one connected
+   215	smooth stratum and one constant `a`; H3 is used only for
+   216	`chi_c(D)=1-nu`; Keller etaleness supplies the covering and reduced set counts.
+   217	The bounds `1<=a<=d-2` additionally use that the unique H2 component is a
+   218	branch component.  Thus (M') is a theorem under the explicit H2+H3 assumptions.
+   219	
+   220	The relaxations are also **CONFIRMED with residual hypotheses made explicit**:
+
+ succeeded in 0ms:
+   360	Grok-xpoll §3.4 is right that "`chi_c` agrees with ordinary `e` for complex
+   361	algebraic varieties" was asserted, that it was justified by an argument valid only
+   362	in the smooth case, and that `A_F` and `F^{-1}(A_F)` are singular curves. The
+   363	repair is to **never leave `chi_c`**. Then no comparison theorem is needed.
+   364	
+   365	> **Lemma 5.1 (`chi_c` toolkit).** Over `C`, with `chi_c` = Euler characteristic of
+   366	> compactly supported rational cohomology:
+   367	> (a) *Additivity*: `Z ⊆ X` closed ⟹ `chi_c(X) = chi_c(Z) + chi_c(X \ Z)`.
+   368	> (b) *Multiplicativity in finite coverings*: if `pi: E -> B` is a covering of
+   369	> degree `k` of complex algebraic varieties, `chi_c(E) = k * chi_c(B)`.
+   370	> (c) *Normalization formula for curves*: for a reduced curve `C` with
+   371	> normalization `n: C~ -> C`, `chi_c(C) = chi_c(C~) - sum_{p ∈ Sing C}(r_p - 1)`.
+   372	> *Proof.* (a) is the long exact sequence of the pair for compactly supported
+   373	> cohomology. (b): `B` is triangulable (Łojasiewicz; Hironaka) by a finite
+   374	> triangulation; over each open simplex — simply connected — the covering is
+   375	> trivial, so by (a) `chi_c(E) = sum_simplices k * chi_c(simplex) = k * chi_c(B)`.
+   376	> (c): apply (a) to `C = (C \ Sing C) ⊔ Sing C` and to
+   377	> `C~ = n^{-1}(C\Sing C) ⊔ n^{-1}(Sing C)`, using that `n` is an isomorphism over
+   378	> `C \ Sing C`; subtract. ∎
+   379	
+   380	Nothing in (a)–(c) needs smoothness, and nothing needs `chi_c = chi`. (For the
+   381	record, `chi_c = chi` for complex algebraic varieties is true — Laumon, C. R.
+   382	Acad. Sci. Paris **292** (1981) 209–212 — but it is **not used** here, so the
+   383	packet's shortcut is repaired by removal, not by citation.)
+   384	
+   385	> **Theorem 5.2 (E).** `1 = d*(1 - chi_c(A_F)) + chi_c(F^{-1}(A_F))`.
+   386	> *Proof.* `F` is proper over `V := A^2 \ D` and étale, so
+   387	> `F^{-1}(V) -> V` is a degree-`d` covering; `F^{-1}(V) = A^2 \ F^{-1}(D)` is the
+   388	> complement of a proper closed subvariety of an irreducible variety, hence
+   389	> connected. Apply 5.1(a) to `A^2 = F^{-1}(V) ⊔ F^{-1}(D)` and 5.1(b) to the
+   390	> covering, with `chi_c(V) = 1 - chi_c(D)` from 5.1(a). ∎
+   391	
+   392	Under (H3), 5.1(c) gives `chi_c(D) = 1 - nu`, hence `chi_c(V) = nu` and
+   393	
+   394	> **`chi_c(F^{-1}(A_F)) = 1 - d*nu`.**
+   395	
+   396	Two immediate sanity gates: `A_F = ∅` gives `d = 1` (the classical statement);
+   397	`F^{-1}(A_F) = ∅` gives `1 = d*nu`, impossible for `d >= 2`, which re-proves
+   398	`F^{-1}(A_F) != ∅` independently of §2.2. **Verdict on (iii): lemma WRITTEN;
+   399	(E) is a theorem, not a checksum candidate.**
+   400	
+   401	<!-- SECTION 5 END -->
+   402	
+   403	## 6. Attack (iv): `s_p` from Puiseux local monodromy
+   404	
+   405	Grok-xpoll §3.5 is **confirmed on every point**, and the correction of §3 makes it
+   406	sharper than stated.
+   407	
+   408	1. `H_p` is the image of `pi_1(Delta_p \ D)` for the **affine** germ `(D,p)`. That
+   409	   group is the local link group of the singularity — the iterated-torus-link
+   410	   group read off the **Puiseux pairs of the branches at `p` and their pairwise
+   411	   linking numbers** — generated by the `r_p` branch meridians, each conjugate in
+   412	   `pi_1(A^2 \ D)` to the single generic meridian class `g` (Zariski–van Kampen,
+   413	   `D` irreducible). Nothing in that data is the colouring of the link **at
+   414	   infinity** carried by the delta-sequence/splice census. Identifying the two is
+   415	   precisely the flag/place/series fallacy; the packet's "add one column to the
+   416	   banked colouring census, no new theory" experiment is **mistyped** and must not
+   417	   be run as specified.
+   418	2. `s := #Sing(D)` counts **affine** singular points of `D ⊂ A^2`; the place at
+   419	   infinity is not among them. Mixing this `s` with a projective cusp count (as in
+   420	   the `Delta_aff` dossier lane) is a second flag/place error. Confirmed.
+   421	3. **The stronger correction**: by (M') below, the quantity the identity consumes
+   422	   is `a_p = #F^{-1}(p)`, not `s_p`. Even a *correct* Puiseux computation of `H_p`
+   423	   delivers only `s_p = #Fix(H_p)`, and `a_p = s_p - b_p`. So a correct local
+   424	   monodromy computation is **necessary but not sufficient**; it becomes sufficient
+   425	   exactly when box 4 is empty (Prop 4.1(β)).
+   426	4. Sol-xpoll's group-theoretic correction is also confirmed: at `d = 4`,
+   427	   `#Fix(H_p) = 1` gives `H_p ∈ {Z/3, S_3}` — the fixed-point count does not force
+   428	   cyclicity. The packet's `#Fix(H_p) = 2` case is fine (`H_p` must then act
+   429	   trivially outside a 2-element set and be nontrivial, so `H_p = Z/2` generated by
+   430	   a transposition), and in the `A_4` class `H_p` is generated by conjugate
+   431	   3-cycles so `H_p ∈ {Z/3, A_4}`.
+   432	
+   433	<!-- SECTION 6 END -->
+   434	
+   435	## 7. The corrected identity
+   436	
+   437	Assemble §3 and §5. `chi_c(F^{-1}(D)) = chi_c(F^{-1}(D_0)) + sum_{p ∈ Sing D} a_p`
+   438	by 5.1(a); `chi_c(F^{-1}(D_0)) = a * chi_c(D_0)` by Lemma 3.3 and 5.1(b); and
+   439	`chi_c(D_0) = chi_c(D) - s = 1 - nu - s` by 5.1(c) and (H3). With
+   440	`chi_c(F^{-1}(D)) = 1 - d*nu` from Theorem 5.2:
+   441	
+   442	> ### (M′)  `a*(nu + s - 1) - sum_{p ∈ Sing A_F} a_p = d*nu - 1`
+   443	> with `a = #F^{-1}(p)` for `p ∈ A_F \ Sing A_F`, `a_p = #F^{-1}(p)`, and
+   444	> **`1 <= a <= d - 2`, `0 <= a_p <= a`** (Prop 2.4, §2.2, Cor 3.4).
+   445	> Hypotheses: Keller; (H2); (H3). **This is a theorem.**
+   446	
+
+exec
+/bin/zsh -lc 'rg -n "Campbell|Galois field extension|Galois.*invertible|Keller.*Galois|Lin.*Zaidenberg|homeomorphic|contractible|topologically embedded line" xmodel/round1033-sheet-gate-opus5-20260831.md xmodel/round1033-sheet-gate-hostile-review-sol56-20260831.md xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-coordinator-integration-sol56-20260830.md xmodel/nori-bc-hostile-review-sol56-20260831.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-coordinator-integration-sol56-20260830.md:117:topology to `B`; each normalized `A1` component is contractible; unibranch
+xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-coordinator-integration-sol56-20260830.md:122:B is a reduced connected topologically contractible plane curve.   (2.4)
+xmodel/round1033-sheet-gate-opus5-20260831.md:175:Galois case of JC is classical (Campbell, *A condition for a polynomial map to be
+xmodel/round1033-sheet-gate-opus5-20260831.md:494:| Degree floor | `d >= 3` | Keller only | **PROVED** (Prop 2.5); classical via Galois case |
+xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md:62:row has `b0(B)=1`.  A connected tree of contractible normalizations glued only
+xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md:63:along the forest incidence pattern is topologically contractible.  That is the
+xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md:65:that `B` is topologically contractible is therefore stronger than the Euler
+xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md:166:Componentwise one-place is not needed after the curve is known contractible and
+xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md:175:contractible forms: a comb has a central global spine meridian, and a weighted
+xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md:184:topologically contractible branch support, connected complement cover, and
+xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md:229:B is connected and topologically contractible;
+
+exec
+/bin/zsh -lc "nl -ba xmodel/block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md | sed -n '384,397p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   384	
+   385	### 3.1 Exact necessary degree-four tuples
+   386	
+   387	The reviewed rank-four surface census is
+   388	
+   389	```text
+   390	generic B: (2,1,1),       cusp c: (3,1),
+   391	omitted node n: (2,2),    e(T)=-3,
+   392	```
+   393	
+   394	with `B` irreducible and its normalization `beta_B:A1->B`; see
+   395	`...quartic-branch-topology-coordinator-integration...md:100-104,213-227`
+   396	and `...pseudoplane-companion-threat-map...md:205-256`.
+   397	
+
+codex
+The sheet-gate review confirms `(M')`, Theorem `(E)`, the covering lemma, and reduced pullback at the scopes the new report consumes. I’m going to write the review report now, with claim-by-claim verdicts and a short seal section.
+exec
+/bin/zsh -lc 'test -e xmodel/mprime-alln-review-gpt55-20260902.md; echo $?' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+1
+
