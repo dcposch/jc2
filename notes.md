@@ -20614,3 +20614,14 @@ DISC-COUPLING lane continues as METHOD development only and will be
 re-targeted on a rebased survivor. Lanes: branch-orbits (Grok),
 reducible-branch (Opus), endgame-review (Sol), disc-coupling (Opus),
 census-rebase (Opus), tf-calibration-review (GPT-5.5). Census 603/975.
+
+## EVENT 19:05Z — ENDGAME REVIEW (Sol, 9e485492) BANKED AS #17 DELTA (f); DISC-COUPLING STOPPED
+
+BOTTOM-ODE / STAR-SIMPLE / STAR-SUM / STAR-ABC promoted (the bottom
+star of a Jacobian pair is a dessin, reviewed); the flagship's global
+interpolation framing, its resonance set (only μ·{0,1,2,3}), its
+order-2 recurrence and "survives orders 1–2" are GAP/REFUTED.
+DISC-COUPLING killed (pkill by its unique lane tag; lock removed):
+wrong resonance data and a dead target. Relaunch after CENSUS-REBASE.
+Lanes: branch-orbits (Grok), reducible-branch (Opus), census-rebase
+(Opus), tf-calibration-review (GPT-5.5). Sol idle. Census 606/975.

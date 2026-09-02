@@ -15405,3 +15405,35 @@ divisibility pair and the (10)/(11) union); they agree on the six
 Moh rows and on killing the D = 105 target and differ in form —
 CENSUS-REBASE (verbatim recovery) adjudicates; neither is promoted.
 GAP: CHAIN-TO-RAMIFICATION.
+
+## INTEGRATION #17 DELTA (f) (2026-09-02 19:05Z, REVIEWED): TIME-FUNCTION ENDGAME — SAFE PROMOTIONS; THE FLAGSHIP AS WRITTEN NOT PROMOTED
+
+Review `time-function-endgame-review-sol56-20260902.md` (9e485492) of
+`time-function-endgame-opus5-20260902.md` (9f47a25f). PROMOTED
+(reproved): THEOREM BOTTOM-ODE d·p_f·p_g′ − e·p_g·p_f′ = κ, deg p_g = eV₂,
+deg p_f = dV₂, κ = −ec/λ_g = c(d+e)/(1−δ₁) = cde/q; STAR-SIMPLE (p_f, p_g
+squarefree, coprime); STAR-RESIDUE in the corrected form
+p_f(c_i)p_g′(c_i) = κ/d = ce/q (the printed ce/(1−δ) is wrong);
+STAR-SUM (including the terminal nonzero value); THEOREM STAR-ABC
+(C = p_f^e − ρp_g^d has degree V₂(de − d − e) + 1; p_f, p_g, C pairwise
+coprime and squarefree; Mason equality; Belyi passport): the bottom
+star is a dessin; the Nullstellensatz table 15/15 REALISABLE plus
+(2,3,4) and (7,8,1); the restricted finite-rank table at D = 105
+(generic 7/5/rank 5/coker 0; rank 4/ker 3/coker 1 at μ·{0,1,2,3} ONLY);
+the D = 105 census arithmetic (5,037 assignments / 264 groups; [6,16]
+leaves 49 assignments / 42 groups); DELTA-DENOM as a measurement.
+GAP: LOCAL-KELLER as a global statement (local completion in the D₁
+chart is not C[x]-polynomial Lagrange interpolation or branch gluing);
+STAR-EIGEN as a geometric theorem (only A | (d+e)V₂ − 1 survives; the
+root dichotomy only for A > 1); D = 105 N = 6 attainment (k = 20 is
+permitted, not realised); the full outer-factor system (degree caps
+omit forced π·p terms); explicit 15 witnesses not delivered. REFUTED:
+"resonances at μZ_{>0}" (4μ is non-resonant); the resonant quadrics as
+recurrence conditions (the order-2 driver sends its source to the wrong
+exponents); "ten share (2,3,1)" (exact count 18); control-4 λ table
+(centre-root term omitted; conclusion survives). Consequence: the
+claim "D = 105 survives orders 1–2" is NOT established; combined with
+delta (d)/(e) (that skeleton is dead under Moh's (8)–(13) as
+transcribed), the DISC-COUPLING lane was STOPPED unsealed at 19:05Z and
+will be relaunched on a rebased survivor with the corrected resonance
+data.
