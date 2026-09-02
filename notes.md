@@ -18304,3 +18304,22 @@ is mis-stamped 05:31Z; observed time was 05:26:44Z. Recurrence
 now carry NO minute-level stamp unless copied verbatim from an
 already-printed date; otherwise write "(observed: see prior
 date print)".
+
+## LIVE STATE (observed: see the 05:26:44Z print; composed after) — RAY REVIEW MIXED-HEALTHY; TWO REPAIR LANES LAUNCHED
+
+**RAY-KILL-REVIEW landed (rerouted to GPT-5.5 after the Grok
+402)**: RAY-DEP CONFIRMED (exact identity, all residuals zero);
+RAY-EDGE CONFIRMED e>=2; the (1,3) cell decision confirmed as
+SINGLE-ENGINE sympy (needs the second engine per certainty
+discipline); RAY-1 GAP (the N2 row is MEASURED, not derived —
+N1/N3/N4 replay exactly); RAY-2 conditional on N2; 2D residual
++ per-cell decidability confirmed at their honest typings;
+OPEN[A2-U-BOUND] confirmed; the B3 ledger correction CONFIRMED.
+**Repair lanes launched**: `a2-cells-codegen-sol56-20260902`
+(the §4.1 A2-E1WALL-CELLS job as qqideal Python; item-0 gate =
+(1,3) second engine; then e<=4 cells — to run on box01) and
+`n2-derive-gpt55-20260902` (derive N2 in prose; closes RAY-1,
+unconditionalizes RAY-2; P0 check on RAY-EDGE's consumption).
+Runners: both repair lanes, 869 msolve. Round floor 12:22Z —
+prime inputs queued: OPEN[A2-U-BOUND], OPEN[HOMCOVER-CUSP-A-N8],
+the (B3) rigid-not-empty cage, Grok outage routing.

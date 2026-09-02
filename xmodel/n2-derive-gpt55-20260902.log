@@ -1,0 +1,94 @@
+cli=codex-cli 0.152.0 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.152.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a060a1-fe52-7cd0-9f0a-48a3bfce6974
+--------
+user
+# Research lane: N2-DERIVE — close the RAY-1 gap (derive N2 in prose)
+
+The charged ray-kill review typed RAY-1 as GAP solely because
+the (N2) row of the 4x5 next-order system is MEASURED
+(CAS-interpolated, ray-kill:233-241) rather than derived. Your
+task: derive (N2) in closed form from the wall data of the
+ray-kill report §3.1 (the same way its N1/N3/N4 are derived by
+hand — the review replayed those three exactly and found them
+correct). Deliver: the derivation, coefficient-by-coefficient
+agreement with the measured row (verify in sympy verbatim), and
+the corrected typing line (RAY-1 -> derived in full; RAY-2's
+conditional then becomes unconditional — state it). If the
+derivation reveals the measured row was WRONG anywhere, that is
+a P0 for RAY-EDGE's rank argument — check whether RAY-EDGE's
+proof path consumes N2 and report loudly either way.
+Report: xmodel/n2-derive-gpt55-20260902.md
+Seal-at-completion; target 8-15KB.
+charged_input=xmodel/ray-kill-opus5-20260902.md
+charged_input=xmodel/ray-kill-review-gpt55-20260902.md
+
+Your inputs are frozen read-only copies in `/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.nPyktR/inputs`;
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+3d08b8996227e292d76e0ba3901cfad16099f347f97129d27b6bf5b3bc253f0a  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.nPyktR/inputs/ray-kill-opus5-20260902.md
+df5612152d60496bb81311ee9183d3c580759a2549d6ea8945a487d284976fcf  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.nPyktR/inputs/ray-kill-review-gpt55-20260902.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll first verify the frozen inputs exactly as requested, then I’ll read the relevant wall-data and review sections before doing any derivation or edits.
+exec
+/bin/zsh -lc 'shasum -a 256 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.nPyktR/inputs/ray-kill-opus5-20260902.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.nPyktR/inputs/ray-kill-review-gpt55-20260902.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+3d08b8996227e292d76e0ba3901cfad16099f347f97129d27b6bf5b3bc253f0a  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.nPyktR/inputs/ray-kill-opus5-20260902.md
+df5612152d60496bb81311ee9183d3c580759a2549d6ea8945a487d284976fcf  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.nPyktR/inputs/ray-kill-review-gpt55-20260902.md
+
