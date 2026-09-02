@@ -1,0 +1,22 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at `xmodel/b3-boundary-instrument-opus5-20260902.md` (body 45202 bytes, SHA-256 `e9f26dde…7887f`, basis `665adaf1`). All six input hashes verified before reading; inputs untouched; no canonical ledger edited; no `jc2-lean`.
+
+## Outcome: instrument built, NO KILL, no EMPTY window in N
+
+**(1) Extraction.** The whole DO determinant/transfer apparatus (Lemmas 1–5, Prop 3, edge formula, Prop 4, Lemma 7) is degree-free, and its one profile hypothesis — that `A_F-bar` meets `L` in a *single* point — is supplied at every `N` by MI Lemma A under `H2`. The census identity `sum Deg = N` stays an **equality** at every `N`, and applying it to the target *curve* `g = A_F-bar` rather than a boundary vertex gives **THEOREM BI-1: `W + a = N`** — DO's own generic-sheet identity *is* `[P3]`, with the dicriticals the `n ≥ 2` part and `Ē_X` the `n = 1` part. That is the first place the two ledgers touch.
+
+**(2) Substitution.** `BI-2`: `n(ṽ_y) = e_y` — the transverse degree of the boundary vertex carrying a place of `E` at infinity over `∞_{A_F}` equals that place's ramification index. `BI-3`: the local-degree ledger over `p` is exactly `(s_l·mu_l)` and `(e_y)`, summing to `N`. `BI-5`: the marks saturate the non-dicritical `Deg` over `v_0`. `BI-4` places the affine excess (charged `≤ K_p`, rest branch-exchanged). `BI-6` shows DO's repeated coprimality kills are kills of the multiplicity of `E`'s sheets.
+
+**(3) Control 1 (N=4): passes.** It reproduces `(mu,corr) = (2,1)`, replaces DO's entry seam by N4-PIN, and identifies DO's "the other two sheets" as the two places of `E` at infinity over `∞_{A_F}`. **It does not shorten the census** — 35 rows and six graphs untouched — because the census is indexed by target vertices while the campaign ledger is indexed by `g` and `Sing A_F`; they share only `v_0`.
+
+**(4) Control 2 (Γ): passes** on every requested item (`y_0`, `chi_c = −3`, `g = 0`, `n_∞ = 5`, split 2+1+2), importing neither smoothness of `E` nor `chi(E) = 1`.
+
+**(5) N=5, 6:** all `(B3)` profiles run; no empty window. One cell (N=6, a=4, three cusps) is forced to `j ≥ 2`, and `BI-7` proves that route can *never* kill.
+
+**(6) Uniformity:** closed form `Census(N) = Σ_m ⌊N/m⌋·Rows(m)`, `Rows(m) = [z^{m+2}]f_m(z)³`, giving `Census(4) = 35` — DO's own count — then 86, 287, 717, …, 405434 at N=14. The affine data does not bound it. It *does* bound the assembly depth by `a = N−W` (tight at N=4). `K_p` and the fibre partitions bound neither.
+
+Two things worth flagging. First, **`GAP-CANDIDATE[BI-ATTACH]`**: my independent local computation gives `(m,n) = (mu_l, s_l)` at the dicritical-incident vertex, the transpose of what DR's §6 assembly presupposes; an explicit resolved `(1,2)`-dicritical model shows the dicritical can meet a *contracted* component at `p̃`. Only `Deg = s_l·mu_l` is safely consumable, and any general-`N` use of Corollary 4 must settle the split first. Second, the body is ~45 KB against the charged 25–40 KB — the overage is content (nine proved items with proofs, two controls, the runs, the census), and I recorded it as a deviation rather than delete a proof.
+
+Note: `DEG-AF-VS-N` landed on `master` while this lane ran. The report predates it and correctly treats it as OPEN at basis `665adaf1`; §6 now says it gates the boundary side too, which the new result may partly answer.
+DIVERT path=xmodel/b3-boundary-instrument-opus5-20260902.md status=DIVERTED body_bytes=45202 body_sha256=e9f26dde675665febdedd2b2555d2c35d02b0719df10cde56637e23b0a71887f overflow=xmodel/b3-boundary-instrument-opus5-20260902.overflow overflow_bytes=301 raw=xmodel/b3-boundary-instrument-opus5-20260902.raw.md raw_sha256=28e6eaf17d4949d7f9404fd561f2a543a0859cc053c889d6a6a9ba161c7f428d overflow_sha256=dbe12bd0008159777556e757fd91f3b4aae5bb26aa51c0527bb93998cbddc913
+post-BODY-END overflow diverted; charged body preserved

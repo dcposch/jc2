@@ -1,0 +1,18 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report delivered: `xmodel/deg-af-vs-n-opus5-20260902.md` (sealed; body 42,774 bytes, sha256 `d7cff053…`). All seven charged hashes verified before any input was read.
+
+## What the lane found
+
+**(1) The correct form of the question.** `n_min` is well defined but is not the sharpest invariant. The right object is the **semigroup at infinity** `Γ = {deg_t f(a(t),b(t))}`: it is `Aut(C²)`-invariant, and `#(N∖Γ) = Σ_p δ_p = δ_aff`. So `δ_aff` — not `n` — is the invariant, and `δ_aff` is exactly what the (B2) β-bound and the (B3) budget consume. Corollary: the delta-budget is the *identity* computing `δ_infty`, not a constraint, so the Chau lane's `OPEN[DELTA-INFTY-NOT-NUMERICAL]` is off the critical path. Chau's `m` is a gauge gcd (on the campaign's own `(9,6,2)` curve `m = 3` while `m(Γ) = 2`).
+
+**(2) Bounds.** Floor (unconditional): `δ_aff ≤ p_a(n)` in every gauge, so `n_min ≤ C(N)` delivers `δ_aff ≤ (C−1)(C−2)/2` — the whole downstream payoff. Ceiling (from the campaign's banked (AM-SG)): `b_1 | b_0`, or `n ≤ 2δ_aff + b_1 − 1 ≤ 3δ_aff`, sharp at `(t², t^{2δ+1})`; residual typed `OPEN[MIN-EMBED-DEGREE]`. New and N-monotone: **MERIDIAN-FLOOR**, `n_min ≥ ⌈(N−1)/(W−1)⌉` (at `W=2`, `≥ N−1`), which with Chau's cap answers half of `OPEN[N-VS-MAPDEG]`.
+
+**(3) Is it bounded?** Not derivable from the banked ledger, and not false. I exhibit a satisfying assignment of every banked constraint at fixed `N` with `k → ∞`, plus explicit rational one-place curves with one (2,3) cusp and exactly `k` nodes. The family the charge asked for in item (3) **cannot exist** (the ceiling forbids it) — the blocker is `k`, not the degree.
+
+**(4) Thresholds.** (B2) dies iff `δ_aff ≤ 3` (N≤10) / `≤ 1` (11–16), re-deriving MPRIME's β thresholds exactly. The crossing: a cell is empty once `n_min ≤ C` with `C < ⌈(N−1)/(W−1)⌉`, which at `W=2` is far weaker than the β-route needs. Sharpening of the Chau lane's (self-typed budget-only) §5 list: `δ_aff = 2` forces `n_min = 5`, so its `n=4, (2,3), k=1` row is empty; the `k=2` row is realised by the quartic `(t³, t⁴+t²)`.
+
+**(5) Custody.** Jelonek: ABSENT from `refs/`; the campaign carries it from memory and it is in `(deg f, deg g)`, not `N`. No theorem bounding a curve's degree by the étale degree onto its complement: ABSENT — the known implication runs the other way.
+
+Two things to flag: the body is 42.8 KB, about 7% over the 25–40 KB band — I trimmed twice and stopped rather than drop a verified result. And the ceiling's escape clause (`b_1 | b_0`, the classical Tschirnhausen case) is genuinely open, so the `δ_aff` form of the crossing is conditional on it; the `n_min` form and every §6 consumer are routed through the unconditional floor instead. No canonical ledger edited, `jc2-lean` untouched, drivers left in `/tmp/degaf`.
+DIVERT path=xmodel/deg-af-vs-n-opus5-20260902.md status=DIVERTED body_bytes=42774 body_sha256=d7cff053a856a61cc2401585737fc47c093eb6edb0562b1c3f4b82420deeb853 overflow=xmodel/deg-af-vs-n-opus5-20260902.overflow overflow_bytes=497 raw=xmodel/deg-af-vs-n-opus5-20260902.raw.md raw_sha256=e905be04454c16be30bd0bf93a1d9c80cf1ca9fe2100a7b39203bc8d930d6b10 overflow_sha256=459307d9c0ec84c9774450eac0152f9a755a7d2b8e9488524b6e1a79fee0d853
+post-BODY-END overflow diverted; charged body preserved

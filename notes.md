@@ -19241,3 +19241,30 @@ says plainly what an all-N (B3) kill costs: the census grows like the
 number of plane trees, and only a NEW degree-monotone datum (the
 delta_aff / N-VS-MAPDEG gate, flagship running) can prune it. Opus
 seats 1/5 (n-vs-mapdeg).
+
+EVENT (observed ~10:25Z per lane print) — **DEG-AF-VS-N REVIEWED**
+(`deg-af-vs-n-review-gpt55-20260902.md`, 50f62fae, body 3aa1af2a,
+BODY_SEALED): PROMOTE with repairs — SG-INV (add affine
+reparametrisation invariance; #gaps = dim_C C[t]/C[a,b] = affine
+delta), BUDGET=IDENT, DEG-DELTA(a), DEG-DELTA(b) with its b_1 | b_0
+escape (exact (AM-SG) = the banked delta-sequence theorem; Tschirnhausen
+removes only represented principal coordinate-degree cases), (R1)–(R4)
+as necessary filters, MERIDIAN-FLOOR (generic meridian cycle type only;
+compatible with CUSP-PARITY/ORBIFOLD-CAGE), the lower half of
+N-VS-MAPDEG, fixed-N ledger non-derivability, (B2) beta <=
+floor(delta_aff/2), (B3) k <= delta_aff − delta_c, the n = 4, (2,3),
+k = 1 EMPTY row, and the cusp+k-nodes family as AFFINE-singularity
+representatives (k = 2, 3, 5 re-verified by CAS: degrees 4, 5, 7; "no
+other singularity" means affine, not projective). DO NOT PROMOTE: any
+upper bound on n_min or delta_aff in N; 2g(E) = 1 + N nu − n_infty(E)
+with geometric genus in disconnected cells; Jelonek's bound "only from
+1999–2002" (source repaired to Jelonek 1993, Theorem 15; it is a
+coordinate-degree bound, confirming OPEN[N-VS-MAPDEG]'s typing).
+INTEGRATION #10 binds now: the (B3) E-geometry set (8, with repairs),
+the DEG-AF-VS-N set (with repairs), the P0 pair (delta 9b), the systems
+deliverables; the boundary instrument waits for its review (#11).
+Successor (2) of DEG-AF launched: `meridian-floor-sharpen-opus5-20260902`
+(raise ceil((N−1)/(W − S)) with the CUSP-CAGE relations and
+point-stabiliser conditions; price every (N,W) cell; attempt the (B2)
+death condition delta_aff <= 3 at 5 <= N <= 10 from the same group
+data). Opus seats 2/5.
