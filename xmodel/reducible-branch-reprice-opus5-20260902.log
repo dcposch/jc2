@@ -1,0 +1,21 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed: `xmodel/reducible-branch-reprice-opus5-20260902.md` (body 40,916 B, SHA-256 `fd1f383a…`, basis `8127b8ac`).
+
+## What the lane found
+
+**(1) Scope audit.** Not one item of the day's exact machinery uses H2. H2 enters the charged reports at exactly one place — the clip of the integrality filter to `[4,16]` (`d1-subtree-opus5-20260902.md:546`). The table separates `(GEN)` monic gauge / `(KEL)` / `(MIN)` degree-minimality / `(TOW)`,`(NU2)` Moh's tower. JAC-FIBRE and FRONTIER-EXACT are Keller-only; D1-PIN, D1-STAR, the filter, condition (15), HARMONIC-BOUND, N-CEILING are degree-minimal but H2-free.
+
+One dependency neither report isolates: **`M_s = n−2` is load-bearing for the D1-PIN coincidence**. With `c := n−M_s−1`, `floor(1) − ceiling(1) = (1−δ₁)(1−c)` — off `M_s = n−2` floor and ceiling do *not* meet at `r=1` either. Verified by perturbing census-legal skeletons.
+
+**(2) The reducible branch.** `N` is unchanged for a structural reason: D1-STAR + DETECTOR-NULL partition the `D` fibre branches into proper (bottom-major discs) and non-proper (minor discs, contributing exactly 0), and every reducibility datum sits in the zero block. New, proved here: `#non-proper branches = e(K − Σ_B V₂(B))`; `ord_t(f(τ)−a₀) = δ⁰−1+ord_t J` at **every** branch (the half of (JF) the D1 lane never used — its controls are automorphisms, which have no non-proper branch); hence for Keller `δ⁰ = 1` is impossible; and `n_A^Y ≤ e(K − Σ_B V₂(B))`. Control R: 113 exact checks, 0 failures, on 19 non-Keller rows with genuinely non-proper branches. The record's reducible residual is `OPEN[COMPANION-R0-REALISATION]`/degree-cap (`notes.md:18413-18416`) — no cell or case of it dies.
+
+**(3) The N ≥ 6 frontier is H2-free** (`N=4-CHECKED-CLOSED`; Żołądek 6.12 has no irreducibility hypothesis), so the reducible branch has the same `N_min = 6`. Rerun at `D ≤ 120`: the record's two columns reproduce to the unit, and the new H2-free `N ≥ 6` column kills 59.79% of groups against the H2 window's 60.04% — 99.6% recovery without H2. No degree emptied.
+
+**(4) Verdict (c), partially subsumed**, boundary at proper/non-proper. The cheapest discriminating computation was *run*, not proposed: `R ≥ 2e` holds on all 9,553 surviving assignments (min `R = 2e`, tight), so zero kills. The missing direction is a lower bound on companion degree — `OPEN[COMPANION-DEGREE-FLOOR]`.
+
+## Two things to flag
+
+- A sibling lane (`time-function-calibration-d48`) banked at 11:41Z, mid-lane and not among my charged inputs, that the census omits Moh's search conditions (8)–(11). I honoured its rebase rule: §4.3 re-runs the sweep through its gates. On its **proved** gate the picture is unchanged (63.40% H2-free vs 63.69% H2); on its **reconstructed** full gate (287 groups) the unconditional `N ≥ 2` filter kills *nothing* and the entire kill is the frontier (9.41% vs 13.94%).
+- Size: body 40.8 KB against the charged 20–30 KB band, disclosed in the typed block. I compressed twice and the overrun is the hypothesis table with its verbatim source lines, §3.3's proofs, and the two measurement tables. A `D ∈ [121,200]` extension is still running in the background; nothing in the report depends on it, and that is disclosed.
+DIVERT path=xmodel/reducible-branch-reprice-opus5-20260902.md status=DIVERTED body_bytes=40916 body_sha256=fd1f383a2882712ad2a288b2b023b464529570652cbd889778cd665c187c96be overflow=xmodel/reducible-branch-reprice-opus5-20260902.overflow overflow_bytes=512 raw=xmodel/reducible-branch-reprice-opus5-20260902.raw.md raw_sha256=7a8f2148fb29877be1e2cf5bbb2e03ac179f7c0f52e1e25ab744f951bf9aedcb overflow_sha256=6d1d6e1be5216a73b0107882c2373baaa86af18b01205f8ba18b81b72a1943c8
+post-BODY-END overflow diverted; charged body preserved
