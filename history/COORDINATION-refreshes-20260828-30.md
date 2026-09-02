@@ -1030,3 +1030,42 @@ owned formalization. Reviews remain asynchronous. Quiet full-round floor is
 `2026-08-31T09:30Z`, broad web backstop `2026-08-31T03:40Z`, and holds/human
 gates are none.
 
+
+## Archived from COORDINATION.md (compaction 2026-09-02)
+
+Coordinator handoff refresh (2026-08-31 06:55Z): synthesis
+`031a0c39146511e02e552865935c9bc1a378addc2a87e864ede470f854014cfa`
+closes the `20260831T0512Z` significant-news round. GPT-5.5, Fable 5, Opus 5,
+and Grok 4.6 all supplied blind same-input reports, but no separate blind
+Sol-5.6 report was frozen; the round is explicitly
+`DEGRADED_BY_MISSING_SOL_SCAN`. Do not update Sol's clean-round date or call
+GPT-5.5 a Sol submission. The next quiet ideation floor is
+`2026-08-31T18:54:51Z`; significant non-echo news may trigger earlier. Latest
+web sweep is full `3b7e5db8...`, body `338b1542...`, cutoff
+`2026-08-31T04:54Z`; hard backstop `2026-09-01T04:54Z`.
+
+All detached external lanes are terminal and unloaded, and no internal
+research agent remains live. The conductor-10/16 Grok review is not a charged
+verdict: its exact raw output `49d7f9d3...` is banked under sealed quarantine
+wrapper `fd5647f8...` because it violated the `BODY-END` boundary. Reviews of
+the genus ladder remain owed and must not block compiler descendants.
+
+Promoted work stops the complete irreducible genus-three row and the
+genus-four `b1=1` row. Provisional work excludes conductors 10, 16, 22, and 28
+in the charged one-place quartic-transposition class and narrows the one-cusp
+case to two non-locally-finite Hamiltonian flows with hyperbolic generic
+fibres. D8 Gröbner work and the general quadratic delta-floor proposal are
+retired. Highest-value successors are the reviewed genus ladder, wild
+one-cusp valuation/completion structure, reducible rank four, an all-degree
+degree-monotone invariant, primitive monodromy, and exact disproof continuity.
+
+Toolchain handoff: all 79 regressions pass under normal Python, `-O`, and
+`-OO`; local Singular and msolve counts are zero. The next systems upgrade is
+immutable charged-input snapshots for external lanes, with focused custody
+tests, and must be implemented only when no external lane is live. AWS
+currently has box01's protected one-core `build_tails43.py` job plus idle
+running `r6a`--`r6d`; Box02/Box03 are stopped. Documented use is 160/512
+vCPUs including the separately owned formalization instance, leaving 352
+immediate vCPUs. Never inspect, stop, or repurpose that instance. There are no
+human holds. Intermittent Sol capacity is the reason for this clean Fable
+coordinator handoff, not a mathematical blocker.

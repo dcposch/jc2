@@ -549,6 +549,51 @@ campaign from paying twice for the same failed idea.
   families to algebraize, or closure within one book/chart/degree range, is
   not by itself a resolution of JC2.
 
+## Resolution-first directive (2026-09-02, DC, standing)
+
+The campaign optimizes for **resolving JC2**, by proof or counterexample.
+Verification exists to keep the probability of building on an unsound
+foundation acceptably low — not to maximize assurance. Deep verification and
+formalization are post-resolution work; resources for them will be ample if
+we succeed. Concretely:
+
+1. **Verification calibration.** One different-model hostile review still
+   gates promotion (unchanged). Beyond that gate, additional hardening of
+   already-promoted results (re-reviews, independent re-derivations,
+   formal-adjacent replication) is DEFAULT-OFF unless the result is
+   load-bearing for the current frontier AND a specific doubt is named.
+   The N=4 foundation (repaired Domrina chain + the campaign's independent
+   kill chain, all pair-reviewed) is assessed acceptable; do not spend
+   frontier capacity re-hardening it.
+2. **Opus seats: up to 5**, aimed at the frontier — the all-degree fronts,
+   new-path flagships, and decisive gap-closers — not at reproducing or
+   hardening past results. Grok/GPT-5.5 carry review volume as before.
+3. **Speculative-parallelism caps loosened** (rationale: the caps were sized
+   for a smaller fleet and maximal-assurance posture): at most **six** active
+   provisional roots campaign-wide; at most **three** child lanes per
+   provisional claim; the 25%-on-one-unreviewed-claim guard and the
+   review-before-first-descendant rule are unchanged.
+4. **Capacity allocation defaults** shift to: 45% strongest critical paths;
+   25% new avenues and cross-avenue connections; 12% adversarial review and
+   replication (floor: the promotion gate is never queued behind frontier
+   work); 10% software/instruments; 4% external intelligence; 4% state
+   integration. The review-debt slot reservation rule is unchanged.
+5. **Ideation rounds keep hunting new paths.** Endorsement of named critical
+   paths (currently the all-degree H2 closure and the reducible
+   cage/companion-curve front) never narrows the round contract: every round
+   still requires genuinely new avenues and new cross-connections, weighed
+   on merit against the endorsed paths.
+6. **AWS: launch instances as needed up to the account quotas** recorded in
+   `ops/FLEET.md` (2026-09-02 table: Standard family quota 1,920 vCPU;
+   X family 548; prior 512-vCPU campaign policy cap is RETIRED). Keep
+   current instances fully utilized before adding more; stop idle paid
+   capacity as always.
+7. **Formalization is non-blocking** in every direction: never wait on it,
+   never gate a launch on it, and keep it outside the inspection boundary.
+8. **Proactive surfacing.** The coordinator surfaces acceleration blockers
+   (quota, seats, custody, instruments) to DC as they arise, in the next
+   user-visible message — never batched behind a question from DC.
+
 ## Bootstrap for a fresh coordinator
 
 1. Read this file, then `README.md`, the newest `PROGRESS.md` entry, the
@@ -589,43 +634,6 @@ Historical availability, allocation, and systems refreshes from
 2026-08-28 through 2026-08-30 are archived verbatim in
 `history/COORDINATION-refreshes-20260828-30.md`; they are provenance,
 not live policy.
-
-Coordinator handoff refresh (2026-08-31 06:55Z): synthesis
-`031a0c39146511e02e552865935c9bc1a378addc2a87e864ede470f854014cfa`
-closes the `20260831T0512Z` significant-news round. GPT-5.5, Fable 5, Opus 5,
-and Grok 4.6 all supplied blind same-input reports, but no separate blind
-Sol-5.6 report was frozen; the round is explicitly
-`DEGRADED_BY_MISSING_SOL_SCAN`. Do not update Sol's clean-round date or call
-GPT-5.5 a Sol submission. The next quiet ideation floor is
-`2026-08-31T18:54:51Z`; significant non-echo news may trigger earlier. Latest
-web sweep is full `3b7e5db8...`, body `338b1542...`, cutoff
-`2026-08-31T04:54Z`; hard backstop `2026-09-01T04:54Z`.
-
-All detached external lanes are terminal and unloaded, and no internal
-research agent remains live. The conductor-10/16 Grok review is not a charged
-verdict: its exact raw output `49d7f9d3...` is banked under sealed quarantine
-wrapper `fd5647f8...` because it violated the `BODY-END` boundary. Reviews of
-the genus ladder remain owed and must not block compiler descendants.
-
-Promoted work stops the complete irreducible genus-three row and the
-genus-four `b1=1` row. Provisional work excludes conductors 10, 16, 22, and 28
-in the charged one-place quartic-transposition class and narrows the one-cusp
-case to two non-locally-finite Hamiltonian flows with hyperbolic generic
-fibres. D8 Gröbner work and the general quadratic delta-floor proposal are
-retired. Highest-value successors are the reviewed genus ladder, wild
-one-cusp valuation/completion structure, reducible rank four, an all-degree
-degree-monotone invariant, primitive monodromy, and exact disproof continuity.
-
-Toolchain handoff: all 79 regressions pass under normal Python, `-O`, and
-`-OO`; local Singular and msolve counts are zero. The next systems upgrade is
-immutable charged-input snapshots for external lanes, with focused custody
-tests, and must be implemented only when no external lane is live. AWS
-currently has box01's protected one-core `build_tails43.py` job plus idle
-running `r6a`--`r6d`; Box02/Box03 are stopped. Documented use is 160/512
-vCPUs including the separately owned formalization instance, leaving 352
-immediate vCPUs. Never inspect, stop, or repurpose that instance. There are no
-human holds. Intermittent Sol capacity is the reason for this clean Fable
-coordinator handoff, not a mathematical blocker.
 
 ## Roster capacity policy and write-ownership change (2026-08-31 07:56Z)
 

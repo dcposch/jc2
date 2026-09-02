@@ -1,25 +1,20 @@
 # DO1-MU2-REPLAY: hostile replay of Domrina--Orevkov I
 
-**Lane.**  The unique-dicritical, generic transverse degree-two branch of
-A. V. Domrina and S. Yu. Orevkov, *On four-sheeted polynomial mappings of
-\(\mathbb C^2\). I. The case of an irreducible ramification curve*.  The
-authoritative source is the published Russian text, *Matematicheskie Zametki*
-64:6 (1998), 847--862.  Page citations below are its printed pages, which are
-PDF pages 1--16 in the repository copy.
+**Lane.**  The unique-dicritical transverse-degree-two branch of Domrina--
+Orevkov, *On four-sheeted polynomial mappings of \(\mathbb C^2\). I*.  The
+authority is the Russian publication, *Matematicheskie Zametki* 64:6 (1998),
+847--862; printed pages correspond to repository PDF pages 1--16.
 
 **Outcome.**  The conditional \(\mu=2\) exclusion survives a complete replay.
-The source's local censuses, six-graph global census, determinant equations,
-and root placements all close after the explicit fills and one citation
-correction listed in this report.  No step in that track uses the adjacent
-\(\mu=1\) assertion or its conclusion.  The final ledger line is
+Its local and global censuses, determinants, and root placements close after
+the named fills.  No step uses the adjacent \(\mu=1\) conclusion.  Thus
 
 \[
 \boxed{\texttt{DO-I-MU2 = REPLAYED-SOUND (after named local repairs).}}
 \]
 
-The whole one-dicritical theorem has one separate assembly repair: the
-order-three case is bound to campaign Corollary 3.8, not to campaign
-Proposition 4.1.  The latter concerns only the all-\(\mu=1\) slice.
+The order-three assembly instead binds to campaign Corollary 3.8;
+Proposition 4.1 concerns only all-\(\mu=1\).
 
 ## 0. Custody, authority, and verdicts
 
@@ -33,26 +28,18 @@ b838a2860c88d64d2a2162fd1a157e345db027bf4c7e95d2abae899dba9dc5de  [frozen]/domri
 99fc1e5870fb74d48e3d14a156115ef625fa9ecbc5843f0d8dd4a138a920e9bf  [frozen]/domrina-gap-repair-opus5-20260901.md
 ```
 
-The first page of the Russian file gives volume 64, issue 6, December 1998,
-and printed page 847.  I read rendered Russian pages directly.  OCR was used
-only as a locator and every quoted or sign-sensitive line was checked against
-the page image.  The English file is an aid, never an authority.  For the
-assembly check I also inspected the repository's English copy of Orevkov's
-three-sheet paper, `refs/jc86.pdf`, SHA-256
+The Russian first page verifies volume 64, issue 6, December 1998, p. 847.
+Rendered pages control; OCR was only a locator and the English file only an
+aid.  The assembly check also used Orevkov's three-sheet paper,
+`refs/jc86.pdf`, SHA-256
 `f80d4a7d7e04987ce7dece58f33cff20ea9210183ca3ffd4488f39a2147532db`.
 
-Verdicts have the charged meanings:
+**REPLAYED-SOUND** means the displayed inputs imply the conclusion;
+**REPAIRED** supplies a bounded missing implication; **GAP** means none was
+found.  The \(\mu=2\) track has no GAP verdict.
 
-- **REPLAYED-SOUND**: the displayed hypotheses and cited inputs imply the
-  conclusion by the calculation reproduced here.
-- **REPAIRED**: the printed proof omits or miscites a necessary implication,
-  and this report supplies a bounded replacement.
-- **GAP**: no safe implication was found.  There are no GAP verdicts in the
-  \(\mu=2\) track.
-
-No exit price is asserted, promoted, or consumed here, so FALLACY-v2's
-`charge_basis` line is inapplicable.  Branches, physical points, source
-components, and cover degrees remain separately typed throughout.
+No exit price is asserted, so `charge_basis` is inapplicable.  Branches,
+points, components, and degrees remain separately typed.
 
 ## 1. What the source means by \(\mu=2\)
 
@@ -73,10 +60,8 @@ n(\widetilde g)=2,\qquad m(\widetilde g)=1,qquad
 \operatorname{Deg}\widetilde g=2.                         \tag{1.1}
 \]
 
-Nor is \(m(\widetilde g)\) the number
-\(m_{\widetilde p}(\widetilde g)=1\) in Lemma 6: the latter is the local
-ramification index of the curve map at the physical point
-\(\widetilde p\).  The relevant geometric objects are
+The \(m_{\widetilde p}(\widetilde g)=1\) of Lemma 6 is instead the curve
+map's local index at the physical point \(\widetilde p\).  The objects are
 
 \[
 \begin{array}{ll}
@@ -89,9 +74,8 @@ p=F(\widetilde p)=g\cap L.
 \end{array}
 \]
 
-Later, \(A=\widetilde L-\widetilde L_\infty-\widetilde g\) is the forest
-contracted to the affine part of \(g\); writing \(\alpha=\det A\) never
-identifies that forest with the point to which it contracts.
+Later, \(A=\widetilde L-\widetilde L_\infty-\widetilde g\) is a contracted
+forest; \(\alpha=\det A\) is not its image point.
 
 ### 1.1 Exact location and numbering map
 
@@ -99,13 +83,13 @@ The order-two track begins in §2 on p. 852, after the order \(1,2,3\)
 trichotomy, and ends with Theorem 1 on p. 862.  It occupies §§2--5.  The
 published-to-preprint map is:
 
-| Russian publication | English aid | role |
-|---|---|---|
-| Lemmas 1--5, formulas (2)--(8), pp. 849--852 | Lemmas 1.2, 1.4, 1.6, 1.7; (1.3), (1.8)--(1.10); Propositions 1.15, 1.17; Lemma 1.19 | edge/coprimality/root/canonical and transfer tools |
-| Proposition 3; Lemma 6, pp. 853--854 | Proposition 2.1; Lemma 2.2 | target splice and terminal degree two |
-| Proposition 4; Lemmas 7--9; Corollaries 4--5, pp. 854--858 | Proposition 3.2; Lemmas 3.4, 3.6, 3.8; Corollaries 3.9--3.10 | local and global censuses |
-| Lemmas 10--11, pp. 858--860 | Lemmas 4.1, 4.6 | graphs 24/25 and 22/23 |
-| Lemmas 12--15, pp. 860--862 | Lemmas 5.1, 5.2, 5.5, 5.6 | canonical/root block and graphs 20/21 |
+| Russian publication | English aid |
+|---|---|
+| Lemmas 1--5, formulas (2)--(8), pp. 849--852 | Lemmas 1.2, 1.4, 1.6, 1.7; (1.3), (1.8)--(1.10); Propositions 1.15, 1.17; Lemma 1.19 |
+| Proposition 3; Lemma 6, pp. 853--854 | Proposition 2.1; Lemma 2.2 |
+| Proposition 4; Lemmas 7--9; Corollaries 4--5, pp. 854--858 | Proposition 3.2; Lemmas 3.4, 3.6, 3.8; Corollaries 3.9--3.10 |
+| Lemmas 10--11, pp. 858--860 | Lemmas 4.1, 4.6 |
+| Lemmas 12--15, pp. 860--862 | Lemmas 5.1, 5.2, 5.5, 5.6 |
 
 Russian Figs. 3--5, 6--11, 13--19, and 20--25 correspond respectively to
 English Figs. 3(a--c), 4(a--f), 6(a--g), and 7(a--f).  Russian Fig. 26 is
@@ -113,27 +97,17 @@ English Fig. 8; Russian Figs. 27--28 are the two halves of English Fig. 9.
 
 ### 1.2 Publication/preprint divergences actually relevant here
 
-Four differences matter to a hostile replay.
+Three differences matter.
 
-1. On p. 852 the Russian says that in order one, \(F\) is an unbranched
-   covering over \(\mathbb C^2\) **outside a finite set of points**:
-   “`вне конечного множества точек`.”  The English p. 6 omits that phrase and
-   asserts a covering over all of \(\mathbb C^2\).  This is a material
-   difference, treated in §3 below.
+1. Russian p. 852 says the order-one covering is unbranched **outside a
+   finite set** (“`вне конечного множества точек`”); English p. 6 omits the
+   qualifier.  Section 3 treats it.
 2. The Russian definition on p. 849 calls a connected subgraph \(C\) linear
    only if every vertex of \(C\) has ambient valence at most two.  The English
    definition controls only non-end vertices of \(C\) and can admit nodal
    endpoints.  Lemmas 6 and 13--15 below use the stricter published meaning.
-3. Published condition E (p. 853) separately imposes target-boundary
-   minimality, allowing a possible exception for the root.  The aid folds a
-   stronger-looking statement into condition (2d) and omits that exception.
-   The proof below uses the published D+E package.
-4. The publication repairs several aid typos: p. 856 supplies “constant
-   degree” after the aid's blank sentence; p. 857 correctly has
-   \(U_{\widetilde b}\) and \(U_{\widetilde a}\), not \(U_{\widetilde a}\)
-   twice, and points to its Fig. 5 rather than the aid's meaningless “(2c) in
-   (3.6).”  These corrections are used in the census replay.
-
+3. Published E (p. 853) imposes target minimality with a possible root
+   exception.  The aid folds a stronger statement into (2d).  I use D+E.
 All rendered determinant signs agree once extraction loss is ignored:
 \(\det L=\det\widetilde L=-1\), Lemma 11 gives
 \(\det\widetilde L_\infty=-2\), and Lemma 15 gives
@@ -162,12 +136,9 @@ the polynomial map is proper; a proper Keller map is finite étale over
 least one dicritical, and Theorem 1 changes \(\ge1\) to \(>1\).
 **DO-I-BINDING-MAP: REPLAYED-SOUND.**
 
-Once Proposition 1.2 has entered the two-dicritical profile, later labels
-\(\widetilde g_1,\widetilde g_2\), their \((m,n)=(1,1),(1,2)\) data, and all
-subsequent blocks inherit DO-I-2 once.  Those later citations to part-I
-determinant lemmas are technical imports, not new uses of the one-dicritical
-exclusion.  This agrees with replay-1 lines 829--840 and the residual statement
-at lines 854--858.
+Later two-dicritical labels and blocks inherit DO-I-2 once.  Subsequent
+part-I citations are technical determinant imports, not new uses of the
+exclusion (charged replay-1 lines 829--840, 854--858).
 
 ## 3. Entry seam and independence from the \(\mu=1\) sentence
 
@@ -211,16 +182,12 @@ least \(2(m-1)\ge2\), not one.  Therefore \(m=1\).
 
 ### 3.1 The adjacent order-one wording
 
-The English aid's claim “an unbranched covering over \(\mathbb C^2\)” ignores
-the two finite corrections allowed by (3.1) at \(n=1\).  The Russian
-publication does not make that stronger claim: it explicitly removes a
-finite set.  That published version has a short replay.  Add to the finite
-set the correction images and images of contracted boundary components.
-Over the complement, the resolved map is a proper, unramified degree-four
-cover.  Its source is connected (it is the complement of finitely many
-complex fibers in an irreducible surface), while
-\(\mathbb C^2\) minus finitely many points is simply connected.  Such a
-connected four-sheeted cover cannot exist.
+The English claim “an unbranched covering over \(\mathbb C^2\)” drops the two
+finite corrections allowed at \(n=1\); the Russian removes a finite set.
+After also removing correction and contracted-component images, the resolved
+map is a proper unramified degree-four cover with connected source, whereas
+\(\mathbb C^2\) minus finitely many points is simply connected.  This is the
+bounded completion; campaign inheritance uses Proposition 4.1 regardless.
 
 Accordingly, the most precise ledger is
 
@@ -230,9 +197,8 @@ DO-I-MU1-ENGLISH-AID       = DEFECTIVE STRONGER WORDING
 DO-I-MU1-CAMPAIGN-BINDING  = REPAIRED independently by Proposition 4.1
 ```
 
-This divergence does not enlarge Proposition 4.1's scope.  It remains an
-independent safe replacement for the all-\(\mu=1\) profile and supplies no
-part of the order-two graph proof.
+Neither version enlarges Proposition 4.1's all-\(\mu=1\) scope or enters the
+order-two proof.
 
 ## 4. Replay invariants and the two omitted structural proofs
 
@@ -310,6 +276,10 @@ The edge formula used below is
 For a blowup tree, branch determinants at one vertex are coprime; away from
 the root all non-root branches but at most one have determinant one; and a
 subgraph excluding the root has positive determinant (published Lemmas 2--4).
+These foundational determinant/transfer statements (published Lemmas 1--5
+and Propositions 1--2) are the charged structure package.  This lane checks
+every application, hypothesis, sign, and integrality use; it does not
+independently promote that package.
 
 ### 4.1 Proposition 4, printed without proof — REPAIRED
 
@@ -389,8 +359,7 @@ length, gives
 3+6(2)+\binom32^3=3+12+8=23.                         \tag{5.1}
 \]
 
-This supplies the enumeration behind the publication's “using (12), (13)”;
-no drawing is assumed complete merely because it appears in the paper.
+This supplies the enumeration behind the publication's “using (4), (5).”
 
 ### 5.2 Degrees two and three: published Lemma 8
 
@@ -480,7 +449,11 @@ pictures.  On a nonunit left or lower target branch, a partition
 right branch is exempt.  A \(3+1\) block forces its target branch
 determinant to be 3, since the two coprime transfer factors are \(P/3,P\).
 A \(2+2\) block forces it to be 2.  The target left and lower determinants
-are coprime by Proposition 3.  Consequently:
+are coprime by Proposition 3.  An unsplit 4 over either of them forces that
+target determinant even: (4.4) contributes denominator 4 at an end, while
+(4.5) contributes \(4/n(\widetilde b)\) at a fork, with
+\(n(\widetilde b)\in\{1,2\}\) by the degree cap.  Thus 4 cannot pair with 4
+or \(2+2\); it can pair only with \(3+1\).  Consequently:
 
 - with one left arm, that arm is 4, the lower partition must be \(3+1\), and
   the right partition is \(2+1+1\): Russian Fig. 13;
@@ -520,7 +493,8 @@ Connectedness of \(\widetilde L_\infty\) therefore forces a first merge, and
 maximality makes it a fork.  Corollary 4 excludes a degree-two fork.  If the
 first fork has degree four, its incident right
 degree-two arm occurs only in local Figs. 13 or 14.  These give global Russian
-Figs. 20 and 21.
+Figs. 20 and 21.  Lemma 9(a) ends their left arms; all right packets already
+meet at the sole degree-four lift, so another right join would cycle.
 
 If the first fork \(A\) has degree three, it is local Fig. 10 or 11.  At the
 same target vertex (4.1) requires exactly one distinct degree-one nonfork lift
@@ -532,13 +506,16 @@ join is a fork because a degree-one vertex preserves valence by Proposition 4.
 
 For local Fig. 11 the left packets have degrees 3 and 1.  Their first meeting
 is a degree-four fork with right partition \(3+1\), so local Figs. 15 and 16
-give global Figs. 22 and 23.  For local Fig. 10, call its left packets
+give global Figs. 22 and 23.  Lemma 9(a) ends the left arms, and another right
+join would repeat the completed \(A\)-to-\(A_0\) join and cycle.  For local
+Fig. 10, call its left packets
 \(X=2,Y=1\) and the companion packet \(Z=1\).  A degree-four join of all three
 would reconnect \(X,Y\), already joined at \(A\), and make a cycle.  A
 degree-three fork \(B\) must take \(X\) and one unit; it must take \(Z\), since
 taking \(Y\) again makes parallel \(A\)-to-\(B\) routes.  The unused \(Y\) is
-the new companion \(B_0\).  The two possible local types of \(B\) give global
-Figs. 24 and 25.  If \(B\) is Fig. 11, its exposed 3-packet plus \(B_0\)'s
+the new companion \(B_0\).  Local Fig. 11 at \(B\) gives global Fig. 24 and
+local Fig. 10 gives global Fig. 25.  If \(B\) is Fig. 11, its exposed
+3-packet plus \(B_0\)'s
 unit can only enter a degree-four \(3+1\) fork; that reconnects vertices
 already joined through \(A\), hence cycles.  If \(B\) is Fig. 10, its exposed
 packets are \(X'=2,Y'=1\), with companion \(Z'=1\).  A degree-four receiver
@@ -547,10 +524,9 @@ of all three creates parallel routes.  A degree-three receiver of
 reconnects \(B\) to \(B_0\), already connected through the preceding spine.
 Every continuation cycles; the list stops.
 
-Thus the alternatives are exactly Russian Figs. 20--25, not merely six
-examples.  This also checks that the later determinant section has a complete
-input list.  **COROLLARY 5 (GLOBAL SIX-GRAPH CENSUS): REPAIRED by the explicit
-assembly above.**
+Thus the alternatives are exactly Russian Figs. 20--25, and the determinant
+section has a complete input list.  **COROLLARY 5 (GLOBAL SIX-GRAPH CENSUS):
+REPAIRED by the explicit assembly above.**
 
 ## 7. Elimination of the six global graphs
 
@@ -560,8 +536,11 @@ Use the labels \(d_1,d_2,d_3\) in Russian Fig. 26 and let
 \(\delta=\det\delta(ab)\) for its target \(a\)-to-\(b\) path.  At
 \(\widetilde a_2\), two displayed branches already have determinant greater
 than one.  The root-unit lemma therefore makes the remaining
-\(\widetilde b_2\)-branch unit and places the root outside it.  Applying the
-same lemma at \(\widetilde a_1\) gives \(d_1=1\).
+\(\widetilde b_2\)-branch unit and places the root outside it.  The path from
+\(\widetilde a_1\) to the root then runs through
+\(\widetilde b_2,\widetilde a_2\); the displayed determinant-two nonroot
+branch uses the sole nonunit allowance, so the root-unit lemma gives
+\(d_1=1\).
 
 The source cancels \(\delta^2\) without saying why it is nonzero.  The target
 root lies strictly left of \(a\), hence outside the off-path forest
@@ -569,7 +548,9 @@ root lies strictly left of \(a\), hence outside the off-path forest
 determinant convention is one.  This is the omitted premise.
 
 Apply the edge formula first in the target tree and then transfer the labeled
-constant blocks.  With \(d_1=1\) this gives
+constant blocks.  Let \(\widetilde L'\) be the component of
+\(F^{-1}(\operatorname{br}_a(b))\) containing \(\widetilde b_2\).  With
+\(d_1=1\) this gives
 
 \[
  \det\operatorname{br}_{\widetilde b_2}(\widetilde a_2)
@@ -587,8 +568,9 @@ gives \(\det\Delta>0\).  The source edge formula, using (7.1), becomes
 y=\det\Delta+4d_3\delta^2>4.                            \tag{7.2}
 \]
 
-The root-unit lemma at \(\widetilde b_2\) gives \(d_3=1\).  The final edge
-calculation in the whole source tree is then
+At \(\widetilde b_2\) the root branch points toward \(\widetilde a_2\), while
+\(y>4\) uses the possible nonunit nonroot branch; the root-unit lemma therefore
+gives \(d_3=1\).  The final whole-tree edge calculation is
 
 \[
 -2d_2=18\delta^2-2d_2-6y\delta^2.                      \tag{7.3}
@@ -601,8 +583,9 @@ The paper disposes of Fig. 25 by “analogously.”  The required relabeling
 swaps, at the left target node, the left/lower packets \((3d_1,2)\) and the
 corresponding source packets, while preserving their product \(6d_1\).  The
 singleton lift still has two nonunit branches, so the same root exclusion and
-\(d_1=1\) hold.  Equations (7.1)--(7.3), including the coefficients 18, 4,
-and 6, are invariant under that swap.  Hence Fig. 25 has the same
+\(d_1=1\) hold; the root/nonroot roles just identified are preserved.
+Equations (7.1)--(7.3), including coefficients 18, 4, and 6, are invariant
+under that swap.  Hence Fig. 25 has the same
 contradiction.  The printed proof is sound for Fig. 24 and is completed for
 Fig. 25; the \(\delta>0\) premise is also supplied.
 
@@ -610,7 +593,7 @@ Fig. 25; the \(\delta>0\) premise is also supplied.
 
 For Fig. 22, transfer at the degree-four fork \(\widetilde b\) gives target
 branch determinants \(\det L_b=3\), \(\det D_b=2\), and \(\det R_b=1\).
-Published Proposition 2, with every endpoint factor displayed, reads
+Published Proposition 2, after suppressing unit factors, reads
 
 \[
 \frac{\det\widetilde L_\infty}{\det L}
@@ -735,7 +718,7 @@ three profiles are \((1,2),(2,1),(3,0)\).  They close as follows.
 | profile | closing input | verdict |
 |---|---|---|
 | \((1,2)\) | campaign Proposition 4.1, exactly its all-\(\mu=1\) slice | **REPAIRED** |
-| \((2,1)\) | §§2--7 of the authoritative part-I text, with the bounded fills listed below | **REPLAYED-SOUND after named repairs** |
+| \((2,1)\) | §§2--7 of the authoritative part-I text, with the bounded fills listed below | **REPAIRED** |
 | \((3,0)\) | campaign Corollary 3.8, `xmodel/b0-trivial-dicritical-proof-opus5-20260831.md:312--321`, independently confirmed in `xmodel/b0-proof-hostile-review-sol56-20260831.md:246--249` | **REPAIRED**: replaces Orevkov's unproved closing Remark |
 
 This is exhaustive arithmetic, not a cap or analogy.  Proposition 4.1 does
@@ -744,27 +727,36 @@ row occurs in the proof of the second.  With the standard zero-dicritical
 proper/finite-etale exclusion from §2, part-I Theorem 1 therefore supplies
 exactly the statement used by part-II Proposition 1.2.
 
-The bounded repairs inside the \(\mu=2\) row are: the Riemann--Hurwitz proof of
-Proposition 4; sheet conservation in Lemma 7; the 35-row enumeration and its
-endpoint checks; the quotient-tree gluing that makes Corollary 5 exhaustive;
-positivity of \(\delta(ab)\) in Lemma 10; explicit reflected/swapped proofs
-for Figs. 25, 23, and 21; and the Lemma 13 citation correction from positivity
-Lemma 4 to root-unit Lemma 3.  Each is proved in this report from already
-stated source hypotheses.  None imports the disputed \(\mu=1\) inference.
+The repairs are the proofs of Proposition 4 and Lemma 7, the quotient-tree
+gluing behind Corollary 5, \(\delta(ab)>0\) in Lemma 10, the three omitted
+companion cases, and the Lemma 13 citation correction.  The 35-row census and
+endpoint checks are replay expansions, not extra repairs.  None imports the
+disputed \(\mu=1\) inference.
 
 The requested typed dispositions are therefore
 
 ```text
 CHECK-1[LOCATION-AND-DO-II-BINDING] = REPLAYED-SOUND
-CHECK-2[COMPLETE-MU2-REPLAY]        = REPLAYED-SOUND-AFTER-NAMED-REPAIRS
+CHECK-2[COMPLETE-MU2-REPLAY]        = REPAIRED[PROP4; LEM7; COR5;
+                                               LEM10-DELTA; COMPANIONS;
+                                               LEM13-CITATION]
 CHECK-2[MU1-CONTAMINATION]          = REPLAYED-SOUND (NONE)
 CHECK-3[PART-I-THEOREM-ASSEMBLY]    = REPAIRED[MU1->PROP-4.1;
                                                  MU3->B0-COR-3.8]
-DO-I-MU2                            = REPLAYED-SOUND
-                                        (after named local repairs)
-DO-I-ONE-DICRITICAL-BOUNDARY        = THEOREM MODULO THE NAMED REPAIRS
+DO-I-MU2                            = REPLAYED-SOUND (+ named local repairs)
+DO-I-ONE-DICRITICAL-BOUNDARY        = THEOREM MODULO NAMED REPAIRS
+                                        AND CHARGED STRUCTURE PACKAGES
 ```
 
-No `GAP-CANDIDATE[DO1-MU2-*]` remains.  This promotion is confined to the
-part-I inheritance; it does not by itself promote the unaudited later half of
-Domrina II or any campaign-wide closure claim.
+No `GAP-CANDIDATE[DO1-MU2-*]` remains.  This promotes only the part-I
+inheritance, not Domrina II's unaudited later half or campaign-wide closure.
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `34582`.
+- Body SHA-256:
+  `d4b19f80f6db58b2dd14363e2202ec182ee6106e9dbaf63c8841cbd576dd854a`.
+- Frozen basis: `4252acc58f89a5cc6047b7f2215bab3278911407`.

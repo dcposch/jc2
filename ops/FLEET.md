@@ -55,25 +55,26 @@ that use the shared wrapper.
   `/home/ubuntu/venvs/td6` (Python 3.12 / python-flint 0.9.0).
 
 The seven campaign instances total **336 vCPUs when all are running**. A
-separate user-owned 16-vCPU formalization instance also counts against the
-512-vCPU account quota and is outside this campaign's inspection/control
-scope. Running-state headroom is therefore dynamic; use `sh ops/status.sh`,
-which queries only the seven named campaign instance IDs and explicitly
-excludes the separate instance. At the 2026-08-31T04:44Z control-plane audit,
-Box02/Box03 were stopped, box01 plus `r6a`--`r6d` were running, so campaign
-capacity was 144 vCPUs running; box01 alone was busy (`build_tails43.py`, one
-fully used vCPU and about 132 GiB RSS), with checkpoint
-`ckpt43/jet_g_04_GB42.pkl` banked and the final `GB21` orbit active, while all
-four `r6*` workers were idle.
-Together with the documented 16-vCPU excluded instance, current account
-running use was 160 vCPUs and immediate quota headroom was 352 vCPUs. Restarting
-both stopped campaign boxes would consume another 192 vCPUs, restoring the
-all-in 352-vCPU allocation and leaving 160 vCPUs of headroom. Do not describe
-AWS as idle while the box01 checkpoint builder remains live, and do not confuse
-stopped restart capacity with current quota use.
+separate user-owned 16-vCPU formalization instance (`box-lean`) is outside
+this campaign's inspection/control scope. Use `sh ops/status.sh`, which
+queries only the seven named campaign instance IDs and explicitly excludes
+the separate instance.
 
-Do not exceed the account total or inspect, stop, retag, or repurpose the
-separate instance. The coordinator may add smaller workers of at most 1 TiB
+**Account quotas (DC, 2026-09-02 — the prior 512-vCPU campaign policy cap is
+RETIRED; launch instances as needed up to these AWS limits):**
+
+| Family (what counts)                           | Live use | AWS quota | Headroom |
+|------------------------------------------------|----------|-----------|----------|
+| Standard (r6i: Box03 + box-lean + stopped r6*) |       80 |     1,920 |    1,840 |
+| X (x8i box01 + stopped Box02)                  |       64 |       548 |      484 |
+| Combined running (at directive time)            |      144 |       n/a |        — |
+
+Standing directive: keep current instances fully utilized before adding
+more; stop idle paid capacity as always; new instances follow the same
+registration, telemetry, and kill-safety rules as the existing fleet.
+
+Do not inspect, stop, retag, or repurpose the separate formalization
+instance. The coordinator may add smaller workers of at most 1 TiB
 RAM, or replace an audited idle instance, when independent lanes benefit from
 job-level parallelism; stop/replace only after every live process and output
 has been identified and preserved. The four `r6*` nodes were resized/restarted

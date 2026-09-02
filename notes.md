@@ -17497,3 +17497,54 @@ land.
 
 Still running: do1-mu2-replay (23977), SAGE-NATIVE 6^9 enum,
 Box03 msolve 869 + M2 queue, oracle window.
+
+## LIVE STATE (observed 2026-09-02T00:23Z) — MU2 SOUND: N=4 CHECKED; RESOLUTION-FIRST DIRECTIVE ADOPTED; SEVEN-LANE FRONTIER WAVE
+
+**DO1-MU2-REPLAY landed** (`do1-mu2-replay-sol56-20260901.md`,
+8607da5c, BODY_SEALED): **DO-I-MU2 = REPLAYED-SOUND** (+ named
+local repairs: Prop 4, Lem 7, Cor 5 quotient-tree gluing,
+delta(ab)>0, three companion cases, Lem 13 citation). No mu1
+contamination. Part-I assembly EXHAUSTIVE (mu+corr=3 -> profiles
+(1,2)/(2,1)/(3,0)): (1,2) closed by campaign Prop 4.1; (2,1) by
+part-I §§2-7 after fills; (3,0) by campaign Cor 3.8 REPLACING
+Orevkov's unproved closing Remark. DO-I-ONE-DICRITICAL-BOUNDARY =
+THEOREM MODULO NAMED REPAIRS + STRUCTURE PACKAGES.
+**Net: the full N=4 chain (part I + Domrina II) is
+SOUND-AFTER-REPAIRS modulo structure packages (F1)/(F2)/(S1)/
+(S2)/(S4) — campaign repairs load-bearing in three places
+(Prop 4.1, R1/R2, Cor 3.8). Sol-produced; Grok hostile review
+IN FLIGHT (mu2-replay-review-grok46-20260902, PROVISIONAL until
+it lands).** Coordinator assessment under the DC verification
+calibration: N=4 foundation acceptable; review runs without
+blocking frontier.
+
+**RESOLUTION-FIRST DIRECTIVE (DC, 2026-09-02) adopted into
+COORDINATION.md** (new §): verification targets acceptably-low
+unsoundness probability; hardening of promoted results
+default-off; 5 Opus seats aimed at frontier; provisional-root
+caps loosened (6 roots / 3 children); allocation 45/25/12/10/4/4;
+ideation must keep producing NEW paths; AWS policy cap RETIRED
+(FLEET.md table: 1,920 Std + 548 X vCPU quotas); formalization
+non-blocking; proactive surfacing of blockers. Stale 08-31
+handoff block archived to history/. GGV custody closed
+(guccione_valqui2017_ja471_shape_counterexamples.pdf, 8b426751,
+arXiv:1401.1784v3, byte-identical to DC's download; DOI
+10.1016/j.jalgebra.2016.08.039). PARAM spec pbcopy'd to DC.
+
+**FLEET**: box01 audit: 1/64 cores busy (protected checkpoint
+builder, 25d) — provisioning launched (msolve 0.10.1 build +
+qqoracle venv) to use the idle 63 cores. Box03: 4/64 busy (M2 +
+native enum + msolve 869 + oracle). Bottleneck is workload
+generation, not compute; N=5 census will consume it.
+
+**SEVEN LANES LAUNCHED (00:22-00:23Z)**: Path-1 flagship
+`mprime-alln-h2-opus5-20260902` (all-N (M') nodal kill under H2 +
+profile classification); Path-2 flagship
+`companion-curve-alln-opus5-20260902` (generalize chi_2+sigma_2=1;
+companion existence pressure; concrete (9,6,2)-D_2 job spec);
+`mu2-replay-review-grok46-20260902`; and FULL IDEATION ROUND
+20260902T0022Z (packet df7df824, four blind equal-standing
+submitters: grok46/sol56/opus5/fable5). Opus seats in use: 3/5.
+
+Still running: SAGE-NATIVE 6^9 enum, Box03 msolve 869 + M2 queue,
+oracle window, box01 provisioning.

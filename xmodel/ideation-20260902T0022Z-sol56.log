@@ -1,0 +1,938 @@
+cli=codex-cli 0.152.0 model=gpt-5.6-sol effort=ultra config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.152.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: ultra
+reasoning summaries: none
+session id: 01a05f7f-8237-75d2-87ee-f20e22ff5363
+--------
+user
+# Blind ideation submission — round 20260902T0022Z (sol56)
+
+You are one of four equal-standing blind submitters. Read the
+charged sealed packet and fulfil its submission contract in
+full. You may read banked repository reports (xmodel/, AUDIT.md,
+APPROACHES.md, notes.md) for depth; do NOT read other lanes'
+round-20260902T0022Z submissions. Independence is the point.
+
+Report: `xmodel/ideation-20260902T0022Z-sol56.md`.
+Seal-at-completion contract: skeleton WITHOUT the marker, bounded
+per-section writes, seal only at completion. Target 12-20KB.
+charged_input=xmodel/ideation-20260902T0022Z-packet.md
+
+Your inputs are frozen read-only copies in `/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.AvFQek/inputs`;
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+df7df824c39e3b9a2eeefc398f813e9b99aa11268ac98ff6b4c8fc26cd9a6c2c  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.AvFQek/inputs/ideation-20260902T0022Z-packet.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll verify the frozen packet hash first. If it matches, I’ll work only from that packet and permitted banked reports, create the unsealed skeleton, fill it in bounded sections, validate the contract, and add the seal only as the final write.
+exec
+/bin/zsh -lc 'shasum -a 256 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.AvFQek/inputs/ideation-20260902T0022Z-packet.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+df7df824c39e3b9a2eeefc398f813e9b99aa11268ac98ff6b4c8fc26cd9a6c2c  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.AvFQek/inputs/ideation-20260902T0022Z-packet.md
+
+codex
+The SHA-256 matches exactly, so I’m proceeding. I’ll now extract the packet’s required structure, evidence boundaries, and sealing rules before drafting anything.
+exec
+/bin/zsh -lc "wc -c -l /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.AvFQek/inputs/ideation-20260902T0022Z-packet.md && sed -n '1,260p' /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.AvFQek/inputs/ideation-20260902T0022Z-packet.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+      95    5104 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.AvFQek/inputs/ideation-20260902T0022Z-packet.md
+# Sealed ideation packet — round 20260902T0022Z
+
+Frozen 2026-09-02T00:22Z. Basis f6a4591d (plus later ledger
+appends; the facts below are the authoritative deltas). Prior full
+round: 20260831T1033Z. This packet is identical for every blind
+submitter. Do not read other lanes' submissions.
+
+## Mission posture (DC directive, 2026-09-02, standing)
+
+Optimize for RESOLVING JC2 (proof or counterexample). Verification
+targets "acceptably low probability of unsound foundation," not
+maximal assurance; the N=4 foundation is assessed acceptable. Up
+to 5 Opus seats, aimed at the frontier. AWS effectively
+unconstrained (quotas 1,920 Std + 548 X vCPU). Two endorsed
+critical paths are launched (below); your round contract still
+REQUIRES genuinely new avenues — endorsement narrows nothing.
+
+## State deltas since the prior round (all pair-reviewed unless noted)
+
+1. N=4 LITERATURE CHAIN CHECKED. Domrina II (official 33pp in
+   custody, 0be24c5c) fully replayed: censuses repaired; two root
+   gaps found, REPAIRED (Theorems R1/R2), repairs CONFIRMED;
+   fork residual FORK-CONSUMED-NOWHERE; §§5-7 no new gap. Part I
+   (Mat. Zametki 64:6, custody 6883978d) mu2 track
+   REPLAYED-SOUND; assembly mu+corr=3 exhaustive, with campaign
+   Prop 4.1 closing (1,2) and campaign Cor 3.8 REPLACING
+   Orevkov's unproved Remark at (3,0). Net:
+   DOMRINA-II = SOUND-AFTER-REPAIRS modulo structure packages
+   (F1)/(F2)/(S1)/(S2)/(S4); mu2 verdict is Sol-produced,
+   Grok review in flight (PROVISIONAL until it lands).
+   NEW-LEMMA[DET-LINF-NONPOS] (det L-infinity tree <= 0,
+   unconditional; properness+Hodge+Grauert) banked, reusable.
+2. N=4 CAMPAIGN CHAIN. All six suite ideals were UNFAITHFUL (raw
+   vs reduced remainders); verdicts vacated and rebuilt:
+   (8,6,11)/(8,6,7) DEAD at rep level, twice-derived (TUBE-2 gate
+   + THEOREM TB-GERM: beta_1 = 8+3kappa, kappa odd, so
+   beta_1 == 2 mod 3; promote-with-repairs). (8,6,3) DEAD at
+   curve level (corrected I_29 EMPTY, msolve+M2, KILL-BINDING
+   review). (8,6,9): rep-open at named global input c_2(T);
+   corrected curve job running. Delta=(9,6,2) is REALIZED
+   (q=t^6+8t^2, p=t^9+12t^5+24t, p^2-q^3-64q=64t^2, 4 nodes,
+   desk-verified) and SURVIVES every promoted gate incl. new
+   THEOREM CABLE-3 (family-2 g=3; promote-with-repairs; class
+   lists brute-confirmed: 6 classes/144 tuples). SIROCCO braid
+   monodromy of the realized curve CONFIRMED the census (8
+   tangencies + x=0 node fibre); ZvK fixed-set intersection in
+   the BLOCK strand-reading: ZERO survivors, both orientations
+   (convention-free 6^9 SAGE-NATIVE check RUNNING;
+   OPEN[BMFACT-BASEPOINT], OPEN[BMFACT-STRAND-VS-BLOCK]).
+   (9,6,4): corrected locus nonempty (HF-twin), six-node job
+   running; would ALSO die to a YES on
+   OPEN[NA-R1-SHARPNESS-IRREDUCIBLE].
+3. REP-96 §7 FORK (reviewed): between "(9,6,2) realized +
+   surviving S_4 datum" and a Keller map stand
+   OPEN[REP-96-BM-FACTORISATION] (being computed),
+   OPEN[REP-96-SOURCE-IS-C2] (Riemann existence gives normal Y;
+   Y ~ C^2 unproven — largest gap), and
+   OPEN[REP-96-MPRIME-COMPANION]: at the reducible N=4 profile
+   (M') COLLAPSES to chi_2 + sigma_2 = 1 — blind to the branched
+   component, constraining ONLY the forced rational companion
+   D_2 (deg >= 2, Lemma NL).
+4. LITERATURE POSTURE: received bound is N >= 6 (Zoladek 2008
+   through 5) but Zoladek carries the documented GGV gap (Lemma
+   4.10 unsupported inclusion; arXiv:1401.1784, custody
+   8b426751) — N=5 is NOT soundly closed. GGV also: gcd of total
+   degrees >= 16 for any counterexample, and != 2p.
+5. INSTRUMENTS: msolveio+qqideal live (strict msolve 0.10.1 I/O;
+   exact QQ ideals; certainty-typed verdicts; PARAM/point
+   extraction coming next release). Parallel-oracle window
+   running. SIROCCO+ZvK+S_4-enumeration pipeline proven
+   end-to-end on a real curve. New CAS footguns #10 (Sage
+   squarefree_part != radical) and #11 (conda-forge sage
+   scripts: no __main__).
+6. LAUNCHED FLAGSHIPS (endorsed Paths 1-2): MPRIME-ALLN-H2
+   (all-N nodal/(M') kill under H2 + profile classification) and
+   COMPANION-CURVE-ALLN (generalize the chi_2+sigma_2=1 collapse;
+   companion existence pressure; concrete (9,6,2)-D_2 job spec).
+   Also open fronts: one-cusp A2 horn (OPEN[A2-CELL-32]; two
+   sections closed by degree termination), N=5 census (pipeline
+   ready), primitive monodromy, all-degree degree-monotone
+   invariant.
+
+## Submission contract (per COORDINATION.md §full-spectrum)
+
+Deliver ALL of: disposition vector over the avenues named above
+(unchanged/raise/lower/reopen + reasons); reranked
+proof/disproof bottlenecks; >= 1 genuinely NEW avenue or
+mechanism; >= 1 new cross-connection; strongest proof attack;
+strongest counterexample attack; one software acceleration or
+decisive experiment; a campaign-systems check (UPGRADE card or
+NO_CHANGE with evidence); <= 3 detailed idea cards (dependencies,
+cheapest discriminator, outcome interpretations, stop condition,
+expected information gain); continue/redesign/stop for the major
+lanes above. Blind: cite only this packet and the repository's
+banked reports.
+
+exec
+/bin/zsh -lc "rg --files -g 'COORDINATION.md' -g 'AUDIT.md' -g 'APPROACHES.md' -g 'notes.md' -g 'xmodel/**' | sed -n '1,240p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+notes.md
+APPROACHES.md
+AUDIT.md
+COORDINATION.md
+dist/jc72108-theory-bundle-v1/notes.md
+dist/jc72108-theory-bundle-v1/AUDIT.md
+xmodel/bd-a2-d3-sectioned-two-support-split-control-hostile-review-opus5-20260830.log
+xmodel/max12-912-order1-binary-cubic-first-two-bands-review-grok-v3-20260825.md
+xmodel/bd-a2-normal-f5-decorated-carrier-effectivity-reduction-different-model-review-gpt55-r2-20260830.run.v2
+xmodel/ideation-20260829T1517Z-crosspoll-fable5.md
+xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-obstruction-sol56-20260830.md.artifact.json
+xmodel/max12-general-faber-exceptional-support-mason-review-grok-20260825-prompt.md
+xmodel/ideation-20260825T1120Z-root.md
+xmodel/k1-mathlib-survey-and-plan-opus5-20260901.run.v2
+xmodel/td6-c1-c2-c3-p3-raw-curve-erratum-20260825.md
+xmodel/encoding-faithfulness-audit-r2-sol56-20260901.md
+xmodel/as109-cubic-coupling-gate-20260824.md
+xmodel/ggv-qgate-opus-new-claims-hostile-review-grok46-20260827.md
+xmodel/k00-ram-e2m1-g5-prefix-hostile-review-opus5-20260829.log
+xmodel/block-descent-a1-total-delta-fox-localization-hostile-review-gpt55-20260830.md
+xmodel/ggv-unit-s-order4-order5-dependency-hostile-review-opus5-20260828-v2.md
+xmodel/td6-v89h8-q13-functional-extension-promotion-20260826.md
+xmodel/as-fonly-p3-d7-associated-top-components-review-grok-20260824.md
+xmodel/max12-812-order2-affine-faber-total-rees-fitting-import-design-20260826.md
+xmodel/block-descent-a1-quartic-cycle1-pseudoplane-companion-hostile-review-opus5-20260830.run.v2
+xmodel/max12-812-order2-square-fan-lower-hull-reduction-20260826.md
+xmodel/max12-812-order2-square-d1-finite-band-a2-a5-hostile-review-grok-20260826-prompt.md
+xmodel/as109-wild-symplectic-conductor-gate-20260824.md
+xmodel/k00-ram-e2m2-h10eq1-g11-survivor-replay-sol56-20260830.py
+xmodel/max12-912-order3-d1-classical-degree-split-20260825.md
+xmodel/td6_first_generic_surjectivity_corollary_hostile_review_20260826.log
+xmodel/as109-quadratic-review-grok-20260824.run
+xmodel/max12-812-order2-p0-total-rees-section-all-depth-v21-hostile-review-fable5-20260827.md
+xmodel/max12-912-order3-nu-q8-good-reduction-no-merger-erratum-review-claude-20260825-prompt.md
+xmodel/max12-812-order2-p0-total-rees-j2-v34-terminal-receiver-strategy-opus5-20260827.md
+xmodel/max12-812-order2-affine-faber-k-delayed-load-k2-composition-exclusion-20260826.md
+xmodel/as-gauge-growth-p3-depth5-d8-survivor-20260824.md
+xmodel/td6-v89h12-allq-p12-full-normal-form-hostile-review-report-20260826.md
+xmodel/max12-812-order2-p0-total-rees-j2-a0-pure-cubic-promotion-sol-20260827.md
+xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.log
+xmodel/bd-fix3-affine-linear-log-closure-coordinator-integration-sol56-20260830.md
+xmodel/d43-common-integral-emitter-preflight-gpt56-20260828.md.sha256
+xmodel/ggv-upper-endpoint-active-c2-literal-d16-d22-tail-sol-ultra-20260828.md
+xmodel/max11-68-vanishing-a-elimination-count-grok46-20260831.md
+xmodel/m2-equal-join-semilinear-primary-research-opus5-20260829.md
+xmodel/max12-812-order2-p0-cusp-successor-design-20260826.md
+xmodel/completion-pair-rank2-review-grok-20260824.log
+xmodel/ggv-upper-endpoint-q1-fixed-proper-divisor-d12-obstruction-hostile-review-fable5-20260828-prompt.md
+xmodel/pi1-s4-verification-r2-grok46-20260831.log
+xmodel/row-86-prebuild-opus5-20260901.log
+xmodel/max12-812-order2-square-d1-a9-full-composition-promotion-20260826.md
+xmodel/ideation-20260827T0145Z-grok.md
+xmodel/sigray-section7-kappa-variation-salvage-gpt55-20260828.md.sha256
+xmodel/bd-a2-d3-halphen-two-support-weighted-boundary-hostile-review-gpt55-20260830.run.v2
+xmodel/ideation-20260829T0820Z-synthesis.md
+xmodel/sol-symplectic.md
+xmodel/sol-witt.out
+xmodel/block-descent-a1-rank4-mm-identity-hostile-review-sol56-20260831.prompt.md
+xmodel/block-descent-a1-wave23-coordinator-integration-fable5-20260831.md.artifact.json
+xmodel/b0-proof-hostile-review-sol56-20260831.run.v2
+xmodel/block-descent-a1-quartic-cycle1-pseudoplane-companion-threat-map-sol56-20260830.md
+xmodel/max12-812-order2-p0-total-rees-j1-zero-prefix-hostile-review-grok-20260827.md
+xmodel/td6-two-chart-next-row-review-grok-20260824.md
+xmodel/m2-two-pole-full-exit-attachment-primary-opus5-76c-20260829.run.v2
+xmodel/max12-812-order2-affine-faber-a-h17-q7-a3-normalized-formal-kummer-lift-theorem-20260826.md
+xmodel/ideation-20260831T1033Z-crosspoll-grok46.log
+xmodel/ideation-20260826T2350Z-freeze.md
+xmodel/max12-812-order2-p0-total-rees-j2-a1-rho0-to-total-dvr-design-erratum-v43-sol-20260827.md
+xmodel/ideation-20260827T0145Z-opus5.log
+xmodel/ideation-20260825T1550Z-td6.md
+xmodel/td6-v89h4-high-q-total-f-k-repair-hostile-review-grok-v2-prompt-20260826.md
+xmodel/k00-ram-e2m1-g5-prefix-replay-sol56-20260829.py
+xmodel/k00-ram-e2m2-h10eq1-g11-coordinator-integration-sol56-20260830.md
+xmodel/max12-812-order2-square-d1-age10-cge-a1-source-ceiling-corollary-hostile-review-claude-20260826-prompt.md
+xmodel/k00-r4-00-r1-r2-exact-deciders-hostile-review-opus5-20260829.prompt.md
+xmodel/ideation-20260829T1517Z-opus5.md
+xmodel/reducible-all-n-opus5-20260901.md
+xmodel/as-b9-max12-w3-survivor-review-grok-20260825.md
+xmodel/k00-r3-erfan-grade12-hostile-review-fable5-20260829.run.v2
+xmodel/ideation-20260827T0935Z-opus5.run
+xmodel/max12-812-order2-gate-t-kummer-row-bridge-hostile-review-opus5-prompt-20260827.md
+xmodel/td6_v76_fixed_a3_hostile_review_v2_20260825.run
+xmodel/ideation-20260831T0512Z-synthesis.md.artifact.json
+xmodel/ideation-20260825T0948Z-synthesis.md
+xmodel/theta-reopen-explicit-pullback-sol56-20260831.prompt.md
+xmodel/k00-unloaded-normal-cone-quartic-coordinator-integration-sol56-20260829.md
+xmodel/grok-normalform.out
+xmodel/ggv-upper-endpoint-tail4-field-obstruction-crossreview-grok46-20260828.log
+xmodel/as109-bounded-polar-conductor-review-grok-20260824.md
+xmodel/td6-c1-c2-c3-q2-cminus5-previous-x11-v73-aws-20260825.md
+xmodel/bd-a2-a1-ruling-euler-boundary-cap-sol56-20260830.md.artifact.json
+xmodel/bd-a2-singular-f5-unbalanced-and-q8-global-hostile-review-gpt55-20260830.run.v2
+xmodel/block-descent-a1-genus-ladder-conductor22-28-hostile-review-gpt55-20260831.md
+xmodel/gcd3-69-lower-pfaffian-successor-review-grok-20260824.run
+xmodel/sol-unify.md
+xmodel/max12-812-order2-p0-total-rees-j2-a1-two-fibre-generic-eliminant-hostile-review-grok-20260827.md
+xmodel/block-descent-a1-genus-four-cable-b1-obstruction-sol56-20260831.md.artifact.json
+xmodel/max12-912-order1-binary-cubic-first-two-bands-review-grok-v2-20260825.log
+xmodel/ideation-20260826T2350Z-rho-unit-review-fable5-prompt.md
+xmodel/as-b9-max12-leading-shear-q8-interface-audit-v2-20260825.md
+xmodel/completion-pair-rank2-review-grok-20260824-prompt.md
+xmodel/ideation-20260826T2350Z-fable5-prompt.md
+xmodel/sigray-later-m-package-source-audit-sol-ultra-20260828.md
+xmodel/m2-exit-safe-floor-legacy-reprice-r1-sol56-20260829.md
+xmodel/domrina-ii-replay2-sol56-20260901.prompt.md
+xmodel/pi1s4-64-nonmonogenic-sol56-20260831.log
+xmodel/max12-812-order2-affine-faber-a-a3-kernel-fan-composition-hostile-review-grok-20260826.launch.stdout
+xmodel/max12-912-order3-nu-q8-char0-mod127-contact-bridge-review-grok-20260825-prompt.md
+xmodel/td6-c1-c2-c3-q2-b3-source-dag-repaired-v66-aws-20260825.md
+xmodel/bd-a2-singular-f5-q8-closure-coordinator-integration-sol56-20260830.md.artifact.json
+xmodel/pi1s4-64-fold-reduction-hostile-review-grok46-20260831.prompt.md
+xmodel/ggv-8_28-carrier-squareclass-r4-hostile-audit-actual-20260827.md
+xmodel/block-descent-a1-quartic-branch-topology-acyclic-obstruction-sol56-20260830.md.artifact.json
+xmodel/ideation-20260827T1349Z-grok.run
+xmodel/td12-occurrence-coverage-attack-opus5-93d-20260829.run.v2
+xmodel/as109-d12-seed-provenance-reconciliation-grok46-20260831.log
+xmodel/max12-812-order2-p0-cusp-raw-g12-cech-certificate-v2-hostile-review-grok-20260826.md
+xmodel/k00-r4-00-aws-packet-builder-fable5-20260829.run.v2
+xmodel/landing-ledger-ll1-r4-software-hostile-review-fable5-ccb-20260829.prompt.md
+xmodel/block-descent-a1-one-ordinary-node-all-degree-meridional-rank-obstruction-sol56-20260830.md
+xmodel/sol-max12-912-squarefree-poisson-recurrence-20260825.md
+xmodel/sol-wtc1.md
+xmodel/b0-proof-verification-grok46-20260831.log
+xmodel/as-fonly-d7-global-q4-pinned-base513-cartier-obstruction-20260825.md
+xmodel/ideation-20260824T2024Z-claude.run
+xmodel/max12-812-terminal-logderivative-pte-u3-review-grok-20260826.run
+xmodel/max12-812-order2-affine-faber-a-formal-weighted-h3-h5-hostile-review-grok-20260826.run
+xmodel/ggv-upper-endpoint-origin-residue-slice-hostile-review-fable5-20260828-check.py
+xmodel/max12-812-order2-affine-faber-a-h17-q7-a3-sequential-g51-hostile-review-grok-20260826.md
+xmodel/m2-td8-cv-weight-contact-gate-hostile-review-fable5-20260829.run
+xmodel/max12-812-order2-square-a-ptangent-hostile-review-grok-20260826.log
+xmodel/bd-a2-d3-sectioned-two-support-split-control-hostile-review-opus5-20260830.prompt.md
+xmodel/exact-coframe-gate-20260824.md
+xmodel/max12-812-order2-gate-t-drho-unique-ac-a2d2-review-repair-v2-sol-20260827.md
+xmodel/ideation-20260827T0145Z-common-prompt.md
+xmodel/max12-general-faber-exceptional-support-mason-review-grok-20260825.md
+xmodel/ggv-upper-endpoint-uniform-d9-fullmodes-hostile-review-grok46-20260828.md
+xmodel/td6-c1-c2-c3-q2-h-source-dag-v60-review-grok-20260825.log
+xmodel/as109-xy-membership-review-grok-20260824.log
+xmodel/td6-two-chart-next-row-20260824.md
+xmodel/max12-812-order2-affine-faber-a-h16-q6-a4-grade48-direct-unit-hostile-review-grok-20260826.run
+xmodel/max12-812-order2-u2-62-oneparameter-rees-reduction-review-grok-20260826-prompt.md
+xmodel/td6_v78bc_all_q_p12_hostile_review_v3_20260826.md
+xmodel/max12-912-order3-nu-q8-char0-specialization-scheme-gap-audit-20260825.md
+xmodel/max12-812-terminal-logderivative-pte-u3-review-grok-20260826-prompt.md
+xmodel/sol-msolve-fix.log
+xmodel/row-sweep-sol56-20260831.run.v2
+xmodel/block-descent-a1-cubic-affine-survivor-funnel-hostile-review-gpt55-20260830.run.v2
+xmodel/as109-wild-symplectic-conductor-review-grok-20260824.log
+xmodel/review-norm-moment-sep-grok.md
+xmodel/sol-thmB.md
+xmodel/systems-custody-p0-patch-sol56-20260831.prompt.md
+xmodel/m2-td8-equal-join-zero-side-initialization-hostile-review-opus5-20260829.log
+xmodel/td6-jet-orbit-adjoint-review-grok-20260824.log
+xmodel/max12-812-order2-affine-faber-a-a3-kernel-fan-composition-hostile-review-grok-20260826-prompt.md
+xmodel/bd-a2-d3-halphen-weighted-boundary-obstruction-sol56-20260830.md
+xmodel/max12-912-order3-nu-q8-w0-rankdrop-b1-frozen-d4-finite-c-unit-review-grok-20260825-prompt.md
+xmodel/bd-a2-d3-local-degreecap-countercontrol-sol56-20260830.md.artifact.json
+xmodel/ideation-20260824T0453Z-adversary.md
+xmodel/bd-a2-normal-f5-contracted-carrier-compatibility-corrigendum-sol56-20260830.md.artifact.json
+xmodel/as109-degree-cross-review-grok-20260824.run
+xmodel/ideation-20260827T0935Z-opus5-crossreview.run
+xmodel/td6-c1-c2-c3-q2-h-source-dag-v60-review-grok-20260825-prompt.md
+xmodel/d43-essential-source-coordinate-bridge-hostile-review-gpt56-20260828.md
+xmodel/bd-a2-a1-p1-full-sandwich-different-model-review-gpt55-20260830.run.v2
+xmodel/sigray-section7-weighted-euler-canonical-integration-map-terra-20260828.md.sha256
+xmodel/m2-td12-pole-entry-price-r1-hostile-review-fable5-20260829.log
+xmodel/k1-mathlib-survey-and-plan-opus5-20260901.prompt.md
+xmodel/bd-a2-singular-f5-unbalanced-local-polar-sol56-20260830.md.artifact.json
+xmodel/ideation-20260831T1033Z-grok46.prompt.md
+xmodel/flag-place-series-consumer-audit-sol56-20260829.md
+xmodel/k00-r4-00-base-diagnostic-controlled-stop-sol56-20260829.md
+xmodel/ideation-20260827T2259Z-grok46.md
+xmodel/n20-escape-hostile-review-sol56-20260901.prompt.md
+xmodel/as-fonly-d7-vertical-d7-cap-boundary-20260824.md
+xmodel/m2-td8-equal-join-st39-coefficient-transport-primary-hostile-review-opus5-20260829.md
+xmodel/max12-912-order3-d1-control2-slope-uniform-review-claude-20260826.log
+xmodel/ideation-20260831T0512Z-synthesis.md
+xmodel/td6-current-denominator-nested-identity-hostile-review-grok-20260826.md
+xmodel/max12-partial-y-kummer-preflight-review-claude-20260824.run
+xmodel/ideation-20260824T1633Z-cube-owner.md
+xmodel/td6-source-dilation-contraction-negative-20260825.md
+xmodel/td6-boundary-q2-deformation-review-grok-20260824.md
+xmodel/round1033-sheet-gate-verification-grok46-20260831.run.v2
+xmodel/td6-c1-c2-c3-q2-beta-u-h-zero-v70-review-grok-20260825-prompt.md
+xmodel/ideation-20260902T0022Z-sol56.log
+xmodel/gcd3-69-coverage-composition-review-claude-20260824.md
+xmodel/ideation-20260827T0935Z-grok.log
+xmodel/bd-a2-normal-f5-decorated-carrier-effectivity-reduction-different-model-review-gpt55-r2-20260830.md
+xmodel/sol-uniform-review.md
+xmodel/sigray-section7-resolution-free-coordinator-final-delta-gate-terra-20260828.md.sha256
+xmodel/td6-current-denominator-nested-identity-hostile-review-grok-20260826-prompt.md
+xmodel/td6-c1-c2-c3-q2-previous-source-rows-v55-aws-20260825.md
+xmodel/ideation-20260827T2137Z-grok46-face-hostile-review-sol-ultra.md
+xmodel/k00-r5-jetfan-provisional-sol56-20260829.md
+xmodel/max12-912-order3-nu-q8-w0-rankdrop-b1-frozen-d4-finite-c-unit-repaired-v2-review-grok-20260825.run
+xmodel/bd-a2-d3-halphen-cfs-state-machine-hostile-review-gpt55-20260830.prompt.md
+xmodel/block-descent-a1-rank4-missing-multiplicity-identity-opus5-r2-20260831.md
+xmodel/bd-a2-q6-fixed-presentation-closure-coordinator-integration-sol56-20260830.md
+xmodel/gcd3-69-coverage-composition-20260824.md
+xmodel/sigray-sheet6-depth-root-meet-reaudit-hostile-gpt55-20260828.md
+xmodel/as-fonly-d7-postd10-d98-f3-20260824.md
+xmodel/bd-a2-singular-f5-unbalanced-local-polar-sol56-20260830.md
+xmodel/sol-probability-prompt.md
+xmodel/round1033-hf-dossier-hostile-review-gpt55-20260831.run.v2
+xmodel/block-descent-a1-ruling-transfer-hostile-review-fable5-20260830.prompt.md
+xmodel/ideation-20260829T1808Z-crosspoll-grok46.log
+xmodel/as-gauge-growth-p3-depth6-cartier-d7-point-review-grok-20260824.log
+xmodel/max12-812-order2-p0-total-rees-j2-a1-c5-typed-transport-v43c6-hostile-review-fable5-prompt-20260827.md
+xmodel/sol-lean-dw.log
+xmodel/as-fonly-d7-q9-source-state-review-claude-20260825.run
+xmodel/n20-escape-kill-opus5-20260901.log
+xmodel/d43-k0-field-theorem-hostile-review-grok46-20260829.md
+xmodel/k00-ram-e2m2-h10eq1-g12-g13-closure-hostile-review-opus5-20260830.log
+xmodel/bd-a2-f5-local-different-two-branch-hostile-review-opus5-20260830.md
+xmodel/max12-812-order2-first-normal-principal-part-ufd-review-grok-20260826.log
+xmodel/max12-812-order2-exact-square-affine-mu2-support-hostile-review-grok-20260826.md
+xmodel/sectioned-output-contract-v1-hostile-review-opus5-20260830.prompt.md
+xmodel/ideation-20260831T1033Z-fable5.log
+xmodel/max12-812-order2-square-d1-a8d3-moving-connection-rankjump-route-promotion-20260826.md
+xmodel/one-cusp-a2-hostile-review-sol56-20260901.run.v2
+xmodel/d43-direct-exact-sparse-source-preflight-gpt56-20260828-v2.sha256
+xmodel/ideation-20260829T1517Z-crosspoll-grok46.run.v2
+xmodel/k00-r4-00-r1-r2-exact-deciders-hostile-review-opus5-20260829.run.v2
+xmodel/ideation-20260827T1104Z-k00_closure_incidence.md
+xmodel/ideation-20260829T0002Z-grok46-prompt.md
+xmodel/ideation-20260827T2259Z-synthesis-sol.md
+xmodel/max12-912-order3-nu-q8-p127-rational-etale-point-20260825.md
+xmodel/td6-c1-line-kill-gate-20260824.md
+xmodel/domrina-ii-replay1-sol56-20260901.run.v2
+xmodel/block-descent-all-degree-acyclic-companion-obstruction-coordinator-integration-sol56-20260830.md
+xmodel/ggv-upper-endpoint-uniform-d14-d15-fullmodes-sol-ultra-20260828.md
+xmodel/max12-812-order2-affine-faber-a-h17-upper-graph-load-unit-hostile-review-grok-20260826.md
+xmodel/as-b9-9-12-common-cubic-3p11-review-grok-20260825.md
+xmodel/block-descent-a1-one-cusp-poisson-hostile-review-grok46-20260831.prompt.md
+xmodel/ggv-upper-endpoint-active-c2-d8-d15-hostile-review-fable5-20260828.md
+xmodel/max12-812-order2-square-d1-tied-a1r2-cge6-maxpole2-promotion-20260826.md
+xmodel/d73-strict-or-equality-review-grok-20260824-prompt.md
+xmodel/max12-812-order2-p0-total-rees-t-rs-implementation-audit-codex-20260826.md
+xmodel/as-fonly-p3-balanced-cyclotomic-terminal-family-20260824.md
+
+exec
+/bin/zsh -lc "rg -n \"full-spectrum|seal|SEALED|bounded|skeleton|idea card|disposition vector|campaign-systems\" COORDINATION.md && sed -n '1,280p' COORDINATION.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+59:- **Research lane** — one bounded prove, disprove, compute, implement, or
+111:   seal, replay in every declared mode, and unchanged pre/post hashes. No
+158:(post-residue-A bounded delay), never bare `G2`. The detailed dependency map
+212:  cost, or reports fleet/lane state unreliably.  Treat this as a bounded
+216:delta, launch or stop bounded work, and bank it without forcing every ideator
+223:Coalesce echo events to prevent review/round thrashing. If a sealed full-round
+240:This pass is bounded and does not interrupt unrelated work.  In particular,
+246:load-bearing snapshot assumption, mark that round `ABORTED` and reseal. If it
+248:sealed round, and start an immediate follow-on full round. Never mutate the
+269:   same sealed packet, submission contract, tool boundary, and deadline, and
+275:   - a compact disposition vector over every numbered avenue: `unchanged`,
+283:   - a short campaign-systems check, independent of the mathematical software
+289:   - no more than three detailed idea cards, each with explicit dependencies,
+313:   highest-value bounded upgrade for immediate work, and track it only in the
+325:and never silently mutate the sealed packet.
+363:actual-total pair or total cap licenses `METHOD_CONTROL_ONLY`; an unbounded-
+373:one theorem is inconclusive.  Unbounded-total partial-`y` work must say
+374:`--total-unbounded` explicitly and still pass every other classical/history
+386:  bounded campaign-system improvement;
+409:job failure rates, model/fleet utilization, and time to a sealed replayable
+426:7. rebalance the portfolio, launch the next bounded lanes, and assign a stop
+449:- Immediate queue/triggers: <ranked bounded actions>
+508:- Reviewed `ops/run_capped.py` is the opt-in `CAPRUN/v1` pilot for bounded
+619:| Fable 5 (Anthropic) | `ops/adapters/claude.sh` | exact-model pinned; permanent equal-standing whole-portfolio researcher; receives every sealed full-round packet independently; clean same-input ideation through `20260829T2254Z`; distinctive reviewed work includes theorem-interface/lifecycle auditing, compiler custody, K00 compression, the exact localized gate intertwiner, the uniform lower two-root endpoint theorem, the E0 exact-`p` linear-vacuity correction, the reviewed algebraic-primitive gate filter, the reviewed single-root endpoint-transport mechanism, the independent repair of the active-`c2` D8--D15 cascade, the normalization/localization repair of the q1/q3 composition, the clean 442-slot hostile review of raw origin coupling, the fixed origin-residue slice audit, the fixed-`Q=X` ideal-membership exclusion, and the literal active-`c2` D16--D22 audit; normal hostile review remains mandatory |
+626:Admission requires a sealed same-input evaluation against a standing model.
+650:  exploration, adversarial-review volume, web sweeps, and bounded desk
+659:  (every sealed full-round packet, unchanged), plus the hardest integrative
+688:## Lane report contract amendment: seal-at-completion (2026-08-31 17:35Z)
+690:Two lanes returned sealed skeletons on 2026-08-31 (a provider ended its
+691:turn after writing the skeleton; a 128K-output-cap kill mid-response),
+693:seal into the initial skeleton — making `report_state=BODY_SEALED`
+698:1. The skeleton written as the lane's first action MUST NOT contain the
+700:2. Sections are appended as separate bounded writes (target under
+705:   remaining section OPEN in one short paragraph each, then seal.
+709:content. Coordinator-side: a `BODY_SEALED` receipt no longer implies
+711:(nonblocking): a divert heuristic flagging sealed reports whose
+# COORDINATION.md — the campaign protocol
+
+This file owns the campaign's live operating policy. It is model-agnostic:
+any sufficiently capable model can fill any role below. Avenue inventory and
+ranking belong in `APPROACHES.md`; the detailed Keller-to-book / `G2-PSC` /
+`G2-BD` dependency map belongs in `ladder/REDUCTION.md`; claim-level evidence
+belongs in `AUDIT.md`. None is duplicated here.
+
+## Mission and decision rule
+
+Resolve the plane Jacobian conjecture, by proof or counterexample, as quickly
+as sound research permits. Urgency changes scheduling, not standards. Review
+gates promotion, publication, expensive commitment, and irreversible action;
+it does not normally block cheap, reversible research based on a result that
+has passed the provisional gate below.
+
+The coordinator may take routine, reversible actions within the campaign.
+External communication, publication, destructive operations, disclosure of a
+private result, and newly expensive commitments remain human decisions unless
+the human has granted standing authority for the exact action.
+
+## Canonical files and write ownership
+
+The six top-level Markdown files have disjoint jobs:
+
+- `README.md` — short project orientation and public-progress pointer.
+- `COORDINATION.md` — live process, roles, gates, clocks, and bootstrap.
+- `APPROACHES.md` — canonical avenue inventory and comparative ranking:
+  routes, gaps, promise, and tried/untried status.
+- `AUDIT.md` — promoted-claim and trust-boundary ledger, including
+  corrections. Promotion requires the review rule below.
+- `PROGRESS.md` — one compact digest per calendar day, newest first.
+- `notes.md` — append-oriented tick log and active-state journal.
+
+The newest `LIVE STATE` block in `notes.md` is authoritative for lanes, holds,
+provisional claims, review debt, clocks, and the immediate queue. `xmodel/`
+holds immutable producer, reviewer, sweep, and round reports; code and replay
+artifacts live beside the relevant cases. `ops/FLEET.md` owns machine inventory
+and compute safety rules.
+
+Do not maintain a second live queue, avenue map, or evidence ledger. Link to
+the canonical entry instead of copying it. When a digest must repeat a fact,
+label its date and evidence/lifecycle state; later corrections supersede but do
+not erase the historical record.
+
+## Roles
+
+Exactly one coordinator is active. A handoff becomes effective only after the
+outgoing coordinator banks an atomic `LIVE STATE` and the incoming coordinator
+acknowledges its basis; research and review lanes may otherwise remain active.
+
+- **Coordinator / integrator** — owns the scientific schedule and global
+  synthesis. It freezes round inputs, keeps the claim and avenue dependencies
+  legible, allocates capacity, adjudicates conflicting reports, attacks the
+  hardest integrative gap, banks state, and surfaces human-only decisions. The
+  strongest available reasoner should spend most of its time here or on the
+  one problem for which global context has the highest marginal value, not on
+  routine replay or documentation.
+- **Research lane** — one bounded prove, disprove, compute, implement, or
+  survey task. It names its input claims and permitted assumptions, owns its
+  task end-to-end, and writes one `xmodel/<tag>.md` report plus replayable
+  artifacts when applicable. It does not edit shared ledgers.
+- **Adversarial reviewer** — independently tries to break one claim by source
+  comparison, counterexample search, and direct replay. It reports a verdict
+  for each exact claim: `CONFIRMED`, `REFUTED`, or `GAP`, with the attack and
+  computation shown. It must not be the producer model.
+- **External-intelligence lane** — searches broadly for new results, actors,
+  artifacts, corrections, and priority changes; snapshots exact sources and
+  maps actionable items into campaign claims and avenues.
+- **Software / compute lane** — improves instruments or runs registered
+  experiments. New tools carry an internal/unreviewed label until their gates
+  and any claim they support are independently reviewed.
+
+Persistent avenue owners preserve depth. At every ideation round, rotating
+fresh-eyes lanes independently scan the whole campaign before receiving any
+narrower lens.
+
+## Two independent claim axes
+
+Never conflate mathematical evidence with workflow maturity.
+
+**Evidence tier** describes what the artifact proves, for example `EXACT`,
+`PROVED`, `MOD-p`, `BOOK-RELATIVE`, `FORMAL`, `INTERNAL-UNREVIEWED`, or
+`CONJECTURE`. Absence of a certificate means the lower tier. A computational
+header or model verdict never upgrades the underlying artifact.
+
+**Lifecycle state** describes scrutiny:
+
+`DRAFT -> PRODUCER-CHECKED -> PROVISIONAL -> PROMOTED`
+
+with exits to `QUARANTINED` or `REFUTED`. `PROVISIONAL` is not an evidence
+tier and must never be presented as promoted truth.
+
+A result may enter `PROVISIONAL` only when all of the following are recorded:
+
+1. an exact statement and scope, with failed or excluded stronger readings;
+   the ambient ring, quotient/localization/saturation order, and every
+   specialization must be literal. A conclusion moved between rings must
+   exhibit and audit the map; matching variable names are not a map;
+2. explicit dependencies and provenance;
+3. frozen source/artifact hashes and a replay command when computational;
+4. producer-run attacks, sanity checks, and at least one meaningful negative
+   control where the object admits one;
+5. for a characteristic-`p`, Witt, or `p`-adic successor digit, the exact
+   integer numerator, its divisibility on the charged predecessor scheme, and
+   the reduced integer quotient are recorded before any reduction modulo `p`;
+6. no known contradiction with the current ledgers.
+7. **Completion handshake.** An author's hash or “ready” message is advisory
+   while that author is still running. The packet is frozen only after the
+   author is idle/completed and the coordinator independently verifies its
+   seal, replay in every declared mode, and unchanged pre/post hashes. No
+   reviewer, commit, or downstream consumer may charge preliminary bytes.
+8. **Transactional local publication.** New reports authored by local agents
+   or the coordinator use `ops/artifact_finalize.py` by default:
+   `begin -> close -> finalize -> verify`. Authors write only the leased
+   private partial; the tracked read-only manifest accompanies the final
+   report. Root verifies after author completion and runs `verify --staged`
+   on the explicitly staged report/manifest before commit. This supplements,
+   rather than replaces, replay and hostile mathematical review. Existing
+   external `ops/lane.sh` custody remains unchanged until a separate adapter
+   migration is reviewed; do not retrofit the transaction into a live lane.
+
+## Promotion and adversarial review
+
+1. **Different-model promotion.** No result enters `AUDIT.md` as promoted
+   until a different model has performed hostile review. Self-review and two
+   agents backed by the same producing model do not satisfy this rule.
+2. **Recompute, do not defer.** Review the exact source statement, hypotheses,
+   transcription, code, certificate, and conclusion as applicable. A second
+   prose opinion is not a computational review.
+   For a characteristic-`p`, Witt, or `p`-adic successor residual, independently
+   reconstruct the integer quotient and compare its generated rows with the
+   exact source identity on both a symbolic control and, where possible, an
+   old-pass/new-fail negative control. A mod-`p` bracket calculation alone does
+   not review a divided carry.
+3. **Priority by exposure.** Review priority is proportional to
+   `downstream fanout x centrality x fragility x rollback cost`. A claim that
+   many active lanes consume outranks an isolated lemma of equal apparent
+   importance.
+4. **Latency targets.** Start review as soon as a claim becomes provisional.
+   Aim to resolve high-fanout claims within six hours and ordinary claims by
+   the next full ideation round. A miss is review debt, recorded in `LIVE
+   STATE`; it is not silent permission to promote.
+5. **Immutable review inputs.**  Give every background reviewer a frozen,
+   hash-pinned claim packet (including the exact canonical excerpts it may
+   need) and require it to review those bytes.  Do not make a long review
+   depend on rereading mutable live ledgers, and do not freeze canonical
+   promotion while that review runs.  Later ledger changes are queued for a
+   delta review if they alter the charged claim; unrelated drift is not a
+   custody failure.
+6. **Fail closed.** `REFUTED` triggers immediate rollback. `GAP` preserves only
+   the portion actually checked. Corrections are appended promptly to
+   `notes.md`, the relevant canonical route/evidence file, and the current
+   daily digest.
+
+When the current reduction architecture is discussed, use the scoped names
+`G2-PSC` (global packet/sheet transport and fidelity) and `G2-BD`
+(post-residue-A bounded delay), never bare `G2`. The detailed dependency map
+is `ladder/REDUCTION.md`; summaries elsewhere must preserve its arrow
+directions and scope.
+
+## Speculative parallelism and rollback
+
+Review runs in the background. Once a claim is provisional, cheap and
+reversible dependent exploration may begin under a visible speculative
+budget:
+
+- at most two child lanes and one unreviewed dependency generation per
+  provisional claim;
+- at most four active provisional roots campaign-wide;
+- normally no more than 25% of active research capacity may depend on any one
+  unreviewed claim;
+- enqueue hostile review before launching the first dependent child; a missed
+  review deadline freezes new descendants but not unrelated work;
+- cap each speculative child at six hours unless the coordinator records a
+  reasoned exception;
+- publication, promotion, irreversible action, expensive fleet campaigns, and
+  further fanout must not rely on an unreviewed claim;
+- every dependent report labels the assumption `PROVISIONAL`, so descendants
+  can be found and rolled back mechanically.
+
+The coordinator maintains a lightweight claim DAG in the newest `LIVE STATE`
+block: claim ID, exact scope, evidence tier, lifecycle, parents, owner,
+reviewer, artifact hashes, descendants, and stop condition. If a premise is
+refuted or narrowed, quarantine its descendants immediately, retain them as
+conditional work when useful, and re-root any result whose proof did not
+actually need the failed premise.
+
+For each load-bearing bridge, prefer three concurrent attacks when useful and
+affordable: prove it, falsify it on the cheapest honest model, and bypass it by
+redesigning the route. A negative result closes only its registered scope.
+
+## The continuous outer loop
+
+Cadences below are maximum quiet intervals, never reasons to wait. Any event
+may interrupt the current allocation; unrelated work continues.
+
+### Event triggers and micro-rounds
+
+Run an immediate strategy update when any of these occurs:
+
+- a decisive lane confirms, refutes, gaps, caps, or times out;
+- a new mathematical object, theorem, countermodel, certificate, or materially
+  faster instrument is banked;
+- review changes a claim's scope or lifecycle;
+- an external result or actor changes correctness, route rank, priority,
+  publication posture, available artifacts, or competitive status;
+- the active portfolio is stalled, duplicated, or exposed to one fragile
+  premise beyond the limits above;
+- campaign machinery loses or delays state, duplicates work, misroutes a
+  model or compute job, exposes mutable inputs, materially inflates context or
+  cost, or reports fleet/lane state unreliably.  Treat this as a bounded
+  systems micro-round unless it also changes the mathematical ranking.
+
+A targeted response to a routine local event is a **micro-round**: triage the
+delta, launch or stop bounded work, and bank it without forcing every ideator
+to rescan all avenues. It does not reset the 12-hour clock. A credible external
+proof/counterexample, a load-bearing review reversal, or any non-echo change to
+the promoted ledger is critical and starts a full round immediately, subject
+to the coalescing rule below. Other events start a full round when they
+materially change the global ranking; otherwise they receive a micro-round.
+
+Coalesce echo events to prevent review/round thrashing. If a sealed full-round
+packet already states a provisional result's complete mathematical content and
+the post-cutoff review merely confirms that same content and scope, harvest the
+lifecycle promotion as a micro-round; it does not trigger an otherwise
+identical full scan. A refutation or scope change of a **promoted or
+load-bearing** claim, a new dependency on the critical path, or a materially
+rank-changing review fact remains a critical trigger. An expected negative
+first-gate result or correction to an unpromoted provisional formula may be
+coalesced when the global ranking and trust perimeter are unchanged. Record
+the coalescing decision explicitly in the next synthesis or `LIVE STATE`.
+
+Every new provisional or promoted theorem also triggers a **theorem-interface
+composition pass**.  Normalize it to object, hypotheses, field/ring, degree or
+support bounds, and conclusion; search the claim DAG for results whose
+conclusions discharge those hypotheses or whose hypotheses consume the new
+conclusion; and test the cheapest exact pairings before treating the theorem
+as an isolated endpoint.  Record a new bridge, a scope mismatch, or `NO HIT`.
+This pass is bounded and does not interrupt unrelated work.  In particular,
+compare proof-side degree/automorphy theorems with counterexample-side
+integrality, specialization, compactness, and collision lemmas: their labels
+may differ even when their theorem interfaces compose.
+
+If a critical event arrives during an open full round and invalidates a
+load-bearing snapshot assumption, mark that round `ABORTED` and reseal. If it
+does not invalidate the packet, take any safe emergency action, finish the
+sealed round, and start an immediate follow-on full round. Never mutate the
+open snapshot in place.
+
+### Full-spectrum ideation — at least every 12 hours
+
+No more than 12 hours may pass between completed full rounds. A significant
+event starts one sooner. Each round follows this protocol:
+
+1. **Freeze a state packet.** Record UTC time, clean basis commit, newer local
+   hashes if any, newest `LIVE STATE`, active/recent lane reports, review debt,
+   current `APPROACHES.md`, load-bearing `AUDIT.md` corrections, and all new
+   external evidence since the prior round.
+2. **Blind independent scan.** Every active research agent is a core ideator by
+   default and reads the whole avenue map, current gaps, and new evidence
+   before seeing the other submissions. A noninterruptible compute or review
+   worker may be omitted explicitly; mark the round degraded if this leaves
+   inadequate coverage. A rotating specialist lens may be added only after
+   the common scan. Model diversity is preferred; duplicate instances still
+   think independently.
+   **Every model marked as an equal-standing whole-portfolio researcher in the
+   roster** is invited automatically to every full round.  Each receives the
+   same sealed packet, submission contract, tool boundary, and deadline, and
+   must submit before seeing any other lane's report.  Every submission
+   receives equal post-deduplication consideration: model identity is neither
+   a bonus nor a vote, and operational unavailability degrades but does not
+   block the round.
+3. **Required submission contract.** Each report gives:
+   - a compact disposition vector over every numbered avenue: `unchanged`,
+     `raise`, `lower`, or `reopen`, with reasons for every change;
+   - a reranking of the principal proof and disproof bottlenecks;
+   - at least one genuinely new avenue or mechanism;
+   - at least one new connection between existing avenues;
+   - the strongest proof attack and strongest counterexample/falsification
+
+exec
+/bin/zsh -lc "sed -n '260,335p' COORDINATION.md && sed -n '680,725p' COORDINATION.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+2. **Blind independent scan.** Every active research agent is a core ideator by
+   default and reads the whole avenue map, current gaps, and new evidence
+   before seeing the other submissions. A noninterruptible compute or review
+   worker may be omitted explicitly; mark the round degraded if this leaves
+   inadequate coverage. A rotating specialist lens may be added only after
+   the common scan. Model diversity is preferred; duplicate instances still
+   think independently.
+   **Every model marked as an equal-standing whole-portfolio researcher in the
+   roster** is invited automatically to every full round.  Each receives the
+   same sealed packet, submission contract, tool boundary, and deadline, and
+   must submit before seeing any other lane's report.  Every submission
+   receives equal post-deduplication consideration: model identity is neither
+   a bonus nor a vote, and operational unavailability degrades but does not
+   block the round.
+3. **Required submission contract.** Each report gives:
+   - a compact disposition vector over every numbered avenue: `unchanged`,
+     `raise`, `lower`, or `reopen`, with reasons for every change;
+   - a reranking of the principal proof and disproof bottlenecks;
+   - at least one genuinely new avenue or mechanism;
+   - at least one new connection between existing avenues;
+   - the strongest proof attack and strongest counterexample/falsification
+     attack;
+   - one software acceleration or decisive experiment;
+   - a short campaign-systems check, independent of the mathematical software
+     proposal: either an `UPGRADE` card with the smallest useful test or
+     implementation, or `NO_CHANGE` with evidence.  Rotate across state
+     freshness, context and retrieval cost, claim/review propagation,
+     duplication, model routing and utilization, adapter reliability, AWS
+     scheduling and cost, reproducibility, and operator/chat-summary quality;
+   - no more than three detailed idea cards, each with explicit dependencies,
+     cheapest discriminator, interpretation of each outcome, stop condition,
+     and expected information gain;
+   - a `continue / redesign / stop` recommendation for current major lanes.
+4. **Deduplicate after collection.** Fingerprint ideas by target obstruction,
+   mechanism, object, and decisive test. Merge operational duplicates while
+   preserving independent votes, disagreements, and genuinely different proof
+   mechanisms. Shared wording is not independent support.
+5. **Cross-pollinate adversarially.** Only after blind collection, ask lanes to
+   combine compatible ideas, expose shared hidden assumptions, attack the
+   strongest proposal, and design the cheapest experiment that separates the
+   leading choices.
+6. **Run the canonical history/priority checksum.** Before compute, search
+   `AUDIT.md`, `APPROACHES.md`, `PROGRESS.md`, the newest `LIVE STATE`,
+   `ladder/REDUCTION.md`, and repository reports for every surviving target,
+   mechanism, and close synonym. Reconcile the master known-degree/closed-case
+   ledgers, then check each load-bearing literature claim in primary text.
+   Label every card `NEW`, `KNOWN`, `DUPLICATE`, or `SCOPE-CONFLICT` in the
+   synthesis. Blind consensus never overrides a banked exact result or primary
+   theorem; a shared stale packet premise is correlated error, not a vote.
+7. **Synthesize and launch.** The coordinator writes a ranked synthesis,
+   updates the avenue/claim graphs if needed, assigns owners and reviewers,
+   launches reversible lanes immediately, and records why alternatives were
+   deferred or stopped.  Deduplicate the systems checks, choose at most one
+   highest-value bounded upgrade for immediate work, and track it only in the
+   canonical `LIVE STATE` queue.  Trial at least one incremental machinery
+   improvement in every rolling 48-hour window unless no candidate clears its
+   measured benefit, regression-risk, and mathematical-opportunity-cost gate;
+   record a reasoned `NO_UPGRADE` rather than changing machinery for its own
+   sake.  Systems work runs beside, and normally does not block, live
+   mathematical research.
+
+Target 60 minutes for blind submissions, 30 for cross-pollination, and 30 for
+synthesis. Close a round within two hours when possible; if an ideator misses
+the close, mark the round `DEGRADED` instead of blocking ongoing research.
+Events arriving after the snapshot are queued for the next micro/full round
+and never silently mutate the sealed packet.
+
+Round artifacts use
+`xmodel/ideation-<YYYYMMDDTHHMMZ>-<lane>.md` and
+`xmodel/ideation-<YYYYMMDDTHHMMZ>-synthesis.md`.
+
+### External web sweep — at least every 24 hours
+
+No more than 24 hours may pass between completed broad sweeps. Low-cost alerts
+and known-actor watches run between sweeps when available. An external event
+can trigger both immediate intake and a full ideation round.
+
+Write-ownership change, binding henceforth: allocation and availability
+refreshes are recorded exclusively in `notes.md` (`LIVE STATE` and event
+blocks). `COORDINATION.md` changes only for genuine protocol, gate, or
+roster changes such as this one. The refresh blocks accumulated above remain
+historical provenance and may be moved to an archive file in a dedicated
+compaction atom without changing any hash-pinned packet's git history.
+
+## Lane report contract amendment: seal-at-completion (2026-08-31 17:35Z)
+
+Two lanes returned sealed skeletons on 2026-08-31 (a provider ended its
+turn after writing the skeleton; a 128K-output-cap kill mid-response),
+because the previous template had lanes write the `<!-- BODY-END -->`
+seal into the initial skeleton — making `report_state=BODY_SEALED`
+unable to distinguish a finished report from a crashed one.
+
+Binding contract for every future lane prompt:
+
+1. The skeleton written as the lane's first action MUST NOT contain the
+   `<!-- BODY-END -->` marker.
+2. Sections are appended as separate bounded writes (target under
+   ~1,500 words per write; never the whole report in one response).
+3. The standalone `<!-- BODY-END -->` line is appended only after the
+   final section is on disk, with nothing after it.
+4. If the budget runs short: finish the current section, type every
+   remaining section OPEN in one short paragraph each, then seal.
+
+Under this contract, `PARTIAL_NO_MARKER` correctly identifies crashed
+or under-delivered lanes, and the divert machinery banks their partial
+content. Coordinator-side: a `BODY_SEALED` receipt no longer implies
+substance; harvest still requires reading the report. Queued ops debt
+(nonblocking): a divert heuristic flagging sealed reports whose
+sections are empty.
+
+exec
+/bin/zsh -lc "rg --files xmodel | rg 'ideation-20260831T1033Z|ideation-20260831T0512Z|ideation-20260829T2254Z' | sort" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+xmodel/ideation-20260829T2254Z-crosspoll-fable5.log
+xmodel/ideation-20260829T2254Z-crosspoll-fable5.md
+xmodel/ideation-20260829T2254Z-crosspoll-fable5.prompt.md
+xmodel/ideation-20260829T2254Z-crosspoll-fable5.run.v2
+xmodel/ideation-20260829T2254Z-crosspoll-opus5.log
+xmodel/ideation-20260829T2254Z-crosspoll-opus5.md
+xmodel/ideation-20260829T2254Z-crosspoll-opus5.prompt.md
+xmodel/ideation-20260829T2254Z-crosspoll-opus5.run.v2
+xmodel/ideation-20260829T2254Z-crosspoll-packet.md
+xmodel/ideation-20260829T2254Z-fable5.log
+xmodel/ideation-20260829T2254Z-fable5.md
+xmodel/ideation-20260829T2254Z-fable5.prompt.md
+xmodel/ideation-20260829T2254Z-fable5.run.v2
+xmodel/ideation-20260829T2254Z-grok46.log
+xmodel/ideation-20260829T2254Z-grok46.prompt.md
+xmodel/ideation-20260829T2254Z-grok46.run.v2
+xmodel/ideation-20260829T2254Z-opus5.log
+xmodel/ideation-20260829T2254Z-opus5.md
+xmodel/ideation-20260829T2254Z-opus5.prompt.md
+xmodel/ideation-20260829T2254Z-opus5.run.v2
+xmodel/ideation-20260829T2254Z-sol56-alt.md
+xmodel/ideation-20260829T2254Z-sol56.md
+xmodel/ideation-20260829T2254Z-state.md
+xmodel/ideation-20260829T2254Z-synthesis.md
+xmodel/ideation-20260831T0512Z-fable5.log
+xmodel/ideation-20260831T0512Z-fable5.md
+xmodel/ideation-20260831T0512Z-fable5.prompt.md
+xmodel/ideation-20260831T0512Z-fable5.run.v2
+xmodel/ideation-20260831T0512Z-gpt55.log
+xmodel/ideation-20260831T0512Z-gpt55.md
+xmodel/ideation-20260831T0512Z-gpt55.prompt.md
+xmodel/ideation-20260831T0512Z-gpt55.run.v2
+xmodel/ideation-20260831T0512Z-grok46.log
+xmodel/ideation-20260831T0512Z-grok46.md
+xmodel/ideation-20260831T0512Z-grok46.prompt.md
+xmodel/ideation-20260831T0512Z-grok46.run.v2
+xmodel/ideation-20260831T0512Z-opus5.log
+xmodel/ideation-20260831T0512Z-opus5.md
+xmodel/ideation-20260831T0512Z-opus5.prompt.md
+xmodel/ideation-20260831T0512Z-opus5.run.v2
+xmodel/ideation-20260831T0512Z-significant-news-packet.md
+xmodel/ideation-20260831T0512Z-synthesis.md
+xmodel/ideation-20260831T0512Z-synthesis.md.artifact.json
+xmodel/ideation-20260831T1033Z-crosspoll-grok46.log
+xmodel/ideation-20260831T1033Z-crosspoll-grok46.md
+xmodel/ideation-20260831T1033Z-crosspoll-grok46.prompt.md
+xmodel/ideation-20260831T1033Z-crosspoll-grok46.run.v2
+xmodel/ideation-20260831T1033Z-crosspoll-sol56.log
+xmodel/ideation-20260831T1033Z-crosspoll-sol56.md
+xmodel/ideation-20260831T1033Z-crosspoll-sol56.prompt.md
+xmodel/ideation-20260831T1033Z-crosspoll-sol56.run.v2
+xmodel/ideation-20260831T1033Z-fable5.log
+xmodel/ideation-20260831T1033Z-fable5.md
+xmodel/ideation-20260831T1033Z-fable5.prompt.md
+xmodel/ideation-20260831T1033Z-fable5.run.v2
+xmodel/ideation-20260831T1033Z-grok46.log
+xmodel/ideation-20260831T1033Z-grok46.md
+xmodel/ideation-20260831T1033Z-grok46.prompt.md
+xmodel/ideation-20260831T1033Z-grok46.run.v2
+xmodel/ideation-20260831T1033Z-opus5.log
+xmodel/ideation-20260831T1033Z-opus5.md
+xmodel/ideation-20260831T1033Z-opus5.prompt.md
+xmodel/ideation-20260831T1033Z-opus5.run.v2
+xmodel/ideation-20260831T1033Z-packet.md
+xmodel/ideation-20260831T1033Z-sol56.log
+xmodel/ideation-20260831T1033Z-sol56.md
+xmodel/ideation-20260831T1033Z-sol56.prompt.md
+xmodel/ideation-20260831T1033Z-sol56.run.v2
+xmodel/ideation-20260831T1033Z-synthesis.md
+xmodel/ideation-20260831T1033Z-synthesis.md.artifact.json
+
