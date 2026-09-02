@@ -11277,3 +11277,82 @@ codex
 The rerun has passed the class-list controls and the synthetic pruner check, and it is entering the full native scans. I’ll let it finish so the report can cite both the frozen run and a local replay.
 codex
 The first product-only full pass is still running; that path touches all 10,077,696 native tuples, so the pause is expected. The important comparison point will be whether it reproduces 174 product-fixed and 72 generating before moving to the full-ZvK passes.
+codex
+The replay is still in the all-tuples scan. I’m keeping it running because a matching independent replay strengthens the pruner and orientation audit; I won’t leave the session open at the end.
+codex
+No new output yet; the product-only word is long, so the first full scan is the slowest fixed-set computation. After that the full-ZvK pruning should shrink rapidly, matching the archived prune-count ladder if the replay is aligned.
+codex
+The rerun is still active. I’ll continue to poll it; if it reproduces the archived counts, I’ll use that as a replay check rather than adding more expensive independent scans.
+codex
+The naive full replay is too slow for the current lane because the product-only relation is a 554-letter word applied across 6^9 tuples. I’m going to stop that replay and switch to targeted independent checks: hash-aligned code audit, class-list expansion, and JSON/count invariants from the frozen run.
+ exited 130 in 213005ms:
+=== hard-coded class list (CONTROL ONLY) ===
+{
+  "passed": true,
+  "kstar": -8,
+  "reps": [
+    {
+      "name": "noncst-T-a",
+      "gate3_at_kstar_-8": true,
+      "T1_product_equals_X": true,
+      "X": "(3 4)",
+      "Y": "(2 3)",
+      "Pi": "(2 4)",
+      "T1": "((1 3), (1 4), (1 3))"
+    },
+    {
+      "name": "noncst-T-b",
+      "gate3_at_kstar_-8": true,
+      "T1_product_equals_X": true,
+      "X": "(3 4)",
+      "Y": "(2 3)",
+      "Pi": "(2 4)",
+      "T1": "((1 4), (1 3), (1 4))"
+    },
+    {
+      "name": "const-4c",
+      "gate3_at_kstar_-8": true,
+      "T1_product_equals_X": true,
+      "X": "(1 2 3 4)",
+      "Y": "(1 2 3 4)",
+      "Pi": "(1 4 3 2)",
+      "T1": "((3 4), (1 4), (1 2))"
+    }
+  ]
+}
+expanded conjugacy orbits: 72 (expect 72)
+Pi-type assertion passed=True (NOT used as a filter); n_transposition=48 n_fourcycle=24
+POSITIVE CONTROL generating=72 expected=72 passed=True
+NEGATIVE CONTROL projective-product=1 count=0 expected=0 passed=True
+=== synthetic pruner (subsample cert) ===
+PRUNE word 0 len=1 n_in=9871 n_out=1646
+PRUNE word 1 len=2 n_in=1646 n_out=550
+SYNTHETIC_PRUNER passed=True pruned=550 unpruned=550
+DIAGNOSTIC BLOCK (not decision) total_survivors=0
+SAGE-NATIVE product-only (as-written) ...
+CERTIFY prune vs unpruned on subsample mod=1021 (as-written) ...
+PRUNE word 0 len=554 n_in=9871 n_out=1
+CERTIFY passed=True pruned=1 unpruned=1
+PRUNE full 6^9 (as-written, product-only) ...
+Traceback (most recent call last):
+  File "/Users/dc/code/math/jc2/box/bmfact964_enum.py", line 1619, in <module>
+    sys.exit(main(sys.argv[1:]))
+             ~~~~^^^^^^^^^^^^^^
+  File "/Users/dc/code/math/jc2/box/bmfact964_enum.py", line 1568, in main
+    native_prod = run_native_scan(
+        braids, invert=False, product_only=True, certify_subsample=certify
+    )
+  File "/Users/dc/code/math/jc2/box/bmfact964_enum.py", line 1114, in run_native_scan
+    survivors, counts = prune_native(words, subsample_mod=None)
+                        ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dc/code/math/jc2/box/bmfact964_enum.py", line 975, in prune_native
+    if is_fixed_int(combo, word):
+       ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/dc/code/math/jc2/box/bmfact964_enum.py", line 903, in is_fixed_int
+    current = hurwitz_one_int(current, tietze_word[index])
+  File "/Users/dc/code/math/jc2/box/bmfact964_enum.py", line 896, in hurwitz_one_int
+    return tuple(out)
+KeyboardInterrupt
+
+codex
+I stopped the expensive replay cleanly; no long-running session remains. I’m now doing a small independent S4 orbit calculation directly from REP-96’s three representatives, which is the right scale for the 72-control derivation.

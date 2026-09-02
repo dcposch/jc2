@@ -18097,3 +18097,19 @@ prose) queued, non-blocking. The realized (9,6,2) curve is DEAD
 at the representation level, BINDING. 964's sibling review
 running (pruner-cert audit critical). Runners: 964-kill review,
 869 msolve, oracle window, box01 provisioning.
+
+## LIVE STATE (observed 2026-09-02T02:35Z per prior print; composed after) — BOX01 STACK LIVE; FLEET FULLY PROVISIONED
+
+box01 provisioning repaired (venv creation had failed on missing
+python3.12-venv; apt-installed, venv rebuilt) and smoke-tested:
+**msolve 0.10.1 + msolveio + qqideal live on box01** (version
+gate + unit-ideal detection verified). Both compute boxes now
+carry the pinned new stack; box01's 63 idle cores are ready for
+the N>=6 census and horn-support computations. An old
+pre-compaction Box03 12h watcher hit its deadline (869 still
+legitimately grinding, ~4h into its own 12h cap; dedicated
+completion watcher remains armed). Box03: 869 msolve running,
+oracle window running (status file still empty), 964 queued
+behind 869 in both queues (harmless; oracle-control value only).
+Remaining: 964-kill review (gpt55), 869, oracle, then
+integration #8.
