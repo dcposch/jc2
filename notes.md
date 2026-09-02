@@ -20534,3 +20534,5 @@ one number refuted (floor max 165/31 at D = 176, harmless). Remaining
 lanes: time-function-endgame (D = 105), time-function-calibration
 (D = 48), branch-orbits. Seats: Opus 2/5, Grok 1, Sol and GPT-5.5 idle
 (reserved). Census 602/975.
+
+## EVENT 18:36Z — REDUCIBLE-BRANCH REPRICE launched (Opus): scope audit of the exact machinery without H2; does the pinned N reprice the reducible branch. Lanes: time-function-endgame, time-function-calibration-d48, branch-orbits, reducible-branch-reprice. Seats: Opus 3/5, Grok 1, Sol/GPT-5.5 idle (reserved). Census 602/975.
