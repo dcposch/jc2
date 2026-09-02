@@ -17974,3 +17974,11 @@ kill requires either orbit coverage or the rep-level gates).
 
 Running: homcover-transfer (opus), SAGE-NATIVE 962 6^9, 964
 enum, Box03 869 msolve, oracle window, box01 provisioning.
+
+CORRECTION (observed 2026-09-02T01:35Z): the block above is
+mis-stamped 01:40Z; observed time at write was 01:35:37Z.
+Projected-timestamp recurrence #8 — same cause as #7 (date -u
+composed in the same command as the block). Coordinator rule
+hardened: the LIVE STATE header timestamp is now copied from a
+date -u output already PRINTED in a PRIOR tool result, never
+from a same-command invocation.
