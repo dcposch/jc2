@@ -17936,3 +17936,19 @@ repairs.
 
 Box03 check: native 6^9 enum RUNNING; 869 msolve RUNNING;
 oracle window RUNNING (no status lines yet).
+
+DEVIATION + BOUNDARY NOTE (observed 2026-09-02T01:32Z): commit
+197eadb5's `git add -A` staged a gitlink for
+`.scratch/jc2-lean-master` — an embedded git repository that
+appeared in the campaign tree (NOT the known nested `jc2-lean`
+path; a separate copy under `.scratch/`). Per the formalization
+boundary it was NOT entered, enumerated, or inspected; only the
+gitlink (a bare SHA reference, no contents) was pushed, and it
+was removed in 7acc5bb1 with `.scratch/` added to `.gitignore`.
+Provenance of the directory is UNKNOWN to the campaign and was
+deliberately not investigated. FLAG FOR DC: if this is your
+working copy, no action needed (it is now ignored); if not,
+something placed a jc2-lean copy in the campaign tree and you
+should know. Also noticed untracked top-level `jc2-lean` path
+in git status — consistent with the known excluded nested repo;
+untouched.
