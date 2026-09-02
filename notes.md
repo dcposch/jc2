@@ -19674,3 +19674,23 @@ found NO solution at small size at N = 8 — this decides whether the
 Keller ledger's numerical solutions exist at all below Moh's 101, i.e.
 where a counterexample could numerically live). Seats: Opus 2/5;
 Sol 1; Grok 1; GPT-5.5 0.
+
+EVENT (~12:05Z per lane print) — **MF-RATIONAL landed**
+(`mf-rational-grok46-20260902.md`, 9454c3e9, body 86e9d5fb, BODY_SEALED;
+Grok, desk): g_L >= 1 is NOT proved for N >= 3. MF-RATIONAL-N2: at N = 2
+the rational case is numerically EMPTY (no Diophantine solution), so
+g_L >= 1 there if such an F exists. MF-RH-EXIST: for N >= 3 the
+equality type (g_L, theta_inf) = (0, 2), W − S = 1, n = N solves every
+consumed identity and is realised as a rational function
+phi(z) = P(z)/z^m on P^1 (a numerical type, NOT a Keller realisation).
+NEVER-SIMPLE: u∘F has a horizontal component of degree n s_l >= 3, so
+the "simple rational polynomial" theorems do not apply; the ambient
+submersion class does not force g_L >= 1 (x(1 + xy) is a submersion
+with C^* fibres and not a variable). OPEN[MF-RATIONAL] stays: if g_L = 0
+then (W − S, n, theta_inf) lies in a finite list; the price of a later
+NO is n(W − S) >= N + 1. Successor named (repair or refute Chau 2010
+Thm 2; classify submersive non-simple rational polynomials with
+theta_L >= 5 against an étale degree-N partner) — DEFERRED: one unit of
+floor is not the frontier; the ceiling is. Record MEASURED/UNREVIEWED.
+Seats: Opus 2/5 (pencil genus, sat-mass); Sol 1 (cluster census
+codegen); Grok 0; GPT-5.5 0.
