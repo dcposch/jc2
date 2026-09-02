@@ -20347,3 +20347,19 @@ squeeze tight, (1−δ₁) + λ_g(δ₁) = −λ_f(δ₁), was found by Grok (§
 whether it is Moh's definition of δ₁ in disguise. Deeper g–g contact
 RAISES N (the f-tree is slaved), inverting the N-ON-THE-TREE lane's
 "free sub-tree can only lower N". Status: PROPOSAL; hostile lane out.
+
+## EVENT ~17:12Z — INTEGRALITY PROXY (MEASURED, PROXY ONLY): NO SKELETON AT D <= 400 HAS U AN INTEGER IN [6,16]
+
+Under the crude-cover proxy of EXACT-N (A_bot = ue, i.e. N = U),
+box/coordinator-recounts-20260902/uint.{py,log} (one core, ~3 min):
+D <= 400: 3,874,261 branch-robust groups, ZERO with U an integer in
+[6,16]; at the MOH-SHARP-2 degrees 105/108/112/117/120 U is never an
+integer at all (264/824/1163/60/4104 groups, 0 integral). Every one
+of the 156 degrees that carries skeletons is emptied by the proxy.
+This is NOT a theorem: (i) EXACT-N is a PROPOSAL under hostile review
+(`exact-n-rigidity-opus5`); (ii) A_bot (g-roots in bottom-major discs)
+may be smaller than ue by the minor-disc roots, so the true condition is
+N = A_bot·d(1−δ₁)/(d+e) ∈ Z with A_bot a multiple of a₁ = eV₂ — the
+refined proxy is being run next. If EXACT-N survives and the refined
+filter also empties D <= 400, Moh's D <= 100 extends to D <= 400 at
+once and the arithmetic of the condition is the all-degree program.
