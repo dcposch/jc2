@@ -20486,3 +20486,14 @@ running: exact-n-rigidity, star-realisability, time-function-endgame
 (D = 105), time-function-calibration (D = 48), branch-orbits. Seats:
 Opus 3/5, Sol 1, Grok 1, GPT-5.5 idle (reserved for the next
 different-model review). Census 595/975.
+
+## EVENT 20:05Z — STAR-REALISABILITY CLOSED, ZERO KILLS (#17 delta (b))
+
+Moh's Prop 4.6 + A.5 already force the squarefree bottom; the
+forced-repeated-root obstruction is empty at D ≤ 120 (9,553 tested).
+Smallest (UNI) D = 105 survivor: (105, 70, (−70,−63,103), V = (1,4,1)),
+N = 6 with twenty unit branches — a second realisation target beside
+the mixed-branch packet (105, 42, (−14,103), 5), N = 10. Remaining
+lanes: exact-n-rigidity, time-function-endgame, time-function-
+calibration (D = 48), branch-orbits. Seats: Opus 3/5, Grok 1, Sol idle,
+GPT-5.5 idle (both reserved for reviews of the Opus landings).

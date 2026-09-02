@@ -15303,3 +15303,22 @@ one-class diagonal analogue). Consistency with D1-PIN confirmed on Moh
 arithmetic witness is Enriques-consistent as a multiset and EXCLUDED
 by D1-PIN (N = 9 there). Five controls pass, including non-Keller
 (x², y³) with d ≠ e, N = 6, and (x, y + x²).
+
+## INTEGRATION #17 DELTA (b) (2026-09-02 ~20:05Z, PROVED-HERE/UNREVIEWED + MEASURED): OPEN[STAR-REALISABILITY] CLOSED WITH ZERO KILLS; SOURCE CORRECTION
+
+`star-realisability-sol56-20260902.md` (16728d4a): Moh's Prop 4.6 at
+r = 1 gives D(n, −M₁, g_{σ₁}(π), T^ψ_{1,σ₁}(π)) = c ∈ k*, which by Prop
+A.5 (p.207; Moh draws the conclusion explicitly on p.184) forces the
+product of the two displayed polynomials to be squarefree, so the
+bottom partition is (1^{eV₂}) for EVERY numerical skeleton. Hence no
+skeleton is killed by a forced repeated bottom root: MEASURED at
+D ≤ 120, 9,553 (UNI)-surviving assignments tested, 0 killed; at the
+MOH-SHARP-2 degrees 6,328 tested, 0 killed; no degree emptied.
+CORRECTION to #17 A.4 / the D1-SUBTREE review's remark: "Prop 4.6 at
+r = 1 does not force simple roots" is false as an implication (true
+only as "does not print the words"); D1-STAR's simple-roots clause is
+Moh-consistent, not Moh-independent. Smallest (UNI)-surviving D = 105
+row in campaign order: n = 105, m = 70, M = (−70, −63, 103), V = (1,4,1),
+(d,e) = (2,3), (u,v) = (20,15), q = 3/10, packet (1^20), N = 6. "Pass"
+asserts no realisation. Review: to be folded into the next
+different-model batch review.
