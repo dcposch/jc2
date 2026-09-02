@@ -19884,3 +19884,75 @@ type are the representation cage (the local-monodromy congruences on
 (p, q), e.g. Prop 3.2's at N = 4) and étaleness — i.e. exactly the
 polar-tree/fork-mass question owned by `minimal-keller-shape` and
 `polar-chain-n4`. Recorded MEASURED (no review spent).
+
+## LIVE STATE (observed ~13:25Z per lane print) — THE FIRST FORK IS DECIDED: E_0 IS NEVER A LEAF; THE CONDITIONAL KILLS EVAPORATE; THE CEILING IS THE PUISEUX DEPTH AT INFINITY OF A MINIMAL JACOBIAN PAIR
+
+**MINIMAL-KELLER-SHAPE landed** (`minimal-keller-shape-opus5-20260902.md`,
+7b0ffec7, BODY_SEALED, 44KB; PROVED-HERE/UNREVIEWED except where
+VERIFIED in refs/; hostile review launched
+`minimal-keller-shape-review-gpt55-20260902`; drivers preserved):
+- THEOREM FIRST-FORK (any dominant F): the valency of E_0 in the polar
+  tree equals nu := #distinct roots of the top form of the max-degree
+  coordinate = #points at infinity of the generic member; nu >= 2 ⇒
+  deg_{T_+}(E_0) = nu; E_0 is a LEAF iff nu = 1, a FORK iff nu >= 3
+  (then Psi >= D). 46 exact resolutions, 0 mismatches.
+- **CH2 DECIDED NEGATIVE:** for every counterexample the Makar-Limanov /
+  van den Essen SUBRECTANGULAR gauge — which PRESERVES both degrees,
+  hence degree-minimality — makes the top form a monomial c x^u y^v with
+  u, v >= 1, so nu = 2 EXACTLY: E_0 is a free vertex, never a leaf, never
+  a fork. "E_0 a leaf" is a NON-MINIMALITY signature (right-composing
+  with a non-linear source automorphism forces nu = 1, with D and Psi
+  jumping). KPG's nine conditional kills (integration #13 CH2) do NOT
+  fire. Moreover THEOREM E0-LEAF-CAP (no Keller): Psi = 0 and E_0 a leaf
+  ⇒ D <= N + 1 − 2 g_L, so CH2 in any gauge + Moh would kill every
+  N <= 99 — "a hypothesis that strong is the theorem, not a lemma".
+- **CH1 DECIDED NEGATIVE as a target:** Psi = 0 fails for the simplest
+  automorphisms ((x, y + x^k): Psi = k = D, Lambda = k + 2, Lambda − Psi
+  = 2); by POLAR-DEGREE the controlled object is Psi − Lambda — the
+  ceiling itself; under Keller + H2 + MERIDIAN-FLOOR+, Psi = 0 would
+  force Lambda <= N while E_0 carries D >= 102.
+- **T IS FREE, AND SAT-CROSS'S PRICE IS EXACTLY THE THEOREM:** with
+  HALF-CAP and DEG-SPLIT, T <= tau ⇔ D_min <= 2(tau + N) — OPEN[SAT-MASS]
+  is not half the ceiling, it IS the ceiling at W <= 3; SM's own floor
+  T >= D_min/2 − kappa >= 51 − N sits ONE unit above the target
+  tau <= 50 − N. Newton-polygon theory leaves T free: T = sum (nu_C −
+  1)c_C is the continuant data of the satellite chains = the PUISEUX
+  CHARACTERISTIC of the branches at infinity; GGV's corner theory
+  constrains only the FIRST corner (u >= 4, v <= u(u − 1), u + v >= 16),
+  never the depth.
+- UNCONDITIONAL GAINS: (i) MOH-FLOOR sharpened — D_min = K·max(d,e) with
+  K = gcd >= 16 (GGV Cor 6.6, VERIFIED in refs/) and max(d,e) >= 3, so
+  **D_min >= 102 and D_min has a divisor K with 16 <= K <= D_min/3**
+  (excluding 101, 103, 106, 107, 109, 113, 118 in [101, 120]; Moh's own
+  surviving pairs (64,68), (84,56), (75,50), (99,66) have exactly this
+  shape, the fourth killed again by GGV); (ii) in the subrectangular
+  gauge T = T_class (SM's definition repair is vacuous at a minimal
+  counterexample; measured 32 + 14 rows). The leading-form theorem
+  (Abhyankar/Nagata) PROVED HERE elementary; Moh 1983 and Heitmann/GGV
+  gcd >= 16 VERIFIED in refs/; the subrectangular normal form
+  LITERATURE-TYPED via GGV.
+- Controls: 46 exact resolutions (Z^2 = N, sum a_i^2 = D^2 − N, Z·K_X
+  two ways, proximity excess, FORK-GENUS, the new Theta-form: 0
+  failures); 6 Singular genus checks; 12 rows reproduce SM's table from
+  a third engine.
+**COORDINATOR READING (direct).** The day's boundary/homology program
+has closed a loop: every instrument built since 07:22Z — the cusp
+cage, the source curve E, the boundary determinant package, the
+meridian floor, the polar ledger, the pencil genus, the satellite
+mass — produces FLOORS, and the two conditional ceilings the round
+proposed are now refuted for degree-minimal pairs. The remaining
+ceiling question is EXACTLY the depth of the satellite chains, i.e.
+the Puiseux characteristic at infinity of a degree-minimal Jacobian
+pair — which is the GGV corner theory's own unresolved core ("always a
+next pair", APPROACHES row 1, the campaign's origin). The two programs
+were the same problem seen from two sides, and neither side has a
+degree-monotone statement. This is recorded plainly, not softened:
+no reviewed route in the record today bounds the depth. Integration
+#13's CH2 conditional stays TRUE but VACUOUS at a counterexample (AUDIT
+delta appended). Next: the depth itself (`depth-ceiling-opus5-20260902`,
+launched: the second characteristic pair of a degree-minimal Jacobian
+pair, GGV corner theory beyond the first corner, the "next pair"
+recursion restated on the satellite chain — bound it or exhibit the
+free datum), and the 20:57Z round with this reading as its headline.
+Seats: Opus 1/5; Grok 1 (polar-chain-n4, now partly moot); Sol 1
+(cluster census); GPT-5.5 1 (review).

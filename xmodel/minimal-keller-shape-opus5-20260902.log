@@ -1,0 +1,24 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/minimal-keller-shape-opus5-20260902.md` (body 44,355 bytes, SHA-256 `7b0ffec7…`).
+
+## What the lane found
+
+**The charged question (b) is decided, negative — and it retracts a banked-adjacent kill.**
+
+The classical Newton-polygon theory turns out to compute exactly one thing the campaign's boundary ledger needed:
+
+- **THEOREM FIRST-FORK** (any dominant map, no Keller): `deg_{L~}(E_0) = ν` = the number of distinct roots of the top form of the max-degree coordinate = the number of points at infinity of the generic pencil member. So `E_0` is a **leaf** of `T_+` iff `ν = 1`, and a **fork** iff `ν ≥ 3`. Verified 46/46 on an independently written resolution engine.
+- The Makar-Limanov/van den Essen **subrectangular** gauge (GGV Prop 4.7/Cor 5.21, in `refs/`) is **degree-preserving**, and in it `ℓ₁,₁(P)` is a *monomial*, so `H = c x^u y^v` and **ν = 2 exactly**: `E_0` is free. KPG's CH2 hypothesis fails there, so its 9 conditional kills (including the live N = 4 (B3) cell) **do not stand**. Worse for CH2: composing with any non-linear source automorphism *manufactures* `ν = 1` — "E₀ a leaf" is a non-minimality signature (measured 3/3).
+- CH2 was also under-priced: **E0-LEAF-CAP** (general) gives `Psi = 0` + `E_0` a leaf ⟹ `D ≤ N + 1 − 2g_L`, so with Moh it would kill every `N ≤ 99`, not 9 cells.
+
+(a) `Psi = 0` fails already for `(x, y+x^k)` (there `Psi = k = D`); `Psi − Λ` *is* the ceiling. (c) `T ≤ τ ⟺ D_min ≤ 2(τ+κ)`, so OPEN[SAT-MASS] is the whole ceiling at `W ≤ 3`, and SAT-CROSS's `τ ≤ 50−N` is exactly one unit below HALF-CAP's own floor `T ≥ 51−N`.
+
+Unconditional gains: **`D_min ≥ 102`** with a divisor `K ∈ [16, D_min/3]` (Moh's own surviving list `(84,56),(75,50),(99,66)` has precisely this `K·(2,3)` shape), and `T = T_class` at a degree-minimal counterexample, making SAT-MASS's definition repair vacuous there.
+
+**Two of my own mid-lane conjectures were refuted by the engine and are recorded as such**, not patched: a leaf-count bound `#leaves ≤ κ+ℓ` (fails at `(x,y+x²)`) and the regularity `m_C ≤ D` (fails at `(x³,y²)`, `(x²,y³)`, both with `D < N`).
+
+Checks: 51 maps attempted, 46 resolved exactly over ℚ, 9 identity checks each, 0 failures; 6 Singular genus computations confirm `2g_L − 2 = N + Z·K_X` (including `g = 3` for KPG's `G_2`); 12 rows reproduce SAT-MASS's table from a third engine.
+
+Two deviations worth flagging: the body is **43.3 KB against the charged 25–40 KB band** (the overrun is the charged literature assembly and the translation proofs), and 5 of the 51 battery maps were skipped because their cluster is not rational over ℚ — the engine refuses rather than approximating.
+DIVERT path=xmodel/minimal-keller-shape-opus5-20260902.md status=DIVERTED body_bytes=44355 body_sha256=7b0ffec769314ce91a0831f7b2a88f5d5c8c97c08bfa56bd1e9bb8dbfb5c23f0 overflow=xmodel/minimal-keller-shape-opus5-20260902.overflow overflow_bytes=273 raw=xmodel/minimal-keller-shape-opus5-20260902.raw.md raw_sha256=f1046d34a5b97641a88f1d447ab23293fcd2e5348bd5a2159944d903bef8794f overflow_sha256=60dce0ac297a33001ae287c63aed68088b8dd7994ccdbca73147384375936b71
+post-BODY-END overflow diverted; charged body preserved

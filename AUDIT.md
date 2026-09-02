@@ -15069,3 +15069,19 @@ binding reading of #12–#13: the H2 ceiling below N = 17 is a statement
 about the shape (fork mass; satellite mass) of the base cluster at
 infinity of a degree-minimal Keller pair. See the artifact for exact
 statements — this entry is a pointer.
+
+## INTEGRATION #13 DELTA (2026-09-02, PRODUCER-LEVEL, REVIEW PENDING): CH2's HYPOTHESIS IS REFUTED FOR DEGREE-MINIMAL COUNTEREXAMPLES
+
+`minimal-keller-shape-opus5-20260902.md` (7b0ffec7; review
+`minimal-keller-shape-review-gpt55-20260902` running) proves THEOREM
+FIRST-FORK (the valency of E_0 in the polar tree is the number of
+distinct roots of the top form of the max-degree coordinate) and, via
+the degree-preserving subrectangular gauge (Makar-Limanov / van den
+Essen; GGV), that a degree-minimal counterexample has nu = 2: E_0 is a
+free vertex, never a leaf. Integration #13's CH2 ("E_0 a leaf ⇒ the
+nine N = 2W cells are EMPTY") remains a correct conditional but its
+hypothesis is FALSE at every degree-minimal counterexample; CH1
+(Psi = 0) fails already for automorphisms. Neither may be consumed as a
+kill. Pending the review: MOH-FLOOR sharpened to D_min >= 102 with a
+divisor K in [16, D_min/3]; T = T_class in the subrectangular gauge;
+OPEN[SAT-MASS] is the ceiling itself at W <= 3.
