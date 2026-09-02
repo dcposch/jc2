@@ -18466,3 +18466,69 @@ attempt lane (Opus, frontier seat) that the 05:26Z state
 queued and the Grok outage + handoff displaced; coordinator
 takes a direct desk pass at the same object. Grok balance
 restored ~06:40Z — volume routing returns to the 08-31 policy.
+
+EVENT (observed: see the 07:25:08Z print; composed after) — THREE
+LANES LAUNCHED; ORPHAN CAS KILLED; (1,5) GAINS ITS Q-EXACT ENGINE
+
+**Web-sweep clock was OVERDUE** (last sweep
+`web-sweep-20260901-grok46` landed 2026-09-01T03:58Z; the
+07:22Z handoff's "current as of 09-01" was right on the date,
+but the 24h deadline was 09-02T03:58Z). Launched
+`web-sweep-20260902-grok46` (Grok; charged input =
+integration8 691da8d4; eight topics incl. the horn's
+degree-termination/unit-Wronskian literature and
+modular-to-exact Groebner certification). Grok balance OK.
+
+**Frontier lanes launched (Opus seats 2 of 5 in use):**
+1. `a2-ubound-opus5-20260902` — OPEN[A2-U-BOUND], flagship.
+   Charge leads: (L1) the two MISSING residual equations
+   (OPEN[A2-O0-O1]: O1 absent, O0 only via (2.2)) — the ladder
+   is exactly one equation short per order (4 conditions on 5
+   new coefficients); (L2) the Z=0 order-side ladder (C32's
+   degree/order duality, never run at e>=1: dual wall
+   ord E1 >= 2 epsilon+1 against deg E1 <= 2e-2; eta forced
+   monomial at (1,3)); (L3) the unit Wronskian E0 +
+   Mason–Stothers; (L4) elimination to one differential
+   resultant; (L5) the negative route (infinite-U family =
+   counterexample-level object). Charged: ray-kill + GPT-5.5
+   review + n2-derive + C32 spec (holds O0/O1) + C32 + HF.
+2. `cusp-a-n8-gate-opus5-20260902` — OPEN[HOMCOVER-CUSP-A-N8],
+   flagship. Charge: a NEW gate on H = pi_1(C^2 \ E) (index-N
+   subgroup of the torus-knot group; F proper over C^2 \ A_F
+   so the cover is finite): (G-A) Alexander/Libgober
+   divisibility with a analytic (p,q)-cusp factors (E's
+   singularities are étale-transported cusps); (G-B)
+   characteristic varieties / mod-p Betti; (G-C) chi(Y)=0 ⇒
+   chi(E)=1 + Alexander duality identity; (G-D) the order-24
+   trefoil cell by hand; (2) prove CUSP-A-KAPPA; (3) per-
+   survivor ledger. Charged: case-a-sweep + homcover-transfer
+   + its review.
+
+**Orphan CAS on the Mac killed** (FLEET hard rule): two sympy
+processes from the RAY-KILL lane's /tmp/raykill queues, 100%
+CPU for 2h40m each. Their logs held UNBANKED RESULTS — preserved
+verbatim with a provenance README in
+`box/raykill-cells-20260902/`:
+- **(1,5) EMPTY over Q, exact** (sympy grevlex unit ideal; full
+  system 89.6 s AND primed system 2510 s). With box01's
+  msolve/qqideal engine (mod-65521 PROVEN + char-0 MODULAR)
+  this is the same two-engine-with-Q-exact-side configuration
+  under which (1,3) was typed PROMOTION-GRADE. Coordinator
+  reading: (1,5) EMPTY is PROMOTION-GRADE (unsealed lane-driver
+  output, code preserved; reviewer may replay cell.py).
+- (2,6) EMPTY exact (25.3 s): the boundary slice U=3e at e=2 —
+  a CAS control of THEOREM RAY-EDGE.
+- Supersedes ray-kill's feasibility note that (1,5) did not
+  terminate under sympy in 50 min (it did, later, in 90 s
+  without accelerators).
+
+**Box03 status-file question resolved:** `status.attempt1`
+carries `corrected_863 msolve_rc=0` and the .msolve.out is the
+unit ideal in char 0 — that is the already-banked (8,6,3)
+curve-level kill (integration #7). The live `status` was
+rewritten by the m2 queue; the 869 msolve loop will append its
+own line when it exits. 869 at 9h06m process time (cap 12h).
+
+Runners: web-sweep (grok), a2-ubound (opus), cusp-a-n8-gate
+(opus); box01 A2 window ((1,9) char-0 running); Box03 869.
+Round floor 12:22Z armed.
