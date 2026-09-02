@@ -19280,3 +19280,28 @@ deliverables, the 0.2 cutover, the DEGRADED round. AUDIT pointer
 appended. Standing fronts as in its §D. Runners: n-vs-mapdeg (opus),
 meridian-floor-sharpen (opus), a2-dev-projection (sol),
 b3-boundary-instrument-review (grok); Box03 869 at its cap.
+
+EVENT (observed ~10:25Z per lane print) — **A2-DEV-PROJECTION landed**
+(`a2-dev-projection-sol56-20260902.md`, 8fb07079, BODY_SEALED, 26KB;
+generator `xmodel/a2-dev-projection-sol56-20260902.py`): REISSUE
+COMPLETE — the seven residual rows re-extracted from SPEC's own Even/Odd
+(exact-diff controls), `EQ2_even` carrying −2qE1, published as the
+canonical corrected §1 (replaces the SPEC's §1 for all consumers; E2 is
+the coefficient polynomial b Z eta^2 throughout); T1 re-derived
+(wall-free); **T2 REPAIRED** (final G' sign negative in the bracket);
+O1s and DET-EO re-derived and machine-checked. DEV-PROJECTION at
+e = 1, 2, 3: the declared capped branch-(A) coefficient ideals are the
+UNIT ideal (I_e = (1), hence J_e = (1)) — no c candidates, no finite-U
+boxes: the live simultaneous-top branch-(A) subsystem with the licensed
+4e−1 deviation cap is EMPTY for e <= 3; c = 0 (Chamber III) separately
+two-engine EMPTY; c = −(2e+1) and Wall A lie inside the unit branch.
+OPEN: c = −2e globally (the cap is unlicensed there); Chamber I (needs
+fixed-(e,g) jobs with the 2g−1 cap); OPEN[A2-K2E] outside the decided
+branches; e >= 4 uncomputed. **T4 RESTORED** by a corrected proof on the
+corrected e = 0 section (the old zero determinant not used). Scope,
+honestly typed by the lane: local in e, necessary subsystem only; no
+chamber emptied globally, no c pinned, no all-degree A2 statement, no
+geometric attainment. Gate launched (`a2-reissue-review-gpt55-20260902`)
+for the ledger-correctness items (canonical system, T2 repair, T4
+restoration, the unit-ideal decisions with their controls) — off the
+critical path; the object stays PROFILE-UNTYPED.
