@@ -20536,3 +20536,55 @@ lanes: time-function-endgame (D = 105), time-function-calibration
 (reserved). Census 602/975.
 
 ## EVENT 18:36Z — REDUCIBLE-BRANCH REPRICE launched (Opus): scope audit of the exact machinery without H2; does the pinned N reprice the reducible branch. Lanes: time-function-endgame, time-function-calibration-d48, branch-orbits, reducible-branch-reprice. Seats: Opus 3/5, Grok 1, Sol/GPT-5.5 idle (reserved). Census 602/975.
+
+## EVENT 18:39Z — TIME-FUNCTION ENDGAME LANDED (9f47a25f, 47KB, Opus, PROVED-HERE/UNREVIEWED): THE BOTTOM STAR IS A DESSIN; NO SKELETON KILL; D = 105 SURVIVES TWO ORDERS; DISC-COUPLING IS THE SUCCESSOR
+
+- THEOREM BOTTOM-ODE: the interpolation conditions (y-degree m < n and
+  polynomiality of the Lagrange interpolant of ∫dx/g_y) restricted to
+  one bottom-major disc at Moh's leading order are EXACTLY the
+  one-variable Keller equation d·p_f·p_g′ − e·p_g·p_f′ = κ ∈ C*, with
+  deg p_g = eV₂, deg p_f = dV₂, κ = c·d·e/q (q the D1-PIN weight). The
+  order-matching that makes κ constant IS D1-PIN.
+- STAR-SIMPLE (strengthens D1-STAR: p_f squarefree too — the f-roots of
+  D₁ also separate at exactly δ₁; intra-f clustering is invisible to N
+  but forbidden at first order); STAR-RESIDUE (p_f(c_i)p_g′(c_i) = κ/d at
+  every star point); STAR-SUM (Σ c_i^k/p_g′(c_i)² = 0 for k ≤ (e−d)V₂ − 2,
+  the conjectured residue identity: (e−d)V₂ − 1 conditions); STAR-EIGEN
+  (Moh Prop 5.5's dichotomy at every s).
+- **THEOREM STAR-ABC:** BOTTOM-ODE ⟺ p_f^e − ρ·p_g^d attains the
+  Mason–Stothers/ABC bound with equality ⟺ p_f^e/p_g^d is a degree-deV₂
+  Belyi map with profiles [e^{dV₂}], [d^{eV₂}], [(d+e)V₂ − 1, 1^*]: the
+  bottom star of a Keller pair is a Davenport–Stothers extremal pair, a
+  dessin d'enfant.
+- NO SKELETON KILL: existence decided by Nullstellensatz (Gröbner over
+  Q, saturated at κ ≠ 0) for 15 of the 220 (d,e,V₂) triples at D ≤ 120
+  (all with b₁ ≤ 6): all REALISABLE, with explicit witnesses; candidate
+  condition (16) is a RIGIDITY condition, not an emptiness condition;
+  OPEN[STAR-REALISABILITY] answered NO as posed.
+- D = 105 (declared smallest: n = 105, m = 70, (d,e) = (2,3), M =
+  (−70,−63,103), V = (1,4,1), δ = (3/4, 71/95, −1), q = 3/10, u = 20,
+  N = 6): order 0 DETERMINED (a single orbit, p_g ∝ π(π² + b), star
+  {0, ±s}); orders 1, 2 governed by a linear operator L_ε whose rank
+  drops exactly at ε ∈ μZ_{>0}, μ = 1/20: non-resonant orders free
+  (7 unknowns, 5 conditions), each resonant order ONE scalar condition
+  (cuts the order-1 plane to two lines). Positive-dimensional; the
+  first exact-form Appendix-II CONSTRAINT, not a kill.
+- Controls 78/0: automorphisms satisfy (i)–(ii) exactly with no log;
+  (y, x^j + y^k), j ≥ 2, satisfies (i) and FAILS (ii) (hypergeometric
+  time function); all seven two-tower rows fail.
+- OPENS (bounded): STAR-ALLV (205 undecided triples; Hurwitz existence
+  for the three-profile passport); **DISC-COUPLING** (the 20 bottom
+  discs share the outer scalars: 20 conditions vs 62 parameters at
+  each resonant order — the first place a counting obstruction can
+  appear; the successor computation); **DELTA-DENOM** (measured anomaly,
+  not used: by Prop 5.3 δ_i is a minimum of ord_t(τ − τ′) over roots, so
+  its denominator should divide the lcm of the branch ramification
+  indices; denom(δ₁) | n holds on 0.74% of the census, | n or | m on
+  0.96%, on 34% of the (UNI) N ≥ 6 survivors, and on 6/6 of Moh's
+  published rows; the selected D = 105 skeleton has δ₁ = 3/4 with 4 ∤ 105,
+  4 ∤ 70 — a signal, not a theorem); EIGEN-A.
+Reading: the endgame is not "does the star exist" (it always does) but
+"do the k rigid stars of one skeleton fit together" (DISC-COUPLING),
+and possibly "is Def 5.1(3) missing a denominator condition"
+(DELTA-DENOM). Lanes launched: review (Sol), disc-coupling (Opus),
+delta-denom (GPT-5.5). Drivers box/tfe-drivers-20260902/.
