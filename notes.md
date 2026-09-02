@@ -19560,3 +19560,46 @@ pencil, and the pencil's monodromy on H_1 with all vanishing cycles at
 infinity; the ceiling flagship is charged as a PROPOSAL only. The
 ANTICANON successor (Opus) waits for the ceiling review. Seats: Opus
 1/5; Sol 1 (b3-census); Grok 1 (mf-defect); GPT-5.5 1 (ceiling review).
+
+## LIVE STATE (observed ~11:50Z per lane print) — CEILING FLAGSHIP REVIEWED: THE ONE-INTEGER REDUCTION AND THE MOH CROSSING STAND; OPEN[MF-DEFECT] CLOSED POSITIVE BY THE REVIEW
+
+**N-VS-MAPDEG-REVIEW landed** (`n-vs-mapdeg-review-gpt55-20260902.md`,
+05d59097, BODY_SEALED): PROMOTE items 2, 3, 5, 6 with repairs; item 1
+as a general-dominant refutation (NEG-GEN typed as
+ceil((c+N+1)/2) <= D_min(F_{N,c}) <= c + N — the lower bound alone
+refutes any general-dominant bound at fixed N; exact D_min needs an
+unsupplied lemma); item 4 only as **NO-CEILING[LATTICE-LEDGER]** (a
+theorem about the relaxed lattice/polar ledger — Z nef, Z^2 = N,
+proximity/effectivity, I1–I6, DEG-SPLIT, determinant identities — plus
+dominant-map witnesses; it does NOT rule out a Keller-specific
+canonical inequality, which is exactly NOETHER-K's route). Repairs:
+the compactification and definitions spelled out (common-degree
+rational map P^2 ⇢ P^2, boundary base points on L_infty blown up,
+Z = D H − sum a_i E_i, kappa = sum_{C→L_inf} k_C, T = the satellite
+a_i); NOETHER-K is Keller/H2 (general dominant maps carry the extra
+affine term Z·R_aff); the one-integer implication spelled out:
+Z·K_X <= f(N) ⇒ n <= (3N + f(N))/(W − S) ⇒ delta_aff <= p_a(n); Moh's
+normalisation repaired — Moh proves no Jacobian counterexample with
+BOTH coordinate degrees <= 100 after the standard reductions, i.e.
+max(deg f, deg g) <= 100, so **D_min >= 101 for noninvertible Keller
+maps with no gap to D_min: MOH-CROSS stands.**
+**BONUS (reviewer, item 3): MERIDIAN-FLOOR+ has a stronger consequence
+than the producer stated — with MF-EXACT it proves
+2 g_L + theta_inf >= W − S + 1, which CLOSES OPEN[MF-DEFECT] POSITIVE**
+(the +1 at every cell; the equality case g_L = 0, theta_inf = 1 is
+EXCLUDED, not merely unattained). The Grok lane still running on
+MF-DEFECT/MULT-VS-BETA becomes an independent second derivation of
+the first and the owner of the second.
+INTEGRATION #12 binds now: the ceiling set (D_min, NEG-GEN at scope,
+the polar ledger with definitions, DEG-SPLIT, CAP-STRICT, NOETHER-K,
+NO-CEILING[LATTICE-LEDGER], MERIDIAN-FLOOR+, the one-integer
+reduction OPEN[ANTICANON-DEFECT], MOH-CROSS, MF-DEFECT closed).
+**Launched** `sat-mass-opus5-20260902` (Opus, flagship): the OTHER half
+of MOH-CROSS — bound the satellite mass T = D − S n − kappa for a
+degree-minimal representative (the boundary avatar of Jung–van der
+Kulk word length), so that a ceiling on n carries to D; consuming the
+reviewed polar ledger, Abhyankar–Moh's leading-form theorem for Keller
+pairs, Heitmann/GGV's gcd >= 16, and the JvdK reduction of a minimal
+pair. Together with `keller-pencil-genus` (the n half) this is the
+whole price of every (B2)/(B3) cell at 4 <= N <= 33. Seats: Opus 2/5;
+Sol 1; Grok 1; GPT-5.5 0.
