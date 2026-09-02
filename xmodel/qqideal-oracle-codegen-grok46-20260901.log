@@ -1,2 +1,33 @@
 cli=grok 1.0.13 (5e9a58528b76) [stable] permission=bypassPermissions output=plain
-I'll start by verifying the frozen input hashes, then read the charged audit, codegen, and kill-review so the oracle jobs match the reviewed derivations.Hashes match the seal. Next I’ll read the charged audit, codegen, and kill-review, and inspect the existing `box/` layout.Hashes match. Reading the three charged reports and the existing corrected `.ms`/`.m2` encodings next.I have the charged specs. Next I’ll read the as-run `.m2` encodings, hunt for the qqideal API, and start the report.
+I'll start by verifying the frozen input hashes, then read the charged audit, codegen, and kill-review so the oracle jobs match the reviewed derivations.Hashes match the seal. Next I’ll read the charged audit, codegen, and kill-review, and inspect the existing `box/` layout.Hashes match. Reading the three charged reports and the existing corrected `.ms`/`.m2` encodings next.I have the charged specs. Next I’ll read the as-run `.m2` encodings, hunt for the qqideal API, and start the report.The prompt only lists signatures. I’ll look up the published qqideal/msolveio APIs and the existing I_DP postcheck so the jobs match the real contracts.PyPI docs confirm the packages. Next I’ll pull the GitHub source for `double_point_ideal`, colon/saturate, and the exact Verdict contract.I'll pull the qqideal source next so the jobs call the real v0.1.0 API rather than a guessed one.Charged hashes match. Next I’ll write the report’s hash-gate and derivation sections, then the Fraction engine and jobs.Writing the jobs module and runner next: Fraction expansion first so the self-checks can run in this sandbox.Self-checks passed, including polynomial equality with all five reviewed `.ms` files. I’ll clean up a few code nits, re-run for a clean transcript, and seal the report.The parallel-oracle window is written. Charged input hashes matched; the three Fraction self-checks passed in this sandbox (including polynomial equality against all five reviewed `.ms` files). Groebner/verdict execution is the on-box run.
+
+**Deliverables**
+- `box/qq_oracle_jobs.py` — P1/P2/P3/P4a/P4b builders
+- `box/qq_oracle_run.py` — self-checks, five-job table, old-stack DIFF, P1 `ORACLE-P0` → exit 2
+- `xmodel/qqideal-oracle-codegen-grok46-20260901.md` — sealed (body 25335 bytes)
+
+**Stack mapping (v0.1.0, not guessed)**
+- Coordinator names `qqideal.ring` / `qqideal.ideal` are `Ring` / `Ideal`.
+- Rabinowitsch `u*g_c-1` ↔ `Ideal.saturate(g_c)` / `ideal_verdict(..., opens=[g_c])` (exact).
+- Cover colon `I : Cover^∞` is **not** faked: v0.1 saturates one polynomial; a product saturate would be a larger open. The `c`-open already excludes common covers; P1 was empty before the colon.
+- `double_point_ideal` builds the **ordered** pair locus in `QQ[s,t,u]`. It does **not** check reduced / length `delta_aff` / immersive / distinct tangents. Ordinary 6 nodes ⇒ ordered degree 12, not 6.
+
+**Old-stack DIFF**
+| job | record | rule |
+|---|---|---|
+| P1 `(8,6,3)` | EMPTY, two-engine, binding | any other Kind (incl. TIMEOUT/ERROR) → `ORACLE-P0`, exit 2 |
+| P2, P3 | pending | record fresh |
+| P4a | raw NONEMPTY vacated | record fresh, do not assume |
+| P4b | raw pending vacated (not nonempty) | record fresh, do not assume |
+
+**Self-checks (verbatim in the report):** (i) charged A point fails corrected 8611 (`g19|a22=4 = 11`); (ii) `(9,6,2)` exhibit passes; (iii) HF-twin passes pre-nodal 964 (`g4=-27/128`).
+
+On-box:
+
+```text
+MSOLVE_BINARY=$HOME/msolve-0.10.1/bin/msolve QQ_ORACLE_TIMEOUT=3600 \
+  python3 box/qq_oracle_run.py
+```
+
+No exit-price claim. `Verdict` is never used as a boolean.
+DIVERT path=xmodel/qqideal-oracle-codegen-grok46-20260901.md status=CLEAN_SEALED body_bytes=25335 body_sha256=d8b4a55e59a49003cb06329d207d6f8e7e75d2a8e68d24c2382329005712a185

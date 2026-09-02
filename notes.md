@@ -17465,3 +17465,35 @@ etc.) were produced by msolve 0.6.5 -g 2 + M2 mirror; the [1]
 unit-basis convention is stable across versions and M2 confirmed
 independently — the kill stands; the oracle window reruns them
 on 0.10.1 regardless.
+
+## LIVE STATE (observed 2026-09-02T00:10Z) — ORACLE WINDOW RUNNING ON THE NEW STACK
+
+**QQIDEAL-ORACLE-CODEGEN landed** (`qqideal-oracle-codegen-grok46-20260901.md`,
+758a27b5, BODY_SEALED): box/qq_oracle_jobs.py (7be3d100, P1-P4b
+corrected systems as qqideal calls with derivation-correspondence
+table) + box/qq_oracle_run.py (331ba6ea, verdict table with
+certainty labels; P1 disagreement = ORACLE-P0 exit 2). Fraction
+self-checks (i)-(iii) PASS in-lane AND re-run on Box03 (LEADING-
+IDENTITIES PASS, MS-ENCODING PASS vs the as-run .ms bytes).
+P3 discipline: incidence verdict recorded fresh; HF-twin is
+self-check (iii), not a Groebner certificate; no six-node
+promotion from this window.
+
+**Oracle window LAUNCHED on Box03** (~/qqoracle, msolve 0.10.1
+pinned via MSOLVE_BINARY + binary=; venv ~/qqoracle-venv):
+all five corrected systems re-decided on the new stack, diffed
+against the old-stack record. Watcher armed (blow4vu74).
+
+Strategic reply sent to DC (assuming N=4): shortest paths =
+(1) all-degree H2 closure (generalize the (M') nodal kill +
+7.B + finish the A2 horn), (2) reducible cage + companion-curve
+contradiction (generalize the chi_2+sigma_2=1 collapse); N=5 as
+test bed (Zoladek gapped => literature N=5 not soundly closed);
+asks: PARAM point-extraction in msolveio, Opus seat ceiling 4-5,
+second compute box/AMI, formalization statements on offer
+(R1/R2/DET-LINF/TB-GERM/CABLE-3), Guccione custody for N=5.
+Deferred ideation round fires when mu2 + native enum + 869/964
+land.
+
+Still running: do1-mu2-replay (23977), SAGE-NATIVE 6^9 enum,
+Box03 msolve 869 + M2 queue, oracle window.
