@@ -1,0 +1,22 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/time-function-calibration-d48-opus5-20260902.md` (36,600 B; body 36,192 B, SHA-256 `db8a10c9…`).
+
+## What the calibration found
+
+**The `D = 48` skeleton dies at Moh's leading order — but not through the time function's ODE.**
+
+**(1) Selection.** `D = 48` forces `(n,m,K,d,e) = (48,32,16,2,3)`. 50 groups / 1301 V-assignments; the knapsack at `N ∈ [6,16]` leaves 39 (correction: `general.log`'s "9 killed" was run at `N ∈ [4,16]` with a smaller cap — at `N ≥ 6` it is 11 killed, 0 capped). The charge's keys (smallest `u·e = 36`, fewest tame coefficients) select a unique row: `M = (−32,−12,46)`, `V = (1,3)`, `δ = (−1, 7/22, 3/8)`, `a_1 = 3`, `b_1 = 2`, `q = 3/4`, `N ∈ {6,9}`.
+
+**(2) The expansion.** I derived the exact order-graded form of `[f,g] = c` in the bottom-disc chart. Order 0 is verbatim Moh's Prop 4.6 `r = 1` clause; `A + B − 1 + δ_1 = 0` (i.e. D1-PIN) is *why* its right-hand side is a nonzero constant. Two results at that order:
+- `d Q P' − e Q' P = γ ≠ 0` forces **both** `p_g` and `p_f` to have simple roots and be coprime — a second proof of D1-STAR(d), and a **refutation** of the charged review's "intra-`f` clustering is free".
+- `Q^e/P^d` is a genus-0 Belyi map with a fully determined profile; its dessin exists for every `(d,e,V)`. So the ODE is **always** solvable — `OPEN[STAR-REALISABILITY]` is answered **negative**. (The parallel `D=105` flagship reached the same conclusion independently; I saw only its one-line memory index, not its report.)
+
+The correction orders give a linear operator `L̃_ν̃` with generic nullity 3 (V=1) — positive-dimensional, no kill; it is injective on the tame-silent subspace, where it forces `h'(C) = 0`, and hence at most one bottom disc when the ceiling `N = U` is attained. Order `2ε` was **not** imposed — typed `OPEN[TF-ORDER2]`.
+
+**(3) The actual kill, and a finding about the census.** Reading Moh firsthand, his search conditions **(8)–(11)** are the root-of-unity/ramification conditions on the `δ`-chain — and `moh_skeleton_N.py` does not implement them. Their `r = 1` form, sharpened by the simple roots above, is `a_1 = eV_2 ≡ 0 or 1 (mod Δ_1)`; all six of Moh's published rows pass it, the selected skeleton fails it (`Δ_1 = 4`, `a_1 = 3`). Measured over `48 ≤ D ≤ 120`: **10 637 groups → 287 → 233** after the knapsack; `D = 105`: **264 → 3**; degrees **48, 66, 78 empty**. Nothing above `D = 100` is claimed emptied.
+
+Caveat stated in the report: the `j ≥ 2` clause is an OCR reconstruction missing Moh's `α = 0` alternative, so those kills are a **ceiling**; the level-1 condition is fully proved and alone kills 86.7% of V-assignments over `D ≤ 90` (but empties no degree by itself).
+
+**(4) Controls.** `tfcal.py` 37/0; charged `jacfibre.py` 101/0. `(y, x+y^k)` reproduces `[f,g] = −1` exactly through the bottom equation for `k = 2..8`; `(y+x², x+(y+x²)²)` satisfies JAC-FIBRE on both branches and its Lagrange interpolant returns `f` exactly; the non-Keller two-tower rows fail the Keller value on every branch.
+DIVERT path=xmodel/time-function-calibration-d48-opus5-20260902.md status=DIVERTED body_bytes=36192 body_sha256=db8a10c986a8a8a7b83c285585e299d887c72e52417b76ea7fca8c4fd0dbff2a overflow=xmodel/time-function-calibration-d48-opus5-20260902.overflow overflow_bytes=408 raw=xmodel/time-function-calibration-d48-opus5-20260902.raw.md raw_sha256=1a0aa982138813d5f261f5f2ea1d9d0733252fe956d69c51db7146a7c0f52b72 overflow_sha256=4334f42daf97bddc5f6ff7a8ddb08d4c87e697d2f6d0efd81425179a75fc26e5
+post-BODY-END overflow diverted; charged body preserved
