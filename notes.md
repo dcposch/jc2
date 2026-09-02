@@ -20036,3 +20036,21 @@ half 101 <= D <= 200), 48 workers, 11h per-cell deadline and a
 250,000-state cap (any cut marks the cell INCOMPLETE — never a zero
 count), fail-closed merge, engine hashed once per run. Launch follows
 the readiness check (Python 3.12, GNU parallel).
+
+EVENT (~13:35Z) — **KELLER-CLUSTER CENSUS LAUNCHED ON BOX01**: run
+directory `~/cluster_census/run-20260902.oXm88P` (engine
+`keller_cluster_census.py` sha256 ef17664c…, revision 20260902.8;
+self-test ok on the box), window **legacy-inclusive** (chosen over
+the lane's "strict" because strict is VACUOUS at N <= 4 while
+legacy-inclusive keeps the a = N/2 cells, i.e. the promoted N = 4 (B3)
+cell: 975 active (N, D) cells for N = 2..8, D = 2..200, 623,871
+parity-feasible profile rows; all-h2 would be 3.1M rows), 48 workers,
+per-cell 11h deadline / 250,000-state cap (cuts mark INCOMPLETE, never
+zero), fail-closed merge at the end of the hard 12h budget (~01:35Z
+09-03). 407 cells had already written rows at +25 s. Run script
+tracked as `box/run-keller-census.sh`. Watcher armed (cell progress,
+failures, completion). What it decides: whether the FULL numerical
+Keller ledger (NOETHER-K both equations, proximity, DEG-SPLIT,
+dicritical structure, Hodge/nef) has solutions at each (N, D) up to 200
+— the numerical habitat of a counterexample above and below Moh's 102;
+every row is NUMERICAL_PROFILE / NECESSARY, never a map.
