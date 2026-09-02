@@ -1,0 +1,273 @@
+=== hard-coded class list ===
+{
+  "passed": true,
+  "kstar": -10,
+  "reps": [
+    {
+      "name": "noncst-T-a",
+      "gate3_at_kstar_-10": true,
+      "T1_product_equals_X": true,
+      "X": "(3 4)",
+      "Y": "(2 3)",
+      "Pi": "(2 4)",
+      "T1": "((1 3), (1 4), (1 3))"
+    },
+    {
+      "name": "noncst-T-b",
+      "gate3_at_kstar_-10": true,
+      "T1_product_equals_X": true,
+      "X": "(3 4)",
+      "Y": "(2 3)",
+      "Pi": "(2 4)",
+      "T1": "((1 4), (1 3), (1 4))"
+    },
+    {
+      "name": "noncst-4c-0",
+      "gate3_at_kstar_-10": true,
+      "T1_product_equals_X": true,
+      "X": "(1 2 3 4)",
+      "Y": "(1 2 4 3)",
+      "Pi": "(3 4)",
+      "T1": "((1 2), (2 3), (3 4))"
+    },
+    {
+      "name": "noncst-4c-1",
+      "gate3_at_kstar_-10": true,
+      "T1_product_equals_X": true,
+      "X": "(1 2 3 4)",
+      "Y": "(1 2 4 3)",
+      "Pi": "(3 4)",
+      "T1": "((2 3), (3 4), (1 4))"
+    },
+    {
+      "name": "noncst-4c-2",
+      "gate3_at_kstar_-10": true,
+      "T1_product_equals_X": true,
+      "X": "(1 2 3 4)",
+      "Y": "(1 2 4 3)",
+      "Pi": "(3 4)",
+      "T1": "((3 4), (1 4), (1 2))"
+    },
+    {
+      "name": "noncst-4c-3",
+      "gate3_at_kstar_-10": true,
+      "T1_product_equals_X": true,
+      "X": "(1 2 3 4)",
+      "Y": "(1 2 4 3)",
+      "Pi": "(3 4)",
+      "T1": "((1 4), (1 2), (2 3))"
+    }
+  ]
+}
+expanded conjugacy orbits: 144 (expect 144)
+Pi-tau pin assertion passed=True (NOT used as a filter)
+POSITIVE CONTROL generating=144 expected=144 passed=True
+NEGATIVE CONTROL projective-product=1 count=0 expected=0 passed=True
+VARIANT BLOCK total_survivors=0 per_class={'noncst-T-a': 0, 'noncst-T-b': 0, 'noncst-4c-0': 0, 'noncst-4c-1': 0, 'noncst-4c-2': 0, 'noncst-4c-3': 0}
+VARIANT BLOCK-inverse total_survivors=0 per_class={'noncst-T-a': 0, 'noncst-T-b': 0, 'noncst-4c-0': 0, 'noncst-4c-1': 0, 'noncst-4c-2': 0, 'noncst-4c-3': 0}
+SAGE-NATIVE 6^9 full ZvK (as-written) ...
+SAGE-NATIVE 6^9 product-only (as-written) ...
+SAGE-NATIVE 6^9 product-only (inverse) ...
+SAGE-NATIVE full generating=0
+SAGE-NATIVE product-only generating=144 passed=True
+{
+  "script": "bmfact_enum.py",
+  "kstar": -10,
+  "n_classes_hardcoded": 6,
+  "charged_class_list_sha256": "a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401",
+  "charged_class_list_citation": "REP-96-INNER \u00a75, frozen copy hashed before reading",
+  "iota_split": "(delta_3^{k_*}, 1, 1)",
+  "tube_embedding": "adjacent blocks (1,2,3), (4,5,6), (7,8,9)",
+  "OPEN": [
+    "OPEN[BMFACT-IOTA-SPLIT]: other distributions of iota with the same ordered product",
+    "OPEN[BMFACT-TUBE-EMBEDDING]: residue-mod-3 tubes vs adjacent blocks",
+    "OPEN[BMFACT-ORIENTATION]: Sage product vs inverse (run as a variant when JSON is present)",
+    "OPEN[BMFACT-STRAND-VS-BLOCK]: Sage Im(y)-at-p1 order vs REP-96 tubular order"
+  ],
+  "gate3_on_reps": {
+    "passed": true,
+    "kstar": -10,
+    "reps": [
+      {
+        "name": "noncst-T-a",
+        "gate3_at_kstar_-10": true,
+        "T1_product_equals_X": true,
+        "X": "(3 4)",
+        "Y": "(2 3)",
+        "Pi": "(2 4)",
+        "T1": "((1 3), (1 4), (1 3))"
+      },
+      {
+        "name": "noncst-T-b",
+        "gate3_at_kstar_-10": true,
+        "T1_product_equals_X": true,
+        "X": "(3 4)",
+        "Y": "(2 3)",
+        "Pi": "(2 4)",
+        "T1": "((1 4), (1 3), (1 4))"
+      },
+      {
+        "name": "noncst-4c-0",
+        "gate3_at_kstar_-10": true,
+        "T1_product_equals_X": true,
+        "X": "(1 2 3 4)",
+        "Y": "(1 2 4 3)",
+        "Pi": "(3 4)",
+        "T1": "((1 2), (2 3), (3 4))"
+      },
+      {
+        "name": "noncst-4c-1",
+        "gate3_at_kstar_-10": true,
+        "T1_product_equals_X": true,
+        "X": "(1 2 3 4)",
+        "Y": "(1 2 4 3)",
+        "Pi": "(3 4)",
+        "T1": "((2 3), (3 4), (1 4))"
+      },
+      {
+        "name": "noncst-4c-2",
+        "gate3_at_kstar_-10": true,
+        "T1_product_equals_X": true,
+        "X": "(1 2 3 4)",
+        "Y": "(1 2 4 3)",
+        "Pi": "(3 4)",
+        "T1": "((3 4), (1 4), (1 2))"
+      },
+      {
+        "name": "noncst-4c-3",
+        "gate3_at_kstar_-10": true,
+        "T1_product_equals_X": true,
+        "X": "(1 2 3 4)",
+        "Y": "(1 2 4 3)",
+        "Pi": "(3 4)",
+        "T1": "((1 4), (1 2), (2 3))"
+      }
+    ]
+  },
+  "n_expanded": 144,
+  "pi_tau_pin_assertion": {
+    "passed": true,
+    "n_checked": 144,
+    "failures": [],
+    "note": "ASSERTION, not a filter. On every (9,6,2) class Pi is a transposition and exactly two of the six transpositions tau satisfy Pi tau in V_4 (tau = Pi or tau disjoint from Pi).",
+    "allowed_tau_by_class_rep": {
+      "noncst-T-a": [
+        "(1 3)",
+        "(2 4)"
+      ],
+      "noncst-T-b": [
+        "(1 3)",
+        "(2 4)"
+      ],
+      "noncst-4c-0": [
+        "(1 2)",
+        "(3 4)"
+      ],
+      "noncst-4c-1": [
+        "(1 2)",
+        "(3 4)"
+      ],
+      "noncst-4c-2": [
+        "(1 2)",
+        "(3 4)"
+      ],
+      "noncst-4c-3": [
+        "(1 2)",
+        "(3 4)"
+      ]
+    }
+  },
+  "n_reconstructed_nines": 144,
+  "positive_control": {
+    "name": "POSITIVE_CONTROL_PRODUCT_ONLY",
+    "description": "Drop all local ZvK relations except rho_inf-fixedness, with rho_inf = C_3(delta_3^2) \u00b7 (delta_3^{k_*}, 1, 1), k_* = -10, adjacent-block identification. Count generating 9-tuples.",
+    "n_input": 144,
+    "n_product_fixed": 144,
+    "n_generating": 144,
+    "expected_generating": 144,
+    "passed": true,
+    "citation": "REP-96-INNER \u00a75: 6 classes, each a 24-element conjugacy orbit; 144 tuples in all. Frozen SHA-256 a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401"
+  },
+  "negative_control": {
+    "name": "NEGATIVE_CONTROL_PROJECTIVE",
+    "description": "Fake extra relation: the product of the nine meridians is 1 (the relation that presents pi_1(P^2 - Dbar), not pi_1(C^2 - D)). On every charged (9,6,2) class Pi is a transposition, hence odd, so the extra relation empties the set.",
+    "n_generating_product_fixed_and_total_product_one": 0,
+    "expected": 0,
+    "passed": true
+  },
+  "controls_passed": true,
+  "mode": "with-json",
+  "json_path": "bmfact-962-out/bmfact_962.json",
+  "sage_nstrands": 9,
+  "sage_n_factors": 9,
+  "sage_census": {
+    "ok": true,
+    "classes": [
+      "tangency",
+      "tangency",
+      "tangency",
+      "node_fibre",
+      "tangency",
+      "tangency",
+      "tangency",
+      "tangency",
+      "tangency"
+    ],
+    "n_tangency": 8,
+    "n_node_fibre": 1,
+    "exponent_ledger": 16
+  },
+  "sage_unpack_shape": "4-tuple (Sage 10.8 docs: braids, strand_dict, vertical_dict, nstrands); base_point ABSENT",
+  "sage_base_point": null,
+  "sage_strand_order_FLAG": "FLAG: braid_monodromy did not return a base point (Sage 10.8 4-tuple). Ordered y-roots below are NOT claimed to be Sage's strand order. OPEN[BMFACT-BASEPOINT] in the report.",
+  "node_fibre_leftover_strand_1based": null,
+  "variant_BLOCK": {
+    "per_class": {
+      "noncst-T-a": 0,
+      "noncst-T-b": 0,
+      "noncst-4c-0": 0,
+      "noncst-4c-1": 0,
+      "noncst-4c-2": 0,
+      "noncst-4c-3": 0
+    },
+    "total_survivors": 0,
+    "survivors": []
+  },
+  "variant_BLOCK_inverse": {
+    "per_class": {
+      "noncst-T-a": 0,
+      "noncst-T-b": 0,
+      "noncst-4c-0": 0,
+      "noncst-4c-1": 0,
+      "noncst-4c-2": 0,
+      "noncst-4c-3": 0
+    },
+    "total_survivors": 0,
+    "survivors": []
+  },
+  "variant_SAGE_NATIVE_full": {
+    "variant": "SAGE-NATIVE-FULL-ZVK",
+    "n_fixed": 6,
+    "n_generating": 0,
+    "n_words": 9,
+    "survivors_verbatim": [],
+    "total_survivors": 0
+  },
+  "variant_SAGE_NATIVE_product_only": {
+    "variant": "SAGE-NATIVE-PRODUCT-ONLY",
+    "n_fixed": 246,
+    "n_generating": 144,
+    "n_words": 1,
+    "expected_generating": 144,
+    "passed_positive_control": true
+  },
+  "variant_SAGE_NATIVE_product_only_inverse": {
+    "variant": "SAGE-NATIVE-inverse-PRODUCT-ONLY",
+    "n_fixed": 246,
+    "n_generating": 144,
+    "n_words": 1,
+    "expected_generating": 144,
+    "passed_positive_control": true
+  },
+  "decision_BLOCK": "KILL at representation level, in the adjacent-block identification, for both orientations. SAGE-NATIVE may still be nonempty: see OPEN[BMFACT-STRAND-VS-BLOCK]."
+}

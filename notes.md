@@ -18017,3 +18017,29 @@ any all-degree closure, anything about (B3).
 N>=17. The horn remains THE neck; its group is now the
 torus-knot-with-extra-relators family on which the merged
 program computes.
+
+## LIVE STATE (observed 2026-09-02T02:10Z per prior date print) — SAGE-NATIVE ZERO: (9,6,2) CARRIES NO S_4 REPRESENTATION
+
+**SAGE-NATIVE 6^9 completed on Box03** (enum_rc=0; artifacts
+pulled into repo: box/bmfact962_result.json 7ad79c5c,
+box/bmfact962_native_enum.log 537e0fa0). RESULT:
+- variant_SAGE_NATIVE_full (all 9 ZvK words, as-written, NO
+  strand identification): n_fixed=6, **n_generating=0,
+  survivors=[]** — the six fixed tuples all have im != S_4.
+- product-only both orientations: n_generating=144 = REP-96's
+  expansion EXACTLY (positive controls pass).
+- BLOCK variants: 0/0 (already banked).
+**Pending review (launched: bmfact-962-kill-review-sol56, Sol),
+the claim is: the realized (9,6,2) curve admits NO transitive
+S_4 representation compatible with its braid factorisation —
+representation-level kill of THIS CURVE, convention-independent
+up to the §6 invariance argument (conjugacy/relabel/inversion)
+which the review must prove or refute (the full variant ran
+one orientation), and OPEN[BMFACT-BASEPOINT] (labels only?).**
+Scope discipline: kills the CURVE, not the (9,6,2) numerical
+row (REPRESENTATIVE vs FULL_ACTUAL_EXIT). Under
+N=4-CHECKED-CLOSED this is confirmatory + pipeline validation;
+its real value is the proven end-to-end instrument for N>=6.
+Interlock: HOM-COVER razor (a) on 962 survivors is MOOT (zero
+survivors; Card A stop condition). The (9,6,4) enum is now the
+live novelty (still running).
