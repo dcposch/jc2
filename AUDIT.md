@@ -15437,3 +15437,35 @@ delta (d)/(e) (that skeleton is dead under Moh's (8)–(13) as
 transcribed), the DISC-COUPLING lane was STOPPED unsealed at 19:05Z and
 will be relaunched on a rebased survivor with the corrected resonance
 data.
+
+## INTEGRATION #17 DELTA (g) (2026-09-02 19:11Z, PROVED-HERE/UNREVIEWED + MEASURED): THE EXACT MACHINERY IS H2-FREE; THE REDUCIBLE BRANCH IS PARTIALLY SUBSUMED AT THE PROPER/NON-PROPER LINE
+
+`reducible-branch-reprice-opus5-20260902.md` (fd1f383a). SCOPE AUDIT:
+no item of JAC-FIBRE, FRONTIER-EXACT, DETECTOR-NULL, D1-PIN, D1-STAR,
+PIN-NOT-CEILING, the integrality filter, condition (15), HARMONIC-BOUND
+or N-CEILING uses H2; H2 enters the charged reports only as the clip of
+the integrality window to [4,16]. Load-bearing instead: (GEN), (MIN),
+and Moh's tower with M_s = n − 2 (checked by perturbation: off
+M_s = n − 2 the r = 1 gap is (1−δ₁)(1 − (n − M_s − 1)) ≠ 0 and N is only
+bracketed). The N ≤ 5 closure is H2-FREE (its dependency chain quoted),
+so the reducible branch has the same N_min = 6. REDUCIBILITY: the
+branches of a generic fibre partition into PROPER (e·Σ_B V₂(B) roots of
+bottom-major discs) and NON-PROPER (all in minor discs, each 0); every
+datum distinguishing A_F reducible from irreducible (limit points
+(a₀, c₂), their monodromy orbits, component degrees) is carried by the
+non-proper block, so the pinned N is blind to reducibility by
+construction. NEW (PROVED-HERE): NONPROPER-COUNT (# non-proper branches
+= D − eΣ_B V₂(B) = e(K − ΣV₂), skeleton-determined); NONPROPER-RATE
+(ord_t(f(τ) − a₀) = δ⁰ − 1 + ord_t J at every branch); STRICT-FRONTIER
+(δ⁰ = 1 impossible for Keller); NONPROPER-CAP (n_A^Y ≤ e(K − Σ_B V₂(B)));
+113 exact checks on 19 non-Keller rows. MEASURED (D ≤ 120, (UNI), N ≥ 6
+with no upper window): 98.94% of assignments / 59.79% of groups die,
+vs the H2-clipped 98.98% / 60.04% — the frontier recovers 99.6% of the
+H2 kill without H2; on the sibling calibration lane's proved (10)₁ gate
+63.40% H2-free vs 63.69% H2; on its RECONSTRUCTED full gate the
+unconditional integrality filter kills NOTHING beyond the frontier
+(9.41% H2-free vs 13.94% H2). No degree emptied anywhere. VERDICT (c),
+partially subsumed: the census + pinned-N filter is ONE program for
+both branches; the reducible residual OPEN[COMPANION-R0-REALISATION]
+(notes 18413–18416) concerns the non-proper block. Review: queued for
+the next free non-Opus seat.

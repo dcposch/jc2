@@ -20625,3 +20625,12 @@ DISC-COUPLING killed (pkill by its unique lane tag; lock removed):
 wrong resonance data and a dead target. Relaunch after CENSUS-REBASE.
 Lanes: branch-orbits (Grok), reducible-branch (Opus), census-rebase
 (Opus), tf-calibration-review (GPT-5.5). Sol idle. Census 606/975.
+
+## EVENT 19:11Z — REDUCIBLE-BRANCH REPRICE LANDED (fd1f383a): exact machinery H2-free; N_min = 6 on both branches; reducibility lives in the zero block; #17 delta (g)
+
+Also of note from it: once Moh's reconstructed full gate is applied,
+the integrality filter adds almost nothing beyond the N ≥ 6 frontier
+(kills 9.4% vs 13.9% with H2) — the arithmetic of (8)–(13) already
+encodes most of what integrality saw. Lanes: branch-orbits (Grok),
+census-rebase (Opus), tf-calibration-review (GPT-5.5),
+global-interpolation (Sol). Opus 1/5. Census 606/975.
