@@ -15149,3 +15149,16 @@ standard subrectangular (m,n)-pair (van den Essen Cor. 10.2.21 as GGV
 nu(F_min) = 2, E_0 is a free vertex of T_+, and CH2 is vacuous at every N
 in this scope; "linear change + (LF)" does not monomialize three or more
 roots. Global B stays the hypothesis of GGV Cor 5.21 and of B >= 16.
+
+## INTEGRATION #14 DELTA (b) (2026-09-02, PRODUCER-LEVEL, REVIEW PENDING): MOH SURVIVOR LIST CORRECTED; D_min >= 105
+
+`depth-ceiling-opus5-20260902.md` (863b05db; review
+`depth-ceiling-review-gpt55-20260902` running) corrects an OCR misreading
+in the shape lane consumed by integration #14: Moh's fourth surviving
+degree pair is (64,48) = 16·(4,3), not (64,68); all four survivors have
+K >= 16 and none is killed by GGV Cor 6.6. Integration #14's promoted
+inequality D_min >= 102 with a divisor K in [16, D_min/3] STANDS; its
+parenthetical about the fourth pair is withdrawn. Pending the review:
+THEOREM MOH-SHARP-2 (D_min >= 105; admissible D in [101,120] = {105, 108,
+112, 117, 120}), THEOREM DEPTH-LOG (s <= log_2 K), NU-TWO gauge-free,
+PLACE-LEDGER, CONTACT-DEFICIENCY.

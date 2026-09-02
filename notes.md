@@ -20088,3 +20088,81 @@ Definition 4.3's m, n > 1 and not B. Global B remains the hypothesis of
 GGV Cor 5.21 and of B >= 16 as printed. DO NOT PROMOTE "linear change +
 (LF) monomialises any H with >= 2 roots". PROMOTED (AUDIT delta 14(a)
 now binding with the reviewer's exact scope sentence). No new OPEN.
+
+## LIVE STATE (observed ~14:30Z per lane print) — DEPTH-CEILING LANDS: THE DEPTH COUNT IS LOG-BOUNDED, THE SIZE IS FREE, AND N LIVES ON MOH'S TREE AS A PAIRING SUM THE RECURSION NEVER FORMS
+
+**DEPTH-CEILING landed** (`depth-ceiling-opus5-20260902.md`, 863b05db,
+BODY_SEALED, 50KB; PROVED-HERE/UNREVIEWED except items VERIFIED in
+refs/; hostile review launched `depth-ceiling-review-gpt55-20260902`;
+drivers in `box/depth-drivers-20260902/`):
+- **THEOREM DEPTH-LOG:** for a degree-minimal counterexample the number
+  s of characteristic pairs at infinity satisfies 3 <= s <= log_2 K
+  (Moh side) and GGV's corner count k + 1 <= log_2 K, K = gcd >= 16, from
+  two independent refs/-verified sources; attained numerically. "Always
+  a next pair" is FALSE as a count — a THEOREM with boundedly many
+  steps; what is free is the SIZE of each pair (M_r, V_r). This
+  identifies Moh's unexplained "a simple computation shows s <= 5" as
+  DEPTH-LOG at n <= 100 (4·2^{s−2} <= 100).
+- **THEOREM NU-TWO, gauge-free:** in any gauge with deg = deg_y a
+  degree-minimal counterexample's leading form has EXACTLY two distinct
+  linear factors of DIFFERENT multiplicities, M_s = n − 2 (Moh Prop 4.5 +
+  Lem 5.3 + Prop 5.4, VERIFIED): E_0-FREE holds without the
+  subrectangular reduction; OPEN[NU2-RIGIDITY] closed positive.
+- **THEOREM PLACE-LEDGER** (Hamburger–Noether at infinity; 16/16 rows):
+  D = sum nu_gamma, N = sum m_gamma, T = sum (nu_gamma − 1), D − T =
+  kappa + Sn over the places at infinity of a generic net member — T is
+  a SIZE (total degree excess = total ramification of x over ∞ in the
+  deg = deg_y gauge), not a depth; T ~ D/2 while the pair count ~ log_2 D.
+  (KL) Keller identity T = D + N + 2 g_L − 2 − nW.
+- **THEOREM CONTACT-DEFICIENCY — where N is:** N = deg_x Res_y =
+  − sum_{i,j} ord_t(tau_i − phi_j) = 2deuv − sum_{same-slope} ord_t, over
+  the n roots tau_i of g − c_2 and the m roots phi_j of f − c_1 in
+  t = x^{−1} (H = L_1^u L_2^v). N is a QUADRATIC FUNCTIONAL of the very
+  tree Moh computes — but every constraint Moh derives (Lem 2.1, Props
+  4.4/4.6, Def 5.1, Prop 5.3, Thm (4)–(7), the search list) and every GGV
+  corner condition constrains radii and counts along ONE major tower;
+  none forms the pairing sum. The recursion is not blind to N in
+  principle, only in practice — **the missing instrument is named and
+  finite: OPEN[N-ON-THE-TREE]** (express N on a Moh skeleton from the
+  tower data plus the minor-disc distribution of Moh §6; evaluate on
+  his four n <= 100 survivors; then run the filter "N <= 16" over the
+  skeleton census — if it empties the census at every D the ceiling is
+  PROVED in that range; if not, the surviving skeletons are the exact
+  objects a realisability lane must attack).
+- **THEOREM MOH-SHARP-2:** D_min >= 105 (D_min = Ke, K >= 16, e >= 3, K
+  neither p nor 2p — GGV Cor 7.9's argument at K = a + b, legitimate by
+  Prop 4.7's v_{1,1}-preservation); admissible D in [101,120] = {105,
+  108, 112, 117, 120}; 30 of 100 survive in [101,200]. MOH-CROSS threshold
+  becomes 104; SAT-CROSS sits THREE units below its own floor now.
+- WHAT LIMITED MOH TO 100: not the depth, not the search — the
+  per-survivor ENDGAME (Appendix II's four bespoke eliminations):
+  OPEN[MOH-ENDGAME] (a uniform elimination of a surviving skeleton; the
+  shared stuck-point of APPROACHES row 1). The free datum is real at the
+  recursion level (place-form families, non-Keller) and unresolved at
+  realisability (the GGV farm's "modular only").
+- Controls: Moh's published delta columns reproduced EXACTLY from the
+  recovered Def 5.1(3) (6/6 legible); his "25 possible values for M_2"
+  at (75,50) reproduced to the unit; 16/16 place-ledger rows; the census
+  calibrated to Moh's own counts.
+- CORRECTIONS to charged inputs: the shape lane's reading of Moh's
+  survivor list was an OCR misread — the fourth pair is (64,48) =
+  16·(4,3), not (64,68); all four have K >= 16 and NONE is killed by GGV
+  Cor 6.6 (integration #14's parenthetical is wrong; the D_min >= 102
+  inequality stands and is now 105 — AUDIT delta 14(b) appended);
+  "the depth is free" corrected to "the count is log-bounded, the size
+  is free"; T is a degree excess, not a Puiseux depth.
+**COORDINATOR READING (direct).** The 13:25Z reading is REVISED: the
+boundary program is not refuted, it is REDUCED to one finite
+instrument — N on the Moh skeleton. For the first time today a
+computation exists whose outcome would PROVE the ceiling on a range:
+build N(skeleton) from the contact-deficiency pairing, run the
+skeleton census with the filter N <= 16 (and the campaign's profile
+data) for D <= 200 on box01 — empty ⇒ no Keller pair of geometric
+degree <= 16 with D <= 200, which with a matching upper bound is the
+crossing, and which by itself already types where a counterexample of
+small N could live. Launched now as `n-on-the-tree-opus5-20260902`
+(Opus, flagship; re-derives CONTACT-DEFICIENCY rather than consuming
+it; the review runs in parallel). The Keller-cluster census on box01
+(boundary-cluster side) and this skeleton census (Puiseux side) are the
+two halves of the same numerical habitat. Seats: Opus 1/5; GPT-5.5 1
+(review); Grok 0; Sol 0.
