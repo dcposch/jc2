@@ -31,10 +31,33 @@ day or inserts the completed day directly below this preamble (see
 > collision-check systems upgrade adopted after its smallest test
 > passed; msolveio 0.2.1 + qqideal 0.2.0 cut over after a
 > zero-disagreement mini-oracle; Max-11 formalization handed to a
-> separate session. Frontier now: the (B3) horn through the source
-> curve E (flagship running), (B2) via Aut-minimal degree of A_F, the
-> reducible R0/degree-cap front, and the all-degree ceiling
-> (ANTI-MONOTONE).
+> separate session.
+>
+> **MIDDAY (through 10:30Z).** Integration #9 bound (case (A) empty at
+> every degree; the local-transitivity lemma; PERIPHERAL-RANK and
+> MERIDIAN-SPAN under the cage window; no companion at coordinate
+> degrees (9,6); the A2 re-filing). The E2 P0 was gated and a SECOND P0
+> found (C32's T2 sign): HORN-A2's wall, RAY-2 and all A2 cell
+> certificates RETRACTED, T4 reopened then RESTORED by a corrected
+> proof in the reissue lane, which also emptied the capped branch-(A)
+> subsystem for e <= 3. The (B3) horn was attacked through the source
+> curve E: eight structural theorems (log-BMY on E is VOID at every N by
+> a scaling theorem; an explicit quintic realises the N=4 numerical type
+> of E; the exact bookkeeping of E's places at infinity; no
+> counting-vs-covering crossing at any N), all reviewed, no kill; then a
+> boundary instrument was built (nine degree-free bridges between the
+> affine cage and Domrina–Orevkov's determinant ledger, both controls
+> pass, no empty window at N=5,6, the census closed form as the
+> obstruction, one gap-candidate on the dicritical block under review).
+> The degree gate was put in invariant form: the affine delta of A_F is
+> what the (B2)/(B3) consumers eat; MERIDIAN-FLOOR is the first
+> N-monotone statement in the record; an upper bound is neither
+> derivable nor false on the banked ledger. Integration #10 bound.
+> Frontier now: the ceiling in invariant form (N-VS-MAPDEG and the
+> meridian-floor sharpening, both running), the (B3) census with the
+> bridges substituted after the BI-ATTACH gap is settled, (B2) as a
+> statement about delta_aff alone, and a profile-driven counterexample
+> census behind the new PREFLIGHT hard gate.
 
 ## 2026-08-31
 
