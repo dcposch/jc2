@@ -20203,3 +20203,26 @@ computation — N on the Moh skeleton; the N <= 16 filter). Runners:
 n-on-the-tree (opus); the box01 cluster census. Seats: Opus 1/5; Sol,
 Grok, GPT-5.5 idle. Next full-round floor 20:57Z; the round's headline
 is the #15 §D reading and the two censuses' first results.
+
+EVENT (~15:05Z, coordinator read of box01 rows) — **CLUSTER CENSUS
+INTERIM:** N = 2, 3 COMPLETE through D = 200 with ZERO admissible
+clusters (the profile window contributes nothing there); N = 4: 161
+cells written, solutions in 9 cells at D = 8, 10, 12, 14, 15, 16, 18, 42,
+60 (114 numerical clusters; e.g. 30 at D = 16, 42 at D = 18) — but 149
+of the 161 cells are INCOMPLETE (the 250,000-state cap fires at larger
+D: those counts are lower bounds, never zeros); N = 5: solutions from
+D = 10 (46 so far, 4 incomplete cells of 17); N = 6..8 not yet reached.
+Reading: the FULL numerical Keller ledger (NOETHER-K, proximity,
+DEG-SPLIT, nef) admits clusters at small D for N >= 4, exactly as
+NO-CEILING[LATTICE-LEDGER] predicts (they are NUMERICAL_PROFILE /
+NECESSARY, below Moh's floor, not maps); the decisive region D >= 101
+(now D in {105, 108, 112, 117, 120} by MOH-SHARP-2) is where the cap
+bites hardest, so this run will end with most large-D cells marked
+incomplete. Decision: let it run to its 12h budget (cost = the box
+only); then a TARGETED rerun of the admissible-D cells with a higher
+cap AND the reviewed depth constraints (DEPTH-LOG s <= log_2 K, NU-TWO,
+MOH-SHARP-2's K ∈ [16, D/3] neither p nor 2p) — or, better, the
+skeleton-side census with the N filter (`n-on-the-tree`, running),
+which carries the Jacobian recursion and not merely the numerical
+ledger. The two censuses agree on the qualitative point: the ledger
+alone never runs dry; only N attached to the tree can.
