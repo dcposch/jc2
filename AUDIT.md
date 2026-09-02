@@ -14885,3 +14885,50 @@ KILL-BINDING, artifacts and reviews cited therein). Records the
 SG-lane items (SRC-0/SG-1/HC-1/HC-2, unreviewed), Card C death,
 NA-sharpness OPEN, N5 typing, and the standing fronts (horn;
 case-(A) N>=8 survivors; R0/degree-cap; N>=6 pipeline).
+
+## INTEGRATION #9 (2026-09-02, FABLE 5.1 COORDINATOR, VERIFIED)
+
+Binding artifact: `xmodel/integration9-coordinator-fable51-20260902.md`
+(body 6a3148a5, full 4f90aa4e, basis fef326a9, VERIFIED via
+artifact_finalize, staged-verify VERIFIED at commit). Promotes, at the
+scopes stated therein: THEOREM CUSP-A-VOID (MPRIME case (A) EMPTY at
+every N >= 2, H2-free; producer opus 2a1717ae, gate gpt55 0ab02c19 ALL
+CONFIRMED, countermodel grok c50ecca9 ALL SURVIVE; second independent
+route in the fable51 ideation 58020a0e); the LOCAL-TRANSITIVITY lemma
+(NO-CUSP-PREIMAGE) and its elementary companion (#cusps(E) = a_{p_0});
+PERIPHERAL-RANK, MERIDIAN-SPAN and kappa|a UNDER the cage constraint
+F1 (2 <= j <= a <= N-2; refuted as bare group theory); CUSP-A-VOID-II;
+CUSP-A-KAPPA (theorem); chi(E) = nu − Sigma* with the puncture split;
+the SMOOTH-KILL composition (the non-properness set of a noninvertible
+Keller map is never homeomorphic to C); (9,6)-NO-COMPANION at
+coordinate degrees (9,6) (opus ideation claim [D], checker gpt55
+99ade634); THEOREM PHI-IMMERSION and the binding re-filing of the
+A2/CELL-32 residual (fable51 ideation, adjudicator sol 4820a2cf).
+Consequences: THEOREM PROFILE loses row (A) at every N; under H2 the
+residual for N <= 16 is exactly (B2) ∪ (B3); OPEN[HOMCOVER-CUSP-A-N8]
+and OPEN[MPRIME-CUSP-J2] CLOSED NEGATIVE; OPEN[A2-U-BOUND] demoted;
+Lin–Zaidenberg citation corrected (Soviet Math. Dokl. 28 (1983)).
+See the artifact for exact statements — this entry is a pointer.
+
+## INTEGRATION #9 DELTA (2026-09-02, COORDINATOR-CONFIRMED P0): CELL-32 SPEC'S E2 OMITS −2qE1
+
+`a2-ubound-opus5-20260902.md` (e8eb9d77) raised, and the coordinator
+independently recomputed (sympy, from the spec's own Even/Odd
+definitions): the CELL-32 SPEC's displayed E2 omits the term −2 q E1
+([A^2]Even = SPEC_E2 − 2 q E1; E0 and E1 displays are exact). Every
+downstream item that consumed E2 inherits the error: C32 §6's
+E2eq|_{G=0} + Delta_2 displays, HORN-A2's EQ2 row and Chamber II
+determinant (claimed identically zero on the corrected system — the
+E1-wall g = 2e, G_{2e} = −b(1+2e)eta_e^2 is NOT derived), RAY-1's N2 row
+(epshat column), RAY-2 (REFUTED), the a2-cells codegen and hence the
+box01 cell EMPTYs for (1,3),(1,5),(1,7) and the sympy (1,5)/(2,6) runs
+(they certify a wrong system). These items are SUSPENDED as consumable
+inputs pending the different-model gate
+`a2-e2-p0-gate-gpt55-20260902` on the exact blast radius; RAY-DEP,
+RAY-EDGE (e >= 2), C32 T1–T5 and HF's non-EQ2 arguments are claimed
+unaffected. Integration #9 §C's cell records are read WITH this delta.
+The reviewed record's two hostile reviews of HORN-A2 and RAY-KILL both
+reproduced the transcription error rather than the source: recorded
+as a review-process finding (transcription controls against the
+DEFINING displays, not the derived ones, are mandatory for
+coefficient-level work).

@@ -18849,3 +18849,59 @@ MERIDIAN-SPAN; kappa|a; CUSP-A-KAPPA; chi(E) = nu - Sigma* (puncture
 split); the SMOOTH-KILL composition; CLAIM [D] at coordinate degrees
 (9,6); the PHI-IMMERSION re-filing of the A2 residual; (1,5)
 promotion-grade EMPTY; the LZ citation correction.
+
+## LIVE STATE (observed ~08:55Z per lane prints) — P0 ON THE A2 RECORD: CELL-32 SPEC'S E2 OMITS −2qE1 (COORDINATOR-RECOMPUTED, CONFIRMED); INTEGRATION #9 BOUND
+
+**A2-U-BOUND landed** (`a2-ubound-opus5-20260902.md`, e8eb9d77,
+BODY_SEALED, 43KB) and RAISED A P0: the CELL-32 SPEC's displayed
+equation E2 omits the term −2 q E1: [A^2]Even = (SPEC's E2) − 2 q E1.
+**COORDINATOR RECOMPUTE (sympy, 0.1 s, from SPEC's own Even/Odd
+definitions with P = p + A C1 + A^2 C2, Q = q + A D1 + A^2 D2,
+R0 = r + A E1 + A^2 E2, S0 = s): [A^2]Even − SPEC_E2 = −2·E1·q EXACTLY;
+[A^1]Even − SPEC_E1 = 0; [A^0]Even = 2(q r' − p' s). P0 CONFIRMED.**
+The lane's four confirmations agree. Different-model gate launched:
+`a2-e2-p0-gate-gpt55-20260902` (rebuild all seven equations; C32 §6
+inheritance; HORN-A2's Chamber-II determinant on the corrected EQ2;
+N2/RAY-2; blast-radius typing; the lane's positive results).
+BLAST RADIUS (lane's claim, provisional until the gate): HORN-A2's
+Chamber II 3x3 determinant is identically ZERO in every chamber on
+the corrected system — the E1-wall g = 2e, G_{2e} = −b(1+2e)eta_e^2 is
+NOT DERIVED; N2 loses its epshat column; RAY-2 (deg E1 <= 2e−2)
+REFUTED; the box01 cells (1,3),(1,5),(1,7) and the sympy (1,5)/(2,6)
+runs were computed on the WRONG system (SPEC's E2 via C32 §6's
+E2eq|_{G=0} + Delta_2) and certify nothing about the corrected one
+(the lane re-decided (1,3) EMPTY on the corrected system WITH the wall
+imposed, single engine, not promotion-grade; the wall-free (1,3) did
+not terminate). UNAFFECTED: RAY-DEP, RAY-EDGE (e >= 2), C32 T1–T5 and
+every HF argument not using EQ2. Positive results on the corrected
+system (PROVED-HERE/UNREVIEWED, in the gate's charge): OPEN[A2-O0-O1]
+RESOLVED (O0 ⇔ EQ4 mod E0 — never missing; O1 transcribed, leading-
+order inert); THEOREM DEV-FREE (EQ1, EQ2, EQ3 are s-free in
+X = 4b eta^2 r − s^2, Y = 4b^2 eta q − 3a s^2; RAY-1's residual is
+deg X, deg Y <= 2 sigma − 2); RAY-SHADOW (the ray is the leading order
+of the kappa = 0 family); THEOREM A2-DEV-BOUND (deg X, deg Y <= 4e − 1,
+UNIFORM IN U); THEOREM A2-U-BOUND as a dichotomy: on branch (A), for
+fixed (e,c) outside three values U takes at most 4e explicit values;
+branch (B) (deg X = 2e, deg Y < 2e) is the named residual
+OPEN[A2-N-DEGENERATE]; new OPEN[A2-WALL-REDERIVE] (pin c on the
+corrected system — what OPEN[A2-U-BOUND] now reduces to),
+OPEN[A2-DEVBOX], OPEN[A2-ORDER-LADDER].
+
+**LEDGER ACTIONS (effective now, gate pending only for the exact
+scope):** HORN-A2's wall/ray clause, RAY-1's N2 column, RAY-2 and the
+A2 cell EMPTYs are SUSPENDED as consumable inputs; the AUDIT carries
+an INTEGRATION #9 DELTA annotating this. The box01 24-thread window
+(computing the wrong system) is STOPPED. Note the irony recorded
+honestly: the coordinator's own 07:22Z→07:41Z headline treated this
+chain as "one theorem away"; the same morning's round showed it was
+the wrong object (PHI-IMMERSION) and the wrong equation (this P0).
+Both corrections came from the round's own lanes within four hours.
+
+**INTEGRATION #9 BOUND AND VERIFIED** (`integration9-coordinator-fable51-20260902.md`,
+body 6a3148a5, full 4f90aa4e, basis fef326a9, staged-verify VERIFIED,
+commit 00e55ac2): promotes CUSP-A-VOID (all N, H2-free), the
+local-transitivity lemma, PERIPHERAL-RANK/MERIDIAN-SPAN/kappa|a under
+F1, CUSP-A-VOID-II, CUSP-A-KAPPA, chi(E) = nu − Sigma*, the
+SMOOTH-KILL composition, (9,6)-NO-COMPANION, PHI-IMMERSION and the
+A2 re-filing; records the rest. Its §C record of the (1,5)/(1,3) cell
+EMPTYs is superseded by this P0 (see the AUDIT delta).
