@@ -19548,3 +19548,15 @@ NEXT: the review; then the ANTICANON flagship (Opus) charged with the
 genus form, the symplectic datum, and the Moh crossing as its price.
 Opus seats 0/5 until then. Runners: b3-census (sol), mf-defect (grok),
 n-vs-mapdeg-review (gpt55).
+
+EVENT (~11:35Z) — `keller-pencil-genus-opus5-20260902` LAUNCHED (Opus,
+flagship) on the ceiling's REVIEWED form: bound g_L, the genus of the
+generic member {alpha P + beta Q = gamma} of the Keller pencil, in N —
+consuming MF-EXACT (integration #11) and the symplectic datum
+(dP∧dQ = dx∧dy: every other pencil coordinate restricts to each fibre
+as an étale unit-speed degree-N map to A^1 with escapes exactly at the
+n non-proper points), the relative canonical bundle of the resolved
+pencil, and the pencil's monodromy on H_1 with all vanishing cycles at
+infinity; the ceiling flagship is charged as a PROPOSAL only. The
+ANTICANON successor (Opus) waits for the ceiling review. Seats: Opus
+1/5; Sol 1 (b3-census); Grok 1 (mf-defect); GPT-5.5 1 (ceiling review).
