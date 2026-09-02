@@ -17770,3 +17770,32 @@ one bridge, three formulations.
 testbed. Genuine counterexample frontier = N>=5 (gated on
 n5-soundness lane). The three necks stand: horn / source
 bridge / R0-degree-cap.
+
+## LIVE STATE (observed 2026-09-02T01:10Z) — N=5 SOUNDLY CLOSED BY DEPENDENCY AUDIT; CE FRONTIER MOVES TO N>=6
+
+**N5-SOUNDNESS landed** (`n5-soundness-grok46-20260902.md`,
+prefix from shell log, BODY_SEALED): **geometric degree 5 is
+soundly closed.** Findings: (1) the GGV objection pinned EXACTLY
+(the unsupported lattice inclusion I_2 in (1/m)Gamma(f_2) is the
+first sentence of the PROOF of Zoladek Lemma 4.10, p.447; GGV
+assert unprovability of the step, not a countermodel to the
+conclusion); (2) complete consumer table of 4.10 in the official
+PDF: Theorem 4.12 (gcd != 2p) and Lemma 4.13 (alpha != 3) ONLY —
+**Theorem 6.12 (low topological degree through 5) does NOT route
+through 4.10**; (3) independently, Sigray's td=5 slice dies via
+a pole-M=1 pin that never enters the gapped §9 transitions;
+(4) DET-LINF does NOT repair 4.10 (typed; the gcd>=16 / !=2p
+bounds REMAIN GAPPED — only the degree-5 closure is clean).
+TYPE DISCIPLINE: this is SOUND-BY-DEPENDENCY-AUDIT + one slice
+replay (Grok, single lane) — below the N=4 full-replay bar,
+above the reception bar; acceptable under the resolution-first
+calibration. NO N=5 census launched (correct per design).
+**Consequences**: counterexample frontier moves to N>=6 (S_6;
+census cost rises); the bound-raising route loses relative value
+vs the all-degree necks (horn / source bridge / R0-degree-cap),
+which is where the frontier already sits. GGV's B>=16 total-
+degree bound is now typed GAPPED (it consumed 4.12/4.10) — any
+lane consuming gcd>=16 must re-check: the ONLY clean GGV bound
+is what their own elementary proof establishes (their Heitmann
+reproof); flag to Card-C-step0 at harvest (its GGV firewall must
+use only the sound part).

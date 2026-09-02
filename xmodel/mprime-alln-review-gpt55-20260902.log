@@ -12179,3 +12179,48 @@ exec
  succeeded in 0ms:
 1
 
+codex
+The cusp argument’s Campbell use reduces to a single standard form: a Keller endomorphism of `C[x,y]` with Galois fraction-field extension is invertible. I found the same citation already used in the sheet-gate materials, so I’m treating it as a classical external input and recording that dependency explicitly.
+exec
+/bin/zsh -lc "nl -ba xmodel/round1033-sheet-gate-opus5-20260831.md | sed -n '160,180p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   160	
+   161	> **Prop 2.4.** `a <= d - 2` and `sigma <= d - 2`, for every component of `A_F`
+   162	> lying in the branch locus of `q`.
+   163	> *Proof.* `sigma = a + b = d - sum_{j: e_j >= 2} delta_j e_j <= d - 2`, and
+   164	> `a <= sigma`. ∎
+   165	
+   166	This is the load-bearing repair. Sol-xpoll wrote that with `sigma` replaced by
+   167	`a`, "`a - a_p = d-1` is compatible with `a = d-1, a_p = 0`". It is not: `a` obeys
+   168	the same `<= d-2` ceiling, proved directly and without any appeal to `g != 1`.
+   169	
+   170	> **Prop 2.5.** Any Keller counterexample has `d >= 3`.
+   171	> *Proof.* Some component `D_1 ⊆ A_F` is a branch component (previous paragraph).
+   172	> Over it, `1 <= a^{(1)} <= d-2`. ∎
+   173	
+   174	Consistency check, not a new theorem: `d = 2` forces `K/Frac A` Galois, and the
+   175	Galois case of JC is classical (Campbell, *A condition for a polynomial map to be
+   176	invertible*, Math. Ann. **205** (1973) 243–248). The box audit reproduces it.
+   177	
+   178	<!-- SECTION 2 END -->
+   179	
+   180	## 3. Attack (ii): the covering lemma over `D - Sing D`
+
+exec
+/bin/zsh -lc "find refs -maxdepth 2 -type f | rg -i 'campbell|lin|zaidenberg|abhyankar|moh|suzuki|jc86|orevkov|zoladek'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+refs/arzhantsev_zaidenberg_acyclic_curves_arxiv1110.3028v2.pdf
+refs/moh1983_jram340_configurations_of_roots.pdf
+refs/jc86.pdf
+refs/zoladek2008_official.pdf
+refs/domrina_orevkov1999_mzm_four_sheeted_I_russian.pdf
+refs/domrina_orevkov1999_mzm_four_sheeted_I_orevkov_preprint.pdf
+refs/orevkov1990_sb65_fundamental_group_complement.pdf
+
+exec
+/bin/zsh -lc 'rg -n "Campbell|A condition for a polynomial map|Galois" refs xmodel/round1033-sheet-gate-opus5-20260831.md xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-hostile-review-gpt55-20260830.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+xmodel/round1033-sheet-gate-opus5-20260831.md:174:Consistency check, not a new theorem: `d = 2` forces `K/Frac A` Galois, and the
+xmodel/round1033-sheet-gate-opus5-20260831.md:175:Galois case of JC is classical (Campbell, *A condition for a polynomial map to be
+xmodel/round1033-sheet-gate-opus5-20260831.md:494:| Degree floor | `d >= 3` | Keller only | **PROVED** (Prop 2.5); classical via Galois case |
+
