@@ -1,2 +1,32 @@
 cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
-I'll verify the frozen input hashes first, then clone the proven (9,6,2) pipeline and adapt it for the realized (9,6,4) curve. Starting with hash checks and the charged inputs.Hashes match. Next I’ll read the charged inputs and the (9,6,2) pipeline so the report can be written as each section is completed.Hashes check out. I’ll pull the REP-96 class list, the enumerator, and the 962 sibling so the clone can stay faithful.I have the clone sources. Next I’ll extract the (9,6,4) class list, the implicit identity, and the rest of the enumerator.Identity checks out. Next I’ll compute the implicit equation and discriminant, and start the report so it isn’t left unwritten.Derivation checks out: F vanishes on the curve, the Jacobian scheme has length 6, and the discriminant matches the charged census. Writing the report and both pipeline files next.Class-list controls passed: 72 tuples, GATE-3 holds at `k_*=-8`, projective count 0. Patching the Sage clone and starting the report.Sage clone is in place. Next I’ll write the enumerator and start the report so the derivation is on disk.
+I'll verify the frozen input hashes first, then clone the proven (9,6,2) pipeline and adapt it for the realized (9,6,4) curve. Starting with hash checks and the charged inputs.Hashes match. Next I’ll read the charged inputs and the (9,6,2) pipeline so the report can be written as each section is completed.Hashes check out. I’ll pull the REP-96 class list, the enumerator, and the 962 sibling so the clone can stay faithful.I have the clone sources. Next I’ll extract the (9,6,4) class list, the implicit identity, and the rest of the enumerator.Identity checks out. Next I’ll compute the implicit equation and discriminant, and start the report so it isn’t left unwritten.Derivation checks out: F vanishes on the curve, the Jacobian scheme has length 6, and the discriminant matches the charged census. Writing the report and both pipeline files next.Class-list controls passed: 72 tuples, GATE-3 holds at `k_*=-8`, projective count 0. Patching the Sage clone and starting the report.Sage clone is in place. Next I’ll write the enumerator and start the report so the derivation is on disk.Selftests passed. Writing the paced report next, then sealing it.The (9,6,4) braid pipeline is in place and the report is sealed. Frozen input hashes and both clone-source hashes matched before anything was read.
+
+**Deliverables**
+
+| path | role |
+|---|---|
+| `box/bmfact_964.sage` | SIROCCO job: HF-twin parametrization, implicit `F`, item-(4) census, env-gated monodromy |
+| `box/bmfact964_enum.py` | three-class / 72-tuple control list; native `6^9` prune is the decision |
+| `xmodel/bmfact-964-codegen-grok46-20260902.md` | sealed report, 19667 body bytes (~19.2KB) |
+
+**Derivation (sympy, in-lane).** The audit identity holds identically:
+
+```text
+p² − q0³ − (9/4)q0² − (27/16)q0 − 27/64 = −27/1024 (8t⁴ + 13t² + 16)
+```
+
+`F = Res_t(p−x, q−y)` is irreducible of bidegree `(6,9)`, and equals (up to units) the `z=t²` identity resultant. Discriminant census matches the charged review: `X^8 · (134217728 X² + 3087315)² · Ω(X)`, degree 20, ledger `8 + 2(4+1+1) = 20`. Jacobian scheme length 6.
+
+**Enumerator controls.** GATE-3 at `k_*=−8` on all three reps; expansion 72; product-only generating 72 (also the independent CABLE-3 `6^9` scan); projective count 0; pruner subsample 550 = 550. `const-4c` has `Pi` a 4-cycle and is control-only. No strand map in the decision path. Tokens: `SURVIVOR` / `NATIVE_ZERO_CURVE_ONLY` / `OPEN(census mismatch)` / `OPEN(API mismatch)` — never a row-level kill.
+
+**Not claimed.** SIROCCO was not run here (no Sage binary; AWS gate). The native decision token waits on `bmfact_964.json`. This curve remains a representative, not `FULL_ACTUAL_EXIT`.
+
+**Replay**
+
+```text
+python3 box/bmfact964_enum.py --selftest --curve-check
+# after preparse on Box03:
+BRAID_JOB_RUN_MONODROMY=1 python bmfact_964_pp.py monodromy
+python3 box/bmfact964_enum.py path/to/bmfact_964.json
+```
+DIVERT path=xmodel/bmfact-964-codegen-grok46-20260902.md status=CLEAN_SEALED body_bytes=19667 body_sha256=48e8e7972cc0838075b44441542cd80466990f33ce253583526daf8666a3efad

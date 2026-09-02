@@ -681,7 +681,7 @@ def run_gate3_on_reps() -> Dict[str, object]:
 def brute_generating_product_fixed(kstar: int = KSTAR) -> Dict[str, object]:
     """All 6^9 transposition 9-tuples, adjacent-block CABLE-3 product relation.
 
-    Lookup-table scan: 216^3. Used as an independent check that 144 is the
+    Lookup-table scan: 216^3. Used as an independent check that 72 is the
     complete generating count, not only the class-list reconstruction.
     """
     all_triples = list(iproduct(TRANSPOSITIONS, repeat=3))
@@ -856,63 +856,430 @@ def intersect_block_with_braids(
     }
 
 
-def brute_sage_native(
-    braids: Sequence[dict],
-    invert: bool,
-    product_only: bool,
-) -> Dict[str, object]:
-    """Enumerate all 6^9 transposition 9-tuples against Sage Tietze words."""
+# ---------------------------------------------------------------------------
+# Native 6^9 universe, integer-encoded, prune after each relation.
+# NO strand map. This is the decision path.
+# ---------------------------------------------------------------------------
+
+def _conj_table() -> List[List[int]]:
+    table: List[List[int]] = [[0] * 6 for _ in range(6)]
+    index_of = {support: idx for idx, support in enumerate(TRANSPOSITIONS)}
+    for i, left in enumerate(TRANSPOSITIONS):
+        perm_left = transposition_to_perm(left)
+        for j, right in enumerate(TRANSPOSITIONS):
+            conjugated = apply_perm_to_transposition(perm_left, right)
+            table[i][j] = index_of[conjugated]
+    return table
+
+
+CONJ_TABLE: List[List[int]] = _conj_table()
+
+
+def hurwitz_one_int(tup: Sequence[int], tietze_letter: int) -> Tuple[int, ...]:
+    if tietze_letter == 0:
+        raise AssertionError("hurwitz_one_int: Tietze letter 0")
+    gen_abs = abs(tietze_letter)
+    if gen_abs < 1 or gen_abs > N_ARTIN:
+        raise AssertionError(
+            "hurwitz_one_int: |Tietze letter| = %d outside 1..8" % gen_abs
+        )
+    pos = gen_abs - 1
+    out = list(tup)
+    left_entry = out[pos]
+    right_entry = out[pos + 1]
+    if tietze_letter > 0:
+        out[pos] = CONJ_TABLE[left_entry][right_entry]
+        out[pos + 1] = left_entry
+    else:
+        out[pos] = right_entry
+        out[pos + 1] = CONJ_TABLE[right_entry][left_entry]
+    return tuple(out)
+
+
+def is_fixed_int(tup: Sequence[int], tietze_word: Sequence[int]) -> bool:
+    current = tuple(tup)
+    index = len(tietze_word) - 1
+    while index >= 0:
+        current = hurwitz_one_int(current, tietze_word[index])
+        index -= 1
+    return current == tuple(tup)
+
+
+def generates_int(tup: Sequence[int]) -> bool:
+    parent = {1: 1, 2: 2, 3: 3, 4: 4}
+
+    def find(letter: int) -> int:
+        walk = letter
+        while parent[walk] != walk:
+            walk = parent[walk]
+        return walk
+
+    for idx in tup:
+        a, b = tuple(TRANSPOSITIONS[idx])
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[ra] = rb
+    return len(set(find(letter) for letter in LETTER_SET)) == 1
+
+
+def product_int(tup: Sequence[int]) -> Tuple[int, int, int, int]:
+    acc = PERM_IDENTITY
+    for idx in reversed(tup):
+        acc = compose_perm(transposition_to_perm(TRANSPOSITIONS[idx]), acc)
+    return acc
+
+
+def combo_id(tup: Sequence[int]) -> int:
+    acc = 0
+    for val in tup:
+        acc = 6 * acc + int(val)
+    return acc
+
+
+def int_tuple_to_transp(tup: Sequence[int]) -> Tuple[frozenset, ...]:
+    return tuple(TRANSPOSITIONS[idx] for idx in tup)
+
+
+def words_from_braids(braids: Sequence[dict], invert: bool, product_only: bool) -> List[List[int]]:
     if product_only:
         product_word: List[int] = []
         for rec in braids:
-            tietze = rec.get("tietze") or []
-            product_word.extend(tietze)
+            product_word.extend(rec.get("tietze") or [])
         if invert:
-            words = [inverse_tietze(product_word)]
+            return [inverse_tietze(product_word)]
+        return [product_word]
+    words: List[List[int]] = []
+    for rec in braids:
+        tietze = list(rec.get("tietze") or [])
+        if invert:
+            tietze = inverse_tietze(tietze)
+        words.append(tietze)
+    return words
+
+
+def prune_native(
+    words: Sequence[Sequence[int]],
+    subsample_mod: Optional[int] = None,
+) -> Tuple[List[Tuple[int, ...]], List[Dict[str, object]]]:
+    """Filter the native universe through each relation in order."""
+    current: Optional[List[Tuple[int, ...]]] = None
+    counts: List[Dict[str, object]] = []
+    for word_index, word in enumerate(words):
+        nxt: List[Tuple[int, ...]] = []
+        if current is None:
+            n_in = 0
+            for combo in iproduct(range(6), repeat=N_STRANDS):
+                if subsample_mod is not None and combo_id(combo) % subsample_mod != 0:
+                    continue
+                n_in += 1
+                if is_fixed_int(combo, word):
+                    nxt.append(combo)
         else:
-            words = [product_word]
-    else:
-        words = []
-        for rec in braids:
-            tietze = rec.get("tietze") or []
-            if invert:
-                tietze = inverse_tietze(tietze)
-            words.append(list(tietze))
-    n_fixed = 0
-    n_gen = 0
-    gen_survivors: List[Tuple[frozenset, ...]] = []
-    for combo in iproduct(TRANSPOSITIONS, repeat=N_STRANDS):
-        nine = tuple(combo)
+            n_in = len(current)
+            for combo in current:
+                if is_fixed_int(combo, word):
+                    nxt.append(combo)
+        counts.append(
+            {
+                "word_index": int(word_index),
+                "word_len": int(len(word)),
+                "n_in": int(n_in),
+                "n_out": int(len(nxt)),
+            }
+        )
+        print(
+            "PRUNE word %d len=%d n_in=%d n_out=%d"
+            % (word_index, len(word), n_in, len(nxt))
+        )
+        sys.stdout.flush()
+        current = nxt
+    if current is None:
+        current = []
+    return current, counts
+
+
+def unpruned_native(
+    words: Sequence[Sequence[int]],
+    subsample_mod: int,
+) -> Tuple[List[Tuple[int, ...]], int]:
+    """Check every subsample tuple against ALL words at once."""
+    survivors: List[Tuple[int, ...]] = []
+    n_seen = 0
+    for combo in iproduct(range(6), repeat=N_STRANDS):
+        if combo_id(combo) % subsample_mod != 0:
+            continue
+        n_seen += 1
         ok = True
         for word in words:
-            if not is_fixed_by_tietze(nine, word):
+            if not is_fixed_int(combo, word):
                 ok = False
                 break
-        if not ok:
-            continue
-        n_fixed += 1
-        if tuple_generates_s4(nine):
-            n_gen += 1
-            if not product_only:
-                gen_survivors.append(nine)
+        if ok:
+            survivors.append(combo)
+    return survivors, n_seen
+
+
+def certify_prune_against_unpruned(
+    words: Sequence[Sequence[int]],
+    subsample_mod: int = SUBSAMPLE_MOD,
+) -> Dict[str, object]:
+    """Pruned subsample survivor set must equal the unpruned subsample set."""
+    pruned, prune_counts = prune_native(words, subsample_mod=subsample_mod)
+    unpruned, n_seen = unpruned_native(words, subsample_mod)
+    pruned_set = set(pruned)
+    unpruned_set = set(unpruned)
+    passed = pruned_set == unpruned_set
+    return {
+        "passed": passed,
+        "subsample_mod": int(subsample_mod),
+        "n_subsample_seen": int(n_seen),
+        "n_pruned_survivors": int(len(pruned)),
+        "n_unpruned_survivors": int(len(unpruned)),
+        "n_symmetric_difference": int(len(pruned_set.symmetric_difference(unpruned_set))),
+        "prune_counts": prune_counts,
+    }
+
+
+def summarise_native(
+    survivors: Sequence[Tuple[int, ...]],
+    prune_counts: Sequence[Dict[str, object]],
+    invert: bool,
+    product_only: bool,
+) -> Dict[str, object]:
+    n_fixed = len(survivors)
+    gen_survivors = [tup for tup in survivors if generates_int(tup)]
+    n_id_product = 0
+    verbatim: List[List[str]] = []
+    for tup in gen_survivors:
+        if product_int(tup) == PERM_IDENTITY:
+            n_id_product += 1
+        verbatim.append([fmt_transp(TRANSPOSITIONS[idx]) for idx in tup])
     result: Dict[str, object] = {
         "variant": (
             ("SAGE-NATIVE-inverse" if invert else "SAGE-NATIVE")
             + ("-PRODUCT-ONLY" if product_only else "-FULL-ZVK")
         ),
-        "n_fixed": n_fixed,
-        "n_generating": n_gen,
-        "n_words": len(words),
+        "n_fixed": int(n_fixed),
+        "n_generating": int(len(gen_survivors)),
+        "n_generating_with_total_product_one": int(n_id_product),
+        "n_words": int(len(prune_counts)),
+        "prune_counts": list(prune_counts),
+        "decision_path": "native_transposition_universe_prune_after_each_relation",
+        "strand_map": None,
     }
     if product_only:
-        result["expected_generating"] = 144
-        result["passed_positive_control"] = n_gen == 144
+        result["expected_generating"] = EXPECTED_GENERATING
+        result["passed_positive_control"] = len(gen_survivors) == EXPECTED_GENERATING
+        result["passed_negative_control"] = n_id_product == 0
     else:
-        result["survivors_verbatim"] = [
-            [fmt_transp(s) for s in nine] for nine in gen_survivors
-        ]
-        result["total_survivors"] = n_gen
+        result["survivors_verbatim"] = verbatim
+        result["total_survivors"] = int(len(gen_survivors))
     return result
+
+
+def run_native_scan(
+    braids: Sequence[dict],
+    invert: bool,
+    product_only: bool,
+    certify_subsample: bool,
+) -> Dict[str, object]:
+    words = words_from_braids(braids, invert=invert, product_only=product_only)
+    if not words:
+        raise AssertionError("run_native_scan: no Tietze words")
+    cert: Optional[Dict[str, object]] = None
+    if certify_subsample:
+        print(
+            "CERTIFY prune vs unpruned on subsample mod=%d (%s) ..."
+            % (SUBSAMPLE_MOD, "inverse" if invert else "as-written")
+        )
+        sys.stdout.flush()
+        cert = certify_prune_against_unpruned(words, SUBSAMPLE_MOD)
+        print(
+            "CERTIFY passed=%s pruned=%s unpruned=%s"
+            % (cert["passed"], cert["n_pruned_survivors"], cert["n_unpruned_survivors"])
+        )
+        sys.stdout.flush()
+        if not cert["passed"]:
+            raise AssertionError(
+                "pruner disagrees with unpruned subsample: %s" % cert
+            )
+    print(
+        "PRUNE full 6^9 (%s, %s) ..."
+        % (
+            "inverse" if invert else "as-written",
+            "product-only" if product_only else "full-ZvK",
+        )
+    )
+    sys.stdout.flush()
+    survivors, counts = prune_native(words, subsample_mod=None)
+    out = summarise_native(survivors, counts, invert=invert, product_only=product_only)
+    if cert is not None:
+        out["subsample_certification"] = cert
+    return out
+
+
+def synthetic_pruner_selftest() -> Dict[str, object]:
+    """Two short words: sigma_1 then sigma_3^2. Prune vs unpruned on the subsample."""
+    words = [[1], [3, 3]]
+    cert = certify_prune_against_unpruned(words, SUBSAMPLE_MOD)
+    return {"name": "SYNTHETIC_PRUNER", **cert}
+
+
+def run_curve_check() -> Dict[str, object]:
+    """Sympy replay of the (9,6,4) identity, resultant, discriminant census."""
+    try:
+        import sympy as sp
+    except ImportError as err:
+        return {"passed": False, "error": "sympy missing: %s" % err}
+
+    t, x, y, z = sp.symbols("t x y z")
+    poly_p = (
+        t**9
+        + 3 * t**7
+        + sp.Rational(21, 4) * t**5
+        + sp.Rational(35, 8) * t**3
+        + sp.Rational(63, 32) * t
+    )
+    poly_q0 = t**6 + 2 * t**4 + sp.Rational(5, 2) * t**2
+    poly_q = poly_q0 + sp.Rational(3, 4)
+    ident = sp.expand(
+        poly_p**2
+        - poly_q0**3
+        - sp.Rational(9, 4) * poly_q0**2
+        - sp.Rational(27, 16) * poly_q0
+        - sp.Rational(27, 64)
+    )
+    rhs = -sp.Rational(27, 1024) * (8 * t**4 + 13 * t**2 + 16)
+    ident_ok = sp.expand(ident - rhs) == 0
+    y3_minus_p2 = sp.factor(sp.expand(poly_q**3 - poly_p**2))
+    gcd_pq = sp.gcd(sp.diff(poly_p, t), sp.diff(poly_q, t))
+
+    f_raw = sp.resultant(poly_p - x, poly_q - y, t)
+    f_poly = sp.Poly(sp.expand(f_raw), x, y, domain=sp.QQ)
+    f_prim = sp.Poly(f_poly.as_expr() / f_poly.content(), x, y, domain=sp.QQ)
+    w_expr = y**3 - x**2
+    poly_a = 1024 * w_expr - 27 * (8 * z**2 + 13 * z + 16)
+    poly_b = 4 * y - 3 - (4 * z**3 + 8 * z**2 + 10 * z)
+    g_raw = sp.resultant(poly_a, poly_b, z)
+    g_poly = sp.Poly(sp.expand(g_raw), x, y, domain=sp.QQ)
+    g_prim = sp.Poly(g_poly.as_expr() / g_poly.content(), x, y, domain=sp.QQ)
+    closed_ok = (f_prim == -g_prim) or (f_prim == g_prim)
+    on_curve = sp.expand(f_prim.as_expr().subs({x: poly_p, y: poly_q})) == 0
+
+    disc = sp.discriminant(sp.Poly(f_prim.as_expr(), y, domain=sp.QQ[x]))
+    disc_poly = sp.Poly(sp.together(disc), x, domain=sp.QQ)
+    sqf = sp.sqf_list(disc_poly.as_expr())
+    omega = (
+        42268920643584 * x**8
+        + 32085100199936 * x**6
+        + 7694037614592 * x**4
+        + 614771555328 * x**2
+        + 16209796869
+    )
+    node_quad = 134217728 * x**2 + 3087315
+    factors = {str(fac): int(mult) for fac, mult in sqf[1]}
+    census_ok = (
+        disc_poly.degree() == 20
+        and factors.get("x", 0) == 8
+        and any("134217728" in key and mult == 2 for key, mult in factors.items())
+        and any("42268920643584" in key and mult == 1 for key, mult in factors.items())
+        and sp.gcd(omega, sp.diff(omega, x)) == 1
+        and sp.gcd(omega, node_quad) == 1
+    )
+    tang = sp.resultant(poly_p - x, sp.diff(poly_p, t), t)
+    tang_poly = sp.Poly(sp.expand(tang), x, domain=sp.QQ)
+    tang_ok = tang_poly.degree() == 8 and sp.gcd(
+        tang_poly.as_expr(), sp.diff(tang_poly.as_expr(), x)
+    ) == 1
+
+    passed = bool(
+        ident_ok
+        and gcd_pq == 1
+        and f_poly.degree(x) == 6
+        and f_poly.degree(y) == 9
+        and f_poly.total_degree() == 9
+        and f_poly.is_irreducible is True
+        and closed_ok
+        and on_curve
+        and census_ok
+        and tang_ok
+    )
+    return {
+        "passed": passed,
+        "identity_ok": bool(ident_ok),
+        "identity_rhs": str(rhs),
+        "y3_minus_p2": str(y3_minus_p2),
+        "gcd_p_prime_q_prime": str(gcd_pq),
+        "deg_x": int(f_poly.degree(x)),
+        "deg_y": int(f_poly.degree(y)),
+        "total_degree": int(f_poly.total_degree()),
+        "irreducible": bool(f_poly.is_irreducible),
+        "closed_form_matches_resultant": bool(closed_ok),
+        "F_vanishes_on_parametrisation": bool(on_curve),
+        "disc_degree": int(disc_poly.degree()),
+        "disc_sqf": str(sqf),
+        "tangency_degree": int(tang_poly.degree()),
+        "census_ok": bool(census_ok),
+        "tangency_squarefree": bool(tang_ok),
+        "lc_y": str(sp.Poly(f_prim.as_expr(), y, domain=sp.QQ[x]).LC()),
+    }
+
+
+def decide_native(
+    census_ok: Optional[bool],
+    api_ok: bool,
+    native_full: Optional[Dict[str, object]],
+    native_full_inv: Optional[Dict[str, object]],
+    native_prod: Optional[Dict[str, object]],
+    native_prod_inv: Optional[Dict[str, object]],
+) -> Tuple[str, str]:
+    """Return (token, reason). Never a row-level kill."""
+    if not api_ok:
+        return "OPEN(API mismatch)", "Sage JSON missing braids, nstrands, or Tietze words"
+    if census_ok is False:
+        return (
+            "OPEN(census mismatch)",
+            "Sage census disagrees with 8 tangency + 1 four-node + 2 one-node, ledger 20",
+        )
+    if native_prod is None or native_prod_inv is None:
+        return "OPEN(API mismatch)", "native product-only scan was not run"
+    prod_fwd = int(native_prod.get("n_generating") or 0)
+    prod_inv = int(native_prod_inv.get("n_generating") or 0)
+    if prod_fwd != EXPECTED_GENERATING and prod_inv != EXPECTED_GENERATING:
+        return (
+            "OPEN(API mismatch)",
+            "product-only generating count is %d (as-written) and %d (inverse), "
+            "neither equals the charged 72" % (prod_fwd, prod_inv),
+        )
+    if native_full is None or native_full_inv is None:
+        return "OPEN(API mismatch)", "native full-ZvK scan was not run"
+    n_fwd = int(native_full.get("n_generating") or 0)
+    n_inv = int(native_full_inv.get("n_generating") or 0)
+    if n_fwd > 0:
+        return (
+            "SURVIVOR",
+            "native as-written full ZvK has %d generating 9-tuple(s); "
+            "listed verbatim under variant_SAGE_NATIVE_full.survivors_verbatim. "
+            "This is a representation of pi_1(C^2-D) on this curve, not a "
+            "Keller map and not FULL_ACTUAL_EXIT of the census row."
+            % n_fwd,
+        )
+    if n_inv > 0:
+        return (
+            "SURVIVOR",
+            "native inverse full ZvK has %d generating 9-tuple(s); "
+            "listed verbatim under variant_SAGE_NATIVE_full_inverse.survivors_verbatim. "
+            "Orientation reading OPEN[BMFACT-ORIENTATION] is live. "
+            "This is a representation of pi_1(C^2-D) on this curve, not a "
+            "Keller map and not FULL_ACTUAL_EXIT of the census row."
+            % n_inv,
+        )
+    return (
+        "NATIVE_ZERO_CURVE_ONLY",
+        "native full ZvK generating count is 0 in both orientations, with "
+        "product-only generating count matching 72 on at least one orientation. "
+        "This decides the realized (9,6,4) curve only. It is not a row-level kill.",
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -921,24 +1288,33 @@ def brute_sage_native(
 
 def parse_args(argv: Sequence[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="ZvK enumeration for the realized (9,6,2) curve"
+        description="ZvK enumeration for the realized (9,6,4) curve"
     )
     parser.add_argument(
         "json_path",
         nargs="?",
         default=None,
-        help="JSON (or JSONL) produced by bmfact_962.sage",
+        help="JSON (or JSONL) produced by bmfact_964.sage",
     )
-    parser.add_argument("--selftest", action="store_true", help="class list + controls; no Sage JSON")
+    parser.add_argument(
+        "--selftest",
+        action="store_true",
+        help="class list + CABLE-3 controls + synthetic pruner; no Sage JSON",
+    )
+    parser.add_argument(
+        "--curve-check",
+        action="store_true",
+        help="sympy identity / resultant / discriminant census (no Sage JSON)",
+    )
     parser.add_argument(
         "--brute-block",
         action="store_true",
-        help="scan all 6^9 adjacent-block tuples against CABLE-3 rho_inf (slow-ish, ~few seconds with tables)",
+        help="scan all 6^9 adjacent-block tuples against CABLE-3 rho_inf (control only)",
     )
     parser.add_argument(
-        "--sage-native",
+        "--skip-subsample-cert",
         action="store_true",
-        help="with JSON: brute all 6^9 in Sage strand order (can take a minute)",
+        help="skip prune-vs-unpruned subsample certification (debug only)",
     )
     parser.add_argument("--out", default=None, help="write JSON report to this path")
     return parser.parse_args(list(argv))
@@ -957,50 +1333,67 @@ def _emit(report: dict, out_path: Optional[str]) -> None:
 def main(argv: Sequence[str]) -> int:
     args = parse_args(argv)
     report: Dict[str, object] = {
-        "script": "bmfact_enum.py",
+        "script": "bmfact964_enum.py",
         "kstar": KSTAR,
         "n_classes_hardcoded": len(CLASS_REPS),
-        "charged_class_list_sha256": (
-            "a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401"
+        "charged_class_list_sha256": CHARGED_CLASS_LIST_SHA256,
+        "charged_class_list_citation": (
+            "REP-96-INNER §5, frozen copy hashed before reading; "
+            "three classes / 72 tuples including const-4c with Pi a 4-cycle. "
+            "CONTROL ONLY; the decision is the native 6^9 universe."
         ),
-        "charged_class_list_citation": "REP-96-INNER §5, frozen copy hashed before reading",
         "iota_split": "(delta_3^{k_*}, 1, 1)",
-        "tube_embedding": "adjacent blocks (1,2,3), (4,5,6), (7,8,9)",
+        "tube_embedding_control_only": "adjacent blocks (1,2,3), (4,5,6), (7,8,9)",
+        "decision_path": "native_transposition_universe_no_strand_map",
         "OPEN": [
-            "OPEN[BMFACT-IOTA-SPLIT]: other distributions of iota with the same ordered product",
-            "OPEN[BMFACT-TUBE-EMBEDDING]: residue-mod-3 tubes vs adjacent blocks",
-            "OPEN[BMFACT-ORIENTATION]: Sage product vs inverse (run as a variant when JSON is present)",
-            "OPEN[BMFACT-STRAND-VS-BLOCK]: Sage Im(y)-at-p1 order vs REP-96 tubular order",
+            "OPEN[BMFACT-ORIENTATION]: Sage product vs inverse (both run)",
+            "OPEN[BMFACT-BASEPOINT]: Sage 4-tuple omits the geometric-basis base point",
         ],
     }
 
-    print("=== hard-coded class list ===")
+    if args.curve_check and args.json_path is None and not args.selftest:
+        print("=== sympy curve check ===")
+        curve = run_curve_check()
+        report["mode"] = "curve-check"
+        report["curve_check"] = curve
+        print(json.dumps(curve, indent=2))
+        if not curve.get("passed"):
+            report["fatal"] = "curve-check failed"
+            _emit(report, args.out)
+            return 2
+        print("CURVE-CHECK-OK")
+        _emit(report, args.out)
+        return 0
+
+    print("=== hard-coded class list (CONTROL ONLY) ===")
     gate = run_gate3_on_reps()
     report["gate3_on_reps"] = gate
     print(json.dumps(gate, indent=2))
     if not gate["passed"]:
-        report["fatal"] = "GATE-3 failed on a hard-coded representative at k_*=-10"
+        report["fatal"] = "GATE-3 failed on a hard-coded representative at k_*=-8"
         _emit(report, args.out)
         return 2
 
-    expanded = expand_144()
+    expanded = expand_72()
     report["n_expanded"] = len(expanded)
-    print("expanded conjugacy orbits: %d (expect 144)" % len(expanded))
+    print("expanded conjugacy orbits: %d (expect 72)" % len(expanded))
 
-    pin = assert_pi_tau_pin(expanded)
-    report["pi_tau_pin_assertion"] = {
+    pin = assert_pi_types(expanded)
+    report["pi_type_assertion"] = {
         "passed": pin["passed"],
         "n_checked": pin["n_checked"],
+        "n_pi_transposition": pin["n_pi_transposition"],
+        "n_pi_fourcycle": pin["n_pi_fourcycle"],
         "failures": pin["failures"],
         "note": pin["note"],
-        "allowed_tau_by_class_rep": {
-            name: [fmt_transp(t) for t in taus]
-            for name, taus in pin["allowed_tau_by_class_rep"].items()
-        },
     }
-    print("Pi-tau pin assertion passed=%s (NOT used as a filter)" % pin["passed"])
+    print(
+        "Pi-type assertion passed=%s (NOT used as a filter); "
+        "n_transposition=%s n_fourcycle=%s"
+        % (pin["passed"], pin["n_pi_transposition"], pin["n_pi_fourcycle"])
+    )
     if not pin["passed"]:
-        print("PI-TAU-PIN-ASSERTION-FAIL %s" % pin["failures"])
+        print("PI-TYPE-ASSERTION-FAIL %s" % pin["failures"])
 
     nines: List[Tuple[frozenset, ...]] = []
     nines_with_class: List[Tuple[Tuple[frozenset, ...], str, Tuple[int, int, int, int]]] = []
@@ -1009,37 +1402,87 @@ def main(argv: Sequence[str]) -> int:
         nines.append(nine)
         nines_with_class.append((nine, str(item["name"]), item["Pi"]))  # type: ignore[arg-type]
     report["n_reconstructed_nines"] = len(set(nines))
-    if len(set(nines)) != 144:
-        print("WARNING reconstructed 9-tuples collapsed: %d unique" % len(set(nines)))
+    if len(set(nines)) != EXPECTED_GENERATING:
+        print(
+            "WARNING reconstructed 9-tuples collapsed: %d unique"
+            % len(set(nines))
+        )
 
     pos = run_positive_control(nines)
     report["positive_control"] = pos
-    print("POSITIVE CONTROL generating=%s expected=144 passed=%s"
-          % (pos["n_generating"], pos["passed"]))
+    print(
+        "POSITIVE CONTROL generating=%s expected=72 passed=%s"
+        % (pos["n_generating"], pos["passed"])
+    )
     neg = run_negative_control(nines)
     report["negative_control"] = neg
-    print("NEGATIVE CONTROL projective-product=1 count=%s expected=0 passed=%s"
-          % (neg["n_generating_product_fixed_and_total_product_one"], neg["passed"]))
+    print(
+        "NEGATIVE CONTROL projective-product=1 count=%s expected=0 passed=%s"
+        % (neg["n_generating_product_fixed_and_total_product_one"], neg["passed"])
+    )
 
-    if args.brute_block:
-        print("BRUTE adjacent-block 6^9 against CABLE-3 rho_inf ...")
+    run_brute = bool(args.brute_block or (args.selftest and args.json_path is None))
+    if run_brute:
+        print("BRUTE adjacent-block 6^9 against CABLE-3 rho_inf (control) ...")
         brute = brute_generating_product_fixed(KSTAR)
         report["brute_block_6pow9"] = brute
-        print("BRUTE n_generating=%s passed=%s" % (brute["n_generating"], brute["passed"]))
+        print(
+            "BRUTE n_generating=%s passed=%s"
+            % (brute["n_generating"], brute["passed"])
+        )
+        if not brute["passed"]:
+            pos = dict(pos)
+            pos["passed"] = False
 
-    controls_ok = bool(pos["passed"]) and bool(neg["passed"]) and bool(gate["passed"])
+    print("=== synthetic pruner (subsample cert) ===")
+    synth = synthetic_pruner_selftest()
+    report["synthetic_pruner"] = synth
+    print(
+        "SYNTHETIC_PRUNER passed=%s pruned=%s unpruned=%s"
+        % (synth["passed"], synth["n_pruned_survivors"], synth["n_unpruned_survivors"])
+    )
+
+    controls_ok = (
+        bool(pos["passed"])
+        and bool(neg["passed"])
+        and bool(gate["passed"])
+        and bool(pin["passed"])
+        and bool(synth["passed"])
+    )
     report["controls_passed"] = controls_ok
     if not controls_ok:
         report["fatal"] = (
-            "self-controls failed: positive=%s negative=%s gate3=%s. "
-            "Refusing to interpret Sage output."
-            % (pos["passed"], neg["passed"], gate["passed"])
+            "self-controls failed: positive=%s negative=%s gate3=%s pi_type=%s "
+            "synthetic_pruner=%s. Refusing to interpret Sage output."
+            % (
+                pos["passed"],
+                neg["passed"],
+                gate["passed"],
+                pin["passed"],
+                synth["passed"],
+            )
         )
         _emit(report, args.out)
         return 2
 
+    if args.curve_check:
+        print("=== sympy curve check ===")
+        curve = run_curve_check()
+        report["curve_check"] = curve
+        print(json.dumps({k: curve[k] for k in curve if k != "disc_sqf"}, indent=2))
+        if not curve.get("passed"):
+            report["fatal"] = "curve-check failed"
+            _emit(report, args.out)
+            return 2
+        print("CURVE-CHECK-OK")
+
     if args.selftest and args.json_path is None:
         report["mode"] = "selftest"
+        report["decision"] = None
+        report["decision_note"] = (
+            "selftest has no Sage JSON; native decision not run. "
+            "Token is not SURVIVOR / NATIVE_ZERO_CURVE_ONLY / OPEN."
+        )
         print("SELFTEST-OK")
         _emit(report, args.out)
         return 0
@@ -1060,87 +1503,113 @@ def main(argv: Sequence[str]) -> int:
     report["sage_base_point"] = bundle.get("base_point")
     report["sage_strand_order_FLAG"] = bundle.get("strand_order_FLAG")
     braids = bundle.get("braids") or []
+    census = bundle.get("census") or {}
+    api_ok = True
+    api_reasons: List[str] = []
     if not braids:
-        report["fatal"] = "JSON has no braids"
-        _emit(report, args.out)
-        return 2
+        api_ok = False
+        api_reasons.append("JSON has no braids")
+    if bundle.get("nstrands") not in (None, 9, N_STRANDS):
+        api_ok = False
+        api_reasons.append("nstrands = %s, expected 9" % bundle.get("nstrands"))
+    for rec in braids:
+        if not rec.get("tietze"):
+            api_ok = False
+            api_reasons.append("braid index %s has empty Tietze" % rec.get("index"))
+            break
+    census_ok: Optional[bool]
+    if not census:
+        census_ok = None
+        api_ok = False
+        api_reasons.append("JSON has no census record")
+    else:
+        census_ok = bool(census.get("ok")) and (
+            int(census.get("n_tangency") or -1) == 8
+            and int(census.get("n_four_node_fibre") or census.get("n_four_node_fibres") or -1) == 1
+            and int(census.get("n_one_node_fibre") or census.get("n_one_node_fibres") or -1) == 2
+            and int(census.get("exponent_ledger") or -1) == 20
+        )
+        if census.get("ok") and not census_ok:
+            census_ok = False
 
-    leftover = node_fibre_leftover_strand(braids)
-    report["node_fibre_leftover_strand_1based"] = leftover
-
-    block_as_written = intersect_block_with_braids(nines_with_class, braids, invert=False)
-    block_inverse = intersect_block_with_braids(nines_with_class, braids, invert=True)
-    report["variant_BLOCK"] = {
-        "per_class": block_as_written["per_class"],
-        "total_survivors": block_as_written["total_survivors"],
-        "survivors": block_as_written["survivors"],
-    }
-    report["variant_BLOCK_inverse"] = {
-        "per_class": block_inverse["per_class"],
-        "total_survivors": block_inverse["total_survivors"],
-        "survivors": block_inverse["survivors"],
-    }
-    print("VARIANT BLOCK total_survivors=%s per_class=%s"
-          % (block_as_written["total_survivors"], block_as_written["per_class"]))
-    print("VARIANT BLOCK-inverse total_survivors=%s per_class=%s"
-          % (block_inverse["total_survivors"], block_inverse["per_class"]))
-
-    # Pi-tau assertion on BLOCK survivors, using leftover strand as tau if known.
-    if leftover is not None:
-        pin_failures = []
-        for surv in block_as_written["survivors"]:
-            xi = surv["xi"]
-            # xi is a list of '(a b)' strings; leftover is 1-based.
-            tau_str = xi[leftover - 1]
-            # allowed tau from Pi
-            # reconstruct Pi from the survivor string
-            # (we stored Pi)
-            # already have Pi as a string; re-check via allowed list on the class
-            pass
-        report["pi_tau_on_BLOCK_survivors"] = {
-            "leftover_strand": leftover,
+    # BLOCK intersection is diagnostic only and is not the decision.
+    if braids:
+        block_as_written = intersect_block_with_braids(
+            nines_with_class, braids, invert=False
+        )
+        block_inverse = intersect_block_with_braids(
+            nines_with_class, braids, invert=True
+        )
+        report["diagnostic_BLOCK_not_decision"] = {
+            "per_class": block_as_written["per_class"],
+            "total_survivors": block_as_written["total_survivors"],
             "note": (
-                "tau is the image of the leftover strand of the x=0 fibre. "
-                "ASSERTION, not a filter: each survivor's tau must be Pi or "
-                "disjoint from Pi."
+                "Adjacent-block identification is CONTROL / diagnostic. "
+                "It is not the decision path and must not be read as a "
+                "row-level kill."
             ),
         }
+        report["diagnostic_BLOCK_inverse_not_decision"] = {
+            "per_class": block_inverse["per_class"],
+            "total_survivors": block_inverse["total_survivors"],
+        }
+        print(
+            "DIAGNOSTIC BLOCK (not decision) total_survivors=%s"
+            % block_as_written["total_survivors"]
+        )
 
-    if args.sage_native:
-        print("SAGE-NATIVE 6^9 full ZvK (as-written) ...")
-        native_full = brute_sage_native(braids, invert=False, product_only=False)
-        print("SAGE-NATIVE 6^9 product-only (as-written) ...")
-        native_prod = brute_sage_native(braids, invert=False, product_only=True)
-        print("SAGE-NATIVE 6^9 product-only (inverse) ...")
-        native_prod_inv = brute_sage_native(braids, invert=True, product_only=True)
-        report["variant_SAGE_NATIVE_full"] = native_full
+    native_full: Optional[Dict[str, object]] = None
+    native_full_inv: Optional[Dict[str, object]] = None
+    native_prod: Optional[Dict[str, object]] = None
+    native_prod_inv: Optional[Dict[str, object]] = None
+    if api_ok:
+        certify = not args.skip_subsample_cert
+        print("SAGE-NATIVE product-only (as-written) ...")
+        native_prod = run_native_scan(
+            braids, invert=False, product_only=True, certify_subsample=certify
+        )
+        print("SAGE-NATIVE product-only (inverse) ...")
+        native_prod_inv = run_native_scan(
+            braids, invert=True, product_only=True, certify_subsample=certify
+        )
+        print("SAGE-NATIVE full ZvK (as-written) ...")
+        native_full = run_native_scan(
+            braids, invert=False, product_only=False, certify_subsample=certify
+        )
+        print("SAGE-NATIVE full ZvK (inverse) ...")
+        native_full_inv = run_native_scan(
+            braids, invert=True, product_only=False, certify_subsample=certify
+        )
         report["variant_SAGE_NATIVE_product_only"] = native_prod
         report["variant_SAGE_NATIVE_product_only_inverse"] = native_prod_inv
-        print("SAGE-NATIVE full generating=%s" % native_full["n_generating"])
-        print("SAGE-NATIVE product-only generating=%s passed=%s"
-              % (native_prod["n_generating"], native_prod.get("passed_positive_control")))
+        report["variant_SAGE_NATIVE_full"] = native_full
+        report["variant_SAGE_NATIVE_full_inverse"] = native_full_inv
+        print(
+            "SAGE-NATIVE product-only generating as-written=%s inverse=%s"
+            % (native_prod["n_generating"], native_prod_inv["n_generating"])
+        )
+        print(
+            "SAGE-NATIVE full generating as-written=%s inverse=%s"
+            % (native_full["n_generating"], native_full_inv["n_generating"])
+        )
 
-    # Decision line for the coordinator.
-    total_block = int(block_as_written["total_survivors"])
-    total_inv = int(block_inverse["total_survivors"])
-    if total_block == 0 and total_inv == 0:
-        report["decision_BLOCK"] = (
-            "KILL at representation level, in the adjacent-block identification, "
-            "for both orientations. SAGE-NATIVE may still be nonempty: see "
-            "OPEN[BMFACT-STRAND-VS-BLOCK]."
-        )
-    elif total_block > 0:
-        report["decision_BLOCK"] = (
-            "SURVIVORS in variant BLOCK (Sage product as written). "
-            "Explicit phi listed under variant_BLOCK.survivors. "
-            "This is a representation of pi_1(C^2-D), not a Keller map."
-        )
-    else:
-        report["decision_BLOCK"] = (
-            "SURVIVORS in variant BLOCK-inverse only. Orientation reading "
-            "OPEN[BMFACT-ORIENTATION] is live. Explicit phi listed under "
-            "variant_BLOCK_inverse.survivors."
-        )
+    token, reason = decide_native(
+        census_ok=census_ok,
+        api_ok=api_ok,
+        native_full=native_full,
+        native_full_inv=native_full_inv,
+        native_prod=native_prod,
+        native_prod_inv=native_prod_inv,
+    )
+    report["decision"] = token
+    report["decision_reason"] = reason
+    report["api_ok"] = api_ok
+    report["api_reasons"] = api_reasons
+    report["census_ok"] = census_ok
+    print("DECISION %s" % token)
+    print(reason)
+    if token.startswith("OPEN"):
+        report["OPEN_token"] = token
 
     _emit(report, args.out)
     return 0

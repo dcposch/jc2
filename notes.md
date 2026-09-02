@@ -17952,3 +17952,25 @@ something placed a jc2-lean copy in the campaign tree and you
 should know. Also noticed untracked top-level `jc2-lean` path
 in git status — consistent with the known excluded nested repo;
 untouched.
+
+## LIVE STATE (observed 2026-09-02T01:40Z) — 964 BRAID PIPELINE RUNNING; CENSUS CONFIRMED BY SIROCCO
+
+**BMFACT-964-CODEGEN landed** (`bmfact-964-codegen-grok46-20260902.md`,
+prefix from shell log, BODY_SEALED; self-controls 72/0/pruner-cert
+pass; REPRESENTATIVE-not-FULL_ACTUAL_EXIT discipline carried).
+Coordinator ran the chain on Box03: PRECHECK-OK; MONODROMY-OK
+(SIROCCO, 2.3s): **CENSUS-OK — 11 braids = 8 tangencies + 1
+four-node fibre + 2 one-node fibres, exponent ledger 20 —
+matching the desk prediction exactly** (second certified
+desk-vs-SIROCCO agreement). Decision enumeration launched
+(full native universe with per-relation pruning + subsample
+certification; three CABLE-3 classes as control; both
+orientations); watcher armed (bix85im9u). Outcomes:
+SURVIVOR (explicit phi verbatim) / NATIVE_ZERO_CURVE_ONLY /
+OPEN(census|API). Note discipline: a zero kills THIS curve only,
+not the (9,6,4) row (curve-level realization is a representative
+of the numerical type; other realizations could exist — row
+kill requires either orbit coverage or the rep-level gates).
+
+Running: homcover-transfer (opus), SAGE-NATIVE 962 6^9, 964
+enum, Box03 869 msolve, oracle window, box01 provisioning.
