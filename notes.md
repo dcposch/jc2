@@ -19613,3 +19613,20 @@ defect (= the genus of the generic pencil member = deg A_F) and the
 satellite mass — against Moh's D >= 101; two flagships own the two
 halves. Runners: keller-pencil-genus (opus), sat-mass (opus),
 b3-census (sol), mf-defect (grok).
+
+EVENT (~12:05Z per lane print) — **MF-DEFECT / MULT-VS-BETA landed**
+(`mf-defect-mult-vs-beta-grok46-20260902.md`, 5c11369a, BODY_SEALED;
+Grok): THEOREM MF-DEFECT proved independently (2 g_L + theta_inf >= 2,
+n(W − S) >= N, the S-known floor never attained — via Miyanishi–Sugie
+1980 Lemma 1.6 / Kaliman 1992 Cor. 2 / Neumann–Norbury 1998; controls:
+recovers n >= 4 at N = 4 without N4-PIN; the non-Keller F_m attains
+(0,1) as it should) — a weaker form of the reviewer's
+2 g_L + theta_inf >= W − S + 1 (integration #12) and an independent
+second derivation; W2-COLUMN: n_min >= N at every W = 2 cell independent
+of beta (crossing price C(N) <= N − 1). **MULT-VS-BETA: NO** — beta = 1
+is NOT forced in (B3) at W = 2 for N >= 5: every beta in {1, …, N − 3}
+is counting-admissible (integer ledger solutions at N = 5, 6, 7);
+forced only at N = 4. New OPEN[MF-RATIONAL] (can g_L = 0 at all; bounded
+by p_a(D_F); if so theta_inf >= 2) — the remaining +1 on the identity;
+classical, not counting. Gate unchanged. (The lane watcher's "402"
+flag was a false match on the log text; no HTTP 402 in the log.)

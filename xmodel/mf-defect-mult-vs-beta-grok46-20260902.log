@@ -1,0 +1,19 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the frozen input hashes, then consume the charged meridian-floor documents and attack MF-DEFECT and MULT-VS-BETA at the review's confirmed typing.Hashes match. Next I’ll read the charged inputs and the review’s CONFIRMED typing, including the S-known vs W-only floor distinction.Charged hashes match. I’ll now read the four frozen inputs and the review’s CONFIRMED repairs.Producer and review are in. Next I’ll pull MPRIME/HF at banked typing and the coordinator’s defect-budget note.Coordinator note is in: the defect budget is spent by (K), so Q1 has to come from fibre structure. I’ll pull MPRIME N4-PIN, Lemma 4.3, and the classical fibre theorems next.Kaliman’s horizontal-component theorem looks decisive for rational fibres. I’ll pull the exact statements and then enumerate the W=2 (C3)/Lemma 4.3 constraints.The polar-branch argument looks like a complete proof of MF-DEFECT. Next I’ll enumerate MULT-VS-BETA at N=5,6,7 and check the report format.I’ll enumerate admissible W=2 (B3) K-distributions for N=5,6,7 and compute where the defect upgrade actually raises the integer floor.The polar-branch argument closes MF-DEFECT; the W=2 ledger does not force β=1 for N≥5. I’ll write the sealed report next.Body is 23KB, over the 12–20KB target. I’ll compress the N=7 list and the remarks so the proofs stay intact.Report sealed at `xmodel/mf-defect-mult-vs-beta-grok46-20260902.md` (body 20457 bytes). Charged hashes matched; no ledgers edited; no `jc2-lean`; no exit price.
+
+**Q1. OPEN[MF-DEFECT] — YES.** For every noninvertible Keller map under H2 and generic `L`, `2g_L + θ_inf ≥ 2`. The S-known floor `n ≥ ceil((N−1)/(W−S))` is never attained, and MF-EXACT upgrades to `n(W−S) ≥ N`.
+
+The argument is structural, not a defect count (the Suzuki/Hà–Lê budget `nW−N+1` is already spent by `(K)`). If `(g_L, θ_inf)=(0,1)`, then:
+1. Polar branches of `u∘F` are equinumerous across fibres (étale covering of a product neighbourhood of `∞_L` in `C^2 \ A_F`).
+2. Jacobian constant forces every irreducible component of every fibre to carry a polar branch, so `θ_inf=1` implies every affine fibre is irreducible.
+3. A rational polynomial with all affine fibres irreducible has exactly one horizontal curve, of degree 1 (Miyanishi–Sugie 1980 Lemma 1.6 / Kaliman 1992 Cor. 2 / Neumann–Norbury Prop. 3), hence `θ_L=1`.
+4. MF-EXACT gives `θ_L = nS + θ_inf = nS+1 ≥ 4` (`S≥1` by 7.B′, `n≥3` by H2 + SMOOTH-KILL). Contradiction.
+
+AMS does not kill the floor case: that case is a rational curve with at least four punctures, not an embedded line. Razar is a second death (recorded, not used). Control: at `N=4`, `W=2` this recovers `n≥4` without N4-PIN.
+
+**Q2. OPEN[MULT-VS-BETA] — NO.** In (B3) at `W=2`, `β=1` is not forced for `N≥5`. Every value `β ∈ {1,…,N−3}` is counting-admissible under `(L)`, `(K)`, `(C1)`–`(C3)` and Lemma 4.3. The unique forcing is `D_gap=0`, which is `N=4` (N4-PIN). Explicit types for `N=5,6,7` are in the report. No Keller realisation is claimed.
+
+**Floor.** At `W=2` one has `S=1`, so Q1 gives `n_min ≥ N` for the whole column, independently of `β`. That is the n-floor prize the producer attached to a YES on Q2. The integer S-known ceil rises iff `W−S` divides `N−1`; it is not a +1 at every cell of the `Phi` table.
+
+**Open raised.** `OPEN[MF-RATIONAL]`: can `g_L=0` occur? Bounded by `g_L ≤ p_a(D_F)`; if yes, then `2 ≤ θ_inf ≤ N`. A NO would give `n(W−S) ≥ N+1`.
+DIVERT path=xmodel/mf-defect-mult-vs-beta-grok46-20260902.md status=CLEAN_SEALED body_bytes=20457 body_sha256=e39f761a29d91d1b774f4020fa88f8cb26b78ed5d847895fb246d82651f3a6ec
