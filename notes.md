@@ -18122,3 +18122,28 @@ Watcher re-armed (b4o7mn88l). If both msolve runs also time out,
 the 869 system likely needs char-p prefilter + elimination-order
 splitting — queue as a box01 job with the new stack rather than
 extending timeouts blindly.
+
+## LIVE STATE (observed 2026-09-02T02:41Z) — INTEGRATION #8 BOUND; HORN WAVE LAUNCHED
+
+**964 kill review landed** (67a2ceb4, BODY_SEALED_AFTER_DIVERT):
+**KILL-BINDING, curve-level** — pruner certification audited
+(550=550, symmetric difference 0, no silent pruner path); one
+nonblocking repair (free_auto_F9 metadata). Both realized
+substrates now carry BINDING representation kills.
+
+**INTEGRATION #8 BOUND AND VERIFIED**
+(`integration8-coordinator-fable5-20260902.md`, body dcce5652,
+basis 4ab4478e): promotes the cusp/homology theorem set
+(NO-PUSHFORWARD, CENTRAL-RANK as binding CUSP-CAGE repair,
+CUSP-PARITY, ORBIFOLD-CAGE, CUSP-A-EMPTY with N=4 H2 residual
+= exactly (B3), ACS resolution) + both curve kills; records
+SG-lane items (unreviewed), Card C death, NA OPEN, N5 typing,
+standing fronts. AUDIT pointer appended.
+
+**HORN WAVE LAUNCHED (02:41Z)**: `horn-flagship-opus5-20260902`
+(extend the cusp theorems to the (B3) group = torus-knot + k
+node relators; run the cage on the (B3) profile; compute the A2
+3x3 at e>=1) and `case-a-sweep-grok46-20260902` (chart 8<=N<=16
+case-(A) survivors with the reviewed machinery; N<=7 emptiness
+as control). Opus seats 1/5. Remaining tail: 869 msolve, oracle
+window (watcher b4o7mn88l), M2 964 control.
