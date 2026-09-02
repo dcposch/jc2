@@ -1,1 +1,19 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Submission sealed: `xmodel/ideation-20260902T0022Z-opus5.md` (31 KB, `<!-- BODY-END -->` appended only after the final section).
+
+**Hash verified** — `df7df824…` matched; packet read, no other lane's round-`20260902T0022Z` submission opened.
+
+## What the lane found
+
+**New mechanism — HOM-COVER.** The banked `ACS-1` covering `C² \ F⁻¹(A) → C² \ A` has three recorded consequences (Euler characteristic, κ̄, local type) — all Euler-family invariants, and `(M')` itself collapses to `χ₂ + σ₂ = 1` at the residual profile, i.e. that family is out of information. I added an invariant it cannot see: the source of a Keller map **is** a plane-curve complement, so `H^ab = H₁(C² \ E) = Z^{r(E)}` — free abelian, rank = component count. Torsion kills a datum outright, with no auxiliary input.
+
+**A correction to the charged REP-96 §7 (R2).** It asks the Riemann-existence *branched* cover to satisfy `Y ≅ C²`. `F` is étale everywhere, so nothing is branched — sheets vanish at infinity. By Zariski's main theorem the normalisation contains the source as an open subset and is typically singular, so `Ȳ ≅ C²` is not a necessary condition. The necessary, finite condition sits on the unbranched cover. That re-types `OPEN[REP-96-SOURCE-IS-C2]` from "the largest gap, not numerical" to a Smith normal form.
+
+**Measured, in-lane, not asserted.** I built and calibrated `box/cover_h1.py` before making the claim — 4/4 controls pass, including the sharp one (`Z ⊕ Z/3` for the trefoil double cover, the textbook `Δ(−1) = 3`), so the instrument is calibrated against a known nonzero answer and not only against zeros. Kill power on the closest analogue (`B₃` = the cuspidal-cubic group; the `(9,6)` place has Puiseux slope 3/2, a trefoil cable): **30/54 transitive degree-4 representations carry torsion, 56%**. That same 44% torsion-free fraction is why I report §5's all-degree theorem as a mechanism with an unproved transfer step rather than a theorem.
+
+**Cross-connection.** Étaleness forbids any cycle of length ≥ 2 from extending, giving `a^(i) ≤ #Fix(meridian_i)` with equality an *extra* hypothesis. At `N = 4`, `W₂ = 1` forces `a^(2) = 3`, and no element of `S₄` has three fixed points — consistent (the loss is at infinity), but it means both flagships must carry the inequality before quoting `a^(i) = N − W_i` as a fixed-point count at general `N`. Raised as `OPEN[ACS-FIX-VS-DEFICIT]`; nothing promoted is retracted.
+
+**Systems check — UPGRADE.** The LIVE STATE names workload generation as the bottleneck (box01 1/64 cores busy). Measured with the delivered `box/open_triage.py`: **72 OPEN tokens raised, 20 ever charged, 52 orphaned** — the campaign types decidable questions 3.6× faster than it charges them, at Opus rates, against idle capacity.
+
+Deviations logged in the verdict block: the body ran 31 KB against a 12–20 KB pace, and I read the two 00:22Z flagship *prompts* (not submissions) to avoid duplicating their charge.
+DIVERT path=xmodel/ideation-20260902T0022Z-opus5.md status=CLEAN body_bytes=31230 body_sha256=dcd40a425b2a2782deebec3f01c3b6859a8aa8d46b3e60639f9865a807d5ddba

@@ -17548,3 +17548,44 @@ submitters: grok46/sol56/opus5/fable5). Opus seats in use: 3/5.
 
 Still running: SAGE-NATIVE 6^9 enum, Box03 msolve 869 + M2 queue,
 oracle window, box01 provisioning.
+
+## LIVE STATE (observed 2026-09-02T00:43Z) — MU2 REVIEW: FIVE-FOR-FIVE CONFIRMED. N=4 IS CHECKED-CLOSED.
+
+**MU2-REPLAY-REVIEW landed** (`mu2-replay-review-grok46-20260902.md`,
+c1c13c59, BODY_SEALED): ALL FIVE charged items CONFIRMED — the
+mu+corr=3 exhaustiveness; the named repairs (Prop 4, Cor 5
+gluing, Lem 10 delta(ab)>0, Lem 13) independently replayed; NO
+mu1 contamination of the (2,1) track; the (3,0) closure by
+campaign Cor 3.8 scope-checked against Orevkov's Remark; the
+part-I-Theorem-1 = part-II-Prop-1.2 payload binding. Producer
+verdict DO-I-MU2 = REPLAYED-SOUND: CONFIRMED.
+
+**LEDGER LINE (pair-reviewed, promotable at integration #7):**
+
+  N=4-CHECKED-CLOSED: no four-sheeted polynomial self-map of C^2
+  has nonzero constant Jacobian. Chain: Domrina--Orevkov I
+  (mu2 track REPLAYED-SOUND; (1,2) closed by campaign Prop 4.1;
+  (3,0) closed by campaign Cor 3.8 replacing Orevkov's unproved
+  Remark) + Domrina II (censuses repaired; root gaps closed by
+  Theorems R1/R2; fork residual consumed nowhere; §§5-7 no new
+  gap). MODULO: structure packages (F1)/(F2)/(S1)/(S2)/(S4)
+  (standard Eisenbud--Neumann splice machinery, consumed not
+  re-derived). Campaign repairs load-bearing in three places.
+  Every link pair-reviewed by a different model.
+
+Under the resolution-first directive this closes the N=4
+verification account entirely; frontier capacity does not return
+here. The campaign's own independent kill chain ((8,6)/(9,6)
+rows) continues ONLY as frontier work — its (9,6,2) substrate
+and the corrected 869/964 jobs now serve the counterexample-side
+and instrument-validation programs, not N=4 re-proof.
+
+INTEGRATION #7 queued (bind after ideation synthesis): the
+ledger line above + TB-GERM (4 repairs) + CABLE-3 (3 repairs) +
+CAGE-N-R2 promotion + (8,6,3) curve kill + DET-LINF +
+R1/R2 + footguns #10/#11 + the resolution-first COORDINATION
+amendment pointer.
+
+Ideation round: fable5 (22KB) + opus5 (31KB) + sol56 (17KB)
+sealed; grok46 still writing (34KB+ on disk). Synthesis on its
+seal. Flagships mprime-alln-h2 + companion-curve-alln running.
