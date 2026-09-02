@@ -7129,3 +7129,31 @@ below degree 125 (GGV-Horruitiner); both subcases reduced to small cores via
 transcription -> torus normalization -> gauge -> bilinear cascade; pipeline
 validated on the solved (66,99) case (EMPTY in 2.3s). Avenue map approved;
 fleet spun up.
+
+### 2026-09-02, afternoon (coordinator Fable 5.1) — integrations #15–#16, round 1608Z, EXACT-N
+
+- **Integration #16** bound: N on Moh's tree (N-ON-THE-TREE, Opus; Grok
+  review, all items CONFIRMED). FRONTIER-N, RADIUS-ORDER, DETECTOR-NULL,
+  N-CEILING (N <= U, upper bound only), FILTER-INVERSION, HARMONIC-BOUND
+  (N < D/2 in scope), N <= 44 at the admissible degrees. #15 §D's "can
+  prove a window" withdrawn. Delta 16(a): the operative frontier is
+  N_min = 6 (N = 5 closed at 01:10Z); the lane's "418 pinned to N = 4"
+  are dead; recount with U >= 6 kills 4,700 groups at D <= 400, no
+  degree emptied.
+- **Round 20260902T1608Z** (COMPLETE, 5/5) on OPEN[UPPER-TO-FLOOR]:
+  the coordinator's one-directionality reading was refuted by three
+  blind routes converging on ONE mechanism — the Jacobian ODE along a
+  root of g − c₂ (d/dx f = ±1/g_y) gives the pole of f exactly
+  (1 − frontier level), so N is a function of the g-tree alone; squeezed
+  against FRONTIER-N + RADIUS-ORDER (Sol SD3–SD6; coordinator EXACT-N),
+  the bottom of every major branch is a STAR and
+  N = Σ_B eV₂(B)·d(1−δ₁(B))/(d+e) EXACTLY. Opus/coordinator: the lattice
+  identity 2deN = Σ(e m_ν − d m'_ν)² and ORTHO-DIV. Status: PROPOSAL under
+  hostile review (`exact-n-rigidity-opus5`); conditional packet filter
+  lane (`exact-packet-filter-gpt55`) running; `d1-subtree-opus5` is the
+  independent check. Proxies: single-branch integrality empties every
+  degree <= 400 at N in [6,16]; the loose form keeps 190k; the exact
+  filter is a knapsack over branch types (Sol's prototype: D = 105 not
+  emptied, 59 -> 21).
+- Box01 Keller-cluster census running (587/975 cells, no failures).
+  Next round floor 04:55Z 09-03.
