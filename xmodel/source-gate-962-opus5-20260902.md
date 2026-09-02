@@ -460,7 +460,7 @@ derivable from `INPUT-rho-D`, since cycle types determine `delta_j` and `e_j`,
 not a resolution tree. Typed `OPEN[SOURCE-OPEN-COMPLETION-UNDECLARED]`, carried
 to Mode 2, where `[S] §4` correctly makes it wait on a full `phi`.
 
-### 5.3 Two traps, named and refused
+### 5.2 Two traps, named and refused
 
 **Empty `L̃∞`.** A tempting free kill: complete `U ≅ A^2` to `P^2`, declare the
 boundary line dicritical, get `L̃∞ = ∅` and `det(∅) = 1 > 0`, contradicting
@@ -528,9 +528,9 @@ implemented:
    convenience, `COVERGEO_FORCE_MAIN=1` is honoured, and `main()` asserts it
    emitted its seal line — a silent empty run with rc=0 is impossible;
 7. `E = e(iota)` is a row **label**, never read by any arithmetic; `c_2` is
-   refused by construction (§7.4).
+   refused by construction (§7.3).
 
-### 7.3 Controls — MEASURED, all pass
+### 7.2 Controls — MEASURED, all pass
 
 The suite is deliberately built so that MATCH and MISMATCH are both reachable;
 a calculator that can only mismatch is not a calculator.
@@ -563,7 +563,7 @@ control is implemented on the actual row (`beta_1 = 15`, three nodes,
 transposition class), `E = −5` is a label only, and it MISMATCHES as required
 (gaps 1 and 6).
 
-### 7.4 The `(8,6,9)` path — and the REFUTATION of "same Chern species"
+### 7.3 The `(8,6,9)` path — and the REFUTATION of "same Chern species"
 
 `[G] §4` claims the missing `(8,6,9)` input `c_2(T) = chi(O_Z)` and
 `chi_c(Y)_RH` are "the same Chern-number species", and charges one pipeline to
@@ -664,7 +664,7 @@ TASK 4  ACS         CARRIED at every use; forced (not assumed) where used;
    unaffected: both branches run and both mismatch.
 2. **§4.9** — no compactification is named because none is used, so
    `OPEN[RH-LINE-AT-INFINITY]` is **not** returned.
-3. **§7.3** — the charged negative control "`(6,4)` at `E = −3`" corrected: the
+3. **§7.2** — the charged negative control "`(6,4)` at `E = −3`" corrected: the
    row's `e(iota)` is `−5`, `E = −3` belongs to a different gate, and `E` is a
    label, never consumed.
 4. **§3.5** — `box/cover_h1.py` was modified (additively, non-breaking) rather
@@ -673,7 +673,7 @@ TASK 4  ACS         CARRIED at every use; forced (not assumed) where used;
 5. **§4.6** — the lane reports that its own charged razor is not independent of
    `(M′)`. That, rather than selling the mismatch as new kill power, is the
    deviation that most changes how the avenue should be funded.
-6. **§7.4** — one calculator does not serve both `(9,6,2)` and `(8,6,9)`'s
+6. **§7.3** — one calculator does not serve both `(9,6,2)` and `(8,6,9)`'s
    `c_2(T)`: the shared layer is delivered and controlled, the `c_2` half is
    refused with named missing inputs.
 
@@ -700,8 +700,8 @@ TASK 4  ACS         CARRIED at every use; forced (not assumed) where used;
 ## 12. FALLACY-v2 audit
 
 * **Flag/place/series.** Four sites: `E = e(iota)` is never an Euler number
-  (§7.3, refused in code); `chi_c` of an affine surface is never a Chern number
-  (§7.4); the place at infinity of `D` enters only as `chi_c(D̃) = 1`, never as
+  (§7.2, refused in code); `chi_c` of an affine surface is never a Chern number
+  (§7.3); the place at infinity of `D` enters only as `chi_c(D̃) = 1`, never as
   `delta_inf`, `beta_1`, `L`, `D̄` (§4.9); `B_Y` is a divisor on `Y`, never a
   dicritical or a Puiseux place of `D`.
 * **Carrier/attainment.** HOM-COVER is a floor-side filter, never an attainment
@@ -709,7 +709,7 @@ TASK 4  ACS         CARRIED at every use; forced (not assumed) where used;
   not `FULL_ACTUAL_EXIT`; no row-level kill is claimed.
 * **Floor/attainment.** The four-box split is a floor; `ram = 2` is proved, not
   capped; `det L̃∞ <= 0` is a floor and its strict form is not asserted.
-* **Pole/interior.** The empty-`L̃∞` determinant is refused (§5.3): DET-LINF's
+* **Pole/interior.** The empty-`L̃∞` determinant is refused (§5.2): DET-LINF's
   vertex class and source hypotheses fail there.
 * **`sat()` / raw remainder / variable-ring map.** Not applicable: no CAS, no
   Gröbner basis, no polynomial arithmetic.
@@ -734,6 +734,21 @@ given. Files written or modified: `box/covergeo.py` (new), `box/cover_h1.py`
 (additive repair, §3.5), and this report. No canonical ledger was edited, no
 charged file modified, no commit, push, AWS action or CAS run.
 
+Report size: body ≈ 40 KB against the charged 25–35 KB target. The overage is
+carried rather than paid for by dropping content: the lane discharges four
+tasks, audits and repairs one delivered instrument and writes another, and each
+of §3–§7 is the record of a separate charged deliverable. No section was added
+beyond the charge.
+
 No `charge_basis` line: this report asserts no new exit price.
 
 <!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `40512`.
+- Body SHA-256:
+  `17f3d9cdad8f7094a51b4e287cb6b2fd477a0da0137a9f1b66606df2a9883ca9`.
+- Frozen basis: `f35adc89bec33c1e1a2df50ac3d8bcd99f762218`.

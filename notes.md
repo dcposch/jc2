@@ -17895,3 +17895,44 @@ the general-N statement — with the explicit note that if the
 horn's cusp profiles force cabled places, the TWO REMAINING
 PROOF NECKS MERGE. Opus seats: 4/5 in use (source-gate-962,
 homcover-transfer + 2 idle-completed).
+
+## LIVE STATE (observed 2026-09-02T01:30Z) — SOURCE-GATE LANDS: MODE-1 CLOSED NEGATIVE; RAZOR (b) PROVED EQUIVALENT TO (M'); INSTRUMENT FAIL-OPEN REPAIRED
+
+**SOURCE-GATE-962 landed** (`source-gate-962-opus5-20260902.md`,
+prefix from shell log, BODY_SEALED):
+- RETYPE DONE: Lemma SRC-0 (the three Y's of the three
+  submissions are ONE scheme) reconciles all formulations;
+  OPEN[REP-96-SOURCE-IS-C2] RETIRED AS MIS-TYPED (re-homed, not
+  closed); official successor OPEN[SOURCE-OPEN-U].
+- FOUR-BOX EULER RUN at (9,6,2), Mode 1 (irreducible A_F):
+  chi_c(Y)_RH = 3 vs 1+chi_c(B_Y) in {2, -5} — **MISMATCH in
+  every admissible branch**; Mode-1 source-open CLOSED NEGATIVE.
+  Confirmatory of H2+(M'), NOT a new kill: **THEOREM SG-1
+  (PROVED-HERE/UNREVIEWED): razor (b) in Mode 1 IS (M')** — the
+  lane refused to sell its own mismatch as independent kill
+  power. Consistent with the round-wide Euler retirement; Lemma
+  SG-2 (chi_c(B_Y)) is the only new content.
+- HOM-COVER INSTRUMENT AUDIT: 4 controls confirmed; TWO DEFECTS
+  found and REPAIRED (a fail-open on convention that would have
+  produced FALSE SURVIVAL on exactly the anticipated input +
+  a convention-blind control suite; CONTROL 4 added, all pass).
+  B_3 census reproduced exactly. Run at (9,6,2): PENDING-INPUT —
+  blocked on OPEN[REP-96-BM-FACTORISATION]/OPEN[BMFACT-BASEPOINT].
+  NEW: Lemma HC-1 (r(E) <= a); Cor HC-2 (razor (a)'s rank
+  decides OPEN[SHEET-LOCATION] at this profile).
+- BOUNDARY LATTICE: NOT REACHED (no admissible U in Mode 1);
+  new typed OPEN[SOURCE-OPEN-COMPLETION-UNDECLARED] (completion
+  data not derivable from cycle types); empty-determinant trap
+  named and refused.
+- box/covergeo.py DELIVERED fail-closed (all controls pass);
+  grok's "same Chern species" REFUTED AS STATED (shared layer
+  delivered; the c_2(T^v) half refused with named missing
+  inputs).
+**BOTTLENECK NOW EXPLICIT: the braid data.** Razor (a) and the
+whole (9,6) decision funnel through SAGE-NATIVE + the basepoint
+OPEN; Mode 2 additionally needs a declared completion. Review
+debt (LOW, negative findings): SG-1, SRC-0, the instrument
+repairs.
+
+Box03 check: native 6^9 enum RUNNING; 869 msolve RUNNING;
+oracle window RUNNING (no status lines yet).

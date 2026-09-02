@@ -466,17 +466,20 @@ def precheck():
         omega = omega + ring_x(coeff) * coord_x_only ** (8 - idx)
     if omega.degree() != 8:
         fail("precheck: charged Omega has degree %s, expected 8" % omega.degree())
-    if omega.gcd(omega.derivative()) != 1:
+    if omega.gcd(omega.derivative()).degree() != 0:
         fail("precheck: charged Omega is not squarefree")
-    if omega.gcd(coord_x_only) != 1:
+    if omega.gcd(coord_x_only).degree() != 0:
         fail("precheck: charged Omega vanishes at x=0 (tangency at the four-node fibre)")
-    if omega.gcd(node_quad) != 1:
+    if omega.gcd(node_quad).degree() != 0:
         fail("precheck: charged Omega shares a root with the new-node quadratic")
-    remainder_after_known = disc_univariate
-    remainder_after_known = remainder_after_known // (
+    quo_zero, rem_zero = disc_univariate.quo_rem(
         coord_x_only**DISC_VALUATION_AT_ZERO_EXPECTED
     )
-    remainder_after_known = remainder_after_known // (node_quad**2)
+    if rem_zero != 0:
+        fail("precheck: X^8 does not divide disc_y F exactly")
+    remainder_after_known, rem_quad = quo_zero.quo_rem(node_quad**2)
+    if rem_quad != 0:
+        fail("precheck: (134217728 X^2+3087315)^2 does not divide disc_y F exactly")
     # remainder should be a unit in QQ times Omega.
     if remainder_after_known == 0:
         fail("precheck: disc / (X^8 Q^2) is zero")
@@ -485,7 +488,7 @@ def precheck():
             "precheck: tangency factor of disc has degree %s, expected 8"
             % remainder_after_known.degree()
         )
-    if remainder_after_known.gcd(remainder_after_known.derivative()) != 1:
+    if remainder_after_known.gcd(remainder_after_known.derivative()).degree() != 0:
         fail("precheck: tangency factor of disc_y F is not squarefree")
     # Proportionality over QQ: Res of the two octics vanishes iff they share
     # a root; we want identity of supports, so gcd of primitives should be
