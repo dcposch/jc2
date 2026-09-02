@@ -1,0 +1,21 @@
+LIB "normal.lib";
+ring r=0,(x,y),dp;
+// mock u1=1,v1=2,m=2,n=3 : N=10, Z.K=-2  -> 2g-2=8 -> g=5
+poly P = x2*y4 + x + y;  poly Q = x3*y6 + x2*y + 1;
+ideal I = 3*P+5*Q-7;  "mock1 genus:", genus(I[1]);
+// family (B) psi_2 o (x,xy^3): N=3, Z.K=-1 -> 2g-2=2 -> g=2
+poly P2 = x + (x*y3)^2; poly Q2 = x*y3;
+ideal I2 = 3*P2+5*Q2-7; "famB k=2 m=3 genus:", genus(I2[1]);
+// family (B) psi_3 o (x,xy^3): N=3, Z.K=1 -> 2g-2=4 -> g=3
+poly P3 = x + (x*y3)^3; poly Q3 = x*y3;
+ideal I3 = 3*P3+5*Q3-7; "famB k=3 m=3 genus:", genus(I3[1]);
+// (x,x^3y^2): N=2, Z.K=-4 -> 2g-2=-2 -> g=0
+poly P4 = x; poly Q4 = x3*y2;
+ideal I4 = 3*P4+5*Q4-7; "(x,x3y2) genus:", genus(I4[1]);
+// mock u1=1,v1=3,m=2,n=3: N=7, Z.K=-3 -> 2g-2=4 -> g=3
+poly P5 = x2*y6 + x*y + 1; poly Q5 = x3*y9 + x*y2 + x;
+ideal I5 = 3*P5+5*Q5-7; "mock3 genus:", genus(I5[1]);
+// PROFILE-WITNESS psi_2 o (x,xy^4-y^2): N=4, Z.K=0 -> 2g-2=4 -> g=3
+poly P6 = x + (x*y4-y2)^2; poly Q6 = x*y4-y2;
+ideal I6 = 3*P6+5*Q6-7; "G_2 genus:", genus(I6[1]);
+exit;
