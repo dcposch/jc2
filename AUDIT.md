@@ -15259,3 +15259,26 @@ FILTER-INVERSION, the CANNOT list and the reading are unchanged.
 Process: OPEN[NMIN-CONSUMPTION] raised in the coordinator's round
 submission (lanes must take N_min from the frontier line, not
 re-derive it).
+
+## INTEGRATION #16 DELTA (b) (2026-09-02, REVIEWED via D1-SUBTREE): #16 §C RETYPED
+
+"Its free datum (the sub-tree of D₁) only ever lowers N" is RETYPED to
+UPPER-ONLY[CONTACT]: true of the contact functional on a free joint
+tree, false of the boundary — the Jacobian condition slaves the f-tree
+(JAC-FIBRE) and pins the per-disc contribution (D1-PIN). See #17.
+
+## INTEGRATION #17 (2026-09-02 ~18:40Z, Fable 5.1) — THE BOTTOM OF MOH'S TREE IS AN EQUALITY; N IS PINNED PER DISC; NO CEILING FOLLOWS
+
+Pointer: `xmodel/integration17-coordinator-fable51-20260902.md`.
+Binds `d1-subtree-opus5-20260902.md` (26479b06) with its Grok review
+(66c3e82f; every theorem CONFIRMED). PROMOTED: JAC-FIBRE (ord f + ord
+g_y = −1 on every branch); FRONTIER-EXACT (N = Σ(1 − δ⁰)⁺ on the g-tree
+alone); D1-PIN (N = Σ_B V₂(B)q(B), q = (1−δ₁)de/(d+e); floor = ceiling
+iff r = 1); D1-STAR; RADIUS-ORDER = Moh Lemma 5.2; PIN-NOT-CEILING
+(measured: min V₂q = 3/112 at D ≤ 200, no growth); the integrality
+filter (60% of groups under (UNI) at D ≤ 120; no degree emptied); Moh
+search condition (15); corrected survivor N-sets {9},{4},{5,10},{9},
+{4,8},{16}. RETRACTED: the coordinator's integrality proxies. READING:
+OPEN[UPPER-TO-FLOOR] ANSWERED-SPLIT (floor = ceiling = O(1)); the
+all-degree program is realisability (OPEN[STAR-REALISABILITY],
+OPEN[BRANCH-ORBITS], OPEN[V-FLOOR]).

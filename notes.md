@@ -20437,3 +20437,18 @@ Reviews: `d1-subtree-review-grok46` launched (different model);
 `exact-n-rigidity-opus5` (hostile check of the squeeze) still running;
 `exact-packet-filter-gpt55` (conditional knapsack) running — partly
 superseded by §5 here, kept for the D ≥ 80 general knapsack.
+
+## LIVE STATE 18:40Z — INTEGRATION #17 BOUND: D1-SUBTREE REVIEW CONFIRMS EVERYTHING; N PINNED PER DISC; NO CEILING; SUCCESSORS LAUNCHED
+
+Review 66c3e82f (Grok): JAC-FIBRE, FRONTIER-EXACT, D1-PIN, D1-STAR
+(g-family + mixed; intra-f clustering free), PIN-NOT-CEILING, the
+integrality filter numbers, condition (15) all CONFIRMED; the printed
+CONTROL 5 survivor sets REFUTED (drop V₂; corrected {9},{4},{5,10},{9},
+{4,8},{16} — under N ≥ 6 the (84,56) M₂=64 row is dead); PLACE LAW a
+GAP as a PLACE-LEDGER theorem. Integration #17 bound; AUDIT delta 16(b)
+retypes #16 §C. Lanes: `star-realisability-sol56` (census kill
+condition: forced repeated root of p(π) at σ₁), `time-function-endgame-
+opus5` (polynomiality of the Lagrange interpolant of ∫dx/g_y on the
+smallest surviving D = 105 skeleton), `exact-n-rigidity-opus5` and
+`exact-packet-filter-gpt55` still running. Census running. Next round
+floor 04:55Z 09-03 with #17 §C as headline.
