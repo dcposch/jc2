@@ -19794,3 +19794,35 @@ automorphisms, the non-Keller PROFILE-WITNESS family, HALF-CAP's
 two-dicritical witnesses, the N = 4 (B3) data. Seats: Opus 1/5; Sol 1;
 Grok 1 + GPT-5.5 1 (reviews). Lane watcher v2 (b2m0wnajc) replaces v1
 (a zsh list-splitting bug misreported the last two exits).
+
+EVENT (~12:40Z per lane print) — **SAT-MASS REVIEWED**
+(`sat-mass-review-gpt55-20260902.md`, 6af7ec8f, BODY_SEALED): A
+(SAT-WEIGHT) CONFIRMED with an indexing repair (sums over strict
+boundary components; c_C = Z·E_i^strict = a_i − sum_{j→i} a_j, and for
+E_0 rho_0 = D − sum_{j→0} a_j; Picard-intersection algebra); B (the T
+definition) GAP as written, CONFIRMED after correction — DEG-SPLIT's T
+is T_ext, the mass of points proximate to two members of the EXTENDED
+cluster, with T_ext − T_class = D − sum_{level 1} a_i − rho_0 globally
+(the charged formula omitted −rho_0; valid only when E_0 is contracted,
+e.g. under D > N) — **integration #12 must read its "satellite mass" as
+T = T_ext (AUDIT delta appended)**; C (LEDGER-BLIND) CONFIRMED for the
+listed banked ledger (N, the A_F data n, W, s_l, mu_l, S, kappa,
+Lambda, dicritical excesses, the (m,k) multiset over L_infty, Z·K_X,
+g_net), REFUTED if "every entry" included source-cluster data (a_i,
+proximity graph, r, nu, T move under source composition); D (HALF-CAP)
+CONFIRMED under H2, ell = 1 (one dicritical) and D > N — the W <= 3
+implication repaired: in an H2 non-proper cell with S >= 1 and 7.B'
+(W >= 2S), W <= 3 forces S = 1 and ell = 1; sharpness and the three
+multi-dicritical refutations recompute; E (the price) CONFIRMED — for a
+degree-minimal representative D = D_min; T <= tau gives D_min <=
+2(tau + N) in W <= 3 H2 cells, and tau <= 50 − N contradicts Moh; F
+(degree-minimality) GAP for the claimed source-boundary cluster
+translation — only a target-side elementary reduction criterion and
+the Moh floor are proved; NOTHING bounds nu_C or T yet; the gcd >= 16
+package is an external classical input, not load-bearing. PROMOTE
+A, E; B with the −rho_0 correction; C for the banked ledger; D with its
+hypotheses; F only as target-side minimality + Moh floor.
+Net: the D-half of the crossing is now an exact, reviewed statement —
+**a bound T_ext <= 50 − N on a degree-minimal Keller pair in an H2 cell
+with W <= 3 kills the cell** — and the boundary-tree translation of
+minimality is the named gap (owned by `minimal-keller-shape`).

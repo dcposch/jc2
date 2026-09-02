@@ -15030,3 +15030,21 @@ for every noninvertible Keller map; any proved D_min <= 100 at
 geometric degree N kills N outright). Records OPEN[SAT-MASS] and the
 retyping OPEN[N-VS-MAPDEG] (upper) = ANTICANON-DEFECT ∧ SAT-MASS. See
 the artifact for exact statements — this entry is a pointer.
+
+## INTEGRATION #12 DELTA (2026-09-02, REVIEWED): THE SATELLITE MASS IS T_ext
+
+`sat-mass-review-gpt55-20260902.md` (6af7ec8f) confirms SAT-WEIGHT and
+the Moh price of `sat-mass-opus5-20260902.md` (3fee2e6a) and binds a
+definition correction to integration #12: the satellite mass T in
+DEG-SPLIT (D = S n + kappa + T) is T_ext, the mass of base points
+proximate to two members of the EXTENDED cluster {L_infty, p_1, …, p_r},
+with T_ext − T_class = D − sum_{level-1} a_i − rho_0 globally
+(rho_0 = D − sum_{j→0} a_j). Promoted at scope: SAT-WEIGHT (strict
+components; D = sum nu_C c_C, N = sum m_C c_C, D − T = sum c_C,
+T = sum (nu_C − 1) c_C); LEDGER-BLIND for the banked ledger list;
+HALF-CAP under H2, one dicritical, D > N (with the repaired W <= 3
+implication: S >= 1 + 7.B' + W <= 3 ⇒ S = 1, one dicritical);
+SAT-CROSS: T_ext <= tau on a degree-minimal representative gives
+D_min <= 2(tau + N) in W <= 3 H2 cells, so tau <= 50 − N contradicts
+Moh. NOT promoted: any source-boundary cluster translation of degree
+minimality; any bound on nu_C or T.
