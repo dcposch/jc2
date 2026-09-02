@@ -51,7 +51,7 @@ from a2_cells_jobs import (  # noqa: E402
 )
 
 
-EXPECTED_PACKAGE_VERSIONS = {"qqideal": "0.1.0", "msolveio": "0.1.0"}
+EXPECTED_PACKAGE_VERSIONS = {"qqideal": "0.2.0", "msolveio": "0.2.1"}  # cut over 2026-09-02 ~08:28Z after a zero-disagreement mini-oracle
 # Coordinator 2026-09-02: an explicit env override for the pinned package
 # versions, so a candidate stack (e.g. qqideal 0.2.0 + msolveio 0.2.1) can be
 # run through the SAME gate/oracle path in a separate venv without editing

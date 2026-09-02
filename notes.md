@@ -18643,3 +18643,19 @@ targets; a NONEMPTY cell would finally yield a point, not just a
 bit). Also queued for the round synthesis: the two ideation
 lanes and two adjudication lanes launched 08:25-08:35Z
 (`phi-immersion-adjudication-sol56`, `chau-delta-budget-gpt55`).
+
+EVENT (observed 2026-09-02T08:28Z per the oracle log) — **STACK CUTOVER
+0.1.0 -> qqideal 0.2.0 + msolveio 0.2.1 EXECUTED** under the same
+discipline as the first cutover: separate venv (`box01:~/qqoracle-venv-02`,
+python-flint 0.9.0, msolve 0.10.1 binary unchanged); mini-oracle = the
+A2 item-0 gate (1,3) (mod-p PROVEN + char-0 MODULAR EMPTY, output
+hashes a2add80d / 35f9f437 IDENTICAL to the 0.1.0 run) plus the
+863/964 replays (p1_863 AGREE-EMPTY modular, sha e8d372a9; p3_964
+NONEMPTY PROVEN dim 3, sha d5b018c7) — ZERO disagreements. Default
+pin in `box/a2_cells_run.py` bumped to 0.2.0/0.2.1 for NEW jobs (env
+override `A2_CELLS_PACKAGE_VERSIONS` added for candidate stacks); the
+running box01 window stays on its 0.1.0 venv untouched. First new
+consumer: `witness_points` on NONEMPTY verdicts (queued for the (B3)
+N=4 parametrisation search and any NONEMPTY cell). Note for the
+runner text: its certainty-scope banner still says "qqideal 0.1.0's
+contract" — cosmetic, unchanged semantics.
