@@ -19268,3 +19268,15 @@ Successor (2) of DEG-AF launched: `meridian-floor-sharpen-opus5-20260902`
 point-stabiliser conditions; price every (N,W) cell; attempt the (B2)
 death condition delta_aff <= 3 at 5 <= N <= 10 from the same group
 data). Opus seats 2/5.
+
+EVENT (observed ~10:35Z) — **INTEGRATION #10 BOUND AND VERIFIED**
+(`integration10-coordinator-fable51-20260902.md`, body 20cb472d, full
+ae090823, basis 5964c9cd, staged-verify VERIFIED, commit d17bed11): the
+(B3) source-curve theorem set with its three repairs; the degree gate in
+invariant form (SG-INV, DEG-DELTA(a)/(b), MERIDIAN-FLOOR, the (B2)/(B3)
+consequences, the crossing price); OPEN[DEG-AF-VS-N] → OPEN[DELTA-AFF-
+VS-N]; records the boundary instrument (review running), the systems
+deliverables, the 0.2 cutover, the DEGRADED round. AUDIT pointer
+appended. Standing fronts as in its §D. Runners: n-vs-mapdeg (opus),
+meridian-floor-sharpen (opus), a2-dev-projection (sol),
+b3-boundary-instrument-review (grok); Box03 869 at its cap.
