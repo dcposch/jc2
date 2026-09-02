@@ -7157,3 +7157,26 @@ fleet spun up.
   emptied, 59 -> 21).
 - Box01 Keller-cluster census running (587/975 cells, no failures).
   Next round floor 04:55Z 09-03.
+
+### 2026-09-02, evening (coordinator Fable 5.1) — integration #17: N pinned per disc; no ceiling; realisability is the program
+
+- **D1-SUBTREE** (Opus) + Grok review, every theorem CONFIRMED, bound as
+  **integration #17** (126d9c84): JAC-FIBRE (ord f + ord g_y = −1 on
+  every branch), FRONTIER-EXACT, D1-PIN (N = Σ_B V₂(B)q(B),
+  q = (1−δ₁)de/(d+e); floor = ceiling iff r = 1), D1-STAR, RADIUS-ORDER
+  = Moh Lemma 5.2, PIN-NOT-CEILING (pinned value O(1); min V₂q = 3/112
+  at D ≤ 200), the integrality filter (60% of groups under (UNI) at
+  D ≤ 120; no degree emptied; Moh's survivors pass), Moh condition (15).
+  #16 §C retyped UPPER-ONLY[CONTACT]; coordinator proxies retracted.
+- Reading: OPEN[UPPER-TO-FLOOR] ANSWERED-SPLIT. The boundary computes
+  N exactly and the value never grows with D; the ceiling program on the
+  boundary is closed by theorem. The all-degree program is realisability
+  of pinned skeletons (Moh's Appendix II in exact form).
+- Mixed-branch packet filter (GPT-5.5): D = 105 complete, 125/264 admit
+  an integer N ≥ 6; D = 117: 43/60; 108/112/120 capped; nothing empties.
+  Smallest D = 105 packet: (105, 42, (−14,103), 5), twelve branches of
+  type V = (1,5,1), N = 10.
+- Lanes out: time-function-endgame (Opus flagship; polynomiality of the
+  Lagrange interpolant of ∫dx/g_y at D = 105), star-realisability (Sol),
+  branch-orbits (Grok; is (UNI) a theorem), ortho-defect-review (GPT-5.5),
+  exact-n-rigidity (Opus). Census 593/975. Next round floor 04:55Z 09-03.
