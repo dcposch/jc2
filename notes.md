@@ -18286,3 +18286,14 @@ per §4 spec) + a U-BOUND attempt lane; both feed the 12:22Z
 round.
 
 869 msolve still grinding (~7h process time).
+
+EVENT (observed 2026-09-02T05:31Z per date print): **GROK
+BALANCE EXHAUSTED** — `ray-kill-review-grok46-20260902` FAILED
+pre-model with HTTP 402 "Grok Build usage balance exhausted"
+(run typed UNAVAILABLE_NO_MODEL_WORK, report_state=MISSING, no
+mathematical content charged). Review REROUTED to GPT-5.5
+(`ray-kill-review-gpt55-20260902`, launched). ROUTING NOTE
+until DC restores balance: Grok volume roles fall back to
+GPT-5.5 (reviews) and Sol (research); Fable/Opus unchanged.
+FLAGGED TO DC (acceleration blocker: Grok is the review/volume
+workhorse under the standing policy).

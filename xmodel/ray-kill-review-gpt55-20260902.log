@@ -1,0 +1,99 @@
+cli=codex-cli 0.152.0 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.152.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a06095-5f84-7a20-9040-b764097f4071
+--------
+user
+# Review lane: RAY-KILL-REVIEW — gate RAY-1/RAY-DEP/RAY-EDGE/RAY-2
+
+The charged ray-kill report proves, one order past the reviewed
+THEOREM HORN-A2: RAY-1 (the 4x5 next-order linear system, rho
+carried by EQ3, rho != 0 exactly on U = 3e); RAY-DEP (the exact
+dependency n(N1)+(n-2)(N3)-(N4) = -(n-2)rho, rank <= 3);
+RAY-EDGE (the boundary slice U = 3e is EMPTY — proved e >= 2 via
+the rank obstruction with rho = -P(-(2e+1)) b^2 eta_e^4/...;
+the degenerate cell n=2,(e,U)=(1,3) via an exact Groebner
+decision); RAY-2 (deg E1 <= 2e-2 on survivors); the exact
+2-dimensional residual per cell (second-order pins displayed);
+per-cell finiteness/overdetermination; NEW OPEN[A2-U-BOUND]
+(U unbounded per e); and a LEDGER CORRECTION (a ray kill closes
+OPEN[A2-CELL-32] + one OBSTRUCTION[A-DEGREE-TWO] layer, NOT
+(B3) windows — the charge premise was wrong per HF §5).
+Hostile review, sympy available:
+(1) Replay RAY-DEP symbolically (the identity must hold
+    coefficient-by-coefficient; state your residuals).
+(2) RAY-EDGE e>=2: verify rho != 0 — in particular that
+    P(-(2e+1)) != 0 for all e >= 2 (P is HF's chamber-II
+    polynomial; check its roots exactly).
+(3) The (1,3) Groebner decision: RERUN it yourself (state
+    engine + basis); the lane ran it in-sandbox — verify the
+    system transcription against the closed form of its §3.1.
+(4) RAY-2 and the second-order pins: replay; check the pins'
+    derivation does not divide by anything unproven-nonzero
+    (eta_e, r_n, s_s nonzero — sourced where?).
+(5) The ledger correction: adjudicate against HF §5 — was the
+    charge wrong as claimed? State what a full ray kill would
+    and would not close.
+(6) The five control layers of its §2 (scaling residuals etc.):
+    spot-verify two.
+Verdict per claim: CONFIRMED / REFUTED / GAP.
+Report: xmodel/ray-kill-review-gpt55-20260902.md
+Seal-at-completion; target 15-25KB.
+charged_input=xmodel/ray-kill-opus5-20260902.md
+charged_input=xmodel/horn-flagship-opus5-20260902.md
+
+Your inputs are frozen read-only copies in `/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.epUu4p/inputs`;
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+3d08b8996227e292d76e0ba3901cfad16099f347f97129d27b6bf5b3bc253f0a  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.epUu4p/inputs/ray-kill-opus5-20260902.md
+30589f6c52843971fa6791f7b792d6980e4d71a2dfe8ef670a024a6cbd5bb4cb  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.epUu4p/inputs/horn-flagship-opus5-20260902.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll start by verifying the frozen input hashes exactly. If either differs, I’ll stop before reading or producing the review.
