@@ -15379,3 +15379,29 @@ endgame target (105, 70, (−70,−63,103), V = (1,4,1)) is NOT among the
 three (10)-survivors; OPEN[CENSUS-REBASE] is the next move (lane
 launched); OPEN[MOH-11] (recover (11) from a clean scan of p.201).
 Review: pending a free non-Opus seat.
+
+## INTEGRATION #17 DELTA (e) (2026-09-02 18:58Z, PROVED-HERE/UNREVIEWED + SOURCE-MOH + MEASURED): DELTA-DENOM — THE RAW DENOMINATOR TEST IS REFUTED; THE SIGNAL IS MOH'S (10)–(13)
+
+`delta-denom-gpt55-20260902.md` (7355259f; driver
+box/delta-denom-drivers-20260902/delta_increment_filter.py; p.147, 154,
+179–180, 201–202, 207 read as images). THEOREM DELTA-DENOM-ACTUAL:
+Prop 5.3's δ_{r−1} is a minimum of ord_t(α − β) over selected roots of
+g·∏T_j^ψ, so its reduced denominator divides the ramification index of
+a branch in an attaining pair (a branch-data theorem, not a skeleton
+theorem). REFUTED: the raw test denom(δ_i) | n or | m (Moh p.207's
+transformed (21,14) row has δ₁ = 7/6). SOURCE-MOH (transcribed from
+p.201, IMPLEMENTED-HERE-UNREVIEWED): with L_i = lcm(den δ_s, …, den
+δ_{i+1}) and A_i = den(L_i δ_i), Moh's (12)/(13) at i = 1 read
+A₁ | (n/d₂)V₂ and A₁ | (m/d₂)V₂ − 1, or the same with n, m swapped; for
+i ≥ 2, with B_i = V_{i+1}d_i/d_{i+1} = Δ_i A_i + R_i, (10)/(11) give the
+necessary union V_i ≤ Δ_i or V_i ≡ R_i (mod A_i). MEASURED D ∈ [48,120]:
+902,893 V-skeletons → 1,692 pass all (0.19%); among the 9,553 (UNI)
+N ≥ 6 survivors, 840 pass (8.8%); D = 105: 5,037 → 15 (UNI: 7); D = 48,
+66, 78 → 0. The endgame/DISC-COUPLING target (δ₁ = 3/4, δ₂ = 71/95)
+FAILS at A₁ = 4 and A₂ = 95 — DEAD (unreviewed). Two independent
+transcriptions of p.201 now exist (calibration lane: (10)₁ congruence
+eV₂ ≡ 0,1 mod Δ₁ and reconstructed (10); this lane: the (12)/(13)
+divisibility pair and the (10)/(11) union); they agree on the six
+Moh rows and on killing the D = 105 target and differ in form —
+CENSUS-REBASE (verbatim recovery) adjudicates; neither is promoted.
+GAP: CHAIN-TO-RAMIFICATION.

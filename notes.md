@@ -20603,3 +20603,14 @@ REBASE (Opus, 5/5) recovers (8)–(11) verbatim from the p.201 image,
 implements them, and reruns the #17 programme on Moh's true space.
 Review of the calibration report queued for the first free non-Opus
 seat (Grok/branch-orbits expected first).
+
+## EVENT 18:58Z — DELTA-DENOM LANDED (7355259f): raw denominator test REFUTED; the signal is Moh's (10)–(13); #17 delta (e)
+
+Second independent confirmation that the census omits Moh's search
+conditions; under GPT-5.5's transcription D ≤ 120 keeps 1,692
+V-skeletons and D = 105 keeps 15 (7 with an integer N ≥ 6). The
+DISC-COUPLING/endgame target is dead by both transcriptions; the
+DISC-COUPLING lane continues as METHOD development only and will be
+re-targeted on a rebased survivor. Lanes: branch-orbits (Grok),
+reducible-branch (Opus), endgame-review (Sol), disc-coupling (Opus),
+census-rebase (Opus), tf-calibration-review (GPT-5.5). Census 603/975.
