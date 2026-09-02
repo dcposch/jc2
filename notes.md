@@ -20013,3 +20013,26 @@ kills; D_min >= 102 with the divisor structure; the day's binding
 reading in its §C. Runners: depth-ceiling (opus), keller-cluster-
 census-codegen (sol). Seats: Opus 1/5; Sol 1; Grok 0; GPT-5.5 0. Next
 full-round floor 20:57Z; the round's headline is the §C reading.
+
+EVENT (~13:20Z per lane print) — **KELLER-CLUSTER-CENSUS instrument
+landed** (`keller-cluster-census-codegen-sol56-20260902.md`, 489e9ba2,
+BODY_SEALED; `box/keller_cluster_census.py`, 106KB, standard library
+only, integer-exact; commands self-test / plan / census / merge /
+validate; coordinator ran `self-test`: ok = true, 41 frozen polar
+fixtures and 41 dicritical-neighbour fixtures passed, 6 automorphism
+Noether controls, NEG-GEN rejected in Keller form and accepted with the
+affine term, quadratic Cremona reproduced, strict-window merge
+contract enforced). DESK RESULT: the charged strict window
+(N/2 < a <= N − 2) is VACUOUS at N = 2, 3, 4 (no integer a) — NOT
+evidence about NOETHER-K; an uncapped exact run to N = 5, D <= 10 found
+the FIRST strict-window numerical solution at (D, n, S, kappa, T, W, a)
+= (10, 5, 1, 2, 3, 2, 3) with multiplicities (5,5,5,4,1,1,1,1) and an
+explicit proximity forest — globally nef by the certificate, satisfying
+every enumerated equation, NOT a map, and below Moh's floor. Typing:
+artifact = NUMERICAL_PROFILE, attainment = NECESSARY. BOX01 PLAN
+(its §7): 1,393 (N, D) cells for N = 2..8, D = 2..200 (752,680 raw
+scalar profiles, 385,222 after parity; 580,550 raw in the Moh-compatible
+half 101 <= D <= 200), 48 workers, 11h per-cell deadline and a
+250,000-state cap (any cut marks the cell INCOMPLETE — never a zero
+count), fail-closed merge, engine hashed once per run. Launch follows
+the readiness check (Python 3.12, GNU parallel).
