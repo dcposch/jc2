@@ -19603,3 +19603,13 @@ pairs, Heitmann/GGV's gcd >= 16, and the JvdK reduction of a minimal
 pair. Together with `keller-pencil-genus` (the n half) this is the
 whole price of every (B2)/(B3) cell at 4 <= N <= 33. Seats: Opus 2/5;
 Sol 1; Grok 1; GPT-5.5 0.
+
+EVENT (~11:58Z) — **INTEGRATION #12 BOUND AND VERIFIED** (body per the
+AUDIT pointer, basis 872c4f41): the ceiling in invariant form, the
+one-integer reduction, MOH-CROSS, MF-DEFECT closed. THE CAMPAIGN'S
+PRICE, in one line (its §C): every (B2)/(B3) cell at 4 <= N <= 16 is
+closed by two bounds on a degree-minimal Keller pair — the anticanonical
+defect (= the genus of the generic pencil member = deg A_F) and the
+satellite mass — against Moh's D >= 101; two flagships own the two
+halves. Runners: keller-pencil-genus (opus), sat-mass (opus),
+b3-census (sol), mf-defect (grok).

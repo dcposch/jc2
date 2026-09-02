@@ -15011,3 +15011,22 @@ Records OPEN[BI-CENSUS-DEG5-DEG6], OPEN[BI-TAIL-AT-INFINITY],
 OPEN[BI-H-INFTY-N4], OPEN[MF-DEFECT], OPEN[MULT-VS-BETA], the A2
 reissue delta 9c, and the standing fronts. See the artifact for exact
 statements — this entry is a pointer.
+
+## INTEGRATION #12 (2026-09-02, FABLE 5.1 COORDINATOR, VERIFIED)
+
+Binding artifact: `xmodel/integration12-coordinator-fable51-20260902.md`
+(body 2fdceea1, basis 872c4f41, VERIFIED via artifact_finalize, staged-verify
+VERIFIED at commit). Promotes, at the scopes and with the binding
+repairs stated therein, the all-degree ceiling in invariant form
+(producer opus ca915761, reviewer gpt55 05d59097): the invariant D_min;
+NEG-GEN at lower-bound scope; the polar ledger with its definitions,
+PROP DN, DEG-SPLIT, CAP-STRICT, NOETHER-K (the Noether equations for
+degree-N Keller maps); NO-CEILING[LATTICE-LEDGER]; MERIDIAN-FLOOR+
+(n >= ceil((N−1)/(W−S)) + 1); the reviewer's consequence closing
+OPEN[MF-DEFECT] POSITIVE (2 g_L + theta_inf >= W − S + 1); the
+one-integer reduction OPEN[DELTA-AFF-VS-N] ⇔ OPEN[ANTICANON-DEFECT]
+(Z·K_X = sum a_i − 3D = −2N − kappa + n(W − S)); MOH-CROSS (D_min >= 101
+for every noninvertible Keller map; any proved D_min <= 100 at
+geometric degree N kills N outright). Records OPEN[SAT-MASS] and the
+retyping OPEN[N-VS-MAPDEG] (upper) = ANTICANON-DEFECT ∧ SAT-MASS. See
+the artifact for exact statements — this entry is a pointer.
