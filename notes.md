@@ -19429,3 +19429,23 @@ on the topology of a smooth affine curve cut by a Keller pencil. The
 running `n-vs-mapdeg` flagship is told this at harvest; OPEN[MF-DEFECT]
 gets a desk lane after the review. Seats: Opus 1/5 (n-vs-mapdeg); Sol 1
 (b3-census); GPT-5.5 1 (mfs review); Grok 0.
+
+COORDINATOR DESK NOTE (~11:05Z, UNREVIEWED, negative): MF-EXACT invites
+the Suzuki / Hà–Lê fibre-defect accounting on the Keller pencil
+u∘F = alpha P + beta Q (a polynomial submersion, so every fibre is
+smooth and atypical values come only from infinity): with chi(C_L) =
+N − nW for the generic fibre, sum over atypical c of
+[chi(F_c) − chi_gen] = 1 − chi_gen = nW − N + 1, each term >= 0 (Hà–Lê
+in dimension 2). Computing the defects from the covering structure
+(F proper étale over L_c \ A_F; a_p affine preimages over each p in
+L_c ∩ A_F): a smooth tangency costs W; a line through a singular point
+p of multiplicity m_p costs (m_p − 1)W − K_p (so m_p >= 1 + K_p/W — a
+weaker form of LOC-MULT); the parametrisation's u-coordinate has n − 1
+critical points of which each branch of multiplicity m_b absorbs
+m_b − 1. Summing: sum_p K_p = W sum_p (r_p − 1) + a − 1 — which is
+EXACTLY the campaign's banked (K) ledger (control: N = 4 (B3) k = 1,
+cusp K = 1 + node K = 2 = 2·1 + 2 − 1). Conclusion: the generic-fibre
+reformulation of the degree question adds NO constraint beyond the
+ledger; the defect budget is linear in n and is fully spent by (K).
+Consistent with the lane's MRK-READING. Recorded so the n-vs-mapdeg
+harvest does not re-walk it.
