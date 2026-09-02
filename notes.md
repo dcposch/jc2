@@ -20524,3 +20524,5 @@ x⁻¹ coefficient of 1/g_y(x, τ) vanishes on every branch of every fibre
 has [x⁻¹] = ±1/2). This is the residue gate the time-function lanes
 impose at all orders. Sent with STAR-REALISABILITY to a GPT-5.5 batch
 review (`rigidity-star-review-gpt55`).
+
+## CLOCK NOTE 18:30Z — the "EVENT 19:40Z / 20:05Z / 20:20Z" stamps above were written at ~17:50Z / 18:05Z / 18:20Z (coordinator estimate drift); stamps from here on are taken from `date -u`. Four lanes alive: time-function-endgame (Opus), time-function-calibration-d48 (Opus), branch-orbits (Grok), rigidity-star-review (GPT-5.5). Census 601/975.
