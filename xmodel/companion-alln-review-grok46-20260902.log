@@ -1,2 +1,23 @@
 cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
-I'll start by verifying the frozen input hashes, then read the charged papers and independently replay the two theorems.Hashes match. Next I’ll read the charged papers, FALLACY-v2, and how prior reviews were sealed.Hashes check out. I’ll load the charged papers and a recent sealed review so the report matches the campaign contract.The paper’s remaining sections and the REP-96 inner source are next; I’ll also pin the frozen-basis convention used at seal.Hashes matched. Next I’ll independently derive the cancellations and run sympy checks on the witness, the three-row family, Chau, and the §2.5 harness.Most of the algebra already checks out. I’ll fix the polynomial-division bugs and generate AGG configurations directly so the harness is a real replay, not a filter.Witness and family checks passed. I’ll now confirm D1 has no extra affine singularities and try to match the paper’s m=2 CONTACT samples.All machine checks passed. I’ll write the hostile review from the independent derivation, then seal it.The draft is over the 25KB cap. I’ll compress it without dropping any verdict or derivation.
+I'll start by verifying the frozen input hashes, then read the charged papers and independently replay the two theorems.Hashes match. Next I’ll read the charged papers, FALLACY-v2, and how prior reviews were sealed.Hashes check out. I’ll load the charged papers and a recent sealed review so the report matches the campaign contract.The paper’s remaining sections and the REP-96 inner source are next; I’ll also pin the frozen-basis convention used at seal.Hashes matched. Next I’ll independently derive the cancellations and run sympy checks on the witness, the three-row family, Chau, and the §2.5 harness.Most of the algebra already checks out. I’ll fix the polynomial-division bugs and generate AGG configurations directly so the harness is a real replay, not a filter.Witness and family checks passed. I’ll now confirm D1 has no extra affine singularities and try to match the paper’s m=2 CONTACT samples.All machine checks passed. I’ll write the hostile review from the independent derivation, then seal it.The draft is over the 25KB cap. I’ll compress it without dropping any verdict or derivation.All five charged items are **CONFIRMED**. Report: `xmodel/companion-alln-review-grok46-20260902.md` (sealed; body `24985` bytes).
+
+Frozen input hashes matched before any reading. Both UNREVIEWED theorems survived independent re-derivation and exact sympy replay.
+
+| # | Claim | Verdict |
+|---|---|---|
+| (1) | THEOREM COLLAPSE-N, including §2.5 | **CONFIRMED** |
+| (2) | THEOREM COMPANION-EXISTS + MULT-2 | **CONFIRMED** |
+| (3) | `(9,6,2)` witness and `a_p` census | **CONFIRMED** |
+| (4) | Lemma CONTACT and `M <= K` bookkeeping | **CONFIRMED** |
+| (5) | Chau Cor 1 / Cor 2 inversions | **CONFIRMED** |
+
+**COLLAPSE-N.** The cancellation was derived from `(LOC)` and `chi_c` additivity, not checked line-by-line. Singularity variables cancel identically. `(LOC)`’s sign is locked by the generic fibre `a^{(i)}=N-W_i`, the witness census, and the CAGE display. Lemma A is not used in the identity; with `(AGG)` it is the conclusion. The floating-`K_tot` trap is real (`35116/41123` mismatches); identifying `K_tot=sum_p K_p` actually repairs it (`0/41123` unfiltered, `0/5000` constructed AGG).
+
+**COMPANION-EXISTS.** Three spots chosen here all work: `(3,2,m=1,λ=1)`, `(5,3,m=2,λ=8)`, `(2,1,m=2,λ=3)` on the repaired `e=1` row. MULT-2 is a sound Gate-EMB kill (graph of a polynomial) and is silent at `(d,e)=(3,2)`.
+
+**Witness.** `xi |-> (xi^3+xi+1, xi^2+3)` is immersive, one ordinary node at `(1,2)`, Chau invariant `1`, twelve distinct transverse crossings, four `D_1`-nodes avoided (Groebner basis of the singular locus is exactly `(u, v^4+96v^2+1536)`), Bezout `27=12+15`, census `a_p in {0,1,2}` with `LHS=RHS=-63`.
+
+**CONTACT / `M<=K` / Chau.** Affine bound `m_1 m_2 de - min(m_1,m_2)` and the Sylvester `deg_u/deg_v` argument both hold. Printed Cor 1/Cor 2 are inverted on `xi |-> (2xi^3, xi^2)`: the vanishing form is `B^d u^e - A^e v^d = u^2-4v^3`, and `c^e=A^e/B^d`.
+
+The producer’s `CLOSED-NEGATIVE` obstruction-lane verdict is licensed on these two theorems. `(9,6,2)` survives this attack. No Keller map is implied. No exit price; no `charge_basis` line.
+DIVERT path=xmodel/companion-alln-review-grok46-20260902.md status=CLEAN_SEALED body_bytes=24985 body_sha256=ee0b9adf589e1e29a9d3dabb97baf4231bf0cdeb0b5c06dcc996f473c9597344

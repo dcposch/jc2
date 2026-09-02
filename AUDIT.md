@@ -14834,3 +14834,23 @@ independent checker fills them.  This is a reproducibility-coverage repair,
 not a mathematical repair.  The result does not prove an order-four pole,
 order-four polynomiality, raw-window compatibility, endpoint emptiness, a
 Keller theorem, or JC2.
+
+## INTEGRATION #7 (2026-09-02, FABLE5 COORDINATOR, VERIFIED)
+
+Binding artifact: `xmodel/integration7-coordinator-fable5-20260902.md`
+(body 1f8dd6eb, full 4a44f21a, basis 7b04bd5e, VERIFIED via
+artifact_finalize). Promotes, at the scopes and with the binding
+repairs stated therein: N=4-CHECKED-CLOSED (modulo structure
+packages); DET-LINF-NONPOS; the (8,6,11)/(8,6,7) twice-derived
+rep kills + THEOREM TB-GERM (4 repairs binding); the (8,6,3)
+curve-level kill; THEOREM CABLE-3 + both (9,6) survives-verdicts
+(3 repairs binding); the (9,6,2) and (9,6,4) realizations;
+CAGE-N-R2; Path-1 set (LEMMA A, SMOOTH-KILL, PROP 6.1,
+NODAL-ALL-N, THEOREM PROFILE, CUSP-KILL, COR 7.2 — calibration
+binding); Path-2 set (THEOREM COLLAPSE-N, THEOREM
+COMPANION-EXISTS, MULT-2, Chau corrections); footguns #10/#11.
+Records: BURNSIDE-CHI collapse + rank formula; N5 =
+SOUND-BY-DEPENDENCY-AUDIT with the Heitmann-vs-Zoladek typing;
+Card C dead at step 0; the SOURCE-OPEN-U retype; the standing
+fronts. See the artifact for exact statements — this entry is a
+pointer, not a restatement.

@@ -23,34 +23,30 @@ cited by line: `domrina-gap-repair-opus5-20260901.md:141-176` (Lemma DET-LINF),
 `tb-g2-finish-opus5-20260901.md:418-480`, `notes.md:17290-17310` (footguns
 #10/#11, SIROCCO census receipt), `box/bmfact_962.sage`, `box/cover_h1.py`.
 
-Ran in-lane, no CAS, no AWS, no network: `box/cover_h1.py` (audited §3, two
-defects found, repaired, fifth control added); `box/covergeo.py` (written this
-lane, §7); four throwaway audit scripts (SNF cross-check, `d_1∘d_2` validity,
-convention-witness search, `B_3` torsion census) whose conclusions are
-reproduced below. Numbers labelled MEASURED came from those runs; everything
-else is desk derivation and marked so. No sibling `20260902T0022Z` report was
-opened beyond the three charged submissions.
+Ran in-lane, no CAS/AWS/network: `box/cover_h1.py` (audited §3, repaired);
+`box/covergeo.py` (written this lane, §7); four throwaway audit scripts (SNF
+cross-check, `d_1∘d_2` validity, convention-witness search, `B_3` torsion
+census). MEASURED = from those runs; all else is desk derivation, marked so. No
+sibling `20260902T0022Z` report was opened beyond the three charged submissions.
 
 ---
 
 ## 1. Task (1) — the retype, as ONE typed object
 
-### 1.1 The three statements, as written
+### 1.1 The three statements
 
-* `[G] §3`: SHEET-GATE `Y = Spec B` "is never `C^2` (Lemma 2.2: `B_Y`
-  nonempty)"; the right question is whether the Riemann-existence cover admits a
-  Zariski-open `U ≅ A^2` whose complement is a curve mapping onto `D`, with
+* `[G] §3` names SHEET-GATE `Y = Spec B`: it "is never `C^2` (Lemma 2.2: `B_Y`
+  nonempty)", and the right question is whether the Riemann-existence cover
+  admits a Zariski-open `U ≅ A^2` with curve complement mapping onto `D` and
   four-box numbers matching SHEET-GATE.
-* `[S] §1/§4`: the label "`Y` is `C2`" is unsafe; construct `q : Y → A^2` from a
-  full monodromy survivor and **seek the divisor `B_Y` for which `U = Y − B_Y`
-  is the Keller source** — "do not test whether the whole `Y` is `A2`". Safe
-  replacement token `OPEN[REP-96-A2-OPEN-IMMERSION-BOUNDARY]`.
-* `[O] §3.1`: `F` is étale everywhere, so nothing is branched; by ZMT the
-  normalisation `Ȳ` contains the source as an *open* subset with `Ȳ ∖ C^2` a
-  curve, and `Ȳ` is normal and typically singular, so `Ȳ ≅ C^2` is **not
-  necessary**. The necessary finite condition is `(SRC)`: the `N`-sheeted
-  covering space of `C^2 ∖ A` determined by `rho` is the complement of a plane
-  curve in `C^2`.
+* `[S] §1/§4` names the finite normalization `q : Y → A^2`: the label "`Y` is
+  `C2`" is unsafe; **seek the divisor `B_Y` for which `U = Y − B_Y` is the
+  Keller source** — "do not test whether the whole `Y` is `A2`".
+* `[O] §3.1` names the normalisation `Ȳ` of the target in `C(x,y)`: `F` is étale
+  everywhere so nothing is branched, ZMT puts the source in `Ȳ` as an *open*
+  subset with curve complement, and `Ȳ` is normal and typically singular, so
+  `Ȳ ≅ C^2` is **not necessary**. Necessary and finite is `(SRC)`: the
+  `N`-sheeted covering space of `C^2 ∖ A` is a plane-curve complement in `C^2`.
 
 ### 1.2 Lemma SRC-0 — the three `Y`s are one scheme
 
@@ -106,10 +102,10 @@ hypothetical `rho`; clause 5 is `[G]`'s four-box match; `[S]`'s
 `OPEN[REP-96-SOURCE-IS-C2]` (`[R96]:652`) is **retired as mis-typed**: it asks
 for `Y ≅ C^2`, which `[SG]` Lemma 2.2 refutes for every Keller `F`, so the token
 is unsatisfiable and its "openness" was an artifact. Successor
-**`OPEN[SOURCE-OPEN-U]`** = does a `U` satisfying `(SRC-OPEN)` exist for a given
-`rho`; `[S]`'s `OPEN[REP-96-A2-OPEN-IMMERSION-BOUNDARY]` is an alias. This is a
-*typing* correction, not a closure: the geometric gap `[R96] §7 R2` names is
-undiminished and now lives in the successor token.
+**`OPEN[SOURCE-OPEN-U]`** — does a `U` satisfying `(SRC-OPEN)` exist for a given
+`rho`? `[S]`'s `OPEN[REP-96-A2-OPEN-IMMERSION-BOUNDARY]` is an alias. A *typing*
+correction, not a closure: the gap `[R96] §7 R2` names is undiminished and now
+lives in the successor.
 
 ---
 
@@ -144,32 +140,26 @@ decides razor (b)'s free parameter (the sheet-location bit `b`).
 ### 3.1 The mathematics is correct
 
 `[O] §3.2`'s razor rests on `H_1(C^2 ∖ E) = Z^{r(E)}`, free of rank the
-component count; re-derived independently from
-`H_2(C^2)=0 → H_0(E) → H_1(C^2∖E) → H_1(C^2)=0`. `H_1` of a covering space is
-the abelianisation of the corresponding subgroup. Both steps stand, and `[O]`'s
-floor/attainment discipline is kept: passing HOM-COVER is not existence.
-
-The free-rank formula is the one line a reviewer would wave through, so:
-`im(d_1) ⊆ Z[S]` is the augmentation submodule, free of rank `k−1` for a
-connected cover, so `0 → H_1 → coker(d_2) → im(d_1) → 0` **splits**,
-`coker(d_2) = H_1 ⊕ Z^{k-1}`, and one Smith normal form returns torsion and rank
-together as `free_rank = n·k − rank(d_2) − (k−1)`. Verified.
+component count — re-derived here from
+`H_2(C^2)=0 → H_0(E) → H_1(C^2∖E) → H_1(C^2)=0` — plus the fact that `H_1` of a
+covering space is the abelianisation of the corresponding subgroup. Both stand,
+and `[O]`'s floor/attainment discipline is kept: passing is not existence. The
+free-rank formula is the line a reviewer would wave through: `im(d_1) ⊆ Z[S]` is
+the augmentation submodule, free of rank `k−1` for a connected cover, so
+`0 → H_1 → coker(d_2) → im(d_1) → 0` **splits**, `coker(d_2) = H_1 ⊕ Z^{k-1}`,
+and one Smith normal form returns torsion and rank together as
+`free_rank = n·k − rank(d_2) − (k−1)`. Verified.
 
 ### 3.2 The four controls, independently re-derived
 
-Re-derived by hand, not merely re-run (all four MEASURED values reproduce):
-
-| control | expected, independent derivation | code |
-|---|---|---|
-| two transverse lines, `k=2` | complement `(C*)^2`, `H = ⟨x^2,y⟩ ≅ Z^2` | `Z^2` ✓ |
-| trivial `rho`, `k=1` | `H_1((C*)^2) = Z^2` | `Z^2` ✓ |
-| cuspidal cubic base | `B_3^{ab} = Z` (braid relation identifies `x,y`) | `Z` ✓ |
-| trefoil cyclic 2-fold | `Z ⊕ Z/|Δ_tref(−1)| = Z ⊕ Z/3` | `Z ⊕ Z/3` ✓ |
-
-The Smith routine was separately checked against a textbook matrix
-(`[[2,4,4],[-6,6,12],[10,4,16]]` → `2,2,156`) — MEASURED, correct. The irregular
-3-fold value `Z^2` is correct too (the trefoil's 3-fold irregular branched cover
-is `S^3`, with 2 branch components upstairs).
+Re-derived by hand, not merely re-run; all four MEASURED values reproduce.
+Two transverse lines at `k=2`: complement `(C*)^2`, `H = ⟨x^2,y⟩ ≅ Z^2`, code
+`Z^2` ✓. Trivial `rho` at `k=1`: `H_1((C*)^2) = Z^2` ✓. Cuspidal-cubic base:
+`B_3^{ab} = Z` (the braid relation identifies `x,y`) ✓. Trefoil cyclic 2-fold:
+`Z ⊕ Z/|Δ_tref(−1)| = Z ⊕ Z/3` ✓ — the sharp one. The Smith routine was checked
+separately against `[[2,4,4],[-6,6,12],[10,4,16]] → 2,2,156` (MEASURED,
+correct), and the irregular 3-fold value `Z^2` is right too (the trefoil's
+3-fold irregular branched cover is `S^3`, with 2 branch components upstairs).
 
 **The four controls are sound and the sharp one is genuinely sharp.** The two
 defects below are not in the controls' answers but in what they fail to test.
@@ -177,12 +167,11 @@ defects below are not in the controls' answers but in what they fail to test.
 ### 3.3 DEFECT 1 — the instrument is FAIL-OPEN on convention
 
 `d2_matrix` walks a relator left-to-right applying `rho[g]` **on the left**, so
-the transport of `w = g_1 … g_m` is `rho(g_m) ∘ … ∘ rho(g_1)` — the right-action
-/ monodromy convention, i.e. `rho` used as an *anti*-homomorphism. A caller
-holding an ordinary left-action homomorphism `L` is passing the wrong datum, the
-relator lifts **do not close**, `d_2` is not a boundary map, and the Smith normal
-form is meaningless. The code never checked. MEASURED witness, found by search
-this lane:
+the transport of `w = g_1 … g_m` is `rho(g_m) ∘ … ∘ rho(g_1)`: the right-action /
+monodromy convention, `rho` used as an *anti*-homomorphism. A caller holding an
+ordinary left-action homomorphism passes the wrong datum, the relator lifts **do
+not close**, `d_2` is not a boundary map, and the Smith normal form is
+meaningless. The code never checked. MEASURED witness, found by search:
 
 ```text
    G = < x, y |  x y x y^-1 x^-1 y^-2 >          k = 5
@@ -234,25 +223,21 @@ different `H^ab`. Declaring the convention is mandatory, not cosmetic.
 
 ### 3.6 The kill-power census reproduces
 
-Independently recomputed this lane (MEASURED), with `lift_closes` enforced:
-
-```text
-   B_3 -> S_3 :  8 transitive reps,  2 with torsion (25%)   Z^2 x6 ,  Z + Z/2 + Z/2 x2
-   B_3 -> S_4 : 54 transitive reps, 30 with torsion (56%)   Z^2 x24 , Z + Z/2 x24 , Z + Z/3 x6
-```
-
-`[O] §7`'s figures are confirmed exactly: the razor has real kill power on data
-of this shape, and every torsion-free survivor has `rank ∈ {1,2}` — which §3.8
-shows is exactly the binding window.
+Recomputed independently with `lift_closes` enforced (MEASURED):
+`B_3 → S_3`, 8 transitive reps, 2 with torsion (25%);
+`B_3 → S_4`, 54 transitive reps, 30 with torsion (56%) —
+`Z^2` ×24, `Z ⊕ Z/2` ×24, `Z ⊕ Z/3` ×6. `[O] §7`'s figures confirmed exactly.
+Every torsion-free survivor has `rank ∈ {1,2}`, which §3.8 shows is exactly the
+binding window.
 
 ### 3.7 Status at `(9,6,2)`: PENDING-INPUT, not OPEN-for-lack-of-theory
 
-Running HOM-COVER needs a presentation of `pi_1(A^2 ∖ D)`: the eight tangency
-transports and the node-fibre word. Those are the content of
-`OPEN[REP-96-BM-FACTORISATION]`. The SIROCCO run banked the nine *braids*
-(`notes.md:17305-17310`, CENSUS-OK, exponent ledger 16), but no braid words or
-transports are on disk here, and Sage 10.9 returned the 4-tuple with **no base
-point** — `OPEN[BMFACT-BASEPOINT]`, which infects every labelled transport.
+HOM-COVER needs a presentation of `pi_1(A^2 ∖ D)`: the eight tangency transports
+and the node-fibre word, i.e. the content of `OPEN[REP-96-BM-FACTORISATION]`.
+SIROCCO banked the nine *braids* (`notes.md:17305-17310`, CENSUS-OK, exponent
+ledger 16), but no braid words or transports are on disk here, and Sage 10.9
+returned the 4-tuple with **no base point** — `OPEN[BMFACT-BASEPOINT]`, which
+infects every labelled transport.
 
 > **Razor (a) at `(9,6,2)`: NOT RUN — PENDING-INPUT.** Typed
 > `OPEN[REP-96-BM-FACTORISATION]` + `OPEN[BMFACT-BASEPOINT]`. The instrument is
@@ -264,20 +249,19 @@ point** — `OPEN[BMFACT-BASEPOINT]`, which infects every labelled transport.
 
 Two facts follow from `INPUT-rho-D` alone, and they are why the razors chain.
 
-> **Lemma HC-1.** In Mode 1, `r(E) <= a`, where `E = F^{-1}(D)`.
-> *Proof.* `E = V(h∘F)` is a hypersurface, so it has no isolated points and
-> every component meets `F^{-1}(D_0)`. By `[SG]` Lemma 3.3, `F^{-1}(D_0) → D_0`
-> is a covering of degree `a`, so it has at most `a` components. ∎
+> **Lemma HC-1.** In Mode 1, `r(E) <= a`, `E = F^{-1}(D)`.
+> *Proof.* `E = V(h∘F)` is a hypersurface, so it has no isolated points and every
+> component meets `F^{-1}(D_0)`, which by `[SG]` Lemma 3.3 is a degree-`a`
+> covering of `D_0` and so has at most `a` components. ∎
+>
+> **Corollary HC-2 (the coupling).** Under `(SRC)`,
+> `rank H_1(V_rho) = r(E) <= a <= sigma`. At `(9,6,2)` in Mode 1 (`sigma = 2`):
+> `rank >= 3` is an outright kill, and `rank = 2` **forces `a = 2`, hence
+> `b = 0`** — razor (a)'s rank decides `OPEN[SHEET-LOCATION]` (`[SG] §9.1`),
+> which is razor (b)'s only free parameter.
 
-> **Corollary HC-2 (the coupling).** Under `(SRC)`, `rank H_1(V_rho) = r(E) <= a
-> <= sigma`. Hence at `(9,6,2)` in Mode 1 (`sigma = 2`): `rank >= 3` is an
-> outright kill, and `rank = 2` **forces `a = 2`, hence `b = 0`** — i.e. razor
-> (a)'s rank output decides `OPEN[SHEET-LOCATION]` (`[SG] §9.1`) at this
-> profile, which is razor (b)'s only free parameter.
-
-A genuine new link between `[O]`'s mechanism and `[SG]`'s open bit, supplied by
-the same Smith normal form at no extra cost. It does not fire today: the
-presentation is missing.
+A new link between `[O]`'s mechanism and `[SG]`'s open bit, supplied by the same
+Smith normal form at no extra cost. It does not fire today: no presentation.
 
 ---
 
@@ -444,110 +428,99 @@ derivation: the second is the equality case of the first, not a confirmation.
 
 ### 4.9 DEVIATION — no compactification is used, so `OPEN[RH-LINE-AT-INFINITY]` does not arise
 
-`[G]` Card I requires the compactification to be NAMED or the run returns
-`OPEN[RH-LINE-AT-INFINITY]`. **No compactification is used anywhere above.**
-Every step is `chi_c` on affine varieties via `[SG]` Lemma 5.1, which needs
-neither smoothness nor properness nor `chi_c = chi`. Infinity enters at exactly
-one place — `chi_c(D̃) = 1`, i.e. `D` rational with **one** place at infinity —
-an affine statement about the normalisation of the affine curve (`(H3)`,
-`[SG]:23`), verified for this row in `[R96] §1`. Naming `P^2`, `L`, `D̄`,
-`delta_inf = 24` or `beta_1 = 25` would import a *projective* place into an
-affine computation: the flag/place fallacy the requirement exists to prevent.
-The requirement is honoured by not needing it, the token is **not** returned,
-and the deviation is in the safe direction. `beta_1`, `delta_inf` and `e(iota)`
-appear nowhere in §4's arithmetic.
+`[G]` Card I requires the compactification NAMED or the run returns
+`OPEN[RH-LINE-AT-INFINITY]`. **None is used above.** Every step is `chi_c` on
+affine varieties via `[SG]` Lemma 5.1, which needs neither smoothness nor
+properness nor `chi_c = chi`. Infinity enters at one place — `chi_c(D̃) = 1`,
+`D` rational with **one** place at infinity — an affine statement about the
+normalisation of the affine curve (`(H3)`, `[SG]:23`), verified in `[R96] §1`.
+Naming `P^2`, `L`, `D̄`, `delta_inf = 24` or `beta_1 = 25` would import a
+*projective* place into an affine computation: the very flag/place fallacy the
+requirement exists to prevent. It is honoured by not being needed, the token is
+**not** returned, and the deviation is in the safe direction. `beta_1`,
+`delta_inf` and `e(iota)` appear nowhere in §4's arithmetic.
 
 ---
 
 ## 5. Task 2(c) — BOUNDARY LATTICE: not reached, and what it would need
 
-### 5.1 The banked lemma, as stated
+### 5.1 The banked lemma, and why razor (c) is not reached
 
 `Lemma DET-LINF` (`domrina-gap-repair-opus5-20260901.md:141-176`):
-`det L̃∞ <= 0` unconditionally, where `X̃` completes the **source** `C̃^2` and `F`
-extends to a morphism of projective varieties, `L̃ = X̃ − C̃^2` is the boundary
-tree, and `L̃∞ = L̃ − (dicriticals)`. Its proof needs (i) `X̃ − L̃∞` affine,
-(ii) `Pic(X̃)` freely generated by the components of `L̃`, plus `L̃∞` connected
-and made of smooth rational curves.
-
-### 5.2 Status at `(9,6,2)` Mode 1
+`det L̃∞ <= 0` unconditionally, where `X̃` completes the **source** `C̃^2` with `F`
+extending to a morphism of projective varieties, `L̃ = X̃ − C̃^2`, and
+`L̃∞ = L̃ − (dicriticals)`. Its proof needs (i) `X̃ − L̃∞` affine, (ii) `Pic(X̃)`
+freely generated by the components of `L̃`, plus `L̃∞` connected and made of
+smooth rational curves.
 
 Razor (b) has already refuted `(SRC-OPEN)` in Mode 1, so there is no admissible
-`U` to complete. **Razor (c): NOT REACHED.** Its input — the dual graph of `L̃`
+`U` to complete: **razor (c) is NOT REACHED.** Its input — the dual graph of `L̃`
 on a declared completion with its dicritical/non-dicritical split — is not
 derivable from `INPUT-rho-D`, since cycle types determine `delta_j` and `e_j`,
 not a resolution tree. Typed `OPEN[SOURCE-OPEN-COMPLETION-UNDECLARED]`, carried
 to Mode 2, where `[S] §4` correctly makes it wait on a full `phi`.
 
-### 5.3 The empty-`L̃∞` determinant trap — named and refused
+### 5.3 Two traps, named and refused
 
-A tempting free kill: complete `U ≅ A^2` to `P^2`, declare the boundary line `L`
-dicritical, get `L̃∞ = ∅` and `det(∅) = 1 > 0`, contradicting DET-LINF. **This is
-refused.** `det` of the empty matrix is a convention, and DET-LINF's proof
-explicitly uses `L̃∞` connected and nonempty (Grauert contraction); the lemma
-says nothing about the empty case. Running it would be a floor/attainment and
-pole/interior violation at once. Recorded so no successor re-imports it.
+**Empty `L̃∞`.** A tempting free kill: complete `U ≅ A^2` to `P^2`, declare the
+boundary line dicritical, get `L̃∞ = ∅` and `det(∅) = 1 > 0`, contradicting
+DET-LINF. **Refused.** `det` of the empty matrix is a convention, and DET-LINF's
+proof explicitly uses `L̃∞` connected and nonempty (Grauert contraction); the
+lemma says nothing about the empty case. Running it would be a floor/attainment
+and a pole/interior violation at once. Recorded so no successor re-imports it.
 
-### 5.4 The one free consequence, stated honestly
-
-Step (i) does give something: `X̃ − L̃∞ = F^{-1}(C^2)` is affine, an affine
-surface is not projective, so `L̃∞ ≠ ∅` — **not every boundary component of an
-admissible completion is dicritical.** For `X̃ = P^2` with `L̃ = {L}` this forces
-`L̃∞ = {L}`, `det = L·L = 1 > 0`, contradiction, so any admissible completion has
-`rho(X̃) >= 2`. That merely reproves that a Keller counterexample does not extend
-to a morphism `P^2 → P^2` (elementary: such a morphism is finite).
-**Consistency check, not new information.**
+**The one free consequence, and why it is not new.** Step (i) does give
+`L̃∞ ≠ ∅` (an affine surface is not projective), so **not every boundary
+component of an admissible completion is dicritical**; with `X̃ = P^2`,
+`L̃∞ = {L}` and `det = 1 > 0`, so every admissible completion has
+`rho(X̃) >= 2`. That only reproves that a Keller counterexample does not extend
+to a morphism `P^2 → P^2`, which is elementary (such a morphism is finite).
+**Consistency check, not information.**
 
 ---
 
 ## 6. Task (4) — `OPEN[ACS-FIX-VS-DEFICIT]`, carried
 
-`[O] §4`: `a^{(i)} <= #Fix(meridian_i)` and `a_p <= |Fix(H_p)|`, with equality an
+`[O] §4`: `a^{(i)} <= #Fix(meridian_i)` and `a_p <= |Fix(H_p)|`, equality an
 extra hypothesis. This is `[SG]` Cor 3.2 (`a_p = s_p − b_p`) at the generic and
-special points respectively, and `[O]`'s independent derivation agrees. It is
-carried at every use above:
+special points; `[O]`'s independent derivation agrees. Carried at every use:
+§4.2 does **not** take `a = sigma` and enumerates both `b`; §4.4 uses `a_p = 0`,
+which is *forced* (`s_p = #Fix(Z/2×Z/2) = 0`, so the inequality direction alone
+suffices — the reason the Mode-1 verdict survives the open bit); §4.7 carries
+`a_p ∈ [0,1]` symbolically and decides over the whole interval; §7 refuses an
+undeclared `a_p` with `s_p > 0` unless the interval decides, and refuses a
+declared `a_p > s_p` outright.
 
-* §4.2 — `a = sigma` is **not** taken; both `b ∈ {0,1}` are enumerated.
-* §4.4 — `a_p = 0` at the nodes is used, and it is *forced*, not assumed:
-  `s_p = #Fix(Z/2×Z/2) = 0` and `0 <= a_p <= s_p`. This is the one place where
-  the inequality direction alone suffices, and it is the reason the Mode-1
-  verdict survives the open bit.
-* §4.7 — where `s_p = 1` the interval `a_p ∈ [0,1]` is carried symbolically and
-  the branch is decided over the whole interval.
-* §7 — `box/covergeo.py` refuses an undeclared `a_p` with `s_p > 0` unless the
-  entire interval decides, and refuses a declared `a_p > s_p` outright.
-
-`[O] §4`'s sharper observation is confirmed and worth re-recording because it is
-the strongest form of the caution: at the `N = 4` reducible profile,
-`W_2 = 1` gives `a^{(2)} = 3`, and **no element of `S_4` has three fixed
-points**, so `a^{(i)} = #Fix` is false there and the deficit is at infinity, not
-in the monodromy. Any all-`N` statement quoting `a^{(i)} = N − W_i` as a
-fixed-point count must carry the inequality. `OPEN[ACS-FIX-VS-DEFICIT]` stays
-open; nothing in this lane closes it.
+`[O]`'s sharper observation is confirmed and is the strongest form of the
+caution: at the `N = 4` reducible profile `W_2 = 1` gives `a^{(2)} = 3`, and
+**no element of `S_4` has three fixed points**, so `a^{(i)} = #Fix` is false
+there and the deficit is at infinity, not in the monodromy. Any all-`N`
+statement quoting `a^{(i)} = N − W_i` as a fixed-point count must carry the
+inequality. The token stays open; nothing here closes it.
 
 ---
 
 ## 7. Task (3) — `box/covergeo.py`, delivered
 
-### 7.1 Typed I/O
+### 7.1 Typed I/O and fail-closed rules
 
 Input is `INPUT-rho-D` (§2) as dataclasses `Row / Component / SingPoint /
-LocalType`, plus a mandatory `source_gate` provenance string. Output per
+LocalType` plus a mandatory `source_gate` provenance string. Output per
 admissible four-box branch: `chi_c(D)`, `chi_c(D_0)`, `chi_c(V_rho)`, `c`,
 `sigma`, `ram`, `sum c_p`, `chi_c(Y)_RH`, `chi_c(B_Y)`, `chi_c(U)`, `gap`, and a
-verdict in `{MATCH, MISMATCH, MISMATCH-ON-INTERVAL, OPEN[...]}`.
+verdict in `{MATCH, MISMATCH, MISMATCH-ON-INTERVAL, OPEN[...]}`; an internal
+assertion checks `chi_c(Y) − chi_c(B_Y) = chi_c(U)` on every branch (an
+implementation cross-check, not a mathematical one). Fail-closed rules as
+implemented:
 
-### 7.2 Fail-closed rules, as implemented
-
-1. cycle type must be a partition of `N`, `sigma >= 1` (box `(U,e=1)` nonempty)
-   and some `e_j >= 2` (purity) — else `OPEN[COVERGEO-BAD-CYCLE-TYPE]` /
-   `OPEN[COVERGEO-NO-AFFINE-SHEET]` / `OPEN[COVERGEO-UNRAMIFIED]`;
-2. `a = sigma` never assumed — all `b` enumerated unless declared **with a
+1. cycle type a partition of `N`, `sigma >= 1` (box `(U,e=1)` nonempty), some
+   `e_j >= 2` (purity) — else `OPEN[COVERGEO-BAD-CYCLE-TYPE]` /
+   `[-NO-AFFINE-SHEET]` / `[-UNRAMIFIED]`;
+2. `a = sigma` never assumed: all `b` enumerated unless declared **with a
    citation** (`OPEN[COVERGEO-UNCITED-B]`);
 3. `a_p > s_p` refused (`OPEN[COVERGEO-AP-EXCEEDS-FIX]`, `[SG]` Cor 3.2);
-   undeclared `a_p` is decided over the whole interval or returned
-   `OPEN[ACS-FIX-VS-DEFICIT]`;
-4. `delta_j > 1` → `OPEN[COVERGEO-DELTA-GT-1]` (Lemma SG-2 does not apply);
+   undeclared `a_p` decided over the whole interval or `OPEN[ACS-FIX-VS-DEFICIT]`;
+4. `delta_j > 1` → `OPEN[COVERGEO-DELTA-GT-1]` (SG-2 does not apply);
 5. empty `source_gate` → refuse. The module does **no** polynomial arithmetic,
    so footgun #10 (`squarefree_part()` ≠ `radical()`) cannot fire inside it; the
    guard forces the caller to declare a radical-verified upstream source;
@@ -576,20 +549,19 @@ CONTROLS: ALL PASS
 ```
 
 `CTRL-P1/P2` are the discriminating pair: they independently re-derive `[SG]
-§8`'s "smooth `A_F` ⟹ `a = 1`" law from the Euler side, which is the strongest
-available evidence that the engine is not hard-wired to kill.
+§8`'s "smooth `A_F` ⟹ `a = 1`" law from the Euler side — the strongest available
+evidence that the engine is not hard-wired to kill.
 
-**DEVIATION on the charged negative control.** `[G] §6` specifies "negative
-control `(6,4)` at `E = −3` must not match". Two corrections. (i) The banked
-`(6,4,3)` row has `beta_1 = 15` and `e(iota) = 10 − beta_1 = −5`, not `−3`;
-`E = −3` is the *deliberately falsified* value in `[R96] §9`'s verification
-control for the **CABLE-3 inner-braid divisibility gate** ("confirm both
-`E = −5` passes and `E = −3` fails"), a different instrument. (ii) `e(iota)` is
-a braid exponent; feeding it to a `chi_c` calculator would identify a cover
-series with an Euler number — the flag/place/series fallacy. The control is
-therefore implemented on the actual row (`beta_1 = 15`, `delta_aff = 3` nodes,
-transposition class), `E = −5` is recorded as a label only, and it MISMATCHES as
-required (gaps 1 and 6).
+**DEVIATION on the charged negative control.** `[G] §6` asks for "negative
+control `(6,4)` at `E = −3`". Two corrections. (i) The banked `(6,4,3)` row has
+`beta_1 = 15` and `e(iota) = 10 − beta_1 = −5`; `E = −3` is the *deliberately
+falsified* value in `[R96] §9`'s verification control for the **CABLE-3
+inner-braid divisibility gate** ("confirm both `E = −5` passes and `E = −3`
+fails") — a different instrument. (ii) `e(iota)` is a braid exponent; feeding it
+to a `chi_c` calculator identifies a cover series with an Euler number. The
+control is implemented on the actual row (`beta_1 = 15`, three nodes,
+transposition class), `E = −5` is a label only, and it MISMATCHES as required
+(gaps 1 and 6).
 
 ### 7.4 The `(8,6,9)` path — and the REFUTATION of "same Chern species"
 
@@ -598,53 +570,46 @@ required (gaps 1 and 6).
 serve both. **Refuted as stated**, on the source `[G]` itself cites:
 
 * `chi_c(Y)_RH` is a compactly-supported **topological** Euler characteristic of
-  a **non-compact affine** normal surface, computed by stratified additivity. It
-  is not a Chern number of anything and uses no compactification (§4.9).
+  a **non-compact affine** normal surface, computed by stratified additivity; it
+  is a Chern number of nothing and uses no compactification (§4.9).
 * `tb-g2-finish-opus5-20260901.md:435` fixes the other object exactly:
-  `chi(O_Z) = 23 − c_2(T^v)`, where `T` is the rank-2 **Tschirnhausen bundle**
-  of the triple plane — not the tangent bundle — and `Z` is **projective and
-  singular** (one non-Gorenstein point `C[z,w]/(z,w)^2`, ten `A_1` points). For
-  singular `Z`, `chi(O_Z)` is a holomorphic Euler characteristic and `c_2(T^v)` a
-  Chern number of a bundle on `P^2`; neither is a topological `chi_c`, and the
-  same report says `c_2(T)` "is not fixed by the numerical type".
+  `chi(O_Z) = 23 − c_2(T^v)` with `T` the rank-2 **Tschirnhausen bundle** of the
+  triple plane — not the tangent bundle — and `Z` **projective and singular**
+  (one non-Gorenstein point `C[z,w]/(z,w)^2`, ten `A_1` points). For singular
+  `Z`, `chi(O_Z)` is a holomorphic Euler characteristic and `c_2(T^v)` a Chern
+  number on `P^2`; neither is a topological `chi_c`, and the same report says
+  `c_2(T)` "is not fixed by the numerical type".
 
-Identifying them would be a flag/place/series identification and a
-pole/interior violation (using a Chern-class identity without checking the
-vertex class and the source hypotheses). What **is** genuinely shared is one
-layer, and the module implements exactly that and nothing more:
-`fibre_partition_over` / `s4_to_s3_orbits` — *conjugacy-invariant local monodromy
-→ orbit decomposition → point count and local type*. Run on `(8,6,9)`
-(`CTRL-869`, MEASURED): pushing the node-local `⟨(01),(23)⟩ ⊂ S_4` through
-`S_4 → S_4/V_4 = S_3` gives orbit sizes `(2,1)` on three sheets, i.e. one `A_1`
-point of `Z` over each of the ten affine double points — **reproducing TB-GERM
-§7.1's "10 `A_1` points" from the calculator**, which is the positive control the
-charge wanted at that row. Asking the module for `c_2` returns
-`OPEN[COVERGEO-C2-TSCHIRNHAUSEN]` with the missing inputs named: the singularity
+Identifying them would be a flag/place/series identification and a pole/interior
+violation at once. What **is** shared is one layer, and the module implements
+that and nothing more: `fibre_partition_over` / `s4_to_s3_orbits` —
+*conjugacy-invariant local monodromy → orbit decomposition → point count and
+local type*. Run on `(8,6,9)` (`CTRL-869`, MEASURED): pushing the node-local
+`⟨(01),(23)⟩ ⊂ S_4` through `S_4 → S_4/V_4 = S_3` gives orbit sizes `(2,1)` on
+three sheets, i.e. one `A_1` point of `Z` over each of the ten affine double
+points — **reproducing TB-GERM §7.1's "10 `A_1` points" from the calculator**,
+the positive control the charge wanted at that row. Asking for `c_2` returns
+`OPEN[COVERGEO-C2-TSCHIRNHAUSEN]` naming the missing inputs: the singularity
 census of `Δ̄` with its local monodromy, `K_Z` or a declared resolution, and the
-`Z/3`-cover class. That is `[G] §6`'s own fallback ("or returns OPEN
-(curve-dependent)"), reached for a sharper reason than curve-dependence.
+`Z/3`-cover class. That is `[G] §6`'s own fallback, reached for a sharper reason
+than curve-dependence.
 
 ---
 
-## 8. What this hands Mode 2 / Path 2 — bounded, not a Path-2 duplicate
+## 8. What this hands Mode 2 / Path 2 — bounded, no `D_2` constructed
 
-Three items, no construction of `D_2` attempted:
-
-1. **Do not double-count.** By THEOREM SG-1 (component-wise form), a Mode-2
-   four-box Euler match is the block-free `(M′)`, already collapsed to
-   `chi_2 + sigma_2 = 1` (`[R96] §7 (7.1)`). `[S] §4`'s nodal-cubic control
-   `t ↦ (t^2−1, t(t^2−1))` with `chi_c(D_2) = 0`, `sigma_2 = 1` attains it, so
-   the identity is a must-pass, not a discriminator — `[S]`'s own reading,
-   confirmed here by an independent route.
-2. **Lemma SG-2 is the new deliverable for Path 2.** Once `D_2`'s type is
-   emitted, SG-2 returns `chi_c(B_Y)` and hence the boundary divisor's forced
-   isomorphism type — which is precisely the missing input of `[S] §4`'s
-   boundary-lattice mechanism and of razor (c). The two meet at `chi_c(B_Y)` and
-   at `r(E)` (§3.8), and at no other number.
-3. **Razor (a)'s rank decides razor (b)'s free bit** (Cor HC-2). Sequencing:
-   BMFACT → HOM-COVER torsion (free kill) → rank (fixes `b`) → four-box Euler
-   with `b` no longer open → boundary lattice. Each step consumes the previous
-   step's output; none of them is a substitute for the construction.
+1. **Do not double-count.** By SG-1's component-wise form a Mode-2 four-box
+   Euler match *is* the block-free `(M′)`, already collapsed to
+   `chi_2 + sigma_2 = 1` (`[R96]` (7.1)); `[S] §4`'s nodal-cubic control
+   `t ↦ (t^2−1, t(t^2−1))` attains it. The identity is a must-pass, not a
+   discriminator — `[S]`'s own reading, confirmed by an independent route.
+2. **Lemma SG-2 is the new deliverable.** Given `D_2`'s type, SG-2 returns
+   `chi_c(B_Y)` and the boundary divisor's forced isomorphism type — the missing
+   input of `[S] §4`'s mechanism and of razor (c). The two lanes meet at
+   `chi_c(B_Y)` and `r(E)` (§3.8), nowhere else.
+3. **Sequencing.** BMFACT → HOM-COVER torsion (free kill) → rank (fixes `b`, Cor
+   HC-2) → four-box Euler with `b` closed → boundary lattice. Each step consumes
+   the previous one's output; none substitutes for construction.
 
 ---
 
@@ -655,37 +620,36 @@ LANE                SOURCE-GATE-962  (retype + three razors, Mode 1 on (9,6,2))
 
 TASK 1  RETYPE      DONE.  Lemma SRC-0 (three Y's are one scheme) PROVED-HERE,
                     UNREVIEWED.  (SRC-OPEN) is the single typed object; the three
-                    submissions are consistent and are reconciled by SRC-0.
-                    OPEN[REP-96-SOURCE-IS-C2] RETIRED AS MIS-TYPED (asks for an
-                    unsatisfiable property); successor OPEN[SOURCE-OPEN-U],
-                    alias OPEN[REP-96-A2-OPEN-IMMERSION-BOUNDARY].
+                    submissions are consistent and SRC-0 reconciles them.
+                    OPEN[REP-96-SOURCE-IS-C2] RETIRED AS MIS-TYPED; successor
+                    OPEN[SOURCE-OPEN-U] (alias: [S]'s open-immersion-boundary).
 
-TASK 2a HOM-COVER   INSTRUMENT: AUDITED, 4 controls CONFIRMED correct; TWO DEFECTS
+TASK 2a HOM-COVER   INSTRUMENT AUDITED: 4 controls CONFIRMED correct; TWO DEFECTS
                     (fail-open on convention; convention-blind control suite);
-                    REPAIRED in box/cover_h1.py, CONTROL 4 added, all pass.
-                    B_3 census reproduced exactly (25% / 56% torsion).
-                    RUN AT (9,6,2): NOT RUN — PENDING-INPUT.
+                    REPAIRED, CONTROL 4 added, all pass.  B_3 census reproduced
+                    exactly (25% / 56% torsion).
+                    RUN AT (9,6,2): NOT RUN - PENDING-INPUT.
                     OPEN[REP-96-BM-FACTORISATION], OPEN[BMFACT-BASEPOINT].
-                    NEW: Lemma HC-1 (r(E) <= a), Cor HC-2 (rank decides b).
+                    NEW: Lemma HC-1 (r(E) <= a); Cor HC-2 (rank decides b).
 
-TASK 2b FOUR-BOX    RUN.  chi_c(Y)_RH = 3.  Four-box (a,sigma,ram) = (a,2,2) with
-        EULER       a in {1,2}.  b=0: 1+chi_c(B_Y) = 2, gap 1.  b=1: −5, gap 8.
-                    VERDICT MISMATCH in every branch, and also in the 3-cycle
-                    class over the whole ACS interval (gap 8..12).
-                    CONFIRMATORY of H2+(M'), NOT a CE, NOT a new kill.
-                    OPEN[MODE1-MATCH-VS-H2] does not arise.
-                    THEOREM SG-1: this razor IS (M') — PROVED-HERE, UNREVIEWED.
+TASK 2b FOUR-BOX    RUN.  chi_c(Y)_RH = 3.  Four-box (a,sigma,ram) = (a,2,2),
+        EULER       a in {1,2}.  b=0: 1+chi_c(B_Y)=2, gap 1.  b=1: -5, gap 8.
+                    VERDICT MISMATCH in every branch, and in the 3-cycle class
+                    over the whole ACS interval (gap 8..12).
+                    CONFIRMATORY of H2+(M'); NOT a CE, NOT a new kill.
+                    OPEN[MODE1-MATCH-VS-H2] does not arise (no match).
+                    THEOREM SG-1: this razor IS (M') - PROVED-HERE, UNREVIEWED.
                     Lemma SG-2 (chi_c(B_Y)) is the razor's only new content.
 
 TASK 2c BOUNDARY    NOT REACHED (no admissible U in Mode 1).  Input not derivable
         LATTICE     from cycle types: OPEN[SOURCE-OPEN-COMPLETION-UNDECLARED].
                     Empty-L-tilde-infinity determinant trap NAMED and REFUSED.
 
-TASK 3  covergeo.py DELIVERED, fail-closed, footguns #10/#11 honoured, controls
+TASK 3  covergeo.py DELIVERED, fail-closed, footguns #10/#11 honoured; controls
                     ALL PASS incl. two MATCH controls, the (9,6,2) four-box, the
-                    (6,4) negative control, four rejection probes and CTRL-869.
-                    grok §4 "same Chern species": REFUTED AS STATED; the shared
-                    layer is implemented, c_2(T^v) refused.
+                    (6,4) negative control, four rejection probes, CTRL-869.
+                    grok sec.4 "same Chern species": REFUTED AS STATED; shared
+                    layer implemented, c_2(T^v) refused.
 
 TASK 4  ACS         CARRIED at every use; forced (not assumed) where used;
                     OPEN[ACS-FIX-VS-DEFICIT] remains open.
@@ -695,25 +659,23 @@ TASK 4  ACS         CARRIED at every use; forced (not assumed) where used;
 
 ## 10. Deviations
 
-1. **§4.8** — the charged four-box `(2,2,2)` is re-typed `(a ∈ {1,2}, 2, 2)`:
+1. **§4.8** — the charged four-box `(2,2,2)` re-typed `(a ∈ {1,2}, 2, 2)`;
    `a = 2` rides `OPEN[SHEET-LOCATION]` / `OPEN[ACS-FIX-VS-DEFICIT]`. Verdict
-   unaffected; both branches run.
-2. **§4.9** — no compactification is named because none is used;
-   `OPEN[RH-LINE-AT-INFINITY]` is **not** returned. Naming one would import a
-   projective place into an affine computation.
-3. **§7.3** — the charged negative control "`(6,4)` at `E = −3`" is corrected:
-   the row's `e(iota)` is `−5`, `E = −3` is `[R96] §9`'s falsified value for a
-   *different* gate, and `E` is recorded as a label and never consumed.
+   unaffected: both branches run and both mismatch.
+2. **§4.9** — no compactification is named because none is used, so
+   `OPEN[RH-LINE-AT-INFINITY]` is **not** returned.
+3. **§7.3** — the charged negative control "`(6,4)` at `E = −3`" corrected: the
+   row's `e(iota)` is `−5`, `E = −3` belongs to a different gate, and `E` is a
+   label, never consumed.
 4. **§3.5** — `box/cover_h1.py` was modified (additively, non-breaking) rather
-   than only reported on, because the defect found is a fail-open that would
-   have produced a false *survival* on the very input the charge anticipates.
-   The four original controls are byte-identical in behaviour.
+   than only reported on: the defect is a fail-open that would have produced a
+   false *survival* on exactly the input the charge anticipates.
 5. **§4.6** — the lane reports that its own charged razor is not independent of
-   `(M′)`. Reporting this rather than presenting the mismatch as new kill power
-   is the deviation that most changes how the avenue should be funded.
-6. **§7.4** — the charge's premise that one calculator serves both `(9,6,2)` and
-   `(8,6,9)`'s `c_2(T)` is only partly honoured: the shared layer is delivered
-   and controlled, the `c_2` half is refused with named missing inputs.
+   `(M′)`. That, rather than selling the mismatch as new kill power, is the
+   deviation that most changes how the avenue should be funded.
+6. **§7.4** — one calculator does not serve both `(9,6,2)` and `(8,6,9)`'s
+   `c_2(T)`: the shared layer is delivered and controlled, the `c_2` half is
+   refused with named missing inputs.
 
 ---
 
@@ -737,31 +699,28 @@ TASK 4  ACS         CARRIED at every use; forced (not assumed) where used;
 
 ## 12. FALLACY-v2 audit
 
-* **Flag/place/series.** Held at four sites: `E = e(iota)` is never an Euler
-  number (§7.3, and refused in code); `chi_c` of an affine surface is never a
-  Chern number (§7.4); the place at infinity of `D` enters only as `chi_c(D̃)=1`
-  and never as `delta_inf`, `beta_1`, `L` or `D̄` (§4.9); `B_Y` is a divisor on
-  `Y`, never a dicritical or a Puiseux place of `D`.
-* **Carrier/attainment.** HOM-COVER is stated as a floor-side filter, never an
-  attainment certificate (`[O]`'s own discipline, kept). `(SRC-OPEN)` is
-  necessary-only. One realized `(9,6,2)` representative is not
-  `FULL_ACTUAL_EXIT` and no row-level kill is claimed anywhere.
+* **Flag/place/series.** Four sites: `E = e(iota)` is never an Euler number
+  (§7.3, refused in code); `chi_c` of an affine surface is never a Chern number
+  (§7.4); the place at infinity of `D` enters only as `chi_c(D̃) = 1`, never as
+  `delta_inf`, `beta_1`, `L`, `D̄` (§4.9); `B_Y` is a divisor on `Y`, never a
+  dicritical or a Puiseux place of `D`.
+* **Carrier/attainment.** HOM-COVER is a floor-side filter, never an attainment
+  certificate; `(SRC-OPEN)` is necessary-only; one realized representative is
+  not `FULL_ACTUAL_EXIT`; no row-level kill is claimed.
 * **Floor/attainment.** The four-box split is a floor; `ram = 2` is proved, not
-  capped. `det L̃∞ <= 0` is used as a floor, and its strict form is not asserted.
-* **Pole/interior.** The empty-`L̃∞` determinant is refused (§5.3) because the
-  vertex class and the source hypotheses of DET-LINF fail there.
+  capped; `det L̃∞ <= 0` is a floor and its strict form is not asserted.
+* **Pole/interior.** The empty-`L̃∞` determinant is refused (§5.3): DET-LINF's
+  vertex class and source hypotheses fail there.
 * **`sat()` / raw remainder / variable-ring map.** Not applicable: no CAS, no
-  Gröbner basis, no polynomial arithmetic. `covergeo.py` does integer arithmetic
-  on conjugacy invariants only.
+  Gröbner basis, no polynomial arithmetic.
 * **Prime label/derivative.** `(M′)` is `[SG]`'s named identity; the prime is a
   label, not differentiation.
 * **Target/arrival index.** `a, a_p, sigma, s_p, b, b_p, c, c_p, delta_j, e_j,
-  r_p, nu` are kept distinct and defined at first use. The two campaign symbols
-  `b` (`[R96] §7 R3`: sheet-location count vs. branched-component count) are not
-  merged; only `[SG]`'s sheet-location `b` appears here.
-* **No safe replacement ⟹ typed OPEN.** Applied at razor (a) (no presentation),
-  razor (c) (no completion) and `c_2(T^v)` (no `K_Z`). No gap filled by cap or
-  analogy. No exit-price assertion, so no `charge_basis` line.
+  r_p, nu` kept distinct and defined at first use. The two campaign symbols `b`
+  (`[R96] §7 R3`) are not merged; only `[SG]`'s sheet-location `b` appears here.
+* **No safe replacement ⟹ typed OPEN.** Razor (a) (no presentation), razor (c)
+  (no completion), `c_2(T^v)` (no `K_Z`). No gap filled by cap or analogy. No
+  exit-price assertion, so no `charge_basis` line.
 
 ---
 

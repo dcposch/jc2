@@ -3,9 +3,9 @@
 **Reviewer.** grok-4.6 (different-model gate).
 **Date.** 2026-09-02.
 **Lane.** `COMPANION-ALLN-REVIEW`.
-**Charge.** Default to refutation. Desk-scale exact reasoning plus sympy 1.14.0 over `Q`. A false COLLAPSE-N wrongly retires `(M')` as a gate; a false COMPANION-EXISTS wrongly keeps `(9,6,2)` alive. `FALLACY-v2` in force. No `charge_basis` line: this review asserts no new exit price.
+**Charge.** Default to refutation. Desk-scale exact reasoning plus sympy 1.14.0 over `Q`. A false COLLAPSE-N wrongly retires `(M')`; a false COMPANION-EXISTS wrongly keeps `(9,6,2)` alive. `FALLACY-v2` in force. No `charge_basis` line: no new exit price.
 
-**Headline.** All five charged items are **CONFIRMED**. The two UNREVIEWED theorems survive independent re-derivation and machine replay. The identity charged to constrain the companion is information-free once `(LOC)`, `(AGG)` and Lemma A are granted; the forced companion datum is realized by an explicit three-row family, including at `(9,6,2)`. This licenses the producer’s `CLOSED-NEGATIVE as an obstruction lane` at the exact scope of those two theorems. It does not license a Keller map, and it does not close `OPEN[REP-96-BM-FACTORISATION]` or `OPEN[REP-96-SOURCE-IS-C2]`.
+**Headline.** All five charged items are **CONFIRMED**. The two UNREVIEWED theorems survive independent re-derivation and machine replay. The identity charged to constrain the companion is information-free once `(LOC)`, `(AGG)` and Lemma A are granted; the forced companion datum is realized by an explicit three-row family, including at `(9,6,2)`. This licenses the producer’s `CLOSED-NEGATIVE as an obstruction lane` at the exact scope of those two theorems. It does not license a Keller map, and it does not close BM-factorisation or source-is-C2.
 
 ## Verdict table
 
@@ -18,7 +18,7 @@
 | (5) | Chau Cor 1 / Cor 2 inversions against `xi |-> (2 xi^3, xi^2)` | **CONFIRMED** |
 | — | Producer `COMPANION-CURVE-ALLN: CLOSED-NEGATIVE as an obstruction lane` | **CONFIRMED** at the two-theorem scope |
 
-Three nonblocking observations, none of which moves a verdict, are recorded in §6.
+Nonblocking observations, none moving a verdict, are in §6.
 
 ---
 
@@ -41,9 +41,7 @@ This matches CC SS0 / SS9. Chau was rasterized and read as images (pages 1–3);
 
 One non-charged campaign file was grepped, and is disclosed because a load-bearing sign was checked against it: `xmodel/reducible-all-n-r2-opus5-20260901.md` for the printed `(LOC)` and `(BUD)` displays. The theorem under review takes `(LOC)` as a hypothesis, so the grep is a campaign-sign audit, not a dependency. `round1033-sheet-gate-opus5-20260831.md` was **not** opened; the block-free `(M')` is taken as quoted in REP SS7 R4 and restated in CC SS2.1.
 
-**Method.** Independent derivation of the COLLAPSE-N cancellation (not a line-check of CC SS2.2). Exact sympy over `Q`: resultants, gcds, squarefree decompositions, a lex Groebner basis for the `D_1` singular locus, integer Euler arithmetic, and a randomised identity harness. No floating point enters any PASS/FAIL. No `msolve`, no `qqideal`, no `jc2-lean`, no ledger edit.
-
-This is not an exit-price assertion.
+**Method.** Independent derivation of the COLLAPSE-N cancellation (not a line-check of CC SS2.2). Exact sympy over `Q`: resultants, gcds, squarefree decompositions, a lex Groebner basis for the `D_1` singular locus, integer Euler arithmetic, and a randomised identity harness. No floating point, no `msolve`/`qqideal`/`jc2-lean`, no ledger edit. No exit-price assertion.
 
 ---
 
@@ -120,14 +118,14 @@ Given `(LOC)` and the stratification, any two of `(M'-bf)`, `(AGG)`, Lemma A imp
 
 **Negative controls.** Holding the census fixed and replacing `chi~_2 = 1` by `0, -1, -3` produces defects `1, 2, 4`, matching `1 - chi~_2`. The identity detects the one thing it can detect.
 
-**Randomised control, and the reported harness failure.** Two independent samplers, exact integer arithmetic.
+**Randomised control, and the reported harness failure.** Exact integer arithmetic, four samplers.
 
-- *Rejection sampler* (CC’s filter: retain `sum_i W_i + sum_p K_p = N-1` and `a_p >= 0`): `4596` AGG configurations, `N in [4,12]`, `m in [2,4]`, up to 8 points. With `chi~ = 1`: **0/4596** failures of `LHS = RHS`. With `chi~_i` free in `[-3,1]`: **0/4596** mismatches against the predicted defect.
-- *Constructed-AGG sampler* (partition `N-1` into weights and `K_p` from the inside): **0/5000** failures at `chi~=1`, **0/5000** free-`chi~` mismatches.
-- *Unfiltered tautology* (`K_tot := sum_p K_p`, no AGG): **0/41123** mismatches. The identity does not need `(AGG)`. CC’s AGG filter is a subset, not a concealment.
-- *Floating-`K_tot` trap* (draw `K_tot` independently of `sum_p K_p`, as CC says the first harness did): **35116/41123** mismatches. The trap is real. The repaired control — identifying `K_tot` with `sum_p K_p` — is actually repaired: once that identification is enforced, the identity is an algebraic tautology and the sampler cannot fail except by a coding error.
+- Rejection (CC’s filter `sum W_i + sum K_p = N-1`, `a_p>=0`): **0/4596** failures at `chi~=1`; **0/4596** free-`chi~` mismatches.
+- Constructed AGG (partition `N-1` from the inside): **0/5000** and **0/5000**.
+- Unfiltered tautology (`K_tot := sum_p K_p`, no AGG): **0/41123**. The identity does not need `(AGG)`; CC’s filter is a subset, not a concealment.
+- Floating-`K_tot` trap (draw `K_tot` independently of `sum_p K_p`): **35116/41123** mismatches. The trap is real. Identifying `K_tot` with `sum_p K_p` actually repairs it: the identity is then an algebraic tautology.
 
-CC’s `33116` is a larger sample of the same tautology. I did not bit-reproduce that count; I reproduced the claim that a correct harness reports zero failures and that a floating-`K_tot` harness reports mass failures.
+CC’s `33116` is a larger sample of the same tautology. I reproduced the claim, not the count.
 
 ---
 
@@ -191,44 +189,30 @@ The pair is a curve pair, not a Keller counterexample. CC SS5.5 states this and 
 
 ### 4.1 CONTACT bookkeeping, replayed
 
-Grade `C[u,v]` by `wt(u)=d`, `wt(v)=e`. A component of multiplicity `m_1` has weighted degree `m_1 d e` with weighted-leading form `(B^d u^e - A^e v^d)^{m_1}` (corrected Chau Cor 1, §5). The `D_2`-parametrisation is proper and birational, so `sum_{p affine}(D_1.D_2)_p = deg_xi f_1(a_2,b_2)`.
-
-A monomial of weight `w` pulls back to `xi`-degree at most `m_2 w`, since `deg a_2 = m_2 d` and `deg b_2 = m_2 e`. The top level contributes at most `m_1(m_2 d e - 1)` because C7 cancels the leading coefficient of `B^d a_2^e - A^e b_2^d` (drop at least `1`; more drop only helps). Every strictly lower weighted level has weight `<= m_1 d e - 1`, hence pullback degree `<= m_2(m_1 d e - 1)`. Degree of a sum is at most the max of the degrees, not the sum, so
+Grade `C[u,v]` by `wt(u)=d`, `wt(v)=e`. Multiplicity `m_1` has weighted degree `m_1 de` with weighted-leading form `(B^d u^e - A^e v^d)^{m_1}` (corrected Cor 1). The `D_2`-parametrisation is proper and birational, so the affine intersection sum equals `deg_xi f_1(a_2,b_2)`. A weight-`w` monomial pulls back to degree `<= m_2 w`. The top level contributes at most `m_1(m_2 de-1)` because C7 drops the leading coefficient of `B^d a_2^e - A^e b_2^d` by at least `1`. Every lower level has weight `<= m_1 de-1`, hence pullback degree `<= m_2(m_1 de-1)`. Degree of a sum is the max, not the sum, so
 
 ```text
-    deg_xi f_1(a_2,b_2)  <=  max( m_1(m_2 de - 1), m_2(m_1 de - 1) )
-                         =  m_1 m_2 d e - min(m_1, m_2) .
+    deg_xi f_1(a_2,b_2)  <=  max( m_1(m_2 de-1), m_2(m_1 de-1) )
+                         =  m_1 m_2 de - min(m_1, m_2) .
 ```
 
-The equality `max(m_1(m_2 de-1), m_2(m_1 de-1)) = m_1 m_2 de - min(m_1,m_2)` was checked on all coprime `(d,e)` with `m_i in [1,5]`. The identity `max(d,e)^2 - de = max(d,e)|d-e|` was checked on `d,e in [1,11]`. Bezout then gives the infinity bound.
-
-The lemma is one-sided and is used only so. Witness: affine `12 <= 17`, infinity `15 >= 10`. Two independent `m_2=2` samples against `D_1` (the family member `xi |-> (xi^6+xi, xi^4)` and a perturbation `xi |-> (xi^6+xi^3+xi, xi^4+3)`): affine degrees `21` and `27`, both `<= 34`; infinity `33` and `27`, both `>= 20`. CC’s “actual `33` twice” refers to two unspecified `m_2=2` companions; I did not recover those particular curves, and I do not need them. The bound is not an equality and is not read as one.
+The max-identity was checked on `m_i in [1,5]` with coprime `(d,e)`; `max(d,e)^2-de = max(d,e)|d-e|` on `d,e in [1,11]`. Bezout gives the infinity bound. The lemma is one-sided. Witness: `12 <= 17`, `15 >= 10`. Two named `m_2=2` samples against `D_1`: affine `21` and `27` (`<= 34`), infinity `33` and `27` (`>= 20`). CC’s “actual `33` twice” names no curves; the bound does not need them and is not an equality.
 
 ### 4.2 `M <= K`, `deg_u` / `deg_v` bookkeeping
 
-Chau’s resultant `Res_y(P-u, Q-v) = R_0(u,v) x^N + ... + R_N(u,v)`, in the monic-in-`y` coordinates of Theorem 1, has `deg_y P = K d` and `deg_y Q = K e`. The Sylvester determinant is of degree `deg_y Q` in the coefficients of `P-u` and of degree `deg_y P` in the coefficients of `Q-v`. The variable `u` appears only in `P-u`, so `deg_u Res <= K e`; `v` appears only in `Q-v`, so `deg_v Res <= K d`. The leading `x`-coefficient `R_0` cannot raise those degrees.
+In Chau’s monic-in-`y` coordinates, `deg_y P = Kd` and `deg_y Q = Ke`. The Sylvester determinant is of degree `deg_y Q` in the coefficients of `P-u` and of degree `deg_y P` in the coefficients of `Q-v`. The variable `u` lives only in `P-u`, so `deg_u Res <= Ke`; `v` lives only in `Q-v`, so `deg_v Res <= Kd`. The leading `x`-coefficient `R_0` cannot raise those degrees.
 
-Corrected Cor 1: the weighted-leading form of `R_0` is `C (B^d u^e - A^e v^d)^M`. Expanding, the unique highest-`u` term is `C B^{d M} u^{M e}` and the unique highest-`v` term is `C (-A^e)^M v^{M d}`. Lower-weight terms cannot cancel these (they have weight `< M d e`, while `u^{M e}` and `v^{M d}` have weight exactly `M d e`). Thus for `M >= 1` one has `deg_u R_0 = M e` and `deg_v R_0 = M d`. Combined with the Sylvester bounds,
+Corrected Cor 1: weighted-leading form of `R_0` is `C(B^d u^e - A^e v^d)^M`. The unique highest-`u` term is `C B^{dM} u^{Me}`; the unique highest-`v` term is `C(-A^e)^M v^{Md}`. Lower-weight terms have weight `< Mde` and cannot cancel them. For `M>=1`, `deg_u R_0 = Me` and `deg_v R_0 = Md`. Hence `Me <= Ke` and `Md <= Kd`, so `M <= K`. The printed inverted form has the same two degrees; the inversion does not affect the inequality.
 
-```text
-    M e  <=  K e ,     M d  <=  K d ,     hence  M <= K .
-```
-
-The printed (inverted) leading form `(A^e u^e - B^d v^d)^M` has the same `deg_u = M e` and `deg_v = M d`; the inversion does not affect this inequality.
-
-Machine checks, not on a Keller map (there is no known Keller example with `M > 0`): (i) `(B^d u^e - A^e v^d)^M` at `(d,e,M)=(3,2,4)` has `deg_u=8=M e`, `deg_v=12=M d`; (ii) `Res_y(y^3+x y+x - u, y^2+x - v)` obeys `deg_u Res <= 2 = K e` and `deg_v Res <= 3 = K d`; (iii) a `K=2` example `Res_y(y^6+x y^2+1-u, y^4+x-v)` obeys `deg_u Res <= 4`, `deg_v Res <= 6`. In proper examples `R_0` can drop below the Sylvester ceiling (even to `deg_u R_0 = 0`, i.e. `M=0`), which is consistent with `M <= K` and is the empty-`A_F` case.
-
-Then `sum_i deg D_i = sum_i m_i max(d,e) <= M max(d,e) <= K max(d,e) = max(deg P, deg Q)`, allowing extra scheme-multiplicities `k_i` in `M = sum k_i m_i`. This is a ceiling, not a `d_min` bound, and is gauge-dependent on the `(x,y)` side, as CC flags. It is the correct currency of `OPEN[COMPANION-R0-REALISATION]`.
+Checks, not on a Keller map (no known example with `M>0`): `(B^d u^e-A^e v^d)^M` at `(d,e,M)=(3,2,4)` has `deg_u=8=Me`, `deg_v=12=Md`; `Res_y(y^3+xy+x-u, y^2+x-v)` obeys `deg_u <= 2`, `deg_v <= 3`; a `K=2` example obeys `deg_u Res <= 4`, `deg_v Res <= 6`. Proper maps may drop `R_0` below the Sylvester ceiling (`M=0`), which is the empty-`A_F` case and still `M <= K`. Then `sum_i deg D_i <= M max(d,e) <= K max(d,e) = max(deg P, deg Q)`, allowing extra scheme-multiplicities in `M`. A ceiling, not a `d_min` bound, gauge-dependent on the `(x,y)` side: the currency of `OPEN[COMPANION-R0-REALISATION]`.
 
 ---
 
 ## 5. Chau inversions — CONFIRMED
 
-Chau, arXiv:math/0305088, Theorem 1 (p. 2, read from the page image): `P, Q` monic in `y` with leading coefficients `A, B`, `deg P = K d`, `deg Q = K e`, `gcd(d,e)=1`, and every component of `A_f` is parametrised by `xi |-> (A xi^{m d} + l.o.t., B xi^{m e} + l.o.t.)`.
+Chau, arXiv:math/0305088, Theorem 1 (p. 2, page image): `P,Q` monic in `y` with leading coefficients `A,B`, `deg P=Kd`, `deg Q=Ke`, `gcd(d,e)=1`, every component of `A_f` parametrised by `xi |-> (A xi^{md}+l.o.t., B xi^{me}+l.o.t.)`. Printed Cor 1: `R_0=C(A^e u^e - B^d v^d)^M + lower`. Printed Cor 2: `c` is a `d`-radical of `B^d/A^e`. The paragraph above Cor 1 prints the same pair.
 
-Printed Cor 1: `R_0 = C(A^e u^e - B^d v^d)^M + lower`. Printed Cor 2: `c` is a `d`-radical of `B^d/A^e`. The paragraph immediately above Cor 1 prints the same two formulae for a single parametrised curve.
-
-Charged instance `xi |-> (2 xi^3, xi^2)`: `A=2`, `B=1`, `d=3`, `e=2`, `m=1`. Directly `u^2 - 4 v^3 = 0` on the curve, and `Res_xi(u-2 xi^3, v-xi^2) = -(u^2-4 v^3)`.
+Charged instance `xi |-> (2 xi^3, xi^2)`: `A=2`, `B=1`, `d=3`, `e=2`. Directly `u^2-4v^3=0` on the curve, and `Res_xi(u-2xi^3, v-xi^2)=-(u^2-4v^3)`.
 
 | combination | value | on the instance |
 |---|---|---|
@@ -237,13 +221,11 @@ Charged instance `xi |-> (2 xi^3, xi^2)`: `A=2`, `B=1`, `d=3`, `e=2`, `m=1`. Dir
 | corrected `c^e = A^e/B^d` with `c=2` | `4 = 4` | holds |
 | printed Cor 2 `c^d = B^d/A^e` | `8` vs `1/4` | fails |
 
-Leading-term cancellation: `u ~ A xi^{m d}`, `v ~ B xi^{m e}` gives `B^d u^e ~ B^d A^e xi^{m d e}` and `A^e v^d ~ A^e B^d xi^{m d e}`, which cancel identically. The printed combination cancels iff `A^{2 e} = B^{2 d}`, which fails on the instance (`16 != 1`). The Newton–Puiseux coefficient along `xi = v^{1/2}` is `c = A B^{-d/e} = 2`, so `c^e = A^e/B^d`. Both printed formulae are correct at `A=B=1`, which is the monic normalisation the campaign has used; nothing banked at `(9,6,2)` is disturbed.
+Leading-term cancellation: `u ~ A xi^{md}`, `v ~ B xi^{me}` makes `B^d u^e` and `A^e v^d` match identically. The printed combination cancels iff `A^{2e}=B^{2d}`, which fails on the instance (`16 != 1`). Along `xi=v^{1/2}` one has `c=A B^{-d/e}=2`, so `c^e=A^e/B^d`. Both printed formulae are correct at `A=B=1`; nothing banked at `(9,6,2)` is disturbed.
 
-The same inversion appears on Chau p. 3, not numbered as a corollary: the printed leading-form relation is `P_+^e = (B^d/A^e) Q_+^d`. For `P_+ = A y^{K d}`, `Q_+ = B y^{K e}` this requires `A^{2 e} = B^{2 d}` again. The identity that holds is `P_+^e = (A^e/B^d) Q_+^d`. CC SS3.3(i) uses the corrected ratio, consistently with AUDIT-CC-3, without listing p. 3 as a third inverted display. Harmless: the producer never consumes the printed p. 3 formula.
+The same inversion is on Chau p. 3: printed `P_+^e=(B^d/A^e)Q_+^d`. For pure `y`-leading forms this again requires `A^{2e}=B^{2d}`. The identity that holds is `P_+^e=(A^e/B^d)Q_+^d`. CC SS3.3(i) uses the corrected ratio and never consumes the printed p. 3 formula.
 
-Sharpening (i) of CC SS3.3 is correct: Theorem 1 feeds the *same* `(A,B)` to every component, and `xi |-> lambda xi` fixes `A^e/B^d`. The component-independent scalar is that one number. Sharpening (ii) — `c` common only up to an `e`-th root — follows from `c^e = A^e/B^d`. CAGE clause 1’s “a common type `u = c v^{d/e}`” over-reads the source if `c` is taken literally common; CC does not use the strong form.
-
-Positive control on the campaign curve: `f_1` of `D_1` has weighted-leading form `(u^2-v^3)^3`, which is the *corrected* Cor 1 shape at `(d,e)=(3,2)`, `m_1=3`, `A=B=1`, `M=3`. At `A=B=1` printed and corrected agree, so this is a shape check, not an inversion check. The inversion check is the charged instance above.
+Sharpening (i): Theorem 1 feeds the same `(A,B)` to every component, and `xi |-> lambda xi` fixes `A^e/B^d`. Sharpening (ii): `c` is common only up to an `e`-th root. CAGE clause 1 over-reads the source if `c` is taken literally common; CC does not use the strong form. The campaign curve’s weighted-leading form `(u^2-v^3)^3` is the corrected Cor 1 shape at `A=B=1`, where printed and corrected agree — a shape check, not an inversion check. The inversion check is the charged instance.
 
 ---
 
@@ -259,19 +241,19 @@ None of these moves a CONFIRMED.
 
 ## 7. FALLACY-v2 self-check
 
-*Flag/place/series.* `(LOC)`’s `a_p` is the finite-fibre count, not a branch count and not a dicritical index. `Sing D` in `(M'-bf)` is `Sing(A_F)`, not `Sing(D_i)`. The two `b` symbols of the charge (`b_dic` vs `b_br`) are not used in any identity replayed here. Prop 2.4’s ceiling (AUDIT-CC-1) was not consumed: COLLAPSE-N does not need it, and COMPANION-EXISTS does not apply it to companions.
+*Flag/place/series.* `a_p` is the finite-fibre count, not a branch count. `Sing D` in `(M'-bf)` is `Sing(A_F)`. The two `b` symbols of the charge are not used in any identity replayed here. Prop 2.4’s ceiling was not consumed.
 
 *Per-ray / exit-set.* No exit is charged. No `charge_basis` line.
 
-*Carrier/attainment.* The §5.3 pair is a curve pair satisfying a necessary cage. THEOREM COMPANION-EXISTS attains prescribed curve data by construction plus machine check, not by non-emptiness of a numerical cage. `REPRESENTATIVE` is not read as `FULL_ACTUAL_EXIT`.
+*Carrier/attainment.* The §5.3 pair is a curve pair. COMPANION-EXISTS attains prescribed curve data by construction, not by cage non-emptiness. `REPRESENTATIVE` is not read as `FULL_ACTUAL_EXIT`.
 
-*Floor/attainment.* Lemma CONTACT and `M <= K` are one-sided and are left one-sided. The witness numbers (`12` vs `17`, `15` vs `10`) are reported as such.
+*Floor/attainment.* CONTACT and `M <= K` are left one-sided (`12` vs `17`, `15` vs `10`).
 
-*Raw remainder degree / variable-ring map.* Every substitution `u |-> a(xi)`, `v |-> b(xi)` is in `Q[xi]`, with `f_1 in Q[u,v]` computed as `Res_t(p-u,q-v)`. Weighted degree is with the declared grading `wt(u)=d`, `wt(v)=e`. Leading coefficients are named, not inferred from variable names.
+*Raw remainder degree / variable-ring map.* Substitutions `u |-> a(xi)`, `v |-> b(xi)` are in `Q[xi]`; `f_1 in Q[u,v]` is `Res_t(p-u,q-v)`; weighted degree uses the declared grading `wt(u)=d`, `wt(v)=e`; leading coefficients are named.
 
-*`sat()` wrapping, pole/interior, prime-label, merge-free, target/arrival.* Not in play. The one Groebner basis (lex, `Q[u,v]`, generators `f_1, partial_u f_1, partial_v f_1`) is a singular-locus computation with a two-element basis `(u, nodepoly)`, not a saturation.
+*`sat()`, pole/interior, prime-label, merge-free, target/arrival.* Not in play. The one Groebner basis is a singular-locus computation `(u, nodepoly)`, not a saturation.
 
-*Gaps.* None filled by cap or analogy. Where Chau and the campaign disagree, the instance decides. Where a first family failed (`e=1` naive row), the failure is the content of MULT-2, not a silent replacement.
+*Gaps.* None filled by cap or analogy. The Chau instance decides the inversion; the naive `e=1` failure is the content of MULT-2, not a silent replacement.
 
 ---
 
@@ -292,3 +274,13 @@ consulted, disclosed
       refs/chau2004_nonproper_value_set_arxiv_math0305088.pdf   [L]
   xmodel/reducible-all-n-r2-opus5-20260901.md   (grep of (LOC)/(BUD) only)
 ```
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `24985`.
+- Body SHA-256:
+  `ee0b9adf589e1e29a9d3dabb97baf4231bf0cdeb0b5c06dcc996f473c9597344`.
+- Frozen basis: `7b04bd5e18154638b3f35e46a74723610893d901`.
