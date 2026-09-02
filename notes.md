@@ -19449,3 +19449,28 @@ reformulation of the degree question adds NO constraint beyond the
 ledger; the defect budget is linear in n and is fully spent by (K).
 Consistent with the lane's MRK-READING. Recorded so the n-vs-mapdeg
 harvest does not re-walk it.
+
+EVENT (observed ~11:10Z per lane print) — **MERIDIAN-FLOOR-SHARPEN
+REVIEWED** (`meridian-floor-sharpen-review-gpt55-20260902.md`, 32c04332,
+BODY_SEALED): items 1, 3–7 CONFIRMED with repairs — MF-EXACT (wording:
+equality g_L = 0, theta_inf = 1 attains the S-known floor
+ceil((N−1)/(W−S)), not the W-only relaxation unless S = 1); LOC-MULT
+(state the orbit hypothesis: T_P = number of orbits of rho(Loc_P) on the
+sheets; a lower bound only); the price table at MF-SHARP strength ("no
+cell empty outright" = no floor-vs-ceiling kill, not a nonemptiness
+theorem); the (B2) forced delta_aff (6..39 is the W = 2 subcolumn;
+minima over W tabulated); the W = 2 threshold C(N) <= N − 2 (necessary
+for the current floor-vs-upper-bound ROUTE, not a theorem against
+future methods); SHARP-CHAU (hypotheses: generic target coordinate u,
+D_F = deg(u∘F) = max(deg P, deg Q), H2, S >= 1; does not bound D_F in
+N). Item 2 (meridional-rank reading) CONFIRMED for the bounded
+quantity, GAP on two overstatements: promote as a SCOPE theorem for
+methods factoring through mrk(G) <= n, not a global impossibility; and
+strike the centerless wording (no Z(G) = 1 in (B3)). INTEGRATION #11
+binds now with the boundary-instrument set and this set (n-vs-mapdeg
+goes to #12). Launched `mf-defect-mult-vs-beta-grok46-20260902` (Grok):
+the two priced +1 questions — OPEN[MF-DEFECT] (is 2 g_L + theta_inf >= 2
+for every noninvertible Keller F and generic line; classical
+generic-fibre theory of polynomial submersions C^2 → C, Suzuki /
+Hà–Lê / Zaidenberg–Lin) and OPEN[MULT-VS-BETA] (is beta = 1 forced in
+(B3) at W = 2 for N >= 5; finite question on (C3) + Lemma 4.3).
