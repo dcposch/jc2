@@ -18621,3 +18621,25 @@ begins now; synthesis on sol56's seal or at the 75-min deadline.
 Runners: a2-ubound (opus), ideation-sol56, cusp-a-void-review
 (gpt55), cusp-a-void-countermodel (grok); box01 A2 x2; Box03 869
 (cap ~10:22Z).
+
+EVENT (observed: see the ~08:35Z lane prints) — SOFTWARE DELTA:
+msolveio 0.2.1 + qqideal 0.2.0 PUBLISHED (DC, in session). New
+capability: exact witness extraction (`Ideal.witness_points` /
+`witness_points(gens, ring=, opens=, timeout=)` -> POINTS / EMPTY /
+POSITIVE_DIMENSIONAL / TIMEOUT / ERROR with RationalPoint and
+AlgebraicPoint over QQ[t]/(g); membership PROVEN by exact
+substitution, completeness MODULAR) on top of msolveio PARAM
+(`run_param` -> RationalParametrization | EmptySolutionSet |
+PositiveDimensional; exact int tuples; char-p param raises).
+Integration policy (coordinator): the running box01 window keeps
+its pinned 0.1.0 venv untouched; 0.2.x goes into a SEPARATE venv
+(`~/qqoracle-venv-02` on box01) and must pass a mini-oracle
+(item-0 gate (1,3) + the 863/964 verdict replays, zero
+disagreements) before becoming the default generation target —
+same cutover discipline as 0.1.0. First consumer once cut over:
+witness extraction on any NONEMPTY verdict (the (B3) N=4
+parametrisation search and the 964 dim-3 locus are the obvious
+targets; a NONEMPTY cell would finally yield a point, not just a
+bit). Also queued for the round synthesis: the two ideation
+lanes and two adjudication lanes launched 08:25-08:35Z
+(`phi-immersion-adjudication-sol56`, `chau-delta-budget-gpt55`).
