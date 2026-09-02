@@ -1,2 +1,19 @@
 cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
-I'll start by verifying the frozen input hashes, then read the charged papers and campaign guardrail before replaying the proofs.
+I'll start by verifying the frozen input hashes, then read the charged papers and campaign guardrail before replaying the proofs.Hashes match. Next I’ll read the charged papers, FALLACY-v2, and prior review/seal conventions so the replay stays on the same terms.Hashes match. I’ll pull CELL-32, the homcover/mprime sources, and a recent review template so the replay can be checked against the same statements.I have the two charged papers. Next I’ll pull the original charge, HT/MI source theorems, and a recent review format so the replay can be checked against those statements.I’ll pull the HT/MI source theorems and CELL-32 equation displays next, then recompute the 3×3 determinant independently.N4-PIN is independently confirmed. I’ll recompute the 3×3 leaders from CELL-32’s displays in sympy, then replay the wall algebra.e=0 controls all match. Next I’ll extract the general-e leading rows and the three chamber determinants.Chamber II and III determinants match. I’ll extract Chamber I the same way and check the wall algebra.Chamber I matches. I’ll recompute the Wall B rows with the vanished E1 leader and check the remaining chamber-termination branches.The U<3e-1 resultant is load-bearing for uniqueness of Wall B, so I’ll recompute it from the leading-row formulas.HORN-A2’s resultant now matches, including the F leading coefficient. I’ll write the sealed review next.The draft is over the 18–28KB target. I’ll cut repeated derivations and keep the independent det, wall, and resultant checks.The review is sealed at `xmodel/horn-flagship-review-grok46-20260902.md` (27,586 body bytes). Frozen-input hashes matched before any reading.
+
+**Headline.** The charge’s `(B3)` presentation is false, and the flagship’s Zariski–van Kampen correction is right. The theorem set mostly survives independent replay. Two gaps: `Z(G)=1` is not proved, and “every theorem is global-abelian or local” is not an exhaustive partition. Nothing here empties `(B3)` at any `N`.
+
+| Claim | Verdict |
+|---|---|
+| (a) Charge “`G_{p,q}` + `k` commuting squares” is false; ZvK correction is right | **CONFIRMED** |
+| (b) B3-DEGREE | **CONFIRMED** |
+| (c) B3-CAGE | **CONFIRMED** |
+| (d) CENTRAL-RANK refuted globally, survives locally | **CONFIRMED** as hypothesis-absent globally, and locally under quasi-homogeneous scope. **GAP** on `Z(G)=1` |
+| (e) B3-PUSHOFF and B3-COMPONENT | **CONFIRMED** under that same scope |
+| (f) `N=4`: `rho(G)=S_4`; Puiseux `(2\|p,3\|q)` or `(3\|p,2\|q)`; `E` dichotomy | **CONFIRMED** |
+| (g) HORN-A2, including chamber II `det = 36 n (c+2e)(c+2e+1)` | **CONFIRMED** (ratio 1) |
+
+Chamber II determinant, Wall B ray `(n/4, 3/4, 1)`, and the `U<3e-1` resultant (including `F`’s leading coefficient and `disc_n(F) = (2^6 e^3 K)^2 · 2e(2e-1)`) all match. Composition with CELL-32’s T5 is scope-clean: same live section, same Wall B, disjoint leftovers. CELL-32 T1–T5 remain an unreviewed dependency of the A2 calculus.
+
+Promote the listed theorems at printed scope. Do not promote `Z(G)=1`, an EMPTY window in `N` for `(B3)`, or closure of `OPEN[A2-CELL-32]`.
+DIVERT path=xmodel/horn-flagship-review-grok46-20260902.md status=CLEAN_SEALED body_bytes=27586 body_sha256=9c549543c954567680439d7d1f8c729678f0a621f38c219b244c54373672c672

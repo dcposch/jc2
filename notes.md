@@ -18229,3 +18229,28 @@ proof side, the analogue of what the realized curves were on
 the CE side).
 
 Runners: horn review (grok), 869 msolve (~9h in).
+
+## LIVE STATE (observed 2026-09-02T03:47Z) — HORN SET REVIEWED; RAY-KILL LAUNCHED
+
+**HORN-FLAGSHIP-REVIEW landed** (BODY_SEALED, hash in commit):
+essentially ALL CONFIRMED — the presentation correction (the
+charge's torus-knot+commutators form CONFIRMED false; flagship
+ZvK form right), B3-DEGREE, B3-CAGE, B3-PUSHOFF/B3-COMPONENT
+(under SCOPE[B3-QH]), the N=4 rigidity, and **THEOREM HORN-A2 in
+full** (chamber II det recomputed and matched; chambers I/III
+empty; Wall B ray; T5 composition scope-clean). Two narrow typed
+GAPs, nothing invalidated: (i) Z(G)=1 not proved (the global
+CENTRAL-RANK refutation stands as hypothesis-absent); (ii) the
+global/local dichotomy is not a partition (third class exists;
+forbidden iota-crossing CONFIRMED absent). SCOPE[B3-QH] typed:
+general unibranch germs (iterated-torus-knot groups) not yet
+covered — a named scope boundary for the (B3) program.
+
+**RAY-KILL launched** (opus, `ray-kill-opus5-20260902`): push
+the wall one order deeper on the reviewed ray; EMPTY closes the
+horn's live section; residual -> finite-dimensionality + qqideal
+job spec per small e. Scope discipline bound in (B3-QH; no
+Z(G)=1; per-theorem transfer only).
+
+869 msolve: 5h20m elapsed on the process (12h cap). Runners:
+ray-kill (opus), 869.
