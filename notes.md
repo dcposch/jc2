@@ -18331,3 +18331,18 @@ coefficient-exact agreement with the measured row (no P0).
 theorem set's only remaining debt is the (1,3) second engine
 (cells codegen lane writing). Runners: a2-cells-codegen (sol),
 869 msolve (~10h, cap ~10:30Z).
+
+EVENT (see date print): **A2 cells window RUNNING on box01.**
+Codegen landed (`a2-cells-codegen-sol56-20260902.md`, prefix in
+commit, PARTIAL_NO_MARKER = unsealed-complete through §9 seal
+line; two source errata in CELL-32 displays found and typed
+during transcription). Gate run on box01:
+**(1,3) EMPTY** — mod-p PROVEN(F_65521) + char-0 MODULAR;
+combined with ray-kill's exact-Q sympy engine, (1,3) is
+TWO-ENGINE EMPTY with the Q-exact side present =
+PROMOTION-GRADE. RAY-EDGE's degenerate-cell debt discharged.
+Window items 1-4 running ((1,5) already EMPTY; (1,7) in
+progress; watcher b8cnhkvtb armed). All EMPTYs beyond the gate
+are MODULAR-certainty evidence pending exact-Q or second-engine
+per cell — typed, not promoted. box01's idle cores finally
+carrying frontier compute.
