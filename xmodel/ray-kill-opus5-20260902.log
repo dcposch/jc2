@@ -1,1 +1,22 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at `xmodel/ray-kill-opus5-20260902.md` (body 35,935 B, SHA-256 `95d6d720…`, basis `966a65f2`).
+
+## The ray does not close — but it is cut at its boundary and tightened everywhere else
+
+**Task (1), the charged core.** Pushing one order past HORN-A2 on the wall gives an explicit 4×5 linear system in the second coefficients. Two things came out of it:
+
+- **RAY-DEP (proved by hand, CAS-confirmed):** `n·(N1) + (n−2)·(N3) − (N4) = −(n−2)·ρ` identically. The four next-order conditions have rank ≤ 3 and are solvable iff `(n−2)ρ = 0`.
+- The inhomogeneity `ρ` is nonzero **exactly on the boundary slice `U = 3e`**, and it is not a new quantity: `ρ = −P(−(2e+1))·b²η_e⁴/((4e−2)s_σ²)` with `P` the flagship's own Chamber-II polynomial, whose nonvanishing at Wall B the review already recorded. So the slice `U = 3e` is **EMPTY** for `e ≥ 2`; the unique degenerate cell `n = 2`, i.e. `(e,U) = (1,3)`, I killed separately by an exact Gröbner decision (unit ideal, also with the wall not imposed).
+- **RAY-2:** the next order forces `E1_{2e−1} = 0`, so the wall tightens from `deg E1 ≤ 2e−1` to `deg E1 ≤ 2e−2`.
+
+Off the boundary slice there is **no** next-order contradiction available, for a structural reason rather than a failed search: the η/G/target families sit at `top − (U−3e+1)`, always an odd offset, so the order-(top−1) system is homogeneous whenever `U ≥ 3e+2`. Order (top−2) then adds nothing. The residual is the exact 2-parameter system in §3.6.
+
+**Tasks (2)–(4).** Finite and grossly overdetermined per cell, so decidable — but `U` is unbounded and nothing in the record bounds it (`OPEN[A2-U-BOUND]`, the highest-value successor). Job spec `A2-E1WALL-CELLS` is written for msolve + qqideal; sympy could not reach `(1,5)`. None of the three reviewed scope boundaries is consumed — no cusp, no centre, no transfer appears here.
+
+Two things you should know before reading the ledger:
+
+1. **A ray kill would close zero (B3) windows.** The charge's premise "(B3)'s A2 route at the affected windows" names something the record does not contain — the flagship §5 states the two instruments act on different objects and do not compose. I supply both ledgers anyway; Ledger B is unchanged in every row.
+2. `(1,3) EMPTY` is single-engine (sympy) and is queued as item 0 of the job spec, not promotion-grade. Controls run: the four `e=0` C32 identities, an independent replay of all three Chamber-II rows / determinant / Wall-B kernel, the pair-and-single sub-configurations HF did not display at Wall B, and a planted-solution negative control on the identical Gröbner pipeline.
+
+One correction worth carrying forward: there is **no** `Z → λZ` symmetry (EQ1 and EQ4 force incompatible weights on `κ`), so `s_σ` may not be normalized. An early run of this pass did normalize it and was discarded.
+DIVERT path=xmodel/ray-kill-opus5-20260902.md status=CLEAN_SEALED body_bytes=35935 body_sha256=95d6d7200d7337ec528350976bc942b87eca0b9cfde4a461d399b67b1d1be259

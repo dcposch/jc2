@@ -18254,3 +18254,35 @@ Z(G)=1; per-theorem transfer only).
 
 869 msolve: 5h20m elapsed on the process (12h cap). Runners:
 ray-kill (opus), 869.
+
+## LIVE STATE (observed 2026-09-02T05:25Z) — RAY CUT AT ITS EDGE; LADDER NON-TERMINATING; CHARGE CORRECTION ADOPTED
+
+**RAY-KILL landed** (`ray-kill-opus5-20260902.md`, 3d08b899,
+BODY_SEALED; review launched `ray-kill-review-grok46-20260902`):
+- RAY-1 (4x5 next-order system) + **RAY-DEP** (exact rank-<=3
+  dependency; solvable iff (n-2)rho = 0) + **RAY-EDGE**: the
+  boundary slice U = 3e is EMPTY (proved e >= 2; the (1,3)
+  degenerate cell by exact Groebner unit ideal) + **RAY-2**:
+  deg E1 <= 2e-2 on survivors.
+- EXACT RESIDUAL: OPEN[A2-CELL-32-E1WALL] narrows to U >= 3e+2,
+  deg E1 <= 2e-2, + three second-order pins — 2-dimensional per
+  cell; order-(top-2) adds nothing on 10 cells (e <= 5); the
+  ladder does NOT terminate. Per-cell: finite, overdetermined,
+  decidable (job spec §4). Per-e: U UNBOUNDED — new
+  **OPEN[A2-U-BOUND]** (a U-bound theorem is now the horn's
+  missing finisher).
+- **CHARGE CORRECTION (adopted)**: a ray kill closes
+  OPEN[A2-CELL-32] + one OBSTRUCTION[A-DEGREE-TWO] layer, NOT
+  (B3) windows — the coordinator's ray-kill charge premise
+  ("closes (B3)'s A2 route at the affected windows") was WRONG
+  per the horn flagship's own §5: the A2 and (B3) instruments
+  act on DIFFERENT objects and do not compose. Coordinator
+  ledger line of 03:19Z partially corrected: the horn front and
+  the (B3) group program are SEPARATE fronts; HORN-A2/RAY-*
+  close the A2 one-cusp cell family, while (B3) rests on the
+  B3-* cage (rigid-not-empty at N=4).
+NEXT after review: per-cell qqideal decisions (smallest cells
+per §4 spec) + a U-BOUND attempt lane; both feed the 12:22Z
+round.
+
+869 msolve still grinding (~7h process time).
