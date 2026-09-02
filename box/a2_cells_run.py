@@ -52,6 +52,17 @@ from a2_cells_jobs import (  # noqa: E402
 
 
 EXPECTED_PACKAGE_VERSIONS = {"qqideal": "0.1.0", "msolveio": "0.1.0"}
+# Coordinator 2026-09-02: an explicit env override for the pinned package
+# versions, so a candidate stack (e.g. qqideal 0.2.0 + msolveio 0.2.1) can be
+# run through the SAME gate/oracle path in a separate venv without editing
+# the default pin. Format: A2_CELLS_PACKAGE_VERSIONS="qqideal=0.2.0,msolveio=0.2.1".
+# The default pin is unchanged; the override is echoed by the preflight line.
+_override = os.environ.get("A2_CELLS_PACKAGE_VERSIONS")
+if _override:
+    EXPECTED_PACKAGE_VERSIONS = {
+        k.strip(): v.strip()
+        for k, v in (item.split("=", 1) for item in _override.split(",") if "=" in item)
+    }
 EXPECTED_MSOLVE_VERSION = "0.10.1"
 DEFAULT_PRIME = 65521
 
