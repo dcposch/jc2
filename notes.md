@@ -17638,3 +17638,49 @@ domrina-instantiate-sol56, burnside-chi-gpt55. Opus seats 4/5
 COMPANION-CURVE-ALLN (injections at harvest), SAGE-NATIVE, 869,
 oracle window, box01 provisioning. Next full-round floor:
 2026-09-02T12:22Z.
+
+## LIVE STATE (observed 2026-09-02T00:58Z) — PATH-2 LANDS: (M') EXHAUSTED EVERYWHERE; COMPANION EXISTS AT EVERY N; (9,6,2) PAIR COMPLETE
+
+**COMPANION-CURVE-ALLN landed** (`companion-curve-alln-opus5-20260902.md`,
+bf6b82e9, BODY_SEALED): **CLOSED-NEGATIVE as an obstruction
+lane**, by two theorems (PROVED-HERE/UNREVIEWED, review launched):
+- **THEOREM COLLAPSE-N**: at every N >= 4, every CAGE profile,
+  LHS(M'-bf)-RHS(M'-bf) = (N-1) - K_tot - sum_i W_i chi~_i —
+  ALL sigma_i/nu_i/node/crossing data cancels identically; given
+  Lemma A, (M'-bf) IS the Orevkov budget and carries no more.
+  OPEN[REP-96-MPRIME-COMPANION] closed NEGATIVE; (M') is NOT an
+  independent gate in RED-N. (Independently corroborates Sol's
+  round prediction that Euler data is exhausted.)
+- **THEOREM COMPANION-EXISTS**: explicit three-row family
+  realizes the complete forced datum (C1)-(C11) at every coprime
+  (d,e), every Chau invariant, every multiplicity except
+  Corollary MULT-2's kill (m=1 at min(d,e)=1 -> every component
+  has deg >= 2max(d,e)). NO N_0 EXISTS.
+- **(9,6,2) companion DECIDED POSITIVE with machine-verified
+  witness**: D_2: xi -> (xi^3+xi+1, xi^2+3), immersive nodal
+  cubic, Chau match, 12 distinct transverse crossings avoiding
+  D_1's nodes, Bezout 27 = 12+15, a_p census consistent. The
+  pair (D_1, D_2) satisfies EVERY promoted constraint of the
+  N=4 reducible cage. NOT claimed to be any Keller map's A_F.
+- Chau AUDIT: two printed formulas inverted (Cor 1 leading form,
+  Cor 2 radical); machine-verified corrections; nothing banked
+  disturbed.
+- NEW OPENs: **OPEN[COMPANION-R0-REALISATION]** — A_F must be
+  V(R_0); pins M = sum k_i m_i <= K = deg P/d, i.e.
+  sum deg D_i <= max(deg P, deg Q): the ONLY reachable handle on
+  companion degree, and the exact currency of the restored
+  OPEN[N5-DEGREE-CAP]. OPEN[COMPANION-AFFINE-DISJOINT] (JOB-A).
+- Load-bearing negatives (do not spend): (N1) LOC-2 vacuous in
+  RED-N (no forced disjointness); (N2) companion degree invisible
+  to every promoted degree gate; (N3) companion carries no
+  monodromy — ZvK/braid/N-A layers blind to it by construction.
+
+**ROUTING**: weight shifts to the three razors (source-gate-962
+running — ITS MODE 2 IS NOW UNBLOCKED by the explicit D_2; launch
+Mode-2 at its harvest), Card C direct solve (step-0 running; the
+R_0 condition now sharpens it), HOM-COVER (non-Euler, immune to
+COLLAPSE-N), BURNSIDE-CHI (gpt55 running — COLLAPSE-N covers the
+natural action only; the subgroup rows may or may not collapse;
+that lane decides). DOMRINA-INSTANTIATE (running) gets the
+concrete witness pair at harvest. Review launched:
+`companion-alln-review-grok46-20260902`.

@@ -1,1 +1,21 @@
 cli=2.1.228 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report delivered: `xmodel/companion-curve-alln-opus5-20260902.md` (sealed, body 49229 B, SHA-256 `0b7582ec…`). Input hashes verified first; all three matched.
+
+## What the lane found
+
+**Task (1) — the collapse is total, and it is a negative.** With `a_p` supplied by `(LOC)`, the block-free `(M′)` satisfies, at *every* `N ≥ 4` on *every* CAGE-N-R2 profile:
+
+```
+LHS − RHS = (N−1) − K_tot − Σ_i W_i·χ̃_i
+```
+
+so `(M′-bf)` holds iff `Σ_i W_i χ̃_i + K_tot = N−1`, which given the Orevkov budget is exactly Lemma A. Every `σ_i`, `ν_i`, node count and crossing count cancels — on the companion as much as the branched component. REP-96 §7's `χ₂ + σ₂ = 1` is the `i=2` instance of `Σ_i W_i(χ̃_i−1) = 0`; it looked like a constraint on `D_2` only because Lemma A had already been spent on `D_1`. **`OPEN[REP-96-MPRIME-COMPANION]` closes NEGATIVE**: the identity cannot bind at any `N`, for any pinning of `D_2`. §2.4 diagnoses why the (H2) kill works — it runs on the *ceiling* `a ≤ N−2`, which Prop 2.4 licenses only on **branched** components, where it reads `W_i ≥ 2` and is automatic.
+
+**Task (2) — the companion exists; there is no `N_0`.** The forced datum is pinned as (C1)–(C11) and realized by an explicit three-row family for every coprime `(d,e)` with `max(d,e) ≥ 2`. One exclusion turned up, and only via a negative control: **Corollary MULT-2**, if `min(d,e)=1` then every component has `m_i ≥ 2` (otherwise it is a graph, Gate-EMB-dead). My first family statement was wrong on that case; the report reports the wrong version rather than silently replacing it.
+
+**Task (3) — witness, not a Groebner job.** `D_2 : ξ ↦ (ξ³+ξ+1, ξ²+3)` — immersive nodal cubic, matching Chau invariant, 12 distinct transverse crossings with the `(9,6,2)` curve, avoiding all four of its nodes, Bezout `27 = 12 + 15`. It satisfies every promoted clause of the `N=4` cage, and it satisfies `(M′)` exactly (`LHS = RHS = −63`) — the concrete face of the collapse. Existence is decided by hand, so §6 specifies JOB-A for the residual stratum and recommends JOB-B (the braid factorisation) instead.
+
+**A source correction.** Chau (arXiv:math/0305088) Cor 1's leading form should be `(B^d u^e − A^e v^d)^M`, and Cor 2's `c` satisfies `c^e = A^e/B^d` — both printed inverted. Verified on `ξ ↦ (2ξ³, ξ²)`. Invisible at `A = B = 1`, so nothing banked is disturbed.
+
+Everything `[D]` is UNREVIEWED and needs a different-model gate. Two deviations worth flagging: the report is ~49 KB against the 25–35 KB target (three compression passes run; §7(e) records it rather than cutting verified content or controls), and I read two non-charged files — the `(M′)` source and the Chau PDF — both disclosed with hashes in §0.
+DIVERT path=xmodel/companion-curve-alln-opus5-20260902.md status=CLEAN_SEALED body_bytes=49229 body_sha256=0b7582ecfd6f108d3ed90e0823a9203cbe3c57fc286b8ad26c6d3f79fbb664d5

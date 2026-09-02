@@ -86,9 +86,13 @@ cannot "become binding once `D_2` is pinned"; it can never bind. SS2.4 diagnoses
 the same identity is fatal under `(H2)` and inert here.
 
 **F2 `[D]`+`[C]` — the companion exists, at every `N`, and explicitly at
-`(9,6,2)`.** SS3.2 pins the complete forced datum (C1)-(C11); SS4 exhibits a uniform
-family realising it for every coprime `(d,e)` with `d,e >= 2`, every multiplicity,
-every value of the Chau invariant, with Gate EMB automatic. **There is no `N_0`.**
+`(9,6,2)`.** SS3.2 pins the complete forced datum (C1)-(C11); SS4 exhibits an
+explicit three-row family realising it for every coprime `(d,e)` with
+`max(d,e) >= 2`, every value of the Chau invariant, and every multiplicity `m`
+except the one case a machine control turned up: Corollary MULT-2, `m = 1` at
+`min(d,e) = 1`, where the component is a graph and Gate EMB kills it. That
+exclusion - the lane's only outright kill, and silent at `(d,e) = (3,2)` - bounds
+multiplicity, not degree. **There is no `N_0`.**
 At the `(9,6,2)` substrate the datum is pinned completely (SS5.2) and a witness is
 machine-verified (SS5.3): `D_2 : xi -> (xi^3 + xi + 1, xi^2 + 3)`, an immersive
 nodal cubic with matching Chau invariant, meeting `D_1` in 12 distinct transverse
@@ -359,7 +363,8 @@ asymptotic coefficient vs. its `e`-th power).
 always cancels is `B^d u^e - A^e v^d`. Machine check `[C]`: the component
 `xi -> (2 xi^3, xi^2)` (`A=2, B=1, d=3, e=2`) has equation `u^2 - 4v^3`;
 `B^d u^e - A^e v^d = u^2-4v^3` divides it, `A^e u^e - B^d v^d = 4u^2-v^3` does not;
-and `c = 2` gives `c^e = 4 = A^e/B^d`, not `c^d = 8` versus `B^d/A^e = 1/4`. Read
+and its `c = 2` satisfies `c^e = c^2 = 4 = A^e/B^d`, whereas Cor 2's reading asks
+for `c^d = c^3 = 8` to equal `B^d/A^e = 1/4`, which it does not. Read
 Cor 1 as `(B^d u^e - A^e v^d)^M` and Cor 2 as `c^e = A^e/B^d`. Both printed forms
 are correct at `A = B = 1`, so nothing banked is disturbed. `[A]` **AUDIT-CC-3.**
 
@@ -388,8 +393,9 @@ verified by expansion. The weighted levels present are `18, 14, 10, 6, 2` only.
 *Proof.* `sum_{p affine} (D_1.D_2)_p = deg_xi f_1(a_2(xi), b_2(xi))`, since the
 `D_2`-parametrisation is proper and birational. Grade `C[u,v]` by
 `wt(u) = d, wt(v) = e`; `f_1` has weighted degree `m_1 de` with weighted-leading
-form `(B^d u^e - A^e v^d)^{m_1}` (SS3.3). Substituting raises weighted degree `w` to
-`xi`-degree at most `m_2 w`. The top level contributes at most
+form `(B^d u^e - A^e v^d)^{m_1}` (SS3.3). The substitution sends a monomial of
+weighted degree `w` to a polynomial of `xi`-degree at most `m_2 w`, since
+`deg a_2 = m_2 d` and `deg b_2 = m_2 e`. The top level contributes at most
 `m_1 (m_2 de - 1)` because `B^d a_2^e - A^e b_2^d` loses its leading coefficient
 exactly by C7; every lower level contributes at most `m_2(m_1 de - 1)`. Take the
 max of the two, i.e. subtract `min(m_1,m_2)`. Bezout in `P^2` with
@@ -425,58 +431,82 @@ The charge asks whether a rational companion with the forced data exists for any
 the data is contradictory beyond some degree. It exists at every `N`, and `N_0`
 does not exist.
 
-### 4.1 Gate EMB is automatic when `d, e >= 2`
+### 4.1 Gate EMB: automatic when `d, e >= 2`, and a small kill when it is not
 
-> **Lemma EMB-AUTO `[D]`.** If `d, e >= 2` then no birational immersive
-> parametrisation of bidegree `(m d, m e)` is injective; hence C4 is automatic and
-> Gate EMB imposes no condition on companions.
+> **Lemma EMB-AUTO `[D]`.** If `d, e >= 2` then no birational parametrisation of
+> bidegree `(md, me)` is injective; C4 is automatic and Gate EMB imposes no
+> condition. If `min(d,e) = 1`, C4 is a real condition.
 
 *Proof.* Abhyankar-Moh: a smoothly embedded `A^1 subset C^2` given by
 `xi -> (a,b)` has `deg a | deg b` or `deg b | deg a`. Here `md | me` iff `d | e`
 iff `d = 1`, and `me | md` iff `e = 1`. []
 
-So the only `(d,e)` where Gate EMB is a real condition are `(d,1)` and `(1,e)`; the
-witness below satisfies it there too, by exhibiting a member with a double point.
+> **Corollary MULT-2 `[D]`.** If `min(d,e) = 1` then **every** component of `A_F`
+> - branched or companion - has `m_i >= 2`, hence `deg D_i >= 2 max(d,e)`.
+
+*Proof.* Say `e = 1` and `m_i = 1`. Then `deg b_i = 1`, so `xi -> b_i(xi)` is an
+isomorphism of `A^1` and `D_i` is the graph of `a_i o b_i^{-1}`: a smoothly
+embedded `A^1`, which Gate EMB forbids (equivalently, rectify by
+`(u,v) -> (u - a_i(b_i^{-1}(v)), v)` and apply Lemma NL to the rectified map). No
+immersivity hypothesis is used, so this covers branched components too. []
+
+This is small but it is a kill, and it is the only place in the lane where a
+promoted gate removes a companion outright. It costs nothing at the live rows: the
+`(9,6,2)` substrate has `(d,e) = (3,2)`, so MULT-2 is silent there.
 
 ### 4.2 The uniform family
 
 > **THEOREM COMPANION-EXISTS `[D]`+`[C]`.** Fix coprime `(d,e)` with
-> `max(d,e) >= 2`, an integer `m >= 1`, and any `lambda in C^*`. Choose `A, B` with
-> `A^e/B^d = lambda`. Then
+> `max(d,e) >= 2`, an integer `m >= 1` with `m >= 2` if `min(d,e) = 1`, and any
+> `lambda in C^*`; choose `A, B` with `A^e/B^d = lambda`. Then
 > ```text
->        C_{d,e,m} :  xi  |-->  ( A (xi^{md} + xi) ,  B xi^{me} )
+>   d, e >= 2 :   xi |-> ( A(xi^{md} + xi) ,  B xi^{me} )
+>   e = 1     :   xi |-> ( A(xi^{md} + xi^{m+1} + xi) ,  B xi^{m} )     (m >= 2)
+>   d = 1     :   xi |-> ( A xi^{m} ,  B(xi^{me} + xi^{m+1} + xi) )     (m >= 2)
 > ```
-> is a plane polynomial curve satisfying **C1-C8** and, generically in its
-> coefficients, **C9**: `A^1` normalisation, one place at infinity, bidegree
-> `(md, me)`, the prescribed Chau invariant, immersive parametrisation, and at
-> least one multibranch point.
+> is a plane polynomial curve satisfying **C1-C8**, and generically **C9**: `A^1`
+> normalisation, one place at infinity, bidegree `(md, me)`, the prescribed Chau
+> invariant, immersive parametrisation, at least one multibranch point. Together
+> with MULT-2 this is exhaustive: for every `(d,e,m)` **not** excluded by MULT-2,
+> the companion datum is realized.
 
-*Proof.* *Birational.* If `xi_1 != xi_2` have the same image then
-`xi_2 = zeta xi_1` with `zeta^{me} = 1`, and `xi_1^{md} + xi_1 = zeta^{md}
-xi_1^{md} + zeta xi_1`; for `xi_1` outside a finite set the two monomials are
-independent, forcing `zeta = 1`. So `eta` is generically injective, hence
-birational, and `deg C = max(md, me)`. *Immersive.* `a' = A(md xi^{md-1} + 1)`,
-`b' = B me xi^{me-1}`; the only zero of `b'` is `xi = 0`, where `a' = A != 0`.
-*One place at infinity, C6-C8.* Immediate from the bidegree and the leading
-coefficients `(A,B)`, which give exactly `A^e/B^d = lambda`. *Singular.* By
-EMB-AUTO when `d,e >= 2`; when `e = 1` (resp. `d = 1`) replace `b` by
-`B(xi^{me} + xi^2)` and check the two-parameter fibre directly. []
+*Proof.* *One place at infinity, `A^1` normalisation.* A birationally parametrised
+polynomial curve has exactly one place at infinity, the image of `xi = infinity`,
+and normalisation `A^1`. *Bidegree, C6-C8.* Read off; the leading pair `(A,B)`
+gives `A^e/B^d = lambda`. *Immersive.* In each row `b'` (resp. `a'`) vanishes only
+at `xi = 0`, where the other derivative is `A != 0` (resp. `B != 0`). *Birational
+and singular.* For `d,e >= 2`: if `xi_1 != xi_2` share an image then
+`xi_2 = zeta xi_1` with `zeta^{me} = 1`, and matching the two monomials of `a`
+forces `zeta = 1` off a finite set, so `eta` is birational; non-injectivity
+somewhere is then EMB-AUTO. For `e = 1`, `m >= 2`: `zeta^m = 1` gives
+`zeta^{md} = 1` and `zeta^{m+1} = zeta`, so the fibre condition reduces to
+`(1 - zeta)(xi^{m+1} + xi) = 0`; taking `zeta != 1` and `xi^m = -1` produces
+genuine double points, while `zeta = 1` off that locus gives birationality. The
+`d = 1` row is the transpose. []
 
-*Machine control `[C]`.* For `(d,e) in {(3,2),(2,3),(5,3),(3,5),(5,2),(4,3),(7,4)}`
-and `m in {1,2,3}` - 21 shapes - the family was checked exactly: `gcd(a',b') = 1`
-in all 21 (immersive), and `Res_eta` of the two divided differences has positive
-degree in all 21 (non-injective, so singular). Bidegrees range over `(3,2)` to
-`(21,12)`.
+*Machine controls `[C]`.* (+) For `(d,e)` in
+`{(3,2),(2,3),(5,3),(3,5),(5,2),(4,3),(7,4)}` and `m in {1,2,3}` - 21 shapes,
+bidegrees `(3,2)` to `(21,12)` - `gcd(a',b') = 1` in all 21 and the double-point
+resultant has positive degree in all 21. (-) The *naive* row
+`(A(xi^{md}+xi), B xi^{me})` was run at `(d,e,m) = (2,1,2), (3,1,2), (2,1,3)`: in
+all three the double-point resultant is **identically zero**, i.e. those curves are
+injective, smoothly embedded, and Gate-EMB-dead. This is exactly the failure MULT-2
+predicts and is why the `e = 1` row of the theorem differs; it was found by running
+the control, not by inspection. (0) The repaired rows at `(d,m) = (2,2), (3,2),
+(2,3), (5,2), (3,4)` and the `d = 1` transposes at `(e,m) = (2,2), (3,2), (2,3)`
+are immersive with positive-degree resultant in all eight.
 
 ### 4.3 Consequence, and the exact answer to the charge
 
 > **Corollary `[D]`.** For every `N >= 4`, every profile in the CAGE-N-R2 ledger,
-> and every companion slot of weight `w` in that profile, the forced companion
-> datum (C1)-(C8) is realized by an explicit curve. C5 constrains only `w`, which
-> is a property of the profile and not of the curve; C9 is a finite set of open
-> conditions relative to the rest of `A_F`; C10 and C11 are vacuous on companions
-> (SS3.5 (N2), THEOREM COLLAPSE-N). **There is no `N_0 >= 4` beyond which the
-> companion datum is contradictory.**
+> and every companion slot of weight `w` in it, the forced companion datum
+> (C1)-(C8) is realized by an explicit curve at every multiplicity `m` not excluded
+> by MULT-2. C5 constrains only `w`, a property of the profile and not of the
+> curve; C9 is a finite set of open conditions relative to the rest of `A_F`; C10
+> and C11 are vacuous on companions (SS3.5 (N2), THEOREM COLLAPSE-N). **There is no
+> `N_0 >= 4` beyond which the companion datum is contradictory**, and the only
+> exclusion found anywhere in the lane is MULT-2's `m = 1` at `min(d,e) = 1`, which
+> is a constraint on the multiplicity, not on the degree.
 
 Three attacks the charge names were run; none bites, recorded so they are not
 re-run. *Genus-degree / Bezout*: genus is `0` by C2, degree is free by (N2), and
@@ -675,16 +705,20 @@ coefficients fixed to `1` by C7 + `xi`-scaling, `b_{2m-1} := 0` by `xi`-translat
 Dimension `5m - 1`; at `m = 1`, `Q[a_2,a_1,a_0,b_0]`.
 
 *Generators.* Form `S(xi) := f_1(a(xi), b(xi)) in Q[coeffs][xi]` with `f_1` the
-closed form of SS3.3. Let `I_A := ( [xi^1]S, [xi^2]S, ..., [xi^{6m+... }]S )` - all
-coefficients of positive powers of `xi`. Disjointness is `S = const != 0`, so the
-decision is `V(I_A) != {}` together with `[xi^0]S != 0` on it. At `m = 1`, `S` has
-degree `12`, so `I_A` has **12 generators in 4 variables**.
+closed form of SS3.3. Let `I_A` be generated by all
+coefficients of positive powers of `xi`, i.e. `[xi^k]S` for
+`1 <= k <= 18m - min(3,m)` (the Lemma CONTACT ceiling; generators above the actual
+degree are zero and harmless). Disjointness is `S = const != 0`, so the decision is
+`V(I_A) != {}` together with `[xi^0]S != 0` on it. At `m = 1` the actual degree is
+`12`, so `I_A` is **12 nonzero generators in 4 variables**.
 
-*Decision.* `msolve -g 2` (or `qqideal` for the rational-solution question)
-on `I_A`; `V(I_A) = {}` is the expected answer and would prove that **every**
-`m = 1` companion of the `(9,6,2)` curve meets it affinely - a clean, sourced
-structural fact about the substrate, and the first nontrivial constraint tying the
-two components together.
+*Decision.* `msolve -f I_A.ms -o out` in its default rational-input mode (0.10.1,
+live on Box03): output `[-1]` is "no solution in the algebraic closure", i.e.
+`V(I_A) = {}`; `msolve -g 2` gives the reduced grevlex basis for a hand audit;
+`qqideal` answers the rational-point refinement if the closure verdict is nonempty.
+Emptiness is the expected answer and would prove that **every** `m = 1` companion
+of the `(9,6,2)` curve meets it affinely - the first nontrivial constraint tying
+the two components together.
 
 *Controls, mandatory.* (+) Replace `f_1` by the companion's own `f_2`: then
 `S = 0`, `I_A = (0)`, `V = A^4` - catches a substitution/ring error. (-) Drop C7
@@ -722,13 +756,17 @@ THEOREM COLLAPSE-N   PROVED-HERE, UNREVIEWED, machine-controlled.
                      Given (AGG): (M'-bf) <=> chi~_i = 1 for all i <=> Lemma A.
                      Corollary: (M') is not an independent gate in RED-N.
 
-THEOREM COMPANION-   PROVED-HERE, UNREVIEWED, machine-controlled on 21 shapes.
-  EXISTS             C_{d,e,m}: xi -> (A(xi^{md}+xi), B xi^{me}) realizes
-                     C1-C8 for every coprime (d,e), max(d,e)>=2, every m,
-                     every value of A^e/B^d.   N_0 DOES NOT EXIST.
+THEOREM COMPANION-   PROVED-HERE, UNREVIEWED, machine-controlled (21 shapes +
+  EXISTS             3 negative + 8 repaired).  A three-row explicit family
+                     realizes C1-C8 for every coprime (d,e) with max(d,e)>=2,
+                     every value of A^e/B^d, and every multiplicity m not
+                     excluded by MULT-2.   N_0 DOES NOT EXIST.
 
 Lemma CONTACT        PROVED-HERE, UNREVIEWED, near-sharp on 3 machine controls.
 Lemma EMB-AUTO       PROVED-HERE (Abhyankar-Moh).
+Corollary MULT-2     PROVED-HERE, UNREVIEWED.  If min(d,e) = 1 then every
+                     component of A_F has m_i >= 2, i.e. deg D_i >= 2 max(d,e).
+                     The lane's only outright kill; silent at (d,e) = (3,2).
 Chau AUDIT-CC-2/3    Cor 1 leading form is (B^d u^e - A^e v^d)^M, not
                      (A^e u^e - B^d v^d)^M; Cor 2's c satisfies c^e = A^e/B^d.
                      Machine-verified. Harmless in the monic normalisation.
@@ -801,7 +839,11 @@ and SS6 declares source ring, target ring, images and the grading it respects.
 
 *Controls.* SS2.5: one positive, three negative (`chi~_2 = 0,-1,-3`, each matching
 the predicted defect), one 33116-case randomised; the failed first harness is
-reported, not discarded. SS4.2: 21 shapes. SS6 specifies `(+)`, `(-)`, `(0)`.
+reported, not discarded. SS4.2: 21 positive shapes, 3 negative, 8 repaired - and the
+negative control is what found the `min(d,e) = 1` failure of the first family, which
+inspection had missed and which turned into Corollary MULT-2; the wrong first
+statement is reported rather than silently replaced. SS6 specifies `(+)`,`(-)`,`(0)`
+for the proposed job.
 
 *Pole/interior, `sat()`, prime-label, merge-free, target/arrival.* Not in play.
 
@@ -825,6 +867,18 @@ consulted, disclosed
 primary literature cited, not re-read here
   Abhyankar-Moh (1975) / Suzuki (1974), embedding line theorem   (via EMB-AUTO)
 computation
-  sympy 1.14.0 over Q; scripts /tmp/comp/{d1,d1b,d2,d3,witness,mprime3,family,contact,final}.py
+  sympy 1.14.0 over Q; scripts /tmp/comp/{d1,d1b,d2,d3,witness,mprime3,family,
+      contact,edge,final}.py
   no AWS, no msolve/qqideal run, no jc2-lean, no canonical ledger
 ```
+
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `49229`.
+- Body SHA-256:
+  `0b7582ecfd6f108d3ed90e0823a9203cbe3c57fc286b8ad26c6d3f79fbb664d5`.
+- Frozen basis: `b00c362c19219c78412735830c172220540a0080`.

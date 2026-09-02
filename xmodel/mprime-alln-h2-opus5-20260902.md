@@ -14,18 +14,14 @@ written. Four small `python3` scripts were run (integer enumeration and one
 every conclusion they support is stated so that it can be re-derived by hand or
 re-run in ten lines. No CAS, no solver, no network fetch.
 
-**What this lane consumes.** The identity `(M')` and its supporting lemmas as
-promoted in `round1033-sheet-gate-opus5-20260831.md` (hostile review
-`round1033-sheet-gate-hostile-review-sol56-20260831.md`: (M') **CONFIRMED** as a
-theorem under explicit `H2 + H3`); the all-degree dicritical facts `[P3]`,
-`[P4]`, `[P7]`, `[P8]` and Orevkov Lemmas 2.1/3.1 as re-derived from primary
-source in `n20-escape-kill-opus5-20260901.md` (review-CONFIRMED); THEOREM 7.B
-from the charged all-degree coordinator integration.
-
-**What this lane does not consume.** No claim from the `(9,6)` REP-96 lane is
-used as an input to a proof here; REP-96 §7 (R4) is used only as the statement
-of the charge and as a control (§10). The `N = 4` *reducible* cage is untouched:
-everything below is the `H2` (irreducible `A_F`) branch.
+**Consumed.** `(M')` and its supporting lemmas from
+`round1033-sheet-gate-opus5-20260831.md` (review
+`...-hostile-review-sol56-...`: (M') **CONFIRMED** under explicit `H2 + H3`);
+`[P3]`, `[P4]`, `[P7]`, `[P8]` and Orevkov Lemmas 2.1/3.1 as re-derived from
+primary source in `n20-escape-kill-opus5-20260901.md` (review-CONFIRMED);
+THEOREM 7.B. **Not consumed:** no REP-96 claim is an input to a proof here
+(REP-96 §7 R4 is the statement of the charge and a control, §10); the `N = 4`
+*reducible* cage is untouched — everything below is the irreducible branch.
 
 **Standing setup.** `F = (F_1,F_2) : A^2 -> A^2` is a Keller map over `C`
 (`Jac F ∈ C^*`), **not** an automorphism; `N = d = [C(x,y) : C(F_1,F_2)] >= 2`;
@@ -40,13 +36,11 @@ the geometric degree, as the charge does. (ii) `mu_l` (Orevkov dicritical
 multiplicity) `= e_j` (sheet-gate boundary multiplicity) and `s_l` (dicritical
 cover degree) `= delta_j`; the dictionary is proved, not assumed, in §1.
 
-**Verdict headline** (details in §10). Under `H2`, at **every** degree `N >= 3`:
-`A_F` is singular (§3); `H3` holds unconditionally (§2); if every branch of
-`A_F` is smooth — this contains the entire nodal case — then `N >= 17` (§5); the
-`N <= 16` residual is exactly "`A_F` carries a singular branch", split into a
-cuspidal horn that is caged but not empty (§7) and a mixed horn that is the
-campaign's one-cusp horn (§8). The `N = 4` `H2` residual is pinned to a single
-profile which reproduces the promoted rank-four census exactly.
+**Verdict headline.** The `H2` branch is *not* closed at all degrees. What is
+closed, at every `N >= 3`: `H3` (§2), smooth `A_F` (§3), and every profile with
+a multibranch point at `N <= 4` (§5); and, when every branch of `A_F` is smooth
+— which contains the whole nodal case — every `N <= 16` (§5). The typed verdict
+block is §10.
 
 ## 1. Notation, the promoted dictionary, and the exact hypotheses of `(M')`
 
@@ -150,25 +144,18 @@ right-hand side: every kill below is a fortiori valid without `H3`. §2 shows
 Three remarks, because this is a repair of a promoted item and must not be
 oversold.
 
-1. **What is new.** The promoted route (`[P5]`; `b0-all-n` §2.3, hostile-review
-   CONFIRMED) reaches `H3` through Riemann–Hurwitz applied to `h̄_0` *after*
-   using `mu_0 = 1` to force `h_0` étale, and its extra output is `s_0 = 1`.
-   Lemma A drops `s_l = 1` — which nothing downstream of 7.B needs — and buys
-   `H3` from Lüroth plus a one-line covering argument. It is strictly weaker in
-   conclusion and strictly weaker in hypothesis.
-2. **Why the repair is necessary and not cosmetic.** After THEOREM 7.B no
-   dicritical has `mu = 1`, so `[P5]`'s antecedent is empty and its consequent
-   is not asserted. The coordinator's bullet "`H3` as a conclusion"
-   (all-degree integration §1.1) is, read literally against `[P5]`, a vacuous
-   implication. Every downstream consumer of `(M')` — including REP-96 §7 (R4)
-   and this lane — needs `H3` as a *fact*, not as an implication with an
-   emptied hypothesis. Lemma A supplies it.
-3. **Scope.** Lemma A is componentwise and needs neither `H2` nor `H3`. It
-   applies to every component of a reducible `A_F` that carries a dicritical;
-   by promoted dicritical surjectivity onto `Irr(A_F)`, that is every component.
-   So `chi_c(D_i) = 1 - nu_i` componentwise in the reducible branch too — a free
-   sharpening of the block-free identity, flagged for the reducible lanes but
-   **not** used below.
+1. **What is new.** The promoted route (`[P5]`; `b0-all-n` §2.3,
+   review-CONFIRMED) reaches `H3` by Riemann–Hurwitz on `h̄_0` *after* using
+   `mu_0 = 1` to force `h_0` étale, with extra output `s_0 = 1`. Lemma A drops
+   `s_l = 1` — which nothing downstream of 7.B needs — and buys `H3` from Lüroth
+   plus a one-line covering argument: weaker conclusion, weaker hypothesis.
+2. **Why the repair is necessary.** After 7.B no dicritical has `mu = 1`, so
+   `[P5]`'s antecedent is empty and its consequent is not asserted; the
+   coordinator's bullet "`H3` as a conclusion" is, read against `[P5]`, a
+   vacuous implication. Every consumer of `(M')` needs `H3` as a *fact*.
+3. **Scope.** Lemma A is componentwise and needs neither `H2` nor `H3`, so
+   `chi_c(D_i) = 1 - nu_i` holds componentwise in the reducible branch too — a
+   free sharpening flagged for those lanes but **not** used below.
 
 Consequences used from here on, all now unconditional under `H2`:
 `D~ ≅ A^1`; `chi_c(D) = 1 - nu`; `chi_c(D_0) = 1 - nu - s`; `T = nu` in
@@ -214,16 +201,13 @@ general-`N` treatment has to close, and it closes completely.
 
 Three notes.
 
-* **Hypotheses actually used**: Keller; `H2` (only through Lemma A, to know `D`
-  irreducible with `D~ ≅ A^1`); Theorem (E) (Keller only); Lemma 3.3 and
-  Cor 3.4 (Keller + `H2`); AMS (char 0). No `(M')`, no 7.B, no budget.
-* **It is not the promoted "smooth-`A_F` law".** The sheet-gate table states
-  *`A_F` smooth ⟹ `a = 1`* and stops there. SMOOTH-KILL uses that as step (a)
-  and then closes the case. I did not find this closure anywhere in the campaign
-  record; it is typed PROVED-HERE, UNREVIEWED.
-* **Immediate corollary.** Every statement below may assume `s >= 1`, i.e. the
-  `(M')` sum over `Sing D` is non-empty. In particular the `a = 1`, `s = 0`
-  escape that REP-96 §7 (R4) leaves open at `N = 4` is closed at every degree.
+* **Hypotheses used**: Keller; `H2` (only through Lemma A); Theorem (E) (Keller
+  only); Lemma 3.3 and Cor 3.4; AMS (char 0). No `(M')`, no 7.B, no budget.
+* **It is not the promoted "smooth-`A_F` law"**, which states *`A_F` smooth ⟹
+  `a = 1`* and stops there (step (a) here). I did not find this closure in the
+  campaign record; typed PROVED-HERE, UNREVIEWED.
+* **Corollary.** Everything below may assume `s >= 1`; the `a = 1`, `s = 0`
+  escape REP-96 §7 (R4) leaves open at `N = 4` is closed at every degree.
 
 ## 4. The local law `[P7]`, re-derived, and the master defect identity
 
@@ -231,7 +215,8 @@ Three notes.
 refinement**, which the campaign has as `[P7]` (`ALL-N (4.5)`, review §4.3
 CONFIRMED). Because `[P7]` is quoted in `N20` inside a `[P5]`-flavoured context
 (`r_p >= 2` there comes from `[P5]`), I re-derive it, to fix that the identity
-itself is `[P5]`-free.
+itself is `[P5]`-free. One step of the promoted derivation is reused verbatim
+and flagged inside the proof.
 
 > **LEMMA 4.1 (fibre law).** For every `p ∈ D`,
 > `N - a_p = r_p·W + K_p` with `K_p := sum_l sum_{t ∈ h_l^{-1}(eta^{-1}(p))} k_t
@@ -241,11 +226,19 @@ itself is `[P5]`-free.
 > *Proof.* Fix `x` near `p`, `x ∉ D`. `F` is proper of degree `N` over
 > `A^2 \ D`, so `#F^{-1}(x) = N`. Of these, exactly `a_p` stay near
 > `F^{-1}(p) ∩ A^2` (`F` étale: each of the `a_p` points has exactly one
-> preimage of `x` in a small neighbourhood). The remaining `N - a_p` escape, and
-> by Orevkov Lemma 3.1 the number escaping near a boundary point `t ∈ l'` with
-> `phi_l(t) = p` is exactly `mu_t` (normal form `u = x'`, `v = y'^{mu_t}`).
-> Orevkov Lemma 2.1 separates the finite points of distinct chains, so no `t` is
-> counted twice. Hence `N - a_p = sum_l sum_{t ∈ phi_l^{-1}(p)} mu_t`. Now
+> preimage of `x` in a small neighbourhood). The remaining `N - a_p` escape,
+> i.e. accumulate on `X \ A^2`. By Orevkov Lemma 2.1 the boundary is a disjoint
+> union of linear chains, each with a **single** `L_F` endpoint `l` (the
+> dicritical) and a contracted `L_C` tail that lands at one attachment point of
+> `l`; so escaping preimages are indexed by points of `l'`, and `mu_t` — the
+> local multiplicity of Orevkov's contracted model at `t`, whose generic value
+> is `mu_l` by the Lemma 3.1 normal form `u = x'`, `v = y'^{mu_l}` — is exactly
+> the number escaping into the chain attached at `t`. **The contracted tail is
+> not an extra source of fibre points: its contribution is what `mu_t` counts**
+> (`ALL-N`, "no extra finite `L_C`-fibre points", review §4.3 CONFIRMED); this
+> is the one step I take from the promoted derivation rather than rebuild.
+> Distinct chains meet only in `L_infty`, so no `t` is counted twice. Hence
+> `N - a_p = sum_l sum_{t ∈ phi_l^{-1}(p)} mu_t`. Now
 > `phi_l^{-1}(p) = h_l^{-1}(eta^{-1}(p))` and `#eta^{-1}(p) = r_p`; for each of
 > those `r_p` places `z`, `sum_{t ∈ h_l^{-1}(z)} e_t = s_l` (degree of a finite
 > map of smooth curves). So
@@ -334,16 +327,12 @@ Exact case analysis, `1 <= a <= N-2`, `N >= 3`, and `s >= 1` by SMOOTH-KILL:
 > `(K)` puts all of `a - 1 = 1` on unibranch points.
 
 Proposition 5.1 subsumes REP-96 §7 (R4) at `N = 4`: R4 kills nodal `A_F` there
-in the two branches `a ∈ {1,2}` with `s >= 1`; SMOOTH-KILL closes `s = 0`; and
-`(C1)` upgrades "nodal" to "multibranch". **`N = 3, 4` are closed under `H2` for
-every profile with a multibranch point.** The `a = d-2` boundary is not
-hand-waved: at `N = 4` it is `a = 2` and it dies because `s(2a-N) = 0 < a-1 = 1`;
-at general `N` it dies inside the `2a > N` branch below.
-
-But the crude bound `LHS <= s·a` is **not** enough for `N >= 5`, and reporting
-otherwise would be the error the charge warns about. The `2a > N` branch is
-genuinely non-empty as far as `(5.2)` is concerned. The sharpening comes from
-`(L)`, `(K)`, `(C3)` and 7.B.
+for `s >= 1`; SMOOTH-KILL closes `s = 0`; `(C1)` upgrades "nodal" to
+"multibranch". The `a = d-2` boundary is not hand-waved: at `N = 4` it is
+`a = 2` and dies because `s(2a-N) = 0 < a-1 = 1`; at general `N` it dies inside
+the `2a > N` branch below. But `LHS <= s·a` is **not** enough for `N >= 5` — the
+`2a > N` branch is genuinely non-empty for `(5.2)` — and the sharpening comes
+from `(L)`, `(K)`, `(C3)` and 7.B.
 
 ### 5.2 The sharp form: all branches smooth
 
@@ -436,13 +425,13 @@ are two different degradations and they must be kept apart.
 >    unavailable at the cusp, `K_cusp <= a`, and the counting collapses. **This
 >    is the genuine residual**, and it is the campaign's one-cusp horn (§8).
 
-*Proofs of the pieces not already given.* `(B)`: `(C1)` with `r_p >= 2`.
-`(B2)`: identical to §5.2 with `(C3)` in place of `#{K_p>0} <= R`; the
-enumeration of `a - 1 <= (R_max(W) + beta)(2a - N)` under `N/2 < a <= N-2`,
-`W = N-a >= 2` gives minimal admissible `beta` equal to `∞` for `N <= 4`, `2`
-for `5 <= N <= 10`, `1` for `11 <= N <= 16`, `0` for `N >= 17`. `(B3)`: at a
-cusp, `(K)` alone gives `K_cusp <= a - 1`, and a single cusp can absorb the
-whole excess; no contradiction arises, and none is claimed.
+*Proofs not already given.* `(B)`: `(C1)` with `r_p >= 2`. `(B2)`: §5.2 with
+`(C3)` in place of `#{K_p>0} <= R`; enumerating
+`a - 1 <= (R_max(W) + beta)(2a - N)` under `N/2 < a <= N-2`, `W >= 2` gives
+minimal admissible `beta` equal to `∞` for `N <= 4`, `2` for `5 <= N <= 10`, `1`
+for `11 <= N <= 16`, `0` for `N >= 17`. `(B3)`: at a cusp `(K)` gives only
+`K_cusp <= a - 1`, and one cusp absorbs the whole excess; no contradiction
+arises and none is claimed.
 
 Two sharpenings that cost nothing and are used in §8.
 
@@ -474,15 +463,15 @@ Two sharpenings that cost nothing and are used in §8.
  N >= 17 :  the above, plus (B1) with data solving (5.4).
 ```
 
-The family is **not empty**, and the obstruction to emptiness is concentrated in
-a single structural feature — a singular branch of `A_F`, and above all a
-unibranch one. That is the honest boundary of the `(M')` instrument, and it is a
-boundary in the mathematics (`(C2)`), not in the bookkeeping.
+The family is **not empty**, and the obstruction is concentrated in one
+structural feature — a singular branch of `A_F`, above all a unibranch one.
+That is the boundary of the `(M')` instrument, and by `(C2)` it is a boundary in
+the mathematics, not in the bookkeeping.
 
 ## 7. The cuspidal horn: Lin–Zaidenberg, CUSP-KILL, and the `pi_1` cage
 
-Case **(A)** — every singular point of `A_F` unibranch — collapses to a single
-curve up to a target automorphism, and then to a covering-space question.
+Case **(A)** — every singular point of `A_F` unibranch — collapses to one curve
+up to a target automorphism, and then to a covering-space question.
 
 > **PROPOSITION 7.1.** In case (A), `A_F` is homeomorphic to `C`, hence by the
 > **Lin–Zaidenberg** theorem there is `α ∈ Aut(A^2)` with
@@ -553,12 +542,11 @@ has `r ∈ {j-1, j}` and cyclic torsion, forcing `u <= 1`, `v <= 1`; and
 > with multiplicity `j - 1 >= 1`.
 
 **Honest limits.** The cage does not empty case (A). Worked check at `N = 4`
-(brute force over `S_4`, §10 script 4): `a = 1` is killed by CUSP-KILL (`j = 1`);
-`a = 2` requires the meridian `m = α^s β^t` (`sq + tp = 1`) to map to a
-transposition under a transitive `rho : G_{p,q} -> S_4`, which happens (e.g.
-`(p,q) = (3,4)`), and `(p,q) = (3,4)`, `M = 4`, `(u,v) = (1,0)`, `r = j = 2`
-satisfies every congruence above. So case (A) at `N = 4` is **not** closed by
-this lane; it is typed `OPEN[MPRIME-CUSP-J2]` in §9.
+(§10 control 6): `a = 1` dies by CUSP-KILL (`j = 1`); `a = 2` needs the meridian
+`m = α^s β^t` (`sq + tp = 1`) to map to a transposition under a transitive
+`rho : G_{p,q} -> S_4`, which happens, and `(p,q) = (3,4)`, `M = 4`,
+`(u,v) = (1,0)`, `r = j = 2` satisfies every congruence above. So case (A) at
+`N = 4` is **not** closed here: `OPEN[MPRIME-CUSP-J2]`, §9.
 
 ## 8. Task (4): interface with the one-cusp `A2` horn; the `N = 4` residual pinned
 
@@ -593,7 +581,7 @@ kill compose with the one-cusp horn work, and does the horn sit inside a profile
 > `a_{p_0} = 1`. Fibre partitions are `{e_y}` read off Lemma 4.1; `chi_c` from
 > Theorem (E) with `chi_c(A_F) = 1 - nu`. ∎
 
-### 8.2 Control against the promoted rank-four census — four independent hits
+### 8.2 Control against the promoted rank-four census
 
 The reviewed rank-four surface census
 (`block-descent-a1-one-cusp-wild-valuation-structure-sol56-20260831.md:390`) is
@@ -602,22 +590,21 @@ The reviewed rank-four surface census
 generic B: (2,1,1),   cusp c: (3,1),   omitted node n: (2,2),   e(T) = -3,
 ```
 
-with `B = A_F` irreducible and normalization `beta_B : A^1 -> B`. THEOREM N4-PIN
-reproduces **all four numbers** — `(2,1,1)`, `(3,1)`, `(2,2)`, and
+with `B = A_F` irreducible and normalization `beta_B : A^1 -> B`. N4-PIN
+reproduces **all four numbers** — `(2,1,1)`, `(3,1)`, `(2,2)` and
 `chi_c(F^{-1}(A_F)) = 1 - 4·1 = -3` at `k = 1` — from `(M')`, `(L)`, `(K)` and
-7.B alone, with no census input. Together with the three-route agreement on
-`(K)` (§4) this is the strongest positive control available to this lane, and it
-is what licenses the `N >= 17` claim built on the same apparatus. `beta_B :
-A^1 -> B` is Lemma A, independently.
+7.B alone, with no census input; `beta_B : A^1 -> B` is Lemma A independently.
+With the three-route agreement on `(K)` (§4) this is the strongest positive
+control available here, and it is what licenses the `N >= 17` claim built on the
+same apparatus.
 
 ### 8.3 The exact interface
 
-* **The horn sits in case (B3)** of THEOREM PROFILE: a cusp *and* a multibranch
-  point. THEOREM NODAL-ALL-N does **not** apply to it — its hypothesis "every
-  branch of `A_F` smooth" fails precisely at the cusp — so there is no
-  composition conflict and no double counting. The nodal kill and the horn are
-  disjoint in scope by construction, not by accident: `(C2)` is the single
-  inequality that separates them.
+* **The horn sits in case (B3)**: a cusp *and* a multibranch point.
+  NODAL-ALL-N does **not** apply — its hypothesis fails precisely at the cusp —
+  so there is no composition conflict and no double counting. The two are
+  disjoint in scope by construction: `(C2)` is the single inequality separating
+  them.
 * **What the nodal work newly gives the horn.** Two pins the horn lane did not
   have from `(M')`: (i) `A_F` has **exactly one** cusp — more precisely exactly
   one point with a singular branch — so no second cusp and no singular branch at
@@ -629,18 +616,16 @@ A^1 -> B` is Lemma A, independently.
   double points. The census value `k = 1` is an input from elsewhere; this lane
   neither confirms nor refutes it, and `k = 0` is exactly the case-(A)
   sub-branch, which CUSP-KILL reduces to `j >= 2` but does not close.
-* **Relation to `OPEN[A2-CELL-32]`.** That OPEN lives one level down, inside the
+* **Relation to `OPEN[A2-CELL-32]`.** That OPEN lives one level down, in the
   `(alpha,beta)` `A`-degree census of the horn's normal form; nothing here
   touches its cell `(3,2)` arithmetic. The composition is one-directional:
-  N4-PIN is an **input** the `A2` lane may consume (it fixes the ambient
-  profile: one cusp, `r = 2` elsewhere, `a = 2`, one `(1,2)` dicritical), not a
-  competitor to its computation. No claim of this report depends on
-  `A2-CELL-32` resolving either way.
-* **Degree generality of the interface.** At `N >= 5` the same argument pins
-  much less: `D_gap` can be positive, so multibranch points may carry excess and
-  `R` may be nonzero, and `s_l = 1` (needed for Lemma 4.3) is no longer forced.
-  The `N = 4` sharpness is a genuine small-degree phenomenon and must not be
-  extended by analogy.
+  N4-PIN is an **input** the `A2` lane may consume (ambient profile: one cusp,
+  `r = 2` elsewhere, `a = 2`, one `(1,2)` dicritical), not a competitor. No
+  claim here depends on `A2-CELL-32` resolving either way.
+* **Degree generality.** At `N >= 5` the argument pins much less: `D_gap` can be
+  positive, so multibranch points may carry excess, `R` may be nonzero, and
+  `s_l = 1` (needed for Lemma 4.3) is no longer forced. The `N = 4` sharpness is
+  a small-degree phenomenon and must not be extended by analogy.
 
 ## 9. Task (3): typed OPENs and the cheapest decisive instrument for each
 
@@ -694,14 +679,13 @@ does not, by itself, close `N = 4`.
 ```text
 OPEN[MPRIME-B3-CUSP-PLUS-NODE]
 ```
-Case (B3), the one-cusp horn: `A_F` has one or more cusps together with
-multibranch points; at `N = 4` it is pinned completely by THEOREM N4-PIN.
-**Instrument:** this is not an `(M')` question any more — `(C2)` says the
-identity is structurally blind here. The decisive instruments are the ones the
-horn lane already uses (braid monodromy / ZvK on the pinned profile, or the
-`pi_1(C^2 \ A_F)` representation gate with the N4-PIN cycle types `(2,1,1)`,
-`(3,1)`, `(2,2)` as the local data). The new N4-PIN facts — exactly one
-singular-branch point, `a_node = 0`, `a_cusp = 1` — are the input to feed them.
+Case (B3), the one-cusp horn: cusps together with multibranch points; at
+`N = 4` pinned completely by N4-PIN. **Instrument:** no longer an `(M')`
+question — `(C2)` says the identity is structurally blind here. Use what the
+horn lane already runs (braid monodromy / ZvK on the pinned profile, or the
+`pi_1(C^2 \ A_F)` representation gate with the N4-PIN local cycle types
+`(2,1,1)`, `(3,1)`, `(2,2)`), fed by the new N4-PIN facts: exactly one
+singular-branch point, `a_node = 0`, `a_cusp = 1`.
 
 **Not raised as OPENs, but flagged for the coordinator.**
 
@@ -714,4 +698,126 @@ singular-branch point, `a_node = 0`, `a_cusp = 1` — are the input to feed them
 
 ## 10. Task (5): typed verdict block, controls, deviations
 
+```text
+LANE              MPRIME-ALLN-H2   (close the H2 branch at all degrees)
+SCOPE             Keller, noninvertible, N >= 3, H2 (A_F irreducible).
+                  H3 is NOT assumed anywhere: it is proved (LEMMA A).
+
+LEMMA A           H3 under H2, no trivial dicritical needed.   PROVED-HERE,
+                  UNREVIEWED.  Repairs a vacuity in the promoted [P5] route.
+SMOOTH-KILL       A_F is singular at every N.                  PROVED-HERE,
+                  UNREVIEWED.  Closes the s = 0 boundary REP-96 R4 leaves open.
+LEMMA 4.1 (L)     N - a_p = r_p W + K_p.   RE-DERIVED HERE, [P5]-free;
+                  agrees with promoted [P7].
+PROP 6.1          s = 1  =>  that point is unibranch with a_p = 1.  Exact
+                  all-degree form of the promoted one-node exclusion.
+NODAL-ALL-N       every branch of A_F smooth  =>  N >= 17.      PROVED-HERE,
+                  UNREVIEWED.  Contains the nodal case.  Consumes 7.B for
+                  8 <= N <= 16 only; N <= 7 is 7.B-free.
+THEOREM PROFILE   the four-case classification (0)/(A)/(B1)/(B2)/(B3).
+CUSP-KILL         case (A) with E irreducible  =>  F invertible.  PROVED-HERE,
+                  UNREVIEWED.  Consumes Lin-Zaidenberg and Campbell.
+CUSP-CAGE         case (A), j >= 2: explicit Kurosh/congruence cage.
+N4-PIN            the N = 4 H2 residual, pinned to one profile; reproduces the
+                  promoted rank-four census (2,1,1)/(3,1)/(2,2)/e(T) = -3.
+
+VERDICT ON THE CHARGE.  The H2 branch is NOT closed at all degrees.  It is
+closed at N = 3 and N = 4 for every profile with a multibranch point, closed
+for every N when A_F is smooth, and closed for N <= 16 when every branch of
+A_F is smooth.  What survives is exactly: a singular BRANCH of A_F.  The
+surviving family is the four typed OPENs of section 9.  The nodal kill does
+NOT generalise for free: the crude bound LHS <= s*a is decisive only at
+N <= 4, and everything from N = 5 to N = 16 is bought by the local law (L),
+the excess budget (K), the localization (C3) and THEOREM 7.B.
+```
+
+**Controls run (all passed).**
+
+1. *Three-route agreement on `(K)`.* `sum_p K_p = a - 1` obtained (i) from
+   `(L)` minus `(M'-def)`, (ii) from Orevkov's `sum_l(mu_l + corr_l) = N-1` with
+   `corr_l = mu_l(s_l-1) + sum_t k_t` and `(RH_l)`, (iii) as `ALL-N (4.6)`.
+   Identical.
+2. *`p ∈ D_0`.* Lemma 4.1 at a smooth point returns `[P3]`, `N = a + W`.
+3. *`N = 4` census.* Four promoted numbers reproduced (§8.2).
+4. *`theta`/`H3`.* `(M'_theta)` differs from `(M')` only by
+   `nu ↦ nu + theta + 2g - 1 >= nu`, so every kill is a fortiori `H3`-free;
+   Lemma A then gives `theta = 1`, `g = 0`.
+5. *7.B sensitivity.* Withdrawing 7.B moves NODAL-ALL-N from `N >= 17` to
+   `N >= 8`.
+6. *Negative control on the representation gate.* At `N = 4` the case-(A) gate
+   admits `576` transitive `rho` with `a ∈ {1,2}` over coprime `(p,q) <= 12`,
+   and `720` with meridian a transposition over `(p,q) <= 24`: **not** vacuous,
+   **not** decisive there. Reported as found.
+
+**Scripts (four, `python3`, integer/permutation only).** `enum.py` (`(5.4)`;
+`N >= 17` and the tuple table); `enum2.py` (`beta` thresholds `∞/2/1/0`;
+7.B-withdrawn variant); `small.py` (small-`N` mixed profiles for §8); `rep4.py`
+(`S_4` search, control 6). Every number is re-derivable by hand from `(5.4)`,
+`(5.5)` and `R_max(W)`.
+
+**Deviations from the charge, logged.**
+
+1. The charge frames (1) as "prove the nodal kill at every `N` where it holds".
+   The kill does **not** hold at every `N`: the honest answer is `N <= 16` under
+   an all-branches-smooth hypothesis, and the crude collapse alone reaches only
+   `N <= 4`. I report the ladder rather than the headline.
+2. The charge's restatement of R4 ("impossible for every `s` at both `a = 1` and
+   `a = 2`") omits `s = 0`. I did not paper over it; §3 closes it with a new
+   theorem, and the `a = 1`/`s = 0` cell is genuinely `(M')`-consistent.
+3. The charge lists `e_j = 1 + v_j(dx∧dy)` among the tools. I did not need it:
+   7.B already delivers `e_j = mu_l >= 2`, the only consequence the counting
+   uses. The formula is not quoted.
+4. Theorem N-A was not applied: it is a boundary/sharpness statement on the
+   `(9,6)` rows with no instance in the `H2` irreducible profile question.
+   Recorded as unused rather than mentioned decoratively.
+5. Three classical theorems are consumed at content level, not byte-hashed:
+   **Lin–Zaidenberg** (Invent. Math. 68 (1982) 1–17), **Campbell** (Math. Ann.
+   205 (1973) 243–248; already cited inside the promoted sheet gate) and
+   **AMS**. None is a campaign artifact. If any is challenged, §3 and §7 fall
+   and §§4–6, 8 stand.
+6. **Size.** Target 25–35 KB; the body is ~44 KB after one trim pass. The
+   overrun is concentrated in §4 (the `[P5]`-free re-derivation of `(L)`, which
+   the whole `N >= 17` result rides on), §7 (the `pi_1` cage, which converts an
+   unbounded case into a finite representation search) and §8 (the `N = 4` pin
+   plus its four-number control, which a successor lane consumes directly). The
+   alternative was to state `(L)` by citation and drop either the cage or the
+   control; I chose completeness and log the choice.
+
 ## 11. FALLACY-v2 audit
+
+* **Flag/place/series.** Four objects over a singular `p` are kept apart: the
+  source points `t ∈ l'`; their normalization places `h_l(t) ∈ D~`; the `r_p`
+  branches `eta^{-1}(p)`; and `p` itself. In Lemma 4.1 `r_p` is a count of
+  *places*, `s_l` a *cover degree*, `mu_l` a *series order*; conflating any two
+  is exactly the error that would turn `(L)` into the false "boundary
+  multiplicity `= W`". The point-separation input (Orevkov Lemma 2.1) is stated.
+* **Per-ray/exit-set charge.** No exit-price assertion is made; no
+  `charge_basis` line is required. `(K)` distributes `a - 1` over a typed set
+  with each `k_t` counted once, under that separation.
+* **Carrier/attainment.** `R_max(W)` and `beta` are **upper allowances**, not
+  attained values; the tuple tables of §5.2 are `REPRESENTATIVE` admissible
+  data, not realizations. Nothing below claims a curve or a map exists.
+* **Floor/attainment.** `N >= 17` is a floor. The `N = 17` cell saturates
+  `(5.3)` and `R <= floor(W/2) - 1` simultaneously; that is a consistency
+  observation, **not** a witness, and no `N = 17` counterexample is suggested.
+* **Pole/interior.** Lemma 4.1 uses Orevkov's local normal form only at points
+  of `l'` (interior of the dicritical, affine image); the single point of
+  `l \ l'` lying over `L_infty` is excluded by construction, and the vertex
+  class of the boundary chain is the one Orevkov Lemma 2.1 supplies.
+* **Prime label/derivative.** `l'` is a *label* for `l ∩ Phi^{-1}(A^2)`, not a
+  derivative; `D_gap = 2a - N` replaces `ALL-N`'s clashing `d`, and `d = N`
+  throughout. `theta` (places at infinity) is never merged with `s` (`ALL-N`'s
+  `sigma`).
+* **Variable/ring map.** Lemma 1.1 declares the map between the `Y`-picture and
+  the Orevkov picture as an equality of *valuations*, and derives
+  `e_j = mu_l`, `delta_j = s_l` from equality of value groups and residue
+  fields. Matching names were not assumed.
+* **Merge-free/M-descent, `sat()`, raw remainder degree.** No Gröbner, no
+  saturation, no normal form was computed; vacuous here, not claimed passed.
+* **Target/arrival index.** `a`, `a_p`, `A_Sigma = sum_p a_p` and
+  `s_p = #Fix(H_p)` are kept distinct; the identity consumes `a_p`, never `s_p`
+  (sheet gate §6). `b = 0` here is the sheet-gate `b` (unramified boundary
+  count), **not** the reducible-cage `b` (branched component count) — REP-96 §7
+  (R3) flags the same collision and I follow its ruling.
+* **No gap filled by cap or analogy.** Where the argument stops it returns a
+  typed `OPEN` (§9), each with exact data and instrument.
