@@ -14871,3 +14871,17 @@ ORBIFOLD-CAGE, CUSP-A-EMPTY (case (A) EMPTY for 4<=N<=7 at its
 stated typing: proved <=6, measured-exhaustive 7), and the
 ACS-FIX-VS-DEFICIT resolution (a = #Fix exactly, under H2+7.B
 only). These enter the next integration.
+
+## INTEGRATION #8 (2026-09-02, FABLE5 COORDINATOR, VERIFIED)
+
+Binding artifact: `xmodel/integration8-coordinator-fable5-20260902.md`
+(body dcce5652, basis 4ab4478e, VERIFIED). Promotes: the
+cusp/homology theorem set (NO-PUSHFORWARD, CENTRAL-RANK as the
+binding CUSP-CAGE repair, CUSP-PARITY, ORBIFOLD-CAGE,
+CUSP-A-EMPTY typed 4<=N<=7 with N=4 H2 residual = exactly (B3);
+ACS-FIX-VS-DEFICIT resolved under H2+7.B) and BOTH realized-
+substrate representation kills ((9,6,2) and (9,6,4), curve-level,
+KILL-BINDING, artifacts and reviews cited therein). Records the
+SG-lane items (SRC-0/SG-1/HC-1/HC-2, unreviewed), Card C death,
+NA-sharpness OPEN, N5 typing, and the standing fronts (horn;
+case-(A) N>=8 survivors; R0/degree-cap; N>=6 pipeline).
