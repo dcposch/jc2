@@ -18554,3 +18554,70 @@ any submission; synthesis after the four seal.
 Work split at freeze: Opus 3 seats (A2-U-BOUND, CUSP-A-N8-GATE,
 ideation); Grok 2 (web sweep, ideation); Sol 1 (ideation); Fable
 1 lane (ideation) + coordinator; boxes: box01 A2 window, Box03 869.
+
+## LIVE STATE (observed: see the ~08:10Z lane prints) — CASE (A) CLAIMED EMPTY AT EVERY DEGREE; PAIRED REVIEW LAUNCHED; ROUND SUBMISSIONS LANDING
+
+**CUSP-A-N8-GATE landed** (`cusp-a-n8-gate-opus5-20260902.md`,
+2a1717ae, BODY_SEALED, 40KB) and EXCEEDS its charge: two
+independent gates, each killing all 26 N=8 survivors AND closing
+MPRIME case (A) at EVERY degree N>=2. PROVED-HERE/UNREVIEWED:
+- THEOREM NO-CUSP-PREIMAGE: F^{-1}(cusp) = EMPTY (F proper +
+  étale over C^2\A_F gives a connected degree-N covering; a
+  preimage of the cusp would be a section over a punctured ball
+  whose local pi_1 surjects onto the global one — for the cone
+  x^p=y^q via the weighted C^*-retraction — so N=1). Hence E is
+  SMOOTH with disjoint components. This CORRECTS the
+  coordinator's charge premise ("E has a cusps"): a is the
+  generic-fibre count, the cusp fibre is empty.
+- THEOREM CUSP-A-VOID (Chain I, H2-FREE, one page):
+  chi(C^2\A_F)=0 => chi(Y)=0 => chi(E)=1 => some component is
+  A^1 => nonconstant A^1 -> A_F\{c} = C^*: impossible. Uses only
+  Lin–Zaidenberg + étale + N>=2.
+- Chain II (representation-level): PERIPHERAL-RANK (base
+  orbifold genus 0; sharpens ORBIFOLD-CAGE), MERIDIAN-SPAN
+  (kappa*j <= a), CUSP-A-VOID-II (the two force rho(m)=1 against
+  W>=2), CUSP-A-KAPPA PROVED (stronger than conjectured), kappa|a.
+  All 32 survivor records fail MERIDIAN-SPAN; census 16/6/6/4
+  replicated.
+- FLAGGED cross-check: MPRIME Prop 6.1 as quoted ("a_p=1,
+  K_p=a-1") — about E or about the dicritical map? Assigned to
+  review. (G-A) Alexander and (G-B) mod-p: NOT decisive on the
+  record (reported honestly).
+Coordinator desk check of Chain I: every step verified by hand
+(properness over the complement is Jelonek's definition; the
+section-of-a-covering argument; chi bookkeeping; A^1 -> C^*
+constant). No hole found. IF CONFIRMED: composed with SMOOTH-KILL,
+"the non-properness set of a noninvertible Keller map is never
+homeomorphic to C"; under H2 the all-degree residual becomes
+(B2)+(B3) only; case (A) leaves the ledger at every N.
+**PAIRED REVIEW LAUNCHED** (pair-don't-pick, flagship weight):
+`cusp-a-void-review-gpt55-20260902` (line-by-line, 10 mandatory
+checks incl. the Prop 6.1 conflict and SUCC-1 extension to (B3)
+cusps with transitive local monodromy) and
+`cusp-a-void-countermodel-grok46-20260902` (hidden-assumption
+audit + small-rep search for MERIDIAN-SPAN violators). Drivers
+preserved: `box/cuspa-n8-drivers-20260902/`.
+
+**WEB-SWEEP 2026-09-02 landed** (`web-sweep-20260902-grok46.md`,
+c16b9b62, BODY_SEALED): THREAT board EMPTY; math.AG/new has no
+plane-JC claim; Tsang–Yip 2607.01165 (Mason–Stothers
+generalisations) = STRUCTURE only for A2-U-BOUND. Its "Schenk
+unaudited" line is STALE: `schenk-audit-b-sol56-20260901`
+returned FATALLY-FLAWED on 09-01. Next sweep deadline
+2026-09-03T~08:00Z.
+
+**box01 A2 window**: the single-thread run timed out (1,9)'s
+mod-p screen at 1h (49 vars) with 63 cores idle; a parallel
+24-thread run (`a2_window_t24.log`, Q-timeout 4h, screen 1.5h)
+launched ~08:00Z and is already past (1,5); the old run continues
+harmlessly. Memory 155/991 GiB used.
+
+**Round 20260902T0741Z**: grok46 (25KB), opus5 (41KB), fable51
+(26KB) SEALED within ~25 min; sol56 still writing; coordinator
+submission `ideation-20260902T0741Z-fable51-coordinator.md`
+(b905417b) committed BEFORE any submission was read. Reading
+begins now; synthesis on sol56's seal or at the 75-min deadline.
+
+Runners: a2-ubound (opus), ideation-sol56, cusp-a-void-review
+(gpt55), cusp-a-void-countermodel (grok); box01 A2 x2; Box03 869
+(cap ~10:22Z).
