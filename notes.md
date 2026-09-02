@@ -17589,3 +17589,52 @@ amendment pointer.
 Ideation round: fable5 (22KB) + opus5 (31KB) + sol56 (17KB)
 sealed; grok46 still writing (34KB+ on disk). Synthesis on its
 seal. Flagships mprime-alln-h2 + companion-curve-alln running.
+
+## LIVE STATE (observed 2026-09-02T00:53Z) — ROUND 20260902T0022Z SYNTHESIZED; EIGHT SYNTHESIS LANES LAUNCHED
+
+**Round closed on time, four/four, NOT degraded.** Synthesis:
+`xmodel/ideation-20260902T0022Z-synthesis.md`. Submission hashes:
+fable5 2ad20b4c, grok46 83319c5e, opus5 dcd40a42, sol56 4b0e4dde.
+
+**Headline 1 — SOURCE-IS-C2 retyped by three-model convergence.**
+OPEN[REP-96-SOURCE-IS-C2] SUPERSEDED by OPEN[SOURCE-OPEN-U]
+(SHEET-GATE Y is never C^2; question = Zariski-open U ~ A^2 in
+the cover). Three composable razors: HOM-COVER torsion/rank
+(instrument box/cover_h1.py delivered+calibrated, 56% measured
+kill on analogues), four-box Euler (cycle-type invariant, immune
+to the strand OPEN), boundary lattice det<=0 (DET-LINF).
+Adopted caution OPEN[ACS-FIX-VS-DEFICIT]: a^(i) <= #Fix,
+equality a hypothesis; the N=4 companion meridian is forced to
+be the IDENTITY.
+
+**Headline 2 — (9,6,4) six-nodal (Sol, EXACT-DESK/UNREVIEWED):**
+two new transverse nodes at v=-11/8, u^2=-35/8 exhaust
+delta_aff=6; if confirmed, (9,6,4) is REALIZED (second substrate)
+and job 964's locus question is superseded; predicted census
+ledger 20. Review lane launched.
+
+**Also adopted:** BURNSIDE-CHI (fable, subgroup-lattice chi_c
+system — candidate first new all-N identity family since (M'));
+Card C direct-solve-for-F (opus; highest single-shot; step-0
+degree pinning launched; SCOPE-CONFLICT with GGV farm typed);
+companion bound deg D_2 >= 3 + nodal-cubic control proving Euler
+exhaustion (sol; Path-2 injection at harvest); N=5
+soundness-first redesign (grok; DET-LINF vs Zoladek 4.10; Sigray
+9.1; prime-N primitivity screen); N-A sharpness Card II;
+DOMRINA-INSTANTIATE trichotomy (fable). Systems: OPEN-triage
+ADOPTED free (74/20/54 measured; five orphans charged/retired in
+synthesis §7: SHAPE-2-INNER-g>=3 RETIRED as closed by CABLE-3);
+ONE tracked upgrade = encoding-faithfulness PREFLIGHT (grok),
+queued to oracle harvest; FAIL-CLOSED-LINT + SNAPSHOT-READSET
+recorded as next-window candidates.
+
+**EIGHT LANES LAUNCHED (00:52-00:53Z, all RUNNING):**
+source-gate-962-opus5 (razor stack, Mode 1), card-c-step0-opus5
+(degree pinning), 964-nodality-review-grok46,
+homcover-discriminator-grok46 (all-degree torsion gate),
+n5-soundness-grok46, na-sharpness-grok46,
+domrina-instantiate-sol56, burnside-chi-gpt55. Opus seats 4/5
+(two flagships + two new). Continuing untouched: MPRIME-ALLN-H2,
+COMPANION-CURVE-ALLN (injections at harvest), SAGE-NATIVE, 869,
+oracle window, box01 provisioning. Next full-round floor:
+2026-09-02T12:22Z.

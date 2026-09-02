@@ -1,0 +1,561 @@
+cli=codex-cli 0.152.0 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.152.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a05f9a-d5a4-7142-b4fc-ec5e97d5a842
+--------
+user
+# Research lane: BURNSIDE-CHI — the 11-row subgroup-lattice chi_c table at the N=4 profile
+
+Charged Fable submission §3/Card A, adopted by synthesis. Build
+the full subgroup-lattice chi_c constraint system for G = S_4 at
+the pinned N=4 reducible profile (core (2,1,0), W=(1,2), D_1 =
+the realized (9,6,2) curve with its exact census; D_2 unknowns
+(chi_2, sigma_2, j)). Eleven subgroup-class rows; pinned rows:
+Y_G = target (chi_c=1) and the point-stabilizer row (source hull,
+typed a^(i)=N-W_i bookkeeping, NEVER #Fix — carry
+OPEN[ACS-FIX-VS-DEFICIT] if you consult the opus submission).
+Compute chi_c(X^g) per class from the local census; apply the
+quotient formula chi_c(X^/H) = (1/|H|) sum_{h in H} chi_c(X^h);
+impose integrality on every row; recompute the sgn-row (double
+cover branched over the odd-meridian part) and the S_3-resolvent
+row (TB-GERM object) independently as controls. QUESTION: does
+any row yield an integer relation on (s_1, sigma_2, j) beyond
+the collapsed chi_2+sigma_2=1? Outcomes (typed): new relation ->
+immediate Path-2 consumable + general-N rank statement on the
+cage's residual classes; provable collapse -> permanent
+retirement of the more-Euler-identities direction WITH the
+degeneracy proof; partial -> keep exactly the non-degenerate
+rows. Exact integer arithmetic; sympy allowed; one N=4
+evaluation + one general-N rank statement; stop.
+Report: xmodel/burnside-chi-gpt55-20260902.md
+Seal-at-completion; target 15-25KB.
+charged_input=xmodel/ideation-20260902T0022Z-fable5.md
+charged_input=xmodel/rep-96-inner-opus5-20260901.md
+charged_input=xmodel/reducible-all-n-r2-opus5-20260901.md
+
+Your inputs are frozen read-only copies in `/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs`;
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+2ad20b4c37128533ef23e956c2921aeb70d830bd6166a11b95a6ef6637cc5eff  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md
+a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/rep-96-inner-opus5-20260901.md
+bdd857c9d8c55fa000fcffee05f9f3084c5d073fb4d06285edf2af0d3c369339  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/reducible-all-n-r2-opus5-20260901.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll verify the frozen inputs first, then read only after the hashes match. If anything is off, I’ll stop before deriving or writing the report.
+exec
+/bin/zsh -lc 'shasum -a 256 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/rep-96-inner-opus5-20260901.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/reducible-all-n-r2-opus5-20260901.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+2ad20b4c37128533ef23e956c2921aeb70d830bd6166a11b95a6ef6637cc5eff  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md
+a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/rep-96-inner-opus5-20260901.md
+bdd857c9d8c55fa000fcffee05f9f3084c5d073fb4d06285edf2af0d3c369339  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/reducible-all-n-r2-opus5-20260901.md
+
+codex
+The hashes match exactly. I’m going into the source notes now, starting with the named Card A and the reducible profile data so the table is derived from the frozen text rather than recalled assumptions.
+exec
+/bin/zsh -lc 'wc -l /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/*.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+     358 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md
+     592 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/reducible-all-n-r2-opus5-20260901.md
+     855 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/rep-96-inner-opus5-20260901.md
+    1805 total
+
+exec
+/bin/zsh -lc "rg -n \"BURNSIDE|Burnside|Card A|chi_c|chi\\b|S_4|S4|subgroup|D_1|D1|D_2|D2|sigma|sgn|resolvent|TB-GERM|N=4|W=|core\" /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "rg -n \"BURNSIDE|Burnside|Card A|chi_c|chi\\b|S_4|S4|subgroup|D_1|D1|D_2|D2|sigma|sgn|resolvent|TB-GERM|N=4|W=|core\" /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/rep-96-inner-opus5-20260901.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+16:| 1 | N=4 literature chain — Domrina I/II custody, mu2 Grok review in flight (delta 1) | unchanged | Await the review; no further custody spend per mission posture. Card C converts the verified machinery from a trust liability into an attack instrument. |
+17:| 2 | N=4 campaign chain — (8,6,9) rep+curve, (9,6,4) six-node, (9,6,2) BM-factorisation (delta 2) | raise | Closest-to-closure front. The block-reading ZERO-survivor result makes the running 6^9 convention-free check the highest-information pending bit anywhere: it decides whether the strongest CE substrate carries any `phi` at all. |
+19:| 4 | MPRIME-ALLN-H2 flagship (delta 6, Path 1) | unchanged | Launched. Augmentation in §3: the (7.1) cancellation shows the natural-action identity is too coarse at reducible profiles; the subgroup system is the repair candidate. |
+24:| 9 | All-degree degree-monotone invariant (delta 6) | unchanged | Goal unchanged; §3 supplies the first concrete candidate family (the Burnside chi_c vector). |
+25:| 10 | Instruments — msolveio+qqideal, SIROCCO+ZvK+S_4 pipeline, oracle window (delta 5) | unchanged | Continue; prioritize the PARAM/point-extraction release — it gates the D_2 decision job (Path-2 item 3). |
+36:   (8,6,3) dead and the two curve jobs running, campaign-side N=4 closure
+44:   gives `b=1` only at N=4,5; `b=2` opens at N=6 and core counts grow like
+48:   §3's Burnside vector is the first candidate with degree-independent
+54:   lands; five structure packages (F1)/(F2)/(S1)/(S2)/(S4) behind
+63:   filtering data that fail necessary conditions (H_1, chi_c, local links)
+65:3. **The D_2 existence decision** — blocked on Path-2 item 3 instantiation
+78:## 3. New avenue: BURNSIDE-CHI — the full subgroup-lattice chi_c system
+82:the Galois closure of the function-field extension. Every subgroup `H <= G`
+85:(`chi_c = 1`), and `Y_{H_1}` (`H_1` a point stabilizer) is the finite hull of
+88:`chi_c(Y_{H_1}) = 1 + chi_c(C_b)` with the sheet-location bookkeeping typed
+94:`chi_c(X^g)` is an integer assembled from the same local census (M')
+97:`chi_c(X^/H) = (1/|H|) * sum_{h in H} chi_c(X^h)` then determines every
+98:intermediate `chi_c` from one class-function vector `(chi_c(X^g))_g`. The
+104:  `sgn`-row is the double cover of the target branched over the odd-meridian
+106:  `S_3`-resolvent row is exactly the TB-GERM triple-cover object already in
+109:That is one identity per subgroup class instead of the single natural-action
+110:pair — at N=4, eleven rows of `S_4` instead of two.
+114:COLLAPSES at the N=4 reducible profile to (7.1) `chi_2 + sigma_2 = 1`, with
+116:permutation character is too coarse to see `s_1`. The subgroup rows weight
+125:**General-N payoff.** The vector `(chi_c(X^g))_g` and its table-of-marks
+129:performed: "Burnside"/"table of marks" have zero hits in the banked corpus;
+130:the `S_3` resolvent and TB-GERM triple cover are single rows of this table
+132:descent but builds no chi_c system on them.
+146:**(b) The repaired Domrina II machinery x the campaign's own N=4 residual.**
+147:The campaign now owns a replayed, repaired N=4 proof (DET-LINF banked
+149:CONFIRMED) AND an explicit surviving N=4 configuration ((9,6,2) plus the
+178:marginal addition is BURNSIDE-CHI at the reducible profiles. Reason: (7.1)
+184:through the subgroup rows). Card C is the N=4-specific complement: kill the
+192:run card B's gate (H_1 of the source candidate zero; chi_c = 1; all local
+193:links S^3) on each surviving `phi`; (3) only for gate-passers, decide D_2
+208:  for the index-N subgroup `phi^{-1}(Stab(1))`; abelianization with filling
+210:  (ii) chi_c of the source candidate by strata assembly; (iii) local link
+213:  smoothness; (iv) optionally the full §3 Burnside table from the same
+216:  over a nodal cubic, H_1 and chi_c reproduced against hand computation;
+255:**Card A — BURNSIDE-CHI (§3).**
+257:- Claim under test: the full subgroup-lattice chi_c system yields at least
+258:  one integer relation on the N=4 reducible residual beyond (7.1); and
+263:  quotient-chi_c formula and the free-action-on-étale-locus lemma (standard;
+266:- Cheapest discriminator: the eleven-row `S_4` table at the pinned N=4
+267:  profile (core (2,1,0), W=(1,2), `D_1` = the realized (9,6,2) curve, `D_2`
+268:  carrying unknowns `(chi_2, sigma_2, j)`). Exact integer arithmetic, desk
+270:- Outcomes: a new relation on `(s_1, sigma_2, j)` — immediate Path-2
+274:  (M'), TB-GERM are all rows of this table); partial — keep exactly the
+276:- Stop condition: one N=4 evaluation plus one general-N rank statement on
+285:  one of — H_1(source candidate) = 0; chi_c(source candidate) = 1; all
+296:  the strongest CE candidate the campaign has ever had, handed to the D_2
+307:  campaign residual (core (2,1,0), W=(1,2), `D_1` = (9,6,2)), kills the
+352:  extraction release (it gates the D_2 decision job).
+
+ succeeded in 0ms:
+38:1. enumeration of the `60` solutions of the outer word equation in `S_4`, of the
+55:`(9,6)` types. The verdicts concern the **`S_4` representation**, not
+56:realizability. As at PB §0, a kill here removes a type from the `PI1-S4`
+201:`sgn(Pi) = (-1)^d = -1`, so `Pi` is a transposition or a `4`-cycle and **`Pi` is
+205:elements of `S_4` gives exactly `60` pairs, in four strata:
+225:Hurwitz convention `sigma_i . (.., t_i, t_{i+1}, ..) = (.., t_i t_{i+1} t_i^{-1}, t_i, ..)`
+226:and `(beta gamma).T = beta.(gamma.T)`, `delta_3 = sigma_1 sigma_2` acts on a
+230:delta_3 . (u_1,u_2,u_3) = sigma_1 . (u_1, u_2 u_3 u_2^{-1}, u_2) = ((u_1u_2) u_3 (u_1u_2)^{-1}, u_1, u_2) ,
+234:by `C_g` (promoted Lemma 3.3, `C_g(sigma_i).(A,B) = (Pi_A B Pi_A^{-1}, A)`
+258:`delta_g := sigma_1 ... sigma_{g-1}`, `e(delta_g) = g-1`, and a full turn is the
+288:> `gcd(a, beta_1) = 1`; and suppose `phi : pi_1(C^2 - D) ->> S_4` sends every
+294:> (3.1)     T_1  =  delta_g^{k_*} . c_h(T_1) ,        delta_g = sigma_1 ... sigma_{g-1} ,
+342:nor the subgroup generated by the entries, nor therefore `(3.2)` — puts the
+347:the subgroup generated by the entries of a tuple. Hence the nine entries of `T`
+350:**Consistency at `g = 2`.** There `delta_2 = sigma`, `e(iota) = k_*`, and on the
+352:hand-evaluated, e.g. `(234)(124)^2(234) = (234)`. Since `sigma^2 = c_{uv} = c_X`
+353:on a block `(u,v)` with `uv = X`, `(3.1)` becomes `T_1 = sigma^{k_*+2}.T_1`,
+364:with `im(phi) = S_4`) / (number of fixed `T_1`).
+383:  transposition, which generates a subgroup of order at most `6`. This is the
+395:> with `im(phi) = S_4` exists only if*
+456:reduction at `g = 2` (blocks of size two, `B_2 = <sigma>`): the outer solutions
+493:up to simultaneous `S_4`-conjugacy the surviving data `(X, Y, T_1)` are:
+507:relations, and `im(phi) = S_4` verified on each class by `(3.2)`. In particular
+549:**Shirane Cor 0.6 / torus-type exclusion / the `S_3` resolvent.** The `(6,4)`
+550:chain (RK §1) descends `pi_1(A^2-D) ->> S_4 -> S_4/V_4 = S_3` to
+555:i.e. `Pi in V_4`, whereas `sgn(Pi) = (-1)^9 = -1` (§2), confirmed on all `60`
+572:`sgn(phi(gamma_inf)) = -1`. No fibre degeneration can present `gamma_inf` as a
+593:`gcd = 3` (its block-level consequence `sgn(Pi) = (-1)^d` is used). SK-1 is
+596:`OPEN[CAMPAIGN-PIN-D1-DMIN-BOUND]` is open and NO-DEG-CAP says no degree, genus
+611:distinct fibres, at smooth points, each contributing a `sigma_i` whose fixed-tuple
+613:`x = 0`, carrying all four nodes, contributing four commuting `sigma_i^2` whose
+623:  transitive subgroup of `S_9` with eight edges on nine vertices: a spanning
+628:* the `x = 0` fibre pins `Pi` further than `sgn` does. `Pi = phi(gamma_inf)` is the
+632:  which lies in the normal subgroup `V_4`). By §5, `Pi` is a **transposition** on
+661:The `N = 4` residual profile is a single row: core `(2,1,0)`, `W = (1,2)`
+662:(`ibid.:459`), i.e. `A_F` has one branched component `D_1` of weight `2` and one
+691:`sum_i a^{(i)} chi_c(D_i \ Sing D) + sum_p a_p = 1 - d chi_c(V)`
+692:(`ibid.:462-466`). Instantiating it on the `N = 4` profile — `D = D_1 u D_2`,
+693:`a^{(1)} = 2`, `a^{(2)} = N - W_2 = 3`, `D_1` with `s_1` nodes and normalization
+694:`A^1`, `D_2` with `sigma_2` nodes and `chi_c(D_2) = chi_2`, meeting `D_1`
+695:transversally in `j` points; `a_p = 0` at a node of `D_1` (two disjoint size-2
+696:clusters exhaust the four letters), `a_p = 1` at a transverse `D_1 u D_2` point
+697:(clusters `2 + 1`), `a_p = 2` at a node of `D_2` (clusters `1 + 1`) — the identity
+701:(7.1)     chi_2 + sigma_2 = 1 ,   i.e.   D_2 also has normalization A^1 ,
+708:identity becomes binding only once `D_2` is pinned.
+711:surviving `S_4` representation datum" and "a Keller counterexample exists" stand:
+714:`OPEN[REP-96-MPRIME-COMPANION]` (needs `D_2`); plus the construction of `D_2`
+730:                  Residual pinned: 6 classes up to S_4-conjugacy (§5).
+736:ROW VERDICT     The (9,6) row is NOT killed at the S_4 representation level.
+741:tuple with image `S_4`. Passing it is **not** existence of `phi`: `rho_inf`-fixedness
+752:* `OPEN[REP-96-MPRIME-COMPANION]` — pin `D_2`; `(M')` binds only through `(7.1)`.
+771:   is blind to `delta_aff(D_1)`. I record this rather than quoting `(M')` as a
+772:   pending gate on `D_1`.
+
+exec
+/bin/zsh -lc "rg -n \"BURNSIDE|Burnside|Card A|chi_c|chi\\b|S_4|S4|subgroup|D_1|D1|D_2|D2|sigma|sgn|resolvent|TB-GERM|N=4|W=|core\" /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/reducible-all-n-r2-opus5-20260901.md" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+38:geometric degree `N >= 4`; `A_F = D_1 u ... u D_m`, `m >= 2`; at least one
+193:subgroup whose *normal closure* is `H_i`; normal generation is not ordinary
+197:> already generate a transitive subgroup of `S_N`, then `d_i . iota_i >= N - 1`;
+210:`G = S_2 wr S_4 < S_8` is generated by `(12)` and the block swaps `(13)(24)`,
+217:> transposition, then `G` is a transitive subgroup of `S_N` generated by
+225:`[X]` r1's SS7 (S3) - "the resolvent trick is provably absent for every `N >= 5`"
+231:`N >= 5`, is `Z/2`, `sgn o rho` is determined on `H_1`, and its one global
+268:   D1-DEGREE discipline (C6 SS1.3).
+314:`P3a` and `P3b` are distinct) and **carrier-level cores** (block-multisets of
+351:N=6  (13 profiles, 6 classes, 6 carrier-level cores)
+355:N=7  (27 profiles, 10 classes, 10 carrier-level cores)
+385:carrier-level cores** (GATE's core count, which is unaffected):
+425:profile is core `(2,1,0)` plus one trivial on a second owner, `W = (1,2)`, class
+485:| `N` | profiles | labels | carrier cores | `b=1` / `b=2` / `b=3` | ramified rows |
+507:> place**, not once per carrier. Does there exist `D = D_1 u ... u D_m` in `C^2`
+508:> satisfying clause 1 of SS4, carrying exactly the prescribed places - each an
+519:only the `k = 0`, `b = 1` classes; VER SS4.3 makes that concrete at the `b = 1`
+535:| 7 | "a transposition meridian forces `G = S_N`" | **withdrawn**; PIN-R2 needs *every* branched meridian to be a transposition. Countermodel `S_2 wr S_4` on `[2+22]` |
+536:| 8 | (S3) "no resolvent analogue at any `N >= 5`" | **withdrawn off the pinned classes**, sign reversed: block systems are a live descent there |
+542:| 14 | `N=6/7/8` tables: headers `14/31/104`, columns `13/28/90` | **recounted** to `13/27/90` profiles, `6/10/26` labels, `6/10/29` cores: four rows restored (VER), 27 removed by Gate ETA, eight ramified added at `N = 8` |
+544:| 16 | "`N=4`/`N=5` recovered as instances" | **rescoped** to the budget/ownership projection only (GATE SS7) |
+552:`OPEN[PI1-S_N-CAGE(carriers, owners, places)]`, one per carrier-level core -
+
+codex
+The hits put the relevant material in three places: Card A in the fable note, the N=4 residual identity in the S4 representation note, and the general-N cage/rank context in the reducible-all-N note. I’m reading those sections with line numbers so the report can cite exact frozen input locations.
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md | sed -n '78,132p'" in /Users/dc/code/math/jc2
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/rep-96-inner-opus5-20260901.md | sed -n '641,709p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+    78	## 3. New avenue: BURNSIDE-CHI — the full subgroup-lattice chi_c system
+    79	
+    80	**Mechanism.** For a hypothetical degree-N Keller counterexample with
+    81	monodromy `G <= S_N`, let `X^` be the normalization of the target `C^2` in
+    82	the Galois closure of the function-field extension. Every subgroup `H <= G`
+    83	yields an intermediate normal affine surface `Y_H = X^/H`, finite (hence
+    84	proper) over the target. Two rows are pinned: `Y_G` is the target `C^2`
+    85	(`chi_c = 1`), and `Y_{H_1}` (`H_1` a point stabilizer) is the finite hull of
+    86	the source — the source `C^2` sits inside it as the complement of the
+    87	boundary curve assembled from the `W_i` escaping sheets, so
+    88	`chi_c(Y_{H_1}) = 1 + chi_c(C_b)` with the sheet-location bookkeeping typed
+    89	per the SHEET-GATE correction (consume the typed `a^{(i)} = N - W_i` and the
+    90	`a_p` census; never `#Fix`).
+    91	
+    92	A nontrivial deck transformation acts freely on the étale locus, so each
+    93	fixed locus `X^g` (`g != 1`) is concentrated over the branch strata, and
+    94	`chi_c(X^g)` is an integer assembled from the same local census (M')
+    95	consumes: cycle types at generic points, `a_p` cluster data at singular
+    96	points, local data at infinity. The standard quotient formula
+    97	`chi_c(X^/H) = (1/|H|) * sum_{h in H} chi_c(X^h)` then determines every
+    98	intermediate `chi_c` from one class-function vector `(chi_c(X^g))_g`. The
+    99	constraint system:
+   100	
+   101	- (i) the two pinned rows above;
+   102	- (ii) integrality of every row (the averages must be integers);
+   103	- (iii) independent recomputation on rows with autonomous geometry: the
+   104	  `sgn`-row is the double cover of the target branched over the odd-meridian
+   105	  part of the branch configuration, computable from the curve alone; the
+   106	  `S_3`-resolvent row is exactly the TB-GERM triple-cover object already in
+   107	  the promoted toolset.
+   108	
+   109	That is one identity per subgroup class instead of the single natural-action
+   110	pair — at N=4, eleven rows of `S_4` instead of two.
+   111	
+   112	**Why now, and why this is not (M) redux.** The fork computation
+   113	(`rep-96-inner-opus5-20260901.md:688-708`) shows the natural-action identity
+   114	COLLAPSES at the N=4 reducible profile to (7.1) `chi_2 + sigma_2 = 1`, with
+   115	the branched component's node count `s_1` cancelling identically: the natural
+   116	permutation character is too coarse to see `s_1`. The subgroup rows weight
+   117	the same strata by different class functions (fixed-coset counts on `G/H`),
+   118	so the cancellation cannot persist across the full table unless the strata
+   119	data satisfy genuinely new integer relations — and each such relation is a
+   120	new gate. The 20260831 (M) failure mode (sheet location) is typed away by
+   121	construction: `X^` and all `Y_H` are finite covers, so no sheet escapes; the
+   122	source enters only through the one pinned open-complement row, where the
+   123	`a`-vs-`#Fix` bookkeeping appears once, explicitly.
+   124	
+   125	**General-N payoff.** The vector `(chi_c(X^g))_g` and its table-of-marks
+   126	image is a candidate for the missing degree-monotone invariant: the table
+   127	grows with N, while the two anchor rows are degree-independent. Whether
+   128	monotonicity holds is card A's question, not an assertion. Novelty check
+   129	performed: "Burnside"/"table of marks" have zero hits in the banked corpus;
+   130	the `S_3` resolvent and TB-GERM triple cover are single rows of this table
+   131	used in isolation; `reducible-all-n-r2` names block systems as a live
+   132	descent but builds no chi_c system on them.
+
+ succeeded in 0ms:
+   641	campaign — or kills `(9,6,2)` outright. Typed `OPEN[REP-96-BM-FACTORISATION]`.
+   642	
+   643	**(R2) Covering-space realization (Riemann existence), and the source.** A `phi`
+   644	fixed by the whole factorisation gives only a degree-4 branched cover `Y -> C^2`
+   645	with branch locus `D` and meridian data `T`. A Keller map additionally requires
+   646	the **source** to be the affine plane, `Y ~ C^2`, plus the normality and
+   647	miracle-flatness step RK §1 records as gate-inserted into the `(6,4)` descent.
+   648	Riemann existence supplies `Y` as a normal surface and nothing about its
+   649	isomorphism type; `Y ~ C^2` follows from no promoted result and is not implied by
+   650	`pi_1`. Then `F : Y = C^2 -> C^2` must have `Jac F in C^*` with non-properness set
+   651	`A_F`. **This is the largest single gap, and it is not numerical.** Typed
+   652	`OPEN[REP-96-SOURCE-IS-C2]`.
+   653	
+   654	**(R3) The `b = 0` / budget constraints.** Two distinct symbols `b` are in play and
+   655	must not be merged: in THEOREM 7.B (all-degree H2 integration §1) `b = 0` is the
+   656	count of dicriticals with affine image and `mu = 1`, a **consequence of H2**;
+   657	in the reducible cage (`reducible-all-n-opus5-20260901.md:130-134`) `b` is the
+   658	number of **branched components** of `A_F`, and `(RC2)` forces `b = 1` at
+   659	`N = 4, 5`. I use only the second.
+   660	
+   661	The `N = 4` residual profile is a single row: core `(2,1,0)`, `W = (1,2)`
+   662	(`ibid.:459`), i.e. `A_F` has one branched component `D_1` of weight `2` and one
+   663	trivial-dicritical component of weight `1`; and `corr = 0` on both dicriticals, so
+   664	the branched component carries **only double points of smooth branches**
+   665	(`b0-reducible-n5-opus5-20260831.md:496-500`). Checked against the realized curve:
+   666	its four affine singularities are ordinary nodes of two smooth branches
+   667	(§1) — **consistent**. The generic-meridian datum matches too: `a^{(1)} = N - W_1 = 2`
+   668	and independently `a^{(1)} = #Fix(transposition) = 2`. The budget therefore does
+   669	not obstruct `(9,6,2)`; but it does demand a **second component**, of degree at
+   670	least `2` (Lemma NL), about which the numerical type says nothing. A counterexample
+   671	needs that companion curve as well.
+   672	
+   673	**(R4) The `(M')` identity.** `(M')`
+   674	(`round1033-sheet-gate-opus5-20260831.md:442`) is
+   675	`a(nu + s - 1) - sum_{p in Sing A_F} a_p = d nu - 1` with `1 <= a <= d-2`,
+   676	`0 <= a_p <= a`, `nu = sum_p (r_p - 1)`, `s = #Sing A_F`, `d = N`. **Its
+   677	hypotheses are Keller + (H2) + (H3)**, and `(H2)` is `A_F` irreducible. Two
+   678	statements, kept apart:
+   679	
+   680	*Under `(H2)` it is fatal — and it is exactly the promoted `N = 4` H2 closure.*
+   681	For a nodal `A_F` with `s` nodes, `nu = s`, so `(M'-def)` reads
+   682	`sum_p (a - a_p) = (a-1) + s(4-a)`, whose left side is at most `s a`. At `a = 2`:
+   683	`2s >= 1 + 2s`, false for every `s >= 0`. At `a = 1`: `s >= 3s`, false for every
+   684	`s >= 1`. So no nodal `N = 4` residual survives `(M')` under `(H2)` — which
+   685	reproduces the promoted "B0 holds at `N = 4` under H2". This is a control on my
+   686	use of the identity, not a new kill.
+   687	
+   688	*The `(9,6,2)` candidate does not live under `(H2)`.* The `N = 4` residual is the
+   689	reducible-`A_F` case (the H2 branch is closed), so only the block-free form
+   690	applies:
+   691	`sum_i a^{(i)} chi_c(D_i \ Sing D) + sum_p a_p = 1 - d chi_c(V)`
+   692	(`ibid.:462-466`). Instantiating it on the `N = 4` profile — `D = D_1 u D_2`,
+   693	`a^{(1)} = 2`, `a^{(2)} = N - W_2 = 3`, `D_1` with `s_1` nodes and normalization
+   694	`A^1`, `D_2` with `sigma_2` nodes and `chi_c(D_2) = chi_2`, meeting `D_1`
+   695	transversally in `j` points; `a_p = 0` at a node of `D_1` (two disjoint size-2
+   696	clusters exhaust the four letters), `a_p = 1` at a transverse `D_1 u D_2` point
+   697	(clusters `2 + 1`), `a_p = 2` at a node of `D_2` (clusters `1 + 1`) — the identity
+   698	collapses to
+   699	
+   700	```text
+   701	(7.1)     chi_2 + sigma_2 = 1 ,   i.e.   D_2 also has normalization A^1 ,
+   702	```
+   703	
+   704	**with `s_1` cancelling identically.** So at the `N = 4` reducible profile `(M')`
+   705	is *blind to the affine node count of the branched component*: it constrains only
+   706	the companion component's topology. It neither kills nor supports `(9,6,2)`, and
+   707	it must not be quoted as doing either. Typed `OPEN[REP-96-MPRIME-COMPANION]`: the
+   708	identity becomes binding only once `D_2` is pinned.
+   709	
+
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/ideation-20260902T0022Z-fable5.md | sed -n '255,276p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   255	**Card A — BURNSIDE-CHI (§3).**
+   256	
+   257	- Claim under test: the full subgroup-lattice chi_c system yields at least
+   258	  one integer relation on the N=4 reducible residual beyond (7.1); and
+   259	  symbolically at general N, the system's rank on the cage's residual
+   260	  classes exceeds the natural-action pair's.
+   261	- Dependencies: `rep-96-inner-opus5-20260901.md` §7 R4 profile data;
+   262	  `reducible-all-n-opus5-20260901.md` cage rows as corrected by r2; the
+   263	  quotient-chi_c formula and the free-action-on-étale-locus lemma (standard;
+   264	  literature-pinned at execution); sheet-location typing per SHEET-GATE —
+   265	  the 20260831 (M) failure is the standing negative control.
+   266	- Cheapest discriminator: the eleven-row `S_4` table at the pinned N=4
+   267	  profile (core (2,1,0), W=(1,2), `D_1` = the realized (9,6,2) curve, `D_2`
+   268	  carrying unknowns `(chi_2, sigma_2, j)`). Exact integer arithmetic, desk
+   269	  or one Sage script.
+   270	- Outcomes: a new relation on `(s_1, sigma_2, j)` — immediate Path-2
+   271	  consumable, and the general-N system becomes a flagship augmentation; a
+   272	  provable collapse to (7.1) — mechanism retired permanently with the
+   273	  degeneracy proof, closing a direction that keeps resurfacing ((M), (E),
+   274	  (M'), TB-GERM are all rows of this table); partial — keep exactly the
+   275	  non-degenerate rows as named gates.
+   276	- Stop condition: one N=4 evaluation plus one general-N rank statement on
+
+exec
+/bin/zsh -lc "nl -ba /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.hELKJd/inputs/reducible-all-n-r2-opus5-20260901.md | sed -n '415,556p'" in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+   415	cross-check reproduces them exactly in the "all `s=1`, no Gate ETA" column. The
+   416	`#` columns are undercounts - by one row in each of four classes at `N = 6,7`
+   417	(VER) and by 14 rows over nine classes at `N = 8` (GATE). The two errors then
+   418	partly cancel: at `N = 6` r1's printed total `13` coincides with the true r2 total
+   419	`13`, but by a different distribution (`[2] 5`, `[2^(1)] 2`, not `4` and `3`).
+   420	Coincidence, not agreement. `[A]` **AUDIT-R2-6.**
+   421	
+   422	### 3.5 Control at the closed degrees
+   423	
+   424	The corrected battery is run at `N = 4,5` as a control. `N = 4`: the unique
+   425	profile is core `(2,1,0)` plus one trivial on a second owner, `W = (1,2)`, class
+   426	`[2]`. `N = 5`: three profiles in two classes - `[2]` with `W = (1,1,2)` (`P3a`)
+   427	and `W = (2,2)` (`P3b`), together `S2`; and `[2^(1)]` with `W = (1,2)`, `S1`.
+   428	`P2` and `P3c` (both `W_br = 3`, `b = 1`, `2W = 6 > 5`) die on `(F4)`. No row is
+   429	lost or added, and Gate ETA changes nothing there.
+   430	
+   431	GATE's scoping caveat is adopted verbatim: this recovers the **budget/ownership
+   432	projection** of the promoted `N = 4` and `N = 5` cages, not the cages themselves.
+   433	C6 SS1.3 records six AM-numerical candidate types plus narrowed shape-family
+   434	residuals at `N = 4`; C6 SS1.4-1.5 record that `S5-COPRIME-KILL` has removed
+   435	`S2`'s coprime stratum and its `(6,4)` slice, while `S1` retains
+   436	`OPEN[PI1-S5-CUSP-CORRECTION]` and `OPEN[N5-S1-INF-WORD]`. A profile census
+   437	reproduces none of that refinement, and r2 claims none of it.
+   438	
+   439	## 4. THEOREM CAGE-N-R2
+   440	
+   441	> **THEOREM CAGE-N-R2 `[D]` (promotion-safe scope).** Let `F` be a noninvertible
+   442	> plane Keller map of geometric degree `N >= 4` in scope RED-N. Then:
+   443	>
+   444	> 1. **Curves.** Every `D_i` is a polynomial curve (`D~_i ~ A^1`, one place at
+   445	>    infinity); all meet `L_inf` in one common point, one place each, of a common
+   446	>    Newton-Puiseux type `u = c v^{d/e}`; all degrees are positive multiples of
+   447	>    `max(d,e) >= 2`; no component is a line or a smoothly embedded `A^1`.
+   448	> 2. **Budget.** `sum_i W_i + K_tot = N - 1`, `c_l = mu_l s_l + K_l`;
+   449	>    `a_i >= m + K_tot >= 2`; `1 <= b <= floor((N-2)/2)`; `m <= N-2-K_tot`;
+   450	>    `s_l <= floor((N-2)/2)`.
+   451	> 3. **Local.** `a_p + sum_i r_{i,p} W_i + K_p = N`; the letters over `p` are
+   452	>    `a_p` fixed singletons plus one `G_p`-invariant cluster per point at infinity
+   453	>    over `p`, `G_p` transitive on each; distinct branches at `p` carry disjoint
+   454	>    meridians; no `G_p` is transitive on all `N` letters.
+   455	> 4. **Normalization gates.** If `D_i` owns a carrier with `s_l = 1`,
+   456	>    `corr_l = 0` - in particular any trivial dicritical - then `2 W_i <= N`
+   457	>    (SELF-R2) and no `s = 1` carrier on `D_i` has `K > 0` (ETA). If `b = 1` then
+   458	>    `2 W_br <= N` (LZ-KILL).
+   459	> 5. **Local analytic, conditionally.** At a correction point `t in l'` with
+   460	>    `mu_l = 2`, `ord_t phi_l >= 2`, off the contracted locus and off `L_inf`:
+   461	>    `e_t = 1` and the image germ is an ordinary cusp `(nu, nu+1)` with
+   462	>    `M_t = nu+1`, `k_t = nu-1` (CUSP-2R). If every `h_l`-ramification point of a
+   463	>    `mu_l = 2` carrier lies off the contracted locus, then `s_l = 1` (NO-RAM-2R).
+   464	>    Unconditionally every ramified carrier is dead for `N <= 7` by clause 4.
+   465	> 6. **Monodromy.** `rho : pi_1(C^2 - D_br) ->> G <= S_N` is transitive with
+   466	>    nonabelian image; `gamma_i` has cycle type `1^{a_i} prod_{l -> i} mu_l^{s_l}`,
+   467	>    i.e. moved type `lambda_i` with `N - |lambda_i|` fixed letters. If **every**
+   468	>    branched meridian is a transposition then `G = S_N`; otherwise `G` may be
+   469	>    imprimitive, and no pin is available.
+   470	> 7. **Degree.** `sum_i d_i iota_i = N - 2 + 2g + Sigma_inf >= N - 1`, conditional
+   471	>    on the generic-line surjection. If the `d_i` meridians of `D_i` on a generic
+   472	>    line generate transitively - in particular if `b = 1` - then
+   473	>    `d_min(D_i) . iota_i >= N - 1`.
+   474	> 8. **Gauge.** `K_N != {}` implies `sup_{F in K_N} deg A_F = infinity`; a
+   475	>    universal raw-degree cap would imply `K_N = {}`. Geometric genus and the
+   476	>    affine singular points with their analytic types are automorphism invariants,
+   477	>    hence *not* unbounded.
+   478	
+   479	Clauses 1-4 and 6-8 are unconditional at their stated scopes; clause 5 is
+   480	conditional as marked; clause 7 carries `OPEN[ZARISKI-GENERIC-LINE-CUSTODY]`. No
+   481	clause is an attainment claim.
+   482	
+   483	## 5. Per-class survivor ledger through `N = 8`, and the rescoped OPEN
+   484	
+   485	| `N` | profiles | labels | carrier cores | `b=1` / `b=2` / `b=3` | ramified rows |
+   486	|---:|---:|---:|---:|---|---:|
+   487	| 4 | 1 | 1 | 1 | 1 / 0 / 0 | 0 |
+   488	| 5 | 3 | 2 | 2 | 3 / 0 / 0 | 0 |
+   489	| 6 | 13 | 6 | 6 | 11 / 2 / 0 | 0 |
+   490	| 7 | 27 | 10 | 10 | 19 / 8 / 0 | 0 |
+   491	| 8 | 90 | 26 | 29 | 55 / 33 / 2 | 8 |
+   492	
+   493	Per-class entries are in SS3.2-3.3. The clause-6 pin covers the
+   494	all-transposition labels only: `10` of the `13` profiles at `N = 6`,
+   495	`19` of `27` at `N = 7`, `42` of `90` at `N = 8`. The unpinned remainder is where
+   496	a block-system descent may exist and where the promoted transposition-graph
+   497	machinery does not reach.
+   498	
+   499	`[X]` r1's per-class question is withdrawn and replaced. The label
+   500	`[lambda^{(k)}]` is not a complete decoration (SS2.6): it loses `(mu,s,K)` and the
+   501	owner partition of trivials, and mis-states both the fixed-letter count and the
+   502	physical cusp weight.
+   503	
+   504	> **`OPEN[PI1-S_N-CAGE(carriers, owners, places)]`.** Fix a profile from the
+   505	> ledger: the carrier multiset `{(mu_l, s_l, K_l)}`, its owner partition, and for
+   506	> each branched `D_i` the critical places of `eta_i` listed **once per physical
+   507	> place**, not once per carrier. Does there exist `D = D_1 u ... u D_m` in `C^2`
+   508	> satisfying clause 1 of SS4, carrying exactly the prescribed places - each an
+   509	> ordinary `(nu, nu+1)` germ **only where CUSP-2R's hypothesis is met**, otherwise
+   510	> unrestricted - together with a transitive
+   511	> `rho : pi_1(C^2 - D) -> S_N` whose `gamma_i` has moved type `lambda_i` and
+   512	> `N - |lambda_i|` fixed letters, obeying `(LOC)` and Lemma D at every point of
+   513	> `D` including the unbranched components, and satisfying
+   514	> `sum_i d_i iota_i = N - 2 + Sigma_inf + 2g`? A negative answer kills that
+   515	> profile; a positive answer is a topological possibility, not a witness.
+   516	
+   517	Decorated questions may share a label: at `N = 8` four labels split, giving `29`
+   518	questions for `26` labels. Cheapest live kill, rescoped: `N-A-RES` `[P]` reaches
+   519	only the `k = 0`, `b = 1` classes; VER SS4.3 makes that concrete at the `b = 1`
+   520	`[2]` degree floor by killing every `T = 0` one-place polynomial quintic
+   521	(`M_inf <= 8 <= 3d-3 = 12`, sample `y^2 = x(x^2-1)^2` with `M_inf = 7`). The class
+   522	survives at `d >= 6` or `T >= 1`. `[A]` **AUDIT-R2-7**: a slice kill, not a class
+   523	kill.
+   524	
+   525	## 6. Exactly what changed from r1
+   526	
+   527	| # | r1 item | r2 disposition |
+   528	|---|---|---|
+   529	| 1 | Gate SELF (`corr = 0` on *every* carrier) | **strengthened** to SELF-R2: one `s=1`, `corr=0` carrier suffices |
+   530	| 2 | - (absent) | **added** Gate ETA: no mixing of zero and positive `K` among `s=1` carriers on one owner |
+   531	| 3 | Lemma CUSP-2; NO-RAM-2 | **rescoped** to CUSP-2R / conditional NO-RAM-2R: `ord phi_l >= 2` replaces "branch singular", removing the appeal to the converse of Lemma 5.2; `J = y h`, `h` a unit, becomes a hypothesis licensed off the contracted locus and `L_inf` |
+   532	| 4 | "no ramified carrier below `N = 10`" | **withdrawn**; unconditionally none below `N = 8` by Gate LZ-KILL alone, and eight live at `N = 8` |
+   533	| 5 | AUDIT-1: `(2,9)` refuted, S1 pinned to one `(2,3)` cusp | **conditional** on the S1 site lying off the contracted locus; `OPEN[PI1-S5-CUSP-CORRECTION]` stays open |
+   534	| 6 | Lemma DEG-PER (primitive `G`) | **withdrawn**; DEG-PER-R2 holds when the generic-line `D_i`-meridians generate transitively, e.g. at `b = 1`. Total floor untouched |
+   535	| 7 | "a transposition meridian forces `G = S_N`" | **withdrawn**; PIN-R2 needs *every* branched meridian to be a transposition. Countermodel `S_2 wr S_4` on `[2+22]` |
+   536	| 8 | (S3) "no resolvent analogue at any `N >= 5`" | **withdrawn off the pinned classes**, sign reversed: block systems are a live descent there |
+   537	| 9 | NO-DEG-CAP as an impossibility theorem | **restated** as Lemma ORBIT-DEG, with GATE's nonconstant-coordinate step added |
+   538	| 10 | AUDIT-3: DQ-3 refuted / close NEGATIVE; "genera unbounded"; "numeric layer exhausted" | **reversed / withdrawn**. Quantifier error: a cap implies `K_N = {}`, so DQ-3 is high-leverage, not dead. The other two are false and unproved; Gate ETA refutes the last |
+   539	| 11 | cycle-type law `1^{a_i} prod mu_l^{s_l}` (SS1) | **unchanged and correct**; GATE's objection misreads the product's range (SS2.6) |
+   540	| 12 | SS9 OPEN question ("`1^{a_i}` fixed") | **corrected** to `N - |lambda_i|` fixed; replaced by the decorated `OPEN[PI1-S_N-CAGE(...)]` |
+   541	| 13 | class label `[lambda^{(k)}]` as the survivor unit | **demoted**: `K_i` double-charges a physical place; the survivor unit is the carrier multiset with its owner partition |
+   542	| 14 | `N=6/7/8` tables: headers `14/31/104`, columns `13/28/90` | **recounted** to `13/27/90` profiles, `6/10/26` labels, `6/10/29` cores: four rows restored (VER), 27 removed by Gate ETA, eight ramified added at `N = 8` |
+   543	| 15 | GATE SS6's `91` at `N = 8`, `[2+22] 5` | **corrected here to `90`, `[2+22] 4`** (finding F1): the extra placement `W = (5,2)` fails GATE's own SELF-R2 |
+   544	| 16 | "`N=4`/`N=5` recovered as instances" | **rescoped** to the budget/ownership projection only (GATE SS7) |
+   545	| 17 | survivor shape stated as an "iff" | **one-way necessary parametrization** only |
+   546	| 18 | `(BUD)`, `(LOC)`, `(IND)`, RC, NL, EMB, Lemma D, TRANS-LOC, LZ-KILL, `(TG-N)`, nonabelian image | **unchanged** |
+   547	
+   548	## 7. OPEN items, lane status, FALLACY-v2 self-check
+   549	
+   550	`OPEN[CUSP-2-AT-CONTRACTED-ATTACHMENT]` (decides the eight `N = 8` ramified rows
+   551	and the `N = 5` S1 pin; SS2.2 states the computation);
+   552	`OPEN[PI1-S_N-CAGE(carriers, owners, places)]`, one per carrier-level core -
+   553	`6/10/29` at `N = 6,7,8`, the `b >= 2` and non-spine ones reached by no promoted
+   554	machinery; `OPEN[RED-N-ORDINARY-GENERATION]`; `OPEN[RED-N-BLOCK-SYSTEM]`;
+   555	`OPEN[ETA-EQUAL-K]`; `OPEN[ZARISKI-GENERIC-LINE-CUSTODY]` (unrepaired; clause 7 is
+   556	conditional on it); `OPEN[RED-N-DMIN-BOUND]`, now with `OPEN[N5-DEGREE-CAP]`
+
