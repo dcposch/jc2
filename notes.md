@@ -18938,3 +18938,60 @@ Review debt (LOW): SG-1/SRC-0/SG-2/HC-1/HC-2; BURNSIDE-CHI rank
 formula; a2-ubound's positive theorems (in the gate's charge);
 LOCAL-ISO TRANSPORT as a general rule (promoted only in its confirmed
 forms).
+
+## LIVE STATE (observed ~09:10Z per lane print) — B3-E-GEOMETRY LANDS: NO KILL, FOUR STRUCTURAL THEOREMS, AND THE REASON THE CAGE SATURATES
+
+**B3-E-GEOMETRY landed** (`b3-e-geometry-opus5-20260902.md`, 87fa5cb2,
+BODY_SEALED, 40KB; all PROVED-HERE/UNREVIEWED; hostile review launched
+`b3-e-geometry-review-grok46-20260902`; drivers preserved in
+`box/b3e-drivers-20260902/`):
+- (G-KAPPA) CLOSED NO-GO AT EVERY N, WITH PROOF — LEMMA E-ETALE
+  (A^2\E -> A^2\A_F is a connected finite étale cover of degree N) and
+  THEOREM E-BMY-VACUITY: kappa-bar and BOTH log Chern numbers of A^2\E
+  are the target's scaled by N, so log-BMY on the source pair holds iff
+  it holds on the target pair. The "BMY on E" and "orbifold BMY on the
+  Galois closure" proposals of the round (fable51 Card C, coordinator
+  Card 2) are VOID by theorem, not blocked by data. The one different
+  instrument is the orbifold pair on the TARGET, which needs deg A_F-bar
+  and a non-cyclic boundary model at L_infty: OPEN[ORBIFOLD-BMY-AT-
+  INFINITY].
+- (G-SPLICE) charge premise CORRECTED: only the places of E at infinity
+  converging to affine points sit on the dicritical, and (LOC-1, all N)
+  such a place converges only to a SINGULAR point of A_F; at N=4, k=1
+  the split is 2 (over A_F's place at infinity) + 1 (cusp) + 2 (node).
+  THEOREM E-CHARGE: a place of E at infinity over a branch b is charged
+  against Orevkov's excess k_t exactly when it lies over the branch l'
+  covers; at a unibranch point this saturates, a − a_p = K_p is carried
+  entirely by places of E at infinity — the link-at-infinity ledger of E
+  at a cusp IS the (K) ledger. Splice tests need deg E-bar:
+  OPEN[E-INFINITY-SPLICE-DEGREE] (lower bounds deg E-bar >= 5).
+- (G-EMBED) ANSWERED NEGATIVELY FOR THE CAMPAIGN: an explicit verified
+  rational plane QUINTIC E_0 has five places at infinity, one ordinary
+  (2,3) cusp and no other affine singularity (chi_c = −3) — exactly the
+  N=4, k=1 numerical type of E. No embedding obstruction exists.
+- (G-ANTI) RUN IN FULL: degree-free covering cap
+  2g(E) <= 1 − a + sum_p r_p·max(0, (r_p−1)W + K_p − 1), sharp at N=4;
+  on the minimal (B3) profile 2g <= N − 3 (B3-E-NOCROSS) — the covering
+  window is NEVER empty; the single unbounded parameter is the number
+  of double points, i.e. deg A_F-bar. **OPEN[DEG-AF-VS-N] is the ONLY
+  thing between the present ledger and a degree-monotone obstruction.**
+- (FRESH EYES) The N=4 (B3) object is Orevkov's one-dicritical profile
+  (mu, corr) = (2,1); it is killed by Domrina–Orevkov I §§2–7 (local
+  census Lemmas 8–9 → six boundary graphs → Lemmas 10–15, on the
+  determinant package Prop 3 / Lemmas 1–5, with the campaign's repairs
+  binding). NOT N-uniform: finiteness is literally sum Deg a~ = 4. And
+  it is a BOUNDARY argument that never touches Sing A_F, rho or E,
+  while the campaign's (B3) cage is entirely AFFINE — the two
+  instruments attack disjoint halves of the same object, which is WHY
+  the cage is rigid-but-not-empty. E-CHARGE is the first bridge between
+  the halves. SUCCESSOR (after review): a boundary instrument fed by
+  affine data — the global count E-bar_X · l on the dicritical, with
+  the contact multiplicities of §3.2, against Orevkov's determinant
+  package on the same chain.
+
+Coordinator reading: two of the round's four (B3) mechanisms are dead
+by theorem (BMY on E; embedding obstruction), one is bookkeeping with a
+named missing datum (splice), and one identifies the single gate
+(deg A_F vs N). The campaign's degree-monotone question is now
+concentrated in ONE OPEN. A flagship on it launches now (below).
+Opus seats after the landing: 0/5 → 1/5.

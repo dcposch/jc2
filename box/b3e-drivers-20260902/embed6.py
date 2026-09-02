@@ -1,0 +1,10 @@
+import sympy as sp
+t1,t2 = sp.symbols('t1 t2')
+def x(t): return (149*t**2 - 785*t + 1100)/(t*(t-1)*(t-2))
+def y(t): return (3*t - 13)/((t-3)*(t-4))
+E1 = sp.factor(sp.numer(sp.together(x(t1)-x(t2))))
+E2 = sp.factor(sp.numer(sp.together(y(t1)-y(t2))))
+print("x(t1)-x(t2) numerator:", E1)
+print("y(t1)-y(t2) numerator:", E2)
+q1 = sp.cancel(E1/(t1-t2)); q2 = sp.cancel(E2/(t1-t2))
+print("\ncommon solutions with t1 != t2:", sp.solve([q1,q2],[t1,t2],dict=True))
