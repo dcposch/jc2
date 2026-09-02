@@ -1,0 +1,55 @@
+== D1-STAR on Keller pairs: the joint f*g tree, root-free ==
+
+   (y, x+y^5)   m=1 n=5 J=-1
+      g-g contacts (per g-root): {'-1/5': '4'}   [+ 1 identical]
+      f-g contacts (per g-root): {'-1/5': '1'}
+  [ok]   one-place homogeneity (integral per-root profile) :: (y, x+y^5)
+  [ok]      profile counts: 5=n, 1=m :: (y, x+y^5)
+      delta^0 = 4/5   lambda_f(delta^0) = -1/5   n*(-lambda_f)^+ = 1   N(res) = 1
+  [ok]   FRONTIER-N reproduces N :: (y, x+y^5)
+  [ok]   DICT: -lambda_f(delta^0) = 1 - delta^0 :: (y, x+y^5)
+      D_1: delta_1 = -1/5, a_1 = 5 g-roots, b_1 = 1 f-roots, Phi(delta_1) = 1
+  [ok]   Phi(delta_1) = 1 :: (y, x+y^5)
+  [ok]   D_1 is a STAR (nothing between delta_1 and delta^0) :: (y, x+y^5)
+  [ok]   A_bot = n (all g-roots in bottom-major discs) :: (y, x+y^5)
+
+   (x+y^5, y+(x+y^5)^3)   m=5 n=15 J=1
+      g-g contacts (per g-root): {'-1/5': '12', '11/15': '2'}   [+ 1 identical]
+      f-g contacts (per g-root): {'-1/5': '4', '11/15': '1'}
+  [ok]   one-place homogeneity (integral per-root profile) :: (x+y^5, y+(x+y^5)^3)
+  [ok]      profile counts: 15=n, 5=m :: (x+y^5, y+(x+y^5)^3)
+      delta^0 = 14/15   lambda_f(delta^0) = -1/15   n*(-lambda_f)^+ = 1   N(res) = 1
+  [ok]   FRONTIER-N reproduces N :: (x+y^5, y+(x+y^5)^3)
+  [ok]   DICT: -lambda_f(delta^0) = 1 - delta^0 :: (x+y^5, y+(x+y^5)^3)
+      D_1: delta_1 = 11/15, a_1 = 3 g-roots, b_1 = 1 f-roots, Phi(delta_1) = 1
+  [ok]   Phi(delta_1) = 1 :: (x+y^5, y+(x+y^5)^3)
+  [ok]   D_1 is a STAR (nothing between delta_1 and delta^0) :: (x+y^5, y+(x+y^5)^3)
+  [ok]   A_bot = n (all g-roots in bottom-major discs) :: (x+y^5, y+(x+y^5)^3)
+
+   (x+y^3, y+(x+y^3)^2)   m=3 n=6 J=1
+      g-g contacts (per g-root): {'-1/3': '4', '1/2': '1'}   [+ 1 identical]
+      f-g contacts (per g-root): {'-1/3': '2', '1/2': '1'}
+  [ok]   one-place homogeneity (integral per-root profile) :: (x+y^3, y+(x+y^3)^2)
+  [ok]      profile counts: 6=n, 3=m :: (x+y^3, y+(x+y^3)^2)
+      delta^0 = 5/6   lambda_f(delta^0) = -1/6   n*(-lambda_f)^+ = 1   N(res) = 1
+  [ok]   FRONTIER-N reproduces N :: (x+y^3, y+(x+y^3)^2)
+  [ok]   DICT: -lambda_f(delta^0) = 1 - delta^0 :: (x+y^3, y+(x+y^3)^2)
+      D_1: delta_1 = 1/2, a_1 = 2 g-roots, b_1 = 1 f-roots, Phi(delta_1) = 1
+  [ok]   Phi(delta_1) = 1 :: (x+y^3, y+(x+y^3)^2)
+  [ok]   D_1 is a STAR (nothing between delta_1 and delta^0) :: (x+y^3, y+(x+y^3)^2)
+  [ok]   A_bot = n (all g-roots in bottom-major discs) :: (x+y^3, y+(x+y^3)^2)
+
+   (x+(y^2+1)^3, y+f^2)   m=6 n=12 J=1
+      g-g contacts (per g-root): {'-1/6': '10', '3/4': '1'}   [+ 1 identical]
+      f-g contacts (per g-root): {'-1/6': '5', '3/4': '1'}
+  [ok]   one-place homogeneity (integral per-root profile) :: (x+(y^2+1)^3, y+f^2)
+  [ok]      profile counts: 12=n, 6=m :: (x+(y^2+1)^3, y+f^2)
+      delta^0 = 11/12   lambda_f(delta^0) = -1/12   n*(-lambda_f)^+ = 1   N(res) = 1
+  [ok]   FRONTIER-N reproduces N :: (x+(y^2+1)^3, y+f^2)
+  [ok]   DICT: -lambda_f(delta^0) = 1 - delta^0 :: (x+(y^2+1)^3, y+f^2)
+      D_1: delta_1 = 3/4, a_1 = 2 g-roots, b_1 = 1 f-roots, Phi(delta_1) = 1
+  [ok]   Phi(delta_1) = 1 :: (x+(y^2+1)^3, y+f^2)
+  [ok]   D_1 is a STAR (nothing between delta_1 and delta^0) :: (x+(y^2+1)^3, y+f^2)
+  [ok]   A_bot = n (all g-roots in bottom-major discs) :: (x+(y^2+1)^3, y+f^2)
+
+ALL CONTROLS PASSED

@@ -1,0 +1,17 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at `xmodel/exact-n-rigidity-opus5-20260902.md` (47.8 KB, sha256 `e639fdbf…`).
+
+## Verdict
+
+**No flaw in the mathematics of STEPS 1–4. The squeeze closes.** The four steps are one monotone function: along a `g`-branch put `Φ(δ) = δ − λ_f(δ) − λ_g(δ)`, slope `1 − a − b ≤ 0`. The Keller identity gives `Φ(δ⁰) ≥ 1` at every frontier; RADIUS-ORDER at `r = 1` with `M₁ = −m` gives `Φ(δ₁) = 1` exactly. Squeeze ⟹ `a + b ≡ 1` on `[δ₁, δ⁰]` ⟹ **`D₁` is a star**. STEPS 2 and 3 are the *same* inequality read on `λ_g` and on `λ_f`.
+
+**Answers to (a).**
+- The "integration step / no log" is mis-posed — run the identity **forward**. The `x⁻¹` coefficient of `d/dx h` vanishes for *any* Puiseux `h`, so it is automatic on the `f` side and a **constraint on `g` alone** (COROLLARY NO-RESIDUE; negative control `g = y²−x²−x`, which has `δ⁰ = 1`, the value the lemma forbids). The genuine second case is `λ = 0`, where `δ⁰ = e₁+1` and `δ⁰ = λ+1` fails.
+- The `r = 1` identity is **not** a coincidence (it *is* `Φ(δ₁)=1`, content `n − M₁ = n + m`) and **not** an artefact of Def 5.1(3): Moh defines `δ_{r−1}` geometrically (MOH:2163‑2167) and computes `δ₁` from Def 5.1 (MOH:3284‑3286). Verified independently on four explicit Keller pairs straight from the joint tree. Moh nowhere asserts the star.
+
+**Answers to (b),(c).** All charged controls run and pass (119 checks, 0 failures), including the charged `(y+x², x+(y+x²)²)` (`δ⁰ = 1/2 ≠ 1`, DICT‑N = N = 1) and the negative two‑tower rows, where DICT‑N = 0 against N = 4…18. But the charge's (c) is **not achievable**: `A_bot` is not a skeleton function — the Keller pair `(x+y⁵, y+(x+y⁵)³)` carries **five** conjugate `D₁`'s. EXACT‑N is a two‑sided window plus an integrality condition. Filter, `D ≤ 140` (18 064 groups, 354 s): the new floor kills 0, `U < 6` kills 697, EXACT‑N unconditional (mixed branch profiles) kills 5 275 (29.2 %), EXACT‑N under one profile kills 11 992 (66.4 %); `D ≤ 190` SINGLE kills 49 623 of 76 282. **No degree is emptied**, MOH‑SHARP‑2 {105,108,112,117,120} included. On Moh's six published rows `N` is pinned to a single value on five (9, 10, 9, 8, 16) and the sixth dies at `N_min = 6`; the `U_tower = 10.5` prediction is confirmed — `A_bot = ue` is *impossible* there.
+
+`OPEN[D1-SUBTREE]` is closed **and empty**. Residual: `OPEN[BRANCH-PROFILE]` (one branch profile or many — the only gap between the 66 % filter and the 29 % one), `OPEN[A-BOT-FLOOR]`, `OPEN[EXACT-N-BEYOND-200]`, `OPEN[MIXED-CAP]`.
+
+Two things to flag. The report overruns the 25–40 KB band at ~48 KB; the overrun is the four evidence tables and two full proofs, disclosed in the verdict block. And after sealing I found that the concurrent `D1-SUBTREE` lane on disk (uncharged, so not cited in the report) derived the same theorem independently — its JAC-FIBRE/D1-PIN/D1-STAR are my LEMMA DICT/Φ-TOWER/D1-STAR, and its filter numbers match mine; its headline "N is determined by the skeleton" is the one point where my §7 disagrees, and only because it holds under its own UNI hypothesis. Recorded in memory.
+DIVERT path=xmodel/exact-n-rigidity-opus5-20260902.md status=NO_MARKER bytes=47847

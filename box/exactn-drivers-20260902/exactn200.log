@@ -1,0 +1,59 @@
+== CONTROL P1: Phi(delta_1) = 1 exactly; Phi(delta_r) > 1 for r >= 2 ==
+   row                     Phi(d_1)     Phi(d_2)     Phi(d_3)          L          U
+   (64,48)                        1         29/4          111        9/4          9
+  [ok]   P1 Phi(delta_1)=1 :: (64,48)
+  [ok]   P1 Phi(delta_r)>1 for r>=2 :: (64,48)
+  [ok]   P1 incremental == closed form :: (64,48)
+   (84,56) M2=64,V2=2             1         37/7          139        4/7          6
+  [ok]   P1 Phi(delta_1)=1 :: (84,56) M2=64,V2=2
+  [ok]   P1 Phi(delta_r)>1 for r>=2 :: (84,56) M2=64,V2=2
+  [ok]   P1 incremental == closed form :: (84,56) M2=64,V2=2
+   (84,56) M2=72,V2=5             1            9          139        5/2       21/2
+  [ok]   P1 Phi(delta_1)=1 :: (84,56) M2=72,V2=5
+  [ok]   P1 Phi(delta_r)>1 for r>=2 :: (84,56) M2=72,V2=5
+  [ok]   P1 incremental == closed form :: (84,56) M2=72,V2=5
+   (75,50) V2=3                   1         26/5          124        9/5         12
+  [ok]   P1 Phi(delta_1)=1 :: (75,50) V2=3
+  [ok]   P1 Phi(delta_r)>1 for r>=2 :: (75,50) V2=3
+  [ok]   P1 incremental == closed form :: (75,50) V2=3
+   (75,50) V2=2                   1         26/5          124        4/5          8
+  [ok]   P1 Phi(delta_1)=1 :: (75,50) V2=2
+  [ok]   P1 Phi(delta_r)>1 for r>=2 :: (75,50) V2=2
+  [ok]   P1 incremental == closed form :: (75,50) V2=2
+   (99,66)                        1         16/3          164       16/3         16
+  [ok]   P1 Phi(delta_1)=1 :: (99,66)
+  [ok]   P1 Phi(delta_r)>1 for r>=2 :: (99,66)
+  [ok]   P1 incremental == closed form :: (99,66)
+
+== CONTROL P2: census-wide, every V-skeleton (n <= NMAX) ==
+   V-skeletons tested: 242099   wall 22.8s
+  [ok]   P2 Phi(delta_1) = 1 on every V-skeleton
+  [ok]   P2 Phi(delta_r) > 1 for r>=2 and Phi non-increasing downward
+  [ok]   P2 0 < L <= U on every V-skeleton
+
+== CONTROL P3: L/U = V_2/u  and  U = (u/V_2) L  (identity) ==
+  [ok]   P3 U*a_1 == L*u*e
+
+== CONTROL P4: N-CEILING recovered: A_bot = u e gives U ==
+  [ok]   P4 u*e*contrib == U on Moh's six rows
+
+  ALL CONTROLS PASSED
+
+
+== EXACT-N FILTER,  N in [6,16],  D <= 200 ==
+   L = a_1 c (FLOOR, new) ; U = u e c (CEILING, reviewed) ; c = d(1-delta_1)/(d+e)
+       D   #groups    kL     kU  k(L|U)  kSINGLE  kMIXED      minL      maxL
+      48        50     0      5       5       28      11      3/16       9/7   [1s]
+      54        40     0      5       5       31      22      3/28       9/7   [1s]
+      60       110     0     40      40       75      52      3/32       9/7   [3s]
+      63        30     0     10      10       25      16      1/10     24/19   [3s]
+      64        84     0      0       0       45      17       1/4       9/5   [4s]
+      66        25     0      5       5       23      13      3/34       9/7   [4s]
+      72       316     0     12      12      148      61      3/25       9/5   [36s]
+      75        40     0      0       0       32      22      3/34     36/29   [36s]
+      78        30     0      5       5       24      15      3/40       9/7   [36s]
+      80       496     0      7       7      341     140       1/8     30/13   [96s]
+      81        40     0     10      10       31      21      3/38     24/19   [97s]
+      84       207     0     54      54      134      80      1/16      16/9   [114s]
+      88        35     0      7       7       29      23      2/17       9/5   [114s]
+      90       577     0     29      29      402     195      3/50     30/13   [218s]
