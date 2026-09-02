@@ -18323,3 +18323,11 @@ unconditionalizes RAY-2; P0 check on RAY-EDGE's consumption).
 Runners: both repair lanes, 869 msolve. Round floor 12:22Z —
 prime inputs queued: OPEN[A2-U-BOUND], OPEN[HOMCOVER-CUSP-A-N8],
 the (B3) rigid-not-empty cage, Grok outage routing.
+
+EVENT (see date print): **N2-DERIVE landed** (BODY_SEALED,
+hash in commit): the N2 row DERIVED in closed form,
+coefficient-exact agreement with the measured row (no P0).
+**RAY-1 now DERIVED IN FULL; RAY-2 UNCONDITIONAL.** The RAY
+theorem set's only remaining debt is the (1,3) second engine
+(cells codegen lane writing). Runners: a2-cells-codegen (sol),
+869 msolve (~10h, cap ~10:30Z).
