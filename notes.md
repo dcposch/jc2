@@ -17799,3 +17799,16 @@ lane consuming gcd>=16 must re-check: the ONLY clean GGV bound
 is what their own elementary proof establishes (their Heitmann
 reproof); flag to Card-C-step0 at harvest (its GGV firewall must
 use only the sound part).
+
+CORRECTION (observed 2026-09-02T01:11Z, coordinator error caught
+at checksum): the previous block's line "GGV's B>=16 total-degree
+bound is now typed GAPPED" is WRONG and is retracted. Correct
+typing per the lane report (§ lines 73-96): Heitmann's
+gcd(deg P, deg Q) >= 16 STANDS — GGV give their own elementary
+proof of it, independent of Zoladek. What is GAPPED through
+Lemma 4.10: Zoladek's Theorem 4.12 (gcd != 2p at the != 2
+instance), Lemma 4.13, and (partially) Theorem 4.16's claimed
+improvements PAST 16 (except its (4,12) branch, which uses
+Prop 5.11 + Thm 5.13 and refuses 4.10). Card-C-step0's GGV
+firewall may consume gcd >= 16 (sound, Heitmann/GGV-elementary)
+but NOT != 2p and NOT any bound beyond 16.

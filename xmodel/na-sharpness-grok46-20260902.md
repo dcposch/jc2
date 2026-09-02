@@ -34,14 +34,9 @@ Primary literature, hashed before consumption:
         (Numdam ASENS 1983, 4 546 575 bytes; banked N-A packet copy)
 7c3ba931d9cf2152a18c2a1b2c0f62c2cddec73e61927751813b449fe4b6d726  refs/orevkov1990_sb65_fundamental_group_complement.pdf
         (Math. USSR Sb. 65 (1990); matches the charge)
-9754547840d422d86bfc36a418fb360b970f75709751a08ccb676f9b03b447e8  orevkov_invar.pdf
+9754547840d422d86bfc36a418fb360b970f75709751a08ccb676f9f03b447e8  orevkov_invar.pdf
+        (Neumann–Norbury, arXiv math/0110286; banked acquisition copy)
 ```
-
-Wait: the Neumann–Norbury hash actually computed in this lane is
-`9754547840d422d86bfc36a418fb360b970f75709751a08ccb676f9f03b447e8`
-(banked acquisition ledger, `/tmp/jc2-pi1-lit/orevkov_invar.pdf`, arXiv
-math/0110286). The line above is the live `shasum` value; it matches the
-acquisition ledger of `b0-pi1-acquisition-grok46-20260831.md` §6.
 
 Nori statements below are from the hashed PDF (journal pagination),
 cross-checked against the banked N-A packet
@@ -269,12 +264,12 @@ rational component (`g = 0`) this is `C̃^2 - 2 r > 0`, i.e.
 inequality. At Card II equality one has `d_NN = 1`; Lemma 5.4 does not
 fire.
 
-Their Figure 3 (degree 6, splice `• —2/3— k/2 —>`): `d_2 = k - 2` wait,
-the recursion is `d_1 = p_1+q_1 = 5`, `Δ_2 = k - 2·3·2 = k-12`,
-`d_2 = 2·5 + (k-12) = k-2`. For `k = 3`, `d_2 = 1`. They state
-explicitly: “when the degree is 6 only `k = 3` is not covered” by Theorem
-2. That is the `(6,4)` equality type, excluded from the Nori application
-by the same missing hypothesis.
+Their Figure 3 (degree 6, splice `• —2/3— k/2 —>`): `p_1=2`, `q_1=3`,
+`p_2=k`, `q_2=2`. Recursion `d_1 = p_1+q_1 = 5`,
+`Δ_2 = p_2 - p_1 q_1 q_2 = k-12`, `d_2 = q_2 d_1 + Δ_2 = k-2`. For
+`k = 3`, `d_2 = 1`. They state explicitly: “when the degree is 6 only
+`k = 3` is not covered” by Theorem 2. That is the `(6,4)` equality type,
+excluded from the Nori application by the same missing hypothesis.
 
 They then write that MAPLE showed, for those degree `< 12` types not
 covered by Theorem 2, that each moduli space is connected and the Orevkov
