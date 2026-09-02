@@ -15322,3 +15322,27 @@ row in campaign order: n = 105, m = 70, M = (−70, −63, 103), V = (1,4,1),
 (d,e) = (2,3), (u,v) = (20,15), q = 3/10, packet (1^20), N = 6. "Pass"
 asserts no realisation. Review: to be folded into the next
 different-model batch review.
+
+## INTEGRATION #17 DELTA (c) (2026-09-02 18:35Z, REVIEWED): EXACT-N-RIGIDITY AND STAR-REALISABILITY PROMOTED
+
+Batch review `rigidity-star-review-gpt55-20260902.md` (573d7ce4) of
+`exact-n-rigidity-opus5-20260902.md` and
+`star-realisability-sol56-20260902.md`. PROMOTED: the Φ-lemma
+(Φ = δ − λ_f − λ_g non-increasing; Φ(δ⁰) = 1 at proper frontiers, > 1 at
+non-proper; Φ(δ₁) = 1 by RADIUS-ORDER; D₁ a joint f·g star); Φ(δ₁) = 1
+is not a Def 5.1(3) artefact (Prop 5.3 at r = 2; four Keller controls);
+A_bot is not a single skeleton function (witness (x + y⁵, y + (x + y⁵)³),
+five conjugate bottom discs, N = 1; ν = 1 control); the EXACT-N window
+L = a₁c ≤ N ≤ uec = U with c = d(1−δ₁)/(d+e), L/U = V₂/u, integrality on
+the total packet; the counts (D ≤ 100: 3,975 groups, U < 6 kills 274,
+SINGLE 2,499, MIXED 1,121 with 847 caps; D ≤ 140 and D ≤ 190 as
+charged; no degree emptied); the D = 105 reconciliation (159 = 264 − 105
+no-hits in [6,16]; GPT-5.5's 125 hits are the N ≥ 6 variant; 20 groups
+have hits only above 16); COROLLARY NO-RESIDUE ([x⁻¹] of 1/g_y(x, τ) = 0
+on every simple branch of every fibre of g; a coefficient-level
+condition on g, NOT a numerical skeleton condition); Prop 4.6 (r = 1) +
+A.5 ⇒ squarefree bottom, part(P₁) = (1^{eV₂}), forced-repeat kills
+0/9,553; the D = 105 STAR row (per-root c = 1/10; q = 3/10 per V₂ unit;
+N = 6). REFUTED: "max L = 3.32 to D ≤ 190" (max L = 63/19 through 140;
+165/31 at D = 176; no floor kill follows either way). Promotion of the
+STAR closure excludes any realisability claim.
