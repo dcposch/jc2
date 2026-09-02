@@ -20166,3 +20166,32 @@ it; the review runs in parallel). The Keller-cluster census on box01
 (boundary-cluster side) and this skeleton census (Puiseux side) are the
 two halves of the same numerical habitat. Seats: Opus 1/5; GPT-5.5 1
 (review); Grok 0; Sol 0.
+
+EVENT (~14:50Z per lane print) — **DEPTH-CEILING REVIEWED**
+(`depth-ceiling-review-gpt55-20260902.md`, 4a171d91, BODY_SEALED):
+PROMOTE in repaired form — DEPTH-LOG (Moh side: d_2 = K and the strict
+divisor chain give K >= 2^s, so 3 <= s <= log_2 K; GGV side via Thm
+7.6(8); "attained" DEMOTED to skeleton-census evidence; Moh's s <= 5
+additionally uses n/K >= 2, not n >= 4·2^{s−2} alone — the producer's
+displayed explanation is repaired), PLACE-LEDGER (theorem promoted; T
+identified with T_ext / SAT-WEIGHT; the 16/16 battery not fully rerun —
+one row timed out, a test gap not a mathematical one),
+**CONTACT-DEFICIENCY CONFIRMED under the monic GEN resultant
+hypothesis** (raw (x, x y^m) must be sheared to a monic f-root gauge;
+Moh/GGV do not form the global pairing sum; OPEN[N-ON-THE-TREE]
+promoted as the successor: the double contact sum over all f/g root
+pairs needs the minor-disc distribution absent from the published
+constraints), MOH-SHARP-2 (D_min >= 105 after a proof-replay repair:
+Cor 7.9 excludes p, 2p for B directly; for degree-minimal K replay Prop
+4.7's preservation with degree-minimality; admissible [101,120] =
+{105, 108, 112, 117, 120}), NU-TWO (in GEN gauges, i.e. any gauge with
+deg = deg_y; E0-free additionally consumes FIRST-FORK), the (64,48)
+survivor correction (Moh's appendix prints (64,68) as a typo; the §6
+table forces (64,48); all four survivors have K >= 16, none killed by
+GGV Cor 6.6), the recovered Definition 5.1(3) formula and the 25-value
+calibration. NOT PROMOTED: exact delta-column reproduction (the n = 75
+bracketed delta_1: Moh prints 1/3, the formula gives 2/3 —
+OPEN[DELTA75-BRACKET], one rational entry); "attained" outside skeleton
+wording; the displayed s <= 5 explanation. INTEGRATION #15 binds the
+depth set now; the running `n-on-the-tree` flagship consumes
+CONTACT-DEFICIENCY at its reviewed (monic GEN) typing.

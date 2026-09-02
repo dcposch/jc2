@@ -15162,3 +15162,27 @@ parenthetical about the fourth pair is withdrawn. Pending the review:
 THEOREM MOH-SHARP-2 (D_min >= 105; admissible D in [101,120] = {105, 108,
 112, 117, 120}), THEOREM DEPTH-LOG (s <= log_2 K), NU-TWO gauge-free,
 PLACE-LEDGER, CONTACT-DEFICIENCY.
+
+## INTEGRATION #14 DELTA (c) (2026-09-02, REVIEWED): THE DEPTH SET
+
+`depth-ceiling-review-gpt55-20260902.md` (4a171d91) on
+`depth-ceiling-opus5-20260902.md` (863b05db). PROMOTED at scope, in
+repaired form: THEOREM DEPTH-LOG (degree-minimal noninvertible Keller
+pair, GEN gauge: 3 <= s <= log_2 K for Moh's effective characteristic
+pairs, K = gcd(deg P, deg Q); GGV corners k + 1 <= log_2 K via Thm
+7.6(8); Moh's s <= 5 at n <= 100 = K >= 2^s with n/K >= 2); THEOREM
+PLACE-LEDGER (every dominant map: D = sum nu_gamma, N = sum m_gamma,
+T = sum (nu_gamma − 1) over the places at infinity of a generic net
+member, T = T_ext); THEOREM CONTACT-DEFICIENCY (monic GEN gauge:
+N = deg_x Res_y = − sum_{i,j} ord_t(tau_i − phi_j) over the two root
+towers; no published Moh/GGV constraint forms the pairing sum); THEOREM
+NU-TWO (GEN gauges: exactly two distinct linear factors of different
+multiplicities, M_s = n − 2; closes OPEN[NU2-RIGIDITY]; E0-free with
+FIRST-FORK); THEOREM MOH-SHARP-2 (D_min >= 105 for every noninvertible
+Keller map; admissible D in [101,120] = {105, 108, 112, 117, 120}); the
+Moh survivor correction ((64,48), a printed typo in Moh's appendix);
+Moh's Definition 5.1(3) formula and the 25-value calibration. NOT
+promoted: exact delta-column reproduction (OPEN[DELTA75-BRACKET]);
+"attained" beyond skeleton evidence. Binding successor:
+OPEN[N-ON-THE-TREE] (the integer N in [1, mn] from the complete
+major/minor root-pair distribution; lane running).
