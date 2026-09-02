@@ -19054,3 +19054,40 @@ and the DET-EO checksum; no imposed wall; both engines). Reminder of
 typing: the A2 object is PROFILE-UNTYPED (integration #9 §C); this lane
 serves ledger correctness and the one positive-side arrow Sol named,
 not the (B3) horn.
+
+## LIVE STATE (observed ~09:45Z per lane print) — (B3) FLAGSHIP REVIEWED: EIGHT FOR EIGHT CONFIRMED (THREE REPAIRS), NO KILL; INTEGRATION #10 ACCUMULATOR OPENS
+
+**B3-E-GEOMETRY-REVIEW landed** (`b3-e-geometry-review-grok46-20260902.md`,
+12dea79f, body e44c5bb0, BODY_SEALED): every PROVED-HERE item CONFIRMED —
+E-ETALE; E-BMY-VACUITY (BINDING REPAIR: log-smooth compactification so
+K+D is Q-Cartier; c_2-bar scales by N independently of compactification,
+c_1-bar^2 on log-minimal models of the normalisation pair); PROP 3.1 /
+LOC-1; COR 3.2 (BINDING REPAIR: g = p_a of the compactified
+normalisation; n_infty = (R−1)a + 2 − 2g − sum a_p r_p,
+chi_c = a(1−R) + sum a_p; matches B3-N4 at all 44 cells k <= 8);
+E-CHARGE (BINDING REPAIR: Orevkov's contracted model, Phi finite of
+degree mu_t at t); B3-E-GENUS; B3-E-NOCROSS at G-ANTI scope (max cap
+2g <= N−3, min cap 2W−3 >= 1, no empty (N,a) cell for N = 4..20;
+OPEN[DEG-AF-VS-N] the unique gate among the two ingredients);
+WITNESS E_0 as REPRESENTATIVE numerical-type witness (point names at
+infinity repaired: ordinary triple delta = 3 at [1:0:0], tacnode delta
+= 2 at [0:1:0]; unique affine A_2 at (15,1); injective off the poles);
+the §6 Domrina–Orevkov identification ((mu,corr) = (2,1) killed by DO I
+§§2–7 as a lemma SET, not N-uniform). GAPs: whether the two places of E
+over A_F's point at infinity meet l \ l' is unpinned; the proposed
+SUCCESSOR "E-bar_X · l against Orevkov's determinants" is NOT well-posed
+(no identity consumes the intersection number). DO NOT PROMOTE: any
+(B3) kill; deg E-bar; kappa-bar(A^2\A_F).
+**INTEGRATION #10 ACCUMULATOR:** the eight (B3) theorems with their
+repairs; E_0 (REPRESENTATIVE); the P0 pair (delta 9b); the DEG-AF-VS-N
+result when it lands (unique gate). Binds on the deg-af landing.
+**(B3) PROGRAM after this:** the affine cage is saturated by theorem
+(E-BMY-VACUITY kills every BMY-on-E idea; E_0 kills the embedding
+route; the cage attacks the affine half only). What kills the object at
+N = 4 is a BOUNDARY argument (DO's determinant package) that is not
+N-uniform. Launched: `b3-boundary-instrument-opus5-20260902` — formulate
+the degree-free part of the DO package (Prop 3 / Lemmas 1–5, edge
+formula, RH on F|_{a~}) at general N with the affine data (cage G1–G4,
+E-CHARGE's K_p-at-infinity) as INPUT; reproduce the N = 4 (2,1) kill as
+a control; pass Sol's Γ regression (y^2 = x^3(x−1)^2); then N = 5, 6.
+Opus seats 2/5.
