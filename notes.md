@@ -18735,3 +18735,27 @@ covering-space mechanism rather than by a budget inequality.
 FLAGGED TO DC (proactive surfacing): major promoted-grade result; the
 Max-11/formalization queue may want it as a target once integration #9
 binds.
+
+EVENT (observed: see date print) — **CHAU-DELTA-BUDGET landed**
+(`chau-delta-budget-gpt55-20260902.md`, 99ade634, BODY_SEALED):
+(1) the Chau transfer under H2 CONFIRMED with a notation repair —
+n = deg A_F = m·max(d,e), m <= K = gcd(deg P, deg Q); the resultant
+exponent M_R = alpha·m must not be identified with m unless the R_0
+component is reduced; (2) delta_infty is NOT a function of (m,d,e)
+alone for m > 1 — needs the Puiseux characteristic / value semigroup
+of the branch at infinity: OPEN[DELTA-INFTY-NOT-NUMERICAL] (Opus's own
+stop condition fired); (3) no finite (m,d,e) list at fixed geometric
+degree N without a theorem bounding max(deg P, deg Q) in N (Grok's
+target-Aut objection, from the other side); (4) **CLAIM [D] CONFIRMED**
+after the notation repair: at coordinate degrees (9,6) the cap
+sum deg D_i <= 9 is saturated by the realised degree-9 component, so
+an actual reducible non-properness set of a Keller map of coordinate
+degrees (9,6) cannot contain any companion — OPEN[COMPANION-R0-
+REALISATION] is NEGATIVE at (9,6) (scope: coordinate degrees, not the
+numerical row); the razor sum deg D_i <= max(deg P, deg Q) is a valid
+prefilter on census types at Chau's hypotheses; (5) (B3) needs n >= 4
+(n = 3 is case (A)); a finite NECESSARY list for n <= 8 is given in its
+§5 (exact realisability inherits item 2). Typing: a different-model
+(GPT-5.5) check of an Opus ideation claim — CLAIM [D] is
+promotion-grade at its scope; items (1),(5) are reproductions with
+repairs. Feeds INTEGRATION #9 and the B3-PARAM-SEARCH design.
